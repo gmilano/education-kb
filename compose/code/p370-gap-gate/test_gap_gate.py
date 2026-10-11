@@ -6,6 +6,16 @@ El caso OBLIGATORIO es la divergencia: las dos oraciones de hueco que esta base 
 que salir con veredicto OPUESTO. Si salieran iguales, el gate seria un contador de la
 palabra «CERO».
 """
+# P115-AK. `python3 -I` (isolated mode) drops the SCRIPT'S OWN DIRECTORY from
+# sys.path, so a sibling import fails -- and `-I` is the invocation several of
+# this KB's own gate READMEs prescribe ("green under `python3 -I`"). Measured at
+# pass 115: all five python gates passed under plain `python3` and ALL FIVE
+# failed under `-I`, with a ModuleNotFoundError traceback. A gate that cannot be
+# RUN is a gate that passes everything, which is `P471`'s failure wearing a
+# different hat. Two lines make the documented invocation true.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+
 import unittest
 
 from gap_gate import (SCOPE_CHANNEL, SCOPE_INDEX, SCOPE_UNDETERMINED, V_CONTRADICHO,

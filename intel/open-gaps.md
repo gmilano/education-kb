@@ -4,6 +4,244 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-fifteenth pass, 2026-10-11 — **`Gap 403` MEASURED** (its own pre-registered remedy yields 12 rows of 193); **`Gap 405` OPENED** (the channel that works is right on everything checkable and unverifiable on 58 % of what it claims); **`Gap 402` WEAKENED** for the first time in eleven passes; `T50`–`T52`, `P115-A`–`P115-AJ` adopted; the suite found **six** faults in this instrument before the shelf did, and the pass owns a **seventh of its own making**
+
+⏱️ **Second pass of 2026-10-11.** Census window **01:13 → 01:25 UTC** (p114 ran 23:54 → 00:25
+across midnight). 🟢 **`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0
+failed**, fully offline; `region.sh` read **296 of 296** addresses, `rc=0` on every one, **zero
+unread, zero empty trees**, 579 448 files enumerated; **four** controls re-derived from the
+same token snapshot in 2.5 s each.**
+
+🔵 **Ninth axis in nine passes, fifth read from the TREE, and the first whose axis is the
+brief's own `region` field rather than a property of the code.**
+
+### 🟢 `Gap 403` — MEASURED, and it stays open for a different reason than it was opened for
+
+🔵 **p113 opened it, p114 corroborated it from an independent axis, and `intel/market.md`
+pre-registered the remedy: *"offline, zero-egress and bounded — extend the placement file —
+which makes it the cheapest open item on this page."* p115 ran exactly that.**
+
+| | |
+|---|---|
+| rows with a structured metadata file at the ROOT | 175 of 296 |
+| 🔴 rows committing no structured metadata ANYWHERE | 🔴 **82** |
+| rows whose own root metadata places them | 🔴 **22 (7.4 %)** |
+| of those, new against the committed org map | 🟡 **11 unplaced + 1 provisional = 12** |
+| 🔴 **the remedy, measured** | 🔴 **12 of 193 — 6.2 %** |
+| coverage, settled, before → after | 93 (31.4 %) → 🟡 **105 (35.5 %)** |
+| 🔴 still UNPLACED | 🔴 **182 (61.5 %)** |
+
+🔴 **Bounded, yes. Cheap, no.** 🔵 **What keeps the gap open has changed, and that is the
+useful part: it is no longer "nobody has extended the file", it is **"the structured-metadata
+channel is nearly empty, and the channel that works has not been validated"**. A gap whose
+stated remedy has been tried and measured is in a better state than one whose remedy is still
+a guess, even when the number is disappointing.**
+
+### 🔴 🆕 `Gap 405` — OPENED: layer R is right on everything checkable and unverifiable on most of what it claims
+
+| | layer 0 (root metadata) | layer R (the README) |
+|---|---|---|
+| rows placed | 22 | 🟢 **59** |
+| placed beyond the other layer's reach | — | 🟢 **48** |
+| agreement with the committed org map | 10 of 10 | 🟢 **25 of 25, 0 contradictions** |
+| 🔴 rows with no settled org to check against | 12 | 🔴 **34 of 59 (58 %)** |
+| 🔴 of the 11 rows BOTH place, how many read the SAME host | — | 🔴 **8** |
+
+🔵 **p115 built layer R as a throwaway — a CEILING declared never to place a row — and it is
+the channel that works.** 🔴 **Two facts keep it from being promoted: the 25/25 is measured on
+42 % of its own output, and its agreement with layer 0 is mostly one piece of evidence counted
+twice (8 of 11 shared rows read the same hostname).**
+
+🟢 **The clearest single argument for promoting it, and the reason the gap is worth a number:
+APAC places ZERO rows at layer 0 and SEVEN at layer R** — `aiverifyfoundation.sg` +
+`www.imda.gov.sg` (government class, three addresses), `acm.hdu.edu.cn` and
+`www.gavo.t.u-tokyo.ac.jp` (academic class), `educhain.in`, `ai-studyhub.cn`. 🔵 **APAC's zero
+is a property of where the instrument looks, not of the shelf.**
+
+🟢 **ACTION A, pre-registered with its refutation clause:** validate layer R on the 34 rows
+with no settled org, by a second channel (`raw.githubusercontent.com` reaches `CODEOWNERS`,
+`.github/FUNDING.yml` and `AUTHORS`, none of which this pass reads). 🔴 **Refuted if layer R
+contradicts the second channel on ≥ 3 of 34.**
+
+### 🟡 `Gap 402` — WEAKENED for the first time in eleven passes, and weakened honestly
+
+| | p114 | 🆕 p115 |
+|---|---|---|
+| candidate tokens extracted and checked | 49 | **61** |
+| already held | 49 | 55 |
+| 🟢 **new** | 🔴 **0** | 🟢 **6** |
+
+🔵 **Not closed. 55 of 61 were already held, and the two queries that produced the six new
+items were FOLLOW-UPS, not the mandated eight — so the mandated set is still exhausted and the
+gap's substance stands.** The ledger, every token class and the two rejections are in
+`intel/market.md` under `P115-R`.
+
+### 🟢 The two new items, each with its verification state attached
+
+🟢 **`P115-T` — the Epesi family.** An MIT CRM/ERP platform this KB never held, returned under
+FOUR GitHub addresses, with the grant in the tree of exactly **one**:
+[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) (`rc=0`, 1 375 files, last commit
+2026-10-07, root `LICENSE` = MIT, "Copyright (c) 2006-2026 Janusz Tylek").
+🔴 [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) **UNREAD**;
+[`cezarc/EPESI`](https://github.com/cezarc/EPESI) last commit **2013-11-22** and **no licence
+file**; [`Telaxus/EPESI`](https://github.com/Telaxus/EPESI) a **one-file husk** whose entire
+tree is a 3-byte `README.md` reading `:3`. 🔵 **Two of the three decoys are named by 2026
+roundups as the project's home.**
+
+🟡 **`P115-S` — North Carolina §7.39 of Session Law 2026-41.** The first new North America
+regulation token in eleven passes: effective 1 July 2026, DPI model AI-use policy by 31
+December 2026, local board policies, an evaluation framework for generative-AI educational
+tools, a public approved-tool list, teacher AI PD by 30 June 2028, AI literacy in the K-12 CS
+standards from 2028-29. 🔴 **Published as `candidate · unverified-at-primary`: the enacted text
+has a URL and this session cannot reach it. Not a 404 and not a host 403 — a refusal at the
+CONNECT layer, read from the refusing layer's own ledger (`P798`'s channel) with host and
+timestamp:**
+
+```
+connect_rejected · gateway answered 403 to CONNECT
+www.ncleg.gov:443   2026-10-11T00:50:13Z, 00:50:31Z, 01:16:17Z
+ncleg.gov:443       2026-10-11T00:50:31Z
+www.dpi.nc.gov:443  2026-10-11T00:50:31Z, 01:16:17Z
+en.wikipedia.org:443  refuses identically — P798's control, still holding
+```
+
+🔵 **`P798`'s ledger gains a NEW MECHANISM this pass: `WebFetch` fails with
+`getaddrinfo ENOTFOUND` on every host tried — a DNS-layer refusal, distinct from the
+CONNECT-layer `403` that `curl` sees. Two tools, two mechanisms, same allowlist.**
+
+### 🟡 `P115-W` — the one-row disagreement p114 recorded and declined to reconcile is CASE FOLDING
+
+p114: *"the two readings of the same committed file differ by ONE row. [...] the likely cause
+is the treatment of the 11 provisional placements."*
+
+| reading | settled | provisional | unplaced |
+|---|---|---|---|
+| case-**sensitive** org prefix | 93 | 10 | 🟡 **193** ← p113, and `Gap 403` |
+| case-**insensitive** org prefix | 93 | 11 | 🟡 **192** ← p114 |
+
+🔴 **The row is `apereo-learning-analytics-initiative/larissa`.** The shelf holds SIX addresses
+under `Apereo-Learning-Analytics-Initiative/` and ONE under the lowercase spelling.
+🟢 **GitHub resolves org names case-insensitively, so p114's 104/192 is the correct reading and
+p113's 103/193 is not — for a reason neither pass stated.** 🔴 **The defect is in neither map:
+the SHELF holds one organisation under two spellings** (`p439-case-collision-gate` /
+`p443-canonical-spelling` family, landing on `addresses.txt`). 🔵 **Not fixed: p114 carried
+`addresses.txt` verbatim from p112 so the cross-tabs stay row-for-row, and silently
+re-spelling a row would break nine passes of comparability invisibly. **ACTION B**: re-spell
+it in a commit that changes nothing else, so the break happens once and visibly.**
+
+### 🟢 `P115-X` — one of p112's three contested placements is settled
+
+[`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor):
+`EMEA?` → 🟢 **North America**, on `vt.edu` (Virginia Tech, `academic` class), which is where
+p112's own note suspected it belonged. 🟡 **ONE ADDRESS, not the org — `P115-U`'s placement
+file is address-keyed precisely because one org can hold repositories maintained from
+different places, and the other six `Apereo-…` addresses place nothing at layer 0.**
+
+### 🟢 Every rule of this instrument is a number, not an assertion
+
+🔵 **Each was switched off over the SAME 296 token streams (`P115-Q`), so the controls and the
+census read one snapshot rather than two:**
+
+| control | rows it moves | the worst named row |
+|---|---|---|
+| `novanity` | 🔴 **+4 wrong, 3 into LATAM** | 🔴 [`huggingface/transformers`](https://github.com/huggingface/transformers) → **LATAM** on `huggingface.co` |
+| `nostop` | 🟡 **+2, and they were RIGHT** | two `opetushallitus` rows → EMEA on 🔴 `ec.europa.eu` (right region, invalid reasoning) |
+| `flat` | 🔴 **+7, ≥2 demonstrably wrong** | 🔴 [`atutor/ATutor`](https://github.com/atutor/ATutor) → LATAM on a Brazilian library author's domain |
+| `nor` | 59 → 0 `r-placed`, layer 0 unchanged at 22 | — |
+
+🔴 **LATAM places 6. Without the vanity class it places 9, and a THIRD of the region's figure
+would be `.co` and `.ai` vanity domains. On a brief whose purpose is that a LATAM engagement
+is as well served as a North American one, that is the error most worth preventing.**
+
+### 🟡 Six faults the suite found in this instrument before the shelf did
+
+| fault | what it would have published |
+|---|---|
+| `P115-L` | `mawk 1.3.4` will not compile `/^[0-9a-f]{40}( \|$)/` — it aborts the program |
+| `P115-M` | the committed maps were loaded **by filename**, and the driver materialises them under other names for the controls → 🔴 **296 rows of `no-country`, with a straight face.** Now positional, with a `MAPFAIL` guard |
+| `P115-O` | the `eval` key class `[a-z_]*`, copied from p112/p114 whose keys carry no digits → 🔴 `region_0=North America` passed through unquoted and the shell ran `America` as a command. **A copied idiom is a parameter too** |
+| `P115-P` | `regionlist()` iterated an awk array, whose order is unspecified → `EMEA\|APAC` and `APAC\|EMEA` for the same evidence; verdict right, **bytes not reproducible** |
+| — | `P115_NO_R=1` left the readme COUNTER on → a control misreporting its own reason |
+| — | `printf` arity: 36 specifiers for 37 columns, **twice** |
+
+🔵 **A seventh was found in the SUITE rather than the instrument and is kept as a fixture: a
+bundled fixture planted at `lib/thirdparty/package.json` was excluded as vendored —
+correctly — and moved to `lib/bundled/`, which is the shape `P115-N` is actually about.**
+
+### 🔴 The seventh fault is the pass's own, and it is an operational one
+
+🔴 **I edited `region.sh` WHILE the census was running** — file mtime `01:21:04`, inside the
+`01:13 → 01:25` window — to add the `class_0` column. Bash re-read the script from a byte
+offset and emitted one parse error to stderr.
+
+🟢 **What saved it: the 296 token streams were already on disk, so the published
+`result.2026-10-11.tsv` is the REPLAY, produced from those streams with the final code — and
+its 38 shared columns are `md5`-identical to the live run's, row for row (`1545c426f7ff…`).**
+🔵 **`P115-Q` was built to make the controls comparable; what it actually did was make a run
+with a changing script salvageable, and the agreement is checkable rather than asserted.**
+🔴 **The rule this pass hands on: a census is a RUN, and editing the script inside its window
+is editing the instrument mid-measurement. Keep the streams; they are the evidence, and the
+TSV is only a derivation.**
+
+### 🟢 🆕 `P115-AK` — all five of this KB's python gates failed under the invocation their own READMEs prescribe, and now do not
+
+🔵 **Found while validating this pass's writes against the gates, which is what the gates are
+for. The environment's standing instruction is to run python over downloaded or untrusted
+input with `python3 -I`, and several of these gates' own READMEs state their suites are
+"green under `python3 -I`". Measured:**
+
+| gate | `python3` (plain) | 🔴 `python3 -I` (as documented) |
+|---|---|---|
+| `p370-gap-gate` | 🟢 **27/27** | 🔴 **`ModuleNotFoundError: test_gap_gate`** |
+| `p471-gap-gate-language` | 🟢 **25/25** | 🔴 **`ModuleNotFoundError: test_gap_language`** |
+| `p243-frontmatter-coverage` | 🟢 **23/23** | 🔴 **`ModuleNotFoundError: check_frontmatter`** |
+| `p239-table-integrity` | 🟢 **OK** | 🔴 **`ModuleNotFoundError: check_tables`** |
+| `p383-region-heading-gate` | 🟢 **11/11** | 🔴 **`ModuleNotFoundError: check_headings`** |
+
+🔴 **Five of five. The cause is one line of Python semantics: `-I` is isolated mode and it
+drops the SCRIPT'S OWN DIRECTORY from `sys.path`, so every sibling import fails.** 🟢 **The
+gates themselves were never broken — their documented invocation was, and `-I` also ignores
+`PYTHONPATH`, so the obvious workaround does not work either.**
+
+🔵 **Why it is worth a finding and not a footnote: this is `P471`'s failure wearing a
+different hat. `P471` recorded that a gate which cannot parse its input returned the same
+verdict as a clean tree — "nothing to judge" where the truth was "I cannot read this". A gate
+that cannot be RUN is the same shape one step earlier, and a traceback is only loud while a
+human is reading it. Any wrapper that checked an exit code and not the output would have
+reported five clean gates.**
+
+🟢 **FIXED, in two lines per file, and verified in both directions:** each gate and each suite
+now inserts its own directory at the head of `sys.path`, and all five pass **27/27, 25/25,
+23/23, OK, 11/11 under `python3 -I` AND unchanged under plain `python3`** — no regression in
+the invocation earlier passes actually used.
+
+🔵 **What the gates then said about this pass's writes, which is the reason they were run:**
+
+| gate | verdict on the p115 sections |
+|---|---|
+| `p383-region-heading-gate` on `intel/market.md` | 🟢 **0 findings** — after a real fix, below |
+| `p239-table-integrity` over all ten edited pages | 🟢 **0 NEW findings** — the 4 it reports are byte-identical to the 4 on the pre-p115 committed files, at line numbers offset by exactly the length of each prepended section (+76, +101, +101, +87) |
+| `p243-frontmatter-coverage` | 🟢 the new `p115-region-evidence/README.md` carries complete frontmatter with `region` in vocabulary |
+| `p370-gap-gate --sweep` | 🟢 **5 declared gaps with a region, none of them this pass's** — and this pass's APAC gap is written in the scoped form p113 was praised for: *"APAC's zero is a property of WHERE this instrument looks, not of the shelf"*, never "the shelf has no APAC rows" |
+
+🔴 **The real fix `p383` forced, recorded because the first draft was wrong:** this pass's
+first write added a SECOND `## Opportunities by region` block at the top of
+`intel/market.md`. 🟢 **The gate caught it, and the file's actual convention turned out to be
+one CUMULATIVE canonical block whose four `###` subsections each carry a dated entry per
+pass. The p115 entries were folded into the existing subsections and the duplicate block
+removed — gate now 0 findings.** 🔵 **A heading level is a type contract (`p383`'s own
+words), and a prepend-only page is exactly where that contract gets broken by accident.**
+
+### 🔵 What this pass did NOT do
+
+🔵 **No licence, reach, recency, bus-factor or provider-binding verdict was changed. No address
+was added to or removed from `addresses.txt`** — it is p112's, carried verbatim so every
+cross-tab is row-for-row against p114, which is also why the new Epesi row and the case
+collision are pre-registered actions rather than edits. 🔵 **No lockfile body was read, and no
+pattern was retired.** 🔴 **And layer R was not promoted, on 59 rows of evidence that agree
+25 of 25 — because `Gap 405` names what is missing and a channel is promoted on validation,
+not on a good first impression.**
+
 ## 🟢 Hundred-and-fourteenth pass, 2026-10-11 — **`Gap 404` OPENED** (`*_requirements.txt` is invisible to the classifier p112 and p114 share, and it costs exactly one verdict); **`Gap 403` CORROBORATED from an independent axis**; `T47`–`T49`, `P114-A`–`P114-K` adopted; the instrument's own suite caught the rule error before the shelf did
 
 ⏱️ **First pass of 2026-10-11.** Census window **2026-10-10 23:54 UTC → 2026-10-11

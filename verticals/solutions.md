@@ -6,6 +6,100 @@ updated: 2026-10-11
 
 # Education — vertical platforms and solutions
 
+**Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**01:13 → 01:25 UTC**).
+
+🟢 **`region.sh` read **296 of 296** addresses in 12 min, zero unread
+(`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0 failed**, fully
+offline), with four controls re-derived from the same token snapshot.**
+
+🟢 **This pass ADDS A PLATFORM to this page for the first time in eleven passes — and the
+interesting part of the finding is the three addresses it did not add.**
+
+### 🟢 🆕 `P115-T` — the Epesi family: the licence claim is true, and three of its four addresses cannot support it
+
+🔵 **The mandated platform query (`open source platform education ERP CRM MIT Apache`,
+extended mode, computed year 2026) returned Epesi BIM — an MIT-licensed PHP CRM/ERP
+rapid-development platform this KB has never held — and returned FOUR GitHub addresses for
+it, two of which the roundups name as "the main project page" and "the source code
+location". Read on the git lane, licence taken FROM THE TREE, one of the four is usable:**
+
+| address | git lane | files | last commit | licence IN THE TREE | verdict |
+|---|---|---|---|---|---|
+| [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | 🟢 `rc=0` | **1 375** | 🟢 **2026-10-07** | 🟢 **`LICENSE` = MIT, "Copyright (c) 2006-2026 Janusz Tylek"** | 🟢 **the canonical live address** |
+| [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) | 🔴 **UNREAD** | — | — | — | 🔴 **does not resolve; a roundup calls it "the main project page"** |
+| [`cezarc/EPESI`](https://github.com/cezarc/EPESI) | 🟢 `rc=0` | 5 559 | 🔴 **2013-11-22** | 🔴 **NONE — no `LICENSE`, no `COPYING`** | 🔴 **thirteen years stale and unlicensed, described as "also MIT licensed"** |
+| [`Telaxus/EPESI`](https://github.com/Telaxus/EPESI) | 🟢 `rc=0` | 🔴 **1** | 2026-06-27 | 🔴 **NONE** | 🔴 **a HUSK: one 3-byte `README.md` reading `:3`, nothing else** |
+
+🟢 **The finding is not "Epesi is MIT".** It is that a 2026 search for an MIT platform hands
+you four addresses, asserts the licence of three, and **the grant exists in the tree of
+exactly one** — while the two it recommends most confidently are a non-resolving slug and an
+emptied repository whose entire content is a three-byte file.
+
+🔵 **`P249` is the rule this obeys — calibrate the channel before believing a negative. The
+git lane answers `rc=0` for `cezarc` and `Telaxus` and `UNREAD` for `Epesi-Team`, so it DOES
+discriminate, and the two `NONE` readings are reads of a real tree rather than a channel
+failure.** 🔴 **`curl -sI` would have answered `403` to all four and told us nothing
+(`P247`/`P249`).**
+
+### 🟡 What `jtylek/EpesiCRM` actually is, stated because the roundups do not
+
+| | |
+|---|---|
+| default branch | 🟡 **`laravel`** — not `main`, not `master` |
+| state of the tree | 🟡 **a Laravel 12 + Filament rewrite IN PROGRESS** |
+| 🔴 licence layer split | 🔴 **the root `LICENSE` is Epesi's MIT grant; `composer.json` still carries the Laravel skeleton's own metadata — `"name": "laravel/laravel"`, `"description": "The skeleton application for the Laravel framework."`** |
+| 🔴 education-specific content | 🔴 **NONE — zero paths matching `education\|student\|course\|school` in 1 375 files** |
+| 🟢 2026 maintenance signal | 🟢 **commits `AGENTS.md`, `CLAUDE.md` and an `AI-shared/` directory at the root** |
+
+🔵 **The licence split is the root-versus-manifest distinction `p199` and `p283` measure,
+found live on a brand-new row: the grant and the manifest's `license` field at the same
+address belong to different projects.** 🟢 **A studio quoting this row must quote the ROOT
+`LICENSE`, and must not read `composer.json`'s `MIT` as Epesi's own statement.**
+
+🔴 **CLASSIFICATION, stated so it cannot be mis-shelved: Epesi is a GENERIC platform.** It
+belongs in the Odoo / Corteza / Krayin class — something an education vertical can be BUILT
+on — and never in a table of education systems. 🟡 **And it is mid-rewrite on a non-default
+branch name, which is a maturity caveat, not a recommendation.** 🔵 **It is NOT added to
+`addresses.txt` this pass: that file is carried verbatim from p112 so every cross-tab above
+is row-for-row against p114. Adding it is pre-registered as action D.**
+
+### 🟢 🆕 `P115-AJ` — the platforms on this page, re-read on committed regional evidence
+
+🔵 **Eighteen platform rows. Two place from their own root metadata; layer R would add two
+more, and both of its additions carry stronger evidence than most of layer 0's:**
+
+| platform | 🆕 layer 0 | 🆕 layer R | evidence |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`placed` EMEA** | 🟢 `r-placed` EMEA | `tum.de`, `aet.cit.tum.de` → README adds `docs.artemis.tum.de`, `apollon.ase.in.tum.de`, `xcit.tum.de` |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **`typed` EMEA** | 🟢 `r-placed` EMEA | 🟢 **a CFF `country: GB` field — and the README independently adds `www.ncl.ac.uk` (Newcastle University), which is real corroboration rather than the same host read twice** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `no-country` | 🟢 **`r-placed` EMEA** | `www.ilias.de`, `docu.ilias.de` |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🔴 `no-address` | 🟢 **`r-placed` North America** | 🟢 **`compsci.rpi.edu`, `www.rpi.edu` — RPI, `academic` class** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `no-address` | 🔴 `r-no-country` | — |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`edly-io/pxc`](https://github.com/edly-io/pxc) | 🔴 `no-address` | 🔴 `r-no-country` | — |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🔴 `nested-only` | 🔴 `r-no-country` | — |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔴 **`no-struct`** | 🔴 `r-no-country` | 🔵 an odoo `__manifest__.py` is not a structured metadata file this instrument reads |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 `no-address` | 🔴 `r-no-country` | — |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 `no-country` | 🔴 `r-no-country` | — |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🔴 `no-address` | 🔴 `r-no-country` | — |
+
+🔴 **No platform on this page places APAC or LATAM from committed evidence at any layer.**
+🔵 **Stated per the brief rather than left silent: the two regions this page has the fewest
+platform rows for are also the two whose rows say least about themselves.**
+
+🟡 **Nothing on this page had its licence, reach or stand-up verdict changed by p115 — the
+`Submitty/Submitty` correction p114 published stands exactly as written.** 🟢 **What p115 adds
+is one platform row, three refuted addresses, and a committed region for four of the eighteen.**
+
+# Education — vertical platforms and solutions
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
 **2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
 

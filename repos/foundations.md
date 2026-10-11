@@ -6,6 +6,85 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**01:13 → 01:25 UTC**).
+
+🟢 **`region.sh` read **296 of 296** addresses in 12 min, zero unread, zero empty trees
+(`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0 failed**, fully
+offline), plus four controls re-derived from the same token snapshot in 2.5 s each.**
+
+### 🔴 🆕 `P115-AF` — the nine `checked` foundations place ZERO rows, and that is a property of being a foundation
+
+🔵 **p112 shrank this page to nine `checked` code repositories and p114 re-read them on lock
+reach. p115 reads the same nine, in the same order, on whether their own root metadata names
+a country:**
+
+| repo | licence | p112 | p114 | 🆕 p115 layer 0 | 🆕 layer 1 | 🆕 layer R |
+|---|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3 | 🟢 `pinned` | 🟢 `full-reach` | 🔴 `no-country` | 🔴 **`n-contested`** | 🔴 `r-no-country` |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | 🟢 MIT | 🟢 `pinned` | 🟢 `full-reach` | 🔴 `no-country` | 🔴 `n-no-country` | 🔴 `r-no-country` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | 🟢 `pinned` | 🟢 `full-reach` | 🔴 `no-country` | `n-none` | `r-none` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟡 `partial-pin` | 🟡 `partial-reach` | 🔴 `no-country` | 🔴 `n-no-country` | 🔴 `r-no-country` |
+| [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🟢 Apache-2.0 | 🟡 `partial-pin` | 🔴 `partial-reach`, root | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🔵 `self-pinned` | 🔵 `self-pinned` | 🔴 `no-country` | 🔴 `n-no-country` | 🔴 `r-no-country` |
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🟢 Apache-2.0 | 🔴 `floating` | 🔴 `partial-reach`, root | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 AGPL-3 | 🔴 `floating` | 🔴 `no-reach` | 🔴 `no-country` | `n-none` | 🔴 `r-no-country` |
+
+🔴 **Nine of nine `no-country`, at every layer. Not one foundational repository on this page
+commits an address that names a country.** 🟢 **And the reason is not neglect — it is
+structural, and it reverses the intuition a reader brings:**
+
+🔵 **These nine are the largest, longest-lived, most international projects on the shelf. A
+project at that scale registers `moodle.org`, `oppia.org`, `temporal.io`, `dspace.org`,
+`huggingface.co` — a generic or vanity TLD, deliberately, because a country code in the
+domain of a global project is a liability. 🔴 **Placeability on this channel is inversely
+related to project maturity**: the rows that place are small academic repositories whose
+maintainer still uses a university email, and the rows that cannot place are the ones a
+studio is most likely to build on.**
+
+### 🟡 🆕 `P115-AI` — `moodle/moodle` is the worked example of why layer 1 is never folded in
+
+| layer | verdict | evidence |
+|---|---|---|
+| **0** (root) | 🔴 `no-country` | one address, not country-bearing |
+| **1** (nested) | 🔴 **`n-contested`** | 🔴 **`gjcampbell.co.uk`, `tubo-world.de`, `www.mullie.eu` — maintainer emails of libraries Moodle BUNDLES under `lib/`** |
+| **R** (README) | 🔴 `r-no-country` | — |
+
+🔵 **Moodle HQ is in Perth and the committed org map places it APAC. A flat read of this tree
+— every structured file, root and nested alike — offers TWO EUROPEAN COUNTRIES for an
+Australian project**, and `region` is a field this KB filters on, so a wrong value reads
+downstream as data and not as a guess (`P800`). 🟢 **`P115-F` excludes `vendor/` and
+`node_modules/`; it cannot exclude `lib/`, because `lib/` is also where a project keeps its
+own code. Depth can — and the suite pins this as a regression on a fixture whose bundled
+libraries are both European, so layer 1 returns a single CLEAN region and a flat read would
+have published it.**
+
+🟢 **Measured shelf-wide by the `flat` control: the pre-depth-split read would have placed
+**7 extra rows**, of which at least two are demonstrably wrong —
+[`atutor/ATutor`](https://github.com/atutor/ATutor) into LATAM on `tiagogouvea.com.br` (ATutor
+is a Toronto project) and [`elmsln/elmsln`](https://github.com/elmsln/elmsln) into EMEA on
+three JS/PHP library authors' domains.**
+
+### 🟢 🆕 The rows on the wider shelf that DO place, and what placed them
+
+🔵 **22 of 296 at layer 0. Every North America placement — all seven — is `academic`:**
+
+| region | places | strongest class present |
+|---|---|---|
+| **EMEA** | 9 | 1 `academic`, 1 `typed`, 7 `other` |
+| **North America** | 7 | 🟢 **7 `academic`** — `berkeley.edu` ×3, `brynmawr.edu`, `calpoly.edu`, `lafayette.edu`, `gatech.edu`, `nd.edu`, `vt.edu`, `csail.mit.edu` |
+| **LATAM** | 6 | 2 `typed` (`country: BR` ×2), 4 `other` (`.com.br` ×3, `ipn.mx`) |
+| 🔴 **APAC** | 🔴 **0** | — |
+
+🟢 **`.edu` is the single most productive token on this shelf** — a registry-restricted
+suffix that names an institution and a country in the same string. 🔵 **The committed
+address-keyed placements are in
+`compose/code/p115-region-evidence/addresses.region.tsv`; the method, every control and the
+pre-registered actions are in that directory's `README.md`.**
+
+# Education — foundational repos
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
 **2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
 

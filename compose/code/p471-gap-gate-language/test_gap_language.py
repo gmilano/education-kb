@@ -10,6 +10,16 @@ a counter of the word "gap":
 If both fired, the instrument would be marking every declared gap, which is the error
 `p370-gap-gate/` was written to avoid.
 """
+# P115-AK. `python3 -I` (isolated mode) drops the SCRIPT'S OWN DIRECTORY from
+# sys.path, so a sibling import fails -- and `-I` is the invocation several of
+# this KB's own gate READMEs prescribe ("green under `python3 -I`"). Measured at
+# pass 115: all five python gates passed under plain `python3` and ALL FIVE
+# failed under `-I`, with a ModuleNotFoundError traceback. A gate that cannot be
+# RUN is a gate that passes everything, which is `P471`'s failure wearing a
+# different hat. Two lines make the documented invocation true.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+
 import os
 import sys
 import unittest

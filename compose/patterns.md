@@ -6,6 +6,186 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 115, 2026-10-11.** Census window **01:13 → 01:25 UTC**.
+🟢 **`compose/code/p115-region-evidence/`, `test_p115.sh` 193 passed / 0 failed, fully
+offline; `region.sh` read 296 of 296 addresses, zero unread, four controls from one snapshot.**
+
+## 🔴 `P115-GATE` — the region gate, run before any regional claim about a starting point reaches a client
+
+🔵 **Nine passes of this page have quoted patterns "for EMEA", "for LATAM", "for APAC". p115
+measured where those regions actually come from, and the answer changes what may be said:**
+
+| source of a row's region | rows | may a client-facing claim rest on it? |
+|---|---|---|
+| a TYPED `country:` field in the row's own `CITATION.cff` | **3** | 🟢 **yes — it is a declaration, machine-readable, by schema** |
+| an `academic` / `government` address in the row's ROOT metadata | **8 + 0** | 🟢 **yes — a registry-restricted suffix names an institution and a country in one token** |
+| an `other`-class ccTLD in the row's ROOT metadata | **11** | 🟡 **only with the evidence quoted beside it** — a company or personal domain is not an institution (`P800`) |
+| this KB's committed org record (`orgs.region.tsv`) | **93** | 🟡 **yes, labelled as this KB's record — not the repository's statement** |
+| the row's README (layer R) | **59** | 🔴 **NOT YET — `Gap 405`; 25 of 25 agree but 58 % is uncheckable** |
+| a NESTED metadata file | — | 🔴 **NEVER (`P115-N`)** |
+| 🔴 **nothing at all** | 🔴 **182 of 296** | 🔴 **then the pattern is REGIONLESS and must be sold as such** |
+
+### 🟢 The gate as three commands, so it is checkable rather than quotable
+
+```sh
+cd compose/code/p115-region-evidence
+
+# 1. does the row state its own region, and on what class of evidence?
+grep -P '^<org>/<repo>\t' addresses.region.tsv
+
+# 2. if not, does this KB's org record place it — settled or provisional?
+awk -F'\t' -v o="<org>" '!/^#/ && $1==o' orgs.region.tsv
+
+# 3. what did the census actually see? (layer 0 / layer 1 / layer R, side by side)
+awk -F'\t' -v s="<org>/<repo>" 'NR==1||$1==s' result.2026-10-11.tsv | cut -f1,20,21,25,26,30,31,36,37,38
+```
+
+🔴 **If step 1 is empty, step 2 is empty or ends in `?`, and step 3 says `no-struct`, the row
+has NO region. Nine of the patterns below carry a region in their title; each is re-checked
+against this gate under `P115-PAT-CHECK`.**
+
+## 🟡 `P115-PAT-CHECK` — the regional patterns on this page, re-checked
+
+| pattern | its region | the row it rests on | 🆕 evidence for that region |
+|---|---|---|---|
+| `PB1` sovereign tutor (EMEA) | EMEA | `moodle/moodle` + local model | 🔴 **`no-country` at every layer — the EMEA claim is the DEPLOYMENT's, not the repo's.** 🟢 Still sound: the pattern's EMEA-ness is the sovereignty requirement, not the maintainer's address. **Re-worded, not retired.** |
+| `P112-PAT-2` LATAM Brazilian SIS line | LATAM | `portabilis/i-educar`, `portabilis/pre-matricula-digital` | 🟢 **CONFIRMED by committed evidence — both place LATAM on `portabilis.com.br`** |
+| `P112-PAT-3` APAC AI-assurance harness | APAC | `aiverify-foundation/moonshot` family | 🟡 **layer R places all three APAC on `aiverifyfoundation.sg` + `www.imda.gov.sg` (government class) — the best APAC evidence on the shelf, and layer 0 places NONE of it.** 🔴 The APAC label is correct and currently rests on a channel `Gap 405` has not cleared |
+| `P112-PAT-4` EMEA sovereign teacher assistant | EMEA | `openfun/richie` among others | 🟢 **CONFIRMED — `openfun/richie` and `openfun/xblock-proctor-exam` both place EMEA on `fun-mooc.fr`** |
+| `P112-PAT-5` North America (pin first) | North America | `jupyterhub/jupyterhub`, `Submitty/Submitty` | 🟡 **`jupyterhub` is `no-country`; `Submitty` places North America at layer R on `compsci.rpi.edu` / `www.rpi.edu` (`academic`).** Label correct, evidence one layer below the gate's bar |
+| `P109-A-PAT` Brazil BNCC alignment service | LATAM | `bncc-dev/bncc-dados`, `bncc-dev/bncc-pacotes` | 🟢 **CONFIRMED AT THE STRONGEST CLASS — both carry a TYPED `country: BR` in their `CITATION.cff`. The only patterns on this page whose region is a machine-readable declaration** |
+| `P106-A` Moodle AI seam | GPL-3, no region | `moodle/moodle` | 🔵 no regional claim made — nothing to check |
+| `P106-B` EUPL Finnish national registry | EMEA | `opetushallitus/*` | 🟢 **CONFIRMED — `opetushallitus/ehoks` places EMEA on `artifactory.opintopolku.fi`.** 🟡 **And two sibling rows would have placed EMEA on `ec.europa.eu` had the stoplist been off: right region, invalid evidence (`P115-AB`)** |
+| `P104-A` sovereign no-egress tutor (EMEA, LATAM) | both | LMS rows | 🔴 **regionless at layer 0; sell it on the sovereignty requirement, not on maintainer geography** |
+
+🟢 **Nothing is retired. Two patterns are UPGRADED to committed evidence (`P109-A-PAT` at the
+typed class, `P112-PAT-2` and `P112-PAT-4` at the root-metadata class), and four are
+re-labelled: their region is a property of the DEPLOYMENT or of this KB's record, not a claim
+the repository makes about itself.**
+
+## 🟢 🆕 `C115-1` — the region-matched starting-point shortlist (any region; half a day)
+
+🔵 **What it is.** The question a client asks in the first week — *"give me a starting point
+that is maintained in our region, builds reproducibly on day one, and whose licence we can
+ship"* — answered from committed files only, with no judgement calls and no egress.
+
+**Wire it from what is already here.** Three committed TSVs, one join:
+
+```sh
+cd compose/code
+
+# region (p115) x lock reach (p114), joined on the address
+join -t$'\t' -1 1 -2 1 \
+  <(awk -F'\t' '!/^#/ && NF>=5 {print $1"\t"$2"\t"$4}' p115-region-evidence/addresses.region.tsv | sort) \
+  <(awk -F'\t' 'NR>1 {print $1"\t"$18}' p114-lock-reach/result.2026-10-11.tsv | sort)
+# -> address  region  evidence-class  reach-verdict
+
+# add this KB's org record for the rows p115 cannot place
+awk -F'\t' '!/^#/ && NF>=2 {print $1"\t"$2}' p115-region-evidence/orgs.region.tsv
+```
+
+**The decision rule, in priority order:**
+
+| rank | region evidence | reach | what to do |
+|---|---|---|---|
+| 1 | `typed` or `academic`/`government` | `full-reach` or `vendored` | 🟢 **adopt as-is** |
+| 2 | `typed` / `academic` / `government` | `partial-reach` | 🟢 adopt + the `C114-1` fork-time pin step |
+| 3 | `other` | any | 🟡 adopt, but **quote the evidence host to the client** — it may be a personal domain |
+| 4 | org record only | any | 🟡 label the region as this KB's record |
+| 5 | 🔴 nothing | any | 🔴 **a regionless row: do not answer the region question with it** |
+
+🔵 **What it costs and buys.** Half a day, zero egress, and it replaces the conversation where
+a studio asserts a region and is later asked where that came from. 🔴 **Its honest limit: on
+this shelf rank 5 is **182 of 296 rows**, so the shortlist it produces is short. That is the
+point — a short list with provenance beats a long one without.**
+
+## 🟡 🆕 `C115-2` — the Epesi evaluation spike, with a go/no-go rule (any region; 1 day)
+
+🔵 **Why it is a spike and not a recommendation.**
+[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) is the only new platform this KB has
+admitted in eleven passes: MIT in its root `LICENSE` ("Copyright (c) 2006-2026 Janusz Tylek"),
+1 375 files, last commit **2026-10-07**, PHP/Laravel 12 + Filament. 🔴 **It is also mid-rewrite
+on a non-default branch name (`laravel`), has ZERO education-specific paths, and its
+`composer.json` still carries the Laravel skeleton's metadata.** A row in that state earns a
+day of evaluation, not a place in an estimate.
+
+```sh
+# 1. the grant, from the tree, not from a roundup
+d=$(mktemp -d); git init -q --bare "$d"
+git --git-dir="$d" remote add origin https://github.com/jtylek/EpesiCRM
+git --git-dir="$d" config remote.origin.promisor true
+git --git-dir="$d" config remote.origin.partialclonefilter blob:none
+git --git-dir="$d" fetch -q --depth=1 --filter=blob:none origin HEAD
+git --git-dir="$d" ls-tree -r --name-only FETCH_HEAD | grep -iE '^(licen[cs]e|copying)'
+
+# 2. the branch it actually serves (NOT main)
+git ls-remote --symref https://github.com/jtylek/EpesiCRM HEAD
+
+# 3. does it reach its own locks? (run p114's instrument on it)
+printf 'jtylek/EpesiCRM\n' > /tmp/one.txt
+compose/code/p114-lock-reach/reach.sh /tmp/one.txt
+
+# 4. does it say where it is maintained? (run p115's)
+compose/code/p115-region-evidence/region.sh /tmp/one.txt
+```
+
+**Go / no-go, decided before the spike starts:**
+
+| finding | decision |
+|---|---|
+| root `LICENSE` is MIT **and** `reach.sh` says `full-reach` or `vendored` | 🟢 **GO** — use it as the back-office/admin layer under an education vertical built on top |
+| 🟡 `partial-reach` with the root manifest reached | 🟡 GO with the `C114-1` fork-time pin step in the estimate |
+| 🔴 root manifest orphaned, **or** the `laravel` branch is not where commits land | 🔴 **NO-GO** — vendor at a SHA and own the dependency set, or use Corteza / Krayin instead |
+| 🔴 any expectation of an education module | 🔴 **NO-GO as stated** — there is none; the education layer is YOUR build |
+
+🔵 **The three decoy addresses are part of the deliverable:**
+[`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) does not resolve on the git lane,
+[`cezarc/EPESI`](https://github.com/cezarc/EPESI) is thirteen years stale with no licence
+file, and [`Telaxus/EPESI`](https://github.com/Telaxus/EPESI) is a one-file husk — and 2026
+roundups name two of the three as the project's home. 🟢 **A client handed "Epesi, MIT" and
+left to find it themselves has a 1-in-4 chance of landing on the address that supports the
+claim.**
+
+## 🟡 🆕 `C115-3` — the North Carolina approved-tool register (North America; 3–4 wk) — CONDITIONAL
+
+🔴 **Published as CONDITIONAL and labelled so in every artefact, because the statute's text
+could not be verified on this channel (`P115-S`: `ncleg.gov` and `dpi.nc.gov` refused at the
+CONNECT layer, logged by host and timestamp).** 🔵 **Two independent secondary guides agree
+that §7.39 of NC Session Law 2026-41, effective 1 July 2026, requires NC DPI to publish a
+model AI-use policy by **31 December 2026**, local boards to adopt their own, a framework for
+evaluating generative-AI educational tools, a **public list of approved tools**, and teacher
+AI professional development by **30 June 2028**.**
+
+🟢 **Why this KB is unusually well placed if it holds: an "approved-tool list + evaluation
+framework" is a procurement artefact, and the evidence a procurement artefact needs is exactly
+what nine passes have measured on these 296 addresses.** Wire the register from the committed
+TSVs:
+
+| the register's column | where it comes from, already committed |
+|---|---|
+| licence, read from the tree | `p963-shelf-licence-agreement`, `p199-perfile-license` |
+| reproducible first install | `p114-lock-reach/result.2026-10-11.tsv` — the `verdict` column |
+| alive / bus factor | `p109-freshness`, `p110-bus-factor` |
+| whose model does it call | `p113-provider-binding` — `local` / `broker` / `override` / `hosted-only` |
+| 🆕 where it is maintained | `p115-region-evidence/addresses.region.tsv` + `orgs.region.tsv` |
+| 🔴 statutory basis | 🔴 **UNVERIFIED — `P115-S`. Step 0 of this pattern is reading the enacted text** |
+
+🔴 **Step 0, and it is a gate not a task: obtain
+`https://www.ncleg.gov/EnactedLegislation/SessionLaws/PDF/2025-2026/SL2026-41.pdf` and read
+§7.39. If the section does not say what the two guides say, this pattern is void.** 🟢 **No
+part of it should be quoted to a client before step 0 completes, and saying so is cheaper
+than withdrawing it later (`P113-T` is the precedent: a roundup reported a two-year-old UK
+procurement in the present tense with its date stripped off, and this KB nearly held it).**
+
+## 🔴 What this pass retired from the patterns on this page
+
+🟢 **Nothing.** 🔵 **p115 read a column no previous axis touched and changed no licence, reach,
+recency, bus-factor or provider-binding verdict.** 🟡 **What it changed is what a REGIONAL
+claim may rest on — which is why `P115-PAT-CHECK` re-labels four patterns rather than retiring
+them, and why the `other`-class rows now require their evidence host quoted beside them.**
+
+# Education — compose patterns
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
 **2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
 

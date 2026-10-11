@@ -6,6 +6,82 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (p114 ran 23:54–00:25 crossing
+midnight; this census window **01:13 → 01:25 UTC**).
+
+🟢 **Instrument this pass: `compose/code/p115-region-evidence/` — `test_p115.sh` **193 passed
+/ 0 failed** (fully offline: real git repositories committed on disk and served to the real
+`region.sh` over `file://`, no mocks); `region.sh` read **296 of 296** addresses in 12 min,
+`rc=0` on every one, **zero unread, zero empty trees**, 579 448 files enumerated, plus
+**four** controls re-derived from the same token snapshot.**
+
+🔵 **Ninth axis in nine passes and the fifth read from the TREE. It is the first pass whose
+axis is the brief's own `region` field rather than a property of the code, and it runs the
+remedy `Gap 403` pre-registered: does a repository COMMIT an address that places it?**
+
+### 🔴 🆕 `P115-AG` — the agent tier is the LEAST placeable tier on this shelf: 0 of 14
+
+🔵 **p114 published fourteen agent-side rows by name. p115 re-reads exactly those fourteen —
+same addresses, no reselection — on whether their own root metadata says where they are
+built:**
+
+| row | p114 lock reach | 🆕 p115 layer 0 | 🆕 layer R |
+|---|---|---|---|
+| [`huggingface/transformers`](https://github.com/huggingface/transformers) | 🔴 `partial-reach` | 🔴 `no-country` | 🔴 `r-no-country` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🔴 `no-reach` | 🔴 `no-address` | 🔴 `r-no-country` |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🔴 `no-reach` | 🔴 **`no-struct`** | 🔴 `r-no-country` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `no-reach` | 🔴 `no-country` | 🔴 `r-no-country` |
+| [`frdel/agent-zero`](https://github.com/frdel/agent-zero) | 🟡 `partial-reach` | 🔴 `nested-only` | 🔴 `r-no-country` |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟡 `partial-reach` | 🔴 `no-country` | 🟢 **`r-placed` APAC — `educhain.in`** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟡 `partial-reach` | 🔴 `no-address` | 🔴 `r-no-country` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟡 `partial-reach` | 🔴 `no-address` | 🔴 `r-no-country` |
+| [`eai6/ai-tutor`](https://github.com/eai6/ai-tutor) | 🟡 `partial-reach` | 🔴 `nested-only` | 🔴 `r-no-country` |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 `no-reach` | 🔴 `no-address` | 🔴 `r-no-country` |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🔴 `no-reach` | 🔴 **`no-struct`** | 🔴 `r-no-country` |
+| [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🔴 `no-reach` | 🔴 `no-country` | 🔴 `r-no-country` |
+| [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | 🔴 `no-reach` | 🔴 **`no-struct`** | 🔴 `r-no-country` |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🔴 `no-reach` | 🔴 **`no-struct`** | 🔴 `r-no-country` |
+
+🔴 **Zero of fourteen place. One of fourteen places from its README.** 🔵 **Four of them
+(`ai-agents-for-beginners`, `AITutorAgent`, `Desktop_BUD-E`, `agents-from-scratch`) commit no
+structured metadata file ANYWHERE in the tree — `no-struct` — so no amount of refining this
+channel will ever reach them.**
+
+🔵 **This is the same ordering p109, p110, p111, p112 and p114 found on their own axes, and
+the mechanism is now visible: the agent tier of this shelf is largely single-maintainer
+repositories under personal accounts, and a personal repository has nobody's affiliation to
+declare.** 🟢 **`P800` is the rule that makes that a FINDING rather than a defeat: a region
+comes from an institution the artefact names, never from a person's name, so "we cannot place
+these" is the correct answer and not a gap in the instrument.**
+
+### 🟢 🆕 `P115-AH` — what the shelf as a whole did, for the agent tier's denominator
+
+| figure | value |
+|---|---|
+| addresses read | 🟢 **296 / 296**, zero unread |
+| rows with a structured metadata file **at the root** | 175 |
+| rows layer 0 **places** | 🔴 **22 (7.4 %)** |
+| of those, new against the committed org map | 🟡 **12** |
+| rows **layer R** would place | 🟢 **59**, of which **48** are beyond layer 0 |
+| layer R checked against the committed org map | 🟢 **25 of 25 agree, 0 contradict** |
+| 🔴 **APAC placed at layer 0** | 🔴 **0** |
+
+🔵 **The agent tier contributes exactly one row to the 59, and it is the APAC one
+(`satvik314/educhain`, `educhain.in`). Full method, every rule's control and the
+pre-registered actions: `compose/code/p115-region-evidence/README.md`.**
+
+### 🟡 How to read the agent table below after this pass
+
+🔴 **No agent row's licence, star count, reach verdict or provider binding changed this
+pass — p115 read a different column and touched none of theirs.** 🟡 **What changed is what
+a regional claim about an agent row may rest on: for 13 of the 14 rows above, NOTHING in the
+repository says where it is maintained, so a region beside them in any table is this KB's
+inference and must be labelled as one.** 🟢 **The one row that now carries committed evidence
+is in `compose/code/p115-region-evidence/addresses.region.tsv`, which is address-keyed by
+design (`P115-U`).**
+
+# Education — AI agents shelf
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (the census crossed midnight:
 window **2026-10-10 23:54 UTC → 2026-10-11 00:25 UTC**; p112 ran 21:4x–22:xx on the 10th).
 

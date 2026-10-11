@@ -1,0 +1,224 @@
+# tld<TAB>class<TAB>region<TAB>note
+#
+# P115-C. THE COUNTRY -> REGION MAP IS A COMMITTED FILE, NOT A DERIVATION.
+# `orgs.region.tsv` (P112-L) made the ORG placement a file. This one does the
+# same for the only machine-readable country signal a repository tree carries:
+# the top-level domain of an address inside a structured metadata field.
+#
+# `region` is the brief's CLOSED vocabulary and nothing else ever appears in
+# the region column: North America | EMEA | APAC | LATAM | Global.
+#
+# FOUR CLASSES, and only one of them places a row:
+#
+#   cc        a country-code TLD whose country sits in exactly one region.
+#             PLACES.
+#   cc?       a country-code TLD whose country is assigned to different
+#             regions by different conventions (Russia, Turkey, the Caucasus,
+#             Central Asia). NEVER PLACES. Reported separately, never folded
+#             into a regional total -- the same discipline orgs.region.tsv
+#             applies to its own `?` rows.
+#   vanity    a country-code TLD in widespread use as a vanity or
+#             infrastructure domain: .io .co .me .ai .be .ly .gg .to .sh .st
+#             .fm .tv .cc .gl .am .io. NEVER PLACES.
+#             P115-D. The trap is real and it is not hypothetical: `youtu.be`
+#             is not Belgian, `bit.ly` is not Libyan, `codecov.io` is not in
+#             the British Indian Ocean Territory and `shields.io` is not
+#             either. A map that reads these as countries does not mis-state
+#             one row, it mis-states whichever rows happen to carry a badge.
+#             The cost of the class is real too and is measured, not waved
+#             away: a genuinely Belgian university address is DROPPED here.
+#             An under-count that cannot invent a country is the only kind of
+#             error this field tolerates, because `region` is filtered on
+#             downstream and a guess does not read as a guess -- it reads as
+#             data (P800).
+#   gtld      a generic TLD (.com .org .net .dev .app ...). Carries no
+#             country by construction. NEVER PLACES.
+#
+# .edu/.gov/.mil are listed as `cc` -> North America. The basis is
+# eligibility, not geography: .edu registration is restricted to
+# US-accredited postsecondary institutions and .gov/.mil to US government
+# bodies. Stated here because it is the one entry in this file whose region
+# comes from a registry POLICY rather than from a country code, and
+# P115-G reports what this KB's shelf would read without it.
+#
+# ---- generic: never places -----------------------------------------------
+com	gtld	-	generic
+org	gtld	-	generic
+net	gtld	-	generic
+info	gtld	-	generic
+biz	gtld	-	generic
+dev	gtld	-	generic
+app	gtld	-	generic
+xyz	gtld	-	generic
+tech	gtld	-	generic
+online	gtld	-	generic
+site	gtld	-	generic
+cloud	gtld	-	generic
+page	gtld	-	generic
+run	gtld	-	generic
+one	gtld	-	generic
+pro	gtld	-	generic
+int	gtld	-	intergovernmental
+# ---- vanity / infrastructure ccTLDs: never places ------------------------
+io	vanity	-	ubiquitous as project/infra domain; country itself contested, never placed even from a typed field
+co	vanity	LATAM	ubiquitous as vanity domain
+me	vanity	EMEA	ubiquitous as vanity domain
+ai	vanity	LATAM	ubiquitous as vanity domain
+be	vanity	EMEA	youtu.be
+ly	vanity	EMEA	bit.ly
+gg	vanity	EMEA	vanity
+to	vanity	APAC	vanity
+sh	vanity	EMEA	vanity
+st	vanity	EMEA	vanity
+fm	vanity	APAC	vanity
+tv	vanity	APAC	vanity
+cc	vanity	APAC	vanity
+gl	vanity	EMEA	goo.gl
+am	vanity	-	vanity; country itself contested, never placed even from a typed field
+im	vanity	EMEA	vanity
+is	vanity	EMEA	vanity + Iceland; dropped rather than guessed
+so	vanity	EMEA	vanity + Somalia; dropped rather than guessed
+ws	vanity	APAC	vanity
+nu	vanity	APAC	vanity
+md	vanity	EMEA	vanity + Moldova; dropped rather than guessed
+sc	vanity	EMEA	vanity
+ms	vanity	LATAM	vanity
+# ---- contested: reported, never folded into a region ---------------------
+ru	cc?	-	Russia
+su	cc?	-	legacy Soviet Union
+tr	cc?	-	Turkey: EMEA by most conventions, APAC by some
+kz	cc?	-	Kazakhstan
+uz	cc?	-	Uzbekistan
+kg	cc?	-	Kyrgyzstan
+tj	cc?	-	Tajikistan
+tm	cc?	-	Turkmenistan
+az	cc?	-	Azerbaijan
+ge	cc?	-	Georgia
+by	cc?	-	Belarus
+# ---- North America -------------------------------------------------------
+us	cc	North America	United States
+ca	cc	North America	Canada
+edu	cc	North America	registry policy: US-accredited postsecondary only
+gov	cc	North America	registry policy: US government
+mil	cc	North America	registry policy: US military
+# ---- LATAM ---------------------------------------------------------------
+mx	cc	LATAM	Mexico
+br	cc	LATAM	Brazil
+ar	cc	LATAM	Argentina
+cl	cc	LATAM	Chile
+pe	cc	LATAM	Peru
+uy	cc	LATAM	Uruguay
+py	cc	LATAM	Paraguay
+bo	cc	LATAM	Bolivia
+ec	cc	LATAM	Ecuador
+ve	cc	LATAM	Venezuela
+cr	cc	LATAM	Costa Rica
+pa	cc	LATAM	Panama
+gt	cc	LATAM	Guatemala
+hn	cc	LATAM	Honduras
+sv	cc	LATAM	El Salvador
+ni	cc	LATAM	Nicaragua
+cu	cc	LATAM	Cuba
+pr	cc	LATAM	Puerto Rico
+ht	cc	LATAM	Haiti
+jm	cc	LATAM	Jamaica
+bz	cc	LATAM	Belize
+gy	cc	LATAM	Guyana
+sr	cc	LATAM	Suriname
+# ---- EMEA ----------------------------------------------------------------
+eu	cc	EMEA	European Union
+uk	cc	EMEA	United Kingdom
+gb	cc	EMEA	United Kingdom
+ie	cc	EMEA	Ireland
+fr	cc	EMEA	France
+de	cc	EMEA	Germany
+es	cc	EMEA	Spain
+pt	cc	EMEA	Portugal
+it	cc	EMEA	Italy
+nl	cc	EMEA	Netherlands
+lu	cc	EMEA	Luxembourg
+ch	cc	EMEA	Switzerland
+at	cc	EMEA	Austria
+dk	cc	EMEA	Denmark
+se	cc	EMEA	Sweden
+no	cc	EMEA	Norway
+fi	cc	EMEA	Finland
+pl	cc	EMEA	Poland
+cz	cc	EMEA	Czechia
+sk	cc	EMEA	Slovakia
+hu	cc	EMEA	Hungary
+ro	cc	EMEA	Romania
+bg	cc	EMEA	Bulgaria
+gr	cc	EMEA	Greece
+hr	cc	EMEA	Croatia
+si	cc	EMEA	Slovenia
+rs	cc	EMEA	Serbia
+ba	cc	EMEA	Bosnia and Herzegovina
+mk	cc	EMEA	North Macedonia
+al	cc	EMEA	Albania
+ee	cc	EMEA	Estonia
+lv	cc	EMEA	Latvia
+lt	cc	EMEA	Lithuania
+ua	cc	EMEA	Ukraine
+cy	cc	EMEA	Cyprus
+mt	cc	EMEA	Malta
+il	cc	EMEA	Israel
+ae	cc	EMEA	United Arab Emirates
+sa	cc	EMEA	Saudi Arabia
+qa	cc	EMEA	Qatar
+kw	cc	EMEA	Kuwait
+bh	cc	EMEA	Bahrain
+om	cc	EMEA	Oman
+jo	cc	EMEA	Jordan
+lb	cc	EMEA	Lebanon
+iq	cc	EMEA	Iraq
+ir	cc	EMEA	Iran
+eg	cc	EMEA	Egypt
+ma	cc	EMEA	Morocco
+dz	cc	EMEA	Algeria
+tn	cc	EMEA	Tunisia
+za	cc	EMEA	South Africa
+ng	cc	EMEA	Nigeria
+ke	cc	EMEA	Kenya
+gh	cc	EMEA	Ghana
+tz	cc	EMEA	Tanzania
+ug	cc	EMEA	Uganda
+et	cc	EMEA	Ethiopia
+rw	cc	EMEA	Rwanda
+sn	cc	EMEA	Senegal
+ci	cc	EMEA	Cote d Ivoire
+cm	cc	EMEA	Cameroon
+zm	cc	EMEA	Zambia
+zw	cc	EMEA	Zimbabwe
+mu	cc	EMEA	Mauritius
+mz	cc	EMEA	Mozambique
+bw	cc	EMEA	Botswana
+na	cc	EMEA	Namibia
+# ---- APAC ----------------------------------------------------------------
+cn	cc	APAC	China
+jp	cc	APAC	Japan
+kr	cc	APAC	South Korea
+in	cc	APAC	India
+au	cc	APAC	Australia
+nz	cc	APAC	New Zealand
+sg	cc	APAC	Singapore
+my	cc	APAC	Malaysia
+id	cc	APAC	Indonesia
+th	cc	APAC	Thailand
+vn	cc	APAC	Vietnam
+ph	cc	APAC	Philippines
+tw	cc	APAC	Taiwan
+hk	cc	APAC	Hong Kong
+mo	cc	APAC	Macao
+kh	cc	APAC	Cambodia
+la	cc	APAC	Laos
+mm	cc	APAC	Myanmar
+bd	cc	APAC	Bangladesh
+pk	cc	APAC	Pakistan
+lk	cc	APAC	Sri Lanka
+np	cc	APAC	Nepal
+bt	cc	APAC	Bhutan
+mv	cc	APAC	Maldives
+mn	cc	APAC	Mongolia
+fj	cc	APAC	Fiji
+pg	cc	APAC	Papua New Guinea

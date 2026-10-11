@@ -6,6 +6,93 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**01:13 → 01:25 UTC**).
+
+🟢 **Measured over **296 of 296** addresses, zero unread
+(`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0 failed**, fully
+offline), with four controls re-derived from the same token snapshot.**
+
+### 🟢 🆕 `T50` — placeability is INVERSELY related to project maturity, and this is now measured rather than suspected
+
+🔵 **The nine `checked` foundational repositories on `repos/foundations.md` place **ZERO**
+rows on region. The agent tier places **0 of 14**. The rows that DO place are small academic
+repositories whose maintainer still uses a university address.**
+
+| tier | rows examined | place at layer 0 |
+|---|---|---|
+| the nine `checked` foundations | 9 | 🔴 **0** |
+| p114's named agent-side rows | 14 | 🔴 **0** |
+| the eighteen platform rows | 18 | 🟡 **2** |
+| 🟢 the whole shelf | 296 | 22 |
+
+🟢 **The mechanism, and it is a deliberate choice by those projects rather than neglect:** a
+project at the scale of `moodle.org`, `oppia.org`, `temporal.io`, `dspace.org` or
+`huggingface.co` registers a generic or vanity TLD **because a country code in the domain of
+a global project is a liability**. 🔴 **So the rows a studio is most likely to build on are
+exactly the rows that will never tell it where they are built** — and any regional claim
+about them is this KB's inference, which must be labelled as one.
+
+🔵 **`T50` is a trend about the ARTEFACTS, not the market, and it is the first one on this
+page in that class. It predicts that this gap will widen: as an education project succeeds it
+migrates from `uni.edu` to `project.org`, which moves it from placeable to unplaceable.**
+
+### 🟢 🆕 `T51` — the structured-metadata channel is being replaced by the AI-agent channel, and both are committed files
+
+🔵 **Two observations from this pass's tree reads, which point the same way:**
+
+🔴 **Only 175 of 296 rows commit a structured metadata file at the ROOT, and 82 commit none
+anywhere.** The ecosystem's "declare yourself in a machine-readable file" layer —
+`CITATION.cff`, `codemeta.json`, `.zenodo.json` — is thin on this shelf: **3 rows** carry a
+typed `country:` field in a CFF, total.
+
+🟢 **Meanwhile the newest platform row this KB has admitted in eleven passes,
+[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) (MIT, last commit 2026-10-07), commits
+`AGENTS.md`, `CLAUDE.md` and an `AI-shared/` directory at its root.** 🔵 **A vertical platform
+being rewritten in the open with coding agents, with the agent instructions versioned beside
+the code, is the shape of 2026 maintenance this KB has asserted in prose for several passes.
+Here it is as a committed file at a named, verified address.**
+
+🟡 **What to do with it: `AGENTS.md` / `CLAUDE.md` at a repository root is a cheap, structural
+signal of how a project is maintained, it is as machine-readable as `CITATION.cff`, and
+nothing in this KB measures it. Named here as a candidate axis rather than claimed as a
+figure.**
+
+### 🟢 🆕 `T52` — "from experimentation to governance" is now a DATED statutory deadline in a US state, not a theme
+
+🔵 **1EdTech, HolonIQ and the OECD all described 2026 as the year AI in education shifts from
+experimentation to governance, and this KB has held that as a theme for several passes. This
+pass found it with dates attached:**
+
+🟢 **North Carolina §7.39 of Session Law 2026-41 — effective 1 July 2026 — requires a DPI
+model AI-use policy by **31 December 2026**, local board policies, a framework for evaluating
+generative-AI educational tools, a **public list of approved tools**, and teacher AI
+professional development by **30 June 2028**, with AI literacy entering the K-12
+computer-science standards in **2028-29**.**
+
+🔴 **Verification of the section's text is BLOCKED on this channel: `ncleg.gov` and
+`dpi.nc.gov` are refused at the CONNECT layer, logged by host and timestamp in the proxy's own
+ledger (`P115-S`, extending `P798`). Two independent secondary guides agree on every
+particular. The item is published as `candidate · unverified-at-primary` with the exact URL
+that would settle it.**
+
+🔵 **Why it is a trend and not just a regulation: an "approved-tool list" plus an "evaluation
+framework" is a procurement artefact, and a procurement artefact needs exactly the evidence
+this KB has spent nine passes measuring — licence, dependency closure, lock reach, provider
+binding, and now region. `T52` is the first trend on this page that the shelf's own axes were
+already built for.**
+
+### 🟡 `T47`–`T49` (p114) and the earlier trends: unchanged
+
+🔵 **p115 read a different column and retired nothing.** 🟡 **One qualification it does add,
+to every trend on this page that carries a region: the regional attribution of a trend
+observed in REPOSITORIES now has a measured provenance — 22 rows from the repositories' own
+root metadata, 59 from their READMEs, 93 from this KB's org record, and **182 of 296 with no
+region at all**. A trend stated "in APAC" on the strength of this shelf is resting on 13 rows,
+every one of them placed by the org map and none by the repositories themselves.**
+
+# Education — current trends
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
 **2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
 

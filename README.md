@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-10
+updated: 2026-10-11
 ---
 
 # 📚 Education KB
@@ -21,6 +21,67 @@ education-kb/
 ├── ingest/        # Scripts de actualización automática
 └── compose/code/  # Código ejecutable y probado, no prosa
 ```
+
+## Pass 115 — 2026-10-11
+
+⏱️ **Second pass of this date** (p114 ran 23:54 → 00:25 crossing midnight; this census window
+**01:13 → 01:25 UTC**). 🔵 **This block jumps from `Pase 106` because the README's own pass log
+had fallen behind the eight content pages, which were already at p114 — recorded rather than
+back-filled.**
+
+🟢 **Ninth axis in nine passes, fifth read from the TREE, and the first whose axis is the
+brief's own `region` field rather than a property of the code: does a repository COMMIT an
+address that places it in a region?**
+
+🟢 **Instrument: `compose/code/p115-region-evidence/` — `test_p115.sh` **193 passed / 0 failed**,
+fully offline (real git repositories committed on disk and served to the real `region.sh` over
+`file://`, no mocks). `region.sh` read **296 of 296** addresses in 12 min, `rc=0` on every one,
+**zero unread, zero empty trees**, 579 448 files enumerated. Four controls re-derived from the
+same token snapshot in 2.5 s each.**
+
+| medida | valor |
+|---|---|
+| direcciones leídas | 🟢 **296 / 296**, cero sin leer |
+| con metadato estructurado en la RAÍZ | 175 |
+| 🔴 sin metadato estructurado en ningún sitio | 🔴 **82** |
+| 🟢 filas que la capa 0 **ubica** | 🔴 **22 (7,4 %)** |
+| nuevas contra el mapa de orgs | 🟡 **11 sin ubicar + 1 provisional** |
+| 🟢 filas que ubicaría el README (capa R) | 🟢 **59**, de ellas **48** fuera del alcance de la capa 0 |
+| 🟢 capa R contrastada con el mapa de orgs | 🟢 **25 de 25 coinciden, 0 contradicen** |
+| 🔴 **APAC ubicada por la capa 0** | 🔴 **0** |
+| cobertura asentada, antes → después | 93 (31,4 %) → 🟡 **105 (35,5 %)** |
+| 🔴 todavía SIN UBICAR | 🔴 **182 (61,5 %)** |
+
+🔴 **`Gap 403` MEDIDO: el remedio que esta base había pre-registrado —«offline, sin egreso y
+acotado: extender el archivo de ubicación»— rinde **12 filas de 193**, un 6,2 %.** 🔵 **Acotado
+sí; barato no. Y lo que mantiene abierto el hueco ya no es «nadie extendió el archivo» sino
+«el canal de metadatos estructurados está casi vacío y el canal que sí funciona no está
+validado».**
+
+🔴 **🆕 `Gap 405` ABIERTO:** la capa R acierta en **todas** las filas comprobables (25 de 25) y
+es **inverificable en el 58 %** de las que reclama (34 de 59), y su coincidencia con la capa 0
+**no es independiente** en 8 de las 11 filas compartidas (leen el mismo host). 🟢 **Un canal así
+es candidato a promoción, no una promoción — con su acción y su cláusula de refutación
+pre-registradas.**
+
+🟢 **Dos ítems nuevos, los primeros en once pases, cada uno con su estado de verificación:**
+[`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) (MIT en el `LICENSE` de la raíz, 1 375
+archivos, último commit 2026-10-07) **y tres direcciones señuelo que no sostienen la licencia**;
+y 🟡 **NC §7.39 de la Session Law 2026-41**, publicada como `candidate · unverified-at-primary`
+porque `ncleg.gov` está rechazado en la capa CONNECT (`P115-S`, registro de primera mano).
+
+🟢 **Archivos nuevos comprometidos:**
+`compose/code/p115-region-evidence/addresses.region.tsv` (ubicación por DIRECCIÓN, con la clase
+de evidencia y el host que la produjo), `country.region.tsv` (123 `cc` + 11 `cc?` + 23 vanity +
+17 gTLD), `stoplist.tsv` (86 hosts de servicio, registro, foro, normalización y regulación),
+y la censura completa más sus cuatro controles.
+
+🔴 **Una falta operativa propia, asumida:** edité `region.sh` **mientras corría la censura**
+(mtime `01:21:04`, dentro de la ventana `01:13 → 01:25`). 🟢 **Los 296 flujos de tokens ya
+estaban en disco, así que el TSV publicado es la RE-DERIVACIÓN con el código final, y sus 38
+columnas compartidas son **idénticas en `md5`** a las de la corrida viva (`1545c426f7ff…`).**
+🔵 **La regla que deja el pase: una censura es una CORRIDA, y editar el script dentro de su
+ventana es editar el instrumento en mitad de la medición.**
 
 ## Pase 106 — 2026-10-10
 

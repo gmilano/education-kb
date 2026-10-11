@@ -240,6 +240,11 @@ def main(argv):
         )
         return 2
     if "--self-test" in argv:
+        # P115-AK. `-I` drops this script's own directory from sys.path, so the
+        # self-test import below fails under the very invocation this gate's
+        # README prescribes. Measured at pass 115 on all five python gates.
+        import os as _os, sys as _sys
+        _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
         import test_gap_gate
         return test_gap_gate.run()
     if "--sweep" in argv:

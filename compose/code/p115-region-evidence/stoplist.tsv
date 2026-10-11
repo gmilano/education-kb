@@ -1,0 +1,105 @@
+# suffix<TAB>why
+#
+# P115-E. A HOSTNAME WHOSE TLD IS A REAL COUNTRY CODE IS STILL NOT EVIDENCE
+# WHEN THE HOST IS A SERVICE, A REGISTRY, A STANDARDS BODY OR A REGULATOR.
+#
+# Matched as a DOMAIN SUFFIX on a label boundary -- `europa.eu` matches
+# `ec.europa.eu` and `data.europa.eu`, and never `noteuropa.eu`. Basename
+# discipline for hostnames (P112-A, carried).
+#
+# The entries that matter are the ones whose TLD this KB's map places:
+# a repository that CITES the EU AI Act is not a European repository, and
+# `ec.europa.eu` in a `url:` field would otherwise place it in EMEA. That is
+# the false positive this file exists to stop, and it is the one most likely
+# to appear on an education shelf in 2026.
+#
+# ---- regulators, standards bodies, intergovernmental ----------------------
+europa.eu	EU institutions: cited by every AI Act-aware repo, maintains none of them
+eur-lex.europa.eu	EU law portal
+unesco.org	intergovernmental; cited, not a maintainer
+oecd.org	intergovernmental
+un.org	intergovernmental
+who.int	intergovernmental
+w3.org	standards body
+iso.org	standards body
+ietf.org	standards body
+unicode.org	standards body
+imsglobal.org	standards body (1EdTech legacy host)
+1edtech.org	standards body
+spdx.org	standards body
+schema.org	standards body
+opensource.org	licence steward
+creativecommons.org	licence steward
+gnu.org	licence steward
+fsf.org	licence steward
+apache.org	licence steward / foundation
+mozilla.org	licence steward
+contributor-covenant.org	code-of-conduct text
+keepachangelog.com	changelog convention text
+semver.org	versioning convention text
+# ---- forges, registries, CI, CDNs, docs hosts ----------------------------
+github.com	forge
+github.io	forge pages
+githubusercontent.com	forge raw
+gitlab.com	forge
+gitlab.io	forge pages
+bitbucket.org	forge
+gitee.com	forge
+codeberg.org	forge
+sourceforge.net	forge
+npmjs.com	registry
+npmjs.org	registry
+pypi.org	registry
+pypi.python.org	registry
+packagist.org	registry
+rubygems.org	registry
+crates.io	registry
+nuget.org	registry
+hub.docker.com	registry
+mvnrepository.com	registry
+repo1.maven.org	registry
+search.maven.org	registry
+readthedocs.io	docs host
+readthedocs.org	docs host
+travis-ci.org	CI
+travis-ci.com	CI
+circleci.com	CI
+appveyor.com	CI
+codecov.io	CI
+coveralls.io	CI
+shields.io	badge service
+img.shields.io	badge service
+jsdelivr.net	CDN
+unpkg.com	CDN
+cdnjs.com	CDN
+cloudflare.com	CDN
+herokuapp.com	PaaS
+vercel.app	PaaS
+netlify.app	PaaS
+netlify.com	PaaS
+pages.dev	PaaS
+# ---- identifiers, archives, publishers -----------------------------------
+doi.org	identifier resolver
+orcid.org	identifier resolver
+ror.org	identifier resolver
+zenodo.org	archive
+archive.org	archive
+arxiv.org	preprint host
+figshare.com	archive
+# ---- platforms a repo links to without being hosted there ----------------
+youtube.com	media
+youtu.be	media
+twitter.com	social
+x.com	social
+linkedin.com	social
+discord.gg	chat
+discord.com	chat
+slack.com	chat
+t.me	chat
+reddit.com	social
+medium.com	publishing
+stackoverflow.com	Q&A
+wikipedia.org	reference
+example.com	placeholder
+example.org	placeholder
+localhost	placeholder

@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 2026-10-11 — pass 115: a 2026 search for an MIT platform hands you four addresses and the grant is in the tree of exactly one
+
+🟢 **Measured over **296 of 296** addresses in 12 min, zero unread, zero empty trees
+(`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0 failed**, fully
+offline — real git repositories served over `file://`, no mocks), plus four controls
+re-derived from the same token snapshot in 2.5 s each.**
+
+🟢 **Ninth axis in nine passes, fifth read from the TREE: does a repository COMMIT an address
+that places it in a region? **22 of 296 (7.4 %)** do.**
+
+### 🟢 🆕 The one new repo this pass admits, and the three it refutes
+
+🔵 **The mandated platform query returned Epesi BIM — an MIT-licensed PHP CRM/ERP
+rapid-development platform this KB has never held — under FOUR GitHub addresses, two of them
+named by roundups as "the main project page" and "the source code location". Licences read
+FROM THE TREE on the git lane:**
+
+| address | git lane | files | last commit | licence IN THE TREE |
+|---|---|---|---|---|
+| 🟢 [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | 🟢 `rc=0` | **1 375** | 🟢 **2026-10-07** | 🟢 **`LICENSE` = MIT, "Copyright (c) 2006-2026 Janusz Tylek"** |
+| 🔴 [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) | 🔴 **UNREAD** | — | — | — |
+| 🔴 [`cezarc/EPESI`](https://github.com/cezarc/EPESI) | 🟢 `rc=0` | 5 559 | 🔴 **2013-11-22** | 🔴 **NONE** |
+| 🔴 [`Telaxus/EPESI`](https://github.com/Telaxus/EPESI) | 🟢 `rc=0` | 🔴 **1** | 2026-06-27 | 🔴 **NONE** |
+
+🔴 **`Telaxus/EPESI` is a HUSK: its entire tree is one 3-byte `README.md` whose content is
+`:3`.** 🔴 **`cezarc/EPESI` is thirteen years stale and carries no licence file at all, and a
+2026 roundup describes it as "also MIT licensed".**
+
+🟡 **What the live one actually is: default branch **`laravel`** (not `main`), a Laravel 12 +
+Filament **rewrite in progress**, and the root `LICENSE` is Epesi's MIT grant while
+`composer.json` still carries the Laravel skeleton's own metadata
+(`"name": "laravel/laravel"`). 🔵 **That is the root-versus-manifest licence split `p199` and
+`p283` measure, found live on a brand-new row — quote the root `LICENSE`, never the
+manifest's field.** 🔴 **Zero education-specific paths in 1 375 files: it is a generic
+platform in the Odoo / Corteza / Krayin class, not an education system.**
+
+🟢 **One more verifiable signal from the same tree: it commits `AGENTS.md`, `CLAUDE.md` and an
+`AI-shared/` directory at the root** — a vertical platform rewritten in the open with coding
+agents, with the agent instructions versioned beside the code (`T51`).
+
+🔵 **Not added to `addresses.txt` this pass: that file is carried verbatim from p112 so every
+cross-tab is row-for-row against p114. Adding it is pre-registered as action D.**
+
+### 🔴 The nine `checked` foundations place ZERO rows, and that is a property of being a foundation
+
+| tier | rows | place at layer 0 |
+|---|---|---|
+| the nine `checked` foundations | 9 | 🔴 **0 — all `no-country`, at every layer** |
+| p114's named agent-side rows | 14 | 🔴 **0** |
+| the eighteen platform rows | 18 | 🟡 **2** |
+| whole shelf | 296 | 22 |
+
+🟢 **`T50`, new this pass: placeability is INVERSELY related to project maturity.** A project
+at the scale of `moodle.org`, `oppia.org`, `temporal.io`, `dspace.org` or `huggingface.co`
+registers a generic or vanity TLD deliberately, because a country code in the domain of a
+global project is a liability. 🔴 **The rows a studio is most likely to build on are exactly
+the rows that will never say where they are built.**
+
+### 🟢 The README channel places 59 and agrees 25 of 25 — and is still not promoted
+
+| | layer 0 (root metadata) | 🟢 layer R (README) |
+|---|---|---|
+| rows placed | 22 | 🟢 **59** |
+| placed beyond the other layer's reach | — | 🟢 **48** |
+| agreement with the committed org map | 10 of 10 | 🟢 **25 of 25, 0 contradictions** |
+| 🔴 rows with no settled org to check against | 12 | 🔴 **34 of 59 (58 %)** |
+| 🔴 of 11 rows both place, how many share the SAME host | — | 🔴 **8** |
+
+🔴 **`Gap 405` opened on exactly that: right on every row that can be checked, unverifiable on
+most of what it claims, and its agreement with layer 0 is largely one piece of evidence
+counted twice.**
+
+### 🟡 Two integrity findings on this KB's own committed files
+
+🟡 **`P115-W`** — p114 recorded a one-row disagreement in the regional denominator and
+declined to reconcile it. The cause is **case folding**, and the row is
+`apereo-learning-analytics-initiative/larissa`: `addresses.txt` holds six addresses under
+`Apereo-Learning-Analytics-Initiative/` and one under the lowercase spelling. 🟢 **GitHub
+resolves org names case-insensitively, so p114's 104/192 is right and p113's 103/193 is not —
+and the defect is in neither map but in the SHELF, which holds one organisation under two
+spellings** (`p439` / `p443` family). Pre-registered as action B rather than silently
+re-spelled.
+
+🟢 **`P115-X`** — one of p112's three contested placements is settled by evidence:
+[`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor)
+moves from `EMEA?` to **North America** on `vt.edu` (Virginia Tech, `academic` class),
+which is where p112's own note suspected it belonged. 🟡 **One ADDRESS, not the org.**
+
 ## 2026-10-11 — pass 113: North America looks like the second-best region on this axis and is the worst, and the weighting is the whole difference
 
 🟢 **Measured over **296 of 296** addresses in 4 m 09 s, zero unread

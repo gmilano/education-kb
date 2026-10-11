@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 2026-10-11 — pass 115: the agent tier cannot say where it is built — 0 of 14 — and the channel that CAN is the one this pass built as a throwaway
+
+🟢 **ONE new item reached this KB's pages this pass, ending TEN consecutive zeros — and it is
+a platform, not an agent.** The eight mandated queries ran in extended mode with the year
+computed (`date -u +%Y` → 2026), four global and four regional, plus three follow-ups the
+first eight provoked: **61 candidate tokens extracted and checked one at a time, 55 already
+held, 6 new.** The ledger, every token class and the two rejections are in `intel/market.md`
+under `P115-R`.
+
+🔵 **No new education-specific AGENT reached this shelf. The eleventh pass in a row for that
+specific claim, and it is now a different claim than it was: `Gap 402` is weakened (6 of 61,
+against 0 of 49 last pass) but the yield came from the FOLLOW-UP queries, not the mandated
+eight.**
+
+🟢 **Instrument: `compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0
+failed** (fully offline — real git repositories committed on disk and served to the real
+`region.sh` over `file://`, no mocks); `region.sh` read **296 of 296** addresses in 12 min,
+**zero unread, zero empty trees**, 579 448 files enumerated, with **four** controls
+re-derived from the same token snapshot in 2.5 s each.**
+
+### What is new this week: the shelf's regional figures rested on a third of the shelf, and the remedy everyone pre-registered turns out to be nearly empty
+
+🔵 **Nine axes have now measured these 296 addresses, and every one published its figures by
+region under the same caveat — the regional read describes about a third of the shelf. p113
+opened `Gap 403` on it, p114 corroborated it, and `intel/market.md` wrote the remedy down:
+*"offline, zero-egress and bounded — extend the placement file — which makes it the cheapest
+open item on this page."***
+
+🟢 **p115 ran it and measured it. 22 of 296 rows (7.4 %) commit an address that places them.
+Twelve of those are new against the committed org map. `Gap 403`'s cheapest remedy closes
+6.2 % of itself.**
+
+| figure | value |
+|---|---|
+| rows with a structured metadata file at the ROOT | 175 of 296 |
+| 🔴 rows committing no structured metadata ANYWHERE | 🔴 **82** |
+| rows layer 0 places | 🔴 **22** |
+| new against the org map | 🟡 **11 unplaced + 1 provisional** |
+| 🟢 rows the README (layer R) places | 🟢 **59**, of which **48** layer 0 cannot reach |
+| 🟢 layer R checked against the committed org map | 🟢 **25 of 25 agree, 0 contradict** |
+
+### 🔴 The agent tier is the least placeable tier on the shelf, and `P800` says that is the right answer
+
+🔵 **p114 published fourteen agent-side rows by name. p115 re-read exactly those fourteen:
+**0 place at layer 0**, **1 places from its README**
+([`satvik314/educhain`](https://github.com/satvik314/educhain), `educhain.in`), and **four
+commit no structured metadata anywhere in the tree** — `microsoft/ai-agents-for-beginners`,
+`Ebimsv/AITutorAgent`, `LAION-AI/Desktop_BUD-E`, `pguso/agents-from-scratch`.**
+
+🟢 **The mechanism is now visible and it matches what p109, p110, p111, p112 and p114 each
+found on their own axes: this shelf's agent tier is largely single-maintainer repositories
+under personal accounts, and a personal repository has nobody's affiliation to declare.**
+🔵 **`P800` — a region comes from an institution the artefact names, never from a person's
+name — makes "we cannot place these" the correct answer rather than a hole in the
+instrument.**
+
+### 🔴 APAC places ZERO agent rows from root metadata, and the gap is the instrument's
+
+🟢 **Written down rather than left silent, per the brief. Layer R finds seven APAC rows on
+the wider shelf — `aiverifyfoundation.sg` + `www.imda.gov.sg` (government class),
+`acm.hdu.edu.cn` and `www.gavo.t.u-tokyo.ac.jp` (academic class), `educhain.in`,
+`ai-studyhub.cn`. Layer 0 finds none of them, because their root metadata carries no
+address.**
+
+### 🟢 What the controls proved, since none of this pass's rules is asserted
+
+| control | effect | the named rows |
+|---|---|---|
+| `novanity` | 🔴 **+4 wrong placements, 3 into LATAM** | [`huggingface/transformers`](https://github.com/huggingface/transformers) → **LATAM** on `huggingface.co` (`.co` is Colombia); `kualico/rice` on `kuali.co`; `ankimcp/anki-mcp-server` on `ankimcp.ai` (`.ai` is Anguilla); `sonsoleslp/tna` on `sonsoles.me` |
+| `nostop` | 🟡 +2, **and they were right** | two `opetushallitus` rows would place EMEA on 🔴 `ec.europa.eu` — correct region, invalid reasoning |
+| `flat` | 🔴 +7, ≥2 demonstrably wrong | `atutor/ATutor` → LATAM on a Brazilian library author; `elmsln/elmsln` → EMEA on three JS/PHP library authors |
+| `nor` | 59 → 0 `r-placed`; layer 0 unchanged | the layers are separate |
+
+### 🟡 `Gap 402` weakened for the first time in eleven passes; `Gap 403` MEASURED; `Gap 405` OPENED
+
+🟡 **`Gap 402`** — the mandated query set is exhausted and needs replacing — **weakened, not
+closed**: 6 of 61 tokens new, and the two that produced them were follow-ups rather than the
+mandated eight.
+
+🟢 **`Gap 403`** — the regional placement reaches a third of the shelf — **MEASURED**: its own
+pre-registered remedy yields 12 rows of 193. 🔴 **It stays open, and what keeps it open has
+changed: it is no longer "nobody has extended the file", it is "the structured-metadata
+channel is nearly empty and the channel that works has not been validated".**
+
+🔴 **🆕 `Gap 405`** — **layer R is right on every row that can be checked (25 of 25) and
+unverifiable on 58 % of the rows it claims (34 of 59), and its agreement with layer 0 is
+mostly NOT independent (8 of the 11 shared rows read the same hostname).** 🔵 **A channel in
+that state is a promotion candidate, not a promotion. The validating action and the clause
+that would refute it are pre-registered in
+`compose/code/p115-region-evidence/README.md` (action A).**
+
+### 🔴 One operational fault this pass owns
+
+🔴 **I edited `region.sh` WHILE the census was running** (file mtime `01:21:04`, inside the
+`01:13 → 01:25` window), adding a column. Bash re-read the script from a byte offset and
+emitted one parse error. 🟢 **The 296 token streams were already on disk, so the published
+TSV is the REPLAY, built from those streams with the final code — and its shared columns are
+`md5`-identical to the live run's, row for row.** 🔵 **`P115-Q` was built to make the controls
+comparable; what it actually did was make a run with a changing script salvageable, and the
+agreement is checkable rather than asserted.**
+
 ## 2026-10-11 — pass 113: the lockfile p112 counted does not reach the manifest on 510 of 2 135 addresses, and on 88 rows the orphan is the file you build first
 
 🔵 **No new education-specific agent reached this shelf this pass, for the TENTH

@@ -6,6 +6,270 @@ updated: 2026-10-11
 
 # Education — market intelligence
 
+**Pass 115, 2026-10-11.** ⏱️ **Second pass of this date** (census window
+**01:13 → 01:25 UTC**; p114 ran 23:54 → 00:25 across midnight).
+
+🟢 **`region.sh` read **296 of 296** addresses in 12 min, zero unread, zero empty trees
+(`compose/code/p115-region-evidence/`, `test_p115.sh` **193 passed / 0 failed**, fully
+offline), plus four controls re-derived from the same token snapshot in 2.5 s each.**
+
+🟢 **AND: the first new market item in ELEVEN passes.** 🔵 **Six of 61 candidate tokens were
+new, against 0 of 49 last pass — and every one is published below with what verified it and
+what did not.**
+### 🟢 🆕 `P115-R` — the eleventh pass of mandated searches is the FIRST with a new item, and it arrives with its verification state attached
+
+🔵 **Eight queries, extended mode, computed year 2026 (`date -u +%Y`, never hardcoded): four
+global (`top open source AI agents education 2026 github MIT`, `github trending education AI
+2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends
+2026`) and one per region (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption
+regulation players`), plus three targeted follow-ups the first eight provoked.**
+
+| token class | checked | already held | 🆕 new |
+|---|---|---|---|
+| US federal / state regulation (H.R. 8747, AB 1159, Idaho SB 1227, Oklahoma, Maryland, NYC moratorium, STUDENTS FIRST Act, 134 bills / 31 states) | 8 | 🔵 **8** | 0 |
+| 🟢 **US state regulation — North Carolina** | 1 | 🔴 **0** | 🟢 **1** |
+| EU / EMEA regulation (Reg. (EU) 2026/1744, Digital Omnibus, 2 Dec 2027 / 2 Aug 2028, Annex III, Art. 50 timing) | 6 | 🔵 **6** | 0 |
+| APAC regulation (Korea AI Basic Act + MSIT grace period, Vietnam 1 Mar 2026, Taiwan Dec 2025, Australia National AI Plan + AI Safety Institute) | 7 | 🔵 **7** | 0 |
+| LATAM (UNESCO IESALC 200 HEIs / 19 countries / 87 % / 74 % / 26 %, LAC Observatory, TALIS, Brazil PL 2.338, Colombia CONPES 4144, Chile bill, Ceibal) | 9 | 🔵 **9** | 0 |
+| market sizing (R&M 7.52 → 10.6 → 42.48 B, Technavio NA 36 %, Europe 2.64 B, HolonIQ) | 6 | 🔵 **6** | 0 |
+| 🟡 APAC market sizing — Ken Research "APAC AI ≈ USD 102 B" | 1 | 🔴 **0** | 🟡 **rejected, see below** |
+| vendors / platforms (OpenEduCat, ERPNext, OFBiz, Corteza, Huly, Krayin, Dolibarr, MS Education AI Toolkit) | 8 | 🔵 **8** | 0 |
+| 🟢 **platforms — the Epesi family** | 4 | 🔴 **0** | 🟢 **4 addresses, 1 usable** |
+| repos / courses (LLMs-from-scratch, generative-ai-for-beginners, ai-agents-for-beginners, agents-radar, awesome-ai-agents-2026 ×2, 500-AI-Agents-Projects, Hermes Agent, MetaGPT) | 9 | 🔵 **9** | 0 |
+| standards bodies (1EdTech three trends, OECD Digital Education Outlook 2026) | 2 | 🔵 **2** | 0 |
+| **total** | **61** | 🔵 **55** | 🟢 **6** |
+
+🟢 **`Gap 402` — "the mandated query set is exhausted and needs REPLACING" — is weakened for
+the first time in eleven passes, and weakened HONESTLY rather than quietly: the yield is 6 of
+61, not 0 of 49, and every one of the six is written up below with what verified it and what
+did not.** 🔵 **The gap is not closed. Fifty-five of sixty-one tokens were already held, and
+the two queries that produced the new items were the FOLLOW-UPS, not the eight mandated ones.**
+
+### 🟢 🆕 `P115-S` — North Carolina: a binding K-12 AI statute, and the primary source this session cannot reach
+
+🟢 **The item.** North Carolina enacted the most detailed AI-in-education statutory framework
+of any US state to date in **Section 7.39 of Session Law 2026-41** (Senate Bill 257, the
+2026 budget act). As reported by two independent secondary guides that agree on every
+particular:
+
+| provision | date |
+|---|---|
+| section effective | 🟢 **1 July 2026** |
+| NC DPI must publish a **model AI-use policy** | 🟡 **31 December 2026** |
+| local boards must adopt their own AI-use policies | following the model policy |
+| framework for evaluating generative-AI educational tools + public list of approved tools | following the model policy |
+| covered teachers must complete AI professional development | 🔵 **30 June 2028** |
+| AI literacy enters the K-12 computer-science standards | 🔵 **2028-29 school year** |
+
+🔴 **AND THE VERIFICATION STATE, WHICH IS PART OF THE ITEM AND NOT A FOOTNOTE.** The enacted
+text has a primary URL —
+`https://www.ncleg.gov/EnactedLegislation/SessionLaws/PDF/2025-2026/SL2026-41.pdf` — and this
+session **cannot reach it.** Not a 404, not a 403 from the host: a refusal at the CONNECT
+layer, read from the refusing layer's own ledger rather than inferred (`P798`'s channel,
+re-probed this pass):
+
+```
+connect_rejected · gateway answered 403 to CONNECT (policy denial or upstream failure)
+www.ncleg.gov:443        2026-10-11T00:50:13Z, 00:50:31Z, 01:16:17Z
+ncleg.gov:443            2026-10-11T00:50:31Z
+www.dpi.nc.gov:443       2026-10-11T00:50:31Z, 01:16:17Z
+en.wikipedia.org:443     refuses identically — P798's control, still holding
+```
+
+🔵 **So this row is published as `candidate · unverified-at-primary`, with the exact URL that
+would settle it.** 🟢 **That is strictly more useful than both alternatives: publishing it as
+held data would put an unread statute into a KB that engagements quote from, and dropping it
+would lose the only new North America regulation token in eleven passes.** 🔴 **`P113-T` is the
+precedent and the warning — a roundup reported a two-year-old UK procurement in the present
+tense with its date stripped off, and this KB nearly held it. The difference here is that the
+date, the bill number and the section number are all specific enough to be checked by anyone
+whose channel reaches `ncleg.gov`.**
+
+🟡 **One token was REJECTED rather than held or declared new:** Ken Research's "Asia-Pacific AI
+market ≈ USD 102 billion" is a figure for the whole APAC AI market, not AI in education, from
+a vendor page, with no stated base year. 🔵 **It is not a smaller version of a number this KB
+holds; it is a different denominator wearing the same words, and `intel/market.md` already
+carries four education-specific sizings. Named here so the rejection is auditable.**
+### 🟢 🆕 `P115-T` — the Epesi family: the licence claim is true, and three of its four addresses cannot support it
+
+🔵 **The mandated platform query (`open source platform education ERP CRM MIT Apache`) returned
+Epesi BIM, an MIT-licensed PHP CRM/ERP rapid-development platform this KB has never held — and
+returned FOUR GitHub addresses for it, naming two of them as "the main project page" and "the
+source code location". Read on the git lane, one of the four is usable:**
+
+| address | git lane | files | last commit | licence IN THE TREE | verdict |
+|---|---|---|---|---|---|
+| [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | 🟢 `rc=0` | **1 375** | 🟢 **2026-10-07** | 🟢 **`LICENSE` = MIT, "Copyright (c) 2006-2026 Janusz Tylek"** | 🟢 **the canonical live address** |
+| [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) | 🔴 **UNREAD** | — | — | — | 🔴 **does not resolve; a roundup calls it "the main project page"** |
+| [`cezarc/EPESI`](https://github.com/cezarc/EPESI) | 🟢 `rc=0` | 5 559 | 🔴 **2013-11-22** | 🔴 **NONE — no `LICENSE`, no `COPYING`** | 🔴 **thirteen years stale and unlicensed, described as "also MIT licensed"** |
+| [`Telaxus/EPESI`](https://github.com/Telaxus/EPESI) | 🟢 `rc=0` | 🔴 **1** | 2026-06-27 | 🔴 **NONE** | 🔴 **a HUSK: one 3-byte `README.md` reading `:3`, nothing else** |
+
+🟢 **The finding is not "Epesi is MIT".** It is that a 2026 search for an MIT platform hands you
+four addresses, asserts the licence of three of them, and **the licence exists in the tree of
+exactly one** — while the two it recommends most confidently are a non-resolving slug and an
+emptied repository whose entire content is a three-byte file. 🔵 **`P249` is the rule this
+obeys: calibrate the channel before believing a negative. The git lane answers `rc=0` for
+`cezarc` and `Telaxus` and `UNREAD` for `Epesi-Team`, so it DOES discriminate, and the two
+`NONE` readings are reads of a real tree rather than a channel failure.**
+
+🟡 **What `jtylek/EpesiCRM` actually is, stated because the roundups do not:** its default branch
+is **`laravel`** (not `main`/`master`), and the tree is a **Laravel 12 + Filament rewrite in
+progress** — `composer.json` still carries the Laravel skeleton's own metadata
+(`"name": "laravel/laravel"`, `"description": "The skeleton application for the Laravel
+framework."`). 🔵 **So the root `LICENSE` is Epesi's grant and the manifest's `license` field is
+Laravel's, at the same address — the root-versus-manifest split `p283` and `p199` measure, found
+live on a brand-new row.** 🔴 **It carries NO education-specific module: zero paths matching
+`education|student|course|school` in 1 375 files. It belongs on `verticals/solutions.md` in the
+Odoo / Corteza / Krayin class — a generic platform an education vertical can be BUILT on — and
+never in a table of education systems.**
+
+🟢 **One more verifiable 2026 signal from the same tree, worth a line because it is rare and
+dated:** `jtylek/EpesiCRM` commits **`AGENTS.md`, `CLAUDE.md` and an `AI-shared/` directory** at
+its root. 🔵 **A vertical platform being rewritten in the open with coding agents, with the
+agent instructions versioned beside the code, is the shape of 2026 maintenance this KB keeps
+asserting in prose — here it is as a committed file at a named address.**
+
+### 🔴 🆕 `P115-Y` — the supply side, measured on REGION itself, and the remedy this page pre-registered is nearly empty
+
+🔵 **Nine passes have published regional figures with the same caveat beneath them: the
+regional read describes about a third of the shelf, because `orgs.region.tsv` (`P112-L`)
+places an ORG only where this KB already records its home. This page pre-registered the
+remedy:**
+
+> **`Gap 403`** — "The remedy is offline, zero-egress and bounded — **extend the placement
+> file** — which makes it the cheapest open item on this page."
+
+🟢 **p115 ran it. Bounded it is; cheap it is not.**
+
+| figure | value |
+|---|---|
+| addresses read | 🟢 **296 / 296** |
+| rows with a structured metadata file **at the root** | 175 |
+| rows whose own root metadata **places** them | 🔴 **22 (7.4 %)** |
+| of those, rows the org map leaves **entirely unplaced** | 🟡 **11** |
+| plus a row it holds only as **provisional** | 🟡 **1** |
+| 🔴 **`Gap 403`'s remedy, measured** | 🔴 **12 of 193 — 6.2 %** |
+| coverage before p115 (settled) | 93 of 296 — 31.4 % |
+| 🆕 coverage after p115 (settled) | 🟡 **105 of 296 — 35.5 %** |
+| 🔴 still UNPLACED | 🔴 **182 — 61.5 %** |
+
+🔵 **The reason is structural and now has numbers: 82 of 296 rows commit no structured
+metadata ANYWHERE, only 175 carry any at the root, and of those 175 just 22 put a
+country-bearing address inside a declared key. The channel is nearly empty before any rule
+of the instrument applies.**
+
+### 🟢 🆕 `P115-Z` — the channel that DOES work is the one the pass built as a throwaway
+
+🔵 **Layer R — the root README — was built as a CEILING that never places a row. Measured, it
+is the remedy:**
+
+| | layer 0 (root metadata) | 🟢 layer R (README) |
+|---|---|---|
+| rows placed | 22 | 🟢 **59** |
+| rows placed that the other layer cannot | — | 🟢 **48** |
+| checked against the committed org map | 10 of 10 agree | 🟢 **25 of 25 agree, 0 contradict** |
+| 🔴 rows with no settled org to check | 12 | 🔴 **34 of 59 (58 %)** |
+
+🔴 **And the caveat that keeps it from being promoted this pass: of the 11 rows BOTH layers
+place, 8 read the SAME hostname — so layer R's agreement with layer 0 is one piece of
+evidence counted twice, not corroboration.** 🟢 **A channel right on every row you can check
+and unverifiable on the majority of rows it claims is a promotion CANDIDATE. Pre-registered
+as action A in `compose/code/p115-region-evidence/README.md`, with the clause that would
+refute it stated in advance.**
+
+### 🔴 🆕 `P115-AA` — the regional read of the supply side, and APAC's zero
+
+| region | 🆕 layer 0 places | class breakdown | 🆕 layer R adds | union coverage after p115 |
+|---|---|---|---|---|
+| **North America** | 7 | 🟢 **7 `academic`** (`berkeley.edu` ×3, `brynmawr.edu`, `calpoly.edu`, `lafayette.edu`, `gatech.edu`, `nd.edu`, `vt.edu`, `csail.mit.edu`) | 17 | **47** |
+| **EMEA** | 9 | 1 `academic`, 1 `typed`, 7 `other` | 18 | **36** |
+| **LATAM** | 6 | 2 `typed` (`country: BR` ×2), 4 `other` | 6 | **9** |
+| 🔴 **APAC** | 🔴 **0** | 🔴 — | 🟢 **7** | **13** (🔴 all from the org map) |
+
+🔴 **APAC places ZERO rows from root metadata, and the brief asks for that to be written down
+rather than left silent. It is NOT that the shelf has no APAC rows — layer R finds seven, and
+they are among the cleanest evidence anywhere on the shelf:**
+
+| row | layer-R evidence | class |
+|---|---|---|
+| [`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) + [`-cicd`](https://github.com/aiverify-foundation/moonshot-cicd) + [`-ui`](https://github.com/aiverify-foundation/moonshot-ui) | `aiverifyfoundation.sg`, 🟢 **`www.imda.gov.sg`** (Singapore's IMDA) | 🟢 **`government`** |
+| [`JonathanSilver/pyKT`](https://github.com/JonathanSilver/pyKT) | 🟢 **`acm.hdu.edu.cn`** (Hangzhou Dianzi University) | 🟢 **`academic`** |
+| [`tzyll/goparrot`](https://github.com/tzyll/goparrot) | 🟢 **`www.gavo.t.u-tokyo.ac.jp`** (University of Tokyo) | 🟢 **`academic`** |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | `educhain.in` | `other` |
+| [`Earth-OL-Player/Ai_learn_project`](https://github.com/Earth-OL-Player/Ai_learn_project) | `ai-studyhub.cn` | `other` |
+
+🔵 **So APAC's zero is a property of WHERE this instrument looks, not of the shelf: three
+Singaporean, two Chinese, one Japanese and one Indian row sit in plain sight in their
+READMEs, two behind registry-restricted academic suffixes and one behind a government one.
+That is the strongest single argument for promoting layer R.**
+
+### 🟢 🆕 `P115-AB` — every rule is a number, and the LATAM one matters most to this brief
+
+🟢 **Each rule was switched off over the SAME 296 token streams, so nothing below is
+asserted:**
+
+| control | rows it moves | what that measures |
+|---|---|---|
+| `novanity` | 🔴 **+4 wrong, 3 of them LATAM** | 🔴 **LATAM places 6 rows; without the vanity class it places 9 — a THIRD of the region's figure would be `.co` and `.ai` vanity domains.** [`huggingface/transformers`](https://github.com/huggingface/transformers) would read **LATAM** on `huggingface.co` |
+| `nostop` | 🟡 **+2, and they were RIGHT** | 🟡 two `opetushallitus` rows would place EMEA on 🔴 **`ec.europa.eu`** — correct region, invalid reasoning. The stoplist was right to cost them |
+| `flat` | 🔴 **+7, at least 2 wrong** | [`atutor/ATutor`](https://github.com/atutor/ATutor) → LATAM on a `.com.br` library author; [`elmsln/elmsln`](https://github.com/elmsln/elmsln) → EMEA on three JS/PHP library authors |
+| `nor` | 59 → 0 `r-placed`, layer 0 unchanged at 22 | the layers are genuinely separate |
+
+🔴 **On a brief whose purpose is that "a North America or EMEA engagement is as well served as
+a LATAM one", an instrument that inflates LATAM by 50 % from vanity TLDs is worse than one
+that reports a small honest number.**
+
+### 🟡 🆕 `P115-W` — the one-row disagreement p114 recorded and declined to reconcile is CASE FOLDING
+
+p114 wrote of its own regional denominator: *"the two readings of the same committed file
+differ by ONE row. Recorded rather than reconciled silently; the likely cause is the
+treatment of the 11 provisional placements."*
+
+🟢 **Re-derived from the two committed files, the cause is not the provisionals:**
+
+| reading | settled | provisional | unplaced |
+|---|---|---|---|
+| org prefix matched **case-sensitively** | 93 | 10 | 🟡 **193** ← p113's figure, and `Gap 403`'s |
+| org prefix matched **case-insensitively** | 93 | 11 | 🟡 **192** ← p114's figure |
+
+🔴 **The row is `apereo-learning-analytics-initiative/larissa`.** `addresses.txt` holds SIX
+addresses under `Apereo-Learning-Analytics-Initiative/` and ONE under
+`apereo-learning-analytics-initiative/`. 🟢 **GitHub org names resolve case-insensitively, so
+p114's 104/192 is correct and p113's 103/193 is not — for a reason neither pass stated.**
+🔴 **But the defect is in neither map: the SHELF holds one organisation under two spellings**
+(the `p439` / `p443` family of fault landing on `addresses.txt`). Not fixed here — p114
+carried `addresses.txt` verbatim so the cross-tabs stay row-for-row — and pre-registered as
+action B.
+
+### 🟢 🆕 `P115-X` — one of p112's three contested placements is settled by evidence
+
+| row | org map | 🆕 p115 | evidence |
+|---|---|---|---|
+| [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 🟡 **`EMEA?`** | 🟢 **North America** | 🟢 **`vt.edu`** — Virginia Tech, `academic` |
+
+🔵 **p112 flagged this org `EMEA?` with its own note: "p111 placed it EMEA; the Apereo
+Foundation is US-registered (`P112-M`)". The repository's root metadata carries a `.edu`
+maintainer address and points where p112 suspected.** 🟡 **It settles ONE ADDRESS, not the
+org — which is exactly why `P115-U`'s new placement file is address-keyed: one org can hold
+repositories maintained from different places, and the other six `Apereo-…` addresses place
+nothing at layer 0.**
+
+## 🟡 Regions and lines of enquiry that returned nothing THIS pass — stated, not hidden
+
+🔵 **Promoted to `##` on purpose: it is NOT a sibling of the four region subsections above.
+`p383-region-heading-gate` measured 24 out-of-vocabulary `###` headings sitting beside the
+regions on this page, and a heading the compiler reads as a fifth region is how a closed
+vocabulary quietly stops being closed.**
+
+| region | this pass's regional query | result |
+|---|---|---|
+| **North America** | ran, extended | 🟢 **ONE new item** — NC §7.39 of SL 2026-41, 🔴 primary source unreachable (`P115-S`) |
+| **EMEA** | ran, extended | 🔴 **no new item** — Reg. (EU) 2026/1744, the Annex III deferral and the European market figures all already held |
+| **APAC** | ran, extended | 🔴 **no new item** — Korea, Vietnam, Taiwan and Australia all already held; one vendor figure REJECTED (`P115-R`) |
+| **LATAM** | ran, extended | 🔴 **no new item** — UNESCO IESALC, the LAC Observatory, TALIS, Brazil, Colombia, Chile and Ceibal all already held |
+
+# Education — market intelligence
+
 **Pass 114, 2026-10-11.** ⏱️ **First pass of this date** (census window
 **2026-10-10 23:54 → 2026-10-11 00:25 UTC**).
 
@@ -900,6 +1164,25 @@ KB: write down what you refused to use, and why.**
 
 ### North America
 
+🟢 **p115 (2026-10-11) — region evidence, placed.**
+🟢 **The best-evidenced region on this shelf after p115: 7 of 7 layer-0 placements are
+`academic`, which is the strongest class short of a typed field, and layer R adds 17 more
+(`compsci.rpi.edu` / `www.rpi.edu` for [`Submitty/Submitty`](https://github.com/Submitty/Submitty)
+among them). Union coverage 47 of 296.**
+
+🟢 **The commercial opening is dated and it is new: North Carolina's §7.39 of Session Law
+2026-41 requires NC DPI to publish a model AI-use policy by 31 December 2026, local boards to
+adopt their own, a framework for evaluating generative-AI educational tools, a PUBLIC LIST OF
+APPROVED TOOLS, and teacher AI professional development by 30 June 2028.** 🔴 **Verification
+of §7.39's text is BLOCKED on this channel (`P115-S`) — treat the dates as candidate until
+`ncleg.gov` is reachable.** 🔵 **If they hold, an "approved-tool register + evaluation
+framework" engagement has a statutory deadline inside the next quarter, and this KB already
+holds the licence, reach and provider-binding evidence such a register needs
+(`P115-GATE` in `compose/patterns.md`).**
+
+🔴 **What this region still cannot say: 7 placements of 43 settled org-level rows means the
+regional figure is still mostly this KB's inference, not the repositories' own statement.**
+
 🔴 **p114 (2026-10-11) — lock reach, placed.** 36 North American rows carry a lockable
 manifest; **13 are `full-reach` (36.1 %)** and **14 have an orphaned ROOT manifest** —
 the worst row-level reach of any placed region. The manifest-weighted figure reads
@@ -1523,6 +1806,25 @@ adoption.** 🔴 **So a North America pitch that leads with adoption is pushing 
 regulatory grain; one that leads with governance, auditability and teacher-augmentation is with it.**
 
 ### EMEA
+
+🟢 **p115 (2026-10-11) — region evidence, placed.**
+🟢 **The most placements at layer 0 (9) and the most layer-R additions (18); union coverage 36
+of 296. One of p115's typed placements is here —
+[`numbas/Numbas`](https://github.com/numbas/Numbas), a CFF `country: GB` field corroborated
+INDEPENDENTLY by `www.ncl.ac.uk` in its README, which is the only clean double-sourced
+placement on the shelf.**
+
+🟡 **But EMEA is also where the evidence is weakest by class: 7 of its 9 placements are
+`other` — company or personal domains whose ccTLD happens to be European, not institutions.**
+🔴 **[`inducer/relate`](https://github.com/inducer/relate) is this pass's own weakest row and
+is flagged as such: its EMEA placement rests entirely on `documen.tician.de`, its README
+names no institution at all, and layer R "corroborates" it by reading the same host.
+Re-reading it is pre-registered as action C.**
+
+🔵 **Regulatory position unchanged and already held: Regulation (EU) 2026/1744 (the Digital
+Omnibus on AI, OJ 24 July 2026, in force 27 July 2026) moved Annex III high-risk duties —
+which is where education sits — to **2 December 2027**, and Annex I to 2 August 2028. Article
+50 transparency duties still apply from 2 August 2026. A deferral is not a removal.**
 
 🔴 **p114 (2026-10-11) — lock reach, placed.** 25 EMEA rows carry a lockable manifest;
 **15 are `full-reach` (60.0 %)**, manifest-weighted **74.2 %**, with **8 root orphans** —
@@ -2402,6 +2704,22 @@ duty is the sellable deliverable that is already overdue.**
 
 ### APAC
 
+🟢 **p115 (2026-10-11) — region evidence, placed.**
+🔴 **ZERO layer-0 placements. Written down rather than left silent, as the brief requires.**
+
+🟢 **And the gap is the instrument's, not the shelf's: layer R finds SEVEN APAC rows, two
+behind registry-restricted academic suffixes (`acm.hdu.edu.cn`,
+`www.gavo.t.u-tokyo.ac.jp`) and one behind a government one (`www.imda.gov.sg`). The
+[`aiverify-foundation/moonshot`](https://github.com/aiverify-foundation/moonshot) family —
+three addresses, Singapore's IMDA — is the best-evidenced APAC cluster on the shelf and
+places nothing at layer 0 because its root metadata carries no address.**
+
+🔵 **Commercially this is the region where promoting layer R changes the answer most: an APAC
+engagement asking "what is maintained in my region" currently gets 13 rows from this KB's own
+org record and NOTHING from the repositories themselves. Nothing new was found by the
+mandated APAC search this pass — Korea's AI Basic Act, Vietnam's 1 March 2026 law, Taiwan's
+December 2025 Act and Australia's National AI Plan are all already held.**
+
 🟢 **p114 (2026-10-11) — lock reach, placed.** 9 APAC rows carry a lockable manifest;
 **6 are `full-reach` (66.7 %)** and manifest-weighted **92.3 %** — the strongest placed
 region on both weightings, with only **2 root orphans**. 🟡 **Stated with the
@@ -3202,6 +3520,28 @@ the permission argument first — except in ANZ, where it does.** 🔴 **That is
 North America posture recorded above, and the two pitches should not share a slide.**
 
 ### LATAM
+
+🟢 **p115 (2026-10-11) — region evidence, placed.**
+🟢 **6 layer-0 placements, and the only region with TWO typed declarations
+([`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) and
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes), both `country: BR`) —
+a Brazilian national-curriculum data line that states its own country in a machine-readable
+field. Layer R adds 6 more. Union coverage 9 of 296.**
+
+🔴 **And the warning that matters most for this region: without the vanity class, LATAM would
+report NINE placements instead of six, and the three extra would come from `.co` and `.ai`
+vanity domains — [`huggingface/transformers`](https://github.com/huggingface/transformers) on
+`huggingface.co`, [`kualico/rice`](https://github.com/kualico/rice) on `kuali.co`,
+[`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) on `ankimcp.ai`.**
+🔵 **A third of the region's figure would have been fabricated. LATAM is the region most
+exposed to this class of error because `.co` is Colombia and `.ai` is Anguilla, and both are
+in heavy vanity use.**
+
+🔵 **Market position unchanged and already held: UNESCO IESALC's 200 institutions across 19
+countries (87 % using AI somewhere, 74 % in teaching and learning, only 26 % with a formal
+strategy), the LAC Observatory, TALIS 2024's Brazil 56 % / Chile 55 % / Colombia 53 % /
+Costa Rica 52 % against an OECD average of 36 %, Brazil's PL 2.338, Colombia's CONPES 4144
+and Chile's risk-based bill.**
 
 🟡 **p114 (2026-10-11) — lock reach, placed, and the denominator is stated first.** Only
 **6 LATAM rows carry a lockable manifest** (17 manifests in total), so a percentage here

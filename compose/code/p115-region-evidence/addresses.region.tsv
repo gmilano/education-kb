@@ -1,0 +1,50 @@
+# address<TAB>region<TAB>layer<TAB>class<TAB>evidence
+#
+# P115-U. Address-keyed regional placement, read from evidence the repository
+# COMMITS about itself. Produced by `emit_placements.sh` from the census TSV;
+# do not hand-edit — re-run the instrument.
+#
+# `region` is the brief's closed vocabulary: North America | EMEA | APAC | LATAM.
+#
+# layer `0`     = a structured metadata file at the repository ROOT.
+# layer `typed` = a TYPED ISO-3166 `country:` field (CITATION.cff schema),
+#                 which is the only place on this shelf where a region is
+#                 DECLARED rather than inferred from an address.
+#
+# `class` is what KIND of address placed the row, classified structurally and
+# never from a name (P115-V):
+#   `academic`   a registry-restricted academic suffix: `.edu`, `.ac.<cc>`,
+#                `.edu.<cc>`. The strongest evidence short of a typed field.
+#   `government` `.gov`, `.mil`, `.gov.<cc>`, `.gob.<cc>`.
+#   `other`      a company or PERSONAL domain whose ccTLD happens to be in
+#                the region. P800's rule asks for an INSTITUTION; this class
+#                does not supply one, and a reader should weigh it as such.
+#
+# NOT in this file, on purpose:
+#   - `contested` rows. Two regions in a row's own metadata gives no single
+#     value for a closed field (P115-K).
+#   - anything read from a NESTED metadata file (P115-N) or from a README
+#     (layer R). Both are measured in the census TSV and neither places.
+#
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	North America	0	academic	vt.edu
+CAHLR/pyBKT	North America	0	academic	berkeley.edu,csail.mit.edu
+KamalEzzo/automated-essay-grading-system	EMEA	0	academic	nu.edu.eg
+bncc-dev/bncc-dados	LATAM	typed	typed	country: BR
+bncc-dev/bncc-pacotes	LATAM	typed	typed	country: BR
+douglasrizzo/catsim	LATAM	0	other	douglasrizzo.com.br
+eribean/girth_mcmc	North America	0	academic	gatech.edu
+inducer/relate	EMEA	0	other	documen.tician.de
+jupyter/nbgrader	North America	0	academic	brynmawr.edu,berkeley.edu,lafayette.edu,calpoly.edu
+ls1intum/Artemis	EMEA	0	other	tum.de,aet.cit.tum.de
+lumieducation/H5P-Nodejs-library	EMEA	0	other	posteo.de,inray.de,www.qm-team.de
+magnusvron/llm-benchmark-quality-index	LATAM	0	other	ipn.mx
+nd-ball/py-irt	North America	0	academic	nd.edu
+nestauk/ojd_daps_skills	EMEA	0	other	nesta.org.uk
+numbas/Numbas	EMEA	typed	typed	country: GB
+openfun/richie	EMEA	0	other	fun-mooc.fr
+openfun/xblock-proctor-exam	EMEA	0	other	fun-mooc.fr
+opetushallitus/ehoks	EMEA	0	other	artifactory.opintopolku.fi
+portabilis/i-educar	LATAM	0	other	portabilis.com.br
+portabilis/pre-matricula-digital	LATAM	0	other	portabilis.com.br
+ucbds-infra/otter-grader	North America	0	academic	berkeley.edu
+ucbds-infra/ottr	North America	0	academic	berkeley.edu
