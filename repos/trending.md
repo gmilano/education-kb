@@ -6,6 +6,70 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 135
+
+🟢 **The headline is a correction of emphasis: this KB built its standards tier around the wrong
+standard.** p134 centred the new sanctioned-integration layer on **LTI at 373★**. Finishing the
+register (`ACTION BN`) measured all six remaining standards, and 🔴 **SCORM carries an order of
+magnitude more code than anything else in the layer** — while two standards have essentially none.
+
+| standard | largest repo | ★ | layer verdict |
+|---|---|---|---|
+| **SCORM** | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | **630** | 🟢 Deep — four repos above 350★ |
+| **LTI** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 373 | 🟢 Strong, current |
+| **QTI 3** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 30 | 🟡 Thin but real — 15 repos, mostly MIT |
+| **Open Badges** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 17 | 🟡 Thin, converging on W3C Verifiable Credentials |
+| **Comprehensive Learner Record** | *the same validator* | 17 | 🔴 **One real row in existence** |
+| **Caliper Analytics** | [`lsloan/udp-notebooks`](https://github.com/lsloan/udp-notebooks) | 🔴 **0** | 🔴 **No usable supply.** Unlicensed, untouched since 2023 |
+
+🔵 **The ranking is monotonic in the standard's AGE and unrelated to its quality.** SCORM (1999) is
+the crudest of the six and has the most code; Caliper (2015) is the most modern event model and has
+none. **Installed base, not merit** — see `intel/trends.md` → `T12` qualifier.
+
+### 🟢 Repos new to this KB
+
+| repo | licence *(hash-verified)* | ★ | pushed | note |
+|---|---|---|---|---|
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **630** | **2026-10-10** | Authoring toolkit for responsive, accessible, multi-language courses; emits SCORM **and** xAPI. The largest repo in the standards stack |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0 + attribution** | **447** | 2026-10-09 | 🟢 **A full permissive Java LMS this KB had never listed**, with QTI, SCORM, curriculum management and assessment built in. Resolves this KB's longest-standing `NOASSERTION` |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🔴 **NO LICENCE FILE** | **391** | 2026-09-18 | The sector's canonical SCORM wrapper. **Eight filenames probed, all absent.** 130 forks inherit the defect |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **354** | 2026-10-09 | Modern SCORM 1.2/2004 runtime, TypeScript, **offline-first**. The permissive replacement for the row above |
+| [`gabrieldoty/simplify-scorm`](https://github.com/gabrieldoty/simplify-scorm) | 🟢 **MIT** | 254 | 2026-08-20 | Minimal SCORM 1.2 JS API |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University.** Browser-based e-assessment, strongest in mathematics |
+| [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 **MIT** | 184 | 2026-10-06 | .NET Core SCORM LMS. 🔵 Its notice carries **no year** |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 🔴 **CC-BY-SA-4.0 (deed only)** | 164 | 2026-10-02 | 🔴 A ShareAlike **content** licence on code, and the file is the 837-byte human-readable deed rather than the legal code |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **NO LICENCE FILE** | 99 | 2026-03-04 | 🔴 Published by the **US DoD ADL Initiative — the author of SCORM and xAPI — unlicensed and archived** |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 92 | **2026-10-10** | AI-native LMS: AI mentor, role-play, SCORM + xAPI, self-hosted |
+| [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) | 🔴 **GPL-3.0** | 6 | 2026-09-29 | QTI 2 → QTI 3. 🟢 Holder read from its filled-in GPL appendix: **Stichting Cito Instituut voor Toetsontwikkeling** (NL national testing institute) |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** | 5 | **2026-10-09** | Framework-neutral TypeScript QTI 3 reference implementation; created 2026-05-20 |
+| [`impierce/credential-converter`](https://github.com/impierce/credential-converter) | 🟢 **Apache-2.0** | 12 | 2025-07-30 | 🟢 Translates Verifiable Credentials ↔ Open Badges ↔ **European Learner Model (ELM)** — an EMEA standard new to this KB |
+| [`epam/qti-learnosity`](https://github.com/epam/qti-learnosity) | 🟢 **MIT** | 2 | 2025-06-30 | 🔵 **EPAM** — a global IT-services peer publishing education-standards tooling openly |
+| [`CoopCodeCommun/pyopenbadges`](https://github.com/CoopCodeCommun/pyopenbadges) | 🔴 **LGPL-2.1** | 8 | 2026-06-05 | Open Badges v3.0 in Python. 🔴 Copyleft — and the whole Python badge layer is |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **LGPL-3.0** | 1 | **2026-10-04** | Open Badges 3.0 as W3C VC-JWT with `did:web` and revocation |
+
+### 🔴 `ACTION BP` discharged — and its premise refuted
+
+`ACTION BP` asked for substring licence detection to be replaced with sha256 matching against
+canonical texts, predicting refutation *"if fewer than 2 corpus payloads are whitespace-variant
+copies — but three are already known."* 🔴 **Zero of 26 are.** A licence payload differs from its
+canonical text by **line wrap width** (SPDX ~105 columns, real `LICENSE` files ~72), so no naive
+hash ever matches.
+
+🟢 **Result: 21 of 26 resolved to a named SPDX identifier.** The five classes of difference that
+actually defeat hash identity, and the two bugs the instrument's own tests caught, are written up in
+`compose/code/p135-licence-sha-identity/README.md`. Two findings worth carrying:
+
+- 🔴 **A second FSF edit to its own licence text:** `why-not-lgpl.html` moved from `/licenses/` to
+  `/philosophy/`, and after wrapping and punctuation were normalised **that one URL path was the
+  entire remaining difference on five GPL-3.0 payloads.**
+- 🔴 **Line-based copyright stripping is wrap-dependent in both possible orders, and each order
+  silently deletes real licence text.** Strip after reflow and the GNU *"Everyone is permitted…"*
+  sentence goes with the notice it shares a paragraph with; strip before reflow and Apache-2.0's
+  *"…a readable copyright notice that is included in or attached to the work"* is deleted because a
+  72-column break lands in front of the word `copyright`. Both were observed on real payloads here.
+
+---
+
 ## 2026-10-11 — Pass 134
 
 🟢 **The headline for this page is an addition, not a correction: the interoperability layer, which

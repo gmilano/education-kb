@@ -6,6 +6,77 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 135
+
+**The pass that read the code instead of the descriptions, and found the blocker had moved rather
+than gone.** For four passes this KB has said the portal-connector tier is undeployable because
+every row holds a student's password, and that the sanctioned standards path fixes it. 🟢 **Half
+confirmed, and it is the important half: `ltijs` holds no user credential at all**, and both MCP
+bridges hold an institution-issued *service* credential rather than a student's password.
+🔴 **The other half is wrong. The sanctioned standard verifies a user cryptographically, and both
+agent bridges to it throw that verification away.**
+
+🔵 **This was only visible because the channel changed.** Earlier passes read *payloads*; this pass
+**cloned the repositories** and read the implementation.
+
+| bridge | tool authentication | user identity | credential at rest |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) · Apache-2.0 · 373★ | Platform-issued client ID + own RSA keypair; `client_credentials` token cached per platform/client/scope | 🟢 **Platform-signed JWT, signature verified**, nonce tracked | 🟢 **None.** Zero occurrences of a stored user credential |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) · MIT | OAuth2 **`client_credentials`** with `BB_CLIENT_ID`/`BB_CLIENT_SECRET`; a separate `authorization_code`/`refresh_token` path exists | 🔴 **Self-asserted.** `caller_identity` is a tool argument, documented as *"trusted at face value"*; `role: "admin"` bypasses the course-entitlement gate | 🟢 **Nothing on disk** — in-memory maps and a token cache only |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) · MIT · 15★ | `LRS_KEY`/`LRS_SECRET` Basic auth to the LRS — an institutional service credential | 🔴 **An environment variable** (`ACTOR_UUID`), at all three call sites | 🟢 No student password; single-tenant by construction |
+
+🔴 **A documentation defect worth naming as a class.** `learnmcp-xapi`'s own source says *"Actor UUID
+from JWT"* in two docstrings. **The project has no JWT dependency at all** — nothing in
+`requirements.txt`, no import. The code is honest; its comments describe a trust anchor it does not
+have, and a reader who trusted them would deploy believing identity was verified.
+
+🟢 **The consequence is a component, not a caveat.** Nothing in this KB terminates a verified
+identity and then calls an MCP server with a subject it established itself. That **identity broker**
+is the clearest unbuilt piece on the shelf, it sits between two mature layers, and every engagement
+on the sanctioned path needs it — now written up as `compose/patterns.md` → **P13**.
+
+### 🟢 New agent-adjacent rows this pass
+
+| repo | licence | ★ | pushed | why it is here |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **92** | **2026-10-10** | An open-source **AI-native LMS** — AI mentor, role-play, SCORM + xAPI, white-label, self-hosted against Moodle/Docebo/Open edX. 🟢 **The only row found where the AI is the platform's own architecture rather than a connector bolted onto someone else's** |
+| [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** | 2 | 2026-09-19 | Markdown → QTI 3.0 XML, and 🟢 **the only row in the standards layer carrying the topic `agent-tool`.** Lets an agent emit assessment items without owning the schema |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | 17 | 2026-09-23 | 🔴 **Refutes p134's "the only conformance suite this KB has found for any standard in this industry."** There are two, and this one is the standards body's own, covering Open Badges and CLR |
+
+### 🔴 The clone cluster — a stronger mirror detector than the one p134 built
+
+`ACTION BQ`'s probe of Brazil's national datasets surfaced `api_enem_microdados` under **four
+distinct owners**, with **byte-identical `README.md`** (sha256 `fea59dc854f35eac9cb72f14`, 1 842 B),
+identical descriptions, identical GPL-3.0 licence bodies, and 🔴 **`fork: false` on all four**:
+
+| owner | ★ | created | pushed |
+|---|---|---|---|
+| `filipedeschamps` | **30** | **2022-07-25** *(original)* | 2026-10-08 **05:37:35Z** |
+| `rendgentmars` | 10 | 2025-12-29 | 2026-10-08 **05:37:46Z** 🔴 **11s later** |
+| `livrunakcream` | 7 | 2025-12-29 | 2026-01-12 |
+| `bluesky816` | 1 | 2025-10-28 | 2026-08-19 |
+
+🟢 **p134's timestamp detector flagged this correctly**, and this pass found the better signal:
+**byte-identity of a non-licence payload.** 🔵 **A shared licence body proves nothing** — 12
+unrelated owners in this pass's corpus share one MIT body — which is why licence grouping is a lead
+and README identity is a verdict. GitHub's `fork` flag is not a lineage signal.
+
+### 🔵 Method and channel state, recorded because both changed
+
+- 🟢 **Public third-party repositories can be cloned in this environment.** `git clone --depth 1`
+  succeeded for all three bridges. This is a stronger instrument than the payload-read lane and it is
+  what made `ACTION BL` answerable.
+- 🔴 **`api.github.com` direct returns 403**; repository search and metadata came through the MCP
+  GitHub tools. `raw.githubusercontent.com` returns 200.
+- 🔴 **Non-GitHub hosts are refused** via both `curl` (403 CONNECT) and `WebFetch` (DNS
+  `ENOTFOUND`) — `leg.colorado.gov`, `openstates.org`, `legiscan.com`. 🟢 **A search restricted to a
+  single domain does reach those documents**, which is how `ACTION BO` was confirmed against the
+  Colorado legislature's own bill page and fiscal note.
+- 🔵 **No `pytest` in this environment**, so this pass's instrument ships its own test runner and
+  needs only a bare interpreter. **33 tests, all passing.**
+
+---
+
 ## 2026-10-11 — Pass 134
 
 **The pass that found the tier this shelf has been working around for ten passes.** 🔴 **Not another

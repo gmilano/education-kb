@@ -6,6 +6,18 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 135, 2026-10-11.** p134's twelve recipes retained; 🔴 **`P13` is added and it is a
+prerequisite for `P11`, not an alternative** — p135 read the source of all three agent bridges and
+found that two accept the user's identity on trust, so the pattern this KB has been recommending as
+its new default **ships an agent that will act on whatever subject the caller claims**. 🟢 **`P14`
+is added** from the content and assessment layer the standards register finished this pass. Fourteen
+recipes. Each names the actual repos, the licence posture of the result, how the pieces wire
+together, and what it does not solve.
+
+🔵 **Every licence stated in `P13` and `P14` was established by sha256 identity against canonical
+SPDX texts** (`compose/code/p135-licence-sha-identity`), not from a GitHub badge — and two popular
+components are flagged out of `P14` for exactly that reason.
+
 **Pass 132, 2026-10-11.** p131's seven recipes retained; 🔴 **P2 is re-based on a real 39 444-star
 stack instead of a greenfield build** and **P8 and P9 are added** from the SIS/portal tier found
 this pass (see `README.md` → Pass 132). Nine recipes. Each names the actual repos, the licence
@@ -599,6 +611,115 @@ generating feedback**, plus:
 9% evaluate it.** 🟢 **Nobody is arguing about whether students use AI. The unanswered question is
 whether the institution can show what its own AI did** — and that is this pattern.
 
+## 🔴 P13 — The identity broker in front of a standards MCP server *(new, p135 — and it is a prerequisite for P11, not an alternative to it)*
+
+**Why this pattern exists.** p134 established that the sanctioned path (P11) removes the credential
+blocker, and that is correct: a tool launched over LTI holds no user credential. 🔴 **p135 read the
+source of all three agent bridges and found that two of them accept the user's identity on trust**
+(`intel/trends.md` → `T13`, `agents/top.md` → `ACTION BL`). **P11 as written ships an MCP server
+that will act on whatever subject the caller claims.** This pattern is the missing component, and it
+is small.
+
+### The problem, in one table
+
+| component | what it proves about the user |
+|---|---|
+| `Cvmcosta/ltijs` (Apache-2.0, 373★) | 🟢 **Verified.** Platform-signed JWT, signature checked against platform keys, nonce tracked |
+| `nitsuah/bb-mcp` (MIT) | 🔴 **Nothing.** `caller_identity` is a tool argument the client fills in; the README states it is *"trusted at face value"*, and `role: "admin"` bypasses the course-entitlement gate |
+| `DavidLMS/learnmcp-xapi` (MIT) | 🔴 **Nothing.** The actor is `ACTOR_UUID` from the environment — one process per student |
+
+🔵 **So the verification exists at the LMS boundary and is thrown away before the agent acts.** The
+broker's whole job is to carry it across.
+
+### The stack
+
+| role | component | licence |
+|---|---|---|
+| Identity termination | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) — LTI 1.3 launch, OIDC, signature verification, nonce replay protection | 🟢 Apache-2.0 *(hash-verified, p135)* |
+| Broker | **your ~300 lines.** Maps the verified `sub`/roles/context claims from the launch into a short-lived, signed capability token; refuses to mint one for a subject the launch did not assert | — |
+| Agent surface | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) or [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi), called **only** by the broker | 🟢 MIT *(both hash-verified)* |
+| Record | the institution's LRS (xAPI) or the platform's own API | — |
+| Audit | `bb-mcp`'s structured access log, SHA-256-hashed subjects, kept | 🟢 MIT |
+
+### How it wires together
+
+1. The user launches the tool from the LMS. `ltijs` validates the `id_token` signature against the
+   platform's JWKS, checks the nonce, and yields **claims the institution signed**: subject, roles,
+   context (course), and the AGS/NRPS endpoints available for this launch.
+2. The broker mints a **short-lived token** carrying only those claims, scoped to that course.
+3. Every MCP call goes through the broker, which fills `caller_identity` **from the verified claims,
+   never from the agent**. The MCP server's own RBAC, FERPA gate and course-entitlement check then
+   operate on a subject that was actually proven.
+4. 🔴 **Network-close the MCP server.** `bb-mcp` fails closed without `MCP_API_KEY` and TLS on a
+   non-loopback host — keep that, and additionally make the broker the only route to it. Its
+   `MCP_API_KEY` authenticates *the client*, not the user; the broker supplies the user.
+5. Writes (grade passback) go over **LTI AGS** where available, so the write is authorised by the
+   same launch that authenticated the user.
+
+### Why it wins the room
+
+🟢 **It is the answer to the only question that stops these projects in security review:** *"what
+stops the agent claiming to be someone else?"* With P11 alone the honest answer is "nothing, we
+trust the client application" — which is `bb-mcp`'s documented design and a finding in any audit.
+With P13 the answer is **"the LMS signed it, we verified the signature, and the agent never supplies
+the subject."**
+
+🔴 **State the FERPA/GDPR consequence plainly to the buyer.** `bb-mcp` gates its restricted tools on
+a `ferpa_authorized: true` flag that **the calling application asserts**. Unbrokered, that flag is
+the agent asserting its own authorisation to see protected education records. Brokered, it is
+derived from a verified role. **That is the difference between a control and a comment.**
+
+### Shape of the engagement
+
+**4–6 weeks.** Week 1: LTI developer key in the client's LMS and a working verified launch.
+Weeks 2–3: the broker, with tests that prove an unasserted subject is refused and that `role:admin`
+cannot be self-granted. Weeks 4–5: wire one MCP server behind it, one read tool and one write tool.
+Week 6: the security review the client was always going to run.
+
+🔵 **What it does not solve.** It does not make `learnmcp-xapi` multi-tenant — that repo is one
+process per `ACTOR_UUID` and last saw a commit on **2025-08-29**, so budget a fork. It does not give
+you Caliper analytics, which have **no open-source client at all**. And it does not remove the need
+for P6: brokered identity makes the audit trail trustworthy, not the pedagogy effective.
+
+## 🟢 P14 — Standards-native content and assessment pipeline *(new, p135)*
+
+**For the client that asks for AI-generated course content or assessment items and needs them to
+work in the LMS it already owns.** p135's register found that the content and assessment standards
+carry far more code than this KB had recorded, and all the pieces below are permissive **except
+where flagged**.
+
+| role | component | licence |
+|---|---|---|
+| Item authoring | [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) — Markdown → QTI 3.0 XML; 🟢 carries the topic `agent-tool` | 🟢 MIT |
+| Item rendering/preview | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (30★) or [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) (TypeScript, pushed 2026-10-09) | 🟢 MIT |
+| Assessment engine | [`numbas/Numbas`](https://github.com/numbas/Numbas) — **Newcastle University**, strongest for mathematics, SCORM-packageable | 🟢 Apache-2.0 |
+| Course packaging | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) (630★) — responsive, accessible, multi-language, emits SCORM **and** xAPI | 🔴 **GPL-3.0 — run it, do not link it** |
+| Runtime/tracking | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (354★) — SCORM 1.2/2004, **offline-first** | 🟢 MIT |
+| Legacy migration | [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) — QTI 2 → QTI 3 | 🔴 **GPL-3.0** (holder: **Stichting Cito**) |
+| Conformance | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) for badges/CLR; `googleworkspace/oneroster-integration-conformance-tests` for rostering | 🟢 Apache-2.0 |
+
+**How it wires together.** The agent generates items as **Markdown**, not as XML — `markdown-to-qti`
+owns the schema so the model never has to. Items render in the QTI player for human review before
+anything ships. Reviewed items go into Adapt (run as a tool; the client owns the output) or Numbas
+for maths, and export as a **SCORM package** the client's existing LMS already knows how to ingest.
+`scorm-again` carries the runtime client-side, so completion tracking survives a lost connection and
+reconciles later.
+
+🟢 **Why this shape and not an LMS plugin.** Nothing in it touches platform source, so it is
+licence-neutral with respect to the client's LMS — it works against Moodle (GPL), Canvas (AGPL),
+Open edX (AGPL) and OpenOlat (Apache) identically, because **a SCORM package is a SCORM package.**
+That is the same argument P11 makes for launch and rostering, applied to content.
+
+🔴 **Two licence traps on this path, both measured this pass.** Do **not** reach for
+`pipwerks/scorm-api-wrapper` (**391★ and no licence file of any kind** — use `scorm-again`), and do
+**not** reach for `cybercussion/SCOBot` (**164★, CC-BY-SA-4.0, and the file is only the
+human-readable deed** — a ShareAlike content licence on code, with no patent grant). Both are
+popular, which is exactly why they get picked by default.
+
+🔵 **What it does not solve.** Accessibility still needs human review — Adapt is built for it, which
+helps, but generated content is not conformant because the framework is. And there is **no
+conformance suite for QTI**, so "the item is valid QTI 3" rests on the player accepting it.
+
 ## Pattern selection, one line each
 
 | if the client… | run |
@@ -618,13 +739,20 @@ whether the institution can show what its own AI did** — and that is this patt
 | 🆕 wants **AI grading or feedback**, in the EU, Oklahoma or Maryland | 🟢 **P12**, on **P11**'s stack |
 | 🆕 is a **US K-12 district or state agency** with an Ed-Fi ODS | 🟢 **P11**, via `edfi-oneroster` |
 | 🆕 is an **assessment platform vendor** rather than an institution | 🟢 **P12** — and see UNIwise as the precedent |
+| 🆕 will put an agent in front of a **system of record**, or faces a security review or DPIA | 🔴 **P13 — mandatory, and before P11 ships, not after** |
+| 🆕 asks for **AI-generated course content or assessment items** for an LMS it already owns | 🟢 **P14** |
+| 🆕 needs tracked content delivery to work **offline** | 🟢 **P14** (`scorm-again` is offline-first), with **P2** |
+| 🆕 is a **German-speaking-Europe** institution wanting off Moodle's GPL | 🟢 **OpenOlat** as the base (Apache-2.0 + attribution), then **P11** |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship
 emotion recognition into an EU deployment. Treat unlicensed components as unusable
 until counsel clears them, however many stars they have — and treat **`NOASSERTION` as "unread",
 not "unusable"**: GitHub reports it whenever its matcher does not recognise a `LICENSE` file, and
-this KB has resolved at least one such row (`openeducat_erp` → **LGPL-3.0**, 8 241 B) by reading the
-payload. Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
+this KB has now resolved **both** such rows by reading the payload (`openeducat_erp` → **LGPL-3.0**,
+8 241 B; `OpenOLAT` → **Apache-2.0 with two attribution statements**, p135). 🔴 **And `NOASSERTION`
+is biased towards institution-derived projects**, because appending institutional attribution is
+exactly what defeats a licence matcher — so the rows it mislabels are disproportionately the ones an
+education engagement most wants to use (`intel/trends.md` → `T14`). Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
 screen as code** — the two education benchmarks that exist are both ungranted.
 
 🆕 **Three cross-cutting rules added by p132:**

@@ -6,6 +6,27 @@ updated: 2026-10-11
 
 # Education — market map and opportunities
 
+**Pass 135, 2026-10-11.** 🔴 **p132's reassuring "the firms nearly agree on the current year"
+is weakened by one more genuinely-2026 figure, and strengthened in its diagnosis.** A sixth 2026
+estimate sits at **$6.02B** — below p132's whole $9.6–11B band — which widens the current-year
+spread from **1.19× back to ~1.89×**. 🟢 **But p132's deeper point survives intact and gets
+sharper: the disagreement is not about today's size, it is about the GROWTH RATE.** Published CAGRs
+for this market now run **12.55% to 45% — a 3.6× spread** — and that, not the base year, is what
+makes any ten-year case arbitrary. Table updated below.
+
+🟢 **`ACTION BO` discharged and CONFIRMED against the legislature's own record, and the answer is
+bigger than the question.** p134 carried an *"unconfirmed Colorado repeal"* as a recorded source
+conflict. It is real: **SB 26-189**, signed **2026-05-14**, repeals and reenacts SB 24-205.
+🔴 **And its scope names education directly** — see North America below.
+
+🟢 **`ACTION BM` discharged, and `P134-H` is PARTLY REFUTED — which is more useful than confirming
+it.** p134 concluded that "EMEA" fails as a research probe because it is a vendor sales-region word.
+Tested this pass on the other two: **"APAC" fails exactly the same way. "LATAM" does not.**
+🔵 **The predictor is not whether the word is a regional acronym — it is whether a region-scoped
+EDUCATION body publishes under that label.** Latin America has two (UNESCO IESALC and the IDB);
+"EMEA" and "APAC" have none, so those probes return enterprise IT. Mechanism and evidence under
+each region.
+
 **Pass 132, 2026-10-11.** 🔴 **This page's headline market claim is withdrawn and replaced: the
 "1.8× spread for the current year" was an artefact of one year-shifted row** (`README.md` →
 Pass 132, `P132-D`). The regional battery also **broke its four-pass saturation streak in all four
@@ -32,6 +53,28 @@ page was built around.
 | **2026** | $4.09B (**higher education only**) | → $13.46B by 2030 | 34.7% | market-research firm — *a segment, not the market* |
 | 🔴 **2025** | ~~~$6.4B~~ | → $79.6B by 2034 | 31.35% (2026–34) | **IMARC — misfiled as a 2026 figure by earlier passes of this KB** |
 | 2025 *(context)* | $7.05B · $7.52B · $8.3B · $8.51B · $9.8B · $5.50B | — | — | Precedence · TBRC · Grand View · various |
+
+🆕 **Added by p135 — the row that reopens the current-year spread, and the CAGR table that
+matters more:**
+
+| year | estimate | forecast | implied CAGR | source |
+|---|---|---|---|---|
+| **2026** | 🔴 **$6.02B** | → $12.30B by 2032 | 🔴 **12.55%** | report aggregator (GII; underlying publisher not named on the page) — **the lowest 2026 figure on record here and the lowest CAGR by a factor of 3.6** |
+| **2026** | **$11.4B** | → $57.2B by 2033 | 25.9% | Grand View Research (its own 2025 base: **$8.3B**; **North America 37.5%** share in 2025) |
+| 2025 | $6.4B | → $79.6B by 2034 | 31.35% | IMARC — 🟢 **re-confirms p132's correction**: this is a 2025 base, exactly as `P132-D` said |
+| 2025–30 | *expansion of* **+$3.37B** | — | 🔴 **45%** | Technavio — 🔵 **an expansion figure, not a market size.** Do not place it in a size column |
+
+🔴 **The CAGR spread is the real finding, and it is wider than the size spread by any measure:**
+**12.55%** · 25.9% · 31.35% · 40.9% · **45%**. 🟢 **Use this instead of the size range.** Two firms
+pricing the same market today within ~20% of each other, while disagreeing 3.6-fold on how fast it
+grows, is precisely why the 2035 figures span ~17×. The disagreement compounds; it does not start
+large.
+
+🔵 **A unit-discipline note, because this page has now been caught twice.** `P132-D` was a **base-year**
+error. The Technavio row above is an adjacent trap — a *market expansion* quoted in the same units as
+a *market size* — and the higher-education row is a third (**a segment, not the market**).
+🟢 **Rule: before using a figure, check its base year, its unit, and its scope.** Two of three have
+already produced a published error on this page.
 
 **The 2035 end of the same sources, which is where the real disagreement lives:**
 **~$70.55B** (SNS Insider) · **~$113.2B** (Research Nester) · **~$136.79B** (Precedence) ·
@@ -178,6 +221,45 @@ pattern (`compose/patterns.md` → **P11**) land here first.
 (**$951M 2024 → $2 303.2M 2029, 15.9% CAGR**) **cannot** be quoted against the global 31–41.5% CAGRs
 on this page. Different denominators, same `P132-D` class of error.
 
+#### 🆕 p135 — `ACTION BO` discharged: Colorado's replacement statute names education, and it has dates
+
+🟢 **Confirmed against the Colorado General Assembly's own bill page and the Legislative Council
+Staff fiscal note.** p134 recorded the repeal as *unconfirmed* and opened `ACTION BO` to confirm or
+strike it. It stands, and it is now the most concretely dated AI obligation this KB holds for any
+region:
+
+| fact | value |
+|---|---|
+| bill | **SB 26-189, "Automated Decision-Making Technology"** |
+| what it does | **Repeals and reenacts SB 24-205** (the Colorado AI Act), replacing *"high-risk artificial intelligence systems"* with **"automated decision-making technology" (ADMT)** used in *consequential decisions* |
+| signed | **2026-05-14** (House passed **34–1** on 2026-05-12) |
+| 🔴 **scope** | Consequential decisions explicitly include **education enrolment and opportunity**, alongside employment, housing, lending, insurance, health care and essential government services |
+| developer duties | From **2027-01-01**: technical documentation to deployers, and notice of material updates to covered ADMT |
+| deployer duties | Notice **at the point of interaction**; a **plain-language explanation within 30 days** of an adverse outcome; consumer rights to **correction of inaccurate data** and to **meaningful human review and reconsideration** |
+| AG rulemaking | Required **by 2027-01-01**; **cure period runs through 2030** |
+| 🔴 enforcement status | A **US District Court ordered the Attorney General not to enforce** SB 24-205 *or any legislation amending it* until rulemaking concludes and the court rules in **`X. AI LLC v. Weiser`** |
+
+🔴 **What was dropped matters as much as what was added.** The duty of reasonable care, mandatory
+**impact assessments** and the required **risk-management programme** are gone; **disclosure, 30-day
+explanation and human review** replace them. 🟢 **That inverts the sales motion.** The old statute
+sold a *governance programme*; the new one sells an **explanation pipeline** — per-decision
+provenance, a retrievable reason for an adverse outcome, and a human-review workflow that can be
+evidenced. An institution that admits, places or streams students with a model now owes an
+explainable record of **why**, within 30 days, to the individual affected.
+
+🔵 **Read the stay correctly before quoting it.** Enforcement being paused is **not** a reason for a
+client to wait: the **compliance dates are not stayed**, the cure period ends in **2030**, and the
+order is tied to the outcome of pending litigation. A buyer who treats the stay as a reprieve has
+2027 duties and no programme.
+
+🔴 **Channel note, recorded rather than hidden.** `leg.colorado.gov` could not be fetched directly
+from this environment (`curl` → **403 CONNECT tunnel failed**; `WebFetch` → DNS `ENOTFOUND`), and
+`openstates.org` and `legiscan.com` were refused the same way. The legislature's own bill page and
+fiscal note were reached **through the search channel restricted to `leg.colorado.gov`**, which
+returned both documents. 🟢 **So this is a primary-source confirmation, through a secondary
+transport** — stronger than p134's seven law-firm summaries, and weaker than a direct read. The
+refusal is logged for `compose/code/p798-proxy-refusal-ledger`.
+
 ### EMEA
 
 - **The regulatory clock moved, and the deferral is now confirmed as law.** High-risk obligations
@@ -284,6 +366,49 @@ and are **secondhand**; the Netherlands reading came from a school-focused blog.
 EC and Jisc items trace to institutional sources. **No primary ministry document was fetched for
 Germany, the Netherlands or any Nordic country** — recorded as an open gap, not as coverage.
 
+#### 🆕 p135 — a European credential standard this KB had never recorded, and the probe failure confirmed
+
+🔴 **`ACTION BM` re-confirms `P134-H` for EMEA on an independent run.** The bare probe
+*"AI education EMEA 2026 adoption regulation players"* returned, again, **enterprise IT**: CompTIA's
+regional IT-strategy outlook, a **2023** Workday study on enterprise AI trust, and a February 2026
+Bandwidth/Cavell piece on enterprise compliance complexity. The only education-sector source it
+surfaced was the **Council of Europe's 2nd Working Conference on regulating AI in education** —
+whose sitting was **24–25 October 2024**, with no indication whether its proposed European edtech
+evaluation framework was adopted. 🟢 **Two independent passes, same failure: "EMEA" is not a word
+the education sector publishes under.** Country-level probing remains mandatory here (p134's
+`ACTION BK` discharge holds: France's *cadre d'usage*, NRW, Skolverket, Jisc's 38 institutions).
+
+🟢 **Supply finding: ELM — the European Learner Model — is a live credential standard with real
+code, and this KB has never listed it.** It appears in **three** repositories, always paired with
+Open Badges 3.0 and W3C Verifiable Credentials:
+
+| repo | licence | ★ | what it does |
+|---|---|---|---|
+| [`impierce/credential-converter`](https://github.com/impierce/credential-converter) | 🟢 **Apache-2.0** | 12 | Translates between **Verifiable Credentials, Open Badges and ELM**, with a mapping CLI. Rust |
+| [`impierce/digital-credential-data-models`](https://github.com/impierce/digital-credential-data-models) | not measured | 5 | The data models for OB 3.0 and ELM. Rust |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **no licence file** | 0 | Issues OB 3.0 and ELM credentials over **OIDC4VCI** |
+
+🔵 **Why this is an EMEA fact and not a global one.** ELM is the EU's learner-credential data model;
+it is the format a European qualification or micro-credential is expressed in for cross-border
+recognition. 🟢 **For an EMEA engagement this is the mapping layer that makes a credential portable
+between member states** — and the only permissive implementation is **Apache-2.0 and in Rust**,
+which is a language mismatch for most AI work and therefore a concrete integration cost to quote.
+
+🟢 **Two further EMEA institutional rows, both permissive, both pushed days before this pass:**
+**Newcastle University's** [`numbas/Numbas`](https://github.com/numbas/Numbas) (Apache-2.0, 215★,
+e-assessment, strongest in mathematics) and **frentix GmbH / University of Zurich's**
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0 + attribution, 447★, a full LMS with
+QTI and SCORM built in). 🔴 **Plus a copyleft one worth knowing by name:**
+[`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) (GPL-3.0), whose holder — read out
+of its own filled-in GPL appendix — is **Stichting Cito Instituut voor Toetsontwikkeling, Arnhem**,
+the Dutch national testing institute. 🟡 And **SURF**, the Dutch national education network, has
+**archived** its `edubadges` front-end.
+
+🔵 **The pattern across all five: EMEA's open-source education supply is institutionally owned —
+universities, national testing institutes, national networks — and it is being published and then
+sometimes abandoned.** An engagement here should expect to meet a credible institutional codebase
+with no maintenance plan, which is a *partnership* conversation rather than a *procurement* one.
+
 ### APAC
 
 - **Fastest-growing region (~35.3% CAGR), and the only one where curriculum mandates are driving
@@ -359,6 +484,40 @@ the region's two entries there are an AGPL-3.0 project and a translation.
 assessment at national scale — `compose/patterns.md` → **P5**), Singapore and Japan are **assurance**
 markets (AI Verify conformance, testing institutes), and 🔴 **China is a market Globant should price
 as a separate build**, not a localisation, on the registration and localisation requirements alone.
+
+#### 🆕 p135 — `ACTION BM`: "APAC" fails exactly as "EMEA" does, and the country probe returns dated mandates
+
+🔴 **The bare regional probe failed, and it failed in the same way.** *"AI education APAC 2026
+adoption regulation players"* returned enterprise-technology coverage — Boomi's APAC tech
+priorities, TechRepublic's enterprise signals, Forrester on sovereign-by-design execution,
+Singapore's consultations on AI in **financial institutions** — and such education content as it
+found was **vendor press release**: a Pearson/TCS learning alliance, LearnUpon's Sydney office,
+Alteryx relaunching its academy. 🔴 **The run recorded explicitly that it found no education-specific
+regulatory framework, no ministry curriculum rule and no edtech market-share data.**
+
+🟢 **The country-level probe, run immediately after, returned the dated mandates the regional one
+could not see:**
+
+| country | obligation | date |
+|---|---|---|
+| **India** | 🔴 **AI and Computational Thinking become MANDATORY subjects from Class 3 upward**, aligned to the National Education Policy 2020, with teacher training through the **NISHTHA** programme | **from the 2026-27 academic year** |
+| **Singapore** | An **AI Literacy Learning Framework** for primary and secondary students; enhanced mathematics, science and technology curricula; a **Guide to Using AI in Teaching**; 🟢 **digital education made a compulsory part of pre-service teacher training** | curricula **from 2026** |
+| **South Korea** | Ministry of Education with the Ministry of Science and ICT treats AI as a **foundational literacy and instructional tool** rather than a standalone subject; the **2026 work plan** lists universal AI integration for students and teachers as a priority | **2026 work plan** |
+| **China, UAE** | Mandatory AI literacy in national education, alongside India | in force |
+| 🔴 **Japan** | 🔴 **MEASURED ABSENT.** The probe returned nothing on Japan's national AI-education policy. **This is a gap in this KB's coverage, not a finding that Japan has no policy** — and it is written down rather than left looking like coverage | — |
+
+🟢 **Why this matters commercially, and it is the opposite of the EMEA shape.** India and Singapore
+have made AI a **compulsory curriculum subject with a start date**, which creates demand for
+*teacher capacity and curriculum materials at national scale* — not for governance programmes.
+🔵 **A mandate with a date and a teacher-training programme attached (NISHTHA, Singapore's
+pre-service requirement) is a delivery contract**, and it is procured by a ministry, not by an
+institution. 🔴 Note the asymmetry that should temper any pitch: **OECD's 2026 review finds ~3 in 4
+teachers lack the skills to teach with AI** (recorded by p134), against mandates that start in
+months.
+
+🔵 **Method, stated for reuse.** The failing probe and the succeeding one differ in one respect:
+**the failing one names a vendor sales region, the succeeding one names a country whose ministry
+publishes.** See the mechanism note under *LATAM* for why "LATAM" is the exception that proves it.
 
 ### LATAM
 
@@ -509,6 +668,77 @@ no evidence found, probe named**. See `verticals/solutions.md`.
 has four national academic systems with real builder communities; Mexico has scrapers and no
 licences; Colombia's activity targets the ministry; Peru has no footprint.** **"LATAM" is four
 markets, and only Brazil has supply this KB could staff an engagement from today.**
+
+#### 🆕 p135 — `ACTION BM` PARTLY REFUTED here: "LATAM" is the one regional word that works, and the mechanism is now named
+
+🟢 **The bare probe *"AI education LATAM 2026 adoption regulation players"* succeeded** where the
+identical construction failed for EMEA and APAC. It returned education-sector primary research with
+denominators:
+
+| finding | figure | source |
+|---|---|---|
+| Institutions using AI in at least one area | **87%** | UNESCO **IESALC** study of **200 institutions across 19 countries** |
+| Institutions with **any formal AI framework** | 🔴 **26%** | same study |
+| By sector | private non-profit **84%** · public **68%** · private for-profit **52%** | same study |
+| Students actively engaging with AI | **92%** | Digital Education Council **LATAM survey 2026**, **30 000+ responses**, with Tecnológico de Monterrey's Institute for the Future of Education |
+| Faculty actively engaging with AI | **79%** | same survey |
+| Universities with a published AI-use policy | 🔴 **~30%** | regional commentary |
+| Regional readiness | an **AI readiness index covering 19 countries** | **IDB** |
+
+**National regulatory posture, as reported:** **Chile** has had a national AI policy since 2021 with
+a bill under discussion; **Brazil** and **Colombia** have national AI strategies **without
+education-specific rules**; **Mexico's** guidance from **SEP** and **ANUIES** 🔴 **lacks binding
+force**. 🟢 **So the region's shape is: near-universal use, almost no binding rule, and a quarter of
+institutions with any framework at all** — which is the governance gap of `T1` at its widest
+anywhere in this KB, and the one place where the buyer is the institution rather than the state.
+
+🔵 **The mechanism, which is the transferable part.** "LATAM" works as a probe because
+**region-scoped education bodies publish under that label** — UNESCO's **IESALC** is literally the
+institute for higher education in Latin America and the Caribbean, and the **IDB** publishes
+education research for the region. 🔴 **"EMEA" and "APAC" have no counterpart**: no ministry,
+university network or multilateral publishes education research addressed to "EMEA". 🟢 **So
+`P134-H` generalises as a rule about INSTITUTIONS, not about words:** a bare regional probe returns
+education material exactly when a region-scoped education body exists to produce it. That is
+testable in advance of any search, and it tells this KB which regions must always be probed by
+country.
+
+#### 🆕 p135 — `ACTION BQ`: the ministry-dataset axis exists outside Colombia, and it has no institutional supply at all
+
+p134 opened `ACTION BQ` to probe by national dataset name (C-600, SIMAT, Censo Escolar/INEP, SISTEC,
+ENEM), predicting refutation *"if fewer than 3 such rows exist outside Colombia."* 🟢 **Not refuted
+— Brazil alone has dozens.** 🔴 **But every one of them is an individual or academic analysis, and
+not one is owned by a ministry, institute or university.**
+
+| probe | rows | largest | owner class |
+|---|---|---|---|
+| `censo escolar inep educacao dados` | **7** | **3★** | 🔴 **Individual and academic throughout** — BI dissertations, quilombola-community analyses, a Rio de Janeiro schools explorer, a DAMA-DMBOK governance project. **Zero institution-owned** |
+| `enem microdados inep` | **35** | **30★** | 🔴 Individual throughout, and the top of the layer is **a clone cluster** (below) |
+
+🔴 **The clone cluster, and it is a measurement result rather than an impression.**
+`api_enem_microdados` — an API over Brazil's ENEM microdata — exists under **four distinct owners**
+with **byte-identical `README.md` (sha256 `fea59dc854f35eac9cb72f14`, 1 842 B)**, identical
+descriptions, **identical GPL-3.0 licence bodies**, and `fork: false` on all four:
+
+| owner | ★ | created | pushed |
+|---|---|---|---|
+| [`filipedeschamps`](https://github.com/filipedeschamps/api_enem_microdados) | **30** | **2022-07-25** *(the original)* | 2026-10-08 **05:37:35Z** |
+| [`rendgentmars`](https://github.com/rendgentmars/api_enem_microdados) | 10 | 2025-12-29 | 2026-10-08 **05:37:46Z** 🔴 **11 seconds later** |
+| [`livrunakcream`](https://github.com/livrunakcream/api_enem_microdados) | 7 | 2025-12-29 | 2026-01-12 |
+| [`bluesky816`](https://github.com/bluesky816/api_enem_microdados) | 1 | 2025-10-28 | 2026-08-19 |
+
+🔵 **What this means for the LATAM picture, and it is not only a data-hygiene point.** The
+ministry-facing dataset axis is **real and active** — Brazil publishes ENEM and Censo Escolar as
+open microdata and people build on them. 🔴 **But the supply is hobbyist, and its apparent size is
+inflated by uncredited copying.** A studio sizing "LATAM open-source education supply" from star
+counts or repository counts will overstate it. 🟢 **The underlying opportunity is the inverse of the
+supply:** Brazil's national datasets are open, documented and unserved by any institutional tool —
+which is a build, not an integration.
+
+🔵 **It also upgrades this KB's own mirror detector.** p134's `ACTION BG` built a signal from
+near-coincident `pushed_at` timestamps, which flagged this cluster correctly (11 seconds apart).
+🟢 **But byte-identity of a NON-LICENCE payload is decisively stronger**, because a shared licence
+body proves nothing — 12 unrelated owners in this pass's corpus share one MIT body. See
+`compose/code/p135-licence-sha-identity` → cross-owner identity, and `agents/trending.md` → Pass 135.
 
 ### Global / unplaced
 

@@ -6,6 +6,38 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 135, 2026-10-11.** 🟢 **`ACTION BL` discharged by reading the source of all three agent
+bridges rather than their descriptions — and it splits.** The credential claim this page has made
+for four passes **holds**: not one of the three stores a student's password, and `ltijs` holds no
+user credential at all. 🔴 **The identity claim does not. Two of the three take the subject's
+identity on trust from configuration or from the caller**, which moves the blocker rather than
+removing it, and changes what a studio has to build. Details in **`ACTION BL` — the three bridges,
+read in source** below.
+
+🔵 **A channel note, because it is why this pass could answer the question at all.** Earlier passes
+read *payloads*; this one **cloned the repositories** (`git clone --depth 1` succeeded for all
+three), so the auth model was read from the code that implements it. See `intel/open-gaps.md` →
+channel state.
+
+🟢 **`ACTION BN` discharged and not refuted: the standards register is finished, and the shelf had
+the wrong standard at the centre.** p134 built this page's new tier around LTI at **373★**. Measured
+across all six remaining standards, **SCORM is an order of magnitude larger** —
+`adaptlearning/adapt_framework` **630★** (pushed 2026-10-10), `OpenOLAT/OpenOLAT` **447★**,
+`pipwerks/scorm-api-wrapper` **391★**, `jcputney/scorm-again` **354★** — while **Caliper is one
+repository with 0★, last touched in 2023**, and **Comprehensive Learner Record is one real row**.
+🔴 **Maturity in this layer tracks the standard's AGE, not its design** (`intel/trends.md` → `T12`).
+
+🔴 **And p134's "only conformance suite in this industry" is withdrawn.** There are two, and the
+second is the standards body's own: `1EdTech/digital-credentials-public-validator` (**Apache-2.0**,
+17★, pushed 2026-09-23).
+
+🟢 **One permissive AI-native platform is added**, because it is both an agent row and a platform
+row: `Selleo/mentingo` (**MIT**, 92★, pushed 2026-10-10) — an open-source **AI-native LMS** with an
+AI mentor and role-play, SCORM and xAPI support, positioned as a self-hosted alternative to Moodle,
+Docebo and Open edX. Licence verified by hash, not by badge (`compose/code/p135-licence-sha-identity`).
+
+---
+
 **Pass 134, 2026-10-11.** 🔴 **This pass did not add a connector to the tier this shelf is built
 around — it found the tier that makes most of that one unshippable, and it has been missing from
 this KB the whole time.** Every row in the 36-row portal tier below authenticates by holding a
@@ -337,6 +369,111 @@ missing is the engagement:
   standard, which is exactly why the LATAM supply is scrapers. That is an informed gap, not an
   unexamined one.
 
+### 🔴 `ACTION BL` — the three bridges, read in source
+
+**Pass 135.** p134 pre-registered: *"read the source of `ltijs`, `learnmcp-xapi` and `bb-mcp`, not
+their descriptions; confirm the auth model and that no credential is stored."* All three were
+cloned and read. 🔴 **Not refuted — the result splits along a line this KB had not drawn.**
+
+| repo | what authenticates the TOOL | what establishes the USER | credential stored? |
+|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Platform-issued client ID + the tool's own RSA keypair; `client_credentials` access token cached per `platformUrl`+`clientId`+`scopes` | 🟢 **A platform-signed JWT, signature verified** (`verifyTokenSignature`, `jwt.verify` against platform keys, with nonce tracking) | 🟢 **No user credential of any kind.** The only secret is a token the institution issued and can revoke |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `LRS_KEY`/`LRS_SECRET` Basic auth to the Learning Record Store — an institution-issued **service** credential | 🔴 **An environment variable.** `ACTOR_UUID`, read from `config` at all three call sites | 🟢 No student password. 🔴 But the subject is asserted by configuration |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | `BB_CLIENT_ID`/`BB_CLIENT_SECRET` via OAuth2 **`client_credentials`** (Basic auth on the token endpoint); a separate `authorization_code`/`refresh_token` path also exists | 🔴 **The caller's own claim.** `caller_identity` is a required tool argument, and the README states it plainly: *"This identity is trusted at face value (bb-mcp does not itself verify end-user identity)"* | 🟢 **Nothing on disk.** Tokens live in in-memory maps and a `tokenCache` only |
+
+🟢 **What this confirms.** The credential-model blocker this page has documented since p132 is real
+and the sanctioned path does solve it. **A tool launched over LTI holds no user credential**, and
+the two MCP servers hold an *institutional service* credential rather than a student's password.
+That is the architectural difference that makes the portal tier unshippable and this tier shippable.
+
+🔴 **What it refutes, and it is the more useful half.** The sanctioned standard carries a
+**cryptographically verified** identity — `ltijs` checks a platform signature. **Both agent bridges
+to that world throw the verification away** and accept whoever the configuration or the calling
+client says the user is. `learnmcp-xapi` is single-tenant by construction (one `ACTOR_UUID` per
+process, so one deployment per student). `bb-mcp` is worse-shaped for scale: its app token is
+**org-wide**, its role gate reads a self-declared field, and 🔴 **`role: "admin"` bypasses the
+course-entitlement check** that otherwise stops an instructor writing grades in a course they are
+not enrolled in.
+
+🔵 **A documentation defect worth recording as a class.** `learnmcp-xapi`'s own source says
+*"Actor UUID from JWT"* in two docstrings. 🔴 **The project has no JWT dependency at all** — no
+`jwt` import, nothing in `requirements.txt`. The code is honest; its comments describe a trust
+anchor it does not have. This KB has an instrument for *description* drift
+(`compose/code/description-drift-audit`); this is the same failure one layer in, and a reader who
+trusted the docstring would deploy believing identity was verified.
+
+🟢 **The engagement consequence, stated plainly.** On the sanctioned path the studio does not build
+credential custody — it builds an **identity broker**: something that terminates a verified
+identity (LTI launch, OIDC, or the institution's IdP) and only then calls the MCP server with an
+asserted subject it has itself established. `bb-mcp`'s `MCP_API_KEY` authenticates *the client*, not
+the *user*, and the README says so. See `compose/patterns.md` → **P13**.
+
+🔴 **And p134's praise of `bb-mcp` is qualified, not withdrawn.** It is still the only row in the
+connector population that ships an access-control layer, and that layer is genuinely useful: RBAC,
+FERPA gating, rate limits per role, an IDOR guard on grade writes, SHA-256-hashed subjects in its
+own audit trail, and a fail-closed refusal to start on a non-loopback host without `MCP_API_KEY`
+and TLS. 🔵 **It is a well-built *delegation* layer. It is not an *enforcement* layer, because its
+trust anchor is the caller** — and that is a design choice its author documented rather than hid.
+
+### 🟢 `ACTION BN` — the standards register, finished *(new, p135)*
+
+p134 left six standards unmeasured and predicted refutation *"if fewer than 3 further institution- or
+vendor-owned rows exist across all six."* 🟢 **Not refuted: eleven.** Every licence below was
+established by **hash identity against canonical SPDX texts**, not from a badge or a prose claim —
+instrument, verdicts and the five ways a licence payload defeats hashing are in
+`compose/code/p135-licence-sha-identity/`.
+
+**SCORM — the largest standards layer in this industry, by an order of magnitude**
+
+| repo | licence | ★ | pushed | owner | why it matters |
+|---|---|---|---|---|---|
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **630** | **2026-10-10** | Adapt community | Authoring toolkit for responsive, accessible, multi-language courses, SCORM **and** xAPI output. The biggest row in the whole layer — and copyleft, so it is a *tool you run*, not a library you link |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0 + 2 attribution statements** | **447** | 2026-10-09 | frentix GmbH / University of Zurich | A full Java LMS with **QTI, SCORM, curriculum management and assessment** built in. 🔵 Its `LICENSE` is Apache-2.0 verbatim with the appendix **replaced** by attribution notices for the original OLAT base (University of Zurich) and openolat.org — permissive in effect, notices must be preserved |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **354** | 2026-10-09 | individual | Modern SCORM 1.2 / 2004 runtime, TypeScript, **offline-first**. The cleanest permissive runtime on the shelf |
+| [`gabrieldoty/simplify-scorm`](https://github.com/gabrieldoty/simplify-scorm) | 🟢 **MIT** | 254 | 2026-08-20 | individual | Minimal SCORM 1.2 JavaScript API |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University (UK)** | Browser-based e-assessment with an emphasis on mathematics. **Institution-owned, permissive, and directly relevant to the 2027 assessment clocks** |
+| [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 **MIT** | 184 | 2026-10-06 | individual | .NET Core SCORM LMS demo. 🔵 Its notice carries **no year at all** |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 🔴 **CC-BY-SA-4.0, and only the deed** | 164 | 2026-10-02 | individual | SCORM API for content, with QUnit tests. 🔴 **The licence file is the 837-byte human-readable *deed*, not the legal code** — a ShareAlike *content* licence applied to software. Do not build on this without counsel |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🔴 **ABSENT** | **391** | 2026-09-18 | individual | The canonical SCORM API wrapper, and 🔴 **no licence file exists** under 8 probed filenames. 391★ of unlicensed-by-omission code — no grant, so no right to use |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **ABSENT** | 99 | 2026-03-04 | 🟢 **ADL Initiative (US DoD)** | **The body that wrote SCORM and xAPI.** 🔴 **ARCHIVED, and no licence file.** The steward of the standard ships its own bridge unlicensed and unmaintained |
+
+**QTI 3 — real, permissive, and tiny**
+
+| repo | licence | ★ | pushed | owner | note |
+|---|---|---|---|---|---|
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** | **30** | 2026-04-07 | amp-up.io (vendor) | The reference QTI 3 item player. Four further sibling components from the same owner (stimulus player, controller, Vue 3 item player, test component) — 🔵 a **vendor component family**, not a fork swarm |
+| [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) | 🔴 **GPL-3.0** | 6 | 2026-09-29 | 🟢 **Stichting Cito Instituut voor Toetsontwikkeling (NL)** | QTI 2 → QTI 3 package converter. 🔵 **The holder was read out of the GPL appendix, which the project filled in** — the Dutch national testing institute. Copyleft |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** | 5 | **2026-10-09** | Longsight Group (vendor) | Dependency-light, framework-neutral TypeScript QTI 3 reference implementation. Created 2026-05-20, pushed two days before this pass |
+| [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** | 5 | 2026-10-05 | individual | Web app to view and edit QTI XML |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | 🟢 **MIT** | 3 | 2026-04-07 | AgencyEnterprise (vendor) | Framework-agnostic QTI 3 renderer, installable from NPM |
+| [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** | 2 | 2026-09-19 | Metya (vendor) | Markdown → QTI 3.0 XML. 🟢 **Carries the topic `agent-tool`** — the only row in the standards layer that labels itself for agent use |
+| [`epam/qti-learnosity`](https://github.com/epam/qti-learnosity) | 🟢 **MIT** | 2 | 2025-06-30 | 🔵 **EPAM** | QTI 2.1 → Learnosity converter. 🔵 **A global IT-services peer publishing education-standards tooling in the open** — worth watching as competitive signal, not just supply |
+
+**Credentials — Open Badges and CLR converged on W3C Verifiable Credentials**
+
+| repo | licence | ★ | pushed | owner | note |
+|---|---|---|---|---|---|
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | **17** | 2026-09-23 | 🟢 **1EdTech — the standards body itself** | Public validator for **Open Badges and Comprehensive Learner Record**. 🔴 **This refutes p134's claim that the OneRoster conformance suite was "the only conformance suite this KB has found for any standard in this industry."** There are two, and this one is the steward's own |
+| [`impierce/credential-converter`](https://github.com/impierce/credential-converter) | 🟢 **Apache-2.0** | 12 | 2025-07-30 | Impierce (vendor) | Translates between **Verifiable Credentials, Open Badges and the European Learner Model (ELM)**. 🟢 **ELM is new to this KB and is an EMEA-specific standard** — see `intel/market.md` → EMEA |
+| [`CoopCodeCommun/pyopenbadges`](https://github.com/CoopCodeCommun/pyopenbadges) | 🔴 **LGPL-2.1** | 8 | 2026-06-05 | individual | Open Badges v3.0 Python library. Copyleft |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **LGPL-3.0** | 1 | **2026-10-04** | individual | Open Badges 3.0 as **W3C VC-JWT** with `did:web`, Bitstring Status List revocation. Copyleft, and the most current credential row |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | 🔴 **ABSENT** | 0 | 2026-08-28 | individual | Issues Open Badges 3.0 and ELM over OIDC4VCI. 🔴 **No licence file** — measured absent, not assumed permissive |
+| [`edubadges/badgr-ui`](https://github.com/edubadges/badgr-ui) | not measured | 1 | 2025-01-01 | 🟢 **SURF (NL national education network)** | 🔴 **ARCHIVED.** 🔵 **64 forks against 1 star** — the inverse ratio that marks a deployment base rather than an audience |
+
+**🔴 Two standards are measured near-absent, and that is the finding**
+
+| standard | probe | result |
+|---|---|---|
+| **Caliper Analytics** | `caliper analytics learning event` | 🔴 **`total_count: 1`.** That row — [`lsloan/udp-notebooks`](https://github.com/lsloan/udp-notebooks) (Unizin Data Platform, a US university consortium) — has **0 stars, no licence file, and has not been touched since 2023**. The learning-analytics event standard has **no open-source agent, library or SDK supply at all** |
+| **Comprehensive Learner Record** | `"comprehensive learner record"` | 🔴 **`total_count: 3`**, of which one is real (the 1EdTech validator above) and two are an empty 2018 repo and a student project |
+| **LTI Deep Linking** *(standalone)* | `"deep linking" lti tool provider` | 🔴 **`total_count: 1`**, and [that row](https://github.com/Gian-Fire/node-lti-v1p3-sdcs) states in its own description that **Deep Linking is not supported**. Deep Linking exists in practice only inside `ltijs` |
+
+🟢 **The AI-native platform row, added here because it is both agent and platform**
+
+| repo | licence | ★ | pushed | note |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **92** | **2026-10-10** | An **AI-native LMS**: AI mentor, role-play scenarios, SCORM and xAPI, white-label, self-hosted — positioned against Moodle, Docebo, TalentLMS and Open edX. 🟢 **The only permissive row this KB has found where the AI is the platform's own architecture rather than a connector bolted onto someone else's.** Published by Selleo (Poland) |
+
 ### Moodle connectors — the tier p130 declared absent
 
 p130's declared gaps said *"no Moodle MCP server with a clear permissive licence"*. **That is
@@ -404,6 +541,26 @@ part; the deployability check is `intel/policy-matrix.tsv`.
 | [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | **No licence field**, 17 stars | Implements MCP as a Moodle *web-service plugin* and is listed on marketplace.moodle.com, which makes it architecturally the cleanest Moodle→MCP route found. Unlicensed as published; ask the author before use. |
 | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | Network copyleft. Fine inside a client's own estate, a problem if the client intends to offer it as a hosted service without reciprocal source release. |
 | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | CC0-1.0 | Public-domain dedication, no express patent grant and no warranty disclaimer of the Apache-2.0 kind. Legal review prefers Apache-2.0 for client deliverables. |
+
+#### 🆕 Flags added by p135, every one established by hash rather than by badge
+
+| repo | flag | consequence |
+|---|---|---|
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | **No licence file**, 391 stars | 🔴 **The canonical SCORM API wrapper, and the single largest unlicensed row this KB has measured.** Eight candidate filenames probed, all 404. Default copyright applies: there is no grant, so there is no right to use it in a client deliverable. Use [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, 354★) instead. |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | **CC-BY-SA-4.0, and the file is only the deed**, 164 stars | 🔴 Two problems at once. **ShareAlike** is copyleft, and a **Creative Commons *content* licence carries no patent grant and is not designed for software** — Creative Commons itself advises against it for code. Worse, the 837-byte file is the *human-readable deed summary*, not the legal code, so the operative terms are incorporated only by reference. |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **No licence file**, archived, 99 stars | 🔴 Published by the **ADL Initiative (US Department of Defense)** — the body that authored both SCORM and xAPI. The steward of the standard ships its own bridge **unlicensed and archived**. Treat as reference reading, not as a dependency. |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | **GPL-3.0**, 630 stars | The largest row in the standards layer is copyleft. Fine as an **authoring tool the client runs** to produce SCORM/xAPI packages; a licensing problem if its code is linked into a client deliverable. |
+| [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) | **GPL-3.0** | Copyleft. 🔵 Note the upside: the holder, read out of the project's filled-in GPL appendix, is **Stichting Cito Instituut voor Toetsontwikkeling** — the Dutch national testing institute, which makes it a credible EMEA reference even where the licence rules out linking. |
+| [`CoopCodeCommun/pyopenbadges`](https://github.com/CoopCodeCommun/pyopenbadges) · [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | **LGPL-2.1** and **LGPL-3.0** | 🔴 **The entire Python Open Badges layer is copyleft.** Weak copyleft permits dynamic linking, but a client's legal review will ask, and there is no permissive Python alternative on this shelf. |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0 with the appendix replaced** | 🟡 Permissive in effect, but the text is **not** unmodified Apache-2.0: two attribution statements (University of Zurich's original OLAT base; frentix GmbH) stand where `END OF TERMS` and the appendix belong. **Those notices must be carried into any redistribution.** |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | **No licence file** | Measured absent under 8 filenames, not assumed permissive. |
+
+🔵 **Method note.** Every licence in the two tables above was established by **sha256 identity against
+canonical SPDX texts** after normalising line wrap, typographic punctuation and two known FSF edits
+to its own licence text — not from GitHub's licence badge and not from prose. 🔴 **A badge would have
+got several of these wrong:** a licence payload never hashes to its canonical text naively, because
+real `LICENSE` files wrap at ~72 columns and SPDX wraps at ~105. Instrument, 33 tests and the five
+classes of difference: `compose/code/p135-licence-sha-identity/`.
 
 ### Fork-swarm warning — `canvas-mcp` and `tutor-mcp`
 
@@ -565,7 +722,7 @@ sorted by stars returns, at ranks 1–6, anti-government propaganda repositories
 stars ranks incidental high-star matches above the entire field. **Read past the head of the list,
 or the single most-starred "finding" will be unrelated to education.**
 
-## 🔴 Gaps this page declares after p134
+## 🔴 Gaps this page declares after p135
 
 🟢 **Two gaps on this page are retired by the tier above, and the replacements are narrower, which
 is the point.**
@@ -595,3 +752,41 @@ is the point.**
   *say*, and a repo that says *public REST API* while shipping a password prompt is indistinguishable
   from here. **This is the first gap in this KB that can only be closed by reading source, not by
   running a better query.**
+
+### 🟢 Verdicts p135 returns on the gaps above
+
+- ~~**Nothing in the standards tier has been code-audited by this KB. This is the first gap that can
+  only be closed by reading source, not by running a better query.**~~ 🟢 **CLOSED, and it was right
+  about the method.** Three repositories were cloned and read (`ltijs`, `learnmcp-xapi`, `bb-mcp`).
+  The auth model is now established from implementation: one verifies a platform signature, two
+  accept an asserted subject. **No query would have found that** — `bb-mcp`'s description says
+  *"RBAC middleware for role-based access control"*, which is true and tells you nothing about where
+  the trust anchor sits. 🔴 **It also found a repo whose own docstrings name a trust anchor the code
+  does not have** (`learnmcp-xapi`, *"Actor UUID from JWT"*, no JWT dependency).
+- ~~**No conformance-tested connector for anything but OneRoster.**~~ 🟡 **NARROWED, not closed.**
+  A second suite exists and it is the standards body's own —
+  [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+  (Apache-2.0, 17★) — covering **Open Badges and Comprehensive Learner Record**. 🔴 **There is still
+  nothing for LTI AGS, for Ed-Fi, for QTI, for Caliper, or for any of the 43 portal connectors.**
+- **No standards-native row originates in LATAM.** 🔴 **SURVIVES p135 unchanged.** The register
+  finished this pass adds eleven institution- or vendor-owned rows and **not one is Latin American**:
+  Newcastle University, Stichting Cito, SURF, 1EdTech, ADL/US DoD, Unizin, Longsight, amp-up.io,
+  AgencyEnterprise, Impierce, Selleo, EPAM. The one LATAM layer measured this pass — Brazil's ENEM
+  and Censo Escolar datasets — is **individual and academic throughout, with zero institution-owned
+  rows** (`ACTION BQ`, `intel/market.md` → LATAM).
+
+### 🆕 Gaps this page opens after p135
+
+- 🔴 **The identity-assertion gap, which replaces the credential gap as this shelf's blocker.** The
+  sanctioned standard verifies a user cryptographically; both agent bridges to it discard that and
+  trust a configured or caller-supplied subject. **No repository on this shelf terminates a verified
+  identity and then calls an MCP server with a subject it established itself.** That component does
+  not exist in open source, in any region, and every engagement on the sanctioned path needs it.
+- 🔴 **Caliper has no supply at all, and nothing on this shelf can read a learning-analytics event
+  stream.** One repository, zero stars, unlicensed, untouched since 2023. The standard that exists
+  precisely to carry learning events to an analytics layer has **no open-source client** — which
+  means the measurement layer `T7` calls unshippable is unshippable one level lower than this KB
+  thought.
+- 🔴 **The most-used SCORM library in the world has no licence.** `pipwerks/scorm-api-wrapper`,
+  391★, 130 forks, pushed 2026-09-18, eight filenames probed and all absent. Everything downstream
+  of it inherits that defect, and this KB has not yet measured how far downstream that reaches.

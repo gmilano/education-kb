@@ -1,0 +1,46 @@
+# Pass 135, 2026-10-11. Education KB measured-row evidence.
+# licence column: SPDX id + how it was established by compose/code/p135-licence-sha-identity
+#   TEMPLATE_MATCH/REFLOWED/WHITESPACE_VARIANT/WHITESPACE_COLLAPSED = hash identity at that
+#   normalisation level; NEAREST(x,r) = unmatched, nearest canonical x at ratio r, cause named
+#   in the instrument README; ABSENT = no licence file under 8 probed filenames.
+# stars/pushed: GitHub search API via MCP, 2026-10-11. api.github.com direct = 403 this session.
+repo	layer	stars	forks	pushed	licence	licence_evidence	owner_class	region	note
+Cvmcosta/ltijs	LTI 1.3	373	-	2026-10-06	Apache-2.0	TEMPLATE_MATCH	individual	unplaced	source-read p135: no user credential; platform-signed JWT verified; client_credentials token cached
+DavidLMS/learnmcp-xapi	xAPI MCP	15	-	2025-08-29	MIT	TEMPLATE_MATCH	individual	unplaced	source-read p135: LRS service credential; actor from ACTOR_UUID env, NOT from JWT despite docstrings; no jwt dependency
+nitsuah/bb-mcp	Blackboard MCP	2	-	2026-10-11	MIT	TEMPLATE_MATCH	individual	unplaced	source-read p135: client_credentials app secret, tokens in-memory only; caller_identity self-asserted, admin bypasses course gate
+amp-up-io/qti3-item-player	QTI 3	30	6	2026-04-07	MIT	TEMPLATE_MATCH	vendor	unplaced	largest QTI row; 4 sibling components same owner
+Citolab/qti-convert	QTI 3	6	1	2026-09-29	GPL-3.0	NEAREST(GPL-3.0,0.998)	institution	EMEA	holder read from GPL appendix: Stichting Cito Instituut voor Toetsontwikkeling, Arnhem (NL national testing institute). COPYLEFT
+LongsightGroup/qti3	QTI 3	5	2	2026-10-09	MIT	TEMPLATE_MATCH	vendor	North America	TypeScript reference implementation; created 2026-05-20
+sonyccd/qti-playground	QTI 3	5	0	2026-10-05	MIT	TEMPLATE_MATCH	individual	unplaced	QTI XML viewer/editor
+agencyenterprise/qti-3-player	QTI 3	3	1	2026-04-07	MIT	TEMPLATE_MATCH	vendor	unplaced	NPM-installable QTI 3 renderer
+epam/qti-learnosity	QTI 2.1	2	0	2025-06-30	MIT	TEMPLATE_MATCH	vendor	Global	EPAM — a global IT services peer publishing an education-standards converter
+metyatech/markdown-to-qti	QTI 3	2	0	2026-09-19	MIT	TEMPLATE_MATCH	vendor	unplaced	topic "agent-tool"; markdown -> QTI 3.0 XML
+1EdTech/digital-credentials-public-validator	Open Badges + CLR	17	12	2026-09-23	Apache-2.0	REFLOWED	standards body	Global	the standards body's OWN validator; refutes p134 "only conformance suite in this industry"
+impierce/credential-converter	Open Badges + ELM	12	2	2025-07-30	Apache-2.0	TEMPLATE_MATCH	vendor	EMEA	translates Verifiable Credentials <-> OpenBadges <-> European Learner Model
+CoopCodeCommun/pyopenbadges	Open Badges 3.0	8	0	2026-06-05	LGPL-2.1	NEAREST(LGPL-2.1-only,0.996)	individual	unplaced	COPYLEFT. OB v3.0 Python library
+luisgf/openbadgeslib	Open Badges 3.0	1	1	2026-10-04	LGPL-3.0	WHITESPACE_VARIANT	individual	unplaced	COPYLEFT. OB 3.0 as W3C VC-JWT, did:web, revocation
+educredentials/ec-issuer	Open Badges + ELM	0	-	2026-08-28	ABSENT	ABSENT	individual	EMEA	no licence file under 8 filenames — measured absent, not permissive
+edubadges/badgr-ui	Open Badges	1	64	2025-01-01	not measured	-	institution	EMEA	SURF (NL national research/education network). ARCHIVED. forks(64) >> stars(1)
+adaptlearning/adapt_framework	SCORM + xAPI authoring	630	252	2026-10-10	GPL-3.0	NEAREST(GPL-3.0,0.998)	consortium	EMEA	COPYLEFT. Largest row in the whole standards layer
+OpenOLAT/OpenOLAT	LMS (QTI+SCORM)	447	167	2026-10-09	Apache-2.0 + attribution	NEAREST(Apache-2.0,0.916)	vendor+institution	EMEA	appendix replaced by 2 attribution statements: University of Zurich OLAT base, frentix GmbH (CH)
+pipwerks/scorm-api-wrapper	SCORM	391	130	2026-09-18	ABSENT	ABSENT	individual	unplaced	391 stars and NO licence file under 8 filenames — unlicensed by omission
+jcputney/scorm-again	SCORM runtime	354	85	2026-10-09	MIT	TEMPLATE_MATCH	individual	unplaced	modern SCORM 1.2/2004 runtime, offline-first
+gabrieldoty/simplify-scorm	SCORM 1.2	254	80	2026-08-20	MIT	TEMPLATE_MATCH	individual	unplaced	SCORM 1.2 JS API
+numbas/Numbas	e-assessment	215	130	2026-10-09	Apache-2.0	REFLOWED	institution	EMEA	Newcastle University (UK). Browser-based maths e-assessment
+dhodges47/SCORM-LearningManagementSystem	SCORM LMS	184	95	2026-10-06	MIT	TEMPLATE_MATCH	individual	unplaced	notice carries NO year: "Copyright (c) David Hodges dba Outermost Software, LLC"
+cybercussion/SCOBot	SCORM	164	37	2026-10-02	CC-BY-SA-4.0 (deed)	NEAREST(-,0.068)	individual	unplaced	licence file is the human-readable DEED, not legal code. ShareAlike content licence on code — flag
+Selleo/mentingo	AI-native LMS	92	29	2026-10-10	MIT	TEMPLATE_MATCH	vendor	EMEA	AI Mentor + role-play, SCORM+xAPI, self-hosted Moodle/Docebo/Open edX alternative. Selleo (PL)
+adlnet/SCORM-to-xAPI-Wrapper	SCORM->xAPI	99	45	2026-03-04	ABSENT	ABSENT	government	North America	ADL Initiative (US DoD) — author of SCORM and xAPI. ARCHIVED, no licence file
+Gian-Fire/node-lti-v1p3-sdcs	LTI 1.3	5	2	2024-01-29	not measured	-	individual	unplaced	self-declares Deep Linking and NRPS NOT supported
+lsloan/udp-notebooks	Caliper	0	0	2023-03-17	ABSENT	ABSENT	institution	North America	Unizin Data Platform (US university consortium). The ONLY Caliper row found. Stale since 2023
+filipedeschamps/api_enem_microdados	ENEM dataset API	30	6	2026-10-08T05:37:35Z	GPL-3.0	WHITESPACE_COLLAPSED	individual	LATAM	ORIGINAL, created 2022-07-25. Brazil ENEM/INEP microdata API
+rendgentmars/api_enem_microdados	ENEM dataset API	10	3	2026-10-08T05:37:46Z	GPL-3.0	WHITESPACE_COLLAPSED	individual	LATAM	CLONE. created 2025-12-29. README byte-identical. fork:false. pushed 11s after the original
+livrunakcream/api_enem_microdados	ENEM dataset API	7	1	2026-01-12	GPL-3.0	WHITESPACE_COLLAPSED	individual	LATAM	CLONE. created 2025-12-29. README byte-identical. fork:false
+bluesky816/api_enem_microdados	ENEM dataset API	1	0	2026-08-19	GPL-3.0	WHITESPACE_COLLAPSED	individual	LATAM	CLONE. created 2025-10-28. README byte-identical. fork:false
+# NAMED CONTROLS / MEASURED ZEROS
+# Caliper standalone probe ("caliper analytics learning event"): total_count=1, that row 0 stars, stale 2023 => layer measured near-absent
+# Comprehensive Learner Record probe ("comprehensive learner record"): total_count=3; 1 real row (1EdTech validator), 2 empty/student projects
+# LTI Deep Linking standalone probe ("deep linking lti tool provider"): total_count=1, and that row declares Deep Linking NOT supported
+# Censo Escolar/INEP probe: total_count=7, all <=3 stars, all individual/academic analyses, ZERO institution-owned
+# Japan national AI-education policy: probed in the APAC country-level sweep, returned nothing => measured absent, not covered
+# All 4 api_enem_microdados READMEs: sha256 fea59dc854f35eac9cb72f14, 1842 B, identical across 4 distinct owners

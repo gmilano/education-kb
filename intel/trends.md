@@ -6,6 +6,12 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 135, 2026-10-11.** p134's trends retained; 🔴 **`T12` is qualified by the measurement that
+finished its own register — the sanctioned layer is not uniformly mature, and the variable is the
+standard's AGE** — **`T10`'s probe rule is generalised from a fact about one word into a rule about
+institutions** (`ACTION BM`), and **`T13` and `T14` are added**. Each trend states its evidence and,
+where it matters, what would falsify it.
+
 **Pass 132, 2026-10-11.** p131's trends retained; 🔴 **T8 and T9 are substantially corrected — both
 had declared an absence that this pass filled** — **T4 and T10 are qualified**, and **T11 is added**
 (see `README.md` → Pass 132). Each trend is stated with the evidence that supports it and, where it
@@ -266,6 +272,32 @@ productive, and the answers change how a figure may be quoted to a client.
 puts education AI in high-risk *"with full effect in August 2026"*. The schools-facing Annex III
 date is **2027-12-02** (T3). This KB has flagged it for three consecutive passes.
 
+### 🟢 p135 generalises the probe rule: it is about institutions, not about words
+
+p133 found that *"EMEA"* returns enterprise IT because it is **a vendor sales-region word no ministry
+uses** (`P133-E`), and p134's `ACTION BK` confirmed it by re-probing EMEA country by country.
+`ACTION BM` tested the other two regions this pass:
+
+| bare probe | result |
+|---|---|
+| **"EMEA"** | 🔴 **Fails.** Enterprise IT outlooks, a 2023 enterprise-AI trust study, enterprise compliance commentary. One education source, and its event sat in **October 2024** |
+| **"APAC"** | 🔴 **Fails identically.** Enterprise tech priorities, sovereign-cloud analysis, and vendor press releases. The run recorded finding **no** education-specific regulation, ministry rule or edtech market data |
+| **"LATAM"** | 🟢 **Succeeds.** UNESCO **IESALC** (200 institutions, 19 countries, 87% using AI, 26% with a framework), the **Digital Education Council** LATAM survey 2026 (30 000+ responses), the **IDB** readiness index, and country-level regulatory posture for Chile, Brazil, Colombia and Mexico |
+| **"North America"** | 🟡 **Partly.** Market-research geography segments dominate, but real findings surface (state-legislature activity, a $169M government commitment, a $55M CMU/Gates courseware investment) |
+
+🔴 **So `P134-H` is not a fact about the word "EMEA", and stating it that way was too narrow.**
+🟢 **The rule:** *a bare regional probe returns education material exactly when a region-scoped
+education body publishes under that label.* Latin America has two — **UNESCO IESALC**, the
+institute for higher education in Latin America and the Caribbean, and the **IDB**. "EMEA" and
+"APAC" have no counterpart; no ministry, university network or multilateral addresses research to
+them. "North America" sits in between because market-research firms use it as a reporting segment.
+
+🔵 **Why this is worth more than the three results.** It is **decidable before searching.** Ask
+whether a region-scoped education institution exists; if not, probe by country from the start.
+🟢 **That is a standing method rule, and it predicted this pass's APAC result correctly** — the
+country probe returned India's Class-3 mandate, Singapore's literacy framework and South Korea's
+2026 work plan, none of which the regional probe could see.
+
 ## T11 — The connector layer is being built bottom-up by students, not by vendors *(new, p132)*
 
 🟢 **The strongest structural finding of this pass, and it reframes where supply comes from.** The
@@ -363,6 +395,100 @@ culture.** That is a materially different explanation from `T11`'s, and it is te
 that LATAM supply stays unsanctioned until a national system publishes an API, regardless of who
 builds it.
 
+### 🔴 p135 qualifies `T12`: maturity tracks the standard's AGE, not its design
+
+p134 stated `T12` as *"the sanctioned-integration layer is mature, permissive and agent-less."*
+🟢 **The second and third clauses hold.** 🔴 **The first is true only on average, and the average
+hides the thing a studio needs to know.** Finishing the register (`ACTION BN`) measured all six
+remaining standards:
+
+| standard | first published | largest repo | ★ | supply verdict |
+|---|---|---|---|---|
+| **SCORM** | **1999** | `adaptlearning/adapt_framework` | **630** | 🟢 **Deep.** Four repos above 350★; a permissive modern runtime; authoring tools |
+| **LTI** | 2010 (1.3 in 2019) | `Cvmcosta/ltijs` | **373** | 🟢 **Strong and current** (pushed 2026-10-06) |
+| **QTI** | 2000s (QTI 3 in 2022) | `amp-up-io/qti3-item-player` | **30** | 🟡 **Thin but real** — 15 repos, mostly MIT, several vendor-owned |
+| **Open Badges** | 2011 (3.0 in 2022) | `1EdTech/digital-credentials-public-validator` | **17** | 🟡 **Thin, converging on W3C Verifiable Credentials** |
+| **Comprehensive Learner Record** | 2010s | *the same validator* | **17** | 🔴 **One real row in existence** |
+| **Caliper Analytics** | 2015 | `lsloan/udp-notebooks` | 🔴 **0** | 🔴 **No usable supply at all.** One repo, unlicensed, untouched since 2023 |
+
+🔵 **The pattern is monotonic in age and has nothing to do with the standards' quality.** SCORM is
+technically the crudest of the six and has the most code; Caliper is the most modern event model and
+has none. 🟢 **The mechanism is deployment, not merit: SCORM and LTI are what institutions have
+*bought* for twenty years, so there is installed base to write against.** Caliper and CLR are
+procured rarely, so nobody has written a client.
+
+🔴 **What this changes in a pitch.** *"We build on the sanctioned standards"* is credible for content
+and launch (SCORM, LTI), **defensible** for assessment and credentials (QTI, Open Badges), and
+🔴 **not currently true for analytics** (Caliper). A proposal that promises standards-based learning
+analytics is promising a standard with **no open-source client**, which is a build the client should
+be told about rather than a dependency.
+
+🔵 **Falsifier.** If a Caliper or CLR client library appears above ~50★ with a permissive licence,
+this reframing weakens and `T12`'s original wording is closer to right.
+
+## 🔴 `T13` — The credential blocker was solved and replaced by an identity-assertion blocker *(new, p135)*
+
+**This is the most consequential thing p135 found, and it only became visible by reading source.**
+
+For four passes this KB has said the portal-connector tier is undeployable because every row holds a
+student's password, and that the sanctioned path fixes it. 🟢 **The second half is confirmed:** of
+the three bridges read this pass, **`ltijs` holds no user credential at all**, and the two MCP
+servers hold an institution-issued *service* credential, never a student's password.
+
+🔴 **But the sanctioned standard carries a cryptographically verified identity, and both agent
+bridges to it discard that verification:**
+
+| bridge | how the user's identity is established |
+|---|---|
+| `Cvmcosta/ltijs` | 🟢 **A platform-signed JWT, signature verified** against the platform's keys, with nonce tracking |
+| `DavidLMS/learnmcp-xapi` | 🔴 **An environment variable** (`ACTOR_UUID`). 🔴 And its own docstrings claim *"Actor UUID from JWT"* while **the project has no JWT dependency at all** |
+| `nitsuah/bb-mcp` | 🔴 **The caller's own assertion** (`caller_identity`), documented as *"trusted at face value"*. `role: "admin"` bypasses the course-entitlement gate; the app token is **org-wide** |
+
+🔵 **Why this is a trend and not three bugs.** It is structural. MCP has no end-user identity model —
+`bb-mcp`'s source says so in its first paragraph — so **every MCP server that fronts an institutional
+system of record must either invent an identity model or accept one on trust, and the shipped
+examples accept it on trust.** As agent-mediated access spreads from reading a portal to writing a
+system of record, that choice stops being acceptable: a grade write attributed to an unverified
+subject is an audit finding.
+
+🟢 **The commercial consequence, and it is a component rather than a caveat.** The missing piece is
+an **identity broker**: something that terminates a verified identity (an LTI launch, OIDC, or the
+institution's IdP) and only then calls the MCP server with a subject it has itself established.
+🔴 **No repository in this KB does this, in any region.** That is the clearest unbuilt component on
+the shelf, it sits between two mature layers, and it is required by every engagement on the
+sanctioned path. See `compose/patterns.md` → **P13**.
+
+🔵 **Falsifier.** If an MCP server appears that verifies an LTI or OIDC assertion itself before
+acting — rather than accepting `caller_identity` — this trend has been answered by the ecosystem and
+becomes a build-versus-buy question instead of a gap.
+
+## 🟡 `T14` — Licence metadata is systematically wrong in the direction of institutional code *(new, p135)*
+
+🔴 **Measured, twice, with a reason.** `P134-F` found that GitHub's `NOASSERTION` is *"biased toward
+unusual, not toward fine."* p135 measured why, by hash-matching 26 licence payloads against
+canonical SPDX texts (`compose/code/p135-licence-sha-identity`):
+
+- 🔴 **A licence payload never matches its canonical text naively.** Real `LICENSE` files wrap at ~72
+  columns; SPDX wraps at ~105. **Zero of 26 payloads were whitespace variants** — refuting the
+  premise `ACTION BP` was written on.
+- 🔴 **Matchers are defeated by punctuation.** SPDX's canonical GPL-3.0 uses curly quotes; the
+  `COPYING` shipped in real repositories uses ASCII. That alone accounted for five payloads.
+- 🔴 **And by the licence steward editing its own text.** Two such edits are known for GNU: the
+  `http`→`https` change, and the FSF moving `why-not-lgpl.html` from `/licenses/` to `/philosophy/`.
+- 🔴 **The bias has a cause: appended institutional attribution.** `OpenOLAT` is Apache-2.0 to the
+  character and then carries two attribution statements for the University of Zurich's original OLAT
+  base and frentix GmbH. `Citolab/qti-convert` fills GNU's appendix with its real holder —
+  **Stichting Cito Instituut voor Toetsontwikkeling** — which is correct practice and makes the text
+  non-canonical. 🟢 **Well-governed, institution-derived projects are the most likely to append
+  attribution, so they are the most likely to be mislabelled.**
+
+🔴 **The practical edge, because this is a procurement risk and not a curiosity.** In this corpus a
+badge would have mislabelled an LMS a studio can use (`OpenOLAT`, permissive) and said nothing about
+two it cannot: `pipwerks/scorm-api-wrapper` (**391★, 130 forks, no licence file at all**) and
+`cybercussion/SCOBot` (**164★, and the licence file is the CC-BY-SA-4.0 human-readable deed, not the
+legal code** — a ShareAlike content licence on software). 🟢 **Rule: on anything a client will ship,
+read the payload and hash it. A badge is a lead.**
+
 ## Watch list for the next pass
 
 **Resolved this pass:**
@@ -449,3 +575,30 @@ builds it.
 - 🟡 **Whether "APAC" and "LATAM" are mis-queried the way "EMEA" was.** `ACTION BK` proved the
   sales-region word reaches enterprise IT rather than ministries. The same test has not been run on
   the other two region words — see `ACTION BM`.
+
+### 🆕 Added to the watch list by p135
+
+- 🔴 **Whether an identity broker appears** — an MCP server, or a component in front of one, that
+  verifies an LTI launch or an OIDC assertion itself rather than accepting `caller_identity` on
+  trust. **This is the single most consequential thing to watch on this shelf** (`T13`). It would
+  turn the sanctioned path from a build into an assembly.
+- 🔴 **Whether anything at all appears for Caliper Analytics.** One repository, 0★, unlicensed,
+  untouched since 2023. A permissive client above ~50★ would reframe `T12` and partially unblock the
+  measurement layer of `T7`.
+- 🟡 **Whether `pipwerks/scorm-api-wrapper` gains a licence.** 391★ and 130 forks with no grant of
+  rights; the sector's most-used SCORM wrapper. Also worth measuring: **how far down this KB's own
+  rows that defect propagates** — a dependency-closure question, and the instrument exists.
+- 🟡 **Whether `learnmcp-xapi` is maintained or forked.** Last push **2025-08-29**, and it is still
+  the only agent↔xAPI bridge in existence. Its docstrings describe a JWT trust anchor it does not
+  implement, so a maintained fork would be a natural place for the identity work above to land.
+- 🟡 **Whether `Selleo/mentingo` keeps its pace.** MIT, 92★, pushed 2026-10-10, and the only row
+  where the AI *is* the platform rather than a connector onto someone else's. If it sustains, it is
+  a fork base; if it stalls, it is a reference architecture.
+- 🔴 **Japan's national AI-education policy, which this pass measured ABSENT** and which is a hole in
+  this KB's APAC coverage rather than a finding about Japan. Probe MEXT directly, in Japanese.
+- 🟡 **Whether Colorado's enforcement stay is lifted** (`X. AI LLC v. Weiser`) and whether the AG's
+  rulemaking lands by its **2027-01-01** deadline. The compliance dates are not stayed; the cure
+  period ends 2030.
+- 🟡 **Whether ELM (European Learner Model) supply grows beyond three repositories**, and whether any
+  of it appears in a language other than Rust. It is the EU's cross-border credential model and the
+  only permissive implementation is a language mismatch for most AI work.

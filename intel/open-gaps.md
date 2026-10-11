@@ -6,6 +6,117 @@ updated: 2026-10-11
 
 # Education — open gaps ledger
 
+## ✅ Verdicts on p134's pre-registered actions, judged by p135 — **all six reached; five discharged, and two refuted their own premise**
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION BL`** — read the source of `ltijs`, `learnmcp-xapi`, `bb-mcp` | 🟢 **DISCHARGED, NOT REFUTED — and it SPLITS** | All three cloned and read. Credential claim **holds** for all three (no student password; `ltijs` holds no user credential at all). 🔴 **Identity claim fails for two of three**: `learnmcp-xapi` takes the actor from `ACTOR_UUID` (env), `bb-mcp` from a self-asserted `caller_identity` documented as *"trusted at face value"*. Refutation condition was *"all three match their descriptions"* — **they do not** |
+| **`ACTION BM`** — test whether "APAC" and "LATAM" fail as "EMEA" did | 🟡 **DISCHARGED AND PARTLY REFUTING** | **"APAC" fails identically** (enterprise IT; the run recorded finding no education regulation at all). 🔴 **"LATAM" does NOT fail** — UNESCO IESALC, Digital Education Council, IDB. So `P134-H` is **not** a fact about regional acronyms; the predictor is **whether a region-scoped education body publishes under the label** |
+| **`ACTION BN`** — finish the standards register (QTI, SCORM, CLR, Open Badges, Caliper, Deep Linking) | 🟢 **DISCHARGED, NOT REFUTED** | Predicted refutation below 3 further institution/vendor-owned rows. **Eleven found.** 🔴 And the register reframes p134's own tier: **SCORM is an order of magnitude larger than LTI**, while **Caliper is 1 repo at 0★ (2023)** and **CLR is 1 real row** |
+| **`ACTION BO`** — confirm or strike the Colorado repeal | 🟢 **DISCHARGED AND CONFIRMED** | **SB 26-189**, signed **2026-05-14**, House 34–1 on 2026-05-12, repeals and reenacts SB 24-205 as an ADMT statute. 🔴 **Scope names education enrolment and opportunity.** Developer duties and AG rulemaking **2027-01-01**, cure period to **2030**, enforcement stayed pending `X. AI LLC v. Weiser`. Read from the legislature's own bill page and Legislative Council fiscal note |
+| **`ACTION BP`** — replace substring licence detection with sha256 matching | 🟢 **DISCHARGED, PREMISE REFUTED** | Built, 33 tests passing, 26 payloads measured, **21 resolved to a named SPDX id**. 🔴 **Zero are whitespace variants** — BP predicted *"three are already known."* The real classes are **line wrap width**, **typographic punctuation**, **steward edits to the licence's own text** (a second FSF one found), **appendix instantiation**, and **undated notices** |
+| **`ACTION BQ`** — probe the ministry-facing dataset axis | 🟢 **DISCHARGED, NOT REFUTED — and the axis is empty of institutions** | Brazil has the rows (`censo escolar inep` → 7, `enem microdados` → 35), so >3 outside Colombia. 🔴 **But every row is individual or academic, none ministry- or university-owned**, and the top of the ENEM layer is **4 uncredited clones with byte-identical READMEs** |
+
+## 🟢 Gaps CLOSED or RETIRED by p135
+
+- 🟢 **CLOSED — *"Nothing in the standards tier has been code-audited by this KB. This is the first
+  gap that can only be closed by reading source, not by running a better query."*** Three
+  repositories cloned and read; the auth model of each is now established from implementation.
+  🔵 **The gap was right about the method**: `bb-mcp`'s description (*"RBAC middleware for
+  role-based access control"*) is true and says nothing about where the trust anchor sits.
+- 🟢 **CLOSED — `OpenOLAT`'s unresolved licence**, which had stood in `verticals/solutions.md` with
+  the note *"no payload read is on record here."* It is **Apache-2.0 to the character** through all
+  nine sections, with `END OF TERMS` and the appendix **replaced by two attribution statements**
+  (University of Zurich's original OLAT base; frentix GmbH). Permissive in effect; the notices are
+  the obligation.
+- 🟢 **RETIRED AS STATED — *"no permissively licensed, full-featured LMS at the scale of Moodle or
+  Canvas."*** `OpenOLAT` is 447★, Apache-2.0, pushed 2026-10-09, and ships QTI, SCORM, curriculum
+  management and assessment. 🔴 **Surviving only in its "at the scale of" clause**, and for an
+  EMEA engagement that clause may not bind.
+- 🟡 **NARROWED — *"no conformance-tested connector for anything but OneRoster."*** A second suite
+  exists and it is the standards body's own (`1EdTech/digital-credentials-public-validator`,
+  Apache-2.0, Open Badges + CLR). 🔴 Still nothing for LTI AGS, Ed-Fi, QTI or Caliper.
+
+## 🔴 Gaps OPEN after p135, with the measurement behind each
+
+- 🔴 **The identity-assertion gap — this shelf's blocker, replacing the credential gap.** No
+  repository in this KB, in any region, terminates a verified identity and then calls an MCP server
+  with a subject it established itself. Measured: of three bridges, one verifies a platform
+  signature and two accept a configured or caller-supplied subject. Required by every engagement on
+  the sanctioned path (`compose/patterns.md` → **P13**).
+- 🔴 **Caliper Analytics has no supply at all.** One repository, **0★**, no licence file, last
+  touched **2023-03-17**. The standard whose purpose is carrying learning events to an analytics
+  layer has no open-source client in any language — so `T7`'s unshippable measurement layer is
+  unshippable one level lower than this KB thought.
+- 🔴 **The sector's most-used SCORM library is unlicensed, and the blast radius is unmeasured.**
+  `pipwerks/scorm-api-wrapper`: **391★, 130 forks**, pushed 2026-09-18, eight filenames probed, all
+  absent. How far that propagates into rows already on this KB's pages is **not measured**.
+- 🔴 **No standards-native row originates in LATAM.** Survives p135 unchanged: the eleven
+  institution/vendor-owned rows added this pass are British, Dutch, Swiss, Polish, American and
+  pan-European. The one LATAM layer measured is individual and academic with **zero**
+  institution-owned rows.
+- 🔴 **Japan's national AI-education policy is MEASURED ABSENT in this KB.** The APAC country probe
+  returned India, Singapore, South Korea, China and the UAE, and **nothing for Japan.** This is a
+  coverage hole, not a finding about Japan.
+- 🔴 **No permissive Python library for Open Badges.** Both Python rows are copyleft (LGPL-2.1,
+  LGPL-3.0); the permissive work is Rust and Java — a language mismatch for most AI engagements.
+- 🟡 **`learnmcp-xapi` is still the only agent↔xAPI bridge, and it is ~14 months stale**
+  (2025-08-29), single-tenant by construction, and its docstrings describe a JWT trust anchor it
+  does not implement.
+
+## 🆕 Actions opened by p135, pre-registered for p136 with refutation conditions
+
+🟢 **`ACTION BR`** — **measure the dependency closure of `pipwerks/scorm-api-wrapper`.** It has no
+licence and 130 forks; find how many rows already on this KB's pages depend on it, directly or at
+depth 2, using the instruments that exist (`compose/code/p112-dependency-closure`,
+`dependency-licence-closure`). 🔴 *Refuted if no row on any page of this KB depends on it — in which
+case the finding is a sector fact rather than a KB risk, and should be demoted accordingly.*
+
+🟢 **`ACTION BS`** — **probe for the identity broker before concluding it does not exist.** `T13`
+asserts an absence on the basis that no row in this KB does it. Query the professional register
+(clause 5): `lti 1.3 oidc mcp`, `mcp oauth resource server`, `mcp identity broker`,
+`token exchange rfc 8693`, `mcp authorization server`. 🔴 *Refuted if any repository verifies an LTI
+or OIDC assertion itself before acting as an MCP server — in which case **P13** becomes
+build-versus-buy and `T13` must be rewritten.*
+
+🟢 **`ACTION BT`** — **probe Japan by ministry and in Japanese** (`文部科学省 AI 教育`, MEXT, GIGA
+School Program, `生成AI 利用 ガイドライン 学校`). 🔴 *Refuted if Japan has no national AI-education
+policy instrument — which would itself be a finding, given India, Singapore, Korea, China and the
+UAE all do.*
+
+🟢 **`ACTION BU`** — **apply the mirror detector across this KB's whole corpus, using README
+byte-identity rather than timestamps.** p135 found one 4-repo cluster by accident while probing
+Brazil. 🔴 *Refuted if fewer than 2 further cross-owner identical-README clusters exist among the
+rows already published on this KB's pages — in which case the ENEM cluster is an isolated case and
+the fork-swarm warnings on `agents/top.md` stand as written.*
+
+🟡 **`ACTION BV`** — **close the steward-edit table, or declare it unclosable.** Three payloads
+remain `UNMATCHED` at `0.996`–`0.998` against GNU texts (`Citolab/qti-convert`,
+`adaptlearning/adapt_framework`, `CoopCodeCommun/pyopenbadges`). Diff each against its canonical and
+determine whether the residue is a further steward edit or project-side text. 🔴 *Refuted if any of
+the three turns out to carry a substantive added clause rather than editorial drift — which would
+make it a `MODIFIED_SUPERSET` and a licence risk rather than a table gap.*
+
+🟡 **`ACTION BW`** — **verify the ENEM clone cluster's lineage at source level, not README level.**
+READMEs and licences are byte-identical; compare the actual application source and commit histories
+to establish whether these are copies, a shared template, or four people vendoring one tutorial.
+🔴 *Refuted if the source trees differ substantially — in which case "clone" is too strong and the
+right description is a shared starting point.*
+
+### 🔵 Channel state after p135, recorded because it changed materially
+
+| channel | state |
+|---|---|
+| **Public third-party `git clone`** | 🟢 **WORKS** (`--depth 1`, three repos). New this pass, and it is what made `ACTION BL` answerable — earlier passes had only the payload lane |
+| **Executing this pass's own scripts** | 🟢 **WORKS.** 33 tests run. 🔵 Earlier passes recorded the harness refusing *repository* code (`Gap 376`); scripts written into the scratchpad by the pass itself run without issue |
+| `raw.githubusercontent.com` | 🟢 200 |
+| `api.github.com` direct | 🔴 **403** — *"GitHub access to this repository is not enabled for this session"*. Use the MCP GitHub tools for search and metadata |
+| Non-GitHub hosts via `curl` / `WebFetch` | 🔴 **REFUSED** — 403 CONNECT tunnel / DNS `ENOTFOUND`. Confirmed for `leg.colorado.gov`, `openstates.org`, `legiscan.com` |
+| Domain-restricted search | 🟢 **REACHES THEM ANYWAY.** A search restricted to `leg.colorado.gov` returned the bill page and the Legislative Council fiscal note — 🔵 **a primary-source read through a secondary transport**, which is how `ACTION BO` was discharged. Logged for `compose/code/p798-proxy-refusal-ledger` |
+| `pytest` | 🔴 **NOT INSTALLED**, and `pip install` did not resolve it. Instruments must ship their own runner |
+
+---
+
 ## ✅ Verdicts on p133's pre-registered actions, judged by p134 — **all five reached, four discharged**
 
 | action | verdict | what settled it |

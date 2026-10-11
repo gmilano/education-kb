@@ -1,0 +1,39 @@
+repo	spdx	verdict	bytes	body_sha16	nearest
+1EdTech/digital-credentials-public-validator	Apache-2.0	REFLOWED	11357	7b6816ac75262b6a	-
+Citolab/qti-convert	-	UNMATCHED	35196	f1674a06e6ceb960	GPL-3.0-only:0.998
+CoopCodeCommun/pyopenbadges	-	UNMATCHED	26526	005e752b277a05bd	LGPL-2.1-only:0.996
+Cvmcosta/ltijs	Apache-2.0	TEMPLATE_MATCH	11361	7b6816ac75262b6a	-
+DavidLMS/learnmcp-xapi	MIT	TEMPLATE_MATCH	1069	5f628e73f7811c15	-
+LongsightGroup/qti3	MIT	TEMPLATE_MATCH	1072	5f628e73f7811c15	-
+OpenOLAT/OpenOLAT	-	UNMATCHED	10982	4240b4799dd4f203	Apache-2.0:0.916
+Selleo/mentingo	MIT	TEMPLATE_MATCH	1062	5f628e73f7811c15	-
+adaptlearning/adapt_framework	-	UNMATCHED	35129	6fc57d8b2bc35165	GPL-3.0-only:0.998
+agencyenterprise/qti-3-player	MIT	TEMPLATE_MATCH	1066	5f628e73f7811c15	-
+amp-up-io/qti3-item-player	MIT	TEMPLATE_MATCH	1076	5f628e73f7811c15	-
+bluesky816/api_enem_microdados	GPL-3.0-only	WHITESPACE_COLLAPSED	35149	d3e14f398ce0e0ca	-
+cybercussion/SCOBot	-	UNMATCHED	837	6ddc63653725baaa	0BSD:0.068
+dhodges47/SCORM-LearningManagementSystem	MIT	TEMPLATE_MATCH	1091	5f628e73f7811c15	-
+epam/qti-learnosity	MIT	TEMPLATE_MATCH	1069	5f628e73f7811c15	-
+filipedeschamps/api_enem_microdados	GPL-3.0-only	WHITESPACE_COLLAPSED	35149	d3e14f398ce0e0ca	-
+gabrieldoty/simplify-scorm	MIT	TEMPLATE_MATCH	1073	5f628e73f7811c15	-
+impierce/credential-converter	Apache-2.0	TEMPLATE_MATCH	11356	7b6816ac75262b6a	-
+jcputney/scorm-again	MIT	TEMPLATE_MATCH	1072	5f628e73f7811c15	-
+livrunakcream/api_enem_microdados	GPL-3.0-only	WHITESPACE_COLLAPSED	35149	d3e14f398ce0e0ca	-
+luisgf/openbadgeslib	LGPL-3.0-short	WHITESPACE_VARIANT	7650	5af5a057a7b88adb	-
+metyatech/markdown-to-qti	MIT	TEMPLATE_MATCH	1066	5f628e73f7811c15	-
+nitsuah/bb-mcp	MIT	TEMPLATE_MATCH	1063	5f628e73f7811c15	-
+numbas/Numbas	Apache-2.0	REFLOWED	11357	7b6816ac75262b6a	-
+rendgentmars/api_enem_microdados	GPL-3.0-only	WHITESPACE_COLLAPSED	35149	d3e14f398ce0e0ca	-
+sonyccd/qti-playground	MIT	TEMPLATE_MATCH	1070	5f628e73f7811c15	-
+
+# cross-owner identical licence bodies (>1 distinct owner)
+7b6816ac75262b6a	4 repos	4 owners	1EdTech/digital-credentials-public-validator,Cvmcosta/ltijs,impierce/credential-converter,numbas/Numbas
+5f628e73f7811c15	12 repos	12 owners	DavidLMS/learnmcp-xapi,LongsightGroup/qti3,Selleo/mentingo,agencyenterprise/qti-3-player,amp-up-io/qti3-item-player,dhodges47/SCORM-LearningManagementSystem,epam/qti-learnosity,gabrieldoty/simplify-scorm,jcputney/scorm-again,metyatech/markdown-to-qti,nitsuah/bb-mcp,sonyccd/qti-playground
+d3e14f398ce0e0ca	4 repos	4 owners	bluesky816/api_enem_microdados,filipedeschamps/api_enem_microdados,livrunakcream/api_enem_microdados,rendgentmars/api_enem_microdados
+
+# verdict tally
+TEMPLATE_MATCH	14
+UNMATCHED	5
+WHITESPACE_COLLAPSED	4
+REFLOWED	2
+WHITESPACE_VARIANT	1

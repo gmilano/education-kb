@@ -6,6 +6,21 @@ updated: 2026-10-11
 
 # Education — vertical platforms you can customise
 
+**Pass 135, 2026-10-11.** 🟢 **This page's longest-standing unresolved licence cell is resolved by
+payload read, and the answer promotes a platform the page had written off.** `OpenOLAT` has sat in
+*Declared gaps* as *"survives as unresolved — its own documentation describes an Apache-2.0 basis
+that GitHub's matcher does not recognise, and no payload read is on record here."* 🔴 **A payload
+read is now on record, and the matcher was defeated by something neither side guessed.**
+
+🟢 **Two platforms are added**, both permissive, both pushed the day before this pass:
+**OpenOlat** (a full LMS with QTI and SCORM built in) and **Mentingo** (an AI-native LMS under MIT).
+🟢 **One authoring platform is added** — **Adapt Framework**, the largest repository in the entire
+standards stack at 630★.
+
+🔵 **Licence cells added or corrected this pass were established by sha256 identity against
+canonical SPDX texts**, not by GitHub's badge — `compose/code/p135-licence-sha-identity`, which
+discharges `ACTION BP`.
+
 **Pass 132, 2026-10-11.** p131's structure and rows retained; 🔴 **a whole category of platform is
 ADDED below — the national K-12 school platforms, which carry more AI connectors than Moodle and
 which no previous pass of this KB had listed at all** (see `README.md` → Pass 132, `P132-A`). The
@@ -174,6 +189,38 @@ read. One review source was ~656 days old. 🟢 **Everything else on this page i
 this table is not, and a client-facing claim should be re-verified against each project's own
 repository first.**
 
+## 🟢 Platforms added by p135 — and one licence cell finally resolved
+
+| platform | licence *(hash-verified this pass)* | the attachment point | real AI-on-top that exists today |
+|---|---|---|---|
+| **OpenOlat** — [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), **447★**, pushed 2026-10-09 | 🟢 **Apache-2.0 + 2 attribution statements** (payload read, 10 982 B, Apache-2.0 core verbatim) | 🟢 **The richest attachment surface of any permissive LMS here**: QTI assessment, SCORM content, curriculum management, lecture management and course templates are all first-party, so AI attaches to a *standard* inside the platform rather than to a bespoke API. LTI for anything kept at arm's length | 🔴 **Nothing.** This KB has found no AI project targeting OpenOlat — and now that the licence is permissive and the surface is standards-native, 🟢 **this is the cleanest unclaimed platform slot on the page**, especially for a German-speaking-Europe engagement |
+| **Mentingo** — [`Selleo/mentingo`](https://github.com/Selleo/mentingo), 92★, pushed **2026-10-10** | 🟢 **MIT** | Not an attachment at all — **the AI is the platform.** Fork it, white-label it, self-host it | 🟢 **It ships its own:** AI mentor, role-play scenarios, compliance/corporate training flows, SCORM and xAPI. Positioned explicitly as a self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX. 🔵 Small and vendor-led (Selleo, Poland), so read it as a **reference architecture and a fork base**, not as a mature platform |
+| **Adapt Framework** — [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework), **630★**, pushed **2026-10-10** | 🔴 **GPL-3.0** | A **content authoring** platform rather than an LMS: it produces responsive, accessible, multi-language course packages that emit **SCORM and xAPI**, which any LMS above can then consume | Generation of course structure and items into Adapt's JSON authoring format, then export as a tracked SCORM package. 🔴 **Copyleft matters here in a specific way:** the client *runs* Adapt as a tool and owns the course output, so GPL-3.0 constrains redistribution of Adapt itself and not the courses it authors |
+
+### 🟢 The OpenOLAT `NOASSERTION`, explained — and it is a general lesson
+
+p132 recorded that GitHub's matcher does not recognise OpenOlat's licence and that its own
+documentation claims Apache-2.0. **Both were right, and the reason is now measured.** The file is
+Apache-2.0 **to the character** through all nine sections of the terms — and then, where
+`END OF TERMS AND CONDITIONS` and the boilerplate appendix belong, it carries instead:
+
+> `* * *` *Additional license statement for the original olat.org code base:* … *originally created
+> by the OLAT Zentrum at the University of Zurich* … `* * *` *Additional license statement for the
+> openolat.org code base:* … *OpenOLAT is initiated by frentix GmbH and is initially based on the
+> OLAT 7.1 release.*
+
+🟢 **Consequence for a client engagement: this is a permissive licence.** The grant, the patent
+clause and the disclaimer are unmodified Apache-2.0. 🔴 **The obligation is the attribution:** both
+statements must be carried into any redistribution, which is an ordinary Apache-2.0 `NOTICE`-style
+duty stated in an unusual place.
+
+🔵 **The general lesson, and it applies to every `NOASSERTION` on this page.** A licence matcher
+answers *"are these bytes a template I know?"* A client needs the answer to *"what may we ship?"*
+Those differ whenever a project appends institutional attribution — which **well-governed,
+institution-derived projects are the most likely to do.** 🔴 **So `NOASSERTION` is biased towards
+exactly the platforms an education engagement most wants to use**, and that is the second time this
+KB has recorded that bias (`P134-F`).
+
 ## The licence decision, stated plainly
 
 | client intent | platforms that permit it |
@@ -190,11 +237,13 @@ repository first.**
   **plus eight standalone MCP servers, five of them MIT** — p131). Sakai, Chamilo, ILIAS, OpenOLAT,
   Oppia, Kolibri, Frappe LMS and OpenEduCat are open ground.
 - ~~**Two platform licences (`openeducat_erp`, `OpenOLAT`) do not resolve to an OSI identifier.**~~
-  🔴 **HALF-REFUTED.** `openeducat_erp` **does** resolve: **LGPL-3.0**, read from an 8 241-byte
-  `master/LICENSE` by an earlier pass of this KB. 🟢 **`OpenOLAT` survives as unresolved** — its own
-  documentation describes an Apache-2.0 basis that GitHub's matcher does not recognise, and no
-  payload read is on record here. **Rule:** `NOASSERTION` means "GitHub's matcher did not recognise
-  the file", never "no grant".
+  🟢 **FULLY RESOLVED BY p135 — both halves.** `openeducat_erp` resolves to **LGPL-3.0**, read from
+  an 8 241-byte `master/LICENSE` by an earlier pass. 🟢 **`OpenOLAT` resolves to Apache-2.0 with two
+  attribution statements replacing the appendix** — payload read this pass, core terms verbatim,
+  permissive in effect (see *The OpenOLAT `NOASSERTION`, explained* above). **Rule, now with two
+  instances behind it:** `NOASSERTION` means "GitHub's matcher did not recognise the file", never
+  "no grant" — and it is **biased towards institution-derived projects**, because they are the ones
+  that append attribution.
 - ~~**No open-source proctoring or academic-integrity system** was found.~~ 🔴 **REFUTED.** Four
   **MIT** proctoring projects are now on the shelf (`agents/top.md` → academic-integrity tier), one
   of which this KB already held. 🟢 **The surviving gap is grade, not existence:** the largest is

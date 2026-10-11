@@ -4,6 +4,170 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 135 — 2026-10-11
+
+⏱️ **Twenty-second pass of this date.** 🟢 **All six of p134's pre-registered actions reached; five
+discharged, and two refuted their own premise — which is the most useful outcome a pre-registered
+action can have.** 🔴 **The headline: this KB has spent four passes saying the sanctioned standards
+path removes the blocker. It removes HALF of it.** The credential claim is confirmed by source read.
+The identity claim is not: the standard verifies a user cryptographically, and both agent bridges to
+it throw that verification away.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P135-A` | 🔴 **THE CREDENTIAL BLOCKER WAS SOLVED AND REPLACED BY AN IDENTITY-ASSERTION BLOCKER** | `ltijs` verifies a platform-signed JWT; `bb-mcp` trusts `caller_identity` *"at face value"*; `learnmcp-xapi` reads the actor from an **env var** |
+| `P135-B` | 🔴 **THE SHELF WAS BUILT AROUND THE WRONG STANDARD — SCORM IS 10× LTI** | `adapt_framework` **630★** vs `ltijs` 373★ vs QTI's largest **30★** vs **Caliper: 1 repo, 0★, 2023** |
+| `P135-C` | 🟢 **`ACTION BO` CONFIRMED, AND COLORADO'S NEW STATUTE NAMES EDUCATION** | **SB 26-189**, signed **2026-05-14**, duties from **2027-01-01**, cure to **2030**, enforcement stayed |
+| `P135-D` | 🟡 **`P134-H` PARTLY REFUTED — "APAC" FAILS, "LATAM" DOES NOT** | the predictor is a region-scoped **education body**, not the word: UNESCO IESALC + IDB exist, "EMEA"/"APAC" counterparts do not |
+| `P135-E` | 🔴 **`ACTION BP`'S PREMISE REFUTED — NOT ONE PAYLOAD IS A WHITESPACE VARIANT** | **0 of 26**; they are **line-wrap** variants. 21 of 26 resolved; **33 tests** |
+| `P135-F` | 🔴 **A SECOND FSF EDIT TO ITS OWN LICENCE TEXT** | `why-not-lgpl.html` moved `/licenses/` → `/philosophy/`; that one path was the whole residue on **5** GPL-3.0 payloads |
+| `P135-G` | 🔴 **LINE-BASED COPYRIGHT STRIPPING SILENTLY DELETES LICENCE TEXT, IN BOTH ORDERS** | caught by the instrument's own tests on real payloads, in both directions |
+| `P135-H` | 🔴 **`ACTION BQ`: THE MINISTRY-DATASET AXIS HAS ROWS AND NO INSTITUTIONS** | 42 Brazilian rows, **zero** institution-owned; **4 uncredited clones**, READMEs byte-identical |
+| `P135-I` | 🟢 **OPENOLAT RESOLVED — THE PERMISSIVE FULL LMS THIS KB SAID DID NOT EXIST** | **Apache-2.0 + 2 attribution statements**, 447★, pushed 2026-10-09 |
+
+### `P135-A` — the finding, and why it is a component rather than a caveat
+
+🔵 **It was only answerable because the channel changed.** Earlier passes read *payloads*; this one
+**cloned the repositories** (`git clone --depth 1`, all three succeeded) and read the implementation.
+
+🟢 **What the source confirms.** `Cvmcosta/ltijs` holds **no user credential at all** — the only
+secret is a platform-issued `client_credentials` token, cached per `platformUrl`+`clientId`+`scopes`,
+that the institution can revoke. User identity comes from an `id_token` whose signature is
+**verified** against the platform's keys, with nonce tracking. `bb-mcp` keeps tokens **in memory
+only** and authenticates with an institution-issued app secret. `learnmcp-xapi` uses an **LRS
+service credential**. 🔴 **Not one of the three stores a student's password**, which is exactly the
+distinction that makes the 36-row portal tier unshippable and this tier shippable.
+
+🔴 **What the source refutes.** `bb-mcp` requires a `caller_identity` argument on every tool call and
+its README states plainly: *"This identity is trusted at face value (bb-mcp does not itself verify
+end-user identity)"*; `MCP_API_KEY` authenticates **the client, not the user**, and `role: "admin"`
+**bypasses** the course-entitlement gate that otherwise stops a grade write into an unenrolled
+course. `learnmcp-xapi` takes its actor from `ACTOR_UUID` in the environment at all three call sites
+— 🔴 **and two of its own docstrings say *"Actor UUID from JWT"* while the project has no JWT
+dependency at all.** The code is honest; its comments describe a trust anchor it does not have.
+
+🟢 **So the gap is a named, small, unbuilt component:** an **identity broker** that terminates a
+verified identity (LTI launch, OIDC, or the institution's IdP) and only then calls the MCP server
+with a subject it established itself. Nothing in this KB does it, in any region. Written up as
+`compose/patterns.md` → **P13**, pre-registered as `ACTION BS` to probe before the absence is
+asserted as fact.
+
+### `P135-B` — the register, and the variable nobody had isolated
+
+`ACTION BN` finished the six remaining standards. 🔴 **Maturity tracks the standard's AGE, not its
+design**: SCORM (1999) is technically the crudest of the six and carries four repositories above
+350★; **Caliper (2015) is the most modern event model and has one repository, 0 stars, no licence,
+untouched since 2023**; Comprehensive Learner Record has **one real row**. 🟢 **The mechanism is
+installed base, not merit** — institutions have *bought* SCORM and LTI for twenty years, so there is
+something to write against.
+
+🔴 **This changes what can be promised.** *"We build on sanctioned standards"* is credible for
+content and launch, defensible for assessment and credentials, and **not currently true for
+analytics**. Eleven institution- or vendor-owned rows were added, against `ACTION BN`'s refutation
+threshold of three: **Newcastle University** (`Numbas`), **Stichting Cito** (`qti-convert`, holder
+read out of its own filled-in GPL appendix), **1EdTech itself**, **ADL / US DoD** (archived and
+unlicensed), **SURF** (archived), EPAM, Longsight, amp-up.io, AgencyEnterprise, Impierce, Selleo.
+
+### `P135-E`–`P135-G` — `ACTION BP`, and why a licence badge is only a lead
+
+🔴 **A licence payload never hashes to its canonical text naively.** SPDX wraps at ~105 columns;
+real `LICENSE` files wrap at ~72. **Zero of 26 payloads were whitespace variants**, refuting BP's
+premise outright. The classes that actually defeat identity, in order of how often they bit: **line
+wrap**, **typographic punctuation** (SPDX's GPL-3.0 uses curly quotes; shipped `COPYING` files use
+ASCII), **steward edits to the licence's own text**, **appendix instantiation**, **undated notices**.
+
+🔴 **`P135-G` is the part worth carrying into any future instrument.** Removing copyright notices
+line-by-line is **wrap-dependent in both possible orders**, and each order silently deleted real
+licence text rather than failing loudly — strip after reflow and GNU's *"Everyone is permitted…"*
+goes with the notice it shares a paragraph with; strip before reflow and Apache-2.0's *"…a readable
+copyright notice that is included in or attached to the work"* is deleted because a 72-column break
+lands in front of the word `copyright`. Both were observed on real payloads in this corpus. The
+rule: **remove a notice as a span inside an already-reflowed paragraph, anchored at the paragraph
+start, requiring a year — or, if the paragraph is nothing but a notice, without one.**
+
+🟢 **And the practical edge:** a badge would have mislabelled an LMS a studio *can* use
+(`OpenOLAT`, permissive) and said nothing about two it cannot — `pipwerks/scorm-api-wrapper`
+(**391★, 130 forks, no licence file at all**) and `cybercussion/SCOBot` (**164★, CC-BY-SA-4.0, and
+the file is only the human-readable deed**).
+
+### Regional battery — all five regions, with `ACTION BM` as its own control
+
+| region | this pass |
+|---|---|
+| **North America** | 🟢 **`ACTION BO` discharged against the legislature's own record.** **SB 26-189** repeals and reenacts SB 24-205; **scope explicitly covers education enrolment and opportunity**; developer duties and AG rulemaking **2027-01-01**; **cure period to 2030**; House 34–1; signed **2026-05-14**; enforcement **stayed** by federal court order pending `X. AI LLC v. Weiser`. 🔴 **Impact assessments and the risk-management programme are GONE; disclosure, a 30-day plain-language explanation and human review replace them** — which inverts the sales motion from a governance programme to an **explanation pipeline** |
+| **EMEA** | 🔴 **Bare probe failed again, independently** — enterprise IT, a 2023 study, and one education source whose event sat in **October 2024**. 🟢 **Supply finding: ELM, the European Learner Model, is a live credential standard with three repositories and this KB had never recorded it** — the only permissive implementation is Apache-2.0 **in Rust**, a quotable integration cost. Three further institutional rows: **Newcastle University**, **frentix/University of Zurich**, **Stichting Cito**; and **SURF has archived** its badge front-end |
+| **APAC** | 🔴 **Bare probe failed identically to EMEA** — the run recorded finding no education regulation, ministry rule or market data at all. 🟢 **The country probe returned dated mandates**: **India** — AI and Computational Thinking **compulsory from Class 3, 2026-27 academic year**, NEP-2020-aligned, teacher training via **NISHTHA**; **Singapore** — AI Literacy Learning Framework, curricula **from 2026**, 🟢 **digital education compulsory in pre-service teacher training**; **South Korea** — MOE + MSIT **2026 work plan**, AI as foundational literacy; **China and the UAE** also mandatory. 🔴 **Japan: MEASURED ABSENT** (`ACTION BT`) |
+| **LATAM** | 🟢 **The one region whose bare probe works**, and now with a mechanism: **UNESCO IESALC** (200 institutions, 19 countries — **87% use AI, 26% have any framework**; private non-profit 84% / public 68% / for-profit 52%), **Digital Education Council LATAM 2026** (**30 000+** responses — **92% of students, 79% of faculty**), **IDB** readiness index across 19 countries, **~30%** of universities with a published policy. Chile has a 2021 policy and a bill; Brazil and Colombia have strategies **without education rules**; Mexico's SEP/ANUIES guidance is 🔴 **non-binding**. 🔴 **`ACTION BQ`: 42 dataset rows, zero institution-owned, and 4 uncredited clones** |
+| **Global** | Market: a sixth genuinely-2026 figure at **$6.02B** reopens the current-year spread to **~1.89×**, but 🟢 **the real disagreement is the growth rate — published CAGRs span 12.55% to 45%, a 3.6× spread**, which is why the 2035 figures span ~17×. The disagreement **compounds; it does not start large** |
+
+### Verdicts on p134's actions
+
+- 🟢 **`ACTION BL` — DISCHARGED, NOT REFUTED, AND SPLIT.** Credential claim holds; identity claim
+  fails on two of three.
+- 🟡 **`ACTION BM` — DISCHARGED AND PARTLY REFUTING.** "APAC" fails, "LATAM" does not; the rule is
+  about institutions, not words.
+- 🟢 **`ACTION BN` — DISCHARGED, NOT REFUTED.** Eleven institution/vendor rows against a threshold
+  of three, and the layer's centre of gravity moves to SCORM.
+- 🟢 **`ACTION BO` — DISCHARGED AND CONFIRMED** against primary documents.
+- 🟢 **`ACTION BP` — DISCHARGED, PREMISE REFUTED.** Zero whitespace variants.
+- 🟢 **`ACTION BQ` — DISCHARGED, NOT REFUTED**, and the axis is empty of institutions.
+
+### Pre-registered for p136
+
+🟢 **`ACTION BR`** — dependency closure of the unlicensed `pipwerks/scorm-api-wrapper` across this
+KB's own rows. 🔴 *Refuted if no published row depends on it.*
+
+🟢 **`ACTION BS`** — probe for an identity broker in the professional register before `T13`'s
+absence is asserted as fact. 🔴 *Refuted if any repo verifies an LTI/OIDC assertion itself.*
+
+🟢 **`ACTION BT`** — probe Japan by ministry, in Japanese (MEXT, GIGA School, 生成AI guidelines).
+🔴 *Refuted if no national instrument exists — itself a finding.*
+
+🟢 **`ACTION BU`** — run README byte-identity mirror detection across the whole corpus. 🔴 *Refuted
+if fewer than 2 further cross-owner clusters exist.*
+
+🟡 **`ACTION BV`** — close the GNU steward-edit table or declare it unclosable (3 payloads at
+0.996–0.998). 🔴 *Refuted if any carries a substantive added clause.*
+
+🟡 **`ACTION BW`** — verify the ENEM cluster's lineage at **source** level, not README level.
+🔴 *Refuted if the source trees differ substantially.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The identity broker was not built, and its absence is asserted from this KB's own rows rather
+  than measured against GitHub.** `ACTION BS` exists precisely because that is the weaker kind of
+  claim, and `T13` should be read as provisional until it runs.
+- 🔴 **Three licence payloads remain unresolved at 0.996–0.998** and were declared rather than
+  chased (`ACTION BV`).
+- 🔴 **`leg.colorado.gov` was never read directly** — 403 via `curl`, DNS failure via `WebFetch`.
+  The bill page and fiscal note came through a domain-restricted search. 🟢 Primary source,
+  secondary transport; recorded as such rather than presented as a direct read.
+- 🔴 **The ENEM clone finding rests on README and licence byte-identity, not on source comparison.**
+  "Clone" may be too strong; `ACTION BW` tests it.
+- 🔴 **Japan remains a hole**, and the 42 Brazilian dataset rows were counted but not individually
+  payload-read.
+- 🔴 **No LATAM standards-native row was found, again** — the fifth consecutive pass in which this
+  KB's best-licensed layer has no Latin American origin.
+
+### Files changed
+
+`agents/top.md` (**`ACTION BL`** source-read table, **`ACTION BN`** full standards register across
+SCORM/QTI/credentials, two measured-absent standards, 8 new licence flags established by hash, gap
+verdicts + 3 new gaps) · `repos/foundations.md` (**new assessment and content layer**, the OpenOLAT
+verdict on this page's flagship gap, 2 new gaps) · `verticals/solutions.md` (**3 platforms added**,
+**the OpenOLAT `NOASSERTION` explained and the gap closed**) · `intel/market.md` (**all five
+regions**; Colorado SB 26-189 in full; APAC country mandates with dates; LATAM denominators and the
+`ACTION BQ` clone cluster; ELM for EMEA; the CAGR-spread correction) · `intel/trends.md` (**`T12`
+qualified**, **`T10` probe rule generalised**, **`T13`** and **`T14`** added, 8 watch items) ·
+`compose/patterns.md` (**P13** and **P14**, selection table extended, `NOASSERTION` rule updated) ·
+`intel/open-gaps.md` (6 verdicts, 4 gaps closed/narrowed, **7 open**, **`ACTION BR`–`BW`**, channel
+state) · both append-only trending logs (dated sections prepended; **71 and 64 insertions, zero
+deletions**) · `evidence/verified-repos.2026-10-11-p135.tsv` (**33 measured rows + 6 named
+controls**) · `compose/code/p135-licence-sha-identity/` (**instrument + 33 passing tests + result
+TSV + fetch log**).
+
+---
+
 ## Pass 134 — 2026-10-11
 
 ⏱️ **Twenty-first pass of this date.** 🟢 **This pass did not add another connector to the tier this

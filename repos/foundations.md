@@ -6,6 +6,30 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 135, 2026-10-11.** 🟢 **The assessment and course-content layer is added — the part of the
+standards stack p134's interoperability section pointed at and did not reach.** p134 finished with
+LTI, OneRoster, Ed-Fi and xAPI. Finishing the register (`ACTION BN`) found that **SCORM carries an
+order of magnitude more code than any of them**, and that two of the six remaining standards have
+almost no supply at all. Rows are below under *The assessment and content layer*.
+
+🔴 **Every licence cell added this pass was established by hash, and the method matters more than
+any single row.** `compose/code/p135-licence-sha-identity` discharges `ACTION BP` and **refutes its
+premise**: not one payload in a 26-repo corpus is a whitespace variant of its canonical text. They
+differ by **line wrap width** (SPDX wraps at ~105 columns, real `LICENSE` files at ~72), by
+**typographic punctuation** (SPDX's GPL-3.0 uses curly quotes; shipped `COPYING` files use ASCII),
+and by **the licence steward editing its own text** — two such edits are now known for GNU, the
+`http`→`https` change and 🔴 **the FSF's move of `why-not-lgpl.html` from `/licenses/` to
+`/philosophy/`, which was the entire remaining difference on five GPL-3.0 payloads.**
+🟢 **Result: 21 of 26 resolved to a named SPDX identifier; the 5 that did not each have a named
+cause, and 2 of them are correctly unmatched** because the text genuinely is not canonical.
+
+🔴 **Two rows added this pass carry the defect this page exists to catch.**
+[`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) — **391★, 130 forks,
+pushed 2026-09-18 — has no licence file under any of eight probed filenames**, and
+[`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) is published
+**unlicensed and archived by the US Department of Defense body that authored both SCORM and xAPI.**
+Neither can be used in a client deliverable. Both are measured absent, not inferred.
+
 **Pass 134, 2026-10-11.** 🟢 **This page gains the layer it was missing: the interoperability
 standards an institution procures against.** `instructure/ims-lti` has sat at the bottom of this
 page for many passes, described correctly as *"the integration path that avoids touching platform
@@ -142,6 +166,37 @@ mirrors and some are GitHub-native, and the topic tells you which.** `pushed_at`
 freshness signal for `ims-lti` and an invalid one for `canvas-lms` — which means freshness must be
 checked per repo, never per organisation.
 
+## 🟢 The assessment and content layer — added by p135
+
+The standards an institution procures against do not stop at rostering and grade passback. Two more
+carry real code: **SCORM**, which packages and tracks course content, and **QTI**, which carries
+assessment items. This is where an AI engagement touching *content* or *assessment* attaches.
+
+| system | repo | licence *(hash-verified)* | ★ | pushed | owner | why it is foundational |
+|---|---|---|---|---|---|---|
+| **Adapt Framework** | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **630** | **2026-10-10** | Adapt community | The largest repo in the whole standards stack. Authoring toolkit producing responsive, accessible, multi-language courses that emit **both SCORM and xAPI**. 🔵 Copyleft: run it as a tool, do not link it |
+| **OpenOlat** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0 + attribution** | **447** | 2026-10-09 | frentix GmbH / Univ. of Zurich | 🟢 **A full Java LMS this KB had never tabled**, with QTI, SCORM, curriculum management, assessment and lecture management built in. The permissive full-featured LMS this page's flagship gap says does not exist — see the verdict below |
+| **scorm-again** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **354** | 2026-10-09 | individual | The modern SCORM 1.2 / 2004 runtime. **Offline-first**, TypeScript, actively maintained. 🟢 **The permissive replacement for the unlicensed `pipwerks` wrapper** |
+| **Numbas** | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University (UK)** | Browser-based e-assessment, strongest in mathematics, SCORM-packageable. **Institution-owned and permissive** — the cleanest base for assessment work before the 2027 clocks |
+| **QTI 3 item player** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** | 30 | 2026-04-07 | amp-up.io | The reference renderer for QTI 3 assessment items, with a four-component sibling family from the same vendor |
+| **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 92 | **2026-10-10** | Selleo (PL) | 🟢 **An AI-native LMS under a permissive licence** — AI mentor, role-play, SCORM and xAPI, white-label, self-hosted. Small, but the only row where the AI is the platform's architecture rather than a bolt-on |
+| **1EdTech validator** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | 17 | 2026-09-23 | 🟢 **1EdTech (the standards body)** | Conformance validation for **Open Badges and Comprehensive Learner Record**. The second conformance suite this KB has found, and the steward's own |
+
+🔴 **Do not reach for these two, and the reason is the licence, not the code**
+
+| repo | ★ | problem |
+|---|---|---|
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | **391** | **No licence file.** Eight filenames probed, all absent. The most widely used SCORM wrapper in the sector confers no rights whatsoever |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 164 | **CC-BY-SA-4.0, and the file is only the 837-byte human-readable deed.** ShareAlike copyleft, no patent grant, and a content licence applied to code |
+
+### 🔴 What this layer does NOT have
+
+| standard | supply measured this pass |
+|---|---|
+| **Caliper Analytics** | 🔴 **One repository, 0★, no licence, last touched 2023.** The standard for carrying learning events to an analytics layer has no usable open-source client in any language |
+| **Comprehensive Learner Record** | 🔴 **One real repository** — the 1EdTech validator above. The other two hits are an empty 2018 repo and a student project |
+| **LTI Deep Linking**, probed alone | 🔴 **One repository, which declares in its own description that Deep Linking is not supported.** In practice it exists only inside `ltijs` |
+
 ## Supporting infrastructure
 
 | repo | licence | stars | what it gives you |
@@ -228,3 +283,33 @@ Kiwix and a local model, and it is permissive enough to fork.
   curriculum-specific offline row found is Indian (`Tushar-cy/Offline-AI`), and LATAM — where this
   KB argues offline is a first-class requirement rather than an edge case — has none.
   🟡 **Also note a new collision source: Aleph Alpha ships a 78B model called "Kolibri".**
+
+### 🟡 p135's verdict on this page's flagship gap
+
+- **"No permissively licensed, full-featured LMS at the scale of Moodle or Canvas."**
+  🟡 **NARROWED, and honestly it is weaker than it was.**
+  [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is **447★**, pushed 2026-10-09, under
+  **Apache-2.0** (with two attribution statements replacing the appendix — permissive in effect),
+  and it ships QTI, SCORM, curriculum management, assessment and lecture management in one Java
+  codebase. It is a real, maintained, permissive, full-featured LMS, and **this KB had never listed
+  it.** 🔴 **The gap survives only in its "at the scale of Moodle or Canvas" clause** — OpenOlat is
+  447★ against Moodle's order of magnitude more, and its deployment base is concentrated in
+  German-speaking Europe. 🔵 **For an EMEA engagement that clause may not matter**, and this is now
+  the first permissive answer this page can give to *"we want off Moodle's GPL."*
+- 🆕 **The offline gap gains a permissive component it did not have.**
+  [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, 354★) lists `offline-first`
+  among its own topics and implements the SCORM runtime client-side. 🟢 **That is the missing piece
+  between `T8`'s offline requirement and standards-tracked course delivery** — a learner can
+  complete tracked content with no connectivity and reconcile later. It still does not close *"no
+  AI project builds inside Kolibri itself"*, and it still is not LATAM-originated.
+
+### 🆕 Gaps this page opens after p135
+
+- 🔴 **The sector's most-used SCORM library is unlicensed, and the blast radius is unmeasured.**
+  `pipwerks/scorm-api-wrapper` has 391 stars and **130 forks**, and no licence file. Every fork and
+  every vendor that vendored it inherits the defect. This KB has not measured how many of the rows
+  on its own pages depend on it — that is a dependency-closure question, and the instrument for it
+  already exists (`compose/code/p112-dependency-closure`, `dependency-licence-closure`).
+- 🔴 **No permissive Python library exists for Open Badges.** Both Python rows are copyleft
+  (LGPL-2.1 and LGPL-3.0). The permissive credential work is in **Rust** (`impierce`, Apache-2.0)
+  and **Java** (`1EdTech`, Apache-2.0), which is a language mismatch for most AI engagements.
