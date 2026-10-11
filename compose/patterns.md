@@ -6,6 +6,103 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
+**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
+`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **0** of the 10 cells
+repaired in this commit — the first pass in four in which it carried none.**
+
+## 🟢 🆕 `P121-PAT-1` — bidirectional licence gate at engagement intake (2–3 days)
+
+🔵 **Why this pattern replaces `P120-PAT-1`.** p120's gate checked one direction: is a repository
+*less* permissive than we published? `P121-C` found two platforms that were *more* permissive —
+[`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0, published GPL-3.0) and
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (MIT, published AGPL-3.0) —
+both marked *"🔴 no"* for reuse. 🔴 **A one-directional gate loses options silently and never
+alarms.**
+
+**Wire it together like this.**
+
+| step | component | licence | what it does |
+|---|---|---|---|
+| 1 | `compose/code/p121-stale-token-crosspage/extract-v6.sh` | in-repo | pull every `(page, line, slug, token)` claim from the shortlist docs — **word-boundary anchored**, source-available family included, `0BSD`/`GPLv3`/`LGPLv3` spellings matched |
+| 2 | `probe.sh` (same directory) | in-repo | read the committed licence from `raw.githubusercontent.com` at **22 candidate paths** on the **measured default branch** — not `HEAD`, not `main` by assumption |
+| 3 | `manifest_q.py` | in-repo | read `package.json` / `composer.json` / `pyproject.toml` and **diff the declared field against the file** |
+| 4 | `crosspage.py` | in-repo | report disagreements in **both** directions, with the inline-`⚠️ was` correction guard so an already-corrected row is not re-flagged |
+| 5 | human read-through | — | 🔴 **mandatory.** On this pass the first run reported 20 manifest contradictions and 10 token defects; reading every row cut them to **10** and **5** and flipped one verdict |
+
+🔵 **Concrete wiring for a client shortlist.** Point step 1 at the shortlist markdown, feed step 2
+the `(slug, default-branch)` pairs from `git ls-remote --symref`, then:
+
+```
+./extract-v6.sh shortlist.md > claims.tsv
+cut -f3 claims.tsv | sort -u | while read s; do
+  b=$(git ls-remote --symref "https://github.com/$s" HEAD | awk '/^ref:/{sub("refs/heads/","",$2); print $2}')
+  printf '%s\t%s\n' "$s" "$b"
+done > pairs.tsv
+./probe.sh < pairs.tsv > committed.tsv      # the GRANT
+./fetch-manifests.sh < pairs.tsv            # the CLAIM
+python3 manifest_q.py                       # the DIFF
+```
+
+🟢 **Output is a three-column verdict per address: what the doc says, what the manifest says, what
+the file says.** Ship nothing until all three agree or the disagreement is explained in writing.
+
+## 🟢 🆕 `P121-PAT-2` — permissive autograding stack behind a copyleft LMS (3–4 weeks)
+
+🔵 **The shape every education engagement eventually needs, and it is fully permissive provided
+the LMS stays on the far side of a service boundary.**
+
+| layer | component | 🟢 licence, measured | role |
+|---|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) *or* [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 GPL-3.0 / **AGPL-3.0** | 🔴 **integrate via LTI 1.3 only — never fork, never link** |
+| notebook serving | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3 | per-student isolated compute |
+| autograding | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) + [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3 · BSD-3 | assignment release, collect, grade, feedback |
+| code assignments | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3 | container-isolated execution + plagiarism detection |
+| R grading | [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) + [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | 🟢 MIT · BSD-3 | inspects student `ggplot` structure, not just output |
+| mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | Bayesian Knowledge Tracing for next-item selection |
+| adaptive testing | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** ⚠️ *was MIT (`P121`)* | IRT/CAT item selection and ability estimation |
+| agent layer | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) *or* [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 · Apache-2.0 | tool-calling tutor loop over the above |
+| badges | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 Apache-2.0 | 🔵 **cite the VALIDATOR** — the specification repo carries **no grant** (`P120-J`) |
+
+🔴 **The boundary is the whole pattern.** Canvas is AGPL-3.0 and Moodle is GPL-3.0: grading
+services talk to them over **LTI 1.3 / REST**, in a separate process, with no linking and no
+shared address space. Everything to the right of that boundary is BSD/MIT/Apache and ships as the
+client's own IP.
+
+🔴 **The one thing this pattern cannot supply, stated rather than hidden:** a commercially usable
+graded-essay corpus. Both `PERSUADE` corpora are **CC-BY-NC-SA-4.0** (`P121-N`). 🟢 **For a paid
+AES engagement the data must be the client's own student work**, under their own terms — which is
+usually available and is the right answer anyway, but it must be in the plan from day one rather
+than discovered at model-training time.
+
+## 🟡 `P121-PAT-3` — LATAM governance engagement, priced off the measured gap (4–6 weeks)
+
+🔵 **This is the pattern the regional evidence most directly supports**, and it needs almost no
+repository substrate.
+
+**The measured gap:** **87 %** of LATAM higher-education institutions use AI somewhere; **26 %**
+have any formal framework (UNESCO IESALC, 200 institutions, 19 countries). **92 %** of students
+and **79 %** of faculty are active users (Digital Education Council, 30 000+ responses, 29
+institutions). Regulation is heterogeneous — Chile has a policy and a bill; Brazil and Colombia
+have national strategies with no education annex; Mexico has non-binding **SEP**/**ANUIES**
+recommendations only.
+
+| phase | deliverable | anchor |
+|---|---|---|
+| 1 | AI-use inventory across teaching, research, administration | the IESALC four-area split (73.5 / 57.0 / 34.1 / 20.0 %) as the comparison baseline |
+| 2 | academic-integrity and assessment-redesign policy | the 92 % student-usage figure makes prohibition unenforceable; design for disclosure instead |
+| 3 | faculty enablement | 79 % already use AI without guidance — this is enablement, not adoption |
+| 4 | jurisdictional readiness note | Chile-first (policy + bill), portable to Brazil/Colombia as their strategies acquire education annexes |
+| 5 | 🟡 optional technical track | `i-educar` (🔴 **GPL-2.0** — service boundary, `P121-A`) for municipal SIS; `catsim` (🟢 BSD-3) for adaptive assessment |
+
+🔴 **Pricing note that follows from the measurement:** the sector scores **35 / 100** on maturity
+with most institutions still piloting. 🟢 **Sell the governance phase first.** It is the phase the
+buyer already knows they need, it does not depend on procurement maturity, and it is the natural
+on-ramp to the technical track.
+
+# Education — compose patterns
+
 **Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
 🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.

@@ -6,6 +6,95 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
+`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **2** of the 10 cells
+repaired in this commit.**
+
+## 🟢 🆕 `P121-N` — the foundations shelf is 98 % granted, and last pass's headline said 59 %
+
+🔴 **p120 published *"41 % of audited addresses cannot be built on"*.** `ACTION N` pre-registered
+the test that would confirm or refute it across the rest of the census. **It refutes it.**
+
+| | addresses | ungranted | rate |
+|---|---|---|---|
+| p120's sample — **selected for being `UNREAD`** | 22 | 9 | 🔴 41 % |
+| 🟢 **`ACTION N` — the other 227** | 227 | 🟢 **4** | 🟢 **1.8 %** |
+| whole census | 249 | 13 | 🟢 **5.2 %** |
+
+🟢 **For a studio choosing substrate this is the number that matters, and it is good news:
+roughly 19 of every 20 addresses on this shelf carry a readable grant.** 🔵 **p120's figure was
+not wrong — it was an answer to a different question**, and this KB published it as though it
+described the shelf. A failure rate measured on the addresses chosen for being hardest is a
+property of the choosing, not of the population.
+
+## 🔴 🆕 `P121-N2` — `atutor/ATutor` is published here as GPL-3 and its repository says only "GPL"
+
+🔴 **[`atutor/ATutor`](https://github.com/atutor/ATutor) (180★) has no licence file at 22 probed
+paths on `master`.** Its README's `## License` section contains one word: **`GPL`**.
+
+🔴 **"GPL" is not a licence.** GPL-2.0 and GPL-3.0 are mutually incompatible — a component under
+one cannot be combined with a component under the other. A bare family name chooses neither, so
+there is nothing for a compliance review to act on.
+
+🟡 **This page is partly right about it already** — a row reads *"genuinely commits no licence file"*
+and `verticals/solutions.md` carries a ‡ footnote saying *"the grant is asserted by this KB's
+history rather than by the repository … treat the row as licence-unresolved"*. 🟢 **That footnote
+stands and this pass confirms it by measurement.** 🔴 **What it does not say is that the
+version — `GPL-3` — is this KB's invention.** The repository never names a version. For an
+accessibility-pioneer LMS last released 2023-02-12, the honest cell is *"author claims GPL, no
+version, no file"*.
+
+## 🟢 `douglasrizzo/catsim` repaired — 🟢 MIT here, BSD-3-Clause in the tree
+
+🔴 **This page's star table published [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim)
+(153★) as 🟢 MIT.** Measured this pass: `dev/LICENSE`, 1 514 B, **BSD 3-Clause**. Its
+`pyproject.toml` also declares `BSD-3-Clause`, so **three channels agreed and the page disagreed
+with all three.** 🟢 **Repaired.**
+
+🔵 **Both are permissive, so nothing is legally exposed** — but `catsim` is the shelf's adaptive-testing
+(IRT/CAT) foundation, the component an assessment engagement builds on, and BSD-3 carries a
+non-endorsement clause MIT does not.
+
+## 🟢 The foundational shelf, measured
+
+🔵 **Licences below were read from the default branch; the `⚠️ was` marker means this pass or a
+prior one corrected the cell.**
+
+| address | ★ | 🟢 licence, measured | region | why it is foundational |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 6.2k | 🔴 GPL-3.0 — `COPYING.txt` | Global (AU origin) | the largest-install LMS on earth; integrate, do not absorb |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 7.5k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | North America | the MOOC platform of record; AGPL reaches hosted services |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | North America | the HiEd LMS with the largest US market share |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1.1k | 🟢 **MIT** | Global (offline-first) | the only permissive LMS at scale — the low-bandwidth answer |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 8.1k | 🟢 BSD-3 | Global | multi-user notebook serving; the CS-teaching substrate |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1.3k | 🟢 BSD-3 | North America | notebook autograding; pairs with JupyterHub |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 800 | 🟢 BSD-3 | North America (RPI) | programming-assignment autograder with plagiarism detection |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | — | 🟢 BSD-3 | North America (UC Berkeley) | Python/R autograding, container-isolated |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 153 | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT** | LATAM (BR) | computerised adaptive testing — **repaired this pass** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 1.5k | 🟢 MIT | North America | Bayesian Knowledge Tracing intelligent tutor |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | — | 🟢 Apache-2.0 | Global | 🔵 **cite the VALIDATOR** — the *specification* repo carries no grant (`P120-J`) |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 1.1k | 🟢 BSD-3 | Global | institutional repository of record |
+
+🔵 **The shape has not changed in eight passes and remains the single most useful fact here: the
+permissive tier is the plumbing — grading, assessment, notebooks, repositories, badges — while
+every large-install LMS is copyleft.** A studio builds permissive tooling *around* a copyleft
+platform at a service boundary; it does not fork the platform.
+
+## 🟡 `ACTION Q` — a manifest is weak evidence, but not as weak as p120 said
+
+🔴 **p120: 2 of 4 manifests contradict the committed licence (50 %).** `ACTION Q` read all 249
+addresses: **161 manifests fetched, 104 declare a licence, 10 contradict — 9.6 %.** The clause
+required **≥ 15 %**, so 🔴 **`ACTION Q` is REFUTED.**
+
+🟢 **The direction survives and is sharper than the rate.** 7 of the 10 are
+permissive-over-restrictive — the dangerous way round, because a dependency scanner reads the
+manifest and returns the permissive answer. Details and the full table are in
+`repos/trending.md` and `intel/trends.md`.
+
+# Education — foundational repos
+
 **Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (census window **05:3x → 06:2x UTC**).
 
 🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
@@ -165,7 +254,7 @@ procurement facts, and this page had a recency column but no liveness column.
 | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **507** | 🟢 MIT | 🟢 live — spaced repetition |
 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **443** | 🟢 MIT | 🟢 live — **repaired, 3 cells carried `~430`** |
 | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **283** | 🟢 MIT | 🟢 live — knowledge tracing |
-| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **153** | 🟢 MIT | 🟢 live, `dev` — adaptive testing |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | **153** | 🟢 **BSD-3-Clause** ⚠️ **was 🟢 MIT** | 🟢 live, `dev` — adaptive testing |
 | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **144** | 🟢 Apache-2.0 | 🟢 live — the xAPI record store |
 | [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | **42** | 🟢 Apache-2.0 | 🔴 **ARCHIVED — treat as a frozen SPEC to implement, never a dependency that will take a fix** |
 

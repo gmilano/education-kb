@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 121 — 2026-10-11 (eighth pass of this date), 06:3x–07:2x UTC
+
+🔵 **APPEND-ONLY page. Added above p120's section; nothing below is edited.**
+
+🟢 **"Trending" is measured here, not quoted. p118 added the default branch; p119 added `archived`
+and `fork`; p120 added whether a repository carries a GRANT. p121 adds the axis that decides
+whether a grant can be TRUSTED: does the repository's own package manifest agree with the
+licence file it commits?**
+
+### 🔴 `ACTION Q` DISCHARGED and REFUTED — 9.6 %, not 50 %, and the 10 that fail fail dangerously
+
+| measure | value |
+|---|---|
+| census addresses probed | 249 |
+| manifests fetched (HTTP 200) | 🟢 **161** — 81 `package.json`, 54 `pyproject.toml`, 26 `composer.json` |
+| manifests **declaring** a licence | 🟢 **104** |
+| agree with the committed file | 🟢 **86** |
+| agree once coarse truth is allowed for | 🟢 **8** |
+| 🔴 **contradict** | 🔴 **10** |
+| contradiction rate | 🔴 **9.6 %** |
+| clause threshold | **≥ 15 %** |
+| 🔴 **verdict** | 🔴 **REFUTED** |
+
+🔵 **p120's 50 % came from a denominator of 4 and p120 flagged the thinness itself. It was right
+to.** 🟢 **But the asymmetry p120 noticed is real and strengthens on the wider sample: 7 of the 10
+contradictions declare something MORE PERMISSIVE than the repository commits, and only 1 goes the
+other way.**
+
+### 🔴 The 10 contradictions, every one re-read from the live tree
+
+| address | manifest | manifest says | 🟢 committed file says | direction |
+|---|---|---|---|---|
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | `package.json` | 🟢 **MIT** | 🔴 **"Fair Code License" v1.0**, `LICENSE.md` 10 830 B — €100 000 past 1 000 users + 5 % | 🔴 **permissive over proprietary** |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `package.json` | 🟢 **MIT** | 🔴 **AGPL-3.0**, `LICENSE` 34 523 B | 🔴 **permissive over network copyleft** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `package.json` | 🟢 **MIT** | 🔴 **AGPL-3.0**, `LICENSE.md` 34 143 B | 🔴 **permissive over network copyleft** |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | `composer.json` | 🟢 **MIT** | 🔴 **AGPL-3.0**, `LICENSE` 34 523 B | 🔴 **permissive over network copyleft** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | `package.json` | 🟢 **ISC** | 🔴 **GPL-3.0** (resolved by p120 via the WordPress `readme.txt`) | 🔴 **permissive over copyleft** |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `package.json` | 🟢 **MIT** | 🟡 **CC-BY** family | 🔴 permissive over attribution-share |
+| [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | `pyproject.toml` | 🟢 **MIT** | 🔴 **no licence file — author claim only** | 🔴 permissive over nothing |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `pyproject.toml` | 🟢 MIT | 🟢 BSD family | 🟡 both permissive, wrong name |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | `package.json` | 🟢 ISC | 🟢 MIT | 🟡 both permissive, wrong name |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | `pyproject.toml` | 🔴 AGPL-3.0 | 🟢 **MIT**, `LICENSE` 1 069 B | 🟡 **restrictive over permissive** — the harmless direction |
+
+🔴 **Four of these put `MIT` or `ISC` in a manifest while committing AGPL-3.0 or a licence that
+bills €100 000.** That is the shape that defeats automation: **every licence gate in a client's CI
+reads the manifest.** `npm ls --json`, `pip-licenses`, most SBOM generators and most SCA scanners
+report the declared field. On these four addresses the gate returns *"permissive, pass"* and the
+copyleft or commercial obligation ships undetected into a client deployment.
+
+🟢 **Operational rule, stated plainly: a manifest licence field is a HINT. The committed licence
+file is the grant.** A studio's intake gate must read the file, on the default branch, at a pinned
+SHA — never the manifest.
+
+### 🟡 Three classes that looked like contradictions and are not — recorded because they cost a re-run
+
+🔵 **The first run of `ACTION Q` reported 20 contradictions (19.2 %), which would have PASSED the
+clause.** Reading all 20 before publishing cut it to 10 and flipped the verdict to refuted.
+
+| class | rows | why it is not a contradiction |
+|---|---|---|
+| 🟡 **coarse truth** | 8 | p118 recorded some committed licences as the bare family — `BSD`, `CC-BY`. A manifest naming `BSD-3-Clause` against a truth of `BSD` is **more precise, not contradictory** |
+| 🟡 **spelling** | 3 | `GPL v3`, `AGPL 3`, `GPL-3.0-or-later` are the same grants the files carry |
+| 🟡 **vendor form** | 1 | `Elastic-2.0` vs this KB's `ElasticLicense-2.0-NOT-OSS` is one licence under two names |
+
+🔴 **Had this pass published its first number, it would have reported a PASS on a clause the data
+refutes.** 🟢 The suite now asserts all three normalisations.
+
+### 🟢 Two repositories move OUT of the "do not use" column this pass
+
+🔴 **The most consequential defect this pass found runs the opposite way to every defect this KB
+has looked for.**
+
+| address | ★ | published here | 🟢 measured this pass | consequence |
+|---|---|---|---|---|
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"* | 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **usable** — the shelf's only timetabling platform, wrongly excluded |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"* | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) | 🟢 **usable via the MIT arm** — a 979★ LMS, wrongly excluded |
+
+🟢 **Both repaired in this commit.** 🔵 **An over-restrictive cell creates no legal exposure, which
+is exactly why no sweep in seven passes was built to find one — and why it survived.** It costs
+options instead of money, and a shortlist that silently lost its only timetabling platform is a
+worse deliverable than one with a licence typo.
+
+### 🔴 And one that moves INTO it — a 1 173★ APAC MOOC platform published as MIT
+
+🔴 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(1 173★, 酷瓜云课堂) was 🟢 MIT and marked *"🟢 yes"* on the verticals shelf. Its `v2/LICENSE` is
+18 092 B — the canonical size of GPL-2.0 — titled "GNU GENERAL PUBLIC LICENSE Version 2".**
+🟢 **Repaired to 🔴 GPL-2.0.** This is the largest-star defect of the pass and the dangerous
+direction: a studio told *"yes, permissive"* about the shelf's biggest Chinese MOOC platform.
+
 ## 🟢 Pass 120 — 2026-10-11 (seventh pass of this date), 05:3x–06:2x UTC
 
 🔵 **APPEND-ONLY page. Added above p119's section; nothing below is edited.**

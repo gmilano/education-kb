@@ -1,0 +1,170 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dropout-ews"
+version = "0.1.0"
+description = "Student Dropout Early-Warning & Intervention System"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+
+# Core ML / data dependencies. Version floors are conservative: they are the
+# oldest releases we have verified against Python 3.10.
+dependencies = [
+    "numpy>=1.26,<2.1",
+    "pandas>=2.1",
+    "pyarrow>=15.0",
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "imbalanced-learn>=0.12",
+    "shap>=0.45",
+    "optuna>=3.6",
+    "pandera>=0.19",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "pyyaml>=6.0",
+    "joblib>=1.3",
+    "structlog>=24.1",
+    "typer>=0.12",
+    "duckdb>=0.10",
+    # pandas.to_markdown, used by the pipeline report writers.
+    "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+# Backend API. Kept separate so the training pipeline can be installed without
+# pulling a web stack, and so the API image stays slim.
+api = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "asyncpg>=0.29",
+    "psycopg[binary]>=3.1",
+    "python-jose[cryptography]>=3.3",
+    "passlib[argon2]>=1.7",
+    "python-multipart>=0.0.9",
+    "slowapi>=0.1.9",
+]
+# Notebooks and plotting. Not needed to train or serve.
+viz = [
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "plotly>=5.20",
+    "jupyterlab>=4.1",
+    "nbval>=0.11",
+]
+# Optional LLM case-note summariser (ADR-0005). Feature-flagged off by default.
+llm = [
+    "anthropic>=0.25",
+]
+dev = [
+    "pytest>=8.1",
+    "pytest-cov>=5.0",
+    "pytest-asyncio>=0.23",
+    "hypothesis>=6.100",
+    "httpx>=0.27",
+    "ruff>=0.4",
+    "mypy>=1.9",
+    "pre-commit>=3.7",
+    "types-pyyaml",
+]
+
+[project.scripts]
+# CLI entrypoints wired up in later phases; declared now so the contract is fixed.
+ews-data = "dropout_ews.pipeline.cli:data_app"
+ews-train = "dropout_ews.pipeline.cli:train_app"
+
+# Two package roots: the ML library lives under src/, the API package at the
+# repository root. Declared explicitly because setuptools' `find` directive takes
+# a single `where`, and scripts/ needs `backend` importable without a sys.path
+# hack — pytest happens to add the rootdir, but a plain `python scripts/x.py`
+# does not.
+[tool.setuptools]
+package-dir = { "dropout_ews" = "src/dropout_ews", "backend" = "backend" }
+packages = [
+    "dropout_ews",
+    "dropout_ews.config",
+    "dropout_ews.data",
+    "dropout_ews.eda",
+    "dropout_ews.evaluation",
+    "dropout_ews.explainability",
+    "dropout_ews.features",
+    "dropout_ews.interventions",
+    "dropout_ews.models",
+    "dropout_ews.monitoring",
+    "dropout_ews.pipeline",
+    "dropout_ews.preprocessing",
+    "backend",
+    "backend.app",
+    "backend.app.db",
+]
+
+[tool.setuptools.package-data]
+dropout_ews = ["config/*.yaml", "py.typed"]
+backend = ["app/**/*.yaml"]
+
+# ----------------------------------------------------------------------------
+# Tooling
+# ----------------------------------------------------------------------------
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "backend", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "PTH", "RUF"]
+ignore = [
+    "E501",    # line length is enforced by the formatter, not the linter
+    "B008",    # FastAPI's Depends() in defaults is idiomatic
+]
+
+[tool.ruff.lint.per-file-ignores]
+# N806: tests mirror scikit-learn's `X`/`y` naming for the design matrix, which
+# is clearer to a reader than an invented lowercase alternative.
+"tests/*" = ["S101", "N806"]
+# scikit-learn requires the estimator API to use the capitalised `X` argument
+# name; renaming it would break Pipeline and cross_val_score.
+"src/dropout_ews/preprocessing/*" = ["N803"]
+"src/dropout_ews/models/base.py" = ["N803"]
+"src/dropout_ews/models/calibration.py" = ["N803"]
+"notebooks/*" = ["E402"]
+
+[tool.mypy]
+# `backend` is checked too. It was omitted originally, which is why a
+# Python 3.11-only import (enum.StrEnum) reached runtime instead of being
+# caught by the type checker on a 3.10 target.
+python_version = "3.10"
+packages = ["dropout_ews", "backend"]
+mypy_path = "src"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+    "slow: takes more than a few seconds (deselect with '-m \"not slow\"')",
+    "integration: exercises the database or the real OULAD extract; runs on SQLite by default, and one test needs TEST_DATABASE_URL pointed at PostgreSQL",
+    "ml: trains or loads a model artifact",
+]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["src/dropout_ews", "backend/app"]
+branch = true
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+]

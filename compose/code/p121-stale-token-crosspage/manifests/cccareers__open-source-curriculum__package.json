@@ -1,0 +1,38 @@
+{
+  "name": "course-content-player",
+  "version": "1.0.0",
+  "description": "GitBook-style Course Content Player with MDX, interactive Quizzes, Flashcards, H5P embeds, and responsive Video links",
+  "main": "server.js",
+  "type": "module",
+  "bin": {
+    "course-player": "./bin/course-player.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "dev:site": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "course-player",
+    "markdown",
+    "mdx",
+    "gitbook",
+    "education",
+    "quizzes",
+    "flashcards",
+    "h5p",
+    "video-player"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.5",
+    "@astrojs/markdown-remark": "^7.3.0",
+    "astro": "^7.3.5",
+    "sharp": "^0.35.5"
+  }
+}

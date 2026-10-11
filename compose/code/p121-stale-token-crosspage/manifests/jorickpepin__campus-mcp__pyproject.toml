@@ -1,0 +1,44 @@
+[project]
+name = "campus-mcp"
+version = "0.1.0"
+description = "Unofficial MCP server for the Campus Coach training platform"
+readme = "README.md"
+authors = [
+    { name = "Jorick Pepin", email = "jorick.pepin@gmail.com" }
+]
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "aiohttp>=3.12",
+    "certifi>=2025.1.31",
+    "mcp[cli]>=2,<3",
+]
+
+[project.scripts]
+campus-mcp = "campus_mcp.server:main"
+campus-mcp-auth = "campus_mcp.auth:main"
+
+[build-system]
+requires = ["uv_build>=0.12.4,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18",
+    "pytest>=9.1.1",
+    "ruff>=0.16.3",
+]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "C4", "RUF", "BLE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+
+[tool.mypy]
+# Check against the lowest version requires-python promises, not the local one.
+python_version = "3.11"
+strict = true
+files = ["src"]

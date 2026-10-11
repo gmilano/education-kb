@@ -1,0 +1,104 @@
+AGREE	Community-Access/accessibility-agents	package.json	MIT	MIT	
+AGREE-COARSE	EducationalTestingService/skll	pyproject.toml	BSD	BSD	truth recorded as bare family
+AGREE	Elgg/Elgg	composer.json	GPL-2.0-only	MULTI-GRANT:GPL-2.0,MIT	
+AGREE	Elgg/Elgg	package.json	GPL-2.0-only	MULTI-GRANT:GPL-2.0,MIT	
+AGREE	GatorEducator/gatorgrader	pyproject.toml	GPL-3.0	GPL-3.0	
+AGREE	GibbonEdu/core	composer.json	GPL-3.0	GPL-3.0	
+CONTRADICT	Gnanakamalesh-M/student-dropout-early-warning	pyproject.toml	MIT	AUTHOR-CLAIM-NO-FILE	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	HASKI-RAK/NodeGrade	package.json	MIT	MIT	
+AGREE	HKUDS/DeepTutor	pyproject.toml	Apache-2.0	Apache-2.0	
+AGREE	Halleck45/OpenPronounce	pyproject.toml	MIT	MIT	
+AGREE	ILIAS-eLearning/ILIAS	composer.json	GPL v3	GPL-3.0	
+AGREE	ILIAS-eLearning/ILIAS	package.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	INGInious/INGInious	pyproject.toml	AGPL 3	AGPL-3.0	
+AGREE	LearnPress/learnpress	composer.json	GPL-3.0-or-later	MANIFEST:GPLv3	
+CONTRADICT	LearnPress/learnpress	package.json	ISC	MANIFEST:GPLv3	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	LearningLocker/learninglocker	package.json	GPL-3.0	GPL-3.0	
+AGREE	Miaotofu01/Study-Mate	package.json	MIT	MIT	
+AGREE	MysterionRise/adaptive-knowledge-graph	pyproject.toml	MIT	MIT	
+CONTRADICT	Open-TutorAi/open-tutor-ai-CE	pyproject.toml	MIT	BSD	OTHER
+AGREE	OtterDen-Lab/Autograder	pyproject.toml	GPL-3.0	GPL-3.0	
+AGREE	a2br/moodle-mcp	pyproject.toml	MIT	MIT	
+AGREE	academico-sis/academico	composer.json	MIT	MIT	
+AGREE	ahnopologetic/canvas-lms-mcp	pyproject.toml	MIT	MIT	
+AGREE	ait0u5hi/canvas-scholar-mcp	package.json	MIT	MIT	
+AGREE	aiverify-foundation/moonshot	pyproject.toml	Apache-2.0	Apache-2.0	
+AGREE	ankimcp/anki-mcp-server	package.json	MIT	MIT	
+AGREE	belentani7/aprende-brasil	package.json	MIT	MIT	
+AGREE	bncc-dev/bncc-benchmark	package.json	MIT	SPLIT-GRANT:LICENSE-CODIGO.md=MIT + LICENSE-DADOS.md=CC-BY	
+AGREE	canyongbs/advisingapp	composer.json	Elastic-2.0	ElasticLicense-2.0-NOT-OSS	
+CONTRADICT	cccareers/open-source-curriculum	package.json	MIT	CC-BY	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	celtic-project/LTI-PHP	composer.json	LGPL-3.0-or-later	LGPL-3.0	
+AGREE	chamilo/chamilo-lms	composer.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	chamilo/chamilo-lms	package.json	GPL-3.0	GPL-3.0	
+AGREE	claroline/Claroline	composer.json	AGPL-3.0-or-later	AGPL-3.0	
+AGREE	claroline/Claroline	package.json	AGPL-3.0	AGPL-3.0	
+CONTRADICT	classroomio/classroomio	package.json	MIT	AGPL-3.0	PERMISSIVE-OVER-RESTRICTIVE
+CONTRADICT	codeXsidd/Studivexa	package.json	ISC	MIT	OTHER
+CONTRADICT	codelitdev/courselit	package.json	MIT	AGPL-3.0	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	csmediapro/moodle-mcp-server	package.json	AGPL-3.0	AGPL-3.0	
+AGREE	csr2017/edfi-oneroster	package.json	Apache 2.0	Apache-2.0	
+AGREE	dfdb76/bncc-mcp	pyproject.toml	MIT	MIT	
+AGREE-COARSE	douglasrizzo/catsim	pyproject.toml	BSD-3-Clause	BSD	truth recorded as bare family
+AGREE	edly-io/pxc	package.json	Apache-2.0	Apache-2.0	
+AGREE	edly-io/pxc	pyproject.toml	Apache-2.0	Apache-2.0	
+AGREE	elgg/elgg	composer.json	GPL-2.0-only	MULTI-GRANT:GPL-2.0,MIT	
+AGREE	elgg/elgg	package.json	GPL-2.0-only	MULTI-GRANT:GPL-2.0,MIT	
+AGREE	francoisjacquet/rosariosis	composer.json	GPL-2.0-or-later	GPL-2.0	
+AGREE	francoisjacquet/rosariosis	package.json	GPL-2.0-or-later	GPL-2.0	
+AGREE	frappe/erpnext	package.json	GPL-3.0	GPL-3.0	
+AGREE	frappe/frappe	package.json	MIT	MIT	
+AGREE	frappe/lms	package.json	AGPL-3.0-or-later	AGPL-3.0	
+AGREE	fwu-de/mem-mcp	package.json	Unlicense	Unlicense	
+AGREE-COARSE	garethmanning/claude-education-skills	package.json	CC-BY-SA-4.0	CC-BY	truth recorded as bare family
+AGREE	giacomomaria81/scorm-mcp-server	package.json	MIT	MIT	
+AGREE	gocodebox/lifterlms	composer.json	GPL-3.0+	GPL-3.0	
+AGREE	gocodebox/lifterlms	package.json	GPL-3.0	GPL-3.0	
+AGREE	h5p/h5p-php-library	composer.json	GPL-3.0	GPL-3.0	
+AGREE	inducer/relate	pyproject.toml	MIT	MIT	
+AGREE	instructure/canvas-lms	package.json	AGPL-3.0	AGPL-3.0	
+AGREE	jcputney/scorm-again	package.json	MIT	MIT	
+AGREE	jibberswrld/fcps-school-mcp	package.json	MIT	MIT	
+AGREE	jorickpepin/campus-mcp	pyproject.toml	MIT	MIT	
+AGREE	jtylek/EpesiCRM	composer.json	MIT	MIT	
+AGREE-COARSE	jupyter/nbgrader	package.json	BSD-3-Clause	BSD	truth recorded as bare family
+AGREE-COARSE	jupyter/nbgrader	pyproject.toml	BSD	BSD	truth recorded as bare family
+AGREE-COARSE	jupyterhub/jupyterhub	package.json	BSD-3-Clause	BSD	truth recorded as bare family
+AGREE-COARSE	jupyterhub/jupyterhub	pyproject.toml	BSD-3-Clause	BSD	truth recorded as bare family
+AGREE	kemalyy/edumints-scorm-mcp	pyproject.toml	MIT	MIT	
+AGREE	learningequality/kolibri	package.json	MIT	MIT	
+AGREE	learningequality/kolibri	pyproject.toml	MIT	MIT	
+CONTRADICT	leemonade/leemons	package.json	MIT	PROPRIETARY-UNNAMED-NOT-OSS:restriction-signals=3	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	libretexts/davis	package.json	MIT	MIT	
+AGREE	libretexts/shapeshift	package.json	MIT	MIT	
+AGREE	ls1intum/Artemis	package.json	MIT	MIT	
+AGREE	lumieducation/H5P-Nodejs-library	package.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	marc-shade/docsingest	pyproject.toml	MIT	MIT	
+AGREE	mizcausevic-dev/student-data-access-audit-stream	package.json	MIT	MIT	
+AGREE	moodle/moodle	composer.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	nd-ball/py-irt	pyproject.toml	MIT License	MIT	
+AGREE	nextcloud/integration_openai	package.json	AGPL-3.0-or-later	AGPL-3.0	
+CONTRADICT	nextcloud/llm2	pyproject.toml	AGPL-3.0	MIT	RESTRICTIVE-OVER-PERMISSIVE
+AGREE	nfh-trust-labs/opencred	package.json	MIT	MIT	
+AGREE	oat-sa/tao-core	composer.json	GPL-2.0-only	GPL-2.0	
+AGREE	open-spaced-repetition/py-fsrs	pyproject.toml	MIT	MIT	
+AGREE	openfun/richie	pyproject.toml	MIT	MIT	
+AGREE	oppia/oppia	package.json	Apache-2.0	Apache-2.0	
+AGREE	overhangio/tutor	pyproject.toml	AGPL-3.0-only	AGPL-3.0	
+AGREE	portabilis/i-educar	composer.json	GPL-2.0-or-later	GPL-2.0	
+AGREE	pressbooks/pressbooks	composer.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	pressbooks/pressbooks	package.json	GPL-3.0-or-later	GPL-3.0	
+AGREE	programadores-obreros/Agente-editor-inet	package.json	GPL-3.0-or-later	GPL-3.0	
+CONTRADICT	tadreeb-lms/tadreeblms	composer.json	MIT	AGPL-3.0	PERMISSIVE-OVER-RESTRICTIVE
+AGREE	thu-maic/dsh-openmaic	package.json	MIT	MIT	
+AGREE	tomaszboloz/WCAG-Accessibility-Skills	package.json	MIT	MIT	
+AGREE	toshieji/moodle-grading-mcp	pyproject.toml	MIT	MIT	
+AGREE	tunapanda/h5p-standalone	package.json	MIT	MIT	
+AGREE-COARSE	ucbds-infra/otter-grader	pyproject.toml	BSD-3-Clause	BSD	truth recorded as bare family
+AGREE	ucfopen/UDOIT	composer.json	GPL-3.0-only	GPL-3.0	
+AGREE	ucfopen/UDOIT	package.json	GPL-3.0-only	GPL-3.0	
+AGREE	vishalsachdev/canvas-mcp	pyproject.toml	MIT	MIT	
+AGREE	x-systems/epesi-base	composer.json	MIT	MIT	
+AGREE	yh2072/edgameclaw	pyproject.toml	AGPL-3.0-or-later	AGPL-3.0	
+AGREE	yukazakiri/koakademy	composer.json	AGPL-3.0-or-later	AGPL-3.0	
+AGREE	yukazakiri/koakademy	package.json	AGPL-3.0-or-later	AGPL-3.0	

@@ -1,0 +1,77 @@
+{
+  "name": "claroline-app",
+  "version": "1.0.0",
+  "description": "Claroline distribution frontend dependencies",
+  "license": "AGPL-3.0",
+  "repository": "https://github.com/claroline/Claroline",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "themes": "node src/main/core/Resources/server/themes/bin build",
+    "webpack": "webpack --config=webpack.config.prod.js --progress --bail",
+    "webpack:dev": "webpack-dev-server --config=webpack.config.dev.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@fortawesome/fontawesome-free": "^6",
+    "@tinymce/tinymce-react": "^6.0",
+    "assets-webpack-plugin": "3.9.7",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.0.0",
+    "bootstrap": "^5.3",
+    "classnames": "^2.3.2",
+    "core-js": "^3.31.0",
+    "cssnano": "^6.0.1",
+    "d3": "^7.9.0",
+    "flag-icons": "^7.1",
+    "html-react-parser": "^5.1.10",
+    "invariant": "^2.2.4",
+    "jsplumb": "^2.2.11",
+    "lodash": "^4.18.1",
+    "mathjax": "2.7.4",
+    "moment": "^2.30",
+    "pdfjs-dist": "^4.10",
+    "postcss": "^8.4.31",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.10",
+    "react-dnd": "^7.7.0",
+    "react-dnd-html5-backend": "^7.0.2",
+    "react-dnd-touch-backend": "^0.5.2",
+    "react-dom": "18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-redux": "^9.1",
+    "react-router-dom": "^5.0.0",
+    "recharts": "^2.15",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^5.1",
+    "sass": "1.77.6",
+    "swagger-ui-react": "^5.32",
+    "tinycolor2": "^1.6.0",
+    "tinymce": "^7.7",
+    "uuid": "^9.0.0",
+    "video.js": "^8.21",
+    "wavesurfer.js": "2.2.1",
+    "webpack": "^5.105",
+    "webpack-cli": "^6.0"
+  },
+  "files": [
+    "package.json"
+  ],
+  "devDependencies": {
+    "circular-dependency-plugin": "^5.2.2",
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5",
+    "redux-freeze": "^0.1.7",
+    "webpack-dev-server": "^5.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

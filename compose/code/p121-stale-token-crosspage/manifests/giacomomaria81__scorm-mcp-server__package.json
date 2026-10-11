@@ -1,0 +1,68 @@
+{
+  "name": "scorm-mcp-server",
+  "version": "2.3.0",
+  "description": "MCP server: turn self-contained HTML, a Claude Design (.dc) bundle or a mobile-learning platform content export into a SCORM 2004/1.2 package any LMS can import — offline assets, milestone/score tracking, bundled ADL schemas.",
+  "mcpName": "io.github.giacomomaria81/scorm-mcp-server",
+  "type": "module",
+  "bin": {
+    "scorm-mcp-server": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "schemas",
+    "schemas12",
+    "scorm-test-harness.html",
+    "icon.png",
+    "manifest.json",
+    "README.md",
+    "LICENSE",
+    "PRIVACY.md",
+    "assets/ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giacomomaria81/scorm-mcp-server.git"
+  },
+  "homepage": "https://github.com/giacomomaria81/scorm-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/giacomomaria81/scorm-mcp-server/issues"
+  },
+  "author": "giacomomaria81",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/converter.test.mjs && node test/runtime.test.mjs && node test/mcp.test.mjs && node test/validate-schema.mjs && node test/audit-fixes.test.mjs && node test/features-1.3.test.mjs && node test/auto-milestones.test.mjs && node test/v2-features.test.mjs && node test/output-dir.test.mjs && node test/tracking-signal.test.mjs && node test/audit-2.0.1.test.mjs && node test/scorm12.test.mjs && node test/cli-batch.test.mjs && node test/ui.test.mjs && node test/tom.test.mjs && node test/validate.test.mjs && node test/interactions.test.mjs",
+    "test:converter": "node test/converter.test.mjs",
+    "test:runtime": "node test/runtime.test.mjs",
+    "test:mcp": "node test/mcp.test.mjs",
+    "test:schema": "node test/validate-schema.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "cheerio": "^1.0.0",
+    "jszip": "^3.10.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "jsdom": "^25.0.1",
+    "scorm-again": "^3.0.5",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "scorm",
+    "scorm-2004",
+    "mcp",
+    "mcp-server",
+    "e-learning",
+    "lms",
+    "claude",
+    "offline"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "h5p-standalone",
+  "version": "0.0.0-semantically-released",
+  "description": "Display H5P content as standalone frontend code, no server needed.",
+  "main": "dist/main.bundle.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/runtime": "^7.15.4",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@types/toposort": "^2.0.3",
+    "babel-loader": "^10.1.1",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "commitlint": "^20.5.0",
+    "copy-webpack-plugin": "^14.0.0",
+    "cypress": "^15.12.0",
+    "exports-loader": "^5.0.0",
+    "husky": "^9.1.7",
+    "node-stream-zip": "^1.15.0",
+    "toposort": "^2.0.2",
+    "ts-loader": "^9.3.0",
+    "typescript": "^6.0.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-merge": "^6.0.1"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow yarn",
+    "watch": "webpack --watch --config webpack.dev.js",
+    "start": "webpack-dev-server --mode development --config webpack.dev.js",
+    "build:dev": "webpack --mode development --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunapanda/h5p-standalone.git"
+  },
+  "keywords": [
+    "h5p"
+  ],
+  "author": "Jake Lee Kennedy <jake@tunapanda.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tunapanda/h5p-standalone/issues"
+  },
+  "homepage": "https://github.com/tunapanda/h5p-standalone#readme"
+}

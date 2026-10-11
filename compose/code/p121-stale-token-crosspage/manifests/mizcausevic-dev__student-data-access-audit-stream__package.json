@@ -1,0 +1,33 @@
+{
+  "name": "student-data-access-audit-stream",
+  "version": "0.1.0",
+  "description": "Hash-chained audit-stream event schema + reference verifier for AI tool reads of student records under FERPA / COPPA / state student-data-privacy law. Part of the Kinetic Gain Protocol Suite.",
+  "license": "MIT",
+  "author": "Miz Causevic",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "student-event-verify": "./src/verify.mjs"
+  },
+  "scripts": {
+    "verify":         "node src/verify.mjs",
+    "build-examples": "node src/build-examples.mjs",
+    "verify-all":     "for f in examples/*.json; do node src/verify.mjs \"$f\" || exit 1; done"
+  },
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/mizcausevic-dev/student-data-access-audit-stream"
+  },
+  "homepage": "https://suite.kineticgain.com",
+  "keywords": [
+    "ai-governance",
+    "audit-stream",
+    "edtech",
+    "ferpa",
+    "coppa",
+    "student-privacy",
+    "ceds",
+    "ed-fi",
+    "kinetic-gain-protocol-suite"
+  ]
+}

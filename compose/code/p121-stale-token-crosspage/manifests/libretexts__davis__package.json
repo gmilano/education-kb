@@ -1,0 +1,42 @@
+{
+  "name": "davis",
+  "version": "1.11.4",
+  "private": true,
+  "description": "An a11y-first UI library for React and Vue",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "dev": "npm run dev --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "check:types": "node scripts/check-dist-types.mjs",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "docs:dev": "npm run dev -w @libretexts/davis-docs",
+    "docs:build": "npm run build -w @libretexts/davis-docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LibreTexts/davis.git"
+  },
+  "author": "LibreTexts, Inc.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/LibreTexts/davis/issues"
+  },
+  "homepage": "https://github.com/LibreTexts/davis#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@storybook/react-vite": "^8.6.18",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "semantic-release": "^23.0.0",
+    "storybook": "^8.6.18",
+    "typescript": "^5.6.0"
+  }
+}

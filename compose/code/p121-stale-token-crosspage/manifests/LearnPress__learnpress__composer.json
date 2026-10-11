@@ -1,0 +1,59 @@
+{
+	"name": "learnpress/learnpress",
+	"description": "Coding Starndard for learnpress.",
+	"type": "library",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://github.com/LearnPress/learnpress",
+	"authors": [
+		{
+			"name": "LearnPress team",
+			"email": "learnpress@thimpress.com",
+			"homepage": "https://thimpress.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/LearnPress/learnpress/issues"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.2.1",
+		"squizlabs/php_codesniffer": "^3.13.6",
+		"wp-coding-standards/wpcs": "^3.4.1",
+		"phpunit/phpunit": "^10.5.64",
+		"phpcsstandards/phpcsutils": "^1.2.3",
+		"phpcompatibility/php-compatibility": "9.3.5",
+		"brain/monkey": "^2.7.0",
+		"mockery/mockery": "^1.6.14"
+	},
+	"_comment": "If the tijsverkoyen Emogrifier library does not work properly, try pelago/emogrifier.",
+	"require": {
+		"ext-json": "*",
+		"tijsverkoyen/css-to-inline-styles": "v2.4.0"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"LearnPress\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": "phpunit",
+		"test:unit": "phpunit --testsuite unit",
+		"test:filter": "phpunit --filter",
+		"format": "phpcbf --standard=phpcs.xml --report-summary --report-source",
+		"format-a-file": "phpcbf --standard=phpcs.xml inc/TemplateHooks/CourseBuilder/BuilderCourseTemplate.php --report-summary --report-source",
+		"format-n-file": "phpcbf --standard=phpcs.xml learnpress.php inc/Models/CourseModel.php --report-summary --report-source",
+		"lint": "phpcs --standard=phpcs.xml",
+		"phpcs": "phpcs --standard=phpcs.xml"
+	},
+	"autoload": {
+		"psr-4": {
+			"LearnPress\\": "inc/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"platform-check": false,
+		"_comment": "Set platform-check for library css-to-inline-styles require PHP 7.4+, but some environment require PHP 8.1+"
+	}
+}

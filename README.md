@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 121 — 2026-10-11
+
+⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).
+
+🟢 **Twelfth axis in twelve passes: all four actions p120 pre-registered, run together —
+`ACTION N` (grant coverage on the unexamined 227), `ACTION O` (word-boundary anchoring),
+`ACTION P` (cross-page stale tokens), `ACTION Q` (manifest vs committed file).**
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/` — `test_p121.sh` **27 passed / 0
+failed**, fully offline.**
+
+🔴 **Two of the four are REFUTED on their own clauses, and both refuted figures were headline
+numbers this KB published last pass.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION N` | 🔴 **REFUTED** | **4 / 227 ungranted = 1.8 %** — p120's 9-of-22 (41 %) was a sample *selected* for being unreadable |
+| `ACTION O` | 🟢 **NOT REFUTED** | claim tokens **3 402 → 3 349 (−53)** |
+| `ACTION P` | 🟢 **NOT REFUTED** | `portabilis/i-educar` publishes **AGPL-3.0**; truth is GPL-2.0, its correction names `was LGPL-3.0` — a third value |
+| `ACTION Q` | 🔴 **REFUTED** | **10 / 104 manifests contradict = 9.6 %** — p120 measured 2 of 4 (50 %) |
+
+🟢 **10 licence cells repaired across 4 pages, every one re-read from the live tree first.**
+
+🔴 **`P121-C` — a NEW defect class, invisible to seven passes of instruments: OVER-restriction.**
+[`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0) was published GPL-3.0 and
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (MIT, split grant) was
+published AGPL-3.0 — **both marked "🔴 no" for reuse.** Every sweep from p114 to p120 tested only
+whether a token was *too permissive*, because that direction creates legal exposure. An
+over-restrictive cell creates none; it silently deletes a 979★ LMS and the only timetabling
+platform from a shortlist.
+
+🔴 **`P121-G` — this KB's gap ledger (`intel/open-gaps.md`) was TWO PASSES STALE**, stopping at
+p118 while p119 and p120 both ran and both updated all eight content pages. Consequence:
+`ACTION C` and `ACTION D` have been pending **four passes** without being attempted or
+re-listed. 🟢 Ledger repaired; both actions re-listed with clauses verbatim.
+
+🔴 **`P121-F` — `frappe/education` carried THREE different licences in three cells of ONE page**
+(GPL-3.0 correct in the top table, AGPL-3 in one, MIT in another).
+
+🔴 **`P121-B` — 6 correct rows scored as defects** because this KB corrects **inline**
+(`⚠️ **was 🟢 MIT**` inside the cell) while every census it has built detects corrections by
+**table header**. Guard fixed.
+
+🔴 **`P121-E` — a dedup guard that could never fire**: tokens joined with `,`, membership tested
+with `" "`. **49 surplus token instances across 46 rows**, since p118. Fixed.
+
+🔴 **`P121-D` — the same address under two spellings** (`xGabrielCv/…` ×15,
+`xgabrielcv/…` ×11) split between p118's and p120's instruments, so a case-sensitive join counts
+one address as two. `p117 ACTION B`'s defect class, recurring *between* instruments.
+
+🔴 **`Gap 402` weakens a SIXTH consecutive pass.** All eight mandated searches ran (4 global + 1
+per region); **17 tokens checked, 17 already held**. Ledger: p117 — 4/13 · p118 — 0/15 ·
+p119 — 0/19 · p120 — 0/14 · **p121 — 0/17**. 🟡 **First testable explanation offered rather than
+another count**: the mandated phrase *"AI education"* returns repositories about **learning to
+build AI** (`microsoft/ai-agents-for-beginners`, `agents-from-scratch`,
+`ai-engineering-from-scratch`) rather than agents that **deliver education** — pre-registered as
+`ACTION S`.
+
+🟢 **Regional evidence refreshed in place under the single `## Opportunities by region` block,
+five `###`, closed vocabulary.** LATAM is now the best-evidenced region on the demand side
+(UNESCO IESALC: 200 HEIs / 19 countries, teaching-and-learning **73.5 %**, **87 % use / 26 %
+framework**; Digital Education Council LATAM 2026: **92 % students / 79 % faculty**, 30 000+
+responses). North America: **71 %** of US teachers untrained, **10 %** of institutions with
+formal guidelines, CMU + Gates **$55 M** into gateway-course courseware. 🔴 **EMEA and APAC
+demand-side gaps stated explicitly as measured absences, not coverage.**
+
+🔴 **Global supply-side constraint worth quoting in any AES proposal:** both `PERSUADE` corpora —
+the canonical graded-essay datasets — are **CC-BY-NC-SA-4.0 (NonCommercial)** stated in README
+prose with **no licence file**, and the 2.0 payload lives on Google Drive. **No permissive
+substitute of comparable size exists on this shelf.**
+
+### Pre-registered for p122
+
+🟢 **`ACTION R`** — extend the licence census to **PROSE** claims, not only table rows
+(`P121-A3` found a wrong licence in a sentence asserting *"measured this pass"*). 🔴 *Refuted if
+fewer than 3 prose claims disagree with the tree.*
+🟢 **`ACTION S`** — test whether `Gap 402` is a **query** defect, re-running discovery with
+edtech nouns (`LMS`, `SIS`, `autograder`, `learning analytics`, `proctoring`, `gradebook`).
+🔴 *Refuted if that set also returns zero new addresses.*
+🟢 **`ACTION T`** — assert mechanically that the ledger, this pass log and the newest instrument
+README name the same pass and the same open actions. 🔴 *Refuted if the three already agree.*
+🟢 **`ACTION U`** — normalise slug case at every join; re-run p118's and p120's joins. 🔴 *Refuted
+if fewer than 2 addresses change verdict.*
+🟡 **`ACTION C` / `ACTION D`** — **carried forward, clauses verbatim, pending FOUR passes.**
+
 # 📚 Education KB
 
 > Knowledge base de la industria **Education** para Globant AI Studios.

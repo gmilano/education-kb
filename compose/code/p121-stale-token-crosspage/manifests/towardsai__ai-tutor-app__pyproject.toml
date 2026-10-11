@@ -1,0 +1,52 @@
+[project]
+name = "ai-tutor-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic",
+    "chromadb",
+    "cohere",
+    "fastapi",
+    "google-genai",
+    "hf-xet",
+    "huggingface-hub",
+    "langchain",
+    "langchain-anthropic",
+    "langchain-deepseek>=1.1.0",
+    "langchain-google-genai",
+    "langchain-openai",
+    "nbconvert",
+    "nbformat",
+    # Not imported directly (langchain-openai is the consumer, and it supports
+    # 2.x and 3.x); the floor documents that this repo expects the v3 SDK.
+    "openai>=3",
+    "pydantic",
+    "python-dotenv",
+    "requests",
+    "tiktoken",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "httpx",
+    "ipykernel",
+    "pre-commit",
+    "pytest>=9.0.3",
+    "ruff>=0.15.10",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+# Ruff 0.16 widened its default rule set (adds UP/SIM/BLE/I and more, ~245 findings
+# here). Pin the pre-0.16 defaults so a toolchain bump never changes lint scope;
+# widening is a deliberate cleanup, not a side effect of `uv lock --upgrade`.
+select = ["E4", "E7", "E9", "F"]

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "check:local-mode": "bash scripts/check_local_mode.sh",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

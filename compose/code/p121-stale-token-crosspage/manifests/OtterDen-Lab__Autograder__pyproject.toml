@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Otter-Autograder"
+version = "0.15.9"
+description = "A collection of tools for grading homework automatically"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Sam Ogden", email = "samuel.s.ogden@gmail.com"},
+]
+keywords = ["education", "quiz", "canvas", "lms", "assessment", "teaching", "exam", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Topic :: Education :: Testing",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "python-dotenv==1.0.1",
+    "PyYAML==6.0.3",
+    "requests>=2.32.4,<3",
+    "canvasapi~=3.2",
+    "python-dateutil~=2.9",
+    "httpx~=0.28",
+    "docker~=7.1",
+    "slack-sdk~=3.36",
+    "openai~=1.93",
+    "anthropic~=0.57",
+    "ollama~=0.6",
+    "otterden-lms-interface~=0.7.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "hypothesis>=6.112.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OtterDen-Lab/Autograder"
+Documentation = "https://github.com/OtterDen-Lab/Autograder/tree/main/documentation"
+Repository = "https://github.com/OtterDen-Lab/Autograder"
+"Bug Tracker" = "https://github.com/OtterDen-Lab/Autograder/issues"
+
+[project.scripts]
+grade-assignments = "Autograder.grade_assignments:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["Autograder"]
+artifacts = [
+  "Autograder/seccomp/*.json",
+  "Autograder/logging.yaml",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["Autograder/**", "pyproject.toml", "README.md", "LICENSE"]
+
+[tool.hatch.metadata]
+allow-direct-references = true

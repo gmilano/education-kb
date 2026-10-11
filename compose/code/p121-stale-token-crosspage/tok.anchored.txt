@@ -1,0 +1,35 @@
+   1451 MIT
+    638 Apache-2.0
+    290 AGPL-3.0
+    278 GPL-3.0
+    104 GPL-2.0
+     91 BSD-3-Clause
+     74 ECL-2.0
+     61 LGPL-3.0
+     52 GPL
+     39 CC-BY-NC
+     39 CC-BY
+     38 BSD-3
+     32 LGPL
+     30 CC0
+     26 MPL-2.0
+     23 BSD
+     22 AGPL
+     19 Elastic-2.0
+     15 CC-BY-SA
+     12 Unlicense
+     10 EPL-2.0
+      9 PolyForm
+      7 Fair Code License
+      7 BSD-2-Clause
+      5 LGPL-2.1
+      4 EPL-1.0
+      3 Fair Code
+      2 PROPRIETARY
+      2 BUSL-1.1
+      2 BUSL
+      1 Sustainable Use License
+      1 Sustainable Use
+      1 Elastic License
+      1 Business Source License
+      1 BSD-2

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moodle-grading-mcp"
+version = "0.1.0"
+description = "MCP server exposing Moodle Web Services as grading I/O — fetch submissions, write unreleased grade drafts, with server-side safety rules."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["mcp", "moodle", "grading", "lms", "webservices", "education"]
+dependencies = [
+    "mcp>=1.0",
+    "httpx",
+    "python-dotenv",
+]
+
+[project.scripts]
+moodle-grading-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server"]
+
+# 配布メモ:
+# - 開発インストール: `pip install -e .`
+# - 起動: `moodle-grading-mcp`（= server:main, stdio 待受）
+# - 認証: .env に MOODLE_URL / MOODLE_TOKEN を設定（README 参照）

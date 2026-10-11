@@ -1,0 +1,293 @@
+{
+    "name": "canyongbs/advisingapp",
+    "type": "project",
+    "description": "Advising App® by Canyon GBS® is a Conversational AI and CRM ecosystem solution built specifically for postsecondary education use, adding features, functionality, and sector capabilities.",
+    "keywords": [
+        "higher",
+        "education",
+        "academic",
+        "laravel"
+    ],
+    "license": "Elastic-2.0",
+    "require": {
+        "php": "8.4.*",
+        "ext-fileinfo": "*",
+        "ext-gd": "*",
+        "ext-pdo": "*",
+        "ably/ably-php": "^1.1",
+        "aws/aws-php-sns-message-validator": "^1.9",
+        "aws/aws-sdk-php": "^3.316",
+        "barryvdh/laravel-debugbar": "^4.3",
+        "canyon-gbs/advising-app-application": "*",
+        "canyon-gbs/advising-app-assistant": "*",
+        "canyon-gbs/advising-app-audit": "*",
+        "canyon-gbs/advising-app-authorization": "*",
+        "canyon-gbs/advising-app-campaign": "*",
+        "canyon-gbs/advising-app-care-team": "*",
+        "canyon-gbs/advising-app-consent": "*",
+        "canyon-gbs/advising-app-engagement": "*",
+        "canyon-gbs/advising-app-form": "*",
+        "canyon-gbs/advising-app-integration-aws-ses-event-handling": "*",
+        "canyon-gbs/advising-app-integration-google-analytics": "*",
+        "canyon-gbs/advising-app-integration-google-recaptcha": "*",
+        "canyon-gbs/advising-app-integration-microsoft-clarity": "*",
+        "canyon-gbs/advising-app-integration-twilio": "*",
+        "canyon-gbs/advising-app-interaction": "*",
+        "canyon-gbs/advising-app-meeting-center": "*",
+        "canyon-gbs/advising-app-notification": "*",
+        "canyon-gbs/advising-app-portal": "*",
+        "canyon-gbs/advising-app-prospect": "*",
+        "canyon-gbs/advising-app-report": "*",
+        "canyon-gbs/advising-app-resource-hub": "*",
+        "canyon-gbs/advising-app-student-data-model": "*",
+        "canyon-gbs/advising-app-survey": "*",
+        "canyon-gbs/advising-app-task": "*",
+        "canyon-gbs/advising-app-team": "*",
+        "canyon-gbs/advising-app-theme": "*",
+        "canyon-gbs/advising-app-timeline": "*",
+        "canyon-gbs/advising-app-webhook": "*",
+        "canyon-gbs/ai": "*",
+        "canyon-gbs/alert": "*",
+        "canyon-gbs/basic-needs": "*",
+        "canyon-gbs/concern": "*",
+        "canyon-gbs/group": "*",
+        "canyon-gbs/integration-open-ai": "*",
+        "canyon-gbs/multifactor-authentication": "*",
+        "canyon-gbs/research": "*",
+        "canyon-gbs/stock-media": "*",
+        "canyon-gbs/workflow": "*",
+        "canyongbs/common": "^2.42.0",
+        "canyongbs/model-state-machine": "^2.1.0",
+        "cboxdk/laravel-queue-autoscale": "4.3.1",
+        "cboxdk/laravel-queue-metrics": "3.4.0",
+        "cboxdk/laravel-queue-monitor": "1.11.0",
+        "cknow/laravel-money": "^8.1",
+        "composer/composer": "^2.7",
+        "dedoc/scramble": "^0.13",
+        "defstudio/filament-searchable-input": "^4.0",
+        "ezimuel/guzzlestreams": "^4.0",
+        "fakerphp/faker": "^1.23",
+        "filament/filament": "^4.15",
+        "filament/spatie-laravel-media-library-plugin": "^4.15",
+        "filament/spatie-laravel-settings-plugin": "^4.15",
+        "filament/support": "^4.15",
+        "giggsey/libphonenumber-for-php-lite": "^9.0",
+        "google/apiclient": "^2.17",
+        "guzzlehttp/guzzle": "^7.2",
+        "internachi/modular": "^3.0",
+        "internachi/modular-livewire": "^1.0",
+        "itsgoingd/clockwork": "^5.2",
+        "kirschbaum-development/eloquent-power-joins": "^4.0",
+        "laravel/framework": "^13.35",
+        "laravel/pennant": "^1.10",
+        "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.24.0",
+        "laravel/tinker": "^3.0",
+        "laravel/ui": "^4.5",
+        "league/commonmark": "^2.9.0",
+        "league/flysystem-aws-s3-v3": "^3.28",
+        "league/html-to-markdown": "^5.1",
+        "league/oauth2-client": "^2.7",
+        "livewire/livewire": "^3.6.1",
+        "maatwebsite/excel": "^3.1",
+        "microsoft/microsoft-graph": "^1.109",
+        "orrison/meliorstan": "^0.4.1",
+        "owen-it/laravel-auditing": "^14.0",
+        "php-mime-mail-parser/php-mime-mail-parser": "^9.0",
+        "phpoffice/phpspreadsheet": "^1.30.6",
+        "saade/filament-fullcalendar": "^4.0.1",
+        "sentry/sentry-laravel": "^4.16.0",
+        "shuvroroy/filament-spatie-laravel-health": "^3.3",
+        "socialiteproviders/google": "^4.1",
+        "socialiteproviders/microsoft-azure": "^5.2",
+        "spatie/laravel-cookie-consent": "^3.3",
+        "spatie/laravel-data": "^4.0",
+        "spatie/laravel-health": "^1.40.2",
+        "spatie/laravel-json-api-paginate": "^2.0",
+        "spatie/laravel-medialibrary": "^11.3",
+        "spatie/laravel-multitenancy": "^4.0",
+        "spatie/laravel-query-builder": "^6.3",
+        "spatie/laravel-schedule-monitor": "^4.3",
+        "spatie/laravel-settings": "^3.3",
+        "sqids/sqids": "^0.5.0",
+        "squirephp/countries-en": "^3.9",
+        "staudenmeir/eloquent-has-many-deep": "^1.22",
+        "stechstudio/filament-impersonate": "^4.0",
+        "talkroute/message-segment-calculator": "^1.0",
+        "telnyx/telnyx-php": "^3.0",
+        "tpetry/laravel-postgresql-enhanced": "^3.5.1",
+        "twilio/sdk": "^8.5.0",
+        "ysfkaya/filament-phone-input": "^4.2.3"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.5",
+        "brianium/paratest": "^7.26",
+        "doctrine/dbal": "^4.2.3",
+        "friendsofphp/php-cs-fixer": "^3.60",
+        "larastan/larastan": "^3.0",
+        "laravel/boost": "^2.4",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^8.1",
+        "pestphp/pest": "^5.3.1",
+        "pestphp/pest-plugin-laravel": "^5.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^13.4.1",
+        "rector/rector": "^2.0",
+        "spatie/laravel-ray": "^1.40.2",
+        "spatie/pest-plugin-test-time": "^2.1",
+        "worksome/request-factories": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Migrations\\Concerns\\": "database/migrations/Concerns/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "exclude-from-classmap": [
+            "vendor/openai-php/client/src/Responses/Threads/Runs/ThreadRunResponse.php"
+        ],
+        "files": [
+            "overrides/OpenAI/Responses/Threads/Runs/ThreadRunResponse.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Rector\\": "rector-rules/",
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade",
+            "@php artisan common:publish --ansi",
+            "@php -r \"if (getenv('COMPOSER_DEV_MODE') === '1') { passthru(PHP_BINARY . ' artisan boost:update --ansi', $code); exit($code); }\""
+        ],
+        "post-install-cmd": [
+            "@php -r \"if (file_exists('vendor/telnyx/telnyx-php/composer.lock')) { unlink('vendor/telnyx/telnyx-php/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/talkroute/message-segment-calculator/tools/php-cs-fixer/composer.lock')) { unlink('vendor/talkroute/message-segment-calculator/tools/php-cs-fixer/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/talkroute/message-segment-calculator/composer.lock')) { unlink('vendor/talkroute/message-segment-calculator/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/spatie/laravel-health/yarn.lock')) { unlink('vendor/spatie/laravel-health/yarn.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/phpdocumentor/reflection/composer.lock')) { unlink('vendor/phpdocumentor/reflection/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/ysfkaya/filament-phone-input/yarn.lock')) { unlink('vendor/ysfkaya/filament-phone-input/yarn.lock'); }\""
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php -r \"if (file_exists('vendor/telnyx/telnyx-php/composer.lock')) { unlink('vendor/telnyx/telnyx-php/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/talkroute/message-segment-calculator/tools/php-cs-fixer/composer.lock')) { unlink('vendor/talkroute/message-segment-calculator/tools/php-cs-fixer/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/talkroute/message-segment-calculator/composer.lock')) { unlink('vendor/talkroute/message-segment-calculator/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/spatie/laravel-health/yarn.lock')) { unlink('vendor/spatie/laravel-health/yarn.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/phpdocumentor/reflection/composer.lock')) { unlink('vendor/phpdocumentor/reflection/composer.lock'); }\"",
+            "@php -r \"if (file_exists('vendor/ysfkaya/filament-phone-input/yarn.lock')) { unlink('vendor/ysfkaya/filament-phone-input/yarn.lock'); }\""
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "refresh-database": [
+            "@php artisan tenants:artisan \"migrate:fresh --database=tenant\"",
+            "@php artisan tenants:artisan \"db:seed --database=tenant\""
+        ],
+        "php-cs-format": [
+            "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix -v --config=./php-cs-fixer.php"
+        ],
+        "php-cs-format-dryrun": [
+            "@php-cs-format --dry-run --stop-on-violation"
+        ],
+        "php-cs-clear-cache": [
+            "rm -rf ./.cache/php-cs-fixer"
+        ],
+        "prettier": [
+            "./node_modules/.bin/prettier . --config ./.prettierrc.json --ignore-path ./.prettierignore --cache --cache-location .cache/prettier/ --cache-strategy content"
+        ],
+        "prettier-format": [
+            "@prettier --write"
+        ],
+        "prettier-format-dryrun": [
+            "@prettier --check"
+        ],
+        "clear-prettier-cache": [
+            "rm -rf ./.cache/prettier"
+        ],
+        "rector": [
+            "./vendor/bin/rector process"
+        ],
+        "rector-dryrun": [
+            "./vendor/bin/rector process --dry-run"
+        ],
+        "format-dryrun": [
+            "@rector-dryrun",
+            "@php-cs-format-dryrun",
+            "@prettier-format-dryrun"
+        ],
+        "format": [
+            "@rector",
+            "@php-cs-format",
+            "@prettier-format"
+        ],
+        "generate-helper-files": [
+            "@php artisan app:generate-helper-files",
+            "@php-cs-format"
+        ],
+        "lint": [
+            "./vendor/bin/phpstan analyse --memory-limit=2G"
+        ],
+        "checks": [
+            "@format-dryrun",
+            "@lint"
+        ],
+        "ci": [
+            "rm -rf ./vendor",
+            "composer install"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "10.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "cboxdk/laravel-queue-autoscale",
+                "cboxdk/laravel-queue-metrics",
+                "cboxdk/laravel-queue-monitor",
+                "nesbot/carbon",
+                "spatie/laravel-multitenancy",
+                "spatie/laravel-prometheus"
+            ]
+        },
+        "google/apiclient-services": [
+            "Oauth2",
+            "Calendar"
+        ]
+    },
+    "config": {
+        "process-timeout": 7200,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "cache-dir": ".composer/cache",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        },
+        "policy": {
+            "abandoned": {
+                "audit": "report"
+            }
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "app-modules/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}

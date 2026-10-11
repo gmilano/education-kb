@@ -1,0 +1,25 @@
+[project]
+name = "moodle-mcp"
+version = "0.1.0"
+description = "Read-only MCP server that gives AI agents access to your EPFL Moodle as a student"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["mcp", "moodle", "epfl", "claude"]
+authors = [
+    { name = "Anatole Debierre", email = "62328077+a2br@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "markdownify>=1.2.3",
+    "mcp>=2.2.0",
+    "pymupdf>=1.28.2",
+]
+
+[project.scripts]
+moodle-mcp = "moodle_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"

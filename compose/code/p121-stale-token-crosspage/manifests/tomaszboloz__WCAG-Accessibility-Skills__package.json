@@ -1,0 +1,32 @@
+{
+  "name": "wcag-accessibility-skills",
+  "version": "1.1.4",
+  "description": "Portable WCAG 2.1 and 2.2 accessibility audit skill for Claude, Codex, Gemini, and agent tool runtimes.",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "SKILL.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "wcag-skill": "bin/wcag-skill.js",
+    "wcag-audit": "bin/wcag-skill.js",
+    "wcag-check": "bin/wcag-skill.js",
+    "wcag-fix": "bin/wcag-skill.js",
+    "wcag-configure": "bin/wcag-skill.js",
+    "wcag-report": "bin/wcag-skill.js",
+    "wcag-delegate": "bin/wcag-skill.js",
+    "wcag-status": "bin/wcag-skill.js"
+  },
+  "scripts": {
+    "test": "node --test tests/unit/*.test.js tests/integration/*.test.js",
+    "validate": "node scripts/validate-package.js",
+    "verify:line-endings": "node scripts/verify-line-endings.js",
+    "verify:package": "node scripts/verify-package-contents.js"
+  },
+  "engines": { "node": ">=20.0.0" },
+  "license": "MIT"
+}

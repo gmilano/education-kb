@@ -1,0 +1,76 @@
+[project]
+name = "pxc"
+version = "0.1.0"
+description = "Aggregator for PXC development. Not published — see src/pxc/{lib,demo,notebook,lti}/pyproject.toml for the individual distributions."
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "componentize-py",
+    "datamodel-code-generator",
+    "httpx",
+    "mypy",
+    "pylint",
+    "pytest",
+    "responses",
+    "types-markdown",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
+
+[tool.pylint.MAIN]
+ignore-paths=[
+    "src/pxc/notebook/frontend",
+    "src/pxc/notebook/migrations/versions",
+    "src/pxc/xblock/migrations",
+]
+
+[tool.pylint.TYPECHECK]
+generated-members = ["objects"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable=[
+    "duplicate-code",
+    "fixme",
+    "import-outside-toplevel",
+    "invalid-name",
+    "line-too-long",
+    "missing-docstring",
+    "protected-access",
+    "redefined-outer-name",
+    "too-few-public-methods",
+    "too-many-arguments",
+    "too-many-instance-attributes",
+    "too-many-locals",
+    "too-many-positional-arguments",
+    "too-many-public-methods",
+    "ungrouped-imports",
+    "unused-argument",
+    "wrong-import-order",
+]
+
+[tool.mypy]
+plugins = ['pydantic.mypy']
+warn_unused_configs = true
+ignore_missing_imports = true
+strict = true
+mypy_path = "src"
+namespace_packages = true
+explicit_package_bases = true
+exclude = [
+    "src/pxc/notebook/frontend",
+    "src/pxc/notebook/migrations/versions",
+    "src/pxc/xblock/migrations",
+    "src/pxc/xblock/samples",
+]
+
+[tool.black]
+extend-exclude = "src/pxc/notebook/frontend, src/pxc/notebook/migrations/versions"

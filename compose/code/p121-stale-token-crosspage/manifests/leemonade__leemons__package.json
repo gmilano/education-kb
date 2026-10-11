@@ -1,0 +1,86 @@
+{
+  "name": "leemons-monorepo",
+  "description": "The powerful, flexible, friendly Learning Experience Platform you're waiting for",
+  "version": "1.23.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leemonade/leemons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leemonade/leemons/issues"
+  },
+  "author": {
+    "email": "hi@leemons.io",
+    "name": "Leemons Edtech Solutions",
+    "url": "https://www.leemons.io"
+  },
+  "maintainers": [
+    {
+      "email": "hi@leemons.io",
+      "name": "Leemons Edutech Solutions",
+      "url": "https://www.leemons.io"
+    }
+  ],
+  "workspaces": [
+    "packages/*",
+    "plugins/*/backend",
+    "plugins/*/frontend",
+    "plugins/*/sdk",
+    "private-plugins/*/backend",
+    "private-plugins/*/frontend",
+    "private-plugins/*/sdk",
+    "apps/*"
+  ],
+  "scripts": {
+    "start:app": "yarn workspace leemons-app backend:dev",
+    "start:front": "yarn workspace leemons-app front:dev",
+    "done": "echo Done ✨",
+    "check": "start-server-and-test 'PORT=8080 yarn start:app' http-get://localhost:8080/api/gateway/list-aliases 'yarn done'",
+    "format:check": "prettier .",
+    "format:fix": "prettier . -write",
+    "lint:check": "eslint . --ext .js --ext .ts --ext .tsx && stylelint \"**/.**/*.css\"",
+    "lint:fix": "eslint . --ext .js --ext .ts --ext .tsx --fix && stylelint \"**/.**/*.css\" --fix",
+    "build:all": "node scripts/build-all.js",
+    "build:watch:all": "node scripts/build-watch-all.js"
+  },
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "npm": "^20.9.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.22.15",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/plugin-proposal-export-default-from": "^7.22.0",
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/preset-env": "^7.22.20",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-import-resolver-jsconfig": "^1.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-nibble": "^8.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-promise": "^6.2.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^1.0.3",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "prettier": "^3.3.2",
+    "rimraf": "^5.0.1",
+    "start-server-and-test": "^2.0.0",
+    "stylelint": "^16.4.0",
+    "stylelint-config-clean-order": "^6.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "turbo": "^2.0.7"
+  },
+  "resolutions": {
+    "wrap-ansi": "7.0.0",
+    "string-width": "4.2.3"
+  }
+}

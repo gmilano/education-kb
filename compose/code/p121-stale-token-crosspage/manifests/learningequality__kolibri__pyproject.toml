@@ -1,0 +1,228 @@
+[build-system]
+# setuptools-scm 9 added SETUPTOOLS_SCM_PRETEND_METADATA, which the Makefile
+# relies on — 8.x ignores it silently and stamps a dirty version.
+requires = ["setuptools>=64", "setuptools-scm>=9,<11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kolibri"
+description = "Kolibri - the offline app for universal education"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Learning Equality", email = "info@learningequality.org"},
+]
+keywords = ["education", "offline", "kolibri"]
+requires-python = ">=3.6, <3.15"
+dependencies = []
+dynamic = ["version"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.urls]
+Homepage = "https://github.com/learningequality/kolibri"
+
+[project.scripts]
+kolibri = "kolibri.utils.cli:main"
+
+[project.entry-points."kolibri.plugins"]
+"kolibri.plugins.app" = "kolibri.plugins.app"
+"kolibri.plugins.coach" = "kolibri.plugins.coach"
+"kolibri.plugins.default_theme" = "kolibri.plugins.default_theme"
+"kolibri.plugins.device" = "kolibri.plugins.device"
+"kolibri.plugins.epub_viewer" = "kolibri.plugins.epub_viewer"
+"kolibri.plugins.html5_viewer" = "kolibri.plugins.html5_viewer"
+"kolibri.plugins.facility" = "kolibri.plugins.facility"
+"kolibri.plugins.learn" = "kolibri.plugins.learn"
+"kolibri.plugins.media_player" = "kolibri.plugins.media_player"
+"kolibri.plugins.pdf_viewer" = "kolibri.plugins.pdf_viewer"
+"kolibri.plugins.perseus_viewer" = "kolibri.plugins.perseus_viewer"
+"kolibri.plugins.pwa" = "kolibri.plugins.pwa"
+"kolibri.plugins.qti_viewer" = "kolibri.plugins.qti_viewer"
+"kolibri.plugins.setup_wizard" = "kolibri.plugins.setup_wizard"
+"kolibri.plugins.slideshow_viewer" = "kolibri.plugins.slideshow_viewer"
+"kolibri.plugins.user_auth" = "kolibri.plugins.user_auth"
+"kolibri.plugins.user_profile" = "kolibri.plugins.user_profile"
+"kolibri.plugins.policies" = "kolibri.plugins.policies"
+"kolibri.plugins.bloompub_viewer" = "kolibri.plugins.bloompub_viewer"
+"kolibri.plugins.safe_html5_viewer" = "kolibri.plugins.safe_html5_viewer"
+"kolibri.plugins.h5p_viewer" = "kolibri.plugins.h5p_viewer"
+
+[project.optional-dependencies]
+postgres = ["psycopg2-binary==2.9.11; python_version >= '3.9' and python_version <= '3.14'"]
+storages = ["django-storages[google]==1.14.6; python_version >= '3.8'", "google-auth==2.38.0; python_version >= '3.8'"]
+
+[dependency-groups]
+base = [
+    "diskcache==5.6.3",
+    "django-csp==3.8",
+    "django-filter==21.1",
+    "django-js-reverse==0.10.2",
+    "djangorestframework==3.14.0",
+    "django==3.2.25",
+    "colorlog==6.12.0",
+    "configobj==5.0.8",
+    "django-mptt==0.14.0",
+    "requests==2.27.1",
+    "cheroot==10.0.1",
+    "magicbus==4.1.2",
+    "le-utils==0.2.18",
+    "jsonfield==3.1.0",
+    "morango==0.8.15",
+    "tzlocal==4.2",
+    "pytz==2026.3.post1",
+    "python-dateutil==2.9.0.post0",
+    "semver==2.13.0",
+    "django-redis-cache==3.0.1",
+    "redis==3.5.3",
+    "html5lib==1.1",
+    "zeroconf-py2compat==0.19.17",
+    "Click==8.0.4",
+    "colorama==0.4.6",
+    "whitenoise==5.3.0",
+    "idna==3.7",
+    "ifaddr==0.1.7",
+    "importlib-metadata==4.8.3",
+    "importlib_resources==5.4.0",
+    "json-schema-validator==2.4.1",
+    "django-sortedm2m==3.1.1",
+]
+test = [
+    {include-group = "base"},
+    "setuptools<82",
+    "setuptools-scm>=9,<11; python_version >= '3.8'",
+    "mixer==6.0.1",
+    "pytest==6.2.5; python_version < '3.14'",
+    "pytest>=8.0; python_version >= '3.14'",
+    "pytest-django==4.5.2",
+    "pytest-env==0.6.2",
+    "pytest-pythonpath==0.7.2; python_version < '3.14'",
+    "attrs==19.2.0",
+    "parameterized==0.8.1",
+    # Morango falls back to pure-Python RSA without this.
+    "cryptography>=40",
+]
+dev = [
+    {include-group = "test"},
+    "ipdb; python_version >= '3.8'",
+    "prek; python_version >= '3.8'",
+    "django-silk; python_version >= '3.8'",
+    "drf-yasg==1.21.7; python_version >= '3.8'",
+    "coreapi==2.3.3; python_version >= '3.8'",
+    "nodeenv>=1.3.3",
+]
+docs = [
+    {include-group = "base"},
+    "sphinx>=7,<8; python_version >= '3.9'",
+    "sphinx-intl; python_version >= '3.9'",
+    "sphinx-rtd-theme~=3.0; python_version >= '3.9'",
+    "sphinx-autobuild; python_version >= '3.9'",
+    "myst-parser; python_version >= '3.9'",
+    "sphinx-notfound-page; python_version >= '3.9'",
+    "sphinx-llm[gen]==0.4.1; python_version >= '3.9'",
+]
+load-test = [
+    {include-group = "base"},
+    "playwright>=1.40; python_version >= '3.8'",
+    "locust>=2.20; python_version >= '3.8'",
+]
+[tool.uv]
+# Don't install packages published less than 7 days ago (matches dependabot cooldown)
+exclude-newer = "7 days"
+# Exempt our own ecosystem libraries from the cooldown
+exclude-newer-package = {le-utils = "0 seconds", morango = "0 seconds"}
+
+[tool.uv.workspace]
+members = [".", "python_packages/*", "platforms/*"]
+# platforms/ also holds non-Python members (raspberry-pi has no pyproject.toml);
+# the glob would otherwise error on them, so exclude those without a project.
+exclude = ["platforms/raspberry-pi", "platforms/apt-repo", "platforms/flatpak-app"]
+
+[tool.setuptools]
+packages = ["kolibri"]
+
+[tool.setuptools.package-dir]
+kolibri = "kolibri"
+
+[tool.setuptools.package-data]
+# The plugin scaffolder reads its *.tmpl sources at runtime via __file__, so
+# they must ship inside the installed wheel (MANIFEST.in only governs the sdist,
+# and setuptools excludes data files from the wheel by default).
+kolibri = ["utils/plugin_scaffold/templates/**/*.tmpl"]
+
+[tool.setuptools_scm]
+tag_regex = "^v(?P<version>\\d+\\.\\d+\\.\\d+)(-(?P<pre>alpha|beta|rc)(?P<pre_n>\\d+))?$"
+version_file = "kolibri/_version.py"
+# Custom template to ensure Python 3.6 compatibility (no `from __future__ import annotations`)
+version_file_template = """# file generated by setuptools-scm\n# don't change, don't track in version control\n__version__ = version = '{version}'\n"""
+
+[tool.ruff]
+line-length = 88
+target-version = "py37"
+exclude = [
+    "kolibri/dist/*",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90", "T20", "I", "UP015", "UP024", "UP026", "UP031", "UP032", "UP034", "PIE", "C4", "RET", "FLY", "G", "LOG", "B", "RUF", "SIM", "DTZ", "PLC0415"]
+ignore = ["E203", "E721", "E741", "SIM105", "SIM108", "SIM117"]
+# Exclude migrations from linting (auto-generated code) but still format them
+exclude = ["kolibri/*/migrations/*"]
+
+[tool.ruff.lint.per-file-ignores]
+# kolibri.utils.conf reads KOLIBRI_HOME at import; these scripts set it from their arguments first.
+"integration_testing/scripts/content_operations_benchmark.py" = ["PLC0415"]
+"integration_testing/scripts/viewset_serialization_benchmark.py" = ["PLC0415"]
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 160
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+known-first-party = ["kolibri", "kolibri_sync_extras_plugin", "kolibri_sentry_plugin", "kolibri_oidc_client_plugin", "kolibri_oidc_provider_plugin", "kolibri_opensearch_plugin", "kolibri_context_translation_plugin", "kolibri_demo_server_plugin", "kolibri_server_setup", "kolibri_app"]
+# Match the prior reorder-python-imports style: one import per line,
+# sorted case-insensitively rather than grouped by type.
+force-single-line = true
+order-by-type = false
+
+[tool.coverage.run]
+branch = true
+source = ["kolibri"]
+omit = [
+    "*/migrations/*",
+    "*/tests/*",
+    "*/test_*.py",
+    "kolibri/core/webpack/management/commands/devserver.py",
+]
+
+[tool.coverage.report]
+ignore_errors = true
+show_missing = true
+precision = 2
+exclude_lines = [
+    "raise NotImplementedError",
+    "raise AssertionError",
+    "if __name__ == .__main__.:",
+]
+
+
+[tool.kolibri.i18n]
+project = "kolibri"
+locale_data_folder = "kolibri/locale"
+ignore = "**/node_modules/**,**/static/**,**/__tests__/**"

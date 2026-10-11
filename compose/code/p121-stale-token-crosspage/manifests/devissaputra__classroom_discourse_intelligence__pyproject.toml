@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classroom-discourse-intelligence"
+version = "0.2.0"
+description = "Research Bundle for transcript-held-out talk-move classification and transparent classroom discourse analytics."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Devis W. Saputra"}]
+dependencies = ["numpy>=1.26","pandas>=2.0","scikit-learn>=1.4","matplotlib>=3.8","PyYAML>=6.0","openpyxl>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0","ruff>=0.6"]
+
+[project.scripts]
+classroom-discourse-intelligence = "classroom_discourse_intelligence.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

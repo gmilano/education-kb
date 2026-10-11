@@ -6,6 +6,128 @@ updated: 2026-10-11
 
 # Education — vertical platforms
 
+**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
+`test_p121.sh` **27 passed / 0 failed**, fully offline. 🔴 **This page carried 6 of the 10 cells
+repaired in this commit — more than every other page combined, and in both directions.**
+
+## 🔴 🆕 `P121-C` — this shelf marked two usable platforms "🔴 no", and that error class had never been looked for
+
+🔴 **Seven passes of licence sweeps on this KB all hunted the same direction: a permissive token
+on a copyleft repository. This pass looked the other way for the first time.**
+
+| address | ★ | published here | 🟢 measured this pass | reuse verdict |
+|---|---|---|---|---|
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0 → *"🔴 no"* | 🟢 **MIT**, `master/LICENSE` 1 684 B | 🟢 **yes, via the MIT arm** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0 → *"🔴 no"* | 🟢 **Apache-2.0**, `master/LICENSE` 11 357 B | 🟢 **yes** |
+
+🔵 **`pupilfirst` is a SPLIT grant and the split favours the studio.** Read from the file:
+
+| portion | licence |
+|---|---|
+| everything under `docs/` | 🟡 CC-BY-SA-4.0 |
+| all client-side JavaScript, served or compiled | 🟢 **MIT** |
+| third-party components | their own original licences |
+| 🟢 **everything else** | 🟢 **MIT** |
+
+🔴 **So the row that read "AGPL-3.0 · 🔴 no" was wrong about the licence AND wrong about the
+decision.** A studio reading this shelf would have struck a 979★ LMS off its shortlist, and
+`unitime` is the only university-timetabling platform this KB carries at all.
+
+🟢 **Both repaired.** 🔵 **Why it survived is the finding, not the licence.** An over-restrictive
+cell produces no compliance incident, no scanner alert and no client complaint — it just quietly
+shrinks the menu. Nothing in this KB's seven passes of instruments was pointed at it.
+
+## 🔴 🆕 `P121-A2` — `course-tencent-cloud`, 1 173★, was 🟢 MIT and is GPL-2.0
+
+🔴 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+(酷瓜云课堂) headed this page's APAC platform rows as 🟢 **MIT**, reuse *"🟢 yes"*.** Measured this
+pass: `v2/LICENSE`, **18 092 B** — the canonical byte-size of GPL-2.0 — titled *"GNU GENERAL PUBLIC
+LICENSE Version 2, June 1991"*.
+
+🔴 **This is the largest-star licence defect of the pass and it runs the dangerous way.** A studio
+told *"permissive, yes"* about an 1 173★ Chinese MOOC platform would have planned a fork; GPL-2.0
+requires the derivative to ship under GPL-2.0, and GPL-2.0 is incompatible with GPL-3.0
+components. 🟢 **Repaired to 🔴 GPL-2.0, reuse 🔴 no.**
+
+## 🔴 `P121-A` — `portabilis/i-educar` carried a THIRD value, 68 lines from a correct row on this page
+
+🔴 **This page's top platform table published
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (718★, Brazil's most-deployed
+municipal SIS) as 🔴 **AGPL-3.0**. Line 205 of the same page reads 🔴 **GPL-2.0** ⚠️ *was
+LGPL-3.0*.**
+
+| the cell | value | the truth? | the value the correction names? |
+|---|---|---|---|
+| `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0* | 🟢 yes | — |
+| 🔴 the top platform table | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a third value** |
+
+🟢 **Measured: `2.12/LICENSE`, 18 092 B, GPL-2.0. Repaired.** 🔵 **This is what discharged
+`ACTION P`**: a repair keyed on the value you expect to find (`was LGPL-3.0`) cannot fix a row
+that is wrong in a different way.
+
+## 🔴 🆕 `P121-F` — `frappe/education` carried THREE different licences in three cells of this one page
+
+| line | published | 🟢 the tree |
+|---|---|---|
+| top platform table | 🔴 GPL-3.0 | 🟢 correct |
+| 🔴 dependency-reach table | 🔴 **AGPL-3** | 🔴 wrong |
+| 🔴 lock-reach table | 🔴 **🟢 MIT** | 🔴 wrong |
+
+🟢 **Measured this pass: `develop/license.txt` is 19 bytes — the single line `License: GNU GPL
+V3`.** 🔵 **That is a GRANT BY REFERENCE: it names a licence and ships none of its text**, which
+p118 classified and this pass reproduces. The correct cell is `GPL-3.0 (by reference, no body)`.
+🟢 **Both wrong cells repaired.**
+
+🔴 **One address, one page, three licences — and the page's own top table was right.** A reader
+who stopped at the first table got the truth; a reader who scrolled to the dependency tables got
+a permissive answer on a GPL platform.
+
+## 🟢 The vertical platform shelf, as it now stands
+
+🔵 **These are the real systems an engagement customises. Licence read from the default branch;
+`⚠️ was` marks a cell this pass or a prior one corrected.**
+
+| platform | what it is | ★ | 🟢 licence, measured | build on it? |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS — the largest install base on earth | 6.2k | 🔴 GPL-3.0 | 🟡 **plugin API only** — do not fork |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC platform | 7.5k | 🔴 AGPL-3.0 | 🟡 **service boundary** — AGPL reaches hosted use |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | HiEd LMS | 5.8k | 🔴 **AGPL-3.0** ⚠️ *was GPL* | 🟡 LTI/API integration only |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline-first LMS | 1.1k | 🟢 **MIT** | 🟢 **yes — the low-bandwidth answer** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS | 979 | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) ⚠️ **was 🔴 AGPL-3.0** | 🟢 **yes — repaired this pass** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | university timetabling | 350 | 🟢 **Apache-2.0** ⚠️ **was 🔴 GPL-3.0** | 🟢 **yes — repaired this pass** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS (strong LATAM/EMEA base) | 1.0k | 🔴 GPL-3.0 | 🔴 no |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **education ERP on Odoo** | 886 | 🟡 LGPL-3.0 | 🟡 **link, do not fork** — tracks the Odoo major (`19.0`) |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | SIS — Brazilian municipal, *software público* | 718 | 🔴 **GPL-2.0** ⚠️ **was 🔴 AGPL-3.0** | 🔴 no — **separate service, repaired this pass** |
+| [`frappe/education`](https://github.com/frappe/education) | school management on Frappe | 660 | 🔴 **GPL-3.0** (by reference, 19 B `license.txt`) ⚠️ **was AGPL-3 / MIT** | 🔴 no — **repaired this pass** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 645 | 🔴 GPL-2.0 | 🔴 no — default branch `mobile` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management | 635 | 🔴 GPL-3.0 | 🔴 no |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | MOOC (APAC, CN) | 1 173 | 🔴 **GPL-2.0** ⚠️ **was 🟢 MIT** | 🔴 no — **repaired this pass** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | SIS | 345 | 🔴 GPL-2.0 — grant at `docs/License.txt` | 🔴 no |
+| [`dspace/dspace`](https://github.com/dspace/dspace) | institutional repository | 1.1k | 🟢 BSD-3 | 🟢 **yes** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture & video | — | 🟢 ECL-2.0 | 🟢 **yes** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | virtual classroom | 8.7k | 🔴 LGPL-3.0 | 🟡 link, do not fork |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | HiEd LMS/CLE | — | 🟢 ECL-2.0 | 🟢 **yes** |
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | LMS (accessibility pioneer) | 180 | 🔴 **no licence file; README says only "GPL", no version** | 🔴 **treat as licence-unresolved** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 云学习系统 | 126 | 🔴 **proprietary EULA — NOT OSS** ⚠️ *was 🟢 MIT* | 🔴 **no, at any price the file names** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | LMS platform | — | 🔴 **"Fair Code License" v1.0** — €100 000 past 1 000 users + 5 %; `package.json` declares 🟢 MIT | 🔴 no |
+
+🟢 **The standing recommendation is unchanged and this pass strengthens it: the permissive
+platform tier is real but small — Kolibri (MIT), DSpace (BSD-3), Opencast and Sakai (ECL-2.0),
+and now Pupilfirst (MIT) and UniTime (Apache-2.0).** Everything with a large install base is
+copyleft and belongs behind a service boundary.
+
+## 🟡 `ACTION Q` on this shelf — four platforms whose manifest lies in the permissive direction
+
+🔴 **`classroomio`, `courselit` and `tadreeblms` each declare `MIT` in a manifest while committing
+AGPL-3.0 (34 143–34 523 B licence files, all re-read this pass). `LearnPress/learnpress` declares
+`ISC` while being GPL-3.0. `leemons` declares `MIT` while billing €100 000.** Full table in
+`repos/trending.md`. 🟢 **Intake rule: read the committed file at a pinned SHA, never the
+manifest field.**
+
+# Education — vertical platforms
+
 **Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
 🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.
@@ -127,14 +249,14 @@ means anything at all.**
 | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | **1 677** | 🟡 multi-grant (GPL-2.0 core) | 🟡 read the tree first |
 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | HE LMS | **1 237** | 🟢 **ECL-2.0** | 🟢 **yes** — Apache-derived, the permissive HE option |
 | [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | course platform | **1 273** | 🔴 AGPL-3.0 | 🔴 no |
-| [`course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | MOOC (APAC, CN) | **1 173** | 🟢 MIT | 🟢 **yes** |
+| [`course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | MOOC (APAC, CN) | **1 173** | 🔴 **GPL-2.0** ⚠️ **was 🟢 MIT** | 🔴 no |
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | Open edX distribution | **1 127** | 🔴 AGPL-3.0 | 🔴 no |
 | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | ERP / CRM | **1 129** | 🟢 Apache-2.0 | 🟢 **yes** |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline-first LMS | **1 141** | 🟢 **MIT** | 🟢 **yes** — the offline/low-bandwidth option |
 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | **1 009** | 🔴 GPL-3.0 | 🔴 no |
-| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS | **979** | 🔴 AGPL-3.0 | 🔴 no |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS | **979** | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0) ⚠️ **was 🔴 AGPL-3.0** | 🟢 **yes, via the MIT arm** |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP | **886** | 🔴 LGPL-3.0 | 🟡 link, do not fork — `19.0`, tracks the Odoo major |
-| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | SIS (LATAM, BR) | **718** | 🔴 AGPL-3.0 | 🔴 no |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | SIS (LATAM, BR) | **718** | 🔴 **GPL-2.0** ⚠️ **was 🔴 AGPL-3.0** | 🔴 no |
 | [`frappe/education`](https://github.com/frappe/education) | school management | **660** | 🔴 GPL-3.0 | 🔴 no |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | **645** | 🔴 GPL-2.0 | 🔴 no — default branch `mobile` |
 | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management | **635** | 🔴 GPL-3.0 | 🔴 no — default branch `v31.0.00` |
@@ -145,7 +267,7 @@ means anything at all.**
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | **447** | 🟢 **Apache-2.0** | 🟢 **yes** |
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | school management | **404** | 🟢 **MIT** | 🟢 **yes** |
 | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | LTI 1.3 bridge | **376** | 🟢 **Apache-2.0** | 🟢 **yes** — the process boundary copyleft does not cross |
-| [`unitime/unitime`](https://github.com/UniTime/unitime) | timetabling | **350** | 🔴 GPL-3.0 | 🔴 no |
+| [`unitime/unitime`](https://github.com/UniTime/unitime) | timetabling | **350** | 🟢 **Apache-2.0** ⚠️ **was 🔴 GPL-3.0** | 🟢 **yes** |
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | SIS | **345** | 🔴 GPL-2.0 | 🔴 no |
 | [`openfun/richie`](https://github.com/openfun/richie) | course catalogue CMS | **316** | 🟢 **MIT** | 🟢 **yes** (EMEA, FR) |
 | [`leemonade/leemons`](https://github.com/leemonade/leemons) | LXP | **292** | 🔴 **"Fair Code License" v1.0 — NOT OSI** | 🔴 **no, and worse: €100 000 past 1 000 users + 5 % royalty. See `P119-A`** |
@@ -586,7 +708,7 @@ that locks all three"* and marked 🟢 **safe**, has an **orphaned root manifest
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2 | 🔴 `floating` | 🔴 **`no-reach`** | 🔴 **5 / 5, root** | 🔴 **nothing reached; vendor at a SHA and own the dependency set** |
 | [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 GPL-3 | 🔵 `vendored` | 🔵 **`vendored`** | — | 🔵 **no reach claim: the dependency tree is COMMITTED, so it stands up with no registry (`P114-D`)** |
 | [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 LGPL-3 | 🔵 `foreign-build` | 🔵 **`foreign-build`** | — | 🔵 **odoo `__manifest__.py`; no claim made in either direction (`P114-E`)** |
-| [`frappe/education`](https://github.com/frappe/education) | 🟡 AGPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 3 | 🟡 **two of three reached** |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **GPL-3.0** ⚠️ **was 🟡 AGPL-3** | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 3 | 🟡 **two of three reached** |
 | [`frappe/lms`](https://github.com/frappe/lms) | 🟡 AGPL-3 | 🟡 `partial-pin` | 🟡 `partial-reach` | 🟡 1 / 3 | 🟡 **two of three reached** |
 
 ※ licence contested — carried unchanged from the pass that opened it; p114 changed no
@@ -740,7 +862,7 @@ today?**
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | 🟢 `checked` | npm,py,gradle | 🟡 2 / 3 | 🟡 `partial-pin` | 🟡 **gradle half unlocked** |
 | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 GPL-2 | 🟡 `partial` | npm,php | 🟡 1 / 2 | 🟡 `partial-pin` | 🔴 **unverified AND half-unpinned** |
 | [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 GPL-3.0 | 🔴 `fossil-ci` | npm,php,dotnet | 🔴 1 / 3 | 🟡 `partial-pin` | 🔴 **34 dead CI configs, 2 of 3 ecosystems unlocked** |
-| [`frappe/education`](https://github.com/frappe/education) | 🟢 MIT | — | npm,py | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** ⚠️ **was 🟢 MIT** | — | npm,py | 🟡 1 / 2 | 🟡 `partial-pin` | 🟡 **py half unlocked** |
 | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3 | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **direct versions literal, transitives resolved** |
 | [`kuali/rice`](https://github.com/kuali/rice) | 🟢 ECL-2.0 | 🟡 `tests-only` | maven | — | 🟡 `self-pinned` | 🟡 **1 791 tests; supply a pipeline** |
 | [`project-sunbird/sunbird-lms-service`](https://github.com/project-sunbird/sunbird-lms-service) | 🟢 MIT | 🟢 `checked` | maven | — | 🟡 `self-pinned` | 🟡 **19 deployment artefacts on resolved transitives** |

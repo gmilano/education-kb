@@ -1,0 +1,314 @@
+[project]
+name = "prairielearn"
+version = "0.0.0"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+classifiers = ["Private :: Do Not Upload"]
+
+dependencies = [
+  "ansi2html==1.9.5",
+  "automata-lib==9.2.0",
+  "chevron==0.14.0",
+  "coloraide==8.13",
+  "faker==40.39.0",
+  "jinja2==3.1.6",
+  "jsonschema==4.26.0",
+  "lxml==6.1.3",
+  "matplotlib==3.11.2",
+  "networkx==3.7",
+  "nltk==3.10.3",
+  "numpy==2.4.6",
+  "openpyxl==3.1.5",
+  "pandas==2.3.3",
+  "pillow==12.3.0",
+  "pint==0.26.1",
+  "psutil==7.2.2",
+  "pulp==3.3.2",
+  "pyarrow==25.0.1",
+  "pycryptodome==3.23.0",
+  "pygments==2.21.0",
+  "pygments-ansi-color==0.3.0",
+  "pygraphviz==1.14",
+  "pyquaternion==0.9.9",
+  "regex==2026.9.10",
+  "requests==2.34.2",
+  "rich==15.0.0",
+  "schemdraw==0.23",
+  "scikit-learn==1.9.1",
+  "scipy==1.18.1",
+  "seaborn==0.13.2",
+  "sketchresponse==0.1.5",
+  "statsmodels==0.15.0",
+  "sympy==1.14.0",
+  "text-unidecode==1.3",
+  "typing-extensions==4.16.0",
+  "tzlocal==5.4.4",
+]
+
+[dependency-groups]
+dev = [
+  "pandas-stubs==2.3.3.260113",
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "pytest-github-actions-annotate-failures==0.4.2",
+  "pytest-repeat==0.9.4",
+  "ruff==0.16.9",
+  "sqlfluff==4.3.0",
+  "squawk-cli==2.66.0",
+  "tomlkit==0.15.1",
+  "types-chevron==0.14.2.20260408",
+  "types-lxml==2026.2.16",
+  "types-pygments==2.21.0.20260819",
+]
+
+docs = [
+  "jsonschema2md==1.7.0",
+  "mdx-truly-sane-lists==1.3",
+  "mkdocs==1.6.1",
+  "mkdocs-d2-plugin==1.7.0",
+  "mkdocs-exclude==1.0.2",
+  "mkdocs-gen-files==0.6.1",
+  "mkdocs-literate-nav==0.6.3",
+  "mkdocs-material==9.7.7",
+  "mkdocstrings==1.0.6",
+  "mkdocstrings-python==2.0.9",
+  "pymdown-extensions==12.1",
+  # https://github.com/pygments/pygments/issues/3076
+  "pygments==2.21.0",
+  # mkdocstrings-python will format the docstrings using ruff
+  # https://mkdocstrings.github.io/python/usage/configuration/signatures/#line_length
+  "ruff==0.16.9",
+]
+
+# We only use pyproject.toml for the Python dependencies, so we don't need to
+# specify any packages / source files.
+[tool.setuptools]
+packages = []
+
+[tool.ruff]
+# Also runs ruff on markdown files containing Python code blocks.
+include = ["**/*.py", "**/*.md"]
+
+extend-exclude = [
+  # These files are intentionally not parseable as Python.
+  "./exampleCourse/questions/demo/autograder/codeUpload/submitted_code_samples/fib_error_binary_file/fib.py",
+  "./exampleCourse/questions/demo/autograder/codeUpload/submitted_code_samples/fib_error_large_text_file/fib.py",
+  # Files related to the Python autograder will often intentionally appear
+  # broken in isolation. We'll exclude these files from linting.
+  "exampleCourse/questions/**/tests/initial_code.py",
+  "exampleCourse/questions/**/tests/trailing_code.py",
+]
+target-version = "py313"
+preview = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+ignore = [
+  # These rules provide little value to us
+  "EM",  # flake8-errmsg
+  "EXE",  # flake8-executable
+  "FIX",  # flake8-fixme
+  "S",  # flake8-bandit (security rules)
+  "TD",  # flake8-todos
+  "PTH",  # flake8-use-pathlib
+  "blind-except",
+  "missing-trailing-comma",
+  "missing-copyright-notice",
+  "complex-structure",
+  "commented-out-code",  # too many false positives
+  "line-too-long",
+  "implicit-namespace-package",
+  "private-member-access",
+  "print",
+  "debugger",
+  "blanket-type-ignore",
+  "invalid-character-esc",
+
+  # These rules were discussed and disabled
+  "any-type",
+  "undocumented-public-init",
+  "incorrect-blank-line-before-class",
+  "multi-line-summary-first-line",
+  "missing-blank-line-after-summary",  # we use a multi-line description instead of summaries sometimes
+  "missing-trailing-period",
+  "missing-terminal-punctuation",
+  "docstring-missing-yields",
+  "read-whole-file",
+  "write-whole-file",
+  "reimplemented-operator",  # confusing
+  "reimplemented-starmap",  # confusing
+  "explicit-string-concatenation",
+  "numpy-legacy-random",  # we use `np.random.*` in many places
+  "import-outside-top-level",
+  "compare-to-empty-string",
+  "import-private-name",
+  "too-many-nested-blocks",
+  "too-many-return-statements",
+  "too-many-branches",
+  "too-many-arguments",
+  "too-many-locals",
+  "too-many-statements",
+  "too-many-boolean-expressions",
+  "too-many-positional-arguments",
+  "literal-membership",  # pyright doesn't understand assert_never with sets
+  "magic-value-comparison",
+  "no-self-use",
+  "too-many-statements-in-try-clause",
+  "unspecified-encoding",
+  "implicit-return",
+  "unnecessary-assign",
+  "superfluous-else-return",
+  "if-else-block-instead-of-if-exp",
+  "runtime-cast-value",
+  "try-consider-else",  # returns in try blocks
+  "raise-within-try",
+  "raise-vanilla-args",  # long messages in raise statements
+
+  # These rules need to be enabled
+  # TODO: D103,D104 (https://github.com/astral-sh/ruff/issues/12434)
+  "undocumented-public-class",
+  "undocumented-public-method",
+]
+
+[tool.ruff.lint.pydocstyle]
+# Default for mkdocstrings (https://mkdocstrings.github.io/python/usage/configuration/docstrings)
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# Files related to the Python autograder will often intentionally appear
+# broken in isolation. We'll allow specific errors in these files to
+# account for that.
+"exampleCourse/questions/**/tests/setup_code.py" = ["unused-import", "undefined-name"]
+"exampleCourse/questions/**/tests/leading_code.py" = [
+  "unused-import",
+  "undefined-name",
+  "unused-variable",
+  "unused-function-argument",
+]
+"exampleCourse/questions/**/tests/ans.py" = ["undefined-name"]
+"exampleCourse/questions/demo/autograder/codeUpload/submitted_code_samples/**/*.py" = [
+  "unused-function-argument",
+]
+
+# Ignore uppercase variables and function parameters (e.g. G for a graph)
+"exampleCourse/questions/**/*.py" = ["non-lowercase-variable-in-function", "invalid-argument-name"]
+"apps/prairielearn/elements/**/*.py" = [
+  # Ignore uppercase function parameters (e.g. G for a graph)
+  "invalid-argument-name",
+  # Allow boolean trap pattern in method signatures
+  "boolean-type-hint-positional-argument",
+  "boolean-default-value-positional-argument",
+  "boolean-positional-value-in-call",
+  # ignore unused parameters in functions
+  "unused-function-argument",
+  "undocumented-public-module",
+  "undocumented-public-function",
+]
+"apps/prairielearn/python/**/*.py" = ["invalid-argument-name"]
+
+"graders/**/*.py" = [
+  # Boolean default positional argument
+  "boolean-default-value-positional-argument",
+  # Avoid future changes to graders
+  "unnecessary-comprehension-in-call",
+  "redundant-none-literal",
+  "none-not-at-end-of-union",
+  # Strict annotation linting
+  "D",
+  "DOC",
+]
+
+# Directories we don't want strict annotation linting or docstring linting on
+# For example, code with no public API, elements with known issues, or course content.
+"apps/prairielearn/python/prairielearn/internal/**/*.py" = [
+  "undocumented-public-module",
+  "undocumented-public-function",
+  "docstring-missing-returns",
+]
+"docs/**/*.py" = ["undocumented-public-module", "docstring-missing-returns"]
+"apps/prairielearn/src/tests/**/*.py" = [
+  "ANN",
+  "undocumented-public-module",
+  "undocumented-public-function",
+  "docstring-missing-returns",
+]
+"apps/prairielearn/**/*_test.py" = ["ANN", "D", "too-many-public-methods"]
+"apps/prairielearn/python/test/**/*.py" = ["D"]
+"contrib/**/*.py" = ["ANN", "D", "docstring-missing-returns"]
+"scripts/**/*.py" = ["undocumented-public-module", "DOC"]
+"testCourse/**/*.py" = ["ANN", "undocumented-public-module", "undocumented-public-function", "DOC"]
+"exampleCourse/**/*.py" = ["ANN", "D", "DOC"]
+"apps/prairielearn/elements/pl-drawing/**/*.py" = ["ANN"]
+"apps/prairielearn/elements/pl-prairiedraw-figure/**/*.py" = ["ANN"]
+"apps/prairielearn/elements/pl-checkbox/**/*.py" = ["ANN"]
+# These are exact-output fixtures, not repository Python source.
+"packages/question-conversion/src/emitters/fixtures/**/server.py" = ["ALL"]
+
+[tool.ruff.lint.pydoclint]
+# Skip docstrings which fit on a single line.
+ignore-one-line-docstrings = true
+
+[tool.ruff.format]
+exclude = [
+  "./exampleCourse/questions/demo/autograder/python/leadingTrailing/tests/trailing_code.py",
+  "./exampleCourse/questions/demo/autograder/python/square/tests/initial_code.py",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "strict"
+include = [
+  "./apps/prairielearn/elements",
+  "./apps/prairielearn/python",
+  "./exampleCourse/questions/**/server.py",
+  "./contrib/question_converters/canvas",
+  "./graders",
+  "./scripts",
+]
+ignore = [
+  "./apps/prairielearn/elements/pl-drawing",  # requires refactor
+  "./apps/prairielearn/elements/pl-prairiedraw-figure",  # deprecated
+  "./exampleCourse/questions/**/tests",  # autograder tests, use different dependencies
+]
+extraPaths = ["./apps/prairielearn/python"]
+pythonVersion = "3.13"
+executionEnvironments = [
+  # TODO: after https://github.com/tamasfe/taplo/issues/332, split with newlines
+  { root = "./graders/python", reportUntypedNamedTuple = "none", reportUntypedFunctionDecorator = "none", reportUnnecessaryComparison = "none", reportUnnecessaryIsInstance = "none", reportMissingTypeArgument = "none", extraPaths = [
+
+  ] },
+  { root = "./graders/c", reportArgumentType = "none", reportOperatorIssue = "none", reportAttributeAccessIssue = "none", reportIndexIssue = "none", reportCallIssue = "none", reportMissingTypeArgument = "none", extraPaths = [
+
+  ] },
+  { root = "./exampleCourse/questions", reportArgumentType = "none", reportUnknownParameterType = "none", reportMissingParameterType = "none", reportOperatorIssue = "none", reportCallIssue = "none", reportConstantRedefinition = "none" },
+]
+reportUnnecessaryTypeIgnoreComment = "error"
+# These rules would require significant changes
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownVariableType = "none"
+# These rules don't provide much value
+reportPrivateUsage = "none"
+reportUnnecessaryIsInstance = "none"
+reportUnknownLambdaType = "none"
+# These rules require improved upstream type annotations
+reportMissingTypeStubs = "none"
+reportMissingTypeArgument = "none"
+reportOperatorIssue = "information"
+reportUnknownParameterType = "information"
+
+[tool.pytest]
+pythonpath = ["apps/prairielearn/python"]
+addopts = ["--cov=apps"]
+testpaths = [
+  "apps/prairielearn/elements",
+  "apps/prairielearn/python/test",
+  "graders/python/python_autograder/tests",
+]
+
+[tool.uv]
+required-version = ">=0.9.0"
+# Ensures that all dependencies are installed whenever we use `uv run`.
+default-groups = "all"

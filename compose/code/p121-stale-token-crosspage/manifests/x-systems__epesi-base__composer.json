@@ -1,0 +1,44 @@
+{
+	"name" : "epesi/base",
+	"description" : "Epesi CRM / ERP base modules",
+	"keywords" : [
+		"epesi",
+		"laravel",
+		"crm",
+		"erp",
+		"composer",
+		"package"
+	],
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Georgi Hristov",
+			"email" : "info@xsystems.io"
+		}
+	],
+	"type" : "project",
+	"minimum-stability" : "dev",
+	"require" : {
+		"php" : ">=7.2",
+		"epesi/core" : "dev-master"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "^8.0",
+		"orchestra/testbench" : "^3.8"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Epesi\\Base\\" : "src/"
+		}
+	},
+	"extra" : {
+		"epesi" : {
+			"modules" : {
+				"Epesi\\Base\\" : "src/"
+			}
+		}
+	},
+	"support" : {
+		"forum" : "https://forum.epe.si"
+	},
+	"homepage" : "https://xsystems.io"
+}

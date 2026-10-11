@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 121 — 2026-10-11 (eighth pass of this date), 06:3x–07:2x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p120's and nothing below it is edited** —
+including the historical rows this pass found stale. A dated section records what was true when it
+was written; repairing it would destroy the record. Stale tokens inside the history are listed
+here instead.
+
+🔴 **What is new this week is not an agent, and for the sixth consecutive pass the mandated
+searches returned none. What is new is that the two biggest numbers this KB published last pass
+were both too small a sample to divide, and this pass refutes them with its own instruments.**
+
+### 🔴 `ACTION N` REFUTED — p120's "41 % ungranted" was an upper bound by construction, and the real rate is 1.8 %
+
+p120 resolved 22 `UNREAD` addresses and found **9 ungranted (41 %)**, stating honestly that the 22
+were *selected* for being unread. `ACTION N` pre-registered the test: probe the other **227** and
+expect **≥ 10** ungranted, or be refuted.
+
+| measure | value |
+|---|---|
+| census addresses | 249 |
+| addresses with a licence FILE recorded on disk by p118 | 🟢 **236** |
+| addresses with no file evidence | 13 |
+| of those, already resolved by p120 | 9 |
+| 🔴 **new to `ACTION N`** | 🔴 **4** |
+| clause threshold | **≥ 10** |
+| 🔴 **verdict** | 🔴 **REFUTED** — 4 < 10 |
+
+🟢 **So the shelf's grant coverage is far better than last pass implied: 1.8 % of the 227 are
+ungranted, not 41 %.** 🔵 **The lesson is about sampling, not licences.** p120 selected the hardest
+22 addresses in the KB and then reported their failure rate; the number was correct about those 22
+and said nothing about the shelf. A rate measured on a sample chosen for being difficult is a
+property of the choosing.
+
+### 🔴 The 4, probed at 22 paths each — and two of them matter commercially
+
+| address | ★ | 🔴 what is actually there |
+|---|---|---|
+| [`atutor/ATutor`](https://github.com/atutor/ATutor) | 180 | 🔴 **no licence file at 22 probed paths.** Its README `## License` section contains the single word **`GPL`** — no version, no file. A bare "GPL" is not a grant: GPL-2.0 and GPL-3.0 are mutually incompatible, so "GPL" names no licence a lawyer can act on. This KB publishes it as **GPL-3**, which the repository never says |
+| [`scrosseye/PERSUADE_corpus`](https://github.com/scrosseye/PERSUADE_corpus) | — | 🔴 **no licence file.** README line 51: **CC BY-NC-SA 4.0** — **NonCommercial** |
+| [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0) | — | 🔴 **no licence file.** README line 29: **CC BY-NC-SA 4.0** — **NonCommercial**. The .csv files are not in the repo at all; the README links **Google Drive** |
+| [`xgabrielcv/auto-matricula-sigaa-unb`](https://github.com/xgabrielcv/auto-matricula-sigaa-unb) | — | 🔴 already known to p120. Badge target `#-licença` is an in-page anchor; probed **404** |
+
+🟢 **This KB already publishes both PERSUADE corpora correctly** as `CC-BY-NC-SA-4.0`, with README
+line numbers and commit SHAs — `agents/top.md`, `intel/trends.md` and the repos pages all agree.
+🔵 **That is worth stating as a positive: the corpus layer is the one place this shelf has been
+consistently right, and p121 confirms it by independent measurement.**
+
+🔴 **Why PERSUADE matters more than its star count.** It is the canonical essay-scoring corpus —
+280 000+ discourse annotations, 25 000+ graded essays from US grades 6–12, the core of the Kaggle
+Feedback Prize. It is the first thing an automated-essay-scoring or writing-feedback engagement
+reaches for. **NonCommercial means it cannot be used in a paid engagement at all**, and ShareAlike
+means a derivative corpus must carry the same terms. 🟢 **An informed gap: there is no permissive
+graded-essay corpus of comparable size on this shelf, and five passes of searching have not
+found one.**
+
+### 🔴 `ACTION O` DISCHARGED and NOT refuted — the census counted 53 claims that no human wrote
+
+The claim-side extractor's alternation ends in BARE tokens — `MIT`, `GPL`, `AGPL`, `BSD` — and
+`awk`'s `match()` has no word boundary.
+
+| variant | rows | claim tokens |
+|---|---|---|
+| p120 v3, **the sweep actually in use** | 3 033 | 3 402 |
+| v4 — anchoring alone | 🔴 3 029 | 🔴 3 390 |
+| v5 — anchor + widen | 3 033 | 3 399 |
+| 🟢 **v6 — anchor + widen + fixed dedup (recommended)** | 3 033 | 🟢 **3 349** |
+
+🔴 **`MIT` was matched inside the word `COMMITTED`**, on two rows:
+
+| row | the word that produced it | the repo's actual licence |
+|---|---|---|
+| `LearnPress/learnpress`, verticals shelf | *"the dependency tree is **COMMITTED**"* | 🔴 GPL-3.0 |
+| `OS4ED/openSIS-Classic`, verticals shelf | *"deps **COMMITTED**, suite runnable offline"* | 🔴 GPL-2.0 |
+
+🔴 **Both manufactured an MIT claim on a copyleft platform out of an English word.** Because
+p118's verdict layer scores a row as AGREE if the tree matches *any* token, and both rows also
+carried their correct GPL token, neither produced a visible defect — **the error was invisible by
+construction and inflated the agreement rate instead.**
+
+🔴 **Anchoring alone made things worse, and that is the more useful half of the finding.**
+`0BSD` contains `BSD`; `LGPLv3` contains `LGPL`. A boundary check *rejects* those matches, so v4
+**lost 4 rows entirely** — converting a wrong token into a missing row, which is worse. This is
+p118's `F5` fault recurring one level up: the alternation cannot express the spelling the page
+uses, and the boundary check then drops the row instead of mislabelling it. 🟢 **v6 anchors AND
+widens** (`0BSD`, `GPLv3`, `LGPLv3`, `AGPLv3`, `GPLv2`), recovering all 4.
+
+🔵 **One widening was rejected on inspection.** Adding the space spelling `Apache 2.0` recovered
+exactly one row — and that row was [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai),
+whose cell quotes the **ECL-2.0 preamble**: *"consists of the Apache 2.0 license, modified…"*.
+🔴 **A licence name inside a quotation of another licence's text is not a claim**, so the space
+spelling stays unmatched and the suite asserts it.
+
+### 🔴 `P121-E` — a dedup guard that could never work, and 49 tokens it let through for four passes
+
+```awk
+if (index(" " toks " ", " " t " ") == 0) toks = (toks=="" ? t : toks "," t)
+```
+
+🔴 **The tokens are joined with `,` and membership is tested with `" "` delimiters.** For
+`toks="AGPL-3.0,AGPL"` and `t="AGPL"`, the test looks for `" AGPL "` inside `" AGPL-3.0,AGPL "`,
+which is absent — so only the FIRST token could ever match and every later repeat leaked.
+**49 surplus token instances across 46 rows**, carried since p118. 🟢 **Fixed by matching the
+delimiter to the join character; the suite asserts it.**
+
+### 🟢 Trend channels, measured this pass
+
+| # | trend | channel | strength |
+|---|---|---|---|
+| 1 | 🔴 **An over-restrictive licence cell is a commercial loss no sweep was built to find.** 2 platforms (`unitime` Apache-2.0, `pupilfirst` MIT) were published as GPL-3.0/AGPL-3.0 and marked unusable. Seven passes of sweeps looked only for the opposite direction | 🟢 **measured** — both licence files re-read from the default branch | 🟢 **strong** |
+| 2 | 🟢 **Grant coverage on this shelf is 98 %, not 59 %.** Only 4 of 227 unexamined addresses lack a licence file | 🟢 **measured** — 22 paths per address, p118 file evidence as the frame | 🟢 **strong** |
+| 3 | 🔴 **A manifest is not evidence of a licence, but it is wrong far less often than p120's sample implied** — 10 of 104, not 2 of 4. The *direction* holds: 7 of the 10 are permissive-over-restrictive | 🟢 **measured** — 161 manifests fetched, 104 declare a licence | 🟢 **strong** |
+| 4 | 🔴 **The graded-essay corpus layer is NonCommercial and there is no permissive substitute.** Both PERSUADE corpora are CC-BY-NC-SA-4.0 by README prose, with the 2.0 payload on Google Drive rather than in the repo | 🟢 **measured** — README line 51 / line 29, read this pass | 🟢 **strong** |
+| 5 | 🟡 **Regional discovery is saturated while regional ADOPTION data is not.** 0 new tokens in 5 passes from search; the newest usable regional figures are survey instruments (UNESCO IESALC, Digital Education Council) already held | 🟢 **measured** — 17 tokens checked, 17 held | 🟡 **moderate** |
+
 ## 🟢 Pass 120 — 2026-10-11 (seventh pass of this date), 05:3x–06:2x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p119's and nothing below it is edited.**

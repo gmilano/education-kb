@@ -6,6 +6,69 @@ updated: 2026-10-11
 
 # Education — current trends
 
+**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (window **06:3x → 07:2x UTC**).
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`, discharging `ACTIONS N, O, P, Q`.
+`test_p121.sh` **27 passed / 0 failed**, fully offline. This page carried **0** of the 10 cells
+repaired in this commit.**
+
+## 🟢 🆕 `P121-TREND` — five trends, each with the channel that evidences it
+
+🔵 **The rule this page has kept since p114: a trend without a named channel is an opinion. The
+channel column says how this pass knows, not who said it.**
+
+| # | trend | channel | strength |
+|---|---|---|---|
+| 1 | 🔴 **The licence error that costs a consultancy money is the one no sweep looks for: OVER-restriction.** This shelf marked [`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0) as GPL-3.0 and [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (MIT, split grant) as AGPL-3.0, both with reuse *"🔴 no"*. Seven passes of instruments hunted permissive-over-copyleft exclusively, because that direction creates legal exposure. An over-restrictive cell creates none — it silently deletes a 979★ LMS and the only timetabling platform from a shortlist | 🟢 **measured** — both licence files re-read from the default branch, 1 684 B and 11 357 B | 🟢 **strong** |
+| 2 | 🟢 **Grant coverage on this shelf is 98 %, and last pass's 59 % was a sampling artifact.** `ACTION N` probed the 227 addresses p120 did not: **4 are ungranted (1.8 %)**, against **9 of 22 (41 %)** in a sample *selected for being unreadable*. A failure rate measured on the hardest cases describes the choosing, not the population | 🟢 **measured** — 22 paths per address; p118's 236-address file evidence as the frame | 🟢 **strong** |
+| 3 | 🔴 **A package manifest contradicts the committed licence on 1 address in 10, and 7 of 10 contradictions run the dangerous way.** `classroomio`, `courselit` and `tadreeblms` each declare **MIT** while committing **AGPL-3.0**; `learnpress` declares **ISC** while being **GPL-3.0**; `leemons` declares **MIT** while billing **€100 000**. Every SBOM generator and SCA scanner reads the manifest field | 🟢 **measured** — 161 manifests fetched across 249 addresses, 104 declare a licence, each committed file re-read | 🟢 **strong** |
+| 4 | 🔴 **The graded-essay corpus layer is NonCommercial, and there is no permissive substitute.** Both `PERSUADE` corpora — 280 000+ discourse annotations, 25 000+ graded US grade-6–12 essays, the core of the Kaggle Feedback Prize — are **CC-BY-NC-SA-4.0 stated in README prose with no licence file**, and the 2.0 payload is on **Google Drive, not in the repo**. Automated essay scoring is the most-requested education AI capability and its canonical data cannot be used commercially | 🟢 **measured** — README line 51 and line 29 read this pass; 22 paths probed, no licence file | 🟢 **strong** |
+| 5 | 🟡 **High usage, low policy — in all four regions, and that is the sellable gap.** LATAM: **87 %** of HEIs use AI, **26 %** have any framework (UNESCO IESALC, 200 institutions / 19 countries); **92 %** of students and **79 %** of faculty active (Digital Education Council, 30 000+ responses). North America: **71 %** of US teachers untrained, **10 %** of institutions with formal guidelines. One maturity index scores the whole sector **35 / 100**, most institutions still piloting | 🟢 **measured** — survey instruments named and dated; 🔴 **but all figures are SECONDARY** (press coverage and abstracts, not primary reports read) | 🟡 **moderate** |
+
+## 🔴 🆕 `P121-M` — the trend this pass cannot evidence, stated because it is the honest answer
+
+🔵 **All eight mandated searches ran — four global, one per region. They returned ZERO new
+addresses and ZERO new regulation tokens. 17 tokens were checked against the tree; all 17 were
+already held.**
+
+🔴 **`Gap 402` weakens a SIXTH consecutive pass**, and the ledger is long enough that the pattern
+is itself the finding:
+
+| pass | new tokens | rejected as already held |
+|---|---|---|
+| p117 | 4 | 13 |
+| p118 | 0 | 15 |
+| p119 | 0 | 19 |
+| p120 | 0 | 14 |
+| 🔴 **p121** | 🔴 **0** | **17** |
+
+🔵 **One refinement this pass can offer about WHY, which is more useful than the count.** The
+mandated query `top open source AI agents education {year} github MIT` returns repositories about
+**learning to build AI** — `microsoft/ai-agents-for-beginners` (MIT, 67k★),
+`pguso/agents-from-scratch` (MIT), `rohitg00/ai-engineering-from-scratch` — rather than agents
+that **deliver education**. 🔴 **The query's phrase "AI education" is ambiguous in exactly the
+wrong way, and five passes of saturation may be partly a query defect rather than an exhausted
+web.** 🟢 **`ACTION S` is pre-registered to test that**: run the discovery set with
+edtech-specific nouns (`LMS`, `SIS`, `autograder`, `student information system`,
+`learning analytics`, `proctoring`, `curriculum alignment`) and count genuinely new addresses. It
+is refuted if that set also returns zero.
+
+## 🟡 What moved and what did not
+
+🟢 **Unchanged across eight passes, and still the most useful single fact here:** the permissive
+tier of education OSS is the **plumbing** — grading, assessment, notebooks, repositories,
+badges — and every large-install LMS is **copyleft**. Nothing this pass measured disturbed that;
+`pupilfirst` (MIT) and `unitime` (Apache-2.0) slightly *widen* the permissive platform tier,
+which now holds Kolibri, DSpace, Opencast, Sakai, Pupilfirst and UniTime.
+
+🔴 **What this pass retired:** two numbers this KB published last pass — *"41 % ungranted"* and
+*"50 % of manifests contradict"*. Both were honestly flagged as thin by p120 and both are now
+measured on real denominators (**1.8 %** and **9.6 %**). 🔵 **Recording the retraction matters more
+than the correction**: a KB that only ever adds findings and never retires its own becomes a
+ledger of everything it has ever suspected.
+
+# Education — current trends
+
 **Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (window **05:3x → 06:2x UTC**).
 
 🟢 **Instrument: `compose/code/p120-unread-grant-resolution/`, discharging `ACTIONS J, K, L`.

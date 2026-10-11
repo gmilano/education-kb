@@ -4,6 +4,170 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Hundred-and-twenty-first pass, 2026-10-11 — **all four pre-registered actions DISCHARGED, two REFUTED on their own clauses**; 🔴 **`P121-G` — THIS LEDGER WAS TWO PASSES STALE**; 🔴 **`P121-C` — a new defect class: OVER-restrictive licence cells**; **`Gap 402` weakens a SIXTH consecutive pass**; 10 cells repaired; `P121-A`–`P121-G`, `ACTION R`–`S` adopted
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/`. `test_p121.sh` — **27 passed / 0
+failed**, fully offline.**
+
+### 🔴 `P121-G` — this ledger stopped at p118 while p119, p120 and their eight pages carried on
+
+🔴 **Stated first, because a ledger that does not record the passes that happened is worse than no
+ledger: it looks complete.** Before this section, the newest entry in `intel/open-gaps.md` was
+**pass 118**. Passes **119** and **120** both ran, both committed, both prepended sections to all
+eight content pages, and both pre-registered actions — **in their instrument READMEs and in
+`README.md`, never here.**
+
+| pass | content pages updated | `README.md` pass log | 🔴 **this ledger** |
+|---|---|---|---|
+| p118 | 🟢 yes | 🟢 yes | 🟢 yes |
+| p119 | 🟢 yes | 🟢 yes | 🔴 **no** |
+| p120 | 🟢 yes | 🟢 yes | 🔴 **no** |
+
+🔴 **The consequence is concrete, not cosmetic.** `ACTION C` (the reverse-DNS package namespace,
+layer P) and `ACTION D` (the API `description` field) were carried forward by p118 **with their
+clauses verbatim** and have been **neither attempted nor re-listed since**. They did not fail —
+they fell out of the record, which is how an action dies quietly. 🟢 **Both are re-listed below,
+clauses unchanged, with the number of passes they have now been pending.**
+
+🔵 **Why it happened, as far as this pass can tell: p119 and p120 both wrote their
+pre-registration into `compose/code/pNNN-*/README.md` and the root `README.md`, which is where
+the NEXT pass looks to find its assignment.** The ledger is where a pass looks to find what is
+*still open*, and nothing in the workflow forces the two to agree. 🟢 **`ACTION T` is
+pre-registered to assert it mechanically.**
+
+### 🟢 The four actions p120 pre-registered, all discharged
+
+| action | clause | verdict |
+|---|---|---|
+| **`ACTION N`** | probe the other 227 addresses for tier-4/tier-5 shapes. *Refuted if fewer than 10 are ungranted or author-claim-only* | 🔴 **DISCHARGED and REFUTED** — **4** of 227 (1.8 %). p120's 9-of-22 (41 %) was an upper bound by construction: the 22 were selected for being `UNREAD` |
+| **`ACTION O`** | anchor every bare token on word boundaries, re-run the sweep, compare the claim count. *Refuted if the count moves by fewer than 3* | 🟢 **DISCHARGED, NOT REFUTED** — claim tokens **3 402 → 3 349 (−53)**: −4 from anchoring plus widening, **−49 from a dedup guard that could never work** |
+| **`ACTION P`** | re-measure every `was X` row, checking OTHER pages for values that are NOT `X`. *Refuted if no second address carries a stale token differing from the one its own correction table names* | 🟢 **DISCHARGED, NOT REFUTED** — [`portabilis/i-educar`](https://github.com/portabilis/i-educar) carries **AGPL-3.0** in two live cells; truth is **GPL-2.0** and its correction tables name **`was LGPL-3.0`**. A third value, on a second address |
+| **`ACTION Q`** | read the licence of every manifest-declaring address and count contradictions. *Refuted if fewer than 15 % differ* | 🔴 **DISCHARGED and REFUTED** — **10 of 104 (9.6 %)**. p120's 2-of-4 (50 %) was a 4-address denominator. 🟢 **The DIRECTION survives and sharpens: 7 of 10 permissive-over-restrictive, 1 the other way** |
+
+🔵 **Two of four refuted is the pass's most reusable result.** Both refuted clauses were written
+against figures p120 itself flagged as thin, and both thin figures were honest extrapolations from
+samples chosen for difficulty. 🟢 **The generalisable rule: a rate measured on a sample selected
+for failing is a property of the selection. It must not be published as a property of the
+population**, and this KB published both as exactly that.
+
+### 🔴 `P121-C` — a defect class seven passes of instruments could not see
+
+🔴 **Every licence sweep from p114 to p120 tested one direction: is the published token more
+permissive than the tree?** Looking the other way found two platforms published as *more*
+restrictive than they are:
+
+| address | ★ | published | 🟢 measured | what it cost |
+|---|---|---|---|---|
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 979 | 🔴 AGPL-3.0, *"🔴 no"* | 🟢 **MIT** (split: `docs/` CC-BY-SA-4.0), 1 684 B | a 979★ LMS struck off the shortlist |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 350 | 🔴 GPL-3.0, *"🔴 no"* | 🟢 **Apache-2.0**, 11 357 B | the only timetabling platform in this KB, struck off |
+
+🟢 **Both repaired.** 🔴 **An over-restrictive cell generates no compliance incident, no scanner
+alert and no client complaint — so nothing was ever pointed at it.** It costs options rather than
+money, which makes it invisible to every feedback loop this KB has.
+
+### 🟢 The 10 cells repaired, all re-read from the live tree before editing
+
+| page | address | published | 🟢 measured |
+|---|---|---|---|
+| `agents/top.md` | `artcc/freelingo` | 🟢 MIT | 🔴 **AGPL-3.0** (34 514 B) |
+| `agents/top.md` | `JuneYaooo/lineage-skill` | 🟢 MIT | 🟢 **Apache-2.0** (11 358 B) |
+| `repos/foundations.md` | `douglasrizzo/catsim` | 🟢 MIT | 🟢 **BSD-3-Clause** (1 514 B) |
+| `verticals/solutions.md` | `portabilis/i-educar` | 🔴 AGPL-3.0 | 🔴 **GPL-2.0** (18 092 B) |
+| `verticals/solutions.md` | `frappe/education` | 🟡 AGPL-3 | 🔴 **GPL-3.0** by reference (19 B) |
+| `verticals/solutions.md` | `frappe/education` | 🟢 MIT | 🔴 **GPL-3.0** by reference (19 B) |
+| `verticals/solutions.md` | `UniTime/unitime` | 🔴 GPL-3.0 | 🟢 **Apache-2.0** |
+| `verticals/solutions.md` | `pupilfirst/pupilfirst` | 🔴 AGPL-3.0 | 🟢 **MIT** (split) |
+| `verticals/solutions.md` | `xiaochong0302/course-tencent-cloud` | 🟢 MIT | 🔴 **GPL-2.0** (18 092 B) |
+| `intel/market.md` | `portabilis/i-educar` (**prose**) | AGPL-3.0 | 🔴 **GPL-2.0** |
+
+🔴 **`P121-F`: `frappe/education` carried THREE different licences in three cells of ONE page** —
+GPL-3.0 (correct) in the top table, AGPL-3 in the dependency-reach table, MIT in the lock-reach
+table. 🔵 **A reader who stopped at the first table got the truth.**
+
+### 🔴 `P121-B` — the guard every census in this KB inherits is insufficient, and 6 correct rows paid for it
+
+🔴 **`ACTION P`'s first run flagged 10 rows. Six were already correct.** This KB writes most of its
+corrections **inline**:
+
+```
+| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT** | …
+```
+
+🔴 **p120's guard detects a correction by the table HEADER** (`published` / `what is actually
+there`). It cannot see a correction written inside the cell, under an ordinary header — so the
+census read the shelf's most careful rows as its worst ones. 🟢 **The guard now recognises the
+inline `⚠️ **was X**` marker; the suite asserts both shapes.**
+
+### 🔴 `P121-D` — the same address, two spellings, split between two instruments
+
+| spelling | occurrences in the tree | which instrument holds it |
+|---|---|---|
+| `xGabrielCv/Auto-Matricula-SIGAA-UnB` | 15 | p120's verdict table |
+| `xgabrielcv/auto-matricula-sigaa-unb` | 11 | p118's 249-address census |
+
+🔴 **A case-sensitive join between the two counts one address as two**, which is how this pass's
+first `ACTION N` tally read **4 new** when the honest answer is **3 new plus 1 already known**.
+🔵 **This is `p117 ACTION B`'s defect class — one organisation, one spelling — recurring BETWEEN
+instruments rather than within a page.** 🟢 **`ACTION U` is pre-registered to normalise slug case
+at every join in this KB's toolchain.**
+
+### 🔴 `P121-E` — a dedup guard that could never fire
+
+```awk
+if (index(" " toks " ", " " t " ") == 0) toks = (toks=="" ? t : toks "," t)
+```
+
+🔴 **Joined with `,`, tested with `" "`.** Only the first token could ever match; every later
+repeat leaked. **49 surplus token instances across 46 rows**, carried since p118. 🟢 **Fixed.**
+
+### 🔴 `Gap 402` weakens a SIXTH consecutive pass
+
+| pass | new tokens | rejected as already held |
+|---|---|---|
+| p117 | 4 | 13 | 
+| p118 | 0 | 15 |
+| p119 | 0 | 19 |
+| p120 | 0 | 14 |
+| 🔴 **p121** | 🔴 **0** | **17** |
+
+🟡 **`ACTION S` below offers the first testable explanation rather than another count:** the
+mandated query's phrase *"AI education"* returns repositories about **learning to build AI**
+(`microsoft/ai-agents-for-beginners`, `agents-from-scratch`, `ai-engineering-from-scratch`), not
+agents that **deliver education**. The saturation may be partly a query defect.
+
+### 🟢 Pre-registered for p122, each with its refutation clause
+
+🟢 **`ACTION R` — extend the licence census to PROSE claims, not only table rows.** p118 scoped
+the sweep to licence *columns* on the stated ground that *"a sentence is not a column"*. This pass
+found a wrong licence in a `intel/market.md` **sentence** that asserted *"measured this pass"*
+(`P121-A3`), which no census could have seen. 🔴 **Refuted if fewer than 3 prose licence claims
+across the live pages disagree with the tree.**
+
+🟢 **`ACTION S` — test whether `Gap 402` is a query defect.** Re-run discovery with edtech-specific
+nouns — `LMS`, `SIS`, `autograder`, `student information system`, `learning analytics`,
+`proctoring`, `curriculum alignment`, `gradebook` — once globally and once per region.
+🔴 **Refuted if that set also returns zero genuinely new addresses**, which would establish
+saturation as a property of the web rather than of the query.
+
+🟢 **`ACTION T` — assert mechanically that the ledger, the root `README.md` pass log and the
+newest instrument README name the SAME pass number and the SAME open actions.** `P121-G` shows
+the three drift apart silently. 🔴 **Refuted if a check over the current tree finds all three
+already in agreement** (it will not: `ACTION C` and `ACTION D` are in none of them).
+
+🟢 **`ACTION U` — normalise GitHub slug case at every join in this KB's toolchain**, and re-run
+p118's and p120's joins to count how many addresses were double-counted. 🔴 **Refuted if fewer
+than 2 addresses change their verdict.**
+
+🟡 **`ACTION C` — CARRIED FORWARD, clause verbatim, now pending FOUR passes** (p118, 119, 120, 121):
+layer P, the reverse-DNS package namespace (`src/main/java/<cc>/…`, `pom.xml` `<groupId>`) over
+all census addresses. 🔴 **Refuted if it places fewer than 20.**
+
+🟡 **`ACTION D` — CARRIED FORWARD, clause verbatim, now pending FOUR passes**: layer D, the API
+`description` field, readable only through the MCP relay's SEARCH endpoint (`P118-A`).
+🔴 **Requires placing ≥ 10 of the census; refuted otherwise.** 🔵 **Caution from p118, repeated
+because it still applies: this is the action most exposed to `P800`'s trap — a `description` is
+written by the author and describes intent, not provenance.**
+
 ## 🟢 Hundred-and-eighteenth pass, 2026-10-11 — **`ACTION E` DISCHARGED and NOT refuted: 18 wrong licences, 38 cells, five pages**; **`Gap 406` widens then CLOSES on measurement**; **`P117-A` REFINED — a refusal is a (transport × endpoint) cell**; **`Gap 409` partly RETRACTED — Moodle does commit a licence**; **`Gap 402` weakened a THIRD consecutive pass**; `P118-A`–`P118-O`, `ACTION F`–`J` adopted; 🔴 **`ACTION C` NOT attempted and `ACTION D` only partly reached — both carried forward**
 
 ⏱️ **Fifth pass of 2026-10-11.** Window **03:4x → 04:2x UTC** (p114 23:54→00:25, p115

@@ -1,0 +1,79 @@
+{
+  "name": "@openmaic/dsh-openmaic",
+  "description": "OpenMAIC for DeepSeek Harness: generate classrooms and render slides, interactive widgets, teaching cards, plus a Socratic teaching skill",
+  "version": "0.4.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "dshx": {
+    "contributes": {
+      "tools": [
+        "openmaic_generate",
+        "openmaic_render",
+        "openmaic_widget",
+        "openmaic_slide"
+      ],
+      "skills": [
+        "openmaic-render",
+        "openmaic-widget",
+        "openmaic-slide",
+        "openmaic-teach"
+      ]
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1-rc.1",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-session": "*",
+    "@deepseek-ai/dsh-skill": "*",
+    "@deepseek-ai/dsh-system-prompt": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "^3.18.1-rc.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.2",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "bash scripts/test.sh",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.client.json"
+  },
+  "dependencies": {
+    "@openmaic/dsl": "^0.8.0",
+    "@openmaic/generation": "^0.3.0",
+    "@openmaic/renderer": "^0.1.0",
+    "echarts": "^6.1.0",
+    "shiki": "^4.4.3"
+  }
+}

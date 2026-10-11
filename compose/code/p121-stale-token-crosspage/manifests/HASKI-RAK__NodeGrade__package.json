@@ -1,0 +1,53 @@
+{
+  "name": "@haski/task-evaluation",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "David Fischer"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach -i --parallel --verbose --all run dev",
+    "dev:up": "node tools/stack.mjs up",
+    "dev:serve": "node tools/stack.mjs serve",
+    "dev:down": "node tools/stack.mjs down",
+    "dev:status": "node tools/stack.mjs status",
+    "dev:logs": "node tools/stack.mjs logs",
+    "dev:reset": "node tools/stack.mjs reset",
+    "debug:up": "node tools/debug/stack.mjs up",
+    "debug:serve": "node tools/debug/stack.mjs serve",
+    "debug:down": "node tools/debug/stack.mjs down",
+    "debug:status": "node tools/debug/stack.mjs status",
+    "debug:logs": "node tools/debug/stack.mjs logs",
+    "debug:reset": "node tools/debug/stack.mjs reset",
+    "setup": "yarn workspace backend setup",
+    "lint": "yarn workspaces foreach --parallel --all run lint",
+    "test": "yarn test:backend && yarn test:frontend",
+    "build": "yarn workspaces foreach --topological --all run build",
+    "test:report": "yarn workspace backend test:report",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:debug": "playwright test --debug --project=chromium",
+    "test:backend": "yarn workspace backend test",
+    "test:frontend": "yarn workspace @haski/ta-frontend test:run",
+    "test:int": "yarn workspace backend test:int",
+    "test:specs": "node --test tools/spec-lint/lint.test.mjs",
+    "lint:check": "yarn workspace backend lint:check && yarn workspace @haski/ta-frontend lint:check",
+    "lint:specs": "node tools/spec-lint/cli.mjs",
+    "typecheck": "yarn workspace backend typecheck && yarn workspace @haski/ta-frontend type-check"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@4.7.0",
+  "resolutions": {
+    "tar@^6.1.11": "^7.5.19",
+    "tar@^6.2.1": "^7.5.19",
+    "form-data@^4.0.0": "^4.0.4",
+    "minimist@^1.2.5": "^1.2.8",
+    "@xhmikosr/decompress@^11.1.4": "^10.2.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

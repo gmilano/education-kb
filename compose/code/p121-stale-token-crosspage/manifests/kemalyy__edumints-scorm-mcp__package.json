@@ -1,0 +1,24 @@
+{
+  "name": "scorm-mcp-engine",
+  "private": true,
+  "type": "module",
+  "description": "Pure-logic game engine modules (W1) — tested with vitest, inlined at runtime.",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "a11y-audit": "node tests/a11y/audit.mjs",
+    "scorm-probe": "node tests/runtime/scorm-probe.mjs",
+    "visual:fixtures": "python tests/visual/generate_fixtures.py",
+    "visual": "node tests/visual/snapshot.mjs",
+    "visual:update": "node tests/visual/snapshot.mjs --update"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "pixelmatch": "^6.0.0",
+    "playwright": "1.61.1",
+    "pngjs": "^7.0.0",
+    "vitest": "^2.1.9"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "fcps-school-mcp",
+  "version": "1.2.0",
+  "description": "A local or self-hosted MCP server for FCPS Schoology and StudentVUE.",
+  "type": "module",
+  "bin": {
+    "fcps-school-mcp": "src/cli.js"
+  },
+  "scripts": {
+    "check": "node --check api/mcp.js && node --check src/cli.js && node --check src/config.js && node --check src/deploy.js && node --check src/fcps.js && node --check src/ion.js && node --check src/server.js && node --check src/setup.js",
+    "deploy": "node src/cli.js deploy",
+    "start": "node src/cli.js",
+    "setup": "node src/cli.js setup",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "api",
+    "src",
+    "vercel.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "schoology",
+    "studentvue",
+    "fcps",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "author": "Jabir O. Mohamed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jibberswrld/fcps-school-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jibberswrld/fcps-school-mcp/issues"
+  },
+  "homepage": "https://github.com/jibberswrld/fcps-school-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "unpdf": "1.8.1"
+  }
+}

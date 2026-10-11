@@ -6,6 +6,118 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
+**Pass 121, 2026-10-11.** ⏱️ **Eighth pass of this date** (census window **06:3x → 07:2x UTC**).
+
+🟢 **Instrument: `compose/code/p121-stale-token-crosspage/` — all four pre-registered actions
+(`N`, `O`, `P`, `Q`) discharged. `test_p121.sh` **27 passed / 0 failed**, fully offline.
+**Two of the four are REFUTED on their own clauses**, and the two headline numbers this KB has
+been carrying — p120's *"41 % ungranted"* and *"50 % of manifests contradict"* — are both
+artifacts of a sample too small to divide. 🟢 **10 licence cells repaired across 4 pages, every
+one re-read from the live tree first.**
+
+## 🔴 🆕 `P121-C` — the error class nobody looked for: this shelf has been telling a studio "no" about platforms it CAN build on
+
+🔴 **Every licence sweep this KB has run for seven passes hunted the same direction: a permissive
+token on a copyleft repository. Looking the other way for the first time found two platforms
+published as copyleft that are not.**
+
+| address | published here | 🟢 measured from the tree this pass | what the wrong cell cost |
+|---|---|---|---|
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) (350★) | 🔴 GPL-3.0 | 🟢 **Apache-2.0** — `master/LICENSE`, 11 357 B | 🔴 the university-timetabling platform was marked **"🔴 no"** for reuse. It is Apache-2.0, patent grant included |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (979★) | 🔴 AGPL-3.0 | 🟢 **MIT**, split grant — `docs/` is CC-BY-SA-4.0, client-side JS and everything else MIT | 🔴 an LMS marked **"🔴 no"** is in fact usable through its MIT arm |
+
+🔵 **Both were repaired in this commit.** 🔴 **The asymmetry is the finding.** A permissive token on
+a copyleft repo creates legal exposure and every pass of this KB has been built to catch it. An
+over-restrictive token creates no exposure at all, so nothing was ever built to catch it — and it
+quietly deletes options from a studio's shortlist. `pupilfirst` is a 979★ LMS and `unitime` is the
+only timetabling platform on this shelf. **Both were excluded by a cell, not by a licence.**
+
+## 🔴 🆕 `P121-A` — `ACTION P` DISCHARGED and NOT refuted, on `portabilis/i-educar`
+
+🔴 **The clause asked for a second address carrying a stale token differing from the one its own
+correction table names. [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (718★) is
+it.** Its correction tables on two pages read *"⚠️ **was LGPL-3.0**"*. The live cells read
+**AGPL-3.0** — a value that is neither the truth nor the one the repair was keyed on.
+
+| where | value | is it the truth? | is it the value the correction names? |
+|---|---|---|---|
+| `repos/foundations.md`, `verticals/solutions.md:205` | 🔴 GPL-2.0 ⚠️ *was LGPL-3.0* | 🟢 yes | — |
+| 🔴 `verticals/solutions.md` top platform table | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a THIRD value** |
+| 🔴 `intel/market.md`, the live LATAM shelf (prose) | 🔴 **AGPL-3.0** | 🔴 no | 🔴 **no — a THIRD value** |
+
+🟢 **Measured this pass: `2.12/LICENSE`, 18 092 B, "GNU GENERAL PUBLIC LICENSE Version 2".**
+🔵 **The two wrong cells sat 68 lines from a correct one on the same page.** This is the
+`ais-chat` shape confirmed on a second address, exactly as `ACTION P` predicted, and it is now
+repaired in both places.
+
+## 🟢 `artcc/freelingo` — this page published 🟢 MIT for an AGPL-3.0 agent, 67 lines above its own correction
+
+🔴 **[`artcc/freelingo`](https://github.com/artcc/freelingo) (164★) was 🟢 MIT in this page's star
+table. It is AGPL-3.0** — `main/LICENSE`, 34 514 B, re-read this pass. Sixteen cells across this KB
+name this address; **fourteen are correct**, and line 207 of *this page* already read
+*"🔴 **AGPL-3.0** ⚠️ **was MIT**"*. The wrong cell was 67 lines above its own correction.
+🟢 **Repaired.**
+
+## 🔴 🆕 `P121-B` — 6 correct rows scored as defects, because this KB corrects INLINE and its censuses read HEADERS
+
+🔵 **Stated as this pass's own instrument defect, because it changes how every future sweep must
+be written.** The first run of `ACTION P` flagged 10 rows. Reading all 10 before believing any of
+them — `P120-E`'s lesson — showed **6 were already correct**:
+
+```
+| [`lovejzzz/CourseMapper`](…) | 🔴 **NO GRANT — no licence file** ⚠️ **was 🟢 MIT** | …
+```
+
+🔴 **That row carries the right verdict AND quotes the superseded token, in the same cell, under an
+ordinary table header.** p120's guard — inherited here verbatim — detects a *correction table* by
+its header (`published` / `what is actually there`). It cannot see a correction written inline.
+
+🔵 **So the KB's correction vocabulary and its census vocabulary had diverged**, and the census was
+reading the shelf's most careful rows as its worst ones. 🟢 **The guard now recognises the inline
+`⚠️ **was X**` marker as well as the header, and the suite asserts both.**
+
+## 🟢 The agents shelf, unchanged where it was right
+
+🔵 **The permissive tier of education OSS remains the plumbing, not the platform** — eight passes,
+unchanged, and still the most useful single fact in this KB. The large-install LMS platforms
+(Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0, Chamilo GPL-3.0, ILIAS GPL-3.0) are all
+copyleft; what is permissive is the grading, assessment and tooling layer.
+
+| address | ★ | 🟢 licence, measured | region | what it is |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 24k | 🟢 Apache-2.0 | APAC (HK) | agent-native tutor, lifelong memory |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 67k | 🟢 MIT | North America | 12-lesson agent course; the teaching artefact, not a tutor |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 30k | 🟢 Apache-2.0 | EMEA (FR) | minimal agent loop; the substrate most of this shelf builds on |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 1.5k | 🟢 MIT | North America (UC Berkeley) | Bayesian Knowledge Tracing ITS |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 453 | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT** | APAC (CN) | skill-lineage tutor — **repaired this pass**, `main/LICENSE` 11 358 B |
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | — | 🟢 MIT | North America | inspects student `ggplot` code — grading layer |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | — | 🟢 BSD-3 | North America | R autograding |
+
+🔵 **`lineage-skill` is the small-stakes case that matters anyway**: MIT and Apache-2.0 are both
+permissive, so nothing is legally exposed — but Apache-2.0 carries a patent grant and `NOTICE`
+obligations MIT does not, and a studio that vendors it under the wrong name ships the wrong
+attribution file.
+
+## 🔴 `Gap 402` weakens a SIXTH consecutive pass — the discovery channel is exhausted at this cadence
+
+🔵 **All eight mandated searches ran this pass** — four global, one per region. **17 tokens were
+checked against the tree. All 17 were already held.**
+
+| pass | new tokens | rejected as already held |
+|---|---|---|
+| p117 | 4 | 13 |
+| p118 | 0 | 15 |
+| p119 | 0 | 19 |
+| p120 | 0 | 14 |
+| 🔴 **p121** | 🔴 **0** | **17** |
+
+🟢 **Stated as a position, not a complaint: for this industry at an hourly cadence the public-web
+channel is saturated, and MEASUREMENT of what is held now returns more than DISCOVERY of what is
+not.** This pass repaired 10 cells and refuted 2 of its own hypotheses; it found no new agent.
+Both of those are results, and only one of them required a search engine.
+
+# Education — AI agents shelf
+
 **Pass 120, 2026-10-11.** ⏱️ **Seventh pass of this date** (p114 23:54→00:25, p115 01:13→01:25,
 p117 02:45→03:0x, p118 03:4x→04:2x, p119 04:3x→05:2x, this census window **05:3x → 06:2x UTC**).
 
@@ -135,9 +247,9 @@ cells are repaired in this commit.
 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 931 | 🔴 GPL-3.0 | 🟡 live, but see p118 |
 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **825** | 🔴 772 | 🟢 MIT | 🟢 live — **repaired, the tail carried 772** |
 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **512** | 511 | 🟢 MIT | 🟢 live |
-| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 MIT | 🟢 live |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **453** | — | 🟢 **Apache-2.0** ⚠️ **was 🟢 MIT** | 🟢 live |
 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **389** | 389 | 🟢 MIT | 🟡 live, pushed 2026-05-29 |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🟢 MIT | 🟢 live |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **165** | 164 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 MIT** | 🟢 live |
 | [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | **25** | 25 | 🔴 **AGPL-3.0** ⚠️ **was 🟢 Apache-2.0** — network copyleft | 🟢 live (EMEA, DE) |
 | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🔴 **1** | `—` | 🟢 MIT | 🔴 **`fork:true` — see `P119-B`** |
 

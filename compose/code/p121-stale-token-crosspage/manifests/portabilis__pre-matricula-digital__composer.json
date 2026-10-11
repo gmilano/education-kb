@@ -1,0 +1,55 @@
+{
+    "name": "portabilis/pre-matricula-digital",
+    "version": "2.10.0",
+    "authors": [
+        {
+            "name": "Portábilis",
+            "email": "contato@portabilis.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "nuwave/lighthouse": "^6.57",
+        "mll-lab/graphql-php-scalars": "^6",
+        "league/csv": "^9.6",
+        "dex/frontier": "^0.16.0",
+        "guzzlehttp/guzzle": "^7.7",
+        "laravel/sanctum": "^4.1"
+    },
+    "require-dev": {
+        "haydenpierce/class-finder": "^0.5.2",
+        "orchestra/testbench": "^10.0",
+        "laravel/pint": "^1.22",
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iEducar\\Packages\\PreMatricula\\": "src/",
+            "iEducar\\Packages\\PreMatricula\\Tests\\": "tests/",
+            "iEducar\\Packages\\PreMatricula\\Database\\Factories\\": "database/factories/",
+            "iEducar\\Packages\\PreMatricula\\Database\\Seeds\\": "database/seeds/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "iEducar\\Packages\\PreMatricula\\Providers\\PreMatriculaServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
+    },
+    "scripts-descriptions": {
+        "coverage": "Run converage",
+        "format": "Format code",
+        "test": "Run tests"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

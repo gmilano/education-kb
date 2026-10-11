@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ojd-daps-skills"
+version = "3.0.0"
+description = "An NLP package to extract skills from job adverts."
+authors = ["Nesta <dataanalytics@nesta.org.uk>"]
+
+readme = "README.md"
+packages = [{include = "ojd_daps_skills"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.7.1"
+spacy = "~3.7.4"
+scikit-learn = "^1.4.2"
+pandas = "^2.2.2"
+pyyaml = "^6.0.1"
+skops = "^0.9.0"
+numpy = "^1.26.4"
+boto3 = "^1.34.99"
+botocore = "^1.34.99"
+toolz = "^0.12.1"
+sentence-transformers = "^2.1.0"
+torch = "^1.13.1"
+pytest = "^8.2.0"
+transformers = "4.41.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

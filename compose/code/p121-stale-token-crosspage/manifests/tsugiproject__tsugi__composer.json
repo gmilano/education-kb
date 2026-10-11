@@ -1,0 +1,73 @@
+{
+    "require": {
+        "php": ">=8.4.0",
+        "ext-curl": "*",
+        "phpseclib/phpseclib": "3.0.57",
+        "firebase/php-jwt" : "7.0.5",
+        "nikic/fast-route": "^1.3",
+        "ezyang/htmlpurifier": "v4.19.0",
+
+        "google/auth": "^1.50",
+        "google/apiclient": "^2.19",
+        "google/apiclient-services": "^0.443",
+
+        "nesbot/carbon" : ">=v3.9.1",
+
+        "symfony/browser-kit" : ">=8.0.8 <8.1",
+        "symfony/clock": "8.0.8",
+        "symfony/deprecation-contracts": ">=3.5.1",
+        "symfony/dom-crawler": "8.0.12",
+        "symfony/error-handler": "7.4.8",
+        "symfony/event-dispatcher": "8.0.8",
+        "symfony/http-client" : ">=7.2.4 <8.1",
+        "symfony/http-foundation" : "7.4.13",
+        "symfony/http-kernel" : "7.4.13",
+        "symfony/mime" : "8.0.12",
+        "symfony/polyfill-intl-idn": ">=1.38.1",
+        "symfony/polyfill-intl-normalizer": ">=1.38.0",
+        "symfony/polyfill-mbstring": ">=1.38.1",
+        "symfony/polyfill-php72": ">=1.31.0",
+        "symfony/process": "^7.4",
+        "symfony/routing" : "8.0.13",
+        "symfony/translation" : "8.0.8",
+        "symfony/var-dumper": "7.4.8",
+        "psr/http-client": ">=1.0.3",
+
+        "monolog/monolog" : ">=3.9.0",
+
+        "react/event-loop" : ">=1.5.0",
+        "react/stream" : ">=1.3.0",
+        "react/promise-timer" : ">=1.11.0",
+        "react/dns" : ">=1.13.0",
+        "react/socket" : ">=1.16.0",
+
+        "minishlink/web-push": "^9.0",
+        "mmccook/php-json-canonicalization-scheme": "^1.0",
+        "stripe/stripe-php": "^20.2",
+        "async-aws/ses": "^1.16",
+        "guzzlehttp/guzzle": "7.15.2",
+        "guzzlehttp/psr7": "2.13.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Koseu\\": "koseu/src/",
+        "Tsugi\\": "lib/src/"
+      }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "platform-check": false
+    },
+    "scripts": {
+        "lint": "php -l index.php && php -l top.php && php -l tsugi.php && php -l about.php && find admin api assertions cc cron dev ext ims lti mod store util -name '*.php' -print0 | xargs -0 -n 1 php -l",
+        "phpstan": "phpstan analyse -c phpstan.neon --memory-limit=1G --no-progress",
+        "finalize-vendor": "bash qa/finalize-vendor.sh",
+        "post-update-cmd": "@finalize-vendor"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.5.22",
+        "symfony/panther": "^2.1",
+        "dbrekelmans/bdi": "^1.4"
+    }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "mentingo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "packages:build": "pnpm --filter @repo/shared build && pnpm --filter @repo/email-templates build && pnpm --filter @repo/prompts build && pnpm --filter @repo/scorm-export-runtime build && pnpm --filter @repo/scorm-export-generator build",
+    "dev": "turbo dev",
+    "dev:test": "turbo dev:test",
+    "setup:unix": "chmod +x setup.sh && ./setup.sh",
+    "setup:win": "bash setup.sh",
+    "lint": "turbo lint",
+    "lint-tsc-web": "pnpm run --filter=web lint-tsc",
+    "lint-tsc-api": "pnpm run --filter=api lint-tsc",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,jsx,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,js,jsx,json}\"",
+    "generate:client": "pnpm run --filter=web generate:client",
+    "db:generate": "pnpm run --filter=api db:generate",
+    "db:migrate": "pnpm run --filter=api db:migrate",
+    "db:seed": "pnpm run --filter=api db:seed",
+    "test:web": "pnpm run --filter=web test",
+    "test:api": "pnpm run --filter=api test",
+    "test:web:e2e": "pnpm run --filter=web test:e2e",
+    "test:api:e2e": "pnpm run --filter=api test:e2e",
+    "perf:load": "pnpm --filter @mentingo/performance-tests test:load",
+    "perf:stress": "pnpm --filter @mentingo/performance-tests test:stress",
+    "perf:spike": "pnpm --filter @mentingo/performance-tests test:spike",
+    "perf:soak": "pnpm --filter @mentingo/performance-tests test:soak",
+    "perf:mixed": "pnpm --filter @mentingo/performance-tests test:mixed",
+    "perf:load:dashboard": "pnpm --filter @mentingo/performance-tests test:load:dashboard",
+    "start:debug": "pnpm run --filter=api start:debug",
+    "prepare": "husky",
+    "gpush": "git push --no-verify"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.10",
+    "prettier": "3.4.1",
+    "prettier-plugin-tailwindcss": "0.6.9",
+    "tsc-files": "1.1.4",
+    "turbo": "2.3.3",
+    "typescript": "5.4.5"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "@hookform/resolvers@3.9.0": {
+        "dependencies": {
+          "zod": "3.25.76"
+        }
+      }
+    }
+  },
+  "packageManager": "pnpm@10.22.0",
+  "engines": {
+    "node": ">=22.15.0"
+  }
+}

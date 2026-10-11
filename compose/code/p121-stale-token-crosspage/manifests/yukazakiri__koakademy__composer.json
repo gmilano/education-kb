@@ -1,0 +1,211 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "yukazakiri/koakademy",
+    "type": "project",
+    "description": "Self-hosted school administration and learning platform built with Laravel, Filament, Inertia, and React.",
+    "keywords": [
+        "laravel",
+        "self-hosted",
+        "education",
+        "school-management",
+        "learning-management-system",
+        "filament",
+        "inertia",
+        "react"
+    ],
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "php": ">=8.5 <8.6",
+        "achyutn/filament-log-viewer": "^2.0",
+        "alizharb/filament-activity-log": "^2.0",
+        "awcodes/filament-gravatar": "^4.0",
+        "backstage/mails": "^5.0",
+        "barryvdh/laravel-debugbar": "^4.0",
+        "bezhansalleh/filament-shield": "^4.0",
+        "chrome-php/chrome": "^1.15",
+        "coolsam/modules": "^5.0",
+        "cweagans/composer-patches": "^2.0",
+        "endroid/qr-code": "^6.0",
+        "erag/laravel-pwa": "^2.1",
+        "filament/filament": "^5.0",
+        "filament/spatie-laravel-media-library-plugin": "^5.0",
+        "filament/spatie-laravel-settings-plugin": "^5.0",
+        "flowframe/laravel-trend": "*",
+        "google/apiclient": "^2.19",
+        "guava/calendar": "^3.0",
+        "guava/filament-icon-select-column": "^3.0",
+        "guzzlehttp/guzzle": "^7.10",
+        "helios-live/filament-feature-showcase": "^1.2",
+        "http-interop/http-factory-guzzle": "^1.2",
+        "inertiajs/inertia-laravel": "^3.0",
+        "joaopaulolndev/filament-edit-profile": "^3.0",
+        "joaopaulolndev/filament-general-settings": "^3.0",
+        "koakademy/forms": "^1.10",
+        "laraowl/client": "^1.0",
+        "laravel/ai": "^1.0",
+        "laravel/framework": "^13.0",
+        "laravel/horizon": "^5.0",
+        "laravel/mcp": "^1.0",
+        "laravel/nightwatch": "^1.22",
+        "laravel/octane": "^2.13",
+        "laravel/pennant": "^1.18",
+        "laravel/pulse": "^1.4",
+        "laravel/sail": "^1.46",
+        "laravel/sanctum": "^4.0",
+        "laravel/scout": "^11.0",
+        "laravel/socialite": "^5.24",
+        "laravel/telescope": "^5.12",
+        "laravel/tinker": "^3.0",
+        "laravel/wayfinder": "^0.1.12",
+        "league/flysystem-aws-s3-v3": "^3.35",
+        "maatwebsite/excel": "4.x-dev",
+        "mansoor/filament-versionable": "5.x-dev",
+        "marcelweidum/filament-passkeys": "^4.0.5",
+        "meilisearch/meilisearch-php": "^1.16",
+        "moataz-01/filament-notification-sound": "^1.0",
+        "mozex/laravel-scout-bulk-actions": "^1.7",
+        "predis/predis": "^3.2",
+        "pusher/pusher-php-server": "^7.2",
+        "pxlrbt/filament-environment-indicator": "^3.0",
+        "pxlrbt/filament-spotlight": "^2.0",
+        "resend/resend-laravel": "^1.1",
+        "robertogallea/pulse-api": "^1.0",
+        "rupadana/filament-api-service": "^5.0",
+        "saasykit/laravel-open-graphy": "^1.2",
+        "sentry/sentry-laravel": "^4.20",
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.6",
+        "shuvroroy/filament-spatie-laravel-backup": "^4.0",
+        "simplestats-io/laravel-client": "*",
+        "smalot/pdfparser": "^2.12",
+        "spatie/laravel-activitylog": "^5.0",
+        "spatie/laravel-pdf": "^2.2",
+        "spatie/laravel-permission": "^6.21",
+        "spatie/laravel-tags": "^4.10",
+        "stechstudio/filament-impersonate": "^5.0",
+        "stephenjude/filament-debugger": "^5.0",
+        "tightenco/ziggy": "^2.5",
+        "tonegabes/filament-phosphor-icons": "^1.3",
+        "ysfkaya/filament-phone-input": "^4.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.6",
+        "driftingly/rector-laravel": "^2.0",
+        "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.0",
+        "laravel/boost": "^2.0",
+        "laravel/pail": "^1.2",
+        "laravel/pao": "^1.0",
+        "laravel/pint": "^1.24",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "pestphp/pest": "^5.0",
+        "pestphp/pest-plugin-agent": "^5.0",
+        "pestphp/pest-plugin-evals": "^5.0",
+        "pestphp/pest-plugin-laravel": "^5.0",
+        "pestphp/pest-plugin-phpstan": "^5.0",
+        "pestphp/pest-plugin-rector": "^5.0",
+        "phpstan/phpstan": "^2.2",
+        "rector/rector": "^2.6"
+    },
+    "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://yukazakiri.github.io/koakademy-modules",
+            "canonical": false
+        },
+        "forms": {
+            "type": "vcs",
+            "url": "https://github.com/yukazakiri/koakademy-module-forms.git"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi",
+            "@php artisan test --parallel --compact"
+        ],
+        "lint": [
+            "rector --debug",
+            "pint"
+        ],
+        "pint": [
+            "vendor/bin/pint"
+        ],
+        "stan": [
+            "php -d memory_limit=-1 vendor/bin/phpstan analyse"
+        ],
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate",
+            "@php artisan migrate --force",
+            "@php artisan wayfinder:generate",
+            "npm install",
+            "npm run build"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "nativephp/desktop",
+                "nativephp/laravel"
+            ]
+        },
+        "merge-plugin": {
+            "include": [
+                "Modules/*/composer.json"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true,
+            "cweagans/composer-patches": true
+        },
+        "audit": {
+            "abandoned": "report"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
