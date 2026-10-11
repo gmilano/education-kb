@@ -6,6 +6,127 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 131
+
+**A pass that audits the previous pass.** p130 rewrote all six non-append-only pages from one
+instrument and declared four gaps. 🔴 **Three of the four are refuted by rows this KB already
+carried — on these very append-only pages, which p130 did not rewrite.** Nothing below was found on
+the web; it was found by grepping this repository.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P131-A` | 🔴 **A REWRITE PUBLISHED ABSENCES ITS OWN KB REFUTES** | **3 of p130's 4** declared gaps refuted; the refuting rows were already on live pages |
+| `P131-B` | 🔴 **AN API FIELD PUBLISHED OVER A PAYLOAD READ — reinstating a retracted claim** | `openeducat_erp`: API `NOASSERTION` published over this KB's own **8 241 B `LICENSE` → LGPL-3.0** |
+| `P131-C` | 🟢 **THE DEMAND CHANNEL IS SATURATED — 4th consecutive pass, now counted** | **0 new tokens in all 4 regions**; 1 useful confirmation (Council adoption) |
+| `P131-D` | 🟢 **3 NEW ADDRESSES, all MIT, all proctoring, all sub-20★** | `online-examination-system` 11★ · `SecureExam-Platform` 10★ · `cheatshield` 8★ |
+| `P131-E` | 🔴 **A ZERO FROM A GENERIC MULTI-TERM QUERY MEASURES THE QUERY, NOT THE FIELD** | control: a 5-term SIS query returns **0** while `academico` is **MIT, 404★**, topic `student-information-system` |
+
+### `P131-A` — the two tiers that were never missing
+
+p130's `agents/top.md` declared *"no education-specific agent-evaluation or learning-outcome
+benchmark in open source… **the largest hole on the shelf**"* and *"no Moodle MCP server with a
+clear permissive licence"*. Both are false, and the evidence was already here:
+
+| p130's declared absence | what refutes it, already in this KB | where |
+|---|---|---|
+| no education benchmark exists | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) — 43★, ETH Zurich, **EMNLP 2025 oral**, held **since pass 4** | `agents/trending.md:15081` |
+| " | [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) — 57★, licence read in full as a **2 690 B bespoke** grant | `agents/trending.md:12242` |
+| no permissive Moodle MCP | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) — **MIT**, 43★, verified at **pass 30** as *the licence-boundary exemplar* | `agents/trending.md:2931`, `:7874` |
+| no SIS beyond 2 candidates | the **system-of-record tier**: RosarioSIS, Gibbon, OpenEduCat, openSIS, Fedena, `frappe/education` | `agents/trending.md:5160` |
+
+🔵 **The cause is a single decision, and it is the one p130 announced as its improvement.** p130
+re-derived every page from GitHub repo search alone. Repo search returns metadata and cannot see a
+licence payload, a prior retraction, or an address found by a different query. **A rewrite grounded
+in one instrument discards everything the KB established with the others** — and then publishes the
+discards as gaps, which is the most expensive possible form of the error: it tells a studio there is
+nothing to start from when there is.
+
+### `P131-B` — the direction of the defect reversed
+
+p129 found **prose that disagreed with the instrument**. p131 finds the opposite: **an instrument's
+coarse field published over a resolved payload read.**
+
+`openeducat/openeducat_erp` — GitHub reports `license.spdx_id = NOASSERTION`, and p130 published
+*"Licence reads as 'Other': review terms before use"*. 🔴 **But this KB read `master/LICENSE` in
+full — 8 241 bytes, genuinely LGPL-3.0 — and used that read to RETRACT an even earlier "no grant"
+row** (`agents/trending.md:5923`, `:7675`, `:7708`). p130 reinstated a claim this KB had already
+withdrawn.
+
+🟢 **The rule, stated so it cannot regress:** `NOASSERTION` means *"GitHub's matcher did not
+recognise this file"*. It is **"unread"**, never **"ungranted"**. Rows still carrying it here
+(`OpenOLAT`, `education-agent-skills`, `frappe/education`, `Khan/tutoring-accuracy-dataset`) are
+**unread**, and two of them have in fact been read by earlier passes.
+
+### `P131-C` — four regions, zero new tokens
+
+The prescribed battery was run in full: four global queries and one per region. 🔴 **Every fact
+returned was already on a live page of this KB** — the Digital Omnibus deferral (2027-12-02 /
+2028-08-02), Ohio's 1 July 2026 district duty, `H.R. 8747`, California `AB 1159`, Idaho `SB 1227`,
+Vietnam's high-risk education listing, Korea's AI Basic Act (22 Jan 2026), UNESCO IESALC's **87% /
+26%**, the Digital Education Council LATAM figures, the UNESCO LAC Observatory (14 Apr 2026), the UK
+**£4M** programme, the OECD *2026 Digital Education Outlook*, **134 bills / 31 states**, EMEA
+**~$2.64B**.
+
+| region | new tokens | what came back |
+|---|---|---|
+| **North America** | 🔴 **0** | state-by-state bills, Ohio, H.R. 8747, NYC moratorium — all held |
+| **EMEA** | 🔴 **0 new**, 🟢 **1 confirmation** | **Council's final green light 29 June 2026** — closes p130's open question and repairs `intel/policy-matrix.tsv` |
+| **APAC** | 🔴 **0** | Korea, Vietnam, Taiwan, Singapore — all held |
+| **LATAM** | 🔴 **0** | UNESCO IESALC, LAC Observatory, DEC survey, CONPES 4144 — all held |
+
+🟢 **A saturated channel is a confirmation channel.** The EMEA confirmation alone justified the
+battery: it was worth one repaired data row. But the pass's real yield came from gap-directed repo
+queries and from grepping this repository.
+
+### `P131-D` — the proctoring tier is permissive after all
+
+This KB has carried a standing claim (`Gap 344`) that the exam-proctoring tier has **zero permissive
+rows**, listing only GPL ones. 🔴 **Refuted.** Four **MIT** rows:
+
+| repo | licence | stars | last push | note |
+|---|---|---|---|---|
+| [`RakeshBabuGajula/Exam_Intellect`](https://github.com/RakeshBabuGajula/Exam_Intellect) | **MIT** | 18 | 2026-10-05 | **already held here** — so the claim was refuted by this KB's own shelf before p131 ran |
+| [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system) | **MIT** | 11 | 2026-08-19 | 🆕 React/Vite + Spring Boot, Dockerised |
+| [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP; face tracking, tab-switch monitoring |
+| [`vishal017/cheatshield`](https://github.com/vishal017/cheatshield) | **MIT** | 8 | 2025-04-03 | 🆕 YOLOv5 + MTCNN + **YAMNet audio** + PyQt5. 🔴 stale ~18 months |
+
+🟡 **The gap survives in a better form: maturity, not licence.** Largest is 18★, all four
+individually owned, none institution-backed — against an Annex III high-risk class binding
+**2027-12-02**, and with three of the four doing affect-adjacent inference, which in EU education is
+**prohibited** under Art. 5, not merely gated.
+
+### `P131-E` — the instrument finding: a generic zero is void
+
+🔴 **`student information system school management license:mit stars:>30` returned 0.** The control
+refutes it outright: `repo:academico-sis/academico` returns **`license.spdx_id = MIT`, 404★**, with
+the topic `student-information-system`. **Cause:** repo search matches name and description with an
+implicit AND and **does not search topics**; academico's description says *"school management
+platform"* and never contains the words *student*, *information* or *system*.
+
+Two consequences applied this pass:
+
+- 🔴 **`kolibri offline learning AI tutor stars:>2` → 0 is void as evidence.** Re-probed validly as
+  `kolibri stars:>2` → **86 repos**: three are the platform family (`kolibri` 1 141★, `studio` 192★,
+  `kolibri-design-system` 52★) and the other 83 are name collisions (KolibriOS, an accessible-HTML
+  design system, a Rust embedded GUI, two keyboards, a SPARQL engine, a game engine). 🟢 **Zero are
+  AI-on-top, so the Kolibri gap SURVIVES — now on a probe that can actually see it.**
+- 🔴 **An `OR` query across unrelated terms degenerates to the generic population.**
+  `openeducat OR chamilo OR sakai OR ilias AI assistant stars:>3` returned **8 908** results headed
+  by `openclaw` at **391 678★**. Discarded; those four platforms need one narrow query each.
+
+🟢 **Rule:** a gap may only be declared from a probe narrow enough that a known positive would
+appear in it. **State the control next to the zero, or do not state the zero.**
+
+### Instruments confirmed unchanged from p130
+
+🔴 `curl -sI https://github.com/<repo>` still returns **403 for every URL**, real or not, so it
+verifies nothing. 🔴 `api.github.com` for arbitrary repos and the `gh` CLI search path remain
+blocked. 🟢 GitHub **repo search** works and is authoritative for metadata — and, per `P131-B`,
+blind to payload. Evidence committed as
+`evidence/verified-repos.2026-10-11-p131.tsv` (**19 repos**, of which **3 new**).
+
+---
+
 ## 2026-10-11 — Pass 130
 
 **A verification pass.** Instruments were re-tested before any row was written, and two of this

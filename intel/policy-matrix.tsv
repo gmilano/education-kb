@@ -31,7 +31,7 @@
 # Columns: region	jurisdiction	function	verdict	effective	instrument	note
 region	jurisdiction	function	verdict	effective	instrument	note
 EMEA	EU	emotion_recognition	PROHIBITED	2025-02-02	AI Act Art. 5	In education institutions; medical/safety exception only. The one unambiguous prohibition on this axis.
-EMEA	EU	assessment_grading	GATED	2027-12-02	AI Act Annex III pt 3	High-risk. Obligations moved from 2026-08-02 by the Digital Omnibus; EP vote reported 2026-06-16, Council adoption NOT confirmed here.
+EMEA	EU	assessment_grading	GATED	2027-12-02	AI Act Annex III pt 3	High-risk. Obligations moved from 2026-08-02 by the Digital Omnibus. P131: Council adoption now CORROBORATED on a second, independent channel - final green light reported 2026-06-29, published as Reg. (EU) 2026/1744 of 2026-07-08. The deferral is law, not a political agreement.
 EMEA	EU	admissions_access	GATED	2027-12-02	AI Act Annex III pt 3	High-risk: systems determining access or admission.
 EMEA	EU	learning_path_steering	GATED	2027-12-02	AI Act Annex III pt 3	High-risk: influencing an individual's educational path.
 EMEA	EU	proctoring_behaviour	GATED	2027-12-02	AI Act Annex III pt 3	Bias testing, human oversight, user notification. Facial/behaviour analysis also hits Art. 5 where it infers emotion.

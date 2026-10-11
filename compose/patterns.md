@@ -6,7 +6,8 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
-**Pass 130, 2026-10-11.** Full rewrite. Six recipes. Each names the actual repos, the licence
+**Pass 131, 2026-10-11.** p130's six recipes retained; **P6 re-grounded on two real benchmarks**
+and **P7 added** (see `README.md` → Pass 131). Seven recipes. Each names the actual repos, the licence
 posture of the result, how the pieces wire together, and what it does not solve. Every repo cited
 is verified in `evidence/verified-repos.2026-10-11.tsv`.
 
@@ -179,7 +180,7 @@ of classrooms (Ipsos 2026), so adoption is a change-management problem, not a so
 
 ---
 
-## P6 — Learning-outcome evaluation harness *(the missing instrument)*
+## P6 — Learning-outcome evaluation harness *(the instrument exists; it is unshippable)*
 
 **For:** any client who will be asked "did it work?" — and the differentiator none of them can
 currently buy.
@@ -194,9 +195,24 @@ currently buy.
 | structured lesson model | [`oppia/oppia`](https://github.com/oppia/oppia) | Apache-2.0 |
 | interaction telemetry | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (xAPI) | MIT |
 | multi-agent baseline | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | CC0-1.0 |
+| **pedagogical benchmark** | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (ETH Zurich, EMNLP 2025 oral) | 🔴 **none declared** — run/cite only |
+| **failure-mode dataset** | [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) (Khan Academy) | 🔴 **bespoke eval-dataset licence** — run/cite only |
 
-**Wiring.** No open-source harness measures whether agentic tutoring improves learning (T7), so
-build the measurement as a deliverable. BKT parameters from `OATutor` give a quantitative,
+**Wiring.** 🔴 **p130 built this pattern on the claim that no benchmark exists. Two do** (T7), and
+starting from them removes weeks of design — so this pattern is now *two layers*, and the licence
+boundary between them is the whole point.
+
+**Layer 1 — borrow the published task structure (do not ship it).** Run `mathtutorbench` against
+the candidate tutor for open-ended *pedagogical* capability (scaffolding, hint quality, when to
+withhold the answer), and use `Khan/tutoring-accuracy-dataset` as the known-failure-mode set for
+maths tutoring. 🔴 **Neither may be redistributed inside a client deliverable**: `mathtutorbench`
+declares no licence and its README names two different ones, Khan's is a bespoke 2 690-byte
+"Evaluation Dataset License". **Run them in your own environment, report the scores, ship neither
+the data nor a derived fixture set.** If the client needs a shippable suite, re-author the task
+*shapes* against their own curriculum — the ideas are not the asset, the labelled data is.
+
+**Layer 2 — build the outcome half, which genuinely does not exist.** Both benchmarks measure tutor
+behaviour, not whether a student learned. BKT parameters from `OATutor` give a quantitative,
 inspectable mastery estimate independent of the tutor's self-assessment; `tutor-mcp` logs every
 decision with the mastery state that produced it; xAPI via `scorm-again` captures interaction
 telemetry from existing courseware so a pre-intervention baseline exists; Oppia's lesson model
@@ -207,8 +223,51 @@ content, tutor on and off, compare mastery trajectories and retention at a fixed
 US state mandates ask for evidence that high-stakes decisions were sound; EU Annex III will ask for
 documented performance. One harness answers the pedagogical question and three regulatory ones.
 
-**Does not solve:** it measures, it does not teach. And it needs a holdout design the institution
-must agree to — negotiate that at contract time, not at delivery.
+**Does not solve:** it measures, it does not teach. It needs a holdout design the institution must
+agree to — negotiate that at contract time, not at delivery. 🔴 **And the two borrowed benchmarks
+are maths-only**: for any other subject, Layer 1 has no published instrument and the shapes must be
+authored from scratch.
+
+---
+
+## P7 — Moodle agent on the permissive side of the GPL boundary *(the route p130 said did not exist)*
+
+**For:** any client on Moodle — the most deployed LMS in the world — that wants an AI layer it can
+own, without taking on GPL-3.0 reciprocity on its own code.
+**Timeline:** 5–7 weeks.
+
+**Stack**
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| platform (untouched) | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | Left entirely alone. **Nothing is forked and no plugin is written**, so no reciprocity is triggered. |
+| connector | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | Standalone MCP server against Moodle's **web-service API**. Verified MIT by two independent instruments. 🔴 **Quiet since 2026-02-22 and publishes no tags — pin a commit.** |
+| assessment + gradebook | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | **MIT** | Exams, gradebooks, item analysis, with **writes off by default** — the right default for anything touching grades. Corporate holder, LTI path. |
+| durable learner state | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | BKT mastery, review scheduling, misconception tracking, auditable pedagogical decisions. LMS-agnostic. |
+| launch surface | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | **MIT** | LTI 1.3 launch with signed identity and grade passback, so the UX lives inside Moodle while the code lives outside it. |
+| build velocity | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) + [`claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | **MIT** | Live moodledev.io docs, Hooks API, XMLDB and Jira as agent tools; plus plugin-building skills if a plugin ever does become necessary. |
+
+**Wiring.** Moodle's web-service API is the whole trick: enable the web-service functions the use
+case needs, issue a scoped token per service, and point the MIT MCP servers at it. The agent gets
+courses, assignments, submissions and grades as tools; `tutor-mcp` holds the mastery state between
+turns so the tutor is not re-deriving the learner from the transcript each time; `ictexam-mcp`
+handles anything assessment-shaped with writes explicitly enabled only where a human approves.
+Learner-facing UX enters through **LTI 1.3**, not a plugin. **Every line Globant writes stays MIT or
+client-proprietary**; the only GPL-3.0 artefact in the deployment is Moodle itself, unmodified.
+
+**Why this pattern exists.** p130's pages told a reader that Moodle had *no permissively licensed
+MCP route* and that the options were a GPL-3.0 in-tree plugin or an unlicensed web-service plugin.
+That was false in both directions, and the cost of the error is the whole engagement shape: it
+pushes a client toward writing a GPL plugin when a clean-room MIT side-car was available.
+
+**Checks before proposing it.** Confirm the client's Moodle has web services enabled and tokens
+issuable — some managed hosts disable them. Pin commits (`peancor` has no tags). Keep grade writes
+behind human approval: automated grading is **Annex III high-risk** in the EU from 2027-12-02 and is
+restricted by several US state rules now (`intel/policy-matrix.tsv`).
+
+**Does not solve:** deep in-page Moodle UX. If the client insists the AI live inside a Moodle
+activity rather than an LTI launch, a GPL-3.0 plugin becomes unavoidable — and the reciprocity is on
+the plugin, not the client's other code.
 
 ---
 
@@ -222,7 +281,12 @@ must agree to — negotiate that at contract time, not at delivery.
 | is an EU institution touching admissions/grading | **P4** |
 | is a ministry facing a curriculum mandate | **P5** |
 | will be asked whether it worked | **P6** — always, alongside the others |
+| runs **Moodle** and wants to own its AI layer | **P7** |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship
-emotion recognition into an EU deployment. Treat `NOASSERTION`/unlicensed components as unusable
-until counsel clears them, however many stars they have. Pin commits for repos with no releases.
+emotion recognition into an EU deployment. Treat unlicensed components as unusable
+until counsel clears them, however many stars they have — and treat **`NOASSERTION` as "unread",
+not "unusable"**: GitHub reports it whenever its matcher does not recognise a `LICENSE` file, and
+this KB has resolved at least one such row (`openeducat_erp` → **LGPL-3.0**, 8 241 B) by reading the
+payload. Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
+screen as code** — the two education benchmarks that exist are both ungranted.

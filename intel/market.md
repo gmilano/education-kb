@@ -6,8 +6,10 @@ updated: 2026-10-11
 
 # Education — market map and opportunities
 
-**Pass 130, 2026-10-11.** Full rewrite. Figures below are attributed to the kind of source they
-came from, because the spread between sources is itself the finding.
+**Pass 131, 2026-10-11.** p130's figures retained and re-checked against this pass's battery (all
+of them already held — see `intel/trends.md` → T10); **the EMEA regulatory status and the
+Global/unplaced benchmark claim corrected** (see `README.md` → Pass 131). Figures are attributed to
+the kind of source they came from, because the spread between sources is itself the finding.
 
 ## Market size — the honest range
 
@@ -82,11 +84,13 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### EMEA
 
-- **The regulatory clock moved, and that is the single most important EMEA fact this pass.**
-  High-risk obligations for Annex III education use cases (admissions, grading, proctoring) were
-  **postponed to 2 December 2027** under the Digital Omnibus on AI, approved by the European
-  Parliament in June 2026 — but **the Council had not yet formally adopted the text** as of this
-  pass. Treat the delay as politically agreed, not final.
+- **The regulatory clock moved, and the deferral is now confirmed as law.** High-risk obligations
+  for Annex III education use cases (admissions, grading, proctoring) were **postponed to 2 December
+  2027** under the Digital Omnibus on AI. 🟢 **p131 correction:** p130 recorded the Council as not
+  yet having adopted and told the reader to treat the delay as "politically agreed, not final". The
+  **Council's final green light is reported for 29 June 2026**, and this KB's own pages have carried
+  the instrument as **Regulation (EU) 2026/1744 of 8 July 2026** for several passes. **Plan against
+  2 December 2027 as a legal date** (Annex I embedded systems: 2 August 2028).
 - **What already binds, regardless of the delay:** emotion recognition in education has been
   **prohibited since 2 February 2025**; **AI literacy duties (Article 4) have applied since
   February 2025**; public schools face a fundamental-rights impact assessment.
@@ -98,8 +102,18 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   an obligation already in force, and architecture that keeps grading and admissions decisions
   human-made by construction. **Avoid emotion recognition entirely** — it is already illegal here,
   and products built elsewhere ship it.
+- 🆕 **Two concrete EMEA openings p130 missed.** (1) **Proctoring is the asked-for capability the
+  shelf cannot supply at grade** — four MIT projects exist, the largest is 18★, and three do
+  affect-adjacent inference, which in an EU education setting is **prohibited outright** (Art. 5),
+  not merely high-risk. An auditable, affect-free integrity system built for Annex III from the
+  start has no open-source incumbent and a dated legal driver. (2) **The benchmark layer is
+  EMEA-origin** — `eth-lre/mathtutorbench` (ETH Zurich, EMNLP 2025 oral) is the strongest
+  evaluation asset in this KB, and its licence is unresolved; an EMEA engagement is the natural
+  place to fund or negotiate that resolution.
 - **Platform reality:** EMEA procurement runs on ILIAS, OpenOLAT, Chamilo and Moodle far more than
-  on Canvas, and all four have essentially no AI-on-top. Standards and accessibility compliance are
+  on Canvas, and all four have essentially no AI-on-top. 🟢 **Moodle is now better served than p130
+  recorded:** five **MIT** standalone MCP servers exist (`repos`/`agents` pages), so a Moodle
+  engagement no longer starts from a licence problem. Standards and accessibility compliance are
   scored in tenders. Richie (MIT, France) is proven at national scale for the public-facing layer.
 
 ### APAC
@@ -157,9 +171,20 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 - Open-source supply is **not** regionally distributed in any useful way: one Apache-2.0 agent at
   41k stars (APAC-origin) and a long tail under 1k. Most agent repos carry **no location evidence at
   all** — 11 of the 17 agent rows in `agents/top.md` are marked unplaced rather than guessed.
-- The **absent benchmark** is global: nothing open source measures whether a tutoring agent improves
-  learning outcomes. Every engagement must bring its own evaluation harness, and the client that
-  gets one is buying evidence no competitor can show.
+- 🔴 **Correction to p130's "absent benchmark".** The benchmark layer is **not absent** — it is
+  **ungranted**. `eth-lre/mathtutorbench` (43★, EMEA) carries no licence field and names two
+  different licences in one README; `Khan/tutoring-accuracy-dataset` (57★, North America) carries a
+  bespoke 2 690-byte evaluation-dataset licence and has been dormant since August 2024. 🟢 **What is
+  genuinely absent is outcome measurement:** both measure tutor *behaviour*, neither measures
+  durable learning gains — the standard the OECD's 2026 Digital Education Outlook asks for. The
+  client who gets outcome evidence is still buying something no competitor can show; the build is
+  just cheaper than p130 implied, because it starts from two real benchmarks.
+- 🆕 **The permissive/popular inversion, across every tier measured this pass.** The most-starred
+  item is repeatedly the unusable one: Moodle connectors (most-starred `loyaniu/moodle-mcp`, 40★,
+  **no licence**; permissive leader `peancor`, 43★ but quiet since February), Canvas (103★
+  `mcp-canvas-lms`, **no licence**, vs MIT `canvas-mcp` at 288★), agent skills (847★,
+  **NOASSERTION**), benchmarks (both ungranted). **Licence screening is not a late-stage check in
+  this sector; it reorders the shortlist.**
 
 ## Declared gaps in this market picture
 

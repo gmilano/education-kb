@@ -6,6 +6,99 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 131
+
+**The repo-side headline is a licence this KB had already resolved and then un-resolved.**
+
+### `openeducat/openeducat_erp` is LGPL-3.0, and this KB knew that
+
+| field | p130 published | p131 restores |
+|---|---|---|
+| licence | **NOASSERTION** — *"licence unresolved"*, *"review terms before use"* | 🟢 **LGPL-3.0**, read from `master/LICENSE` at **8 241 bytes** |
+| basis | GitHub API `license.spdx_id` | this KB's own payload read, which **retracted** an earlier *"no grant"* row |
+| consequence for a client | ERP slot unusable pending legal review | **LGPL: linking is fine**, modifying the module carries reciprocity |
+
+🔴 **GitHub reports `NOASSERTION` whenever its matcher does not recognise a `LICENSE` file.** It
+means *unread*, not *ungranted*. p130 read it as the latter and so reinstated a claim this KB had
+already withdrawn (`agents/trending.md:5923`, `:7675`). The row is corrected in
+`repos/foundations.md` and `verticals/solutions.md`.
+
+### The system-of-record tier, restored
+
+p130's `repos/foundations.md` told the reader *"no open-source student information system of record…
+`openeducat_erp` (licence unclear) and `academico` (small) are the whole field."* 🔴 **The field is
+at least six systems, and an earlier pass had read the tier.**
+
+| repo / system | licence | stars | note |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **LGPL-3.0** (payload-read) | 886 | Odoo-based; broadest functional coverage |
+| [`frappe/education`](https://github.com/frappe/education) | **NOASSERTION** — unread | **662** | pushed 2026-10-05, 454 forks; sits beside ERPNext finance/HR |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | 404 | pushed 2026-10-07; **the only permissive SIS**, so the only forkable base for a closed product |
+| RosarioSIS | GPL-2.0 | — | real deployments; most restrictive of the tier |
+| Gibbon | GPL-3.0 | — | long institutional track record |
+| openSIS / Fedena | copyleft / mixed | — | both long-lived, both with commercial forks — verify the edition |
+
+🔵 **The last three rows carry no link on purpose:** they come from this KB's earlier read of the
+tier (`agents/trending.md:5160`, commits recorded there) and were **not re-verified this pass**. The
+three linked rows were.
+
+🟢 **The honest client summary: supply is not the problem, licensing is.** Exactly one member
+(`academico`, MIT) can become a closed derivative; one more (`openeducat_erp`, LGPL-3.0) permits
+linking without reciprocity. **And no AI agent targets any of them** — that gap is real and is now
+the largest genuine hole in this KB.
+
+### Kolibri, re-probed validly
+
+p130's probe for AI-on-Kolibri was a five-term query returning 0, which is void as evidence
+(`agents/trending.md` → `P131-E`). Re-probed as `kolibri stars:>2` → **86 repos**:
+
+| repo | licence | stars | in the family? |
+|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | **1 141** | 🟢 the offline-first platform |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | **MIT** | 192 | 🟢 content curation |
+| [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | — | 52 | 🟢 🆕 third family repo |
+| `KolibriOS/kolibrios`, `public-ui/kolibri`, `Yandrik/kolibri`, `kreme123/Kolibri*`, `StreamIntelligenceLab/Kolibrie`, `8bitprodigy/kolibri_engine` | various | 619 → 40 | 🔴 name collisions — an OS, an accessible-HTML design system, a Rust embedded GUI, two keyboards, a SPARQL engine, a game engine |
+
+🟢 **Zero AI-on-top in the family. The gap survives, on a probe that could have seen it.** 83 of the
+86 results are a different word.
+
+### New addresses this pass — all proctoring, all MIT, all small
+
+| repo | licence | stars | last push | note |
+|---|---|---|---|---|
+| [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system) | **MIT** | 11 | 2026-08-19 | 🆕 most complete *platform* of the three |
+| [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) | **MIT** | 10 | 2026-04-17 | 🆕 PHP |
+| [`vishal017/cheatshield`](https://github.com/vishal017/cheatshield) | **MIT** | 8 | 2025-04-03 | 🆕 best architecture (YOLOv5 + MTCNN + YAMNet), 🔴 stale ~18 months |
+
+### Moodle connector tier — eight servers, five MIT
+
+🔴 **p130 recorded Moodle as having no permissively licensed MCP route.** It has five MIT ones.
+
+| repo | licence | stars | last push |
+|---|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | 43 | 2026-02-22 🔴 quiet |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | 🔴 **none** | 40 | 2026-06-29 |
+| [`1alexandrer/moodle-mcp`](https://github.com/1alexandrer/moodle-mcp) | **MIT** | 18 | 2026-04-21 |
+| [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | **MIT** | 17 | 2026-09-07 |
+| [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | 🔴 **none** | 10 | 2026-09-03 |
+| [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | **MIT** | 8 | 2026-06-06 |
+| [`Deeptanshuu/mydy-lms-helper`](https://github.com/Deeptanshuu/mydy-lms-helper) | **MIT** | 7 | 2026-09-29 |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🔴 **none** | 6 | 2026-10-01 |
+
+🟡 **The permissive/popular inversion again:** the most-starred Moodle connector carries no licence,
+and the MIT leader is the quietest row in the table. New engagement recipe: `compose/patterns.md`
+→ **P7**.
+
+### Platform re-checks
+
+🔴 `instructure/canvas-lms` last push still **2026-04-30** — now ~5.5 months quiet, while
+`oppia/oppia`, `frappe/lms`, `learnhouse`, `classroomio` and `moodle/moodle` all pushed within days
+of this pass. Raise it explicitly before recommending Canvas as an actively developed base.
+
+Evidence: `evidence/verified-repos.2026-10-11-p131.tsv` (**19 repos**, **3 new**).
+
+---
+
 ## 2026-10-11 — Pass 130
 
 **The headline is a rename this KB has been getting wrong.**

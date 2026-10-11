@@ -1,0 +1,31 @@
+# Pass 131, 2026-10-11.  Repos verified this pass with GitHub repo search
+# (authoritative fields: license.spdx_id, stargazers_count, pushed_at, fork, archived).
+#
+# INSTRUMENT NOTE.  `curl -sI https://github.com/<repo>` returns 403 for every URL from this
+# runner, real or not (established p130 with a control on a nonexistent repo), so it verifies
+# nothing.  api.github.com and the gh CLI search path are blocked for out-of-scope repos.
+# Repo search is the working instrument for METADATA.  It cannot read a licence PAYLOAD, and
+# that distinction is this pass's finding: see README Pass 131, P131-B.
+#
+# held_before = was this address already present on a live page of this KB before p131?
+# Columns: repo	spdx_id	stars	pushed_at	fork	region	held_before	note
+repo	spdx_id	stars	pushed_at	fork	region	held_before	note
+peancor/moodle-mcp-server	MIT	43	2026-02-22	false	unplaced	YES (p30)	MIT Moodle MCP server. Refutes p130's "no Moodle MCP with a clear permissive licence". agents/trending.md:2931 records MIT + LICENSE 1064 B; :7874 makes it the licence-boundary exemplar. Two instruments agree.
+loyaniu/moodle-mcp	none	40	2026-06-29	false	unplaced	YES	No licence field at all. Second-largest Moodle MCP; unusable as published.
+1alexandrer/moodle-mcp	MIT	18	2026-04-21	false	unplaced	YES	MIT Moodle MCP server template.
+ictinnovations/ictexam-mcp	MIT	17	2026-09-07	false	unplaced	YES	MIT; exams, gradebooks, item analysis; corporate holder; writes gated off by default.
+SaadRahman01/moodle-mcp	MIT	8	2026-06-06	false	unplaced	YES	MIT; developer-facing (moodledev.io docs, Hooks API, XMLDB, Moodle Jira), not learner-facing.
+Deeptanshuu/mydy-lms-helper	MIT	7	2026-09-29	false	APAC	YES	MIT; TUI + MCP over a Moodle-based LMS (D.Y. Patil, India).
+haanhtuandev/vgu-mcp	none	10	2026-09-03	false	APAC	YES	No licence. Go MCP server for Moodle at Vietnamese-German University.
+ink-waffle/moodle-mcp	none	6	2026-10-01	false	unplaced	YES	No licence. Generic Moodle MCP.
+eth-lre/mathtutorbench	none	43	2026-08-27	false	EMEA	YES (p4)	ETH Zurich LRE; EMNLP 2025 oral. NO licence field. KB read: README self-contradicts CC-BY-4.0 (badge) vs CC-BY-SA-4.0 (body). Refutes p130's "no education benchmark exists"; confirms the layer is UNGRANTED.
+Khan/tutoring-accuracy-dataset	NOASSERTION	57	2024-08-29	false	North America	YES	Khan Academy. KB read the payload in full: bespoke 2690 B "Evaluation Dataset License". Dormant ~2 y. Citable, not shippable.
+frappe/education	NOASSERTION	662	2026-10-05	false	APAC	YES	School-management / SIS on Frappe. Refutes p130's "academico + openeducat are the whole field".
+openeducat/openeducat_erp	NOASSERTION	886	2026-10-09	false	APAC	YES	API field says NOASSERTION; this KB READ master/LICENSE at 8241 B and resolved LGPL-3.0, retracting an earlier "no grant" row. p130 published the API field over the payload read. See P131-B.
+academico-sis/academico	MIT	404	2026-10-07	false	unplaced	YES	Control for P131-E: MIT, topic student-information-system, yet a 5-term generic SIS query returned it NOT AT ALL.
+learningequality/kolibri	MIT	1141	2026-10-11	false	Global	YES	Offline-first platform. Still zero AI-on-top after a valid re-probe (86 repos named kolibri).
+learningequality/kolibri-design-system	n/a	52	2026-10-02	false	Global	YES	Third repo of the Kolibri family.
+RakeshBabuGajula/Exam_Intellect	MIT	18	2026-10-05	false	APAC	YES	MIT AI-proctoring dashboard (CV + speech). Largest permissive proctoring row; already held, which already refuted "zero permissive proctoring rows".
+VIJAYAPANDIANT/online-examination-system	MIT	11	2026-08-19	false	APAC	NO - NEW	MIT. Exam system with AI proctoring; React/Vite + Spring Boot, Dockerised.
+singhrajvardhan/SecureExam-Platform	MIT	10	2026-04-17	false	APAC	NO - NEW	MIT. PHP; face tracking, tab-switch monitoring, auto-proctoring.
+vishal017/cheatshield	MIT	8	2025-04-03	false	APAC	NO - NEW	MIT. YOLOv5 + MTCNN + YAMNet + PyQt5. STALE: last push 2025-04-03, ~18 months.

@@ -6,6 +6,56 @@ updated: 2026-10-11
 
 # Education — open gaps
 
+**Pass 131, 2026-10-11.** ⏱️ **Eighteenth pass of this date.** 🔴 **This pass's finding is about how
+gaps DEGRADE between pages, not about a new gap.** p130's rewrite restated three of this file's
+precise gaps as absolute absences, and all three became false in the restatement.
+
+## 🔴 The degradation, measured
+
+| this file's precise gap | p130's restatement on a live page | verdict |
+|---|---|---|
+| *"Moodle permissive agent edge — **ZERO permissive RELEASES**"* (`a2br/moodle-mcp` MIT at **0 tags**) | *"**no Moodle MCP server with a clear permissive licence**"* | 🔴 **FALSE.** `peancor/moodle-mcp-server` is **MIT, 43★**, verified by this KB at p30; four more MIT servers exist. 🟢 **This file's own wording was CORRECT** — the permissive ones publish no releases. The precision was lost in restatement, not in measurement |
+| *"the benchmark layer is **UNGRANTED**"* (p127; `mathtutorbench` no payload, `Khan` bespoke 2 690 B) | *"**no education-specific benchmark** in open source… the largest hole on the shelf"* | 🔴 **FALSE.** Both benchmarks exist and are held here. 🟢 **"Ungranted" was right; "absent" was not** |
+| *"no open-source SIS **of record**"* | *"`openeducat_erp` and `academico` are **the whole field**"* | 🔴 **FALSE.** At least six systems, read by an earlier pass |
+
+🔵 **This is `P129-C`'s family — a claim refuted by a row elsewhere in this KB — but one level up:
+the refuting row is this KB's own GAP FILE, and the degradation is a quantifier swap.** "No
+permissive release" → "no permissive licence". "Ungranted" → "absent". "None of record" → "the whole
+field is two". 🟢 **Each swap is small, each is checkable in seconds, and each inverts the
+engagement advice that follows from it.**
+
+## 🟢 Gaps CLOSED or corrected by p131
+
+| gap | state | what changed it |
+|---|---|---|
+| **`Gap 344` — the exam-proctoring tier has ZERO permissive rows** | 🔴 **REFUTED** | **4 MIT** rows: `Exam_Intellect` (18★, **already held here**, so the claim was refuted by this KB's own shelf before p131 ran), 🆕 `online-examination-system` (11★), 🆕 `SecureExam-Platform` (10★), 🆕 `cheatshield` (8★, stale). 🟡 **Reissued as a MATURITY gap:** largest 18★, none institution-backed, three do affect-adjacent inference — **prohibited** in EU education under Art. 5, not merely gated |
+| **`openeducat_erp` licence unresolved** | 🟢 **CLOSED — and it had been closed before** | **LGPL-3.0**, read at `master/LICENSE`, 8 241 B. p130 republished the API's `NOASSERTION` over it. 🟢 **Rule adopted KB-wide: `NOASSERTION` = UNREAD, never UNGRANTED** |
+| **The AI Act date a client can be quoted** | 🟡 **NARROWED on corroboration, still not primary** | 🟢 The **Council's final green light (29 June 2026)** now corroborated on a second independent channel, closing p130's *"Council adoption still outstanding"*. 🔴 `eur-lex`-class hosts remain refused in both lanes, so **Reg. (EU) 2026/1744** is still not payload-read here |
+
+## 🔴 Gaps OPEN, restated by p131
+
+| gap | why it is still open |
+|---|---|
+| **No AI agent for any system of record** | 🟢 **Now the largest genuine hole in this KB.** The platform tier is six-plus systems deep and **zero** have agent coverage — while administrative automation is the most-cited adoption driver |
+| **No OUTCOME benchmark** | 🟡 Both existing benchmarks measure tutor *behaviour*. Nothing measures **durable learning gains**, the standard the OECD's *2026 Digital Education Outlook* asks for |
+| **The benchmark layer carries no usable grant** | 🔴 `mathtutorbench`: **no licence field**, README names **two** licences (CC-BY-4.0 badge vs CC-BY-SA-4.0 body). `Khan/tutoring-accuracy-dataset`: bespoke **2 690 B** licence, dormant since 2024-08-29. 🔵 **One upstream commit to a `LICENSE` file would be the highest-leverage change available to this KB** |
+| **No AI-on-top of Kolibri** | 🟢 **SURVIVES on a VALID probe for the first time.** p130's five-term query returned 0, which is void (`P131-E`); `kolibri stars:>2` returns **86** repos, **3** in the family, **0** with AI. The other 83 are name collisions |
+| **Africa and the Middle East inside "EMEA"** | 🔴 Second consecutive pass with no regional evidence. Folded into EU findings by the bucket. 🟢 Addressed by `ACTION BD` |
+| **APAC-placed permissive supply** | 🟡 **NARROWED.** All three new addresses this pass are **APAC-placed** (two India, one unplaced-India-adjacent) and all three are **MIT** — but all are sub-12★ individual projects |
+| **The 46 Apache-2.0 / ECL rows with no licensor** | 🔴 Untouched; `ACTION AY` carried from p129 through an undischarged p130 |
+
+## 🆕 Gap opened by p131 — the instrument's blind spot
+
+🔴 **A gap may only be declared from a probe narrow enough that a known positive would appear in
+it.** Control: `student information system school management license:mit stars:>30` → **0**, while
+`repo:academico-sis/academico` returns **MIT, 404★**, carrying the topic `student-information-system`.
+**Cause: repo search ANDs the terms over name and description and does not search topics**;
+academico's description never contains *student*, *information* or *system*. 🔴 **Every declared
+absence in this KB that rests on a multi-term query is therefore unproven**, and `ACTION BC`
+requires a named control beside each one from now on.
+
+---
+
 **Pass 129, 2026-10-11.** ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
 
 ## 🟢 Gaps CLOSED or narrowed this pass

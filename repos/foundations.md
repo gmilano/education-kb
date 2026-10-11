@@ -6,10 +6,15 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
-**Pass 130, 2026-10-11.** Full rewrite. These are the systems a client already runs, or would
-sensibly adopt, and that AI work gets attached to. Every row verified this pass via GitHub repo
-search (licence, stars, last push, fork flag). Licence is the first column that matters: it decides
-whether Globant can ship a derivative at all.
+**Pass 131, 2026-10-11.** p130's rows retained; **one licence corrected and a whole tier restored**
+(see `README.md` → Pass 131). These are the systems a client already runs, or would sensibly adopt,
+and that AI work gets attached to. Licence is the first column that matters: it decides whether
+Globant can ship a derivative at all.
+
+🔴 **Read this before trusting a licence cell.** GitHub's `license.spdx_id` reports **`NOASSERTION`
+("Other")** whenever its matcher does not recognise a `LICENSE` file as a known template. That is
+*not* a finding of "no grant", and p130 published it as one. Where this KB has **read the payload**,
+the payload wins and the cell below says so.
 
 ## The platforms
 
@@ -27,7 +32,7 @@ whether Globant can ship a derivative at all.
 | [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | 1 127 | 2026-10-08 | EMEA (Overhang.IO, France) | The Docker-based Open edX distribution — in practice *the* supported way to stand up and upgrade Open edX. A large first-party plugin ecosystem, all AGPL-3.0: `tutor-mfe` (micro-frontends), `tutor-cairn` (real-time analytics), `tutor-discovery`, `tutor-credentials`, `tutor-jupyter`, `openedx-scorm-xblock`. If the engagement is Open edX, it is a Tutor engagement. |
 | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1 141 | 2026-10-10 | Global (Learning Equality) | Offline-first learning platform for low- and no-connectivity classrooms; content syncs by LAN or USB. **MIT-licensed**, which with its offline design makes it the single best base for rural LATAM, African and South Asian deployments. Content tooling: [`learningequality/studio`](https://github.com/learningequality/studio) (MIT, 192). |
 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1 009 | 2026-10-10 | EMEA (Chamilo Association, Belgium) | LMS built around ease of use and accessibility, with real institutional adoption in Francophone Europe and Spanish-speaking LATAM. The most LATAM-relevant of the EMEA-origin platforms. |
-| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **NOASSERTION** | 886 | 2026-10-09 | APAC (India) | Education *ERP* — admissions, students, faculty, timetabling, fees — built on Odoo. The closest thing to a student information system in open source, which makes it the natural target for the administrative automation nobody else serves. **Licence reads as "Other": review terms before use.** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **LGPL-3.0** (payload-read) | 886 | 2026-10-09 | APAC (India) | Education *ERP* — admissions, students, faculty, timetabling, fees — built on Odoo. The natural target for the administrative automation nobody else serves. 🔴 **Licence corrected by p131.** GitHub's API reports `NOASSERTION` and p130 published that as "review terms before use". This KB had already **read `master/LICENSE` in full — 8 241 bytes, genuinely LGPL-3.0** — and used that read to *retract* an even earlier "no grant" row. p130 reinstated the retracted claim by trusting the API field over its own evidence. **LGPL on an LGPL Odoo base: linking is fine, modifying the module itself carries reciprocity.** |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | 2026-10-10 | EMEA (Germany) | Mature German LMS with strong standards and accessibility compliance — relevant precisely because EMEA procurement weighs those heavily. |
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **NOASSERTION** | 447 | 2026-10-09 | EMEA (frentix, Switzerland) | Java LMS widely deployed in Swiss/German universities. Licence reads as "Other" to GitHub (it is Apache-2.0-based in its own documentation) — **verify before building**. |
 
@@ -43,6 +48,36 @@ whether Globant can ship a derivative at all.
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | 404 | Laravel/Filament school-management platform for small and mid-size institutions. MIT, so the most forkable administrative base here. |
 | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | **MIT** | 203 | LTI tool-provider/consumer library. LTI is how an external AI tool gets launched from inside any compliant LMS — the integration path that avoids touching platform source, and therefore avoids AGPL reciprocity entirely. |
 
+## The system-of-record tier (restored by p131)
+
+p130's declared gaps said *"`openeducat_erp` (licence unclear) and `academico` (small) are the whole
+field."* 🔴 **They are not.** This KB read a system-of-record tier in an earlier pass and p130's
+rewrite dropped it. Restored here, because "there is no open-source SIS" and "every open-source SIS
+is copyleft" are completely different briefings for a client.
+
+| repo | licence | why it matters | the catch |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | **NOASSERTION** (API) — read terms | **662★**, pushed 2026-10-05, 454 forks. Full school management on Frappe: students, programmes, fees, assessment. Sits beside ERPNext finance/HR with no integration work. | Licence does not resolve to an OSI identifier via the API; GPL-3.0 in the Frappe family's own documentation. **Read `LICENSE` before committing** — this is exactly the row class p130 got wrong. |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **LGPL-3.0** (payload-read) | 886★. The Odoo-based ERP; the broadest functional coverage of the tier. | Odoo module, so you inherit the Odoo ecosystem *and* its constraints. |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | **404★**, pushed 2026-10-07. Laravel/Filament. **The only permissive SIS**, so the only forkable base for a closed client product. Carries the topic `student-information-system`. | Small, and aimed at small-to-mid institutions rather than a university of record. |
+| **RosarioSIS** | GPL-2.0 | A genuine student information system with real deployments. | GPL-2.0 — the most restrictive option here. |
+| **Gibbon** | GPL-3.0 | School platform with a long institutional track record. | GPL-3.0 reciprocity. |
+| **openSIS** / **Fedena** | copyleft / mixed | Named in this KB's earlier reads of the tier; both long-lived. | Neither is permissive; verify the current edition's terms, since both have had commercial forks. |
+
+🔵 **Provenance of the four rows without links.** RosarioSIS, Gibbon, openSIS and Fedena are
+carried from **this KB's own earlier read of the tier** (`agents/trending.md:5160`, which recorded
+`RosarioSIS mobile@899f6da` GPL-2.0, `Gibbon v31.0.00@683d2c4` GPL-3.0 and `OpenEduCat 19.0@1c95cef`
+LGPL-3.0 at specific commits). 🔴 **They were NOT re-verified this pass and are deliberately listed
+without links** — a row this pass did not measure does not get presented as one it did. Re-verify
+before quoting them to a client; the three linked rows above were verified this pass and are in
+`evidence/verified-repos.2026-10-11-p131.tsv`.
+
+**The honest summary for a client:** there are **at least six** open-source systems of record. Exactly
+**one** (`academico`, MIT) can become a closed derivative; one more (`openeducat_erp`, LGPL-3.0)
+permits linking without reciprocity. The rest are GPL-family. 🔴 **So the gap is not supply — it is
+that the system-of-record tier is almost entirely copyleft**, which is a licensing conversation at
+the start of an engagement, not a missing-software conversation.
+
 ## How to choose, in one paragraph
 
 If the client already runs a platform, the platform is chosen and the only question is the
@@ -56,9 +91,23 @@ AGPL rows commit a hosted-service client to reciprocal source release.
 
 ## Declared gaps
 
-- **No permissively licensed, full-featured LMS at the scale of Moodle or Canvas.** Oppia and Sakai
-  are the permissive options and neither is a drop-in replacement for either.
-- **No open-source student information system of record.** `openeducat_erp` (licence unclear) and
-  `academico` (small) are the whole field.
-- **Canvas is the quietest major platform this pass** (last push 2026-04-30, ~5 months). Worth
-  re-checking next cycle before recommending it as an actively developed base.
+- **No permissively licensed, full-featured LMS at the scale of Moodle or Canvas.** Oppia
+  (Apache-2.0) and Sakai (ECL-2.0) are the permissive options and neither is a drop-in replacement
+  for either. 🟢 **SURVIVES.**
+- ~~**No open-source student information system of record.** `openeducat_erp` (licence unclear) and
+  `academico` (small) are the whole field.~~ 🔴 **REFUTED by p131** — see the system-of-record tier
+  above: at least six systems, read by an earlier pass and dropped by p130's rewrite. 🟢 **The
+  surviving gap is that the tier is almost entirely copyleft, with `academico` (MIT) the lone
+  permissive base — and that no AI *agent* targets any of them** (`agents/top.md`).
+- **Canvas is the quietest major platform** (last push 2026-04-30, ~5 months) 🔴 **and it is now
+  ~5.5 months quiet, unchanged on re-check this pass.** Worth raising explicitly before
+  recommending it as an actively developed base — it is still the richest API surface in the
+  sector, which is why every connector targets it.
+- 🆕 **Three Kolibri-family repos, zero AI on any of them.** A valid re-probe this pass
+  (`kolibri stars:>2` → 86 repos) resolves the family to
+  [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, 1 141★),
+  [`learningequality/studio`](https://github.com/learningequality/studio) (MIT, 192★) and
+  [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system)
+  (52★). The other 83 are name collisions — KolibriOS, an accessible-HTML design system, a Rust
+  embedded GUI, two keyboards, a SPARQL engine, a game engine. **The offline slot is still the
+  cleanest unclaimed opportunity in this KB** (`intel/trends.md` → T8).

@@ -6,8 +6,9 @@ updated: 2026-10-11
 
 # Education — current trends
 
-**Pass 130, 2026-10-11.** Full rewrite. Each trend below is stated with the evidence that supports
-it and, where it matters, what would falsify it.
+**Pass 131, 2026-10-11.** p130's trends retained; **T3, T5, T7 and T9 corrected** and **T10 added**
+(see `README.md` → Pass 131). Each trend is stated with the evidence that supports it and, where it
+matters, what would falsify it.
 
 ## T1 — The governance gap is the market
 
@@ -41,13 +42,20 @@ missing."**
 ## T3 — The EU's high-risk clock slipped to December 2027, and that is a sales window
 
 Annex III education obligations (admissions, grading, proctoring) were postponed to **2 December
-2027** via the Digital Omnibus on AI, approved by the European Parliament in June 2026 — **Council
-adoption was still outstanding** as of this pass, so the delay is politically agreed rather than
-final. Meanwhile Article 4 AI-literacy duties and the emotion-recognition prohibition bind now.
+2027** via the Digital Omnibus on AI. 🟢 **p131 closes p130's open question: the Council HAS adopted.**
+A final Council green light is reported for **29 June 2026**, and this KB's own append-only pages
+have carried the instrument as **Regulation (EU) 2026/1744 of 8 July 2026** for several passes.
+p130's *"Council adoption was still outstanding"* was a regression against this KB's own record,
+and an independent channel now corroborates the adoption. **The deferral is law, not a political
+agreement.** Annex I embedded systems follow at **2 August 2028**.
 
-**Read it as:** eighteen months to build conformity in by design rather than retrofit it, not
-eighteen months of nothing to do. **Falsifier to watch:** if the Council fails to adopt, the
-original high-risk dates snap back and every EMEA roadmap compresses.
+Meanwhile what binds *now* is unmoved: Article 4 AI-literacy duties and the emotion-recognition
+prohibition (both since February 2025), and **Art. 50 transparency, live since 2 August 2026**.
+
+**Read it as:** ~14 months to build conformity in by design rather than retrofit it, not 14 months
+of nothing to do. 🔴 **The old falsifier ("if the Council fails to adopt") is spent.** The live
+falsifier is narrower: a further omnibus reopening Annex III, or a national regulator applying the
+pre-deferral dates anyway.
 
 ## T4 — Supply is extraordinarily concentrated, and one repo is the whole mid-market
 
@@ -66,9 +74,16 @@ integration. Budget for the integration, not the engine.
 
 ## T5 — Connector effort has pooled on Canvas, and fork swarms inflate the apparent supply
 
-Five-plus Canvas MCP servers exist; Moodle — the most deployed LMS in the world — has three AI
-plugins and no permissively licensed MCP route; eight of the fifteen platforms in
-`verticals/solutions.md` have **no** AI-on-top project at all.
+Five-plus Canvas MCP servers exist; eight of the fifteen platforms in `verticals/solutions.md` have
+**no** AI-on-top project at all.
+
+🔴 **Correction to p130's version of this trend.** It said Moodle *"has no permissively licensed MCP
+route"*. Moodle has **eight standalone MCP servers, five of them MIT** — the tier p130's queries
+missed because it looked only for in-tree plugins. The concentration claim survives; the Moodle
+exception does not. 🟡 **But note what the permissive tier looks like:** the largest MIT one
+(`peancor/moodle-mcp-server`, 43★) has not been pushed since February 2026, and the most-starred
+Moodle connector overall (`loyaniu/moodle-mcp`, 40★) carries **no licence at all**. The permissive
+rows and the active rows are different rows.
 
 Worse, the apparent supply is padded by **fork swarms**: at least five repositories carry a
 byte-identical `canvas-mcp` description under different owners, and `tutor-mcp` appears under two.
@@ -90,17 +105,32 @@ Academico (MIT), Richie (MIT), H5P (MIT), XBlock (Apache-2.0), codejail (Apache-
 **Consequence:** licence review belongs at the start of an education engagement, not at hardening.
 The highest-traction components are the riskiest ones.
 
-## T7 — The missing instrument: nobody measures learning
+## T7 — The measurement layer exists and cannot be shipped *(corrected by p131)*
 
-No open-source benchmark or evaluation harness for *learning outcomes* from agentic tutoring was
-found this pass. The OECD's 2026 Digital Education Outlook argues for moving beyond general-purpose
-tools toward purpose-built educational AI that produces **durable learning gains** — a standard
-nothing in the open-source shelf can currently demonstrate.
+🔴 **p130 stated this trend as "nobody measures learning" and called it the largest hole on the
+shelf. That was false, and this KB's own pages refuted it.** Two real benchmarks exist:
 
-**This is the most commercially valuable gap in the KB.** A client who can show measured outcomes
-has something no competitor can show, and the measurement apparatus is buildable: `OATutor` and
-`tutor-mcp` already expose Bayesian Knowledge Tracing mastery estimates, which gives a defensible
-quantitative basis that an LLM's self-report does not.
+- [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) — 43★, **ETH Zurich**,
+  **EMNLP 2025 oral**, held in this KB **since pass 4**. Measures open-ended *pedagogical* capability
+  (scaffolding, hint quality), not answer accuracy.
+- [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) — 57★,
+  **Khan Academy**, with its licence read in full by an earlier pass.
+
+🔴 **The real constraint is the grant, and it is worse than a missing repo.** `mathtutorbench` has
+**no licence field** and a README that names **two different licences in one file** (CC-BY-4.0 badge
+vs CC-BY-SA-4.0 body); Khan's carries a **bespoke 2 690-byte "Evaluation Dataset License"**, not an
+OSI one, and has been dormant since August 2024. **Both can be run and cited; neither can be shipped
+inside a client deliverable without counsel.**
+
+🟢 **The genuine gap, stated so it cannot regress again:** nothing open source measures **learning
+outcomes** — durable gains in what a student knows. Both benchmarks measure *tutor behaviour*. The
+OECD's 2026 Digital Education Outlook asks precisely for durable learning gains, and that standard
+is still unmet.
+
+**Still the most commercially valuable gap in the KB**, and now a cheaper build than p130 implied:
+start from `mathtutorbench`'s task structure rather than a blank page, and anchor the quantitative
+side on `OATutor` and `tutor-mcp`, which already expose Bayesian Knowledge Tracing mastery estimates
+that an LLM's self-report cannot substitute for. See `compose/patterns.md` → P6.
 
 ## T8 — Offline and low-bandwidth stopped being an edge case
 
@@ -117,18 +147,59 @@ regulatory tailwind, no incumbent.
 
 Intelligent tutoring, personalised learning, administrative automation, AI-driven assessment and
 virtual assistants are the standard trend list; administration is where institutions report the
-clearest return. Yet there is **no open-source agent for a student information system** — no
-enrolment, records or timetabling agent. The only candidates are `openeducat_erp` (licence unclear)
-and `academico` (MIT, 404★, small). The gap between the stated driver and the available software is
-total.
+clearest return. **There is still no open-source *agent* for a student information system** — no
+enrolment, records or timetabling agent. That half of the trend holds, and it is now the largest
+genuine hole in this KB.
+
+🔴 **The other half was wrong.** p130 said the only candidates are `openeducat_erp` *"(licence
+unclear)"* and `academico`. The **platform** tier is at least six systems deep —
+`frappe/education` (662★), `openeducat_erp` (**LGPL-3.0**, payload-read, not "unclear"),
+`academico` (MIT, 404★), RosarioSIS (GPL-2.0), Gibbon (GPL-3.0), openSIS, Fedena — all restored in
+`repos/foundations.md`. 🟢 **The constraint is licensing, not supply: exactly one of them
+(`academico`, MIT) can become a closed derivative.** "No software exists" and "the software is
+copyleft" lead to opposite engagement plans.
+
+## T10 — The demand-side channel is saturated; the supply side still moves *(new, p131)*
+
+🔴 **Fourth consecutive pass in which the prescribed regional battery returned nothing this KB did
+not already hold.** All four regional queries plus the four global ones were run this pass. **Zero
+new tokens in all four regions.** Everything they returned was already on a live page here: the
+Digital Omnibus deferral (2027-12-02 / 2028-08-02), Ohio's 1 July 2026 district duty, H.R. 8747,
+California AB 1159, Idaho SB 1227, Vietnam's high-risk education listing, Korea's AI Basic Act
+(22 January 2026), UNESCO IESALC's **87% adoption / 26% with a strategy**, the Digital Education
+Council's LATAM faculty figures, the UNESCO LAC Observatory (14 April 2026), the UK's £4M
+lesson-planning programme, the OECD *2026 Digital Education Outlook*, **134 bills across 31 US
+states**, and the EMEA market at ~$2.64B.
+
+🟢 **One thing the channel did add, and it is worth the battery on its own:** independent
+corroboration that the **Council adopted** the Digital Omnibus (29 June 2026), which closes a
+question p130 left open and repairs `intel/policy-matrix.tsv`. A saturated channel is not a useless
+channel — it is a *confirmation* channel, and should be budgeted as one.
+
+🟢 **The supply side moved, as it has every pass.** p131's new addresses all came from
+layer-specific repo queries aimed at this KB's own declared gaps, not from the generic battery:
+three MIT proctoring projects, and the restoration of two tiers p130 had declared absent.
+
+**Consequence for how these passes are run:** spend the regional battery on *confirmation and
+dating*, and spend the pass's real effort on gap-directed supply queries and on **auditing this
+KB's own claims against its own pages.** Pass 131 found more by grepping this repository than by
+searching the web.
 
 ## Watch list for the next pass
 
-- Whether the **EU Council formally adopts** the Digital Omnibus (T3) — binary, high-impact.
-- Whether `instructure/canvas-lms` resumes activity; its last push was **2026-04-30**, ~5 months
-  quiet, while every other major platform pushed within days of this pass.
-- Whether any **Kolibri-based AI project** appears (T8) — the clearest unclaimed slot.
-- Whether an **education-specific evaluation harness** emerges (T7).
+- ~~Whether the **EU Council formally adopts** the Digital Omnibus.~~ 🟢 **RESOLVED this pass: it
+  did (29 June 2026; Reg. (EU) 2026/1744).** Watch instead for a national regulator applying the
+  pre-deferral dates, or a further omnibus reopening Annex III.
+- Whether `instructure/canvas-lms` resumes activity; last push still **2026-04-30**, now ~5.5
+  months quiet, while every other major platform pushed within days of this pass.
+- Whether any **Kolibri-based AI project** appears (T8) — still the clearest unclaimed slot, now on
+  a valid probe (86 repos named `kolibri`, 3 in the family, 0 with AI).
+- Whether `mathtutorbench` **resolves its own licence** (T7). One commit to a `LICENSE` file turns
+  the benchmark layer from unshippable to usable, and it is the single highest-leverage upstream
+  change for this KB.
+- Whether **any proctoring project acquires an institutional owner** — the tier is permissive but
+  capped at 18★.
 - Whether **Open edX MCP** moves past experimental; `blend-ed/openedx-mcp` sits at 2 stars.
-- **Africa and the Middle East:** no regional evidence surfaced under the EMEA bucket this pass.
-  Needs a dedicated query next cycle rather than being folded into EU findings.
+- Whether a **student-information-system agent** appears — now the largest genuine hole (T9).
+- **Africa and the Middle East:** no regional evidence surfaced under the EMEA bucket for a second
+  pass. Needs a dedicated query rather than being folded into EU findings.

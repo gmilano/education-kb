@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 131 — 2026-10-11
+
+⏱️ **Eighteenth pass of this date.** 🔴 **Note first that there is no Pass 130 section below this
+one.** p130 rewrote all six non-append-only pages, changed the verification method, and **never
+wrote its pass log or discharged p129's pre-registrations** — so the chain of verdicts broke for one
+pass. It is picked up here.
+
+🔴 **A pass that audits the previous pass, and finds the rewrite itself was the defect.** p130
+re-derived every page from a single instrument (GitHub repo search) and declared four gaps. 🟢
+**Three of the four are refuted by rows this KB already carried on its own append-only pages** —
+the pages p130 did not rewrite. 🔵 **Nothing in this pass's headline was found on the web. It was
+found by grepping this repository.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P131-A` | 🔴 **A REWRITE PUBLISHED ABSENCES ITS OWN KB REFUTES** | **3 of 4** declared gaps refuted; all refuting rows already live here |
+| `P131-B` | 🔴 **AN API FIELD PUBLISHED OVER A PAYLOAD READ**, reinstating a retracted claim | `openeducat_erp`: `NOASSERTION` published over an **8 241 B `LICENSE` → LGPL-3.0** |
+| `P131-C` | 🟢 **DEMAND CHANNEL SATURATED — 4th consecutive pass, now counted** | **0 new tokens in 4 of 4 regions**; **1** confirmation worth the battery |
+| `P131-D` | 🔴 **`Gap 344` REFUTED** — the proctoring tier is permissive after all | **4 MIT** rows (3 new); largest **18★**, none institution-backed |
+| `P131-E` | 🔴 **A GENERIC ZERO MEASURES THE QUERY, NOT THE FIELD** | 5-term SIS query → **0**, while `academico` is **MIT, 404★**, topic `student-information-system` |
+
+### What p130 declared absent, and what was already here
+
+| p130's declared absence | refuted by | held since |
+|---|---|---|
+| *"no education benchmark… **the largest hole on the shelf**"* | `eth-lre/mathtutorbench` (43★, ETH Zurich, **EMNLP 2025 oral**) + `Khan/tutoring-accuracy-dataset` (57★, licence read in full) | **pass 4** |
+| *"no Moodle MCP server with a clear permissive licence"* | `peancor/moodle-mcp-server` — **MIT**, 43★, *"the licence-boundary exemplar"* | **pass 30** |
+| *"`openeducat_erp` and `academico` are the whole field"* (SIS) | the **system-of-record tier**: + `frappe/education` (662★), RosarioSIS, Gibbon, openSIS, Fedena | an earlier pass |
+| *"no agent targeting a student information system"* | 🟢 **SURVIVES** — and is now the largest genuine hole here | — |
+
+🔵 **One cause explains all three, and it is the thing p130 announced as its improvement.** Repo
+search returns metadata faithfully and **cannot see a licence payload, a prior retraction, or an
+address found by a different query**. A rewrite grounded in one instrument discards what the KB
+established with the others — then publishes the discards as gaps. 🔴 **A false absence is the most
+expensive error this KB can make: it tells a studio there is nothing to start from when there is.**
+
+🔵 **And the sharper diagnosis, found in `intel/open-gaps.md`: the measurements were right and the
+RESTATEMENTS were wrong — each by a single quantifier swap.** This KB's gap file said *"zero
+permissive **releases**"* (true: the MIT Moodle servers publish no tags) and p130 wrote *"no
+permissive **licence**"*. It said the benchmark layer is *"**ungranted**"* (true) and p130 wrote
+*"**absent**"*. It said *"no SIS **of record**"* and p130 wrote *"two repos are **the whole
+field**"*. 🔴 **This is `P129-C`'s family one level up: not prose disagreeing with an instrument, but
+prose disagreeing with this KB's own gap register — and every swap inverts the advice that follows
+from it.**
+
+### The defect's direction reversed from p129
+
+p129 found **prose disagreeing with the instrument**. p131 finds **an instrument's coarse field
+published over a resolved payload read.** `openeducat_erp` is `NOASSERTION` to the API; this KB had
+read its `LICENSE` at 8 241 bytes, resolved **LGPL-3.0**, and used that read to *retract* an earlier
+*"no grant"* row. p130 reinstated the retracted claim.
+
+🟢 **Rule now stated on four pages: `NOASSERTION` means "GitHub's matcher did not recognise this
+file" — it is UNREAD, never UNGRANTED.**
+
+### Verdicts on p129's pre-registrations *(left undischarged by p130)*
+
+🟡 **`ACTION AW` — DISCHARGED BY SUBSTITUTION, not as written.** It asked for every published figure
+to be re-derived **from the committed instrument output**. p130 instead re-measured from a *new*
+instrument (repo search) and corrected several figures by large multiples — `DeepTutor` to **41 136**,
+`educhain` to **388** (previously published ~9k–12k, overstated ~30×). 🔴 **But substituting the
+instrument is exactly how `P131-A`/`P131-B` happened**, since the new instrument cannot see what the
+old evidence recorded. The clause's intent — re-derive from committed output — **remains
+undischarged** and is reissued as `ACTION BB`.
+
+🔴 **`ACTION AX` — UNDISCHARGED.** The binder fix (three blind forms) needs the instrument lane p130
+did not open. Carried.
+
+🔴 **`ACTION AY` — UNDISCHARGED.** The 46 Apache-2.0/ECL addresses with no licensor in `LICENSE` or
+`NOTICE` were not probed for source headers. Carried.
+
+🟢 **`ACTION AZ` — NOT REFUTED, and discharged in the form it demanded.** It asked for a supply
+clause that survives a zero denominator. Measured on **absolute counts**, as required:
+**gap-directed layer-specific queries returned 3 new addresses; the generic regional battery
+returned 0.** 🔵 **The direction has now held for three consecutive passes, and the ratio form that
+p129 found void is not needed to state it.**
+
+### Pre-registered for p132
+
+🟢 **`ACTION BA`** — audit every live *absence* claim in this KB against its own append-only pages:
+for each "no X exists" sentence, grep the trending logs for the class before the claim stands. 🔴
+*Refuted if fewer than 2 further false absences are found beyond the 3 that `P131-A` names.*
+
+🟢 **`ACTION BB`** — payload-read the remaining `NOASSERTION` rows, which this pass has now labelled
+*unread* rather than *ungranted*: `OpenOLAT`, `frappe/education`, `GarethManning/education-agent-skills`,
+`Khan/tutoring-accuracy-dataset`. 🔴 *Refuted if none resolves to an identifiable grant, since
+`openeducat_erp` proves at least one such row can.*
+
+🟢 **`ACTION BC`** — give each of the 8 platforms with no AI-on-top **one narrow probe carrying a
+named control**, per `P131-E`'s rule. 🔴 *Refuted if any probe fails to return its own control — in
+which case the probe, not the platform, is the finding.*
+
+🟢 **`ACTION BD`** — test whether saturation is a property of the channel or of these four queries:
+run the prescribed battery a fifth time **and** four substituted queries on axes this KB has never
+run (Africa/Middle East specifically, procurement/tender language, teacher-union guidance, and
+non-English sources). 🔴 *Refuted if the substituted set also returns 0 new tokens, which would make
+saturation a property of the KB's coverage rather than of the queries.*
+
+### Regions
+
+🔴 **Zero new tokens in all four, fourth consecutive pass.** 🟢 **One confirmation that justified the
+battery on its own: the EU Council's final green light on the Digital Omnibus, reported 29 June
+2026** — closing a question p130 left explicitly open and repairing `intel/policy-matrix.tsv`,
+`intel/trends.md` T3 and `intel/market.md` EMEA. 🟢 **The supply side placed two of its restored
+tiers by region:** the benchmark layer's strongest member is **EMEA** (ETH Zurich) and all three new
+proctoring addresses are **APAC**.
+
+### Files changed
+
+`agents/top.md` (two tiers restored, gaps restated, a rule added) · `repos/foundations.md` (licence
+corrected, system-of-record tier restored) · `verticals/solutions.md` (Moodle + OpenEduCat rows
+corrected) · `intel/trends.md` (T3/T5/T7/T9 corrected, **T10** added) · `intel/market.md` (EMEA
+status, benchmark claim, permissive/popular inversion) · `compose/patterns.md` (P6 re-grounded on
+two real benchmarks, **P7** added) · `intel/policy-matrix.tsv` (Council adoption) ·
+`intel/open-gaps.md` · both append-only trending logs (dated sections prepended) ·
+`evidence/verified-repos.2026-10-11-p131.tsv` (**19 repos**, **3 new**).
+
+---
+
 ## Pass 129 — 2026-10-11
 
 ⏱️ **Sixteenth pass of this date** (census window **14:4x → 15:3x UTC**).
