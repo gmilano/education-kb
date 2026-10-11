@@ -1,0 +1,1 @@
+| mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 283 + 153 | 🟢 **MIT** (`pyBKT`) + **BSD-3-Clause** (`catsim`) ⚠️ **was 🟢 MIT both**<!--corrected--> | Bayesian knowledge tracing + adaptive item selection |

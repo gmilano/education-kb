@@ -1,0 +1,1 @@
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) *or* [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 GPL-3.0 / **AGPL-3.0** | 🔴 **integrate via LTI 1.3 only — never fork, never link** |

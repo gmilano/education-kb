@@ -1,0 +1,17 @@
+# page                        swept  proposed  matched
+# agents/top.md                   3         3        3
+# agents/trending.md             19        19       19
+# repos/foundations.md            3         3        3
+# repos/trending.md              22        22       22
+# verticals/solutions.md          5         5        5
+# intel/market.md                 6         6        6
+# intel/trends.md                 0         0        0
+# intel/open-gaps.md             12        12       12
+# compose/patterns.md             7         7        7
+# README.md                       4         4        4
+# TOTAL                          81        81       81
+#
+# p125's committed recognisers reproduce 81 of 81 of its own marks = 100.0 %
+# rows marked by a path not in this repository = 0
+# clause (AM): refuted below 90 %  ->  NOT REFUTED
+#

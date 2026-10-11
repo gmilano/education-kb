@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 126 — 2026-10-11
+
+⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
+
+🟡 **Seventeenth axis in seventeen passes: of the four actions p125 pre-registered, `AK` and `AM` are discharged and not refuted, and 🔴 **`AJ` and `AL` are REFUTED on their own clauses**. The pass's own finding is that `AJ` is refuted as a CAUSE and indispensable as a MECHANISM — without it, `AK` destroys the defect p125 called the one worth the pass.**
+
+🟢 **Instrument: `compose/code/p126-address-binding/` — `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**
+
+| action | verdict | figure |
+|---|---|---|
+| `ACTION AJ` | 🔴 **REFUTED** | **0 of 15** explained by mis-binding (clause: ≥ 12). The 15 decompose as **6** split-grant survivors, **4** unmarked apparatus, **3** SUBSTRING, **2** prose referents |
+| `ACTION AK` | 🟢 **NOT REFUTED + IMPLEMENTED** | all **6** `pupilfirst` rows cleared with **0** regressions — but only composed over `AJ`; alone it launders **9** live false claims |
+| `ACTION AL` | 🔴 **REFUTED** | **1 of 3** (clause: ≥ 3), and that one was already known. **672 probes**, 200×3 / 404×669, zero proxy noise; **160** dual-filename probes returned **0** |
+| `ACTION AM` | 🟢 **NOT REFUTED** | **81 of 81 = 100 %**, per page exactly — once measured against the right writer |
+
+🔴 **`P126-A` — p125's committed evidence cannot be found again on p125's committed pages.** Not one of the 36 `path:line|address|token` records in `out/ac-after.triples` names the address it is filed under. p125 measured the pages and then prepended its section to each, moving every coordinate below the insertion (`agents/top.md` by **58**, `intel/open-gaps.md` by **186**). 🟢 **Relocated by `(page, address, token)` all 15 of `AJ`'s set are found, 0 unlocatable** — the same claims, at coordinates the pass itself invalidated. p122 found a census less precise than the page, p123 a repair that was an edit, p124 a token without its scope, p125 an assertion without its domain; p126 finds **evidence keyed on a coordinate the pass does not preserve.**
+
+🔴 **`P126-B` — one unreadable column heading, and the table reporting three false claims was itself an unmarked correction.** Recomputed on the committed pages the assertion returns **49** violations, not 36, and **12 of the 49 sit inside p125's own section** — the largest single bucket. `P125-A`'s defect table is headed *"the page said"*, which `HDR_OLD` does not carry, so `classify_header` returns `None` and its quoted OLD values read as live claims on all **6** pages it was copied onto. 🟢 **Repaired: three spellings added, 6 rows marked with p125's own writer.**
+
+🔴 **`P126-C` — `AJ` and `AK` are one mechanism.** An address-level survivor set fed by co-occurrence hands `pyBKT`'s `MIT` to `douglasrizzo/catsim` and clears **9** live rows asserting `MIT` for a `BSD-3-Clause` repository. Bound, it clears `pupilfirst`'s 6 and keeps catsim's 9. The binder needs a **short name** in backticks (the only rule that resolves the `pyBKT`/`catsim` row), **ordinal pairing**, then the **cell wall**. Composed, the assertion falls from **49** violations over 23 addresses to **27** over 13.
+
+🔴 **The 3 SUBSTRING records are `ACTION AG`'s own class in a function `AG` never reached.** `repair_search.violations` tests `re.escape(tok)` with word boundaries rather than the vocabulary, and `\bGPL\b` matches inside `GPL-3.0`. `compose/patterns.md:524` carries no bare `GPL` at all.
+
+🔴 **`P126-D` — two writers ship side by side and this pass published a false number before catching it.** `p125-retraction-cue/` holds an `apply_marks` in both `correction_form.py` and `mark_forms.py`; only the latter has the `APPARATUS` guard, and nothing marks the former superseded. Measured against the wrong one, `AM` read **41 of 81 = 50.6 %** and the drafted conclusion was that 40 marks had no provenance. Against `mark_forms` it is **81 of 81**. The superseded writer proposes **50** marks on pages the live one has converged on — including p125's own prose *about* the marker.
+
+🔴 **Research sweep: NEW tokens for the first time in three passes, on the DEMAND side only.** Ohio is the first state to require every K-12 district to adopt an AI policy (`2026-07-01`); the EU's Art. 4 AI-literacy duty is **not** delayed and has applied since `2025-02-02`; Singapore leads the ASEAN AI-governance working group; UNESCO IESALC + UNU-IAS report **87 %** of 200 LATAM institutions using AI with only **26 %** holding a formal strategy. 🔴 **The SUPPLY channel still returns zero education-specific addresses**, so `Gap 402` is split rather than weakened a ninth time. 🔴 **Both LATAM figures are CHANNEL-ONLY**: `iesalc.unesco.org` and `digitaleducationcouncil.com` are both refused at the agent proxy (`CONNECT tunnel failed, response 403`), the identical signature p125 recorded — a systematic policy, not a dead source.
+
+### Pre-registered for p127
+
+🟢 **`ACTION AN`** — give `repair_search.violations` the vocabulary instead of `re.escape(tok)`, so a family token cannot match inside a precise one, and re-run the lineage's baselines. 🔴 *Refuted if fewer than the 3 `GPL` SUBSTRING records are removed, or if any of the other 24 live violations disappears with them.*
+
+🟢 **`ACTION AO`** — mark the superseded writer as superseded: a module-level refusal in `correction_form.apply_marks` naming `mark_forms.apply_marks` as live, plus an assertion that no instrument in `compose/code/` calls the former. 🔴 *Refuted if any pass's committed instrument depends on it.*
+
+🟢 **`ACTION AP`** — bind a token to a referent named in PROSE rather than as an address. The 2 `openbadges-specification` records are *"the spec carries no grant while the validator is Apache-2.0"*, and that validator is a separately published address here. 🔴 *Refuted if fewer than both resolve by matching a prose noun phrase to an address this KB already publishes.*
+
+🟢 **`ACTION AQ`** — the 8 remaining `catsim/MIT` rows, all on append-only pages or inside the `"MIT both"` quantifier cell. Decide and record the rule: may an append-only page carry a correction *annotation* without being rewritten? 🔴 *Refuted if the rule cannot be applied without editing a single historical claim.*
+
+🟢 **`ACTION AR`** — make the fence a SCOPE. `_is_quote` skips a fence's delimiter lines while nothing tracks fence state, so every licence token inside a fenced block is read as a live claim. Quoting one cell verbatim registered as an unmarked retraction on **7** pages this pass, caught by the self-audit before the commit. 🔴 *Refuted if fewer than those 7 rows are cleared by tracking fence state, or if doing so suppresses any of the 27 live violations.*
+
 ## Pass 125 — 2026-10-11
 
 ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).

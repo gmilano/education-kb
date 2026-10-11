@@ -1,0 +1,1 @@
+| 1 | the LMS, **unforked** | 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) GPL-3.0 (`COPYING.txt`, `main`) · [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) AGPL-3.0 · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) AGPL-3.0 | 🟢 **run it as shipped.** An unmodified deployment triggers no copyleft duty at all |

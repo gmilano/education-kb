@@ -1,0 +1,1 @@
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (979★) | 🔴 AGPL-3.0<!--corrected-->| 🟢 **MIT**, split grant — `docs/` is CC-BY-SA-4.0, client-side JS and everything else MIT | 🔴 an LMS marked **"🔴 no"** is in fact usable through its MIT arm |

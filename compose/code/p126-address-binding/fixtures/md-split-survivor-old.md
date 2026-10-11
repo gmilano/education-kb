@@ -1,0 +1,1 @@
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0`<!--corrected--> | **MIT** | kept `docs/`'s CC clause, dropped the software's MIT grant (`P456`) | 🔴 a **permissive, redistributable** row rejected as ShareAlike |

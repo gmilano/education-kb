@@ -1,0 +1,17 @@
+# binding = ON (AK over AJ)
+# repaired pairs   per-line=44  address-SET=42
+# violations       per-line=43  address-SET=32
+CLEARED	agents/top.md	pupilfirst/pupilfirst	CC-BY-SA-4.0
+CLEARED	agents/trending.md	portabilis/i-educar	LGPL-3.0
+CLEARED	intel/market.md	portabilis/i-educar	LGPL-3.0
+CLEARED	intel/open-gaps.md	portabilis/i-educar	LGPL-3.0
+CLEARED	intel/open-gaps.md	pupilfirst/pupilfirst	CC-BY-SA-4.0
+CLEARED	repos/foundations.md	pupilfirst/pupilfirst	CC-BY-SA-4.0
+CLEARED	repos/trending.md	pupilfirst/pupilfirst	CC-BY-SA-4.0
+CLEARED	verticals/solutions.md	portabilis/i-educar	LGPL-3.0
+CLEARED	verticals/solutions.md	pupilfirst/pupilfirst	CC-BY-SA-4.0
+#
+# pupilfirst / CC-BY-SA-4.0  (AK's quarry)   before=6 after=0
+# catsim / MIT  (must NOT be laundered)      before=9 after=9
+# clause: refuted if the SET rule does not clear all 6
+# VERDICT: DISCHARGED, NOT REFUTED

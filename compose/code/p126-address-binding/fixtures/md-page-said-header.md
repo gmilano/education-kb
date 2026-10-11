@@ -1,0 +1,4 @@
+| # | where | the page said | the file says | how it was missed |
+|---|---|---|---|---|
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |

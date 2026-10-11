@@ -1,0 +1,23 @@
+# newly surfaced by ACTION AF = 15
+BOUND      	agents/top.md:221	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	agents/trending.md:3539	oat-sa/tao-core	LGPL-3.0	bound
+SUBSTRING  	compose/patterns.md:524	instructure/canvas-lms	GPL	SUBSTRING of a longer token; not a token on this line
+SUBSTRING  	compose/patterns.md:799	instructure/canvas-lms	GPL	SUBSTRING of a longer token; not a token on this line
+SUBSTRING  	compose/patterns.md:799	openedx/edx-platform	GPL	SUBSTRING of a longer token; not a token on this line
+BOUND      	intel/market.md:3764	1edtech/openbadges-specification	Apache-2.0	bound
+BOUND      	intel/open-gaps.md:734	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	intel/open-gaps.md:3428	oat-sa/tao-core	LGPL-3.0	bound
+BOUND      	repos/foundations.md:1456	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	repos/foundations.md:2927	oat-sa/tao-core	LGPL-3.0	bound
+BOUND      	repos/foundations.md:2955	1edtech/openbadges-specification	Apache-2.0	bound
+BOUND      	repos/trending.md:406	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	verticals/solutions.md:257	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	verticals/solutions.md:416	pupilfirst/pupilfirst	CC-BY-SA-4.0	bound
+BOUND      	verticals/solutions.md:2335	oat-sa/tao-core	LGPL-3.0	bound
+#
+# explained by MIS-BINDING = 0
+# SUBSTRING artefacts      = 3
+# genuinely BOUND          = 12
+# unlocatable              = 0
+# clause: refuted if fewer than 12 of 15 are mis-binding
+# VERDICT: DISCHARGED, REFUTED

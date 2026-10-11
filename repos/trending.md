@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-11
 ---
 
+## 🟢 Pass 126 — 2026-10-11 (thirteenth pass of this date), 11:4x–12:1x UTC
+
+🔵 **APPEND-ONLY page. This section is added above p125's and nothing below it is edited** — except
+the single `P125-A` table row `P126-B` repaired, which gained a `<!--corrected-->` marker and no
+new claim.
+
+🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline.**
+
+🔴 **This page is where the assertion's residue concentrates, and `P126-A` says why that was
+invisible.** p125's committed evidence recorded 4 violations on this page at line numbers that its
+own write invalidated; relocated by address they are all found. 🔴 **8 of the 27 remaining
+violations corpus-wide are `douglasrizzo/catsim` still published as `MIT` when its `dev/LICENSE` is
+`BSD-3-Clause` (1 514 B)** — and most sit here, where a repair may not rewrite history.
+`ACTION AQ` is pre-registered to decide whether an append-only page may carry a correction
+*annotation* without being rewritten.
+
+## 🔴 🆕 `P126-S` — the research channel returns NEW tokens for the first time in three passes
+
+p124 and p125 both recorded zero new items in all four regions. 🟢 **This pass's sweep does not.**
+Every mandated query was run globally and once per region; what follows separates what HELD from
+what is new, and names the regions where the channel still gives nothing.
+
+| region | new to this KB | held |
+|---|---|---|
+| **North America** | 🟢 **Ohio is the first state to require every K-12 district to adopt an AI use policy, due `2026-07-01`** · Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students · Katy ISD bans generative-AI chatbots for K-6 and phases access in through grade 12 for 2026-27 · **> 30 states** now carry AI guidance documents | `H.R. 8747` · 134 bills / 31 states · CA `AB 1159` · ID `SB 1227` · `STUDENTS FIRST Act of 2026` · NA share 36 % · NYC K-8 moratorium |
+| **EMEA** | 🟢 **the Art. 4 AI-literacy obligation is NOT delayed — it has applied since `2025-02-02`**, while the Digital Omnibus moves only the high-risk dates · enforcement by the AI Office and national authorities began `2026-08-02` · Council of Europe: only **4 of 23** responding member states reported policies (2022) | EU AI Act Annex III · Digital Omnibus → `2027-12-02` / `2028-08-02` · AI Office · OECD / UNESCO guidance |
+| **APAC** | 🟢 **Singapore leads the ASEAN Working Group on AI Governance** · Ipsos *Education Monitor 2026*: lower support for banning AI in schools across Asian markets, **higher** in Australia and New Zealand · APAC CAGR **28.1 %** 2026→2033 · 🟡 Taiwan's AI Basic Act reported passed **Dec 2025** *and* reported still drafting — contested, recorded as contested | Korea's AI Basic Act in force `2026-01-22` · Vietnam's law `2026-03-01`, education named high-risk · Japan voluntary · China's binding algorithm rules |
+| **LATAM** | 🟢 **UNESCO IESALC + UNU-IAS, launched at Digital Learning Week (8–11 Sept 2026): 200 institutions across 19 countries, 87 % already using AI, only 26 % with a formal AI strategy** · UNESCO's regional **Observatory on AI in Education**, launched April 2026 in Santiago (CAF, CENIA Chile, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Fundación Ceibal) · Uruguay the first LATAM country to sign the Council of Europe AI framework convention (2025) | DEC LATAM 79 % faculty · `ILIA` · Brazil's AI bill · Chile's framework · Colombia's `CONPES 4144` · Mexico's sectoral rules |
+
+🔴 **Supply side: still zero.** The agent and repo queries returned no education-specific address
+new to this KB. `top open source AI agents education 2026 github MIT` returns general-purpose
+frameworks (CrewAI, LangGraph, OpenHands, OpenCode) and two curated lists; `github trending
+education AI 2026` returns coding-education repos and one institutional announcement. 🟢 **`Gap 402`
+is therefore split rather than weakened a ninth time: the DEMAND channel recovered this pass, the
+SUPPLY channel did not.**
+
+🔴 **The two numbers worth reading twice are both LATAM, and neither could be read first-hand.**
+`iesalc.unesco.org` and `digitaleducationcouncil.com` are both unreachable from this environment —
+`ENOTFOUND` via the fetch tool and `curl: (56) CONNECT tunnel failed, response 403` at the agent
+proxy, the identical signature p125 recorded for the second host. 🟢 **p125's recorded refusal
+holds, and a second host now joins it**, which makes this a systematic proxy policy rather than a
+dead source. **The 87 % / 26 % figures and the 200-institution scope are recorded as CHANNEL-ONLY,
+not first-hand**, and the DEC faculty-denominator item (7 319 faculty vs 30 000+ responses across
+29 institutions) stays open for the same reason it was opened.
+
+## 🟢 Pre-registered for p127
+
+🟢 **`ACTION AN`** — give `repair_search.violations` the vocabulary instead of `re.escape(tok)`, so
+a family token cannot match inside a precise one, and re-run the lineage's baselines. 🔴 *Refuted
+if fewer than the 3 `GPL` records this pass classified as SUBSTRING are removed, or if any of the
+other 24 live violations disappears with them.*
+
+🟢 **`ACTION AO`** — mark the superseded writer as superseded. Add a module-level refusal to
+`correction_form.apply_marks` naming `mark_forms.apply_marks` as the live one, and assert no
+instrument in `compose/code/` calls the former. 🔴 *Refuted if any pass's committed instrument
+turns out to depend on it.*
+
+🟢 **`ACTION AP`** — bind a token to a referent named in PROSE rather than as an address. The 2
+`openbadges-specification` records are *"the spec carries no grant while the validator is
+Apache-2.0"*, and that validator is a real, separately published address in this corpus. 🔴
+*Refuted if fewer than both are resolved by matching a prose noun phrase to an address this KB
+already publishes.*
+
+🟢 **`ACTION AQ`** — the 8 remaining `catsim/MIT` rows, all on append-only pages or inside the
+`"MIT both"` quantifier cell. Decide and record the rule: may an append-only page carry a
+correction *annotation* without being rewritten? 🔴 *Refuted if the rule cannot be applied without
+editing a single historical claim.*
+
+🟢 **`ACTION AR`** — make the fence a SCOPE. `_is_quote` skips a fence's delimiter lines while
+nothing tracks fence state, so every licence token inside a fenced block is read as a live claim.
+🔴 *Refuted if fewer than the 7 rows this pass's own self-audit raised are cleared by tracking
+fence state, or if doing so suppresses any of the 27 live violations.*
+
+🔵 **`compose/code/p126-address-binding/out/` carries every number above, keyed on `(page, address, token)` and never on a line.**
+
 ## 🟢 Pass 125 — 2026-10-11 (twelfth pass of this date), 11:0x–11:1x UTC
 
 🔵 **APPEND-ONLY page. This section is added above p124's and nothing below it is edited** — including rows this pass found stale. Stale tokens in the history are listed here, not rewritten.
@@ -47,7 +122,7 @@ p124 found **zero** live false claims among its 27. Over the full ten-page domai
 
 | # | where | the page said | the file says | how it was missed |
 |---|---|---|---|---|
-| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT`<!--corrected--> | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
 | 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
 | 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
 

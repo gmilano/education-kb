@@ -6,6 +6,178 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
+**Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).
+
+🟢 **Instrument: `compose/code/p126-address-binding/` — `ACTION AK` and `AM` discharged and not refuted; 🔴 **`ACTION AJ` and `ACTION AL` REFUTED on their own clauses**. `test_p126.sh` **20 passed / 0 failed**, fully offline, over 9 fixtures.**
+
+## 🔴 🆕 `P126-A` — p125's committed evidence cannot be found again on p125's committed pages
+
+p125 committed `out/ac-after.triples`: 36 `path:line|address|token` records, the residue of its own
+`ACTION AC` assertion. 🔴 **Not one of those 36 line numbers names the address it is filed under.**
+
+The cause is ordering, not drift and not a faulty recogniser. p125 measured the pages, then
+**prepended its pass section to each page it had just measured**, and every coordinate below the
+insertion moved down by the length of that section.
+
+| page | p125's section | recorded → true |
+|---|---|---|
+| `agents/top.md` | **58** lines | `163` → **221** (`pupilfirst/pupilfirst`, CC-BY-SA-4.0) |
+| `intel/market.md` | **63** | a uniform `+63` across all 4 of its records |
+| `intel/trends.md` | **33** | `+33` across both |
+| `intel/open-gaps.md` | **186** | `+186` across all 4 |
+
+🟢 **The claims themselves survive.** Relocated by `(page, address, token)`, all 15 records of
+`ACTION AJ`'s clause set are found and **0 are unlocatable** — the same claims, at coordinates the
+pass itself invalidated. 🔵 **This is the lineage's own pattern one level up**: p122 found a census
+less precise than the page, p123 a repair that was an edit, p124 a token read without its scope,
+p125 an assertion run without its domain — and p126 finds **evidence keyed on a coordinate the pass
+does not preserve.** This instrument's `out/` is therefore keyed on `(page, address, token)` and
+never on a line number.
+
+## 🔴 🆕 `P126-B` — one unreadable column heading, and the table reporting three false claims was itself an unmarked correction
+
+Recomputed on the committed pages with p125's own code, the assertion returns **49** violations
+rather than the 36 reported, and 🔴 **12 of the 49 sit inside p125's own section** — the largest
+single bucket when each violation is attributed to the pass section it lives in (p122: 6, p93: 5,
+p118: 4, p120/p116/p104: 3 each).
+
+The cause is one heading. `P125-A`'s defect table — the table that reports the three live false
+claims — is headed `| # | where | the page said | the file says | how it was missed |`, and
+`HDR_OLD` carries `this KB said`, `KB said` and `pNNN said` but 🔴 **not `the page said`**. So
+`classify_header` returns `None`, the table is not a correction table to the apparatus at all, its
+quoted OLD values read as live claims, and the assertion re-raises them on each of the **6** pages
+the table was copied onto.
+
+🔵 **p125 invented a new column spelling in the same commit that shipped the sweep for forms
+1–13** — which is `ACTION AM`'s argument restated as a measured fact rather than a prediction.
+
+🟢 **Repaired this pass:** three spellings added to `HDR_OLD` (`the page said`, `the
+{shelf,row,cell,table} said`, `as published`), after which p125's own writer reaches the rows.
+**6 rows marked, form 2, one per page.** Rows 2 and 3 of that table are correctly *not* hits —
+row 2's old value `MIT` is also a new value (for `pyBKT`), and row 3's old cell carries no licence
+token at all.
+
+## 🔴 🆕 `P126-C` — `ACTION AJ` and `ACTION AK` are one mechanism, and neither works alone
+
+The 15 violations `ACTION AF` newly surfaced decompose exhaustively, and 🔴 **mis-binding explains
+none of them**:
+
+| n | class | why |
+|---|---|---|
+| **6** | `pupilfirst/pupilfirst` CC-BY-SA-4.0 | 🟢 `AK`'s class — a split grant collapsed to one token, so the surviving member reads as superseded |
+| **4** | `oat-sa/tao-core` LGPL-3.0 | unmarked correction apparatus: a quoted retraction, and an old column whose header was not read |
+| **3** | `instructure/canvas-lms`, `openedx/edx-platform` `GPL` | 🔴 **SUBSTRING, not binding** |
+| **2** | `1EdTech/openbadges-specification` Apache-2.0 | the referent is *"the validator"* — named in prose, not as an address, so binding structurally cannot reach it |
+
+🔴 **The 3 are `ACTION AG`'s own SUBSTRING class recurring in a function `AG` never reached.**
+`repair_search.violations` tests `re.escape(tok)` between word boundaries instead of the
+vocabulary, and `\bGPL\b` matches inside `GPL-3.0`. Line 524 of `compose/patterns.md` carries no
+bare `GPL` at all — the vocabulary reads `GPL-3.0` and `AGPL-3.0`. `AG` guarded token *reading*;
+the violation *check* was outside it.
+
+🔴 **And `AK` cannot be implemented without `AJ`.** An address-level survivor set must be fed by
+*bound* tokens. `compose/patterns.md` carries one cell naming [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT)
+and [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) together, giving each its own
+token in a parenthetical and retracting the earlier *"both"* reading. An unbound union hands
+`MIT`, true of `pyBKT`, to `catsim` as a surviving member — clearing `catsim`'s superseded `MIT` on
+**9** live rows: the defect p125 called *the one worth the pass*, re-opened by its own remedy.
+
+🔵 **That cell is described here rather than quoted, and the reason is a finding of its own.**
+🔴 **`mark_forms` is not fence-aware**: `_is_quote` skips a fence's delimiter lines but nothing
+tracks fence STATE, so a licence token inside a fenced block is read as live prose. Quoting the
+cell verbatim — even fenced — registered as an unmarked retraction on **7** pages, and the
+self-audit caught it before this commit. `ACTION AR` makes the fence a scope.
+
+| run | `pupilfirst` cleared (wanted 6) | `catsim/MIT` kept (wanted 9) | verdict |
+|---|---|---|---|
+| `AK` alone (`--no-bind`) | 🟢 6 | 🔴 **0 — laundered** | 🔴 refuted |
+| 🟢 **`AK` over `AJ`** | 🟢 **6** | 🟢 **9** | 🟢 **not refuted** |
+
+🟢 **So `AJ` is refuted as a CAUSE and indispensable as a MECHANISM, and those are not opposites.**
+The binder needed three rules in priority order: a **short name** in backticks within 30 characters
+(the only rule that resolves the `pyBKT`/`catsim` row — cell and distance both fail); **ordinal
+pairing** where k addresses and k tokens sit in two cells; then the **cell wall and nearest
+address**. Composed, the assertion falls from **49** violations over 23 addresses to **27** over 13.
+
+## 🔴 🆕 `P126-D` — two writers ship side by side, and this pass published a false number before catching it
+
+`compose/code/p125-retraction-cue/` contains **two** `apply_marks`: one in `correction_form.py`,
+one in `mark_forms.py`. Only the second carries the `APPARATUS` guard and the cue model, and
+🔴 **nothing in the directory marks the first as superseded.**
+
+🔴 **p126 used the wrong one.** Measured against `correction_form`, `ACTION AM` reproduced **41 of
+81 = 50.6 %** and the conclusion drafted was that 40 of p125's marks had no provenance in the
+repository. Measured against `mark_forms` — p125's actual writer — it reproduces 🟢 **81 of 81 =
+100 %, per page exactly**, and `AM` is not refuted.
+
+| writer | proposes on p125's own committed pages | `APPARATUS` guard |
+|---|---|---|
+| 🟢 `mark_forms.apply_marks` | **0** — converged, exactly as p125 claimed | 🟢 yes |
+| 🔴 `correction_form.apply_marks` | 🔴 **50** | 🔴 none |
+
+Run with `P126-B`'s header patch, the superseded writer marks p125's own prose *about* the marker —
+*"(`⚠️ **was 🟢 MIT**` inside the cell)"* — the exact false-positive class p125's fourth defect
+fixed. Two such lines were written and reverted before `repair.py` was pointed at `mark_forms`;
+`AM.5` now pins both numbers so the hazard cannot be hit silently again.
+
+🔵 **The lesson is this pass's own:** a reproduction claim is only as good as the identification of
+what it reproduces, and a directory shipping two writers without saying which is live invites
+exactly this error. `ACTION AO` makes it refuse.
+
+## 🔴 `ACTION AL` — a blind spot with nothing behind it
+
+`ACTION AI` inferred the toolchain was blind to two conventions. Both were added and probed over
+**32** candidate addresses × **21** paths = **672 probes**, each reading the repository's own bytes
+on its real default branch (`raw.githubusercontent.com` resolves `HEAD`, so no branch is guessed).
+🟢 **200 × 3, 404 × 669, and zero `000`/`403` — no proxy noise in the channel.**
+
+| path class | probes | grants found |
+|---|---|---|
+| 🔴 `LICENSE.GPL`, `.LGPL`, `.MPL`, `.APACHE`, `.BSD` | **160** | 🔴 **0** |
+| 🟢 `readme.txt` / `README.txt` / `Readme.txt` (WordPress plugin header) | 96 | 🟢 **1** — [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress), `License: GPLv3` at line 7 of 41 951 B |
+
+🔴 **The clause needed 3 and got 1, and this KB already knew that one** — it is `P125-A`'s own
+defect 3. The dual-licence filename convention does not occur anywhere in this corpus's no-grant
+set. 🟢 **The extended path list is still correct to keep**: it is the right convention and costs
+nothing. The honest statement is that it has no further yield here.
+
+🔵 **Two caveats, both from the probe's own output.** The candidate set was harvested by text search
+for no-grant language, which over-captures — 2 of the 3 hits (`moodle/moodle` `COPYING.txt`,
+`celtic-project/LTI-PHP` `LICENSE`) are addresses this KB never claimed were grantless. And `AL`'s
+literal subject, the **18 "genuinely absent"** addresses of p123's `ACTION Y`, are repositories
+that **do not exist**; a 404 repository cannot carry a grant on any path, so that reading is vacuous
+and the operative set had to be the exists-but-unread one.
+
+## 🟢 Pre-registered for p127
+
+🟢 **`ACTION AN`** — give `repair_search.violations` the vocabulary instead of `re.escape(tok)`, so
+a family token cannot match inside a precise one, and re-run the lineage's baselines. 🔴 *Refuted
+if fewer than the 3 `GPL` records this pass classified as SUBSTRING are removed, or if any of the
+other 24 live violations disappears with them.*
+
+🟢 **`ACTION AO`** — mark the superseded writer as superseded. Add a module-level refusal to
+`correction_form.apply_marks` naming `mark_forms.apply_marks` as the live one, and assert no
+instrument in `compose/code/` calls the former. 🔴 *Refuted if any pass's committed instrument
+turns out to depend on it.*
+
+🟢 **`ACTION AP`** — bind a token to a referent named in PROSE rather than as an address. The 2
+`openbadges-specification` records are *"the spec carries no grant while the validator is
+Apache-2.0"*, and that validator is a real, separately published address in this corpus. 🔴
+*Refuted if fewer than both are resolved by matching a prose noun phrase to an address this KB
+already publishes.*
+
+🟢 **`ACTION AQ`** — the 8 remaining `catsim/MIT` rows, all on append-only pages or inside the
+`"MIT both"` quantifier cell. Decide and record the rule: may an append-only page carry a
+correction *annotation* without being rewritten? 🔴 *Refuted if the rule cannot be applied without
+editing a single historical claim.*
+
+🟢 **`ACTION AR`** — make the fence a SCOPE. `_is_quote` skips a fence's delimiter lines while
+nothing tracks fence state, so every licence token inside a fenced block is read as a live claim.
+🔴 *Refuted if fewer than the 7 rows this pass's own self-audit raised are cleared by tracking
+fence state, or if doing so suppresses any of the 27 live violations.*
+
+🔵 **`compose/code/p126-address-binding/out/` carries every number above, keyed on `(page, address, token)` and never on a line.**
+
 **Pass 125, 2026-10-11.** ⏱️ **Twelfth pass of this date** (census window **11:0x → 11:1x UTC**).
 
 🟢 **Instrument: `compose/code/p125-retraction-cue/` — `ACTION AF`, `AG`, `AH` discharged and not refuted; 🔴 **`ACTION AI` REFUTED on its own clause**. `test_p125.sh` **51 passed / 0 failed**, fully offline, over 25 fixtures.**
@@ -17,7 +189,7 @@ p124 found **zero** live false claims among its 27. Over the full ten-page domai
 
 | # | where | the page said | the file says | how it was missed |
 |---|---|---|---|---|
-| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT` | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
+| 1 | `agents/trending.md` | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) **453★** 🟢 `MIT`<!--corrected--> | 🟢 **`Apache-2.0`** — `main/LICENSE`, **11 358 B** | p124 repaired this address on `agents/top.md` **and recorded the repair on both of that page's tables**; the trending row was outside the assertion's domain |
 | 2 | `compose/patterns.md` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) 🟢 **`MIT` both** | 🟡 `pyBKT` **MIT**, `catsim` **`BSD-3-Clause`** — `dev/LICENSE`, **1 514 B** | 🔴 **inside p124's domain and read by hand.** The word *"both"* carries the error, and twelve other rows on these pages already say `BSD-3` |
 | 3 | `verticals/solutions.md` | the licence-tier table counted [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) under 🔴 **"not open source / unknown"** as *"(no file)"* | 🔴 **`GPL-3.0`** — declared in the WordPress plugin header of `develop/readme.txt`: *"License: GPLv3"*, *"License URI: gnu.org/licenses/gpl-3.0.html"* | the row is right that there is no `LICENSE` **file**, and wrong about the tier. 🟢 **This KB's own `README.md` already records it as GPL-3.0** |
 
