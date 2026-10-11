@@ -6,9 +6,11 @@ updated: 2026-10-11
 
 # Education — vertical platforms you can customise
 
-**Pass 131, 2026-10-11.** p130's structure retained; **the Moodle and OpenEduCat rows corrected**
-(see `README.md` → Pass 131). This page answers one question: *the client runs X — where
-does AI attach, and what does the licence let us ship?* Repo-level verification lives in
+**Pass 132, 2026-10-11.** p131's structure and rows retained; 🔴 **a whole category of platform is
+ADDED below — the national K-12 school platforms, which carry more AI connectors than Moodle and
+which no previous pass of this KB had listed at all** (see `README.md` → Pass 132, `P132-A`). The
+Kolibri row is also corrected. This page answers one question: *the client runs X — where does AI
+attach, and what does the licence let us ship?* Repo-level verification lives in
 `repos/foundations.md`; this page is about the attachment, the integration standard and the
 constraint.
 
@@ -36,7 +38,7 @@ Four ways to put AI into an existing education platform, in increasing order of 
 | **Open edX** — [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | **XBlock** ([`openedx/XBlock`](https://github.com/openedx/XBlock), Apache-2.0) is the clean route — the component framework is permissive even though the platform is not. Operations go through **Tutor** | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (AGPL-3.0, 2★, experimental) is the only MCP path. Sandboxing for generated/learner code: [`openedx/codejail`](https://github.com/openedx/codejail) (Apache-2.0). Analytics: `tutor-cairn`. |
 | **Tutor** (Open edX distribution) — [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | Write a Tutor plugin (cookiecutter provided) to ship AI services as containers alongside the platform | Plugin family is first-party and broad: `tutor-mfe`, `tutor-cairn`, `tutor-discovery`, `tutor-credentials`, `tutor-jupyter`, `openedx-scorm-xblock`. A Tutor plugin is how an AI service gets deployed and upgraded with the platform rather than beside it. |
 | **Canvas** — [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | Canvas's REST API is the richest of any LMS — hence MCP first, LTI second. Avoid forking | The deepest connector ecosystem in education AI: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 288★, canonical) and [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (MIT, 9★). Avoid [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (103★ but **no licence**). |
-| **Kolibri** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Fork freely, or extend the Python app directly; content pipeline via [`learningequality/studio`](https://github.com/learningequality/studio) (MIT) | No AI agent found on top of Kolibri. **This is the most valuable unfilled slot in the whole KB:** MIT licence, offline-first design, and the deployment contexts (rural LATAM, Sub-Saharan Africa, South Asia) where a *small local model* is the only viable option. See pattern P4 in `compose/patterns.md`. |
+| **Kolibri** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Fork freely, or extend the Python app directly; content pipeline via [`learningequality/studio`](https://github.com/learningequality/studio) (MIT). 🟢 **Or do not integrate at all — orchestrate it** | 🔴 **CORRECTED BY p132. The claim that this was "the most valuable unfilled slot in the whole KB" is false.** [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) (**Apache-2.0, 39 444★**) already runs **Kolibri as its education container** beside **Kiwix** (library) and **Ollama** (AI assistant), as a Docker orchestration layer. It is the second-largest repo in this KB. Also [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) (20★, macOS port) and [`Tushar-cy/Offline-AI`](https://github.com/Tushar-cy/Offline-AI) (2★, Indian Class-10 curriculum, claims Kolibri integration). 🟢 **The surviving slots are narrower: nothing builds AI *inside* Kolibri** (NOMAD attaches from outside), **and nothing offline targets LATAM.** See pattern P2 in `compose/patterns.md`. |
 | **Sakai** — [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** (permissive) | Java tool/provider model, or LTI | No notable AI-on-top found. Attractive because the licence is permissive and the installed base is institutional Java estate. |
 | **Chamilo** — [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | Plugin API, or LTI | No notable AI-on-top found. Matters for engagement reach: real adoption in Francophone Europe and Spanish-speaking LATAM, where Moodle/Canvas assumptions do not hold. |
 | **ILIAS** — [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | Plugin slots, or LTI | No notable AI-on-top found. Chosen in EMEA public-sector procurement for standards and accessibility compliance — the same reasons that make AI features there a documentation exercise as much as an engineering one. |
@@ -49,6 +51,44 @@ Four ways to put AI into an existing education platform, in increasing order of 
 | **Richie** — [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | Django/React CMS in front of Open edX | The catalogue/portal layer. MIT, so the public-facing surface can be customised freely even when the LMS behind it is AGPL. |
 | **SCORM/xAPI** — [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | Runtime shim | How legacy courseware a client already paid for keeps working, and how learner interaction data gets out of it for analytics. |
 | **Blackboard** (proprietary) | n/a | API only | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) (ISC, 11★, Peru) is the only open connector found. Blackboard retains significant higher-ed share, especially in LATAM, and is almost entirely unserved by open source. |
+
+## The category this page was missing: national K-12 school platforms
+
+🔴 **Every platform above is an LMS or an ERP, and in most of EMEA and APAC that is not what a
+school actually runs.** A Polish school runs **Librus**. A Slovak or Czech school runs **EduPage**.
+A French school runs **Pronote**. A German one runs **IServ**. These are the systems of record for
+grades, attendance, homework and parent communication for millions of pupils — and this KB had
+never listed one.
+
+🟢 **They are also, by connector count, better served by open-source AI than Moodle is.** The
+connectors are tiny and unofficial, but they exist and they map the API surface.
+
+| platform | country | proprietary? | the attachment point | open connectors that exist |
+|---|---|---|---|---|
+| **Librus Synergia** | Poland | yes | portal login; no public partner API found | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) — 🟡 **MIT (2.x)**, `legacy_reference/` **GPL-3.0-only**, 10★. The largest connector of the tier. 🔴 Unofficial, *"not affiliated with Librus"*, and **no 2FA support** |
+| **EduPage** | Slovakia / Czechia | yes | portal login | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) (**MIT**, 3★ — timetables, grades, homework, **meal ordering**, multi-school discovery, 2FA) and an independent second implementation [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) (**MIT**, 1★). 🟢 **Two independent implementations is the strongest demand signal in the tier** |
+| **Pronote** | France | yes | portal login | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) (**MIT**, 1★) — grades, timetables, homework, absences |
+| **IServ** | Germany | yes | portal login | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) (**MIT**, 0★) — parent letters, timetables, **sick notes**. 🔵 The only connector in this KB whose user is a **parent** |
+| **Sisu (Funidata)** | Finland (higher ed) | yes | institutional SIS API | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) (🔴 **no licence**, 1★) — written for **any** Sisu deployment, so the broadest reach of the tier, and unusable as published |
+| **uSaint** | South Korea (higher ed) | yes | via `rusaint` | [`yourssu/soongpt-plugin`](https://github.com/yourssu/soongpt-plugin) (**MIT**, 3★) — course search, timetable planning, **graduation requirements**. Org-owned |
+| **VTOP** | India (VIT) | yes | portal login | [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) (**Apache-2.0**, 4★) — attendance, marks, timetable, exams |
+| **QLDT** | Vietnam (Hanoi Univ.) | yes | portal login | [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) (**GPL-2.0**, 1★). 🔴 **Jurisdiction warning:** Vietnam's Decision 33/2026/QD-TTg names education, including automated assessment and behavioural monitoring, as high-risk |
+| **Visual Schedule Builder (VSB)** | Canada | yes | institutional API | [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) (**MIT**, 2★ — conflict checks and schedule generation **without browser automation**) and [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP) (**MIT**, 1★) |
+
+🔴 **The attachment point for this whole category is the problem, not the opportunity.** There is no
+LTI here, no MCP-friendly partner API, and no vendor programme — the connectors log in **as the
+pupil or the parent, with their password**, against a platform that has not sanctioned it. For the
+four K-12 platforms that is children's attendance and grade data under GDPR with no processing
+agreement, and `librus-mcp` only works where **two-factor authentication is switched off**.
+
+🟢 **How to use this category in an engagement anyway, which is the genuinely valuable part:**
+
+1. **As integration intelligence.** The expensive, slow work — mapping each platform's undocumented
+   API surface — is done and published under MIT. Read it, keep the surface map, rebuild the auth.
+2. **As the opening for a sanctioned integration.** None of these vendors has an agent story. A
+   studio that brings one a properly authenticated, logged, DPA-backed connector is not competing
+   with open source; it is replacing a password-scraper the vendor would rather did not exist.
+3. **Never deploy one as-is.** See the credential-model blocker in `agents/top.md`.
 
 ## The licence decision, stated plainly
 
@@ -78,5 +118,15 @@ Four ways to put AI into an existing education platform, in increasing order of 
   **prohibited** in EU education settings under AI Act Art. 5, not merely high-risk. Assessment
   integrity remains the top institutional concern and the shelf still cannot answer it at
   production grade.
-- 🆕 **No AI-on-top for any system of record.** The platform tier is restored (above) but every
-  one of its six-plus members has zero agent coverage.
+- **No AI-on-top for any *open-source* system of record.** 🟢 **NARROWED, and the distinction is
+  now the whole point.** p132 found **21 SIS/student-portal agents** (`agents/top.md`), so the
+  blanket claim *"no AI-on-top for any system of record"* is **refuted** — but every one of the 21
+  connects to a **proprietary or institution-hosted** portal (Librus, EduPage, Pronote, IServ,
+  Sisu, uSaint, VTOP, QLDT, VSB, Quercus). 🔴 **The open-source systems of record —
+  `openeducat_erp`, `frappe/education`, `academico`, RosarioSIS, Gibbon, openSIS, Fedena — still
+  have exactly zero agent coverage between them.** That is the sharper and more useful gap: the
+  connector effort has gone to the platforms a studio *cannot* fork, and avoided the ones it can.
+- 🆕 **The national K-12 platforms have no sanctioned integration path at all.** Nine proprietary
+  platforms (above) with real open connectors and **no LTI, no partner API and no vendor agent
+  programme** between them. Every existing connector is an unofficial password-scraper. This is
+  simultaneously the clearest unmet need and the clearest compliance hazard on this page.

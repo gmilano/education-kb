@@ -6,10 +6,11 @@ updated: 2026-10-11
 
 # Education — foundational repos
 
-**Pass 131, 2026-10-11.** p130's rows retained; **one licence corrected and a whole tier restored**
-(see `README.md` → Pass 131). These are the systems a client already runs, or would sensibly adopt,
-and that AI work gets attached to. Licence is the first column that matters: it decides whether
-Globant can ship a derivative at all.
+**Pass 132, 2026-10-11.** p131's rows carried forward unchanged (they were verified hours earlier
+in the same date window); 🔴 **one new row changes this page's headline recommendation and refutes
+this page's own flagship gap** — see `README.md` → Pass 132, `P132-C`. These are the systems a
+client already runs, or would sensibly adopt, and that AI work gets attached to. Licence is the
+first column that matters: it decides whether Globant can ship a derivative at all.
 
 🔴 **Read this before trusting a licence cell.** GitHub's `license.spdx_id` reports **`NOASSERTION`
 ("Other")** whenever its matcher does not recognise a `LICENSE` file as a known template. That is
@@ -35,6 +36,36 @@ the payload wins and the cell below says so.
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **LGPL-3.0** (payload-read) | 886 | 2026-10-09 | APAC (India) | Education *ERP* — admissions, students, faculty, timetabling, fees — built on Odoo. The natural target for the administrative automation nobody else serves. 🔴 **Licence corrected by p131.** GitHub's API reports `NOASSERTION` and p130 published that as "review terms before use". This KB had already **read `master/LICENSE` in full — 8 241 bytes, genuinely LGPL-3.0** — and used that read to *retract* an even earlier "no grant" row. p130 reinstated the retracted claim by trusting the API field over its own evidence. **LGPL on an LGPL Odoo base: linking is fine, modifying the module itself carries reciprocity.** |
 | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | 2026-10-10 | EMEA (Germany) | Mature German LMS with strong standards and accessibility compliance — relevant precisely because EMEA procurement weighs those heavily. |
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **NOASSERTION** | 447 | 2026-10-09 | EMEA (frentix, Switzerland) | Java LMS widely deployed in Swiss/German universities. Licence reads as "Other" to GitHub (it is Apache-2.0-based in its own documentation) — **verify before building**. |
+
+## The offline / low-connectivity stack (added by p132 — and it refutes this page's own gap)
+
+🔴 **This page has carried, for several passes, that "the offline slot is the cleanest unclaimed
+opportunity in this KB". It is not unclaimed.** It is occupied by the second-largest repository
+anywhere in this KB.
+
+| repo | licence | stars | origin | why it is foundational |
+|---|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **Apache-2.0** | **39 444** | unplaced | **Offline-first knowledge and education server**: Wikipedia, thousands of books, courses, maps and optional local AI, all on hardware the client owns with no internet required. Architecturally a **Docker orchestration layer over containerised tools** — **Kiwix** powers the Information Library, **Kolibri** powers the Education Platform, **Ollama** powers the AI Assistant (the installer provisions Ollama on the host; an external OpenAI-compatible endpoint is also supported). 🟢 **Permissive, so a client can ship a derivative.** 850 commits, updated the day of this pass. |
+| [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟡 **UNREAD** | 20 | unplaced | macOS / Apple Silicon port, bundling Ollama, Open WebUI, Kiwix, Kolibri and FlatNotes. Useful as a single-machine pilot before committing to the Docker stack. Licence not measured this pass. |
+| [`Tushar-cy/Offline-AI`](https://github.com/Tushar-cy/Offline-AI) | 🟡 **UNREAD** | 2 | **APAC (India)** | Offline LMS for Class 10 Maths and Science on the Indian curriculum: FastAPI + React + RAG over structured chapter data with a local Ollama model, gamified quizzes, LAN-only operation, and a claimed Kolibri integration. 🔴 **Duplicate pair** with [`Tushar-cy/Ai-edge-learning-hub`](https://github.com/Tushar-cy/Ai-edge-learning-hub) (same owner, byte-identical description). Small, but the only row that targets a *named national curriculum* offline. |
+
+🔵 **Why eleven passes missed it, and why the probe was not at fault.** p131 ran `kolibri stars:>2`,
+got 86 repos, correctly resolved 3 to the Learning Equality family and 0 with AI. **The probe was
+valid; the conclusion was false.** NOMAD *composes* Kolibri as a container and never names it in
+its description — the dependency appears only in the README architecture. **A dependency is not
+always visible in the metadata of the thing that depends on it.**
+
+🟢 **What this changes for an engagement.** The low-connectivity offer stops being *"build an
+offline tutor"* and becomes *"deploy and extend an Apache-2.0 stack that already composes content,
+library and local inference"* — faster, cheaper and far more defensible in a procurement
+conversation. Kolibri (MIT) remains the right content layer; what changed is that the integration
+around it already exists. See `compose/patterns.md` → P2.
+
+## Administrative automation — the first optimiser (added by p132)
+
+| repo | licence | stars | origin | what it gives you |
+|---|---|---|---|---|
+| [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | Conflict-free academic timetable generation under **India's NEP 2020**: electives, faculty availability, courses, rooms, balanced workloads, scenario simulation, manual overrides, exports, and a natural-language interface over MCP. 🟢 **The "most-cited driver, least-served tier" finally has a repo, and it is an optimiser rather than an LLM wrapper.** 🔴 One star — a reference design, not a dependency. |
 
 ## Supporting infrastructure
 
@@ -87,7 +118,10 @@ plugin), or **MCP** against the platform API (see `agents/top.md`). If the clien
 wants to own a closed derivative, the shortlist is short because of licensing, not features:
 **`oppia/oppia`** (Apache-2.0), **`sakaiproject/sakai`** (ECL-2.0), **`learningequality/kolibri`**
 (MIT) and **`academico-sis/academico`** (MIT). Everything else on this page is copyleft, and the
-AGPL rows commit a hosted-service client to reciprocal source release.
+AGPL rows commit a hosted-service client to reciprocal source release. 🟢 **And if the constraint
+is connectivity rather than licensing, start from `Crosstalk-Solutions/project-nomad`
+(Apache-2.0, 39 444★) instead of assembling the stack yourself** — it already composes Kolibri,
+Kiwix and a local model, and it is permissive enough to fork.
 
 ## Declared gaps
 
@@ -103,11 +137,19 @@ AGPL rows commit a hosted-service client to reciprocal source release.
   ~5.5 months quiet, unchanged on re-check this pass.** Worth raising explicitly before
   recommending it as an actively developed base — it is still the richest API surface in the
   sector, which is why every connector targets it.
-- 🆕 **Three Kolibri-family repos, zero AI on any of them.** A valid re-probe this pass
-  (`kolibri stars:>2` → 86 repos) resolves the family to
+- ~~**Three Kolibri-family repos, zero AI on any of them.** A valid re-probe this pass
+  (`kolibri stars:>2` → 86 repos) resolves the family to three Learning Equality repos; the other
+  83 are name collisions. **The offline slot is still the cleanest unclaimed opportunity in this
+  KB** (`intel/trends.md` → T8).~~ 🔴 **REFUTED BY p132.** The family resolution was right —
   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, 1 141★),
-  [`learningequality/studio`](https://github.com/learningequality/studio) (MIT, 192★) and
+  [`learningequality/studio`](https://github.com/learningequality/studio) (MIT, 192★),
   [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system)
-  (52★). The other 83 are name collisions — KolibriOS, an accessible-HTML design system, a Rust
-  embedded GUI, two keyboards, a SPARQL engine, a game engine. **The offline slot is still the
-  cleanest unclaimed opportunity in this KB** (`intel/trends.md` → T8).
+  (52★) — **and the conclusion drawn from it was wrong.**
+  [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+  (**Apache-2.0, 39 444★**) runs Kolibri as its education container beside Kiwix and Ollama, and
+  does not contain the string `kolibri` in its description. 🟢 **The surviving gaps are narrower and
+  real: (a) no AI project builds *inside* Kolibri itself** — NOMAD orchestrates it from outside and
+  the Learning Equality repos carry no AI; **(b) nothing offline targets LATAM.** The one
+  curriculum-specific offline row found is Indian (`Tushar-cy/Offline-AI`), and LATAM — where this
+  KB argues offline is a first-class requirement rather than an edge case — has none.
+  🟡 **Also note a new collision source: Aleph Alpha ships a 78B model called "Kolibri".**

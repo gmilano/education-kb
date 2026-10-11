@@ -6,12 +6,18 @@ updated: 2026-10-11
 
 # Education — AI agents shelf
 
-**Pass 131, 2026-10-11.** Pass 130's rows retained and re-verified; **two tiers p130 declared absent
-are restored below**, because this KB's own append-only pages already carried them (see
-`README.md` → Pass 131, `P131-A`). Every row was verified against the GitHub
-repository-search API (existence, owner, star count, SPDX licence, last push, fork flag) and, where
-noted, by reading the repository page. Rows are ordered by how useful they are to a studio
+**Pass 132, 2026-10-11.** p131's rows retained; 🔴 **an entire tier is ADDED below — the one this
+KB had declared its largest hole.** *"No agent targeting a student information system"* is refuted
+by **21 rows** (see `README.md` → Pass 132, `P132-A`). p131's own rows were verified hours earlier
+in the same date window and are **carried forward unchanged** rather than re-measured; everything
+new on this page was measured this pass and is recorded with its instrument in
+`evidence/verified-repos.2026-10-11-p132.tsv`. Rows are ordered by how useful they are to a studio
 engagement, not by stars.
+
+🔵 **One method note, because it is the whole finding.** The probe that found the new tier was
+`timetable timetabling MCP in:name,description` — **not** any query containing the words *student
+information system*. The builders name repos after the platform they connect to, never after the
+category, so the analyst's vocabulary cannot reach them at any star threshold.
 
 ## How these rows were verified (and one instrument that does not work here)
 
@@ -26,7 +32,18 @@ engagement, not by stars.
   standing instruction to verify with `curl -sI` does not work from this runner; use repo search.
 - The GitHub REST API for arbitrary repositories (`api.github.com/repos/...`) is blocked for this
   session, as is the `gh` CLI search path. Repo search is the only endpoint that reaches repos
-  outside the session's own scope.
+  outside the session's own scope. 🔵 **p132 adds:** the session's GitHub *file-read* tool is scoped
+  to this KB's own repositories and returns `Access denied` for any third party, so a licence
+  **payload** must be read over the fetch lane at
+  `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE`. **That lane works** and produced two
+  licence corrections this pass.
+- 🔴 **BROKEN QUERY FORM — added by p132: `OR` is not honoured as a boolean in repo search.** It
+  does not union two narrow sets; it collapses into a broad match.
+  `oneroster OR ed-fi MCP agent in:name,description` returned **69 812** results (the global
+  MCP-agent population) and `swahili OR yoruba OR amharic education in:name,description` returned
+  **248 136** (the global `education` population). 🔴 **So a count from this instrument is evidence
+  of nothing until the query form is checked — a zero, a 69 812 and a 248 136 can all be
+  artefacts of form rather than measurements of a field.**
 
 ## Agents
 
@@ -44,6 +61,81 @@ engagement, not by stars.
 | **canvas-lms-mcp** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | 9 | 2026-10-10 | unplaced | Second, independent Canvas MCP implementation (read courses/assignments/submissions/rubrics, grade and comment). Small, but a useful cross-check against the canonical one. |
 | **campus-cli** | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | ISC | 11 | 2026-10-11 | **LATAM (Peru)** | CLI + MCP server over **Blackboard Learn** — the only Blackboard connector in this KB, and the only LATAM-origin education agent found. Targets UPC's Aula Virtual (Universidad Peruana de Ciencias Aplicadas); Canvas and Moodle are on its roadmap. ISC is permissive (BSD-equivalent). |
 | **openedx-mcp** | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | 2 | 2026-08-28 | unplaced | Open edX admin/authoring operations as an MCP facade, reusing the platform's own `is_staff`/`is_superuser` checks per request. **Experimental — 2 stars.** Listed because it is the only Open edX MCP path found, not because it is ready. |
+
+### Student-information-system agents — the tier this KB called its largest hole
+
+🔴 **This KB carried *"no agent targeting a student information system"* for several passes and
+promoted it to "the largest genuine hole on this shelf" in p131. It is refuted.** There are at
+least **twenty-one** rows, listed below and in
+`evidence/verified-repos.2026-10-11-p132.tsv`.
+
+🔵 **Why no previous pass found them: the field is named after platforms, not after the category.**
+Searches for *"student information system"*, *"school management"* and *"SIS"* cannot reach repos
+called `librus-mcp`, `edupage-mcp`, `mcp-pronotes`, `iserv-mcp`, `sisu-mcp`, `soongpt-plugin`,
+`vtop-bhopal-mcp`, `qldt-hanu-mcp`, `mcgill-vsb-mcp` or `nycu` — none of which contain the
+analyst's words. The probe that worked was `timetable timetabling MCP in:name,description`, because
+**timetable access is the one capability every one of them implements.**
+
+🔴 **Read the shape of this tier before recommending any of it.** These are overwhelmingly
+*one-person connectors to the author's own institution*, created within the last six months, at 0–10
+stars. The licences are good and the maturity is near zero. **Nothing here is a product; the value
+is that the integration work against ten national platforms has already been scouted.**
+
+#### Generic / platform-independent — the forkable ones
+
+| agent | repo | licence | stars | region | what it actually does |
+|---|---|---|---|---|---|
+| **classroom-mcp** | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | **MIT** | 1 | unplaced | 🟢 **Architecturally the most reusable row in this tier, and the only one not bound to an institution.** Standalone (SQLite, no external DB): students and classes, assignments with per-student score/time/mastery tracking, courses and sequenced modules with learning objectives, courseware, **teaching-agent roles (lecturer, tutor, grader, designer)**, and AI curriculum generation against **CEFR/JLPT** frameworks. ~42 MCP tools plus a REST API. 🔴 **1 star.** Treat as a reference design to read, not a dependency to adopt. |
+| **mcp-student-records** | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** (payload-read) | 1 | North America | Full SIS surface in **Rust** — students, courses, enrolment, grades and rubrics, attendance, guardians, transcripts, analytics — with **FERPA access logging** built in. 🟢 **The only organisation-owned row in the tier** (holder: *"Copyright 2026 Zavora AI"*), and the only one that treats the audit trail as a feature. 🔵 **Licence corrected this pass:** GitHub's API says `NOASSERTION`; the payload is Apache-2.0 carried as the **~745-byte notice block** without the licence body, which is what defeats GitHub's matcher. |
+| **sis-demo** | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) | 🔴 **no licence field** | 1 | unplaced | The **identity and rostering** angle nothing else covers: Okta OIDC/SAML, OAuth 2.0 API, **SCIM** provisioning, and an MCP server over the top. Unusable as published, but the only worked example of agent access governed by enterprise SSO rather than a scraped student password. |
+| **AI-Based-Timetable-Generation-System** | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | 🟢 **The administrative-automation agent this KB said did not exist.** Generates conflict-free academic timetables under **India's NEP 2020** — electives, faculty availability, courses, rooms, balanced workloads — with scenario simulation, manual edits, exports and a natural-language interface over MCP. Optimisation, not chat. |
+
+#### Institution- and nation-bound portal connectors
+
+These bind to a specific national school platform or university portal. **Region is stated
+evidence** — a named institution, a national system, a country-coded homepage — not an inference.
+
+| agent | repo | licence | stars | region | platform it connects to |
+|---|---|---|---|---|---|
+| **librus-mcp** | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | 🟡 **MIT (2.x)**; `legacy_reference/` is **GPL-3.0-only** | **10** | **EMEA (Poland)** | **Librus Synergia**, the dominant Polish school platform: grades, messages, attendance, homework, timetables, announcements. 🔴 **Mixed-licence repo — a fork must exclude `legacy_reference/` or inherit GPL-3.0.** Unofficial, not affiliated with Librus; no 2FA support. |
+| **DAU-buddy** | [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | 🔴 **no licence** | 7 | **APAC (India)** | Dhirubhai Ambani University (DA-IICT) — timetables, library catalogue, faculty directory. Second-largest row of the tier and unusable as published. |
+| **vtop-bhopal-mcp** | [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) | **Apache-2.0** | 4 | **APAC (India)** | VIT Bhopal's **VTOP** portal: attendance, marks, timetable, exams, grades, plus bunk/OD calculators. Created 2026-10-02 — nine days old at this pass. |
+| **soongpt-plugin** | [`yourssu/soongpt-plugin`](https://github.com/yourssu/soongpt-plugin) | **MIT** | 3 | **APAC (South Korea)** | Soongsil University **uSaint** via `rusaint`: course search, timetable planning and **graduation-requirement checking** — the only row that reasons about degree progress. Org-owned (`yourssu`). |
+| **edupage-mcp** | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** | 3 | **EMEA (Slovakia)** | **EduPage**, the Slovak/Czech school platform. The most complete connector of the tier: timetables, grades, homework, daily summary, **meal ordering**, multi-school discovery, role-aware student switching and **2FA**. |
+| **ddl-killer** | [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🟡 **UNREAD** | 3 | **APAC (China)** | Student planner for Chinese universities — timetables, tasks and deadlines in one schedule, AI-assisted scheduling, MCP access, Web/Android sync. Created **2026-10-10**, one day before this pass. Licence not measured. |
+| **mcgill-vsb-mcp** | [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | **MIT** | 2 | **North America (Canada)** | McGill **VSB**: timetable data, conflict checks and schedule generation *without browser automation* — an API path rather than a scraper. |
+| **edupage-mcp** (second) | [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | Independent second EduPage implementation — a useful cross-check, and evidence that EduPage demand is real rather than one person's itch. |
+| **mcp-pronotes** | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | **Pronote**, the dominant French school platform: grades, timetables, homework, absences. |
+| **ibu-mcp** | [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) | 🟢 **MIT** (payload-read) | 1 | **EMEA (Bosnia)** | International Burch University: grades, attendance, exams, tuition, notifications. Region is hard evidence — homepage `mine.ibu.edu.ba`, topic `bosnia`. Holder *"Haris Skeledzija"*. |
+| **sisu-mcp** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **no licence field** | 1 | **EMEA (Finland)** | **Sisu (Funidata)**, the Finnish higher-education SIS: attainments, enrolments, timetables, plans. 🔴 **Written for *any* Sisu deployment rather than one university — the broadest reach of the bound connectors, and unusable as published.** Same owner as `ink-waffle/moodle-mcp`, also unlicensed and already flagged below: **this author ships unlicensed education connectors as a pattern.** |
+| **nycu** | [`zyx1121/nycu`](https://github.com/zyx1121/nycu) | **MIT** | 1 | **APAC (Taiwan)** | National Yang Ming Chiao Tung University portal, E3 LMS, timetable and attendance, packaged as a Claude Code / Codex plugin. |
+| **UofT-MCP** | [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP) | **MIT** | 1 | **North America (Canada)** | University of Toronto Timetable Builder API. |
+| **qldt-hanu-mcp** | [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) | **GPL-2.0** | 1 | **APAC (Vietnam)** | **QLDT**, Hanoi University's student management system. 🔴 **The only copyleft row in the tier** — and note the jurisdiction: Vietnam's **Decision 33/2026/QD-TTg names education, including automated assessment and behavioural monitoring, as high-risk** (`intel/market.md` → APAC). |
+| **ntnu-mcp** | [`MartinSA04/ntnu-mcp`](https://github.com/MartinSA04/ntnu-mcp) | **MIT** | 0 | **EMEA (Norway)** | NTNU course data on Cloudflare Workers: catalogue search, schedules, **grade statistics**, course comparison, conflict checks. The only remote/edge-deployed row. |
+| **iserv-mcp** | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | **MIT** | 0 | **EMEA (Germany)** | **IServ**, a German school platform: parent letters, timetables, **sick notes**. 🔵 Note the user it serves — a *parent*, not a student or teacher. The only row on that surface. |
+| **uoft-quercus-mcp** | [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) | **MIT** | 0 | **North America (Canada)** | University of Toronto **Quercus** — a Canvas deployment — plus Timetable Builder tools. Belongs to the Canvas connector family as much as to this tier. |
+| **vsuet-timetable-api-mcp** | [`fakelag28/vsuet-timetable-api-mcp`](https://github.com/fakelag28/vsuet-timetable-api-mcp) | **MIT** | 0 | **EMEA (Russia)** | VSUET (ВГУИТ) timetable client library plus MCP server. |
+
+#### 🔴 The credential model is a tier-wide blocker, not a per-repo caveat
+
+Nearly every bound connector above authenticates **as the student or parent, with their own portal
+username and password**, against a platform that has not sanctioned it. `librus-mcp` states plainly
+that it is *"an unofficial integration, not affiliated with Librus"* and **does not support accounts
+with interactive two-factor authentication** — which means the ones that work are the ones with 2FA
+switched off.
+
+**What that means for an engagement, concretely:**
+
+- **Do not deploy any of these as-is into a client estate.** A stored portal password is a
+  credential-custody problem the client's security team will reject, and correctly.
+- **It is a GDPR processing relationship with no contract.** These connectors read grades,
+  attendance and absence records — personal data about children in the K-12 cases (Librus, EduPage,
+  Pronote, IServ) — with no data-processing agreement and no lawful-basis analysis anywhere in sight.
+- 🟢 **The sanctioned path already exists in this tier:** `barneslardo/sis-demo` shows agent access
+  via **Okta OIDC/SAML + SCIM**, and `zavora-ai/mcp-student-records` shows **FERPA access logging**.
+  Neither is mature, but together they describe the architecture a client can actually buy.
+- 🟢 **Read these repos as integration intelligence, then rebuild the auth layer.** The API surface
+  mapping is the expensive part and it is done; the credential model is the part to throw away.
 
 ### Moodle connectors — the tier p130 declared absent
 
@@ -152,12 +244,26 @@ is nothing to start from when there is.
 - **No LATAM-origin education agent above 11 stars.** 🟢 **SURVIVES.** `alejooroncoy/campus-cli`
   (ISC, 11★, Peru) is still the only one, and it is one person's university tool. An informed gap,
   not an absence of demand — see `intel/market.md`.
-- **No agent targeting a student information system** (enrolment, records, timetabling). 🟢
-  **SURVIVES as an AGENT gap, but the PLATFORM claim behind it was wrong** — see
-  `repos/foundations.md`, where p130's *"`openeducat_erp` and `academico` are the whole field"* is
-  refuted by a system-of-record tier this KB had already read. Administrative automation, the
-  most-cited adoption driver, still has no open-source **agent**. That is the largest genuine hole
-  on this shelf now.
+- ~~**No agent targeting a student information system** (enrolment, records, timetabling).
+  Administrative automation, the most-cited adoption driver, still has no open-source **agent**.
+  That is the largest genuine hole on this shelf now.~~ 🔴 **REFUTED BY p132 — and this was the
+  gap this KB had just promoted to "the largest genuine hole".** There are **21 rows**, tabled
+  above: `librus-mcp` (MIT, 10★, Poland), `DAU-buddy` (7★, India), `vtop-bhopal-mcp` (Apache-2.0,
+  India), `soongpt-plugin` (MIT, Korea), `edupage-mcp` ×2 (MIT, Slovakia), `mcp-pronotes` (MIT,
+  France), `iserv-mcp` (MIT, Germany), `sisu-mcp` (Finland), `ibu-mcp` (MIT, Bosnia), `nycu` (MIT,
+  Taiwan), `qldt-hanu-mcp` (GPL-2.0, Vietnam), `ntnu-mcp` (MIT, Norway), `mcgill-vsb-mcp` +
+  `UofT-MCP` + `uoft-quercus-mcp` (MIT, Canada), `vsuet-timetable-api-mcp` (MIT, Russia),
+  `classroom-mcp` (MIT, standalone), `mcp-student-records` (Apache-2.0, FERPA logging),
+  `sis-demo` (SCIM/Okta), `AI-Based-Timetable-Generation-System` (MIT, NEP 2020) and `ddl-killer`
+  (China). 🔵 **Cause of the false absence: the category term is absent from the field.** No query
+  containing *"student information system"* can reach a repo called `librus-mcp`.
+  🟢 **Three narrower gaps survive and are worth more than the one they replace:**
+  **(a) nothing in the tier exceeds 10 stars**, so there is no production-grade row;
+  **(b) the credential model is unsanctioned portal scraping** with a stored student password —
+  see the blocker note above, and `sis-demo` and `mcp-student-records` for the two partial answers;
+  **(c) no row touches an open-source system of record.** All 21 connect to *proprietary or
+  institution-hosted* portals; `openeducat_erp`, `frappe/education`, `academico`, RosarioSIS and
+  Gibbon still have **zero** agent coverage (`repos/foundations.md`).
 - 🆕 **No permissive proctoring project with an institutional owner.** Four MIT rows exist (above);
   the largest is 18★ and all four are individual projects. Against an Annex III high-risk class
   binding 2027-12-02, this is the tier an EMEA client will ask for and the shelf cannot supply at
@@ -174,3 +280,22 @@ see an address that an earlier pass found with a different query.
 Three of p130's four declared gaps would have failed that grep in under a second. A full rewrite
 that re-derives every page from one instrument discards everything the KB established with the
 others.
+
+## The vocabulary rule (added by p132, and it outranks the rule above)
+
+🔴 **Grepping this KB would NOT have saved `P132-A`.** The SIS-agent gap was not a row this KB had
+and forgot — it was a field this KB had never been able to see, because **every probe for it was
+built from the analyst's vocabulary and the field is named in the builders' vocabulary.** No star
+threshold and no amount of internal grepping fixes that.
+
+**So, before declaring a CLASS absent, name the class three ways and probe all three:**
+
+1. **the category term** — *"student information system"*, *"proctoring"*, *"benchmark"*;
+2. **the capability every member must implement** — *timetable*, *attendance*, *grade passback*
+   (this is the one that worked: `timetable timetabling MCP` found 21 rows that `SIS` could not);
+3. **the proper nouns of the market** — the platform and vendor names a practitioner in that
+   country would use: Librus, EduPage, Pronote, IServ, Sisu, uSaint, VTOP, Quercus, Blackboard.
+
+🔵 **Probe 3 is where regional supply hides.** A tier that looks empty from a global English query
+is often fully populated under ten national platform names — and those rows come with their region
+already attached as evidence, which is the thing this KB most often lacks.

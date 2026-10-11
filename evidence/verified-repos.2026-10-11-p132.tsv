@@ -1,0 +1,41 @@
+# Pass 132 — 2026-10-11. Instrument column records HOW each row was measured.
+# search = GitHub repo-search API (authoritative for metadata, BLIND to licence payload)
+# payload = raw.githubusercontent.com LICENSE read via fetch tool (authoritative for grant)
+# page    = rendered github.com repository page via fetch tool (sidebar licence + stars)
+# NOT USED: `curl -sI https://github.com/<repo>` — control-tested again this pass and it returns
+#   403 for a REAL repo (Crosstalk-Solutions/project-nomad) AND for a deliberately fake one
+#   (zzz-not-a-real-org-9981/zzz-not-real-9981). A 403 here is evidence of nothing.
+repo	licence	licence_instrument	stars	last_push	region	region_evidence	tier	note
+ink-waffle/sisu-mcp	NONE (no licence field)	search	1	2026-09-17	EMEA	Sisu/Funidata is the Finnish higher-ed SIS	sis-agent	same owner as the unlicensed ink-waffle/moodle-mcp already flagged in this KB
+zavora-ai/mcp-student-records	Apache-2.0	payload	1	2026-08-13	North America	FERPA access logging names a US statute	sis-agent	API reported NOASSERTION; LICENSE is the ~745 B Apache NOTICE BLOCK only, holder "Zavora AI"; org-owned
+Haris0059/ibu-mcp	MIT	payload	1	2026-09-22	EMEA	International Burch University, homepage mine.ibu.edu.ba, topic "bosnia"	sis-agent	holder "Haris Skeledzija" 2026
+qxbao/qldt-hanu-mcp	GPL-2.0	search	1	2026-04-17	APAC	Hanoi University, qldt.hanu.edu.vn	sis-agent	only copyleft row of the tier
+barneslardo/sis-demo	NONE (no licence field)	search	1	2026-09-17	Global	none stated	sis-agent	Okta OIDC/SAML + SCIM + MCP; identity/rostering demo
+krzysztofbury/librus-mcp	MIT (2.x); legacy_reference/ GPL-3.0-only	page	10	n/a (106 commits)	EMEA	Librus Synergia is the dominant Polish school platform	student-portal	MIXED LICENCE. Unofficial, not affiliated with Librus. Auth = portal username+password; no 2FA support
+Piyushtanwani/DAU-buddy	NONE (no licence shown)	page	7	2026-10-06 (updated)	APAC	Dhirubhai Ambani University (DA-IICT), India	student-portal	timetables, library catalogue, faculty directory
+divyarthjain/vtop-bhopal-mcp	Apache-2.0	search	4	2026-10-04 (updated)	APAC	VIT Bhopal VTOP portal, India	student-portal	created 2026-10-02
+yourssu/soongpt-plugin	MIT	search	3	2026-08-27 (updated)	APAC	Soongsil University uSaint, South Korea	student-portal	org-owned (yourssu); graduation-requirement checking
+oliverhruby/edupage-mcp	MIT	search	3	2026-10-08 (updated)	EMEA	EduPage is the Slovak/Czech school platform	student-portal	meal ordering, multi-school discovery, 2FA, role-aware student switching
+edwyj/ddl-killer	UNREAD	search	3	2026-10-11 (updated)	APAC	Chinese-language student planner for Chinese universities	student-portal	created 2026-10-10; licence not measured this pass
+luca-dupont2/mcgill-vsb-mcp	MIT	search	2	2026-10-07 (updated)	North America	McGill University VSB, Canada	student-portal	created 2026-10-05; conflict checks + schedule generation
+mhlavac/edupage-mcp	MIT	search	1	2026-09-22 (updated)	EMEA	EduPage, Slovakia	student-portal	second independent EduPage implementation
+HAL-XP/mcp-pronotes	MIT	search	1	2026-04-07 (updated)	EMEA	Pronote is the dominant French school platform	student-portal	grades, timetables, homework, absences
+zyx1121/nycu	MIT	search	1	2026-10-11 (updated)	APAC	National Yang Ming Chiao Tung University, Taiwan	student-portal	portal + E3 + timetable + attendance
+SleepyPandas/UofT-MCP	MIT	search	1	2026-10-01 (updated)	North America	University of Toronto Timetable Builder, Canada	student-portal	-
+sandraschi/classroom-mcp	MIT	page	1	2026-09-28 (updated)	Global	none stated	sis-agent	STANDALONE (SQLite), ~42 MCP tools + REST API; teaching-agent roles; CEFR/JLPT curriculum generation
+saytooyum/AI-Based-Timetable-Generation-System	MIT	search	1	2026-10-02 (updated)	APAC	built to India's NEP 2020	admin-automation	conflict-free timetable optimisation with MCP natural-language interface
+MartinSA04/ntnu-mcp	MIT	search	0	2026-09-16 (updated)	EMEA	NTNU, Norway	student-portal	course data, schedules, grade statistics
+skhdemo/uoft-quercus-mcp	MIT	search	0	2026-09-12 (updated)	North America	University of Toronto Quercus (Canvas), Canada	student-portal	Canvas-family connector
+chenning42/iserv-mcp	MIT	search	0	2026-09-15 (updated)	EMEA	IServ is a German school platform	student-portal	parent letters, timetables, sick notes
+fakelag28/vsuet-timetable-api-mcp	MIT	search	0	2026-09-16 (updated)	EMEA	VSUET (ВГУИТ), Russia	student-portal	-
+Crosstalk-Solutions/project-nomad	Apache-2.0	page	39444	2026-10-11 (updated)	Global	none stated	offline-stack	ORCHESTRATES Kolibri (education) + Kiwix (library) + Ollama (AI assistant) via Docker. Occupies the slot this KB called unclaimed
+karissafuller/project-nomad-macos	UNREAD	search	20	2026-10-07 (updated)	Global	none stated	offline-stack	macOS/Apple Silicon port of Project NOMAD; bundles Ollama, Open WebUI, Kiwix, Kolibri
+Tushar-cy/Offline-AI	UNREAD	search	2	2026-09-09 (updated)	APAC	Class 10 Maths/Science = Indian CBSE/state curriculum	offline-stack	claims "Kolibri integration support"; DUPLICATE PAIR with Ai-edge-learning-hub (same owner, same description)
+h9-tec/graduation-project-advisor	NONE — README states "Private / TBD"	page	63	2026-10-02 (updated)	EMEA	Arabic-first, stated target = Egyptian CS students; AUTHOR LOCATION NOT ESTABLISHED	mena-education	largest Africa/MENA-targeted education AI row found; unlicensed BY DECLARATION, not by omission
+mbzuai-oryx/ClimateGPT	UNREAD	search	80	2026-09-07 (updated)	EMEA	MBZUAI, Abu Dhabi, UAE	mena-adjacent	Arabic/English climate LLM, EMNLP'23. Shows MENA institutional AI capacity; NOT an education tool
+eth-lre/mathtutorbench	NONE (no LICENSE file); README badge CC-BY-4.0 vs body CC-BY-SA-4.0	page	43	2026-08-27	EMEA	ETH Zurich	benchmark	RE-CHECKED THIS PASS: still unresolved. Highest-leverage upstream change available to this KB
+instructure/canvas-lms	AGPL-3.0	search	6863	2026-04-30	North America	Instructure, US	platform	RE-CHECKED THIS PASS: push date UNCHANGED, now ~5.4 months quiet
+blend-ed/openedx-mcp	AGPL-3.0 (carried from p129 payload read)	search	2	2026-09-02 (updated)	Global	none stated	agent	RE-CHECKED THIS PASS: still 2 stars, still experimental
+Tushar-cy/Ai-edge-learning-hub	UNREAD	search	2	2026-09-09 (updated)	APAC	Class 10 Maths/Science = Indian curriculum	offline-stack	DUPLICATE of Tushar-cy/Offline-AI (same owner, byte-identical description); counted ONCE, never as two rows
+ossu/computer-science	UNREAD	search	209883	2026-10-11 (updated)	Global	none stated	curriculum	surfaced from the OR-query noise; largest education-adjacent repo this KB has touched. NOT an AI project and NOT a platform; licence not measured
+instructure/ims-lti	MIT	search	203	2026-10-02 (updated)	North America	Instructure, US	infrastructure	LTI tool consumer/provider library (Ruby). Verified this pass because it is cited by pattern P8 and was absent from prior evidence files

@@ -6,6 +6,77 @@ updated: 2026-10-11
 
 # Education — trending repos (append-only log)
 
+## 2026-10-11 — Pass 132
+
+**The repo finding of this pass is a 39 444-star Apache-2.0 project sitting in the slot this KB has
+called, for several passes, "the cleanest unclaimed opportunity".**
+
+### 🆕 The offline/low-bandwidth slot is occupied — `P132-C`
+
+| repo | licence | ★ | last activity | why it matters |
+|---|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | **Apache-2.0** | **39 444** | updated 2026-10-11 | 🔴 **Offline-first knowledge and education server** — Wikipedia, thousands of books, courses, maps and optional local AI on hardware you own, no internet required. A Docker **orchestration layer**: **Kiwix** → Information Library, **Kolibri** → Education Platform, **Ollama** → AI Assistant (the installer sets up Ollama on the host; an external OpenAI-compatible endpoint also works). **Second-largest repo in this KB**, behind only `HKUDS/DeepTutor` (41 136★). 850 commits |
+| [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟡 **UNREAD** | 20 | updated 2026-10-07 | macOS / Apple Silicon port. Bundles Ollama, Open WebUI, Kiwix, **Kolibri**, CyberChef, FlatNotes. Self-described as *"deployed by a non-developer using AI-to-AI orchestration"* |
+| [`Tushar-cy/Offline-AI`](https://github.com/Tushar-cy/Offline-AI) | 🟡 **UNREAD** | 2 | updated 2026-09-09 | Offline LMS for **Class 10 Maths and Science** (Indian curriculum): FastAPI + React + RAG + local Ollama, gamified quizzes, LAN-only operation, claims *"Kolibri integration support for schools"*. 🔴 **Duplicate pair** with [`Tushar-cy/Ai-edge-learning-hub`](https://github.com/Tushar-cy/Ai-edge-learning-hub) — same owner, byte-identical description; one is presumably a rename the other did not retire |
+
+🔵 **Why this was missed for eleven passes, stated precisely, because the probe was not sloppy.**
+p131 ran `kolibri stars:>2`, got **86** repos, correctly resolved **3** to the Learning Equality
+family and **0** with AI, and concluded the slot was unclaimed. **The probe was valid and the
+conclusion was false**: NOMAD composes Kolibri as a container and its description never says so.
+`P132-A`'s vocabulary lesson applies to platforms too — **a dependency is not always visible in the
+metadata of the thing that depends on it.**
+
+🟢 **Consequence for `repos/foundations.md` and pattern `P2`:** the offline engagement is no longer a
+build. It is *"deploy, extend or contribute to a 39k-star Apache-2.0 stack that already composes the
+three pieces"* — which is a stronger position to take to a client, not a weaker one.
+
+🟡 **New name-collision source:** **Aleph Alpha now ships a 78B model called "Kolibri"**, so later
+`kolibri` probes return sovereign-LLM repos alongside KolibriOS, the Russian "Kolibri AI"
+cognitive-system family (`rd8r8bkd9m-tech`, `leontov`) and a CRM.
+
+### 🆕 Administrative automation — the first optimisation repo, not another chatbot
+
+| repo | licence | ★ | region | what it does |
+|---|---|---|---|---|
+| [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | 🟢 Conflict-free academic timetable generation under **India's NEP 2020** — electives, faculty availability, courses, rooms, balanced workloads — with scenario simulation, manual edits, exports, low-code integration and a natural-language interface over MCP. 🔵 **The administrative-automation slot this KB has described as "the most-cited adoption driver and the least-served" now has a repo in it, and it is an optimiser rather than an LLM wrapper** |
+
+### 🆕 The identity and audit layer — small, and the only procurement-shaped rows found
+
+| repo | licence | ★ | why a client's security team will ask for this |
+|---|---|---|---|
+| [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) | 🔴 **no licence field** | 1 | **Okta OIDC/SAML, OAuth 2.0, SCIM provisioning**, plus an MCP server. The only worked example of agent access to student records governed by enterprise SSO rather than a scraped student password. Unusable as published |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** (payload-read) | 1 | **FERPA access logging** as a first-class feature, in Rust. 🟢 **Org-owned** (holder *"Copyright 2026 Zavora AI"*) — the only organisation in the new SIS tier |
+
+🔵 **`P132-F` — the licence correction, and a mechanism worth naming.** GitHub's API reports
+`NOASSERTION` for `mcp-student-records`. The payload is **Apache-2.0**. The cause is not a bespoke
+licence: the `LICENSE` file is the **~745-byte Apache-2.0 *notice block*** — the *"Licensed under the
+Apache License, Version 2.0… obtain a copy at apache.org"* stanza — **without the licence body**,
+which GitHub's matcher requires. 🟡 **Grant is by incorporation-by-reference; ordinary practice, but
+a client's reviewer will want the full text vendored before shipping a derivative.** 🟢 This is
+p131's `NOASSERTION = UNREAD` rule returning a real grant within one pass of being written.
+
+### Re-checked, unchanged — the three watch-list items that did not move
+
+| repo | watched for | state this pass |
+|---|---|---|
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | whether it resolves its own licence | 🔴 **No `LICENSE` file. Sidebar shows no licence. README badge CC-BY-4.0, body CC-BY-SA-4.0.** Unchanged. Still the highest-leverage upstream commit available to this KB |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | whether activity resumes | 🔴 `pushed_at` **2026-04-30**, byte-identical to p131. **~5.4 months quiet**, third consecutive pass, while every other major platform pushed within days |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | whether it passes experimental | 🔴 **Still 2★.** Description now mentions *"Ulmo"* and *"native openedx-platform APIs only"*; no traction change |
+
+### 🔴 Instrument note — `OR` is not a boolean here
+
+`oneroster OR ed-fi MCP agent in:name,description` → **69 812** results (the global MCP-agent
+population, not a rostering-standard tier). `swahili OR yoruba OR amharic education` → **248 136**
+(the global `education` population). **`OR` collapses the query into a broad match rather than
+unioning two narrow sets**, so a four-figure count from this instrument is as suspect as a zero.
+Recorded on `agents/top.md` as a standing query-form warning.
+
+🔵 One useful row surfaced *from* that noise and is kept because it is real:
+[`ossu/computer-science`](https://github.com/ossu/computer-science) at **209 883★** — the
+self-taught CS curriculum. Not an AI project and not a platform, but by far the largest
+education-adjacent repository this KB has ever touched, and a content base for any curriculum
+engagement.
+
 ## 2026-10-11 — Pass 131
 
 **The repo-side headline is a licence this KB had already resolved and then un-resolved.**

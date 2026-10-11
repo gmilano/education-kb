@@ -4,6 +4,188 @@ region: Global
 updated: 2026-10-11
 ---
 
+## Pass 132 — 2026-10-11
+
+⏱️ **Nineteenth pass of this date.** 🟢 **p131's discipline worked, and it worked by being pointed
+outward.** p131 found more by grepping this repository than by searching the web, and told the next
+pass to spend its effort on *gap-directed supply queries*. This pass did that — and the largest gap
+in the KB fell.
+
+🔴 **`P132-A` is the most expensive class of error this KB tracks, found in its own flagship gap.**
+For several passes this KB has carried *"no AI agent targeting a student information system"* and
+promoted it to **"the largest genuine hole on this shelf."** It is false. **There are at least
+twenty-one**, and this pass has their addresses, licences and regions.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P132-A` | 🔴 **THE LARGEST DECLARED GAP IN THIS KB IS REFUTED** | **21 rows** found; the gap was promoted to "largest hole" **one pass before** being disproved |
+| `P132-B` | 🟢 **AND THE NEW TIER INVERTS TWO STANDING KB CLAIMS AT ONCE** | **~90% region-placed** (vs 11-of-17 unplaced on the old shelf) and **~80% MIT** |
+| `P132-C` | 🔴 **THE "CLEANEST UNCLAIMED OPPORTUNITY" IS OCCUPIED BY A 39 444★ APACHE-2.0 PROJECT** | `project-nomad` = **Kolibri + Kiwix + Ollama**, i.e. this KB's own pattern `P2`, already built |
+| `P132-D` | 🔴 **A "1.8× SPREAD" IN THE MARKET TABLE WAS ONE YEAR-SHIFTED ROW** | drop IMARC's **2025** base and the 2026 estimates agree within **1.19×** |
+| `P132-E` | 🔴 **`OR` IS NOT A BOOLEAN IN REPO SEARCH — IT RETURNS THE BROAD POPULATION** | **69 812** and **248 136** results from two intended-narrow queries |
+| `P132-F` | 🟢 **p131's `NOASSERTION = UNREAD` RULE PAID OFF IMMEDIATELY, WITH A NEW MECHANISM** | `mcp-student-records` = **Apache-2.0** at payload; the file is the **~745 B NOTICE BLOCK** only |
+| `P132-G` | 🟡 **`ACTION BD` (Africa/Middle East) NARROWED, NOT CLOSED** | first MENA row: **63★** Arabic-first, **unlicensed by declaration** |
+| `P132-H` | 🟢 **THE DEMAND CHANNEL BROKE ITS 4-PASS SATURATION STREAK** | new tokens in **4 of 4** regions once the battery was read for *dating and structure* |
+
+### `P132-A` — why every previous pass's SIS query returned zero
+
+🔵 **The field is not organised by the category term. It is organised by platform name.** This KB
+searched for *"student information system"*, *"school management"*, *"SIS"* — the words an analyst
+uses. The people actually building these connectors name them after the system they connect to:
+**Librus** (Poland), **EduPage** (Slovakia), **Pronote** (France), **IServ** (Germany), **Sisu**
+(Finland), **uSaint** (South Korea), **VTOP** (India), **QLDT** (Vietnam), **VSB** / **Quercus**
+(Canada), **NYCU** (Taiwan).
+
+🔴 **So p131's `P131-E` was right about the mechanism and still understated it.** p131 found that a
+multi-term query returns a zero that measures the query. This pass shows the stronger version: **the
+category term itself can be absent from an entire real field**, because the builders are not
+analysts. A query built from the analyst's vocabulary cannot see them at any star threshold.
+
+🟢 **And the builders are not enterprises — they are students and parents.** Nearly every row is one
+person connecting an assistant to their own university or their own child's school. That explains
+every property of the tier at once: tiny star counts, MIT licences chosen by default, precise
+regional placement, brand-new creation dates, and **no procurement story whatsoever**.
+
+### `P132-B` — the tier inverts two things this KB has said for many passes
+
+| standing KB claim | what this tier shows |
+|---|---|
+| *"Most agent repos carry no location evidence at all — 11 of the 17 rows are unplaced rather than guessed"* (`intel/market.md`) | 🟢 **~90% of the 21 new rows are placed on hard evidence** — a named university, a national platform, a country-coded homepage (`mine.ibu.edu.ba`, `qldt.hanu.edu.vn`). Region is *stated*, not inferred |
+| *"The permissive/popular inversion, across every tier measured this pass… the most-starred item is repeatedly the unusable one"* (`intel/market.md`) | 🔴 **Inverted back.** ~80% of this tier is **MIT**. The exceptions are small: one GPL-2.0, one Apache-2.0, three unlicensed. 🟡 **But the tier's own top two by stars are the weak ones** — `librus-mcp` (10★) is mixed-licence and `DAU-buddy` (7★) is unlicensed |
+
+🔵 **The honest reading of both:** this KB's generalisations were drawn from one tier — big, famous,
+Canvas-and-Moodle-shaped repos — and do not survive contact with a second. **A claim about "every
+tier measured" is only ever a claim about the tiers you queried.**
+
+### `P132-C` — the pattern this KB wrote as an opportunity already exists at 39 444 stars
+
+`intel/trends.md` → T8 and `compose/patterns.md` → P2 have called offline/low-bandwidth delivery
+*"the most valuable unfilled slot in the whole KB"* and *"the clearest unclaimed opportunity"*, on
+the strength of a probe that found **86 repos named `kolibri`, 3 in the family, 0 with AI**.
+
+🔴 **The probe was sound and the conclusion was wrong, because the occupant is not named after
+Kolibri.** [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+— **Apache-2.0, 39 444★** — is an offline-first knowledge and education server that orchestrates
+containerised tools via Docker: **Kiwix** powers its Information Library, **Kolibri** powers its
+Education Platform, and **Ollama** powers its AI Assistant.
+
+🔵 **That is pattern `P2`, line for line, built and permissively licensed.** It is the
+second-largest repository anywhere in this KB — behind only `HKUDS/DeepTutor` (41 136★) — and no
+pass had seen it, because every Kolibri probe searched for the string `kolibri` in names and
+descriptions, and NOMAD's description does not contain it.
+
+**Consequence for an engagement, stated plainly:** the offline opportunity is **not** greenfield.
+It is now *"extend, contribute to, or deploy a 39k-star Apache-2.0 stack"* — a far better starting
+position than the build P2 described, and a completely different conversation with a client.
+
+### `P132-D` — the market spread was an artefact of mixing base years
+
+This KB's headline has been: *2026 estimates span ~$6.4B to ~$11.4B, a **1.8× spread for the
+current year**, so quote the range and the disagreement.* 🔴 **One row in that table is not a 2026
+estimate.** IMARC's **~$6.4B is a 2025 base** (its own earlier edition reads $4.8B for 2024 →
+$75.1B by 2033).
+
+🟢 **Restrict the table to figures genuinely for 2026 and the firms nearly agree: $9.58B, $10.4B,
+$10.6B, ~$11B — a 1.19× spread.** The real disagreement is not about today at all; it is about the
+horizon, where 2035 estimates run from **~$70B to ~$1 169B (~17×)**. One source even publishes two
+different CAGRs for its own forecast (34.52% and 36.02%).
+
+🔵 **This reverses the advice.** "Nobody agrees what this market is worth now" was wrong and
+unsellable. **"The firms agree within ~20% on the current year and diverge seventeen-fold by 2035"**
+is both true and a much sharper thing to say in a commercial conversation.
+
+### `P132-E` — the instrument's second blind spot, and it is the opposite of the first
+
+p131 established that a **generic zero** measures the query. This pass establishes the mirror
+image: **a generic enormous number measures the query too.**
+
+| query as written | intent | returned |
+|---|---|---|
+| `oneroster OR ed-fi MCP agent in:name,description` | the rostering-standard connector tier | 🔴 **69 812** — the global MCP-agent population |
+| `swahili OR yoruba OR amharic education in:name,description` | African-language education repos | 🔴 **248 136** — the global `education` population |
+| `arabic education LLM tutor in:name,description stars:>5` | MENA tutoring | 🔴 **0** |
+| `arabic LLM in:name,description stars:>50` *(control)* | — | 🟢 **3**, one of them a **63★ student-facing advisor** |
+
+🔴 **`OR` is not honoured as a boolean here.** It does not union two narrow sets; it collapses the
+query into a broad match. **So a result count in this instrument is evidence of nothing until the
+query form is checked** — a zero, a 69 812 and a 248 136 can all be artefacts. `ACTION BC` (a named
+control beside every declared absence) is hereby extended: **a named control beside every declared
+abundance as well.**
+
+### `P132-F` — the new rule caught a real grant within one pass of being written
+
+p131 ruled KB-wide that **`NOASSERTION` means "GitHub's matcher did not recognise this file" — it
+is UNREAD, never UNGRANTED**, and told later passes to read the payload.
+[`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) came back
+`NOASSERTION` from the API. 🟢 **The payload is Apache-2.0**, holder *"Copyright 2026 Zavora AI"*.
+
+🔵 **And the mechanism is new and worth naming.** The `LICENSE` file is **not** a truncated or
+bespoke licence — it is the **~745-byte Apache-2.0 *notice block*** (the "Licensed under the Apache
+License, Version 2.0… you may obtain a copy at apache.org" stanza) **without the licence body**.
+GitHub's matcher needs the body, so it reports "Other". 🟡 **Flag for counsel, not a blocker:** the
+grant is by incorporation-by-reference, which is ordinary practice, but a client's reviewer will
+want the full text vendored before shipping a derivative.
+
+🟢 **It also answers one instance of this KB's standing `ACTION AY`** (*"who grants the 46
+Apache-2.0 / ECL rows with no licensor"*): this row **has** a named licensor, and it is an
+organisation rather than an individual — the only org-owned row in the new SIS tier.
+
+### `P132-G` — Africa and the Middle East, after three passes of silence
+
+`ACTION BD` required a dedicated query rather than folding the region into EU findings. Run.
+
+🟢 **There is something there, and it is bigger than most of this KB's agent shelf.**
+[`h9-tec/graduation-project-advisor`](https://github.com/h9-tec/graduation-project-advisor) —
+**63★**, Arabic-first LLM advisor that walks **Egyptian CS students** from an onboarding form to
+five ranked project ideas to a supervisor-ready blueprint (Next.js 15, FastAPI, Qdrant, Azure
+OpenAI + Ollama). 🔴 **And it is unusable: its README states *"Private / TBD. Licensing terms will
+be finalized before any public release."*** — unlicensed **by declaration**, which is a stronger
+and clearer bar than the missing-file cases elsewhere in this KB.
+
+🔵 **Region recorded honestly:** EMEA on the strength of its *stated target audience* (Egyptian
+students) and its Arabic-first design. **The author's own location is not established** by anything
+on the page, and this KB does not infer nationality from a name.
+
+🟡 **So the gap narrows rather than closes:** the region is no longer *"no evidence found"*. It is
+*"one 63★ row, aimed at Egypt, that nobody may build on."* Also noted:
+[`mbzuai-oryx/ClimateGPT`](https://github.com/mbzuai-oryx/ClimateGPT) (80★, **MBZUAI, Abu Dhabi**,
+EMNLP'23) — evidence of institutional MENA AI capacity, though not an education tool.
+
+### `P132-H` — the saturated channel produced new tokens in all four regions
+
+p131 counted a **fourth consecutive pass** of zero new tokens from the prescribed regional battery
+and recommended budgeting it as a *confirmation* channel. 🟢 **Run again this pass, it broke the
+streak in 4 of 4 regions** — but note *how*: nothing new surfaced as a **fact**. Everything new
+surfaced as a **date, a denominator, or a delivery structure.**
+
+| region | what the channel added that this KB did not hold |
+|---|---|
+| **North America** | **10%** of institutions have formal AI guidelines and **71%** of US teachers lack AI training (new predicates beside the held *18% of teachers have a written policy*); **CMU + Gates Foundation, $55M** into AI courseware for gateway college courses; an OpenAI country-level education programme with **eight national partners** |
+| **EMEA** | the UK's first **AI Adoption Summit (8 June), £200m+** — and its *delivery structure*: government funds, **Big Tech delivers** (Cisco, IBM, BT, Rolls-Royce), unions legitimise, **Skills England** sets curriculum, and **few traditional education providers appear at all**; the **QS/HolonIQ 2026 Europe EdTech 200** as the EMEA counterpart to the held LATAM EdTech 100 |
+| **APAC** | **Australia/New Zealand**, a jurisdiction absent from this KB's APAC section entirely — Canberra tightening AI governance and copyright, with OpenAI appointing a dedicated ANZ policy lead |
+| **LATAM** | 🟢 **the IESALC fieldwork window: August–October 2025**, which *dates* the held *87% adoption / 26% with a strategy* figures to late 2025 rather than 2026; Tec de Monterrey's observatory moving **students 86%→92%** and **teachers 61%→79%**; **ILIA 2025 (CEPAL)** named as the instrument that actually carries country-level LATAM regulation detail |
+
+🔵 **The lesson is about how the battery is read, not whether it is run.** Four passes called it
+saturated because they read it for *new facts*. Read for **provenance** — when was this measured,
+who was counted, who delivers the money — the same queries are still productive. 🔴 **And one stale
+claim is still circulating in North-America-facing sources: *"the EU AI Act classifies education AI
+as high-risk, with full effect in August 2026."* It is wrong** (the Annex III date is
+**2027-12-02**), this KB has flagged it for three passes, and a client may well arrive holding it.
+
+### What this pass did not resolve
+
+- 🔴 **`mathtutorbench` still has no licence.** Re-checked: no `LICENSE` file, sidebar shows none,
+  README badge says **CC-BY-4.0** and the body says **CC-BY-SA-4.0**. Unchanged, and still the
+  single highest-leverage upstream change available to this KB.
+- 🔴 **`instructure/canvas-lms` has still not been pushed since 2026-04-30** — now ~5.4 months, and
+  the quietest major platform for a third consecutive pass.
+- 🔴 **`blend-ed/openedx-mcp` is still at 2 stars.** Open edX MCP has not moved past experimental.
+- 🟡 **Three rows of the new tier were not licence-measured** (`ddl-killer`, `project-nomad-macos`,
+  `Tushar-cy/Offline-AI`) and are marked `UNREAD` in the evidence file rather than guessed.
+
+Evidence for every row measured this pass: `evidence/verified-repos.2026-10-11-p132.tsv`
+(instrument recorded per row — `search`, `payload` or `page`).
+
 ## Pass 131 — 2026-10-11
 
 ⏱️ **Eighteenth pass of this date.** 🔴 **Note first that there is no Pass 130 section below this

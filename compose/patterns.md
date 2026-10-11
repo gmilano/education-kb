@@ -6,10 +6,12 @@ updated: 2026-10-11
 
 # Education — compose patterns
 
-**Pass 131, 2026-10-11.** p130's six recipes retained; **P6 re-grounded on two real benchmarks**
-and **P7 added** (see `README.md` → Pass 131). Seven recipes. Each names the actual repos, the licence
-posture of the result, how the pieces wire together, and what it does not solve. Every repo cited
-is verified in `evidence/verified-repos.2026-10-11.tsv`.
+**Pass 132, 2026-10-11.** p131's seven recipes retained; 🔴 **P2 is re-based on a real 39 444-star
+stack instead of a greenfield build** and **P8 and P9 are added** from the SIS/portal tier found
+this pass (see `README.md` → Pass 132). Nine recipes. Each names the actual repos, the licence
+posture of the result, how the pieces wire together, and what it does not solve. Repos cited are
+verified in `evidence/verified-repos.2026-10-11.tsv` and
+`evidence/verified-repos.2026-10-11-p132.tsv`.
 
 ---
 
@@ -46,7 +48,7 @@ connector for a GPL-3.0 plugin or `onbirdev/moodle-webservice_mcp` (**unlicensed
 
 ---
 
-## P2 — Offline-first tutor for low-connectivity deployments *(the unclaimed slot)*
+## P2 — Offline-first tutor for low-connectivity deployments *(re-based by p132: the slot is occupied, and that is good news)*
 
 **For:** rural LATAM, Sub-Saharan Africa, South Asia; ministries and NGOs.
 **Timeline:** 10–12 weeks.
@@ -55,27 +57,48 @@ connector for a GPL-3.0 plugin or `onbirdev/moodle-webservice_mcp` (**unlicensed
 
 | layer | component | licence |
 |---|---|---|
-| platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | MIT |
+| 🆕 **orchestration (start here)** | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | **Apache-2.0** |
+| education platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) *(NOMAD's education container)* | MIT |
+| reference library | **Kiwix** *(NOMAD's Information Library — offline Wikipedia and books)* | GPL-3.0 family |
+| local inference | **Ollama** *(NOMAD's AI Assistant; external OpenAI-compatible endpoint also supported)* | MIT |
 | content pipeline | [`learningequality/studio`](https://github.com/learningequality/studio) | MIT |
-| local inference | a small open-weights model served on-device | model-dependent |
 | mastery state | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT |
 | interactive content | [`h5p/h5p-interactive-video`](https://github.com/h5p/h5p-interactive-video) | MIT |
+| single-machine pilot | [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟡 UNREAD |
 
-**Wiring.** Kolibri already solves content distribution without connectivity (LAN or USB sync).
-Add a locally served small model and `tutor-mcp` keeping learner state in Kolibri's own store, so
-the tutor works with the network off and syncs mastery when a link appears. Author activities as
-H5P so the same content renders if the institution later moves to Moodle or Open edX.
+🔴 **Re-based by p132. Do not build this stack from parts — it exists.** Earlier versions of this
+pattern called the slot unclaimed and specified an integration of Kolibri + a local model from
+scratch. [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+(**Apache-2.0, 39 444★**, 850 commits) already orchestrates exactly those pieces as Docker
+containers: Kiwix for the library, **Kolibri for the education platform**, Ollama for the AI
+assistant. It is the second-largest repo in this KB.
 
-**Why this is strategically the best pattern in the KB.** MIT top to bottom, no incumbent (no AI
-project on Kolibri was found this pass), and **data never leaves the device** — which discharges
-most of the privacy obligation in US state law, the EU AI Act and Brazil's pending PL 2338 by
-construction rather than by policy. The regulatory tailwind and the engineering choice point the
-same way.
+**Wiring, revised.** Stand up NOMAD first and confirm the three containers on the client's target
+hardware — that is now a deployment task, not an integration project. Then add the two things NOMAD
+does not do: **`tutor-mcp` for durable learner state** (BKT mastery, review scheduling,
+misconceptions) persisted locally and reconciled on next sync, and **H5P activities** authored
+through Kolibri Studio so the same content survives a later move to Moodle or Open edX. Pilot on a
+single machine with the macOS port before committing to the Docker estate.
 
-**Result licence:** MIT throughout.
+**Why this remains the strategically strongest pattern in the KB — more so now.** Permissive top to
+bottom (Apache-2.0 orchestration over MIT components; **check Kiwix's GPL-3.0 terms if you intend to
+modify it rather than run it**), and **data never leaves the device**, which discharges most of the
+privacy obligation in US state law, the EU AI Act and Brazil's pending PL 2338 by construction
+rather than by policy. 🟢 **The difference from the old version is commercial: the client is buying
+weeks of deployment and curriculum work on a proven stack, not months of integration risk.** That
+is an easier sale and a defensible one.
 
-**Does not solve:** small-model quality is the binding constraint; scope to one subject and
-validate before widening. Requires device-management capability the client may not have.
+**Timeline, revised:** **5–7 weeks** (was 10–12), because the integration layer is no longer yours
+to build.
+
+**Result licence:** Apache-2.0 orchestration over MIT components; audit Kiwix if modified.
+
+**Does not solve:** small-model quality is still the binding constraint — scope to one subject and
+validate before widening. Still requires device-management capability the client may not have.
+🔴 **And the opportunity gap is now geographic, not technical: nothing offline targets LATAM.**
+The one curriculum-specific offline project found is Indian
+([`Tushar-cy/Offline-AI`](https://github.com/Tushar-cy/Offline-AI)), so a Spanish- or
+Portuguese-curriculum NOMAD deployment is unclaimed, permissively licensed, and now cheap.
 
 ---
 
@@ -271,6 +294,101 @@ the plugin, not the client's other code.
 
 ---
 
+## P8 — Sanctioned connector for a national school platform *(new, p132 — EMEA's clearest unmet need)*
+
+**For:** the vendor or ministry behind a national K-12 platform — **Librus** (Poland), **EduPage**
+(Slovakia/Czechia), **Pronote** (France), **IServ** (Germany) — or a large school group running one.
+**Timeline:** 8–10 weeks.
+
+🔵 **Why this pattern exists.** p132 found that all four platforms already have open-source MCP
+connectors, mostly MIT, written by pupils and parents — and **every one is an unofficial
+password-scraper with no DPA, no audit trail, and (for `librus-mcp`) no 2FA support**. The vendors
+have no agent story at all. So the work is not *"can an agent reach this platform"* — that is proven
+and published — it is *"make it legitimate"*.
+
+**Stack**
+
+| layer | component | licence | role |
+|---|---|---|---|
+| API surface map | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) · [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) · [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) · [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | MIT *(🔴 `librus-mcp`: MIT 2.x only — `legacy_reference/` is **GPL-3.0-only**)* | 🟢 **read as documentation**; keep the endpoint map, discard the auth |
+| identity | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) as the reference shape — Okta OIDC/SAML, OAuth 2.0, **SCIM** | 🔴 unlicensed — **pattern only, do not vendor the code** | replaces the stored pupil password |
+| audit | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) FERPA-logging approach | **Apache-2.0** (payload-read) | per-access logging a regulator can read |
+| policy gate | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) for auditable pedagogical decisions | MIT | keeps inference out of high-stakes calls |
+| launch surface | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) where the platform speaks LTI | MIT | avoids touching platform source |
+
+**Wiring.** Lift the endpoint map from the existing MIT connectors — that is the weeks of
+undocumented-API archaeology you do not repeat. Replace the credential model wholesale: the agent
+authenticates through the platform's own SSO with scoped, revocable tokens provisioned by SCIM, and
+**never holds a pupil credential**. Every read is logged with actor, subject, field and purpose.
+Write operations stay off by default; grade and attendance writes require a human confirmation step.
+Ship it as a vendor-sanctioned integration, not a scraper.
+
+🔴 **The compliance work is the deliverable, not overhead.** For all four platforms the subjects are
+children, so: a **DPA with the vendor**, a lawful-basis analysis, a **DPIA**, data-minimised scopes
+(a timetable agent does not need disciplinary records), and retention limits. Annex III of the AI
+Act is not triggered by reading a timetable — but it *is* triggered the moment the same connector
+feeds grading or admissions, which is the second phase every client will ask for. **Architect the
+boundary now** (`P4`).
+
+**Result licence:** your own code; MIT inputs read as reference only. 🔴 **Do not vendor
+`sis-demo`** (unlicensed) or `librus-mcp`'s `legacy_reference/` (GPL-3.0-only).
+
+**Does not solve:** it needs the platform vendor at the table. Without their cooperation this is
+still a scraper, and should not be built. 🟢 **The pitch to the vendor is that pupils are already
+scraping them with stored passwords and no 2FA** — a sanctioned surface is a security improvement
+for the vendor, not just a feature.
+
+---
+
+## P9 — Administrative automation on an open-source system of record *(new, p132 — the real hole)*
+
+**For:** institutions running, or willing to adopt, an open-source SIS/ERP — mid-size universities,
+school groups, ministries. **Timeline:** 10–12 weeks.
+
+🔵 **Why this is the sharpest opportunity in the KB after p132.** The SIS *agent* gap is closed —
+there are 21 connectors — but **every single one targets a proprietary or institution-hosted
+portal.** The open-source systems of record have **zero** agent coverage between them, while
+administrative automation remains the most-cited adoption driver. **The connector effort has gone to
+the platforms a studio cannot fork and avoided the ones it can.**
+
+**Stack**
+
+| layer | component | licence | note |
+|---|---|---|---|
+| system of record | [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | 🟢 **the only permissive SIS** — the one base a client can own as a closed derivative |
+| — or — | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (payload-read) | broadest functional coverage; **linking is fine**, modifying the module carries reciprocity |
+| — or — | [`frappe/education`](https://github.com/frappe/education) | 🔴 **read `LICENSE` first** (API says `NOASSERTION`) | pick when the client already runs ERPNext |
+| agent scaffold | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | **MIT** | 🟢 standalone, ~42 tools, teaching-agent roles — **the reference design to read** (1★; do not depend on it) |
+| optimiser | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | conflict-free timetabling under India's NEP 2020 — the only real optimiser found |
+| audit | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | **Apache-2.0** | FERPA-style per-access logging |
+| identity | SCIM/OIDC per [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) | 🔴 unlicensed — pattern only | institutional SSO, scoped tokens |
+
+**Wiring.** Pick the system of record on the licence question first, because it is irreversible:
+**`academico` (MIT)** if the client wants to own a closed product, **`openeducat_erp` (LGPL-3.0)** if
+they want coverage and will call it from outside without modifying it. Put an MCP server in front of
+it modelled on `classroom-mcp`'s tool taxonomy — students, enrolment, assignments, courseware,
+progress — reading through the platform's own permission model rather than around it. Attach the
+timetable optimiser as a *tool the agent calls*, not as something the model does: scheduling is a
+constraint-satisfaction problem and an LLM is the wrong instrument for it. Wrap everything in
+per-access logging and SCIM-provisioned scoped tokens from day one.
+
+🟢 **The commercial shape is better than the tutoring engagements.** Timetabling, enrolment and fee
+chasing have a measurable baseline (hours of registrar time, scheduling conflicts per term, days to
+produce a timetable), so the business case writes itself — unlike tutoring, where the client is
+buying an unproven learning-outcome claim (`P6`). And the regulatory exposure is far lower: **a
+timetable is not Annex III.**
+
+**Result licence:** MIT throughout if built on `academico`; LGPL-3.0 linking obligations if on
+`openeducat_erp` and the module is modified.
+
+**Does not solve:** 🔴 **the client has to be willing to run an open-source SIS**, and most
+institutions of record run a proprietary one — which is why the 21 connectors target those instead.
+Realistically this lands at mid-size institutions, new campuses and ministry programmes rather than
+at a university replacing Banner or SITS. 🔴 **Both scaffold rows are 1★** — read them as reference
+designs and expect to own the code.
+
+---
+
 ## Pattern selection, one line each
 
 | if the client… | run |
@@ -282,6 +400,8 @@ the plugin, not the client's other code.
 | is a ministry facing a curriculum mandate | **P5** |
 | will be asked whether it worked | **P6** — always, alongside the others |
 | runs **Moodle** and wants to own its AI layer | **P7** |
+| is the **vendor** of a national K-12 platform, or runs one at scale | 🆕 **P8** |
+| wants **administrative** automation and will run open-source as its record | 🆕 **P9** |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship
 emotion recognition into an EU deployment. Treat unlicensed components as unusable
@@ -290,3 +410,18 @@ not "unusable"**: GitHub reports it whenever its matcher does not recognise a `L
 this KB has resolved at least one such row (`openeducat_erp` → **LGPL-3.0**, 8 241 B) by reading the
 payload. Pin commits for repos with no releases. **Benchmarks and datasets need the same licence
 screen as code** — the two education benchmarks that exist are both ungranted.
+
+🆕 **Three cross-cutting rules added by p132:**
+
+1. 🔴 **Distinguish three licence states, never conflate them.** **Granted-but-unmatched**
+   (`NOASSERTION` over a real grant — `mcp-student-records` is **Apache-2.0** carried as a
+   ~745-byte notice block; `openeducat_erp` is **LGPL-3.0** at 8 241 bytes), **silent** (no licence
+   file — `sisu-mcp`, `sis-demo`, `DAU-buddy`), and **deliberately withheld**
+   (`graduation-project-advisor`: *"Private / TBD"*). Only the first is buildable.
+2. 🔴 **Check for mixed licences inside a single repo.** `krzysztofbury/librus-mcp` is **MIT at
+   2.x** over a `legacy_reference/` directory that remains **GPL-3.0-only**. A whole-repo fork
+   inherits the stricter term; exclude the directory or do not fork.
+3. 🔴 **Never adopt a student-built portal connector as a dependency.** They authenticate as the
+   pupil with a stored password against an unsanctioned platform, and the ones that work are the
+   ones with 2FA disabled. 🟢 **Read them for the API surface map, then rebuild the auth layer**
+   (`P8`).

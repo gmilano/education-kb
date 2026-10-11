@@ -6,6 +6,118 @@ updated: 2026-10-11
 
 # Education — trending agents (append-only log)
 
+## 2026-10-11 — Pass 132
+
+**The pass where this KB's largest declared gap turned out to be a vocabulary problem.** p131 told
+the next pass to spend its effort on gap-directed supply queries rather than the saturated demand
+battery. Done — and *"no AI agent targeting a student information system"*, promoted by p131 itself
+to **"the largest genuine hole on this shelf"**, is refuted by **21 rows**.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P132-A` | 🔴 **THE LARGEST DECLARED GAP IN THIS KB IS REFUTED** | **21 rows**, refuted one pass after being promoted to "largest hole" |
+| `P132-B` | 🟢 **THE NEW TIER INVERTS TWO STANDING KB CLAIMS** | **~90% region-placed** and **~80% MIT** |
+| `P132-C` | 🔴 **THE "CLEANEST UNCLAIMED OPPORTUNITY" IS OCCUPIED AT 39 444★** | `project-nomad` = **Kolibri + Kiwix + Ollama**, Apache-2.0 |
+| `P132-E` | 🔴 **`OR` IS NOT A BOOLEAN IN REPO SEARCH** | **69 812** and **248 136** from two intended-narrow queries |
+| `P132-F` | 🟢 **`NOASSERTION = UNREAD` PAID OFF WITHIN ONE PASS** | `mcp-student-records` → **Apache-2.0** at payload (**~745 B notice block**) |
+| `P132-G` | 🟡 **FIRST AFRICA/MENA EDUCATION ROW, AND IT IS UNUSABLE** | **63★**, Arabic-first, *"Private / TBD"* by declaration |
+
+### 🆕 The student-information-system tier — 21 new addresses
+
+🔵 **The probe that worked was `timetable timetabling MCP in:name,description`.** Not *SIS*, not
+*student information system*, not *school management*. **Timetable access is the one capability
+every member of this field implements**, so it is the only word that reaches all of them.
+
+| repo | licence | ★ | region | platform |
+|---|---|---|---|---|
+| [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | 🟡 **MIT** (2.x); `legacy_reference/` **GPL-3.0-only** | **10** | **EMEA (Poland)** | Librus Synergia |
+| [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | 🔴 **none** | 7 | **APAC (India)** | DA-IICT campus |
+| [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) | **Apache-2.0** | 4 | **APAC (India)** | VIT Bhopal VTOP |
+| [`yourssu/soongpt-plugin`](https://github.com/yourssu/soongpt-plugin) | **MIT** | 3 | **APAC (South Korea)** | Soongsil uSaint |
+| [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** | 3 | **EMEA (Slovakia)** | EduPage |
+| [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🟡 **UNREAD** | 3 | **APAC (China)** | Chinese university planners |
+| [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | **MIT** | 2 | **NA (Canada)** | McGill VSB |
+| [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | EduPage (2nd impl.) |
+| [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | Pronote |
+| [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) | 🟢 **MIT** (payload) | 1 | **EMEA (Bosnia)** | Int'l Burch University |
+| [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **none** | 1 | **EMEA (Finland)** | Sisu / Funidata (**any** deployment) |
+| [`zyx1121/nycu`](https://github.com/zyx1121/nycu) | **MIT** | 1 | **APAC (Taiwan)** | NYCU portal + E3 |
+| [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP) | **MIT** | 1 | **NA (Canada)** | UofT Timetable Builder |
+| [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) | **GPL-2.0** | 1 | **APAC (Vietnam)** | QLDT, Hanoi University |
+| [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | **MIT** | 1 | unplaced | 🟢 **standalone, ~42 tools** |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** (payload) | 1 | **NA** | 🟢 **FERPA logging, org-owned** |
+| [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) | 🔴 **none** | 1 | unplaced | Okta OIDC/SAML + SCIM |
+| [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | 1 | **APAC (India)** | 🟢 **NEP 2020 timetable optimisation** |
+| [`MartinSA04/ntnu-mcp`](https://github.com/MartinSA04/ntnu-mcp) | **MIT** | 0 | **EMEA (Norway)** | NTNU course data |
+| [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | **MIT** | 0 | **EMEA (Germany)** | IServ (**parent**-facing) |
+| [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) | **MIT** | 0 | **NA (Canada)** | UofT Quercus (Canvas) |
+| [`fakelag28/vsuet-timetable-api-mcp`](https://github.com/fakelag28/vsuet-timetable-api-mcp) | **MIT** | 0 | **EMEA (Russia)** | VSUET (ВГУИТ) |
+
+🔴 **The tier-wide blocker, recorded here so no later pass re-discovers it as good news:** these
+authenticate **as the student or parent with their own portal password**, against platforms that
+have not sanctioned them. `librus-mcp` says so outright — *"unofficial, not affiliated with
+Librus"* — and **does not support accounts with 2FA enabled**, so the ones that work are the ones
+with 2FA off. For the K-12 platforms (Librus, EduPage, Pronote, IServ) that is children's grade and
+attendance data under GDPR with no processing agreement. 🟢 **The two partial answers are in the
+tier itself:** `sis-demo` (Okta OIDC/SAML + SCIM) and `mcp-student-records` (FERPA access logging).
+
+### 🆕 `P132-C` — the offline slot is occupied, and it was never named "kolibri"
+
+| repo | licence | ★ | what it is |
+|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | **Apache-2.0** | **39 444** | 🔴 **Offline-first knowledge and education server.** Docker orchestration layer where **Kiwix** powers the Information Library, **Kolibri** powers the Education Platform and **Ollama** powers the AI Assistant (external/OpenAI-compatible endpoints also supported). **Second-largest repo in this entire KB**, behind only `HKUDS/DeepTutor` (41 136★) |
+| [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟡 **UNREAD** | 20 | macOS / Apple Silicon port of the above; bundles Ollama, Open WebUI, Kiwix, Kolibri, FlatNotes |
+| [`Tushar-cy/Offline-AI`](https://github.com/Tushar-cy/Offline-AI) | 🟡 **UNREAD** | 2 | Offline LMS for Class 10 Maths/Science (Indian curriculum): FastAPI + React + RAG + local Ollama, claims *"Kolibri integration support"*. 🔴 **Duplicate pair** with [`Tushar-cy/Ai-edge-learning-hub`](https://github.com/Tushar-cy/Ai-edge-learning-hub) — same owner, byte-identical description |
+
+🔵 **Why eleven passes missed a 39k-star project in this KB's declared flagship opportunity.** Every
+Kolibri probe searched the string `kolibri` in names and descriptions. NOMAD's description names
+*"courses, maps, and optional local AI"* and never says Kolibri — the dependency is visible only in
+the README's architecture. **p131's `kolibri stars:>2` probe was valid, returned 86 repos, correctly
+resolved 3 to the family and 0 with AI, and was still wrong about the field**, because the occupant
+composes Kolibri without being named for it.
+
+🟡 **New collision source for later passes:** **Aleph Alpha has shipped a 78B model called
+"Kolibri"**, so the name now also returns sovereign-LLM repos alongside KolibriOS, the Russian
+"Kolibri AI" cognitive-system family (`rd8r8bkd9m-tech`, `leontov`), a CRM and a hummingbird or two.
+
+### 🆕 `P132-G` — Africa and the Middle East, after three passes of silence
+
+| repo | licence | ★ | note |
+|---|---|---|---|
+| [`h9-tec/graduation-project-advisor`](https://github.com/h9-tec/graduation-project-advisor) | 🔴 **none — *"Private / TBD"*** | **63** | Arabic-first LLM advisor taking **Egyptian CS students** from onboarding form → 5 ranked idea cards → supervisor-ready blueprint. Next.js 15, FastAPI, Qdrant, Azure OpenAI + Ollama. 🔴 **Unlicensed BY DECLARATION** — *"Licensing terms will be finalized before any public release"* — which is a clearer bar than the missing-file cases elsewhere in this KB |
+| [`mbzuai-oryx/ClimateGPT`](https://github.com/mbzuai-oryx/ClimateGPT) | 🟡 **UNREAD** | 80 | **MBZUAI, Abu Dhabi.** Arabic/English climate LLM, EMNLP'23. Evidence of institutional MENA AI capacity; **not** an education tool |
+
+🔵 **Region recorded as EMEA on stated-audience evidence** (Arabic-first, Egyptian students). The
+author's own location is **not** established by anything on the page, and this KB does not infer
+nationality from a name.
+
+### 🔴 `P132-E` — the instrument's blind spot has a second, opposite face
+
+p131 established that a **generic zero** measures the query. The mirror image also holds:
+
+| query | intent | returned |
+|---|---|---|
+| `oneroster OR ed-fi MCP agent in:name,description` | rostering-standard connectors | 🔴 **69 812** (global MCP-agent population) |
+| `swahili OR yoruba OR amharic education in:name,description` | African-language education repos | 🔴 **248 136** (global `education` population) |
+| `arabic education LLM tutor in:name,description stars:>5` | MENA tutoring | 🔴 **0** |
+| `arabic LLM in:name,description stars:>50` *(control)* | — | 🟢 **3**, incl. the 63★ advisor above |
+| `school management AI agent in:name,description stars:>3` | SIS agents | 🔴 **1**, and it was irrelevant |
+| `timetable timetabling MCP in:name,description` *(the one that worked)* | — | 🟢 **60**, ~21 education rows |
+
+🔴 **`OR` does not union narrow sets; it collapses the query into a broad match.** `ACTION BC`
+(a named control beside every declared absence) is extended: **a named control beside every declared
+abundance too.** A four-figure result count is as suspect as a zero.
+
+### Re-checked and unchanged
+
+- 🔴 [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) — **still no `LICENSE`
+  file**, sidebar shows no licence, README badge **CC-BY-4.0** vs body **CC-BY-SA-4.0**. The single
+  highest-leverage upstream change available to this KB, still not made.
+- 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) — `pushed_at`
+  **2026-04-30**, unchanged. Now ~5.4 months quiet, third consecutive pass.
+- 🔴 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) — **still 2★**. Open edX MCP
+  has not moved past experimental.
+
 ## 2026-10-11 — Pass 131
 
 **A pass that audits the previous pass.** p130 rewrote all six non-append-only pages from one

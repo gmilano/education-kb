@@ -6,6 +6,99 @@ updated: 2026-10-11
 
 # Education — open gaps
 
+**Pass 132, 2026-10-11.** ⏱️ **Nineteenth pass of this date.** 🔴 **This pass's finding is that a gap
+can be WRONG rather than merely stale — and the one that was wrong is the one this register had just
+promoted to "the largest genuine hole in this KB".**
+
+p131 diagnosed gap *degradation*: a precise gap in this file restated as an absolute absence on a
+live page, each error a single quantifier swap. p132 finds the failure one level deeper. **The SIS
+agent gap was not degraded in restatement. It was false at the point of measurement, in this file,
+and it stayed false for several passes** — because every probe that tested it was built from the
+wrong vocabulary.
+
+## 🔴 The defect: a gap measured with the analyst's words about a field named in the builders' words
+
+| this register's gap | how it was probed | why the probe could not work |
+|---|---|---|
+| *"No AI agent for any system of record"* — 🟢 *"now the largest genuine hole in this KB"* (p131) | `student information system …`, `school management AI agent …`, `SIS …` | 🔴 **The category term does not appear in the field.** The 21 repos that exist are called `librus-mcp`, `edupage-mcp`, `mcp-pronotes`, `iserv-mcp`, `sisu-mcp`, `soongpt-plugin`, `vtop-bhopal-mcp`, `qldt-hanu-mcp`, `mcgill-vsb-mcp`, `nycu`. **None contains "student", "information", "system", "SIS" or "school management"** |
+
+🔵 **This is not `P131-E` and it is worse.** `P131-E` said a multi-term query returns a zero that
+measures the query — the fix was fewer terms. **Here the fix is different words entirely.** No star
+threshold, no term reduction and no amount of grepping this KB would have found the tier, because
+the KB never possessed the vocabulary. p131's remedy (*"grep your own append-only pages before
+declaring absence"*) would have returned nothing and confirmed the false gap.
+
+🟢 **The probe that worked, and the generalisable rule.**
+`timetable timetabling MCP in:name,description` → **60 results, ~21 education rows.** Timetable
+access is **the one capability every member of the field implements**, so it is the only word that
+reaches all of them. **Rule, now on `agents/top.md`: before declaring a CLASS absent, probe it three
+ways — the category term, the capability every member must implement, and the proper nouns of the
+market.** Probe 3 is where *regional* supply hides, and it returns rows with their region already
+attached as evidence.
+
+## 🟢 Gaps CLOSED or REFUTED by p132
+
+| gap | state | what changed it |
+|---|---|---|
+| **No AI agent for any system of record** *(p131: "the largest genuine hole in this KB")* | 🔴 **REFUTED** | **21 rows** (`agents/top.md`). MIT: `librus-mcp` (10★, PL), `soongpt-plugin` (3★, KR), `edupage-mcp` ×2 (SK), `mcp-pronotes` (FR), `iserv-mcp` (DE), `ibu-mcp` (BA), `nycu` (TW), `ntnu-mcp` (NO), `mcgill-vsb-mcp` + `UofT-MCP` + `uoft-quercus-mcp` (CA), `vsuet` (RU), `classroom-mcp`, `AI-Based-Timetable-Generation-System`. Apache-2.0: `mcp-student-records` (FERPA logging), `vtop-bhopal-mcp`. GPL-2.0: `qldt-hanu-mcp`. Unlicensed: `sisu-mcp`, `sis-demo`, `DAU-buddy`. Unread: `ddl-killer` |
+| **No AI-on-top of Kolibri** / *"the offline slot is the cleanest unclaimed opportunity"* | 🔴 **REFUTED** | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) — **Apache-2.0, 39 444★**, orchestrates **Kolibri** (education) + **Kiwix** (library) + **Ollama** (AI) via Docker. 🔵 **p131's `kolibri stars:>2` probe was VALID and its conclusion was still false**: NOMAD composes Kolibri without naming it in its description |
+| **The 2026 market-size spread was not resolvable** | 🟢 **LARGELY CLOSED — and it was this KB's filing error, not a source problem** | IMARC's **~$6.4B is a 2025 base** misfiled here as a 2026 estimate. Genuine 2026 figures agree within **1.19×** (~$9.6–11B). 🔴 The horizon stays open: 2035 spans **~$70B–$1 169B (~17×)** |
+| **Administrative automation has no agent** | 🔴 **REFUTED** | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) (**MIT**) — conflict-free timetabling under India's **NEP 2020**, with scenario simulation and an MCP interface. 🟢 **An optimiser, not an LLM wrapper** |
+| **`ACTION AY` — Apache-2.0 rows with no named licensor** | 🟡 **one instance discharged** | `mcp-student-records` names its licensor: *"Copyright 2026 Zavora AI"* — an organisation, and the only org-owned row in the new tier |
+
+## 🟡 Gaps NARROWED by p132
+
+| gap | previous form | narrowed form |
+|---|---|---|
+| **`ACTION BD` — Africa and the Middle East inside "EMEA"** | *"third consecutive pass with no regional evidence"* | 🟢 **One address found:** [`h9-tec/graduation-project-advisor`](https://github.com/h9-tec/graduation-project-advisor), **63★**, Arabic-first, **Egyptian CS students** — 🔴 **unlicensed BY DECLARATION** (*"Private / TBD. Licensing terms will be finalized before any public release"*). Also `mbzuai-oryx/ClimateGPT` (80★, **MBZUAI, Abu Dhabi**), not an education tool. 🔴 **Still absent: any African or Gulf market sizing, any national instrument, any Sub-Saharan row** |
+| **Supply carries no region evidence** *("11 of 17 agent rows unplaced")* | a property of the sector | 🔴 **a property of the tier that was measured.** The 21 new rows are **~90% placed on hard evidence** — EMEA 9, APAC 7, NA 4, unplaced 2. 🟢 Famous repos are unplaced because they are international; institution-bound repos arrive pre-placed |
+| **The permissive/popular inversion** *("across every tier measured")* | a law about the sector | 🟡 **scope overstated.** The new tier is **~80% MIT** — the inversion does not hold across it. 🔵 **It still holds at the TOP of it:** the two most-starred rows are the weak ones (`librus-mcp` 10★ mixed-licence, `DAU-buddy` 7★ unlicensed). **Accurate form: popularity does not predict licence quality, most strongly among the largest repos in a tier** |
+| **The demand channel is saturated** *(4 consecutive passes)* | *"0 new tokens in 4 of 4 regions"* | 🟢 **Streak BROKEN in 4 of 4** — but no new *facts*. Every new token is a **date, a denominator or a delivery structure**: IESALC fieldwork **Aug–Oct 2025** (which re-ages the held 87%/26%), the UK's **£200m+** summit delivered by **Big Tech not EdTech**, **ANZ** entering the KB, CMU+Gates **$55M** on gateway courses. 🔴 **Saturated for facts, productive for provenance** |
+
+## 🔴 Gaps OPEN, with this pass's reason
+
+| gap | why it is still open |
+|---|---|
+| 🆕 **No agent for any OPEN-SOURCE system of record** | 🟢 **The replacement for the refuted gap, and sharper than it.** All 21 connectors target **proprietary or institution-hosted** portals. `openeducat_erp`, `frappe/education`, `academico`, RosarioSIS, Gibbon, openSIS and Fedena have **zero** between them. 🔴 **Connector effort has gone to the platforms a studio cannot fork and avoided the ones it can** — addressed by `compose/patterns.md` → **P9** |
+| 🆕 **The whole SIS/portal tier is undeployable as published** | Authenticates **as the pupil or parent with a stored password**, against unsanctioned platforms; `librus-mcp` **does not support 2FA**, so the ones that work are the ones with 2FA off. For Librus/EduPage/Pronote/IServ the subjects are **children** under GDPR with no DPA. 🟢 Partial answers exist in the tier itself (`sis-demo`: Okta/SCIM; `mcp-student-records`: FERPA logging) — **P8** |
+| 🆕 **No national K-12 platform has a sanctioned integration path** | Nine proprietary platforms with real open connectors and **no LTI, no partner API, no vendor agent programme** between them. Simultaneously the clearest unmet EMEA need and the clearest compliance hazard |
+| 🆕 **Nothing in the new tier exceeds 10 stars** | No production-grade row anywhere in it. The tier is *forming* — three rows were created within ten days of this pass — so maturity, not existence, is now the constraint |
+| **No OUTCOME benchmark** | 🟡 Unchanged. Both benchmarks measure tutor *behaviour*, not durable learning gains. 🟢 **p132 adds a target worth building against:** CMU + Gates are funding **$55M** into *gateway courses*, where an outcome gain is directly measurable in retention — the natural home for `P6` |
+| **The benchmark layer carries no usable grant** | 🔴 **RE-CHECKED, UNCHANGED.** `eth-lre/mathtutorbench`: **no `LICENSE` file**, sidebar shows none, README badge **CC-BY-4.0** vs body **CC-BY-SA-4.0**. `Khan/tutoring-accuracy-dataset`: bespoke **2 690 B**, dormant since 2024-08-29. 🔵 Still the single highest-leverage upstream commit available to this KB |
+| **No LATAM-origin supply** | 🔴 **WORSE in relative terms, and now the KB's most consistent finding.** p132 added 21 rows: **EMEA 9, APAC 7, NA 4, unplaced 2, LATAM 0.** `campus-cli` (ISC, 11★, Peru) is still the only LATAM row in the KB. 🔴 **And nothing offline targets LATAM** either, in the region this KB argues needs offline most. 🟡 **But see `ACTION BE` — a LATAM zero is not credible until re-probed with platform proper nouns** |
+| **Canvas is the quietest major platform** | 🔴 **RE-CHECKED, UNCHANGED.** `pushed_at` **2026-04-30** — byte-identical to p131, now ~5.4 months, third consecutive pass |
+| **Open edX MCP is experimental** | 🔴 **RE-CHECKED: still 2★.** |
+| **No permissive proctoring project with an institutional owner** | Untouched this pass. Four MIT rows, largest 18★, all individual, three affect-adjacent (**prohibited** in EU education under Art. 5) |
+| **The AI Act date a client can be quoted** | 🟡 Unchanged, and 🔴 **the stale *"full effect August 2026"* reading is still circulating in NA-facing sources** — a client may arrive holding it. `eur-lex`-class hosts remain refused in both lanes, so **Reg. (EU) 2026/1744** is still not payload-read here |
+| **The 46 Apache-2.0 / ECL rows with no licensor** | 🟡 One instance discharged (above); the body of `ACTION AY` is otherwise untouched, carried from p129 |
+| 🆕 **Three rows left licence-UNREAD** | `edwyj/ddl-killer`, `karissafuller/project-nomad-macos`, `Tushar-cy/Offline-AI`. Marked `UNREAD` in the evidence file rather than guessed |
+| 🆕 **ANZ is a blank in this KB** | Australia and New Zealand appeared for the first time this pass, as a *regulatory signal only*. **Zero** ANZ-origin open-source education AI found — and no dedicated probe has ever been run, so this is a KB gap, not a market finding. `ACTION BF` |
+
+## 🆕 Actions opened by p132
+
+- **`ACTION BE` — re-probe LATAM with platform proper nouns before the zero is reported again.**
+  The vocabulary rule unlocked EMEA and APAC supply this pass; the LATAM equivalents have never been
+  tried: **SIGA, SIGAA, Q-Acadêmico, SIAGIE (Peru), SIMAT (Colombia), Blackboard LATAM, Chamilo**.
+  🔴 **Until that is run, "no LATAM supply" is an untested claim about a query, not a finding about
+  a region** — and it is the claim this KB repeats most often.
+- **`ACTION BF` — run a dedicated ANZ probe.** Australia and New Zealand run Moodle and Canvas at
+  scale in a mature English-language export market and are a blank here.
+- **`ACTION BG` — extend `ACTION BC` to abundances.** A named control is required beside every
+  declared absence; p132 adds that one is required beside every declared **abundance** too. `OR` is
+  not honoured as a boolean in repo search: `oneroster OR ed-fi MCP agent` → **69 812**,
+  `swahili OR yoruba OR amharic education` → **248 136**. **A four-figure count is as suspect as a
+  zero.**
+- **`ACTION BH` — record licence STATE, not licence STRING.** Three states must never be conflated:
+  **granted-but-unmatched** (`mcp-student-records` → Apache-2.0 as a ~745 B notice block;
+  `openeducat_erp` → LGPL-3.0 at 8 241 B), **silent** (no file), **deliberately withheld**
+  (*"Private / TBD"*). Only the first is buildable, and the KB's current `licence` columns cannot
+  express the difference.
+- **`ACTION BI` — check every repo for MIXED licensing before recommending a fork.**
+  `krzysztofbury/librus-mcp` is **MIT at 2.x** over a `legacy_reference/` directory that remains
+  **GPL-3.0-only**. A whole-repo fork inherits the stricter term.
+
+---
+
 **Pass 131, 2026-10-11.** ⏱️ **Eighteenth pass of this date.** 🔴 **This pass's finding is about how
 gaps DEGRADE between pages, not about a new gap.** p130's rewrite restated three of this file's
 precise gaps as absolute absences, and all three became false in the restatement.
@@ -1135,7 +1228,7 @@ repeat leaked. **49 surplus token instances across 46 rows**, carried since p118
 
 | pass | new tokens | rejected as already held |
 |---|---|---|
-| p117 | 4 | 13 | 
+| p117 | 4 | 13 |
 | p118 | 0 | 15 |
 | p119 | 0 | 19 |
 | p120 | 0 | 14 |
