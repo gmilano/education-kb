@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 139 — 2026-10-12
+
+⏱️ **Second pass of this date.** 🟢 **All six of p138's pre-registered actions ran; five discharged,
+one blocked by the environment and now DIAGNOSED rather than re-registered.** 🔴 **The headline: the
+nine connector payloads p138 downloaded for a licence question register 411 tools, document 249, and
+62 of the 162 undocumented ones write to the LMS — five over grades, five over identity.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P139-B` | 🔴 **`ACTION CK` DISCHARGED, NOT REFUTED — and the axis beats the count** | **6 of 9 (66%)** packages disagree with their own documentation vs a 33% threshold. 🔴 **62 of 162 undocumented tools (38%) MUTATE the LMS**, incl. `bulk_update_grades`, `grade_submission`, `create_user`, `update_user_login`, **`update_sso_settings`** |
+| `P139-C` | 🟢 **`ACTION CL` DISCHARGED, NOT REFUTED — EXECUTED, not read** | pre-seeded grant → `POST /oauth/token` → **HTTP 200**, Bearer `mcpat_…`, seeded scopes, rotated refresh, 🟢 **0 Canvas contacts measured by sentinel** |
+| `P139-C1` | 🔴 **AND THE DOCUMENTED EMBEDDER ENTRY POINT KILLS THE IMPORTER** | `dist/http.js` runs `main()` at module top level, **no `import.meta.main` guard**, parses the *importer's* `argv`, `process.exit(1)`. The `oauthStore` seam p138 cited is **unreachable by import** |
+| `P139-D` | 🟡 **`ACTION CM` SPLIT — REFUTED on PyPI, NOT REFUTED on Maven** | PyPI **9%** (1 of 11, and it ships no code); Maven **40–67%** (2 of 3 declaring); npm was 33%. 🔵 **The defect belongs to the BUILD TOOL, not to open source or to npm** |
+| `P139-D2` | 🔴 **A LICENCE PROBE FOUND A RELEASE DEFECT** | `openedx-learning` **0.33.0** and **0.33.1** are **1 479-byte** wheels with only `dist-info` — down from **257 553 B** at 0.32.0. `pip install` resolves to the empty one |
+| `P139-A` | 🔴 **`ACTION CJ` DISCHARGED, NOT REFUTED — 2 of 3** | `frappe/lms`'s root licence names **no holder of `frappe/lms`** (all 3 `Copyright` lines are AGPL apparatus, incl. an **unfilled template**); ownership lives only in source, split across **two legal entities** |
+| `P139-E` | 🟢 **`ACTION CN` DISCHARGED, NOT REFUTED** | **75 shared commit shas**, **17 refs vs 2**, author id `59054736+GhaithAlHallak8` → `GhaithAlHallak8/moodler-mcp` is the original, corroborating p138 through an independent channel |
+| `P139-F` | 🔴 **`ACTION CO` BLOCKED — and the cause is now known** | `sdaia.gov.sa`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` all answer **403 to `CONNECT`** at the proxy gateway. 🔵 **The environment's network policy refuses government hosts.** Not a probe to re-register |
+
+### `P139-B` — why the write axis is the finding and the count is not
+
+An undocumented read tool is a missing paragraph. 🔴 **An undocumented `bulk_update_grades` is an
+ungoverned capability** — and *"grading or ranking learners"* is named high-risk by **EU AI Act
+Annex III** and by **Vietnam's Decision 33/2026/QĐ-TTg**, the only education-AI conformity regime
+actually in force (`T16`). 🔵 **A duty cannot be discharged against a capability nobody has
+enumerated, and the README is what procurement reads.** That is why this pass adds **`P18`**, a
+gate, rather than a caveat on `P17`: pull the payload, count registered tools across all three
+registration idioms, diff against the documentation, partition by write verb, then call `tools/list`
+on the running server and diff again — because registration is not behaviour.
+
+🔴 **`@imazhar101/mcp-canvas-server` is the row that should stop a delivery conversation**: 227
+tools, 96 documented, **61 undocumented writes**, including **`update_sso_settings`** and
+**`restore_authentication_provider`** — tools that change how a Canvas tenant authenticates — in the
+same package p138 found carrying **no licence signal and no `repository` field**, so there is no
+source to audit either.
+
+### `P139-C` — the one that changes delivery, and it moved the cost rather than removing it
+
+p138 wrote of its own `ACTION CE`: *"answered by reading an interface, not by calling it."* `ACTION CL`
+called it. 🟢 **The brokered flow does not demand the Canvas redirect when a grant is pre-seeded** —
+proven by a sentinel listener standing in for Canvas and recording **zero** connections, with the
+grant store encrypted at rest (`scrypt` + AES-GCM, no plaintext). 🔴 **But the integration shape is
+not what p138 implied**: because `main()` runs on import, an embedder cannot pass `oauthStore` in
+process. The working route is **seed the encrypted store, run `serve` as a managed process**. `P13`
+is rewritten a fifth time: 🟢 **protocol work drops to hours, plumbing rises to ~a week**, and the
+"no fork" claim is **narrowed, not refuted** — no fork to *use* it, a one-line `main` guard to
+*embed* it.
+
+### Regions this pass
+
+| region | what moved |
+|---|---|
+| **North America** | 🔴 **🆕 A federal preemption proposal aims at the exact instrument layer this KB has modelled for three passes.** The White House's **National Policy Framework for AI (March 2026)** recommends Congress **preempt state AI laws** — which would collapse ~31 state regimes and retire p137's "system board is the buying unit" thesis. 🟡 A recommendation, not a bill. 🆕 **Virginia JLARC** is auditing how public colleges set AI rules, reporting **early 2028**. 🟢 Scale datum: **CSU + OpenAI, 460 000 students / 63 000 staff**. 🔴 Measured defect: `edu.ksu.ome.lti:lti-launch` (Kansas State), the `P13` dependency, **declares LGPL-3.0 and ships no licence text** |
+| **EMEA** | 🟢 **🆕 `AI Skills Academy` operational since 2026-05-01** under the Digital Europe Programme — the first EMEA instrument here that is a **funded delivery vehicle** rather than a duty. 🟡 🆕 Council of Europe education ministers argue the **private sector is a key regulatory actor**. 🔴 **The Omnibus deferral is NOT new — `T24` records that this pass nearly double-published `T16`.** 🔴 First EMEA-owned connector measured: `eth-moodle-mcp` documents 3 tools, registers 18, ten of them scraping one **ETH Zürich** course, plus an undocumented `submit_assignment`. 🟡 `uk.ac.ox.ctl:spring-lti13` is **404 on Maven Central** |
+| **APAC** | 🟡 🆕 **China and the UAE reported as the only two jurisdictions with compulsory national AI curricula** since 2025-26 — which, if right, makes the Gulf gap a failure of *reading* rather than an absence of instruments. 🆕 **India moved twice in 2026**: Feb IT-Rules amendment on AI content, July signal toward dedicated legislation — so "mandate without statute" has an expiry date. 🟢 Confirmed: Korea's **AI Basic Act in force 2026-01-22**, India Class 3 from **2026-27**, Japan's PM-chaired AI Strategic HQ. 🔴 **The region owns this pass's sharpest ownership defect**: `frappe/lms` and `openeducat/openeducat_erp` |
+| **LATAM** | 🟢 **🆕 Peru's Law 31814 (July 2023) — the region's only ENACTED AI statute — has never been on this page**, which makes "LATAM has frameworks but no enacted law" a sentence this KB got wrong for several passes. 🔴 **🆕 Brazil's `Digital ECA` (Law 15.211/2025) has been IN FORCE since March 2026** — age verification, limits on ads to minors — so a Brazilian K-12 deployment faces a live minors regime **now**, while this page tracked PL 2338/2023 for five passes and missed the law that applies. 🟡 🆕 **Chile asks to defer its data law to Dec 2027** — a third jurisdiction slipping 2026 dates. 🟢 UNESCO LAC Observatory and CENIA's 13-of-19 finding confirmed, not new |
+| **Global** | 🔴 **🆕 VC into education AI fell to ~$1B in H1 2026, −26% YoY, while 86% of education organisations use generative AI — most without a policy.** 🔵 Adoption near-saturation with capital retreating is a **services** market, not a product one. 🔴 🆕 And two faculty signals cut against it: only **29%** of students think instructors are equipped, and **faculty intent in US+Canada FELL 9 points (76%→67%)** — the first practitioner-intent reversal this page has recorded |
+
+### Verdicts on p138's actions
+
+- 🔴 **`ACTION CJ` — DISCHARGED, NOT REFUTED.** 2 of 3 `ROOT_ONLY` rows carry a foreign holder in
+  source; p137's 50% is a **floor**.
+- 🔴 **`ACTION CK` — DISCHARGED, NOT REFUTED.** 66% against a 33% threshold, and the write axis.
+- 🟢 **`ACTION CL` — DISCHARGED, NOT REFUTED**, by execution, with a blocker found one layer above.
+- 🟡 **`ACTION CM` — SPLIT: REFUTED on PyPI, NOT REFUTED on Maven.** The single-number answer the
+  action expected would have been wrong either way.
+- 🟢 **`ACTION CN` — DISCHARGED, NOT REFUTED**, and the instrument immediately resolved a second
+  duplicate pair nobody had seen.
+- 🔴 **`ACTION CO` — NOT DISCHARGED.** Blocked by network policy, now diagnosed. The premise is
+  nonetheless **not** met on secondary evidence (SDAIA's **Saudi Academic Framework for AI
+  Qualifications** is entirely about education), so `P138-J` stays a **region gap**, not an absence.
+
+### Pre-registered for p140
+
+🔴 **`ACTION CP`** — call `tools/list` on **one** running connector from the nine and diff it against
+this pass's static count. 🔴 *Refuted if the live list matches the build count exactly, which would
+make `p139-tool-count-drift`'s numbers behavioural rather than static — and would make step 5 of
+`P18` unnecessary.*
+
+🟡 **`ACTION CQ`** — extend `ACTION CJ` to the **five unread `ROOT_ONLY` rows**
+(`Crosstalk-Solutions/project-nomad`, `overhangio/tutor`, `adaptlearning/adapt_framework`,
+`openedx/XBlock`, `openedx/codejail`). 🔴 *Refuted if none carries a foreign source header, which
+would make the 2-of-3 a property of the three largest rather than of the class.*
+
+🟢 **`ACTION CR`** — resolve **parent-POM inheritance** for the two Maven rows reading
+`NONE_DECLARED`. 🔴 *Refuted if either inherits a `<licenses>` block from its parent — which would
+move it out of the "no signal" class and RAISE the declared-but-absent denominator, against this
+pass's own finding.*
+
+🟡 **`ACTION CS`** — check whether `openedx-learning`'s empty **0.33.x** releases are known upstream
+(issue tracker, release notes, or a 0.33.2). 🔴 *Refuted if an upstream issue predates this pass, in
+which case this is a packaging bug already in hand and not a finding about the supply chain.*
+
+🟢 **`ACTION CT`** — read **`ArnaudGuiovanna/tutor-mcp`** in source: what its "durable learner
+state" and "auditable pedagogical decisions" actually persist, and whether any of it is a write
+surface of the `P18` class. 🔴 *Refuted if the agent tier turns out to hold no learner PII at all,
+which would put it outside the Annex III/Decision 33 frame this KB has been applying.*
+
+🔴 **`ACTION CU`** — **book ONE region on measured evidence.** Pick a single row and establish its
+origin from something that is not a name: a `pom.xml` `<organization>`, a funding file, an
+institutional email domain in `git log`, a university host in a tool description. 🔴 *Refuted if no
+row on this shelf yields origin evidence of that kind — in which case the nine-pass ownership gap
+should be restated as "this shelf does not carry origin metadata" rather than "this KB has not
+looked".*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **`ACTION CO` did not run against a primary source, and no primary source was read this pass
+  at all.** Every regulatory statement above is from search results. 🔵 **The difference from p138 is
+  that the cause is now identified** — `403 at CONNECT`, by network policy, for every government
+  host tried — so the next pass should ask for the policy to be widened rather than spend another
+  action on it.
+- 🔴 **`T24` is a near-miss this pass caught in itself.** A regional sweep returned the EU Annex III
+  deferral as new; it was already `T16` from p137. It is published as a near-miss because a
+  search-driven pass will keep rediscovering its own file. 🟢 **New rule: grep `intel/` for the date
+  and instrument number before booking a regulatory finding as `🆕`.**
+- 🔴 **No region was measured for ANY artefact, for the ninth consecutive pass.** `edu.ksu` is
+  Kansas State, `uk.ac.ox` is Oxford, `frappe`/`FOSS United` are Indian, `moodler-mcp` commits are
+  `+04:00` — **all four are name or timezone inferences and none is booked.** `ACTION CU` exists to
+  break this, and it is the one action with a refutation condition that would force a restatement of
+  the gap itself.
+- 🔴 **Star counts are `UNMEASURED` for every row**, as in p138. `api.github.com` is 403 and git
+  carries no star count. 🟢 **HEAD dates and commit counts ARE measured now**, because the git lane
+  works — a correction to p138's channel note.
+- 🔴 **No tool was CALLED on any connector.** 411 registered tools is a count of registrations;
+  a registered tool may be a stub. `ACTION CP` exists for exactly this.
+- 🔴 **`is_write_tool` reads verbs, not effects.** The 62 is a name-level estimate; `mark_module_item_read`
+  counts as a write and `get_cache_status` as a read, on their names alone.
+- 🔴 **Maven n = 5, and two of the five are the same Sakai kernel.** There is **no Maven search
+  channel** here (403), so coordinates were *named* rather than sampled — the sample is biased
+  toward LTI and Sakai and **must not be quoted as "40% of Maven"**.
+- 🔴 **The `ACTION CL` run proves token issuance, not Canvas access.** No `tools/call` was made and
+  the Canvas credential in the seeded grant is a fixture string, so "the agent can now read Canvas
+  as that user" remains **unproven**.
+- 🔴 **The market figures were not reconciled and will not be.** Two more scope-incompatible
+  estimates were seen and the column was deliberately not widened.
+- 🔴 **Four instrument errors were caught by control before publishing**, and each is recorded in
+  its probe's README: a git sample hook published as a foreign holder; five sentences of AGPL-3.0
+  published as holders; a `name:`-in-file gate that returned **0 tools for a 141-path package** and
+  **`beta`/`prod` as tools** for another; and a greedy POM regex that published **three developers'
+  names as licences**. 🔵 **Every one was caught by disbelieving a number, not by a test that
+  already existed** — the tests were written afterwards, and now exist: **39 across three probes**.
+- 🔵 **Channel state, recorded for the next pass.** 🟢 `registry.npmjs.org` **200** (metadata +
+  tarballs). 🟢 `pypi.org` **200**, sha256 published for every distribution. 🟢
+  `raw.githubusercontent.com` **200**. 🟢 **`github.com` git smart-HTTP 200 — clone, `ls-tree`,
+  `ls-remote` and `log` all work**, which is new information against p138. 🟡 `repo1.maven.org`
+  **200 but 429-rate-limits** a shared egress IP (4 s backoff + one retry). 🔴 `api.github.com`,
+  `codeload.github.com` **403**. 🔴 `search.maven.org`, `central.sonatype.com` **403 at CONNECT** —
+  no Maven search. 🔴 `pypi.org/search` returns a **3 038-byte page with no results**. 🔴
+  `sdaia.gov.sa`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` **403 at CONNECT**. 🔵 All
+  refusals are enumerated by `curl -sS "$HTTPS_PROXY/__agentproxy/status"`, which is the lookup the
+  next pass should make first.
+
+### Files changed
+
+| file | change |
+|---|---|
+| `agents/top.md` | p139 section: the drift table, `P139-B1`–`B4`, six new tutoring rows, the refused duplicate |
+| `agents/trending.md` | 🟢 **append-only**: dated p139 section on top, all prior passes kept below |
+| `repos/foundations.md` | p139 section: the PyPI/Maven split, the Maven table, `openedx-learning`, `ACTION CJ`, the git-lane correction |
+| `repos/trending.md` | 🟢 **append-only**: dated p139 section on top, history kept |
+| `verticals/solutions.md` | Sakai's own artefacts measured; attachment-review consequences; the executed `P13` seam |
+| `intel/market.md` | p139 subsection under **each** of the five `### region` headings |
+| `intel/trends.md` | 🆕 `T21`, `T22`, `T23`, `T25`; 🔴 `T24` recorded as a near-miss duplicate of `T16` |
+| `compose/patterns.md` | 🔁 `P13` fifth revision (from execution); 🆕 `P18` tool-surface gate |
+| `evidence/verified-repos.2026-10-12-p139.tsv` | **37 rows**, instrument named per row, `UNMEASURED`/`unplaced` where true |
+| `compose/code/p139-source-header-holder/` | 🆕 probe + **20 tests** + TSV |
+| `compose/code/p139-tool-count-drift/` | 🆕 probe + **12 tests** + TSV |
+| `compose/code/p139-oauthstore-adapter/` | 🆕 adapter, seeder, sentinel harness + run transcript |
+| `compose/code/p139-pypi-maven-payload/` | 🆕 two scanners + POM parser + **7 tests** + two TSVs |
+| `compose/code/p139-duplicate-lineage/` | 🆕 lineage instrument + TSV for both pairs |
+
+
 ## Pass 138 — 2026-10-12
 
 ⏱️ **First pass of this date.** 🟢 **Five of p137's six pre-registered actions reached and

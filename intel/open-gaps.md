@@ -38,11 +38,30 @@ measured in the **same pass** — which is what makes the AGPL row below a two-l
 
 | action | the question | 🔴 refuted if |
 |---|---|---|
-| 🆕 **`ACTION CJ`** — run the per-file notice census over the tiers that are **not** npm-published TypeScript: this KB's Java, PHP and Python institutional rows (`kstateome/lti-launch`, the standards tier, the platform tier) | `T18` claims per-file notice is practised by **1 of 21** rows. 🔵 **That census is entirely npm/TypeScript, and header notice is conventional in Java and PHP** — so the trend may be a property of the packaging ecosystem rather than of education software | 🔴 **Refuted if the non-npm tiers exceed 20% own-header notice**, in which case `T18` is a finding about npm and must be rescoped out of this industry's trend list |
-| 🆕 **`ACTION CK`** — read **Texas HB 149 (TRAIGA)**, in force **2026-01-01**, in its enrolled text | 🔴 **The only item 11 searches surfaced that this KB does not carry.** `capitol.texas.gov` and `agora.eto.tech` both **fail DNS resolution** in this channel, so nothing is published from the vendor summaries that did return. The questions: does it impose any duty naming schools, students or curriculum; does the government-deployer disclosure duty reach K-12 districts; and is education only in the regulatory-sandbox list | 🔴 **Refuted if the enrolled text contains an education-specific obligation.** 🔵 **The expected finding is NEGATIVE** — secondary sources agree there is no curriculum or school-training mandate — **which is exactly why it must not be asserted before it is read**, in either direction |
+| 🆕 **`ACTION CV`** — run the per-file notice census over the tiers that are **not** npm-published TypeScript: this KB's Java, PHP and Python institutional rows (`kstateome/lti-launch`, the standards tier, the platform tier) | `T18` claims per-file notice is practised by **1 of 21** rows. 🔵 **That census is entirely npm/TypeScript, and header notice is conventional in Java and PHP** — so the trend may be a property of the packaging ecosystem rather than of education software | 🔴 **Refuted if the non-npm tiers exceed 20% own-header notice**, in which case `T18` is a finding about npm and must be rescoped out of this industry's trend list |
+| 🆕 **`ACTION CW`** — read **Texas HB 149 (TRAIGA)**, in force **2026-01-01**, in its enrolled text | 🔴 **The only item 11 searches surfaced that this KB does not carry.** `capitol.texas.gov` and `agora.eto.tech` both **fail DNS resolution** in this channel, so nothing is published from the vendor summaries that did return. The questions: does it impose any duty naming schools, students or curriculum; does the government-deployer disclosure duty reach K-12 districts; and is education only in the regulatory-sandbox list | 🔴 **Refuted if the enrolled text contains an education-specific obligation.** 🔵 **The expected finding is NEGATIVE** — secondary sources agree there is no curriculum or school-training mandate — **which is exactly why it must not be asserted before it is read**, in either direction |
 
-🔵 **`ACTION CJ` is the one that could cost this KB a published trend**, and it is registered on the
-pass that added the trend rather than left for a later pass to find.
+### 🔴 `ACTION CV` was fired by this pass's own concurrent lane, before it was ever carried forward
+
+🔴 **Registered and answered in the same pass.** `ACTION CV` asked whether `T18`'s *1 of 21* is a
+property of education software or of npm/TypeScript packaging, and set the threshold at **20% own-header
+notice** in non-npm tiers. [`p139-source-header-holder`](../compose/code/p139-source-header-holder/README.md),
+run in the concurrent lane for a different question, measured exactly that quantity:
+🟢 **`openeducat_erp` 190/450 = 42%**, 🟡 **`frappe/lms` 166/1 411 = 12%**, 🔴 **`academico` 0/660 = 0%**.
+
+🔴 **42% clears the registered threshold by a factor of two, so the generalisation is withdrawn**
+and `T18` is rescoped to the npm-published TypeScript connector tier in
+[`trends.md`](trends.md). 🔵 **The withdrawal happened before the claim was relied on by any
+pattern or slide**, which is the only reason a pre-registered threshold is worth writing down.
+
+🔵 **Both lanes land on the same mechanism**, which is why this is a rescoping and not a retreat:
+`ACTION CM` found the licence-*file* defect tracks each ecosystem's default build behaviour, and
+`T18` is that mechanism one layer down — `tsc` emits no header and `npm init` writes no template,
+while Odoo's module scaffolding does.
+
+🔵 **`ACTION CV` therefore needs no re-run.** What remains open is narrower and is **not**
+re-registered as a blocker: whether the 0%/12%/42% spread tracks scaffolding tooling specifically.
+It is listed on the watch list, not as an action.
 
 ## ✅ Verdicts on p136's pre-registered actions, judged by p137 — **all six reached; six discharged, and three refuted their own premise**
 

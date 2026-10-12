@@ -6,7 +6,79 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
-**Pass 139, 2026-10-12.** 🟡 **No platform row changed this pass either, and it is stated rather
+**Pass 139, 2026-10-12.** 🟡 **No platform row changed this pass either, and it is again stated
+rather than padded.** But two measurements this pass land *on* the platform layer rather than beside
+it, and one of them is about Sakai itself.
+
+### 🔴 Sakai's own published artefacts do not carry the licence Sakai declares
+
+`ACTION CM` probed Maven Central, where the Java platforms on this page actually ship. Two Sakai
+kernel artefacts, **sha1-verified against the repository's own `.sha1`**:
+
+| coordinate | version | POM declares | jar paths | licence file in jar |
+|---|---|---|---|---|
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-api` | **25.2** | 🔴 **Educational Community License 2.0** | **578** | 🔴 **NONE** |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-impl` | 23.3 | 🔴 **nothing declared** | **524** | 🔴 **NONE** |
+
+🔵 **Two artefacts of one kernel, same release line, opposite licence posture.** The `api` jar
+declares **ECL-2.0** — *education's own licence*, an Apache-2.0 derivative with a patent clause
+written for universities — and ships no text for it. The `impl` jar declares nothing at all.
+🔴 **A client doing classpath licence review on a Sakai integration gets `ECL-2.0` from a sibling
+POM file and nothing from the jar**, and ECL-2.0 is exactly the identifier an off-the-shelf scanner
+does not recognise. Detail and method:
+[`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+🟢 **The contrast row matters as much**: `org.imsglobal:basiclti-util` 1.2.0 ships
+`META-INF/LICENSE` **and** `META-INF/NOTICE` for its Apache-2.0 grant. 🔵 **So this is fixable
+configuration, not a Maven law** — which is the sentence to put in front of a platform's maintainers.
+
+### 🔴 The attachment layer: what `install` actually gives an institution
+
+This page's standing claim is that AI attaches to these platforms through connectors rather than by
+forking platform source. Pass 139 measured what those connectors contain, and two results change how
+an attachment should be reviewed:
+
+- 🔴 **A connector's tool list is not its documentation.** Across the nine npm connector rows,
+  **411** tools are registered and **249** documented; **62** of the 162 undocumented ones **write**
+  to the LMS. For Canvas specifically, `@imazhar101/mcp-canvas-server` registers **227** tools with
+  **61 undocumented writes**, including `bulk_update_grades`, `grade_submission`, `create_user`,
+  `update_user_login` and 🔴 **`update_sso_settings`** — a tool that changes how the tenant
+  authenticates. 🔵 **Attachment review must enumerate `tools/list` against the live server, not
+  read the README.**
+- 🔴 **An npm connector may not contain the connector.** `@exhabition/brightspace-mcp` is an
+  **82-line loader** that downloads a Rust binary from GitHub Releases on first run, `chmod 0o700`s
+  it and executes it, with **no checksum or signature verification**. 🔵 **For a Brightspace
+  institution that is a procurement question, not a packaging detail.**
+
+Both measured in [`p139-tool-count-drift`](../compose/code/p139-tool-count-drift/README.md).
+
+### 🟢 The brokered-identity seam was executed against a live server, and it works
+
+p138 read `canvas-lms-mcp`'s `OAuthStore` interface and called it sufficient for pattern `P13`.
+`ACTION CL` ran it. 🟢 **With a grant pre-seeded into the store, `POST /oauth/token` returned
+HTTP 200 with a Bearer access token, the seeded scopes (`canvas:read canvas:write`), a rotated
+single-use refresh token — and ZERO contacts with Canvas**, measured by a sentinel listener rather
+than inferred.
+
+🔴 **But the documented embedder entry point cannot be imported.** `dist/http.js` calls `main()` at
+module top level with no `import.meta.main` guard, so importing `canvas-lms-mcp/http` parses the
+*importer's* `process.argv` and calls `process.exit(1)`. 🔵 **So the attachment shape for an
+institution that already holds Canvas tokens is: seed the encrypted grant store, run `serve` as a
+managed process.** Not an in-process embed — which is cheaper on protocol work and dearer on
+plumbing. Full transcript:
+[`p139-oauthstore-adapter`](../compose/code/p139-oauthstore-adapter/README.md).
+
+### 🔴 One platform-adjacent library of this page is currently an empty package
+
+🔴 **`openedx-learning` ("Open edX Learning Core (and Tagging)") ships no code in its two most
+recent releases** — 0.33.0 and 0.33.1 are **1 479-byte** wheels containing only `dist-info`
+metadata, down from **257 553 B** at 0.32.0, across 79 releases. `pip install openedx-learning`
+resolves to the empty one. 🔵 **Anyone pinning Open edX's learning core from PyPI right now should
+pin `0.32.0`**, and this is the kind of state a studio should verify at the payload layer before an
+engagement rather than after.
+
+
+**Pass 139 — second probe lane (`ACTION CH`), 2026-10-12.** 🟡 **No platform row changed this pass either, and it is stated rather
 than padded for the second consecutive time.** `ACTION CH` was spent on the **attachment** layer —
 the connector packages that bolt onto the platforms below — and it produced a finding that changes
 how the platforms are *integrated* rather than which ones are listed: 🔴 **per-file licence notice

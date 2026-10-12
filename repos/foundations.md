@@ -6,7 +6,140 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
-**Pass 139, 2026-10-12.** 🟢 **p138 measured a fifth layer — the published package — and found a
+**Pass 139, 2026-10-12.** 🔴 **p138 measured the npm payload layer and found a third of the
+connector shelf declaring a licence it does not ship. This pass asked the obvious next question —
+is that open source, or is it npm? — and the answer is neither: it is the TOOLCHAIN.**
+`ACTION CM` ran the same method against **PyPI** and **Maven Central**. Probe, tests and committed
+TSVs: [`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+| registry | artefacts measured | 🔴 declare a licence, ship no licence file | rate | vs the 10% threshold |
+|---|---|---|---|---|
+| 🟢 **PyPI** | **11** (+1 absent from the registry) | 🟡 **1** — and it ships **nothing at all** | **9%** | 🟢 **REFUTED** |
+| 🔴 **Maven Central** | **5** (+1 absent) | 🔴 **2 of the 3 that declare** | **40–67%** | 🔴 **NOT REFUTED** |
+| *(npm, p138)* | *21* | *7* | *33%* | *not refuted* |
+
+🔵 **The defect tracks each ecosystem's DEFAULT BUILD BEHAVIOUR, not its culture.**
+
+- 🟢 **Python's backends ship the licence for you.** Under **PEP 639**, setuptools and hatch copy
+  declared licence files into `<dist>.dist-info/licenses/`. **10 of 11** packages carried one in
+  *both* wheel and sdist — every Open edX row included. A maintainer gets this right by doing nothing.
+- 🔴 **Maven's jar plugin ships nothing for you.** A POM's `<licenses>` block lives in a *sibling
+  file*; the jar on the classpath is untouched. `META-INF/LICENSE` requires deliberate
+  configuration, and **2 of 3 declaring artefacts had not done it**.
+- 🔴 **npm's `files` array names what to pack and silently omits what is absent** — p138's
+  `canvas-mcp-server` *listed* `LICENSE` and shipped 8 paths containing none.
+
+### 🔴 `P139-D1` — the Maven rows, and the library this KB tells clients to build on is in the defect class
+
+| coordinate | version | POM declares | jar paths | licence in jar |
+|---|---|---|---|---|
+| 🟢 `org.imsglobal:basiclti-util` | 1.2.0 | Apache-2.0 | 70 | 🟢 `META-INF/LICENSE`, `META-INF/NOTICE` |
+| 🔴 **`edu.ksu.ome.lti:lti-launch`** | **1.4.7** | 🔴 **LGPL-3.0** | 43 | 🔴 **NONE** |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-api` | 25.2 | 🔴 **ECL-2.0** | **578** | 🔴 **NONE** |
+| 🔴 `net.oauth.core:oauth` | 20100527 | 🔴 **nothing declared** | 32 | 🔴 **NONE** |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-impl` | 23.3 | 🔴 **nothing declared** | **524** | 🔴 **NONE** |
+| — `uk.ac.ox.ctl:spring-lti13` | — | — | — | not on Central (**404**) |
+
+All five resolvable jars were **sha1-verified against the repository's own `.sha1`**; no mismatches.
+
+🔴 **`edu.ksu.ome.lti:lti-launch` is the artefact built from
+[`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) — the LGPL-3.0 Kansas State
+library p137 identified (`P137-A`) as the LTI→OAuth-subject mapping that pattern `P13` depends on.**
+It declares the strongest obligation of the five and ships no text to satisfy it. 🔵 **The one
+interoperability library this KB recommends building on reproduces p138's worst npm row, in Java.**
+
+🔴 **`sakai-kernel-api` declares ECL-2.0 while `sakai-kernel-impl` declares nothing** — two
+artefacts of one kernel, same release line, opposite licence posture, and the one with **578
+paths** is the one making the claim with no text. ECL-2.0 is **education's own licence** (an
+Apache-2.0 derivative with a university-oriented patent clause), and it is exactly the identifier a
+client's scanner will not recognise.
+
+🔴 **`net.oauth.core:oauth` (2010) carries no licence signal at all** and is still a transitive
+dependency of LTI 1.1 integrations. No grant and no file is not "permissive by default" — it is
+**unlicensed**, and sixteen years of use does not change that.
+
+### 🔴 `P139-D2` — the PyPI hit is not a licence defect: `openedx-learning` ships NO CODE
+
+The one PyPI row declaring a licence and shipping no licence file is **`openedx-learning` 0.33.1**
+— *"Open edX Learning Core (and Tagging)"*. It declares `AGPL 3.0` by legacy field **and**
+classifier. Its wheel holds **4 paths, all metadata**; `top_level.txt` is **1 byte**; `RECORD`
+lists only the four `dist-info` entries.
+
+| version | wheel | sdist |
+|---|---|---|
+| 0.31.0 | 268 554 B | 192 313 B |
+| 0.32.0 | 257 553 B | 189 430 B |
+| 🔴 **0.33.0** | 🔴 **1 479 B** | 🔴 **1 748 B** |
+| 🔴 **0.33.1** *(latest)* | 🔴 **1 479 B** | 🔴 **1 742 B** |
+
+🔴 **`pip install openedx-learning` resolves to 0.33.1 and installs no modules.** Across **79
+releases**, the two most recent are the empty ones — this is the *current* state of a core library
+of the dominant open-source higher-education platform, not an old artefact. The collapse from 257 KB
+to 1.4 KB is the signature of a packaging regression, shipped twice.
+
+🔵 **A licence probe found a release defect.** It is counted honestly in both places: as a licence
+row it is the hit that makes PyPI 9% rather than 0%; as a *finding* it belongs to a different class.
+
+🟡 **Two smaller carries.** `xblock-sdk` 0.15.2 ships **two vendored Jasmine 1.3.1 `MIT.LICENSE`
+files** under `sample_xblocks/*/static/js/lib/` beside its own AGPL-3.0 grant — `ACTION CJ`'s
+foreign-holder class, in a payload. And `moodle-dl` declares `GPL-3.0` with `license_files`
+**absent** from its metadata yet **ships** `LICENSE` in both distributions: 🔵 **a missing
+`License-File` field does not imply a missing file**, the mirror image of npm's `files` naming one
+it does not ship.
+
+## 🔴 `ACTION CJ` — on the rows where the root licence file was "the whole story", it names nobody
+
+p137 cleared **8** of the 20 largest rows as `ROOT_ONLY`: one licence file, nothing else
+licence-shaped in the tree. `ACTION CJ` read the **source-file headers** of the three largest.
+🔴 **Two of the three carry a holder their licence file does not name**, so p137's 50% is a **floor,
+not an estimate**. Probe, 20 tests and TSV:
+[`p139-source-header-holder`](../compose/code/p139-source-header-holder/README.md).
+
+| row | tree paths | source files read | own holders | 🔴 foreign holders | verdict |
+|---|---|---|---|---|---|
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 1 606 | 1 411 | 2 | 🔴 **1 — `FOSS United`, 78 header lines** | `FOREIGN_HEADER_IN_SOURCE` |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 1 345 | 450 | 1 | 🟢 0 | `OWN_HEADERS_ONLY` — 🔴 *but its pointer dangles* |
+| 🔴 [`academico-sis/academico`](https://github.com/academico-sis/academico) | 692 | 660 | 🔴 **0** | 🔴 **3** | `FOREIGN_HEADER_IN_SOURCE` |
+
+🔴 **`frappe/lms`'s `license.txt` names no holder of `frappe/lms`.** All **three** of its
+`Copyright` lines are the AGPL's own apparatus: the FSF's copyright on the licence text (line 4),
+the §0 definitions (line 65), and 🔴 **the "how to apply" template with the placeholder never
+filled in** — `Copyright (C) <year>  <name of author>` (line 633). Ownership exists **only** in the
+source headers, and there it is **two distinct legal entities**: `Frappe` / `Frappe Technologies
+Pvt. Ltd.` (165 lines) and 🔴 **`FOSS United`** (78 lines), a separate Indian non-profit. 🔵 **A
+verdict read from the root — "AGPL-3.0, Frappe" — is wrong in both halves on 78 files.**
+
+🔴 **`openeducat/openeducat_erp`'s root `LICENSE` delegates copyright twice, and both pointers
+dangle.** It opens *"For copyright information, please see the COPYRIGHT file."* — and
+`git ls-tree -r HEAD` over all **1 345** paths finds **no `COPYRIGHT` file anywhere**. It then
+delegates again, to "the relevant source files", which carry only `OpenEduCat Inc` (190 lines).
+🔵 **The grant is sound and legible (LGPL-3.0, stated in its first lines); the chain that would say
+whom you owe terminates nowhere.** It is the only one of the three honest enough to say it is not
+trying.
+
+🔴 **`academico-sis/academico` has zero headers of its own** and three foreign ones, all in built
+Filament bundles under `public/` — `Pusher` (`echo.js`), `Chen Fengyuan` (`cropperjs`), `Chen,
+Yi-Cyuan` (`js-sha256`) — 🔵 **the paths a client redistributes, and where no licence file would
+ever be looked for.**
+
+### 🟢 A channel p138 recorded as closed is open, and HEAD dates are measurable again
+
+🟢 **`git clone --depth 1` against `github.com` works here.** p138 published **UNMEASURED** for
+star counts *and* HEAD dates on the strength of `api.github.com`, `codeload` and `github.com` HEAD
+all answering **403**. 🔵 **Git smart-HTTP is a different lane from the REST API, and it answers** —
+which is how every row on this page was verified this pass, and how the `ACTION CN` lineage work was
+done at all.
+
+| row | HEAD commit | HEAD date |
+|---|---|---|
+| `frappe/lms` | `0f760e6` | **2026-10-11** |
+| `openeducat/openeducat_erp` | `1c95cef` | **2026-09-07** |
+| `academico-sis/academico` | `d0cd78c` | **2026-10-07** |
+
+🔴 **Star counts stay `UNMEASURED`** — git carries no star count, so that half of p138's gap stands.
+
+
+**Pass 139 — second probe lane (`ACTION CH`), 2026-10-12.** 🟢 **p138 measured a fifth layer — the published package — and found a
 third of the connector tier shipping an SPDX identifier with no licence text. It then registered a
 falsifier against itself, and this pass fires it: `ACTION CH` read every shipped text file in all
 21 payloads, and 0 of the 9 licence-file-less packages carry their own grant in a source header.**

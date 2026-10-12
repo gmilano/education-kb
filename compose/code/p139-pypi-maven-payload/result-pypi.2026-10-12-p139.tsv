@@ -1,0 +1,23 @@
+package	version	declared	declared_via	license_file_field	artefact	paths	licence_file
+xblock	6.3.4	Apache-2.0	expression	LICENSE.TXT	bdist_wheel	91	xblock-6.3.4.dist-info/licenses/LICENSE.TXT
+xblock	6.3.4	Apache-2.0	expression	LICENSE.TXT	sdist	242	xblock-6.3.4/LICENSE.TXT,xblock-6.3.4/NOTICE.txt
+tutor	22.0.2	AGPL-3.0-only	legacy_field+classifier	LICENSE.txt	sdist	109	tutor-22.0.2/LICENSE.txt
+canvasapi	3.6.0	MIT License	legacy_field+classifier	LICENSE|AUTHORS.md	bdist_wheel	81	canvasapi/license.py,canvasapi-3.6.0.dist-info/licenses/LICENSE
+canvasapi	3.6.0	MIT License	legacy_field+classifier	LICENSE|AUTHORS.md	sdist	164	canvasapi-3.6.0/LICENSE,canvasapi-3.6.0/canvasapi/license.py
+edx-opaque-keys	4.0.1	AGPL-3.0-only	expression	LICENSE	bdist_wheel	37	edx_opaque_keys-4.0.1.dist-info/licenses/LICENSE
+edx-opaque-keys	4.0.1	AGPL-3.0-only	expression	LICENSE	sdist	89	edx_opaque_keys-4.0.1/LICENSE
+openedx-events	11.2.0	Apache 2.0	legacy_field	LICENSE.txt	bdist_wheel	38	openedx_events-11.2.0.dist-info/licenses/LICENSE.txt
+openedx-events	11.2.0	Apache 2.0	legacy_field	LICENSE.txt	sdist	79	openedx_events-11.2.0/LICENSE.txt
+openedx-learning	0.33.1	AGPL 3.0	legacy_field+classifier	ABSENT	bdist_wheel	4	NONE
+openedx-learning	0.33.1	AGPL 3.0	legacy_field+classifier	ABSENT	sdist	11	NONE
+codejail	NOT_ON_PYPI	-	-	-	-	-	-
+xblock-sdk	0.15.2	AGPL-3.0	expression	LICENSE.TXT	bdist_wheel	86	sample_xblocks/filethumbs/static/js/lib/jasmine-1.3.1/MIT.LICENSE,sample_xblocks/thumbs/static/js/lib/jasmine-1.3.1/MIT.LICENSE,xblock_sdk-0.15.2.dist-info/licenses/LICENSE.TXT
+xblock-sdk	0.15.2	AGPL-3.0	expression	LICENSE.TXT	sdist	185	xblock_sdk-0.15.2/LICENSE.TXT,xblock_sdk-0.15.2/src/sample_xblocks/filethumbs/static/js/lib/jasmine-1.3.1/MIT.LICENSE,xblock_sdk-0.15.2/src/sample_xblocks/thumbs/static/js/lib/jasmine-1.3.1/MIT.LICENSE
+openedx-filters	3.15.0	AGPL-3.0-or-later	expression	LICENSE.txt	bdist_wheel	18	openedx_filters-3.15.0.dist-info/licenses/LICENSE.txt
+openedx-filters	3.15.0	AGPL-3.0-or-later	expression	LICENSE.txt	sdist	117	openedx_filters-3.15.0/LICENSE.txt
+edx-django-utils	8.1.0	License :: OSI Approved :: Apache Software License	classifier	LICENSE.txt	bdist_wheel	92	edx_django_utils-8.1.0.dist-info/licenses/LICENSE.txt
+edx-django-utils	8.1.0	License :: OSI Approved :: Apache Software License	classifier	LICENSE.txt	sdist	138	edx_django_utils-8.1.0/LICENSE.txt
+edx-rest-api-client	7.1.0	Apache-2.0	expression	LICENSE	bdist_wheel	9	edx_rest_api_client-7.1.0.dist-info/licenses/LICENSE
+edx-rest-api-client	7.1.0	Apache-2.0	expression	LICENSE	sdist	52	edx_rest_api_client-7.1.0/LICENSE
+moodle-dl	2.3.13	GPL-3.0	legacy_field+classifier	ABSENT	bdist_wheel	77	moodle_dl-2.3.13.dist-info/LICENSE
+moodle-dl	2.3.13	GPL-3.0	legacy_field+classifier	ABSENT	sdist	100	moodle_dl-2.3.13/LICENSE

@@ -1,0 +1,8 @@
+# p139 ACTION CM, Maven half. Coordinates named (no search channel: 403), rate-limited (429).
+coordinate	version	pom_license	jar_paths	licence_in_jar	sha1	notes
+org.imsglobal:basiclti-util	1.2.0	The Apache Software License, Version 2.0	70	META-INF/LICENSE,META-INF/NOTICE	cc6bc82c7817d15bd3ba5c988bc2b9de5d2535b7	sha1 verified
+edu.ksu.ome.lti:lti-launch	1.4.7	GNU Lesser General Public License (LGPL), Version 3	43	NONE	7b814630f5f1c40dbfd1f2e87122cd971d0111e1	sha1 verified
+org.sakaiproject.kernel:sakai-kernel-api	25.2	Educational Community License, Version 2.0	578	NONE	a6c2423809fdd6335d304ee3bc2de3c0d382038f	sha1 verified
+net.oauth.core:oauth	20100527	NONE_DECLARED	32	NONE	a84c5331e225bc25a5a288db328048d6b1bb6fd5	sha1 verified
+org.sakaiproject.kernel:sakai-kernel-impl	23.3	NONE_DECLARED	524	NONE	7b26581b998e8888d71c73c63c9298ed644dd1f9	sha1 verified
+uk.ac.ox.ctl:spring-lti13	HTTP_404	-	-	-	-	metadata unavailable

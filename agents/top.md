@@ -6,7 +6,127 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
-## Pass 139 — 2026-10-12 — the falsifier was fired at this shelf's own headline, and it did not go off
+## Pass 139 — 2026-10-12 — the tools a connector registers, the tools it admits to, and the 62 that mutate an LMS
+
+🔴 **The headline: across the nine npm rows p138 downloaded, the shelf registers 411 tools,
+documents 249, and 62 of the 162 undocumented ones WRITE to the LMS.** `ACTION CK` asked whether
+p138's hand-read of two repositories generalised. It does, by an instrument rather than by eye:
+🔴 **6 of 9 packages (66%)** disagree with their own documentation, against a one-third refutation
+threshold. Probe, tests and committed TSV:
+[`p139-tool-count-drift`](../compose/code/p139-tool-count-drift/README.md).
+
+| package | build tools | documented | 🔴 undocumented | 🔴 **undocumented WRITES** |
+|---|---|---|---|---|
+| 🔴 [`@imazhar101/mcp-canvas-server`](https://www.npmjs.com/package/@imazhar101/mcp-canvas-server) 2.1.3 | **227** | 96 | 🔴 **131** | 🔴 **61** |
+| 🔴 [`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) 1.3.3 | 18 | 3 | 🔴 **15** | 🔴 **1** (`submit_assignment`) |
+| 🔴 [`moodle-mcp-server-aql`](https://www.npmjs.com/package/moodle-mcp-server-aql) 0.1.7 | 14 | 🔴 **0** | 🔴 **14** | 0 |
+| 🟡 [`@owen-x-tech/canvas-mcp`](https://www.npmjs.com/package/@owen-x-tech/canvas-mcp) 1.1.0 | 62 | 61 | 1 | 0 |
+| 🟡 [`canvas-mcp-server`](https://www.npmjs.com/package/canvas-mcp-server) 2.2.3 | 54 | 53 | 1 | 0 |
+| 🔴 [`@exhabition/brightspace-mcp`](https://www.npmjs.com/package/@exhabition/brightspace-mcp) 0.2.2 | **0** | 0 | 0 | 0 — *it ships no server; see `P139-B4`* |
+| 🟢 [`@n35da/brightspace-mcp`](https://www.npmjs.com/package/@n35da/brightspace-mcp) 0.4.0 | 17 | 17 | 🟢 0 | 0 |
+| 🟢 [`@ink-waffle/moodle-mcp`](https://www.npmjs.com/package/@ink-waffle/moodle-mcp) 0.2.0 | 16 | 16 | 🟢 0 | 0 |
+| 🟢 [`mcp-canvas-lms`](https://www.npmjs.com/package/mcp-canvas-lms) 1.0.5 | 3 | 3 | 🟢 0 | 0 |
+| **total** | **411** | 249 | 🔴 **162** | 🔴 **62 (38%)** |
+
+### 🔴 `P139-B1` — the row that should stop a delivery conversation
+
+[`@imazhar101/mcp-canvas-server`](https://www.npmjs.com/package/@imazhar101/mcp-canvas-server)
+registers **227** tools and names **96**. Among the **61 undocumented writes**:
+
+| class | undocumented write tools |
+|---|---|
+| 🔴 **grades** | `grade_submission`, `grade_submission_by_anonymous_id`, `bulk_update_grades`, `bulk_update_grades_for_course`, `bulk_update_assignment_dates` |
+| 🔴 **identity / authentication** | `update_sso_settings`, `restore_authentication_provider`, `update_user_login`, `update_user`, `create_user` |
+| destructive | `delete_assignment`, `delete_quiz`, `delete_module`, `delete_external_tool`, `delete_custom_data`, … |
+
+🔴 **`update_sso_settings` and `restore_authentication_provider` change how a Canvas tenant
+authenticates.** Neither is documented. This is also the row p138 found carrying **no licence
+signal and no `repository` field** — so there is no source to audit either. 🔵 **An agent handed
+this server gets five grade-mutating and five identity-mutating capabilities that nothing in the
+package announces**, and "grading or ranking learners" is precisely what **Vietnam's Decision
+33/2026/QĐ-TTg** and **EU AI Act Annex III** name high-risk.
+
+### 🔴 `P139-B2` — "Works with Any Moodle", and ten tools wired to one ETH Zürich course
+
+[`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) 1.3.3 documents **three** tools
+under `## Available Tools` and carries a heading that reads **`## Works with Any Moodle`**. It
+registers **18**. The undocumented fifteen include **ten `ddca_*` tools** whose own descriptions
+say they scrape *"the DDCA course website"* (*Digital Design and Computer Architecture*) —
+`ddca_browse`, `ddca_get_lectures`, `ddca_get_exams`, `ddca_get_homeworks`, `ddca_get_labs`,
+`ddca_get_readings`, `ddca_get_navigation`, `ddca_get_announcements`, `ddca_list_files`,
+`ddca_download` — plus 🔴 **`submit_assignment`, a write.**
+
+🔵 **Same shape as p138's `Jawadh-Salih/moodle-mcp-server` (`submit_journal`,
+`update_assignment`), in a different repository, found by instrument rather than by hand.** That
+is what turns an observation into a class.
+
+### 🔴 `P139-B3` — a package that documents none of its 14 tools and asserts a licence it does not ship
+
+[`moodle-mcp-server-aql`](https://www.npmjs.com/package/moodle-mcp-server-aql) 0.1.7 has a
+108-line README with sections for install, configure, run and *Plugin SDK* — and **no tool list
+anywhere**, not even in prose. Two further defects in the same payload:
+
+- 🔴 Its only documentation links point at `../../docs/plugins/CREATING-PLUGINS.md` and
+  `../../docs/plugins/CONTRACT.md`; the payload contains **0 paths under `docs/`**. Dead for
+  everyone installing from npm.
+- 🔴 Its `## License` section reads **`AGPL-3.0.`** — in a payload p138 showed ships **no licence
+  file across 141 paths**. 🔵 **It asserts the strongest obligation on this shelf in prose, and
+  ships neither the text nor the tool list.**
+
+### 🔴 `P139-B4` — `@exhabition/brightspace-mcp` is not a server. It is an 82-line downloader.
+
+p138 recorded this row as *"MIT, 3 paths, no licence file"*. The reason is larger than the licence:
+
+```js
+const url = `https://github.com/Exhabition/brightspace-mcp-rs/releases/download/v${version}/${asset}`;
+// get(url) → up to 5 redirects → pipeline(…, createWriteStream(dest))
+// → spawn(tar, ['-xzf', …]) → chmodSync(binary, 0o700) → spawn(binary, …)
+```
+
+🔴 **The npm package contains no MCP server.** On first run it fetches a platform Rust binary from
+GitHub Releases, extracts it, makes it executable and runs it. Its README documents **31** tools
+that exist only in that binary. 🔴 **No integrity check of any kind** — a search of the loader for
+`sha`, `hash`, `checksum`, `integrity`, `createHash` and `digest` returns nothing; the version is
+pinned, the bytes are not. 🆕 New repository address for this KB:
+[`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs).
+
+🔵 **No licence audit and no tool count would ever have surfaced this.** It is a supply-chain fact,
+and it is the kind a studio must raise before an institution installs the package.
+
+## 🆕 Six tutoring-agent rows added this pass — and one duplicate refused promotion
+
+A tutoring-layer sweep (the agent tier, not the connector tier) returned seven addresses. All seven
+were **verified by cloning them** — `git` over `github.com` answers here even though
+`api.github.com` does not — and licences were read from the tree at `HEAD`, not from a badge.
+
+| repo | licence | commits | HEAD | what it is |
+|---|---|---|---|---|
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | **459** | **2026-10-10** | MCP server turning any LLM into an **intelligent tutoring system**: durable learner state, review scheduling, session memory, misconception tracking, auditable pedagogical decisions. Self-labelled **alpha** at v0.5.0. 🔵 **The most built-out agent-tier row found this pass** |
+| 🆕 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** | 191 | **2026-10-08** | self-hosted, **local-first** learning workspace: uploaded material → notes, quizzes, flashcards, adaptive tutor. 🔵 Local-first matters for the EMEA sovereignty thread |
+| 🆕 🟡 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** | **828** | 2026-06-07 | learner-owned education platform with **course-scoped RAG** and its own MCP server. 🔴 Copyleft — not a `MIT/Apache` building block |
+| 🆕 🟢 [`mohaneesh-03/mcp-tutor`](https://github.com/mohaneesh-03/mcp-tutor) | **MIT** | 🔴 **5** | 2026-10-05 | harness-agnostic **Socratic** tutoring MCP server for coding assistants. 🔴 Five commits: a seed, not a dependency |
+| 🆕 🟢 [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | **Apache-2.0** | 🔴 **2** | 2026-10-10 | lessons / quizzes / feedback ledger over MCP. 🔴 Two commits |
+| 🆕 🔴 [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) | 🔴 **NONE — no licence file at `HEAD`** | 7 | 2026-05-26 | WordPress plugin exposing an MCP endpoint over **Tutor LMS** courses, lessons, quizzes, enrolments. 🔴 **Unlicensed: not usable, whatever it does** |
+| — ⛔ `kvnloo/tutor-mcp` | MIT | 452 | 2026-10-02 | 🔴 **NOT PROMOTED — a fork 7 commits behind the row above.** See below |
+
+🔵 **The star counts for all six are `UNMEASURED`, and say so.** `api.github.com` answers **403**
+in this channel, so no number is lifted from a search snippet. Commit counts and HEAD dates are
+measured, because git carries them.
+
+### 🟢 The duplicate was caught before it was published, by an instrument built one action earlier
+
+`ArnaudGuiovanna/tutor-mcp` and `kvnloo/tutor-mcp` carry a **byte-identical description** — the
+same shape as the `moodler-mcp` pair `ACTION CN` was registered to resolve. Running
+[`p139-duplicate-lineage`](../compose/code/p139-duplicate-lineage/README.md) on it:
+**452 shared commit shas, 7 unique to Arnaud's, 0 unique to the fork, same root commit
+`baea09f`** → 🟢 **`ArnaudGuiovanna/tutor-mcp` is the trunk** and only it is carried here.
+
+🔵 **This is the value of building the instrument rather than answering the one question**: the
+action asked about `moodler-mcp`, and the tool it produced paid for itself on a pair nobody had
+seen, in the same pass, before a wrong row reached this page.
+
+
+## Pass 139, second probe lane (`ACTION CH`) — 2026-10-12 — the falsifier was fired at this shelf's own headline, and it did not go off
 
 🟢 **`ACTION CH` is discharged and p138's defect count stands.** p138 found that **9 of 21**
 published connector packages ship no licence file, and registered a falsifier against its own

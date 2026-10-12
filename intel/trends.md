@@ -6,7 +6,98 @@ updated: 2026-10-12
 
 # Education — current trends
 
-**Pass 139, 2026-10-12.** 🟢 **`T17` was fired at and survived.** p138 added it one pass ago and
+## Pass 139 — 2026-10-12
+
+### 🆕 `T21` — the registry's default build behaviour decides whether the grant ships
+
+🔵 **The strongest new trend this pass is not about licences at all. It is that an ecosystem's
+packaging DEFAULTS determine its compliance posture**, and the three big registries differ sharply.
+
+| registry | declared-but-absent licence rate | why |
+|---|---|---|
+| 🟢 **PyPI** | **9%** (1 of 11, and that one ships no code) | **PEP 639**: setuptools/hatch copy licence files into `dist-info/licenses/` automatically |
+| 🔴 **npm** | **33%** (7 of 21, p138) | `files` names what to pack and omits absent entries **silently** |
+| 🔴 **Maven Central** | **40–67%** (2 of 3 declaring) | `<licenses>` is metadata in a sibling POM; the jar is untouched unless configured |
+
+🔵 **The consequence for a studio is directional and actionable: a Python dependency's grant is
+probably in the artefact; a Java or Node dependency's grant probably is not.** That is a review
+budget, not a slogan. Measured in
+[`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+### 🆕 `T22` — the agentic write surface is outrunning its own documentation
+
+🔴 **Across the nine measured npm connectors: 411 tools registered, 249 documented, 162
+undocumented — and 62 of those (38%) MUTATE the LMS.** The undocumented set is not a random sample
+of the documented one; it concentrates on exactly the capabilities a governance review exists to
+catch: `bulk_update_grades`, `grade_submission`, `create_user`, `update_user_login`,
+`update_sso_settings`, `submit_assignment`.
+
+🔵 **This is `T22` and not a bug report because it is where two threads of this KB collide.**
+Vietnam's **Decision 33/2026/QĐ-TTg** and **EU AI Act Annex III** both name *grading or ranking
+learners* high-risk. 🔴 **A duty cannot be discharged against a capability nobody has enumerated** —
+and the README is the artefact most procurement processes actually read. The practical rule:
+**enumerate `tools/list` against the running server and diff it against the documentation**, every
+time, as a delivery gate.
+
+### 🆕 `T23` — "install from npm" increasingly means "download a binary at first run"
+
+🔴 **`@exhabition/brightspace-mcp` ships an 82-line loader and no server**: it fetches a
+platform-specific Rust binary from GitHub Releases, follows up to five redirects, extracts,
+`chmod 0o700`, `spawn`. 🔴 **No checksum, no signature.** The version is pinned; the bytes are not.
+
+🔵 **The trend is the rewrite of MCP servers into compiled languages, with npm retained as a
+distribution front door.** It is good for performance and bad for auditability, and it defeats both
+of the layers this KB has been measuring: the repository layer (the Rust source is in a *different*
+repository, 🆕 [`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs))
+and the payload layer (the npm payload contains nothing to audit). 🟡 **Expect more of these, and
+expect licence and tool-count probes to return zeroes that are correct and uninformative.**
+
+### 🔵 `T24` — 🔴 **NOT A NEW TREND. This pass rediscovered `T16` and nearly published it twice**
+
+🔴 **A regional sweep this pass returned the EU Annex III deferral as if it were news, and it is
+already in this file**: `T16` (p137) records **Regulation (EU) 2026/1744**, in force
+**2026-07-27**, deferring Annex III — where education sits — from **2026-08-02** to
+**2027-12-02**, Annex I embedded to **2028-08-02**, with **Article 50 transparency NOT deferred**
+and a grace period to **2026-12-02** for systems already on the market.
+
+🔵 **It is recorded here as a near-miss rather than deleted, because the failure mode is the one
+this KB is most exposed to.** A regional search battery run fresh each pass will keep returning
+the same instruments, and a pass that writes up every hit as `🆕` inflates its own novelty. 🟢 **The
+check that caught it was grepping this file for the date before writing the entry** — which is now
+the rule: *before booking a regulatory finding as new, grep `intel/` for its date and its
+instrument number.*
+
+🟢 **What the sweep did add, and it is small:** two procedural dates `T16` does not carry —
+**Council approval 2026-06-29** and **OJ publication 2026-07-24** — and independent corroboration
+of the deferral from a different source set than p137 used. 🔴 **Both remain secondary.**
+
+🔴 **And the pass can now say WHY they remain secondary, which `T16` could not.** `eur-lex.europa.eu`
+is not unreachable by accident: the proxy gateway **answers `403` to `CONNECT`**, as it does for
+`digital-strategy.ec.europa.eu` and `sdaia.gov.sa`. 🔵 **This environment's network policy permits
+package registries and `github.com` and refuses government hosts** — so "read the Official Journal"
+is not a probe the next pass should register again. It is a request to widen the policy, and it
+belongs to whoever owns this environment rather than to the next action list.
+
+### 🟡 `T25` — provenance signals are being manufactured, so history depth is no longer a maturity proxy
+
+While resolving the `moodler-mcp` duplicate, the commit history of
+`GhaithAlHallak8/moodler-mcp` turned out to open with ~20 commits spaced **7 316–7 317 seconds
+apart — every single one**, all `+04:00`, starting at exactly `09:00:00`, each with a tidy
+conventional-commit message. 🔴 **Human work does not land on a two-hour metronome.** The later
+history is organic (dependabot, github-actions, release-please, real PR numbers), so the repository
+became real after it was staged.
+
+Separately, **30 of the 459 commits** on the strongest new tutoring row,
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), are authored by
+`Claude`.
+
+🔵 **Neither fact is a defect, and neither is graded here.** The consequence is narrow: **commit
+count and commit dates are no longer evidence of elapsed human effort**, which is precisely what
+this KB's `p109-freshness` and `p110-bus-factor` instruments read them as. 🟡 **Recency still means
+the code is being worked on; depth no longer means the project is old.**
+
+
+**Pass 139 — second probe lane (`ACTION CH`), 2026-10-12.** 🟢 **`T17` was fired at and survived.** p138 added it one pass ago and
 registered its own falsifier: *if the grants live in source-file headers rather than licence files,
 7 of 21 is an overstatement.* 🔴 **`ACTION CH` read every shipped text file in all 21 payloads and
 found 0 of the 9 carrying their own header grant** — so `T17` holds and is now **strengthened**
@@ -24,15 +115,49 @@ copy. 🔵 **No trend is added from the search channel this pass, because it ret
 | 🔵 **the near-refutation** | **1 of the 9 did** report a notice: `@owen-x-tech/canvas-mcp` 1.1.0, carrying `@license React … Copyright (c) Meta Platforms, Inc. and affiliates` at byte **1197** of a **572 657-byte** minified `dist/ui/mcp-app.html`. 🔴 **A bundler hoisted a dependency's notice into the header window**, and it points at a `LICENSE file in the root directory` the package does not ship. 🔵 **Position cannot attribute a notice** — the new rule treats a notice in minified output (any line over 2 000 B) as the bundle's, never the package's. Without that clause this trend would read as refuted by a React licence |
 | 🔴 **what would overturn it** | A grant living where the probe does not look: a sourcemap, an extensionless script, a `LICENSE` spelled so p138's path matcher misses it, or authored source whose notice sits below the first 4 096 bytes. 🔵 The window is what separates a package's own header from a bundled dependency's text, but it is the assumption most likely to be wrong |
 
-### 🆕 `T18` — a licence cell describes a tree; only a per-file notice survives a partial copy, and 1 in 21 has one
+### 🆕 `T18` — a licence cell describes a tree; only a per-file notice survives a partial copy, and in THIS tier 1 in 21 has one
 
 | | |
 |---|---|
-| **the claim** | 🔴 **Per-file notice is not a practice in the education-connector tier: 1 of 21 rows — 5%.** On the other 20, a single file lifted out of the package names no holder and no grant |
+| **the claim** | 🔴 **Per-file notice is not a practice in the npm-published TypeScript education-connector tier: 1 of 21 rows — 5%.** On the other 20, a single file lifted out of the package names no holder and no grant. 🔵 **The tier is part of the claim** — see the `ACTION CV` rescoping below |
 | **why it is not a restatement of `T17`** | `T17` is about packages with **no grant at all** (9 of 21). `T18` is about the **11 that are clean at the root and still unattributable file-by-file**. 🔵 A root `LICENSE` discharges redistribution of the *whole* package; it discharges nothing about the file a developer pastes into a client's codebase |
 | **the one row that has it** | 🟢 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) **3.13.10**: `Copyright (c) 2026 Rohan Muppa … Licensed under MIT — see LICENSE file for details` in **100 of 118** shipped text files, **and the `LICENSE` ships**, so the reference resolves. 🟢 **56★** — neither the largest (547 paths) nor the most-starred row on the shelf |
 | **what it changes in a room** | 🔴 *"It's MIT, just keep the notice"* is not actionable on this shelf. In 9 payloads there is no notice to keep; in 11 more it exists only as one root file that any partial copy drops. 🟢 **The deliverable is a notice-injection step in the build**, not a licence column in a slide |
-| 🔴 **what would overturn it** | The same census run over a tier that is **not** npm-published TypeScript — the Java and PHP rows on this KB's standards and platform pages are the obvious test, and header notice is conventional in both. 🔵 **So `T18` is scoped to this tier and must not be generalised to the shelf's institutional rows until that runs** (`ACTION CJ`) |
+| 🔴 **what would have overturned it** | The same census run over a tier that is **not** npm-published TypeScript. 🔴 **Registered as `ACTION CV` — and FIRED within the same pass by this pass's own concurrent lane. `T18` is rescoped below rather than left standing.** |
+
+#### 🔴 `ACTION CV` fired on arrival: `T18` is a property of this tier, not of education software
+
+🔴 **The falsifier was registered and answered in the same pass**, by
+[`p139-source-header-holder`](../compose/code/p139-source-header-holder/README.md), which read
+source headers over the three largest `ROOT_ONLY` repository rows for a different question
+(ownership) and in doing so measured the quantity `T18` depends on:
+
+| row | source files read | files carrying an OWN holder header | rate |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(Python/Odoo)* | 450 | **190** — all `OpenEduCat Inc` | 🟢 **42%** |
+| [`frappe/lms`](https://github.com/frappe/lms) *(Python/JS)* | 1 411 | **166** — `Frappe` + `Frappe Technologies Pvt. Ltd` | 🟡 **12%** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) *(PHP/Laravel)* | 660 | 🔴 **0** | 🔴 **0%** |
+| *(this tier, for comparison — npm/TypeScript connectors)* | *21 packages* | *1* | 🔴 **5%** |
+
+🔴 **The registered threshold was 20%, and `openeducat_erp` clears it by a factor of two.** 🔵 **So
+`T18` is NOT a statement about education software, and the generalisation is withdrawn before it was
+ever relied on.** The restated claim:
+
+> 🔴 **Within the npm-published TypeScript connector tier, per-file notice is practised by 1 of 21
+> rows.** Outside it, the practice is real but highly variable — **0%, 12% and 42%** on the three
+> non-npm rows measured — so **the tier must be named whenever the figure is quoted.**
+
+🔵 **The two lanes agree on the mechanism, which is what makes the rescoping trustworthy rather
+than a retreat.** `ACTION CM` found the *licence-file* defect tracks each ecosystem's **default
+build behaviour** — PEP 639 ships the licence for you, Maven's jar plugin does not, npm's `files`
+array silently omits what is absent. 🔵 **`T18` is the same mechanism one layer down**: per-file
+notice is a convention carried by an ecosystem's tooling and templates, and the npm/TypeScript
+connector tier has neither. 🔴 **It is not that education developers are careless; it is that
+`tsc` emits no header and `npm init` writes no template.**
+
+🔵 **`academico-sis/academico` at 0% is the row that keeps `T18` from being purely ecological** —
+a PHP row with no own notice at all, which is why the restated claim says *variable* rather than
+*higher elsewhere*.
 
 ### 🔵 p139 on `T10`: the search channel returned nothing, and that is now the dominant cost finding
 
@@ -45,7 +170,7 @@ fieldwork ran **August–October 2025** and must be quoted as a baseline.
 🔴 **One item was genuinely absent from this KB and could not be verified in this channel**: Texas
 **HB 149 (TRAIGA)**, in force **2026-01-01**. `capitol.texas.gov` and `agora.eto.tech` both fail
 DNS resolution here, so the statute could not be read and **nothing is published from the vendor
-summaries that did return**. Registered as `ACTION CK` with the exact question. 🔵 **The secondary
+summaries that did return**. Registered as `ACTION CW` with the exact question. 🔵 **The secondary
 sources agree that TRAIGA carries no curriculum or school-training mandate** — education appears in
 its regulatory **sandbox** list and via a government-deployer disclosure duty — **so the likely
 finding is a negative one**, which is precisely why it must not be asserted before it is read.

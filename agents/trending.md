@@ -8,6 +8,37 @@ updated: 2026-10-12
 
 ## 2026-10-12 — Pass 139
 
+**The pass that counted what the connectors can DO, and found 62 undocumented ways to write to an
+LMS — five of them over grades, five over identity.**
+
+🔵 **p138 downloaded nine payloads to answer a licence question and left them on disk. This pass
+asked them a different question at zero marginal download cost**, which is the second time the npm
+lane has paid for itself beyond the action that opened it.
+
+| what moved this week | measurement |
+|---|---|
+| 🔴 **Tool-count drift is the shelf's habit, not two repositories'** | **6 of 9 (66%)** npm connector packages disagree with their own documentation, against a one-third refutation threshold. **411** tools registered, **249** documented, 🔴 **162 undocumented** |
+| 🔴 **And the gap is where the writes are** | 🔴 **62 of the 162 undocumented tools (38%) MUTATE the LMS.** `@imazhar101/mcp-canvas-server` 2.1.3 alone: **227** registered, 96 documented, 🔴 **61 undocumented writes** — `bulk_update_grades`, `bulk_update_grades_for_course`, `grade_submission`, `grade_submission_by_anonymous_id`, `create_user`, `update_user_login`, 🔴 **`update_sso_settings`**, `restore_authentication_provider` |
+| 🔴 **"Works with Any Moodle" ships ten tools for one ETH Zürich course** | `eth-moodle-mcp` **1.3.3** documents **3** tools, registers **18**: ten `ddca_*` scrapers for the *Digital Design and Computer Architecture* course website, plus 🔴 **`submit_assignment`, an undocumented write** — p138's `Jawadh-Salih` shape, in a different repo, found by instrument |
+| 🔴 **A package that documents none of its 14 tools** | `moodle-mcp-server-aql` **0.1.7**: **0 of 14** documented, not even in prose. Its only doc links (`../../docs/plugins/*`) point outside the payload — **0 paths under `docs/`** — and its `## License` section asserts **`AGPL-3.0`** in a payload shipping no licence file across 141 paths |
+| 🔴 **One "connector" is an 82-line downloader with no integrity check** | `@exhabition/brightspace-mcp` **0.2.2** fetches a Rust binary from `github.com/Exhabition/brightspace-mcp-rs/releases`, up to 5 redirects, `tar -xzf`, `chmod 0o700`, `spawn`. 🔴 **No `sha`, `hash`, `checksum`, `integrity`, `createHash` or `digest` anywhere in the loader.** Its README documents **31** tools that exist only in the binary |
+| 🟢 **`P13`'s adapter was EXECUTED, and it works** | Against a pre-seeded grant in `canvas-lms-mcp` **2.2.0**: `POST /oauth/token` → 🟢 **HTTP 200**, `mcpat_…` Bearer token, seeded scopes `canvas:read canvas:write`, rotated single-use refresh — and 🟢 **0 Canvas contacts**, measured by a sentinel listener rather than inferred |
+| 🔴 **…but its documented entry point kills the importing process** | `dist/http.js` calls `main()` at module top level with **no `import.meta.main` guard**, so importing `canvas-lms-mcp/http` parses the *importer's* `argv` and `process.exit(1)`s. The `oauthStore` seam p138 cited is 🔴 **unreachable by import**; the per-module `.d.ts` tree describes the source, not the 5-symbol bundled payload |
+| 🆕 🟢 **Six tutoring-agent rows added, all verified by cloning** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**, 459 commits, HEAD **2026-10-10**, alpha v0.5.0 — durable learner state, review scheduling, misconception tracking); [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (**MIT**, 191, **2026-10-08**, local-first); [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) (🔴 **GPL-3.0**, 828, course-scoped RAG + MCP); [`mohaneesh-03/mcp-tutor`](https://github.com/mohaneesh-03/mcp-tutor) (**MIT**, 🔴 5 commits); [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) (**Apache-2.0**, 🔴 2 commits); [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) (🔴 **no licence file at `HEAD` — unusable**) |
+| 🟢 **A duplicate was caught before it was published** | `kvnloo/tutor-mcp` carries a byte-identical description to Arnaud's. Lineage: **452 shared commit shas, 7 unique to the trunk, 0 unique to the fork**, same root `baea09f` → 🟢 **fork, not promoted.** The instrument built for `ACTION CN` earned its keep on a pair nobody had seen, in the same pass |
+| 🟢 **`moodler-mcp` resolved without reading a manifest** | **75 shared commit shas** (identical history), **17 remote refs vs 2**, and every GitHub-side commit authored by `59054736+GhaithAlHallak8@users.noreply.github.com` — the noreply form embeds the account id. 🟢 **`GhaithAlHallak8/moodler-mcp` is the original**, corroborating p138 through an independent channel |
+| 🔴 **…and its early history is synthetic** | Its first ~20 commits are spaced **7 316–7 317 seconds apart, every one**, all `+04:00`, starting at exactly `09:00:00`, with tidy conventional-commit messages. 🔵 **Commit depth is no longer evidence of elapsed effort** (`intel/trends.md` → `T25`) |
+| 🔵 **Star counts remain `UNMEASURED` and say so** | `api.github.com` answers **403** here. 🟢 **But `git clone` over `github.com` works**, so commit counts and HEAD dates are measured this pass — a lane p138 recorded as closed |
+
+
+---
+
+### Second probe lane — `ACTION CH`: the falsifier fired at p138's headline, and it did not go off
+
+🔵 **A second, independently run lane of this same pass.** The lane above counted what the
+connectors can *do*; this one asked whether the licence grants p138 found missing are hiding in the
+source files. Both read the same npm payloads.
+
 **The pass that fired a falsifier at its own previous headline — and reports that it did not go
 off, plus the bundled third-party notice it found instead.**
 

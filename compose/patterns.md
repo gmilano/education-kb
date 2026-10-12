@@ -6,7 +6,126 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
-**Pass 139, 2026-10-12.** 🔁 **`P17` is rewritten one pass after it was added, and the change makes
+**Pass 139, 2026-10-12.** 🟢 **`P13` is revised a fifth time — and this time from an EXECUTION
+rather than a reading.** `ACTION CL` ran the adapter against a live server: the protocol half is
+cheaper than p138 estimated and the integration half is dearer, in a specific and fixable way.
+🆕 **`P18` is added** because 62 undocumented write tools across nine connectors is not a caveat on
+`P17`, it is its own gate.
+
+## 🔁 `P13` rewritten — the grant goes in the store, and the server runs as a process *(fifth revision, p139)*
+
+🟢 **Executed, not estimated.** p138's fourth revision rested on reading
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)'s `OAuthStore` interface.
+`ACTION CL` seeded a fixture grant and drove the real server over HTTP. Full transcript and harness:
+[`p139-oauthstore-adapter`](../compose/code/p139-oauthstore-adapter/README.md).
+
+**What the run proves:**
+
+| step | result |
+|---|---|
+| `POST /oauth/token`, `grant_type=refresh_token`, grant pre-seeded | 🟢 **HTTP 200** |
+| token issued | 🟢 `mcpat_…`, `Bearer`, `expires_in: 3600` |
+| scopes from the seeded grant | 🟢 `canvas:read canvas:write` |
+| refresh rotation (single-use, OAuth 2.1 §6.1) | 🟢 **rotated** |
+| 🟢 **Canvas contacts during the entire flow** | 🟢 **0**, measured by a sentinel listener |
+| grant store at rest | 🟢 **`scrypt` + AES-GCM, no plaintext** |
+
+🔵 **So an institution that already holds Canvas refresh tokens — from an LTI launch, a prior
+consent, or a service account — can mint MCP tokens for its own clients with no user redirect and no
+Canvas call.** That is the whole premise of `P13`, and it is now demonstrated rather than inferred.
+
+🔴 **The cost moved, it did not vanish.** `dist/http.js` calls `main()` at module top level with no
+`import.meta.main` guard, so `import { createHttpHandler } from 'canvas-lms-mcp/http'` parses the
+**importer's** `process.argv` and calls `process.exit(1)`. 🔴 **The `oauthStore` config seam is
+therefore unreachable by import**, and the per-module `.d.ts` tree describes the source rather than
+the bundled payload (`AuthorizationServer`, `ClientResolver`, `CanvasOAuthClient` are **not**
+exported; only five symbols are).
+
+### The build, as it actually has to be done
+
+```text
+1.  Seed:   FileOAuthStore.open(path, keySecret)
+              → putClient({ clientId, clientSecretHash: sha256(secret),
+                            grantTypes: ['authorization_code','refresh_token'],
+                            source: 'preregistered' })
+              → putGrant({ id, clientId, scopes, resource,
+                           canvasUserId, canvas: { accessToken, refreshToken, expiresAt } })
+              → putToken({ hash: sha256(refresh), kind: 'refresh', grantId, … })
+              → flush()
+2.  Run:    CANVAS_AUTH_PROFILE=oauth_brokered \
+            CANVAS_MCP_ISSUER=https://… CANVAS_BASE_URL=https://canvas.inst.edu \
+            CANVAS_OAUTH_CLIENT_ID=… CANVAS_OAUTH_CLIENT_SECRET=… \
+            CANVAS_MCP_OAUTH_STORE=/var/lib/…/store.json \
+            CANVAS_MCP_OAUTH_STORE_KEY=… \
+            node dist/http.js serve --port 8097
+3.  Verify: GET /.well-known/oauth-authorization-server   ← take endpoint paths from HERE
+            POST /oauth/token  (NOT /token — that is a 404)
+```
+
+🔵 **Take the endpoint paths from the metadata document.** This pass lost a run posting to `/token`;
+the issuer mounts OAuth under `/oauth`, and `authorization_endpoint`, `token_endpoint`,
+`registration_endpoint` and `revocation_endpoint` are all advertised.
+
+| element | estimate |
+|---|---|
+| 🟢 brokered token flow against a pre-seeded grant | 🟢 **hours — it works as shipped** |
+| the LTI→grant seeding job (`kstateome/lti-launch` → `putGrant`) | **3–5 days** |
+| 🔴 process supervision, store key management, rotation/backup of the encrypted store | 🔴 **3–5 days — this is the new line item** |
+| 🟡 *optional* fork or one-line patch adding a `main` guard, if an in-process embed is required | 🟡 **1 day + a maintenance burden** |
+| **total** | 🟢 **~1.5–2 weeks, and the risk has moved from protocol to plumbing** |
+
+🔴 **Two licence conditions to settle before this ships.** `canvas-lms-mcp` is **MIT and ships its
+`LICENSE` in the payload** (🟢 clean, verified p138). But `edu.ksu.ome.lti:lti-launch` **1.4.7** is
+**LGPL-3.0 and ships NO licence text in its jar** — so step 1's dependency obliges a notice the
+artefact does not provide, and the text must be taken from
+[the repository](https://github.com/kstateome/lti-launch) and shipped deliberately. 🔵 **Run `P17`
+over both before writing any of this.**
+
+## 🆕 `P18` — The tool-surface gate: enumerate what the connector can DO before anyone connects it *(new, p139 — Global)*
+
+🔴 **Why this is a gate and not a checklist item.** Across the nine published LMS connectors
+measured this pass: **411 tools registered, 249 documented, 162 undocumented — and 62 of those
+mutate the LMS.** One package registers **227** tools and documents **96**, with **61 undocumented
+writes** including `bulk_update_grades`, `grade_submission`, `create_user`, `update_user_login` and
+🔴 **`update_sso_settings`**. 🔵 **"Grading or ranking learners" is named high-risk by EU AI Act
+Annex III and Vietnam's Decision 33/2026/QĐ-TTg. A duty cannot be discharged against a capability
+nobody enumerated — and the README is what procurement reads.**
+
+**The recipe**
+
+| step | what you do | tool |
+|---|---|---|
+| 1 | Pull the **payload**, not the repo. Verify the registry's own digest (sha1 on npm, sha256 on PyPI, `.sha1` on Maven) | `p138-npm-payload-licence`, `p139-pypi-maven-payload` |
+| 2 | Count **registered** tools in the shipped build across all three idioms — `registerTool(…)`, `{ name, …, inputSchema }`, and a module exporting `name` + `inputSchema` | [`p139-tool-count-drift`](../compose/code/p139-tool-count-drift/README.md) |
+| 3 | Diff against the package's own documentation → the **undocumented** set | same |
+| 4 | Partition the undocumented set by **write verb** → the **governance** set | `count_tools.is_write_tool` |
+| 5 | Call `tools/list` on the **running** server and diff against step 2 — registration is not behaviour, and a stub is not a capability | your MCP client |
+| 6 | For every write tool reaching grades, identity or enrolment: either **disable it at the gateway** or **file it in the conformity dossier** (`P16`) / Annex III technical documentation (`P15`) | `mcp-allowlist-gateway` |
+| 7 | Re-run at **every dependency bump**. `@imazhar101/mcp-canvas-server` went 2.1.3 on 2026-10-01; the tier publishes weekly | CI |
+
+🔵 **Step 6 is where this pattern pays for itself**: this KB already carries
+[`mcp-allowlist-gateway`](code/mcp-allowlist-gateway/README.md), so the remediation is configuration
+of something that exists, not a build.
+
+🔴 **Two preconditions this gate also catches, both found this pass:**
+
+- 🔴 **A package may contain no server at all.** `@exhabition/brightspace-mcp` is an **82-line
+  loader** that downloads a Rust binary from GitHub Releases, `chmod 0o700`s it and `spawn`s it with
+  **no checksum or signature**. Steps 2–4 correctly return **0** and tell you nothing; step 1 and a
+  read of `bin/` are what catch it.
+- 🔴 **A package may contain no code at all.** `openedx-learning` **0.33.0** and **0.33.1** are
+  **1 479-byte** wheels holding only `dist-info` metadata, down from **257 553 B** at 0.32.0. 🔵 **Pin
+  `0.32.0`** and make "artefact is non-empty" an assertion in step 1.
+
+**Effort:** 🟢 **2–3 days to stand up for one connector family, then minutes per bump in CI.**
+**Deliverable:** a signed tool inventory, a diff against vendor documentation, and a gateway
+allowlist — 🔵 **which is exactly the artefact an Annex III or Decision 33 reviewer asks for and
+that no vendor currently supplies.**
+
+
+---
+
+**Pass 139 — second probe lane (`ACTION CH`), 2026-10-12.** 🔁 **`P17` is rewritten one pass after it was added, and the change makes
 it shippable.** p138 created it as a gate that proves what you are about to redistribute; `ACTION
 CH` then measured that **0 of 9** licence-file-less packages carry a grant in their source either,
 and that **only 1 of 21** rows on the whole shelf practises per-file notice. 🔴 **So a gate that
