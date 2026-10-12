@@ -21,7 +21,7 @@ refutations are worth more than a discharge would have been.
 | 🟢 **`ACTION FQ`** | 🟢 **DISCHARGED — and `P240` was never dangling** | It resolves at `p239-table-integrity/README.md:17`. 🆕 **Three identifier spaces, FOUR append-only pages.** 🆕 **`T82`** |
 | 🔴 **`ACTION FR`** | 🔴 **REFUTED — the register had NO single location, and now it has one** | **55** defined · 🔴 **17 defined NOWHERE** (`T39` cited **24×**) · 3 append-only-only · 🟡 5 candidates, collision count **0** with the limit stated |
 | 🟢 **`ACTION FV`** | 🟢 **DISCHARGED — Vietnam's three dates are ONE TIERED REGIME** | Effect **2026-08-15** · **2027-03-01** · **2027-09-01**. 🔴 **p148's effect date WITHDRAWN** |
-| 🆕 🔴 `P151-S` | 🆕 🔴 **The API refusal is a repository SCOPE policy, not a transport failure** | It governs **every** GitHub channel — `curl`, `WebFetch`, the authenticated MCP server — while public `git clone` is served. 🟢 **Star counts `UNMEASURED` by policy, permanently** |
+| 🆕 🔴 `P151-S` | 🆕 🔴 **The API refusal is a repository SCOPE policy, not a transport failure — and the scope is a LIST, not a wall** | Proved by the proxy's own refusal of this pass's push, and by the push succeeding once the repo was attached. 🔴 **p151's own word "permanently" is WITHDRAWN**; `UNMEASURED` stands as a judgement about 58 third-party repos. 🔵 **`ACTION GE`** |
 | 🆕 🔴 `P151-T` | 🆕 🔴 **The agent search finds four real repos and NONE belongs on the agents page** | 4 of 4 clone-verified, 4 of 4 **MIT**, 🔴 **0 of 4 education-sector.** 🆕 **LINK LAYER** class. 🆕 **`T84`** |
 | 🆕 🟢 `P151-L` | 🆕 🟢 **LATAM's governance gap gains a SECOND instrument** | DEC × Tec de Monterrey: **92%** students · **79%** faculty · 🔴 **30%** with a published policy, against IESALC's **26%** |
 | 🆕 🔴 `P151-E` | 🆕 🔴 **EMEA and APAC both return ZERO education-specific sources** | And EMEA's one transferable figure is MIS-SCOPED: CompTIA's **94%** is a **US-respondent** survey on EMEA pages |
@@ -64,15 +64,16 @@ refutations are worth more than a discharge would have been.
 
 ### 🔜 Pre-registered for p152
 
-🔵 **Thirteen actions, in [`intel/open-gaps.md`](intel/open-gaps.md).** 🟢 **`FG` and `FJ` are
+🔵 **Fourteen actions, in [`intel/open-gaps.md`](intel/open-gaps.md).** 🟢 **`FG` and `FJ` are
 FIRST and SECOND** because they are unreached for a third pass. Then `FH` (the three-surface
 gate, which p151's field gate does **not** satisfy), `FS` (widened to separate the prompt
 layer from the link layer), `FT` (with a written prediction that it will be refused), `FW`
 (the README-heading question into `lib/`), `GA` (the election over the six verticals), `GB`
 (the sealed-token patch for `T83`), `FY` (the thesis register's `FIRST`/`REVISIT` grammar),
 `GC` (the 17 undefined theses, `T39` first), `FX` (a `lib/` import test), `FZ` (a
-generation boundary in the dangling gate) and `GD` (the five suites that are red at HEAD). 🔵 **No action is registered against the GitHub
-API, by design** (`P151-S`).
+generation boundary in the dangling gate) and `GD` (the five suites red at HEAD).
+🔴 **`ACTION GE` was added LAST, after this pass's own push corrected `P151-S`**: p151
+wrote "permanently" about an environment limit while holding the tool that lifts it.
 
 ### 🔴 What this pass did NOT achieve, said rather than hidden
 

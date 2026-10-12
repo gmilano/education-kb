@@ -38,6 +38,43 @@ needs GitHub API metadata.**
 | 🔴 **`ACTION FS`** — build the prompt-layer probe | 🔴 **NOT REACHED** | 🔴 **No work done** — 🆕 **and the tier it must cover GREW this pass**: `avinash201199/free-ai-agents-resources` ships **0 code files**, a 🆕 **LINK LAYER** row that reads as zero for a different reason than a prompt-layer row. 🟢 **RE-REGISTERED and WIDENED** |
 | 🔴 **`ACTION FT`** — payload check for `Zenglian990/AI_Tutor_Release`'s APK and IPA release assets | 🔴 **NOT REACHED** | 🔴 **No work done.** 🔵 **And `P151-S` bears on its falsifier**: *"refuted if the release assets are unreachable on this channel"* — release-asset URLs are GitHub API surface, which this session's repository scope governs. 🟢 **RE-REGISTERED with that prediction written down, so the next pass measures it instead of discovering it** |
 
+### 🔴 `P151-S` is CORRECTED by this pass's own push — "permanently" was wrong
+
+🔵 **This correction is to a sentence p151 itself wrote, found minutes after writing it, and
+it is recorded rather than quietly edited.**
+
+🔴 **What p151 published:** *"star counts are `UNMEASURED` by policy, **permanently**"* and
+*"**no further action will be registered against it**"*.
+
+🔴 **What then happened.** The push of this very pass was refused by the git proxy —
+*"gmilano/education-kb is not in this session's authorized repository set, so the proxy will
+not inject a credential for it"* — 🟢 **which confirms the scope reading exactly.** 🔴 **But
+the scope is PER-REPOSITORY and ATTACHABLE**: attaching `gmilano/education-kb` to the
+session made the same push succeed (`ac8074f..d74898e`). 🟢 **So the policy is not a wall;
+it is a list.**
+
+| claim | state |
+|---|---|
+| the API refusal is a scope policy, not a transport failure | 🟢 **HOLDS — and is now proved by the proxy's own refusal message, not inferred** |
+| it governs every GitHub channel for an unattached repo | 🟢 **HOLDS** |
+| star counts are unmeasurable **permanently** | 🔴 **WITHDRAWN. The word is wrong.** |
+| no further action should be registered against it | 🔴 **WITHDRAWN** |
+
+🔵 **What is actually true, and it is narrower in one way and wider in another.** The **58
+census subjects are third-party repositories** — `zavora-ai`, `BetterSEQTA`, `moodle` and
+the rest — and attaching fifty-eight repositories belonging to other people, to read a star
+count, is 🔴 **out of proportion to the question and is not something this KB should do
+unprompted.** 🟢 **So the operational conclusion is unchanged — star counts stay
+`UNMEASURED` — but the REASON changes from "impossible" to "not worth what it would cost",
+which is a judgement and must be labelled as one.**
+
+🔵 **And the general lesson, which is the part worth keeping:** 🔴 **p151 published
+"permanently" about an environment limit while holding the tool that lifts it.** 🔵 **Same
+class as `T78`'s own history** — p149 claimed the API was open, p150 withdrew it, p151
+explained it, and p151 then overstated the explanation. 🟢 **Three passes of narrowing, and
+the lesson is to describe what was refused and what was tried, never to quantify how long a
+refusal will last.** 🔵 **`ACTION GE`.**
+
 ### 🆕 🔴 `P151-R` — FIVE committed suites on this shelf are RED at HEAD, and the reset is why
 
 🔵 **p151 ran every Python suite under `compose/code/` — 155 of them — and then ran the five
@@ -113,7 +150,7 @@ defect in that same prose** (`P263`), which is the only evidence that it would h
 | 🔴 **The prompt layer has no probe, and now the LINK layer joins it** | Two prompt-layer rows plus `free-ai-agents-resources` at **0 code files**. 🔵 **`ACTION FS`** |
 | 🔴 **`lib/` has no import test** | Nothing fails if a fourth module re-types the licence ladder instead of importing it. 🔵 **`ACTION FX`** |
 | 🔴 **A generation boundary is not expressible in the dangling gate** | The gate can exclude a page; it cannot say *"ids below P469 here are generation 1"*. 🔵 **`ACTION FZ`** |
-| 🔴 **No star count for any row, and now permanently by POLICY** | `P151-S`: the session's repository scope governs every GitHub channel. 🟢 `UNMEASURED`, and **no further action will be registered against it** |
+| 🔴 **No star count for any row — and the reason is a JUDGEMENT, not an impossibility** | `P151-S`: the session's repository scope governs every GitHub channel for an unattached repo, 🔴 **and the scope is per-repository and attachable** — this pass's own push proved it. 🟢 `UNMEASURED` stands because attaching **58 third-party repositories** to read a star count is out of proportion. 🔵 **`ACTION GE`** |
 | 🔴 **No market-size figure is quotable, and the problem got WORSE** | Three publishers give **$6.4B**, **$7.52B** and **$8.3B** for **2025** — a 30% spread on a completed year |
 | 🔴 **EMEA has no education-sector adoption figure from the general-query channel** | 🟢 **Measured this pass rather than assumed**: the regional query returned zero education sources, and its one transferable figure (CompTIA **94%**) is a **US-respondent** survey on EMEA pages |
 | 🔴 **APAC has no ministry-level education instrument beyond the five already named** | The 2026 sweep returned enterprise material and four **corporate L&D** vendors, not formal education |
@@ -123,7 +160,7 @@ defect in that same prose** (`P263`), which is the only evidence that it would h
 
 ## 🔜 Pre-registered for p152
 
-🔵 **Thirteen actions.** 🟢 **`FG` and `FJ` are FIRST and SECOND** because they are unreached
+🔵 **Fourteen actions.** 🟢 **`FG` and `FJ` are FIRST and SECOND** because they are unreached
 for a third pass. 🟢 **`FH`, `FS` and `FT` are re-registered**, `FS` widened and `FT` with a
 prediction attached. 🔵 **No action is registered against the GitHub API, by design**
 (`P151-S`).
@@ -143,6 +180,7 @@ prediction attached. 🔵 **No action is registered against the GitHub API, by d
 | 🟢 **`ACTION FX`** — add an import test to `lib/`: assert that no module under `compose/code/` defines its own GNU licence rung | 🔴 *Refuted if a module legitimately needs its own ladder* — which would mean `P263`'s rule has an exception and the rule must name it, as `lib/region.py` already does for the two region questions |
 | 🟢 **`ACTION FZ`** — make the dangling gate express a GENERATION boundary, so an append-only page can be scanned for defects in its own generation | 🔴 *Refuted if no single id threshold separates the two generations* — which would mean the 2026-10-06 reset did not restart the space cleanly, and the 260 flagged ids need classifying one by one rather than by range |
 | 🔴 **`ACTION GD`** — repair the five suites that are RED at HEAD: re-measure the three stale generation-1 assertions (`p351`, `p356`, `p598`), diagnose the non-terminating one (`p471`), and either vendor or skip the one needing `_cffi_backend` (`p213`) | 🔴 *Refuted if any of the three stale assertions is not stale but WRONG* — which would mean the figure it asserts was never true rather than made false by the reset, and the module's published result needs withdrawing rather than re-measuring. 🔵 *And refuted differently if `p471` does not terminate because it is waiting on the network* — which would make it the second non-offline suite on a shelf that claims every instrument is offline |
+| 🟡 **`ACTION GE`** — replace every "permanent"/"never" claim about an environment limit on this shelf with a dated statement of what was refused and what was tried. Start with `P144-X`, `T78` and `P151-S` | 🔴 *Refuted if no other such claim exists on the shelf* — which would make p151's "permanently" a single slip rather than a habit, and this action a one-line edit instead of a sweep. 🔵 **p151 predicts it will NOT be refuted**, because the same wording appears wherever this shelf has recorded a 403 |
 
 ## ✅ Verdicts on the nine actions p149 registered, judged by p150
 

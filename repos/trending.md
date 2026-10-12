@@ -75,8 +75,12 @@ surface** (`T83`), held by a CI gate rather than by the type system.
 146 new offline tests.** 🔴 **`api.github.com/repos/…` and `/search/…` refused; every
 primary-legal-text and UNESCO host 403 at CONNECT.** 🔵 **The cause is this session's
 repository SCOPE (`gmilano/globant-kb`), which governs every GitHub channel including the
-authenticated MCP server** — so star counts are `UNMEASURED` by policy, permanently, and
-public `git clone` works because the git proxy serves public reads.
+authenticated MCP server** — and public `git clone` works because the git proxy serves
+public reads. 🔴 **CORRECTION, same pass:** the scope is **per-repository and attachable**.
+This pass's own push was refused and then succeeded once the repo was attached, so 🔴 **the
+word "permanently" is WITHDRAWN.** 🟢 Star counts stay `UNMEASURED` because attaching 58
+third-party repositories to read one is out of proportion — a judgement, labelled as one.
+🔵 **`ACTION GE`.**
 
 ## 2026-10-12 — pass 150 — p149's channel upgrade is WITHDRAWN: the API host answers and serves nothing
 
