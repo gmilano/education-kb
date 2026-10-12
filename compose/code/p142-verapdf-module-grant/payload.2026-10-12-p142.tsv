@@ -1,0 +1,6 @@
+coordinate	jar_http	entries	licence_text_entries	verdict
+org.verapdf:core:1.30.3	200	460	NONE	SILENT
+org.verapdf:verapdf-xmp-core:1.30.3	200	78	NONE	SILENT
+org.verapdf:validation-model:1.30.3	200	369	NONE	SILENT
+org.verapdf:xmp-core:1.30.3	HTTP 404	-	-	NO_JAR
+org.verapdf:verapdf-library:1.30.3	HTTP 404	-	-	NO_JAR

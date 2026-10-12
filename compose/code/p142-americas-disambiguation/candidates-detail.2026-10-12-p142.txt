@@ -1,0 +1,6 @@
+
+# eligible (Americas-ambiguous offset): 4
+# LATAM           2  alcastaro/opendata-latam-mcp, damasiormoura/mcp-dev-latam
+# North America   0  -
+# UNMAPPED        2  Cicatriiz/openedu-mcp, acestein13/campusintel-mcp
+# rows whose platform token AGREES with the booking: 0 of 2

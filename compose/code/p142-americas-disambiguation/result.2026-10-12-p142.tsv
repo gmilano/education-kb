@@ -1,0 +1,22 @@
+subject	offset	eligible	hosts	countries	edu_hosts	platform_tokens	region	evidence_kind	note
+Agso-o/sigaa-calendar	-0300	YES	sigaa.ufpi.br	Brazil(1)	NONE	sigaa	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+MartinSA04/ntnu-mcp	-	NO	-	-	-	-	NOT_ELIGIBLE	-	offset is not ambiguous between North America and LATAM
+MatheusMach/QuantoFalta	-0300	YES	sis.sig.uema.br	Brazil(1)	NONE	sigaa	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+RubsNeto/SigaaUI	-0300	YES	atendimento.ufj.edu.br,cercomp.ufg.br,files.cercomp.ufg.br,login.dev.ufj.edu.br,sigaa.sistemas.ufg.br,sigaa.sistemas.ufj.edu.br,sigadmin.sistemas.ufj.edu.br,sigeleicao.sistemas.ufj.edu.br,sigeventos.sistemas.ufj.edu.br,sigrh.sistemas.ufj.edu.br,sipac.sistemas.ufj.edu.br,sso.ufg.br,ufj.edu.br	Brazil(13)	NONE	sigaa	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+SIU-Toba/docker-guarani	-0300	YES	colab.siu.edu.ar,repositorio.siu.edu.ar,siu.edu.ar	Argentina(3)	NONE	guarani,siu	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Argentina
+SleepyPandas/UofT-MCP	-0400	YES	acorn.utoronto.ca,api.easi.utoronto.ca,degreeexplorer.utoronto.ca,idpz.utorauth.utoronto.ca,security.utoronto.ca,ttb.utoronto.ca,weblogin.utoronto.ca	Canada(7)	NONE	NONE	North America	CCTLD_IN_SOURCE	every country-bearing host is North America: Canada
+alejooroncoy/campus-cli	-0500	YES	advising.yalecollege.yale.edu,apps.rree.gob.pe,aulavirtual.upc.edu.pe,banner.upc.edu.pe,biblioteca.upc.edu.pe,diariooficial.elperuano.pe,dspace.mit.edu,estudiante.upc.edu.pe,evil-aulavirtual.upc.edu.pe,leyes.congreso.gob.pe,repositorio.upch.edu.pe,upc.edu.pe,wb2server.congreso.gob.pe,www.congreso.gob.pe,www.gob.pe,www.pj.gob.pe,www.tc.gob.pe,www3.congreso.gob.pe	Peru(16)	advising.yalecollege.yale.edu,dspace.mit.edu	aula virtual,siu	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Peru
+barneslardo/sis-demo	-	NO	-	-	-	-	NOT_ELIGIBLE	-	offset is not ambiguous between North America and LATAM
+despedite/siu-guarani	-0300	YES	guarani.unq.edu.ar	Argentina(1)	NONE	guarani,siu	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Argentina
+eugeborzone/Auto_Grade_Guarani	-0300	YES	servicios.unl.edu.ar	Argentina(1)	NONE	guarani,siu	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Argentina
+fabrica-de-inovacao/expeditto	-0300	YES	acad.ifma.edu.br,campusparaiso.ifto.edu.br,expeditto.fabitz.com.br,ifma.edu.br,lattes.cnpq.br,portal.ifma.edu.br,portal.tco.ifsuldeminas.edu.br,sol.sbc.org.br,suap.ifma.edu.br,suap.ifrn.edu.br,www.ifb.edu.br	Brazil(11)	NONE	suap	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+filipecalegario/auto-sigaa	-0300	YES	sigaa.ufpe.br	Brazil(1)	NONE	sigaa	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+frjunioalves/suap-mcp	-0300	YES	suap.ifpi.edu.br,suap.ifrn.edu.br,suap.suainstituicao.edu.br	Brazil(3)	NONE	suap	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+joojdev/academic-tracker-mcp	-0300	YES	suap.ifsp.edu.br	Brazil(1)	NONE	suap	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil
+juliancasaburi/siu-guarani-promedio-extension	-0300	YES	documentacion.siu.edu.ar	Argentina(1)	NONE	guarani,siu	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Argentina
+karkarkins/BlackboardAssistantMCP	-0400	YES	NONE	NONE	NONE	NONE	UNMAPPED	NO_HOST	no hardcoded country-bearing hostname in tracked source
+luca-dupont2/mcgill-vsb-mcp	-0400	YES	vsb.mcgill.ca	Canada(1)	NONE	NONE	North America	CCTLD_IN_SOURCE	every country-bearing host is North America: Canada
+nitsuah/bb-mcp	-0400	YES	NONE	NONE	NONE	NONE	UNMAPPED	NO_HOST	no hardcoded country-bearing hostname in tracked source
+ruud0/aula-virtual-mcp	-0400	YES	aula-virtual.unav.edu	NONE	aula-virtual.unav.edu	aula virtual	UNMAPPED	EDU_ONLY	only .edu hosts — US-restricted since 2001, but recorded as corroboration and never booked alone
+skhdemo/uoft-quercus-mcp	-0400	YES	api.easi.utoronto.ca,mail.utoronto.ca,map.utoronto.ca,q.utoronto.ca,ttb.utoronto.ca	Canada(5)	NONE	quercus	North America	CCTLD_IN_SOURCE	every country-bearing host is North America: Canada
+trindadetiago/sigaa-caiu	-0300	YES	sig.unb.br,sigaa.suauni.br,sigaa.ufc.br,sigaa.ufg.br,sigaa.ufpb.br,sigaa.ufrn.br	Brazil(6)	NONE	sigaa	LATAM	CCTLD_IN_SOURCE	every country-bearing host is LATAM: Brazil

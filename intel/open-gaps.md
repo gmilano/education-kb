@@ -6,6 +6,85 @@ updated: 2026-10-12
 
 # Education — open gaps ledger
 
+## ✅ Verdicts on p141's six pre-registered actions, judged by p142
+
+🔵 **All six resolved. Two refuted.** 🟢 **None is re-registered** — a falsifier that goes off has
+done its job.
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION DD`** — test `T31` on a second non-`.sql` component | 🔴 **DISCHARGED, NOT REFUTED — and `T31` RE-CUT** | 🟢 The generalised probe reproduces p141 **to the digit** on p141's own subject: 118 tables, 22 in `.sql`, 19%. 🔴 **Then neither registered subject declares a table in `CREATE TABLE` form at all.** `zijinz456/OpenTutor`: **34** `__tablename__`, 148 model classes, 27 Alembic migrations, **0** `.sql` files, DDL census **1** (`alembic_version`). `nitsuah/bb-mcp`: no persistence of any kind. 🔵 **The falsifier could not fire because it presupposed DDL** — so `T31` becomes a review-method claim, not a file-extension one. Instrument `compose/code/p142-schema-location-tiers`, **13 tests** incl. p141's `CREATE TABLE … is not` fixture carried forward verbatim |
+| **`ACTION DE`** — recover a pointer to `owentaylor/canvas-mcp` | 🔴 **DISCHARGED and REFUTED** | Condition as registered: *"refuted if the payload carries no pointer beyond the dead URL."* 🔴 **It carries none.** Source maps are `['../src/index.ts']` with `sourceRoot` empty; no CI config, `.npmignore` or changelog is shipped; all **8** candidate owner spellings are unreadable against a nonexistent control. 🟢 **One pointer survives OUTSIDE the payload** — `maintainers[0] = owen-x-tech <ogsoccer2006@gmail.com>` — so 🔵 **`ACTION CY` had merged "no readable repository" with "no contactable publisher"**. 🆕 And the README claims **150+ tools** against **62** measured a third time |
+| **`ACTION DF`** — which licence do veraPDF's consumer modules declare | 🔴 **DISCHARGED and REFUTED** | 🔴 **`org.verapdf:verapdf-xmp-core:1.30.3` declares BSD-3-Clause in its own POM**, against a parent offering dual GPL-3.0 / MPL-2.0 — so the election is per-module and **`P20` step 2 was wrong as written**. 🔴 **`org.verapdf:xmp-core` is `404` — it never existed**, because a `<module>` entry is a source-tree path and not an artifactId. **3 of 3** jars `SILENT` across 907 entries. Walker is p140's, run unchanged |
+| **`ACTION DG`** — is the stale Open edX contact a cohort | 🔴 **DISCHARGED, NOT REFUTED** | **5 of 7** further repositories carry `oscm@edx.org` at `HEAD`; **6 of 9** with p141's two. 🔴 **`openedx/event-tracking` carried it into PEP 621 on 2026-07-28** — between p141's stale June and corrected September, so the correction post-dates July. 🆕 🟡 **A fourth spelling**: `openedx/openedx-filters` declares `authors = [{name = "eduNEXT", email = "technical@edunext.co"}]` |
+| **`ACTION DH`** — the offset channel at scale | 🔴 **DISCHARGED, NOT REFUTED — and its own headline withdrawn** | 🟢 **23 of 44 placed** (12 EMEA, 11 APAC); none of the 44 is npm-published so the payload channel had no subject — `T29`'s second clause earned. 🔴 **But its 0-LATAM return is withdrawn as an artefact**: **0 North America** too, and **19 of 19** refusals are American offsets. 🟢 **44 of 44 publicly readable.** 🔵 Population is 44, not 43 |
+| **`ACTION DI`** — `T30` on a third tier | 🔴 **DISCHARGED — falsifier silent, inference inverted** | Dynamic registration **3 of 6 (50%)**, matching the agent tier. 🔴 **p141 wrote that a 12% result would mean "npm-vs-everything"; the opposite holds** — 50% on a *connector* tier is what shows the axis is npm publication. 🟢 **`GATED` now 0 of 18 across three tiers.** 🔴 **4 of 10 rows are not MCP servers at all** |
+
+### 🔴 Four instrument defects this pass produced, every one caught before publication
+
+🔵 **Fourth consecutive pass where the first draft erred in the inflating direction, and the first
+where three of the errors would have published a WRONG REGION — which is worse than publishing
+none, and two of them pointed at the gap this pass was closing.**
+
+| defect | what it would have published | pinned by |
+|---|---|---|
+| 🔴 `MPL` ⊂ `IMPL` | **300+** "licence files" in `org.verapdf:validation-model`, all compiled classes in an `impl` package | `test_jar_licence.py` |
+| 🔴 `.py` is Paraguay **and** Python | `scraper.py` → `BlackboardAssistantMCP` **LATAM**; `synth.py` → `bb-mcp` **LATAM**; six `*.py` "hosts" split the Canadian `UofT-MCP` row | `test_americas.py` |
+| 🔴 `.do` is the Dominican Republic **and** a Struts action — 🔵 *which SIGAA itself uses* | `logar.do`, `vertelalogin.do` as Dominican hosts on four Brazilian rows | `test_americas.py` |
+| 🔴 `\b` matches before a hyphen | the AWS region `us-east-1` read as the `.us` host `dkr.ecr.us`, booking `Cicatriiz/openedu-mcp` into **North America** | `test_americas.py` |
+
+🔴 **And two defects in p141's published instrument, corrected here rather than inherited:**
+`anthropic.com` was reported as an *institutional* email domain for two rows (it is the address an
+AI coding tool writes — 🟢 **nothing was ever booked off it**, since region comes from offsets
+alone), and `git ls-files` reads the index, which a `--no-checkout` clone does not have — left
+unchanged it would have reported all 44 rows as shipping no funding file, silently.
+
+## 🆕 Gaps this ledger opens after p142, each with a pre-registered falsifier
+
+| action | the question | 🔴 refuted if |
+|---|---|---|
+| 🟡 **`ACTION DJ`** — establish eduNEXT's jurisdiction from a readable channel: commit offsets across `eduNEXT/*` repositories, or a package the company publishes | `openedx/openedx-filters` (AGPL-3.0-or-later) names eduNEXT as author of record, set 2026-10-02 during the `modernize` campaign. 🔴 **`.co` is Colombia's ccTLD AND a generic registration**, and `edunext.co` is unreachable here, so the row is held `UNVERIFIED_JURISDICTION`. 🔵 **A commercial holder of an Open edX extension point is a procurement fact either way** | 🔴 **Refuted if the offsets across eduNEXT's own repositories are not predominantly `-0500`** — which would mean the `.co` reading is wrong and the row must stay unplaced rather than be booked LATAM |
+| 🟡 **`ACTION DK`** — build the vendor-tenancy host channel: extract `*.blackboard.com`, `*.instructure.com`, `*.brightspace.com` subdomains across the 44-row population and resolve only where the subdomain is an institution's own registered abbreviation | `karkarkins/BlackboardAssistantMCP` reaches `ncat.blackboard.com`, which names an institution exactly and carries **no country**. 🔵 **This is the one row the ccTLD channel refused for a reason an instrument could fix** | 🔴 **Refuted if fewer than three rows yield a tenancy subdomain that is not a placeholder** — which makes this a one-row channel not worth an instrument, and `ncat` should be hand-noted instead |
+| 🔴 **`ACTION DL`** — find the mechanism behind `T30`'s npm correlation, or demote it. Compare tool count and source size between the 8 npm rows and the 10 non-npm servers | `T30` now rests on npm publication predicting literal registration — 12% / 50% / 50% — with 🔴 **no mechanism established.** The obvious candidate is that npm rows are simply smaller | 🔴 **Refuted if the npm rows are not systematically smaller** — which leaves `T30` a correlation with no proposed cause, and it must be **demoted from a trend to an observation** |
+| 🔴 **`ACTION DM`** — repair `p141-agent-surface-gate` for `REFLECTION` (bare decorator wrapping `server.tool`, name from `fn.__name__`) and for multi-line decorators, then re-run all three tiers | 🔴 **Both shapes return `NO_REGISTRATION_SITE_FOUND` on rows that are fully literal**: `edupage-mcp` (31 tools) and `global-education-mcp` (10). 🔵 **The instrument is blind to the best-behaved rows on the shelf** | 🔴 **Refuted if re-running changes any tier's dynamic share by more than five points** — which would mean `T30`'s three figures were measured with an instrument blind to a third of its subjects, and **all three must be withdrawn** |
+| 🟡 **`ACTION DN`** — close the four-country hole: re-admit `.py`, `.do`, `.cu` and `.cl` behind a URL-context requirement (`://` or `www.` immediately preceding), then re-run the 19-row eligible population | 🔴 **Paraguay, the Dominican Republic, Cuba and Chile are currently unplaceable** because their ccTLDs are Python, Struts, CUDA and OpenCL extensions. 🔵 **On a LATAM question that is the largest remaining hole this pass created** | 🔴 **Refuted if requiring URL context loses any of the 16 rows already placed** — which would mean the two rules cannot both hold and the homograph exclusion must stand as a permanent limit |
+| 🟢 **`ACTION DO`** — audit `malkreide/global-education-mcp`'s `tools.lock.json` against its source: recompute all ten signature hashes from `server.py` and diff | 🟢 **The shelf's one self-verifying row.** It claims a stable SHA-256 per tool over annotations, description and schema, and `P21` is built on that claim | 🔴 **Refuted if any hash disagrees with the committed lockfile** — which would make the one row this KB holds up as the practice to copy an unverified one, and 🔵 **matters more than its ten tools do** |
+
+### 🔴 `ACTION CW` is NOT re-registered, for the fifth consecutive pass — but its cause is now MEASURED
+
+🔴 **Texas HB 149 (TRAIGA), in force 2026-01-01, remains unread.** 🆕 **What changes this pass is
+the evidence class.** p141 attributed the blockage to the sandbox proxy. This pass measured both
+fetch channels against a **positive control**:
+
+| host | `curl` via proxy | `WebFetch` |
+|---|---|---|
+| `capitol.texas.gov` | 🔴 `000` | — |
+| `eur-lex.europa.eu` | 🔴 `000` | 🔴 `ENOTFOUND` |
+| `artificialintelligenceact.eu` | 🔴 `000` | 🔴 `ENOTFOUND` |
+| `oecd.org` | 🔴 `000` | — |
+| `algoritmos.uniandes.edu.co` | 🔴 `000` | 🔴 `ENOTFOUND` |
+| 🔴 **`api.uis.unesco.org`** | 🔴 `000` | — |
+| 🔴 **`sdmx.oecd.org`** | 🔴 `000` | — |
+| `api.github.com` | 🔴 `403` | — |
+| 🟢 **`raw.githubusercontent.com`** | 🟢 `200` | 🟢 **`200`** |
+
+🔵 **The control is the finding: both fetch channels share one allowlist**, so five passes of
+"sources blocked" stops being an attribution and becomes a measurement.
+
+🆕 **And the request is now specific rather than general.** The two rows in bold are not
+regulatory — they are **UNESCO UIS** and **OECD *Education at a Glance***, the primary statistical
+sources that every market-research page on `intel/market.md` is re-quoting. 🟢 **An MIT-licensed,
+read-only, annotation-complete client for both exists**
+([`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp)), found this
+pass. 🔵 **Two allowlist entries would convert this KB's weakest page from re-quoted vendor
+figures to primary per-country data.** It belongs to whoever owns this environment.
+
+🆕 **One further refusal joins the ledger as its own class.** The agent proxy's own status
+endpoint — the page its documentation points to for per-tool allowlist diagnostics — is refused
+by **sandbox policy**, not by the network. 🔵 **Distinct from p140's connector-execution refusal
+and from the `403`/`000` network blocks**, and recorded so a later pass does not spend a probe on
+it: the allowlist cannot be enumerated from inside, only sampled host by host.
+
 ## ✅ Verdict on p138's pre-registered action, judged by p139
 
 | action | verdict | the measurement |

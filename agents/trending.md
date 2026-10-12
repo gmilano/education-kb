@@ -6,6 +6,68 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 142
+
+**The pass in which a ten-pass finding of this KB's own was withdrawn as an instrument artefact,
+and the instrument that produced it was caught by the region nobody was watching.**
+
+🔵 **p141 asked for an eleventh LATAM null "explicitly, including when it is zero", reasoning
+that a null on 44 rows would be a stronger statement than a null on eight. It would have been
+this KB's most confident restatement of its own blind spot.** 🔴 **The channel returned 0 LATAM
+and 0 North America, and the second zero is unbelievable on its face** — this shelf holds two
+University of Toronto connectors and a McGill one.
+
+| what moved this week | measurement |
+|---|---|
+| 🔴 **The LATAM gap was never a gap. 13 rows.** | [`p142-americas-disambiguation`](../compose/code/p142-americas-disambiguation/README.md). **Brazil 9, Argentina 3, Peru 1**, each on an American-ambiguous commit offset **and** a hardcoded host under a LATAM-only ccTLD — `sigaa.ufpi.br`, `sigaa.ufrn.br`, `suap.ifrn.edu.br`, `guarani.unq.edu.ar`, `siu.edu.ar`, `aulavirtual.upc.edu.pe`. 🟢 **Control passes**: the probe reproduces, unprompted, the Peru placement `agents/top.md` made passes ago by reading a README |
+| 🔴 **…and the cause is structural, not a sampling accident** | p141's table books an offset only where it is unambiguous across five regions. 🔴 **`-0300` is Brazil/Argentina/Uruguay AND Greenland; `-0400` is US Eastern AND Bolivia/Paraguay/Chile; `-0500`, `-0600`, `-0700` likewise.** So **19 of 19** refusals on this population were American. 🔵 **The rule is honest and its refusals are not randomly distributed** |
+| 🟢 **`ACTION DH` discharged: the channel IS additional** | **23 of 44 placed** — 12 EMEA, 11 APAC — and not one of the 44 is npm-published, so the payload channel had no subject to read. 🟢 **44 of 44 publicly readable** against a nonexistent control, where `ACTION CY`'s npm tier had 4 of 6 unreadable. 🔵 **The population is 44, not p141's 43** |
+| 🆕 🟢 **The search channel broke a three-pass null streak** | Six candidates, **6 of 6 live**. 🟢 **2 placed LATAM** — `alcastaro/opendata-latam-mcp` (MIT, 8 countries' government hosts) and `damasiormoura/mcp-dev-latam` (MIT, **182** Brazilian hosts). 🟢 **1 EMEA**, and it is the best-engineered row added in twenty passes |
+| 🟢 **A row that ships a tool-surface LOCKFILE** | `malkreide/global-education-mcp` — **MIT**, 151 commits, `+0200` ×70, **10 tools, all literal, all `readOnlyHint: true`, zero writes**, 🟢 **full MCP `ToolAnnotations` on 10 of 10**, and 🟢 **`tools.lock.json`: a SHA-256 per tool over its annotations, description and schema.** Its own comment says the logging wrapper preserves `__doc__` *"damit der tools.lock.json-Hash stabil bleibt"* |
+| 🆕 🔴 **A THIRD registration shape, invisible to every instrument here** | `REFLECTION`: `oliverhruby/edupage-mcp` registers via a bare `@_tool` wrapping `server.tool`, 🔴 **the tool name being `fn.__name__` and never written as a string**. 31 tools; p141's gate returns **0**. And `global-education-mcp`'s `@mcp.tool(` spans lines, which p141's line-oriented regex also reads as 0. 🔵 **`LITERAL` and `DYNAMIC` were never the two options** |
+| 🟢 **The first row on any tier to declare its own write surface** | `oliverhruby/edupage-mcp`: **31 of 31** tools carry a declared annotation class — 19 `_READ`, 4 `_WRITE_SAFE`, 3 `_LOCAL_WRITE`, 3 `_WRITE_DESTRUCTIVE`, 2 `_WRITE_NON_IDEMPOTENT`. 🟢 **12 of 31 (39%) writes, quotable rather than derived.** MIT, bearer auth on `MCP_API_KEY` |
+| 🔴 **`ACTION DI`: 50% on a third tier — and p141's inference was backwards** | npm connectors **12%**, agent servers **50%**, 🆕 **GitHub-only connectors 50%**. p141 wrote that a 12% result *"would mean the split is npm-vs-everything"*; 🔴 **the opposite is true** — 50% on a *connector* tier is what shows the axis is npm publication. 🟢 **`GATED` is 0 of 18 across three tiers** |
+| 🔴 **`zijinz456/OpenTutor` is a second `PII_AND_AFFECT` row** | **34** `__tablename__` declarations, 148 model classes, 🔴 **0 `.sql` files**, and a `CREATE TABLE` census finds **1** — `alembic_version`. 🔴 Among the 34: `cognitive_baselines`, `mastery_snapshots`, `preference_signals`, `intervention_outcomes`, `conversation_memories`, `integration_credentials`. 🔵 **This KB recommended the row for three passes without saying so** |
+| 🔴 **`@owen-x-tech/canvas-mcp` claims 150+ tools and serves 62** | Confirmed a **third** time by a third method: the `const tools = [ … ]` array holds **62** name literals, **62** distinct, no `push`/`concat`/spread. 🔴 **The README headline says "150+ Tools"** — a 2.4× over-claim on the one row whose repository is gone. 🔵 **Inverts `P138-E`**, which found drift *under*-documents |
+| 🔴 **Four instrument defects, three of which would have published a WRONG REGION** | `MPL` ⊂ `IMPL` (300+ false "licence files"); `.py` is Paraguay **and** Python (`scraper.py` placed two rows in LATAM); `.do` is the Dominican Republic **and** a Struts action 🔵 *that SIGAA itself uses*; and `\b` matching before a hyphen turned the AWS region `us-east-1` into the "`.us` host" `dkr.ecr.us`. 🔵 **Fourth consecutive pass where the first draft erred in the inflating direction** |
+| 🔴 **The cost of fixing two of them, declared** | Excluding `.py`, `.do`, `.cu` and `.cl` means 🔴 **this KB cannot place a repository in Paraguay, the Dominican Republic, Cuba or Chile at all.** On a LATAM question that is a real hole, and it is cheaper than a probe that books Paraguay off `auth.py`. `ACTION DN` registered to close it with a URL-context rule |
+| 🔴 **`.edu` is not a US signal, and the counterexample was inside the subject set** | `ruud0/aula-virtual-mcp` hardcodes `BASE_URL = "https://aula-virtual.unav.edu"` — 🔴 **the Universidad de Navarra, in Spain**, naming *Navarra* and *Spain* in its own source. 🔵 **So `.edu` is corroboration and never a booking**, and the row is left `UNMAPPED` rather than quietly upgraded on its prose |
+| 🔴 **4 of the 10 largest "connector" rows are not MCP servers** | `BetterSEQTA-Plus` and `DesQTA` contain **zero** `mcp` tokens; `sigaa-calendar` is a Go CLI; `siu-guarani-promedio-extension` is a browser extension. 🔵 **With p141's `OpenTutor`, five rows across two passes are shelved beside connectors they do not resemble** — and two of the five are named `*-mcp` |
+| 🔴 **One candidate rejected and named** | `jayendrasai/mcp_for_university` — **1 commit, no licence file of any kind**, APAC `+0530`. Recorded so the next pass does not re-find it |
+
+### 🔵 What the regional channel returned this pass, including where it returned nothing
+
+| region | query | outcome |
+|---|---|---|
+| Global — agents | `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific.** Returned general agent-framework rankings and `microsoft/ai-agents-for-beginners` — a **course about building agents**, not an education-industry agent. One roundup's own caveat is worth keeping: *"open source gets stretched to cover a lot of things this year"* |
+| Global — trending | `github trending education AI 2026` | 🔴 **Null in the same way.** Every return is a *learn-AI* repository — `ai-engineering-from-scratch`, Karpathy's `nn-zero-to-hero`, an AI glossary. 🔵 **"education AI" retrieves AI pedagogy, never education software.** Fourth pass with this result |
+| Global — verticals | `open source platform education LMS SIS MIT Apache 2026` | 🟡 **No new platform.** Named Moodle, Open edX, Sakai, ILIAS, Chamilo, Canvas, OpenEduCat — all held. 🔵 **One source's licence observation is correct and worth keeping**: this layer is *"most often GPL, AGPL, LGPL, BSD or Apache"*, and **MIT is not in the list** |
+| Global — trends | `AI education industry trends 2026 market size adoption` | 🟡 **Figures held or unverifiable.** `$10.6B → $42.48B` by 2030 at 41.5% and Precedence's `$9.58B` are already on `intel/market.md`. 🆕 Two candidates recorded as **second-hand**: a higher-education segment at `$4.09B → $13.46B` by 2030 (34.7% CAGR), and NA 36% / APAC fastest at 35.3% |
+| **North America** | `AI education North America 2026 adoption regulation players` | 🟡 **No new instrument.** Named FERPA and *"states like Colorado and Texas introducing piecemeal requirements"* — 🔴 **which is `ACTION CW`, unread for five passes because `capitol.texas.gov` is unreachable.** Adoption figures are aggregator-of-aggregator and not adopted |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation AI Act schools` | 🟡 **The richest regional return, and not one item verifiable.** Emotion recognition in schools banned since **Feb 2025**; schools as *deployers* not providers; Annex III education duties at **2 Dec 2027** — 🔴 **against a blog asserting 2 Aug 2026**, and a claimed *"Digital Omnibus on AI, Regulation (EU) 2026/1744"* softening AI-literacy duties. 🔴 **`eur-lex.europa.eu` and `artificialintelligenceact.eu` are both unreachable on BOTH fetch channels, so none of it is adopted** |
+| **APAC** | `AI education APAC 2026 adoption policy ministry China India Japan` | 🔴 **Ministry-level policy absent for the sixth consecutive pass.** The one on-target source is a Clarivate white paper covering seven jurisdictions **with no readable publication date**; the rest is 2020-vintage. 🟢 One durable item: India's NEP added robotics/IoT/big-data to grades 8–10 |
+| **LATAM** | `inteligencia artificial educación América Latina 2026 regulación adopción` | 🟡 **Regulatory signal, no artefacts.** A Universidad de los Andes report (Aug 2026) with a repository covering **20** LATAM/Caribbean countries; a UAM piece finding adoption rising while *"la región carece de marcos regulatorios específicos"* (Mexico, Paraguay); ParlAmericas convening 15 Sep 2026. 🔴 **`algoritmos.uniandes.edu.co` is unreachable**, so the 20-country figure is recorded as second-hand |
+| **LATAM**, second attempt | `open source education MCP "agente IA" GitHub Brasil Argentina México universidad 2026` | 🟢 **THIS is the query that worked, and it worked by naming the artefact rather than the market.** Four live repositories, two of them LATAM-placed. 🔵 **The lesson is the same one `P138-H` recorded for registries**: the retrieval that finds rows describes code, not industries |
+
+### 🔴 The blocked-source ledger, now measured on two channels with a positive control
+
+| host | `curl` via proxy | `WebFetch` | what it would have answered |
+|---|---|---|---|
+| `api.uis.unesco.org` | 🔴 `000` | — | UNESCO UIS, 4 000+ education indicators per country |
+| `sdmx.oecd.org` | 🔴 `000` | — | OECD *Education at a Glance* |
+| `eur-lex.europa.eu` | 🔴 `000` | 🔴 `ENOTFOUND` | The AI Act's Annex III text and the 2027 date |
+| `artificialintelligenceact.eu` | 🔴 `000` | 🔴 `ENOTFOUND` | Annex III point 3, education |
+| `capitol.texas.gov` | 🔴 `000` | — | `ACTION CW` — Texas HB 149 / TRAIGA |
+| `algoritmos.uniandes.edu.co` | 🔴 `000` | 🔴 `ENOTFOUND` | The 20-country LATAM regulatory repository |
+| `api.github.com` | 🔴 `403` | — | Star counts, which is why `ACTION DI` used commit counts |
+| 🟢 `raw.githubusercontent.com` | 🟢 `200` | 🟢 **`200`** | **the positive control** |
+
+🔵 **The control is the point.** p141 attributed the blockage to the sandbox proxy. 🔴 **Both fetch
+channels share one allowlist**, and the last row proves the failures above are the policy rather
+than the probe. 🟢 **And the ask is now specific rather than general: two hostnames —
+`api.uis.unesco.org` and `sdmx.oecd.org` — would give this KB a primary, per-country,
+MIT-tooled market channel**, replacing the vendor blogs `intel/market.md` is forced to cite.
+
 ## 2026-10-12 — Pass 141
 
 **The pass in which four of six pre-registered falsifiers fired, three of this KB's own

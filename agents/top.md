@@ -6,6 +6,219 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 142 — 2026-10-12 — thirteen LATAM rows that were always here, a third registration shape, and the row that ships its own lockfile
+
+🔴 **This page has carried "the only LATAM-origin education agent found" on a single row for ten
+passes. That sentence is withdrawn.** `ACTION DH` ran the offset channel over this page's whole
+44-row connector population and returned **0 LATAM and 0 North America** — and the second zero
+is what exposed the first: 🔴 **the channel cannot place either American region, because every
+American offset is one it refuses as ambiguous.** Answered on p140's hostname channel instead,
+**13 of these rows are LATAM** and **3 are Canada**.
+
+🟢 **And the search channel, null for three passes, returned the best-engineered new row on this
+page.**
+
+### 🟢 Thirteen LATAM rows, placed on hardcoded hosts the connector must reach
+
+[`p142-americas-disambiguation`](../compose/code/p142-americas-disambiguation/README.md).
+Each row below has an American-ambiguous commit offset **and** a hardcoded host under a
+LATAM-only ccTLD. 🔵 **Neither half is published alone.**
+
+| row | offset | host evidence in source | country |
+|---|---|---|---|
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | `-0300` ×71 | `sigaa.ufpi.br` | 🟢 **Brazil** |
+| [`MatheusMach/QuantoFalta`](https://github.com/MatheusMach/QuantoFalta) | `-0300` | `sis.sig.uema.br` | 🟢 **Brazil** |
+| [`RubsNeto/SigaaUI`](https://github.com/RubsNeto/SigaaUI) | `-0300` ×31 | **13 hosts** — `sigaa.sistemas.ufg.br`, `sigaa.sistemas.ufj.edu.br`, `cercomp.ufg.br` … | 🟢 **Brazil** |
+| [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) | `-0300` ×25 | **6 hosts** — `sigaa.ufrn.br`, `sigaa.ufc.br`, `sigaa.ufpb.br`, `sig.unb.br` … | 🟢 **Brazil** |
+| [`filipecalegario/auto-sigaa`](https://github.com/filipecalegario/auto-sigaa) | `-0300` | `sigaa.ufpe.br` | 🟢 **Brazil** |
+| [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) | `-0300` | `suap.ifrn.edu.br`, `suap.ifpi.edu.br` | 🟢 **Brazil** |
+| [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) | `-0300` | `suap.ifsp.edu.br` | 🟢 **Brazil** |
+| [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) | `-0300` ×39 | **11 hosts** — `acad.ifma.edu.br`, `campusparaiso.ifto.edu.br`, `lattes.cnpq.br` … | 🟢 **Brazil** |
+| [`SIU-Toba/docker-guarani`](https://github.com/SIU-Toba/docker-guarani) | `-0300` ×28 | `siu.edu.ar`, `colab.siu.edu.ar`, `repositorio.siu.edu.ar` | 🟢 **Argentina** |
+| [`despedite/siu-guarani`](https://github.com/despedite/siu-guarani) | `-0300` ×11 | `guarani.unq.edu.ar` | 🟢 **Argentina** |
+| [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | `-0300` ×16 | `servicios.unl.edu.ar` | 🟢 **Argentina** |
+| [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | `-0300` ×59 | `documentacion.siu.edu.ar` | 🟢 **Argentina** |
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | `-0500` ×570 | **16 hosts** — `aulavirtual.upc.edu.pe`, `banner.upc.edu.pe`, `estudiante.upc.edu.pe` … | 🟢 **Peru** |
+
+🟢 **The last row is the control, and it is why the other twelve are publishable.** This page
+already carried `campus-cli` as *"LATAM (Peru) … targets UPC's Aula Virtual"*, placed passes ago
+by **reading its README**. The instrument places it in Peru from sixteen hardcoded `upc.edu.pe`
+hosts, without being told. 🟢 **An instrument that reproduces a known answer on a known row can
+be trusted on twelve unknown ones.**
+
+🔵 **Read the tier correctly, though.** These are connectors to **Brazil's SIGAA and SUAP and
+Argentina's SIU-Guaraní** — the national university systems. Nothing changes about their
+maturity: they remain one-person connectors at 0–10 stars. 🟢 **What changes is that the
+integration work against two national SIS platforms is already scouted, by thirteen authors, in
+the open** — and a studio opening a Brazilian or Argentine engagement starts from thirteen
+worked examples rather than from the one this page admitted to.
+
+### 🟢 Three North American rows, and the region had never been placed by this channel either
+
+| row | offset | host evidence | country |
+|---|---|---|---|
+| [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP) | `-0400` ×56 | **7 hosts** — `acorn.utoronto.ca`, `api.easi.utoronto.ca`, `idpz.utorauth.utoronto.ca`, `degreeexplorer.utoronto.ca` … | 🟢 **Canada** |
+| [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) | `-0400` ×21 | **5 hosts** — `q.utoronto.ca`, `api.easi.utoronto.ca`, `ttb.utoronto.ca` … | 🟢 **Canada** |
+| [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | `-0400` | `vsb.mcgill.ca` | 🟢 **Canada** |
+
+🔴 **No US row is placed, and that is a declared gap rather than a result.** The `.edu` channel is
+refused on evidence, below, and no US ccTLD host appears anywhere in the population.
+
+### 🔴 Three rows this page does NOT place, and the reason for each
+
+| row | why not |
+|---|---|
+| 🔴 [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | `-0400` ×191, and **every** hostname in the tree is `example.com` / `example.edu` / `mcp.example.com`. 🔵 **A well-written placeholder set places nothing**, and this row's tidiness is why |
+| 🟡 [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP) | Its only real host is `ncat.blackboard.com` — a **vendor tenancy subdomain**. It names an institution precisely and carries no country. Needs an institution→country lookup this KB does not have → `ACTION DK` |
+| 🟡 [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | `BASE_URL = "https://aula-virtual.unav.edu"` — 🔴 **the Universidad de Navarra, in SPAIN.** Left `UNMAPPED` on this channel rather than quietly upgraded to EMEA on its prose |
+
+🔴 **That last row is the reason `.edu` is never booked.** `.edu` registration has been restricted
+to accredited US institutions since 2001, which looks exactly like the `uk.ac.ox` argument p141
+accepted for a Maven `groupId`. 🔵 **One counterexample inside the subject set settles it**, and
+it was in this population: a Spanish university on a pre-restriction `.edu`, naming *Navarra* and
+*Spain* in its own source.
+
+### 🆕 🟢 `malkreide/global-education-mcp` — the row that verifies its own tool surface
+
+| | |
+|---|---|
+| repo | [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) |
+| licence | 🟢 **MIT**, `LICENSE` present, declared in `pyproject.toml` |
+| size | 151 commits, HEAD **2026-10-04**, 83 files, Python |
+| region | 🟢 **EMEA** — `+0200` on 70 of 151 commits, 🔵 corroborated from a second channel: its docstrings are in **German** |
+| tools | 🟢 **10, every name a literal**, every one `readOnlyHint: true` — 🟢 **zero write tools** |
+| annotations | 🟢 **10 of 10 carry full MCP `ToolAnnotations`** (`title`, `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`) |
+| 🟢 **surface lockfile** | 🟢 **`tools.lock.json` — a SHA-256 hash per tool over its annotations, description and schema** |
+| sources | **UNESCO UIS** (4 000+ indicators) and **OECD Education at a Glance**, over SDMX, 🟢 **no API key** |
+
+🟢 **The lockfile is the find.** This KB has spent five passes building instruments to detect tool
+surface drift — `p139-tool-count-drift`, `description-drift-audit`, `p141-agent-surface-gate`.
+🟢 **This row ships one**, and its own code says why: the logging wrapper preserves `__doc__`
+*"damit der `tools.lock.json`-Hash stabil bleibt"* — so that the hash stays stable. 🔵 **A
+connector that pins its own surface by hash is the shape every row on this page should have**, and
+it is pattern `P21` this pass.
+
+🔴 **And this environment cannot run it.** `api.uis.unesco.org` and `sdmx.oecd.org` both answer
+`000`. 🔵 **So the instrument that would let `intel/market.md` cite UNESCO and the OECD instead of
+vendor market-research blogs exists, is MIT, needs no key — and is two allowlist entries away.**
+
+### 🆕 Three further rows added this pass, each measured before being written
+
+| repo | licence | region | surface | why it is here |
+|---|---|---|---|---|
+| 🟢 [`alcastaro/opendata-latam-mcp`](https://github.com/alcastaro/opendata-latam-mcp) | 🟢 **MIT** | 🟢 **LATAM** — hosts in **8** countries | 1 literal + **15 dynamic** → 🔴 `DYNAMIC_UNBOUNDED` | 7 national CKAN open-data portals (AR, CL, DO, EC, MX, PA, UY) behind one server. 🔵 **Not education — but it is the only LATAM-placed row on these shelves that reaches a government data source**, and regional evidence is this KB's scarcest input |
+| 🟢 [`acestein13/campusintel-mcp`](https://github.com/acestein13/campusintel-mcp) | 🟢 **MIT** | 🔴 `UNMAPPED` — `www.harvard.edu` only, and `.edu` is never booked | **9 literal**, 0 dynamic → 🟢 `BOUNDED_STATIC` | University research, researchers, programmes and institutional data over OpenAlex. 🔴 **3 commits.** Listed for the institutional-data tier, not for maturity |
+| 🟡 [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 🟢 **MIT** | 🔴 `UNMAPPED` — 🔵 **and it nearly was not**: a first draft booked it North America off `dkr.ecr.us`, a fragment of an **AWS region string** | 21 literal + **1 dynamic** → 🔴 `DYNAMIC_UNBOUNDED` | OER discovery over **OpenLibrary + Wikipedia + arXiv**. 🔴 HEAD **2025-06-03** — the oldest row added in twenty passes, and the only one over a year stale |
+
+🔴 **One candidate is rejected and named**: [`jayendrasai/mcp_for_university`](https://github.com/jayendrasai/mcp_for_university)
+— **1 commit, no licence file of any kind**. APAC (`+0530`). Unusable as published, and recorded
+so the next pass does not re-find it. 🟡 **`damasiormoura/mcp-dev-latam`** (MIT, 336 commits,
+🟢 **LATAM** on **182** Brazilian hosts) is **not shelved here**: it is Pix / NF-e / fiscal
+commerce, not education. Recorded in `intel/market.md` as regional supply evidence only.
+
+### 🆕 🔴 A THIRD registration shape — and both instruments on this page are blind to it
+
+`ACTION DI` ran p141's gate over the ten largest GitHub-only connector rows.
+[`p142-github-only-tier`](../compose/code/p142-github-only-tier/README.md).
+
+| tier | servers | 🔴 dynamic | share | gated |
+|---|---|---|---|---|
+| npm connectors *(p140)* | 8 | 1 | 12% | 0 |
+| agent servers *(p141)* | 4 | 2 | 🔴 50% | 0 |
+| 🆕 **GitHub-only connectors** | **6** | 🔴 **3** | 🔴 **50%** | 🔴 **0** |
+
+🟢 **`GATED` is now 0 of 18 servers across three tiers.** `T28` belongs to `tutor-mcp`'s maturity
+and to nothing else on these shelves.
+
+🔴 **Two rows returned `NO_REGISTRATION_SITE_FOUND` and both are fully literal.** The shapes:
+
+```python
+# oliverhruby/edupage-mcp — REFLECTION: the name is fn.__name__, never a string
+def _tool(fn):
+    hints = TOOL_ANNOTATIONS.get(fn.__name__)
+    if server is not None:
+        return server.tool(annotations=ToolAnnotations(**hints))(fn)
+    return fn
+```
+
+```python
+# malkreide/global-education-mcp — MULTI-LINE: p141's REG_PY is line-oriented
+@mcp.tool(
+    name="uis_list_indicators",
+    annotations={"readOnlyHint": True, ...},
+```
+
+🔵 **`LITERAL` and `DYNAMIC` were never the two options.** Hand-reading puts the two rows at
+**31** and **10** tools, both fixed at import, both `BOUNDED_STATIC`. 🟢 **The 50% share is
+unchanged either way**, which is why it is published — and `ACTION DM` is registered against the
+instrument rather than the figure.
+
+### 🆕 🟢 `oliverhruby/edupage-mcp` declares its own write surface, and it is the first row that does
+
+| class | tools | |
+|---|---|---|
+| 🟢 `_READ` | **19** | read-only |
+| `_WRITE_SAFE` | 4 | mutating, non-destructive |
+| `_LOCAL_WRITE` | 3 | writes to local disk |
+| 🔴 `_WRITE_DESTRUCTIVE` | 3 | `destructiveHint: true` |
+| 🔴 `_WRITE_NON_IDEMPOTENT` | 2 | `send_message`, `custom_request` |
+
+🟢 **31 of 31 tools carry a declared annotation class; 12 of 31 (39%) are writes, declared by the
+row rather than counted by this KB.** MIT, `LICENSE` present, bearer-token auth gated on
+`MCP_API_KEY`, and a module docstring that names which tools mutate. EMEA, `+0200` ×111 of 111.
+🔵 **Every other row's write count on this page was derived by a probe. This one is quotable.**
+
+### 🔴 4 of the 10 largest "connector" rows are not MCP servers at all
+
+[`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) and
+[`BetterSEQTA/DesQTA`](https://github.com/BetterSEQTA/DesQTA) contain **zero** `mcp` tokens;
+[`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) is a Go CLI;
+[`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension)
+is a browser extension. 🔵 **With p141's `zijinz456/OpenTutor` that is five rows across two passes
+shelved beside connectors they do not resemble**, and two of the five are named `*-mcp`. They
+remain real software with no tool surface to bound.
+
+### 🔴 `zijinz456/OpenTutor` is a second `PII_AND_AFFECT` row, and this page did not say so
+
+[`p142-schema-location-tiers`](../compose/code/p142-schema-location-tiers/README.md). p141
+described this row as *"a real, MIT-licensed, active tutoring application"*. Measured:
+
+| measure | value |
+|---|---|
+| `__tablename__` declarations | **34** |
+| model classes | 148 |
+| `.sql` files | 🔴 **0** |
+| tables a `CREATE TABLE` census finds | 🔴 **1** — `alembic_version`, Alembic's own bookkeeping |
+
+🔴 **And the 34 include `cognitive_baselines`, `concept_mastery`, `mastery_snapshots`,
+`preference_signals`, `intervention_outcomes`, `conversation_memories`, `chat_message_logs`,
+`wrong_answers`, `integration_credentials` and `users`.** That is the `PII_AND_AFFECT` class
+p140 assigned to `tutor-mcp`, on a second row, in a repository this page has recommended for
+three passes without mentioning that it persists a per-learner cognitive profile. 🔵 **A DPIA
+against this row has 34 tables to enumerate and a `CREATE TABLE` grep finds one.**
+
+🟢 **And the opposite result, on the row that earns it:** `nitsuah/bb-mcp` has **no persistence of
+any kind** — 0 tables, 0 models, 0 migrations, 0 `.sql`. 🟢 **For the one connector on this page
+that ships an access-control layer, holding no learner data at rest is the other half of the same
+virtue.**
+
+### 🔴 `@owen-x-tech/canvas-mcp` claims 150+ tools and serves 62
+
+[`p142-dead-repo-recovery`](../compose/code/p142-dead-repo-recovery/README.md). `ACTION DE`
+confirmed the tool count a **third** time by a third method — extracting the `const tools = [ … ]`
+array by bracket matching gives **62** name literals, **62** distinct, with no `push`, `concat` or
+spread mutation anywhere. 🔴 **The package README's own headline reads "150+ Tools".**
+
+🔵 **That inverts `P138-E`**, which concluded from the Moodle tier that description drift
+*"under-documents rather than over-claims"*. True where it was measured; false here — 🔴 **on the
+one row whose repository is gone, so the README is all a buyer can read.** The README's
+per-section counts are consistent with 62; the headline was written separately.
+
+🟢 **One pointer does survive, and `ACTION CY` had merged two claims:**
+`maintainers[0] = owen-x-tech <ogsoccer2006@gmail.com>`, identical `_npmUser` on both versions.
+🔵 **"No readable repository" and "no contactable publisher" are different findings.** Here there
+is a publisher; all 8 candidate owner spellings are unreadable against a nonexistent control.
+
 ## Pass 141 — 2026-10-12 — the shelf's gating is one row's maturity, its registration is half dynamic, and its best engineering is in a two-commit repo
 
 🔴 **`ACTION CZ` is REFUTED: none of the five tutoring rows p139 added is flag-gated, so

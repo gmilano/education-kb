@@ -6,6 +6,140 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 142, 2026-10-12.** 🔴 **`P20` step 2 is CORRECTED — it told a studio to make one licence
+election for veraPDF and the election is per-module.** 🆕 **`P21` is added, and like `P19` it is
+sourced from a row that already ships the control rather than needing one wrapped around it.**
+🆕 **`P22` is added: the regional-placement recipe this KB used to withdraw its own ten-pass
+LATAM finding, written so a studio can run it on any shelf.**
+
+🔵 **Register note.** `P21` and `P22` are the next numbers in the **current** register, restarted
+at `P1` by the 2026-10-06 reset. 🔴 **The append-only logs carry an unrelated pre-reset `P22`
+(*"`P22` check 4"*), and `compose/code/licence-grant-gate/README.md` cites `P22`/`P22.5` in that
+older sense.** A `P` number resolves against this page; a `P` number inside a dated log section
+resolves against the register current on that date.
+
+## 🔁 `P20` step 2 CORRECTED — the licence election is per COORDINATE, not per project *(p142 — Global)*
+
+`P20` step 2 as written instructs a studio to *elect* between GPL-3.0 and MPL-2.0 for veraPDF,
+the PDF/UA validator used when course material carries an accessibility obligation.
+🔴 **`ACTION DF` refuted the premise.**
+[`p142-verapdf-module-grant`](code/p142-verapdf-module-grant/README.md):
+
+| coordinate a build actually resolves | effective licence | election needed? |
+|---|---|---|
+| `org.verapdf:core:1.30.3` | **GPL-3.0 *or* MPL-2.0**, inherited at depth **4** | 🟢 **yes — elect MPL-2.0** |
+| `org.verapdf:validation-model:1.30.3` | **GPL-3.0 *or* MPL-2.0**, inherited at depth **4** | 🟢 **yes — elect MPL-2.0** |
+| 🔴 `org.verapdf:verapdf-xmp-core:1.30.3` | 🟢 **BSD-3-Clause — its own declaration** | 🔴 **NO. There is no dual offer to elect from** |
+| 🔴 `org.verapdf:verapdf-library:1.30.3` | the dual offer, in a parent | 🔴 **no jar exists — nothing resolves here** |
+
+**Step 2, as it must now read:**
+
+> 2. For each veraPDF **coordinate in the dependency graph**, walk the `<parent>` chain and record
+>    the nearest `<licenses>` block. 🔴 **Do not record one licence for the project.** Elect
+>    MPL-2.0 where a dual offer is inherited; record BSD-3-Clause for `verapdf-xmp-core`, which
+>    makes no offer to elect from. 🔴 **No veraPDF jar ships licence text**, so the bill of
+>    materials must carry the POM coordinate and chain depth as its evidence, not a file path.
+
+🔵 **And one trap to put in the runbook.** `org.verapdf:xmp-core` — the coordinate p141 named — is
+`404` on Central. It came out of `<modules><module>xmp-core</module></modules>`, and
+🔵 **a `<module>` entry is a source-tree path, not an artifactId.** Never derive a coordinate from
+a `<modules>` block.
+
+## 🆕 🟢 `P21` — pin your tool surface with a committed lockfile *(p142 — EMEA)*
+
+**Sourced from:** [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp)
+(MIT) and [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) (MIT), which
+between them already implement both halves.
+
+**The problem it solves.** This KB has built four instruments to detect tool-surface drift —
+`p139-tool-count-drift`, `description-drift-audit`, `p141-agent-surface-gate`,
+`p142-github-only-tier` — because a connector's tool set changes without its version changing,
+and a client discovers that at runtime. 🔴 **And `@owen-x-tech/canvas-mcp` shows the failure mode
+at its worst**: a README claiming **150+ tools** against **62** served, on a row whose repository
+no longer exists.
+
+**The recipe, concretely.**
+
+1. **Annotate every tool at its registration site**, using MCP's own `ToolAnnotations` —
+   `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`, `title`. 🟢 **Copy
+   `edupage-mcp`'s shape**: a module-level table mapping tool name → annotation class, with
+   named classes rather than inline dicts:
+
+   ```python
+   _READ                 = {"readOnlyHint": True,  "destructiveHint": False, "idempotentHint": True}
+   _WRITE_DESTRUCTIVE    = {"readOnlyHint": False, "destructiveHint": True,  "idempotentHint": True}
+   _WRITE_NON_IDEMPOTENT = {"readOnlyHint": False, "destructiveHint": True,  "idempotentHint": False}
+   TOOL_ANNOTATIONS = {"get_grades": _READ, ..., "send_message": _WRITE_NON_IDEMPOTENT}
+   ```
+
+   🟢 **`edupage-mcp` has 31 of 31 tools classified and 12 of 31 declared as writes** — the first
+   row on any of these three tiers whose write count is quotable rather than derived.
+
+2. **Emit a `tools.lock.json`**: one SHA-256 per tool over its *signature* — annotations,
+   description and input schema. 🟢 **`global-education-mcp` ships exactly this**, and its own
+   logging wrapper preserves `__doc__` *"damit der `tools.lock.json`-Hash stabil bleibt"*.
+
+3. **Fail CI when the lockfile and the source disagree**, and require the diff in the PR that
+   changes a tool. 🔵 **This is the step that converts the file from documentation into a
+   control.**
+
+4. **In the engagement contract, reference the lockfile hash rather than a tool count.** A count
+   in prose is what drifted; a hash cannot.
+
+5. 🔴 **Enumerate per `P18` (a)–(d) anyway, on the deployment you are actually given.** A
+   lockfile pins what the build registers. It does not pin what a `GATED` or `DYNAMIC` server
+   serves under someone else's configuration, and `P18`'s amendment still governs that.
+
+🔴 **Known limit, stated so it is not discovered later.** A lockfile makes a surface *checkable*,
+not *bounded*: a `DYNAMIC` server that walks a table assembled at runtime can ship a stable
+lockfile and serve a different set. 🔵 **`P21` and `P18` are complements** — `P21` proves the
+build has not changed, `P18` measures what the deployment serves.
+
+## 🆕 🟢 `P22` — place a repository's region on two weak channels in conjunction *(p142 — all regions)*
+
+**Sourced from:** this KB withdrawing its own ten-pass finding. 🔵 **Written up as a pattern
+because the failure it prevents is one every studio doing regional sourcing will hit.**
+
+**The problem.** You need to know where a candidate repository comes from — for a regional
+engagement, a data-residency question, or a procurement conversation. 🔴 **Neither obvious channel
+works alone**: author email domains are free-mail six times out of eight, and the commit UTC
+offset is ambiguous across regions for **every American country**.
+
+**The recipe.**
+
+1. **Read the commit offsets**, not the author names. `git log --format=%ad --date=format:%z`.
+   An offset is written by the author's machine and cannot be edited by a later reader.
+2. 🔴 **Refuse to book any offset shared across two regions.** `-0300`, `-0400`, `-0500`,
+   `-0600`, `-0700` are each shared between North America and LATAM; `+0000` is what a CI
+   container writes and is evidence of nothing.
+3. 🔴 **Then look at what you refused.** If the refusals cluster in the region reporting zero,
+   your zero is about the instrument — `T32`. 🟢 **Always print a second region's count as a
+   control**, even when nobody asked for it; an implausible zero beside a plausible one is what
+   makes the plausible one checkable.
+4. **For the refused rows, extract hardcoded hostnames from tracked source** — excluding
+   `node_modules`, vendored trees, lockfiles and placeholder hosts. 🔵 **Require three or more
+   labels**: `service.name.tld` is a host the code must reach; `name.tld` is a registrable name,
+   and `scraper.py` is neither.
+5. **Book only where every country-bearing host agrees on one of the candidate regions.**
+   Disagreement stays `UNMAPPED`. 🟢 **The conjunction of an ambiguous offset and a single-region
+   ccTLD host is publishable where neither half is** — `T33`.
+6. 🔴 **Exclude ccTLDs that are filename extensions.** `.py` Paraguay / Python, `.do` Dominican
+   Republic / Struts action, `.cu` Cuba / CUDA, `.cl` Chile / OpenCL — and 🔴 **declare the
+   coverage you lose**, because the alternative is booking Paraguay off `auth.py`.
+7. 🔴 **Do not treat `.edu` as a US signal.** `aula-virtual.unav.edu` is the Universidad de
+   Navarra, in Spain, on a pre-2001 registration. Record it as corroboration; wait for a ccTLD.
+8. 🔴 **Do not let `\b` end your hostname match.** `123.dkr.ecr.us-east-1.amazonaws.com` parses
+   as the `.us` host `dkr.ecr.us` — a cloud region identifier booked as a country.
+9. 🟢 **Validate against a row you already placed by another method.** This KB's control is
+   `campus-cli`, placed in Peru passes ago by reading its README and re-placed by the instrument
+   from 16 hardcoded `upc.edu.pe` hosts.
+
+**What it bought, on 44 rows:** the offset channel placed **23** (12 EMEA, 11 APAC, 🔴 **0
+American**); the conjunction placed **16 of the 19** it had refused — 🟢 **13 LATAM and 3
+Canada**. Instruments: [`p142-origin-at-scale`](code/p142-origin-at-scale/README.md) and
+[`p142-americas-disambiguation`](code/p142-americas-disambiguation/README.md), 21 tests between
+them, every homograph regression pinned.
+
 **Pass 140, 2026-10-12.** 🆕 **`P19` is added, and it is the first pattern on this page sourced
 from a row that already SHIPS the control rather than needing one wrapped around it.** 🔁 **`P18`
 is amended at step 5**: enumerate per *deployment configuration*, not per package — because

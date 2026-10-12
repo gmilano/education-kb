@@ -6,6 +6,63 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
+**Pass 142, 2026-10-12.** 🔴 **`ACTION DF` refuted: the licence a consumer gets from veraPDF
+depends on which MODULE it resolves, not on the project.** 🟢 **And a foundational row is added
+that this page has never had a category for — a permissively licensed, read-only connector over
+UNESCO and OECD education statistics, which is a primary source for the figures `intel/market.md`
+has had to take from vendor blogs.**
+
+### 🔴 `ACTION DF` — veraPDF's grant is per-module, and 3 of 3 jars say nothing
+
+[`p142-verapdf-module-grant`](../compose/code/p142-verapdf-module-grant/README.md). p140's
+parent-chain walker, **executed unchanged**; only the coordinates are new.
+
+| coordinate | own POM | effective licence | depth | jar licence text |
+|---|---|---|---|---|
+| `org.verapdf:core:1.30.3` | 🔴 NONE | **GPL-3.0 *or* MPL-2.0** *(from `verapdf-parent`)* | **4** | 🔴 `SILENT` — 460 entries |
+| 🔴 **`org.verapdf:verapdf-xmp-core:1.30.3`** | 🟢 **BSD-3-Clause** | 🟢 **BSD-3-Clause** | 4 | 🔴 `SILENT` — 78 entries |
+| `org.verapdf:validation-model:1.30.3` | 🔴 NONE | **GPL-3.0 *or* MPL-2.0** | 4 | 🔴 `SILENT` — 369 entries |
+| 🔴 `org.verapdf:xmp-core:1.30.3` | — | — | — | 🔴 **404 — never published** |
+
+**What a studio has to do differently.** veraPDF is the PDF/UA validator — the component you
+reach for when course material has to meet an accessibility obligation. 🔴 **The election between
+GPL-3.0 and MPL-2.0 applies to `core` and `validation-model` and does NOT arise for
+`verapdf-xmp-core`, which is BSD-3-Clause.** A scanner reading the named umbrella coordinate
+reports nothing and the umbrella has no jar at all.
+
+🔵 **`org.verapdf:xmp-core` was never a coordinate.** p141 read it out of
+`<modules><module>xmp-core</module></modules>`, and **a `<module>` entry is a source-tree path,
+not an artifactId** — the directory `xmp-core/` builds `verapdf-xmp-core`. Any probe deriving
+coordinates from a `<modules>` block inherits this error; it is pinned as a test.
+
+### 🆕 🟢 The education-statistics layer — a foundational tier this page did not have
+
+| repo | licence | what it is |
+|---|---|---|
+| 🟢 [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | 🟢 **MIT**, `LICENSE` present, declared in `pyproject.toml` | 🟢 **UNESCO UIS (4 000+ indicators) and OECD *Education at a Glance*, over SDMX, with no API key.** 151 commits, HEAD **2026-10-04**, EMEA (`+0200` ×70). **10 tools, every name a literal, every one `readOnlyHint: true` — zero write tools.** Full MCP `ToolAnnotations` on 10 of 10, and 🟢 **a `tools.lock.json` that SHA-256-hashes each tool's annotations, description and schema** |
+| 🟢 [`alcastaro/opendata-latam-mcp`](https://github.com/alcastaro/opendata-latam-mcp) | 🟢 **MIT** | 7 national CKAN open-data portals (AR, CL, DO, EC, MX, PA, UY), 15 628 datasets, cross-country parallel search. 🟢 **LATAM-placed on government hosts in 8 countries.** Not education-specific; the regional-evidence layer for engagements that need one |
+
+🔵 **Why these belong on a *foundations* page rather than only on the agents shelf.** Every
+regional figure this KB carries — market size, adoption rate, CAGR by region — currently comes
+from market-research marketing pages, and `intel/market.md` says so each pass. 🟢 **UNESCO UIS and
+OECD EAG are the primary sources those pages are re-quoting**, and there is now an MIT-licensed,
+read-only, annotation-complete client for both.
+
+🔴 **And it cannot run here.** `api.uis.unesco.org` and `sdmx.oecd.org` both answer `000` through
+this environment's proxy. 🔵 **This is the most actionable entry the blocked-source ledger has
+ever carried: two hostnames, one MIT dependency, and the figure channel this KB has been missing
+for twenty passes.**
+
+### 🟢 The practice worth copying off this page's newest row
+
+`tools.lock.json` is a **tool-surface lockfile**: one SHA-256 per tool over its signature
+(annotations + description + input schema), committed. 🔵 **This KB has built four instruments to
+detect what that file prevents** — `p139-tool-count-drift`, `description-drift-audit`,
+`p141-agent-surface-gate`, `p142-github-only-tier`. 🟢 **A row that pins its own surface by hash
+makes all four unnecessary against it**, and the repository's own comment states the intent: the
+logging wrapper preserves `__doc__` *"damit der `tools.lock.json`-Hash stabil bleibt"*. Adopted
+as pattern `P21`.
+
 **Pass 141, 2026-10-12.** 🔴 **`ACTION DC` applied p140's parent-chain walk to every Maven
 coordinate this KB cites, and three further rows change verdict — so `T26` is not a property of
 two artefacts but of Maven's inheritance model.** 🔴 **`ACTION DA` found the opposite failure

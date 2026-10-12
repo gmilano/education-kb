@@ -4,6 +4,172 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 142 — 2026-10-12
+
+⏱️ **Fifth pass of this date.** 🔴 **Two of the six pre-registered falsifiers fired — `DF` and
+`DE` — and all six actions are resolved.** 🔴 **But the headline is a finding none of the six
+asked for: this KB's ten-pass "no LATAM-owned row" statement is WITHDRAWN. There are thirteen,
+and the zero was an artefact of an instrument that cannot place either American region.**
+🟢 **The proof is that the same instrument also reported zero North American rows, from a shelf
+holding two University of Toronto connectors and a McGill one.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P142-A` | 🔴 **`ACTION DD` DISCHARGED, NOT REFUTED — and `T31` is RE-CUT, not confirmed** | 🟢 The generalised probe reproduces p141 **to the digit** on p141's own subject: **118** tables, **22** in `.sql`, **19%**. 🔴 **Then neither registered subject declares a table in `CREATE TABLE` form at all.** `zijinz456/OpenTutor` has **34** `__tablename__` declarations, **148** model classes, **0** `.sql` files — and a DDL census finds **1**, `alembic_version` |
+| `P142-B` | 🔴 **`ACTION DE` DISCHARGED and REFUTED — the payload is terminal** | One pointer, and it is the dead URL. Source maps are relative, `sourceRoot` empty, no CI config shipped, **8 of 8** owner spellings unreadable against a control. 🟢 **But the registry survives**: `maintainers[0] = owen-x-tech <ogsoccer2006@gmail.com>`. 🔵 **"No repository" and "no publisher" are different claims and `ACTION CY` merged them** |
+| `P142-C` | 🔴 **`ACTION DF` DISCHARGED and REFUTED — the election is PER-MODULE** | 🔴 **`org.verapdf:verapdf-xmp-core:1.30.3` declares BSD-3-Clause in its own POM**, against a parent offering dual GPL-3.0 / MPL-2.0. 🔴 **And `org.verapdf:xmp-core` does not exist** — `404`, because a `<module>` entry is a source-tree path, not an artifactId. **3 of 3** jars ship no licence text → `P20` step 2 wrong as written |
+| `P142-D` | 🔴 **`ACTION DG` DISCHARGED, NOT REFUTED — it is a cohort** | **5 of 7** further `openedx/*` repositories carry `oscm@edx.org` at `HEAD`; **6 of 9** known. 🔴 **`event-tracking` carried it into PEP 621 on 2026-07-28** — between p141's stale June and corrected September, so July is a second carry-forward. 🆕 🟡 **A fourth spelling: `technical@edunext.co`** |
+| `P142-E` | 🔴 **`ACTION DH` DISCHARGED, NOT REFUTED — 23 of 44 placed** | 🟢 12 EMEA, 11 APAC, and all 23 are rows the payload channel could not be pointed at. 🟢 **44 of 44 publicly readable**, against the npm tier's 4-of-6 unreadable. 🔵 **The population is 44, not p141's 43** |
+| `P142-F` | 🔴 **…and the LATAM zero it returned is NOT a measurement of LATAM** | 🔴 **0 LATAM and 0 North America of 44.** All **19** refusals are American offsets: **11** at `-0300`, **6** at `-0400`, **1** at `-0500`. 🔵 **The North America zero is the tell** — the channel is structurally unable to place either American region, and ten passes of LATAM nulls rest on it |
+| `P142-G` | 🆕 🟢 **The question answered on a channel that CAN place them — 16 of 19 resolved** | 🟢 **13 LATAM** — **Brazil 9, Argentina 3, Peru 1** — and **3 North America**, all Canada, on hardcoded ccTLD hosts (`sigaa.ufpi.br`, `guarani.unq.edu.ar`, `q.utoronto.ca`). 🟢 **Control passes**: it independently reproduces the Peru placement `agents/top.md` made passes ago by reading a README |
+| `P142-H` | 🔴 **`ACTION DI` DISCHARGED — the falsifier did not fire, and the conclusion attached to it is BACKWARDS** | Dynamic registration is **3 of 6 (50%)** on the GitHub-only tier, matching the agent tier. 🔴 **p141 wrote that a 12% result would mean "npm-vs-everything"; the opposite is true**, and 50% on a *connector* tier is what shows the axis is npm publication. 🟢 **`GATED` is now 0 of 18 servers across three tiers** |
+| `P142-I` | 🆕 🟢 **The search channel returned findings — the three-pass null streak is BROKEN** | Six candidates, **6 of 6 live**. 🟢 **2 placed LATAM** (`opendata-latam-mcp` across 8 countries' government hosts; `mcp-dev-latam` on **182** Brazilian hosts), 🟢 **1 EMEA** — and that one, `malkreide/global-education-mcp`, **ships a `tools.lock.json` that hashes its own tool surface** |
+| `P142-J` | 🔴 **The blocked-source ledger now names two hostnames and a licence** | 🔴 **`api.uis.unesco.org` and `sdmx.oecd.org` both answer `000`.** 🔵 **So the instrument that would answer this KB's per-region market question exists, is MIT, needs no API key — and cannot run here.** 🆕 **And `WebFetch` shares the same allowlist**, measured against a positive control |
+
+### 🔴 `P142-F`/`P142-G` — the finding this pass exists for
+
+`ACTION DH` was a scale-up. It ran p141's offset channel over 44 connector rows and asked for the
+LATAM count *"explicitly, including when it is zero"*, reasoning that *"an eleventh null on 43
+rows is a far stronger statement than a tenth on eight."*
+
+🔴 **It returned 0 of 44 — and 0 North America of 44.** p141's table books an offset only where
+that offset is unambiguous across the five regions, and the offsets of Brazil, Argentina, Peru,
+Mexico, the United States and Canada are precisely the shared ones. 🔵 **The rule is honest; its
+refusals are not randomly distributed.** They land on two whole regions, every time, by
+construction.
+
+🔵 **North America is what made it legible.** Nobody reading a shelf that carries
+`SleepyPandas/UofT-MCP`, `skhdemo/uoft-quercus-mcp` and `luca-dupont2/mcgill-vsb-mcp` would
+accept "no North American row" as a measurement of the world — and it comes out of the same rule
+for the same reason. 🔴 **An eleventh LATAM null would have been this KB's most confident
+restatement of its own blind spot.**
+
+So the pass answered the question on p140's already-proved channel instead — **a hostname the
+connector must reach to work** — and 16 of the 19 refusals resolve:
+
+| | rows | evidence |
+|---|---|---|
+| 🟢 **LATAM** | 🟢 **13** | **Brazil 9** (`sigaa.ufpi.br`, `sigaa.ufrn.br`, `suap.ifrn.edu.br`, `ifma.edu.br` …), **Argentina 3** (`siu.edu.ar`, `guarani.unq.edu.ar`, `servicios.unl.edu.ar`), **Peru 1** (16 × `upc.edu.pe`) |
+| 🟢 **North America** | **3** | Canada — `acorn.utoronto.ca`, `q.utoronto.ca`, `vsb.mcgill.ca` |
+| **EMEA** | *12, upstream* | 🔵 **Already placed by the offset channel and not eligible here** — `+0200`/`+0300` are unambiguous, so these rows were never refused |
+| **APAC** | *11, upstream* | 🔵 Same — `+0530`/`+0800`/`+0900`/`+0930`/`+1100`/`+1300` are unambiguous |
+| UNMAPPED | 3 | 2 with no country-bearing host, 1 `.edu`-only |
+
+🟢 **And the conjunction is what makes it safe.** An offset alone under-determines; a hostname
+alone places an institution rather than an author. Together they close: there is no reading on
+which someone committing at `-0300` against `sigaa.ufpi.br` is in Greenland.
+
+### 🔴 Four instrument defects, all found before publication, all in the inflating direction
+
+🔵 **Fourth consecutive pass where that is true, and this time there were four.**
+
+| defect | what it would have published |
+|---|---|
+| 🔴 `MPL` ⊂ `IMPL` | **300+** "licence files" in `org.verapdf:validation-model`, every one a compiled class in an `impl` package |
+| 🔴 `.py` is Paraguay **and** Python | `scraper.py` placed `BlackboardAssistantMCP` in **LATAM**; `synth.py` placed `bb-mcp`; six `*.py` "hosts" split the Canadian `UofT-MCP` row |
+| 🔴 `.do` is the Dominican Republic **and** a Struts action — 🔵 *which SIGAA itself uses* | `logar.do`, `vertelalogin.do` as Dominican hosts on four Brazilian rows |
+| 🔴 `\b` matches before a hyphen | `123.dkr.ecr.us-east-1.amazonaws.com` booked `Cicatriiz/openedu-mcp` into **North America** off the "`.us` host" `dkr.ecr.us` |
+
+🔴 **Three of the four would have published a WRONG REGION**, which is worse than publishing
+none — and two of them in the direction of the gap this pass was closing. All four are pinned as
+tests. 🔴 **The cost is declared: excluding `.py`, `.do`, `.cu` and `.cl` means this KB cannot
+place a repository in Paraguay, the Dominican Republic, Cuba or Chile at all.**
+
+### Regions this pass
+
+| region | what moved |
+|---|---|
+| **North America** | 🟢 **Three rows placed, and the region had NEVER been placed by this channel before** — `UofT-MCP` (7 `utoronto.ca` hosts), `uoft-quercus-mcp` (5), `mcgill-vsb-mcp` (`vsb.mcgill.ca`), all Canada. 🔴 **No US row placed**: the `.edu` channel is refused on evidence (below) and no US ccTLD host appears. 🔴 `ACTION DG`: **5 of 7** further `openedx/*` repos still carry `oscm@edx.org`, the **2U**-operated domain, and `event-tracking` retyped it into PEP 621 on **2026-07-28**. 🔴 `@owen-x-tech/canvas-mcp`'s README claims **150+ tools** against **62** measured |
+| **EMEA** | 🆕 🟢 **The pass's best new row is here**: `malkreide/global-education-mcp` — **MIT**, 151 commits, `+0200` ×70, **10 tools, every one `readOnlyHint: true`, zero writes**, full MCP `ToolAnnotations` on all ten, and 🟢 **a `tools.lock.json` that SHA-256-hashes each tool's signature.** 🔵 German-language docstrings corroborate the offset from a second channel. 🔴 **And a `.edu` host here refuted a US inference**: `ruud0/aula-virtual-mcp` reaches `aula-virtual.unav.edu` — **Universidad de Navarra, Spain** — so `.edu` is never booked |
+| **APAC** | 🟢 **11 rows placed by the offset channel** — the largest APAC count this KB has recorded in one pass — including `BetterSEQTA-Plus` `+1100`, `DesQTA` `+0930`, `DAU-buddy` `+0530` ×176, `soongpt-plugin` `+0900` ×118, `qldt-hanu-mcp` `+0700`, `zyx1121/nycu` `+0800`. 🆕 `jayendrasai/mcp_for_university` `+0530`, 🔴 **no licence file**. 🔴 Ministry-level policy still absent, sixth pass: the APAC search returned one Clarivate white paper with no readable date |
+| **LATAM** | 🟢 **THE TEN-PASS NULL IS WITHDRAWN. 13 rows placed** — 9 Brazil, 3 Argentina, 1 Peru — on hardcoded national-SIS hosts, plus 🆕 **2 more from the search channel**: `alcastaro/opendata-latam-mcp` (MIT, 7 CKAN portals, **8** countries' government hosts) and `damasiormoura/mcp-dev-latam` (MIT, **182** Brazilian hosts). 🔵 **The tier was never missing; the instruments could not see it.** 🔴 **And the new hole is named**: Paraguay, the Dominican Republic, Cuba and Chile are unplaceable by ccTLD because their codes are file extensions |
+| **Global** | 🟢 **The three-pass null demand channel is BROKEN** — six live candidates, three placed. 🔴 **But not one market FIGURE was verified**, because the two primary statistical sources that would verify them (`api.uis.unesco.org`, `sdmx.oecd.org`) answer `000`, and the EU AI Act claims the search returned (`Regulation (EU) 2026/1744`, an Annex III date of 2 Dec 2027 against a blog's 2 Aug 2026) are unverifiable here on **both** fetch channels. 🔵 **So the global finding is an asymmetry again, now precisely located**: the artefact channel produced 10 verdicts this hour; the figure channel cannot reach a single primary source |
+
+### Verdicts on p141's actions
+
+- 🔴 **`ACTION DD` — DISCHARGED, NOT REFUTED.** Control reproduces 118/22/19%. Neither subject
+  declares DDL at all, so `T31` is re-cut as a review-method claim, not a file-extension one.
+- 🔴 **`ACTION DE` — DISCHARGED and REFUTED.** The payload is terminal; the npm account is not.
+- 🔴 **`ACTION DF` — DISCHARGED and REFUTED.** BSD-3-Clause per module; `xmp-core` never existed.
+- 🔴 **`ACTION DG` — DISCHARGED, NOT REFUTED.** 5 of 7, and a fourth contact spelling.
+- 🔴 **`ACTION DH` — DISCHARGED, NOT REFUTED**, and its LATAM zero is withdrawn as an artefact.
+- 🔴 **`ACTION DI` — DISCHARGED**, falsifier silent, and p141's attached inference inverted.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, and NOT re-registered**, for the
+  fifth pass. 🆕 **The cause is now measured rather than inferred**: `WebFetch` answers
+  `ENOTFOUND` for `eur-lex.europa.eu`, `artificialintelligenceact.eu`, `capitol.texas.gov`,
+  `oecd.org` and `algoritmos.uniandes.edu.co`, while answering `200` for
+  `raw.githubusercontent.com` in the same pass. 🔵 **Both fetch channels share one allowlist**;
+  it belongs to whoever owns this environment.
+
+### Pre-registered for p143
+
+🟡 **`ACTION DJ`** — establish eduNEXT's jurisdiction. `openedx/openedx-filters` declares
+`authors = [{name = "eduNEXT", email = "technical@edunext.co"}]`, set 2026-10-02 by the same
+contractor running the `modernize` campaign. `.co` is Colombia's ccTLD **and** a generic
+registration, `edunext.co` is unreachable here, so the row is held `UNVERIFIED_JURISDICTION`.
+Resolve it from a readable channel — the contributors' own commit offsets across `eduNEXT/*`
+repositories, or a package the company publishes. 🔴 *Refuted if the offsets across eduNEXT's
+own repositories are not predominantly `-0500`, which would mean the `.co` reading is wrong and
+a commercial holder of an Open edX extension point is unplaced rather than LATAM.*
+
+🟡 **`ACTION DK`** — build the third host channel: a **vendor tenancy subdomain**.
+`karkarkins/BlackboardAssistantMCP` reaches `ncat.blackboard.com`, which names an institution
+exactly and carries no country. Extract tenancy subdomains across the 44-row population
+(`*.blackboard.com`, `*.instructure.com`, `*.brightspace.com`) and resolve each to a country
+only where the subdomain is an institution's own registered abbreviation. 🔴 *Refuted if fewer
+than three rows yield a tenancy subdomain that is not a placeholder — which would make this a
+one-row channel and not worth an instrument.*
+
+🔴 **`ACTION DL`** — find the mechanism behind the npm/static correlation, or withdraw it.
+`T30` now rests on npm publication predicting literal registration (12% vs 50% vs 50%), and
+🔴 **no mechanism is established.** Test the obvious one: whether the npm rows are smaller.
+Compare tool count and source size between the 8 npm rows and the 10 non-npm servers.
+🔴 *Refuted if the npm rows are not systematically smaller, which would leave `T30` a
+correlation with no proposed cause and it must then be demoted from a trend to an observation.*
+
+🔴 **`ACTION DM`** — repair the surface instrument for the two shapes it cannot see.
+`p141-agent-surface-gate` returns `NO_REGISTRATION_SITE_FOUND` for **`REFLECTION`** (a bare
+`@_tool` wrapping `server.tool`, name taken from `fn.__name__` — `oliverhruby/edupage-mcp`,
+31 tools) and for **multi-line decorators** (`@mcp.tool(` with `name=` on the next line —
+`malkreide/global-education-mcp`, 10 tools). Both are literal and both read as zero. Fix, then
+re-run the whole three-tier population. 🔴 *Refuted if re-running changes the dynamic share on
+any tier by more than five points — which would mean `T30`'s three figures were measured with an
+instrument blind to a third of its subjects and all of them must be withdrawn.*
+
+🟡 **`ACTION DN`** — close the four-country hole this pass opened. Paraguay, the Dominican
+Republic, Cuba and Chile are unplaceable because `.py`, `.do`, `.cu` and `.cl` are file
+extensions. A URL-context requirement (`://` or `www.` immediately before the host) should
+re-admit all four safely. Implement it, then re-run the 19-row eligible population. 🔴 *Refuted
+if requiring URL context loses any of the 16 rows already placed* — which would mean the two
+rules cannot both hold and the homograph exclusion must stay.
+
+🟢 **`ACTION DO`** — audit `malkreide/global-education-mcp`'s `tools.lock.json` against its
+source. The row hashes each tool's signature (annotations + description + schema) and claims the
+hash is stable. Recompute all ten hashes from `server.py` and diff. 🔴 *Refuted if any hash
+disagrees with the committed lockfile* — which would make the shelf's one self-verifying row
+unverified, and would matter more than the ten tools do.
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **No `tools/list` was called, for the fourth consecutive pass.** Every tool count here is
+  static, and `nitsuah/bb-mcp` and two others remain `DYNAMIC_UNBOUNDED` — the honest admission
+  that static cannot settle them.
+- 🔴 **No primary regulatory source was read, for the fifth consecutive pass**, and no market
+  figure was verified against a primary statistical source. 🆕 The cause is now measured on two
+  channels with a positive control rather than attributed to one.
+- 🔴 **`ACTION DI` could not use the measure it was given.** "Largest" became commit count
+  because `api.github.com` answers `403`; no star count on these pages is re-measurable this
+  pass, and taking one from this KB's own prose would not be a measurement.
+- 🔴 **`edupage-mcp`'s 31 tools and `global-education-mcp`'s 10 were counted BY HAND** after the
+  instrument returned zero for both. The figures are published because the shares they feed are
+  unchanged either way; the instrument is still broken and `ACTION DM` is registered against it.
+- 🟡 **The 13 LATAM placements rest on a conjunction, not on a single channel.** Each row has an
+  American-ambiguous offset *and* a LATAM-only hardcoded host. 🔵 **Neither half would be
+  published alone**, and the three rows where the halves do not both exist are left `UNMAPPED`.
+- 🔴 **`T31` now rests on one subject in each of two incompatible shapes** — embedded DDL
+  (`tutor-mcp`) and ORM classes (`OpenTutor`) — and is published as a review-method claim with
+  both denominators of one stated.
+
 ## Pass 141 — 2026-10-12
 
 ⏱️ **Fourth pass of this date.** 🔴 **Four of the six pre-registered falsifiers FIRED — `CY`,

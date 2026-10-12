@@ -1,0 +1,73 @@
+subject	kind	channel	status	head_or_version	note
+github.com/Agso-o/sigaa-calendar	repo	git-smart-http	200	d5dac190bf30e0a6573db1e6c7f2dc2c37a3f4e7	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/BetterSEQTA/BetterSEQTA-Plus	repo	git-smart-http	200	47077f77d7faef4da21069d80c9d1203041854e3	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/BetterSEQTA/DesQTA	repo	git-smart-http	200	c38f4f15cdc52e27c7dcc021e381fc20b6cba4ee	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/HAL-XP/mcp-pronotes	repo	git-smart-http	200	9328f305c1adca6b6d77e118731a89d6119393cb	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/Haris0059/ibu-mcp	repo	git-smart-http	200	6609c8f0985db35747116a3ae50dda282db92677	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/MartinSA04/ntnu-mcp	repo	git-smart-http	200	62ccc4cfee91842f296b66ea4fe64cefa8458cbb	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/MatheusMach/QuantoFalta	repo	git-smart-http	200	9e2d7202e510ef719a595fce3f79d608bebf4940	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/NiccoloSalvini/mcp-blackboard-ucsc	repo	git-smart-http	200	633220d7a4f270385a605e54a551f0ccc6aa5cc5	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/P1ckle3/blackboard-mcp	repo	git-smart-http	200	32af42d9742d93e1be4b33b49095823a04f1604b	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/Piyushtanwani/DAU-buddy	repo	git-smart-http	200	341fe319126a0ffa89931658ce3f45f25530d3b9	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/RubsNeto/SigaaUI	repo	git-smart-http	200	08f8357603727f30e13e6ebf612c86db0b26edf7	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/SIU-Toba/docker-guarani	repo	git-smart-http	200	427c551a708f22ffa5b0ea7f38656cf6267d4d26	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/SleepyPandas/UofT-MCP	repo	git-smart-http	200	12f751976f07e4af7360b1007d5f738879823d86	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/alejooroncoy/campus-cli	repo	git-smart-http	200	2a1d9487dab1d6ccac5652c322e3176f8c4d5593	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/barneslardo/sis-demo	repo	git-smart-http	200	559550c9aec7fd8a1218ed500bb2a42396768070	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/chenning42/iserv-mcp	repo	git-smart-http	200	dd1d66cf08701ead604ef271c57f0d9f337d6609	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/despedite/siu-guarani	repo	git-smart-http	200	e944ff8480eba8149a5c986bbcecbb43e70392df	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/divyarthjain/vtop-bhopal-mcp	repo	git-smart-http	200	7ffdf2aea3a79cb1d00ab386ab8a02ad6732f051	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/edwyj/ddl-killer	repo	git-smart-http	200	b3fbc758252ee1edb2f97c430275a0bea10791e2	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/eugeborzone/Auto_Grade_Guarani	repo	git-smart-http	200	35b9cda15da38a156b6cdbc22429a33dc4f46a9e	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/fabrica-de-inovacao/expeditto	repo	git-smart-http	200	3421306756dfda01436a79ad2ddf8e73f500f5ad	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/fakelag28/vsuet-timetable-api-mcp	repo	git-smart-http	200	62447556bb5887802afda7ccdc02f21d9ef16d9a	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/felipedias-ie/blackboard-mcp	repo	git-smart-http	200	73fb032e14d3fecce396a5a0bf59404ca62dbe29	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/filipecalegario/auto-sigaa	repo	git-smart-http	200	435d40aec1371b16f26b2938aed18d763be22e9b	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/frjunioalves/suap-mcp	repo	git-smart-http	200	26467647d370983543212a782af08d25dfebb681	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/ink-waffle/sisu-mcp	repo	git-smart-http	200	c20eccd2f264b2a63fb28c3ce36d22a33fcc29ac	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/joojdev/academic-tracker-mcp	repo	git-smart-http	200	8ac9574c727f75c817778d10f385325530d8aa09	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/juliancasaburi/siu-guarani-promedio-extension	repo	git-smart-http	200	6962638adbddd1e8baf397d698b5fe4506f54aeb	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/karkarkins/BlackboardAssistantMCP	repo	git-smart-http	200	d5250cd577b815402fc5f749da8e3c89cff14cf8	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/krzysztofbury/librus-mcp	repo	git-smart-http	200	57558ce4668c5a98d013d02d1dd1ec370a5292d0	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/luca-dupont2/mcgill-vsb-mcp	repo	git-smart-http	200	f71efb49ebb309b70a13c05c31799111176a6d49	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/mhlavac/edupage-mcp	repo	git-smart-http	200	f684d71cdb1a8e1245d42db08aa213ece6ea00fa	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/nitsuah/bb-mcp	repo	git-smart-http	200	d06e76878586b69e2f1c3559c7a12ac673072f3f	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/oliverhruby/edupage-mcp	repo	git-smart-http	200	2862c0e097aee824afb81f68622635cd995047be	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/qxbao/qldt-hanu-mcp	repo	git-smart-http	200	c22def1edff4ae1fc2f6f3e5e5f21c4e035ffa84	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/ruud0/aula-virtual-mcp	repo	git-smart-http	200	eb629830ba21adee0aed761f3f8e4ec83b7e774c	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/sandraschi/classroom-mcp	repo	git-smart-http	200	7cae5aa087f6f2229eccf186afdbeb80f478da24	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/saytooyum/AI-Based-Timetable-Generation-System	repo	git-smart-http	200	3a0256b31c2de29e095c77cab64b920dd93e5b84	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/skhdemo/uoft-quercus-mcp	repo	git-smart-http	200	c371c376c937d6490e56414773d18bcaf74c6300	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/st22209/Parent-Portal	repo	git-smart-http	200	66309071139d1d090b0c401f2f088d6041efa610	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/trindadetiago/sigaa-caiu	repo	git-smart-http	200	7373c6abac62dfa59ed673b002b1d80988d6da0b	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/yourssu/soongpt-plugin	repo	git-smart-http	200	0643131b201fd36bf839f4337c8c721417aef530	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/zavora-ai/mcp-student-records	repo	git-smart-http	200	aaa3d6b644d4bc5ca7cd56f722003b5be6a5920c	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/zyx1121/nycu	repo	git-smart-http	200	dba5d057048c0d617027b15117ff34c93abd7cc6	DH connector population; cloned --filter=blob:none; github.com HTML is 403 at this proxy
+github.com/malkreide/global-education-mcp	repo	git-smart-http	200	26f7cd2972b9e58a24cbebde87deaaace96ec13f	search-channel candidate, verified this pass
+github.com/Cicatriiz/openedu-mcp	repo	git-smart-http	200	2302ef27f511b401fb60e5c09bdfd13bd3818400	search-channel candidate, verified this pass
+github.com/acestein13/campusintel-mcp	repo	git-smart-http	200	51b9ea147eb81af7599fdf53e2d95423de261ecc	search-channel candidate, verified this pass
+github.com/alcastaro/opendata-latam-mcp	repo	git-smart-http	200	615fe2f491a919fe04641feec9dba26e3a4fb497	search-channel candidate, verified this pass
+github.com/damasiormoura/mcp-dev-latam	repo	git-smart-http	200	3ea0425570fef2ccff92cbdba52019ae800e019b	search-channel candidate, verified this pass
+github.com/jayendrasai/mcp_for_university	repo	git-smart-http	200	d013c7ad1f872a148cef42edddc55d89e5a87362	search-channel candidate, verified this pass
+github.com/openedx/openedx-learning	repo	git-smart-http	200	b6a58bf88874ccfc7f71eca1154e8b779c0c1ce5	ACTION DG contact-cohort subject
+github.com/openedx/openedx-events	repo	git-smart-http	200	808095ea79ff038f6adb3ccbbae08532779653c6	ACTION DG contact-cohort subject
+github.com/openedx/openedx-filters	repo	git-smart-http	200	f50e385aae3bf99c8f6b47688982c37decd92f94	ACTION DG contact-cohort subject
+github.com/openedx/event-tracking	repo	git-smart-http	200	fb8c7663d2b0142e07f91dd4bedbd0c3a717c51c	ACTION DG contact-cohort subject
+github.com/openedx/code-annotations	repo	git-smart-http	200	9cbbe95f9a617c4d7184e14be268430dd72c3331	ACTION DG contact-cohort subject
+github.com/openedx/edx-lint	repo	git-smart-http	200	ec1b6a1946e2d331221058c063411bc4ece2ac4d	ACTION DG contact-cohort subject
+github.com/openedx/super-csv	repo	git-smart-http	200	9c85ad09a7036a1f81108487fecf36d503ab57f9	ACTION DG contact-cohort subject
+github.com/ArnaudGuiovanna/tutor-mcp	repo	git-smart-http	200	368d637282ad85309ba9f93c827620d2c30f8da2	ACTION DD control subject (reproduces p141: 118/22/19%)
+github.com/zijinz456/OpenTutor	repo	git-smart-http	200	f0142f28e8ed1ab4047e16c9aee5c283a6ee98b7	ACTION DD Python control; 34 __tablename__, 0 .sql
+github.com/gmilano/definitely-not-a-real-repo-p142	control	git-smart-http	fail	-	deliberately nonexistent; MUST be unreadable, and is
+registry.npmjs.org/@owen-x-tech/canvas-mcp	package	npm	200	1.1.0	62 tools (3rd independent count); README claims 150+; maintainer owen-x-tech survives
+registry.npmjs.org/campus-cli	package	npm	200	2.2.3	repository=alejooroncoy/campus-cli — IS npm-published, excluded from the GitHub-only tier
+registry.npmjs.org/bb-mcp	package	npm	200	1.0.0	DIFFERENT project ("MCP server for Bitbucket Server", maintainer g7v, no repository field) — a name collision, not this row
+repo1.maven.org/org/verapdf/core/1.30.3	maven	maven-central	200	1.30.3	ACTION DF; jar ships NO licence text (SILENT)
+repo1.maven.org/org/verapdf/verapdf-xmp-core/1.30.3	maven	maven-central	200	1.30.3	ACTION DF; jar ships NO licence text (SILENT)
+repo1.maven.org/org/verapdf/validation-model/1.30.3	maven	maven-central	200	1.30.3	ACTION DF; jar ships NO licence text (SILENT)
+repo1.maven.org/org/verapdf/xmp-core/1.30.3	maven	maven-central	404	-	coordinate p141 named; NEVER PUBLISHED — a <module> entry is a path, not an artifactId
+api.uis.unesco.org	data-source	https	000	-	UNESCO UIS; unreachable at this proxy — would verify per-country education figures
+sdmx.oecd.org	data-source	https	000	-	OECD Education at a Glance; unreachable at this proxy
+eur-lex.europa.eu	primary-source	https/webfetch	000/ENOTFOUND	-	blocked on BOTH fetch channels
+capitol.texas.gov	primary-source	https	000	-	ACTION CW, unread for a fifth pass
+raw.githubusercontent.com	control	https/webfetch	200/200	-	POSITIVE CONTROL: proves the rows above are an allowlist, not a probe defect

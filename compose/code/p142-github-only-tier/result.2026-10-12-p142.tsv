@@ -1,0 +1,11 @@
+subject	languages	is_mcp_server	literal_sites	dynamic_sites	gated_sites	static_bounds_live	verdict
+BetterSEQTA/BetterSEQTA-Plus	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+BetterSEQTA/DesQTA	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+nitsuah/bb-mcp	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED
+Piyushtanwani/DAU-buddy	python	YES	40	0	0	YES	BOUNDED_STATIC
+yourssu/soongpt-plugin	python	YES	20	0	0	YES	BOUNDED_STATIC
+oliverhruby/edupage-mcp		YES	0	0	0	NO	NO_REGISTRATION_SITE_FOUND
+krzysztofbury/librus-mcp	python	YES	0	23	0	NO	DYNAMIC_UNBOUNDED
+divyarthjain/vtop-bhopal-mcp	js	YES	0	4	0	NO	DYNAMIC_UNBOUNDED
+Agso-o/sigaa-calendar	go	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+juliancasaburi/siu-guarani-promedio-extension	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)

@@ -1,0 +1,8 @@
+channel	subject	finding	verdict
+payload_urls	@owen-x-tech/canvas-mcp 1.1.0	only pointer is https://github.com/owentaylor/canvas-mcp (the dead URL); all other hosts are w3.org/json-schema namespaces, instructure.com docs, or your-*.instructure.com placeholders	NO_NEW_POINTER
+sourcemap_sources	build/*.js.map, build/*.d.ts.map (4 files)	sources=['../src/<name>.ts'] relative; sourceRoot='' empty; no absolute path, no author directory	NO_NEW_POINTER
+ci_config	tarball (12 files)	no .github, no workflow yaml, no .npmignore, no CHANGELOG shipped	NO_NEW_POINTER
+registry_maintainer	npm packument	maintainers[0] = owen-x-tech <ogsoccer2006@gmail.com>; _npmUser identical on both versions; free-mail, no institution	NEW_POINTER_OUTSIDE_PAYLOAD
+ls_remote_sweep	8 candidate owner spellings	all 8 unreadable; nonexistent control also unreadable	NO_SURVIVING_REPO
+tool_count	build/index.js const tools = [...]	62 name literals inside the array, 62 distinct, no push/concat/spread mutation	CONFIRMS_P139_AND_P140
+readme_claim	package/README.md	declares "150+ Tools"	OVER_CLAIM_2.4x

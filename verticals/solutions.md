@@ -6,6 +6,53 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 142, 2026-10-12.** 🆕 **Two national student-information platforms arrive on this page,
+and they arrive with thirteen connectors already written against them.** 🔴 **And veraPDF — the
+accessibility validator a studio reaches for when course material has a compliance obligation —
+turns out to grant different licences per module.**
+
+### 🆕 🟢 The platform tier this page was missing: Brazil's SIGAA/SUAP and Argentina's SIU-Guaraní
+
+[`p142-americas-disambiguation`](../compose/code/p142-americas-disambiguation/README.md) placed
+13 connector rows in LATAM by the hosts they hardcode. 🔵 **Read the other way round, those hosts
+are a platform census** — and the platforms behind them are the ones a Brazilian or Argentine
+engagement actually meets.
+
+| platform | what it is | installations named in connector source | licence posture |
+|---|---|---|---|
+| 🆕 **SIGAA** — *Sistema Integrado de Gestão de Atividades Acadêmicas* | The academic-management system of Brazil's **federal** universities: enrolment, timetable, grades, course history | `sigaa.ufrn.br` (UFRN — the originating university), `sigaa.ufpe.br`, `sigaa.ufc.br`, `sigaa.ufpb.br`, `sigaa.ufpi.br`, `sigaa.sistemas.ufg.br`, `sigaa.sistemas.ufj.edu.br`, `sig.unb.br`, `sis.sig.uema.br` — **9 institutions across 7 connectors** | 🔵 **Not probed this pass.** SIGAA originates at UFRN and is adopted by federal institutions; no licence claim is made here, and 🔴 **this page does not assert one it has not read** |
+| 🆕 **SUAP** — *Sistema Unificado de Administração Pública* | The administrative/academic system of Brazil's **federal institutes** (the IF network) | `suap.ifrn.edu.br` (IFRN — the originating institute), `suap.ifpi.edu.br`, `suap.ifsp.edu.br`, `acad.ifma.edu.br`, `campusparaiso.ifto.edu.br` | 🔵 Same caveat |
+| 🆕 **SIU-Guaraní** | The student system of Argentina's **national** universities, under the SIU consortium | `siu.edu.ar`, `colab.siu.edu.ar`, `repositorio.siu.edu.ar`, `guarani.unq.edu.ar` (Quilmes), `servicios.unl.edu.ar` (Litoral) | 🟢 **`SIU-Toba/docker-guarani` is the consortium's own GitHub organisation** — a platform tier whose *vendor* publishes on GitHub, which is rare on this page |
+| **Blackboard Learn** *(tenancy evidence added)* | Already on this page | 🆕 `ncat.blackboard.com` — a **tenancy subdomain**, the first on this page. 🔵 It names an institution exactly and carries no country | — |
+| **Canvas / Instructure** *(negative evidence)* | Already on this page | 🔴 **`your-institution.instructure.com` is the single most common "hostname" across these shelves and it places nothing.** Worth stating: a Canvas connector's source usually names no real tenancy at all | — |
+
+🔵 **Why this matters more than a row count.** This page's job is platforms a studio can customise.
+🟢 **For Brazil and Argentina the attachment point is now specific**: not "an LMS", but SIGAA, SUAP
+and SIU-Guaraní, with 13 open connectors naming 15 real installations between them. 🔴 **The
+connectors remain one-person projects at 0–10 stars** — their value is that the integration
+surface against three national platforms has been scouted in the open.
+
+🔴 **And the honest gap on the same evidence:** no licence has been read for SIGAA, SUAP or
+SIU-Guaraní, and nothing on this page should be taken as a grant for any of them. 🔵 **The
+connectors are MIT/ISC; the platforms they target are a separate question this pass did not ask.**
+
+### 🔴 veraPDF, the accessibility validator — the election is per-module
+
+[`p142-verapdf-module-grant`](../compose/code/p142-verapdf-module-grant/README.md). A studio
+validating PDF/UA on course material resolves modules, not the umbrella:
+
+| coordinate | effective licence | ships licence text? |
+|---|---|---|
+| `org.verapdf:core:1.30.3` | **GPL-3.0 *or* MPL-2.0**, inherited at depth 4 | 🔴 **no** |
+| `org.verapdf:validation-model:1.30.3` | **GPL-3.0 *or* MPL-2.0**, inherited at depth 4 | 🔴 **no** |
+| 🟢 `org.verapdf:verapdf-xmp-core:1.30.3` | 🟢 **BSD-3-Clause — its own declaration** | 🔴 **no** |
+| 🔴 `org.verapdf:verapdf-library:1.30.3` | the dual offer, in a parent | 🔴 **no jar exists** |
+
+🔵 **Elect MPL-2.0 for the two that need an election, record BSD-3-Clause for the third, and do
+not write "veraPDF is GPL-or-MPL" in a bill of materials** — it is true of two of the three
+artefacts a build pulls. 🔴 **No jar carries licence text, so nothing a consumer unzips will tell
+them any of this.**
+
 **Pass 141, 2026-10-12.** 🔴 **Two of this page's platform rows change character.** Sakai's
 `org.sakaiproject:kernel` aggregator is added to the inheritance ledger — it declares nothing
 and inherits ECL-2.0 at depth 3, like its `impl` sibling. 🆕 **And a platform category this page

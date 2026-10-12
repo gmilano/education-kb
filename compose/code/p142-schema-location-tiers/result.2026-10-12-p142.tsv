@@ -1,0 +1,6 @@
+subject	languages	sql_files	host_files	tables_total	in_sql	host_only	sql_only	both	sql_visible_share	verdict
+ArnaudGuiovanna/tutor-mcp (p141 control)	go+py	4	284	118	22	96	7	15	19%	MINORITY_IN_SQL
+nitsuah/bb-mcp	py+ts	0	29	0	0	0	0	0	0%	NO_DDL_FOUND
+zijinz456/OpenTutor	py+ts	0	597	1	0	1	0	0	0%	MINORITY_IN_SQL
+fabrica-de-inovacao/expeditto	py+ts	0	64	0	0	0	0	0	0%	NO_DDL_FOUND
+SleepyPandas/UofT-MCP	py	0	19	0	0	0	0	0	0%	NO_DDL_FOUND

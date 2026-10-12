@@ -6,6 +6,100 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 142
+
+🔵 **p141 asked whether the module a consumer actually resolves carries the licence its project
+declares. The answer is no — in the permissive direction, which is the one nobody checks.**
+
+### 🔴 `ACTION DF` — the licence election is PER-MODULE, and one coordinate never existed
+
+[`p142-verapdf-module-grant`](../compose/code/p142-verapdf-module-grant/README.md). p140's
+parent-chain walker, **executed unchanged**; only the coordinates are new.
+
+| coordinate | own POM | inherits from | effective licence | depth | jar licence text |
+|---|---|---|---|---|---|
+| `org.verapdf:core:1.30.3` | 🔴 NONE | `org.verapdf:verapdf-parent:1.30.1` | **GPL-3.0 *or* MPL-2.0** | **4** | 🔴 `SILENT` (460 entries) |
+| 🆕 🔴 **`org.verapdf:verapdf-xmp-core:1.30.3`** | 🟢 **BSD-3-Clause** | *(parent offers dual GPL/MPL)* | 🟢 **BSD-3-Clause** | 4 | 🔴 `SILENT` (78 entries) |
+| 🆕 `org.verapdf:validation-model:1.30.3` | 🔴 NONE | `org.verapdf:verapdf-parent:1.30.1` | **GPL-3.0 *or* MPL-2.0** | 4 | 🔴 `SILENT` (369 entries) |
+| 🔴 `org.verapdf:xmp-core:1.30.3` | — | — | — | — | 🔴 **404 — never published** |
+
+🔴 **The falsifier fires.** `verapdf-xmp-core` declares **BSD-3-Clause in its own POM** against a
+parent offering dual GPL-3.0 / MPL-2.0, so the election a studio has to make is per-module and
+`P20` step 2 is wrong as written.
+
+🔵 **And the direction is the opposite of the worry.** The XMP module is *more* permissive than
+the project. A studio electing MPL-2.0 project-wide over-complies on that artefact; one assuming
+the project licence applies uniformly mis-states its own bill of materials **in both directions**.
+
+🔴 **Three of three published jars ship no licence text — `SILENT` across 907 entries.** The grant
+exists only in a POM four levels up, and nothing a consumer unzips says anything at all.
+
+### 🔴 `org.verapdf:xmp-core` does not exist, and the reason generalises to every `<modules>` read
+
+p141 took both coordinate names from `verapdf-library-1.30.3.pom`:
+
+```xml
+<modules><module>xmp-core</module><module>core</module></modules>
+```
+
+🔵 **A `<module>` entry is a path in the source tree, not an artifactId.** The directory
+`xmp-core/` builds the artefact `verapdf-xmp-core`; the directory `core/` happens to build
+`core`, and that coincidence is exactly what made the other name look resolvable. `404` on
+Central, checked in the same run in which `org.verapdf:core` answered `200`. Pinned as a test.
+
+### 🔴 A defect in this probe's own first draft — fourth consecutive pass, same direction
+
+The first draft reported licence text in **every** jar, and every hit was false: it matched entry
+names against a substring list containing `MPL`, and **`MPL` is a substring of `IMPL`**.
+🔴 **`validation-model` returned 300-plus "licence files", all compiled classes in
+`org/verapdf/gf/model/impl/`.** The matcher now anchors on the **basename** and skips code
+extensions; `org/verapdf/xmp/impl/XMPNode.class` is a fixture that must not match.
+
+🔵 **p140's was `SERVER_CTOR`, p141's was `CREATE TABLE … is not`, this pass's are `IMPL` and
+three ccTLD homographs.** Every one inflated, every one caught before publication, every one now
+a test.
+
+### 🆕 Repositories added this pass, measured before being written
+
+| repo | licence · HEAD | region | why it is here |
+|---|---|---|---|
+| 🟢 [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | 🟢 **MIT** · 151 commits · **2026-10-04** | 🟢 **EMEA** `+0200` ×70 | 🟢 **UNESCO UIS (4 000+ indicators) + OECD *Education at a Glance* over SDMX, no API key.** 10 tools, all literal, 🟢 **all `readOnlyHint: true` — zero writes**, full `ToolAnnotations` on 10 of 10, and 🟢 **a `tools.lock.json` hashing each tool's signature.** 🔴 **Both of its data hosts answer `000` here** |
+| 🟢 [`alcastaro/opendata-latam-mcp`](https://github.com/alcastaro/opendata-latam-mcp) | 🟢 **MIT** · 33 commits · **2026-09-30** | 🟢 **LATAM** — hosts in **8** countries | 7 national CKAN portals (AR, CL, DO, EC, MX, PA, UY) behind one MCP server, 15 628 datasets, cross-country parallel search. 🔵 **Not education — but the only LATAM-placed row on these shelves reaching a government data source** |
+| 🟢 [`acestein13/campusintel-mcp`](https://github.com/acestein13/campusintel-mcp) | 🟢 **MIT** · 3 commits · 2026-08-23 | 🔴 `UNMAPPED` (`.edu` only, never booked) | University research, researchers, programmes and institutional data over OpenAlex. **9 literal tools**, `BOUNDED_STATIC`. 🔴 **3 commits** — listed for the tier, not for maturity |
+| 🟡 [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 🟢 **MIT** · 21 commits · 🔴 **2025-06-03** | 🔴 `UNMAPPED` | OER discovery over OpenLibrary + Wikipedia + arXiv. 🔴 **Over a year stale — the oldest row added in twenty passes.** 🔵 And it nearly got a wrong region: a first draft booked it North America off `dkr.ecr.us`, a fragment of an **AWS region string** |
+| 🟡 [`damasiormoura/mcp-dev-latam`](https://github.com/damasiormoura/mcp-dev-latam) | 🟢 **MIT** · 336 commits · **2026-10-05** | 🟢 **LATAM** — **182** Brazilian hosts | Pix / NF-e / banking / fiscal / logistics MCP servers for BR, MX, AR, CO, CL, PE. 🔵 **Not education and not shelved as such** — carried as regional supply evidence: it is the densest LATAM host evidence this KB has measured |
+| 🔴 [`jayendrasai/mcp_for_university`](https://github.com/jayendrasai/mcp_for_university) | 🔴 **no licence file** · 1 commit · 2026-10-09 | APAC `+0530` | 🔴 **Rejected.** Recorded by name so the next pass does not re-find it |
+
+### 🔴 `ACTION DG` — the stale Open edX contact is a cohort, and a fourth spelling appeared
+
+[`p142-contact-cohort`](../compose/code/p142-contact-cohort/README.md). Seven repositories read,
+not the five requested.
+
+| repository | contact at `HEAD` | where | set | by |
+|---|---|---|---|---|
+| 🔴 `openedx/code-annotations` | 🔴 `oscm@edx.org` | `setup.py` | 2025-04-08 | `bmesick@tcril.org` |
+| 🔴 `openedx/edx-lint` | 🔴 `oscm@edx.org` | `setup.cfg` | **2017-03-09** | `cale@edx.org` |
+| 🔴 **`openedx/event-tracking`** | 🔴 **`oscm@edx.org`** | 🔴 **`pyproject.toml`** | 🔴 **2026-07-28** | 🔴 `irfan.ahmad@A006-01919.local` |
+| 🔴 `openedx/openedx-events` | 🔴 `oscm@edx.org` | `setup.py` | 2026-03-31 | `ty@axim.org` |
+| 🔴 `openedx/super-csv` | 🔴 `oscm@edx.org` | `setup.py` | 2019-05-15 | `dstgermain@edx.org` |
+| 🆕 🟡 **`openedx/openedx-filters`** | 🟡 **`technical@edunext.co`** | `pyproject.toml` | **2026-10-02** | `irfanuddinahmad` |
+| 🟢 `openedx/openedx-learning` | 🟢 `dave@axim.org` | `pyproject.toml` | 2026-09-03 | `irfan.ahmad@gmail.com` |
+
+🔴 **5 of 7, and 6 of 9 with p141's two rows.** `event-tracking` is the strongest: the stale
+address was carried into PEP 621 **again on 2026-07-28**, between p141's stale June `XBlock` and
+corrected September `codejail` — so July is a second carry-forward and the correction post-dates
+it. 🔵 **And that commit's author address is a local machine hostname**, `A006-01919.local`, on an
+official `openedx/*` repository.
+
+🟡 **The fourth spelling is not stale — it is commercial.** `openedx/openedx-filters`, AGPL-3.0-or-later,
+declares `authors = [{name = "eduNEXT", email = "technical@edunext.co"}]`. 🔵 **A core
+extension-point library of the platform names a commercial Open edX partner as its author of
+record.** Possibly accurate attribution; it still means *"who do I contact about `openedx-*`"* has
+four answers. 🔴 **The vendor's jurisdiction is NOT established**: `.co` is Colombia's ccTLD and a
+generic registration, `edunext.co` is unreachable here, so the row is held
+`UNVERIFIED_JURISDICTION` → `ACTION DJ`. 🔵 **Declined for exactly the reason the Navarra `.edu`
+counterexample gave one probe over.**
+
 ## 2026-10-12 — Pass 141
 
 🔵 **p140 asked whether a licence that looks missing really is, and twice the answer was no.

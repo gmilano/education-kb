@@ -1,0 +1,7 @@
+# ArnaudGuiovanna/tutor-mcp (p141 control) 118 tables; 22 in .sql (19%); 96 host-only -> MINORITY_IN_SQL
+#   host-only: account_tokens, assessment_adjudications, assessment_attempts, assessment_reviews, async_jobs, audit_events, billing_provider_events, catalog_admin_mutations, cohort_badge_statistics, cohort_concept_statistics, cohort_statistics, cohort_trainers, cohorts, collective_weight_applications
+# nitsuah/bb-mcp               0 tables; 0 in .sql (0%); 0 host-only -> NO_DDL_FOUND
+# zijinz456/OpenTutor          1 tables; 0 in .sql (0%); 1 host-only -> MINORITY_IN_SQL
+#   host-only: alembic_version
+# fabrica-de-inovacao/expeditto 0 tables; 0 in .sql (0%); 0 host-only -> NO_DDL_FOUND
+# SleepyPandas/UofT-MCP        0 tables; 0 in .sql (0%); 0 host-only -> NO_DDL_FOUND

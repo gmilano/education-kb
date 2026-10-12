@@ -1,0 +1,8 @@
+
+# population 44; PLACED 23 (52%); UNMAPPED 21
+# North America   0  -
+# EMEA           12  HAL-XP/mcp-pronotes, Haris0059/ibu-mcp, NiccoloSalvini/mcp-blackboard-ucsc, chenning42/iserv-mcp, fakelag28/vsuet-timetable-api-mcp, felipedias-ie/blackboard-mcp, ink-waffle/sisu-mcp, krzysztofbury/librus-mcp, mhlavac/edupage-mcp, oliverhruby/edupage-mcp, sandraschi/classroom-mcp, zavora-ai/mcp-student-records
+# APAC           11  BetterSEQTA/BetterSEQTA-Plus, BetterSEQTA/DesQTA, P1ckle3/blackboard-mcp, Piyushtanwani/DAU-buddy, divyarthjain/vtop-bhopal-mcp, edwyj/ddl-killer, qxbao/qldt-hanu-mcp, saytooyum/AI-Based-Timetable-Generation-System, st22209/Parent-Portal, yourssu/soongpt-plugin, zyx1121/nycu
+# LATAM           0  -
+# 🔴 LATAM count: 0 of 44
+# bookings REFUSED as cross-region ambiguous: 19  Agso-o/sigaa-calendar, MatheusMach/QuantoFalta, RubsNeto/SigaaUI, SIU-Toba/docker-guarani, SleepyPandas/UofT-MCP, alejooroncoy/campus-cli, despedite/siu-guarani, eugeborzone/Auto_Grade_Guarani, fabrica-de-inovacao/expeditto, filipecalegario/auto-sigaa, frjunioalves/suap-mcp, joojdev/academic-tracker-mcp, juliancasaburi/siu-guarani-promedio-extension, karkarkins/BlackboardAssistantMCP, luca-dupont2/mcgill-vsb-mcp, nitsuah/bb-mcp, ruud0/aula-virtual-mcp, skhdemo/uoft-quercus-mcp, trindadetiago/sigaa-caiu

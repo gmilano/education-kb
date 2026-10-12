@@ -6,6 +6,46 @@ updated: 2026-10-12
 
 # Education — market map and opportunities
 
+**Pass 142, 2026-10-12.** 🔴 **No market figure changed this pass either — but for the first
+time the reason is a named, fixable blocker rather than channel saturation.** 🟢 **The search
+channel itself broke its three-pass null streak**: eight queries plus one targeted retry returned
+**six live repositories**, three of them region-placed, where the previous three passes returned
+nothing at all.
+
+🟢 **And the pass found the instrument this page has needed for twenty passes.**
+[`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) — **MIT**,
+151 commits, **10 read-only tools** — serves **UNESCO UIS** (4 000+ education indicators per
+country) and the **OECD *Education at a Glance*** over SDMX, 🟢 **with no API key.** Those are the
+primary sources that the market-research marketing pages on this page re-quote.
+
+🔴 **`api.uis.unesco.org` and `sdmx.oecd.org` both answer `000` from this environment.** 🔵 **So
+every regional share below is still sourced from a secondary publisher, and the fix is two
+allowlist entries rather than a better search.** That is the most actionable item this page has
+ever carried, and it belongs to whoever owns this environment.
+
+🔴 **The headline correction, though, is to this page's own regional picture.** `ACTION DH` ran
+the commit-offset channel over the 44-row connector population and returned **0 LATAM and 0
+North America**. 🔵 **The second zero is what made the first readable**: that channel refuses any
+offset shared across regions, and every American offset is shared. Re-asked on the hostname
+channel, 🟢 **13 rows are LATAM and 3 are Canada**, so the supply-side entries under **LATAM**
+below are rewritten and this page's ten-pass "no LATAM-owned row" line is withdrawn.
+
+### 🆕 Figures the channel returned this pass, recorded as SECOND-HAND and not adopted
+
+| figure | source class | status |
+|---|---|---|
+| Higher-education AI segment **$4.09B (2026) → $13.46B (2030)**, 34.7% CAGR | market-research marketing page | 🟡 **Recorded, not adopted.** No primary source reachable |
+| North America **36%** share; APAC fastest at **35.3%** CAGR | aggregator citing an aggregator | 🟡 Recorded. 🔵 Consistent in direction with this page's existing rows, which is not corroboration |
+| **OECD 2026 *Digital Education Outlook*** recommends purpose-built educational AI over general-purpose tools | secondary report of a primary source | 🟡 Recorded. 🔴 `oecd.org` unreachable |
+| EU: *"Digital Omnibus on AI, Regulation (EU) 2026/1744"* softening AI-literacy duty from a strict duty to a duty to *support* | single blog | 🔴 **NOT adopted.** `eur-lex.europa.eu` unreachable on **both** fetch channels |
+| EU: Annex III education duties from **2 Dec 2027** *(Commission AI Office slides)* vs **2 Aug 2026** *(a blog)* | two conflicting secondary sources | 🔴 **NOT adopted — they disagree and neither is verifiable here** |
+| LATAM: Universidad de los Andes repository covering **20** LATAM/Caribbean countries, Aug 2026 | secondary summary | 🟡 Recorded. 🔴 `algoritmos.uniandes.edu.co` unreachable |
+
+🔵 **Why they are listed rather than used.** This page's own rule from p136 — a figure gets a base
+year and a publisher class before it gets quoted — is why the spread was resolved then. 🔴 **A
+figure no readable channel can confirm does not become a KB figure**, however often the search
+channel repeats it.
+
 **Pass 141, 2026-10-12.** 🔴 **No market figure changed this pass, for the THIRD consecutive
 time, and the cause is now a finding about the channel rather than about the pass.** Eight
 searches ran — four global plus one per region for North America, EMEA, APAC and LATAM — and
@@ -298,6 +338,31 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 ## Opportunities by region
 
 ### North America
+
+**Pass 142.** 🟢 **The supply side gains its first placements in this region from a measured
+channel, and they are Canadian.** [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP)
+(7 hardcoded `utoronto.ca` hosts incl. `acorn.utoronto.ca`, `idpz.utorauth.utoronto.ca`),
+[`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) (5 hosts) and
+[`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) (`vsb.mcgill.ca`).
+🔵 **Opportunity, stated plainly: the two largest Canadian universities each have an unofficial,
+one-person connector against their student systems and no official one** — the ordinary shape of
+a first engagement.
+
+🔴 **No US row is placed, and this is an instrument limit rather than a finding.** The `.edu`
+channel is refused on evidence — `aula-virtual.unav.edu` is the Universidad de **Navarra** — and
+no US ccTLD host appears in the population. 🔵 **Do not read "0 US rows" as a US gap.**
+
+🔴 **Procurement risk, measured and specific.** `ACTION DG`: **5 of 7** further `openedx/*`
+repositories still carry `oscm@edx.org` — the **2U**-operated domain — at `HEAD`, and
+`openedx/event-tracking` retyped it into PEP 621 on **2026-07-28**. 🔵 **A Open edX engagement
+whose contract names a contact address inherits a four-way ambiguity**: `oscm@edx.org` (6 repos),
+`oscm@openedx.org` (1), `dave@axim.org` (1), `technical@edunext.co` (1). 🟢 **One-line remedy per
+repository, template already committed from p141.**
+
+🔴 **Regulatory channel: unchanged and unread for a fifth pass.** The regional search named FERPA
+and *"states like Colorado and Texas introducing piecemeal requirements"* — which is `ACTION CW`,
+and `capitol.texas.gov` answers `000`.
+
 
 #### 🆕 🔴 p141 — an Open edX core component sends security mail to a domain its steward does not own, and the line was edited four months ago
 
@@ -654,6 +719,34 @@ written down so the K-12 richness above is not mistaken for regional completenes
 
 ### EMEA
 
+**Pass 142.** 🟢 **The strongest new supply row this pass is European, and it is a market-data
+instrument rather than a learner-facing agent.**
+[`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) — MIT, `+0200`
+on 70 of 151 commits, German-language docstrings corroborating the offset from a second channel.
+🟢 **10 tools, all read-only, zero writes, full MCP `ToolAnnotations` on all ten, and a
+`tools.lock.json` hashing each tool's signature.** 🔵 **Opportunity: it is the cheapest credible
+answer to "where do your per-country education figures come from" that a studio can give** — and
+the one this page cannot yet run.
+
+🟢 **12 of the 44 connector rows are EMEA-placed**, the largest regional count the offset channel
+returns: `mcp-pronotes` (France), `librus-mcp` (Poland), two independent `edupage-mcp`
+implementations (Slovakia/Czechia), `iserv-mcp` (Germany), `sisu-mcp`, `ibu-mcp`,
+`vsuet-timetable-api-mcp`, `classroom-mcp`, `mcp-student-records`, `mcp-blackboard-ucsc`,
+`blackboard-mcp`. 🔵 **Two independent connectors against the same national platform (Edupage) is
+the pattern that says a platform has demand and no vendor API story.**
+
+🟢 **And `oliverhruby/edupage-mcp` is the best-governed row on these shelves**: 31 of 31 tools
+carry a declared annotation class, **12 of 31 are writes declared by the row itself**, MIT, bearer
+auth on `MCP_API_KEY`.
+
+🔴 **The regulatory picture is the richest regional return and not one item of it is verifiable
+here.** Emotion recognition in schools banned since Feb 2025; schools as *deployers* not
+providers; Annex III education duties at **2 Dec 2027** against a blog's **2 Aug 2026**; a claimed
+*Regulation (EU) 2026/1744* Digital Omnibus. 🔴 **`eur-lex.europa.eu` and
+`artificialintelligenceact.eu` answer `000` on `curl` and `ENOTFOUND` on `WebFetch`.** 🔵 **An
+EMEA engagement's conformity dates must be taken from the Official Journal, not from this page.**
+
+
 #### 🆕 🟢 p141 — EMEA gains four rows on measured evidence, and the cleanest Maven artefact on the shelf is Oxford's
 
 🟢 **🆕 A Maven `groupId` is origin evidence, and it is stronger than an npm author field.**
@@ -996,6 +1089,27 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+**Pass 142.** 🟢 **11 of the 44 connector rows are APAC-placed — the largest single-pass APAC
+count this KB has recorded.** `BetterSEQTA-Plus` `+1100` and `DesQTA` `+0930` (Australia),
+`Piyushtanwani/DAU-buddy` `+0530` ×176 and `divyarthjain/vtop-bhopal-mcp` `+0530` (India),
+`yourssu/soongpt-plugin` `+0900` ×118 (Korea), `qxbao/qldt-hanu-mcp` `+0700` (Vietnam),
+`zyx1121/nycu` and `edwyj/ddl-killer` `+0800`, `st22209/Parent-Portal` `+1300` (New Zealand),
+`P1ckle3/blackboard-mcp` `+1000`, `saytooyum/AI-Based-Timetable-Generation-System` `+0530`.
+
+🔵 **Opportunity: this is the broadest national coverage on any region's supply side** — six
+countries, each with at least one worked integration against a local platform. 🔴 **And the
+maturity caveat is unchanged**: these are one-person connectors, and **2 of the 11**
+(`BetterSEQTA-Plus`, `DesQTA`) turn out not to be MCP servers at all.
+
+🔴 **Ministry-level policy is absent for the sixth consecutive pass.** The one on-target source
+the regional query returned is a Clarivate white paper covering Mainland China, India, Japan,
+Malaysia, Singapore, South Korea and Taiwan — 🔴 **with no readable publication date** — and the
+remainder of the channel's returns are 2020-vintage. 🟢 One durable item: India's National
+Education Policy added robotics, IoT and big data to grades 8–10.
+
+🆕 `jayendrasai/mcp_for_university` (`+0530`) is rejected: **1 commit, no licence file**.
+
 
 #### 🆕 🟢 p141 — APAC is corroborated from a second channel, gains two rows, and holds the commit bit on Open edX core
 
@@ -1346,6 +1460,50 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+**Pass 142.** 🟢 **This section's premise for ten passes was wrong, and it is rewritten rather
+than extended.** This page has carried *"the only LATAM-origin education agent found"* as a single
+row. 🔴 **There are thirteen**, and the zero was produced by a channel that cannot place either
+American region — proved by its also returning zero North American rows from a shelf holding two
+University of Toronto connectors.
+[`p142-americas-disambiguation`](../compose/code/p142-americas-disambiguation/README.md).
+
+| country | rows | the platform they target |
+|---|---|---|
+| 🟢 **Brazil** | **9** | **SIGAA** (federal universities) — `sigaa.ufrn.br`, `sigaa.ufpe.br`, `sigaa.ufc.br`, `sigaa.ufpb.br`, `sigaa.ufpi.br`, `sigaa.sistemas.ufg.br`, `sig.unb.br`, `sis.sig.uema.br`; **SUAP** (federal institutes) — `suap.ifrn.edu.br`, `suap.ifpi.edu.br`, `suap.ifsp.edu.br`, `acad.ifma.edu.br` |
+| 🟢 **Argentina** | **3** | **SIU-Guaraní** (national universities) — `siu.edu.ar`, `guarani.unq.edu.ar`, `servicios.unl.edu.ar`. 🟢 `SIU-Toba/docker-guarani` is the **consortium's own** GitHub organisation |
+| 🟢 **Peru** | **1** | Blackboard / Aula Virtual at UPC — `aulavirtual.upc.edu.pe`, 570 commits |
+
+🟢 **Two further LATAM-placed rows came from the search channel**, neither education-specific and
+both worth holding: [`alcastaro/opendata-latam-mcp`](https://github.com/alcastaro/opendata-latam-mcp)
+(MIT, **7 national CKAN portals** across AR, CL, DO, EC, MX, PA, UY, 15 628 datasets) and
+[`damasiormoura/mcp-dev-latam`](https://github.com/damasiormoura/mcp-dev-latam) (MIT, 336 commits,
+**182** Brazilian hosts — Pix, NF-e, fiscal).
+
+**Opportunities, restated on the new evidence:**
+
+1. 🟢 **A Brazilian federal-university engagement starts from nine worked SIGAA/SUAP
+   integrations naming nine real installations.** The integration surface is scouted; the
+   maturity is not there. 🔵 **That is the ideal shape for a studio** — the discovery cost is
+   already paid and nothing is productised.
+2. 🟢 **Argentina's SIU consortium publishes on GitHub.** A platform vendor with a public
+   repository is a different (and much easier) conversation than a closed national system.
+3. 🔴 **No LATAM row carries a licence problem**: the thirteen are MIT/ISC where they declare at
+   all. 🔵 The blocker on this tier was never licensing; it was that this KB could not see it.
+4. 🟡 **`opendata-latam-mcp` is the regional-evidence play.** Seven governments' open data behind
+   one MCP server is the fastest route to a defensible per-country baseline while
+   `api.uis.unesco.org` stays unreachable.
+5. 🔴 **The new, honest hole: Paraguay, the Dominican Republic, Cuba and Chile are
+   UNPLACEABLE by this channel**, because `.py`, `.do`, `.cu` and `.cl` are Python, Struts, CUDA
+   and OpenCL file extensions. 🔵 **A LATAM row in those four countries would be invisible to the
+   instrument that found the other thirteen**, and `ACTION DN` is registered to fix it.
+
+🟡 **Demand side: unchanged and thin.** The regional query returned a Universidad de los Andes
+repository covering 20 LATAM/Caribbean countries (Aug 2026), a UAM finding that adoption is
+rising while *"la región carece de marcos regulatorios específicos"* (Mexico, Paraguay), and a
+ParlAmericas session on 15 Sep 2026. 🔴 **`algoritmos.uniandes.edu.co` is unreachable**, so all of
+it is second-hand.
+
 
 #### 🔴 p141 — a TENTH consecutive pass with no LATAM-owned row, and this pass actively declined two chances to fake one
 
@@ -1801,6 +1959,28 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+**Pass 142.** 🟢 **The three-pass null demand channel is broken** — six live repositories, three
+region-placed, from eight queries plus one retry. 🔵 **And the retry is the lesson.** The eight
+registered queries describe *industries* (*"AI education market"*, *"trends"*, *"adoption
+regulation players"*) and returned market-research marketing pages. The ninth described an
+*artefact* — `open source education MCP "agente IA" GitHub Brasil Argentina México universidad` —
+and returned four repositories, two of them LATAM-placed. 🟢 **Same hour, same engine, same
+region: the retrieval that finds rows names code, not markets.** `P138-H` recorded this for
+registries; `T10` is amended for the search channel.
+
+🔴 **Not one market FIGURE was verified, and the cause is now a two-line allowlist request.**
+`api.uis.unesco.org` and `sdmx.oecd.org` answer `000`; `eur-lex.europa.eu`,
+`artificialintelligenceact.eu`, `capitol.texas.gov`, `oecd.org` and `algoritmos.uniandes.edu.co`
+answer `000` on `curl` **and** `ENOTFOUND` on `WebFetch`, while `raw.githubusercontent.com`
+answers `200` on both. 🔵 **The positive control is what turns five passes of "sources blocked"
+from an attribution into a measurement: both fetch channels share one allowlist.**
+
+🔵 **The structural asymmetry, now precisely located.** This hour produced **10 artefact verdicts
+and 2 refutations**, withdrew a ten-pass regional finding, and added 5 rows. 🔴 **The figure
+channel produced zero verified numbers** — not because the demand side is saturated, but because
+every primary statistical source is unreachable and every reachable source is re-quoting them.
+
 
 #### 🔵 p141 — the asymmetry between the two channels is now the global finding
 

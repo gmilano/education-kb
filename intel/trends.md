@@ -6,6 +6,99 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 142 — 2026-10-12
+
+🔴 **Two of this KB's trends are rescoped and one of its own ten-pass findings is withdrawn — and
+all three corrections came from the same source: an instrument whose refusals were not randomly
+distributed.** 🔵 **`T30` was written one pass ago to stop a claim measured on one tier being
+published as a claim about education software. It did not stop this one, because the defect here
+is not scope — it is an instrument that cannot see a whole region and reports that as a zero.**
+
+### 🔵 A register note, because this pass's numbers collide with the append-only history
+
+`T32`–`T35` are the next numbers in the **current** register, which the 2026-10-06 reset
+restarted at `T1`. 🔴 **The append-only logs still contain pre-reset uses of `T32`–`T35` meaning
+entirely different things**, and so do `T26`, `T28` and `T30` — this KB has been living with that
+since the reset without saying so. 🔵 **Stated now rather than discovered by a reader**: a `T`
+number resolves against `intel/trends.md`, and a `T` number inside a dated section of
+`agents/trending.md` or `repos/trending.md` resolves against the register that was current on
+that date. The same applies to `P21`/`P22` in `compose/patterns.md`, where the pre-reset log
+carries an unrelated *"`P22` check 4"*.
+
+### 🆕 🔴 `T32` — a measurement channel's REFUSALS are evidence, and must be reported with the same weight as its results
+
+| | |
+|---|---|
+| **the claim** | 🔴 **When an instrument declines to answer, publish the shape of what it declined, not only the count of what it found.** A channel whose refusals correlate with the question being asked returns a zero that looks exactly like a finding |
+| 🔴 **what forced it** | `ACTION DH`. p141's offset channel placed **23 of 44** connector rows and returned 🔴 **0 LATAM and 0 North America**. **19 of 19 refusals were American offsets** — `-0300`, `-0400`, `-0500` — because those are precisely the offsets shared between the two American regions, and p141's table refuses any shared offset |
+| 🔵 **why the zero was nearly published** | p141 pre-registered *"report the LATAM count explicitly, including when it is zero"*, reasoning that **an eleventh null on 44 rows beats a tenth on eight**. 🔵 **That reasoning is right about sample size and silent about instrument reach.** A bigger population measured through the same blind spot produces a more confident wrong answer |
+| 🟢 **what caught it** | 🔵 **The region nobody was watching.** North America also came back zero, from a shelf carrying `SleepyPandas/UofT-MCP`, `skhdemo/uoft-quercus-mcp` and `luca-dupont2/mcgill-vsb-mcp`. 🟢 **An implausible zero next to the plausible one is what made the plausible one checkable** |
+| **the operational rule** | 🔴 **Before publishing a regional null, ask the instrument for its refusals and check whether they cluster.** If every refusal falls in the region reporting zero, the zero is about the instrument. 🟢 **And report a second region's count even when nobody asked** — it is the cheapest available control |
+| **where it is enforced** | `p142-origin-at-scale` prints the refusal list and per-region counts on every run; `test_origin_scale.py` asserts the five American offsets are still refused, so the limit cannot be silently removed either |
+
+### 🆕 🟢 `T33` — a hardcoded hostname and an ambiguous offset resolve each other; neither resolves alone
+
+| | |
+|---|---|
+| **the claim** | 🟢 **Two weak origin channels in conjunction are stronger than either alone, and the conjunction is publishable where neither half is.** An American commit offset under-determines the region; a hardcoded host names an *institution*, not an author. 🟢 **Together they close** |
+| **the measurement** | [`p142-americas-disambiguation`](../compose/code/p142-americas-disambiguation/README.md): **16 of 19** rows the offset channel refused are placed — 🟢 **13 LATAM** (Brazil 9, Argentina 3, Peru 1) and **3 North America** (Canada) — each on an American-ambiguous offset **plus** a ccTLD host under exactly one candidate region |
+| 🔵 **why it is safe** | There is no reading on which an author committing at `-0300` against `sigaa.ufpi.br` is in Greenland, and none on which one committing at `-0400` against `acorn.utoronto.ca` is in Bolivia. 🔴 **Three rows where only one half exists are left `UNMAPPED`** rather than placed on the half |
+| 🟢 **the control that licenses it** | `alejooroncoy/campus-cli` was placed in **Peru** passes ago by *reading its README*. The instrument reproduces that placement from 16 hardcoded `upc.edu.pe` hosts, unprompted. 🟢 **An instrument that gets a known row right can be trusted on the unknown ones** |
+| 🔴 **the cost, declared** | Four ccTLDs are unusable because they are filename extensions — `.py` Paraguay / Python, `.do` Dominican Republic / Struts action, `.cu` Cuba / CUDA, `.cl` Chile / OpenCL. 🔴 **So this channel cannot place a repository in those four countries at all** |
+
+### 🔁 `T31` RE-CUT — the schema is not "in source instead of `.sql`"; a `CREATE TABLE` census is the wrong instrument for most of this shelf
+
+| | |
+|---|---|
+| **p141's claim** | *"96 of 118 tables are invisible to a `.sql` reader"* — the authoritative schema of a Go/Rust/TS component is embedded in source, measured on **one** subject |
+| 🟢 **the control** | [`p142-schema-location-tiers`](../compose/code/p142-schema-location-tiers/README.md) reproduces p141 **to the digit** on p141's subject: **118** tables, **22** in `.sql`, **19%** |
+| 🔴 **what re-cut it** | `ACTION DD`. 🔴 **Neither registered subject declares a table in `CREATE TABLE` form anywhere.** `nitsuah/bb-mcp` has no persistence at all. `zijinz456/OpenTutor` has **34** `__tablename__` declarations, 148 model classes, 27 Alembic migrations, **0** `.sql` files — and a DDL census finds **1**, `alembic_version` |
+| 🔵 **the corrected claim** | 🔵 **In `tutor-mcp` the DDL moved out of `.sql` into Go strings: still DDL, still greppable. In an ORM project there is no DDL to find.** So `T31` is a claim about **review method**, not about file extensions: a schema enumeration that greps `CREATE TABLE` returns zero on a project with 34 tables |
+| 🔴 **why it matters beyond tidiness** | OpenTutor's 34 include `cognitive_baselines`, `concept_mastery`, `mastery_snapshots`, `preference_signals`, `intervention_outcomes`, `conversation_memories`, `integration_credentials`, `users`. 🔴 **A DPIA has 34 tables to enumerate and the conventional grep finds one** |
+| 🟡 **denominators, stated** | 🔴 **One subject in each of two incompatible shapes.** Published as a method warning with both denominators of one visible, per `T30` |
+
+### 🔁 `T30` RE-CUT — the split is npm-vs-everything, and p141's falsifier pointed the wrong way
+
+| | |
+|---|---|
+| **p141's claim** | A static tool count bounds the live surface on the **npm connector tier** (12% dynamic) and not on the **agent-server tier** (50%) |
+| **the third tier** | [`p142-github-only-tier`](../compose/code/p142-github-only-tier/README.md): GitHub-only connectors, 6 servers, 🔴 **3 dynamic = 50%** |
+| 🔴 **the inversion** | p141 wrote: *"Refuted if the share matches the npm tier's 12% rather than the agent tier's 50% — which would mean the split is npm-vs-everything."* 🔴 **Backwards.** These rows are *connectors*; a connector-like 12% would have shown the axis is **connector-vs-agent**. 🔵 **50% on a connector tier is exactly what shows the axis is npm publication** |
+| 🔵 **so the falsifier was silent while the thing it was built to detect happened** | 🟢 **Which is why a pre-registration has to state the measurement AND the inference separately.** The number was predicted correctly and read wrongly |
+| 🔴 **what is NOT claimed** | 🔴 **No mechanism.** Why publishing to a registry should correlate with literal registration is unestablished; asserting a cause here would be the same error one layer up. `ACTION DL` tests the obvious candidate (npm rows are smaller) and will demote `T30` to an observation if it fails |
+| 🟢 **the clean sub-finding** | 🟢 **`GATED` is now 0 of 18 servers across three tiers.** `T28`'s rescoping to `tutor-mcp`'s maturity is confirmed a third time |
+
+### 🆕 🔴 `T34` — `LITERAL` and `DYNAMIC` were never the two options; there is a third shape and every instrument here is blind to it
+
+| | |
+|---|---|
+| **the claim** | 🔴 **A tool name can be produced by reflection and never written as a string at all.** Any instrument that counts name literals or registration sites reports **zero** for such a server |
+| **shape 1 — `REFLECTION`** | `oliverhruby/edupage-mcp`: a bare `@_tool` decorator wrapping `server.tool()`, with the tool name taken from `fn.__name__`. 🔴 **31 tools; p141's gate returns 0** |
+| **shape 2 — multi-line registration** | `malkreide/global-education-mcp`: `@mcp.tool(` with `name="…"` on the following line. 🔴 **10 tools; p141's line-oriented regex returns 0** |
+| 🔵 **why it is a trend and not a bug report** | Both rows are **fully literal and fully bounded** — the most auditable shape there is — and both read as unmeasurable. 🔴 **An instrument that cannot see the best-behaved rows under-reports exactly the population a studio should prefer** |
+| 🟢 **why the published figures survive** | Hand-reading puts both at `BOUNDED_STATIC`, so the three tiers' dynamic shares are unchanged. 🟢 **Stated because the correction flatters nothing: the numbers held, the instrument did not** |
+| **registered** | `ACTION DM`, with a falsifier that withdraws all three of `T30`'s figures if repair moves any tier by more than five points |
+
+### 🔁 `T10` AMENDED — the search channel is not saturated; it was being asked the wrong kind of question
+
+| | |
+|---|---|
+| **p141's version** | *"Run the regional sweep to confirm saturation, not to find rows"* — after three consecutive passes of zero new findings |
+| 🔴 **what amended it** | The eight registered queries returned nothing again. 🟢 **A ninth, describing an artefact instead of an industry — `open source education MCP "agente IA" GitHub Brasil Argentina México universidad` — returned four live repositories, two of them LATAM-placed** |
+| 🔵 **the corrected instruction** | 🔵 **Industry-shaped queries retrieve market-research marketing pages; artefact-shaped queries retrieve repositories.** Same engine, same hour, same region. 🟢 **`P138-H` recorded this for registries and it generalises to search**: name the code, the platform, the language, the country — never the market |
+| 🟡 **what remains true** | 🔴 **The figure channel IS saturated, and worse than saturated**: every primary statistical source is unreachable here, so the demand side can only be re-quoted. 🔵 **That half of `T10` stands and is now a network finding rather than a sampling one** |
+
+### 🆕 🟢 `T35` — the shelf's best rows declare their own surface, and two of them did it before this KB asked
+
+| | |
+|---|---|
+| **the claim** | 🟢 **Machine-readable self-declaration of a tool surface is appearing on this shelf without prompting, and it makes four of this KB's instruments unnecessary against the rows that have it** |
+| **evidence 1** | `oliverhruby/edupage-mcp`: **31 of 31** tools carry a declared MCP `ToolAnnotations` class — 19 `_READ`, 4 `_WRITE_SAFE`, 3 `_LOCAL_WRITE`, 3 `_WRITE_DESTRUCTIVE`, 2 `_WRITE_NON_IDEMPOTENT`. 🟢 **12 of 31 writes, quotable rather than derived** |
+| **evidence 2** | `malkreide/global-education-mcp`: 10 of 10 annotated, all `readOnlyHint: true`, and 🟢 **a committed `tools.lock.json` holding a SHA-256 per tool over its annotations, description and schema** |
+| 🔵 **the significance** | This KB built `p139-tool-count-drift`, `description-drift-audit`, `p141-agent-surface-gate` and `p142-github-only-tier` to detect what that lockfile prevents. 🟢 **The repository's own comment names the intent**: the logging wrapper preserves `__doc__` *"damit der `tools.lock.json`-Hash stabil bleibt"* |
+| 🔴 **the counter-evidence, in the same pass** | `@owen-x-tech/canvas-mcp`'s README claims **150+ tools** against **62** measured three independent times. 🔴 **Self-declaration is a practice, not a property of the ecosystem** — and it inverts `P138-E`'s *"drift under-documents rather than over-claims"* on the one row whose repository is gone |
+| **adopted as** | pattern `P21` |
+
 ## Pass 141 — 2026-10-12
 
 🔴 **Four of six pre-registered falsifiers fired, and three of this KB's own trends are rescoped
