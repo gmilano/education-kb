@@ -1,0 +1,25 @@
+# subjects: 16   target rows: 18
+# subjects declaring MORE THAN ONE target: 2
+#   krzysztofbury_librus-mcp                       2 targets, tool_sites [35, 39] -> DIVERGE
+#   yourssu_soongpt-plugin                         2 targets, tool_sites [20] -> AGREE
+#
+# ACTION FB falsifier -- another subject with two targets? YES -> NOT REFUTED
+subject	target	key	kind	items	files_in_scope	tool_sites
+Agso-o_sigaa-calendar	-	-	NO_TARGET	0	0	0
+BetterSEQTA_BetterSEQTA-Plus	-	-	NO_TARGET	0	0	0
+BetterSEQTA_DesQTA	-	-	NO_TARGET	0	0	0
+Piyushtanwani_DAU-buddy	-	-	NO_TARGET	0	0	0
+ahmedEid1_lumen	-	-	NO_TARGET	0	0	0
+divyarthjain_vtop-bhopal-mcp	package.json	files	npm-tarball(single)	4	3	0
+hesham0-0nasser_tutor-lms-mcp	-	-	NO_TARGET	0	0	0
+juliancasaburi_siu-guarani-promedio-extension	-	-	NO_TARGET	0	0	0
+krzysztofbury_librus-mcp	tool.hatch.build.targets.wheel	packages	wheel	1	23	35
+krzysztofbury_librus-mcp	tool.hatch.build.targets.sdist	only-include	sdist	16	60	39
+malkreide_global-education-mcp	tool.hatch.build.targets.wheel	packages	wheel	1	4	10
+mohaneesh-03_mcp-tutor	-	-	NO_TARGET	0	0	0
+nirholas_ai-tutor-mcp	package.json	files	npm-tarball(single)	4	8	1
+nitsuah_bb-mcp	-	-	NO_TARGET	0	0	0
+oliverhruby_edupage-mcp	-	-	NO_TARGET	0	0	0
+yourssu_soongpt-plugin	tool.hatch.build.targets.wheel	packages	wheel	1	33	20
+yourssu_soongpt-plugin	tool.hatch.build.targets.sdist	include	sdist	4	42	20
+zijinz456_OpenTutor	-	-	NO_TARGET	0	0	0

@@ -1,0 +1,49 @@
+# mode: --exclude none
+# population: 44
+# placed: 27   CONFLICT: 3   UNPLACED: 14
+#
+subject	region	channel	host	how	where	conflict	lead
+Agso-o_sigaa-calendar	LATAM	cctld	sigaa.ufpi.br	ccTLD .br	internal/sigaa/client.go	-	-
+BetterSEQTA_BetterSEQTA-Plus	CONFLICT	cctld	apps.sace.sa.edu.au	academic ns .edu.au	src/seqta/content/links.json	APAC|EMEA|LATAM|North America	-
+BetterSEQTA_DesQTA	CONFLICT	cctld	phet.colorado.edu	bare .edu (LEAD -- grandfathered non-US exist)	src/mock/data/courseContent.ts	EMEA|North America	-
+HAL-XP_mcp-pronotes	UNPLACED	-	-	-	-	-	-
+Haris0059_ibu-mcp	UNPLACED	-	-	-	-	-	-
+MartinSA04_ntnu-mcp	CONFLICT	cctld	ntnu-mcp.martinsundal.no	ccTLD .no	README.md	EMEA|North America	-
+MatheusMach_QuantoFalta	LATAM	cctld	sis.sig.uema.br	ccTLD .br	extensao/comum.js	-	-
+NiccoloSalvini_mcp-blackboard-ucsc	EMEA	cctld	blackboard.unicatt.it	ccTLD .it	README.md	-	-
+P1ckle3_blackboard-mcp	APAC	cctld	learn.uq.edu.au	academic ns .edu.au	src/blackboard_mcp/auth.py	-	-
+Piyushtanwani_DAU-buddy	APAC	cctld	opac.daiict.ac.in	academic ns .ac.in	.env.example	-	-
+RubsNeto_SigaaUI	LATAM	hardcoded	ufj.edu.br	academic ns .edu.br	extension/content/constants.js	-	-
+SIU-Toba_docker-guarani	LATAM	cctld	colab.siu.edu.ar	academic ns .edu.ar	README.md	-	-
+SleepyPandas_UofT-MCP	North America	hardcoded	acorn.utoronto.ca	ccTLD .ca	uoft_mcp/acorn/client.py	-	-
+alejooroncoy_campus-cli	LATAM	hardcoded	aulavirtual.upc.edu.pe	academic ns .edu.pe	src/providers/blackboard/auth/session.ts	-	-
+barneslardo_sis-demo	UNPLACED	-	-	-	-	-	-
+chenning42_iserv-mcp	EMEA	cctld	xn--mnchen-3ya.iserv.de	ccTLD .de	tests/test_client_security.py	-	-
+despedite_siu-guarani	LATAM	cctld	guarani.unq.edu.ar	academic ns .edu.ar	siu.py	-	-
+divyarthjain_vtop-bhopal-mcp	APAC	cctld	vtopcc.vit.ac.in	academic ns .ac.in	render.yaml	-	-
+edwyj_ddl-killer	APAC	cctld	hitsz.edu.cn	academic ns .edu.cn	app/web/userscript/hitsz-kebiao-export.user.js	-	-
+eugeborzone_Auto_Grade_Guarani	LATAM	cctld	servicios.unl.edu.ar	academic ns .edu.ar	Configuracion.py	-	-
+fabrica-de-inovacao_expeditto	LATAM	cctld	expeditto.fabitz.com.br	ccTLD .br	README.md	-	-
+fakelag28_vsuet-timetable-api-mcp	EMEA	hardcoded	timetable.vsuet.ru	ccTLD .ru	vsuet/client.py	-	-
+felipedias-ie_blackboard-mcp	North America	hardcoded	bb.edu	bare .edu (LEAD -- grandfathered non-US exist)	test/unit.test.ts	-	-
+filipecalegario_auto-sigaa	LATAM	cctld	sigaa.ufpe.br	ccTLD .br	auto_sigaa.py	-	-
+frjunioalves_suap-mcp	LATAM	cctld	suap.ifpi.edu.br	academic ns .edu.br	README.md	-	-
+ink-waffle_sisu-mcp	UNPLACED	-	-	-	-	-	-
+joojdev_academic-tracker-mcp	LATAM	cctld	suap.ifsp.edu.br	academic ns .edu.br	src/webscraping.py	-	-
+juliancasaburi_siu-guarani-promedio-extension	LATAM	cctld	documentacion.siu.edu.ar	academic ns .edu.ar	README.md	-	-
+karkarkins_BlackboardAssistantMCP	UNPLACED	-	-	-	-	-	-
+krzysztofbury_librus-mcp	EMEA	hardcoded	synergia.librus.pl	ccTLD .pl	legacy_reference/tests/test_optimizations.py	-	-
+luca-dupont2_mcgill-vsb-mcp	North America	cctld	vsb.mcgill.ca	ccTLD .ca	README.md	-	-
+mhlavac_edupage-mcp	UNPLACED	-	-	-	-	-	-
+nitsuah_bb-mcp	UNPLACED	-	-	-	-	-	-
+oliverhruby_edupage-mcp	UNPLACED	-	-	-	-	-	-
+qxbao_qldt-hanu-mcp	APAC	hardcoded	qldt.hanu.edu.vn	academic ns .edu.vn	src/client/http.ts	-	-
+ruud0_aula-virtual-mcp	UNPLACED	-	-	-	-	-	-
+sandraschi_classroom-mcp	UNPLACED	-	-	-	-	-	-
+saytooyum_AI-Based-Timetable-Generation-System	UNPLACED	-	-	-	-	-	-
+skhdemo_uoft-quercus-mcp	North America	hardcoded	q.utoronto.ca	ccTLD .ca	tests/test_quercus_tools.py	-	-
+st22209_Parent-Portal	UNPLACED	-	-	-	-	-	-
+trindadetiago_sigaa-caiu	LATAM	cctld	sigaa.ufpb.br	ccTLD .br	README.md	-	-
+yourssu_soongpt-plugin	UNPLACED	-	-	-	-	-	-
+zavora-ai_mcp-student-records	UNPLACED	-	-	-	-	-	-
+zyx1121_nycu	APAC	cctld	e3p.nycu.edu.tw	academic ns .edu.tw	scripts/e3p.py	-	-

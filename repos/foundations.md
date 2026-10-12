@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 149 — 2026-10-12 — the licence census reproduces over 58, the denominator moves, and two of this KB's instruments disagree about evidence strength
+
+🟢 **Every channel this page needs was open**: 🟢 **`git clone` 50 of 50**, 🟢 **`npm pack` 8 of
+8**, 🆕 🟢 **`cargo fetch` + `cargo test` for the Rust row.**
+
+### 🟢 The licence census, reproduced and extended to 58
+
+🟢 **`ACTION FC` re-ran the grant census over the whole population** rather than the 44 this
+page usually quotes. 🟢 **Strict-unlicensed reproduces at 8**, and 🔵 **the eight are now named
+on one line** so no later pass has to re-derive them:
+
+`MatheusMach/QuantoFalta` · `P1ckle3/blackboard-mcp` · `Piyushtanwani/DAU-buddy` ·
+`SIU-Toba/docker-guarani` · `karkarkins/BlackboardAssistantMCP` · `ruud0/aula-virtual-mcp` ·
+`hesham0-0nasser/tutor-lms-mcp` · `@n35da/brightspace-mcp@0.4.0`
+
+🔴 **The denominator is 58, not the 57 p148 quoted** — 44 connectors + 8 npm + **6**
+agent-tier, every one reached. 🟢 **The figure 8 is unaffected**, because every agent-tier row
+but `tutor-lms-mcp` carries a `FILE` grant (`AGPL-3.0`, `MIT`, `MIT`, `Apache-2.0`, `MIT`).
+🔴 **Recorded as a one-row discrepancy to reconcile, not as an error in p148**: the agent tier
+has **no committed subject list**, so the two counts cannot be compared directly.
+🟢 **`ACTION FL` registers the list.**
+
+🔴 **`ACTION FC` itself is REFUTED**: adding eighteen common-title licence forms (`Apache
+License 2.0`, `GPLv2`, `GPL v3`, `BSD 3-Clause`, `MPL 2.0`, …) changes **0 of 58** rows.
+🟢 **So `T72` is confirmed a Fedena-specific artefact outside this shelf's population.**
+🔵 **Exactly one row is `UNIDENTIFIED` under both rules** — `eugeborzone/Auto_Grade_Guarani`,
+a Spanish licence **heading with no licence named under it**, which is not a title-form case.
+🟢 **The matcher is kept anyway**: it is tested, it costs nothing, and the next shelf this KB
+censuses will not be this one.
+
+### 🆕 🔴 `T74` — two of this KB's own instruments disagree about what counts as stronger evidence
+
+🔴 **The page's real finding, and it came out of a reproduction control.**
+
+| module | grant ladder |
+|---|---|
+| `p145-licence-census` | `FILE` → 🟢 **`PKG_ONLY`** → `README_ONLY` → `NONE` |
+| `p147-licence-language` | `FILE` → 🔴 **`README_ONLY`** → `PKG_ONLY` → `NONE` |
+
+🔵 **p145's own docstring states the intent** — *"`README_ONLY` the only mention is prose in a
+README. **Weaker still**"* — weaker, that is, than a licence declared in a package manifest.
+🔴 **p147 silently inverted the two rungs.**
+
+🟢 **It was invisible on the population p147 ran.** Over the 44 connectors the two modules
+agree row for row, because 🔵 **no connector carries both a manifest licence field and a README
+licence heading**, and p147's base tally on the 44 reproduces p145's exactly. 🔴 **p147 never
+ran the npm tier** — where rows carry both — and there it moves **3 of 8**:
+`@owen-x-tech/canvas-mcp@1.1.0` and `eth-moodle-mcp@1.3.3` (**MIT** either way) and
+`moodle-mcp-server-aql@0.1.7` (**AGPL-3.0** either way), each from `PKG_ONLY` to `README_ONLY`.
+
+🟢 **No licence identification changes.** 🔴 **What changes is the evidence class, in the
+weakening direction**: a declared manifest field demoted to a prose mention. 🔵 **p145's order
+is the defensible one.** 🔴 **Deliberately not fixed this pass** — changing the ladder in the
+pass that measures it would mean comparing a modified instrument against published figures,
+the mistake `ACTION EU` was built to avoid. 🟢 **`ACTION FE`.**
+
+### 🟢 `zavora-ai/mcp-student-records` — the strongest pin on the shelf gains a third surface
+
+🟢 **A third declaration surface, set-identical to the manifest**: the **23** tools flagged
+`requires_approval = true` are exactly the **23** names passed to `mcp_2026_server!` as
+`approval_tools`. 🟢 **And the crate now builds and tests here** — 24 of its own tests passing,
+7 added. 🔴 **Its approval gate, though fail-closed at the MCP boundary, is bypassable
+in-process via a `pub` store.** 🔵 **Full detail in `agents/top.md` and `p149-approval-enforcement`.**
+
+### 🟡 `ACTION FB` — the build target behind every `NOT_SHIPPED` figure on this page
+
+🟢 **Named, for all five rows that have an allowlist**: `librus-mcp` **wheel (35)** ·
+`soongpt-plugin` **wheel (20)** · `global-education-mcp` **wheel (10)** ·
+`vtop-bhopal-mcp` **npm tarball (0)** · `ai-tutor-mcp` **npm tarball (1)**. 🟢 **librus
+reproduces p148's 35 / 39 exactly.** 🔴 **`yourssu/soongpt-plugin` declares TWO targets**, which
+p148's key list could not see — 🟢 **but they agree at 20**, so `T68`'s *disagreement* stays a
+single instance while its *structure* generalises to 2 of 5. 🔵 **The two npm rows are
+structurally immune**: one tarball, one `files` key, no second target to disagree with.
+
 ## Pass 148 — 2026-10-12 — the foundational Rust row gets a bidirectional pin, and the `NOT_SHIPPED` rule fails as a general rule
 
 🟢 **The clone and `npm pack` channels are both open** (`T65`), so this page's figures are

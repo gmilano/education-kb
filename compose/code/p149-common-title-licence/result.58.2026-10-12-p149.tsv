@@ -1,0 +1,65 @@
+# population: 58
+# base grants: [('FILE', 39), ('NONE', 8), ('PKG_ONLY', 4), ('README_ONLY', 7)]
+# ext  grants: [('FILE', 39), ('NONE', 8), ('PKG_ONLY', 4), ('README_ONLY', 7)]
+# UNIDENTIFIED: base 1 -> ext 1
+#
+# ACTION FC falsifier -- rows changing class: 0 -> REFUTED
+subject	base_grant	base_licence	ext_grant	ext_licence	evidence	changed
+Agso-o_sigaa-calendar	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+BetterSEQTA_BetterSEQTA-Plus	FILE	MIT	FILE	MIT	LICENSE	-
+BetterSEQTA_DesQTA	FILE	MIT	FILE	MIT	LICENSE	-
+HAL-XP_mcp-pronotes	FILE	MIT	FILE	MIT	LICENSE	-
+Haris0059_ibu-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+MartinSA04_ntnu-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+MatheusMach_QuantoFalta	NONE	-	NONE	-	-	-
+NiccoloSalvini_mcp-blackboard-ucsc	FILE	MIT	FILE	MIT	LICENSE	-
+P1ckle3_blackboard-mcp	NONE	-	NONE	-	-	-
+Piyushtanwani_DAU-buddy	NONE	-	NONE	-	-	-
+RubsNeto_SigaaUI	FILE	MIT	FILE	MIT	LICENSE	-
+SIU-Toba_docker-guarani	NONE	-	NONE	-	-	-
+SleepyPandas_UofT-MCP	FILE	MIT	FILE	MIT	LICENSE	-
+alejooroncoy_campus-cli	FILE	ISC	FILE	ISC	LICENSE	-
+barneslardo_sis-demo	README_ONLY	MIT	README_ONLY	MIT	README	-
+chenning42_iserv-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+despedite_siu-guarani	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+divyarthjain_vtop-bhopal-mcp	FILE	Apache-2.0	FILE	Apache-2.0	LICENSE	-
+edwyj_ddl-killer	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+eugeborzone_Auto_Grade_Guarani	README_ONLY	UNIDENTIFIED	README_ONLY	UNIDENTIFIED	README	-
+fabrica-de-inovacao_expeditto	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+fakelag28_vsuet-timetable-api-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+felipedias-ie_blackboard-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+filipecalegario_auto-sigaa	FILE	MIT	FILE	MIT	LICENSE	-
+frjunioalves_suap-mcp	README_ONLY	MIT	README_ONLY	MIT	README	-
+ink-waffle_sisu-mcp	PKG_ONLY	MIT	PKG_ONLY	MIT	package.json	-
+joojdev_academic-tracker-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+juliancasaburi_siu-guarani-promedio-extension	FILE	MIT	FILE	MIT	LICENSE	-
+karkarkins_BlackboardAssistantMCP	NONE	-	NONE	-	-	-
+krzysztofbury_librus-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+luca-dupont2_mcgill-vsb-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+mhlavac_edupage-mcp	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+nitsuah_bb-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+oliverhruby_edupage-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+qxbao_qldt-hanu-mcp	FILE	LGPL	FILE	LGPL	LICENSE	-
+ruud0_aula-virtual-mcp	NONE	-	NONE	-	-	-
+sandraschi_classroom-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+saytooyum_AI-Based-Timetable-Generation-System	FILE	MIT	FILE	MIT	LICENSE	-
+skhdemo_uoft-quercus-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+st22209_Parent-Portal	FILE	MIT	FILE	MIT	LICENSE	-
+trindadetiago_sigaa-caiu	FILE	MIT	FILE	MIT	LICENSE	-
+yourssu_soongpt-plugin	FILE	MIT	FILE	MIT	LICENSE	-
+zavora-ai_mcp-student-records	FILE	Apache-2.0	FILE	Apache-2.0	LICENSE	-
+zyx1121_nycu	FILE	MIT	FILE	MIT	LICENSE	-
+ahmedEid1_lumen	FILE	AGPL-3.0	FILE	AGPL-3.0	LICENSE	-
+hesham0-0nasser_tutor-lms-mcp	NONE	-	NONE	-	-	-
+malkreide_global-education-mcp	FILE	MIT	FILE	MIT	LICENSE	-
+mohaneesh-03_mcp-tutor	FILE	MIT	FILE	MIT	LICENSE	-
+nirholas_ai-tutor-mcp	FILE	Apache-2.0	FILE	Apache-2.0	LICENSE	-
+zijinz456_OpenTutor	FILE	MIT	FILE	MIT	LICENSE	-
+_imazhar101_mcp-canvas-server-2.1.3	README_ONLY	MIT	README_ONLY	MIT	README	-
+_ink-waffle_moodle-mcp-0.2.0	PKG_ONLY	MIT	PKG_ONLY	MIT	package.json	-
+_n35da_brightspace-mcp-0.4.0	NONE	-	NONE	-	-	-
+_owen-x-tech_canvas-mcp-1.1.0	README_ONLY	MIT	README_ONLY	MIT	README	-
+canvas-mcp-server-2.2.3	PKG_ONLY	MIT	PKG_ONLY	MIT	package.json	-
+eth-moodle-mcp-1.3.3	README_ONLY	MIT	README_ONLY	MIT	README	-
+mcp-canvas-lms-1.0.5	PKG_ONLY	MIT	PKG_ONLY	MIT	package.json	-
+moodle-mcp-server-aql-0.1.7	README_ONLY	AGPL-3.0	README_ONLY	AGPL-3.0	README	-

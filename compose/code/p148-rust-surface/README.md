@@ -32,7 +32,7 @@ lockfile, a classification manifest and a golden name array; this is the first t
 **governance** artefact — a risk class and an approval flag per tool — and 🔴 **the only one
 the repository does not verify itself.** `tests/manifest_test.rs` asserts `m.tools.len() == 46`
 and `requires_approval` on eleven named writes, all read from the manifest. 🔴 **No test
-compares the manifest's names against the router's.** 🟢 **`P32` in `compose/patterns.md` is
+compares the manifest's names against the router's.** 🟢 **`P35` in `compose/patterns.md` is
 the CI gate that closes it.**
 
 ## Method — a brace-tracked reader, not a line grep

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 149 — 2026-10-12
+
+⏱️ **Twelfth pass of this date.** 🟢 **All eight of p148's pre-registered actions (`EW`–`FD`)
+reached.** 🟢 **Three discharged with silent falsifiers, three refuted, one not-refuted with a
+wrong boundary, one undischargeable in this environment** — 🔵 **and two of the three
+refutations found what the action was not looking for.**
+
+🟢 **The pass's two headline results.** 🟢 **Africa is no longer a null**: four jurisdictions
+with dated instruments, closing the gap p148 called the highest-value regional lookup
+outstanding. 🔴 **And `P35` — the governance pattern this KB recommends to clients — has a
+real, fail-closed approval gate that is bypassable in-process**, proved by six gated writes
+succeeding with no approval through a `pub` store.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🆕 🔴 `P149-A` | 🆕 🔴 **A figure published yesterday is WITHDRAWN for ARITHMETIC** | "Twenty-one months earlier than Annex III" is 🔴 **nine**. 🔵 `2026-03-01 → 2027-12-02` **is** 21 — a year transposed. 🔴 **Inflating direction**; the earliest APAC date is **Korea's**, not Vietnam's |
+| 🟡 `P149-B` | 🔴 **`ACTION EW` NOT DISCHARGEABLE — primary text 403** | 🟢 **But the three education entries are NAMED**: uncontrolled-data self-study content · automated examination/assessment/ranking · 🔴 **biometric** behavioural monitoring. 🟡 **A narrowing is confirmed to exist and is unread** |
+| 🟢 `P149-C` | 🟢 **`ACTION EY` DISCHARGED — AFRICA IS NOT A NULL** | **AU Strategy** endorsed **2024-07-18/19** (Action Eight) · **Kenya** 2025–2030, roadmap **2025-12** · **Nigeria** 2025 curriculum reform + **1.5M**-teacher programme · 🟡 **South Africa** framework unpublished. 🔴 **SA's 2024 draft was WITHDRAWN over citations that do not exist** |
+| 🔴 `P149-D`/`E` | 🔴 **`ACTION EX` REFUTED — an ENVIRONMENT limit, not a research gap** | `law.go.kr`, `elaw.klri.re.kr`: 🔴 **403 at CONNECT**. 🔵 **And these are NOT DNS failures** — this proxy resolves hosts, so local lookups fail for everything. 🔴 **p148's `aibasicact.kr ENOTFOUND` is very likely the same 403** |
+| 🔴 **`ACTION EZ`** | 🔴 **REFUTED — and it is the pass's best finding** | `DISAGREE` **still 1**. 🟢 `bb.edu` fixed; 🔴 **`BetterSEQTA/DesQTA` took its place on `sh.rustup.rs`** — the **Rust installer**, `.rs` = Serbia, subject Australian. 🔵 **`CONFLICT` had been masking it.** 🟢 `CONFLICT` 3 → 1 |
+| 🟡 **`ACTION FA`** | 🟢 **NOT refuted — 🔴 but its boundary is wrong** | **1** placement moves (`youtu.be`). 🔴 **5 of its 6 hosts could NEVER have placed a row** — 🟢 **`CCTLD`'s omission of repurposed suffixes was load-bearing and unmeasured.** 🔴 **It misses `sh.rustup.rs`** |
+| 🆕 🔴 `P149-F` | 🆕 🔴 **`T70` is a class of FOUR kinds, two of them excluded** | platform · 🆕 **dev tooling** · 🆕 **news media** (9 hosts, 4 regions, one subject) · 🆕 **government portal** (17 `.gob.pe`). 🟢 **Diagnostic mode: `DISAGREE` → 0, coverage 37 → 39 of 44** |
+| 🟢 **`ACTION FB`** | 🟢 **DISCHARGED — and p148's "single instance" was its own key list** | 🔴 **`yourssu/soongpt-plugin` declares two targets too**; p148's table lacked `(sdist, include)`. 🟡 **`T68` SPLITS**: structure generalises **2 of 5**, 🔴 **divergence stays one.** 🟢 **librus reproduces 35 / 39** |
+| 🔴 **`ACTION FC`** | 🔴 **REFUTED — 0 of 58 change class** | 🟢 **`T72` confirmed Fedena-specific.** 🟢 **Strict-unlicensed reproduces at 8, named.** 🔴 **Denominator is 58, not 57** |
+| 🆕 🔴 **`T74`** | 🆕 🔴 **Two published instruments order the grant ladder DIFFERENTLY** | p145: `FILE > PKG_ONLY > README_ONLY`. 🔴 **p147 inverted the last two.** 🟢 **Invisible on the 44**; 🔴 **moves 3 of 8 npm rows, in the WEAKENING direction** |
+| 🆕 🔴 **`T75`** | 🆕 🔴 **`P32` named TWO live patterns, and this KB published both** | p147's multilingual licence gate and p148's manifest-contract CI gate. 🟢 **Fixed: the later is now `P35`**, first allocation keeps the number. 🔵 **Same cause as the thesis-number collisions `P144-F` recorded** |
+| 🟢 **`ACTION FD`** | 🟢 **DISCHARGED — the gate is REAL, fail-closed, 🔴 and bypassable** | 🟢 **`cargo test` runs: 24 repo tests + 7 ours = 31.** 🟢 **Fail-closed on four conditions.** 🆕 🟢 **A THIRD surface: manifest's 23 `requires_approval` ≡ macro's 23 `approval_tools`, SET-IDENTICAL.** 🔴 **6 gated writes succeed through `pub store`** |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **Four new instruments, 82 tests, all passing, all offline with authored fixtures**:
+  [`p149-placement-exclusions`](compose/code/p149-placement-exclusions/README.md) (26),
+  [`p149-build-target`](compose/code/p149-build-target/README.md) (22),
+  [`p149-common-title-licence`](compose/code/p149-common-title-licence/README.md) (27),
+  [`p149-approval-enforcement`](compose/code/p149-approval-enforcement/README.md) (7, **Rust**).
+- 🟢 **The first Rust test this shelf has RUN rather than read** — `cargo fetch` and
+  `cargo test --offline` both work, against a git-pinned SDK at rev `4dac4301`.
+- 🟢 **A third declaration surface found on the best-governed row**, and pinned set-identical.
+- 🟢 **A new compose pattern, `P36`** — place a vendor by region without trusting a suffix,
+  with the four non-institutional host kinds named and a per-region sale for each.
+- 🔴 **A pattern-identifier collision found and fixed**: p148's `P32` is now `P35`.
+- 🆕 **Three theses, `T74`–`T76`**, and 🔴 **one published figure withdrawn for arithmetic**.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **EMEA** | 🟢 **Africa CLOSED — the gap p148 ranked highest** | AU Strategy (Action Eight) · Kenya 2025–2030 · Nigeria 1.5M teachers · SA framework unpublished. 🔴 **Residual gap is a FIGURE, not evidence** |
+| **APAC** | 🟢 **Vietnam's scope sharpened, 🔴 p148's month figure withdrawn** | Three named entries; **9** months not 21; Korea earliest at **11**. 🔴 **Narrowing clause confirmed to exist, unread** |
+| **LATAM** | 🟢 **16 placements survive the new exclusions** | 🟢 **Coverage 37 → 39 of 44** under the diagnostic mode; 🔴 **17 `.gob.pe` hosts are a government-portal class, not institutions** |
+| **North America** | 🔵 **one row LOSES a placement, correctly** | `felipedias-ie/blackboard-mcp` was North America on `bb.edu`; 🟢 **now `OFFSET_ONLY`** |
+| **Global** | 🔴 **tenth consecutive pass with no agent row from search** | 🔴 **Not searched this pass** — eight actions, all instrument or policy work. 🟢 **Recorded, not hidden** |
+
+### Pre-registered for p150
+
+🔵 **Eight actions, in `intel/open-gaps.md`**: `FE` (fix `T74`'s inverted ladder),
+`FF` (close `P35`'s data-layer gap, or re-pitch the pattern), `FG` (exclude news-media and
+government-portal hosts by role), `FH` (the three-surface `P35` CI gate), `FI` (Africa's
+first figure), `FJ` (audit the other rows for a third surface), `FK` (break the ten-pass
+agent-search streak), `FL` (commit the agent tier's subject list), `FM` (the
+identifier-collision gate, per `T75`).
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **`P35`'s data-layer gap is PROVED and NOT FIXED.** This KB recommends `P35` to clients,
+  and this pass establishes that its approval gate does not reach the store. 🔵 **`ACTION FF`
+  is registered, and until it lands `P35` must be pitched as an MCP-surface control with the
+  data layer named as out of scope** — `compose/patterns.md` now says so at the top of `P35`.
+- 🔴 **`T74` is proved and not fixed**, deliberately: correcting the ladder in the same pass
+  that measured it would mean comparing a modified instrument against published figures,
+  which is the mistake `ACTION EU` was built to avoid. 🔵 **`ACTION FE`.**
+- 🔴 **No primary legal text was read, for the second consecutive pass**, and 🟢 **this is now
+  recorded as an environment limit rather than a research gap.** Korean and Vietnamese
+  primary text join `capitol.texas.gov` as standing requests, 🟢 **stated once and not
+  re-registered.**
+- 🔴 **Africa has policy and no numbers.** Four strategies, one withdrawn draft, zero adoption
+  or spend figures. 🔵 **An informed gap, and a smaller one than a null.**
+- 🔴 **The agent-search streak reached ten passes without being tested**, because all eight
+  actions were instrument or policy work. 🟢 **`ACTION FK` restores it, with a falsifier that
+  would convert the streak into a measured property of the ecosystem.**
+- 🔴 **`FD`'s conditions 2–4 were read, not run.** A full protocol round-trip needs a live
+  client session at version `2026-07-28` with sealed state; 🟢 **condition 1 and the bypass
+  are executed.** 🔵 **Stated because the gate's strength is being asserted partly from
+  source.**
+- 🔴 **`capitol.texas.gov` unread for a tenth pass**, not re-probed and 🟢 **not re-registered.**
+
 ## Pass 148 — 2026-10-12
 
 ⏱️ **Eleventh pass of this date.** 🔵 **p147 did not update this ledger**; its verdicts are in
@@ -41,7 +127,7 @@ twenty-one months earlier than the EU's Annex III.
   [`p148-manifest-allowlist`](compose/code/p148-manifest-allowlist/README.md) (12),
   [`p148-channel-agreement`](compose/code/p148-channel-agreement/README.md) (11),
   [`p148-guard-preserving`](compose/code/p148-guard-preserving/README.md) (9).
-- 🟢 **A new compose pattern, `P32`** — the manifest-contract CI gate, with the exact CI step,
+- 🟢 **A new compose pattern, `P35`** — the manifest-contract CI gate, with the exact CI step,
   the three drift modes a count check misses, and a per-region sale for each of the four
   regions.
 - 🟢 **Three vertical licences read from a clone** instead of off a rendered page, and
@@ -67,7 +153,7 @@ sole-basis qualifier), `EX` (Korean primary text on `law.go.kr` / `elaw.klri.re.
 `EY` (close the Africa null by country name + the AU Continental AI Strategy),
 `EZ` (promote `T67` to an exclusion and re-run `ER`), `FA` (platform-host exclusion for
 `T70`), `FB` (name the build target behind every `NOT_SHIPPED` figure, per `T68`),
-`FC` (common-title licence forms, per `T72`), `FD` (the **enforcement** half of `P32`).
+`FC` (common-title licence forms, per `T72`), `FD` (the **enforcement** half of `P35`).
 
 ### 🔴 What this pass did NOT achieve, said rather than hidden
 
@@ -79,9 +165,9 @@ sole-basis qualifier), `EX` (Korean primary text on `law.go.kr` / `elaw.klri.re.
 - 🔴 **`T67` was proved to be the sole cause of a refutation and was not fixed.** The
   one-line exclusion is deferred to `ACTION EZ` on purpose: changing the probe this pass
   would have meant comparing a modified instrument against published figures.
-- 🔴 **`P32`'s behavioural half does not exist.** It proves the manifest and the router
+- 🔴 **`P35`'s behavioural half does not exist.** It proves the manifest and the router
   agree on **names**; that the server *enforces* `requires_approval` is untested, and
-  `P32` is being recommended on the strength of a declaration. `ACTION FD`.
+  `P35` is being recommended on the strength of a declaration. `ACTION FD`.
 - 🔴 **Africa is still zero.** One targeted search, three named countries, nothing.
 - 🔴 **`capitol.texas.gov` unread for a ninth pass**, not re-probed and 🟢 **not
   re-registered** — an environment allowlist request, stated once.

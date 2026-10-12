@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-12
 ---
 
+**Pass 149, 2026-10-12.** 🔴 **No vertical was re-measured this pass, and that is a choice
+worth stating rather than hiding.** 🔵 **All eight pre-registered actions (`EW`–`FD`) were
+instrument, licence or policy work**, and 🟢 **none of them touched a vertical platform** — so
+every row below carries p148's measurement and p148's date, unchanged.
+
+🟢 **What did change for this page is a caveat on one of its claims**, and it is upstream of
+the verticals rather than in them:
+
+- 🟢 **`T72` is CLOSED as out-of-population.** The `Fedena` refusal that opens this page was
+  the evidence for `T72` — *a licence named in words rather than in an SPDX token*. 🔴 **An
+  extended matcher carrying eighteen common-title forms changed 0 of 58 rows on the connector
+  and agent tiers**, so 🟢 **`T72` is confirmed specific to Fedena and must not be cited as a
+  shelf-wide licence-reading gap.** 🔵 **The `Fedena` refusal itself stands untouched** — it
+  rests on a clone with no licence body and a last commit in **2012**, not on a matcher.
+- 🔴 **The licence figures on this page were read by `p147-licence-language`, which `T74` now
+  shows carries an inverted grant ladder.** 🟢 **No vertical row is affected**: the inversion
+  only moves a row that has **both** a package-manifest licence field and a README licence
+  heading, and 🟢 **the three verticals read from a clone in p148 all have a `FILE` grant**,
+  which is the top rung either way. 🔵 **Stated because the same module produced both sets of
+  figures**, and a reader checking one should know the defect's reach.
+
+🔵 **And one regional note for this page's engagement map.** 🟢 **The Africa null closed this
+pass** (`P149-C`: AU Continental AI Strategy, Kenya, Nigeria, South Africa — see
+`intel/market.md`). 🔴 **No African deployment of any platform on this page was measured**, and
+🔴 **no adoption figure exists for any of the four jurisdictions** — so 🔵 **the right reading is
+that the policy case for an African education engagement is now documentable while the
+platform evidence is not.** 🟢 **`ACTION FI` registers the figure.**
+
 **Pass 148, 2026-10-12.** 🔴 **The one permissively-licensed SIS that 2026 comparison tables
 name does not ship a licence, and has not been touched in a decade.** 🟢 **Three vertical
 licences are now read from a clone instead of off a rendered page.**

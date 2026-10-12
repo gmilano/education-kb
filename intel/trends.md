@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 149 — 2026-10-12
+
+🔵 **Thesis high-water mark before this pass: `T73`. Next free: `T74`.** 🟢 **This pass takes
+`T74`–`T76`**, computed from the register rather than assumed (`ACTION EN`'s rule, holding) —
+🔴 **and `T75` exists because the same discipline was NOT applied to pattern numbers.**
+
+| thesis | statement | the measurement behind it |
+|---|---|---|
+| 🆕 🔴 **`T74`** | 🆕 **Two instruments can implement the same documented ladder in different orders, and the population they were tested on can hide it.** A rung order is a design decision; it must be asserted, not assumed shared | 🔴 **`p145-licence-census` is `FILE > PKG_ONLY > README_ONLY`, matching its own docstring (*"README_ONLY … weaker still"*); `p147-licence-language` inverted the last two.** 🟢 **Over the 44 connectors the two agree row for row**, because no connector carries both a manifest licence field and a README heading. 🔴 **p147 never ran the npm tier, where 3 of 8 rows carry both** — and there the inversion demotes a declared manifest licence to a prose mention. 🟢 **No licence identification changes; only the evidence class, in the weakening direction** |
+| 🆕 🔴 **`T75`** | 🆕 **An identifier allocated from a high-water mark nobody re-reads will eventually name two things.** The fix is a committed collision check, not more care | 🔴 **`P32` named TWO live patterns for a pass** — p147's multilingual licence gate and p148's manifest-contract CI gate, both published, both referenced. 🟢 **Resolved: first allocation keeps the number, the later becomes `P35`.** 🔵 **The thesis register has `ACTION EN`'s computed-high-water rule and the pattern register does not** — which is why this collision happened in the patterns file and not here. 🟢 **`ACTION FM`** |
+| 🆕 🔴 **`T76`** | 🆕 **A nationally-bound suffix is not an institution signal. The host's ROLE decides, and role cannot be read from the suffix** | 🔴 **Four non-institutional kinds measured over 50 clones**: platform/shortener (`youtu.be` → EMEA), 🆕 **developer tooling** (`sh.rustup.rs` → EMEA on an Australian subject, from a `curl … \| sh` line), 🆕 **news media** (**9** hosts across **4** regions in one subject, an RSS fixture list), 🆕 **government portal** (**17** `.gob.pe` hosts). 🔵 **`T70` was the first instance and was written as an incident**; this is the class. 🟢 **Excluding by host name, never by suffix** — a real `kuleuven.be` or `bg.ac.rs` must keep its placement |
+
+### 🟢 `T67` and `T70` after this pass
+
+| thesis | movement |
+|---|---|
+| 🟢 **`T67`** — a bare `.edu` is a registration date, not a country | 🟢 **PROMOTED from observation to enforced rule.** A bare `.edu` never places and is kept as a `lead`. 🔴 **And it was NOT the sole cause of the channel disagreement** — `ACTION EZ` refuted. 🔵 **Its cleanest demonstration yet**: `alejooroncoy/campus-cli` holds `dspace.mit.edu`, `utsystem.edu`, `yalecollege.yale.edu`, `www.artic.edu` **and `cv.uoc.edu` (Barcelona)** in one tree — and the old rule would have called all five North America **without raising a `CONFLICT`**, because it mapped every bare `.edu` to one region |
+| 🟡 **`T70`** — no category for a platform host | 🟡 **A category exists and is too small.** 🟢 **Generalised into `T76`.** 🔴 **Five of the six hosts `ACTION FA` named could never have placed a row** — their suffixes are not in the ccTLD map — 🟢 **so `p147-npm-region`'s decision to omit repurposed suffixes was load-bearing and nobody had measured it** |
+| 🟡 **`T68`** — one manifest can carry two disagreeing allowlists | 🟡 **SPLIT into two claims.** 🟢 **The two-target STRUCTURE generalises — 2 of 5** (`yourssu/soongpt-plugin`, which p148's key list could not see). 🔴 **The DISAGREEMENT does not — `librus-mcp` only.** 🔵 **Cite `T68` as the first, not the second** |
+| 🟢 **`T72`** — a licence named in words, not in a token | 🟢 **CLOSED as out-of-population.** Eighteen common-title forms change **0 of 58** rows; `T72` is a Fedena-specific artefact |
+| 🔴 **`T71`** — Vietnam lists education as high-risk | 🟡 **SHARPENED and still caveated.** 🟢 **Three entries named.** 🔴 **A narrowing clause is confirmed to exist and is unread** (Allen & Gledhill: *"not all AI systems used in these sectors will automatically be classified as high-risk"*), and 🔴 **primary text is 403 at this environment's gateway** |
+
+### 🔴 A new defect class for this shelf: the derived figure nobody re-derived
+
+🔴 **`P149-A`: p148 published, twice, that Vietnam's 2027-03-01 is "twenty-one months earlier"
+than the EU's 2027-12-02. It is nine.** 🔵 **The arithmetic that yields 21 is
+`2026-03-01 → 2027-12-02`** — a year transposed in an intermediate step.
+
+🟢 **No source was wrong and no date was wrong.** 🟢 **Every date p148 published reproduces.**
+🔴 **Only the subtraction did not** — and 🔴 **it failed in the inflating direction**,
+overstating Vietnam's regulatory lead by twelve months, which is the direction that makes the
+APAC pitch sound more urgent.
+
+🔵 **This is a third class, distinct from the two this shelf already tracks.** `T73` is the
+**unsourced** figure. `T63`/`T72` are the **mis-read** figure. 🆕 **This is the figure whose
+inputs are all correct and whose derivation is not** — and 🔴 **no citation check can catch
+it**, because every cited input verifies. 🟢 **Two further corrections fell out of the same
+recomputation**: the earliest APAC date is **Korea's ~2027-01**, not Vietnam's, and
+**2027-09-01 is the education-specific deadline** — the later of Vietnam's two, not the
+earlier.
+
+### 🟢 The regional trend this pass establishes
+
+🟢 **Africa moves from "no evidence" to "policy mapped, market unmeasured"** — four
+jurisdictions with dated instruments (AU Continental AI Strategy, endorsed **2024-07-18/19**;
+Kenya 2025–2030 with a **2025-12** roadmap; Nigeria's 2025 curriculum reform and a **1.5M**
+teacher programme; South Africa's unpublished DBE framework). 🔴 **Zero adoption, spend or
+deployment figures for any of them.** 🔵 **A different gap, and a smaller one.**
+
+🔴 **The trend worth quoting to a client drafting AI policy**: 🔴 **South Africa's 2024 draft
+national AI policy framework was published for comment and then WITHDRAWN, after concerns it
+contained incorrect information and citations and journals that do not exist.** 🔵 **A
+national AI policy withdrawn for fabricated references is the sharpest available argument for
+the citation discipline this shelf runs on**, and a live risk for anyone drafting from
+secondary summaries.
+
+🔵 **And the regulatory shape is now three regimes that differ in KIND, not in severity of one
+rule**: 🔴 **Vietnam broadest in kind** (three entries, including biometric behavioural
+monitoring), 🔴 **the EU strictest in consequence** (affect inference in education is
+prohibited, not classified), 🟡 **Korea narrowest in scope** (one use case, K-12 student
+evaluation). 🟢 **So an EU-shaped compliance package transfers to Vietnam more readily than to
+Korea**, and the clock that bites first is Korea's ~**2027-01**.
+
 ## Pass 148 — 2026-10-12
 
 🔵 **Thesis high-water mark before this pass: `T67`. Next free: `T68`.** 🟢 **This pass takes

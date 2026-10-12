@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 149 — the streak reaches TEN, and this pass did not test it
+
+🔴 **No agent search ran this pass.** 🔵 **All eight pre-registered actions were instrument or
+policy work** (`EW`–`FD`: two legal texts, one regional null, five code instruments), and
+🟢 **the sweep is recorded as NOT RUN rather than as another null** — a null is a measurement
+and this pass did not make one.
+
+| what | state after p149 |
+|---|---|
+| consecutive passes with no agent row **from search** | 🔴 **10** |
+| of those, passes that **ran** the sweep | **9** (p140–p148) |
+| 🔴 **passes that skipped it** | 🔴 **1 — this one** |
+| cumulative queries | ~**70**, unchanged |
+| agent rows contributed by the search channel | 🔴 **0** |
+
+🟢 **`ACTION FK` is registered to restore it**, with a falsifier that converts the streak into
+a finding either way: *refuted if the sweep again returns only courses* — which would make
+*"no OSS education agent is discoverable by search"* a **measured property of the ecosystem**
+after ~80 queries, to be stated in `agents/top.md` rather than carried forward as a recurring
+null for an eleventh pass.
+
+### 🟢 What the shelf gave up instead, with no search at all
+
+🔵 **Every finding below came from re-measuring rows already on the shelf** — the fifth
+consecutive pass for which that is true.
+
+| row | what p149 found |
+|---|---|
+| 🟢 **`zavora-ai/mcp-student-records`** | 🆕 🟢 **A THIRD declaration surface**: the manifest's **23** `requires_approval = true` names are **SET-IDENTICAL** to the `mcp_2026_server!` macro's **23** `approval_tools`. 🟢 **The approval gate is REAL and fail-closed on four conditions.** 🔴 **And bypassable in-process** — `pub store`, **6** gated writes succeed unapproved. 🟢 **Still FERPA-logged.** 🟢 **`cargo test`: 24 repo tests + 7 ours = 31 passing** |
+| 🔴 **`BetterSEQTA/DesQTA`** | 🔴 **Placed EMEA on `sh.rustup.rs`** — the Rust installer, `.rs` = Serbia, subject Australian, read from a `curl … \| sh` line. 🔵 **The row's `INSTITUTION_CONFLICT` had been masking it for a pass** |
+| 🔴 **`BetterSEQTA/BetterSEQTA-Plus`** | 🔴 **9 news-media hosts across FOUR regions** (`feeds.bbci.co.uk`, `www.cbc.ca`, `www3.nhk.or.jp`, `news.ltn.com.tw`, `critica.com.pa`, `www.nrc.nl`, `www.dutchnews.nl`, `rthk9.rthk.hk`, `www.panamaamerica.com.pa`) keep it in `CONFLICT` under every exclusion mode. 🟢 **Its 3 own hosts all say APAC**, and the offset channel agrees |
+| 🟡 **`ahmedEid1/lumen`** | 🔴 **Was placed EMEA on `youtu.be`.** 🟢 **Now `UNPLACED`** — the one placement `ACTION FA` moves |
+| 🟢 **`felipedias-ie/blackboard-mcp`** | 🟢 **Loses a false North America placement** on `bb.edu`; now `OFFSET_ONLY` |
+| 🟢 **`MartinSA04/ntnu-mcp`** | 🟢 **`INSTITUTION_CONFLICT` → `INSTITUTION_ONLY` (EMEA, `www.ntnu.no`)** once the bare `.edu` stops voting |
+| 🟢 **`zijinz456/OpenTutor`** | 🟢 **`CONFLICT` → APAC** — its disagreement was `professor-site.edu`, a placeholder |
+| 🆕 🔴 **`yourssu/soongpt-plugin`** | 🆕 🔴 **Declares TWO build targets**, which p148's key list could not see (`sdist include`, not `only-include`). 🟢 **They agree at 20 tool sites** |
+| 🟡 **`alejooroncoy/campus-cli`** | 🔵 **Holds FIVE bare-`.edu` leads that are not one country** — `dspace.mit.edu`, `utsystem.edu`, `yalecollege.yale.edu`, `www.artic.edu` (US) and 🔴 **`cv.uoc.edu` (Barcelona)**. 🟢 **Placed LATAM correctly by a stronger channel**, plus **17** `.gob.pe` government hosts |
+| 🔴 **`hesham0-0nasser/tutor-lms-mcp`** | 🟢 **Strict-unlicensed, confirmed** — one of the 8, reproduced over a 58-row population |
+
+### 🔴 The licence lane's finding, and it is about this KB's own instruments
+
+🆕 🔴 **`T74`: `p145-licence-census` and `p147-licence-language` order the grant ladder
+differently.** p145 is `FILE > PKG_ONLY > README_ONLY`, matching its own docstring
+(*"README_ONLY … weaker still"*); 🔴 **p147 silently inverted the last two rungs.**
+🟢 **Invisible on the 44 connectors** — none carries both a manifest licence field and a
+README heading — and p147 never ran the npm tier, 🔴 **where it moves 3 of 8 rows in the
+WEAKENING direction**, demoting a declared manifest licence to a prose mention.
+🟢 **No licence identification changes.** 🟢 **`ACTION FE` registered; deliberately not fixed
+in the pass that measured it.**
+
+🔴 **`ACTION FC` is REFUTED**: adding eighteen common-title licence forms (`Apache License
+2.0`, `GPLv2`, `BSD 3-Clause`, …) changes **0 of 58** rows. 🟢 **So `T72` is confirmed a
+Fedena-specific artefact outside this shelf's population**, and 🟢 **strict-unlicensed
+reproduces at 8**, named. 🔴 **Denominator correction: 58, not 57.**
+
 ## 2026-10-12 — pass 148 — ninth consecutive null, and the search channel returns a REFUSED vertical claim instead
 
 🔴 **No new agent signal for the ninth pass running.** Eight queries (four global, four

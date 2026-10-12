@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 149 — 2026-10-12 — the approval gate is REAL, fail-closed on four conditions, and bypassable in-process
+
+🟢 **p148 could only say that `zavora-ai/mcp-student-records` *declares* approval.** 🟢 **This
+pass RUNS the crate** — `cargo 1.97.0`, dependencies resolved including a git-pinned SDK at rev
+`4dac4301`, 🟢 **the repository's own suite passing at 24 tests**, and 7 more added here, for
+**31**. 🔵 **The answer to `ACTION FD` is "both", and the two halves matter to different
+readers.**
+
+### 🟢 The gate is stronger than `P35` claimed
+
+🔵 **`mcp_2026_server!` generates `ServerHandler::call_tool`, and its FIRST action — before
+the router, before any task dispatch — is `approval_gate`.** 🟢 **It is fail-closed on four
+independent conditions:**
+
+| # | condition | what happens if it fails |
+|---|---|---|
+| 1 | the tool is in `approval_tools` | not gated → passes through |
+| 2 | protocol version **is** `2026-07-28` | 🔴 **`invalid_request`** — *"this protected tool requires MCP 2026-07-28 MRTR approval"* |
+| 3 | a **sealed** `request_state` matching **this caller and this tool** | 🔴 **`invalid_request`** — *"approval state does not match this caller or tool"* |
+| 4 | `input_responses["approval"]["action"] == "accept"` | 🔴 **`invalid_request`** — *"protected operation was not approved"* |
+
+🟢 **The first call returns an `input_required` response carrying freshly sealed state**, so an
+approval cannot be forged by replaying another caller's token. 🔵 **`P35` understated this.**
+
+### 🆕 🟢 A THIRD declaration surface, and it is set-identical
+
+🔴 **p148 found two surfaces at 46 and pinned them. There is a third.**
+
+| surface | what it declares | count |
+|---|---|---|
+| `mcp-server.toml` `[[tools]]` | per-tool `requires_approval` | **46 tools, 23 true** |
+| `src/server.rs` `#[tool_router]` | `#[tool(…)]` sites | **46** |
+| 🆕 `src/server.rs` `mcp_2026_server!` | `approval_tools: [...]` | 🆕 **23** |
+
+🟢 **The manifest's 23 `requires_approval = true` names are SET-IDENTICAL to the macro's 23
+`approval_tools`** — symmetric difference empty both ways, no duplicates either side.
+🟢 **So this row is three-way consistent, which makes it the best-governed thing on this
+shelf.** 🔴 **And the repository asserts none of it**: `manifest_test.rs` checks
+`requires_approval` for **11 named tools** of 23, 🔴 **never the set, never against the macro,
+never behaviour.** 🔵 **`P35`'s CI gate therefore needs THREE pins, not two** — `ACTION FH`.
+
+### 🔴 And the gate does not reach the data layer
+
+🟢 **The tool methods on `StudentServer` are PRIVATE** (`fn place_hold`, not `pub fn`), so an
+external crate cannot call them — 🔵 **good design, and worth crediting.** 🔴 **But
+`StudentServer` has no constructor and needs none**: the struct and its `store` field are both
+`pub`, and every gated write is a `pub fn` on `StudentStore`.
+
+🟢 **Six distinct approval-gated writes succeed with no approval, no protocol version and no
+sealed state**: `add_accommodation`, `place_hold`, `add_guardian`, `send_communication`,
+`raise_flag`, `set_student_status`. 🔵 **`place_hold` returns a hold with `active == true`** —
+live, not staged. 🟢 **The one mitigation, stated precisely: the bypassed write is still
+FERPA-logged**, because `StudentStore` calls `log_access` itself, so the actor appears in
+`access_log_for(student_id)`. 🔵 **The audit trail survives the bypass; the approval does not.**
+
+🔵 **What this means for the row's recommendation.** 🟢 **Run it as a server and the gate
+holds.** 🔴 **Embed it as a library and you get the audit log, not the approval.** 🟢 **`P35`
+now says so at the top**, and `ACTION FF` registers the fix — one visibility change plus a
+store-level guard. 🔵 **The 7 tests assert the CURRENT behaviour, so they fail loudly when it
+lands.**
+
+🔴 **The limit of this measurement, stated**: conditions 2–4 are established by **reading the
+SDK at the pinned rev**, not by running them — a full round-trip needs a live client session at
+`2026-07-28` with sealed state. 🟢 **Condition 1 and the bypass are executed.**
+
+### 🔵 Row card, unchanged except where this pass moved it
+
+| field | value |
+|---|---|
+| repo | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0**, **Apache-2.0** |
+| surface | 🟢 **46 tools** — router and manifest **SET_IDENTICAL**, order identical (p148) |
+| 🆕 approval surface | 🆕 🟢 **23 gated tools — manifest and macro SET_IDENTICAL** (p149) |
+| 🆕 enforcement | 🟢 **fail-closed at the MCP boundary on 4 conditions**; 🔴 **bypassable via `pub store`** |
+| 🆕 own test suite | 🟢 **24 tests, all passing, run here** — asserting 11 of 23 approval flags and no behaviour |
+| licence evidence | `FILE` → **Apache-2.0** (`Cargo.toml` agrees), reproduced over a 58-row census |
+| region | 🔵 **unplaced by the host channel**; author contact `zavora.ai`, homepage `enterprise.adk-rust.com` |
+
 ## Pass 148 — 2026-10-12 — the Rust row is measured by an instrument, its manifest proves set identity, and a negative control finds a SECOND Rust row
 
 🟢 **`P144-G`'s bidirectional gap closes at 4 of 4.** `zavora-ai/mcp-student-records` is read

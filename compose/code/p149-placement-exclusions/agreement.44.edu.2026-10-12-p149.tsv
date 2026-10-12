@@ -1,0 +1,54 @@
+# population (in both files): 44
+# AGREE                  10
+# DISAGREE               1
+# INSTITUTION_ONLY       17
+# OFFSET_ONLY            11
+# INSTITUTION_CONFLICT   1
+# NEITHER                4
+#
+# ACTION ER falsifier -- DISAGREE count: 1  -> REFUTED
+subject	institution	offset	state	host	how	where
+Agso-o_sigaa-calendar	LATAM	UNMAPPED	INSTITUTION_ONLY	sigaa.ufpi.br	ccTLD .br	internal/sigaa/client.go
+BetterSEQTA_BetterSEQTA-Plus	CONFLICT	APAC	INSTITUTION_CONFLICT	apps.sace.sa.edu.au	academic ns .edu.au	src/seqta/content/links.json
+BetterSEQTA_DesQTA	EMEA	APAC	DISAGREE	sh.rustup.rs	ccTLD .rs	docs/development/build-deployment.md
+HAL-XP_mcp-pronotes	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+Haris0059_ibu-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+MartinSA04_ntnu-mcp	EMEA	UNMAPPED	INSTITUTION_ONLY	ntnu-mcp.martinsundal.no	ccTLD .no	README.md
+MatheusMach_QuantoFalta	LATAM	UNMAPPED	INSTITUTION_ONLY	sis.sig.uema.br	ccTLD .br	extensao/comum.js
+NiccoloSalvini_mcp-blackboard-ucsc	EMEA	EMEA	AGREE	blackboard.unicatt.it	ccTLD .it	README.md
+P1ckle3_blackboard-mcp	APAC	APAC	AGREE	learn.uq.edu.au	academic ns .edu.au	src/blackboard_mcp/auth.py
+Piyushtanwani_DAU-buddy	APAC	APAC	AGREE	opac.daiict.ac.in	academic ns .ac.in	.env.example
+RubsNeto_SigaaUI	LATAM	UNMAPPED	INSTITUTION_ONLY	ufj.edu.br	academic ns .edu.br	extension/content/constants.js
+SIU-Toba_docker-guarani	LATAM	UNMAPPED	INSTITUTION_ONLY	colab.siu.edu.ar	academic ns .edu.ar	README.md
+SleepyPandas_UofT-MCP	North America	UNMAPPED	INSTITUTION_ONLY	acorn.utoronto.ca	ccTLD .ca	uoft_mcp/acorn/client.py
+alejooroncoy_campus-cli	LATAM	UNMAPPED	INSTITUTION_ONLY	aulavirtual.upc.edu.pe	academic ns .edu.pe	src/providers/blackboard/auth/session.ts
+barneslardo_sis-demo	UNPLACED	UNMAPPED	NEITHER	-	-	-
+chenning42_iserv-mcp	EMEA	EMEA	AGREE	xn--mnchen-3ya.iserv.de	ccTLD .de	tests/test_client_security.py
+despedite_siu-guarani	LATAM	UNMAPPED	INSTITUTION_ONLY	guarani.unq.edu.ar	academic ns .edu.ar	siu.py
+divyarthjain_vtop-bhopal-mcp	APAC	APAC	AGREE	vtopcc.vit.ac.in	academic ns .ac.in	render.yaml
+edwyj_ddl-killer	APAC	APAC	AGREE	hitsz.edu.cn	academic ns .edu.cn	app/web/userscript/hitsz-kebiao-export.user.js
+eugeborzone_Auto_Grade_Guarani	LATAM	UNMAPPED	INSTITUTION_ONLY	servicios.unl.edu.ar	academic ns .edu.ar	Configuracion.py
+fabrica-de-inovacao_expeditto	LATAM	UNMAPPED	INSTITUTION_ONLY	expeditto.fabitz.com.br	ccTLD .br	README.md
+fakelag28_vsuet-timetable-api-mcp	EMEA	EMEA	AGREE	timetable.vsuet.ru	ccTLD .ru	vsuet/client.py
+felipedias-ie_blackboard-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+filipecalegario_auto-sigaa	LATAM	UNMAPPED	INSTITUTION_ONLY	sigaa.ufpe.br	ccTLD .br	auto_sigaa.py
+frjunioalves_suap-mcp	LATAM	UNMAPPED	INSTITUTION_ONLY	suap.ifpi.edu.br	academic ns .edu.br	README.md
+ink-waffle_sisu-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+joojdev_academic-tracker-mcp	LATAM	UNMAPPED	INSTITUTION_ONLY	suap.ifsp.edu.br	academic ns .edu.br	src/webscraping.py
+juliancasaburi_siu-guarani-promedio-extension	LATAM	UNMAPPED	INSTITUTION_ONLY	documentacion.siu.edu.ar	academic ns .edu.ar	README.md
+karkarkins_BlackboardAssistantMCP	UNPLACED	UNMAPPED	NEITHER	-	-	-
+krzysztofbury_librus-mcp	EMEA	EMEA	AGREE	synergia.librus.pl	ccTLD .pl	legacy_reference/tests/test_optimizations.py
+luca-dupont2_mcgill-vsb-mcp	North America	UNMAPPED	INSTITUTION_ONLY	vsb.mcgill.ca	ccTLD .ca	README.md
+mhlavac_edupage-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+nitsuah_bb-mcp	UNPLACED	UNMAPPED	NEITHER	-	-	-
+oliverhruby_edupage-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+qxbao_qldt-hanu-mcp	APAC	APAC	AGREE	qldt.hanu.edu.vn	academic ns .edu.vn	src/client/http.ts
+ruud0_aula-virtual-mcp	UNPLACED	UNMAPPED	NEITHER	-	-	-
+sandraschi_classroom-mcp	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+saytooyum_AI-Based-Timetable-Generation-System	UNPLACED	APAC	OFFSET_ONLY	-	-	-
+skhdemo_uoft-quercus-mcp	North America	UNMAPPED	INSTITUTION_ONLY	q.utoronto.ca	ccTLD .ca	tests/test_quercus_tools.py
+st22209_Parent-Portal	UNPLACED	APAC	OFFSET_ONLY	-	-	-
+trindadetiago_sigaa-caiu	LATAM	UNMAPPED	INSTITUTION_ONLY	sigaa.ufpb.br	ccTLD .br	README.md
+yourssu_soongpt-plugin	UNPLACED	APAC	OFFSET_ONLY	-	-	-
+zavora-ai_mcp-student-records	UNPLACED	EMEA	OFFSET_ONLY	-	-	-
+zyx1121_nycu	APAC	APAC	AGREE	e3p.nycu.edu.tw	academic ns .edu.tw	scripts/e3p.py

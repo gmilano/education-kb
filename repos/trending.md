@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 149 — 58 of 58 reached, the Rust toolchain opens, and the GitHub API turns out to answer
+
+🟢 **Every channel this pass needed was open, and two that were recorded as shut are not.**
+
+| channel | attempted | succeeded |
+|---|---|---|
+| `git clone` census roster | **50** | 🟢 **50** |
+| `npm pack` | **8** | 🟢 **8** |
+| 🆕 `cargo fetch` (incl. a **git-pinned** dependency at rev `4dac4301`) | 1 | 🆕 🟢 **1** |
+| 🆕 `cargo test --offline` | 1 | 🆕 🟢 **1 — 31 tests pass** |
+| 🆕 `curl https://api.github.com/` | 1 | 🆕 🟢 **200** |
+| `curl https://github.com/` | 1 | 🔴 **400** |
+| `curl` primary-legal-text hosts (6) | **6** | 🔴 **0 — all 403 at CONNECT** |
+
+### 🆕 🟢 Two channel corrections, both narrowing a recorded failure
+
+🟢 **`P144-X` is narrower than five passes have recorded.** *"`curl -sI` cannot verify a GitHub
+URL here"* turns out to be about the **web** host: 🟢 **`api.github.com` answers 200**, as do
+`raw.githubusercontent.com`, `codeload.github.com` and `registry.npmjs.org`. 🔵 **So a URL can
+be verified by `curl` after all** — through the API host, not the web host. 🔴 **The deeper
+API probe was declined by this session's own tool-use policy as credential exploration**, so
+the sanctioned route for GitHub metadata remains the `mcp__github__*` tools; 🟢 **what is
+established here is only that the host is reachable and returns 200.**
+
+🔴 **And a correction to how this shelf records unreachable hosts.** They are **not** DNS
+failures. 🔵 **This environment's proxy resolves hosts itself**, so a local name lookup fails
+for *every* host — reachable ones included — and a bare `curl` reports what looks like a DNS
+error. 🟢 **The discriminating signal is the proxy's own relay log**, which names each refusal
+`connect_rejected — gateway answered 403 to CONNECT (policy denial or upstream failure)`.
+🔴 **p148's `aibasicact.kr ENOTFOUND` is very likely the same 403** and must not be cited as
+evidence that host is dead.
+
+### 🆕 🟢 The Rust lane: read for two passes, RUN for the first time
+
+🟢 **`cargo 1.97.0` / `rustc 1.97.0`.** 🟢 **`zavora-ai/mcp-student-records` builds and its own
+suite passes — 24 tests** (`integration_test` 10, `manifest_test` 5, `v11_test` 9), 🟢 **plus
+the 7 this pass added, for 31.** 🔵 **This matters beyond one row**: it means a Rust subject's
+*declared* governance can now be tested behaviourally rather than inferred from source, which
+is what `ACTION FD` was registered to find out.
+
+🟢 **Dependency resolution reached a git dependency pinned by rev**, so a shelf row whose
+supply chain is not entirely on crates.io is still measurable here.
+
+### 🔴 What the clone tier gave up
+
+| finding | figure |
+|---|---|
+| 🔴 **A non-institutional host class, measured** | **4** kinds: platform/shortener, 🆕 **developer tooling** (`sh.rustup.rs`), 🆕 **news media** (9 hosts / 4 regions in one subject), 🆕 **government portal** (17 `.gob.pe`) |
+| 🟢 **Region coverage, two-channel** | **37 → 39 of 44** under the diagnostic exclusion mode; `CONFLICT` **3 → 1** |
+| 🆕 🔴 **A second two-target manifest** | `yourssu/soongpt-plugin`, invisible to p148 because its sdist key is `include`, not `only-include` |
+| 🟢 **Licence census, reproduced and extended** | **58** subjects; strict-unlicensed **8**, named; **0** rows changed by eighteen common-title forms |
+| 🆕 🔴 **An inverted grant ladder between two of this KB's own instruments** | `T74` — moves **3 of 8** npm rows, weakening direction |
+
+🟢 **Reproduction controls, stated because they license every figure above**: 🟢 **the
+unmodified placement probe reproduces p148's institution placements row for row on all 44**,
+region and host alike; 🟢 **`librus-mcp` reproduces 35 (wheel) / 39 (sdist)**; 🟢 **the npm rows
+reproduce p145's published grants once the `package/` payload root is honoured.**
+
+🔴 **Two defects this pass produced and caught before publishing, both by those controls**:
+a decorator tool-site counted **twice** (43 where p148 published 39), and an `npm pack`
+payload read at the wrong root (**7 of 8** rows reported `NONE` against published `PKG_ONLY`).
+🔵 **Both failed in a direction that reads as a stronger finding than the truth** — one
+inflating a shipped surface, one understating licence coverage.
+
 ## 2026-10-12 — pass 148 — 54 of 54 clone, the region census gains 16 rows, and the institution probe places a repo on a URL shortener
 
 🟢 **Every channel this pass needed was open.**

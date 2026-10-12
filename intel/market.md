@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 149 — 2026-10-12
+
+🟢 **The Africa null is CLOSED.** 🔴 **And a figure this page published yesterday is
+withdrawn for arithmetic**, not for sourcing — the first of those on this shelf.
+
+### 🔴 `P149-A` — "twenty-one months earlier than Annex III" is WITHDRAWN
+
+🔴 **p148 published, in two places on this page, that Vietnam's 2027-03-01 is "twenty-one
+months earlier" than the EU's Annex III date of 2027-12-02.** 🔴 **It is nine.**
+
+| from | to Annex III **2027-12-02** | to Annex I **2028-08-02** |
+|---|---|---|
+| Vietnam general **2027-03-01** | 🟢 **9 months** | 17 months |
+| Vietnam education **2027-09-01** | 🟢 **3 months** | 11 months |
+| Vietnam in force **2026-08-15** | 16 months | 24 months |
+| Korea penalties ~**2027-01** | 🟢 **11 months** | 19 months |
+
+🔵 **The arithmetic that yields 21 is `2026-03-01 → 2027-12-02`** — a year transposed in an
+intermediate step, and 🔴 **it failed in the inflating direction**, overstating Vietnam's
+regulatory lead by twelve months. 🟢 **Two further corrections fall out of the same table**:
+the earliest APAC date is **Korea's**, not Vietnam's, and 🟢 **the education-specific Vietnam
+deadline is the LATER of its two (2027-09-01), not the earlier** — legacy systems in
+education, health and finance get the extra six months.
+
+🔵 **No sourcing was wrong and no date was wrong.** 🟢 **Every date p148 published reproduces**;
+only the subtraction was. 🔴 **Recorded as a new defect class for this shelf** — a derived
+figure nobody re-derived — alongside the unsourced-figure class `ACTION ET` closed.
+
+### 🟢 `P149-B` — the three Vietnamese education entries, NAMED
+
+🟡 **`ACTION EW` is NOT discharged**: 🔴 **Decision 33/2026/QD-TTg itself remains unread** and
+every channel to it is refused at this environment's gateway (`P149-E`). 🟢 **What did move
+is the specificity**, from *"education is a listed sector"* to three named entries:
+
+| # | the listed education AI system |
+|---|---|
+| 1 | provides **automated content for learners' self-study** using 🔴 **uncontrolled data sources** |
+| 2 | **automatically conducts examinations, assesses learning outcomes, or ranks learners** |
+| 3 | **monitors and analyses learner behaviour** using 🔴 **biometric data** or other automated monitoring |
+
+🔵 **Entry 2 is Korea's whole education scope** (Art. 2(4)(j), student evaluation) and
+🔵 **entry 3 is affect-adjacent inference**, which EU education prohibits outright rather than
+merely classifying. 🟢 **So the three jurisdictions are not three strictnesses of one rule**:
+Vietnam is broadest in *kind*, the EU strictest in *consequence*, Korea narrowest in *scope*.
+
+🔴 **The qualifier `ACTION EW` was written to test is still not settled.** The action asked
+whether a *"sole basis for a decision, no human in the loop"* condition applies to the
+education entries. 🔴 **It is not shown to**, and 🟡 **a narrowing of some kind does exist**:
+Allen & Gledhill state that *"not all AI systems used in these sectors will automatically be
+classified as high-risk."* 🔵 **So `T71` keeps a caveat rather than losing one** — the
+narrowing is confirmed to exist and its text is unread, which is a sharper exposure than
+p148 recorded, not a softer one.
+
+🆕 🟡 **And the instrument has a drafting inconsistency of its own**: Indochine Counsel notes
+Decision 33 says **"finance"** in an article and **"banking"** in the appendix, and does not
+reconcile them. 🔵 **Recorded because it bears on how confidently any secondary reading of
+this decision should be quoted**, education included.
+
+🟢 **Dates confirmed from four independent briefings**: issued **2026-06-30**, in force
+**2026-08-15**, 46 systems across six sectors, education **three**, compliance
+**2027-03-01**, legacy education/health/finance **2027-09-01**.
+
+### 🟢 `P149-C` — AFRICA IS NOT A NULL. Four jurisdictions, dated
+
+🔴 **p148 searched three country names, found nothing, and declared "Africa: zero
+education-AI evidence on any channel" the highest-value regional lookup outstanding.**
+🟢 **`ACTION EY` closes it: three of four targets returned substantive, dated evidence, and
+the fourth returned an informed negative.**
+
+| jurisdiction | instrument | the dated fact |
+|---|---|---|
+| **African Union** | 🟢 **Continental AI Strategy** | 🟢 **Endorsed by the Executive Council, 45th Ordinary Session, Accra, 2024-07-18/19.** Education a priority sector; **Action Eight** commits member states to AI skills in educational institutions. Implementation to **2030**, Phase 1 **2025–2026** = governance structures and national strategies |
+| **Kenya** | **National AI Strategy 2025–2030** | 🟢 **Launched 2025-03**, active on OECD.AI, education a target sector; talent pillar covers AI in curricula. 🟢 **Implementation roadmap 2025-12.** 🔴 **Draft AI and Emerging Technologies Policy (2026) states AI is NOT yet systematically integrated into formal curricula** and teacher capacity is limited |
+| **Nigeria** | **National AI Strategy (2025)** + 2025 curriculum reform | 🟢 **AI and digital literacy introduced in the 2025 Federal Ministry of Education curriculum reform.** 🟢 **Naija Teacher AI** (Teachers Registration Council of Nigeria + GMind AI), a **UNESCO SDG4** case study, targets **1.5M licensed teachers**; **3MTT** talent programme; an **FCT AI Club** pilot approved by FCT UBEB and FCT SEB |
+| **South Africa** | 🟡 **National AI in Education Framework — IN PROGRESS, unpublished** | 🟡 DBE's 2026 digital-education update refers to it; the minister is reviewing the digital education policy framework. 🟢 **Coding and robotics ARE in the curriculum** (Grades R–3 and 7, from 2023) |
+
+🔴 **South Africa carries a caution this KB should quote by name.** Its **2024 draft national
+AI policy framework was published for comment and then WITHDRAWN**, after concerns that it
+contained incorrect information and 🔴 **citations and journals that do not exist.** 🔵 **A
+national AI policy withdrawn for fabricated references is the sharpest available argument
+for the citation discipline this shelf runs on**, and it is a live risk for any client
+drafting AI policy from secondary summaries.
+
+🟢 **So the five-region vocabulary can populate its Africa bucket** — the inverse of what
+`ACTION EY`'s falsifier was braced for. 🔴 **What is still absent is a FIGURE**: adoption
+rates, spend, or deployment counts. 🔵 **Four strategies and one withdrawn draft is a policy
+map, not a market measurement.**
+
+### 🔴 `P149-D` — Korean primary text is an ENVIRONMENT limit, not a research gap
+
+🔴 **`ACTION EX` is REFUTED exactly as specified.** Both hosts it named are refused:
+
+| host | result |
+|---|---|
+| `law.go.kr` / `www.law.go.kr` | 🔴 **gateway answered 403 to CONNECT** |
+| `elaw.klri.re.kr` (Korea Law Translation Center) | 🔴 **gateway answered 403 to CONNECT** |
+
+🟢 **Per the action's consequence clause, Korean primary text now joins `capitol.texas.gov`
+as a standing environment request, stated once and NOT re-registered.** 🟢 **`T58` needs
+nothing further** — p148 settled the statute name from the KLRI convention, and the primary
+text would confirm a point no longer in dispute.
+
+### 🔴 `P149-E` — the channel finding behind both legal actions
+
+🔵 **Worth separating from the two actions, because it changes what this shelf should bother
+registering.** 🔴 **Every primary-legal-text host tried this pass is refused at the gateway
+with a 403 on CONNECT** — Vietnamese and Korean alike, 🔴 **and `WebFetch` is governed by the
+same policy** (`english.luatvietnam.vn`, `allenandgledhill.com`, `vietnam-briefing.com` all
+unreachable through it too).
+
+🔴 **A correction to how this KB has been recording these failures**: they are **not** DNS
+failures. 🔵 **This environment's proxy resolves hosts itself**, so a local name lookup fails
+for *every* host including reachable ones, and a bare `curl` reports what looks like a DNS
+error. 🟢 **The discriminating signal is the proxy's own relay log**, which names each refusal
+`connect_rejected — gateway answered 403 to CONNECT (policy denial or upstream failure)`.
+🔵 **`aibasicact.kr ENOTFOUND`, recorded by p148, is very likely the same 403** and should not
+be cited as evidence the host is dead.
+
+🟢 **What IS reachable by `curl`**: `api.github.com` (**200**), `raw.githubusercontent.com`,
+`codeload.github.com`, `registry.npmjs.org`. 🔵 **So the five-pass `curl -sI github.com` 403
+(`P144-X`) is narrower than recorded** — the GitHub *API* host answers; it is the web host
+that does not. 🟢 **`git clone` 50 of 50 and `npm pack` 8 of 8 this pass.**
+
+🔵 **The practical consequence, stated once**: 🔴 **no action asking this shelf to read a
+government legal text should be registered again** until the allowlist changes. 🟢 **Law-firm
+briefings that agree with each other remain the best available channel**, and every claim
+resting on them must say so — as `T71` now does.
+
 ## Pass 148 — 2026-10-12
 
 🆕 🔴 **APAC holds TWO statutory education items, not one, and this page had said one for
@@ -46,9 +174,12 @@ relevant direction.**
 | **China** | curriculum mandate | AI compulsory **from age 6** | reported from **2025-09** |
 | **Taiwan** | AI Basic Act (**2025-12**) | 🟡 **unread** | 🟡 unread |
 
-🔵 **Three of the four APAC dates land before the EU's**, and one of them — Vietnam's
-**2027-03-01** — is twenty-one months earlier than Annex III. 🟢 **An APAC engagement is now
-the one with the nearest compliance deadline, not the one with the loosest rules**, and
+🔵 **Three of the four APAC dates land before the EU's.** 🔴 **p148 said the nearest was
+"twenty-one months earlier than Annex III" and that figure is WITHDRAWN** — see
+`P149-A` below. 🟢 **Corrected: the earliest APAC date is Korea's ~2027-01, eleven months
+before Annex III; Vietnam's general 2027-03-01 is nine months before, and Vietnam's
+education-specific deadline of 2027-09-01 is three.** 🟢 **An APAC engagement is still the
+one with the nearest compliance deadline, not the one with the loosest rules**, and
 Vietnam's framing is the EU's (a listed high-risk sector with conformity assessment) rather
 than Korea's (one named use case).
 
@@ -1380,7 +1511,27 @@ written down so the K-12 richness above is not mistaken for regional completenes
 
 ### EMEA
 
-#### 🆕 🟢 p148 — the Middle East gap is PARTLY CLOSED, and Africa is a dated null
+#### 🆕 🟢 p149 — AFRICA IS CLOSED: four jurisdictions, dated
+
+🔴 **p148 declared Africa a dated null and called it the highest-value regional lookup
+outstanding.** 🟢 **`ACTION EY` closes it.** Full detail and sources under `P149-C` at the top
+of this page; the placements, for this region's engagement map:
+
+| jurisdiction | instrument | the dated fact |
+|---|---|---|
+| 🟢 **African Union** | **Continental AI Strategy** | Endorsed **2024-07-18/19**, Accra (Executive Council, 45th Ordinary Session). Education a priority sector; **Action Eight** = AI skills in educational institutions. Phase 1 **2025–2026**: governance structures and national strategies; horizon **2030** |
+| 🟢 **Kenya** | **National AI Strategy 2025–2030** | Launched **2025-03**, active on OECD.AI; education a target sector. Implementation roadmap **2025-12**. 🔴 **The 2026 draft AI and Emerging Technologies Policy says AI is NOT yet systematically in formal curricula** |
+| 🟢 **Nigeria** | **National AI Strategy (2025)** + 2025 curriculum reform | AI and digital literacy **in the 2025 curriculum reform**; **Naija Teacher AI** (TRCN + GMind AI, UNESCO SDG4 case study) targets **1.5M** teachers; **3MTT**; **FCT AI Club** pilot approved by FCT UBEB and SEB |
+| 🟡 **South Africa** | **National AI in Education Framework — unpublished** | DBE's 2026 digital-education update refers to it. 🟢 **Coding and robotics in curriculum** (Grades R–3, Grade 7, from 2023). 🔴 **The 2024 draft national AI policy was WITHDRAWN over citations and journals that do not exist** |
+
+🔵 **What an EMEA engagement can and cannot claim here.** 🟢 **Policy intent is documented and
+datable in all four.** 🔴 **No adoption figure, spend figure or deployment count was found for
+any of them** — so Africa moves from *"no evidence"* to *"policy mapped, market unmeasured"*,
+which is a different gap and a smaller one. 🔵 **Kenya's own draft policy is the most useful
+single sentence for a client conversation**, because it is a government document saying the
+curriculum work has not happened yet.
+
+#### 🟢 p148 — the Middle East gap is PARTLY CLOSED
 
 🆕 🟢 **Two national curricula, named, where this page had "no education-specific data for
 the Middle East or Africa":**
@@ -1897,7 +2048,37 @@ slugs are now known to be one repository.
 
 ### APAC
 
-#### 🆕 🔴 p148 — a SECOND statutory education item, and three APAC dates now land before the EU's
+#### 🆕 🟢 p149 — Vietnam's three education entries, NAMED (and p148's month figure withdrawn)
+
+🟢 **`P149-B`: the listed education AI systems are three, and they are now specific** rather
+than *"education is a listed sector"*:
+
+| # | the listed education AI system |
+|---|---|
+| 1 | **automated content for learners' self-study** using 🔴 **uncontrolled data sources** |
+| 2 | **automatically conducts examinations, assesses learning outcomes, or ranks learners** |
+| 3 | **monitors and analyses learner behaviour** using 🔴 **biometric data** or other automated monitoring |
+
+🔵 **Entry 2 is the whole of Korea's education scope; entry 3 is affect-adjacent inference,
+which the EU prohibits rather than classifies.** 🟢 **So the three APAC/EU regimes differ in
+kind, not in severity of the same rule** — Vietnam broadest in kind, EU strictest in
+consequence, Korea narrowest in scope. 🔵 **An EU-shaped compliance package still transfers to
+Vietnam more readily than to Korea**, because both are listed-sector regimes with conformity
+assessment.
+
+🔴 **Two corrections to p148's APAC headline.** 🔴 **"Twenty-one months earlier than Annex III"
+is WITHDRAWN** — it is **nine** for 2027-03-01, and the earliest APAC date is **Korea's
+~2027-01 at eleven months**, not Vietnam's (`P149-A`). 🟢 **And 2027-09-01 is the
+education-specific deadline** — the later of Vietnam's two, for systems already running.
+
+🔴 **The qualifier is still unsettled and the exposure is now sharper, not softer.** Allen &
+Gledhill state *"not all AI systems used in these sectors will automatically be classified as
+high-risk"* — 🟡 **so a narrowing exists and its text is unread.** 🔴 **Decision 33 itself is
+unreachable from this environment** (`P149-E`), and 🔴 **Indochine Counsel notes the decision
+says "finance" in an article and "banking" in the appendix without reconciling them** — a
+drafting inconsistency that bears on how confidently any secondary reading should be quoted.
+
+#### 🔴 p148 — a SECOND statutory education item, and three APAC dates land before the EU's
 
 🆕 🔴 **`T71`: Vietnam.** **Decision 33/2026/QD-TTg** (issued **2026-06-30**, in force
 **2026-08-15**) lists **46 high-risk AI systems** under **Law 134/2025** and **Decree 142**,
@@ -1918,8 +2099,9 @@ region's sequence is now:
 | 🆕 **2027-09-01** | 🆕 **Vietnam** | 🔴 **legacy education/health/finance systems live before 2026-08-15** |
 | **2027-12-02** | *(EU, for comparison)* | Annex III high-risk classification |
 
-🟢 **Three APAC dates before the EU's, and the nearest is twenty-one months earlier than
-Annex III.** 🔵 **Vietnam's framing is the EU's, not Korea's** — a listed sector with
+🟢 **Three APAC dates before the EU's.** 🔴 **"Twenty-one months earlier" is WITHDRAWN
+(`P149-A`); the earliest is Korea's ~2027-01 at ELEVEN months.** 🔵 **Vietnam's framing is
+the EU's, not Korea's** — a listed sector with
 conformity assessment, rather than one named use case — so an EU-shaped compliance package
 transfers to Vietnam more readily than to Korea.
 

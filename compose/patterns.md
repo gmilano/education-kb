@@ -4,11 +4,105 @@ region: Global
 updated: 2026-10-12
 ---
 
-## 🆕 🟢 `P32` — the manifest-contract CI gate: prove the governance claim instead of citing it *(new, p148 — Global, deploys per-region)*
+## 🆕 🟢 `P36` — place a vendor by region without trusting a suffix: exclude non-institutional hosts *(new, p149 — all regions, LATAM first)*
+
+🔵 **Region placement is the column every Globant engagement is judged on and the one this
+shelf is weakest at.** `P23` places a vendor from commit timezones; `P24` reads a tenancy
+hostname. 🔴 **p149 measured what both lanes actually read, and a third of the placing hosts
+are not institutions at all.**
+
+### 🔴 The defect, measured
+
+Over **50 clones**, the host channel placed rows on a nationally-bound ccTLD without ever
+asking *whether the host is an institution*. 🔴 **Four non-institutional kinds, all measured:**
+
+| kind | instance on this shelf | what it did |
+|---|---|---|
+| **platform / shortener** | `youtu.be` | 🔴 **placed an Egyptian-authored row in EMEA** — `.be` is Belgium |
+| 🆕 **developer tooling** | `sh.rustup.rs` | 🔴 **placed an AUSTRALIAN row in EMEA** — `.rs` is Serbia, read out of a `curl … \| sh` install line |
+| 🆕 **news media** | `feeds.bbci.co.uk`, `www.cbc.ca`, `www3.nhk.or.jp`, `news.ltn.com.tw`, `critica.com.pa` + 4 more | 🔴 **9 hosts across FOUR regions in one subject** — an RSS fixture list, which held the row in `CONFLICT` under every exclusion mode |
+| 🆕 **government portal** | **17** hosts under `.gob.pe` | 🟡 **right answer, wrong reason** — the row is Peruvian, but it was placed by a stronger channel; on a row without one, 17 ministry hosts would have decided it |
+| **bare `.edu`** | `bb.edu`, `phet.colorado.edu`, `professor-site.edu` | 🔴 **a registration date, not a country** — one row holds `dspace.mit.edu` **and** `cv.uoc.edu` (Barcelona) |
+
+### The recipe
+
+1. **Name the strongest channel and stop there.** A host assigned to a `BASE_URL`-shaped
+   constant beats a URL in prose, which beats a publisher field, which beats an author
+   email. 🟢 **`P144-V`'s rule — *"the institution is where it deploys; the author is wherever
+   they were sitting"* — holds, and this pattern is how you apply it without a git history.**
+2. **Exclude by ROLE, not by suffix.** 🔴 **Never drop a ccTLD** — `.be`, `.rs`, `.co`, `.ly`,
+   `.io`, `.me` and `.to` are sold as vanity suffixes *because they read as words*, and a real
+   `kuleuven.be` or `bg.ac.rs` must keep its placement. 🟢 **Name the hosts**: shorteners,
+   video platforms, package and toolchain installers, news media, and government portals that
+   are not the deploying institution.
+3. **Refuse placeholders by token.** Split each label on `-` as well as `.` and refuse
+   `example`, `myschool`, `your-university`, `demo`, `test`. 🔴 **This shelf produced three
+   false placements on `*.example.edu`-shaped hosts before the rule existed**, all in the
+   reassuring direction.
+4. **Treat a bare `.edu` as a LEAD, never a placement.** Keep it in its own column so the
+   evidence survives the demotion.
+5. **Cross-check against a second, independent channel** and classify every row into six
+   states, so *"both placed and they agree"* is never counted with *"only one could answer"*.
+   🟢 **`INSTITUTION_ONLY` is the result worth having** — net new coverage at zero
+   contradiction cost.
+6. **Read the disagreements by name.** 🔵 **Do not average two channels.** On this shelf a
+   single `DISAGREE` row named the whole defect twice: first `bb.edu`, then `sh.rustup.rs`.
+
+### What it buys, per region
+
+| region | why it matters here |
+|---|---|
+| **LATAM** | 🟢 **The biggest win.** Two-channel coverage **37 → 39 of 44**, almost all LATAM, because the timezone lane was declining `-0300` as ambiguous while the host lane could answer |
+| **APAC** | 🔴 **The clearest error.** An Australian vendor was being placed in EMEA by a Rust installer URL |
+| **EMEA** | 🟢 Protects real `.be`/`.rs`/`.no` institutions from a suffix-level fix that would have cost them their placement |
+| **North America** | 🔵 **Removes a false positive**: `bb.edu` had placed a row here, and the offset channel disagreed |
+
+### 🔴 What `P36` does NOT solve
+
+🔴 **It cannot tell a deploying institution from one merely cited.** A university named in a
+README because the author studied there looks exactly like one the server points at, unless
+the host sits in an assignment. 🔴 **And the exclusion list is a list** — it holds the kinds
+this shelf has met, and the next corpus will carry a kind it does not. 🟢 **Which is why step
+5 is not optional**: a second channel is what turns an unknown kind into a visible
+`DISAGREE` instead of a silent placement.
+
+🔵 **Instruments**: [`p149-placement-exclusions`](code/p149-placement-exclusions/README.md)
+(**26 tests**), [`p148-channel-agreement`](code/p148-channel-agreement/README.md) (**11**),
+[`p147-npm-region`](code/p147-npm-region/README.md) (**15**).
+
+## 🆕 🟢 `P35` — the manifest-contract CI gate: prove the governance claim instead of citing it *(p148, RENUMBERED by p149 — Global, deploys per-region)*
+
+> 🔴 **`P35` was published by p148 as `P32`, and `P32` was already taken** — p147 had
+> allocated it to the multilingual licence gate, which is still `P32` below. 🔵 **Two live
+> patterns carried one identifier for a pass.** 🟢 **The first allocation keeps the number and
+> this one moves**, which is why every p148 reference to "`P32`'s CI gate" means `P35`.
+> 🔵 **`T75`**: this shelf allocates pattern numbers from a high-water mark it does not
+> re-read, and the same habit produced the thesis-number collisions `P144-F` recorded.
+> 🟢 **`ACTION FM` registers the one-line gate that would have caught it.**
+
+### 🔴 `P35` does NOT reach the data layer — read this before pitching it
+
+🔴 **`ACTION FD` (p149) proved the approval gate this pattern certifies is bypassable
+in-process.** 🟢 **The gate itself is strong**: it runs first in the generated `call_tool` and
+is fail-closed on four conditions (tool in `approval_tools`; protocol exactly `2026-07-28`;
+sealed `request_state` bound to this caller and tool; `input_responses["approval"]["action"]
+== "accept"`). 🔴 **But it lives at the protocol boundary only.** In `mcp-student-records`,
+`StudentServer.store` is `pub` and every gated write is a `pub fn` on `StudentStore`, so
+🔴 **six distinct approval-gated writes succeed with no approval, no protocol version and no
+sealed state** when the crate is embedded as a library rather than run as a server.
+🟢 **The bypassed write is still FERPA-logged**, so the audit trail survives; the approval
+does not.
+
+🔵 **So pitch `P35` as an MCP-surface control and name the data layer as out of scope.**
+🔴 **Do not present it as a records-layer guarantee.** 🟢 **And pin THREE surfaces, not two**:
+the router's 46 names against the manifest's 46, **and** the manifest's 23
+`requires_approval = true` names against the macro's 23 `approval_tools` — which p149 measured
+**set-identical**, and which the repository's own suite checks for **11 of 23**, never as a set.
+🟢 **`ACTION FF`** and 🟢 **`ACTION FH`** carry both halves.
 
 🟢 **`P31` recommends `zavora-ai/mcp-student-records` as a records layer because its
 `mcp-server.toml` declares a risk class and an approval requirement per tool.** 🔴 **p148
-proved that contract holds today and that nothing keeps it holding.** `P32` is the four-file
+proved that contract holds today and that nothing keeps it holding.** `P35` is the four-file
 gate that closes it, and it is the pattern to ship in week one of any engagement that quotes
 the manifest to a procurement reviewer.
 
@@ -41,7 +135,7 @@ anywhere fails.** 🟢 **The gate costs one CI job.**
 🔴 **Three failure modes the gate catches that a count check does not**, each pinned by a
 test in the instrument's **14**:
 
-| drift | what `len() == 46` does | what `P32` does |
+| drift | what `len() == 46` does | what `P35` does |
 |---|---|---|
 | a tool renamed on one side only | 🔴 **passes** — still 46 and 46 | 🟢 **fails**, naming `router_only` and `manifest_only` |
 | a tool added to the router, another dropped from it | 🔴 **passes** | 🟢 **fails** |
@@ -54,10 +148,10 @@ manifest that agrees with itself is not a contract.**
 
 ### 🔵 Per-region framing — the same gate, four different sales
 
-| region | the clock | how `P32` is sold |
+| region | the clock | how `P35` is sold |
 |---|---|---|
 | **APAC** | 🔴 **nearest in the world** — Vietnam **2027-03-01** / **2027-09-01**; Korea ~**2027-01** | 🟢 **Conformity evidence.** Vietnam designates third-party certification for some listed systems; a machine-checked tool-and-risk-class inventory is the artefact that assessment wants |
-| **EMEA** | Annex III **2027-12-02**; Art. 4 literacy duty **live since 2025-02-02** | 🟢 **Annex III record-keeping.** The manifest is the system description; `P32` is the evidence it is current |
+| **EMEA** | Annex III **2027-12-02**; Art. 4 literacy duty **live since 2025-02-02** | 🟢 **Annex III record-keeping.** The manifest is the system description; `P35` is the evidence it is current |
 | **North America** | no federal statute; **MD/OK** require human oversight and bar AI from high-stakes student decisions | 🟢 **`requires_approval` as the oversight control**, named per tool. 🔵 **Maps onto the AASA student framework's "no AI determining grades or discipline"** |
 | **LATAM** | 🔴 **no education-specific statute**; **87% adoption / 26% strategy** | 🟢 **The governance layer itself is the product** — there is no compliance deadline to sell against, and a verifiable control inventory is what an institution with no framework can adopt whole |
 
@@ -68,7 +162,7 @@ and a build — 🔴 **and `Fedena`, which 2026 comparison tables call the permi
 ships no licence body and was last committed in 2012** (`verticals/solutions.md`, p148).
 🟢 **Have that conversation in week one.**
 
-### 🔴 What `P32` does NOT solve
+### 🔴 What `P35` does NOT solve
 
 - 🔴 **It proves names match, not that behaviour matches.** `record_grade` carrying
   `requires_approval = true` is a declaration; that the server *enforces* it is a separate
