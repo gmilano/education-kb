@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P157-A` — the efficacy-evidence stack, and it closes a gap by COMPOSITION rather than by finding a product *(new, p157 — Global)*
+
+🔵 **The problem this solves:** 🔴 **2026 buyers increasingly require evidence that a tool
+improves learning before they purchase, and there is NO tutor evaluation harness in open
+source** — 🔴 **a direct search this pass matched `122` repositories and `0 of 15` top rows were
+on-domain.** 🟢 **But the three pieces needed to MEASURE an intervention all exist, are
+permissive, and nobody has wired them together.**
+
+🟢 **The recipe — three permissive repos and the LMS the client already runs:**
+
+| layer | repo | licence *(body-read this pass)* | what it contributes |
+|---|---|---|---|
+| 1. **Experiment design and assignment** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** (`LICENSE`, 11 323 B, resolves on `main` and `master`) | 🟢 **A randomised-controlled-trial plug-in FOR the LMS. It does condition assignment, consent and treatment delivery inside the course the student is already in.** 🔵 **This is the piece everyone assumes does not exist** |
+| 2. **Evidence capture** | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** (🆕 `LICENSE.md`, 1 094 B — 🔴 **plain `LICENSE` is `404`, a `P50` instance**) | 🟢 **A Learning Record Store: xAPI statements in, queryable learning records out.** 🟢 **MIT, so the pipeline ships inside a client product** |
+| 3. **Mastery estimate** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** (`LICENSE`, 1 066 B) · 446 ★ | 🟢 **DKT / AKT / SAKT knowledge tracing — turns the interaction stream into a mastery trajectory instead of a post-test score** |
+| 4. **System of record** | the client's Moodle / Open edX / Canvas / Sakai | 🔴 copyleft — **untouched** | 🟢 **Roster, gradebook and enrolment stay authoritative.** 🟢 **Terracotta attaches as an LTI 1.3 tool, so no fork** |
+
+🟢 **Wiring, concretely:**
+1. 🟢 **Terracotta is registered as an LTI 1.3 tool in the LMS.** A course's experiment defines
+   conditions (e.g. tutor-assisted vs control) and Terracotta handles consent and random
+   assignment per student, inside the normal course flow.
+2. 🟢 **The tutoring surface under test** — `DeepTutor` (Apache-2.0) or `ai-shifu`
+   (Apache-2.0), or the `P156-A` composition — **emits xAPI statements for every interaction**
+   to `ralph`.
+3. 🟢 **`ralph` stores the statements and exposes them for query**; the LMS gradebook supplies
+   outcomes back through **LTI AGS**.
+4. 🟢 **`pykt-toolkit` consumes the per-learner interaction sequence from `ralph` and returns a
+   mastery trajectory**, so the comparison between arms is a learning curve rather than a single
+   score.
+5. 🟢 **The deliverable is a pre-registered result on the client's own students** — 🔵 **which is
+   the artefact a procurement committee asked for and no vendor can supply about someone
+   else's cohort.**
+
+🟢 **Licence posture: layers 1–3 are Apache-2.0 / MIT / MIT.** 🟢 **Nothing links against the
+LMS's GPL or AGPL code** — Terracotta attaches over LTI, which is a protocol boundary.
+🔵 **So the whole harness is permissive and the client keeps their platform.**
+
+🔵 **Why this is the most defensible thing on this shelf:** 🔴 **every competitor sells a tutor.**
+🟢 **This sells the evidence that the tutor worked** — 🟢 **and `terracotta` at `21 ★` means
+nobody is competing for it.**
+
+## 🆕 🟢 `P157-B` — the licence gate, as a procedure a studio can actually run before a repo enters a deliverable *(new, p157 — Global)*
+
+🔵 **The problem this solves:** 🔴 **this pass measured three instruments giving three different
+answers about the same four repositories** *(`T117`)*, and 🔴 **three repositories whose licence
+a single-channel probe declared absent and which are in fact licensed** *(`P53`)*.
+🔴 **Either error, shipped, is a legal finding on a client engagement.**
+
+🟢 **The gate — four checks, all free, none needing a clone:**
+
+| # | check | channel | what it catches |
+|---|---|---|---|
+| 1 | 🟢 **Resolve `default_branch` FIRST** | GitHub metadata *(`search_repositories`)* | 🔴 **`P53`. Three instances this pass, all `master`-default: `openbadgeslib`, `my-learning-analytics`, `openedx/edx-platform`.** 🔵 **Older and institutional repositories are exactly the foundational tier, and they are exactly the ones still on `master`** |
+| 2 | 🟢 **Read the licence BODY on `raw`, probing `LICENSE*`, `LICENCE*`, `COPYING*` and `license`, and record the path that answered** | `raw.githubusercontent.com` | 🔴 **`P50`. `moodle` keeps the GPL in `COPYING.txt`; `ralph` only in `LICENSE.md`.** 🔴 **A sweep stopping at `LICENSE` publishes *"Moodle: no licence"*** |
+| 3 | 🟢 **Compare the body against the metadata `license` field and treat ANY disagreement as an unfinished measurement** | both | 🔴 **`T117`. This is what caught `P53` twice.** 🔴 **Never break the tie by preferring a channel — go find the ref or the path** |
+| 4 | 🟢 **If no licence file exists, read the README for a prose claim, then enumerate refs with `ls-remote` and re-probe** | `raw` + `git ls-remote` | 🔴 **`P51`'s three tiers. `4 of 15` rows claim MIT in prose with no licence text; `2 of 15` explicitly DECLINE to grant; `9 of 15` say nothing at all** |
+
+🟢 **The verdict is one of four values, not two:**
+
+| verdict | what it means commercially |
+|---|---|
+| 🟢 **GRANTED — body read, family identified** | 🟢 **Proceed under that licence's terms** |
+| 🟡 **CLAIMED — prose only, no licence text** | 🟡 **Open an issue asking the author to add the file. Do NOT ship until they do.** 🔵 **Usually a one-day fix, and it converts the row** |
+| 🔴 **DECLINED — the author states private, personal-use or non-commercial** | 🔴 **Stop. No amount of stars changes it.** 🔵 **`PageLM` at `2 029 ★` is this** |
+| 🔴 **UNKNOWN — nothing, on any ref or path** | 🔴 **Default all-rights-reserved. Treat as closed source** |
+
+🔵 **The cost of the gate is four cheap calls per repository.** 🔴 **The cost of skipping it,
+measured on this shelf's own history, is a published claim that the most-deployed LMS in the
+world has no licence, and a published claim that the reference implementation of Open Badges 3.0
+has none either.** 🟢 **Both were caught by check 1 or 3.**
+
+## 🆕 🟢 `P157-C` — the credentialing product, built because there is nothing to adopt *(new, p157 — Global, strongest in EMEA and LATAM)*
+
+🔵 **The demand:** 🟢 **2026 trend sources name digital credentials and micro-credentials against
+employer skills-based hiring.**
+🔵 **The supply:** 🔴 **`29` repositories in the whole `topic:open-badges` population, an `85 ★`
+ceiling, and the standards-complete library at `1 ★`.**
+🟢 **So this is the one lane on this shelf where the correct advice is BUILD, and where a studio
+could plausibly own the reference implementation.**
+
+🟢 **The recipe — the standard does the hard part, so the build is integration, not invention:**
+
+| layer | repo / standard | licence | role |
+|---|---|---|---|
+| 1. **Issue / verify / revoke** | [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🟡 **LGPL-3.0** (🆕 `master/LICENSE.txt`, 7 650 B) | 🟢 **Open Badges 3.0 as W3C Verifiable Credentials: JWT-VC issuance, verification, and Bitstring Status List revocation.** 🟡 **LGPL — LINK it as a library, do not modify it, and the product stays yours** |
+| 2. **Author the achievement** | [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **MIT** (`LICENSE`, 1 080 B) | 🟢 **A Vue widget for defining an Open Badge 3.0 achievement — the authoring surface, already built** |
+| 3. **Decide WHEN to award** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | 🟢 **A mastery threshold from a knowledge-tracing model, not a course-completion tick.** 🔵 **This is the differentiator: a credential backed by a learner model rather than by attendance** |
+| 4. **Evidence trail** | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** | 🟢 **The xAPI record that substantiates the claim if an employer or auditor challenges it** |
+| 5. **Where it attaches** | the client's LMS over **LTI 1.3 + AGS** | 🔴 copyleft, untouched | 🟢 **Grades and completion come from the system of record** |
+
+🟢 **Wiring:** 🟢 **`ralph` accumulates interaction evidence → `pykt-toolkit` returns a mastery
+estimate → crossing the threshold triggers `openbadgeslib` to issue a signed Open Badges 3.0
+credential whose achievement definition was authored in the `OB3DefinitionWidget` → the badge is
+verifiable by any W3C VC verifier, with the `ralph` record as the evidence trail → revocation
+runs through the Bitstring Status List.**
+
+🟢 **Licence posture: one LGPL library LINKED (layer 1), everything else MIT.** 🟢 **The
+deliverable stays the client's.** 🔴 **Do not vendor the LGPL source into the product tree —
+link it, and say so in the SBOM.**
+
+🔵 **Regional fit:** 🟢 **EMEA** — a credential is a pedagogical artefact, not an evaluative
+decision, so it sits on the permitted side of the Commission's `2026-05-19` line *(and a
+credential that automatically gates access to education would cross it, which is the design
+constraint)*. 🟢 **LATAM** — the UNESCO LAC Observatory (`2026-04-14`, ECLAC Santiago) and the
+`68%`-adopting / `26%`-governing public-university segment make this a regional-programme sale
+rather than a per-institution one.
+
 ## 🆕 🟢 `P156-A` — the licence-safe LMS composition, and it is the same in all five regions *(new, p156 — Global)*
 
 🔵 **The problem this solves:** 🔴 **every client already runs Moodle (GPL) or Open edX

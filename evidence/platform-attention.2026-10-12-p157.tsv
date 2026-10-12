@@ -1,0 +1,15 @@
+repo	stars	forks	open_issues	default_branch	pushed_updated	licence_body_read	tier
+bigbluebutton/bigbluebutton	9241	5976	764	v3.0.x-develop	2026-10-11	LGPL-3.0 (p156, LICENSE 7652 B)	virtual-classroom
+moodle/moodle	7475	7672	1	main	2026-10-12	GPL (p156, COPYING.txt 35147 B)	LMS
+sakaiproject/sakai	1237	1016	61	master	2026-10-10	ECL-2.0 (p156, LICENSE 11120 B)	LMS
+learningequality/kolibri	1143	1001	541	develop	2026-10-12	MIT (p156, LICENSE 1097 B)	LMS offline-first
+chamilo/chamilo-lms	1011	561	424	master	2026-10-12	GPL (p156, LICENSE 35147 B)	LMS
+openeducat/openeducat_erp	887	777	0	19.0	2026-10-12	LGPL-3.0 (p157, 19.0/LICENSE 8241 B)	education ERP
+frappe/education	664	455	151	develop	2026-10-12	19 B stub, no licence field in pyproject (p155)	education ERP
+francoisjacquet/rosariosis	646	391	20	mobile	2026-10-12	GPL-2.0 (p155)	SIS
+ILIAS-eLearning/ILIAS	505	426	316	release_11	2026-10-12	GPL (p156)	LMS
+OpenOLAT/OpenOLAT	447	167	5	master	2026-10-12	Apache-2.0 (p156, LICENSE 10982 B)	LMS permissive
+pykt-team/pykt-toolkit	446	138	54	main	2026-10-11	MIT (p156, LICENSE 1066 B)	knowledge tracing
+h5p/h5p-php-library	150	146	92	master	2026-09-08	GPL (p156, LICENSE.txt 35146 B)	content layer
+Selleo/mentingo	93	29	107	main	2026-10-12	MIT (p156, LICENSE 1062 B)	LMS MIT
+openedx/edx-platform	NOT-SERVED	-	-	master (confirmed on raw)	-	AGPL-3.0 (p157 re-read, master/LICENSE 35136 B)	MOOC platform

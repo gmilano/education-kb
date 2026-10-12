@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 157
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **`ACTION HN` DISCHARGED — falsifier SILENT, which p156 correctly predicted would be the
+USEFUL outcome.** 🟢 **Four sibling topics measured against the `ai-tutor` baseline: population,
+top-20 on-domain rate, and licence distribution.**
+
+### 🟢 `ACTION HN` — the four sibling topics, measured
+
+🔴 **Falsifier: *"refuted if none of the four beats `ai-tutor`'s 19-in-20 on-domain rate."***
+🟢 **`knowledge-tracing` returned `20 of 20`. NOT REFUTED.**
+[`evidence/sibling-topic-census.2026-10-12-p157.tsv`](../evidence/sibling-topic-census.2026-10-12-p157.tsv)
+
+| topic | population | on-domain (top 20) | permissive (top 20) | unusable / unmatched | top row |
+|---|---|---|---|---|---|
+| 🟢 **`knowledge-tracing`** | 🟢 **86** | 🟢 **20/20 — 100%** | 🟡 10/20 — 50% | 🔴 **10/20 — 50%** | `pykt-team/pykt-toolkit` (446 ★) |
+| 🟢 `ai-tutor` *(baseline)* | 669 | 🟢 19/20 — 95% | 🟢 **15/20 — 75%** | 🟢 **2/20 — 10%** | `HKUDS/DeepTutor` (41 210 ★) |
+| 🟢 `edtech` | 🔴 **4 343** | 🟢 19/20 — 95% | 🔴 9/20 — 45% | 🟡 5/20 — 25% | `virgiliojr94/book-to-skill` (34 654 ★) |
+| 🟡 `learning-analytics` | 363 | 🟡 18/20 — 90% | 🟡 12/20 — 60% | 🟡 6/20 — 30% | `AkihikoWatanabe/paper_notes` (170 ★) |
+| 🔴 `ai-education` | 485 | 🔴 **13/20 — 65%** | 🟡 10/20 — 50% | 🔴 **9/20 — 45%** | `HugeCatLab/ChatTutor` (1 316 ★) |
+
+🟢 **p156's prediction — *"`knowledge-tracing` will be the most precise and the smallest"* — is
+CONFIRMED ON BOTH LIMBS.** 🔵 **Worth noting because most of this shelf's pre-registered
+predictions have missed.**
+
+### 🆕 🔴 `T119` — precision and licence hygiene are ANTI-correlated, so the best topic is not the most precise one
+
+🔴 **The topic with the best on-domain rate has the WORST licence hygiene.**
+🟢 **`knowledge-tracing` is `20/20` on-domain and `10 of 20` of its top rows have NO LICENCE
+FILE — `50%`, against `ai-tutor`'s `10%`.**
+
+🟢 **The mechanism, and it is not a coincidence:** 🔵 **`knowledge-tracing` is a RESEARCH-CODE
+tier — paper implementations (`GKT`, `SAINT-pytorch`, `GIKT`, `DTransformer`, `ATKT`,
+`HawkesKT`), published to accompany a paper and licensed as an afterthought.**
+🟢 **`ai-tutor` is an APPLICATION tier, where authors expect other people to install the thing
+and therefore attach a licence.**
+🆕 **`T119`:** 🔴 **a topic's on-domain precision measures how well the LABEL works; its licence
+distribution measures what KIND OF ARTEFACT lives under the label** — 🟢 **and the two move in
+opposite directions, because precise technical labels attract research code and research code
+does not license itself.**
+
+🟢 **So `ai-tutor` remains the best single entry point for a studio** — 🔴 **not because it is
+the most precise, but because it is the only topic that is both on-domain AND `75%` permissive.**
+🔵 **`knowledge-tracing` is the right place to look for the MODEL and the wrong place to expect
+to ship it: half of what you find there cannot be used, and `pykt-toolkit` (MIT) is the row that
+can.**
+
+### 🆕 🔴 `T121` — `ai-education` is BIMODAL, and that is why it scores worst
+
+🔴 **`7 of 20` top `ai-education` rows are *"education ABOUT AI"* rather than *"AI FOR
+education"***: `agents-from-scratch` (1 043 ★), `M3Exam`, `Seeed_Studio_Courses`, `visible-ai`,
+`HNN`, `RE-GPT`, `ai-competency-model`.
+🆕 **`T121`:** 🔴 **the label `ai-education` is read by authors in two opposite directions, and
+the star sort favours the teaching-about-AI reading** — 🟢 **so it is `T110`'s pathology at a
+FIFTH instrument, now inside a topic that looks narrow.**
+🔵 **Practical consequence: narrowness is not the same as precision.** 🔴 **`ai-education` has
+`485` repositories, fewer than `ai-tutor`'s `669`, and a `65%` on-domain rate against `95%`.**
+
+### 🆕 🔴 `T111` CORRECTED — the `ai-tutor` population FELL, it does not only grow
+
+🔴 **p155 measured `684`, p156 `685`, and published `T111`: *"the population grew 684 → 685
+within one hour — the denominator moves while counted."***
+🔴 **This pass measures `669` — DOWN `16` from p156.**
+🟢 **Two readings are possible and this pass cannot separate them:**
+
+| reading | what it would mean |
+|---|---|
+| 🟡 **The population genuinely fell** | 16 repositories were deleted, made private or un-topicked in hours — 🔴 **possible but a large swing** |
+| 🟡 **The two CHANNELS disagree** | 🔴 **p155/p156 counted on the rendered topic page; this pass counted on the search API.** 🟢 **A `2.3%` disagreement between a rendered page and a search index is ordinary** |
+
+🟢 **`T111`'s direction claim is WITHDRAWN. What survives is the weaker and more defensible
+form:** 🆕 **a topic population is an estimate with channel-dependent noise of a couple of
+percent, so a population figure must name its channel, and a change of a few rows between
+passes is not a finding.**
+🔴 **This pass cannot settle it because `curl` gets `403` on the rendered channel this session.**
+🔵 **Registered honestly rather than resolved.**
+
+### 🆕 🟢 New permissive rows surfaced by the sibling topics
+
+| repo | ★ | licence *(body-read)* | why it matters |
+|---|---|---|---|
+| 🟢 [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 21 | 🟢 **Apache-2.0** (11 323 B) | 🟢 **A randomised-controlled-trial plug-in for the LMS.** 🔵 **The missing piece of an efficacy harness — see `P157-A`** |
+| 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) | 51 | 🟢 **MIT** (🆕 `LICENSE.md`, 1 094 B) | 🟢 **A Learning Record Store — xAPI in, queryable records out.** 🔴 **Plain `LICENSE` is `404`; only `LICENSE.md` answers (`P50`)** |
+| 🟢 [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 29 | 🟢 **MIT** (1 090 B) | 🟢 **Knowledge Space Theory for adaptive education, as 10 composable skills: course materials → knowledge graph.** 🟡 **North America — Vanderbilt, an institutional host (`P36`)** |
+| 🟢 [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 37 | 🟢 **Apache-2.0** (🆕 `master/LICENSE`, 11 379 B) | 🟢 **A deployed student-facing analytics dashboard.** 🟡 **North America — University of Michigan (`P36`).** 🔴 **`P53` instance: `main` 404s, default is `master`** |
+| 🟡 [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | 7 | 🟡 MIT *(metadata, not body-read)* | 🟢 **Q-learning adaptive pathways, integrated with Moodle over LTI 1.3.** 🔵 **A worked example of `P156-A`'s boundary by someone else** |
+
+### 🔴 GitHub Trending, re-run — still zero, THIRD pass
+
+🔴 **`github trending education AI 2026` returned only developer-learning repositories:**
+`ai-engineering-from-scratch`, Karpathy's `Neural Networks: Zero to Hero`, Microsoft's
+`AI Agents for Beginners`, `Made With ML`. 🔴 **Zero education-sector rows.**
+🟢 **`T110` now holds on four independent instruments**, and 🔵 **`topic:edtech`'s own star sort
+agrees: its top row is a Claude-skill generator for technical books at `34 654 ★`, and its
+second is a list of 400 companies to apply to.**
+🟢 **The rule stands: enter through a narrow topic, never a trend list.**
+
 ## 2026-10-12 — pass 156 — `GitHub Trending` was read, and it has nothing to do with education
 
 🟢 **The standing honesty note on this page is finally discharged, not repeated.**

@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 157 — 2026-10-12
+
+🟢 **`ACTION HM` DISCHARGED after three unreached passes. The foundational tier finally has an
+attention measurement beside its licences** — 🔴 **and the number is the most important thing
+this shelf has measured about the market it sells into.**
+🟡 **Discharged on a SUBSTITUTED instrument, and this pass says so rather than claiming the
+registered one worked.**
+
+### 🔴 `T118` — attention has DECOUPLED from deployment, and the gap is 1.7×
+
+🔴 **One tutoring repository has more GitHub stars than the ENTIRE institutional platform tier
+put together.**
+[`evidence/platform-attention.2026-10-12-p157.tsv`](../evidence/platform-attention.2026-10-12-p157.tsv)
+
+| | ★ |
+|---|---|
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), one repository | **41 210** |
+| 🔴 **All 13 platform + foundational rows below, summed** | **23 945** |
+| 🔴 **Ratio** | 🔴 **1.72 ×** |
+
+🔴 **And `moodle/moodle` — the most-deployed open-source LMS on earth, vendor-reported at 400M+
+users and 150k+ sites — has `7 475 ★`.** 🔴 **`DeepTutor` has `5.5 ×` that.**
+🔴 **`bigbluebutton` (`9 241`) outranks Moodle too**, so 🔵 **inside the tier the ordering is not
+deployment either — the videoconferencing layer beats the system of record.**
+
+🟢 **What a studio should take from this, stated plainly:**
+- 🔴 **Stars measure developer attention, NOT installed base.** 🟢 **On this shelf the two are
+  not merely different, they are nearly inverted, and the inversion is 1.7× at the top.**
+- 🔵 **So a shortlist built by sorting stars will recommend the tutoring layer and miss the
+  system of record the client actually runs** — 🟢 **which is `P156-A`'s whole premise, now with
+  a number behind it instead of an assumption.**
+- 🟢 **And the converse: a client's installed platform will never look exciting on GitHub.**
+  🔵 **Do not let a star count argue you into forking it.**
+
+### 🟢 The foundational and platform tier — ★, activity and licence, all measured
+
+🟢 **13 of 14 rows served ★ and `pushed_at`.** 🟢 **Every row is ACTIVE** — 🔵 **twelve of
+fourteen pushed within four days of this pass, which is itself the answer to *"is this
+maintained?"***
+
+| repo | ★ | last push | licence *(body-read, path recorded)* | what it is, and the licence consequence |
+|---|---|---|---|---|
+| 🔴 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **9 241** | `2026-10-11` | 🔴 **LGPL-3.0** (`LICENSE`, 7 652 B) | 🟢 **The virtual-classroom layer: WebRTC, whiteboard, breakouts, recording.** 🟡 **LGPL — link freely, modifying the library is not free.** 🔵 **Top of the tier by attention** |
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | **7 475** | `2026-10-12` | 🔴 **GPL** (🆕 `COPYING.txt`, 35 147 B — `P50`) | 🟢 **The most-deployed open-source LMS.** 🔴 **GPL: a distributed derivative ships source.** 🟢 **Plugin-boundary work is the commercial route** |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **1 237** | `2026-10-10` | 🟡 **ECL-2.0** (`LICENSE`, 11 120 B) | 🟢 **Apache-2.0 derivative, permissive, built for university consortia.** 🔵 **Permissive route #2** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **1 143** | `2026-10-12` | 🟢 **MIT** (`LICENSE`, 1 097 B) | 🟢 **Offline-first, built for low/no-connectivity deployment.** 🔵 **The LATAM and Africa infrastructure row, and MIT** |
+| 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **1 011** | `2026-10-12` | 🔴 **GPL** (`LICENSE`, 35 147 B) | 🟢 **Lightweight LMS with real deployment in francophone and LATAM public education** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **887** | `2026-10-12` | 🔴 **LGPL-3.0** (🆕 `19.0/LICENSE`, 8 241 B) | 🟢 **Education ERP on Odoo: admissions, fees, timetable, library.** 🆕 🟡 **Default branch is `19.0`, not `master`** — see the correction below |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | **664** | `2026-10-12` | 🔴 **19 B stub, no licence field in `pyproject.toml`** | 🟢 **School management on Frappe/ERPNext.** 🔴 **The grant has NO readable surface. Do not build a deliverable on it without asking the maintainer** |
+| 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **646** | `2026-10-12` | 🔴 **GPL-2.0** | 🟢 **Student Information System — enrolment, attendance, gradebook.** 🔵 **The SIS lane, and the only row here that is a SIS rather than an LMS** |
+| 🔴 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **505** | `2026-10-12` | 🔴 **GPL** | 🟢 **Institutional LMS, strong DACH public-sector deployment.** 🟡 **Default branch `release_11`** |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **447** | `2026-10-12` | 🟢 **Apache-2.0** (`LICENSE`, 10 982 B) | 🟢 **A full institutional LMS under a PERMISSIVE licence WITH a patent grant.** 🔵 **The fork-safe platform route, and the most under-rated row on this shelf at 447 ★** |
+| 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **446** | `2026-10-11` | 🟢 **MIT** (`LICENSE`, 1 066 B) | 🟢 **DKT, AKT, SAKT knowledge tracing on standard datasets.** 🔵 **The one row that answers *"does the student know it?"* with a model.** 🟢 **MIT, so it ships inside a client product** |
+| 🔴 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | **150** | `2026-09-08` | 🔴 **GPL** (`LICENSE.txt`, 35 146 B) | 🟢 **Interactive content types that drop into Moodle, Open edX and Canvas.** 🔵 **Content layer, not a platform** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **93** | `2026-10-12` | 🟢 **MIT** (`LICENSE`, 1 062 B) | 🟢 **The only MIT LMS. AI-native, SCORM + xAPI, white-label.** 🟡 **EMEA — Poland.** 🔴 **Still unassessed beyond licence, ★ and region, FOURTH pass** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **NOT SERVED** | — | 🔴 **AGPL-3.0** (🆕 re-read `master/LICENSE`, 35 136 B) | 🔴 **AGPL reaches a HOSTED derivative, not just a shipped one.** 🔵 **The most common MOOC platform and the most restrictive licence in this table** |
+
+🟢 **Permissive routes through this tier, and there are exactly four:** 🟢 **`OpenOLAT`
+(Apache-2.0)** · 🟡 **`sakai` (ECL-2.0)** · 🟢 **`mentingo` (MIT)** · 🟢 **`kolibri` (MIT)**.
+🔴 **Everything else is GPL, LGPL or AGPL.**
+
+### 🆕 🔴 `T120` — a `repo:` search miss is NOT evidence of absence
+
+🔴 **`openedx/edx-platform` was absent from TWO independent `repo:`-qualified searches**, which
+would read as a deleted or renamed repository. 🟢 **It is neither:**
+
+| probe | result |
+|---|---|
+| 🔴 `repo:openedx/edx-platform` in two separate queries | 🔴 **absent both times** — 6 of 7, then 7 of 8 |
+| 🟢 `raw.../openedx/edx-platform/master/LICENSE` | 🟢 **`200`, `35 136 B`, GNU AFFERO GENERAL PUBLIC LICENSE** |
+| 🔴 `raw.../openedx/edx-platform/main/LICENSE` | 🔴 **`404` — there is no `main`; the ref is `master`** |
+
+🔴 **A second row behaves the same way:** `LAION-AI/Desktop_BUD-E` is absent from `repo:` search
+and 🟢 **answered `ls-remote` with two refs and served a `4 970 B` README on `raw`.**
+🆕 **`T120`:** 🟢 **an index miss and a dead repository are indistinguishable from inside the
+search channel**, 🔴 **so *"not found"* from a search endpoint is never publishable as
+*"gone"* — 🟢 **it costs one `ls-remote` to tell them apart, and this shelf now pays it.**
+
+### 🟢 `P52` — the channel map, measured rather than assumed
+
+🟢 **p156 recorded *"`api.github.com` refuses this session, `403` on all 17 owners"* as a
+categorical gap.** 🟢 **It is narrower than that, and the shelf has been leaving metadata on
+the table.**
+[`evidence/channel-map.2026-10-12-p157.tsv`](../evidence/channel-map.2026-10-12-p157.tsv)
+
+| channel | status | what it answers |
+|---|---|---|
+| 🔴 `curl api.github.com` | 🔴 **`403`, 2nd pass** | 🔴 nothing |
+| 🔴 `curl github.com` *(rendered)* | 🔴 **`403` this session** | 🔴 nothing — 🟡 **so p156's rendered channel is not reproducible by curl here** |
+| 🟢 **GitHub MCP `search_repositories`** | 🟢 **`200` for ANY public repo** | 🟢 **population counts, ★, forks, open issues, SPDX licence, `default_branch`, `pushed_at`, `archived`, topics** |
+| 🔴 GitHub MCP `list_branches` / `get_file_contents` | 🔴 **refused outside this session's own repos** | 🔴 nothing third-party |
+| 🟢 `raw.githubusercontent.com` | 🟢 **`200`** | 🟢 **file BODIES, any public repo, any ref** |
+| 🟢 `git ls-remote --heads` | 🟢 **15 of 15** | 🟢 **the complete ref list for any public repo** |
+
+🆕 **`P52`** — 🟢 **the GitHub channel is SPLIT, not closed: GLOBAL SEARCH endpoints answer for
+any repository, PER-REPOSITORY endpoints are scoped to this session.** 🟢 **So the working
+triple is: metadata from search, bodies from `raw`, refs from `ls-remote`** — 🔵 **and together
+they cover everything this shelf had been treating as unreachable for three passes.**
+
+### 🆕 🟢 CORRECTION, and it strengthens p156 rather than weakening it
+
+🔴 **p156 probed `openeducat_erp`'s `COPYRIGHT` pointer on `master`, `18.0` and `17.0` and found
+`404` on all three. None of those is the default branch** — 🟢 **the default is `19.0`.**
+🟢 **Probed this pass: `19.0/LICENSE` = `200`, `8 241 B`, LGPLv3 — identical. `19.0/COPYRIGHT` =
+`404`.**
+🟢 **So `ACTION HB`'s conclusion HOLDS on the branch it had not examined, and the dangling
+pointer is now confirmed on FOUR refs.** 🔵 **Stated because the gap was real even though the
+answer did not change** — 🟢 **and because it is the same defect `P53` was written for, found in
+this shelf's own prior work rather than in someone else's repository.**
+
 ## Pass 156 — 2026-10-12
 
 🟢 **Every licence on this page is now read from a BODY on `raw.githubusercontent.com`, this

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 157
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **Seven new agent rows, every licence read from a body this pass with the answering path
+recorded.** 🔴 **Three of the seven are unusable or restricted — and they are the three with the
+most stars.**
+
+### 🆕 The new rows
+
+| agent | ★ | licence *(body-read)* | bytes | path | what moved |
+|---|---|---|---|---|---|
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29 559** | 🔴 **NONE** | 0 | 🔴 404 on 9 paths | 🔴 **The largest no-grant row this shelf has ever measured.** 🔴 **Stale since `2025-09-30`.** 🔵 **A prompt, not a program** |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | **4 164** | 🔴 **AGPL-3.0** | 34 523 | `LICENSE` | 🟢 **Structured English listening/speaking drill — intensive listening, shadowing, blind listening, retelling, spaced review.** 🟢 **Pushed `2026-10-12`** |
+| 🔴 [`penecho/penecho`](https://github.com/penecho/penecho) | **2 480** | 🔴 **AGPL-3.0** | 34 523 | `LICENSE` | 🟢 **A shared canvas for handwriting, equations, diagrams and spatial reasoning.** 🔵 **The most interesting INTERACTION model on the shelf — it is not a chat box** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | **1 316** | 🔴 **AGPL-3.0** | 34 522 | `LICENSE` | 🟢 **Visual, interactive tutor. Top row of `topic:ai-education` by stars** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** | 35 149 | `LICENSE` | 🟢 **A tutor built on Theory-of-Mind reasoning — it models the learner's mental state.** 🔵 **The closest thing to a pedagogical thesis in code on this shelf** |
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | **325** | 🟢 **Apache-2.0** | 11 342 | `LICENSE.txt` | 🟢 **Conversational teaching and Q&A, pushed `2026-10-12`.** 🟢 **The only permissive tutoring application above 300 ★ besides `DeepTutor`** |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | **314** | 🟢 **MIT** | 1 070 | `LICENSE` | 🟢 **Illustrated video lessons with presenters, voices and a timeline.** 🟢 **The content-production lane, MIT** |
+
+### 🔴 The week's pattern: the attention leaders are the ones you cannot use
+
+🟢 **Sorted by stars, the top four new rows are `NONE`, `AGPL-3.0`, `AGPL-3.0`, `AGPL-3.0`.**
+🟢 **The two permissive rows are 7th and 8th by stars.**
+🆕 **`T123`** — 🔴 **AGPL-3.0 is the default licence of the attention-leading open education
+application**, and 🟢 **the three AGPL bodies land at `34 522`–`34 523 B`, a one-byte spread,
+so this is a measured family read rather than a label trusted from a sidebar.**
+🔵 **Combined with Open edX (AGPL-3.0), the category default is network-copyleft** — 🔴 **and
+the standard edtech delivery model is hosting it for the client, which AGPL turns into a
+disclosure event.**
+
+### 🟢 Re-confirmations worth recording
+
+- 🟢 **`HKUDS/DeepTutor` at `41 210 ★`** — within the band this shelf has carried, and
+  🟢 **Apache-2.0 re-read from the body (`LICENSE`, 11 408 B)**.
+- 🔴 **`CaviraOSS/PageLM` (`2 029 ★`) re-read and still DO-NOT-VENDOR.** 🟢 **The body confirms
+  the shelf's `P411` reading in detail: it opens with MIT's literal grant sentence, is titled
+  *"PageLM Community License"*, grants only personal / educational / non-commercial research
+  use, 🔴 **PROHIBITS redistribution in whole or in part without written permission**, and is
+  🔴 **REVOCABLE.** 🔵 **A client engagement is commercial use, so the star count is irrelevant.**
+- 🟢 **`learnhouse/learnhouse` (`2 351 ★`) AGPL-3.0 re-read on `main` at `34 523 B`** —
+  🟢 **agrees with this shelf's earlier correction from Apache-2.0, and now on a second ref.**
+
+### 🆕 🔴 A reminder about how these rows are verified, because this pass got one wrong
+
+🔴 **This pass's own probe declared `luisgf/openbadgeslib` unlicensed on nine paths. It is
+LGPL-3.0.** 🔴 **The probe assumed `main`; the repository's default branch is `master`.**
+🟢 **Caught only because GitHub's metadata disagreed with the file probe.** 🆕 **`P53`: resolve
+the default branch before probing, and treat a two-channel disagreement as an unfinished
+measurement rather than a tie to break.**
+🔵 **Recorded here, in the trending log, because this is the file where rows enter the shelf and
+therefore where the gate has to hold.**
+
 ## 2026-10-12 — pass 156 — the topic is 75% permissive and 21% unusable, and the gap is invisible on the page
 
 🟢 **p155 built the free discovery channel. p156 spent it: `80` new rows, `80` licence bodies,

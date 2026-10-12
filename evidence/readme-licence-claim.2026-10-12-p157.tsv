@@ -1,0 +1,16 @@
+repo	stars	branches	nondefault_branch_probes	readme_path	readme_bytes	prose_signal	tier	verdict
+CipherCraze/SpeakGenie-AI-Tutor	16	1 (main)	0	README.md	7795	"This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details."	PROSE_CLAIM_NO_TEXT	MIT claimed in prose; LICENSE pointer DANGLING; only branch is main
+dragonpilee/ScholarMate	8	1 (main)	0	README.md	4868	shields.io License-MIT badge + "This project is licensed under the MIT License - see the LICENSE file for details."	PROSE_CLAIM_NO_TEXT	MIT claimed twice; LICENSE absent; README still contains the unedited template placeholder "yourusername"
+mayankjndl/vidyamind	4	1 (main)	0	README.md	10551	shields.io License-MIT badge + "This project is licensed under the MIT License. See [LICENSE] for details."	PROSE_CLAIM_NO_TEXT	MIT claimed in prose; LICENSE pointer DANGLING; only branch is main
+pulkitpareek18/LearnFlow-AI	7	1 (main)	0	README.md	4702	"## License / MIT License - see [LICENSE](LICENSE) for details."	PROSE_CLAIM_NO_TEXT	MIT claimed in prose; LICENSE pointer DANGLING; only branch is main
+aadyatalreja/Adaptive-AI-Learning-Assistant	4	1 (main)	0	README.md	6294	"This project is private (\"private\": true in package manifests). Add a license file if you intend to open-source or distribute it."	EXPLICIT_NON_GRANT	Not an oversight. The project states it is private. p156's no-grant reading CONFIRMED and strengthened
+legostin/learn-almost-anything	9	16 (main + 15)	0 of 90 probes	README.md	13164	"## License / Not set. Source is open for reading and personal use; use at your own risk."	EXPLICIT_NON_GRANT	Source-available, NOT open source. Deliberate. Personal-use-only grant, no redistribution right
+A-R007/Multi-Agent-Study-Assistant	63	1 (main)	0	README.md	9915	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown
+LAION-AI/Desktop_BUD-E	43	2 (endo, main)	0 of 12 probes	README.md	4970	— none —	NO_STATEMENT	No licence file, no prose claim, on either branch. True unknown
+photolensfocus/Llm-language-learning	22	1 (main)	0	README.md	5221	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown
+CyanDR21/Cyanskill	12	1 (main)	0	README.md	1809	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown
+huangfengqwq/huangfeng-exam-tutor	8	1 (main)	0	README.md	7879	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown
+gupta-v/KIRA	7	2 (dev, main)	0 of 12 probes	README.md	7540	— none —	NO_STATEMENT	No licence file, no prose claim, on either branch. True unknown
+SHALINISAURAV/AI-Study-Assistant	6	1 (main)	0	README.md	9535	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown
+lalitm1004/cogito-tutor	6	4 (frontend, landing_content, main, pass_topic_as_param)	0 of 18 probes	README.md	1560	— none —	NO_STATEMENT	No licence file, no prose claim, on any of 4 branches. True unknown
+jangtrinh/design-os-pedagogy	4	1 (main)	0	README.md	8000	— none —	NO_STATEMENT	No licence file, no prose claim. True unknown

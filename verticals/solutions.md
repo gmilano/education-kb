@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 157 — 2026-10-12
+
+🟢 **A 156-pass gap on this page is CLOSED, and the answer is a build decision rather than a
+shortlist.**
+🔴 **The credentialing layer that 2026 buyer-demand sources keep naming has `29` repositories
+behind it, a `85 ★` ceiling, and a reference implementation with ONE star.**
+
+### 🆕 🟢 The credentialing layer — the gap is CLOSED, and the finding is that the supply is not there
+
+🔵 **This shelf has carried *"no credentialing / skills-pathway repository"* as an open gap for
+156 passes, with the honest caveat that it might be a search failure rather than a supply gap.**
+🟢 **It is a supply gap. Measured:**
+[`evidence/credentialing-census.2026-10-12-p157.tsv`](../evidence/credentialing-census.2026-10-12-p157.tsv)
+
+| measurement | value |
+|---|---|
+| 🔴 **Population of `topic:open-badges`** | 🔴 **`29` repositories, entire topic** |
+| 🔴 **Highest star count in the topic** | 🔴 **`85`** — `fedora-infra/tahrir` |
+| 🔴 **Stars on the only production-oriented Open Badges 3.0 library** | 🔴 **`1`** |
+| 🔴 **Rows that are MIT or Apache AND pushed in 2026** | 🔴 **`2` of 29** |
+| 🔴 **Rows last pushed before 2022** | 🔴 **`6` of the 15 read** |
+
+🟢 **The rows worth naming, licence read from the body where it mattered:**
+
+| repo | ★ | licence | what it is, and the verdict |
+|---|---|---|---|
+| 🆕 🟡 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **1** | 🟡 **LGPL-3.0** (🆕 `master/LICENSE.txt`, 7 650 B) | 🟢 **Issue, verify and revoke Open Badges 3.0 / W3C Verifiable Credentials as JWT-VC, with Bitstring Status List revocation. Active `2026-10-04`.** 🔵 **This is THE standards-complete implementation, and it has one star.** 🟡 **LGPL: link freely; modifying the library is not free** |
+| 🆕 🟡 [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | **63** | 🔴 **AGPL-3.0** (`LICENSE`, 33 820 B) | 🟢 **Open Badges 3.0 issuance for course, workshop and conference organisers — the closest thing to a usable issuer product.** 🔴 **AGPL: a hosted derivative discloses** |
+| 🆕 🟡 [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | **85** | 🔴 **AGPL-3.0** (🆕 `develop/LICENSE`, 34 917 B) | 🟢 **A badge-issuing web app with a decade of real operation behind Fedora's badges programme.** 🟡 **GitHub reports `NOASSERTION` because the body is `394 B` longer than standard AGPL — the body read resolves it** |
+| 🆕 🟢 [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🔴 **1** | 🟢 **MIT** (`LICENSE`, 1 080 B) | 🟢 **A Vue widget to author an Open Badge 3.0 achievement definition. Active `2026-09-28`.** 🔵 **The ONLY clean permissive active row in the topic** — 🔴 **and it is a form widget, not a system** |
+
+🔵 **The studio call, and it is the clearest build-vs-adopt decision on this shelf:**
+- 🟢 **Demand is named by 2026 trend sources** — digital credentials and micro-credentials
+  against employer skills-based hiring.
+- 🔴 **Supply is 29 repositories whose best permissive row is a form widget.** 🔴 **There is no
+  credentialing PLATFORM to adopt.**
+- 🟢 **So this is a BUILD lane, not an integrate lane** — 🟢 **and the standards work is already
+  done for free: Open Badges 3.0 is W3C Verifiable Credentials, `openbadgeslib` shows the
+  JWT-VC issue/verify/revoke path, and LGPL lets a product link it without disclosing.**
+- 🔵 **It is also the only lane on this shelf where a studio could credibly own the reference
+  implementation**, 🟢 **because the incumbent has one star.**
+
+### 🆕 🔴 `learnhouse` joins the platform shelf, and it is AGPL — re-verified from the body
+
+🆕 🔴 [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) — **2 351 ★**, active
+`2026-10-11`, 🔴 **AGPL-3.0, body-read `34 523 B` this pass on `main`** *(the shelf's prior read
+was on `dev`; it resolves identically on both, as p145 recorded)*.
+🟢 **A next-generation learning platform with AI features first-class rather than bolted on** —
+🔵 **so it is the closest open competitor to what a studio would otherwise propose building**,
+and 🔴 **its AGPL makes hosting it for a client a disclosure event.**
+🟢 **Independent re-confirmation, not a new row: this shelf already corrected its licence from
+Apache-2.0 to AGPL-3.0, and the body read this pass agrees.**
+
+### 🔴 `T122` — the ERP/CRM query has stopped measuring the market
+
+🟢 **Run this pass as registered:** `open source platform education ERP CRM MIT Apache`.
+🔴 **`10` of `10` results were ONE vendor's own glossary pages — `openeducat.org`, the same two
+articles in ten locales** (`ar`, `fr`, `pt-BR`, `zh`, `de`, `es`, and more).
+
+🆕 **`T122`** — 🔴 **a research query whose result page is a single vendor's glossary repeated in
+ten languages is not returning a market picture; it is returning that vendor's SEO.**
+🟢 **The query is retired as a market instrument** and 🔵 **kept only as a reminder that a
+channel can saturate without going quiet, which is the harder failure to notice** —
+🟢 **`T110`'s lesson on a different axis: there, the words resolved to the wrong domain; here,
+they resolve to one seller.**
+
+🟢 **One real thing did come back, and it is a confirmation:** 🔴 **the source itself states that
+*"MIT and Apache 2.0 are permissive... so if you specifically want MIT or Apache, OpenEduCat is
+not the match"*** — 🟢 **i.e. the question *"is there a permissive education ERP?"* is answered
+NO by the leading vendor in the category.** 🔴 **ELEVENTH pass with no open-source vendor named
+in any market source.**
+
+### 🟢 The vertical platform shelf, with attention now attached
+
+🔵 **The full ★ / activity / licence table for all 14 platform and foundational rows is on
+[`repos/foundations.md`](../repos/foundations.md) this pass** *(`ACTION HM`)*. 🟢 **The
+platform-selection summary for an engagement:**
+
+| if the client needs | take | licence posture |
+|---|---|---|
+| 🟢 **To keep their LMS and add AI** | 🟢 **leave Moodle / Open edX ALONE, integrate over LTI 1.3 + AGS** | 🟢 **A protocol boundary is not a derivative work. `P156-A`** |
+| 🟢 **To OWN the platform, fork-safe** | 🟢 **`OpenOLAT` (Apache-2.0, 447 ★)** or 🟢 **`Selleo/mentingo` (MIT, 93 ★)** | 🟢 **Permissive, patent grant on OpenOLAT** |
+| 🟢 **Low/no-connectivity deployment** | 🟢 **`kolibri` (MIT, 1 143 ★)** | 🟢 **MIT** |
+| 🟢 **Student records, not courses** | 🔴 **`rosariosis` (GPL-2.0, 646 ★)** | 🔴 **GPL-2.0 — distribution discloses** |
+| 🟢 **Education ERP** | 🔴 **`openeducat_erp` (LGPL-3.0, 887 ★, default branch `19.0`)** | 🟡 **LGPL — link, do not modify** |
+| 🟢 **Verifiable credentials** | 🔴 **nothing to adopt — see above. BUILD, linking `openbadgeslib`** | 🟡 **LGPL-3.0 linking** |
+| 🟢 **Virtual classroom** | 🔴 **`bigbluebutton` (LGPL-3.0, 9 241 ★)** | 🟡 **LGPL** |
+| 🟢 **Interactive content** | 🔴 **`h5p-php-library` (GPL, 150 ★)** | 🔴 **GPL** |
+
 ## Pass 156 — 2026-10-12
 
 🟢 **`ACTION HB` DISCHARGED, and it REFUTED this shelf's own published claim about the row a

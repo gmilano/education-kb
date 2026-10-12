@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 157 — 2026-10-12
+
+🟢 **All three pre-registered actions reached. `ACTION HL` is DISCHARGED and its falsifier
+FIRED — p156's own headline number is materially overstated, exactly as p156 wrote the test to
+detect.**
+🔴 **p156 predicted *"NOT refuted at 3."* It was refuted at 4.**
+🟢 **And this pass opened a metadata channel the shelf has been without for 157 passes.**
+
+### 🆕 🔴 `ACTION HL` — REFUTED. A prose licence claim is the most common defect in this tier, and three instruments give three different answers
+
+🔴 **`4 of 15` no-grant rows carry an affirmative MIT grant in README prose.** The falsifier
+was *"refuted if 3 or more."*
+[`evidence/readme-licence-claim.2026-10-12-p157.tsv`](../evidence/readme-licence-claim.2026-10-12-p157.tsv)
+
+| row | ★ | what the README says | branches | licence text anywhere? |
+|---|---|---|---|---|
+| 🔴 [`CipherCraze/SpeakGenie-AI-Tutor`](https://github.com/CipherCraze/SpeakGenie-AI-Tutor) | 16 | *"This project is licensed under the MIT License — see the `LICENSE` file for details."* | 1 | 🔴 **No. The pointer is dangling** |
+| 🔴 [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate) | 8 | shields.io **`License-MIT`** badge **and** the same sentence | 1 | 🔴 **No.** 🆕 **And its README still reads `github.com/yourusername/scholarmate`** — an unedited template placeholder, 🔵 **which is evidence the MIT line is template residue too** |
+| 🔴 [`mayankjndl/vidyamind`](https://github.com/mayankjndl/vidyamind) | 4 | badge **and** *"licensed under the MIT License. See `LICENSE`"* | 1 | 🔴 **No. Dangling** |
+| 🔴 [`pulkitpareek18/LearnFlow-AI`](https://github.com/pulkitpareek18/LearnFlow-AI) | 7 | *"## License — MIT License, see `LICENSE` for details."* | 1 | 🔴 **No. Dangling** |
+
+🆕 **`T117`** — 🔴 **on these four rows, three instruments return three different answers, and
+each one alone would publish something false:**
+
+| instrument | what it says | if you trusted only this |
+|---|---|---|
+| 🔴 A licence-FILE probe *(p156's, 22 paths)* | **no grant** | 🔴 you call a project unusable that its author believes is MIT |
+| 🔴 GitHub's own `license` field | **`null`** | 🔴 same error, with the platform's authority behind it |
+| 🔴 A README skim *(what a developer actually does)* | **MIT** | 🔴 you ship a client deliverable on a grant with no licence text and no named copyright holder |
+
+🟢 **The useful consequence is not a number, it is a THREE-TIER verdict** — 🆕 **`P51`:**
+
+| tier | count | what it is | what a studio does |
+|---|---|---|---|
+| 🔴 **No statement at all** | **9 of 15** (60%) | no licence file, no prose claim, on any branch | 🔴 **Default all-rights-reserved. Do not ship. A true unknown — ask the author** |
+| 🔴 **Explicit NON-grant** | **2 of 15** (13%) | `Adaptive-AI-Learning-Assistant`: *"This project is private."* · `learn-almost-anything`: *"Not set. Source is open for reading and personal use"* | 🔴 **Do not ship, and do not ask** — 🟢 **the author has already answered.** 🔵 **p156's reading is CONFIRMED and strengthened on these two** |
+| 🔴 **Prose claim, no licence text** | **4 of 15** (27%) | an MIT sentence, sometimes a badge, pointing at a file that does not exist | 🟡 **Evidence of intent to grant, not a grant.** 🟢 **One issue gets it fixed.** 🔴 **Until then legal review rejects it and a developer skim accepts it** |
+
+🟢 **Both bases published, not the flattering one** *(`T106`)*. Over p156's 80 `ai-tutor` rows:
+
+| evidentiary standard | MIT share | legally unusable |
+|---|---|---|
+| 🔴 **Strict — licence text required** | **50 of 80 = 62.5%** | **17 of 80 = 21.3%** *(p156's figure, UNCHANGED)* |
+| 🟡 **Permissive — a README claim counts** | **54 of 80 = 67.5%** | **13 of 80 = 16.3%** |
+
+🔴 **So the headline moves 5 points on the standard of evidence alone**, and 🟢 **`T106`'s lesson
+generalises: it is not only the denominator that decides a licence figure, it is the standard of
+proof — and a figure published without naming its standard is not checkable.**
+
+### 🟢 `ACTION HL`, second limb — falsifier SILENT. No licence hides on a non-default branch
+
+🟢 **`ls-remote` answered for 15 of 15 rows.** 🟢 **20 non-default branches found; `6` licence
+paths probed on each; `120` probes; `0` hits.**
+[`evidence/branch-enumeration.2026-10-12-p157.tsv`](../evidence/branch-enumeration.2026-10-12-p157.tsv)
+
+🟢 **Decisively: the four prose-MIT rows have EXACTLY ONE branch each.** 🔴 **Their licence text
+does not exist anywhere in the repository**, so the dangling pointer cannot be rescued.
+🟡 **Where branches did exist they were ordinary feature work** — `legostin/learn-almost-anything`
+carries 15, `lalitm1004/cogito-tutor` 4, `gupta-v/KIRA` and `LAION-AI/Desktop_BUD-E` 2 each.
+
+### 🆕 🔴 This pass's own negative control FIRED, and it changes the probing rule
+
+🔴 **`luisgf/openbadgeslib` returned `404` on all nine licence paths — and it IS licensed.**
+🟢 **GitHub's metadata said `LGPL-3.0`; the file probe said nothing there.** 🔴 **The probe was
+wrong: the default branch is `master`, not `main`,** and 🟢 **`master/LICENSE.txt` is `7 650 B`.**
+
+🆕 **`P53`** — 🟢 **resolve `default_branch` from metadata BEFORE probing `raw`; never assume
+`main`.** 🔵 **`P50` taught that a licence-absence claim is a claim about the PATHS probed;
+this adds that it is equally a claim about the REF probed, and the ref is the cheaper mistake
+to make.**
+🟢 **The error was caught only because two instruments disagreed.** 🆕 **So the operating rule
+is: read the licence on `raw` and the licence field from metadata, and treat any disagreement as
+an unfinished measurement rather than a tie to be broken.** 🔴 **Had this shelf used one channel,
+it would have published *"the reference implementation of Open Badges 3.0 has no licence."***
+
+### 🆕 🔴 The largest no-grant row on this shelf, and it is not close
+
+🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) —
+🔴 **`29 559 ★`, NO LICENCE FILE on nine paths, last push `2025-09-30`.**
+🔵 **The second-most-starred education-AI artefact this shelf has ever measured, behind only
+`DeepTutor`** — 🔴 **and it is legally unusable, unmaintained for over a year, and it is a
+PROMPT rather than a program.**
+🟢 **`T117`'s scale: the no-grant defect is not a long-tail hobby-project problem.** 🔴 **It sits
+on the most-starred row in the category.**
+
+### 🟢 The verified agent shelf, ★ and licence body-read this pass
+
+🔵 **Rows carried from earlier passes keep their verification; the five marked 🆕 are read this
+pass.**
+[`evidence/licence-bodies.2026-10-12-p157.tsv`](../evidence/licence-bodies.2026-10-12-p157.tsv)
+
+| agent | ★ | licence *(body-read, path recorded)* | what it is, and the engagement consequence |
+|---|---|---|---|
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 210** | 🟢 **Apache-2.0** (`LICENSE`, 11 408 B) | 🟢 **Lifelong personalised tutoring, HKU Data Intelligence Lab.** 🟢 **Apache-2.0 carries a patent grant — the single best starting point on this shelf.** 🟡 **APAC (Hong Kong), `P36`-placed p156** |
+| 🆕 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29 559** | 🔴 **NONE** (404 on 9 paths) | 🔴 **DO NOT SHIP.** 🔵 **Read it for prompt design, cite nothing, vendor nothing. Stale since `2025-09-30`** |
+| 🆕 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | **4 164** | 🔴 **AGPL-3.0** (`LICENSE`, 34 523 B) | 🟢 **Structured English listening/speaking drill: intensive listening, shadowing, blind listening, retelling, spaced review.** 🔴 **AGPL — a hosted derivative discloses** |
+| 🆕 🔴 [`penecho/penecho`](https://github.com/penecho/penecho) | **2 480** | 🔴 **AGPL-3.0** (`LICENSE`, 34 523 B) | 🟢 **A shared canvas for handwriting, equations, diagrams and spatial reasoning — not a chat box.** 🔵 **The most interesting INTERACTION model on the shelf** |
+| 🆕 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | **1 316** | 🔴 **AGPL-3.0** (`LICENSE`, 34 522 B) | 🟢 **Visual, interactive tutor.** 🔴 **AGPL** |
+| 🆕 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | **931** | 🔴 **GPL-3.0** (`LICENSE`, 35 149 B) | 🟢 **A tutor built on Theory-of-Mind reasoning — it models the learner's mental state, not just their answers.** 🔵 **The closest thing on the shelf to a pedagogical thesis in code** |
+| 🆕 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | **325** | 🟢 **Apache-2.0** (`LICENSE.txt`, 11 342 B) | 🟢 **Conversational teaching and Q&A, active `2026-10-12`.** 🟢 **The only PERMISSIVE tutoring application above 300 ★ on this shelf besides `DeepTutor`.** 🔵 **Patent grant included** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **515** | 🟢 **MIT** | 🟢 **MCP server over Anki — spaced repetition as a tool call.** 🔵 **Composes into any host agent** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **140** | 🟢 **MIT** | 🟢 **Block-based adaptive workspace that runs LOCALLY** — 🔵 **the data-boundary answer for an institution that cannot send student work to a vendor** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **93** | 🟢 **MIT** (`LICENSE`, 1 062 B) | 🟢 **The only MIT-licensed LMS on this shelf.** 🟡 **EMEA — Poland, `P36`-verified** |
+| 🆕 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | **314** | 🟢 **MIT** (`LICENSE`, 1 070 B) | 🟢 **Generates illustrated video lessons with presenters, voices and a timeline.** 🔵 **The content-production lane, MIT** |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2 029** | 🔴 **"PageLM Community License"** (`LICENSE.md`, 8 563 B) | 🔴 **DO NOT VENDOR — re-confirmed from the body this pass.** 🔴 **Opens with MIT's literal sentence, then grants only personal/educational/non-commercial use, PROHIBITS redistribution, and is REVOCABLE.** 🔵 **A client engagement is commercial use** |
+
+🟢 **Twelve rows. Every licence read from a body, with the answering path recorded.**
+🔴 **Three of the twelve are unusable or restricted at any star count** — and 🔵 **they are the
+1st, 3rd and 4th most-starred rows in the table.**
+
+🆕 **`T123`** — 🔴 **AGPL-3.0 is the default licence of the attention-leading open education
+application.** 🟢 **Measured: of the top eight `education`+`ai` rows above 1 300 ★, FOUR are
+AGPL-3.0** — `Echo-Loop`, `penecho`, `learnhouse`, `ChatTutor` — 🟢 **and all four bodies land at
+`34 522`–`34 523 B`, a one-byte spread, so the family read is not in doubt.**
+🔵 **Read with Open edX (AGPL-3.0) this is a pattern, not a coincidence: the modern open
+education platform is born network-copyleft**, 🟢 **which is exactly why `P156-A`'s
+protocol-boundary recipe is the billable shape and a fork is not.**
+
 ## Pass 156 — 2026-10-12
 
 🟢 **`ACTION HF` DISCHARGED: 80 more `ai-tutor` rows read, 80 licence bodies read, and this

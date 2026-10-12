@@ -1,0 +1,4 @@
+repo	assumed_ref	result_on_assumed	actual_default	result_on_actual	how_it_was_caught	tier
+luisgf/openbadgeslib	main	404 on 9 licence paths	master	LICENSE.txt 200, 7650 B, LGPL-3.0	metadata said LGPL-3.0 while the file probe said nothing — two-instrument disagreement	credentialing
+tl-its-umich-edu/my-learning-analytics	main	404 on 9 licence paths	master	LICENSE 200, 11379 B, Apache-2.0 (identical on 28 refs)	metadata said Apache-2.0 while the file probe said nothing — same disagreement	learning analytics
+openedx/edx-platform	main	404	master	LICENSE 200, 35136 B, AGPL-3.0	absent from repo: search entirely; raw on master answered	MOOC platform

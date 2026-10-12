@@ -1,0 +1,25 @@
+repo	branch	path_that_answered	http	bytes	name_line_or_opening
+learnhouse/learnhouse	main	LICENSE	200	34523	GNU AFFERO GENERAL PUBLIC LICENSE
+plastic-labs/tutor-gpt	main	LICENSE	200	35149	GNU GENERAL PUBLIC LICENSE
+ai-shifu/ai-shifu	main	LICENSE.txt	200	11342	Apache License
+penecho/penecho	main	LICENSE	200	34523	GNU AFFERO GENERAL PUBLIC LICENSE
+echo-loop/Echo-Loop	main	LICENSE	200	34523	GNU AFFERO GENERAL PUBLIC LICENSE
+CaviraOSS/PageLM	main	LICENSE.md	200	8563	# PageLM Community License **Copyright (c) 2025 nullure & recabasic** Permission is hereby granted, free of charge, to
+HugeCatLab/ChatTutor	main	LICENSE	200	34522	GNU AFFERO GENERAL PUBLIC LICENSE
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	main	LICENSE	200	1070	MIT License
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main	-	404-ALL-9-PATHS	0	NO-LICENCE-FILE
+luisgf/openbadgeslib	main	-	404-ALL-9-PATHS	0	NO-LICENCE-FILE
+Schroedinger-Hat/certo	main	LICENSE	200	33820	GNU AFFERO GENERAL PUBLIC LICENSE
+opensalt/OB3DefinitionWidget	main	LICENSE	200	1080	MIT License
+fedora-infra/tahrir	develop	LICENSE	200	34917	GNU AFFERO GENERAL PUBLIC LICENSE
+HKUDS/DeepTutor	main	LICENSE	200	11408	Apache License
+luisgf/openbadgeslib	master	LICENSE.txt	200	7650	LGPL-3.0 supplement — P53 CORRECTION: default branch is master, not main
+luisgf/openbadgeslib	ci/py315-ldp-context-pin-docs	LICENSE.txt	200	7650	same body on the second branch
+openeducat/openeducat_erp	19.0	LICENSE	200	8241	GNU LESSER GENERAL PUBLIC LICENSE — default branch, never probed by p156
+openeducat/openeducat_erp	19.0	COPYRIGHT	404	0	dangling pointer confirmed on a FOURTH branch
+openedx/edx-platform	master	LICENSE	200	35136	GNU AFFERO GENERAL PUBLIC LICENSE — alive; absent only from repo: search
+openedx/edx-platform	main	LICENSE	404	0	no main branch
+terracotta-education/terracotta	master	LICENSE	200	11323	Apache License 2.0 — also resolves on main
+openfun/ralph	main	LICENSE.md	200	1094	MIT License — P50: plain LICENSE is 404, only LICENSE.md answers
+vanderbilt-data-science/knowledge-spaces	main	LICENSE	200	1090	MIT License
+tl-its-umich-edu/my-learning-analytics	master	LICENSE	200	11379	Apache License 2.0 — P53 CORRECTION: default is master; main 404s on 9 paths; body identical on 28 refs

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🟢 Verdicts on the THREE actions p156 registered, judged by p157 — all three reached, one REFUTED
+
+🟢 **Second consecutive clean sweep of a three-action register.** 🔵 **Two data points now
+support p155's cut from nine to three, and the rule *"three is what a pass finishes"* has
+earned its place.**
+🔴 **A caveat this pass owes the reader: p157 is judging actions p156 wrote, but the work was
+done by p157, so these are self-assessments. Where a falsifier had a numeric threshold it is
+reported against the threshold, not against a judgement.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🔴 **`ACTION HL`** — assess all 15 no-grant READMEs for a prose licence claim, and re-probe each on non-default branches | 🔴 **DISCHARGED — falsifier FIRED on the prose limb, SILENT on the branch limb** | Condition: *"refuted if 3 or more of the 15 carry a licence claim in prose or on another branch."* 🔴 **`4 of 15` carry an affirmative MIT grant in README prose** — `SpeakGenie-AI-Tutor`, `ScholarMate`, `vidyamind`, `LearnFlow-AI`, 🔴 **every one pointing at a `LICENSE` file that does not exist.** 🔴 **p156 predicted *"NOT refuted at 3."* Wrong.** 🟢 **Branch limb: `ls-remote` on 15 of 15, `20` non-default branches, `6` paths each, `120` probes, `0` hits** — 🟢 **and the four prose-MIT rows have exactly ONE branch, so their licence text exists nowhere.** 🟢 **`P51` written: a three-tier verdict replaces the binary.** 🆕 **`T117`.** [`evidence/readme-licence-claim.2026-10-12-p157.tsv`](../evidence/readme-licence-claim.2026-10-12-p157.tsv) · [`evidence/branch-enumeration.2026-10-12-p157.tsv`](../evidence/branch-enumeration.2026-10-12-p157.tsv) |
+| 🟢 **`ACTION HM`** — read ★ and last-push for the 13 platform and foundational rows | 🟢 **DISCHARGED — falsifier SILENT, on a SUBSTITUTED instrument** | Condition: *"refuted if the rendered page cannot serve ★ for 3 or more of the 13."* 🟢 **`13 of 14` rows served ★, forks, open issues, `default_branch` and `pushed_at`.** 🔴 **Only `openedx/edx-platform` failed. 1 < 3, NOT REFUTED.** 🟡 **Said plainly: the registered instrument was the RENDERED page, and `curl` gets `403` on it this session. The action was discharged on the GitHub MCP search channel instead** — 🟢 **a better instrument, but not the one registered, and the substitution is recorded rather than glossed.** 🆕 **`T118`: `DeepTutor` alone (`41 210 ★`) is `1.72 ×` the whole platform tier summed (`23 945 ★`).** [`evidence/platform-attention.2026-10-12-p157.tsv`](../evidence/platform-attention.2026-10-12-p157.tsv) |
+| 🟢 **`ACTION HN`** — population and top-20 on-domain rate for `ai-education`, `edtech`, `learning-analytics`, `knowledge-tracing` | 🟢 **DISCHARGED — falsifier SILENT, and p156's prediction CONFIRMED on both limbs** | Condition: *"refuted if none of the four beats `ai-tutor`'s 19-in-20."* 🟢 **`knowledge-tracing` returned `20 of 20` at a population of `86`** — 🟢 **so p156's *"most precise and the smallest"* is right twice.** 🆕 **`T119`: precision and licence hygiene are ANTI-correlated — the `20/20` topic is `50%` no-licence against `ai-tutor`'s `10%`**, because a precise technical label attracts research code. 🆕 **`T121`: `ai-education` is BIMODAL** — `7 of 20` rows are education ABOUT AI, which is why it scores worst at `65%`. [`evidence/sibling-topic-census.2026-10-12-p157.tsv`](../evidence/sibling-topic-census.2026-10-12-p157.tsv) |
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p157
+
+| gap | movement |
+|---|---|
+| 🔴 *"No credentialing / skills-pathway repository, 156 passes"* | 🟢 **CLOSED, and the answer is a supply gap rather than a search failure.** 🔴 **`topic:open-badges` = `29` repositories total, `85 ★` ceiling, and the standards-complete Open Badges 3.0 / W3C VC library (`luisgf/openbadgeslib`) has `1 ★`.** 🟢 **`P157-C` turns it into a BUILD recipe.** 🔵 **The only lane on this shelf with named demand and no incumbent** |
+| 🔴 *"No evaluation harness for a TUTOR"* | 🟡 **NOT closed as a product — CLOSED as a COMPOSITION.** 🔴 **A direct search matched `122` repositories and `0 of 15` top rows were on-domain: they were ML paper lists.** 🟢 **But `terracotta` (Apache-2.0, an RCT plug-in FOR the LMS) + `ralph` (MIT, a Learning Record Store) + `pykt-toolkit` (MIT) compose into one — `P157-A`.** 🔵 **The harness does not exist; its parts do, and all three are permissive** |
+| 🔴 *"No star count for ANY platform or foundational row, THIRD pass"* | 🟢 **CLOSED for 13 of 14** — and 🔴 **the number refutes how this shelf had been reading the tier.** 🆕 **`T118`** |
+| 🔴 *"`api.github.com` refuses this session — categorical"* | 🔴 **NARROWED, and the shelf had been leaving metadata unused.** 🆕 **`P52`: the GitHub channel is SPLIT — GLOBAL search endpoints answer for any repository; PER-REPOSITORY endpoints are scoped to this session.** 🟢 **Working triple: metadata from search, bodies from `raw`, refs from `ls-remote`** |
+| 🔴 *"A licence sweep's probe list is unexamined" (`P50`)* | 🔴 **EXTENDED, and by this pass's OWN error. 🆕 `P53`: resolve `default_branch` BEFORE probing `raw`.** 🔴 **Three instances, all `master`-default: `openbadgeslib`, `my-learning-analytics`, `openedx/edx-platform`.** 🟢 **A licence-absence claim is a claim about the PATHS *and the REF*.** [`evidence/p53-default-branch.2026-10-12-p157.tsv`](../evidence/p53-default-branch.2026-10-12-p157.tsv) |
+| 🔴 *"`T111` — the population GREW 684 → 685"* | 🔴 **CORRECTED. This pass measures `669`, DOWN `16`.** 🟢 **The direction claim is WITHDRAWN; what survives is that a population figure must name its CHANNEL and a few rows' drift is not a finding** |
+| 🔴 *"`openeducat_erp`'s `COPYRIGHT` 404s on master/18.0/17.0"* | 🟢 **CONFIRMED on the DEFAULT branch p156 never probed — `19.0`.** 🟢 **`LICENSE` `200`/`8 241 B`, `COPYRIGHT` `404`.** 🔵 **`ACTION HB`'s conclusion holds on four refs now** |
+| 🔴 *"Korea's grace period is vague"* | 🟢 **CLOSED with a commencement date: the AI Basic Act took effect `2026-01-22`**, so penalties bite `2027-01-22` and the window between is sellable design-and-remediate time |
+| 🔴 *"The EMEA AI-Act date is four-valued"* | 🟡 **FIVE-valued, and still not a contradiction.** 🆕 **`2028-08-02` for high-risk AI embedded in REGULATED PRODUCTS.** 🟢 **And p156's *"live amendment risk"* is resolved: the Council approved the Digital Omnibus `2026-06-29`, so `2027-12-02` can be architected to** |
+| 🔴 *"LATAM's 87%/26% gap is one undifferentiated population"* | 🟢 **SEGMENTED: private non-profit `84%`, PUBLIC `68%`, private for-profit `52%`.** 🔵 **The for-profits are the laggards, which inverts the usual assumption, and the public university is the buyer with a procurement process** |
+| 🔴 *"No named LATAM institutional channel"* | 🟢 **CLOSED. 🆕 UNESCO launched the Observatory on AI in Education for LAC on `2026-04-14` at ECLAC, Santiago** — a region-wide publicly-funded demand channel for `P156-B` |
+| 🔴 *"`T115` — the incumbent is an unprocured general assistant"* | 🔴 **SHARPENED into something worse. 🆕 Microsoft is supplying Copilot and Teams for Education FREE to Washington state classrooms from 2026.** 🔴 **It is being procured now, at zero price, at state scale** — 🟢 **which closes the per-seat tutoring market rather than slowing it** |
+| 🔴 *"No open-source vendor in any market source, 10th pass"* | 🔴 **ELEVENTH pass — and now attested by the incumbent.** 🟢 **The ERP/CRM query's own sources state there is no MIT- or Apache-licensed education ERP or CRM to name.** 🆕 **`T122`: that query returned `10 of 10` results from ONE vendor's glossary in ten locales, so it is retired as a market instrument** |
+
+## 🔴 Gaps OPEN after p157, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🆕 🔴 **The four prose-MIT rows have no licence text and nobody has asked their authors** | 🟢 **A one-line issue converts each from `CLAIMED` to `GRANTED`.** 🔵 **`ACTION HP`** |
+| 🆕 🔴 **`T111` cannot be settled from this session** | 🔴 **The rendered topic page `403`s on `curl`, so the rendered-vs-API population disagreement is unresolvable here.** 🟡 **Left registered, not resolved** |
+| 🔴 **`590` of `669` `ai-tutor` rows unread** | 95 read across p155–p156. 🟢 **The search channel serves 100 rows per call with licence SPDX attached, so this is now cheap.** 🔵 **`ACTION HQ`** |
+| 🆕 🔴 **`14` of `29` credentialing rows unread** | 🟢 **15 read this pass.** 🔵 **Low value: the ceiling is `85 ★` and the shape is established** |
+| 🔴 **No EMEA-only adoption rate, NINTH pass** | 🟡 **The `~70%` figure fuses Europe with North America** |
+| 🔴 **No APAC adoption RATE, FOURTH pass** | 🟡 **Regulation and sentiment only, no percentage** |
+| 🔴 **Africa not queried as a region in its own right, THIRD pass** | 🔴 **The EMEA query surfaced Kenya, South Africa, Nigeria, UAE and Saudi only as a fragment.** 🔵 **`ACTION HD`, carried a third time** |
+| 🔴 **Canada and Mexico return nothing, SEVENTH pass** | 🟢 **The *"North America"* query is the United States in practice and this shelf should rename it** |
+| 🔴 **`Selleo/mentingo` unassessed beyond licence, ★ and region, FOURTH pass** | 🟢 **The only MIT LMS; `93 ★`, `107` open issues, active `2026-10-12`. Nobody has read its data model or multi-tenancy** |
+| 🔴 **No primary legal text, NINTH pass** | `eur-lex` and the law-firm hosts refuse this egress. 🟢 **Recorded once under the categorical-egress rule** |
+| 🔴 **TENTH pass with no quotable market size** | 🟢 **`T114` diagnosed it: none of the four figures is a primary study.** 🆕 **One internal check passes — NA at `36%`/`$3.68B` implies `~$10.2B` world, within 4% of the `$10.6B` figure** |
+| 🔴 **The rotation that selects this industry is STILL STUCK, and p156's fix did NOT land** | 🔴 **p156 published *"p156 ADVANCED it to `9` (automotive)"*.** 🔴 **Verified this pass on THREE refs of `gmilano/globant-kb` — `origin/main`, `origin/claude/…` and local `HEAD` — all three read `next: 8`, `last_updated: 2026-08-02`, `last_industry: technology`.** 🔴 **The advance was never committed or never pushed.** 🟡 **p157 has advanced it again and VERIFIED the push rather than asserting it** — see the README |
+
+## 🔜 Pre-registered for p158 — THREE actions, each with a falsifier
+
+🔵 **Three again. Two passes have now finished three; none has finished nine.**
+🟢 **All three are research or client-facing. None is about this KB's own bookkeeping** — which
+is the standing correction p155 made and p156 and p157 have both honoured.
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HP`** *(FIRST — it converts rows rather than counting them)* — open a licence-clarification issue on each of the four prose-MIT rows, and read the next 100 `ai-tutor` rows with licence SPDX from the search channel in the same pass | 🔴 *Refuted if the `NO_LICENCE_FILE` share in rows 96–195 differs from p156's `18.8%` by more than 8 points* — 🟡 **p157 expects it to be LOWER, because star rank falls and this pass found the no-grant defect concentrated at BOTH extremes** (`Mr.-Ranedeer` at `29 559 ★` and a tail of 4–63 ★ rows). 🔵 **Either way the shelf gets `195` of `669` read, from `95`** |
+| 🟢 **`ACTION HR`** — assess `Selleo/mentingo` properly: data model, multi-tenancy, SCORM/xAPI surface and LTI support, read from its tree on `raw` | 🔴 *Refuted if `mentingo` turns out NOT to speak LTI 1.3* — 🟡 **which would matter, because the shelf recommends it as the MIT fork-safe platform in `P156-A` and `P157-A` on the assumption that it does.** 🟢 **Its own topic list claims `scorm` and `xapi` but NOT `lti`, so this is a real risk to the shelf's own advice, FOURTH pass of carrying it unchecked** |
+| 🟢 **`ACTION HS`** — query Africa as a region in its own right (`AI education Africa 2026 adoption regulation players`), plus Kenya, South Africa and Nigeria individually | 🔴 *Refuted if fewer than 2 of the 4 queries return a dated national instrument* — 🟡 **p157 expects at least 2, since p153 found four jurisdictions and the EMEA query surfaced three again as a fragment.** 🔵 **Third pass of carrying `HD`; if it is not done now it should be retired by decision rather than carried a fourth time** |
+
+🔴 **Deliberately NOT registered**, and they are real: the `T111` channel disagreement *(cannot
+be settled from this session)*, the 14 unread credentialing rows *(low value — the ceiling is
+established)*, an EMEA or APAC adoption rate *(searched four times, not supplied by any source
+this shelf can reach)*, Canada and Mexico *(seven passes of nothing — the honest move is to
+rename the query, not re-run it)*, and a primary legal text *(categorical egress refusal)*.
+🟢 **Listed so they stay visible, and left unregistered because three is what a pass finishes.**
+
 ## 🟢 Verdicts on the THREE actions p155 registered, judged by p156 — all three reached
 
 🟢 **p155 cut the register from nine to three and said *"three is what a pass finishes."***

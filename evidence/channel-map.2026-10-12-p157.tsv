@@ -1,0 +1,8 @@
+channel	probe	result	what it can answer	what it cannot
+curl https://api.github.com	GET /repos/moodle/moodle	403	nothing	everything — confirms p156's categorical finding, 2nd pass
+curl https://github.com (rendered)	GET /moodle/moodle	403	nothing via curl	p156 used a rendered channel; curl cannot reach it this session
+raw.githubusercontent.com	GET /moodle/moodle/main/COPYING.txt	200	file BODIES on any public repo, any ref	no metadata: no stars, no default branch, no ref list
+GitHub MCP search_repositories	topic:ai-tutor	200	population count, stars, forks, SPDX licence, default_branch, pushed_at, archived, topics — for ANY public repo	misses some repos entirely (openedx/edx-platform, LAION-AI/Desktop_BUD-E)
+GitHub MCP list_branches	CipherCraze/SpeakGenie-AI-Tutor	Access denied — out of session scope	only repos attached to this session	any third-party repo
+GitHub MCP get_file_contents	third-party repo	Access denied — out of session scope	only repos attached to this session	any third-party repo
+git ls-remote --heads	15 of 15 third-party repos	200 on all 15	the complete ref list for any public repo	no file bodies, no metadata

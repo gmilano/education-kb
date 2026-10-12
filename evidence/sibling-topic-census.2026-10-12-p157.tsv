@@ -1,0 +1,6 @@
+topic	population	top20_on_domain	on_domain_rate	permissive_top20	permissive_rate	no_grant_or_unmatched	unusable_rate	top_row	top_row_stars
+ai-tutor (baseline)	669	19	95.0%	15	75.0%	2	10.0%	HKUDS/DeepTutor	41210
+knowledge-tracing	86	20	100.0%	10	50.0%	10	50.0%	pykt-team/pykt-toolkit	446
+learning-analytics	363	18	90.0%	12	60.0%	6	30.0%	AkihikoWatanabe/paper_notes	170
+edtech	4343	19	95.0%	9	45.0%	5	25.0%	virgiliojr94/book-to-skill	34654
+ai-education	485	13	65.0%	10	50.0%	9	45.0%	HugeCatLab/ChatTutor	1316

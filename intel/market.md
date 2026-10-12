@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 157 — 2026-10-12
+
+🔴 **TENTH pass with no quotable market size, and this pass adds nothing to the figure because
+nothing new was published** — 🟢 **the four sources returned are the same four, which is itself
+the confirmation `T114` wanted.**
+🔴 **ELEVENTH pass with no open-source vendor named in any market source** — 🟢 **and this pass
+got the category's leading vendor to say so in its own words.**
+🟢 **The regional sweep ran globally and once per region as registered. Two regions returned
+genuinely new instruments; two returned corroboration only, and this pass says which is which
+instead of presenting all four as movement.**
+
+### 🔴 Market size, TENTH pass — unchanged, and that is the finding
+
+| source | base | horizon | CAGR |
+|---|---|---|---|
+| 🟡 Research and Markets | **$10.6B** (2026) | **$42.48B** (2030) | 41.5% |
+| 🔴 secondary aggregator | **~$6B** (2024) | **~$32B** (2030) | — |
+| 🔴 vendor (X-Pilot) | **$12.3B** (2026) | — | — |
+| 🟡 aggregator, Europe only | **$2.64B** (2026) | **$8.0B** (2030) | 31.9% |
+
+🟢 **`T114` holds: not one of the four is a primary study this shelf has read.**
+🆕 🟢 **One internal-consistency check is now available, and it passes:** 🟡 **an aggregator puts
+North America at `36%` of the market and `~$3.68B` in 2026**, which implies a world total of
+**`~$10.2B`** — 🟢 **within 4% of Research and Markets' `$10.6B`.** 🔵 **Two aggregators agreeing
+is weak evidence, but it does locate the 2026 base near `$10B` and makes the `$6B` and `$12.3B`
+figures the outliers.**
+🟢 **The instruction to a studio is unchanged and now better supported: do not quote a market
+size for AI in education. Quote adoption and governance, which carry named samples.**
+
+### 🔴 ELEVENTH pass with no open-source vendor — and this time the vendor said it
+
+🟢 **Searched this pass:** `AI education industry trends 2026` · `open source platform education
+ERP CRM MIT Apache` · `github trending education AI 2026` · four regional queries.
+🔴 **No market source names an open-source project as a vendor, competitor or category
+participant.**
+
+🆕 🟢 **The sharpest evidence yet is a vendor's own admission.** 🔴 **The ERP/CRM query's results
+state that *"MIT and Apache 2.0 are permissive... if you specifically want MIT or Apache,
+OpenEduCat is not the match"*, and that the page *"doesn't name any MIT- or Apache-licensed
+education ERP or CRM."***
+🔵 **So the leading open-source education-ERP vendor confirms there is no permissive option in
+its own category.** 🟢 **That is the gap this KB exists to fill, and it is now attested by the
+incumbent rather than only inferred from silence.**
+
+### 🔴 `T110` corroborated a THIRD time — *"education"* in a trend query still means *"learning to code"*
+
+🟢 **`github trending education AI 2026`, run with different phrasing from p156's:** 🔴 **every
+named repository was developer learning** — `ai-engineering-from-scratch`,
+Karpathy's `Neural Networks: Zero to Hero`, Microsoft's `AI Agents for Beginners`,
+`Made With ML`. 🔴 **Zero education-sector rows, for the third pass and on a third channel.**
+🟢 **`T102`'s mechanism is now confirmed on four independent instruments** *(the `education`
+topic page, GitHub Trending, a general web trend query, and this pass's `topic:edtech`
+star sort, whose top row is a Claude-skill generator for technical books at `34 654 ★`)*.
+🔵 **Operational consequence: this shelf must enter the market through a NARROW topic, never a
+trend list** — 🟢 **which is exactly what `ACTION HN` measured on
+[`repos/trending.md`](../repos/trending.md) this pass.**
+
+### 🟢 Key players — unchanged at the top, with one addition that matters
+
+🟢 **Named in market sources this pass:** Google, Microsoft, IBM, Pearson, Byju's; 🟢 **China,
+India and Japan described as dominating APAC.**
+🆕 🔵 **The addition is a DISTRIBUTION channel, not a vendor:** 🟢 **Microsoft announced Copilot
+and Teams for Education free to Washington state classrooms from 2026.**
+🔴 **This sharpens `T115` rather than restating it.** 🔵 **p156's finding was that the incumbent
+is a general assistant nobody procured. 🆕 The update is that it is now being procured — at
+zero price, by a state, at classroom scale.**
+🔴 **A paid per-seat tutoring product cannot be sold against free Copilot.** 🟢 **What can be
+sold against it is the layer Copilot does not provide: curriculum grounding, audit, data
+boundaries, assessment integrity and a sanctioned path** — 🟢 **i.e. `P156-B`, and this is the
+strongest commercial argument on this shelf.**
+
+### 🟢 What the regional channel returned, separated into new and corroborating
+
+| region | genuinely NEW this pass | corroboration only |
+|---|---|---|
+| **North America** | 🔴 **nothing** | 🟢 Ohio `2026-07-01`, `H.R. 8747`, NYC/Katy ISD restrictions, STUDENTS FIRST, 60%/32% teacher use, 36% share — 🟡 **all already on this shelf from p156.** 🔵 **An independent re-run returning p156's set unchanged is a real check: the NA picture is stable, not stale** |
+| **EMEA** | 🆕 🟡 **A FIFTH distinct AI-Act date: `2028-08-02` for high-risk AI embedded in regulated products** · 🆕 🟢 **Council approved the Digital Omnibus `2026-06-29`, so p156's *"live amendment risk"* is now a settled instrument** | 🟢 Finland / Estonia / Netherlands leading K-12 integration; `$2.64B`→`$8.0B`; Kenya / South Africa / Nigeria drafting; UAE and Saudi national strategies |
+| **APAC** | 🆕 🟢 **Korea's AI Basic Act COMMENCED `2026-01-22`** — a dated instrument where this shelf had only *"a grace period"* | 🟢 Taiwan AI Basic Act (Dec 2025); Vietnam's two dates; Korea's one-year penalty grace; regional fragmentation |
+| **LATAM** | 🆕 🟢 **The IESALC sample SEGMENTED by institution type: private non-profit `84%`, public `68%`, private for-profit `52%`** · 🆕 🟢 **UNESCO Observatory on AI in Education for LAC launched `2026-04-14` at ECLAC, Santiago** | 🟢 IESALC 87%/74%/26%; TALIS 2024 Brazil 56 / Chile 55 / Colombia 53 / Costa Rica 52 vs OECD 36; Brazil `PL 2.338/2023`; Chile's bill; Colombia `CONPES 4144`; Ceibal |
+| **Global** | 🆕 🔴 **`T122`** — the ERP/CRM channel is vendor-saturated, 10 of 10 | 🟢 Market spread unchanged; `T110` third pass |
+
+🔴 **Still missing after this pass, and named rather than left silent:** 🔴 **no EMEA-only
+adoption rate (NINTH pass)** · 🔴 **no APAC adoption rate at all (FOURTH pass)** · 🔴 **Canada
+and Mexico return nothing (SEVENTH pass)** · 🔴 **Africa not re-queried as a region in its own
+right, THIRD pass — the EMEA query surfaced Kenya, South Africa and Nigeria only as a
+fragment** · 🔴 **no primary legal text, NINTH pass** *(the categorical egress refusal on
+`eur-lex` and the law-firm hosts stands)*.
+
 ## Pass 156 — 2026-10-12
 
 🟢 **The ninth-pass market-size gap is NOT closed, and this pass can finally say WHY instead of
@@ -169,6 +257,22 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p157
+
+🟢 **The NA channel was re-run in full and returned p156's set UNCHANGED — no new instrument,
+no new figure, no contradiction.** 🔵 **Recorded as a stability check rather than as movement:
+Ohio's passed `2026-07-01` deadline remains the most immediately billable item on this page, and
+the remediation pitch below is unaltered.**
+🆕 🔴 **One thing did sharpen, and it is a threat rather than an opportunity.** 🟢 **Microsoft is
+giving Copilot and Teams for Education free to Washington state classrooms from 2026.**
+🔴 **Do not propose a per-seat tutoring product into this market.** 🟢 **Propose the layer
+Copilot cannot supply: curriculum grounding, audit trail, data boundaries, assessment integrity
+and a sanctioned institutional path** — 🔵 **`P156-B`, sold against a free incumbent rather than
+against another vendor.**
+🔴 **Canada and Mexico: nothing, SEVENTH pass.** 🟢 **This shelf should rename the query
+*"United States."***
+
+
 #### p156
 
 🟢 **A deadline that has already PASSED is the sharpest opportunity on this page.**
@@ -235,6 +339,37 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p157
+
+🆕 🟡 **A FIFTH distinct AI-Act date, and like the other four it is a DISTINCT OBLIGATION rather
+than a competing guess** *(`T112`)*:
+
+| date | what attaches |
+|---|---|
+| 🟢 **live now** | Article 5 — 🔴 **emotion inference in schools PROHIBITED outright** |
+| 🟢 **live now** | Article 4 — AI literacy duty |
+| 🟢 **`2026-08-02`** | enforcement machinery on |
+| 🟡 **`2027-12-02`** | Annex III **stand-alone** high-risk systems — admissions, evaluation, exam scoring |
+| 🆕 🟡 **`2028-08-02`** | 🆕 **high-risk AI EMBEDDED IN REGULATED PRODUCTS** — a later, separate horizon |
+
+🆕 🟢 **p156 carried the November 2025 *"AI omnibus"* as a live amendment RISK. It is now a
+settled instrument: the Council approved the Digital Omnibus `2026-06-29`.** 🔵 **So the
+`2027-12-02` horizon is no longer at risk of moving underneath an engagement — it can be
+architected to.**
+🔵 **The engagement shape this creates:** 🟢 **an education client selling into the EU needs a
+conformity file for anything touching admissions, evaluation or exam scoring, and the Commission's
+`2026-05-19` guidelines draw the line between pedagogical support and evaluative use.**
+🟢 **That line is `P49`'s architecture, so the compliance deliverable and the technical
+deliverable are the same deliverable.**
+🟢 **Country texture:** 🟢 **Finland, Estonia and the Netherlands are named as leading K-12 AI
+integration** — 🔵 **the three most likely EMEA reference-account markets.**
+🔴 **Africa, inside EMEA by this shelf's vocabulary, surfaced only as a fragment:** 🟡 **Kenya,
+South Africa and Nigeria drafting AI policies; UAE and Saudi Arabia with national strategies and
+governance frameworks.** 🔴 **Not a regional query, THIRD pass.**
+🔴 **No EMEA-only adoption rate, NINTH pass.** 🔴 **The `~70%` figure still fuses Europe with
+North America and is not usable as an EMEA number.**
+
 
 #### p156
 
@@ -317,6 +452,25 @@ documentation, logging and human oversight are PRODUCT FEATURES, not compliance 
 skills body and whose delivery is outsourced is a programme that needs an integrator.
 
 ### APAC
+
+#### p157
+
+🆕 🟢 **Korea's AI Basic Act COMMENCED `2026-01-22`.** 🔵 **This shelf has carried Korea as *"a
+pilot year with a one-year grace period on penalties"* — a posture without a date. It now has
+one**, 🟢 **which makes the window concrete: the Act is in force NOW, penalties bite from
+`2027-01-22`, and the twelve months in between are design-and-remediate time a client can be
+sold.**
+🟢 **Corroborated without change:** 🟢 **Taiwan's AI Basic Act (December 2025)** · 🟡 **Vietnam's
+two dates — law in force `2026-03-01`, extraterritorial; education high-risk obligation
+`September 2027`** *(`T112`: two dates, two obligations)* · 🔴 **regional fragmentation through
+2026 across Singapore, Japan, Australia, China, India, Hong Kong, Thailand, Indonesia and the
+Philippines.**
+🔵 **The sharpest APAC sale remains Vietnam**, 🟢 **because it bills a conformity assessment to a
+client with no Asian operations** — the obligation reaches outside the region.
+🔴 **No APAC adoption RATE, FOURTH pass.** 🟢 **Regulation and sentiment only.** 🔴 **And
+`T113` stands: ANZ shows higher support for banning AI in schools than Asian markets, so an
+APAC pitch is not one deck.**
+
 
 #### p156
 
@@ -401,6 +555,40 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p157
+
+🆕 🟢 **The best opportunity statistic on this shelf is now SEGMENTED, and the segment with the
+gap is the one with the budget.**
+
+| institution type | AI adoption *(UNESCO IESALC, 200 institutions / 19 countries, `2026-09-09`)* |
+|---|---|
+| 🟢 private non-profit | **84%** |
+| 🟡 **public** | 🟡 **68%** |
+| 🔴 private for-profit | **52%** |
+
+🔵 **Read against the same study's `26%` with a formal AI strategy, the public-university row is
+the engagement:** 🟢 **68% are already doing it, the institution has no policy, and a public
+university is the buyer that answers to an accreditation body and runs a procurement process.**
+🔴 **The private for-profit row at `52%` is the weakest market, not the strongest** — 🔵 **which
+inverts the usual assumption that for-profits move first.**
+🆕 🟢 **A named institutional partner, and a new one:** 🟢 **UNESCO launched the Observatory on
+Artificial Intelligence in Education for Latin America and the Caribbean on `2026-04-14` at
+ECLAC headquarters in Santiago**, mandated to guide public policy and capacity-building.
+🔵 **That is a region-wide, publicly-funded demand channel for exactly the governance-retrofit
+work in `P156-B`** — 🟢 **and a reference-account route that does not require winning a single
+university first.**
+🟢 **Corroborated without change:** 🟢 **IESALC 87% doing / 74% in teaching / 26% governing** ·
+🟢 **TALIS 2024 — Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% of secondary teachers vs
+an OECD average of 36%** · 🟢 **Brazil `PL 2.338/2023` still in the Chamber of Deputies, so the
+text can change** · 🟢 **Chile's risk-based executive bill at first constitutional stage** ·
+🟢 **Colombia's policy route via `CONPES 4144` (February 2025)** · 🟢 **Ceibal (Uruguay).**
+🔵 **And the study's own diagnosis corroborates `T115` independently: adoption is driven by
+individual academics, researchers and students rather than institution-wide strategy.**
+🟢 **No deadline forces LATAM, so the sale is an accreditation and equity argument, not a
+compliance one** — 🔵 **which is why the public-university segmentation above matters more here
+than a date would.**
+
 
 #### p156
 
@@ -508,6 +696,30 @@ public institutions (68%) are the volume.** 🟢 **Permissive LATAM-native rows 
 - 🔴 **No APAC ministry source** (`ACTION GY`).
 - 🔴 **Every market figure on this page is secondary**, and the regional ones now disagree with
   the global ones by more than the global ones disagree with each other.
+
+### Global
+
+#### p157
+
+🔵 **Added this pass to complete the closed five-value vocabulary** — 🔴 **this page carried
+four region subsections and the vocabulary has five, so a Global finding had nowhere to compile
+to.**
+
+🟢 **The Globant-facing opportunity that is not regional at all:**
+
+| opportunity | the measurement behind it | why it is global |
+|---|---|---|
+| 🟢 **Own the credentialing layer** | 🔴 **`topic:open-badges` = `29` repositories; `85 ★` ceiling; the standards-complete Open Badges 3.0 library has `1 ★`** | 🟢 **Open Badges 3.0 IS W3C Verifiable Credentials — one standard, every jurisdiction.** 🔵 **The only lane on this shelf with named buyer demand and effectively no incumbent** |
+| 🟢 **The licence-boundary integration** | 🟢 **4 permissive routes vs 10 copyleft rows in the platform tier; AGPL on 4 of the top 8 attention leaders (`T123`)** | 🟢 **Every client already runs Moodle or Open edX. The LTI 1.3 + AGS boundary is the same in all five regions** *(`P156-A`)* |
+| 🟢 **Governance retrofit on an installed base** | 🟢 **LATAM 87% doing / 26% governing; NA ~30+ states with guidance but per-district policy still owed; EMEA Article 4 literacy duty live NOW** | 🔵 **The 87/26 gap is measured in LATAM but the SHAPE is global — adoption already happened informally, everywhere** |
+| 🔴 **Do NOT sell a per-seat tutor** | 🔴 **Microsoft giving Copilot + Teams for Education free at state scale; `T115` — the incumbent was never procured** | 🔴 **A free general assistant is the competitor in every region** |
+| 🟢 **Evidence-of-efficacy tooling** | 🔴 **NO tutor evaluation harness exists — `122` repositories matched a direct search and `0 of 15` were on-domain** | 🟢 **2026 sources name demonstrated instructional benefit as a purchase condition in every market.** 🔴 **Nobody has built the instrument** |
+
+🔴 **The honest global gap: TENTH pass with no quotable market size, ELEVENTH with no
+open-source vendor in any market source.** 🟢 **Both are now attested rather than suspected —
+`T114` on the market figures, and the leading education-ERP vendor's own words on the
+permissive-option question.**
+
 
 ## Pass 153 — 2026-10-12
 

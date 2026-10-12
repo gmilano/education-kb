@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 157 — 2026-10-12
+
+🟢 **Eight trends. Each names the region it was observed in and the channel that returned it.**
+🔴 **Where a trend is an aggregator's claim rather than a sampled finding, the row says so.**
+🆕 **Three of the eight are new this pass; five are carried with their evidence re-checked, and
+the carried ones are marked so nobody mistakes repetition for movement.**
+
+### 1. 🆕 🔴 Attention has decoupled from deployment — *Global, measured*
+
+🔴 **One tutoring repository outweighs the entire institutional platform tier: `DeepTutor`
+`41 210 ★` against `23 945 ★` for all 13 platform and foundational rows summed — `1.72 ×`.**
+🔴 **Moodle, vendor-reported at 400M+ users, has `7 475 ★`; `DeepTutor` has `5.5 ×` that.**
+🔵 **The trend is not *"tutoring is hot."* It is that the artefacts getting built and starred are
+NOT the artefacts institutions run** — 🟢 **so a shortlist produced by sorting attention will
+systematically miss the client's system of record.** 🆕 **`T118`.**
+🟢 **Channel: GitHub metadata, 13 of 14 rows served.**
+[`evidence/platform-attention.2026-10-12-p157.tsv`](../evidence/platform-attention.2026-10-12-p157.tsv)
+
+### 2. 🆕 🔴 The modern open education platform is born network-copyleft — *Global, measured*
+
+🟢 **Of the top eight `education`+`ai` repositories above `1 300 ★`, FOUR are AGPL-3.0** —
+`Echo-Loop` (4 164), `penecho` (2 480), `learnhouse` (2 351), `ChatTutor` (1 316) — 🟢 **and all
+four licence bodies land between `34 522` and `34 523 B`, a one-byte spread, so the family read
+is not an inference.**
+🔴 **Add Open edX (AGPL-3.0) and the pattern is the category default, not a coincidence.**
+🔵 **Why it is a trend and not a licence trivium: AGPL reaches a HOSTED derivative.** 🔴 **The
+standard edtech delivery model is hosting it for the client**, 🟢 **so the licence that the
+attention leaders chose is precisely the one that makes the standard delivery model a disclosure
+event.** 🆕 **`T123`.**
+🟢 **Consequence: the protocol-boundary architecture is not a preference, it is the only
+shape that survives the licences the market actually ships.**
+
+### 3. 🆕 🟢 Buyer demand for credentials is real and the supply is absent — *Global, measured*
+
+🟢 **2026 trend sources name digital credentials and micro-credentials against employer
+skills-based hiring.** 🔴 **The entire `topic:open-badges` population is `29` repositories, the
+star ceiling is `85`, and the standards-complete Open Badges 3.0 / W3C Verifiable Credentials
+library has `1 ★`.**
+🔵 **This is the shelf's first measured instance of demand without supply** — 🟢 **every other
+gap on this page has been supply this shelf could not find. This one it found, counted, and the
+count is the finding.**
+🟢 **Channel: GitHub topic census, 15 of 29 rows read.**
+[`evidence/credentialing-census.2026-10-12-p157.tsv`](../evidence/credentialing-census.2026-10-12-p157.tsv)
+
+### 4. 🟢 The governance gap, now SEGMENTED — *LATAM, strongest evidence on this shelf*
+
+🟢 **Carried and sharpened.** 🟢 **UNESCO IESALC, `2026-09-09`, 200 institutions / 19 countries:
+`87%` use AI somewhere, `74%` in teaching and learning, `26%` have a formal AI strategy.**
+🆕 🟢 **Newly segmented: private non-profit `84%`, PUBLIC `68%`, private for-profit `52%`.**
+🔵 **The segmentation inverts the obvious read — for-profits are the LAGGARDS at `52%`, and the
+public university at `68%` is the buyer with an accreditation body and a procurement process.**
+🟢 **Corroborated one level down by TALIS 2024:** Brazil `56%`, Chile `55%`, Colombia `53%`,
+Costa Rica `52%` of secondary teachers against an OECD average of `36%`.
+🔵 **Sellable shape, unchanged: governance retrofit on an installed base, not a pilot.**
+
+### 5. 🔴 The default AI in education is a general assistant — and it is now being procured free — *Global*
+
+🟢 **Carried from p156 and materially sharpened.** 🟢 **IESALC names `ChatGPT`, `Copilot` and
+`Gemini` as the default entry point, and attributes adoption to individual academics and
+students rather than institutional strategy.**
+🆕 🔴 **The update: Microsoft is supplying Copilot and Teams for Education FREE to Washington
+state classrooms from 2026.**
+🔵 **p156's `T115` said the incumbent was never procured. 🆕 It is being procured now, at zero
+price, at state scale** — 🔴 **which closes the per-seat tutoring market rather than slowing it.**
+🟢 **What remains sellable is what a general assistant cannot do: curriculum grounding, audit,
+data boundaries, assessment integrity, a sanctioned institutional path.**
+
+### 6. 🟢 Regulation has split into pedagogical vs evaluative use — *EMEA primary, the line to architect to*
+
+🟢 **Carried, and now standing on a settled instrument rather than a contested one.** 🟢 **The
+Commission's `2026-05-19` guidelines separate pedagogical support from evaluative use**, and
+🆕 🟢 **the Council approved the Digital Omnibus `2026-06-29`, so p156's *"live amendment risk"*
+on the `2027-12-02` horizon is resolved.**
+🆕 🟡 **A fifth distinct date appeared — `2028-08-02` for high-risk AI embedded in regulated
+products** — 🟢 **and like the other four it is a separate obligation, not a competing estimate
+(`T112`).**
+🔴 **Article 5's outright prohibition on emotion inference in schools is live NOW.** 🔵 **That is
+a thing to design away from, not a risk tier to document.**
+🟢 **The architectural consequence: the compliance boundary and the technical boundary coincide,
+so one deliverable serves both.**
+
+### 7. 🔴 *"Education"* in a general query means *"learning to code"* — FOURTH instrument — *Global*
+
+🟢 **Carried, and corroborated on a fourth independent channel this pass.** 🔴 **A
+`github trending education AI 2026` query returned only developer-learning repositories**
+(`ai-engineering-from-scratch`, Karpathy's course, `AI Agents for Beginners`, `Made With ML`).
+🔴 **And `topic:edtech`'s star sort is topped by a Claude-skill generator for technical books at
+`34 654 ★`.**
+🟢 **Four instruments now agree** *(the `education` topic page, GitHub Trending, a web trend
+query, the `edtech` star sort)*. 🆕 🟢 **Newly quantified this pass: the narrow topic
+`knowledge-tracing` returns `20 of 20` on-domain against `topic:education`'s `1 of 20`.**
+🔵 **Operational rule: enter through a narrow topic, never a trend list.** 🆕 **`T119`.**
+
+### 8. 🆕 🔴 A research channel can saturate without going quiet — *Global*
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned `10` of `10` results from ONE
+vendor's own glossary, the same two articles in ten locales.**
+🔵 **A channel that returns nothing announces its own failure. A channel that returns ten
+confident, well-formed, on-topic pages from a single seller does not** — 🟢 **and that is the
+harder failure to notice, because the output looks like research.**
+🆕 **`T122`.** 🟢 **The query is retired as a market instrument.**
+🟢 **One real datum survived it, and it is the eleventh-pass confirmation: the source itself
+states there is no MIT- or Apache-licensed education ERP or CRM to name.**
+
+### 🔴 What this pass did NOT find, said rather than implied
+
+- 🔴 **No tutor EVALUATION harness, and now with a measured negative:** 🔴 **a direct search
+  matched `122` repositories and `0 of 15` of the top rows were on-domain** — they were ML paper
+  lists. 🔵 **Against an explicit 2026 buyer demand for evidence of instructional benefit
+  before purchase. The instrument does not exist.**
+- 🔴 **No EMEA-only adoption rate, NINTH pass.** 🔴 **No APAC adoption rate at all, FOURTH.**
+- 🔴 **Canada and Mexico, SEVENTH pass of nothing.**
+- 🔴 **Africa not queried as a region in its own right, THIRD pass.**
+- 🔴 **`590` of `669` `ai-tutor` rows remain unread**, 🟢 **and the population itself moved —
+  see `T111`'s correction on [`repos/trending.md`](../repos/trending.md).**
+
 ## Pass 156 — 2026-10-12
 
 🟢 **Eight trends, each with the region it was observed in and the channel that returned it.**
