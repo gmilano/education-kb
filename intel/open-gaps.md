@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-12
 ---
 
+## ✅ Verdicts on the twelve actions standing open, judged by p147
+
+🔵 **Six were registered by p146 for this pass (`EI`–`EN`); six were registered for p146 and
+could not run there because the clone channel was refused (`EB`–`EG`).** 🟢 **All twelve
+reached.** 🔴 **Three refuted, and one of the three refuted its own premise rather than the
+repository it was aimed at.** 🟢 **None is re-registered.**
+
+🔴 **The pass's two largest findings were registered by none of them**: a negative control
+found a 46-tool Apache-2.0 server the shelf could not see, and a reconciliation action found
+one of this KB's own figures entered twice under two headings.
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION EI`** — re-verdict the five `NOT_AN_MCP_SERVER` rows under the guard, clone-dependent | 🟢 **DISCHARGED — all five CLEARED** | Precondition met (`T65`). 🟢 **0 of 5 are `T42` artefacts**: **726 / 488 / 427 / 10 / 6** files walked, and **`git ls-files` matches 0 paths under `dist/` or `build/` on all five** — the exclusion never fired. 🟢 **Every published verdict reproduces to the token.** [`p147-provisional-reverdict`](../compose/code/p147-provisional-reverdict/README.md), **10 tests** |
+| 🟢 **`ACTION EB`** — re-measure the github-only and agent tiers under `PAYLOAD` mode logic | 🟢 **DISCHARGED, NOT refuted** | Condition: *"refuted if no github-only or agent row resolves to `PAYLOAD` mode."* 🟢 **2 of 16 do** — `divyarthjain/vtop-bhopal-mcp` (4/4 entries) and `nitsuah/bb-mcp` (2/2). 🔵 **So `T42` stays shelf-wide and is not an npm special case.** 🆕 🔴 **And `T62`: both rows GITIGNORE the tree they name and commit 0 files in it** — the mode is a manifest property, decided over an artefact that does not contain it. 🔴 **13 of 16 declare none in `package.json`** |
+| 🟢 **`ACTION EC`** — replace `NOT_SHIPPED` with **reachability from the declared entry point** and re-run the 16 surface subjects | 🟢 **DISCHARGED, NOT refuted — and the rule already exists in the repository** | Condition: *"refuted if `krzysztofbury/librus-mcp` does not still read 35."* 🟢 **It reads exactly 35**: `server.tool(` sites inside the manifest-declared package `src/librus_mcp` sum to **1+8+3+12+2+4+5 = 35**, matching `MCP_CONTRACT.md` to the number. 🟢 **And the property-based rule `P145-P` asked for is `pyproject.toml`'s own `only-include`** — 16 items, which excludes `legacy_reference` entirely and admits only `scripts/qualify_native.py`. 🔴 **Outside that allowlist sit 23 sites in `legacy_reference` and 2 in `scripts`**, so naive inclusion would read **60**. 🔵 **p144's hand-tuned `{legacy_reference, scripts}` list was right, and the manifest says the same thing by construction instead of by tuning** |
+| 🟢 **`ACTION EJ`** — wire the guard into the five at-risk instruments | 🟢 **DISCHARGED, in wrapper form, and the reason is recorded** | 🔴 **The literal form edits five files whose bytes produced published figures**, destroying the "baseline reproduces" discipline p145 established. 🟢 **Wired AROUND instead**: the harness calls each instrument's own enumeration and refuses at zero. 🔴 **10 of 10 npm (root, instrument) pairs would be refused**; 🟢 **2 of 220 clone pairs** — and those 2 are the find of the pass. [`p147-guard-harness`](../compose/code/p147-guard-harness/README.md), **9 tests** |
+| 🟡 **`ACTION ED`** — resolve `@imazhar101`'s 227 vs 18 by following the 18 calls one level | 🟢 **DISCHARGED at exactly 227** | Condition: *"refuted if the sum is not 227."* 🟢 **18 modules, 18 spread sites, 1:1, sum = 227.** 🟢 **So `T42` is confirmed by a third method and the largest tool surface this KB quotes is correct.** [`p147-tooldef-sum`](../compose/code/p147-tooldef-sum/README.md), **11 tests** |
+| 🟢 **`ACTION EE`** — check the 8 unlicensed rows for a fork parent carrying a grant | 🔴 **DISCHARGED and REFUTED** | Condition: *"refuted if fewer than 2 of the 8 are forks of a licensed parent."* 🔴 **0 of 8 are forks of anything** — eight pages read on the WebFetch channel, not one "forked from" notice. 🔵 **So the consequence clause stands: "ask the author" is the only route** for the rows that are genuinely unlicensed. 🆕 🔴 **`T63`: two of them are not** — a Portuguese and a Spanish grant the census could not match |
+| 🟡 **`ACTION EF`** — does `moodle-mcp-server-aql`'s AGPL-3.0 declaration have text behind it? | 🔴 **DISCHARGED and REFUTED, exactly as specified** | Condition: *"refuted if a licence file exists in the repository but not the tarball."* 🟢 **It does**: `csmediapro/moodle-mcp-server` carries the **complete 661-line AGPL-3.0 body** at its monorepo root; the tarball carries none. 🔴 **Cause named**: `packages/server/package.json` ships a **16-glob `files` allowlist** with no `LICENSE`, and there is no `LICENSE` inside `packages/server/`. 🟢 **A packaging defect (`T21`'s shape), and the verticals warning is restated accordingly** |
+| 🟢 **`ACTION EG`** — build the bidirectional half for `ahmedEid1/lumen` | 🔴 **DISCHARGED and REFUTED — and the PREMISE is the defect** | Condition: *"refuted if the two sets are not equal."* 🔴 **9 tools, 10 scopes.** 🟢 **The extra element is `WILDCARD_SCOPE = "*"`, by design, and `set(scopes) - {"*"} == set(tools)` holds with zero orphans either way.** 🔵 **So the test this action specified would FAIL on a correct repository**, and `P145-J`'s pin holds. 🔴 **The real finding is that `"*"` is the shipped default on 2 of 3 client-minting paths.** [`p147-scope-parity`](../compose/code/p147-scope-parity/README.md), **9 tests** |
+| 🔴 **`ACTION EK`** — can any npm row be region-placed by non-git evidence? | 🟢 **DISCHARGED — 2 of 8, and `T59` is NARROWED** | 🟢 **`eth-moodle-mcp` → EMEA (Switzerland)** on a committed `MOODLE_URL` default at ETH Zürich plus **nethz/SWITCHaai** in its auth flow. 🟡 **`mcp-canvas-lms` → APAC (Hong Kong)** on `canvas.ust.hk` as an `e.g.` — a lead. 🔵 **The git-only constraint is the instrument lane's, not the evidence's.** 🔴 **Three false positives found before publication**, all placeholder hosts. 🆕 🔴 **`T67`: a bare `.edu` is not a country signal** [`p147-npm-region`](../compose/code/p147-npm-region/README.md), **15 tests** |
+| 🔴 **`ACTION EL`** — verify `T58`'s scope against primary Korean text | 🟡 **DISCHARGED on secondary sources; primary UNREACHED** | 🟢 **`T58` HOLDS**: Article 2(4)(j) names **student evaluation in early childhood, elementary and secondary** education only, so Korean higher education is outside the category. 🆕 🟡 **The cross-referenced statute has two English names** — *Framework Act on Education* vs Georgetown CSET's *Basic Education Act*, same Article 9(1). 🔴 **`aibasicact.kr` answers `ENOTFOUND`** — a second instance of `ACTION CW`'s allowlist shape |
+| 🔴 **`ACTION EM`** — reconcile the two North American denominators | 🔴 **DISCHARGED, and one denominator is WRONG** | 🆕 🔴 **`T66`: "35 states + DC + PR introducing" and "35+ states publishing guidance" are the SAME figure under two headings**, and 🔴 **"24 states enacted" is supported by no reachable source.** 🟢 **134 bills in 31 states (2026-03) confirmed.** 🔴 **Competing enactment counts: 3 K-12 statutes (MD, ID, OK) / 10 bills this session / 12 states in 2026** — a definitional spread, not a dating one |
+| 🟢 **`ACTION EN`** — republish the thesis allocation table | 🟢 **DISCHARGED** | 🟢 **`T1`–`T61` are ALL allocated with no gaps**, verified by census over every `.md` file in this KB. 🟢 **Next free number is `T62`**, and this pass takes **`T62`–`T67`.** 🔵 **`P146-W`'s rewind cannot recur while the next free number is computed rather than assumed** |
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p147
+
+| gap | movement |
+|---|---|
+| 🔴 *"Five rows carry a verdict that may be a `T42` artefact"* | 🟢 **CLOSED.** 0 of 5. All five confirmed on real input |
+| 🔴 *"`T42` may be an npm-tier special case"* | 🟢 **CLOSED.** 2 of 16 non-npm rows resolve to `PAYLOAD`; it is shelf-wide |
+| 🔴 *"The 227 vs 18 disagreement is unresolved"* | 🟢 **CLOSED at exactly 227.** Third independent method |
+| 🔴 *"`moodle-mcp-server-aql` may have no grant"* | 🟢 **CORRECTED.** It has AGPL-3.0; the file does not ship |
+| 🔴 *"8 connector rows are unlicensed"* | 🟡 **NARROWED to 6** strict; "no shipped grant" unchanged at 18 |
+| 🔴 *"npm rows are structurally unplaceable on the region axis"* | 🟡 **NARROWED.** 2 of 8 placed by institution evidence |
+| 🔴 *"The clone channel is closed"* | 🟢 **CLOSED — it was a session, not a channel** (`T65`) |
+| 🔴 *"The thesis counter has rewound"* | 🟢 **CLOSED.** `T1`–`T61` contiguous; next free computed, not assumed |
+| 🔴 *"`NOT_SHIPPED` is a name-based exclusion with no property behind it"* | 🟢 **CLOSED.** The property is the package manifest's own include allowlist, and it reproduces librus's 35 exactly |
+
+## 🔴 Gaps OPEN after p147, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **The surface lane reads 7 languages; the shelf holds at least 8** | `lang_of` maps `.py .js .mjs .cjs .ts .go .php`. 🔴 **`.rs` is handled by REFUSING a verdict, not by measuring one** — so the best-governed row on the shelf has no gate-measured surface |
+| 🔴 **No bidirectional surface pin added since p144** | `mcp-student-records` has the strongest **property** pin here (manifest + risk class + approval, pinned by test) and still never asserts set identity between its 46 manifest names and its 46 `#[tool]` names. 🔴 **`P144-G` stays at 3 of 4** |
+| 🔴 **Eight consecutive passes with no agent row from SEARCH** | Four global + four regional queries per pass. 🔵 **Both rows added this pass came from re-measuring what the KB already held** |
+| 🔴 **Primary legal text unreachable in two jurisdictions** | `capitol.texas.gov` (eight passes) and `aibasicact.kr` (new): both `ENOTFOUND` on WebFetch, 403/000 on `curl`. 🔵 **An environment allowlist request** |
+| 🔴 **No market-size figure is quotable** | Four non-overlapping 2025 baselines (**$6.4B / $7.52B / $8.3B / $9.58B**); projections **$42.48B–$79.6B**. 🟢 **Only the maturity read (35/100, pilot mode) is adopted** |
+| 🔴 **`curl -sI` cannot verify a GitHub URL here** | **403** on every `github.com/<owner>/<repo>`, fourth consecutive pass (`P144-X`). 🟢 **`git clone`, `git ls-remote`, `npm pack` and `WebFetch` all work** |
+
+## 🔜 Pre-registered for p148
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION EO`** — give the surface lane a **Rust reader** and measure `zavora-ai/mcp-student-records` with an instrument rather than with `grep`. Count `#[tool(` sites under `#[tool_router]` and compare against `mcp-server.toml`'s 46 `[[tools]]` | 🔴 *Refuted if the two do not both read 46* — which would mean this pass's headline figure for the best-governed row on the shelf came from two sources that disagree, and the row's manifest pin is weaker than claimed |
+| 🟢 **`ACTION EP`** — build the **manifest↔router set-identity test** `P31` step 5 specifies for `mcp-student-records`, and state whether the 46 names are equal as SETS rather than as counts | 🔴 *Refuted if the name sets are not equal* — which would mean a repository whose manifest this KB is recommending as a governance contract has already drifted from its own code, and `P31` must be withdrawn as a pattern |
+| 🟡 **`ACTION EQ`** — run the **language-extended licence matcher over the 8 npm rows and the 5 agent rows**, the two tiers `p147-licence-language` did not cover. `T63` was measured on the 44 connector rows only | 🔴 *Refuted if no row on either tier changes class* — which would make `T63` a connector-tier property and the correction to the 52-row total already complete |
+| 🟢 **`ACTION ER`** — re-run `p147-npm-region`'s institution channel over the **44 connector clones**, where `P144-V` found its original instance. The probe has only ever run on 8 npm rows | 🔴 *Refuted if it disagrees with any region this KB has already placed on the commit-timezone channel* — which would mean the institution rule and the author rule conflict on a row where both are available, and `P144-V`'s precedence claim needs re-testing rather than citing |
+| 🔴 **`ACTION ES`** — settle the **Korean statute name** from a primary or official-translation source: is Article 2(4)(j)'s cross-reference the *Framework Act on Education* or the *Basic Education Act*? | 🔴 *Refuted if both names denote the same statute in Korean law* — which would make this a translation variant worth one footnote rather than a citation defect, and `T58` can stop carrying the caveat |
+| 🔴 **`ACTION ET`** — find a source for the **"24 states enacted"** figure this page carried, or withdraw it by name. `ACTION EM` could not reach one and found three competing counts (**3 / 10 / 12**) | 🔴 *Refuted if a source is found* — which would mean the figure is real and the three competing counts are measuring narrower things, and `T66`'s second clause must be withdrawn while its double-entry clause stands |
+| 🟡 **`ACTION EV`** — generalise `ACTION EC`'s result: read the **package manifest's include allowlist** (`pyproject.toml` `only-include`/`packages`, `package.json` `files`) as the `NOT_SHIPPED` rule across all 16 surface subjects, replacing the name list entirely | 🔴 *Refuted if any subject has no manifest allowlist to read* — which would mean the property-based rule is not universally available and the name list has to stay as a fallback, with the two rules' disagreements enumerated |
+| 🟡 **`ACTION EU`** — test whether the **guard harness changes any PUBLISHED figure** when the five at-risk instruments are run through it over the full 44-row census, rather than only reporting refusals | 🔴 *Refuted if any row's published value changes* — which would mean the wrapper is not verdict-preserving on rows that DO have input, and `ACTION EJ`'s "wrap, do not rewrite" answer is unsafe as implemented |
+
 # Education — open gaps ledger
 
 ## ✅ Verdicts on p144's six pre-registered actions, judged by p145

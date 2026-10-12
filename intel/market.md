@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 147 — 2026-10-12
+
+🔴 **`ACTION EM` is discharged and the answer is worse than "unreconciled": one of this
+page's two North American denominators IS the other one, miscategorised.** 🟢 **The LATAM
+and APAC survey evidence firms up with a second publisher.** 🟡 **`ACTION EL` leaves `T58`
+standing on substance and finds that this KB cites a Korean statute by a name its own
+primary source does not use.**
+
+🔵 **Regional detail is filed under the canonical `## Opportunities by region` block below;
+this section records what moved and what was refused.**
+
+### 🔴 `ACTION EM` DISCHARGED — the two NA denominators, reconciled, and one of them is wrong
+
+This page carried four North American readings as though they were comparable. 🟢 **Three
+check out. The one that does not is the one this page quoted hardest.**
+
+| reading this page carried | verified? | what it actually measures |
+|---|---|---|
+| **134 bills in 31 states**, tracker, 2026-03 | 🟢 **confirmed** | 🟢 **BILLS**, in the **2026 session only**, as of March |
+| **35 states + DC + PR introducing since 2025** | 🔴 **NOT FOUND** | 🔴 **no source says this** |
+| **24 states enacted** | 🔴 **NOT FOUND** | 🔴 **no source says this either** |
+| **35+ states publishing guidance**, June 2026 | 🟢 **confirmed** | 🟢 **state DoE GUIDANCE**, not legislation |
+
+🆕 🔴 **`T66`: the "35 states introducing" row and the "35+ states guidance" row are the
+same figure, entered twice under two different headings.** 🔵 **The coincidence is the
+tell** — a 35 that appears as both an introduction count and a guidance count in one table
+is one measurement wearing two labels, and this page compared it against a bill count as if
+all three were independent.
+
+🔴 **And "24 enacted" is unsupported by any source reachable this pass.** What is reachable
+is **three competing enactment counts**, and they differ by definition rather than by date:
+
+| source class | enacted | what it counts |
+|---|---|---|
+| legislative tracker | **10 bills** | 🟢 bills enacted **this session** |
+| policy-institute list | **12 states** | 🟡 states enacting in **2026**, AI-in-education broadly |
+| state-law guide | 🔴 **3 states** | 🔴 **K-12 AI STATUTES specifically** — Maryland, Idaho, Oklahoma |
+
+🔵 **The spread is 3 to 12 and it is not noise: it is the definition of "an AI education
+law."** 🟢 **The honest form for this page, and the one adopted:** *"Maryland, Idaho and
+Oklahoma have enacted K-12 AI statutes; a further ~9 states enacted legislation that
+touches AI in education in 2026; 35+ state departments have published non-binding
+guidance; 134 bills were live across 31 states as of 2026-03."* 🔴 **Four numbers, four
+units, never summed.**
+
+🔵 **Why this is the most consequential correction on the page.** A studio pricing a US
+engagement asks *"is there a law I must comply with in this state?"* 🔴 **"24 enacted"
+answers yes almost everywhere. "3 K-12 statutes" answers yes in three places and "there is
+guidance you will be held to informally" everywhere else.** 🟢 **The named instruments stay
+quotable by subject, as p146 left them** — Oklahoma SB 1734, California AB 1159, Idaho
+SB 1227, Maryland SB 720, Alabama HB 329. 🔴 **Utah HB 218 vs HB 273 remains unresolved.**
+
+### 🟡 `ACTION EL` — `T58` stands, and a citation in this KB is one of two translations
+
+🟢 **`T58`'s scope claim is confirmed by independent sources.** Korea's AI Basic Act
+**Article 2(4)(j)** names **student evaluation in early childhood, elementary and secondary
+education**, cross-referencing **Article 9(1)** of the education framework statute.
+🟢 **Higher education is not named, so `T58`'s "Korean higher education sits outside the
+category while EU higher education is inside Annex III" holds.**
+
+🆕 🟡 **The statute's NAME differs between translations.** p146 wrote *"Framework Act on
+Education"*, following two commentaries. 🔴 **The Georgetown CSET translation — which p146
+also cited as one of its four sources — calls the same cross-referenced statute the
+"Basic Education Act."** 🔵 **Same article, same paragraph, two English names.** 🟢 **The
+substance is unaffected; the citation is not settled, and this page now says so rather than
+picking one silently.**
+
+🔴 **The primary Korean text was not reached.** `aibasicact.kr` answers `ENOTFOUND` on the
+WebFetch channel, as `capitol.texas.gov` does. 🔵 **Both are environment allowlist
+requests, not findings** — `ACTION CW`'s shape, now with a second instance.
+
+🟢 **The obligations side is corroborated**: operators must self-assess high-impact status
+and may request confirmation from the Minister of Science and ICT (**Article 33**), with
+duties on explanation, human oversight, user protection and record-keeping. 🟡 **One
+commentary reads a human-in-the-loop requirement into assessment specifically; recorded as
+a secondary interpretation, not adopted.**
+
+### 🟢 The survey evidence firms up — a second publisher on LATAM, and a split on NA
+
+🟢 **LATAM higher education now has two independent surveys agreeing on the SHAPE of the
+gap**, which is the part a studio sells against:
+
+| | UNESCO IESALC | Digital Education Council |
+|---|---|---|
+| population | **200 institutions, 19 countries**, Aug–Oct 2025 | LATAM higher education, **2026** |
+| adoption | 🟢 **87% use AI in at least one area** | 🟢 **92% of students, 79% of faculty** |
+| governance | 🔴 **26% have a formal framework** | 🔴 **19% of faculty use AI for feedback vs 50% of students who want it** |
+| leading use | teaching & learning **73.5%**, research **57.0%**, administration **34.1%**, community **20.0%** | — |
+| sector split | 🟡 **private non-profit 84% vs public 68%** | — |
+
+🔵 **Two publishers, two instruments, one conclusion: adoption is near-universal and
+governance is not.** 🟢 **That 87%-vs-26% gap is the single most quotable LATAM figure on
+this page**, and the DEC survey's 50%-vs-19% feedback gap is the same shape at the
+individual level. 🟢 **Named participants: Tecnológico de Monterrey (co-ran the DEC
+survey), UNAM, UPC.**
+
+🔴 **North America's equivalent pair disagrees, and the disagreement is the finding**:
+student use reported at **92% in 2025** (up from 66% in 2024) against **only ~10% of
+institutions holding formal AI guidelines** and **71% of US teachers reporting no AI
+training**. 🔵 **Same gap as LATAM, measured on different units — one counts students, the
+other counts institutions — so it is a parallel, not a comparison.**
+
+### 🔴 Market-size figures: the spread widened and nothing is adopted
+
+🔴 **Four 2025 baselines were returned this pass and they do not overlap**: **$6.4B**,
+**$7.52B**, **$8.3B**, and this KB's carried **$9.58B**. 🔴 **2030-2034 projections span
+$42.48B to $79.6B.** 🟢 **One maturity read is worth more than any of them**: one analysis
+scores the market at **35/100 on maturity, with most institutions still in pilot mode.**
+🔵 **A studio should quote the maturity, not the TAM** — the pilot-to-production transition
+is the billable work, and the dollar figures are vendor-dependent to the point of being
+unquotable. 🔴 **No market-size figure is adopted this pass.**
+
+🟡 **North America share: 36% of the global market** (single source, carried as a lead).
+🟡 **NA 2024 base ~$951M → ~$2.3B by 2029 at 15.9% CAGR** — 🔴 **inconsistent with the 36%
+share against any of the four global baselines above, and recorded as such rather than
+reconciled.**
+
 ## Pass 146 — 2026-10-12
 
 🔴 **The APAC entry on this page was a declared null one pass ago. It is now the
@@ -653,6 +770,40 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🆕 🔴 p147 — `ACTION EM` discharged: the enacted count is 3, not 24, and one denominator was double-entered
+
+🆕 🔴 **`T66`.** This page's **"35 states + DC + PR introducing"** row and its
+**"35+ states publishing guidance"** row are the **same figure under two headings** — and
+🔴 **"24 states enacted" is unsupported by any source reachable this pass.**
+
+🟢 **What is supportable, in four units that are never summed:**
+
+| figure | unit | window | source class |
+|---|---|---|---|
+| 🔴 **3 states** — Maryland, Idaho, Oklahoma | **K-12 AI STATUTES** | current | state-law guide |
+| 🟡 **~12 states** | legislation touching AI in education | **2026** | policy institute |
+| 🟢 **10 bills** | bills **enacted** | 2026 session | legislative tracker |
+| 🟢 **134 bills across 31 states** | **bills live** | as of **2026-03** | legislative tracker |
+| 🟢 **35+ states** | **non-binding DoE guidance** | as of **2026-06** | teacher-facing tracker |
+
+🔵 **The opportunity this reframes.** 🔴 **"24 states enacted" sells a compliance product.**
+🟢 **"3 statutes and 35+ states of guidance you will be held to informally" sells a
+governance product** — policy drafting, an auditable human-in-the-loop record, and evidence
+for a procurement review. 🟢 **The second is the larger engagement and it is available in
+all 50 states**, because guidance without a statute is exactly where an institution has no
+internal capability to lean on.
+
+🟢 **Demand-side anchors, carried:** student use **92%** (2025) against **~10%** of
+institutions holding formal AI guidelines and **71%** of US teachers reporting no AI
+training. 🟢 **OpenAI launched a country-level education programme with eight national
+partners in Q1 2026; Carnegie Mellon and the Gates Foundation put $55M into AI courseware.**
+
+🆕 🟢 **A permissive technical entry point, newly measured:**
+[`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) —
+**Apache-2.0, 46 tools, FERPA access logging, 23 of 46 writes approval-gated by its own
+manifest.** 🔵 **FERPA is the US-specific regulatory surface, and this is the only row on
+this shelf that ships machine-checked evidence against it.**
+
 #### 🔴 p146 — a claim refused, and two denominators that disagree
 
 🔴 **`T57`: "Texas HB 2400 bans AI from providing direct classroom instruction" is NOT
@@ -1114,6 +1265,32 @@ written down so the K-12 richness above is not mistaken for regional completenes
 
 ### EMEA
 
+#### 🆕 🟢 p147 — the first EMEA-placed connector row, and the clock it sits under
+
+🆕 🟢 **`eth-moodle-mcp@1.3.3` → EMEA (Switzerland)**, on evidence that needs no git
+history: its shipped `MOODLE_URL` **default** is `moodle-app2.let.ethz.ch` — **ETH
+Zürich's** production Moodle — and its token flow names **nethz** (ETH's account system) and
+**AAI / SWITCHaai**, the Swiss academic federation. 🔵 **A working reference deployment for
+a European university Moodle engagement.**
+
+🔴 **And it sits directly under the Annex III clock.** A Moodle connector that reaches
+grades and assignments touches **learning-outcome assessment** and **level assignment** —
+two of the four education use cases the EU places in Annex III. 🟢 **Regulation (EU)
+2026/1744** in force **2026-07-27**; Annex III obligations **2027-12-02**; 🟢 **Article 4
+AI-literacy live since 2025-02-02** and classroom emotion recognition **banned since
+2025-02**.
+
+🔴 **Switzerland is not in the EU**, so ETH itself is outside Annex III — 🔵 **but any
+studio reusing this connector for an EU institution is inside it, and the AGPL/GPL licence
+of the Moodle layer beneath is the second constraint.**
+
+🟡 **Demand signal, single-sourced:** the UK's AI Adoption Summit carries a **£200m+**
+commitment to AI skills delivery, and one QS/HolonIQ read notes **few traditional education
+providers in the delivery model, with Big Tech as delivery partners**. 🔵 **That is a
+displacement risk for institutional buyers and an opening for an integrator who is neither.**
+🔴 **38% of EMEA organisations have not begun piloting**, and **60% report siloed data** —
+enterprise-wide figures, not education-specific, and recorded as such.
+
 #### 🟢 p146 — the clock is RESOLVED, and two obligations are already live
 
 🟢 **`T3` resolved.** Digital Omnibus on AI: EP **2026-06-16** → Council **2026-06-29** →
@@ -1571,6 +1748,39 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 🟡 p147 — a second APAC-placed row, and a statute name that is not settled
+
+🟡 **`mcp-canvas-lms@1.0.5` → APAC (Hong Kong)** on `canvas.ust.hk` (**HKUST**), given in
+its README as an **`e.g.`** rather than a committed default. 🔵 **A lead, not a placement**
+— the distinction is recorded because this axis is the one this KB most often overstates.
+
+🟢 **`T58` holds on substance.** Korea's AI Basic Act **Article 2(4)(j)** names **student
+evaluation in early childhood, elementary and secondary education** only — 🟢 **so Korean
+higher education sits outside the high-impact category while EU higher education is inside
+Annex III**, and Korea's penalties bite around **2027-01** against Annex III's
+**2027-12-02**, eleven months earlier.
+
+🆕 🟡 **The cross-referenced statute has two English names.** p146 wrote *"Framework Act on
+Education"*; the **Georgetown CSET** translation calls the same Article 9(1) the
+**"Basic Education Act."** 🟢 **Same provision, unsettled citation** — recorded rather than
+silently resolved. 🔴 **The primary Korean text is unreachable here**: `aibasicact.kr`
+answers `ENOTFOUND`, a second instance of `ACTION CW`'s allowlist shape.
+
+🟢 **Operator duties are corroborated**: self-assess high-impact status, with optional
+confirmation from the **Minister of Science and ICT (Article 33)**, plus explanation, human
+oversight, user protection and record-keeping.
+
+🔵 **The opportunity, stated against the split.** 🟢 **Korean K-12 assessment is a regulated
+market with a near-term deadline and a named duty-holder** — the highest-urgency APAC
+engagement on this page. 🟢 **Korean higher education is the opposite**: uncovered, so the
+sale is governance-by-choice rather than compliance. 🔴 **Korea also withdrew statutory
+textbook status on 2025-08-04 and adoption fell 37% → 19%** (`T56`) — 🔵 **the one negative
+adoption slope in this KB, and a warning that an APAC mandate can reverse.**
+
+🟡 **Regional context, enterprise-wide rather than education-specific:** **57%** of Asian
+organisations have AI in at least one area; Singapore's live consultations are on **financial
+institutions, not schools**; Australia has moved on AI governance and copyright.
 
 #### 🆕 🔴 p146 — `P145-W`'s null is REFUTED, and the region splits three ways
 
@@ -2030,6 +2240,45 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 🟢 p147 — two publishers now agree on the shape of the LATAM gap
+
+🟢 **The single most quotable LATAM figure on this page is a RATIO, and it is now
+independently corroborated.**
+
+| | UNESCO IESALC (200 institutions, 19 countries, Aug–Oct 2025) | Digital Education Council (2026) |
+|---|---|---|
+| adoption | 🟢 **87%** use AI in at least one area | 🟢 **92%** of students, **79%** of faculty |
+| governance | 🔴 **26%** hold a formal framework | 🔴 **19%** of faculty use AI for feedback vs **50%** of students who want it |
+| by use | teaching & learning **73.5%**, research **57.0%**, administration **34.1%**, community **20.0%** | — |
+| by sector | 🟡 private non-profit **84%** vs public **68%** | — |
+
+🔵 **87% adoption against 26% governance is the engagement.** 🟢 **Two publishers, two
+instruments, one conclusion** — and the DEC survey reproduces the same shape at the
+individual level, where demand for AI feedback runs 2.6× ahead of faculty practice.
+🟢 **Named participants: Tecnológico de Monterrey (co-ran the DEC survey), UNAM, UPC.**
+
+🟢 **Regulation is fragmented and that is the selling position, not an obstacle**: Chile
+leads with a National AI Policy since 2021 and a law in discussion; Brazil and Colombia have
+national strategies **without education-sector rules**; Mexico's SEP / ANUIES / Observatorio
+IA proposals **lack binding force**. 🔵 **No LATAM jurisdiction on this page imposes an
+Annex III-style obligation**, so the buyer's driver is institutional risk and accreditation,
+not a deadline — 🟢 **which is why the 26% framework figure is the whole pitch.**
+
+🟢 **Carried and still quotable:** Brazil, **53%** of administrators using AI against
+**22%** of schools holding guidelines (`T1`'s first K-12 instance); Google.org's **$4.6M**
+via the Raspberry Pi Foundation — **24 000 educators and 1.25M students by 2028 across nine
+countries.**
+
+🔴 **The connector tier is the structural weakness.** 🔴 **The LATAM system-of-record rows
+this page recommends as entry points are the least licensed on the shelf**: of the 8 rows
+carrying no licence file, the SIU-Guaraní / SIGAA / SUAP cluster is the bulk of them.
+🟢 **`ACTION EE` tested whether any is a fork of a licensed parent — 0 of 8 are** — so
+🔴 **"ask the author" is the only route** for those that are genuinely unlicensed.
+🟢 **Two turn out not to be** (`T63`): `frjunioalves/suap-mcp` declares **MIT** under
+`## Licença` and `eugeborzone/Auto_Grade_Guarani` carries an informal Spanish grant under
+`# Licencia`. 🔵 **Both were invisible because the census matcher was English-only — on the
+region whose rows it most needed to read.**
 
 #### 🟢 p146 — `T1`'s first K-12 instance, and a programme figure that IS quotable
 

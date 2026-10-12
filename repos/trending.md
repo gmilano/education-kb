@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 147 — the channel reopens, 52 of 52 clone, and the census gains a Rust row it already had
+
+🟢 **Everything p146 recorded as unreachable was reachable this pass.**
+
+| channel | p146 | 🆕 p147 |
+|---|---|---|
+| `git clone` third-party | 🔴 **refused** (`Untrusted Code Integration`) | 🟢 **52 of 52 distinct repos, zero dead** |
+| `npm pack` | 🔴 not attempted | 🟢 **8 of 8 tarballs** |
+| `git ls-remote` | 🟢 open | 🟢 open |
+| `WebFetch` on `github.com/<owner>/<repo>` | 🟢 open (`T60`) | 🟢 open — **8 fork checks** |
+| `curl -sI` on the same URLs | 🔴 **403** | 🔴 **403** (`P144-X`, fourth pass) |
+| `capitol.texas.gov` | 🔴 `ENOTFOUND` / 403 | 🔴 unchanged — environment allowlist request |
+
+🆕 🔴 **`T65`: the channel map is not stable within a DATE, let alone across one.** p145
+certified 44 of 44 cloning on 2026-10-12; p146 was refused on 2026-10-12; p147 makes 52 of
+52 on 2026-10-12. 🟢 **The rule: a refusal is recorded against a session, and the next pass
+retries rather than inheriting it.**
+
+### 🆕 🟢 `zavora-ai/mcp-student-records` — in the census for passes, measured for the first time
+
+🔴 **This repository has been in this KB's 44-row connector census and was never
+surface-measured.** 🔴 **Both `os.walk` gates read it as ZERO FILES** — not because of
+`dist`/`build`, which it does not have, but because it is **Rust** and
+`surface_gate.lang_of` maps `.py .js .mjs .cjs .ts .go .php`. 🔵 **A verdict was available
+and would have been wrong; a guard now refuses one instead** (`T64`).
+
+| | |
+|---|---|
+| licence | 🟢 **Apache-2.0**, full body at `LICENSE`, declared in `Cargo.toml` |
+| stack | Rust edition 2024, `rmcp` **3.1.2** + `adk-mcp-sdk` **0.2.0** |
+| surface | 🟢 **46 tools** — `#[tool(` ×46 on 46 distinct `fn`, under `#[tool_router]` |
+| manifest | 🟢 **`mcp-server.toml`, 46 `[[tools]]`**, typed `risk_class`, `requires_approval` per tool (**23 of 46 true**) |
+| tests | 🟢 `tests/manifest_test.rs` — count, `domain = "education"`, approval on **11 named FERPA-sensitive writes** |
+
+🔵 **It is the only row on this shelf that ships a machine-checked risk classification of
+its own write surface**, which is the thing a school procurement actually asks for.
+
+### 🔴 What the trending search returned, for the eighth pass running
+
+🔴 **Courses.** `microsoft/ai-agents-for-beginners` (**67 223★**, MIT),
+`rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch` (**796★**, MIT),
+`microsoft/ai-edu`, `microsoft/ML-For-Beginners`, AI Engineering Hub, D2L. 🟢 **Not
+re-registered as repos; none is an education-domain tool.**
+
+🔴 **A dated secondary claim worth not repeating**: one Japanese trending digest reports
+that **9 of the top 10** projects in GitHub's February 2026 monthly ranking were
+AI-related. 🔴 **Single source, a monthly aggregate of a daily list, and not education —
+recorded as unverified.**
+
+### 🟢 The 44-row census, re-cloned and re-measured on the licence axis
+
+| | FILE | PKG_ONLY | README_ONLY | NONE |
+|---|---|---|---|---|
+| p145's published pattern | 34 | 1 | 1 | 🔴 **8** |
+| 🆕 language-extended | 34 | 1 | 🟢 **3** | 🟢 **6** |
+
+🟢 **The baseline reproduces p145's value for all 44 rows**, so the pattern is the only
+variable, and 🟢 **exactly 2 rows change with zero false positives among the 34 `FILE`
+rows**. Instrument [`p147-licence-language`](../compose/code/p147-licence-language/README.md), **13 tests**.
+
 ## 2026-10-12 — pass 146 — the trending channel could not be read, and the reason is new
 
 🔴 **No repository was cloned, measured or star-counted this pass.** Every `git clone` of a

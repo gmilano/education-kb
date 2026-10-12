@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 147 — 2026-10-12 — the clone channel is open, the five provisional rows are cleared, and the shelf gains a 46-tool Apache-2.0 SIS
+
+🟢 **Every clone p146 could not make, this pass made.** **52 distinct repositories, 52
+cloned, zero dead**, plus **8 of 8** npm tarballs fetched. 🆕 🔴 **`T65`: the clone channel
+is SESSION-scoped, not dated.** `P146-A` recorded `Untrusted Code Integration` on 1 of 1
+single and 1 of 1 bulk attempt; `P145-X` recorded 44 of 44 cloning cleanly hours earlier on
+this same date; this pass makes 52 of 52. 🔵 **`T60`'s "the channel map is dated, not
+permanent" is one notch too optimistic — it is not even stable within a date.** A pass that
+finds a channel shut must say which session found it shut.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 `P147-A` | 🟢 **`ACTION EI` DISCHARGED — 0 of 5 are `T42` artefacts** | **726 / 488 / 427 / 10 / 6** files walked. 🟢 **All five published verdicts reproduce to the token** |
+| 🟢 `P147-B` | 🟢 **The exclusion `P146-B` indicts never fired on any of the five** | `git ls-files` matches **0** paths under `dist/` or `build/` on all five |
+| 🟢 `P147-C` | 🟢 **`ACTION EB` NOT refuted — the payload rule is shelf-wide** | **2 of 16** non-npm rows resolve to `PAYLOAD`. 🔵 **`T42` is not an npm special case** |
+| 🆕 🔴 `P147-D` | 🆕 🔴 **`T62` — but both `PAYLOAD` rows name a tree that is not there** | `vtop-bhopal-mcp` and `bb-mcp` **gitignore `dist/`** and commit **0** files in it |
+| 🆕 🔴 `P147-E` | 🆕 🔴 **`T64` — an empty walk has THREE causes, and the third hides a real server** | `zavora-ai/mcp-student-records` is **Rust**; `lang_of` has no `.rs` |
+| 🔴 `P147-F` | 🔴 **`ACTION EE` REFUTED — 0 of 8 unlicensed rows is a fork of anything** | Fewer than the 2 its falsifier required |
+| 🆕 🔴 `P147-G` | 🆕 🔴 **`T63` — the licence census is monolingual** | **2 of 9 `NONE` rows carry a grant** in Portuguese and Spanish |
+| 🔴 `P147-H` | 🔴 **`ACTION EG` REFUTED, and its premise is the defect** | `lumen`: **9 tools, 10 scopes**; the extra is `"*"`, by design |
+| 🟢 `P147-I` | 🟢 **`ACTION ED` DISCHARGED at exactly 227** | **18 modules, 18 spread sites, sum 227.** 🔵 `T42` confirmed by a third method |
+| 🟢 `P147-K` | 🟢 **`ACTION EC` DISCHARGED — `librus-mcp` still reads 35, by the manifest's own rule** | `server.tool(` inside `pyproject.toml`'s declared package: **1+8+3+12+2+4+5 = 35**. 🔴 **23 sites in `legacy_reference` + 2 in `scripts` sit outside the allowlist** — naive inclusion reads **60** |
+| 🔴 `P147-J` | 🔴 **EIGHTH consecutive null for new agent rows** | 🔴 **Every education-specific hit is still a COURSE** |
+
+### 🟢 The five provisional rows, cleared
+
+p146 flagged these because `P146-B` proved a gate can emit their exact verdict from a walk
+of zero files. 🟢 **With the payload in hand, none of them did.**
+
+| row | tier | files walked | `dist`/`build` tracked | status after p147 |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | agent | **726** | 🟢 **0** | 🟢 **CONFIRMED** |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | github-only | **488** | 🟢 **0** | 🟢 **CONFIRMED** |
+| [`BetterSEQTA/DesQTA`](https://github.com/BetterSEQTA/DesQTA) | github-only | **427** | 🟢 **0** | 🟢 **CONFIRMED** |
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | github-only | **10** | 🟢 **0** | 🟢 **CONFIRMED** |
+| [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | github-only | **6** | 🟢 **0** | 🟢 **CONFIRMED** |
+
+🔵 **p146 was right to flag them and right about why.** `NOT_AN_MCP_SERVER` and "I read
+nothing" are the same string, and the shelf could not tell them apart. 🟢 **It can now, and
+on these five the answer is the reassuring one** — four are browser extensions and calendar
+tools that were never MCP servers, and the fifth reads 726 files and one `mcp` token.
+Instrument [`p147-provisional-reverdict`](../compose/code/p147-provisional-reverdict/README.md), **10 tests**.
+
+### 🆕 🟢 The row the negative control found — a 46-tool Apache-2.0 student-records server
+
+🔴 **Both `os.walk` surface gates on this shelf read `zavora-ai/mcp-student-records` as zero
+files and would publish `NOT_AN_MCP_SERVER`.** It has no `dist/` and no `build/`. 🔵 **It is
+Rust, and `surface_gate.lang_of` maps `.py .js .mjs .cjs .ts .go .php` — not `.rs`.**
+
+| property | value |
+|---|---|
+| repo | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0** |
+| licence | 🟢 **Apache-2.0** — full body at `LICENSE`, `Cargo.toml` declares it |
+| language | Rust, edition 2024, `rust-version = 1.94.1` |
+| SDK | 🟢 **`rmcp` 3.1.2** (`server`, `transport-io`, `macros`) + `adk-mcp-sdk` 0.2.0 |
+| tool surface | 🟢 **46** — `#[tool(` ×46 on 46 distinct `fn` in `src/server.rs`, under `#[tool_router]` |
+| declared manifest | 🟢 **`mcp-server.toml`, 46 `[[tools]]`** — count, risk class and approval per tool |
+| scope | students, courses, enrollments, grades & rubrics, attendance, guardians, transcripts, learning analytics |
+| 🟢 **compliance posture** | 🟢 **FERPA-gated communications and a FERPA access log**, declared in the package description |
+
+🟢 **This is the strongest PROPERTY pin on the shelf.** `tests/manifest_test.rs` asserts
+`m.tools.len() == 46`, `m.domain == "education"`, `requires_approval` on **11 named
+FERPA-sensitive writes** (`record_grade`, `record_attendance`, `send_communication`,
+`set_student_status`, `add_accommodation`, `enroll`, `add_guardian`,
+`record_mastery_evidence`, `place_hold`, `release_hold`, `assign_intervention`), and a
+typed `risk_class` — `ExternalWrite` for `send_communication`, `ReadOnly` for a named read
+set. 🟢 **23 of 46 tools carry `requires_approval = true`.**
+
+🔴 **It is still not bidirectional in `P144-G`'s sense.** Nothing compares the manifest's
+names against the router's `#[tool]` names; the three counts meet at the literal **46** and
+set identity is never asserted. 🔵 **`P144-G`'s bidirectional count stays where it was.**
+
+🔵 **Why this matters more than one row.** The shelf's entire surface-measurement lane is
+blind to any non-`{py,js,ts,go,php}` server, and it is blind *silently* — it returns a
+verdict rather than refusing one. 🟢 **`p147-guard-harness` now refuses instead** (`T64`).
+
+### 🔴 `lumen`'s OAuth vocabulary — the pin holds, the default does not
+
+🔴 **`ACTION EG` is refuted**: `scopes_supported` is **10**, `all_tool_names()` is **9**.
+🟢 **The extra element is `WILDCARD_SCOPE = "*"` and `set(scopes) - {"*"} == set(tools)`
+holds with zero orphans either way.** 🔵 **So the bidirectional test the action specified
+would fail on a correct repository** — the action's premise was the defect, and `P145-J`'s
+pin stands.
+
+🔴 **The deployment finding is separate and worse.** `"*"` is the **shipped default** on two
+of three client-minting paths (`admin_mcp_clients.py:66`, `cli.py:478`) and `has_scope()`
+short-circuits on it, so **8 of 9 tools are reachable by any authenticated principal** —
+including `grade_review_card`, which changes a student's record. 🟢 **`ingest_url_to_draft`
+is not**: the `admin` posture gate is independent of scope and still fires. 🔵 **Mint
+`lumen` clients with an explicit scope list, never the default.** Instrument
+[`p147-scope-parity`](../compose/code/p147-scope-parity/README.md), **9 tests**.
+
+### 🔴 The eighth agent null
+
+Eight queries — four global, four regional — as mandated. 🔴 **Not one education-domain
+agent.** 🟢 **Recorded as a dated null rather than padded.**
+
+| candidate | licence | ★ | why it is not a row |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **67 223** | 🔴 **12 lessons — a curriculum, carried from p144/p145** |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | MIT | **796** | 🔴 **a tutorial; `ai-education` is a topic tag, not a product** |
+| `rohitg00/ai-engineering-from-scratch` | — | — | 🔴 **a course, carried from p144** |
+| `microsoft/ai-edu`, `microsoft/ML-For-Beginners` | MIT | — | 🔴 **teaching materials** |
+| `avinash201199/free-ai-agents-resources` | 🔴 **unstated** | — | 🔴 **a link list** |
+
+🔵 **Eight nulls is a settled fact about the channel, not a gap in the shelf.** 🟢 **The
+rows this pass added came from measuring what was already here** — a Rust server the
+instruments could not see, and a licence two rows declared in a language the census could
+not read.
+
 ## Pass 146 — 2026-10-12 — a second instrument can return a verdict over nothing, and five rows carry that verdict
 
 🔴 **No row on this shelf was re-measured this pass.** Every `git clone` of a third-party

@@ -1,0 +1,17 @@
+row	walked_excl	walked_all	guard	artefact	artefact_why	verdict_published_reproduces	verdict_now	t42
+Agso-o_sigaa-calendar	10	10	WALKED	SOURCE	no declared entry point	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	INPUT_SEEN
+BetterSEQTA_BetterSEQTA-Plus	488	488	WALKED	SOURCE	no declared entry point	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	INPUT_SEEN
+BetterSEQTA_DesQTA	427	427	WALKED	SOURCE	no declared entry point	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	INPUT_SEEN
+Piyushtanwani_DAU-buddy	89	89	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+ahmedEid1_lumen	781	781	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+divyarthjain_vtop-bhopal-mcp	42	42	WALKED	PAYLOAD	4/4 entries inside build/dist	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+hesham0-0nasser_tutor-lms-mcp	6	6	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+juliancasaburi_siu-guarani-promedio-extension	6	6	WALKED	SOURCE	no declared entry point	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	INPUT_SEEN
+librus-mcp	73	73	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+malkreide_global-education-mcp	20	20	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+mohaneesh-03_mcp-tutor	10	10	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+nirholas_ai-tutor-mcp	7	7	WALKED	SOURCE	0/3 entries inside a built tree	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+nitsuah_bb-mcp	50	50	WALKED	PAYLOAD	2/2 entries inside build/dist	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+oliverhruby_edupage-mcp	21	21	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+yourssu_soongpt-plugin	68	68	WALKED	SOURCE	no declared entry point	IS_AN_MCP_SERVER	IS_AN_MCP_SERVER	INPUT_SEEN
+zijinz456_OpenTutor	726	726	WALKED	SOURCE	no declared entry point	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)	INPUT_SEEN

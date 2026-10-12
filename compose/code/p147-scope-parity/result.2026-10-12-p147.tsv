@@ -1,0 +1,19 @@
+property	value
+n_tools	9
+n_scopes	10
+equal_raw	False
+equal_modulo_wildcard	True
+wildcard_present	True
+scopes_without_tool	-
+tools_without_scope	-
+
+name	auth	has_scope_entry
+list_courses	public	yes
+get_course	public	yes
+search_lesson_content	user	yes
+ask_tutor	user	yes
+list_my_due_reviews	user	yes
+grade_review_card	user	yes
+create_course_draft	user	yes
+ingest_url_to_draft	admin	yes
+list_my_progress	user	yes

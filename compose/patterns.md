@@ -4,6 +4,177 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P31` — the permissive system-of-record stack, with governance that passes a procurement review *(new, p147 — North America first, portable)*
+
+🟢 **This is `P30` extended down into the records layer, which `P30` could not reach**
+because every SIS-shaped row on this shelf was copyleft or unlicensed. 🆕 **One
+Apache-2.0 row changes that.**
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| records + agent surface | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0** | 🟢 **Apache-2.0** | 🟢 **46 tools**, `mcp-server.toml` manifest, **23 of 46 approval-gated**, **FERPA access log** |
+| learning platform | **Sakai** | 🟢 **ECL-2.0** | 🟢 **the only permissive major LMS** (p146) |
+| agent runtime | **`rmcp` 3.1.2** (in-tree) or any MCP client | 🟢 Apache-2.0 / MIT | 🟢 the server speaks MCP over stdio — no bespoke protocol |
+| identity | OAuth client-credentials with an **explicit scope list** | — | 🔴 **never the wildcard default** — see `P147-H` |
+| audit | the server's own FERPA access log + `requires_approval` flags | 🟢 in-tree | 🟢 **evidence, not a policy document** |
+
+### 🟢 How to wire it
+
+1. 🟢 **Stand up `mcp-student-records` against the institution's SIS.** `cargo build`;
+   `mcp-server.toml` is the tool manifest and the governance contract in one file.
+2. 🟢 **Read `mcp-server.toml` BEFORE writing any agent logic.** Every tool carries a
+   `risk_class` and a `requires_approval` flag. 🔵 **Build the approval UI off that file,
+   not off a list you maintain by hand** — `tests/manifest_test.rs` keeps it honest in CI.
+3. 🔴 **Gate the 11 named FERPA-sensitive writes through human approval**, because the
+   manifest already says they require it: `record_grade`, `record_attendance`,
+   `send_communication`, `set_student_status`, `add_accommodation`, `enroll`,
+   `add_guardian`, `record_mastery_evidence`, `place_hold`, `release_hold`,
+   `assign_intervention`. 🟢 **`send_communication` is typed `ExternalWrite`** — treat it
+   as leaving the institution, because it does.
+4. 🟢 **Put Sakai beside it, not under it.** The two share no code, so ECL-2.0 and
+   Apache-2.0 compose with no copyleft anywhere in the stack.
+5. 🔴 **Add the parity test the repository does not have.** Nothing compares the manifest's
+   46 names against the router's 46 `#[tool]` names; the counts meet at the literal `46`.
+   🟢 **A ten-line test asserting set identity closes the one real gap in this row**, and
+   [`p147-scope-parity`](code/p147-scope-parity/README.md) is the shape to copy.
+
+🔵 **Why this clears procurement.** A school asks three questions: *can we use it* (🟢
+Apache-2.0), *which tools can change a student's record* (🟢 23 of 46, named in a committed
+file), *can you prove a human approved each one* (🟢 the approval flag plus the FERPA access
+log). 🔴 **No other row on this shelf answers all three from the repository.**
+
+🔴 **Two honest limits.** It is **Rust**, which is not most studios' default for this layer.
+And 🔴 **this shelf's own surface instruments cannot measure it** — `lang_of` has no `.rs`
+(`T64`) — so the 46 figure here comes from reading `#[tool(` attributes and the manifest,
+not from the gate that measured every other row.
+
+**Effort: 6–8 weeks** for a single-institution deployment with the approval UI and the
+parity test, excluding SIS data mapping.
+
+---
+
+## 🆕 🟢 `P32` — the multilingual licence gate, before any LATAM connector is adopted *(new, p147 — LATAM, portable)*
+
+🔴 **`T63` is not a curiosity; it is a procurement hazard.** This KB scored 9 connector rows
+as having **no grant at all**, and **2 of them declare one** — in Portuguese and Spanish, on
+the region whose system-of-record rows this KB recommends most often as entry points.
+
+### 🟢 The gate, as four checks run in order
+
+1. 🟢 **Licence FILE first**, by name: `LICEN[CS]E`, `COPYING`, `UNLICEN[CS]E`,
+   `LICENSE-MIT`, `LICENSE-APACHE`, with or without `.md`/`.txt`/`.rst`.
+2. 🟢 **Identify by BODY, not by identifier.** `Permission is hereby granted, free of
+   charge` is MIT whatever the README calls it; `GNU AFFERO GENERAL PUBLIC LICENSE` is
+   AGPL-3.0 even when an `MIT` token appears lower in the same file.
+3. 🆕 🟢 **README headings in the languages the rows are WRITTEN in**, not just English:
+   `licen[cs]e | licen[cçs]a | licencia | lizenz | licenza`, plus the inline forms
+   `licenciado sob`, `licenciado bajo`, `bajo la licencia`, `sob a licença`,
+   `unter der Lizenz`.
+4. 🆕 🟡 **Informal grants, flagged and never promoted.** *"Usted es libre de copiar y
+   modificar"* is a permission, not a licence: it says nothing about warranty, patents,
+   attribution or redistribution. 🟢 **Score it `UNIDENTIFIED` and escalate to legal** —
+   it is materially different from silence and materially different from a licence.
+
+🟢 **Run the baseline alongside the extension and diff them.** That is how this pass could
+say *"the baseline reproduces p145's value for all 44 rows, so the pattern is the only
+variable"* — and how it could show **2 rows changing with zero false positives among the 34
+`FILE` rows**. 🔵 **Without the control, a new pattern's wins are indistinguishable from its
+mistakes.** [`p147-licence-language`](code/p147-licence-language/README.md), **13 tests**.
+
+### 🔴 Two traps this gate is built around
+
+🔴 **A README that cites a `LICENSE` file which was never committed.**
+`frjunioalves/suap-mcp` says *"Veja o arquivo `LICENSE` para detalhes"* and `git ls-files`
+matches nothing. 🟢 **Score `README_ONLY`, never `FILE`** — the declaration is real and the
+file a compliance review wants does not exist.
+
+🔴 **A monorepo whose licence does not ship.** `moodle-mcp-server-aql` declares AGPL-3.0,
+the repository carries the full **661-line** body at its root, and the tarball carries
+nothing — because `packages/server/package.json` has a **16-glob `files` allowlist** with no
+`LICENSE` and no `LICENSE` inside the package directory. 🔵 **npm's automatic inclusion
+looks in the package directory and does not reach up.** 🟢 **Check the repository before
+concluding a published package is unlicensed**, and 🔴 **check the package before
+concluding a licensed repository ships its grant.**
+
+**Effort: 1 week** to build and run across a candidate set, including the baseline control.
+
+---
+
+## 🆕 🔴 `P33` — the refusal harness: never let an instrument answer a question it had no input for *(new, p147 — all regions)*
+
+🔵 **Three of this pass's six theses are one shape**: a measurement that was never taken,
+published in the shape of one, always at the reassuring value.
+
+| cause | how it presents | real example |
+|---|---|---|
+| 🔴 exclusion drops the payload | `0 files` → "not a server" | npm `dist/` tier, **7 rows**, 2 passes |
+| 🔴 artefact is not the kind read | `git ls-tree` on a tarball | **8** npm rows (`T59`) |
+| 🆕 🔴 language outside the map | `.rs` unmapped → `0 files` | 🔴 **a 46-tool Apache-2.0 SIS** |
+| 🆕 🔴 pattern cannot express the target | `licen[cs]e` vs `Licença` | **2** LATAM rows (`T63`) |
+
+### 🟢 The recipe
+
+1. 🟢 **At every point a verdict is formed, assert that input was seen.**
+   `walked_or_refuse(files, root, excluded)` from
+   [`p146-empty-walk-guard`](code/p146-empty-walk-guard/README.md) — four lines, and it
+   preserves the distinction that matters: **zero files walked withholds a verdict; files
+   walked with no match keeps one.**
+2. 🟢 **Wrap, do not rewrite.** [`p147-guard-harness`](code/p147-guard-harness/README.md)
+   calls each instrument's **own** enumeration function and refuses at zero, so the bytes
+   that produced published figures stay reproducible. 🔴 **Editing them in place would
+   destroy every future pass's ability to say "the baseline reproduces."**
+3. 🔴 **Never let the harness carry a copy of what it inspects.** `P146-D`'s census read
+   itself as compliant because it held the guard tokens as regexes, inflating the exact
+   number it existed to report. 🟢 **A test asserts the harness holds no exclusion set.**
+4. 🟢 **Run the negative control and read it.** This pass's control over 220
+   (clone, instrument) pairs returned **2 refusals** — and those two were the Rust row that
+   nobody had noticed. 🔵 **The control found the finding.**
+5. 🆕 🟢 **Extend the idea past the walk to the pattern.** A matcher that cannot express its
+   target must not return "absent." 🔵 **`licen[cs]e` returning `NONE` on a `## Licença`
+   heading is the same bug as a gate returning `NOT_AN_MCP_SERVER` over zero files.**
+
+🔵 **The one line worth carrying out of this pattern:** 🟢 **an instrument must distinguish
+"I looked and it is not there" from "I could not look."** 🔴 **Every figure this KB has
+withdrawn in five passes failed that test, and not one failed on the measurement itself.**
+
+**Effort: 2–3 days** to add the guard and a harness to an existing instrument set; the
+negative control is the expensive part and the part that pays.
+
+---
+
+## 🔴 `P34` — mint MCP clients with explicit scopes, because the shipped default is `"*"` *(new, p147 — all regions)*
+
+🔴 **`ahmedEid1/lumen` publishes an RFC 8414 metadata document with a per-tool scope
+vocabulary, and then defaults to a wildcard that collapses it.**
+
+| path | default |
+|---|---|
+| `app/api/v1/admin_mcp_clients.py:66` | 🔴 `Field(default_factory=lambda: [WILDCARD_SCOPE])` |
+| `app/cli.py:478` | 🔴 `scope_list = [WILDCARD_SCOPE]` |
+| `issue_token` with an explicit list | 🟢 intersected against the grant (`auth.py:102`) |
+
+🔴 **`has_scope()` short-circuits on `"*"`** (`principal.py:87`), so **8 of 9 tools are
+reachable by any authenticated principal** — including **`grade_review_card`**, which
+changes a student's record, and `create_course_draft`. 🟢 **`ingest_url_to_draft` is not:
+its `admin` posture gate is independent of scope and still fires** (`server.py:123`).
+
+🔵 **So the recipe is one line long and it is the third path in the table.** 🟢 **Always
+pass an explicit scope list when minting a client**, and 🟢 **scope it to the read tools
+unless a write is genuinely required.**
+
+🟢 **And add the assertion the repository is missing**, which is not the obvious one:
+
+    set(scopes_supported) - {WILDCARD_SCOPE} == set(all_tool_names())
+
+🔴 **A plain bidirectional equality would FAIL on this correct repository**, because the
+wildcard is a designed member of the scope set and not of the tool set. 🔵 **Name the
+wildcard; do not count past it.** [`p147-scope-parity`](code/p147-scope-parity/README.md),
+**9 tests**.
+
+**Effort: 1 day**, and it is the highest ratio of risk removed to work done on this page.
+
+---
+
 ## 🆕 🟢 `P30` — the all-permissive education stack, end to end *(new, p146 — all regions)*
 
 🟢 **This KB can now name a complete education stack with no copyleft anywhere in it.** It

@@ -1,0 +1,8 @@
+
+# population: 44
+# base  FILE=34  NONE=8  PKG_ONLY=1  README_ONLY=1
+# ext   FILE=34  NONE=6  PKG_ONLY=1  README_ONLY=3
+# rows changed by language: 2
+#   eugeborzone_Auto_Grade_Guarani                 NONE/- -> README_ONLY/UNIDENTIFIED (README)
+#   frjunioalves_suap-mcp                          NONE/- -> README_ONLY/MIT (README)
+# baseline vs p145 published: REPRODUCES row for row

@@ -1,0 +1,4 @@
+
+# tools=9 scopes=10  equal_raw=False  equal_modulo_wildcard=True
+# reachable with a wildcard token and no elevated role: 8 of 9
+# gated by posture regardless of scope: ingest_url_to_draft(admin)

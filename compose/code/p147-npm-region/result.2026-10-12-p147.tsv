@@ -1,0 +1,9 @@
+subject	region	channel	host	how	where	conflict
+x_canvas-mcp-server-2.2.3	UNPLACED	-	-	-	-	-
+x_eth-moodle-mcp-1.3.3	EMEA	cctld	moodle-app2.let.ethz.ch	ccTLD .ch	package/README.md	-
+x_imazhar101-mcp-canvas-server-2.1.3	UNPLACED	-	-	-	-	-
+x_ink-waffle-moodle-mcp-0.2.0	UNPLACED	-	-	-	-	-
+x_mcp-canvas-lms-1.0.5	APAC	cctld	canvas.ust.hk	ccTLD .hk	package/README.md	-
+x_moodle-mcp-server-aql-0.1.7	UNPLACED	-	-	-	-	-
+x_n35da-brightspace-mcp-0.4.0	UNPLACED	-	-	-	-	-
+x_owen-x-tech-canvas-mcp-1.1.0	UNPLACED	-	-	-	-	-

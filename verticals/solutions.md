@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-12
 ---
 
+**Pass 147, 2026-10-12.** 🔴 **The AGPL warning this page carried on `moodle-mcp-server-aql`
+was the wrong KIND of warning, and the correction matters commercially.** 🆕 🟢 **A
+permissively-licensed SIS layer joins the page for the first time.**
+
+### 🔴 CORRECTION — `moodle-mcp-server-aql` has a grant; what it lacks is a shipped licence file
+
+🔴 **p145 recorded this row as declaring AGPL-3.0 with nothing behind it**, and this page
+warned accordingly. 🟢 **`ACTION EF` tested that and refuted it.**
+
+| question | answer |
+|---|---|
+| does a licence file exist? | 🟢 **yes** — `csmediapro/moodle-mcp-server`, monorepo root, **661 lines, complete AGPL-3.0 body** |
+| is it in the published tarball? | 🔴 **no** |
+| why? | 🔴 `packages/server/package.json` ships a **`files` allowlist of 16 globs**, none `LICENSE`; no `LICENSE` inside `packages/server/` |
+| what kind of defect is it? | 🟢 **packaging** (`T21`'s shape), not a missing grant |
+
+🔵 **The practical difference for a studio.** A missing grant means *you may not use this
+without asking the author.* A packaging defect means *the grant is AGPL-3.0, the obligation
+is live, and the file you need for your own compliance file is one directory up in the
+repository.* 🔴 **The AGPL-3.0 network clause still fires on a hosted multi-tenant Moodle
+connector** — which is how this row would actually be deployed. 🔵 **The warning stands;
+its reason changes.**
+
+### 🆕 🟢 The permissive SIS row this page did not have
+
+🟢 **Every system-of-record row on this page has been copyleft or unlicensed.**
+
+| platform | layer | licence | note |
+|---|---|---|---|
+| Moodle | LMS | 🔴 GPL-3.0 | copyleft |
+| Open edX | LMS | 🔴 **AGPL-3.0** | 🔴 network clause fires on hosted multi-tenant |
+| Canvas | LMS | 🔴 **AGPL-3.0** | 🔴 same |
+| Chamilo, ILIAS | LMS | 🔴 GPL-3.0 | copyleft |
+| OpenEduCat | education ERP | 🔴 LGPL-3.0 | weak copyleft |
+| Sakai | LMS | 🟢 **ECL-2.0** | 🟢 **the one permissive major LMS** (p146) |
+| 🆕 **`zavora-ai/mcp-student-records`** | 🆕 **SIS / MCP** | 🟢 **Apache-2.0** | 🆕 🟢 **46 tools, FERPA access log, approval-gated writes** |
+
+🟢 **So a studio can now assemble LMS + SIS with no copyleft anywhere**: **Sakai**
+(ECL-2.0) for the learning layer, **`mcp-student-records`** (Apache-2.0) for the records
+layer and the agent surface over it. 🔵 **That is the first time this page can say that.**
+
+🟢 **And it is the only row here that ships a machine-checked governance surface:**
+`mcp-server.toml` declares a `risk_class` and a `requires_approval` flag per tool
+(**23 of 46 require approval**), and `tests/manifest_test.rs` asserts approval on **11
+named FERPA-sensitive writes** — `record_grade`, `record_attendance`, `send_communication`,
+`set_student_status`, `add_accommodation`, `enroll`, `add_guardian`,
+`record_mastery_evidence`, `place_hold`, `release_hold`, `assign_intervention` — plus
+`risk_class = ExternalWrite` on `send_communication`. 🔵 **A procurement review asks for
+exactly that list, and here it is enforced by CI rather than asserted in a datasheet.**
+
+🔴 **Two limits, stated.** It is **Rust**, which is not most studios' default stack for this
+layer. And 🔴 **nothing asserts the manifest's 46 names against the router's 46 `#[tool]`
+names** — the counts meet at the literal `46` and set identity is never checked, so it is a
+very strong property pin and **not** a bidirectional identity pin.
+
+### 🟡 Two connector rows now have a deployment region
+
+🟢 **`eth-moodle-mcp` → EMEA (Switzerland)** — its shipped `MOODLE_URL` default is **ETH
+Zürich's** production Moodle and its auth flow names **nethz** and **SWITCHaai**. 🔵 **A
+ready reference for a European university Moodle engagement, and a reminder that the EU AI
+Act's Annex III obligations land on 2027-12-02 for exactly this deployment shape.**
+
+🟡 **`mcp-canvas-lms` → APAC (Hong Kong)**, on `canvas.ust.hk` (HKUST) given as an example
+rather than a default — a lead, not a placement.
+
 **Pass 146, 2026-10-12.** 🆕 🟢 **The whole major-LMS layer was read on the licence axis for
 the first time, and it has exactly ONE permissive member.** 🔴 **Six of the seven platforms
 a studio would reach for are copyleft** — and the exception is not the one this page or the

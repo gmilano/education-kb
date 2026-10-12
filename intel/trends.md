@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 147 — 2026-10-12
+
+🟢 **Six of p146's eight open actions resolved; two refuted on their own terms and one
+refuted with its premise.** 🆕 **`T62`–`T67` adopted.** 🟢 **`T42` confirmed by a third
+independent method.** 🔴 **`T59` narrowed.** 🔴 **`T60` weakened by `T65`.** 🟢 **The five
+rows p146 made provisional are all cleared.**
+
+| thesis | movement this pass |
+|---|---|
+| 🟢 **`T42`** — two instruments measuring different properties | 🟢 **CONFIRMED by a third method.** Resolving `@imazhar101`'s 18 registration sites one level sums to **exactly 227** descriptors. 🔵 **The 18 and the 227 are one surface counted at two levels** |
+| 🔴 **`T59`** — npm rows structurally unplaceable on the region axis | 🔴 **NARROWED.** 🟢 **2 of 8 ARE placeable** by institution evidence in the shipped payload. 🔵 **The git-only constraint is the instrument lane's, not the evidence's** |
+| 🔴 **`T60`** — the channel map is dated, not permanent | 🔴 **WEAKENED by `T65`.** It is not stable within a date either |
+| 🆕 🔴 **`T62`** | 🆕 **Artefact mode is a MANIFEST property, not a tree property.** 2 of 16 non-npm rows read `PAYLOAD` while **gitignoring** the tree they name. 🔴 **13 of 16 declare none in `package.json`, so `SOURCE` is reached by default — and some declare one in a manifest the probe does not read (`ACTION EV`)** |
+| 🆕 🔴 **`T63`** | 🆕 **The licence census is monolingual.** `licen[cs]e` cannot match `Licença` or `Licencia`. 🔴 **2 of 9 `NONE` rows carry a grant**; strict-unlicensed **9 → 7** |
+| 🆕 🔴 **`T64`** | 🆕 **An empty walk has THREE causes, not one** — exclusion, wrong artefact kind, **and a language outside the instrument's map**. 🔴 **The third hides a real 46-tool Apache-2.0 server** |
+| 🆕 🔴 **`T65`** | 🆕 **The clone channel is SESSION-scoped.** Three passes, one date (2026-10-12): 44/44 open, refused, **52/52 open** |
+| 🆕 🔴 **`T66`** | 🆕 **A North American denominator was double-entered.** "35 states introducing" IS "35+ states guidance"; **"24 enacted" is unsupported**, against competing counts of **3 / 10 / 12** |
+| 🆕 🔴 **`T67`** | 🆕 **A bare `.edu` is not a country signal.** Grandfathered non-US registrations exist and **this shelf holds the counterexample** — `P144-V` placed `unav.edu` as EMEA |
+| 🟢 **`T58`** — Korea covers one K-12 use case against the EU's four | 🟢 **HOLDS on substance.** 🟡 **But the cross-referenced statute has two English names** — *Framework Act on Education* vs CSET's *Basic Education Act* |
+| 🟢 **`T39`** — a population exclusion is sound only relative to the property measured | 🟢 **VINDICATED by the repository itself.** `ACTION EC` finds the property-based rule already written: `librus-mcp`'s `pyproject.toml` `only-include` excludes `legacy_reference` and admits one file from `scripts/`, and reading registration sites inside it gives **exactly 35** — p144's hand-tuned name list, by construction instead of by tuning. 🔴 **Naive inclusion would read 60** |
+| 🟢 **`T21`** — a licence identifier is not a licence | 🟢 **Instance resolved in the opposite direction.** `moodle-mcp-server-aql`'s AGPL-3.0 **does** have 661 lines behind it — in the repository, excluded from the tarball by a 16-glob `files` allowlist |
+
+### 🔵 The trend this pass is actually about: an instrument that refuses is worth more than one that answers
+
+🔴 **Three of this pass's six new theses are the same shape.** An instrument was asked a
+question it had no input for, and it answered anyway:
+
+| instrument | input it had | what it said |
+|---|---|---|
+| `surface_gate*` on the npm tier | 🔴 **0 files** (exclusion) | `NOT_AN_MCP_SERVER` |
+| `surface_gate*` on a Rust tree | 🔴 **0 files** (language) | `NOT_AN_MCP_SERVER` |
+| `licence_census` on a Portuguese README | 🔴 **no matching pattern** | `NONE` |
+
+🔵 **None of the three is a wrong measurement. All three are a measurement that was never
+taken, published in the shape of one** — and in every case the output was the reassuring
+value. 🟢 **`p146-empty-walk-guard` fixed that for the walk; this pass extends the idea to
+the pattern**: a matcher that cannot express the thing it is looking for should not return
+"absent."
+
+🔵 **The generalisable rule, which is now this register's most load-bearing line:**
+🟢 **an instrument must be able to distinguish "I looked and it is not there" from "I could
+not look."** 🔴 **Every figure this KB has withdrawn in the last five passes failed that
+test**, and none of them failed on the measurement itself.
+
+### 🆕 🟢 What moved in the world, as distinct from in the instruments
+
+- 🆕 🟢 **A permissive SIS layer exists.** `zavora-ai/mcp-student-records` — **Apache-2.0,
+  Rust, 46 tools**, a declared `mcp-server.toml` with a typed `risk_class` per tool,
+  **23 of 46 writes approval-gated**, and **FERPA access logging**. 🔵 **The first row on
+  this shelf that ships machine-checked governance over its own write surface**, and the
+  first time a studio can build LMS + SIS with **no copyleft anywhere** (Sakai ECL-2.0 +
+  this).
+- 🔴 **Adoption-versus-governance is now the same gap in two regions, measured by four
+  publishers.** LATAM: **87% adoption / 26% frameworks** (UNESCO IESALC) and **92% students
+  / 79% faculty** with a **50%-want / 19%-practise** feedback gap (DEC). NA: **92% student
+  use** against **~10% of institutions with guidelines** and **71% of teachers untrained**.
+  🔵 **Two regions, different units, identical shape** — and it is the shape a studio sells
+  into.
+- 🔴 **Market sizing is no longer quotable.** Four 2025 baselines were returned and none
+  overlaps: **$6.4B / $7.52B / $8.3B** against this KB's carried **$9.58B**; 2030–2034
+  projections span **$42.48B to $79.6B**. 🟢 **One maturity read is worth more than all of
+  them: 35/100, most institutions still in pilot mode.** 🔵 **Sell the
+  pilot-to-production transition, not the TAM.**
+- 🟡 **The EdTech delivery model is being displaced in EMEA.** One QS/HolonIQ read of the
+  2026 Europe EdTech 200 notes **few traditional education providers** in the UK's AI-skills
+  delivery model, **with Big Tech as delivery partners**, against a **£200m+** commitment.
+  🔵 **A risk for institutional buyers and an opening for an integrator who is neither.**
+  🔴 **Single source, not adopted.**
+
+### 🔴 Declared gaps after this pass
+
+- 🔴 **No education-domain agent has been added by SEARCH for eight consecutive passes.**
+  Every hit is a curriculum. 🔵 **Both rows this pass added came from re-measuring what the
+  KB already held.** 🟢 **That is a settled fact about the channel and should stop being
+  reported as a surprise.**
+- 🔴 **Primary legal text is unreachable on both channels for two jurisdictions** —
+  `capitol.texas.gov` (eight passes) and now `aibasicact.kr`. 🔵 **An environment allowlist
+  request, not a research gap.**
+- 🔴 **The surface lane reads 7 languages and the shelf contains at least 8.** `.rs` is
+  fixed by refusal, not by measurement — 🔴 **nothing counts Rust tool surfaces yet, and
+  the one Rust row is the best-governed on the shelf.**
+- 🔴 **No bidirectional surface pin has been added since p144.** `mcp-student-records` has
+  the strongest **property** pin on the shelf and still does not assert set identity between
+  its manifest and its router.
+
 ## Pass 146 — 2026-10-12
 
 🔴 **`T40` is WITHDRAWN and `T3` is RESOLVED** — the two longest-running open questions on

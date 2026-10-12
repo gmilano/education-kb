@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 147 — eighth consecutive null, and the channel that was shut is open again
+
+🔴 **No new agent signal for the eighth pass running.** Eight queries (four global, four
+regional). 🔴 **Every education-specific hit is a course.** 🟢 **Recorded as a dated null.**
+
+| query class | result | verdict |
+|---|---|---|
+| top open source AI agents education 2026 github MIT | `microsoft/ai-agents-for-beginners` (**67 223★**, MIT), `pguso/agents-from-scratch` (**796★**, MIT) | 🔴 **both curricula** |
+| github trending education AI 2026 | `rohitg00/ai-engineering-from-scratch`, AI Engineering Hub, D2L | 🔴 **all courses** |
+| open source platform education LMS SIS MIT Apache | one vendor's own comparison page, ×10 locales | 🔴 **no new platform** |
+| AI education industry trends 2026 | market reports, spread **$6.4B–$8.3B** for 2025 | 🟡 **intel, not a repo** |
+| per-region × 4 | policy, adoption and survey material | 🔴 **null for agents, 🟢 rich for intel** |
+
+🔵 **What actually moved this week is the measuring apparatus, not the shelf** — and the
+thing that moved it was a channel coming back.
+
+### 🆕 🔴 `T65` — the clone channel is session-scoped, not dated
+
+| pass | date | clone result |
+|---|---|---|
+| p145 | 2026-10-12 | 🟢 **44 of 44 census repositories cloned, zero dead** |
+| p146 | 2026-10-12 | 🔴 **`Untrusted Code Integration` — 1 of 1 single, 1 of 1 bulk** |
+| 🆕 **p147** | 2026-10-12 | 🟢 **52 of 52 distinct repositories cloned, zero dead; 8 of 8 npm tarballs fetched** |
+
+🔴 **Three passes, one date, two different answers about the same channel.** 🔵 **`T60` said
+the channel map is dated rather than permanent. That is one notch too optimistic: it is not
+stable within a date.** 🟢 **The operational rule this yields: a pass that finds a channel
+shut records WHICH SESSION found it shut, and the next pass retries rather than inheriting
+the refusal.** p146 did the right thing with what it had — it ran the one lane that needed
+no payload — and 🟢 **everything it deferred was runnable one pass later.**
+
+🔴 **`curl -sI` is still 403 on every `github.com/<owner>/<repo>`** (`P144-X` holds, fourth
+consecutive pass). 🟢 **`git clone`, `git ls-remote`, `npm pack` and `WebFetch` all work.**
+
+### 🆕 🟢 The one new row this week, and it came from the instruments rather than the search
+
+🆕 🟢 **[`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records)
+v1.2.0 — Apache-2.0, Rust, 46 tools, FERPA access logging.** 🔴 **It was already in this
+KB's 44-row connector census and had never been surface-measured**, because both `os.walk`
+gates map `.py .js .mjs .cjs .ts .go .php` and **not `.rs`** — so they read zero files and
+would have published `NOT_AN_MCP_SERVER` over nothing. 🆕 **`T64`.**
+
+🟢 **`mcp-server.toml` declares 46 tools with a typed `risk_class` and `requires_approval`
+per tool; 23 of 46 require approval.** 🟢 **`tests/manifest_test.rs` pins the count, the
+education domain, and approval on 11 named FERPA-sensitive writes.** 🔵 **For a
+system-of-record engagement this is the most defensible starting point this shelf has.**
+
+### 🔴 Two corrections to figures this log published
+
+- 🔴 **`T63`: `p145-licence-census` is monolingual.** Its README matcher is `licen[cs]e`,
+  which cannot match `Licença` or `Licencia`. 🔴 **2 of the 9 `NONE` rows declare a grant** —
+  `frjunioalves/suap-mcp` (`## Licença` → MIT, citing a `LICENSE` file that was never
+  committed) and `eugeborzone/Auto_Grade_Guarani` (`# Licencia` → an informal permission in
+  prose). 🟢 **Strict-unlicensed over 52 rows: 9 → 7.** 🟢 **"No shipped grant" is UNCHANGED
+  at 18**, because both rows move into a class already inside that total.
+- 🔴 **`ACTION EF` REFUTED on its own terms: `moodle-mcp-server-aql`'s AGPL-3.0 is a
+  PACKAGING defect, not a missing grant.** The repository `csmediapro/moodle-mcp-server`
+  carries the **complete 661-line AGPL-3.0 body** at its monorepo root. 🔴 **The published
+  tarball carries no licence file** because `packages/server/package.json` ships an explicit
+  `files` allowlist of **16 globs**, none of them `LICENSE`, and there is no `LICENSE` inside
+  `packages/server/`. 🔵 **npm's automatic licence inclusion looks in the package directory
+  and does not reach up.** 🟢 **The grant exists and is AGPL-3.0** — so the verticals warning
+  stands on substance and must be restated as a packaging warning.
+
+### 🟢 Two npm rows gain a region, and `T59` is narrowed
+
+🔴 **`T59` said this shelf's 8 npm rows are "structurally unplaceable on the region axis."**
+🟢 **2 of 8 are placeable — just not by a git-only instrument.**
+
+| row | region | evidence | strength |
+|---|---|---|---|
+| 🟢 `eth-moodle-mcp@1.3.3` | 🟢 **EMEA** (Switzerland) | `MOODLE_URL` **default** `https://moodle-app2.let.ethz.ch`; token flow names **nethz** and **AAI/SWITCHaai** | 🟢 **strong — two ETH-specific signals, one a shipped default** |
+| 🟡 `mcp-canvas-lms@1.0.5` | 🟡 **APAC** (Hong Kong) | `canvas.ust.hk` as an **`e.g.`** — HKUST | 🟡 **a lead — illustrative, not a default** |
+
+🔵 **The instrument lane is git-only; the evidence is not.** `P144-V`'s rule — *the
+institution is where it deploys, the author is wherever they were sitting* — needs no
+history, only the shipped payload. 🟢 **The other 6 return `UNPLACED`, which is an answer;
+`Global` would have been a claim.**
+
+🔴 **This probe produced three false positives before publication**, all placements on
+sample hosts out of `*.example.json` and README config blocks: `moodle.example.edu`,
+`d2l.myschool.edu`, and — one round later, because the label is hyphenated —
+`moodle.your-university.edu`. 🔵 **All three failed in the reassuring direction, on the axis
+this shelf calls its weakest.** 🆕 🔴 **`T67`: and a bare `.edu` is not a country signal at
+all** — EDUCAUSE grandfathered the non-US registrations it held in 2001, and **this shelf
+holds the counterexample**: `P144-V` placed `ruud0/aula-virtual-mcp` as **EMEA (Spain)** on
+`aula-virtual.unav.edu`, Universidad de Navarra.
+
 ## 2026-10-12 — pass 146 — seventh consecutive null, and the regulator is the story instead
 
 🔴 **No new agent signal for the seventh pass running.** Six queries (two global, four

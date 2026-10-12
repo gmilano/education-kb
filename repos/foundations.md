@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 147 — 2026-10-12 — the npm tier gains two regions, and a foundational row was never read
+
+🟢 **The clone and `npm pack` channels are both open** (`T65`), so this page's npm block is
+re-measured from the payload rather than carried.
+
+### 🆕 🟢 Two npm rows are region-placeable after all — `T59` NARROWED
+
+🔴 **`T59` called this shelf's 8 npm rows "structurally unplaceable on the region axis."**
+🟢 **That is a property of the INSTRUMENT lane, not of the evidence.**
+
+| row | region | host | where | strength |
+|---|---|---|---|---|
+| 🟢 `eth-moodle-mcp@1.3.3` | 🟢 **EMEA** | `moodle-app2.let.ethz.ch` — ETH Zürich | `README.md:76`, the `MOODLE_URL` **default** | 🟢 **strong** |
+| 🟡 `mcp-canvas-lms@1.0.5` | 🟡 **APAC** | `canvas.ust.hk` — HKUST | `README.md:37`, an **`e.g.`** | 🟡 **a lead** |
+| `@imazhar101/mcp-canvas-server` | 🔴 `UNPLACED` | — | — | — |
+| `@ink-waffle/moodle-mcp` | 🔴 `UNPLACED` | — | — | — |
+| `@n35da/brightspace-mcp` | 🔴 `UNPLACED` | — | 🔴 only `d2l.myschool.edu`, a placeholder | — |
+| `@owen-x-tech/canvas-mcp` | 🔴 `UNPLACED` | — | — | — |
+| `canvas-mcp-server` | 🔴 `UNPLACED` | — | — | — |
+| `moodle-mcp-server-aql` | 🔴 `UNPLACED` | — | 🔴 only `moodle.example.edu`, a placeholder | — |
+
+🟢 **`eth-moodle-mcp` is strong because two independent Swiss-specific signals agree**: the
+shipped `MOODLE_URL` default is ETH Zürich's production Moodle, and the token-minting
+instruction names **nethz** (ETH's account system) and **AAI** (SWITCHaai, the Swiss
+academic federation). Instrument [`p147-npm-region`](../compose/code/p147-npm-region/README.md), **15 tests**.
+
+### 🟢 `@imazhar101/mcp-canvas-server` — 227 confirmed by a third method
+
+🔴 **This page has carried a disagreement: 227 descriptors on one instrument, 18 dynamic
+sites on another.** 🟢 **Resolving the 18 one level gives exactly 227.**
+
+**18 tool modules, 18 spread sites in the `tools/list` handler, 1:1** at
+`dist/servers/canvas/src/index.js:263-280`. Largest: `user-tools` **39**, `page-tools`
+**21**, `file-tools` **20**, `submission-tools` **20**, `module-tools` **18**. Smallest:
+`lti-launch-definition-tools` **1**, `grading-standard-tools` **3**, `admin-tools` **4**.
+
+🟢 **So `T42` is confirmed by a third method**: `surface_bound` counts descriptors,
+`surface_gate*` counts registration sites, and the two are the same surface at two levels.
+🔵 **The largest tool surface this KB quotes is correct.** Instrument
+[`p147-tooldef-sum`](../compose/code/p147-tooldef-sum/README.md), **11 tests**.
+
+### 🆕 🟢 A foundational row this page should have had — Apache-2.0, Rust, 46 tools
+
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | v1.2.0 |
+|---|---|
+| licence | 🟢 **Apache-2.0** — buildable on, no copyleft |
+| surface | 🟢 **46 tools**, declared in `mcp-server.toml` and pinned by test |
+| write governance | 🟢 **23 of 46 `requires_approval = true`**; typed `risk_class` per tool |
+| compliance | 🟢 **FERPA-gated communications + FERPA access log** |
+| domain | 🟢 self-declared `domain = "education"` in the manifest |
+
+🔴 **Both `os.walk` surface gates on this shelf read it as zero files**, because it is Rust
+and `lang_of` has no `.rs` (`T64`). 🔵 **It is a complete SIS surface — students, courses,
+enrollments, grades, rubrics, attendance, guardians, transcripts, analytics — under a
+permissive licence, and the shelf could not see it.**
+
+### 🔴 `moodle-mcp-server-aql`'s AGPL-3.0 — a packaging defect, not a missing grant
+
+🔴 **`ACTION EF` REFUTED exactly as its falsifier specified.** The declared repository
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) is alive
+and carries the **complete 661-line AGPL-3.0 body** at its monorepo root.
+
+🔴 **The tarball carries no licence file at all.** Cause, named precisely:
+`packages/server/package.json` ships an explicit **`files` allowlist of 16 globs**, none of
+them `LICENSE`, and there is **no `LICENSE` inside `packages/server/`**. 🔵 **npm's
+automatic licence inclusion looks in the package directory and does not reach up a
+monorepo.** 🟢 **The grant exists and it is AGPL-3.0** — the obligation is real, the file
+just never shipped. 🔵 **Restate as a packaging warning, not a licence gap.**
+
 ## Pass 146 — 2026-10-12 — the platform layer's licence map, and a shelf-wide instrument defect
 
 🔴 **No foundational repo was cloned this pass** (`P146-A`). 🟢 **But the licence axis of the
