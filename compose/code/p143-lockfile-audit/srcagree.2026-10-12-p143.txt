@@ -1,0 +1,21 @@
+
+# tools declared in source : 10
+# tools in lockfile        : 10
+# AGREE        10
+# DISAGREE     0
+# LOCK_ONLY    0
+# SOURCE_ONLY  0
+# decorators spanning MORE THAN ONE LINE: 10 of 10  <- the shape ACTION DM says the surface gate cannot see
+# fields verifiable from source: name, annotations, description (3 of 4)
+# field requiring execution    : inputSchema (1 of 4) -- NOT verified
+tool	in_source	in_lock	name_agree	annot_agree	desc_agree	schema_checked	dec_lines	verdict
+education_benchmark_countries	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+oecd_get_education_indicator	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+oecd_list_education_datasets	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+oecd_search_datasets	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_compare_countries	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_country_education_profile	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_get_education_data	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_list_countries	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_list_indicators	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE
+uis_list_versions	YES	YES	YES	YES	YES	NOT_DERIVABLE_WITHOUT_EXECUTION	10	AGREE

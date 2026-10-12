@@ -1,0 +1,14 @@
+
+# distinct authors: 63
+# NOT_AMERICAN_OFFSET                    16
+# UNDETERMINED_minus5_one_window_only    15
+# NO_DST_AT_MINUS5_BOTH_WINDOWS          13
+# UNDETERMINED_mixed_multi_zone          9
+# UNDETERMINED_minus4_one_window_only    5
+# NO_DST_AT_MINUS4_BOTH_WINDOWS          3
+# DST_OBSERVING_US_EASTERN_SHAPE         2
+#
+# 🟢 authors at -0500 in BOTH windows with NO -0400 ever: 13
+#    (a non-DST -0500 zone: Colombia, Peru or Ecuador -- NOT US Eastern, NOT US Central)
+#    commits from them: 491 of 1485
+# 🔴 authors with the US Eastern DST shape: 2 (commits 28)

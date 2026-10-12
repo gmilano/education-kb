@@ -1,0 +1,5 @@
+
+# tier agent          servers=4  dynamic=2  (50%)  gated=0  no_site=0
+# tier foundations    servers=1  dynamic=0  (0%)  gated=0  no_site=0
+# tier github-only    servers=6  dynamic=2  (33%)  gated=0  no_site=0
+# tier npm            servers=1  dynamic=1  (100%)  gated=0  no_site=0

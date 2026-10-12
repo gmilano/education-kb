@@ -6,6 +6,84 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 143
+
+🔵 **p142 asked whether a declared tool-surface lockfile actually pins what the source serves.
+It does — and the same pass found that seven of eight npm connector packages ship nothing a
+reader can audit at all.**
+
+### 🟢 `ACTION DO` — the lockfile verifies, recomputed independently of its own generator
+
+[`p143-lockfile-audit`](../compose/code/p143-lockfile-audit/README.md).
+`malkreide/global-education-mcp`, HEAD `26f7cd2`, **2026-10-04**, 🟢 **MIT**.
+
+| check | result |
+|---|---|
+| hashes recomputed from the stored signature blocks | 🟢 **10 of 10 AGREE** |
+| 🔴 hashes DISAGREE | 🟢 **0** |
+| `name` re-derived from `server.py` | 🟢 **10 of 10 agree** |
+| `annotations` re-derived from the decorator literal | 🟢 **10 of 10 agree** |
+| `description` re-derived from the docstring (`inspect.cleandoc`) | 🟢 **10 of 10 agree** |
+| 🔴 `inputSchema` | 🔴 **NOT VERIFIED — pydantic generates it at import** |
+| `readOnlyHint: true` | 🟢 **10 of 10** |
+| signature key-sets matching the documented four fields | 🟢 **10 of 10** |
+
+🔵 **Reimplemented rather than invoked.** The repository ships `scripts/tool_signatures.py`;
+running it would ask the lockfile's author whether the lockfile is right. 🔴 **And one of the
+four hashed fields cannot be checked without executing the repository**, so the publishable
+claim is *three fields of four for all ten tools* — not "the lockfile verifies".
+
+🟢 **All 10 decorators span 10 lines each**, which is the `ACTION DM` premise confirmed from the
+other side: this is the best-instrumented row on these shelves and the old gate returned
+`NO_REGISTRATION_SITE_FOUND` on it.
+
+### 🔴 What the 8 npm connector packages actually ship
+
+[`p143-tier-size`](../compose/code/p143-tier-size/README.md).
+
+| package | ships | source bytes | compiled bytes | declared tools |
+|---|---|---|---|---|
+| `@imazhar101/mcp-canvas-server` 2.1.3 | 🔴 `dist/` only | **0** | 553 166 | 227 |
+| `@ink-waffle/moodle-mcp` 0.2.0 | 🔴 `dist/` only | **0** | 108 123 | 16 |
+| 🟢 **`@n35da/brightspace-mcp` 0.4.0** | 🟢 **source** (`.mjs`, `lib/`) | **45 368** | 56 976 | 17 |
+| `@owen-x-tech/canvas-mcp` 1.1.0 | 🔴 `build/` only | **0** | 78 261 | 62 |
+| `canvas-mcp-server` 2.2.3 | 🔴 `build/` only | **0** | 85 399 | 54 |
+| `eth-moodle-mcp` 1.3.3 | 🔴 `build/` only | **0** | 53 873 | 18 |
+| `mcp-canvas-lms` 1.0.5 | 🔴 `dist/` only | **0** | 47 623 | 3 |
+| `moodle-mcp-server-aql` 0.1.7 | 🔴 `dist/` only | **0** | 256 548 | 14 |
+
+🔴 **7 of 8 ship no source.** A studio reviewing one of these is reviewing a bundle — minified,
+with dependencies inlined — or else fetching the repository separately. 🔴 **And
+`@owen-x-tech/canvas-mcp` is the row whose repository is gone**, while its README claims 150+
+tools against 62 measured three times.
+
+🟢 **The consequence for this page's recommendations:** prefer the package that ships source
+(`@n35da/brightspace-mcp`) or the one that pins its surface
+(`malkreide/global-education-mcp`). 🔵 **Those are different guarantees and a studio can have
+either; the other six rows offer neither.**
+
+### 🔴 `ACTION DL` FIRED — the npm tier is not smaller, and `T30`'s mechanism is refuted
+
+| | npm | non-npm |
+|---|---|---|
+| median declared tool count | 🔴 **18** | **9** |
+
+🔴 **The opposite of the hypothesis.** `T30` proposed that npm rows register literally because
+they are small; they carry twice the tools. 🔵 **Combined with `ACTION DM`, `T30` is withdrawn
+rather than demoted** — two independent falsifiers in one pass.
+
+### 🔵 Channel note — `git clone` opened, and the artefact asymmetry it exposes
+
+🟢 **`git clone` of public repositories now works**, with full history. 🔴 **`codeload.github.com`
+tarballs remain `403`**, so the git channel is open while the archive channel is not — worth
+recording as an asymmetry rather than rediscovering next pass. 🔴 **`api.github.com` repository
+endpoints are refused on SCOPE, not blocked** (`rate_limit` answers `200`), so star counts stay
+unavailable. 🟡 **`repo1.maven.org` answered `429`** this pass — rate-limited, not blocked, so
+the POM-chain instruments remain usable with backoff.
+
+🔴 **Unchanged and re-measured:** `api.uis.unesco.org`, `sdmx.oecd.org`, `eur-lex.europa.eu`,
+`www.oecd.org` and `coe.int` all answer **`000`**.
+
 ## 2026-10-12 — Pass 142
 
 🔵 **p141 asked whether the module a consumer actually resolves carries the licence its project

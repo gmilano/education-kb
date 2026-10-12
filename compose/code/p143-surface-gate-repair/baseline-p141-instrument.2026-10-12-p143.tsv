@@ -1,0 +1,25 @@
+subject	languages	is_mcp_server	literal_sites	dynamic_sites	gated_sites	static_bounds_live	verdict
+_imazhar101_mcp-canvas-server-2.1.3		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+_ink-waffle_moodle-mcp-0.2.0		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+_n35da_brightspace-mcp-0.4.0	js	YES	0	17	0	NO	DYNAMIC_UNBOUNDED
+_owen-x-tech_canvas-mcp-1.1.0		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+canvas-mcp-server-2.2.3		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+eth-moodle-mcp-1.3.3		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+mcp-canvas-lms-1.0.5		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+moodle-mcp-server-aql-0.1.7		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+zijinz456/OpenTutor	js,python	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)
+ahmedEid1/lumen	python	YES	1	9	0	NO	DYNAMIC_UNBOUNDED
+mohaneesh-03/mcp-tutor	python	YES	5	0	0	YES	BOUNDED_STATIC
+nirholas/ai-tutor-mcp	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED
+hesham0-0nasser/tutor-lms-mcp	php	YES	1	0	0	YES	BOUNDED_STATIC
+BetterSEQTA/BetterSEQTA-Plus	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+BetterSEQTA/DesQTA	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+nitsuah/bb-mcp	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED
+Piyushtanwani/DAU-buddy	python	YES	40	0	0	YES	BOUNDED_STATIC
+yourssu/soongpt-plugin	python	YES	20	0	0	YES	BOUNDED_STATIC
+oliverhruby/edupage-mcp		YES	0	0	0	NO	NO_REGISTRATION_SITE_FOUND
+krzysztofbury/librus-mcp	python	YES	0	23	0	NO	DYNAMIC_UNBOUNDED
+divyarthjain/vtop-bhopal-mcp	js	YES	0	4	0	NO	DYNAMIC_UNBOUNDED
+Agso-o/sigaa-calendar	go	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+juliancasaburi/siu-guarani-promedio-extension	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)
+malkreide/global-education-mcp		YES	0	0	0	NO	NO_REGISTRATION_SITE_FOUND

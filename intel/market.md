@@ -6,6 +6,64 @@ updated: 2026-10-12
 
 # Education — market map and opportunities
 
+**Pass 143, 2026-10-12.** 🟢 **A supply-side row moves out of `UNVERIFIED_JURISDICTION` and
+into LATAM on 491 commits of evidence**, and 🆕 **the search channel returned the first
+regionally decomposed figure set this page has had from a SINGLE publisher** — which is worth
+more as a ratio than any of its absolute levels, and is still not adopted.
+
+🔴 **No market figure is adopted this pass either, and the blocker is unchanged and
+re-measured:** `api.uis.unesco.org`, `sdmx.oecd.org`, `eur-lex.europa.eu`, `www.oecd.org` and
+`coe.int` all answer **`000`** from this environment. 🔵 **Two allowlist entries remain the most
+actionable item on this page, and it belongs to whoever owns this environment.**
+
+🟢 **One capability did change: `git clone` of public repositories now works** — full history
+and source. That is what placed eduNEXT, and it is the reason the supply side of this page
+moved while the demand side did not.
+
+### 🆕 Figures the channel returned this pass, recorded as SECOND-HAND and not adopted
+
+| figure | source class | status |
+|---|---|---|
+| **North America** AI-in-education **$951M (2024) → $2.3B (2029)**, 15.9% CAGR | market-research marketing page (publisher A) | 🟡 **Recorded, not adopted** |
+| **Europe** AI-in-education **$512.6M (2024)** | same publisher A | 🟡 Recorded, not adopted |
+| **Asia Pacific** AI-in-education **$591.6M (2024) → $1 848.1M (2029)**, 20.9% CAGR | same publisher A | 🟡 Recorded, not adopted |
+| 🔴 **"Rest of Latin America"** AI-in-education **$18.2M (2024) → $36M (2029)** | same publisher A | 🔴 **Recorded with a SCOPE WARNING — see below** |
+| UK: AI Adoption Summit commits **£200m+**; Skills England sets the curriculum framework | sector newsletter | 🟡 Recorded |
+| EU: Commission updated its **ethical guidelines on AI in education**, 9 June | sector newsletter reporting a primary act | 🟡 Recorded. 🔴 `oecd.org`/`eur-lex` unreachable; `coe.int` also `000` |
+| Council of Europe runs an **AI-and-education regulation** workstream, 2nd working conference in October | primary body, page unreachable here | 🟡 Recorded |
+| North America: **10%** of institutions have formal AI guidelines; **71%** of US teachers lack AI training | statistics-roundup blog | 🟡 Recorded |
+| APAC: AI legislation **fragmented** — Singapore mature guidelines, China algorithmic-misconduct laws, ASEAN Guide early-stage | analyst blog | 🟡 Recorded. 🔵 Not education-specific |
+| LATAM: Tec de Monterrey 2026 survey — student use **86%→92%**, teacher use **61%→79%**; **65%** fear superficial learning | named institutional survey | 🟡 Recorded. 🔵 Consistent with the Digital Education Council figures this page already holds |
+
+### 🆕 🟢 Why the four regional figures are worth more together than apart
+
+🟢 **They come from one publisher, with one methodology, across four regions** — which is the
+first time this page has had that. 🔵 **Under `T36`, that is exactly the property that makes
+numbers comparable**: not their provenance quality, but the fact that one instrument produced
+all of them. So the *ratio* carries information the levels do not:
+
+| region (2024, publisher A) | figure | share of the four |
+|---|---|---|
+| North America | $951.0M | **46%** |
+| Asia Pacific | $591.6M | **29%** |
+| Europe | $512.6M | **25%** |
+| 🔴 "Rest of Latin America" | $18.2M | 🔴 **0.9%** |
+
+🟢 **Direction, adopted as direction only:** North America leads, APAC is second and growing
+fastest of the three majors (20.9% vs 15.9%). 🔵 **That ordering is consistent with this
+page's existing rows, which is corroboration of direction and not of magnitude.**
+
+### 🔴 And the scope trap in the fourth row, stated before anyone quotes it
+
+🔴 **"Rest of Latin America" is a RESIDUAL category, not LATAM.** Publishers using this label
+break out the large national markets — typically Brazil and Mexico — as their own lines, and
+"Rest of" is what remains. 🔴 **Quoting $18.2M as "the LATAM AI-in-education market" would
+understate it by whatever Brazil and Mexico are**, and this page does not hold those two lines.
+
+🔵 **This is `T30`'s rule in its original and still-correct form**: a figure's denominator is
+part of the figure. 🟢 **The 0.9% above is therefore a floor on LATAM's share and not an
+estimate of it** — and it is published as a floor.
+
 **Pass 142, 2026-10-12.** 🔴 **No market figure changed this pass either — but for the first
 time the reason is a named, fixable blocker rather than channel saturation.** 🟢 **The search
 channel itself broke its three-pass null streak**: eight queries plus one targeted retry returned
@@ -339,6 +397,32 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🆕 p143 — a named US institution appears in connector source, and the governance gap is quantified
+
+🟢 **The first US institution this KB can name from a connector's own configuration.**
+[`p143-vendor-tenancy`](../compose/code/p143-vendor-tenancy/README.md):
+`karkarkins/BlackboardAssistantMCP` sets `BB_LOGIN_URL=https://ncat.blackboard.com/` —
+**North Carolina A&T State University**, the largest historically Black university in the
+United States. 🔵 **A Blackboard tenancy at a named public institution is a procurement fact**:
+the LMS is Blackboard, the integration surface has been scouted in the open, and the row is one
+person's project at low single-digit stars.
+
+🔴 **The governance gap, recorded second-hand and consistent with this page's existing rows:**
+**10%** of institutions have formal AI guidelines and **71%** of US teachers lack AI training,
+against near-universal student use. 🔵 **That shape — adoption ahead of policy — is what this
+page's state-legislature thesis predicts**, and it is the opening a studio engagement actually
+addresses: the buyer needs a policy and an audit trail, not a model.
+
+🟡 **Market frame (publisher A, not adopted):** **$951M (2024) → $2.3B (2029)**, 15.9% CAGR,
+**46%** of the four regions this publisher decomposes.
+
+🔴 **And the regulatory asymmetry worth naming for a US engagement:** there is no federal
+education-technology approval gate, so adoption decisions sit with individual districts,
+systems and universities — 🔵 **which is why this page's buying unit is the system board** —
+while any vendor also serving EU customers inherits the AI Act's high-risk classification for
+education. 🟢 **A North America engagement that ships to Europe is an EMEA compliance
+engagement whether or not anyone scoped it that way.**
+
 **Pass 142.** 🟢 **The supply side gains its first placements in this region from a measured
 channel, and they are Canadian.** [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP)
 (7 hardcoded `utoronto.ca` hosts incl. `acorn.utoronto.ca`, `idpz.utorauth.utoronto.ca`),
@@ -648,8 +732,8 @@ on this page. Different denominators, same `P132-D` class of error.
 
 🟢 **Confirmed against the Colorado General Assembly's own bill page and the Legislative Council
 Staff fiscal note.** p134 recorded the repeal as *unconfirmed* and opened `ACTION BO` to confirm or
-strike it. It stands, and it is now the most concretely dated AI obligation this KB holds for any
-region:
+strike it. It stands, and it is now the most concretely dated AI obligation this KB holds for
+any region:
 
 | fact | value |
 |---|---|
@@ -718,6 +802,40 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 p143 — a Norwegian tenancy corroborates the EMEA supply side, and two policy workstreams are named
+
+🟢 **`ntnu.blackboard.com` ×8 in `MartinSA04/ntnu-mcp`** — the Norwegian University of Science
+and Technology. 🔵 **Corroboration rather than a new placement**: the row was already EMEA on
+its commit offset, and this is the second independent channel agreeing.
+🟡 **With its weakness stated:** the evidence sits in `tests/fixtures/course_page_*.html`, a
+captured course page, not in shipped source — 🔴 **weaker than a host a connector must reach**,
+which is the standard `T29` sets.
+
+🟢 **And the EMEA supply side gains a foundational row this pass by another route:**
+`malkreide/global-education-mcp` (MIT, EMEA on `+0200` ×70) is confirmed by
+[`p143-lockfile-audit`](../compose/code/p143-lockfile-audit/README.md) to serve **UNESCO UIS
+and OECD *Education at a Glance*** through **10 read-only tools, 10 of 10 hash-verified**.
+🔵 **An EMEA-authored instrument for the very statistics this page cannot reach directly.**
+
+**Policy, recorded second-hand:**
+
+| item | status |
+|---|---|
+| UK: AI Adoption Summit commits **£200m+**; **Skills England** sets the curriculum framework; government as funder, Big Tech as delivery partner | 🟡 Recorded |
+| EU: Commission **updated its ethical guidelines on AI in education**, 9 June | 🟡 Recorded. 🔴 `eur-lex.europa.eu` = `000` |
+| Council of Europe: standing **AI-and-education regulation** workstream; expert group; 2nd working conference in October; a possible **European evaluation framework for edtech** | 🟡 Recorded. 🔴 `coe.int` = `000` |
+| Eurobarometer via secondary: **64%** of Europeans agree everyone will need AI literacy by 2030, with large per-country spread in whether generative AI use in education is encouraged or stigmatised | 🟡 Recorded |
+
+🔴 **The AI Act dates this page flagged at p142 remain unresolved and are NOT adopted** — Annex
+III education duties at **2 Dec 2027** (Commission AI Office slides) against **2 Aug 2026** (a
+blog), two conflicting secondary sources with the primary unreachable. 🔵 **A compliance date
+is the one figure a studio cannot afford to take from a blog**, and this page still declines to.
+
+🟡 **Market frame (publisher A, not adopted):** **$512.6M (2024)**, **25%** of the four regions.
+🔵 **Smallest of the three majors on this publisher's methodology, against the heaviest
+regulatory load** — which is the EMEA engagement shape: compliance work priced against a
+smaller licence base.
 
 **Pass 142.** 🟢 **The strongest new supply row this pass is European, and it is a market-data
 instrument rather than a learner-facing agent.**
@@ -1090,6 +1208,34 @@ slugs are now known to be one repository.
 
 ### APAC
 
+#### 🆕 p143 — fastest growth of the three majors, and the one region with no education-specific regulation named
+
+🟡 **Market frame (publisher A, not adopted):** **$591.6M (2024) → $1 848.1M (2029)**, **20.9%
+CAGR** — **29%** of the four regions this publisher decomposes, and 🟢 **the fastest-growing of
+the three majors** (20.9% against North America's 15.9%). 🔵 **Consistent in direction with the
+APAC 35.3%-CAGR figure p142 recorded from a different publisher; the two disagree on magnitude
+by 14 points, which is why neither is adopted.**
+
+🔴 **The regulatory finding is a NULL, and it is the honest one.** Four queries returned no
+education-specific AI regulation for any APAC jurisdiction. What exists is general-purpose and
+fragmented: Singapore with mature responsible-AI guidelines, China with laws against
+algorithmic misconduct, the **ASEAN Guide on AI Governance and Ethics** still early-stage.
+🔵 **Unlike EMEA, there is no instrument that classifies education AI as a distinct risk tier**
+— so an APAC engagement is governed by general AI rules plus sectoral data-protection law, and
+the compliance work is differently shaped rather than absent.
+
+🔴 **And this page should not read that null as freedom.** 🔵 **Absence of an education-specific
+instrument is absence of a published instrument**, and procurement conditions at national
+education ministries are not indexed by the channels available here.
+
+🟢 **Supply side, from this KB's own shelves rather than from search:** APAC is the second-best
+represented region in the connector population — **11 of 44 rows** placed APAC by commit offset
+at p142 — including Vietnamese, Korean, Taiwanese and Indian institutional connectors
+(`qxbao/qldt-hanu-mcp`, `yourssu/soongpt-plugin`, `zyx1121/nycu`,
+`divyarthjain/vtop-bhopal-mcp`). 🔵 **That is a real asymmetry worth naming: APAC has the second
+largest open connector population and the least education-specific regulation**, which makes it
+the region where the open-source starting points are usable soonest.
+
 **Pass 142.** 🟢 **11 of the 44 connector rows are APAC-placed — the largest single-pass APAC
 count this KB has recorded.** `BetterSEQTA-Plus` `+1100` and `DesQTA` `+0930` (Australia),
 `Piyushtanwani/DAU-buddy` `+0530` ×176 and `divyarthjain/vtop-bhopal-mcp` `+0530` (India),
@@ -1460,6 +1606,62 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 p143 — a commercial Open edX vendor is placed in Colombia, and the published LATAM market figure is a residual
+
+🟢 **`eduNEXT` moves from `UNVERIFIED_JURISDICTION` to LATAM (Colombia).**
+[`p143-edunext-jurisdiction`](../compose/code/p143-edunext-jurisdiction/README.md).
+
+🔴 **p142 declined to book it on `.co` alone**, because `.co` is Colombia's ccTLD *and* a
+generic registration, and `edunext.co` is unreachable here. 🟢 **The booking now rests on
+author working hours instead**: across 5 eduNEXT repositories, **1 485 commits**, **63
+authors** —
+
+| | |
+|---|---|
+| 🟢 authors at `-0500` in **both** DST windows, never `-0400` | **13** (491 commits) |
+| 🔴 authors with the US Eastern DST shape | **2** (28 commits) |
+| 🟢 `edunext.co` as author mail domain | **998 of 1 485 commits (67%)** |
+
+🔵 **Colombia does not observe daylight saving and the United States does**, so `-0500` in July
+rules out US Eastern and `-0500` in January rules out US Central. 🔴 **The channel does not
+separate Colombia from Peru or Ecuador** — all three are `-0500` year round — and Colombia is
+the reading because `edunext.co` is the company's own domain. 🟢 **The region is determined
+either way, and the region is what this page files on.**
+
+**Why it matters commercially.** eduNEXT is named as author of record on
+`openedx/openedx-filters` (AGPL-3.0-or-later), set 2026-10-02 during the `modernize` campaign.
+🟢 **A commercial holder of an Open edX *extension point* is a procurement fact**: the
+hook interface that third-party Open edX customisation runs through is maintained by a
+Colombian company. 🔵 **For a LATAM Open edX engagement that is a partner or a competitor, and
+either way it is not a US vendor.**
+
+### 🔴 The published LATAM market figure, and why this page refuses to quote it as LATAM
+
+🔴 **Publisher A's LATAM line is labelled "Rest of Latin America": $18.2M (2024) → $36M
+(2029).** That is a **residual** category — this publisher breaks out the large national
+markets separately, and "Rest of" is what remains after them. 🔴 **Quoting $18.2M as the LATAM
+AI-in-education market understates it by whatever Brazil and Mexico are**, and this page holds
+neither of those lines.
+
+🟢 **So it is published as a FLOOR: LATAM is at least 0.9% of the four-region total, and this
+page does not know the ceiling.** 🔵 **An unqualified $18.2M on a LATAM engagement deck would
+be the most damaging single number this KB could carry**, because it is sourced, specific and
+wrong by construction.
+
+### 🟢 And the supply side is now the strongest part of this region's entry
+
+**13 of 19** American-ambiguous connector rows are LATAM (Brazil 9, Argentina 3, Peru 1), over
+three national platforms — **SIGAA**, **SUAP**, **SIU-Guaraní** — naming 15 real institutional
+installations. 🆕 **Chile and Cuba become placeable this pass**
+([`p143-cctld-url-context`](../compose/code/p143-cctld-url-context/README.md)): `juris.pjud.cl`
+and `revistas.uh.cu` are admitted on URL context. 🔴 **Paraguay and the Dominican Republic are
+unblocked but unexercised** — no such host exists in this population.
+
+🔵 **The asymmetry to carry into an engagement:** LATAM has this KB's **largest** open
+connector population against its **smallest and least reliable** published market figure.
+🟢 **The supply-side evidence is first-hand and the demand-side evidence is not**, and a
+proposal should lean on the half that is measured.
 
 **Pass 142.** 🟢 **This section's premise for ten passes was wrong, and it is rewritten rather
 than extended.** This page has carried *"the only LATAM-origin education agent found"* as a single
@@ -1965,8 +2167,8 @@ region-placed, from eight queries plus one retry. 🔵 **And the retry is the le
 registered queries describe *industries* (*"AI education market"*, *"trends"*, *"adoption
 regulation players"*) and returned market-research marketing pages. The ninth described an
 *artefact* — `open source education MCP "agente IA" GitHub Brasil Argentina México universidad` —
-and returned four repositories, two of them LATAM-placed. 🟢 **Same hour, same engine, same
-region: the retrieval that finds rows names code, not markets.** `P138-H` recorded this for
+and returned four repositories, two of them LATAM-placed. 🟢 **Same hour, same engine and
+same region — the retrieval that finds rows names code, not markets.** `P138-H` recorded this for
 registries; `T10` is amended for the search channel.
 
 🔴 **Not one market FIGURE was verified, and the cause is now a two-line allowlist request.**

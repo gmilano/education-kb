@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 143 — 2026-10-12
+
+⏱️ **Sixth pass of this date.** 🟢 **The clone channel opened — `git clone` of public
+repositories now works from this environment, with full history — and all six pre-registered
+actions were answerable in one pass because of it.** 🔴 **Three of six falsifiers fired: `DK`,
+`DL` and `DM`.** 🔴 **`T30` is WITHDRAWN, by two independent routes in the same pass.**
+
+🔵 **And the headline is a finding none of the six asked for: this KB published a tool-surface
+verdict for `krzysztofbury/librus-mcp` that was measured entirely on a dead reference tree.**
+🟢 **What exposed it was not a falsifier — it was one subject's classification flipping between
+two instruments, which is a signal no share-based falsifier can see.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P143-A` | 🔴 **`ACTION DM` DISCHARGED and REFUTED — `T30`'s three figures WITHDRAWN** | GitHub-only tier **50% → 33%** dynamic, a **17-point** move against a five-point falsifier. 🔴 **Four static registration shapes were invisible, not two** — and the fourth is a *misclassification*: p141 scored any `@x.tool(…)` lacking a literal `name=` as dynamic, when a bare decorator takes `fn.__name__` and is maximally static |
+| `P143-B` | 🔴 **…and the npm 12% was never produced by the same instrument at all** | 🔴 **7 of 8 npm packages ship only compiled `dist/`/`build/`.** So npm was measured over **bundles** by `surface_bound.py` while the agent and connector tiers were measured over **source** by `surface_gate.py`. 🔵 **`T30` compared two instruments over two artefact kinds and presented it as one gradient.** Adopted as `T36` |
+| `P143-C` | 🔴 **The defect that moved the number was a POPULATION error, and it survived two instruments** | `librus-mcp`: p141 read **0 literal / 23 dynamic**; this pass's first repaired draft read **23 literal / 0 dynamic**. 🔴 **All 23 sites are in `legacy_reference/src/server.py` (21) and `scripts/qualify_native.py` (2)** — none in the shipped server, whose real surface is **35** `server.tool(…)(fn)` calls. 🔴 **The tier share was identical both times**, so the registered falsifier would have passed it. Adopted as `T37` |
+| `P143-D` | 🟢 **The repair is corroborated against two numbers this KB already held** | 🟢 **31** on `oliverhruby/edupage-mcp` — p142's hand read, to the row. 🟢 **10** on `malkreide/global-education-mcp` — its own committed `tools.lock.json`, to the row. 🔵 **Hitting 31 needed one more fix**: the forwarding call inside `_tool`'s body is the mechanism, not a tool, and counting it gave 32 |
+| `P143-E` | 🔴 **`ACTION DL` DISCHARGED and REFUTED — npm rows are not smaller, they carry twice the tools** | Median declared tool count **18** on npm against **9** off it; `@imazhar101/mcp-canvas-server` alone declares **227**. 🔵 **The mechanism `T30` proposed is refuted in the opposite direction**, so `T30` falls to two unrelated falsifiers in one pass |
+| `P143-F` | 🔴 **`ACTION DK` DISCHARGED and REFUTED — 2 rows, not 3; the channel is retired** | 🟢 **But it placed the row it was built for**: `karkarkins/BlackboardAssistantMCP` → **North America (United States)**, North Carolina A&T, on its own `BB_LOGIN_URL=https://ncat.blackboard.com/`. 🔵 The second row (`ntnu-mcp`, Norway) was already placed and its evidence sits in a test fixture |
+| `P143-G` | 🔴 **…and the negative half is the useful half** | 🔴 **`developer.blackboard.com` occurs 19 times across 44 repositories and places nothing.** Of 6 rows carrying any Blackboard/Canvas host, **4 carry only the vendor's own estate**. 🔵 **`your-institution.instructure.com` one layer up** — a census counting `*.blackboard.com` as institutions would return 19 hits for Blackboard itself |
+| `P143-H` | 🟢 **`ACTION DJ` DISCHARGED, falsifier silent — eduNEXT is LATAM on 491 commits, not on `.co`** | 🔴 **The pooled offset test was unreadable** — `MIXED` on 5 of 5 repositories. Per author across **1 485 commits / 63 authors**: 🟢 **13 authors at `-0500` in BOTH DST windows, never `-0400`** (491 commits) against 🔴 **2 with the US Eastern shape** (28). `edunext.co` on **998 of 1 485 (67%)**. 🔵 **Colombia observes no DST and the US does** — that is the whole discriminator |
+| `P143-I` | 🟢 **`ACTION DO` DISCHARGED, falsifier silent — and one field of four is honestly unverified** | **10 of 10** hashes recomputed independently of the repository's own generator; **10 of 10** agree with `server.py` on `name`, `annotations`, `description`. 🔴 **`inputSchema` NOT verified** — pydantic generates it at import, and checking it means executing the repository. 🔵 **"The lockfile verifies" would have concealed which field is which** |
+| `P143-J` | 🟢 **`ACTION DN` DISCHARGED, falsifier silent — the four-country hole is closed** | **19 of 19** regions reproduced, **16 of 16** placed rows retained. 🟢 **`juris.pjud.cl` and `revistas.uh.cu` admitted on URL context**, while five bare `url.hostname === 'revistas.uh.cu'` comparisons in the same file are correctly refused. 🔴 **No row changed region**, and **Paraguay and the Dominican Republic are unblocked but unexercised** |
+| `P143-K` | 🔵 **A standing channel note CORRECTED rather than repeated** | `api.github.com` is not blanket-`403`: it answers **`200`** on `rate_limit` and refuses repository endpoints with a **scope** message — *"sessions are bound to their configured repositories"*. 🔴 **Star counts remain unavailable.** 🔴 **`codeload.github.com` tarballs are `403` while `git clone` succeeds** — an asymmetry worth recording |
+| `P143-L` | 🔴 **The search channel returned a FOURTH consecutive null for new agent rows** | Four global and four regional queries, run as mandated. Every education-specific candidate is already here or is not an agent — `ai-agents-for-beginners` and `ai-engineering-from-scratch` are **courses**. 🔵 **Four nulls is now a finding about the channel**: it returns articles *about* education AI, not education MCP servers |
+| `P143-M` | 🆕 🟢 **The first regionally decomposed figure set from a SINGLE publisher — recorded, not adopted** | NA **$951M (2024)→$2.3B (2029)** 15.9%; APAC **$591.6M→$1 848.1M** 20.9%; Europe **$512.6M**; "Rest of LATAM" **$18.2M→$36M**. 🔵 **One instrument across four regions is what makes the RATIO readable** under `T36` — NA 46%, APAC 29%, Europe 25%. 🔴 **"Rest of Latin America" is a RESIDUAL**, so 0.9% is published as a FLOOR on LATAM and not an estimate |
+| `P143-N` | 🔴 **The figures blocker is unchanged and re-measured** | `api.uis.unesco.org`, `sdmx.oecd.org`, `eur-lex.europa.eu`, `www.oecd.org` and `coe.int` all answer **`000`**. 🔵 **Every regional market share on this KB is still second-hand, and the fix is still an allowlist rather than a better search** |
+
+### 🔴 `P143-C` — the finding this pass exists for
+
+`ACTION DM` was a repair. It named two blind shapes and attached a share-based falsifier: *more
+than five points on any tier and `T30`'s figures are withdrawn.* The share moved 17 points, so the
+falsifier did its job.
+
+🔴 **But the repair's own first draft was wrong in the same way p141 was**, and the falsifier could
+not have told anyone. It reported the same 23 `legacy_reference/` sites, merely relabelled
+`LITERAL` instead of `DYNAMIC`. 🔴 **Same population, same count, opposite classification — and an
+identical tier share.** A five-point test passes that silently.
+
+🟢 **What caught it was noticing that one subject's verdict flipped between two instruments, and
+then opening the repository and counting.** 🔵 **A per-subject disagreement is louder than a tier
+aggregate**, and the aggregate was the only thing being watched. `T37` states the rule;
+`NOT_SHIPPED` and `test_not_shipped_trees_are_excluded` enforce it; and the probe now emits
+`not_shipped_delta` per row so a whole-tree/shipped-tree disagreement is visible per subject.
+
+### Verdicts on p142's actions
+
+- 🟢 **`ACTION DJ` — DISCHARGED, falsifier silent.** `-0500` dominant in 5 of 5; eduNEXT **LATAM**
+  on 13 year-round `-0500` authors, with the pooled test recorded as unreadable.
+- 🔴 **`ACTION DK` — DISCHARGED and REFUTED.** 2 rows, not 3. Channel retired, `ncat` hand-noted,
+  and the row it was built for placed **North America**.
+- 🔴 **`ACTION DL` — DISCHARGED and REFUTED.** npm rows carry **more** tools, not fewer.
+- 🔴 **`ACTION DM` — DISCHARGED and REFUTED.** 17-point move; `T30`'s three figures withdrawn;
+  four blind shapes, not two; and a population defect the falsifier could not see.
+- 🟢 **`ACTION DN` — DISCHARGED, falsifier silent.** 19/19 regions reproduced; rule adopted.
+- 🟢 **`ACTION DO` — DISCHARGED, falsifier silent.** 10/10 hashes, 3 of 4 fields source-verified.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, and NOT re-registered**, for the sixth
+  pass. 🔵 **Cause unchanged and re-measured**: `capitol.texas.gov` is outside this environment's
+  allowlist, like `eur-lex.europa.eu` and `oecd.org`. 🔴 **It is an environment request, not a
+  research task**, and re-registering it a sixth time would be theatre.
+
+### Pre-registered for p144
+
+🔴 **`ACTION DP`** — measure the npm tier on SOURCE, so `T36` has a test rather than an example.
+`T36` says two instruments' numbers are not comparable; the npm tier is the claim's only
+load-bearing case and it currently rests on *"we cannot measure it"*. Clone the repositories
+behind all 8 npm packages, run `surface_gate2.py` over their source, and compare each package's
+**bundle-derived** tool count against its **source-derived** one. 🔴 *Refuted if the two counts
+agree within one tool on 6 of 8 or more* — which would mean bundle and source are interchangeable
+for this measurement, `T36`'s central example collapses, and `T30`'s npm figure should be
+reinstated rather than withdrawn.
+
+🟡 **`ACTION DQ`** — find a second row with a tool-surface lockfile, or state that there is one.
+`P21` and `ACTION DO` rest entirely on `malkreide/global-education-mcp`. Search the 44-row
+connector population and the 8 npm packages for any committed artefact that pins a tool surface
+(`tools.lock.json`, a snapshot test over `list_tools()`, a golden file). 🔴 *Refuted if zero
+further rows carry one* — which makes `P21` a recipe derived from a single instance, and it must
+be published as *"one row does this and it is worth copying"* rather than as a practice the
+ecosystem is adopting.
+
+🔴 **`ACTION DR`** — re-measure `librus-mcp`'s shipped surface by a second, independent method,
+because `P143-C` means one method already got it wrong twice. Count its tools from
+`tools/list` fixtures, its README, or its tests, and compare against the **35** this pass
+published. 🔴 *Refuted if the independent count is not 35* — which would mean the corrected
+figure is as unreliable as the one it replaced, and the row must be reported as
+`SURFACE_UNRESOLVED` rather than `BOUNDED_STATIC`.
+
+🟡 **`ACTION DS`** — test whether `NOT_SHIPPED` is itself over-broad. It excludes `scripts/`,
+and `scripts/` is where `global-education-mcp` keeps `tool_signatures.py`. Re-run all three tiers
+with each `NOT_SHIPPED` directory re-admitted one at a time and record which rows change verdict.
+🔴 *Refuted if re-admitting any single directory changes a verdict on a row other than
+`librus-mcp`* — which would mean the exclusion list is doing more work than the one defect it was
+built for, and it must be narrowed to `legacy_reference/` alone.
+
+🟢 **`ACTION DT`** — place the 2 remaining `UNMAPPED` connector rows, or declare them
+unplaceable and say why. `nitsuah/bb-mcp` (241 commits, `-0400`, only
+`developer.blackboard.com`) and `ruud0/aula-virtual-mcp` (`-0400`, only
+`aula-virtual.unav.edu`). Try the author channel that placed eduNEXT: per-author offsets across
+both repositories' full history. 🔴 *Refuted if neither row has an author with commits in both
+DST windows* — which would mean the author channel needs a commit volume these rows do not have,
+and `P23` must carry a minimum-history caveat.
+
+🔴 **`ACTION DU`** — ask whether `T37` applies to this KB's OTHER population-defined probes.
+`T37` says a share-based falsifier cannot see a population error. Audit the subject lists of
+`p142-origin-at-scale`, `p141-pom-chain-sweep` and `p140-live-surface-bound` for trees that the
+artefact does not ship — vendored code, reference copies, examples. 🔴 *Refuted if none of the
+three includes a non-shipped tree* — which would make `librus-mcp` a one-probe accident rather
+than a pattern, and `T37` should be demoted to an observation about one instrument.
+
 ## Pass 142 — 2026-10-12
 
 ⏱️ **Fifth pass of this date.** 🔴 **Two of the six pre-registered falsifiers fired — `DF` and

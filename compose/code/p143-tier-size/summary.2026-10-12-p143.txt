@@ -1,0 +1,10 @@
+
+# tier agent        n=4   median tools=5    median bytes=95822    ships_source=4/4
+# tier foundations  n=1   median tools=10   median bytes=123670   ships_source=1/1
+# tier github-only  n=6   median tools=31   median bytes=298763   ships_source=6/6
+# tier npm          n=8   median tools=18   median bytes=85399    ships_source=1/8
+
+# --- the comparison ACTION DL asked for ---
+# median tool count   npm=18  non-npm=9
+# 🔴 npm rows are NOT smaller on tool count
+# npm rows shipping SOURCE (directly comparable): 1 of 8  _n35da_brightspace-mcp

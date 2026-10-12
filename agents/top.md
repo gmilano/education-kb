@@ -6,6 +6,95 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 143 — 2026-10-12 — an UNMAPPED row placed, and a connector this shelf called unbounded has 35 literal tools
+
+🟢 **The clone channel opened this pass, and it changes what this shelf can say about its own
+rows.** `git clone` of a public repository now works from this environment — full history and
+full source — where previous passes had only single-file fetches. 🔵 **Every finding below
+comes from that**, and the standing note that `api.github.com` is `403` needs one correction:
+it answers **`200`** on `rate_limit` and refuses *repository* endpoints with a **scope**
+message, not a block. 🔴 **Star counts are still unavailable**, so commit counts remain this
+shelf's size proxy.
+
+### 🟢 `ACTION DK` — `karkarkins/BlackboardAssistantMCP` is placed, on a login URL it configures itself
+
+[`p143-vendor-tenancy`](../compose/code/p143-vendor-tenancy/README.md). This row has been
+`UNMAPPED` since p142, flagged as *"needs an institution→country lookup this KB does not
+have"*.
+
+| row | tenancy host | institution | region |
+|---|---|---|---|
+| 🟢 [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP) | `ncat.blackboard.com` | North Carolina A&T State University | 🟢 **North America** (United States) |
+
+🔵 **The evidence is the repository's own configuration**, not an inference from four letters:
+`README.md:72` sets `BB_LOGIN_URL=https://ncat.blackboard.com/`.
+
+🔴 **And the channel that found it is retired in the same breath.** `ACTION DK`'s falsifier
+required three rows and got **two** — the second, `MartinSA04/ntnu-mcp`, was already placed
+EMEA and its tenancy evidence sits in a **test fixture** rather than shipped source. 🔴 **Of 6
+rows carrying any Blackboard/Canvas host, 4 carry only the vendor's own estate** —
+`developer.blackboard.com` alone occurs 19 times across this population and places nothing.
+🔵 **That is `your-institution.instructure.com` one layer up.**
+
+**This shelf's American population now stands at 13 LATAM, 4 North America (3 Canada + 1
+United States), 2 `UNMAPPED`** — `nitsuah/bb-mcp` and `ruud0/aula-virtual-mcp`.
+
+### 🔴 `ACTION DM` — three rows on this shelf had their tool surface measured wrongly, and one is inverted
+
+[`p143-surface-gate-repair`](../compose/code/p143-surface-gate-repair/README.md). The surface
+instrument was blind to **four** static registration shapes, not the two that were registered.
+
+| row | this shelf's previous reading | corrected | what was missed |
+|---|---|---|---|
+| 🔴 [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | `DYNAMIC_UNBOUNDED` — 0 literal, 23 dynamic | 🟢 **`BOUNDED_STATIC` — 35 literal, 0 dynamic** | `server.tool(annotations=x)(fn)` — a decorator spelled without the `@` |
+| 🟢 [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | `NO_REGISTRATION_SITE_FOUND` | 🟢 **`BOUNDED_STATIC` — 31 literal** | bare `@_tool` forwarding to `server.tool`, name from `fn.__name__` |
+| 🟢 [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | `NO_REGISTRATION_SITE_FOUND` | 🟢 **`BOUNDED_STATIC` — 10 literal** | `@mcp.tool(` spanning 10 lines |
+
+🔴 **The librus-mcp row is the serious one, and not because the verdict flipped.** Not one of
+the 23 sites this KB measured is in the server the package runs: **21 are in
+`legacy_reference/src/server.py`** and 2 in `scripts/qualify_native.py`. 🔵 **This shelf
+published a dynamism verdict derived entirely from a dead reference tree.**
+
+🟢 **The corrected counts are corroborated against two numbers this KB already held**, which
+is why they are publishable: **31** matches p142's hand read of `edupage-mcp`, and **10**
+matches `global-education-mcp`'s own committed `tools.lock.json`.
+
+🔵 **A fourth shape nobody had registered is what moved the tier statistic**: p141 classified
+any `@x.tool(…)` lacking a literal `name=` as *dynamic*. That is a misclassification rather
+than blindness, and it inverts a verdict instead of dropping a row.
+
+### 🟢 `ACTION DO` — the shelf's one self-verifying row verifies, with one field it cannot
+
+[`p143-lockfile-audit`](../compose/code/p143-lockfile-audit/README.md).
+`malkreide/global-education-mcp`'s `tools.lock.json`, recomputed **independently of the
+repository's own generator**:
+
+| check | result |
+|---|---|
+| hashes recomputed from the stored signature blocks | 🟢 **10 of 10 AGREE** |
+| `name` re-derived from source | 🟢 **10 of 10 agree** |
+| `annotations` re-derived from the decorator literal | 🟢 **10 of 10 agree** |
+| `description` re-derived from the docstring (`inspect.cleandoc`) | 🟢 **10 of 10 agree** |
+| 🔴 `inputSchema` | 🔴 **NOT VERIFIED — pydantic generates it at import; checking it means executing the repository** |
+| tools with `readOnlyHint: true` | 🟢 **10 of 10** |
+
+🔴 **"The lockfile verifies" would have concealed which field is which.** Three of the four
+hashed fields are confirmed against source; the fourth is not checkable without execution, and
+🔵 **a consumer who cannot run the server has verified three quarters of the claim.**
+
+### 🔵 p143 on `T10`: the search channel returned a FOURTH consecutive null for new agent rows
+
+Four global queries and four regional ones, run as mandated. Every education-specific agent
+candidate returned is already on this shelf or is not an agent: Microsoft's
+`ai-agents-for-beginners` and `rohitg00/ai-engineering-from-scratch` are **courses**, and the
+general frameworks named (CrewAI, AutoGen, LangGraph, Aider, Cline) belong to the technology
+shelf, not this one. 🔴 **No new education agent repository was found by search this pass**,
+and the rows added above came from re-measuring rows already here.
+
+🔵 **Said plainly because four nulls is now a finding about the channel**: on this shelf,
+search finds *articles about* education AI and does not find education MCP servers. The three
+instruments that did produce rows this pass were all read directly off source.
+
 ## Pass 142 — 2026-10-12 — thirteen LATAM rows that were always here, a third registration shape, and the row that ships its own lockfile
 
 🔴 **This page has carried "the only LATAM-origin education agent found" on a single row for ten

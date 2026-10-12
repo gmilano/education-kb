@@ -6,6 +6,68 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 143, 2026-10-12.** 🆕 **A vendor tier this page has never had: the company that
+maintains an Open edX extension point, placed in Colombia.** 🆕 **And the Blackboard entry
+gains a named institutional tenancy plus a warning about the four hosts that look like
+tenancies and are not.**
+
+### 🆕 🟢 Open edX — the extension point has a commercial maintainer, and it is LATAM
+
+[`p143-edunext-jurisdiction`](../compose/code/p143-edunext-jurisdiction/README.md).
+
+| platform | the vendor fact | licence posture |
+|---|---|---|
+| **Open edX** *(already on this page)* | 🆕 🟢 **`eduNEXT` — a Colombian company — is author of record on `openedx/openedx-filters`**, the hook interface third-party Open edX customisation runs through, set 2026-10-02 during the `modernize` campaign. Placed **LATAM** on 13 authors committing `-0500` in both DST windows across 1 485 commits, with `edunext.co` on **998 of them (67%)** | `openedx-filters`: 🔴 **AGPL-3.0-or-later.** 🔵 The eduNEXT `eox-*` extension family is a separate licence question this pass did not read |
+
+🔵 **Why this belongs on a platforms page rather than only on a market map.** A studio
+customising Open edX does not touch the core — 🟢 **it writes against the filters and hooks
+interface**, and the maintainer of that interface decides what is extensible. 🟢 **For a LATAM
+engagement that maintainer is in the same region and the same timezone**, which is a delivery
+fact, not a trivium. 🔴 **For any engagement it is an AGPL-3.0-or-later interface**, so the
+obligation travels with anything built through it that is distributed or served.
+
+🔴 **What is NOT claimed:** no licence has been read for the `eox-*` repositories themselves,
+and nothing here is a grant for them. 🔵 **The jurisdiction finding and the licence question
+are separate**, and only the first was asked.
+
+### 🆕 Blackboard Learn — a named institutional tenancy, and the four hosts that place nothing
+
+[`p143-vendor-tenancy`](../compose/code/p143-vendor-tenancy/README.md).
+
+| platform | tenancy evidence | what it tells a studio |
+|---|---|---|
+| **Blackboard Learn** *(already on this page)* | 🆕 🟢 **`ncat.blackboard.com` — North Carolina A&T State University**, from `karkarkins/BlackboardAssistantMCP`'s own `README.md`: `BB_LOGIN_URL=https://ncat.blackboard.com/`. 🆕 `ntnu.blackboard.com` ×8 — **NTNU, Norway** (🟡 in a test fixture, not shipped source) | 🟢 **Two named public institutions on Blackboard, one US and one Norwegian**, each with an open connector already written against it |
+
+🔴 **And the negative finding, which is the more useful half.** Of 6 rows in this KB's
+44-row connector population carrying any Blackboard/Canvas host, 🔴 **4 carry only the vendor's
+own estate**:
+
+| host | occurrences | what it is |
+|---|---|---|
+| 🔴 `developer.blackboard.com` | **19** | the vendor's developer portal — 🔴 **the single most common vendor-domain string in the whole population, and it places nothing** |
+| 🔴 `basic-doc-viewer.eu.api.blackboard.com`, `notif-websockets-eu-central-1.prod.notifications.api.blackboard.com`, `prod01-euc1-prod01-xythos.prod.files.blackboard.com`, `files.blackboard.com` | 1 each | vendor infrastructure |
+| 🔴 `community.canvaslms.com` | 1 | vendor community site |
+| 🔴 `example.blackboard.com`, `your-instance.blackboard.com`, `school.instructure.com`, `myuni.blackboard.com` | 1 each | documentation placeholders |
+| 🔴 `alt-5f0d0e6d23ee0.blackboard.com`, `alt-0123456789abc.blackboard.com` | 1 each | real tenancies whose label names nobody |
+
+🔵 **This is the `your-institution.instructure.com` lesson one layer up.** The frequent
+host-shaped string under a vendor domain is the vendor's own, and a census that counts
+`*.blackboard.com` as "institutions using Blackboard" would return 19 hits for Blackboard
+itself. 🟢 **Only a single-label subdomain that is an institution's own abbreviation places
+anything**, and in 44 repositories there are exactly **two**.
+
+🔴 **`myuni.blackboard.com` was checked rather than assumed** to be a placeholder: it occurs in
+`felipedias-ie/blackboard-mcp/test/auth.test.ts:145` in a list beside `blackboard.example.edu`
+and `learn.university.edu`. 🔵 **Its neighbours settle it.**
+
+### 🔵 SIGAA, SUAP and SIU-Guaraní — unchanged, and the licence question still unasked
+
+The three national platforms added at p142 stand as written. 🔴 **No licence has been read for
+SIGAA, SUAP or SIU-Guaraní and this page still does not assert one.** 🟢 **One addition from
+this pass:** `SIU-Toba/docker-guarani` remains the only row on this page whose *platform vendor*
+publishes on GitHub, and the probe re-confirmed its Argentine hosts (`siu.edu.ar`,
+`colab.siu.edu.ar`, `repositorio.siu.edu.ar`) on a fresh clone.
+
 **Pass 142, 2026-10-12.** 🆕 **Two national student-information platforms arrive on this page,
 and they arrive with thirteen connectors already written against them.** 🔴 **And veraPDF — the
 accessibility validator a studio reaches for when course material has a compliance obligation —

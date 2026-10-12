@@ -1,0 +1,45 @@
+subject	tenancy_hosts	institution	country	region	vendor_infra	placeholder	opaque	unresolved	verdict
+Agso-o/sigaa-calendar	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+BetterSEQTA/BetterSEQTA-Plus	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+BetterSEQTA/DesQTA	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+HAL-XP/mcp-pronotes	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+Haris0059/ibu-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+MartinSA04/ntnu-mcp	ntnu.blackboard.com	Norwegian University of Science and Technology	Norway	EMEA	NONE	NONE	NONE	NONE	PLACED_EMEA
+MatheusMach/QuantoFalta	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+NiccoloSalvini/mcp-blackboard-ucsc	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+P1ckle3/blackboard-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+Piyushtanwani/DAU-buddy	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+RubsNeto/SigaaUI	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+SIU-Toba/docker-guarani	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+SleepyPandas/UofT-MCP	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+alejooroncoy/campus-cli	NONE	-	-	-	files.blackboard.com	NONE	alt-5f0d0e6d23ee0.blackboard.com	NONE	VENDOR_HOST_ONLY — places nothing
+barneslardo/sis-demo	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+chenning42/iserv-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+despedite/siu-guarani	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+divyarthjain/vtop-bhopal-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+edwyj/ddl-killer	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+eugeborzone/Auto_Grade_Guarani	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+fabrica-de-inovacao/expeditto	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+fakelag28/vsuet-timetable-api-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+felipedias-ie/blackboard-mcp	NONE	-	-	-	basic-doc-viewer.eu.api.blackboard.com,developer.blackboard.com,notif-websockets-eu-central-1.prod.notifications.api.blackboard.com,prod01-euc1-prod01-xythos.prod.files.blackboard.com	myuni.blackboard.com	alt-0123456789abc.blackboard.com	NONE	VENDOR_HOST_ONLY — places nothing
+filipecalegario/auto-sigaa	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+frjunioalves/suap-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+ink-waffle/sisu-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+joojdev/academic-tracker-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+juliancasaburi/siu-guarani-promedio-extension	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+karkarkins/BlackboardAssistantMCP	ncat.blackboard.com	North Carolina A&T State University	United States	North America	NONE	NONE	NONE	NONE	PLACED_NORTH_AMERICA
+krzysztofbury/librus-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+luca-dupont2/mcgill-vsb-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+mhlavac/edupage-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+nitsuah/bb-mcp	NONE	-	-	-	developer.blackboard.com	example.blackboard.com,your-instance.blackboard.com	NONE	NONE	VENDOR_HOST_ONLY — places nothing
+oliverhruby/edupage-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+qxbao/qldt-hanu-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+ruud0/aula-virtual-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+sandraschi/classroom-mcp	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+saytooyum/AI-Based-Timetable-Generation-System	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+skhdemo/uoft-quercus-mcp	NONE	-	-	-	community.canvaslms.com	NONE	NONE	NONE	VENDOR_HOST_ONLY — places nothing
+st22209/Parent-Portal	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+trindadetiago/sigaa-caiu	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+yourssu/soongpt-plugin	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+zavora-ai/mcp-student-records	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST
+zyx1121/nycu	NONE	-	-	-	NONE	NONE	NONE	NONE	NO_VENDOR_HOST

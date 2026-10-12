@@ -6,6 +6,103 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 143 — 2026-10-12
+
+🔴 **`T30` is WITHDRAWN.** Two pre-registered falsifiers fired on it independently in the same
+pass: `ACTION DM` removed its three figures by repairing the instrument that produced them, and
+`ACTION DL` refuted the mechanism it had proposed. 🔵 **One trend, two unrelated routes to the
+same verdict — which is what a register of pre-registered falsifiers is for.**
+
+🟢 **Three of six falsifiers fired.** `DJ`, `DN` and `DO` came back silent; `DK`, `DL` and `DM`
+fired.
+
+### 🔁 `T30` WITHDRAWN — the three figures were never one measurement
+
+| | |
+|---|---|
+| **the claim** | *"A property measured on one packaging tier must be published with that tier named"* — resting on dynamic registration at npm **12%**, agent servers **50%**, GitHub-only connectors **50%** |
+| 🔴 **what fired it (1)** | `ACTION DM`. Repairing the instrument moved the GitHub-only tier from **50% to 33%** — a **17-point** move against a five-point falsifier. [`p143-surface-gate-repair`](../compose/code/p143-surface-gate-repair/README.md) |
+| 🔴 **what fired it (2)** | `ACTION DL`. The proposed mechanism — *npm rows are simply smaller* — is **refuted in the opposite direction**: median tool count is **18** on npm against **9** off it. [`p143-tier-size`](../compose/code/p143-tier-size/README.md) |
+| 🔴 **and the reason neither falsifier anticipated** | 🔴 **The npm 12% was never produced by the instrument that produced the other two.** 7 of 8 npm packages ship only compiled `dist/`/`build/`, which `surface_gate.py` skips — so npm was measured by `p140-live-surface-bound/surface_bound.py`, over **bundles**, while the agent and connector tiers were measured over **source** |
+| 🔵 **what was right in it** | The instruction *"name the tier"* was never wrong and is retained in `T36` below. 🔵 **`T30`'s error was not its rule — it was that `T30` itself broke the rule one level up**, comparing instruments while warning about comparing tiers |
+| 🟢 **what replaces the figures** | One instrument, one artefact kind: on source trees, agent servers **2 of 4** dynamic, GitHub-only connectors **2 of 6**, foundations **0 of 1**. 🔴 **The npm tier is absent and stays absent until it is measured on source**, where only `@n35da/brightspace-mcp` qualifies and **n=1 is reported as n=1** |
+
+### 🆕 🔴 `T36` — a measurement's INSTRUMENT is part of its claim, exactly as its tier is
+
+| | |
+|---|---|
+| **the claim** | 🔴 **Two numbers produced by different instruments, or over different artefact kinds, are not comparable however identical their units look.** A percentage carries the thing that measured it, and a gradient assembled from two instruments is an artefact of the assembly |
+| **what forced it** | `T30`'s three figures: **12% / 50% / 50%**, read as an axis. 🔴 **The 12% came from a probe reading minified bundles with dependencies inlined; the 50%s from a probe reading source trees.** A literal-vs-dynamic classification is not the same question on those two artefacts, and nothing in the three numbers' presentation said so |
+| 🔵 **why it is not just `T30` restated** | `T30` says *name the tier*, and the tiers here **were** named. 🔴 **Naming the tier is insufficient when the tier determines the instrument** — npm publication is precisely what makes a row ship compiled output, so "npm tier" silently means "different probe, different artefact". 🟢 **The tier and the instrument were confounded, and `T30` could not see it because it was looking at tiers** |
+| 🟢 **the operational rule** | 🟢 **Publish the probe name and the artefact kind beside every cross-tier figure.** When a tier forces a different instrument, report the tiers separately and refuse the gradient. 🔵 **`T21` is the positive case**: PyPI 0% / npm 33% / Maven 83% holds because one probe read one artefact kind — a published package — in all three ecosystems |
+| 🔴 **what would overturn it** | A cross-instrument comparison on these shelves that survives re-measurement by either instrument alone. 🔵 **`ACTION DP` is registered to try exactly that** on the npm tier, by measuring the one npm row that ships source |
+| **where it is enforced** | `p143-surface-gate-repair` prints its tier table with the artefact kind per tier and omits npm entirely; `test_compiled_output_is_still_skipped` pins the reason npm cannot appear there |
+
+### 🆕 🔴 `T37` — a share-based falsifier cannot catch an error in the POPULATION
+
+| | |
+|---|---|
+| **the claim** | 🔴 **A falsifier phrased as "the statistic must not move by more than N points" passes any error that is symmetric across the population** — including measuring the wrong population entirely |
+| **what forced it** | `krzysztofbury/librus-mcp`. p141 reported **0 literal, 23 dynamic**; this pass's first repaired draft reported **23 literal, 0 dynamic**. 🔴 **Both readings came from `legacy_reference/src/server.py` and `scripts/qualify_native.py` — dead reference code — and neither touched the 35 registrations in `src/librus_mcp/`.** The tier share was *identical* in both runs, so `ACTION DM`'s five-point falsifier would have passed a measurement drawn from a tree the package does not ship |
+| 🔵 **what actually caught it** | 🟢 **Reading the row.** The classification flipped on a single subject between two instruments, and the only way to adjudicate was to open the files and count. 🔵 **A per-subject disagreement is a louder signal than a tier aggregate**, and the aggregate was what the falsifier was watching |
+| 🟢 **the operational rule** | 🟢 **Pair every share-based falsifier with a per-subject diff.** Publish the rows whose verdict changed, not only the share that did or did not move — and when a repair changes a row's classification without changing the share, that row is the one to read |
+| 🔴 **what would overturn it** | A population error on these shelves that a share-based falsifier did catch. 🔵 **None of the three that fired this pass was caught by its share**: `DK` was caught by a row count, `DL` by a median, `DM`'s real defect by reading one repository |
+| **where it is enforced** | `NOT_SHIPPED` in `surface_gate2.py`, with `test_not_shipped_trees_are_excluded`; the probe emits `not_shipped_delta` per row so a whole-tree/shipped-tree disagreement is visible per subject rather than pooled |
+
+### 🟢 `T33` STRENGTHENED — the conjunction channel takes a third form, and it keeps refusing correctly
+
+`T33` said a hardcoded hostname and an ambiguous offset resolve each other. `ACTION DN` adds
+the **URL-context** form and it holds:
+[`p143-cctld-url-context`](../compose/code/p143-cctld-url-context/README.md).
+
+🟢 **19 of 19 regions reproduced, 16 of 16 placed rows retained**, so the four homograph ccTLDs
+(`.py`, `.do`, `.cu`, `.cl`) can be re-admitted behind a scheme requirement without losing
+anything. 🟢 **And both halves of the rule fire on one host in one file**:
+`alejooroncoy/campus-cli` carries `https://revistas.uh.cu/…` (admitted, Cuba) and five bare
+`url.hostname === 'revistas.uh.cu'` comparisons (refused). It also yields `juris.pjud.cl`,
+Chile's Judicial Branch.
+
+🔴 **The hole is closed as a capability and unexercised for half of it.** No `.py` or `.do`
+host with URL context exists anywhere in the 19-row population, so **Paraguay and the
+Dominican Republic are unblocked rather than demonstrated** — and 🔴 **no row changed region**,
+because the one row carrying Chile and Cuba was already placed on 30 Peruvian hosts.
+
+### 🟢 `T29` STRENGTHENED, on a channel it did not have — the author, not the repository
+
+`T29` narrowed origin to *"in the code when the code must reach a named host"*. `ACTION DJ`
+adds a channel that reads neither code nor metadata:
+[`p143-edunext-jurisdiction`](../compose/code/p143-edunext-jurisdiction/README.md).
+
+🔴 **The pooled offset test was unreadable** — `MIXED` on 5 of 5 eduNEXT repositories, both
+`-0500` and `-0400` inside and outside the DST window. 🟢 **The author is the unit that carries
+a timezone**, and across 1 485 commits and 63 authors:
+
+| | |
+|---|---|
+| 🟢 authors at `-0500` in **both** DST windows, never `-0400` | **13** (491 commits) |
+| 🔴 authors with the US Eastern DST shape | **2** (28 commits) |
+
+🔵 **`-0500` in January rules out US Central; `-0500` in July rules out US Eastern.** Neither
+half places anything alone — which is `T33`'s structure applied to time rather than to
+hostnames. With `edunext.co` on **998 of 1 485 commits**, eduNEXT books **LATAM**.
+
+### 🔵 p143 on the environment: the clone channel opened, and the market blockers did not
+
+🟢 **`git clone` of public repositories now works** — full history, full source. Every probe
+this pass depends on it; `ACTION DJ` alone needed 1 485 commits of author metadata that no
+single-file fetch could supply.
+
+🔴 **One standing note needs correcting rather than repeating:** `api.github.com` is not
+blanket-`403`. It answers **`200`** on `rate_limit` and refuses repository endpoints with a
+**scope** message — *"sessions are bound to their configured repositories"*. 🔵 **A scope
+refusal and a block have different fixes**, and this KB has been recording the symptom.
+🔴 **Star counts remain unavailable either way.**
+
+🔴 **And the figures blocker is unchanged, measured again this pass:**
+`api.uis.unesco.org`, `sdmx.oecd.org`, `eur-lex.europa.eu`, `www.oecd.org` and `coe.int` all
+answer `000`. 🔵 **So every regional market share in `intel/market.md` is still second-hand,
+and the fix is still an allowlist rather than a better search.**
+
 ## Pass 142 — 2026-10-12
 
 🔴 **Two of this KB's trends are rescoped and one of its own ten-pass findings is withdrawn — and

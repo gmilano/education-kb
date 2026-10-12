@@ -6,6 +6,128 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 143, 2026-10-12.** 🔁 **`P18` is CORRECTED — its tool-surface enumeration misses four
+static registration shapes, and on one row it inverts the answer.** 🆕 **`P23` is added: the
+timezone recipe that placed a vendor in Colombia from commit metadata alone.** 🆕 **`P24` is
+added: how to read a vendor-tenancy hostname without booking the vendor.**
+
+🔵 **Register note.** `P23` and `P24` are the next numbers in the **current** register,
+restarted at `P1` by the 2026-10-06 reset. A `P` number resolves against this page; a `P`
+number inside a dated log section resolves against the register current on that date.
+
+## 🔁 `P18` CORRECTED — a tool-surface enumeration must recognise FOUR static shapes, not two *(p143 — Global)*
+
+`P18`(a)/(b) tells a studio to enumerate an MCP server's tool surface by finding registration
+sites and classifying each as literal or dynamic. 🔴 **The recipe as written misses four static
+shapes and misclassifies a fifth**, and
+[`p143-surface-gate-repair`](code/p143-surface-gate-repair/README.md) measured the cost on real
+rows.
+
+| shape | how it appears | the old recipe | corrected |
+|---|---|---|---|
+| decorator, name literal | `@mcp.tool(name="x")` | 🟢 `LITERAL` | 🟢 `LITERAL` |
+| 🔴 decorator spanning lines | `@mcp.tool(\n  annotations={…},\n)` | 🔴 **invisible** | 🟢 `LITERAL` |
+| 🔴 decorator with no `name=` | `@mcp.tool(description="…")` | 🔴 **`DYNAMIC` — wrong** | 🟢 `LITERAL` (name is `fn.__name__`) |
+| 🔴 indirection decorator | `@_tool`, where `_tool` → `server.tool(…)(fn)` | 🔴 **invisible** | 🟢 `LITERAL` |
+| 🔴 call-applied decorator | `server.tool(annotations=x)(get_grades)` | 🔴 **invisible** | 🟢 `LITERAL` |
+| registration in a loop | `for t in TOOLS: server.add_tool(t.name, …)` | 🟢 `DYNAMIC` | 🟢 `DYNAMIC` |
+
+**Step (a), as it must now read:**
+
+> (a) 🔴 **Parse the source; do not grep it.** Use the language's own parser — `ast` for
+>     Python — because every shape above except the first is invisible to a line-oriented
+>     regex, and a nested multi-line decorator is what defeats one. Count a site as **static**
+>     whenever the tool's NAME is fixed by the source at import, 🔴 **including when no `name=`
+>     is written at all**: a bare decorator takes the function's own name, and that is the most
+>     static shape there is, not the least.
+
+**Step (b), as it must now read:**
+
+> (b) 🔴 **Exclude trees the package does not ship before counting anything** — on these
+>     shelves `legacy_reference/`, `scripts/`, `examples/`, `docs/`, plus tests. 🔴 **Report
+>     the whole-tree and shipped-tree counts separately and look at any row where they
+>     disagree.**
+
+🔴 **The row that proves step (b) is not pedantry.** `krzysztofbury/librus-mcp` was published by
+this KB as `DYNAMIC_UNBOUNDED` on **0 literal / 23 dynamic**. The shipped server has
+🟢 **35 literal registrations and 0 dynamic**, and all 23 of the measured sites were in
+`legacy_reference/src/server.py` and `scripts/qualify_native.py`. 🔵 **The verdict was not
+imprecise; it was about a different program.**
+
+🟢 **Validation to copy into the runbook:** a repaired enumeration must reproduce a count you
+already know by hand. This one hits **31** on `oliverhruby/edupage-mcp` (p142's hand read) and
+**10** on `malkreide/global-education-mcp` (its own committed lockfile). 🔵 **Two independent
+agreements are what make the other numbers worth believing.**
+
+## 🆕 `P23` — place a vendor's jurisdiction from commit metadata, using DST as the discriminator *(p143 — LATAM, Global method)*
+
+**The problem.** You need to know where a supplier is, and the usual signals fail: the ccTLD is
+ambiguous (`.co` is Colombia *and* a generic registration), the corporate site is unreachable,
+and the repository metadata carries nothing.
+
+**Recipe.**
+
+1. **Clone every repository the organisation publishes** — not one. 🔵 eduNEXT: 5 repositories,
+   1 485 commits, 63 authors.
+2. 🔴 **Do not pool the offsets.** A repository's commits come from many people, and two zones
+   pool into exactly the shape one ambiguous zone would. This step was run and returned `MIXED`
+   on 5 of 5 — a wasted measurement, recorded so it is not repeated.
+3. **Group by author**, and for each author collect the set of commit offsets **and** whether
+   they committed inside the DST window (take Apr–Oct) and outside it (Jan, Feb, Dec).
+   🔵 Report March and November separately; whole months cannot resolve a transition week.
+4. 🟢 **Apply the discriminator.** Among candidate zones that share an offset, use the one
+   that differs in *whether it moves*:
+   - `-0500` in **both** windows, never `-0400` → a non-DST `-0500` zone: **Colombia, Peru,
+     Ecuador**. 🔴 Rules out US Eastern (would be `-0400` in July) **and** US Central (would be
+     `-0600` in January).
+   - `-0400` in July + `-0500` in January → **US Eastern**.
+   - `-0400` in **both** windows → a non-DST `-0400` zone: **Venezuela, Bolivia**. 🔴 Rules out
+     Atlantic Canada, which goes to `-0300`.
+   - one window only → 🔴 **`UNDETERMINED`. Do not assign it to the majority.**
+5. **Corroborate on the author mail DOMAIN**, never the address. 🟢 eduNEXT: `edunext.co` on
+   **998 of 1 485 commits (67%)**, and on 6 of the 13 booked authors.
+6. 🔴 **State the residual.** The channel does not separate Colombia from Peru or Ecuador.
+   🟢 **The `region` field is determined; the country is an inference from the mail domain**, and
+   the two are reported as different strengths of claim.
+
+🔴 **When NOT to use it.** A single repository, or an organisation with fewer than ~10 authors
+in the Americas, will not produce enough both-window authors to book anything. 🔵 **And publish
+domains only** — a contributor's personal address is not a studio's to post.
+
+## 🆕 `P24` — read a vendor-tenancy hostname without booking the vendor *(p143 — Global)*
+
+**The problem.** SaaS LMS deployments live at `<tenant>.blackboard.com` /
+`.instructure.com` / `.brightspace.com`. A tenancy names an **institution** precisely and
+carries **no country**, and the same domain also carries the vendor's entire estate.
+
+**Recipe.**
+
+1. Extract every `*.{blackboard,instructure,brightspace,moodlecloud,schoology,canvaslms}.{com,net,org}`
+   host from tracked source.
+2. 🔴 **Classify into four buckets and resolve only the last:**
+   - **`VENDOR_INFRA`** — multi-label hosts (`basic-doc-viewer.eu.api.blackboard.com`) and a
+     deny-list of vendor labels (`developer`, `api`, `files`, `community`, `docs`, `support`,
+     `status`, `login`, …). 🔴 **`developer.blackboard.com` was 19 of the matches in a 44-row
+     population. This bucket is the majority and it places nothing.**
+   - **`PLACEHOLDER`** — `example`, `your-*`, `my*`, `school`, `institution`, `tenant`.
+   - **`OPAQUE`** — `alt-5f0d0e6d23ee0`: a real tenancy whose label is a hash. 🔵 Report, never
+     resolve.
+   - 🟢 **`TENANCY`** — a **single** label that is an institution's own abbreviation.
+3. 🔴 **Resolve a tenancy label only against an explicit, hand-checked table.** There is no rule
+   that derives an institution from three letters, and 🔴 **an unrecognised label is
+   `TENANCY_UNRESOLVED` and places nothing.** Guessing an institution out of an abbreviation is
+   how a `region` field gets poisoned.
+4. 🔵 **Record where the evidence sits.** A host in a connector's configured login URL
+   (`BB_LOGIN_URL=https://ncat.blackboard.com/`) is stronger than one in a test fixture
+   (`ntnu.blackboard.com` in a captured course page) — the first is what the code must reach,
+   which is `T29`'s standard.
+
+🔴 **Expected yield, so nobody budgets for more:** 44 repositories produced **2** resolvable
+tenancies, one of which was already placed by another channel. 🟢 **Run it once on a
+population, take the rows it gives you, and do not build a standing instrument** — `ACTION DK`'s
+falsifier fired at exactly this point, and the honest conclusion was to hand-note the one row
+and retire the channel.
+
 **Pass 142, 2026-10-12.** 🔴 **`P20` step 2 is CORRECTED — it told a studio to make one licence
 election for veraPDF and the election is per-module.** 🆕 **`P21` is added, and like `P19` it is
 sourced from a row that already ships the control rather than needing one wrapped around it.**

@@ -1,0 +1,9 @@
+
+# eligible: 19
+# LATAM          13  Agso-o/sigaa-calendar, MatheusMach/QuantoFalta, RubsNeto/SigaaUI, SIU-Toba/docker-guarani, alejooroncoy/campus-cli, despedite/siu-guarani, eugeborzone/Auto_Grade_Guarani, fabrica-de-inovacao/expeditto, filipecalegario/auto-sigaa, frjunioalves/suap-mcp, joojdev/academic-tracker-mcp, juliancasaburi/siu-guarani-promedio-extension, trindadetiago/sigaa-caiu
+# North America   3  SleepyPandas/UofT-MCP, luca-dupont2/mcgill-vsb-mcp, skhdemo/uoft-quercus-mcp
+# UNMAPPED        3  karkarkins/BlackboardAssistantMCP, nitsuah/bb-mcp, ruud0/aula-virtual-mcp
+#
+# 🆕 rows placed ONLY because a restricted ccTLD was re-admitted: 0  -
+# rows where a restricted ccTLD appeared WITHOUT url context (correctly refused): 1
+#    alejooroncoy/campus-cli                            revistas.uh.cu x5

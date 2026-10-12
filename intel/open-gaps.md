@@ -6,6 +6,69 @@ updated: 2026-10-12
 
 # Education — open gaps ledger
 
+## ✅ Verdicts on p142's six pre-registered actions, judged by p143
+
+🔵 **All six resolved. Three refuted.** 🟢 **None is re-registered** — a falsifier that goes off
+has done its job. 🟢 **All six were answerable in one pass because `git clone` of public
+repositories now works from this environment**, with full history: `ACTION DJ` alone needed
+1 485 commits of author metadata that no single-file fetch could have supplied.
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION DJ`** — establish eduNEXT's jurisdiction from commit offsets across `eduNEXT/*` | 🟢 **DISCHARGED, falsifier SILENT** | `-0500` is dominant in **5 of 5** repositories, so the registered condition does not fire. 🔴 **And dominance was not sufficient** — `-0500` is Colombia *and* US Eastern Standard, and the pooled DST test returned `MIXED` on 5 of 5. Re-asked **per author** over 1 485 commits / 63 authors: 🟢 **13 authors at `-0500` in BOTH DST windows and never `-0400`** (491 commits) against 🔴 **2 with the US Eastern shape** (28 commits). `edunext.co` on **998 of 1 485 (67%)**, and on 6 of the 13. 🔵 **Residual stated: the channel does not separate Colombia from Peru or Ecuador** — all LATAM, so the region field is determined and the country rests on the mail domain. Instrument `compose/code/p143-edunext-jurisdiction` |
+| **`ACTION DK`** — build the vendor-tenancy host channel | 🔴 **DISCHARGED and REFUTED** | Condition as registered: *"refuted if fewer than three rows yield a tenancy subdomain that is not a placeholder."* 🔴 **Two rows.** 🟢 **But the row it was built for is placed**: `karkarkins/BlackboardAssistantMCP` → **North America (United States)**, North Carolina A&T, on `BB_LOGIN_URL=https://ncat.blackboard.com/` in its own README. 🔵 The second (`MartinSA04/ntnu-mcp`, NTNU Norway) was already placed by the offset channel and its evidence is in a **test fixture**, not shipped source. 🔴 **And the negative half is larger**: of 6 rows carrying any vendor host, **4 carry only the vendor's own estate** — `developer.blackboard.com` **19 times** across 44 repositories, placing nothing. 🟢 **Channel retired as registered; `ncat` hand-noted.** Instrument `compose/code/p143-vendor-tenancy` |
+| **`ACTION DL`** — find the mechanism behind `T30`'s npm correlation | 🔴 **DISCHARGED and REFUTED** | Condition: *"refuted if the npm rows are not systematically smaller."* 🔴 **They are larger.** Median declared tool count **18** on npm against **9** off it; `@imazhar101/mcp-canvas-server` declares **227**, more than any repository-only row on these shelves. 🔴 **And the byte comparison the action asked for cannot be made at all**: 7 of 8 npm packages ship only compiled output, so a byte count measures a *bundle* against a *source tree*. 🟢 **Only `@n35da/brightspace-mcp` ships source, and n=1 is reported as n=1.** Instrument `compose/code/p143-tier-size` |
+| **`ACTION DM`** — repair the surface instrument, then re-run all three tiers | 🔴 **DISCHARGED and REFUTED — `T30`'s three figures WITHDRAWN** | Condition: *"refuted if re-running changes any tier's dynamic share by more than five points."* 🔴 **GitHub-only tier moved 50% → 33% — 17 points.** 🔴 **Four static shapes were invisible, not the two registered**, and the fourth is a *misclassification* rather than blindness: p141 scored any `@x.tool(…)` without a literal `name=` as dynamic, when a bare decorator takes `fn.__name__` and is maximally static. 🟢 **Corroborated against two counts this KB already held — 31 on `edupage-mcp` (p142's hand read) and 10 on `global-education-mcp` (its own lockfile).** Instrument `compose/code/p143-surface-gate-repair`, **10 tests**, each pinning a defect that was real |
+| **`ACTION DN`** — re-admit `.py`/`.do`/`.cu`/`.cl` behind URL context | 🟢 **DISCHARGED, falsifier SILENT** | Condition: *"refuted if requiring URL context loses any of the 16 rows already placed."* 🟢 **19 of 19 regions reproduced, 16 of 16 retained.** 🟢 **The rule admits real hosts**: `juris.pjud.cl` (Chile's Judicial Branch) and `revistas.uh.cu` (Universidad de La Habana), while **five bare `url.hostname === 'revistas.uh.cu'` comparisons in the same file are correctly refused** — both halves firing on one host. 🔴 **No row changed region**, because the only row carrying them was already placed on 30 Peruvian hosts. 🔴 **Paraguay and the Dominican Republic are unblocked but unexercised.** Instrument `compose/code/p143-cctld-url-context` |
+| **`ACTION DO`** — audit `global-education-mcp`'s `tools.lock.json` against source | 🟢 **DISCHARGED, falsifier SILENT** | Condition: *"refuted if any hash disagrees."* 🟢 **10 of 10 AGREE**, recomputed **independently of the repository's own generator** — running that generator would ask the lockfile's author whether the lockfile is right. 🟢 **10 of 10 also agree with `server.py`** on `name`, `annotations` and `description`. 🔴 **`inputSchema` is NOT verified**: pydantic generates it at import, so checking it requires executing the repository. 🔵 **Three fields of four, named rather than rounded up to "the lockfile verifies".** Instrument `compose/code/p143-lockfile-audit` |
+
+### 🔴 The instrument defect this pass produced, and the reason it is the pass's main finding
+
+🔵 **Fifth consecutive pass whose first draft erred — and the first where the error was invisible
+to the falsifier guarding it.**
+
+`ACTION DM`'s repaired instrument, on its first run, reported `krzysztofbury/librus-mcp` as
+**23 literal / 0 dynamic**. p141 had reported **0 literal / 23 dynamic**. 🔴 **Both readings are
+drawn from the same 23 sites, and none of those sites is in the server the package ships** — 21
+are in `legacy_reference/src/server.py`, 2 in `scripts/qualify_native.py`. The shipped surface is
+**35** `server.tool(annotations=…)(fn)` calls in `src/librus_mcp/`.
+
+🔴 **The tier share was identical under both readings.** A falsifier phrased as *"the statistic
+must not move by more than five points"* passes any error that is symmetric across the
+population — including measuring the wrong population.
+
+🟢 **What caught it:** one subject's verdict flipped between two instruments, which prompted
+opening the repository and counting by hand. 🔵 **Adopted as `T37`**, with three enforcements:
+`NOT_SHIPPED` in `surface_gate2.py`, `test_not_shipped_trees_are_excluded`, and a
+`not_shipped_delta` column so a whole-tree/shipped-tree disagreement is visible per row instead
+of pooled into a share.
+
+🔴 **And `ACTION DS` is registered against the fix itself**, because `NOT_SHIPPED` excludes
+`scripts/` — which is where `global-education-mcp` keeps the very generator this pass praised.
+
+## 🆕 Gaps this ledger opens after p143, each with a pre-registered falsifier
+
+| action | the gap, and the evidence for it | 🔴 what would refute it |
+|---|---|---|
+| 🔴 **`ACTION DP`** — measure the npm tier on SOURCE. Clone the repositories behind all 8 npm packages, run `surface_gate2.py` over their source, and compare each package's bundle-derived tool count against its source-derived one | `T36` says two instruments' numbers are not comparable, and the npm tier is the claim's only load-bearing case. 🔴 **It currently rests on "we cannot measure it"**, which is an absence, not a measurement | 🔴 **Refuted if the two counts agree within one tool on 6 of 8 or more** — which would mean bundle and source are interchangeable for this measurement, `T36`'s central example collapses, and `T30`'s npm figure should be reinstated rather than withdrawn |
+| 🟡 **`ACTION DQ`** — find a second row with a tool-surface lockfile, or state there is one. Search the 44-row population and the 8 npm packages for any committed artefact pinning a tool surface (`tools.lock.json`, a snapshot test over `list_tools()`, a golden file) | `P21` and `ACTION DO` rest **entirely** on `malkreide/global-education-mcp`. 🔵 **p142 called machine-readable self-declaration something "appearing on this shelf without prompting"** — on a sample of one, plus a counter-example | 🔴 **Refuted if zero further rows carry one** — which makes `P21` a recipe from a single instance, to be published as *"one row does this and it is worth copying"* rather than as an ecosystem trend |
+| 🔴 **`ACTION DR`** — re-measure `librus-mcp`'s shipped surface by a second, independent method: `tools/list` fixtures, its README, or its tests, compared against the **35** published this pass | 🔴 **One method has already got this row wrong twice**, in opposite directions. 🔵 **A corrected figure from the instrument that produced the error deserves exactly the scepticism the error earned** | 🔴 **Refuted if the independent count is not 35** — which would mean the correction is as unreliable as what it replaced, and the row must be reported `SURFACE_UNRESOLVED` rather than `BOUNDED_STATIC` |
+| 🟡 **`ACTION DS`** — test whether `NOT_SHIPPED` is over-broad. Re-run all three tiers re-admitting each excluded directory one at a time, and record which rows change verdict | 🔴 **It excludes `scripts/`, which is where `global-education-mcp` keeps `tool_signatures.py`** — the artefact this pass holds up as the practice to copy. 🔵 **An exclusion list written for one defect is a population rule applied to every row** | 🔴 **Refuted if re-admitting any single directory changes a verdict on a row other than `librus-mcp`** — which would mean the list does more work than the defect it was built for, and must be narrowed to `legacy_reference/` alone |
+| 🟢 **`ACTION DT`** — place the 2 remaining `UNMAPPED` connector rows or declare them unplaceable with a reason. Try the per-author channel that placed eduNEXT, over both repositories' full history | `nitsuah/bb-mcp` (241 commits, `-0400`, only `developer.blackboard.com`) and `ruud0/aula-virtual-mcp` (`-0400`, only `aula-virtual.unav.edu`, which p142 showed is a **Spanish** `.edu`). 🟢 **`bb-mcp` has the commit volume the author channel needs** | 🔴 **Refuted if neither row has an author with commits in both DST windows** — which would mean the author channel needs a history these rows lack, and `P23` must carry a minimum-history caveat |
+| 🔴 **`ACTION DU`** — ask whether `T37` generalises. Audit the subject lists of `p142-origin-at-scale`, `p141-pom-chain-sweep` and `p140-live-surface-bound` for trees the artefact does not ship: vendored code, reference copies, examples | `T37` is currently one row in one probe. 🔵 **If this KB's other population-defined probes include non-shipped trees, every figure they produced inherits the defect** | 🔴 **Refuted if none of the three includes a non-shipped tree** — which makes `librus-mcp` a one-probe accident rather than a pattern, and `T37` should be demoted to an observation about one instrument |
+
+### 🔴 `ACTION CW` is NOT re-registered, for the sixth consecutive pass — and the reason is unchanged
+
+Texas HB 149 / TRAIGA remains unread. 🔴 **`capitol.texas.gov` is outside this environment's
+allowlist**, measured again this pass alongside `eur-lex.europa.eu`, `www.oecd.org`,
+`coe.int`, `api.uis.unesco.org` and `sdmx.oecd.org` — **all `000`**.
+
+🔵 **This is an environment request, not a research task.** 🟢 **One change to report:** the
+GitHub picture improved — `git clone` now works and `api.github.com` answers `200` on
+`rate_limit`, refusing repository endpoints on **scope** rather than blocking them. 🔴 **No
+government or inter-governmental source became reachable**, so every market figure in this KB
+stays second-hand and the two-line allowlist request stands.
+
 ## ✅ Verdicts on p141's six pre-registered actions, judged by p142
 
 🔵 **All six resolved. Two refuted.** 🟢 **None is re-registered** — a falsifier that goes off has

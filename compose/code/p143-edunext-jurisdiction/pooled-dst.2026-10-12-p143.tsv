@@ -1,0 +1,6 @@
+subject	total	n_0500	n_0400	0400_in_dst	0400_out_dst	0500_in_dst	0500_out_dst	verdict
+eduNEXT/eox-tenant	458	298	108	62	26	136	95	MIXED — both offsets in both windows
+eduNEXT/eox-core	751	451	255	152	61	349	72	MIXED — both offsets in both windows
+eduNEXT/eox-theming	134	68	48	29	9	45	15	MIXED — both offsets in both windows
+eduNEXT/eox-audit-model	102	57	26	21	5	46	7	MIXED — both offsets in both windows
+eduNEXT/picasso	40	22	9	7	1	20	2	MIXED — both offsets in both windows

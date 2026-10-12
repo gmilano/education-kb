@@ -1,0 +1,25 @@
+subject	tier	languages	is_mcp_server	literal_sites	dynamic_sites	gated_sites	static_bounds_live	verdict	shapes	all_tree_literal	all_tree_dynamic	not_shipped_delta
+_imazhar101_mcp-canvas-server-2.1.3	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+_ink-waffle_moodle-mcp-0.2.0	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+_n35da_brightspace-mcp-0.4.0	npm	js	YES	0	17	0	NO	DYNAMIC_UNBOUNDED	JS_LINE=17	0	17	SAME
+_owen-x-tech_canvas-mcp-1.1.0	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+canvas-mcp-server-2.2.3	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+eth-moodle-mcp-1.3.3	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+mcp-canvas-lms-1.0.5	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+moodle-mcp-server-aql-0.1.7	npm		NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+zijinz456/OpenTutor	agent	js,python	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)	-	0	0	-
+ahmedEid1/lumen	agent	python	YES	0	9	0	NO	DYNAMIC_UNBOUNDED	DECORATOR_CALL_NAME_EXPR=9	0	9	SAME
+mohaneesh-03/mcp-tutor	agent	python	YES	5	0	0	YES	BOUNDED_STATIC	DECORATOR_CALL_NAME_FROM_FUNC=5	5	0	SAME
+nirholas/ai-tutor-mcp	agent	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED	JS_LINE=1	0	1	SAME
+hesham0-0nasser/tutor-lms-mcp	agent	php	YES	1	0	0	YES	BOUNDED_STATIC	PHP_LINE=1	1	0	SAME
+BetterSEQTA/BetterSEQTA-Plus	github-only	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+BetterSEQTA/DesQTA	github-only	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+nitsuah/bb-mcp	github-only	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED	JS_LINE=1	0	1	SAME
+Piyushtanwani/DAU-buddy	github-only	python	YES	40	0	0	YES	BOUNDED_STATIC	DECORATOR_CALL_NAME_FROM_FUNC=40	40	0	SAME
+yourssu/soongpt-plugin	github-only	python	YES	20	0	0	YES	BOUNDED_STATIC	DECORATOR_CALL_NAME_FROM_FUNC=20	20	0	SAME
+oliverhruby/edupage-mcp	github-only	python	YES	31	0	0	YES	BOUNDED_STATIC	DECORATOR_INDIRECTION=31	31	0	SAME
+krzysztofbury/librus-mcp	github-only	python	YES	35	0	0	YES	BOUNDED_STATIC	CALL_APPLIED_NAME_FROM_FUNC=35	58	1	WHOLE_TREE_ADDS lit+23 dyn+1
+divyarthjain/vtop-bhopal-mcp	github-only	js	YES	0	4	0	NO	DYNAMIC_UNBOUNDED	JS_LINE=4	0	4	SAME
+Agso-o/sigaa-calendar	github-only	go	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+juliancasaburi/siu-guarani-promedio-extension	github-only	js	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	-	0	0	-
+malkreide/global-education-mcp	foundations	python	YES	10	0	0	YES	BOUNDED_STATIC	DECORATOR_CALL_NAME_LITERAL=10	10	0	SAME

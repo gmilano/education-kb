@@ -1,0 +1,15 @@
+
+# rows scanned                        : 44
+# rows with ANY vendor-domain host     : 6
+# 🟢 rows PLACED by a resolved tenancy  : 2
+#      MartinSA04/ntnu-mcp                            ntnu.blackboard.com    EMEA
+#      karkarkins/BlackboardAssistantMCP              ncat.blackboard.com    North America
+# rows with an UNRESOLVED tenancy label: 0
+# 🔴 rows whose only vendor hosts are the VENDOR'S OWN: 4
+#      alejooroncoy/campus-cli                        files.blackboard.com
+#      felipedias-ie/blackboard-mcp                   basic-doc-viewer.eu.api.blackboard.com,developer.blackboard.com,notif-websockets
+#      nitsuah/bb-mcp                                 developer.blackboard.com
+#      skhdemo/uoft-quercus-mcp                       community.canvaslms.com
+#
+# FALSIFIER: registered as 'fewer than three rows yield a non-placeholder tenancy'
+# rows yielding a non-placeholder tenancy subdomain: 2  => FALSIFIER FIRES

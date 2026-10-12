@@ -1,0 +1,20 @@
+subject	offset	eligible	region	evidence_kind	countries	urlctx_hosts	rejected_no_urlctx	note
+Agso-o/sigaa-calendar	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(1)	NONE	NONE	every country-bearing host is LATAM: Brazil
+MatheusMach/QuantoFalta	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(1)	NONE	NONE	every country-bearing host is LATAM: Brazil
+RubsNeto/SigaaUI	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(13)	NONE	NONE	every country-bearing host is LATAM: Brazil
+SIU-Toba/docker-guarani	-0300	YES	LATAM	CCTLD_IN_SOURCE	Argentina(3)	NONE	NONE	every country-bearing host is LATAM: Argentina
+SleepyPandas/UofT-MCP	-0400	YES	North America	CCTLD_IN_SOURCE	Canada(7)	NONE	NONE	every country-bearing host is North America: Canada
+alejooroncoy/campus-cli	-0500	YES	LATAM	CCTLD_IN_SOURCE	Chile(1);Colombia(3);Cuba(1);Mexico(1);Peru(30)	juris.pjud.cl,revistas.uh.cu	revistas.uh.cu x5	every country-bearing host is LATAM: Chile, Colombia, Cuba, Mexico, Peru
+despedite/siu-guarani	-0300	YES	LATAM	CCTLD_IN_SOURCE	Argentina(1)	NONE	NONE	every country-bearing host is LATAM: Argentina
+eugeborzone/Auto_Grade_Guarani	-0300	YES	LATAM	CCTLD_IN_SOURCE	Argentina(1)	NONE	NONE	every country-bearing host is LATAM: Argentina
+fabrica-de-inovacao/expeditto	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(11)	NONE	NONE	every country-bearing host is LATAM: Brazil
+filipecalegario/auto-sigaa	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(1)	NONE	NONE	every country-bearing host is LATAM: Brazil
+frjunioalves/suap-mcp	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(3)	NONE	NONE	every country-bearing host is LATAM: Brazil
+joojdev/academic-tracker-mcp	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(1)	NONE	NONE	every country-bearing host is LATAM: Brazil
+juliancasaburi/siu-guarani-promedio-extension	-0300	YES	LATAM	CCTLD_IN_SOURCE	Argentina(1)	NONE	NONE	every country-bearing host is LATAM: Argentina
+karkarkins/BlackboardAssistantMCP	-0400	YES	UNMAPPED	NO_HOST	NONE	NONE	NONE	no country-bearing host in source
+luca-dupont2/mcgill-vsb-mcp	-0400	YES	North America	CCTLD_IN_SOURCE	Canada(1)	NONE	NONE	every country-bearing host is North America: Canada
+nitsuah/bb-mcp	-0400	YES	UNMAPPED	NO_HOST	NONE	NONE	NONE	no country-bearing host in source
+ruud0/aula-virtual-mcp	-0400	YES	UNMAPPED	EDU_ONLY	NONE	NONE	NONE	only .edu hosts — never booked alone
+skhdemo/uoft-quercus-mcp	-0400	YES	North America	CCTLD_IN_SOURCE	Canada(5)	NONE	NONE	every country-bearing host is North America: Canada
+trindadetiago/sigaa-caiu	-0300	YES	LATAM	CCTLD_IN_SOURCE	Brazil(6)	NONE	NONE	every country-bearing host is LATAM: Brazil

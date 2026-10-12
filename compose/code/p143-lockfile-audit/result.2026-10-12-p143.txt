@@ -1,0 +1,17 @@
+
+# tools in lockfile: 10
+# hash AGREE:    10
+# hash DISAGREE: 0
+# entries whose signature key-set is NOT the documented four: 0 
+# entries WITHOUT readOnlyHint=true: 0 
+tool	stored_hash	recomputed_hash	verdict	sig_keys	annotations	read_only	schema_props
+education_benchmark_countries	65ab6913ccdde306	65ab6913ccdde306	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+oecd_get_education_indicator	c583b3c26ab0c796	c583b3c26ab0c796	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+oecd_list_education_datasets	f01c287061b3b2d3	f01c287061b3b2d3	AGREE	annotations,description,inputSchema,name	YES(5)	True	0
+oecd_search_datasets	0d677b2500cab6a9	0d677b2500cab6a9	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_compare_countries	dd06d00c12b439d3	dd06d00c12b439d3	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_country_education_profile	6a412f3d0b431799	6a412f3d0b431799	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_get_education_data	a265bd1b755b04b6	a265bd1b755b04b6	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_list_countries	f2b0d92326e72e77	f2b0d92326e72e77	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_list_indicators	ddef6ec497d372c7	ddef6ec497d372c7	AGREE	annotations,description,inputSchema,name	YES(5)	True	1
+uis_list_versions	60f8e7d80ee87cbe	60f8e7d80ee87cbe	AGREE	annotations,description,inputSchema,name	YES(5)	True	0
