@@ -41,8 +41,12 @@ off.**
   corrected**: the Annex III date (`T88`), `T78`'s unmeasurability, `P151-S`'s *"every
   GitHub channel"*, and `P970`'s *"the sandbox cannot execute repository code"* — 🟢 **p151's
   own suite ran 31 of 31 in this pass.**
-- 🟢 **56 of 56 clones** (50 census subjects + 6 verticals, **2.4 GB**), so p153 starts with
-  both populations on disk.
+- 🟢 **56 of 56 clones** (50 census subjects + 6 verticals, **2.4 GB**) — 🔴 **and they do
+  NOT persist.** 🔵 This session's container is ephemeral and reclaimed, so p153 re-clones
+  from scratch. 🟢 **What carries forward is the COST, now measured rather than feared:
+  56 of 56 OK, 2.4 GB, under two minutes, `--depth 1 --single-branch`.** 🔵 **A corrected
+  sentence: an earlier draft of this entry said p153 would start with both populations on
+  disk. It will not** — `ACTION GE`'s rule applied to this shelf's own housekeeping.
 - 🟢 **Two of p151's own gates caught defects in p152's PROSE, which is the only evidence
   that they work on a page they did not write.** 🔴 The region-heading gate flagged **three**
   `###` headings this pass put inside the `## Opportunities by region` block — 🟢 demoted to
