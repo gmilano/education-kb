@@ -1,0 +1,12 @@
+dimension	finding	how measured (p160)
+licence	Apache-2.0, LICENSE, 11357 B	P56 gate, body read on main
+what it is	a Django APP (pip install OpenLXP-XIA), not a platform -- V-T-V-L: Validate, Transform, Validate, Load for learning-EXPERIENCE METADATA	README + tree read
+tracked files	53	find on depth=1 clone
+last commit	2026-02-26 (a README edit), 228 days stale	git log -1
+django pin	Django>=3.2.3,<4.0.0 -- Django 3.2 reached END OF LIFE in April 2024	requirements.txt
+other pins	boto3~=1.16.54, coverage>=5.5,<6.0, django-cors-headers<3.8, bleach==6.0.0 -- a 2021-era set	requirements.txt
+schema server	AWS S3 only, via the sibling Experience Schema Service (XSS)	README
+required siblings	openlxp/openlxp-xis RESOLVES (main); openlxp/openlxp-xss RESOLVES (main); openlxp/openlxp-xsr-aws DOES NOT RESOLVE (credential prompt -- private or absent, P54)	git ls-remote x3
+xapi / caliper	ABSENT -- 0 matches in app/	grep
+credentialing	ABSENT -- 0 badge-named paths	find
+verdict for a studio	NOT learning-RECORD plumbing (no xAPI statements). Metadata CATALOGUING plumbing, usable only as part of the OpenLXP trio, on an EOL Django pin	synthesis

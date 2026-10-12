@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 160 — 2026-10-12
+
+🟢 **Moodle — the platform this page routes copyleft engagements to, and the one it had never
+read — is now measured from its tree.** 🟢 **Two of its rows change, one correction is owed to
+`mentingo`, and one description on this page was simply wrong.**
+
+### 🆕 🟢 The routing table, corrected where this pass's measurements changed it
+
+| engagement | platform | licence *(body-read)* | why — and what changed this pass |
+|---|---|---|---|
+| 🟢 **Institution that wants to OWN an academic platform** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** `10 982 B` | 🟢 **UNCHANGED and now CURRENT: committed `2026-10-12`, the day of this pass.** 🟢 **QTI 2.1 at `919` paths on a uniform re-count** |
+| 🆕 🟢 **ASSESSMENT-heavy engagement** *(exams, item banks, QTI interchange)* | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🆕 🟢 **Settled by one dimension: OpenOLAT `919` QTI paths against Moodle's `8`, and Moodle's eight are QTI `v1.2` LEGACY — Common Cartridge `.xsd` schemas and a Blackboard import filter.** 🔴 **Moodle cannot interchange a modern QTI item bank** |
+| 🆕 🟢 **xAPI / learning-record engagement** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** `35 147 B` | 🆕 🟢 **REVERSED from this page's standing assumption: Moodle SHIPS xAPI — `public/lib/xapi`, `78` paths, `api.php`/`iri.php`/`state_store.php`.** 🔴 **OpenOLAT has `0` on four spellings.** 🔵 **First dimension where the copyleft platform is the right answer on capability, not just on incumbency** |
+| 🆕 🟢 **Client wants GOVERNED AI inside an existing LMS** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) core AI | 🟡 **GPL-3.0** | 🆕 🟢 **`public/ai`, `372` files: seven providers (`ollama` included — sovereign deployment is CONFIGURATION), a per-call ledger in `ai_action_register`, policy acceptance in `ai_policy_register` with a report, and `rate_limiter.php`.** 🔴 **Four actions, NONE evaluative.** 🔵 **`P160-B`** |
+| 🟢 **Corporate L&D / HRTech, greenfield, white-labelled or resold** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** `1 062 B` | 🟢 **Still the only row with a real tenancy boundary (PostgreSQL RLS).** 🆕 🟢 **CORRECTION: it DOES ship SCORM — `119` files, `packages/scorm-export-generator` + `packages/scorm-export-runtime` with a bundled player.** 🔴 **xAPI still absent (README only)** |
+| 🟢 **Client needs ISSUED, portable CREDENTIALS** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) *(Apache-2.0)* **or** 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) *(GPL-3.0)* | mixed | 🆕 🟢 **TWO incumbents, not one: OpenOLAT `182` paths, Moodle `306` — `assertion.php`, `badgeclass.php`, `criteria/`, backpack export, `backpack_api2p1_mapping.php`.** 🔴 **BOTH are Open Badges `v2` only; `OPEN_BADGES_V2` appears `132` times in Moodle and `V3` never.** 🟢 **`P159-A`'s signing build stands — `ACTION HY` confirmed `0 of 5` platforms issue an OB 3.0 / W3C VC** |
+| 🔴 **MULTI-TENANT public-sector or district estate** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) **or** separate instances | 🟢 MIT | 🆕 🔴 **Measured and negative: Moodle core has NO tenancy — its `62` *"tenant"* paths are `62 of 62` inside the vendored `public/lib/google2-service`** *(`T136`)*. 🔴 **Moodle Workplace, which has it, is proprietary.** 🔴 **OpenOLAT has none either** |
+| 🆕 🔴 **Metadata CATALOGUING plumbing** *(was: "learning-record plumbing")* | 🟡 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 **Apache-2.0** `11 357 B` | 🆕 🔴 **CORRECTION — this page described it wrongly.** 🔴 **`0` matches for `xapi`, `caliper` or `statement`: it carries METADATA, not learning records.** 🔴 **`53` files, last commit `2026-02-26` (`228` days, a README edit), `Django<4.0` (EOL April 2024), and its `openlxp-xsr-aws` sibling does not resolve.** 🟡 **Vendor the V-T-V-L idea; do not ship the package** |
+| 🔴 **Education ERP / SIS** | 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(LGPL-3.0)*, [`frappe/erpnext`](https://github.com/frappe/erpnext) *(GPL-3.0)* | 🔴 copyleft | 🔴 **THIRTEENTH pass with no MIT/Apache education ERP.** 🆕 🔴 **This pass's ERP/CRM query returned one vendor's own pages in SEVEN locales — `T122` a fourth time** |
+
+### 🆕 🔴 `T135` — a capability that ships as an EXPORT PIPELINE is invisible to a schema census
+
+[`evidence/mentingo-scorm-correction.2026-10-12-p160.tsv`](../evidence/mentingo-scorm-correction.2026-10-12-p160.tsv)
+
+🔴 **p158's `T127` read `mentingo`'s DATABASE SCHEMA and concluded its topics over-claim `scorm`
+and `xapi`.** 🟢 **The tree says otherwise on half of it:** 🟢 **`119` SCORM files —
+`packages/scorm-export-generator`, `packages/scorm-export-runtime` including `src/player` and its
+assets, `packages/shared/src/constants/scorm.ts`, and SCORM references inside the API's
+`certificates`, `adminChapter` and `native-archive` import/snapshot services.**
+🟢 **`xapi` appears ONLY in `README.md` — `0` code or schema matches, so `T127` stands there.**
+🆕 **`T135`:** 🔵 **SCORM in `mentingo` is an EXPORT PIPELINE — a build artefact with a bundled
+player — not a schema concept. A schema census structurally cannot see it**, 🔵 **exactly as
+`T133`'s topic census could not see a capability shipped as a module.** 🟢 **Three instruments,
+three blind spots, one lesson: match the instrument to how the capability is IMPLEMENTED.**
+🟡 **`T127` is amended, not withdrawn: the `xapi` half was right.**
 ## Pass 159 — 2026-10-12
 
 🟢 **`OpenOLAT` was this page's default recommendation for the fork-and-own academic case on an

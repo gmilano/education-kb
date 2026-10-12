@@ -1,0 +1,33 @@
+dimension	moodle/moodle	openolat/OpenOLAT	how measured (p160)
+default_branch	main	master	git ls-remote --symref
+head_sha	f20534726	e4be14f0	ls-remote HEAD == clone HEAD (both)
+version_in_tree	6.0dev build 20261005 branch 600	n/r	public/version.php read from clone
+licence_body	COPYING.txt 35147 B GPL-3.0	LICENSE 10982 B Apache-2.0	P56 gate, body read
+last_commit	2026-10-03	2026-10-12	git log -1 on depth=1 clone
+tracked_files	67589	25823	find, .git and node_modules excluded
+lti_paths_raw	1225	388	ipath *lti* -- CONTAMINATED
+lti_paths_multi_collision	375	128	ipath *lti* AND multi
+lti_paths_clean	843	255	raw minus multi-family
+lti13_vocabulary	ltiadvantage (94); lib/lti1p3	lti13 (158)	per-platform naming differs
+lti_as_platform	public/mod/lti (254 files)	lti13.platform.iss	tree read
+lti_as_tool	public/enrol/lti + auth/lti (154 files)	LTI13Platform entity	tree read
+ags_grade_passback	mod/lti/service/gradebookservices/.../lineitem(s).php	model/json/LineItem.java	tree read
+nrps_names_roles	enrol/lti/.../entity/nrps_info.php + task/sync_members.php	model/json/Member.java	tree read
+deep_linking	mod/lti/openid-configuration.php + amd/src/contentitem.js	LTI13ContentItem.java	tree read
+oidc_jwks	mod/lti/classes/local/ltiopenid/jwks_helper.php; enrol/lti/jwks.php	OIDCApi.java, LTI13Key.java	tree read
+open_badges	YES -- public/badges, 306 paths	YES -- openbadges, 182 paths	tree read
+open_badges_version	OPEN_BADGES_V2 x132, V1 x2, backpack_api2p1	v2 package, openbadges/v2 context	grep constants / package path
+open_badges_3_w3c_vc	ABSENT (0 on 8 spellings)	ABSENT (0 on 8 spellings)	grep OpenBadgeCredential|VerifiableCredential|credentialSubject|ob/v3p0|openbadges/v3|AchievementSubject|Ed25519Signature|did:key
+xapi	PRESENT -- public/lib/xapi (78 paths): api.php, iri.php, state_store.php	ABSENT (0 paths)	tree read
+cmi5	ABSENT	ABSENT	grep
+scorm	226 paths (public/mod/scorm)	186 paths	ipath *scorm*
+qti	8 paths, ALL QTI v1.2 legacy (IMS CC schemas + Blackboard import)	919 paths (QTI 2.1 engine)	ipath *qti* + file read
+multi_tenancy	ABSENT in core -- 62 "tenant" paths are ALL public/lib/google2-service (vendored)	ABSENT (0 paths)	ipath *tenant* + attribution
+core_ai_subsystem	PRESENT -- public/ai, 372 files	not measured this pass	tree read
+core_ai_providers	anthropic(36) awsbedrock(35) azureai(21) deepseek(25) gemini(34) ollama(24) openai(34)	n/r	ls public/ai/provider
+core_ai_actions	explain_text, generate_image, generate_text, summarise_text -- NONE evaluative	n/r	ls public/ai/classes/aiactions
+core_ai_audit_tables	ai_action_register, ai_action_{explain,generate,generate_image,summarise}, ai_policy_register, ai_providers	n/r	public/lib/db/install.xml
+core_ai_ledger_fields	actionname actionid success userid contextid courseid provider model prompttokens completiontokens errorcode errormessage timecreated timecompleted	n/r	install.xml field read
+core_ai_policy_gate	public/ai/policy_acceptance_report.php + policymodal.js + reportbuilder systemreport	n/r	tree read
+core_ai_rate_limit	public/ai/classes/rate_limiter.php	n/r	tree read
+mcp_server	ABSENT	not measured	grep modelcontextprotocol|mcp_server

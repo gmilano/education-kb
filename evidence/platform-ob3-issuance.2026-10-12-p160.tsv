@@ -1,0 +1,7 @@
+platform	licence (body-read p160)	bytes	default_branch	badge-named paths	what they actually are	OB 3.0 / W3C VC issuance
+moodle/moodle	GPL-3.0 (COPYING.txt)	35147	main	306	Open Badges v2 issuer: assertion.php, badgeclass.php, backpack_api2p1_mapping.php, criteria/	NO -- 0 matches, 8 spellings
+openolat/OpenOLAT	Apache-2.0	10982	master	198	Open Badges v2 issuer: BadgeAssertion, BadgeClass, OpenBadgesBakeContext, BadgeVerification, LinkedInUrl	NO -- 0 matches, 8 spellings
+Selleo/mentingo	MIT	1062	main	8	UI COMPONENTS ONLY -- badge.tsx, ProgressBadge.tsx, LearningPathStatusBadge.tsx	NO -- and no credentialing at all
+openfun/richie	MIT	1079	master	7	UI COMPONENTS ONLY -- components/Badge/*, social-networks/*-badges.html	NO -- and no credentialing at all
+openlxp/openlxp-xia	Apache-2.0	11357	main	0	none	NO -- metadata pipeline, not a credential issuer
+opensalt/OB3DefinitionWidget	MIT	1080	main	n/a	OB 3.0 AUTHORING widget (known to p159, not one of the four)	AUTHORING only -- does not sign

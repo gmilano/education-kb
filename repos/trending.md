@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 160 — 🟢 a recency instrument that does NOT need the API
+
+🔴 **GitHub trending could not be read this pass — `api.github.com` is closed to this session
+(`T137`, `agents/trending.md`) and the web channel returned AI *courses* rather than education
+repositories.**
+🟢 **So recency was measured a different way: `git log -1` on a `depth=1` clone gives the real
+last-commit date of the default branch, which is what `pushed_at` was being used as a proxy
+for.** [`evidence/platform-currency.2026-10-12-p160.tsv`](../evidence/platform-currency.2026-10-12-p160.tsv)
+
+| repo | licence | head | last commit | stale | tracked files | verdict |
+|---|---|---|---|---|---|---|
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | `e4be14f0` *(`master`)* | 🟢 **2026-10-12** | 🟢 **`0` days — committed TODAY** | 25 823 | 🟢 **ACTIVE.** 🔵 The fork-and-own recommendation is current, not inherited |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | `242a932` *(`main`)* | 🟢 **2026-10-10** | 🟢 `2` days | 4 753 | 🟢 **ACTIVE** |
+| 🟢 [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** *(`1 079 B`)* | `8b14aec` *(`master`)* | 🟢 **2026-10-07** | 🟢 `5` days | 3 175 | 🟢 **ACTIVE.** 🔴 **Its default branch is `master`, not `main`** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** | `f20534726` *(`main`)* | 🟢 **2026-10-03** | 🟢 `9` days | 67 589 | 🟢 **ACTIVE — `6.0dev`, weekly dev cadence** |
+| 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 **Apache-2.0** | `fd594e1` *(`main`)* | 🔴 **2026-02-26** | 🔴 **`228` days** | 53 | 🔴 **STALE — and the last change was a README edit.** 🔴 **Django pinned `<4.0`, EOL since April 2024 ** |
+
+🟢 **Every row's HEAD sha was cross-checked between `ls-remote` and the clone — `5 of 5` agree**,
+🔵 **which is the `P987` currency check run on the clone channel for the first time.**
+
+🆕 🟢 **What this instrument gives that stars never did:** 🟢 **a licence read from the body, a
+tree size, a capability census and a commit date, all from one artefact, with no metadata layer
+in between.** 🔴 **What it cannot give: stars, forks, topics, `created_at` — so NEW-ENTRANT
+discovery stays blocked until a pass has API access again.** 🔵 **Cost: `1.3 GB` of clone traffic
+for five repositories. It does not scale to a 100-row census; it is a PLATFORM-tier instrument.**
+
 ## 2026-10-12 — Pass 159
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**

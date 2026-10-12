@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 160 — 🔴 the discovery channel is CLOSED, and the replacement is measured
+
+🔴 **No new agent rows this pass, and the reason is an instrument, not an absence.**
+🟢 **`api.github.com` refuses every repository this session is not configured for, so
+`topic:ai-tutor`, `topic:edtech`, `created:>`, stars, forks and `pushed_at` — every channel this
+shelf has used to find new rows for 160 passes — returned nothing at all.**
+[`evidence/channel-boundary.2026-10-12-p160.tsv`](../evidence/channel-boundary.2026-10-12-p160.tsv)
+
+### 🆕 🔴 `T137` — the API refusal is a POLICY SCOPE, not auth and not rate limiting
+
+| probe | result |
+|---|---|
+| 🟢 `api.github.com/rate_limit` | 🟢 **`200` — core `15 000` remaining, search `30` remaining, `0` used** |
+| 🔴 `api.github.com/search/repositories?q=topic:ai-tutor` | 🔴 **`403` — *"sessions are bound to their configured repositories"*** |
+| 🔴 `api.github.com/repos/moodle/moodle` | 🔴 **`403` — the same message. Even repo-scoped endpoints are refused** |
+| 🟢 `git clone --depth=1` | 🟢 **WORKS — `1.3 GB` across five platform repos this pass** |
+| 🟢 `git ls-remote --symref` | 🟢 **WORKS — existence and default branch for every repo probed** |
+| 🟢 `raw.githubusercontent.com` | 🟢 **WORKS — `200` on `47` licence-body reads** |
+
+🆕 **`T137`, and it REFINES p159's `T134` rather than repeating it:** 🔴 **p159 recorded
+`api.github.com 403` as an egress fact.** 🟢 **The credential is live and unspent — `rate_limit`
+answers `200` with the full quota — so the refusal is a repository-scope POLICY, and the message
+says so.** 🔵 **Which matters practically: a future pass cannot fix this by waiting, slowing down
+or retrying. It can only change instrument.**
+
+🟢 **The substitute, and it is in some ways BETTER:** 🟢 **a `--depth=1` clone gives the full tree
+AND file CONTENT, which the API's search never did** — this pass read `97 992` tracked files
+across five platforms. 🔴 **What is lost is attention and recency metadata: stars, topics,
+`created_at`, forks.** 🟢 **`git log -1` substitutes for `pushed_at`**
+*(see `repos/trending.md`)*. 🔴 **No substitute for stars exists on the clone channel.**
+
+### 🟢 What was searched for new agents anyway, and what came back
+
+| query | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **`0` education-specific rows.** 🟡 Returned `microsoft/ai-agents-for-beginners` and `pguso/agents-from-scratch` — AI *courses*, not education-industry agents. 🔵 **`T122`'s family: the query returns the AI-learning market, not the learning market** |
+| `github trending education AI 2026` | 🔴 **`0` rows.** 🟡 Third-party trackers only; the one named row (`rohitg00/ai-engineering-from-scratch`) is an AI course again |
+| `open source platform education LMS SIS MIT Apache 2026 self-hosted` | 🔴 **`0` new rows.** 🟡 Returned ONE vendor's own pages in seven locales *(OpenEduCat, LGPL-3.0 — already on this shelf)* — 🔴 **`T122` confirmed a FOURTH time** |
+
+🔴 **Recorded as an informed gap: the agent shelf did not grow this pass.** 🟢 **It was
+re-verified instead — `10 of 10` attention-tier licences reproduced byte-for-byte, and `38`
+no-grant rows re-probed on 33 paths** *(`agents/top.md`)*.
+
 ## 2026-10-12 — Pass 159
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**

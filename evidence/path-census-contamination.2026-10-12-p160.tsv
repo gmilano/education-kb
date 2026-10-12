@@ -1,0 +1,8 @@
+token	repo	raw matches	contaminated by	contaminated count	clean	contamination rate	mechanism
+lti	moodle/moodle	1225	the substring "multi" (multianswer, multichoice, multilang)	375	843	30.6%	a 3-letter token is a substring of a common English word
+lti	openolat/OpenOLAT	388	the substring "multi"	128	255	33.0%	same
+tenant	moodle/moodle	62	vendored public/lib/google2-service	62	0	100.0%	a vendored third-party SDK answers for the host project
+badge	Selleo/mentingo	8	UI components (badge.tsx, ProgressBadge.tsx)	8	0	100.0%	a product word and a credential standard share a name
+badge	openfun/richie	7	UI components (components/Badge, footer-badges.html)	7	0	100.0%	same
+lti13	moodle/moodle	0	n/a -- FALSE ABSENCE	0	0	n/a	Moodle spells LTI 1.3 "ltiadvantage" (94 paths) + lib/lti1p3
+ltiadvantage	openolat/OpenOLAT	0	n/a -- FALSE ABSENCE	0	0	n/a	OpenOLAT spells it "lti13" (158 paths)

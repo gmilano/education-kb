@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 160 — 2026-10-12
+
+### 1. 🆕 🟢 The governed-AI plumbing an education client would pay to build is already in Moodle core — *Global, measured*
+
+🟢 **`public/ai`, `372` files, GPL-3.0:** 🟢 **seven pluggable providers (`anthropic`,
+`awsbedrock`, `azureai`, `deepseek`, `gemini`, `ollama`, `openai`), a per-call ledger in
+`ai_action_register` (user, course, context, provider, model, prompt and completion tokens,
+success, error, timings), per-user policy acceptance in `ai_policy_register` with a
+`reportbuilder` report, and `rate_limiter.php`.**
+🆕 **`T139`:** 🔵 **the audit artefact `P158-A` assembled from Langfuse traces and `mentingo`'s
+rubric tables EXISTS IN CORE on the world's most widely installed LMS.**
+🔴 **And the boundary is exactly as useful as the capability: Moodle core AI has FOUR actions —
+`generate_text`, `generate_image`, `summarise_text`, `explain_text` — and NONE is evaluative.**
+🟢 **So core Moodle does not grade, score or place a learner, and sits outside the EU AI Act's
+Annex III evaluative tier; the first plugin that adds an evaluative action inherits the
+high-risk obligations.** 🔵 **That line is where `P160-B` puts the engagement.**
+
+### 2. 🆕 🔴 This shelf publishes path counts as capability evidence, and a path count is contaminated three ways — *Global, measured*
+
+🔴 **`ipath *lti*` returns `1 225` paths in Moodle; `375` of them (`30.6%`) are `multi`** —
+`multianswer`, `multichoice`, `multilang`. 🔴 **OpenOLAT: `128 of 388`, `33.0%`.**
+🔴 **`ipath *tenant*` returns `62` paths in Moodle and `62 of 62` are inside the VENDORED
+`public/lib/google2-service`.** 🔴 **`mentingo`'s `8` and `richie`'s `7` *"badge"* paths are
+`15 of 15` UI components.**
+🔴 **And it fails in the other direction too: `lti13` returns `0` in Moodle, which spells LTI 1.3
+`ltiadvantage`; `ltiadvantage` returns `0` in OpenOLAT, which spells it `lti13`.**
+🆕 **`T136`:** 🟢 **disambiguate the token, attribute the hits to first-party code, and take the
+probe vocabulary from the platform itself — otherwise the census invents both capabilities and
+absences.** 🟡 **p159's OpenOLAT figures are NOT affected: they were directory-scoped.**
+
+### 3. 🆕 🔴 Three instruments, three blind spots, one rule: match the instrument to how the capability is IMPLEMENTED — *Global, measured*
+
+| instrument | blind to | instance |
+|---|---|---|
+| 🔴 **topic query** *(`T133`, p159)* | a capability shipped as a MODULE of a platform | OpenOLAT's Open Badges, invisible to `topic:open-badges` |
+| 🆕 🔴 **schema census** *(`T135`, this pass)* | a capability shipped as an EXPORT PIPELINE | 🟢 **`mentingo` ships SCORM — `119` files, `scorm-export-generator` + `scorm-export-runtime` with a bundled player.** 🔴 **p158's `T127` read the DB schema and called the claim false** |
+| 🆕 🔴 **path-name census** *(`T136`, this pass)* | nothing — it OVER-counts instead | `multi`, vendored SDKs, UI badges |
+
+🟢 **`T127` is AMENDED, not withdrawn: `mentingo`'s `xapi` topic claim is still unsupported
+(`README` only, `0` code matches).** 🔵 **The pattern across all three: an instrument's blind
+spot is a property of the IMPLEMENTATION SHAPE it cannot see, and three different instruments
+have now mis-reported the same shelf.**
+
+### 4. 🆕 🟢 Credentialing has TWO open-source incumbents, both one spec version behind the demand — *Global, with North America and EMEA weight*
+
+🟢 **`ACTION HX` + `ACTION HY`, both falsifiers SILENT: Moodle ships Open Badges at `306` paths
+and OpenOLAT at `182`.** 🔴 **Both are `v2` ONLY — `OPEN_BADGES_V2` appears `132` times in
+Moodle's code and `V3` never; neither emits an OB 3.0 or W3C Verifiable Credential on any of
+eight spellings; `mentingo`, `richie` and `openlxp-xia` have no credentialing at all.**
+🟢 **Against 1EdTech's Badge Count 2025 — `40%` of badge providers issuing some OB 3.0,
+`2 694 271` OB 3.0 achievements, `6 269 066` CLRs, `74M`+ badges total.**
+🔵 **So the lane is not *"no incumbent"* (p157) and not *"one incumbent"* (p159): it is TWO
+incumbents at `v2`, dated demand at `v3`, and a signing step nobody permissive has shipped.**
+🟢 **`P159-A` stands as a build, and its scope is now confirmed: authoring exists
+(`opensalt/OB3DefinitionWidget`, MIT), issuance does not.**
+
+### 5. 🆕 🟢 The platform choice now splits on TWO measured dimensions instead of licence alone — *Global, measured*
+
+| if the engagement needs | the answer is | because |
+|---|---|---|
+| 🟢 **modern QTI assessment interchange** | 🟢 **OpenOLAT** *(Apache-2.0)* | 🟢 **`919` QTI paths against Moodle's `8`** — 🔴 **and Moodle's eight are QTI `v1.2` legacy: Common Cartridge `.xsd` and a Blackboard import filter** |
+| 🆕 🟢 **xAPI learning records** | 🆕 🟡 **Moodle** *(GPL-3.0)* | 🟢 **`public/lib/xapi`, `78` paths, `api.php`/`iri.php`/`state_store.php`.** 🔴 **OpenOLAT: `0` on four spellings** |
+| 🟢 **multi-tenancy** | 🟢 **`mentingo`** *(MIT)* | 🔴 **NEITHER platform has it: Moodle's `62` "tenant" paths are all vendored, OpenOLAT has none, and Moodle Workplace is proprietary** |
+| 🟢 **permissive licence** | 🟢 **OpenOLAT / mentingo** | 🟢 Apache-2.0 `10 982 B` / MIT `1 062 B`, bodies read |
+
+🔵 **This is the first pass where the recommendation is not *"take the Apache one"*** — 🟢 **one
+capability (xAPI) now points at the copyleft platform, and the honest routing table says so.**
+
+### 6. 🆕 🔴 The web channel for AI-in-education is SATURATED at this shelf's depth — *Global, measured*
+
+🔴 **Twelve queries this pass — four global, one per region — returned `0` new regional facts.**
+🟢 **Everything that came back was already held: `134` bills / `31` states, Ohio's deadline,
+`H.R. 8747`, Korea's `2026-01-22` commencement, Vietnam's `134/2025/QH15`, IESALC's `200`/`19`,
+the DEC surveys, the UNESCO LAC Observatory.** 🟡 **The ONE new item is an unverifiable seventh
+AI-Act date variant from a Commission page the session cannot reach** *(`T134`)*.
+🔵 **Stated as a property of the channel rather than as a gap in the research: at this depth, new
+education findings come from TREES, from NAMED primary instruments, and from the unread scope of
+named surveys — not from another round of the same five queries.**
+🟢 **Every finding in this pass came from the first of those three.**
+
+### 7. 🆕 🟢 The licence-absence figures this shelf has published are CONFIRMED, and the gate's error is confined to the mature tier — *Global, measured*
+
+🟢 **`ACTION HW`: all `37` no-grant rows from the published bands re-probed on `P56`'s 33 paths,
+after `ls-remote` confirmed each exists.** 🟢 **Recoveries: `0`.**
+🟢 **So rows 1–80 stay at `18.8%` and rows 96–195 stay at `23.0%` — the falsifier was `±3` points
+and the change is `0.0`.** 🔴 **p159 expected a `1–3` point correction and was WRONG.**
+🆕 **`T138`:** 🔵 **`T129`'s *"the gate's error tracks maturity"* is now bounded at both ends —
+`26.7%` false absence on the platform control, `0.0%` across `37` hobby-tier rows.**
+🟢 **The open-gaps entry calling the published shares *"OVERSTATED by an unknown amount"* is
+closed; `T128`'s monotone licence gradient survives unchanged.**
 ## Pass 159 — 2026-10-12
 
 ### 1. 🆕 🔴 Licence risk is a function of STAR RANK, and the previous reading was backwards — *Global, measured*

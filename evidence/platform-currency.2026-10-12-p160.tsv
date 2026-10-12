@@ -1,0 +1,6 @@
+repo	default_branch	head_sha	last_commit_date	days_stale (from 2026-10-12)	tracked_files	verdict
+openolat/OpenOLAT	master	e4be14f0	2026-10-12	0	25823	ACTIVE -- committed today
+Selleo/mentingo	main	242a932	2026-10-10	2	4753	ACTIVE
+openfun/richie	master	8b14aec	2026-10-07	5	3175	ACTIVE
+moodle/moodle	main	f20534726	2026-10-03	9	67589	ACTIVE (weekly dev cadence, 6.0dev)
+openlxp/openlxp-xia	main	fd594e1	2026-02-26	228	53	STALE -- 7.5 months, last change was a README edit

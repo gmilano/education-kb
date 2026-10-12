@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 160 — 2026-10-12
+
+🟢 **The sweep was run globally and once per region — United States/Canada, EMEA, APAC, LATAM —
+and the honest headline is that it returned NOTHING NEW.**
+🔴 **Twelve queries, `0` new regional facts, and every figure that came back was already on this
+shelf.** 🟢 **That is a measurement, not a failure to look: the web channel for *"AI in
+education"* is SATURATED at this shelf's depth, and the one datum that was new is unverifiable
+from this session.**
+🔵 **Regional detail is filed under the canonical `## Opportunities by region` block below as
+`#### p160` entries. ONE region block, not one per pass** *(`ACTION HK`'s rule, honoured).*
+
+### 🔴 What the regional channel produced — the saturation is the finding
+
+| region | genuinely NEW this pass | returned, and already held |
+|---|---|---|
+| **North America** | 🔴 **NOTHING** | 🟢 `134` bills / `31` states; CA `A.B. 1159`; ID `S.B. 1227`; OK + MD human-oversight clauses; Ohio's `2026-07-01` policy deadline; `H.R. 8747`; the student-authored STUDENTS FIRST framework; `60%` / `32%` teacher use; `36%` regional share; Gemini for Education across `1 000+` US institutions; `35+` states with guidance — 🟡 **every one of them already on the shelf from p156–p159** |
+| **EMEA** | 🆕 🟡 **A SEVENTH AI-Act date variant — a Commission page rendered by the search channel lists *"31 July 2026 — entry into force of AI Act"* alongside *"27 July 2026 — AI Omnibus"*.** 🔴 **It contradicts both this shelf's ledger and the Act's real 2024 entry into force, and `T134` means it CANNOT be checked at source from this session.** 🟡 **Recorded as a channel artefact, NOT promoted to the date ledger** | 🟢 `$2.64B` (2026) → `$8.0B` (2030) at `31.9%`; Annex III education as high-risk; extraterritorial reach to non-EU edtech; OECD 2026 Digital Education Outlook; UNESCO generative-AI guidance; Finland / Estonia / Netherlands leading K-12 integration |
+| **APAC** | 🔴 **NOTHING** | 🟢 Korea's AI Basic Act in force `2026-01-22`, education named high-impact, 2026 a pilot year with a one-year penalty grace; Vietnam's Law `134/2025/QH15` effective `2026-03-01` with automated assessment and behavioural monitoring in the high-risk list; China assertive / Japan light-touch; India and Australia still drafting; China + Singapore with AI-in-education policies (UNESCO); Ipsos ban support; Squirrel AI as the named China player |
+| **LATAM** | 🔴 **NOTHING** | 🟢 UNESCO IESALC + UNU-IAS `200` institutions / `19` countries, `87%` any-use, `26%` with a strategy, public weaker than private; DEC LATAM `29` institutions, `79%` faculty use, `88%` minimal-to-moderate engagement; UNESCO LAC Observatory `2026-04-14` with CAF / CENIA / CETIC.br / ECLAC / Tec de Monterrey / ProFuturo / Ceibal; Uruguay first in the region to sign the Council of Europe Framework Convention; Mexico's federal bill; Colombia `CONPES 4144` |
+| **Global** | 🆕 🔴 **`T137` — the GitHub API refusal is a repository-SCOPE policy, not auth and not rate limiting** *(`agents/trending.md`)*, which closes the new-entrant channel and opens the clone channel | 🔴 **`T122` a FOURTH time: the ERP/CRM query returned ONE vendor's own pages in seven locales and named no open-source vendor in any market source — THIRTEENTH pass** |
+
+### 🔵 What saturation means for the next pass, said plainly
+
+🔴 **Running the same five queries a sixth time will return the same facts.** 🟢 **The channels
+that still yield new education findings on this shelf are: (1) reading TREES, which produced
+every one of this pass's findings; (2) PRIMARY instruments by name and number — a bill, a
+regulation, an OJ reference — which the shelf can ask for specifically; (3) named SURVEYS whose
+scope is partly unread, where `ACTION GJ`'s countries and fieldwork window remain the open
+example.** 🔵 **Recorded so the next pass spends its queries on those instead.**
 ## Pass 159 — 2026-10-12
 
 🟢 **The sweep was run globally and once per region, with `ACTION HV`'s rename APPLIED: the
@@ -336,6 +365,25 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p160
+
+🔴 **`0` new facts. The United States/Canada query returned p156–p159's set unchanged**, and an
+independent re-run returning the same set is a currency check, not a wasted query: 🟢 **the North
+America picture is STABLE.**
+🟡 **The one re-read worth recording: the Digital Education Council's 2026 global survey figures
+this shelf already holds — US+Canada faculty INTENT down `9` points (`76% → 67%`) and `29%` of
+students judging their instructors equipped — came back a second time from a different
+aggregator, so both are now double-sourced in the search channel.**
+🔴 **Still no Canadian federal instrument, and p159's Ontario contradiction is UNRESOLVED and
+unresolvable from this session** *(`T134`).*
+
+🟢 **Opportunity, unchanged and now better supported by `repos/foundations.md`:** 🟢 **the
+Oklahoma and Maryland human-oversight clauses and Ohio's policy deadline all ask a district to
+EVIDENCE who used AI, where, and under what policy.** 🆕 🟢 **Moodle core already emits exactly
+that — `ai_action_register` and `ai_policy_register` with a reportable acceptance ledger
+(`T139`)** — 🔵 **so for the US K-12 estate the compliance deliverable is configuration and
+reporting on an existing GPL platform, not a build.** 🟢 **`P160-B`.**
+
 #### p159
 
 🆕 🟢 **`ACTION HV` DISCHARGED — and the rename is APPLIED. This region's query is now
@@ -512,6 +560,29 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p160
+
+🆕 🟡 **A SEVENTH AI-Act date variant, recorded and QUARANTINED.** 🔴 **A Commission page, as
+rendered by the search channel, lists *"31 July 2026 — entry into force of AI Act"* beside
+*"27 July 2026 — entry into force of the AI Omnibus."*** 🔴 **The first contradicts the Act's
+actual 2024 entry into force and every date on this shelf's ledger; the second matches it.**
+🟢 **`T134` means `digital-strategy.ec.europa.eu` cannot be read at source from this session, so
+the variant is filed as a CHANNEL ARTEFACT and is NOT promoted to the ledger.**
+🔵 **The practitioner position is unchanged: Annex III education high-risk at `2027-12-02`
+post-Omnibus (Regulation (EU) 2026/1744, OJ `2026-07-24`, in force `2026-07-27`), with Art 50
+transparency NOT delayed, against a persisting `2026-08-02` claim.**
+
+🔴 **No EMEA-wide education ADOPTION rate — ELEVENTH pass.** 🟢 **Declared, with the query that
+failed: `AI education EMEA Europe Middle East Africa 2026 adoption regulation players` returned
+EU legal commentary, one aggregator's `$2.64B` market size, and nothing from the Middle East or
+Africa at all.** 🔴 **p159's `ACTION HS` Africa findings are CARRIED, not re-queried — this
+pass's EMEA query reproduced the same Europe-weighting `ACTION HS` was created to fix.**
+
+🟢 **Opportunity, sharpened by this pass's tree reads:** 🟢 **`ollama` is one of SEVEN providers
+in Moodle core AI, so a sovereign, no-egress deployment on the EU's most widely installed LMS is
+a configuration choice.** 🔵 **That is the strongest answer this shelf has to the EMEA
+data-residency objection, and it costs no fork.**
 
 #### p159
 
@@ -718,6 +789,26 @@ skills body and whose delivery is outsourced is a programme that needs an integr
 
 ### APAC
 
+#### p160
+
+🔴 **`0` new facts, and the gaps are the same two.**
+🟢 **Corroborated a further time: Korea's AI Basic Act in force `2026-01-22` with education named
+a high-impact area, impact assessments and human oversight required, 2026 effectively a pilot
+year and penalties on a one-year grace — so the sellable window still runs to `2027-01-22`.**
+🟢 **Vietnam's Law `134/2025/QH15`, effective `2026-03-01`, keeps education in the high-risk
+list, with AUTOMATED ASSESSMENT and BEHAVIOURAL MONITORING named.** 🟢 **China assertive, Japan
+light-touch and voluntary, India and Australia still drafting — unchanged.**
+🔴 **No APAC education adoption RATE — SIXTH pass.** 🟢 **Query declared:
+`AI education APAC Asia Pacific 2026 adoption regulation players` returned law-firm regulatory
+summaries, UNESCO readiness prose and market-report vendor lists; no rate.**
+🔴 **Every named APAC player remains proprietary — Google, Microsoft, IBM, Pearson, Byju's,
+Squirrel AI. THIRTEENTH pass with no open-source vendor named in any market source (`T122`).**
+
+🟢 **Opportunity, and `T126` still points the same way:** 🔵 **APAC is the SUPPLY side of new
+permissive education OSS — `4 of 5` new `ai-tutor` entrants p158 measured were Chinese-language
+MIT/Apache projects.** 🔴 **This pass could not refresh that channel at all (`T137`), so the
+finding is one pass old and marked as such.**
+
 #### p159
 
 🆕 🔴 **The most consequential regulatory finding of the pass: Vietnam's AI law, reported
@@ -899,6 +990,28 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p160
+
+🔴 **`0` new facts — and for LATAM that is the SECOND consecutive pass of nothing new, which
+makes it the best-evidenced and most saturated region in this channel.**
+🟢 **Returned again, unchanged: UNESCO IESALC + UNU-IAS across `200` institutions in `19`
+countries — `87%` using AI somewhere, `26%` with a formal strategy, use driven by individual
+faculty and students rather than institutional policy, public institutions weaker than private;
+the Digital Education Council LATAM survey with Tec de Monterrey — `29` institutions, `79%` of
+faculty using AI in teaching, `88%` reporting only minimal-to-moderate engagement; the UNESCO LAC
+Observatory launched `2026-04-14` with CAF, CENIA, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo
+and Fundación Ceibal; Uruguay as the first country in the region to sign the Council of Europe
+Framework Convention; Mexico's federal bill and its unacceptable/high/lower taxonomy; Colombia's
+CONPES 4144.**
+🔴 **`ACTION GJ` is STILL not closed: the DEC LATAM survey's countries and fieldwork window
+remain unread, and this pass's query did not surface them.** 🟡 **Its institution count (`29`)
+and partner (Tec de Monterrey's IFE) were already held.**
+
+🟢 **Opportunity, unchanged and still the sharpest in the KB:** 🔵 **`87%` adoption against `26%`
+strategy is a GOVERNANCE engagement, not an adoption one** — 🟢 **and the artefact it needs
+(per-call AI ledger + policy acceptance) is now known to exist in Moodle core, which is what most
+LATAM public institutions already run.** 🟢 **`P160-B` is written for exactly this gap.**
 
 #### p159
 
@@ -1115,6 +1228,23 @@ public institutions (68%) are the volume.** 🟢 **Permissive LATAM-native rows 
   the global ones by more than the global ones disagree with each other.
 
 ### Global
+
+#### p160
+
+🆕 🔴 **`T137` — the channel boundary is now understood, not just observed.** 🟢 **`rate_limit`
+answers `200` with the full quota unspent, while `search/repositories` and even
+`repos/{owner}/{repo}` answer `403` with *"sessions are bound to their configured
+repositories."*** 🔵 **So the refusal is a repository-SCOPE policy: it cannot be waited out, and
+the only response is to change instrument.**
+🟢 **What replaced it this pass, and it produced every finding on this page's sibling files:**
+🟢 **`git ls-remote` for existence and default branch, `--depth=1` clones for tree AND content,
+`raw.githubusercontent.com` for licence bodies, `git log -1` for recency.** 🔴 **What is gone:
+stars, topics, forks, `created_at` — so attention-ranked discovery is closed until a pass has API
+access.**
+🔴 **`T122` a FOURTH time: the global ERP/CRM query named no open-source vendor and returned one
+vendor's own pages in seven locales. THIRTEENTH consecutive pass.** 🟢 **That absence is still
+this KB's product — the market channel cannot see what a studio can build on, which is precisely
+what the tree channel measures.**
 
 #### p159
 

@@ -1,0 +1,8 @@
+channel	result (p160)	what it proves
+git clone --depth=1 --single-branch (5 platform repos, 1.3 GB)	WORKS -- moodle 746M, OpenOLAT 339M, mentingo 141M, richie 109M, openlxp-xia 628K	full tree AND file CONTENT are reachable
+git ls-remote --symref	WORKS -- default branch + HEAD sha for every repo probed	existence (P54) and branch (P53) are reachable
+raw.githubusercontent.com	WORKS -- 200 on 47 licence-body reads this pass	body reads are reachable
+api.github.com/rate_limit	200 -- core 15000 remaining, search 30 remaining, 0 used	the credential is LIVE and UNSPENT: the block is not auth and not rate limiting
+api.github.com/search/repositories	403 -- "This GitHub API path is not available: sessions are bound to their configured repositories"	the boundary is a POLICY scope bound to a repo list
+api.github.com/repos/moodle/moodle	403 -- same message	even repo-scoped endpoints are refused for non-configured repos
+consequence	stars, topics, created_at, pushed_at, fork counts are UNAVAILABLE this pass	the new-entrant and top-N-by-stars channels are CLOSED; tree reads and git log -1 are the substitutes

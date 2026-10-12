@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P160-A` — the capability census when the API is CLOSED, with the three contaminations removed *(new, p160 — Global)*
+
+🔵 **The problem this solves:** 🔴 **`api.github.com` refuses every repository this session is not
+configured for (`T137`), so topics, stars and `pushed_at` are gone.** 🔴 **And the fallback this
+shelf reached for — counting paths whose name contains a token — over-counts three ways and
+invents absences a fourth** *(`T136`)*.
+🟢 **The clone channel is better than what it replaces for CAPABILITY questions, because it
+carries file CONTENT; it is worse for ATTENTION questions, because it carries no metadata.**
+
+🟢 **The gate, in order:**
+
+```bash
+REPO="owner/name"; DIR="/tmp/census/$(basename $REPO)"
+
+# STEP 0 (P54) — existence and default branch, before any absence means anything.
+BR=$(git ls-remote --symref "https://github.com/$REPO" HEAD | awk '/^ref:/{sub("refs/heads/","",$2);print $2}')
+[ -z "$BR" ] && { echo "$REPO: DOES NOT EXIST OR IS PRIVATE"; exit 1; }
+SHA_REMOTE=$(git ls-remote "https://github.com/$REPO" HEAD | cut -f1)
+
+# STEP 1 — one shallow clone. Trees AND content, no metadata layer in between.
+git clone --depth=1 --single-branch -q "https://github.com/$REPO" "$DIR"
+[ "$(git -C $DIR rev-parse HEAD)" = "$SHA_REMOTE" ] || echo "WARN: head drifted mid-clone"
+
+# STEP 2 (T136a) — DISAMBIGUATE the token before counting. `lti` matches `multi`.
+RAW=$(find $DIR -path '*/.git' -prune -o -ipath '*lti*' -print | wc -l)
+CLEAN=$(find $DIR -path '*/.git' -prune -o -ipath '*lti*' -print | grep -viE 'multi' | wc -l)
+
+# STEP 3 (T136b) — ATTRIBUTE every hit. A vendored SDK is somebody else's capability.
+find $DIR -ipath '*tenant*' | grep -vE 'lib/(google2-service|aws-sdk)|node_modules|vendor/'
+
+# STEP 4 (T136c) — take the VOCABULARY from the platform, not from a fixed list.
+#   LTI 1.3 is `lti13` in OpenOLAT, `ltiadvantage` + `lib/lti1p3` in Moodle.
+#   Probe BOTH spellings and treat a zero on one spelling as no evidence at all.
+
+# STEP 5 (T135) — a capability can be an EXPORT PIPELINE or a MODULE, so grep CONTENT
+#   for the standard's own identifiers, not for the product word.
+grep -rilE 'OpenBadgeCredential|VerifiableCredential|credentialSubject|ob/v3p0' \
+     --exclude-dir=.git --exclude-dir=node_modules "$DIR"
+
+# STEP 6 — licence from the body (P56, 33 paths) and recency from the log.
+git -C $DIR log -1 --format='%ad|%h' --date=short
+```
+
+🟢 **What each step cost and caught, measured on five platforms this pass:**
+
+| step | caught |
+|---|---|
+| 🟢 **STEP 2** | 🔴 **`375` false `lti` hits in Moodle (`30.6%`), `128` in OpenOLAT (`33.0%`)** |
+| 🟢 **STEP 3** | 🔴 **`62 of 62` Moodle *"tenant"* paths are vendored — the capability is ABSENT** |
+| 🟢 **STEP 4** | 🔴 **two FALSE ABSENCES that a fixed token list would have published as findings** |
+| 🟢 **STEP 5** | 🟢 **`mentingo`'s `119` SCORM files, which a schema census missed** *(`T135`)*; 🔴 **`0 of 5` platforms issuing OB 3.0** |
+| 🟢 **STEP 6** | 🔴 **`openlxp-xia` `228` days stale on an EOL Django pin** |
+
+🔴 **Cost, stated honestly: `1.3 GB` of clone traffic for five repositories** *(Moodle alone is
+`746 MB` / `67 589` files)*. 🟢 **This is a PLATFORM-tier instrument. Do not run it over a
+100-row census — for that, `raw` + `P56` is still the right gate.**
+
+---
+
+## 🆕 🟢 `P160-B` — governed AI on Moodle: use the ledger that is already there, and keep the evaluative action OUTSIDE core *(new, p160 — Global; strongest in North America, EMEA and LATAM)*
+
+🔵 **The problem this solves:** 🔴 **three regulatory regimes now ask an institution to EVIDENCE
+its AI use — Oklahoma and Maryland's human-oversight clauses, Ohio's district policy deadline,
+the EU AI Act's Art 50 transparency duty — and LATAM's `87%` adoption against `26%` strategy is
+the same problem without a statute.** 🔴 **`P158-A` answered it by assembling Langfuse traces and
+rubric tables on a greenfield MIT platform.** 🟢 **That is the wrong answer for a client who
+already runs Moodle, and most public institutions do.**
+
+🟢 **What this pass measured, and it changes the build** *(`T139`, `repos/foundations.md`)*:
+
+| layer | what Moodle core ALREADY ships | licence |
+|---|---|---|
+| 🟢 **Provider abstraction** | 🟢 **`public/ai/provider/{anthropic,awsbedrock,azureai,deepseek,gemini,ollama,openai}`** — `209` files | 🟡 GPL-3.0, in core |
+| 🟢 **Sovereign option** | 🟢 **`ollama` is a core provider** — no egress, no fork | 🟡 GPL-3.0 |
+| 🟢 **Per-call audit ledger** | 🟢 **`ai_action_register`: `userid`, `contextid`, `courseid`, `provider`, `model`, `prompttokens`, `completiontokens`, `success`, `errorcode`, `timecreated`, `timecompleted`** | 🟡 GPL-3.0 |
+| 🟢 **Consent evidence** | 🟢 **`ai_policy_register` + `policy_acceptance_report.php` + a `reportbuilder` system report** | 🟡 GPL-3.0 |
+| 🟢 **Cost control** | 🟢 **`public/ai/classes/rate_limiter.php`** | 🟡 GPL-3.0 |
+| 🟢 **Learning records** | 🟢 **`public/lib/xapi` — `78` paths** | 🟡 GPL-3.0 |
+| 🟢 **Federation** | 🟢 **LTI 1.3 as platform AND tool, with AGS, NRPS, Deep Linking, JWKS** | 🟡 GPL-3.0 |
+
+🟢 **The recipe:**
+
+| step | what to do | why this way |
+|---|---|---|
+| 1 | 🟢 **Configure, do not fork. Turn on `core_ai` with the `ollama` provider pointed at the institution's own inference, and leave Moodle UNMODIFIED** | 🟢 **`P156-A`'s rule: an unmodified GPL platform is not a derivative, so the studio's deliverable stays permissive** |
+| 2 | 🟢 **Switch on the AI policy gate and the acceptance report** | 🟢 **This is the artefact an Ohio district, an Oklahoma appeal or an Art 50 enquiry actually asks for, and it is `0` lines of code** |
+| 3 | 🔴 **Put every EVALUATIVE capability OUTSIDE core, behind LTI 1.3** | 🔴 **Core AI has four actions and none grades or places a learner. 🟢 Keeping assessment in an LTI tool keeps the Annex III high-risk surface EXPLICIT, versioned and separately auditable — and keeps it out of the institution's LMS upgrade path** |
+| 4 | 🟢 **Build the evaluative tool on `P158-A`'s shape: rubric criteria as DATA, `pykt-toolkit` (MIT) as a second non-LLM mastery estimate, the human signing** | 🟢 **Satisfies the human-oversight clauses without putting a prompt in the decision path** |
+| 5 | 🟢 **Pass grades back over AGS; pull roster over NRPS; emit xAPI statements to the institution's LRS** | 🟢 **All four surfaces measured present in Moodle this pass** |
+| 6 | 🔴 **For a MULTI-DISTRICT estate, use one Moodle instance per tenant** | 🔴 **Moodle core has NO tenancy — its `62` *"tenant"* paths are vendored (`T136`). Moodle Workplace has it and is PROPRIETARY. 🟢 `mentingo` (MIT, PostgreSQL RLS) is the single-deployment alternative, and it does not speak LTI** |
+| 7 | 🟡 **For CREDENTIALS, issue Open Badges `v2` from core now and treat OB 3.0 as a separate build** | 🔴 **Moodle is `OPEN_BADGES_V2` only (`132` references, `V3` never). 🟢 `P159-A` is the upgrade; authoring is MIT (`opensalt/OB3DefinitionWidget`), signing is unbuilt** |
+
+🟢 **Why this is cheaper than `P158-A` for an existing-Moodle client:** 🟢 **layers 1, 2, 3 and 5
+of `P158-A` — trace, tenancy-adjacent audit, provider abstraction, record emission — are already
+installed.** 🔴 **What remains billable is the evaluative tool, the rubric data model and the
+integration.** 🟡 **`4–6` weeks against `P158-A`'s `8–10`, and the client keeps its LMS.**
+🔴 **Licence line to state in the SOW: the Moodle side is GPL-3.0 and stays unmodified; the LTI
+tool is the studio's own work and can be licensed freely.**
+
+---
 ## 🆕 🟢 `P159-A` — the credential-issuing build, and it is the first pattern on this shelf with a DATED demand figure above it and a NAMED permissive platform below it *(new, p159 — Global; strongest in North America and EMEA)*
 
 🔵 **The problem this solves:** 🟢 **employers and institutions are moving to skills-based

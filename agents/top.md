@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 160 — 2026-10-12
+
+🟢 **`ACTION HW` DISCHARGED, falsifier SILENT — and SILENT at ZERO, which is not what p159
+expected.** 🔴 **p159 predicted a `1–3` point correction to this shelf's published no-grant
+shares. The correction is `0.0` points: `37 of 37` rows re-probed on the corrected 33-path list
+came back with no licence file, exactly as the 9-path list said.**
+🟢 **The attention tier was re-read from the bodies a second time, one pass later, and all ten
+licences reproduce BYTE-FOR-BYTE.**
+
+### 🆕 🟢 `T138` — the licence gate's blind spot is confined to the MATURE tier, and `T129` is now bounded
+
+🟢 **Every no-grant row in the two bands this shelf has published was re-probed on `P56`'s 33
+paths, on its own default branch, after `git ls-remote` confirmed it exists** *(`P53` + `P54`,
+honoured).* [`evidence/aitutor-regate-33path.2026-10-12-p160.tsv`](../evidence/aitutor-regate-33path.2026-10-12-p160.tsv)
+
+| band | no-grant rows re-probed | recovered on 33 paths | published share | revised share | falsifier *(±3 points)* |
+|---|---|---|---|---|---|
+| 🟢 **rows 1–80** *(p156)* | 15 | 🟢 **`0`** | `18.8%` | 🟢 **`18.8%`** | 🟢 **n/a — not registered** |
+| 🟢 **rows 96–195** *(p158)* | 23 | 🟢 **`0`** | `23.0%` | 🟢 **`23.0%`** | 🟢 **SILENT — `0.0` points** |
+| 🔵 *carried* rows 196–295 *(p159)* | 47 | 🟡 `2` | `47.0%` | 🟡 `45.0%` *(p159's own figure)* | 🔵 n/a |
+| 🔴 **the platform control** *(p159)* | 15 | 🔴 **`4`** | — | — | 🔴 **`26.7%` false absence** |
+
+🆕 **`T138`:** 🟢 **`0 of 38` recoveries across the two bands (`37` unique rows; `vidyamind`
+appears in both) against `4 of 15` on the platform control.** 🔵 **`T129` said the gate's error
+rate tracks project MATURITY. It does — and the bound is now measured at the hobby end:
+`0.0%`, not the `4.3%` p159 carried forward from the `1 ★` tail.**
+🟢 **What this buys the shelf: `18.8%` and `23.0%` are CONFIRMED figures, not overstated ones.**
+🔴 **The open-gaps entry that called them *"OVERSTATED by an unknown amount"* is wrong and is
+closed.** 🔵 **And the practitioner reading of `T128` survives intact — the licence tax still
+rises monotonically with depth, because the top-ten reading and the tail reading were both
+measured on bodies.**
+
+🔵 **Honest caveat on the arithmetic:** 🟡 **`0 of 38` bounds the recovery rate below about `9%`
+at 95% confidence, not at zero.** 🟢 **It does not bound the PLATFORM rate at all — that one is
+`26.7%` and it is the one that reaches clients.**
+
+### 🆕 🔴 `T136` — a path-name census is contaminated in THREE directions, and this shelf publishes path counts as capability evidence
+
+🟢 **Measured on two full trees this pass**
+[`evidence/path-census-contamination.2026-10-12-p160.tsv`](../evidence/path-census-contamination.2026-10-12-p160.tsv)
+
+| failure | measurement | mechanism |
+|---|---|---|
+| 🔴 **Substring collision** | 🔴 **`ipath *lti*` returns `1 225` paths in Moodle; `375` of them (`30.6%`) are `multi`** — `multianswer`, `multichoice`, `multilang`. 🔴 **OpenOLAT: `128 of 388`, `33.0%`** | 🔵 **a three-letter token is a substring of a common English word** |
+| 🔴 **Vendored dependencies** | 🔴 **`ipath *tenant*` returns `62` paths in Moodle and `62 of 62` are inside `public/lib/google2-service`** | 🔵 **a vendored SDK answers for the host project — `T86`'s family, now for capability instead of licence** |
+| 🔴 **Product-word collision** | 🔴 **`mentingo` `8` badge paths, `richie` `7` — `15 of 15` are UI components** *(`badge.tsx`, `ProgressBadge.tsx`, `footer-badges.html`)* | 🔵 **a product word and a credential standard share a name** |
+| 🔴 **False ABSENCE from vocabulary** | 🔴 **`lti13` returns `0` in Moodle, which spells it `ltiadvantage` (`94`) plus `lib/lti1p3`; `ltiadvantage` returns `0` in OpenOLAT, which spells it `lti13` (`158`)** | 🔵 **the probe vocabulary is per-platform; a fixed cross-platform token list manufactures absences** |
+
+🆕 **`T136`:** 🟢 **a path count is evidence of a capability only after the token is disambiguated,
+the hits are attributed to first-party code, and the vocabulary is taken from the platform
+itself.** 🔵 **`P160-A` is written** *(see `compose/patterns.md`)*. 🟡 **p159's `148` for
+OpenOLAT's `lti13` is NOT affected — it was scoped to a directory, not a bare substring.**
+
+### 🟢 The attention tier, re-read one pass later — `10 of 10` reproduce byte-for-byte
+
+[`evidence/attention-tier-reverify.2026-10-12-p160.tsv`](../evidence/attention-tier-reverify.2026-10-12-p160.tsv)
+
+| ★ *(p159)* | agent | licence *(body-read p160)* | bytes | ship it? |
+|---|---|---|---|---|
+| **41 214** | 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | 11 408 | 🟢 **Yes — patent grant included.** 🔵 Lifelong personalised tutoring |
+| 894 | 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** | 1 064 | 🟢 **Yes.** 🔵 Route → teach → project → spaced review, one loop |
+| 571 | 🔴 [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0 — HEADER ONLY** | **1 134** | 🔴 **No — the licence text is not in the repository** *(`T130`, reproduced)* |
+| 515 | 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | 1 074 | 🟢 **Yes.** 🔵 MCP server over Anki |
+| 304 | 🟢 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** | 1 065 | 🟢 **Yes.** 🔵 Teaches from slides with page citations |
+| 287 | 🟢 [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** | 1 081 | 🟢 **Yes.** 🔵 Progressive hints, never the solution |
+| 283 | 🟢 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** | 1 069 | 🟢 **Yes.** 🔵 Bloom's 2-sigma as a skill + a self-hostable web app |
+| 243 | 🟢 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** | 1 102 | 🟢 **Yes.** 🔵 Diagnosis-first |
+| 170 | 🟢 [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** | 1 083 | 🟢 **Yes.** 🔵 Chinese civil-service exam prep |
+| 167 | 🟡 [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟡 **AGPL-3.0** *(full text)* | 34 514 | 🟡 **Across a process boundary only.** 🔵 Self-hosted, Ollama-capable |
+
+🟢 **`10 of 10` licence bodies are byte-identical to p159's reads, on the same default branches,
+one pass apart.** 🔵 **That is a reproducibility check on the instrument, not a new finding —
+and it is the first time this shelf has run one.**
+🔴 **The star column is p159's and could NOT be refreshed this pass: `api.github.com` is closed
+to this session** *(`T137` below, `repos/trending.md`)*. 🟡 **Treat the ordering as one pass old;
+every licence, branch and body in the table is this pass's.**
 ## Pass 159 — 2026-10-12
 
 🟢 **All three pre-registered actions DISCHARGED. One falsifier FIRED, one was SILENT, one was

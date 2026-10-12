@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 160 — 2026-10-12
+
+🟢 **`ACTION HX` DISCHARGED, falsifier SILENT: Moodle DOES ship Open Badges — `306` paths — so
+`T133` is a PATTERN, not one instance, and the *"credentialing has no incumbent"* finding was
+wrong on BOTH platforms this shelf recommends.**
+🟢 **`ACTION HY` DISCHARGED on both limbs, falsifier SILENT: `0 of 4` permissive platforms issue
+an OB 3.0 / W3C Verifiable Credential — and neither does Moodle, so it is `0 of 5`.**
+🆕 🟢 **The pass's largest discovery was not registered at all: Moodle ships a provider-pluggable
+AI subsystem in CORE, with an audit ledger as database rows.**
+
+### 🆕 🟢 `moodle/moodle` read from the tree — `ACTION HX` in full
+
+🟢 **`746 MB`, `67 589` tracked files, `depth=1` clone of `main`, HEAD `f20534726` identical to
+`ls-remote`.** 🟢 **`6.0dev`, build `20261005`, branch `600`, read from `public/version.php`.**
+🔴 **Note for every future pass: Moodle's tree moved under `public/` — a probe against
+`mod/`, `lib/` or `badges/` at the root returns `0` and means nothing.**
+[`evidence/moodle-surface.2026-10-12-p160.tsv`](../evidence/moodle-surface.2026-10-12-p160.tsv)
+
+| dimension | Moodle `6.0dev` | `OpenOLAT` *(p159, re-measured p160)* | who wins for a studio |
+|---|---|---|---|
+| 🟢 **Licence** | 🟡 **GPL-3.0** — `COPYING.txt`, `35 147 B` | 🟢 **Apache-2.0** — `10 982 B` | 🟢 **OpenOLAT.** 🔵 **No patent grant and no permissive terms in Moodle; `T129`'s original catch, re-confirmed** |
+| 🟢 **LTI 1.3 both ways** | 🟢 **YES** — `mod/lti` as platform (`254` files), `enrol/lti` + `auth/lti` as tool (`154`), `lib/lti1p3` | 🟢 **YES** — `lti13.platform.iss` + `LTI13Platform` | 🟢 **Tie** |
+| 🟢 **AGS / NRPS / Deep Linking / JWKS** | 🟢 **ALL FOUR** — `gradebookservices/.../lineitem.php`, `nrps_info.php` + `sync_members.php`, `openid-configuration.php` + `contentitem.js`, `ltiopenid/jwks_helper.php` + `enrol/lti/jwks.php` | 🟢 **ALL FOUR** | 🟢 **Tie** |
+| 🟢 **Open Badges** | 🟢 **YES — `306` paths**, `assertion.php`, `badgeclass.php`, `criteria/`, backpack export | 🟢 **YES — `182` paths** | 🟢 **Tie** |
+| 🔴 **Open Badges version** | 🔴 **`v2` ONLY — `OPEN_BADGES_V2` ×`132`, `V1` ×`2`, `backpack_api2p1_mapping.php`** | 🔴 **`v2` ONLY** | 🔴 **Neither.** 🆕 **`ACTION HY`'s answer** |
+| 🔴 **OB 3.0 / W3C VC** | 🔴 **ABSENT — `0` on eight spellings** | 🔴 **ABSENT — `0`** | 🔴 **Neither** |
+| 🟢 **xAPI** | 🟢 **PRESENT — `public/lib/xapi`, `78` paths: `api.php`, `iri.php`, `state_store.php`, `handler.php`** | 🔴 **ABSENT — `0`** | 🟢 **MOODLE — and this is the FIRST capability on this shelf where Moodle beats OpenOLAT** |
+| 🔴 **cmi5** | 🔴 ABSENT | 🔴 ABSENT | 🔴 Neither |
+| 🟢 **SCORM** | 🟢 `226` paths | 🟢 `186` paths | 🟢 Tie |
+| 🔴 **QTI** | 🔴 **`8` paths and ALL of them are QTI `v1.2` LEGACY** — IMS Common Cartridge `.xsd` schemas and a Blackboard import format. 🔴 **No QTI 2.x/3.0 engine** | 🟢 **`919` paths — a full QTI 2.1 assessment engine** | 🟢 **OpenOLAT, decisively. 🔵 For an assessment-heavy engagement this one dimension settles the platform choice** |
+| 🔴 **Multi-tenancy** | 🔴 **ABSENT in core.** 🔴 **`62` *"tenant"* paths exist and `62 of 62` are inside the VENDORED `public/lib/google2-service`** *(`T136`)* | 🔴 **ABSENT** *(hierarchical organisations, not tenants)* | 🔴 **Neither.** 🟢 **`Selleo/mentingo` is still the only row on this shelf with a real tenancy boundary (PostgreSQL RLS, MIT)** |
+| 🆕 🟢 **AI subsystem in CORE** | 🟢 **YES — `public/ai`, `372` files** | 🟡 **not measured this pass** | 🟢 **Moodle** |
+| 🔴 **MCP server** | 🔴 ABSENT | 🟡 not measured | 🔴 Neither |
+
+### 🆕 🟢 `T139` — Moodle's core AI subsystem logs every call as DATABASE ROWS, which is the audit artefact `P158-A` assembled by hand
+
+🟢 **`public/lib/db/install.xml` defines seven core AI tables:** 🟢 **`ai_action_register`,
+`ai_action_generate_text`, `ai_action_generate_image`, `ai_action_explain_text`,
+`ai_action_summarise_text`, `ai_policy_register`, `ai_providers`.**
+🟢 **`ai_action_register`'s own fields:** `actionname`, `actionid`, `success`, `userid`,
+`contextid`, `courseid`, `provider`, `model`, `prompttokens`, `completiontokens`, `errorcode`,
+`errormessage`, `timecreated`, `timecompleted`.
+
+| layer | what ships | why a studio cares |
+|---|---|---|
+| 🟢 **Providers, pluggable** | 🟢 **`anthropic`, `awsbedrock`, `azureai`, `deepseek`, `gemini`, `ollama`, `openai`** — seven, `209` files | 🟢 **`ollama` in core means the SOVEREIGN deployment is a configuration, not a fork** — 🔵 **directly answers the EMEA data-residency objection** |
+| 🟢 **Per-call ledger** | 🟢 **`ai_action_register` rows: who, which course, which provider, which model, tokens, success, error, timings** | 🟢 **This is the artefact an appeal or a regulator asks for.** 🔵 **`P158-A` built it from Langfuse traces; on Moodle it is already there, GPL-3.0** |
+| 🟢 **Consent gate** | 🟢 **`ai_policy_register` + `policy_acceptance_report.php` + a `reportbuilder` system report** | 🟢 **Per-user AI-policy acceptance, reportable** — 🔵 **what the EU AI Act's transparency duty and the US state transparency clauses actually ask to evidence** |
+| 🟢 **Rate limiting** | 🟢 **`public/ai/classes/rate_limiter.php`** | 🟢 Cost control in core |
+| 🔴 **Actions — and this is the finding** | 🔴 **FOUR, and NONE is evaluative: `generate_text`, `generate_image`, `summarise_text`, `explain_text`** | 🔴 **Moodle core AI does NOT grade, score or place a learner.** 🟢 **So core Moodle sits OUTSIDE the EU AI Act's Annex III evaluative tier — and the moment a plugin adds an evaluative action, that plugin carries the high-risk obligations.** 🔵 **`P160-B` is built on exactly that line** |
+
+🆕 **`T139`:** 🔵 **the governed-AI plumbing a client engagement would otherwise build — provider
+abstraction, per-call audit, policy acceptance, rate limiting — is already in Moodle core and is
+GPL-3.0.** 🟢 **What is NOT there is the evaluative capability, the tenancy boundary, and OB 3.0.**
+🟢 **That is a far better starting position than this shelf has been assuming, and it changes
+where the billable work sits.**
+
+### 🟢 `ACTION HY`, second limb — `openlxp/openlxp-xia` assessed, and this shelf's description of it was WRONG
+
+[`evidence/openlxp-xia-assessment.2026-10-12-p160.tsv`](../evidence/openlxp-xia-assessment.2026-10-12-p160.tsv)
+
+| dimension | finding |
+|---|---|
+| 🟢 **Licence** | 🟢 **Apache-2.0, `11 357 B`, body-read — CONFIRMED** |
+| 🔴 **What it is** | 🔴 **A `53`-file Django APP installed with `pip install OpenLXP-XIA`, not a platform.** 🟢 **A V-T-V-L pipeline: Validate → Transform → Validate → Load, for learning-experience METADATA** |
+| 🔴 **Not learning RECORDS** | 🔴 **`0` matches for `xapi`, `caliper` or `statement`.** 🔴 **This shelf's `verticals/solutions.md` called it *"learning-record PLUMBING"* — it is metadata CATALOGUING plumbing. Corrected this pass** |
+| 🔴 **Maintenance** | 🔴 **Last commit `2026-02-26` — `228` days, and it was a README edit.** 🔴 **`Django>=3.2.3,<4.0.0` — Django 3.2 reached END OF LIFE in April 2024; `boto3~=1.16.54`, `coverage<6.0`: a 2021-era pin set** |
+| 🔴 **Needs siblings** | 🟢 **`openlxp/openlxp-xis` and `openlxp/openlxp-xss` RESOLVE.** 🔴 **`openlxp/openlxp-xsr-aws` DOES NOT RESOLVE — a credential prompt, so private or absent** *(`P54`)*. 🟡 **AWS S3 is the only schema server** |
+| 🔴 **Verdict** | 🔴 **Do not put it in front of a client as a platform.** 🟡 **Permissive, readable and small enough to vendor the V-T-V-L idea from; shipping it as-is imports an EOL framework pin** |
 ## Pass 159 — 2026-10-12
 
 🔴 **`ACTION HT` DISCHARGED and its falsifier is SILENT — but the pass that verified `OpenOLAT`

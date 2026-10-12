@@ -1,0 +1,4 @@
+claim (p158 T127)	instrument p158 used	what the TREE shows (p160)	verdict
+"mentingo's topics advertise scorm ... its schema lacks"	database schema read	SCORM IS SHIPPED: 119 files -- packages/scorm-export-runtime (incl. src/player + assets), packages/scorm-export-generator, packages/shared/src/constants/scorm.ts, and API references in certificates/, chapter/repositories/adminChapter, native-archive import+snapshot services	T127 HALF WRONG -- the scorm claim is SUPPORTED
+"mentingo's topics advertise ... xapi, its schema lacks"	database schema read	xAPI appears ONLY in README.md -- 0 code or schema matches	T127 STANDS on xapi
+mechanism	--	SCORM in mentingo is an EXPORT PIPELINE (a build artefact + bundled player), not a schema concept. A schema census structurally cannot see it	T135

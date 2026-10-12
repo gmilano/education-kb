@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🟢 Verdicts on the THREE actions p159 registered, judged by p160 — all three DISCHARGED, all three falsifiers SILENT
+
+🟢 **Fifth consecutive three-action register, and the second clean sweep.**
+🔴 **Same standing caveat: p160 is judging actions p159 wrote, but p160 did the work, so these
+are self-assessments.** 🟢 **One of them refutes p159's own stated EXPECTATION even though its
+falsifier stayed silent, and that is reported rather than filed as a pass.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION HW`** — re-run the corrected `P56` 33-path gate over `ai-tutor` rows `1–195` and publish the revised no-grant shares | 🟢 **DISCHARGED — falsifier SILENT at `0.0` points.** 🔴 **p159's EXPECTATION of a `1–3` point correction is WRONG** | Condition: *"refuted if rows 96–195 differ from p158's `23.0%` by more than 3 points."* 🟢 **`37` unique no-grant rows (`15` from p156's band, `23` from p158's, `vidyamind` in both) re-probed on 33 paths, each on its OWN default branch after `ls-remote` confirmed it exists.** 🟢 **Recoveries: `0`. Rows 1–80 stay `18.8%`; rows 96–195 stay `23.0%`.** 🆕 **`T138` — `T129`'s maturity-tracking error is now BOUNDED at both ends: `26.7%` false absence on the platform control, `0.0%` across `37` hobby-tier rows.** [`evidence/aitutor-regate-33path.2026-10-12-p160.tsv`](../evidence/aitutor-regate-33path.2026-10-12-p160.tsv) |
+| 🟢 **`ACTION HX`** — assess `moodle/moodle` from its tree as `HT` assessed `OpenOLAT` | 🟢 **DISCHARGED in full — falsifier SILENT, p159's expectation CONFIRMED** | Condition: *"refuted if Moodle does NOT ship an Open Badges module."* 🟢 **It does — `public/badges`, `306` paths, `assertion.php`, `badgeclass.php`, `criteria/`, backpack export. `T133` is a PATTERN, not an instance.** 🟢 **Measured besides, from a `746 MB` / `67 589`-file clone of `main` (`6.0dev`, build `20261005`): LTI 1.3 BOTH ways with AGS, NRPS, Deep Linking and JWKS; 🟢 **xAPI PRESENT (`78` paths) where OpenOLAT has none**; 🔴 **QTI only `v1.2` LEGACY at `8` paths against OpenOLAT's `919`**; 🔴 **NO tenancy in core**; 🆕 🟢 **a core AI subsystem of `372` files with seven providers and an audit ledger in seven DB tables (`T139`)**. [`evidence/moodle-surface.2026-10-12-p160.tsv`](../evidence/moodle-surface.2026-10-12-p160.tsv) |
+| 🟢 **`ACTION HY`** — OB 3.0 / W3C VC issuance across the four permissive platforms, and assess `openlxp-xia` | 🟢 **DISCHARGED on both limbs — falsifier SILENT** | Condition: *"refuted if ANY of the four already ISSUES an OB 3.0 or W3C Verifiable Credential."* 🔴 **None does — `0` matches on eight spellings across `OpenOLAT`, `mentingo`, `richie` and `openlxp-xia`, and `0` in Moodle too, so it is `0 of 5`.** 🆕 🔴 **And two of the four have no credentialing AT ALL: `mentingo`'s `8` and `richie`'s `7` *"badge"* paths are `15 of 15` UI components (`T136`).** 🔴 **`openlxp-xia` assessed: a `53`-file Django app, metadata not learning records, `228` days stale, `Django<4.0` (EOL April 2024), and its `openlxp-xsr-aws` sibling does not resolve.** [`evidence/platform-ob3-issuance.2026-10-12-p160.tsv`](../evidence/platform-ob3-issuance.2026-10-12-p160.tsv) · [`evidence/openlxp-xia-assessment.2026-10-12-p160.tsv`](../evidence/openlxp-xia-assessment.2026-10-12-p160.tsv) |
+
+## 🔴 The control nobody registered this pass either — and it hit the shelf's own path counts
+
+🔴 **Two platform trees were counted with the same bare-substring probe this shelf has been
+publishing path counts from.** 🔴 **`ipath *lti*` returns `1 225` in Moodle — `375` of them
+(`30.6%`) are `multi`. OpenOLAT: `128 of 388`, `33.0%`.** 🔴 **`ipath *tenant*` returns `62` in
+Moodle and `62 of 62` sit inside the VENDORED `public/lib/google2-service`.** 🔴 **And it fails
+the other way: `lti13` returns `0` in Moodle, which spells LTI 1.3 `ltiadvantage`.**
+🆕 **`T136`**, 🟢 **`P160-A` is the corrected gate.** 🟡 **p159's OpenOLAT figures are NOT
+affected — they were directory-scoped, not substring-scoped.**
+🔵 **Same lesson as `T129`, one layer up: a count this shelf has never disambiguated is not
+evidence, it is a habit.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p160
+
+| gap | movement |
+|---|---|
+| 🔴 *"The published no-grant shares for rows 1–195 are OVERSTATED by an unknown amount"* | 🟢 **CLOSED — overstated by `0.0` points. `0 of 37` rows recovered on 33 paths; `18.8%` and `23.0%` are CONFIRMED figures** |
+| 🔴 *"`moodle/moodle`'s own surface has never been read"* | 🟢 **CLOSED — read in full from the tree, `30` dimensions, and it changed two routing rows** |
+| 🔴 *"`openlxp/openlxp-xia` unassessed beyond its licence"* | 🟢 **CLOSED — and this shelf's description of it was WRONG: metadata cataloguing, not learning records** |
+| 🔴 *"Neither permissive platform emits xAPI"* | 🟡 **NARROWED, with an uncomfortable answer: it is still true of both permissive platforms, but the COPYLEFT one (Moodle, GPL-3.0) emits xAPI at `78` paths.** 🟢 **A client with an existing LRS CAN be served from this shelf — via `P156-A`'s unmodified-platform crossing, not from a permissive fork** |
+| 🔴 *"Nothing permissive ISSUES an OB 3.0 / W3C VC credential"* | 🟡 **CONFIRMED and WIDENED to `0 of 5` platforms, Moodle included. `P159-A` stands as a build** |
+| 🔴 *"Credentialing's incumbent is `OpenOLAT`"* | 🔴 **CORRECTED AGAIN — there are TWO: Moodle `306` paths, OpenOLAT `182`, both Open Badges `v2` only.** 🟢 **`T133` is a pattern across the platform tier, not a single instance** |
+| 🔴 *"`T127` — `mentingo` over-claims `scorm` and `xapi`"* | 🔴 **AMENDED. SCORM IS SHIPPED — `119` files, an export generator plus a runtime with a bundled player.** 🟢 **The `xapi` half stands (`README` only).** 🆕 **`T135`: a schema census cannot see a capability that ships as an export pipeline** |
+| 🟡 *"`T134` — the egress boundary"* | 🟢 **SHARPENED into `T137`: `rate_limit` answers `200` with the full quota unspent, so the `403`s are a repository-SCOPE policy, not auth and not rate limiting.** 🔵 **It cannot be waited out; only the instrument can change** |
+| 🟡 *"The regional sweep returns little that is new"* | 🔴 **MEASURED and named: `0` new regional facts from twelve queries. The web channel is SATURATED at this shelf's depth** |
+
+## 🔴 Gaps OPEN after p160, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🆕 🔴 **New-entrant and attention-ranked discovery is CLOSED to this session** | 🔴 **`T137`: no stars, topics, forks or `created_at`. The agent shelf could be re-verified but not GROWN this pass, and `agents/top.md`'s star column is one pass old** |
+| 🆕 🔴 **`OpenOLAT`'s AI surface has never been read** | 🟢 **Moodle's is now measured at `372` files; OpenOLAT was read for standards and tenancy only.** 🔵 **`ACTION HZ`** |
+| 🆕 🔴 **No permissive platform on this shelf has BOTH tenancy and LTI** | 🟢 **Measured: `mentingo` has tenancy and no LTI; `OpenOLAT` has LTI and no tenancy; Moodle has LTI, no tenancy and is GPL.** 🔴 **A multi-district federated engagement has no single-platform answer** |
+| 🆕 🟡 **Moodle's core AI ledger has not been read as a SCHEMA** | 🟢 **Seven tables and `ai_action_register`'s fields are read; retention, purge and privacy exporters are not.** 🔵 **`ACTION IA` — it decides whether the ledger is actually usable as audit evidence** |
+| 🔴 **No APAC education adoption rate, SIXTH pass · no EMEA education adoption RATE, ELEVENTH** | 🟡 **Both queries ran again this pass and returned regulation, sentiment and market sizes. Declared, with the query text, in `intel/market.md`** |
+| 🔴 **`ACTION GJ` is not closed** | 🔴 **The DEC LATAM survey's countries and fieldwork window are still unread; `29` institutions and the Tec de Monterrey partnership were already held** |
+| 🔴 **The AI Act date conflict is unresolved, and a SEVENTH variant appeared** | 🟡 **A Commission page rendered by the search channel lists *"31 July 2026 — entry into force of AI Act."*** 🔴 **Unverifiable at source (`T134`), QUARANTINED, not promoted to the ledger. Architect to `2027-12-02` and name the reading** |
+| 🔴 **`374` of `669` `ai-tutor` rows unread, and the only sort this session can reach is gone** | 🔴 **The star channel saturated at p159 AND the API that serves it is closed at p160.** 🟡 **Resuming the census needs API access, not a better plan** |
+| 🔴 **The rotation that selects this industry is STILL not fixed on `main`** | 🔴 **p158 diagnosed it, p159 confirmed it, p160 confirms it again: each run reads `main`, each run may write only its own `claude/…` branch, nothing merges them. Advanced on this pass's branch as required, and it will not reach the next run.** 🟡 **NOT registered — it is not a research task** |
+
+## 🔜 Pre-registered for p161 — THREE actions, each with a falsifier
+
+🔵 **Three again.** 🟢 **All three are tree reads, because the tree channel is the one that
+works** *(`T137`)*, 🟢 **and each one tests a claim this pass is now selling to clients.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HZ`** *(FIRST — it tests `P160-B`'s central claim)* — read `openolat/OpenOLAT`'s AI surface as `HX` read Moodle's: provider abstraction, per-call logging, policy/consent gate, evaluative actions | 🔴 *Refuted if `OpenOLAT` ships a per-call AI audit ledger comparable to Moodle's `ai_action_register`* — 🟡 **p160 expects it does NOT, which is what makes `P160-B` a Moodle-specific pattern rather than a platform-agnostic one.** 🟢 **If OpenOLAT HAS one, `P160-B` must be rewritten onto the Apache-2.0 platform and the GPL caveat in its SOW line disappears** |
+| 🟢 **`ACTION IA`** — read Moodle's AI ledger as a SCHEMA: field types, retention and purge tasks, privacy exporters, and whether `ai_action_register` stores the PROMPT and the RESPONSE or only their token counts | 🔴 *Refuted if the ledger retains neither prompt nor response text* — 🟡 **p160 expects it does NOT retain them (the field list shows only `prompttokens` and `completiontokens`), which means the ledger evidences USE but not CONTENT, and `P160-B` step 2 must say so before a client relies on it for an appeal.** 🔵 **Either answer changes what the pattern may promise** |
+| 🟢 **`ACTION IB`** — run `P160-A` over `openedx/edx-platform` (AGPL-3.0, the other platform `P156-A` crosses to): LTI 1.3 both ways, Open Badges and version, xAPI, QTI, tenancy, AI subsystem | 🔴 *Refuted if `edx-platform` has NO multi-tenancy* — 🟡 **p160 expects it DOES (site/organisation scoping is part of its design), which would make it the only platform on this shelf with tenancy AND LTI, and would open the multi-district gap this pass just declared.** 🔴 **AGPL means the crossing must stay at the protocol (`P156-A`), and the pattern must say so.** 🔵 **Note for whoever runs it: its default branch is `master`, not `main` (`ls-remote`, p160) — probe `master` or `P53` will hand back a false absence** |
+
+🔴 **Deliberately NOT registered:** 🔴 **the rotation defect** *(not research)*, 🔴 **a primary
+legal text, a primary market study and third-party efficacy evidence** *(retired under `T134`)*,
+🔴 **and resuming the `ai-tutor` census** — 🟢 **because `T137` means this session cannot, and
+registering it would pretend otherwise.**
 ## 🟢 Verdicts on the THREE actions p158 registered, judged by p159 — all three DISCHARGED, one falsifier FIRED
 
 🟢 **Fourth consecutive three-action register, and the first clean sweep since p157.**
