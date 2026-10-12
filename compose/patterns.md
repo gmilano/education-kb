@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🔴 `P48` — classify a licence by its NAME LINE; the body SIZE cannot tell the families apart *(new, p155 — Global)*
+
+🔵 **The problem this replaces.** `P44` step 4 told you to confirm a licence family by the
+body's byte size. 🔴 **p155 measured three collisions that break it**, and the worst two are on
+the pairs that matter most to a studio
+([`evidence/band-collision.2026-10-12-p155.tsv`](../evidence/band-collision.2026-10-12-p155.tsv)):
+
+| collision | bytes | gap | the loss |
+|---|---|---|---|
+| 🔴 **MIT cluster vs AGPL-3.0 SHORT FORM** | 1 062–1 102 vs **1 134** | 🔴 **32 B** | 🔴 **Strongest copyleft read as most permissive licence** |
+| 🔴 **Apache-2.0 vs ECL-2.0** | 10 982 *(and 10 227–11 408 across Apache bodies)* vs **11 120** | 🔴 **138 B** — 🔴 **and the Apache range BRACKETS ECL entirely** | 🔴 ECL-2.0's narrowed patent grant |
+| 🔴 **GPL-3.0 vs AGPL-3.0** | 35 147 vs **35 136** | 🔴 **11 B** | 🔴 **"Network use counts as distribution"** |
+
+### The recipe
+
+**Inputs:** a repository slug. **Cost:** one `curl`.
+
+1. 🟢 **Fetch the body on the `raw` channel** (`P45`): try branches `main`, `master`,
+   `develop`, and filenames `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`,
+   `COPYING.txt`. 🔴 **A wrong path must `404`** or the probe proves nothing.
+   🔵 **`frappe/education` is the reason `develop` and `license.txt` are both on that list,
+   and `moodle/moodle` is the reason `COPYING.txt` is.**
+2. 🟢 **Read the NAME LINE — the first match of the licence-name strings**, in this order:
+
+   ```
+   GNU AFFERO GENERAL PUBLIC LICENSE      ->  AGPL
+   GNU LESSER GENERAL PUBLIC LICENSE      ->  LGPL
+   GNU GENERAL PUBLIC LICENSE             ->  GPL
+   Educational Community License          ->  ECL
+   Apache License                         ->  Apache
+   MIT License / BSD n-Clause / Mozilla   ->  as named
+   ```
+
+   🔴 **The order is not cosmetic.** An AGPL body contains `GNU GENERAL PUBLIC LICENSE` in its
+   own preamble and an LGPL body appends the GPL text wholesale, 🔴 **so a naive order reads
+   `canvas-lms` as GPL and `openeducat_erp` as GPL.** 🟢 **Pin the order with a test.**
+3. 🟢 **Read the VERSION separately** (`Version 2` vs `Version 3`), because `P43`'s whole
+   question lives there. 🔵 **`rosariosis` is GPL-**2**.0, not 3** — a secondary source said
+   only *"GPL"*.
+4. 🟢 **Use SIZE only as an ANOMALY flag, never as a confirmer:**
+   - 🔴 **Body under ~2 KB that names a GNU licence → a GRANT BY REFERENCE or SHORT FORM.**
+     `frappe/education` = **19 B** `License: GNU GPL V3`; `24kchengYe/human-skill-tree` =
+     **1 134 B** AGPL-3.0. 🔴 **Neither is classifiable by any detector, GitHub's included.**
+   - 🔴 **Body that classifies as a permissive family but is far too LARGE → a proprietary
+     licence wearing a permissive opening** (`P411`: `PageLM`, 8 563 B "MIT").
+   - 🔴 **A size inside the right band proves nothing** — that is the whole point of this gate.
+5. 🟢 **Then run `P47`**: the root grant may be a property of the PATH. 🔵 **Two instances now
+   — `scibly-dev/scibly` (`ee/` proprietary) and `openeducat/openeducat_erp`, whose own
+   preamble says bundled externals *"may be published under other GPL-compatible licenses."***
+6. 🟢 **Then run `P44` step 5** — enumerate the other surfaces and compare on the FAMILY.
+   🔵 **And treat a comparison article's licence column as a hypothesis** (`T96`: three of
+   three platform licences were wrong or imprecise in secondary sources this pass).
+
+🟢 **Result in production:** **19 of 19** bodies classified by name line this pass with zero
+ambiguity, across MIT, Apache-2.0, ECL-2.0, LGPL-3.0, GPL-2.0, GPL-3.0, AGPL-3.0 full-text and
+AGPL-3.0 short-form. 🔴 **Zero of those three collisions are detectable by size.**
+
+---
+
+## 🆕 🟢 `P49` — compose a pedagogy SKILL onto a governed platform *(new, p155 — Global)*
+
+🔵 **The problem.** A studio is asked for an AI tutor. 🔴 **The two obvious answers are both
+wrong:** build on the institution's LMS and inherit AGPL (Canvas, Open edX) or GPL (Moodle);
+or ship a standalone app and inherit the institution's whole compliance surface with no
+integration. 🟢 **`T98` supplies a third shape**, and the pieces below are all verified on this
+shelf.
+
+### The recipe
+
+| layer | the piece | licence | why this one |
+|---|---|---|---|
+| 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | 🟢 **A skill: no runtime, no deployment.** 🟢 **`Bloom` ships as a skill AND a hostable app — the migration path is already written** |
+| 🟢 **Memory / retention** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) *(515 ★)* | 🟢 **MIT, 1 074 B** | 🟢 **Spaced repetition as an MCP tool surface the skill can call** — retention stops being a promise |
+| 🟢 **Learner model** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | 🟢 **Knowledge tracing: the evidence layer buyers now demand.** 🔵 **Feeds the diagnosis the tutor skill opens with** |
+| 🟢 **Institutional boundary** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) *(Apache-2.0, 376 ★)* for LTI, or an external MCP server — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(MIT, 290 ★)* | 🟢 **Apache-2.0 / MIT** | 🟢 **Nothing of Moodle's GPL or Canvas's AGPL-3.0-ONLY reaches your code** (`P43`) |
+| 🟢 **Platform, if greenfield** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(92 ★)* · [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **MIT, 1 062 B** · 🟢 **Apache-2.0, 10 982 B** | 🟢 **The two permissive substrates.** 🔵 `mentingo` for fork-and-own, `OpenOLAT` for institutional procurement |
+| 🟢 **SIS inputs** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 🟢 **Attendance/grades/scheduling for dropout prediction** — 🔴 **go out to its API, never build inside** |
+
+### Wiring it
+
+1. 🟢 **The skill is the product and it holds the pedagogy only.** Diagnose, then teach — the
+   shape `universal-diagnostic-tutor-skill` ships.
+2. 🟢 **The host agent supplies model, memory and tool access.** 🔵 **This is why the skill
+   layer costs almost nothing to deliver and almost nothing to license.**
+3. 🟢 **The boundary layer carries every institutional duty the skill cannot:** FERPA logging
+   (`zavora-ai/mcp-student-records`' demonstrable artefact), the EU AI Act deployer duties, the
+   human-approval gate Oklahoma `SB 1734` requires, and the parental opt-out.
+   🔴 **A skill cannot be a data controller. Do not pretend otherwise.**
+4. 🟢 **`pyKT` closes the loop** and produces the evaluation evidence the 2026 buyer asks for
+   before purchase.
+5. 🔴 **Run `P48` on every row before you ship**, and 🔴 **`P47` on any row with a carve-out.**
+
+🔵 **Why this sells.** 🟢 **EMEA:** keep the skill on the pedagogical side of the
+`2026-05-19` Commission guideline line and the Annex III high-risk tier does not attach;
+the boundary layer carries the FRIA when it does. 🟢 **North America:** Oklahoma `SB 1734`'s
+approval gate and opt-out live in the boundary layer, so one architecture serves every district
+on a statutory deadline. 🟢 **LATAM:** IESALC's 87%-doing / 26%-governing gap is a governance
+sale, and this shape makes governance a separable, auditable layer. 🟢 **APAC:** Korea's pilot
+year is design time, and Vietnam's extraterritorial high-risk classification lands on the
+boundary layer — which is where you want it.
+
+🔴 **What this pattern does NOT solve:** 🔴 **region placement is unverified for most skill
+rows** (`ACTION HA`), 🔴 **`mentingo` is unassessed beyond licence and stars** (`ACTION HC`),
+and 🔴 **no credentialing piece exists on this shelf at all** (`ACTION HE`).
+
+
 ## 🆕 🟢 `P46` — measure the POPULATION in one call, then spend the body-reads where they matter *(new, p154 — Global)*
 
 🔵 **The problem this replaces.** p153 priced a ten-row shelf at **one rendered-page fetch per

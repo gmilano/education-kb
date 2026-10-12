@@ -1,0 +1,22 @@
+slug	head_sha12	verdict
+frappe/education	444cc8efc100	EXISTS - unchanged from the SHA p153 recorded
+openeducat/openeducat_erp	1c95cefebc17	EXISTS - unchanged from the SHA p153 recorded
+OpenOLAT/OpenOLAT	e4be14f0d1bb	EXISTS
+francoisjacquet/rosariosis	22ec5ba9256e	EXISTS
+HKUDS/DeepTutor	6cf793bd868b	EXISTS
+24kchengYe/human-skill-tree	be589ddd04c9	EXISTS
+ankimcp/anki-mcp-server	e0e347f7f399	EXISTS
+ZeKaiNie/universal-examprep-skill	b9e84f5fef3a	EXISTS
+karanb192/algo-sensei	25ea970f82c5	EXISTS
+Li-Evan/Bloom	b3918981bb34	EXISTS
+SenmuuuuW/universal-diagnostic-tutor-skill	075c1895d255	EXISTS
+artcc/freelingo	3f4d68356625	EXISTS
+Selleo/mentingo	242a9324fe48	EXISTS
+KeWang0622/kaogong-skill	2af2115291bd	EXISTS
+flysheep-ai/education-skills	b4c935210206	EXISTS
+yh2072/edgameclaw	4d92b73121d6	EXISTS
+PrepLabsAI/InterviewMentor	609d311bbbb5	EXISTS
+codeXsidd/Studivexa	6ac279946ca9	EXISTS
+SimonsTang/feifei-companion	c9c6295d220c	EXISTS
+gmilano/this-cannot-exist-155	NO SHA	NEGATIVE CONTROL FIRES
+ZeKaiNie/no-such-repo-p155	NO SHA	NEGATIVE CONTROL FIRES

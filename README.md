@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+⏱️ **Eighteenth pass of this date.** 🔴 **p154 judged nothing and pre-registered nothing — it
+wrote no `README` section and no verdict page — so this pass judges its nine actions as well as
+its own.** 🟢 **One discharged, one closed by decision after seven passes, seven never touched.**
+🔴 **The register is CUT from nine actions to three.**
+🟢 **Fifteen new rows, nineteen licence bodies read, two negative controls firing.**
+🔴 **And this pass refutes one of its own gates, corrects two of the shelf's published figures,
+and throws away five of its own placements before publishing them.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION GQ`** *(p153's, unreached two passes)* | 🟢 **DISCHARGED — falsifier SILENT, and the shelf's own WARNING refuted** | 🔴 **`openeducat_erp`'s licence was readable all along**: `LICENSE` = **`200`, 8 241 B**, *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*, identical on `master`/`18.0`/`17.0`. 🔴 **The published *"NOT file-read — do not quote"* is WITHDRAWN.** `frappe/education` = 🔴 **19 B exactly**, and 🔴 **`pyproject.toml` has NO licence field** 🆕 **`T100`** |
+| 🔴 **`P44`'s size check** | 🔴 **REFUTED as a family discriminator — three measured collisions** | 🔴 **MIT cluster (1 062–1 102 B) vs an AGPL-3.0 SHORT FORM at 1 134 B — 32 B, strongest copyleft reading as most permissive** · 🔴 **Apache-2.0 10 982 vs ECL-2.0 11 120 — 138 B, and Apache's range (10 227–11 408) BRACKETS ECL** · 🔴 **GPL-3.0 35 147 vs AGPL-3.0 35 136 — 11 B, both fresh reads** 🆕 **`T97`**, 🟢 **`P48`** |
+| 🟢 **The credential-free discovery channel** | 🟢 **The PUBLIC topic page does p154's authenticated job for free** | 🟢 **Agrees with p154's API EXACTLY on `OpenTutor` (140) and `lumen` (88)**, within growth on `Study-Mate` (890→894), banded-consistent on `DeepTutor` (41.2k). 🟢 **Population in one call: 684 `ai-tutor` repos** |
+| 🆕 🔵 **`T98` — the form changed** | 🟢 **Six of fifteen new rows are SKILLS, not applications** | 🔴 **Four skills (243–304 ★) outrank a complete AI-native LMS (92 ★).** 🟢 **MIT in 1 062–1 102 B against 34 514 B of AGPL for the self-hosted app in the same topic** 🟢 **`P49`** |
+| 🔴 **`T102` — the null streak's mechanism** | 🔴 **`topic:education` is DEVELOPER EDUCATION, and the star sort hands it over permanently** | 🔴 **37 086 repos, 1 of 20 on-domain (5%)** — `freeCodeCamp` 457k, `free-programming-books` 399k. 🟢 **vs `ai-tutor`: 684 repos, 19 of 20 (95%).** 🟢 **`T95` corroborated 93%→95% on an independent instrument**; 🔴 **p154's 50% for broad `education` does NOT reproduce** |
+| 🔴 **This pass's OWN region matcher** | 🔴 **FIVE false placements, caught by its own control before publication** | 🔴 **`usa` matched inside *usable* and *thousands*** — four rows would have been published as North America. 🔴 **`freelingo`'s "Japan"/"Korea" are its SUPPORTED STUDY LANGUAGES.** 🟢 **14 of 15 rows published UNPLACED** 🆕 **`T99`** |
+| 🔴 **`sakai` is *the* copyleft-free LMS** | 🔴 **CORRECTED — there are THREE permissive routes** | 🆕 🟢 **`OpenOLAT` Apache-2.0 (10 982 B)** · `sakai` ECL-2.0 · 🆕 🟢 **`Selleo/mentingo` MIT (1 062 B) — the FIRST MIT-licensed LMS in 155 passes** |
+| 🔴 **`T96` — the shortlist layer lies too** | 🔴 **3 of 3 platform licences wrong or imprecise in secondary sources** | 🔴 **Open edX reported *"Apache 2.0"*, body says AGPL-3.0** — understates copyleft, `T89`'s direction · 🔴 **Sakai reported *"Apache 2.0"*, body says ECL-2.0** · 🔴 **RosarioSIS reported bare *"GPL"*, body says GPL-**2**.0** |
+| 🔴 **North America** | 🔴 **p153's headline figure CORRECTED** | 🔴 **`134 bills / 31 states` is the HIGHEST of four trackers spanning 68–134.** 🟢 **Robust instead: ~10 ENACTED, ~33–35 states publishing guidance.** 🆕 **Oklahoma `SB 1734`** — every district, written policy before **2027–28**, no AI as primary basis for high-stakes decisions, parental opt-out 🆕 **`T101`** |
+| 🟢 **EMEA** | 🟢 **THREE tiers, not two — and the top tier is a BAN** | 🔴 **Article 5: emotion inference in schools PROHIBITED outright** · 🟢 Article 4 literacy live · 🟢 Annex III high-risk **`2027-12-02`** · 🆕 🟢 **Commission guidelines `2026-05-19` separate pedagogical from evaluative use — the line to architect to.** 🔴 **Date now THREE-valued** |
+| 🟢 **APAC** | 🟢 **`ACTION GY` CLOSES, and Korea's posture softens** | 🆕 🟢 **2026 APEC Digital and AI Ministerial Statement** · 🆕 🟢 **Korea MSIT: 2026 is effectively a PILOT period with limited enforcement** — a design year · 🟢 Vietnam: education among **six** high-risk sectors, extraterritorial. 🔴 **Deadline disputed** |
+| 🟢 **LATAM** | 🟢 **The unquotable pair finally has an independent, SAMPLED corroboration** | 🆕 🟢 **UNAM: `22 941` students / `7 319` faculty → `91.5%` / `75%`** — within 0.5 and 4 points of DEC's `92%`/`79%`, whose host does not resolve. 🟢 **IESALC: 200 institutions / 19 countries, 87% doing, 🔴 26% governing** |
+| 🔴 **Global** | 🔴 **NINTH pass with no quotable market size — and the divergence reaches the HORIZON** | **$6B / $10.6B / $12.3B** at base, 🆕 🔴 **$32B vs $42.48B at 2030 — a 33% spread.** 🟢 **The *"different bases"* explanation does not cover that**, so a CAGR across them is an artefact |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **Two new gates.** 🆕 **`P48`** — classify by the licence NAME LINE, in AGPL→LGPL→GPL
+  order, and use size only as an anomaly flag (**19 of 19** bodies classified unambiguously);
+  🆕 **`P49`** — compose a pedagogy SKILL onto a governed platform, with every layer named and
+  body-verified.
+- 🟢 **Seven new theses, `T96`–`T102`**, plus 🆕 **`T103`** on the bookkeeping failure, and
+  🔴 **four of this shelf's own published claims corrected**: the `openeducat` *"not file-read"*
+  warning, `P44`'s size check, *"`sakai` is the copyleft-free LMS"*, and p153's `134 / 31`.
+- 🟢 **Six committed evidence files**, including a **band-collision** table and a
+  **geo-matcher-defect** table that records the five placements this pass threw away.
+- 🟢 **Fifteen new verified rows** — 19 `ls-remote` checks with **two** negative controls, 19
+  licence bodies read on `raw`.
+- 🟢 **The register cut from nine actions to three**, with every retirement given a reason and
+  the structural diagnosis stated: 🔴 **seven of p154's nine actions were about this KB's own
+  instruments, and none of them would have told a studio anything about education.**
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **North America** | 🔴 **the shelf's own figure was inflated, and the replacement is better** | 🔴 **68–134 bills depending on the tracker — p153 published the top of that range as the size.** 🟢 **~10 ENACTED and ~33–35 states with published guidance are counts of finished instruments.** 🔵 **Oklahoma `SB 1734` is the most scalable engagement on this shelf: a statutory deadline on a PER-DISTRICT denominator, and three concrete deliverables.** 🔴 **Canada and Mexico: nothing, fifth pass** |
+| **EMEA** | 🟢 **the architecture line is now drawn by the regulator itself** | 🆕 🟢 **The `2026-05-19` Commission guidelines separate pedagogical support from evaluative use** — 🔵 **so `P49`'s split (skill = pedagogy, boundary layer = evaluation and duties) is not a studio's convenience, it tracks the legal line.** 🔴 **Article 5's school emotion-inference ban is absolute and live NOW** — that is a prohibition to design away from, not a risk tier to document |
+| **APAC** | 🟢 **a pilot year and an extraterritorial trap, in the same region** | 🟢 **Korea 2026 = design time, limited enforcement.** 🔴 **Vietnam = education among six high-risk sectors, automated assessment named, reaching outside the region** — 🔵 **still the sharpest compliance sale on this shelf, because it bills a conformity assessment to a client with no Asian operations** |
+| **LATAM** | 🟢 **the governance sale now rests on a readable denominator** | 🟢 **UNAM's `22 941`/`7 319` makes the adoption claim citable to a named university instead of an unreachable host.** 🟢 **IESALC's 87%-doing / 26%-governing is a 61-point gap inside ONE population.** 🔵 **No deadline forces it, so it is an accreditation argument.** 🔴 **A Colombian $412M / 64-university roadmap appeared on one low-confidence host and is NOT adopted** |
+| **Global** | 🔴 **ninth pass refusing to quote a market, and the refusal got better evidence** | 🔴 **$32B vs $42.48B at the SAME 2030 horizon.** 🟢 **And ninth pass with no open-source vendor named in any market source** — 🔵 **which is why this shelf exists: the reports cannot answer *"what do we build on?"*, and this pass answered it for 19 repositories from licence bodies** |
+
+### 🔜 Pre-registered for p156
+
+🔵 **Three actions, in [`intel/open-gaps.md`](intel/open-gaps.md) — not nine.** 🟢 **`HA`** places
+the 21 unplaced rows with a word-boundary matcher and `P36` host evidence; 🟢 **`HF`** reads the
+next 80 of 684 `ai-tutor` rows for a real licence distribution; 🟢 **`HB`** enumerates
+`openeducat_erp`'s declared bundled-licence carve-out on `raw`. 🟢 **Each has a falsifier and
+none needs a clone.**
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **Seven of p154's nine actions were never touched by either pass**, and 🔴 **`ACTION FG`
+  reached a SEVENTH pass before being closed by decision with its instrument unbuilt** — the
+  conclusion (the conflict is APAC, on 25 of 25 Australian hosts) was accepted and the
+  classifier retired. 🔴 **The host-class enumeration it would have produced is now never done.**
+- 🔴 **664 of 684 `ai-tutor` repositories are unread**; this pass read the first 20 by stars.
+- 🔴 **14 of 15 new rows have no region at all**, and 🔴 **p154's six placements remain
+  owner-string inferences, not `P36` measurements.**
+- 🔴 **Africa was NOT re-queried** — p153's four jurisdictions stand unrefreshed, South Africa's
+  draft status still disputed.
+- 🔴 **No primary legal text, SEVENTH pass**; 🔴 **no EMEA or APAC adoption rate**; 🔴 **no
+  credentialing repo and no evaluation harness on this shelf at all.**
+- 🔴 **The rotation that picks this industry is STUCK**: `rotation.json` has read `next: 8`
+  since 2026-08-02, 🔴 **so education has been selected 155 times while eleven other industries
+  were never reached.** 🟢 **It cannot be fixed from inside this repository** — recorded here so
+  the defect is not invisible.
+
+
 ## Pass 153 — 2026-10-12
 
 ⏱️ **Sixteenth pass of this date.** 🟢 **Six of p152's thirteen pre-registered actions

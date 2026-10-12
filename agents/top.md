@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+🟢 **The PUBLIC topic page is a discovery AND star channel, and it needs no credentials.**
+🟢 **It reproduces p154's authenticated-API star counts EXACTLY on the rows both measured** —
+`OpenTutor` 140 → **140**, `lumen` 88 → **88** — 🟢 **and it returns the POPULATION SIZE in one
+call: 684 repositories carry `ai-tutor`.**
+🟢 **Fifteen rows this shelf had never seen, all fifteen licence bodies read, all fifteen
+existence-verified.**
+🔴 **And the pass's own region matcher manufactured FIVE false placements before its control
+caught them**, so every new row below is published **UNPLACED** rather than guessed.
+
+### 🔵 The channel note first, because this session could not use p154's
+
+🔴 **p154's authenticated `search_repositories` channel was NOT used this pass.** This
+session's repository scope is `gmilano/globant-kb`, and its operating rules forbid aiming a
+credentialed search tool at repositories outside that scope. 🟢 **So the whole pass ran on
+unauthenticated public channels** — `git ls-remote`, `raw.githubusercontent.com`, and the
+rendered topic page — 🟢 **and the star-agreement test below is what earns the substitution**,
+not an assumption that the channels are equivalent.
+
+[`evidence/star-channel-agreement.2026-10-12-p155.tsv`](../evidence/star-channel-agreement.2026-10-12-p155.tsv)
+
+| row | p154, authenticated API | p155, public topic page | verdict |
+|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 140 | **140** | 🟢 **EXACT** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 88 | **88** | 🟢 **EXACT** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 890 | **894** | 🟢 **AGREE** — +4 over the interval |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 41 136 *(shelf, 2026-10-08)* | **41.2k** *(banded)* | 🟢 **AGREE, display-banded** |
+
+🔵 **What this earns:** 🟢 **the right to measure stars and discover rows without
+credentials**, on a channel any studio can run. 🔴 **What it does not earn:** a claim that the
+public page agrees with the API *in general* — four rows agreed, and that is four rows.
+
+### 🆕 🟢 `topic:ai-tutor` — the fifteen new rows, every licence read from a BODY
+
+🟢 **Existence and `HEAD` verified for all nineteen rows touched this pass by `git ls-remote`,
+with TWO negative controls that both returned no SHA**
+([`evidence/ls-remote-verification.2026-10-12-p155.tsv`](../evidence/ls-remote-verification.2026-10-12-p155.tsv)).
+🟢 **Licences classified by the NAME LINE in the body, never by size** — see `P48`, which this
+pass had to write because the size test broke.
+
+| repo | licence *(body-read)* | bytes | ★ | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0** — 🔴 **a 1 134 B SHORT FORM** | **1 134** | **570** | 🔴 **UNPLACED** | Skill tree for lifelong learning, 30+ skills K-12 → career. 🔴 **Read `T97` before forking: its grant is AGPL in a file the size of an MIT file** |
+| 🆕 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | 1 074 | **515** | 🔴 **UNPLACED** | 🟢 **MCP server over Anki flashcards** — spaced repetition as a tool surface an agent can call |
+| 🆕 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** | 1 065 | **304** | 🔴 **UNPLACED** | Exam-prep coach with cross-session memory and page-cited slide teaching. 🔵 **A SKILL, not an app** (`T98`) |
+| 🆕 [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** | 1 081 | **287** | 🔴 **UNPLACED** | DSA/LeetCode mentor. 🔵 **Ships as a skill for a host agent** (`T98`) |
+| 🆕 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** | 1 069 | **283** | 🔴 **UNPLACED** | Adaptive tutor shipped **both** as a skill **and** a self-hostable web app. 🟢 **The dual-form row — the one to read first if you want the pattern** |
+| 🆕 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** | 1 102 | **243** | 🔴 **UNPLACED** | 🟢 **Diagnosis-FIRST tutor** for STEM/CS — diagnose before teaching, which is the pedagogy `pyKT` models |
+| 🆕 [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** | 1 083 | **170** | 🟡 **APAC** — Chinese-language subject matter (civil-service exams), 🔴 **not a `P36` placement** | Study skills for Chinese civil-service and public-institution exams |
+| 🆕 [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** — full text | 34 514 | **167** | 🔴 **UNPLACED** | Self-hosted language learning: study plans, voice, flashcards, spaced repetition. 🔴 **AGPL — network use counts** |
+| 🆕 [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 🟢 **MIT** | 1 071 | **112** | 🔴 **UNPLACED** | Mock technical interviews. 🔵 **The corporate-reskilling edge of this topic** |
+| 🆕 [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** | 1 068 | **109** | 🟡 **APAC** — Chinese-language description, 🔴 **not a `P36` placement** | 🟢 **A COLLECTION of education skills** — the closest thing on this shelf to a skill registry |
+| 🆕 [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 🟢 **Apache-2.0** | 10 227 | **106** | 🟡 **APAC** — Chinese-language description, 🔴 **not a `P36` placement** | K-12 education companion, "Trinity" three-part system |
+| 🆕 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **1 062** | **92** | 🔴 **UNPLACED** — 🔴 **its README yields NO region evidence under a correct matcher** | 🟢 **An AI-native LMS with an AI mentor and role-play — and the ONLY MIT-licensed LMS this shelf has ever found.** See `verticals/solutions.md` |
+| 🆕 [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 🟢 **MIT** | 1 068 | **72** | 🔴 **UNPLACED** | Student productivity workspace, gamified learning, focus rooms |
+| 🆕 [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 🔴 **AGPL-3.0** — full text | 34 523 | **71** | 🔴 **UNPLACED** | 🟢 **Turns learning material into a game-based course** — the only game-generation row here |
+| 🆕 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🔴 **NO GRANT** *(p153 verdict, carried)* | — | **63** | 🟡 **APAC** | RAG tutor for grades 1–9. 🟢 **First star measurement for this row** — 🔴 **and it still ships with no licence** |
+
+🟢 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) re-verified this pass**: Apache-2.0
+read from an **11 408 B** body, `HEAD` `6cf793b`, **41.2k ★** — 🟢 **the shelf's largest
+education-specific agent, confirmed on a second channel, and permissively licensed.** It
+remains the default starting point for a tutoring engagement.
+
+### 🆕 🔵 `T98` — the distribution form changed, and no market source on this shelf names it
+
+🔴 **Six of the fifteen new rows are not applications. They are SKILLS** — instruction bundles
+that attach to a host agent — and one more ships as a skill *and* an app:
+
+| row | ★ | form |
+|---|---|---|
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 304 | skill |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 287 | skill |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 283 | 🟢 **skill + self-hostable app** |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 243 | skill |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 170 | skill |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 109 | 🟢 **a collection of skills** |
+
+🔵 **Why this matters commercially, stated plainly.** 🟢 **A skill has no runtime, no database
+and no deployment** — it is text plus a manifest, and it inherits its host's model, memory and
+tool access. 🟢 **So the cheapest education deliverable on this shelf is no longer a platform:
+it is a pedagogy encoded as a skill, and `Bloom` shows the migration path** (same pedagogy,
+shipped twice — once as a skill, once as a hostable app). 🔴 **And `1 062 B` of MIT text is the
+entire licensing question for six of them**, against **34 514 B of AGPL** for the self-hosted
+app in the same topic. 🔵 **The recipe is `P49`.**
+
+🔴 **What this does NOT establish**: that skills are *better*, or that they can carry
+institutional requirements. A skill cannot hold a FERPA audit log, cannot be a data
+controller, and cannot satisfy an EU AI Act deployer duty on its own. 🔵 **It composes with
+something that can** — and that is the whole point of `P49`.
+
+### 🔴 Region: the matcher broke, and the rows are published UNPLACED rather than guessed
+
+[`evidence/geo-matcher-defect.2026-10-12-p155.tsv`](../evidence/geo-matcher-defect.2026-10-12-p155.tsv)
+
+🔴 **A README geo-matcher without word boundaries produced five placements, and all five were
+artifacts:**
+
+- 🔴 **`usa` matched inside `usable` and `thousands`** — `Selleo/mentingo`,
+  `karanb192/algo-sensei`, `ankimcp/anki-mcp-server`, `PrepLabsAI/InterviewMentor` would all
+  have been published as **North America**. 🟢 **A word-boundary retest on `mentingo` returns
+  NO MATCH AT ALL.**
+- 🔴 **`artcc/freelingo`'s `Japan` and `Korea` are a LANGUAGE LIST** — *"Japanese (`ja-JP`),
+  Korean…"* — the study languages the app supports, 🔴 **not where anyone is.** 🔵 **A word
+  boundary would not have caught this one**: it is semantic, not lexical.
+
+🟢 **This is `T90`'s class on a new surface** (a matcher without boundaries manufactures data),
+🆕 **and `T99` adds the harder half: a correct lexical match can still be the wrong KIND of
+fact.** 🔵 **`ACTION HA`** carries the real placement work.
+
+🔴 **It also puts p154's six 🟡 placements in question.** p154 placed by *"LANGUAGE and OWNER
+STRING"*; this pass shows the weaker cousin of that method failing outright on eight rows.
+🟢 **Those six are not withdrawn** — owner strings like `…pku` are stronger evidence than a
+substring hit — 🔴 **but they are not `P36` measurements and should not be quoted as placements.**
+
+##### 🔴 What this page still cannot do, after p155
+
+- 🔴 **14 of the 15 new rows have NO region.** 🔵 **`ACTION HA`.**
+- 🔴 **The 44 connector rows and 8 npm rows are STILL unaudited for surface agreement** —
+  `ACTION GM`, unreached for a second pass. 🟢 **`P48` makes it cheaper than p154 thought.**
+- 🔴 **4 of p153's 10 audited rows still have no star reading** — p154's `GQ` (see the id
+  collision recorded in `intel/open-gaps.md`). 🟢 **The public topic page can now serve them.**
+- 🔴 **`664` of the `684` `ai-tutor` repositories are unread.** This pass read the first 20.
+- 🔴 **No star count for any platform or foundational row** — `ACTION GN`, unreached a second pass.
+
+
 ## Pass 154 — 2026-10-12
 
 🟢 **The authenticated GitHub API channel is OPEN, and it is the first channel this shelf

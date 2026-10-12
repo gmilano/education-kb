@@ -1,0 +1,5 @@
+pair	licence_a	bytes_a	licence_b	bytes_b	gap_bytes	size_discriminates	error_direction_if_size_used
+1	MIT (cluster of 10, 1062-1102 B)	1102	AGPL-3.0 short-form (24kchengYe/human-skill-tree)	1134	32	NO	STRONGEST COPYLEFT READ AS MOST PERMISSIVE - worst possible
+2	Apache-2.0 (OpenOLAT)	10982	ECL-2.0 (sakai)	11120	138	NO	narrowed patent grant collapsed into a standard one
+2b	Apache-2.0 (feifei-companion)	10227	Apache-2.0 (DeepTutor)	11408	1181	NO	Apache range 10227-11408 BRACKETS ECL-2.0's 11120 entirely
+3	GPL-3.0 (moodle COPYING.txt)	35147	AGPL-3.0 (edx-platform)	35136	11	NO	network-use-is-distribution lost - the single most consequential distinction for a hosted LMS

@@ -1,0 +1,9 @@
+slug	naive_match	true_source_of_string	word_boundary_retest	published_region
+Selleo/mentingo	usa	substring of "usable" and "thousands"	NO MATCH	UNPLACED
+karanb192/algo-sensei	usa	substring artifact	not run - class established	UNPLACED
+ankimcp/anki-mcp-server	usa,uk	substring artifacts	not run - class established	UNPLACED
+PrepLabsAI/InterviewMentor	usa	substring artifact	not run - class established	UNPLACED
+artcc/freelingo	japan,korea	a LANGUAGE LIST: "Japanese (ja-JP), Korean"	n/a - semantic, not lexical	UNPLACED
+24kchengYe/human-skill-tree	none	README 404s on main (lives on master)	n/a	UNPLACED
+SenmuuuuW/universal-diagnostic-tutor-skill	none	-	n/a	UNPLACED
+codeXsidd/Studivexa	none	-	n/a	UNPLACED

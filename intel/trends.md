@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+🟢 **The trend sources and the repository evidence AGREE this pass, which is unusual enough to
+state first.** 🟢 **Both say the same thing: the general-purpose chatbot is being displaced by
+purpose-built, narrow, composable pieces.** 🆕 🟢 **And the repositories show the FORM that
+displacement is taking, which no trend source names: the skill.**
+
+### 🟢 What the trend sources say, 2026
+
+| trend | what it says | 🔵 what it means for a studio |
+|---|---|---|
+| 🟢 **Purpose-built over general-purpose** | General chatbots created work for teachers — prompt-crafting and accuracy checking. The field is moving to education-designed tools | 🟢 **Sell a narrow, evaluated tool, not "AI in your LMS"** |
+| 🟢 **Agents and real-time adaptation** | Agents handling multi-step tasks; adaptive systems adjusting difficulty live; multimodal | 🟢 **`SenmuuuuW/universal-diagnostic-tutor-skill`'s diagnose-first shape is this trend in 1 102 bytes of MIT** |
+| 🟢 **Evidence demanded before purchase** | Buyers want rigorous proof of instructional benefit, not personalisation promises | 🔴 **A demo does not close in 2026.** 🟢 **Ship an evaluation harness with the pilot** |
+| 🟢 **Governance structures** | Institutions building AI strategies with governance and compliance checks | 🟢 **IESALC's 87%-doing / 26%-governing gap is this trend with a number on it** |
+| 🟢 **Digital credentials, skills-based pathways** | Credentials gaining ground as employer expectations shift | 🟡 **Unserved on this shelf** — no credentialing repo found in 155 passes. 🔵 **`ACTION HE`** |
+
+### 🆕 🔵 The trend the sources miss — `T98`, the skill as a distribution form
+
+🔴 **Not one trend source read this pass mentions it.** 🟢 **Six of the fifteen new
+`topic:ai-tutor` rows are skills rather than applications**, and a seventh
+([`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), 283 ★) ships **both**.
+
+🔵 **Why it is a trend and not a curiosity:**
+
+- 🟢 **The economics are different in kind.** No runtime, no database, no deployment: text plus
+  a manifest, inheriting the host agent's model, memory and tools. 🟢 **Delivery cost
+  approaches zero and the pedagogy is the whole product.**
+- 🟢 **The licensing question collapses.** 🟢 **`1 062–1 102 B` of MIT** for six rows, against
+  🔴 **34 514 B of AGPL** for the self-hosted app ([`artcc/freelingo`](https://github.com/artcc/freelingo))
+  in the same topic. 🔵 **Same domain, opposite legal weight, chosen by FORM.**
+- 🟢 **It is where the attention is.** Four skill rows sit between **243 and 304 ★** — above
+  [`Selleo/mentingo`](https://github.com/Selleo/mentingo)'s 92 ★ for a full AI-native LMS.
+  🔵 **A pedagogy in a text file is out-starring a platform.**
+- 🔴 **And the ceiling is real.** A skill cannot hold a FERPA audit log, cannot be a data
+  controller, cannot satisfy an EU AI Act deployer duty. 🟢 **Which is exactly why it composes
+  rather than competes — `P49`.**
+
+### 🆕 🔴 `T95` CORROBORATED and SHARPENED — the discovery problem is a RANK problem
+
+[`evidence/topic-channel-census.2026-10-12-p155.tsv`](../evidence/topic-channel-census.2026-10-12-p155.tsv)
+
+| topic | repos GitHub reports | rows read | on-domain | rate |
+|---|---|---|---|---|
+| 🟢 **`ai-tutor`** | **684** | 20 | **19** | 🟢 **95%** |
+| 🔴 **`education`** | **37 086** | 20 | 🔴 **1** | 🔴 **5%** |
+
+🟢 **p154 measured `topic:ai-tutor` at 93% on the authenticated API; this pass measures 95% on
+the unauthenticated public page — independent instrument, same answer.** 🟢 **`T95` holds.**
+
+🔴 **But p154's 50% for broad `topic:education` does NOT reproduce: the public page, sorted by
+stars, gives 5%.** 🟢 **The explanation is the sort, and it is more useful than the number
+was.** 🔴 **The star-sorted head of `topic:education` is DEVELOPER CURRICULUM** —
+`freeCodeCamp` (457k), `free-programming-books` (399k), `TheAlgorithms/Python` (225k),
+`You-Dont-Know-JS` (185k), `hello-algo` (131k), Microsoft's `*-For-Beginners` courses.
+🔴 **The single on-domain row in the top twenty is `JushBJJ/Mr.-Ranedeer-AI-Tutor` (29.6k) —
+and it is a PROMPT, not software.**
+
+🔵 **So the ten-pass agent-search null streak has a mechanism, not just a vocabulary:**
+🔴 **GitHub's "education" population IS developer education, and ranking it by stars buries
+education-SECTOR software under teaching-material repositories forever.** 🆕 **`T102`: in a
+topic whose name a second community owns, the star sort is not a relevance sort — it is a
+handover to the larger community.** 🟢 **The fix is lexical precision, not more reading:
+`ai-tutor` at 684 repositories is a tractable population; `education` at 37 086 is not a
+population at all.**
+
+##### 🔴 What this page still cannot do, after p155
+
+- 🔴 **`664` of `684` `ai-tutor` repositories are unread.** 🟢 The population is now sized and
+  the channel is free. 🔵 **`ACTION HF`.**
+- 🔴 **No sibling topic measured** — `ai-education`, `edtech`, `learning-analytics`,
+  `knowledge-tracing` are unqueried, so 🔴 **nobody knows whether `ai-tutor` is the only clean
+  term or merely the first one tried.** 🔵 **`ACTION HG`.**
+- 🔴 **The credentialing / skills-pathway trend has NO repository on this shelf** (`ACTION HE`).
+- 🔴 **Evidence-and-evaluation is a named buyer demand with no evaluation harness on this
+  shelf** beyond `pyKT`'s modelling. 🔵 **`ACTION HH`.**
+
+
 ## Pass 154 — 2026-10-12
 
 ⏱️ **Seventeenth pass of this date.** 🟢 **Four theses, `T92`–`T95`, and three of them come

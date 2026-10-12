@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+🔴 **A load-bearing claim on this page is WRONG and is corrected here.** This shelf has said
+for several passes that **`sakai` (ECL-2.0) is *the* answer whenever copyleft is a blocker.**
+🟢 **There are now THREE permissive institutional routes, not one** — and one of them is **MIT**.
+
+### 🆕 🟢 The permissive-platform table, rebuilt from bodies read this pass
+
+| platform | licence *(body-read)* | bytes | what it is | the permissive story |
+|---|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **10 982** | Full Java institutional LMS: courses, assessment, communication | 🟢 **A STANDARD permissive grant on a complete LMS.** 🔵 **Nothing to negotiate, nothing to carve out — the cleanest substrate on this page** |
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | **11 120** | University-governed LMS, Apache-derived | 🟡 **Permissive, but NOT Apache-2.0.** 🔴 **ECL-2.0 narrows the patent grant** — read it before assuming Apache terms. 🔴 Its one GNU notice is VENDORED TrimPath (`T86`) |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **1 062** | 🟢 **AI-native LMS with a built-in AI mentor and role-play** | 🟢 **MIT — the only LMS on this shelf that imposes nothing.** 🔴 **92 ★ and young**: this is a fork-and-own candidate, not an institutional procurement |
+| 🆕 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | **15 214** | 🟢 **K-12 Student Information System** — attendance, grades, scheduling, billing | 🔴 **GPL-2.0, and version 2 is NOT version 3**: different compatibility, no Apache-2.0 patent-clause interop. 🟢 **Go out to an API, do not build inside** |
+
+🔵 **How to choose between the three permissive routes, and it is not a tie:**
+
+- 🟢 **Institutional procurement, EMEA especially → `OpenOLAT`.** A complete LMS with a grant
+  every legal department already recognises. 🟡 **Region placement needs `P36` work** (`ACTION HA`).
+- 🟢 **University consortium, existing Java estate → `sakai`.** 🔴 **But brief counsel that
+  ECL-2.0 ≠ Apache-2.0.**
+- 🟢 **Greenfield, AI-first, small cohort → `mentingo`.** 🔵 **It is the only row where the
+  platform's own licence is a non-event** — and it ships the AI mentor already.
+- 🔴 **Never: build inside `rosariosis`, Canvas, Moodle or Open edX.** 🟢 **The boundary rows
+  (`tsugi` Apache-2.0, `XBlock` Apache-2.0, `scorm-again` MIT, an external MCP server) remain
+  the way in** — unchanged and re-affirmed.
+
+### 🆕 🔴 `openeducat_erp`'s warning is WITHDRAWN, and replaced by a sharper one
+
+🟢 **The licence IS file-read now: 8 241 B, LGPL-3.0, identical on `master`, `18.0`, `17.0`**
+(`repos/foundations.md`, `ACTION GQ`). 🔴 **The *"do not quote the licence from here"* line on
+this page is therefore wrong and is withdrawn.**
+
+🔴 **The replacement warning is narrower and real:** the root body itself says bundled external
+libraries *"may be published under other GPL-compatible licenses"* and points into the tree.
+🔵 **So for an OpenEduCat engagement: the ERP is LGPL-3.0 — 🟢 which permits linking your own
+modules without inheriting — 🔴 but the bundled paths are not enumerated and must be before
+you ship.** 🔵 **`ACTION HB`.**
+
+🔴 **`frappe/education` keeps its warning, with an exact figure:** a **19-byte** `license.txt`
+on `develop`, nothing in `pyproject.toml`, and 🔴 **no `-or-later`/`-only` wording anywhere**,
+so `P43` has no surface to run on. 🔵 **Get it in writing from Frappe Technologies.**
+
+### 🟢 Which route sells, by region
+
+🔵 **Four regions, and the gaps are named where they exist.** 🔵 **The canonical opportunity block for this industry lives in [`intel/market.md`](../intel/market.md) under `## Opportunities by region`** — this section is the PLATFORM-CHOICE reading of those same regions, not a second register.
+
+#### North America
+
+🟢 **Canvas (AGPL-3.0-only) dominates HiEd → the external-MCP architecture stands**, and
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 290 ★) is the
+demonstrable artefact. 🆕 🟢 **The new, concrete asks this pass found are statutory and
+dated:** Oklahoma **`SB 1734`** requires **every district** to adopt a written AI policy before
+the **2027–28** school year, bars AI as the primary basis for high-stakes student decisions,
+and mandates a parental opt-out — 🔵 **that is three deliverables (policy instrument, approval
+gate, opt-out plumbing) with a statutory deadline.** Maryland **`SB 720`** funds statewide
+teacher AI professional development; Alabama **`HB 329`** ties graduation to a CS course
+including AI instruction; California **`AB 1159`** bars training on student data; Idaho
+**`SB 1227`** sets tool-privacy requirements. 🔴 **Canada and Mexico returned nothing, FIFTH
+consecutive pass** — the continental query is US-only in practice.
+
+#### EMEA
+
+🟢 **Moodle + Open edX institutional base, and the sellable structure is now THREE-TIERED, not
+two:** 🔴 **Article 5 PROHIBITIONS are live and absolute** — emotion inference in schools is
+banned outright, not regulated — 🟢 **Article 4 AI-literacy duties are live**, and 🟢 **the
+Annex III high-risk programme for admissions, grading and proctoring is a `2027-12-02`
+engagement.** 🆕 🟢 **Commission guidelines of `2026-05-19` distinguish pedagogical support
+from evaluative use**, 🔵 **which is the line a studio should architect to: keep the agent on
+the pedagogical side of it and the high-risk obligations do not attach.** 🟢 **Deployer duties
+are concrete work**: a Fundamental Rights Impact Assessment before go-live, and a student's
+right to a meaningful explanation of the system's role in a decision. 🆕 🟢 **`OpenOLAT`
+(Apache-2.0) is a European-origin permissive LMS** — 🟡 **placement unverified** (`ACTION HA`).
+
+#### APAC
+
+🆕 🟢 **Korea's enforcement posture is the news, and it changes the pitch:** the Ministry of
+Science and ICT has signalled that **2026 is effectively a pilot period with limited
+enforcement.** 🔵 **So Korea is a design-and-pilot year, not a compliance scramble** — sell
+readiness, not remediation. 🟢 **Vietnam's 2026 decree names education among SIX high-risk
+sectors**, specifically **automated assessment and behavioural monitoring**; 🔴 **sources
+conflict on the deadline — p153 recorded in force `2026-03-01`, one source this pass puts the
+high-risk education obligation at September 2027.** 🟢 **Both carried, neither quoted as
+settled.** 🟢 **Vietnam's regime is extraterritorial (p153), so a LATAM or EMEA vendor selling
+into Vietnam is in scope.** 🆕 🟢 **`ACTION GY` CLOSES**: the **2026 APEC Digital and AI
+Ministerial Statement** is a ministerial education source — it commits member economies to
+broadening education access and sharing digital-education practice. Japan: an **AI Basic Plan**
+plus a transition to official digital textbooks. India: 🔴 a proposed licensing regime for AI
+training that industry warns will slow adoption.
+
+#### LATAM
+
+🆕 🟢 **The adoption figure this shelf has been unable to quote for six passes now has an
+independent corroboration WITH a readable sample.** 🟢 **A UNAM study of `22 941` students and
+`7 319` faculty finds `91.5%` of students and `75%` of faculty using AI tools.** 🔵 **Set
+against the Digital Education Council × Tecnológico de Monterrey pair (`92%` / `79%`) whose
+host is unresolvable (`ACTION GJ`), the UNAM figures land within 0.5 and 4 points — 🟢 two
+instruments, one named university, one readable denominator.** 🟢 **UNESCO IESALC (September
+2026): 200 institutions across 19 countries, 87% using AI in at least one area, 74% in
+teaching and learning, 🔴 26% with a formal strategy.** 🔵 **So the sale is governance depth,
+with no external deadline to force it — an accreditation and quality-assurance argument.**
+🔴 **A Colombian MinEducación roadmap (64 public universities, $412M, 2028) appeared on ONE
+low-confidence host and is NOT adopted** — recorded in `intel/market.md` as unverified.
+
+##### 🔴 What this page still cannot do, after p155
+
+- 🔴 **`OpenOLAT` and `mentingo` are UNPLACED by region** (`ACTION HA`), and `OpenOLAT`'s
+  European origin is an expectation this pass did not verify.
+- 🔴 **`openeducat_erp`'s bundled non-LGPL paths are unenumerated** (`ACTION HB`).
+- 🔴 **No star count for any platform row** (`ACTION GN`, second pass unreached).
+- 🔴 **`mentingo` is unassessed beyond its licence and star count** — no read of its AI mentor,
+  its data model, or whether it is multi-tenant. 🔵 **`ACTION HC`.**
+
+
 ## Pass 154 — 2026-10-12
 
 🟢 **The platform map gains the layer it was missing: the INTEGRATION BOUNDARY.** p153 asked

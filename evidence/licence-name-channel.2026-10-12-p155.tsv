@@ -1,0 +1,29 @@
+slug	branch	path	http	bytes	name_line_read	classified	notes
+openeducat/openeducat_erp	master	LICENSE	200	8241	GNU LESSER GENERAL PUBLIC LICENSE Version 3	LGPL-3.0	REFUTES shelf claim "not file-read"; preamble carves out bundled externals
+openeducat/openeducat_erp	18.0	LICENSE	200	8241	identical byte size	LGPL-3.0	same body on 18.0 and 17.0
+openeducat/openeducat_erp	17.0	LICENSE	200	8241	identical byte size	LGPL-3.0	same body
+openeducat/openeducat_erp	master	LICENSE.md	404	-	-	-	negative control path fires
+frappe/education	develop	license.txt	200	19	License: GNU GPL V3	GPL-3.0-GRANT-BY-REFERENCE	exact 19 B, not "~20"; no or-later/only wording
+frappe/education	develop	pyproject.toml	200	1622	NO license field present	NONE	packaging metadata is SILENT; single declaration surface
+frappe/education	main	license.txt	404	-	-	-	default branch is develop, not main
+openedx/edx-platform	master	LICENSE	200	35136	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	INSIDE the shelf's GPL-3.0 band 35121-35147
+moodle/moodle	main	COPYING.txt	200	35147	GNU GENERAL PUBLIC LICENSE	GPL-3.0	fresh re-read this pass; band edge confirmed
+moodle/moodle	main	LICENSE	404	-	-	-	control path fires
+sakaiproject/sakai	master	LICENSE	200	11120	Educational Community License, Version 2.0 (ECL-2.0)	ECL-2.0	third-party sites report Apache-2.0: WRONG
+OpenOLAT/OpenOLAT	master	LICENSE	200	10982	Apache License Version 2.0	Apache-2.0	NEW row; second copyleft-free institutional LMS
+francoisjacquet/rosariosis	master	LICENSE	200	15214	GNU GENERAL PUBLIC LICENSE Version 2	GPL-2.0	third-party source said bare "GPL": version lost
+HKUDS/DeepTutor	main	LICENSE	200	11408	Apache License	Apache-2.0	Apache band widens; brackets ECL-2.0
+SimonsTang/feifei-companion	main	LICENSE	200	10227	Apache License	Apache-2.0	Apache band lower edge
+24kchengYe/human-skill-tree	master	LICENSE	200	1134	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0-SHORT-FORM	1134 B sits 29 B above the MIT cluster top edge
+ankimcp/anki-mcp-server	main	LICENSE	200	1074	MIT License	MIT	
+ZeKaiNie/universal-examprep-skill	main	LICENSE	200	1065	MIT License	MIT	
+karanb192/algo-sensei	main	LICENSE	200	1081	MIT License	MIT	
+Li-Evan/Bloom	main	LICENSE	200	1069	MIT License	MIT	
+SenmuuuuW/universal-diagnostic-tutor-skill	main	LICENSE	200	1102	MIT License	MIT	
+Selleo/mentingo	main	LICENSE	200	1062	MIT License	MIT	only MIT-licensed LMS on this shelf
+KeWang0622/kaogong-skill	main	LICENSE	200	1083	MIT License	MIT	
+flysheep-ai/education-skills	main	LICENSE	200	1068	MIT License	MIT	
+PrepLabsAI/InterviewMentor	main	LICENSE	200	1071	MIT License	MIT	
+codeXsidd/Studivexa	main	LICENSE	200	1068	MIT License	MIT	
+artcc/freelingo	main	LICENSE	200	34514	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full text
+yh2072/edgameclaw	main	LICENSE	200	34523	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full text

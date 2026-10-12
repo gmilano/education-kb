@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+🟢 **`ACTION GQ` DISCHARGED — and it REFUTES a warning this shelf has published for two
+passes.** 🔴 **`openeducat_erp`'s licence was readable the whole time**: `LICENSE` on `master`
+returns **`200`, 8 241 B**, and its first sentence names **LGPL-3.0**.
+🔴 **And the pass's main finding is a defect in this shelf's own gate: `P44`'s size check
+cannot tell the licence families apart.** 🔴 **Three measured collisions, the worst 11 bytes
+wide, all on fresh reads taken this pass.**
+
+### 🟢 `ACTION GQ` — the two ERP rows, answered from bodies
+
+[`evidence/licence-name-channel.2026-10-12-p155.tsv`](../evidence/licence-name-channel.2026-10-12-p155.tsv)
+
+p153's falsifier: *"refuted if the tree says something OTHER than the one-liner and the README
+say."* 🟢 **SILENT on both rows — the trees AGREE with the declarations.** 🔴 **But the reach
+claim was wrong, and that is the finding.**
+
+| row | what the shelf published | what the body says | verdict |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 *"LGPL-3.0 — README-declared, **NOT file-read**"*, with a *"do not quote"* warning | 🟢 **`LICENSE` = `200`, 8 241 B, 178 lines: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."*** Identical body on `master`, `18.0` and `17.0` | 🟢 **LGPL-3.0 CONFIRMED from the body.** 🔴 **The *"not file-read"* warning is WITHDRAWN** |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 *"GPL-3.0 — a ONE-LINE declaration, ~20 B"* | 🟢 **`license.txt` on `develop` = exactly `19 B`: `License: GNU GPL V3`.** 🔴 **`pyproject.toml` exists (1 622 B) and carries NO licence field at all.** `main` 404s — the default branch is `develop` | 🟡 **CONFIRMED, and SHARPENED below** |
+
+🔴 **Why the `openeducat` error happened, said rather than smoothed.** 🟢 **`P45` and `T92` —
+this shelf's own channel for reading a licence without a clone — were created in p153.**
+🔴 **Nobody aimed them at the two rows the shelf was warning about.** `ACTION GQ` was written
+as *"CLONE `frappe/education` and `openeducat_erp`"*, so it inherited a clone budget it never
+needed and went unreached for two passes. 🆕 **`T100`: an action phrased around an expensive
+instrument outlives the cheap instrument that replaced it.**
+
+### 🆕 🔴 `openeducat_erp` carries a carve-out in its preamble — `T92`'s SECOND instance
+
+🔴 **Before the LGPL text begins, the body says:**
+
+> *"Some external libraries and contributions bundled with OpenEduCat may be published under
+> other GPL-compatible licenses. For these, please refer to the relevant source files and/or
+> license files, in the source code tree."*
+
+🔵 **So the root grant is LGPL-3.0 and the tree is not uniformly LGPL-3.0 — by the root file's
+own admission.** 🟢 **This is exactly `scibly-dev/scibly`'s shape from p154** (AGPL-3.0 at the
+root, proprietary inside `ee/`), 🟢 **so `T92` — *a licence can be a property of the PATH, not
+the repository* — now has TWO instances, and the second is a row a studio bills against.**
+🔴 **It is no longer an anecdote.** 🟢 **`P47`'s path-licence gate is therefore mandatory on
+this row**, and the carve-out is *declared*, which makes it cheap to honour and inexcusable to
+miss.
+
+### 🆕 🔴 `frappe/education`: a 19-byte grant whose VERSION DIRECTION is unanswerable
+
+🟢 **Exact, not approximate: 19 bytes.** `License: GNU GPL V3` — and 🔴 **`pyproject.toml`, the
+one other surface that could speak, is silent.** 🔴 **One declaration surface, 19 bytes, no
+`-or-later`, no `-only`.**
+
+🔵 **Why that is worse than a long copyleft licence.** `P43` turns on exactly this word:
+Moodle's **GPL-3.0-or-later** gives a relicensing route, Canvas's **AGPL-3.0-only** does not.
+🔴 **`frappe/education` does not say**, so 🔴 **`P43` cannot be run on it at all** — the
+question has no surface to read. 🟢 **Previously published as *"GPL if the one-liner binds"*;
+🟢 the correct statement is *"GPL version 3, with the or-later/only question UNANSWERABLE from
+any surface in the repository."*** 🔵 **For an engagement: that is a question for Frappe
+Technologies in writing, not a question for an auditor.**
+
+### 🆕 🔴 `T97` / `P48` — `P44`'s size check is REFUTED as a family discriminator
+
+[`evidence/band-collision.2026-10-12-p155.tsv`](../evidence/band-collision.2026-10-12-p155.tsv)
+
+`P44` step 4 reads: *"MIT ≈ 1 062–1 105 B, Apache-2.0 ≈ 11 357–11 358 B, GPL-3.0 ≈ 35 121–35 147 B,
+AGPL-3.0 ≈ 34–35 KB."* 🔴 **Three collisions, measured this pass:**
+
+| # | the pair | bytes | gap | if you trusted size |
+|---|---|---|---|---|
+| 🔴 **1** | **MIT** cluster *(ten bodies, 1 062–1 102 B)* vs 🔴 **AGPL-3.0 short form** — [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 1 102 vs **1 134** | 🔴 **32 B** | 🔴 **You read the STRONGEST COPYLEFT as the MOST PERMISSIVE licence.** The worst direction that exists |
+| 🔴 **2** | **Apache-2.0** — [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) vs **ECL-2.0** — [`sakai`](https://github.com/sakaiproject/sakai) | 10 982 vs **11 120** | 🔴 **138 B** | 🔴 ECL-2.0's **narrowed patent grant** collapses into Apache-2.0's standard one |
+| 🔴 **2b** | **Apache-2.0's own RANGE** — `feifei-companion` 10 227 → `DeepTutor` 11 408 | 1 181 B wide | — | 🔴 **The Apache range BRACKETS ECL-2.0 entirely.** The two are not separable by size in principle, not just in practice |
+| 🔴 **3** | **GPL-3.0** — `moodle/moodle` `COPYING.txt`, 🟢 **re-read fresh this pass** vs **AGPL-3.0** — `openedx/edx-platform` `LICENSE` | 35 147 vs **35 136** | 🔴 **11 B** | 🔴 **You lose *network use counts as distribution*** — the single most consequential distinction for a hosted LMS |
+
+🟢 **Both figures in collision 3 are fresh reads taken this pass**, not a carried band against
+a new measurement: `moodle/moodle/main/COPYING.txt` = **35 147 B, `GNU GENERAL PUBLIC LICENSE`**;
+`openedx/edx-platform/master/LICENSE` = **35 136 B, `GNU AFFERO GENERAL PUBLIC LICENSE`**.
+🔴 **The AGPL body sits INSIDE the band this shelf uses to confirm GPL-3.0.**
+
+🟢 **What survives.** Size still catches the `P411` shape — 🟢 **a body that CLASSIFIES as one
+family but is the wrong SIZE for it is a flag** (`PageLM`'s 8 563 B "MIT"). 🟢 **And a 19-byte
+or 1 134-byte body is a flag by itself: a grant too short to be a licence text.**
+🔴 **What dies is size as a CONFIRMER of family.** 🆕 **`P48` replaces it: read the NAME LINE.**
+🟢 **This pass classified 19 of 19 bodies by name line with zero ambiguity**, including both
+AGPL short-form and full-text bodies in the same sweep.
+
+### 🆕 🟢 New foundational rows, licences read from bodies
+
+| repo | licence *(body-read)* | bytes | `HEAD` | why it is here |
+|---|---|---|---|---|
+| 🆕 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **10 982** | `e4be14f` | 🟢 **A full Java institutional LMS under a STANDARD permissive licence.** 🔵 **This shelf has said for several passes that `sakai` (ECL-2.0) is *"the"* copyleft-free LMS — 🔴 that is now WRONG: there are TWO, and the newcomer carries the better-understood grant** |
+| 🆕 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** — 🔴 **version 2, not 3** | **15 214** | `22ec5ba` | 🟢 **A K-12 Student Information System** — attendance, grades, scheduling, the inputs a dropout-prediction agent needs. 🔴 **The secondary source that surfaced it said only *"GPL"*; the body says **Version 2**, and `P43`'s whole question lives in that number** |
+| 🆕 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **1 062** | `242a932` | 🟢 **The only MIT-licensed LMS this shelf has found.** 92 ★, young — 🔵 **but it is the only row where the platform licence imposes nothing at all** |
+
+### 🆕 🔴 `T96` — third-party comparison sites misreport platform licences, and the error UNDERSTATES copyleft
+
+🔵 **The layer a studio's first-pass shortlist is actually built from is the comparison
+article, not the repository.** 🔴 **Three of three platform licences cross-checked against the
+secondary sources that surfaced them this pass are wrong or imprecise:**
+
+| platform | what secondary sources said | what the BODY says | the error |
+|---|---|---|---|
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 one source: *"Apache License 2.0: Used by Open edX"* *(another said AGPLv3)* | 🔴 **AGPL-3.0**, 35 136 B, name line `GNU AFFERO GENERAL PUBLIC LICENSE` | 🔴 **AGPL → Apache. Understates copyleft — the dangerous direction, same as `T89`'s badge** |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 *"Apache 2.0"* *(another said ECL v2)* | 🟢 **ECL-2.0**, 11 120 B, name line `Educational Community License, Version 2.0 (ECL-2.0)` | 🟡 **Apache-DERIVED is not Apache.** ECL-2.0 narrows the patent grant — material for a studio |
+| 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 bare *"GPL"* | 🔴 **GPL-2.0**, 15 214 B | 🔴 **Version dropped**, which is where `P43` lives |
+
+🟢 **So `T89` generalises off the repository.** p153 found a repo whose own badge contradicted
+its own `LICENSE`; 🔴 **p155 finds the same error direction one layer out, in the sources a
+shortlist is built from, and the sources CONTRADICT EACH OTHER on the same platform in the
+same search.** 🔵 **Operationally: a licence column in a comparison article is a hypothesis.
+`P48` costs one `curl`.**
+
+##### 🔴 What this page still cannot do, after p155
+
+- 🔴 **`openeducat_erp`'s per-directory carve-out is DECLARED but UNMEASURED** — nobody has
+  enumerated which bundled paths are not LGPL. 🔵 **`ACTION HB`.**
+- 🔴 **`frappe/education`'s version direction is unanswerable from the repo.** 🔵 **Ask the vendor.**
+- 🔴 **No star count for ANY foundational row** — `ACTION GN`, unreached a second pass.
+- 🔴 **`P44` step 4 is now known-wrong in the published text below**; 🟢 **`P48` supersedes it
+  in `compose/patterns.md`**, and the older text is left standing as history rather than
+  silently edited.
+
+
 ## Pass 154 — 2026-10-12
 
 🟢 **Two foundational layers this shelf has been reasoning ABOUT without ever enumerating are

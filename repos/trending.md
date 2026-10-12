@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 155 — the topic census, and why ten passes of "education" searches found nothing
+
+🟢 **Two topic populations measured on a free channel, and the contrast is the finding.**
+
+[`evidence/topic-channel-census.2026-10-12-p155.tsv`](../evidence/topic-channel-census.2026-10-12-p155.tsv)
+
+| topic | repositories GitHub reports | top 20 read | on-domain | rate | p154's authed-API figure |
+|---|---|---|---|---|---|
+| 🟢 **`ai-tutor`** | **684** | 20 | **19** | 🟢 **95%** | 🟢 **93% — REPRODUCED on an independent instrument** |
+| 🔴 **`education`** | **37 086** | 20 | 🔴 **1** | 🔴 **5%** | 🔴 **50% — NOT reproduced** |
+
+### 🔴 What the star-sorted head of `topic:education` actually is
+
+| repo | ★ | what it is |
+|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **457k** | 🔴 developer curriculum |
+| [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | **399k** | 🔴 a book list |
+| [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | **225k** | 🔴 algorithm implementations |
+| [`DigitalPlatDev/FreeDomain`](https://github.com/DigitalPlatDev/FreeDomain) | **204k** | 🔴 domain/DNS resources |
+| [`getify/You-Dont-Know-JS`](https://github.com/getify/You-Dont-Know-JS) | **185k** | 🔴 a book series |
+| [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | **131k** | 🔴 a DSA tutorial |
+| [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) | **96.9k** | 🔴 a 24-lesson course |
+| [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | **91.4k** | 🔴 a 12-week curriculum |
+| 🟡 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29.6k** | 🟡 **the ONLY on-domain row — and it is a PROMPT, not software** |
+
+🔵 **So the mechanism behind the ten-pass null streak is now visible, and it is not just
+vocabulary** (`T95`): 🔴 **GitHub's `education` population IS developer education, 37 086 strong,
+and ranking it by stars hands the head of the list to the larger community permanently.**
+🆕 **`T102`: in a topic whose name a second community owns, the star sort is a handover, not a
+relevance ranking.** 🟢 **`ai-tutor`, at 684 repositories, is a tractable population; `education`
+at 37 086 is not a population at all.**
+
+### 🟢 Foundational and platform rows added this pass, every licence body-read
+
+| repo | licence *(NAME LINE, `P48`)* | bytes | `HEAD` | why it is new here |
+|---|---|---|---|---|
+| 🆕 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **10 982** | `e4be14f` | 🟢 **A complete Java institutional LMS under a standard permissive grant.** 🔴 **Corrects this shelf's claim that `sakai` is *the* copyleft-free LMS** |
+| 🆕 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | **15 214** | `22ec5ba` | 🟢 **K-12 SIS** — attendance/grades/scheduling. 🔴 **Version 2, not 3; the secondary source said only "GPL"** |
+| 🆕 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **1 062** | `242a932` | 🟢 **The only MIT-licensed LMS this shelf has found in 155 passes** |
+| 🟢 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **LGPL-3.0 — 🆕 BODY-READ at last** | **8 241** | `1c95cef` | 🔴 **The *"not file-read"* warning this shelf published for two passes is WITHDRAWN** |
+| 🟢 [`frappe/education`](https://github.com/frappe/education) | 🟡 **GPL v3 by a 19 B grant-by-reference** | **19** | `444cc8e` | 🔴 **Exact, not "~20 B"** — and `pyproject.toml` carries no licence field, so 🔴 **the or-later/only question has NO surface** |
+
+🔵 **Freshness datum:** `frappe/education` at `444cc8e` and `openeducat_erp` at `1c95cef` are
+🟢 **the same SHAs p153 recorded** — neither has moved. 🔵 **The `ls-remote` channel gives that
+for one round trip, which is why `P45` exists.**
+
+### 🔴 The licence-band collisions, because they change how every row above was read
+
+| collision | bytes | gap |
+|---|---|---|
+| 🔴 **MIT cluster vs AGPL-3.0 short form** | 1 062–1 102 vs **1 134** | 🔴 **32 B** |
+| 🔴 **Apache-2.0 vs ECL-2.0** | 10 982 *(range 10 227–11 408)* vs **11 120** | 🔴 **138 B, and the Apache range brackets ECL** |
+| 🔴 **GPL-3.0 vs AGPL-3.0** | 35 147 *(moodle `COPYING.txt`)* vs **35 136** *(`edx-platform`)* | 🔴 **11 B** |
+
+🟢 **Both figures in the last row are fresh reads taken this pass.** 🆕 **`T97`**, and
+🟢 **`P48`** replaces size-as-confirmer with the name line. 🟢 **19 of 19 bodies classified
+unambiguously.**
+
+### 🔴 What this week did not find
+
+- 🔴 **No star count for ANY platform or foundational row** — `ACTION GN`, unreached a second pass.
+- 🔴 **`openeducat_erp`'s declared bundled-licence carve-out is unenumerated** (`ACTION HB`).
+- 🔴 **No credentialing or skills-pathway repository exists on this shelf**, against a trend
+  source that names digital credentials as a 2026 movement (`ACTION HE`).
+- 🔴 **GitHub Trending itself was never read** — this pass used topic pages. 🔴 **So "trending"
+  here still means "new to this shelf", not "rising this week".** 🔵 **`ACTION HI`.**
+
+
 ## 2026-10-12 — pass 154 — a channel that measures 100 repos per call, and the two negatives it can tell apart
 
 🟢 **The verification cost model on this shelf changes this pass.** p153 paid one rendered-page

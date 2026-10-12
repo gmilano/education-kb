@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🔴 Verdicts on the nine actions p154 registered, judged by p155 — and a bookkeeping failure first
+
+🔴 **p154 wrote no verdict page and no pre-registration.** Its commit touched 14 files;
+🔴 **`README.md` and `intel/open-gaps.md` were not among them.** 🟢 **So p154's own nine actions
+were never judged, p155 was never pre-registered, and the register rolled over invisibly.**
+🆕 **`T103`: a pass that does not publish its verdicts does not merely lose a page — it
+silently converts its register into a wish list, because nothing records that nothing happened.**
+
+🔴 **And p154 coined action ids without registering them, one of which COLLIDES.** p153's
+**`GQ`** = *"clone `frappe/education` and `openeducat_erp` and read their licences from the
+tree."* p154's `agents/top.md` writes **`ACTION GQ`** = *"finish the ten [API star readings]."*
+🔴 **Two different actions, one id, neither in the register.** 🟢 **p153's `GQ` is the one
+honoured below**; 🔵 **p154's is renamed `ACTION HJ` and retired with the rest.**
+p154 also coined **`GY`** (no APAC education-ministry source) and **`GW`** (an LTI/Canvas test)
+outside the register. 🟢 **`GY` is CLOSED by this pass.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION GQ`** *(p153's)* — read the two ERP licences from the tree | 🟢 **DISCHARGED — falsifier SILENT on content, and the shelf's own REACH claim REFUTED** | Condition: *"refuted if the tree says something OTHER than the one-liner and the README say."* 🟢 **SILENT: both trees AGREE.** `openeducat_erp/master/LICENSE` = **`200`, 8 241 B**, *"published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*, identical on `18.0` and `17.0`. 🔴 **So the two-pass warning *"NOT file-read — do not quote"* was FALSE**: the body was reachable on `raw`, the channel this shelf built in p153. `frappe/education/develop/license.txt` = **exactly 19 B**, and 🔴 **`pyproject.toml` (1 622 B) has NO licence field**, so 🔴 **the `-or-later`/`-only` question has no surface at all and `P43` cannot be run.** 🆕 **`T100`** — an action phrased around an expensive instrument (*"clone"*) outlived the cheap one that replaced it (`P45`), which is why it sat unreached for two passes. 🆕 **`T92`'s SECOND instance**: `openeducat`'s own preamble carves out bundled externals. [`evidence/licence-name-channel.2026-10-12-p155.tsv`](../evidence/licence-name-channel.2026-10-12-p155.tsv) |
+| 🟢 **`ACTION FG`** *(SIXTH pass unreached under p154, SEVENTH under p155)* — write the host-role classifier and re-run over 50 re-clones | 🟢 **CLOSED BY DECISION, instrument deliberately NOT built** | 🔵 **Seven passes is the verdict on the action, not on the question.** 🟢 **The decisive datum has been in hand since p152: 25 of 25 region-bearing hosts in `BetterSEQTA-Plus` are Australian.** 🟢 **The shelf therefore ACCEPTS the resolution — the `CONFLICT` is APAC — and RETIRES the classifier unbuilt.** 🔴 **Stated cost of the choice:** the host-class enumeration that a refutation would have exposed is now never done, 🔴 **and any future region conflict will have to pay this cost again.** 🔵 **Choosing the conclusion over the instrument after seven passes is the honest move; carrying it to an eighth was not.** |
+| 🔴 **`ACTION GF`** · 🔴 **`GK`** · 🔴 **`GG`** · 🔴 **`GM`** · 🔴 **`GO`** · 🔴 **`GP`** · 🔴 **`GN`** | 🔴 **NOT REACHED — by p154 and again by p155** | 🔴 **No work by either pass on any of the seven.** 🟢 **The cause is stated in the cut below rather than re-pleaded as budget.** `GF`/`GG` need the six vertical clones (**2.4 GB**, and the container is ephemeral); `GK`/`GM` are affordable on `raw` and were displaced by the research sweep; `GO`/`GP` are internal bookkeeping; `GN` is now cheap on the public page and still unspent |
+
+## 🔴 The register is CUT from nine actions to three, and the trade is stated
+
+🔴 **The pathology is measured, not suspected.** 🟢 **p153 registered thirteen actions and
+reached six. p154 registered nine, reached its own new work, and judged none.** 🔴 **Of p154's
+nine, p155 discharges one and closes one by decision; seven were never touched by either pass.**
+🔴 **A register that accumulates faster than any pass can spend it is not a plan.**
+
+🔵 **The second half of the diagnosis is harder and is said plainly: the register had drifted
+almost entirely to INTERNAL METHODOLOGY** — gate sweeps, thesis bookkeeping, control
+definitions, re-baselining historical suites — 🔴 **while the standing task for this shelf is
+industry research for client engagements.** 🟢 **Seven of p154's nine actions were about this
+KB's own instruments. None of them would have told a studio anything about education.**
+
+🟢 **So p155 retires the following, with reasons, rather than carrying them:**
+
+| retired | reason it is retired rather than deferred |
+|---|---|
+| 🔴 **`GF`**, 🔴 **`GG`** | 🔴 **Both require the six vertical clones (2.4 GB) in an ephemeral container.** 🟢 **`P45`/`P48` answer the licence question without a tree; the per-file HOLDER question does not pay for its clone.** 🔴 **Cost: `sakai`'s notice row stays published as KNOWN-WRONG-attribution, which is already labelled** |
+| 🔴 **`GK`**, 🔴 **`GM`** | 🟡 **Affordable, genuinely useful, and still retired** — 🔴 **they audit this shelf's own prior rows rather than finding new ones.** 🟢 **Re-register when a pass has spare budget after the research sweep, not before** |
+| 🔴 **`GO`**, 🔴 **`GP`**, 🔴 **`GD3`**, 🔴 **`GR`** | 🔴 **Internal bookkeeping: bilingual gate sweeps, absent-thesis writing, stale-baseline repair.** 🟢 **`T91` and `T99` are already recorded as classes; the sweeps add rigour to a record nobody outside this KB reads** |
+| 🔴 **`GN`** | 🟢 **Now cheap on the public topic page** (`P48` channel) — 🔴 **but it buys attention figures for platform rows whose LICENCES are what decides an engagement, and those are read** |
+| 🔴 **`GE2`**, 🔴 **`GH`**, 🔴 **`FS`**, 🔴 **`GW`**, 🔴 **`HJ`** *(p154's mis-numbered `GQ`)* | 🔴 **Held off for two or more passes without ever being first.** 🟢 **`GE2`'s RULE — name the exact URL refused and the exact URL that answered — is APPLIED throughout p155 and is kept as a standing rule, not an action** |
+
+🔵 **Standing rules kept (not actions, no budget):** 🟢 **`GE2`'s channel-naming rule** ·
+🟢 **the categorical-egress rule** (a refused host is an allowlist event, recorded once, not
+re-registered per host) · 🟢 **`P48` before any licence claim** · 🟢 **`P47` on any row with a
+carve-out** · 🟢 **a negative control in every channel sweep.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p155
+
+| gap | movement |
+|---|---|
+| 🔴 *"Two of eighteen licences cannot be file-read"* | 🟢 **CLOSED. `openeducat_erp` = LGPL-3.0 from an 8 241 B body**; `frappe/education` = 🔴 **19 B exactly, and its version direction is UNANSWERABLE** — a sharper verdict than *"unverified"* |
+| 🔴 *"p154's authenticated channel is unavailable to a scope-restricted session"* | 🟢 **CLOSED. The PUBLIC topic page discovers rows, sizes populations and reads stars with no credentials**, and agrees with p154's API **EXACTLY on 2 rows, within growth on a 3rd, banded-consistent on a 4th** |
+| 🔴 *"The ten-pass agent-search null streak"* | 🟢 **MECHANISM FOUND, not just a vocabulary.** 🔴 **`topic:education` = 37 086 repos whose star-sorted head is DEVELOPER CURRICULUM; 1 of 20 on-domain.** `topic:ai-tutor` = **684 repos, 19 of 20.** 🆕 **`T102`** |
+| 🔴 *"`T95` rests on one instrument"* | 🟢 **CORROBORATED: 93% (authed API, p154) → 95% (public page, p155).** 🔴 **And p154's 50% for broad `topic:education` does NOT reproduce — 5% by stars** |
+| 🔴 *"`T92` is one observation (`scibly`)"* | 🟢 **SECOND INSTANCE, on a row a studio bills against**: `openeducat_erp`'s preamble carves out bundled externals by its own admission. 🔴 **No longer an anecdote** |
+| 🔴 *"`P44`'s size check confirms a family"* | 🔴 **REFUTED — three measured collisions: 32 B (MIT vs AGPL short form), 138 B (Apache vs ECL), 11 B (GPL-3.0 vs AGPL-3.0).** 🟢 **`P48` replaces it; 19 of 19 bodies classified by name line** |
+| 🔴 *"`sakai` is THE copyleft-free LMS"* | 🔴 **CORRECTED. Three permissive routes**: 🆕 `OpenOLAT` **Apache-2.0** (10 982 B), `sakai` **ECL-2.0**, 🆕 `Selleo/mentingo` **MIT** — 🟢 **the first MIT-licensed LMS in 155 passes** |
+| 🔴 *"`134 bills / 31 states` is the size of the US wave"* | 🔴 **CORRECTED: it is the HIGHEST of four tracker counts spanning 68–134.** 🟢 **What is robust is ~10 ENACTED and ~33–35 states publishing guidance.** 🆕 **`T101`** |
+| 🔴 *"The `92%`/`79%` LATAM pair is unquotable (host unresolvable)"* | 🟢 **CORROBORATED INDEPENDENTLY with a readable sample: UNAM, `22 941` students / `7 319` faculty → `91.5%` / `75%`** — within 0.5 and 4 points. 🟢 **Now citable to UNAM** |
+| 🔴 *"No APAC education-ministry source"* (p154's `GY`) | 🟢 **CLOSED — the 2026 APEC Digital and AI Ministerial Statement**, plus Korea's MSIT and Vietnam's MOST as named ministries |
+| 🔴 *"EMEA is a two-tier timeline"* | 🟢 **THREE tiers**: Article 5 prohibitions **live and absolute** (emotion inference in schools banned outright) · Article 4 literacy **live** · Annex III high-risk **`2027-12-02`**. 🆕 **Commission guidelines `2026-05-19` separate pedagogical from evaluative use** |
+| 🔴 *"Korea's deadline is a compliance scramble"* | 🟢 **NARROWED: MSIT signals 2026 is effectively a PILOT period with limited enforcement** — a design year, not a remediation year |
+
+## 🔴 Gaps OPEN after p155, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **14 of 15 new rows have NO region, and p154's six placements are owner-string inferences** | 🔴 **A naive geo-matcher produced 5 false placements**: `usa` inside *usable* / *thousands*; `freelingo`'s *"Japan/Korea"* is its **supported study-language list**. 🆕 **`T99`.** 🔵 **`ACTION HA`** |
+| 🔴 **664 of 684 `ai-tutor` repositories are unread** | The population is sized and the channel is free; this pass read the top 20 by stars. 🔵 **`ACTION HF`** |
+| 🔴 **`openeducat_erp`'s bundled non-LGPL paths are DECLARED but unenumerated** | Its own root body points into the tree. 🔵 **`ACTION HB`** |
+| 🔴 **No sibling topic measured** | `ai-education`, `edtech`, `learning-analytics`, `knowledge-tracing` unqueried — 🔴 **so `ai-tutor` may be the first clean term, not the best** |
+| 🔴 **`Selleo/mentingo` is unassessed beyond licence and ★** | The only MIT LMS on the shelf, and nobody has read its data model or multi-tenancy |
+| 🔴 **No credentialing / skills-pathway repository on this shelf** | A 2026 trend source names digital credentials; 155 passes have found no repo |
+| 🔴 **No evaluation harness**, against a buyer demand for evidence before purchase | Only `pyKT`'s learner modelling |
+| 🔴 **No quotable market size, NINTH pass** | **$6B / $10.6B / $12.3B** at base, 🔴 **and now $32B vs $42.48B at 2030** — a 33% spread at the horizon the *"different bases"* explanation does not cover |
+| 🔴 **No open-source vendor in any market source, NINTH pass** | 🟢 **The shelf's oldest unbroken finding, and its product** |
+| 🔴 **No primary legal text, SEVENTH pass** | `eur-lex` and the law-firm hosts refuse this egress. 🟢 **Recorded once under the categorical-egress rule** |
+| 🔴 **The EMEA date question is now THREE-valued** | Council approval `2026-06-29` + *"awaiting publication"* · **Regulation (EU) 2026/1744 applying since `2026-07-27`** · pages still asserting August 2026. 🟢 All carried, none quoted |
+| 🔴 **Vietnam's education deadline is disputed** | `2026-03-01` in force (p153) vs September 2027 for the high-risk education obligation (p155) |
+| 🔴 **No adoption RATE for EMEA (7th pass) or APAC** | — |
+| 🔴 **Africa was NOT re-queried this pass** | p153's four jurisdictions stand unrefreshed; 🔴 **South Africa's draft status still DISPUTED** (abrogated `2026-04-27`?). 🔵 **`ACTION HD`** |
+| 🔴 **Canada and Mexico return nothing, FIFTH pass** | The continental query is US-only in practice |
+| 🔴 **`GitHub Trending` itself has never been read** | *"Trending"* on this shelf means *"new to this shelf"*. 🔵 **`ACTION HI`** |
+| 🆕 🔴 **`intel/market.md` carries TWO `## Opportunities by region` blocks** | The canonical one (line ~107, where p155 filed its four `#### p155` entries) and an older duplicate further down the page. 🔴 **A compiler reading the first match gets current data; one reading the last gets stale data.** 🟢 **Found, recorded, and NOT silently rewritten** — merging two region blocks is a decision about history, not a repair. 🔵 **`ACTION HK`** |
+| 🔴 **The rotation that selects this industry is STUCK** | 🔴 **`rotation.json` in `globant-kb` has read `next: 8` since 2026-08-02, so education has been selected 155 times while eleven industries were never reached.** 🔵 **Recorded here because it is the largest single defect affecting this KB, and it is not fixable from inside this repository** |
+
+## 🔜 Pre-registered for p156 — THREE actions, and two of them are research
+
+🔵 **Three, not nine.** 🟢 **Each has a falsifier, and each is affordable on the public
+channels this pass validated — no clones.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HA`** *(FIRST)* — place the 15 new rows and re-examine p154's six, using `P36` institutional-host evidence: a **word-boundary** matcher over README + owner profile, and the repo's own named institution where one exists | 🔴 *Refuted if fewer than 3 of 21 rows yield institutional-host evidence* — 🟢 **which is the USEFUL outcome, because it would mean region is simply not a property of individual-owner repositories and this shelf should stop implying it can place them.** 🔵 p155 predicts NOT refuted on `DeepTutor` (HKUDS), `flysheep-ai` and `Selleo` |
+| 🟢 **`ACTION HF`** — read the next 80 `ai-tutor` rows (pages 2–5) and publish the licence distribution over 100 of 684 | 🔴 *Refuted if MIT's share in the next 80 differs from the first 20 by more than 20 points* — 🟡 **p155 expects it to FALL**, because the first 20 are star-sorted and the skill rows that dominate MIT are recent; 🟢 **either way the shelf gets its first real licence distribution for this industry instead of a top-20 impression** |
+| 🟢 **`ACTION HB`** — enumerate `openeducat_erp`'s bundled non-LGPL paths on the `raw` channel, no clone, starting from the directories its preamble implicates | 🔴 *Refuted if no bundled path carries a non-LGPL notice* — 🟢 **which would make the carve-out vestigial boilerplate and would CLOSE `T92`'s second instance rather than leave it open**, and that is worth knowing before a studio bills against the row |
+
+🔴 **Deliberately NOT registered:** `HC` (`mentingo` assessment), `HD` (Africa re-query), `HE`
+(credentialing), `HG` (sibling topics), `HH` (evaluation harness), `HI` (GitHub Trending).
+🟢 **They are real gaps, listed above, and they are not registered because three is what a pass
+finishes.** 🔵 **That is the whole lesson of `FG`'s seven passes.**
+
+
 ## ✅ Verdicts on the thirteen actions p152 registered, judged by p153
 
 🟢 **Six reached, seven not.** 🟢 **Three DISCHARGED with silent falsifiers** (`FJ`, `GL`,

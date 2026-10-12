@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 155 — the discovery channel needs NO credentials, and six of the fifteen new rows are not applications
+
+🟢 **p154's channel is replaced by a cheaper one that this session was permitted to use.**
+🔴 **p154 discovered rows with the AUTHENTICATED GitHub API; this session's repository scope
+forbids aiming a credentialed search outside `gmilano/globant-kb`.** 🟢 **The PUBLIC topic page
+turns out to do the same job for free** — population size, slugs, stars and descriptions in one
+rendered fetch — 🟢 **and it agrees with p154's authenticated star counts EXACTLY on the rows
+both measured.**
+
+### 🟢 The channel-agreement test that earns the substitution
+
+[`evidence/star-channel-agreement.2026-10-12-p155.tsv`](../evidence/star-channel-agreement.2026-10-12-p155.tsv)
+
+| row | p154, authed API | p155, public page | verdict |
+|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 140 | **140** | 🟢 **EXACT** |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 88 | **88** | 🟢 **EXACT** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 890 | **894** | 🟢 **+4, consistent with growth** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 41 136 *(2026-10-08)* | **41.2k** | 🟢 **AGREE, banded** |
+
+🔵 **Two instruments, four rows, no disagreement.** 🔴 **Four rows is not a law**, and the
+public page gives stars BANDED above ~1 000 (`41.2k`), 🔴 **so it is a discovery and
+small-number channel, not a precision instrument at scale.**
+
+### 🆕 🔵 The finding: a pedagogy in a text file is out-starring a platform
+
+🟢 **Six of fifteen new rows are SKILLS** — instruction bundles with no runtime, no database
+and no deployment, inheriting the host agent's model, memory and tools. 🟢 **A seventh ships
+both ways.**
+
+| row | ★ | licence *(body-read)* | form |
+|---|---|---|---|
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **304** | 🟢 MIT, 1 065 B | skill |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **287** | 🟢 MIT, 1 081 B | skill |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **283** | 🟢 MIT, 1 069 B | 🟢 **skill + hostable app** |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **243** | 🟢 MIT, 1 102 B | skill |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **170** | 🟢 MIT, 1 083 B | skill |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **109** | 🟢 MIT, 1 068 B | 🟢 **a collection** |
+| — compare — [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🔴 **92** | 🟢 MIT, 1 062 B | 🟢 **a full AI-native LMS** |
+
+🔴 **Four skills outrank a complete AI-native LMS on attention.** 🟢 **`T98`**, and the recipe
+is 🟢 **`P49`**. 🔴 **The ceiling is stated with it**: a skill cannot hold a FERPA audit log,
+be a data controller, or satisfy an EU AI Act deployer duty.
+
+### 🟢 The other new rows this week
+
+| row | ★ | licence *(body-read)* | note |
+|---|---|---|---|
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **570** | 🔴 **AGPL-3.0 in a 1 134 B SHORT FORM** | 🔴 **The pass's licence trap** — 32 B above the MIT cluster (`T97`) |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **515** | 🟢 MIT, 1 074 B | 🟢 **Spaced repetition as an MCP tool surface** — the memory layer in `P49` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **167** | 🔴 AGPL-3.0, 34 514 B | Self-hosted language learning. 🔵 **Same topic as the skills, opposite legal weight** |
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | **112** | 🟢 MIT, 1 071 B | Mock technical interviews — the reskilling edge |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **106** | 🟢 Apache-2.0, 10 227 B | K-12 companion |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **72** | 🟢 MIT, 1 068 B | Student workspace, gamified |
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | **71** | 🔴 AGPL-3.0, 34 523 B | 🟢 **Material → game-based course**, the only game-generation row |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **63** | 🔴 **NO GRANT** *(p153)* | 🟢 First ★ reading — 🔴 **still unshippable** |
+
+🟢 **19 of 19 existence checks passed via `git ls-remote`, with TWO negative controls returning
+no SHA.** 🟢 **19 of 19 licence bodies read and classified by NAME LINE** (`P48`).
+
+### 🔴 The region column is empty on purpose this week
+
+🔴 **A README geo-matcher without word boundaries produced five placements and all five were
+artifacts**: `usa` inside **usable** and **thousands** (four rows that would have been published
+as North America), and `artcc/freelingo`'s *"Japan"* / *"Korea"* are 🔴 **its SUPPORTED STUDY
+LANGUAGES**, not a location. 🟢 **A word-boundary retest on `mentingo` returns no match at all.**
+🟢 **`T99`** — and 🔴 **14 of 15 rows are therefore published UNPLACED rather than guessed**
+([`evidence/geo-matcher-defect.2026-10-12-p155.tsv`](../evidence/geo-matcher-defect.2026-10-12-p155.tsv)).
+🔵 **`ACTION HA`** carries the real `P36` placement work.
+
+### 🔴 What this week did not find
+
+- 🔴 **`664` of the `684` `ai-tutor` repositories are unread** — this pass read the first 20 by stars.
+- 🔴 **No sibling topic measured** (`ai-education`, `learning-analytics`, `knowledge-tracing`),
+  🔴 **so `ai-tutor` may not be the best term — only the first clean one.**
+- 🔴 **Free-text web search for education agents returned listicles AGAIN** — general-purpose
+  agent frameworks (LangChain, CrewAI, OpenHands), not education software. 🟢 **Eleventh pass
+  of the same null, and `T95`'s mechanism now explains it.**
+
+
 ## 2026-10-12 — pass 154 — the agent-search channel is replaced, and a narrow topic beats free text by 3.4×
 
 🟢 **The null streak on agent discovery was a CHANNEL defect, and this pass names the

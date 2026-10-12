@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 155 — 2026-10-12
+
+🔴 **NINTH consecutive pass with no quotable market size — and this pass makes the refusal
+worse in a useful way: the DIVERGENCE IS AT THE HORIZON TOO, not just at the base.**
+🔴 **A figure this shelf published last pass is corrected: `134 bills across 31 states` is not
+the size of the US legislative wave, it is the HIGHEST of four tracker counts that span 68 to 134.**
+🟢 **And the LATAM adoption claim finally gets an independent corroboration with a readable sample.**
+
+### 🔴 The market size, ninth pass — and the new observation
+
+| base year | figure | source class |
+|---|---|---|
+| 2024 | **~$6B** | K-12 sector report |
+| 2026 | **$10.6B** | Research and Markets |
+| 2026 | **$12.3B** | HolonIQ, via a vendor page |
+| 2030 | 🔴 **~$32B** | the same K-12 report that bases at $6B |
+| 2030 | 🔴 **$42.48B** | Research and Markets |
+
+🆕 🔴 **The new finding: the 2030 figures disagree by $10.5B — a 33% spread at the horizon.**
+🔵 **Previous passes diagnosed the base-year spread as *"the bases count different things."*
+That explanation does NOT cover this**, because `$32B` and `$42.48B` are both 2030 and both
+sit on top of bases that are themselves 5.3× apart. 🟢 **So the honest statement is stronger
+than a shrug: the series are not comparable at either end, and a CAGR computed across two of
+them is an artefact.** 🔴 **Nothing here is quotable to a client.**
+
+🔴 **And for the NINTH pass: not one market source names an open-source vendor.**
+🟢 **That absence remains this KB's product** — the reports cannot answer *"what do we build
+on?"*, and this pass answered it for 19 repositories from licence bodies.
+
+### 🔴 CORRECTION — p153's `134 bills / 31 states` was one tracker, published as the size
+
+| tracker | count | states |
+|---|---|---|
+| Multistate | **134 bills** | 31 |
+| PIE Network | ~100 bills | — |
+| FutureEd | **77 bills** | 27 |
+| FutureEd, later update | **68 tracked**, 🟢 **10 ENACTED** | — |
+
+🔴 **p153 published `134 / 31` as *"the number that makes the pitch concrete."*** 🟢 **It is
+the top of a range whose bottom is 68 — a 2× spread between trackers counting the same
+legislative session.** 🔵 **What is actually robust, and what a studio should say in a room:**
+🟢 **the number of ENACTED laws (~10) and the number of states publishing official guidance
+(~33–35 plus Puerto Rico)**, because those are counts of finished instruments, not of
+introductions. 🟢 **Introductions measure attention; enactments measure obligation.**
+🆕 **`T101`.**
+
+🔵 **Regional detail for p155 is filed under the canonical `## Opportunities by region` block below, as `#### p155` entries under each region — this page keeps ONE region block, not one per pass.**
+
+##### 🔴 What this page still cannot do, after p155
+
+- 🔴 **No quotable market size, NINTH pass** — 🟢 now with the horizon divergence measured too.
+- 🔴 **No open-source vendor in any market source, NINTH pass.**
+- 🔴 **No adoption rate for EMEA (7th), APAC, or Africa.** 🔴 **Africa was NOT re-queried this
+  pass** — p153's four jurisdictions (AU Continental Strategy, South Africa draft with
+  disputed status, Kenya draft 2025–2030) stand unrefreshed. 🔵 **`ACTION HD`.**
+- 🔴 **Canada and Mexico: five passes of nothing.**
+- 🔴 **The EMEA date conflict is now three-valued and unresolved** — primary text unreachable.
+
+
 ## Pass 154 — 2026-10-12
 
 ⏱️ **Seventeenth pass of this date.** 🟢 **`ACTION GJ` is PARTLY DISCHARGED — the DEC survey's
@@ -55,6 +114,25 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p155
+
+🟢 **The opportunity is the gap between 134 introductions and ~10 enactments:** districts face
+a moving target and have no in-house expertise. 🆕 **Named, dated asks found this pass:**
+
+| instrument | what it requires | the deliverable |
+|---|---|---|
+| 🟢 Oklahoma **`SB 1734`** | 🔴 **Every district** adopts a written AI policy before **2027–28**; AI barred as primary basis for high-stakes student decisions; parental opt-out | 🟢 **Policy instrument + human-approval gate + opt-out plumbing.** 🔵 **A statutory deadline on a per-district denominator — the most scalable NA engagement on this shelf** |
+| 🟢 California **`AB 1159`** | No training on student data | 🟢 A data-flow audit |
+| 🟢 Idaho **`SB 1227`** | Tool privacy requirements | 🟢 A procurement review |
+| 🟢 Maryland **`SB 720`** | Statewide teacher AI professional development | 🟢 Curriculum + delivery, 🔵 **a services sale, not software** |
+| 🟢 Alabama **`HB 329`** | Graduation tied to a CS course including AI | 🟢 Course material — 🔵 **and `T98`'s skills are the cheapest form to deliver it in** |
+| 🟡 New York **RAISE Act** | AI safety and education duties; 🟡 **publicly backed by OpenAI and Anthropic** | 🟡 Watch item |
+| 🟢 Federal | Dept. of Education AI **grant-priority rule finalised `2026-04-13`** | 🟢 **Grant-aligned proposal support** |
+| 🔴 NYC | Moratorium through 8th grade (p153) | 🔴 A market that is closed, not slow |
+
+🔴 **Canada and Mexico: nothing, FIFTH pass.** 🟢 **Said rather than left as apparent coverage.**
+
+
 🟢 **Evidence this pass:** only **10%** of institutions have formal AI guidelines · **71%** of
 US teachers lack AI training · Carnegie Mellon + Gates Foundation put **$55M** into AI
 courseware for gateway college courses · OpenAI launched a country-level education programme
@@ -71,6 +149,21 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p155
+
+🟢 **Three tiers, and the inversion is the sale** (see `verticals/solutions.md`): 🔴 **Article 5
+prohibitions live and absolute** (emotion inference in schools banned outright) · 🟢 **Article 4
+AI-literacy duties live** · 🟢 **Annex III high-risk — admissions, grading, proctoring —
+`2027-12-02`.** 🆕 🟢 **The `2026-05-19` Commission guidelines separate pedagogical support
+from evaluative use**: 🔵 **architect to that line and the high-risk tier does not attach.**
+🟢 **Deployer work is concrete: a FRIA before go-live, plus a student's right to an explanation.**
+🔴 **The date conflict p153 carried is now THREE-VALUED** — Council final approval `2026-06-29`
+with the act *"awaiting publication"*, one source citing **Regulation (EU) 2026/1744 applying
+since `2026-07-27`**, and pages still asserting August 2026. 🟢 **All carried, none quoted as
+settled.** 🔴 **No primary legal text, SEVENTH pass** — `eur-lex` refuses this egress.
+🔴 **No EMEA adoption RATE, seventh pass.**
+
 
 🟢 **Evidence this pass:** the UK's AI Adoption Summit committed **£200m+**, with government
 as funder, Big Tech as delivery partner and **Skills England** setting the curriculum
@@ -89,6 +182,20 @@ documentation, logging and human oversight are PRODUCT FEATURES, not compliance 
 skills body and whose delivery is outsourced is a programme that needs an integrator.
 
 ### APAC
+
+#### p155
+
+🆕 🟢 **Korea: 2026 is a pilot period with limited enforcement** (Ministry of Science and ICT)
+— 🔵 **sell readiness and design, not remediation.** 🟢 **Vietnam: education among six
+high-risk sectors, automated assessment and behavioural monitoring named, extraterritorial
+reach** — 🔵 **the sharpest compliance fact on this shelf, because it sells a conformity
+assessment to a client with no Asian operations.** 🔴 **Deadline disputed: `2026-03-01` in
+force (p153) vs September 2027 for the high-risk education obligation (this pass).**
+🆕 🟢 **`ACTION GY` CLOSES** — the **2026 APEC Digital and AI Ministerial Statement** is the
+ministerial education source p154 could not find. 🟢 Japan: **AI Basic Plan** + official
+digital textbooks. 🔴 India: a proposed AI-training licensing regime, flagged by industry as
+an adoption brake. 🔴 **No APAC adoption rate.**
+
 
 🟢 **Evidence this pass:** Pearson × TCS announced a multi-year AI learning alliance aimed at
 employer skills gaps · LearnUpon opened a Sydney HQ with **Create+** AI course authoring ·
@@ -113,6 +220,25 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p155
+
+🆕 🟢 **The strongest LATAM datum this shelf has ever held, because the denominator is readable:**
+🟢 **UNAM — `22 941` students, `7 319` faculty: `91.5%` of students, `75%` of faculty using AI
+tools.** 🟢 **It corroborates the DEC × Tec de Monterrey `92%`/`79%` pair to within 0.5 and 4
+points on an independent instrument with a named institution** — 🔵 **so the pair can finally
+be used in a room, cited to UNAM rather than to a host that does not resolve.**
+🟢 **UNESCO IESALC, September 2026: 200 institutions / 19 countries — 87% using AI in ≥1 area,
+74% in teaching and learning, 🔴 26% with a formal strategy.** 🟢 **A 61-point doing-vs-governing
+gap inside one instrument's own population.**
+🔵 **The sale: governance DEPTH, and with no statutory deadline it is an accreditation and
+quality-assurance argument, not a compliance one.**
+🔴 **NOT ADOPTED, recorded as unverified:** a Colombian MinEducación roadmap to 2028 with
+licences for 64 public universities and **$412M** investment, and a claim that Colombia is the
+second regional country with a specific framework after Chile — 🔴 **one low-confidence host,
+no official confirmation found.** 🔴 **Also unverified:** *">80% of Mexican institutions lack a
+clear normative framework"* — the figure's own source is unclear on the page carrying it.
+
 
 🟢 **Evidence this pass:** DEC 2026 LATAM — **92% of students, 79% of faculty** actively
 engaging, **30 000+ responses**, with Tecnológico de Monterrey and its Institute for the

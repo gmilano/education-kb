@@ -1,0 +1,3 @@
+topic	total_repos_reported	rows_read	on_domain_rows	on_domain_pct	sort	instrument	note
+ai-tutor	684	20	19	95	stars (default)	public topic page, no credentials	corroborates p154's authed-API 93% on an independent unauthenticated instrument
+education	37086	20	1	5	stars (default)	public topic page, no credentials	REFUTES p154's 50% as a property of the topic; the star-sorted head is DEVELOPER CURRICULUM
