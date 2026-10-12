@@ -1,10 +1,57 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — trending agents (append-only log)
+
+## 2026-10-12 — Pass 138
+
+**The pass that stopped reading repositories and read the bytes clients install — and found a
+third of the shelf ships a licence identifier with no licence text.**
+
+🔵 **`registry.npmjs.org` opened as a lane in p137 and went unused; p137 said so and registered
+`ACTION CD` against it.** Used this pass, it did not just answer the registered question about one
+package — it re-measured the whole published connector tier, because the same probe costs the same
+either way.
+
+| what moved this week | measurement |
+|---|---|
+| 🔴 **The `P137-J` class generalised from 1 row to 9** | **21** education-LMS connector packages probed (Canvas, Moodle, Brightspace, EduBase), all 21 **sha1-verified against the registry's own `shasum`**. 🔴 **7 (33%)** declare an SPDX id and ship **no licence file**; 🔴 **2 (10%)** declare nothing and ship nothing; 🟢 **12 (57%)** are clean |
+| 🔴 **A copyleft grant without its text** | `moodle-mcp-server-aql` **0.1.7** (2026-10-01) declares **AGPL-3.0** across **141 shipped paths**, no licence file — while [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) carries a canonical **34 523 B** `LICENSE`. The repository has the grant; the distribution drops it |
+| 🟢 **`P13`'s adapter became an interface instead of an estimate** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) accepts an embedder-supplied `oauthStore?: OAuthStore` (*"Embedders may supply their own implementation"*) with `putGrant` / `putToken` over a `Grant` carrying `CanvasConnection { refreshToken }` — 🟢 **so the LTI→MCP adapter forks neither library** |
+| 🟢 **RFC 8707, by name, in an LMS connector** | the same repo's `src/auth/oauth/authorization-server.ts` (**978 lines**) implements **RFC 8707 §7** canonical resource comparison as `normalizeResource()`, plus **PKCE S256** and **dynamic client registration**; `resource-server.ts` (195 lines) publishes `/.well-known/oauth-protected-resource` and checks the **audience** |
+| 🔴 **Undocumented write tools** | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (**MIT**, **Go**) registers **19** tools and documents **14**. 🔴 **`submit_journal` and `update_assignment` are writes and appear in neither the README nor any tool list** |
+| 🔴 **A duplicate address on the shelf** | [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) and `GhaithAlHallak8/moodler-mcp` are **byte-identical** at `pyproject.toml` and `README.md` (sha1 `bc895a8e…`, both **1.1.2**), and the manifest's own Homepage/Repository/Issues name **`GhaithAlHallak8`**. 🔴 Not on **PyPI (404)**, so no registry arbitrates it |
+| 🔵 **Slug-first coverage is narrower than registry-first** | one search per platform family returned **21** packages where this log tracked a handful — a **547**-path Brightspace server (`brightspace-mcp` 1.3.1), a **378**-path Canvas server (2026-10-10), `moodle-cli` **0.10.0** (2026-10-03), four more Moodle connectors |
+| 🔴 **Two rows with no source at all** | `@imazhar101/mcp-canvas-server` **2.1.3** (71 paths, 2026-10-01) and `@n35da/brightspace-mcp` **0.4.0** (22 paths, 2026-09-22): no `repository` field, no SPDX id, no licence file. Live, recent, and unauditable |
+| 🟢 **Recency on the usable rows** | `brightspace-mcp-server` **3.13.10** published **2026-10-11** (today), `canvas-lms-mcp` **2.2.0** **2026-10-10**, `moodle-cli` **0.10.0** **2026-10-03**, `moodle-mcp-server-aql` **0.1.7** **2026-10-01**, `@exhabition/brightspace-mcp` **0.2.2** **2026-10-01** — this tier is being worked on now |
+| 🔴 **And one row has been still for sixteen months** | `canvas-mcp-server` npm latest is **2.2.3** (2025-06-27) while the repository's HEAD manifest says **2.3.1**; the older name `mcp-canvas-lms` stops at **1.0.5** (2025-04-11). The **103★** repository has published nothing in that window |
+
+### The GitHub-fork residue, in a package a client can still install today
+
+🔴 **`mcp-canvas-lms@1.0.5` — the name the published README tells users to `npx` — ships a GitHub
+MCP server's operation modules.** `dist/operations/` contains `branches.js`, `commits.js`,
+`issues.js`, `pulls.js`, `repository.js` and `search.js`, each importing `githubRequest` from
+`../common/utils.js` and carrying `GitHubPullRequestSchema` / `GitHubReferenceSchema`. 🔵 **None is
+reachable** from the package's three registered Canvas tools (`get_courses`, `get_assignments`,
+`get_announcements`). 🟢 **`canvas-mcp-server@2.2.3` is clean** — the residue was removed between the
+two names, and only the abandoned one still carries it.
+
+### What this entry does NOT claim
+
+- 🔴 **No region for any of the 21 packages.** Two have owner names that invite a guess
+  (`@nahuelalbornoz/moodle-mcp`, author *"Italicia"*, repo **`marcosnahuel/moodle-mcp`** — a third
+  address mismatch this pass — and `brightspace-mcp`, author *"Jhostin Aleck"*). 🔵 **A personal
+  name is not a region.** The eight-pass LATAM-ownership gap is not closed by onomastics.
+- 🔴 **The probe reads licence FILES only**, so a grant in a source header is invisible to it.
+  **7 of 21 is a floor, not a count** — the same limit `p137-foreign-holder-tree` carries.
+  `ACTION CH`, registered to close it, **did not run**.
+- 🔴 **One platform family per search, four families, npm only.** PyPI, Maven and crates were not
+  probed, and `moodler-mcp` is not on PyPI at all.
+- 🔴 **Tool counts were read in source for two repositories, not the tier.** `ACTION CI` is
+  partially discharged and re-registered.
 
 ## 2026-10-11 — Pass 137
 

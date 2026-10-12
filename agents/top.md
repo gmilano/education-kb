@@ -1,10 +1,209 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — AI agents shelf
+
+## Pass 138 — 2026-10-12 — the registry layer, and what it says about this whole shelf
+
+🔴 **The headline: the licence defect p137 found in one repository is a third of the published
+connector tier, and it is measured in the bytes a client actually installs.** `ACTION CD` was
+registered against one package. The lane that answered it answers for the whole shelf at the same
+cost, so it was widened to **21** education-LMS connector packages across Canvas, Moodle,
+Brightspace and EduBase — every tarball downloaded and **sha1-verified against the registry's own
+`shasum`**, 21 of 21 matching.
+
+| finding | verdict |
+|---|---|
+| `P138-A` | 🔴 **`ACTION CD` DISCHARGED, NOT REFUTED — and generalised 1 → 9.** **7 of 21 (33%)** published packages carry an SPDX identifier and **no licence file**; **2 more (10%)** carry neither. 🟢 12 carry one |
+| `P138-B` | 🔴 **The worst row is the copyleft one.** `moodle-mcp-server-aql` **0.1.7** declares **AGPL-3.0** across **141 shipped paths** with no licence text — while its repository carries a canonical 34 523-byte `LICENSE`. The grant exists; the distribution drops it |
+| `P138-C` | 🟢 **`ACTION CE` DISCHARGED, NOT REFUTED — but the "no fork" half is CONFIRMED in source.** `P13`'s adapter is an `OAuthStore` implementation, not a fork of either library |
+| `P138-D` | 🟢 **`ACTION CF` DISCHARGED — and one of the "three Moodle connectors" is not a third connector.** `Dymayo/moodler-mcp` is **byte-identical** to `GhaithAlHallak8/moodler-mcp`, which its own manifest names as the canonical address |
+| `P138-E` | 🔴 **`ACTION CI` first hard numbers, and the drift runs the OTHER way.** `Jawadh-Salih/moodle-mcp-server` registers **19** tools in source and documents **14** — **two of the five undocumented ones are writes** |
+| `P138-F` | 🟡 **`ACTION CG` DISCHARGED — the conflict NARROWS, the date does not resolve.** And Vietnam's education scope includes **psychological assessment**, which p137 did not record |
+| `P138-G` | 🔴 **Two packages on this shelf have no `repository` field, no SPDX id and no licence file.** `@imazhar101/mcp-canvas-server` (71 paths) and `@n35da/brightspace-mcp` (22 paths): a studio cannot even locate the source |
+| `P138-H` | 🔵 **A registry-first search finds connectors this GitHub-slug-first shelf never carried** — 21 packages where this page tracked a handful, including a **547-path** Brightspace connector and a **378-path** Canvas one |
+
+### `P138-A` — the defect, moved to the layer that matters
+
+🔵 **This KB has read licence files at four layers: the root file, tree enumeration, source headers,
+and registry metadata. The payload is the fifth, and it is the only one a client receives.**
+`npm install` does not clone a repository; it unpacks a tarball. A grant that lives only at HEAD is
+never conveyed to the person who installs.
+
+| package | version | published | manifest says | paths | licence file |
+|---|---|---|---|---|---|
+| 🔴 `moodle-mcp-server-aql` | 0.1.7 | 2026-10-01 | **`AGPL-3.0`** | **141** | 🔴 **NONE** |
+| 🔴 `mcp-canvas-lms` | 1.0.5 | 2025-04-11 | `MIT`, `files: ["dist"]` | 18 | 🔴 **NONE** |
+| 🔴 `canvas-mcp-server` | 2.2.3 | 2025-06-27 | `MIT`, **`files` lists `LICENSE`** | 8 | 🔴 **NONE** |
+| 🔴 `@owen-x-tech/canvas-mcp` | 1.1.0 | 2026-02-23 | `MIT` | 12 | 🔴 **NONE** |
+| 🔴 `@ink-waffle/moodle-mcp` | 0.2.0 | 2026-09-17 | `MIT` | 38 | 🔴 **NONE** |
+| 🔴 `eth-moodle-mcp` | 1.3.3 | 2026-04-15 | `MIT` | 15 | 🔴 **NONE** |
+| 🔴 `@exhabition/brightspace-mcp` | 0.2.2 | 2026-10-01 | `MIT` | 3 | 🔴 **NONE** |
+| 🔴 `@imazhar101/mcp-canvas-server` | 2.1.3 | 2026-10-01 | **absent** | 71 | 🔴 **NONE** |
+| 🔴 `@n35da/brightspace-mcp` | 0.4.0 | 2026-09-22 | **absent** | 22 | 🔴 **NONE** |
+| 🟢 [`canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 2.2.0 | **2026-10-10** | `MIT` | **378** | 🟢 `package/LICENSE` |
+| 🟢 `brightspace-mcp` | 1.3.1 | 2026-09-28 | `MIT` | **547** | 🟢 `package/LICENSE` |
+| 🟢 `brightspace-mcp-server` | 3.13.10 | **2026-10-11** | `MIT` | 120 | 🟢 `package/LICENSE` |
+| 🟢 `@mtgibbs/canvas-lms-mcp` | 0.2.18 | 2026-02-13 | `MIT` | 208 | 🟢 `package/LICENSE` |
+| 🟢 `moodle-mcp` | 0.2.0 | 2026-04-21 | `MIT` | 58 | 🟢 `package/LICENSE` |
+| 🟢 `brightspace-d2l-mcp` | 1.0.0 | 2026-09-16 | `MIT` | 58 | 🟢 `package/LICENSE` |
+| 🟢 `@edubase/mcp` | 2.0.3 | 2026-09-28 | `MIT` | 24 | 🟢 `package/LICENSE` |
+| 🟢 `edubase-mcp` | 1.0.10 | 2025-05-30 | `MIT` | 15 | 🟢 `package/LICENSE` |
+| 🟢 `moodle-cli` | 0.10.0 | 2026-10-03 | `MIT` | 11 | 🟢 `package/LICENSE` |
+| 🟢 `moodle-mcp-server` | 1.0.0 | 2026-01-29 | `MIT` | 11 | 🟢 `package/LICENSE` |
+| 🟢 `@nahuelalbornoz/moodle-mcp` | 0.5.1 | 2026-04-23 | `MIT` | 6 | 🟢 `package/LICENSE` |
+| 🟢 `@likr/canvas-lms-mcp` | 2.0.0 | 2026-07-09 | `MIT` | 8 | 🟢 `package/LICENSE` |
+
+🟢 **Direction of the error, recorded because it changes the remedy.** All nine are cases of the
+repository being *better* than the distribution. **Not one package shipped a licence its repository
+lacked.** So this is packaging discipline, not misrepresented licensing — and the fix a studio asks
+an upstream for is a one-line `files` change, not a relicensing conversation.
+
+🔴 **`canvas-mcp-server` 2.2.3 shows the mechanism exactly**: its packed manifest reads
+`files: ["build/**/*", "README.md", "LICENSE", "package.json"]` — it **names** `LICENSE` — and its
+8 paths contain none. `files` names a path absent from the tree and npm omits it silently.
+🔵 **A manifest that lists a licence is not evidence that one shipped.** Probe, method and the
+committed 21-row TSV: [`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md).
+
+### `P138-B` — the package identity split behind the registered target
+
+🔴 **The repository and the registry have drifted apart, and two package names share one repo.**
+
+| layer | name | version | published |
+|---|---|---|---|
+| repository HEAD manifest | `canvas-mcp-server` | **2.3.1** | — |
+| npm, that name | `canvas-mcp-server` | **2.2.3** | 2025-06-27 |
+| npm, the older name | `mcp-canvas-lms` | **1.0.5** | 2025-04-11 |
+
+🔵 **So the 103★ repository has published nothing for about sixteen months**, and the name npm
+still serves under `mcp-canvas-lms` stops four versions back. 🟢 **The HEAD README is correct** —
+it says `npx -y canvas-mcp-server` and *"50+ Tools"*. 🔴 **The published 1.0.5 README is not**: it
+says `npx -y mcp-canvas-lms`, and that package registers **3** tools (`get_courses`,
+`get_assignments`, `get_announcements`).
+
+🔴 **And the abandoned name still ships a GitHub connector's operations.**
+`mcp-canvas-lms@1.0.5`'s `dist/operations/` contains `branches.js`, `commits.js`, `issues.js`,
+`pulls.js`, `repository.js` and `search.js` — every one importing `githubRequest` from
+`../common/utils.js` and carrying `GitHubPullRequestSchema` / `GitHubReferenceSchema`. None is
+reachable from the three registered Canvas tools. 🟢 **`canvas-mcp-server@2.2.3` is clean** — no
+`githubRequest`, no `api.github.com` — so the residue was removed between the two names, and only
+the abandoned one carries it.
+
+### `P138-C` — `ACTION CE`: the seam holds, and it needs no fork of either library
+
+**`ACTION CE` asked whether `ltijs` v7's launch context can hand a verified `sub` to
+`canvas-lms-mcp`'s authorization server with no fork, and registered refutation if either library
+needed a patched release.**
+
+🟢 **p137's reading of this repository is confirmed and extended, in source.** It is not merely an
+OAuth 2.1 authorization and resource server — it implements the exact binding p137-A said the LTI
+seam lacked:
+
+| component | measured |
+|---|---|
+| `src/auth/oauth/authorization-server.ts` | **978 lines.** 🟢 **RFC 8707 §7** canonical resource comparison, as a named function — `normalizeResource()`, rejecting fragments and case-normalising host and scheme. **PKCE `S256`**, `registration_endpoint` with **dynamic client registration**, `/.well-known/oauth-authorization-server`, scopes including `canvas:write` |
+| `src/auth/oauth/resource-server.ts` | **195 lines.** Publishes `/.well-known/oauth-protected-resource` (**RFC 9728**) and performs the **RFC 8707 audience** check |
+| `src/auth/oauth/` as a whole | 11 modules: `authorization-server`, `resource-server`, `canvas-oauth`, `clients`, `config`, `crypto`, `file-store`, `html`, `http-util`, `redirect-uri`, `store` |
+| `src/http.ts` | 428 lines of transport. `authProfile` ∈ `remote_static_token` (the default, documented *self-managed only*) and `oauth_brokered`. 🟢 Writes are **scope-gated**: `outcome.scopes.includes('canvas:write')` or tools are blocked |
+
+🔴 **Not refuted — the adapter is still required.** The subject is established by
+`CanvasOAuthClient`: the launching user is redirected to Canvas and authenticates there. **No path
+accepts an externally-verified assertion**, so an LTI 1.3 `sub` cannot be injected as-is.
+
+🟢 **But the "no fork of either" half is confirmed, and this is the pass's most useful result for
+delivery.** `CanvasMCPServerConfig` accepts an embedder-supplied store —
+`oauthStore?: OAuthStore`, documented *"Embedders may supply their own implementation"* — and the
+`OAuthStore` interface exposes `putClient`, `putGrant`, `putToken` and `putPendingAuthorization`,
+over a `Grant` carrying a `CanvasConnection { refreshToken }`. 🔵 **So the adapter is a store
+implementation**: terminate the 1.3 launch with `ltijs`, obtain the per-user Canvas refresh token in
+the shape [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) proves, `putGrant` it,
+and the brokered flow issues an audience-bound MCP token without the Canvas redirect and without a
+patched release of either library. `P13` is rewritten a fourth time in
+[`compose/patterns.md`](../compose/patterns.md) — **still about two weeks, and now a known interface
+rather than an estimate.**
+
+🔴 **One caveat read in the code and not glossed**: `store.ts` carries *"Update only, never create
+(QA S7, #356)"* on the Canvas-refresh path, so the adapter must create the grant up front —
+`putGrant` before the first token call, not a lazy upsert.
+
+### `P138-D` — `ACTION CF`: three rows, two connectors, three languages
+
+🟢 **All three licences verified by payload read, and all three match their labels.** 🔴 **But the
+shelf's "three Moodle connectors" are two independent implementations and one duplicate address.**
+
+| row | licence *(payload-read)* | stack | verdict |
+|---|---|---|---|
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 **AGPL-3.0** — canonical FSF text, **34 523 B** | **Node**, workspace monorepo; packed name `moodle-mcp-server-workspace` **0.1.7**, source at `packages/server/src/index.ts` | 🟢 label correct. 🔴 **Its npm payload drops the licence** — see `P138-B` |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 🟢 **MIT**, holder *"Jawadh"*, 2026, 1 063 B | **Go** — `github.com/mark3labs/mcp-go v0.26.0`, `cmd/moodle-mcp`, with a `Makefile` carrying `go vet`, `staticcheck`, `-race` tests, benchmarks and coverage targets | 🟢 label correct. 🔴 **19 tools in source, 14 documented** — see `P138-E` |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🟢 **MIT**, holder ***Ghaith AlHallak*** — 🔴 **not the slug owner** — 2026, 1 072 B | **Python**, `uv_build`, `requires-python >=3.14`; `src/moodler_mcp/` with `auth.py`, `web_session.py`, `moodle_api.py`, `tools/` | 🔴 **A duplicate address.** Its own `pyproject.toml` names Homepage, Repository and Issues as **`github.com/GhaithAlHallak8/moodler-mcp`**, which exists and whose `pyproject.toml` and `README.md` are **byte-identical** (`README` sha1 `bc895a8e…` on both; version **1.1.2** on both) |
+
+🔵 **Three connectors to the same LMS in three different languages, sharing no implementation.** For
+a studio choosing one, the Go row is the only one with a committed test-and-lint harness; the Node
+row is the only copyleft one; the Python row is the only one that drives a browser session
+(`playwright`) and the only one whose canonical address is in question.
+
+🔴 **`moodler-mcp` is not on PyPI (404).** So for this row there is no payload layer to measure and
+no registry to arbitrate the address — the duplicate can only be resolved from the manifest's own
+URLs, which point away from the slug this KB carries.
+
+### `P138-E` — `ACTION CI`: the drift is real, and it under-documents rather than over-claims
+
+🔵 **p137 found vendor connectors whose descriptions over-claimed their tool counts. The first
+source-measured row this pass drifts the other way, which is the more dangerous direction.**
+
+| | `Jawadh-Salih/moodle-mcp-server` |
+|---|---|
+| tools registered in source (`mcp.NewTool`) | **19** |
+| tools documented in the README | **14** |
+| 🔴 in source, **undocumented** | `download_resource`, `get_journal_entry`, `list_resources`, 🔴 **`submit_journal`**, 🔴 **`update_assignment`** |
+| in README, not a tool | `moodle_mobile_app` — a Moodle **service** name, not a tool |
+
+🔴 **Two of the five undocumented tools are writes.** A client reading this README would conclude
+the server is read-only. It is not. 🔵 **For an education deployment that is a governance fact, not
+a documentation nit**: the write surface is what a data-protection review has to cover, and here it
+is larger than the document the review would be handed.
+
+🟢 **The Canvas family's recorded conflict resolves in source, in the other direction.**
+`canvas-mcp-server@2.2.3`'s `build/index.js` registers **exactly 54** tools, every one prefixed
+`canvas_`, and the HEAD README says **"50+ Tools"** — so p137's *"2.2 / 54 tools"* cell was right
+and README-vs-source **agree** here. The surviving *"102 vs 126"* disagreement belongs to
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (About vs README) and is
+unchanged this pass.
+
+🔴 **`ACTION CI` is therefore only PARTIALLY discharged**: two repositories measured in source, not
+the tier. It is re-registered below rather than reported as done.
+
+### `P138-G` — the rows a studio cannot source at all
+
+🔴 **Two published packages carry no `repository` field, no SPDX identifier and no licence file:**
+`@imazhar101/mcp-canvas-server` **2.1.3** (71 paths, published **2026-10-01**) and
+`@n35da/brightspace-mcp` **0.4.0** (22 paths, **2026-09-22**). 🔵 Both are recent, both are live,
+and for both the only artefact that exists is the tarball. There is nothing to read, nothing to
+audit and nobody identified to ask. 🔴 **Unusable in a client engagement at any price**, and worth
+recording precisely because a registry search surfaces them next to the usable rows.
+
+### 🔵 `P138-H` — what a registry-first search does to this page's coverage
+
+🔵 **This page has been built slug-first: a GitHub repository, then its licence.** One registry
+search per platform family returned **21** connector packages, including several this shelf has
+never carried — a **547**-path Brightspace server (`brightspace-mcp` 1.3.1), a **378**-path Canvas
+server (`canvas-lms-mcp` 2.2.0, which is `bruchris`'s, published **2026-10-10**), `moodle-cli`
+**0.10.0** (**2026-10-03**), and four more Moodle connectors.
+
+🔴 **Region remains UNMEASURED for all of them, and this page will not infer it.** Two rows have
+owner names that invite a guess — `@nahuelalbornoz/moodle-mcp` (author *"Italicia"*, maintainer
+`nahuelalbornoz`, repository **`github.com/marcosnahuel/moodle-mcp`** — 🔴 **a third address
+mismatch this pass**) and `brightspace-mcp` (author *"Jhostin Aleck"*, repository
+`JhostinAleck/brightspace-mcp`). 🔵 **A personal name is not a region**, and this KB's eight-pass
+LATAM-ownership gap is not closed by onomastics. Both are recorded as `region: UNMEASURED` with the
+measured facts attached.
+
+🔵 **`eth-moodle-mcp` repeats p137's Javeriana shape exactly**: its description names **ETH Zurich**
+— an EMEA institution — as the **integration target**, while the package has no `repository` field
+and no identified owner. The region appears as a target again, never as an owner.
 
 **Pass 137, 2026-10-11.** 🔴 **This page's newest tier gains the row it said did not exist, and the
 row is twenty years older than the tier.** p136 closed `T13` with one surviving clause — *"nothing

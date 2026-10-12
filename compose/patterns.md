@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — compose patterns
@@ -16,6 +16,100 @@ the first such regime anywhere, and this KB had no recipe for it.
 
 🔵 **Every component named below was read this pass or in a prior pass with the licence established
 from the payload.** Where a component was **not** read in source, the row says so.
+
+## 🔁 `P13` rewritten — the adapter is an `OAuthStore` implementation *(fourth revision, p138)*
+
+🟢 **`ACTION CE` discharged in source, and the one unknown in the third revision is now a published
+interface.** p137 left the adapter as *"about two weeks"* of work whose shape was inferred. This pass
+read `bruchris/canvas-lms-mcp`'s OAuth module and the shape is no longer inferred:
+
+| p137's open question | p138's measurement |
+|---|---|
+| Does the broker implement the **RFC 8707** binding the LTI seam lacks? | 🟢 **Yes, by name.** `src/auth/oauth/authorization-server.ts` (**978 lines**) carries `normalizeResource()` — *"Canonical comparison for RFC 8707 `resource` values (§7)"* — plus **PKCE `S256`**, `registration_endpoint` with **dynamic client registration**, `/.well-known/oauth-authorization-server`, and a `canvas:write` scope. `resource-server.ts` (195 lines) publishes `/.well-known/oauth-protected-resource` (**RFC 9728**) and performs the **audience** check |
+| Does wiring it require forking either library? | 🟢 **No.** `CanvasMCPServerConfig` takes `oauthStore?: OAuthStore`, documented *"Embedders may supply their own implementation"*. `OAuthStore` exposes `putClient`, `putGrant`, `putToken`, `putPendingAuthorization`, over a `Grant` carrying `CanvasConnection { refreshToken }` |
+| Can a verified LTI `sub` be injected directly? | 🔴 **No — and this is the adapter's entire reason to exist.** The subject is established by `CanvasOAuthClient`, which redirects the user to Canvas. No path accepts an external assertion |
+
+🔵 **So `P13` step 2 and step 3 collapse into one deliverable with a known signature**: implement
+`OAuthStore`, seed it from the launch, hand it to the server constructor.
+
+**Shape of the work (≈2 weeks, one engineer) — revised steps 2–3.**
+1. Stand up `ltijs` v7 as the tool; take `sub`, `deployment_id` and the course context from the
+   verified launch (the `LaunchContext` v7 hands the handler). *Unchanged.*
+2. 🔁 **Implement `OAuthStore`** against the institution's own session store, keyed by the launch
+   `sub`. Obtain the per-user Canvas refresh token in the shape `kstateome/lti-launch` proves
+   (`/beginOauth` for that user → `storeToken(userId, refreshToken)`) and `putGrant` a `Grant`
+   carrying it as `CanvasConnection { refreshToken }`.
+   🔴 **Create the grant up front.** `store.ts` carries *"Update only, never create (QA S7, #356)"*
+   on the Canvas-refresh path — a lazy upsert on first token call will not work.
+3. 🔁 **Construct the server with `{ oauthStore, authProfile: 'oauth_brokered' }`.** The brokered flow
+   then issues an audience-bound MCP token for the launching user **without the Canvas redirect**,
+   because the grant is already present. 🟢 **No fork of `ltijs`, no fork of `canvas-lms-mcp`.**
+4. Pseudonymise before anything leaves the boundary: `canvas-lms-mcp` ships
+   `src/pseudonym/pseudonymizer.ts`. 🟢 **And it fails closed** — when `sharedAcrossCallers` is
+   undeclared the factory treats the deployment as shared and **throws** rather than guess if the
+   environment asks for reverse lookup. *Build on that default; do not switch it off.*
+5. 🔴 **Acceptance tests that make the pattern honest** — three now, not one:
+   - a valid MCP token for a *different* audience must be refused (*"Access token was not issued for
+     this resource"*);
+   - a token without the `canvas:write` scope must leave write tools **blocked**, which `http.ts`
+     decides at `outcome.scopes.includes('canvas:write')`;
+   - a pasted `X-Canvas-Token` must get a **`400`** under the brokered profile.
+6. 🔴 **Pin the dependency by payload, not by identifier.** `canvas-lms-mcp` **2.2.0** on npm is
+   clean (378 paths, `package/LICENSE` present, published **2026-10-10**) — but 9 of 21 packages on
+   this shelf ship no licence text, so verify the one you pin. See `P17`.
+
+🔴 **What still kills this build is unchanged:** an institution whose LMS is **not** Canvas. The
+broker and the launch mapping are both Canvas-specific, and the Brightspace and Moodle connectors
+hold credentials instead of brokering them. 🟡 **For Brightspace, `D2L_PASSWORDLESS=true` plus a
+token-paste path is the stopgap** — a stopgap, not the pattern.
+
+## 🆕 `P17` — The licence-payload gate: prove what you are about to redistribute *(new, p138 — Global)*
+
+**The engagement.** Any engagement that ships open-source components to a client — so, effectively,
+all of them. 🔴 **`T17` measured that 9 of 21 published education-connector packages carry no licence
+text, 7 of them while declaring an SPDX identifier.** A studio that reads licences from repositories
+and ships artefacts from registries is checking a different object from the one it delivers.
+
+**Why this is a pattern and not a checklist item.** 🔵 **The defect is invisible to every tool a
+studio normally uses.** `npm ls --json` reports the identifier from the manifest; so do licence
+scanners that read `package.json`. Both report `MIT` for a package whose tarball contains no licence
+file at all. The only way to see it is to enumerate the payload.
+
+**The stack.**
+
+| piece | component | licence | role |
+|---|---|---|---|
+| the probe | [`p138-npm-payload-licence`](code/p138-npm-payload-licence/README.md) — in this KB | — | 🟢 **Runs as-is.** Takes package names, emits one TSV row each: version, publish time, SPDX id, `files` field, path count, licence file. **sha1-verifies every tarball against the registry's own `shasum`** and refuses to report a row whose bytes do not match |
+| licence family classification | `compose/code/lib/license_family.sh` — in this KB | — | classifies the grant text once found, so a payload licence can be checked against the declared identifier rather than merely counted |
+| the gate | the probe's exit path, wired into CI | — | fail the build when a dependency the client will receive ships an identifier with no text |
+
+**How it wires together.**
+1. Resolve the dependency set you will actually ship (not the dev tree) to exact versions.
+2. Run `scan_npm_payload.sh` over those names; keep the TSV as a **build artefact**, because it is
+   the evidence, and it is dated and reproducible.
+3. 🔴 **Fail on `spdx_id != ABSENT && licence_file == NONE`** — the declared-but-absent class. That is
+   the one where the client is told an obligation exists and handed nothing to satisfy it.
+4. 🟡 **Warn, do not fail, on `spdx_id == ABSENT && licence_file == NONE`.** Two live packages on this
+   shelf are in that state with no `repository` field either (`@imazhar101/mcp-canvas-server`,
+   `@n35da/brightspace-mcp`). 🔵 **Nothing to read, nobody to ask — the correct action is not to ship
+   them, which is a sourcing decision rather than a build failure.**
+5. 🟢 **Escalate copyleft rows to a block.** `moodle-mcp-server-aql` declares **AGPL-3.0** over 141
+   paths with no text. A permissive row missing its notice is an attribution defect; a copyleft row
+   missing its text is a conveyance defect, and for an AGPL component attached to a GPL platform
+   (this KB's `P7` route) it is the one that reaches the client's own obligations.
+6. 🟢 **When a row fails, the ask upstream is small and specific**: all nine defects measured are the
+   repository being *better* than the distribution, so the fix is one `files` entry in `package.json`,
+   not a licensing negotiation. Open that PR; it is a two-line change and it fixes it for everyone.
+
+**Shape of the engagement.** 🔵 **Two days to wire, then free forever.** It is not a billable
+workstream; it is the thing that keeps a licence column from being wrong in the one place it matters.
+
+🔴 **What this pattern does NOT cover, stated so nobody over-trusts it.** It reads licence **files**
+only, so a grant in a source-file header reads as `NONE` — p137's `pipwerks` correction proved that
+case is real, which means the gate **over-reports** and every failure needs a header read before
+anyone writes to an upstream. It covers **npm** only: PyPI, Maven and crates need the same probe
+against their own payload formats, and some rows have no payload layer at all (`moodler-mcp` is not
+on PyPI). 🔵 **Use it as a gate on what you ship, never as a licence verdict on a project.**
 
 ## 🔁 `P13` rewritten — sanctioned MCP access to an LMS with no new credential *(third revision, p137)*
 
@@ -880,6 +974,10 @@ conformance suite for QTI**, so "the item is valid QTI 3" rests on the player ac
 | 🆕 is a **German-speaking-Europe** institution wanting off Moodle's GPL | 🟢 **OpenOlat** as the base (Apache-2.0 + attribution), then **P11** |
 | 🆕 runs **Brightspace / D2L** | 🟢 **P11** shape with [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) (MIT) as the read surface — 🔴 **behind P13**, and audit its write surface first: it was not source-read |
 | 🆕 asks *"can we buy the identity layer rather than build it?"* | 🟢 **P13 as rewritten by p136** — buy `giantswarm/mcp-oauth` or `atrawog/mcp-oauth-gateway` (both Apache-2.0), build only the LTI adapter |
+| 🆕 **ships any open-source component to a client** — so, every engagement | 🟢 **P17** — two days to wire, and it catches the defect `npm ls` and manifest-reading licence scanners both report as `MIT` |
+| 🆕 will attach an **AGPL-3.0 connector to a GPL platform** (the **P7** route) | 🔴 **P17 first, as a blocking gate** — `moodle-mcp-server-aql` declares AGPL-3.0 over 141 shipped paths and ships no licence text |
+| 🆕 runs **Canvas** and wants the broker wired without forking anything | 🟢 **P13 fourth revision** — implement `OAuthStore`, `putGrant` the per-user Canvas refresh token, pass it to the server constructor |
+| 🆕 runs **Moodle** and wants a permissive connector with its own test discipline | 🟢 [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (**MIT**, Go, committed `go vet`/`staticcheck`/`-race`/coverage) — 🔴 **but audit its write surface: 19 tools in source, 14 documented, and `submit_journal` and `update_assignment` appear in neither** |
 | 🆕 wants to **reuse an open skills/prompt library** in a client deliverable | 🔴 Read the licence first: `GarethManning/education-agent-skills` is **CC-BY-SA-4.0 by deed** (847★) — **ShareAlike propagates into the client's adaptations** |
 
 **Cross-cutting constraints.** Prefer **LTI 1.3** over forking any AGPL platform. Never ship

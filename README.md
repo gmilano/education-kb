@@ -1,8 +1,139 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
+
+## Pass 138 — 2026-10-12
+
+⏱️ **First pass of this date.** 🟢 **Five of p137's six pre-registered actions reached and
+discharged; one (`ACTION CH`) did not run and is re-registered unchanged.** 🔴 **The headline: the
+licence defect p137 found in one repository is a third of the published connector tier, and it is
+measured in the bytes a client installs rather than in a repository anyone can read.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P138-A` | 🔴 **`ACTION CD` DISCHARGED, NOT REFUTED — and generalised from 1 row to 9** | **21** education-LMS connector packages, all **sha1-verified against the registry's own `shasum`**: 🔴 **7 (33%)** declare an SPDX id and ship **no licence file**, 🔴 **2 (10%)** declare nothing, 🟢 **12 (57%)** clean |
+| `P138-B` | 🔴 **THE WORST ROW IS THE COPYLEFT ONE** | `moodle-mcp-server-aql` **0.1.7** declares **AGPL-3.0** across **141 shipped paths** with no licence text — its repository carries a canonical **34 523 B** `LICENSE` |
+| `P138-C` | 🔴 **THE MECHANISM, MEASURED** | `canvas-mcp-server` **2.2.3**'s packed manifest **names `LICENSE` in `files`** and ships 8 paths containing none. npm omits a `files` entry absent from the tree, silently |
+| `P138-D` | 🟢 **`ACTION CE` DISCHARGED, NOT REFUTED — AND THE "NO FORK" HALF IS CONFIRMED** | `oauthStore?: OAuthStore` is a documented embedder extension point (`putGrant`, `putToken`, `CanvasConnection { refreshToken }`); **RFC 8707 §7** `normalizeResource()`, **PKCE S256**, dynamic client registration all present in **978 lines** |
+| `P138-E` | 🟢 **`ACTION CF` DISCHARGED — AND ONE OF THE THREE MOODLE CONNECTORS IS NOT A THIRD CONNECTOR** | `Dymayo/moodler-mcp` is **byte-identical** to `GhaithAlHallak8/moodler-mcp` (`README` sha1 `bc895a8e…`, both **1.1.2**), which its own manifest names canonical. 🔴 **Not on PyPI (404)** |
+| `P138-F` | 🔴 **`ACTION CI` FIRST HARD NUMBERS — AND THE DRIFT RUNS THE OTHER WAY** | `Jawadh-Salih/moodle-mcp-server`: **19** tools in source, **14** documented; 🔴 **`submit_journal` and `update_assignment` are writes and appear in neither** |
+| `P138-G` | 🟡 **`ACTION CG` DISCHARGED — CONFLICT NARROWS, DATE DOES NOT RESOLVE** | Decision **33/2026/QĐ-TTg** signed **2026-06-30** (Deputy PM **Hồ Quốc Dũng**), in force **2026-08-15**, under 🆕 **Nghị định 142/2026/NĐ-CP**; 🆕 education scope includes **`đánh giá tâm lý`** |
+| `P138-H` | 🔴 **TWO LIVE PACKAGES CANNOT BE SOURCED AT ALL** | `@imazhar101/mcp-canvas-server` **2.1.3** (71 paths) and `@n35da/brightspace-mcp` **0.4.0** (22 paths): no `repository` field, no SPDX id, no licence file |
+| `P138-I` | 🔵 **SLUG-FIRST COVERAGE IS NARROWER THAN REGISTRY-FIRST** | one search per platform family returned **21** packages where this KB tracked a handful — a **547**-path Brightspace server and a **378**-path Canvas server among them |
+| `P138-J` | 🔴 **EMEA IS NOT THE EU, AND THIS KB HAS BEEN READING ONE OF ITS THREE PARTS** | first **Middle East / Africa** rows: UAE **National AI Strategy 2031**, Saudi **SDAIA**, Kenya/South Africa/Nigeria **in drafting** — all economy-wide, none education-specific |
+
+### `P138-A` — why the layer is the finding
+
+🔵 **This KB has read licence files at four layers: the root file, tree enumeration, source headers,
+registry metadata. The payload is the fifth, and it is the only one a client receives.**
+`npm install` unpacks a tarball; it does not clone a repository. A grant that lives only at HEAD is
+never conveyed to the person who installs — so a licence cell can be correct about a repository and
+wrong about the delivery.
+
+🟢 **Direction of the error is recorded because it decides the remedy.** All nine defective rows are
+the repository being *better* than the distribution. **Not one package shipped a licence its
+repository lacked.** So this is packaging discipline, not misrepresented licensing, and the ask to
+an upstream is a one-line `files` change. 🟢 **That asymmetry became a pattern**: `P17`, the
+licence-payload gate, with the fail/warn/block split drawn along it.
+
+🔵 **The defect is invisible to the tools a studio already runs.** `npm ls --json` and any scanner
+that reads `package.json` both report `MIT` for a package whose tarball contains no licence text.
+
+Probe, method, committed 21-row TSV and **7 passing tests**:
+[`compose/code/p138-npm-payload-licence`](compose/code/p138-npm-payload-licence/README.md).
+
+### `P138-D` — the one that changes delivery, not just the ledger
+
+🔵 **`P13` has been rewritten four times: build (p135) → buy-and-adapt (p136) → adapter (p137) → a
+named interface (p138).** This pass is the one where the remaining work stopped being an estimate:
+`CanvasMCPServerConfig` accepts an embedder-supplied `OAuthStore`, so the adapter seeds a `Grant`
+carrying the per-user Canvas refresh token — in the shape
+[`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) proves — and the brokered flow
+issues an audience-bound MCP token **without forking `ltijs` or `canvas-lms-mcp`**.
+
+🔴 **Not refuted: the adapter is still required.** The subject is established by `CanvasOAuthClient`,
+which redirects the user to Canvas; no code path accepts an external verified assertion. 🔴 And
+`store.ts` carries *"Update only, never create (QA S7, #356)"* on the Canvas-refresh path, so the
+grant must be created up front rather than lazily.
+
+### Regions this pass
+
+| region | this pass |
+|---|---|
+| **North America** | 🆕 **The age gate is the new instrument class, and it constrains product rather than process.** New York City — the largest US district — has a **one-year moratorium on student-facing AI through eighth grade**. 🔵 **A deadline creates demand for compliance tooling; an age gate removes the end user**, so a K-8 tutor has no deployment surface there however conformant it is. Consequence for a studio: **build teacher-facing and administrative surfaces first** — the same conclusion `P9` reaches from the platform side. 🆕 **California AB 1159** would bar student data from training AI models; **Idaho SB 1227** would require privacy protections. 🟡 **134** bills across **31** states and **60%** of K-12 teachers using AI in 2024–25 — both single-publisher secondary figures, and p136 already recorded that bill counts disagree. 🔴 **Canada: still nothing, fourth consecutive pass** |
+| **EMEA** | 🔴 **A gap in this KB's own region vocabulary.** Every EMEA row for several passes has been EU, UK or Nordic; the **Middle East and Africa are the other two-thirds of the label and had no rows at all.** First entries: **UAE National AI Strategy 2031**, Saudi Arabia's **SDAIA** framework, and AI policies **in drafting** in Kenya, South Africa and Nigeria. 🔵 **The finding is not "MEA regulates education AI" — it is that MEA has national AI machinery and no education-specific duty**, the inverse of the EU's position: no conformity deadline to sell against, and the buyer is a ministry building capability rather than a school proving compliance. 🔴 **All five rows come from one secondary source whose subject was insurance** — leads, not findings. 🟡 EU unchanged: Annex III education duties at **2027-12-02**, **Article 50 applying since 2026-08-02** |
+| **APAC** | 🟢 **`ACTION CG` discharged in Vietnamese, and it was the right language to ask in.** Decision **33/2026/QĐ-TTg**: signed **2026-06-30** by Deputy PM **Hồ Quốc Dũng**, in force **2026-08-15**, issued under 🆕 **Nghị định 142/2026/NĐ-CP** (p137 cited only Law 134/2025/QH15). 🆕 **The education list includes `đánh giá tâm lý` — psychological assessment** — which the English read missed, and which catches wellbeing screening, engagement scoring and at-risk prediction: product classes a vendor would file as neither "grading" nor "biometrics". 🔴 **The transition date still does not resolve**: **2027-09-01** for health/education/finance in one Vietnamese source, a general **2027-03-01** in another whose scope list omits education. 🔵 **The disagreement is not about education's deadline being later — it is about whether the later deadline exists.** Plan against **2027-03-01**. 🔴 **The gazette `congbao.chinhphu.vn` does not resolve in this channel** (`ENOTFOUND`) |
+| **LATAM** | 🔴 **Eighth consecutive pass with no LATAM-owned row — and this pass declined a chance to fake one.** The registry census returned two packages whose owner names invite the booking: `@nahuelalbornoz/moodle-mcp` (author *"Italicia"*, repo **`marcosnahuel/moodle-mcp`** — 🔴 a third address mismatch this pass) and `brightspace-mcp` (author *"Jhostin Aleck"*, **547 paths**, the largest connector payload on the shelf). 🔵 **A personal name is not a region, and onomastics is not evidence** — both carried as `region: UNMEASURED` with the measured facts attached, so a later pass can promote them in one edit. 🔵 **What would actually close the gap is named**: an affiliation in an author field, a university or ministry as repo owner, a LATAM-domain homepage, or a LATAM institution as a licence **holder**. None of the 21 has any. 🟡 Demand side unchanged and still the stronger half: UNESCO IESALC **87%** adoption against **26%** holding a strategy |
+| **Global** | 🔴 **The 2026 column widened again**: **USD 10.6B** (Research and Markets, 40.9% CAGR) and **USD 12.3B** (HolonIQ via a vendor blog) — a **16%** disagreement about a year three-quarters elapsed. 🟢 **This is now a rule rather than a recurring complaint**: the disagreement is about market *definition*, so **quote the CAGR, never the level** — growth rates agree across publishers who differ by billions on the base. 🔴 **Regional shares remain unusable**: NA at **36% / USD 3.68B** and Europe at **USD 2.64B** cannot be reconciled with each other or with any global level, and p137's LATAM-flat-at-5%-across-three-horizons stands as a modelling assumption |
+
+### Verdicts on p137's actions
+
+- 🔴 **`ACTION CD` — DISCHARGED, NOT REFUTED**, and widened from one package to a 21-package census.
+- 🟢 **`ACTION CE` — DISCHARGED, NOT REFUTED**; the adapter stands, and the "no fork" half is
+  confirmed in source.
+- 🟢 **`ACTION CF` — DISCHARGED**; all three licences correct, and one row exposed as a duplicate
+  address rather than a third connector.
+- 🟢 **`ACTION CG` — DISCHARGED**; conflict narrowed, a scope element added, the date still open.
+- 🔴 **`ACTION CH` — NOT RUN.** Re-registered unchanged. This is the pass's main omission and it
+  bounds `P138-A`: the payload probe reads licence **files**, so **7 of 21 is a floor**.
+- 🟡 **`ACTION CI` — PARTIALLY DISCHARGED**: two repositories source-read, not the tier.
+  Re-registered narrowed.
+
+### Pre-registered for p139
+
+🔴 **`ACTION CJ`** *(carried from `CH`, unrun)* — extend a licence-header read to **source-file
+headers** on the three largest `ROOT_ONLY` rows. 🔴 *Refuted if none carries a foreign header —
+which would make p137's 50% an estimate rather than a floor.*
+
+🟡 **`ACTION CK`** *(narrowed from `CI`)* — measure **tool-count drift** across the **nine npm rows
+whose payload is already downloaded**, counting registered tools in the shipped build and comparing
+to each package's own README. 🔴 *Refuted if fewer than a third disagree with themselves.*
+
+🟢 **`ACTION CL`** — execute the `P13` step-2 adapter against `canvas-lms-mcp`'s `OAuthStore` for
+real, with a fixture grant. 🔴 *Refuted if the brokered flow still demands the Canvas redirect when
+a grant is pre-seeded — which would put the adapter back above two weeks.*
+
+🟡 **`ACTION CM`** — probe the **PyPI and Maven** payload layers with the same method
+(`p138-npm-payload-licence` generalised). 🔴 *Refuted if the declared-but-absent rate is under 10%
+there — which would make the defect an npm packaging habit rather than an open-source one.*
+
+🟡 **`ACTION CN`** — resolve the `moodler-mcp` duplicate by a channel that is not the manifest:
+commit history, release dates, or a fork marker. 🔴 *Refuted if neither address is derivable as the
+original, in which case this KB carries both and says so.*
+
+🟢 **`ACTION CO`** — read **one** of the five new MEA instruments in primary source (SDAIA's
+framework is the most likely to be fetchable). 🔴 *Refuted if none mentions education at all — which
+would downgrade `P138-J` from a region gap to a region absence.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **`ACTION CH` did not run at all.** It was the action bounding this pass's headline, and its
+  absence means **7 of 21 is a floor, not a count**.
+- 🔴 **No region measured for any of the 21 packages.** Two had suggestive owner names and were
+  deliberately not booked. The LATAM-ownership gap is at **eight consecutive passes**.
+- 🔴 **Star counts and HEAD dates were NOT measured for the new registry rows.** They say
+  **UNMEASURED** rather than carrying a number lifted from a search result.
+- 🔴 **Every regional instrument this pass — the NYC moratorium, AB 1159, SB 1227, and all five MEA
+  rows — was read through search results, not primary text.** The one primary fetch attempted
+  (Vietnam's gazette) **failed at DNS**. Primary source, secondary transport, third pass running.
+- 🔴 **The five MEA rows come from a single secondary source whose subject was insurance.** They are
+  published as leads and should not be quoted to a client.
+- 🔴 **`ACTION CE` was answered by reading an interface, not by calling it.** No adapter was built
+  and no grant was seeded; `ACTION CL` exists because an interface that looks sufficient is not the
+  same as one that is.
+- 🔴 **npm only.** Four platform families, one search each. `moodler-mcp` has no payload layer at all
+  (not on PyPI), so for part of the shelf this pass's main method does not apply.
+- 🔴 **The market figures were not reconciled and will not be.** Two more publishers were added to a
+  column that is now wider than when this KB started tracking it.
+- 🔵 **Channel state, recorded for the next pass.** 🟢 `registry.npmjs.org` answers **200**, including
+  its search endpoint and tarball downloads — this pass's whole method rests on that lane.
+  🟢 `raw.githubusercontent.com` answers **200** and was used to verify that all eight repository
+  addresses cited this pass really exist. 🔴 **`api.github.com`, `codeload.github.com` and
+  `github.com` HEAD requests all answer `403`** here, so star counts, fork counts and HEAD dates
+  could not be taken and say **UNMEASURED**; `github.com` *tree pages* remain readable only through
+  WebFetch. 🔴 **`congbao.chinhphu.vn` does not resolve at all** (`ENOTFOUND`).
 
 ## Pass 137 — 2026-10-11
 

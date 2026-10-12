@@ -1,10 +1,54 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — foundational repos
+
+**Pass 138, 2026-10-12.** 🔴 **p137 measured that a licence cell describes a repository root rather
+than a whole tree. This pass measured a fifth layer, and it is the only one a client actually
+receives: the published package.** `ACTION CD` downloaded **21** education-LMS connector tarballs
+(Canvas, Moodle, Brightspace, EduBase), **sha1-verified every one against the registry's own
+`shasum`** — 21 of 21 matched — and enumerated every shipped path.
+
+| the layer | what it tells you | measured |
+|---|---|---|
+| root licence file | what you may do | 🟢 right about the **family** 92% of the time (`p444`) |
+| tree enumeration | 🔴 **whom you owe** | 🔴 incomplete for **50%** of the largest rows (`p137`) |
+| 🆕 **published payload** | 🔴 **what the client is actually handed** | 🔴 **9 of 21 packages ship NO licence file; 7 of those declare an SPDX id** |
+
+🔵 **`npm install` unpacks a tarball; it does not clone a repository.** A grant that lives only at
+HEAD is never conveyed to the person who installs the package — so a licence cell sourced from a
+repository can be correct about the repository and wrong about the delivery.
+
+🔴 **The row that matters most is the copyleft one.** `moodle-mcp-server-aql` **0.1.7**
+(2026-10-01) declares **AGPL-3.0** across **141 shipped paths** and ships no licence text, while
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) carries a
+canonical **34 523-byte** `LICENSE`. 🔵 The strongest obligation on this shelf, conveyed without the
+document that states it.
+
+🔴 **And the mechanism is now known rather than guessed**: `canvas-mcp-server` **2.2.3**'s packed
+manifest reads `files: ["build/**/*", "README.md", "LICENSE", "package.json"]` — it **names**
+`LICENSE` — and its 8 shipped paths contain none. npm omits a `files` entry that does not exist in
+the tree, silently. 🔵 **New rule for this page: a manifest that lists a licence is not evidence
+that one shipped.**
+
+🟢 **Direction of the error, which decides the remedy.** All nine defective rows are the repository
+being *better* than the distribution — **not one package shipped a licence its repository lacked**.
+The ask to an upstream is a one-line `files` change, not a relicensing conversation.
+
+Instrument, method, committed 21-row TSV and 7 passing tests:
+[`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md).
+
+🔴 **This probe reads licence FILES only**, so the `pipwerks` case — a grant in a source-file header
+— stays invisible to it. **7 of 21 is a floor, not a count.** `ACTION CH` was registered to close
+that hole at the repository layer and **did not run this pass**; it is re-registered.
+
+🔴 **Scope, stated:** npm only, four platform families, one registry search each. PyPI, Maven and
+crates were not probed, and `moodler-mcp` — a Python connector on this KB's shelf — **is not on PyPI
+at all (404)**, so for part of the shelf there is no payload layer to measure and no registry to
+arbitrate a disputed address.
 
 **Pass 137, 2026-10-11.** 🔴 **Every licence cell on this page describes a repository ROOT, and for
 half of the largest rows the root is not the whole obligation.** `ACTION BY` enumerated the file

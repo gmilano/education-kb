@@ -1,10 +1,83 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — current trends
+
+**Pass 138, 2026-10-12.** p137's sixteen trends retained. 🆕 **`T17` is added — the first trend this
+KB has measured at the distribution layer rather than the repository layer, and it reframes every
+licence cell on every page.** 🟢 **`T13` is narrowed for the third consecutive pass and is now one
+interface wide rather than one standard version wide.** 🟢 **`T14` gains its first measurement in the
+under-claiming direction**, which is the more dangerous one. 🆕 **`T16` gains a scope element the
+English-language read had missed.** Each change states the measurement and what would overturn it.
+
+### 🆕 `T17` — a licence identifier is not a licence, and a third of a published tier proves it
+
+| claim | 🔴 **An open-source licence cell sourced from a repository describes the repository, not the artefact a client installs — and for a third of the published education-connector tier the artefact carries no licence text at all.** |
+|---|---|
+| measurement | **21** education-LMS connector packages (Canvas, Moodle, Brightspace, EduBase), every tarball **sha1-verified against the registry's own `shasum`**, 21 of 21 matching. 🔴 **7 (33%) declare an SPDX identifier and ship no licence file; 2 (10%) declare nothing and ship nothing; 12 (57%) are clean.** [`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md) |
+| 🔴 the sharpest case | `moodle-mcp-server-aql` **0.1.7** declares **AGPL-3.0** across **141 shipped paths** with no licence text, while its repository carries a canonical **34 523-byte** grant |
+| the mechanism | `canvas-mcp-server` **2.2.3**'s packed manifest **names `LICENSE` in `files`** and ships 8 paths containing none. npm silently omits a `files` entry absent from the tree |
+| 🟢 direction | **all nine are the repository being better than the distribution**; not one package shipped a licence its repository lacked. So this is packaging discipline, not misrepresented licensing |
+| what it changes | 🔵 **Every licence column in this KB is now a claim about a repository.** For any row a client will `npm install`, the payload is a separate question with a separate answer |
+| 🔴 **what would overturn it** | A re-run finding the licence files present — which would mean the probe's path matcher is wrong, so the matcher is tested against real and near-miss filenames (7 tests, all passing). Or a licence-header read showing the grants live in source files rather than licence files, which would make **7 of 21 an overstatement of the defect and an understatement of the obligation**. 🔴 `ACTION CH` was registered for exactly this and has not run |
+| 🔴 scope limit | npm only; four platform families; one registry search each. PyPI, Maven, crates unprobed. `moodler-mcp` **is not on PyPI (404)**, so part of the shelf has no payload layer to measure |
+
+### 🟢 p138 narrows `T13` a third time: the residue is one interface, and it is a published extension point
+
+| p137's clause | p138's measurement, in source |
+|---|---|
+| *"the 1.3 half of the gap"* — no RFC 8707-bound token for an MCP resource server | 🟢 **Present and named.** [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) `src/auth/oauth/authorization-server.ts` (**978 lines**) implements **RFC 8707 §7** canonical resource comparison as `normalizeResource()`, with **PKCE S256** and **dynamic client registration**; `resource-server.ts` (195 lines) publishes `/.well-known/oauth-protected-resource` and checks the **audience** |
+| *"an adapter of about two weeks"* between three components | 🟢 **Still about two weeks, and no longer an estimate of unknown work.** `CanvasMCPServerConfig` accepts `oauthStore?: OAuthStore` — *"Embedders may supply their own implementation"* — and `OAuthStore` exposes `putClient`, `putGrant`, `putToken`, over a `Grant` carrying `CanvasConnection { refreshToken }` |
+| 🔴 what still does not exist | 🔴 **An external verified subject cannot be injected.** The subject is established by `CanvasOAuthClient`, which redirects the user to Canvas. No code path accepts an LTI 1.3 assertion |
+
+🟢 **So `T13` reduces to: the LTI→MCP seam is one store implementation, and it forks neither
+library.** 🔴 **Overturned if** either library requires a patched release in practice — the
+interface is published but the integration was **not executed** this pass, and `store.ts`'s
+*"Update only, never create (QA S7, #356)"* comment on the Canvas-refresh path means the adapter
+must `putGrant` before the first token call rather than relying on an upsert.
+
+### 🟢 p138 extends `T14`: capability metadata drifts in BOTH directions, and under-claiming is worse
+
+🔵 **`T14` has been measured only on over-claiming — connectors whose descriptions promised more
+tools than they had. The first source-read of this pass drifts the other way.**
+
+| repo | source | documented | 🔴 undocumented |
+|---|---|---|---|
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (**MIT**, Go) | **19** tools (`mcp.NewTool`) | **14** | `download_resource`, `get_journal_entry`, `list_resources`, 🔴 **`submit_journal`**, 🔴 **`update_assignment`** |
+
+🔴 **Two of the five are writes.** A client reading this README concludes the server is read-only;
+it is not. 🔵 **For an education deployment that is a governance fact, not a documentation nit** — the
+write surface is precisely what a data-protection review covers, and here it is larger than the
+document the reviewer is handed. 🟢 **The clause `T14` gains:** *a tool count in a description is not
+a measurement — and neither is its absence.*
+
+🟢 **And one of `T14`'s recorded conflicts resolves in source, in the reassuring direction.**
+`canvas-mcp-server@2.2.3`'s `build/index.js` registers **exactly 54** tools, all `canvas_`-prefixed,
+against a HEAD README claiming **"50+ Tools"** — agreement. The surviving *"102 vs 126"* conflict
+belongs to [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) and is
+unchanged. 🔴 **`ACTION CI` therefore remains PARTIALLY discharged** — two repositories, not the tier.
+
+### 🆕 p138 adds a scope element to `T16`: psychological assessment is in Vietnam's education list
+
+🟢 **`T16` — that the first binding education-AI conformity regime in force is Vietnam's, not the
+EU's — is unchanged and firms up.** Decision **33/2026/QĐ-TTg** was signed **2026-06-30** by Deputy
+PM **Hồ Quốc Dũng**, in force **2026-08-15**, under 🆕 **Nghị định 142/2026/NĐ-CP**.
+
+🆕 **The education entries include `đánh giá tâm lý` — psychological assessment** — which p137's
+English-language read did not record alongside uncontrolled-source self-study content, automated
+grading and behaviour monitoring. 🔵 **This catches a product class a vendor would not self-file as
+high-risk**: wellbeing screening, engagement scoring and at-risk prediction are none of them
+"grading" and none of them "biometrics".
+
+🔴 **The transition date remains contradictory in Vietnamese sources too** — **2027-09-01** for
+health/education/finance with **2027-03-01** for other listed sectors in one, a general
+**2027-03-01** in another whose visible scope list omits education. 🔵 **Plan against 2027-03-01**:
+a client ready for March is ready for September, not the reverse. 🔴 **The gazette
+(`congbao.chinhphu.vn`) does not resolve in this channel** — primary source, secondary transport,
+third pass running.
 
 **Pass 137, 2026-10-11.** p136's fifteen trends retained. 🔴 **`T13` is rewritten for the second
 consecutive pass, and this time by source code rather than by a better query**: the mapping it

@@ -1,10 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — vertical platforms you can customise
+
+**Pass 138, 2026-10-12.** 🟡 **No platform row changed this pass, and that is stated rather than
+padded.** `ACTION CD`, `CE`, `CF`, `CG` and part of `CI` were spent on the **connector** layer that
+attaches to these platforms, not on the platforms themselves — so the platform table below is
+p137's, unchanged, and this page's own measurement this pass is about what happens when a client
+*installs* one of the attachments.
+
+🔴 **The attachment layer has a distribution defect this page must flag, because it lands on the
+copyleft platform.** Of **21** education-LMS connector packages probed at the payload layer,
+**9 ship no licence file**, and the worst is the one attached to Moodle:
+`moodle-mcp-server-aql` **0.1.7** declares **AGPL-3.0** across **141 shipped paths** with no licence
+text, while its repository
+([`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)) carries the
+canonical **34 523-byte** grant. 🔵 **For this page the consequence is specific**: a studio that
+attaches an AGPL-3.0 connector to a GPL-3.0 platform inherits the strongest obligation on the shelf
+and is handed none of the text that states it.
+[`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md).
+
+🟢 **One attachment-point fact worth adding to this page.** Moodle now has **three independent
+connectors in three different languages**, sharing no implementation —
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) (**AGPL-3.0**,
+Node workspace monorepo), [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server)
+(**MIT**, **Go**, with a committed `go vet` / `staticcheck` / `-race` / coverage harness) and
+`GhaithAlHallak8/moodler-mcp` (**MIT**, **Python**, `playwright`-driven session) — plus at least six
+more Moodle packages on npm that this KB's slug-first method never surfaced. 🔵 **For the
+permissive-side route this page recommends (`P7`), the Go row is the only one that ships its own
+test-and-lint discipline, and the only permissive one whose canonical address is not in question.**
 
 **Pass 137, 2026-10-11.** 🔴 **The licence column on this page is a ROOT licence column, and for the
 platforms a client actually runs that is now a measured understatement.** `ACTION BY` enumerated the

@@ -1,10 +1,98 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — trending repos (append-only log)
+
+## 2026-10-12 — Pass 138
+
+🔵 **p137 ended by listing the npm lane as an opened door nobody had walked through. This pass
+walked through it, and the view from the registry is not the view from the repository.**
+
+### The measurement
+
+**21** education-LMS connector packages (Canvas, Moodle, Brightspace, EduBase), every tarball
+downloaded and **sha1-verified against the registry's own `shasum`** — **21 of 21 matched, 0
+identity mismatches**. Probe, method, committed TSV and 7 passing tests:
+[`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md).
+
+| class | count | share |
+|---|---|---|
+| 🟢 licence file present in the payload | **12** | 57% |
+| 🔴 **SPDX identifier, no licence file** | **7** | 🔴 **33%** |
+| 🔴 **no identifier and no licence file** | **2** | 🔴 **10%** |
+
+🔵 **`P137-J` — "an SPDX id without text" — was published last pass as one repository's defect, with
+the class called new. It is a third of the published tier.** And the layer matters: `npm install`
+unpacks a tarball, it does not clone a repository. A grant that exists only at HEAD is never
+conveyed to the person who installs.
+
+### The row that should change a delivery decision
+
+🔴 **`moodle-mcp-server-aql` 0.1.7 (2026-10-01) declares `AGPL-3.0` across 141 shipped paths and
+ships no licence text.** Its repository,
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server), carries a
+canonical **34 523-byte** AGPL-3.0 `LICENSE`. 🔵 **The strongest obligation on this shelf, conveyed
+without the document that states it.** Of the nine defective rows this is the only copyleft one,
+and it is the one where the missing text has consequences beyond attribution.
+
+### The mechanism, measured rather than inferred
+
+🔴 **`canvas-mcp-server` 2.2.3's packed manifest reads
+`files: ["build/**/*", "README.md", "LICENSE", "package.json"]`** — it **names** `LICENSE` — and its
+**8 paths contain none**. `files` names a path that does not exist in the tree, and npm omits it
+silently with no warning in the published artefact. 🔵 **A manifest that lists a licence is not
+evidence that one shipped**, which is a new rule for this KB's licence columns.
+
+🟢 **Direction of the error, recorded because it changes the remedy.** All nine are the repository
+being *better* than the distribution; **not one package shipped a licence its repository lacked**.
+So the ask to an upstream is a one-line `files` fix, not a relicensing conversation.
+
+### New rows this shelf never carried, found registry-first
+
+🔵 **This log has been built slug-first — a GitHub repository, then its licence. One registry search
+per platform family returned connectors that were simply invisible to that method.**
+
+| package | version | published | licence *(payload-read)* | paths | note |
+|---|---|---|---|---|---|
+| 🆕 `brightspace-mcp` | 1.3.1 | 2026-09-28 | 🟢 **MIT** + `LICENSE` | **547** | 🔵 **the largest connector payload on this shelf** — larger than anything this KB tracked for Brightspace; *"multi-auth, opt-in writes, session cache"* |
+| 🆕 `@mtgibbs/canvas-lms-mcp` | 0.2.18 | 2026-02-13 | 🟢 **MIT** + `LICENSE` | 208 | an independent Canvas implementation |
+| 🆕 `moodle-cli` | 0.10.0 | **2026-10-03** | 🟢 **MIT** + `LICENSE` | 11 | *"Moodle for terminals and AI agents"* — CLI-shaped rather than MCP-shaped |
+| 🆕 `brightspace-d2l-mcp` | 1.0.0 | 2026-09-16 | 🟢 **MIT** + `LICENSE` | 58 | a fourth independent Brightspace connector |
+| 🆕 `moodle-mcp` | 0.2.0 | 2026-04-21 | 🟢 **MIT** + `LICENSE` | 58 | |
+| 🆕 `moodle-mcp-server` | 1.0.0 | 2026-01-29 | 🟢 **MIT** + `LICENSE` | 11 | |
+| 🆕 `@nahuelalbornoz/moodle-mcp` | 0.5.1 | 2026-04-23 | 🟢 **MIT** + `LICENSE` | 6 | 🔴 **third address mismatch this pass**: scope `@nahuelalbornoz`, author *"Italicia"*, repository **`github.com/marcosnahuel/moodle-mcp`**. Description claims it can *publish and manage pedagogical content* — a **write-capable** content connector |
+| 🆕 `@likr/canvas-lms-mcp` | 2.0.0 | 2026-07-09 | 🟢 **MIT** + `LICENSE` | 8 | |
+| 🆕 `@ink-waffle/moodle-mcp` | 0.2.0 | 2026-09-17 | 🔴 **MIT id, no text** | 38 | drives a `playwright` session |
+| 🆕 `eth-moodle-mcp` | 1.3.3 | 2026-04-15 | 🔴 **MIT id, no text** | 15 | 🔵 names **ETH Zurich** as its **target**; no `repository` field, no identified owner — p137's Javeriana shape again |
+| 🆕 `@owen-x-tech/canvas-mcp` | 1.1.0 | 2026-02-23 | 🔴 **MIT id, no text** | 12 | |
+| 🆕 `@exhabition/brightspace-mcp` | 0.2.2 | **2026-10-01** | 🔴 **MIT id, no text** | **3** | a 3-path package |
+| 🆕 `edubase-mcp` | 1.0.10 | 2025-05-30 | 🟢 **MIT** + `LICENSE` | 15 | 🔵 **a second EduBase name**: `@edubase/mcp` **2.0.3** is the maintained one — two names again |
+| 🔴 `@imazhar101/mcp-canvas-server` | 2.1.3 | **2026-10-01** | 🔴 **nothing: no id, no file** | 71 | 🔴 **no `repository` field** — nothing to read, nobody to ask |
+| 🔴 `@n35da/brightspace-mcp` | 0.4.0 | 2026-09-22 | 🔴 **nothing: no id, no file** | 22 | 🔴 **no `repository` field** |
+
+### Recency, both directions
+
+🟢 **This tier is being worked on right now**: `brightspace-mcp-server` **3.13.10** published
+**2026-10-11** (today), `canvas-lms-mcp` **2.2.0** on **2026-10-10** (378 paths, licence present),
+`moodle-cli` on **2026-10-03**, `moodle-mcp-server-aql` and two others on **2026-10-01**.
+
+🔴 **And one prominent row has not moved in sixteen months.** `canvas-mcp-server`'s npm latest is
+**2.2.3** (2025-06-27) against a HEAD manifest of **2.3.1**; the older name `mcp-canvas-lms` stops
+at **1.0.5** (2025-04-11). 🔵 A **103★** repository, four published versions behind its own HEAD.
+
+### Declared gaps for this entry
+
+- 🔴 **Region: UNMEASURED for all 21 rows.** Two owner names invite a guess and this log refuses it
+  — **a personal name is not a region**, and the eight-pass LATAM-ownership gap stands.
+- 🔴 **Licence FILES only.** A grant in a source-file header is invisible to the probe, so
+  **7 of 21 is a floor**. `ACTION CH` was registered for exactly this and did not run.
+- 🔴 **npm only, four platform families, one search each.** PyPI, Maven and crates unprobed;
+  `moodler-mcp` is **not on PyPI (404)**, so part of this shelf has no payload layer at all.
+- 🔴 **Star counts and HEAD dates were NOT re-measured this pass** for the new rows. They say
+  **UNMEASURED** rather than carrying a number taken from a search result.
 
 ## 2026-10-11 — Pass 137
 

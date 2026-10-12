@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — market map and opportunities
@@ -185,6 +185,41 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 p138 — the age gate is the new instrument class, and it is the one that constrains product
+
+🔵 **p137 found the buying unit (the system board). This pass found the clause that decides whether
+there is a product to sell into it at all.** p136 and p137 tracked mandate *deadlines*; the instrument
+appearing now restricts the **audience**, which is a different kind of constraint and a harder one to
+engineer around.
+
+| instrument | what it does | status |
+|---|---|---|
+| 🆕 **New York City — student-facing AI moratorium through eighth grade** | 🔴 **a one-year moratorium on student-facing AI** for grades up to and including 8 — not a governance requirement but a **prohibition on the deployment surface** | reported in force; the largest school district in the United States |
+| 🆕 **California AB 1159** | would **bar the use of student data to train AI models** | bill, 2026 session |
+| 🆕 **Idaho SB 1227** | would require privacy protections for school AI tools | bill, 2026 session |
+| **Ohio** | first state to require **every** K-12 district to adopt a formal AI use policy, by **2026-07-01** | 🟢 deadline **passed** — already recorded by p136 |
+| **H.R. 8747** (K-12 AI Literacy and Readiness Act) | federal funds usable for AI curriculum | 🟡 ordered reported **2026-07-21**, **18–15**; no floor vote — unchanged from p137 |
+
+🔴 **The moratorium class is the one to brief a client on, and it cuts the opposite way from every
+mandate this page has tracked.** A deadline creates demand for compliance tooling. An age gate
+removes the end user: a tutor product aimed at K-8 has no deployment surface in that district for the
+duration, regardless of how conformant it is. 🔵 **For a studio the consequence is concrete — in the
+US K-12 segment, build the teacher-facing and administrative surfaces first, because they are the
+ones that remain sellable while student-facing deployment is restricted.** That is the same
+conclusion `P9` reaches from the platform side, now reached from the regulatory side.
+
+🟡 **Volume, from a secondary tracker and labelled as such**: **134** AI-in-education bills across
+**31** states in the 2026 session, concentrated on data privacy, classroom restrictions and
+curriculum, with **more than 30** states already holding AI guidance documents. 🔴 **p136 already
+recorded that published bill counts disagree with each other; this figure is one publisher's and is
+not reconciled against the others.**
+
+🟡 **Adoption, same caveat**: **60%** of US K-12 teachers reported using AI tools during the
+2024–25 school year and **32%** at least weekly; North America is put at **36%** of the global
+AI-in-education market and **USD 3.68B** in 2026. 🔴 **All three figures come from one secondary
+statistics roundup**, not from the survey instruments themselves, and the market share sits inside
+the unresolved global spread recorded below. 🔴 **Canada: still nothing — a fourth consecutive pass.**
 
 #### 🆕 p137 — the higher-education hole was a vocabulary hole, and the buying unit is the system board
 
@@ -380,6 +415,40 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 p138 — EMEA is not the EU, and this page has been reading one of its three parts
+
+🔴 **A structural gap in this KB's own region vocabulary, found by querying the region as a region.**
+Every EMEA entry on this page for the last several passes has been **EU, UK or Nordic**: the AI Act
+clocks, Jisc procurement, SURF, the OECD outlook. 🔵 **The Middle East and Africa are the other
+two-thirds of the label, and they have had no rows at all.** First entries, named so later passes can
+deepen them:
+
+| jurisdiction | instrument | class |
+|---|---|---|
+| 🆕 **UAE** | **National AI Strategy 2031** | national strategy, not education-specific |
+| 🆕 **Saudi Arabia** | **SDAIA** AI governance framework | national regulator with a published framework |
+| 🆕 **Kenya, South Africa, Nigeria** | AI policies reported **in drafting** | 🔴 pre-instrument — nothing binding to comply with yet |
+
+🔴 **Both the Gulf rows are economy-wide strategies, not education instruments**, and the three
+African rows are drafts. 🔵 **So the measured finding is not "MEA regulates education AI" — it is
+that MEA has national AI governance machinery and no education-specific duty**, which is the inverse
+of the EU's position and a genuinely different engagement shape: there is no conformity deadline to
+sell against, and the buyer is a ministry building capability rather than a school proving
+compliance. 🔴 **Every one of these five rows is from a single secondary source whose subject was
+insurance, not education.** They are recorded as leads, not as findings, and none should be quoted to
+a client without a primary read.
+
+🟡 **The EU picture is unchanged from p137 and still the one with dates**: Annex III education duties
+deferred to **2027-12-02** by Regulation **(EU) 2026/1744**, with **Article 50 transparency applying
+since 2026-08-02**. 🔵 That split — *the high-risk clock moved, the transparency obligation did not*
+— remains this region's whole commercial argument, and `P15` is the pattern built on it.
+
+🟡 **Adoption, weakly sourced and labelled**: the European AI-in-education market is put at
+**USD 2.64B** in 2026, with **Finland, Estonia and the Netherlands** named as K-12 integration
+leaders, and the **OECD's 2026 Digital Education Outlook** reported to favour purpose-built
+educational AI over general-purpose tools. 🔴 **One secondary roundup for the first two; the OECD
+report itself was not fetched this pass.**
 
 #### 🆕 p137 — the education high-risk clock moved to 2027-12-02, and the obligation that survived is the one this KB already has instruments for
 
@@ -583,6 +652,46 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 p138 — `ACTION CG` in Vietnamese: the instrument gains an element, the transition date stays contradictory
+
+🟢 **`ACTION CG` DISCHARGED — and it was the right language to ask in.** p137 recorded Vietnam's
+Decision **33/2026/QĐ-TTg** from English-language law-firm briefings and published its transition
+date as a conflict. Probed in Vietnamese, the instrument's own identifying facts firm up and **one
+scope element p137 never recorded appears**:
+
+| fact | measured this pass |
+|---|---|
+| signed | **2026-06-30**, by Deputy Prime Minister **Hồ Quốc Dũng** |
+| in force | **2026-08-15** |
+| issued under | 🆕 **Nghị định 142/2026/NĐ-CP**, the decree implementing the AI Law — p137 cited only Law **134/2025/QH15** |
+| education entries in the high-risk list | self-study content generated from **uncontrolled data sources**; automated testing, **grading** and — 🆕 **`đánh giá tâm lý`, psychological assessment** — plus **monitoring and analysis of learner behaviour** |
+
+🔴 **`đánh giá tâm lý` is the addition that changes a client conversation.** p137's reading was
+content, grading and biometric monitoring. **Psychological assessment** is a separate class, and it
+catches a category of product — wellbeing screening, engagement scoring, at-risk prediction — that
+a vendor would not file under "grading" or "biometrics" and would therefore not expect to be
+conformity-assessed.
+
+🔴 **The transition date did NOT resolve, and it is published as a conflict for the second pass
+running.** Two Vietnamese-language sources disagree:
+
+- one gives **2027-09-01** for AI systems in health, **education** and finance, with **2027-03-01**
+  for the remaining listed sectors;
+- another gives **2027-03-01** for systems already operating before entry into force *and* for
+  systems deployed within the first six months, and its visible scope list names ethnic and
+  religious affairs, legal proceedings and transport — **not education**.
+
+🔵 **So the disagreement is not about whether education has a later deadline; it is about whether
+the later deadline exists at all.** Recorded as unresolved. For a 2027 engagement the safe planning
+assumption is the earlier date, **2027-03-01**, because a client that is ready for March is ready
+for September and not the reverse.
+
+🔴 **The primary text was NOT read, and the reason is a hard channel failure, not an omission.**
+`congbao.chinhphu.vn` — the Công báo gazette page carrying Decision 33 — **does not resolve in this
+channel** (`getaddrinfo ENOTFOUND`). p137 criticised itself for reading national instruments through
+search results; this pass tried the gazette directly, failed at DNS, and says so. **Primary source,
+secondary transport, third pass running.**
 
 #### 🆕 p137 — APAC overtook the EU: Vietnam's education-AI conformity duties are in force NOW
 
@@ -788,6 +897,37 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 p138 — the eighth consecutive pass with no LATAM-owned row, and this pass declined a chance to fake one
+
+🔴 **Nothing changed in LATAM ownership, and the honest version of that sentence is longer than the
+dishonest one.** A registry-first search of the education-connector tier returned **21** packages,
+and **two** carry owner names that a careless pass would have booked as LATAM rows:
+
+| package | what is actually measured | what is NOT measured |
+|---|---|---|
+| `@nahuelalbornoz/moodle-mcp` **0.5.1** (2026-04-23) | 🟢 **MIT** with `LICENSE` in the payload, 6 paths. Author field *"Italicia"*, maintainer `nahuelalbornoz`, repository **`github.com/marcosnahuel/moodle-mcp`** — 🔴 **an address mismatch**. Description claims it can *publish and manage pedagogical content*, so it is **write-capable** | 🔴 **region. No country, institution, or affiliation appears anywhere in the package metadata** |
+| `brightspace-mcp` **1.3.1** (2026-09-28) | 🟢 **MIT** with `LICENSE`, **547 paths** — the largest connector payload on this shelf. Author *"Jhostin Aleck"*, repository `JhostinAleck/brightspace-mcp` | 🔴 **region, on the same grounds** |
+
+🔵 **A personal name is not a region, and onomastics is not evidence.** This KB has recorded a
+LATAM-ownership gap for eight consecutive passes. Closing it on the strength of two given names
+would convert a measured absence into a false presence — the exact failure mode `p137-E` caught when
+two "empty" regions turned out to be probe artefacts, and the opposite error. 🟢 **Both rows are
+carried with `region: UNMEASURED` and the measured facts attached**, so a later pass that finds real
+affiliation evidence can promote them in one edit.
+
+🔵 **What would actually close this gap**, named so a future pass can aim at it: an affiliation in a
+`pyproject.toml`/`package.json` author field, a university or ministry in a repository owner, a
+LATAM-domain homepage, or a LATAM institution as the copyright **holder** of a licence file. None of
+the 21 packages has any of these.
+
+🟡 **The demand side is unchanged from p137 and still the stronger half of this region's case**:
+UNESCO IESALC's 2026 survey of **200 institutions across 19 countries** found **87%** using AI in at
+least one area and **74%** in teaching and learning, against only **26%** holding a formal AI
+strategy — and the 2024 TALIS figures for secondary teachers (**Brazil 56%, Chile 55%, Colombia
+53%, Costa Rica 52%** against an OECD average of **36%**) say the classroom is ahead of the
+institution. 🔵 **The region's opportunity remains governance-shaped: adoption is not the gap,
+and a studio selling adoption here is selling what the region already has.**
 
 #### 🆕 p137 — the regulatory picture now rests on the instrument's own words, and money appears for the first time
 
@@ -1085,6 +1225,35 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🆕 p138 — the spread did not converge, and a second publisher now disagrees about the same year
+
+🔴 **p137 recorded a 2026 column of USD 7.50B–11.4B plus a USD 1.94B outlier, and said the column
+was widening rather than converging. It widened again.** This pass adds two more 2026 figures from
+two more publishers:
+
+| publisher | 2026 figure | growth claim |
+|---|---|---|
+| Research and Markets | **USD 10.6B** | **40.9% CAGR** |
+| HolonIQ, as quoted by a vendor blog | **USD 12.3B** | — |
+
+🔴 **USD 10.6B and USD 12.3B are a 16% disagreement about a year that is already three-quarters
+elapsed.** 🔵 **This is now a stable, publishable finding rather than a recurring complaint: the
+disagreement is about market *definition*, not measurement, and no amount of further sourcing will
+close it** — p136 established that the widest figures come from firms defining the market broadly
+and the narrow outlier from one defining it narrowly.
+
+🟢 **So this page states the rule instead of chasing the number.** Quote a 2026 figure to a client
+**only with its publisher attached and its growth rate alongside**, because the growth rates agree
+far better than the levels do (40%+ CAGR appears across publishers who differ by billions on the
+base). 🔵 **The CAGR is the quotable figure; the level is not.**
+
+🔴 **Regional shares remain unusable.** p137 recorded one publisher printing LATAM at a flat **5%**
+in 2026, 2030 **and** 2036 — a constant across three forecast horizons, which is a modelling
+assumption rather than a measurement. 🔴 This pass adds **North America at 36% / USD 3.68B (2026)**
+and **Europe at USD 2.64B (2026)** from a different secondary roundup, and the two cannot be
+reconciled against each other or against any of the global levels above. 🔵 **No regional share on
+this page should be used for sizing. They are recorded to show that the published ones conflict.**
 
 <!--p136: renamed from "Global / unplaced". `p383-region-heading-gate` had been
 reporting this heading as P383-OUT-OF-VOCAB and, as a consequence, `Global` as
