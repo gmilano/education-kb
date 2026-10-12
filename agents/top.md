@@ -6,6 +6,103 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 139 — 2026-10-12 — the falsifier was fired at this shelf's own headline, and it did not go off
+
+🟢 **`ACTION CH` is discharged and p138's defect count stands.** p138 found that **9 of 21**
+published connector packages ship no licence file, and registered a falsifier against its own
+finding: if those grants merely live in **per-file source headers** instead, then *7 of 21* was an
+overstatement of the defect and an understatement of the obligation. 🔴 **Every shipped text file
+in all 21 payloads has now been read. 0 of the 9 carry their own grant in a header.** In 8 of them
+there is no copyright line, no SPDX tag and no operative licence sentence anywhere in any shipped
+text file.
+
+🔵 **The one apparent exception is the opposite of a refutation.** `@owen-x-tech/canvas-mcp` 1.1.0
+does contain a licence notice — **Meta's, for React**, at byte **1197** of a **572 657-byte**
+minified `dist/ui/mcp-app.html`, hoisted there by a bundler, pointing at a `LICENSE file in the
+root directory` **that the package does not ship**. 🔴 **The only licence text in that payload
+belongs to a third party and is itself a dangling reference.**
+
+Instrument, method, committed TSV and **24 passing tests**:
+[`p139-source-header-grant`](../compose/code/p139-source-header-grant/README.md).
+
+### `P139-A` — per-file notice is not a practice on this shelf: 1 of 21
+
+| measurement | value |
+|---|---|
+| packages probed | **21** *(p138's census, re-run in full)* |
+| tarballs sha1-verified against the registry's own `shasum` | 🟢 **21 of 21**, 0 mismatches |
+| ship no licence file *(p138's count, independently re-measured)* | 🔴 **9** — 🟢 **agrees with p138 exactly** |
+| 🔴 **of those 9, carry their OWN grant in a source header** | 🔴 **0** |
+| of those 9, carry a **third party's** notice in bundled output | **1** |
+| 🔴 **practise per-file notice at all, across the whole shelf** | 🔴 **1 of 21 — 5%** |
+
+🔴 **So the obligation cannot be discharged by pointing a client at the source.** On 20 of 21 rows,
+a single file extracted from the package is unattributable — there is nothing in it that names a
+holder or a grant.
+
+### 🟢 `P139-B` — the one row whose notice survives extraction, and it is a 56★ row
+
+🟢 **[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+3.13.10 carries a notice in 100 of its 118 shipped text files**, and ships the `LICENSE` those
+headers point to, so the reference resolves:
+
+```
+/**
+ * Brightspace MCP Server
+ * Copyright (c) 2026 Rohan Muppa. All rights reserved.
+ * Licensed under MIT — see LICENSE file for details.
+ */
+```
+
+🔵 **Copy one file out of it and the grant travels with the file.** 🔵 **This is the second pass
+running in which this row has set the shelf's ceiling** — p137 read it as the zero-write-surface
+connector with eight named institution modules, and it is now the only row on the shelf with
+file-level attribution. It is not the largest row and it is not the most-starred.
+
+### 🔴 `P139-C` — the AGPL row, now confirmed on both layers in one pass
+
+🔵 **Cross-checked at the repository layer through this KB's established raw-file lane.** 🔵 **No
+new channel here** — [`raw.githubusercontent.com` is already documented below](#how-these-rows-were-verified-and-one-instrument-that-does-not-work-here)
+as the working substitute for the blocked REST API, and p136's evidence file used it. 🔵 **What is
+new is that p138's probe script read only npm**, so the two layers had never been measured in the
+same pass. Done here against the strongest obligation on the shelf:
+
+| layer | what it carries |
+|---|---|
+| repository — `csmediapro/moodle-mcp-server@main/LICENSE` | 🟢 canonical AGPL-3.0, **34 523 B**, first line `GNU AFFERO GENERAL PUBLIC LICENSE` |
+| published payload — `moodle-mcp-server-aql` **0.1.7** | 🔴 **141 paths, 71 text files, and no grant in any of them** |
+
+🔴 **`moodle-mcp-server-aql` declares AGPL-3.0 and ships no grant at either the file or the header
+layer.** 🔵 **The grant exists; the distribution drops it.** This is the one row on this shelf where
+the finding should change a delivery decision rather than a line in a report — and it is now
+verified twice, in two layers, by two independent lanes, in the same pass.
+
+### 🔴 `P139-D` — the instrument's own defect, stated because its direction flatters this pass
+
+🔴 **The matcher's first version missed the MIT grant it was built to find.** Real licence headers
+wrap inside comment blocks, so the operative sentence arrives as `free of\n * charge`, and a
+contiguous-phrase match returns nothing. The test suite caught it before any number was published.
+
+🔵 **The direction is the point.** That bug would have produced *this pass's own headline for the
+wrong reason* — a clean "no header grants anywhere" that was really a broken instrument. The
+0-of-9 is only worth anything because the matcher demonstrably finds the thing when it is there,
+which the 100-file `brightspace-mcp-server` row proves. 🔵 **A probe that confirms the pass's prior
+expectation is the one that most needs a positive control.**
+
+### 🔵 `P139-E` — what the demand-side search channel returned this pass: nothing
+
+🔵 **Eleven searches were run — four global (open-source agents, GitHub trending, vertical
+platforms, industry trends) and one per region for North America, EMEA, APAC and LATAM.** 🔴 **They
+produced zero new rows for this page, and zero corrections to any existing one.** Every repo,
+platform, figure and institution they surfaced is already carried here, in most cases with better
+provenance than the channel supplied — the channel offered UNESCO IESALC's 87%/26% as *2026* data,
+where [`intel/market.md`](../intel/market.md) already records that its fieldwork ran
+**August–October 2025** and must be quoted as a baseline.
+
+🔵 **This is `T10` holding for a further pass, and it is now the dominant cost finding of this
+rotation**: the registry and source-read lanes produced four findings this pass and the search
+channel produced none. Recorded rather than padded, per this page's own rule.
+
 ## Pass 138 — 2026-10-12 — the registry layer, and what it says about this whole shelf
 
 🔴 **The headline: the licence defect p137 found in one repository is a third of the published

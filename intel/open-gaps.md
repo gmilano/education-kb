@@ -1,10 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-11
+updated: 2026-10-12
 ---
 
 # Education — open gaps ledger
+
+## ✅ Verdict on p138's pre-registered action, judged by p139
+
+| action | verdict | the measurement |
+|---|---|---|
+| **`ACTION CH`** — read licence HEADERS inside the 21 payloads before p138's *"7 of 21 ship an identifier with no text"* is left standing | 🟢 **DISCHARGED, NOT REFUTED — and p138's count stands** | Condition, as registered: *"a licence-header read showing the grants live in source files rather than licence files would make 7 of 21 an overstatement of the defect and an understatement of the obligation."* 🔴 **Every shipped text file in all 21 payloads was read. 0 of the 9 licence-file-less packages carry their own grant in a header**; in **8 of 9** there is no copyright line, no SPDX tag and no operative licence sentence anywhere. 🔵 **1 of 9 reported a notice and it was Meta's**, for React, at byte **1197** of a **572 657-byte** minified `dist/ui/mcp-app.html`, pointing at a `LICENSE file in the root directory` the package does not ship — so the probe gained a `VENDORED` class, because **position cannot attribute a notice**. Instrument `compose/code/p139-source-header-grant`, **24 tests**, committed 21-row TSV |
+
+### 🔴 The instrument defect this pass produced, and why its direction matters
+
+🔴 **The matcher's first version missed the MIT grant it was built to find** — licence headers wrap
+inside comment blocks (`free of\n * charge`) and a contiguous-phrase match returns nothing. Caught
+by the test suite before any number was published; comment leaders and whitespace are now collapsed
+first.
+
+🔵 **Stated because the bug flattered the pass's own expectation.** It would have produced the same
+headline — *no header grants anywhere* — for an entirely false reason. 🔵 **The 0-of-9 is only
+load-bearing because the instrument demonstrably finds notice when it is present**, which the
+**100-of-118**-file `brightspace-mcp-server` row is the positive control for. **A probe that
+confirms the prior is the one that most needs one.**
+
+### 🔴 A false-novelty claim this pass made about itself, and withdrew before publishing
+
+🔴 **The first draft of this pass claimed `raw.githubusercontent.com` as a lane "p138 recorded as
+closed" and "reopened".** 🟢 **It is neither.** `agents/top.md` already documents it as the working
+substitute for the blocked REST API, and **p136's own evidence file used it**. p138's script comment
+records only `api.github.com` and `codeload` as unavailable. 🔵 **The defensible claim is narrower
+and survives**: p138's probe read only npm, so the payload and repository layers had never been
+measured in the **same pass** — which is what makes the AGPL row below a two-layer finding.
+
+## 🆕 Gaps this ledger opens after p139, each with a pre-registered falsifier
+
+| action | the question | 🔴 refuted if |
+|---|---|---|
+| 🆕 **`ACTION CJ`** — run the per-file notice census over the tiers that are **not** npm-published TypeScript: this KB's Java, PHP and Python institutional rows (`kstateome/lti-launch`, the standards tier, the platform tier) | `T18` claims per-file notice is practised by **1 of 21** rows. 🔵 **That census is entirely npm/TypeScript, and header notice is conventional in Java and PHP** — so the trend may be a property of the packaging ecosystem rather than of education software | 🔴 **Refuted if the non-npm tiers exceed 20% own-header notice**, in which case `T18` is a finding about npm and must be rescoped out of this industry's trend list |
+| 🆕 **`ACTION CK`** — read **Texas HB 149 (TRAIGA)**, in force **2026-01-01**, in its enrolled text | 🔴 **The only item 11 searches surfaced that this KB does not carry.** `capitol.texas.gov` and `agora.eto.tech` both **fail DNS resolution** in this channel, so nothing is published from the vendor summaries that did return. The questions: does it impose any duty naming schools, students or curriculum; does the government-deployer disclosure duty reach K-12 districts; and is education only in the regulatory-sandbox list | 🔴 **Refuted if the enrolled text contains an education-specific obligation.** 🔵 **The expected finding is NEGATIVE** — secondary sources agree there is no curriculum or school-training mandate — **which is exactly why it must not be asserted before it is read**, in either direction |
+
+🔵 **`ACTION CJ` is the one that could cost this KB a published trend**, and it is registered on the
+pass that added the trend rather than left for a later pass to find.
 
 ## ✅ Verdicts on p136's pre-registered actions, judged by p137 — **all six reached; six discharged, and three refuted their own premise**
 

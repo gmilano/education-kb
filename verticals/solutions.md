@@ -6,6 +6,16 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 139, 2026-10-12.** 🟡 **No platform row changed this pass either, and it is stated rather
+than padded for the second consecutive time.** `ACTION CH` was spent on the **attachment** layer —
+the connector packages that bolt onto the platforms below — and it produced a finding that changes
+how the platforms are *integrated* rather than which ones are listed: 🔴 **per-file licence notice
+is practised by 1 of the 21 published connectors, so a developer who lifts one file out of an
+attachment into a client codebase carries no holder and no grant with it.** 🟢 **The platform table
+below is p137's, unchanged.** 🔵 **The four regional searches returned no new platform**, and the
+one new regulatory item they surfaced (Texas HB 149, in force 2026-01-01) could not be read in this
+channel and is registered rather than published.
+
 **Pass 138, 2026-10-12.** 🟡 **No platform row changed this pass, and that is stated rather than
 padded.** `ACTION CD`, `CE`, `CF`, `CG` and part of `CI` were spent on the **connector** layer that
 attaches to these platforms, not on the platforms themselves — so the platform table below is

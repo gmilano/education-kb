@@ -6,6 +6,73 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 139
+
+🔵 **p138 opened the registry lane and found a third of the published tier shipping an SPDX
+identifier with no licence text. It then registered a falsifier against itself. This pass fires
+it.**
+
+### The measurement
+
+p138's full **21**-package census re-run, every tarball re-downloaded and **sha1-verified against
+the registry's own `shasum`** (**21 of 21 matched**), and this time **every shipped text file read**
+— not just the path list. Probe, method, committed TSV and **24 passing tests**:
+[`p139-source-header-grant`](../compose/code/p139-source-header-grant/README.md).
+
+| class | count | share |
+|---|---|---|
+| ship no licence file *(p138's finding, independently re-measured)* | 🔴 **9** | 43% — 🟢 **agrees with p138 exactly** |
+| 🔴 **of those 9: carry their OWN grant in a source header** | 🔴 **0** | 🔴 **0%** |
+| of those 9: carry a **third party's** notice in bundled output | **1** | 11% |
+| 🔴 **whole shelf: practise per-file notice at all** | 🔴 **1** | 🔴 **5%** |
+
+🟢 **`ACTION CH` is discharged and NOT refuting.** The grants are not hiding in the source files.
+p138's **7 of 21** stands, and `T17` survives its registered falsifier.
+
+### What this changes about reading any licence cell on this page
+
+🔴 **A repository licence cell and a per-file notice are different assets, and this tier has
+almost none of the second.** On **20 of 21** rows a single file extracted from the package names no
+holder and no grant. 🔵 **So "it's MIT, just keep the notice" is not actionable advice on this
+shelf** — in 9 payloads there is no notice to keep, and in 11 more the notice exists only as one
+root file that any partial copy drops.
+
+### The row that sets the ceiling, and it is neither the largest nor the most-starred
+
+🟢 **[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+3.13.10** — **100 of 118** shipped text files carry
+`Copyright (c) 2026 Rohan Muppa … Licensed under MIT — see LICENSE file for details`, **and the
+`LICENSE` ships**, so the reference resolves. 🟢 **56★.** The **547**-path `brightspace-mcp` 1.3.1
+and the **378**-path `canvas-lms-mcp` 2.2.0 both carry a root licence file and **zero** per-file
+notices.
+
+### The repository layer, measured in the same pass as the payload layer
+
+🔵 **Through this KB's established raw-file lane, not a new one.** `raw.githubusercontent.com` is
+already documented in [`agents/top.md`](../agents/top.md) as the working substitute for the blocked
+REST API (`api.github.com` answers **400**), and p136's evidence file used it. 🔵 **What is new is
+that p138's probe read only npm**, so payload and repository had never been measured together. Two
+figures this KB published from earlier passes were re-verified byte-exact:
+
+| file | bytes | first line |
+|---|---|---|
+| `csmediapro/moodle-mcp-server@main/LICENSE` | 🟢 **34 523** | `GNU AFFERO GENERAL PUBLIC LICENSE` |
+| `kstateome/lti-launch@master/License.txt` | 🟢 **7 651** | `GNU LESSER GENERAL PUBLIC LICENSE` |
+
+🔴 **Which makes the AGPL row a two-layer, two-lane finding in a single pass**:
+`moodle-mcp-server-aql` **0.1.7** declares **AGPL-3.0**, ships **141 paths / 71 text files** with
+**no grant in any of them**, while its repository carries the canonical 34 523-byte text. 🔵 The
+grant exists; the distribution drops it.
+
+### GitHub trending, searched and reported empty
+
+🔴 **Four global searches (open-source education agents, GitHub trending, vertical platforms,
+industry trends) and four regional ones returned zero new repositories for this page.** Everything
+surfaced — `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, OpenEduCat,
+Kuali — is already carried in this log or in
+[`repos/foundations.md`](foundations.md). 🔵 **Recorded as a measured empty result, not padded**:
+this rotation's four findings all came from the registry and raw-file lanes.
+
 ## 2026-10-12 — Pass 138
 
 🔵 **p137 ended by listing the npm lane as an opened door nobody had walked through. This pass

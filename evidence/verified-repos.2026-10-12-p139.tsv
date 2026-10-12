@@ -1,0 +1,45 @@
+# Pass 139, 2026-10-12. Education KB measured-row evidence.
+# ACTION CH: does a published package carry its own licence GRANT in a source HEADER
+# when it ships no licence FILE? Instrument: compose/code/p139-source-header-grant (24 tests).
+#
+# Every tarball sha1-verified against the registry's own `shasum` before any byte was read.
+# own_header_grants = authored source files carrying a copyright line, SPDX tag or operative
+#   licence sentence in their first 4096 bytes.
+# vendored_notices  = the same, but inside machine-minified output (any line >2000 B), so the
+#   notice belongs to a bundled dependency and is NOT this package's grant.
+# verdict: HAS_LICENCE_FILE | GRANT_IN_HEADERS_ONLY | NO_GRANT_IN_PAYLOAD
+#
+# Headline: 9 packages ship no licence file (agrees with p138 exactly); 0 of those 9 carry
+# their own header grant; 1 of 21 packages practises per-file notice at all.
+package	version	spdx_manifest	licence_file	text_files	own_header_grants	grant_classes	strongest_own_grant	vendored_notices	verdict
+mcp-canvas-lms	1.0.5	MIT	NONE	17	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+canvas-mcp-server	2.2.3	MIT	NONE	7	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+canvas-lms-mcp	2.2.0	MIT	package/LICENSE	197	0	NONE	NONE	0	HAS_LICENCE_FILE
+@imazhar101/mcp-canvas-server	2.1.3	ABSENT	NONE	70	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+@mtgibbs/canvas-lms-mcp	0.2.18	MIT	package/LICENSE	137	0	NONE	NONE	0	HAS_LICENCE_FILE
+@owen-x-tech/canvas-mcp	1.1.0	MIT	NONE	6	0	VENDORED	NONE	1	NO_GRANT_IN_PAYLOAD
+@likr/canvas-lms-mcp	2.0.0	MIT	package/LICENSE	6	0	NONE	NONE	0	HAS_LICENCE_FILE
+moodle-mcp-server-aql	0.1.7	AGPL-3.0	NONE	71	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+moodle-mcp	0.2.0	MIT	package/LICENSE	38	0	NONE	NONE	0	HAS_LICENCE_FILE
+@ink-waffle/moodle-mcp	0.2.0	MIT	NONE	19	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+@nahuelalbornoz/moodle-mcp	0.5.1	MIT	package/LICENSE	3	0	NONE	NONE	0	HAS_LICENCE_FILE
+eth-moodle-mcp	1.3.3	MIT	NONE	14	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+moodle-cli	0.10.0	MIT	package/LICENSE	9	0	NONE	NONE	0	HAS_LICENCE_FILE
+moodle-mcp-server	1.0.0	MIT	package/LICENSE	5	0	NONE	NONE	0	HAS_LICENCE_FILE
+brightspace-mcp-server	3.13.10	MIT	package/LICENSE	118	100	COPYRIGHT	COPYRIGHT	0	HAS_LICENCE_FILE
+brightspace-mcp	1.3.1	MIT	package/LICENSE	275	0	NONE	NONE	0	HAS_LICENCE_FILE
+@n35da/brightspace-mcp	0.4.0	ABSENT	NONE	21	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+@exhabition/brightspace-mcp	0.2.2	MIT	NONE	2	0	NONE	NONE	0	NO_GRANT_IN_PAYLOAD
+brightspace-d2l-mcp	1.0.0	MIT	package/LICENSE	56	0	NONE	NONE	0	HAS_LICENCE_FILE
+@edubase/mcp	2.0.3	MIT	package/LICENSE	22	0	NONE	NONE	0	HAS_LICENCE_FILE
+edubase-mcp	1.0.10	MIT	package/LICENSE	13	0	NONE	NONE	0	HAS_LICENCE_FILE
+#
+# Repository-layer cross-check, same pass, via raw.githubusercontent.com (established lane,
+# already documented in agents/top.md; api.github.com answers 400 in this channel).
+# file	bytes	first_line
+csmediapro/moodle-mcp-server@main/LICENSE	34523	GNU AFFERO GENERAL PUBLIC LICENSE
+kstateome/lti-launch@master/License.txt	7651	GNU LESSER GENERAL PUBLIC LICENSE
+#
+# The two-layer finding: moodle-mcp-server-aql 0.1.7 declares AGPL-3.0, ships 141 paths and
+# 71 text files with no grant in any of them, while its repository carries the canonical
+# 34523-byte AGPL text. The grant exists; the distribution drops it.

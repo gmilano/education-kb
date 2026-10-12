@@ -6,6 +6,50 @@ updated: 2026-10-12
 
 # Education — current trends
 
+**Pass 139, 2026-10-12.** 🟢 **`T17` was fired at and survived.** p138 added it one pass ago and
+registered its own falsifier: *if the grants live in source-file headers rather than licence files,
+7 of 21 is an overstatement.* 🔴 **`ACTION CH` read every shipped text file in all 21 payloads and
+found 0 of the 9 carrying their own header grant** — so `T17` holds and is now **strengthened**
+with the clause below. 🆕 **`T18` is added**, and it is the operational half of `T17`: per-file
+notice is practised by **1 of 21** rows, which is what decides whether a grant survives a partial
+copy. 🔵 **No trend is added from the search channel this pass, because it returned nothing** —
+11 searches, 0 new rows, 0 corrections, which is `T10` holding again.
+
+### 🟢 p139 strengthens `T17`: the grants are not hiding in the source, and one "grant" was Meta's
+
+| | |
+|---|---|
+| **the claim** | 🔴 An SPDX identifier without the text it names is **a third of the published education-connector shelf** — and the text is not elsewhere in the payload either |
+| **the measurement** | **21** packages, all **sha1-verified** against the registry's own `shasum`. **9** ship no licence file *(independently re-measured, agrees with p138 exactly)*. 🔴 **0 of those 9 carry their own grant in a source header.** In **8 of 9** there is no copyright line, no SPDX tag and no operative licence sentence in any shipped text file |
+| 🔵 **the near-refutation** | **1 of the 9 did** report a notice: `@owen-x-tech/canvas-mcp` 1.1.0, carrying `@license React … Copyright (c) Meta Platforms, Inc. and affiliates` at byte **1197** of a **572 657-byte** minified `dist/ui/mcp-app.html`. 🔴 **A bundler hoisted a dependency's notice into the header window**, and it points at a `LICENSE file in the root directory` the package does not ship. 🔵 **Position cannot attribute a notice** — the new rule treats a notice in minified output (any line over 2 000 B) as the bundle's, never the package's. Without that clause this trend would read as refuted by a React licence |
+| 🔴 **what would overturn it** | A grant living where the probe does not look: a sourcemap, an extensionless script, a `LICENSE` spelled so p138's path matcher misses it, or authored source whose notice sits below the first 4 096 bytes. 🔵 The window is what separates a package's own header from a bundled dependency's text, but it is the assumption most likely to be wrong |
+
+### 🆕 `T18` — a licence cell describes a tree; only a per-file notice survives a partial copy, and 1 in 21 has one
+
+| | |
+|---|---|
+| **the claim** | 🔴 **Per-file notice is not a practice in the education-connector tier: 1 of 21 rows — 5%.** On the other 20, a single file lifted out of the package names no holder and no grant |
+| **why it is not a restatement of `T17`** | `T17` is about packages with **no grant at all** (9 of 21). `T18` is about the **11 that are clean at the root and still unattributable file-by-file**. 🔵 A root `LICENSE` discharges redistribution of the *whole* package; it discharges nothing about the file a developer pastes into a client's codebase |
+| **the one row that has it** | 🟢 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) **3.13.10**: `Copyright (c) 2026 Rohan Muppa … Licensed under MIT — see LICENSE file for details` in **100 of 118** shipped text files, **and the `LICENSE` ships**, so the reference resolves. 🟢 **56★** — neither the largest (547 paths) nor the most-starred row on the shelf |
+| **what it changes in a room** | 🔴 *"It's MIT, just keep the notice"* is not actionable on this shelf. In 9 payloads there is no notice to keep; in 11 more it exists only as one root file that any partial copy drops. 🟢 **The deliverable is a notice-injection step in the build**, not a licence column in a slide |
+| 🔴 **what would overturn it** | The same census run over a tier that is **not** npm-published TypeScript — the Java and PHP rows on this KB's standards and platform pages are the obvious test, and header notice is conventional in both. 🔵 **So `T18` is scoped to this tier and must not be generalised to the shelf's institutional rows until that runs** (`ACTION CJ`) |
+
+### 🔵 p139 on `T10`: the search channel returned nothing, and that is now the dominant cost finding
+
+🔵 **11 searches — 4 global, 1 each for North America, EMEA, APAC and LATAM — produced 0 new rows
+and 0 corrections** anywhere in this KB. Every repo, platform, figure and institution surfaced is
+already carried, several with **better provenance here than the channel supplied**: the channel
+offered UNESCO IESALC's 87%/26% as *2026* data, where [`market.md`](market.md) records that the
+fieldwork ran **August–October 2025** and must be quoted as a baseline.
+
+🔴 **One item was genuinely absent from this KB and could not be verified in this channel**: Texas
+**HB 149 (TRAIGA)**, in force **2026-01-01**. `capitol.texas.gov` and `agora.eto.tech` both fail
+DNS resolution here, so the statute could not be read and **nothing is published from the vendor
+summaries that did return**. Registered as `ACTION CK` with the exact question. 🔵 **The secondary
+sources agree that TRAIGA carries no curriculum or school-training mandate** — education appears in
+its regulatory **sandbox** list and via a government-deployer disclosure duty — **so the likely
+finding is a negative one**, which is precisely why it must not be asserted before it is read.
+
 **Pass 138, 2026-10-12.** p137's sixteen trends retained. 🆕 **`T17` is added — the first trend this
 KB has measured at the distribution layer rather than the repository layer, and it reframes every
 licence cell on every page.** 🟢 **`T13` is narrowed for the third consecutive pass and is now one

@@ -6,6 +6,49 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 139
+
+**The pass that fired a falsifier at its own previous headline — and reports that it did not go
+off, plus the bundled third-party notice it found instead.**
+
+🔵 **p138 found 9 of 21 published connector packages shipping no licence file, and registered
+`ACTION CH` against its own finding**: if those grants merely live in per-file source headers, the
+defect was overstated. Every shipped text file in all 21 payloads has now been read.
+
+| what moved this week | measurement |
+|---|---|
+| 🟢 **`ACTION CH` discharged, falsifier did NOT fire** | 🔴 **0 of 9** packages carry their own grant in a source header. In **8 of 9** there is no copyright line, no SPDX tag and no operative licence sentence in **any** shipped text file. p138's **7 of 21** stands |
+| 🔴 **Per-file notice is not a practice here: 1 of 21 — 5%** | On 20 of 21 rows, a single file extracted from the package is **unattributable**: nothing in it names a holder or a grant. The obligation cannot be discharged by pointing a client at the source |
+| 🔴 **The one notice found in the 9 belongs to Meta** | `@owen-x-tech/canvas-mcp` **1.1.0**: `@license React … Copyright (c) Meta Platforms, Inc. and affiliates`, at byte **1197** of a **572 657-byte** minified `dist/ui/mcp-app.html`. 🔴 It points at a `LICENSE file in the root directory` **the package does not ship** — the only licence text in the payload is a third party's, and it dangles |
+| 🟢 **The ceiling row, for the second pass running** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) **3.13.10** carries `Copyright (c) 2026 Rohan Muppa … Licensed under MIT — see LICENSE file` in **100 of 118** shipped text files **and ships the `LICENSE`**. 🟢 **The only row whose grant survives file-level extraction** |
+| 🔴 **The AGPL row, confirmed on both layers in one pass** | `moodle-mcp-server-aql` **0.1.7**: **141 paths, 71 text files, no grant in any of them**, against a repository `LICENSE` re-verified at **34 523 B** / `GNU AFFERO GENERAL PUBLIC LICENSE`. 🔵 The grant exists; the distribution drops it |
+| 🔵 **Two layers measured in one pass for the first time** | 🔵 **No new channel**: `raw.githubusercontent.com` is already documented in [`top.md`](top.md) as the substitute for the blocked REST API, and p136's evidence file used it. 🔵 **p138's probe simply read only npm** — so payload and repository had never been set against each other in the same pass. Done here, and the AGPL row is the result |
+| 🔴 **The search channel returned nothing** | **11 searches** — 4 global, 1 each for North America, EMEA, APAC, LATAM. 🔴 **Zero new rows, zero corrections.** Every item already carried, several with better provenance here than the channel gave |
+
+### The instrument defect, stated because its direction flatters this pass
+
+🔴 **The matcher's first version missed the MIT grant it was built to find.** Licence headers wrap
+inside comment blocks — `free of\n * charge` — and a contiguous-phrase match returns nothing. The
+tests caught it before a number was published; comment leaders and whitespace are now collapsed
+first.
+
+🔵 **That bug would have produced this pass's headline for the wrong reason**: a clean "no header
+grants anywhere" that was really a broken matcher. The 0-of-9 is only load-bearing because the
+instrument finds the thing when it is there — which the 100-file row above is the positive control
+for. **24 tests**, half of them near-misses that must not count: a `"license": "MIT"` manifest
+field, a `licenseKey` variable, a URL to a licence, a `license-checker` import, the bare word
+*copyright* with no year or holder, and a grant 40 KB inside a build artefact.
+
+### Why `VENDORED` is a class and not a grant *(new rule this pass)*
+
+🔵 **A bundler hoists its dependencies' notices to the top of what it emits**, which puts them
+inside any header window. **Position cannot attribute a notice.** A notice in machine-minified
+output — any line over 2 000 bytes — is now reported as the bundle's, never the package's. Without
+this clause the React notice above would have read as a refutation of `T17`.
+
+Instrument, method, committed 21-row TSV and tests:
+[`p139-source-header-grant`](../compose/code/p139-source-header-grant/README.md).
+
 ## 2026-10-12 — Pass 138
 
 **The pass that stopped reading repositories and read the bytes clients install — and found a

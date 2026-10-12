@@ -6,6 +6,92 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 139, 2026-10-12.** 🔁 **`P17` is rewritten one pass after it was added, and the change makes
+it shippable.** p138 created it as a gate that proves what you are about to redistribute; `ACTION
+CH` then measured that **0 of 9** licence-file-less packages carry a grant in their source either,
+and that **only 1 of 21** rows on the whole shelf practises per-file notice. 🔴 **So a gate that
+only checks for a root licence file passes 11 packages whose grant any partial copy silently
+drops.** `P17` now gates both layers and ships a notice-injection step. 🆕 **`P18` is added** for
+the AGPL row, because it is the one finding on this shelf that should stop a delivery rather than
+annotate it. 🔵 **No pattern is added from the search channel: 11 searches returned 0 new rows.**
+
+## 🔁 `P17` rewritten — the two-layer licence gate, plus the notice the build must inject *(second revision, p139 — Global)*
+
+**The problem p138's version missed.** A gate that asks *"does the payload contain a licence
+file?"* splits this shelf 12 / 9 and calls the 12 clean. 🔴 **But a root licence file discharges
+redistribution of the whole package and nothing about a single file.** A developer who copies one
+module out of a clean MIT connector into a client's codebase carries **no holder and no grant** on
+20 of 21 rows — and that copy, not the tarball, is what ends up in the client's repository.
+
+### The stack
+
+| component | licence *(payload-verified this pass)* | role |
+|---|---|---|
+| [`p139-source-header-grant`](code/p139-source-header-grant/README.md) | this KB | reads every shipped text file; reports own-grant vs `VENDORED` vs none. **24 tests** |
+| [`p138-npm-payload-licence`](code/p138-npm-payload-licence/README.md) | this KB | the root-file layer, sha1-verified against the registry's `shasum`. **7 tests** |
+| 🟢 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** (`LICENSE` ships; notice in **100 of 118** files) | 🟢 **the reference implementation of the output** — copy its header convention verbatim |
+
+### How it wires together
+
+1. **Gate A — the root layer.** For each dependency, download the published tarball, **sha1-verify
+   it against the registry's own `shasum`**, and enumerate paths. No licence file and no SPDX id →
+   🔴 **block**. SPDX id without text → 🔴 **block** and fetch the grant from the repository.
+2. **Gate B — the file layer *(new)*.** Read every shipped text file. 🔵 **Report own-grant,
+   `VENDORED` and none as three separate counts, never two** — a notice in minified output is a
+   bundled dependency's and must not be credited to the package. A dependency at **0%** own-notice
+   is not blocked; it is **flagged for step 3**.
+3. **Inject on copy.** Any file lifted out of a flagged dependency and into the client's tree gets
+   a header naming **that dependency's** holder and grant, applied by a build step, not by hand.
+   This is the deliverable that makes Gate B worth running.
+4. **Resolve the dangling references.** 🔴 A vendored notice pointing at a `LICENSE file in the
+   root directory` that does not ship is an **unresolved** reference, not a satisfied one — fetch
+   the named text and vendor it alongside.
+5. **Pin and re-run per release.** Both gates read a *version*, and 5 of the 21 rows published
+   inside eleven days.
+
+### Why it wins the room
+
+🔵 **It converts a licence column into a build step.** The client's question is never *"what does
+the table say?"* but *"what is in our repository and can we ship it?"* — and on this shelf the
+honest answer requires reading the bytes twice, at two layers.
+
+## 🆕 `P18` — Stop-ship gate for the one copyleft row on this shelf *(new, p139 — Global)*
+
+🔴 **`moodle-mcp-server-aql` 0.1.7 declares AGPL-3.0, ships 141 paths and 71 text files, and
+carries no grant at either the file layer or the header layer.** Its repository
+([`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)) carries the
+canonical text, re-verified this pass at **34 523 B**, first line `GNU AFFERO GENERAL PUBLIC
+LICENSE`. 🔵 **The grant exists; the distribution drops it.**
+
+### Why this is a pattern and not a footnote
+
+AGPL-3.0 is the strongest obligation on this shelf, and §13 reaches **network use** — which is
+exactly how an MCP server is deployed. 🔴 **A client who installs this package into a hosted
+tutoring or administration service takes on a source-provision duty over a network boundary, and
+the artefact that arrived tells them nothing about it.** Two of three signals a reviewer would
+check are silent: no licence file, no header. Only the manifest's `"license": "AGPL-3.0"` says so.
+
+### Shape of the engagement
+
+1. **Detect before install.** Gate A of `P17` catches it: SPDX `AGPL-3.0`, licence file absent.
+2. **Decide at the network boundary, not the repository boundary.** If the service is reachable by
+   users, §13 is live. 🔵 This is a **hosting-architecture** question, and it belongs with the
+   client's counsel before an estimate, not after one.
+3. **If the answer is no, the alternative is on the same shelf and is permissive.** The Moodle
+   connector tier carries MIT rows with licence files present —
+   [`verticals/solutions.md`](../verticals/solutions.md) and
+   [`agents/top.md`](../agents/top.md) place them. 🔵 **`P7` already describes the permissive route
+   onto Moodle**; this pattern is the gate that routes a client into it.
+4. **If the answer is yes, vendor the grant the distribution dropped** — fetch the 34 523-byte text
+   from the repository and ship it with the deployment, per `P17` step 4.
+
+### Why it wins the room
+
+🔴 **It is the only finding in this KB that can stop a delivery**, and it is three facts long: a
+declared copyleft licence, a network-deployed server, and no notice in the artefact. 🟢 **Raising
+it before the build is a credibility event; discovering it at a client's security review is the
+opposite.**
+
 **Pass 137, 2026-10-11.** p136's fourteen recipes retained. 🔴 **`P13` is rewritten again and
 shrinks again** — from p136's three-to-four-week buy-and-adapt to **an adapter of about two weeks**,
 because `ACTION BX` found the per-user mapping already implemented in a university-owned library and

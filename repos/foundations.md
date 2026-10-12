@@ -6,6 +6,17 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
+**Pass 139, 2026-10-12.** 🟢 **p138 measured a fifth layer — the published package — and found a
+third of the connector tier shipping an SPDX identifier with no licence text. It then registered a
+falsifier against itself, and this pass fires it: `ACTION CH` read every shipped text file in all
+21 payloads, and 0 of the 9 licence-file-less packages carry their own grant in a source header.**
+🔴 **p138's count stands.** 🔴 **A sixth layer is now measured, and it is the one a partial copy
+depends on: per-file notice, practised by 1 of 21 rows.** On the other 20, a single file lifted out
+of the tree names no holder and no grant. 🔵 **And the repository layer was measured in the same
+pass as the payload layer for the first time** — through this KB's already-documented raw-file lane,
+not a new one — re-verifying two of this KB's published licence figures byte-exact. Instrument and 24 tests:
+[`p139-source-header-grant`](../compose/code/p139-source-header-grant/README.md).
+
 **Pass 138, 2026-10-12.** 🔴 **p137 measured that a licence cell describes a repository root rather
 than a whole tree. This pass measured a fifth layer, and it is the only one a client actually
 receives: the published package.** `ACTION CD` downloaded **21** education-LMS connector tarballs

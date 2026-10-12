@@ -6,6 +6,37 @@ updated: 2026-10-12
 
 # Education — market map and opportunities
 
+**Pass 139, 2026-10-12.** 🔴 **No market figure changed this pass, because the channel that
+produces them returned nothing.** Eleven searches were run — four global and **one per region for
+North America, EMEA, APAC and LATAM** — and they yielded **0 new rows and 0 corrections** anywhere
+on this page. 🔵 **Every figure they surfaced is already carried here, in several cases with better
+provenance than the channel supplied**: it offered UNESCO IESALC's **87% / 26%** as *2026* data,
+where this page already records that the fieldwork ran **August–October 2025** and must be quoted
+as a baseline. Per-region outcomes — including the empty ones — are recorded under
+[**What the regional channel returned this pass**](#-what-the-regional-channel-returned-this-pass-p139)
+rather than left as silence, because an unrecorded empty region is indistinguishable from a covered
+one. 🔴 **One genuinely new item surfaced and is NOT published**: Texas **HB 149 (TRAIGA)**, in
+force **2026-01-01**, whose statutory text could not be read in this channel. It is registered as
+`ACTION CK`.
+
+## 🔵 What the regional channel returned this pass *(p139)*
+
+🔵 **Recorded per region, including the empty results.** The query was
+`AI education {region} 2026 adoption regulation players`, run once per region.
+
+| region | what the channel returned | verdict |
+|---|---|---|
+| **North America** | Market levels (~$951M 2024 → ~$2.3B 2029, 15.9% CAGR), the ~10%-with-guidelines and ~71%-of-teachers-untrained pair, **Carnegie Mellon + Gates $55M** for gateway courses, OpenAI's eight-partner national programme, and *"states like Colorado and Texas"* | 🟡 **All carried already** except Texas. 🔴 **Texas HB 149 is the pass's one genuine gap** — unreadable here, registered as `ACTION CK`, **not published**. Colorado is already carried in depth (SB 24-205 repealed and reenacted as ADMT, with dates) |
+| **EMEA** | 🔴 **Nothing education-specific.** The channel returned enterprise-AI adoption content — CompTIA's *94% likely to invest in AI training*, Workday's EMEA adoption study, generic EU AI Act framing | 🔴 **EMPTY for this page's purposes.** 🔵 Recorded as empty: it names no education regulator, no ministry instrument and no edtech provider. This page's EMEA section already carries four **Jisc** procurement routes with contract windows, which the channel did not surface |
+| **APAC** | Pearson–TCS skills alliance, LearnUpon's Sydney HQ, OpenAI's ANZ policy hire; otherwise enterprise-AI and sovereignty commentary. 🔴 The channel itself reported finding *"no results on AI in schools or universities, national education AI curricula, or education-specific regulators"* | 🔴 **EMPTY on instruments.** 🔵 Recorded as empty. This page already carries China's **教科信〔2026〕1号** with its per-stage hour schedule, Korea's **2026 업무계획** (1 141→2 000 AI schools), Japan's Ipsos figures and Vietnam's **Decision 33** — none of which the English-language regional query returned. 🔵 **`T10`'s language clause holds: the instrument's own language is part of the probe** |
+| **LATAM** | 🟢 **The richest regional return, and all of it already held**: UNESCO IESALC (200 institutions, 19 countries, 87% using AI, 26% with a framework), the Digital Education Council LATAM 2026 survey (92% students / 79% faculty, 30 000+ responses, 29 institutions), the IDB's ILIA readiness index, and country posture for Chile, Brazil, Colombia and Mexico | 🟡 **Carried, and this page is ahead of the channel on two points.** It presented the IESALC figures as 2026 (fieldwork was **Aug–Oct 2025**), and it offered a **30%** published-policy figure alongside IESALC's **26%** formal-framework figure 🔵 **without noting they are different predicates** — this page already separates them |
+
+🔵 **The asymmetry is the finding.** The two regions where this page is strongest on primary
+instruments — EMEA procurement and APAC mandates — are the two where the English regional query
+returns nothing at all. 🔴 **A team that ran only this channel would conclude EMEA and APAC are
+thin, and would be wrong in both cases by the width of a Jisc framework and a national curriculum
+mandate.**
+
 **Pass 137, 2026-10-11.** 🔴 **The 2026 column widened instead of converging, and the widening is
 informative rather than noise.** p136 narrowed the broad-market 2026 level to **$9.6–11.4B** across
 three firms. A fourth and fifth broad-scope estimate now sit **below** that band, and the outlier
