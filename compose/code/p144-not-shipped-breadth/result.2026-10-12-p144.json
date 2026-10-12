@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "zijinz456/OpenTutor": "NOT_AN_MCP_SERVER",
+    "ahmedEid1/lumen": "DYNAMIC_UNBOUNDED|lit=0|dyn=9|gated=0",
+    "mohaneesh-03/mcp-tutor": "BOUNDED_STATIC|lit=5|dyn=0|gated=0",
+    "nirholas/ai-tutor-mcp": "DYNAMIC_UNBOUNDED|lit=0|dyn=1|gated=0",
+    "hesham0-0nasser/tutor-lms-mcp": "BOUNDED_STATIC|lit=1|dyn=0|gated=0",
+    "BetterSEQTA/BetterSEQTA-Plus": "NOT_AN_MCP_SERVER",
+    "BetterSEQTA/DesQTA": "NOT_AN_MCP_SERVER",
+    "nitsuah/bb-mcp": "DYNAMIC_UNBOUNDED|lit=0|dyn=1|gated=0",
+    "Piyushtanwani/DAU-buddy": "BOUNDED_STATIC|lit=40|dyn=0|gated=0",
+    "yourssu/soongpt-plugin": "BOUNDED_STATIC|lit=20|dyn=0|gated=0",
+    "oliverhruby/edupage-mcp": "BOUNDED_STATIC|lit=31|dyn=0|gated=0",
+    "krzysztofbury/librus-mcp": "BOUNDED_STATIC|lit=35|dyn=0|gated=0",
+    "divyarthjain/vtop-bhopal-mcp": "DYNAMIC_UNBOUNDED|lit=0|dyn=4|gated=0",
+    "Agso-o/sigaa-calendar": "NOT_AN_MCP_SERVER",
+    "juliancasaburi/siu-guarani-promedio-extension": "NOT_AN_MCP_SERVER",
+    "malkreide/global-education-mcp": "BOUNDED_STATIC|lit=10|dyn=0|gated=0"
+  },
+  "readmit": {
+    "bench": {},
+    "benchmarks": {},
+    "doc": {},
+    "docs": {},
+    "example": {},
+    "examples": {},
+    "fixtures": {},
+    "legacy": {},
+    "legacy_reference": {
+      "krzysztofbury/librus-mcp": {
+        "baseline": "BOUNDED_STATIC|lit=35|dyn=0|gated=0",
+        "readmitted": "DYNAMIC_UNBOUNDED|lit=56|dyn=1|gated=0"
+      }
+    },
+    "samples": {},
+    "scripts": {
+      "krzysztofbury/librus-mcp": {
+        "baseline": "BOUNDED_STATIC|lit=35|dyn=0|gated=0",
+        "readmitted": "BOUNDED_STATIC|lit=37|dyn=0|gated=0"
+      }
+    },
+    "tests_native": {}
+  }
+}

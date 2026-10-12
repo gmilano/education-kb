@@ -1,0 +1,9 @@
+package	bundle_tools_surface_bound	source_shipped_surface_bound	bundle_nameset	source_nameset	nameset_identical	source_route	note
+canvas-mcp-server-2.2.3	54	54	55	55	YES	repository_field:DMontgomery40/mcp-canvas-lms	commits own dist/; full-tree read 0 MULTI_SURFACE
+moodle-mcp-server-aql-0.1.7	14	14	14	14	YES	repository_field:csmediapro/moodle-mcp-server	monorepo; tools are name= one-per-file; full-tree read 3 from client pkg
+mcp-canvas-lms-1.0.5	3	3	3	3	YES	homepage_field:MisterCommand/mcp-canvas-lms	commits own dist/; full-tree read 3 MULTI_SURFACE
+_owen-x-tech_canvas-mcp-1.1.0	62	UNSOURCEABLE	-	-	n/a	repository_field_DEAD:owentaylor/canvas-mcp	declared repo not publicly readable (ls-remote auth prompt)
+_imazhar101_mcp-canvas-server-2.1.3	227	UNSOURCEABLE	-	-	n/a	NONE	no repository, homepage or bugs field
+_ink-waffle_moodle-mcp-0.2.0	16	UNSOURCEABLE	-	-	n/a	NONE	18 .map files, zero sourcesContent
+_n35da_brightspace-mcp-0.4.0	17	UNSOURCEABLE	-	-	n/a	NONE	no repository, homepage or bugs field
+eth-moodle-mcp-1.3.3	18	UNSOURCEABLE	-	-	n/a	NONE	no repository, homepage or bugs field

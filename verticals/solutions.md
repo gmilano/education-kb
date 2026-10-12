@@ -6,6 +6,62 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 144, 2026-10-12.** 🆕 **A second European institutional tenancy, named in shipped
+source: Universidad de Navarra.** 🔴 **And the Moodle entry gains a copyleft warning the npm tier
+had been hiding** — the one Moodle connector published to npm whose source is reachable is
+**AGPL-3.0**.
+
+### 🆕 🟢 Moodle — the reachable npm connector is AGPL-3.0, and that changes the build decision
+
+[`p144-npm-source-parity`](../compose/code/p144-npm-source-parity/README.md). Moodle itself is
+**GPL-3.0** and always has been; the question for a studio is the *connector* layer on top.
+
+| connector | repo | licence | tools | verdict for a studio build |
+|---|---|---|---|---|
+| `moodle-mcp-server-aql@0.1.7` | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | **14** | 🔴 **STOP-SHIP as a dependency.** AGPL reaches across a network boundary |
+| `@ink-waffle/moodle-mcp@0.2.0` | 🔴 none reachable | 🟢 MIT (declared in npm) | **16** | 🟡 **Permissive but unverifiable** — no `repository`, no `homepage`, no `sourcesContent` |
+| `eth-moodle-mcp@1.3.3` | 🔴 none reachable | 🟢 MIT (declared in npm) | **18** | 🟡 ETH Zurich lecture-PDF scope; permissive but unverifiable |
+
+🔵 **The permissive Moodle connectors are the ones nobody can read, and the readable one is
+copyleft.** 🔴 **That is the opposite of a usable supply position**, and it is a direct
+consequence of `P144-B`: a declared SPDX identifier in npm metadata is not a licence file in a
+repository, and p138 already recorded that *"a licence identifier is not a licence"*.
+
+### 🆕 🟢 Universidad de Navarra — the second institutional tenancy this page can name
+
+[`p144-author-window-strict`](../compose/code/p144-author-window-strict/README.md).
+
+| row | evidence | institution | region |
+|---|---|---|---|
+| 🟢 [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | `server.py:19` — `BASE_URL = "https://aula-virtual.unav.edu"` | **Universidad de Navarra**, Pamplona | 🟢 **EMEA** (Spain) |
+
+🟢 **The LMS behind it is *Aula Virtual ADI*, the university's own learning platform.** 🔴 **And
+the disambiguation matters**: `MiAulario`/Sakai belongs to the **Universidad Pública de
+Navarra** — a different institution in the same city. 🔵 **Two universities, one city, two
+unrelated LMS stacks** is exactly the sort of pair a ccTLD-level census collapses.
+
+🔴 **The row itself is UNLICENSED and four commits long.** 🔵 **It is a tenancy signal, not a
+software asset**: it tells a studio that a named Spanish university's Aula Virtual has been
+scouted in the open, and nothing more.
+
+### 🔵 Blackboard Learn — `P143-G` confirmed on the row that motivated it
+
+`nitsuah/bb-mcp` was the last `UNMAPPED` row and it stays unmapped, with the reason now
+measured rather than suspected. Of its URLs: `developer.blackboard.com` **×9** is the vendor's
+own developer estate, and `blackboard.example.edu`, `mcp.example.edu` and `push.example.edu` are
+**placeholders**. 🔴 **241 commits and not one institutional host.**
+
+🔵 **This is the case `P143-G` predicted**: a Blackboard connector can be large, active and
+MIT-licensed and still place nothing, because the only real hostname in it belongs to Blackboard.
+
+### 🟡 No ERP/LMS platform row was added or removed this pass, and that is stated rather than padded
+
+The mandated vertical query — `open source platform education ERP CRM MIT Apache` — returned
+**one vendor's glossary across ten locales** and no new platform. 🔵 **It did confirm the standing
+entries**: **OpenEduCat** is **LGPLv3** on **Odoo**, with **Moodle** (LMS) and **Koha** (library)
+named as the reference open-source education systems. 🔴 **No MIT- or Apache-licensed education
+ERP surfaced**, which is the fourth pass in a row this page has recorded that absence.
+
 **Pass 143, 2026-10-12.** 🆕 **A vendor tier this page has never had: the company that
 maintains an Open edX extension point, placed in Colombia.** 🆕 **And the Blackboard entry
 gains a named institutional tenancy plus a warning about the four hosts that look like

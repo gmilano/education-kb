@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 144 — 2026-10-12
+
+⏱️ **Seventh pass of this date.** 🔴 **`T36` is WITHDRAWN one pass after it was adopted, in the
+exact place it was strongest.** p143 withdrew three of `T30`'s figures on the grounds that the npm
+tier was measured over *bundles* while every other tier was measured over *source*. 🟢 **Hold the
+instrument fixed and vary only the artefact, and bundle and shipped source return IDENTICAL
+TOOL-NAME SETS on 3 of 3 measurable packages.**
+
+🔵 **And the headline is how nearly this pass confirmed the opposite.** The first run read
+**54 → 0** and would have corroborated `T36` emphatically. 🔴 **It was `T37` again** — two of these
+repositories commit their own `dist/`, so a clone holds the source *and* a stale bundle.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P144-A` | 🔴 **`ACTION DP` DISCHARGED and REFUTED — `T36` withdrawn** | 🟢 **3 of 3 set-identical**: **54/54**, **14/14**, **3/3**, with `bundle_only` and `source_only` both empty. 🟢 **`T30`'s npm figure reinstated**, as `ACTION DP` specified |
+| `P144-B` | 🔴 **…and the registered threshold was never reachable** | 🔴 **5 of 8 packages have NO reachable source.** `@owen-x-tech/canvas-mcp` **declares** `owentaylor/canvas-mcp` and it is **dead**; four declare nothing. 🔴 **The sourcemap route is dead**: 3 ship `.map` files, **zero** carry `sourcesContent`. *"Within one tool on 6 of 8"* was never evaluable |
+| `P144-C` | 🟢 **`ACTION DR` DISCHARGED, falsifier silent — 35, plus two figures this KB did not hold** | An independent method reproduces **35 / 31 / 27**, matching `librus-mcp`'s own `MCP_CONTRACT.md` prose to the number. 🔵 **Reproducing all three beats reproducing the one under test** |
+| `P144-D` | 🆕 🔴 **The figure to publish is 31, not 35** | `send_message` defaults to **`False`**. 🔴 **35 is the maximum surface; 31 is shipped** — and the 4-tool gap *is* the write surface |
+| `P144-E` | 🆕 🔴 **`T38` ADOPTED — a `gated=0` means "no gate in the same file"** | `librus-mcp` has **three real feature gates** and the instrument reports **`gated=0`**: gates in `server.py`, sites in `send_tools.py`. 🔵 **`T28`'s `GATED` is a floor, not a measurement** |
+| `P144-F` | 🟢 **`ACTION DQ` DISCHARGED, falsifier silent — three pins, three mechanisms** | 🆕 `oliverhruby/edupage-mcp` (**31**, classification manifest) and 🆕 `divyarthjain/vtop-bhopal-mcp` (**17**, golden array) join `malkreide/global-education-mcp` (**10**, SHA-256). 🔵 **`P21` is not a single-instance recipe — and there is no standard to consume** |
+| `P144-G` | 🆕 🟢 **A committed pin RESOLVES a `DYNAMIC_UNBOUNDED` verdict** | `vtop-bhopal-mcp` scores 0 literal / 4 dynamic here; its own test pins **17 names** against live `tools/list`, checking `missing` AND `extra` |
+| `P144-H` | 🟢 **`ACTION DS` DISCHARGED, falsifier silent — 9 of 11 exclusions are inert** | No row but `librus-mcp` changes under any re-admission, across 16 subjects. 🔴 **Only `legacy_reference` (verdict flips) and `scripts` (35→37, verdict holds) act at all** |
+| `P144-I` | 🔴 **…and `ACTION DS`'s own remedy would have broken its own row** | *"narrowed to `legacy_reference/` alone"* re-admits `scripts/` → **35 → 37**. 🟢 **Minimal correct list: `{legacy_reference, scripts}`.** 🟢 Its premise tested: `global-education-mcp`'s `scripts/tool_signatures.py` exists and declares **zero** sites |
+| `P144-J` | 🔴 **`ACTION DT` DISCHARGED and REFUTED — 0 of 2 rows qualify** | `nitsuah/bb-mcp`'s whole **241-commit** history runs **2026-03 → 2026-10**, eight months inside one northern DST period |
+| `P144-K` | 🟢 **…and one row is placed anyway, by institution rather than author** | 🟢 **`ruud0/aula-virtual-mcp` → EMEA (Spain)** on `server.py:19`'s `BASE_URL = "https://aula-virtual.unav.edu"` — **Universidad de Navarra**. 🔴 `nitsuah/bb-mcp` **UNPLACEABLE, declared** |
+| `P144-L` | 🆕 🔴 **`P23`'s caveat is CALENDAR SPAN, not commit volume** | `ACTION DT` predicted failure *"for a commit volume these rows do not have"*. 🔴 **241 commits is not a volume problem** |
+| `P144-M` | 🔴 **The window definition IS the instrument, and a crude split manufactures LATAM rows** | A first draft placed `nitsuah` as year-round `-0400` → **Bolivia/Paraguay**. 🔴 **All 17 "winter" commits are in March and November.** 🟢 **p143's eduNEXT probe was checked and does NOT have this defect — `P143-H` stands** |
+| `P144-N` | 🔴 **`ACTION DU` DISCHARGED and REFUTED on its literal criterion** | None of the three probes carries `librus-mcp`'s defect. 🔵 **Each fails for a different reason, and the three reasons beat the pattern** |
+| `P144-O` | 🆕 🟢 **`T39` ADOPTED — exclusion must be property-relative** | 🔴 **`p141` includes non-shipped parent POMs on 3 of 5 rows and is RIGHT to** — the licence *lives* there. 🔵 **"Not shipped" is not the defect; "not bearing the property" is** |
+| `P144-P` | 🆕 🔴 **`p142`'s origin census counts ROBOTS as human-location evidence** | **9 of 44 rows, 123 commits.** 🔴 **`nitsuah/bb-mcp` is 32.4% bot** (78/241); `dependabot` commits there at **both `+0000` and `-0400`**. 🟢 **The aggregate hides it** — 8 of 9 rows under 2.5% |
+| `P144-Q` | 🆕 🔴 **The largest tool surface on the github-only tier is UNLICENSED** | `Piyushtanwani/DAU-buddy` — **40 literal tools, 176 commits, no licence file at HEAD.** `ruud0/aula-virtual-mcp` likewise. 🔴 **No grant, no build** |
+| `P144-R` | 🟢 **`T1` quantified on BOTH halves, from a named primary publisher** | UNESCO IESALC over **200 institutions / 19 countries**: 🟢 **87% using AI** against 🔴 **26% holding a formal AI strategy**. EMEA independently: 🔴 **10% of 450+** have guidelines. 🔵 **Two continents, two publishers, same gap** |
+| `P144-S` | 🆕 🔴 **`T41` ADOPTED — LATAM teacher adoption LEADS the OECD, and this KB's framing was wrong** | 2024 secondary teachers: **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%** against **OECD 36%**. 🔴 **The "uneven and lagging" framing is retired** |
+| `P144-T` | 🆕 🔴 **`T40` ADOPTED — APAC's compliance surface is horizontal, EMEA's is vertical** | Three binding statutes in force — **Korea 2026-01-22**, **Vietnam 2026-03-01**, **Taiwan 2025-12** — and 🔴 **not one is about education**. 🟢 **Korea's 2026 pilot year is the dated window** |
+| `P144-U` | 🔴 **The EU education clock is CONFLICTED and published unresolved** | **2026-08** (one source) against Digital Omnibus approved **2026-06-29** moving high-risk to **2027-12-02** / **2028-08-02** (another). 🔴 **Sixteen months**, and `eur-lex.europa.eu` is unreachable here |
+| `P144-V` | 🔴 **The figures blocker is unchanged and re-measured, now on two channels** | `iesalc.unesco.org`, `unesco.org`, `oecd.org`, `digital-strategy.ec.europa.eu`, `multistate.us`, `lw.com` all answer **`000`** to `curl` — and **`WebFetch` fails DNS on the same hosts**. 🔵 **The fix is still an allowlist, not a better search** |
+| `P144-W` | 🔴 **FIFTH consecutive null for new agent rows** | 🔴 **Every education-specific candidate is a COURSE**: `microsoft/ai-agents-for-beginners` (**67 223★**, MIT), `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch` (796★, MIT). 🔵 **"Education" matches a repo's pedagogy, not its domain** |
+| `P144-X` | 🆕 🔴 **`curl -sI` cannot verify a GitHub URL in this environment** | **`403` on every `github.com/<owner>/<repo>`**, live or dead. 🟢 **`git ls-remote` and `git clone` work and distinguish them** — which is how `owentaylor/canvas-mcp` was shown dead rather than merely unreachable |
+
+### 🔴 `P144-A` — the finding this pass exists for
+
+`T36` was the most load-bearing claim p143 adopted. It withdrew three of `T30`'s figures on the
+grounds that npm and the other tiers were measured by different instruments over different
+artefact kinds, so a gradient across them could not be read.
+
+🟢 **Half of that is still true.** `surface_gate2.py` and `surface_bound.py` count different
+things — registration *sites* versus tool *descriptors* — and `surface_gate2.py` reads **0** on all
+three of these packages in *both* artefact kinds, because they register through
+`setRequestHandler(ListToolsRequestSchema, …)` and it has no pattern for that shape.
+
+🔴 **The other half is false, and it is the half the thesis was adopted on.** Varying only the
+artefact, the same instrument returns the same tool names every time. 🔵 **The bundle was never
+the variable; the population was** — and the first draft of this very probe reproduced `T37`'s
+defect by reading a committed `dist/` as if it were source. 🔴 **Two passes running, the
+instrument was blamed for what the subject list did.**
+
+### Verdicts on p143's actions
+
+- 🔴 **`ACTION DP` — DISCHARGED and REFUTED.** 3 of 3 set-identical; `T36` withdrawn; `T30`'s npm
+  figure reinstated. 🔴 **Threshold unreachable — 5 of 8 unsourceable.**
+- 🟢 **`ACTION DQ` — DISCHARGED, falsifier silent.** Three bidirectional pins, three mechanisms.
+- 🟢 **`ACTION DR` — DISCHARGED, falsifier silent.** 35 confirmed; 31 is the default; `T38`.
+- 🟢 **`ACTION DS` — DISCHARGED, falsifier silent.** Only librus moves; 9 of 11 names inert; the
+  proposed remedy refuted; the premise tested and its inference refuted.
+- 🔴 **`ACTION DT` — DISCHARGED and REFUTED.** 0 of 2 qualify; one placed by institution; `P23`
+  recaveated to calendar span.
+- 🔴 **`ACTION DU` — DISCHARGED and REFUTED** on its literal criterion; returns `T39` plus a
+  bot-contamination finding in `p142`.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, seventh pass, NOT re-registered.**
+  🔵 `capitol.texas.gov` is outside this environment's allowlist. It is an environment request.
+
+### Pre-registered for p145
+
+🔴 **`ACTION DV`** — reinstate `T30`'s npm figure explicitly, with the tier recomputed by ONE
+instrument over shipped trees. `P144-A` removes the reason the figure was withdrawn but does not
+recompute the tier. Run `surface_bound.py` over the shipped tree of all 24 subjects across the
+four tiers. 🔴 *Refuted if any tier's dynamic share moves more than five points from p143's
+published value* — which would mean the instrument choice, not the artefact, is what `T30` was
+measuring all along, and `T30` must be withdrawn outright rather than reinstated.
+
+🟡 **`ACTION DW`** — strip bots from `p142-origin-at-scale` and re-run the 44-row census.
+`P144-P` shows 9 rows contaminated and one at 32.4%. Re-run `origin_scale.py` with the bot filter
+`author_window.py` already uses, and record which rows change `dominant_offset` or region.
+🔴 *Refuted if no row changes its region* — which would make bot contamination a real defect with
+no consequence, to be recorded as a caveat rather than fixed.
+
+🟢 **`ACTION DX`** — count how many of the 44 connector rows and 8 npm packages are UNLICENSED.
+`P144-Q` found two by accident, and one is the largest tool surface on its tier. Read the licence
+file at HEAD for all 52. 🔴 *Refuted if fewer than 4 rows are unlicensed* — which would make
+`DAU-buddy` and `aula-virtual-mcp` a coincidence rather than a property of this population.
+
+🟡 **`ACTION DY`** — test whether a bidirectional pin exists for any row this KB calls
+`DYNAMIC_UNBOUNDED`. `P144-G` found one and it resolved the verdict. Check the other three —
+`ahmedEid1/lumen`, `nirholas/ai-tutor-mcp`, `nitsuah/bb-mcp` — for a committed golden list,
+manifest or lockfile. 🔴 *Refuted if none of the three carries one* — which would make the pin
+channel useful only on rows that are already statically bounded, and `P144-G` one lucky row.
+
+🟢 **`ACTION DZ`** — give `surface_gate2.py` a pattern for
+`setRequestHandler(ListToolsRequestSchema, …)`. `P144-A` shows it reads **0** on three real MCP
+servers in both artefact kinds, so every JS/TS row measured by it is suspect. Add the shape and
+re-run the npm and github-only tiers. 🔴 *Refuted if no row's verdict changes* — which would mean
+the blind spot never touched a published figure.
+
+🟡 **`ACTION EA`** — apply `T39` to the `NOT_SHIPPED` list properly. For each of the nine inert
+names, state the property-bearing test: could a tree with that name ever hold a shipped tool
+registration? 🔴 *Refuted if any of the nine can be shown to bear a registration in a real
+repository outside this shelf's 16 subjects* — which would mean the list is a sound heuristic this
+population merely does not exercise, and it should be kept whole.
+
 ## Pass 143 — 2026-10-12
 
 ⏱️ **Sixth pass of this date.** 🟢 **The clone channel opened — `git clone` of public

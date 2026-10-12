@@ -6,6 +6,89 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
+**Pass 144, 2026-10-12.** 🔴 **The correction this page owed about its npm instruments is
+discharged, and it resolves in the opposite direction.** p143 recorded that 7 of 8 npm packages
+could not be read at all because they ship only compiled output, and withdrew the npm figures on
+that basis. 🟢 **Three of them were cloned this pass and the compiled output turns out to be a
+faithful measurement**: bundle and shipped source return **identical tool-name sets** on 3 of 3.
+🔴 **But 5 of 8 have no reachable source at all**, and one of those *declares* a repository that
+is dead.
+
+### 🟢 `ACTION DP` — the npm foundation rows measure the same on bundle and on source
+
+[`p144-npm-source-parity`](../compose/code/p144-npm-source-parity/README.md).
+
+| package | repo | licence | bundle | shipped source | name sets |
+|---|---|---|---|---|---|
+| `canvas-mcp-server@2.2.3` | 🟢 [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 MIT | **54** | 🟢 **54** | 🟢 identical |
+| `moodle-mcp-server-aql@0.1.7` | 🟢 [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | **14** | 🟢 **14** | 🟢 identical |
+| `mcp-canvas-lms@1.0.5` | 🟢 [`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms) | 🟢 MIT | **3** | 🟢 **3** | 🟢 identical |
+
+🔵 **Set identity is the claim, not count identity** — `namesets.py` reports `bundle_only` and
+`source_only`, both empty on all three rows. 🟢 **So `T30`'s npm figure is reinstated**, which is
+what `ACTION DP` specified on this outcome.
+
+🔴 **`moodle-mcp-server-aql` is AGPL-3.0 and that is a stop-ship for a studio build**, declared
+in the npm metadata and confirmed in the repository. It is the only copyleft row on the npm tier.
+
+### 🔴 The 5 rows this page cannot verify, stated per row rather than as a share
+
+| package | source route | outcome |
+|---|---|---|
+| `@owen-x-tech/canvas-mcp@1.1.0` | `repository: owentaylor/canvas-mcp` | 🔴 **DECLARED AND DEAD** — `git ls-remote` prompts for credentials |
+| `@imazhar101/mcp-canvas-server@2.1.3` | none | 🔴 no `repository`, `homepage` or `bugs`; **227 declared tools unverifiable** |
+| `@ink-waffle/moodle-mcp@0.2.0` | none | 🔴 **18 `.map` files, zero `sourcesContent`** |
+| `@n35da/brightspace-mcp@0.4.0` | none | 🔴 no pointer |
+| `eth-moodle-mcp@1.3.3` | none | 🔴 no pointer |
+
+🟢 **One correction to `P138-H` in the other direction**: `mcp-canvas-lms` was recorded as having
+no `repository` field, which is true, and it is placeable anyway from `homepage`/`bugs`. 🔵 **A
+missing `repository` field is not the same as an unsourceable package**, and three fields have to
+be read before a row is declared dark.
+
+🔴 **The sourcemap route is now closed and recorded as closed.** Three packages ship `.map`
+files and not one carries `sourcesContent`, so a map yields original *path names* and no original
+*bytes*. 🔵 **A future pass should not re-attempt it.**
+
+### 🟢 `global-education-mcp` is no longer the only self-verifying row on this page
+
+[`p144-surface-pin-census`](../compose/code/p144-surface-pin-census/README.md). `ACTION DQ` asked
+for a second row carrying a committed tool-surface pin and found **two**, by two mechanisms
+neither of which is a hash lockfile.
+
+| row | licence | mechanism | pinned |
+|---|---|---|---|
+| 🟢 [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | 🟢 MIT | `tools.lock.json`, SHA-256 per tool | **10** |
+| 🆕 🟢 [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | 🟢 MIT | classification manifest over live `list_tools()` | **31** |
+| 🆕 🟢 [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) | 🟢 Apache-2.0 | `EXPECTED_TOOLS` golden name array | **17** |
+
+🔴 **Three instances and three incompatible formats.** 🔵 **So a consumer cannot ask "does it
+ship the lockfile?"** — the question is whether *any* committed artefact pins the surface, and
+the answer has to be looked for in three places.
+
+### 🆕 🔴 Two rows cited by this KB carry no licence at all
+
+Found while verifying something else, which is why `ACTION DX` now counts all 44 connector rows
+and all 8 packages rather than trusting an incidental pair.
+
+| row | size | licence at HEAD |
+|---|---|---|
+| 🔴 [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | **40 literal tools, 176 commits** | 🔴 **NONE** |
+| 🔴 [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | 4 commits | 🔴 **NONE** |
+
+🔴 **`DAU-buddy` is the largest tool surface on the github-only tier and it is unusable** — no
+licence means no grant, and no grant means a studio cannot copy a line of it. 🔵 **It remains
+worth reading as a design reference**, which is a different permission from building on it.
+
+### 🔵 Channel note — `curl -sI` cannot verify a GitHub URL in this environment
+
+🔴 **`curl -sI https://github.com/<owner>/<repo>` returns `403` for every repository, live or
+dead**, so it cannot distinguish them and must not be used as a URL check here. 🟢 **`git
+ls-remote` and `git clone` both work**, and are what showed `owentaylor/canvas-mcp` to be dead
+rather than merely unreachable. 🔵 **Every repository figure on this page was produced by
+`git clone` over full history**; see
+[`evidence/verified-repos.2026-10-12-p144.tsv`](../evidence/verified-repos.2026-10-12-p144.tsv).
+
 **Pass 143, 2026-10-12.** 🟢 **`ACTION DO` discharged: the education-statistics row added last
 pass is now VERIFIED rather than declared**, and it is the only row on this page whose tool
 surface a consumer can check without running it. 🔴 **And a correction this page owes: the

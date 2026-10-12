@@ -6,6 +6,38 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 144
+
+**The pass in which the reason for withdrawing `T30`'s npm figure turned out to be the same
+population defect the withdrawal was built to avoid.**
+
+🔴 **`T36` is withdrawn where it was strongest.** It said the npm tier and the other tiers were
+not comparable because one was measured over bundles and the other over source. 🟢 **Hold the
+instrument fixed and vary only the artefact, and they return the same tool NAMES on every row
+where both exist.**
+
+| what moved this week | measurement |
+|---|---|
+| 🔴 **`ACTION DP` FIRED: bundle and source are the same measurement** | [`p144-npm-source-parity`](../compose/code/p144-npm-source-parity/README.md). 🟢 **3 of 3 set-identical** — `canvas-mcp-server` **54/54**, `moodle-mcp-server-aql` **14/14**, `mcp-canvas-lms` **3/3**, with `bundle_only` and `source_only` both empty. 🔵 **Set identity, not count identity**: two trees can both read 14 and name different tools. 🟢 **`T30`'s npm figure is reinstated** |
+| 🔴 **…and the disagreement that nearly confirmed `T36` was `T37` again** | The first run read **54 → 0**. 🔴 **`canvas-mcp-server` and `mcp-canvas-lms` commit their own `dist/`**, so a clone holds source *and* a stale bundle — 3 and 2 server instances, count suppressed as `MULTI_SURFACE`. 🔵 **The bundle was never the variable. The population was** |
+| 🔴 **5 of 8 npm packages have no reachable source, so the registered threshold was unrunnable** | 🔴 `@owen-x-tech/canvas-mcp` **declares** `owentaylor/canvas-mcp` and it is **dead**; four declare nothing. 🔴 **The sourcemap route is dead too**: 3 packages ship `.map` files, **zero** carry `sourcesContent`. 🟢 **One correction to `P138-H`** — `mcp-canvas-lms` has no `repository` field and *is* placeable from `homepage` |
+| 🟢 **`ACTION DQ` silent: three bidirectional surface pins, by three different mechanisms** | [`p144-surface-pin-census`](../compose/code/p144-surface-pin-census/README.md). 🆕 `oliverhruby/edupage-mcp` — **31**, a classification manifest whose docstring says *"Adding a new tool (or deleting one) must update this manifest"*. 🆕 `divyarthjain/vtop-bhopal-mcp` — **17**, an `EXPECTED_TOOLS` golden array checking `missing` AND `extra`. With `malkreide/global-education-mcp`'s **10**-tool SHA-256 lockfile. 🔵 **Three formats means there is no "the lockfile" to consume** |
+| 🆕 🟢 **A committed pin RESOLVES a `DYNAMIC_UNBOUNDED` verdict** | This shelf scores `vtop-bhopal-mcp` **0 literal / 4 dynamic**. 🟢 **Its own test pins 17 names against live `tools/list`.** 🔵 **Static analysis and a committed pin are complementary**, and the pin is the stronger evidence because it runs the server |
+| 🆕 🟢 **`edupage-mcp` pins harder than a hash file does** | A lockfile pins identity; this pins identity **and write capability** — 8 write tools, 4 auth/local, the rest polled, asserted disjoint. 🔵 **For a school deployment that is the machine-checked list of which tools can change a student's record** |
+| 🟢 **`ACTION DR` silent: `librus-mcp` is 35, and the repo says so in prose** | [`p144-librus-contract-count`](../compose/code/p144-librus-contract-count/README.md). An independent method reproduces **35 / 31 / 27**, matching `MCP_CONTRACT.md` to the number. 🔵 **Reproducing all three beats reproducing the one under test** |
+| 🆕 🔴 **…and the figure to publish is 31, not 35** | `send_message` defaults to **`False`**. 🔴 **35 is the maximum; the shipped default is 31**, and the 4-tool gap *is* the write surface |
+| 🆕 🔴 **`T38`: a `gated=0` on this shelf means "no gate in the same file"** | `librus-mcp` has **three real feature gates** and the instrument reports **`gated=0`**. The gates are in `server.py`; the sites they control are in `send_tools.py`. 🔵 **`T28`'s `GATED` is a floor, not a measurement** |
+| 🟢 **`ACTION DS` silent: 9 of 11 `NOT_SHIPPED` names are inert** | [`p144-not-shipped-breadth`](../compose/code/p144-not-shipped-breadth/README.md). No row but `librus-mcp` changes under any re-admission, across 16 subjects. 🔴 **Only `legacy_reference` and `scripts` do anything** |
+| 🔴 **…and `ACTION DS`'s own remedy would have broken the row it was built for** | *"narrowed to `legacy_reference/` alone"* re-admits `scripts/` and takes librus **35 → 37**. 🟢 **The minimal correct list is `{legacy_reference, scripts}`.** 🟢 **Its premise was tested too**: `global-education-mcp`'s `scripts/tool_signatures.py` exists and declares **zero** sites |
+| 🔴 **`ACTION DT` FIRED: neither `UNMAPPED` row has an author in both DST windows** | [`p144-author-window-strict`](../compose/code/p144-author-window-strict/README.md). 🔴 **0 of 2.** `nitsuah/bb-mcp`'s whole 241-commit history runs **2026-03 → 2026-10** — eight months inside one northern DST period |
+| 🟢 **…and one is placed anyway, by the institution instead of the author** | 🟢 **`ruud0/aula-virtual-mcp` → EMEA (Spain)** on `server.py:19`'s hardcoded `BASE_URL = "https://aula-virtual.unav.edu"` — **Universidad de Navarra**. 🔵 **The author channel disagrees and is weaker**: `+0200` in May, `-0400` in September. The institution is where it deploys; the author is wherever they were sitting |
+| 🔴 **The window definition is the instrument, and the crude split MANUFACTURES LATAM rows** | A first draft split Apr–Oct / Nov–Mar and placed `nitsuah` as year-round `-0400` → **Bolivia/Paraguay, LATAM.** 🔴 **All 17 "winter" commits are in March and November**, when US Eastern is already `-0400`. 🟢 **p143's eduNEXT probe was checked and does NOT have this defect — `P143-H` stands** |
+| 🔴 **`ACTION DU` FIRED on its literal criterion, and returned `T39` instead** | [`p144-population-audit`](../compose/code/p144-population-audit/README.md). 🔴 **`p141` includes non-shipped parent POMs on 3 of 5 rows and is RIGHT to** — the licence *lives* there. 🔵 **"Not shipped" is not the defect; "not bearing the property" is** |
+| 🆕 🔴 **`p142`'s origin census counts ROBOTS as evidence of a human's location** | **9 of 44 rows, 123 commits.** 🔴 **`nitsuah/bb-mcp` is 32.4% bot** (78 of 241), and `dependabot` commits there at **both `+0000` and `-0400`**. 🟢 **The aggregate hides it** — 8 of 9 rows sit under 2.5% |
+| 🆕 🔴 **The largest tool surface on the github-only tier is UNLICENSED** | `Piyushtanwani/DAU-buddy` — **40 literal tools, 176 commits, no licence file at HEAD**. 🔴 **Unusable by a studio at any price.** `ruud0/aula-virtual-mcp` is unlicensed too. 🔵 **Found by accident while verifying something else**, which is why `ACTION DX` now counts all 44 |
+| 🔴 **FIFTH consecutive null for new agent rows** | Four global and four regional queries, run as mandated. 🔴 **Every education-specific candidate is a COURSE** — `microsoft/ai-agents-for-beginners` (**67 223★**, MIT) and `rohitg00/ai-engineering-from-scratch` are curricula. 🔵 **Five nulls is a settled fact about the channel**, not a gap in the shelf |
+| 🆕 🔴 **`curl -sI` cannot verify a GitHub URL here** | **`403` on every `github.com/<owner>/<repo>`**, live or dead. 🟢 **`git ls-remote` and `git clone` work and distinguish the cases** — which is how `owentaylor/canvas-mcp` was shown dead rather than merely unreachable |
+
 ## 2026-10-12 — Pass 143
 
 **The pass in which the clone channel opened, and the first thing it showed was that this KB had

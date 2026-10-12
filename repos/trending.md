@@ -6,6 +6,42 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 144
+
+🔵 **p143 withdrew `T30`'s npm figure because npm was measured over bundles while everything
+else was measured over source. This pass cloned the source and the two agree exactly.**
+
+| repo / package | licence | what it shows |
+|---|---|---|
+| 🟢 [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (`canvas-mcp-server@2.2.3`, MIT) | MIT | 🟢 **Bundle 54, shipped source 54, name sets identical.** 🔴 **Commits its own `dist/`** — a full clone reads **0** because source + stale bundle give 3 server instances |
+| 🟢 [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) (`moodle-mcp-server-aql@0.1.7`) | 🔴 **AGPL-3.0** | 🟢 **Bundle 14, source 14, identical.** 🔵 **One tool per file** as `name = "..."`, 14 files under `packages/server/src/tools/`. 🔴 **AGPL on the npm tier — a stop-ship for a studio build** |
+| 🟢 [`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms) (`mcp-canvas-lms@1.0.5`, MIT) | MIT | 🟢 **Bundle 3, source 3, identical.** 🟢 **Placeable from `homepage` although it has no `repository` field** — the correction to `P138-H` |
+| 🔴 `owentaylor/canvas-mcp` (`@owen-x-tech/canvas-mcp@1.1.0`, MIT) | MIT (declared) | 🔴 **DECLARED AND DEAD.** The `repository` field names it; `git ls-remote` prompts for credentials. 🔵 **A declared repository is not a reachable one** |
+| 🆕 🟢 [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) | 🟢 **Apache-2.0** | 🆕 **`scripts/test-published.ts` pins 17 tool names and checks both `missing` and `extra`.** 🟢 **A committed pin that resolves this shelf's `DYNAMIC_UNBOUNDED` verdict** |
+| 🆕 🟢 [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | 🟢 **MIT** | 🆕 **`tests/e2e/test_manifest.py` pins 31 tools AND their write capability** — 8 write, 4 auth/local, rest polled, asserted disjoint. 🔵 **Stronger than a hash lockfile for an education deployment** |
+| 🔴 [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | 🔴 **UNLICENSED** | 🔴 **40 literal tools, 176 commits, NO licence file at HEAD.** 🔴 **The largest tool surface on the github-only tier and unusable by a studio at any price** |
+| 🔴 [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) | 🔴 **UNLICENSED** | 🟢 **Placed EMEA (Spain)** on `BASE_URL = "https://aula-virtual.unav.edu"` — Universidad de Navarra. 🔴 4 commits, no licence |
+| 🟢 [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | 🟢 **MIT** | 🟢 **35 confirmed independently — and `MCP_CONTRACT.md` says 27/31/35 in prose.** 🔴 **31 is the shipped default**; `send_message` defaults to `False` |
+| 🔵 [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** | 🆕 **First `.well-known/ai-catalog.json` on this shelf** — an AIR-spec service-discovery manifest with a `did:web` identifier. 🔵 **Discovery layer, not a tool-surface pin** |
+
+### 🔴 What the GitHub trending channel returned, and why no row came from it
+
+Four global queries and four regional ones, run as mandated. 🔴 **Fifth consecutive null for new
+education agent rows.**
+
+| candidate | stars | licence | why it is not a row here |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **67 223★** | 🟢 MIT | 🔴 **A 12-lesson CURRICULUM.** Not an agent, not education-domain software |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | — | — | 🔴 **A course.** Reached #1 on GitHub Trending 2026-05-24 per Trendshift |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 796★ | 🟢 MIT | 🔴 **A teaching repo** tagged `open-source-education` — about agents, not for education |
+
+🔵 **The channel returns repositories that TEACH AI, because "education" matches the pedagogy of
+the repo rather than its domain.** 🔴 **Star counts above are search-reported and unverifiable
+here**: `api.github.com` refuses repository endpoints with a scope message, and
+`curl -sI github.com/<owner>/<repo>` is **`403`** for live and dead repositories alike. 🟢 **Only
+`git clone`/`git ls-remote` verify a repository in this environment**, and every figure in the
+first table was produced that way.
+
 ## 2026-10-12 — Pass 143
 
 🔵 **p142 asked whether a declared tool-surface lockfile actually pins what the source serves.

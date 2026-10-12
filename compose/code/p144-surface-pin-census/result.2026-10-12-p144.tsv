@@ -1,0 +1,9 @@
+row	artefact	mechanism	direction	pinned_n	verdict
+malkreide/global-education-mcp	tools.lock.json	SHA-256 per tool, committed at repo root	bidirectional	10	SURFACE_PINNED
+oliverhruby/edupage-mcp	tests/e2e/test_manifest.py	classification manifest over live list_tools()	bidirectional	31 (8 write + 4 auth/local + polled)	SURFACE_PINNED
+divyarthjain/vtop-bhopal-mcp	scripts/test-published.ts	EXPECTED_TOOLS golden name array	bidirectional	17	SURFACE_PINNED
+krzysztofbury/librus-mcp	MCP_CONTRACT.md + release_verification/measure_tools.py	documented counts + UTF-8 catalog KiB budget gate	size budget, not a name set	27/31/35	SURFACE_DOCUMENTED
+Piyushtanwani/DAU-buddy	tests/test_prompt_tool_catalogue.py	advertised-vs-reachable, self-declared one-directional	one-directional	>20 floor	SURFACE_FLOOR_ONLY
+felipedias-ie/blackboard-mcp	test/protocol.test.ts	assert tools.length >= 20 over tools/list	one-directional	>=20 floor	SURFACE_FLOOR_ONLY
+MartinSA04/ntnu-mcp	tests/fixtures/catalog_page.json	NOT a tool catalog - NTNU course catalog fixture	n/a	0	FALSE_POSITIVE_ON_FILENAME
+alejooroncoy/campus-cli	site/public/.well-known/ai-catalog.json	AIR-spec service discovery (did:web, MCP server entries)	n/a - different layer	1 server entry	DISCOVERY_NOT_SURFACE

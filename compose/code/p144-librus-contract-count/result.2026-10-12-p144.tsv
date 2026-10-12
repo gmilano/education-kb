@@ -1,0 +1,13 @@
+module	sites	gated_by	default
+read_tools	12	-	-
+message_tools	8	-	-
+server	5	-	-
+send_tools	4	send_message	False
+notification_tools	3	notifications	True
+school_history_tools	2	-	-
+attachment_tools	1	attachments	True
+
+surface	tools	composition
+all_features	35	every module registered
+default	31	ungated 27 + default-on gated 4
+minimal	27	ungated only; -4 default-on, -4 default-off

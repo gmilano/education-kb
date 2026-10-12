@@ -6,6 +6,184 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 144, 2026-10-12.** 🆕 **`P25` is added: the surface-pin gate — require a committed
+bidirectional pin before connecting a connector, and generate one when it is missing.** 🆕 **`P26`
+is added: the npm connector reachability-and-licence gate, which stops a build on an AGPL row and
+on a declared-but-dead repository.** 🔁 **`P18` is amended at steps 2 and 5** — measure the
+SHIPPED tree, publish the DEFAULT configuration, and stop reading `gated=0` as "no gate".
+🔁 **`P23` is recaveated**: its discriminator needs a calendar span, not a commit count.
+
+## 🆕 🟢 `P25` — the surface-pin gate: require a committed pin, or generate one *(new, p144 — Global)*
+
+**Use when** an engagement is about to connect an education MCP connector to a live LMS, and
+someone needs a machine-checked answer to *"what can this thing do to a student's record?"*
+
+🔴 **A static tool count is not that answer**, and `P144-G` shows why: this KB scores
+[`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) as
+`DYNAMIC_UNBOUNDED` — 0 literal sites, 4 dynamic — while the repository's own test pins **17
+named tools**. 🟢 **A committed bidirectional pin beats static analysis because it runs the
+server.**
+
+### Step 1 — look for an existing pin, in three places, because there is no standard
+
+🔴 **Three real instances on this shelf use three incompatible formats.** Check all three:
+
+| mechanism | reference implementation | what it pins |
+|---|---|---|
+| **SHA-256 lockfile** at repo root | [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) → `tools.lock.json` (MIT, 10 tools) | name + annotations + description per tool |
+| **Classification manifest** test | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) → `tests/e2e/test_manifest.py` (MIT, 31 tools) | 🟢 **identity AND write capability** |
+| **Golden name array** | [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) → `scripts/test-published.ts` (Apache-2.0, 17 tools) | the exact name set, `missing` and `extra` |
+
+🟡 **Reject a one-directional pin.** `Piyushtanwani/DAU-buddy`'s
+`tests/test_prompt_tool_catalogue.py` says so itself — *"Only one direction is asserted"* — and
+`felipedias-ie/blackboard-mcp`'s `test/protocol.test.ts` asserts `tools.length >= 20`. 🔴 **A
+floor permits a surface to grow silently**, which is the thing the gate exists to prevent.
+
+### Step 2 — if there is no pin, generate one over the SHIPPED tree
+
+```bash
+# the descriptor-counting instrument, over the tree the package actually ships
+python3 -I compose/code/p140-live-surface-bound/surface_bound.py <shipped-src-dir>
+
+# and the name SET, which is what parity actually means
+python3 -I compose/code/p144-npm-source-parity/namesets.py \
+        row=<bundle-or-dist-dir>=<shipped-src-dir>
+```
+
+🔴 **Do not point either instrument at a repository root.** `P144-A`: `canvas-mcp-server` and
+`mcp-canvas-lms` **commit their own `dist/`**, so a clone holds source *and* a stale bundle, the
+tool reads 3 and 2 server instances, and a **54-tool** server reports **0** as `MULTI_SURFACE`.
+
+### Step 3 — copy `edupage-mcp`'s shape, not the lockfile's
+
+🟢 **Classify every tool into disjoint classes and assert both directions:**
+
+1. every live tool from `list_tools()` is accounted for in exactly one class — **no unaccounted**;
+2. every name in the manifest still exists — **no stale**;
+3. **polled ∩ write = ∅** and **polled ∩ auth/local = ∅**.
+
+🔵 **Class 2 — write-capable — is the deliverable.** It is the machine-checked list of tools that
+can change a student's record, and it is what a school's procurement is actually asking for. 🔴 **A
+SHA-256 lockfile does not produce it**; it pins identity and says nothing about capability.
+
+### Step 4 — wire the gate into CI, and make adding a tool fail
+
+🟢 **Steal `edupage-mcp`'s contract verbatim**: *"Adding a new tool (or deleting one) must update
+this manifest — the test fails."* 🔵 **That sentence is the whole control.** A surface that cannot
+change without a human editing a classification file is a surface a deployment can reason about.
+
+### Step 5 — pin the CONFIGURATION too, not just the tool set
+
+🔴 **`P144-D`**: `krzysztofbury/librus-mcp` has **35** tools with every feature on and **31** by
+default, because `send_message` defaults to `False` — and the **4-tool gap is exactly the write
+surface**. 🟢 **Record the flag values the pin was taken under**, or the pin describes a server
+nobody deployed.
+
+### 🔴 What this gate cannot do
+
+🔴 **It cannot see a gate in another file.** `T38`: librus-mcp has three real feature gates and
+`surface_gate2.py` reports `gated=0`, because `if config.features.send_message:` lives in
+`server.py` while the sites it controls live in `send_tools.py`. 🔵 **Read the registration
+helpers' call sites by hand**, and treat `gated=0` as "no gate in the same file".
+
+---
+
+## 🆕 🔴 `P26` — the npm connector gate: reachability and licence, before the first sprint *(new, p144 — Global)*
+
+**Use when** an engagement proposes to build on an education connector published to npm. 🔴 **Five
+of the eight on this shelf fail this gate**, so run it before anyone estimates.
+
+### Step 1 — resolve source through THREE metadata fields, not one
+
+```bash
+curl -sS "https://registry.npmjs.org/$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1],safe=''))" "@scope/pkg")"
+# then read, in order: .repository.url  ->  .homepage  ->  .bugs.url
+```
+
+🟢 **`mcp-canvas-lms@1.0.5` has no `repository` field and IS placeable from `homepage`** →
+[`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms). 🔵 **A missing
+`repository` is not a dark package**; `P138-H` recorded it as one and `P144-B` corrects that.
+
+### Step 2 — verify with `git ls-remote`, never with `curl`
+
+```bash
+GIT_TERMINAL_PROMPT=0 git ls-remote https://github.com/<owner>/<repo> HEAD
+```
+
+🔴 **`curl -sI https://github.com/<owner>/<repo>` returns `403` in this environment for live and
+dead repositories alike**, so it cannot distinguish them. 🟢 **`git ls-remote` prints a SHA for a
+live repo and prompts for credentials for a dead one** — which is how
+`@owen-x-tech/canvas-mcp`'s **declared** `owentaylor/canvas-mcp` was shown to be dead.
+
+### Step 3 — do not attempt the sourcemap route; it is closed
+
+🔴 **Three of the eight packages ship `.map` files and ZERO carry `sourcesContent`.**
+`@ink-waffle/moodle-mcp` ships **18** maps and not one has source bytes. 🔵 **A map gives original
+path names and no original code**, so an unsourceable package stays unsourceable.
+
+### Step 4 — read the licence at HEAD, and stop on copyleft
+
+| package | repo licence | verdict |
+|---|---|---|
+| `canvas-mcp-server@2.2.3` | 🟢 MIT | 🟢 build |
+| `mcp-canvas-lms@1.0.5` | 🟢 MIT | 🟢 build |
+| `moodle-mcp-server-aql@0.1.7` | 🔴 **AGPL-3.0** | 🔴 **STOP-SHIP as a dependency** |
+| `@ink-waffle/moodle-mcp`, `eth-moodle-mcp` | 🟡 MIT *declared in npm only* | 🟡 **unverifiable — treat as unknown** |
+
+🔴 **The readable Moodle connector is copyleft and the permissive ones are unreadable.** 🔵 **That
+is the Moodle supply position in one line**, and p138's rule applies: *a licence identifier is not
+a licence.*
+
+### Step 5 — check the repository for an unlicensed row before reading its code
+
+🔴 **`P144-Q`**: [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) is the
+**largest tool surface on the github-only tier — 40 literal tools, 176 commits — and has no
+licence file at HEAD.** 🔴 **No licence means no grant.** 🔵 **It is still worth reading as a design
+reference**, which is a different permission from building on it, and the distinction belongs in
+the engagement's notes rather than in a developer's head.
+
+---
+
+## 🔁 `P18` AMENDED at steps 2 and 5 — measure the shipped tree, publish the default *(p144 — Global)*
+
+🔴 **Three amendments, each from a defect that reached a published figure.**
+
+1. 🔴 **Step 2 — measure the SHIPPED tree, and name it explicitly.** Pointing the instrument at a
+   repository root reads committed `dist/` and test servers: a **54**-tool server read **0**.
+   🟢 **The exclusion list that makes this work is `{legacy_reference, scripts}`** —
+   `P144-H` shows the other nine names in `NOT_SHIPPED` are inert, and `P144-I` shows that
+   narrowing to `legacy_reference` *alone* re-admits `scripts/` and inflates librus 35 → 37.
+2. 🔴 **Step 5 — publish the DEFAULT configuration's count, not the maximum.** librus-mcp is
+   **31** by default and **35** with every feature on. 🔵 **Quote 31 and state the 35.**
+3. 🔴 **Step 5 — compare NAME SETS, not counts.** Two trees can both read 14 and name different
+   tools; `namesets.py` reports `bundle_only` and `source_only` for exactly this reason.
+
+---
+
+## 🔁 `P23` RECAVEATED — the discriminator needs a calendar span, and bots must be stripped *(p144 — LATAM, Global method)*
+
+🔴 **Two corrections, both from `ACTION DT`.**
+
+1. 🔴 **The requirement is CALENDAR SPAN, not commit volume.** `nitsuah/bb-mcp` has **241
+   commits** and cannot be placed, because its whole history runs **2026-03 → 2026-10** — eight
+   months lying wholly inside one northern DST period. 🔵 **No number of commits inside a single
+   summer contains a winter observation.**
+2. 🔴 **Use strict windows, or the recipe manufactures LATAM rows.** A split at Apr–Oct / Nov–Mar
+   puts **March and November** in the "winter" bucket, and both hold a DST transition; US Eastern
+   is already `-0400` through most of March. 🔴 **This probe's first draft placed `nitsuah` as
+   year-round `-0400` — Bolivia or Paraguay — purely from the bucket boundary.**
+   🟢 **Use `Dec/Jan/Feb` against `Jun/Jul/Aug` and discard the rest.**
+3. 🔴 **Strip bot commits first.** `P144-P`: **9 of 44 rows** carry bot commits and
+   `nitsuah/bb-mcp` is **32.4% bot**, with `dependabot` committing at **both `+0000` and
+   `-0400`**. 🟢 **`author_window.py` filters `[bot]@`, `dependabot`, `copilot@` and
+   `github-actions`.**
+
+🟢 **And prefer the institution over the author when both are available.** `ruud0/aula-virtual-mcp`
+is placed **EMEA (Spain)** on `server.py:19`'s hardcoded
+`BASE_URL = "https://aula-virtual.unav.edu"` — Universidad de Navarra — while its author commits
+at `+0200` in May and `-0400` in September. 🔵 **The institution is where the software deploys;
+the author is wherever they were sitting.**
+
 **Pass 143, 2026-10-12.** 🔁 **`P18` is CORRECTED — its tool-surface enumeration misses four
 static registration shapes, and on one row it inverts the answer.** 🆕 **`P23` is added: the
 timezone recipe that placed a vendor in Colombia from commit metadata alone.** 🆕 **`P24` is

@@ -6,6 +6,75 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 144 — 2026-10-12
+
+🟢 **`T1` — the governance gap — is now measured on two continents by two unrelated publishers,
+and it is the same gap.** 🔴 **`T36` is WITHDRAWN one pass after adoption**, in the place it was
+strongest. 🆕 **`T38` and `T39` adopted**, both about the limits of the instruments this page
+reasons with.
+
+| thesis | movement this pass |
+|---|---|
+| 🟢 **`T1` — the governance gap is the market** | 🟢 **STRENGTHENED, and quantified on both halves from one instrument.** UNESCO IESALC over **200 institutions in 19 countries**: 🟢 **87% using AI** against 🔴 **26% holding a formal AI strategy**. EMEA independently: 🔴 **10% of 450+ institutions** have formal guidelines. 🔵 **Two continents, two publishers, same gap** |
+| 🔴 **`T36` — npm and the other tiers are not comparable** | 🔴 **WITHDRAWN.** Bundle and shipped source return **identical tool-name sets** on 3 of 3 measurable packages. 🔵 **What survives is narrower**: the two *instruments* are not interchangeable, but the two *artefact kinds* are |
+| 🟢 **`T37` — a share-based falsifier cannot see a population error** | 🟢 **CORROBORATED by recurrence, then SUPERSEDED in its remedy.** It recurred twice this pass — in `ACTION DP`'s own first draft, and in `p142`'s bot commits. 🔵 **But its remedy was wrong**, see `T39` |
+| 🆕 🔴 **`T38` — a lexical gate detector cannot see a cross-module gate** | 🆕 **ADOPTED.** `librus-mcp` has **three real feature gates** and the instrument reports **`gated=0`**: the gates are in `server.py`, the sites they control in `send_tools.py`. 🔴 **Every `gated=0` on this KB means "no gate in the same file"**, and `T28`'s category is a floor |
+| 🆕 🟢 **`T39` — a population exclusion is sound only relative to the property measured** | 🆕 **ADOPTED.** 🔴 **`p141` includes non-shipped parent POMs on 3 of 5 rows and is RIGHT to** — the licence *lives* in the parent. 🔵 **"Not shipped" is not the defect; "not bearing the property" is.** A blanket `NOT_SHIPPED` list stands in for that test, and 9 of its 11 names stand in for nothing |
+| 🟡 **`T3` — the EU high-risk clock is a sales window** | 🔴 **UNRESOLVED and now explicitly conflicted.** One source: high-risk provisions in force **2026-08**. Another: Digital Omnibus approved **2026-06-29**, moving stand-alone high-risk to **2027-12-02** and embedded to **2028-08-02**. 🔴 **Sixteen months apart**, and `eur-lex.europa.eu` is unreachable here |
+| 🟢 **`T2` — mandates with hard dates replaced guidance** | 🟢 **STRENGTHENED with the first PASSED deadline.** Ohio required every K-12 district to hold a formal AI policy by **2026-07-01**. 🔵 **A past deadline is a different sale from a future one** |
+
+### 🆕 🔴 `T40` — the APAC compliance surface is horizontal, and EMEA's is vertical
+
+🆕 **ADOPTED.** Three binding AI statutes entered force in APAC during 2026 — **Korea
+2026-01-22**, **Vietnam 2026-03-01**, **Taiwan passed 2025-12** — and 🔴 **not one is about
+education**.
+
+🔵 **So the same engagement inherits a different compliance shape by region.** In EMEA the
+education use case is named inside the classification: an AI tool affecting *access to education*
+is high-risk by definition, so admissions screening triggers a conformity assessment. In APAC the
+obligation is a general-purpose AI statute that an education deployment inherits like any other
+software.
+
+🟢 **Korea's pilot year is the dated consequence.** MSIT signals **2026 as a pilot period with
+limited enforcement** — 🔵 **a statute in force with enforcement deferred is the one window where
+conformance work is cheap and voluntary**, and it closes when the pilot does.
+
+### 🆕 🔴 `T41` — teacher adoption in LATAM leads the OECD, and the "lagging region" framing is wrong
+
+🆕 **ADOPTED, and it corrects this KB's own prior framing.** 2024 secondary-teacher AI use:
+🟢 **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%** against an **OECD average of 36%**.
+
+🔴 **Four LATAM countries, all 16 to 20 points above the OECD average.** 🔵 **What LATAM lacks is
+institutional governance, not usage** — 26% formal strategy against 87% adoption — so the regional
+opportunity is governance and platform work on top of an installed base that already exists,
+not evangelism. 🔴 **This page has previously carried an "uneven and lagging" framing from
+secondary sources; it is retired.**
+
+### 🔵 The supply-side trend the market channel keeps missing
+
+🟢 **Four independent publishers agree the 2026 shift is from experimentation to GOVERNANCE**,
+plus agentic use cases, **purpose-built education platforms over generic tools**, and digital
+credentials for skills-based hiring.
+
+🔴 **But 90% of LATAM universities implementing AI in teaching use ChatGPT, Copilot or Gemini.**
+🔵 **So "purpose-built over general-purpose" describes a migration that has not started**, and the
+connector shelf in this KB is the supply map for it.
+
+🔴 **Credentials is the one named trend this KB holds nothing on** — no connector, no platform row,
+no repo. 🔵 **Declared as a gap rather than left to look like coverage.**
+
+### 🔴 What the agent channel returned, for the fifth consecutive pass
+
+🔴 **Null.** Four global queries and four regional ones. 🔴 **Every education-specific candidate is
+a COURSE**: `microsoft/ai-agents-for-beginners` (**67 223★**, MIT) and
+`rohitg00/ai-engineering-from-scratch` are curricula; `pguso/agents-from-scratch` (796★, MIT) is a
+teaching repo tagged `open-source-education`.
+
+🔵 **Five nulls is a settled fact about the channel, not a gap in the shelf.** The query term
+"education" matches a repository's *pedagogy* rather than its *domain*, so the channel returns
+software that teaches AI instead of software that runs a school. 🟢 **Every connector row this KB
+holds was found by other means**, and a sixth attempt at the same query is not registered.
+
 ## Pass 143 — 2026-10-12
 
 🔴 **`T30` is WITHDRAWN.** Two pre-registered falsifiers fired on it independently in the same

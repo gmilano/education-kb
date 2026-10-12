@@ -1,0 +1,4 @@
+probe	population_unit	non_shipped_tree_included	other_population_defect	verdict
+p140-live-surface-bound	published npm tarball (8)	NO - 0 of 8 tarballs contain examples/docs/tests/scripts	instrument has NO NOT_SHIPPED exclusion at all; safe only because a tarball is shipped-by-construction	CLEAN_BY_ARTEFACT_NOT_BY_CODE
+p141-pom-chain-sweep	Maven coordinate (5)	YES - 3 of 5 inherit licence from a parent POM that is NOT distributed with the artefact	none; inclusion is CORRECT here - the licence genuinely lives in the parent	NON_SHIPPED_BUT_PROPERTY_BEARING
+p142-origin-at-scale	git commit (44 repos)	n/a - no trees measured	BOT COMMITS counted as author-origin evidence: 9 of 44 rows, 123 commits	CONTAMINATED_DIFFERENT_KIND

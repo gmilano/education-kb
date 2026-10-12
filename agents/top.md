@@ -6,6 +6,115 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 144 — 2026-10-12 — the npm figure is reinstated, and the shelf's biggest tool surface is unlicensed
+
+🔴 **`T36` is withdrawn in the place it was strongest.** p143 adopted it on the claim that the
+npm tier was measured over *bundles* while every other tier was measured over *source*, making
+the figures incomparable. 🟢 **On all 3 rows where both artefacts exist, they are the same
+measurement — identical tool-name sets, not merely identical counts.**
+
+🔵 **And the apparent disagreement that nearly confirmed `T36` was `T37` wearing a different
+coat**: a 54-tool server read **0** because two of these repositories commit their own `dist/`,
+so a clone holds the source *and* a stale bundle.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P144-A` | 🔴 **`ACTION DP` DISCHARGED and REFUTED — bundle and source are the same measurement** | 🟢 **3 of 3 set-identical**: `canvas-mcp-server` **54/54**, `moodle-mcp-server-aql` **14/14**, `mcp-canvas-lms` **3/3**, with empty `bundle_only` and `source_only`. 🟢 **`T30`'s npm figure is reinstated**, as `ACTION DP` specified |
+| `P144-B` | 🔴 **…but the registered threshold was never reachable** | 🔴 **5 of 8 packages have NO reachable source.** `@owen-x-tech/canvas-mcp` declares `owentaylor/canvas-mcp` and it is **dead**; four declare nothing at all. 🔴 **The sourcemap route is dead too** — 3 packages ship `.map` files, **zero** carry `sourcesContent`. So *"agree within one tool on 6 of 8"* could not have been evaluated in either direction |
+| `P144-C` | 🟢 **`ACTION DR` DISCHARGED, falsifier silent — 35 confirmed, and two more figures with it** | A method sharing no code with the AST reproduces **35 / 31 / 27**, matching `librus-mcp`'s own `MCP_CONTRACT.md` prose to the number. 🔵 **Reproducing all three is stronger than reproducing the one under test** |
+| `P144-D` | 🆕 🔴 **…and the number this shelf should publish is 31, not 35** | `send_message` defaults to **`False`**. 🔴 **35 is the maximum surface; the shipped default is 31**, and the 4-tool gap is precisely the write surface a school's procurement asks about |
+| `P144-E` | 🆕 🔴 **`T38` — a `gated=0` on this shelf means *"no gate in the same file"*** | `librus-mcp` has **three real feature gates** and `surface_gate2.py` reports `gated=0`. The gates sit in `server.py`; the 4 sites they control sit in `send_tools.py`. 🔵 **`T28`'s `GATED` category is a floor, not a measurement** |
+| `P144-F` | 🟢 **`ACTION DQ` DISCHARGED, falsifier silent — three bidirectional pins, by three different mechanisms** | 🆕 `oliverhruby/edupage-mcp` (**31**, classification manifest) and 🆕 `divyarthjain/vtop-bhopal-mcp` (**17**, golden name array) join `malkreide/global-education-mcp` (**10**, SHA-256 lockfile). 🔵 **Three formats is the finding**: the practice is real and has not converged, so there is no "the lockfile" to consume |
+| `P144-G` | 🆕 🟢 **A committed pin RESOLVES a `DYNAMIC_UNBOUNDED` verdict** | This shelf scores `vtop-bhopal-mcp` 0 literal / 4 dynamic. 🟢 **Its own test pins 17 names and checks both `missing` and `extra` against live `tools/list`.** A bidirectional pin bounds a surface that static analysis cannot |
+| `P144-H` | 🟢 **`ACTION DS` DISCHARGED, falsifier silent — and 9 of 11 exclusions are decoration** | No row but `librus-mcp` changes under any re-admission. 🔴 **Only `legacy_reference` (verdict flips) and `scripts` (35→37, verdict holds) do anything at all**; the other nine are inert across 16 subjects |
+| `P144-I` | 🔴 **…and `ACTION DS`'s own proposed remedy would have broken the row it was built for** | *"narrowed to `legacy_reference/` alone"* re-admits `scripts/` and takes librus from **35 → 37**. 🟢 **The minimal correct list is `{legacy_reference, scripts}`** — two names, not one and not eleven. 🟢 **Its premise was also tested**: `global-education-mcp`'s `scripts/tool_signatures.py` exists and declares **zero** registration sites |
+| `P144-J` | 🔴 **`ACTION DT` DISCHARGED and REFUTED — neither row has an author in both DST windows** | 🔴 **0 of 2.** `nitsuah/bb-mcp`'s whole 241-commit history runs **2026-03 → 2026-10**, eight months lying wholly inside one northern DST period |
+| `P144-K` | 🟢 **…and one of the two is placed anyway, by the institution rather than the author** | 🟢 **`ruud0/aula-virtual-mcp` → EMEA (Spain)**, on `server.py:19`'s hardcoded `BASE_URL = "https://aula-virtual.unav.edu"` — **Universidad de Navarra**. 🔴 `nitsuah/bb-mcp` is **UNPLACEABLE, declared**: vendor estate and `*.example.edu` placeholders only |
+| `P144-L` | 🆕 🔴 **`P23`'s caveat is about CALENDAR SPAN, not commit volume** | `ACTION DT` predicted the author channel would fail *"for a commit volume these rows do not have"*. 🔴 **241 commits is not a volume problem.** It needs a history that crosses a DST boundary, and no number of commits inside one summer will do |
+| `P144-M` | 🔴 **The window definition IS the instrument — and the crude split manufactures LATAM rows** | This probe's first draft split Apr–Oct / Nov–Mar and placed `nitsuah` as year-round `-0400` → **Bolivia/Paraguay. LATAM.** 🔴 **All 17 "winter" commits fall in March and November**, when US Eastern is already `-0400`. 🟢 **p143's eduNEXT probe was checked and does NOT have this defect** — `P143-H` stands |
+| `P144-N` | 🔴 **`ACTION DU` DISCHARGED and REFUTED on its literal criterion** | None of the three probes has `librus-mcp`'s defect. 🔵 **But each fails for a different reason, and the three reasons together are worth more than the pattern would have been** |
+| `P144-O` | 🆕 🟢 **`T39` — exclusion must be property-relative, and `p141` is the proof** | 🔴 **`p141` includes non-shipped parent POMs on 3 of 5 rows and is RIGHT to** — the licence *lives* there. 🔵 **"Not shipped" is not a defect; not bearing the property is.** A blanket `NOT_SHIPPED` list stands in for that test, and `P144-H` shows nine of its names stand in for nothing |
+| `P144-P` | 🆕 🔴 **`p142`'s origin census counts ROBOTS as evidence of a human's location** | **9 of 44 rows, 123 commits.** 🔴 **`nitsuah/bb-mcp` is 32.4% bot** (78 of 241) and `dependabot` commits there at **both `+0000` and `-0400``**. 🟢 **The aggregate hides it**: 8 of 9 rows are under 2.5% |
+| `P144-Q` | 🆕 🔴 **The largest tool surface on the github-only tier is UNLICENSED** | `Piyushtanwani/DAU-buddy` — **40 literal tools, 176 commits, no licence file at HEAD**. 🔴 **Not usable by a studio at any price.** `ruud0/aula-virtual-mcp` is unlicensed too |
+| `P144-R` | 🔴 **The search channel returned a FIFTH consecutive null for new agent rows** | Four global and four regional queries, run as mandated. 🔴 **Every education-specific candidate is a COURSE**: `microsoft/ai-agents-for-beginners` (67 223★) and `rohitg00/ai-engineering-from-scratch` are curricula, not agents. 🔵 **Five nulls is a settled fact about the channel**, not a gap in the shelf |
+| `P144-S` | 🆕 🔴 **`curl -sI` cannot verify a GitHub URL in this environment** | **`403` on every `github.com/<owner>/<repo>`**, live or dead. 🟢 **`git ls-remote` and `git clone` both work and distinguish the cases.** The standing instruction to verify a URL with `curl -sI` is unrunnable here and `git ls-remote` replaces it |
+
+### 🔴 `P144-A` — the finding this pass exists for
+
+`T36` was the most load-bearing claim p143 adopted: it withdrew three of `T30`'s figures on the
+grounds that the npm tier and the other tiers were measured by different instruments over
+different artefact kinds, and that a gradient across them could not be read.
+
+🟢 **Half of that is still true** — `surface_gate2.py` and `surface_bound.py` do count different
+things, and `surface_gate2.py` reads **0** on all three of these packages in *both* artefact
+kinds, because they register via `setRequestHandler(ListToolsRequestSchema, …)` and it has no
+pattern for that shape.
+
+🔴 **The other half is false, and it is the half `T36` was adopted on.** Hold the instrument
+fixed and vary only the artefact, and bundle and source return the same tool names on every row
+where both exist. 🔵 **The bundle was never the problem. The population was** — and the first
+draft of this very probe reproduced `T37`'s defect by reading a committed `dist/` as if it were
+source.
+
+### Verdicts on p143's actions
+
+- 🔴 **`ACTION DP` — DISCHARGED and REFUTED.** 3 of 3 set-identical; `T36`'s central example
+  collapses; `T30`'s npm figure reinstated. 🔴 **Threshold unreachable: 5 of 8 unsourceable.**
+- 🟢 **`ACTION DQ` — DISCHARGED, falsifier silent.** Three bidirectional pins, three mechanisms.
+- 🟢 **`ACTION DR` — DISCHARGED, falsifier silent.** 35 confirmed; 31 is the default; `T38`.
+- 🟢 **`ACTION DS` — DISCHARGED, falsifier silent.** Only librus moves; 9 of 11 names inert;
+  the proposed remedy refuted.
+- 🔴 **`ACTION DT` — DISCHARGED and REFUTED.** 0 of 2 qualify; one placed by institution; `P23`
+  recaveated to calendar span.
+- 🔴 **`ACTION DU` — DISCHARGED and REFUTED** on its literal criterion; returns `T39` and a
+  bot-contamination finding in `p142`.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, seventh pass, NOT re-registered.**
+  🔵 `capitol.texas.gov` is outside this environment's allowlist. It is an environment request.
+
+### Pre-registered for p145
+
+🔴 **`ACTION DV`** — reinstate `T30`'s npm figure explicitly, with the tier recomputed by ONE
+instrument over shipped trees. `P144-A` removes the reason the figure was withdrawn but does not
+recompute the tier. Run `surface_bound.py` over the shipped tree of all 24 subjects across the
+four tiers, so every tier is measured by the descriptor-counting instrument rather than two.
+🔴 *Refuted if any tier's dynamic share moves more than five points from p143's published value*
+— which would mean the instrument choice, not the artefact, is what `T30` was measuring all
+along, and `T30` must be withdrawn outright rather than reinstated.
+
+🟡 **`ACTION DW`** — strip bots from `p142-origin-at-scale` and re-run the 44-row census.
+`P144-P` shows 9 rows contaminated and one at 32.4%. Re-run `origin_scale.py` with the bot
+filter `author_window.py` already uses, and record which rows change `dominant_offset` or region.
+🔴 *Refuted if no row changes its region* — which would make bot contamination a real defect with
+no consequence, and it should be recorded as a caveat rather than fixed.
+
+🟢 **`ACTION DX`** — count how many of the 44 connector rows are UNLICENSED. `P144-Q` found two
+by accident while verifying something else, and one of them is the largest tool surface on its
+tier. Read the licence file at HEAD for all 44 rows and all 8 npm packages.
+🔴 *Refuted if fewer than 4 rows are unlicensed* — which would make `DAU-buddy` and
+`aula-virtual-mcp` a coincidence rather than a property of this population.
+
+🟡 **`ACTION DY`** — test whether a bidirectional pin exists for any row this shelf calls
+`DYNAMIC_UNBOUNDED`. `P144-G` found one (`vtop-bhopal-mcp`, 17 names) and it resolved the verdict.
+Check the other three `DYNAMIC_UNBOUNDED` rows — `ahmedEid1/lumen`, `nirholas/ai-tutor-mcp`,
+`nitsuah/bb-mcp` — for a committed golden list, manifest or lockfile.
+🔴 *Refuted if none of the three carries one* — which would make the pin channel useful only on
+rows that are already statically bounded, and `P144-G` a single lucky row.
+
+🟢 **`ACTION DZ`** — give `surface_gate2.py` a pattern for
+`setRequestHandler(ListToolsRequestSchema, …)`. `P144-A` shows it reads **0** on three real
+MCP servers in both artefact kinds, so every JS/TS row on this shelf measured by it is suspect.
+Add the shape, re-run the npm and github-only tiers, and compare.
+🔴 *Refuted if no row's verdict changes* — which would mean the blind spot never touched a
+published figure and the instrument can stay as it is.
+
+🟡 **`ACTION EA`** — apply `T39` to the `NOT_SHIPPED` list properly. For each of the nine inert
+names, state the property-bearing test: could a tree with that name ever hold a shipped tool
+registration? Replace the blanket list with the two names `P144-H` proves are load-bearing plus
+an explicit rule.
+🔴 *Refuted if any of the nine names can be shown to bear a registration in a real repository
+outside this shelf's 16 subjects* — which would mean the list is a sound heuristic that this
+population simply does not exercise, and it should be kept whole.
+
 ## Pass 143 — 2026-10-12 — an UNMAPPED row placed, and a connector this shelf called unbounded has 35 literal tools
 
 🟢 **The clone channel opened this pass, and it changes what this shelf can say about its own
