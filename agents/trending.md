@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 151 — the search finds four real repos and none of them is an education agent
+
+🆕 **`T84`.** 🟢 **4 of 4 clone-verified, 4 of 4 MIT.** 🔴 **0 of 4 are education-sector
+software**: three are AI-engineering curricula and one is a link list. 🔵 **The generic
+query returns the population that TEACHES AI, not the population that applies AI to
+education** — and those are two different things sharing one phrase.
+
+| repo | licence | shape | head | class |
+|---|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | **3 510** `.md` · **2 240** `.ipynb` · **15** code | **2026-10-12** `4c9a275` | **CURRICULUM** |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** | **2 269** code · **2 063** `.md` | **2026-10-11** `56c886c` | **CURRICULUM + CODE** |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** | **17** code · **17** `.md` · 44 paths | 2026-07-25 `da3f9df` | **TEACHING CODEBASE** |
+| 🆕 [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | 🟢 **MIT** | 🔴 **0 code** · 2 `.md` · 4 paths | 2026-03-01 `a80de73` | 🆕 **LINK LAYER** |
+
+🔵 **The symmetry with p150 is what makes this a finding rather than a complaint.** p150's
+`ACTION FK`: the two generic queries returned only **courses**, the one naming **`tutor`**
+returned five **repositories**. 🟢 **p151's generic query returns four repositories that ARE
+courses.** 🟢 **Both directions say: name the artefact, not the sector.**
+
+🔴 **Region: all four UNPLACED, deliberately.** The only evidence available without a
+placement run is the owner's name, and this shelf does not place a row from a name (`T67`,
+`T70`).
+
+🟢 **Where they DO belong**: a studio team's reading list.
+`microsoft/ai-agents-for-beginners` is MIT, updated today, and **2 240 notebooks** of
+agent-design material. 🔴 **It is not a starting point for a client's education product**,
+and this page says so in the same breath it recommends it.
+
+### 🟢 What else moved for the agent tier this week
+
+- 🟢 **`ahmedEid1/lumen` is GPL-3.0**, and the last stale `AGPL-3.0` on `agents/top.md` is
+  struck through. The census behind the correction is 🟢 **re-published**, not quoted.
+- 🔴 **Star counts are permanently `UNMEASURED`, and the reason is now exact**: this
+  session's repository SCOPE is `gmilano/globant-kb`, which governs **every** GitHub
+  channel — `curl`, `WebFetch` and the authenticated MCP server alike — while public
+  `git clone` is served by the git proxy. 🟢 **50 of 50 clones and 8 of 8 `npm pack` this
+  pass.** 🔵 A capability limit, not a research gap.
+- 🔴 **The PROMPT LAYER still has no probe** (`ACTION FS`, not reached), and 🆕 **the LINK
+  LAYER joins it** — two classes that every tool-surface instrument here reports as zero,
+  for different reasons.
+
 ## 2026-10-12 — pass 150 — the streak is BROKEN at ten, and the null was a query defect
 
 🟢 **`ACTION FK` ran the sweep and the falsifier did not fire.** 🔴 *"Refuted if the sweep

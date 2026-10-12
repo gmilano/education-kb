@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+🔴 **The agent search found four real repositories and NONE of them belongs on this page.**
+🟢 **4 of 4 clone-verified, 4 of 4 MIT** — and 4 of 4 are AI-engineering **curricula** or
+link lists rather than education-sector software. 🆕 **`T84`.**
+
+| repo | licence | shape | head | why NOT an agent row here |
+|---|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** (`LICENSE`, canonical MIT text) | **3 510** `.md` + **2 240** `.ipynb` + **15** code files | **2026-10-12** `4c9a275` | 🔵 A **curriculum**. The notebooks are the product; it teaches how to build agents and ships none for education |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** | **2 269** code + **2 063** `.md` | **2026-10-11** `56c886c` | 🔵 A **curriculum with code**. AI engineering, not education-sector |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** | **17** code + **17** `.md`, 44 paths | 2026-07-25 `da3f9df` | 🔵 A **teaching codebase** — agents from first principles on a local LLM |
+| 🆕 [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | 🟢 **MIT** | 🔴 **0 code files**, 2 `.md`, 4 paths | 2026-03-01 `a80de73` | 🆕 **LINK LAYER** — a curated list and nothing else |
+
+🔴 **Region: all four UNPLACED.** 🔵 **No placement channel was run on them** — the only
+available evidence would be the owner's name, and this shelf does not place a row from a
+name (`T67`, `T70`). 🟢 **Said rather than guessed.**
+
+### 🆕 The LINK LAYER, and why it is a class and not an empty row
+
+🆕 **`avinash201199/free-ai-agents-resources` ships zero code files.** 🔵 **Sibling of
+p150's PROMPT LAYER** (no server, no code — rules only): both read as **zero** on every
+tool-surface instrument on this shelf, 🔴 **for different reasons**, and an instrument that
+reports them identically is hiding the difference. 🟢 Recorded as a named class with its
+axis rather than filed as a blank.
+
+| class | ships | what a tool-surface probe returns | what it withholds |
+|---|---|---|---|
+| **PROMPT LAYER** (p150) | rules, no server, no code | zero | hold-back, answer-key and scope-binding rules |
+| 🆕 **LINK LAYER** (p151) | a list of other people's work | zero | nothing of its own — the licence governs the *list* |
+
+🔵 **The licence point worth making to a client**: `free-ai-agents-resources`' MIT grant
+covers **the list**. It says nothing about the licences of the things listed, which is
+`T80`'s shape (`ishands/upstack`: MIT over 3 `.js` while 64 `.md` that *are* the product are
+`CC-BY-SA-4.0`).
+
+### 🟢 `T84` — the symmetry with p150's `ACTION FK`, which is the useful part
+
+🔵 **p150 found this from the other side.** Its eight-query sweep: the two **generic**
+queries returned only courses; the one naming **`tutor`** returned five real repositories.
+🟢 **p151's generic query returns four real repositories that are courses.** 🟢 **Same
+lesson, both directions: name the education ARTEFACT — `tutor`, `moodle`, `canvas`, `sis`,
+`sigaa`, `guarani` — never the word "education".**
+
+### 🟢 The licence correction carried into this page
+
+🟢 **`ahmedEid1/lumen` is GPL-3.0**, and p151 struck through the last stale `AGPL-3.0` on
+this page (the p148 section at the agent-tier summary). 🔵 **Struck through rather than
+overwritten**, so the correction stays visible — and the census that produced it is now
+re-published rather than quoted:
+[`evidence/licence-census.2026-10-12-p151.tsv`](../evidence/licence-census.2026-10-12-p151.tsv).
+
+### 🔴 What this page still cannot do
+
+- 🔴 **No star count for any row, and the reason is now stated precisely.** `api.github.com`
+  answers and `/repos/{o}/{r}` and `/search/repositories` do not. 🔵 **The refusal is this
+  session's repository-SCOPE policy, not a transport failure** — it governs every GitHub
+  channel including the authenticated MCP server, while public `git clone` is served by the
+  git proxy. 🟢 **`UNMEASURED` is a capability limit, permanently, and not a research gap.**
+- 🔴 **The prompt-layer tier still has no probe** (`ACTION FS`, not reached), and the link
+  layer now joins it with the same problem.
+- 🔴 **`ACTION FJ` and `ACTION FG` were not reached for a third pass.** Named, not implied.
+
 ## Pass 150 — 2026-10-12 — the agent-search streak BREAKS at ten, and the shelf gains a tier it was not looking for
 
 🟢 **`ACTION FK` is discharged and its falsifier is silent.** 🔴 *"Refuted if the sweep again
@@ -312,7 +374,9 @@ agent tier were outside the denominator.
 
 🟢 **The other four agent rows are clean and two are permissive**: `mohaneesh-03/mcp-tutor`
 **MIT** and `nirholas/ai-tutor-mcp` **Apache-2.0**, both by shipped `LICENSE` body;
-`zijinz456/OpenTutor` **MIT**; `ahmedEid1/lumen` **AGPL-3.0**.
+`zijinz456/OpenTutor` **MIT**; `ahmedEid1/lumen` ~~**AGPL-3.0**~~ 🟢 **GPL-3.0**
+*(corrected p151, `ACTION FN` — the last stale copy of this value on this page. Struck
+through rather than overwritten, so the correction stays visible.)*
 
 ### 🔴 The ninth agent null
 

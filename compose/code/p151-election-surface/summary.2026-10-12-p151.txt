@@ -1,0 +1,3 @@
+subjects=7  source files scanned=1513  SILENT=7
+CONTROL: the same matcher fires on 7 of 7 licence BODIES
+ACTION FO falsifier (no row states an election anywhere): FIRED

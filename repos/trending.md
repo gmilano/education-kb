@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 151 — the body matcher is retired, and the question moves into `lib/`
+
+🟢 **`T77` is acted on, not just measured.** The three GNU rungs are gone from the two
+modules that owned a copy, and the licence-identity question now lives in
+[`compose/code/lib/licence_identity.py`](../compose/code/lib/licence_identity.py). 🔵 **This
+is `P263`'s rule being paid** — *while the question does not live in `lib/`, every new
+instrument reimplements it and chooses the bug again* — and 🆕 **`P40`** is the pattern that
+says so.
+
+| measurement | value |
+|---|---|
+| modules that actually owned a copy | **2**, not 3 — 🔵 p149's `identify_ext()` **delegates** to p147's `identify()` |
+| rows changing licence id, against the published census | 🔴 **4 of 52** |
+| …outside the GNU family | 🟢 **0** — `ACTION FN`'s falsifier SILENT |
+| GNU-family population over all **58** | **7**, by both surfaces — `ACTION FU`'s falsifier SILENT |
+| licence files carrying a readable TITLE line | 🟢 **39 of 39** — the replacement costs **zero coverage** |
+| p147's own regression suite, after the patch | 🟢 **13 of 13 pass** |
+| new offline tests this pass | 🟢 **146** across five modules |
+
+### 🔴 `ACTION FO` is REFUTED, and the refutation is the better result
+
+🔴 **1 513 source files across the 7 GNU rows: 0 elections.** No `or (at your option) any
+later version` header, no `-only` statement, no SPDX election. 🟢 **The positive control —
+the same matcher over the licence BODIES — fires 7 of 7**, so the null belongs to the rows.
+
+🆕 **`T81`: the election is inside the licence being interrogated.** GPL-3.0's appendix
+carries the recommended notice verbatim, so a body read returns `OR_LATER` for **every**
+verbatim GNU file — including one whose author elected `-only`. 🔵 **`T77`'s class, one layer
+down.**
+
+🔴 **Two instrument defects the authored fixtures caught BEFORE the sweep was published**,
+recorded because either would have produced a false null over 1 513 files:
+
+1. 🔴 **A comment prefix breaks the phrase.** A real GNU notice is wrapped in a block
+   comment, so the two halves are separated by `"\n * "`, which `\s*` does not cross.
+2. 🔴 **`license.svg` is not a licence.** `edwyj/ddl-killer` ships a badge image; an open
+   extension suffix counted it, and the control reported *"7 of 8"* — one of the eight was a
+   picture.
+
+### 🟢 `ACTION FQ`: `P240` resolves, and there are THREE identifier spaces
+
+🟢 **`P240` is not dangling** — `compose/code/p239-table-integrity/README.md:17`, the
+region-column completeness axis, allocated at pass 78 after being born cited at pass 39.
+🆕 **`T82`**: this shelf has **patterns** (41), **module axes** (23) and **pass findings**
+(174 passes nameable), all sharing one `P` prefix, and **four** of its ten content files are
+append-only history.
+
+| scope | cited | dangling |
+|---|---|---|
+| the 6 pages rewritten each pass | 48 | 🟢 **0** |
+| …plus `intel/open-gaps.md` | 354 | 🔴 **260** |
+| …plus the trending pages and the README | 745 | 🔴 **685** |
+
+🔵 **Every one of the 260 is a previous-generation id**, from before the **2026-10-06 reset**
+restarted the pattern space at `P1`. 🟢 **The gate found one real defect in p151's own
+writing**: `P263`, this KB's *"put the question in `lib/`"* rule, had been cited in prose
+since pass 88 and allocated nowhere. 🟢 **Now allocated, in `lib/README.md`.**
+
+### 🟢 `ACTION FF`: `P35`'s data-layer gap is closed by two lines
+
+🟢 **`zavora-ai/mcp-student-records`**: `pub store` → `store`, plus a `pub fn new`, plus the
+one call site. 🟢 **p149's bypass test stops COMPILING** (`E0616` ×2, `E0451` on the struct
+literal) while 🟢 **the repository's own 24 tests still pass**. 🔴 **Residual: the in-crate
+surface** (`T83`), held by a CI gate rather than by the type system.
+
+### 🔴 The channel, stated once
+
+🟢 **`git clone` 50 of 50 · `npm pack` 8 of 8 · `cargo fetch` + `cargo test` both work ·
+146 new offline tests.** 🔴 **`api.github.com/repos/…` and `/search/…` refused; every
+primary-legal-text and UNESCO host 403 at CONNECT.** 🔵 **The cause is this session's
+repository SCOPE (`gmilano/globant-kb`), which governs every GitHub channel including the
+authenticated MCP server** — so star counts are `UNMEASURED` by policy, permanently, and
+public `git clone` works because the git proxy serves public reads.
+
 ## 2026-10-12 — pass 150 — p149's channel upgrade is WITHDRAWN: the API host answers and serves nothing
 
 🔴 **`P150-A` — p149 published that the GitHub API is open here, and it is not.** 🔵 **The

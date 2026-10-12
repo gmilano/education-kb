@@ -1,0 +1,103 @@
+# p151 — ACTION FN. The 58-row licence census RE-PUBLISHED after the body matcher's GNU
+# rungs were retired (T77). Instrument: compose/code/p145-licence-census/licence_census.py
+# at this pass's HEAD, which now imports compose/code/lib/licence_identity.py.
+#
+# WHAT CHANGED, against result.2026-10-12-p145.tsv (52 rows, the 44 connectors + 8 npm):
+#   4 of 52 rows change licence id. 0 outside the GNU family. ACTION FN's falsifier is
+#   SILENT. Grant classes unchanged on all 52.
+#     Agso-o_sigaa-calendar       AGPL-3.0 -> GPL-3.0
+#     despedite_siu-guarani       AGPL-3.0 -> GPL-3.0
+#     mhlavac_edupage-mcp         AGPL-3.0 -> GPL-3.0
+#     qxbao_qldt-hanu-mcp         LGPL     -> GPL-2.0
+#   The fifth T77 row, ahmedEid1_lumen (AGPL-3.0 -> GPL-3.0), is in the agent tier and so
+#   is not one of the 52; it is corrected here. Five corrections in total, and they are
+#   exactly the five T77 named.
+#
+# THE GNU-FAMILY POPULATION, measured over all 58 (ACTION FU, falsifier SILENT):
+#   7 at the FILE surface, by BOTH surfaces independently. One more row, the npm package
+#   moodle-mcp-server-aql-0.1.7, DECLARES AGPL-3.0 in package.json with no licence file,
+#   so it is an eighth GNU-family row that T77 structurally cannot reach: there is no
+#   body to mis-read. 8 GNU-family ids across 58 rows, 7 of them read from a body.
+#
+# COVERAGE, so the fix is not a trade: 39 of 39 licence files on this shelf carry a
+#   readable title line. The title surface costs ZERO coverage against the body matcher
+#   it replaces.
+#
+# 🔴 ONE FIGURE ON THIS ARTEFACT IS INSTRUMENT-DEPENDENT AND IS NOT THE SHELF'S FIGURE.
+#   Strict-unlicensed reads 10 here and 8 on p149-common-title-licence's 58-row result.
+#   The two rows are eugeborzone/Auto_Grade_Guarani and frjunioalves/suap-mcp, both
+#   Portuguese-language. p145's README surface is the English-only `licen[cs]e` pattern,
+#   which T63 proved cannot match `Licença`/`Licencia`; p147's EXTENDED_README can, and
+#   reads both as README_ONLY. 8 IS THE CORRECT FIGURE. The full reconciliation across
+#   three instruments, with every difference attributed:
+#       class         p149(58)   after p150's ACTION FE   this artefact   reconciled
+#       FILE              39              39                  39             39
+#       PKG_ONLY           4               7                   7              7
+#       README_ONLY        7               4                   2              4
+#       NONE               8               8                  10              8
+#   p149's PKG/README split is the inverted grant ladder p150's ACTION FE fixed; this
+#   artefact's NONE is the English-only README surface. Nothing is unexplained.
+#   The README-heading question belongs in lib/ for the same reason the licence-identity
+#   question now does (P263). Registered as ACTION FW for p152 — NOT fixed in the pass
+#   that measured it (ACTION EU's rule).
+#
+# tiers: github-50 = the 44 connector rows + the 6 agent-tier rows. npm-8 = npm pack.
+subject	tier	grant	licence	evidence
+Agso-o_sigaa-calendar	github-50	FILE	GPL-3.0	LICENSE
+ArnaudGuiovanna_tutor-mcp	github-50	FILE	MIT	LICENSE
+BetterSEQTA_BetterSEQTA-Plus	github-50	FILE	MIT	LICENSE
+BetterSEQTA_DesQTA	github-50	FILE	MIT	LICENSE
+HAL-XP_mcp-pronotes	github-50	FILE	MIT	LICENSE
+Haris0059_ibu-mcp	github-50	FILE	MIT	LICENSE
+MartinSA04_ntnu-mcp	github-50	FILE	MIT	LICENSE
+MatheusMach_QuantoFalta	github-50	NONE	-	-
+NiccoloSalvini_mcp-blackboard-ucsc	github-50	FILE	MIT	LICENSE
+P1ckle3_blackboard-mcp	github-50	NONE	-	-
+Piyushtanwani_DAU-buddy	github-50	NONE	-	-
+RubsNeto_SigaaUI	github-50	FILE	MIT	LICENSE
+SIU-Toba_docker-guarani	github-50	NONE	-	-
+SleepyPandas_UofT-MCP	github-50	FILE	MIT	LICENSE
+ahmedEid1_lumen	github-50	FILE	GPL-3.0	LICENSE
+alejooroncoy_campus-cli	github-50	FILE	ISC	LICENSE
+barneslardo_sis-demo	github-50	README_ONLY	MIT	README
+chenning42_iserv-mcp	github-50	FILE	MIT	LICENSE
+despedite_siu-guarani	github-50	FILE	GPL-3.0	LICENSE
+divyarthjain_vtop-bhopal-mcp	github-50	FILE	Apache-2.0	LICENSE
+edwyj_ddl-killer	github-50	FILE	AGPL-3.0	LICENSE
+eugeborzone_Auto_Grade_Guarani	github-50	NONE	-	-
+fabrica-de-inovacao_expeditto	github-50	FILE	AGPL-3.0	LICENSE
+fakelag28_vsuet-timetable-api-mcp	github-50	FILE	MIT	LICENSE
+felipedias-ie_blackboard-mcp	github-50	FILE	MIT	LICENSE
+filipecalegario_auto-sigaa	github-50	FILE	MIT	LICENSE
+frjunioalves_suap-mcp	github-50	NONE	-	-
+hesham0-0nasser_tutor-lms-mcp	github-50	NONE	-	-
+ink-waffle_sisu-mcp	github-50	PKG_ONLY	MIT	package.json
+joojdev_academic-tracker-mcp	github-50	FILE	MIT	LICENSE
+juliancasaburi_siu-guarani-promedio-extension	github-50	FILE	MIT	LICENSE
+karkarkins_BlackboardAssistantMCP	github-50	NONE	-	-
+krzysztofbury_librus-mcp	github-50	FILE	MIT	LICENSE
+luca-dupont2_mcgill-vsb-mcp	github-50	FILE	MIT	LICENSE
+mhlavac_edupage-mcp	github-50	FILE	GPL-3.0	LICENSE
+mohaneesh-03_mcp-tutor	github-50	FILE	MIT	LICENSE
+nirholas_ai-tutor-mcp	github-50	FILE	Apache-2.0	LICENSE
+nitsuah_bb-mcp	github-50	FILE	MIT	LICENSE
+oliverhruby_edupage-mcp	github-50	FILE	MIT	LICENSE
+qxbao_qldt-hanu-mcp	github-50	FILE	GPL-2.0	LICENSE
+ruud0_aula-virtual-mcp	github-50	NONE	-	-
+sandraschi_classroom-mcp	github-50	FILE	MIT	LICENSE
+saytooyum_AI-Based-Timetable-Generation-System	github-50	FILE	MIT	LICENSE
+skhdemo_uoft-quercus-mcp	github-50	FILE	MIT	LICENSE
+st22209_Parent-Portal	github-50	FILE	MIT	LICENSE
+trindadetiago_sigaa-caiu	github-50	FILE	MIT	LICENSE
+yourssu_soongpt-plugin	github-50	FILE	MIT	LICENSE
+zavora-ai_mcp-student-records	github-50	FILE	Apache-2.0	LICENSE
+zijinz456_OpenTutor	github-50	FILE	MIT	LICENSE
+zyx1121_nycu	github-50	FILE	MIT	LICENSE
+_imazhar101_mcp-canvas-server-2.1.3	npm-8	README_ONLY	MIT	README
+_ink-waffle_moodle-mcp-0.2.0	npm-8	PKG_ONLY	MIT	package.json
+_n35da_brightspace-mcp-0.4.0	npm-8	NONE	-	-
+_owen-x-tech_canvas-mcp-1.1.0	npm-8	PKG_ONLY	MIT	package.json
+canvas-mcp-server-2.2.3	npm-8	PKG_ONLY	MIT	package.json
+eth-moodle-mcp-1.3.3	npm-8	PKG_ONLY	MIT	package.json
+mcp-canvas-lms-1.0.5	npm-8	PKG_ONLY	MIT	package.json
+moodle-mcp-server-aql-0.1.7	npm-8	PKG_ONLY	AGPL-3.0	package.json

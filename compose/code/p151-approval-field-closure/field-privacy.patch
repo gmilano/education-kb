@@ -1,0 +1,28 @@
+--- a/src/server.rs	2026-10-12 13:50:15.877062540 +0000
++++ b/src/server.rs	2026-10-12 13:57:54.560583468 +0000
+@@ -97,7 +97,13 @@
+ // ── server ──────────────────────────────────────────────────────────────
+ 
+ #[derive(Clone)]
+-pub struct StudentServer { pub store: Arc<StudentStore> }
++pub struct StudentServer { store: Arc<StudentStore> }
++
++impl StudentServer {
++    /// The only way to build a server from a store. The field is private, so the
++    /// store is reachable only through the approval-gated tool router.
++    pub fn new(store: Arc<StudentStore>) -> Self { Self { store } }
++}
+ 
+ #[tool_router]
+ impl StudentServer {
+--- a/src/main.rs	2026-10-12 13:50:15.877062540 +0000
++++ b/src/main.rs	2026-10-12 13:57:54.560916487 +0000
+@@ -11,7 +11,7 @@
+         )
+         .init();
+     let store = Arc::new(StudentStore::new());
+-    let server = StudentServer { store };
++    let server = StudentServer::new(store);
+     let service = server.serve(stdio()).await?;
+     service.waiting().await?;
+     Ok(())

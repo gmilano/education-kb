@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+🟢 **The 58-row licence census is RE-PUBLISHED**, the body matcher is retired in both
+modules that owned a copy, and 🟢 **the GNU-family population is confirmed at SEVEN over all
+58 subjects** rather than the 28 trees p150 could reach.
+
+| measurement | value |
+|---|---|
+| subjects walked | **58** — 🟢 **50 of 50 `git clone`**, 🟢 **8 of 8 `npm pack`** |
+| subjects shipping a licence FILE | **39** |
+| of those, carrying a readable TITLE line | 🟢 **39 — all of them** |
+| GNU-family population, by the title surface | **7** |
+| …by the retired body matcher, as a population | **7** |
+| rows where the two surfaces DISAGREE | 🔴 **5** — exactly the five `T77` named |
+| rows changing licence id against the published census | 🔴 **4 of 52** |
+| …of those, outside the GNU family | 🟢 **0** — `ACTION FN`'s falsifier is SILENT |
+| rows with more than one licence file | **0** |
+
+🟢 **The re-published artefact:**
+[`evidence/licence-census.2026-10-12-p151.tsv`](../evidence/licence-census.2026-10-12-p151.tsv).
+
+### 🟢 The five corrections, now in the census and not only beside it
+
+| row | published | corrected |
+|---|---|---|
+| `Agso-o/sigaa-calendar` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| `despedite/siu-guarani` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| `mhlavac/edupage-mcp` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| `ahmedEid1/lumen` *(agent tier, not in the 52)* | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| `qxbao/qldt-hanu-mcp` | 🔴 `LGPL` | 🟢 **GPL-2.0** — wrong family **and** no version |
+
+🔵 **`mhlavac/edupage-mcp` is the row that makes the title WINDOW load-bearing**: its
+`LICENSE` opens with *"Copyright (c) 2026 Martin Hlavac"* and names the GNU licence on the
+next non-blank line. 🔴 **A one-line window would read it as having no licence at all** — so
+the window's width is now asserted against this row's shape in the suite.
+
+### 🟢 The coverage result, which the action did not ask for and matters more
+
+🔴 **A narrower surface that answers less often is a trade, not a fix.** 🟢 **39 of 39
+licence files on this shelf carry a readable title line**, so retiring the body matcher
+costs **zero coverage**. 🔵 That is why the replacement can be shipped rather than offered
+as an option.
+
+### 🔴 The eighth GNU-family row, and why `T77` cannot touch it
+
+🔴 **`moodle-mcp-server-aql-0.1.7` declares `AGPL-3.0` in `package.json` and ships no
+licence file.** It is GNU-family at the **declaration** layer, where there is no body to
+mis-read. 🟢 **8 GNU-family ids across 58 rows; 7 of them read from a body.** 🔵 Stated now
+so it is not later found as a correction.
+
+### 🔴 A figure on the re-published census that is NOT this shelf's figure
+
+🔴 **Strict-unlicensed reads 10 on the new artefact and 8 on `p149-common-title-licence`'s
+58-row result.** The two rows are **`eugeborzone/Auto_Grade_Guarani`** and
+**`frjunioalves/suap-mcp`**, both Portuguese-language. 🔵 **`p145`'s README surface is the
+English-only `licen[cs]e` pattern that `T63` proved cannot match `Licença`/`Licencia`**;
+p147's extended matcher can, and reads both as `README_ONLY`. 🟢 **8 is the correct figure.**
+The full reconciliation, with every difference attributed:
+
+| class | p149 (58) | after p150's `ACTION FE` | this artefact | 🟢 reconciled |
+|---|---|---|---|---|
+| `FILE` | 39 | 39 | 39 | **39** |
+| `PKG_ONLY` | 4 | 7 | 7 | **7** |
+| `README_ONLY` | 7 | 4 | 🔴 **2** | **4** |
+| `NONE` | 8 | 8 | 🔴 **10** | **8** |
+
+🟢 **Nothing is unexplained**: the `PKG`/`README` split is the inverted grant ladder p150
+fixed, and the `NONE` difference is the English-only README surface. 🔵 **`ACTION FW`** moves
+the README-heading question into `lib/` for the same reason the licence-identity question
+now lives there (`P40`), and 🔵 **it is deliberately NOT fixed in the pass that measured it**
+(`ACTION EU`'s rule).
+
+### 🟢 Where the licence question now lives
+
+🟢 **[`compose/code/lib/licence_identity.py`](../compose/code/lib/licence_identity.py)** —
+imported by `p145-licence-census` and `p147-licence-language`. 🔵 **p149's `identify_ext()`
+DELEGATES to p147's `identify()`**, so p150's *"three published copies"* were two copies and
+one delegation, and two edits fixed all three. 🔴 **`retired_identify()` is kept, and kept
+wrong**, so the defect can be reproduced rather than asserted. **47 tests.**
+
 ## Pass 150 — 2026-10-12 — this shelf cannot see a GPL row, and has published none in 150 passes
 
 🔴 **`T77`. Five of seven GNU-family rows on this shelf carry the wrong licence

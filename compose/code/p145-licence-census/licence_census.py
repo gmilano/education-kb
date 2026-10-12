@@ -29,6 +29,13 @@ import os
 import re
 import sys
 
+# 🟢 `ACTION FN` / `P263`: the licence-identity question lives in `lib/` and is imported,
+# not copied. This is the import that stops the fourth copy from being written.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                os.pardir, "lib"))
+import licence_identity as _LI  # noqa: E402
+
+
 LICENCE_NAMES = re.compile(
     r"^(LICEN[CS]E|COPYING|UNLICEN[CS]E|MIT-LICEN[CS]E|LICENSE-MIT|LICENSE-APACHE)"
     r"(\.(md|txt|rst|html))?$", re.IGNORECASE)
@@ -40,9 +47,11 @@ SPDX = re.compile(
 
 BODY_HINTS = [
     (re.compile(r"Apache License.*Version 2\.0", re.S | re.I), "Apache-2.0"),
-    (re.compile(r"GNU AFFERO GENERAL PUBLIC LICENSE", re.I), "AGPL-3.0"),
-    (re.compile(r"GNU LESSER GENERAL PUBLIC LICENSE", re.I), "LGPL"),
-    (re.compile(r"GNU GENERAL PUBLIC LICENSE", re.I), "GPL"),
+    # 🔴 **The three GNU rungs that stood here are RETIRED** (`T77`, `ACTION FN`, pass 151).
+    # They were applied with `rx.search(body)` over the whole licence text, and GPL-3.0's own
+    # section 13 is titled "Use with the GNU Affero General Public License" — so every
+    # verbatim GPL-3.0 file matched the AGPL rung first. 🟢 The GNU question is now asked once,
+    # on the TITLE line, in `lib/licence_identity.py`.
     (re.compile(r"Mozilla Public License", re.I), "MPL-2.0"),
     (re.compile(r"Permission is hereby granted, free of charge", re.I), "MIT"),
     (re.compile(r"Redistribution and use in source and binary forms", re.I), "BSD"),
@@ -61,10 +70,20 @@ def read(path, limit=200000):
 
 
 def identify(text):
-    """The licence a file's BODY is, preferring body text over any identifier in it."""
+    """The licence a file's body is — with the GNU family read from its TITLE LINE.
+
+    🟢 `ACTION FN`, pass 151. The non-GNU body hints are unchanged and are tried first,
+    so the 34 non-GNU rows of the 58-row census are bit-identical to what this module
+    published before. 🔴 The GNU rungs are gone: a GNU licence is identified by
+    `lib/licence_identity.title_spdx`, which reads only the title line and therefore
+    cannot be fooled by the sibling licence every GNU text names in its own body.
+    """
     for rx, name in BODY_HINTS:
         if rx.search(text):
             return name
+    gnu = _LI.title_spdx(text)
+    if gnu and _LI.GNU_FAMILY.match(gnu):
+        return gnu
     m = SPDX.search(text)
     return m.group(1) if m else "UNIDENTIFIED"
 

@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+⏱️ **Fourteenth pass of this date.** 🟢 **Seven of p150's twelve pre-registered actions
+reached, five not** — and the five are named. 🟢 **`ACTION FF` is DISCHARGED after three
+passes on the register**: the worst open item on this shelf turns out to be two lines of the
+subject's own code. 🔴 **Two actions were REFUTED exactly as specified**, and both
+refutations are worth more than a discharge would have been.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION FF`** | 🟢 **`P35`'s data-layer gap CLOSED for consumers, and the residual named** | `pub store` → `store` + `pub fn new`. 🟢 p149's bypass **FAILS TO COMPILE** (`E0616` ×2, `E0451`); 🟢 **the repo's own 24 tests still pass.** 🆕 **`T83`** |
+| 🟢 **`ACTION FN`** | 🟢 **The body matcher is RETIRED and the census re-published** | 🔴 **4 of 52** rows change id, 🟢 **0 outside the GNU family.** 🔵 Two copies and one **delegation**, not three copies. 🆕 **`P40`** |
+| 🟢 **`ACTION FU`** | 🟢 **`T77`'s population is SEVEN over all 58, not 28 trees** | 7 by both surfaces · 5 disagreeing · 🟢 **39 of 39 licence files carry a title line, so the fix costs ZERO coverage** |
+| 🔴 **`ACTION FO`** | 🔴 **REFUTED — 0 of 7 rows state an election anywhere** | **1 513** files, **0** headers, **0** SPDX elections — 🟢 **control fires 7 of 7 on the BODIES.** 🆕 **`T81`** |
+| 🟢 **`ACTION FQ`** | 🟢 **DISCHARGED — and `P240` was never dangling** | It resolves at `p239-table-integrity/README.md:17`. 🆕 **Three identifier spaces, FOUR append-only pages.** 🆕 **`T82`** |
+| 🔴 **`ACTION FR`** | 🔴 **REFUTED — the register had NO single location, and now it has one** | **55** defined · 🔴 **17 defined NOWHERE** (`T39` cited **24×**) · 3 append-only-only · 🟡 5 candidates, collision count **0** with the limit stated |
+| 🟢 **`ACTION FV`** | 🟢 **DISCHARGED — Vietnam's three dates are ONE TIERED REGIME** | Effect **2026-08-15** · **2027-03-01** · **2027-09-01**. 🔴 **p148's effect date WITHDRAWN** |
+| 🆕 🔴 `P151-S` | 🆕 🔴 **The API refusal is a repository SCOPE policy, not a transport failure** | It governs **every** GitHub channel — `curl`, `WebFetch`, the authenticated MCP server — while public `git clone` is served. 🟢 **Star counts `UNMEASURED` by policy, permanently** |
+| 🆕 🔴 `P151-T` | 🆕 🔴 **The agent search finds four real repos and NONE belongs on the agents page** | 4 of 4 clone-verified, 4 of 4 **MIT**, 🔴 **0 of 4 education-sector.** 🆕 **LINK LAYER** class. 🆕 **`T84`** |
+| 🆕 🟢 `P151-L` | 🆕 🟢 **LATAM's governance gap gains a SECOND instrument** | DEC × Tec de Monterrey: **92%** students · **79%** faculty · 🔴 **30%** with a published policy, against IESALC's **26%** |
+| 🆕 🔴 `P151-E` | 🆕 🔴 **EMEA and APAC both return ZERO education-specific sources** | And EMEA's one transferable figure is MIS-SCOPED: CompTIA's **94%** is a **US-respondent** survey on EMEA pages |
+| 🆕 🔴 `P151-M` | 🆕 🔴 **Three publishers disagree about a year that has ENDED** | 2025 base: **$6.4B** · **$7.52B** · **$8.3B** — a **30%** spread. 🔴 Fourth pass with no quotable figure |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **One shared library and four new instruments — 146 tests, all passing, all offline
+  with authored fixtures**: [`lib/licence_identity`](compose/code/lib/licence_identity.py)
+  (**47**), [`p151-gnu-population-reach`](compose/code/p151-gnu-population-reach/README.md)
+  (**31**), [`p151-election-surface`](compose/code/p151-election-surface/README.md) (**24**),
+  [`p151-identifier-spaces`](compose/code/p151-identifier-spaces/README.md) (**25**),
+  [`p151-approval-field-closure`](compose/code/p151-approval-field-closure/README.md) (**19**).
+- 🟢 **The licence-identity question now lives in `lib/` and is imported, not copied** —
+  `P263`'s rule, written at pass 88 and paid at pass 151. 🟢 **p147's own 13 tests still
+  pass after the patch.**
+- 🟢 **A patch to a third-party crate, with both halves measured**: the bypass test that
+  passes on HEAD and does not compile after, and the repository's own suite green on both.
+- 🟢 **Three committed evidence files**: the
+  [re-published 58-row census](evidence/licence-census.2026-10-12-p151.tsv), the
+  [thesis register](evidence/thesis-register.2026-10-12-p151.tsv) — in one place for the
+  first time — and the census summary.
+- 🟢 **Two new compose patterns**: **`P40`** (ask a licence question once; put it in `lib/`)
+  and **`P41`** (declare the identifier space and the scope before claiming a citation
+  dangles). 🟢 **And two axes allocated in `lib/README.md`** — `P263` and `P264` — which had
+  been cited in prose for sixty-three passes with no allocation anywhere.
+- 🆕 **Four theses, `T81`–`T84`**, and 🔴 **two of this shelf's own published values
+  withdrawn**: Vietnam's effect date and the framing of the API refusal.
+- 🟢 **A new artefact class, the LINK LAYER** — 0 code files — sibling to p150's prompt layer.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **LATAM** | 🟢 **a SECOND governance instrument** | DEC × Tec de Monterrey vs UNESCO IESALC: **30%** vs **26%** governance on different samples and wordings. 🟢 **Not averaged.** 🔵 **The two gap ratios — 3.1 : 1 and 3.3 : 1 — land within 7%**, the most robust number of the four. 🆕 Chile leads on policy; Brazil and Colombia have strategies with no education rules; Mexico's are non-binding. 🆕 **The IDB's ILIA index** covers 19 countries |
+| **APAC** | 🟢 **Vietnam RECONCILES**, 🔴 **and the region returns no education figure** | Three dates are three rungs of one transitional ladder. 🔴 **A later-launched system has the EARLIER deadline.** 🔴 The regional sweep returned enterprise material and four **corporate L&D** vendors — TCS × Pearson, LearnUpon, Alteryx, NIIT MTS — not formal education |
+| **North America** | 🔴 **the FEDERAL layer turns against the state layer** | A December executive order directs the attorney general to challenge conflicting state AI laws. 🔴 **A Boston Public Schools graduation mandate could not be confirmed and is carried as UNCONFIRMED, not as a figure** |
+| **EMEA** | 🔴 **the education-specific query returns NOTHING, and it is written down** | Zero education regulators, ministries or vendors. 🔴 **CompTIA's 94% is a US-respondent survey published on EMEA pages** — named so it is never lifted onto this page. 🟢 The EU AI Act clock remains the only EMEA instrument here with a date |
+| **Global** | 🔴 **the market spread is now INTERNAL to a completed year** | **$6.4B / $7.52B / $8.3B** for 2025. 🔴 **And no open-source vendor is named in any market source, fifth pass.** 🔵 That gap is this KB's product |
+
+### 🔜 Pre-registered for p152
+
+🔵 **Thirteen actions, in [`intel/open-gaps.md`](intel/open-gaps.md).** 🟢 **`FG` and `FJ` are
+FIRST and SECOND** because they are unreached for a third pass. Then `FH` (the three-surface
+gate, which p151's field gate does **not** satisfy), `FS` (widened to separate the prompt
+layer from the link layer), `FT` (with a written prediction that it will be refused), `FW`
+(the README-heading question into `lib/`), `GA` (the election over the six verticals), `GB`
+(the sealed-token patch for `T83`), `FY` (the thesis register's `FIRST`/`REVISIT` grammar),
+`GC` (the 17 undefined theses, `T39` first), `FX` (a `lib/` import test), `FZ` (a
+generation boundary in the dangling gate) and `GD` (the five suites that are red at HEAD). 🔵 **No action is registered against the GitHub
+API, by design** (`P151-S`).
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **Five of twelve actions were not reached** — `FG`, `FH`, `FJ`, `FS`, `FT`. 🔵 **The
+  cause is budget allocation, not difficulty**: `ACTION FF` meant cloning the subject,
+  patching it, resolving a git-pinned Rust SDK and running `cargo test` four times across
+  two trees. 🟢 **It was worth it and the trade is stated.** 🔴 **`FG` and `FJ` unreached for
+  a third consecutive pass is the worst item here.**
+- 🔴 **This pass gated an identifier space in the same pass it extended it.** p151 added two
+  patterns and two axes, taking the spaces from 39/21 to **41/23**, so the gate's green
+  reading is 🟡 **green on a page this pass wrote.** 🟢 **It did catch one real defect in that
+  same prose** (`P263`, unallocated since pass 88), which is the only evidence that it would
+  have caught another.
+- 🔴 **`ACTION FH` is NOT discharged by `ACTION FF`'s gate**, and the overlap is stated so
+  the two are never conflated: p151's gate pins the field, the constructor and the in-crate
+  surface; `FH` asks for router = manifest = macro.
+- 🔴 **The election was NOT measured on the six vertical platforms** — and four of them are
+  large copyleft codebases, exactly the kind that *do* carry per-file headers. 🟢 **`T81` is
+  therefore NOT claimed for `moodle`, `edx-platform`, `canvas-lms` or `bigbluebutton`.**
+  🔵 **`ACTION GA`.**
+- 🔴 **The re-published census carries a strict-unlicensed figure of 10 where this shelf's
+  figure is 8**, because `p145`'s README surface is English-only (`T63`). 🟢 **Both numbers
+  are on the artefact with the full three-instrument reconciliation**, and the fix is
+  deliberately deferred (`ACTION EU`'s rule). 🔵 **`ACTION FW`.**
+- 🔴 **No primary legal text was read, for a fourth consecutive pass.** Vietnam's decision
+  was read through a publisher's quoted extract; the host is 403 at CONNECT. 🟢 **Stated
+  once, NOT re-registered.**
+- 🔴 **Every regional figure this pass is secondary**, including both LATAM surveys. 🟢 Said
+  once at page level rather than row by row.
+- 🔴 **FIVE committed suites on this shelf are RED at HEAD, and p151 reports them rather than
+  repairing them.** 150 of 155 pass. 🔵 **Three are stale generation-1 assertions**
+  (`p351`: 219 vs 254 · `p356`: 8 vs 15 · `p598`), 🔴 **one does not terminate**
+  (`p471`) and 🔴 **one needs a native dependency** (`p213`, `_cffi_backend`).
+  🔵 **That is `T82` one layer further out: the 2026-10-06 reset invalidated committed
+  test ASSERTIONS, not only citations, and nobody named it for thirteen passes.**
+  🟢 **Established by running the five against a pristine clone of HEAD**, so the
+  authorship is measured and not assumed. 🔵 **`ACTION GD`.**
+- 🔴 **Four new agent-search rows were found and none was placed by region.** 🟢 **UNPLACED
+  rather than guessed from an owner's name** (`T67`, `T70`).
+
 ## Pass 150 — 2026-10-12
 
 ⏱️ **Thirteenth pass of this date.** 🔴 **Five of p149's nine pre-registered actions reached,

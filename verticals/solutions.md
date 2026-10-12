@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+🟢 **The six vertical platforms are the negative control that bounds `T77`, and p151 keeps
+them in that role** — their licences were known independently of this shelf's matcher, and
+p150 re-measured **6 of 6 correct**. 🔵 **p151 changes nothing about them and says so**
+rather than re-stating six values as if they had moved.
+
+| platform | licence | why it is the control |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | 🟢 a plain GPL file — the exact shape the retired matcher called `AGPL-3.0` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 🟢 the true positive |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 🟢 second true positive |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 🟢 permissive, offline-first — still the one row a studio can build on without a copyleft conversation |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | 🟢 the third GNU family, which the title surface must separate from the other two |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 🟢 non-GNU, and the reason `ECL-2.0` is now a title rung in `lib/` |
+
+### 🔴 What p151 did NOT measure on the verticals, stated so it is not assumed
+
+🔴 **The `-only` / `-or-later` election was NOT measured on these six.** `ACTION FO` ran over
+the **7 connector/agent GNU rows** and found **0 elections in 1 513 files**; 🔴 **the
+verticals were not in that population.** 🔵 **So `T81` is NOT claimed for `moodle`,
+`edx-platform`, `canvas-lms` or `bigbluebutton`** — four large, long-lived copyleft
+codebases, which are exactly the kind that *do* often carry per-file headers. 🟢 **An
+engagement that forks one of them must read its election directly, and the instrument to do
+it is committed**:
+
+    python3 compose/code/p151-election-surface/election.py <clones-dir> moodle_moodle …
+
+🔵 **This is the highest-value unmeasured thing on this page**, and it is registered rather
+than guessed: 🔵 **`ACTION GA`**.
+
+### 🟢 Where the licence question now lives, for every page including this one
+
+🟢 **[`compose/code/lib/licence_identity.py`](../compose/code/lib/licence_identity.py)**,
+with the three GNU title rungs, the `ECL-2.0` rung these verticals required, and the AGPL
+§13 clause as an independent second surface. **47 tests.** 🔵 **`P40`** is the pattern that
+says why it lives there and not in the next instrument.
+
 ## Pass 150 — 2026-10-12 — the verticals are RE-MEASURED, and they are the negative control that bounds `T77`
 
 🟢 **Six platform licences read from the tree this pass**, by sparse clone of the licence file

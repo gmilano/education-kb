@@ -1,0 +1,96 @@
+# p151 — ACTION FR. THE THESIS REGISTER, in ONE place for the first time.
+# Grammar: a DEFINITION is a heading or a table row whose FIRST cell is the
+# bare id and whose statement does not open with a revisit verb. A REVISIT is
+# the same shape with HELD/STRENGTHENED/DISCHARGED/WITHDRAWN/… — legitimate,
+# and the distinction the pattern gate has had since p150 and the thesis
+# register has not.
+# Scope: the 10 content files. APPEND-ONLY pages (agents/trending.md,
+# repos/trending.md, README.md, intel/open-gaps.md) are read but marked, so a
+# thesis defined only in history is visible as such.
+#
+# APPEND_ONLY_DEFINITION   3
+# DEFINED                  55
+# MULTI_STATEMENT          5
+# NO_DEFINITION            17
+# T1..T80
+id	state	cited	definitions	revisits	location	statement
+T1	DEFINED	43	3	0	intel/trends.md:1409	The governance gap is the market
+T2	DEFINED	3	1	0	intel/trends.md:1420	Mandates with hard dates replaced guidance
+T3	MULTI_STATEMENT	14	2	0	intel/trends.md:449	what is resolved and what is not
+T4	DEFINED	6	1	0	intel/trends.md:1456	Supply is extraordinarily concentrated, and one repo is the whole mid-market
+T5	DEFINED	1	1	0	intel/trends.md:1483	Connector effort has pooled on Canvas, and fork swarms inflate the apparent supply
+T6	DEFINED	4	1	0	intel/trends.md:1502	Licence risk is concentrated exactly where the traction is
+T7	DEFINED	4	1	0	intel/trends.md:1516	The measurement layer exists and cannot be shipped *(corrected by p131)*
+T8	DEFINED	1	1	0	intel/trends.md:1543	Offline and low-bandwidth stopped being an edge case
+T9	DEFINED	9	1	0	intel/trends.md:1578	Administrative automation is the most-cited driver and the least-served
+T10	DEFINED	33	1	0	intel/trends.md:1613	The demand-side channel is a dating channel, not a fact channel *(corrected by p132)*
+T11	DEFINED	7	1	0	intel/trends.md:1717	The connector layer is being built bottom-up by students, not by vendors *(new, p132)*
+T12	DEFINED	9	1	0	intel/trends.md:1764	The sanctioned-integration layer is mature, permissive and agent-less *(new, p134)*
+T13	DEFINED	34	1	0	intel/trends.md:1845	The credential blocker was solved and replaced by an identity-assertion blocker *(new, p135)*
+T14	DEFINED	17	1	0	intel/trends.md:1913	Licence metadata is systematically wrong in the direction of institutional code *(new, p135)*
+T15	DEFINED	15	1	0	intel/trends.md:1964	A licence verdict belongs to a LINEAGE, not to a slug *(new, p136)*
+T16	DEFINED	21	1	0	intel/trends.md:1368	The first binding education-AI conformity regime in force is Vietnam's, not the EU's *(new, p137)*
+T17	DEFINED	24	1	0	intel/trends.md:1240	a licence identifier is not a licence, and a third of a published tier proves it
+T18	DEFINED	21	1	0	intel/trends.md:1173	a licence cell describes a tree; only a per-file notice survives a partial copy, and in THIS tier 1 in 21 has one
+T19	NO_DEFINITION	0	0	0	-	-
+T20	NO_DEFINITION	5	0	0	-	-
+T21	DEFINED	41	1	0	intel/trends.md:1066	the registry's default build behaviour decides whether the grant ships
+T22	DEFINED	5	1	0	intel/trends.md:1082	the agentic write surface is outrunning its own documentation
+T23	DEFINED	3	1	0	intel/trends.md:1097	"install from npm" increasingly means "download a binary at first run"
+T24	DEFINED	22	1	0	intel/trends.md:1110	🔴 **NOT A NEW TREND. This pass rediscovered `T16` and nearly published it twice**
+T25	DEFINED	8	1	0	intel/trends.md:1136	provenance signals are being manufactured, so history depth is no longer a maturity proxy
+T26	DEFINED	20	1	0	intel/trends.md:891	a licence grant has a DEPTH, and a scanner that reads one file reads the wrong answer
+T27	DEFINED	13	1	0	intel/trends.md:915	a package name can be RETIRED while the registry still answers to it
+T28	DEFINED	23	3	0	intel/trends.md:945	a tool surface is a property of a DEPLOYMENT, not of a package
+T29	DEFINED	20	1	0	intel/trends.md:976	origin lives in the code, not in the metadata, and nine passes looked in the wrong place
+T30	DEFINED	107	1	0	intel/trends.md:802	a measurement's TIER is part of its claim, and this KB has now broken that rule three times
+T31	DEFINED	18	1	0	intel/trends.md:811	a schema has a LOCATION, and `.sql` files are increasingly not it
+T32	DEFINED	5	1	0	intel/trends.md:702	a measurement channel's REFUSALS are evidence, and must be reported with the same weight as its results
+T33	DEFINED	13	2	0	intel/trends.md:713	a hardcoded hostname and an ambiguous offset resolve each other; neither resolves alone
+T34	DEFINED	9	2	0	intel/trends.md:745	`LITERAL` and `DYNAMIC` were never the two options; there is a third shape and every instrument here is blind to it
+T35	DEFINED	10	2	0	intel/trends.md:765	the shelf's best rows declare their own surface, and two of them did it before this KB asked
+T36	DEFINED	28	1	0	intel/trends.md:607	a measurement's INSTRUMENT is part of its claim, exactly as its tier is
+T37	DEFINED	19	1	0	intel/trends.md:618	a share-based falsifier cannot catch an error in the POPULATION
+T38	NO_DEFINITION	10	0	0	-	-
+T39	NO_DEFINITION	24	0	0	-	-
+T40	MULTI_STATEMENT	27	2	0	intel/trends.md:478	the challenge, stated so the next pass can settle it
+T41	DEFINED	14	1	0	intel/trends.md:550	teacher adoption in LATAM leads the OECD, and the "lagging region" framing is wrong
+T42	DEFINED	35	1	0	intel/trends.md:426	a measurement's population filter is part of its instrument
+T43	DEFINED	13	1	0	intel/trends.md:466	the prohibition nobody disputes
+T44	APPEND_ONLY_DEFINITION	10	1	0	repos/trending.md:3064	Finland publishes a national education stack, and binds its model layer to AWS
+T45	APPEND_ONLY_DEFINITION	2	1	0	repos/trending.md:3038	the regional read, and it inverts the usual pitch order
+T46	APPEND_ONLY_DEFINITION	7	1	0	repos/trending.md:3082	the LMS tier declares no model at all, on full uncapped reads
+T47	NO_DEFINITION	1	0	0	-	-
+T48	NO_DEFINITION	0	0	0	-	-
+T49	NO_DEFINITION	1	0	0	-	-
+T50	NO_DEFINITION	4	0	0	-	-
+T51	NO_DEFINITION	1	0	0	-	-
+T52	NO_DEFINITION	3	0	0	-	-
+T53	NO_DEFINITION	3	0	0	-	-
+T54	NO_DEFINITION	1	0	0	-	-
+T55	NO_DEFINITION	8	0	0	-	-
+T56	DEFINED	13	1	0	intel/trends.md:381	the reversal channel, and why this KB had not looked for it
+T57	NO_DEFINITION	13	0	0	-	-
+T58	DEFINED	26	1	0	intel/trends.md:354	what replaces `T40`, and why the replacement is more useful
+T59	NO_DEFINITION	12	0	0	-	-
+T60	NO_DEFINITION	7	0	0	-	-
+T61	NO_DEFINITION	5	0	0	-	-
+T62	DEFINED	6	1	0	intel/trends.md:258	🆕 **Artefact mode is a MANIFEST property, not a tree property.** 2 of 16 non-npm rows read `PAYLOAD` while **gitignoring** the tree they name. 🔴 **13 
+T63	DEFINED	17	1	0	intel/trends.md:259	🆕 **The licence census is monolingual.** `licen[cs]e` cannot match `Licença` or `Licencia`. 🔴 **2 of 9 `NONE` rows carry a grant**; strict-unlicensed 
+T64	DEFINED	11	1	0	intel/trends.md:260	🆕 **An empty walk has THREE causes, not one** — exclusion, wrong artefact kind, **and a language outside the instrument's map**. 🔴 **The third hides a
+T65	DEFINED	12	2	0	intel/trends.md:261	🆕 **The clone channel is SESSION-scoped.** Three passes, one date (2026-10-12): 44/44 open, refused, **52/52 open** |
+T66	DEFINED	8	1	0	intel/trends.md:262	🆕 **A North American denominator was double-entered.** "35 states introducing" IS "35+ states guidance"; **"24 enacted" is unsupported**, against comp
+T67	DEFINED	23	1	0	intel/trends.md:263	🆕 **A bare `.edu` is not a country signal.** Grandfathered non-US registrations exist and **this shelf holds the counterexample** — `P144-V` placed `u
+T68	MULTI_STATEMENT	18	2	0	intel/trends.md:157	🆕 **One manifest can declare TWO include allowlists that DISAGREE.** `librus-mcp`: wheel `packages` (1 item) → **35** sites; sdist `only-include` (16 
+T69	DEFINED	5	2	0	intel/trends.md:158	🆕 **An instrument's precision is a function of the artefact's CURATION.** The institution probe: **2 placements / 3 caught false positives** on 8 allo
+T70	DEFINED	15	2	0	intel/trends.md:159	🆕 **A global-platform or URL-shortener host is not an institution, and ccTLD logic cannot tell.** `ahmedEid1/lumen` → **EMEA on `youtu.be`**, from a v
+T71	MULTI_STATEMENT	14	2	0	intel/trends.md:160	🆕 **APAC holds TWO statutory education items.** Vietnam's **Decision 33/2026/QD-TTg** lists education among 46 high-risk AI systems; **2027-03-01** / 
+T72	DEFINED	17	1	0	intel/trends.md:161	🆕 **A stated grant can be unnameable for a THIRD reason — the licence's own common TITLE.** *"Apache License 2.0"* matches neither `Apache-2\.0` nor `
+T73	DEFINED	7	1	0	intel/trends.md:162	🆕 **A figure with no source is indistinguishable from a sourced one until someone looks.** "24 states enacted" survived **three passes** because each 
+T74	MULTI_STATEMENT	17	3	0	intel/trends.md:82	🆕 **Two instruments can implement the same documented ladder in different orders, and the population they were tested on can hide it.** A rung order i
+T75	DEFINED	13	2	0	intel/trends.md:83	🆕 **An identifier allocated from a high-water mark nobody re-reads will eventually name two things.** The fix is a committed collision check, not more
+T76	DEFINED	5	1	0	intel/trends.md:84	🆕 **A nationally-bound suffix is not an institution signal. The host's ROLE decides, and role cannot be read from the suffix** | 🔴 **Four non-institut
+T77	DEFINED	23	2	0	intel/trends.md:16	**A licence cannot be identified by searching its body, because every GNU licence names its siblings in its own text** | GPL-3.0's §13 is **titled** *
+T78	DEFINED	4	1	0	intel/trends.md:17	**A gateway returning 200 on a root endpoint is not an open channel, and a rate-limit budget is not a capability** | `api.github.com/` **200**, `/rate
+T79	DEFINED	4	1	0	intel/trends.md:18	**A repository's stated relation to its upstream is a claim; the diff is the measurement — and the claim can invert it** | `maxew6/ai-tutor-project` a
+T80	DEFINED	7	1	0	intel/trends.md:19	**A dual-licensed repository must be measured by FILE REACH, not by which licence its badge names first** | `ishands/upstack` declares MIT for `script

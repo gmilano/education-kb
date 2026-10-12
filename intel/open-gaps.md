@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-12
 ---
 
+## ✅ Verdicts on the twelve actions p150 registered, judged by p151
+
+🟢 **Seven reached, five not.** 🟢 **Five discharged with silent falsifiers** (`FF`, `FN`,
+`FU`, `FQ`, `FV`). 🔴 **Two REFUTED exactly as specified** (`FO`, `FR`) — 🔵 **and both
+refutations are more useful than a discharge would have been.** 🔴 **Five NOT REACHED**
+(`FG`, `FH`, `FJ`, `FS`, `FT`), all five instrument work, and the reason is stated below
+rather than implied.
+
+🔵 **Channel state first, because it settles a cause this shelf has been describing
+loosely:** 🟢 **`git clone` 50 of 50**, 🟢 **`npm pack` 8 of 8**, 🟢 **`cargo fetch` +
+`cargo test` both work**, 🟢 **146 new offline tests**, 🔴 **`api.github.com/repos/…` and
+`/search/…` refused**, 🔴 **every primary-legal-text and UNESCO host 403 at CONNECT.**
+🆕 **`P151-S` — the cause is a repository SCOPE policy, not a transport failure.** This
+session's GitHub scope is `gmilano/globant-kb`, and it governs **every** GitHub channel —
+`curl`, `WebFetch` and the authenticated MCP server alike — while public `git clone` is
+served by the git proxy. 🟢 **So `T78` holds and sharpens: star counts are `UNMEASURED` by
+policy, permanently.** 🔵 **The practical consequence: do not register another action that
+needs GitHub API metadata.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION FF`** — close `P35`'s data-layer gap: state the exact change and write the failing test | 🟢 **DISCHARGED, falsifier silent — two lines of the subject's own code close it** | Condition: *"refuted if no change to the subject's own code can close it."* 🔴 **It did not fire.** 🟢 **The change**: `pub store` → `store` plus `pub fn new(store)`, and the **one** call site at `src/main.rs:14`. 🟢 **HEAD**: p149's bypass compiles and PASSES — `place_hold` returns `active == true` with no approval, no protocol version, no sealed state, and 🟢 the write is still FERPA-logged (asserted). 🟢 **PATCHED**: the same file **FAILS TO COMPILE** — `E0616` ×2 on the field reads, `E0451` on the struct literal — while 🟢 **the repository's own 24 tests still pass**, plus a constructor control. 🔵 **Why privacy is the whole consumer-side fix**: a Rust integration test is its own crate, so p149's `tests/` bypass *is* a consumer's bypass. 🔴 **Residual, named: the IN-CRATE surface** — `pub`/private is a module boundary, so closing it needs a sealed token in all **23** write signatures. 🆕 **`T83`**, held by a CI gate instead. [`p151-approval-field-closure`](../compose/code/p151-approval-field-closure/README.md), **19 tests** |
+| 🟢 **`ACTION FN`** — retire the body matcher in the three modules and re-publish the 58-row census | 🟢 **DISCHARGED, falsifier silent — 4 of 52 change, 0 outside the GNU family** | Condition: *"refuted if any row OUTSIDE the five `T77` named changes licence id."* 🔴 **It did not fire.** 🟢 **4 of 52** published rows change (`sigaa-calendar`, `siu-guarani`, `edupage-mcp` `AGPL-3.0`→`GPL-3.0`; `qldt-hanu-mcp` `LGPL`→`GPL-2.0`), the fifth (`ahmedEid1/lumen`) is in the agent tier and outside the 52, and 🟢 **grant classes are unchanged on all 52.** 🔵 **A correction to p150's own count**: there were **two** copies and **one delegation**, not three copies — p149's `identify_ext()` calls p147's `identify()` — so two edits fixed all three. 🟢 **The question now lives in [`lib/licence_identity.py`](../compose/code/lib/licence_identity.py)**, which is `P263`'s rule paid and 🆕 **`P40`**. 🟢 **p147's own suite: 13 of 13 after the patch.** 🟢 Re-published at [`evidence/licence-census.2026-10-12-p151.tsv`](../evidence/licence-census.2026-10-12-p151.tsv) |
+| 🟢 **`ACTION FU`** — measure `T77`'s reach over all 58 by reading every licence file's title line | 🟢 **DISCHARGED, falsifier silent — the population is SEVEN** | Condition: *"refuted if the GNU-family population is larger than seven."* 🔴 **It did not fire.** 🟢 **7 by the title surface and 7 by the retired matcher as a population**, over all **58** subjects, with **5** rows disagreeing — exactly the five `T77` named. 🟢 **And the result the action did not ask for: 39 of 39 licence files carry a readable title line**, so the replacement costs **zero coverage**. 🔴 **The eighth GNU-family row, named**: `moodle-mcp-server-aql-0.1.7` declares `AGPL-3.0` in `package.json` with no licence file — GNU family at the *declaration* layer, where `T77` has no body to mis-read. 🔵 **The falsifier's mechanism is demonstrated, not described**: the suite builds a GPL `LICENSE` under an `MIT` `package.json`, and a GNU file quoting Apache which the retired ladder sorts OUT of the family. The shelf holds neither. [`p151-gnu-population-reach`](../compose/code/p151-gnu-population-reach/README.md), **31 tests** |
+| 🔴 **`ACTION FO`** — read the `-only` / `-or-later` election from per-file headers | 🔴 **REFUTED exactly as specified — 0 of 7 state an election anywhere** | Condition: *"refuted if no row states an election anywhere."* 🔴 **It fired.** **1 513** source files across the 7 GNU rows, licence files excluded at any depth: **0** `or (at your option) any later version` headers, **0** `-only` statements, **0** SPDX elections. 🟢 **Positive control: the same matcher over the licence BODIES fires 7 of 7**, so the null belongs to the rows and not to the instrument. 🆕 **`T81`: the election is inside the licence being interrogated** — GPL-3.0's *"How to Apply These Terms"* appendix carries the notice verbatim, so a body read returns `OR_LATER` for every verbatim GNU file including one that elected `-only`. 🔴 **Two instrument defects the authored fixtures caught BEFORE publication**, either of which would have produced a false null: a **comment prefix** splitting the phrase across `"\n * "`, and **`license.svg`** — a badge image — counted as a licence body (the control first read *"7 of 8"*). 🟢 **Per the consequence clause, `P38` step 4 now says the election is UNSTATED** rather than implying it is readable. [`p151-election-surface`](../compose/code/p151-election-surface/README.md), **24 tests** |
+| 🟢 **`ACTION FQ`** — catch a DANGLING citation; resolve or withdraw `P240` | 🟢 **DISCHARGED, falsifier silent — and `P240` is not dangling at all** | Condition: *"refuted if `P240` is the only dangling citation."* 🔴 **It did not fire** — and the reason is better than a second slip. 🟢 **`P240` RESOLVES**: `compose/code/p239-table-integrity/README.md:17`, the region-column completeness axis, allocated at **pass 78** after being born cited at **pass 39** (`p356-citation-origin` had already filed it among fifteen *"NACIÓ CITADA"* ids). 🆕 **`T82`: there are THREE identifier spaces sharing one `P` prefix** — patterns (**41**), module axes (**23**), pass findings (**174** passes nameable) — and 🔴 **FOUR of this shelf's ten content files are append-only history, not three**: `intel/open-gaps.md` joins the two trending pages and the README. 🔵 **Scope decides the answer**: 6 rewritten pages → **0** dangling; plus `open-gaps.md` → **260**; plus history → **685**, every one a previous-generation id from before the **2026-10-06 reset** restarted the space at `P1`. 🟢 **And the gate found a real defect in p151's own prose**: `P263`, this KB's *"put the question in `lib/`"* rule, cited since pass 88 and allocated nowhere — 🟢 **now allocated in `lib/README.md`**, gate green at `dangling=0`. [`p151-identifier-spaces`](../compose/code/p151-identifier-spaces/README.md), **25 tests** |
+| 🔴 **`ACTION FR`** — point `register_collisions()` at the live thesis register and settle whether `T1`–`T80` contains a collision | 🔴 **REFUTED — the falsifier FIRED, and the register now exists because it did** | Condition: *"refuted if the register has no single committed location."* 🔴 **It fired: there was none.** Definitions were spread across **seven** files. 🟢 **Built as one file**: [`evidence/thesis-register.2026-10-12-p151.tsv`](../evidence/thesis-register.2026-10-12-p151.tsv) — **55 DEFINED** on a live page, 🔴 **17 with NO DEFINITION anywhere** (`T19`, `T20`, `T38`, `T39`, `T47`–`T55`, `T57`, `T59`–`T61`), 🔴 **3 defined only on an append-only page** (`T44`–`T46`), 🟡 **5 multi-statement**. 🔴 **`T39` is cited 24 times and defined nowhere**; `T57` 13×, `T59` 12×, `T38` 10×. 🔵 **Exactly the defect `ACTION FL` closed for the agent tier.** 🟡 **And the collision question is NOT settled, with the cause named**: the 5 candidates are status sections rather than rival claims (`T3`'s *"what is resolved and what is not"*), and 🔴 **the register carries no `FIRST`/`REVISIT` marker** — the very distinction the pattern gate has had since p150. 🟢 **So the measured collision count is 0 with an instrument limitation stated, not a number asserted.** 🔵 **`ACTION FY`** |
+| 🟢 **`ACTION FV`** — reconcile Vietnam's three compliance dates or withdraw the September 2027 figure | 🟢 **DISCHARGED, falsifier silent — the three dates are one TIERED REGIME** | Condition: *"refuted if no second source exists."* 🔴 **It did not fire**: four publishers carry the regime and one quotes the decision's operative sentence. 🟢 **Effect `2026-08-15`** · 🟢 **`2027-03-01`** for systems started within six months of effect and for the other listed fields · 🟢 **`2027-09-01`** for systems **already running** in healthcare, **education** and finance. 🔴 **And an effect date this shelf published is WITHDRAWN**: p148's `2026-03-01` is wrong. 🟢 **`P149-B`'s drafting defect is now LOCATED precisely** — the sector list says **banking**, the transitional article says **finance**. 🔵 **The counter-intuitive consequence worth saying in a room**: a later-launched education system has the EARLIER deadline, so replacing a legacy Vietnamese system moves a client from the September rung to the March rung. 🔴 **Still not quotable: the number of conformity pathways** — one source says two, another three. 🔴 Primary host still 403 at CONNECT |
+| 🔴 **`ACTION FG`** — extend the placement exclusion to news-media and government-portal hosts by role | 🔴 **NOT REACHED, third consecutive pass** | 🔴 **No work done.** 🟢 **RE-REGISTERED verbatim** |
+| 🔴 **`ACTION FH`** — the three-surface `P35` CI gate (router = manifest = macro) | 🔴 **NOT REACHED** | 🔴 **Not discharged, and NOT to be read as discharged by `ACTION FF`'s gate.** 🔵 p151's gate reads the macro's **23** `approval_tools` as a denominator and pins the FIELD, the CONSTRUCTOR and the in-crate surface. 🔴 **It does not pin the router's 46 names against the manifest's 46, nor the manifest's 23 `requires_approval` flags against the macro's 23.** 🟢 **RE-REGISTERED, and the overlap is stated so the two are not conflated** |
+| 🔴 **`ACTION FJ`** — audit the other three surface-bearing rows for a third declaration surface | 🔴 **NOT REACHED, third consecutive pass** | 🔴 **No work done.** 🟢 **RE-REGISTERED verbatim** |
+| 🔴 **`ACTION FS`** — build the prompt-layer probe | 🔴 **NOT REACHED** | 🔴 **No work done** — 🆕 **and the tier it must cover GREW this pass**: `avinash201199/free-ai-agents-resources` ships **0 code files**, a 🆕 **LINK LAYER** row that reads as zero for a different reason than a prompt-layer row. 🟢 **RE-REGISTERED and WIDENED** |
+| 🔴 **`ACTION FT`** — payload check for `Zenglian990/AI_Tutor_Release`'s APK and IPA release assets | 🔴 **NOT REACHED** | 🔴 **No work done.** 🔵 **And `P151-S` bears on its falsifier**: *"refuted if the release assets are unreachable on this channel"* — release-asset URLs are GitHub API surface, which this session's repository scope governs. 🟢 **RE-REGISTERED with that prediction written down, so the next pass measures it instead of discovering it** |
+
+### 🆕 🔴 `P151-R` — FIVE committed suites on this shelf are RED at HEAD, and the reset is why
+
+🔵 **p151 ran every Python suite under `compose/code/` — 155 of them — and then ran the five
+failures against a pristine clone of HEAD to establish authorship.** 🟢 **150 pass. 5 fail,
+and all five fail at HEAD too**, so p151 did not cause them and did not fix them.
+
+| suite | cause | class |
+|---|---|---|
+| `p351-star-digit-sweep` | `AssertionError: 219 not greater than or equal to 254` | 🔴 **stale generation-1 count** |
+| `p356-citation-origin` | `AssertionError: 8 != 15` — it asserts fifteen *"ANUNCIADA"* ids and finds eight | 🔴 **stale generation-1 count** |
+| `p598-register-freshness-gate` | `no cito verticals/` · `quedan rancias: [289]` | 🔴 **stale generation-1 content assertion** |
+| `p471-gap-gate-language` | 🔴 **does not complete within 90 s** — terminated, not failed | 🔴 **non-terminating** |
+| `p213-envelope-aad` | `ModuleNotFoundError: No module named '_cffi_backend'` | 🔴 **missing native dependency** |
+
+🔴 **Three of the five are `T82` one layer further out.** The **2026-10-06 reset** did not
+only orphan citations — 🔴 **it invalidated committed test ASSERTIONS**, and three suites have
+been red for thirteen passes without being named. 🔵 **`p356-citation-origin` is the sharpest
+case: it is the very module whose output p151 used to establish that `P240` was born cited,
+and its own suite is red on the count of born-cited ids.** 🟢 **The datum p151 used
+(`P240` ∈ ANUNCIADA) is in its committed README and is unaffected by the count assertion** —
+said explicitly, because citing a module whose suite is red requires saying which part was
+relied on.
+
+🔵 **And one is not about this shelf at all**: `p213-envelope-aad` needs `_cffi_backend`,
+making it 🔴 **the only suite here that is not offline-and-stdlib**, which is why every
+instrument p151 wrote is both.
+
+🔵 **`ACTION GD`** repairs them, in that order: the three stale counts first, because each is
+a one-line re-measurement; then the hang, because a suite that does not terminate cannot be
+run in CI at all.
+
+## 🔴 Why five actions were not reached, said rather than implied
+
+🔵 **The cause is budget allocation, and the trade is stated.** `ACTION FF` had been open for
+three passes and was the highest-consequence item on this shelf; closing it properly meant
+cloning the subject, applying the patch, resolving a git-pinned Rust SDK, and running
+`cargo test` four times against two trees. 🟢 **That plus the two licence actions and the two
+register actions consumed the pass.** 🔴 **`FG` and `FJ` are now unreached for a third
+consecutive pass**, which is the worst item in this section — 🟢 **and they are first and
+second on p152's list.**
+
+🔴 **One correction to this pass's own framing, before the gaps.** p151 wrote two new
+patterns and allocated an axis, which moved the pattern space from 39 ids to **41** and the
+module-axis space from 21 to **23**. 🔵 **A pass that extends the identifier space in the
+same pass it gates that space is marking its own homework**, and the gate's green reading
+(`dangling=0`) is therefore 🟡 **green on a page this pass wrote**. 🟢 **It did catch one real
+defect in that same prose** (`P263`), which is the only evidence that it would have.
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p151
+
+| gap | movement |
+|---|---|
+| 🔴 *"`P35` is sold as a governance pattern and is bypassable at the data layer"* | 🟢 **CLOSED for consumers by two lines, and the residual NAMED** (`T83`). Three passes open; the fix is a privacy keyword and a constructor |
+| 🔴 *"Three published copies of `identify()` still carry the body matcher"* | 🟢 **RETIRED.** Two copies and one delegation; the question now lives in `lib/` (`P40`) |
+| 🔴 *"The 44-row census TSV still publishes 5 wrong licence ids"* | 🟢 **RE-PUBLISHED over 58 rows.** 4 of 52 change, **0** outside the GNU family |
+| 🔴 *"`T77`'s reach was measured over 28 trees, not 58"* | 🟢 **MEASURED over 58. The population is 7**, and the coverage result (39 of 39) makes the fix free |
+| 🔴 *"A DANGLING pattern citation exists and the gate does not catch it"* | 🟢 **GATED — and `P240` was never dangling.** 🆕 Three identifier spaces, four append-only pages (`T82`) |
+| 🔴 *"The thesis register is not scanned by the collision gate"* | 🟡 **The REGISTER NOW EXISTS as a file.** 🔴 17 of T1..T80 defined nowhere; the collision question stays open for want of a `FIRST`/`REVISIT` marker |
+| 🔴 *"Vietnam's compliance date has THREE published readings"* | 🟢 **RECONCILED as a transitional ladder**, and 🔴 **p148's effect date is WITHDRAWN** |
+| 🔴 *"`curl`/API refusal is a transport failure"* | 🟢 **RE-READ as a repository SCOPE policy** (`P151-S`) governing every GitHub channel. `T78` sharpens; star counts are `UNMEASURED` by policy |
+| 🔴 *"Tenth consecutive pass with no agent row from SEARCH"* (closed by p150) | 🟡 **HOLDS as closed, and the population SPLITS.** 🆕 `T84`: the generic query returns AI-engineering **curricula**; 4 of 4 verified, 0 of 4 education-sector |
+| 🔴 *"`P263`'s rule is written and not followed"* | 🟢 **FOLLOWED, and the rule itself ALLOCATED** — it had been cited in prose since pass 88 with no allocation anywhere |
+
+## 🔴 Gaps OPEN after p151, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **`T83`: the in-crate bypass of `P35`'s gate is open by construction** | `pub`/private is a module boundary. **23** `pub fn` writes on `StudentStore`. 🟢 Held by a CI gate, 🔴 not by the type system. 🔵 **`ACTION GB`** |
+| 🔴 **The re-published census publishes 10 strict-unlicensed where the shelf's figure is 8** | `eugeborzone/Auto_Grade_Guarani` and `frjunioalves/suap-mcp`, both Portuguese. p145's README surface is English-only (`T63`). 🔵 **`ACTION FW`** |
+| 🔴 **17 of `T1`–`T80` have no definition anywhere, and `T39` is cited 24 times** | Committed in the register. 🔵 **`ACTION FY`** covers the gate; 🔵 **`ACTION GC`** the 17 |
+| 🔴 **The `-only`/`-or-later` election is UNMEASURED on the six vertical platforms** | `ACTION FO` ran over the 7 connector/agent rows only. 🔴 **Four large copyleft codebases — `moodle`, `edx-platform`, `canvas-lms`, `bigbluebutton` — are exactly the kind that DO carry per-file headers.** 🔵 **`ACTION GA`** |
+| 🔴 **Two non-institutional host kinds are measured and NOT excluded** | 9 news-media hosts, 17 `.gob.pe`. 🔴 **`ACTION FG` unreached for a third pass** |
+| 🔴 **The prompt layer has no probe, and now the LINK layer joins it** | Two prompt-layer rows plus `free-ai-agents-resources` at **0 code files**. 🔵 **`ACTION FS`** |
+| 🔴 **`lib/` has no import test** | Nothing fails if a fourth module re-types the licence ladder instead of importing it. 🔵 **`ACTION FX`** |
+| 🔴 **A generation boundary is not expressible in the dangling gate** | The gate can exclude a page; it cannot say *"ids below P469 here are generation 1"*. 🔵 **`ACTION FZ`** |
+| 🔴 **No star count for any row, and now permanently by POLICY** | `P151-S`: the session's repository scope governs every GitHub channel. 🟢 `UNMEASURED`, and **no further action will be registered against it** |
+| 🔴 **No market-size figure is quotable, and the problem got WORSE** | Three publishers give **$6.4B**, **$7.52B** and **$8.3B** for **2025** — a 30% spread on a completed year |
+| 🔴 **EMEA has no education-sector adoption figure from the general-query channel** | 🟢 **Measured this pass rather than assumed**: the regional query returned zero education sources, and its one transferable figure (CompTIA **94%**) is a **US-respondent** survey on EMEA pages |
+| 🔴 **APAC has no ministry-level education instrument beyond the five already named** | The 2026 sweep returned enterprise material and four **corporate L&D** vendors, not formal education |
+| 🔴 **Africa still has no ADOPTION rate, spend figure or deployment count** | Unchanged from p150. Connectivity (35%) and completion (23.3%) are not adoption |
+| 🔴 **Every regional figure on `intel/market.md` is secondary** | OECD, UNESCO IESALC, DEC and MarketsAndMarkets all read through aggregators. 🟢 Said once at page level |
+| 🔴 **Vietnam's conformity-pathway COUNT is unresolved** | Two publishers, two counts (two vs three), no primary text. 🟢 No count carried |
+
+## 🔜 Pre-registered for p152
+
+🔵 **Thirteen actions.** 🟢 **`FG` and `FJ` are FIRST and SECOND** because they are unreached
+for a third pass. 🟢 **`FH`, `FS` and `FT` are re-registered**, `FS` widened and `FT` with a
+prediction attached. 🔵 **No action is registered against the GitHub API, by design**
+(`P151-S`).
+
+| action | falsifier |
+|---|---|
+| 🟡 **`ACTION FG`** *(re-registered, p149 — THIRD time)* — extend the placement exclusion to news media and government portal. Classify by role, not by name, and re-run over the 50 clones | 🔴 *Refuted if the surviving `BetterSEQTA-Plus` `CONFLICT` does not resolve to APAC* — which would mean the 9 news hosts are not the whole cause and the row carries a real regional ambiguity this KB has been attributing to fixture data |
+| 🟢 **`ACTION FJ`** *(re-registered, p149 — THIRD time)* — audit the other three surface-bearing rows for a third declaration surface. Count surfaces per row | 🔴 *Refuted if no other row declares more than two* — which would make the three-surface shape unique to the best-governed row on the shelf |
+| 🟢 **`ACTION FH`** *(re-registered, p149)* — the `P35` CI gate against **three** surfaces: router names = manifest names (46) **and** manifest `requires_approval` = macro `approval_tools` (23). 🔵 **Not satisfied by p151's field gate**, which pins a different three | 🔴 *Refuted if the macro's `approval_tools` list cannot be read without compiling the crate* — which would make the third pin a build-time check rather than a CI text check. 🔵 **p151 read all 23 names with a regex**, so this falsifier is now expected to stay silent |
+| 🟢 **`ACTION FS`** *(re-registered, p150, WIDENED)* — build the prompt-layer probe, and make it distinguish a PROMPT-LAYER row (rules, no code) from a 🆕 **LINK-LAYER** row (0 code files, a list) | 🔴 *Refuted if the three rows' rules cannot be located by any textual rule* — which would mean a prompt-layer row is only auditable by hand. 🆕 *And refuted differently if the probe cannot separate the two classes* — which would mean "zero tools" is the only verdict available and `T84`'s two classes are one |
+| 🟡 **`ACTION FT`** *(re-registered, p150, with a PREDICTION)* — read the licence and declared surface of `Zenglian990/AI_Tutor_Release`'s APK and IPA release assets | 🔴 *Refuted if the release assets are unreachable on this channel.* 🔵 **p151 predicts it WILL be refuted**, because release-asset URLs are GitHub API surface and `P151-S` says the session's repository scope governs every GitHub channel. 🟢 **Recording the prediction so the next pass measures it rather than discovering it** |
+| 🔴 **`ACTION FW`** — move the README-heading question into `lib/` beside the licence-identity question, and re-publish the census with p147's multilingual surface | 🔴 *Refuted if the merged surface changes any row OTHER than `eugeborzone/Auto_Grade_Guarani` and `frjunioalves/suap-mcp`* — which would mean the English-only matcher was wrong in more places than `T63` measured and the grant-class figures need re-deriving, not just two rows |
+| 🟢 **`ACTION GA`** — run `p151-election-surface` over the SIX vertical platforms | 🔴 *Refuted if the verticals are also silent, 6 of 6* — which would promote `T81` from "true of this shelf's small rows" to a property of education copyleft generally, and make the "ask the author" advice in `P38` universal rather than row-specific. 🔵 **A refutation here is the MORE interesting outcome** |
+| 🟡 **`ACTION GB`** — write the sealed-token patch for `T83`: an `Approved` newtype the gate alone can mint, threaded into the gated writes, and keep the repository's 24 tests green | 🔴 *Refuted if the token cannot be threaded without changing the `#[tool_router]` macro's generated signatures* — which would mean the in-crate surface is not closable from the subject's own code and `T83`'s residual is permanent, making the CI gate the only available control |
+| 🟢 **`ACTION FY`** — give the thesis register the pattern gate's `FIRST`/`REVISIT` grammar and gate the committed file | 🔴 *Refuted if the five MULTI_STATEMENT candidates do not all resolve to status sections* — which would mean at least one real thesis collision exists, and `T75` extends from pattern numbers to thesis numbers as `P144-F` suspected |
+| 🔴 **`ACTION GC`** — resolve the **17** theses with no definition anywhere: define or withdraw each by name, `T39` first (cited 24 times) | 🔴 *Refuted if any of the 17 turns out to be defined on a page this pass's scope missed* — which would mean the register's scope is wrong rather than the shelf's bookkeeping, and the count is an instrument artefact |
+| 🟢 **`ACTION FX`** — add an import test to `lib/`: assert that no module under `compose/code/` defines its own GNU licence rung | 🔴 *Refuted if a module legitimately needs its own ladder* — which would mean `P263`'s rule has an exception and the rule must name it, as `lib/region.py` already does for the two region questions |
+| 🟢 **`ACTION FZ`** — make the dangling gate express a GENERATION boundary, so an append-only page can be scanned for defects in its own generation | 🔴 *Refuted if no single id threshold separates the two generations* — which would mean the 2026-10-06 reset did not restart the space cleanly, and the 260 flagged ids need classifying one by one rather than by range |
+| 🔴 **`ACTION GD`** — repair the five suites that are RED at HEAD: re-measure the three stale generation-1 assertions (`p351`, `p356`, `p598`), diagnose the non-terminating one (`p471`), and either vendor or skip the one needing `_cffi_backend` (`p213`) | 🔴 *Refuted if any of the three stale assertions is not stale but WRONG* — which would mean the figure it asserts was never true rather than made false by the reset, and the module's published result needs withdrawing rather than re-measuring. 🔵 *And refuted differently if `p471` does not terminate because it is waiting on the network* — which would make it the second non-offline suite on a shelf that claims every instrument is offline |
+
 ## ✅ Verdicts on the nine actions p149 registered, judged by p150
 
 🟢 **Five reached, four not.** 🟢 **Four discharged with silent falsifiers** (`FE`, `FK`, `FL`,

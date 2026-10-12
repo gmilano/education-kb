@@ -1,0 +1,70 @@
+# p151 / ACTION FF — measured 2026-10-12. cargo 1.97.0 / rustc 1.97.0.
+# Subject: zavora-ai/mcp-student-records v1.2.0, depth-1 clone at this pass's HEAD.
+
+## HEAD — the bypass test compiles and PASSES (p149's finding, reproduced)
+         Running unittests src/lib.rs (target/debug/deps/mcp_student_records-5d3ec1385de71fe1)
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running unittests src/main.rs (target/debug/deps/mcp_student_records-8e98a1030ac2c052)
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/integration_test.rs (target/debug/deps/integration_test-a14708afd34db7a2)
+    test enroll_guards ... ok
+    test ferpa_access_is_logged ... ok
+    test analytics_risk_levels ... ok
+    test attendance_rate ... ok
+    test guardian_comms_ferpa_gated ... ok
+    test rubric_grading_sums_criteria ... ok
+    test support_case_lifecycle ... ok
+    test seeded_students_present ... ok
+    test transcript_gpa ... ok
+    test weighted_gradebook ... ok
+    test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/manifest_test.rs (target/debug/deps/manifest_test-74ba8fd38d403984)
+    test sensitive_writes_are_gated ... ok
+    test ferpa_reads_are_read_only ... ok
+    test manifest_parses_and_validates ... ok
+    test v11_gated_writes ... ok
+    test comms_is_external_write ... ok
+    test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+         Running tests/p151_bypass.rs (target/debug/deps/p151_bypass-ccdb026ef7da4bb7)
+    test gated_write_is_reachable_without_approval ... ok
+    test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/v11_test.rs (target/debug/deps/v11_test-d59a724ba591d35b)
+    test holds_lifecycle ... ok
+    test academic_standing_from_gpa ... ok
+    test degree_audit_computes_remaining ... ok
+    test early_warning_raises_flags ... ok
+    test intervention_lifecycle ... ok
+    test mastery_evidence_validates_refs ... ok
+    test learning_path_respects_prerequisites ... ok
+    test mastery_rolling_average_and_level ... ok
+    test tier_clamped ... ok
+    test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+## PATCHED — the same file FAILS TO COMPILE (E0616), which is the fix held
+    error[E0616]: field `store` of struct `StudentServer` is private
+      --> tests/p151_bypass.rs:16:10
+    error[E0616]: field `store` of struct `StudentServer` is private
+      --> tests/p151_bypass.rs:20:22
+    error: could not compile `mcp-student-records` (test "p151_bypass") due to 2 previous errors
+    error[E0451]: field `store` of struct `StudentServer` is private
+      --> tests/p151_literal.rs:11:35
+    error: could not compile `mcp-student-records` (test "p151_literal") due to 1 previous error
+
+## PATCHED — the struct LITERAL surface, isolated (E0451)
+    error[E0451]: field `store` of struct `StudentServer` is private
+      --> tests/p151_literal.rs:11:35
+    error: could not compile `mcp-student-records` (test "p151_literal") due to 1 previous error
+
+## PATCHED — the repository's own suite, unchanged, plus the constructor control
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/integration_test.rs (target/debug/deps/integration_test-a14708afd34db7a2)
+    test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/manifest_test.rs (target/debug/deps/manifest_test-74ba8fd38d403984)
+    test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+         Running tests/p151_legit.rs (target/debug/deps/p151_legit-faf4cdfbb75c136f)
+    test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+         Running tests/v11_test.rs (target/debug/deps/v11_test-d59a724ba591d35b)
+    test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

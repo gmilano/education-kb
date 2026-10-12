@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P40` — ask a licence question ONCE: put it in `lib/`, not in the next instrument *(new, p151 — Global)*
+
+🔵 **This is `P263`'s rule, paid.** The rule has been written on this shelf since pass 88:
+*while the question does not live in `compose/code/lib/`, every new instrument reimplements
+it and chooses the bug again.* 🔴 **`T77` is the invoice.** Three published modules carried
+a copy of the same `identify()`; every copy carried the same body-substring rung for the
+GNU family; **5 of 7 GNU rows were published wrong and the id `GPL` was published ZERO
+times in 150 passes.**
+
+### Step 1 — find out how many copies there really are
+
+🔴 **Count delegations separately from copies.** p150 recorded *"three published copies"*.
+🟢 **There were two copies and one delegation**: `p149-common-title-licence.identify_ext()`
+calls `p147`'s `identify()`, so patching two files fixed all three. 🔵 **A census of copies
+that counts delegations as copies overstates the work and understates the coupling.**
+
+### Step 2 — move the question, do not re-type it
+
+🟢 [`compose/code/lib/licence_identity.py`](code/lib/licence_identity.py) now owns it, and
+`p145-licence-census` and `p147-licence-language` **import** it. The surface:
+
+| question | function | reads |
+|---|---|---|
+| which licence is this file? | `title_spdx()` | the **TITLE LINE** only — the name must *be* the line |
+| independently, which licence? | `clause_licence()` | AGPL-3.0 §13 *"Remote Network Interaction"* |
+| do the two agree? | `agree()` | `AGREE` / `TITLE_ONLY` / `DISAGREE` / `UNDETERMINED` |
+| what did the old matcher say? | `retired_identify()` | the published ladder, **in its published order** |
+
+### Step 3 — keep the broken version, deliberately
+
+🔴 **`retired_identify()` must stay wrong.** A reproduction that quietly fixes either
+ordering defect — the Apache rung ahead of the GNU rungs, AGPL ahead of GPL — cannot measure
+what was published. 🟢 **Both orderings are asserted as REQUIRED behaviour of the repro**, so
+a later tidy-up breaks the suite instead of silently erasing the evidence.
+
+### Step 4 — prove the replacement costs no coverage before you ship it
+
+🔴 **A narrower surface that answers less often is a trade, not a fix.** 🟢 **Measured:
+39 of 39** licence files across the 58-row census carry a readable title line, and
+**4 of 52** published rows change id — **0 outside the GNU family**. 🔵 **Re-publish the
+census in the same pass, and diff it against the published artefact row by row.**
+
+### Step 5 — do not correct in the pass that measured
+
+🟢 **`ACTION EU`'s rule.** p150 measured `T77` and deliberately left the three copies
+unpatched; p151 patched them. 🔵 **The one pass of delay is what makes the diff a test
+rather than a tautology.**
+
+### 🔴 What `P40` does NOT solve
+
+- 🔴 **The README-heading question is still copied.** p151's re-published census reads
+  **10** strict-unlicensed where p147's multilingual matcher reads **8** — the two
+  Portuguese rows `T63` named. 🔵 **`ACTION FW`** moves that question to `lib/` too.
+- 🔴 **`lib/` has no import test.** Nothing fails if a fourth module re-types the ladder
+  instead of importing it. 🔵 **`ACTION FX`.**
+
+## 🆕 🟢 `P41` — declare the identifier SPACE and the SCOPE before claiming a citation dangles *(new, p151 — Global)*
+
+🔵 **A "dangling reference" check is the cheapest audit a knowledge base can run and the
+easiest one to run wrongly.** 🔴 **p150 reported `P240` as cited-and-never-allocated.** 🟢 **It
+resolves** — `compose/code/p239-table-integrity/README.md:17`, the region-column
+completeness axis, allocated at pass 78.
+
+### Step 1 — enumerate the spaces. There are three here, sharing one `P` prefix
+
+| space | allocated by | count |
+|---|---|---|
+| **patterns** | a `## `P35` — …` heading on `compose/patterns.md` | **41** after this pass, max `P41` |
+| **module axes** | a table row in `compose/code/*/README.md` whose first cell is the bare id | **23** after this pass |
+| **pass findings** | being reported in a pass; cited bare (`P138`) or qualified (`P150-A`) | **174** passes nameable |
+
+### Step 2 — declare the scope, and expect the number to move by two orders of magnitude
+
+| scope | cited | dangling |
+|---|---|---|
+| the **6 pages rewritten each pass** | 48 | 🟢 **0** |
+| …plus `intel/open-gaps.md` | 354 | 🔴 **260** |
+| …plus the two trending pages and the README | 745 | 🔴 **685** |
+
+🔴 **Four of this shelf's ten content files are append-only pass history, not three.** 🔵
+**Every one of the 260 is a previous-generation id** (the range P469 to P1047, written here
+without backticks because it is a numeric range and not a citation) surviving in a verdict
+row written before the **2026-10-06 reset restarted the pattern space at `P1`**. 🟢 **A
+historical record is not a defect**, which is why `scope` and `spaces` are arguments of the
+gate rather than constants inside it. 🆕 **`T82`.**
+
+### Step 3 — the CI step
+
+    python3 compose/code/p151-identifier-spaces/identifier_spaces.py .   # exit != 0 on a dangling id
+    python3 compose/code/p151-identifier-spaces/test_identifier_spaces.py # 25 tests, offline
+
+### 🔴 What `P41` does NOT solve
+
+- 🔴 **The thesis register is not gated.** `ACTION FR` built it as a file
+  (`evidence/thesis-register.2026-10-12-p151.tsv`) and found **17 of T1..T80 with no
+  definition anywhere** — `T39` cited **24** times among them. 🔵 **`ACTION FY`.**
+- 🔴 **A generation boundary is not expressible.** The gate can exclude a page; it cannot say
+  *"ids below P469 on this page belong to generation 1"*. 🔵 **`ACTION FZ`.**
+
 ## 🆕 🟢 `P38` — the licence-IDENTITY gate: never quote a licence your matcher read from the body *(new, p150 — all regions)*
 
 🔴 **Why this pattern exists: this KB got it wrong on five rows and published the wrong answer
@@ -61,6 +160,26 @@ proprietary client deliverable, whatever the first badge says.
 🔵 **`GPL` with no version is not an answer.** `qxbao/qldt-hanu-mcp` was filed as bare `LGPL`
 and is **GPL-2.0** — full copyleft with no patent grant, on a row a studio would have treated
 as link-and-go.
+
+#### 🔴 And the `-only` / `-or-later` election is UNSTATED on this shelf — do not imply it is readable
+
+🔴 **`ACTION FO` (p151) measured it and the answer is zero.** Across the **7** GNU-family
+rows, **1 513** source files scanned: **0** per-file `or (at your option) any later version`
+notices, **0** `-only` statements, **0** `SPDX-License-Identifier` lines carrying an
+election. 🟢 **The positive control — the same matcher over the licence BODIES — fires 7 of
+7**, so the null is a property of the rows and not of the instrument.
+
+🔴 **Never read the election from the licence file. 🆕 `T81`.** GPL-3.0's own appendix,
+*"How to Apply These Terms to Your New Programs"*, contains *"either version 3 of the
+License, or (at your option) any later version"* — so a body search returns `OR_LATER` for
+**every** verbatim GNU file, including one whose author elected `-only`. 🔵 **That is `T77`'s
+defect class one layer down**: a phrase correct as a phrase and wrong as a test.
+
+🔵 **What to say in a room.** For all seven rows the election is unstated, so a derivative
+cannot rely on *"or later"* and must be planned against the **stated version only**. Ask the
+upstream author; do not infer it from the LICENSE file.
+
+    python3 compose/code/p151-election-surface/test_election.py   # 24 tests, offline
 
 ### Step 5 — the CI step
 
@@ -139,9 +258,10 @@ files** and is the one to fork for a China-facing engagement.
     LMS surface                 vishalsachdev/canvas-mcp      (MIT)         ← courses, assignments, grades
     governance gate             zavora-ai/mcp-student-records (Apache-2.0)  ← FERPA logging, approval gate
 
-🔴 **Read `P35`'s data-layer caveat before pitching the last row**: its approval gate is real,
-fail-closed on four conditions, **and bypassable in-process** (`ACTION FD`). 🔵 **Pitch it as
-an MCP-surface control with the data layer named as out of scope.**
+🟢 **`P35`'s data-layer caveat is RESOLVED as of p151** (`ACTION FF`): its approval gate is
+real, fail-closed on four conditions, was bypassable in-process (`ACTION FD`), and 🟢 **two
+lines of the subject's own code close the consumer-side bypass.** 🔴 **The residual is the
+in-crate surface** (`T83`), held by a CI gate rather than by the type system.
 
 ### 🔴 What `P39` does NOT solve
 
@@ -229,7 +349,47 @@ this shelf has met, and the next corpus will carry a kind it does not. 🟢 **Wh
 > re-read, and the same habit produced the thesis-number collisions `P144-F` recorded.
 > 🟢 **`ACTION FM` registers the one-line gate that would have caught it.**
 
-### 🔴 `P35` does NOT reach the data layer — read this before pitching it
+### 🟢 `P35`'s data-layer gap is CLOSED by p151 — and the fix is two lines
+
+> 🔵 **This heading read *"`P35` does NOT reach the data layer"* for three passes.**
+> 🟢 **`ACTION FF` (p151) closed it.** The gap was real, the fix is two lines of the
+> subject's own code, and both halves are now measured rather than argued.
+
+🟢 **The change, in `zavora-ai/mcp-student-records`:**
+
+```diff
+-pub struct StudentServer { pub store: Arc<StudentStore> }
++pub struct StudentServer { store: Arc<StudentStore> }
++
++impl StudentServer {
++    pub fn new(store: Arc<StudentStore>) -> Self { Self { store } }
++}
+```
+
+plus the **one** call site (`src/main.rs`): `StudentServer { store }` →
+`StudentServer::new(store)`.
+
+🔵 **Why a privacy keyword is the whole consumer-side fix.** A Rust integration test is its
+own crate, and p149 demonstrated its bypass from `tests/` — so the bypass it demonstrated
+*is* the bypass a downstream consumer has, and that is exactly the boundary `pub`/private
+closes. Measured:
+
+| tree | the bypass | the repository's own suite |
+|---|---|---|
+| **HEAD** | 🔴 compiles and PASSES — `place_hold` returns `active == true` with no approval | 🟢 24 pass |
+| **patched** | 🟢 **FAILS TO COMPILE** — `E0616` ×2 on the field reads, `E0451` on the struct literal | 🟢 24 pass + constructor control |
+
+🔴 **What the two lines do NOT close, and say so in the room — 🆕 `T83`.** `pub`/private is a
+*module* boundary, so a future module **inside** the crate can still reach `self.store` and
+call a `pub fn` write. Closing that needs a sealed approval token threaded into all **23**
+write signatures — a 23-site change to a repository this KB does not own. 🟢 **So the
+recommendation splits: ship the two-line change, and hold the in-crate surface with the
+gate in CI.**
+
+    python3 compose/code/p151-approval-field-closure/field_gate.py <crate>   # exit 1 on HEAD, 0 patched
+    python3 compose/code/p151-approval-field-closure/test_field_gate.py      # 19 tests, offline
+
+### 🔵 The gap as p149 measured it, kept because the fix only means something against it
 
 🔴 **`ACTION FD` (p149) proved the approval gate this pattern certifies is bypassable
 in-process.** 🟢 **The gate itself is strong**: it runs first in the generated `call_tool` and
@@ -242,8 +402,10 @@ sealed state** when the crate is embedded as a library rather than run as a serv
 🟢 **The bypassed write is still FERPA-logged**, so the audit trail survives; the approval
 does not.
 
-🔵 **So pitch `P35` as an MCP-surface control and name the data layer as out of scope.**
-🔴 **Do not present it as a records-layer guarantee.** 🟢 **And pin THREE surfaces, not two**:
+🟢 **So pitch `P35` as an MCP-surface control PLUS the two-line data-layer fix above**, and
+🔴 **name the in-crate surface as the residual** (`T83`). 🔵 **p149's and p150's instruction to
+scope the data layer out is SUPERSEDED, not deleted** — it was right while the fix did not
+exist. 🟢 **And pin THREE surfaces, not two**:
 the router's 46 names against the manifest's 46, **and** the manifest's 23
 `requires_approval = true` names against the macro's 23 `approval_tools` — which p149 measured
 **set-identical**, and which the repository's own suite checks for **11 of 23**, never as a set.

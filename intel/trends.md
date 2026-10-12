@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+⏱️ **Fourteenth pass of this date.** 🟢 **Seven of p150's twelve pre-registered actions
+reached, five not** — and the five are named. 🟢 **`ACTION FF` is DISCHARGED after three
+passes on the register**, which was the worst open item on this shelf. 🔴 **Two actions were
+REFUTED exactly as specified**, and both refutations are more useful than a discharge would
+have been.
+
+| thesis | state | what it says |
+|---|---|---|
+| 🆕 🔴 **`T81`** | 🆕 **new** | **The `-only` / `-or-later` election cannot be read from a licence body, because every GNU licence states it in its own appendix** |
+| 🆕 🔴 **`T82`** | 🆕 **new** | **A "dangling reference" is meaningless until the identifier SPACES and the page SCOPE are declared — this shelf has three spaces and four append-only pages** |
+| 🆕 🟡 **`T83`** | 🆕 **new** | **A `pub`/private fix closes a consumer bypass and not an in-crate one, so a type-visibility control needs a CI gate beside it** |
+| 🆕 🔴 **`T84`** | 🆕 **new** | **"AI education" and "education AI" are two different populations sharing one query, and the generic query returns the first** |
+| 🟢 **`T77`** | 🟢 **ACTED ON** | The body matcher is retired in both modules that owned a copy; the census is re-published; **4 of 52 rows change, 0 outside the GNU family** |
+| 🟢 **`T75`** | 🟢 **HELD and WIDENED** | The collision gate is green at `ids=41 collisions=0`; its mirror image now has a gate too |
+| 🔴 **`T78`** | 🔴 **HELD, and the CAUSE re-read** | Star counts stay `UNMEASURED`. 🔵 The refusal is a **session repository-scope policy**, not a transport failure — it governs every GitHub channel including the MCP server, while public `git clone` is served. **50 of 50 clones, 8 of 8 `npm pack`** |
+
+### 🆕 🔴 `T81` — the election is inside the licence that is being interrogated
+
+| claim | 🔴 **The `-only` / `-or-later` election is UNSTATED in every GNU-family row on this shelf, and a body-surface read would have reported the opposite for all seven.** |
+|---|---|
+| **the measurement** | **7** subjects, **1 513** source files scanned with licence files excluded at any depth: 🔴 **0** `or (at your option) any later version` headers · **0** `-only` statements · **0** SPDX elections. 🟢 **Positive control: the same matcher over the licence BODIES fires 7 of 7** |
+| **why the body is the trap** | GPL-3.0's appendix *"How to Apply These Terms to Your New Programs"* contains the recommended notice verbatim. 🔴 **So the phrase occurs in every GNU file, including one whose author elected `-only`** — `T77`'s class one layer down |
+| **what would overturn it** | 🔴 A per-file notice or SPDX election in any of the seven trees. 🔵 The matcher that would find it is committed and its two near-miss defects are recorded: a **comment prefix** breaking the phrase across `"\n * "`, and a **badge image** named `license.svg` counted as a licence file |
+| **what it changes in a room** | 🔴 *"It's GPL, we can take GPL-3-or-later"* is not available on this shelf. Plan against the **stated version only**, and ask the upstream author. 🟢 **`P38` step 4 now says so.** |
+| instrument | [`p151-election-surface`](../compose/code/p151-election-surface/README.md), **24 tests** |
+
+### 🆕 🔴 `T82` — a dangling reference is a property of the SCOPE, not of the citation
+
+| claim | 🔴 **This shelf has THREE identifier spaces sharing one `P` prefix, and four of its ten content files are append-only history. Change either and the dangling count moves by two orders of magnitude.** |
+|---|---|
+| **the spaces** | **patterns** (headings on `compose/patterns.md`, **41** after this pass) · **module axes** (a row in a `compose/code/*/README.md`, **23**) · **pass findings** (`P138`, `P150-A`; **174** passes nameable) |
+| **the scope** | 6 rewritten pages → 48 cited, 🟢 **0 dangling**. Plus `intel/open-gaps.md` → 354 cited, 🔴 **260 dangling**. Plus the trending pages and README → 745 cited, 🔴 **685** |
+| **the cause** | 🔵 The **2026-10-06 reset restarted the pattern space at `P1`**, so every id the history cites belongs to a previous generation of the same space. 🟢 **A historical record, not a defect** |
+| **`P240`, which started this** | 🟢 **NOT dangling. It resolves** at `compose/code/p239-table-integrity/README.md:17` — the region-column completeness axis, allocated at pass 78 after being born cited at pass 39 |
+| **what would overturn it** | 🔴 A fourth space, or a cited id on a rewritten page that resolves in none of the three. 🟢 One was found and fixed in this very pass: `P263`, this KB's own *"put the question in `lib/`"* rule, had been cited in prose since pass 88 and allocated nowhere |
+| instrument | [`p151-identifier-spaces`](../compose/code/p151-identifier-spaces/README.md), **25 tests** |
+
+### 🆕 🟡 `T83` — a visibility fix closes the consumer surface and not the in-crate one
+
+| claim | 🟡 **Making a field private closes the bypass every CONSUMER has and leaves the one the crate's own modules have, so a type-visibility control is half a control until a gate sits beside it.** |
+|---|---|
+| **the measurement** | `zavora-ai/mcp-student-records`: two lines (`pub store` → `store`, plus `pub fn new`) make p149's bypass test 🟢 **fail to compile** — `E0616` ×2 on the field reads, `E0451` on the struct literal — while 🟢 **the repository's own 24 tests still pass** |
+| **why the consumer surface is the one that mattered** | 🔵 **A Rust integration test is its own crate.** p149 demonstrated the bypass from `tests/`, so what it demonstrated *is* what a downstream consumer can do, and `pub`/private is exactly that boundary |
+| **the residual** | 🔴 `pub`/private is a **module** boundary. A future module inside the crate can still reach `self.store` and call a `pub fn` write. Closing that needs a sealed approval token in all **23** write signatures |
+| **what would overturn it** | 🔴 A sealed-token patch that compiles and keeps the 24 tests green would promote this from "half a control" to "closed". 🔵 Not attempted here: it is a 23-site change to a repository this KB does not own |
+| **what it changes in a room** | 🟢 Ship the two lines, and run the gate in CI for the in-crate surface. 🔴 Do not say "the data layer is closed" — say "closed to consumers, gated in CI inside the crate" |
+| instrument | [`p151-approval-field-closure`](../compose/code/p151-approval-field-closure/README.md), **19 tests** |
+
+### 🆕 🔴 `T84` — "AI education" and "education AI" are different populations
+
+| claim | 🔴 **A query naming "education" and "AI agents" returns AI-ENGINEERING CURRICULA, not education-sector agents. 4 of 4 hits this pass were curricula or link lists; 0 were education-sector software.** |
+|---|---|
+| **the measurement** | 🟢 **4 of 4 clone-verified, 4 of 4 MIT.** `microsoft/ai-agents-for-beginners` — **3 510** `.md` + **2 240** `.ipynb` + **15** code files. `rohitg00/ai-engineering-from-scratch` — 2 269 code + 2 063 `.md`. `pguso/agents-from-scratch` — 17 code + 17 `.md`. 🆕 `avinash201199/free-ai-agents-resources` — 🔴 **0 code files, 2 `.md`** |
+| **the symmetry with `ACTION FK`** | 🔵 p150 found the other half: the two **generic** queries returned only courses, and the one naming **`tutor`** returned the repositories. 🟢 **Same lesson from the opposite side** — the query must name the education ARTEFACT (`tutor`, `moodle`, `canvas`, `sis`), never the word "education" |
+| 🆕 **a new class** | **LINK LAYER** — a row that ships **zero code files**, only a curated list. 🔵 Sibling of p150's **PROMPT LAYER** (no server, no code): both read as zero on every tool-surface instrument on this shelf, for different reasons |
+| **what would overturn it** | 🔴 A generic "education AI agent" query returning an education-sector agent. 🔵 ~90 queries across eleven passes have not produced one |
+| **what it changes in a room** | 🟢 These four rows are real, permissive and useful — **as training material for a studio team**, not as a starting point for a client's education product. 🔴 **They do NOT belong in `agents/top.md`** and are filed on the trending pages with the distinction stated |
+
+### 🔵 What the thesis register now is, and what it is missing
+
+🟢 **`ACTION FR` built it as one file** —
+[`evidence/thesis-register.2026-10-12-p151.tsv`](../evidence/thesis-register.2026-10-12-p151.tsv).
+🔴 **Its falsifier FIRED: there was no single committed location.** What the file shows:
+
+| state | count |
+|---|---|
+| 🟢 **DEFINED** on a live page | **55** |
+| 🔴 **NO DEFINITION anywhere** | 🔴 **17** — `T19`, `T20`, `T38`, `T39`, `T47`–`T55`, `T57`, `T59`–`T61` |
+| 🔴 **defined ONLY on an append-only page** | **3** — `T44`, `T45`, `T46` |
+| 🟡 **MULTI_STATEMENT** (collision candidates) | **5** |
+
+🔴 **`T39` is cited 24 times and defined nowhere.** `T57` 13×, `T59` 12×, `T38` 10× — all
+undefined. 🔵 **That is the same defect `ACTION FL` closed for the agent tier**, now measured
+for the theses.
+
+🟡 **And the collision count is NOT settled, with the cause named.** The 5 candidates are
+section headings *about* a thesis's status rather than second definitions — `T3`'s *"what is
+resolved and what is not"* is a status section, not a rival claim. 🔴 **The register carries
+no `FIRST` / `REVISIT` marker**, which is precisely what the pattern gate has had since p150
+and what lets it tell an amendment from a collision. 🔵 **So the measured collision count is
+**0** with an instrument limitation stated rather than a number asserted.** 🔵 **`ACTION FY`.**
+
 ## Pass 150 — 2026-10-12
 
 🔵 **Thesis high-water mark before this pass: `T76`. Next free: `T77`.** 🟢 **This pass takes

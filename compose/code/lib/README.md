@@ -213,3 +213,53 @@ payload read and the `NON-GITHUB` case — not a defect of this library.
 on the first real address it met. 🟢 **`P841` — re-assert every verdict class against a live
 payload before citing the instrument.** 🔵 Pass 74 predicted this about its own unexecuted
 fetch branch and was right.
+
+---
+
+## The axes this library owns
+
+🔵 **Allocated here rather than on `compose/patterns.md`, because they are properties of this
+library and not engagement recipes.** 🟢 **p151 writes them as rows so the dangling-citation
+gate can resolve them** — `P263` had been cited in prose on this page and in `region.py`
+since pass 88 and allocated nowhere, which is `T82`'s shape exactly.
+
+| axis | what it requires |
+|---|---|
+| **P263** | a question asked by more than one instrument must live in `compose/code/lib/` — while it does not, every new instrument reimplements it and chooses the bug again |
+| **P264** | two callers needing OPPOSITE leniency get two functions, and their disagreement is asserted as a required case rather than reconciled |
+
+## 🆕 `licence_identity.py` — the licence-identity question, pass 151
+
+🔵 **`P263`'s rule came due a second time.** The rule written above — *while the question
+does not live in `compose/code/lib/`, every new instrument reimplements it and chooses the
+bug again* — is exactly what `T77` is: three published modules carried a copy of the same
+`identify()`, every copy carried the same body-substring rung for the GNU family, and
+**5 of 7 GNU rows were published wrong while `GPL` was published zero times in 150
+passes.**
+
+🟢 **So the question now lives here**, and `p145-licence-census` and
+`p147-licence-language` **import** it. 🔵 **p149's `identify_ext()` DELEGATES to p147's
+`identify()`**, so the "three published copies" were two copies and one delegation, and
+patching two files fixed all three.
+
+| what it answers | function | surface |
+|---|---|---|
+| which licence is this file? | `title_spdx()` | the **TITLE LINE** only — the name must *be* the line |
+| independently, which licence is this? | `clause_licence()` | AGPL-3.0 §13 *"Remote Network Interaction"* |
+| do the two agree? | `agree()` | `AGREE` / `TITLE_ONLY` / `DISAGREE` / `UNDETERMINED` |
+| what did the retired matcher say? | `retired_identify()` | the published ladder, **in its published order** |
+
+🔴 **`retired_identify()` must stay wrong.** A reproduction that quietly fixes either
+ordering defect — the Apache rung ahead of the GNU ones, AGPL ahead of GPL — cannot measure
+what was published. Both orderings are asserted as *required* behaviour of the repro in
+`test_licence_identity.py`.
+
+🔴 **What this module deliberately does not do: read an election.** `-only` vs `-or-later`
+is in every GNU licence's own appendix, so reading it from the body is `T77` one layer down
+(`T81`). That question lives in
+[`../p151-election-surface`](../p151-election-surface/README.md).
+
+🟢 **Measured reach: 39 of 39** licence files across the 58-row census carry a readable
+title line. The title surface costs **zero coverage** against the body matcher it replaces.
+
+- **47 tests**, all offline, every fixture authored in the suite: `python3 test_licence_identity.py`

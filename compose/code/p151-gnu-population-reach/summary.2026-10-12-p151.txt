@@ -1,0 +1,7 @@
+rows=58
+licence files=39   with a readable TITLE line=39
+GNU-family by TITLE=7: Agso-o_sigaa-calendar, ahmedEid1_lumen, despedite_siu-guarani, edwyj_ddl-killer, fabrica-de-inovacao_expeditto, mhlavac_edupage-mcp, qxbao_qldt-hanu-mcp
+GNU-family by RETIRED matcher=7: Agso-o_sigaa-calendar, ahmedEid1_lumen, despedite_siu-guarani, edwyj_ddl-killer, fabrica-de-inovacao_expeditto, mhlavac_edupage-mcp, qxbao_qldt-hanu-mcp
+rows where the two surfaces DIFFER=5
+rows with more than one licence file=0 []
+ACTION FU falsifier (population > 7): SILENT

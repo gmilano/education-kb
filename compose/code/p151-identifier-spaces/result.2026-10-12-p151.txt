@@ -1,0 +1,9 @@
+# p151 — ACTION FQ. The gate over the six pages this shelf rewrites each pass.
+# Run 2026-10-12, after p151's own writes. Exit 0.
+spaces: patterns=41  module-axis=23  pass-finding=174
+scope: 6 files   cited=48   dangling=0
+
+resolution by space:
+  module-axis    2
+  pass-finding   5
+  patterns       41

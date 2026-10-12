@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 151 — 2026-10-12
+
+⏱️ **Fourteenth pass of this date.** 🟢 **`ACTION FV` DISCHARGED — Vietnam's three
+compliance dates are ONE TIERED REGIME, not a contradiction**, and the reconciliation
+withdraws an effect date this shelf has carried since p148. 🔴 **Two regional queries
+returned NOTHING education-specific** — EMEA and APAC — and both nulls are written down
+with what was searched. 🟢 **LATAM gains a SECOND governance instrument**, which agrees on
+the shape and differs on the level.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION FV`** | 🟢 **DISCHARGED — the three dates RECONCILE as a transitional ladder** | Effect **2026-08-15** · **2027-03-01** for systems started within six months of effect and for other sectors · **2027-09-01** for systems ALREADY RUNNING in healthcare, education, finance |
+| 🔴 `P151-V1` | 🔴 **An effect date this shelf published is WITHDRAWN** | p148's **`2026-03-01`** is wrong. Decision 33/2026/QD-TTg takes effect **2026-08-15** |
+| 🟢 `P151-V2` | 🟢 **`P149-B`'s drafting defect is LOCATED, not just reported** | The sector list says **banking**; the transitional article says **finance**. One decision, two words |
+| 🆕 🟢 `P151-L` | 🆕 🟢 **LATAM's governance gap has a SECOND instrument** | Digital Education Council × Tec de Monterrey: **92%** students · **79%** faculty · 🔴 **30%** of universities with a published policy |
+| 🔵 `P151-L2` | 🔵 **The two LATAM instruments differ by 4 points and are NOT averaged** | UNESCO IESALC **26%** (formal framework, n=200/19) vs DEC **30%** (published policy). 🟢 **Same shape, different level** |
+| 🔴 `P151-E` | 🔴 **EMEA: the education-specific query returns ZERO education sources** | And the one transferable figure is MIS-SCOPED: CompTIA's **94%** is a **US-respondent** survey published on EMEA pages |
+| 🔴 `P151-A2` | 🔴 **APAC: a second education-sector null** | The only education items are **corporate L&D** — TCS × Pearson, LearnUpon, Alteryx, NIIT MTS. 🔴 No ministry instrument, no adoption figure |
+| 🔴 `P151-N` | 🔴 **North America: the FEDERAL layer now moves AGAINST the state layer** | A December executive order directs the attorney general to challenge conflicting state AI laws. 🟡 Secondary |
+| 🔴 `P151-M` | 🔴 **Three publishers now disagree about a year that has already happened** | 2025 base: **$6.4B** · **$7.52B** · **$8.3B** — a **30%** spread. 🔴 **Fourth pass with no quotable figure** |
+
+### 🟢 `ACTION FV` — the reconciliation, in full
+
+> 🔴 **`ACTION FV`** — reconcile Vietnam's three compliance dates; find a second source for
+> the **September 2027** high-risk education deadline or withdraw it by name.
+> 🔴 *Refuted if no second source exists* — which would put the figure in `P148-K`'s class.
+
+🔴 **The falsifier did NOT fire.** Four independent publishers carry the regime, and one of
+them quotes the decision's own operative sentence:
+
+| element | value | where |
+|---|---|---|
+| instrument | **Decision 33/2026/QD-TTg** (Prime Minister) | 🔴 primary host **403 at CONNECT**; read through the publisher's quoted extract |
+| takes effect | 🆕 **2026-08-15** | 🔴 **this shelf had `2026-03-01` — WITHDRAWN** |
+| scope | **46** high-risk AI systems across **six** sectors | education; ethnicity and religion; healthcare; banking; litigation; transportation |
+| deadline, systems ALREADY RUNNING at effect | 🟢 **2027-09-01** — healthcare, **education**, finance | *"providers and deployers shall be responsible for completing compliance obligations … Before September 01, 2027, for artificial intelligence systems in the fields of healthcare, education, and finance"* |
+| deadline, systems started WITHIN SIX MONTHS of effect | 🟢 **2027-03-01** | and the same date for the other listed fields |
+| during the transition | existing systems may keep running **unless** a competent state agency finds serious risk and orders suspension or termination | |
+
+🟢 **So the "three readings" were three RUNGS.** An education system live before
+2026-08-15 has until **2027-09-01**; one launched between 2026-08-15 and 2027-02-15 has
+until **2027-03-01** — 🔴 **the later-launched system has the EARLIER deadline**, which is
+counter-intuitive and is exactly why three dates looked like a contradiction. 🔵 **What it
+changes in a room**: an engagement that *replaces* a legacy Vietnamese education system
+moves the client from the September rung to the March rung. Say so before the proposal,
+not after.
+
+🔴 **One thing still unresolved and not to be quoted: the number of conformity pathways.**
+One publisher describes two under the AI Law; another lists three, with third-party
+certification mandatory for the highest-risk systems. 🔵 **Two sources, two counts, no
+primary text — so no count is carried.**
+
+### 🔴 What this page still cannot do, after p151
+
+- 🔴 **No market-size figure is quotable, for a FOURTH pass** — and the problem is now worse
+  than a forecast spread: three publishers disagree about **2025**, a year that has ended.
+- 🔴 **EMEA has no education-sector adoption figure from this channel**, and p151 is the
+  first pass to establish that by running the query and recording the null rather than by
+  not asking.
+- 🔴 **APAC has no ministry-level education AI instrument on this page** beyond Korea,
+  Vietnam, Japan and the four jurisdictions p146 named. The 2026 sweep added none.
+- 🔴 **Every regional figure in this section is secondary.** The UNESCO, OECD, DEC and
+  MarketsAndMarkets numbers were all read through aggregators or publisher pages. 🟢 Said
+  once, at section level.
+- 🔴 **No open-source vendor is named in any market source, for a fifth pass.** 🔵 The gap
+  between what market reports name and what is forkable IS this KB's product.
+
 ## Pass 150 — 2026-10-12
 
 🟢 **`ACTION FI` is NOT refuted — Africa has figures.** 🟢 **And the pass's larger result is
@@ -1039,6 +1106,36 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🆕 p151 — the FEDERAL layer turns against the state layer, and one claim is refused
+
+🔴 **The newest instrument on this page points the other way from every other one.** A
+**December executive order** directs the US attorney general to challenge state AI laws
+that conflict with a *"minimally burdensome national policy framework"*. 🟡 **Secondary
+source** (Cimplifi), which also judges that the impact will unfold slowly and that **states
+remain the main drivers** of AI governance. 🔵 **What it changes in a room**: the
+state-by-state map this page has built over six passes is now *contested*, so a compliance
+pitch keyed to one state's statute should name the federal challenge as a risk rather than
+assume the statute is stable.
+
+🔴 **A claim this page REFUSES to carry as a figure.** A newsletter reports **Boston Public
+Schools** as the first major US district to mandate **AI fluency as a graduation
+requirement from September 2026**, and reports **Maryland** and **Oklahoma** restricting AI
+in high-stakes decisions. 🔴 **None could be confirmed from a primary source.** 🟢 **Named
+and marked UNCONFIRMED** — `P148-K`'s class, carried so the next pass can settle it and not
+so it can be quoted.
+
+🟡 **Two more aggregator figures, in the same class as p150's four and equally unquotable:**
+
+| measure | value | class |
+|---|---|---|
+| US institutions with formal AI guidelines | **10%** | 🔴 secondary compilation |
+| US teachers lacking AI training | **71%** | 🔴 secondary compilation |
+
+🔴 **And the market-size spread is now internal to the region too**: MarketsAndMarkets puts
+North America at **$951M (2024) → ~$2.3B (2029)**; Technavio's May 2026 report cites
+**41.7%** North American growth. 🔴 **Different scopes, different methods, unreconciled.**
+
+
 #### 🆕 p150 — classroom-level adoption numbers, two new state statutes, and the first district BANS
 
 🟢 **Adoption, at teacher level rather than institution level** — the granularity this page
@@ -1619,6 +1716,33 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 🔴 p151 — the education-specific query returns NOTHING, and the null is WRITTEN DOWN
+
+🔴 **`AI education EMEA 2026 adoption regulation players` returned zero education-sector
+results.** What came back: CompTIA's EMEA IT-strategy outlook, a Workday AI-adoption study,
+a Bandwidth/Cavell enterprise study, a customer-contact panel. 🔴 **No education regulator,
+no ministry, no university body, no edtech vendor.**
+
+🔵 **An informed gap is information; silence looks exactly like coverage.** So: the named
+organisations in that result set are CompTIA, Workday, Bandwidth/Cavell and Google Cloud.
+🔴 **None is an education provider.**
+
+🔴 **And the one transferable number is MIS-SCOPED, which is worse than missing.**
+CompTIA's *"94% of organizations are at least somewhat likely to invest in AI-specific
+training in 2026"* is published on CompTIA's EMEA pages and 🔴 **surveyed US respondents
+only**. 🟢 **Named here precisely so it is not later lifted onto this page as an EMEA
+figure** — the defect class `P147`'s NA denominators belong to.
+
+| figure | value | why it is not an EMEA education figure |
+|---|---|---|
+| likely to invest in AI training in 2026 | **94%** | 🔴 **US respondents**, EMEA-page publication |
+| EMEA organisations yet to begin piloting AI | **38%** | 🔴 Workday, **2023 edition** — three years old, enterprise-wide |
+
+🟢 **What EMEA does still have, and it is the strongest regional anchor on this page**: the
+**EU AI Act** clock (p146, p149) — the only EMEA instrument here that can be cited with a
+date and an article. 🔵 **The residual gap is a regional ADOPTION FIGURE, not evidence.**
+
 
 #### 🆕 p150 — AFRICA GETS ITS FIRST FIGURES, and two guidance numbers that contradict each other
 
@@ -2223,6 +2347,35 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 🔴 p151 — a second education-sector null, and the only education items are CORPORATE L&D
+
+🔴 **`AI education APAC 2026 adoption regulation players` returned enterprise material
+only.** Boomi, TechRepublic and Forrester on sovereignty and tech priorities; **57% of
+Asian organisations with AI in one or more areas**; Singapore's consultations on AI in
+**financial institutions**; Australia tightening AI governance and copyright rules. 🔴 **No
+ministry-level education AI regulation. No education adoption figure.**
+
+🟢 **The four education-sector items that did surface are all commercial, and all four are
+CORPORATE L&D rather than formal education** — a different buyer, so they are separated
+rather than counted as education adoption:
+
+| item | what it is | why it is not formal education |
+|---|---|---|
+| **TCS × Pearson** | multi-year AI learning alliance for employers' skills gaps | 🔵 employer-funded workforce reskilling |
+| **LearnUpon** | APAC HQ in Sydney, "Create+" AI course authoring | 🔵 corporate LMS vendor |
+| **Alteryx Academy** | relaunch with personalised AI learning paths and credentials | 🔵 vendor certification |
+| **NIIT MTS** | sixteenth consecutive year on Training Industry's top-20 custom-content list, AI-led design cited | 🔵 custom corporate content |
+
+🔵 **Commentary worth one line, not a figure**: analysts expect APAC to converge on common
+principles — safety, transparency, accountability — **executed differently per market**,
+which is the shape `T40` already describes for this region, and Forrester expects
+sovereignty requirements to shape infrastructure choices for roughly **half** of APAC
+firms.
+
+🟢 **The region's one real movement this pass is Vietnam**, and it is a reconciliation
+rather than a new instrument — see `ACTION FV` in the pass section above.
+
 
 #### 🆕 p150 — Korea's pilot year is NAMED, Vietnam gains a THIRD date, and adoption is broad and shallow
 
@@ -2839,6 +2992,50 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 🟢 p151 — a SECOND governance instrument, agreeing on the shape and differing on the level
+
+🟢 **The Digital Education Council's *AI in Higher Education LATAM Survey 2026***, run with
+**Tecnológico de Monterrey**'s Institute for the Future of Education; participating
+institutions include **UNAM** (Mexico), **UPC** (Peru) and the **Pontificia Universidad
+Católica de Chile**.
+
+| measure | DEC 2026 | UNESCO IESALC (p150) |
+|---|---|---|
+| students actively engaging with AI | 🟢 **92%** | — |
+| faculty actively engaging with AI | 🟢 **79%** | **74%** in teaching |
+| institutions adopting AI in at least one area | — | 🟢 **87%** (n=200, 19 countries) |
+| 🔴 **institutions with governance** | 🔴 **30%** — a *published policy* | 🔴 **26%** — a *formal framework* |
+| the gap, as a ratio | 🔵 **3.1 : 1** | 🔵 **3.3 : 1** |
+
+🔵 **Two instruments, two samples, two question wordings — and they are NOT averaged.**
+🟢 **They agree on the shape**: adoption vastly exceeds governance. 🔴 **They differ on the
+level by 4 points**, and *"has a published policy"* is a stricter test than *"has a formal
+framework"*, so the direction of the difference is the wrong way round from what the
+wordings predict. 🔵 **Recorded as a disagreement to carry, not a range to quote.** 🟢 **The
+two ratios land within 7% of each other**, which is the more robust number of the four.
+
+🆕 **And the regulatory map gains names this page did not have:**
+
+| jurisdiction | state |
+|---|---|
+| **Chile** | 🟢 the most developed national AI policy in the region |
+| **Brazil**, **Colombia** | 🟡 national AI strategies, 🔴 **no education-specific rules** |
+| **Mexico** | 🟡 **SEP**, **ANUIES** and the Observatorio IA have issued recommendations — 🔴 **non-binding** |
+| region-wide | 🔴 **no unified regulatory framework for AI in higher education** |
+
+🆕 **A named index this page should be using**: the **IDB's ILIA** tracks readiness,
+adoption and governance across **19 countries** — an instrument, not an aggregator, and the
+first LATAM source on this page with a per-country structure.
+
+🔴 **Both surveys are published by the institutions that ran them or their partners, and
+both were read through aggregators this pass.** 🟢 Stated rather than implied.
+
+🔵 **The opportunity is unchanged and now doubly measured: the governance gap IS the
+engagement.** Two independent instruments put adoption at 3× governance. A LATAM higher-ed
+engagement that ships a policy artefact — a published AI-use policy, an approval gate, an
+access log — addresses the thing **70–74%** of institutions do not have.
+
 
 #### 🆕 p150 — the governance gap is MEASURED: 87% adoption, 26% strategy, on a named sample
 
@@ -3622,6 +3819,36 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🆕 🔴 p151 — three publishers now disagree about a year that has already ENDED
+
+🔴 **The market-size problem stopped being a forecast spread.** Three publishers give three
+different figures for **2025**, a completed year:
+
+| publisher | 2025 base | forecast |
+|---|---|---|
+| IMARC | **$6.4B** | **$79.6B** by 2034 |
+| The Business Research Company / GII | **$7.52B** | **$10.6B** in 2026 |
+| GII (Korean-language report) | **$8.3B** | **$57.2B** by 2033 |
+
+🔴 **A 30% spread on a historical year**, and the two long forecasts differ by **39%** on
+different end years. 🟢 **No market-size figure is quotable, for a fourth consecutive
+pass** — and the reason is now stronger than "forecasts differ".
+
+🆕 **Adoption, with one coincidence worth flagging rather than celebrating**: one aggregator
+reports global student AI usage rising **66% (2024) → 92% (2025)**. 🔵 **The 92% is
+numerically identical to the DEC LATAM student figure** from an unrelated instrument.
+🔴 **Recorded as a coincidence to check, NOT as corroboration** — two instruments landing on
+the same round number is a reason to doubt one of them, not to believe both.
+
+🟡 **Two structural figures, carried as indicative**: cloud deployment held **71.22%** share
+in 2024; the AI-tutors segment was **$1.63B** in 2024 with language learning the
+fastest-growing part. 🔴 Both vendor/market-research class.
+
+🔴 **And the finding that has not moved in five passes: no open-source vendor is named in
+any market source.** 🔵 Every publisher names big tech, publishers and startups. 🟢 **The
+gap between what the market reports name and what is forkable is this KB's product.**
+
 
 #### 🆕 p150 — the adoption-governance gap is the global pattern, and the open-source counterparty is missing
 
