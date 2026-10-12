@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 152 — the agent tier gets its first star counts, and the artefact-named query pays again
+
+🔴 **`T78` is REFUTED.** 🟢 **Nine repositories measured for stars this pass, none attached
+to this session**, on a channel this shelf documented at pass 93 and declared closed at
+p150. 🆕 **`T87`.**
+
+| repo | licence | ★ | forks | note |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | **140** | 30 | 🟢 the most-starred agent-tier row on this shelf |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | 🟢 **MIT** | **40** | 25 | APAC — 🟢 **25 of 25 region-bearing hosts in its tree are Australian** |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** | 🔴 **1** | 0 | 🔴 **the best-governed row on this shelf** |
+
+🟢 **The oracle test, because a channel that cannot fail is not a channel:**
+`github.com/moodle/moodle` → **7.5k ★**; `github.com/moodle/moodle-definitely-not-a-real-repo-p152`
+→ 🟢 **HTTP 404.** 🔵 **It discriminates.**
+
+🔴 **The figure worth keeping: 1 star.** `zavora-ai/mcp-student-records` has had three
+passes of instrument work spent on it — 23 approval-gated writes, FERPA-logged mutations,
+`ACTION FF`'s two-line privacy fix, a 24-test suite — 🔴 **and one star, no forks.**
+🟢 **Stars measure attention, not governance.**
+
+### 🆕 Two REAL education-sector rows, clone-verified — and the query matters
+
+| repo | licence (read from the tree) | head | shape | class |
+|---|---|---|---|---|
+| 🆕 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** — *"Copyright (c) 2025 Vishal Sachdev"* | 🟢 **2026-10-11** `7c4229c` | **184** code · **116** `.md` | 🟢 **EDUCATION-SECTOR AGENT** — Canvas LMS MCP for students and educators |
+| 🆕 [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** — *"Copyright (c) 2026 AGENTE 404 S.L."* | 2026-07-23 `cead98e` | 🟡 **5** code · 2 `.md` | 🟡 **THIN CONNECTOR** — local-first stdio MCP |
+
+🟢 **`T84` holds, third direction.** The mandated generic query
+*"top open source AI agents education 2026 github MIT"* returned **four** rows and
+🔴 **all four were curricula or link lists** — the same population p151 found, plus an
+unverifiable *"Hermes Agent, 180 000★"* claim 🔴 **this pass declines to carry** (one
+secondary source, no repository named, no licence). 🟢 **The query naming `moodle`,
+`canvas`, `LMS` and `tutor` returned the two rows above.** 🔵 **Name the artefact.**
+
+### 🆕 🟡 A candidate placement channel, on one row, NOT used
+
+🔴 **`admin978/canvas-mcp`'s holder is *"AGENTE 404 S.L."*** — `S.L.` is a **Spanish
+corporate legal form.** 🔵 **Structurally different from the owner-name guessing `T67` and
+`T70` forbid**: a legal-entity suffix is a jurisdictional fact the holder states about
+itself, not an inference from a username.
+
+🔴 **The row is left UNPLACED.** 🟢 **One observation is a candidate, not a channel** — and
+the test is measurable from clones this pass already holds: how often do `S.L.`, `GmbH`,
+`S.A.`, `Ltda`, `Pty Ltd`, `K.K.` appear across the 58 census licence files? 🔵 **`ACTION GH`.**
+
+### 🔴 What this entry does NOT claim
+
+- 🔴 **Only 3 of the agent tier's rows were star-measured**, not all. 🔵 One fetch per
+  repository, and the budget went to `ACTION GA`. 🔵 **`ACTION GI`.**
+- 🔴 **GitHub Trending returned no education repository**, for a pass this shelf stopped
+  counting. 🟢 The artefact-named query did.
+- 🔴 **Neither new row is placed by region**, and neither is promoted to `agents/top.md`
+  this pass — 🟢 **filed here first**, as the shelf's convention requires.
+
 ## 2026-10-12 — pass 151 — the search finds four real repos and none of them is an education agent
 
 🆕 **`T84`.** 🟢 **4 of 4 clone-verified, 4 of 4 MIT.** 🔴 **0 of 4 are education-sector

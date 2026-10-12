@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P42` — never publish a ZERO without the denominator that makes it a measurement *(new, p152 — Global)*
+
+🔴 **p151 published *"0 elections across 1 513 files"*. That figure cannot be read.** A tree
+with **zero** GNU per-file notices and a tree with **16 905** notices that each decline to
+elect both report "0 elections" — 🔴 **and they are opposite facts about the same question.**
+
+🔵 **The rule**: a zero is a measurement only when the population that COULD have been
+non-zero is counted beside it.
+
+### Step 1 — name the thing that would have had to exist
+
+🟢 For an election: a **GNU per-file notice**. For a tool count: a **router entry**. For a
+region: a **region-bearing host**. 🔵 **If you cannot name it, the zero is not yet a
+measurement** — it is an absence of looking.
+
+### Step 2 — count it in the same walk, not in a second pass
+
+🟢 `notice_files` is one `if` inside the loop that was already reading every header:
+
+    if GNU_NOTICE.search(t):
+        notices += 1
+
+🔵 **A denominator that needs its own pass will not get written.** This one cost one line.
+
+### Step 3 — report the pair, always, and let the classes separate themselves
+
+🟢 **Measured over the six education verticals, the single verdict `SILENT` became four:**
+
+| class | subject | notices | what the zero MEANS |
+|---|---|---|---|
+| `NO_NOTICE` | `learningequality/kolibri` | **0 of 4 350** | 🟢 permissive — nothing to elect in |
+| `ROOT_ONLY` | `openedx/edx-platform` | **0 first-party** | 🟡 licence in the root file alone |
+| 🔴 `DECLINING` | `instructure/canvas-lms` | 🔴 **16 905 of 19 286** | 🔴 **not silent — an election by omission** |
+| `NOTICE_NO_VERSION` | p151's seven small rows | **17 of 1 513** | 🟢 GNU named, no version to elect from |
+
+### Step 4 — go back and re-read the old zero
+
+🟢 **The denominator re-read p151's own published null**: all **17** notice-bearing files
+across the seven small rows never reach a version, and 🔴 **two rows have ZERO notices across
+1 020 files.** 🟢 **`T81` still holds for them — for a cause nobody had measured.** 🔵 **A
+denominator usually confirms the old finding and always changes what it means.**
+
+### 🔴 What `P42` does NOT solve
+
+- 🔴 **It does not tell you whose file it is.** `canvas-lms`' 16 905 notices are
+  first-party; `sakai`'s 12 are not. 🔵 That is `T86` and `ACTION GF`, a different question.
+- 🔴 **It does not fix a wrong matcher.** A denominator beside a blind matcher gives you a
+  confident wrong answer with a population attached — 🔵 which is exactly how `T85` was
+  found, and only because the denominator and the matcher disagreed.
+
+---
+
+## 🆕 🟢 `P43` — the FORK-LICENCE decision: read the election before you choose the platform *(new, p152 — all regions)*
+
+🔵 **The engagement shape**: a client wants an AI layer on an open-source LMS and will fork
+it. 🔴 **The licence IDENTITY (`GPL-3.0`, `AGPL-3.0`) does not decide this. The licence
+TERM — the `-only` / `-or-later` election — does**, and it is readable from the tree in
+under a minute per platform.
+
+### Step 1 — clone shallow, and only the platforms actually shortlisted
+
+    git clone --depth 1 --single-branch https://github.com/moodle/moodle          <dir>/moodle_moodle
+    git clone --depth 1 --single-branch https://github.com/instructure/canvas-lms <dir>/instructure_canvas-lms
+
+🟢 **Measured: 6 platforms, 2.4 GB, 6 of 6 OK, under two minutes.** 🔵 `--depth 1` is enough
+— the election is at `HEAD`, not in history.
+
+### Step 2 — run both surfaces, because one of them is blind
+
+    python3 compose/code/p152-vertical-election/election_verticals.py <dir>   # or-later + the notice denominator
+    python3 compose/code/p152-vertical-election/omission.py          <dir>   # the -only-by-OMISSION form
+
+🔴 **Run the second one.** The first reports `instructure/canvas-lms` as `SILENT`; the second
+reports **16 896** files electing **AGPL-3.0-only**. 🟢 **`T85`.**
+
+### Step 3 — read the answer off the table, and it is a real decision input
+
+| platform | ★ | licence | election | what the client's fork may become |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7.5k** | GPL-3.0 | 🟢 **`-or-later`** | 🟢 **GPL-3.0 or any later GPL** — a future relicensing route exists |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **6.9k** | AGPL-3.0 | 🔴 **`-only`** | 🔴 **AGPL-3.0 ONLY, plus §13 network-use at v3's wording. No route out.** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **8.2k** | AGPL-3.0 | 🟡 **unstated per-file** | 🟡 **ask upstream** — 🔵 though its README says *"version 3 … unless otherwise noted"* |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **1.1k** | 🟢 **MIT** | 🟢 **n/a** | 🟢 **anything** — 🔵 the only one of the four with no copyleft conversation |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **9.2k** | LGPL-3.0 | 🟢 **`-or-later`** | 🟢 **link, do not absorb** — and the or-later route exists |
+
+### Step 4 — check the hit is the SUBJECT's before you act on it
+
+🔴 **`sakaiproject/sakai` reads `-or-later` and it is false.** The single hit is
+`library/src/webapp/js/trimpath-template-latest.js` — *"Copyright (C) 2004, 2005 Metaha"*,
+a bundled library. 🟢 **Sakai is ECL-2.0 and elects nothing.** 🔵 **So for any row with a
+LOW notice count (`sakai` 12, `edx-platform` 1), open the hit and read its copyright
+holder.** 🔴 **`SKIP_DIRS` will not do it for you** — neither bundled copy is under
+`vendor/`. 🟢 **High counts are safe** (`moodle` 14 024, `canvas-lms` 16 905 — first-party).
+
+### Step 5 — wire the AI layer on top, without inheriting the copyleft
+
+🟢 **The pattern that keeps the client's model code out of the copyleft**: the LMS stays
+unmodified behind its own licence, and the agent talks to it over MCP.
+
+| piece | repo | licence | role |
+|---|---|---|---|
+| **Canvas connector** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 🟢 **184 code files, head `2026-10-11`** — the largest, most active Canvas MCP this shelf has measured |
+| **records layer with an authorisation boundary** | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** | 🟢 **23 approval-gated writes, FERPA-logged, 24 tests** — 🔴 **and 1 ★, so nobody will find it by searching** |
+| **offline / low-connectivity front** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 the permissive escape hatch when the copyleft answer is unacceptable |
+
+🔵 **Why this ordering matters commercially.** 🟢 **An MCP connector under MIT, talking to an
+unmodified AGPL LMS over a network boundary, does not make the client's agent code AGPL.**
+🔴 **Forking `canvas-lms` to add the same feature inside the tree does** — and on the
+`-only` election, permanently at version 3. 🟢 **Step 3 is therefore a build-vs-connect
+decision, not a legal footnote.**
+
+### 🔴 What `P43` does NOT solve
+
+- 🔴 **It is not legal advice and the election is not the whole licence.** AGPL §13's
+  network-use trigger applies whether or not the election is or-later; 🟢 the election decides
+  only what a derivative may MOVE to.
+- 🔴 **`openedx/edx-platform` has no per-file answer**, so this pattern returns *"ask
+  upstream"* for one of the four majors. 🟢 Named rather than guessed.
+- 🔴 **No star count is exact.** `7.5k` carries the shelf's `K-3CIFRAS` band; only the
+  agent-tier figures (`140`, `40`, `1`) are exact as rendered.
+- 🔴 **The instrument cannot attribute a notice to a holder yet** (`ACTION GF`), which is why
+  Step 4 is a human read and not a flag.
+
+---
+
 ## 🆕 🟢 `P40` — ask a licence question ONCE: put it in `lib/`, not in the next instrument *(new, p151 — Global)*
 
 🔵 **This is `P263`'s rule, paid.** The rule has been written on this shelf since pass 88:

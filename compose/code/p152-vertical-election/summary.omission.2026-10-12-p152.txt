@@ -1,0 +1,3 @@
+  instructure_canvas-lms omission sample: rspack.config.js
+scanned=105727  or_later=14115  only_worded=0  ONLY_BY_OMISSION=16896  notice_no_version=194
+scanned=1513  or_later=0  only_worded=0  ONLY_BY_OMISSION=0  notice_no_version=17

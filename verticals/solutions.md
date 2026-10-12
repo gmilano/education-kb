@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 152 — 2026-10-12
+
+🟢 **`ACTION GA` is DISCHARGED and the verticals stop being a negative control: they are
+now the most consequential licence measurement on this shelf.** 🔴 **Two of the six
+platform verdicts this page has implied are WRONG**, in two different ways, and 🟢 **one of
+them changes what a studio may do with Canvas LMS.**
+
+🟢 **And these six rows carry STAR COUNTS for the first time in 152 passes** — `T78` is
+refuted on a channel this shelf had declared closed (see `intel/trends.md`, `T87`).
+
+| platform | licence | ★ | forks | 🆕 **election** | what a fork may relicense to |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | **7.5k** | — | 🟢 **`-or-later`** — 13 859 of 14 024 notices | 🟢 **GPL-3.0 or any later GPL** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | **6.9k** | 3.0k | 🔴 **`-only`, by OMISSION** — 16 896 files | 🔴 **AGPL-3.0 ONLY. Not "or later".** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | **8.2k** | 4.4k | 🟡 **UNSTATED per-file** (root-only surface) | 🟡 **ask — but the README says *"version 3 … unless otherwise noted"*** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | **9.2k** | 6.0k | 🟢 **`-or-later`** — 255 of 263 notices | 🟢 **LGPL-3.0 or any later LGPL** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | **1.2k** | 1.0k | 🔴 **NONE — the one hit is VENDORED** | 🟢 **ECL-2.0 (permissive); the GPL hit is not Sakai's** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | **1.1k** | 1.0k | 🟢 **not applicable — 0 notices** | 🟢 **anything MIT allows** |
+
+🟢 **Six of six sidebar licences independently CONFIRM what this page already said**, read
+from a second channel this pass. 🔵 **That is the negative control still doing its job**:
+the licence *identities* on this page have now been corroborated twice (p150's hand read of
+the licence files, p152's sidebar read), 🔴 **while the licence *terms* turn out to have
+been unmeasured all along.**
+
+### 🔴 The Canvas LMS finding, which is the one to take into an engagement
+
+🔴 **`instructure/canvas-lms` carries a complete AGPL notice in 16 905 of 19 286 source
+files — 87.7%, the highest notice rate on this shelf — and NOT ONE of them says "or later".**
+
+    # Canvas is free software: you can redistribute it and/or modify it under
+    # the terms of the GNU Affero General Public License as published by the Free
+    # Software Foundation, version 3 of the License.
+
+🔴 **That sentence is an election.** It is the FSF's own `-only` form, expressed by
+**omitting** the or-later clause rather than by writing the word "only" — 🔴 **so every
+matcher on this shelf reads it as `SILENT`, the same verdict it gives a file with no notice
+at all.** 🆕 **`T85`.**
+
+🔵 **What it changes in a room.** `P38` step 4 has been saying the election is UNSTATED, so
+ask the author. 🔴 **For Canvas that advice is wrong and would waste a client's time**: the
+answer is in the tree 16 896 times. 🟢 **Say instead: a Canvas fork is AGPL-3.0-only, so a
+future AGPL-4 is not a relicensing route, and the §13 network-use obligation is fixed at
+version 3's wording.** 🟢 **A Moodle fork does have the or-later route.** 🔵 **That
+difference is a real decision input between the two platforms and this shelf could not state
+it before this pass.**
+
+### 🔴 The Sakai finding — this page would have published a licence that is not Sakai's
+
+🔴 **Sakai's single `-or-later` hit is `library/src/webapp/js/trimpath-template-latest.js`**
+— *"TrimPath Template. Release 1.0.38. Copyright (C) 2004, 2005 Metaha"*, dual
+GPL-2.0-or-later / Apache-2.0. 🔴 **A bundled third-party library, not Sakai's code.**
+
+🟢 **Sakai elects nothing and remains ECL-2.0**, which is the permissive reading this page
+has always carried. 🔴 **But the instrument attributed a vendored GPL to an ECL-2.0
+project**, and `SKIP_DIRS` cannot catch it: it excludes `vendor/`, and this copy lives under
+`library/src/webapp/js/`. 🆕 **`T86`**, measured and **not** fixed — 🔵 **`ACTION GF`.**
+
+🔴 **The same defect reaches Open edX**, whose only notice-bearing file is
+`common/test/data/uploads/jschannel.js`, also vendored. 🟢 **So Open edX's FIRST-PARTY
+per-file notice surface is zero**, and its silence is a root-only licence surface rather
+than a declination.
+
+### 🟢 What `ACTION GA` actually settled, stated against its own falsifier
+
+> 🔴 *Refuted if the verticals are also silent, 6 of 6.*
+
+🔴 **It did not fire: 3 of 6 state an election.** 🟢 **So `T81` is CONFINED to the small
+rows** and `P38`'s "ask the author" stays row-specific rather than becoming universal. 🔵
+**And the four large copyleft codebases p151 flagged as "exactly the kind that DO carry
+per-file headers" split two ways**: Moodle and BigBlueButton carry them and elect;
+Canvas carries them and declines; Open edX does not carry them at all.
+
+🟢 **Instrument, with the reproduction control and 25 offline tests:**
+[`p152-vertical-election`](../compose/code/p152-vertical-election/README.md) ·
+[the verticals result](../compose/code/p152-vertical-election/result.verticals.2026-10-12-p152.tsv) ·
+[the omission result](../compose/code/p152-vertical-election/result.omission.2026-10-12-p152.tsv).
+🔵 **105 727 source files over six `--depth 1` clones, 6 of 6 OK.**
+
+### 🔴 What this page still cannot do
+
+- 🔴 **The `-only` / `-or-later` election is still unmeasured for every vertical this page
+  does NOT list.** Six platforms were cloned; the page names no others, so there is no
+  hidden population — 🟢 **said so it is not read as six-of-many.**
+- 🔴 **No notice-to-subject attribution.** `sakai`'s row is published with a verdict this
+  page knows is wrong, because dropping it would hide `T86`. 🔵 **`ACTION GF`.**
+- 🔴 **The positive control degrades on big trees and the figure is given rather than
+  hidden**: it fires on **10 of 161** licence bodies here, against 7 of 7 on p151's small
+  rows, because these six trees bundle 161 licence files that are mostly vendored
+  MIT/Apache. 🔵 **`ACTION GG`.**
+- 🔴 **Star counts are rendered values** (`7.5k`, `6.9k`), not exact integers, and carry the
+  shelf's `K-3CIFRAS` band — 🟢 **a band, named, not a false precision.**
+
 ## Pass 151 — 2026-10-12
 
 🟢 **The six vertical platforms are the negative control that bounds `T77`, and p151 keeps

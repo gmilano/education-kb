@@ -1,0 +1,10 @@
+# p152 -- ACTION GA. The election surface over the SIX vertical platforms.
+# Instrument: election_verticals.py (p151 semantics re-implemented, plus the notice denominator).
+# Clones: git clone --depth 1 --single-branch, 2026-10-12, 6 of 6 OK.
+subject	files_scanned	notice_files	hdr_or_later	hdr_only	spdx_elections	election	notice_rate_pct	evidence
+bigbluebutton_bigbluebutton	3083	263	255	0	0	OR_LATER	8.5	bigbluebutton-html5/client/main.html; bigbluebutton-html5/client/meetingClient.jsx
+instructure_canvas-lms	19286	16905	0	0	0	SILENT	87.7	-
+learningequality_kolibri	4350	0	0	0	0	SILENT	0.0	-
+moodle_moodle	60259	14024	13859	0	0	OR_LATER	23.3	index.php; Gruntfile.js
+openedx_edx-platform	7129	1	0	0	0	SILENT	0.0	-
+sakaiproject_sakai	11620	12	1	0	0	OR_LATER	0.1	library/src/webapp/js/trimpath-template-latest.js

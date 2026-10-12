@@ -1,0 +1,3 @@
+subjects=7  source files scanned=1513  GNU-notice files=17  SILENT=7
+CONTROL: the same matcher fires on 7 of 7 licence BODIES
+ACTION GA falsifier (the verticals are also silent, 6 of 6): FIRED

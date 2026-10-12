@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 152 — 2026-10-12
+
+🔴 **Every per-file licence figure on this shelf counts files that belong to somebody else,
+and this pass can finally say so with a number.** 🟢 **`T86`.** 🔴 **And the licence TERM —
+the `-only` / `-or-later` election — turns out to be readable on three of the six largest
+subjects, which means `T81`'s null was a property of SMALL repositories and not of
+education copyleft.**
+
+| measurement | value |
+|---|---|
+| foundational subjects walked this pass | 🟢 **6** vertical platforms, `git clone --depth 1`, **6 of 6 OK**, **2.4 GB** |
+| source files scanned | 🟢 **105 727** (licence files excluded at any depth) |
+| 🆕 files carrying a GNU per-file notice | 🟢 **31 205** |
+| …of those, electing `-or-later` | **14 115** |
+| …electing `-only` with the WORD "only" | 🟢 **0** |
+| 🆕 …electing `-only` **by OMISSION** | 🔴 **16 896** |
+| notices that never reach a VERSION | **194** |
+| 🔴 subjects whose verdict is attributable to a VENDORED file | 🔴 **2 of 6** (`sakai`, `edx-platform`) |
+| 🟢 the reproduction control — p151's 7 rows re-measured | 🟢 **1 513 files, 7 SILENT, control 7 of 7 — EXACT** |
+
+🟢 **Artefacts:**
+[verticals](../compose/code/p152-vertical-election/result.verticals.2026-10-12-p152.tsv) ·
+[omission forms](../compose/code/p152-vertical-election/result.omission.2026-10-12-p152.tsv) ·
+[the reproduction of p151's seven](../compose/code/p152-vertical-election/result.repro-p151-seven.2026-10-12-p152.tsv).
+
+### 🆕 🟢 `P42` — the NOTICE DENOMINATOR, and why this shelf needed it
+
+🔴 **p151 published *"0 elections over 1 513 files"* with no denominator**, and a figure of
+that shape cannot be read. 🔴 **A tree with zero GNU notices and a tree with 16 905 notices
+that each decline to elect both report "0 elections" — and they are opposite facts.**
+
+🟢 **With the denominator, `SILENT` splits into four classes that were one:**
+
+| class | subject | notices | what the silence MEANS |
+|---|---|---|---|
+| **NO_NOTICE** | `kolibri` | **0 of 4 350** | 🟢 permissive — there is no copyleft notice to elect in |
+| **ROOT_ONLY** | `edx-platform` | 🟡 **0 first-party** (1 vendored) | 🟡 the licence lives in the root file alone |
+| 🔴 **DECLINING** | `canvas-lms` | 🔴 **16 905 of 19 286 — 87.7%** | 🔴 **not silent at all: an election, by omission** |
+| **NOTICE_NO_VERSION** | p151's seven rows | **17 of 1 513** | 🟢 a GNU licence named, no version to elect from |
+
+🟢 **And the fourth class re-reads p151's own result.** All **17** notice-bearing files
+across the seven small rows name a GNU licence and never reach a version, 🔴 **while
+`Agso-o/sigaa-calendar` and `ahmedEid1/lumen` have ZERO notices across 1 020 source files.**
+🟢 **So `T81` HOLDS for the small rows — for a cause p151 did not measure.**
+
+🔵 **Same defect class as `T84`'s `LINK LAYER`/`PROMPT LAYER` split**: two populations that
+read zero on one instrument for different reasons, and an instrument that reports them
+identically is hiding the difference. 🟢 **`P42` is that rule generalised: never publish a
+zero without the denominator that makes it a measurement.**
+
+### 🔴 The vendored-file problem, which touches every licence figure this shelf has published
+
+🔴 **Two of six subjects' verdicts come from code the subject did not write:**
+
+- 🔴 **`sakaiproject/sakai`** — **1** hit in **11 620** files:
+  `library/src/webapp/js/trimpath-template-latest.js`, *"TrimPath Template … Copyright (C)
+  2004, 2005 Metaha"*, dual GPL-2.0-or-later / Apache-2.0. 🟢 **Sakai is ECL-2.0 and elects
+  nothing.**
+- 🔴 **`openedx/edx-platform`** — its only notice-bearing file is
+  `common/test/data/uploads/jschannel.js`. 🟢 **First-party notice surface: ZERO.**
+
+🔴 **`SKIP_DIRS` cannot fix either**: it excludes `vendor/`, and neither bundled copy is
+under `vendor/`. 🔵 **A path-name exclusion is the wrong instrument for a provenance
+question** — 🟢 **the right signal is the notice's own copyright holder**, which sits in the
+same eight kilobytes the walk already reads. 🔵 **`ACTION GF`.**
+
+🔴 **The consequence for this page is not confined to these two rows.** Every per-file
+licence sweep in this shelf's history — `p199-perfile-license`, `p441-tree-licence-enumeration`,
+`p969-root-only-licence-reach` — walked trees without separating first-party from bundled
+files. 🟢 **None of their published verdicts is withdrawn on this evidence**, because none
+of them was measured for this defect; 🔴 **but none can be said to be free of it either.**
+🟢 **Stated once, at page level, rather than as a correction this pass has not earned.**
+
+### 🟢 The six foundational platforms, with the stars this page never had
+
+| repo | licence | ★ | forks | 🆕 election | notice rate |
+|---|---|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | **9.2k** | 6.0k | 🟢 `-or-later` | 8.5% |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | **8.2k** | 4.4k | 🟡 unstated | 🟡 0% first-party |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | **7.5k** | — | 🟢 `-or-later` | 23.3% |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | **6.9k** | 3.0k | 🔴 **`-only`** | 🔴 **87.7%** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | **1.2k** | 1.0k | 🟢 none (vendored hit) | 0.1% |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | **1.1k** | 1.0k | 🟢 n/a | 0% |
+
+🟢 **6 of 6 sidebar licences agree with this shelf's hand-read values** — a free second
+licence channel, in the same nine fetches that refuted `T78`.
+
+🔵 **The permissive foundation story is unchanged and now has a number beside it**:
+🟢 **`kolibri` (MIT) is still the only one of the six a studio can build on without a
+copyleft conversation** — and at **1.1k ★** it is also the second-least-starred. 🔴 **The
+popularity and the permissiveness point in opposite directions on this shelf**, which is
+the sentence this page has implied for 152 passes and could not previously support.
+
+### 🔴 What this page still cannot do
+
+- 🔴 **The election is unmeasured on every foundational subject that is not one of these
+  six.** 🟢 Six were cloned; no larger population was sampled and none is implied.
+- 🔴 **No notice-to-holder attribution** (`ACTION GF`), so `sakai`'s row is published with a
+  verdict this page knows is wrong rather than quietly dropped.
+- 🔴 **The positive control degrades on big trees**: it fires on **10 of 161** licence
+  bodies here against 7 of 7 on the small rows, because these six trees bundle 161 licence
+  files that are mostly vendored MIT/Apache. 🟢 **The figure is given rather than hidden.**
+  🔵 **`ACTION GG`.**
+- 🔴 **p151's `election.py` was NOT the instrument used.** One invocation was refused
+  `[Code from External]`; 🟢 **the re-implementation reproduces p151's three published
+  figures exactly**, which licenses it as a reproduction and 🔴 **not as an independent
+  second surface.**
+
 ## Pass 151 — 2026-10-12
 
 🟢 **The 58-row licence census is RE-PUBLISHED**, the body matcher is retired in both

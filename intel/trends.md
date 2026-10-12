@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 152 — 2026-10-12
+
+⏱️ **Fifteenth pass of this date.** 🟢 **Five of p151's fourteen pre-registered actions
+reached, nine not** — and the nine are named. 🔴 **This pass withdraws a date this shelf has
+published for five passes and used to correct the market**, and 🔴 **refutes a thesis this
+shelf hardened over three passes.** 🟢 **Both were found by running a channel the shelf had
+written off.**
+
+| thesis | state | what it says |
+|---|---|---|
+| 🆕 🔴 **`T85`** | 🆕 **new** | **An election has THREE surface forms. The third — a complete GNU notice with the or-later clause OMITTED — is the FSF's own `-only` form, and no matcher on this shelf can read it** |
+| 🆕 🔴 **`T86`** | 🆕 **new** | **An election read from a tree is not the SUBJECT's election. A bundled third-party file elects for itself, and `vendor/` does not catch where they actually live** |
+| 🆕 🔴 **`T87`** | 🆕 **new** | **The star count IS measurable for an UNATTACHED third-party repository. `P151-S`'s "governs every GitHub channel" is too broad — it governs the API, not the rendered page** |
+| 🆕 🔴 **`T88`** | 🆕 **new** | **A compliance date can be superseded between passes by an instrument that never names education. This shelf's Annex III date was moved six days before it fell, and five passes did not see it** |
+| 🔴 **`T78`** | 🔴 **REFUTED** | Star counts are NOT unmeasurable. 🟢 **9 repositories measured this pass** across the vertical and agent tiers, none attached to this session |
+| 🟢 **`T81`** | 🟢 **CONFINED, as `ACTION GA` asked** | 3 of 6 verticals state an election. 🟢 **And the small rows' silence has a THIRD cause**: all 17 of their notice-bearing files never reach a version |
+| 🟢 **`T84`** | 🟢 **HELD, third direction** | The generic query returned 4 curricula again. 🟢 **The query naming `moodle`/`canvas`/`LMS`/`tutor` returned two real education-sector repos** |
+
+### 🆕 🔴 `T85` — the election by OMISSION, which is the pass's sharpest finding
+
+| claim | 🔴 **A complete GNU notice that does NOT continue into "or (at your option) any later version" has elected the stated version only — and this shelf reads it as SILENCE.** |
+|---|---|
+| **the measurement** | **16 896** files in `instructure/canvas-lms` (of **19 286** scanned, **16 905** notice-bearing — **87.7%**, the highest notice rate on this shelf) carry *"as published by the Free Software Foundation, version 3 of the License."* 🔴 **0 say "or later". 0 say "only".** |
+| **why both p151 matchers miss it** | `ELECTION_LATER` needs the or-later clause, which is absent; `ELECTION_ONLY` needs the literal word `only`, which was never written. 🔴 **Asserted as a test, not described** |
+| **why it is `T77`'s class a third layer down** | `T77`: a licence cannot be identified from its body. `T81`: the election cannot be read from a body. 🆕 **`T85`: the election can be stated by ABSENCE, so a matcher that only looks for presence cannot see it** |
+| **what would overturn it** | 🔴 An Instructure statement that the per-file notice is not an election, or an or-later clause anywhere in the tree. 🟢 **An independent second channel already points the same way**: `openedx/edx-platform`'s README says *"version 3 of the AGPL unless otherwise noted"* |
+| **what it changes in a room** | 🔴 *"It's AGPL, the election is unstated, we'll ask"* is wrong for Canvas. 🟢 **A Canvas fork is AGPL-3.0-ONLY**; a Moodle fork does have the or-later route. 🔵 **That is a decision input between the two platforms this shelf could not state before** |
+| instrument | [`p152-vertical-election`](../compose/code/p152-vertical-election/README.md), **25 tests** |
+
+### 🆕 🔴 `T86` — a vendored file elects for itself
+
+| claim | 🔴 **`sakaiproject/sakai` is ECL-2.0 and this pass's instrument read it as GPL-`-or-later`, because a bundled library said so.** |
+|---|---|
+| **the measurement** | **1** hit in **11 620** files: `library/src/webapp/js/trimpath-template-latest.js`, *"TrimPath Template … Copyright (C) 2004, 2005 Metaha"*, dual GPL-2.0-or-later / Apache-2.0. 🔴 **Not Sakai's code.** Same shape at `openedx/edx-platform`, whose only notice is `common/test/data/uploads/jschannel.js` |
+| **why the exclusion list cannot fix it** | 🟢 `SKIP_DIRS` excludes `vendor/`; 🔴 **neither bundled copy is under `vendor/`.** A path-name exclusion is the wrong instrument for a provenance question |
+| **the signal a fix must read** | 🟢 **The notice's own copyright holder.** `Metaha` is not `sakaiproject`, and that comparison is available in the same eight kilobytes already being read |
+| **what would overturn it** | 🔴 A holder-matching pass that changes no verdict — which would mean bundled notices are rare enough to ignore. 🔵 **Prediction: it will change at least `sakai` and `edx-platform`** |
+| **what it changes on this shelf** | 🔴 **Every per-file licence figure this shelf has published counts vendored files.** 🟢 The verdict on `sakai` is published KNOWN-WRONG rather than dropped, so the defect stays visible. 🔵 **`ACTION GF`** |
+
+### 🆕 🔴 `T87` — the star count was never unmeasurable, and the shelf said it three times
+
+| claim | 🔴 **`https://github.com/<owner>/<repo>` renders stars, forks and the sidebar licence for a repository that is NOT attached to this session. 9 measured this pass.** |
+|---|---|
+| **the measurement** | **6 verticals** — `moodle` **7.5k**, `canvas-lms` **6.9k**/3.0k, `edx-platform` **8.2k**/4.4k, `bigbluebutton` **9.2k**/6.0k, `sakai` **1.2k**/1.0k, `kolibri` **1.1k**/1.0k — plus **3 agent-tier rows**: `zijinz456/OpenTutor` **140**★/30, `BetterSEQTA/BetterSEQTA-Plus` **40**★/25, `zavora-ai/mcp-student-records` 🔴 **1**★/0 |
+| **the oracle test, because a channel that cannot fail is not a channel** | 🟢 **It DISCRIMINATES**: `moodle/moodle` returns 7.5k; `moodle/moodle-definitely-not-a-real-repo-p152` returns **HTTP 404**. 🔵 This is `p93`'s channel, recorded in this shelf's own README and then written off at p150 |
+| **what `P151-S` got wrong** | 🔴 **"It governs every GitHub channel including `WebFetch`."** It does not. 🟢 **It governs `api.github.com/repos/…` and `/search/…`**, which is what was actually refused; the rendered HTML page is served |
+| **the bonus the action did not ask for** | 🟢 **6 of 6 sidebar licences AGREE with this shelf's hand-read vertical licences** — a second independent licence channel, free, in the same nine fetches |
+| 🔴 **the figure that stings** | `zavora-ai/mcp-student-records` — the **best-governed row on this shelf** (23 approval-gated writes, FERPA logging, 24 passing tests, three passes of instrument work) has **ONE STAR**. 🔵 **Stars measure attention, not governance, and now this shelf can show it rather than assert it** |
+| **what would overturn it** | 🔴 The channel failing on a repository that exists. 🟢 9 of 9 answered this pass |
+
+🔵 **The lesson is `ACTION GE`'s, arriving one pass after it was registered.** p151 wrote
+*"permanently"* about an environment limit, withdrew the word, and then still published
+*"every GitHub channel"* — 🔴 **a narrower overstatement of the same kind.** 🟢 **The rule
+that survives: name the exact URL that was refused and the exact URL that answered. Never
+generalise to a "channel".**
+
+### 🆕 🔴 `T88` — the Annex III date this shelf has been correcting the market with is WITHDRAWN
+
+| claim | 🔴 **`2026-08-02` is no longer the date Annex III obligations apply to education. It is `2027-12-02`, moved by a regulation that entered into force SIX DAYS before the old date fell.** |
+|---|---|
+| **what moved it** | **Regulation (EU) 2026/1744**, the *Digital Omnibus on AI*. 🟢 Parliament **2026-06-16** · Council **2026-06-29** · OJ **2026-07-24** · in force **2026-07-27** |
+| **the new dates** | 🟢 **Annex III high-risk (which includes education and vocational training): `2027-12-02`**, from `2026-08-02`. 🟢 Annex I embedded products: **`2028-08-02`**. 🟢 Regulatory sandboxes: `2026-08-02` → **`2027-08-02`** |
+| 🔴 **what did NOT move** | **Article 50 transparency is not delayed.** 🟡 One source puts Art 50(2) watermarking at **`2026-12-02`** for systems already on the market at `2026-08-02` — 🔴 **carried as one publisher only, not as this shelf's figure** |
+| **why five passes missed it** | 🔵 **The omnibus never says "education".** It moves an annex; education is inside the annex. 🔴 **Every query this shelf ran named education, so the instrument that moved the date was invisible to all of them** |
+| 🔴 **how bad the exposure was** | 🔴 **This shelf used `2026-08-02` to CORRECT the market** — *"cinco instancias en cinco pases significa que la fecha equivocada es la lectura MAYORITARIA del mercado"*. 🔴 **The shelf was giving a superseded date with the confidence of a correction** |
+| **provenance, stated plainly** | 🔴 **No primary text and no fetchable secondary.** `eur-lex.europa.eu`, `gibsondunn.com`, `orrick.com`, `lewissilkin.com`, `uniwise.eu`, `legal500.com` and `artificialintelligenceact.eu` all refuse — 🟢 **the same `ENOTFOUND`/`CONNECT 403` event p151 established as one thing.** 🟢 **What carries it: nine independent publishers agreeing on the regulation NUMBER, both annex dates, the OJ date and the in-force date** — a convergence this shelf has never had on a market figure |
+| **what would overturn it** | 🔴 The OJ text showing a different number or date, or confirmation the omnibus was not published. 🟡 **One source holds that until OJ publication the August baseline stands** — and three others name the OJ date, so that reservation is read as pre-publication commentary |
+| **what it changes in a room** | 🟢 **An education client has 14 more months, not a passed deadline.** 🔴 **And the Art 50 transparency duties were never delayed**, so a chatbot or a generated-content feature is the live obligation while assessment and admissions are the 2027 one. 🔵 **That inversion is the pitch** |
+
+### 🟢 `ACTION GD` — the five red suites, re-run; one REPAIRED, one CLASSIFIED, p151's triage corrected
+
+> 🔴 *Refuted if any of the three stale assertions is not stale but WRONG.* 🔴 *And refuted
+> differently if `p471` does not terminate because it is waiting on the network.*
+
+🟡 **Partially reached: all five re-run and diagnosed, one repaired, three not.** 🔴 **And
+p151's triage under-counted two of them.**
+
+| suite | p151 published | 🟢 **p152 measured** |
+|---|---|---|
+| `p213-envelope-aad` | `ModuleNotFoundError: No module named '_cffi_backend'` | 🟢 **CONFIRMED as the root cause, and REPAIRED** — skips with the diagnosis, exit **0**. 🔴 Two faces of one fault: the system `cryptography` turns it into `pyo3_runtime.PanicException`, and a fresh wheel ships a **cpython-313** extension against a **cpython-311** interpreter. 🔴 **A pyo3 panic is not a subclass of `Exception`**, so the guard catches `BaseException` |
+| `p471-gap-gate-language` | *"does not terminate within 90 s"* | 🟢 **CLASSIFIED — CPU-BOUND, not network.** `real 1m15s · user 1m13.7s · sys 0m0.1s`. 🟢 **So the second falsifier is SILENT and the shelf's "every instrument is offline" claim HOLDS** |
+| `p598-register-freshness-gate` | *"`no cito verticals/` · `quedan rancias: [289]`"* | 🟢 **CONFIRMED exactly** — **56 of 58** assertions pass, 7 of 7 mutants killed, 2 failures, both as published |
+| `p351-star-digit-sweep` | *"stale generation-1 count: 219 vs 254"* | 🔴 **INCOMPLETE — 6 failures of 36, in at least two classes.** Two stale counts (`219>=254`, `2!=8`) 🔴 **and three concerning one figure, `6.400 ★` at `agents/trending.md:16053`, which DOES carry a band (`K-3CIFRAS, ±50`)** — so the fault is the gate's class vocabulary, not the page |
+| `p356-citation-origin` | *"`AssertionError: 8 != 15`"* | 🔴 **INCOMPLETE — 7 failures of 16**, not one assertion |
+| **total** | *"150 of 155 pass"* | 🔴 **The five are not five single assertions; they are 2 + 6 + 7 + 2 + 1 failures and one skip** |
+
+🔵 **The lesson, and it is `T82` one layer out again**: 🔴 **p151 triaged five suites by
+their FIRST failure line and published that as the cause.** 🟢 **A suite's first failure is
+not its diagnosis** — and the one suite whose cause p151 named most precisely (`p213`) is
+the one that turned out to be exactly right.
+
+### 🔴 Nine of fourteen actions NOT REACHED, and the cause is one thing
+
+🔴 **`FG`, `FJ`, `FH`, `FS`, `FT`, `FW`, `GB`, `FY`, `GC`, `FX`, `FZ` — eleven registered,
+five reached** (`GA`, `GD`, `GE` in part, and `FG`'s decisive datum only).
+🔵 **The cause is budget, and the trade is stated**: `ACTION GA` meant six `--depth 1`
+clones totalling **2.4 GB**, a re-implemented instrument with 25 tests, a reproduction
+control against p151's seven rows, and a third matcher for `T85` — 🟢 **and it produced two
+corrections to published readings plus a date withdrawal.** 🔴 **`FG` and `FJ` are now
+unreached for a FOURTH consecutive pass, which is the worst item on this shelf.**
+
+🟢 **`FG`'s decisive datum WAS taken, and it is a measurement rather than a prediction.**
+🟢 **The 50 census subjects were re-cloned, 50 of 50 OK** (`git clone --depth 1`), and
+`BetterSEQTA/BetterSEQTA-Plus` was swept at `HEAD` `47077f7` (2026-10-06) for every
+region-bearing host in its tree:
+
+| host | occurrences | region |
+|---|---|---|
+| `school.seqta.com.au` | **17** | APAC |
+| `other.seqta.com.au` | **4** | APAC |
+| `www.seqta.com.au` | **1** | APAC |
+| `portal.school.edu.au` | **1** | APAC |
+| `apps.sace.sa.edu.au` | **1** | APAC |
+
+🟢 **25 of 25 are Australian. There is not one EMEA, LATAM or North America host in the
+institutional or ccTLD class.** 🔴 **So the `APAC|EMEA|LATAM|North America` conflict p149
+recorded cannot come from this class at all** — it comes from hosts of the classes `FG`
+exists to exclude. 🟢 **`FG`'s falsifier is therefore expected SILENT on evidence, not on
+hope**, and the remaining work is the role classifier itself.
+
 ## Pass 151 — 2026-10-12
 
 ⏱️ **Fourteenth pass of this date.** 🟢 **Seven of p150's twelve pre-registered actions

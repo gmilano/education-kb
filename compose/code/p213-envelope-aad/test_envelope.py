@@ -40,10 +40,35 @@ import hmac
 import inspect
 import sys
 
-from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+# p152, `ACTION GD` -- the SKIP the action permits, with the diagnosis recorded IN it.
+#
+# This is the one suite on the shelf that is not offline-and-stdlib: it needs
+# `cryptography`, which needs a COMPILED `_cffi_backend` matching the running
+# interpreter.
+#
+# 🟢 **p151's diagnosis is CONFIRMED as the root cause, not corrected.** Measured
+# 2026-10-12, pass 152: `_cffi_backend` is genuinely not importable for this
+# interpreter, and the two faces of that one fault are
+#
+#   * the system `cryptography`, whose Rust bindings turn the missing extension
+#     into `pyo3_runtime.PanicException: Python API call failed` -- the
+#     `ModuleNotFoundError` is printed to stderr first, then pyo3 panics on it;
+#   * a freshly resolved wheel, which ships `_cffi_backend.cpython-313-*.so`
+#     against a `cpython-311` interpreter, so `pip install` does not fix it
+#     without building cffi from source.
+#
+# 🔴 What p151 did NOT record, and it is the reason this guard exists in the
+# shape it does: the failure arrives as a **pyo3 panic, which is not a subclass
+# of `Exception`**. A conventional `except Exception` guard does not catch it and
+# the suite stays red. Hence `BaseException`.
+SKIP_REASON = None
+try:
+    from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
-import vendored_crypto as vc
+    import vendored_crypto as vc
+except BaseException as _exc:  # noqa: BLE001 -- pyo3 panics bypass Exception
+    SKIP_REASON = "%s: %s" % (type(_exc).__name__, _exc)
 
 FAILURES = []
 
@@ -66,6 +91,15 @@ def backend_side(envelope, server_private):
 
 
 def main():
+    if SKIP_REASON is not None:
+        print("P213-SKIPPED\t" + SKIP_REASON)
+        print("P213-SKIPPED\tthis suite needs a loadable compiled `_cffi_backend`. "
+              "Measured pass 152: p151's `_cffi_backend` diagnosis is the ROOT "
+              "cause; it surfaces either as a pyo3 panic (system copy) or as an "
+              "ABI mismatch (cpython-313 extension, cpython-311 interpreter). "
+              "D1 and D2 stand on the pass-57 measurement in README.md; they are "
+              "NOT re-derived on this image.")
+        return 0
     server_private = X25519PrivateKey.generate()
     server_public_b64 = base64.b64encode(
         server_private.public_key().public_bytes_raw()

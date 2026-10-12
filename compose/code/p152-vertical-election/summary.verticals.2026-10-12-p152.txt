@@ -1,0 +1,3 @@
+subjects=6  source files scanned=105727  GNU-notice files=31205  SILENT=3
+CONTROL: the same matcher fires on 10 of 161 licence BODIES
+ACTION GA falsifier (the verticals are also silent, 6 of 6): SILENT

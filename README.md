@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 152 — 2026-10-12
+
+⏱️ **Fifteenth pass of this date.** 🟢 **Five of p151's fourteen pre-registered actions
+reached, nine not** — and the nine are named. 🔴 **This pass withdraws a compliance date the
+shelf has published for five passes and used to correct the market, and refutes a thesis the
+shelf hardened over three.** 🔵 **Both were found by running a channel the shelf had written
+off.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION GA`** | 🟢 **DISCHARGED, falsifier SILENT — and it found TWO WRONG verdicts** | **105 727** files over 6 verticals. 3 of 6 elect, so 🟢 **`T81` is CONFINED.** 🔴 **`canvas-lms`: 16 896 files elect AGPL-3.0-`only` BY OMISSION** 🆕 **`T85`** · 🔴 **`sakai`'s one hit is VENDORED** 🆕 **`T86`** · 🟢 reproduction of p151's seven **EXACT** |
+| 🆕 🔴 **`T88`** | 🔴 **The Annex III education date is WITHDRAWN** | **Regulation (EU) 2026/1744**, OJ **`2026-07-24`**, in force **`2026-07-27`**: Annex III moves **`2026-08-02` → `2027-12-02`**. 🔴 **In force six days before the date it replaced** |
+| 🆕 🔴 **`T87`** | 🔴 **`T78` REFUTED — star counts are measurable** | **9 repositories**, none attached to this session. 🟢 Channel **discriminates** (fake slug → **404**). 🔴 **`P151-S`'s "every GitHub channel" is too broad** |
+| 🟢 **APAC** | 🟢 **A declared gap CLOSES** | **Korea's AI Framework Act**, in force **`2026-01-22`**, **NAMES education** as a high-impact sector. 🔴 Scope caveat carried |
+| 🟢 **EMEA** | 🟢 **p151's measured NULL is broken** | **DFKI `KI-Kompetenzen HS`** — **Jan 2026–Mar 2029, ≈€6.9 M** — plus Spain's draft `Real Decreto`. 🔴 Still no EMEA adoption RATE |
+| 🟢 **North America** | 🟢 **The state layer turns BINDING, with dates** | 🔴 **Ohio: district AI policy due `2026-07-01` — already passed.** Oklahoma **`2027-28`** · Nevada **AB 406** bars AI from counselor functions · US DoE rule **`2026-04-13`** |
+| 🟡 **`ACTION GD`** | 🟡 **One suite REPAIRED, one CLASSIFIED, p151's triage CORRECTED on two** | 🟢 `p213` skips with its diagnosis, exit **0** · 🟢 `p471` is **CPU-BOUND** (`user 1m13.7s / sys 0m0.1s`), so the offline claim HOLDS · 🔴 **`p351` has 6 failures not 1; `p356` has 7** |
+| 🔴 **`ACTION FT`** | 🔴 **p151's PREDICTION IS WRONG** | The releases page **renders**: 10 releases, latest **`v1.5.5`**. 🟢 **APK only — no IPA exists**, so the action's premise was half wrong. 🔴 The asset licence is still unreadable |
+| 🟡 **`ACTION FG`** | 🟡 **Not implemented, but its decisive datum is MEASURED** | **50 of 50** subjects re-cloned. 🟢 **`BetterSEQTA-Plus`: 25 of 25 region-bearing hosts are AUSTRALIAN, 0 EMEA/LATAM/NA** — so the four-way conflict cannot come from this class |
+| 🆕 🟢 **two new agent rows** | 🟢 **Clone-verified, both MIT, found by naming the ARTEFACT** | 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **184** code files, head **`2026-10-11`** · 🟡 [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) — 5 code files. 🟢 **`T84` holds, third direction** |
+| 🔴 **LATAM** | 🔴 **A provenance trap on this shelf's OWN headline pair** | The **`92%`/`79%`** pair p151 attributed to *DEC × Tec de Monterrey* is carried in this pass's channel by a **Google for Education** blog. 🟡 Not withdrawn, not re-asserted. 🟢 **The gap ratio survives on IESALC's 26% alone** |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **One new instrument with two matchers and 25 offline tests, all passing** —
+  [`p152-vertical-election`](compose/code/p152-vertical-election/README.md), whose fixtures
+  are transcribed from the three real notice shapes (Moodle, Canvas, BigBlueButton).
+  🟢 **Three committed evidence files**, including the reproduction of p151's seven rows.
+- 🟢 **One suite REPAIRED** — `p213-envelope-aad` now skips with its diagnosis and exits 0
+  instead of failing, on both faces of the `_cffi_backend` fault.
+- 🟢 **Two new compose patterns**: 🆕 **`P42`** — never publish a zero without its
+  denominator — and 🆕 **`P43`**, the fork-licence decision, which turns `ACTION GA` into a
+  Moodle-vs-Canvas recommendation a studio can act on.
+- 🆕 **Four theses, `T85`–`T88`**, and 🔴 **four of this shelf's own published claims
+  corrected**: the Annex III date (`T88`), `T78`'s unmeasurability, `P151-S`'s *"every
+  GitHub channel"*, and `P970`'s *"the sandbox cannot execute repository code"* — 🟢 **p151's
+  own suite ran 31 of 31 in this pass.**
+- 🟢 **56 of 56 clones** (50 census subjects + 6 verticals, **2.4 GB**), so p153 starts with
+  both populations on disk.
+- 🟢 **Two of p151's own gates caught defects in p152's PROSE, which is the only evidence
+  that they work on a page they did not write.** 🔴 The region-heading gate flagged **three**
+  `###` headings this pass put inside the `## Opportunities by region` block — 🟢 demoted to
+  `#####`, gate now **0 findings** on `intel/market.md`. 🔴 The dangling gate flagged a
+  `P950` citation on two REWRITTEN pages whose definition lives on an **append-only** one —
+  🔵 **exactly `T82`'s shape and `T39`'s class** — 🟢 restated in prose with the definition's
+  location named, gate now **`dangling=0` over 50 citations**, pattern space **41 → 43**.
+  🔵 **p151 had the same experience with `P263`**: two passes running, the gates' only
+  demonstrated catches are in the prose of the pass that ran them.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **EMEA** | 🔴 **the clock MOVED and five passes missed it** | 🔵 **Why: the omnibus never says "education"** — it amends an annex, and education sits inside it. 🟢 **The opportunity INVERTS**: Article 50 transparency is live NOW while assessment and admissions became a `2027-12-02` programme, the reverse of the order this shelf has implied since pass 146 |
+| **APAC** | 🟢 **Korea names education, 23 months before the EU** | 🟢 **So Korea, not Europe, is the first large market where an education deployment meets a statutory high-impact regime.** 🔴 The decree that sets the criteria cannot be read (`P149-D`) |
+| **North America** | 🟢 **small-ticket, high-volume advisory, not a platform build** | 🔴 **Ohio's deadline has already fallen and the policy content is the district's own** — the buyer is a district that had to write a policy without expertise. 🔴 **Guidance-count denominator still disputed: 28+DC vs 35+** |
+| **LATAM** | 🔴 **the figures are in question; the ARGUMENT is not** | 🟢 **New and bounded**: McKinsey's 8-country study (some institutions at **8% of revenue**), DEC's **71%** of students demanding AI-ethics training, and a **280-teacher / 42-university / 6-country** Central America study — 🟢 **the first Central-America-specific population on this shelf.** 🔵 **And on the EU timetable a LATAM institution now has NO external deadline**, which makes the sale an accreditation argument, not a compliance one |
+| **Global** | 🔴 **sixth pass with no quotable market size** | **$6.4B / $7.52B / $8.3B** for a completed 2025. 🔴 **And no open-source vendor named in any market source, sixth pass.** 🟢 That gap is still this KB's product |
+
+### 🔜 Pre-registered for p153
+
+🔵 **Thirteen actions, in [`intel/open-gaps.md`](intel/open-gaps.md).** 🟢 **`FJ` is FIRST**
+— unreached four passes and, unlike `FG`, with no measurement to show; **`FG` is SECOND**,
+now carrying its decisive datum. Then `GF` (holder attribution for `T86`), `GK` (the
+omission matcher over the 58 census rows), `GG` (a positive control for a large tree), `GD2`
+(`p351` and `p356`), `GE2` (the permanence sweep, re-registered), `GI` (star-measure the
+agent tier), `GH` (the legal-entity-suffix channel), `GJ` (the `92%`/`79%` provenance), `GL`
+(the APK asset licence), `FS` and `GC`.
+
+🔴 **Six actions were deliberately HELD OFF the list** — `FH`, `FW`, `GB`, `FY`, `FX`, `FZ`.
+🔴 **Actions carried unreached across two passes each are not a register, they are a wish
+list**, 🟢 **and a fourteen-item list that pretends otherwise is how `FG` and `FJ` reached a
+fourth pass.** 🔵 They stay in the gap table and return when something moves them.
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **Nine of fourteen actions not reached**, and the cause is budget: `ACTION GA` alone
+  meant 2.4 GB of clones, a re-implemented instrument, a third matcher written after the
+  first two disagreed with the denominator, and a reproduction control. 🟢 **The trade is
+  stated and it paid.**
+- 🔴 **`FG` and `FJ` are unreached for a FOURTH consecutive pass.**
+- 🔴 **No primary legal text, FIFTH consecutive pass.** 🔴 **Eight more hosts refused**
+  (`eur-lex`, four law firms, two commentary sites, `artificialintelligenceact.eu`) — 🟢 the
+  same `ENOTFOUND`/`CONNECT 403` event, 🟢 **NOT re-registered** and not retried host by host (the **categorical-egress rule** — the denial is an allowlist, not a per-host fault — defined on `intel/open-gaps.md`).
+- 🔴 **`T88` rests on NINE SECONDARY PUBLISHERS and no primary.** 🟢 They agree on the
+  regulation number, both annex dates, the OJ date and the in-force date — 🔵 **a convergence
+  stronger than anything this shelf has on a market figure** — 🔴 **and it is still
+  secondary.**
+- 🔴 **`sakai`'s election verdict is published KNOWN-WRONG**, because dropping it would hide
+  `T86`. 🔵 **`ACTION GF`.**
+- 🔴 **`p351` and `p356` remain RED with 13 failures between them**, and p151's published
+  causes for both are incomplete.
+- 🔴 **Africa was not queried at all this pass.** 🟢 The omission is budget, and it is named
+  rather than left to look like coverage.
+- 🔴 **Only 3 of the agent tier's rows were star-measured**, so `T87`'s nine measurements
+  are a demonstration and not a distribution.
+
 ## Pass 151 — 2026-10-12
 
 ⏱️ **Fourteenth pass of this date.** 🟢 **Seven of p150's twelve pre-registered actions

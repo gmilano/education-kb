@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 152 — the election is readable on the big trees, and two verdicts belong to somebody else
+
+🟢 **`ACTION GA` ran over the six vertical platforms: 105 727 source files, six `--depth 1`
+clones, 6 of 6 OK.** 🔴 **Its falsifier did NOT fire — 3 of 6 state an election — so `T81`
+is a property of SMALL repositories, not of education copyleft.** 🔴 **And two of the six
+verdicts are wrong, in two different ways.**
+
+| subject | licence | scanned | 🆕 notices | or-later | 🆕 `-only` by omission | verdict |
+|---|---|---|---|---|---|---|
+| `moodle/moodle` | GPL-3.0 | **60 259** | **14 024** | **13 859** | 0 | 🟢 **`-or-later`** |
+| `instructure/canvas-lms` | AGPL-3.0 | **19 286** | 🔴 **16 905** | **0** | 🔴 **16 896** | 🔴 **`-only`** |
+| `sakaiproject/sakai` | ECL-2.0 | **11 620** | **12** | **1** | 0 | 🔴 **vendored hit** |
+| `openedx/edx-platform` | AGPL-3.0 | **7 129** | 🟡 **1** (vendored) | **0** | 0 | 🟡 **root-only surface** |
+| `learningequality/kolibri` | MIT | **4 350** | 🟢 **0** | **0** | 0 | 🟢 **n/a** |
+| `bigbluebutton/bigbluebutton` | LGPL-3.0 | **3 083** | **263** | **255** | 0 | 🟢 **`-or-later`** |
+
+### 🆕 🔴 `T85` — the third election form
+
+🔴 **Canvas LMS states `-only` by OMITTING the or-later clause**, which is the FSF's own
+`-only` form and which no matcher on this shelf can read:
+
+    # Canvas is free software: you can redistribute it and/or modify it under
+    # the terms of the GNU Affero General Public License as published by the Free
+    # Software Foundation, version 3 of the License.
+
+🔴 **16 896 files. No "or later" to find, no "only" to match** — so p151's two matchers
+report `SILENT`, the same verdict they give a file with no notice. 🟢 **The test that reads
+it is structural**: a notice reaching the grant verb and a version, and then stopping.
+
+🔵 **In a room:** 🟢 **a Canvas fork is AGPL-3.0-ONLY** — a future AGPL-4 is not a
+relicensing route. 🟢 **A Moodle fork does have the or-later route.** 🔴 **`P38` step 4's
+"ask the author" is wrong for Canvas**: the answer is in the tree, 16 896 times.
+
+### 🆕 🔴 `T86` — a vendored file elects for itself
+
+🔴 **Sakai's single hit is `library/src/webapp/js/trimpath-template-latest.js`** —
+*"TrimPath Template … Copyright (C) 2004, 2005 Metaha"*, dual GPL-2.0-or-later/Apache-2.0.
+🔴 **An ECL-2.0 project read as GPL because of a bundled library.** Same shape at
+`edx-platform` (`common/test/data/uploads/jschannel.js`).
+
+🔴 **`SKIP_DIRS` excludes `vendor/` and neither copy is under `vendor/`.** 🔵 **A path-name
+exclusion is the wrong instrument for a provenance question** — 🟢 the signal is the
+notice's own copyright holder. 🔵 **`ACTION GF`.**
+
+### 🆕 🟢 `P42` — never publish a zero without its denominator
+
+🟢 **`notice_files` splits `SILENT` into four classes that were one**: `NO_NOTICE`
+(`kolibri`, 0 of 4 350) · `ROOT_ONLY` (`edx-platform`, 0 first-party) · 🔴 **`DECLINING`**
+(`canvas-lms`, 16 905 of 19 286) · `NOTICE_NO_VERSION` (**all 17** notice-bearing files
+across p151's seven small rows). 🔴 **p151's instrument reports all four identically.**
+
+### 🟢 The reproduction control, and what it does and does not license
+
+🔴 **p151's `election.py` was not the instrument used** — one invocation was refused
+`[Code from External]`. 🟢 **The re-implementation reproduces p151's three published figures
+EXACTLY**: **1 513** files, **7** `SILENT`, control **7 of 7**. 🔴 **That makes it a faithful
+reproduction and NOT an independent second surface**, because it carries p151's regexes on
+purpose. 🔵 Stated before the results, not after.
+
+🔵 **And the sandbox note, because this shelf has mis-stated it twice** (`P970`, `P151-S`):
+repo code is **not** globally refused — p151's `test_population.py` ran **31 of 31** in this
+same pass. 🔴 **One invocation was refused, not a channel.**
+
+🟢 **Instrument:** [`p152-vertical-election`](../compose/code/p152-vertical-election/README.md),
+**25 offline tests**, authored fixtures transcribed from the three real notice shapes.
+
 ## 2026-10-12 — pass 151 — the body matcher is retired, and the question moves into `lib/`
 
 🟢 **`T77` is acted on, not just measured.** The three GNU rungs are gone from the two

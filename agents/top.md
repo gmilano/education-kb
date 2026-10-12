@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 152 — 2026-10-12
+
+🟢 **This page carries STAR COUNTS for the first time in 152 passes.** 🔴 **`T78` —
+*"no star count for any row"*, held and hardened over three passes — is REFUTED**, and the
+channel that refutes it is one this shelf documented at pass 93 and then wrote off.
+
+🟢 **And the agent search returns TWO REAL education-sector rows**, clone-verified, both
+MIT — 🟢 **because the query named the ARTEFACT**, exactly as `T84` prescribes.
+
+### 🟢 The three agent-tier rows now measured, and the figure that stings
+
+| repo | licence | ★ | forks | what the star count says |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | **140** | 30 | 🟢 the most-starred agent-tier row on this shelf |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | 🟢 **MIT** | **40** | 25 | 🔵 a student-built SEQTA extension, APAC |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** | 🔴 **1** | 0 | 🔴 **the best-governed row on this shelf has ONE star** |
+
+🔴 **`zavora-ai/mcp-student-records` is the row this shelf has spent three passes
+instrumenting** — 23 approval-gated writes, FERPA-logged mutations, a 24-test suite, and
+`ACTION FF`'s two-line privacy fix. 🔴 **One star. No forks.** 🟢 **Stars measure attention,
+not governance, and this page can now demonstrate that rather than assert it.**
+
+🔵 **What it changes in a room.** A client who shortlists by stars will not find the one row
+on this shelf with a real authorisation boundary. 🟢 **That is an argument for the shelf
+itself**, and it is the first time it can be made with a number.
+
+### 🆕 Two new rows, clone-verified — and the query that found them
+
+| repo | licence (read from the tree) | head | shape | verdict |
+|---|---|---|---|---|
+| 🆕 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** (`LICENSE`, *"MIT License Copyright (c) 2025 Vishal Sachdev"*) | 🟢 **2026-10-11** `7c4229c` | **184** code files + **116** `.md` | 🟢 **A REAL education-sector agent row.** Canvas LMS MCP server for students and educators; the largest and most active Canvas connector this shelf has measured |
+| 🆕 [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** (`LICENSE`, *"MIT License Copyright (c) 2026 AGENTE 404 S.L."*) | 2026-07-23 `cead98e` | 🟡 **5** code files + 2 `.md` | 🟡 **Real but thin** — a local-first stdio MCP server exposing Canvas to coding agents |
+
+🟢 **Both clone-verified at `HEAD`, both licence read from the tree and not from a badge or a
+directory listing.** 🔴 **Neither is placed by region** — see below.
+
+🟢 **`T84` holds, and this is its third direction.** The generic query
+*"top open source AI agents education 2026 github MIT"* returned **four** results and
+🔴 **all four were AI-engineering curricula or link lists** — `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, plus an unverifiable
+180 000★ claim for a *"Hermes Agent"* this pass declines to carry. 🟢 **The query naming
+`moodle`, `canvas`, `LMS` and `tutor` returned the two rows above.** 🔵 **Name the artefact,
+never the word "education" — now shown from the generic side, the artefact side, and the
+star side.**
+
+### 🆕 🟡 A placement channel this shelf does not have, found on one row
+
+🔴 **`admin978/canvas-mcp`'s copyright holder is *"AGENTE 404 S.L."*** — and `S.L.`
+(*Sociedad Limitada*) is a **Spanish corporate legal form**, not a name. 🔵 **That is
+structurally different from the owner-name guessing `T67` and `T70` forbid**: a legal-entity
+suffix is a jurisdictional fact about the holder, registered in prose by the holder itself.
+
+🔴 **It is NOT used to place the row.** 🟢 **One observation on one row is a candidate
+channel, not a channel** — the question is whether suffixes (`S.L.`, `GmbH`, `S.A.`, `Ltda`,
+`Pty Ltd`, `K.K.`) appear often enough across the 58 census licence files to be worth
+reading, and that is measurable from clones this pass already has. 🔵 **`ACTION GH`.**
+
+### 🔴 Region: both new rows UNPLACED, and the reason is the same as p151's
+
+🔴 **No placement channel was run on either new row.** 🟢 **Said rather than guessed**
+(`T67`, `T70`). 🔵 `vishalsachdev`'s holder string carries no legal form; `admin978`'s
+carries `S.L.` and is held back pending `ACTION GH` rather than used once.
+
+### 🔴 What this page still cannot do
+
+- 🔴 **Star counts are RENDERED values** — `140`, `40`, `1` are exact as shown, but the
+  vertical tier's are banded (`7.5k`). 🟢 **The band is named, not hidden** (`K-3CIFRAS`).
+- 🔴 **Only 3 of the agent tier's rows were measured**, not all of them. 🔵 **The channel is
+  one fetch per repository and the budget went to `ACTION GA`** — 🟢 a cost, stated, not a
+  limit. 🔵 **`ACTION GI`.**
+- 🔴 **The prompt-layer and link-layer tiers still have no probe** (`ACTION FS`, not reached
+  for a second pass).
+- 🔴 **`avinash201199/free-ai-agents-resources` and the three curricula stay OFF this page**,
+  as p151 ruled. 🟢 Re-confirmed, not re-litigated.
+
 ## Pass 151 — 2026-10-12
 
 🔴 **The agent search found four real repositories and NONE of them belongs on this page.**
