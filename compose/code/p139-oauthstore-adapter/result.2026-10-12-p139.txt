@@ -1,0 +1,13 @@
+SEED: {"step":"seed","store_path":"/tmp/claude-0/-home-user-globant-kb/97826356-d09e-5a3e-971a-461ce0cf7f0b/scratchpad/cl-run/p139-store.json","grant_id":"3d076d87-c407-44b3-a4e4-4d5f251e4c0c","client_id":"p139-fixture-client","refresh_token":"p139-fixture-refresh-token","resource":"http://127.0.0.1:8097/mcp"}
+SERVER LOG:
+  Canvas LMS MCP server listening on http://127.0.0.1:8097
+  Auth profile: oauth_brokered
+  MCP endpoint: http://127.0.0.1:8097/mcp (OAuth: issuer http://127.0.0.1:8097)
+  Grant store: encrypted file
+  Health check: http://127.0.0.1:8097/health
+METADATA:
+{"issuer":"http://127.0.0.1:8097","authorization_endpoint":"http://127.0.0.1:8097/oauth/authorize","token_endpoint":"http://127.0.0.1:8097/oauth/token","registration_endpoint":"http://127.0.0.1:8097/oauth/register","revocation_endpoint":"http://127.0.0.1:8097/oauth/revoke","response_types_supported":["code"],"response_modes_supported":["query"],"grant_types_supported":["authorization_code","refresh_token"],"token_endpoint_auth_methods_supported":["none","client_secret_basic","client_secret_post"],"revocation_endpoint_auth_methods_supported":["none","client_secret_basic","client_secret_post"],"
+TOKEN RESPONSE (POST /oauth/token):
+{"access_token":"mcpat_8O0m8fTnomzwmy8iB5IfnFHuN_x_Dl3aG_VhdPZ-B-c","token_type":"Bearer","expires_in":3600,"scope":"canvas:read canvas:write","refresh_token":"mcprt_j6mRXYVX9AhOTjyN7SMzXMvIBdItA3pcz_eXNexjXVw"}
+HTTP_STATUS=200
+CANVAS SENTINEL HITS: 0

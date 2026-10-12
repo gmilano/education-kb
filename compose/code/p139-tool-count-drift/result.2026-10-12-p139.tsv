@@ -1,0 +1,15 @@
+package	source_files	idiom	build_tools	documented	undocumented	write_tools	undocumented_writes	phantom	disagrees	undocumented_names
+moodle-mcp-server-aql	34	module	14	0	14	0	0	0	YES	get_agent_runtime_config,get_cache_status,get_capabilities,get_course,get_site_info,get_user,list_assignments,list_categories
+mcp-canvas-lms	16	adjacent	3	3	0	0	0	0	no	-
+canvas-mcp-server	3	adjacent	54	53	1	11	0	2	YES	canvas_get_module_item
+@owen-x-tech/canvas-mcp	2	direct+adjacent	62	61	1	24	0	2	YES	course_dashboard
+@ink-waffle/moodle-mcp	18	direct	16	16	0	0	0	0	no	-
+eth-moodle-mcp	13	direct	18	3	15	1	1	1	YES	ddca_browse,ddca_download,ddca_get_announcements,ddca_get_exams,ddca_get_homeworks,ddca_get_labs,ddca_get_lectures,ddca_get_navigation
+@exhabition/brightspace-mcp	1	none	0	0	0	0	0	31	YES	-
+@imazhar101/mcp-canvas-server	69	adjacent	227	96	131	105	61	28	YES	add_rce_favorite,add_top_nav_favorite,bulk_update_assignment_dates,bulk_update_grades,bulk_update_grades_for_course,clear_course_nicknames,create_assignment_override,create_external_tool
+@n35da/brightspace-mcp	19	direct	17	17	0	2	0	0	no	-
+
+# rows=9 disagree=6 (66%) threshold=a third (NOT REFUTED)
+# undocumented_tools=162 of which WRITE=62 (38%)
+#   eth-moodle-mcp: submit_assignment
+#   @imazhar101/mcp-canvas-server: add_rce_favorite, add_top_nav_favorite, bulk_update_assignment_dates, bulk_update_grades, bulk_update_grades_for_course, clear_course_nicknames, create_assignment_override, create_external_tool, create_group_page, create_module, create_module_item, create_quiz, create_quiz_question, create_user, delete_assignment, delete_assignment_override, delete_custom_data, delete_external_tool, delete_group_page, delete_module, delete_module_item, delete_quiz, delete_quiz_question, duplicate_assignment, duplicate_course_page, grade_submission, grade_submission_by_anonymous_id, hide_all_stream_items, hide_stream_item, mark_bulk_submissions_as_read, mark_module_item_done, mark_module_item_not_done, mark_module_item_read, mark_submission_as_read, mark_submission_as_unread, mark_submission_item_as_read, remove_course_nickname, remove_rce_favorite, remove_top_nav_favorite, reorder_quiz_items, restore_authentication_provider, set_course_nickname, submit_assignment, update_assignment_override, update_course_front_page, update_custom_color, update_dashboard_positions, update_external_tool, update_files_ui_version_preference, update_group_front_page, update_group_page, update_module, update_module_item, update_module_overrides, update_quiz, update_quiz_question, update_sso_settings, update_text_editor_preference, update_user, update_user_login, update_user_settings

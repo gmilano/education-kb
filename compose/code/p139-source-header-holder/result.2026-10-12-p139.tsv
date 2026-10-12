@@ -1,0 +1,13 @@
+slug	tree_paths	source_paths_read	licence_files_skipped	own_names	own_holders	foreign_holders	steward_holders	foreign_header_lines	verdict
+frappe/lms	1606	1411	1	Frappe|Frappe Technologies	2	1	0	78	FOREIGN_HEADER_IN_SOURCE
+openeducat/openeducat_erp	1345	450	15	OpenEduCat	1	0	0	0	OWN_HEADERS_ONLY
+academico-sis/academico	692	660	1	Thomas Debay|academico	0	3	0	3	FOREIGN_HEADER_IN_SOURCE
+
+slug	holder	class	lines	sample_paths
+frappe/lms	Frappe	OWN	165	lms/job/doctype/job_opportunity/job_opportunity.js;lms/job/doctype/job_opportunity/job_opportunity.py;lms/job/doctype/job_opportunity/test_job_opportunity.py
+frappe/lms	FOSS United	FOREIGN	78	lms/lms/docperm_shadow.py;lms/lms/doctype/chapter_reference/chapter_reference.py;lms/lms/doctype/course_chapter/course_chapter.js
+frappe/lms	Frappe Technologies Pvt. Ltd	OWN	1	lms/unsplash.py
+openeducat/openeducat_erp	OpenEduCat Inc	OWN	190	openeducat_activity/__init__.py;openeducat_activity/__manifest__.py;openeducat_activity/models/__init__.py
+academico-sis/academico	Pusher	FOREIGN	1	public/js/filament/filament/echo.js
+academico-sis/academico	Chen Fengyuan	FOREIGN	1	public/js/filament/forms/components/file-upload.js
+academico-sis/academico	Chen, Yi-Cyuan	FOREIGN	1	public/js/filament/support/support.js

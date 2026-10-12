@@ -1,0 +1,56 @@
+# Pass 139 — 2026-10-12 — education KB. Rows measured THIS pass, with the instrument named.
+#
+# INSTRUMENTS THIS PASS:
+#   git      = `git clone --depth 1` / `--filter=blob:none` over github.com smart-HTTP.
+#              Authoritative for commits, HEAD sha, HEAD date, tree paths, source headers,
+#              commit-sha lineage and remote ref counts. BLIND to stars (git carries none).
+#   tree     = `git ls-tree -r HEAD` + `git show HEAD:<path>` (p139-source-header-holder).
+#   npm      = registry.npmjs.org metadata + tarball, sha1-verified (payload downloaded p138).
+#   pypi     = pypi.org/pypi/<pkg>/json + wheel AND sdist, sha256-verified.
+#   maven    = repo1.maven.org maven-metadata.xml + POM + jar, .sha1-verified.
+#   exec     = the artefact was RUN and answered over HTTP (p139-oauthstore-adapter).
+#
+# CHANNEL STATE: api.github.com 403; codeload 403; search.maven.org 403; central.sonatype.com 403;
+#   sdaia.gov.sa 403; eur-lex.europa.eu 403; digital-strategy.ec.europa.eu 403 — all "gateway
+#   answered 403 to CONNECT" per $HTTPS_PROXY/__agentproxy/status. repo1.maven.org 429-rate-limits.
+#   pypi.org 200. registry.npmjs.org 200. raw.githubusercontent.com 200. github.com git lane 200.
+#
+# stars = UNMEASURED everywhere: no channel in this environment serves a star count.
+#
+slug_or_coordinate	instrument	licence	licence_evidence	stars	head_or_version	head_date	region_origin	region_evidence
+frappe/lms	git+tree	AGPL-3.0	root license.txt 33893B = bare AGPL body; 3 Copyright lines all licence apparatus incl. UNFILLED template; holders only in source: Frappe 165 + FOSS United 78	UNMEASURED	0f760e6	2026-10-11	unplaced	holder names are Indian entities; NOT booked (a name is not evidence)
+openeducat/openeducat_erp	git+tree	LGPL-3.0	root LICENSE 8241B states LGPLv3; delegates copyright to a COPYRIGHT file ABSENT from all 1345 paths; 190 source headers all OpenEduCat Inc	UNMEASURED	1c95cef	2026-09-07	unplaced	same; NOT booked
+academico-sis/academico	git+tree	MIT	root LICENSE 1094B, holder Thomas Debay; ZERO own source headers; 3 FOREIGN headers in public/js/filament (Pusher, Chen Fengyuan, Chen Yi-Cyuan)	UNMEASURED	d0cd78c	2026-10-07	unplaced	NOT booked; this is the KB's only candidate LATAM-owned row and it stays unplaced
+ArnaudGuiovanna/tutor-mcp	git	MIT	LICENSE at HEAD read: "MIT License"	UNMEASURED	368d637	2026-10-10	unplaced	no location evidence read
+zijinz456/OpenTutor	git	MIT	LICENSE at HEAD read: "MIT License"	UNMEASURED	f0142f2	2026-10-08	unplaced	no location evidence read
+ahmedEid1/lumen	git	GPL-3.0	LICENSE at HEAD: "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"	UNMEASURED	07635d3	2026-06-07	unplaced	no location evidence read
+mohaneesh-03/mcp-tutor	git	MIT	LICENSE at HEAD read: "MIT License"	UNMEASURED	a66cdcf	2026-10-05	unplaced	no location evidence read
+nirholas/ai-tutor-mcp	git	Apache-2.0	LICENSE at HEAD: "Apache License Version 2.0, January 2004"	UNMEASURED	759853e	2026-10-10	unplaced	no location evidence read
+hesham0-0nasser/tutor-lms-mcp	git	NONE	NO licence-shaped path at HEAD (branch master) — UNLICENSED, not usable	UNMEASURED	c92e5b9	2026-05-26	unplaced	no location evidence read
+kvnloo/tutor-mcp	git	MIT	fork of ArnaudGuiovanna/tutor-mcp: 452 shared shas, 0 unique, 7 behind — NOT PROMOTED	UNMEASURED	3d11705	2026-10-02	unplaced	no location evidence read
+GhaithAlHallak8/moodler-mcp	git	MIT	ORIGINAL of the pair: 75 shared shas, 17 remote refs, author 59054736+GhaithAlHallak8@users.noreply	UNMEASURED	4e6139e	2026-09-19	unplaced	+04:00 timezone suggests Gulf; NOT booked
+Dymayo/moodler-mcp	git	MIT	COPY: identical 75 shas, 2 remote refs, no Dymayo identity anywhere in history	UNMEASURED	4e6139e	2026-09-19	unplaced	NOT booked
+Exhabition/brightspace-mcp-rs	npm(indirect)	UNREAD	NEW address, inferred from @exhabition/brightspace-mcp loader's release URL; repo itself NOT read this pass	UNMEASURED	-	-	unplaced	no evidence
+@imazhar101/mcp-canvas-server	npm	ABSENT	p138: no SPDX id, no licence file, no repository field. p139: 227 tools, 131 undocumented, 61 undocumented WRITES	UNMEASURED	2.1.3	2026-10-01	unplaced	no repository field at all
+eth-moodle-mcp	npm	MIT(declared)	p138: declared, NO licence file (15 paths). p139: 18 tools, 3 documented, submit_assignment undocumented	UNMEASURED	1.3.3	2026-04-15	unplaced	tool descriptions name ETH Zurich (EMEA); NOT booked
+moodle-mcp-server-aql	npm	AGPL-3.0(declared)	p138: declared across 141 paths, NO licence file. p139: 0 of 14 tools documented; docs/ links dead	UNMEASURED	0.1.7	2026-10-01	unplaced	not measured
+@exhabition/brightspace-mcp	npm	MIT(declared)	p138: declared, no file (3 paths). p139: NOT A SERVER — 82-line loader, no integrity check	UNMEASURED	0.2.2	2026-10-01	unplaced	not measured
+canvas-lms-mcp	npm+exec	MIT	payload ships package/LICENSE (p138). p139: EXECUTED — POST /oauth/token → 200, 0 Canvas calls	UNMEASURED	2.2.0	2026-10-10	unplaced	not measured
+xblock	pypi	Apache-2.0	license_expression + LICENSE.TXT in BOTH wheel (dist-info/licenses/) and sdist	UNMEASURED	6.3.4	-	unplaced	not measured
+tutor	pypi	AGPL-3.0-only	legacy field + classifier; LICENSE.txt in sdist	UNMEASURED	22.0.2	-	unplaced	not measured
+canvasapi	pypi	MIT	legacy + classifier; LICENSE in both distributions	UNMEASURED	3.6.0	-	unplaced	not measured
+edx-opaque-keys	pypi	AGPL-3.0-only	license_expression; LICENSE in both	UNMEASURED	4.0.1	-	unplaced	not measured
+openedx-events	pypi	Apache-2.0	legacy field; LICENSE.txt in both	UNMEASURED	11.2.0	-	unplaced	not measured
+openedx-learning	pypi	AGPL-3.0(declared)	DECLARED, NO licence file — because the package is EMPTY: 1479B wheel, 4 dist-info paths, top_level.txt 1 byte, down from 257553B at 0.32.0	UNMEASURED	0.33.1	-	unplaced	not measured
+xblock-sdk	pypi	AGPL-3.0	LICENSE.TXT present; ALSO 2 vendored Jasmine 1.3.1 MIT.LICENSE files (foreign holders in a payload)	UNMEASURED	0.15.2	-	unplaced	not measured
+openedx-filters	pypi	AGPL-3.0-or-later	license_expression; LICENSE.txt in both	UNMEASURED	3.15.0	-	unplaced	not measured
+edx-django-utils	pypi	Apache-2.0	classifier only; LICENSE.txt in both	UNMEASURED	8.1.0	-	unplaced	not measured
+edx-rest-api-client	pypi	Apache-2.0	license_expression; LICENSE in both	UNMEASURED	7.1.0	-	unplaced	not measured
+moodle-dl	pypi	GPL-3.0	declared legacy+classifier, license_files field ABSENT, yet LICENSE IS SHIPPED in both — field absence != file absence	UNMEASURED	2.3.13	-	unplaced	not measured
+codejail	pypi	-	NOT_ON_PYPI (404) — openedx/codejail has no PyPI distribution	UNMEASURED	-	-	unplaced	not measured
+org.imsglobal:basiclti-util	maven	Apache-2.0	POM <licenses> read as XML; jar ships META-INF/LICENSE + NOTICE; sha1 verified	UNMEASURED	1.2.0	2017-10-31(lastUpdated)	unplaced	not measured
+edu.ksu.ome.lti:lti-launch	maven	LGPL-3.0(declared)	POM declares LGPL-3.0; jar ships NO licence text in 43 paths; sha1 verified. The P13 dependency	UNMEASURED	1.4.7	-	unplaced	groupId edu.ksu = Kansas State (NA); NOT booked
+org.sakaiproject.kernel:sakai-kernel-api	maven	ECL-2.0(declared)	POM declares Educational Community License 2.0; jar ships NO licence text in 578 paths; sha1 verified	UNMEASURED	25.2	-	unplaced	not measured
+org.sakaiproject.kernel:sakai-kernel-impl	maven	NONE_DECLARED	POM declares nothing; jar ships nothing in 524 paths; sha1 verified	UNMEASURED	23.3	-	unplaced	not measured
+net.oauth.core:oauth	maven	NONE_DECLARED	no <licenses> in POM, no licence file in 32 paths; still a transitive LTI 1.1 dependency; sha1 verified	UNMEASURED	20100527	-	unplaced	not measured
+uk.ac.ox.ctl:spring-lti13	maven	-	maven-metadata.xml 404 — NOT on Maven Central; cannot be consumed by a build tool	UNMEASURED	-	-	unplaced	groupId uk.ac.ox = Oxford (EMEA); NOT booked

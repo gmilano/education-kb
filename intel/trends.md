@@ -6,6 +6,97 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 139 — 2026-10-12
+
+### 🆕 `T21` — the registry's default build behaviour decides whether the grant ships
+
+🔵 **The strongest new trend this pass is not about licences at all. It is that an ecosystem's
+packaging DEFAULTS determine its compliance posture**, and the three big registries differ sharply.
+
+| registry | declared-but-absent licence rate | why |
+|---|---|---|
+| 🟢 **PyPI** | **9%** (1 of 11, and that one ships no code) | **PEP 639**: setuptools/hatch copy licence files into `dist-info/licenses/` automatically |
+| 🔴 **npm** | **33%** (7 of 21, p138) | `files` names what to pack and omits absent entries **silently** |
+| 🔴 **Maven Central** | **40–67%** (2 of 3 declaring) | `<licenses>` is metadata in a sibling POM; the jar is untouched unless configured |
+
+🔵 **The consequence for a studio is directional and actionable: a Python dependency's grant is
+probably in the artefact; a Java or Node dependency's grant probably is not.** That is a review
+budget, not a slogan. Measured in
+[`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+### 🆕 `T22` — the agentic write surface is outrunning its own documentation
+
+🔴 **Across the nine measured npm connectors: 411 tools registered, 249 documented, 162
+undocumented — and 62 of those (38%) MUTATE the LMS.** The undocumented set is not a random sample
+of the documented one; it concentrates on exactly the capabilities a governance review exists to
+catch: `bulk_update_grades`, `grade_submission`, `create_user`, `update_user_login`,
+`update_sso_settings`, `submit_assignment`.
+
+🔵 **This is `T22` and not a bug report because it is where two threads of this KB collide.**
+Vietnam's **Decision 33/2026/QĐ-TTg** and **EU AI Act Annex III** both name *grading or ranking
+learners* high-risk. 🔴 **A duty cannot be discharged against a capability nobody has enumerated** —
+and the README is the artefact most procurement processes actually read. The practical rule:
+**enumerate `tools/list` against the running server and diff it against the documentation**, every
+time, as a delivery gate.
+
+### 🆕 `T23` — "install from npm" increasingly means "download a binary at first run"
+
+🔴 **`@exhabition/brightspace-mcp` ships an 82-line loader and no server**: it fetches a
+platform-specific Rust binary from GitHub Releases, follows up to five redirects, extracts,
+`chmod 0o700`, `spawn`. 🔴 **No checksum, no signature.** The version is pinned; the bytes are not.
+
+🔵 **The trend is the rewrite of MCP servers into compiled languages, with npm retained as a
+distribution front door.** It is good for performance and bad for auditability, and it defeats both
+of the layers this KB has been measuring: the repository layer (the Rust source is in a *different*
+repository, 🆕 [`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs))
+and the payload layer (the npm payload contains nothing to audit). 🟡 **Expect more of these, and
+expect licence and tool-count probes to return zeroes that are correct and uninformative.**
+
+### 🔵 `T24` — 🔴 **NOT A NEW TREND. This pass rediscovered `T16` and nearly published it twice**
+
+🔴 **A regional sweep this pass returned the EU Annex III deferral as if it were news, and it is
+already in this file**: `T16` (p137) records **Regulation (EU) 2026/1744**, in force
+**2026-07-27**, deferring Annex III — where education sits — from **2026-08-02** to
+**2027-12-02**, Annex I embedded to **2028-08-02**, with **Article 50 transparency NOT deferred**
+and a grace period to **2026-12-02** for systems already on the market.
+
+🔵 **It is recorded here as a near-miss rather than deleted, because the failure mode is the one
+this KB is most exposed to.** A regional search battery run fresh each pass will keep returning
+the same instruments, and a pass that writes up every hit as `🆕` inflates its own novelty. 🟢 **The
+check that caught it was grepping this file for the date before writing the entry** — which is now
+the rule: *before booking a regulatory finding as new, grep `intel/` for its date and its
+instrument number.*
+
+🟢 **What the sweep did add, and it is small:** two procedural dates `T16` does not carry —
+**Council approval 2026-06-29** and **OJ publication 2026-07-24** — and independent corroboration
+of the deferral from a different source set than p137 used. 🔴 **Both remain secondary.**
+
+🔴 **And the pass can now say WHY they remain secondary, which `T16` could not.** `eur-lex.europa.eu`
+is not unreachable by accident: the proxy gateway **answers `403` to `CONNECT`**, as it does for
+`digital-strategy.ec.europa.eu` and `sdaia.gov.sa`. 🔵 **This environment's network policy permits
+package registries and `github.com` and refuses government hosts** — so "read the Official Journal"
+is not a probe the next pass should register again. It is a request to widen the policy, and it
+belongs to whoever owns this environment rather than to the next action list.
+
+### 🟡 `T25` — provenance signals are being manufactured, so history depth is no longer a maturity proxy
+
+While resolving the `moodler-mcp` duplicate, the commit history of
+`GhaithAlHallak8/moodler-mcp` turned out to open with ~20 commits spaced **7 316–7 317 seconds
+apart — every single one**, all `+04:00`, starting at exactly `09:00:00`, each with a tidy
+conventional-commit message. 🔴 **Human work does not land on a two-hour metronome.** The later
+history is organic (dependabot, github-actions, release-please, real PR numbers), so the repository
+became real after it was staged.
+
+Separately, **30 of the 459 commits** on the strongest new tutoring row,
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), are authored by
+`Claude`.
+
+🔵 **Neither fact is a defect, and neither is graded here.** The consequence is narrow: **commit
+count and commit dates are no longer evidence of elapsed human effort**, which is precisely what
+this KB's `p109-freshness` and `p110-bus-factor` instruments read them as. 🟡 **Recency still means
+the code is being worked on; depth no longer means the project is old.**
+
+
 **Pass 138, 2026-10-12.** p137's sixteen trends retained. 🆕 **`T17` is added — the first trend this
 KB has measured at the distribution layer rather than the repository layer, and it reframes every
 licence cell on every page.** 🟢 **`T13` is narrowed for the third consecutive pass and is now one

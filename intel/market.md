@@ -186,6 +186,45 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🆕 p139 — the state-board thesis has a federal counterparty now, and a measurable ownership defect
+
+🔵 **Two additions, one of which cuts against three passes of this page's own argument.**
+
+🔴 **🆕 A federal preemption proposal aims at exactly the instrument layer this page has been
+tracking.** The White House's **National Policy Framework for AI (March 2026)** recommends that
+**Congress preempt state-level AI laws**. 🔴 **If enacted, the system board and the state statute —
+p137's buying unit and p134's buyer — stop being the operative instruments**, and a US education
+engagement's compliance surface collapses from ~31 state regimes to one federal one.
+🟡 **It is a recommendation, not a bill, and no vote is recorded in these sources.** But it is the
+first thing found that would *invalidate* rather than extend this page's North America model, and
+it is booked for that reason. 🔴 **Secondary-sourced; `digital-strategy`-class primary channels are
+403 here (see `intel/trends.md` → `T24`).**
+
+🟡 **🆕 Higher education's own rule-making is under formal review in Virginia.** The **Joint
+Legislative Audit and Review Commission (JLARC)** is studying how public colleges and universities
+set AI rules — academic integrity, data privacy, equity, transparency — with a report due
+**early 2028**. 🔵 **A legislative audit of institutional AI policy is a different instrument class
+again**: not a mandate and not a procurement route, but a published baseline that other states copy.
+🔴 **The 2028 date means it constrains nothing in this engagement cycle.**
+
+🔵 **Confirmed, not new** (already on this page): **134 bills across 31 states** in the 2026 session
+(single-source, approximate); **Ohio**'s district policy deadline of **2026-07-01**, now **passed**;
+**North Carolina**'s staged K-12 governance deadlines through **2028**; amended **COPPA** general
+compliance **2026-04-22**, which belongs with p138's age-gate class.
+
+🟢 **A deployment datum worth carrying for scale arguments**: **OpenAI + California State
+University** — `ChatGPT Edu` for **460 000+ students** and **63 000** faculty and staff. 🔵 **The
+largest single-system deployment this page has recorded**, and the comparison point for any
+"pilot first" proposal.
+
+🔴 **And one measured, North-America-owned defect this pass.**
+`edu.ksu.ome.lti:lti-launch` **1.4.7** — the Kansas State LGPL-3.0 library this KB's pattern `P13`
+depends on — **declares LGPL-3.0 in its POM and ships no licence text in its jar** (43 paths,
+sha1-verified). 🔵 **The interoperability library a North American engagement is most likely to
+inherit is itself the licence defect this KB has spent two passes measuring elsewhere.** Detail:
+[`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+
 #### 🆕 p138 — the age gate is the new instrument class, and it is the one that constrains product
 
 🔵 **p137 found the buying unit (the system board). This pass found the clause that decides whether
@@ -415,6 +454,41 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 p139 — a funded skills instrument, and the first EMEA-owned connector measured at the tool layer
+
+🟢 **🆕 The `AI Skills Academy` is operational since 2026-05-01**, funded under the **Digital Europe
+Programme**, offering AI training including generative AI. 🔵 **This is the first EMEA instrument on
+this page that is a *funded delivery vehicle* rather than a duty** — i.e. a route by which a studio's
+curriculum or tooling work can be paid for, which is what p137's Jisc procurement finding was for
+the UK.
+
+🟡 **🆕 The Council of Europe's education ministers argue the private sector should be treated as a
+key actor in regulating AI in education.** 🔵 **Worth one line because it is the opposite of the
+posture most EU-level education texts take**, and it opens a standards-participation route for a
+vendor rather than only a compliance obligation. 🔴 Non-binding; a conference position.
+
+🔴 **Confirmed, not new — and `T24` records that this pass nearly double-published it.** The
+**Digital Omnibus / Regulation (EU) 2026/1744** deferral of Annex III (education) from
+**2026-08-02** to **2027-12-02**, with **Article 50 transparency undeferred from 2026-08-02**, is
+already on this page and in `intel/trends.md` → `T16` (p137). 🟢 **The only increments this pass
+found are two procedural dates — Council approval 2026-06-29, OJ publication 2026-07-24 — and they
+are secondary.**
+
+🔴 **The first EMEA-owned education connector measured at the tool layer, and it disagrees with
+itself by 15 tools.** [`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) **1.3.3**
+documents **3** tools under a heading that reads **"Works with Any Moodle"** and registers **18** —
+including **ten `ddca_*` tools** that scrape one specific **ETH Zürich** course website, and
+🔴 **`submit_assignment`, an undocumented write.** 🔵 **For an EMEA engagement this is the concrete
+form of `T22`: the connector a Swiss or German institution would pick up off npm is substantially a
+single-course scraper, and its write surface is undocumented.** Measured in
+[`p139-tool-count-drift`](../compose/code/p139-tool-count-drift/README.md).
+
+🟡 **One EMEA interoperability gap, measured rather than assumed**: `uk.ac.ox.ctl:spring-lti13`
+(Oxford's LTI 1.3 Spring library, which this KB has cited as an attachment option) **is not on Maven
+Central at all — `maven-metadata.xml` answers 404**. 🔵 **An institution cannot consume it through
+the channel its build tool uses**, which makes it a source dependency rather than a library.
+
 
 #### 🆕 p138 — EMEA is not the EU, and this page has been reading one of its three parts
 
@@ -652,6 +726,47 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 p139 — the compulsory-curriculum column has a second occupant, and the region owns the LMS defect
+
+🟡 **🆕 China and the UAE are reported as the only two jurisdictions running a compulsory NATIONAL
+AI curriculum, since the 2025-26 school year.** 🔵 **The pairing is the useful part**: this page has
+tracked China's compulsory curriculum for three passes and recorded the Gulf as a region gap
+(`P138-J`). 🔴 **If the UAE is genuinely the second, then the MEA gap is not an absence of
+instruments but an absence of *reading* — which is exactly what `ACTION CO` failed to fix and why
+the Gulf stays a gap rather than an absence.** Single secondary source; **not** quotable.
+
+🟡 **🆕 India's legislative posture moved twice in 2026**: a **February 2026** amendment to the IT
+Rules added obligations on AI-generated content, and in **July 2026** the government signalled it
+may pursue **dedicated AI legislation** after relying on soft law. 🔵 **India is the largest
+education market in the region and has been modelled here as "mandate without statute"; that
+modelling now has an expiry date.**
+
+🟢 **Confirmed, not new**: **South Korea's AI Basic Act in force 2026-01-22**, covering
+"high-impact" AI **including education**, with human-oversight and disclosure duties (already on
+this page at the APAC `#### p136/p137` entries); **India's AI and computational thinking mandatory
+from Class 3 in 2026-27**, backed by **IndiaAI Mission** funding; **Japan's 2025 framework
+promotion law** and its **AI Strategic Headquarters chaired by the Prime Minister**, light-touch
+and voluntary; **Vietnam's Decision 33/2026/QĐ-TTg** as the only education-AI conformity regime
+actually in force (`T16`).
+
+🔴 **The region owns this pass's sharpest ownership defect, and it is the dominant open-source LMS
+ERP pair.** `ACTION CJ` read source headers on rows p137 had cleared:
+
+- 🔴 **[`frappe/lms`](https://github.com/frappe/lms)** (India) — its `license.txt` names **no holder
+  of `frappe/lms`**; all three `Copyright` lines are the AGPL's own apparatus, including 🔴 **an
+  unfilled `Copyright (C) <year>  <name of author>` template**. Ownership lives only in source
+  headers, where it is **two separate legal entities**: `Frappe Technologies Pvt. Ltd.` (165 lines)
+  and 🔴 **`FOSS United`** (78 lines).
+- 🔴 **[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)** (India) — root
+  `LICENSE` delegates to a **`COPYRIGHT` file that does not exist** anywhere in its 1 345 paths.
+
+🔵 **Both are APAC-owned by their holders' incorporation, and both are rows a LATAM or EMEA client
+would deploy** — so this is a supply-chain fact about the region's output, not a regional market
+datum. 🔴 **Neither is booked as region *evidence*: the placement is inferred from an entity name,
+which this KB does not accept as a region measurement.** Detail:
+[`p139-source-header-holder`](../compose/code/p139-source-header-holder/README.md).
+
 
 #### 🆕 p138 — `ACTION CG` in Vietnamese: the instrument gains an element, the transition date stays contradictory
 
@@ -897,6 +1012,50 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 p139 — two statutes this page did not carry, and the minors regime that is already in force
+
+🔵 **The LATAM *instrument* picture is better than this page has had it; the LATAM *ownership*
+picture is still empty, and the two should stop being conflated.**
+
+🟢 **🆕 Peru has the region's only ENACTED AI statute — Law 31814, July 2023.** 🔴 **This page has
+never carried it**, across every LATAM pass, while tracking Brazil's unenacted bill in detail.
+🔵 **So the sentence "LATAM has frameworks but no enacted law", which this page has implied for
+several passes, is wrong** — it has had one for over three years. 🟡 Law 31814 is a promotion-oriented
+framework statute rather than a risk-classification regime, so it does not create education duties
+the way Brazil's bill would; the correction is to the claim, not to the engagement model.
+
+🔴 **🆕 Brazil's `Digital ECA` — Law 15.211/2025 — has been IN FORCE since March 2026**, covering
+**age verification** and limits on **targeted advertising to minors**. 🔵 **This is the single most
+actionable LATAM item on this page**, and it belongs with p138's North America age-gate class:
+a Brazilian K-12 deployment faces a live minors regime **now**, regardless of where PL 2338/2023
+ends up. 🔴 **This page has carried PL 2338 for five passes and missed the law that actually
+applies.**
+
+🟡 **🆕 Chile has asked to defer its personal data law from December 2026 to December 2027.** 🔵 Same
+direction as the EU's Annex III deferral — 🟡 **a regional pattern of slipping data and AI deadlines
+is forming, and a client plan that assumes 2026 dates hold is now wrong in at least three
+jurisdictions.** Chile's AI bill remains in its first constitutional stage; an anti-deepfake bill
+(labelling, 72-hour takedown) passed in general and returned to committee.
+
+🟢 **Confirmed, not new**: the **UNESCO Observatory on AI in Education for LAC** (launched
+**2026-04-14**, Santiago) and **CENIA**'s finding that **13 of 19** countries studied do not teach
+early AI in schools are both already carried here and in `intel/open-gaps.md`. **Brazil's PL
+2338/2023** (Senate approved **2024-12-10**, now in the Chamber, education among its high-risk
+classes) is unchanged. **Mexico**'s federal AI bills remain **unenacted**, with 2026 amendments to
+copyright/labour/film law pending and deepfake provisions sent to the Senate; **Argentina**'s
+government has proposed keeping AI largely unregulated; **Brazil signed a digital partnership with
+the EU** in 2026.
+
+🔴 **The LATAM ownership gap is now at NINE consecutive passes, and this pass did nothing about it
+either.** Of every artefact measured this pass — 9 npm connectors, 11 PyPI packages, 5 Maven
+artefacts, 3 repository trees, 7 new tutoring repos, 4 duplicate-pair members — 🔴 **not one is
+LATAM-owned, and not one was even *tested* for LATAM ownership.** 🔵 **The honest statement is that
+this is a property of where education-AI connector code is written, not of where this KB looks** —
+but it is not *measured*, so it stays a declared gap. The one LATAM-owned row this KB carries at all
+remains `academico-sis/academico`, whose holder (`Thomas Debay`) this pass read and did **not**
+place regionally, because a name is not evidence.
+
 
 #### 🆕 p138 — the eighth consecutive pass with no LATAM-owned row, and this pass declined a chance to fake one
 
@@ -1225,6 +1384,38 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🆕 p139 — the demand signal and the funding signal are now moving in opposite directions
+
+🔴 **🆕 Venture funding into education AI fell to ~$1B in H1 2026, down 26% year on year**, while
+institutional adoption is reported at **86%** of education organisations using generative AI —
+🔴 **most without a policy.** 🔵 **The divergence is the datum**: adoption is near-saturation and
+capital is retreating, which is the profile of a market moving from *buying tools* to *integrating
+and governing what it already bought*. 🟢 **That is squarely a services thesis rather than a product
+thesis**, and it is the clearest market-level support this page has for the pattern library's
+direction.
+
+🔴 **🆕 Two faculty-side signals cut against the adoption number.** Per the **Digital Education
+Council**'s 2026 global survey: only **29%** of students believe their instructors are well equipped
+to guide them on AI use, and 🔴 **faculty intent to use AI in the US and Canada FELL 9 points, from
+76% (2025) to 67% (2026)**. 🔵 **A year-on-year *decline* in practitioner intent, against rising
+institutional deployment, is the first reversal of its kind this page has recorded** — and it
+predicts exactly the failure mode a studio gets called in to fix: tools bought centrally, unused
+locally.
+
+🟡 **Market-size figures were again not reconciled, and again will not be.** One publisher puts the
+AI-in-education market at **$7.52B (2025) → $10.6B (2026)**; another at ~**$6B (2024) → ~$32B
+(2030)**. 🔴 **These are different scopes, not different forecasts** — the reconciliation this page
+attempted at p136 and abandoned at p138 is not reattempted, and the column is not widened further.
+
+🔵 **The structural reading this pass adds, from its own measurements rather than from a publisher:**
+the open-source education-AI supply chain is **recent, thin and under-documented**. Of the nine
+published LMS connectors measured, **six disagree with their own documentation**; **62** registered
+write tools are undocumented; one package is a **downloader with no integrity check**; one core Open
+edX library currently **ships no code at all**; and the **LTI library this KB recommends** ships no
+licence text. 🟢 **None of that is visible from a market report, and all of it is billable
+diligence** — which is the most defensible global opportunity statement this page can make.
+
 
 #### 🆕 p138 — the spread did not converge, and a second publisher now disagrees about the same year
 

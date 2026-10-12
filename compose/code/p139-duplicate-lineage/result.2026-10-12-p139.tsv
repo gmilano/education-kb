@@ -1,0 +1,25 @@
+### pair 1 — ACTION CN's registered target
+field	GhaithAlHallak8/moodler-mcp	Dymayo/moodler-mcp
+commits	75	75
+head	4e6139e	4e6139e
+head_date	2026-09-19T07:14:44+04:00	2026-09-19T07:14:44+04:00
+root_commit	f3da2b74be505352eee66f68c889432f2d0e4c86	f3da2b74be505352eee66f68c889432f2d0e4c86
+head_tree	0250a2e84614f454ac1813e2f1f0d939dcc1c6b9	0250a2e84614f454ac1813e2f1f0d939dcc1c6b9
+remote_refs	17	2
+shared_commits	75	75
+unique_commits	0	0
+noreply_accounts	59054736+GhaithAlHallak8@users.noreply.github.com	59054736+GhaithAlHallak8@users.noreply.github.com
+verdict	IDENTICAL_HISTORY -- decide on refs and author accounts	IDENTICAL_HISTORY -- decide on refs and author accounts
+
+### pair 2 — a new duplicate pair found this pass
+field	ArnaudGuiovanna/tutor-mcp	kvnloo/tutor-mcp
+commits	459	452
+head	368d637	3d11705
+head_date	2026-10-10T08:36:16+00:00	2026-10-02T15:55:15+00:00
+root_commit	baea09f77545a4da5e1957fecffcc16cbfd7e213	baea09f77545a4da5e1957fecffcc16cbfd7e213
+head_tree	373d3fab409420a23de9cbc225c6d5e1c415fe13	675a9a9e6f8fbf9110ac3c1c069cb099ae2e2599
+remote_refs	16	14
+shared_commits	452	452
+unique_commits	7	0
+noreply_accounts	127393720+ArnaudGuiovanna@users.noreply.github.com	127393720+ArnaudGuiovanna@users.noreply.github.com
+verdict	B_IS_BEHIND_A -- ArnaudGuiovanna/tutor-mcp is the trunk	B_IS_BEHIND_A -- ArnaudGuiovanna/tutor-mcp is the trunk

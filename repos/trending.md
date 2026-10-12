@@ -6,6 +6,90 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 139
+
+🔵 **p138 asked whether one package's licence defect was that package's. This pass asked whether the
+defect was open source's — and the answer is that it belongs to neither the culture nor the
+registry. It belongs to the BUILD TOOL.**
+
+### The measurement
+
+`ACTION CM` ran p138's npm method against **PyPI** and **Maven Central**. Every artefact verified
+against the registry's own digest — sha256 on PyPI, `.sha1` on Maven. Probe, 7 tests and two
+committed TSVs: [`p139-pypi-maven-payload`](../compose/code/p139-pypi-maven-payload/README.md).
+
+| registry | artefacts | 🔴 declare a licence, ship no licence file | rate | vs 10% threshold |
+|---|---|---|---|---|
+| 🟢 **PyPI** | **11** (+1 absent) | 🟡 **1** — and it ships **no code at all** | **9%** | 🟢 **REFUTED** |
+| 🔴 **Maven Central** | **5** (+1 absent) | 🔴 **2 of 3 declaring** | **40–67%** | 🔴 **NOT REFUTED** |
+| *(npm, p138)* | *21* | *7* | *33%* | *not refuted* |
+
+🔵 **The mechanism, which is the actual finding:** **PEP 639** makes setuptools and hatch copy
+licence files into `dist-info/licenses/` automatically — **10 of 11** PyPI packages carried one in
+*both* wheel and sdist. Maven's `<licenses>` lives in a **sibling POM** and never touches the jar.
+npm's `files` array **silently omits** entries that are not there. 🟢 **A Python dependency's grant
+is probably in the artefact; a Java or Node dependency's probably is not.**
+
+### 🔴 The LTI library this KB recommends is itself in the defect class
+
+| coordinate | version | POM declares | jar paths | licence in jar |
+|---|---|---|---|---|
+| 🟢 `org.imsglobal:basiclti-util` | 1.2.0 | Apache-2.0 | 70 | 🟢 `META-INF/LICENSE` + `NOTICE` |
+| 🔴 **`edu.ksu.ome.lti:lti-launch`** | **1.4.7** | 🔴 **LGPL-3.0** | 43 | 🔴 **NONE** |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-api` | 25.2 | 🔴 **ECL-2.0** | **578** | 🔴 **NONE** |
+| 🔴 `net.oauth.core:oauth` | 20100527 | 🔴 **nothing** | 32 | 🔴 **NONE** |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-impl` | 23.3 | 🔴 **nothing** | **524** | 🔴 **NONE** |
+| — `uk.ac.ox.ctl:spring-lti13` | — | — | — | **404 — not on Central** |
+
+🔴 **`edu.ksu.ome.lti:lti-launch` is the artefact built from `kstateome/lti-launch`**, the library
+`P137-A` identified as the LTI→OAuth-subject mapping that pattern `P13` depends on. 🔵 **The one
+interoperability dependency this KB tells clients to build on reproduces p138's worst npm row, in
+Java.** `sakai-kernel-api` declares **ECL-2.0** — *education's own licence* — with no text, while
+its sibling `impl` declares nothing; `net.oauth.core:oauth` (2010) has no grant at all and is still
+a transitive LTI 1.1 dependency.
+
+### 🔴 `openedx-learning` currently ships NO CODE — the probe found a release defect
+
+| version | wheel | sdist |
+|---|---|---|
+| 0.31.0 | 268 554 B | 192 313 B |
+| 0.32.0 | 257 553 B | 189 430 B |
+| 🔴 **0.33.0** | 🔴 **1 479 B** | 🔴 **1 748 B** |
+| 🔴 **0.33.1** *(latest)* | 🔴 **1 479 B** | 🔴 **1 742 B** |
+
+🔴 **"Open edX Learning Core (and Tagging)" — 4 paths, all `dist-info`; `top_level.txt` is 1 byte;
+`RECORD` lists only metadata.** `pip install openedx-learning` resolves to the empty release. Across
+**79 releases** the two most recent are the empty ones. 🔵 **Pin `0.32.0`.**
+
+### 🔴 `ACTION CJ` — where p137 said "the root file is the whole story", the root file names nobody
+
+| row | tree paths | source files | own holders | 🔴 foreign |
+|---|---|---|---|---|
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 1 606 | 1 411 | 2 | 🔴 **`FOSS United` — 78 header lines** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 1 345 | 450 | 1 | 0 — 🔴 *delegates to a file that does not exist* |
+| 🔴 [`academico-sis/academico`](https://github.com/academico-sis/academico) | 692 | 660 | 🔴 **0** | 🔴 **`Pusher`, `Chen Fengyuan`, `Chen, Yi-Cyuan`** |
+
+🔴 **`frappe/lms`'s `license.txt` contains three `Copyright` lines and all three are the AGPL's own
+apparatus** — the FSF's notice, the §0 definitions, and 🔴 **an unfilled
+`Copyright (C) <year>  <name of author>` template.** Ownership exists only in source headers, split
+across **two legal entities** (`Frappe Technologies Pvt. Ltd.`, 165 lines; `FOSS United`, 78).
+🔴 **`openeducat_erp`'s `LICENSE` opens *"please see the COPYRIGHT file"* — and no `COPYRIGHT` file
+exists in any of its 1 345 paths.** Probe, **20 tests**, TSV:
+[`p139-source-header-holder`](../compose/code/p139-source-header-holder/README.md).
+
+### 🟢 Channel: a lane p138 recorded as closed is open
+
+🟢 **`git clone --depth 1` against `github.com` answers**, so HEAD dates and commit counts are
+measurable (`frappe/lms` `0f760e6` **2026-10-11**; `openeducat_erp` `1c95cef` **2026-09-07**;
+`academico` `d0cd78c` **2026-10-07**). 🔴 **Star counts stay `UNMEASURED`** — `api.github.com` is
+403 and git carries no star count. 🔴 **Maven has no search channel at all here**
+(`search.maven.org` and `central.sonatype.com` both **403 at CONNECT**), and `repo1.maven.org`
+**429**s a shared egress IP — which is why the Maven n is **5** and not 21, and why those five are
+named rather than sampled.
+
+
+---
+
 ## 2026-10-12 — Pass 138
 
 🔵 **p137 ended by listing the npm lane as an opened door nobody had walked through. This pass
