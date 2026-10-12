@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 148 — 54 of 54 clone, the region census gains 16 rows, and the institution probe places a repo on a URL shortener
+
+🟢 **Every channel this pass needed was open.**
+
+| channel | attempted | succeeded |
+|---|---|---|
+| `git clone` census roster | **50** | 🟢 **50** |
+| `git clone` vertical candidates | **4** | 🟢 **4** |
+| `npm pack` | **8** | 🟢 **8** |
+| `git ls-remote` URL verification | **7** | 🟢 **7 live, 0 dead** |
+| `curl -sI github.com` | 1 | 🔴 **403 — fifth consecutive pass** |
+
+### 🟢 `ACTION ER` — the institution channel moves to the clone tier and adds SIXTEEN placements
+
+`p147-npm-region` placed **2 of 8** npm rows by institution evidence and narrowed `T59`.
+`ACTION ER` ran the same probe over the **44 connector clones**, then compared it row-by-row
+against the commit-offset channel this KB has been placing rows with.
+
+| state | n of 44 | what it means |
+|---|---|---|
+| 🟢 **`INSTITUTION_ONLY`** | 🟢 **16** | 🟢 **the offset channel declined; the institution channel placed it** |
+| 🟢 `AGREE` | **10** | both placed it, same region |
+| `OFFSET_ONLY` | **10** | the institution channel found nothing |
+| 🔴 `INSTITUTION_CONFLICT` | **3** | hosts in 2+ regions |
+| `NEITHER` | **4** | no channel placed it |
+| 🔴 **`DISAGREE`** | 🔴 **1** | 🔴 **both placed it, different regions** |
+
+🟢 **Region coverage on the 44-row connector tier goes 20 → 36.** 🔵 **Almost all sixteen
+gains are LATAM**, and the reason is precise: the offset channel declines `-0300` as
+`AMBIGUOUS` (Brazil/Argentina/Uruguay **and** Greenland/St Pierre), while an institution host
+like `sigaa.ufpi.br`, `guarani.unq.edu.ar` or `aulavirtual.upc.edu.pe` is not ambiguous at
+all. 🟢 **The axis this KB is judged on was being declined for a timezone reason on rows
+whose own code names the country.**
+
+### 🔴 …and the one disagreement is the defect `T67` named one pass earlier
+
+| row | institution | offset | the evidence |
+|---|---|---|---|
+| 🔴 `felipedias-ie/blackboard-mcp` | **North America** | **EMEA** | 🔴 **`bb.edu`, in `test/unit.test.ts`** |
+
+🔴 **`ACTION ER` is refuted on its literal criterion: one disagreement is more than zero.**
+🟢 **And the row it fires on is the one class of evidence `T67` had already demoted** — *a
+bare `.edu` is not a country signal* — which the probe itself labels
+`bare .edu (LEAD — grandfathered non-US exist)`. 🔵 **`bb.edu` in a unit test is a
+placeholder, not a deployment.**
+
+🟢 **Excluding bare-`.edu` leads, the two channels agree on 10 of 10 rows where both can
+answer, and `DISAGREE` is 0.** 🔵 **So `P144-V`'s precedence rule needs no re-testing; what
+it needs is for `T67` to be promoted from an observation into an exclusion in the probe.**
+That is the one-line change this pass recommends and does not make, because making it would
+edit an instrument whose published figures are being compared against.
+
+### 🆕 🔴 `T70` — the probe placed a repository in EMEA on a URL shortener
+
+🔴 **`ahmedEid1/lumen` → EMEA, on `youtu.be`.** The host is in a video-ingest allowlist at
+`apps/backend/app/services/content_ingest.py:70`, with a `if host == "youtu.be"` branch
+twenty lines below it.
+
+🔵 **No academic-namespace rule can catch this.** `.be` is a plain ccTLD, Belgium is in EMEA,
+and the probe's ccTLD route is working exactly as designed. 🔴 **The defect is that a
+global-platform or URL-shortener host is not an institution at all**, and the probe has no
+category for it. 🆕 **`T70`.** 🟢 **Caught before publication; `lumen` is not placed by this
+channel** — and it falls outside the 44-row comparison anyway, because it is an agent-tier
+row.
+
+### 🆕 🔴 `T69` — the probe's precision is a function of how curated the artefact is
+
+🔵 **This is the generalisation, and it explains both false-positive classes at once.**
+
+| population | artefact | placements | false-positive sources |
+|---|---|---|---|
+| 8 npm rows (p147) | a tarball, **filtered by a `files` allowlist** | **2** | 3, all placeholder hosts in `*.example.json` |
+| 🆕 44 clones (p148) | **the whole tree** | **26** | 🔴 **test fixtures, mock data, locale files, link collections** |
+
+🔴 **A clone contains the files a tarball strips.** `BetterSEQTA/BetterSEQTA-Plus` conflicts
+across **four regions** from `src/seqta/content/links.json` — a link collection.
+`BetterSEQTA/DesQTA` reads `phet.colorado.edu` out of `src/mock/data/courseContent.ts` — a
+simulation library referenced in mock content. `felipedias-ie/blackboard-mcp` reads `bb.edu`
+out of a unit test. 🟢 **The probe gains 13× the placements and inherits a class of noise
+the npm tier structurally cannot have**, and `T68`'s two-allowlist finding is the same
+observation from the other end: 🔵 **what ships and what is committed are different
+populations, and an instrument validated on one does not transfer to the other without
+being re-validated.**
+
+Instrument [`p148-channel-agreement`](../compose/code/p148-channel-agreement/README.md),
+**11 tests** — three of which exist because the comparison first reported
+`DISAGREE 0 → NOT REFUTED` over an **empty population**, a leading blank line having made
+`csv.DictReader` take the blank as its header. 🔴 **`T64`'s shape in a new place, with the
+reassuring value**, caught before publication.
+
+### 🟢 `ACTION EU` — the guard wrapper is verdict-preserving, measured rather than assumed
+
+`ACTION EJ` wired `p146-empty-walk-guard` **around** the five at-risk instruments rather than
+editing them. 🟢 **p147 showed it refuses in the right places. p148 shows it changes nothing
+in all the others.**
+
+| status | pairs | meaning |
+|---|---|---|
+| 🟢 **`PRESERVED`** | 🟢 **218** | both runs equal, on a non-empty enumeration |
+| 🟢 `REFUSED` | **2** | the enumeration is empty; the verdict is withdrawn, not changed |
+| 🔴 **`CHANGED`** | 🟢 **0** | 🟢 **the falsifier is silent** |
+
+🔵 **The falsifier here is inverted relative to the rest of this shelf, deliberately: a
+silent one is the good outcome.** 🟢 **And the 2 refusals reproduce p147's 2-of-220 exactly**
+— from an instrument that shares no code with `p147-guard-harness`, calling each at-risk
+module's own published verdict entry point (`is_mcp_server`, `hosts_in`, `survey`, `scan`)
+twice rather than its enumeration once.
+
+🟢 **Both refusals are `zavora-ai/mcp-student-records`, and this pass gives them a remedy**
+rather than only a refusal: the row the two surface gates cannot read is now read at 46 by
+`p148-rust-surface`. 🔵 **A refusal plus a reader for the refused case is the whole
+correction.** Instrument
+[`p148-guard-preserving`](../compose/code/p148-guard-preserving/README.md), **9 tests**.
 ## 2026-10-12 — pass 147 — the channel reopens, 52 of 52 clone, and the census gains a Rust row it already had
 
 🟢 **Everything p146 recorded as unreachable was reachable this pass.**

@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 148 — 2026-10-12
+
+🔵 **Thesis high-water mark before this pass: `T67`. Next free: `T68`.** 🟢 **This pass takes
+`T68`–`T73`**, computed from the register rather than assumed (`ACTION EN`'s rule, holding).
+
+🟢 **Eight of eight pre-registered actions reached.** 🟢 **Four discharged with silent
+falsifiers.** 🔴 **Four refuted — and three of the four refutations are the pass's best
+findings**, because each failed for a reason the action had not imagined.
+
+| thesis | movement this pass |
+|---|---|
+| 🟢 **`T64`** — an empty walk has three causes, the third being a language outside the map | 🟢 **CLOSED for Rust, and WIDENED.** `p148-rust-surface` reads the language and the row reads **46**. 🔴 **And the shelf has a SECOND Rust row** — `BetterSEQTA/DesQTA`, **31 `.rs` files** — which no pass had noticed |
+| 🔴 **`T63`** — the licence census is monolingual | 🔴 **NARROWED to the connector tier.** `ACTION EQ`: **0 of 13** npm and agent rows change class. 🟢 **The 52-row correction was already complete** |
+| 🔴 **`T59`** — npm rows unplaceable on the region axis | 🟢 **The INVERSE now measured.** The institution channel on **44 clones** places **26** rows and adds **16** the offset channel declined. 🔴 **But it inherits noise a tarball cannot have** — `T69` |
+| 🟢 **`T67`** — a bare `.edu` is not a country signal | 🟢 **VINDICATED, and it is the ONLY reason `ACTION ER` was refuted.** Excluding bare-`.edu` leads, the two region channels agree **10 of 10**. 🔵 **Promote it from observation to exclusion** |
+| 🟢 **`T58`** — Korea covers one K-12 use case against the EU's four | 🟢 **CAVEAT DROPPED** (`ACTION ES`). 🔴 **But SUPERSEDED in scope by `T71`**: Korea is no longer APAC's only statutory education item |
+| 🟢 **`T66`** — a North American denominator was double-entered | 🟢 **SECOND CLAUSE CONFIRMED** (`ACTION ET`). 🔴 **"24 states enacted" has no reachable source and is WITHDRAWN BY NAME** |
+| 🟢 **`T42`** — two instruments measuring different properties | 🟢 **A FOURTH confirmation, from the wrapper side.** `ACTION EU`: **218 PRESERVED / 2 REFUSED / 0 CHANGED** over 220 pairs |
+| 🟢 **`T39`** — an exclusion is sound only relative to the property measured | 🔴 **GENERALISED AND LIMITED.** `ACTION EV`: only **5 of 16** subjects have a manifest allowlist to read, and **1 of 16 CANNOT HAVE ONE** (`go.mod`). 🔵 **`T39` applied to itself** |
+| 🟢 **`T21`** — a licence identifier is not a licence | 🟢 **A THIRD instance, on a row this KB never held.** Fedena declares Apache-2.0 in prose and ships **no Apache text at all** |
+| 🆕 🔴 **`T68`** | 🆕 **One manifest can declare TWO include allowlists that DISAGREE.** `librus-mcp`: wheel `packages` (1 item) → **35** sites; sdist `only-include` (16 items) → **39**. 🔴 **p147 named the sdist rule and published the wheel figure.** 🟢 **The 35 is right; the rule cited for it is not** |
+| 🆕 🔴 **`T69`** | 🆕 **An instrument's precision is a function of the artefact's CURATION.** The institution probe: **2 placements / 3 caught false positives** on 8 allowlist-filtered tarballs; **26 placements** and a URL-shortener placement on 44 whole clones. 🔴 **Validated on one population, not transferable to the other without re-validation** |
+| 🆕 🔴 **`T70`** | 🆕 **A global-platform or URL-shortener host is not an institution, and ccTLD logic cannot tell.** `ahmedEid1/lumen` → **EMEA on `youtu.be`**, from a video-ingest allowlist |
+| 🆕 🔴 **`T71`** | 🆕 **APAC holds TWO statutory education items.** Vietnam's **Decision 33/2026/QD-TTg** lists education among 46 high-risk AI systems; **2027-03-01** / **2027-09-01**. 🔴 **Three APAC dates now land before the EU's 2027-12-02** |
+| 🆕 🔴 **`T72`** | 🆕 **A stated grant can be unnameable for a THIRD reason — the licence's own common TITLE.** *"Apache License 2.0"* matches neither `Apache-2\.0` nor `Apache License.*Version 2\.0`. 🟢 **`UNIDENTIFIED` is honest and still cannot name what is in front of it** |
+| 🆕 🔴 **`T73`** | 🆕 **A figure with no source is indistinguishable from a sourced one until someone looks.** "24 states enacted" survived **three passes** because each pass cited this KB rather than the tracker |
+
+### 🔵 The trend this pass is about: four falsifiers fired, and three of them fired sideways
+
+🟢 **`ACTION EO`, `EP`, `ET` and `EU` discharged with their falsifiers silent.** 🔴 **`EQ`,
+`ER`, `ES` and `EV` were refuted.** 🔵 **What is worth recording is that three of the four
+refutations were refuted by something the action had not asked about:**
+
+| action | refuted because | what it actually found |
+|---|---|---|
+| `EQ` | **0 of 13** rows changed class | 🆕 🔴 **the agent tier had never been censused for licence at all** — population **52 → 57** |
+| `ER` | **1** disagreement, not 0 | 🆕 🟢 **16 net new region placements**, and the one disagreement is `T67`'s own evidence class |
+| `EV` | **11 of 16** have no allowlist | 🆕 🔴 **`T68`** — and `go.mod` **cannot** have one, which makes it structural |
+| `ES` | both names are the same statute | 🟢 **exactly as the falsifier predicted** — the one clean refutation |
+
+🔵 **A falsifier that fires has done its job; a falsifier that fires and hands you a better
+question has done more than its job.** 🟢 **This KB's practice of writing the consequence
+clause before the measurement is what makes the difference visible** — `EQ`'s consequence
+clause said *"the correction to the 52-row total is already complete,"* and it was, and the
+52 turned out to be the wrong denominator.
+
+### 🔵 The register's load-bearing line, tested in two new places and holding
+
+> 🟢 **An instrument must be able to distinguish "I looked and it is not there" from "I
+> could not look."**
+
+| new instance this pass | the reassuring value it would have returned |
+|---|---|
+| 🔴 `csv.DictReader` over a file with a **leading blank line** | 🔴 **`DISAGREE 0 → NOT REFUTED`** over an empty population |
+| 🔴 `licence_census` on *"Apache License 2.0"* | 🟡 **`UNIDENTIFIED`** — honest, but it cannot name a plainly stated grant |
+| 🟢 `p148-rust-surface` on a tree with no `.rs` | 🟢 **`NO_RUST_SURFACE_READ`, never `0`** — the line applied at design time |
+
+🔴 **The first of these was in THIS pass's own new instrument and was caught before
+publication**, which is the fourth consecutive pass where a probe inflated or flattened its
+own headline in the reassuring direction before being corrected (`P146-H`, `P147-K`'s
+allowlist, `P147-D`, this). 🔵 **That is now frequent enough to be a property of the method
+rather than a run of bad luck**: 🟢 **the self-check is working, and the thing it keeps
+catching is the same thing.**
+
+### 🆕 🟢 What moved in the world, as distinct from in the instruments
+
+- 🆕 🔴 **A second APAC statute reaches education, and it is the EU's shape.** Vietnam's
+  **Decision 33/2026/QD-TTg** (in force **2026-08-15**) lists **46** high-risk AI systems
+  under **Law 134/2025**; education is a listed sector with automated assessment and
+  behavioural monitoring named. Compliance **2027-03-01**, or **2027-09-01** for systems
+  live before 2026-08-15. 🔴 **No primary text read** — four law-firm briefings agreeing.
+  🟡 **And one qualifier that would narrow it sharply if it holds for education**: some
+  listed systems are high-risk only where AI output is the **sole** basis for a decision
+  with no human in the loop.
+- 🆕 🟢 **The Middle East is no longer a hole.** UAE: AI **KG–G12** from **2025-26**, a
+  standalone subject, extended to national-curriculum private schools **2026-27**, **22 000**
+  educators trained. Saudi Arabia: all public schools from **2025-26**, **6M+** students,
+  **SDAIA** among the implementers. 🔵 **Ministry-scale buyers, not institution-scale.**
+- 🔴 **Africa is a NULL that was searched for by country name.** Kenya, Nigeria, South
+  Africa: nothing. 🟢 **On the record as looked for**, which is the only way a gap stays
+  distinguishable from coverage.
+- 🆕 🟢 **LATAM produces its first capability figure.** TALIS secondary-teacher AI use:
+  **Brazil 56% · Chile 55% · Colombia 53% · Costa Rica 52%** against an **OECD average of
+  36%**; **Uruguay/Ceibal 75%**. 🔵 **The 87% / 26% governance gap is unchanged** — so the
+  region is not an adoption problem, it is a governance problem on a workforce that already
+  adopted.
+- 🟢 **An institutional recommendation that matches this KB's repository-side read.** The
+  **OECD 2026 Digital Education Outlook** recommends moving beyond general-purpose AI tools
+  toward **purpose-built educational AI**. 🔵 **`P31` is that recommendation, with repo
+  names attached.**
+- 🔴 **Market sizing remains unquotable, and the spread widened again.** Research and
+  Markets **~$10.6B (2026) → ~$42.5B (2030)**; X-Pilot **$12.3B (2026)**; Europe **$2.64B
+  (2026)**; against this KB's four non-overlapping 2025 baselines. 🟢 **The maturity read
+  stays the only adopted number: 35/100, most institutions in pilot mode.**
+
+### 🔴 Declared gaps after this pass
+
+- 🔴 **Nine consecutive passes with no education-domain agent from SEARCH.** 🟢 **Stop
+  reporting it as a surprise**: every row added in five passes came from re-measuring the
+  shelf, and this pass found two Rust rows that way.
+- 🔴 **No primary legal text read for Vietnam, and none for Korea.** `capitol.texas.gov`
+  unread for a **ninth** pass and not re-registered; `aibasicact.kr` `ENOTFOUND`;
+  `law.go.kr` and `elaw.klri.re.kr` **not yet attempted** — `ACTION EX`.
+- 🔴 **Africa: zero education-AI evidence on any channel.**
+- 🔴 **`T67` is proved and not enforced.** It is the sole cause of `ACTION ER`'s refutation
+  and the probe still emits bare-`.edu` placements. 🔵 **A one-line change, deliberately not
+  made this pass** so the comparison ran against unmodified instruments.
+- 🔴 **`mcp-student-records`' set identity is proved by this KB and asserted by nobody in
+  CI.** 🟢 **`p148-rust-surface` is the artefact to vendor**; the repository has no such test.
 ## Pass 147 — 2026-10-12
 
 🟢 **Six of p146's eight open actions resolved; two refuted on their own terms and one

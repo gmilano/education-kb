@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 148 — 2026-10-12 — the Rust row is measured by an instrument, its manifest proves set identity, and a negative control finds a SECOND Rust row
+
+🟢 **`P144-G`'s bidirectional gap closes at 4 of 4.** `zavora-ai/mcp-student-records` is read
+by a brace-tracked Rust reader rather than by `grep`: **46 router tools, 46 manifest tools,
+set-identical, and identical in order**. 🔴 **The repository still does not assert it** — its
+own `manifest_test.rs` asserts `tools.len() == 46` and per-tool presence, never set equality.
+🟢 **The pin is this KB's; the governance claim is the repository's.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 `P148-A` | 🟢 **`ACTION EO` DISCHARGED, falsifier silent — both read 46** | Router **46** `#[tool(` sites inside the `#[tool_router]` block of `src/server.rs`; manifest **46** `[[tools]]` in `mcp-server.toml` |
+| 🟢 `P148-B` | 🟢 **`ACTION EP` DISCHARGED, falsifier silent — `SET_IDENTICAL`** | `router_only` **0**, `manifest_only` **0**, duplicate names **0** on both sides. 🟢 **And `order_equal` is true** — the manifest is written in router order |
+| 🆕 🔴 `P148-C` | 🆕 🔴 **…and the repository asserts none of it** | `tests/manifest_test.rs` asserts `len() == 46`, `domain == "education"`, `requires_approval` on 11 named writes. 🔴 **No test compares the manifest's names against the router's** |
+| 🆕 🔴 `P148-D` | 🆕 🔴 **The negative control found a SECOND Rust row, and no pass had noticed** | `BetterSEQTA/DesQTA` carries **31 `.rs` files**. 🟢 **Its published `NOT_AN_MCP_SERVER` HOLDS** — the reader finds no `#[tool_router]` in any of the 31 — 🔵 **but for a reason no instrument on this shelf could previously state** |
+| 🔴 `P148-E` | 🔴 **`ACTION EQ` DISCHARGED and REFUTED — 0 of 13 rows change class** | The language-extended matcher moves **no** npm row and **no** agent row. 🟢 **`T63` is a connector-tier property and the 52-row correction was already complete** |
+| 🆕 🔴 `P148-F` | 🆕 🔴 **…but the agent tier had never been censused for licence AT ALL** | `p145-licence-census` ran on **44 connectors + 8 npm = 52**. 🔴 **The 5 agent rows were outside it.** Population **52 → 57**; strict-unlicensed **7 → 8** |
+| 🔴 `P148-G` | 🔴 **NINTH consecutive null for new agent rows** | Four global + four regional queries. 🔴 **Every education-specific hit is a COURSE** |
+
+### 🟢 `ACTION EO` + `ACTION EP` — what the instrument reads that `grep` could not
+
+🔴 **`#[tool(...)]` is a registration only inside the `impl` block that `#[tool_router]`
+annotates.** A line count cannot know that, and p147's figure was a line count that happened
+to be right. [`p148-rust-surface`](../compose/code/p148-rust-surface/README.md) resolves the
+block properly — **14 tests**, authored fixtures, offline.
+
+| property | value |
+|---|---|
+| repo | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0**, Apache-2.0 |
+| `.rs` files walked | **8** |
+| router block | `src/server.rs`, one `#[tool_router] impl StudentServer` |
+| 🟢 **router tools** | 🟢 **46** |
+| 🟢 **manifest tools** | 🟢 **46** (`mcp-server.toml`, 46 `[[tools]]`) |
+| 🟢 **set identity** | 🟢 **`SET_IDENTICAL`** — symmetric difference empty both ways |
+| 🟢 **order** | 🟢 **identical** — not required, and it holds |
+| duplicates | **0** router-side, **0** manifest-side |
+
+🔵 **Why the reader is more than a tidier `grep`.** Four of its fourteen tests are cases a
+line count gets wrong: a `}` inside a string literal, a `}` inside a block comment, a
+commented-out `#[tool(`, and a lifetime `'a` that a naive char-literal stripper swallows. 🟢
+**A fifth is the case `ACTION EO` cannot catch on its own** — 46 names on one side and 46
+*different* names on the other, where the counts agree and the sets do not. `ACTION EP` is
+the question that closes `P144-G`, and `EO` alone would have passed on a drifted repository.
+
+### 🆕 🔴 `P148-D` — the shelf has two Rust rows, and the second one is a verdict that was right by accident
+
+`T64` said the surface lane reads 7 languages and the shelf holds at least 8. 🔴 **It holds
+at least 8 in at least TWO rows.**
+
+| row | `.rs` files | `#[tool_router]` | published verdict | after p148 |
+|---|---|---|---|---|
+| `zavora-ai/mcp-student-records` | **8** | 🟢 **yes** | 🔴 `NOT_AN_MCP_SERVER` (`T64` artefact) | 🟢 **46 tools, SET_IDENTICAL** |
+| 🆕 `BetterSEQTA/DesQTA` | **31** | 🔴 **no** | `NOT_AN_MCP_SERVER` (0 `mcp` tokens, 427 files) | 🟢 **CONFIRMED, and now for a stated reason** |
+
+🔵 **`DesQTA` is the better of the two findings about the shelf.** Its verdict never needed
+correcting — it walked 427 files and found nothing. 🔴 **But the instrument that cleared it
+could not have read its tool surface if it had one**, and nothing in the pipeline would have
+said so. 🟢 **A row can be right and unmeasurable at the same time, and only a reader for its
+language can tell you which it was.**
+
+### 🔴 `ACTION EQ` — refuted, and the refutation exposes a population hole
+
+🔴 **Zero of 13 rows change licence class** under the language-extended matcher. The
+falsifier fires exactly as written, so `T63` is narrowed to the connector tier and the
+52-row correction stands as published.
+
+| tier | n | `FILE` | `README_ONLY` | `PKG_ONLY` | `NONE` | rows changed by language |
+|---|---|---|---|---|---|---|
+| npm | **8** | 0 | 4 | 3 | **1** | 🔴 **0** |
+| agent | **5** | 4 | 0 | 0 | **1** | 🔴 **0** |
+
+🆕 🔴 **The finding `EQ` was not looking for is that the agent tier had never been censused.**
+`p145-licence-census` ran over 44 connectors and 8 npm packages — **52** — and this KB has
+quoted "9 of 52", then "7 of 52", for three passes without noting that five rows on its own
+agent tier were outside the denominator.
+
+| | before p148 | 🆕 after p148 |
+|---|---|---|
+| censused subjects | **52** | 🟢 **57** |
+| strict-unlicensed | **7** | 🔴 **8** |
+| the new row | — | 🔴 **`hesham0-0nasser/tutor-lms-mcp`** — no licence file, no README grant, no `package.json` licence |
+
+🟢 **The other four agent rows are clean and two are permissive**: `mohaneesh-03/mcp-tutor`
+**MIT** and `nirholas/ai-tutor-mcp` **Apache-2.0**, both by shipped `LICENSE` body;
+`zijinz456/OpenTutor` **MIT**; `ahmedEid1/lumen` **AGPL-3.0**.
+
+### 🔴 The ninth agent null
+
+Eight queries — four global, four regional — as mandated. 🔴 **Not one education-domain
+agent.** 🟢 **Recorded as a dated null rather than padded.**
+
+| candidate | licence | ★ | why it is not a row |
+|---|---|---|---|
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | MIT | **~121 000** | 🔴 **21 lessons — a course** |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **67 223** | 🔴 **12 lessons, carried from p144–p147** |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | MIT | **796** | 🔴 **a tutorial; `ai-education` is a topic tag** |
+| `kamranahmedse/developer-roadmap` | — | — | 🔴 **learning paths, not an agent** |
+| `microsoft/ai-edu`, `microsoft/ML-For-Beginners` | MIT | — | 🔴 **teaching materials, carried** |
+| `caramaschiHG/awesome-ai-agents-2026` | — | — | 🔴 **a link list** |
+
+🔵 **Nine nulls is a settled fact about the search channel.** 🟢 **Every row this KB has
+added in the last five passes came from measuring what it already held** — and this pass is
+the clearest case yet: a 46-tool Apache-2.0 server and a 31-file Rust tree, both already on
+the shelf, neither readable until an instrument learned the language.
 ## Pass 147 — 2026-10-12 — the clone channel is open, the five provisional rows are cleared, and the shelf gains a 46-tool Apache-2.0 SIS
 
 🟢 **Every clone p146 could not make, this pass made.** **52 distinct repositories, 52

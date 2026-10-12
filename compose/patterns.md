@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P32` — the manifest-contract CI gate: prove the governance claim instead of citing it *(new, p148 — Global, deploys per-region)*
+
+🟢 **`P31` recommends `zavora-ai/mcp-student-records` as a records layer because its
+`mcp-server.toml` declares a risk class and an approval requirement per tool.** 🔴 **p148
+proved that contract holds today and that nothing keeps it holding.** `P32` is the four-file
+gate that closes it, and it is the pattern to ship in week one of any engagement that quotes
+the manifest to a procurement reviewer.
+
+🔵 **Why this is a pattern and not a chore.** The sale in `P31` is *"23 of 46 writes are
+approval-gated and the manifest says so."* 🔴 **If a later release adds `delete_student` to
+the router and not to the manifest, every slide in that deck becomes false and no test
+anywhere fails.** 🟢 **The gate costs one CI job.**
+
+### The recipe — concrete repos, concrete wiring
+
+| step | artefact | what it does |
+|---|---|---|
+| 1 | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0**, Apache-2.0 | the records layer: **46** tools, Rust, `rmcp` 3.1.2, FERPA access log |
+| 2 | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **ECL-2.0** | the LMS. 🟢 **Permissive, so the stack carries no copyleft** |
+| 3 | [`p148-rust-surface`](../compose/code/p148-rust-surface/README.md) | 🟢 **the gate.** Reads the router's `#[tool(` sites inside `#[tool_router]` and the manifest's `[[tools]]`, and fails on set inequality |
+| 4 | [`p146-empty-walk-guard`](../compose/code/p146-empty-walk-guard/README.md) | 🟢 **the refusal.** A gate that reads zero files must fail the build, not pass it |
+| 5 | [`p147-scope-parity`](../compose/code/p147-scope-parity/README.md) | the same idea on the auth axis, if the deployment fronts the server with `ahmedEid1/lumen`-style scopes |
+
+### The gate, as a CI step
+
+    # fails the build if the manifest and the router have drifted
+    python3 compose/code/p148-rust-surface/rust_surface.py ./mcp-student-records \
+      | tee surface.txt
+    grep -q 'ACTION EP       SET_IDENTICAL' surface.txt || exit 1
+    grep -q 'ACTION EO       counts AGREE'  surface.txt || exit 1
+
+🟢 **Measured output on v1.2.0, this pass:** `router tools 46`, `manifest tools 46`,
+`counts AGREE`, `SET_IDENTICAL`, `router_only -`, `manifest_only -`, `order identical True`.
+
+🔴 **Three failure modes the gate catches that a count check does not**, each pinned by a
+test in the instrument's **14**:
+
+| drift | what `len() == 46` does | what `P32` does |
+|---|---|---|
+| a tool renamed on one side only | 🔴 **passes** — still 46 and 46 | 🟢 **fails**, naming `router_only` and `manifest_only` |
+| a tool added to the router, another dropped from it | 🔴 **passes** | 🟢 **fails** |
+| the gate run against a tree it cannot read | 🔴 **passes with `0 == 0`** | 🟢 **refuses** — `NO_RUST_SURFACE_READ` |
+
+🔵 **The third is the one that matters most and is the least obvious.** 🔴 **The repository's
+own `tests/manifest_test.rs` asserts `m.tools.len() == 46` and checks that eleven named
+writes require approval — all read from the manifest, none compared against the code.** 🟢 **A
+manifest that agrees with itself is not a contract.**
+
+### 🔵 Per-region framing — the same gate, four different sales
+
+| region | the clock | how `P32` is sold |
+|---|---|---|
+| **APAC** | 🔴 **nearest in the world** — Vietnam **2027-03-01** / **2027-09-01**; Korea ~**2027-01** | 🟢 **Conformity evidence.** Vietnam designates third-party certification for some listed systems; a machine-checked tool-and-risk-class inventory is the artefact that assessment wants |
+| **EMEA** | Annex III **2027-12-02**; Art. 4 literacy duty **live since 2025-02-02** | 🟢 **Annex III record-keeping.** The manifest is the system description; `P32` is the evidence it is current |
+| **North America** | no federal statute; **MD/OK** require human oversight and bar AI from high-stakes student decisions | 🟢 **`requires_approval` as the oversight control**, named per tool. 🔵 **Maps onto the AASA student framework's "no AI determining grades or discipline"** |
+| **LATAM** | 🔴 **no education-specific statute**; **87% adoption / 26% strategy** | 🟢 **The governance layer itself is the product** — there is no compliance deadline to sell against, and a verifiable control inventory is what an institution with no framework can adopt whole |
+
+🔴 **One honest limit, the same one `P31` carries.** This is a **tool surface over a records
+store**, not a registrar. A client needing enrolment workflows, fees, timetabling and report
+cards out of the box is choosing between **LGPL-3.0 (OpenEduCat)**, **GPL-2.0 (RosarioSIS)**
+and a build — 🔴 **and `Fedena`, which 2026 comparison tables call the permissive option,
+ships no licence body and was last committed in 2012** (`verticals/solutions.md`, p148).
+🟢 **Have that conversation in week one.**
+
+### 🔴 What `P32` does NOT solve
+
+- 🔴 **It proves names match, not that behaviour matches.** `record_grade` carrying
+  `requires_approval = true` is a declaration; that the server *enforces* it is a separate
+  test this KB has not written.
+- 🔴 **It is Rust-only as built.** The same gate for the shelf's Python and TypeScript rows
+  needs the equivalent reader; `p143-surface-gate-repair` is the nearest existing one, and
+  🔴 **no row on this shelf outside `mcp-student-records` ships a declared manifest to compare
+  against** — three carry bidirectional pins, in three incompatible formats (`P144-F`).
+- 🔴 **`"*"` wildcard scopes defeat the auth half.** If step 5 is used, mint clients with an
+  explicit scope list: `"*"` is the shipped default on **2 of 3** `lumen` client-minting
+  paths and `has_scope()` short-circuits on it (`P147-H`).
 ## 🆕 🟢 `P31` — the permissive system-of-record stack, with governance that passes a procurement review *(new, p147 — North America first, portable)*
 
 🟢 **This is `P30` extended down into the records layer, which `P30` could not reach**

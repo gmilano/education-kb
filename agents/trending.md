@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 148 — ninth consecutive null, and the search channel returns a REFUSED vertical claim instead
+
+🔴 **No new agent signal for the ninth pass running.** Eight queries (four global, four
+regional). 🔴 **Every education-specific hit is a course.** 🟢 **Recorded as a dated null.**
+
+| query class | result | verdict |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose agent round-ups (OpenClaw, OpenHands, SWE-agent, CrewAI, LangGraph, Agent Zero, Hermes) | 🔴 **not education rows** — one source explicitly: *"nothing specifically about education"* |
+| `github trending education AI 2026` | `generative-ai-for-beginners` (~121k★), `developer-roadmap`, `nanochat`, `awesome-ai-agents-2026` | 🔴 **all courses, roadmaps or link lists** |
+| `open source platform education SIS LMS MIT Apache` | OpenEduCat, RosarioSIS, OpenSIS, Fedena, dotLRN | 🟢 **verticals, not agents** — and one claim refused, below |
+| `AI {industry} industry trends 2026` | HolonIQ, 1EdTech, OECD, Research&Markets | 🟢 **intel, not agents** |
+| **4 × regional** (NA / EMEA / APAC / LATAM) | legislation, adoption surveys, national curricula | 🔴 **zero repositories of any kind** |
+
+🔵 **The channel's shape has stopped changing.** Nine passes, ~70 queries, and the
+education-domain agent population it has contributed is **zero**. 🟢 **Both rows p147 added
+and both findings p148 added came from re-measuring the shelf**, which is now the only
+channel that has ever produced one.
+
+### 🆕 🔴 The one new thing the agent-adjacent search did produce — a REFUSED licence claim
+
+A 2026 comparison table surfaced by the vertical query states that **Fedena is Apache
+2.0** and is *"the only Apache-licensed SIS in that table."* 🔴 **It does not survive the
+artefact.**
+
+| property | what the table says | 🔴 what the repository says |
+|---|---|---|
+| licence | **Apache-2.0** | 🟡 **README prose only** — *"Fedena is released under the Apache License 2.0."* |
+| licence file | — | 🔴 **none of its own.** 14 licence-named files, **all vendored third-party** (FCKeditor, TinyMCE, `delayed_job` MIT, `index_length` MIT) |
+| maintenance | — | 🔴 **HEAD 2012-10-12** (`foradian/fedena`) and **2016-07-20** (`projectfedena/fedena`) |
+
+🔵 **This is `T21`'s shape** — *a licence identifier is not a licence* — on a row this KB had
+never held, and it is the third time the search channel has handed this KB a claim that the
+payload refuses (`T57` Texas HB 2400, `P146-V` OpenEduCat's licence, this). 🟢 **Recorded as
+a licence-flagged non-row rather than added to `verticals/solutions.md` as a permissive
+option.** Full reading on that page.
+
+### 🆕 🔴 A third gap in the licence lane, found by measuring the refusal
+
+🔴 **`p147-licence-language` reads Fedena's plainly-stated grant as `UNIDENTIFIED`.** Both of
+its naming routes miss it:
+
+| matcher | pattern | Fedena's README |
+|---|---|---|
+| `SPDX` | `\bApache-2\.0\b` | 🔴 **no hyphenated form** |
+| `BODY_HINTS` | `Apache License.*Version 2\.0` | 🔴 **no token `Version`** |
+
+🔵 **The README says "Apache License 2.0" — the licence's own common title, without the word
+the pattern requires.** 🟢 **`UNIDENTIFIED` is the honest output and the census is right to
+return it**, which is exactly the register's load-bearing line working as intended: the
+instrument distinguished *"I could not name this"* from *"there is nothing here."* 🔴 **But
+it is the third independent reason this shelf cannot name a grant that is in front of it** —
+after the language gap (`T63`) and the shipped-file gap (`T21`). 🆕 **`T72`.**
+
+### 🔵 Channel state, recorded for the next pass
+
+| channel | p146 | p147 | 🆕 p148 |
+|---|---|---|---|
+| `git clone` (third-party) | 🔴 **refused** | 🟢 44→**52 of 52** | 🟢 **50 of 50, plus 4 verticals — 54 of 54** |
+| `npm pack` | 🔴 unreachable | 🟢 **8 of 8** | 🟢 **8 of 8** |
+| `curl -sI github.com` | 🔴 **403** | 🔴 **403** | 🔴 **403 — fifth consecutive pass** (`P144-X`) |
+| `git ls-remote` | — | 🟢 open | 🟢 **open — used to verify 7 vertical URLs without a clone** |
+| `capitol.texas.gov` | 🔴 `ENOTFOUND` | 🔴 `ENOTFOUND` | 🔴 **not re-probed — ninth pass unread, still not re-registered** |
+
+🟢 **`T65` holds and gains a third data point**: the clone channel is session-scoped, and
+this session is open.
 ## 2026-10-12 — pass 147 — eighth consecutive null, and the channel that was shut is open again
 
 🔴 **No new agent signal for the eighth pass running.** Eight queries (four global, four

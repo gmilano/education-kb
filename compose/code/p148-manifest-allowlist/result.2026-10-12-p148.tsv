@@ -1,0 +1,24 @@
+# population: 16
+# ALLOWLIST                5
+# MANIFEST_NO_ALLOWLIST    7
+# NO_ALLOWLIST_CONCEPT     1
+# NO_MANIFEST              3
+#
+# ACTION EV falsifier -- subjects with NO allowlist to read: 11 -> REFUTED
+subject	verdict	n	how	note
+Agso-o_sigaa-calendar	NO_ALLOWLIST_CONCEPT	0	go.mod	Go has no include allowlist; the module is the unit
+BetterSEQTA_BetterSEQTA-Plus	MANIFEST_NO_ALLOWLIST	0	package.json	manifest present, no include allowlist declared
+BetterSEQTA_DesQTA	MANIFEST_NO_ALLOWLIST	0	package.json	manifest present, no include allowlist declared
+Piyushtanwani_DAU-buddy	NO_MANIFEST	0	-	no package manifest of any kind
+ahmedEid1_lumen	NO_MANIFEST	0	-	no package manifest of any kind
+divyarthjain_vtop-bhopal-mcp	ALLOWLIST	4	package.json files	
+hesham0-0nasser_tutor-lms-mcp	NO_MANIFEST	0	-	no package manifest of any kind
+juliancasaburi_siu-guarani-promedio-extension	MANIFEST_NO_ALLOWLIST	0	package.json	manifest present, no include allowlist declared
+krzysztofbury_librus-mcp	ALLOWLIST	1	pyproject.toml [tool.hatch.build.targets.wheel] packages	
+malkreide_global-education-mcp	ALLOWLIST	1	pyproject.toml [tool.hatch.build.targets.wheel] packages	
+mohaneesh-03_mcp-tutor	MANIFEST_NO_ALLOWLIST	0	pyproject.toml	manifest present, no include allowlist declared
+nirholas_ai-tutor-mcp	ALLOWLIST	4	package.json files	
+nitsuah_bb-mcp	MANIFEST_NO_ALLOWLIST	0	package.json	manifest present, no include allowlist declared
+oliverhruby_edupage-mcp	MANIFEST_NO_ALLOWLIST	0	pyproject.toml	manifest present, no include allowlist declared
+yourssu_soongpt-plugin	ALLOWLIST	1	pyproject.toml [tool.hatch.build.targets.wheel] packages	
+zijinz456_OpenTutor	MANIFEST_NO_ALLOWLIST	0	package.json	manifest present, no include allowlist declared

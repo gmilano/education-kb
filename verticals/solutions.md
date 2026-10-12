@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-12
 ---
 
+**Pass 148, 2026-10-12.** 🔴 **The one permissively-licensed SIS that 2026 comparison tables
+name does not ship a licence, and has not been touched in a decade.** 🟢 **Three vertical
+licences are now read from a clone instead of off a rendered page.**
+
+### 🔴 REFUSED — `Fedena` is not the Apache-2.0 SIS the market tables call it
+
+A 2026 free-SIS comparison surfaced this pass lists **Fedena as Apache 2.0** and notes it as
+*"the only Apache-licensed SIS in that table."* 🔴 **Both repositories were cloned and the
+claim does not hold in the form a studio could rely on.**
+
+| | `foradian/fedena` | `projectfedena/fedena` |
+|---|---|---|
+| grant | 🟡 **README prose** — *"Fedena is released under the Apache License 2.0."* | 🟡 **same prose** |
+| 🔴 **own licence file** | 🔴 **NONE** | 🔴 **NONE** |
+| licence-named files present | **14** — 🔴 **all vendored third-party** (FCKeditor, TinyMCE, `delayed_job` MIT, `index_length` MIT) | **14**, 🔴 **same** |
+| tracked files | 4 568 | 4 608 |
+| 🔴 **HEAD** | 🔴 **2012-10-12** | 🔴 **2016-07-20** |
+
+🔵 **The grant is real prose and it is not nothing** — it is an unambiguous statement of
+intent by the copyright holder. 🔴 **What is missing is the licence body**, which is `T21`'s
+exact shape and the same defect this page already records against
+`moodle-mcp-server-aql` — except that there the text existed in the monorepo and merely
+failed to ship, while here 🔴 **no Apache-2.0 text exists in either repository at all.**
+
+🔴 **And the maintenance finding is the decisive one for a studio.** A Rails 2-era codebase
+last committed in **2012** is not a platform to put AI on top of, licence or no licence.
+🟢 **Recorded here so the next pass does not re-surface the comparison table and re-adopt
+the claim.** 🆕 **`T72`** also comes out of this row — see `agents/trending.md` for why the
+census reads the grant as `UNIDENTIFIED` rather than `Apache-2.0`.
+
+### 🟢 Vertical licences, read from the payload this pass
+
+| platform | repo | 🟢 licence, from the clone | HEAD | buildable by Globant? |
+|---|---|---|---|---|
+| 🟢 **RosarioSIS** — K-12 SIS, PHP | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** — full body at `LICENSE` | 🟢 **2026-10-09** | 🔴 **no — strong copyleft.** 🟢 **Alive and the most actively maintained SIS on this page** |
+| **OpenEduCat** — SIS+LMS+fees on Odoo | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** — `LICENSE` names it, `COPYRIGHT` referenced | 🟢 **2026-09-07** | 🔴 **no.** 🔵 **p146 read this off a rendered page; it is now confirmed from source** |
+| 🔴 **Fedena** — SIS, Rails | [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 **README-only "Apache License 2.0", no body** | 🔴 **2012-10-12** | 🔴 **no — and abandoned** |
+| 🟢 **`mcp-student-records`** — SIS tool layer, Rust | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0 — full body at `LICENSE`** | 🟢 2026 | 🟢 **YES** |
+
+🔵 **The shape of this page has not changed, and now it is measured rather than asserted.**
+🔴 **Every full-platform SIS a studio could deploy is copyleft or dead.** 🟢 **The one
+permissive, live, Apache-2.0 row is a tool layer, not a platform** — 46 tools over a records
+store, with a typed manifest proved set-identical to its router this pass (`ACTION EP`).
+
+🟢 **So the composition `P31` describes is still the only permissive route to a records
+layer, and it is now the only one this page can recommend without a copyleft caveat**:
+Sakai (**ECL-2.0**) for the LMS + `mcp-student-records` (**Apache-2.0**) for the records
+tools, with no GPL, LGPL or AGPL anywhere in the stack.
+
+🔵 **Stated as a limit, not hidden:** that route buys a *tool surface* over student records,
+not a registrar. A studio that needs enrolment workflows, fee management, timetabling and
+report cards out of the box is choosing between **LGPL-3.0 (OpenEduCat)**, **GPL-2.0
+(RosarioSIS)** and a build. 🟢 **That is a procurement conversation to have in week one, and
+this page's job is to make sure it happens then rather than at integration.**
 **Pass 147, 2026-10-12.** 🔴 **The AGPL warning this page carried on `moodle-mcp-server-aql`
 was the wrong KIND of warning, and the correction matters commercially.** 🆕 🟢 **A
 permissively-licensed SIS layer joins the page for the first time.**

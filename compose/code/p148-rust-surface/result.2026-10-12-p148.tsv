@@ -1,0 +1,4 @@
+subject	rs_files	router_tools	manifest_tools	count_equal	set_equal	order_equal	verdict
+BetterSEQTA_DesQTA	31	-	-	-	-	-	NO_RUST_SURFACE_READ (no #[tool_router] in 31 .rs files)
+mcp-student-records	8	46	46	True	True	True	SET_IDENTICAL
+zavora-ai_mcp-student-records	8	46	46	True	True	True	SET_IDENTICAL

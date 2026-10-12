@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 148 — 2026-10-12 — the foundational Rust row gets a bidirectional pin, and the `NOT_SHIPPED` rule fails as a general rule
+
+🟢 **The clone and `npm pack` channels are both open** (`T65`), so this page's figures are
+re-measured from the payload rather than carried.
+
+### 🟢 `zavora-ai/mcp-student-records` — promoted to the strongest pin on the shelf
+
+🟢 **`ACTION EO` and `ACTION EP` both discharge with silent falsifiers.** This row is the
+first on this shelf whose declared tool manifest and whose actual router are proved **equal
+as sets**, by an instrument that reads its language.
+
+| property | value | how it is known |
+|---|---|---|
+| repo | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0** | clone, this pass |
+| licence | 🟢 **Apache-2.0** | full body at `LICENSE`; `Cargo.toml` declares it |
+| language | Rust, edition 2024, `rust-version = 1.94.1` | `Cargo.toml` |
+| SDK | `rmcp` **3.1.2** + `adk-mcp-sdk` **0.2.0** | `Cargo.toml` |
+| 🟢 **router surface** | 🟢 **46** | `#[tool(` sites inside `#[tool_router] impl StudentServer`, `src/server.rs`, brace-tracked |
+| 🟢 **declared surface** | 🟢 **46** | `mcp-server.toml`, 46 `[[tools]]` |
+| 🟢 **set identity** | 🟢 **PROVED** | symmetric difference empty both ways; **0** duplicates either side; order identical |
+| approval-gated writes | **23 of 46** | `requires_approval = true` |
+| risk classes | `read_only` / `internal_write` / `ExternalWrite` | typed per tool in the manifest |
+| compliance posture | 🟢 **FERPA-gated communications + a FERPA access log** | `get_access_log` tool; package description |
+| 🔴 **what the repo itself asserts** | 🔴 **the COUNT only** | `tests/manifest_test.rs`: `len() == 46`, `domain`, `requires_approval` on 11 named writes. 🔴 **No set comparison** |
+
+🔵 **`P144-G` closes at 4 of 4.** The three earlier bidirectional pins were a SHA-256
+lockfile (`malkreide/global-education-mcp`, 10), a classification manifest
+(`oliverhruby/edupage-mcp`, 31) and a golden name array
+(`divyarthjain/vtop-bhopal-mcp`, 17). 🆕 **The fourth is a typed TOML manifest with a risk
+class per tool, and it is the only one of the four where the pin is a governance artefact
+rather than a test fixture.** 🔴 **It is also the only one of the four the repository does
+not verify itself.**
+
+🟢 **For a studio, this is the row to start a records layer on**, and the caveat is one
+sentence: the manifest is a contract the code happens to satisfy today, and nothing in CI
+stops it drifting. [`p148-rust-surface`](../compose/code/p148-rust-surface/README.md) is the
+check to vendor into a build — **14 tests**, offline, no network.
+
+### 🔴 `ACTION EV` — the manifest allowlist cannot replace the name list, and the reason is worse than coverage
+
+`ACTION EC` (p147) found the `NOT_SHIPPED` rule already written in `librus-mcp`'s own
+`pyproject.toml`, and `T39` was vindicated. 🔴 **`ACTION EV` asked whether that generalises.
+It does not.**
+
+| verdict | n of 16 | meaning |
+|---|---|---|
+| 🟢 `ALLOWLIST` | **5** | a manifest include allowlist exists and was read |
+| 🔴 `MANIFEST_NO_ALLOWLIST` | **7** | a manifest exists and declares no allowlist |
+| 🔴 `NO_MANIFEST` | **3** | no package manifest of any kind |
+| 🔴 `NO_ALLOWLIST_CONCEPT` | **1** | 🔴 **the manifest CANNOT express one** — `go.mod`; the module is the unit |
+
+🔴 **5 of 16. The falsifier fires by eleven rows.** 🔵 **And `NO_ALLOWLIST_CONCEPT` is the
+row that makes this structural rather than incidental**: `Agso-o/sigaa-calendar` is Go, and
+no amount of author diligence would give it an include allowlist, because the format has no
+such key. 🟢 **That is `T39` one level up — a property-based exclusion is sound only where
+the property exists** — and it means the name list stays as a fallback, as the action's
+consequence clause specified.
+
+| row | allowlist | items | source |
+|---|---|---|---|
+| `krzysztofbury/librus-mcp` | 🟢 yes | **1** | `pyproject.toml [tool.hatch.build.targets.wheel] packages` |
+| `malkreide/global-education-mcp` | 🟢 yes | **1** | same key |
+| `yourssu/soongpt-plugin` | 🟢 yes | **1** | same key |
+| `divyarthjain/vtop-bhopal-mcp` | 🟢 yes | **4** | `package.json files` |
+| `nirholas/ai-tutor-mcp` | 🟢 yes | **4** | `package.json files` |
+
+### 🆕 🔴 `T68` — and one manifest declares TWO allowlists that disagree
+
+🔴 **This is the sharpest thing `ACTION EV` found, and it corrects p147's prose.**
+`librus-mcp`'s `pyproject.toml` carries **two** hatchling include allowlists, for two
+different build targets, and they do not admit the same directories:
+
+| target | key | items | 🔴 `.tool(` sites inside it |
+|---|---|---|---|
+| **wheel** | `packages` | **1** — `src/librus_mcp` | 🟢 **35** |
+| **sdist** | `only-include` | **16** — incl. `tests_native`, `scripts/qualify_native.py` | 🔴 **39** |
+
+🔴 **p147 named the 16-item `only-include` as the rule and published 35, which is the wheel
+figure.** 🟢 **The number 35 is correct** — it is what the installable package contains, it
+matches `MCP_CONTRACT.md`'s prose to the token, and it is the figure a studio consuming the
+package would observe. 🔴 **The rule cited for it yields 39**, because the sdist allowlist
+admits `scripts/qualify_native.py` (**2** sites) and `tests_native` (**2** sites).
+
+🔵 **So "read the manifest's include allowlist" is underdetermined.** A pass has to say
+*which build target*, and the right answer depends on which artefact the question is about.
+🟢 **For a tool surface, the wheel is the right target**, and this page states that
+explicitly from now on.
+
+🟢 **p147's other librus figures reproduce exactly.** Whole tree **60**, and the
+decomposition is **35** (`src/librus_mcp`) + **21** (`legacy_reference`) + **2** (`scripts`)
++ **2** (`tests_native`) = **60**. 🔵 p147 reported *"23 in `legacy_reference` + 2 in
+`scripts`"*, attributing `tests_native`'s two to `legacy_reference`; the total is identical
+and no published figure changes.
+
+Instrument [`p148-manifest-allowlist`](../compose/code/p148-manifest-allowlist/README.md),
+**12 tests** — one of which is the two-allowlist shape itself.
+
+### 🔵 The npm tier, re-measured — unchanged
+
+🟢 **8 of 8 tarballs fetched.** `ACTION EQ` ran the language-extended licence matcher over
+all eight: **0 rows change class**. The tier's licence picture stands as p145 published it —
+**4 `README_ONLY`, 3 `PKG_ONLY`, 1 `NONE`** (`@n35da/brightspace-mcp`, still the only npm
+row on this shelf with no grant on any channel, and still the only one of the eight that
+ships source).
 ## Pass 147 — 2026-10-12 — the npm tier gains two regions, and a foundational row was never read
 
 🟢 **The clone and `npm pack` channels are both open** (`T65`), so this page's npm block is

@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 148 — 2026-10-12
+
+⏱️ **Eleventh pass of this date.** 🔵 **p147 did not update this ledger**; its verdicts are in
+`intel/open-gaps.md` and `agents/top.md`, and its pre-registered actions (`EO`–`EV`) are the
+eight this pass judges. 🟢 **All eight reached. Four discharged with silent falsifiers, four
+refuted — and three of the four refutations found something the action had not asked about.**
+
+🟢 **The pass's two headline results.** `P144-G`'s bidirectional gap, open since p144, closes
+at **4 of 4**: `zavora-ai/mcp-student-records` reads **46 router tools and 46 manifest
+tools, set-identical and identical in order**, measured by a brace-tracked Rust reader rather
+than by `grep`. 🔴 **And APAC holds two statutory education items, not one** — Vietnam's
+Decision 33/2026/QD-TTg lists education among 46 high-risk AI systems, with a compliance date
+twenty-one months earlier than the EU's Annex III.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 `P148-A`/`B` | 🟢 **`ACTION EO` + `EP` DISCHARGED, both falsifiers silent** | Router **46**, manifest **46**, `SET_IDENTICAL`, `order_equal` true, **0** orphans either side. 🟢 **`P144-G` → 4 of 4** |
+| 🆕 🔴 `P148-C` | 🆕 🔴 **…and the repository asserts none of it** | `manifest_test.rs`: `len() == 46` and per-tool approval flags, 🔴 **never set equality against the router** |
+| 🆕 🔴 `P148-D` | 🆕 🔴 **A SECOND Rust row, which no pass had noticed** | `BetterSEQTA/DesQTA`, **31 `.rs` files**. 🟢 **Its verdict HOLDS** (no `#[tool_router]`) — 🔵 **but it was right by accident until this pass** |
+| 🔴 `P148-E`/`F` | 🔴 **`ACTION EQ` REFUTED — 0 of 13 rows change class** | 🟢 `T63` is connector-tier. 🆕 🔴 **And the agent tier had NEVER been licence-censused**: population **52 → 57**, strict-unlicensed **7 → 8** |
+| 🔴 `P148-G` | 🔴 **NINTH consecutive agent null** | Eight queries. 🔴 **Every education-specific hit is a course** |
+| 🆕 🔴 `P148-H`/`I` | 🆕 🔴 **`T71` — Vietnam is a second APAC statutory education item** | **Decision 33/2026/QD-TTg**, in force **2026-08-15**; **46** high-risk systems, education listed. Compliance **2027-03-01** / **2027-09-01**. 🔴 **Three APAC dates now precede the EU's 2027-12-02** |
+| 🟢 `P148-K`/`L` | 🟢 **`ACTION ET` DISCHARGED — "24 states enacted" WITHDRAWN BY NAME** | Five trackers, five numbers (**3 / 7 / 10 / 12 / 35+ guidance**), 🔴 **none reads 24**. 🟢 **The 12 are NAMED** |
+| 🔴 `P148-M` | 🔴 **`ACTION ES` DISCHARGED and REFUTED, as specified** | Both names denote **교육기본법**; the **KLRI 2024** convention renders 기본법 as *Framework Act*. 🟢 **`T58` drops the caveat** |
+| 🆕 🟢 `P148-N`/`O` | 🆕 🟢 **The Middle East gap half closes; AFRICA is a dated null** | UAE **KG–G12 from 2025-26**, **22 000** educators; Saudi **6M+** students, **SDAIA**. 🔴 **Kenya/Nigeria/South Africa: nothing, searched by name** |
+| 🆕 🟢 `P148-P`/`Q` | 🆕 🟢 **LATAM's first CAPABILITY figure** | TALIS teacher AI use: **BR 56 · CL 55 · CO 53 · CR 52** vs **OECD 36**; **Uruguay/Ceibal 75%** |
+| 🟢 **`ACTION ER`** | 🔴 **REFUTED on ONE row — and that row is `T67`** | 🟢 **`INSTITUTION_ONLY` 16, `AGREE` 10, `DISAGREE` 1.** 🟢 **Coverage 20 → 36 of 44, almost all LATAM.** 🆕 `T69`, `T70` |
+| 🟢 **`ACTION EU`** | 🟢 **DISCHARGED, falsifier silent** | **220 pairs: 218 `PRESERVED`, 2 `REFUSED`, 0 `CHANGED`.** 🟢 Reproduces p147's 2-of-220 from different code |
+| 🔴 **`ACTION EV`** | 🔴 **REFUTED by eleven rows** | **5 of 16** have an allowlist. 🔴 **1 CANNOT** (`go.mod`). 🆕 🔴 **`T68`: librus declares TWO allowlists — 35 vs 39 — and p147 named the wrong one for the right number** |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **Four new instruments, 46 tests, all passing, all offline with authored fixtures**:
+  [`p148-rust-surface`](compose/code/p148-rust-surface/README.md) (14),
+  [`p148-manifest-allowlist`](compose/code/p148-manifest-allowlist/README.md) (12),
+  [`p148-channel-agreement`](compose/code/p148-channel-agreement/README.md) (11),
+  [`p148-guard-preserving`](compose/code/p148-guard-preserving/README.md) (9).
+- 🟢 **A new compose pattern, `P32`** — the manifest-contract CI gate, with the exact CI step,
+  the three drift modes a count check misses, and a per-region sale for each of the four
+  regions.
+- 🟢 **Three vertical licences read from a clone** instead of off a rendered page, and
+  🔴 **one market claim refused**: `Fedena`, which 2026 comparison tables call the only
+  Apache-licensed SIS, ships **no licence body of its own** and was last committed in
+  **2012**.
+- 🟢 **Six theses, `T68`–`T73`**, allocated from the register's computed high-water mark.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **APAC** | 🔴 **a second statute, and the nearest clock in the world** | `T71`. Vietnam **2027-03-01** / **2027-09-01**; Korea ~**2027-01**; Taiwan's Act **2025-12** (education scope unread) |
+| **LATAM** | 🟢 **the first capability figure, and 16 new placements** | TALIS **+16 to +20pp** over the OECD mean in four countries; UNESCO regional Observatory **2026-04-14**; 🟢 **the region's repos were being suppressed by a timezone, not by missing evidence** |
+| **EMEA** | 🟡 **half a gap closed, half still open** | UAE and Saudi curricula named and dated. 🔴 **Africa null, searched by country name.** OECD 2026 Outlook endorses purpose-built educational AI |
+| **North America** | 🔴 **a figure withdrawn, a federal bill added** | "24 states enacted" **withdrawn**; **H.R. 8747** out of committee **2026-07-21**; CA AB 1159, ID SB 1227, MD/OK oversight, NYC grade-8 moratorium |
+| **Global** | 🔴 **ninth agent null** | `P148-G` |
+
+### Pre-registered for p149
+
+🔵 **Eight actions, in `intel/open-gaps.md`**: `EW` (Vietnam primary text and the
+sole-basis qualifier), `EX` (Korean primary text on `law.go.kr` / `elaw.klri.re.kr`),
+`EY` (close the Africa null by country name + the AU Continental AI Strategy),
+`EZ` (promote `T67` to an exclusion and re-run `ER`), `FA` (platform-host exclusion for
+`T70`), `FB` (name the build target behind every `NOT_SHIPPED` figure, per `T68`),
+`FC` (common-title licence forms, per `T72`), `FD` (the **enforcement** half of `P32`).
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **No primary legal text was read, for either jurisdiction it added or corrected.**
+  `T71` rests on four agreeing law-firm briefings and 🔴 **Decision 33/2026 itself is
+  unread**. 🔵 **That is the same exposure `T57` caught before** — a secondary source
+  reporting a statute's scope more confidently than the statute does — and `ACTION EW`
+  names the qualifier that would narrow it.
+- 🔴 **`T67` was proved to be the sole cause of a refutation and was not fixed.** The
+  one-line exclusion is deferred to `ACTION EZ` on purpose: changing the probe this pass
+  would have meant comparing a modified instrument against published figures.
+- 🔴 **`P32`'s behavioural half does not exist.** It proves the manifest and the router
+  agree on **names**; that the server *enforces* `requires_approval` is untested, and
+  `P32` is being recommended on the strength of a declaration. `ACTION FD`.
+- 🔴 **Africa is still zero.** One targeted search, three named countries, nothing.
+- 🔴 **`capitol.texas.gov` unread for a ninth pass**, not re-probed and 🟢 **not
+  re-registered** — an environment allowlist request, stated once.
 ## Pass 146 — 2026-10-12
 
 ⏱️ **Ninth pass of this date.** 🔴 **The clone channel p145 certified clean, hours earlier
