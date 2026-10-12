@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 150 — p149's channel upgrade is WITHDRAWN: the API host answers and serves nothing
+
+🔴 **`P150-A` — p149 published that the GitHub API is open here, and it is not.** 🔵 **The
+sentence was:** *"so `P144-X`'s '`curl` cannot verify a GitHub URL' is narrower than recorded:
+the API host answers, the web host does not."* 🔴 **It is true of the root endpoint and false
+of every endpoint that would verify anything**, which is the inflating direction: a reader
+takes it to mean star counts and licence fields are recoverable.
+
+| endpoint | status | what the body says |
+|---|---|---|
+| `api.github.com/` | 🟢 **200** | the generic endpoint directory |
+| `api.github.com/rate_limit` | 🟢 **200** | core **15 000**, search **30** — 🔵 **a real authenticated budget, and it is not spendable on this question** |
+| 🔴 `api.github.com/repos/HKUDS/DeepTutor` | 🔴 **refused** | *"GitHub access to this repository is not enabled for this session. Use add_repo…"* |
+| 🔴 `api.github.com/search/repositories?q=…` | 🔴 **refused** | *"This GitHub API path is not available: sessions are bound to their configured repositories."* |
+| 🔴 `github.com/` (web) | 🔴 **400** | unchanged |
+
+🔵 **The refusal is the SESSION PROXY's, not GitHub's**, and that distinction matters: it will
+not change by waiting, retrying or authenticating, and it does not indicate anything about the
+repository. 🟢 **`P144-X` stands as originally recorded.** 🔴 **A rate-limit header is not a
+capability** — this pass is the second time a 200 from a gateway has been read as an open
+channel on this shelf.
+
+🟢 **What this makes star counts, permanently and until the scope changes: `UNMEASURED`.**
+🔵 **Not zero, not a snippet, not an estimate.**
+
+### 🟢 The channels that DO serve arbitrary repositories
+
+| channel | attempted | succeeded |
+|---|---|---|
+| 🟢 `git ls-remote` | **22** | 🟢 **22** |
+| 🟢 `git clone --depth 1` | **22** | 🟢 **22** |
+| 🟢 `npm pack` | **8** | 🟢 **8** |
+| 🟢 `python3` / `unittest` offline | **82 tests** | 🟢 **82** |
+| 🔴 every primary-legal-text and UNESCO host attempted | **4** | 🔴 **0 — `connect_rejected`, 403 at CONNECT** |
+
+🔵 **And a correction to how this KB records the last row.** p149 suspected that
+`ENOTFOUND` was the same 403 as a `connect_rejected`. 🟢 **CONFIRMED, from the proxy's own
+ledger**, which names the host and the cause:
+
+    {"kind":"connect_rejected",
+     "detail":"gateway answered 403 to CONNECT (policy denial or upstream failure)",
+     "host":"www.ichei.org:443"}
+
+🟢 **So `WebFetch`'s `ENOTFOUND`, `curl`'s exit-000 and the proxy's `connect_rejected` are one
+event with three spellings**, and none of them is evidence that a host is dead. 🟢 **p149's
+caution about `aibasicact.kr` is upgraded from "very likely" to confirmed for this class.**
+
+### 🟢 Five new education repositories reached this pass
+
+🔵 **All five by clone, licence read from the tree at `HEAD`.** Full rows in
+[`agents/top.md`](../agents/top.md).
+
+| repo | licence | HEAD | files |
+|---|---|---|---|
+| 🆕 `Zenglian990/AI_Tutor_Release` | **MIT** | **2026-10-12** | 301 |
+| 🆕 `ishands/upstack` | 🔴 **MIT (3) / CC-BY-SA-4.0 (64)** | 2026-04-29 | 82 |
+| 🆕 `flysheep-ai/education-skills` | **MIT** | 2026-01-29 | 20 |
+| 🆕 `krishna16-origin/ai-tutor` | **MIT** | 2026-09-30 | 🔴 4 |
+| 🆕 `maxew6/ai-tutor-project` | **MIT** | 2026-09-30 | 🔴 5 |
+
+🔴 **`Zenglian990/AI_Tutor_Release` pushed on the day of this pass** — the freshest row on the
+shelf, and the only tutoring row shipping mobile binaries.
+
+### 🔴 Not trending, and said so
+
+- 🔴 **No GitHub Trending page was read.** It lives on the web host, which 400s. 🟢 **Every
+  "trending" claim on this page is a clone-channel measurement of recency (`HEAD` date), not
+  a ranking.** 🔵 **That has been true for several passes and is stated here once.**
+- 🔴 **No star-ordered list exists on this shelf and cannot be built here.** `P150-A`.
+- 🔴 **No new foundational infrastructure repo this pass** — the sweep was tutor-shaped.
+
 ## 2026-10-12 — pass 149 — 58 of 58 reached, the Rust toolchain opens, and the GitHub API turns out to answer
 
 🟢 **Every channel this pass needed was open, and two that were recorded as shut are not.**

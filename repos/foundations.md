@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12 — this shelf cannot see a GPL row, and has published none in 150 passes
+
+🔴 **`T77`. Five of seven GNU-family rows on this shelf carry the wrong licence
+identifier**, and the cause is one published line applied the wrong way.
+
+### 🔴 The defect, and why it is structural rather than a typo
+
+`p145-licence-census.identify()` — copied verbatim into `p147-licence-language` and
+`p149-common-title-licence` — tests the licence **body** for a phrase:
+
+    (re.compile(r"GNU AFFERO GENERAL PUBLIC LICENSE", re.I), "AGPL-3.0"),
+
+🔴 **GPL-3.0's own section 13 is TITLED *"Use with the GNU Affero General Public License"***
+and its body names the Affero licence twice more. 🔴 **So every verbatim GPL-3.0 file matches
+the AGPL rung before the GPL rung is reached.**
+
+🔴 **And the whole family behaves this way.** GPL-2.0's preamble reads *"you may want to use
+the GNU Lesser General Public License instead"* — so a GPL-2.0 file matches the **LGPL** rung.
+🔵 **Each GNU licence names its siblings in its own text, which is exactly what a
+body-substring test cannot survive.** 🔵 **`T39`'s class again: the phrase is right and the
+test is wrong, because the phrase lives inside the licence it is meant to exclude.**
+
+### 🔴 The published distribution was the clue, and nobody read it
+
+| licence | rows in `p145`'s published census |
+|---|---|
+| MIT | 33 |
+| *(none)* | 9 |
+| 🔴 **AGPL-3.0** | 🔴 **6** |
+| Apache-2.0 | 2 |
+| 🔴 **LGPL** | 🔴 **1** |
+| ISC | 1 |
+| 🔴 **GPL** | 🔴 **ZERO** |
+
+🔵 **A shelf of 58 education repositories, a third of them LATAM university scrapers and
+Moodle plugins, publishes not one GPL row** — while its own `agents/top.md` describes several
+rows as GPL-3.0 by hand. 🔴 **The contradiction was on two pages at once and went nine passes
+without being read as a signal.**
+
+### 🟢 Measured, row by row
+
+| row | published | measured from the title line | direction |
+|---|---|---|---|
+| `Agso-o/sigaa-calendar` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** | 🔴 **OVERSTATED** |
+| `despedite/siu-guarani` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** | 🔴 **OVERSTATED** |
+| `mhlavac/edupage-mcp` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** | 🔴 **OVERSTATED** |
+| `ahmedEid1/lumen` *(agent tier)* | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** | 🔴 **OVERSTATED** |
+| `qxbao/qldt-hanu-mcp` | 🔴 `LGPL` | 🟢 **GPL-2.0** | 🔴 **WRONG FAMILY, and no version** |
+| `edwyj/ddl-killer` | 🟢 `AGPL-3.0` | 🟢 **AGPL-3.0** | 🟢 **right** |
+| `fabrica-de-inovacao/expeditto` | 🟢 `AGPL-3.0` | 🟢 **AGPL-3.0** | 🟢 **right** |
+
+🟢 **Two rows are genuinely AGPL-3.0, which is why the defect survived**: the matcher is not
+always wrong, so every spot-check that happened to land on `ddl-killer` or `expeditto`
+confirmed it.
+
+### 🔵 What the error costs a studio, in both directions
+
+🔴 **Four rows OVERSTATED.** AGPL-3.0 obliges source disclosure to anyone interacting with the
+software **over a network**; GPL-3.0 obliges it on **distribution** only. 🔵 **A hosted tutor
+or a SaaS SIS connector trips AGPL §13 and does not trip GPL-3.0** — so this shelf has been
+telling a studio that three LATAM/EMEA connectors and one tutoring agent are unusable behind a
+hosted product when they are ordinary copyleft. 🟢 **The safe direction, and still wrong: it
+disqualifies usable work.**
+
+🔴 **One row runs the other way, and that is the dangerous one.** `qxbao/qldt-hanu-mcp` was
+filed as `LGPL` — the most permissive member of the family, routinely treated as
+link-and-go. 🔴 **It is GPL-2.0**: full copyleft, **no patent grant**, and incompatible with
+GPL-3.0-licensed code it might be combined with. 🔵 **An understatement of obligation on a row
+nobody flagged.**
+
+### 🟢 The fix: a licence is identified by its TITLE, confirmed by its operative clause
+
+[`p150-gpl-affero-discrimination`](../compose/code/p150-gpl-affero-discrimination/README.md),
+**35 tests**, authored fixtures, offline.
+
+| surface | what it reads | why it is independent of the body |
+|---|---|---|
+| **title** | the licence name as a **whole line** in the first 5 non-blank lines, plus the version | 🟢 **a sentence is never just a licence's name** |
+| **clause** | AGPL-3.0's §13 *"Remote Network Interaction"*, anchored to line start | 🟢 **this is the clause that MAKES AGPL different; a plain GPL file cannot contain it** |
+
+🟢 **A verdict is returned only when both surfaces agree**; a hand-edited or genuinely
+dual-licensed file comes back `DISAGREE` and is named rather than guessed at. 🟢 **The version
+is carried** — `GPL-2.0` and `GPL-3.0` are different instruments and this shelf published
+neither.
+
+🔵 **The window must stay narrow, and the tests enforce it.** An earlier draft used a 20-line
+title window; the GPL-2.0 fixture caught it reading "Lesser" out of the preamble and returning
+`LGPL-2.0` — 🟢 **the defect being fixed, reproduced inside the fix.** The matcher now requires
+the licence name to **be** the line.
+
+### 🟢 `ACTION FE` — the grant ladder is corrected, and it moves exactly three rows
+
+[`p150-grant-ladder-order`](../compose/code/p150-grant-ladder-order/README.md), **17 tests**.
+🔴 *Refuted if any row other than the three npm rows p149 named changes class.* 🟢 **Falsifier
+silent.**
+
+| subject | p147 (inverted) | corrected | direction |
+|---|---|---|---|
+| `eth-moodle-mcp-1.3.3` | 🔴 `README_ONLY` | 🟢 **`PKG_ONLY`** | 🟢 strengthening |
+| `moodle-mcp-server-aql-0.1.7` | 🔴 `README_ONLY` | 🟢 **`PKG_ONLY`** | 🟢 strengthening |
+| `owen-x-tech-canvas-mcp-1.1.0` | 🔴 `README_ONLY` | 🟢 **`PKG_ONLY`** | 🟢 strengthening |
+
+🟢 **No connector row, no agent row, and no licence IDENTIFICATION changes** — only the rung
+recording where the grant was found. 🔵 **p147's inversion had been quietly WEAKENING three
+rows**, reporting prose where a declared `package.json` licence exists; the correction restores
+the stronger reading, which is why it moves no figure in the dangerous direction.
+
+🟢 **FILE-grant rows are invariant by construction** — `census()` returns on the licence-file
+branch before either reordered branch — so the test set is the 18 non-FILE rows plus the 6
+agent rows, **24 subjects measured**, and the invariance is asserted rather than assumed.
+
+### 🔴 What this pass did NOT fix, deliberately and otherwise
+
+- 🔴 **The three published copies of `identify()` are UNCHANGED.** `p145`, `p147` and `p149`
+  all still carry the body matcher. 🔵 **Correcting them in the pass that measures them is the
+  mistake `ACTION EU` exists to avoid** — and the mistake `ACTION FE` was registered to undo.
+  🔵 **`ACTION FN`.**
+- 🔴 **The 44-row census is NOT re-published.** Five rows are known wrong and the TSV that
+  carries them is p145's. 🟢 **The corrected values are in
+  [`result.2026-10-12-p150.tsv`](../compose/code/p150-gpl-affero-discrimination/result.2026-10-12-p150.tsv)**
+  and the row-by-row table above.
+- 🔴 **`GPL-3.0-only` versus `GPL-3.0-or-later` is NOT distinguished.** That election lives in
+  per-file headers, not the licence body, and it changes what a derivative may relicense to.
+  🔵 **`ACTION FO`.**
+- 🔴 **Only 28 trees were measured, not 58.** The GNU-family population was identified from
+  `p145`'s published census — which is the artefact under suspicion. 🔵 **A row whose body
+  contains no sibling mention cannot be mis-sorted by this defect**, so the published `MIT`,
+  `Apache-2.0` and `ISC` rows are not at risk from `T77`; 🔴 **that is an argument, not a
+  measurement.** 🔵 **`ACTION FU`.**
+- 🔴 **`moodle-mcp-server-aql`'s `AGPL-3.0` is untouched** and stands: it is `PKG_ONLY`, read
+  from a declared manifest string, not from a body match.
+
 ## Pass 149 — 2026-10-12 — the licence census reproduces over 58, the denominator moves, and two of this KB's instruments disagree about evidence strength
 
 🟢 **Every channel this page needs was open**: 🟢 **`git clone` 50 of 50**, 🟢 **`npm pack` 8 of

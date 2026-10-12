@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12 — the verticals are RE-MEASURED, and they are the negative control that bounds `T77`
+
+🟢 **Six platform licences read from the tree this pass**, by sparse clone of the licence file
+at `HEAD`. 🔵 **Done because `T77` established that this shelf's licence identifier is wrong on
+five census rows, and the obvious next question is whether this page is wrong too.**
+
+| platform | repo | licence read this pass | title line | matches this page |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` / `Version 3` | 🟢 **yes** |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` / `Version 3` | 🟢 **yes** |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` / `Version 3` | 🟢 **yes** |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | `Educational Community License, Version 2.0` | 🟢 **yes** |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | `MIT License` | 🟢 **yes** |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 **LGPL-3.0** | `GNU LESSER GENERAL PUBLIC LICENSE` / `Version 3` | 🟢 **yes** |
+
+🟢 **Six of six agree with what this page already said.** 🔵 **This is the result worth
+having, and it is a negative control in two directions at once:**
+
+1. 🟢 **`T77`'s damage is CONFINED to rows measured by `p145-licence-census`.** This page's
+   values were read by hand from the licence files and are correct. 🔵 **Which bounds
+   `ACTION FU`: the question is the census's population, not the shelf's.**
+2. 🟢 **And it validates the FIX against six known-correct answers**, including every
+   discrimination `T77` is about — **two AGPL-3.0, one GPL-3.0, one LGPL-3.0** — all three
+   families distinguished correctly on the title surface. 🔵 **A fix that agreed with the
+   broken matcher on these would be worthless; this one agrees with the hand reading.**
+
+🔴 **The build bar on this page does not move.** Open edX and Canvas remain **network
+copyleft** — the obligation that bites a studio offering a hosted product — and Moodle remains
+**GPL-3.0**, distribution copyleft. 🟢 **Sakai (ECL-2.0) and Kolibri (MIT) remain the two
+permissive routes**, and `P7`'s premise is unchanged.
+
+### 🟡 What this page still carries from earlier passes, unchanged
+
+🔵 **Stated plainly rather than implied fresh.** Only the six licence identifiers above were
+re-measured this pass. Every other claim on the rows below — tool surfaces, version ladders,
+plugin APIs, deployment shapes, the AI-feature readings — **carries its earlier pass's
+measurement and its earlier pass's date.** 🟢 **The six re-measurements do not refresh them.**
+
+### 🔴 What this pass did NOT do to the verticals
+
+- 🔴 **No vertical was functionally exercised.** No Moodle plugin built, no Open edX course
+  generated, no BigBlueButton session started. 🟢 **The measurement is a licence read, and
+  that is all it claims.**
+- 🔴 **OpenEduCat, H5P, ERPNext, Odoo and Tutor-CLI were NOT re-measured** — the six above
+  were chosen as the ones whose licence family bears on a build decision. 🔵 **The unmeasured
+  rows are a named gap, not a silent one.**
+- 🔴 **`qxbao/qldt-hanu-mcp`'s correction reaches a vertical connector, not a vertical.** It
+  is GPL-2.0, not `LGPL` — see [`repos/foundations.md`](../repos/foundations.md). 🔴 **A row
+  this shelf filed as the most permissive copyleft is the least.**
+
 **Pass 149, 2026-10-12.** 🔴 **No vertical was re-measured this pass, and that is a choice
 worth stating rather than hiding.** 🔵 **All eight pre-registered actions (`EW`–`FD`) were
 instrument, licence or policy work**, and 🟢 **none of them touched a vertical platform** — so

@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P38` — the licence-IDENTITY gate: never quote a licence your matcher read from the body *(new, p150 — all regions)*
+
+🔴 **Why this pattern exists: this KB got it wrong on five rows and published the wrong answer
+for nine passes.** `T77`. A studio that repeats the mistake tells a client that a usable repo
+is unusable, or — worse — that a GPL-2.0 repo is `LGPL`.
+
+🔵 **Run this before any repository's licence reaches a slide, an SBOM or a procurement memo.**
+
+### Step 1 — read the TITLE LINE, not the body
+
+    python3 compose/code/p150-gpl-affero-discrimination/run_gpl_affero.py <clones-dir>
+
+🔴 **Do not grep the licence text for a licence name.** Every GNU licence names its siblings:
+
+| file | contains the phrase | a body matcher returns |
+|---|---|---|
+| **GPL-3.0** | *"Use with the GNU **Affero** General Public License"* (§13 title) | 🔴 **AGPL-3.0** |
+| **GPL-2.0** | *"you may want to use the GNU **Lesser** General Public License instead"* | 🔴 **LGPL** |
+
+🟢 **The licence name must BE the line.** First five non-blank lines, name occupying the whole
+line, version read from the same line or the next.
+
+### Step 2 — confirm on the operative clause, and require agreement
+
+| licence | the clause that proves it |
+|---|---|
+| **AGPL-3.0** | §13 **"Remote Network Interaction"** — 🟢 **a plain GPL file cannot contain it** |
+| **GPL-3.0** | §13 **"Use with the GNU Affero General Public License"** |
+| **GPL-2.0** | 🔴 **no §13 at all** |
+
+🟢 **Ship the verdict only when title and clause agree.** On `DISAGREE`, stop and read the file
+by hand — it is hand-edited or genuinely dual-licensed, and both cases need a human.
+
+### Step 3 — for a dual-licensed repo, measure FILE REACH, not badge order
+
+🔴 **`T80`.** A split-licence file states which half governs which paths. **Count the files.**
+
+    # ishands/upstack — the worked example
+    find . -name '*.js' -not -path './.git/*' | wc -l    #  3  → MIT
+    find . -name '*.md' -not -path './.git/*' | wc -l    # 64  → CC-BY-SA-4.0
+
+🔴 **`ishands/upstack` badges MIT first and MIT reaches 3 of 82 files.** 🟢 **The 64 markdown
+files that ARE the product are ShareAlike** — so its tutor prompts cannot go into a
+proprietary client deliverable, whatever the first badge says.
+
+### Step 4 — carry the version, because it changes the obligation
+
+| id | distribution copyleft | network copyleft | patent grant |
+|---|---|---|---|
+| **GPL-2.0** | 🔴 yes | no | 🔴 **NONE** |
+| **GPL-3.0** | 🔴 yes | no | 🟢 yes |
+| **AGPL-3.0** | 🔴 yes | 🔴 **yes** | 🟢 yes |
+| **LGPL-3.0** | 🟡 library-scoped | no | 🟢 yes |
+
+🔵 **`GPL` with no version is not an answer.** `qxbao/qldt-hanu-mcp` was filed as bare `LGPL`
+and is **GPL-2.0** — full copyleft with no patent grant, on a row a studio would have treated
+as link-and-go.
+
+### Step 5 — the CI step
+
+    python3 compose/code/p150-gpl-affero-discrimination/test_gpl_affero.py   # 35 tests, offline
+
+🟢 **Validated against six vertical platforms whose licences were known independently** —
+`moodle/moodle` **GPL-3.0**, `openedx/edx-platform` **AGPL-3.0**,
+`instructure/canvas-lms` **AGPL-3.0**, `sakaiproject/sakai` **ECL-2.0**,
+`learningequality/kolibri` **MIT**, `bigbluebutton/bigbluebutton` **LGPL-3.0**. 🟢 **Six of
+six, and all three GNU families distinguished.**
+
+### 🔴 What `P38` does NOT solve
+
+- 🔴 **It does not distinguish `GPL-3.0-only` from `GPL-3.0-or-later`.** That election lives in
+  per-file headers and it decides what a derivative may relicense to. 🔵 **`ACTION FO`.**
+- 🔴 **It reads the licence file at the repository root.** A monorepo with per-package licences
+  needs `p441-tree-licence-enumeration` run alongside it.
+- 🔴 **It is not legal advice and does not read a NOTICE file**, which is where an Apache-2.0
+  row's attribution obligations actually live.
+
+
+## 🆕 🟢 `P39` — adopting a PROMPT-LAYER education agent: audit what it withholds *(new, p150 — APAC first, portable)*
+
+🔴 **A new artefact class this shelf had no category for.** Two of the five rows found in p150
+ship **no server, no API and no code**: the whole product is instructions.
+
+| row | licence | what it ships | region |
+|---|---|---|---|
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | **5** Agent Skills for the Chinese 高考 — science, liberal arts, Chinese, English, general-tech | 🟢 **APAC (China)** |
+| [`ishands/upstack`](https://github.com/ishands/upstack) | 🔴 **MIT (3 files) / CC-BY-SA-4.0 (64)** | Socratic framework: productive struggle, calibrated hints, learning journal | unplaced |
+| [`krishna16-origin/ai-tutor`](https://github.com/krishna16-origin/ai-tutor) | **MIT** | one 1 006-line Flask file whose substance is a quiz-generation prompt | unplaced |
+
+🔴 **Every tool-surface probe on this shelf returns ZERO against these rows** —
+`p148-rust-surface`, `p141-agent-surface-gate`, `p145-surface-payload-repair` all count
+declared tools, and there are none. 🔴 **Zero is indistinguishable from "not measured", so a
+prompt-layer row looks like an empty row.**
+
+### Step 1 — invert the axis: measure the REFUSALS, not the tools
+
+🔵 **A tutoring agent's safety property is what it declines to do.** Extract and review, by
+hand, every instruction of these three kinds:
+
+| axis | what to find | worked example |
+|---|---|---|
+| **hold-back** | does it withhold the answer until the learner attempts? | `upstack`: *"withholds the full answer until you've genuinely attempted the climb"* |
+| **answer-key handling** | is the key hidden from the learner, and is its position randomised? | `krishna16-origin/ai-tutor`: *"Randomize the correct option position… never make every answer the same letter"* |
+| **scope binding** | is it bound to a named curriculum or exam? | `education-skills`: bound to 高考 subject splits; `AI_Tutor_Release`: 人教版 grades 1–9 |
+
+### Step 2 — diff against the upstream before adopting a fork
+
+🔴 **`T79`, and this is the step that pays for the pattern.** A prompt-layer fork's README can
+claim an extension while the diff is a deletion.
+
+    git clone --depth 1 https://github.com/krishna16-origin/ai-tutor   trunk
+    git clone --depth 1 https://github.com/maxew6/ai-tutor-project     fork
+    diff trunk/app.py fork/app.py
+
+🔴 **Six lines differ, and four of them are safeguards the fork REMOVED** — the
+answer-position randomisation and the note that the key is hidden until reveal. 🟢 **Adopt the
+trunk. Six lines of `diff` is the whole audit, and nothing else on the row would have told
+you.**
+
+### Step 3 — gate the licence by file reach, not by badge
+
+🔵 **Run `P38` step 3.** 🔴 **`upstack`'s prompts are ShareAlike**: usable, improvable,
+**not** carryable into a closed deliverable. 🟢 **`education-skills` is MIT across all 20
+files** and is the one to fork for a China-facing engagement.
+
+### Step 4 — wire it to a connector, because a prompt layer has no data
+
+🟢 **The prompt layer carries pedagogy and no state.** Pair it with the tiers that have both:
+
+    persona / hold-back rules   flysheep-ai/education-skills  (MIT)         ← what to teach
+    learner state + mastery     ArnaudGuiovanna/tutor-mcp     (MIT, Go)     ← BKT, review scheduling
+    auditable mastery estimates CAHLR/OATutor                 (MIT)         ← BKT, not an LLM's opinion
+    LMS surface                 vishalsachdev/canvas-mcp      (MIT)         ← courses, assignments, grades
+    governance gate             zavora-ai/mcp-student-records (Apache-2.0)  ← FERPA logging, approval gate
+
+🔴 **Read `P35`'s data-layer caveat before pitching the last row**: its approval gate is real,
+fail-closed on four conditions, **and bypassable in-process** (`ACTION FD`). 🔵 **Pitch it as
+an MCP-surface control with the data layer named as out of scope.**
+
+### 🔴 What `P39` does NOT solve
+
+- 🔴 **Step 1 is a HAND review.** No instrument on this shelf measures a refusal rule. 🔵
+  **`ACTION FS`** registers the probe; until it lands this pattern is a checklist, not a gate.
+- 🔴 **It does not test that the hold-back actually holds.** A prompt saying it withholds
+  answers is a claim about behaviour, and behaviour needs a live session — the same gap
+  `ACTION FD` hit on `P35`'s conditions 2–4.
+- 🔴 **The two China-placed rows are placed by SUBJECT, not by author.** 人教版 and 高考 place
+  the market; they do not establish where the authors are or who supports the code.
+
 ## 🆕 🟢 `P36` — place a vendor by region without trusting a suffix: exclude non-institutional hosts *(new, p149 — all regions, LATAM first)*
 
 🔵 **Region placement is the column every Globant engagement is judged on and the one this
@@ -1543,7 +1692,7 @@ module out of a clean MIT connector into a client's codebase carries **no holder
 the table say?"* but *"what is in our repository and can we ship it?"* — and on this shelf the
 honest answer requires reading the bytes twice, at two layers.
 
-## 🆕 `P18` — Stop-ship gate for the one copyleft row on this shelf *(new, p139 — Global)*
+## 🆕 `P37` — Stop-ship gate for the one copyleft row on this shelf *(p139, RENUMBERED by p150 — Global)*
 
 🔴 **`moodle-mcp-server-aql` 0.1.7 declares AGPL-3.0, ships 141 paths and 71 text files, and
 carries no grant at either the file layer or the header layer.** Its repository

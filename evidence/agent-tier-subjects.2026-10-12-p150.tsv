@@ -1,0 +1,24 @@
+# p150 — ACTION FL. The agent tier's subject list, committed so the 57-vs-58 denominator
+# is settled by a file rather than by inference.
+#
+# PROVENANCE: the six rows promoted by p139 ("Six tutoring-agent rows added this pass"),
+# agents/top.md. kvnloo/tutor-mcp was refused promotion in the same pass as a fork 7
+# commits behind ArnaudGuiovanna/tutor-mcp and is NOT a member.
+#
+# THE DENOMINATOR: 44 connectors + 8 npm + 6 agent = 58. p148 wrote 5 agent rows and so
+# reached 57; p149 wrote 6 and reached 58. 6 is correct — p148 undercounted by one. The
+# strict-unlicensed figure 8 is unaffected either way, because only one agent row
+# (hesham0-0nasser/tutor-lms-mcp) carries no grant and it is inside both counts.
+#
+# licence/grant measured this pass by p150-grant-ladder-order over a depth-1 clone.
+# head_sha/head_date measured by git. commits are p139's figures, NOT re-measured here
+# (a depth-1 clone cannot count them) and marked so.
+# stars: UNMEASURED. api.github.com/repos is refused for repositories outside this
+# session's scope (P150-A), so no star count is lifted from a search snippet.
+subject	repo	licence	grant	head_date	head_sha	files	commits_p139	stars	promoted
+ArnaudGuiovanna_tutor-mcp	ArnaudGuiovanna/tutor-mcp	MIT	FILE	2026-10-10	368d637	687	459	UNMEASURED	p139
+zijinz456_OpenTutor	zijinz456/OpenTutor	MIT	FILE	2026-10-08	f0142f2	890	191	UNMEASURED	p139
+ahmedEid1_lumen	ahmedEid1/lumen	GPL-3.0	FILE	2026-06-07	07635d3	1082	828	UNMEASURED	p139
+mohaneesh-03_mcp-tutor	mohaneesh-03/mcp-tutor	MIT	FILE	2026-10-05	a66cdcf	16	5	UNMEASURED	p139
+nirholas_ai-tutor-mcp	nirholas/ai-tutor-mcp	Apache-2.0	FILE	2026-10-10	759853e	37	2	UNMEASURED	p139
+hesham0-0nasser_tutor-lms-mcp	hesham0-0nasser/tutor-lms-mcp	NONE	NONE	2026-05-26	c92e5b9	9	7	UNMEASURED	p139

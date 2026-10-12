@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12
+
+🟢 **`ACTION FI` is NOT refuted — Africa has figures.** 🟢 **And the pass's larger result is
+that one pattern now holds in every region measured: institutions have already deployed AI
+and have not governed it.** 🔵 **LATAM is the only region where both halves are measured on a
+named sample, and the ratio is 3.3 to 1.**
+
+| region | the headline this pass | the number |
+|---|---|---|
+| 🟢 **LATAM** | 🟢 **the governance gap, measured** | **87%** adopt / 🔴 **26%** have a strategy (UNESCO IESALC, n=**200**, **19** countries, Sept 2026) |
+| 🟢 **EMEA** | 🟢 **Africa's first figures** | 🟡 **35%** of sampled Kenyan schools have working internet · **308** teachers across **37 of 47** counties |
+| 🟢 **North America** | 🆕 🔴 **the district layer, and it RESTRICTS** | NYC moratorium through grade 8 · Katy ISD bans K-6 from **2026–27** · **60%** of teachers used AI in 2024–25 |
+| 🟢 **APAC** | 🆕 🟢 **Korea's 2026 is a declared PILOT year** | one-year penalty grace period · 🔴 **Vietnam gains a THIRD compliance date** |
+| 🟢 **Global** | 🔴 **no open-source vendor is named in any market source** | market-size spread unchanged, **nothing adopted** |
+
+🔵 **Regional detail is filed under the canonical `## Opportunities by region` block below;
+this section is the pass summary only.**
+
+### 🟢 `ACTION FI` — the verdict, and why "not refuted" is the honest word
+
+🔴 **Falsifier:** *"refuted if all three return policy documents only"* — which would have
+established Africa's education-AI evidence base as **policy-only by nature at this date** and
+made the figure gap permanent rather than outstanding.
+
+🟢 **It did not fire. Kenya returns three figures** — a peer-reviewed teacher survey (**308**
+respondents, **37 of 47** counties), a **~35%** school-connectivity baseline, and a **23.3%**
+learner completion rate from the OIAI trial. 🔴 **Nigeria and South Africa return policy and a
+vendor training target only.** 🔵 **So the correct verdict is partial: the action's claim is
+true of one of the three countries, and the other two behave exactly as the consequence clause
+described.**
+
+🔴 **Two honest qualifications, because they bear on whether these are quotable:**
+
+- 🔴 **The Kenyan teacher survey predates this page's window** — roughly 2024, not 2026. 🟢 **It
+  is the most rigorous Africa figure on this shelf and it is not current.**
+- 🔴 **The one continental study declines to be representative.** UNESCO **IICBA**/**ICHEI**,
+  *Digitalization and the Use of Artificial Intelligence in Higher Education in Africa: An
+  Exploratory Study*, **January 2026** — its authors caution the sample is small,
+  online-recruited and **not representative**. 🔵 **A named, bounded limitation is far more
+  useful to a client than a null, and it is what Africa's evidence base actually is.**
+
+🔴 **The primary PDF was not read.** `www.ichei.org` and three more UNESCO hosts answer **403
+at CONNECT** — confirmed this pass from the proxy's own refusal ledger (`connect_rejected`),
+which also settles that `WebFetch`'s `ENOTFOUND` is the same event. 🟢 **The UNESCO hosts join
+the standing environment requests and are NOT re-registered.**
+
+### 🔴 What this page still cannot do
+
+- 🔴 **No market-size figure is adopted.** Two publishers put 2030 at **USD 42.48B** and
+  **~USD 32B** — 33% apart. 🟢 **Unchanged for a third pass, and restated so the silence reads
+  as a decision rather than as absence of searching.**
+- 🔴 **No Africa adoption rate, spend figure or deployment count.** Connectivity and a
+  completion rate are not adoption. 🔵 **The gap narrows from "no figures" to "no ADOPTION
+  figure" and stays open.**
+- 🔴 **Every North America adoption number this pass is aggregator-sourced** and none traced
+  to NCES, RAND or a named instrument. 🟢 **Carried as indicative and flagged inline.**
+- 🔴 **Vietnam's compliance date now has three readings and the primary text is 403.** 🟢 **No
+  published figure moved.** 🔵 **`ACTION FV`.**
+
 ## Pass 149 — 2026-10-12
 
 🟢 **The Africa null is CLOSED.** 🔴 **And a figure this page published yesterday is
@@ -980,6 +1039,56 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🆕 p150 — classroom-level adoption numbers, two new state statutes, and the first district BANS
+
+🟢 **Adoption, at teacher level rather than institution level** — the granularity this page
+has been missing:
+
+| measure | value | source class |
+|---|---|---|
+| US K-12 teachers who used AI tools in the **2024–25** school year | **60%** | 🟡 aggregator |
+| …of whom used them **at least weekly** | **32%** | 🟡 aggregator |
+| institutions in Europe **and** North America with AI guidance in place or in development | **~70%** | 🟡 aggregator |
+| North America's share of the global AI-in-education market | **36%** | 🔴 **market-research aggregator — do not quote** |
+
+🔴 **All four are aggregator figures and none was traceable to NCES, RAND or a named survey
+instrument.** 🟢 **Carried as indicative, flagged as unverified**, consistent with how this
+page already treats the market-size spread.
+
+🆕 **Two named state statutes this page did not have**, both tool-safety rather than curriculum:
+
+| state | instrument | what it does |
+|---|---|---|
+| 🆕 Oregon | **SB 1546** | design-feature requirements intended to protect minors |
+| 🆕 Washington | **HB 2225** | reporting requirements on harmful behaviours |
+
+🆕 **And a curriculum route, on a long clock**: **Georgia** and **Mississippi** are requiring
+computer-science credits that include AI instruction, 🔴 **starting in the late 2020s** — so
+they are a pipeline item, not a 2026 engagement driver.
+
+##### 🆕 🔴 The district layer — restriction is now a live procurement reality
+
+🔵 **This page has tracked state and federal instruments and never the districts, which is
+where a deployment actually lands.** 🔴 **Three named restrictions, all pointing the same way:**
+
+| body | restriction | from |
+|---|---|---|
+| **New York City** | 🔴 **one-year moratorium on student-facing AI through eighth grade** | in force |
+| **Katy ISD** (Texas) | 🔴 **generative-AI chatbots banned for K-6**, scaffolded access through grade 12 | **2026–27** school year |
+| **Columbia Law School** | AI permitted as a **learning aid**, barred from producing submitted coursework | **2026–27** |
+
+🔵 **The shape matters for a studio: the binding constraint in North America is increasingly
+"which grades may be served at all", not "is the model accurate".** 🟢 **A student-facing
+tutor pitched K-8 can be unsellable in a district on policy grounds alone**, while the
+teacher-facing and administrative surfaces stay open. 🔵 **That is `P3`'s premise, sharpened.**
+
+🆕 **A non-binding item worth knowing by name**: the **STUDENTS FIRST Act of 2026**, a
+framework written by students from all 50 states and published by AASA on **2026-08-03**. 🔴
+**Non-binding and not a bill** — relevant as the language a school board may borrow.
+
+🟡 **Federal: `H.R. 8747` status unchanged from p148** — advanced in committee **2026-07-21**,
+no final status reachable. 🟢 **Not re-probed and not re-registered.**
+
 #### 🆕 🟢 p148 — the enacted count is WITHDRAWN, and the federal item is new
 
 🔴 **"24 states enacted" is withdrawn by name** (`ACTION ET`, `P148-K`). 🟢 **Quote the named
@@ -1510,6 +1619,73 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 p150 — AFRICA GETS ITS FIRST FIGURES, and two guidance numbers that contradict each other
+
+🟢 **`ACTION FI` is NOT refuted.** 🔴 *"Refuted if all three return policy documents only"* —
+which would have made Africa's evidence base policy-only **by nature** and the figure gap
+permanent. 🟢 **Kenya returns three numbers**, so the gap is closing rather than closed.
+
+| figure | measure | source | date |
+|---|---|---|---|
+| 🟢 **308** in-service teachers surveyed across 🟢 **37 of Kenya's 47 counties** | AI readiness; confidence in AI **and in AI ethics** significantly shaped it, 🔴 **attitudes and perceived threat did not** | 🟢 **peer-reviewed** (ScienceDirect) | 🔴 **~2024 — predates this page's window** |
+| 🟡 **~35%** of surveyed Kenyan schools | had **working internet** | cited in a 2026 pan-African curriculum framework paper, from a **2024** baseline | 2024 |
+| 🟡 **23.3%** | learner **completion rate** in the initial Kenya OIAI trial | Kenya National Commission for UNESCO journal | — |
+| 🔴 **1 000 000** South Africans | 🔴 **a TRAINING TARGET, not adoption** — Microsoft AI + cybersecurity skilling | vendor commitment | by 2026 |
+
+🔵 **The 35% internet figure is the one to carry into an engagement**, because it bounds every
+other number: a tutor that assumes connectivity is unsellable to two thirds of the sampled
+estate. 🟢 **It is also why `P2` — offline-first — is the Africa-facing pattern, not `P1`.**
+
+🔴 **And the continental study declines to be representative, which is itself the finding.**
+UNESCO **IICBA** and UNESCO-**ICHEI** co-published *Digitalization and the Use of Artificial
+Intelligence in Higher Education in Africa: An Exploratory Study*, **January 2026**, built on
+two online surveys across the five sub-Saharan regions. 🔴 **Its own authors caution that the
+sample is small, recruited through online contacts, and not representative.** 🔵 **So Africa's
+one continental instrument at this date is explicitly non-generalisable — a bounded gap rather
+than a null, and a much more useful thing to tell a client than silence.**
+
+🔴 **The primary PDF is unreachable here.** `www.ichei.org`, `en.ichei.org`,
+`iicba.unesco.org` and `iesalc.unesco.org` all return **403 at CONNECT** — confirmed from the
+proxy's own ledger, `connect_rejected`. 🟢 **The UNESCO hosts join the standing environment
+request list with `capitol.texas.gov` and the Korean and Vietnamese primary texts — stated
+once, NOT re-registered as a reading task.**
+
+##### 🆕 🔴 Two guidance figures on the same page that cannot both be right
+
+| claim | value |
+|---|---|
+| institutions in Europe and North America with AI guidance **in place or in development** | **~70%** |
+| schools and universities across **450+** institutions with **established formal** guidelines | 🔴 **10%** |
+
+🔵 **They are different measurements — "developing" against "established" — and the gap is
+too wide for that to be the whole explanation.** 🔴 **Neither is traceable to a named
+instrument.** 🟢 **Recorded as a contradiction rather than averaged**, and 🔵 **the LATAM
+numbers below are the reason to take the low one seriously: UNESCO IESALC measures 87%
+adoption against 26% formal strategy on a named, sized sample.** 🟢 **A 3:1 adoption-to-
+governance ratio is the pattern; 70% "have guidance" is the outlier.**
+
+##### 🟡 EU AI Act — the education clock, and what moved
+
+🟢 **Unchanged and load-bearing: stand-alone high-risk obligations at `2027-12-02`**, embedded
+high-risk at `2028-08-02`. 🟢 **This is the date `P4` builds against and it is confirmed again
+this pass.** 🔴 **The Digital Omnibus that moved them was still awaiting publication as of a
+2026-07-03 schools guide**, and a second source reports the amendments in force **2026-07-27**
+with enforcement from **2026-08-02**. 🔴 **Two readings, both secondary, Official Journal
+unread** — 🔵 **and the discrepancy is about the *enforcement* machinery, not about the
+high-risk education deadline, which both agree on.**
+
+🟢 **The education trigger list, restated because it is what scopes a conformity dossier**: a
+system that **evaluates learners**, **assigns them to programmes**, **detects prohibited
+behaviour during assessment**, or **influences access to qualifications**.
+
+🆕 **OECD's 2026 Digital Education Outlook** reportedly recommends moving beyond
+general-purpose AI toward **purpose-built educational AI** — 🔵 **which is the institutional
+endorsement `P1`'s "auditable tutor" framing has lacked.** 🔴 **Read from a secondary summary.**
+
+🆕 **Reported K-12 integration leaders: Finland, Estonia, the Netherlands.** 🔴 **Aggregator-
+sourced, no instrument named.** 🔴 **A reported UK £4M programme for AI lesson-planning and
+marking tools could not be verified and is NOT carried as a figure.**
 
 #### 🆕 🟢 p149 — AFRICA IS CLOSED: four jurisdictions, dated
 
@@ -2047,6 +2223,54 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 p150 — Korea's pilot year is NAMED, Vietnam gains a THIRD date, and adoption is broad and shallow
+
+🆕 🟢 **Korea's 2026 is a pilot year, and that is a procurement fact.** Korean **MSIT** has
+signalled **limited enforcement of the AI Basic Act through 2026, with a one-year penalty
+grace period.** 🔵 **So the Act is in force and the penalties are not** — which changes the
+pitch for a Korean engagement from "conform now" to "instrument now, conform before the grace
+period closes." 🟢 **It also explains why the Act being earliest on the calendar has not
+produced the earliest enforcement.**
+
+🔴 **Vietnam now has THREE published compliance dates and this page should not pick one.**
+
+| reading | date | source class |
+|---|---|---|
+| law takes effect | **2026-03-01** | 🟢 consistent across sources |
+| high-risk **education** systems must comply by | 🆕 🔴 **September 2027** | 🔴 **a single vendor blog** |
+| the date this page has been carrying | `2027-12-02` is **EU's** Annex III, not Vietnam's | 🟢 p149's arithmetic correction |
+
+🔵 **p149 withdrew "twenty-one months earlier than Annex III" for arithmetic and put the real
+gap at nine months.** 🆕 **A September 2027 Vietnamese deadline would make the gap ~3 months,
+not 9.** 🔴 **One vendor blog is not enough to move a published figure**, and the primary text
+is **403 at CONNECT**, so: 🟢 **no figure is changed this pass, and the third reading is
+recorded so the next pass has all three in one place.** 🔵 **`ACTION FV`.**
+
+🟢 **Vietnam's three education entries stand as p149 named them**: self-study content from
+uncontrolled data · automated examination, assessment or ranking · 🔴 **biometric** or other
+automated behavioural monitoring.
+
+🆕 **Two jurisdictions this page did not have:**
+
+| jurisdiction | instrument | date |
+|---|---|---|
+| 🆕 **Taiwan** | **AI Basic Act** passed | **December 2025** |
+| 🆕 **Australia** | **AI Safety Institute** established + **National AI Plan** | **December 2025** |
+
+🟢 **China remains the most comprehensive binding regime** — registration and content
+labelling — consistent with what this page already records.
+
+🆕 **Adoption, and the shape is the point**: **Singapore** leads the region at a **60.9% AI
+diffusion rate among working-age adults**; **South Korea** posted the region's largest gain in
+**H2 2025**. 🔴 **Across APAC, adoption BREADTH is high and DEPTH is shallow** — 🔵 **the same
+split the LATAM numbers below measure precisely (87% adoption, 26% strategy), and the reason
+`P5`'s teacher-capacity framing sells where a platform pitch does not.**
+
+🟡 **A market report names China, India and Japan as the leading APAC markets**, China driven
+by state backing, and lists **Google, Microsoft, IBM, Pearson and BYJU'S** as key vendors.
+🔴 **Commercial research, indicative only** — 🔵 **and note that not one of those five is an
+open-source counterparty, which is exactly the gap this KB's agent tier exists to fill.**
 
 #### 🆕 🟢 p149 — Vietnam's three education entries, NAMED (and p148's month figure withdrawn)
 
@@ -2615,6 +2839,68 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 p150 — the governance gap is MEASURED: 87% adoption, 26% strategy, on a named sample
+
+🟢 **This is the strongest regional evidence on this page, and it is LATAM's.** A **UNESCO
+IESALC** study launched **September 2026** surveyed **200 higher-education institutions across
+19 countries**:
+
+| measure | value |
+|---|---|
+| 🟢 institutions using AI in **at least one area** | 🟢 **87%** |
+| 🟢 using it in **teaching and learning** | 🟢 **74%** |
+| 🔴 institutions with a **formal AI strategy** | 🔴 **26%** |
+
+🔵 **A 3.3:1 adoption-to-governance ratio, on a sized and named sample.** 🟢 **This is the
+figure to open a LATAM engagement with**, because it says the sale is not "adopt AI" — the
+institution already has — it is **"govern what you already run."** 🔵 **`P10` and the
+governance patterns are the LATAM-facing offer; a tutor pitch competes with something already
+installed.**
+
+🆕 🟢 **And the split by institution type tells a studio who buys:**
+
+| institution type | AI implemented |
+|---|---|
+| private **non-profit** universities | 🟢 **84%** |
+| **public** institutions | **68%** |
+| private **for-profit** | 🔴 **52%** |
+
+🔵 **The leader is the private non-profit tier, not the public system** — which inverts the
+assumption behind a ministry-scale pitch and points the first conversation at university
+consortia.
+
+🟢 **K-12 teacher use, now with per-country numbers** (TALIS 2024, OECD mean **36%**):
+
+| country | secondary teachers who used AI in the previous year |
+|---|---|
+| **Brazil** | **56%** |
+| **Chile** | **55%** |
+| **Colombia** | **53%** |
+| **Costa Rica** | **52%** |
+| 🆕 **Uruguay** (public schools, Ceibal) | 🟢 **75%** |
+
+🟢 **Four LATAM countries 16–20pp above the OECD mean, as p148 recorded — and the named
+figures now replace the range.** 🆕 **Uruguay's 75% via Ceibal is the highest single number on
+this page for any region**, and it is a public-school measurement, not an institutional
+self-report.
+
+🆕 🟢 **A regional institution this page did not have**: UNESCO launched the **Observatory on
+Artificial Intelligence in Education for Latin America and the Caribbean** on **2026-04-14**,
+at **ECLAC headquarters in Santiago**. 🔵 **A named counterparty for a public-sector
+engagement, and the first regional body whose remit is exactly this KB's subject.**
+
+🟢 **Regulation — three distinct routes, none yet a statute in force:**
+
+| country | instrument | state |
+|---|---|---|
+| **Brazil** | **PL 2.338/2023**, risk-based | 🟡 **passed the Senate Dec 2024, now in the Chamber of Deputies — the text can still change** |
+| **Chile** | government-sponsored risk-based bill, introduced **2024-05-07** | 🔴 **still in first constitutional stage in committee** |
+| **Colombia** | 🟢 **CONPES 4144** (Feb 2025) — policy, not statute | 🟢 **in force, government-wide AI programme with budget through 2030** |
+
+🔵 **Colombia is the one to build against today**: a funded national programme with a budget
+line through 2030 and no pending statute to invalidate the work. 🔴 **Brazil's text is still
+movable, so a conformity dossier built to PL 2.338 now carries rework risk.**
 
 #### 🆕 🟢 p148 — the first LATAM figure on this page that is a LEAD rather than a gap
 
@@ -3336,6 +3622,44 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🆕 p150 — the adoption-governance gap is the global pattern, and the open-source counterparty is missing
+
+🟢 **One pattern holds across every region measured this pass, and LATAM is the only place it
+is measured precisely:**
+
+| region | adoption | governance |
+|---|---|---|
+| **LATAM** | 🟢 **87%** institutions using AI (UNESCO IESALC, n=200, 19 countries) | 🔴 **26%** with a formal strategy |
+| **North America** | **60%** of K-12 teachers used AI in 2024–25 | 🟡 **~70%** "have or are developing" guidance |
+| **EMEA** | — | 🔴 **10%** of 450+ institutions with **established** guidelines |
+| **APAC** | breadth high (Singapore **60.9%** diffusion) | 🔴 **depth shallow**, Korea's penalties in a grace period |
+| 🔴 **Africa** | 🔴 **no adoption figure** — 🟡 **35%** of sampled Kenyan schools have working internet | 🟢 **four national strategies, zero deployment counts** |
+
+🔵 **The consistent finding is not that institutions resist AI — it is that they have already
+deployed it without governing it.** 🟢 **That is a services sale, and it is the one this KB's
+governance patterns (`P35`, `P28`, `P36`) are actually built for.** 🔴 **It is also a warning
+about this KB's own shelf: `P35`, the pattern it recommends for exactly this gap, has an
+approval gate that `ACTION FD` proved bypassable at the data layer and `ACTION FF` has not
+closed.**
+
+🆕 🔴 **The market-vendor layer has no open-source counterparty.** A commercial APAC market
+report names **Google, Microsoft, IBM, Pearson and BYJU'S**; the HoloniQ and sector reads name
+platform consolidation and "purpose-built educational AI." 🔴 **Not one named vendor in any
+regional source this pass is an open-source project**, while this shelf now holds **58
+measured subjects plus 5 new rows** that are. 🔵 **The gap between what the market reports
+name and what is actually forkable IS this KB's product**, and it is worth stating as the
+reason the shelf exists.
+
+🟡 **Market size: the spread is unchanged and nothing is adopted.** Research and Markets puts
+2026 at **USD 10.6B** reaching **USD 42.48B by 2030** at a **41.5% CAGR**; a K-12 Academics
+report runs from **~USD 6B (2024)** to **~USD 32B by 2030**. 🔴 **Two publishers, two 2030
+figures 33% apart.** 🟢 **No market-size figure is adopted by this page** — unchanged from
+p148 and p149, and restated so the silence is not read as absence of searching.
+
+🟢 **The maturity read is the only figure this page adopts: 35/100, pilot mode.** 🟢 **Three
+independent regional signals now agree with it** — Korea's explicit pilot year, APAC's
+shallow depth, and LATAM's 26% strategy rate.
 
 #### 🔴 p146 — the seventh agent null, and a licence rejection
 

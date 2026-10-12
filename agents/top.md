@@ -4,6 +4,154 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12 — the agent-search streak BREAKS at ten, and the shelf gains a tier it was not looking for
+
+🟢 **`ACTION FK` is discharged and its falsifier is silent.** 🔴 *"Refuted if the sweep again
+returns only courses"* — 🟢 **it did not.** Five education-specific repositories, **all MIT**,
+**all verified by cloning them**, none previously on this shelf. 🔵 **And the reason ten passes
+found nothing is now measurable: the generic queries return courses, and the targeted ones
+return repositories.**
+
+| query | what came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **courses and general frameworks only** — Microsoft *AI Agents for Beginners*, HuggingFace *Agents Course*, CrewAI, LangGraph, OpenHands |
+| `github trending education AI 2026` | 🔴 **courses and roundups only** — `developer-roadmap`, `nanochat`, a university/GitHub press release |
+| 🟢 `open source AI tutor agent github MIT Apache 2026 student learning repository` | 🟢 **five real education-specific repos** |
+
+🔵 **This is the same lesson `ACTION BF` learned on the SIS tier and it has now been paid for
+twice: the field is named after what it teaches, not after the analyst's category.** 🟢 **"AI
+agents education" reaches course material. "AI tutor" reaches tutors.**
+
+### 🟢 Five new rows, verified on the clone channel
+
+🔵 **Verified by cloning each one and reading the licence from the tree at `HEAD`** — not from
+a badge, not from a search snippet. 🔴 **`api.github.com/repos/…` is refused for every
+repository outside this session's scope (`P150-A`), so stars are `UNMEASURED` and say so.**
+
+| repo | licence | HEAD | files | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | **2026-10-12** | **301** | 🟢 **APAC (China)** | 🟢 **The first PRODUCT-shaped row the tutoring tier has had.** RAG tutor over the **人教版 (People's Education Press)** curriculum, grades 1–9, all subjects. React 18 + Node/Express, **LanceDB** vectors, DeepSeek-V3 + Gemini 2.5. Ships **Android APK and iOS IPA binaries** and a hosted web build, at **v1.5.5**. 🔵 **Region is stated evidence, not inference: the PEP curriculum is China's national textbook series.** |
+| 🆕 🟢 [`ishands/upstack`](https://github.com/ishands/upstack) | 🔴 **SPLIT — MIT code / CC-BY-SA-4.0 content** | 2026-04-29 | 82 | unplaced | Prompt-layer framework configuring an assistant as a **Socratic tutor that withholds answers** — productive struggle, a learning journal, calibrated hints. 🔴 **Read the licence split before adopting: see `P150-C`.** |
+| 🆕 🟢 [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | 2026-01-29 | 20 | 🟢 **APAC (China)** | 🟢 **Five Agent Skills for the Chinese 高考 (Gaokao)** — science, liberal arts, Chinese, English, general-tech tutors, each a Socratic/progressive-questioning persona bound to the national exam's subject split. 🔵 **No server, no code: the whole artefact is instructions.** |
+| 🆕 🟡 [`krishna16-origin/ai-tutor`](https://github.com/krishna16-origin/ai-tutor) | **MIT** | 2026-09-30 | 🔴 **4** | unplaced | 🟢 **The TRUNK of the pair below.** Single-file Flask tutor (`app.py`, 1 006 lines) with a static frontend. 🔴 **Four files and no README: a seed, not a dependency.** |
+| 🆕 🔴 [`maxew6/ai-tutor-project`](https://github.com/maxew6/ai-tutor-project) | **MIT** | 2026-09-30 | 🔴 **5** | unplaced | 🔴 **NOT RECOMMENDED — advertises itself as an extension and is a deletion.** See `P150-B`. |
+
+### 🆕 🔴 `P150-B` — a self-described "extension" is a four-line REMOVAL of its upstream's safeguards
+
+🔵 **`maxew6/ai-tutor-project`'s own GitHub description reads:** *"Independent deployment and
+extension of the open-source AI Tutor project by krishna16-origin; MIT license and upstream
+attribution retained."*
+
+🟢 **The attribution claim is TRUE and checkable**: the two `LICENSE` files are
+**byte-identical** (`sha256 de8107bf…`), and both carry `Copyright (c) 2026 krishna16-origin`.
+🟡 **It lives only in the licence file** — neither repo has a README at all.
+
+🔴 **The "extension" claim is FALSE in the measurable direction.** `app.py` differs by **six
+lines**, and every one of them is content the upstream has and the "extension" does not:
+
+| upstream `krishna16-origin/ai-tutor` has | `maxew6/ai-tutor-project` |
+|---|---|
+| *"Randomize the correct option position across questions. Balance a), b), c), and d) as evenly as possible; never make every answer the same letter and do not use the same correct letter for more than two consecutive questions."* | 🔴 **deleted** |
+| *"This key is used internally by the interactive quiz and is hidden from the learner until they reveal answers."* | 🔴 **compressed to "letter, nothing else on each line"** |
+
+🔴 **1 002 lines against the upstream's 1 006.** 🔵 **The deleted instruction is the one that
+stops a generated multiple-choice bank from being guessable**, which is a pedagogical
+regression, not a styling change. 🟢 **The trunk is the row to carry; the fork is recorded so
+that nobody adopts it on the strength of its description.**
+
+🔵 **A caution this KB should generalise: a repository's stated relation to its upstream is a
+claim, and the diff is the measurement.** 🆕 **`T79`.**
+
+### 🆕 🔴 `P150-C` — `upstack`'s MIT reaches 3 of 82 files; the product is ShareAlike
+
+🔴 **The badge order misleads, and so would this shelf's own matcher.** `upstack`'s `LICENSE`
+opens by splitting itself:
+
+    Code (scripts/, *.js)      — MIT License
+    Content (everything else)  — CC-BY-SA 4.0
+
+| what the half governs | files |
+|---|---|
+| **MIT** — `*.js` | 🔴 **3** |
+| **CC-BY-SA-4.0** — everything else | 🔴 **64 `.md`** |
+
+🔴 **The substance of this repository — the tutor configuration, which IS the product — is
+ShareAlike copyleft.** 🔵 **A studio cannot carry `upstack`'s prompts into a proprietary
+client deliverable on the strength of the MIT badge**, and `grant`-style instruments that read
+the first licence name in the file would report `MIT` for the whole tree. 🆕 **`T80`.**
+
+### 🆕 🟢 A tier this shelf had no category for: the PROMPT LAYER
+
+🔵 **Two of the five new rows ship no server, no API and no code** — `flysheep-ai/education-
+skills` is five skill directories of instructions; `ishands/upstack` is 64 markdown files and
+three scripts. 🔴 **Every probe this KB has built for the agent tier measures a TOOL SURFACE**
+— `#[tool(…)]` sites, `TOOL_SPECS` literals, `[[tools]]` manifests. 🔴 **Against a prompt-layer
+row every one of them returns zero, and zero is indistinguishable from "not measured".**
+
+🟢 **Recorded as a class, with its own axis**: a prompt-layer agent's surface is its **persona
+and refusal rules**, and the thing a client needs audited is what it *withholds* — the
+Socratic hold-back in `upstack`, the answer-key hiding in the `ai-tutor` pair, the
+exam-subject binding in `education-skills`. 🔵 **`ACTION FS` registers the probe.**
+
+### 🔴 `ahmedEid1/lumen`'s licence is CORRECTED, and this page contradicted itself
+
+🔴 **This page says both.** Line 167 of the p148 section: *"`ahmedEid1/lumen` **AGPL-3.0**"*.
+The p139 promotion table: *"🔴 **GPL-3.0**"*. 🟢 **The p139 table is right.**
+
+🟢 **Measured this pass from the tree**: the `LICENSE` title line reads `GNU GENERAL PUBLIC
+LICENSE / Version 3, 29 June 2007`, and the file contains **no section 13 "Remote Network
+Interaction"** — which is the clause that makes AGPL different from GPL. 🔴 **The three
+"Affero" strings in it are GPL-3.0's own §13 cross-reference**, *"Use with the GNU Affero
+General Public License"*.
+
+🔵 **`lumen` is GPL-3.0, and the error is not a transcription slip — it is an instrument
+defect with four more victims on this shelf.** 🆕 **`T77`**, measured in
+[`p150-gpl-affero-discrimination`](../compose/code/p150-gpl-affero-discrimination/README.md),
+**35 tests**.
+
+🟢 **What it means for an engagement**: GPL-3.0 obliges source on **distribution**, AGPL-3.0
+obliges it on **network interaction**. A hosted tutor built on `lumen` does not trip AGPL
+§13, because there is no §13. 🔴 **It is still copyleft and still not an `MIT/Apache` building
+block.**
+
+### 🟢 `ACTION FL` — the agent tier is SIX rows, and the denominator is 58
+
+🟢 **Committed as a file**, so the 57-vs-58 question is settled by evidence rather than
+inference: [`evidence/agent-tier-subjects.2026-10-12-p150.tsv`](../evidence/agent-tier-subjects.2026-10-12-p150.tsv).
+
+| subject | licence | grant | HEAD | files |
+|---|---|---|---|---|
+| `ArnaudGuiovanna/tutor-mcp` | **MIT** | `FILE` | 2026-10-10 | 687 |
+| `zijinz456/OpenTutor` | **MIT** | `FILE` | 2026-10-08 | 890 |
+| `ahmedEid1/lumen` | 🔴 **GPL-3.0** *(corrected)* | `FILE` | 2026-06-07 | 1 082 |
+| `mohaneesh-03/mcp-tutor` | **MIT** | `FILE` | 2026-10-05 | 🔴 16 |
+| `nirholas/ai-tutor-mcp` | **Apache-2.0** | `FILE` | 2026-10-10 | 🔴 37 |
+| `hesham0-0nasser/tutor-lms-mcp` | 🔴 **NONE** | `NONE` | 2026-05-26 | 🔴 9 |
+
+🟢 **Six members. `58` is correct; p148's `57` undercounted by one.** 🟢 **`kvnloo/tutor-mcp`
+is NOT a member** — p139 refused its promotion as a fork 7 commits behind the trunk, and the
+file records that so the exclusion is not re-litigated. 🟢 **The strict-unlicensed figure 8 is
+unaffected either way**: only `tutor-lms-mcp` carries no grant, and it is inside both counts.
+
+🔵 **Falsifier was** *"refuted if the list cannot be reconstructed from committed evidence."*
+🟢 **It reconstructs from p139's own promotion table on this page**, and every field except
+`commits` was re-measured this pass. 🔴 **`commits` is carried from p139 and marked as
+carried** — a depth-1 clone cannot count commits.
+
+### 🔴 What this pass did NOT establish about these rows
+
+- 🔴 **No star count for any of the eleven rows named above.** `P150-A`: the GitHub API is not
+  a verification channel here. 🟢 **`UNMEASURED` rather than a snippet.**
+- 🔴 **The two Chinese rows are placed by SUBJECT, not by author.** 人教版 and 高考 are
+  China's national curriculum and national exam, which places the *market*; it does not
+  establish where the authors are. 🟢 **Stated as subject-evidence.**
+- 🔴 **`Zenglian990/AI_Tutor_Release` ships binaries this pass did not open.** The APK and IPA
+  are release assets; the licence was read from the tree. 🔵 **A shipped-binary row deserves
+  the payload check `p138-npm-payload-licence` does for npm.** 🔵 **`ACTION FT`.**
+- 🔴 **`upstack`'s 64 content files were counted, not read.** The ShareAlike reach is a file
+  census; whether any individual prompt is substantial enough to matter is a judgement this
+  pass did not make.
+
 ## Pass 149 — 2026-10-12 — the approval gate is REAL, fail-closed on four conditions, and bypassable in-process
 
 🟢 **p148 could only say that `zavora-ai/mcp-student-records` *declares* approval.** 🟢 **This
@@ -1898,6 +2046,10 @@ category, so the analyst's vocabulary cannot reach them at any star threshold.
 | **canvas-lms-mcp** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | 9 | 2026-10-10 | unplaced | Second, independent Canvas MCP implementation (read courses/assignments/submissions/rubrics, grade and comment). Small, but a useful cross-check against the canonical one. |
 | **campus-cli** | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | ISC | 11 | 2026-10-11 | **LATAM (Peru)** | CLI + MCP server over **Blackboard Learn** — the only Blackboard connector in this KB, and the only LATAM-origin education agent found. Targets UPC's Aula Virtual (Universidad Peruana de Ciencias Aplicadas); Canvas and Moodle are on its roadmap. ISC is permissive (BSD-equivalent). |
 | **openedx-mcp** | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | AGPL-3.0 | 2 | 2026-08-28 | unplaced | Open edX admin/authoring operations as an MCP facade, reusing the platform's own `is_staff`/`is_superuser` checks per request. **Experimental — 2 stars.** Listed because it is the only Open edX MCP path found, not because it is ready. |
+| 🆕 **ZengLian AI Tutor** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | UNMEASURED | 2026-10-12 | **APAC (China — 人教版 curriculum)** | 🆕 **Added p150.** RAG tutor over China's People's Education Press curriculum, grades 1–9, all subjects. React 18 + Node/Express, LanceDB vectors, DeepSeek-V3 and Gemini 2.5. Ships Android APK, iOS IPA and a hosted web build at **v1.5.5** — **the only product-shaped row in the tutoring tier.** 301 files. |
+| 🆕 **education-skills** | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | UNMEASURED | 2026-01-29 | **APAC (China — 高考/Gaokao)** | 🆕 **Added p150.** Five Agent Skills bound to the Chinese national exam's subject split — science, liberal arts, Chinese, English, general-tech — each a Socratic/progressive-questioning tutor persona. **Prompt layer: no server and no code**, so every tool-surface probe on this shelf returns zero against it. |
+| 🆕 **upstack** | [`ishands/upstack`](https://github.com/ishands/upstack) | 🔴 **SPLIT: MIT (3 files) / CC-BY-SA-4.0 (64 files)** | UNMEASURED | 2026-04-29 | unplaced | 🆕 **Added p150.** Framework configuring an assistant as a tutor that withholds answers — productive struggle, calibrated hints, a learning journal. 🔴 **The MIT half governs 3 `.js` files; the 64 markdown files that ARE the product are ShareAlike.** Do not carry its prompts into a proprietary deliverable on the strength of the MIT badge (`P150-C`). |
+| 🆕 **ai-tutor** (trunk) | [`krishna16-origin/ai-tutor`](https://github.com/krishna16-origin/ai-tutor) | **MIT** | UNMEASURED | 2026-09-30 | unplaced | 🆕 **Added p150.** Single-file Flask tutor (1 006 lines) with a static frontend and an interactive MCQ quiz whose prompt balances answer positions. 🔴 **Four files, no README: a seed to read, not a dependency.** 🔵 **Carry this one, not `maxew6/ai-tutor-project`** — the fork advertises an extension and deletes the answer-randomisation instruction (`P150-B`). |
 
 ### Student-information-system agents — the tier this KB called its largest hole
 

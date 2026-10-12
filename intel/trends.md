@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12
+
+🔵 **Thesis high-water mark before this pass: `T76`. Next free: `T77`.** 🟢 **This pass takes
+`T77`–`T80`**, computed from the register rather than assumed (`ACTION EN`'s rule, holding) —
+🟢 **and this is the first pass where the same discipline is also ENFORCED on pattern numbers,
+by a committed gate rather than by habit.**
+
+| thesis | statement | the measurement behind it |
+|---|---|---|
+| 🆕 🔴 **`T77`** | **A licence cannot be identified by searching its body, because every GNU licence names its siblings in its own text** | GPL-3.0's §13 is **titled** *"Use with the GNU Affero General Public License"*; GPL-2.0's preamble says *"use the GNU Lesser General Public License instead"*. 🔴 **5 of 7 GNU-family rows on this shelf carry the wrong id**; 🔴 **`GPL` has been published ZERO times in 150 passes.** Fix reads the **title line** and confirms on **AGPL §13**. [`p150-gpl-affero-discrimination`](../compose/code/p150-gpl-affero-discrimination/README.md), **35 tests** |
+| 🆕 🔴 **`T78`** | **A gateway returning 200 on a root endpoint is not an open channel, and a rate-limit budget is not a capability** | `api.github.com/` **200**, `/rate_limit` **200** with core **15 000** and search **30** — 🔴 **`/repos/{owner}/{repo}` and `/search/repositories` both REFUSED by the session proxy.** 🔴 **p149 read the 200 as a channel upgrade and published it.** 🟢 **`P144-X` stands as originally recorded** |
+| 🆕 🔴 **`T79`** | **A repository's stated relation to its upstream is a claim; the diff is the measurement — and the claim can invert it** | `maxew6/ai-tutor-project` advertises *"deployment and extension"* of `krishna16-origin/ai-tutor`. 🟢 **Attribution true** (byte-identical `LICENSE`, upstream's holder). 🔴 **"Extension" false: 1 002 lines against 1 006, and the deleted text is the answer-position randomisation instruction** |
+| 🆕 🔴 **`T80`** | **A dual-licensed repository must be measured by FILE REACH, not by which licence its badge names first** | `ishands/upstack` declares MIT for `scripts/, *.js` and CC-BY-SA-4.0 for everything else. 🔴 **MIT governs 3 files; ShareAlike governs 64 `.md` files that ARE the product.** 🔴 **Any matcher reading the first licence name in the file reports `MIT` for the whole tree** |
+
+### 🟢 What moved in the trend picture this pass
+
+🔵 **Four regional reads, one pattern.** The trend worth naming is not a technology — it is a
+**governance deficit that is now measurable**:
+
+| region | adoption | governance | ratio |
+|---|---|---|---|
+| **LATAM** | 🟢 **87%** (n=200, 19 countries) | 🔴 **26%** formal strategy | 🔴 **3.3 : 1** |
+| **EMEA** | — | 🔴 **10%** of 450+ with established guidelines | — |
+| **North America** | **60%** of K-12 teachers | 🟡 **~70%** have or are developing guidance | — |
+| **APAC** | breadth high | 🔴 **depth shallow**; Korea's penalties in a **grace period** | — |
+
+🟢 **This is `T56`'s "governance is the barrier" thesis, upgraded from a sector read to a
+measured ratio on a named sample.** 🔵 **And it reverses the sales motion: the LATAM
+institution has already deployed AI, so the offer is not adoption, it is control.**
+
+🆕 🟡 **A second trend, from the regional sources rather than from code: restriction is now a
+product constraint in North America.** NYC's moratorium through grade 8, Katy ISD's K-6 ban
+from 2026–27, Oregon SB 1546 and Washington HB 2225 are all **tool-safety and
+age-gating** instruments, not curriculum ones. 🔵 **A student-facing tutor can be unsellable
+on policy grounds in a district while the teacher-facing and administrative surfaces stay
+open** — which is an argument for building the teacher/admin surface first in that region.
+
+🆕 🟡 **A third, and it is this KB's own reason to exist, stated as a finding**: 🔴 **not one
+vendor named in any regional market source this pass is an open-source project.** The APAC
+market report names Google, Microsoft, IBM, Pearson and BYJU'S. 🔵 **The shelf holds 58
+measured subjects and 5 new rows that are forkable, and no market source can see them.**
+
+🆕 🟢 **A fourth, small and concrete: the prompt layer is now a real artefact class.** Two of
+the five rows found this pass ship **no server and no code** — `flysheep-ai/education-skills`
+is five skill directories, `ishands/upstack` is 64 markdown files and three scripts. 🔴 **Every
+tool-surface probe on this shelf returns zero against them**, and zero is indistinguishable
+from unmeasured. 🔵 **`ACTION FS`** registers the probe; the axis is what the persona
+**withholds**, not what it exposes.
+
+### 🔴 Theses this pass did NOT test, and one it declines to promote
+
+- 🔴 **`T74` is fixed, not re-litigated.** `ACTION FE` restored the ladder and moved exactly
+  the three npm rows p149 predicted. 🟢 **The thesis closes.**
+- 🟢 **`T75` is PROMOTED from a slip to a property.** `ACTION FM`'s gate found a **second**
+  collision — `P18` naming two different patterns, both allocated in p139 — independent of
+  `P32`. 🔵 **Two collisions, two passes, one cause: a number picked from memory rather than
+  from the page.** 🟢 **Fixed: the orphan is now `P37`.**
+- 🔴 **The ten-pass agent-search null is WITHDRAWN rather than promoted.** `ACTION FK`'s
+  consequence clause offered to convert the streak into *"a measured property of the
+  ecosystem"* after ~80 queries. 🔴 **It was a property of the QUERIES**: the two generic
+  queries returned courses, the one naming `tutor` returned five repositories. 🔵 **Nothing is
+  promoted to a thesis, because the honest reading is that this KB was asking wrongly.**
+- 🔴 **No trend on this page is backed by a primary source this pass.** Every regional read is
+  a secondary summary; the OECD Outlook, the UNESCO IESALC study and the IICBA/ICHEI report
+  were all read through aggregators because their hosts answer **403 at CONNECT**. 🟢 **Stated
+  once, at the level of the whole page, rather than row by row.**
+
 ## Pass 149 — 2026-10-12
 
 🔵 **Thesis high-water mark before this pass: `T73`. Next free: `T74`.** 🟢 **This pass takes

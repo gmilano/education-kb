@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 150 — 2026-10-12
+
+⏱️ **Thirteenth pass of this date.** 🔴 **Five of p149's nine pre-registered actions reached,
+four not** — and the four unreached are named rather than quietly dropped. 🟢 **Four
+discharged with silent falsifiers, one partially discharged** — 🔵 **and the pass's two biggest
+results were not asked for by any action.**
+
+🟢 **The pass's two headline results.** 🟢 **The ten-pass agent-search streak BREAKS**, and the
+null turns out to have been a defect in this KB's queries rather than a property of the
+ecosystem. 🔴 **And this shelf cannot see a GPL licence**: a body-substring matcher in three
+published modules has mis-identified **5 of 7 GNU-family rows**, and `GPL` has been published
+**zero times in 150 passes**.
+
+| finding | verdict | figure |
+|---|---|---|
+| 🆕 🔴 `P150-A` | 🆕 🔴 **p149's channel upgrade is WITHDRAWN — the API host answers and serves nothing** | `api.github.com/` **200**, `/rate_limit` **200** (core **15 000**, search **30**) — 🔴 **`/repos/{o}/{r}` and `/search/repositories` REFUSED by the session proxy.** 🟢 **`P144-X` stands as originally recorded.** 🆕 **`T78`** |
+| 🆕 🔴 **`T77`** | 🆕 🔴 **A licence cannot be identified from its BODY — every GNU licence names its siblings** | GPL-3.0 §13 is *titled* *"Use with the GNU **Affero**…"*; GPL-2.0's preamble says *"use the GNU **Lesser**… instead"*. 🔴 **5 of 7 rows wrong; `GPL` published ZERO times.** Fix reads the **title line**, confirms on **AGPL §13** |
+| 🟢 **`ACTION FK`** | 🟢 **DISCHARGED — the streak was a QUERY defect** | 🟢 **5 education repos, all MIT, all clone-verified.** 🔴 **Both generic queries returned only courses; the one naming `tutor` returned the repos.** 🔵 **Consequence clause WITHDRAWN, not promoted** |
+| 🟢 **`ACTION FE`** | 🟢 **DISCHARGED, falsifier silent — exactly 3 rows, and they are the 3** | `eth-moodle-mcp`, `moodle-mcp-server-aql`, `owen-x-tech-canvas-mcp`: `README_ONLY → PKG_ONLY`. 🟢 **No connector row, no agent row, no licence id changes.** 🔵 **Direction is STRENGTHENING** |
+| 🟢 **`ACTION FM`** | 🟢 **DISCHARGED — `P32` was NOT the only collision** | 🔴 **`P18` names two patterns, both from p139.** 🟢 **All five later `P18` amendments are tool-surface work**, so the orphan renumbers to **`P37`**. 🟢 **Gate green: `ids=39 collisions=0`.** 🟢 **`T75` promoted to a property** |
+| 🟢 **`ACTION FL`** | 🟢 **DISCHARGED — the tier is SIX, and 58 is correct** | Committed at `evidence/agent-tier-subjects.2026-10-12-p150.tsv`. 🔴 **p148's 57 undercounted by one.** 🔴 **And `ahmedEid1/lumen` is GPL-3.0, not AGPL-3.0** — this page carried both values |
+| 🟡 **`ACTION FI`** | 🟡 **NOT refuted, and PARTIAL — true of one of three countries** | 🟢 **Kenya: 308 teachers / 37 of 47 counties · ~35% school connectivity · 23.3% completion.** 🔴 **Nigeria and South Africa: policy and a vendor target only.** 🔴 **The continental study declines to be representative** |
+| 🆕 🔴 `P150-B` | 🆕 🔴 **A self-described "extension" is a DELETION of its upstream's safeguards** | `maxew6/ai-tutor-project`: **1 002** lines vs the trunk's **1 006**; the removed text is the answer-position randomisation instruction. 🟢 **Attribution claim true, extension claim false.** 🆕 **`T79`** |
+| 🆕 🔴 `P150-C` | 🆕 🔴 **A dual-licensed row's MIT reaches 3 of 82 files** | `ishands/upstack`: MIT governs **3** `.js`; **64** `.md` files that ARE the product are **CC-BY-SA-4.0**. 🆕 **`T80`** |
+| 🆕 🟢 `P150-D` | 🆕 🟢 **The verticals are the NEGATIVE CONTROL, 6 of 6** | `moodle` GPL-3.0 · `edx-platform` AGPL-3.0 · `canvas-lms` AGPL-3.0 · `sakai` ECL-2.0 · `kolibri` MIT · `bigbluebutton` LGPL-3.0. 🟢 **Bounds `T77` to census-measured rows, and validates the fix on all three GNU families** |
+| 🆕 🟢 `P150-E` | 🆕 🟢 **The proxy's own ledger settles `ENOTFOUND`** | `{"kind":"connect_rejected","detail":"gateway answered 403 to CONNECT"}`. 🟢 **p149's "very likely" is CONFIRMED for this class** |
+| 🆕 🟢 `P150-F` | 🆕 🟢 **The governance gap is MEASURED, on a named sample** | UNESCO IESALC, **n=200**, **19** countries: 🟢 **87%** adopt · 🟢 **74%** in teaching · 🔴 **26%** have a strategy. 🔵 **3.3 : 1** |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **Three new instruments, 82 tests, all passing, all offline with authored fixtures**:
+  [`p150-gpl-affero-discrimination`](compose/code/p150-gpl-affero-discrimination/README.md)
+  (35), [`p150-identifier-collision`](compose/code/p150-identifier-collision/README.md) (30),
+  [`p150-grant-ladder-order`](compose/code/p150-grant-ladder-order/README.md) (17).
+- 🟢 **The first CI gate on this shelf whose exit status is the check** — the collision gate
+  drops in as one line and returns non-zero on a collision.
+- 🟢 **Five new agent rows**, all MIT, all clone-verified, and 🆕 **two new artefact classes**:
+  a product-shaped tutor shipping mobile binaries, and the **prompt layer** — rows that ship
+  no server and no code, against which every tool-surface probe here returns zero.
+- 🟢 **Two new compose patterns**: **`P38`** (the licence-identity gate) and **`P39`**
+  (adopting a prompt-layer agent: audit what it withholds).
+- 🟢 **The agent tier's subject list, committed**, settling a denominator this KB had quoted
+  across four passes.
+- 🆕 **Four theses, `T77`–`T80`**, and 🔴 **one of p149's own published figures withdrawn**.
+- 🔴 **A pattern-identifier collision found by instrument and fixed**: `P18` → `P37`.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **LATAM** | 🟢 **the governance gap, measured precisely** | **87%** adopt / **26%** strategy on n=200. 🆕 **Private non-profits lead at 84%, not the public system.** 🆕 **Uruguay 75%** (Ceibal) is the highest single figure on the page |
+| **EMEA** | 🟢 **Africa gets its first FIGURES** | Kenya ×3. 🔴 **Two guidance numbers on one page that cannot both be right (70% vs 10%)** — recorded as a contradiction, not averaged |
+| **APAC** | 🆕 🟢 **Korea's 2026 is a declared PILOT year** | One-year penalty grace period. 🆕 **Taiwan and Australia added.** 🔴 **Vietnam gains a THIRD compliance date and no figure moved** |
+| **North America** | 🆕 🔴 **the DISTRICT layer, and it restricts** | NYC through grade 8 · Katy ISD K-6 from 2026–27 · Oregon SB 1546 · Washington HB 2225. 🔵 **The binding constraint is which grades may be served at all** |
+| **Global** | 🔴 **no open-source vendor is named in any market source** | 🔵 **The gap between what market reports name and what is forkable IS this KB's product** |
+
+### Pre-registered for p151
+
+🔵 **Twelve actions, in `intel/open-gaps.md`.** 🟢 **`FF`, `FG`, `FH` and `FJ` are
+re-registered VERBATIM** because they were not reached, not because they failed — 🟢 **`FF`,
+`P35`'s data-layer gap, is first.** Then `FN` (retire the body matcher across three modules
+and re-publish the census), `FU` (`T77`'s reach over all 58), `FO` (`-only` vs `-or-later`),
+`FQ` (the dangling-citation gate, and `P240`), `FR` (the thesis register), `FS` (the
+prompt-layer probe), `FT` (binary payload check), `FV` (Vietnam's third date).
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **Four of nine actions were not reached at all** — `FF`, `FG`, `FH`, `FJ`. 🔵 **The cause
+  is budget allocation, not difficulty**: `T77` was not on the list, and following it cost
+  this pass two instruments and a vertical re-measurement. 🟢 **It was worth it and the
+  trade is stated, not hidden.** 🔴 **`FF` going unreached for a second pass is the worst
+  item here**, because `P35` is what this KB recommends to clients.
+- 🔴 **`P35`'s data-layer gap is unmoved and still PROVED.** Until `FF` lands, `P35` must be
+  pitched as an MCP-surface control with the data layer named out of scope — 🟢
+  **`compose/patterns.md` still says so at the top of `P35`, and `P39` step 4 repeats it.**
+- 🔴 **The three published copies of `identify()` are NOT patched**, deliberately: correcting
+  them in the pass that measured them is the mistake `ACTION EU` exists to avoid. 🔵 **So the
+  58-row census still publishes five wrong licence ids**, with the corrected values beside
+  them. 🔵 **`ACTION FN`.**
+- 🔴 **`T77`'s reach rests on a population taken from the artefact under suspicion.** 28 trees
+  measured, not 58. 🔵 **The argument that non-GNU rows cannot be mis-sorted is an argument,
+  not a measurement.** 🔵 **`ACTION FU`.**
+- 🔴 **No primary legal text was read, for a third consecutive pass**, and 🆕 **the UNESCO
+  hosts now join the same list** — 403 at CONNECT, confirmed from the proxy ledger. 🟢 **Stated
+  once, NOT re-registered.**
+- 🔴 **Star counts are now permanently `UNMEASURED` on this channel**, and p149's claim to the
+  contrary is withdrawn. 🟢 **Recorded as a capability limit, not a research gap.**
+- 🔴 **Every regional figure this pass is secondary.** The OECD Outlook, the UNESCO IESALC
+  study and the IICBA/ICHEI report were all read through aggregators. 🟢 **Said once at page
+  level rather than row by row.**
+- 🔴 **The prompt-layer rows are on the shelf with no instrument that can measure them.** 🟢
+  **Recorded as a class with a named axis rather than filed as empty rows.**
+
 ## Pass 149 — 2026-10-12
 
 ⏱️ **Twelfth pass of this date.** 🟢 **All eight of p148's pre-registered actions (`EW`–`FD`)

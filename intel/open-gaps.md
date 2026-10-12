@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-12
 ---
 
+## ✅ Verdicts on the nine actions p149 registered, judged by p150
+
+🟢 **Five reached, four not.** 🟢 **Four discharged with silent falsifiers** (`FE`, `FK`, `FL`,
+`FM`). 🟡 **One partially discharged** (`FI` — true of one of its three countries). 🔴 **Four
+NOT REACHED** (`FF`, `FG`, `FH`, `FJ`), all four instrument work, 🔵 **and the reason is stated
+below rather than implied.**
+
+🔵 **Channel state first, because it overturns a figure p149 published:** 🟢 **`git clone` 22
+of 22**, 🟢 **`git ls-remote` 22 of 22**, 🟢 **`npm pack` 8 of 8**, 🟢 **82 offline tests**,
+🔴 **`api.github.com/repos/…` and `/search/…` REFUSED by the session proxy**, 🔴 **every
+primary-legal-text and UNESCO host 403 at CONNECT.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION FE`** — fix `T74`: restore `p147-licence-language`'s ladder to `FILE > PKG_ONLY > README_ONLY` and re-run over all 58 | 🟢 **DISCHARGED, falsifier silent — exactly 3 rows, and they are the 3** | Condition: *"refuted if any row other than the three npm rows this pass named changes class."* 🔴 **It did not fire.** 🟢 **`eth-moodle-mcp`, `moodle-mcp-server-aql`, `owen-x-tech-canvas-mcp` move `README_ONLY → PKG_ONLY`; no connector row, no agent row, and no licence IDENTIFICATION changes.** 🔵 **The direction is STRENGTHENING — p147's inversion had been reporting prose where a declared `package.json` licence exists.** 🟢 **FILE rows are invariant by construction** (`census()` returns before either reordered branch), so the test set is the 18 non-FILE rows + 6 agent rows = **24 subjects**, and the invariance is asserted not assumed. [`p150-grant-ladder-order`](../compose/code/p150-grant-ladder-order/README.md), **17 tests** |
+| 🔴 **`ACTION FF`** — close `P35`'s data-layer gap: state the exact change and write the failing test | 🔴 **NOT REACHED** | 🔴 **No work done.** 🔵 **The highest-consequence item on this shelf is still open**, and `compose/patterns.md` still carries p149's caveat at the top of `P35`. 🟢 **RE-REGISTERED unchanged for p151, and it is the first action on the list** |
+| 🔴 **`ACTION FG`** — extend the placement exclusion to news-media and government-portal hosts by role | 🔴 **NOT REACHED** | 🔴 **No work done.** 🟢 **RE-REGISTERED** |
+| 🔴 **`ACTION FH`** — the three-surface `P35` CI gate | 🔴 **NOT REACHED** | 🔴 **No work done.** 🟢 **RE-REGISTERED** |
+| 🟡 **`ACTION FI`** — give Africa its first FIGURE | 🟡 **NOT REFUTED, and partial — true of ONE of three countries** | Condition: *"refuted if all three return policy documents only."* 🔴 **It did not fire: Kenya returns three figures** — 🟢 **308 in-service teachers across 37 of 47 counties** (peer-reviewed), 🟡 **~35% of sampled schools with working internet** (2024 baseline), 🟡 **23.3% learner completion** in the OIAI trial. 🔴 **Nigeria and South Africa return policy and a vendor TRAINING TARGET (Microsoft, 1M by 2026) only** — exactly as the consequence clause described. 🔴 **The Kenyan survey predates this window (~2024).** 🔴 **And the one continental study declines to be representative**: UNESCO IICBA/ICHEI, *Digitalization and the Use of AI in Higher Education in Africa*, **Jan 2026**, authors caution the sample is small, online-recruited and **not representative**. 🔵 **A named, bounded limitation — a much smaller gap than a null.** 🔴 **Primary PDF 403 at CONNECT** |
+| 🔴 **`ACTION FJ`** — audit the other three surface-bearing rows for a third declaration surface | 🔴 **NOT REACHED** | 🔴 **No work done.** 🟢 **RE-REGISTERED** |
+| 🟢 **`ACTION FK`** — break the agent-search streak at ten; run the eight-query sweep and record every hit with its class | 🟢 **DISCHARGED, falsifier silent — and the streak was a QUERY defect** | Condition: *"refuted if the sweep again returns only courses"* — which would have made *"no OSS education agent is discoverable by search"* a measured property of the ecosystem after ~80 queries. 🔴 **It did not fire.** 🟢 **Five education-specific repos, all MIT, all verified by clone**: `Zenglian990/AI_Tutor_Release` (301 files, APAC/China, 人教版, ships APK+IPA, v1.5.5), `ishands/upstack`, `flysheep-ai/education-skills` (5 Gaokao skills, APAC/China), `krishna16-origin/ai-tutor` + its fork. 🔴 **The two GENERIC queries returned only courses; the one naming `tutor` returned the repositories.** 🔵 **So the consequence clause's reading is WITHDRAWN rather than promoted — this KB was asking wrongly, the same lesson `ACTION BF` taught on the SIS tier.** 🆕 **Two new classes: a product-shaped tutor, and the PROMPT LAYER (no server, no code)** |
+| 🟢 **`ACTION FL`** — commit the agent tier's subject list so the 57-vs-58 denominator is settled by a file | 🟢 **DISCHARGED, falsifier silent — the tier is SIX and 58 is correct** | Condition: *"refuted if the list cannot be reconstructed from committed evidence."* 🟢 **It reconstructs from p139's own promotion table in `agents/top.md`.** 🟢 **Six members, committed at [`evidence/agent-tier-subjects.2026-10-12-p150.tsv`](../evidence/agent-tier-subjects.2026-10-12-p150.tsv)**, every field except `commits` re-measured this pass. 🟢 **p148's `57` undercounted by one; `58` stands.** 🟢 **`kvnloo/tutor-mcp` recorded as NOT a member** so p139's refusal is not re-litigated. 🔴 **And a licence CORRECTION falls out: `ahmedEid1/lumen` is GPL-3.0, not AGPL-3.0** — `agents/top.md` carried both values on one page |
+| 🟢 **`ACTION FM`** — the identifier-collision gate, as a committed check | 🟢 **DISCHARGED, falsifier silent — `P32` was NOT the only one** | Condition: *"refuted if `P32` is the only collision on the shelf"* — which would make `T75` a single slip. 🔴 **It did not fire.** 🔴 **`P18` names TWO different patterns, both allocated in p139** — the tool-surface gate (line 1453) and a copyleft stop-ship gate (1546). 🟢 **The allocation is not arbitrary: all five later `P18` amendments are about tool-surface enumeration**, so the tool-surface gate is the live `P18` and the orphan is 🟢 **renumbered `P37`** on p149's own rule. 🟢 **Gate green after the fix: `ids=39 collisions=0`, exit 0.** 🟢 **`T75` is PROMOTED from slip to property.** [`p150-identifier-collision`](../compose/code/p150-identifier-collision/README.md), **30 tests** |
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p150
+
+| gap | movement |
+|---|---|
+| 🔴 *"Tenth consecutive pass with no agent row from SEARCH"* | 🟢 **CLOSED, and the cause RECLASSIFIED.** Five rows; the null was a query defect, not an ecosystem property |
+| 🔴 *"The 57-vs-58 denominator is unreconciled"* | 🟢 **CLOSED by a committed file.** Six agent rows; **58** |
+| 🔴 *"`p147-licence-language` carries an inverted grant ladder"* | 🟢 **FIXED. 3 of 24 move, all npm, all strengthening** |
+| 🔴 *"`T75`: pattern numbers allocated from an unread high-water mark"* | 🟢 **GATED and a SECOND instance found and fixed.** `P18` → `P37` |
+| 🔴 *"Africa has no market FIGURE"* | 🟡 **NARROWED to "no ADOPTION figure".** Kenya has three numbers; the continental study is self-declared non-representative |
+| 🔴 *"`curl -sI` cannot verify a GitHub URL here"* | 🔴 **RESTORED as originally recorded.** 🔴 **p149's narrowing is WITHDRAWN** — the API host answers and serves nothing (`T78`) |
+| 🔴 *"`aibasicact.kr ENOTFOUND` is very likely the same 403"* | 🟢 **CONFIRMED from the proxy's own refusal ledger** — `connect_rejected`, *"gateway answered 403 to CONNECT"* |
+| 🔴 *"Five of this shelf's GNU rows may be misidentified"* | 🆕 🟢 **MEASURED, not previously suspected.** `T77`: 5 of 7 wrong; **`GPL` published ZERO times in 150 passes** |
+| 🔴 *"Vertical platform licences are hand-carried"* | 🟢 **RE-MEASURED, 6 of 6 correct** — and they are the negative control bounding `T77` |
+
+## 🔴 Gaps OPEN after p150, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **`P35` is sold as a governance pattern and is bypassable at the data layer** | **6** gated writes succeed through `pub store`. 🔴 **Unmoved for a second pass. The highest-consequence item on this shelf**, and `ACTION FF` was registered and not reached |
+| 🔴 **Three published copies of `identify()` still carry the body matcher** | `p145`, `p147`, `p149`. 🟢 **Deliberately not patched in the pass that measured them** — `ACTION EU`'s rule. 🔵 **`ACTION FN`** |
+| 🔴 **The 44-row census TSV still publishes 5 wrong licence ids** | Corrected values exist in `p150-gpl-affero-discrimination/result.2026-10-12-p150.tsv`; the census artefact is p145's and unrewritten |
+| 🔴 **`T77`'s reach was measured over 28 trees, not 58** | The GNU-family population was identified **from the artefact under suspicion**. 🔵 **A row with no sibling mention cannot be mis-sorted — an argument, not a measurement.** 🔵 **`ACTION FU`** |
+| 🔴 **Two non-institutional host kinds are measured and NOT excluded** | 9 news-media hosts, 17 `.gob.pe`. 🔴 **`ACTION FG` not reached** |
+| 🔴 **The prompt-layer tier has no probe** | Two rows on this shelf that every tool-surface instrument reads as zero. 🔵 **`ACTION FS`** |
+| 🔴 **A DANGLING pattern citation exists and the gate does not catch it** | `compose/patterns.md` cites *"this KB's own `P240` gate"*; 🔴 **no `P240` is allocated** and the highest is `P37`. 🔵 **The mirror image of a collision, same cause.** 🔵 **`ACTION FQ`** |
+| 🔴 **The thesis register is not scanned by the collision gate** | `register_collisions()` exists and is tested on fixtures; the live register is spread across pass sections, not one table. 🔵 **`ACTION FR`** |
+| 🔴 **No star count for any row, and now permanently so** | `P150-A` / `T78`: `/repos` and `/search` refused by session scope. 🟢 **`UNMEASURED`, not a snippet** |
+| 🔴 **No market-size figure is quotable** | Unchanged for a third pass. Two publishers, 2030 figures **33% apart** |
+| 🔴 **Africa has no ADOPTION rate, spend figure or deployment count** | Connectivity (35%) and a completion rate (23.3%) are not adoption |
+| 🔴 **Vietnam's compliance date has THREE published readings** | `2026-03-01` effect · 🆕 **Sept 2027** high-risk (one vendor blog) · EU's `2027-12-02` is not Vietnam's. 🔴 **Primary text 403.** 🔵 **`ACTION FV`** |
+| 🔴 **Korean, Vietnamese and now UNESCO primary text: standing environment requests** | 403 at CONNECT, confirmed in the proxy ledger. 🟢 **Stated once with `capitol.texas.gov`, NOT re-registered** |
+| 🔴 **No North America adoption figure traces to a named instrument** | Four aggregator figures, flagged inline, none from NCES or RAND |
+
+## 🔜 Pre-registered for p151
+
+🔵 **`FF`, `FG`, `FH` and `FJ` are re-registered VERBATIM from p149 because they were not
+reached, not because they were attempted and failed.** 🟢 **`FF` is first on the list.**
+
+| action | falsifier |
+|---|---|
+| 🔴 **`ACTION FF`** *(re-registered, p149)* — close `P35`'s data-layer gap: state the exact change that would make the approval gate unbypassable (`StudentServer.store` private, or an approval token threaded into `StudentStore`'s write methods) and write the failing test that would hold it | 🔴 *Refuted if no change to the subject's own code can close it* — which would mean the gate is inherently a protocol-boundary control, and `P35` must be re-pitched as an MCP-surface pattern with the data layer named as out of scope rather than implied as covered |
+| 🟡 **`ACTION FG`** *(re-registered, p149)* — extend the placement exclusion to news media and government portal. Classify by role, not by name, and re-run over the 50 clones | 🔴 *Refuted if the surviving `BetterSEQTA-Plus` `CONFLICT` does not resolve to APAC* — which would mean the 9 news hosts are not the whole cause and the row carries a real regional ambiguity this KB has been attributing to fixture data |
+| 🟢 **`ACTION FH`** *(re-registered, p149)* — write the `P35` CI gate against **three** surfaces: router names = manifest names (46) **and** manifest `requires_approval` = macro `approval_tools` (23) | 🔴 *Refuted if the macro's `approval_tools` list cannot be read without compiling the crate* — which would make the third pin a build-time check rather than a CI text check |
+| 🟢 **`ACTION FJ`** *(re-registered, p149)* — audit the other three surface-bearing rows for a third declaration surface. Count surfaces per row | 🔴 *Refuted if no other row declares more than two* — which would make the three-surface shape unique to the best-governed row on the shelf |
+| 🔴 **`ACTION FN`** — retire the body matcher: replace `identify()`'s GNU rungs in `p145-licence-census`, `p147-licence-language` and `p149-common-title-licence` with `p150`'s title surface, and re-publish the 58-row census | 🔴 *Refuted if any row OUTSIDE the five `T77` named changes licence id* — which would mean the defect reached the non-GNU rows too and `T77`'s population argument is wrong, making this a correction to the whole census rather than to seven rows |
+| 🟡 **`ACTION FU`** — measure `T77`'s reach over all **58** subjects rather than the 28 trees p150 held, by reading every licence file's title line | 🔴 *Refuted if the GNU-family population is larger than seven* — which would mean `p145`'s census mis-sorted rows INTO non-GNU classes as well as within the GNU family, and every licence figure on this shelf needs re-deriving |
+| 🟡 **`ACTION FO`** — read the `-only` / `-or-later` election for the five GPL-family rows, from per-file headers rather than the licence body | 🔴 *Refuted if no row states an election anywhere* — which would establish that this shelf's copyleft rows are silent on the one term that decides what a derivative may relicense to, and `P38` step 4 must say so instead of implying the election is readable |
+| 🟢 **`ACTION FQ`** — extend `p150-identifier-collision` to catch a DANGLING citation: a pattern id cited in prose with no allocation anywhere. Resolve or withdraw `P240` | 🔴 *Refuted if `P240` is the only dangling citation* — which would make it a transcription slip rather than the mirror of `T75`, and the extension a one-line check kept for the next one |
+| 🟢 **`ACTION FS`** — build the prompt-layer probe: extract hold-back, answer-key and scope-binding rules from a row that ships no tools, and return a verdict distinguishable from `zero tools` | 🔴 *Refuted if the three rows' rules cannot be located by any textual rule* — which would mean a prompt-layer row is only auditable by hand, and `P39` must stay a checklist rather than becoming a gate |
+| 🟡 **`ACTION FT`** — payload check for a row shipping BINARIES: read the licence and declared surface of `Zenglian990/AI_Tutor_Release`'s APK and IPA release assets, as `p138-npm-payload-licence` does for npm | 🔴 *Refuted if the release assets are unreachable on this channel* — which would make shipped-binary rows unverifiable here and require the row to be carried with its payload explicitly unmeasured |
+| 🔴 **`ACTION FV`** — reconcile Vietnam's three compliance dates; find a second source for the **September 2027** high-risk education deadline or withdraw it by name | 🔴 *Refuted if no second source exists* — which would put the figure in `P148-K`'s class ("24 states enacted"), to be withdrawn by name and never to reappear |
+| 🟢 **`ACTION FR`** — point `register_collisions()` at the live thesis register and settle whether `T1`–`T80` contains a collision | 🔴 *Refuted if the register has no single committed location* — which would mean this KB's thesis numbers have never been enumerated in one place, exactly the defect `ACTION FL` just closed for the agent tier |
+
 ## ✅ Verdicts on the eight actions p148 registered, judged by p149
 
 🟢 **All eight reached.** 🟢 **Three discharged with silent falsifiers** (`EY`, `FB`, `FD`).

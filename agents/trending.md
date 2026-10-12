@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 150 — the streak is BROKEN at ten, and the null was a query defect
+
+🟢 **`ACTION FK` ran the sweep and the falsifier did not fire.** 🔴 *"Refuted if the sweep
+again returns only courses."* 🟢 **Five education-specific repositories came back, all MIT,
+all verified by clone.** 🔵 **So the ten-pass null was never a property of the ecosystem — it
+was a property of the queries**, and the consequence clause's alternative reading (*"no OSS
+education agent is discoverable by search"*) is 🔴 **withdrawn rather than promoted.**
+
+| the streak | state |
+|---|---|
+| passes without an agent row from search, p139 → p149 | 🔴 **ten** |
+| 🟢 **p150** | 🟢 **BROKEN — 5 rows** |
+| queries run this pass | **8** (4 global, 4 regional) **+ 1 targeted re-ask** |
+| 🔴 queries that returned only courses | 🔴 **the two generic agent queries** |
+| 🟢 queries that returned repositories | 🟢 **the one naming `tutor`** |
+
+### 🟢 What came back, by class
+
+| class | rows | note |
+|---|---|---|
+| 🆕 🟢 **product-shaped tutor** | **1** — `Zenglian990/AI_Tutor_Release` | 🟢 **New class for this tier.** Mobile binaries, versioned releases, hosted build |
+| 🆕 🟢 **prompt layer** (no server, no code) | **2** — `flysheep-ai/education-skills`, `ishands/upstack` | 🆕 **New class for this shelf.** Every tool-surface probe returns zero against it |
+| 🟡 **seed** (<10 files, no README) | **2** — `krishna16-origin/ai-tutor` + its fork | 🔴 **One of the two is a regression of the other** |
+| 🔴 **courses / general frameworks** | many | 🔴 **What ten passes of generic querying had been finding** |
+
+### 🔵 The query that worked, written down so it is reusable
+
+🔴 **Returns courses:** `top open source AI agents education 2026 github MIT` ·
+`github trending education AI 2026`
+
+🟢 **Returns repositories:** `open source AI tutor agent github MIT Apache 2026 student
+learning repository`
+
+🔵 **The discriminator is the word `tutor`.** 🟢 **Same lesson as `ACTION BF` on the SIS tier,
+where `timetable timetabling MCP in:name,description` reached ten national platforms that
+`"student information system"` could not.** 🔴 **This KB has now paid for that lesson twice**;
+it is recorded here as a standing rule rather than a pass result: **query the capability, not
+the category.**
+
+### 🔴 What is NOT trending, said rather than left silent
+
+- 🔴 **No new MCP server for an LMS this pass.** The five rows are tutors and prompt layers;
+  the connector tier gained nothing from search.
+- 🔴 **No star counts, for any row.** `api.github.com/repos/…` and `/search/repositories` are
+  both refused outside this session's repository scope (`P150-A`), and the clone channel
+  does not carry stars. 🟢 **`UNMEASURED` rather than a snippet.**
+- 🔴 **No LATAM, EMEA or North America origin among the five.** Two are placed **APAC
+  (China)** on national-curriculum evidence; three are unplaced. 🟢 **An informed regional
+  gap on a page that has been reporting a total one.**
+- 🔴 **The prompt-layer tier has no probe.** Two rows are now on this shelf that no
+  instrument here can measure. 🔵 **`ACTION FS`.**
+
 ## 2026-10-12 — pass 149 — the streak reaches TEN, and this pass did not test it
 
 🔴 **No agent search ran this pass.** 🔵 **All eight pre-registered actions were instrument or
