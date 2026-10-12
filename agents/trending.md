@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 156 — the topic is 75% permissive and 21% unusable, and the gap is invisible on the page
+
+🟢 **p155 built the free discovery channel. p156 spent it: `80` new rows, `80` licence bodies,
+`95 of 685` read.**
+🔴 **The trend this records is not a repo. It is that `17 of 80` rows on the cleanest education
+topic on GitHub cannot be used by a studio** — 🔴 **15 with no licence file at all, 2 with a
+`LICENSE` that explicitly refuses open source** — 🔴 **and the topic page shows stars, language
+and description for all 17 without a hint of it.**
+
+### 🆕 🔴 New this week: the non-open-source `LICENSE` file
+
+🟢 **Two rows, both found only because they matched NOTHING** (`T104`):
+
+| row | ★ | the file says |
+|---|---|---|
+| 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 5 | *"Public visibility does not make the original AIpha source open source and does not grant a general copyright license."* 🔴 **1 296 B — inside the MIT short-form band** |
+| 🔴 [`lilialla/bandwise`](https://github.com/lilialla/bandwise) | 4 | *"This software is SOURCE-AVAILABLE, not open source."* 🔴 **PolyForm Noncommercial 1.0.0; commercial use needs a separate licence** |
+
+🔵 **Why it belongs in a TREND file:** 🟡 **both are 2026 repositories, both are agent-skill-era
+projects, and both chose a deliberate non-OSI grant rather than omitting one.** 🔴 **That is a
+different phenomenon from the 15 rows that simply never added a `LICENSE`**, and it is new to
+this shelf.
+
+### 🆕 🟢 New this week: the rows worth composing with
+
+| row | ★ | licence | why it is new information |
+|---|---|---|---|
+| 🟢 [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | **58** | 🟢 MIT | 🟢 **Uses the LLM ONLY to write quizzes** — reinforcement learning picks the action, FSRS picks the timing. 🔵 **The cheapest-to-run tutor architecture on the shelf** |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **45** | 🟢 MIT | 🟢 **Intelligent Tutoring System as an MCP server, in Go.** 🔵 **Composable into any host agent** |
+| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **31** | 🟢 MIT | 🟢 **Agentic RAG over a curated course corpus on LangGraph** — the "tutor over OUR content" reference |
+| 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | **20** | 🟢 MIT | 🟢 **Fully offline, local Ollama, Electron.** 🔵 **Quote for data-residency work** |
+| 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | **7** | 🔴 AGPL-3.0 | 🟢 **Checks maths step-by-step with SymPy instead of asking a model** — the only symbolic verifier found in 156 passes |
+
+### 🔴 Two corrections this pass, both to rows this shelf has published
+
+- 🔴 **`MysterionRise/adaptive-knowledge-graph`** was carried as **`Apache2, ~350★`** since
+  `education_cycle3`. 🟢 **Measured: `MIT` (1 094 B body) and `17★`.** 🔴 **A 20× star error and
+  the wrong licence family.**
+- 🔴 **`openeducat_erp`'s "carve-out"** — p155 recorded it as the second instance of `T92`
+  *(a project admitting bundled non-conforming licences)*. 🔴 **REFUTED this pass:** the sentence
+  is **verbatim Odoo boilerplate**, down to the dangling `COPYRIGHT` pointer, and OpenEduCat's
+  copy even introduces a typo Odoo does not have. 🟢 **`T92`'s second instance is CLOSED.**
+
+### 🔵 Channel note, under the standing naming rule
+
+🔴 **`https://api.github.com/users/*` returned `403` for all 17 owners probed** — the proxy
+refuses that host. 🟢 **The rendered owner page `https://github.com/<owner>` answered**, and it
+carries name, location, website-verification and bio, which is what `P36` needs.
+🔵 **Recorded once, under the categorical-egress rule.**
+
 ## 2026-10-12 — pass 155 — the discovery channel needs NO credentials, and six of the fifteen new rows are not applications
 
 🟢 **p154's channel is replaced by a cheaper one that this session was permitted to use.**

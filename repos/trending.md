@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 156 — `GitHub Trending` was read, and it has nothing to do with education
+
+🟢 **The standing honesty note on this page is finally discharged, not repeated.**
+🔴 **For 155 passes *"trending"* on this shelf meant *"new to this shelf."*** 🟢 **This pass went
+to the actual trend channels and the answer is worth more than a row list: 🔴 **education does
+not appear on GitHub's general trending surface at all**, and 🟢 **the reason is now measured
+rather than guessed.**
+
+### 🔴 What the general trend channel returned, and why it is empty of education
+
+| query | what came back | on-domain? |
+|---|---|---|
+| `github trending {industry} AI 2026` | `rohitg00/ai-engineering-from-scratch` *(#1 on 2026-05-24 per Trendshift)*, `AI Engineering Hub`, `OpenAI Cookbook`, Microsoft `AI Agents for Beginners`, `Made With ML`, Karpathy `Neural Networks: Zero to Hero` | 🔴 **ZERO.** 🔴 **Every row is a DEVELOPER LEARNING resource — people learning AI, not AI used to teach** |
+| `top open source AI agents education 2026 github MIT` | `LangChain`, `CrewAI`, `OpenHands`, `opencode`, `OpenClaw`, `500-AI-Agents-Projects` | 🔴 **ZERO education-specific rows.** 🟢 **A general agent-framework list with an `education` folder in one awesome-list** |
+
+🆕 **`T110`** — 🔴 **the string *"education"* in a trend query resolves to *"learning to code"*,
+not to *"teaching."*** 🟢 **This is `T102`'s mechanism confirmed on a SECOND, independent
+channel**: p155 found `topic:education` returns developer curriculum 19 times in 20;
+🟢 **the general web trend channel returns it 20 times in 20.**
+🔵 **The operational consequence, and it is the useful part:** 🟢 **for this industry the topic
+channel (`topic:ai-tutor`, 685 rows, 19-in-20 on-domain) is not merely better than the trend
+channel — the trend channel has a ZERO hit rate and should not be queried again.**
+🟢 **One Japanese source reports 9 of the top 10 monthly trending repos in February 2026 were
+AI-related**, 🔴 **and none of them were education** — which is the shape of the whole problem.
+
+### 🟢 So the trend for this industry is measured on the topic channel instead
+
+🟢 **Population: `685` repositories carry `ai-tutor`** — 🟢 **`684` when p155 measured it
+roughly one hour earlier.** 🆕 **`T111`: the denominator moves while it is being counted**,
+🔵 **so every share statistic on this shelf is a share at an hour, not a share.**
+
+| the week's movement, measured | value |
+|---|---|
+| 🟢 Rows now read | **95 of 685** *(p155: 20, p156: +80, 5 overlap/prior)* |
+| 🟢 Rows still unread | 🔴 **590** |
+| 🟢 Permissive share of p156's 80 | **75%** *(MIT 50 + Apache-2.0 10)* |
+| 🔴 **No-grant share of p156's 80** | 🔴 **18.8%** *(15 rows, nothing on 22 probed paths)* |
+| 🔴 Source-available non-OSI | **2 rows** 🆕 **new category this pass** |
+| 🟢 Copyleft share | **3.8%** *(3 × AGPL-3.0)* |
+
+### 🟢 Existence verification, and it corroborated five of this shelf's old negative verdicts
+
+🟢 **Every `github.com` repository URL in p156's new content was existence-checked with
+`git ls-remote ... HEAD` this pass: `247` returned a SHA.** 🟢 **Two negative controls
+(`zzzznotarealowner/zzzznotarealrepo`, `gmilano/definitely-not-a-repo-156`) returned none.**
+[`evidence/existence-verification.2026-10-12-p156.tsv`](../evidence/existence-verification.2026-10-12-p156.tsv)
+
+🔵 **Five further rows returned no SHA, and all five are rows EARLIER passes had already
+labelled `ABSENT`, `gone` or `does not resolve`:** `Epesi-Team/epesi` · `1edtech/caliper-php` ·
+`imsglobal/caliper-python` · `concentricsky/badgr-server` · `1EdTech/caliper-js`.
+🟢 **So p156's instrument independently reproduced five standing negative verdicts** — 🔵 **which
+is the only kind of corroboration a *"this repository does not exist"* claim can get, and this
+shelf had never run it against its own absence record.**
+🟢 **Nothing was repaired, because nothing was broken: the rows are labelled absent and they are
+absent.**
+
+### 🆕 🟢 The genuinely new repositories this week
+
+🟢 **Star-descending pages 2–5 of `topic:ai-tutor`, every licence body-read this pass.**
+
+| repo | ★ | licence | lang | note |
+|---|---|---|---|---|
+| 🟢 [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 58 | 🟢 MIT | JS | 🟢 **RL picks the action, FSRS picks the timing, LLM only writes quizzes** |
+| 🟢 [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 56 | 🟢 MIT | TS | Learning paths + **cognitive-load tracking** |
+| 🟢 [`InfinityZero3000/LexiLingo`](https://github.com/InfinityZero3000/LexiLingo) | 49 | 🟢 MIT | Python | Language tutor, *"Trace-CAG"* feedback pipeline |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 45 | 🟢 MIT | **Go** | 🟢 **ITS as an MCP server** |
+| 🟢 [`poobserver/Agent-World-Builder`](https://github.com/poobserver/Agent-World-Builder) | 43 | 🟢 MIT | Python | Multi-agent simulations from rules and character relationships |
+| 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 36 | 🟢 MIT | PowerShell | Tutor as an agent skill, progress dashboard |
+| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 31 | 🟢 MIT | Python | 🟢 **Agentic RAG on LangGraph over a curated corpus** |
+| 🟢 [`yudongfang-thu/PrepDojo`](https://github.com/yudongfang-thu/PrepDojo) | 31 | 🟢 MIT | Python | Local-first interview practice, **sandboxed code judging** |
+| 🟢 [`koukekoukej-glitch/feynman-tutor`](https://github.com/koukekoukej-glitch/feynman-tutor) | 30 | 🟢 MIT | Python | 🟢 **Inverts the roles: the USER teaches the AI, to expose gaps** |
+| 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 20 | 🟢 MIT | TS | 🟢 **Fully offline Electron + Ollama** |
+| 🟢 [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 17 | 🟢 MIT | Python | KG + IRT/BKT mastery. 🔴 **Shelf had `Apache2, ~350★` — both wrong** |
+| 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 🟢 MIT | **Swift** | 🟢 **The only macOS-native row in 156 passes** |
+| 🟢 [`linyeping/GemMate`](https://github.com/linyeping/GemMate) | 11 | 🟢 MIT | **Dart** | On-device Gemma, offline study companion |
+| 🔴 [`grey8-io/learn-ai-with-grey8`](https://github.com/grey8-io/learn-ai-with-grey8) | 10 | 🔴 AGPL-3.0 | Python | Bootcamp with a local LLM tutor |
+| 🟢 [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | 8 | 🟢 MIT | **Rust** | Offline adaptive desktop app, terminal labs |
+| 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 7 | 🔴 AGPL-3.0 | Python | 🟢 **SymPy step-verification — symbolic, not generative** |
+
+### 🔴 The rows to NOT ship, and why they are listed anyway
+
+🔵 **A no-grant repository is still worth reading for its architecture.** 🔴 **It is not worth
+forking.** 🟢 **Named so nobody rediscovers them as finds:**
+
+🔴 [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) **63★** ·
+🔴 [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) **43★** ·
+🔴 [`photolensfocus/Llm-language-learning`](https://github.com/photolensfocus/Llm-language-learning) **22★** ·
+🔴 [`CipherCraze/SpeakGenie-AI-Tutor`](https://github.com/CipherCraze/SpeakGenie-AI-Tutor) **16★** ·
+🔴 [`CyanDR21/Cyanskill`](https://github.com/CyanDR21/Cyanskill) **12★** ·
+🔴 [`legostin/learn-almost-anything`](https://github.com/legostin/learn-almost-anything) **9★** ·
+🔴 [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate) **8★** ·
+🔴 [`huangfengqwq/huangfeng-exam-tutor`](https://github.com/huangfengqwq/huangfeng-exam-tutor) **8★** ·
+🔴 [`gupta-v/KIRA`](https://github.com/gupta-v/KIRA) **7★** ·
+🔴 [`pulkitpareek18/LearnFlow-AI`](https://github.com/pulkitpareek18/LearnFlow-AI) **7★** ·
+🔴 [`SHALINISAURAV/AI-Study-Assistant`](https://github.com/SHALINISAURAV/AI-Study-Assistant) **6★** ·
+🔴 [`lalitm1004/cogito-tutor`](https://github.com/lalitm1004/cogito-tutor) **6★** ·
+🔴 [`aadyatalreja/Adaptive-AI-Learning-Assistant`](https://github.com/aadyatalreja/Adaptive-AI-Learning-Assistant) **4★** ·
+🔴 [`jangtrinh/design-os-pedagogy`](https://github.com/jangtrinh/design-os-pedagogy) **4★** ·
+🔴 [`mayankjndl/vidyamind`](https://github.com/mayankjndl/vidyamind) **4★**
+
+🟡 **Stated limit of this verdict:** 🟢 **all 15 were probed on 22 paths across `main` and
+`master`** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `COPYING.txt`,
+`COPYING.md`, `license`, `LICENSE-MIT`, `LICENSE.rst`, `NOTICE`
+([`evidence/no-licence-recheck.2026-10-12-p156.tsv`](../evidence/no-licence-recheck.2026-10-12-p156.tsv)).
+🔴 **Their READMEs were NOT assessed for a prose licence claim** — the check errored and is
+registered for p157, not quietly dropped. 🔴 **So `18.8%` is an upper bound on "no grant" and a
+lower bound on "no grant in a licence FILE."**
+
 ## 2026-10-12 — pass 155 — the topic census, and why ten passes of "education" searches found nothing
 
 🟢 **Two topic populations measured on a free channel, and the contrast is the finding.**

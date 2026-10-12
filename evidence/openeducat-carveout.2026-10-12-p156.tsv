@@ -1,0 +1,9 @@
+probe	url	http	bytes	finding
+openeducat root LICENSE	raw.githubusercontent.com/openeducat/openeducat_erp/master/LICENSE	200	8241	LGPLv3; carve-out sentence present; bounded to "other GPL-compatible licenses"; contains transcription defect "publishedunder"
+odoo root LICENSE	raw.githubusercontent.com/odoo/odoo/master/LICENSE	200	-	SAME carve-out sentence VERBATIM except project name; same preceding COPYRIGHT pointer; NO typo
+openeducat COPYRIGHT @master	raw.githubusercontent.com/openeducat/openeducat_erp/master/COPYRIGHT	404	0	pointer in line 1 of LICENSE is DANGLING
+openeducat COPYRIGHT @18.0	raw.githubusercontent.com/openeducat/openeducat_erp/18.0/COPYRIGHT	404	0	absent on 18.0 too
+openeducat COPYRIGHT @17.0	raw.githubusercontent.com/openeducat/openeducat_erp/17.0/COPYRIGHT	404	0	absent on 17.0 too
+openeducat NOTICE	raw.githubusercontent.com/openeducat/openeducat_erp/master/NOTICE	404	0	absent
+openeducat AUTHORS	raw.githubusercontent.com/openeducat/openeducat_erp/master/AUTHORS	404	0	absent
+openeducat_core/static/src/lib/LICENSE	raw.githubusercontent.com/openeducat/openeducat_erp/master/openeducat_core/static/src/lib/LICENSE	404	0	no bundled licence file at the implicated path

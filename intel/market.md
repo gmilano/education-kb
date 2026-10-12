@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 156 — 2026-10-12
+
+🟢 **The ninth-pass market-size gap is NOT closed, and this pass can finally say WHY instead of
+re-reporting the spread.**
+🟢 **The tenth-pass *"no open-source vendor in any market source"* finding holds, and it is now
+the oldest unbroken observation on this shelf.**
+🟢 **LATAM gets its first quotable, sampled, institutionally-published adoption figure.**
+🟢 **`ACTION HK` is discharged — this page had two `## Opportunities by region` headings and now
+has one.**
+
+### 🔴 Market size, NINTH pass — the spread is a fact about the SOURCES, not the market
+
+| source | base | horizon | CAGR |
+|---|---|---|---|
+| 🟡 Research and Markets | **$10.6B** (2026) | **$42.48B** (2030) | — |
+| 🔴 secondary aggregator | **~$6B** (2024) | **~$32B** (2030) | — |
+| 🔴 vendor (X-Pilot) | **$12.3B** (2026) | — | 🔴 **also claims a 42% outcome improvement** |
+| 🆕 🟡 aggregator, Europe only | **$2.64B** (2026) | **$8.0B** (2030) | 31.9% |
+
+🔴 **`$32B` vs `$42.48B` at the SAME 2030 horizon is a 33% spread that the *"different base
+years"* explanation does not cover.** 🟢 **What this pass adds is the diagnosis:**
+🆕 **`T114`** — 🔴 **of the four figures above, not one is a primary market study this shelf has
+read.** 🟢 **Three are aggregator or vendor restatements of studies behind paywalls, and the
+fourth is a press summary of one.** 🔴 **So the spread is not measurement disagreement; it is
+four hosts paraphrasing an unknown number of underlying reports.**
+🟢 **The honest instruction for a studio: do not quote a market size for AI in education.**
+🟢 **Quote the ADOPTION and GOVERNANCE figures instead** — they have named samples
+(UNESCO IESALC `200` institutions / `19` countries; TALIS 2024; `60%` of US K-12 teachers) —
+🔵 **and they are what a buyer actually recognises about their own situation.**
+
+### 🔴 No open-source vendor in any market source — TENTH pass
+
+🟢 **Searched this pass:** `AI {industry} industry trends 2026` · `open source platform
+education ERP CRM MIT Apache LMS` · four regional queries.
+🔴 **Named as players: Research and Markets' vendor set, state education agencies, district
+leaders, UNESCO, OECD, the European Commission, the Council of Europe, ECLAC, MSIT, Ipsos,
+ChatGPT / Copilot / Gemini as the generative entry point.**
+🔴 **Moodle, Open edX, Kolibri, Sakai, OpenOLAT, Chamilo, ILIAS and OpenEduCat appear in NONE of
+them** — 🟢 **except on the vendor's own site, which is how this pass found the OpenEduCat
+comparison page.**
+🟢 **This is the shelf's product, restated once:** 🔵 **the installed base of open-source
+education platforms is invisible to the analyst layer that clients read.** 🟢 **A studio that
+knows the licence table in `repos/foundations.md` knows something no market report will tell the
+buyer.**
+
+### 🟢 Key players — corrected on one point
+
+🔴 **The generative-AI entry point is NOT an edtech vendor.** 🟢 **UNESCO IESALC's finding is
+that `ChatGPT`, `Copilot` and `Gemini` have become the DEFAULT entry point for teaching in LATAM
+higher education.** 🆕 **`T115`** — 🔴 **the competitor in this industry is not an edtech
+company; it is a general assistant the institution never procured.** 🟢 **Which is precisely why
+the `87%` adoption / `26%` strategy gap exists, and why the sellable work is governance and
+integration rather than another tutor.**
+
+
 ## Pass 155 — 2026-10-12
 
 🔴 **NINTH consecutive pass with no quotable market size — and this pass makes the refusal
@@ -114,6 +169,37 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p156
+
+🟢 **A deadline that has already PASSED is the sharpest opportunity on this page.**
+
+| instrument | what it requires | the deliverable |
+|---|---|---|
+| 🆕 🔴 **Ohio** — first state to require it | 🔴 **EVERY district adopts a formal AI use policy, due `2026-07-01`** | 🔴 **That date is three months PAST.** 🟢 **So the Ohio ask is REMEDIATION, not preparation** — districts already out of compliance, with no in-house expertise. 🔵 **The most immediately billable item found in six passes of NA research** |
+| 🆕 🟡 **Federal** — `H.R. 8747` | **K-12 AI Literacy and Readiness Act of 2026**, advanced out of House committee at a July 2026 markup; would amend ESEA to let schools spend federal funds on AI | 🟡 **Watch item — committee passage is not enactment.** 🟢 **If enacted it converts AI spend into an allowable federal-funds category, which is the single biggest demand-side change available** |
+| 🆕 🟢 **>30 states** | AI guidance documents in place | 🟢 **Guidance is not a policy: the per-district policy instrument is the product** |
+| 🔴 **NYC** · 🔴 **Katy ISD (TX)** | NYC moratorium through 8th grade; Katy ISD restricts generative chatbots K-6 | 🔴 **Closed markets, not slow ones.** 🟢 **K-6 student-facing is the segment to not sell into** |
+
+🆕 **Scale correction to this shelf's bill counts:** 🟢 **one tracker reports >1 500 AI-related
+bills introduced nationwide in 2026, of which ~100 directly affect K-12 student AI use.**
+🔴 **So the `68–134` range this shelf carries is the EDUCATION-SPECIFIC slice of a much larger
+wave**, which is consistent rather than contradictory — 🟢 **`T101`'s *"different trackers count
+different things"* now has a named denominator.**
+
+🆕 **Adoption, secondary sources, flagged as such:** 🟡 **60% of US K-12 teachers used AI tools
+during the 2024–25 school year and 32% used them at least weekly.** 🟡 **North America holds the
+largest regional share of the AI-in-education market at 36%.** 🔴 **Both from aggregator hosts,
+not primary research** — 🟢 **carried for shape, not quoted as fact.**
+
+🆕 🔵 **A demand signal with no vendor in it:** 🟢 **students from all 50 states produced a
+*"STUDENTS FIRST Act of 2026"* framework at a July 2026 UMass Boston / MIT event, explicitly
+rejecting both an outright ban and unrestricted adoption.** 🔵 **Worth knowing because
+procurement committees increasingly include student representation.**
+
+🔴 **Canada and Mexico: nothing, SIXTH pass.** 🟢 **The *"North America"* query is United States
+in practice, and this shelf should stop calling it North America.**
+
+
 #### p155
 
 🟢 **The opportunity is the gap between 134 introductions and ~10 enactments:** districts face
@@ -150,6 +236,55 @@ courseware.** 🔵 **Gateway-course remediation is where the $55M says the money
 
 ### EMEA
 
+#### p156
+
+🟢 **The seven-pass EMEA adoption-rate gap is PARTLY closed, and the date question gets a
+FOURTH value — this time from the Commission's own host.**
+
+🆕 🟢 **The date, from `digital-strategy.ec.europa.eu` (the most authoritative host that has
+answered this shelf):** 🟢 **from `2026-08-02` the AI Office and national authorities STARTED TO
+ENFORCE the AI Act.** 🔵 **This does not overturn the `2027-12-02` Annex III high-risk date for
+education; it names when the enforcement MACHINERY switched on.** 🟢 **So the three-valued
+muddle this shelf carried is now resolvable as THREE DIFFERENT EVENTS, not three guesses:
+
+| date | what actually happens on it | status |
+|---|---|---|
+| 🟢 **live** | Article 5 prohibitions — 🔴 **emotion inference in schools banned OUTRIGHT** | absolute, no grace |
+| 🟢 **live** | Article 4 AI literacy obligations | in force |
+| 🆕 🟢 **`2026-08-02`** | 🟢 **AI Office + national authorities begin ENFORCING** | per the Commission's own page |
+| 🟢 **`2027-12-02`** | Annex III high-risk duties bite for education systems | the compliance horizon |
+
+🆕 🔴 **A live amendment risk this shelf had not recorded:** 🔴 **the Commission proposed targeted
+amendments — the *"AI omnibus"*, part of the digital simplification package — in November 2025.**
+🔵 **So the `2027-12-02` horizon is a MOVING target, and any EMEA compliance engagement should be
+scoped to re-read the timeline rather than hard-code it.**
+
+🆕 🟡 **Adoption, finally a number — and it is a weak one, said so:**
+🟡 **~70% of institutions in Europe and North America have AI guidance in place or in
+development, against 45% in Latin America and the Caribbean.** 🔴 **The host is an
+aggregator and it fuses Europe with North America**, 🔴 **so this is NOT an EMEA rate** —
+🟢 **it is the first quantified EMEA-inclusive datum in seven passes, and the gap is narrowed,
+not closed.**
+🟡 **European AI-in-education market put at `$2.64B` (2026) → `$8.0B` (2030), CAGR 31.9%**, with
+🟡 **Finland, Estonia and the Netherlands named as K-12 integration leaders.** 🔴 **Vendor
+aggregator, methodology unverifiable — carried, not quoted.**
+
+🔴 **A stale baseline worth keeping for contrast:** 🟢 **a Council of Europe survey found only
+`4 of 23` responding member states had AI-in-education policies and regulations** — 🔴 **but that
+is 2022 data.** 🔵 **Set against ~70% having guidance in 2026, the direction is the finding; the
+pair is not a time series.**
+
+🟢 **Named institutional players this pass:** 🟢 **the EU *AI Continent Action Plan* names
+education as a sector to accelerate AI uptake in** · 🟢 **the Council of Europe is working on a
+Framework Convention on AI** · 🟢 **UNESCO guidance is non-binding but referenced by most
+national education ministries, as are the OECD AI Principles.**
+
+🟡 **EMEA includes Africa by definition and this pass's EMEA evidence is Europe-weighted
+AGAIN.** 🔴 **Africa was not re-queried for a SECOND pass** — p153's four jurisdictions stand
+unrefreshed, South Africa's draft status still disputed. 🟢 **Said rather than left as apparent
+coverage.**
+
+
 #### p155
 
 🟢 **Three tiers, and the inversion is the sale** (see `verticals/solutions.md`): 🔴 **Article 5
@@ -182,6 +317,52 @@ documentation, logging and human oversight are PRODUCT FEATURES, not compliance 
 skills body and whose delivery is outsourced is a programme that needs an integrator.
 
 ### APAC
+
+#### p156
+
+🟢 **Vietnam's disputed deadline is RESOLVED, and the resolution is that both dates were right
+about different things.**
+
+🆕 🟢 **The resolution:** 🟢 **Law No. `134/2025/QH15` on Artificial Intelligence took effect
+`2026-03-01` and has EXTRATERRITORIAL reach** — 🟢 **and high-risk sectors, education among
+them, have until `September 2027` to comply.**
+🟢 **So p153's `2026-03-01` (the law in force) and p155's September 2027 (the high-risk education
+obligation) were never in conflict.** 🆕 **`T112`** — 🔴 **two dates for one law are usually two
+different obligations, and this shelf carried them as a contradiction for two passes** because
+nobody asked *"in force for WHOM?"*
+🔵 **Engagement consequence: the extraterritorial clause means a Globant delivery team outside
+Vietnam serving a Vietnamese institution is in scope.**
+
+🆕 🟢 **Korea, sharpened:** 🟢 **the AI Basic Act is in force; MSIT has indicated 2026 is
+effectively a PILOT period, and the mechanism is now named — a ONE-YEAR GRACE PERIOD ON
+PENALTIES.** 🟢 **The Act covers *"high-impact AI"* explicitly including education.**
+🔵 **So 2026 is a design year in Korea and 2027 is the enforcement year** — 🟢 **which makes Korea
+the best-timed APAC market for a build engagement right now.**
+
+| jurisdiction | posture, this pass | what it means to sell into |
+|---|---|---|
+| 🟢 **South Korea** | AI Basic Act in force; education = *"high-impact"*; 🟢 **1-year penalty grace** | 🟢 **Build now, certify in 2027** |
+| 🟢 **Vietnam** | Law `134/2025/QH15` in force `2026-03-01`, extraterritorial; 🟢 **education high-risk deadline `Sept 2027`** | 🟢 **Compliance runway exists; non-Vietnamese suppliers in scope** |
+| 🟡 **Japan** | Innovation-friendly, voluntary | 🟡 **No compliance product to sell; sell capability** |
+| 🟡 **Singapore** | Voluntary frameworks + 🟢 **government-built testing tools** | 🟢 **Testing tools are a free evaluation substrate** |
+| 🟡 **India**, 🟡 **Australia** | Building national frameworks; relying on sectoral and privacy law for now | 🟡 **Privacy law is the live constraint, not AI law** |
+| 🆕 🟡 **Indonesia** | Soft AI law/framework proposed, 🟢 **education named among the sectors** | 🟡 **Early — a watch item with a named sector hook** |
+| 🟢 **China**, 🟢 **Singapore** | 🟢 **Established *"AI in Education"* policies and guidelines** *(UNESCO)* | 🟢 **Policy exists; the gap is implementation** |
+
+🆕 🔵 **A sentiment split INSIDE one region, which is a procurement signal and not an adoption
+rate:** 🟢 **the Ipsos Education Monitor 2026 records LOWER support for banning AI in schools
+across the Asian markets examined, but HIGHER support for banning it in Australia and New
+Zealand.** 🔴 **This shelf has been treating APAC as one buyer.** 🆕 **`T113`: ANZ and East/South-East
+Asia are opposite ends of the same region on this question**, 🟢 **so an APAC pitch deck should
+not be one deck.**
+
+🟢 **UNESCO's standing caution, carried because it is the actual blocker:** 🔴 **policy
+frameworks are not enough without reliable IT infrastructure, internet access and teacher
+training**, and 🔴 **some countries in the region are still struggling to meet basic educational
+needs.** 🔵 **That is `kolibri`'s market, not a chatbot's.**
+
+🔴 **Still no APAC ADOPTION RATE** — sentiment and regulation, no percentage. 🟢 **Stated.**
+
 
 #### p155
 
@@ -220,6 +401,60 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p156
+
+🟢 **The strongest regional find of the pass, and it replaces a number this shelf could never
+quote.**
+
+🆕 🟢 **UNESCO IESALC study, launched `2026-09-09`: `200` institutions across `19` countries.**
+
+| finding | value | why it matters |
+|---|---|---|
+| 🟢 **Using AI in at least one area** | **87%** | 🟢 **Adoption is not the problem** |
+| 🟢 **Using AI in teaching and learning** | **74%** | 🟢 **It is in the classroom, not just admin** |
+| 🔴 **Have a FORMAL AI strategy** | 🔴 **26%** | 🔴 **A `61-point` governance gap** |
+| 🟢 Private non-profit universities | **84%** uptake | 🟢 **The segment that moves first** |
+| 🟢 Public institutions | **68%** | 🟡 Slower, larger, procurement-bound |
+| 🔴 Private for-profit | **52%** | 🔴 Laggard |
+
+🟢 **This REPLACES the `92% / 79%` pair** this shelf carried from an unresolvable host and then
+corroborated against UNAM. 🟢 **It is named, dated, institutionally published, and carries its
+sample size** — 🔵 **the first LATAM datum on this shelf that can go in a client deck without a
+caveat.**
+🔵 **And the `87%` vs `26%` gap is the single best opportunity statistic in this entire
+knowledge base:** 🟢 **the work is not adoption, it is governance retrofit on an installed base
+that already adopted.**
+
+🆕 🟢 **Teacher-level adoption, from TALIS 2024 — an OECD instrument, not an aggregator:**
+🟢 **Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` of secondary teachers had used
+AI in the previous year, against an OECD average of `36%`.**
+🟢 **A separate Uruguayan study puts public-school teacher use at `75%`.**
+🔵 **Four LATAM countries ALL above the OECD average is the finding** — 🔴 **this region is not
+behind on usage, it is behind on governance**, which is the same shape the IESALC study found one
+level up.
+
+🆕 🟢 **Named institutional players:** 🟢 **UNESCO launched an *Observatory on Artificial
+Intelligence in Education for Latin America and the Caribbean* in April 2026, at ECLAC
+headquarters in Santiago, Chile**, during the 2026 Forum of the Countries of LAC on Sustainable
+Development. 🟢 **UNESCO has also run AI-regulation capacity training for officials in Ecuador
+and Chile, with FLACSO Ecuador.** 🔵 **An observatory is a standing demand channel, not an event.**
+
+| jurisdiction | instrument | posture |
+|---|---|---|
+| 🟢 **Brazil** | **`PL 2.338/2023`** — risk-based | 🟡 **In the Chamber of Deputies; text can still change** |
+| 🟢 **Chile** | Government bill, risk-based grammar adapted to local institutions | 🟡 Live |
+| 🟢 **Colombia** | 🟢 **`CONPES 4144`** *(February 2025)* — government-wide programme, 🟢 **with actions AND budget through 2030** | 🟢 **The most concrete: a funded programme, not a bill** |
+
+🔵 **Where the money is, stated plainly:** 🟢 **Colombia's `CONPES 4144` is budgeted through
+2030 and Brazil's and Chile's are still bills.** 🟢 **So Colombia is the LATAM jurisdiction where
+a public-sector engagement has an appropriation behind it today.**
+
+🔴 **The `45%` figure for LAC institutions with AI guidance** *(aggregator host, see EMEA)*
+🔴 **sits oddly against IESALC's `26%` with a formal strategy** — 🟡 **"guidance in place or in
+development" is a looser test than "formal strategy"**, so they are compatible. 🟢 **Both
+carried; `26%` is the one with a published sample.**
+
 
 #### p155
 
@@ -1498,7 +1733,17 @@ nor audit trail. **The sellable work is governance, integration and evidence —
   AI over general-purpose tools), IDB, Google.org (AI-literacy funding across nine LATAM
   countries), teachers' unions (NEA, AFT, CTA have all issued classroom AI guidance).
 
-## Opportunities by region
+## Opportunities by region — SUPERSEDED SNAPSHOT (archival, do NOT compile)
+
+🔴 **`ACTION HK` DISCHARGED.** 🔴 **This page carried TWO `## Opportunities by region` headings**
+— one at the top of the file and this one. 🔴 **A compiler reading the FIRST match got current
+data; one reading the LAST got this stale snapshot.**
+🟢 **The canonical block is the one at the TOP of this file**, which every pass from p141 onward
+has filed its regional entries into.
+🟢 **Nothing is deleted.** 🟢 **The heading is RENAMED so the closed region vocabulary resolves to
+exactly ONE compilable block**, and the history below stays readable where it was written.
+🔵 **Merging the two was available and was NOT done**: the older entries are a record of what the
+shelf believed at the time, and rewriting them would destroy the only evidence of that.
 
 ### North America
 

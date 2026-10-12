@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P156-A` — the licence-safe LMS composition, and it is the same in all five regions *(new, p156 — Global)*
+
+🔵 **The problem this solves:** 🔴 **every client already runs Moodle (GPL) or Open edX
+(AGPL-3.0)**, 🔴 **so a forked-and-resold platform is a source-disclosure event** — and on Open
+edX the AGPL reaches a *hosted* derivative, not just a shipped one.
+
+🟢 **The recipe — three processes, one licence boundary:**
+
+| layer | repo | licence | why this one |
+|---|---|---|---|
+| 1. **System of record** — leave it alone | [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 GPL *(`COPYING.txt`)* **or** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) 🔴 AGPL-3.0 | copyleft | 🟢 **Unmodified. Enrolment, gradebook and roster stay authoritative here** |
+| 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | 🟢 **An Intelligent Tutoring System exposed as an MCP server** — so any host agent calls it as a tool |
+| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | 🟢 **Agentic RAG over a curated course corpus — the client's own material, not the open web** |
+| 4. **Mastery model** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) 🟢 **MIT** | 🟢 permissive | 🟢 **DKT / AKT / SAKT knowledge tracing — answers *"does the student know it?"* with a model, not a vibe** |
+| 5. **The wire** | **LTI 1.3** *(Moodle, Open edX, Canvas, Sakai, ILIAS, Chamilo all speak it)* + the LMS REST API | — | 🟢 **A protocol boundary is not a derivative work.** 🔵 **This is the whole trick** |
+
+🟢 **Wiring, concretely:** 🟢 **LTI 1.3 launch from the LMS carries the signed user + context
+claims** → 🟢 **the agent host resolves the learner, then calls `tutor-mcp` for the pedagogy and
+the `ai-tutor-app` RAG service for the course material** → 🟢 **`pykt-toolkit` consumes the
+interaction stream and returns a mastery estimate** → 🟢 **grades go BACK through **LTI AGS**
+(Assignment and Grade Services) so the LMS gradebook stays the system of record.**
+🔴 **Nothing in layers 2–5 links against GPL or AGPL code**, so 🟢 **the deliverable stays MIT
+and the client keeps their LMS.**
+
+🔵 **If the client wants to own the platform too:** 🟢 **swap layer 1 for
+[`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) (Apache-2.0) or
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (MIT)** — 🟢 **the only two LMS rows on
+this shelf a studio can fork without a copyleft obligation.**
+
+## 🆕 🟢 `P156-B` — the governance-retrofit engagement, built for the `87% / 26%` gap *(new, p156 — LATAM primary, Global applicable)*
+
+🔵 **The demand this answers is measured, not assumed:** 🟢 **UNESCO IESALC `2026-09-09`, 200
+institutions / 19 countries — `87%` already use AI, `74%` in teaching and learning, and only
+`26%` have a formal AI strategy.** 🟢 **The incumbent tool is `ChatGPT` / `Copilot` / `Gemini`,
+which the institution never procured** *(`T115`)*.
+🔴 **So the sale is NOT another tutor.** 🟢 **It is a sanctioned path for what staff already do.**
+
+🟢 **The recipe:**
+
+1. 🟢 **Discovery instrument** — 🔵 **there is no open-source tool for this, and that is worth
+   saying**: the audit of which assistants are already in use is a services deliverable, not a
+   repo.
+2. 🟢 **Sanctioned gateway** — 🟢 **a single MIT/Apache agent host in front of the models**, with
+   the institution's data boundary, logging and per-role policy. 🟢 **Compose
+   [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT) behind it so
+   the pedagogy is a tool, not a prompt.**
+3. 🟢 **Curriculum grounding** — 🟢 **[`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app)
+   (MIT)** so answers cite the institution's corpus.
+4. 🟢 **Policy artefact** — 🔵 **the written AI-use policy is itself the billable item in
+   several jurisdictions.** 🟢 **Ohio requires one per district** *(deadline `2026-07-01`, now
+   past)*; 🟢 **Oklahoma `SB 1734` requires one per district before 2027–28.**
+5. 🟢 **Evidence loop** — 🟢 **[`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit)
+   (MIT)** for mastery estimates, 🔴 **and a stated gap: there is still NO open-source harness
+   that evaluates the TUTOR**, so the evaluation design is bespoke.
+
+🔵 **Why this sequences well commercially:** 🟢 **steps 1 and 4 are short, funded by a compliance
+line, and produce the access needed for steps 2–3.**
+
+## 🆕 🟢 `P156-C` — the offline / data-residency build *(new, p156 — LATAM, EMEA-Africa, APAC emerging)*
+
+🔵 **The constraint UNESCO names as the real blocker:** 🔴 **policy frameworks are useless
+without reliable IT infrastructure, internet access and teacher training**, and 🔴 **parts of
+APAC and Africa are still meeting basic educational needs.**
+🟢 **Also the EMEA data-residency case, where Article 5 bans emotion inference in schools
+outright and a cloud round-trip is the compliance question.**
+
+🟢 **Every row MIT, every row runs with no internet:**
+
+| layer | repo | licence |
+|---|---|---|
+| Platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — offline-first by design | 🟢 **MIT** |
+| Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** |
+| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** |
+| Spaced repetition | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) — Anki as a tool surface | 🟢 **MIT** |
+| Mastery | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** |
+
+🟢 **Wiring:** 🟢 **Kolibri serves content on the LAN; `study-buddy` runs the tutor against a
+local Ollama model; `anki-mcp-server` holds the review schedule; `pykt-toolkit` runs the mastery
+model on the same box.** 🟢 **Sync to the cloud is optional and batched** — 🔵 **which is what
+makes it quotable under a data-residency requirement.**
+
+## 🆕 🟢 `P156-D` — verify the answer instead of generating it *(new, p156 — Global)*
+
+🔵 **The 2026 buyer demand is evidence of instructional benefit, and a generative tutor cannot
+produce it about its own correctness.** 🟢 **Two rows found this pass do something structurally
+different:**
+
+| repo | licence | what it verifies |
+|---|---|---|
+| 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 🔴 **AGPL-3.0** | 🟢 **Checks each STEP of a maths solution with **SymPy** and finds the root cause, then generates targeted practice.** 🟢 **Symbolic, so the verdict is not a model's opinion** |
+| 🟢 [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 **MIT** | 🟢 **Reinforcement learning picks the next action, **FSRS** picks the review time, and the LLM is used ONLY to write quizzes** |
+
+🟢 **The pattern:** 🟢 **put a DETERMINISTIC judge (SymPy, a unit test, a scheduler like FSRS)
+between the learner and the model**, 🟢 **and use the model only where its output is cheap to
+check.** 🔵 **This is also the cheapest architecture to run, because the model is off the hot
+path.**
+🔴 **Licence note:** 🔴 **`stem-tutor-agent` is AGPL-3.0** — 🟢 **read it for the SymPy
+step-checking approach and reimplement, or deploy it internally where AGPL's network clause is
+satisfied.** 🟢 **`Smart-Study-Agent` is MIT and can ship as-is.**
+
+## 🆕 🔴 `P156-E` — the licence gate that must run BEFORE any of the above *(new, p156 — Global)*
+
+🔴 **`17 of 80` rows on `topic:ai-tutor` cannot be used by a studio, and the topic page shows
+stars, language and description for all 17 without a hint of it.**
+
+🟢 **The gate, in order, each step cheap:**
+
+1. 🟢 **Fetch the licence BODY** on `raw.githubusercontent.com`. 🔴 **Never trust a badge** — this
+   shelf has a row whose badge contradicts its tree.
+2. 🟢 **Probe `COPYING*` too, not just `LICENSE*`** *(`P50`)*. 🔴 **`moodle/moodle` returns 404 on
+   six `LICENSE*` paths and keeps the GPL in `COPYING.txt`** — a `LICENSE*`-only sweep publishes
+   *"Moodle has no licence."*
+3. 🟢 **Classify on the WHOLE BODY, not the name line** *(`P48` + `T105`)*.
+   🔴 **`ZelinZhou-THU/stem-tutor-agent`'s file opens with a BOM and the line *"STEM Tutor
+   Agent"*, and is a full AGPL-3.0 text.**
+4. 🔴 **Treat `UNCLASSIFIED` as the finding, never as a default-to-MIT** *(`T104`)*.
+   🔴 **`Tzxser/aipha-learning-os` is 1 296 B — inside the MIT short-form band — and grants
+   NOTHING** (*"does not make the original AIpha source open source"*).
+   🔴 **`lilialla/bandwise` is PolyForm Noncommercial 1.0.0: *"SOURCE-AVAILABLE, not open
+   source"*, commercial use needs a separate licence.**
+5. 🟢 **Diff a suspicious preamble against UPSTREAM** *(`T116`)*. 🟢 **OpenEduCat's bundled-externals
+   carve-out is verbatim Odoo boilerplate with a dangling `COPYRIGHT` pointer** — 🟢 **one fetch
+   of `odoo/odoo/master/LICENSE` settles it.**
+6. 🔴 **Size proves nothing** *(`P44` refuted)*: measured collisions at **32 B** (MIT vs AGPL short
+   form), **138 B** (Apache vs ECL), **11 B** (GPL-3.0 vs AGPL-3.0).
+
+🔵 **Run this before a row enters a proposal, not after.**
+
 ## 🆕 🔴 `P48` — classify a licence by its NAME LINE; the body SIZE cannot tell the families apart *(new, p155 — Global)*
 
 🔵 **The problem this replaces.** `P44` step 4 told you to confirm a licence family by the

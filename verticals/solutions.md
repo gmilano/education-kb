@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 156 — 2026-10-12
+
+🟢 **`ACTION HB` DISCHARGED, and it REFUTED this shelf's own published claim about the row a
+studio is most likely to bill against.**
+🟢 **Every platform licence below is body-read this pass with the answering PATH recorded** —
+🔴 **and one of them is not where anyone would look.**
+
+### 🔴 CORRECTION — `openeducat_erp` does NOT admit to bundled non-conforming licences
+
+🔵 **p155 recorded OpenEduCat's `LICENSE` preamble as the SECOND instance of `T92`** *(a project
+admitting by its own words that it bundles externals under other licences)*, and warned a studio
+to read it before billing.
+🔴 **That reading is now REFUTED, exactly on `HB`'s registered falsifier.**
+[`evidence/openeducat-carveout.2026-10-12-p156.tsv`](../evidence/openeducat-carveout.2026-10-12-p156.tsv)
+
+| probe | result |
+|---|---|
+| 🟢 `openeducat_erp/master/LICENSE` | **200**, 8 241 B, LGPLv3. Carve-out sentence present: *"Some external libraries and contributions bundled with OpenEduCat may be publishedunder other GPL-compatible licenses."* |
+| 🆕 🔴 `odoo/odoo/master/LICENSE` | **200.** 🔴 **Carries the SAME SENTENCE VERBATIM, with only the project name changed**, and the same preceding line *"For copyright information, please see the COPYRIGHT file."* 🟢 **Odoo's copy has no typo; OpenEduCat's reads `publishedunder`** |
+| 🔴 `openeducat_erp/{master,18.0,17.0}/COPYRIGHT` | 🔴 **404, 404, 404.** 🔴 **The pointer in line 1 of its own licence is DANGLING on all three branches** |
+| 🔴 `NOTICE`, `AUTHORS`, `openeducat_core/static/src/lib/LICENSE` | 🔴 **404 on every path.** 🔴 **No bundled non-LGPL notice found anywhere probed** |
+
+🟢 **Verdict: the carve-out is INHERITED ODOO BOILERPLATE, copied with a transcription defect,
+pointing at a file OpenEduCat never added.** 🟢 **It is not a statement about OpenEduCat's own
+tree.** 🟢 **`T92`'s second instance is CLOSED, and `T92` returns to resting on one real
+observation — `scibly`'s proprietary `ee/` directory.**
+🟢 **Two further things worth a studio's attention:** 🟢 **the carve-out is bounded to
+*"GPL-COMPATIBLE"* licences, so even if it were live it could not introduce a proprietary
+term** — 🔴 **and OpenEduCat is a module set that RUNS ON Odoo, so the inherited sentence is
+about Odoo's bundle, which the deployment does include.**
+🆕 **`T116`** — 🔴 **a licence preamble inherited from an upstream framework describes the
+UPSTREAM's bundle, not the fork's**, 🟢 **and the way to tell is to diff it against upstream,
+which costs one fetch.**
+
+### 🟢 The platform shelf — licence, path, and the integration consequence
+
+| platform | licence *(body-read, p156)* | path | what it is | how to put AI on it |
+|---|---|---|---|---|
+| 🔴 [**Moodle**](https://github.com/moodle/moodle) | 🔴 **GPL** *(35 147 B)* | 🆕 **`COPYING.txt`** | 🟢 **The most-deployed open-source LMS.** Vendor self-reports 400M+ users, 150k+ sites | 🟢 **Plugin boundary + LTI 1.3.** 🔴 **Do not fork and resell** |
+| 🔴 [**Open edX**](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** *(35 136 B)* | `LICENSE` | 🟢 **The MOOC platform; course-centric at scale** | 🔴 **AGPL reaches hosted derivatives.** 🟢 **Integrate as a separate service over REST/LTI, never in-process** |
+| 🟡 [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** *(11 120 B)* | `LICENSE` | 🟢 **Institutional, built for university consortia** | 🟢 **Permissive (Apache-derived). Fork freely** |
+| 🟢 [**OpenOLAT**](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** *(10 982 B)* | `LICENSE` | 🟢 **Full institutional LMS, permissive, with a patent grant** | 🟢 **The cleanest fork target of any LMS on this shelf** |
+| 🟢 [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **MIT** *(1 097 B)* | `LICENSE` | 🟢 **Offline-first, built for low/no connectivity** | 🟢 **MIT. 🔵 The LATAM / Africa infrastructure play, and UNESCO's own caution names exactly its market** |
+| 🟢 [**Mentingo**](https://github.com/Selleo/mentingo) | 🟢 **MIT** *(1 062 B)* | `LICENSE` | 🟢 **The only MIT-licensed LMS on this shelf.** 🟡 **EMEA — Poland** *(`P36`, verified profile)* | 🟢 **Fork freely.** 🔴 **Still unassessed on data model and multi-tenancy** |
+| 🔴 [**BigBlueButton**](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** *(7 652 B)* | `LICENSE` | 🟢 **Virtual classroom: WebRTC, whiteboard, breakouts, recording** | 🟡 **LGPL: link, don't modify.** 🟢 **The live-session capture surface** |
+| 🔴 [**H5P**](https://github.com/h5p/h5p-php-library) | 🔴 **GPL** *(35 146 B)* | `LICENSE.txt` | 🟢 **Interactive content types that drop into Moodle, Open edX and Canvas** | 🟢 **Generate H5P content with AI; the generator stays outside the GPL boundary** |
+| 🔴 [**Chamilo**](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL** *(35 147 B)* | `LICENSE` | 🟢 **Lightweight LMS with real francophone and LATAM public-sector deployment** | 🟢 **LTI + plugin** |
+| 🔴 [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL** *(35 147 B)* | `LICENSE` | 🟢 **Institutional LMS, strong in German-speaking EMEA** | 🟢 **LTI + plugin** |
+| 🔴 [**OpenEduCat**](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** *(8 241 B)* | `LICENSE` | 🟢 **Education ERP on Odoo: admissions, fees, library, hostel, exams** | 🟢 **LGPL + Odoo module boundary. 🔵 The ERP/SIS row, closest analogue to Odoo-for-education** |
+| 🔴 [**Frappe Education**](https://github.com/frappe/education) | 🔴 **GPL-3.0**, 🔴 **from a 19 B stub** | `license.txt` | 🟢 **Education module on the Frappe/ERPNext stack** | 🔴 **The whole grant is `License: GNU GPL V3`; `-only` vs `-or-later` is UNANSWERABLE** |
+| 🟡 **Canvas LMS** | 🟡 **open core, commercial** *(not body-read this pass)* | — | 🟢 **Dominant in US higher ed** | 🟢 **LTI 1.3 + its REST API. 🔵 Two `canvas-mcp` connectors already on this shelf, both MIT** |
+
+🟢 **Permissive and forkable: `OpenOLAT` (Apache-2.0), `Kolibri` (MIT), `Mentingo` (MIT),
+`Sakai` (ECL-2.0) — four of twelve body-read rows.**
+🔴 **Eight are copyleft, and the two with the largest installed bases are the GPL and AGPL
+rows.**
+
+### 🔵 The one structural recommendation this page supports
+
+🟢 **Do not fork the LMS. Compose beside it.**
+🔴 **Moodle's GPL and Open edX's AGPL turn a resold derivative into a source-disclosure event**,
+and 🟢 **every client already runs one of them.** 🟢 **An MIT or Apache-2.0 agent that reaches the
+LMS over **LTI 1.3**, **MCP** or **REST** carries none of those obligations** — 🔵 **and that is
+the same architecture in all five regions, which is why it is worth saying once here rather than
+four times in `intel/market.md`.** 🟢 **See `compose/patterns.md` `P156-A`.**
+
+
 ## Pass 155 — 2026-10-12
 
 🔴 **A load-bearing claim on this page is WRONG and is corrected here.** This shelf has said

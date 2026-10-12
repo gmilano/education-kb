@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 156 — 2026-10-12
+
+🟢 **Every licence on this page is now read from a BODY on `raw.githubusercontent.com`, this
+pass, with the PATH that answered recorded next to it.**
+🔴 **And the pass found the reason a licence sweep lies: the most-deployed LMS in the world does
+not keep its licence in a file called `LICENSE`.**
+[`evidence/foundations-licences.2026-10-12-p156.tsv`](../evidence/foundations-licences.2026-10-12-p156.tsv)
+
+### 🆕 🔴 `P50` — probe `COPYING*` before concluding a repository has no licence
+
+🔴 **`moodle/moodle` returned `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`,
+`COPYING` and `license`, across both `main` and `master`.** 🟢 **Its licence is at
+`COPYING.txt` — `35 147 B`, the full GNU GPL text.**
+🔴 **A sweep that stopped at `LICENSE*` would have published *"Moodle: no licence file"***, which
+is 🔴 **both false and the single most damaging error this shelf could make**, since Moodle is
+the row most engagements start from.
+🆕 **`T109`** — 🟢 **a licence-absence claim is a claim about the PATHS PROBED, and it is only as
+strong as that list.** 🟢 **`P50` therefore requires the probe list to be published with the
+verdict**, which this page now does.
+
+### 🟢 The foundational layer, licence read from the body this pass
+
+| repo | licence *(body-read)* | path that answered | bytes | what it is, and the licence consequence |
+|---|---|---|---|---|
+| 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | `LICENSE` | 1 066 | 🟢 **Knowledge tracing: DKT, AKT, SAKT and more on standard datasets.** 🟢 **MIT, so the learner model can ship inside a client product.** 🔵 **The one row on this shelf that answers *"how do you know the student knows it?"*** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | `LICENSE` | 1 097 | 🟢 **Offline-first learning platform built for low/no-connectivity deployment.** 🟢 **MIT.** 🔵 **The LATAM and Africa infrastructure row — and the UNESCO IESALC finding below is exactly its market** |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | `LICENSE` | 10 982 | 🟢 **A full institutional LMS under a PERMISSIVE licence with a patent grant.** 🔵 **The copyleft-free LMS route — confirmed again this pass** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | `LICENSE` | 1 062 | 🟢 **The only MIT-licensed LMS on this shelf.** 🟡 **EMEA — Poland** *(`P36`, verified owner profile, this pass)*. 🔴 **Still unassessed beyond licence, ★ and region** |
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL** | 🆕 **`COPYING.txt`** | **35 147** | 🟢 **The most-deployed open-source LMS; vendor reports 400M+ users, 150k+ sites** *(self-reported)*. 🔴 **GPL: a distributed derivative must ship source.** 🟢 **Plugin-boundary work is the normal commercial route** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | `LICENSE` | 35 136 | 🔴 **AGPL — network use counts, so a hosted derivative triggers disclosure.** 🟡 **The most common MOOC platform and the most restrictive licence in this table** |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** | `LICENSE` | 11 120 | 🟢 **Educational Community License 2.0 — an Apache-2.0 derivative, permissive, built for university consortia.** 🔵 **Permissive route #2** |
+| 🔴 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** | `LICENSE` | 7 652 | 🟢 **The virtual-classroom layer: WebRTC, whiteboard, breakouts, recording.** 🟡 **LGPL — linking is fine, modifying the library is not free** |
+| 🔴 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL** | `LICENSE.txt` | 35 146 | 🟢 **Interactive content types that drop into Moodle, Open edX and Canvas.** 🔵 **The content layer, not a platform** |
+| 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL** | `LICENSE` | 35 147 | 🟢 **Lightweight LMS with real deployment in francophone and LATAM public education** |
+| 🔴 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL** | `LICENSE` | 35 147 | 🟢 **Institutional LMS, strong in German-speaking EMEA** |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0**, 🔴 **from a 19 B stub** | `license.txt` | **19** | 🔴 **The whole grant is the string `License: GNU GPL V3`.** 🔴 **`pyproject.toml` carries NO licence field**, so 🔴 **the `-only` / `-or-later` question has no surface at all** *(carried from p155, unchanged)* |
+
+🟢 **Twelve rows, twelve bodies read, twelve paths recorded.**
+🟢 **Permissive and safe to build on: `pykt-toolkit` (MIT), `kolibri` (MIT), `OpenOLAT`
+(Apache-2.0), `mentingo` (MIT), `sakai` (ECL-2.0) — five of twelve.**
+🔴 **Seven of twelve are copyleft**, and 🔴 **the two platforms a client is most likely to already
+run — Moodle and Open edX — are the GPL and AGPL rows.**
+
+### 🔵 What this means for a studio, stated once
+
+🟢 **The engagement shape that survives this licence table is the SAME in every region:**
+🟢 **leave the LMS alone and compose beside it.** 🔴 **Moodle's GPL and Open edX's AGPL make a
+forked, resold platform a disclosure event**; 🟢 **an MIT/Apache agent that talks to the LMS over
+LTI, MCP or REST carries none of it. See `compose/patterns.md` `P156-A`.**
+
+### 🔴 Open on this page
+
+- 🔴 **No star count for ANY row above — a THIRD unreached pass.** 🟢 **The rendered topic page
+  can serve it; nothing else is blocking.**
+- 🔴 **`mentingo` still unassessed on data model and multi-tenancy** — the only MIT LMS.
+- 🔴 **No credentialing or skills-pathway repository, in 156 passes**, against a 2026 trend
+  source that names digital credentials as a live buyer demand.
+- 🔴 **No evaluation harness.** 🟢 **`pykt-toolkit` is the nearest thing and it models learners,
+  it does not evaluate a tutor.**
+
+
 ## Pass 155 — 2026-10-12
 
 🟢 **`ACTION GQ` DISCHARGED — and it REFUTES a warning this shelf has published for two

@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 156 — 2026-10-12
+
+🟢 **`ACTION HF` DISCHARGED: 80 more `ai-tutor` rows read, 80 licence bodies read, and this
+shelf finally has a licence DISTRIBUTION instead of a top-20 impression.**
+🔴 **The headline is not MIT's share. It is that `17 of 80` rows — `21.3%` — CANNOT BE USED BY A
+STUDIO**, and 🔴 **neither the star count nor the topic page shows it.**
+🟢 **`ACTION HA` DISCHARGED, falsifier SILENT at exactly its boundary: 3 of 21 rows placed.**
+🔴 **And the pass's own negative control refuted the owner-string shortcut on the first row it
+was aimed at.**
+
+### 🆕 🔴 The finding: one in five repositories on the cleanest education topic has no grant
+
+🟢 **`95` of `685` `ai-tutor` rows are now read** — p155's first 20, this pass's next 80, star-
+descending across pages 2–5.
+[`evidence/licence-distribution.2026-10-12-p156.tsv`](../evidence/licence-distribution.2026-10-12-p156.tsv)
+
+| licence, over p156's 80 rows | count | share | what it means for an engagement |
+|---|---|---|---|
+| 🟢 **MIT** | **50** | **62.5%** | 🟢 Build on it |
+| 🟢 **Apache-2.0** | **10** | **12.5%** | 🟢 Build on it — patent grant included |
+| 🔴 **NO LICENCE FILE AT ALL** | **15** | 🔴 **18.8%** | 🔴 **Default all-rights-reserved. Not open source. Unusable, however permissive the topic looks** |
+| 🔴 **AGPL-3.0** | **3** | 3.8% | 🟡 Network use triggers disclosure — viable only for an internal deployment |
+| 🔴 **Source-available, NOT open source** | **2** | 2.5% | 🔴 **Named `LICENSE` file, no open-source grant. See below** |
+
+🟢 **Permissive total: `60 of 80` = `75%`.** 🔴 **Legally unusable total: `17 of 80` = `21.3%`.**
+
+### 🆕 🔴 `P49` — a file named `LICENSE` is not evidence of a licence, and the NAME LINE cannot tell you
+
+🔴 **Two rows fell through `P48`'s name-line classifier into `UNCLASSIFIED`. Both turned out to
+be deliberate non-open-source grants**, and 🔴 **both defeat `P48` by the same mechanism: the
+first line of the body is the PROJECT's name, not a licence's name.**
+
+| row | ★ | bytes | name line | what the body actually grants |
+|---|---|---|---|---|
+| 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 5 | 1 296 | *"AIpha Source-Available Competition and Portfolio License"* | 🔴 **A bespoke licence. Its own words: *"Public visibility does not make the original AIpha source open source and does not grant a general copyright license."*** 🔴 **No copying, redistribution, sublicensing, commercial use or derivative works.** 🔵 Judges and competition organisers only |
+| 🔴 [`lilialla/bandwise`](https://github.com/lilialla/bandwise) | 4 | 5 489 | *"Bandwise — IELTS Coach for Claude Code"* | 🔴 **PolyForm Noncommercial 1.0.0**, `SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0`. Its own words: *"This software is SOURCE-AVAILABLE, not open source."* 🔴 **ANY commercial use needs a separate licence from the author** |
+
+🆕 **`T104`** — 🔴 **`UNCLASSIFIED` is the VALUABLE bucket of a licence sweep, not its failure
+mode.** 🟢 **Both of these rows were caught *because* they matched nothing**; a classifier that
+guessed a family from size, or fell back to *"probably MIT"* on a ~1 KB body, would have
+published both as permissive. 🔴 **`Tzxser/aipha-learning-os`'s body is 1 296 B — squarely
+inside the MIT short-form band this shelf measured at 1 065–1 102 B.**
+
+🆕 **`T105`** — 🟡 **`P48` needs a second pass over the whole body, not line 1.**
+🟢 **Demonstrated on a third row:** [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent)'s
+`LICENSE` opens with a BOM and the line *"STEM Tutor Agent"*, 🟢 **and is a full 35 211 B
+AGPL-3.0 text.** 🟢 **The body scan classified it correctly; the name line alone would not have.**
+
+### 🟢 `ACTION HF`'s falsifier, judged
+
+🔵 **Registered condition:** *"Refuted if MIT's share in the next 80 differs from the first 20 by
+more than 20 points."* 🟡 **p155 predicted MIT would FALL.**
+
+| cohort | basis | MIT share |
+|---|---|---|
+| p155, first 15 new rows | all rows | **66.7%** *(10 of 15)* |
+| 🆕 p156, next 80 rows | all rows | **62.5%** *(50 of 80)* |
+| | | 🟢 **−4.2 points → NOT REFUTED** |
+| p155, first 15 | rows with a classifiable OSI grant | **71.4%** *(10 of 14)* |
+| 🆕 p156, next 80 | rows with a classifiable OSI grant | **79.4%** *(50 of 63)* |
+| | | 🔴 **+8.0 points — the direction FLIPS** |
+
+🟢 **Verdict: NOT REFUTED on either basis, both far inside the 20-point gate.**
+🟡 **p155's directional prediction is CONFIRMED on the all-rows basis and REFUTED on the
+licensed-rows basis.** 🆕 **`T106`: for a share statistic, the DENOMINATOR decides the
+direction** — 🔴 **so a pass that predicts a direction without naming its denominator has not
+made a falsifiable prediction.** 🟢 **Both bases are published above rather than the one that
+flatters the prediction.**
+
+### 🟢 The permissive rows worth an engagement — read, not padded
+
+🟢 **Every row below: licence read from a body on `raw.githubusercontent.com` this pass, star
+count from the rendered topic page the same hour.** 🔴 **All are UNPLACED unless a region is
+stated with its evidence.**
+
+| repo | licence *(body-read)* | ★ | lang | what it is |
+|---|---|---|---|---|
+| 🆕 🟢 [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 **NO LICENCE FILE** | **63** | Python | 🔴 **The topic's #1 row on page 2 has no grant.** Six specialised agents — roadmaps, quizzes, tutoring, RAG document Q&A — on Phidata + Streamlit + LangChain. 🔵 **Read it for the architecture; do not ship it** |
+| 🆕 🟢 [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 **MIT** | **58** | JavaScript | 🟢 **The most interesting design on this page: reinforcement learning picks the action, FSRS picks the review time, and the LLM is used ONLY to write quizzes.** Chrome extension + Anki export + MCP server + Ollama |
+| 🆕 🟢 [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 🟢 **MIT** | **56** | TypeScript | Learning-path engine: clarifies the goal by dialogue, generates a path, runs turn-based teaching, tracks review and **cognitive load**. Self-hostable |
+| 🆕 🟢 [`InfinityZero3000/LexiLingo`](https://github.com/InfinityZero3000/LexiLingo) | 🟢 **MIT** | **49** | Python | Language tutor on a *"Trace-CAG pipeline"* for pedagogical feedback |
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, 1 073 B | **45** | Go | 🟢 **An MCP server that turns any LLM into an Intelligent Tutoring System, grounded in cognitive science.** 🔵 **The cleanest composition surface on the shelf — see `compose/patterns.md`** |
+| 🆕 🟢 [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | 🔴 **NO LICENCE FILE** | **43** | Python | 🟡 **EMEA — Germany** *(`P36`, owner profile: LAION AI, non-profit, verified `laion.ai`)*. Voice-assistant framework with pluggable educational skills. 🔴 **A named non-profit shipping no grant is the most surprising row of the sweep** |
+| 🆕 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 **MIT** | **36** | PowerShell | Interactive tutor **built as an agent skill** — spaced repetition, personalised project examples, visual progress dashboard. 🔵 `T98` again |
+| 🆕 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **MIT** | **31** | Python | 🟢 **Agentic RAG tutor on LangGraph (FastAPI + Next.js) over a curated course corpus.** 🔵 **The reference implementation for "tutor over OUR content"** |
+| 🆕 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 🟢 **MIT** | **20** | TypeScript | 🟢 **Fully offline Electron tutor on local Ollama/Llama — no internet.** 🔵 **The row to quote for a data-residency or low-connectivity engagement** |
+| 🆕 🟢 [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **MIT**, 1 094 B | **17** | Python | Knowledge graph + local LLM + Bayesian skill tracking, IRT/BKT mastery, privacy-first RAG. 🔴 **CORRECTION, see below** |
+| 🆕 🟢 [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | 🟢 **MIT** | **8** | Rust | Offline adaptive desktop app: spaced repetition, terminal labs, bring-your-own-key |
+| 🆕 🔴 [`grey8-io/learn-ai-with-grey8`](https://github.com/grey8-io/learn-ai-with-grey8) | 🔴 **AGPL-3.0**, 34 523 B | **10** | Python | Self-paced AI bootcamp with a local LLM tutor, 15 projects. 🔴 **AGPL — network use counts** |
+| 🆕 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 🔴 **AGPL-3.0**, 35 211 B | **7** | Python | 🟢 **Step-level checking of a student's maths with SymPy, then targeted practice** — 🟢 **the only row on the shelf that VERIFIES work symbolically rather than asking a model.** 🔴 **AGPL, and its own page calls it a course final project** |
+
+🔴 **CORRECTION, carried from an earlier cycle of this shelf:**
+`MysterionRise/adaptive-knowledge-graph` was recorded in `education_cycle3` as
+**`Apache2, ~350★`**. 🟢 **Both values are wrong.** 🟢 **Measured this pass: `MIT` from a
+1 094 B body, and `17★` on the rendered topic page.** 🔴 **A 20× star error and a wrong licence
+family, on a row this shelf has published for three cycles.**
+
+### 🟢 `ACTION HA`'s falsifier, judged — and the shortcut it killed
+
+🔵 **Registered condition:** *"Refuted if fewer than 3 of 21 rows yield institutional-host
+evidence."* 🟢 **Exactly 3 reached. SILENT — at its boundary, which is worth saying plainly.**
+[`evidence/region-institutional-evidence.2026-10-12-p156.tsv`](../evidence/region-institutional-evidence.2026-10-12-p156.tsv)
+
+| owner | institutional evidence, quoted from the profile | stated location | region |
+|---|---|---|---|
+| 🟢 [`HKUDS`](https://github.com/HKUDS) | *"Data Intelligence Lab@HKU"*, bio *"Welcome to the Data Intelligence Lab @ HKU!"* | **Hong Kong** | 🟢 **APAC** |
+| 🟢 [`LAION-AI`](https://github.com/LAION-AI) | *"a non-profit organization to liberate machine learning research, models and datasets"*, verified `laion.ai` | **Germany** | 🟢 **EMEA** |
+| 🟢 [`Selleo`](https://github.com/Selleo) | verified organization, *"Creating software for your product vision"*, `selleo.com` | **Poland** | 🟢 **EMEA** |
+
+🟢 **p155 predicted NOT REFUTED on `DeepTutor` (HKUDS), `flysheep-ai` and `Selleo`.**
+🟢 **Two of the three named rows carried it.** 🔴 **`flysheep-ai` was NOT reached** — its profile
+was never read, so its APAC label remains what p155 called it: a description-language guess, not
+a `P36` placement.
+
+🔴 **The negative control, and it fired on the first row:**
+🟢 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) —
+the owner string ends in the token **`-THU`**, which a word-boundary matcher accepts and which
+reads as Tsinghua University. 🔴 **Its own repository page names NO institution**; the only
+affiliation-like sentence is *"Built by ZelinZhou-THU — a course final project."*
+🟢 **So the row stays UNPLACED**, and `yudongfang-thu/PrepDojo` is refused on the same ground.
+🆕 **`T107`** — 🔴 **a university token in an owner string is not institutional evidence; it is a
+person telling you where they study, in a field the platform does not validate.**
+🆕 **`T108`** — 🟢 **the three rows that PLACED are all ORGANIZATION-owned, and every row that
+failed to place is INDIVIDUAL-owned.** 🟢 **Region is a property of the owner's TYPE before it is
+a property of the repository** — 🔵 **which means this shelf should stop trying to place
+individual-owner rows at all, rather than failing to place them once per pass.**
+
+### 🔴 What this page still cannot do, after p156
+
+- 🔴 **590 of 685 `ai-tutor` rows remain unread.** 🟢 **95 read, and the population GREW 684 → 685
+  within the hour between p155 and p156** — 🔵 **so the denominator moves while it is counted.**
+- 🔴 **15 rows carry no grant and 2 are source-available; none of the 17 has been re-probed on a
+  non-default branch.** 🟡 **A `LICENSE` on `gh-pages` would change a verdict.**
+- 🔴 **`flysheep-ai`, and the 44 connector rows, are still unplaced and unaudited.**
+- 🔴 **No star count for any platform or foundational row** — unreached for a THIRD pass.
+
+
 ## Pass 155 — 2026-10-12
 
 🟢 **The PUBLIC topic page is a discovery AND star channel, and it needs no credentials.**

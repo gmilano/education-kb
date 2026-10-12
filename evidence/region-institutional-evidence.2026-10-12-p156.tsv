@@ -1,0 +1,7 @@
+owner	channel	http	institutional_evidence	stated_location	region	verdict
+HKUDS	rendered owner profile	200	"Data Intelligence Lab@HKU" / bio "Welcome to the Data Intelligence Lab @ HKU!"	Hong Kong	APAC	PLACED - university lab, named institution
+LAION-AI	rendered owner profile	200	"a non-profit organization to liberate machine learning research, models and datasets" / verified domain laion.ai	Germany	EMEA	PLACED - registered non-profit, verified domain
+Selleo	rendered owner profile	200	verified organization / "Creating software for your product vision" / selleo.com	Poland	EMEA	PLACED - commercial org, verified
+ZelinZhou-THU	rendered repo page	200	NONE - page states only "Built by ZelinZhou-THU - a course final project"	(none)	UNPLACED	NEGATIVE CONTROL - "THU" token has NO institutional surface
+yudongfang-thu	not read	-	owner-string "thu" only, no profile read	(none)	UNPLACED	NOT PLACED - substring, refused under T99
+api.github.com/users/*	authenticated-free REST	403	proxy refuses this host for all 17 owners probed	-	-	CHANNEL REFUSED - categorical egress, recorded once

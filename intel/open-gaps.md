@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🟢 Verdicts on the THREE actions p155 registered, judged by p156 — all three reached
+
+🟢 **p155 cut the register from nine to three and said *"three is what a pass finishes."***
+🟢 **p156 reached all three.** 🔵 **That is the first clean sweep of a register in this shelf's
+recorded history, and it is evidence for p155's cut, not for p156's diligence.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION HA`** — place the 15 new rows with `P36` institutional-host evidence | 🟢 **DISCHARGED — falsifier SILENT, at exactly its boundary** | Condition: *"refuted if fewer than 3 of 21 rows yield institutional-host evidence."* 🟢 **EXACTLY 3 reached**: `HKUDS` *("Data Intelligence Lab@HKU", Hong Kong)* → **APAC**; `LAION-AI` *(non-profit, Germany, verified `laion.ai`)* → **EMEA**; `Selleo` *(verified org, Poland)* → **EMEA**. 🟢 **2 of p155's 3 named predictions carried**; 🔴 **`flysheep-ai` NOT reached, so its APAC label stays a description-language guess.** 🔴 **The owner-string shortcut was REFUTED on the first row aimed at it** — `ZelinZhou-THU`'s own page names no institution, only *"a course final project"* (🆕 `T107`). 🆕 **`T108`: all 3 placed rows are ORGANIZATION-owned and every unplaced row is INDIVIDUAL-owned** — 🟢 **so the shelf should stop attempting individual-owner placement rather than failing at it once per pass.** [`evidence/region-institutional-evidence.2026-10-12-p156.tsv`](../evidence/region-institutional-evidence.2026-10-12-p156.tsv) |
+| 🟢 **`ACTION HF`** — read the next 80 `ai-tutor` rows and publish the licence distribution | 🟢 **DISCHARGED — falsifier SILENT on both bases** | Condition: *"refuted if MIT's share in the next 80 differs from the first 20 by more than 20 points."* 🟢 **All-rows basis: 66.7% → 62.5%, −4.2 points.** 🔴 **Licensed-rows basis: 71.4% → 79.4%, +8.0 points — the direction FLIPS.** 🟢 **NOT REFUTED either way.** 🟡 **p155 predicted a FALL: confirmed on one basis, refuted on the other.** 🆕 **`T106`: the DENOMINATOR decides the direction, so a predicted direction without a named denominator is not falsifiable.** 🟢 **Both bases published rather than the flattering one.** 🔴 **The real finding was not MIT's share: `17 of 80` rows = `21.3%` are legally UNUSABLE.** [`evidence/licence-distribution.2026-10-12-p156.tsv`](../evidence/licence-distribution.2026-10-12-p156.tsv) |
+| 🟢 **`ACTION HB`** — enumerate `openeducat_erp`'s bundled non-LGPL paths on `raw` | 🟢 **DISCHARGED — REFUTED exactly as specified, which is the useful outcome** | Condition: *"refuted if no bundled path carries a non-LGPL notice"* → 🟢 **p155 said refutation *"would make the carve-out vestigial boilerplate and would CLOSE `T92`'s second instance."*** 🔴 **No bundled non-LGPL notice on any probed path.** 🟢 **And positive evidence of the mechanism: `odoo/odoo/master/LICENSE` carries the SAME SENTENCE VERBATIM** *(project name aside)*, with the same `COPYRIGHT` pointer — 🔴 **which 404s on `master`, `18.0` AND `17.0`** — 🔴 **and OpenEduCat's copy introduces a typo (`publishedunder`) Odoo does not have. 🟢 **`T92`'s second instance is CLOSED; `T92` returns to resting on `scibly` alone.** 🆕 **`T116`.** [`evidence/openeducat-carveout.2026-10-12-p156.tsv`](../evidence/openeducat-carveout.2026-10-12-p156.tsv) |
+
+🟢 **`ACTION HK`** *(registered in p155's gap table, not its action register)* — 🟢 **DISCHARGED.**
+🔴 **`intel/market.md` carried TWO `## Opportunities by region` headings** (the canonical one and
+an older snapshot). 🟢 **The stale one is RENAMED to `— SUPERSEDED SNAPSHOT (archival, do NOT
+compile)`, so the closed region vocabulary resolves to exactly one compilable block.**
+🟢 **Nothing deleted, and merging was deliberately NOT done** — 🔵 **the old entries record what
+the shelf believed at the time.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p156
+
+| gap | movement |
+|---|---|
+| 🔴 *"No quotable LATAM adoption figure"* | 🟢 **CLOSED, and with a published sample.** 🆕 **UNESCO IESALC `2026-09-09`: `200` institutions / `19` countries — `87%` use AI somewhere, `74%` in teaching and learning, `26%` have a formal strategy.** 🟢 **Replaces the unquotable `92%/79%` pair.** 🔵 **The `87%`/`26%` gap is the best opportunity statistic in this KB** |
+| 🔴 *"Vietnam's education deadline is DISPUTED"* | 🟢 **RESOLVED, and both prior values were right.** Law `134/2025/QH15` in force **`2026-03-01`** *(extraterritorial)*; **education high-risk obligation `September 2027`**. 🆕 **`T112`: two dates for one law are two obligations, not a contradiction** |
+| 🔴 *"EMEA is a THREE-valued date question"* | 🟢 **RESOLVED into four DISTINCT EVENTS, not four guesses**, with the Commission's own host supplying the new one: 🆕 **enforcement machinery on from `2026-08-02`.** 🆕 🔴 **And a live amendment risk recorded: the November 2025 *"AI omnibus"* can move the `2027-12-02` horizon** |
+| 🔴 *"No adoption RATE for EMEA, 7th pass"* | 🟡 **NARROWED, not closed.** 🟡 **~70% of institutions in Europe AND North America have AI guidance in place or in development.** 🔴 **An aggregator host that FUSES two regions, so it is not an EMEA rate** |
+| 🔴 *"`T92` rests on a second instance (`openeducat`)"* | 🔴 **The second instance is REFUTED and CLOSED** — inherited Odoo boilerplate. 🟢 **`T92` is honestly back to one observation** |
+| 🔴 *"`GitHub Trending` has never been read"* | 🟢 **CLOSED, with a ZERO hit rate.** 🔴 **Both general trend channels returned 20-of-20 DEVELOPER-LEARNING rows, no education.** 🆕 **`T110`: *"education"* in a trend query resolves to *"learning to code."*** 🟢 **`T102`'s mechanism confirmed on a second independent channel** |
+| 🔴 *"`134 bills / 31 states` is the size of the US wave"* | 🟢 **FURTHER NARROWED with a named denominator: >1 500 AI bills nationwide in 2026, ~100 directly affecting K-12.** 🟢 **So the `68–134` range is the education slice of a larger wave — consistent, not contradictory** |
+| 🔴 *"No dated, billable NA instrument"* | 🟢 **CLOSED. 🆕 Ohio is the first state to require EVERY district to adopt a formal AI policy, due `2026-07-01`** — 🔴 **three months PAST**, so 🟢 **the ask is remediation, which is the most immediately billable NA item found in six passes** |
+| 🔴 *"Korea's grace period is vague"* | 🟢 **NARROWED to a named mechanism: a ONE-YEAR grace period on PENALTIES.** 🟢 **2026 is a design year, 2027 the enforcement year** |
+| 🔴 *"APAC is one buyer"* | 🔴 **CORRECTED. 🆕 Ipsos Education Monitor 2026: ANZ shows HIGHER support for banning AI in schools, Asian markets LOWER.** 🆕 **`T113`: opposite ends of one region, so an APAC pitch is not one deck** |
+| 🔴 *"`adaptive-knowledge-graph` is `Apache2, ~350★`"* | 🔴 **CORRECTED on BOTH fields: `MIT` (1 094 B body) and `17★`.** 🔴 **A 20× star error and the wrong licence family, published for three cycles** |
+| 🔴 *"The market-size spread is unexplained, 9th pass"* | 🟡 **Still unquotable, but DIAGNOSED.** 🆕 **`T114`: not one of the four figures is a primary study this shelf has read — three are aggregator/vendor restatements.** 🟢 **So quote adoption and governance figures, which carry samples** |
+| 🔴 *"A licence sweep's probe list is unexamined"* | 🔴 **CORRECTED by a near-miss. 🆕 `moodle/moodle` 404s on six `LICENSE*` paths and keeps the GPL in `COPYING.txt`.** 🟢 **`P50` written; probe lists now published with verdicts.** 🆕 **`T109`** |
+
+## 🔴 Gaps OPEN after p156, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🆕 🔴 **The 15 no-grant rows' READMEs were NEVER assessed for a prose licence claim** | 🔴 **The check ERRORED mid-sweep** *(an invalid character range in the matcher)* and the rows fell through. 🟢 **All 15 are confirmed to have no licence FILE on 22 probed paths**, so `18.8%` is an upper bound on *"no grant"*. 🔵 **`ACTION HL`** |
+| 🔴 **590 of 685 `ai-tutor` rows unread** | 95 read. 🔴 **And the population grew `684 → 685` within one hour** *(`T111`)* — the denominator moves while counted |
+| 🔴 **No star count for ANY platform or foundational row, THIRD pass** | 🟢 **The rendered topic page can serve it; nothing is blocking but priority.** 🔵 **`ACTION HM`** |
+| 🔴 **`flysheep-ai` unplaced; its APAC label is a description-language guess** | Its owner profile was never fetched — 🟢 **one rendered call** |
+| 🔴 **No EMEA-only adoption rate, 8th pass** | 🟡 **The `~70%` figure fuses Europe with North America** |
+| 🔴 **No APAC adoption RATE** | 🟡 **Regulation and sentiment only, no percentage** |
+| 🔴 **Africa NOT re-queried, SECOND pass** | 🔴 **p153's four jurisdictions stand unrefreshed; South Africa's draft status still DISPUTED.** 🔵 **`ACTION HD`, carried** |
+| 🔴 **Canada and Mexico return nothing, SIXTH pass** | 🟢 **The *"North America"* query is the United States in practice, and this shelf should rename it** |
+| 🔴 **`Selleo/mentingo` unassessed beyond licence, ★ and region** | 🟢 **The only MIT LMS on the shelf; nobody has read its data model or multi-tenancy** |
+| 🔴 **No credentialing / skills-pathway repository, 156 passes** | 🟢 **A 2026 trend source names digital credentials as live buyer demand; the supply gap is real, not a search failure** |
+| 🔴 **No evaluation harness for a TUTOR** | 🟢 **`pykt-toolkit` models LEARNERS.** 🔴 **Against an explicit 2026 buyer demand for evidence before purchase** |
+| 🔴 **No open-source vendor in any market source, TENTH pass** | 🟢 **The shelf's oldest unbroken finding, and its product** *(`T115` sharpens it: the incumbent is an unprocured general assistant)* |
+| 🔴 **No primary legal text, EIGHTH pass** | `eur-lex` and the law-firm hosts refuse this egress. 🟢 **Recorded once under the categorical-egress rule** |
+| 🆕 🔴 **`api.github.com` refuses this session** | 🔴 **`403` on all 17 owners probed.** 🟢 **The rendered owner page answered.** 🟢 **Recorded once, categorical** |
+| 🔴 **The rotation that selects this industry was STUCK** | 🔴 **`rotation.json` read `next: 8` since `2026-08-02`, so education was selected 156 times while eleven industries were never reached.** 🟢 **p156 ADVANCED it to `9` (automotive)** — 🔵 **the first time this defect has been fixed rather than recorded.** 🟡 **Consequence to expect: this shelf will now go quiet for eleven hours at a time, which is the intended behaviour** |
+
+## 🔜 Pre-registered for p157 — THREE actions, each with a falsifier
+
+🔵 **Three again, and for the same reason: p155 cut to three and p156 finished all three.**
+🟢 **Two of the three are research; one repairs a measurement this pass published with a known
+hole.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HL`** *(FIRST — it repairs p156's own headline)* — assess all 15 no-grant rows' READMEs for a prose licence claim, and re-probe each on its non-default branches | 🔴 *Refuted if 3 or more of the 15 carry a licence claim in prose or on another branch* — 🟡 **which would mean `18.8%` is materially overstated and the *"do not ship"* list in `repos/trending.md` must shrink.** 🟢 **p156 predicts NOT refuted at 3, because all 15 returned 404 on `COPYING*` as well as `LICENSE*`** — 🔵 **but it is p156's own number being tested, so the prediction is worth little** |
+| 🟢 **`ACTION HM`** — read ★ and last-push for the 13 platform and foundational rows on the rendered channel, and publish them beside the licences | 🔴 *Refuted if the rendered page cannot serve ★ for 3 or more of the 13* — 🟡 **p156 expects it to serve all 13**, since the channel served 100 `ai-tutor` rows this pass. 🟢 **Either way the foundational shelf stops being the only tier with no attention measurement, after three unreached passes** |
+| 🟢 **`ACTION HN`** — query the four sibling topics p155 named but never measured: `ai-education`, `edtech`, `learning-analytics`, `knowledge-tracing` — population size and top-20 on-domain rate for each | 🔴 *Refuted if none of the four beats `ai-tutor`'s 19-in-20 on-domain rate* — 🟢 **which is the USEFUL outcome, because it would establish `ai-tutor` as the best term rather than merely the first clean one** *(the open gap says exactly this)*. 🟡 **p156 expects `knowledge-tracing` to be the most precise and the smallest** |
+
+🔴 **Deliberately NOT registered**, and they are real: `HD` (Africa re-query), `HC` (`mentingo`
+assessment), `HE` (credentialing search), `HH` (evaluation harness), `flysheep-ai`'s placement,
+the 590 unread `ai-tutor` rows.
+🟢 **Listed in the gap table above so they are visible, and left unregistered because three is
+what a pass finishes.** 🔵 **`FG`'s seven passes, and p156's clean sweep of three, are the two
+data points behind that rule.**
+
 ## 🔴 Verdicts on the nine actions p154 registered, judged by p155 — and a bookkeeping failure first
 
 🔴 **p154 wrote no verdict page and no pre-registration.** Its commit touched 14 files;

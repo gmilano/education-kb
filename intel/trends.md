@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 156 — 2026-10-12
+
+🟢 **Eight trends, each with the region it was observed in and the channel that returned it.**
+🔴 **Where a trend is an aggregator's claim rather than a sampled finding, it says so in the
+row.**
+
+### 1. 🟢 The governance gap overtook the adoption gap — *LATAM, strongest evidence on this shelf*
+
+🟢 **UNESCO IESALC, `2026-09-09`, `200` institutions, `19` countries: `87%` use AI somewhere,
+`74%` in teaching and learning, `26%` have a formal AI strategy.**
+🔵 **The trend is not *"adoption is rising."* It is that adoption ALREADY HAPPENED, informally,
+and the institution has no policy for what its staff are already doing.**
+🟢 **Corroborated one level down by TALIS 2024:** Brazil `56%`, Chile `55%`, Colombia `53%`,
+Costa Rica `52%` of secondary teachers, against an OECD average of `36%`.
+🔵 **Sellable shape: governance retrofit on an installed base, not a pilot.**
+
+### 2. 🆕 🟢 The default AI in education is a general assistant nobody procured — *Global*
+
+🟢 **IESALC names `ChatGPT`, `Copilot` and `Gemini` as the default entry point for teaching.**
+🆕 **`T115`.** 🔴 **So the incumbent is not an edtech vendor and cannot be displaced by a better
+tutor** — 🟢 **it is displaced, if at all, by an institutional layer that gives staff a sanctioned
+path with audit, data boundaries and curriculum grounding.**
+
+### 3. 🟢 From generic chatbots to purpose-built, governed tools — *Global, NA-weighted sourcing*
+
+🟢 **Multiple 2026 sources agree institutions are moving off generic chatbots toward
+education-specific platforms**, with the stated reason that 🔴 **teachers were spending the saved
+time on prompt-writing and fact-checking instead.**
+🟢 **2026 is described as *selective* AI acceleration: ethics, transparency, agentic use cases
+and demonstrated instructional benefit over broad personalisation claims.**
+
+### 4. 🟢 Agents, specifically multi-step agents, are the named 2026 development — *Global*
+
+🟢 **The frontier is described as moving from single prompts to multimodal systems and agents
+that carry out multi-step tasks** — planning a lesson sequence, drafting an assessment.
+🟢 **This shelf's own topic census is the evidence from the supply side:** 🟢 **`685` repositories
+carry `ai-tutor`, and `95` read rows are dominated by agent SKILLS rather than applications.**
+
+### 5. 🟢 Evidence before purchase — *Global*
+
+🟢 **Systems increasingly expect evidence that a product improves learning quality, persistence,
+well-being or job-relevant skills, grounded in research.**
+🔴 **And this shelf still has NO evaluation harness after 156 passes** — 🟢 **`pykt-toolkit`
+(MIT) models learners, it does not evaluate a tutor.**
+🔵 **The gap and the trend are the same fact: buyers want evidence and the open-source supply
+has no instrument to produce it.**
+
+### 6. 🆕 🟡 Digital credentials and skills-based hiring — *Global, and still unmet in open source*
+
+🟢 **2026 sources name digital credentials and a skills-driven ecosystem, pushed by shifting
+employer expectations and AI itself.**
+🔴 **156 passes have found NO credentialing or skills-pathway repository.** 🟢 **Recorded as a
+genuine supply gap rather than filled with an adjacent row.**
+
+### 7. 🆕 🔴 The regulatory clock is now a sequence of DIFFERENT obligations, not one date — *EMEA, APAC*
+
+🟢 **EMEA, four distinct events:** Article 5 prohibitions live and absolute
+*(🔴 emotion inference in schools banned outright)* · Article 4 literacy live ·
+🆕 **enforcement machinery on from `2026-08-02` per the Commission's own page** ·
+Annex III high-risk for education at `2027-12-02`, 🔴 **with a live *"AI omnibus"* amendment
+proposal from November 2025 that can move it.**
+🟢 **APAC, resolved this pass:** Vietnam's Law `134/2025/QH15` in force `2026-03-01`
+*(extraterritorial)* with the **education high-risk deadline at September 2027** — 🆕 **`T112`:
+two dates for one law were two obligations, not a contradiction.**
+🟢 **Korea: AI Basic Act in force, 2026 a pilot year with a one-year penalty grace period.**
+🔵 **Consequence: a compliance engagement must be scoped to RE-READ the timeline, never to
+hard-code it.**
+
+### 8. 🆕 🔴 Supply-side trend this shelf measured itself: the licence floor is unsafe — *Global*
+
+🔴 **`17 of 80` rows (`21.3%`) on the cleanest education topic on GitHub cannot be used by a
+studio** — `15` with no licence file on 22 probed paths, `2` with a `LICENSE` that explicitly
+refuses open source.
+🆕 **Two of these are a NEW category for this shelf**: deliberate non-OSI grants
+*(a bespoke source-available licence, and PolyForm Noncommercial 1.0.0)* 🔴 **rather than a
+missing file.**
+🔵 **The trend worth naming: as agent skills get cheap to publish, licence hygiene is getting
+worse, and star count carries no signal about it.**
+
+### 🔴 What this page is still missing
+
+- 🔴 **No quotable market size, NINTH pass** — 🟢 **and now with a diagnosis: no primary study has
+  been read, only restatements** *(`T114`)*.
+- 🔴 **No APAC adoption RATE.** 🟡 **Sentiment only** *(Ipsos: ANZ and Asia split in opposite
+  directions — `T113`)*.
+- 🔴 **No EMEA-only adoption rate.** 🟡 **The `~70%` figure fuses Europe with North America.**
+- 🔴 **Africa not re-queried, SECOND pass.**
+- 🔴 **Canada and Mexico: nothing, SIXTH pass.**
+- 🔴 **No primary legal text, EIGHTH pass** — `eur-lex` and the law-firm hosts refuse this egress.
+
+
 ## Pass 155 — 2026-10-12
 
 🟢 **The trend sources and the repository evidence AGREE this pass, which is unusual enough to
