@@ -6,6 +6,97 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
+**Pass 145, 2026-10-12.** 🔴 **The npm rows on this page were never read.** The instrument
+this KB measures tool surfaces with excludes `dist` and `build` unconditionally, and **7 of
+the 8 npm packages cited here ship their entire payload under exactly those two names**.
+🟢 **All eight are now measured**, and 🔴 **none of the eight ships a licence file.**
+
+### 🔴 `ACTION DZ` / `P145-A` — seven rows on this page returned a verdict over zero files
+
+🔵 **p144 discharged `ACTION DP` by cloning three npm packages and comparing bundle against
+source.** That comparison was sound. 🔴 **What nobody checked is whether the instrument
+could read the bundle at all** — and on seven of eight rows it could not, because
+`SKIP_DIRS` removed the only tree the package ships.
+
+| package | all code under | files | p143 read | p145 reads |
+|---|---|---|---|---|
+| `@imazhar101/mcp-canvas-server` | 🔴 `dist/` | 69 | 🔴 `NOT_AN_MCP_SERVER` | **18 dynamic sites** (227 descriptors) |
+| `moodle-mcp-server-aql` | 🔴 `dist/` | 68 | 🔴 `NOT_AN_MCP_SERVER` | 🔴 **`MUTATED` — plugin-extensible** |
+| `@ink-waffle/moodle-mcp` | 🔴 `dist/` | 18 | 🔴 `NOT_AN_MCP_SERVER` | 🟢 **16 literal** |
+| `mcp-canvas-lms` | 🔴 `dist/` | 16 | 🔴 `NOT_AN_MCP_SERVER` | 🟢 **3 literal** |
+| `eth-moodle-mcp` | 🔴 `build/` | 13 | 🔴 `NOT_AN_MCP_SERVER` | 🟢 **18 literal** |
+| `canvas-mcp-server` | 🔴 `build/` | 6 | 🔴 `NOT_AN_MCP_SERVER` | 🟢 **54 literal** |
+| `@owen-x-tech/canvas-mcp` | 🔴 `build/` | 4 | 🔴 `NOT_AN_MCP_SERVER` | 🟢 **62 literal** |
+| 🟢 `@n35da/brightspace-mcp` | 🟢 `lib/` + `server.mjs` | 17 | 🟢 **17 dynamic** | 🟢 **17 dynamic** (unchanged) |
+
+🟢 **Four of the new readings reproduce counts this page already held by other means** — 16,
+3, 18 and 54 match `p143-tier-size`'s hand counts exactly, and **62** matches the live
+surface `p139` established for `@owen-x-tech/canvas-mcp`. 🔵 **Agreement across two
+unrelated instruments on five rows is what makes the seven corrections trustworthy.**
+
+### 🔴 The rule this page should have been applying, and now is
+
+> **A tree is excluded only when it does not bear the property being measured.**
+
+`dist/` is a regenerated artefact in a git checkout and **the shipped source itself** in a
+published tarball. 🔵 **Same name, opposite correctness** — so the test is the package's own
+declared entry point (`main`, `bin`, `module`, `exports`), not the name. Instrument:
+[`p145-surface-payload-repair`](../compose/code/p145-surface-payload-repair/README.md),
+**14 tests**.
+
+🟢 **This also forecloses `T37` by construction**: a committed `dist/` beside its own source
+stays excluded, so the double count that defeated `P144-A`'s first draft cannot recur.
+
+### 🔴 `ACTION DX` — not one npm row on this page ships a licence file
+
+| package | grant | licence |
+|---|---|---|
+| `@imazhar101/mcp-canvas-server` | 🔴 README only | MIT |
+| `@ink-waffle/moodle-mcp` | 🔴 `package.json` only | MIT |
+| `@n35da/brightspace-mcp` | 🔴 **NONE** | — |
+| `@owen-x-tech/canvas-mcp` | 🔴 `package.json` only | MIT |
+| `canvas-mcp-server` | 🔴 `package.json` only | MIT |
+| `eth-moodle-mcp` | 🔴 `package.json` only | MIT |
+| `mcp-canvas-lms` | 🔴 `package.json` only | MIT |
+| `moodle-mcp-server-aql` | 🔴 `package.json` only | 🔴 **AGPL-3.0** |
+
+🔴 **0 of 8.** 🔵 **Consistent with `T21`'s 33% npm licence-payload rate rather than in
+conflict with it**: `npm pack` includes a `LICENSE` only if one exists in the tree, so a
+0% file rate at HEAD and a 33% historical payload rate describe the same population at two
+times. 🟢 **`P138`'s distinction holds and is the operative one here — a licence identifier
+is not a licence**, and seven of these rows offer only an identifier.
+
+🔴 **`@n35da/brightspace-mcp` is the sharpest row on the page**: the only npm package that
+ships readable source, and the only one with no licence of any kind. 🔵 **The row a
+developer can most easily learn from is the row they have least right to copy.**
+
+### 🔴 The foundational row that is unbounded by design
+
+`moodle-mcp-server-aql` builds `toolDefinitions = buildCoreToolDefinitions()` and then
+**`.push()`es one descriptor per discovered plugin** (`dist/server/factory.js:131`, inside
+the plugin loop). 🔴 **Its tool surface is a property of the deployment's plugin set**, not
+of the published package — the first row on these shelves that is unbounded for an
+architectural reason rather than an instrumental one.
+
+🔴 **It is also the AGPL-3.0 declaration.** 🔵 **A plugin-extensible connector under
+copyleft is a specific delivery hazard**: the extension points invite exactly the
+modification the licence attaches obligations to. `ACTION EF` tests whether any licence
+text exists behind the declaration.
+
+### 🟢 What this page can now say about its own instruments
+
+🔴 **`ACTION DV` asked for all four tiers under one instrument and that is not achievable
+here.** `surface_bound.py` reads **JS and TS only**; of the 20 MCP servers across the four
+tiers, **7 are Python and 1 is PHP**. 🔵 **Recorded as a structural property of the
+population**, not as an environment blocker and not as a probe to re-register.
+
+🔴 **And the two instruments measure different things.** `surface_bound` counts
+**descriptors**; the gate instruments count **registration sites**. On
+`@imazhar101/mcp-canvas-server` that is **227** against **18**, and 🟢 **neither number is
+wrong** — which is why `T30`, built across both, is withdrawn outright rather than
+reinstated.
+
+
 **Pass 144, 2026-10-12.** 🔴 **The correction this page owed about its npm instruments is
 discharged, and it resolves in the opposite direction.** p143 recorded that 7 of 8 npm packages
 could not be read at all because they ship only compiled output, and withdrew the npm figures on

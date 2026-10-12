@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 145 — 2026-10-12
+
+⏱️ **Eighth pass of this date.** 🔴 **The npm tier was never measured.** The instrument this
+KB reasons about tool surfaces with excludes `dist` and `build` unconditionally, and **7 of
+the 8 npm packages on this shelf ship their entire payload under exactly those two names**.
+It walked **zero files** on all seven and returned `NOT_AN_MCP_SERVER (0 'mcp' tokens, no
+SDK import)` — 🔴 **a verdict over an empty file set, published for two passes.**
+
+🟢 **`ACTION DZ`'s registered repair works and its falsifier is silent — 7 of 24 rows change
+verdict.** 🔴 **But it is not why those rows read zero**, and the difference is the pass.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P145-A` | 🔴 **The npm tier returned verdicts over nothing** | `SKIP_DIRS` drops `dist`/`build` in **both** instrument modes. 🟢 **`test_unpatched_exclusion_would_walk_zero_files` pins it**: the walk returns `[]` and `is_mcp_server` returns `(False, 0)` |
+| `P145-B` | 🔴 **`ACTION DV` DISCHARGED and REFUTED — `T30` WITHDRAWN OUTRIGHT** | npm's dynamic share **100% (n=1) → 50% (n=8)**, and **12.5%** under `surface_bound`. 🔴 **Both clear the five-point falsifier by an order of magnitude** |
+| `P145-C` | 🔴 **…and `T30`'s "12%" is found, to the decimal** | `surface_bound` reads **1 of 8** non-static on npm — **12.5%**. 🔴 **`T30` compared a `surface_bound` figure on npm against `surface_gate2` site counts on every other tier** |
+| `P145-D` | 🔴 **`ACTION DV` is not executable as written** | `surface_bound.py` reads **JS/TS only**; **8 of the 20 MCP servers are Python or PHP**. 🔵 **"One instrument across four tiers" is unachievable on this population** |
+| `P145-E` | 🆕 🔴 **`T42` ADOPTED — the two instruments measure different PROPERTIES** | descriptors vs registration **sites**. `@imazhar101/mcp-canvas-server`: **227 `BOUNDED_STATIC`** against **18 dynamic sites**, 🟢 **both correct** |
+| `P145-F` | 🟢 **`ACTION DZ` DISCHARGED, falsifier silent — five handler shapes** | 🟢 **Five counts corroborate figures held by other means**: **16 / 18 / 3** reproduce `p143-tier-size` exactly, **54** on `canvas-mcp-server`, **62** on `@owen-x-tech/canvas-mcp` against its own "150+" claim |
+| `P145-G` | 🆕 🔴 **The first row unbounded BY DESIGN** | `moodle-mcp-server-aql` **`.push()`es a descriptor per discovered plugin** (`dist/server/factory.js:131`) — an architecture, not an instrument limit |
+| `P145-H` | 🟢 **`ACTION DX` DISCHARGED, falsifier silent — 9, not 2** | 🔴 **9 of 52 rows carry no licence at all; 18 of 52 ship no grant.** `P144-Q`'s two are **eight** on the 44-row tier |
+| `P145-I` | 🔴 **The npm tier ships declarations, not grants** | 🔴 **0 of 8 ship a licence FILE.** 6 declare MIT in `package.json`, 1 in a README, 🔴 **1 declares AGPL-3.0** — `moodle-mcp-server-aql`, the plugin-extensible row |
+| `P145-J` | 🟢 **`ACTION DY` DISCHARGED, falsifier silent — 2 of 3** | 🆕 `ahmedEid1/lumen` ships **`TOOL_SPECS`, a literal list of 9**, walked by `server.py:263`. 🆕 `nitsuah/bb-mcp` ships **17 named schemas**. 🔴 `nirholas/ai-tutor-mcp` carries nothing |
+| `P145-K` | 🆕 🟢 **`lumen` CORRECTED to `BOUNDED_STATIC` (9)** | 🔴 **The agent tier falls 50% → 25%** — same class as `librus-mcp` |
+| `P145-L` | 🔴 **…and neither new pin is bidirectional** | `lumen` asserts tools **→** scopes only; `bb-mcp` checks uniqueness and RBAC, **not parity**. 🔴 **`P144-G`'s bidirectional pin stays 1 of 4** |
+| `P145-M` | 🔴 **`ACTION DW` DISCHARGED and REFUTED** | 🟢 **0 of 44 rows change `dominant_offset` or region** when robots are stripped. `bb-mcp` at **32.4% (78/241)** reproduces `P144-P` and does not move its own mode |
+| `P145-N` | 🔴 **…and `P144-P`'s aggregate does not reproduce** | **7 rows / 120 commits**, not 9 / 123 — and *widening* the bot pattern recovers neither. 🟢 **The aggregate was wrong; the finding inside it was right** |
+| `P145-O` | 🟢 **`ACTION EA` DISCHARGED, falsifier silent on 52 repositories** | **46 `NOT_SHIPPED` trees**, incl. **28 repos outside the 16 subjects**. 🟢 **Only `legacy_reference` and `scripts` bear a registration, both in `librus-mcp`.** 🔴 **5 of 12 names never occur once**; `docs` occurs 13× and bears nothing |
+| `P145-P` | 🆕 🔴 **`scripts` is load-bearing and inert at once** | A registration in `librus-mcp`, nothing in the other **21** trees with that name. 🔵 **A name rule cannot express that; a property rule can** |
+| `P145-Q` | 🟢 **`T3` HALF-RESOLVED on a second independent source** | High-risk education — admissions, grading, placement, proctoring — at **`2027-12-02`** under the Digital Omnibus. 🔴 **The Article 4 AI-literacy duty is now the conflicted item** |
+| `P145-R` | 🆕 🟢 **`T43` ADOPTED — one prohibition is already in force and undisputed** | 🟢 **Emotion-recognition AI in schools banned since 2025-02**, agreed by every source. 🔴 **This KB holds two shelf rows in the affect-detection class** |
+| `P145-S` | 🔴 **`T40` CHALLENGED, adoption withheld** | One source puts **education inside Korea's high-impact category**. 🔴 **If right, `T40`'s central claim is wrong** — but the passage is truncated and the primary text unreachable. Registered as `ACTION EH` |
+| `P145-T` | 🟢 **`T41` CORROBORATED by a second publisher, with a slope** | Tec de Monterrey observatory: student **86% → 92%**, teacher **61% → 79%**; 🔴 **65% of students fear superficial learning** |
+| `P145-U` | 🟢 **`T1` quantified on its North American half** | **35 states + DC + PR** introduced since 2025, 🟢 **24 enacted**, 35+ guidance. 🔵 **24 of 35 — in NA the deadline is the trigger; in EMEA/LATAM the absence of one is** |
+| `P145-V` | 🔴 **A LATAM figure refused before anyone quotes it** | "Rest of Latin America" **$18.2M → $36M** is a **residual category** — the publisher's LATAM total minus Brazil and Mexico. 🔴 **Not a LATAM market size** |
+| `P145-W` | 🔴 **An explicit APAC null** | 🔴 **No classroom-adoption rate, no edtech policy figure, no ministry guidance** for Korea, Japan, China or India. 🔵 **The region with the clearest statutes has the weakest adoption data — the inverse of LATAM** |
+| `P145-X` | 🟢 **The clone channel is clean; `curl` still is not** | 🟢 **44 of 44 census repositories cloned, zero dead.** 🔴 `curl -sI` answers **403** on every `github.com/<owner>/<repo>` — `P144-X` holds |
+| `P145-Y` | 🔴 **SIXTH consecutive null for new agent rows** | Two global queries, four regional. 🔴 **Same three course repositories as p144.** 🟢 **Not re-registered** |
+
+### 🔴 `P145-A` — the finding this pass exists for
+
+`ACTION DZ` was registered on a correct observation: `surface_gate2.py` reads **0** on real
+MCP servers that register through `setRequestHandler(ListToolsRequestSchema, …)`. 🟢 **The
+repair was built and it works.** 🔴 **It is not why seven rows read zero.**
+
+`SKIP_DIRS` at `surface_gate2.py:79` contains `dist` and `build`, and `shipped_only` adds
+`NOT_SHIPPED` on top rather than changing it. So both modes drop both trees — and the npm
+tier keeps all of its code in them:
+
+| ships all code under | packages |
+|---|---|
+| 🔴 `dist/` | `@imazhar101/mcp-canvas-server` (69 files), `moodle-mcp-server-aql` (68), `@ink-waffle/moodle-mcp` (18), `mcp-canvas-lms` (16) |
+| 🔴 `build/` | `eth-moodle-mcp` (13), `canvas-mcp-server` (6), `@owen-x-tech/canvas-mcp` (4) |
+| 🟢 `lib/` + root | `@n35da/brightspace-mcp` (17) — 🟢 **the only row p143 measured** |
+
+🔵 **This is `T39` one level up from where `P144-O` applied it.** `NOT_SHIPPED` was audited
+in p143, p144 and p145. 🔴 **`SKIP_DIRS` sat four lines above it and was never read** — and
+it was doing the consequential filtering: removing seven of eight rows from a tier and
+leaving behind something shaped like a measurement. 🆕 **That is `T42`.**
+
+🟢 **The baseline reproduces p143 row for row**, so every difference is attributable to this
+probe's two deliberate changes. 🟢 **And five of the seven new readings match counts this KB
+already held from unrelated instruments**, which is what makes the corrections trustworthy
+rather than merely different.
+
 ## Pass 144 — 2026-10-12
 
 ⏱️ **Seventh pass of this date.** 🔴 **`T36` is WITHDRAWN one pass after it was adopted, in the

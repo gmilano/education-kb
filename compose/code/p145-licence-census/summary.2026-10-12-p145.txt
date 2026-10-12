@@ -1,0 +1,9 @@
+
+# FILE         34
+# PKG_ONLY     7
+# README_ONLY  2
+# NONE         9
+# NO_CLONE     0
+# UNLICENSED strict (no file, no declaration): 9 of 52
+# NO SHIPPED GRANT (strict + declaration-only): 18 of 52
+# COPYLEFT rows: 7  Agso-o_sigaa-calendar, despedite_siu-guarani, edwyj_ddl-killer, fabrica-de-inovacao_expeditto, mhlavac_edupage-mcp, qxbao_qldt-hanu-mcp, moodle-mcp-server-aql-0.1.7

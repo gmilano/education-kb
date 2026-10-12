@@ -1,0 +1,10 @@
+
+# rows measured:            44
+# rows with ANY bot commit: 7
+# rows whose DOMINANT OFFSET changes when bots are stripped: 0
+# most contaminated rows:
+#   nitsuah_bb-mcp                                 32.4% of 241 commits
+#   trindadetiago_sigaa-caiu                       2.4% of 42 commits
+#   alejooroncoy_campus-cli                        1.9% of 582 commits
+#   oliverhruby_edupage-mcp                        1.8% of 111 commits
+#   BetterSEQTA_BetterSEQTA-Plus                   1.0% of 2255 commits

@@ -1,0 +1,18 @@
+
+# name               trees    bearing  verdict
+# bench              0        0        inert here
+# benchmarks         1        0        inert here
+# doc                0        0        inert here
+# docs               13       0        inert here
+# example            0        0        inert here
+# examples           2        0        inert here
+# fixtures           6        0        inert here
+# legacy             0        0        inert here
+# legacy_reference   1        1        LOAD_BEARING
+#     bears in: krzysztofbury_librus-mcp
+# samples            0        0        inert here
+# scripts            22       1        LOAD_BEARING
+#     bears in: krzysztofbury_librus-mcp
+# tests_native       1        0        inert here
+
+# names NOT in P144-H's load-bearing pair that nevertheless bear a registration: 0  -

@@ -6,6 +6,192 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 145, 2026-10-12.** 🆕 **`P27` is added: the measurement-population gate — prove your
+instrument read the files before you believe its verdict.** 🆕 **`P28` is added: the
+connector grant gate, which stops a build on the 18 of 52 rows that ship no grant and names
+the three LATAM system-of-record rows it catches.** 🔁 **`P18` is amended at step 1** — the
+tree to measure is decided by the package's declared entry point, not by a name list. 🔁
+**`P21` is recaveated**: two of the three "pins" found since are one-directional.
+
+## 🆕 🔴 `P27` — the measurement-population gate: prove the instrument read something *(new, p145 — Global)*
+
+🔴 **This pattern exists because this KB published a tier share computed over zero files for
+two passes.** `surface_gate2.py` excluded `dist` and `build` by name; 7 of 8 npm packages
+ship their whole payload under those names; the instrument walked **0 files**, found **0
+`mcp` tokens**, and emitted `NOT_AN_MCP_SERVER` — which reads exactly like a measurement.
+
+🔵 **Any instrument with a skip list can do this to you, and on a client engagement it will
+do it on the vendor's package rather than on a KB row.**
+
+### Step 1 — make an empty population an ERROR, never a value
+
+```python
+files = list(walk(root))
+if not files:
+    raise EmptyPopulation(root)      # 🔴 NOT "no registrations found"
+```
+
+🔴 **The single highest-value line in this pattern.** A verdict and a vacuum must not share
+a representation. Every scanner you write or adopt gets this guard before it gets features.
+
+### Step 2 — print the population, not just the verdict
+
+```
+subject                              artefact  admitted  files  verdict
+mcp-canvas-lms-1.0.5                 PAYLOAD   dist      16     BOUNDED_STATIC
+_n35da_brightspace-mcp-0.4.0         SOURCE    -         17     DYNAMIC_UNBOUNDED
+```
+
+🟢 **`artefact` and `admitted` as columns are what makes the npm correction auditable.** A
+reviewer can see *which tree* produced each number without rerunning anything. 🔵 **If your
+output cannot answer "what did you read?", it cannot be reviewed.**
+
+### Step 3 — decide exclusions by the property, not by the name
+
+For a published package, the shipped tree is whatever its own metadata points at:
+
+```bash
+jq -r '.main, .module, (.bin|if type=="object" then .[] else . end), .exports' package.json
+```
+
+Admit a `dist`/`build` tree **only** when every declared entry resolves inside it and no
+source exists beside it. 🟢 **That admits the seven npm payloads and still excludes a
+committed `dist/` in a git checkout** — which is `T37`'s double count, foreclosed by rule
+rather than by vigilance.
+
+### Step 4 — reproduce the old numbers before you publish new ones
+
+🟢 **Run the unmodified instrument first and check it still returns the published table.**
+This probe's baseline reproduced p143 row for row (agent 50%, foundations 0%, github-only
+33%, npm 100% n=1), 🔵 **so every difference afterwards was attributable to one of two
+deliberate changes** rather than to drift, environment or a different clone.
+
+### Step 5 — cross-check against a second instrument and keep both numbers
+
+🔴 **Do not reconcile a disagreement by preferring your own instrument.**
+`@imazhar101/mcp-canvas-server` reads **227 `BOUNDED_STATIC`** under descriptor counting and
+**18 dynamic sites** under site counting. 🟢 **Both are published.** The first answers "how
+many tool definitions exist?", the second "where are they attached?", 🔵 **and a client
+asking "how many tools does this connector have?" needs to be told which question they are
+asking.**
+
+### 🔴 What this gate cannot do
+
+🔴 **It does not prove reachability.** A tree that was read, and registrations that were
+found, still do not establish that the server runs them — `p140`'s limit, unchanged.
+
+## 🆕 🔴 `P28` — the connector grant gate: run it before the first sprint, not before go-live *(new, p145 — all regions)*
+
+🔴 **18 of 52 connector rows on these shelves ship no grant a client can rely on; 9 carry no
+licence of any kind.** 🔵 **That is a third of the shelf, and the rows it catches are not the
+marginal ones** — they include the largest tool surface on the github-only tier and three
+LATAM system-of-record connectors this KB recommends as entry points.
+
+### Step 1 — classify the grant into four states, never two
+
+```bash
+# FILE | PKG_ONLY | README_ONLY | NONE  —  see compose/code/p145-licence-census
+python3 licence_census.py "vendor-connector=$CLONE=candidate"
+```
+
+🔴 **`ls LICENSE` is the wrong test.** 🔵 **A licence identifier is not a licence** (`P138`):
+`PKG_ONLY` means `package.json` says `"license": "MIT"` and no text ships. 🔴 **7 of 8 npm
+connectors on these shelves are `PKG_ONLY` or `README_ONLY`** — an identifier naming terms
+nobody shipped.
+
+### Step 2 — identify the licence from the BODY, before trusting any string in it
+
+```python
+for rx, name in BODY_HINTS:      # Apache preamble, AGPL header, MIT grant sentence…
+    if rx.search(text):
+        return name
+return SPDX.search(text)         # only as a fallback
+```
+
+🔴 **A file saying "MIT" in a comment above the Apache text is Apache.** Body first,
+identifier second — not the other way round.
+
+### Step 3 — stop the build on copyleft, and stop it harder on copyleft + extensibility
+
+🔴 **`moodle-mcp-server-aql` is the worked example to show a client.** It declares
+**AGPL-3.0**, ships no licence text, and **`.push()`es a tool descriptor per discovered
+plugin** at `dist/server/factory.js:131`. 🔵 **Copyleft obligations attach to modification,
+and a plugin architecture is an invitation to modify** — so the two properties compound
+rather than add.
+
+🟢 **The Moodle rows to use instead**: `eth-moodle-mcp` (18 tools) and
+`@ink-waffle/moodle-mcp` (16), both MIT-declared. 🔴 **Both still `PKG_ONLY`** — carry the
+caveat, do not pretend it away.
+
+### Step 4 — check the fork parent before you abandon an unlicensed row
+
+```bash
+git log --reverse --format='%H %ae %s' | head -3    # does history start at a fork?
+```
+
+🔵 **An unlicensed fork of a licensed parent is a different problem from an original work
+with no grant**: the parent's terms may already cover the code. 🟢 **`p136-lineage-verdict`
+is the instrument**; `ACTION EE` runs it over the eight.
+
+### Step 5 — escalate a consortium-published row differently from a hobby row
+
+🔴 **`SIU-Toba/docker-guarani` is unlicensed and published under the SIU-Guaraní
+consortium's own organisation.** 🔵 **You cannot route around that by emailing one author** —
+it needs the consortium, and that is a procurement conversation with a lead time, not a
+licence question. 🟢 **Raise it in week one or it lands in week twelve.**
+
+### 🔴 The row where this gate and the compliance gate meet
+
+`eugeborzone/Auto_Grade_Guarani` — 🔴 **auto-grading, no licence at all, LATAM.**
+🔵 **Auto-grading is the named EU high-risk use case (`T3`) and LATAM is the region with the
+highest teacher-adoption base (`T41`).** 🔴 **The row sitting on the most demand and the most
+regulation is the row with no grant.** 🟢 **Name it in the engagement's first risk register,
+not its last.**
+
+## 🔁 `P18` AMENDED at step 1 — the tree to measure is declared, not named *(p145 — Global)*
+
+🔴 **Previous step 1 said "measure the shipped tree" and left "shipped" to a name list.**
+That name list excluded `dist` and `build`, and on 7 of 8 npm connectors the excluded tree
+was the only tree there was.
+
+### The amended step 1
+
+1. Read `package.json`'s `main`, `module`, `bin`, `exports`.
+2. If **every** declared entry resolves inside a `dist`/`build` tree **and no source file
+   exists outside it** → that tree is the shipped source. Measure it. Record `PAYLOAD`.
+3. Otherwise → the built tree is an artefact beside its own source. Exclude it, measure the
+   source. Record `SOURCE`.
+4. 🔴 **If the resulting population is empty, raise — do not report a verdict** (`P27`
+   step 1).
+
+🟢 **`@n35da/brightspace-mcp` is the regression test**: it ships `lib/` + `server.mjs`, reads
+`SOURCE`, and its 17 sites are unchanged from p143. 🔵 **The one row the old rule got right
+must keep reading the same, or the new rule is not a repair.**
+
+## 🔁 `P21` RECAVEATED — most "pins" are one-directional, and a one-directional pin is a floor *(p145 — Global method)*
+
+🔵 **`P21` asks for a committed bidirectional pin: a golden list checked for `missing` AND
+`extra`.** Since it was written, four candidate pins have turned up and 🔴 **only one is
+bidirectional.**
+
+| row | what it pins | direction |
+|---|---|---|
+| 🟢 `divyarthjain/vtop-bhopal-mcp` | `EXPECTED_TOOLS`, 17 names, checks `missing` **and** `extra` | 🟢 **bidirectional** |
+| 🟡 `malkreide/global-education-mcp` | SHA-256 lockfile over 10 tools | 🟢 content-exact |
+| 🔴 `oliverhruby/edupage-mcp` | classification manifest, 31 tools | 🔴 **manifest, not assertion** |
+| 🔴 **`ahmedEid1/lumen`** 🆕 | `TOOL_SPECS` (9) → OAuth `scopes_supported` | 🔴 **tools ⊆ scopes only** |
+| 🔴 **`nitsuah/bb-mcp`** 🆕 | `src/manifest.ts`, 17 named schemas; test checks uniqueness + RBAC | 🔴 **no surface parity check** |
+
+🔴 **So when you adopt a vendor's "we pin our tools" claim, read the assertion, not the
+file.** `lumen` will not fail if a scope is added without a tool; `bb-mcp` will not fail if a
+schema stops being registered. 🟢 **Both are still worth having** — they make the surface
+statically enumerable, which is what resolved both rows' `DYNAMIC_UNBOUNDED` verdicts — 🔵
+**but they bound the surface from one side and `P21`'s gate must supply the other.**
+
+🟢 **`ACTION EG` builds the missing half for `lumen`** by extending its existing assertion to
+check scopes → tools, and will state whether the two sets are in fact equal.
+
+
 **Pass 144, 2026-10-12.** 🆕 **`P25` is added: the surface-pin gate — require a committed
 bidirectional pin before connecting a connector, and generate one when it is missing.** 🆕 **`P26`
 is added: the npm connector reachability-and-licence gate, which stops a build on an AGPL row and

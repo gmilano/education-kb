@@ -6,6 +6,42 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 145
+
+🔵 **p144 reinstated `T30`'s npm figure. This pass found that the figure was never measured
+by the instrument it was attributed to, and withdrew `T30` outright.**
+
+| repo / package | licence | what it shows |
+|---|---|---|
+| 🔴 [`@imazhar101/mcp-canvas-server@2.1.3`](https://www.npmjs.com/package/@imazhar101/mcp-canvas-server) | 🔴 **README only** | 🔴 **227 descriptors, 18 dynamic registration sites, and both readings are correct.** Its handler spreads **18 `getToolDefinitions()` calls** and wraps the result in `injectEnvParam(...)`. 🔵 **The largest tool surface this KB quotes, and no licence file behind it** |
+| 🔴 [`moodle-mcp-server-aql@0.1.7`](https://www.npmjs.com/package/moodle-mcp-server-aql) | 🔴 **declares AGPL-3.0, ships no text** | 🔴 **The only row on the shelf that is unbounded by design.** `dist/server/factory.js:131` **`.push()`es a descriptor per discovered plugin**. 🔴 **A copyleft declaration with no licence file is the worst of both worlds** — it deters use and grants nothing |
+| 🟢 [`canvas-mcp-server@2.2.3`](https://www.npmjs.com/package/canvas-mcp-server) | 🟡 `package.json` MIT, no file | 🟢 **54 literal descriptors via `tools: TOOLS` → `const TOOLS = [`**, reproducing `p143-tier-size`'s hand count exactly. 🟢 **`BOUNDED_STATIC`** |
+| 🟢 [`@owen-x-tech/canvas-mcp@1.1.0`](https://www.npmjs.com/package/@owen-x-tech/canvas-mcp) | 🟡 `package.json` MIT, no file | 🟢 **62 literal descriptors via `return { tools }`** — reproducing the live surface `p139` and `p142` established, 🔴 **against the package's own "150+ tools" claim** |
+| 🟢 [`eth-moodle-mcp@1.3.3`](https://www.npmjs.com/package/eth-moodle-mcp) | 🟡 `package.json` MIT, no file | 🟢 **18 literal `registerTool` sites** in `build/`, matching `p143-tier-size`. 🔵 **Readable only once `build/` is admitted** |
+| 🟢 [`@ink-waffle/moodle-mcp@0.2.0`](https://www.npmjs.com/package/@ink-waffle/moodle-mcp) | 🟡 `package.json` MIT, no file | 🟢 **16 literal sites**, matching `p143-tier-size`. 🔵 **Readable only once `dist/` is admitted** |
+| 🟢 [`mcp-canvas-lms@1.0.5`](https://www.npmjs.com/package/mcp-canvas-lms) | 🟡 `package.json` MIT, no file | 🟢 **3 inline descriptors in the handler body**, matching `p143-tier-size` |
+| 🔴 [`@n35da/brightspace-mcp@0.4.0`](https://www.npmjs.com/package/@n35da/brightspace-mcp) | 🔴 **NONE** | 🔵 **The one npm row that ships source (`lib/` + `server.mjs`) — and therefore the only one p143 could measure.** 🔴 **It is also the one npm row with no licence of any kind**, not even a `package.json` declaration |
+| 🟢 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | MIT | 🆕 🟢 **Ships `TOOL_SPECS`, a literal list of 9 tool specs with auth posture**, walked by `app/mcp/server.py:263`. 🟢 **Verdict corrected `DYNAMIC_UNBOUNDED` → `BOUNDED_STATIC` (9)**, dropping the agent tier from 50% to 25% |
+| 🟢 [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | MIT | 🆕 🟢 **`src/manifest.ts` imports 17 named tool schemas** and builds a provider manifest with RBAC roles per tool. 🔴 **32.4% of its 241 commits are robots** — the most contaminated row in the census, and its dominant offset does not move when they are stripped |
+| 🔴 [`Piyushtanwani/DAU-buddy`](https://github.com/Piyushtanwani/DAU-buddy) | 🔴 **NONE** | 🔴 **40 literal tools — the largest surface on the github-only tier — and no licence file at HEAD.** Confirmed from `P144-Q` |
+| 🔴 [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | 🔴 **NONE** | 🔴 **An auto-grading row with no grant.** 🔵 **Auto-grading is the named EU high-risk use case** (`T3`), so this is the row where the licence gap and the compliance gap meet |
+| 🔴 [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) | 🔴 **NONE** | 🔴 **SUAP**, Brazil's institutional system of record, on the LATAM platform tier this KB recommends as an entry point |
+| 🔴 [`SIU-Toba/docker-guarani`](https://github.com/SIU-Toba/docker-guarani) | 🔴 **NONE** | 🔴 **The SIU-Guaraní containerisation** — vendor-adjacent, LATAM, and unlicensed |
+| 🔴 [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP) | 🔴 **NONE** | 🔴 **The row `ACTION DK` placed in p143.** 🔵 **Placed, measured — and unbuildable** |
+
+### 🔵 The licence picture on this page, stated as a rate
+
+🔴 **9 of 52 rows (17%) carry no licence at all. 18 of 52 (35%) ship no grant** a client can
+rely on. 🔴 **0 of 8 npm packages ship a licence file.** 🟢 **34 of 52 do carry a real grant
+at HEAD**, which is the number to quote when this page is read as a shelf rather than as a
+warning.
+
+🔴 **7 rows are copyleft**: `Agso-o/sigaa-calendar`, `despedite/siu-guarani`,
+`edwyj/ddl-killer`, `fabrica-de-inovacao/expeditto`, `mhlavac/edupage-mcp`,
+`qxbao/qldt-hanu-mcp`, and `moodle-mcp-server-aql` (declared only). 🔵 **Four are LATAM or
+APAC system-of-record connectors** — readable, not foldable into a deliverable.
+
+
 ## 2026-10-12 — Pass 144
 
 🔵 **p143 withdrew `T30`'s npm figure because npm was measured over bundles while everything

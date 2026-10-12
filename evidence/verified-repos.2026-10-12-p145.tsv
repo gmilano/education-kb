@@ -1,0 +1,25 @@
+subject	tier	artefact	verdict	lit	dyn	grant	licence
+_imazhar101_mcp-canvas-server-2.1.3	npm	PAYLOAD	DYNAMIC_UNBOUNDED	0	18	README_ONLY	MIT
+_ink-waffle_moodle-mcp-0.2.0	npm	PAYLOAD	BOUNDED_STATIC	16	0	PKG_ONLY	MIT
+_n35da_brightspace-mcp-0.4.0	npm	SOURCE	DYNAMIC_UNBOUNDED	0	17	NONE	-
+_owen-x-tech_canvas-mcp-1.1.0	npm	PAYLOAD	DYNAMIC_UNBOUNDED	63	1	PKG_ONLY	MIT
+canvas-mcp-server-2.2.3	npm	PAYLOAD	BOUNDED_STATIC	54	0	PKG_ONLY	MIT
+eth-moodle-mcp-1.3.3	npm	PAYLOAD	BOUNDED_STATIC	18	0	PKG_ONLY	MIT
+mcp-canvas-lms-1.0.5	npm	PAYLOAD	BOUNDED_STATIC	3	0	PKG_ONLY	MIT
+moodle-mcp-server-aql-0.1.7	npm	PAYLOAD	DYNAMIC_UNBOUNDED	0	1	PKG_ONLY	AGPL-3.0
+zijinz456/OpenTutor	agent	SOURCE	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)	0	0	-	-
+ahmedEid1/lumen	agent	SOURCE	DYNAMIC_UNBOUNDED	0	9	-	-
+mohaneesh-03/mcp-tutor	agent	SOURCE	BOUNDED_STATIC	5	0	-	-
+nirholas/ai-tutor-mcp	agent	SOURCE	DYNAMIC_UNBOUNDED	0	1	-	-
+hesham0-0nasser/tutor-lms-mcp	agent	SOURCE	BOUNDED_STATIC	1	0	-	-
+BetterSEQTA/BetterSEQTA-Plus	github-only	SOURCE	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	0	0	-	-
+BetterSEQTA/DesQTA	github-only	SOURCE	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	0	0	-	-
+nitsuah/bb-mcp	github-only	SOURCE	DYNAMIC_UNBOUNDED	0	1	-	-
+Piyushtanwani/DAU-buddy	github-only	SOURCE	BOUNDED_STATIC	40	0	-	-
+yourssu/soongpt-plugin	github-only	SOURCE	BOUNDED_STATIC	20	0	-	-
+oliverhruby/edupage-mcp	github-only	SOURCE	BOUNDED_STATIC	31	0	-	-
+krzysztofbury/librus-mcp	github-only	SOURCE	BOUNDED_STATIC	35	0	-	-
+divyarthjain/vtop-bhopal-mcp	github-only	SOURCE	DYNAMIC_UNBOUNDED	0	4	-	-
+Agso-o/sigaa-calendar	github-only	SOURCE	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	0	0	-	-
+juliancasaburi/siu-guarani-promedio-extension	github-only	SOURCE	NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK import)	0	0	-	-
+malkreide/global-education-mcp	foundations	SOURCE	BOUNDED_STATIC	10	0	-	-

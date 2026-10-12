@@ -1,0 +1,12 @@
+package	literal_tools	dynamic_sites	server_instances	transports	gated_sites	verdict
+_imazhar101_mcp-canvas-server-2.1.3	227	0	1	StdioServerTransport	0	BOUNDED_STATIC
+_ink-waffle_moodle-mcp-0.2.0	16	0	1	StdioServerTransport,StreamableHTTPServerTransport	0	BOUNDED_STATIC
+_n35da_brightspace-mcp-0.4.0	17	0	1	StdioServerTransport	0	BOUNDED_STATIC
+_owen-x-tech_canvas-mcp-1.1.0	62	1	2	StdioServerTransport,StreamableHTTPServerTransport	0	MULTI_SURFACE
+canvas-mcp-server-2.2.3	54	0	1	StdioServerTransport	0	BOUNDED_STATIC
+eth-moodle-mcp-1.3.3	18	0	1	StdioServerTransport	0	BOUNDED_STATIC
+mcp-canvas-lms-1.0.5	3	0	1	StdioServerTransport	0	BOUNDED_STATIC
+moodle-mcp-server-aql-0.1.7	14	0	1	StdioServerTransport	0	BOUNDED_STATIC
+nitsuah_bb-mcp	0	0	0	-	0	BOUNDED_STATIC
+divyarthjain_vtop-bhopal-mcp	5	1	1	StdioServerTransport,StreamableHTTPServerTransport	0	UNBOUNDED
+nirholas_ai-tutor-mcp	0	1	1	StdioServerTransport	0	BOUNDED_DYNAMIC

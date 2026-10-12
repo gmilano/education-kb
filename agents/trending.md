@@ -6,6 +6,43 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 145
+
+**The pass in which the npm tier turned out never to have been measured, and `T30` was
+withdrawn outright rather than reinstated.**
+
+🔴 **`surface_gate2.py` excludes `dist` and `build` unconditionally. 7 of the 8 npm packages
+on this shelf ship their entire payload under exactly those two names.** The instrument
+walked **zero files** on all seven and returned `NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK
+import)` — a verdict over an empty file set, carried for two passes.
+
+| what moved this week | measurement |
+|---|---|
+| 🔴 **The npm tier goes from 1 measured row to 8** | [`p145-surface-payload-repair`](../compose/code/p145-surface-payload-repair/README.md). 🟢 **Baseline reproduces p143 row for row** (agent 50%, foundations 0%, github-only 33%, npm 100% n=1), so every difference is this probe's two changes. 🔴 **7 of 24 rows change verdict, all npm** |
+| 🔴 **`ACTION DV` REFUTED — `T30` withdrawn outright** | npm's dynamic share: **100% (n=1) → 50% (n=8)** on the repaired gate, **12.5%** on `surface_bound`. 🔴 **`T30`'s published npm figure was 12%** — it is `surface_bound`'s 1-of-8, compared against `surface_gate2` site counts on every other tier |
+| 🔴 **`ACTION DV` is also unrunnable as written** | `surface_bound.py` reads **JS/TS only**; **8 of 20 MCP servers are Python or PHP**. 🔵 **"One instrument across four tiers" is not achievable on this population** — recorded as structural, not as an environment blocker |
+| 🆕 🔴 **`T42` adopted — the two instruments measure different properties** | `surface_bound` counts **descriptors**, `surface_gate*` counts **registration sites**. `@imazhar101/mcp-canvas-server` reads **227 `BOUNDED_STATIC`** on one and **18 dynamic sites** on the other, 🟢 **and both are correct about what they measure** |
+| 🟢 **`ACTION DZ` silent — five `ListToolsRequestSchema` shapes, each off a real row** | `JS_LIST_HANDLER` (inline descriptors), `_REF` (identifier that IS a literal array), `_SPREAD_CALL`, `_MUTATED`, `_WRAPPED`. 🟢 **Five counts corroborate figures this KB already held**: **16**, **18**, **3** reproduce `p143-tier-size` exactly; **54** on `canvas-mcp-server`; **62** on `@owen-x-tech/canvas-mcp` against its own "150+" claim |
+| 🆕 🔴 **The first row that is unbounded BY DESIGN** | `moodle-mcp-server-aql` **`.push()`es one descriptor per discovered plugin** at `dist/server/factory.js:131`. 🔴 **Its tool surface is a function of what is installed**, not of what is published — the only such row on the shelf |
+| 🟢 **`ACTION DY` silent — two new surface pins** | 🆕 `ahmedEid1/lumen` ships **`TOOL_SPECS`, a literal list of 9**, walked by `server.py:263` and cross-checked against the OAuth scope vocabulary in `test_mcp_auth.py:338`. 🆕 `nitsuah/bb-mcp` ships `src/manifest.ts` with **17 named schemas**. 🔴 `nirholas/ai-tutor-mcp` carries nothing |
+| 🆕 🟢 **`ahmedEid1/lumen` CORRECTED to `BOUNDED_STATIC` at 9** | 🔴 **The agent tier falls 50% → 25%.** Same class as `librus-mcp`: a literal registry the instrument had no pattern for |
+| 🔴 **…and neither new pin is bidirectional** | `lumen` asserts tools **→** scopes and never scopes **→** tools; `bb-mcp`'s test checks name uniqueness and RBAC roles, **not surface parity**. 🔴 **`P144-G`'s bidirectional pin remains 1 of 4** |
+| 🟢 **`ACTION DX` silent — 9 unlicensed rows, not 2** | [`p145-licence-census`](../compose/code/p145-licence-census/README.md) over **52 rows**. 🔴 **9 carry no licence at all; 18 ship no grant.** 🔴 **0 of 8 npm packages ship a licence FILE** — 6 declare MIT in `package.json`, 1 in a README, **1 declares AGPL-3.0** |
+| 🔴 **`ACTION DW` REFUTED — the contamination changes nothing** | [`p145-origin-bots`](../compose/code/p145-origin-bots/README.md). 🟢 **0 of 44 rows change dominant offset or region** when robots are stripped. 🟢 `nitsuah/bb-mcp` at **32.4% (78/241)** reproduces `P144-P` exactly 🔴 **but `P144-P`'s aggregate does not**: 7 rows / 120 commits, not 9 / 123, and widening the bot pattern recovers neither |
+| 🟢 **`ACTION EA` silent across 52 repositories** | [`p145-not-shipped-property`](../compose/code/p145-not-shipped-property/README.md). **46 `NOT_SHIPPED` trees**, including **28 repos outside the 16 subjects**. 🟢 **Only `legacy_reference` and `scripts` bear a registration, both in `librus-mcp`.** 🔴 **5 of the 12 names never occur once**; `docs` occurs 13 times and bears nothing |
+| 🆕 🔴 **`scripts` is load-bearing and inert simultaneously** | A registration in `librus-mcp`, nothing in the other **21** trees carrying the name. 🔵 **A name-based exclusion cannot express that. A property-based one can** |
+| 🟢 **The clone channel is clean; `curl` still is not** | 🟢 **44 of 44 census repositories cloned**, zero dead. 🔴 `curl -sI` answers **403** on every `github.com/<owner>/<repo>` (`P144-X` holds unchanged) |
+| 🔴 **SIXTH consecutive null for new agent rows** | Two global queries, four regional. 🔴 **Same three course repositories as p144**: `microsoft/ai-agents-for-beginners` (**67 223★**, MIT), `pguso/agents-from-scratch` (**796★**, MIT), `rohitg00/ai-engineering-from-scratch`. 🟢 **Not re-registered** |
+
+### 🔵 The register note this pass owes the log
+
+🔴 **Three figures in the sections below are now known to be wrong, and they are left in
+place.** This log is append-only, so `T30`'s 12%/50%/50%, p143's npm "100% dynamic", and
+`P144-P`'s 9 rows / 123 commits stay where they were written. 🟢 **The corrections are
+here, dated, with the probe that produced each** — which is the only way a trend log can
+record that it was wrong without destroying the trend it exists to record.
+
+
 ## 2026-10-12 — Pass 144
 
 **The pass in which the reason for withdrawing `T30`'s npm figure turned out to be the same

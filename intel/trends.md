@@ -6,6 +6,119 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 145 — 2026-10-12
+
+🔴 **`T30` is WITHDRAWN OUTRIGHT**, and the reason is that its npm figure and its other
+figures were produced by two instruments measuring two different properties. 🆕 **`T42`
+adopted.** 🟢 **`T3`'s date conflict is half-resolved on a second independent source**, and
+🟢 **`T41` is corroborated by a second publisher**. 🔴 **`T40` is CHALLENGED and the
+challenge is recorded without being adopted.**
+
+| thesis | movement this pass |
+|---|---|
+| 🔴 **`T30` — npm publication predicts literal registration** | 🔴 **WITHDRAWN OUTRIGHT.** Its npm figure (**12%**) is `surface_bound`'s **1 of 8**; its other tiers' figures (**50%**) are `surface_gate2`'s site counts. 🔴 **Two instruments, two properties, one trend built across them** |
+| 🆕 🔴 **`T42` — a measurement's POPULATION FILTER is part of its instrument** | 🆕 **ADOPTED.** 🔴 **7 of 8 npm rows returned `NOT_AN_MCP_SERVER` from an empty file set**, because `SKIP_DIRS` excluded the only tree they ship. 🔵 **`T39` said an exclusion must be property-relative; `T42` says a skip list is an exclusion** |
+| 🟢 **`T39` — exclusion is sound only relative to the property** | 🟢 **STRENGTHENED on a 52-repository population, and in both directions at once.** `NOT_SHIPPED` over-excludes nothing (**10 of 12 names inert**, 5 never seen); `SKIP_DIRS` over-excluded **7 of 8 npm rows entirely** |
+| 🟢 **`T35` — the best rows declare their own surface** | 🟢 **STRENGTHENED, two new rows.** `ahmedEid1/lumen` ships `TOOL_SPECS` (**9**, walked by `server.py:263`); `nitsuah/bb-mcp` ships `src/manifest.ts` (**17** named schemas). 🔴 **Neither is bidirectional** |
+| 🟢 **`T21` — the registry decides whether the grant ships** | 🟢 **STRENGTHENED, and sharpened to zero.** 🔴 **0 of 8 npm packages ship a licence FILE.** 6 declare MIT in `package.json`, 1 in a README, 1 declares **AGPL-3.0**. 🔵 **Consistent with `T21`'s 33% payload rate: `npm pack` includes a `LICENSE` only if one exists** |
+| 🟡 **`T3` — the EU high-risk clock is a sales window** | 🟢 **HALF-RESOLVED.** A second, independent source confirms the **Digital Omnibus** moves high-risk education — admissions, grading, placement, proctoring — to **2027-12-02**. 🔴 **The Article 4 AI-literacy duty is now the conflicted item**, not the high-risk date |
+| 🆕 🟢 **`T43` — one prohibition is already in force and nobody disputes it** | 🆕 **ADOPTED.** 🟢 **Emotion-recognition AI in schools has been banned since 2025-02**, and it is the one date every source agrees on. 🔵 **A past, undisputed prohibition is a different conversation from a deferred classification** |
+| 🔴 **`T40` — APAC's compliance surface is horizontal, EMEA's vertical** | 🔴 **CHALLENGED, not withdrawn.** One source states Korea's **high-impact** category names **education** alongside healthcare and finance. 🔴 **If so, `T40`'s "not one is about education" is wrong.** The passage is truncated in the result and the primary text is unreachable here — 🟡 **recorded as a live challenge, adoption withheld** |
+| 🟢 **`T41` — LATAM adoption leads the OECD** | 🟢 **CORROBORATED by a second publisher.** Tec de Monterrey's observatory: student use **86% → 92%**, teacher use **61% → 79%**. 🔵 **A second publisher, the same direction, and a rising slope rather than a level** |
+| 🟢 **`T1` — the governance gap is the market** | 🟢 **STRENGTHENED on the North American half, quantified.** **35 states + DC + Puerto Rico** introduced AI education legislation since 2025; **24 states enacted**; **35+ published guidance**. 🔵 **Introduced-to-enacted is 24 of 35 — the gap is narrowing in NA while it holds elsewhere** |
+| 🔴 **`T10` — the agent search channel is saturated for this domain** | 🔴 **CONFIRMED a sixth time.** Six queries, same three course repositories. 🟢 **Not re-registered** |
+
+### 🆕 🔴 `T42` — a measurement's population filter is part of its instrument
+
+🆕 **ADOPTED.** This KB has now broken the same rule at three levels, and `T42` is the
+level it had not reached.
+
+| level | the rule broken | where |
+|---|---|---|
+| the **tier** | a figure's tier is part of its claim | `T30` (p141) |
+| the **instrument** | a figure's instrument is part of its claim | `T36` (p143, withdrawn p144) |
+| the **exclusion list** | an exclusion is sound only relative to the property | `T39` (p144) |
+| 🆕 the **skip list** | 🔴 **a skip list is an exclusion, and nobody checked it** | 🆕 **`T42` (p145)** |
+
+🔴 **`NOT_SHIPPED` was audited three times across p143, p144 and p145. `SKIP_DIRS` sat four
+lines above it and was never read.** 🔵 **The list that looked like configuration was doing
+the most consequential filtering on the shelf** — it removed seven of eight rows from a
+tier and left a verdict behind that looked like a measurement.
+
+🟢 **The general form, and it is cheap to apply:** before reading a share, ask what the
+denominator excluded and whether the excluded thing could carry the property. 🔴 **A
+verdict computed over zero files must be an error, not a value** — and no instrument on
+this shelf said so, which is why `surface_gate3.py` prints `artefact` and `admitted` as
+columns rather than deciding silently.
+
+### 🟢 `T3` — what is resolved and what is not
+
+🟢 **Resolved:** two independent sources now put high-risk education obligations —
+admissions, grading, placement, proctoring — at **2027-12-02** under the Digital Omnibus,
+against the pre-Omnibus **2026-08**. 🔵 **`P144-U` published a sixteen-month conflict; one
+side of it now has two publishers and the other has one.**
+
+🔴 **Not resolved:** the **Article 4 AI-literacy duty**. One source says national
+authorities began enforcing it on **2026-08-02**; another says the Omnibus replaced it with
+a softer obligation to *support* AI literacy. 🔴 **That is a live conflict about a duty that
+is either in force now or not a duty at all**, and it is the nearer-term question for a
+client.
+
+🔵 **The commercially useful consequence is unchanged by either reading**: the deferral
+moved the deadline, not the work, and a 2027-12-02 conformity assessment is still scoped in
+2026.
+
+### 🆕 🟢 `T43` — the prohibition nobody disputes
+
+🆕 **ADOPTED.** Every source on the EU clock disagrees about high-risk dates and the
+literacy duty. 🟢 **All of them agree that emotion-recognition AI in schools has been
+prohibited since 2025-02.**
+
+🔵 **This matters more than its narrowness suggests.** It is the one EU AI Act provision a
+client can be told is *already* binding, with no date risk. 🔴 **And this KB holds two rows
+in the affect-detection class** — `P142` flagged `zijinz456/OpenTutor` and one other as
+`PII_AND_AFFECT`. 🟢 **A prohibition in force plus two shelf rows inside its scope is a
+concrete audit, not a trend.**
+
+### 🔴 `T40` — the challenge, stated so the next pass can settle it
+
+p144 adopted `T40` on the finding that three APAC statutes entered force in 2026 and **not
+one is about education**. 🔴 **One source this pass says Korea's AI Framework Act names
+education inside its high-impact category**, alongside healthcare and finance.
+
+🔴 **If that is right, `T40` is wrong in its central claim** — Korea would be a *vertical*
+surface naming education, exactly like the EU, and the horizontal/vertical split between
+APAC and EMEA would collapse.
+
+🟡 **Adoption is withheld for two stated reasons.** The passage is truncated in the search
+result, so what is attributed to the high-impact category cannot be read in full; and the
+primary text is not reachable from this environment. 🔵 **A trend this KB adopted one pass
+ago should not be withdrawn on a truncated secondary source, and should not be defended by
+ignoring one either.** It is registered as `ACTION EH`.
+
+### 🔵 The supply-side picture this pass changes
+
+🔴 **The shelf is less buildable than it looked.** 🟢 **8 of 44 connector rows carry no
+licence at all**, three of them on the LATAM system-of-record tier this KB recommends as an
+entry point, and **0 of 8 npm packages ship a licence file**.
+
+🔵 **So the 2026 "purpose-built over general-purpose" migration has a supply problem that is
+legal rather than technical.** The connectors exist, their tool surfaces are now measured,
+and a third of them cannot be folded into a client deliverable as they stand. 🟢 **That is
+the most actionable thing this pass produced**, and it is why `ACTION EE` goes looking for
+licensed fork parents rather than for more rows.
+
+### 🔴 What the agent channel returned, for the sixth consecutive pass
+
+🔴 **Null.** Two global queries and four regional ones. 🔴 **The same three course
+repositories as p144** — `microsoft/ai-agents-for-beginners` (**67 223★**, MIT),
+`pguso/agents-from-scratch` (**796★**, MIT), `rohitg00/ai-engineering-from-scratch`.
+
+🔵 **Six nulls is a settled fact about the channel**, confirming `T10`. The query term
+"education" matches a repository's *pedagogy*, not its *domain*. 🟢 **Every connector row
+this KB holds was found by other means**, and a seventh attempt is not registered.
+
+
 ## Pass 144 — 2026-10-12
 
 🟢 **`T1` — the governance gap — is now measured on two continents by two unrelated publishers,

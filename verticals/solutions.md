@@ -6,6 +6,93 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 145, 2026-10-12.** 🔴 **The Moodle copyleft warning this page carried is corrected:
+the AGPL-3.0 row is `moodle-mcp-server-aql`, it declares the licence in `package.json` and
+ships no licence text at all.** 🔴 **And three rows on the LATAM system-of-record tier —
+the tier this page recommends as an entry point — carry no licence whatsoever.**
+
+### 🔴 CORRECTION — Moodle's npm connectors, all three measured, and the copyleft row named
+
+p144 wrote that *"the one Moodle connector published to npm whose source is reachable is
+AGPL-3.0"*. 🔴 **The reachability qualifier is now gone** — `P145-A` shows all three were
+always readable, the instrument was excluding the tree they ship — and the licence picture
+is more specific than p144 could state.
+
+| Moodle npm connector | tools | grant | licence |
+|---|---|---|---|
+| `eth-moodle-mcp@1.3.3` | 🟢 **18 literal** | 🔴 `package.json` only | MIT |
+| `@ink-waffle/moodle-mcp@0.2.0` | 🟢 **16 literal** | 🔴 `package.json` only | MIT |
+| `moodle-mcp-server-aql@0.1.7` | 🔴 **plugin-extensible** | 🔴 `package.json` only | 🔴 **AGPL-3.0** |
+
+🔴 **None of the three ships a licence file.** 🔵 **Two declare MIT and one declares
+AGPL-3.0, and all three declarations are equally unbacked** — so the build decision rests
+on a string in a manifest rather than on a grant, for the permissive rows as much as for
+the copyleft one.
+
+🔴 **`moodle-mcp-server-aql` is the row to keep away from a client deliverable**, and for
+two reasons that compound. It declares **AGPL-3.0**, and it is the one connector on these
+shelves whose **tool surface grows with the plugins installed at run time**
+(`dist/server/factory.js:131` pushes a descriptor per discovered plugin). 🔵 **A copyleft
+licence attaches to modification, and a plugin architecture is an invitation to modify.**
+
+🟢 **The two MIT-declared rows are the Moodle attachment points to use** — `eth-moodle-mcp`
+at 18 tools, `@ink-waffle/moodle-mcp` at 16 — with `ACTION EF`'s outcome as the condition on
+the third.
+
+### 🔴 The LATAM system-of-record tier has a licence hole, and it is in the rows this page recommends
+
+🔴 **Three of the eight wholly unlicensed connector rows are on the tier this page sends
+engagements to:**
+
+| row | platform | region | grant |
+|---|---|---|---|
+| `frjunioalves/suap-mcp` | **SUAP** (Brazil) | LATAM | 🔴 **NONE** |
+| `SIU-Toba/docker-guarani` | **SIU-Guaraní** (Argentina) | LATAM | 🔴 **NONE** |
+| `eugeborzone/Auto_Grade_Guarani` | **SIU-Guaraní**, auto-grading | LATAM | 🔴 **NONE** |
+
+🔵 **`SIU-Toba/docker-guarani` is the vendor-adjacent one** — the SIU-Guaraní
+containerisation, under the consortium's own GitHub organisation, and still with no licence
+file at HEAD. 🔴 **An unlicensed artefact published by the platform consortium is a
+different problem from an unlicensed hobby connector**: it cannot be routed around by
+asking a single author.
+
+🔴 **`eugeborzone/Auto_Grade_Guarani` is the row where two gaps meet.** Auto-grading is the
+named high-risk use case under the EU AI Act (`T3`), and in LATAM it is the use case with
+the highest teacher-adoption base (`T41`). 🔵 **The row that sits on the most demand and the
+most regulation is the row with no grant at all.**
+
+🟡 **And the copyleft rows on this tier are named rather than discovered later**:
+`despedite/siu-guarani`, `Agso-o/sigaa-calendar` and `fabrica-de-inovacao/expeditto` are
+GPL-family. 🟢 **Readable, auditable, demonstrable — not foldable into a client
+deliverable** without accepting the obligation.
+
+### 🟢 Blackboard Learn — the placed row is unlicensed, and that changes the recommendation
+
+🔴 **`karkarkins/BlackboardAssistantMCP`, the row `ACTION DK` placed in p143 on a login URL
+it configures itself, carries no licence file at HEAD.** 🔵 **Placement and measurement do
+not make a row usable** — this page has spent four passes establishing where that connector
+is deployed, and it cannot be built on as it stands.
+
+🟡 **`P1ckle3/blackboard-mcp` is likewise unlicensed**; `felipedias-ie/blackboard-mcp` and
+`NiccoloSalvini/mcp-blackboard-ucsc` do carry grants. 🟢 **So the Blackboard attachment
+point stands, on the two licensed rows**, and `ACTION EE` tests whether the unlicensed pair
+are forks of a licensed parent.
+
+### 🟡 No ERP/LMS platform row was added or removed this pass, and that is stated rather than padded
+
+🟢 **The platform tier below — Moodle, Open edX, Sakai, Canvas, ILIAS, OpenOLAT, Chamilo,
+OpenEduCat, ERPNext, SIGAA/SUAP, SIU-Guaraní, WordPress + Tutor LMS — is unchanged.** 🔵
+**The search channel returned one vendor's own comparison site and nothing else this pass**
+(`openeducat.org`, nine localisations of one page), which is a null on the platform channel
+and is recorded as one. 🔴 **No row was invented to fill it.**
+
+🟢 **One citation from that channel is worth keeping**, because it agrees with this page's
+own licence column: the permissive/copyleft split it describes for LMS platforms — Moodle
+**GPL**, Canvas open-core, Open edX **AGPL** at the application layer — matches what
+`ACTION DA` and `ACTION CS` measured from the artefacts. 🔵 **A vendor page that agrees with
+the measurement is a corroboration; it is not promoted to a source.**
+
+
 **Pass 144, 2026-10-12.** 🆕 **A second European institutional tenancy, named in shipped
 source: Universidad de Navarra.** 🔴 **And the Moodle entry gains a copyleft warning the npm tier
 had been hiding** — the one Moodle connector published to npm whose source is reachable is
