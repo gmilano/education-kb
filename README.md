@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 158 — 2026-10-12
+
+🟢 **Three pre-registered actions: two DISCHARGED in full, one discharged on its measurement limb
+and DECLINED on its correspondence limb.** 🔴 **One falsifier FIRED, and it refutes advice this
+shelf had been giving clients for three passes.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION HR`** — assess `Selleo/mentingo` | 🔴 **DISCHARGED, falsifier FIRED. It does NOT speak LTI 1.3 or xAPI** |
+| 🟡 **`ACTION HP`** — census rows 96–195, and open issues on four prose-MIT rows | 🟢 **Census DISCHARGED, falsifier SILENT at `23.0%`.** 🔴 **Issue-opening DECLINED with reason** |
+| 🟢 **`ACTION HS`** — Africa, Kenya, South Africa, Nigeria | 🟢 **DISCHARGED, falsifier SILENT — `3 of 4` returned dated national instruments** |
+
+### 🟢 What this pass added to the shelf
+
+- 🔴 **`T127` — `Selleo/mentingo` has NO LTI 1.3 and NO xAPI**, measured as `0` real occurrences in a `104`-table, `100 244 B` Drizzle schema. 🔴 **The *"SCORM + xAPI"* claim this shelf republished for four passes came from the repository's GitHub TOPIC LIST; the maintainers' own README keeps `xAPI/LTI` inside a commented-out block marked *"do not publish without verification."***
+- 🟢 **`mentingo` measured properly in exchange:** PostgreSQL **Row-Level Security** tenancy (`tenantId` ×154, least-privilege runtime role), 4 SCORM **runtime** tables, a 7-table **LLM-as-judge rubric engine with hard-fail blocking errors** that nothing else on this shelf has, pgvector RAG, a 5-table RBAC engine, and an `outboxEvents` transactional outbox.
+- 🔴 **`T124` — `NOASSERTION` is not *"no licence."*** `10 of 10` bodies read: 🔴 **`6` are non-commercial BY DESIGN** — Business Source License 1.1, PolyForm Noncommercial, PolyForm Strict ×2 *(byte-identical: one project, two owners)*, and two all-rights-reserved. 🟢 **`P51` gains a fourth tier and `P158-B` replaces the licence-existence test with a family classifier.**
+- 🔴 **`T125` — the same 100 rows are `23.0%` or `33.0%` unlicensed on vocabulary alone.** 🟢 **`T106`'s third and sharpest instance.**
+- 🟢 **`T117` CORROBORATED on a fresh sample:** `4 of 23` metadata-null rows carry an affirmative MIT claim in README prose with no licence text anywhere *(p157: `4 of 15`)*.
+- 🟢 **`P54` — resolve the repository before reading absence into a `404`.** 🔴 **Caught by a control that fired by accident: two nonexistent repository names probed identically to licence-less ones.**
+- 🟢 **`P55` — settle *"does it integrate with X?"* from the schema and the dependency manifest, not the feature table.** 🟢 **Cost of the whole `mentingo` assessment: 6 `raw` fetches and one `ls-remote`. No clone.**
+- 🟢 **`T126` — the NEW-ENTRANT tier is permissive and APAC-origin**, inverting p157's `T123`. 🟢 **`Miaotofu01/Study-Mate` — MIT, `894 ★` and 44 forks in ~25 days, the steepest new education curve this shelf has measured** — plus `VeryMath-textbook-copilot` (Apache-2.0, ACP), `StepsToGreat` (MIT) and `LeetLens` (MIT, FSRS), every licence read from the body.
+- 🟢 **A channel rule, after five passes of nulls:** 🔴 **web search returns commentary and courses for education repositories;** 🟢 **the GitHub search API with a `created:>` filter returns code.** 🟢 **One call found all five new rows. `P158-C`.**
+- 🟢 **Three new patterns:** 🟢 **`P158-A`** the auditable-assessment build *(rubric as database rows, for the Oklahoma/Maryland human-oversight rule and the EU Annex III evaluative tier)* · 🟢 **`P158-B`** the corrected licence gate *(existence → default branch → family name line → four-tier verdict)* · 🟢 **`P158-C`** the new-entrant discovery loop.
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **North America** | 🆕 🟢 **US DoE AI grant-priority rule `2026-04-13`** · 🆕 🔴 **a second tracker at `68` bills / `27` states / `10` ENACTED against p153's `134`/`31` — `T114` applied to legislative counts** · 🆕 🔴 **Oklahoma + Maryland ban AI from high-stakes student decisions — the first NA instrument constraining ARCHITECTURE** · 🆕 🟢 **Maryland, Idaho, Oklahoma, Virginia mandate district policy; Alabama `H.B. 329`; SUNY × 64 campuses** · 🔴 **EIGHTH pass with nothing from Canada** |
+| **EMEA** | 🟢 **`ACTION HS` discharged — Kenya, South Africa, Nigeria, Rwanda, AU, OECD** · 🆕 🟡 **the FIRST EMEA-only percentage in nine passes (`13%` Italian universities, governance not adoption)** · 🆕 🔴 **a SIXTH AI-Act date, in direct conflict: Annex III at `2026-08-02` (Commission) vs `2027-12-02` (practitioner analyses)** · 🔴 **South Africa's draft policy WITHDRAWN, reportedly for citing non-existent sources** |
+| **APAC** | 🆕 🟢 **first rates in four passes (Japan `26.7%` vs US `68.8%`, China `81.2%`, economy-wide)** · 🆕 🔴 **the first OPPOSITION figure on this shelf: ban support `21%→29%` Japan, `26%` India** · 🆕 🟢 **China compulsory from age 6 since `2025-09`; India mandatory from Class 3 from `2026–27`; Korea's statute in force `2026-01-22` corroborated** · 🆕 🔵 **APAC is now the SUPPLY side of permissive education OSS** |
+| **LATAM** | 🆕 🟢 **Peru `Ley N° 31814` (`2023-07-05`) — the region's only ENACTED AI law, and this shelf did not hold it** · 🆕 🟡 **Mexico's first binding AI-adjacent obligations; Public AI Training Center targeting 10 000 specialists in 2026** · 🆕 🟢 **Mexico ANSWERS under LATAM, halving an eight-pass gap by reclassification** · 🔴 **`mentingo` ships Spanish but NOT Portuguese — a concrete cost for Brazil** |
+| **Global** | 🔴 **market size ELEVENTH pass, now with two of four figures mutually incoherent** · 🔴 **no open-source vendor in any market source, ELEVENTH pass** · 🟢 **`T124`, `T125`, `T127`, `P54`, `P55`** |
+
+### 🔜 Pre-registered for p159
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HT`** — assess `openolat/OpenOLAT` as p158 assessed `mentingo` | 🔴 *Refuted if `OpenOLAT` does NOT speak LTI 1.3* — 🔵 **p158 has just put it in front of clients on that unverified assumption, which is exactly how `ACTION HR` fired** |
+| 🟢 **`ACTION HU`** — `ai-tutor` rows `196–295`, classified with `P158-B`'s four tiers | 🔴 *Refuted if the source-available-by-design family appears in fewer than 3 of 100 rows* |
+| 🟢 **`ACTION HV`** — query Canada in its own right; rename *"North America"* to *"United States"* | 🔴 *Refuted if Canada returns no dated federal or provincial instrument* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The rotation is STILL not fixed on `main` — and p158 identified WHY, after three passes of wrong diagnosis.** 🟢 **p156 and p157 did commit and push the advance; `origin/claude/ecstatic-mccarthy-zz0tys` reads `next: 9`, `last_industry: education`.** 🔴 **But `origin/main` reads `next: 8`, `2026-08-02`, `technology`, each run reads `main`, each run may only write its own `claude/…` branch, and nothing merges them.** 🔴 **p158 advanced it on its branch as required and states plainly that this will not reach the next run: it needs a human merge, or rotation state both sides can see.** 🟡 **It is NOT re-registered, because registering it a fourth time would be pretending it is a research task.**
+- 🔴 **The issue-opening limb of `ACTION HP` was DECLINED, not attempted** — it writes publicly into four private individuals' repositories from an unattended scheduled run. 🟢 **Retired from the register by decision.**
+- 🔴 **No third-party efficacy evidence for any agent** — the oldest gap here, unregistered because no channel in reach supplies it.
+- 🔴 **No APAC or EMEA EDUCATION adoption rate** — governance-coverage and economy-wide figures only.
+- 🔴 **No primary legal text, TENTH pass**, so the AI Act date conflict stays unresolved.
+- 🔴 **`474` of `669` `ai-tutor` rows unread**, and `scormStandardEnum`'s members unread.
+
 ## Pass 157 — 2026-10-12
 
 🟢 **All three pre-registered actions reached — a second consecutive clean sweep of a

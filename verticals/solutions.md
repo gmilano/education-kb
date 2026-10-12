@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 158 — 2026-10-12
+
+🔴 **A CORRECTION to this page's own recommendation, and it is the client-facing half of
+`ACTION HR`.** 🟢 **`Selleo/mentingo` is fully assessed for the first time in four passes — and it
+belongs in a different column than this page has been putting it in.**
+
+### 🔴 CORRECTED — `mentingo` is not an academic LMS, and it does not speak LTI 1.3
+
+🔴 **This page has offered `mentingo` as the MIT answer to *"to OWN the platform, fork-safe"*
+without qualification. That is right for one engagement shape and wrong for the other.**
+
+| claim this page carried | p158 verdict |
+|---|---|
+| 🔴 *"AI-native LMS, SCORM + xAPI, white-label"* | 🔴 **xAPI is ABSENT from the data model.** The claim traces to the repository's GitHub **topic list**; the maintainers' own README keeps `xAPI/LTI` inside a commented-out block marked *"DO NOT PUBLISH WITHOUT VERIFICATION"* |
+| 🔴 *"the only MIT LMS"* | 🟡 **True on licence, misleading on category.** 🟢 **Its README: *"designed for corporate L&D… If you need a large academic plugin ecosystem, choose Moodle"*** |
+| 🟢 *"MIT, 1 062 B, fork freely"* | 🟢 **CONFIRMED again from the body** |
+
+### 🟢 The corrected routing table — which platform for which engagement
+
+| engagement | platform | licence | why |
+|---|---|---|---|
+| 🟢 **University / K-12 with an existing LMS estate; AI delivered as a federated tool** | 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) *(GPL)* or [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(AGPL-3.0)*, **left unmodified** | 🔴 copyleft | 🟢 **They speak LTI 1.3 + AGS. `P156-A` crosses the licence boundary at the protocol, so the deliverable stays MIT** |
+| 🟢 **Institution that wants to OWN an academic platform** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) *(Apache-2.0, 447 ★)* | 🟢 permissive + patent grant | 🟢 **Fork-safe AND speaks LTI and QTI.** 🔵 **This is now the default recommendation for the fork-and-own academic case** |
+| 🆕 🟢 **Corporate L&D / HRTech, greenfield, white-labelled or resold** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(MIT, 93 ★)* | 🟢 **MIT — imposes nothing** | 🟢 **DB-level multi-tenancy (PostgreSQL RLS), AI mentor and an LLM-judge rubric engine in the core, AWS Marketplace one-click deploy.** 🔴 **No LTI — do not propose it where tools must federate into a campus LMS** |
+| 🔴 **Hosted-for-the-client AI-native platform** | 🔴 `learnhouse`, `lextures` *(AGPL-3.0)* | 🔴 network copyleft | 🔴 **Hosting IS distribution under AGPL. `mentingo` is the MIT row in the same architectural slot** |
+
+### 🆕 🟢 Why `mentingo` is a stronger corporate row than this page realised
+
+🟢 **The assessment turned up a subsystem no other platform on this shelf has:** 🟢 **an
+LLM-as-judge assessment engine modelled in the database** — `aiJudgeConfigurations`,
+`aiJudgeCriteria`, `aiJudgeScoreGuidance`, `aiJudgeBlockingErrors`, plus per-judgement tables.
+🔵 **Rubric criteria, score guidance and *hard-fail blocking errors* are first-class rows, not
+prompt text.**
+
+🟢 **For a compliance-training engagement that is the whole product**: 🟢 **mandatory training
+where a specific error must fail the attempt regardless of overall score is precisely what
+`aiJudgeBlockingErrors` models**, and 🟢 **the EU AI Act reading on this shelf (`trends` T6) puts
+EVALUATIVE use in the high-risk tier, where an auditable, data-modelled rubric is worth more
+than a better prompt.**
+
+🟢 **Also shipped, and relevant to a studio:** 🟢 **a `permission*` RBAC rule-set engine (5
+tables), learning paths with their own certificates, live training with attendance (LiveKit),
+calendar sync both directions, a transactional `outboxEvents` table for integration, and a
+`courseAuthoring*` surface (4 tables) that is an authoring-agent landing zone.**
+🔴 **Against that: `93 ★`, `107` open issues, single vendor (Selleo, Poland), and no third-party
+deployment this shelf can point to.** 🔵 **Read it as a reference architecture and fork base,
+which is what this page has always said about it.**
+
+### 🟡 Regional note, from the same read
+
+🟢 **`mentingo` ships UI in English, Polish, German, Spanish, French and Czech.**
+🟢 **Spanish is present — so a LATAM or Iberian corporate deployment starts with the interface
+already translated.**
+🔴 **Portuguese is NOT present**, which is a concrete localisation cost for Brazil — 🔵 **the
+largest LATAM market, and the one whose AI bill (`PL 2338/2023`) is furthest advanced.**
+
+### 🔴 Still open on this page
+
+- 🔴 **`OpenOLAT`'s data model is unread**, and it is now the recommended fork-and-own academic platform. 🔵 **It should be assessed the way `mentingo` just was.**
+- 🔴 **No platform row on this shelf has a third-party production deployment this KB can name**, 🟡 **other than Moodle and Open edX, which are the two it tells clients not to fork.**
+- 🟡 **`scormStandardEnum`'s members unread** — `mentingo`'s SCORM 2004 support is unknown.
+
 ## Pass 157 — 2026-10-12
 
 🟢 **A 156-pass gap on this page is CLOSED, and the answer is a build decision rather than a

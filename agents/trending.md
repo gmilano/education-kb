@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 158
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **Five new rows from the new-entrant channel, four with the licence body read and the
+answering path recorded.** 🟢 **For the first time in several passes the permissive rows are the
+ones with the momentum.**
+
+### 🆕 The new rows — created since `2026-08-01`, ordered by stars
+
+| agent | ★ | created | licence *(body-read)* | bytes | path | what moved |
+|---|---|---|---|---|---|---|
+| 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **894** | **2026-09-17** | 🟢 **MIT** | 1 064 | `LICENSE` | 🟢 **`894 ★` in ~25 days — the steepest new-row curve this shelf has measured in education.** 🟢 **Plans a learning route, teaches it, sets projects, schedules spaced review.** 🔵 **Chinese-language, JavaScript, 44 forks** |
+| 🔴 [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) | 70 | 2026-09-22 | 🔴 **NONE** | 0 | 🔴 404 on 8 paths | 🔴 **NOT A PROJECT — an HTML page with `0` forks and `0` issues, top of `topic:edtech` by stars. Recorded as a false positive, not a finding** |
+| 🟢 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 22 | 2026-09-21 | 🟢 **MIT** | 1 082 | `LICENSE` | 🟢 **A Markdown teaching PROTOCOL — turns any AI tool into a 1:1 tutor.** 🔵 **Socratic method + mastery learning, `AGENTS.md`-shaped. The LICENSED answer to `Mr.-Ranedeer`'s no-grant prompt** |
+| 🔴 [`photolensfocus/Llm-language-learning`](https://github.com/photolensfocus/Llm-language-learning) | 22 | 2026-09-14 | 🔴 **NONE** | 0 | 🔴 404 on 8 paths | 🟡 A curated spoken-English guide for developers. 🔵 Content, not a program |
+| 🟢 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 18 | 2026-09-12 | 🟢 **Apache-2.0** | 11 338 | `LICENSE` | 🟢 **Textbook left, coding agent right, wired over ACP.** 🟢 **Emits explanations, exercises, mindmaps, a knowledge graph and LaTeX Beamer slides.** 🔵 **TypeScript, self-hosted — the most composable new row** |
+| 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 2026-08-07 | 🟢 **MIT** | 1 066 | `LICENSE` | 🟢 **Native macOS Swift client with FSRS spaced repetition**, building a knowledge graph from the learner's own submissions. 🔵 **The only native-desktop row on this shelf** |
+
+### 🆕 🔵 The week's pattern is the INVERSE of last week's
+
+🔴 **p157 recorded `T123`: the attention leaders are AGPL-3.0 or unlicensed, and the permissive
+rows sit 7th and 8th by stars.**
+🟢 **This week, in the rows created since August, the TOP row is MIT and `4 of 5` are permissive.**
+🆕 **`T126`:** 🔵 **the licence distribution of open education AI depends on which tier you
+sample — the established, attention-leading tier is network-copyleft, the new-entrant tier is
+permissive** — 🟢 **and a studio looking for something to build on should be reading the new tier,
+which is also where the only `+800 ★`-per-month curve on this shelf currently is.**
+
+🟢 **A second placement, recorded because this shelf is paid to place findings:** 🔵 **`4 of the 5`
+new entrants are Chinese-language projects (`Study-Mate`, `VeryMath`, `LeetLens`, and
+`StepsToGreat` bilingually).** 🟢 **APAC is now the origin of the new-entrant tier, and it is
+arriving MIT/Apache rather than AGPL.**
+
+### 🔴 The honest caveat on all five rows
+
+🔴 **These are weeks-old repositories, mostly single-author, with no release history, no
+third-party efficacy evidence and no maintenance record.** 🟢 **A permissive licence read from the
+body is the only thing this pass can vouch for.** 🔵 **`Study-Mate` at `894 ★` and `44` forks is
+the only one with independent adoption signal of any kind, and 25 days is not a maintenance
+record.**
+
+### 🟢 Re-confirmations and corrections worth recording
+
+- 🟢 **`topic:ai-tutor` population measures `669` this pass — EXACTLY p157's figure**, after
+  p155's `684`, p156's `685` and p157's `669`. 🔵 **`T111`'s *"the denominator moves while
+  counted"* is now better described as a step change between p156 and p157 that has since
+  held, not as continuous drift.**
+- 🆕 🔴 **`NOASSERTION` rows are NOT unlicensed** — `10 of 10` bodies read this pass, `6` of them
+  non-commercial by design (BUSL 1.1, PolyForm Noncommercial, PolyForm Strict ×2, and two
+  all-rights-reserved). 🔵 **See `T124` in `agents/top.md`; this is the licence family that
+  looks most like open source and is least usable.**
+- 🆕 🔴 **`freesoft/MathCrew` and `minouza/MathCrew` carry byte-identical `LICENSE.md` bodies at
+  `3 905 B`** — one project under two owners, counted once in any licence statistic from now on.
+- 🆕 🔴 **A gate failure worth logging where rows ENTER the shelf:** two nonexistent repository
+  names probed this pass returned exactly what a licence-less repository returns.
+  🆕 **`P54`: resolve the repository before reading absence into a `404`.**
+
 ## 2026-10-12 — Pass 157
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**

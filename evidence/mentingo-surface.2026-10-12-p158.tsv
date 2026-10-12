@@ -1,0 +1,14 @@
+dimension	finding	how_measured	verdict
+licence	MIT	"LICENSE body, 1062 B, ""Copyright (c) 2024 Selleo"""	CONFIRMED
+LTI 1.3	ABSENT	"0 real occurrences in schema (4 matches are ""multirange""/""totalTime""); README mentions LTI only inside an HTML comment marked ""NIE publikowac bez weryfikacji"""	FALSIFIER FIRED
+xAPI	ABSENT	0 occurrences in schema; same unverified HTML comment only	ABSENT
+SCORM	1.2 export (README) but RUNTIME tables present in schema	4 tables: scorm_packages, scorm_scos, scorm_attempts, scorm_runtime_state; 5 enums incl. scormStandardEnum	README UNDERSTATES schema
+multi-tenancy	PostgreSQL Row-Level Security, least-privilege runtime role, per-tenant domains	"tenants table; tenantId x154, withTenantId x98 in schema; docs/architecture.md: ""A bug in application code cannot read another tenant rows"""	CONFIRMED, DB-enforced
+data model	104 pgTable, 12 pgEnum, 3103 lines, 100244 B	apps/api/src/storage/schema/index.ts, Drizzle ORM	MEASURED
+AI subsystem	aiMentor* x7 tables + aiJudge*/judgement x7 tables	LLM-as-judge assessment engine with blocking (hard-fail) criteria	NOT PREVIOUSLY ON SHELF
+RAG	documents, docChunks, documentToAiMentorLesson, searchDocuments + pgvector	PostgreSQL 16 + pgvector	PRESENT
+stack	NestJS 10 + CQRS, Remix/React, Drizzle, PG16+pgvector, Redis+BullMQ, Socket.IO, LiveKit, Langfuse	"README ""At a glance"" + apps/api/package.json"	MEASURED
+positioning	corporate L&D / HRTech, NOT academic	"README: ""If you need a large academic plugin ecosystem, choose Moodle"""	SHELF ADVICE MUST BE CORRECTED
+UI languages	English, Polish, German, Spanish, French, Czech	README At a glance	Spanish YES, Portuguese NO (Brazil gap)
+distribution	AWS Marketplace one-click CloudFormation + self-host + Selleo managed	README	COMMERCIALLY RELEVANT
+refs	39 heads on origin	git ls-remote --heads	MEASURED

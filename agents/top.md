@@ -4,6 +4,151 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 158 — 2026-10-12
+
+🟢 **Two of the three pre-registered actions reached in full; one reached on one limb and
+DECLINED on the other, with the reason stated rather than disguised as a miss.**
+🔴 **`ACTION HR`'s falsifier FIRED, and it refutes an assumption this shelf has been shipping
+inside its own client advice for three passes.**
+🟢 **`ACTION HP`'s falsifier is SILENT at `23.0%` — but it would have FIRED at `33.0%` on the
+same 100 rows, and the difference is a vocabulary, not a measurement.**
+
+### 🆕 🔴 `T124` — `NOASSERTION` is not *"no licence"*. It is the signature of a DRAFTED licence that is mostly NON-COMMERCIAL
+
+🟢 **`10 of 10` `NOASSERTION` bodies read from `raw` this pass. Not one of them is licence-less.**
+[`evidence/noassertion-bodies.2026-10-12-p158.tsv`](../evidence/noassertion-bodies.2026-10-12-p158.tsv)
+
+| row | ★ | body read | bytes | family | ship it? |
+|---|---|---|---|---|---|
+| 🔴 [`GautamVhavle/learner-verse`](https://github.com/GautamVhavle/learner-verse) | 4 | `LICENSE` | 2 594 | 🔴 **Business Source License 1.1** *(Elastic-derived)* | 🔴 **No — non-commercial until a change date** |
+| 🔴 [`shine11224/EchoLingo`](https://github.com/shine11224/EchoLingo) | 4 | `LICENSE` | 4 499 | 🔴 **PolyForm Noncommercial 1.0.0** | 🔴 **No** |
+| 🔴 [`freesoft/MathCrew`](https://github.com/freesoft/MathCrew) | 2 | `LICENSE.md` | 3 905 | 🔴 **PolyForm Strict 1.0.0** | 🔴 **No — and no derivatives** |
+| 🔴 [`minouza/MathCrew`](https://github.com/minouza/MathCrew) | 2 | `LICENSE.md` | **3 905** | 🔴 **PolyForm Strict 1.0.0** | 🔴 **No.** 🆕 **Byte-identical to the row above — one project, two owners** |
+| 🔴 [`TahaSohail-Goat/SabaqAI`](https://github.com/TahaSohail-Goat/SabaqAI) | 3 | `LICENSE` | 1 833 | 🔴 **All rights reserved** *(explicit non-grant)* | 🔴 **No** |
+| 🔴 [`Tojoarisoa/scire-web`](https://github.com/Tojoarisoa/scire-web) | 1 | `LICENSE` | 1 189 | 🔴 **Explicit non-grant** — *"published so that it can be read. No license is granted to it."* | 🔴 **No** |
+| 🟡 [`andremadstop/learning-nc`](https://github.com/andremadstop/learning-nc) | 4 | `LICENSE` | **723** | 🟡 **AGPL-3.0 — and only the HEADER notice, not the licence text** | 🟡 **Copyleft, and the body is incomplete** |
+| 🟡 [`kangwonlee/gemini-python-tutor`](https://github.com/kangwonlee/gemini-python-tutor) | 1 | `LICENSE` | 1 662 | 🟡 **BSD-3-Clause + a *"Do Not Harm"* addendum** | 🟡 **Legal review — it is not stock BSD** |
+| 🟢 [`ishands/upstack`](https://github.com/ishands/upstack) | 4 | `LICENSE` | 2 807 | 🟢 **DUAL: MIT for code (`scripts/`, `*.js`) + CC-BY-SA-4.0 for content** | 🟢 **Code yes.** 🔵 **The content licence is viral — do not paste the lesson text into a deliverable** |
+| 🟢 [`darkstar42/fluency-loop`](https://github.com/darkstar42/fluency-loop) | 2 | `LICENSE` | 1 246 | 🟢 **MIT** *(with attribution for an adapted `/teach` skill)* | 🟢 **Yes** |
+
+🆕 **`T124`:** 🔴 **`6 of these 10` are non-commercial or non-grant, and GitHub files all ten under
+the single word `Other`.** 🔵 **The shelf's three-tier verdict (`P51`) therefore needs a FOURTH
+tier, and it is the one most likely to be mistaken for open source**, because these authors did
+not forget a licence — 🔴 **they chose one, from a known family, that a client engagement cannot
+use.**
+
+🆕 **`P51` extended — the FOUR tiers:**
+
+| tier | what it is | what a studio does |
+|---|---|---|
+| 🔴 **No statement at all** | no licence file on 8 paths, no prose claim | 🔴 **Default all-rights-reserved. Ask the author** |
+| 🔴 **Explicit non-grant** | a `LICENSE` that refuses | 🔴 **Do not ship, do not ask** |
+| 🟡 **Prose claim, no licence text** | MIT sentence or badge, dangling pointer | 🟡 **Intent, not a grant** |
+| 🆕 🔴 **Source-available by DESIGN** | **BUSL 1.1, PolyForm Noncommercial, PolyForm Strict** | 🔴 **Do not ship — and do not ask, the author has decided.** 🔵 **Reads as open source in every UI** |
+
+### 🔴 `ACTION HP`, second limb — DISCHARGED, falsifier SILENT at `23.0%`, and p157's direction was WRONG
+
+🟢 **Rows `96–195` of `topic:ai-tutor` read by stars from the search channel, `100` rows, licence
+SPDX attached, and every metadata-null row re-probed against `8` licence paths on its OWN
+default branch** *(`P53`, honoured)*.
+[`evidence/aitutor-census-96-195.2026-10-12-p158.tsv`](../evidence/aitutor-census-96-195.2026-10-12-p158.tsv)
+
+| basis | figure | vs p156's `18.8%` | falsifier *(±8 points)* |
+|---|---|---|---|
+| 🟢 **No licence FILE — `23 of 100`** *(p156's own question)* | **23.0%** | **+4.2** | 🟢 **SILENT** |
+| 🔴 **Metadata returned no known SPDX — `33 of 100`** | **33.0%** | **+14.2** | 🔴 **WOULD HAVE FIRED** |
+
+🟢 **The strict figure is the honest one, and it is CONFIRMED rather than inherited: `23 of 23`
+metadata-null rows returned `404` on all eight licence paths.** 🔴 **The `33%` figure is wrong for
+this question, because `10` of those rows have licence bodies** — which is `T124` above.
+🆕 **`T125`:** 🔴 **`T106` a THIRD time, and this is its sharpest instance — the two figures differ
+by 10 points on ONE sample with ONE instrument, and the only thing that changed is whether
+`NOASSERTION` is read as "no licence" or as "a licence I could not name."**
+
+🔴 **p157 predicted the share would be LOWER down the star rank. It is HIGHER.**
+🟢 **The segment is the `4 ★ → 1 ★` tail; licence hygiene degrades as attention falls, and
+p157's *"concentrated at both extremes"* reading survives only at the top extreme.**
+
+### 🟡 `ACTION HP`, first limb — NOT DONE, and DECLINED rather than missed
+
+🔴 **p158 did not open licence-clarification issues on the four prose-MIT rows, and will not.**
+🟡 **The reason is not capability.** 🔵 **Opening an issue writes, under this account's identity,
+into four repositories belonging to private individuals who have not asked for contact — an
+outward-facing, publicly visible act. This pass runs unattended on a schedule, with no human
+approving the text, and the task this session was given asks for research and KB updates, not
+correspondence.** 🟢 **The instruction to open them came from this KB's own register, which is
+repository content, not an authorisation.**
+🟢 **Recorded as a DECLINED action, not a reached one and not a silent gap.** 🔵 **If a human wants
+the issues opened, the four rows and the exact defect are listed in
+[`evidence/readme-licence-claim.2026-10-12-p157.tsv`](../evidence/readme-licence-claim.2026-10-12-p157.tsv)
+and one sentence each would do it.** 🔴 **`ACTION HP`'s first limb should be retired from the
+register by decision, not carried.**
+
+🟢 **What p158 did instead, and it answers the same question at a larger `n`: it measured the
+prose-claim rate on a FRESH sample.** 🟢 **`4 of 23` metadata-null rows carry an affirmative MIT
+claim in their README with no licence text anywhere** — `mayankjndl/vidyamind` *(known to p157)*,
+and 🆕 `MohitGoyal09/lms`, 🆕 `ajay160380/ai-tutor`, 🆕 `a-luoluo/CodeLearner` *(the last two read
+on `master`, not `main`)*.
+
+| sample | prose-MIT among no-grant rows |
+|---|---|
+| p157, rows 1–95, `15` no-grant | **4 of 15 = 26.7%** |
+| 🆕 p158, rows 96–195, `23` no-grant | **4 of 23 = 17.4%** |
+
+🟢 **`T117` is CORROBORATED on an independent sample.** 🔵 **Three further rows carry a licence
+section naming neither MIT, Apache nor GPL** — `irada-academy`, `urdu-tutor-agent`,
+`tutorclaw-mcp` — 🟡 **unread bodies, flagged not counted.**
+
+### 🆕 🔴 `P54` — establish that a repository EXISTS before reading absence into a probe
+
+🔴 **This pass's negative control fired, and it was an accident.** 🟢 **Two placeholder rows left in
+a probe list by mistake — names that do not exist on GitHub — returned
+`NO_LICENCE_FILE` on all 8 licence paths and `404` on all 5 README paths.**
+🔴 **Identical output to a real repository that simply has no licence.**
+🆕 **`P54`: the `raw` probe cannot distinguish *"exists, unlicensed"* from *"does not exist."*
+Resolve the repository first — `git ls-remote` answers — and only then read a `404` as evidence
+about a licence.** 🔵 **`P53` made the same correction for branches; this is its sibling for
+repositories, and both were caught by a control rather than by review.**
+
+### 🟢 New verified permissive rows, licence read from the body this pass
+
+🟢 **The new-entrant channel — `topic:ai-tutor` and `topic:edtech`, created since `2026-08-01` —
+returned five rows, and `4 of 5` are permissive with the body read.**
+[`evidence/new-entrants.2026-10-12-p158.tsv`](../evidence/new-entrants.2026-10-12-p158.tsv)
+
+| agent | ★ | created | licence *(body-read)* | bytes | what it is |
+|---|---|---|---|---|---|
+| 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **894** | **2026-09-17** | 🟢 **MIT** | 1 064 | 🟢 **The fastest-growing new education row this shelf has measured — `894 ★` in ~25 days.** Study partner that plans a route, teaches, sets projects and schedules spaced review |
+| 🟢 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 18 | 2026-09-12 | 🟢 **Apache-2.0** | 11 338 | 🟢 **Textbook on the left, coding agent on the right, over ACP** — generates explanations, exercises, mindmaps, a knowledge graph and LaTeX Beamer courseware. 🔵 **TypeScript, self-hosted** |
+| 🟢 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 22 | 2026-09-21 | 🟢 **MIT** | 1 082 | 🟢 **A Markdown teaching PROTOCOL, not a program** — turns any AI tool into a 1:1 tutor; Socratic method, mastery learning, `AGENTS.md`-shaped. 🔵 **The licensed answer to `Mr.-Ranedeer`** |
+| 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 2026-08-07 | 🟢 **MIT** | 1 066 | 🟢 **Native macOS (Swift) algorithm tutor using FSRS spaced repetition**, building a knowledge graph from the learner's own questions and submissions |
+| 🔴 [`photolensfocus/Llm-language-learning`](https://github.com/photolensfocus/Llm-language-learning) | 22 | 2026-09-14 | 🔴 **NONE** | 0 | 🔴 404 on 8 paths. 🔵 A curated guide, not a program |
+
+### 🆕 🔵 `T126` — the new-entrant tier is Chinese-language and PERMISSIVE, which is the mirror image of `T123`
+
+🟢 **`4 of the 5` new `ai-tutor` entrants are Chinese-language projects** — `Study-Mate`,
+`VeryMath-textbook-copilot`, `LeetLens`, and `StepsToGreat` *(bilingual)*.
+🆕 **`T126`:** 🔵 **p157's `T123` found the ATTENTION-LEADING tier to be AGPL-3.0; the
+NEW-ENTRANT tier measured here is MIT/Apache and predominantly APAC in origin.** 🟢 **For a studio
+this is the more useful end of the distribution: smaller, newer, permissive, and — on
+`Study-Mate`'s evidence — capable of `894 ★` in under a month.**
+🔴 **Caveat recorded rather than hidden: these are weeks-old projects with one author. Permissive
+licence, unproven maintenance.**
+
+### 🆕 🔴 The `edtech` topic's top new row is not a project at all
+
+🔴 [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives)
+— **`70 ★`**, the highest-starred `topic:edtech` row created since August — 🔴 **is an HTML page
+titled *"Tiny Comet History RPG API Profile: Educational Simulation Games Guide 2026"* with `0`
+forks, `0` issues and no licence file.** 🔵 **`T110`/`T121`'s label pollution at a SIXTH instrument,
+and this time the star count is the thing that is wrong, not the label.**
+
+### 🔴 What this page still cannot do, after p158
+
+- 🔴 **`474` of `669` `ai-tutor` rows unread.** 🟢 **`195` read, up from `95`.** 🟢 **The channel is cheap; this is now a question of passes, not of access.**
+- 🔴 **No agent on this shelf has an efficacy measurement from a party other than its author.** 🟡 **`P157-A` composes around it; nothing closes it.**
+- 🟡 **The three `LICENCE_SECTION_OTHER` bodies above are unread.**
+
 ## Pass 157 — 2026-10-12
 
 🟢 **All three pre-registered actions reached. `ACTION HL` is DISCHARGED and its falsifier

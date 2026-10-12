@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 158 — 2026-10-12
+
+🔴 **`ACTION HR` DISCHARGED and its falsifier FIRED. `Selleo/mentingo` does NOT speak LTI 1.3,
+and this shelf has been recommending it inside `P156-A` on the assumption that it does.**
+🟢 **Four passes of carrying it unassessed is over: data model, multi-tenancy, SCORM surface and
+LTI support are all now measured from the repository itself.**
+[`evidence/mentingo-surface.2026-10-12-p158.tsv`](../evidence/mentingo-surface.2026-10-12-p158.tsv)
+
+### 🔴 `ACTION HR` — LTI 1.3 is ABSENT, and the claim this shelf repeated came from a topic list
+
+🔴 **`lti` appears 4 times in the `100 244 B` schema module. All four are substrings of other
+words** — `multirange` ×3, `totalTime` ×1. 🔴 **There is no LTI table, no LTI column, no LTI
+dependency in `apps/api/package.json`.**
+🔴 **`xapi` appears `0` times.**
+
+🔴 **The only place `LTI` and `xAPI` appear in the whole repository front matter is inside an
+HTML comment in the README, in Polish, which translates as:**
+
+> *"STAGE 3 — to be confirmed by the team, DO NOT PUBLISH WITHOUT VERIFICATION: ISO 27001
+> (Selleo certificate or only process conformity?), WCAG 2.1 AA (accessibility audit), DPA/GDPR
+> template, pentest, **xAPI/LTI**, mapping to NIS-2 / art. 8e KSC, retention and data deletion."*
+
+🟢 **So the maintainers know these are unverified, and deliberately commented them OUT of the
+rendered README.** 🔴 **This shelf nevertheless published *"SCORM + xAPI"* on this row for four
+passes** — 🔴 **read, on p157's own account, from the repository's GitHub TOPIC LIST.**
+
+🆕 **`T127`:** 🔴 **a FEATURE claim fails across instruments exactly the way `T117` showed a
+LICENCE claim fails, and the ranking of instruments is the same** — 🟢 **the data model is
+authoritative, the rendered README is cautious, and the topic list is marketing.**
+🔵 **`T110`, `T117`, `T120`, `T121` and now `T127`: on this shelf, every instrument that is cheap
+to read is the one that is wrong.**
+
+### 🟢 What `mentingo` actually is, measured
+
+| dimension | finding | how measured |
+|---|---|---|
+| 🟢 **Licence** | 🟢 **MIT**, `1 062 B`, *"Copyright (c) 2024 Selleo"* | body re-read on `main` — **CONFIRMED, third pass running** |
+| 🔴 **LTI 1.3** | 🔴 **ABSENT** | `0` real hits in schema; unverified HTML comment only |
+| 🔴 **xAPI** | 🔴 **ABSENT** | `0` hits in schema |
+| 🟡 **SCORM** | 🟡 **README says *"SCORM 1.2 export"*. The SCHEMA carries `scorm_packages`, `scorm_scos`, `scorm_attempts` and `scorm_runtime_state`, plus 5 SCORM enums including `scormStandardEnum`** | 🟢 **Runtime + attempt state is what a PLAYER needs, not an exporter** — 🟡 **so the README understates it. The enum's members live in `@repo/shared` and were NOT read this pass** |
+| 🟢 **Multi-tenancy** | 🟢 **PostgreSQL Row-Level Security with a least-privilege runtime role (`LMS_DATABASE_URL`) and per-tenant domains.** `tenants` table; `tenantId` ×154 and `withTenantId` ×98 in the schema | 🟢 **`docs/architecture.md`: *"A bug in application code cannot read another tenant's rows through that connection."*** 🔵 **DB-enforced, not app-enforced — the strongest tenancy claim on this shelf** |
+| 🟢 **Data model** | 🟢 **`104` tables, `12` enums, `3 103` lines, `100 244 B`, Drizzle ORM** | `apps/api/src/storage/schema/index.ts` |
+| 🆕 🟢 **AI mentor** | 🟢 **7 tables** — `aiMentorLessons`, `aiMentorConfigurations`, `aiMentorTeacherConfigurations`, `aiMentorRoleplayConfigurations`, `aiMentorThreads`, `aiMentorPracticeSessions`, `aiMentorThreadMessages` | schema |
+| 🆕 🟢 **LLM-as-judge assessment engine** | 🟢 **7 tables** — `aiJudgeConfigurations`, `aiJudgeCriteria`, `aiJudgeScoreGuidance`, `aiJudgeBlockingErrors`, `aiMentorJudgements`, `aiMentorJudgementCriteria`, `aiMentorJudgementBlockingErrors` | 🟢 **Rubric criteria, score guidance AND hard-fail *blocking errors*, modelled in the database.** 🔵 **NOTHING ELSE ON THIS SHELF HAS THIS** |
+| 🟢 **RAG** | 🟢 `documents`, `docChunks`, `documentToAiMentorLesson`, `searchDocuments` over **PostgreSQL 16 + pgvector** | schema + architecture doc |
+| 🟢 **Also in the model** | 🟢 **Learning paths (7 tables, incl. path certificates), RBAC policy engine (5 tables: roles, rule sets, rule-set permissions), live training + attendance (7 tables), calendar sync inbound/outbound, `outboxEvents` transactional outbox, `courseAuthoring*` agent surface (4 tables), `integrationApiKeys`, `certificates`, `forms`** | schema |
+| 🟢 **Stack** | 🟢 **NestJS 10 + CQRS · Drizzle · PG 16 + pgvector · Redis + BullMQ · Socket.IO · Remix/React · LiveKit voice · Langfuse tracing · Vercel AI SDK + OpenAI · LangChain** | README *At a glance* + `apps/api/package.json` |
+| 🟢 **Distribution** | 🟢 **AWS Marketplace one-click CloudFormation**, self-host, or Selleo-managed | README |
+| 🟡 **UI languages** | 🟢 **English, Polish, German, Spanish, French, Czech** | 🟢 **Spanish present.** 🔴 **No Portuguese — a real gap for Brazil** |
+| 🟢 **Refs** | `39` heads on origin | `git ls-remote --heads` |
+
+### 🔴 The consequence for this shelf's own advice, stated plainly
+
+🔴 **`P156-A` layer 5 is LTI 1.3. Its closing paragraph offers `mentingo` as a drop-in swap for
+layer 1. Those two sentences are incompatible, and p158 is the pass that found it.**
+
+🟢 **The corrected reading:**
+
+| engagement | does `mentingo` fit? |
+|---|---|
+| 🔴 **University / K-12, existing LMS estate, tools federated over LTI** | 🔴 **NO.** 🟢 **Moodle, Open edX, OpenOLAT, Sakai, ILIAS and Chamilo all speak LTI 1.3; `mentingo` does not. `P156-A` keeps layer 1 copyleft-but-unmodified for exactly this reason** |
+| 🟢 **Corporate L&D / HRTech, greenfield, white-label, resold** | 🟢 **YES, and it is the best row on this shelf for it** — MIT, DB-level tenancy, AI mentor and judge in the core, AWS Marketplace deployment |
+
+🟢 **`mentingo`'s own README says this before this shelf did** — *"Mentingo is a TypeScript
+platform designed for corporate L&D… If you need a large academic plugin ecosystem, choose
+Moodle."* 🔴 **The shelf filed it as *"the only MIT LMS"* and inherited an academic framing the
+project never claimed.** 🟢 **It is not a Moodle replacement; it is a Docebo/TalentLMS
+replacement, under MIT.**
+
+### 🆕 🟢 `P55` — settle an interoperability question from the DATA MODEL, not the feature table
+
+🟢 **Cost of this assessment: `6` `raw` fetches and one `ls-remote`. No clone.**
+🟢 **The decisive artefact was `apps/api/src/storage/schema/index.ts` — a single `100 KB` module
+that answered LTI, xAPI, SCORM, tenancy and subsystem inventory at once.**
+🆕 **`P55`: for any *"does it integrate with X?"* question, grep the schema and the dependency
+manifest. A feature table states intent; a table definition states what ships.**
+🔵 **`P52`'s channel map made this free: metadata from search, bodies from `raw`, refs from
+`ls-remote` — and a schema file is just another body.**
+
+### 🔴 Open on this page after p158
+
+- 🔴 **`scormStandardEnum`'s members are unread** — they live in `@repo/shared`. 🟡 **Whether `mentingo` supports SCORM 2004 as well as 1.2 is therefore still unknown, and the README's own TODO asks the same question about IMPORT.**
+- 🟢 **`mentingo` is no longer an open gap.** 🔵 **Four passes of *"unassessed beyond licence"* are closed.**
+- 🔴 **No foundational row other than `mentingo` has had its data model read.** 🟡 **`OpenOLAT` (Apache-2.0, the other fork-safe platform) is the one that matters next, and it is the one that DOES speak LTI and QTI.**
+
 ## Pass 157 — 2026-10-12
 
 🟢 **`ACTION HM` DISCHARGED after three unreached passes. The foundational tier finally has an

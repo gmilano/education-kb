@@ -1,0 +1,101 @@
+rank	repo	stars	metadata_spdx	default_branch	pushed	licence_body_probe	body_bytes	licence_family_read	readme_claim	commercially_usable
+96	HermeticOrmus/learning-skills	4	MIT	main	2026-05-25	not re-probed this pass		MIT	-	YES
+97	slow-0731/slow	4	AGPL-3.0	main	2026-08-23	not re-probed this pass		AGPL-3.0	-	COPYLEFT
+98	mayankjndl/vidyamind	4	NONE	main	2026-03-10	NO_LICENCE_FILE (8 paths)	0	none	MIT_PROSE	NO
+99	RobinaMirbahar/Python-Learning-Assistant	4	Apache-2.0	main	2026-04-01	not re-probed this pass		Apache-2.0	-	YES
+100	YANG-Haruka/HaruSpeak	4	MIT	main	2026-07-04	not re-probed this pass		MIT	-	YES
+101	maxpetrusenko/ai-math-tutor	4	NONE	main	2026-10-02	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+102	GautamVhavle/learner-verse	4	NOASSERTION	main	2026-08-10	FILE_FOUND:LICENSE	2594	Business Source License 1.1	-	NO
+103	lilialla/learn-everything	4	MIT	main	2026-08-01	not re-probed this pass		MIT	-	YES
+104	andremadstop/learning-nc	4	NOASSERTION	main	2026-10-09	FILE_FOUND:LICENSE	723	AGPL-3.0 (header notice only, 723 B)	-	COPYLEFT
+105	ValeraZSD/terramentor	4	AGPL-3.0	main	2026-10-12	not re-probed this pass		AGPL-3.0	-	COPYLEFT
+106	ishands/upstack	4	NOASSERTION	main	2026-04-29	FILE_FOUND:LICENSE	2807	DUAL: MIT (code: scripts/, *.js) + CC-BY-SA-4.0 (content)	-	YES-CODE
+107	ZYT64/KuroTutor	4	MIT	main	2026-09-25	not re-probed this pass		MIT	-	YES
+108	shine11224/EchoLingo	4	NOASSERTION	main	2026-08-20	FILE_FOUND:LICENSE	4499	PolyForm Noncommercial 1.0.0	-	NO
+109	Deriicc/LibreTutor	3	MIT	main	2026-06-02	not re-probed this pass		MIT	-	YES
+110	Sanjayt215/AI-ML-Adaptive-Learning-Platform	3	NONE	main	2026-04-10	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+111	Enterprise-DNA-OS/ai-learning-path-generator	3	MIT	main	2026-04-10	not re-probed this pass		MIT	-	YES
+112	MohitGoyal09/lms	3	NONE	master	2026-05-17	NO_LICENCE_FILE (8 paths)	0	none	MIT_PROSE	NO
+113	Mohamed-El-Sharqawy/agent-tutor	3	MIT	main	2026-08-31	not re-probed this pass		MIT	-	YES
+114	ajay160380/ai-tutor	3	NONE	main	2026-06-24	NO_LICENCE_FILE (8 paths)	0	none	MIT_PROSE	NO
+115	CGSeb/lessonfolk	3	MIT	main	2026-10-12	not re-probed this pass		MIT	-	YES
+116	kaixiad/RetainCraft	3	MIT	main	2026-05-24	not re-probed this pass		MIT	-	YES
+117	cskwork/supertutor-skill	3	MIT	main	2026-09-07	not re-probed this pass		MIT	-	YES
+118	SebastianElvis/hammer	3	MIT	main	2026-05-05	not re-probed this pass		MIT	-	YES
+119	YusenZhang0601/tutor	3	MIT	main	2026-09-05	not re-probed this pass		MIT	-	YES
+120	InferHaven/agent-skills	3	Apache-2.0	main	2026-10-11	not re-probed this pass		Apache-2.0	-	YES
+121	buildonlabs-org/awesome-ai-learning	3	CC0-1.0	main	2026-04-04	not re-probed this pass		CC0-1.0	-	YES
+122	apervashov/typescript-learning-assistant	3	MIT	main	2026-08-09	not re-probed this pass		MIT	-	YES
+123	TahaSohail-Goat/SabaqAI	3	NOASSERTION	main	2026-10-09	FILE_FOUND:LICENSE	1833	All rights reserved (explicit non-grant)	-	NO
+124	smilezyl2023/smile-teacher	3	MIT	main	2026-07-19	not re-probed this pass		MIT	-	YES
+125	giusyferrara/synapse-course	3	MIT	main	2026-09-13	not re-probed this pass		MIT	-	YES
+126	Hr0mE/tutor-skills	3	MIT	master	2026-09-10	not re-probed this pass		MIT	-	YES
+127	dikshant182004/MathTutor	3	MIT	master	2026-10-12	not re-probed this pass		MIT	-	YES
+128	lungstrahv/T2AG	3	Apache-2.0	main	2026-10-01	not re-probed this pass		Apache-2.0	-	YES
+129	RESHAPELab/sigil-ps-vscode	3	NONE	main	2026-08-24	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+130	rox1694125-bit/magic-memory	3	MIT	main	2026-06-01	not re-probed this pass		MIT	-	YES
+131	fanfanfanfanfan626/mastery-tutor	3	MIT	main	2026-10-12	not re-probed this pass		MIT	-	YES
+132	MohamedFuad16/Tutor-System	3	MIT	main	2026-09-27	not re-probed this pass		MIT	-	YES
+133	Mrigank005/NeoTutor	3	MIT	main	2025-07-11	not re-probed this pass		MIT	-	YES
+134	tong666-bit/song-hao-math	3	MIT	main	2026-10-09	not re-probed this pass		MIT	-	YES
+135	Itaybeeri/learn-to-build-fully-working-llm	2	MIT	main	2026-07-07	not re-probed this pass		MIT	-	YES
+136	darkstar42/fluency-loop	2	NOASSERTION	main	2026-06-20	FILE_FOUND:LICENSE	1246	MIT (+ attribution for adapted /teach skill)	-	YES
+137	devahmadpk/CoCreative-Story-Teller	2	MIT	main	2026-05-13	not re-probed this pass		MIT	-	YES
+138	davidme6/ai-learning-method	2	MIT	main	2026-09-19	not re-probed this pass		MIT	-	YES
+139	MayankBaddam/TutorGenie-AI	2	MIT	main	2026-07-26	not re-probed this pass		MIT	-	YES
+140	geezheleznyak/agensy	2	MIT	main	2026-05-07	not re-probed this pass		MIT	-	YES
+141	liukai1919/AI-tutor	2	MIT	main	2026-09-30	not re-probed this pass		MIT	-	YES
+142	fyuuwang/fyuu-tutor	2	MIT	main	2026-08-12	not re-probed this pass		MIT	-	YES
+143	lernen-edu/wachturm	2	Apache-2.0	main	2026-08-03	not re-probed this pass		Apache-2.0	-	YES
+144	OmShinde3156/shiro.ai	2	MIT	main	2026-10-01	not re-probed this pass		MIT	-	YES
+145	freesoft/MathCrew	2	NOASSERTION	main	2026-02-27	FILE_FOUND:LICENSE.md	3905	PolyForm Strict 1.0.0	-	NO
+146	connorads/lumo-mcp-app	2	NONE	main	2026-02-22	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+147	RyannKim327/ai-tutor	2	NONE	main	2026-09-27	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+148	oyekamal/live-voice-tutor	2	MIT	master	2026-07-19	not re-probed this pass		MIT	-	YES
+149	wildcat430524/Steps2Great-skill	2	MIT	main	2026-10-03	not re-probed this pass		MIT	-	YES
+150	all666666all/mastery-loop	2	MIT	main	2026-06-20	not re-probed this pass		MIT	-	YES
+151	a-luoluo/CodeLearner	2	NONE	master	2026-06-27	NO_LICENCE_FILE (8 paths)	0	none	MIT_PROSE	NO
+152	juliairsalina/agentic-study-companion	2	NONE	main	2026-06-04	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+153	pingakshgaur/TatvaX-AI-PROTOTYPE	2	MIT	main	2026-01-01	not re-probed this pass		MIT	-	YES
+154	JamesWeatherhead/CaseAttend	2	MIT	main	2026-10-06	not re-probed this pass		MIT	-	YES
+155	ROHITHELAYARAJA/Student-AI-Assistant	2	NONE	main	2026-09-28	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+156	ShivamKumar2002/langwise-ai	2	NONE	main	2026-02-11	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+157	fairley46/juno	2	MIT	main	2026-05-26	not re-probed this pass		MIT	-	YES
+158	FarzamHejaziK/TutorGalaxy_BE	2	NONE	main	2025-06-04	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+159	huieric/toefl-miniapp	2	NONE	main	2026-09-10	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+160	yousefbzaqout/irada-academy	2	NONE	main	2026-08-15	NO_LICENCE_FILE (8 paths)	0	none	LICENCE_SECTION_OTHER	NO
+161	Abdulbasit110/urdu-tutor-agent	2	NONE	master	2025-08-27	NO_LICENCE_FILE (8 paths)	0	none	LICENCE_SECTION_OTHER	NO
+162	tehreemtasawar/CodeQuestAI	2	MIT	main	2026-06-23	not re-probed this pass		MIT	-	YES
+163	qtsone/learning	2	AGPL-3.0	main	2026-10-11	not re-probed this pass		AGPL-3.0	-	COPYLEFT
+164	Drew-Z/anchor	2	MIT	main	2026-09-15	not re-probed this pass		MIT	-	YES
+165	dark-matter08/principia-desk	2	MIT	main	2026-09-22	not re-probed this pass		MIT	-	YES
+166	Ai-Dictionary/superaitutor	2	MIT	main	2026-07-24	not re-probed this pass		MIT	-	YES
+167	demetrius-edelin/tutor	2	MIT	master	2026-10-10	not re-probed this pass		MIT	-	YES
+168	thegauravmahto/sparks-ai-math-tutor	2	MIT	main	2026-06-09	not re-probed this pass		MIT	-	YES
+169	mpoiaganova/stage-aware-AI-tutor	2	MIT	main	2026-06-28	not re-probed this pass		MIT	-	YES
+170	Hashmil-Muhammed/MENTORA-AI_Assisted_Platform_for_Online_Tutoring	2	NONE	main	2026-09-16	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+171	adriangitvitz/leetcodetutor	2	NONE	main	2026-06-02	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+172	ayiii-a/algorithm-tutor	2	MIT	main	2026-09-24	not re-probed this pass		MIT	-	YES
+173	felixyustian/edusenseai	2	GPL-3.0	main	2026-05-05	not re-probed this pass		GPL-3.0	-	COPYLEFT
+174	mohsinsheikhani/tutorclaw-mcp	2	NONE	main	2026-04-17	NO_LICENCE_FILE (8 paths)	0	none	LICENCE_SECTION_OTHER	NO
+175	hawitariku/ethio_tutor	2	NONE	main	2026-04-18	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+176	KK1182112KK/vaultforgian	2	MIT	main	2026-05-04	not re-probed this pass		MIT	-	YES
+177	CreatmanCEO/lingua-companion	2	MIT	main	2026-04-30	not re-probed this pass		MIT	-	YES
+178	epic-coder97/no-sidequests	2	MIT	main	2026-09-26	not re-probed this pass		MIT	-	YES
+179	shaunbenedict/Sherilyn3.0	2	LGPL-2.1	main	2025-07-12	not re-probed this pass		LGPL-2.1	-	COPYLEFT
+180	yashmahe2020/math-tutor-research	2	NONE	main	2026-09-30	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+181	wanjeans33/socratic-feynman-tutor	2	MIT	main	2026-07-20	not re-probed this pass		MIT	-	YES
+182	minouza/MathCrew	2	NOASSERTION	main	2026-10-12	FILE_FOUND:LICENSE.md	3905	PolyForm Strict 1.0.0 (byte-identical to freesoft/MathCrew)	-	NO
+183	heisallaki/StudyAssistantAI	2	MIT	main	2026-10-12	not re-probed this pass		MIT	-	YES
+184	kangwonlee/gemini-python-tutor	1	NOASSERTION	main	2026-06-19	FILE_FOUND:LICENSE	1662	"BSD-3-Clause + ""Do Not Harm"" addendum"	-	REVIEW
+185	weike-zhang/grounded-ai-tutor	1	MIT	main	2026-08-13	not re-probed this pass		MIT	-	YES
+186	NouhKhouyi/aula	1	MIT	main	2026-09-13	not re-probed this pass		MIT	-	YES
+187	Layton2617/code-sensei	1	MIT	main	2026-04-08	not re-probed this pass		MIT	-	YES
+188	kaijiyuan/Dr.Kevin	1	NONE	master	2026-09-08	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+189	MatiasV3B/CourseLab	1	MIT	main	2026-09-14	not re-probed this pass		MIT	-	YES
+190	DerYokoya/AI-Language-Learning	1	MIT	main	2026-10-11	not re-probed this pass		MIT	-	YES
+191	samchenhub/unstuck-ai-tutor	1	NONE	main	2026-10-12	NO_LICENCE_FILE (8 paths)	0	none	none	NO
+192	Tojoarisoa/scire-web	1	NOASSERTION	main	2026-10-12	FILE_FOUND:LICENSE	1189	"All rights reserved (explicit non-grant: ""published so that it can be read"")"	-	NO
+193	aiahmet/synedrix	1	MIT	main	2026-08-22	not re-probed this pass		MIT	-	YES
+194	robinfrancis186/ai-tutor	1	MIT	main	2025-06-25	not re-probed this pass		MIT	-	YES
+195	jiangsir668/your-own-tutor	1	MIT	main	2026-07-29	not re-probed this pass		MIT	-	YES

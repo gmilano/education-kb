@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 158 — 2026-10-12
+
+### 1. 🆕 🔴 The non-open-source licence is now a FAMILY, not an anomaly — *Global, measured*
+
+🟢 **`10 of 10` `NOASSERTION` licence bodies read from `raw` this pass. `6` are non-commercial or
+non-grant by design:** 🔴 **Business Source License 1.1, PolyForm Noncommercial 1.0.0, PolyForm
+Strict 1.0.0 (×2, byte-identical — one project, two owners), and two all-rights-reserved files.**
+🔴 **GitHub files all ten as `Other`, and no UI a developer uses distinguishes them from MIT.**
+🆕 **`T124`:** 🔵 **p156 found two non-open-source `LICENSE` files and read them as an oddity.
+🟢 **At `n=100` the oddity is a licensing CHOICE with recognisable families behind it** — and the
+authors who make it are not careless, they are deliberate. 🔴 **No market report mentions this.**
+
+### 2. 🆕 🔴 A licence statistic is worthless without its standard of proof — *Global, measured*
+
+🟢 **The same 100 rows yield `23.0%` or `33.0%` unlicensed, depending only on whether
+`NOASSERTION` is counted as *"no licence."*** 🟢 **`23 of 23` metadata-null rows were re-probed on
+8 paths and confirmed; `10 of 10` `NOASSERTION` rows have bodies.**
+🆕 **`T125`:** 🔴 **`T106` a third time, and the sharpest instance — one sample, one instrument, a
+10-point swing from a vocabulary choice.** 🟢 **Any licence figure a studio publishes must name
+its basis, or it is not checkable.**
+
+### 3. 🆕 🔴 Licence hygiene degrades as attention falls — *Global, measured*
+
+🟢 **`topic:ai-tutor` rows `96–195` — the `4 ★ → 1 ★` tail — carry `23%` with no licence file,
+against `18.8%` in rows 1–80.** 🔴 **p157 predicted LOWER and was wrong.**
+🟢 **`57 of 100` are nonetheless MIT, so the tail is not unusable — it is UNEVEN**, and
+🔵 **the practical read is that a tail row needs its licence read individually, because the
+population rate no longer predicts the row.**
+
+### 4. 🆕 🔵 The new-entrant tier is permissive and APAC-origin, inverting the attention tier — *APAC primary, Global consequence*
+
+🟢 **`4 of the 5` new `topic:ai-tutor` projects created since `2026-08-01` are Chinese-language
+and MIT/Apache-2.0**, led by `Miaotofu01/Study-Mate` — 🟢 **MIT, `894 ★` and 44 forks in about 25
+days, the steepest new-row curve this shelf has measured in education.**
+🆕 **`T126`:** 🔴 **p157's `T123` found the attention leaders to be AGPL-3.0 or unlicensed.**
+🟢 **The arrivals are the opposite.** 🔵 **So the licence distribution of open education AI
+depends on WHICH TIER you sample, and the useful tier for a studio is the new one — which is
+also the one a star-sorted view hides for months.**
+
+### 5. 🆕 🔴 A feature claim fails across instruments exactly like a licence claim — *Global, measured*
+
+🟢 **`Selleo/mentingo`: the GitHub topic list claims `scorm` and `xapi`. The data model
+(`104` tables, `100 244 B`) contains SCORM tables, NO xAPI and NO LTI. The README mentions
+`xAPI/LTI` only inside a commented-out block its maintainers marked *"do not publish without
+verification."*** 🔴 **This shelf republished the topic list for four passes.**
+🆕 **`T127`:** 🔵 **the instrument ranking is the same as for licences — the data model is
+authoritative, the README is cautious, the topic list is marketing** — 🟢 **and `P55` follows:
+settle an interoperability question by grepping the schema and the dependency manifest.**
+
+### 6. 🆕 🔴 Opposition to AI in schools is now measurable, and nobody was measuring it — *APAC primary*
+
+🟢 **Ipsos: support for BANNING AI in schools rose from `21%` to `29%` in Japan, and stands at
+`26%` in India.** 🔴 **This shelf holds nine passes of adoption and governance percentages and had
+no opposition figure until now.**
+🔵 **A quarter of two large markets favouring prohibition is a procurement risk that belongs in a
+pitch, not a footnote** — 🟢 **and it strengthens the evidence-first framing of `P157-A`, because
+the counter to a ban argument is a measured learning outcome, not a feature list.**
+
+### 7. 🆕 🟡 The AI Act's education deadline is genuinely CONTESTED — *EMEA, the line to architect to*
+
+🔴 **Annex III high-risk — the tier containing education — is `2026-08-02` on the Commission's own
+page and `2027-12-02` in practitioner analyses of the May 2026 provisional deal.**
+🔴 **This shelf cannot settle it; the primary text is behind a standing egress refusal, TENTH
+pass.** 🟢 **What does not depend on the resolution: systems that determine access, assess
+outcomes or shape a learner's path are high-risk on every reading, and the duty reaches non-EU
+providers serving EU residents.**
+🔵 **Architect to the earlier date; treat the later one as relief, not plan.**
+
+### 8. 🟢 Governance coverage, not adoption, is the measurable quantity in EMEA — *EMEA, narrowed*
+
+🆕 🟢 **`13%` of Italian universities had operational AI governance approaching the August 2026
+point; `46%` of South African universities had institution-wide generative-AI guidance at a
+February 2025 analysis.**
+🟡 **Neither is the EMEA adoption RATE this shelf has sought for nine passes** — 🟢 **but both
+measure the same thing on two continents inside EMEA, and both are low.**
+🔵 **The thesis that carries across LATAM (IESALC `87% / 26%`), EMEA and now Africa is one
+thesis: deployment is ahead of rules everywhere it is measured** — 🟢 **which is why `P156-B` is
+the most portable pattern on this shelf.
+
+### 🔴 What this pass did NOT find, said rather than implied
+
+- 🔴 **No education-specific agent repository from ANY of the four mandated global web queries** — 🟢 **`P143-L` a FIFTH time; the channel returns listicles and courses.** 🟢 **The `created:>` search filter is what works.**
+- 🔴 **No APAC or EMEA EDUCATION adoption rate.** 🟡 **Economy-wide and governance-coverage figures only.**
+- 🔴 **No Canada.** 🟢 **Mexico answered, under LATAM.**
+- 🔴 **No primary legal text, TENTH pass** *(categorical egress refusal on `eur-lex` and the law-firm hosts)*.
+- 🔴 **No third-party efficacy measurement for any agent on this shelf** — 🟡 **the oldest open gap here.**
+
 ## Pass 157 — 2026-10-12
 
 🟢 **Eight trends. Each names the region it was observed in and the channel that returned it.**

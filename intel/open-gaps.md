@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🟢 Verdicts on the THREE actions p157 registered, judged by p158 — two reached in full, one reached on one limb and DECLINED on the other
+
+🟢 **Third consecutive three-action register. 🔴 **But p158 breaks the clean-sweep streak
+deliberately, and says so in the verdict rather than in a footnote.**
+🔴 **Same caveat p157 owed and p158 owes: these are self-assessments. Where a falsifier had a
+numeric threshold it is reported against the threshold.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟡 **`ACTION HP`** — open a licence-clarification issue on each of the four prose-MIT rows, AND read the next 100 `ai-tutor` rows with licence SPDX | 🟡 **SPLIT — second limb DISCHARGED, falsifier SILENT; first limb DECLINED, not attempted** | Condition: *"refuted if the `NO_LICENCE_FILE` share in rows 96–195 differs from p156's `18.8%` by more than 8 points."* 🟢 **`23 of 100` = `23.0%`, `+4.2` points. SILENT.** 🟢 **CONFIRMED rather than inherited: `23 of 23` metadata-null rows re-probed on 8 paths on their OWN default branch, `0` hits.** 🔴 **p157 expected it LOWER; it is HIGHER — prediction missed, falsifier silent.** 🔴 **On the permissive basis (`NOASSERTION` counted as no licence) the figure is `33.0%` and the falsifier WOULD have fired** — 🆕 **`T125`.** 🔴 **The issue-opening limb was NOT done: it writes publicly into four strangers' repositories, unattended, and this session's task is research, not correspondence. DECLINED with reason, not missed.** [`evidence/aitutor-census-96-195.2026-10-12-p158.tsv`](../evidence/aitutor-census-96-195.2026-10-12-p158.tsv) |
+| 🔴 **`ACTION HR`** — assess `Selleo/mentingo`: data model, multi-tenancy, SCORM/xAPI surface, LTI support | 🔴 **DISCHARGED — falsifier FIRED** | Condition: *"refuted if `mentingo` turns out NOT to speak LTI 1.3."* 🔴 **It does not. `0` real occurrences of `lti` in a `104`-table, `100 244 B` schema** *(the 4 matches are `multirange` and `totalTime`)*; 🔴 **`xapi` `0` occurrences.** 🔴 **The only `xAPI/LTI` mention in the repository front matter sits inside a Polish HTML comment its maintainers marked *"DO NOT PUBLISH WITHOUT VERIFICATION."*** 🟢 **Measured in full instead: MIT re-read from body; RLS tenancy with `tenantId` ×154; 4 SCORM runtime tables; a 7-table LLM-as-judge rubric engine.** 🆕 **`T127`, 🟢 `P55`.** [`evidence/mentingo-surface.2026-10-12-p158.tsv`](../evidence/mentingo-surface.2026-10-12-p158.tsv) |
+| 🟢 **`ACTION HS`** — query Africa as a region in its own right, plus Kenya, South Africa and Nigeria individually | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if fewer than 2 of the 4 queries return a dated national instrument."* 🟢 **`3 of 4` did: Kenya (AI and Emerging Technologies Policy `2026` + AI Bill `2026`), South Africa (Draft National AI Policy `2026-04`, since withdrawn), Nigeria (National AI Strategy `2024` + Digitalisation of Public Schools `2025-10` + `₦7bn` 2026 budget line).** 🟡 **The continental query returned the AU Strategy (2024) and the OECD 2026 report — frameworks, not national instruments.** 🟢 **Bonus jurisdiction: Rwanda's regulator allocation.** 🟢 **`ACTION HD`'s THIRD carry is CLOSED.** [`evidence/africa-instruments.2026-10-12-p158.tsv`](../evidence/africa-instruments.2026-10-12-p158.tsv) |
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p158
+
+| gap | what changed |
+|---|---|
+| 🟢 **`mentingo` unassessed beyond licence, ★ and region — FOURTH carry** | 🟢 **CLOSED.** Data model, tenancy, SCORM, LTI, xAPI, stack and positioning all measured. 🔴 **And the answer refutes this shelf's own advice** |
+| 🟢 **Africa not queried as a region in its own right — THIRD carry** | 🟢 **CLOSED.** `3 of 4` queries returned dated national instruments |
+| 🟢 **`590` of `669` `ai-tutor` rows unread** | 🟢 **NARROWED to `474`.** `195` read, up from `95` |
+| 🆕 🔴 **`NOASSERTION` read as "no licence"** | 🔴 **CORRECTED. `10 of 10` bodies read; `6` are non-commercial by design.** 🆕 **`T124`; `P51` gains a FOURTH tier; `P158-B` replaces the existence test with a family classifier** |
+| 🆕 🔴 **A `404` read as evidence about a licence** | 🔴 **CORRECTED by a control that fired by accident: two nonexistent repositories probed identically to licence-less ones.** 🆕 **`P54` — resolve the repository first** |
+| 🟡 **No EMEA-only adoption rate — NINTH carry** | 🟡 **NARROWED, not closed.** 🟢 **First EMEA-only percentage on this shelf: `13%` of Italian universities with operational AI governance.** 🔴 **One country, HE only, and it measures governance rather than adoption** |
+| 🟡 **No APAC adoption RATE — FOURTH carry** | 🟡 **NARROWED, not closed.** 🟢 **Japan `26.7%` genAI usage vs US `68.8%`, China `81.2%`** *(economy-wide)*; 🆕 🟢 **and an education-specific OPPOSITION rate: ban support `21%→29%` Japan, `26%` India** |
+| 🟢 **"Canada and Mexico return nothing" — SEVENTH carry** | 🟢 **HALVED, and by reclassification rather than research: Mexico answers immediately when queried as LATAM.** 🔴 **Only Canada is genuinely missing. The compound gap is RETIRED and replaced by a Canada-only gap** |
+| 🆕 🔴 **The rotation failure — mechanism IDENTIFIED after three passes of wrong diagnosis** | 🔴 **p156 and p157 both published that they had advanced it; both were judged to have failed. 🟢 **Both actually DID commit and push — to their own session branches.** 🟢 **`origin/claude/ecstatic-mccarthy-zz0tys` reads `next: 9`, `last_industry: education`.** 🔴 **`origin/main` reads `next: 8`, `2026-08-02`, `technology`, and nothing merges those branches.** 🔵 **See below — this is not a bookkeeping slip, it is a structural dead end** |
+
+## 🔴 Gaps OPEN after p158, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🆕 🔴 **The rotation CANNOT advance under the current branch policy** | 🔴 **The next run reads `rotation.json` from `main`; every run may only write to its own `claude/…` branch. 🟢 **The write succeeds, the read never sees it.** 🔴 **Three passes have now "fixed" it and the next pass will still get `next: 8`.** 🟡 **p158 advances it on its branch as required AND states that this does not work — the fix needs a human to merge the branch, or rotation state the runs can both read and write** |
+| 🔴 **`474` of `669` `ai-tutor` rows unread** | 🟢 **The channel serves 100 rows per call with SPDX. 🔵 **`ACTION HU`** |
+| 🔴 **`OpenOLAT`'s data model unread** | 🔴 **And p158 just promoted it to the recommended fork-and-own ACADEMIC platform, on the assumption it speaks LTI and QTI — the exact assumption that just fired on `mentingo`.** 🔵 **`ACTION HT`** |
+| 🔴 **No third-party efficacy measurement for any agent** | 🟡 **Oldest open gap on this shelf. `P157-A` composes around it; nothing closes it.** 🔴 **Not registered — searched repeatedly, not supplied by any channel this session can reach** |
+| 🔴 **No Canada, EIGHTH pass** | 🔵 **`ACTION HV`** |
+| 🔴 **`scormStandardEnum`'s members unread** | 🟡 **They live in `@repo/shared`; `mentingo`'s SCORM 2004 support is therefore unknown, and the maintainers' own TODO asks whether IMPORT exists** |
+| 🔴 **AI Act Annex III date CONTESTED — `2026-08-02` vs `2027-12-02`** | 🔴 **Unresolvable here: primary text behind the standing egress refusal, TENTH pass.** 🟢 **Recorded as a conflict; architect to the earlier date** |
+| 🔴 **No primary legal text, TENTH pass** | 🟢 **`eur-lex` and the law-firm hosts refuse this egress. Recorded once under the categorical-egress rule** |
+| 🔴 **ELEVENTH pass with no quotable market size and no open-source vendor in any source** | 🔴 **p158 adds that two of four figures are mutually incoherent, which strengthens `T114` rather than adding a number** |
+| 🟡 **Three `LICENCE_SECTION_OTHER` bodies unread** | `irada-academy`, `urdu-tutor-agent`, `tutorclaw-mcp` — 🟡 **flagged, not counted** |
+
+## 🔜 Pre-registered for p159 — THREE actions, each with a falsifier
+
+🔵 **Three again. Three passes have now finished three; none has finished nine.**
+🟢 **All three are research or client-facing.**
+🔴 **`ACTION HP`'s first limb is RETIRED BY DECISION, not carried: opening issues in strangers'
+repositories is not work an unattended pass should do, and saying so once is better than
+carrying it as a permanent miss.** 🟢 **The four rows and the exact defect are recorded in
+p157's evidence file if a human wants them raised.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HT`** *(FIRST — it tests the advice p158 just rewrote)* — assess `openolat/OpenOLAT` exactly as p158 assessed `mentingo`: schema or domain model, LTI 1.3, QTI, xAPI, SCORM and tenancy, read from its tree | 🔴 *Refuted if `OpenOLAT` does NOT speak LTI 1.3* — 🟡 **p158 expects it DOES, but `ACTION HR` just fired on exactly this expectation, and p158 has now put `OpenOLAT` in front of clients as the fork-safe academic platform on an unverified assumption.** 🟢 **Verify it before a third pass repeats it** |
+| 🟢 **`ACTION HU`** — read `ai-tutor` rows `196–295` and classify every licence with `P158-B`'s FOUR tiers, counting the source-available-by-design family explicitly | 🔴 *Refuted if the source-available-by-design family (BUSL / PolyForm / Elastic / SSPL / "Community License") appears in fewer than 3 of the 100 rows* — 🟡 **p158 measured `6 in 100` and expects `3`+; a figure below that would mean p158's `T124` was a property of one star band rather than of the topic.** 🟢 **Either way the shelf reaches `295` of `669`** |
+| 🟢 **`ACTION HV`** — query Canada as a jurisdiction in its own right (federal plus Ontario, Quebec, British Columbia), and rename this shelf's *"North America"* query to *"United States"* | 🔴 *Refuted if Canada returns no dated federal or provincial instrument touching AI in education* — 🟡 **p158 expects at least one; eight passes of a fused query have returned nothing, and the Mexico result shows the failure was the query plan, not the world.** 🔵 **If Canada genuinely returns nothing, that is a finding and the gap should be retired rather than carried a ninth time** |
+
+🔴 **Deliberately NOT registered**, and they are real: 🔴 **third-party efficacy evidence** *(the
+oldest gap; no channel here supplies it)* · 🔴 **a primary legal text** *(categorical egress
+refusal)* · 🔴 **the AI Act date conflict** *(same refusal)* · 🔴 **a primary market study**
+*(eleven passes; none exists in reach)* · 🟡 **the three unread `LICENCE_SECTION_OTHER` bodies**
+*(low value)* · 🔴 **the rotation** — 🟢 **because p158 has established it is not fixable from
+inside a pass, and registering it again would be the fourth pass to pretend otherwise.**
+🟢 **Listed so they stay visible, and left unregistered because three is what a pass finishes.**
+
 ## 🟢 Verdicts on the THREE actions p156 registered, judged by p157 — all three reached, one REFUTED
 
 🟢 **Second consecutive clean sweep of a three-action register.** 🔵 **Two data points now

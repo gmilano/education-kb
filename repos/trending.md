@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 158
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **The new-entrant channel measured for the first time: `topic:ai-tutor` and `topic:edtech`
+filtered by `created:>2026-08-01`, which is a question this shelf had never asked.**
+
+### 🟢 What the new-entrant channel returns, and why it is worth a standing slot
+
+| topic | created since 2026-08-01 | rows above the star floor | top row |
+|---|---|---|---|
+| 🟢 `ai-tutor` *(floor `10 ★`)* | 🟢 **5** | 5 | 🟢 **`Miaotofu01/Study-Mate` — 894 ★, MIT** |
+| 🔴 `edtech` *(floor `20 ★`)* | 🔴 **2** | 2 | 🔴 **`comet-trail-archives` — 70 ★, not a project** |
+
+🟢 **`ai-tutor` returns five real projects; `edtech`, a topic with `4 343` repositories, returns
+two rows and the top one is an SEO page.** 🔵 **p157's `T119` said `ai-tutor` is the best single
+entry point for a studio because it is both on-domain and permissive. 🟢 **The new-entrant cut
+CORROBORATES that from a second direction: it is also the only topic whose recent arrivals are
+real.**
+
+🆕 **A standing recommendation, cheap enough to run every pass:** 🟢 **the `created:>` filter costs
+one search call and surfaces rows the star sort buries for months.** 🔵 **`Study-Mate` at
+`894 ★` would not appear in a top-20-by-stars view of a `669`-row topic for a long time, and it
+is the fastest-moving education row on this shelf.**
+
+### 🟢 The new repository rows, licence read from the body
+
+| repo | ★ | created | licence *(body-read)* | language | why it is here |
+|---|---|---|---|---|---|
+| 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **894** | 2026-09-17 | 🟢 **MIT** *(1 064 B)* | JavaScript | 🟢 **44 forks in 25 days. Route planning + teaching + projects + spaced repetition in one** |
+| 🟢 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 18 | 2026-09-12 | 🟢 **Apache-2.0** *(11 338 B)* | TypeScript | 🟢 **Uses ACP to drive a coding agent as the teaching engine** — the only row on this shelf that treats a coding agent as courseware infrastructure |
+| 🟢 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 22 | 2026-09-21 | 🟢 **MIT** *(1 082 B)* | JavaScript | 🟢 **A protocol in Markdown — portable across any assistant, zero runtime** |
+| 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 2026-08-07 | 🟢 **MIT** *(1 066 B)* | Swift | 🟢 **FSRS implemented against real submission history** — the spaced-repetition row with the best algorithm provenance |
+| 🔴 [`photolensfocus/Llm-language-learning`](https://github.com/photolensfocus/Llm-language-learning) | 22 | 2026-09-14 | 🔴 **NONE** *(404 on 8 paths)* | — | 🟡 Content, not code |
+
+### 🆕 🔴 `T125` — the same 100 rows yield `23%` or `33%` unlicensed, and only the VOCABULARY changes
+
+🟢 **Rows `96–195` of `topic:ai-tutor`, licence distribution from the search channel:**
+
+| SPDX returned | rows |
+|---|---|
+| 🟢 **MIT** | **57** |
+| 🔴 **none (`null`)** | **23** |
+| 🔴 **`NOASSERTION`** | **10** |
+| 🟢 Apache-2.0 | 4 |
+| 🔴 AGPL-3.0 | 3 |
+| 🟡 CC0-1.0 / GPL-3.0 / LGPL-2.1 | 1 each |
+
+🟢 **`61 of 100` permissive (MIT + Apache + CC0) — materially better than p156's `75%` figure
+would predict for a tail, because MIT dominates even at `1–4 ★`.**
+🔴 **But `33 of 100` returned no usable SPDX, and `10` of those have licence bodies** — which is
+`T124`. 🆕 **`T125`: a licence statistic must name whether `NOASSERTION` counts as "no licence";
+on this sample the choice is worth 10 points.**
+
+🟢 **`23 of 23` metadata-null rows re-probed on `8` paths on their own default branch: `0` hits.**
+🟢 **The strict figure is measured, not inherited.**
+[`evidence/aitutor-census-96-195.2026-10-12-p158.tsv`](../evidence/aitutor-census-96-195.2026-10-12-p158.tsv)
+
+### 🔴 Where the probe nearly published something false
+
+🔴 **Two nonexistent repository names, left in a probe list by mistake, returned
+`NO_LICENCE_FILE` on all 8 paths and `404` on all 5 README paths — indistinguishable from a real
+licence-less row.** 🆕 **`P54`: resolve the repository with `ls-remote` before a `404` is allowed
+to mean anything about a licence.** 🔵 **Logged on this page too, because this is where repository
+rows are admitted.**
+
 ## 2026-10-12 — Pass 157
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**

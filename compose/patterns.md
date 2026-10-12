@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P158-A` — the auditable-assessment build, and it is the first pattern on this shelf whose rubric is DATA rather than a prompt *(new, p158 — Global; strongest in North America and EMEA)*
+
+🔵 **The problem this solves:** 🔴 **two regulators now constrain the ARCHITECTURE of educational
+AI, not its paperwork.** 🔴 **Oklahoma and Maryland ban AI from making high-stakes decisions about
+students and require human oversight.** 🔴 **The EU AI Act puts EVALUATIVE use — systems that
+assess learning outcomes or influence a learner's path — in the Annex III high-risk tier, on
+every reading of a contested date.**
+🔴 **A grading agent whose rubric lives in a prompt cannot satisfy either: there is nothing to
+audit, nothing to version, and no way to show WHY an attempt failed.**
+
+🟢 **The recipe — the rubric is a table, the model is a worker:**
+
+| layer | repo / artefact | licence | why this one |
+|---|---|---|---|
+| 1. **Platform + rubric store** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** *(`LICENSE`, 1 062 B, body-read p158)* | 🟢 **Ships `aiJudgeConfigurations`, `aiJudgeCriteria`, `aiJudgeScoreGuidance`, `aiJudgeBlockingErrors` and per-judgement tables.** 🔵 **Rubric criteria, score guidance and HARD-FAIL conditions are database rows — the only artefact on this shelf that models a grading decision as data** |
+| 2. **Tenancy boundary** | same — PostgreSQL 16 **Row-Level Security** | 🟢 MIT | 🟢 **Least-privilege runtime role; *"a bug in application code cannot read another tenant's rows."*** 🔵 **One deployment, many districts or many group companies** |
+| 3. **Mastery evidence, independent of the judge** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | 🟢 **DKT / AKT / SAKT knowledge tracing.** 🔵 **A SECOND, non-LLM estimate of whether the learner knows it — so the human reviewer sees two instruments, not one** |
+| 4. **Verification, not generation** | `P156-D`'s pattern | — | 🟢 **The model proposes; the rubric row decides; the human signs** |
+| 5. **Trace** | **Langfuse** *(already wired in `mentingo`)* | — | 🟢 **Per-judgement traces are the audit artefact a regulator or an appeal actually asks for** |
+
+🟢 **Wiring, concretely:**
+1. 🟢 **Author the rubric as rows** — one `aiJudgeCriteria` row per criterion, `aiJudgeScoreGuidance` for the band descriptors, and `aiJudgeBlockingErrors` for conditions that fail the attempt **regardless of total score** *(the plagiarism case, the safety-critical procedural error, the mandatory-training miss)*.
+2. 🟢 **The model scores against criteria it cannot edit.** 🔵 **The prompt carries the criteria; the criteria do not live in the prompt.**
+3. 🟢 **`pykt-toolkit` consumes the interaction stream** and returns a mastery estimate from the learner's history, computed without the LLM.
+4. 🔴 **Nothing auto-decides.** 🟢 **A judgement row plus its blocking-error rows plus the mastery estimate render as a reviewer's queue item; the human's sign-off is the decision of record.**
+5. 🟢 **Langfuse holds the trace; the judgement tables hold the reasons.** 🔵 **Versioned rubric rows mean *"what was the rule when this attempt was graded?"* has an answer.**
+
+🔴 **The boundary, stated because `p158` found it the hard way:** 🔴 **`mentingo` does NOT speak
+LTI 1.3 or xAPI** — 🟢 **`0` occurrences in a `104`-table schema, confirmed p158.**
+🟢 **So this pattern is for CORPORATE L&D, compliance training and greenfield K-12/HE builds
+where `mentingo` IS the platform.** 🔴 **For an institution with an existing LMS estate, keep
+`P156-A`: Moodle or Open edX unmodified at layer 1, federated over LTI 1.3 + AGS, and take the
+rubric idea across as your own tables.**
+
+🟢 **Sell it as:** 🟢 **North America — district AI-policy compliance for Maryland, Idaho,
+Oklahoma and Virginia, where the mandate is per-district and repeats hundreds of times; Ohio and
+Tennessee as remediation, the `2026-07-01` deadline having passed.** 🟢 **EMEA — Annex III
+readiness, architected to `2026-08-02` and relieved if `2027-12-02` holds.**
+🟢 **Timeline: 6–8 weeks** *(rubric modelling 2, judge + review queue 3, `pykt` integration 2,
+overlapping)*.
+
+---
+
+## 🆕 🔴 `P158-B` — the licence gate, CORRECTED to classify by family and to prove the repository exists *(new, p158 — Global; supersedes the probe in `P157-B` and `P156-E`)*
+
+🔵 **The problem this solves:** 🔴 **`P156-E` and `P157-B` test whether a licence file EXISTS.
+p158 showed that test is wrong twice over.**
+🔴 **`10 of 10` `NOASSERTION` rows have licence files — and `6` of them forbid commercial use.**
+🔴 **And two nonexistent repository names produced exactly the output a licence-less repository
+produces, so absence was being read out of a `404` that meant *"no such repo."***
+
+🟢 **The corrected gate — four steps, in this order, and the order is the fix:**
+
+```bash
+REPO="owner/name"
+
+# STEP 0 (NEW, P54) — does it exist? A 404 means nothing until this passes.
+BR=$(git ls-remote --symref "https://github.com/$REPO" HEAD 2>/dev/null \
+     | awk '/^ref:/{sub("refs/heads/","",$2); print $2}')
+[ -z "$BR" ] && { echo "$REPO: DOES NOT EXIST OR IS PRIVATE — not a finding"; exit 1; }
+
+# STEP 1 (P53) — probe the repo's OWN default branch, not "main".
+for p in LICENSE LICENSE.md LICENSE.txt LICENCE LICENSE-MIT COPYING COPYING.LESSER license LICENSE.rst; do
+  curl -sf "https://raw.githubusercontent.com/$REPO/$BR/$p" -o /tmp/lic && { echo "BODY: $p"; break; }
+done
+
+# STEP 2 (P48 + T124) — classify by the FAMILY NAME LINE, never by size or by the sidebar.
+head -5 /tmp/lic | grep -iE \
+ 'MIT License|Apache License|BSD [0-9]|GNU (Affero|Lesser)? ?General Public|Mozilla Public|\
+Business Source License|PolyForm (Noncommercial|Strict|Perimeter)|Elastic License|\
+Server Side Public|All rights reserved|Community License'
+
+# STEP 3 — the four-tier verdict (P51, extended by p158).
+```
+
+🟢 **The four tiers, and what a studio does with each:**
+
+| tier | signature | verdict |
+|---|---|---|
+| 🟢 **Permissive** | `MIT`, `Apache License 2.0`, `BSD`, `CC0` | 🟢 **Ship** |
+| 🔴 **Copyleft** | `GNU General Public`, `GNU Affero` | 🟡 **Ship only across a process/protocol boundary** *(`P156-A`)*. 🔴 **AGPL: HOSTING is distribution** |
+| 🆕 🔴 **Source-available by DESIGN** | 🔴 **`Business Source License`, `PolyForm Noncommercial`, `PolyForm Strict`, `Elastic License`, `Server Side Public`, anything named `… Community License`** | 🔴 **STOP. A client engagement is commercial use.** 🔵 **Do not open an issue — the author has already decided** |
+| 🔴 **No grant** | 🔴 **`All rights reserved`, or nothing on 9 paths after STEP 0 passed** | 🔴 **Default all-rights-reserved.** 🟡 **A README MIT sentence is INTENT, not a grant** *(`T117`: `8` instances across p157–p158)* |
+
+🔴 **Two traps this gate now catches that the old one did not:**
+- 🔴 **`CaviraOSS/PageLM` opens with MIT's literal grant sentence and is titled *"PageLM Community License"* — non-commercial and REVOCABLE.** 🟢 **STEP 2 reads the title line, so it fires.**
+- 🔴 **`andremadstop/learning-nc`'s `LICENSE` is `723 B`** — 🟢 **the AGPL HEADER notice, not the licence. 🔵 **A body under `~1 000 B` for a long-form family means the text is incomplete; record it as unresolved, not as AGPL.**
+
+🟢 **Cost: one `ls-remote` and at most nine `curl`s per repository.** 🟢 **`33` repositories were
+gated this way in p158 with zero clones.**
+
+---
+
+## 🆕 🟢 `P158-C` — find the repository BEFORE the star sort does *(new, p158 — Global; APAC-weighted in practice)*
+
+🔵 **The problem this solves:** 🔴 **a star-sorted topic view shows a studio what was popular last
+year.** 🔴 **Five passes of mandated web queries returned listicles and courses and not one
+education repository** *(`P143-L`)*.
+
+🟢 **The recipe — one search call, run every pass:**
+
+```
+topic:ai-tutor created:>YYYY-MM-DD stars:>10     # sort=stars, order=desc
+topic:edtech   created:>YYYY-MM-DD stars:>20
+topic:ai-education / topic:knowledge-tracing / topic:learning-analytics
+```
+
+🟢 **What it returned on `2026-10-12`, with every licence read from the body:**
+
+| row | ★ | licence | what to do with it |
+|---|---|---|---|
+| 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **894** | 🟢 **MIT** | 🟢 **Study the route-planning + spaced-repetition loop; `894 ★` in ~25 days means the UX is landing** |
+| 🟢 [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | 18 | 🟢 **Apache-2.0** | 🟢 **Drives a coding agent over ACP as the teaching engine and emits LaTeX Beamer courseware.** 🔵 **The most directly reusable new row for content production** |
+| 🟢 [`wildcat430524/StepsToGreat`](https://github.com/wildcat430524/StepsToGreat) | 22 | 🟢 **MIT** | 🟢 **A Markdown teaching protocol — compose it as a SKILL onto a governed platform** *(`P49`)*, zero runtime |
+| 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 🟢 **MIT** | 🟢 **FSRS against real submission history — the scheduling component, not the whole app** |
+
+🔴 **Run `P158-B` on every row before any of it enters a deliverable**, and 🔴 **discount for age:
+these are weeks old, single-author, and have no maintenance record.** 🔵 **Use them as
+components and references; `P156-A`'s platform layer stays Moodle, Open edX, OpenOLAT or
+`mentingo`.**
+
+🟢 **The division of channels, now a rule:** 🟢 **web search for REGULATION and market structure;
+the GitHub search API for CODE.** 🔴 **Using either for the other's job is five passes of nulls.**
+
+---
+
 ## 🆕 🟢 `P157-A` — the efficacy-evidence stack, and it closes a gap by COMPOSITION rather than by finding a product *(new, p157 — Global)*
 
 🔵 **The problem this solves:** 🔴 **2026 buyers increasingly require evidence that a tool
