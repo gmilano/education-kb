@@ -1,0 +1,22 @@
+dimension	finding	how_measured
+licence	Apache-2.0, 10982 B, body-read on master	raw fetch of LICENSE on the repo's own default branch
+default_branch	master (NOT main)	git ls-remote --symref
+attention	447 stars, 167 forks, 5 open issues, pushed 2026-10-12	GitHub search channel
+LTI 1.3	PRESENT — org/olat/ims/lti13, 148 path matches	code search, repo-scoped
+LTI 1.3 role	BOTH directions: Platform (lti13.platform.iss) and Tool (LTI13Platform stores an external platform's issuer/clientId/authorizationUri/tokenUri/jwkSetUri)	LTI13Module.java + LTI13Platform.java read from raw
+LTI AGS	PRESENT — model/json/LineItem.java, LineItemScore.java	code search
+LTI NRPS	PRESENT — model/json/Member.java, Context.java	code search
+LTI Deep Linking	PRESENT — LTI13ContentItem.java	code search
+LTI OIDC/JWKS	PRESENT — OIDCApi.java, LTI13Key.java, getJwkSetUri/getPrivateKey	code search + raw read
+named LTI integrations	ZOOM, JUPYTER_HUB, MEDIASITE_GLOBAL, MEDIASITE_COURSE, EXTERNAL, EXT_TEMPLATE, SHARED	LTI13ToolType.java enum read from raw
+QTI 2.1	PRESENT — org/olat/ims/qti21, 660 path matches	code search
+SCORM	PRESENT — org/olat/modules/scorm + ScormCourseNode, 154 path matches	code search
+xAPI	ABSENT — 0 matches for xapi, cmi5, "Tin Can", "experience api"	code search, four spellings
+Open Badges	PRESENT — org/olat/modules/openbadges, 156 path matches; v2 package (Badge, Assertion, Criteria, Profile, Identity, BadgeClass) + LinkedInUrl push	code search
+Open Badges 3.0 / W3C VC	ABSENT — 0 matches for OpenBadgeCredential, VerifiableCredential, openbadges/v3	code search
+badge award engine	BadgeCriteria.isAwardAutomatically() + composable List<BadgeCondition> + allConditionsMet(courseEntry, uce, recipient); conditions bind to course elements via CourseElementDAO	raw read of criteria/BadgeCriteria.java and criteria/BadgeCondition.java
+tenancy	HIERARCHICAL organisations: materialized-path tree (getMaterializedPathKeys), matchOrganisationOrItsParents, customerNumber, externalId, OrganisationStatus, managed flags	raw read of core/id/Organisation.java
+tenancy role scoping	RolesByOrganisation — roles granted PER organisation (administrator, curriculumManager, learnResourceManager, userManager, poolManager, author, groupManager, invitee, guest)	raw read of core/id/RolesByOrganisation.java
+tenancy scoping entities	15 *ToOrganisation join types: RepositoryEntry, Offer (accesscontrol), CatalogLauncher, Project, ProjTemplate, Video, Building (room management), QualityContext and others	code search filename:Organisation.java
+tenancy enforcement level	APPLICATION-level, not database-level — no row-level security; contrast mentingo's PostgreSQL RLS	absence of RLS in the organisation model; mentingo comparison from p158
+topic list fidelity	topics list qti, scorm, lms, curriculum-management but NOT lti — its deepest integration surface is UNLISTED	GitHub search channel topics array

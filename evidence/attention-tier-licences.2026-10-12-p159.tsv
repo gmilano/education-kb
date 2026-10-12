@@ -1,0 +1,11 @@
+rank	repo	stars	default_branch	licence_path	bytes	licence_final	tier	body_complete
+1	HKUDS/DeepTutor	41214	main	LICENSE	11408	Apache-2.0	PERMISSIVE	yes
+2	Miaotofu01/Study-Mate	894	main	LICENSE	1064	MIT	PERMISSIVE	yes
+3	24kchengYe/human-skill-tree	571	master	LICENSE	1134	AGPL-3.0 (HEADER NOTICE ONLY)	COPYLEFT-UNRESOLVED	NO — 1134 B is the notice, not the licence
+4	ankimcp/anki-mcp-server	515	main	LICENSE	1074	MIT	PERMISSIVE	yes
+5	ZeKaiNie/universal-examprep-skill	304	main	LICENSE	1065	MIT	PERMISSIVE	yes
+6	karanb192/algo-sensei	287	main	LICENSE	1081	MIT	PERMISSIVE	yes
+7	Li-Evan/Bloom	283	main	LICENSE	1069	MIT	PERMISSIVE	yes
+8	SenmuuuuW/universal-diagnostic-tutor-skill	243	main	LICENSE	1102	MIT	PERMISSIVE	yes
+9	KeWang0622/kaogong-skill	170	main	LICENSE	1083	MIT	PERMISSIVE	yes
+10	artcc/freelingo	167	main	LICENSE	34514	AGPL-3.0	COPYLEFT	yes

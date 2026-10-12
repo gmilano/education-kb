@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 159
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **`ACTION HU` reached `295` of `669` `ai-tutor` rows, and the window it read turned out not to
+be a star band at all.**
+
+### 🆕 🔴 The star instrument SATURATES — rows `196–295` are all `1 ★`
+
+🔴 **Every one of the 100 rows in the registered window carries exactly `1 ★`.**
+🔵 **p158 registered *"rows 196–295"* expecting a band. It is not a band — it is an undifferentiated
+`1 ★` mass, and the order within it is a tiebreak, not a ranking.**
+🟢 **Measured boundary: stars fall from `41 214` (row 1) to `2` by row 183 and to `1` by row 196.**
+🆕 **Practitioner consequence:** 🔴 **below about row 195 a *"top-N by stars"* query is no longer
+sorting anything.** 🟢 **To go deeper into a topic a studio must switch instrument — forks,
+`pushed_at`, or `created:>` — because the star sort has run out of resolution.**
+
+### 🟢 `ACTION HU` — the four-tier census of rows `196–295`, bodies read
+
+[`evidence/aitutor-census-196-295.2026-10-12-p159.tsv`](../evidence/aitutor-census-196-295.2026-10-12-p159.tsv)
+
+| tier | n | share | what is in it |
+|---|---|---|---|
+| 🟢 **Permissive** | **49** | **49.0%** | 🟢 **47 MIT** *(every body `1 004 – 1 093 B`, complete)* + 🟢 **2 Apache-2.0** |
+| 🔴 **No grant** | **47** | **47.0%** | 🔴 **45 SILENT** *(nothing on 33 paths, own default branch)* + 🔴 **2 EXPLICIT** — `marwanyasser2005/fahim-ai` *("Fahim Proprietary License… no permission is granted")* and `Hackerscolonyofficial/HCO-Python-Tutor` |
+| 🟡 **Copyleft** | 3 | 3.0% | 🟡 2 AGPL-3.0 *(`Vidhya-Setu`, `sarvo-shala`)* + 🟡 1 GPL-3.0 *(`lingocue`)*, all full texts |
+| 🔴 **Source-available BY DESIGN** | 🔴 **1** | 🔴 **1.0%** | 🔴 **`batinium/Speaklify` — PolyForm Noncommercial 1.0.0** |
+
+### 🆕 🔴 `ACTION HU`'s falsifier FIRED — `T124` does not generalise
+
+🔴 **Condition: *"refuted if the source-available-by-design family appears in fewer than 3 of the
+100 rows."*** 🔴 **It appears in `1`. REFUTED.**
+🟢 **p158 measured `6 in 100` and expected `3`+.**
+🆕 **`T131`:** 🟢 **p158's own hedge was right and its expectation was wrong — `T124` is a property
+of the `NOASSERTION` SUBSET, not of the topic.** 🔵 **`NOASSERTION` is a bucket GitHub assigns to
+licences it cannot parse, so it CONCENTRATES exotic families by construction.** 🔴 **Sampling that
+bucket and generalising to the population is the error, and this pass is the control that caught
+it.**
+🟡 **What survives of `T124`: the family is real, it is recognisable, and `1 in 100` of an
+education topic's tail still forbids the commercial use a client engagement is.**
+
+### 🆕 🔴 `Speaklify` nearly escaped the gate — and that is `P158-B`'s STEP 2 failing
+
+🔴 **`batinium/Speaklify`'s `LICENSE` opens with an SPDX line, a product name, a copyright line
+reading *"All rights reserved"*, and a `---` rule.** 🔴 **The words `PolyForm Noncommercial License
+1.0.0` do not appear until LINE 14.**
+🔴 **`P158-B` says to classify from `head -5`.** 🔴 **On `head -5` this row classifies as
+*"All rights reserved"* — the right TIER by luck, the wrong LICENCE, and an unusable audit trail.**
+🔴 **And a whole-body scan over-corrects: AGPL-3.0's text cites the GPL in §13, so `3` copyleft
+rows matched TWO families each.**
+🟢 **Corrected in `P56`: SPDX line first, then the TITLE line scanning top-down, with a
+whole-body scan used only to DETECT a preamble — never to classify.**
+
+### 🟢 What the window is actually good for
+
+🟢 **`49` permissive, genuinely-licensed projects at `1 ★` is not nothing** — 🔵 **it is the raw
+material for a studio that wants a shape rather than a dependency.** 🟢 **The ones worth reading:**
+
+| repo | ★ | licence | why it is interesting at `1 ★` |
+|---|---|---|---|
+| 🟢 [`Swaraj-Mandre/Vidhya-Setu`](https://github.com/Swaraj-Mandre/Vidhya-Setu) | 1 | 🟡 AGPL-3.0 | 🟢 **Builds a PREREQUISITE knowledge graph from textbook PDFs with a local 3.8B model and teaches along it, stepping back when the student gets lost. CPU-only, no internet, no API cost** |
+| 🟢 [`isa-aguilar/poligloti`](https://github.com/isa-aguilar/poligloti) | 1 | 🟢 MIT | 🟢 **Speaking practice with no audience; local models or any OpenAI-compatible endpoint** |
+| 🟢 [`aule-org/AImauta`](https://github.com/aule-org/AImauta) | 1 | 🟢 **MIT** *(1 078 B, body-read; row 299, just outside the window)* | 🟢 **Socratic tutor for Peru, starts from the student's own attempt and shows the source. `minedu` topic — built against a national curriculum** |
+| 🟢 [`Arnobrizwan/mentormind`](https://github.com/Arnobrizwan/mentormind) | 1 | 🟢 **MIT** *(body-read, row 227)* | 🟢 **Fine-tuned local LLM grounded in Cambridge mark schemes, rubric grading, proctoring, dropout prediction, zero third-party AI APIs.** 🔵 **Permissive AND self-contained — the most composable row in the window** |
+| 🟢 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | — | 🟢 Apache-2.0 | 🟢 **Not from this window — surfaced by the control. A permissive learning-experience data pipeline, which this shelf had no row for** |
+
+🔴 **`374` of `669` `ai-tutor` rows remain unread** — 🟡 **and the saturation finding above means
+reading further by star rank is now the wrong plan.**
 ## 2026-10-12 — Pass 158
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**

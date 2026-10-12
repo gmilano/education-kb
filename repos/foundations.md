@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 159 — 2026-10-12
+
+🔴 **`ACTION HT` DISCHARGED and its falsifier is SILENT — but the pass that verified `OpenOLAT`
+also discovered that this shelf's licence gate reports *"no licence"* for MOODLE.**
+🟢 **Both findings are below, and the second one is the more important.**
+
+### 🆕 🔴 `T129` — the licence gate's probe list produced FALSE ABSENCES at `4 of 15`, and the blind spots track project MATURITY
+
+🟢 **The gate was run on a KNOWN-ANSWER control: fifteen platform and foundational rows whose
+licences are not in doubt.** 🔴 **Four came back `NO_LICENCE_FILE`.**
+[`evidence/licence-path-false-absence.2026-10-12-p159.tsv`](../evidence/licence-path-false-absence.2026-10-12-p159.tsv)
+
+| repo | the 9-path list said | the licence is actually at | and it is |
+|---|---|---|---|
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`NO_LICENCE_FILE`** | 🟢 **`COPYING.txt`** *(35 147 B)* | 🟢 **GPL-3.0** |
+| 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **`NO_LICENCE_FILE`** | 🟢 **`license.txt`** *(35 149 B)* | 🟢 **GPL-3.0** |
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`NO_LICENCE_FILE`** | 🟢 **`license.txt`** *(33 893 B)* | 🔴 **AGPL-3.0 — STRICTER than ERPNext's GPL** |
+| 🔴 [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 **`NO_LICENCE_FILE`** | 🟡 **`NOTICE.txt`** *(545 B)* | 🟡 **Apache-2.0 ASSERTED — and no licence TEXT anywhere in the tree** |
+
+🆕 **`T129`, and the mechanism is the point:** 🟢 **GitHub's *"Add license"* button writes
+`LICENSE`.** 🔴 **Projects that predate it, or that follow the GNU convention (`COPYING.txt`) or a
+framework's house style (`license.txt`), do not.**
+🔴 **So the probe list's blind spots are CORRELATED WITH MATURITY** — 🔴 **which means this
+shelf's licence-absence claims were safest exactly where it sampled (the hobby tail, which uses
+the button) and WRONG where it mattered most: the platform tier it puts in front of clients.**
+🟢 **The same extended probe recovered only `2 of 47` in the `1 ★` tail — `4.3%` there against
+`26.7%` on the control.** 🔵 **`T106`'s family again: the instrument's error rate is not constant
+across the population it is used on.**
+
+🟢 **`P56` is written** *(see `compose/patterns.md`)*: 🟢 **33 paths, SPDX line first, family read
+from the TITLE line, and a byte floor that belongs to the family.**
+
+### 🟢 `ACTION HT` — `OpenOLAT` speaks LTI 1.3 in BOTH directions, and the falsifier is SILENT
+
+[`evidence/openolat-surface.2026-10-12-p159.tsv`](../evidence/openolat-surface.2026-10-12-p159.tsv)
+
+🟢 **`org/olat/ims/lti13` — `148` path matches.** 🟢 **p158's expectation is CONFIRMED, which
+matters because `ACTION HR` fired on exactly this expectation one pass ago.**
+
+| dimension | finding | how measured |
+|---|---|---|
+| 🟢 **Licence** | 🟢 **Apache-2.0**, `10 982 B` | body read on `master` — 🔴 **its default branch is `master`, not `main`** |
+| 🟢 **LTI 1.3 — as a PLATFORM** | 🟢 **`lti13.platform.iss`** — OpenOLAT issues as a platform and hosts external tools | `LTI13Module.java` read from `raw` |
+| 🟢 **LTI 1.3 — as a TOOL** | 🟢 **`LTI13Platform` stores an EXTERNAL platform's `issuer`, `clientId`, `authorizationUri`, `tokenUri`, `jwkSetUri`** — which is exactly what a Tool keeps about its Platform | `LTI13Platform.java` |
+| 🟢 **AGS** *(grade passback)* | 🟢 **`model/json/LineItem.java`, `LineItemScore.java`** | code search |
+| 🟢 **NRPS** *(names & roles)* | 🟢 **`model/json/Member.java`, `Context.java`** | code search |
+| 🟢 **Deep Linking** | 🟢 **`LTI13ContentItem.java`** | code search |
+| 🟢 **OIDC / JWKS** | 🟢 **`OIDCApi.java`, `LTI13Key.java`, private/public key handling** | code search + `raw` |
+| 🟢 **Named integrations** | 🟢 **`ZOOM`, `JUPYTER_HUB`, `MEDIASITE_GLOBAL`, `MEDIASITE_COURSE`, `EXTERNAL`, `EXT_TEMPLATE`, `SHARED`** | `LTI13ToolType.java` enum |
+| 🟢 **QTI 2.1** | 🟢 **`org/olat/ims/qti21` — `660` path matches**, a full assessment engine | code search |
+| 🟢 **SCORM** | 🟢 **`org/olat/modules/scorm` + `ScormCourseNode` — `154` paths** | code search |
+| 🔴 **xAPI** | 🔴 **ABSENT — `0` matches across FOUR spellings** *(`xapi`, `cmi5`, `"Tin Can"`, `"experience api"`)* | code search |
+| 🟢 **Open Badges** | 🟢 **`org/olat/modules/openbadges` — `156` paths**, `v2` package, LinkedIn push | code search — 🆕 **see `T133`** |
+| 🔴 **Open Badges 3.0 / W3C VC** | 🔴 **ABSENT — `0` matches for `OpenBadgeCredential`, `VerifiableCredential`, `openbadges/v3`** | code search |
+| 🟢 **Tenancy** | 🟢 **HIERARCHICAL organisations — materialized-path tree, `matchOrganisationOrItsParents`, `customerNumber`, `externalId`, per-organisation role grants, `15` `*ToOrganisation` scoping types** | `Organisation.java`, `RolesByOrganisation.java` |
+| 🟡 **Tenancy enforcement** | 🟡 **APPLICATION-level. No row-level security.** | 🔵 **The honest contrast with `mentingo` — see below** |
+
+🟢 **Cost of the whole assessment: `8` code searches, `7` `raw` fetches, one `ls-remote`. No clone.**
+🟢 **`P55` holds a second time: *"does it integrate with X?"* is settled from the tree, not the
+feature table.**
+
+### 🆕 🔴 `T132` — the GitHub topic list is unreliable in BOTH directions
+
+🔴 **p158's `T127` caught `mentingo`'s topic list OVER-claiming: it advertised `scorm` and `xapi`
+the schema does not have.**
+🔴 **`OpenOLAT` UNDER-claims: its topics are `qti`, `scorm`, `lms`, `curriculum-management`,
+`assessment` — and `lti` is NOT among them**, although LTI 1.3 is its deepest integration
+surface at `148` paths, in both directions, with AGS, NRPS and Deep Linking.
+🆕 **`T132`:** 🔵 **a topic list is marketing, and marketing both exaggerates and forgets.**
+🟢 **It can never settle a capability question in either direction — not presence, and not
+absence.**
+
+### 🟢 Tenancy, compared honestly — two different guarantees, not one better one
+
+| | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(MIT)* | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) *(Apache-2.0)* |
+|---|---|---|
+| **shape** | 🟡 **FLAT** — `tenantId` ×154 | 🟢 **HIERARCHICAL** — materialized path, parent matching |
+| **enforced where** | 🟢 **DATABASE** — PostgreSQL RLS, least-privilege runtime role | 🟡 **APPLICATION** code |
+| **what it buys** | 🟢 ***"a bug in application code cannot read another tenant's rows"*** | 🟢 **faculty → department → programme, with roles granted per node** |
+| **where it fits** | 🟢 **Many unrelated customers on one deployment** | 🟢 **ONE institution with real internal structure** |
+
+🔵 **Neither dominates.** 🔴 **A studio that wants a DB-level guarantee and a hierarchy has
+neither off the shelf** — 🟢 **and that is a build, not a search.**
+
+### 🟢 The foundational shelf, every licence re-read with the corrected gate
+
+[`evidence/foundations-licences.2026-10-12-p159.tsv`](../evidence/foundations-licences.2026-10-12-p159.tsv)
+
+| repo | default branch | licence *(body-read)* | tier |
+|---|---|---|---|
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🔴 `master` | 🟢 **Apache-2.0** *(10 982 B)* | 🟢 **Permissive + patent grant** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `main` | 🟢 **MIT** *(1 062 B)* | 🟢 **Permissive** — 🟢 **fourth consecutive confirming pass** |
+| 🟢 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | `main` | 🟢 **Apache-2.0** *(11 357 B)* | 🟢 **Permissive** — 🆕 **NEW to this shelf: a learning-experience data pipeline** |
+| 🟢 [`openfun/richie`](https://github.com/openfun/richie) | 🔴 `master` | 🟢 **MIT** *(1 079 B)* | 🟢 **Permissive** |
+| 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `main` | 🟢 **MIT** *(1 066 B)* | 🟢 **Permissive** |
+| 🟡 [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 `master` | 🟡 **Apache-2.0 asserted in `NOTICE.txt`** *(545 B)*, no licence text in tree | 🟡 **Usable, but the grant is a NOTICE not a LICENSE** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🟡 **GPL-3.0** *(`COPYING.txt`, 35 147 B)* | 🟡 **Copyleft — cross at a protocol boundary** *(`P156-A`)* |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `master` | 🟡 **AGPL-3.0** *(35 136 B)* | 🔴 **Hosting is distribution** |
+| 🟡 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`release_11`** | 🟡 **GPL-3.0** *(35 147 B)* | 🟡 **Copyleft** — 🆕 **a THIRD default-branch convention** |
+| 🟡 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `master` | 🟡 **GPL-3.0** *(35 147 B)* | 🟡 **Copyleft** |
+| 🟡 [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`20.0`** | 🟡 **LGPL-3.0** *(43 529 B; its `LICENSE` defers to a `COPYRIGHT` file)* | 🟡 **Copyleft, library-scoped** |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** | 🟡 **LGPL-3.0** *(8 241 B)* | 🟡 **Copyleft** — 🟢 **confirmed on a FIFTH ref** |
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`develop`** | 🔴 **AGPL-3.0** *(`license.txt`)* | 🔴 **Hosting it for a client is distribution** |
+| 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **`develop`** | 🟡 **GPL-3.0** *(`license.txt`)* | 🟡 **Copyleft** |
+| 🔴 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 `master` | 🔴 **LGPL-3.0** *(`LICENSE.txt`, 7 650 B)* | 🔴 **CORRECTION — p157 offered this as a BUILD BASE without naming its copyleft** |
+
+🔴 **`9` of `15` are copyleft; `5` are permissive; `1` carries only a NOTICE.**
+🔴 **`8` of `15` do NOT default to `main`** — `master` ×5, plus `release_11`, `20.0`, `19.0` and
+`develop` ×2. 🟢 **`P53` is not an edge case on this shelf; it is the majority case.**
+🟢 **And the search channel's `default_branch` agreed with `ls-remote` on `100 of 100` tail rows**,
+🔵 **so resolving the ref is now cheap — but `ls-remote` is still what proves the repository
+EXISTS** *(`P54`)*.
 ## Pass 158 — 2026-10-12
 
 🔴 **`ACTION HR` DISCHARGED and its falsifier FIRED. `Selleo/mentingo` does NOT speak LTI 1.3,

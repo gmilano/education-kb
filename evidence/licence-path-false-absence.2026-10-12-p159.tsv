@@ -1,0 +1,7 @@
+repo	default_branch	reported_by_9_path_list	real_licence_path	bytes	licence_final	sample	convention
+moodle/moodle	main	NO_LICENCE_FILE	COPYING.txt	35147	GPL-3.0	known-answer control	GNU convention
+openedx/XBlock	master	NO_LICENCE_FILE	NOTICE.txt	545	Apache-2.0 (asserted; no licence text in tree)	known-answer control	Apache NOTICE only
+frappe/erpnext	develop	NO_LICENCE_FILE	license.txt	35149	GPL-3.0	known-answer control	lowercase + extension
+frappe/lms	develop	NO_LICENCE_FILE	license.txt	33893	AGPL-3.0	known-answer control	lowercase + extension
+mentorbit/plugin-spec	main	NO_LICENCE_FILE	LICENSE-APACHE	11358	Apache-2.0	ai-tutor row 211	per-licence suffix
+Hackerscolonyofficial/HCO-Python-Tutor	main	NO_LICENCE_FILE	License	3477	Explicit all-rights-reserved	ai-tutor row 240	capitalised, no extension

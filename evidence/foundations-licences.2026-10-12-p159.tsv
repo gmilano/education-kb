@@ -1,0 +1,16 @@
+repo	default_branch	licence_path	bytes	licence_final	tier	probe_round	note
+openolat/OpenOLAT	master	LICENSE	10982	Apache-2.0	PERMISSIVE	base	CONFIRMED from body; default branch is master not main
+Selleo/mentingo	main	LICENSE	1062	MIT	PERMISSIVE	base	CONFIRMED, fourth consecutive pass
+openfun/richie	master	LICENSE	1079	MIT	PERMISSIVE	base	CONFIRMED
+pykt-team/pykt-toolkit	main	LICENSE	1066	MIT	PERMISSIVE	base	CONFIRMED
+openlxp/openlxp-xia	main	LICENSE	11357	Apache-2.0	PERMISSIVE	base	NEW to this shelf — permissive learning-experience data pipeline
+openedx/XBlock	master	NOTICE.txt	545	Apache-2.0 (asserted in NOTICE, no licence text in tree)	PARTIAL	EXTENDED (p159)	FALSE ABSENCE under the 9-path list; and a NOTICE is not the licence text
+moodle/moodle	main	COPYING.txt	35147	GPL-3.0	COPYLEFT	EXTENDED (p159)	FALSE ABSENCE under the 9-path list
+openedx/edx-platform	master	LICENSE	35136	AGPL-3.0	COPYLEFT	base	CONFIRMED
+ILIAS-eLearning/ILIAS	release_11	LICENSE	35147	GPL-3.0	COPYLEFT	base	default branch is release_11 — a third non-main convention
+chamilo/chamilo-lms	master	LICENSE	35147	GPL-3.0	COPYLEFT	base	CONFIRMED
+odoo/odoo	20.0	LICENSE	43529	LGPL-3.0	COPYLEFT	base	default branch is 20.0; LICENSE defers to a COPYRIGHT file
+openeducat/openeducat_erp	19.0	LICENSE	8241	LGPL-3.0	COPYLEFT	base	CONFIRMED on a fifth ref; default branch 19.0
+frappe/erpnext	develop	license.txt	35149	GPL-3.0	COPYLEFT	EXTENDED (p159)	FALSE ABSENCE under the 9-path list; default branch develop
+frappe/lms	develop	license.txt	33893	AGPL-3.0	COPYLEFT	EXTENDED (p159)	FALSE ABSENCE; AGPL is STRICTER than ERPNext's GPL — hosting is distribution
+luisgf/openbadgeslib	master	LICENSE.txt	7650	LGPL-3.0	COPYLEFT	base	CORRECTION — p157 offered it as a build base without naming its copyleft

@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🟢 Verdicts on the THREE actions p158 registered, judged by p159 — all three DISCHARGED, one falsifier FIRED
+
+🟢 **Fourth consecutive three-action register, and the first clean sweep since p157.**
+🔴 **Same standing caveat: p159 is judging actions p158 wrote, but p159 did the work, so these
+are self-assessments. Where a falsifier had a numeric threshold it is reported against the
+threshold.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION HT`** — assess `openolat/OpenOLAT` as p158 assessed `mentingo`: schema or domain model, LTI 1.3, QTI, xAPI, SCORM and tenancy, read from its tree | 🟢 **DISCHARGED — falsifier SILENT, and p158's expectation CONFIRMED** | Condition: *"refuted if `OpenOLAT` does NOT speak LTI 1.3."* 🟢 **It does, in BOTH directions: `org/olat/ims/lti13` at `148` paths, `lti13.platform.iss` for the Platform role and `LTI13Platform`'s `issuer`/`clientId`/`authorizationUri`/`tokenUri`/`jwkSetUri` for the Tool role, plus AGS (`LineItem`, `LineItemScore`), NRPS (`Member`, `Context`), Deep Linking (`LTI13ContentItem`) and OIDC/JWKS.** 🟢 **Measured in full besides: Apache-2.0 re-read from the body (`10 982 B`, on `master`), QTI 2.1 at `660` paths, SCORM at `154`, hierarchical organisations with per-node roles and `15` scoping entities.** 🔴 **xAPI ABSENT on four spellings — the same hole as `mentingo`.** 🆕 **`T132`, `T133`, 🟢 `P159-A`.** [`evidence/openolat-surface.2026-10-12-p159.tsv`](../evidence/openolat-surface.2026-10-12-p159.tsv) |
+| 🔴 **`ACTION HU`** — read `ai-tutor` rows `196–295` and classify every licence with `P158-B`'s four tiers, counting the source-available-by-design family explicitly | 🔴 **DISCHARGED — falsifier FIRED** | Condition: *"refuted if the source-available-by-design family appears in fewer than 3 of the 100 rows."* 🔴 **It appears in `1`** — `batinium/Speaklify`, PolyForm Noncommercial 1.0.0. **REFUTED.** 🟢 **Full census, bodies read: permissive `49`, no grant `47`, copyleft `3`, source-available-by-design `1`.** 🆕 **`T131` — `T124` is a property of the `NOASSERTION` BUCKET, which concentrates exotic families by construction, not of the topic.** 🟢 **The shelf reaches `295` of `669`.** 🔴 **And the window turned out not to be a star band at all: all 100 rows carry exactly `1 ★`.** [`evidence/aitutor-census-196-295.2026-10-12-p159.tsv`](../evidence/aitutor-census-196-295.2026-10-12-p159.tsv) |
+| 🟢 **`ACTION HV`** — query Canada as a jurisdiction in its own right (federal plus Ontario, Quebec, British Columbia), and rename this shelf's *"North America"* query to *"United States"* | 🟢 **DISCHARGED on both limbs — falsifier SILENT, with the margin reported** | Condition: *"refuted if Canada returns no dated federal or provincial instrument touching AI in education."* 🟢 **Ontario names *"Cyber Safety and Artificial Intelligence"* a MANDATORY professional-learning topic for the `2026–27` school year. SILENT.** 🔴 **But barely, and the honest reading is that Canada's substantive guidance is OLDER than assumed: BC's *"Considerations for Using AI Tools in K-12 Schools"* — the most concrete document in the country — was first issued `2023` and updated summer `2024`.** 🔴 **Federal: nothing binding.** 🔴 **And two sources in the SAME result set CONTRADICT each other on whether Ontario's ministry has issued any AI memorandum.** 🟢 **Rename limb: APPLIED — this pass ran *"United States"*, which produced `H.R. 8747`, CA `A.B. 1159` and ID `S.B. 1227`.** [`evidence/canada-instruments.2026-10-12-p159.tsv`](../evidence/canada-instruments.2026-10-12-p159.tsv) |
+
+## 🔴 The control NOBODY registered, and it fired hardest
+
+🔴 **`P158-B` was run on fifteen platform and foundational rows as a known-answer check.**
+🔴 **It returned `NO_LICENCE_FILE` for Moodle, ERPNext, Frappe LMS and `openedx/XBlock`.**
+🟢 **All four are licensed; none uses a path on the 9-path list.**
+[`evidence/licence-path-false-absence.2026-10-12-p159.tsv`](../evidence/licence-path-false-absence.2026-10-12-p159.tsv)
+
+🆕 **`T129`:** 🔴 **`26.7%` false-absence on the platform control against `4.3%` in the `1 ★` tail**,
+🟢 **because GitHub's *"Add license"* button writes `LICENSE` and GNU- or framework-convention
+projects do not.** 🔴 **So this shelf's licence-absence claims were most reliable where it
+sampled and least reliable on the tier it recommends to clients.**
+🟢 **`P56` replaces `P158-B`: 33 paths, SPDX first, title-line classification, per-family byte
+floor.** 🔵 **The lesson is cheap to restate and expensive to learn: a gate that has never been
+run on a KNOWN ANSWER is not an instrument, it is a habit.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p159
+
+| gap | movement |
+|---|---|
+| 🔴 *"No credentialing / skills-pathway repository — the only lane with named demand and no incumbent"* | 🔴 **CORRECTED. There IS an incumbent: `openolat/OpenOLAT` ships Open Badges at `156` paths, Apache-2.0, `447 ★`, with rule-driven automatic award.** 🆕 **`T133` — p157 measured `topic:open-badges` and a topic query structurally cannot see a capability that ships as one module of a platform.** 🟢 **The lane is NARROWED, not closed: OpenOLAT is OB `v2`, and `40%` of commercial providers already issue OB 3.0** |
+| 🔴 *"`T123` — the attention leaders are AGPL-3.0 or unlicensed"* | 🔴 **WITHDRAWN. Top ten, bodies read: `8 of 10` permissive, `0` unlicensed.** 🟢 **Replaced by `T128`, which is more useful: licence risk is a monotone function of star rank** |
+| 🔴 *"`Selleo/mentingo` is the only MIT platform and the fork-and-own recommendation is unverified"* | 🟢 **CLOSED. `OpenOLAT` verified in full and the recommendation STANDS with more behind it than p158 claimed** |
+| 🔴 *"No EMEA-only adoption or market figure, NINTH pass"* | 🟢 **NARROWED: the first EMEA-only MARKET SIZE — `$2.64B` (2026) → `$8.0B` (2030), `31.9%` CAGR — and it coheres with the global and NA figures.** 🔴 **An EMEA education adoption RATE is still absent** |
+| 🔴 *"No LATAM K-12 data — every figure is higher education"* | 🟢 **CLOSED, from a primary instrument. TALIS 2024: Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` against OECD `36%`; Uruguay `75%` (Ceibal, 2026)** |
+| 🔴 *"Canada and Mexico return nothing, EIGHTH pass"* | 🟢 **CLOSED by decision. Mexico answers under LATAM (p158); Canada answers under a renamed query (p159).** 🟢 **The eight-pass gap was a QUERY-PLAN defect, start to finish** |
+| 🔴 *"No primary legal text, TENTH pass" · "No primary market study, ELEVENTH" · "No third-party efficacy evidence"* | 🔴 **RETIRED BY DECISION, with the measurement that justifies it.** 🆕 **`T134`: `raw.githubusercontent.com` `200`, `github.com` refs resolve, `api.github.com` `403`, and `gov.bc.ca` / `1edtech.org` / `unesco.org` all `000`.** 🟢 **These are channel properties. No number of passes closes them from here** |
+| 🟡 *"`T124` — `NOASSERTION` is a non-commercial FAMILY"* | 🟡 **BOUNDED. `1 of 100` in the topic tail against `6 of 100` in the `NOASSERTION` subset.** 🟢 **The family is real; the generalisation was not** |
+| 🔴 *"`luisgf/openbadgeslib` offered as a build base"* | 🔴 **CORRECTED — it is LGPL-3.0 (`LICENSE.txt`, `7 650 B`), which p157 did not say** |
+| 🔴 *"`frappe/lms` grouped with ERPNext by organisation"* | 🔴 **CORRECTED — it is AGPL-3.0, stricter than ERPNext's GPL-3.0. Hosting it for a client is distribution** |
+| 🟡 *"`590`/`474` of `669` `ai-tutor` rows unread"* | 🟡 **`374` unread.** 🔴 **And reading further BY STARS is now the wrong plan: the star sort saturates at `1 ★` by row 196 and stops ordering anything** |
+
+## 🔴 Gaps OPEN after p159, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🆕 🔴 **Nothing permissive ISSUES and SIGNS an Open Badges 3.0 / W3C VC credential** | 🟢 **`OpenOLAT`: `0` matches for `OpenBadgeCredential`, `VerifiableCredential`, `openbadges/v3`.** 🟢 **NARROWER than first written: the `v3` AUTHORING surface IS permissive and already on this shelf — `opensalt/OB3DefinitionWidget`, MIT, `1 080 B`.** 🔴 **The gap is issuance and signing, where the only library is LGPL-3.0 at `1 ★`.** 🟢 **This is the `P159-A` build, and the demand figure is dated** |
+| 🆕 🔴 **Neither permissive platform emits xAPI** | 🟢 **`OpenOLAT` `0` on four spellings; `mentingo` `0` in a `104`-table schema.** 🔴 **A client with an existing LRS cannot be served from this shelf** |
+| 🆕 🔴 **The shelf's published no-grant shares for rows 1–195 were measured with the DEFECTIVE 9-path list** | 🟢 **`T129` gives a `4.3%` tail correction rate, so `18.8%` and `23.0%` are both OVERSTATED by an unknown amount.** 🔵 **`ACTION HW`** |
+| 🆕 🔴 **`openlxp/openlxp-xia` unassessed beyond its licence** | 🟢 **Apache-2.0, `11 357 B`, body-read. A permissive learning-experience pipeline this shelf had no row for.** 🔵 **`ACTION HY`** |
+| 🆕 🔴 **`moodle/moodle`'s own surface has never been read**, although `P156-A` crosses to it | 🟢 **`COPYING.txt`, GPL-3.0 confirmed this pass — and nothing else about it is measured.** 🔵 **`ACTION HX`** |
+| 🔴 **No APAC EDUCATION adoption rate, FIFTH pass** | 🟡 **Regulation, sentiment and enterprise maturity only.** 🟢 **Recorded as an informed gap in `intel/market.md` rather than re-registered** |
+| 🔴 **No EMEA education adoption RATE, TENTH pass** | 🟡 **Two governance-coverage figures (`10%` of `450+` institutions; `13%` of Italian universities), no adoption rate** |
+| 🔴 **The AI Act date conflict is unresolved** | 🟢 **`2027-12-02` / `2028-08-02` post-Omnibus now read TWICE independently, against a persisting `2026-08-02` Annex III claim.** 🔴 **The primary text is unreachable (`T134`) — architect to `2027-12-02` and name the reading** |
+| 🔴 **Ontario's AI guidance is reported two contradictory ways** | 🔴 **One source: a mandatory `2026–27` professional-learning topic. Another, same result set: no ministry memorandum at all.** 🔴 **`T134` blocks resolution at source** |
+| 🔴 **`374` of `669` `ai-tutor` rows unread, and the star instrument has saturated** | 🟢 **Going deeper needs a different sort — forks, `pushed_at`, or `created:>`** |
+| 🔴 **The rotation that selects this industry is STILL not fixed on `main`** | 🔴 **p158 diagnosed it correctly and p159 confirms the diagnosis: each run reads `main`, each run may write only its own `claude/…` branch, and nothing merges them. p159 has advanced it on its branch as required and states plainly that this will not reach the next run.** 🟡 **NOT registered — it is not a research task, and registering it a fifth time would pretend otherwise** |
+
+## 🔜 Pre-registered for p160 — THREE actions, each with a falsifier
+
+🔵 **Three again. Four passes have now finished three; none has finished nine.**
+🟢 **All three are research or client-facing, and all three are consequences of `T129` — the pass
+that found its own instrument broken owes the next pass the re-measurement.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HW`** *(FIRST — it re-measures this shelf's own published figures)* — re-run the corrected `P56` 33-path gate over `ai-tutor` rows `1–195`, the bands p156 and p158 measured with the 9-path list, and publish the revised no-grant shares | 🔴 *Refuted if the revised no-grant share for rows 96–195 differs from p158's `23.0%` by more than 3 points* — 🟡 **p159 expects a correction of `1–3` points, because the tail recovery rate was `4.3%` and these rows are tail-like.** 🔴 **A larger shift would mean `T129` reaches into every licence figure this shelf has published, not just the platform tier** |
+| 🟢 **`ACTION HX`** — assess `moodle/moodle` from its tree exactly as `HT` assessed `OpenOLAT`: LTI 1.3 and AGS, Open Badges and its version, xAPI, QTI, and tenancy | 🔴 *Refuted if Moodle does NOT ship an Open Badges module* — 🟡 **p159 expects it DOES, which would make `T133` a PATTERN rather than one instance and would mean the credentialing *"no incumbent"* finding was wrong twice over.** 🟢 **Moodle is the platform `P156-A` crosses to and this shelf has never read it** |
+| 🟢 **`ACTION HY`** — read the trees of the permissive PLATFORMS (`OpenOLAT`, `mentingo`, `openfun/richie`, `openlxp/openlxp-xia`) for Open Badges 3.0 / W3C VC ISSUANCE, and assess `openlxp-xia` beyond its licence | 🔴 *Refuted if ANY of the four already ISSUES an OB 3.0 or W3C Verifiable Credential* — 🟡 **p159 expects none does, which is what makes `P159-A` a build.** 🔵 **Note for whoever runs it: `opensalt/OB3DefinitionWidget` (MIT) already covers `v3` AUTHORING and is NOT one of the four — do not re-discover it and do not count it as issuance.** 🟢 **If a platform does issue, `P159-A`'s signing step collapses into configuration and the pattern must be rewritten before it is sold** |
+
+🔴 **Deliberately NOT registered**, and they are real: 🔴 **a primary legal text, a primary market
+study and third-party efficacy evidence** — 🟢 **all three now RETIRED by decision under `T134`,
+because the egress boundary is measured and they are unreachable from here** · 🔴 **an APAC or
+EMEA education adoption rate** *(searched five and ten times; not supplied by any reachable
+source — recorded as informed gaps in `intel/market.md`)* · 🔴 **the Ontario contradiction**
+*(`T134` blocks the ministry page)* · 🔴 **the remaining `374` `ai-tutor` rows** *(the star
+instrument has saturated; a new sort must be chosen before the reading resumes)* · 🔴 **the
+rotation** *(not fixable from inside a pass; p158 established this and p159 confirms it)*.
+🟢 **Listed so they stay visible, and left unregistered because three is what a pass finishes.**
 ## 🟢 Verdicts on the THREE actions p157 registered, judged by p158 — two reached in full, one reached on one limb and DECLINED on the other
 
 🟢 **Third consecutive three-action register. 🔴 **But p158 breaks the clean-sweep streak

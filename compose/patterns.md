@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P159-A` — the credential-issuing build, and it is the first pattern on this shelf with a DATED demand figure above it and a NAMED permissive platform below it *(new, p159 — Global; strongest in North America and EMEA)*
+
+🔵 **The problem this solves:** 🟢 **employers and institutions are moving to skills-based
+recognition, and the demand is now measured rather than asserted** — 🟢 **1EdTech's Badge Count
+2025 reports `40%` of badge platform providers already issuing Open Badges 3.0, `2 694 271`
+OB 3.0 achievements and `6 269 066` Comprehensive Learner Records, against `74 million`+ badges
+issued in total.**
+🔴 **The open-source supply is one spec version behind.** 🟢 **`openolat/OpenOLAT` (Apache-2.0,
+`447 ★`) ships a real Open Badges module — `156` paths, `Badge`, `Assertion`, `Criteria`,
+`Profile`, `Identity`, `BadgeClass`, LinkedIn push, and a rule engine that awards
+automatically.** 🔴 **It is Open Badges `v2`: `0` matches for `OpenBadgeCredential`,
+`VerifiableCredential` or an `openbadges/v3` package.**
+🟢 **The authoring surface for `v3` already exists and is permissive** — [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget),
+**MIT** — 🔴 **so what is genuinely missing is ISSUANCE: serialising and SIGNING a W3C Verifiable
+Credential.**
+🔵 **So the engagement is not *"build a credentialing system"*. It is *"take a working
+Apache-2.0 issuer to the version buyers are asking for."***
+
+🟢 **The recipe — issue from the platform, upgrade at the edge:**
+
+| layer | repo / artefact | licence | why this one |
+|---|---|---|---|
+| 1. **Issuer + award rules** | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) `org/olat/modules/openbadges` | 🟢 **Apache-2.0** *(`LICENSE`, 10 982 B, body-read on `master`)* | 🟢 **`BadgeCriteria.isAwardAutomatically()` plus a composable `List<BadgeCondition>` and `allConditionsMet(courseEntry, uce, recipient)`.** 🔵 **Conditions bind to COURSE ELEMENTS via `CourseElementDAO` — the award is a rule over real outcomes, not a prompt** |
+| 2. **Evidence the badge points at** | same — QTI 2.1 *(`660` paths)* + SCORM *(`154` paths)* | 🟢 Apache-2.0 | 🟢 **A badge whose `Criteria` dereferences an actual assessment attempt is the difference between a credential and a sticker** |
+| 3. **Where the learning happens** | 🟢 Any permissive tutor from `agents/top.md` — [`DeepTutor`](https://github.com/HKUDS/DeepTutor) *(Apache-2.0)*, [`Bloom`](https://github.com/Li-Evan/Bloom) *(MIT)*, [`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) *(MIT)* | 🟢 **Apache-2.0 / MIT** | 🟢 **Federated in over LTI 1.3 — OpenOLAT is a Platform (`lti13.platform.iss`), so the tutor is a Tool and keeps its own licence** |
+| 4. **Grade back, roles out** | same — LTI **AGS** *(`LineItem`, `LineItemScore`)* and **NRPS** *(`Member`, `Context`)* | 🟢 Apache-2.0 | 🟢 **The tutor posts a score; the score satisfies a `BadgeCondition`; the badge issues. No custom integration** |
+| 5. 🟢 **OB 3.0 AUTHORING — already built and permissive** | 🟢 [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **MIT** *(`LICENSE`, 1 080 B)* | 🟢 **A Vue widget that produces an Open Badge **v3** achievement DEFINITION.** 🔵 **The authoring half of the upgrade exists — do not rebuild it** |
+| 6. 🔴 **The build: OB 3.0 ISSUANCE and SIGNING** | 🔴 **Nothing permissive ISSUES one.** [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) is **LGPL-3.0** *(`LICENSE.txt`, 7 650 B)*, `1 ★` | 🔴 **copyleft, and unmaintained-thin** | 🟢 **Write a `v3` EMITTER beside OpenOLAT's `v2` package: take the `BadgeClass` and `Assertion` rows, serialise them as a W3C Verifiable Credential, sign it, and manage the keys.** 🔵 **Authoring is solved; issuance is the deliverable the client cannot buy** |
+| 7. **Mastery evidence independent of the rule** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** *(1 066 B)* | 🟢 **A non-LLM second opinion on whether the learner knows it, so a contested award has two instruments behind it** |
+
+🟢 **Wiring, concretely:**
+1. 🟢 **Model the credential as a `BadgeClass` with `Criteria` that name course elements** — not
+   free text. 🔵 **The criterion must be dereferenceable, or the credential cannot be defended.**
+2. 🟢 **Set `isAwardAutomatically()` and compose the `BadgeCondition` list** so issuance is a
+   consequence of assessment, never a manual act. 🔵 **This is the same *"decision as data"*
+   principle `P158-A` applies to grading.**
+3. 🟢 **Federate the tutor in over LTI 1.3 and let AGS post the score.** 🟢 **Because OpenOLAT is
+   Apache-2.0, `P156-A`'s process boundary is not even needed here** — 🔵 **the licence boundary
+   that forces it with Moodle or Open edX simply is not present.**
+4. 🟢 **Emit `v2` today** *(it works, and it is `74M` badges' worth of installed base)*, 🟢 **and
+   ship the `v3`/VC emitter as the differentiated layer** — 🟢 **authoring the `v3` definition with
+   the MIT widget rather than writing a form.**
+5. 🔴 **Do NOT promise xAPI.** 🔴 **Neither permissive platform on this shelf emits it** —
+   OpenOLAT: `0` matches on four spellings; `mentingo`: `0` in its schema.
+
+🔴 **Where it does NOT fit:** 🔴 **a client who needs xAPI statements into an existing LRS**
+*(nothing permissive supplies it)*; 🔴 **a client who must issue OB 3.0 on day one with no build
+budget** *(authoring is MIT and ready, but the only ISSUANCE library is LGPL-3.0 at `1 ★`)*.
+🟡 **Tenancy note:** 🟢 **OpenOLAT's organisations are hierarchical with per-node roles, which
+suits one institution with internal structure.** 🔴 **For many unrelated customers on one
+deployment, `mentingo`'s database-level RLS is the stronger guarantee — and it has no LTI.**
+
+🟢 **Effort:** 🟢 **`4–6` weeks to a working `v2` issuing pipeline with a federated tutor**;
+🟡 **`8–10` weeks including a signed OB 3.0 / W3C VC emitter and the key management it implies.**
+
+---
+
+## 🆕 🟢 `P56` — the licence gate, CORRECTED again, because `P158-B` reported *"no licence"* for Moodle *(new, p159 — supersedes `P158-B`)*
+
+🔵 **The problem this solves:** 🔴 **`P158-B` was run on a known-answer control of 15 platform
+rows and returned `NO_LICENCE_FILE` for `4` of them** — 🔴 **Moodle, ERPNext, Frappe LMS and
+`openedx/XBlock`, all of which are licensed and none of which uses a path on the 9-path list.**
+🔴 **And its STEP 2 (`head -5`) misclassified a PolyForm Noncommercial licence as
+*"All rights reserved"*, because the family name line sat at line 14 behind a preamble.**
+
+🟢 **The corrected gate — the ORDER is the fix, and so is the path list:**
+
+```bash
+REPO="owner/name"
+
+# STEP 0 (P54) — does it exist? A 404 means nothing until this passes.
+BR=$(git ls-remote --symref "https://github.com/$REPO" HEAD 2>/dev/null \
+     | awk '/^ref:/{sub("refs/heads/","",$2); print $2}')
+[ -z "$BR" ] && { echo "$REPO: DOES NOT EXIST OR IS PRIVATE — not a finding"; exit 1; }
+
+# STEP 1 (P53 + T129) — probe the repo's OWN default branch, over 33 paths, not 9.
+#   8 of this shelf's 15 platform rows do NOT default to `main`:
+#   master x5, plus release_11 (ILIAS), 20.0 (Odoo), 19.0 (OpenEduCat), develop (Frappe x2).
+for p in LICENSE LICENSE.md LICENSE.txt LICENSE.rst LICENCE LICENCE.md LICENCE.txt \
+         License License.md License.txt Licence Licence.md Licence.txt \
+         license license.md license.txt licence licence.md licence.txt \
+         COPYING COPYING.txt COPYING.md COPYING.LESSER COPYRIGHT COPYRIGHT.txt \
+         NOTICE NOTICE.txt LICENSE-MIT LICENSE-APACHE LICENSE-BSD \
+         docs/LICENSE.md LICENSE/LICENSE LICENSES/LICENSE; do
+  curl -sf "https://raw.githubusercontent.com/$REPO/$BR/$p" -o /tmp/lic && { echo "BODY: $p"; break; }
+done
+
+# STEP 2 (T131) — SPDX line FIRST. It is the author's own declaration.
+grep -ioE 'SPDX-License-Identifier:[[:space:]]*[A-Za-z0-9.+-]+' /tmp/lic | head -1
+
+# STEP 3 (T131) — else the family TITLE line, scanning top-down, first match wins.
+#   NOT head -5 (a preamble pushes the title below it: PolyForm at line 14).
+#   NOT a whole-body scan either (AGPL-3.0's text cites the GPL in §13 — 3 rows matched
+#   two families each). The whole-body scan is a DETECTOR for a preamble, never the classifier.
+grep -inoE 'GNU AFFERO GENERAL PUBLIC LICENSE|GNU LESSER GENERAL PUBLIC LICENSE|\
+GNU GENERAL PUBLIC LICENSE|Apache License|MIT License|BSD [0-9]-Clause|Mozilla Public License|\
+Business Source License|PolyForm (Noncommercial|Strict|Perimeter)|Elastic License|\
+Server Side Public|All rights reserved|Community License|Creative Commons' /tmp/lic | head -1
+
+# STEP 4 (T130) — the completeness floor belongs to the FAMILY, not to the file.
+```
+
+🟢 **The per-family completeness floor — `T130`:**
+
+| family | complete body is | below that you have |
+|---|---|---|
+| 🟢 **MIT / ISC** | `~1 000 – 1 300 B` | — *(complete at 1 kB)* |
+| 🟢 **Apache-2.0** | `~11 kB` | 🔴 a NOTICE or a stub |
+| 🔴 **GPL / AGPL / LGPL-3.0** | `~30 – 36 kB` | 🔴 **the HEADER NOTICE, not the licence** |
+
+🔴 **The trap this catches that `P158-B` did not:** 🔴 **`24kchengYe/human-skill-tree` (`571 ★`)
+carries an `1 134 B` file GitHub files as AGPL-3.0.** 🔴 **At `1 134 B` that is the header notice.**
+🟢 **p158's single *"under ~`1 000 B`"* floor does not fire; a per-family floor does.**
+
+🟢 **The four tiers are unchanged from `P158-B`** *(permissive → copyleft → source-available by
+design → no grant)*, 🟢 **with one addition:** 🟡 **`GRANT ASSERTED, TEXT ABSENT`** — 🟡 **the
+family is named in a `NOTICE` or in README prose but no licence text exists in the tree
+(`openedx/XBlock`; and `T117`'s eight prose-MIT instances).** 🔵 **Usable with legal review,
+not shippable on the strength of the claim alone.**
+
+🟢 **Cost: one `ls-remote` and at most 33 `curl`s per repository.** 🟢 **`118` repositories were
+gated this way in p159** *(100 census rows, 15 platform rows, 3 new entrants)*. 🔴 **The upgrade
+from 9 paths to 33 changed `6` verdicts, `4` of them on rows this shelf recommends to clients.**
 ## 🆕 🟢 `P158-A` — the auditable-assessment build, and it is the first pattern on this shelf whose rubric is DATA rather than a prompt *(new, p158 — Global; strongest in North America and EMEA)*
 
 🔵 **The problem this solves:** 🔴 **two regulators now constrain the ARCHITECTURE of educational
@@ -739,8 +862,8 @@ non-zero is counted beside it.
 
 ### Step 1 — name the thing that would have had to exist
 
-🟢 For an election: a **GNU per-file notice**. For a tool count: a **router entry**. For a
-region: a **region-bearing host**. 🔵 **If you cannot name it, the zero is not yet a
+🟢 For an election: a **GNU per-file notice**. For a tool count: a **router entry**.
+For a region: a **region-bearing host**. 🔵 **If you cannot name it, the zero is not yet a
 measurement** — it is an absence of looking.
 
 ### Step 2 — count it in the same walk, not in a second pass

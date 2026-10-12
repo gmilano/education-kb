@@ -1,0 +1,101 @@
+row	repo	stars	default_branch	licence_path	bytes	licence_final	tier_P158B	probe_round	instrument
+196	Atulya1607/school-ai-tutor-pro	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+197	Swaraj-Mandre/Vidhya-Setu	1	main	LICENSE	34523	AGPL-3.0	COPYLEFT	base	title line (lines 1-3)
+198	anup-a/roadmap-ai	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+199	Uxielo/personal-ai-teacher	1	main	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+200	yun-dev-cmd/smart-vocab	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+201	mubashir72/PaperSensei	1	main	LICENSE	1074	MIT	PERMISSIVE	base	body family line
+202	Jun-maxs/auto-dao	1	main	LICENSE	1064	MIT	PERMISSIVE	base	body family line
+203	thebacons/claude-code-tutor	1	main	LICENSE	1292	MIT	PERMISSIVE	base	body family line
+204	Chhhhhhhhhhhhhhh/cyberedu	1	main	LICENSE	1073	MIT	PERMISSIVE	base	body family line
+205	thekaveh/LinguAI	1	main	LICENSE	1069	MIT	PERMISSIVE	base	body family line
+206	cryptoyoginya/learneverything	1	main	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+207	W1413580489/Computer-Suience-From-Enrollment-to-Expulsion	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+208	NabiBukhsh-AI/MASHQ-AI	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+209	Siggmond/Examine	1	main	LICENSE	1077	MIT	PERMISSIVE	base	body family line
+210	ZBZD-p/lingocue	1	master	LICENSE	35149	GPL-3.0	COPYLEFT	base	title line (lines 1-3)
+211	mentorbit/plugin-spec	1	main	LICENSE-APACHE	11358	Apache-2.0	PERMISSIVE	EXTENDED (p159)	body family line, path missed by P158-B 9-path list
+212	Dr-AneeshJoseph/lathe-cognitive-tutor	1	main	LICENSE	11357	Apache-2.0	PERMISSIVE	base	body family line
+213	schnitzlermandy85-beep/course-grounded-tutor	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+214	ben4mn/MedQuiz	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+215	FarzamHejaziK/TutorGalaxy_FE	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+216	oyrdfs-orf/BumbloApp	1	main	LICENSE	1067	MIT	PERMISSIVE	base	body family line
+217	Willie-Conway/DW-Master	1	main	LICENSE	1071	MIT	PERMISSIVE	base	body family line
+218	lonexreb/Maple	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+219	DawsonSallee/ai-python-tutor	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+220	TurboRx/tutor-from-doc	1	main	LICENSE	1082	MIT	PERMISSIVE	base	body family line
+221	TofuBen/simtradebook	1	main	LICENSE	1082	MIT	PERMISSIVE	base	body family line
+222	teddywuinfo/ai-family-learning	1	main	LICENSE	1087	MIT	PERMISSIVE	base	body family line
+223	StudyMonkey-ai/ai-tutor	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+224	dsouzavijeth/teaching-assistant	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+225	njh20030605-code/study-apps	1	main	LICENSE	1068	MIT	PERMISSIVE	base	body family line
+226	IsaacChen89/aceL---AI-learning-platform	1	main	LICENSE	1090	MIT	PERMISSIVE	base	body family line
+227	Arnobrizwan/mentormind	1	main	LICENSE	1069	MIT	PERMISSIVE	base	body family line
+228	Abhion24/LearnCode	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+229	Chrisyefficient258/learn-claude-code-js	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+230	yudeshna/AI-Tutor	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+231	MaikelHeijen/socrates	1	main	LICENSE	1070	MIT	PERMISSIVE	base	body family line
+232	Benjamindaoson/stuck-to-ship	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+233	henryhyunwookim/KoreanTeacher_LINE	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+234	Moh-Tayyab/tutorclaw	1	master	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+235	subramanib/The-Learners-AI	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+236	rhochgraf21/MentorLM	1	main	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+237	aabuhammam-dh/telc-b1-coach	1	main	LICENSE	1074	MIT	PERMISSIVE	base	body family line
+238	Benjamindaoson/huisen-ai-adaptive-algorithm-coach	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+239	sorrywecann/edututor-ai	1	main	LICENSE	1074	MIT	PERMISSIVE	base	body family line
+240	Hackerscolonyofficial/HCO-Python-Tutor	1	main	License	3477	Explicit-all-rights-reserved	NO_GRANT	EXTENDED (p159)	body family line, path missed by P158-B 9-path list
+241	MinhHieu13-cmc/Novator_AI	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+242	codeandbe/schooltry-edtech	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+243	nhanvu0901/adaptive-tutor	1	main	LICENSE	1084	MIT	PERMISSIVE	base	body family line
+244	Lucineer/studylog-ai	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+245	wujiajun4/english-teacher	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+246	Noggin-Labs/noggimigo	1	main	LICENSE	1093	MIT	PERMISSIVE	base	body family line
+247	AbdullahSoftDev/The-Wise-Student-Ai-Learning-Platform	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+248	AuvroIslam/DrawExplain	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+249	hanserdesu/11408Advance-mcp	1	main	LICENSE	1081	MIT	PERMISSIVE	base	body family line
+250	hammadshakeelai/prompt-mastery-app	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+251	isa-aguilar/poligloti	1	main	LICENSE	1068	MIT	PERMISSIVE	base	body family line
+252	boyac/pyGamgee	1	main	LICENSE	1045	MIT	PERMISSIVE	base	body family line
+253	EmanIqbal620/ai-native-book	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+254	MH0511/byui-canvas-calculus-helper	1	main	LICENSE	1063	MIT	PERMISSIVE	base	body family line
+255	farmarguan/coral	1	main	LICENSE	1067	MIT	PERMISSIVE	base	body family line
+256	ange-iracanye/nova-ai	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+257	EIP-Playground/EIP-Playground	1	main	LICENSE	1067	MIT	PERMISSIVE	base	body family line
+258	aadisthunder/pragati	1	main	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+259	mrx-arafat/DeepRead	1	main	LICENSE	1069	MIT	PERMISSIVE	base	body family line
+260	GARERYIES/ai-math-ml-teacher-workflow	1	main	LICENSE	1091	MIT	PERMISSIVE	base	body family line
+261	Pontinn/mentor-skill	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+262	linuteresa/peekaboo-webapp	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+263	StewAlexander-com/python-tutor	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+264	AnushkaOtari/StudyPilotAI	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+265	jiteshoffice1234-star/marcus	1	main	LICENSE	1071	MIT	PERMISSIVE	base	body family line
+266	marwanyasser2005/fahim-ai	1	main	LICENSE	482	Proprietary-all-rights-reserved	NO_GRANT	base	title line (lines 1-3)
+267	GDenizKaratas/teach-anything	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+268	invincible-summer/Next-Tutor-Agent	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+269	ujai/studiolo	1	main	LICENSE	1078	MIT	PERMISSIVE	base	body family line
+270	amarjeetsahoo/Adaptive-Learning-Assistant	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+271	ArpitAswal/Flutter_Foundation_2026_AI_Roadmap	1	main	LICENSE	1066	MIT	PERMISSIVE	base	body family line
+272	iyohesohoka646-dotcom/learn-by-ai	1	main	LICENSE	1081	MIT	PERMISSIVE	base	body family line
+273	HoloSoul-Team/bloom-study-guide-mcp	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+274	wookat/daan	1	main	LICENSE	1072	MIT	PERMISSIVE	base	body family line
+275	metacore-stack/CogniLearn-Pro	1	main	LICENSE	1004	MIT	PERMISSIVE	base	body family line
+276	ystyleb/cefr-reading-coach	1	main	LICENSE	1073	MIT	PERMISSIVE	base	body family line
+277	batinium/Speaklify	1	main	LICENSE	4933	PolyForm-Noncommercial-1.0.0	SOURCE_AVAILABLE_BY_DESIGN	base	SPDX line (family line sits below a preamble)
+278	nitoni-jim/ai-tutor-app	1	main	LICENSE	1074	MIT	PERMISSIVE	base	body family line
+279	dffge552/english-learn.app	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+280	ahmed3bead/teach-me	1	main	LICENSE	1067	MIT	PERMISSIVE	base	body family line
+281	LongWuAI/longwu-ai-tutor	1	main	LICENSE	1071	MIT	PERMISSIVE	base	body family line
+282	AbhhnavPundir/linguabridge	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+283	HaoyanZhang123/sproutask	1	main	LICENSE	1071	MIT	PERMISSIVE	base	body family line
+284	getappz/sarvo-shala	1	main	LICENSE	34482	AGPL-3.0	COPYLEFT	base	title line (lines 1-3)
+285	egouilliard-leyton/python-tutor-skill	1	main	LICENSE	1075	MIT	PERMISSIVE	base	body family line
+286	AkhileshNagargoje/Synapse-Study	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+287	Adossi-design/Math-Homework-Helper	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+288	kushGupta-15/IntelliPrep	1	master	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+289	cheryljia27-commits/ai-tutor-bot	1	main	LICENSE	1067	MIT	PERMISSIVE	base	body family line
+290	manojk909/CodeMentor-AI	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+291	SenmuuuuW/dsh-diagnostic-tutor	1	main	LICENSE	1090	MIT	PERMISSIVE	base	body family line
+292	bleidys16/Intellixy	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+293	VictorNain26/tomai-monorepo	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+294	get-fluently-app/fluently-blog	1	main	NO_LICENCE_FILE	0	NONE	NO_GRANT	base+EXTENDED	33 paths probed on own default branch, 0 hits
+295	chayan-1906/IntelliCourse-Next.js	1	master	LICENSE	1071	MIT	PERMISSIVE	base	body family line

@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 159 — 2026-10-12
+
+### 1. 🆕 🔴 Licence risk is a function of STAR RANK, and the previous reading was backwards — *Global, measured*
+
+🟢 **Four bands, three passes, one monotone direction:** 🟢 **`0.0%` no-grant in the top ten** →
+🟡 **`18.8%` (rows 1–80)** → 🟡 **`23.0%` (rows 96–195)** → 🔴 **`47.0%` (rows 196–295)**.
+🔴 **p157's `T123` — *"the attention leaders are AGPL-3.0 or unlicensed"* — is WITHDRAWN:** at the
+top ten, bodies read, 🟢 **`8 of 10` are permissive and `0` are unlicensed.**
+🆕 **`T128`:** 🔵 **the practitioner rule is that a studio's licence tax rises as it digs deeper
+into a topic.** 🟢 **Sourcing from the top is nearly free; below about row 200, half of what you
+find cannot be used at all.**
+
+### 2. 🆕 🔴 This shelf's own licence instrument was understating absence on the rows that matter most — *Global, measured*
+
+🟢 **Run on a known-answer control of 15 platform rows, the 9-path gate returned
+`NO_LICENCE_FILE` for `4`** — 🔴 **Moodle (`COPYING.txt`, GPL-3.0), ERPNext and Frappe LMS
+(`license.txt`), and `openedx/XBlock` (`NOTICE.txt`).**
+🔴 **`26.7%` false-absence rate on the control against `4.3%` in the `1 ★` tail.**
+🆕 **`T129`, and the mechanism explains the gap:** 🟢 **GitHub's *"Add license"* button writes
+`LICENSE`, so button-era hobby projects are found and GNU-convention or framework-convention
+projects are missed.** 🔴 **The instrument was therefore most reliable where this shelf sampled
+and least reliable on the platform tier it recommends to clients.**
+🔵 **`T106`'s family again, in its most expensive form yet: an instrument's error rate is not
+constant across the population it is applied to.**
+
+### 3. 🆕 🔴 A capability census by TOPIC cannot see a capability that ships as a MODULE — *Global, measured*
+
+🔴 **p157 measured `topic:open-badges` — `29` repositories, an `85 ★` ceiling — and concluded
+credentialing is *"the only lane with named demand and no incumbent."***
+🔴 **`openolat/OpenOLAT` ships `org/olat/modules/openbadges` at `156` paths**, with `Badge`,
+`Assertion`, `Criteria`, `Profile`, `Identity`, `BadgeClass`, a LinkedIn push and a rule engine
+that awards automatically — 🟢 **Apache-2.0, `447 ★`.**
+🆕 **`T133`:** 🔵 **a topic query returns projects whose IDENTITY is the capability; it structurally
+cannot return platforms for which the capability is one module of two hundred.** 🟢 **Any
+*"no incumbent"* finding on this shelf must now be re-tested against the module trees of the
+platforms it already tracks.**
+
+### 4. 🆕 🔴 The GitHub topic list is unreliable in BOTH directions — *Global, measured*
+
+🔴 **p158's `T127`: `mentingo`'s topics advertise `scorm` and `xapi` its schema lacks** —
+over-claiming. 🔴 **`OpenOLAT`'s topics list `qti`, `scorm`, `lms` and `curriculum-management`
+but NOT `lti`**, although LTI 1.3 is its deepest surface at `148` paths, in both directions.
+🆕 **`T132`:** 🟢 **a topic list cannot settle a capability question in EITHER direction.**
+
+### 5. 🆕 🟢 Credentialing has quantified demand for a standard the open-source platform does not emit — *Global, with North America and EMEA weight*
+
+🟢 **1EdTech's Badge Count 2025 survey: `40%` of badge platform providers report issuing at least
+some Open Badges 3.0, totalling `2 694 271` OB 3.0 achievements; `22%` report issuing
+Comprehensive Learner Records, totalling `6 269 066`; `74 million`+ Open Badges issued globally.**
+🔴 **`OpenOLAT`'s module is Open Badges `v2` — `0` matches for `OpenBadgeCredential`,
+`VerifiableCredential` or an `openbadges/v3` package.** 🟢 **The `v3` AUTHORING surface is already permissive on this shelf —
+[`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget), MIT, `1 080 B`.**
+🔴 **What is missing is ISSUANCE: the only library that SIGNS an OB 3.0 / W3C Verifiable
+Credential is LGPL-3.0 with `1 ★`.**
+🟢 **So the lane is bracketed from both sides for the first time: dated demand above, a named
+permissive platform below, and the gap between them is exactly one spec version.**
+🟡 **Caveat: the 1EdTech figures reached this shelf through the search channel; `1edtech.org`
+refuses this session's egress, so they are not read at source.**
+
+### 6. 🆕 🔴 A second jurisdiction now puts EDUCATION in a statutory high-risk tier — *APAC primary, Global consequence*
+
+🟢 **Vietnam's AI law is reported effective `2026-03-01`, classifying education as a HIGH-RISK
+sector including automated assessment.**
+🔵 **The EU AI Act's Annex III put evaluative educational use in the high-risk tier; Vietnam is
+the second jurisdiction to do it by statute, and Korea's AI Basic Act (in force `2026-01-22`,
+with 2026 described as a pilot year and a one-year penalty grace period) is a third framework in
+the same direction.**
+🆕 **Consequence for architecture, not paperwork:** 🟢 **`P158-A`'s rubric-as-data design was built
+for Oklahoma, Maryland and Annex III. It now answers a THIRD regime** — 🔵 **which makes it the
+portable choice rather than a regional one.**
+🟡 **Sources disagree on Vietnam's grace periods; the effective date is reported consistently.**
+
+### 7. 🆕 🟢 The first K-12 adoption data for LATAM, and the region is ABOVE the OECD average — *LATAM, measured*
+
+🟢 **TALIS 2024: secondary-school teachers who used AI in the previous year — Brazil `56%`,
+Chile `55%`, Colombia `53%`, Costa Rica `52%`, against an OECD average of `36%`.**
+🟢 **Uruguay: `75%` of public-school teachers report using these tools (Ceibal, 2026).**
+🔵 **Every LATAM figure this shelf held was HIGHER EDUCATION.** 🟢 **The K-12 layer is now
+measured, it comes from a primary instrument, and it runs `16–20` points above the OECD
+average** — 🔴 **which inverts the assumption that LATAM is the late adopter in a sales deck.**
+
+### 8. 🆕 🟢 The region's governance gap is corroborated INDEPENDENTLY, down to the segmentation — *LATAM, measured*
+
+🟢 **UNESCO IESALC, `200` institutions across `19` countries: `87%` use AI in at least one area,
+🆕 `74%` in TEACHING AND LEARNING, and only `26%` have a formal AI strategy.**
+🟢 **The segmentation p157 published is reproduced exactly by a second reading: private
+non-profit `84%`, public `68%`, private for-profit `52%`.**
+🔵 **A figure that survives an independent re-derivation is worth more than a newer one** —
+🟢 **and `74%` in teaching and learning is the number that sizes the actual buying centre.**
+
+### 9. 🆕 🟢 The FIRST EMEA-only market size, and it passes an internal coherence check — *EMEA, measured*
+
+🟢 **European AI-in-education market: `$2.64B` in 2026, to `$8.0B` by 2030 at a `31.9%` CAGR.**
+🟢 **Checked against the shelf's other figures: EMEA at `$2.64B` is `24.9%` of the global
+`$10.6B`; p158's North America share is `36%` / `$3.68B`.** 🟢 **`36% + 25% = 61%`, leaving `39%`
+for APAC, LATAM and the rest — coherent.**
+🟡 **The global figure now also carries a horizon: `$10.6B` (2026) → `$42.48B` (2030) at `41.5%`
+CAGR.** 🔴 **Still not a primary study, TWELFTH pass** — 🟢 **but three figures that cohere beat
+one that is merely repeated.**
+
+### 10. 🆕 🟢 The incumbents' own institutions are now arguing for purpose-built education AI — *Global, named sources*
+
+🟢 **The OECD's 2026 Digital Education Outlook recommends moving beyond general-purpose AI tools
+toward purpose-built educational AI designed to produce durable learning gains.**
+🟢 **1EdTech expects institutions to define governance structures, clarify compliance
+expectations and establish evaluation processes.** 🟢 **HolonIQ reports the clearest gains came
+from course design support, teacher productivity and administrative workflows, and that systems
+increasingly expect EVIDENCE that products improve learning quality, persistence, well-being or
+job-relevant skills.**
+🔵 **p158's `T115` said the incumbent is an unprocured general assistant, being procured at zero
+price.** 🆕 **The counter-pressure is now named and institutional rather than hoped for** —
+🟢 **and *"purpose-built, with evidence"* is precisely what a studio engagement sells and a free
+seat licence does not.**
+
+### 11. 🆕 🔴 The egress boundary is MEASURED, so eleven passes of *"no primary source"* were a channel property — *Global, measured*
+
+🟢 **Probed this pass: `raw.githubusercontent.com` → `200`; `github.com` → refs resolve;
+`api.github.com` → `403`; `www2.gov.bc.ca`, `www.1edtech.org`, `content.1edtech.org` and
+`www.unesco.org` → `000`, DNS refused.**
+[`evidence/egress-boundary.2026-10-12-p159.tsv`](../evidence/egress-boundary.2026-10-12-p159.tsv)
+🆕 **`T134`:** 🔴 **this session reaches GitHub and the search channel. Nothing else.**
+🟢 **So *"no primary legal text"*, *"no primary market study"* and *"no third-party efficacy
+evidence"* are not research failures and never were** — 🔴 **they are the shape of the channel,
+and they are not fixable from inside a pass.**
+🟢 **They are retired from the register by decision and recorded once, here, with the measurement
+behind them.**
 ## Pass 158 — 2026-10-12
 
 ### 1. 🆕 🔴 The non-open-source licence is now a FAMILY, not an anomaly — *Global, measured*

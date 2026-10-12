@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 159 — 2026-10-12
+
+🟢 **All three pre-registered actions DISCHARGED. One falsifier FIRED, one was SILENT, one was
+SILENT on a technicality this pass refuses to hide.**
+🔴 **And a control that nobody registered fired hardest of all: this shelf's own licence gate
+reports *"no licence"* for Moodle.**
+
+### 🆕 🟢 `T128` — licence quality is a MONOTONE function of star rank, and it REFUTES `T123`
+
+🟢 **Four bands, three passes, one direction.** [`evidence/star-band-licence-gradient.2026-10-12-p159.tsv`](../evidence/star-band-licence-gradient.2026-10-12-p159.tsv)
+
+| band | n | stars | no grant | permissive | measured by |
+|---|---|---|---|---|---|
+| 🟢 **rows 1–10** | 10 | `167 – 41 214` | 🟢 **`0.0%`** | 🟢 **`80.0%`** *(8 of 10; 2 copyleft)* | **p159, bodies read** |
+| 🟡 rows 1–80 | 80 | high | 🟡 `18.8%` | n/r | p156 *(9-path gate — understated, `T129`)* |
+| 🟡 rows 96–195 | 100 | `2 – 63` | 🟡 `23.0%` | `57.0%` | p158 *(9-path gate — understated, `T129`)* |
+| 🔴 **rows 196–295** | 100 | 🔴 **`1` throughout** | 🔴 **`47.0%`** | `49.0%` | **p159, bodies read** |
+
+🔴 **p157's `T123` said the ATTENTION LEADERS are *"AGPL-3.0 or unlicensed."*** 🟢 **At the top ten,
+read from the bodies: `8 of 10` are permissive, `0` are unlicensed** — 🟢 **`DeepTutor` is
+Apache-2.0 (`11 408 B`) and seven more are MIT.** 🔴 **`T123` is WITHDRAWN.**
+🟢 **What survives, and it is more useful than what it replaces:** 🔵 **licence risk is a function
+of star rank.** 🟢 **A studio sourcing from the top of a topic pays almost no licence tax; below
+about row 200 nearly half of what it finds cannot be used at all, and the sourcing cost rises
+monotonically in between.**
+
+### 🆕 🔴 `T130` — a licence-body byte floor must be PER-FAMILY, and p158's single floor misses a `571 ★` row
+
+🔴 **`24kchengYe/human-skill-tree` (`571 ★`, the shelf's third-largest education row) carries a
+`LICENSE` of `1 134 B` that GitHub files as AGPL-3.0.** 🔴 **`1 134 B` is the AGPL HEADER NOTICE,
+not the licence.** 🟢 **At the same byte size MIT is COMPLETE** — every one of this pass's 47 MIT
+bodies sits between `1 004` and `1 093 B`.
+🔴 **p158's rule — *"a body under ~`1 000 B` for a long-form family means the text is
+incomplete"* — does not fire at `1 134 B`.** 🟢 **Corrected: the floor belongs to the FAMILY.
+MIT and ISC are complete at ~`1 kB`; GPL/AGPL/LGPL are not complete below ~`30 kB`;
+Apache-2.0 is not complete below ~`11 kB`.**
+🔵 **Recorded as unresolved-copyleft, not as AGPL** — the grant this row actually makes is not in
+its repository.
+
+### 🟢 The attention tier, every licence read from the body
+
+[`evidence/attention-tier-licences.2026-10-12-p159.tsv`](../evidence/attention-tier-licences.2026-10-12-p159.tsv)
+
+| ★ | agent | licence *(body-read)* | bytes | ship it? |
+|---|---|---|---|---|
+| **41 214** | 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | 11 408 | 🟢 **Yes — patent grant included.** 🔵 Lifelong personalised tutoring; `5 198` forks |
+| 894 | 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** | 1 064 | 🟢 **Yes.** 🔵 Route → teach → project → spaced review, one loop |
+| 571 | 🔴 [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0 — HEADER ONLY** | **1 134** | 🔴 **No — the licence text is not in the repository.** 🆕 `T130` |
+| 515 | 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | 1 074 | 🟢 **Yes.** 🔵 MCP server over Anki — spaced repetition as a tool call |
+| 304 | 🟢 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** | 1 065 | 🟢 **Yes.** 🔵 Teaches from slides **with page citations** — anti-hallucination by provenance |
+| 287 | 🟢 [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** | 1 081 | 🟢 **Yes.** 🔵 Progressive hints, never the solution |
+| 283 | 🟢 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** | 1 069 | 🟢 **Yes.** 🔵 Bloom's 2-sigma as a skill **plus** a self-hostable web app |
+| 243 | 🟢 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** | 1 102 | 🟢 **Yes.** 🔵 Diagnosis-first, no mode menu |
+| 170 | 🟢 [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** | 1 083 | 🟢 **Yes.** 🔵 Chinese civil-service exam prep |
+| 167 | 🟡 [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟡 **AGPL-3.0** *(full text, `34 514 B`)* | 34 514 | 🟡 **Across a process boundary only — hosting is distribution.** 🔵 Self-hosted, Ollama-capable |
+
+🟢 **Every row above EXISTS** *(`ls-remote` resolved, `P54`)*, 🟢 **every licence was read from the
+body on the repository's OWN default branch** *(`P53`; `human-skill-tree` defaults to `master`)*,
+and 🟢 **every one was re-probed on the corrected 33-path list** *(`P56`)* — 🟢 **no row in this
+table rests on GitHub's sidebar.**
 ## Pass 158 — 2026-10-12
 
 🟢 **Two of the three pre-registered actions reached in full; one reached on one limb and

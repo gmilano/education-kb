@@ -1,0 +1,8 @@
+host	purpose	http_code	channel_verdict
+raw.githubusercontent.com	repository file bodies	200	ANSWERS
+github.com	git ls-remote, refs	200 (ls-remote resolves)	ANSWERS
+api.github.com	repository + search metadata	403	REFUSED — session bound to its configured repositories
+www2.gov.bc.ca	BC Ministry of Education AI guidance (primary)	000	REFUSED (DNS)
+www.1edtech.org	LTI/QTI/Open Badges standards body (primary)	000	REFUSED (DNS)
+content.1edtech.org	Badge Count 2025 survey results (primary)	000	REFUSED (DNS)
+www.unesco.org	UNESCO IESALC study (primary)	000	REFUSED (DNS)

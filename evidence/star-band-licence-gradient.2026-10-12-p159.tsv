@@ -1,0 +1,5 @@
+band	n	measured_by	star_range	no_grant_share	permissive_share	instrument
+topic:ai-tutor rows 1-10	10	p159	167-41214 stars	0.0%	80.0% (8 of 10; 2 copyleft)	body-read, 33-path gate
+topic:ai-tutor rows 1-80	80	p156	high	18.8%	n/r	9-path gate (UNDERSTATED, see T129)
+topic:ai-tutor rows 96-195	100	p158	2-63 stars	23.0% strict / 33.0% permissive basis	57.0%	9-path gate (UNDERSTATED, see T129)
+topic:ai-tutor rows 196-295	100	p159	1 star throughout	47.0%	49.0%	body-read, 33-path gate

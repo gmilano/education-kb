@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 159 — 2026-10-12
+
+🟢 **Three pre-registered actions, all three DISCHARGED. One falsifier FIRED.**
+🔴 **And an unregistered control fired hardest: this shelf's own licence gate reports
+*"no licence"* for Moodle.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION HT`** — assess `openolat/OpenOLAT` | 🟢 **DISCHARGED, falsifier SILENT. LTI 1.3 in BOTH directions, with AGS, NRPS and Deep Linking** |
+| 🔴 **`ACTION HU`** — `ai-tutor` rows `196–295`, four tiers | 🔴 **DISCHARGED, falsifier FIRED. The source-available family is `1 of 100`, not `3`+** |
+| 🟢 **`ACTION HV`** — Canada in its own right; rename *"North America"* | 🟢 **DISCHARGED on both limbs, falsifier SILENT — and the margin is reported, not rounded up** |
+
+### 🟢 What this pass added to the shelf
+
+- 🔴 **`T129` — the licence gate's probe list produced FALSE ABSENCES at `4 of 15` on a
+  known-answer control.** 🔴 **Moodle (`COPYING.txt`, GPL-3.0), ERPNext and Frappe LMS
+  (`license.txt`), `openedx/XBlock` (`NOTICE.txt`).** 🟢 **The mechanism: GitHub's *"Add license"*
+  button writes `LICENSE`, so the blind spots track project MATURITY** — 🔴 **which means this
+  shelf's licence-absence claims were safest where it sampled and WRONG on the platform tier it
+  recommends to clients.** 🟢 **`26.7%` false-absence on the control against `4.3%` in the tail.**
+- 🟢 **`P56` replaces `P158-B`:** 33 paths, **SPDX line first**, family read from the **title
+  line** scanning top-down *(a PolyForm licence hid at line 14 behind a preamble; a whole-body
+  scan over-matches because AGPL's text cites the GPL)*, and a **per-family byte floor** —
+  🔴 **`T130`: a `571 ★` row's *"AGPL-3.0"* is an `1 134 B` header notice, and p158's single
+  `1 000 B` floor does not fire on it.**
+- 🔴 **`T128` — licence risk is a MONOTONE function of star rank, and `T123` is WITHDRAWN.**
+  🟢 **`0.0%` no-grant in the top ten** *(`8 of 10` permissive, `0` unlicensed)* → `18.8%`
+  (rows 1–80) → `23.0%` (96–195) → 🔴 **`47.0%` (196–295).** 🔵 **A studio's licence tax rises as
+  it digs deeper; below about row 200 half of what it finds cannot be used at all.**
+- 🔴 **The star instrument SATURATES.** 🔴 **All 100 rows in the registered window carry exactly
+  `1 ★`** — stars fall to `2` by row 183 and `1` by row 196, 🟢 **so *"top-N by stars"* stops
+  ordering anything and going deeper needs forks, `pushed_at` or `created:>`.**
+- 🟢 **`OpenOLAT` measured in full, and the fork-and-own recommendation STANDS with more behind it:**
+  🟢 **LTI 1.3 as Platform (`lti13.platform.iss`) AND as Tool, with AGS, NRPS, Deep Linking and
+  OIDC/JWKS; QTI 2.1 at `660` paths; SCORM at `154`; hierarchical organisations with per-node
+  roles and `15` scoping entities; Apache-2.0 re-read from the body.** 🔴 **xAPI ABSENT on four
+  spellings — the same hole as `mentingo`.**
+- 🟢 **`T133` + a corrected gap: `OpenOLAT` ships OPEN BADGES** — `156` paths, `v2` spec,
+  LinkedIn push, and `BadgeCriteria.isAwardAutomatically()` with conditions bound to course
+  elements. 🔴 **p157 called credentialing *"the only lane with named demand and no incumbent"*
+  after measuring `topic:open-badges`** — 🟢 **and a topic query structurally cannot see a
+  capability that ships as one module of a platform.**
+- 🔴 **`T132` — the GitHub topic list is unreliable in BOTH directions.** p158 caught `mentingo`
+  over-claiming; `OpenOLAT` UNDER-claims — its topics omit `lti`, its deepest surface.
+- 🟢 **`P159-A`** — the credential-issuing build: 🟢 **1EdTech's Badge Count 2025 gives `40%` of
+  badge providers issuing OB 3.0, `2 694 271` OB 3.0 achievements and `6 269 066` CLRs against
+  `74M`+ badges total**; 🔴 **`OpenOLAT` emits OB `v2`; the `v3` AUTHORING widget this shelf
+  already holds is MIT (`opensalt/OB3DefinitionWidget`), and the only library that ISSUES and
+  SIGNS an OB 3.0 / W3C VC credential is LGPL-3.0 at `1 ★`.** 🟢 **Dated demand above, a named permissive platform
+  below, one spec version in between.**
+- 🔴 **`T131` — `T124` is BOUNDED:** the source-available family is `1 of 100` in the topic tail
+  against `6 of 100` in the `NOASSERTION` subset, 🔵 **because `NOASSERTION` concentrates exotic
+  families by construction.**
+- 🔴 **`T134` — the egress boundary is MEASURED:** 🟢 **`raw.githubusercontent.com` `200`,
+  `github.com` refs resolve, `api.github.com` `403`, and `gov.bc.ca` / `1edtech.org` /
+  `unesco.org` all `000`.** 🟢 **So *"no primary legal text"*, *"no primary market study"* and
+  *"no efficacy evidence"* are channel properties and are RETIRED from the register.**
+- 🔴 **Two client-facing CORRECTIONS:** 🔴 **`frappe/lms` is AGPL-3.0, stricter than ERPNext's
+  GPL — hosting it for a client is distribution**; 🔴 **`luisgf/openbadgeslib`, offered by p157 as
+  a build base, is LGPL-3.0.**
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **North America** | 🆕 🟢 **`ACTION HV` discharged — Canada answers after eight empty passes: Ontario's *"Cyber Safety and Artificial Intelligence"* is a MANDATORY professional-learning topic for `2026–27`** · 🔴 **but BC's framework dates from `2023`, updated summer `2024`, and the federal level has nothing binding** · 🔴 **two sources contradict each other on Ontario** · 🆕 🟢 **first federal BILL: `H.R. 8747`** · 🆕 🟢 **CA `A.B. 1159` bars student data from model TRAINING; ID `S.B. 1227` covers privacy, PROCUREMENT and transparency** · 🆕 🟢 **OK `S.B. 1734`, MD's 120-day clock, `35+` states with guidance** |
+| **EMEA** | 🆕 🟢 **the FIRST EMEA-only market size — `$2.64B` (2026) → `$8.0B` (2030), `31.9%` CAGR — and it COHERES with the global and NA figures** · 🆕 🟢 **the OECD's 2026 Digital Education Outlook argues for purpose-built over general-purpose educational AI** · 🆕 🟡 **`10%` of `450+` institutions have formal guidelines** · 🆕 🟢 **UAE National AI Strategy 2031 + AI Ethics Guidelines; Saudi SDAIA — named at last** |
+| **APAC** | 🆕 🔴 **Vietnam's AI law, effective `2026-03-01`, classifies EDUCATION as HIGH-RISK including automated assessment — the second statutory high-risk education tier on this shelf** · 🆕 🟢 **Taiwan's AI Basic Act, December 2025** · 🆕 🟢 **Korea: 2026 is a PILOT year with a one-year penalty grace, so the sellable window runs to `2027-01-22`** · 🆕 🟢 **Australia's AI Safety Institute from early 2026** · 🔴 **no education adoption RATE, FIFTH pass** |
+| **LATAM** | 🆕 🟢 **the FIRST K-12 data, from TALIS 2024: Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` against OECD `36%`** · 🆕 🟢 **Uruguay `75%` of public-school teachers (Ceibal, 2026)** · 🆕 🟢 **UNESCO IESALC scope named — `200` institutions, `19` countries, `74%` using AI in TEACHING AND LEARNING** · 🟢 **the `84%`/`68%`/`52%` segmentation reproduced EXACTLY by an independent reading** · 🔴 **a deck selling LATAM as *"catching up"* is wrong at the teacher level** |
+| **Global** | 🆕 🟢 **1EdTech Badge Count 2025 quantifies credentialing demand** · 🆕 🟡 **global horizon `$10.6B` → `$42.48B` (2030), `41.5%` CAGR, three figures now mutually coherent** · 🆕 🔴 **`T134`** · 🔴 **no open-source vendor in any market source, TWELFTH pass; the ERP/CRM query returned one vendor's glossary in five locales — `T122` confirmed a third time** |
+
+### 🔜 Pre-registered for p160
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION HW`** — re-run the corrected `P56` gate over rows `1–195` and publish revised shares | 🔴 *Refuted if rows 96–195 differ from p158's `23.0%` by more than 3 points* |
+| 🟢 **`ACTION HX`** — assess `moodle/moodle`'s tree as `HT` assessed `OpenOLAT` | 🔴 *Refuted if Moodle does NOT ship an Open Badges module* |
+| 🟢 **`ACTION HY`** — OB 3.0 / W3C VC support across the four permissive platforms; assess `openlxp-xia` | 🔴 *Refuted if ANY of the four already emits OB 3.0* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The rotation is STILL not fixed on `main`, and p158's diagnosis is CONFIRMED rather than
+  improved on.** 🟢 **Each run reads `rotation.json` on `main`; each run may write only its own
+  `claude/…` branch; nothing merges them.** 🟢 **p159 advanced it on its branch as required and
+  states plainly that this will not reach the next run: it needs a human merge, or rotation state
+  both sides can see.** 🟡 **Not re-registered — it is not a research task.**
+- 🔴 **`374` of `669` `ai-tutor` rows unread** — 🔴 **and the star sort has saturated, so the next
+  pass must pick a different instrument before resuming.**
+- 🔴 **No APAC education adoption rate (fifth pass) and no EMEA education adoption rate (tenth).**
+  🟢 **Both recorded as informed gaps with the queries that failed, not left as silence.**
+- 🔴 **No primary source for ANY figure in this pass's regional sweep.** 🟢 **`T134` explains why,
+  and the 1EdTech, TALIS, OECD and Ceibal figures are all marked as search-channel readings
+  rather than read at source.**
+- 🔴 **The Ontario contradiction is unresolved** and cannot be resolved from this session.
 ## Pass 158 — 2026-10-12
 
 🟢 **Three pre-registered actions: two DISCHARGED in full, one discharged on its measurement limb

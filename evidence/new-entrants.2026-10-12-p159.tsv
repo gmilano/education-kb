@@ -1,0 +1,4 @@
+repo	stars	created	default_branch	licence	bytes	body_complete	what_it_is
+ahmtsahin/deutsch-loop	8	2026-09-24	main	MIT	1082	yes	German tutor skill for Claude Code/Codex that remembers the learner's mistakes AND which hints worked
+wanikhawar/ferris-forge	6	2026-10-05	master	MIT	1075	yes	Pixel-art browser game teaching Rust with an agent as the teacher; Axum backend
+xhuandy666/AlgoPractice	5	2026-09-09	main	MIT	1067	yes	Offline-first algorithm workbench: graded AI tutoring, separate review of approach vs language, mock interviews

@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 159 — 2026-10-12
+
+🟢 **`OpenOLAT` was this page's default recommendation for the fork-and-own academic case on an
+UNVERIFIED assumption one pass ago. It is now verified, and the recommendation STANDS** —
+🟢 **with more behind it than p158 claimed.**
+🆕 🟢 **And this page gains a column it never had: CREDENTIALING, because `OpenOLAT` ships Open
+Badges.**
+
+### 🟢 CONFIRMED — `OpenOLAT` is the fork-safe academic platform, and it federates both ways
+
+| claim this page carried | p159 verdict |
+|---|---|
+| 🟢 *"Apache-2.0, 447 ★"* | 🟢 **CONFIRMED from the body — `10 982 B` on `master`. `447 ★`, `167` forks, `5` open issues, pushed `2026-10-12`** |
+| 🟢 *"Fork-safe AND speaks LTI and QTI"* | 🟢 **CONFIRMED and DEEPER than claimed: LTI 1.3 in BOTH directions, with AGS, NRPS and Deep Linking; QTI 2.1 at `660` paths** |
+| 🟡 *(not claimed)* | 🆕 🟢 **SCORM at `154` paths; Open Badges 2.0 at `156` paths with automatic rule-driven award** |
+| 🔴 *(not claimed)* | 🔴 **xAPI ABSENT — `0` matches on four spellings.** 🔵 **Same hole as `mentingo`. Neither permissive platform on this shelf emits xAPI** |
+
+### 🆕 🟢 The routing table, now with a credentialing row
+
+| engagement | platform | licence | why |
+|---|---|---|---|
+| 🟢 **Institution that wants to OWN an academic platform** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0 + patent grant** | 🟢 **VERIFIED: LTI 1.3 platform **and** tool, AGS, NRPS, Deep Linking, QTI 2.1, SCORM, Open Badges 2.0, hierarchical organisations with per-node roles.** 🔵 **The default, and now on evidence** |
+| 🟢 **Corporate L&D / HRTech, greenfield, white-labelled or resold** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🟢 **DB-level RLS tenancy, LLM-judge rubric engine as DATA.** 🔴 **No LTI — never where tools must federate into a campus LMS** |
+| 🟢 **University / K-12 with an existing LMS estate; AI as a federated tool** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) *(GPL-3.0, `COPYING.txt`)* or [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(AGPL-3.0)*, **left unmodified** | 🔴 copyleft | 🟢 **They speak LTI 1.3 + AGS. `P156-A` crosses at the protocol, so the deliverable stays permissive** |
+| 🆕 🟢 **Client needs ISSUED, portable CREDENTIALS** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) **Open Badges module** | 🟢 **Apache-2.0** | 🟢 **`156` paths, `v2` spec: `Badge`, `Assertion`, `Criteria`, `Profile`, `Identity`, `BadgeClass`, plus LinkedIn push.** 🔴 **Open Badges 2.0 ONLY — no 3.0, no W3C VC.** 🟢 **Pair with the MIT [`OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) for `v3` authoring.** 🔵 **`P159-A` is the upgrade, and only the SIGNING half is a build** |
+| 🆕 🟡 **Client needs learning-record PLUMBING** | 🟡 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 **Apache-2.0** *(11 357 B)* | 🟢 **A permissive learning-experience data pipeline. NEW to this shelf** — 🟡 **unassessed beyond its licence; see `ACTION HY`** |
+| 🔴 **Education ERP / SIS** | 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(LGPL-3.0)* on [`odoo/odoo`](https://github.com/odoo/odoo) *(LGPL-3.0)*, or [`frappe/erpnext`](https://github.com/frappe/erpnext) *(GPL-3.0)* | 🔴 **copyleft, no permissive option exists** | 🔴 **TWELFTH pass with no MIT- or Apache-licensed education ERP.** 🟢 **This is a SUPPLY fact, now licence-verified from four bodies rather than inferred** |
+
+### 🔴 A correction this page owes `frappe/lms` adopters
+
+🔴 **[`frappe/lms`](https://github.com/frappe/lms) is AGPL-3.0, not GPL** — read from `license.txt`
+on its `develop` default branch, `33 893 B`.
+🔴 **It is STRICTER than ERPNext (GPL-3.0) in the same organisation**, 🔴 **so hosting Frappe LMS
+for a client is distribution and triggers source obligations on the hosted work.**
+🟢 **Anyone comparing the Frappe stack by organisation rather than by repository gets this wrong.**
+
+### 🔴 And one `P157-C` caveat, stated plainly
+
+🔴 **[`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) — the standards-complete
+Open Badges 3.0 / W3C VC library p157 proposed as a BUILD BASE — is LGPL-3.0**, read from
+`LICENSE.txt` on `master`, `7 650 B`.
+🟡 **LGPL on a library is workable** *(linking, not statically absorbing)*, 🔴 **but it is copyleft
+and p157 presented it without saying so.** 🟢 **A client who expected a permissive foundation
+needs to hear this before the architecture, not after.**
 ## Pass 158 — 2026-10-12
 
 🔴 **A CORRECTION to this page's own recommendation, and it is the client-facing half of

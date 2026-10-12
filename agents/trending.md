@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — Pass 159
+
+🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
+🟢 **The `created:>` new-entrant slot p158 recommended as standing is RUN, and it paid: three
+rows that did not exist at p158's cut, all three MIT with complete bodies.**
+🔴 **But p158's `T126` does not replicate in full, and this pass says which limb failed.**
+
+### 🆕 🟢 The new rows — created since `2026-09-01`, above a `5 ★` floor
+
+[`evidence/new-entrants.2026-10-12-p159.tsv`](../evidence/new-entrants.2026-10-12-p159.tsv)
+
+| agent | ★ | created | licence *(body-read)* | bytes | what moved |
+|---|---|---|---|---|---|
+| 🟢 [`ahmtsahin/deutsch-loop`](https://github.com/ahmtsahin/deutsch-loop) | **8** | **2026-09-24** | 🟢 **MIT** | 1 082 | 🟢 **Remembers the learner's mistakes AND WHICH HINTS WORKED.** 🔵 **The only row on this shelf that treats the HINT as the thing worth storing** — a scaffolding-efficacy memory, not a mistake book. Claude Code + Codex skill, German grammar |
+| 🟢 [`wanikhawar/ferris-forge`](https://github.com/wanikhawar/ferris-forge) | 6 | 2026-10-05 | 🟢 **MIT** | 1 075 | 🟢 **A cozy pixel-art browser game that teaches Rust, with the agent cast as the teacher-character.** 🔵 **Axum backend; the first game-shaped education row here since the gaming shelf's own NPC work.** 🔴 **Defaults to `master`** |
+| 🟢 [`xhuandy666/AlgoPractice`](https://github.com/xhuandy666/AlgoPractice) | 5 | 2026-09-09 | 🟢 **MIT** | 1 067 | 🟢 **Offline-first algorithm workbench that reviews APPROACH and LANGUAGE separately.** 🔵 **That separation is a real pedagogical claim — a learner who had the idea but botched the syntax needs a different next step from one who had neither.** Mock interviews, spaced repetition |
+
+### 🆕 🔴 `T126` splits — the licence limb HOLDS, the APAC-origin limb does NOT
+
+🟢 **p158's `T126` said the new-entrant tier is *"permissive and APAC-origin."***
+🟢 **Permissive: CONFIRMED on a fresh cut — `3 of 3` MIT, every body complete and read.**
+🔴 **APAC-origin: NOT confirmed — `1 of 3`** *(`AlgoPractice` is Chinese-language; `deutsch-loop`
+teaches German; `ferris-forge` is English)*. 🔴 **p158 measured `4 of 5`.**
+🔵 **So the licence claim is a property of the tier and the geography claim was a property of
+p158's particular week.** 🟢 **Said now, at `n=3`, rather than carried until it embarrasses a
+deck.**
+
+### 🟢 `Study-Mate` holds at `894 ★` — and that is not yet information
+
+🟡 **p158 read `894 ★` and `44` forks earlier the same day; p159 reads `894 ★` and `44` forks.**
+🔵 **Two readings hours apart say nothing about a curve.** 🟢 **Recorded so the next pass has a
+timestamped baseline rather than a remembered impression** — 🔴 **and as a standing caution that
+this shelf runs more often than its subject matter changes.**
+
+### 🔴 The web channel returned commentary again — THIRD consecutive pass
+
+🔴 **`top open source AI agents education 2026 github MIT` returned `microsoft/ai-agents-for-beginners`
+and `pguso/agents-from-scratch`** — 🔴 **both of which teach people to BUILD agents, neither of
+which is an agent for the education industry.**
+🔴 **`github trending education AI 2026` returned `rohitg00/ai-engineering-from-scratch`, an AI
+job-search repo and a curated roadmap list.**
+🟢 **This is p157's `T121` — `ai-education` is BIMODAL — arriving through a second channel:**
+🔵 **the web channel does not merely dilute the education-industry signal, it INVERTS it, because
+*"AI education"* in English prose overwhelmingly means education ABOUT AI.**
+🟢 **`P158-C` stands reinforced: one GitHub `created:>` call out-performed both web queries
+combined, and cost one request.**
 ## 2026-10-12 — Pass 158
 
 🟢 **APPEND-ONLY. Everything below this section is prior history and is not rewritten.**
