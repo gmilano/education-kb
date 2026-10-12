@@ -1,0 +1,6 @@
+# p153 ACTION FJ -- declaration-surface audit, 10 agent-tier clones, 2026-10-12
+# instrument: p153-declaration-surfaces/surfaces.py, 36 offline tests, all passing
+# clones: git clone --depth 1 --single-branch, 10 of 10 OK, 187 MB
+
+# subjects=10  with_more_than_two_surfaces=4  DISAGREE=1
+# FJ falsifier: 'refuted if no other row declares more than two' -> SILENT (rows exceed two)

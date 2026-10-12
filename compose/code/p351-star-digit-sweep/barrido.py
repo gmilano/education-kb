@@ -35,7 +35,11 @@ RE_CIFRA = re.compile(r'[0-9]{1,3}[.,][0-9]{3}(?:\.[0-9]{3})* ?★')
 # arriba re-atribuye lo de abajo- pero con la causa real a la vista: el limite siguiente
 # no existia porque no se lo reconocia.
 SEPARADOR_DE_TABLA = re.compile(r'[\s:|-]+')
-RE_ENCABEZADO_PASE = re.compile(r'pase (\d+)', re.IGNORECASE)
+# `ACCION GD2` (pase 153): el estante cambio el IDIOMA de sus encabezados de pase
+# (`## Pase 138` -> `## Pass 152`) y el atribuidor, que solo conocia la forma
+# castellana, dejo de atribuir EN SILENCIO: 50 ocurrencias sin pase. No es que la
+# regex no cubriera «un formato», es que no cubria un IDIOMA.
+RE_ENCABEZADO_PASE = re.compile(r'(?:pase|pass) (\d+)', re.IGNORECASE)
 
 # 🆕 `P376` (pase 115): este arbol atribuye un pase con DOS portadores, y este modulo
 # reconocia UNO. El otro es la linea de resumen `> **Pase N del FECHA:** ...`, que es como
@@ -51,7 +55,7 @@ RE_ENCABEZADO_PASE = re.compile(r'pase (\d+)', re.IGNORECASE)
 #
 # 🔵 El arreglo respeta la estructura del archivo y no el instrumento (que es lo que `P359`
 # pedia): la linea se atribuye a lo que ELLA MISMA declara.
-RE_LINEA_DE_PASE = re.compile(r'^>\s*\*\*Pase (\d+) del ', re.IGNORECASE)
+RE_LINEA_DE_PASE = re.compile(r'^>\s*\*\*Pas[es]+ (\d+) del ', re.IGNORECASE)
 
 ARCHIVOS = ('agents/top.md', 'agents/trending.md', 'repos/foundations.md', 'repos/trending.md',
             'verticals/solutions.md', 'intel/market.md', 'intel/trends.md',
@@ -200,14 +204,47 @@ def es_rechazo(texto, pos=None):
     return any(m in texto.lower() for m in MARCAS_RECHAZO)
 
 
+# `ACCION GD2` (pase 153). El pase 152 dejo abierto si `K-3CIFRAS, ±50` es una banda que
+# el vocabulario de clases debe ACEPTAR. La respuesta medida es SI: la cifra de
+# `agents/trending.md:16108` (`6.400 ★ (K-3CIFRAS, ±50)`) lleva su banda ADOSADA en forma
+# de token, no en prosa, asi que `MARCAS_UMBRAL` -que es lexica- no la ve. La clase se
+# ensancha de «borde de banda» a «portadora de banda»: una cifra que declara su propia
+# tolerancia CUMPLE la regla del pase 110 y por eso no pertenece a la rama de refutacion.
+# 🔴 Lo que esto NO arregla, y se dice: las 4 cifras de PROSA sin banda que quedan
+# (`agents/trending.md:16122`, `:16171`, `repos/trending.md:12483`, `:12491`) son un
+# defecto DE LA PAGINA, no del gate. Ahi el gate tiene razon.
+MARCAS_BANDA_ADOSADA = ('k-2cifras', 'k-3cifras', 'k-4cifras', 'k-5cifras')
+
+
+def tiene_banda_adosada(texto, pos=None):
+    """La cifra declara su propia tolerancia junto a si misma.
+
+    Dos formas medidas en este corpus: el token de banda (`K-3CIFRAS`) y la tolerancia
+    explicita (`±50`). Se busca en una ventana POSTERIOR a la cifra, porque la anotacion
+    va entre parentesis despues del numero y no antes.
+    """
+    bajo = texto.lower()
+    if any(m in bajo for m in MARCAS_BANDA_ADOSADA):
+        return True
+    if pos is not None:
+        ventana = texto[pos:pos + 48]
+        if re.search(r'±\s*\d', ventana):
+            return True
+    return False
+
+
 def es_umbral(texto, pos=None):
-    """La cifra es el BORDE de una banda, no la medicion de un repo.
+    """La cifra es el BORDE de una banda, O LLEVA SU BANDA ADOSADA -en cualquiera de los
+    dos casos no es una medicion desnuda y queda fuera de la rama de refutacion.
 
     Senal estructural: cae en una celda que declara un RANGO (`1.000-9.999`, `< 1.000`,
     `>= 100.000`). Senal lexica: la linea habla de la banda y no de un repo.
+    Senal de banda adosada (`GD2`, pase 153): la cifra trae su propio token de tolerancia.
     """
     bajo = texto.lower()
     if any(m in bajo for m in MARCAS_UMBRAL):
+        return True
+    if tiene_banda_adosada(texto, pos):
         return True
     if pos is not None:
         ventana = texto[max(0, pos - 12):pos + 24]

@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 153 — 2026-10-12
+
+🟢 **Every row on this page is now clone-verified, star-measured and
+surface-audited — the first pass where all three hold at once.**
+🔴 **And the audit found a row that calls itself MIT and is GPL-3.0.**
+
+### 🟢 The education-agent tier — 10 rows, all three measurements
+
+🟢 **Licence is read from the cloned TREE, never from a badge** — which is no longer a
+precaution but a rule with a casualty behind it. ★/forks read **`EXACTO, 2026-10-12`** on
+the rendered-page channel, one fetch per repository.
+[`evidence/star-distribution.2026-10-12-p153.tsv`](../evidence/star-distribution.2026-10-12-p153.tsv)
+· [`evidence/declaration-surfaces.2026-10-12-p153.tsv`](../evidence/declaration-surfaces.2026-10-12-p153.tsv)
+
+| repo | licence (from the tree) | ★ | forks | surfaces | what it is |
+|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 🟢 **290** | 96 | 2 🟢 `AGREE` | 🟢 **The most-starred education agent on this shelf.** Canvas LMS MCP server for students and educators — 102 tools by the sidebar, *"up to 126"* by the README, **1 004 commits**, 184 code files. Works with Claude, Cursor, Codex and 40+ agents |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | **140** | 30 | 3 🟢 `AGREE` | Full tutoring platform, **890 files**, Python API + web app monorepo. Declares MIT on three surfaces and they agree |
+| 🔴 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** | **88** | 40 | 🔴 **3 `DISAGREE`** | 🔴 **DO NOT SHORTLIST FROM THE BADGE.** Learner-owned AI education platform — describe a goal, it builds a private course and tutors with course-scoped retrieval and citations. 🔴 **Its badge and its `pyproject.toml` say MIT; its `LICENSE` is GPL-3.0** |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** | **45** | 7 | 3 🟢 `AGREE` | *"Turns any LLM into an Intelligent Tutoring System"* — MCP server grounded in cognitive-science tutoring tactics. **687 files**, the tier's most-cited design |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | 🟢 **MIT** | **40** | 25 | 2 🟢 `AGREE` | 🔵 **APAC, and measurably so**: 25 of 25 region-bearing hosts in the tree are Australian (p152). Student-built browser extension over the SEQTA school platform |
+| [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) | 🔴 **NONE** | **8** | 1 | 🔴 **0** | 🔴 **Not shippable.** WordPress plugin exposing Tutor LMS courses, content and enrolments over MCP. 🔴 **Zero declaration surfaces — confirmed by an independent instrument this pass** |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | 🟢 **Apache-2.0** | **7** | 0 | 2 🟢 `AGREE` | Pay-as-you-learn tutor ledger callable from any agent. **37 files, 2 commits** — a design sketch, honestly small |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | 🟢 **MIT** | **4** | 0 | 2 🟢 `AGREE` | Local-first Canvas MCP server, stdio transport, *"~125 lines of Python"*. 🟢 **Thin by intent, and says so** |
+| 🟢 [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🟢 **Apache-2.0** | 🔴 **1** | 0 | 3 🟢 `AGREE` | 🟢 **The best-governed row on this shelf, and ninth of ten by stars.** Full SIS: 46 MCP tools, **23 approval-gated writes, FERPA access logging on every student-scoped operation**, 24-test suite |
+| [`mohaneesh-03/mcp-tutor`](https://github.com/mohaneesh-03/mcp-tutor) | 🟢 **MIT** | **0** | 0 | 2 🟢 `AGREE` | **16 files, 5 commits**, no description. Real, licensed, pre-everything |
+
+🟢 **8 of 10 are MIT or Apache-2.0 — buildable.** 🔴 **One is GPL-3.0 while advertising
+MIT.** 🔴 **One carries no grant at all.**
+
+### 🔴 `ahmedEid1/lumen` — the row that must be read before it is shortlisted
+
+| surface | says | where |
+|---|---|---|
+| 🔴 **`LICENSE`** — governs, and what GitHub's detector reads | **GPL-3.0**, 674 lines | `LICENSE` |
+| 🔴 README **badge** | **MIT** — and it **links to the GPL-3.0 file** | `README.md:13` |
+| 🔴 **metadata** | **MIT** — `license = { text = "MIT" }` | `apps/backend/pyproject.toml:13` |
+
+🔵 **The practical instruction, which is the whole value of this finding.** `lumen` is the
+**third-most-starred** row here and the **only** one shaped like a complete learner-facing
+product. 🔴 **It is also strong copyleft.** 🟢 **So it is a reference architecture to read
+and a fork to avoid** unless the client's deliverable can itself be GPL-3.0 — which, for
+a platform an institution will extend privately, it usually cannot. 🔵 **`P43`'s
+fork-licence decision applies to an agent row, not just a vertical platform.**
+
+### 🟢 How to shortlist from this page, in the order that survives a licence review
+
+1. 🟢 **Read `LICENSE` from a clone.** Not the badge, not the sidebar, not the manifest.
+   🔴 **`lumen` is why.** The instrument is
+   [`p153-declaration-surfaces`](../compose/code/p153-declaration-surfaces/README.md) —
+   36 offline tests, and it reports `DISAGREE` rather than resolving it.
+2. 🟢 **Then rank by fitness, not by stars.** The star median here is **24**;
+   🔴 **the one row with an authorisation boundary is ninth of ten at 1 ★.** A stars-first
+   shortlist does not merely miss it — **it ranks it last.**
+3. 🟢 **Pick the substrate before the agent.** `canvas-mcp` (×2) and `tutor-lms-mcp` are
+   adapters onto a host the client already owns; `OpenTutor` and `lumen` are platforms that
+   replace one. 🔵 **The host decides the licence of what you write** (`P43`).
+4. 🔴 **Discard a row with zero declaration surfaces.** `tutor-lms-mcp` is useful reading
+   and cannot be delivered.
+
+### 🟢 By function, with the licence attached because it decides the engagement
+
+🟢 **Canvas LMS, permissive, two sizes** — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+(MIT, 290 ★, 102+ tools) for a full deployment; [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp)
+(MIT, 4 ★, ~125 lines) when the client wants something auditable in an afternoon.
+
+🟢 **Student records with a real boundary** — [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records)
+(Apache-2.0). 🟢 **The only row here that can be shown to a privacy officer**: approval
+gates on writes, FERPA logging on reads. 🔵 **Directly sellable against California
+`AB 1159` and Idaho `SB 1227`.**
+
+🟢 **Tutoring logic, permissive** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+(MIT, 45 ★) for tutoring tactics over any LLM; [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)
+(MIT, 140 ★) for a whole platform.
+
+🔴 **Learner-owned course generation — read, do not fork** — [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen)
+(**GPL-3.0**, 88 ★).
+
+🔴 **WordPress/Tutor LMS — unshippable as published** — [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp)
+(**no licence**, 8 ★).
+
+##### 🔴 What this page still cannot do, after p153
+
+- 🔴 **No star figure here carries a band.** Each is one exact read on one channel at one
+  time — `EXACTO, 2026-10-12`, and that is all it is.
+- 🔴 **Only this tier was surface-audited.** The 44 connector rows and 8 npm rows are
+  unaudited, so **`T89`'s 1-in-10 is not a shelf-wide rate** (`ACTION GM`).
+- 🔴 **The `SPDX` surface is sampled, not censused** — capped at 4 000 source files per
+  subject.
+- 🔴 **Commit counts come from p139 and were not re-measured**; a `--depth 1` clone cannot
+  count them. Where a count appears it is from the rendered page and is marked.
+- 🔴 **`lumen`'s contradiction was NOT reported upstream.** 🟢 Stating that plainly: the
+  finding is published here and no issue was filed, which is a choice and not an oversight.
+
 ## Pass 152 — 2026-10-12
 
 🟢 **This page carries STAR COUNTS for the first time in 152 passes.** 🔴 **`T78` —

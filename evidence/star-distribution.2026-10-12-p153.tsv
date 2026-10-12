@@ -1,0 +1,36 @@
+# p153 — ACTION GI. The agent tier's star distribution, measured on the RENDERED-PAGE
+# channel (WebFetch github.com/<owner>/<repo>), which p152 established and T87 asserts.
+#
+# CHANNEL, stated exactly per ACTION GE2's rule — the URL refused and the URL that answered:
+#   ANSWERED: https://github.com/<owner>/<repo>            (rendered page, stars + sidebar licence)
+#   ANSWERED: https://github.com/<o>/<r>/releases/download/<tag>/<file>   (302 -> signed asset)
+#   REFUSED : https://api.github.com/repos/<owner>/<repo>   (session scope policy, P150-A)
+#   REFUSED : https://github.com/<o>/<r>/releases/expanded_assets/<tag>   (403)
+#   REFUSED : curl https://github.com/<owner>/<repo>        (403 on ALL 17 slugs tried — so
+#             the rendered page is served to WebFetch and refused to curl. NOT a repo fault.)
+#
+# FALSIFIER 1 — "refuted if the channel fails on any row that exists": SILENT.
+#   8 of 8 rows fetched this pass answered. 0 failures. With p152's 9, 17 measurements.
+# FALSIFIER 2 — "refuted differently if the distribution's median is above 10 stars": FIRED.
+#   Agent-tier-6 median = 26.5. All-10-rows median = 24. Both above 10.
+#
+# licence_file = read from the cloned tree by p153-declaration-surfaces (NOT from a badge).
+subject	stars	forks	watchers	sidebar_licence	licence_file	surfaces	surface_verdict	measured_in
+vishalsachdev/canvas-mcp	290	96	4	MIT	MIT	2	AGREE	p153
+zijinz456/OpenTutor	140	30	-	MIT	MIT	3	AGREE	p152
+ahmedEid1/lumen	88	40	6	GPL-3.0	GPL-3.0	3	DISAGREE	p153
+ArnaudGuiovanna/tutor-mcp	45	7	1	MIT	MIT	3	AGREE	p153
+BetterSEQTA/BetterSEQTA-Plus	40	25	-	MIT	MIT	2	AGREE	p152
+hesham0-0nasser/tutor-lms-mcp	8	1	1	NONE	NONE	0	NONE	p153
+nirholas/ai-tutor-mcp	7	0	0	Apache-2.0	Apache-2.0	2	AGREE	p153
+admin978/canvas-mcp	4	0	0	MIT	MIT	2	AGREE	p153
+zavora-ai/mcp-student-records	1	0	-	Apache-2.0	Apache-2.0	3	AGREE	p152
+mohaneesh-03/mcp-tutor	0	0	0	MIT	MIT	2	AGREE	p153
+#
+# DISTRIBUTION, agent tier (the 6 subjects of evidence/agent-tier-subjects.2026-10-12-p150.tsv):
+#   0, 7, 8, 45, 88, 140  -> min 0, median 26.5, max 140, sum 288
+# DISTRIBUTION, all 10 measured education-agent rows:
+#   0, 1, 4, 7, 8, 40, 45, 88, 140, 290 -> min 0, median 24, max 290, sum 623
+# The best-governed row (zavora-ai/mcp-student-records, 23 approval-gated writes, FERPA
+# logging) is the SECOND-LOWEST of ten at 1 star. That is an INVERSION, not a baseline:
+# the tier is not uniformly ignored — its median is 24 — and the governed row sits under it.

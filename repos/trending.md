@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 153 — a verification channel that costs nothing, and the curl/WebFetch split inside one host
+
+🟢 **18 of 18 repositories verified for existence and `HEAD` with `git ls-remote`** —
+🟢 **no clone, no API, and a negative control that fires.**
+[`evidence/ls-remote-verification.2026-10-12-p153.tsv`](../evidence/ls-remote-verification.2026-10-12-p153.tsv)
+
+🔵 **Why this matters more than the 18 rows.** This shelf has verified repositories three
+ways: by **clone** (correct, expensive — 2.4 GB at p152), by **`api.github.com`**
+(refused since p150), and by **`WebFetch` on the rendered page** (works, one call per
+repo). 🟢 **`git ls-remote` is a fourth: it returns the `HEAD` SHA of a remote without
+transferring a tree**, so existence and freshness cost one round trip each.
+
+| subject | `ls-remote` | `HEAD` |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 OK | `f205347` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 OK | `b3f862e` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟢 OK | `1c9f0bb` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟢 OK | `1524a63` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 OK | `10a1d90` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 OK | `d3de265` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 OK | `1c95cef` |
+| [`frappe/education`](https://github.com/frappe/education) | 🟢 OK | `444cc8e` |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 OK | `d194d5b` |
+| [`OpenVidu/openvidu`](https://github.com/OpenVidu/openvidu) | 🟢 OK | `ba72e6b` |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 OK | `d0cd78c` |
+| [`Ilyas-Codes/eCourse`](https://github.com/Ilyas-Codes/eCourse) | 🟢 OK | `3ee89f6` |
+| [`geli-lms/geli`](https://github.com/geli-lms/geli) | 🟢 OK | `02ae520` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 OK | `948a378` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 OK | `a40eff7` |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 OK | `eec087e` |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 OK | `8b14aec` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟢 OK | `1d83c2b` |
+| 🟢 **NEGATIVE CONTROL** — a slug that cannot exist | 🔴 **no SHA** | — |
+
+🟢 **The control FIRED**, so an `OK` above means the remote answered — not that the
+channel always says yes. 🔵 **Without the control this table would be eighteen rows of
+nothing**, which is `P42`'s rule (never publish a verdict without its denominator) applied
+to a liveness check.
+
+### 🔴 The channel finding: `curl` and `WebFetch` DISAGREE on the same URL
+
+🔴 **`curl https://github.com/<owner>/<repo>` returned `403` on 17 of 17 slugs** — every
+one of which `git ls-remote` then resolved and `WebFetch` renders.
+
+🔵 **So the refusal is not GitHub's, not the repository's, and not "the GitHub channel".**
+It is this session's egress declining one tool against one path class. 🔴 **Three
+instruments, one host, three different answers** — and a shelf that had written
+*"`api.github.com` is refused"* as though that described GitHub would have mis-read all
+three. 🟢 **`ACTION GE2`'s rule, now paid for a third time: name the exact URL refused and
+the exact URL that answered, never the "channel".**
+
+| URL class | `curl` | `WebFetch` | `git` |
+|---|---|---|---|
+| `github.com/<o>/<r>` | 🔴 `403` | 🟢 renders | 🟢 `ls-remote` OK |
+| `github.com/<o>/<r>/releases/download/<tag>/<file>` | 🟢 `302` → `206` | — | — |
+| `github.com/<o>/<r>/releases/expanded_assets/<tag>` | 🔴 `403` | 🔴 absent from page | — |
+| `api.github.com/repos/<o>/<r>` | 🔴 refused | 🔴 refused | — |
+
+### 🟢 `ACTION GL` — DISCHARGED, and p152's diagnosis of the collapsed asset list is WRONG
+
+🔴 *Falsifier: refuted if no channel exposes an individual asset URL without the API.*
+🟢 **SILENT — the asset URL is served.**
+
+`https://github.com/Zenglian990/AI_Tutor_Release/releases/download/v1.5.5/AI_Tutor_v1.5.5.apk`
+→ 🟢 **`302`** to a signed `release-assets.githubusercontent.com` URL carrying
+`rscd=attachment; filename=AI_Tutor_v1.5.5.apk`, `rsct=application/vnd.android.package-archive`,
+asset `1283813540/62a66e4b-fd81-4a05-a37d-13162cbc8912` → 🟢 **`206` on a range request.**
+
+🔴 **p152 wrote that the per-release asset lists are *"collapsed in the rendered page."*
+They are not collapsed — the endpoint that fills them,
+`/releases/expanded_assets/<tag>`, returns `403` to this session.** 🟢 **The page is fine;
+the egress is what hides the list**, and the rendered page's own error text
+(*"There was an error while loading"*) was the tell nobody read.
+
+🔴 **The LICENCE question is still NOT answered, and now it is answered as a NEGATIVE:**
+🔴 **the repository carries no licence file, the releases page carries no licence
+statement, and the asset is distributed with NO GRANT at all.** 🟢 **That is a verdict, not
+a gap** — `ACTION FT`/`GL` close here. 🔵 **An APK with 10 releases and no licence is not
+an ambiguity a studio resolves; it is a row that cannot be shipped.**
+
+### 🔴 What this section does NOT claim
+
+- 🔴 **`ls-remote` verifies EXISTENCE and `HEAD`, not licence, not size, not activity.**
+  Every licence on this page was read from a clone or a rendered sidebar, never inferred
+  from an `ls-remote` row.
+- 🔴 **No star counts were taken for these 18** — the budget went to the agent tier
+  (`ACTION GI`). 🔵 `ACTION GN`.
+- 🔴 **The `403` on `curl` was not retried host by host** — the categorical-egress rule.
+
 ## 2026-10-12 — pass 152 — the election is readable on the big trees, and two verdicts belong to somebody else
 
 🟢 **`ACTION GA` ran over the six vertical platforms: 105 727 source files, six `--depth 1`

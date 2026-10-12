@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P44` — audit the licence SURFACES before you shortlist, because the badge can lie *(new, p153 — all regions)*
+
+🔴 **The instance that forces this pattern:** `ahmedEid1/lumen` — 88 ★, the only complete
+learner-facing product in this shelf's agent tier — **declares MIT on its README badge and
+in `apps/backend/pyproject.toml`, and ships a GPL-3.0 `LICENSE`.** 🔴 **Two of three
+surfaces are wrong and both wrong ones understate copyleft.**
+
+🔵 **Why a pattern and not a warning.** A shortlist is built from front doors: a badge, a
+sidebar, a package manifest. 🟢 **All three are derived surfaces. Exactly one governs.**
+
+### The recipe
+
+**Inputs:** a candidate list of repository slugs.
+**Cost:** one shallow clone per candidate, or 🟢 **one `raw` fetch per candidate if you only
+need the body** (`P45`).
+
+1. 🟢 **Verify existence and freshness without a clone.**
+   `git ls-remote <url> HEAD` → existence + `HEAD` SHA, one round trip.
+   🔴 **Include a slug that cannot exist.** If it returns a SHA, your channel is lying and
+   every row is void.
+2. 🟢 **Read the licence BODY, not a label.**
+   `raw.githubusercontent.com/<owner>/<repo>/<branch>/LICENSE` — try `main`, `master`,
+   `develop`, and the filenames `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`,
+   `COPYING`, `COPYING.txt`. 🔴 **A wrong path must 404**, or the probe proves nothing.
+3. 🟢 **Classify by distinctive marker, AGPL before LGPL before GPL.**
+   🔴 **An AGPL body contains the string `GNU GENERAL PUBLIC LICENSE` in its own preamble**,
+   so a naive marker order reads `canvas-lms` as GPL. Pin the order with a test.
+4. 🟢 **Check the body SIZE against the family.** MIT ≈ **1 062–1 105 B**, Apache-2.0 ≈
+   **11 357–11 358 B**, GPL-3.0 ≈ **35 121–35 147 B**, AGPL-3.0 ≈ **34–35 KB**.
+   🔴 **A 1 070-byte file that classifies MIT is probably MIT; an 8 563-byte one that
+   classifies MIT is `PageLM`** (`P411`) — a proprietary licence opening with the MIT grant
+   verbatim. 🔴 **And a ~20-byte file is a GRANT BY REFERENCE** (`frappe/education`:
+   `License: GNU GPL V3`) which no detector can classify, GitHub's included.
+5. 🟢 **Enumerate the OTHER surfaces and compare on the FAMILY.**
+   Badge (`README`), metadata (`package.json`, `pyproject.toml`, `Cargo.toml`,
+   `composer.json`, `setup.py` — 🔵 **including one level into `apps/`, `packages/`,
+   `services/`, which is where `lumen` hides its contradiction**), and
+   `SPDX-License-Identifier` headers.
+   🔴 **Decode the badge first.** shields.io escapes `-` as `--` and `_` as space:
+   `license-Apache--2.0-blue.svg` **is** `Apache-2.0`, and a non-greedy capture reads
+   `Apache`, 🔴 **which manufactures a false contradiction** (`T90` — this shelf published
+   one before catching it).
+   🟢 **Compare on the family**, so `-only` vs `-or-later` is not a disagreement — that is a
+   separate question (`T81`, and `P43` decides on it).
+6. 🟢 **Report, do not resolve.** `SINGLE` / `AGREE` / `DISAGREE` / `UNCLASSIFIED` /
+   `NONE`. 🔴 **A `DISAGREE` is a legal question**, and an unclassifiable body is
+   `UNCLASSIFIED`, 🔴 **never silent agreement** (`P42`).
+
+### The decision it produces
+
+| verdict | what to do |
+|---|---|
+| 🟢 `AGREE`, permissive | 🟢 **Shortlist.** 8 of 10 agent-tier rows |
+| 🔴 `DISAGREE` | 🔴 **Treat the FILE as binding.** 🟢 Read it as a reference architecture; 🔴 **do not fork** unless the deliverable can carry the file's licence |
+| 🔴 `NONE` (0 surfaces) | 🔴 **Not shippable.** `hesham0-0nasser/tutor-lms-mcp` — useful reading, undeliverable |
+| 🟡 `UNCLASSIFIED` / grant-by-reference | 🟡 **Usable, unquotable.** Clone and read, or ask the maintainer. 🔴 **Never put it in a proposal from a table** |
+
+### Wire-up
+
+- 🟢 **Instrument:** [`p153-declaration-surfaces`](code/p153-declaration-surfaces/README.md)
+  — `surfaces.py` + **36 offline tests**, no network.
+- 🟢 **Put it in CI as a gate** over the client's own dependency list, the way `P35` gates a
+  manifest contract: a new dependency whose surfaces `DISAGREE` fails the build.
+- 🟢 **Evidence shape:** one TSV row per subject with every surface and its location
+  (`evidence/declaration-surfaces.2026-10-12-p153.tsv`), so a reviewer can re-read the file
+  you read.
+
+### 🔴 What it does not do
+
+🔴 **It does not resolve a contradiction**, rank by fitness, or read a licence out of a
+release asset. 🔴 **`SPDX` coverage is sampled** (capped at 4 000 source files per subject),
+so on a large tree that surface is a sample. 🔴 **And it says nothing about vendored
+files** — a notice inside `node_modules/` is somebody else's grant (`T86`, `ACTION GF`).
+
+---
+
+## 🆕 🟢 `P45` — size the population with `ls-remote` BEFORE you spend clone budget *(new, p153 — Global)*
+
+🔴 **The instance:** p152 spent **2.4 GB** and most of a pass's budget on six clones, and
+**nine of fourteen pre-registered actions went unreached because of it**. 🔴 **p153 then
+re-cloned from scratch, because the container is ephemeral and clones do not persist.**
+
+🟢 **The fix is to separate three questions that a clone answers all at once, expensively:**
+
+| question | cheap channel | cost |
+|---|---|---|
+| **Does it exist? Is it fresh?** | 🟢 `git ls-remote <url> HEAD` | 1 round trip, **no tree** |
+| **What is its licence?** | 🟢 `raw.githubusercontent.com/<o>/<r>/<br>/LICENSE` | 1 round trip, **no clone** |
+| **How many stars / forks?** | 🟢 `WebFetch github.com/<o>/<r>` | 1 render |
+| **What is IN the tree?** | 🔴 `git clone --depth 1 --single-branch` | 🔴 **the whole tree** |
+
+🟢 **Measured this pass: 18 of 18 `ls-remote` OK and 16 of 18 licences read, with zero
+clones.** 🟢 **The agent tier's 10 clones cost 187 MB** — spent deliberately, because the
+surface audit genuinely needs the tree.
+
+### The recipe
+
+1. 🟢 **`ls-remote` the whole candidate list**, with a non-existent slug as a control.
+   🔴 **If the control returns a SHA, stop.**
+2. 🟢 **`raw`-fetch the licence body** for every survivor; record **body bytes** alongside
+   the classification (`P44` step 4).
+3. 🟢 **Now decide what deserves a clone.** Only questions that need file-level evidence —
+   a surface audit, a notice census, a gate detector, a test run.
+4. 🟢 **Record the clone cost in the pass's own evidence**, so the next pass budgets from a
+   number instead of a feeling: *"10 of 10 OK, 187 MB, under a minute,
+   `--depth 1 --single-branch`."*
+5. 🔴 **Assume the clones are GONE next pass.** 🔵 Never pre-register an action whose plan
+   begins *"starting from the clones already on disk"*.
+
+### 🔴 The channel rule this pattern depends on
+
+🔴 **Never write "the GitHub channel".** This pass measured **five different answers from
+one host**:
+
+| URL class | `curl` | `WebFetch` | `git` |
+|---|---|---|---|
+| `github.com/<o>/<r>` | 🔴 **403** | 🟢 renders | 🟢 `ls-remote` OK |
+| `raw.githubusercontent.com/…/LICENSE` | 🟢 **200** | — | — |
+| `github.com/…/releases/download/<tag>/<file>` | 🟢 **302 → 206** | — | — |
+| `github.com/…/releases/expanded_assets/<tag>` | 🔴 **403** | 🔴 absent from page | — |
+| `api.github.com/repos/…` | 🔴 refused | 🔴 refused | — |
+
+🟢 **Name the exact URL refused and the exact URL that answered** (`ACTION GE2`). 🔵 **p152
+wrote that a releases page "collapses" its asset lists; it does not — the endpoint that
+fills them returns 403 to this session.** 🔴 **A sentence about a "channel" hid a fact about
+one path.**
+
+---
+
 ## 🆕 🟢 `P42` — never publish a ZERO without the denominator that makes it a measurement *(new, p152 — Global)*
 
 🔴 **p151 published *"0 elections across 1 513 files"*. That figure cannot be read.** A tree

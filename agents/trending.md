@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 153 — a row that calls itself MIT and is GPL-3.0, and the star median that breaks the shelf's own reading
+
+🟢 **`ACTION FJ` is DISCHARGED at the fourth attempt**, and it found the defect this shelf
+has spent 153 passes building the instrument to find: 🔴 **a row whose licence
+declarations CONTRADICT EACH OTHER, pointing in the dangerous direction.**
+
+### 🔴 `ahmedEid1/lumen` — two surfaces say MIT, the one that governs says GPL-3.0
+
+Read from the cloned tree at `HEAD` `07635d3` (2026-06-07), **88 ★ / 40 forks**:
+
+| surface | says | where |
+|---|---|---|
+| 🔴 **licence FILE** (governs) | **GPL-3.0** — 674 lines, *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* | `LICENSE` |
+| 🟢 README **badge** | 🔴 **MIT** — and it **hyperlinks to the GPL-3.0 file it contradicts** | `README.md:13` |
+| 🟢 package **metadata** | 🔴 **MIT** — `license = { text = "MIT" }` | `apps/backend/pyproject.toml:13` |
+
+🔵 **Why this is the worst error direction available.** The contradiction UNDERSTATES
+copyleft. A studio that shortlists by badge — which is the badge's entire purpose —
+concludes `MIT` and builds proprietary work on strong copyleft. 🟢 **This shelf's census
+read it correctly at p150** (`GPL-3.0`/`FILE`) because the census reads the tree, and
+🟢 **the trending page that promoted `lumen` on 2026-10-05 also called it GPL-3.0.**
+🔴 **The repository's own front door says otherwise.**
+
+### 🟢 The surface census — 4 of 10 rows declare on more than two surfaces
+
+[`evidence/declaration-surfaces.2026-10-12-p153.tsv`](../evidence/declaration-surfaces.2026-10-12-p153.tsv)
+· **10 of 10 clones OK, 187 MB** · instrument
+[`p153-declaration-surfaces`](../compose/code/p153-declaration-surfaces/README.md), **36
+offline tests**.
+
+🔴 *Falsifier: refuted if no other row declares more than two.* 🟢 **SILENT — four do**
+(`tutor-mcp`, `OpenTutor`, `mcp-student-records`, `lumen`), 🟢 **so the three-surface
+shape is NOT a property of good governance.** The best-governed row and the
+self-contradicting row have the same surface count.
+
+### 🟢 The agent tier's star distribution — and `ACTION GI`'s second falsifier FIRES
+
+[`evidence/star-distribution.2026-10-12-p153.tsv`](../evidence/star-distribution.2026-10-12-p153.tsv)
+· **8 rows fetched this pass, 8 answered, 0 channel failures.** With p152's nine,
+**17 measurements**, so 🟢 **`T87` HOLDS on a distribution and not on a demonstration.**
+
+| repo | ★ | forks | licence (read from the TREE) | surfaces |
+|---|---|---|---|---|
+| 🆕 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **290** | 96 | 🟢 **MIT** | 2 `AGREE` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **140** | 30 | 🟢 MIT | 3 `AGREE` |
+| 🔴 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | **88** | 40 | 🔴 **GPL-3.0** | 🔴 **3 `DISAGREE`** |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **45** | 7 | 🟢 MIT | 3 `AGREE` |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | **40** | 25 | 🟢 MIT | 2 `AGREE` |
+| [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) | **8** | 1 | 🔴 **NONE** | 🔴 **0** |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | **7** | 0 | 🟢 Apache-2.0 | 2 `AGREE` |
+| [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) | **4** | 0 | 🟢 MIT | 2 `AGREE` |
+| 🔴 [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | 🔴 **1** | 0 | 🟢 Apache-2.0 | 3 `AGREE` |
+| [`mohaneesh-03/mcp-tutor`](https://github.com/mohaneesh-03/mcp-tutor) | **0** | 0 | 🟢 MIT | 2 `AGREE` |
+
+🔴 **`GI`'s second falsifier FIRED, exactly as specified.** *"Refuted differently if the
+distribution's median is above 10 ★"* — the agent tier's six subjects are
+`0, 7, 8, 45, 88, 140`, 🔴 **median 26.5**; all ten rows are `0, 1, 4, 7, 8, 40, 45, 88,
+140, 290`, 🔴 **median 24.** Both above ten.
+
+🟢 **And the refutation IMPROVES the claim it breaks.** The shelf has been reading
+`zavora-ai/mcp-student-records`' single star as *"governance is uncorrelated with
+attention"* — a reading that rested on one row and implied the whole tier is ignored.
+🔴 **It is not ignored: its median is 24 and its top row has 290 stars.** 🟢 **So the one
+row with a real authorisation boundary — 23 approval-gated writes, FERPA-logged mutations
+— is not sitting at the tier's baseline. It is sitting UNDER it, ninth of ten.** That is
+an **inversion**, and it is a sharper thing to say in a room than the correlation claim it
+replaces.
+
+### 🆕 `vishalsachdev/canvas-mcp` is now the most-starred education-agent row this shelf has measured
+
+🟢 **290 ★ / 96 forks / 1 004 commits / MIT, read from `LICENSE`.** p152 promoted it on a
+clone and could not weigh it; it outranks every row the shelf had. 🔴 **And it disagrees
+with itself on a different field**: the sidebar advertises **102 tools**, the README body
+**"up to 126 tools."** 🔵 **Not a licence fault, so not `DISAGREE` — but the same class of
+defect as `lumen`'s, in the same pass, found by the same channel.** 🆕 **`T89`.**
+
+### 🟢 The channel, stated as `ACTION GE2` requires — the URL refused and the URL that answered
+
+| channel | result |
+|---|---|
+| 🟢 `WebFetch https://github.com/<owner>/<repo>` | **ANSWERS** — stars, forks, watchers, sidebar licence. 8 of 8 |
+| 🟢 `git ls-remote https://github.com/<owner>/<repo>` | **ANSWERS** — 18 of 18, 🟢 **and a slug that cannot exist returns NO SHA, so the control discriminates** |
+| 🟢 `https://github.com/<o>/<r>/releases/download/<tag>/<file>` | **ANSWERS** — `302` to a signed `release-assets.githubusercontent.com` URL, then `206` |
+| 🔴 `curl https://github.com/<owner>/<repo>` | 🔴 **`403` on 17 of 17 slugs** — so the rendered page is served to `WebFetch` and refused to `curl`. 🔵 **A channel difference INSIDE one host, which is the distinction `P151-S` flattened** |
+| 🔴 `https://github.com/<o>/<r>/releases/expanded_assets/<tag>` | 🔴 **`403`** |
+| 🔴 `https://api.github.com/repos/<owner>/<repo>` | 🔴 refused — the session's repository-scope policy, defined as **`P150-A`** on this page's own history at `repos/trending.md:242`. Unchanged |
+| 🔴 `digitaleducationcouncil.com` | 🔴 `ENOTFOUND` — 🟢 the same categorical-egress event, **NOT re-registered** |
+
+### 🔴 What this section does NOT claim
+
+- 🔴 **Only the 10 agent-tier rows were surface-audited.** The 44 connector rows and 8 npm
+  rows were not, so `T89`'s contradiction rate is **1 of 10** on one tier and is **not** a
+  shelf-wide figure. 🔵 `ACTION GM`.
+- 🔴 **The `SPDX` surface is sampled, not censused** — capped at 4 000 source files per
+  subject.
+- 🔴 **No star count carries a band**, because each is a single exact read at one time on
+  one channel. They are `EXACTO, 2026-10-12` readings and are published as such.
+
 ## 2026-10-12 — pass 152 — the agent tier gets its first star counts, and the artefact-named query pays again
 
 🔴 **`T78` is REFUTED.** 🟢 **Nine repositories measured for stars this pass, none attached

@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-12
 ---
 
+## ✅ Verdicts on the thirteen actions p152 registered, judged by p153
+
+🟢 **Six reached, seven not.** 🟢 **Three DISCHARGED with silent falsifiers** (`FJ`, `GL`,
+`GC`), 🔴 **one REFUTED exactly as specified on its second branch** (`GI`), 🟡 **two
+partially** (`GD2`, `GJ`). 🔴 **Seven NOT REACHED** — `FG`, `GF`, `GK`, `GG`, `GE2`, `GH`,
+`FS` — and the reason is stated rather than implied.
+
+🔵 **Channel state first, because this pass changes it THREE times and one change
+corrects p152 directly:**
+
+🟢 **`git ls-remote <url> HEAD` ANSWERS — 18 of 18**, 🟢 **and a slug that cannot exist
+returns NO SHA**, so the channel discriminates. 🆕 **Existence and `HEAD` for one round
+trip, no tree.** ·
+🟢 **`raw.githubusercontent.com/<o>/<r>/<branch>/LICENSE` ANSWERS to `curl` — 16 of 18
+licence bodies read with ZERO clones**, 🟢 **and a wrong path returns `404`.** 🆕 **`T92`** ·
+🔴 **`curl https://github.com/<owner>/<repo>` returns `403` on 17 of 17 slugs** — 🟢 the
+same URLs `WebFetch` renders and `ls-remote` resolves, 🔵 **so three instruments get three
+answers from one host** ·
+🟢 **`github.com/<o>/<r>/releases/download/<tag>/<file>` ANSWERS — `302` to a signed
+`release-assets.githubusercontent.com` URL, then `206`** · 🔴 **`/releases/expanded_assets/<tag>`
+returns `403`** — 🔴 **which REFUTES p152's claim that the rendered page "collapses" its
+asset lists: the page is fine, the egress hides the list** ·
+🔴 **`digitaleducationcouncil.com` refuses** (`ENOTFOUND`) — 🟢 the same
+`ENOTFOUND`/`CONNECT 403` event, 🟢 **NOT re-registered** and not retried host by host (the
+**categorical-egress rule** — the denial is an allowlist, not a per-host fault).
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION FJ`** *(fourth pass, FIRST on the list)* — audit the surface-bearing rows for a third declaration surface; count surfaces per row | 🟢 **DISCHARGED, falsifier SILENT — and it found a row that CONTRADICTS ITSELF** | Condition: *"refuted if no other row declares more than two."* 🔴 **It did not fire: 4 of 10 exceed two** (`tutor-mcp`, `OpenTutor`, `mcp-student-records`, `lumen`), 🟢 **so the three-surface shape is NOT a property of good governance.** 🔴 **`ahmedEid1/lumen` is `DISAGREE`: `LICENSE` = GPL-3.0 (674 lines), `apps/backend/pyproject.toml` = MIT, README badge = MIT — and the badge HYPERLINKS to the GPL-3.0 file.** 🆕 **`T89`.** 🔴 **The error direction UNDERSTATES copyleft**, which is the dangerous one. 🟢 `hesham0-0nasser/tutor-lms-mcp` = **0 surfaces**, confirming p150's census by an independent instrument. 🟢 **10 of 10 clones, 187 MB.** 🟢 **New instrument [`p153-declaration-surfaces`](../compose/code/p153-declaration-surfaces/README.md), 36 offline tests.** 🔴 **A FALSE `DISAGREE` was published internally on `zavora-ai/mcp-student-records` and caught before release**: shields.io escapes `-` as `--`, so `Apache--2.0` read as `Apache`. 🆕 **`T90`** |
+| 🔴 **`ACTION GI`** — star-measure the rest of the agent tier and publish the distribution | 🔴 **DISCHARGED on branch 1, REFUTED on branch 2 — and the refutation IMPROVES the claim** | Branch 1: *"refuted if the channel fails on any row that exists."* 🟢 **SILENT — 8 of 8 answered, 0 failures.** With p152's nine, **17 measurements**, so 🟢 **`T87` rests on a distribution.** Branch 2: *"refuted differently if the distribution's median is above 10 ★."* 🔴 **FIRED.** Agent tier: `0, 7, 8, 45, 88, 140` → **median 26.5**. All ten rows: `0, 1, 4, 7, 8, 40, 45, 88, 140, 290` → **median 24.** 🔴 **So p152's *"stars measure attention, not governance"* is WITHDRAWN** — the tier is not ignored. 🟢 **Replaced by a sharper statement: `zavora-ai/mcp-student-records` is NINTH OF TEN at 1 ★ in a population whose median is 24, so a stars-first shortlist ranks the only row with an authorisation boundary LAST.** 🆕 Most-starred education-agent row on the shelf: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), **290 ★ / 96 forks / 1 004 commits / MIT** — 🔴 **and it disagrees with ITSELF on tool count (sidebar 102, README "up to 126")** |
+| 🟢 **`ACTION GL`** — read the APK asset licence for `Zenglian990/AI_Tutor_Release` | 🟢 **DISCHARGED, falsifier SILENT — and p152's diagnosis is WRONG** | Condition: *"refuted if no channel exposes an individual asset URL without the API."* 🟢 **It did not fire.** `…/releases/download/v1.5.5/AI_Tutor_v1.5.5.apk` → **`302`** to a signed URL carrying `filename=AI_Tutor_v1.5.5.apk` and `rsct=application/vnd.android.package-archive`, asset `1283813540/62a66e4b-…`, → **`206`** on a range request. 🔴 **p152 wrote the asset lists are "collapsed in the rendered page". They are not — `/releases/expanded_assets/<tag>` returns `403` to this session**, which is what the page's own *"There was an error while loading"* was saying. 🔴 **The LICENCE is answered as a NEGATIVE: no licence file in the repo, no licence statement on the releases page — the APK ships with NO GRANT.** 🟢 **A verdict, not a gap. `FT`/`GL` CLOSE** |
+| 🟢 **`ACTION GC`** — resolve the 17 theses with no definition anywhere, `T39` first | 🟢 **DISCHARGED — and it corrects this shelf's own headline** | Condition: *"refuted if any of the 17 is defined on a page this pass's scope missed."* 🔴 **NOT TESTED and NOT claimed silent** — scope was the same 10 files. 🟢 **The 17 split: 6 RECOVERABLE + 11 ABSENT.** The six (`T39` 36×, `T57` 17×, `T59` 16×, `T38` 14×, `T60` 7×, `T61` 7×) have a stable statement on an in-scope non-append-only page but **only ever inside a REVISIT**, so the grammar reads them as absent — 🟢 **a FIRST-MENTION debt, not a meaning debt.** 🔴 **So `T39`, the face of the debt for two passes, is the HEALTHIEST of the 17.** 🔴 **The real debt is `T55` (10×, no statement anywhere) and `T20` (7×); `T48` is cited ZERO times — a dead id.** 🔴 **Declared defect: on `T47`, `T50` and `T53` the statement regex captured a LIST OF OTHER IDS — 3 false captures of 17**, corrected by hand, 🟢 **and the regex deliberately NOT committed as an instrument.** [`evidence/thesis-resolution.2026-10-12-p153.tsv`](../evidence/thesis-resolution.2026-10-12-p153.tsv) |
+| 🟡 **`ACTION GD2`** — repair `p351` (6 failures) and `p356` (7); settle whether `K-3CIFRAS, ±50` is a band the gate should accept | 🟡 **PARTIALLY — TWO REAL REPAIRS, `p351` 6 → 4, and BOTH horns of the falsifier are true on DIFFERENT rows** | Condition: *"refuted if `6.400 ★` turns out to be a real unbanded figure."* 🟢 **SILENT on that figure — it IS banded**: `agents/trending.md` carries `6.400 ★ (K-3CIFRAS, ±50)` in a column headed `★ (21:46Z)`. 🟢 **So the answer to `GD2`'s question is YES, the vocabulary must accept it** — the band is a TOKEN, not prose, and `MARCAS_UMBRAL` is lexical. 🟢 **Repair 1: the class widens from "band EDGE" to "band-BEARING"** (`MARCAS_BANDA_ADOSADA` + a `±\d` window). 🟢 **Repair 2, and it is the better finding: the shelf renamed its own pass headings `## Pase N` → `## Pass N`, and the attributor matched `r'pase (\d+)'` — so it stopped attributing IN SILENCE, 50 occurrences, no error.** 🆕 **`T91`.** Fixed to `r'(?:pase|pass) (\d+)'`. 🔴 **Residue, precisely classified: 2 STALE COUNTS (220 vs ≥254; 3 vs 8 files) + 4 GENUINELY UNBANDED prose figures where THE GATE IS RIGHT AND THE PAGE IS WRONG** — `agents/trending.md:16122` (`1.200 ★`), `:16171` (`2.000 ★`), `repos/trending.md:12483` (`1.300 ★`), `:12491` (`2.000 ★`). 🔴 **p152's triage is therefore INCOMPLETE: it is the gate's vocabulary on 2 figures and the page on 4.** 🔴 **`p356`: 7 of 7 failures are STALE BASELINES, and 2 fail because the debt they tracked was PAID** (`P129`/`P135` now `DEFINIDA-FUERA+INSTRUMENTO`) 🔴 **while 5 new members entered the class.** 🟢 **Classified, not re-baselined — re-baselining a historical gate is a decision, not a repair** |
+| 🟡 **`ACTION GJ`** — settle whether the `92%`/`79%` pair originates with DEC × Tec de Monterrey or with the Google for Education blog | 🟡 **Attribution SETTLED; primary UNREAD, so the falsifier fires on reach** | Condition: *"refuted if the primary survey cannot be reached on any channel"* — 🔴 **it cannot: `digitaleducationcouncil.com` → `ENOTFOUND`.** 🟢 **But the ATTRIBUTION question is settled AGAINST the Google-blog hypothesis**: the search channel returns DEC's **own domain** hosting *"92% of Students and 79% of Faculty Actively Engaging with AI: Findings from AI in Higher Education LATAM Survey 2026"*, plus a second DEC post. 🟡 **So: DEC-ORIGIN, sample size / country count / field dates UNREAD** — the pair stays labelled and stays OUT of the load-bearing argument. 🆕 🔵 **And DEC's own second post dissolves the tension the shelf has been carrying: 88% of LATAM faculty report "minimal" to "moderate" engagement.** 🟢 **High adoption, shallow usage — so `79%` and IESALC's `26%` describe the same institution.** 🟢 **IESALC also REFINED to three figures: 200 institutions / 19 countries, 87% using AI in ≥1 area, 74% in teaching and learning, 26% with a formal strategy** (UNESCO IESALC × UNU-IAS) |
+| 🔴 **`ACTION FG`** *(FIFTH pass)* · 🔴 **`GF`** · 🔴 **`GK`** · 🔴 **`GG`** · 🔴 **`GE2`** · 🔴 **`GH`** · 🔴 **`FS`** | 🔴 **NOT REACHED** | 🔴 **No work done on any of the seven.** 🔴 **`FG` is now unreached for a FIFTH consecutive pass — the worst item this shelf has ever carried.** 🟢 `GF`, `GK` and `GG` all need the six VERTICAL clones, which this pass did not take; 🟢 **`GE2`'s rule was nonetheless APPLIED throughout this pass** (every channel row above names the exact URL refused and the exact URL that answered) 🔴 **without the sweep being run** |
+
+## 🔴 Why seven actions were not reached, said rather than implied
+
+🔵 **The cause is budget and the trade is stated.** `ACTION FJ` cost 10 clones (187 MB), a
+new instrument with **36 authored offline tests**, a matcher defect found and fixed with
+four more tests, and a re-run. `GI` cost 8 rendered-page fetches. `GC` cost a full
+citation sweep over 10 files. `GD2` cost two suite runs, two patches and a re-run.
+🟢 **Together they returned three discharges, one specified refutation, four new theses, two
+corrections to this shelf's own published claims, and a licence contradiction on a row the
+shelf was recommending.**
+
+🔴 **`FG` at five passes is no longer a budget story.** 🟢 **It has had its decisive
+measurement since p152** (25 of 25 region-bearing hosts in `BetterSEQTA-Plus` are
+Australian) 🔴 **and the role classifier is still unwritten.** 🔵 **It is FIRST on p154's
+list and nothing else should be started before it.**
+
+🔴 **`GF`, `GK` and `GG` share one blocker that should be said once**: all three need the
+six vertical clones (**2.4 GB** at p152), and 🔴 **clones do not persist — this container is
+ephemeral too.** 🟢 **`P45` now exists precisely to stop that cost being paid for questions
+that do not need a tree.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p153
+
+| gap | movement |
+|---|---|
+| 🔴 *"`FJ` has nothing to show, four passes"* | 🟢 **DISCHARGED with a new instrument and the pass's headline finding.** 🆕 `T89`, `T90` |
+| 🔴 *"The asset LICENCE of `AI_Tutor_Release` is still unread"* | 🟢 **CLOSED as a NEGATIVE: no grant exists.** 🔴 And p152's cause for the collapsed asset list was **wrong** |
+| 🔴 *"17 of `T1`–`T80` have no definition anywhere"* | 🟢 **RESOLVED into 6 + 11.** 🔴 **And the shelf's named worst (`T39`) is its best** |
+| 🔴 *"Only 3 of the agent tier's rows have a star count"* | 🟢 **ALL 10 rows now measured.** 🔴 And the distribution **refutes** the reading built on 3 |
+| 🔴 *"`p351` is RED with 6 failures"* | 🟡 **6 → 4, two real repairs.** 🆕 `T91` |
+| 🔴 *"The `92%`/`79%` provenance is in question"* | 🟡 **Publisher SETTLED (DEC), sample still UNREAD.** 🟢 And the apparent adoption/governance tension is **dissolved** by DEC's own second post |
+| 🔴 *"Africa was not queried at all"* (p152) | 🟢 **CLOSED — queried.** 🔴 **And what came back CONFIRMS `P149-C`'s four jurisdictions rather than adding a rate** |
+| 🔴 *"EMEA has no education instrument beyond DFKI and Spain"* | 🟢 **`T88` CORROBORATED on an independent channel** 🔴 **with a DATE CONFLICT carried** (Council approval `2026-06-29` + *"awaiting publication"* vs an OJ date of `2026-07-24`) |
+| 🔴 *"APAC's statutory regime is Korea alone"* | 🟢 **Vietnam CONFIRMED on a second channel** — in force `2026-03-01`, **extraterritorial**, education named high-risk. 🟢 **Independently reproduces `P149-B`** |
+| 🔴 *"A 58-row licence census costs 2.4 GB"* | 🟢 **REFUTED. 16 of 18 bodies read with ZERO clones** via `raw`. 🆕 **`T92`**, 🟢 **`P45`** |
+
+## 🔴 Gaps OPEN after p153, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **`FG`'s role classifier is unwritten at FIVE passes** | Its decisive datum has been in hand since p152: 25 of 25 Australian hosts. 🔵 **`ACTION FG`** |
+| 🔴 **An election cannot be attributed to the SUBJECT rather than a bundled dependency** | **2 of 6** vertical verdicts come from vendored files; `sakai`'s row is published KNOWN-WRONG. 🔵 **`ACTION GF`** |
+| 🔴 **`T85`'s omission form is unmeasured outside the six verticals** | 16 896 found there; the 58 census rows were never re-swept. 🟢 **And `P45`/`T92` make this cheap now — `raw`, not clones.** 🔵 **`ACTION GK`** |
+| 🔴 **The positive control degrades on large trees** | 10 of 161 licence bodies fire. 🔵 **`ACTION GG`** |
+| 🔴 **`T89`'s contradiction rate is 1 of 10 on ONE tier** | The 44 connector rows and 8 npm rows are unaudited. 🔵 **`ACTION GM`** |
+| 🔴 **No star count for ANY platform or foundational row** | 18 rows verified for existence, zero for attention. 🔵 **`ACTION GN`** |
+| 🔴 **Every lexical gate on this shelf is bilingual and nobody checked** | `T91`: one instrument silently stopped attributing on a language change. `MARCAS_UMBRAL`, `MARCAS_RECHAZO` and their kin are Spanish-only. 🔵 **`ACTION GO`** |
+| 🔴 **`T55` (10×) and `T20` (7×) have no statement; `T48` is a dead id** | Measured this pass; **not written and not retired.** 🔵 **`ACTION GP`** |
+| 🔴 **Two of eighteen licences cannot be file-read** | `frappe/education` = a **~20-byte** `License: GNU GPL V3`; `openeducat_erp` = README-declared only. 🔵 **`ACTION GQ`** |
+| 🔴 **4 unbanded star figures stand on append-only pages** | `agents/trending.md:16122`, `:16171`, `repos/trending.md:12483`, `:12491`. 🔴 **The gate is right and the page is wrong**, and the page is append-only. 🔵 **`ACTION GR`** |
+| 🔴 **`p351` 4 failures, `p356` 7 — all stale baselines** | 2 + 7 stale assertions; 2 of `p356`'s fail because the debt was PAID. 🔵 **`ACTION GD3`** |
+| 🔴 **No primary legal text, SIXTH consecutive pass** | `eur-lex`, the law-firm hosts and `digitaleducationcouncil.com` all refuse. 🟢 Stated once, **NOT re-registered** |
+| 🔴 **No market-size figure is quotable, SEVENTH pass** | Four 2026-base figures spanning **$6B–$12.3B**. 🟢 **Now with a stated MECHANISM**: the bases count different things. 🟢 **One arithmetic consistency found** (36% NA share of ~$10.2B vs a $10.6B global), recorded, not adopted |
+| 🔴 **No open-source vendor named in any market source, SEVENTH pass** | 🟢 **The shelf's oldest unbroken finding, and its product** |
+| 🔴 **No EMEA adoption RATE (6th pass); no Africa rate, spend or deployment count** | 🟢 Africa queried this pass; 🔴 nothing countable returned |
+| 🔴 **Canada and Mexico return nothing from the NA query, FOURTH pass** | The continental query is US-only in practice |
+| 🔴 **The South Africa draft AI policy's status is DISPUTED** | One source marks the 2026 draft abrogated `2026-04-27`. 🟢 Recorded as disputed, not quoted as current |
+
+## 🔜 Pre-registered for p154
+
+🔵 **Nine actions.** 🟢 **`FG` is FIRST and nothing precedes it** — five passes unreached
+with its decisive datum already in hand. 🟢 **`GF`, `GK` and `GG` are SECOND as a single
+clone batch**, because they share one blocker and paying it once is the only way they get
+done. 🔵 **Four actions are HELD OFF deliberately** — `GE2`, `GH`, `FS`, `GD3` — 🔴 **because
+a register longer than a pass's budget is a wish list**, which is how `FG` reached five.
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION FG`** *(re-registered, FIFTH time, FIRST and alone)* — write the role classifier for news-media and government-portal hosts and re-run over the 50 clones, 🔴 **which must be RE-CLONED** | 🔴 *Refuted if the surviving `BetterSEQTA-Plus` `CONFLICT` does not resolve to APAC.* 🟢 **p152 and p153 both predict SILENT on evidence** (25 of 25 Australian) — 🔴 **so a refutation means the conflict's cause is a host class nobody has enumerated**, and that is the useful outcome |
+| 🟢 **`ACTION GF`** — attribute each per-file notice to a HOLDER and re-verdict the six verticals | 🔴 *Refuted if holder attribution changes no verdict* — which would mean bundled notices are rare enough to ignore and `T86` is a curiosity. 🔵 p152 predicts it WILL change `sakai` and `edx-platform` |
+| 🟢 **`ACTION GK`** — re-sweep the 58 census rows with the `-only`-by-OMISSION matcher, 🟢 **over the `raw` channel rather than clones** (`T92`) | 🔴 *Refuted if no census row carries the omission form* — which would confine `T85` to large first-party codebases and make it a property of project MATURITY. 🔵 **A refutation is the more useful outcome: it bounds the correction** |
+| 🟢 **`ACTION GG`** — define the positive control for a large tree: the subject's ROOT licence file rather than every licence body in it | 🔴 *Refuted if a root-licence-only control fires on fewer than 6 of 6 verticals* — which would mean the control cannot be rescued by narrowing |
+| 🟢 **`ACTION GM`** — run the declaration-surface audit over the 44 connector rows and 8 npm rows, and publish `T89`'s rate on a real denominator | 🔴 *Refuted if no row outside the agent tier `DISAGREE`s* — which would make `lumen` an anecdote and 🟢 **close `T89` rather than leave it open**, which is a good outcome and should be said in advance |
+| 🟢 **`ACTION GO`** — sweep every lexical gate for Spanish-only marker lists and measure how many are silently degrading as the prose turns English (`T91`) | 🔴 *Refuted if `p351`'s attributor is the only bilingual gate on the shelf* — 🔵 **p153 predicts NOT refuted**, because `MARCAS_UMBRAL`, `MARCAS_RECHAZO` and `MARCAS_BANDA_ADOSADA` are all Spanish and all consulted against increasingly English pages |
+| 🟡 **`ACTION GP`** — write or RETIRE `T55`, `T20` and the nine other ABSENT theses; decide `T48`, cited zero times | 🔴 *Refuted if any of the 11 turns out to have a statement this pass's matcher missed* — 🔵 **which is live, because that matcher had 3 false captures of 17** and is not committed |
+| 🟡 **`ACTION GQ`** — clone `frappe/education` and `openeducat_erp` and read their licences from the tree | 🔴 *Refuted if the tree says something OTHER than the one-liner and the README say* — 🔵 **which is exactly `lumen`'s shape, so the prediction is NOT confident**: two ERP rows a studio bills against, with unverified grants |
+| 🟢 **`ACTION GN`** — star-measure the 18 foundational and 15 vertical rows on the rendered-page channel | 🔴 *Refuted if the channel fails on any row that exists* — 🟢 **`T87` would then be conditional after all.** 🔵 And 🟡 *refuted differently if any platform row sits below the agent tier's median of 24*, which would say something surprising about what attention tracks |
+
+🔵 **`GE2`, `GH`, `FS` and `GD3` are HELD OFF the p154 list.** 🟢 **`GE2`'s RULE was applied
+throughout p153 even though its sweep was not run** — every channel claim on this shelf's
+new pages names the exact URL refused and the exact URL that answered. 🔴 **The sweep over
+the old wordings remains undone and stays in the gap table.**
+
 ## ✅ Verdicts on the fourteen actions p151 registered, judged by p152
 
 🟢 **Five reached, nine not.** 🟢 **One DISCHARGED with its falsifier silent** (`GA`),

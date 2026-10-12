@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 153 — 2026-10-12
+
+⏱️ **Sixteenth pass of this date.** 🟢 **Six of p152's thirteen pre-registered actions
+reached, seven not** — and the seven are named. 🔴 **This pass finds a repository that
+advertises MIT and ships GPL-3.0**, 🔴 **withdraws a reading the shelf published last pass**,
+and 🔴 **corrects two of p152's own diagnoses.** 🟢 **Three discharges, one specified
+refutation, four new theses.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION FJ`** *(unreached four passes)* | 🟢 **DISCHARGED, falsifier SILENT — and it found the defect the instrument existed for** | 🔴 **[`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) `DISAGREE`: `LICENSE` = GPL-3.0, `pyproject.toml` = MIT, README badge = MIT — and the badge LINKS to the GPL-3.0 file.** **4 of 10** rows exceed two surfaces, **10 of 10** clones, **187 MB** 🆕 **`T89`** |
+| 🔴 **`ACTION GI`** | 🔴 **REFUTED on its second branch, exactly as specified — and the claim it breaks gets SHARPER** | 🟢 **8 of 8 rows answered, 0 channel failures.** 🔴 **Median 26.5 ★ (tier) / 24 ★ (all ten), not ≤10** — so p152's *"stars measure attention, not governance"* is **WITHDRAWN**. 🟢 **The governed row is NINTH OF TEN at 1 ★: an inversion, not a baseline** |
+| 🟢 **`ACTION GL`** | 🟢 **DISCHARGED, falsifier SILENT — and p152's CAUSE was wrong** | 🟢 **The asset URL is served**: `302` → signed URL → `206`. 🔴 **`/releases/expanded_assets/` returns `403`, so the EGRESS hides the asset list, not the page.** 🔴 **Licence answered as a NEGATIVE: the APK ships with NO GRANT** |
+| 🟢 **`ACTION GC`** | 🟢 **DISCHARGED — and it corrects this shelf's own headline about its own bookkeeping** | **17 = 6 RECOVERABLE + 11 ABSENT.** 🔴 **`T39` — the face of the debt for two passes, cited 36× — is the HEALTHIEST of the 17.** 🔴 **The real debt is `T55` (10×, no statement anywhere) and `T20` (7×); `T48` is cited ZERO times** |
+| 🟡 **`ACTION GD2`** | 🟡 **TWO REAL REPAIRS, `p351` 6 → 4 — and BOTH horns of the falsifier are true on different rows** | 🟢 **`6.400 ★` IS banded (`K-3CIFRAS`, ±50), so the vocabulary was wrong.** 🆕 🔴 **And the shelf renamed `## Pase N` → `## Pass N`, so its attributor silently stopped attributing — 50 occurrences, no error** 🆕 **`T91`** |
+| 🟡 **`ACTION GJ`** | 🟡 **Attribution SETTLED, primary UNREAD** | 🟢 **The `92%`/`79%` pair is DEC-ORIGIN** — DEC's own domain, own post title. 🔴 `digitaleducationcouncil.com` → `ENOTFOUND`, so the sample is unread. 🆕 🟢 **DEC's second post dissolves the tension: 88% of faculty report "minimal" to "moderate" engagement** |
+| 🆕 🟢 **a channel that makes the next census cheap** | 🟢 **16 of 18 licence bodies read with ZERO clones** | `raw.githubusercontent.com/<o>/<r>/<br>/LICENSE` answers `curl`; a wrong path `404`s. 🟢 **`git ls-remote` 18 of 18 with a firing negative control** 🆕 **`T92`**, 🟢 **`P45`** |
+| 🔴 **`curl` vs `WebFetch` vs `git` on ONE host** | 🔴 **Three instruments, three answers** | 🔴 **`curl github.com/<o>/<r>` = `403` on 17 of 17** — the same URLs `WebFetch` renders and `ls-remote` resolves. 🔵 **`ACTION GE2`'s rule, earned a third time** |
+| 🟢 **EMEA** | 🟢 **`T88` CORROBORATED on an independent channel** 🔴 **with a date conflict** | In force **`2026-07-27`**, stand-alone high-risk **`2027-12-02`**. 🔴 **One source: Council approval `2026-06-29`, act *"awaiting publication"* — incompatible with an OJ date of `2026-07-24`.** 🟢 Both carried |
+| 🟢 **APAC** | 🟢 **Vietnam independently reproduced** | Law in force **`2026-03-01`**, **extraterritorial**, education named high-risk. 🟢 **Confirms `P149-B` on a second channel — so APAC has TWO statutory education regimes, not one** |
+| 🟢 **LATAM** | 🟢 **IESALC refined from one figure to three** | **200 institutions / 19 countries**: **87%** use AI in ≥1 area · **74%** in teaching and learning · 🔴 **26%** have a formal strategy. 🟢 **A 61-point gap inside ONE instrument's population** |
+| 🟢 **North America** | 🟢 **The advisory volume is now SIZED, and the federal layer moves** | **134 bills across 31 states** in 2026 · California **`AB 1159`** · Idaho **`SB 1227`** · 🟢 **`H.R. 8747` cleared House committee `2026-07-21`** · 🔴 **NYC moratorium through 8th grade** |
+| 🟢 **Africa** | 🟢 **p152's named omission CLOSES** | 🔴 **And it CONFIRMS `P149-C` rather than extending it**: AU Continental AI Strategy, South Africa draft 2026 policy (🔴 status disputed — abrogated `2026-04-27`?), Kenya draft 2025–2030. 🔴 **Still no rate, spend or deployment count** |
+| 🔴 **Global** | 🔴 **SEVENTH pass with no quotable market size** | **$6B–$12.3B** across four 2026/2024 bases. 🟢 **Now with a MECHANISM, not a shrug: the bases count different things.** 🟢 One arithmetic consistency found and recorded, not adopted |
+
+### 🟢 What this pass added to the shelf
+
+- 🟢 **One new instrument with 36 offline tests, all passing** —
+  [`p153-declaration-surfaces`](compose/code/p153-declaration-surfaces/README.md), which
+  counts licence declaration surfaces per repository and reports `DISAGREE` rather than
+  resolving it. 🟢 **Four committed evidence files.**
+- 🟢 **Two suites repaired in `p351`**, taking it from **6 failures to 4** — and the second
+  repair (`Pase` → `Pass`) is a defect class, not a typo.
+- 🟢 **Two new compose patterns**: 🆕 **`P44`** — audit the licence surfaces before you
+  shortlist, because the badge can lie — and 🆕 **`P45`** — size the population with
+  `ls-remote` and `raw` *before* spending clone budget.
+- 🆕 **Four theses, `T89`–`T92`**, and 🔴 **four of this shelf's own published claims
+  corrected**: p152's *"stars measure attention, not governance"*, p152's cause for the
+  collapsed asset list, p152's triage of `p351`, and the two-pass headline that made `T39`
+  the face of the documentation debt.
+- 🟢 **Every licence on `repos/foundations.md` and `verticals/solutions.md` is now read from
+  a licence FILE BODY with its byte size published next to it** — because `P411` taught
+  this shelf that the size is the tell, and the sizes cluster exactly as a clean corpus
+  should.
+- 🟢 **Two of this pass's own defects were caught by its own gates, before publication**:
+  🔴 a **false `DISAGREE`** on `zavora-ai/mcp-student-records` (shields.io escapes `-` as
+  `--`, so `Apache--2.0` read as `Apache`) 🆕 **`T90`**, and 🔴 **a `T92` statement written
+  with a colon instead of an em-dash**, which this pass's own citation check could not see —
+  🔵 **`T91`'s lesson landing on the pass that wrote it.** 🔵 **Third pass running, the
+  gates' only demonstrated catches are in the prose of the pass that ran them.**
+- 🟢 **An authored test was wrong and the matcher was right**, and the test was corrected
+  with the reason written into it rather than the code bent to match.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **North America** | 🟢 **the advisory opportunity gets a SIZE** | **134 bills / 31 states** is the number that makes the pitch concrete: a district procurement officer faces a moving target with no in-house expertise. 🟢 **And the asks are specific** — a data-flow audit for `AB 1159`, an approval-gate layer for the human-oversight mandates. 🔴 **Canada and Mexico returned nothing, FOURTH pass** |
+| **EMEA** | 🟢 **the inverted clock is confirmed, and the inversion IS the sale** | 🟢 **Article 50 transparency is live NOW; assessment and admissions became a `2027-12-02` programme.** 🔵 **So sell a small current duty today and a 14-month design engagement for 2027** — the reverse of the order the shelf implied before p152. 🔴 **A date conflict is carried into the room rather than resolved, which is the more credible position** |
+| **APAC** | 🟢 **two statutory regimes, and one reaches outside the region** | 🔴 **Vietnam's law is EXTRATERRITORIAL and names education high-risk** — 🟢 **so a LATAM or EMEA vendor selling into Vietnam is in scope.** 🔵 **That is the sharpest compliance fact on this shelf: it sells a conformity assessment to a client who does not operate in Asia.** 🔵 **And the buyer mood splits** — Ipsos finds less support for school AI bans across Asian markets, more in Australia and New Zealand |
+| **LATAM** | 🟢 **the governance argument gets better numbers and loses a tension** | 🟢 **87% doing / 26% governing, inside ONE study's own 200-institution population** — stronger than the cross-source ratio the shelf has been using. 🟢 **And DEC's own second post explains the apparent conflict with its 79% headline: high adoption, SHALLOW usage.** 🔵 **So the sale is depth, not onboarding** — and with no external deadline, it is an accreditation argument |
+| **Global** | 🔴 **seventh pass with no quotable market size — but the refusal is now a DIAGNOSIS** | **$6B–$12.3B** across four bases that count different things. 🔴 **And no open-source vendor named in any market source, SEVENTH pass.** 🟢 **That absence is this KB's product**: the market reports cannot answer *"what do we build on?"* and this shelf verified **18 of 18** rows to answer it |
+
+### 🔜 Pre-registered for p154
+
+🔵 **Nine actions, in [`intel/open-gaps.md`](intel/open-gaps.md).** 🟢 **`FG` is FIRST and
+ALONE** — unreached five passes, with its decisive measurement in hand since p152 and only
+the classifier unwritten. 🟢 **`GF`, `GK` and `GG` are SECOND as a single clone batch**,
+because they share one blocker and paying it once is the only way all three get done. Then
+`GM` (`T89`'s rate on a real denominator), `GO` (the bilingual-gate sweep), `GP` (write or
+retire the 11 absent theses), `GQ` (the two unreadable ERP licences) and `GN` (stars for
+the platform rows).
+
+🔴 **Four actions were deliberately HELD OFF** — `GE2`, `GH`, `FS`, `GD3`. 🟢 **`GE2`'s rule
+was applied throughout this pass even though its sweep was not run.** 🔴 **A register
+longer than a pass's budget is a wish list, and that is how `FG` reached a fifth pass.**
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **Seven of thirteen actions not reached**, and 🔴 **`FG` is unreached for a FIFTH
+  consecutive pass — the worst item this shelf has ever carried.** 🟢 The cause for three
+  of the seven (`GF`, `GK`, `GG`) is one shared blocker: the six vertical clones.
+- 🔴 **No primary legal text, SIXTH consecutive pass.** `eur-lex`, the law-firm hosts and
+  now `digitaleducationcouncil.com` all refuse — 🟢 the same `ENOTFOUND`/`CONNECT 403`
+  event, 🟢 **NOT re-registered** and not retried host by host.
+- 🔴 **`T88`'s corroboration carries a DATE CONFLICT this pass cannot settle**, and both
+  readings are published rather than one being chosen.
+- 🔴 **The `92%`/`79%` sample size, country count and field dates remain UNREAD.**
+- 🔴 **`T89`'s contradiction rate is 1 of 10 on ONE tier.** The 44 connector rows and 8 npm
+  rows are unaudited, so it is **not** a shelf-wide figure.
+- 🔴 **Two of eighteen licences could not be file-read** — `frappe/education`'s is a
+  ~20-byte `License: GNU GPL V3`, `openeducat_erp`'s is README-only — 🟢 **and both are ERP
+  rows a studio bills against.** 🔴 **Neither should be quoted to a client's legal team.**
+- 🔴 **Four genuinely unbanded star figures stand on append-only pages.** 🔴 **The gate is
+  right and the page is wrong**, and this pass did not edit append-only history to fix it;
+  the locations are named instead (`ACTION GR`).
+- 🔴 **`lumen`'s licence contradiction was NOT reported upstream.** 🟢 Said plainly: it is
+  published here and no issue was filed.
+- 🔴 **`T55` and `T20` were measured as the real debt and NOT written.** `T48` is a dead id
+  and was not retired, because retiring an id changes a register's number space (`T61`).
+- 🔴 **No Africa adoption rate, spend figure or deployment count.** 🟢 The region was
+  queried this pass — the omission is closed — 🔴 **but nothing countable came back.**
+- 🔴 **10 of 10 clones taken this pass do NOT persist.** 🔵 This container is ephemeral too,
+  so p154 re-clones. 🟢 **The cost is measured, not feared: 10 of 10 OK, 187 MB, under a
+  minute, `--depth 1 --single-branch`** — 🟢 **and `P45` now exists so the next pass does not
+  pay it for questions that never needed a tree.**
+
 ## Pass 152 — 2026-10-12
 
 ⏱️ **Fifteenth pass of this date.** 🟢 **Five of p151's fourteen pre-registered actions

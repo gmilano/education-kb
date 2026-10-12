@@ -1,0 +1,43 @@
+# p153 — ACTION GC. The 17 theses the p151 register marked NO_DEFINITION, resolved.
+#
+# Scope: the same 10 content files p151 used. Nothing outside it was read, so GC's
+# falsifier — "refuted if any of the 17 is defined on a page this pass's scope missed" —
+# is NOT tested by this file and is NOT claimed to be silent.
+#
+# WHAT THE MEASUREMENT CHANGES: the premise "no definition anywhere" is WRONG for 6 of
+# the 17. Their statement IS on an in-scope, non-append-only page — but only ever in
+# REVISIT shape (HELD / GENERALISED / STRENGTHENED / VINDICATED), never as an
+# introduction. The register's grammar reads a revisit as not-a-definition, correctly;
+# the DEBT it reports is therefore a first-mention debt, not a meaning debt.
+#
+# cited = occurrences of the backticked id over the 10 files INCLUDING README.md and
+# intel/open-gaps.md. p151's register used a different denominator, so these counts are
+# HIGHER and are not a correction of p151's: two instruments, two denominators.
+id	cited	class	statement_page	statement
+T39	36	RECOVERABLE	agents/top.md	a population exclusion is sound only relative to the property measured
+T57	17	RECOVERABLE	intel/trends.md	a legislative tracker's status field is not a legal fact
+T59	16	RECOVERABLE	intel/trends.md	an instrument's TRAVERSAL CHANNEL is part of its reach
+T38	14	RECOVERABLE	agents/top.md	a `gated=0` means "no gate in the same file"; a lexical detector cannot see a cross-module gate
+T60	7	RECOVERABLE	intel/trends.md	the channel map is not stable across passes, so it must be re-measured, not assumed
+T61	7	RECOVERABLE	intel/trends.md	a register's NUMBER SPACE is part of its data
+T55	10	ABSENT	-	NO STATEMENT TEXT ANYWHERE — the worst real debt on the shelf
+T20	7	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T47	3	ABSENT	-	no statement; this pass's matcher FALSELY captured an id enumeration here
+T50	4	ABSENT	-	no statement; FALSE capture (id enumeration), and append-only pages only
+T53	3	ABSENT	-	no statement; FALSE capture (id enumeration), and append-only pages only
+T52	3	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T19	2	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T49	1	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T51	1	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T54	1	ABSENT	-	NO STATEMENT TEXT ANYWHERE
+T48	0	ABSENT	-	NO STATEMENT TEXT ANYWHERE, and cited ZERO times — a dead id
+#
+# TOTALS: 17 = 6 RECOVERABLE + 11 ABSENT.
+# THE CORRECTION TO THIS SHELF'S OWN HEADLINE: p151 and p152 both led with "T39 is cited
+# 24 times and defined nowhere", making T39 the face of the debt. T39 is the BEST of the
+# 17 — its statement is identical across all 36 citations. The real debt is T55 (cited
+# 10x, no statement anywhere) and T20 (7x). T48 is cited zero times and is a dead id.
+# DECLARED DEFECT OF THIS INSTRUMENT: on T47, T50 and T53 the statement regex captured a
+# LIST OF OTHER IDS and reported it as a statement. 3 false captures of 17, found before
+# publication, corrected in the class column by hand. The regex is not committed as an
+# instrument for that reason.

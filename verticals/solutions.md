@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 153 — 2026-10-12
+
+🟢 **The vertical platforms now carry a licence read from the FILE BODY plus a live `HEAD`**
+— and 🔴 **the two ERP-class rows, which are the ones a studio bills against, are the two
+whose licence cannot be read that way.**
+
+### 🟢 The platform map — what it is, what it costs you in licence terms, where AI attaches
+
+🔵 **The column that decides the engagement is not "what does it do". It is "what licence
+does my code inherit when I plug in".** 🟢 **`P43`'s question, answered per row.**
+
+| platform | what it runs | licence (file body) | 🔴 **what YOUR plugin inherits** | where AI attaches |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | The world's most-deployed LMS | 🟡 **GPL-3.0-or-later** (35 147 B) | 🔴 **GPL** — 🟢 **but `-or-later` leaves a relicensing route open** | AI subsystem + plugin API; LTI |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | HiEd LMS, strong in NA | 🔴 **AGPL-3.0-ONLY** — elected **by omission** in 16 896 files (`T85`) | 🔴 **AGPL, and NO `-or-later` route** — 🔴 **network use counts as distribution** | 🟢 **LTI, or an external MCP server** — `vishalsachdev/canvas-mcp` (MIT, 290 ★) |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC-grade, corporate + government | 🔴 **AGPL-3.0** | 🔴 AGPL inside the platform | 🟢 **`XBlock` (Apache-2.0) — the permissive component boundary** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | University-governed LMS | 🟢 **ECL-2.0** | 🟢 **Permissive. Apache-derived** | 🟢 **The copyleft-free LMS route.** 🔴 Its one GNU notice is VENDORED TrimPath, not Sakai's (`T86`) |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | Virtual classroom, LMS-native | 🟡 **LGPL-3.0-or-later** | 🟡 **LGPL — linking is permitted**; modification is not | Recording/transcript pipeline for AI summarisation |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **Offline-first learning platform** | 🟢 **MIT** | 🟢 **Yours** | 🟢 **On-device models.** 🔵 **The row for low-connectivity: LATAM rural, Africa, APAC islands** |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | Synchronous classroom, complete | 🟢 **MIT** (1 062 B) | 🟢 **Yours** | Live tutoring agent, co-browsing, whiteboard capture |
+| [`OpenVidu/openvidu`](https://github.com/OpenVidu/openvidu) | Self-hosted real-time video | 🟢 **Apache-2.0** (11 357 B) | 🟢 **Yours, with a patent grant** | Real-time transcription, attention/engagement signals |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **Permissive SIS** | 🟢 **MIT** (1 094 B) | 🟢 **Yours** | 🟢 **Dropout prediction on enrolment + attendance** |
+| [`Ilyas-Codes/eCourse`](https://github.com/Ilyas-Codes/eCourse) | Lightweight LMS | 🟢 **MIT** (1 062 B) | 🟢 **Yours** | Course generation, assessment drafting |
+| [`geli-lms/geli`](https://github.com/geli-lms/geli) | E-learning platform | 🟢 **Apache-2.0** (11 358 B) | 🟢 **Yours** | Content pipeline |
+| [`openfun/richie`](https://github.com/openfun/richie) | Education portal CMS (Django+React) | 🟢 **MIT** (1 079 B) | 🟢 **Yours** | 🟢 **Permissive front end for an AGPL LMS** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | School management / SIS | 🔴 **GPL-3.0** (35 121 B) | 🔴 GPL | Attendance + grade signals for an early-warning agent |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **Education ERP on Odoo, 73+ modules** | 🟡 **LGPL-3.0 — README-declared, NOT file-read** | 🟡 LGPL if the README is right | Admissions, finance, prospect CRM |
+| [`frappe/education`](https://github.com/frappe/education) | School management on Frappe/ERPNext | 🟡 **GPL-3.0 by a ~20-byte `license.txt`** | 🟡 GPL if the one-liner binds | Admissions, scheduling, attendance |
+
+🟢 **All 15 verified live this pass: `git ls-remote` 15 of 15, with a firing negative
+control.** 🟢 **13 of 15 licences read from the file body.**
+
+### 🔴 The ERP problem, stated for the people who sell the work
+
+🔵 **Odoo and ERPNext are where an education engagement becomes an ERP engagement, which is
+where the budget is.** 🔴 **And they are the two rows on this page whose licence a studio
+cannot read the way it reads the other thirteen:**
+
+- 🔴 **`frappe/education`'s entire licence file is the sentence `License: GNU GPL V3`** —
+  ~20 bytes where a real GPL-3.0 body is 35 147. 🔴 **GitHub's detector declines it; so
+  does every body-marker matcher.** 🆕 **A GRANT BY REFERENCE** — `T85`'s omission shape in
+  a new location.
+- 🔴 **`openeducat_erp`'s LGPL-3.0 comes from its README**, and 🔴 **`lumen` proved this
+  pass that a README can contradict the file it links to** (`T89`).
+
+🟢 **Both are usable. Neither licence should be quoted to a client's legal team from this
+page** — clone and read, or ask the maintainer (`ACTION GQ`). 🔵 **That sentence is worth
+more than a confident table row, because the confident row is what gets repeated in a
+proposal.**
+
+### 🟢 The Moodle-vs-Canvas decision, now with the asymmetry that settles it
+
+🔵 **`P43` asked which platform to attach to. p152 measured the election; this page states
+the consequence:**
+
+| | Moodle | Canvas |
+|---|---|---|
+| licence | 🟡 GPL-3.0-**or-later** | 🔴 AGPL-3.0-**only** |
+| 🟢 **relicensing route** | 🟢 **OPEN** — `-or-later` admits a future GPL version | 🔴 **CLOSED** — `-only`, and 🔴 **elected by OMISSION in 16 896 files**, so nothing in the tree ever says so out loud |
+| network use | GPL: distribution only | 🔴 **AGPL: serving it over a network IS distribution** |
+| 🟢 **the permissive route** | plugin inherits GPL → 🟢 **go out to LTI** | 🟢 **go out to an external MCP server** — `canvas-mcp` (MIT) talks to Canvas without linking into it |
+
+🟢 **So the recommendation inverts by deployment model, not by feature set.** For a
+client who will **self-host and extend privately**, Moodle's `-or-later` is the safer
+substrate. For a client on **Canvas**, 🔴 **do not build inside the platform** — 🟢 **build
+an external MCP server**, which is exactly what the shelf's most-starred agent row
+(`vishalsachdev/canvas-mcp`, MIT, 290 ★, 102+ tools) already is. 🔵 **That is the strongest
+architecture recommendation on this shelf, and it is a licence consequence rather than an
+engineering preference.**
+
+### 🟢 Regional fit, because the same platform is not the same sale everywhere
+
+| region | the platform argument that lands |
+|---|---|
+| **North America** | 🔴 **Canvas dominates HiEd** → 🟢 **external-MCP architecture, plus a data-flow audit for California `AB 1159` / Idaho `SB 1227`.** `zavora-ai/mcp-student-records`' FERPA logging is the demonstrable artefact |
+| **EMEA** | 🟢 **Moodle + Open edX institutional base** → 🟢 **sell the live Article 50 transparency duty now and the `2027-12-02` high-risk programme as a roadmap.** 🟢 OECD's purpose-built-over-general-purpose line favours a composed stack |
+| **APAC** | 🔴 **Vietnam's extraterritorial law names education high-risk and is in force** → 🟢 **approval gates and audit logs are a compliance deliverable, not a nice-to-have.** `BetterSEQTA-Plus` (MIT) is the region's own measured artefact |
+| **LATAM** | 🟢 **No external deadline** → 🟢 **sell on accreditation and quality.** 🟢 **`kolibri` (MIT, offline-first) and `academico` (MIT, SIS) fit rural connectivity and thin budgets** — permissive, so the institution keeps what it pays for |
+| **Global** | 🟢 **`sakai` (ECL-2.0) is the answer whenever copyleft is a blocker at all** |
+
+##### 🔴 What this page still cannot do, after p153
+
+- 🔴 **Two of fifteen licences are not file-read** (`frappe/education`, `openeducat_erp`).
+- 🔴 **No election was re-measured this pass.** The `-only`/`-or-later` verdicts are
+  p152's, and 🔴 **p152's clones no longer exist** — the container is ephemeral.
+- 🔴 **No star counts and no activity measures for any platform row** (`ACTION GN`).
+- 🔴 **`H5P`, `Open Tutor AI CE`, `Moodle Workplace` and the national K-12 platforms
+  catalogued in earlier passes were NOT re-verified this pass** — the 15 rows above are the
+  ones that were, and the rest stand on their original measurement with its date.
+- 🔴 **The regional-fit table is an ARGUMENT, not a measurement.** No deployment counts per
+  region exist on this shelf for any platform here.
+
 ## Pass 152 — 2026-10-12
 
 🟢 **`ACTION GA` is DISCHARGED and the verticals stop being a negative control: they are

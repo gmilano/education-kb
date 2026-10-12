@@ -1,0 +1,25 @@
+# p153 — repository existence + HEAD, measured with git ls-remote, the channel that
+# discriminates. curl on github.com repo HTML returned 403 on 17 of 17 slugs (a
+# categorical egress refusal, not a repo fault); WebFetch on the same URLs renders.
+# NEGATIVE CONTROL: a slug that cannot exist returns no SHA. The control FIRED, so
+# an OK in this file means the remote answered, not that the channel always says yes.
+slug	ls_remote	head_sha
+moodle/moodle	OK	f205347
+openedx/edx-platform	OK	b3f862e
+instructure/canvas-lms	OK	1c9f0bb
+bigbluebutton/bigbluebutton	OK	1524a63
+sakaiproject/sakai	OK	10a1d90
+learningequality/kolibri	OK	d3de265
+openeducat/openeducat_erp	OK	1c95cef
+frappe/education	OK	444cc8e
+netless-io/flat	OK	d194d5b
+OpenVidu/openvidu	OK	ba72e6b
+academico-sis/academico	OK	d0cd78c
+Ilyas-Codes/eCourse	OK	3ee89f6
+geli-lms/geli	OK	02ae520
+openedx/XBlock	OK	948a378
+CAHLR/OATutor	OK	a40eff7
+pykt-team/pykt-toolkit	OK	eec087e
+openfun/richie	OK	8b14aec
+GibbonEdu/core	OK	1d83c2b
+this-slug-should-not-exist-p153/nope	REFUSED_OR_404	-

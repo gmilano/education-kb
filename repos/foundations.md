@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 153 — 2026-10-12
+
+🟢 **18 of 18 rows verified for EXISTENCE and `HEAD` by `git ls-remote`, with a negative
+control that fires** — and 🟢 **every licence below read from the LICENCE FILE BODY**, not
+from a sidebar, a badge or this shelf's memory.
+🆕 **A new channel does it for one round trip per repo and no clone.**
+
+### 🟢 The foundational layer, with the licence read from the file and the file's size as its tell
+
+🔵 **Why the byte size is published next to the licence.** This shelf learned at `P411`
+that a proprietary licence can open with the MIT grant verbatim; **the tell was the size**
+— 8 563 B against ~1 070 B for a real MIT. 🟢 **So every row carries the body size, and the
+sizes cluster exactly as a clean corpus should**: MIT **1 062–1 105 B**, Apache-2.0
+**11 357–11 358 B**, GPL-3.0 **35 121–35 147 B**.
+
+| repo | licence (read from the body) | body | `HEAD` | why it is foundational |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0-or-later** | 35 147 B | `f205347` | The world's most-deployed LMS. 🟢 **p152 measured the election: 13 859 of 14 024 notices say `-or-later`** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | — | `b3f862e` | MOOC-grade LMS behind edX. 🟡 **Root-only notice surface (p152)** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0-only** | — | `1c9f0bb` | 🔴 **`-only` elected BY OMISSION in 16 896 files** (`T85`, p152) — the strictest row here, and it reads as silent to a naive matcher |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 **LGPL-3.0-or-later** | — | `1524a63` | Virtual classroom with an LMS-native integration path. 255 of 263 notices `-or-later` (p152) |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | — | `10a1d90` | Apache-derived, university-governed LMS. 🟢 **The most permissive copyleft-free LMS of the big four** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | — | `d3de265` | 🟢 **Offline-first learning platform, MIT.** The row for low-connectivity deployments — LATAM rural, Africa, APAC islands |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | — | `948a378` | *"Framework for building custom learning components that run in the Open edX LMS"* — 🟢 **the permissive entry point into an AGPL platform** |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 **MIT** | **1 062 B** | `d194d5b` | 🟢 **The largest permissive synchronous-classroom codebase this shelf has measured** |
+| [`OpenVidu/openvidu`](https://github.com/OpenVidu/openvidu) | 🟢 **Apache-2.0** | **11 357 B** | `ba72e6b` | Self-hosted real-time video over LiveKit/mediasoup. 🟢 **Permissive substrate for live tutoring** |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** | **1 094 B** | `d0cd78c` | 🟢 **A PERMISSIVE SIS** — the layer where this shelf had only copyleft and non-OSI |
+| [`Ilyas-Codes/eCourse`](https://github.com/Ilyas-Codes/eCourse) | 🟢 **MIT** | **1 062 B** | `3ee89f6` | 🟢 **Lightweight LMS without Moodle's copyleft** |
+| [`geli-lms/geli`](https://github.com/geli-lms/geli) | 🟢 **Apache-2.0** | **11 358 B** | `02ae520` | E-learning platform, permissive, patent grant included |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **1 105 B** | `a40eff7` | Intelligent tutoring with Bayesian Knowledge Tracing, UC Berkeley. 🟢 **The ITS reference for STEM** |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **1 066 B** | `eec087e` | PyTorch knowledge tracing — the field's standard toolkit. 🟢 **The modelling core under any adaptive-learning claim** |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** | **1 079 B** | `8b14aec` | Django+React CMS for education portals. 🟢 **The permissive front end for an AGPL LMS** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0 — README-declared** | 🔴 **not file-read** | `1c95cef` | Education ERP on the Odoo framework, 73+ modules. 🔴 **See the warning below** |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **GPL-3.0 — a ONE-LINE declaration** | 🔴 **~20 B** | `444cc8e` | School management on Frappe/ERPNext. 🔴 **See the warning below** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** | 35 121 B | `1d83c2b` | School-management/SIS platform. Attendance, grades, scheduling — 🟢 **the input data for a dropout-prediction agent** |
+
+🟢 **8 of 18 are MIT or Apache-2.0.** 🔴 **7 are copyleft** (2 AGPL, 3 GPL/LGPL-family, plus
+Moodle and BigBlueButton's `-or-later` elections). 🟢 **1 is ECL-2.0.**
+🟡 **2 cannot be read from a file body at all** — and those two are the finding.
+
+### 🔴 Two rows whose licence CANNOT be read the way the other sixteen were
+
+🔵 **Both are ERP-class platforms, which is where a studio's margin usually is, and both
+fail the test this shelf applies to everything else.**
+
+🔴 **`frappe/education`** — its licence lives at `license.txt` on branch `develop` and its
+entire content is the string **`License: GNU GPL V3`**. 🟢 **About 20 bytes against the
+35 147 B of a real GPL-3.0 body.** 🔴 **So GitHub's own detector cannot classify it — the
+sidebar shows a bare "License" link with no type** — and neither can any body-marker
+matcher, including this shelf's. 🟢 **The intent is unambiguous and the instrument is
+useless on it**, which is `T85`'s shape (an election by omission) in a new place: 🆕 **a
+GRANT BY REFERENCE.**
+
+🔴 **`openeducat/openeducat_erp`** — the sidebar likewise shows an unclassified "License"
+link; the **README** states LGPL-3.0. 🔴 **That is a README surface, which is exactly the
+surface `lumen` proved can lie** (`T89`, this pass). 🟡 **Recorded as README-declared, NOT
+file-read, and the distinction is kept** rather than flattened into the table.
+
+🟢 **The consequence for a studio, stated plainly:** both rows are usable, 🔴 **and neither
+licence should be quoted to a client's legal team from this page.** 🔵 **For those two,
+clone and read, or ask the maintainer.** 🔵 **`ACTION GQ`.**
+
+### 🆕 🟢 The channel that made this page cheap, and the control that makes it trustworthy
+
+| channel | what it does | cost | result |
+|---|---|---|---|
+| 🟢 `git ls-remote <url>` | existence + `HEAD` SHA | 1 round trip, **no tree** | 🟢 **18 of 18** |
+| 🟢 `raw.githubusercontent.com/<o>/<r>/<branch>/LICENSE` | 🟢 **the licence BODY and its byte size** | 1 round trip, **no clone** | 🟢 **16 of 18 read directly** |
+| 🔴 `curl github.com/<o>/<r>` | — | — | 🔴 **`403` on 17 of 17** |
+| 🔴 `api.github.com/repos/…` | — | — | 🔴 refused — the session's repository-scope policy, defined as **`P150-A`** at [`repos/trending.md:242`](trending.md), an APPEND-ONLY page |
+
+🟢 **NEGATIVE CONTROLS, both fired.** A slug that cannot exist returns **no SHA** from
+`ls-remote`; a wrong licence path returns **`404`** from `raw`. 🔵 **Without them this page
+would be eighteen rows of a channel that might say yes to anything** — `P42`'s rule applied
+to a liveness check.
+
+🔵 **And a channel difference INSIDE one host, for the third time this pass.**
+`raw.githubusercontent.com` answers `curl`; `github.com` repo HTML refuses it; `WebFetch`
+renders it. 🟢 **`ACTION GE2`'s rule earns its keep again: name the URL refused and the URL
+that answered, never "the channel".** 🆕 **`T92` — a licence body is readable without a clone, so a 58-row census does not
+need 2.4 GB.** 🔵 **Stated with an em-dash deliberately**: an earlier draft of this line
+used a colon, and 🔴 **this pass's own citation check could not see it as a statement** —
+🟢 `T91`'s lesson landing on the pass that wrote it.
+
+### 🟢 How to choose from this page — the licence decides, then the attachment point
+
+1. 🟢 **Permissive and complete, pick first:** `kolibri` (MIT, offline-first), `flat`
+   (MIT, synchronous classroom), `academico` (MIT, SIS), `eCourse` (MIT, LMS),
+   `geli` (Apache-2.0), `OpenVidu` (Apache-2.0, real-time).
+2. 🟢 **Permissive LAYERS onto a copyleft host:** `XBlock` (Apache-2.0) into Open edX,
+   `richie` (MIT) in front of it. 🔵 **This is the route that keeps your code yours**
+   when the client already runs an AGPL LMS.
+3. 🔴 **Copyleft hosts — the plugin inherits.** Moodle (GPL-3.0-or-later), Open edX and
+   Canvas (AGPL), BigBlueButton (LGPL-3.0-or-later), Gibbon (GPL-3.0).
+   🔴 **Canvas is the strictest: `AGPL-3.0-only`, elected by omission** — 🟢 **so an
+   `-or-later` relicensing route that works for Moodle does NOT exist for Canvas** (`P43`).
+4. 🟢 **Copyleft-free institutional LMS:** `sakai` (ECL-2.0), the Apache-derived option.
+5. 🔴 **Do not quote the licence of `frappe/education` or `openeducat_erp` from here.**
+
+##### 🔴 What this page still cannot do, after p153
+
+- 🔴 **No star count for any of the 18.** The star budget went to the agent tier
+  (`ACTION GI`); 🔵 **`ACTION GN`** carries it.
+- 🔴 **Two of eighteen licences are not file-read** (`frappe/education`,
+  `openeducat_erp`) — named above rather than smoothed into the table.
+- 🔴 **`ls-remote` proves existence and freshness, nothing else** — not activity, not
+  maintenance, not fitness. No row here is recommended on the strength of a `HEAD` SHA.
+- 🔴 **The `-only`/`-or-later` election was re-measured for NONE of these rows this pass**;
+  the elections quoted are p152's, on p152's clones, and 🔴 **those clones are gone** — the
+  container is ephemeral.
+- 🔴 **`raw` was tried on three branches and six filenames.** A repo that keeps its licence
+  elsewhere would read as `NO_LICENCE_FILE_FOUND`, which is a limit of the probe and not a
+  property of the repo. 🟢 **None of the 18 hit it.**
+
 ## Pass 152 — 2026-10-12
 
 🔴 **Every per-file licence figure on this shelf counts files that belong to somebody else,

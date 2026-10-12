@@ -4,6 +4,167 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 153 — 2026-10-12
+
+⏱️ **Sixteenth pass of this date.** 🟢 **`ACTION GC` is DISCHARGED and it corrects this
+shelf's own headline about its own bookkeeping.** 🆕 **Three theses, `T89`–`T91`.**
+🔴 **And a star distribution refutes the reading this page has published for two passes.**
+
+| finding | verdict |
+|---|---|
+| 🟢 **`ACTION GC`** | 🟢 **DISCHARGED. The "17 undefined theses" are 6 RECOVERABLE + 11 ABSENT** — and 🔴 **`T39`, the face of the debt for two passes, is the BEST of the 17** |
+| 🆕 🔴 **`T89`** | 🔴 **A repository can CONTRADICT ITSELF about its own licence.** 1 of 10 agent-tier rows does, and the contradiction UNDERSTATES copyleft |
+| 🆕 🟢 **`T90`** | 🟢 **A licence identifier is an ENCODED STRING, not a token** — shields.io escapes `-` as `--`, and a matcher that does not decode it invents a disagreement |
+| 🆕 🟢 **`T91`** | 🟢 **A prose-language change can silently break an instrument.** The shelf renamed `## Pase N` to `## Pass N` and its own attributor stopped attributing — **50 occurrences**, no error raised |
+| 🔴 **the "governance is uncorrelated with attention" reading** | 🔴 **REFUTED and REPLACED by something sharper** — the agent tier's star median is **24–26.5**, not ≤10, so the governed row is an **INVERSION** below the tier, not a sample of it |
+
+### 🟢 `ACTION GC` — the 17 "undefined" theses, resolved, and the shelf's headline corrected
+
+[`evidence/thesis-resolution.2026-10-12-p153.tsv`](../evidence/thesis-resolution.2026-10-12-p153.tsv)
+
+🔵 **The register's grammar is right and its HEADLINE is misleading.** A `DEFINITION` is a
+bare-id statement that does not open with a revisit verb. Six of the seventeen have a
+perfectly stable statement on an in-scope, non-append-only page — **but only ever inside a
+revisit** (`HELD`, `GENERALISED`, `STRENGTHENED`, `VINDICATED`). The grammar reads that as
+absent, correctly. 🟢 **So the debt is a FIRST-MENTION debt, not a meaning debt**, and the
+two are worth very different amounts of worry.
+
+| 🟢 **RECOVERABLE — 6** | cited | the statement, identical across every citation |
+|---|---|---|
+| **`T39`** | **36×** | *an exclusion is sound only relative to the property measured* |
+| **`T57`** | 17× | *a legislative tracker's status field is not a legal fact* |
+| **`T59`** | 16× | *an instrument's TRAVERSAL CHANNEL is part of its reach* |
+| **`T38`** | 14× | *a `gated=0` means "no gate in the same file"; a lexical detector cannot see a cross-module gate* |
+| **`T60`** | 7× | *the channel map is not stable across passes, so it must be re-measured, not assumed* |
+| **`T61`** | 7× | *a register's NUMBER SPACE is part of its data* |
+
+🔴 **The correction.** p151 and p152 both led with *"`T39` is cited 24 times and defined
+nowhere"*, making `T39` the face of the documentation debt. 🟢 **`T39` is the healthiest
+item on the list** — restated identically **36 times**, never ambiguous, never contested.
+🔴 **The real debt is `T55`: cited 10 times, and no statement text exists anywhere on the
+shelf.** Then `T20` (7×). 🔴 **And `T48` is cited ZERO times — a dead identifier occupying
+a register slot.**
+
+| 🔴 **ABSENT — 11** | note |
+|---|---|
+| 🔴 **`T55` (10×)**, **`T20` (7×)** | 🔴 **The actual debt. Nothing to recover; these must be WRITTEN or RETIRED** |
+| `T52` (3×), `T19` (2×), `T49`, `T51`, `T54` (1× each) | low-citation, low-cost to retire |
+| 🔴 **`T48` (0×)** | 🔴 **a dead id** |
+| `T47` (3×), `T50` (4×), `T53` (3×) | 🔴 **this pass's matcher FALSELY captured an id enumeration as a statement on all three** |
+
+🔴 **A declared defect in the measurement, found before publication.** On `T47`, `T50` and
+`T53` the statement regex matched a **list of other identifiers** (`` `T55`, `T57`,
+`T59`–`T61` ``) and reported it as a definition — **3 false captures of 17**. 🟢 They are
+corrected by hand in the class column and 🔴 **the regex is deliberately NOT committed as
+an instrument**, because a matcher with a 1-in-6 false-capture rate is not one. 🔵 **This
+is `T39` applied to the thesis register itself**: the exclusion *"has a statement"* was
+sound only relative to the property *"text follows an em-dash"*, which is not the property
+wanted.
+
+🔴 **What `GC` does NOT settle.** Its falsifier — *refuted if any of the 17 is defined on a
+page this pass's scope missed* — 🔴 **was not tested**: the scope was the same 10 files
+p151 used. 🟢 **Not claimed silent.** 🔵 **And the citation counts here are HIGHER than
+p151's** (`T39` 36 vs 24, `T57` 17 vs 13) because this instrument counts the backticked id
+over all 10 files including `README.md`. 🟢 **Two denominators, not a correction** —
+`P42`'s rule.
+
+### 🆕 🔴 `T89` — a repository can contradict itself about its own licence
+
+🔴 **`ahmedEid1/lumen`: the `LICENSE` file is GPL-3.0; the README badge and the backend
+`pyproject.toml` both say MIT.** Three surfaces, two wrong, and the wrong ones are the two
+a human reads first.
+
+🔵 **Why this is a thesis and not an anecdote.** The shelf has had a rule since p138 —
+*read the licence from the tree, never from a badge* — 🔴 **and it was a precaution with no
+instance behind it.** 🟢 **Now it has one, and the error direction is the dangerous one**:
+the contradiction makes copyleft look permissive. The opposite mistake wastes a meeting;
+this one obliges a rewrite.
+
+🔴 **And the same pass found a SECOND self-disagreement in a different field:**
+`vishalsachdev/canvas-mcp`'s sidebar advertises **102 tools** and its README body says **up
+to 126**. 🟢 Not a licence fault, so not counted in `T89`'s rate — 🔵 **but the same class,
+on the same channel, in the same hour.** 🔴 **`T89`'s rate is 1 of 10 on ONE tier**; the 44
+connector rows and 8 npm rows were not audited, so it is not a shelf-wide figure
+(`ACTION GM`).
+
+### 🆕 🟢 `T90` — a licence identifier is an encoded string
+
+🔴 **This pass's own instrument published a false `DISAGREE`** on
+`zavora-ai/mcp-student-records`, whose badge reads `license-Apache--2.0-blue.svg`.
+shields.io escapes a literal hyphen as `--`; a non-greedy capture stopped at the first one
+and read **`Apache`**, a different family from **`Apache-2.0`**. 🟢 **Decoded, tested four
+ways, re-run: the row is `AGREE`.**
+
+🔵 **The general form, and it is cheap to state and expensive to learn:** a licence id read
+off a rendered surface has been through an encoding — URL-escaping, badge-escaping,
+Markdown. 🟢 **Decode before comparing, or the instrument manufactures disagreements** —
+which is `T39`'s lesson one level down, and the second time in two passes that a gate's
+only demonstrated catch was in the prose of the pass that ran it.
+
+### 🆕 🟢 `T91` — a prose-language change can silently break an instrument
+
+🔴 **The shelf renamed its own pass headings from `## Pase 138` to `## Pass 152`. Its
+star-figure attributor matched `r'pase (\d+)'` — case-insensitively, which does not help,
+because `Pass` is not `Pase`.** Result: **50 occurrences with no pass attributed**, and
+🔴 **no error, no warning, no failing assertion that said so** — the suite reported *"a
+pass heading in a format the regex does not cover"*, which is how p152 recorded it.
+🟢 **It was not a format. It was a LANGUAGE**, and naming it that way is what made it a
+one-line fix: `r'(?:pase|pass) (\d+)'`.
+
+🔵 **Why this generalises past a typo.** This KB writes in two languages by design — its
+instruments, patterns and older pages are Spanish, its recent passes English. 🔴 **Every
+lexical gate on this shelf is therefore a bilingual gate whether its author knew it or
+not**, and the ones that match Spanish marker words (`MARCAS_UMBRAL`, `MARCAS_RECHAZO`,
+`MARCAS_BANDA_ADOSADA`) are **silently degrading as the prose shifts**. 🟢 **That is a
+sweep worth running** — 🔵 **`ACTION GO`**.
+
+### 🔴 The reading this page must withdraw, and the better one that replaces it
+
+🔴 **WITHDRAWN:** *"stars measure attention, not governance"*, as published at p152 on the
+strength of one row at 1 ★.
+
+🟢 **REPLACED BY, on ten measurements:** the education-agent tier's star median is **24**
+(all ten rows) or **26.5** (the six-row tier), with a top row at **290 ★**. 🔴 **So the
+tier is not ignored.** 🟢 **And the single best-governed row on this shelf — 23
+approval-gated writes, FERPA-logged mutations, a 24-test suite — is ninth of ten at 1 ★,
+which puts it UNDER the tier it belongs to, not level with it.**
+
+🔵 **The sentence that survives a client's scrutiny**: *"the row with a real authorisation
+boundary ranks ninth of ten by stars, in a population whose median is 24 — so a
+stars-first shortlist does not merely miss it, it ranks it last."* 🟢 **That is a stronger
+claim than the one it replaces and it was produced by a falsifier FIRING**, which is the
+third time this shelf has gained from a refutation rather than a discharge.
+
+### 🟢 Market and sector trends this pass, with their publisher class attached
+
+| trend | evidence | class |
+|---|---|---|
+| 🟢 **Away from general-purpose chatbots, toward education-specific tooling** | Multiple 2026 sources; one reports teacher prompt-crafting and output-verification **shifted** cognitive load from lesson planning to AI supervision rather than reducing it | 🟡 vendor/analyst blogs — 🟢 **but the OECD's 2026 Digital Education Outlook reaches the same conclusion by another route** |
+| 🟢 **Agents and multimodal over single prompts** | Analyst commentary describes the frontier moving to multi-step agentic task execution | 🟡 secondary |
+| 🟢 **Governance structures are being BUILT, not debated** | 1EdTech: institutions defining governance, clarifying compliance, establishing evaluation processes | 🟡 standards body |
+| 🟢 **Evidence demands on vendors are hardening** | Systems increasingly require proof that a product improves learning quality, persistence, well-being or job-relevant skills | 🟡 analyst |
+| 🟢 **Skills and portable credentials** | 1EdTech on digital credentials accelerating a skills-driven ecosystem; micro-credentials and verifiable badges | 🟡 standards body |
+| 🔴 **The teacher-hours claim** | *"teachers adopt AI most readily when it saves 5–10 hours/week"* | 🔴 **vendor claim, NOT adopted** |
+
+🔵 **Why the first row is the one that matters commercially**: it is the market's own
+version of `P43`. 🟢 **If general-purpose tooling shifts load rather than removing it, the
+buyable thing is a composed vertical stack** — a substrate plus an agent plus a gate —
+which is precisely what `compose/patterns.md` ships and what the market reports cannot name
+a vendor for, **seventh pass running**.
+
+##### 🔴 What this page still cannot do, after p153
+
+- 🔴 **`T55` and `T20` are still undefined** — `GC` measured the debt and did not pay it.
+  🔵 **`ACTION GP`**: write or retire them.
+- 🔴 **`T48` is a dead id and was not retired**, because retiring an id changes a register's
+  number space, which is `T61`'s own warning.
+- 🔴 **`T89`'s contradiction rate is 1 of 10 on one tier.** The 44 connector rows and 8 npm
+  rows are unaudited (`ACTION GM`).
+- 🔴 **No bilingual sweep of the lexical gates was run** (`T91`, `ACTION GO`) — the defect
+  is named on one instrument and is likely present on others.
+- 🔴 **Every trend in the table above is secondary.** None is adopted; each carries its
+  publisher class.
+
 ## Pass 152 — 2026-10-12
 
 ⏱️ **Fifteenth pass of this date.** 🟢 **Five of p151's fourteen pre-registered actions
