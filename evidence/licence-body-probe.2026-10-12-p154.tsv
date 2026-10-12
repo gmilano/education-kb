@@ -1,0 +1,8 @@
+repo	api_licence	probe_paths_tried	body_found	body_bytes	body_opens_with	classified_from_body	verdict
+haolpku/Omni-Edu	ABSENT	{main,master}x{LICENSE,LICENSE.md,LICENSE.txt,COPYING}	NO	0	-	NO GRANT	API-ABSENT CONFIRMED BY BODY PROBE
+jaltekruse/Free-Math	ABSENT	{main,master}x{LICENSE,LICENSE.md,LICENSE.txt,COPYING}	NO	0	-	NO GRANT	API-ABSENT CONFIRMED BY BODY PROBE
+henriquegpb/gradesinteli	ABSENT	{main,master}x{LICENSE,LICENSE.md,LICENSE.txt,COPYING}	NO	0	-	NO GRANT	API-ABSENT CONFIRMED BY BODY PROBE
+scibly-dev/scibly	NOASSERTION	main/LICENSE	YES	34739	"Copyright (c) 2026-present Scibly"	AGPL-3.0 PLUS PATH CARVE-OUT	PATH-DEPENDENT LICENCE - see T92
+scibly-dev/scibly (ee/)	n/a	main/ee/LICENSE	YES	1287	"Scibly Enterprise License"	PROPRIETARY non-production-only	SECOND LICENCE IN SAME REPO
+five-plus-one/AI-Marker-Suite	GPL-3.0	master/LICENSE	YES	35154	"GNU GENERAL PUBLIC LICENSE Version 3"	GPL-3.0	AGREE - and widens the GPL-3.0 size band to 35121-35154 B
+NEGATIVE CONTROL jupyter/nbgrader/main/NOT_A_LICENCE_FILE	n/a	1 wrong path	NO (HTTP 404)	-	-	-	CONTROL FIRES - channel is not fabricating

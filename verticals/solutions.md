@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 154 — 2026-10-12
+
+🟢 **The platform map gains the layer it was missing: the INTEGRATION BOUNDARY.** p153 asked
+the right question per platform — *what licence does my plugin inherit* — and answered it for
+LMS and ERP rows. 🟢 **This pass adds the permissive standards layer that lets you avoid
+inheriting anything at all**, plus 🔵 **the largest LATAM school platform on this shelf,
+re-measured.**
+
+### 🟢 The integration boundary — permissive rows that attach to copyleft platforms
+
+🔵 **The structural fact `P43` keeps running into:** the big LMS rows are GPL (Moodle), AGPL
+(Canvas, Open edX) or LGPL (BigBlueButton). 🟢 **You do not have to fork them.** Every one of
+them speaks **LTI** and **SCORM/xAPI**, and the libraries that speak those are permissive.
+
+| repo | licence (API detector) | ★ | `HEAD` | what it is, and why it is the boundary |
+|---|---|---|---|---|
+| 🟢 [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** | **376** | `0b806bf` | 🟢 **An LTI tool framework.** Write your agent as an LTI tool, host it yourself, and 🟢 **nothing of Moodle's or Canvas's licence reaches your code** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | **354** | — | 🟢 **A modern SCORM runtime in JavaScript.** The permissive way to make AI-generated content report completion and scores back to ANY conformant LMS |
+| 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | — | `948a378` | 🟢 **Carried from p153** — the permissive component boundary INSIDE an AGPL platform |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | **515** | `e0e347f` | 🟢 **The MCP boundary onto a learner's real review queue** |
+
+🔵 **The sentence a studio can take to a client.** 🟢 *"Your Moodle stays GPL and ours stays
+ours: we attach over LTI with an Apache-2.0 framework and report results over SCORM with an
+MIT runtime."* 🔴 **The alternative — a plugin inside the platform tree — inherits the
+platform's licence, and on Canvas that licence is AGPL-3.0-ONLY with no `-or-later` route.**
+
+### 🔵 The LATAM platform row, measured rather than remembered
+
+| platform | licence | ★ | `HEAD` | what it is | where AI attaches |
+|---|---|---|---|---|---|
+| 🔵 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** | **719** | 🔴 **`cd1da68` — see `T94`** | 🟢 **Self-described as the largest free-software education platform in Brazil** — municipal school management: enrolment, attendance, grades | Dropout early-warning on enrolment + attendance; 🔴 **a plugin inherits GPL-2.0 — and whether that blocks reuse in GPL-3.0 code depends on an election nobody has read** |
+| 🔵 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | 🟢 **Apache-2.0** | **583** | `94cedd7` | 🟢 **Brazilian open-source programming-education platform** (*"Plataforma gratuita e open-source de ensino de programação"*) | 🟢 **Permissive. Content generation, exercise grading, tutor agent** |
+| 🔵 [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🟢 **MIT** | **20 914** | `b995c11` | 🟢 **The largest Portuguese-language education repository this shelf has measured** — a self-taught CS curriculum | Curriculum-aware tutoring; it is CONTENT, not software |
+
+🔴 **`i-educar` is this shelf's first GPL-**2.0** row, and the version matters more here than
+anywhere else on the page.** 🔴 **If the election is `-only`, GPL-2.0 and GPL-3.0 code cannot
+be combined**, so an agent written for `i-educar` could not be reused inside a GPL-3.0
+platform — a problem no amount of care in the studio's OWN code fixes. 🟢 **If it is
+`-or-later`, the route stays open**, exactly as p152 found for Moodle's 13 859 `-or-later`
+notices.
+🔴 **And the API CANNOT tell you which**: GitHub's detector reports the key `gpl-2.0` for both
+elections, the same way `T85` found Canvas's `-only` elected BY OMISSION. 🟢 **So the one
+question that decides reuse on Brazil's largest school platform is still unanswered** —
+🔵 **`ACTION GX`**: read `i-educar`'s notice headers and settle the election.
+
+### 🟢 Platform rows added to the map this pass
+
+| platform | licence | ★ | what it runs | 🔴 **what YOUR plugin inherits** | where AI attaches |
+|---|---|---|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** | **1 718** | Course platform for companies, Teachable alternative | 🔴 **AGPL — network use counts** | Course authoring, cohort analytics |
+| [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 **GPL-3.0** | **253** | Distributed course network (higher ed) | 🔴 GPL | Course-content pipeline |
+| 🟢 [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | 🟢 **Apache-2.0** | **130** | 🟡 **North America** — microsite/courseware CMS | 🟢 **Yours, with a patent grant** | 🟢 **Permissive courseware authoring front end** |
+| [`edrys-org/edrys`](https://github.com/edrys-org/edrys) | 🟡 **MPL-2.0** | **336** | Remote-teaching platform, modular | 🟡 **MPL — file-level copyleft; your NEW files stay yours** | Live classroom agent, lab modules |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🟡 **NOASSERTION** | **340** | 🟡 **North America** — AI advising for student success | 🔴 **UNKNOWN until the body is read** (`P47`) | Already AI-native: advising assistant |
+| 🟢 [`studentinsights/studentinsights`](https://github.com/studentinsights/studentinsights) | 🟢 **MIT** | **134** | 🟡 **North America** — student-centred data systems for school districts | 🟢 **Yours** | 🟢 **Early-warning and intervention signals on real district data** |
+| [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 **GPL-3.0** | **223** | 🟢 **An AI plugin that already lives INSIDE Moodle** — tutoring, quizzes, mind maps, RAG over course material | 🔴 **GPL-3.0 — the inheritance `P43` warned about, in a shipped artefact** | 🔵 **Read it as the reference implementation of the inside-the-tree route** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **1 143** | 🟢 **Offline-first learning platform** — carried, now star-measured | 🟢 **Yours** | On-device models; LATAM rural, Africa, APAC islands |
+
+🔵 **`moodle-ai-skill-navigator` is the row to show a sceptical client.** 🟢 **It proves the
+inside-the-tree route works** — tutoring, quiz generation and RAG over course material, in
+production Moodle. 🔴 **And it proves the price: it is GPL-3.0, because it had to be.**
+
+### 🟢 The two routes, side by side, now that both have real rows
+
+| | 🔴 **inside the tree** | 🟢 **over the boundary** |
+|---|---|---|
+| the row that proves it | `moodle-ai-skill-navigator` (GPL-3.0, 223 ★) | `tsugi` (Apache-2.0, 376 ★) + `scorm-again` (MIT, 354 ★) |
+| your licence | 🔴 **the platform's** | 🟢 **yours** |
+| deploy | inside the client's Moodle | 🟢 **your own service, any client LMS** |
+| reach | 🟢 **everything the platform's internals expose** | 🔴 **only what LTI/SCORM/xAPI expose** |
+| when it is right | deep gradebook//course-format work | 🟢 **tutoring, content generation, analytics — i.e. most engagements** |
+
+##### 🔴 What this page still cannot do, after p154
+
+- 🔴 **`advisingapp` is `NOASSERTION` and unread** — a 340 ★ AI-native higher-ed platform whose
+  licence this shelf cannot state. 🔵 **`ACTION GU`** covers it.
+- 🔴 **Licences on this page are the API detector's except where p153 body-read them.** The
+  ERP problem p153 named (`openeducat` README-declared, `frappe/education` ~20 B grant by
+  reference) is UNCHANGED — the API cannot fix a grant by reference either.
+- 🔴 **No LTI-conformance claim was tested.** `tsugi` says LTI; nobody on this shelf has run
+  it against a Canvas or Moodle instance. 🔵 **`ACTION GW`**.
+
 ## Pass 153 — 2026-10-12
 
 🟢 **The vertical platforms now carry a licence read from the FILE BODY plus a live `HEAD`**

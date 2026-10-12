@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 154 — a channel that measures 100 repos per call, and the two negatives it can tell apart
+
+🟢 **The verification cost model on this shelf changes this pass.** p153 paid one rendered-page
+fetch per repository for stars and one shallow clone per repository for a licence. 🟢 **The
+authenticated API returns both for up to 100 repositories in a single call** — and its
+licence field, tested against this shelf's own known casualty, did not lie.
+
+### 🟢 The cost table, which is the whole reason to care
+
+| question | p153's channel | cost for 100 repos | 🆕 p154's channel | cost for 100 repos |
+|---|---|---|---|---|
+| does it exist, what is `HEAD`? | `git ls-remote` | **100 round trips** | `git ls-remote` (unchanged) | 100 round trips |
+| how many ★ / forks? | rendered page via `WebFetch` | **100 fetches** | 🟢 **authed API search** | 🟢 **1 call** |
+| what licence does GitHub think it is? | 🔴 not available without a clone | **100 clones** | 🟢 **same 1 call** | 🟢 **0 extra** |
+| what does the licence BODY say? | `raw` fetch or clone | 100+ fetches | 🔴 **unchanged — the API will not read third-party files** | 🔴 **100+ fetches** |
+
+🔵 **So the upgrade is real and bounded**: 🟢 **measurement collapses from ~200 round trips to
+1**, 🔴 **and body-reading does not collapse at all.** `P46` exists to spend the saving in the
+right place: use the one call to decide WHICH bodies are worth reading.
+
+### 🟢 The two negatives the API can distinguish — and this is new information
+
+🔴 This shelf has treated "no licence" as one state. 🟢 **The API reports two, and they mean
+different things:**
+
+| API reading | what it means | this pass's instances | what a studio must do |
+|---|---|---|---|
+| 🔴 **the `license` key is ABSENT entirely** | GitHub found **no licence file at all** | `Hesham0-0Nasser/tutor-lms-mcp` (8 ★) · `haolpku/Omni-Edu` (225 ★) · `jaltekruse/Free-Math` (74 ★) · `henriquegpb/gradesinteli` (84 ★) | 🔴 **No grant. Do not ship. Ask the author** |
+| 🟡 **`"spdx_id": "NOASSERTION"`** | 🟢 **A licence file EXISTS and the detector could not match it** | `scibly-dev/scibly` · `CaviraOSS/PageLM` · `inducer/relate` · `INGInious/INGInious` · `GarethManning/education-agent-skills` · `canyongbs/advisingapp` · `learning-commons-org/knowledge-graph` | 🟢 **READ THE BODY. This is where the bespoke licences live** |
+
+🟢 **Both negatives were cross-checked against the body channel this pass, and both held:**
+[`evidence/licence-body-probe.2026-10-12-p154.tsv`](../evidence/licence-body-probe.2026-10-12-p154.tsv)
+
+- 🟢 **3 of 3 `ABSENT` rows: no licence body on any of 8 probed paths** (`main`/`master` ×
+  `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`).
+- 🔴 **1 of 1 `NOASSERTION` row opened: `scibly` is AGPL-3.0 at the root and PROPRIETARY
+  inside `ee/`** — see `T92`.
+- 🟢 **Negative control fired**: a deliberately wrong path on `jupyter/nbgrader` returned
+  **HTTP 404**, so the body channel is not inventing files.
+
+🔵 **The practical reading**: 🟢 **`NOASSERTION` is the most valuable signal the API emits.**
+It is a pointer at exactly the population `P411` and `P44` were written for — and this shelf
+had been finding those rows by accident.
+
+### 🔴 `git ls-remote HEAD` can return TWO lines, and one repository on this shelf proves it
+
+```
+$ git ls-remote https://github.com/portabilis/i-educar HEAD
+cd1da687c9ddce01adaefec4f12ed158506cc6c3        HEAD
+99dfe34a0de9dceabb9719a007e946cf6185cacc        refs/remotes/origin/HEAD
+```
+
+🔴 **The repository advertises a `refs/remotes/origin/HEAD` ref**, which is a local-clone
+concept that has no business on a server. 🔴 **An instrument doing
+`ls-remote … HEAD | awk '{print $1}'` gets TWO SHAs for one repository** — and this pass's
+first verification run did exactly that, emitting a stray line into its own output table.
+🟢 **Caught before publication; recorded as `T94`.** The fix is `grep -P '\tHEAD$'`, not
+`head -1`, because ordering is not guaranteed.
+
+🔵 **Why it generalises.** 🟢 **`P45` sized a population with `ls-remote` and assumed one line
+per repository.** That assumption is now known false on a live row, and the row is **Brazil's
+largest free education platform** — i.e. not an obscure corner this shelf can route around.
+
+### 🟢 The population this pass measured, published whole
+
+[`evidence/api-discovery-overlap.2026-10-12-p154.tsv`](../evidence/api-discovery-overlap.2026-10-12-p154.tsv)
+— **248 unique repositories**, each with ★, the API's licence, `pushed_at`, and whether its
+full slug already appears on this shelf.
+
+| licence (API detector) across all 248 | rows | share |
+|---|---|---|
+| 🟢 **MIT** | **102** | **41%** |
+| 🔴 **absent entirely — no licence file** | **48** | 🔴 **19%** |
+| 🟡 **NOASSERTION — a body exists, unclassifiable** | **32** | 🟡 **13%** |
+| 🟢 **Apache-2.0** | **28** | **11%** |
+| 🔴 GPL-3.0 | 15 | 6% |
+| 🔴 AGPL-3.0 | 11 | 4% |
+| 🟢 CC0-1.0 | 6 | 2% |
+| 🟡 MPL-2.0 | 3 | 1% |
+| 🔴 LGPL-3.0 · 🔴 GPL-2.0 · 🟢 BSD-3-Clause | 1 each | — |
+
+🟢 **Permissive total: 140 of 248 — 56%.** 🔴 **Copyleft: 28 — 11%.** 🔴 **Unclassifiable or
+ungranted: 80 — 32%.**
+
+🟢 **52% of the measured population is MIT or Apache-2.0 outright** (130 of 248), 56% counting
+every permissive family — which is this shelf's standing answer to *"can Globant build on this
+layer"*, now resting on a 248-row sample instead of a shortlist.
+🔴 **32% — 80 rows — is either ungranted or unclassifiable, and the ungranted half (48 rows,
+19%) is the bigger one.** 🔵 **That is the number to carry into a procurement conversation**,
+and it is almost three times the copyleft share that procurement usually worries about.
+
+##### 🔴 Not done this pass
+
+- 🔴 **No `pushed_at` freshness sweep over the 248** — the data is in the TSV, the analysis is
+  not written. 🔵 **`ACTION GV`**.
+- 🔴 **The licence totals above are the DETECTOR's**, on a population where 32 rows are by
+  definition unclassifiable and 48 carry nothing to classify. 🟢 **56% is a FLOOR for
+  permissive** — some `NOASSERTION` bodies will read permissive once opened — and 🔴 **it is
+  also a CEILING for what can be quoted**, because none of the 140 was body-read this pass.
+- 🔴 **`T94`'s fix has not been applied to `P45`'s published recipe** — it is named there and
+  nowhere else yet.
+
 ## 2026-10-12 — pass 153 — a verification channel that costs nothing, and the curl/WebFetch split inside one host
 
 🟢 **18 of 18 repositories verified for existence and `HEAD` with `git ls-remote`** —

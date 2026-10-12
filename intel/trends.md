@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 154 — 2026-10-12
+
+⏱️ **Seventeenth pass of this date.** 🟢 **Four theses, `T92`–`T95`, and three of them come
+from a channel this shelf had written off twice.** 🟢 **`T95` finally EXPLAINS the agent-search
+null streak without blaming the search engine** — the education domain's own vocabulary is
+owned by machine learning, and the number is 93% versus 27%.
+🔴 **`T92` says something this shelf's whole licence model cannot express: a licence can
+belong to a DIRECTORY.**
+
+| finding | verdict |
+|---|---|
+| 🆕 🔴 **`T92`** | 🔴 **A licence can be a property of the PATH, not of the repository.** `scibly` is AGPL-3.0 at its root and proprietary inside `ee/` |
+| 🆕 🔴 **`T93`** | 🔴 **`updated_at` is not `pushed_at`.** `lumen`'s metadata moved **115 days** after its last code push; a freshness claim read from the wrong field overstates liveness |
+| 🆕 🔴 **`T94`** | 🔴 **`git ls-remote <url> HEAD` can return MORE THAN ONE LINE.** `i-educar` advertises `refs/remotes/origin/HEAD`, so an instrument that takes "the SHA" takes two |
+| 🆕 🟢 **`T95`** | 🟢 **In education, the TOPIC index is clean and the free-text index is not** — `topic:ai-tutor` **93%** on-domain against free text's **27%**, because `learning` and `teaching` are ML words first |
+| 🟢 **the API licence field, tested against a known liar** | 🟢 **It sided with the TREE.** On `lumen` — badge MIT, `pyproject.toml` MIT, `LICENSE` GPL-3.0 — the API says **GPL-3.0** |
+| 🟡 **`T89`'s contradiction rate** | 🟡 **Still 1 of 10 on one tier.** 🟢 The channel that makes the other 52 rows affordable now exists (`ACTION GM`) |
+
+### 🆕 🔴 `T92` — a licence can belong to a DIRECTORY
+
+🔴 **Every instrument on this shelf reads one root `LICENSE` and assigns one licence to one
+repository.** `scibly-dev/scibly` breaks that model in the most ordinary way possible: its
+root body is **34 739 B** and contains **AGPL-3.0 verbatim**, preceded by one paragraph that
+carves out `ee/` and points at a second licence file — **1 287 B**, *"Scibly Enterprise
+License … licensed, not sold … non-production purposes only."*
+
+🔵 **Why the shelf's own gates would have missed it.** 🟢 `P44` reads the body, not the badge —
+correct, and insufficient. 🟢 `P44` step 4 checks the body SIZE against the family — and
+**34 739 B sits inside the AGPL band, so the check PASSES and confirms a conclusion that is
+only true for part of the tree.** 🔴 **A size check validates which licence TEXT was pasted
+in. It cannot see the sentence above it.**
+
+🟢 **What caught it was `NOASSERTION`** — GitHub's detector declining to classify a file it
+could not match. 🔵 **So the open-core pattern has a machine-readable fingerprint**, and
+`P47` is built on it.
+
+🔴 **The commercial consequence, stated plainly**: a studio that forks an open-core education
+platform and ships `ee/` code to a client's production system has breached a licence that its
+own licence scanner reported as AGPL-3.0.
+
+### 🆕 🔴 `T93` — `updated_at` is not `pushed_at`, and the gap is months
+
+| field, on `ahmedEid1/lumen` | value | what moves it |
+|---|---|---|
+| `pushed_at` | **2026-06-07** | 🟢 **a commit** |
+| `updated_at` | **2026-09-30** | 🔴 **a star, a description edit, a topic change, a rename** |
+
+🔴 **115 days apart.** 🟢 **So "last updated 2026-09-30" is TRUE and means nothing about the
+code.** This shelf publishes freshness columns; from this pass they read `pushed_at`, and the
+p153 row that reported `DeepTutor` as "2026-10-08" should be read as a measurement DATE, not a
+push date.
+
+🔵 **Why it generalises past one field name.** 🟢 **`T39`'s rule one level down: an exclusion —
+or a freshness claim — is sound only relative to the property actually measured.** A liveness
+claim built on `updated_at` measures ATTENTION, not maintenance, and those came apart by four
+months on the first row tested.
+
+### 🆕 🟢 `T95` — the null streak was a VOCABULARY collision, and here is the number
+
+[`evidence/channel-precision.2026-10-12-p154.tsv`](../evidence/channel-precision.2026-10-12-p154.tsv)
+
+| channel | on-domain software in the top 30 |
+|---|---|
+| 🟢 `topic:ai-tutor` | 🟢 **93%** |
+| 🟢 `topic:edtech` | 🟢 **90%** |
+| 🟡 `topic:education` + `topic:ai-agents` | 🟡 **50%** |
+| 🔴 free text `education OR tutor OR learning OR teaching` | 🔴 **27%** |
+
+🔴 **`learning`, `teaching`, `tutorial` and `curriculum` are machine-learning and
+developer-documentation words first.** The free-text sweep's top 30 by stars returned
+`JEPA-Anything`, `GPT-Policy`, `RoboICL`, `VisionHOPE`, `DeepEP-Ascend` — and a **desk lamp**
+*"learning to be more than a lamp"*.
+
+🟢 **This is the first explanation of the ten-pass null streak that does not blame the search
+engine**, and 🔴 **it also refuses the easy fix**: the broad `education` topic scores **50%**,
+because course repositories claim it too. 🟢 **The instruction that survives is NARROW TOPIC,
+never free text, and never the broad topic.**
+
+### 🟢 Market and sector trends this pass, with their publisher class attached
+
+| trend | evidence | class |
+|---|---|---|
+| 🆕 🔴 **The learner-modelling layer is half UNGRANTED** | 10 of the top 20 `knowledge-tracing` repositories carry no licence file — including SAINT, SAKT, DTransformer and ATKT. 🟢 **9 MIT, 1 Apache-2.0, ZERO copyleft** | 🟢 **PRIMARY — measured on 20 repositories this pass** |
+| 🆕 🔴 **The grading layer is the INVERSE: copyleft-heavy** | Of 11 assessment rows: 2 permissive (`nbgrader` BSD-3, `pedal` MIT), 6 copyleft, 2 `NOASSERTION`, 1 ungranted | 🟢 **PRIMARY — measured this pass** |
+| 🆕 🔵 **APAC education AI is arriving as a RETROFIT from below** | `AI-Marker-Suite` automates marking on 24 named Chinese exam platforms as a userscript; `BetterSEQTA-Plus` is a student-built extension over a commercial school platform | 🟢 **PRIMARY — repositories, not commentary** |
+| 🆕 🔴 **Education-specific FOUNDATION MODELS have appeared, and the first one has no grant** | `haolpku/Omni-Edu`, *"Open Foundation Models for Learning and Teaching"*, **225 ★**, 🔴 **no licence file on 8 probed paths** | 🟢 **PRIMARY** |
+| 🟢 **Away from general-purpose chatbots, toward education-specific tooling** | Carried from p153; the OECD's 2026 Digital Education Outlook reaches it by another route | 🟡 vendor/analyst + 🟢 OECD |
+| 🟢 **Evidence demands on vendors are hardening** | Carried. 🆕 **And it is now visible in code**: `bydeng01/ability-levels-audit` and `bydeng01/conv-vs-ped-tutor` are **pre-registered LLM-judge audits** of tutor helpfulness and answer leakage, with frozen data | 🟢 **PRIMARY for the code; 🟡 analyst for the claim** |
+| 🟢 **Governance structures are being BUILT, not debated** | 1EdTech, carried. 🆕 Corroborated from the other side by IESALC's **26%** formal-framework figure | 🟡 standards body + 🟢 UNESCO |
+| 🔴 **The teacher-hours claim** | *"teachers adopt AI most readily when it saves 5–10 hours/week"* | 🔴 **vendor claim, STILL NOT ADOPTED** |
+
+🔵 **The two licence findings together are the commercially sharpest thing on this page.**
+🟢 **A studio's adaptive-learning stack is permissive at the top (tutors: 52% MIT/Apache over
+248 rows) and at the modelling core (`pykt`, `pyedmine`: MIT)** — 🔴 **but the SOTA models it
+will be asked for by name are ungranted, and the grading layer it must integrate is copyleft.**
+🟢 **So the defensible architecture is: permissive substrate, reimplemented models, and
+grading reached over a boundary rather than forked** — which is `P46`, `P47` and p153's `P43`
+pointing at the same answer from three directions.
+
+##### 🔴 What this page still cannot do, after p154
+
+- 🔴 **`T55` and `T20` are STILL undefined** (`ACTION GP`, carried from p153, unpaid again).
+- 🔴 **`T48` is still a dead id** and still not retired, for `T61`'s reason.
+- 🔴 **No bilingual sweep of the lexical gates** (`T91`, `ACTION GO`) — carried, not run.
+- 🔴 **`T94`'s fix is named but not applied** to `P45`'s published recipe.
+- 🔴 **`T92` is a single instance.** One repository proves the pattern exists; it does not
+  measure how common it is. 🔵 **`ACTION GS`**: probe the 32 `NOASSERTION` rows for `ee/`-style
+  carve-outs.
+- 🔴 **Every market trend above that is not marked PRIMARY is secondary** and carries its class.
+
+### 🔵 Actions open after p154
+
+| id | what it asks | why it is affordable now |
+|---|---|---|
+| 🔵 **`GQ`** | finish the API licence/star reading on the 4 audited rows not reached | 4 calls |
+| 🔵 **`GM`** *(carried)* | surface-audit the 44 connector + 8 npm rows | 🟢 **the API makes it ~1 call per owner instead of 52 clones** |
+| 🔵 **`GS`** | probe the 32 `NOASSERTION` rows for path carve-outs (`T92`) | 1 raw fetch per row |
+| 🔵 **`GU`** | body-read the 11 grading rows and `advisingapp` before any is quoted | 12 raw fetches |
+| 🔵 **`GV`** | run the `pushed_at` freshness analysis over the 248-row population | data already in the TSV |
+| 🔵 **`GW`** | run `tsugi` against a live Moodle/Canvas and test the LTI claim | a container |
+| 🔵 **`GX`** | settle `i-educar`'s GPL-2.0 election (`-only` vs `-or-later`) | notice-header sweep |
+| 🔵 **`GY`** | query APAC education MINISTRIES directly | search, different channel |
+| 🔵 **`GT`** | find whether any Spanish/Portuguese `topic:` value has a population | 2 calls |
+| 🔵 **`GJ`** *(carried, partly paid)* | DEC countries + fieldwork dates | 🔴 **blocked: host unresolvable on two channels** |
+| 🔵 **`GO`, `GP`, `GF`** *(carried)* | bilingual gate sweep · define/retire `T55`+`T20` · vendored-file exclusion | unchanged |
+
 ## Pass 153 — 2026-10-12
 
 ⏱️ **Sixteenth pass of this date.** 🟢 **`ACTION GC` is DISCHARGED and it corrects this

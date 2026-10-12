@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P46` — measure the POPULATION in one call, then spend the body-reads where they matter *(new, p154 — Global)*
+
+🔵 **The problem this replaces.** p153 priced a ten-row shelf at **one rendered-page fetch per
+repository for stars** plus **one shallow clone per repository for a licence**. 🟢 **The
+authenticated GitHub API returns stars, forks, topics, language, `pushed_at` AND GitHub's
+detected licence for up to 100 repositories in a single call.** 🔴 **What it will NOT do is
+read a third-party file** — `get_file_contents` refuses any repository not attached to the
+session. 🟢 **So the API tells you WHICH bodies to read, and the body channel reads them.**
+
+### The recipe
+
+**Inputs:** an industry and the narrow topics that name it.
+**Cost:** 1 call per topic + 1 `ls-remote` per shortlisted row + 1 raw fetch per FLAGGED row.
+
+1. 🟢 **Enumerate by NARROW topic, never by free text** (`T95`).
+   `topic:ai-tutor` · `topic:edtech` · `topic:knowledge-tracing` ·
+   `topic:intelligent-tutoring-system` · `topic:grading`.
+   🔴 **`topic:a OR topic:b` is REJECTED** — *"logical operators only apply to text, not to
+   qualifiers"* — so budget one call per topic.
+   🔴 **And do not reach for the broad topic**: `topic:education` scored **50%** on-domain
+   against `topic:ai-tutor`'s **93%**.
+2. 🔴 **Never let a short generic term into an `OR` over `in:name,description`.**
+   `moodle OR canvas-lms OR lms OR openedx mcp` returned **60 059 rows** of generic MCP
+   infrastructure. 🟢 **An `OR` of a three-letter token is a sieve with no mesh.**
+3. 🟢 **Sort by stars, request `perPage: 30`, and ask for the FULL output.**
+   🔴 **The minimal output omits the `license` object entirely** — which is the one field this
+   pattern exists to collect.
+4. 🟢 **Triage on the licence field into THREE buckets, not two.**
+   - 🟢 **a real SPDX id** (`MIT`, `Apache-2.0`, `BSD-3-Clause`, …) → shortlist; body-read only
+     before you quote it (`P38`).
+   - 🟡 **`"spdx_id": "NOASSERTION"`** → 🟢 **a licence file EXISTS and could not be matched.
+     THIS IS THE HIGH-VALUE BUCKET.** Every bespoke, open-core and proprietary-masquerading
+     licence this shelf has been burned by lands here: `PageLM` (`P411`), `scibly` (`T92`).
+     🔴 **Read the body. Always.**
+   - 🔴 **the `license` key ABSENT** → no licence file at all. 🔴 **No grant: do not ship.**
+     3 of 3 such rows were confirmed by probing 8 paths each this pass.
+5. 🟢 **Verify existence and `HEAD` with `ls-remote`, and parse it correctly** (`T94`).
+   `git ls-remote <url> HEAD` can return **two lines** — `i-educar` advertises
+   `refs/remotes/origin/HEAD`. 🔴 **Match `\tHEAD$`; never `head -1`**, because order is not
+   guaranteed. 🔴 **Include a slug that cannot exist**; if it returns a SHA, void the run.
+6. 🟢 **Read freshness from `pushed_at`, never `updated_at`** (`T93`) — they were **115 days**
+   apart on the first row tested.
+7. 🟢 **Publish the whole population, not the shortlist.** The 248-row TSV is what lets the
+   next pass say "40% of this was already on the shelf" instead of guessing.
+
+### 🟢 What it bought, measured on this pass
+
+| | p153's way | 🆕 `P46` |
+|---|---|---|
+| 248 rows measured for ★ + licence | 🔴 **~496 round trips** (248 fetches + 248 clones) | 🟢 **10 calls** |
+| bodies actually read | 10 clones | 🟢 **5 raw fetches, aimed by the triage** |
+| rows found that the shelf lacked | — | **6 new, on-domain, ≥30 ★** |
+| known-liar row re-tested | `lumen` needed a clone | 🟢 **the API returned `GPL-3.0` directly** |
+
+🔴 **What it does not buy.** 🔴 **The licence field is a DETECTED surface, not the governing
+one.** It agreed with the tree on 6 of 6 rows this pass, including the one row whose badge
+lies — 🔴 **but six observations are not a law, and `P38` still forbids quoting a licence you
+have not read from the body.**
+
+---
+
+## 🆕 🔴 `P47` — the PATH-LICENCE gate: before you fork, ask which DIRECTORY you are standing in *(new, p154 — all regions)*
+
+🔴 **The instance that forces this pattern:** `scibly-dev/scibly` — an AI-native learning
+platform — is **AGPL-3.0 at its root and PROPRIETARY, non-production-only, inside `ee/`.**
+🔴 **A scanner that reads one root `LICENSE` reports "AGPL-3.0" and is wrong about part of the
+tree.** 🔴 **And `P44`'s size check PASSES on it**: 34 739 B is inside the AGPL band, so the
+check confirms a conclusion that holds only outside `ee/`.
+
+🔵 **Why a pattern and not a footnote.** 🟢 **Open core is the dominant commercial shape in
+education software** — a permissive or copyleft core with an enterprise directory — and this
+shelf's entire licence model assigns **one licence per repository**. 🔴 **That model cannot
+represent the thing it is auditing.**
+
+### The recipe
+
+**Inputs:** a repository you intend to fork, vendor or ship.
+**Cost:** 1 raw fetch for the root body + 1 per carve-out named + 1 directory listing.
+
+1. 🟢 **Read the root body FIRST — the whole body, not the first marker.**
+   🔴 **The carve-out lives in the PREAMBLE, above the pasted licence text**, which is exactly
+   where a marker-matcher never looks.
+2. 🟢 **Grep the root body for carve-out grammar before you classify it.**
+   `portions` · `namely` · `files that reside under` · `directory` · `licensed separately` ·
+   `licensed, not sold` · `ee/` · `enterprise`.
+   🟢 **One of those in the first 500 bytes means the repository has more than one licence.**
+3. 🟢 **Enumerate EVERY licence file in the tree, not just the root one.**
+   Probe `ee/LICENSE`, `enterprise/LICENSE`, `pro/LICENSE`, `packages/*/LICENSE`. 🔴 **A
+   wrong path must 404**, or the probe proves nothing — a deliberately wrong path on
+   `jupyter/nbgrader` returned **404** this pass, so the channel is honest.
+4. 🔴 **Read what the enterprise licence actually PERMITS, not what it is called.**
+   `scibly`'s is 1 287 B and permits *"view, copy, and modify … for non-production purposes
+   only — development, testing, and evaluation."* 🔴 **That forbids the only thing a client
+   engagement does with code.**
+5. 🟢 **Record the licence as a PAIR, path → licence**, in the evidence TSV. A single-valued
+   licence column is a data-model bug once `T92` is known.
+6. 🔴 **Decide BEFORE the first sprint, not before go-live** (`P28`'s lesson, one level up).
+   The decision is: 🟢 **use the core only and delete the enterprise directory in your fork**,
+   🟢 **buy the enterprise grant**, or 🔴 **walk away** — and the first of those requires a CI
+   check that the directory never reappears through a merge.
+
+### 🟢 The gate as a one-liner a studio can actually run
+
+```bash
+# flag every candidate whose root licence carves out a path, and list the inner licences
+for slug in $(cat candidates.txt); do
+  body=$(curl -s "https://raw.githubusercontent.com/$slug/main/LICENSE")
+  echo "$body" | head -c 500 | grep -qiE 'portions|namely|reside under|licensed separately|licensed, not sold' \
+    && echo "PATH-LICENCE SUSPECT: $slug"
+done
+```
+
+🔴 **Run it on every `NOASSERTION` row the API returns** (`P46` step 4), because that is where
+these live: 🟡 **32 of this pass's 248 rows are `NOASSERTION`, and exactly one has been
+opened.** 🔵 **`ACTION GS`.**
+
+### 🔴 Which of this shelf's rows must go through this gate
+
+| row | ★ | why |
+|---|---|---|
+| 🔴 [`scibly-dev/scibly`](https://github.com/scibly-dev/scibly) | 42 | 🔴 **CONFIRMED path-licensed.** AGPL-3.0 + proprietary `ee/` |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 029 | 🔴 `P411`'s casualty: a proprietary licence opening with the MIT grant verbatim, 8 563 B |
+| 🟡 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🟡 `NOASSERTION`, AI-native higher-ed platform, UNREAD |
+| 🟡 [`inducer/relate`](https://github.com/inducer/relate) | 437 | 🟡 `NOASSERTION`, course + assessment environment, UNREAD |
+| 🟡 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 243 | 🟡 `NOASSERTION`, secure assessment, UNREAD |
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 849 | 🟡 `NOASSERTION`, 165 teacher-facing skills, UNREAD |
+| 🟡 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 159 | 🟡 `NOASSERTION`, *"the data layer for smarter educational AI"*, UNREAD |
+
 ## 🆕 🟢 `P44` — audit the licence SURFACES before you shortlist, because the badge can lie *(new, p153 — all regions)*
 
 🔴 **The instance that forces this pattern:** `ahmedEid1/lumen` — 88 ★, the only complete

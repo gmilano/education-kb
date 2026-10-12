@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 154 — 2026-10-12
+
+🟢 **Two foundational layers this shelf has been reasoning ABOUT without ever enumerating are
+now enumerated with licences attached: ASSESSMENT/GRADING and KNOWLEDGE TRACING.**
+🔴 **And the second one — the layer every adaptive-learning claim rests on — is HALF
+UNGRANTED.**
+
+### 🔴 The knowledge-tracing layer: permissive or ungranted, never copyleft
+
+🔵 **Why this layer decides an engagement.** Every "adaptive", "personalised" or "mastery"
+claim a studio makes needs a learner model underneath it. `topic:knowledge-tracing` is **86
+repositories**; here are the top 20 by stars, licence read from the API's detector.
+
+| repo | licence | ★ | last push | what it is |
+|---|---|---|---|---|
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **446** | 2026-10-11 | 🟢 **The field's benchmark library** — already this shelf's KT reference, now with a star figure |
+| [`hcnoh/knowledge-tracing-collection-pytorch`](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) | 🟢 **MIT** | **194** | 2022-06-16 | A collection of KT implementations. 🔴 **Four years cold** |
+| [`jhljx/GKT`](https://github.com/jhljx/GKT) | 🟢 **MIT** | **141** | 2021-03-19 | Graph-based KT (IJCAI). 🔴 **Five years cold** |
+| [`jilljenn/ktm`](https://github.com/jilljenn/ktm) | 🟢 **MIT** | **140** | 2025-08-12 | 🟡 **EMEA (inferred)** — Knowledge Tracing Machines: factorization machines for KT |
+| 🔴 [`ckyeungac/deep-knowledge-tracing-plus`](https://github.com/ckyeungac/deep-knowledge-tracing-plus) | 🔴 **NO GRANT** | **124** | 2019-01-08 | DKT+ |
+| [`lccasagrande/Deep-Knowledge-Tracing`](https://github.com/lccasagrande/Deep-Knowledge-Tracing) | 🟢 **MIT** | **107** | 2020-12-04 | DKT in TF2 |
+| 🔴 [`arshadshk/SAINT-pytorch`](https://github.com/arshadshk/SAINT-pytorch) | 🔴 **NO GRANT** | **94** | 2022-04-26 | 🔴 **SAINT — one of the transformer KT baselines everybody cites** |
+| 🔴 [`seewoo5/KT`](https://github.com/seewoo5/KT) | 🔴 **NO GRANT** | **90** | 2024-08-11 | KT models in PyTorch |
+| 🔴 [`ApexEDM/GIKT`](https://github.com/ApexEDM/GIKT) | 🔴 **NO GRANT** | **83** | 2021-07-17 | Graph interaction KT |
+| [`tswsxk/EduData`](https://github.com/tswsxk/EduData) | 🟢 **Apache-2.0** | **83** | 2023-05-03 | 🟢 **Education datasets + a download/preprocess interface** — the data side of the layer |
+| [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | 🟢 **MIT** | **82** | 2026-09-17 | 🟢 **Active.** KT + cognitive diagnosis + exercise recommendation in one library |
+| [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) | 🟢 **MIT** | **78** | 2026-01-06 | 🔵 **APAC** — unified student-modelling library (FCS 2025) |
+| 🔴 [`yxonic/DTransformer`](https://github.com/yxonic/DTransformer) | 🔴 **NO GRANT** | **46** | 2025-03-24 | 🔴 **Diagnostic-transformer KT — a current-generation model with no grant** |
+| 🔴 [`arshadshk/Last_Query_Transformer_RNN-PyTorch`](https://github.com/arshadshk/Last_Query_Transformer_RNN-PyTorch) | 🔴 **NO GRANT** | **45** | 2021-04-08 | Kaggle-winning architecture |
+| 🔴 [`TianHongZXY/pytorch-SAKT`](https://github.com/TianHongZXY/pytorch-SAKT) | 🔴 **NO GRANT** | **38** | 2023-07-23 | SAKT |
+| 🔴 [`xiaopengguo/ATKT`](https://github.com/xiaopengguo/ATKT) | 🔴 **NO GRANT** | **34** | 2021-11-01 | Adversarial-training KT (ACM MM, oral) |
+| [`THUwangcy/HawkesKT`](https://github.com/THUwangcy/HawkesKT) | 🟢 **MIT** | **31** | 2023-09-14 | 🔵 **APAC** — temporal cross-effects (WSDM'21) |
+| [`jdxyw/deepKT`](https://github.com/jdxyw/deepKT) | 🟢 **MIT** | **28** | 2021-11-05 | KT in PyTorch |
+| 🔴 [`ZhijieXiong/dlkt`](https://github.com/ZhijieXiong/dlkt) | 🔴 **NO GRANT** | **17** | 2025-09-04 | 🟢 **Migrated to `pyedmine`** — follow the successor |
+| 🔴 [`HFUT-LEC/awesome-student-cognitive-modeling`](https://github.com/HFUT-LEC/awesome-student-cognitive-modeling) | 🔴 **NO GRANT** | **14** | 2024-08-01 | Resource list |
+
+🔴 **The count: 10 of 20 carry NO GRANT. 9 are MIT, 1 is Apache-2.0. ZERO are copyleft.**
+
+🟢 **That distribution is the commercially useful fact on this page.** A studio reaching for
+the layer finds no GPL trap — 🔴 **it finds an EMPTY GRANT, which is strictly worse, because
+copyleft at least tells you the price.** 🔴 **And the ungranted rows are not the fringe**:
+SAINT, SAKT, DTransformer and ATKT are the transformer baselines a client's data-science
+reviewer will ask for by name.
+🟢 **The buildable path is therefore `pykt-toolkit` (MIT) or `pyedmine` (MIT, active) as the
+substrate, with `EduData` (Apache-2.0) for datasets** — and any paper implementation treated
+as a SPEC to reimplement, never as a dependency.
+
+### 🟢 The assessment / grading layer — enumerated for the first time
+
+🔵 **`topic:grading` is 259 repositories.** The rows that matter for an education engagement,
+licence from the API's detector:
+
+| repo | licence | ★ | last push | region | what it is |
+|---|---|---|---|---|---|
+| 🟢 [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** | **1 374** | 2026-10-01 | Global | 🟢 **The most-starred permissive grading system in open source.** Assign, release, collect and autograde notebooks. 🟢 **`HEAD` `f9915da`** |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🟡 **NOASSERTION** | **437** | 2026-10-07 | 🟡 North America | Full course environment with assessment. 🔴 **Read the body before adopting** (`P47`) |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🟡 **NOASSERTION** | **243** | 2026-10-12 | 🟡 **EMEA** | 🟢 **Secure, automated exercise assessment running the instructor's own tests** — the grading substrate for programming courses |
+| 🔴 [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader) | 🔴 **GPL-3.0** | **85** | 2026-10-06 | 🟡 North America | Checks writers' and programmers' work |
+| 🆕 🔴 [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | 🔴 **GPL-3.0**, body-read **35 154 B** | **79** | 2026-10-12 | 🔵 **APAC** | 🟢 **AI marking over 24 named incumbent platforms** — the retrofit pattern |
+| 🔴 [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | 🔴 **NO GRANT** (8 paths probed) | **74** | 2026-10-06 | 🟡 North America | Offline React app for digital math homework |
+| 🔴 [`zmievsa/autograder`](https://github.com/zmievsa/autograder) | 🔴 **GPL-3.0** | **48** | 2024-07-15 | — | Assignment grading for programming courses |
+| 🔴 [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | 🔴 **AGPL-3.0** | **38** | 2026-07-17 | 🔵 **APAC** | 🟢 **Dual-agent parallel grading** |
+| 🔴 [`federicazoe/gradetools`](https://github.com/federicazoe/gradetools) | 🔴 **GPL-3.0** | **35** | 2025-07-24 | 🟡 North America | R package for a grading workflow |
+| 🔴 [`sourcegrade/jagr`](https://github.com/sourcegrade/jagr) | 🔴 **AGPL-3.0** | **33** | 2026-10-07 | 🟡 **EMEA** | Java autograder in Kotlin |
+| 🟢 [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 **MIT** | **32** | 2026-08-24 | 🟡 North America | 🟢 **Static + dynamic analysis of student Python with feedback generation** — permissive, and the right shape to put an agent behind |
+
+🔴 **The grading layer is COPYLEFT-HEAVY, and the inverse of the modelling layer.** Of those
+11 rows: **2 permissive (`nbgrader` BSD-3, `pedal` MIT)**, **6 copyleft**, **2 NOASSERTION**,
+**1 ungranted**.
+🟢 **So the composable grading stack has exactly two entry points** — and both are real:
+`nbgrader` for notebook-based courses, `pedal` for Python feedback. 🔵 **Everything else is a
+licence conversation before it is an engineering one.**
+
+### 🟢 Spaced repetition, added as a foundational row
+
+| repo | licence | ★ | last push | why it is foundational |
+|---|---|---|---|---|
+| 🟢 [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** | **4 101** | 2026-08-14 | 🟢 **The FSRS scheduler — the most-starred permissive row in the whole retention layer.** `HEAD` `ff7c85c` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** | **515** | 2026-10-11 | 🟢 **The MCP boundary onto Anki** — an agent can read and write a learner's real review queue. `HEAD` `e0e347f` |
+
+🔵 **Why these belong next to the KT rows and not in a curiosities drawer.** `pykt` tells you
+what a learner knows; **FSRS tells you when to ask again**. 🟢 **A retention claim with no
+scheduler underneath it is a chatbot with a syllabus.**
+
+🟢 **All 23 rows probed this pass verified by `git ls-remote`, 23 of 23, negative control
+returned nothing**
+([`evidence/ls-remote-verification.2026-10-12-p154.tsv`](../evidence/ls-remote-verification.2026-10-12-p154.tsv)).
+
+##### 🔴 What this page still cannot do, after p154
+
+- 🔴 **Every licence above except two is from the API's DETECTOR, not from the body.** The
+  two body-reads are `AI-Marker-Suite` (35 154 B, GPL-3.0) and the three absences confirmed
+  by probe. 🔵 **`ACTION GU`**: body-read the 11 grading rows before any of them is quoted.
+- 🔴 **`inducer/relate` and `INGInious` are `NOASSERTION`** — the `scibly` class. Unread.
+- 🔴 **The 10 ungranted KT rows were not contacted and no issue was filed.** An ungranted
+  repo can be granted on request; nobody has asked.
+
 ## Pass 153 — 2026-10-12
 
 🟢 **18 of 18 rows verified for EXISTENCE and `HEAD` by `git ls-remote`, with a negative

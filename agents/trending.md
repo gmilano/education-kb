@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 154 — the agent-search channel is replaced, and a narrow topic beats free text by 3.4×
+
+🟢 **The null streak on agent discovery was a CHANNEL defect, and this pass names the
+replacement.** For ten-plus passes this shelf asked a web search engine for *"open source AI
+agents education 2026"* and got blog listicles. 🟢 **The authenticated GitHub API, queried by
+TOPIC, returns education agents with ★, licence and last-push attached — 248 unique
+repositories across ten queries this pass.**
+
+### 🟢 The measurement that decides how to query, from now on
+
+[`evidence/channel-precision.2026-10-12-p154.tsv`](../evidence/channel-precision.2026-10-12-p154.tsv)
+
+🔵 **Rule used** (published so it can be overturned): **`EDU-SW`** = software that teaches or
+tutors a human, assesses or grades work, models a learner, or runs a school/university/course
+operation. **`EDU-CT`** = course content, curricula, reading lists, books. **`OFF`** =
+everything else. 🟡 **The classification is the curator's hand call, not an instrument's**,
+and every row is listed in the TSV.
+
+| query | population | of the top 30: `EDU-SW` | `EDU-CT` | `OFF` | 🟢 **precision** |
+|---|---|---|---|---|---|
+| 🟢 **`topic:ai-tutor`** | 78 | **28** | 1 | 1 | 🟢 **93%** |
+| 🟢 **`topic:edtech`** | 229 | **27** | 3 | 0 | 🟢 **90%** |
+| 🟡 **`topic:education topic:ai-agents`** | 44 | 15 | **11** | 4 | 🟡 **50%** |
+| 🔴 **free text: `education OR tutor OR learning OR teaching`** | 357 | 8 | 8 | **14** | 🔴 **27%** |
+
+🟢 **A narrow topic outperforms free text by 3.4× on the only metric that matters to a
+studio: is this SOFTWARE I can ship, or is it a reading list?**
+🔴 **And "use topics" is not the lesson** — the broad `education` topic scores 50%, because
+course repositories claim it. 🟢 **The lesson is the NARROW topic**: `ai-tutor`, `edtech`,
+`knowledge-tracing`, `intelligent-tutoring-system`, `grading`.
+
+### 🔴 Why free text fails here specifically, and it is not the engine's fault
+
+🔴 **The education domain's own vocabulary is owned by machine learning.** `learning`,
+`teaching`, `tutorial`, `curriculum` are all ML or dev-doc words first. The free-text sweep's
+top 30 by stars contains `JEPA-Anything`, `GPT-Policy`, `RoboICL`, `VisionHOPE`,
+`DeepEP-Ascend` and a **desk lamp** *"learning to be more than a lamp"*.
+🟢 **This is `T95`, and it is the first explanation this shelf has for its own null streak
+that does not blame the engine.**
+
+🔴 **A second query defect, measured:** `moodle OR canvas-lms OR lms OR openedx mcp` over
+`in:name,description` returned **60 059** results — generic MCP infrastructure, because `lms`
+is a three-letter token inside an `OR`. 🟢 **An `OR` of a short generic term is not a filter,
+it is a sieve with no mesh.**
+
+🔴 **A third, and it is a hard channel limit, not a defect to fix:** `topic:a OR topic:b` is
+**REJECTED** — *"Logical operators only apply to text, not to qualifiers."* 🟢 **So a
+multi-topic sweep costs one call per topic**, and `P46`'s cost arithmetic says so.
+
+### 🟢 What the sweep found that this shelf did NOT already have — honestly accounted
+
+[`evidence/api-discovery-overlap.2026-10-12-p154.tsv`](../evidence/api-discovery-overlap.2026-10-12-p154.tsv)
+
+| | count | reading |
+|---|---|---|
+| unique repositories returned, 10 queries | **248** | |
+| 🟢 **already on this shelf by full slug** | **99** | 🟢 **40% — the shelf's existing coverage of the education topic index is GOOD** |
+| 🟡 neither slug nor name present | **136** | 🔴 **and most of these are the free-text sweeps' `OFF` rows**, not missed education agents |
+| 🟢 **new AND on-domain, ≥30 ★, published this pass** | **6** | `Study-Mate` · `Omni-Edu` · `AI-Marker-Suite` · `scibly` · `econai-agent-platform` · `learnflow-ai` |
+
+🔵 **The honest headline is therefore a MEASUREMENT upgrade, not a discovery windfall.** 🟢
+**Six new rows is a good pass; 40% overlap says p139–p153's slow WebSearch grind actually
+worked.** 🔴 **What it could not do was measure what it found** — which is why four of the
+ten audited rows had star counts read off a rendered page and why `lumen`'s licence took a
+clone to settle.
+
+### 🟢 Agent-tier star distribution, re-measured on the new channel
+
+| row | ★ (p153, rendered page) | ★ (p154, API) | drift |
+|---|---|---|---|
+| `vishalsachdev/canvas-mcp` | 290 | **290** | 🟢 **0** |
+| `zijinz456/OpenTutor` | 140 | **140** | 🟢 **0** |
+| `ahmedEid1/lumen` | 88 | **88** | 🟢 **0** |
+| `ArnaudGuiovanna/tutor-mcp` | 45 | **45** | 🟢 **0** |
+| `BetterSEQTA/BetterSEQTA-Plus` | 40 | **40** | 🟢 **0** |
+| `Hesham0-0Nasser/tutor-lms-mcp` | 8 | **8** | 🟢 **0** |
+
+🟢 **Zero drift on six rows across two independent channels.** 🔵 **p153's star median of
+24 (ten rows) / 26.5 (six-row tier) therefore survives**, and so does its sharper reading:
+the best-governed row on this shelf ranks ninth of ten by stars.
+
+🔴 **`HKUDS/DeepTutor` is now 41 205 ★** (p153's page-era figure: 41 136, measured 2026-10-08).
+🟢 **+69 in four days** — and it remains **142× the top row of the MCP agent tier**, which is
+the fact a shortlist built only from MCP servers keeps hiding.
+
+##### 🔴 Not done this pass
+
+- 🔴 **`topic:mcp` was never swept cleanly for education** — the attempt became the 60 059-row
+  sieve above.
+- 🔴 **No LATAM-language topic sweep exists**, because LATAM education repositories tag in
+  English or not at all; the Spanish/Portuguese FREE-TEXT attempt returned 621 rows of which
+  the top 25 were mostly OSINT and security guides. 🔵 **`ACTION GT`**: find whether a
+  `topic:` value in Spanish or Portuguese has any population at all.
+
 ## 2026-10-12 — pass 153 — a row that calls itself MIT and is GPL-3.0, and the star median that breaks the shelf's own reading
 
 🟢 **`ACTION FJ` is DISCHARGED at the fourth attempt**, and it found the defect this shelf

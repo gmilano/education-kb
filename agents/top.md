@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 154 — 2026-10-12
+
+🟢 **The authenticated GitHub API channel is OPEN, and it is the first channel this shelf
+has had that returns ★, forks, licence and last-push for a whole population in ONE call.**
+🟢 **Six of p153's ten audited rows re-measured on it: 6/6 EXACT on stars, 6/6 AGREE on
+licence.**
+🟢 **And on `ahmedEid1/lumen` — the row whose badge lies — the API sides with the TREE.**
+🔴 **One new row carries a licence that is a property of its PATH, not of the repository.**
+
+### 🟢 The channel, stated before anything measured on it
+
+p149 recorded the GitHub API as answering; p150 WITHDREW that — *"the API host answers and
+serves nothing."* 🟢 **Both were right about what they tested.** The unauthenticated host
+reached by `curl` still serves nothing useful here; the **authenticated** `search_repositories`
+channel serves everything this shelf has been buying one fetch at a time.
+
+| channel | what it returns | cost | what it is trustworthy FOR |
+|---|---|---|---|
+| 🆕 🟢 **authed API `search_repositories`** | ★, forks, topics, `language`, `pushed_at`, `updated_at`, **licence as GitHub detects it** | 🟢 **1 call per ≤100 repos** | 🟢 **★/forks: authoritative.** 🟡 Licence: a DETECTED surface — strong, not governing |
+| 🔴 **authed API `get_file_contents`** | a file body | 1 call | 🔴 **REFUSES third-party repos** — *"not configured for this session"*. Unusable for shelf audit |
+| 🟢 `raw.githubusercontent.com` (`curl`) | the licence BODY | 1 call per repo per path guess | 🟢 **The governing surface** (`P44`) |
+| 🟢 `git ls-remote` | existence + `HEAD` | 1 round trip | 🟢 Existence/freshness (`P45`) |
+| 🟡 rendered page (`WebFetch`) | ★ as displayed | 1 per repo | 🟡 Agrees with the API — 6/6 this pass |
+
+🔵 **The split matters because the two API tools have DIFFERENT scopes.** Search reaches all
+of GitHub; file-reads are confined to this session's own repositories. 🟢 **So the API can
+tell you WHAT to read the body of, and cannot read it for you.** That asymmetry is the whole
+shape of `P46`.
+
+### 🟢 The agreement test — run against p153's own tree-read figures
+
+[`evidence/api-channel-agreement.2026-10-12-p154.tsv`](../evidence/api-channel-agreement.2026-10-12-p154.tsv)
+
+| repo | p153, from the cloned TREE | API licence | ★ p153 → API | verdict |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | **MIT** | 290 → **290** | 🟢 **AGREE, EXACT** |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | MIT | **MIT** | 140 → **140** | 🟢 **AGREE, EXACT** |
+| 🔴 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** (badge + `pyproject.toml` say MIT) | 🟢 **GPL-3.0** | 88 → **88** | 🟢 **AGREE — WITH THE TREE, AGAINST TWO BADGES** |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | **MIT** | 45 → **45** | 🟢 **AGREE, EXACT** |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | MIT | **MIT** | 40 → **40**, forks 25 → **25** | 🟢 **AGREE, EXACT** |
+| 🔴 [`Hesham0-0Nasser/tutor-lms-mcp`](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) | 🔴 **NONE, 0 surfaces** | 🔴 **no `license` key at all** | 8 → **8** | 🟢 **AGREE — the absence is reported as an ABSENCE** |
+
+🔴 **Four rows were NOT reached** — `nirholas/ai-tutor-mcp`, `admin978/canvas-mcp`,
+`zavora-ai/mcp-student-records`, `mohaneesh-03/mcp-tutor`. The batched `user:`-OR query
+ranks each owner's whole account by stars and their education repo did not make the first
+40. 🔵 **`ACTION GQ`**: finish the ten.
+
+🔵 **What this earns and what it does not.** 🟢 **It earns the right to use the API for ★ and
+to SHORTLIST on its licence field.** 🔴 **It does not earn the right to QUOTE that field**:
+the one row where a derived surface lied, the API happened to agree with the tree — one
+observation, not a law. `P38` stands: quote the body.
+
+### 🆕 🔴 `scibly-dev/scibly` — the licence that belongs to a DIRECTORY
+
+🔴 **The API says `NOASSERTION`. The body says two different things depending where you
+stand in the tree.**
+
+| surface | bytes | says |
+|---|---|---|
+| `main/LICENSE` | **34 739 B** | Opens *"Copyright (c) 2026-present Scibly"*, then: *"Portions of this software – namely all files that reside under the `ee/` directory – are licensed under the license defined in `ee/LICENSE`"*, then **AGPL-3.0 verbatim** for everything else |
+| 🔴 `main/ee/LICENSE` | **1 287 B** | 🔴 **"Scibly Enterprise License … licensed, not sold … You may view, copy, and modify this software for non-production purposes only"** |
+
+🔴 **So the repository is AGPL-3.0 at the root and proprietary, non-production-only, inside
+`ee/`** — and 🔴 **its 34 739 B root body sits squarely inside the band this shelf uses to
+*confirm* a GPL-family read** (`P44` step 4: GPL-3.0 ≈ 35 121–35 147 B, AGPL ≈ 34–35 KB).
+🟢 **The size check passes and the conclusion is still wrong**, because the size tells you
+which licence TEXT is pasted in, never what the paragraph above it carves out.
+
+🟢 **What caught it was the API's `NOASSERTION`** — GitHub's detector declining to classify
+a file it could not match. 🔵 **A `NOASSERTION` is therefore not noise: it is a POINTER at
+the rows where the licence is non-standard, which are exactly the rows a studio must read.**
+This is `T92`, and the gate it implies is 🆕 **`P47`**.
+
+### 🆕 The rows this pass adds, with the API's licence and the body where it was read
+
+🟡 **Region placement below is by LANGUAGE and OWNER STRING, which is weaker than `P36`'s
+institutional-host method** — it is marked 🟡 wherever it is an inference and nothing more.
+
+| repo | licence | ★ | last PUSH | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | 🔴 **GPL-3.0** — 🟢 **body-read, 35 154 B** | **79** | 2026-10-12 | 🔵 **APAC** | 🟢 **AI marking retrofitted onto 24 NAMED incumbent exam platforms** (智学网, 七天网络, 好分数, C30, AMEQP, 海云智评…) as a userscript: handwriting recognition, scoring, auto-submit. 🔵 **An adoption pattern no market report on this shelf names** |
+| 🆕 [`haolpku/Omni-Edu`](https://github.com/haolpku/Omni-Edu) | 🔴 **NO GRANT** — absent on 8 probed paths | **225** | 2026-09-15 | 🟡 **APAC** (owner string `…pku`) | 🔴 **"Open Foundation Models for Learning and Teaching"** — an education-specific foundation-model line, and 🔴 **the most interesting new object this pass is unshippable** |
+| 🆕 [`scibly-dev/scibly`](https://github.com/scibly-dev/scibly) | 🔴 **AGPL-3.0 + proprietary `ee/`** | **42** | 2026-09-19 | 🔴 **UNPLACED** — no region evidence found | AI-native learning platform; turns existing knowledge into interactive courses. 🔴 **Read `T92` before forking** |
+| 🆕 [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | 🔴 **AGPL-3.0** | **38** | 2026-07-17 | 🔵 **APAC** | Economics/finance course platform: teacher publishes, student submits, 🟢 **two agents grade in parallel** |
+| 🆕 [`Bbar0n234/learnflow-ai`](https://github.com/Bbar0n234/learnflow-ai) | 🟢 **Apache-2.0** | **35** | 2026-09-02 | 🟡 **EMEA** (Russian-language) | Material-preparation platform for teachers and technical speakers |
+| 🆕 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** | **890** | 2026-10-12 | 🔵 **APAC** | Study companion: plans a route, explains, builds projects. 🟢 **Second-largest education-agent row on this shelf after `DeepTutor`** |
+
+🟢 **Existence and `HEAD` verified for every row above by `git ls-remote`, 23 of 23, with a
+negative control that returned nothing**
+([`evidence/ls-remote-verification.2026-10-12-p154.tsv`](../evidence/ls-remote-verification.2026-10-12-p154.tsv)).
+
+##### 🔴 What this page still cannot do, after p154
+
+- 🔴 **4 of the 10 audited rows have no API reading** (`ACTION GQ`).
+- 🔴 **The 44 connector rows and 8 npm rows are still unaudited for surface agreement**
+  (`ACTION GM`) — 🟢 **but the channel that makes it affordable now exists.**
+- 🔴 **`scibly` is unplaced by region**, and the placements above are language-based 🟡
+  inferences, not `P36` measurements.
+- 🔴 **`Omni-Edu`'s 225 ★ are real and its grant is absent** — the shelf cannot recommend it
+  and cannot ignore it.
+
 ## Pass 153 — 2026-10-12
 
 🟢 **Every row on this page is now clone-verified, star-measured and

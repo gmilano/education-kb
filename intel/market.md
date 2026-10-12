@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 154 — 2026-10-12
+
+⏱️ **Seventeenth pass of this date.** 🟢 **`ACTION GJ` is PARTLY DISCHARGED — the DEC survey's
+SAMPLE SIZE is now known (30 000+ responses) and its partner named, from a channel that is
+not the publisher's own host.** 🔴 **The host itself is STILL `ENOTFOUND` on a second
+independent attempt, so countries and fieldwork dates remain unread.**
+🔴 **EIGHTH pass with no quotable market size — and this pass finds the contradiction is
+WORSE at the REGION level than at the global one.**
+🟢 **IESALC gains a dimension it did not have: adoption BY INSTITUTION TYPE.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🟢 **`ACTION GJ`** | 🟡 **PARTLY DISCHARGED** | 🟢 **DEC LATAM 2026: "over 30 000 responses", partners include Tecnológico de Monterrey and its Institute for the Future of Education.** 🔴 Countries, fieldwork window and student/faculty split: **STILL UNREAD** |
+| 🔴 **the DEC host** | 🔴 **`ENOTFOUND` again, second channel, second pass** | `digitaleducationcouncil.com` does not resolve from here. 🟢 **The post's existence and headline are corroborated by the search channel's index** |
+| 🆕 🔴 **a figure that TRAVELS** | 🔴 **FLAGGED, NOT ADOPTED** | 🔴 **One source reports global student AI use rising "66% (2024) → 92% (2025)". DEC reports "92% of students" for LATAM in 2026.** 🔴 **The same 92% in two different scopes and years is a provenance smell, not a corroboration** |
+| 🆕 🟢 **IESALC by institution type** | 🟢 **NEW DIMENSION** | 🟢 **Private non-profit 84% · public 68% · private for-profit 52%** use AI in ≥1 area |
+| 🟢 **IESALC detail, refined again** | 🟢 **Decimals where p153 had integers** | Teaching & learning **73.5%** (p153: 74%) · research **57.0%** · administration **34.1%** · community engagement **20.0%** · formal framework **26%** · any use **87%** · **200 institutions / 19 countries** |
+| 🆕 🔴 **market size** | 🔴 **EIGHTH pass, nothing quotable** | New 2026 base: 🔴 **$11.4B** (Grand View via GII: $8.3B 2025 → $11.4B 2026 → $57.2B 2033, **CAGR 25.9%**) alongside carried **$10.6B** (TBRC, from $7.52B 2025, **CAGR 40.9%**) and **$12.3B** (vendor-attributed, unverifiable). IMARC: **$6.4B 2025 → $79.6B 2034, CAGR 31.35%** |
+| 🆕 🔴 **the REGIONAL figures contradict the global ones by ~3×** | 🔴 **NEW, and it is the sharpest version of this problem yet** | MarketsandMarkets: **North America $951M (2024) → $2 303.2M (2029), CAGR 15.9%.** The share route: **37.5% of $8.3B (2025) ≈ $3.11B.** 🔴 **Adjacent years, 3.3× apart — and a 15.9% regional CAGR against a 25.9–40.9% global one** |
+| 🔴 **no open-source vendor in any market source** | 🔴 **EIGHTH pass** | 🟢 **Still this KB's product, and still its oldest unbroken finding** |
+
+### 🔴 The market-size spread, now diagnosed one level deeper
+
+p153 established that the four 2026-base figures *"disagree about what counts as a market."*
+🟢 **This pass can say something stronger and more useful: the disagreement is LARGER between
+a region and its own global total than between two global totals.**
+
+| route to a North America 2026-ish number | figure | implied CAGR |
+|---|---|---|
+| 🔴 **direct regional report** (MarketsandMarkets) | **$951M (2024) → $2 303.2M (2029)** | **15.9%** |
+| 🔴 **share of global** (37.5% of Grand View's $8.3B, 2025) | **≈ $3.11B** | 25.9% (global) |
+| 🔴 **share of global** (36% of ~$10.2B, carried from p153) | **≈ $3.68B** | 41.5% (global) |
+
+🔴 **Three routes, three answers, a 3.9× spread on the SAME region in adjacent years.**
+🔵 **Why this is worth publishing rather than suppressing**: a studio does not sell into "the
+global AI-in-education market", it sells into a region. 🟢 **So the number a client will be
+quoted at them is precisely the one with the widest disagreement**, and the defensible move is
+to quote adoption and governance rates — which multiple independent publishers agree on to
+within a few points — and refuse the currency figure. 🔴 **Eight passes of refusing it is now
+a position, not a gap.**
+
+## Opportunities by region
+
+🔵 **Region vocabulary is the closed five.** 🟡 **EMEA includes Africa by definition, and this
+pass's EMEA evidence is Europe-weighted** — p153's Africa findings (AU Continental AI
+Strategy; South Africa draft National AI Policy 2026, one source marking it abrogated
+`2026-04-27`; Kenya draft 2025–2030; Nigeria *"aspirational rather than systemic"*) are
+**carried, not re-queried.**
+
+### North America
+
+🟢 **Evidence this pass:** only **10%** of institutions have formal AI guidelines · **71%** of
+US teachers lack AI training · Carnegie Mellon + Gates Foundation put **$55M** into AI
+courseware for gateway college courses · OpenAI launched a country-level education programme
+with **8 national partners** in Q1 2026 · **Colorado and Texas** have piecemeal state
+requirements · 🔴 **there is no FDA-equivalent for educational technology** and adoption is
+decided school-by-school, district-by-district.
+
+🟢 **The opportunity, stated against that evidence.** 🔴 **A 10%-guidelines / 71%-untrained
+market does not buy a model; it buys a GOVERNED deployment.** 🟢 **Sell the gate, not the
+tutor**: `zavora-ai/mcp-student-records`-class approval gating (23 approval-gated writes,
+FERPA logging) wrapped around an off-the-shelf tutor, plus the teacher-training layer the
+71% implies. 🟢 **Permissive rows that fit: `studentinsights` (MIT) for district early
+warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apache-2.0) for
+courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
+
+### EMEA
+
+🟢 **Evidence this pass:** the UK's AI Adoption Summit committed **£200m+**, with government
+as funder, Big Tech as delivery partner and **Skills England** setting the curriculum
+framework — 🔴 **and few traditional education providers named in the delivery model** ·
+the **2026 Europe EdTech 200** list exists · GDPR remains the #1 driver of security strategy
+· Bandwidth/Cavell (Feb 2026) name **compliance complexity and data governance** as the top
+enterprise barriers · the EU AI Act classifies education AI as **high-risk**.
+
+🟢 **The opportunity.** 🔵 **EMEA is the only region where the regulatory clock is a sales
+argument rather than an obstacle.** p152/p153's dates stand (amendments in force
+`2026-07-27`; stand-alone high-risk `2027-12-02`), and 🔴 **a high-risk classification means
+documentation, logging and human oversight are PRODUCT FEATURES, not compliance overhead.**
+🟢 **Sell the audit trail**: `P47`-grade licence provenance, per-decision logging, and the
+`INGInious`-class secure assessment substrate that already runs in European universities.
+🔴 **The £200m+ delivery model is the opening**: a programme whose curriculum is set by a
+skills body and whose delivery is outsourced is a programme that needs an integrator.
+
+### APAC
+
+🟢 **Evidence this pass:** Pearson × TCS announced a multi-year AI learning alliance aimed at
+employer skills gaps · LearnUpon opened a Sydney HQ with **Create+** AI course authoring ·
+Alteryx relaunched its Academy with AI learning paths · OpenAI named an **ANZ policy lead** as
+Canberra tightens AI governance and copyright · Diligent Institute: **57%** of organisations
+in Asia have AI in ≥1 area (enterprise-wide, 🔴 **not education**) · Forrester expects
+sovereignty to shape infrastructure for ~half of APAC firms.
+
+🔴 **The named gap, stated so it cannot be mistaken for coverage: NO ministry-level K-12 or
+higher-education AI policy was returned for ANY APAC jurisdiction this pass** — not Singapore
+MOE, not China, not the Australian state departments. 🔵 **`ACTION GY`**: query the ministries
+directly rather than the enterprise-trend channel.
+
+🟢 **The opportunity, and it is the one the market reports cannot see.** 🔵 **APAC's education
+AI is arriving as a RETROFIT onto incumbent platforms, from below.**
+`five-plus-one/AI-Marker-Suite` (GPL-3.0, 79 ★) automates marking across **24 named Chinese
+exam platforms** as a browser userscript; `ai-lingnan/econai-agent-platform` (AGPL-3.0) runs
+**two graders in parallel**; `BetterSEQTA-Plus` (MIT, 40 ★, 25/25 Australian hosts at p152) is
+a student-built extension over a commercial school platform. 🟢 **Teachers and students are
+already shipping the integration layer vendors have not built** — and a studio's product is
+the supported, licence-clean version of it. 🔴 **Note the licences: the retrofit layer is
+GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
+
+### LATAM
+
+🟢 **Evidence this pass:** DEC 2026 LATAM — **92% of students, 79% of faculty** actively
+engaging, **30 000+ responses**, with Tecnológico de Monterrey and its Institute for the
+Future of Education · 🔴 **a DEC official: "only 30% of universities in Latin America have
+published policies on how to use AI"** · UNESCO IESALC × UNU-IAS over **200 institutions in
+19 countries**: **87%** any use, **73.5%** teaching and learning, 🔴 **26%** with a formal
+framework, and 🟢 **by type: private non-profit 84% · public 68% · private for-profit 52%** ·
+Chile leads with a National AI Policy since 2021 and a law under discussion · Brazil and
+Colombia have national strategies but 🔴 **no education-specific regulation** · Mexico's SEP,
+ANUIES and Observatorio IA have issued **non-binding** recommendations · the IDB has published
+on AI regulatory frameworks for the region · 🔴 **Times Higher Education calls regional
+adoption "uneven".**
+
+🟢 **The opportunity.** 🔴 **A 92%-student / 26%-framework market is not an adoption problem,
+it is a GOVERNANCE VACUUM**, and p153's qualifier keeps it honest: **88% of LATAM faculty
+report only "minimal" to "moderate"** engagement, so 79% is breadth, not depth.
+🟢 **The sellable unit is the institutional AI framework itself** — policy, approval gates,
+audit logging, staff enablement — with the tutor as the thing it governs. 🔵 **The
+institution-type split tells you who buys first: private non-profits (84%) are ahead and
+public institutions (68%) are the volume.** 🟢 **Permissive LATAM-native rows to build on:
+`menthorlabs/menthor` (Apache-2.0, 583 ★) and `Universidade-Livre/ciencia-da-computacao`
+(MIT, 20 914 ★) for content; `academico-sis/academico` (MIT) for the SIS layer.** 🔴 **And
+`i-educar` (GPL-2.0, 719 ★) is the incumbent to integrate WITH over a boundary, not to fork**
+— see `ACTION GX`.
+
+##### 🔴 What this page still cannot do, after p154
+
+- 🔴 **`ACTION GJ` is not closed.** Sample size known, countries and dates not. The publisher's
+  host has failed twice on two channels.
+- 🔴 **The 92% collision is unresolved** and will stay so until a primary is read.
+- 🔴 **Africa was NOT re-queried**; p153's four jurisdictions are carried.
+- 🔴 **No APAC ministry source** (`ACTION GY`).
+- 🔴 **Every market figure on this page is secondary**, and the regional ones now disagree with
+  the global ones by more than the global ones disagree with each other.
+
 ## Pass 153 — 2026-10-12
 
 ⏱️ **Sixteenth pass of this date.** 🟢 **`T88` is CORROBORATED on a channel that did not
