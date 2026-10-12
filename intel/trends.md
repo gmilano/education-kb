@@ -6,6 +6,185 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 140 — 2026-10-12
+
+🔵 **This pass was refused the probe it registered, answered the question from source instead,
+and refuted three of its predecessor's findings in the process.** Two of the four new trends
+below are corrections to p139 rather than additions to it.
+
+### 🆕 `T26` — a licence grant has a DEPTH, and a scanner that reads one file reads the wrong answer
+
+🔴 **Both Maven artefacts p139 recorded as declaring nothing DO declare a licence — two and
+three levels up their parent-POM chains.** `ACTION CR`'s falsifier fired exactly as written:
+
+| artefact | own POM | inherits | from | depth |
+|---|---|---|---|---|
+| `net.oauth.core:oauth` 20100527 | 🔴 nothing | 🆕 **Apache-2.0** | `net.oauth:oauth-parent:20090531` | 3 |
+| `org.sakaiproject.kernel:sakai-kernel-impl` 23.3 | 🔴 nothing | 🆕 **ECL-2.0** | `org.sakaiproject:oss-parent:1` | 4 |
+
+🔵 **`T17` said a licence identifier is not a licence. `T26` says the absence of an identifier
+is not the absence of a licence.** The grant exists; it is three files and one `groupId` change
+away from where anyone looks. 🔴 **`net.oauth.core:oauth`'s grant lives under a DIFFERENT
+`groupId`** (`net.oauth`, not `net.oauth.core`), which is why sixteen years of use never
+surfaced it.
+
+🔴 **And the correction makes the defect worse, not milder.** With inheritance resolved, **5 of
+5** Maven artefacts on this shelf declare a licence and 🔴 **4 of 5 (80%)** ship no licence text
+in the jar — against p139's 40–67% and npm's 33%. 🔵 **So `T21` survives its own correction with
+a steeper gradient: PyPI 9%, npm 33%, Maven 80%.** The practical rule for a studio is unchanged
+in direction and sharper in degree: *a Java dependency's grant is probably not in the artefact,
+and may not be in its POM either.* Measured in
+[`p140-pom-parent-chain`](../compose/code/p140-pom-parent-chain/README.md).
+
+### 🆕 `T27` — a package name can be RETIRED while the registry still answers to it
+
+🔴 **`openedx-learning` 0.33.0 and 0.33.1 are not broken releases. They are a deliberate rename
+shim**, and p139 read the symptom as a defect. The 0.33.1 `setup.py` says so in its own
+docstring:
+
+> *"Builds a final shell release of openedx-learning which simply 'redirects' to openedx-core"*
+
+with `packages=[]`, `install_requires=["openedx-core==0.34.1"]`, and
+`Development Status :: 7 - Inactive`. 🟢 **So `pip install openedx-learning` WORKS** — it resolves
+the shim and installs `openedx-core`. p139's *"`pip install` resolves to the empty one"* is true
+of the bytes and wrong about the outcome.
+
+🔴 **The real finding is that this KB was tracking a retired name for two passes.** The live
+artefact is [`openedx-core`](https://pypi.org/project/openedx-core/) **1.9.1**, uploaded
+**2026-10-09**, versioned to continue exactly where the shim points (first release `0.34.1`), and
+it consolidates six top-level packages — `openedx_core`, `openedx_learning`, `openedx_tagging`,
+`openedx_catalog`, `openedx_content`, `openedx_django_lib` — into one distribution.
+
+🟢 **It also vindicates `T21`'s mechanism on the newest artefact on the shelf.** `openedx-core`
+1.9.1's wheel carries `dist-info/licenses/LICENSE.txt` (**35 139 B**) with
+`License-Expression: AGPL-3.0-only` and `License-File: LICENSE.txt` under Metadata-Version 2.4 —
+textbook **PEP 639**, the grant shipped by the build system rather than by the maintainer.
+🔵 **And it removes p139's single PyPI hit: the one row in that denominator was a shim with no
+code, so PyPI's declared-but-absent rate on this shelf is 0 of 10, not 1 of 11.**
+
+🔵 **The rule this yields is a freshness check, not a licence check**: *before carrying a package
+row forward, read its latest release's `Development Status` classifier and its `long_description`
+for a rename.* Both signals were in the artefact p139 downloaded.
+
+### 🆕 `T28` — a tool surface is a property of a DEPLOYMENT, not of a package
+
+🔴 **`ACTION CP` asked whether a live `tools/list` matches a build's static tool count. On the
+npm shelf it must — and on the first non-JavaScript row this KB has read, it does not.**
+
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) registers **55** tool
+names in non-test sources, and 🔴 **its own CI-enforced test asserts a live `tools/list` of 46**
+(`tools/tools_register_test.go:221`). Three gates explain the gap — `deps.Institution`,
+`REGULATION_GOAL`, `deps.OAuthGranularScopes` — and the repository states the principle in its
+own comment:
+
+> `// [1] GoalDecomposer — gated by REGULATION_GOAL=on. When off, neither tool is`
+> `// registered, so the surface is invisible to the LLM and the system prompt has no`
+> `// instruction to call them.`
+
+🔵 **This retires the question "how many tools does this connector have?"** There is a count per
+configuration. 🟢 **On the eight npm rows the count is still forced** — every one is a single
+server instance registering literal names with no gate, so static *is* live there, provably,
+without running anything. 🔴 **But no payload read can tell a studio which flags a client's
+deployment sets**, which is why `P18` step 5 survives and why it is now written per
+configuration rather than per package.
+
+🔴 **A second shape makes the same point without a flag.** `@owen-x-tech/canvas-mcp` 1.1.0 builds
+**two** MCP server instances in one file, selected by `--http`. Both happen to expose 62 tools —
+but the HTTP path registers **1** by name literal and 61 through
+`for (const tool of tools) httpMcp.registerTool(tool.name, …)`. 🔵 **A name-literal count of that
+path returns 1 where the server serves 62**, and that 61-tool blind spot is invisible to every
+instrument this KB has used until now. *Two transports on one server is one surface; two server
+instances is two.* Measured in
+[`p140-live-surface-bound`](../compose/code/p140-live-surface-bound/README.md).
+
+### 🆕 `T29` — origin lives in the code, not in the metadata, and nine passes looked in the wrong place
+
+🟢 **`ACTION CU` booked two regions on evidence that is not a name**, after nine passes of
+recording an ownership gap:
+
+| row | evidence | region |
+|---|---|---|
+| `eth-moodle-mcp` 1.3.3 | `moodle-app2.let.ethz.ch` (**4×**), `safari.ethz.ch` | 🟢 **EMEA** — ETH Zürich |
+| `mcp-canvas-lms` 1.0.5 | `canvas.ust.hk` (**2×**), compiled into a request path | 🟢 **APAC** — HKUST, Hong Kong |
+
+🔵 **Both halves of the action's falsifier are true, of different layers, and that is the
+trend.** 🔴 **The npm metadata layer carries no origin signal**: 5 of 8 payloads declare no
+author at all, and the two that do give a personal `gmail.com` address and a bare name. 🟢 **The
+code layer carries it plainly**, because a hardcoded hostname is a *binding* rather than a label
+— an author field can claim anything, but the server has to reach the real host to function.
+
+🔴 **The sharpest instance is a defect as well as evidence.** `mcp-canvas-lms` reads
+`CANVAS_BASE_URL` in `dist/common/utils.js:4` and then ignores it in
+`dist/operations/canvas.js:58`, which hardcodes `https://canvas.ust.hk/api/v1/courses`. 🔵 **One
+of its three tools is wired to HKUST whatever the client configures** — the same class as
+`eth-moodle-mcp`'s *"Works with Any Moodle"* plus ten hardcoded `ddca_*` tools, one step worse
+because this one claims configurability and silently drops it. 🔴 **Two of eight rows advertise
+"any instance" and hardcode one institution.**
+
+🟡 **The gap is narrowed, not closed: 6 of 8 rows still yield nothing.** And the inverse case is
+worth recording — `overhangio/tutor`'s `pyproject.toml` names **Edly**, which is *correct and
+current* (Edly, the edtech arm of Pakistan-based Arbisoft, acquired Overhang.IO on 2023-03-27 and
+Tutor's founder Régis Behmo leads its technical direction there), while the **GitHub organisation
+name is the stale signal**. 🔵 **A row's org name is not evidence of anything**, which is `T29`
+reached from the other direction. Measured in
+[`p140-origin-evidence`](../compose/code/p140-origin-evidence/README.md).
+
+### 🔵 p140 on `T10`: the search channel returned ZERO new findings in four regions and Global
+
+🔴 **Every regulatory and market candidate this pass's search battery returned was already in
+this KB.** The mandated sweep ran globally and once per region; each hit was then grepped against
+`intel/` before being written, per the rule `T24` created. The result:
+
+| candidate from this pass's searches | already held in |
+|---|---|
+| `H.R. 8747` K-12 AI Literacy and Readiness Act, 134 bills / 31 states, CA `AB 1159`, Oklahoma + Maryland oversight, NYC moratorium | `intel/market.md`, `intel/trends.md` |
+| EU AI Act omnibus dates, EMEA market ~$2.64B, OECD *Digital Education Outlook*, Finland/Estonia/Netherlands, UK £4M | `intel/market.md`, `intel/trends.md` |
+| Vietnam Law `134/2025/QH15`, Korea AI Basic Act 2026-01-22, Taiwan AI Basic Act, Australia National AI Plan | `intel/market.md`, `intel/open-gaps.md` |
+| UNESCO IESALC + UNU-IAS (200 HEIs, 19 countries, 87%/74%/26%), DEC LATAM 79%, Uruguay, Colombia CONPES 4144, Peru 31814, Brazil 15.211 | `intel/market.md` |
+| 86% adoption, VC $1B H1 2026 −26%, 29% student confidence, faculty intent 76%→67% | `intel/market.md` |
+
+🔵 **This is `T10` at its strongest statement yet: the demand-side search channel is now
+returning this KB's own contents.** 🟢 **Stated as an informed gap rather than left as silence** —
+a pass that published these as `🆕` would have inflated its novelty by a dozen findings, which is
+precisely the `T24` failure mode. 🔴 **The entire yield of this pass came from reading artefacts**,
+and that is now the expected shape rather than a surprise.
+
+### 🔴 p140 adds a second entry to the refusal ledger, and widens the first
+
+p139 diagnosed its blocked action as *"the environment's network policy refuses government
+hosts."* 🔴 **That diagnosis was too narrow, and a new blocker sits beside it:**
+
+| channel | status | note |
+|---|---|---|
+| 🟢 `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org`, `repo1.maven.org`, `github.com` (smart-HTTP), `raw.githubusercontent.com` | reachable | the whole of this pass's evidence came through these |
+| 🔴 `api.github.com` | `403` | — |
+| 🔴 government hosts **and 🆕 university hosts** | `403` at `CONNECT` | `canvas.ust.hk`, `moodle-app2.let.ethz.ch`, `safari.ethz.ch` all refused — 🔵 **the policy is an allowlist of registries plus GitHub, not an exclusion of governments** |
+| 🔴 🆕 **executing an installed npm connector** | **refused by sandbox policy** | a *different* mechanism from the network refusals, and the reason `ACTION CP` ran as a source read |
+
+🔵 **Neither is a probe to re-register.** The first is a request to widen a network policy; the
+second is a request to widen an execution policy. Both belong to whoever owns this environment,
+not to the next action list.
+
+### 🟢 p140 confirms p139's instrument by reimplementation, and finds one latent defect in it
+
+🟢 **An independently written tool extractor reproduced `p139-tool-count-drift`'s counts exactly
+on all eight rows** — 227, 62, 54, 18, 17, 16, 14, 3. 🔵 **That agreement is worth more than a
+re-run**, and it took a correction to reach: this pass's first draft reported 17 where p139 said
+16, 4 where it said 3, and 64 where it said 62. 🔴 **p139 was right every time**; the cause was
+omitting its `SERVER_CTOR` exclusion, so `new McpServer({ name: 'moodle-mcp' })` read as a tool.
+*The server's own name is not a tool, and a probe that does not know this inflates every row by
+one.*
+
+🔴 **One latent defect found.** `header_holder.extract_holder("Copyright © 2024")` returns
+**`"2024"`** — a nameless notice lets the year fall through into the holder capture. 🟢 **p139's
+published results are unaffected**; its three rows contain no nameless notice, and an audit of its
+committed detail table finds zero year-shaped holders. 🔴 **It fired on the first new row this
+pass read**: `adaptlearning/adapt_framework` ships `"attribution": "Copyright © 2024"`, which
+unguarded publishes `2024` as a foreign copyright holder of the repository. 🔵 **p139's committed
+code is left untouched** — its result is a dated record and editing the instrument beneath it
+would invalidate rather than correct it. The guard and its tests live in
+[`p140-rootonly-header-reach`](../compose/code/p140-rootonly-header-reach/README.md).
+
 ## Pass 139 — 2026-10-12
 
 ### 🆕 `T21` — the registry's default build behaviour decides whether the grant ships

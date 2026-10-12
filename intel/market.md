@@ -6,6 +6,47 @@ updated: 2026-10-12
 
 # Education — market map and opportunities
 
+**Pass 140, 2026-10-12.** 🔴 **No market figure changed this pass either, and for the second
+consecutive pass the reason is that the channel which produces them returned nothing at all.**
+Ten searches ran — global plus **one per region for North America, EMEA, APAC and LATAM** —
+and yielded 🔴 **0 new rows and 0 corrections.** 🔵 **Every single candidate they surfaced is
+already carried on this page**, and each was grepped against `intel/` before being written, per
+the rule `T24` created. Per-region outcomes, including the empty ones, are recorded under
+[**What the regional channel returned this pass *(p140)***](#-what-the-regional-channel-returned-this-pass-p140)
+rather than left as silence.
+
+🟢 **What DID move this pass is placement, and it moved by measurement rather than by search.**
+`ACTION CU` booked **EMEA** and **APAC** on hostnames compiled into shipped code — the first rows
+this KB has placed on evidence that is not a name — and a package-identity probe relocated the
+Open edX learning core's steward. 🔵 **So this page's regional sections below grew from artefact
+reads, not from the demand channel**, which is now the expected shape rather than a surprise.
+
+🔴 **`ACTION CW` (Texas HB 149 / TRAIGA, in force 2026-01-01) remains UNREAD and is NOT
+published.** p139 registered it after the statutory text proved unreachable. This pass
+characterised the cause precisely: the proxy gateway answers **`403` to `CONNECT`** for
+government hosts *and* for university hosts, so it is an allowlist of package registries plus
+GitHub. 🔵 **`ACTION CW` is therefore not a probe to re-register** — it is a request to widen a
+network policy, and it belongs to whoever owns this environment.
+
+## 🔵 What the regional channel returned this pass *(p140)*
+
+🔵 **Recorded per region, including the empty results**, because an unrecorded empty region is
+indistinguishable from a covered one. Queries: `AI education {region} 2026 adoption regulation
+players`, once per region, plus the four global queries.
+
+| region | what the channel returned | already held in | verdict |
+|---|---|---|---|
+| **North America** | `H.R. 8747` K-12 AI Literacy and Readiness Act (July 21 markup); **134 bills across 31 states**; CA `AB 1159`; Oklahoma + Maryland human-oversight statutes; Georgia + Mississippi CS credits; NYC's one-year student-facing moratorium through grade 8; the student-authored *STUDENTS FIRST Act of 2026* | `intel/market.md`, `intel/trends.md`, `intel/open-gaps.md` | 🔴 **0 new** |
+| **EMEA** | EU AI Act omnibus dates (Council 2026-06-29, in force 2026-07-27, Annex III to 2027-12-02); EMEA market ~**$2.64B** 2026; Finland/Estonia/Netherlands as K-12 leaders; OECD *Digital Education Outlook 2026*; UK **£4M** for lesson-planning and marking tools; UAE National AI Strategy 2031; SDAIA's framework | `intel/market.md`, `intel/trends.md` | 🔴 **0 new** |
+| **APAC** | Vietnam Law **134/2025/QH15** in force 2026-03-01 (the statute behind Decision 33); Korea's AI Basic Act **2026-01-22** with a one-year penalty grace period; Taiwan's AI Basic Act (Dec 2025); Australia's National AI Plan + AI Safety Institute; China/India/Japan adoption dominance | `intel/market.md`, `intel/open-gaps.md`, `intel/trends.md` | 🔴 **0 new** |
+| **LATAM** | UNESCO IESALC + UNU-IAS (200 HEIs, 19 countries, **87%** using AI, **74%** in teaching, **26%** with a formal strategy); DEC LATAM faculty **79%**; Uruguay's CoE Framework Convention signature; Colombia **CONPES 4144**; Mexico's 2024 federal bill; the UNESCO LAC Observatory partner list | `intel/market.md` | 🔴 **0 new** |
+| **Global** | **86%** of education organisations using generative AI; VC into education AI ~**$1B** H1 2026, 🔴 **−26% YoY**; **29%** of students think instructors are equipped; US+Canada faculty intent **76% → 67%** | `intel/market.md` | 🔴 **0 new** |
+
+🔵 **This is `T10` at its strongest statement yet: the demand-side search channel is now returning
+this KB's own contents.** 🟢 **A pass that published these as `🆕` would have inflated its novelty
+by a dozen findings** — exactly the failure `T24` was written to catch. 🔴 **The entire yield of
+this pass came from reading artefacts.**
+
 **Pass 139, 2026-10-12.** 🔴 **No market figure changed this pass, because the channel that
 produces them returned nothing.** Eleven searches were run — four global and **one per region for
 North America, EMEA, APAC and LATAM** — and they yielded **0 new rows and 0 corrections** anywhere
@@ -216,6 +257,50 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 p140 — the Open edX steward is a US non-profit, and its own repositories disagree about where to send a notice
+
+🔴 **No new North American instrument this pass — the channel returned only rows this page
+carries.** What is new is measured, and it lands on the supply side rather than the policy side.
+
+🆕 **The Open edX learning core's live artefact is stewarded from the United States, and this KB
+was tracking the wrong package.** [`openedx-core`](https://pypi.org/project/openedx-core/)
+**1.9.1** (uploaded **2026-10-09**) names `David Ormsbee <dave@axim.org>` — **Axim
+Collaborative**, the US non-profit that is edX Inc. *renamed*, holding the ~$700–800M in net
+proceeds Harvard and MIT received when the edX brand was sold to **2U**, and obligated to apply
+them to public educational purposes. 🔵 **For a North American engagement this is the counterparty
+that matters**: the platform's steward is a US charitable entity with a public-benefit mandate,
+not a vendor.
+
+🔴 **And its own repositories give three different answers to "who do we notify?"**
+
+| layer | artefact | holder | contact |
+|---|---|---|---|
+| repo | `openedx/XBlock` | `edX` | 🔴 `oscm@edx.org` |
+| repo | `openedx/codejail` | `edX` / 🆕 `Open edX Project` | 🆕 `oscm@openedx.org` |
+| registry | `openedx-core` 1.9.1 | 🆕 `David Ormsbee` | 🆕 **`dave@axim.org`** |
+
+🟢 **The holder name is defensible** — `edX` is the pre-rename identity of the current steward.
+🔴 **The contact is not**: `edx.org` is operated by **2U**, a different company, so one of two
+sibling repositories in one GitHub organisation routes its notice obligation to the wrong
+organisation. 🔵 **This is a procurement finding, not a pedantic one**: a US institution's counsel
+asked to discharge an AGPL-3.0 notice duty on an Open edX customisation has three addresses and no
+way to choose between them from the repositories alone.
+
+🟡 **Two smaller North American placements, both measured:**
+
+- 🆕 `Crosstalk-Solutions/project-nomad` is the only one of five `ROOT_ONLY` rows read this pass
+  whose Apache-2.0 appendix is **filled in** — `Copyright 2024-2026 Crosstalk Solutions LLC`, a US
+  entity, corroborated in `package.json`. 🟢 **One row in five doing licence hygiene correctly, and
+  it is a North American commercial one.**
+- 🔴 `edu.ksu.ome.lti:lti-launch` 1.4.7 (**Kansas State University**) remains the worst Maven row
+  on this shelf and the correction made it starker: of **5 of 5** artefacts that declare a licence,
+  **4 (80%)** ship no text, and this one declares the strongest obligation of them all (LGPL-3.0).
+  🔵 **It is still the LTI→OAuth-subject mapping pattern `P13` depends on.**
+
+🔴 **`ACTION CW` — Texas HB 149 (TRAIGA, in force 2026-01-01) — is still unread**, and this pass
+established that the cause is a network allowlist rather than a per-host accident. Not
+re-registered.
 
 #### 🆕 p139 — the state-board thesis has a federal counterparty now, and a measurable ownership defect
 
@@ -485,6 +570,43 @@ Canada** — which is a hole in this page's coverage, not a finding about those 
 written down so the K-12 richness above is not mistaken for regional completeness.
 
 ### EMEA
+
+#### 🆕 p140 — EMEA is the first region this KB has placed on MEASURED evidence, and it took nine passes
+
+🟢 **🆕 `ACTION CU` booked EMEA on a hostname compiled into shipped code.**
+[`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) **1.3.3** carries
+`https://moodle-app2.let.ethz.ch` **four times** and `https://safari.ethz.ch` once — **ETH
+Zürich's** production Moodle (run by its *Lehrentwicklung und -technologie* unit) and its SAFARI
+course platform.
+
+🔵 **Why this is different in kind from every previous regional attribution on this page.** p139
+called this row *"the first EMEA-owned connector measured at the tool layer"* on the strength of
+its `ddca_*` tool descriptions — which is a reading of prose. 🟢 **A compiled-in hostname is a
+binding**: the server does not function pointed anywhere else, and an author field can claim any
+country while a request path cannot. 🔴 **Nine passes of ownership gap were a failure of looking
+at the layer where looking works** (`T29`).
+
+🔴 **The region's correction this pass is about Sakai, and it raises the review burden.** p139 told
+this page that Sakai's two kernel artefacts had *"opposite licence posture"*. 🔴 **Both are
+ECL-2.0** — `sakai-kernel-impl` 23.3 inherits it from `org.sakaiproject:oss-parent:1`, three levels
+up. 🔵 **For a European university running Sakai, the practical consequence is worse than the
+original claim**: the grant is **ECL-2.0**, *education's own licence*, which off-the-shelf scanners
+do not recognise; it is declared in a sibling POM three levels up; and **neither jar ships any
+licence text**. 🟢 **The fix is build configuration, not law** — `org.imsglobal:basiclti-util`
+1.2.0 ships `META-INF/LICENSE` and `META-INF/NOTICE` correctly — which is the sentence to put in
+front of a platform's maintainers.
+
+🔴 **No new EMEA instrument.** The channel returned the EU AI Act omnibus dates (already `T16`),
+the ~$2.64B regional figure, the OECD *Digital Education Outlook*, the Finland/Estonia/Netherlands
+grouping and the UK's £4M — 🔵 **all already carried**, and each was grepped against `intel/`
+before being discarded, which is the `T24` rule working as designed. 🔴 **Still no primary source
+read**: `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` answer `403` at `CONNECT`, and
+this pass established the same refusal applies to `ethz.ch` — so it is an allowlist, not a
+government-host exclusion.
+
+🟡 **The EMEA coverage holes p139 recorded are unchanged**: this page still carries four **Jisc**
+procurement routes the channel has never surfaced, and still has no EMEA ministry-side edtech
+provider map.
 
 #### 🆕 p139 — a funded skills instrument, and the first EMEA-owned connector measured at the tool layer
 
@@ -757,6 +879,42 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 p140 — APAC gets its first measured row AND turns out to own the Open edX deployment layer
+
+🟢 **🆕 `ACTION CU` booked APAC on a compiled-in hostname.**
+[`mcp-canvas-lms`](https://www.npmjs.com/package/mcp-canvas-lms) **1.0.5** hardcodes
+`https://canvas.ust.hk/api/v1/courses` — the Canvas tenant of the **Hong Kong University of
+Science and Technology**. 🔵 **The first APAC-placed connector row in this KB's history, and the
+evidence is a request path rather than a name.**
+
+🔴 **It is also a defect an institution would want flagged before installing it.** The package
+reads `CANVAS_BASE_URL` in `dist/common/utils.js:4` and then ignores it in
+`dist/operations/canvas.js:58`. 🔵 **One of its three tools queries HKUST's Canvas whatever the
+client configures** — a data-egress question, invisible from the README, and the same class as
+`eth-moodle-mcp`'s *"Works with Any Moodle"* heading, one step worse because this package claims
+configurability and silently drops it.
+
+🆕 🔵 **And a market fact this page should have carried for three years: the most widely used Open
+edX deployment tool is owned in APAC.** [`overhangio/tutor`](https://github.com/overhangio/tutor)
+declares `authors = [{name = "Edly"}, {email = "hello@edly.io"}]`. **Edly** is the edtech division
+of **Arbisoft**, a **Pakistan**-based company, which acquired the French firm Overhang.IO on
+**2023-03-27**; Tutor's founder **Régis Behmo** became Edly's VP of Engineering and still leads its
+technical direction.
+
+🔵 **This reframes a standing assumption.** This KB has treated the Open edX supply chain as
+US-stewarded (Axim) with a European and North American contributor base. 🟢 **The deployment layer
+every self-hosted Open edX installation passes through is owned by a Pakistani company** — which is
+a live consideration for an APAC engagement and a sourcing option for any region. 🟡 **Recorded as
+secondary evidence, not measured**: the acquisition is from company announcements and trade
+reporting, and `edly.io` is a `.io` domain carrying no country signal, so the *artefact* evidence
+is `hello@edly.io` and the regional attribution rests on the reporting.
+
+🔴 **No new APAC instrument.** The channel returned Vietnam's Law `134/2025/QH15` (the statute
+behind Decision 33, already carried), Korea's AI Basic Act of 2026-01-22, Taiwan's AI Basic Act and
+Australia's National AI Plan — 🔵 **all already held.** 🟡 **The region's standing gaps hold**: the
+compulsory-curriculum pairing (China + UAE) is unchanged, and no APAC education ministry's
+provider map has been read.
 
 #### 🆕 p139 — the compulsory-curriculum column has a second occupant, and the region owns the LMS defect
 
@@ -1043,6 +1201,44 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🆕 p140 — the ninth consecutive pass with no LATAM-owned row, and this time the emptiness is MEASURED
+
+🔴 **No LATAM row. Again.** 🔵 **What is different this pass is that the absence is now the output
+of an instrument rather than of a failure to look.**
+
+`ACTION CU`'s origin probe scanned all eight downloadable connector payloads for institutional
+hostnames and email domains, with a region table carrying **fifteen LATAM suffixes** — `.br`,
+`.mx`, `.ar`, `.cl`, `.co`, `.pe`, `.uy`, `.ec`, `.cr`, `.gt`, `.bo`, `.py`, `.ve`, `.do`, `.pa`.
+🔴 **Zero matches.** The two rows that placed went to EMEA (`ethz.ch`) and APAC (`ust.hk`); six
+rows carried no origin signal at all.
+
+🟢 **This is a better kind of gap statement than the previous eight.** Earlier passes recorded
+"no LATAM-owned row" as the result of not finding one. 🔵 **This pass can say that a probe
+explicitly looking for `.br`, `.mx`, `.cl` and twelve more found nothing on a shelf where the same
+probe successfully placed Switzerland and Hong Kong** — so the instrument works and the supply is
+absent, which are different claims and only the second one is now evidenced.
+
+🔴 **And this pass declined a chance to fake one, for the second time in the KB's history.** An
+earlier draft of the probe used a hand-written placeholder list and **booked North America three
+times** off `d2l.myschool.edu`, `school.edu` and `moodle.example.edu`. 🔵 **Had any payload shipped
+a `escuela.example.mx`-style placeholder, that draft would have booked LATAM off a worked example**
+— the exact `T24` failure mode, and it would have ended a nine-pass gap with a fabrication. The
+placeholder rule is now structural and its tests pin all eight verbatim placeholders found in these
+payloads.
+
+🔴 **No new LATAM instrument.** The channel returned UNESCO IESALC + UNU-IAS (200 HEIs, 19
+countries, **87%** using AI, **74%** in teaching and learning, 🔴 **26%** with a formal AI
+strategy), DEC's LATAM faculty survey (**79%** using AI, **88%** at minimal-to-moderate
+engagement), Uruguay's Council of Europe Framework Convention signature, Colombia's **CONPES
+4144**, Mexico's 2024 federal bill and the UNESCO LAC Observatory partner list — 🔵 **every one
+already carried on this page**, including Peru's Law **31814** and Brazil's **Digital ECA** (Law
+15.211/2025) that p139 added.
+
+🔵 **So the regional reading stands unchanged and better grounded**: LATAM has the adoption (87%),
+lacks the governance (26%), has enacted statutes this page now carries, and 🔴 **supplies no
+institutional open-source rows to this shelf** — which is a services opportunity rather than a
+sourcing one, and is the ninth pass to say so.
 
 #### 🆕 p139 — two statutes this page did not carry, and the minors regime that is already in force
 
@@ -1415,6 +1611,50 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🆕 p140 — the demand channel has stopped producing information, and the supply channel produced five corrections
+
+🔴 **For the second consecutive pass, the global search battery returned nothing new** — 86%
+adoption, VC at ~$1B in H1 2026 (**−26% YoY**), 29% of students judging instructors equipped, and
+US+Canada faculty intent falling **76% → 67%** are all already on this page. 🔵 **`T10` now reads
+at full strength: the demand-side channel is returning this KB's own contents.**
+
+🟢 **Meanwhile the artefact channel produced five verdicts, three of them corrections to p139.**
+🔵 **That asymmetry is the global finding of this pass**, and it has a direct bearing on how a
+studio should spend research time:
+
+| action | verdict | what it changed |
+|---|---|---|
+| `CP` | 🔴 **NOT REFUTED** | A connector's tool surface is a property of its **deployment flags**, not of its version. `P18` step 5 amended |
+| `CQ` | 🟡 **NOT REFUTED, weakly** | 1 of 5 foreign headers; 🔴 **3 of 5 rows carry no source header at all** — 287 files, zero |
+| `CR` | 🔴 **REFUTED on both rows** | Maven's declared-but-absent rate rises **40–67% → 80%**; a grant has a *depth* (`T26`) |
+| `CS` | 🔴 **REFUTED** | `openedx-learning` is a **rename shim**, not a broken release; the live row is `openedx-core` (`T27`) |
+| `CT` | 🔴 **NOT REFUTED** | The agent tier holds `learners.email` **and** a per-session psychological profile |
+| `CU` | 🟢 **DISCHARGED** | Two regions booked on compiled-in hostnames (`T29`) |
+
+🔵 **The commercial reading: the governance gap this page has called "the market" for fourteen
+passes is now measurable at the artefact layer, and it is wider there than any survey reports.**
+Adoption is at 86% and venture funding is retreating 26% — 🟢 **which is a services market, as
+p139 said.** 🔴 **What p140 adds is the substance of those services**: a shelf where 80% of Java
+artefacts ship no licence text for a licence they declare, where three repositories in one project
+give three answers to "who holds this", where a connector's capability list changes with a
+deployment flag nobody documents, and where 6 of 8 packages cannot be placed in a region at all.
+🔵 **None of that is visible from a market report, and all of it is billable.**
+
+🟢 **And one genuinely encouraging global datum, measured rather than surveyed.**
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) — **MIT**, 279 source
+files against **286 test files** — ships a **one-way** high-stakes classification whose evidence
+policy types `host_llm` and `external_service` evaluations as *insufficient*. 🔵 **The model cannot
+certify itself.** 🔴 **That is the property EU AI Act Article 14, Annex III, Vietnam's Decision 33
+and the Oklahoma and Maryland statutes are all reaching for, and it is being implemented by a
+single alpha-stage maintainer before any vendor on this page.** It is now pattern `P19`.
+
+🔴 **The global blocker, stated plainly.** No primary regulatory source has been read for two
+passes. The cause is fully characterised: the proxy gateway answers **`403` to `CONNECT`** for
+government and university hosts alike — an allowlist of package registries plus GitHub — and
+separately, **executing an installed connector is refused by sandbox policy**. 🔵 **Neither is a
+probe to re-register.** Both are requests to widen a policy, and they belong to whoever owns this
+environment rather than to the next action list.
 
 #### 🆕 p139 — the demand signal and the funding signal are now moving in opposite directions
 

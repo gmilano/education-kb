@@ -1,0 +1,14 @@
+# /tmp/claude-0/-home-user-globant-kb/77a5ceff-46b5-5b75-9c7f-62f21a92607c/scratchpad/payload/_owen-x-tech_canvas-mcp-1.1.0/package/build/index.js
+{
+  "stdio (ListTools returns `tools` wholesale)": {
+    "served": 62,
+    "name_literals_on_this_path": 62,
+    "how": "array literal returned unchanged"
+  },
+  "instance `httpMcp`": {
+    "served": 62,
+    "name_literals_on_this_path": 1,
+    "how": "1 by literal + 61 via `for \u2026 of tools` (minus 1 already registered)"
+  }
+}
+# surfaces agree

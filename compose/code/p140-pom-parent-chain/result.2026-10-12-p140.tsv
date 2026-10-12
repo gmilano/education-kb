@@ -1,0 +1,5 @@
+coordinate	own_declaration	inherited_from	inherited_licenses	chain_depth	verdict
+net.oauth.core:oauth:20100527	NONE	net.oauth:oauth-parent:20090531	The Apache Software License, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0.txt>	3	INHERITS_FROM_PARENT
+org.sakaiproject.kernel:sakai-kernel-impl:23.3	NONE	org.sakaiproject:oss-parent:1	Educational Community License, Version 2.0 <http://www.opensource.org/licenses/ecl2.txt>	4	INHERITS_FROM_PARENT
+org.sakaiproject.kernel:sakai-kernel-api:25.2	Educational Community License, Version 2.0 <https://opensource.org/licenses/ECL-2.0>	-	NONE	2	DECLARES_OWN
+edu.ksu.ome.lti:lti-launch:1.4.7	GNU Lesser General Public License (LGPL), Version 3 <http://www.fsf.org/licensing/licenses/lgpl.txt>	-	NONE	1	DECLARES_OWN

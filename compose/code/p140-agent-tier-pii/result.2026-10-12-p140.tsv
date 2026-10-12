@@ -1,0 +1,2 @@
+repo	tree_paths	go_src_files	go_test_files	tools	writes	documented	undocumented	undocumented_writes	schema_tables	direct_pii_tables	affect_tables	oversight_tools	inverse_tools	verdict
+tutor-mcp	687	279	286	55	27	46	9	3	36	1	2	mark_domain_high_stakes	NONE	PII_AND_AFFECT

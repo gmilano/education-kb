@@ -1,0 +1,10 @@
+    net.oauth.core:oauth:20100527                                no <licenses>
+    net.oauth.core:oauth-core-parent:20090531                    no <licenses>
+    net.oauth:oauth-parent:20090531                              declares: The Apache Software License, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0.txt>
+    org.sakaiproject.kernel:sakai-kernel-impl:23.3               no <licenses>
+    org.sakaiproject:kernel:23.3                                 no <licenses>
+    org.sakaiproject:master:23.3                                 no <licenses>
+    org.sakaiproject:oss-parent:1                                declares: Educational Community License, Version 2.0 <http://www.opensource.org/licenses/ecl2.txt>
+    org.sakaiproject.kernel:sakai-kernel-api:25.2                declares: Educational Community License, Version 2.0 <https://opensource.org/licenses/ECL-2.0>
+    org.sakaiproject:kernel:25.2                                 HTTP 404
+    edu.ksu.ome.lti:lti-launch:1.4.7                             declares: GNU Lesser General Public License (LGPL), Version 3 <http://www.fsf.org/licensing/licenses/lgpl.txt>

@@ -1,0 +1,67 @@
+
+# detail
+tutor-mcp {
+  "undocumented": [
+    "add_formation_concepts",
+    "draft_formation",
+    "get_cohort_insights",
+    "get_cohort_statistics",
+    "get_formation_version",
+    "get_learner_formation",
+    "get_learner_progress",
+    "list_trainer_cohorts",
+    "publish_formation"
+  ],
+  "undocumented_writes": [
+    "add_formation_concepts",
+    "draft_formation",
+    "publish_formation"
+  ],
+  "direct_pii": {
+    "learners": [
+      "email"
+    ]
+  },
+  "affect": {
+    "interactions": [
+      "confidence"
+    ],
+    "affect_states": [
+      "autonomy_score",
+      "energy",
+      "next_session_intent",
+      "perceived_difficulty",
+      "satisfaction",
+      "subject_confidence"
+    ]
+  },
+  "writes": [
+    "add_concepts",
+    "add_formation_concepts",
+    "archive_domain",
+    "cancel_assessment_attempt",
+    "delete_domain",
+    "draft_formation",
+    "init_domain",
+    "mark_domain_high_stakes",
+    "prepare_assessment_attempt",
+    "publish_curriculum_revision",
+    "publish_formation",
+    "queue_webhook_message",
+    "record_affect",
+    "record_calibration_result",
+    "record_interaction",
+    "record_learning_event",
+    "record_session_close",
+    "record_transfer_result",
+    "set_domain_priority",
+    "set_goal_relevance",
+    "start_learning_session",
+    "submit_assessment_attempt",
+    "unarchive_domain",
+    "update_availability_model",
+    "update_implementation_intention",
+    "update_learner_memory",
+    "update_learner_profile"
+  ]
+}

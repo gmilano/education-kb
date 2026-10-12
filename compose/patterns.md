@@ -6,6 +6,136 @@ updated: 2026-10-12
 
 # Education — compose patterns
 
+**Pass 140, 2026-10-12.** 🆕 **`P19` is added, and it is the first pattern on this page sourced
+from a row that already SHIPS the control rather than needing one wrapped around it.** 🔁 **`P18`
+is amended at step 5**: enumerate per *deployment configuration*, not per package — because
+`ACTION CP` established that a connector's tool surface is a property of its flags.
+
+## 🔁 `P18` amended at step 5 — enumerate per CONFIGURATION, because the surface moves with the flags *(p140 — Global)*
+
+p139 wrote `P18` step 5 as *"call `tools/list` on the running server and diff again — because
+registration is not behaviour"*, and pre-registered `ACTION CP` to test whether that step was
+needed at all. 🔴 **It is needed, and for a different reason than p139 gave.**
+
+🟢 **On the npm connector shelf, registration IS behaviour.** All eight downloadable rows are a
+single server instance registering literal tool names with no gate, so the live `tools/list` is
+*forced* to equal the static build count — provable from the payload, without running anything
+([`p140-live-surface-bound`](../compose/code/p140-live-surface-bound/README.md)). For those rows,
+a static count is sound.
+
+🔴 **The step survives because of the rows that are not shaped like that**, and this pass found
+both failing shapes:
+
+| shape | instance | what breaks |
+|---|---|---|
+| 🔴 **deployment-flag gating** | `ArnaudGuiovanna/tutor-mcp`: `deps.Institution`, `REGULATION_GOAL`, `deps.OAuthGranularScopes` | **55** names in the build; its own CI test asserts a live list of **46**. 🔵 No payload read can tell you which flags a client sets |
+| 🔴 **dynamic registration** | `@owen-x-tech/canvas-mcp`: `for (const tool of tools) httpMcp.registerTool(tool.name, …)` | **1** name literal on the HTTP path; **62** tools served |
+| 🔴 **two server instances** | same package, `--http` vs stdio | two surfaces under one version number |
+
+### The amended step 5
+
+> 5. Call `tools/list` **against each configuration the engagement will actually run** —
+>    every transport the client will connect on, and every feature flag the contract enables —
+>    and diff each result against the documentation *and against the other configurations.*
+>    🔴 **Record the flag set beside the count.** A tool count with no configuration attached is
+>    not a measurement.
+
+🔵 **The practical consequence for a delivery team is a line item, not a philosophy**: if the
+contract turns on an institutional tier, the tier's tools are the ones least likely to be
+documented. On `tutor-mcp` that is exactly where the three undocumented writes are.
+
+## 🆕 `P19` — Adopt the one-way high-stakes gate as the engagement's oversight primitive *(new, p140 — Global)*
+
+🔵 **Every high-risk control this page has specified until now was something Globant builds AROUND
+a component.** `P15` ships an Article 50 obligation, `P16` assembles a Decision 33 dossier, `P18`
+gates a connector whose writes nobody enumerated. 🟢 **`ACTION CT` found a row that ships the
+control itself, in MIT-licensed source, and it is better than what this page has been
+specifying.**
+
+### The primitive, as [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) implements it
+
+`mark_domain_high_stakes` applies a **one-way** classification to a learning domain. Once set:
+
+| property | implementation |
+|---|---|
+| 🟢 **irreversible from the agent tier** | **no inverse tool exists** — this pass searched for `unmark_*`, `clear_*`, `unset_*`, `reset_*` and found none |
+| 🟢 **rationale recorded in code** | `db/store.go`: *"Downgrading safety classification requires an operator-controlled process that is outside the learner-facing MCP trust boundary."* |
+| 🟢 **evidence provenance is typed** | returns `"policy": "trusted human_review evidence is required; host_llm and external_service evaluations do not satisfy this gate"` |
+| 🟢 **capabilities withdrawn, not warned about** | returns `demonstrated_claims_allowed: false`, `intrusive_notifications_allowed: false` |
+| 🟢 **degradation is explicit** | returns `degraded_components: ["human_review_evidence_readback"]` rather than failing silently |
+
+🔵 **The design idea worth stealing is that the model cannot certify itself.** A `host_llm`
+evaluation is *typed as insufficient*, so "the AI reviewed it" is not a path through the gate.
+🔴 **That is the one property every regulator in this KB's matrix is reaching for and almost no
+implementation expresses** — EU AI Act **Article 14** human oversight, **Annex III** grading and
+ranking, Vietnam's **Decision 33/2026/QĐ-TTg**, and the Oklahoma and Maryland statutes requiring
+human oversight and barring AI from high-stakes decisions about students.
+
+### Why this row is inside the regime at all
+
+🔴 Not a judgement — its schema
+([`p140-agent-tier-pii`](../compose/code/p140-agent-tier-pii/README.md)):
+
+- `learners.email` — `TEXT UNIQUE NOT NULL`, a **direct identifier**
+- `affect_states` — a **per-session psychological profile** keyed `UNIQUE(learner_id, session_id)`:
+  `energy`, `subject_confidence`, `satisfaction`, `perceived_difficulty`, `next_session_intent`,
+  `autonomy_score`
+- **27 of its 55 tools are writes**, including `submit_assessment_attempt`,
+  `publish_curriculum_revision`, `update_learner_profile`, `record_affect`
+
+🔵 **p138 established that Vietnam's Decision 33 names psychological assessment in its education
+high-risk list.** `affect_states` is that, persisted, per session. A deployment of this row is
+inside Annex III *and* Decision 33 on the strength of its schema alone.
+
+### The stack
+
+| layer | component | licence | why |
+|---|---|---|---|
+| oversight primitive | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) `mark_domain_high_stakes` | 🟢 **MIT** | the gate, and MIT means it can be lifted into client code |
+| adaptive core *(same row)* | its `algorithms/` — BKT, FSRS, IRT, KST | 🟢 **MIT** | 286 test files against 279 source files |
+| LMS attachment | the sanctioned-integration stack of `P11` (LTI AGS, OneRoster, xAPI/LRS) | permissive | `P19` governs decisions; `P11` moves them |
+| connector gate | `P18` as amended above | — | the LMS write surface still needs enumerating per configuration |
+| dossier | `P16` (Decision 33) / `P15` (Article 50) | — | `P19` produces the oversight *evidence* those dossiers assert |
+
+### How it wires together
+
+1. **Lift the gate, not the product.** The engagement adopts the *contract* —
+   one-way classification, typed evidence provenance, no self-certification, explicit
+   degradation — into whatever system of record the client already runs. 🟢 **MIT permits
+   copying the source outright**, which is why this is `P19` and not a build-from-scratch.
+2. **Bind the classification to the client's high-stakes definition.** For an EMEA client that is
+   Annex III (admission, evaluation, exam scoring, proctoring); for a Vietnamese deployment it is
+   Decision 33's list *including psychological assessment*; for Oklahoma or Maryland it is the
+   statute's "high-stakes decisions about students".
+3. **Make the inverse operator-only.** 🔴 **Reproduce the absence of the inverse tool.** If a
+   downgrade path exists in the agent tier, the gate is advisory and the dossier claim is false.
+4. **Type the evidence, do not merely log it.** `human_review` must be a distinct, trusted kind
+   that `host_llm` and `external_service` cannot satisfy. 🔵 **Most "human in the loop" builds
+   fail precisely here** — they record who clicked, not what class of evaluator it was.
+5. **Enumerate the surface per configuration** (amended `P18` step 5). On this row, enabling the
+   institution tier turns on `draft_formation`, `publish_formation` and `add_formation_concepts` —
+   🔴 **three undocumented writes that author the curriculum a cohort is assessed against.**
+6. **Carry the degradation signal into the dossier.** `degraded_components` is the field an
+   auditor needs and the one hand-rolled implementations omit.
+
+### Shape of the engagement
+
+**6–8 weeks.** Weeks 1–2: map the client's high-stakes definition onto the classification and
+confirm the statutory list that applies. Weeks 3–5: lift and bind the gate, with the
+operator-only downgrade path built outside the agent trust boundary. Week 6: enumerate every
+configuration's tool surface and document the tier the vendor did not. Weeks 7–8: assemble the
+`P15`/`P16` dossier around the oversight evidence the gate now produces.
+
+### Why it wins the room
+
+🔵 **It inverts the usual conversation.** The standing pitch has been *"your AI tutor needs
+governance we will build"*. This one is *"a working implementation of the oversight duty exists
+under MIT, we have read its schema and its gate, and here is what it does that your current build
+does not — the model cannot sign off on itself."* 🔴 **And the honest caveat is part of the
+pitch**: the row is **alpha**, single-maintainer, and its own institutional tier is undocumented.
+🟢 **Globant is adopting a contract, not a dependency** — which is the version of this argument
+that survives procurement.
+
 **Pass 139, 2026-10-12.** 🟢 **`P13` is revised a fifth time — and this time from an EXECUTION
 rather than a reading.** `ACTION CL` ran the adapter against a live server: the protocol half is
 cheaper than p138 estimated and the integration half is dearer, in a specific and fixable way.

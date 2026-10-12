@@ -6,6 +6,144 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 140 — 2026-10-12 — the shelf's tool counts are confirmed by reimplementation, and one row ships the gate the others need
+
+🟢 **An independently written extractor reproduced `p139-tool-count-drift`'s registered-tool
+counts EXACTLY on all eight downloadable rows** — 227, 62, 54, 18, 17, 16, 14, 3. 🔵 **p139's
+instrument is confirmed by reimplementation rather than merely re-run**, which is the strongest
+statement this shelf's numbers have carried.
+
+🔴 **It took a correction to get there.** This pass's first draft reported 17 tools for
+`@ink-waffle/moodle-mcp` where p139 reported 16, 4 where p139 reported 3, and 64 where p139
+reported 62. **p139 was right every time.** The cause was omitting its `SERVER_CTOR` exclusion:
+`new McpServer({ name: 'moodle-mcp' })` sits inside the adjacency window of a later `inputSchema`
+and reads as a tool. 🔵 **The server's own name is not a tool, and a probe that does not know
+this inflates every row by one.**
+
+### 🔴 `ACTION CP` — the live tool list is a property of the DEPLOYMENT, not of the package
+
+| package | literal tools | dynamic sites | server instances | verdict |
+|---|---|---|---|---|
+| [`@imazhar101/mcp-canvas-server`](https://www.npmjs.com/package/@imazhar101/mcp-canvas-server) 2.1.3 | **227** | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| 🔴 [`@owen-x-tech/canvas-mcp`](https://www.npmjs.com/package/@owen-x-tech/canvas-mcp) 1.1.0 | **62** | 🔴 **1** | 🔴 **2** | 🔴 `MULTI_SURFACE` |
+| [`canvas-mcp-server`](https://www.npmjs.com/package/canvas-mcp-server) 2.2.3 | 54 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| [`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) 1.3.3 | 18 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| [`@n35da/brightspace-mcp`](https://www.npmjs.com/package/@n35da/brightspace-mcp) 0.4.0 | 17 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| [`@ink-waffle/moodle-mcp`](https://www.npmjs.com/package/@ink-waffle/moodle-mcp) 0.2.0 | 16 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| [`moodle-mcp-server-aql`](https://www.npmjs.com/package/moodle-mcp-server-aql) 0.1.7 | 14 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+| [`mcp-canvas-lms`](https://www.npmjs.com/package/mcp-canvas-lms) 1.0.5 | 3 | 0 | 1 | 🟢 `BOUNDED_STATIC` |
+
+🟢 **For seven of eight rows the live `tools/list` is FORCED to equal the static count** — one
+server instance, literal names, no gate — so p139's figures are behavioural after all, provable
+without execution. 🔴 **`ACTION CP` itself could not run**: executing an installed third-party
+connector is refused by this environment's sandbox policy, a *different* blocker from the network
+`403`s p139 diagnosed (and those now extend to **university** hosts, not just government ones).
+
+🔴 **The refuting case is `@owen-x-tech/canvas-mcp`, and it is a 61-tool blind spot.** It builds
+two server instances in one file, selected by `--http`:
+
+| surface | tools served | name literals on that path |
+|---|---|---|
+| stdio (default) | **62** | 62 |
+| HTTP (`--http`) | **62** | 🔴 **1** |
+
+Both agree at 62 — but only because the HTTP path registers one tool by literal and the other 61
+through `for (const tool of tools) httpMcp.registerTool(tool.name, …)`. 🔵 **A name-literal count
+of that path returns 1 where the server serves 62.** `@ink-waffle/moodle-mcp` is the control that
+makes the distinction real: it builds **two transports on one server instance**, so both expose
+the same 16 tools. *Two transports is one surface; two server instances is two.*
+[`p140-live-surface-bound`](../compose/code/p140-live-surface-bound/README.md).
+
+### 🆕 🟢 `ArnaudGuiovanna/tutor-mcp` measured in depth — and it is the row that ships its own high-risk gate
+
+p139 added this row on a clone and a star count. `ACTION CT` read it.
+[`p140-agent-tier-pii`](../compose/code/p140-agent-tier-pii/README.md).
+
+| measure | value |
+|---|---|
+| licence | 🟢 **MIT**, `Copyright (c) 2026 Arnaud Guiovanna` |
+| status / stack | **alpha**, Go 1.26.9, official `modelcontextprotocol/go-sdk v1.8.0` |
+| tree paths | 687 |
+| Go source / test files | 279 / 🟢 **286** — *more test files than source files* |
+| registered tools (non-test) | **55** |
+| 🔴 write tools | **27 (49%)** |
+| 🟡 undocumented | 9 — 🔵 **all of one gated tier, not drift** |
+| 🔴 undocumented **writes** | **3** — `draft_formation`, `publish_formation`, `add_formation_concepts` |
+| 🔴 direct identifier | **`learners.email`** — `TEXT UNIQUE NOT NULL` |
+| 🔴 affective state | **`affect_states`** (6 columns) + `interactions.confidence` |
+| 🟢 oversight tool | **`mark_domain_high_stakes`** — one-way |
+| 🟢 inverse tool to clear it | **NONE** |
+
+🟢 **This is the first row on this shelf that ships a high-risk control rather than needing one
+wrapped around it.** `mark_domain_high_stakes` is irreversible from the agent tier — this pass
+searched for `unmark_*`, `clear_*`, `unset_*`, `reset_*` and found none — and `db/store.go` says
+why: *"Downgrading safety classification requires an operator-controlled process that is outside
+the learner-facing MCP trust boundary."* 🔵 **Its evidence policy is typed, not logged**:
+
+> `"policy": "trusted human_review evidence is required; host_llm and external_service`
+> `evaluations do not satisfy this gate"`
+
+🔴 **The model cannot certify itself**, which is what EU AI Act **Article 14** reaches for and
+almost no implementation expresses. It is now pattern [`P19`](../compose/patterns.md).
+
+🔴 **And it is squarely inside the regime this KB tracks.** `affect_states` persists a
+per-session psychological profile keyed `UNIQUE(learner_id, session_id)` — `energy`,
+`subject_confidence`, `satisfaction`, `perceived_difficulty`, `next_session_intent`,
+`autonomy_score`. 🔵 **p138 established that Vietnam's Decision 33/2026/QĐ-TTg names psychological
+assessment in its education high-risk list.** This is that, persisted.
+
+🟡 **The 9 undocumented tools are a TIER, not drift, and saying so cost the easier finding.** All
+nine are the institution/trainer surface, and `RegisterTools` gates every one behind
+`if deps != nil && deps.Institution`. On the npm shelf, 62 undocumented tools were *registered and
+served* while the README stayed silent; here they are **not registered at all** in the default
+deployment, and `docs/mcp-tools.md`'s 46 entries match that default exactly. 🟢 **Tiering is the
+better-engineered shape.** 🔴 **It still leaves a real gap**: enable the tier a university buys
+and three undocumented writes that author the curriculum a cohort is assessed against become
+live.
+
+🟡 **Naming collision, recorded so a later pass does not conflate them:** `ArnaudGuiovanna/tutor-mcp`
+has **nothing to do with** [`overhangio/tutor`](https://github.com/overhangio/tutor), the AGPL-3.0
+Open edX deployment tool now owned by Edly. The shared word "tutor" is all they have in common.
+
+### 🟢 `ACTION CU` — two rows on this shelf place themselves, and the evidence is a hostname
+
+| row | evidence | occurrences | region |
+|---|---|---|---|
+| 🟢 [`eth-moodle-mcp`](https://www.npmjs.com/package/eth-moodle-mcp) 1.3.3 | 🆕 `moodle-app2.let.ethz.ch`, `safari.ethz.ch` | **5** | 🟢 **EMEA** — ETH Zürich |
+| 🟢 [`mcp-canvas-lms`](https://www.npmjs.com/package/mcp-canvas-lms) 1.0.5 | 🆕 `canvas.ust.hk` | **2** | 🟢 **APAC** — HKUST, Hong Kong |
+| 🔴 the other six rows | — | 0 | *no origin signal* |
+
+🔴 **`mcp-canvas-lms` is the sharper one, because the evidence is also a defect.** It reads
+`CANVAS_BASE_URL` in `dist/common/utils.js:4` and then ignores it in
+`dist/operations/canvas.js:58`:
+
+```js
+return canvasRequest("https://canvas.ust.hk/api/v1/courses", { headers: { Authorization: … } });
+```
+
+🔵 **One of its three tools is wired to HKUST's Canvas whatever the client configures.** Same
+class as `eth-moodle-mcp`'s *"Works with Any Moodle"* plus ten hardcoded `ddca_*` tools — one step
+worse, because this package claims configurability and silently drops it. 🔴 **Two of eight rows
+advertise "any instance" and hardcode one institution.**
+
+🔴 **An earlier draft of this measurement booked North America three times off
+`d2l.myschool.edu`, `school.edu` and `moodle.example.edu`** — three regional findings off three
+worked examples, the exact error `T24` exists to prevent. The placeholder rule is now structural
+and its tests pin all eight verbatim placeholders found in these payloads.
+[`p140-origin-evidence`](../compose/code/p140-origin-evidence/README.md).
+
+### 🔴 What this pass did NOT establish about this shelf
+
+- 🔴 **No `tools/list` was called.** Every figure above is a source read. The one live number —
+  `tutor-mcp`'s 46 — is an assertion in that repository's **own CI-enforced test**, which is
+  strong evidence and still second-hand.
+- 🔴 **Host liveness could not be checked.** `canvas.ust.hk`, `moodle-app2.let.ethz.ch` and
+  `safari.ethz.ch` all answer `403` at `CONNECT` through this environment's proxy. The evidence
+  is the hardcoded host, not the host's existence.
+- 🟡 **`@exhabition/brightspace-mcp` is absent from this pass's tables.** It ships no server, so
+  there is no registration to bound — a zero that is correct and uninformative, exactly as `T23`
+  predicted.
+
 ## Pass 139 — 2026-10-12 — the tools a connector registers, the tools it admits to, and the 62 that mutate an LMS
 
 🔴 **The headline: across the nine npm rows p138 downloaded, the shelf registers 411 tools,

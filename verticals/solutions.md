@@ -6,6 +6,118 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 140, 2026-10-12.** 🔴 **Two claims this page made about Sakai last pass are wrong, and the
+correction is published here rather than quietly dropped.** 🆕 **A third platform row changes
+identity entirely**: the package Open edX's learning core ships under has been renamed, and this
+page has been pointing at the retired name.
+
+### 🔴 CORRECTION — Sakai's two kernel artefacts have the SAME licence posture, not opposite ones
+
+p139 wrote, on this page:
+
+> *"Two artefacts of one kernel, same release line, **opposite licence posture**. The `api` jar
+> declares **ECL-2.0** … and ships no text for it. The `impl` jar declares nothing at all."*
+
+🔴 **`impl` does declare ECL-2.0** — inherited from `org.sakaiproject:oss-parent:1`, three levels
+up its parent-POM chain, resolved by `ACTION CR`:
+
+| coordinate | own POM | inherits | from | licence in jar |
+|---|---|---|---|---|
+| `org.sakaiproject.kernel:sakai-kernel-api` 25.2 | ECL-2.0 | — | — | 🔴 **NONE** |
+| `org.sakaiproject.kernel:sakai-kernel-impl` 23.3 | 🔴 nothing | 🆕 **ECL-2.0** | 🆕 `org.sakaiproject:oss-parent:1` | 🔴 **NONE** |
+
+🔵 **Both are ECL-2.0. Only the declaration DEPTH differs** — and depth is exactly what an
+off-the-shelf scanner reading one POM does not traverse. 🟢 **The sentence to put in front of
+Sakai's maintainers is unchanged and now better supported**: `org.imsglobal:basiclti-util` 1.2.0
+ships `META-INF/LICENSE` *and* `META-INF/NOTICE` for its Apache-2.0 grant, so 🔵 **this is
+fixable build configuration, not a Maven law.**
+
+🔴 **And the review burden on a Sakai integration is HIGHER than p139 said, not lower.** With
+inheritance resolved, **5 of 5** Java artefacts on this shelf declare a licence and **4 of 5
+(80%)** ship no text for it. A client doing classpath licence review gets `ECL-2.0` — *education's
+own licence*, an Apache-2.0 derivative with a university patent clause that off-the-shelf scanners
+do not recognise — from a **sibling POM three levels up**, and nothing whatsoever from the jar.
+[`p140-pom-parent-chain`](../compose/code/p140-pom-parent-chain/README.md).
+
+### 🆕 🔴 Open edX: the learning-core package has been RENAMED, and this page tracked the retired name
+
+`openedx-learning` **0.33.1** is not a broken release — it is a deliberate rename shim.
+Its `setup.py`: *"Builds a final shell release of openedx-learning which simply 'redirects' to
+openedx-core"*, with `packages=[]`, `install_requires=["openedx-core==0.34.1"]` and
+`Development Status :: 7 - Inactive`.
+
+| | retired | 🆕 current |
+|---|---|---|
+| package | `openedx-learning` 0.33.1 | 🆕 [`openedx-core`](https://pypi.org/project/openedx-core/) **1.9.1** |
+| uploaded | 2026-02-18 | 🟢 **2026-10-09** |
+| wheel | 🔴 1 479 B, 4 metadata paths | 358 188 B, **261 paths** |
+| licence | AGPL 3.0 (legacy field) | 🔴 **AGPL-3.0-only** as a PEP 639 `License-Expression` |
+| 🟢 licence payload | 🔴 none — it ships nothing | 🟢 `dist-info/licenses/LICENSE.txt`, **35 139 B** |
+
+🔵 **For an institution customising Open edX, the practical consequence is a dependency rename,
+not a licence change** — AGPL-3.0 either way, and the platform's copyleft posture on this page is
+unaffected. 🟢 **What improves is auditability**: `openedx-core` ships its grant in the artefact
+automatically under PEP 639, which is the cleanest licence payload this KB has measured, and
+consolidates six top-level packages into one distribution.
+
+🔴 **What a procurement conversation needs to know is the contact, and there are three of them.**
+`openedx/XBlock` routes notices to `oscm@edx.org`; its sibling `openedx/codejail` routes to
+`oscm@openedx.org`; the live PyPI artefact names `dave@axim.org`. 🟢 **The holder itself is
+continuous** — edX Inc. was *renamed* Axim Collaborative, same trustees and tax ID, after Harvard
+and MIT sold the edX brand to 2U. 🔴 **But `edx.org` is now operated by 2U**, a different company
+from the steward, so one of those two repositories is routing its notice obligation to the wrong
+organisation.
+
+### 🔴 The attachment layer: a connector's tool surface moves with the DEPLOYMENT, not the version
+
+p139 told this page that attachment review must *"enumerate `tools/list` against the live server,
+not read the README"*. 🟢 **That instruction survives `ACTION CP` and the reason has changed.**
+
+🟢 **On the npm connector shelf the README is not the problem the enumeration solves** — all eight
+downloadable rows register literal tool names on a single server instance with no gate, so the
+static count provably equals the live list. 🔴 **The enumeration is needed because of two shapes
+that defeat any payload read:**
+
+- 🔴 **Deployment-flag gating.** `ArnaudGuiovanna/tutor-mcp` registers **55** tool names and its
+  own CI test asserts a live `tools/list` of **46**, gated on `deps.Institution`,
+  `REGULATION_GOAL` and `deps.OAuthGranularScopes`. 🔵 **An institution that buys the
+  institutional tier enables precisely the nine tools the vendor's documentation does not
+  cover — three of them writes that author the curriculum a cohort is assessed against.**
+- 🔴 **Two server instances in one package.** `@owen-x-tech/canvas-mcp` 1.1.0 exposes a different
+  code path under `--http` than on stdio. Both happen to serve 62 tools, but the HTTP path names
+  only **1** of them as a literal and registers 61 through a loop.
+
+🔵 **So the line for an attachment review is: enumerate every transport the institution will
+connect on AND every flag its contract enables, and record the flag set beside the count.** A
+tool count with no configuration attached is not a measurement. `P18` step 5 is amended
+accordingly.
+
+### 🆕 🟢 Two connector rows place themselves on a hostname — and one of them is a misconfiguration
+
+| row | evidence | region |
+|---|---|---|
+| 🟢 `eth-moodle-mcp` 1.3.3 | `moodle-app2.let.ethz.ch` (4×), `safari.ethz.ch` | 🟢 **EMEA** — ETH Zürich |
+| 🟢 `mcp-canvas-lms` 1.0.5 | `canvas.ust.hk` (2×) | 🟢 **APAC** — HKUST, Hong Kong |
+
+🔴 **For a platform owner, `mcp-canvas-lms` is the row with an operational defect, not just an
+origin.** It reads `CANVAS_BASE_URL` in `dist/common/utils.js:4` and then hardcodes
+`https://canvas.ust.hk/api/v1/courses` in `dist/operations/canvas.js:58`. 🔵 **One of its three
+tools queries a different university's Canvas tenant regardless of configuration** — which is a
+data-egress question for any institution that installs it, and it is invisible from the README.
+
+🔴 **Host reachability could not be confirmed**: all three institutional hosts answer `403` at
+`CONNECT` through this environment's proxy, which this pass established refuses **university**
+hosts as well as the government hosts p139 diagnosed. The evidence is the compiled-in hostname,
+not the host's liveness.
+
+### 🟡 No platform row was added or removed this pass, and that is stated rather than padded
+
+🔵 **The platform shelf below is unchanged.** Moodle, Open edX, Canvas, Sakai, BigBlueButton,
+H5P, Kolibri and OpenEduCat are where p139 left them; the mandated vertical-platform search
+returned only rows this page already carries (OpenEduCat LGPL-3, `frappe/education`, ERPNext,
+RosarioSIS). 🔴 **Everything above is a correction to how an existing row should be READ**, which
+is the kind of movement this page should expect once its shelf is saturated.
+
 **Pass 139, 2026-10-12.** 🟡 **No platform row changed this pass either, and it is again stated
 rather than padded.** But two measurements this pass land *on* the platform layer rather than beside
 it, and one of them is about Sakai itself.

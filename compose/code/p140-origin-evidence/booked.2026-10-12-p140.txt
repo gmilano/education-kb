@@ -1,0 +1,10 @@
+
+# regions booked on measured evidence
+{
+  "EMEA": [
+    "eth-moodle-mcp-1.3.3"
+  ],
+  "APAC": [
+    "mcp-canvas-lms-1.0.5"
+  ]
+}

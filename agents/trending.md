@@ -6,6 +6,41 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 140
+
+**The pass that was refused the probe it registered, answered the question from source anyway,
+and confirmed its predecessor's tool counts by reimplementing them.**
+
+🔵 **p139 downloaded nine payloads for a licence question and a tool-count question. This pass
+asked them a third — "can a static count bound what a live server serves?" — at zero marginal
+download cost.** Third time the npm lane has paid for itself beyond the action that opened it.
+
+| what moved this week | measurement |
+|---|---|
+| 🟢 **p139's tool counts confirmed by an independent reimplementation** | **227, 62, 54, 18, 17, 16, 14, 3** — exact agreement on all eight rows. 🔴 **And it took a correction**: this pass's first draft said 17/4/64 where p139 said 16/3/62, by omitting p139's `SERVER_CTOR` exclusion. 🔵 *The server's own name is not a tool* |
+| 🔴 **`ACTION CP` could not run — a NEW blocker, not p139's** | Executing an installed third-party connector is **refused by sandbox policy**, distinct from the network `403 at CONNECT`. 🔴 **And the network refusal is wider than p139 diagnosed**: `canvas.ust.hk`, `moodle-app2.let.ethz.ch` and `safari.ethz.ch` are all refused, so the policy is an **allowlist of registries plus GitHub**, not an exclusion of governments |
+| 🟢 **…and the question was answered statically anyway, for 7 of 8 rows** | Single server instance + literal tool names + no gate ⇒ the live `tools/list` is **forced** to equal the static count. 🔵 **p139's figures are behavioural after all, provably, without execution** |
+| 🔴 **The refuting case: 1 name literal, 62 tools served** | `@owen-x-tech/canvas-mcp` **1.1.0** builds **two** MCP server instances in one file, selected by `--http`. The HTTP path registers **1** tool by literal and **61** through `for (const tool of tools) httpMcp.registerTool(tool.name, …)`. 🔵 **A 61-tool blind spot invisible to every instrument this KB has used.** Control: `@ink-waffle/moodle-mcp` builds **two transports on ONE server** — same 16 tools. *Two transports is one surface; two instances is two* |
+| 🔴 **A tool surface is a property of a DEPLOYMENT** | 🆕 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) registers **55** tool names; 🔴 **its own CI test asserts a live `tools/list` of 46** (`tools/tools_register_test.go:221`). Gates: `deps.Institution`, `REGULATION_GOAL`, `deps.OAuthGranularScopes`. Its own comment: *"gated by `REGULATION_GOAL=on`. When off, neither tool is registered, so the surface is invisible to the LLM"* |
+| 🆕 🟢 **The first row on this shelf that SHIPS its high-risk gate** | Same row. `mark_domain_high_stakes` is **one-way** — this pass searched for `unmark_*`/`clear_*`/`unset_*`/`reset_*` and found **none** — and types its evidence: 🟢 `"policy": "trusted human_review evidence is required; host_llm and external_service evaluations do not satisfy this gate"`. 🔵 **The model cannot certify itself.** Now pattern `P19` |
+| 🔴 **…and that row is squarely inside the regime** | **MIT**, 687 paths, 279 source / 🟢 **286 test** files, **55** tools of which 🔴 **27 are writes**. Persists `learners.email` (`TEXT UNIQUE NOT NULL`) **and** `affect_states` — a per-session psychological profile (`energy`, `subject_confidence`, `satisfaction`, `perceived_difficulty`, `next_session_intent`, `autonomy_score`) keyed `UNIQUE(learner_id, session_id)`. 🔵 **p138 established Vietnam's Decision 33 names psychological assessment high-risk** |
+| 🟡 **Its 9 undocumented tools are a TIER, not drift — and saying so cost the easier finding** | All nine are the institution/trainer surface, gated behind `if deps != nil && deps.Institution`, and `docs/mcp-tools.md`'s 46 entries match the default deployment exactly. 🟢 **Tiering is the better-engineered shape.** 🔴 **The gap is still real**: enable the tier a university buys and **3 undocumented writes** — `draft_formation`, `publish_formation`, `add_formation_concepts` — author the curriculum a cohort is assessed against |
+| 🆕 🟢 **`ACTION CU`: two regions booked on a hostname, after nine passes of asking** | `eth-moodle-mcp` → `moodle-app2.let.ethz.ch` (**4×**) + `safari.ethz.ch` ⇒ 🟢 **EMEA**, ETH Zürich. `mcp-canvas-lms` → `canvas.ust.hk` (**2×**) ⇒ 🟢 **APAC**, HKUST. 🔴 **6 of 8 rows yield nothing**, and the npm *metadata* layer yields nothing at all — 5 of 8 declare no author, the two that do give a `gmail.com` address |
+| 🔴 **…and the sharpest origin signal is also a defect** | `mcp-canvas-lms` **1.0.5** reads `CANVAS_BASE_URL` in `dist/common/utils.js:4`, then hardcodes `https://canvas.ust.hk/api/v1/courses` in `dist/operations/canvas.js:58`. 🔵 **One of its three tools queries HKUST's Canvas whatever the client configures** — `eth-moodle-mcp`'s *"Works with Any Moodle"* class, one step worse, because this one claims configurability and silently drops it |
+| 🔴 **A false-region near-miss, caught and published** | An earlier draft of the origin probe **booked North America three times** off `d2l.myschool.edu`, `school.edu` and `moodle.example.edu` — three findings off three worked examples, the exact `T24` failure mode. 🔵 **A hand list of placeholders cannot work; every README invents its own.** The rule is now structural, and its tests pin all eight verbatim placeholders in these payloads |
+| 🔴 **A latent defect found in p139's own classifier** | `header_holder.extract_holder("Copyright © 2024")` returns **`"2024"`**. 🟢 **p139's published results are clean** — zero year-shaped holders in its committed table — 🔴 **but it fired on the first new row this pass read**: `adaptlearning/adapt_framework` ships `"attribution": "Copyright © 2024"`. 🔵 **p139's code is left untouched**; its result is a dated record, and the guard lives in p140 |
+| 🔴 **The search channel returned ZERO new findings, in four regions and Global** | Every regulatory and market candidate the mandated sweep returned was **already in this KB** — `H.R. 8747`, 134 bills/31 states, `AB 1159`, the EU omnibus dates, Vietnam `134/2025/QH15`, Korea's AI Basic Act, UNESCO IESALC's 87%/74%/26%, VC −26%. 🟢 **Stated as an informed gap rather than republished as `🆕`** — `T10` at its strongest, and `T24`'s rule doing its job |
+
+### Probes committed this pass
+
+| probe | action | verdict |
+|---|---|---|
+| [`p140-live-surface-bound`](../compose/code/p140-live-surface-bound/README.md) | `CP` | 🔴 **NOT REFUTED** — static *is* live on 7 of 8 npm rows, provably; the refuting case is flag-gated and in Go |
+| [`p140-rootonly-header-reach`](../compose/code/p140-rootonly-header-reach/README.md) | `CQ` | 🟡 **NOT REFUTED, weakly** — 1 of 5 foreign headers; 3 of 5 rows have **zero** source headers |
+| [`p140-pom-parent-chain`](../compose/code/p140-pom-parent-chain/README.md) | `CR` | 🔴 **REFUTED on both rows** — and the defect rate rises 40–67% → **80%** |
+| [`p140-origin-evidence`](../compose/code/p140-origin-evidence/README.md) | `CU` | 🟢 **DISCHARGED** — two regions booked on measured evidence |
+| [`p140-agent-tier-pii`](../compose/code/p140-agent-tier-pii/README.md) | `CT` | 🔴 **NOT REFUTED** — `PII_AND_AFFECT`, and the row ships its own oversight gate |
+
 ## 2026-10-12 — Pass 139
 
 **The pass that counted what the connectors can DO, and found 62 undocumented ways to write to an

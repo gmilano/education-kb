@@ -1,0 +1,109 @@
+
+# holders and ownership locations
+Crosstalk-Solutions/project-nomad {
+  "holders": {
+    "Crosstalk Solutions, LLC": {
+      "class": "OWN",
+      "count": 1
+    }
+  },
+  "nameless_suppressed": [],
+  "where": {
+    "root_licence": {
+      "file": "LICENSE",
+      "holders": [
+        "Crosstalk Solutions LLC"
+      ]
+    },
+    "metadata": {
+      "package.json": [
+        "Crosstalk Solutions, LLC"
+      ]
+    }
+  }
+}
+overhangio/tutor {
+  "holders": {},
+  "nameless_suppressed": [],
+  "where": {
+    "root_licence": {
+      "file": "LICENSE.txt",
+      "holders": [],
+      "template": true
+    },
+    "metadata": {
+      "pyproject.toml": [
+        "Edly",
+        "hello@edly.io",
+        "tutor"
+      ]
+    }
+  }
+}
+adaptlearning/adapt_framework {
+  "holders": {
+    "Tim Branyen, contributors": {
+      "class": "FOREIGN",
+      "count": 1
+    }
+  },
+  "nameless_suppressed": [
+    "2024"
+  ],
+  "where": {
+    "root_licence": {
+      "file": "LICENSE",
+      "holders": [
+        "ADAPT LEARNING"
+      ]
+    }
+  }
+}
+openedx/XBlock {
+  "holders": {},
+  "nameless_suppressed": [],
+  "where": {
+    "root_licence": {
+      "file": "LICENSE.TXT",
+      "holders": [],
+      "template": true
+    },
+    "notice": {
+      "file": "NOTICE.txt",
+      "holders": [
+        "edX"
+      ]
+    },
+    "metadata": {
+      "pyproject.toml": [
+        "XBlock",
+        "edX",
+        "oscm@edx.org"
+      ]
+    }
+  }
+}
+openedx/codejail {
+  "holders": {},
+  "nameless_suppressed": [],
+  "where": {
+    "root_licence": {
+      "file": "LICENSE.txt",
+      "holders": [],
+      "steward_only": []
+    },
+    "notice": {
+      "file": "NOTICE.txt",
+      "holders": [
+        "edX"
+      ]
+    },
+    "metadata": {
+      "pyproject.toml": [
+        "Open edX Project",
+        "edx-codejail",
+        "oscm@openedx.org"
+      ]
+    }
+  }
+}

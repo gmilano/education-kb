@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 140 — 2026-10-12
+
+⏱️ **Third pass of this date.** 🔴 **The pass was refused the probe it registered, answered the
+question from source anyway, and refuted three of p139's findings.** 🟢 **All six pre-registered
+actions are resolved; none is re-registered unchanged.** 🔴 **The headline: `ACTION CR`'s falsifier
+fired and made its own target worse — both Maven artefacts p139 called "no licence signal" inherit
+a licence from a parent POM, which raises the declared-but-absent rate from 40–67% to 80%.**
+
+| finding | verdict | figure |
+|---|---|---|
+| `P140-A` | 🔴 **`ACTION CP` NOT REFUTED — but the action could not run, and the blocker is new** | Executing an installed connector is **refused by sandbox policy**, distinct from p139's network `403`s. Answered statically: 7 of 8 npm rows are single-instance + literal + ungated, so static **is** live, provably. 🔴 The refuting case is `tutor-mcp`: **55** names in the build, **46** asserted live by its own CI test, gated on `deps.Institution` / `REGULATION_GOAL` / `OAuthGranularScopes` |
+| `P140-B` | 🔴 **`ACTION CR` DISCHARGED and REFUTED ON BOTH ROWS** | `net.oauth.core:oauth` inherits **Apache-2.0** from `net.oauth:oauth-parent` (depth 3, 🔴 **different `groupId`**); `sakai-kernel-impl` inherits **ECL-2.0** from `org.sakaiproject:oss-parent:1` (depth 4). 🔴 **5 of 5 declare; 4 of 5 (80%) ship no text** |
+| `P140-C` | 🔴 **`ACTION CS` DISCHARGED and REFUTED — it was never a bug** | `openedx-learning` 0.33.x is a **deliberate rename shim**: `packages=[]`, `install_requires=["openedx-core==0.34.1"]`, `Development Status :: 7 - Inactive`. 🟢 `pip install` **works**. 🔴 **This KB tracked a retired name for two passes**; the live row is `openedx-core` **1.9.1** (2026-10-09) |
+| `P140-D` | 🟡 **`ACTION CQ` DISCHARGED, NOT REFUTED — weakly: 1 of 5** | vs p139's 2 of 3; **3 of 8** across all `ROOT_ONLY` rows. 🔴 **The larger finding is unasked-for: `tutor` (157 files), `XBlock` (99) and `codejail` (31) carry ZERO source headers** — 287 files, none — and Open edX names its holder **three different ways** across three layers |
+| `P140-E` | 🔴 **`ACTION CT` DISCHARGED, NOT REFUTED — `PII_AND_AFFECT`** | `tutor-mcp` persists `learners.email` (`TEXT UNIQUE NOT NULL`) **and `affect_states`**, a per-session psychological profile keyed `UNIQUE(learner_id, session_id)`. **55** tools, 🔴 **27 writes**. 🟢 **And it ships a one-way high-stakes gate with NO inverse tool** → pattern `P19` |
+| `P140-F` | 🟢 **`ACTION CU` DISCHARGED — two regions booked on measured evidence** | `eth-moodle-mcp` → `moodle-app2.let.ethz.ch` (**4×**) ⇒ 🟢 **EMEA**, ETH Zürich. `mcp-canvas-lms` → `canvas.ust.hk` (**2×**) ⇒ 🟢 **APAC**, HKUST. 🔴 **6 of 8 rows yield nothing**, and the npm metadata layer yields nothing at all |
+| `P140-G` | 🟢 **p139's tool counts CONFIRMED by independent reimplementation** | **227, 62, 54, 18, 17, 16, 14, 3** — exact on all eight rows. 🔴 This pass's first draft said 17/4/64; **p139 was right every time**, and the cause was omitting its `SERVER_CTOR` exclusion |
+| `P140-H` | 🔴 **The search channel returned ZERO new findings in four regions and Global** | Every candidate already held. Stated as an informed gap rather than republished as `🆕` |
+
+### `P140-B` — why a refuted falsifier is the best outcome this pass produced
+
+`ACTION CR` was written against p139's own interest: *"Refuted if either inherits a `<licenses>`
+block from its parent — which would … RAISE the declared-but-absent denominator, **against this
+pass's own finding**."* 🔴 **Both rows refuted it.** And the consequence p139 predicted is exactly
+what happened — the denominator rose, so `T21`'s gradient **steepens**: PyPI **9%** → npm **33%**
+→ Maven **80%**.
+
+🔵 **The new trend is `T26`: a licence grant has a DEPTH.** `T17` said a licence identifier is not
+a licence; `T26` says the *absence* of an identifier is not the absence of a licence.
+🔴 **`net.oauth.core:oauth`'s grant lives under a different `groupId`** — which is why sixteen
+years of transitive use never surfaced it, and why two sentences on `repos/foundations.md` and
+`verticals/solutions.md` calling it *"unlicensed"* are now corrected rather than quietly dropped.
+
+### `P140-E` — the row that ships the control, and why it becomes a pattern
+
+Every high-risk control on `compose/patterns.md` until now was something Globant builds *around* a
+component. `ACTION CT` found one that ships it: `mark_domain_high_stakes` is irreversible from the
+agent tier — this pass searched for `unmark_*`, `clear_*`, `unset_*`, `reset_*` and found **none** —
+and `db/store.go` says why: *"Downgrading safety classification requires an operator-controlled
+process that is outside the learner-facing MCP trust boundary."* Its evidence policy is **typed**:
+
+> `"policy": "trusted human_review evidence is required; host_llm and external_service`
+> `evaluations do not satisfy this gate"`
+
+🔵 **The model cannot certify itself** — the property EU AI Act **Article 14**, **Annex III**,
+Vietnam's **Decision 33** and the Oklahoma and Maryland statutes are all reaching for, implemented
+by a single alpha-stage MIT maintainer before any vendor on this page. 🟡 **And the honest caveat
+is part of it**: alpha, one maintainer, and its own institutional tier is undocumented.
+
+### Regions this pass
+
+| region | what moved |
+|---|---|
+| **North America** | 🔴 **No new instrument; the channel returned only rows this page holds.** 🆕 Measured instead: the Open edX learning core's live artefact is stewarded from the US by **Axim Collaborative** (`dave@axim.org`) — edX Inc. *renamed*, holding the ~$700–800M from the 2U sale. 🔴 **And its own repositories give three answers to "who do we notify?"**: `oscm@edx.org` (a domain **2U** now operates), `oscm@openedx.org`, and `dave@axim.org`. 🟢 `Crosstalk Solutions LLC` is the only one of five `ROOT_ONLY` rows with a **filled** Apache appendix. 🔴 `edu.ksu.ome.lti:lti-launch` (Kansas State) is still the worst Maven row and `P13` still depends on it |
+| **EMEA** | 🟢 **🆕 The first region this KB has placed on MEASURED evidence**: `eth-moodle-mcp` compiles `moodle-app2.let.ethz.ch` in **four times** plus `safari.ethz.ch` — ETH Zürich. 🔵 p139 called it EMEA-owned from tool *prose*; a compiled-in host is a **binding**. 🔴 **Sakai correction**: the two kernel artefacts do **not** have "opposite licence posture" — both are **ECL-2.0**, one by inheritance at depth 4 — and *neither jar ships licence text*, so a European university's review burden is higher than p139 stated, not lower |
+| **APAC** | 🟢 **🆕 First APAC-placed connector row**: `mcp-canvas-lms` hardcodes `canvas.ust.hk` — **HKUST** — and 🔴 **ignores its own `CANVAS_BASE_URL`** to do it, so one of its three tools queries HKUST whatever a client configures. 🆕 🔵 **And a market fact this KB should have carried for three years: the most widely used Open edX deployment tool is APAC-owned.** `overhangio/tutor` declares **Edly** — the edtech arm of Pakistan-based **Arbisoft**, which acquired Overhang.IO on **2023-03-27**; founder Régis Behmo leads Tutor there. 🟡 Secondary evidence, marked as such |
+| **LATAM** | 🔴 **Ninth consecutive pass with no LATAM-owned row — 🟢 and this time the emptiness is MEASURED.** The origin probe carried **fifteen** LATAM suffixes (`.br`, `.mx`, `.ar`, `.cl`, `.co`, `.pe`, `.uy`, `.ec`, `.cr`, `.gt`, `.bo`, `.py`, `.ve`, `.do`, `.pa`) and matched **zero**, on a shelf where the same probe successfully placed Switzerland and Hong Kong. 🔵 **The instrument works and the supply is absent — two different claims, and only the second is now evidenced.** 🔴 This pass also declined a chance to fake one: an earlier draft booked regions off placeholder hosts |
+| **Global** | 🔴 **The demand channel has stopped producing information** — second consecutive null pass — **while the artefact channel produced five verdicts, three of them corrections.** 🔵 That asymmetry is the global finding: the governance gap this page has called "the market" is measurable at the artefact layer and wider there than any survey reports. 🟢 Encouraging datum, measured not surveyed: `tutor-mcp` ships **279 source files against 286 test files** |
+
+### Verdicts on p139's actions
+
+- 🔴 **`ACTION CP` — NOT REFUTED.** Could not run as written (sandbox policy); answered from source
+  in two parts. `P18` step 5 survives, with a changed justification and a per-configuration rewrite.
+- 🟡 **`ACTION CQ` — DISCHARGED, NOT REFUTED, weakly.** 1 of 5. The ownership-location axis is the
+  result worth keeping.
+- 🔴 **`ACTION CR` — DISCHARGED and REFUTED on both rows**, and the trend it threatened got stronger.
+- 🔴 **`ACTION CS` — DISCHARGED and REFUTED.** Not a bug; a rename this KB had not followed.
+- 🔴 **`ACTION CT` — DISCHARGED, NOT REFUTED.** `PII_AND_AFFECT`, plus an oversight primitive worth
+  stealing.
+- 🟢 **`ACTION CU` — DISCHARGED.** Two regions, on hostnames, after nine passes of asking.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, and NOT re-registered.** The cause is now
+  characterised as a network allowlist rather than a per-host accident.
+
+### Pre-registered for p141
+
+🔴 **`ACTION CX`** — resolve where `tutor-mcp` defines `pedagogical_decisions`. The table is absent
+from `db/schema.sql` while `db/pedagogical_decisions.go` and `get_decision_replay_summary` both
+exist, so the *"auditable pedagogical decisions"* half of `ACTION CT` is only half answered.
+🔴 *Refuted if the decision log turns out to persist no learner-linked row at all — which would
+make `P19`'s audit-trail claim rest on the affect tables alone.*
+
+🟢 **`ACTION CY`** — run the `p140-origin-evidence` probe over the **repository** layer of the rows
+it could not place: `git log` author email domains and any `FUNDING.yml`, for the six npm rows that
+yielded no origin signal in their payloads. 🔴 *Refuted if the repository layer places no additional
+row — which would mean `T29`'s "origin is in the code" is specifically about compiled-in hosts, not
+about code generally.*
+
+🔴 **`ACTION CZ`** — apply `p140-live-surface-bound` to the **five other tutoring-agent rows p139
+added** (`zijinz456/OpenTutor`, `ahmedEid1/lumen`, `mohaneesh-03/mcp-tutor`, `nirholas/ai-tutor-mcp`,
+`hesham0-0nasser/tutor-lms-mcp`) and count flag-gated registration. 🔴 *Refuted if none is gated —
+which would make `T28` a property of `tutor-mcp`'s maturity rather than of agent servers, and would
+narrow the `P18` amendment back to a note.*
+
+🟢 **`ACTION DA`** — check whether `openedx-core`'s **six consolidated top-level packages** each
+retain their own licence posture, or whether consolidation flattened them to one AGPL-3.0 grant.
+🔴 *Refuted if any of the six carries a per-package licence differing from the distribution's
+`AGPL-3.0-only` — which would make `T18`'s per-file notice question live again at the package layer.*
+
+🔴 **`ACTION DB`** — read `openedx/XBlock`'s and `openedx/codejail`'s commit history for when
+`oscm@edx.org` and `oscm@openedx.org` diverged, and whether either was updated after the Axim
+rename. 🔴 *Refuted if both addresses predate the rename and neither has been touched since — which
+would make the three-way contact split an artefact of neglect rather than a live inconsistency, and
+a far weaker procurement finding.*
+
+🟡 **`ACTION DC`** — apply the `ACTION CR` parent-chain walk to **every** Maven coordinate this KB
+cites, not just the five on the LTI shelf. 🔴 *Refuted if no further row changes verdict — which
+would make `T26` a property of these two artefacts rather than of Maven's inheritance model.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **`ACTION CP` was not executed, and no `tools/list` was called by this pass.** Its one live
+  number is an assertion in the subject's **own CI test**. Strong evidence; still second-hand.
+- 🔴 **No primary regulatory source was read, for the second consecutive pass.** 🟢 **The cause is
+  now fully characterised**: the proxy answers `403` to `CONNECT` for government **and university**
+  hosts, so it is an allowlist of package registries plus GitHub — p139's "refuses government
+  hosts" was too narrow. 🔵 **A second refusal joins the ledger**: executing an installed npm
+  connector is blocked by *sandbox* policy, a different mechanism. Neither is a probe to
+  re-register; both are requests to widen a policy, and they belong to whoever owns this
+  environment.
+- 🔴 **Institutional host liveness could not be checked**, so `ACTION CU`'s evidence is the
+  compiled-in hostname and not the host's existence. Stated in the probe and in every page that
+  cites it.
+- 🔴 **An earlier draft of the origin probe booked North America three times off placeholder
+  hosts** (`d2l.myschool.edu`, `school.edu`, `moodle.example.edu`). Published as a near-miss
+  because the failure mode is `T24`'s: three regional findings off three worked examples. The
+  placeholder rule is now structural and its tests pin all eight verbatim placeholders.
+- 🔴 **A latent defect was found in p139's `header_holder`** — `extract_holder("Copyright © 2024")`
+  returns `"2024"`. 🟢 p139's published results are clean, but it fired on the first new row read.
+  🔵 **p139's committed code is deliberately left untouched**: its result is a dated record, and
+  editing the instrument beneath it would invalidate rather than correct it.
+- 🟡 **No platform row and no market figure changed.** The vertical-platform search returned only
+  rows `verticals/solutions.md` already carries. Everything this pass added is a correction to how
+  an existing row should be *read*, which is the movement to expect once a shelf is saturated.
+
 ## Pass 139 — 2026-10-12
 
 ⏱️ **Second pass of this date.** 🟢 **All six of p138's pre-registered actions ran; five discharged,

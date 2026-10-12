@@ -6,6 +6,117 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 140
+
+🔵 **p139 asked whose fault a missing licence file is and answered "the build tool". This pass
+asked the prior question — is the licence actually missing? — and twice the answer was no.**
+
+### The measurement
+
+`ACTION CR` walked the **parent-POM chains** of the two Maven artefacts p139 recorded as
+declaring nothing. 🔴 **Both declare a licence, two and three levels up.** Probe, controls and
+committed walk: [`p140-pom-parent-chain`](../compose/code/p140-pom-parent-chain/README.md).
+
+| coordinate | own POM | inherits | from | depth |
+|---|---|---|---|---|
+| 🔴 `net.oauth.core:oauth` 20100527 | **NONE** | 🆕 **Apache-2.0** | `net.oauth:oauth-parent:20090531` | 3 |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-impl` 23.3 | **NONE** | 🆕 **ECL-2.0** | `org.sakaiproject:oss-parent:1` | 4 |
+
+🔵 **`net.oauth.core:oauth`'s grant sits under a DIFFERENT `groupId`** — `net.oauth`, not
+`net.oauth.core` — which is why sixteen years of transitive use never surfaced it. p139 called
+this artefact *"unlicensed"*. 🔴 **It is Apache-2.0, two files and one namespace hop from where
+anyone looks.**
+
+🔴 **And the refutation makes the defect worse.** With inheritance resolved, **5 of 5** Maven rows
+declare a licence and **4 of 5 (80%)** ship no licence text in the jar — against p139's 40–67% and
+npm's 33%. 🔵 **`T21`'s gradient steepens instead of collapsing: PyPI 9%, npm 33%, Maven 80%.**
+
+### 🆕 🔴 A repo row this page has been tracking under a retired name
+
+`ACTION CS` asked whether `openedx-learning`'s empty **0.33.x** wheels were a known upstream bug.
+🔴 **They were never a bug.** The `setup.py` docstring: *"Builds a final shell release of
+openedx-learning which simply 'redirects' to openedx-core"* — `packages=[]`,
+`install_requires=["openedx-core==0.34.1"]`, `Development Status :: 7 - Inactive`.
+
+| | retired | 🆕 current |
+|---|---|---|
+| package | `openedx-learning` 0.33.1 *(2026-02-18)* | 🆕 [`openedx-core`](https://github.com/openedx/openedx-core) **1.9.1** *(🟢 **2026-10-09**)* |
+| wheel | 🔴 1 479 B / 4 metadata paths | 358 188 B / **261 paths** |
+| sdist | 🆕 🔴 1 742 B — `setup.py` + `setup.cfg`, **zero package source** | 901 962 B |
+| licence | AGPL 3.0, legacy field, **no file shipped** | 🔴 **AGPL-3.0-only** as PEP 639 `License-Expression` |
+| 🟢 payload | 🔴 nothing | 🟢 `dist-info/licenses/LICENSE.txt`, **35 139 B**, Metadata-Version 2.4 |
+
+🟢 **So `pip install openedx-learning` WORKS** — it resolves the shim and installs `openedx-core`.
+p139's *"`pip install` resolves to the empty one"* was true of the bytes and wrong about the
+outcome. 🆕 **This pass measured the sdist too, which p139 did not**: a build recipe with nothing
+to build, `top_level.txt` a single newline.
+
+🟢 **`openedx-core` is the cleanest licence payload this KB has measured**, and it vindicates
+`T21`'s mechanism on the newest artefact on the shelf. 🟢 **It also removes p139's only PyPI
+hit** — that row was a shim with no code — so this shelf's PyPI declared-but-absent rate is
+**0 of 10**, not 1 of 11. 🔵 **New rule (`T27`): before carrying a package row forward, read its
+latest release's `Development Status` classifier and its `long_description` for a rename.** Both
+signals were in the artefact p139 already had on disk.
+
+### 🔴 Five `ROOT_ONLY` repos read, and three of them record ownership nowhere in source
+
+`ACTION CQ` cloned the five rows p139 left unread. 🟡 **The foreign-header class holds weakly —
+1 of 5** (`Tim Branyen, contributors`, an MIT-licensed vendored grunt task inside GPL-3.0
+`adaptlearning/adapt_framework`); **3 of 8** across all `ROOT_ONLY` rows.
+
+🔴 **The unasked-for finding is larger**: `overhangio/tutor` (157 source files),
+`openedx/XBlock` (99) and `openedx/codejail` (31) carry **no copyright header in any source
+file** — 287 files, zero headers.
+
+| row | tree | `LICENSE` names a holder? | where ownership lives |
+|---|---|---|---|
+| `Crosstalk-Solutions/project-nomad` | 664 | 🟢 appendix **filled** — `Copyright 2024-2026 Crosstalk Solutions LLC` | + `package.json` |
+| `openedx/XBlock` | 193 | 🔴 `Copyright [yyyy] [name of copyright owner]` | `NOTICE.txt`, `pyproject.toml` |
+| `overhangio/tutor` | 249 | 🔴 `Copyright (C) <year>  <name of author>` | `pyproject.toml` **only** |
+| `adaptlearning/adapt_framework` | 118 | 🟡 only inside the GPL's **interactive-mode example** | — |
+| `openedx/codejail` | 43 | 🔴 **no copyright line at all** | `NOTICE.txt`, `pyproject.toml` |
+
+🔵 **`adapt_framework` is a third form this KB has not recorded**: the holder appears in the
+licence file only as part of the GPL's illustrative `show c` snippet — a real attribution in a
+place no scanner treats as one.
+[`p140-rootonly-header-reach`](../compose/code/p140-rootonly-header-reach/README.md).
+
+### 🔴 Open edX answers "who holds this?" three different ways
+
+| layer | artefact | holder | contact |
+|---|---|---|---|
+| repo | `openedx/XBlock` | `edX` | 🔴 `oscm@edx.org` |
+| repo | `openedx/codejail` | `edX` / 🆕 `Open edX Project` | 🆕 `oscm@openedx.org` |
+| registry | `openedx-core` 1.9.1 | 🆕 `David Ormsbee` | 🆕 **`dave@axim.org`** |
+
+🟢 **The holder name is defensible** — edX Inc. was *renamed* Axim Collaborative, same trustees
+and tax ID, after Harvard and MIT sold the edX brand to 2U. 🔴 **The contact domain is not**:
+`edx.org` is operated by **2U**, a different company from the steward, and one of these two
+sibling repositories routes its notice obligation there while the other routes to `openedx.org`.
+
+### 🟡 And one row's metadata is FRESHER than its organisation name
+
+`overhangio/tutor` declares `authors = [{name = "Edly"}, {email = "hello@edly.io"}]` — correct and
+current: **Edly**, the edtech arm of Pakistan-based **Arbisoft**, acquired Overhang.IO on
+**2023-03-27**, and Tutor's founder **Régis Behmo** leads its technical direction there. 🔵 **This
+KB has repeatedly found metadata lagging reality; here the GitHub organisation name is the stale
+signal.** 🔴 **A row's org name is not evidence of anything** — which is `T29` reached from the
+opposite direction.
+
+### 🔴 What this pass did not reach
+
+- 🔴 **No primary regulatory source was read, again**, and the cause is now fully characterised:
+  the proxy answers `403` at `CONNECT` for government **and university** hosts alike, so the
+  policy is an allowlist of package registries plus GitHub. 🔵 **Not a probe to re-register** — a
+  request to widen a network policy.
+- 🔴 🆕 **A second refusal joins the ledger**: executing an installed npm connector is blocked by
+  **sandbox policy**, a different mechanism from the network refusals. It is why `ACTION CP` ran
+  as a source read.
+- 🟡 `db/pedagogical_decisions.go` exists in `tutor-mcp` and `get_decision_replay_summary` is
+  registered, but the `pedagogical_decisions` table is **not** in `db/schema.sql` — so the
+  "auditable pedagogical decisions" half of `ACTION CT` is **only partly answered**, and that is
+  said rather than rounded up.
+
 ## 2026-10-12 — Pass 139
 
 🔵 **p138 asked whether one package's licence defect was that package's. This pass asked whether the

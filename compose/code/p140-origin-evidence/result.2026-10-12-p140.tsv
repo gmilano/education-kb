@@ -1,0 +1,10 @@
+subject	kind	evidence	occurrences	region	note	where
+_imazhar101_mcp-canvas-server-2.1.3	NONE	-	0	UNMAPPED	no institutional host or email in payload	-
+_ink-waffle_moodle-mcp-0.2.0	NONE	-	0	UNMAPPED	no institutional host or email in payload	-
+_n35da_brightspace-mcp-0.4.0	HOST_IN_CODE	n35da.com	4	UNMAPPED	no country signal in 'n35da.com'	README.md,deadlinesExport.mjs,server.mjs
+_owen-x-tech_canvas-mcp-1.1.0	NONE	-	0	UNMAPPED	no institutional host or email in payload	-
+canvas-mcp-server-2.2.3	NONE	-	0	UNMAPPED	no institutional host or email in payload	-
+eth-moodle-mcp-1.3.3	HOST_IN_CODE	moodle-app2.let.ethz.ch	4	EMEA	ETH Zürich (Switzerland)	README.md,index.js,moodle-client.js
+eth-moodle-mcp-1.3.3	HOST_IN_CODE	safari.ethz.ch	1	EMEA	ETH Zürich SAFARI course platform	ddca-client.js
+mcp-canvas-lms-1.0.5	HOST_IN_CODE	canvas.ust.hk	2	APAC	suffix .hk	README.md,canvas.js
+moodle-mcp-server-aql-0.1.7	HOST_IN_CODE	csmediapro.com	2	UNMAPPED	no country signal in 'csmediapro.com'	README.md,package.json
