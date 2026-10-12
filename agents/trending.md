@@ -6,6 +6,71 @@ updated: 2026-10-12
 
 # Education — trending agents (append-only log)
 
+## 2026-10-12 — Pass 141
+
+**The pass in which four of six pre-registered falsifiers fired, three of this KB's own
+instruments were found to be tier-scoped rather than general, and the best engineering on the
+shelf turned up in a two-commit repository.**
+
+🔵 **p140 answered its blocked action from source and called that the pass's lesson. This pass
+inherited six actions and refuted four of them** — `CY`, `CZ`, `DB`, `DC`. 🟢 **Refuting your
+own predecessor's hopes on this scale is what a pre-registration is for**, and every one of the
+four was refuted in the direction that makes the underlying finding sharper rather than milder.
+
+| what moved this week | measurement |
+|---|---|
+| 🟢 **`ACTION CX`: the decision log is real, and it is enforced by the DATABASE** | `pedagogical_decisions` is declared in [`db/pedagogical_contract_schema.go`](https://github.com/ArnaudGuiovanna/tutor-mcp) as Go-embedded DDL. `learner_id TEXT NOT NULL REFERENCES learners(id)`, append-only by trigger on **both** engines (`RAISE(ABORT, 'pedagogical decisions are immutable')` / `tutor_immutable_pedagogical_decision()`), 🟢 `ENABLE` **and** `FORCE ROW LEVEL SECURITY` on Postgres, and FK-bound one-to-one to `assessment_attempts` by `idx_assessment_decision_once`. 🔵 **`P19` does not rest on the affect tables** |
+| 🟢 **…and the binding is tighter than an audit trail** | `assessment_decision_scope` refuses the insert unless `json_extract(p.snapshot_json, '$.contract.target_concept') = NEW.concept_id` **and** the recommended activity type matches. 🔵 **The recommendation a learner was given and the assessment they were graded against are bound at write time, at a pinned curriculum version, and neither side can be edited afterwards** |
+| 🔴 **…but 96 of 118 tables are invisible to a `.sql` reader** | `db/*.sql` declares **22**; non-test `db/*.go` declares **111**; 🔴 **96 `GO_ONLY`**. A reviewer reading the conventional place sees **19%**. 🔴 **And the split falls ACROSS a DPIA**: `learners` (the email table) and `interactions` are `SQL_ONLY`, while 🔴 `pedagogical_decisions`, `assessment_attempts` and `audit_events` are all Go-only. *An enumeration that reads `db/*.sql` finds the learner's email and misses every table recording what was decided about them.* [`p141-schema-location`](../compose/code/p141-schema-location/README.md) |
+| 🔴 **`ACTION CZ` REFUTED — 0 of 5 gated, so `T28` belongs to `tutor-mcp`, not to agent servers** | And only **4 of the 5 are MCP servers at all**. 🔵 p140's instruction to *"apply `p140-live-surface-bound`"* assumed a homogeneity that does not survive one tier up: two of the five are Python, one is PHP, one has no MCP in it |
+| 🔴 **…and the unasked-for finding inverts p140's headline** | Dynamic registration — where a name-literal count tells you nothing about what is served — is **1 of 8 (12%)** on the npm connector tier and 🔴 **2 of 4 (50%)** here. `ahmedEid1/lumen` serves **10** tools and a literal count returns **1**; `nirholas/ai-tutor-mcp` serves **2** and a literal count returns **0**, through the *identical* `for (const tool of TOOLS) server.registerTool(tool.name, …)` idiom that was p140's 61-tool blind spot. 🔵 **`BOUNDED_STATIC` is a property of that tier, not of MCP servers** — now `T30` |
+| 🆕 🟢 **The best code on this shelf is in its smallest repository** | [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) — **Apache-2.0, 2 commits** — ships the entry-point guard p139 recorded as missing from `canvas-lms-mcp`: `isProcessEntryPoint()`, realpathing **both** sides because *"npm bin shims are symlinks, so argv[1] may differ from import.meta.url"*, plus a `buildServer()` that returns a registered server with no transport — 🟢 **exactly the seam p139 found unreachable by import in the 19-version package.** 🔵 *Two commits solved what nineteen versions did not* |
+| 🔴 **Two rows were misclassified on arrival, and both corrections are load-bearing** | 🔴 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) **is not an MCP server**: 425 Python + 184 TSX files and the token `mcp` occurs **once** in the tree; its only `Server(` is a mock OpenAI test double. 🟢 Still real, MIT, active (191 commits, HEAD **2026-10-08**) — a tutoring *application* with no tool surface to bound. 🔴 [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) is a **WordPress plugin** for Tutor LMS: hand-rolled JSON-RPC over `register_rest_route`, 🔴 **31 tools of which 17 of 33 distinct names are `create`/`update`/`delete`** — course delete among them — and 🔴 **still no licence file at `HEAD`** |
+| 🔴 **`ACTION CY` REFUTED — the repository layer places NOTHING, and for four of six it does not exist** | 🔴 **3 of 6 declare no `repository` field in ANY published version** (13, 1 and 5 versions inspected). 🔴 **A fourth declares one that is not publicly readable** — `owentaylor/canvas-mcp`, confirmed against a deliberately nonexistent control that fails identically. 🔴 Neither reachable row ships a **funding file**; neither email domain carries a country. 🔵 **So `T29` narrows: origin is in the code when the code must reach a named host to work — not in "code generally" and not in metadata** |
+| 🆕 🟢 **A new origin channel, invented because the registered one was empty** | The **UTC offset each commit records** — written by the author's machine, unreviewable later. It places **6 of 7** agent-tier rows: 🟢 `MisterCommand/mcp-canvas-lms` **+0800, 20 of 20** *(independently corroborating p140's `canvas.ust.hk` booking)*, 🆕 `zijinz456/OpenTutor` **+1100** ⇒ APAC/Australia, 🆕 `ahmedEid1/lumen` **+0200, 828 of 828** ⇒ EMEA, 🆕 `mohaneesh-03/mcp-tutor` **+0530** ⇒ APAC/India, 🆕 `hesham0-0nasser/tutor-lms-mcp` **+0300** ⇒ EMEA, `ArnaudGuiovanna/tutor-mcp` **+0200** ⇒ EMEA |
+| 🔴 **…and it REFUSED the two bookings it could have made** | `canvas-mcp-server` is **13 of 16 commits at `-0600`** and `moodle-mcp-server-aql` **9 at `-0400`**. 🔴 **Both offsets are shared between North America and LATAM** — `-0600` is US Central *and* Mexico City, Guatemala, Costa Rica, Honduras, El Salvador, Nicaragua, Belize. 🔵 **Both left `UNMAPPED`**, and `test_repo_origin.py` pins that **no entry in the bookable table maps to LATAM at all**, so a future pass that wants to place one must change that test in the open |
+| 🆕 🔴 **A measurable AI-authorship share, self-declared** | `zijinz456/OpenTutor`: **151 of 191 commits (79%)** carry a `Co-Authored-By: Claude` trailer, 49 authored `Claude <noreply@anthropic.com>`. `ArnaudGuiovanna/tutor-mcp`: 51 trailers, 30 authored, of 459. 🔵 **This is `T25` upgraded from inference to declaration** — p139 *inferred* synthetic history from 7 316-second commit spacing; these projects say it themselves. 🟢 Not a defect; `tutor-mcp` ships **286 test files against 279 source** — but commit count is now useless as a proxy for human effort or bus factor |
+| 🔵 **`T24` fired on this pass, and it caught two rows before publication** | An earlier draft presented the Canvas rows' **publish ages** (`2.2.3` 2025-06-27, `1.0.5` 2025-04-11) and the **repo-ahead-of-registry** gap (`package.json` **2.3.1** vs npm **2.2.3**) as new. 🔴 **Both are already in this file** — *"one row has been still for sixteen months"*, same figures, same two packages. 🟢 **Withdrawn and credited rather than republished.** The only addition is the denominator: 🔴 **2 of 8 npm rows exceed a year since publication; the other six are inside 231 days** |
+| 🆕 🔴 **What IS new on that cluster: three artefacts, two owners, one name** | The string `mcp-canvas-lms` names an npm package by 🆕 **MisterCommand** (`anthony.tr.hou@gmail.com`; 3 tools, hardcodes `canvas.ust.hk`, declares **no** repository), 🆕 a GitHub repo by **MisterCommand** — and the declared repository of the *differently named* npm package `canvas-mcp-server` by **DMontgomery40** (54 tools). 🔵 **A prior pass mapped `plyght/canvas-mcp` → `canvas-mcp-server` → `DMontgomery40/mcp-canvas-lms` as a `FOREIGN-PACKAGE` row; the second owner of the name was never identified.** Following the repository link and searching npm for the repo's own name land a buyer on two unrelated artefacts by two unrelated authors |
+| 🔴 **The search channel returned ZERO new findings — a THIRD consecutive null pass** | Four global queries and four regional ones. Every candidate already held: the DEC LATAM 92%/79% survey and its ~30% policy figure, UNESCO IESALC's 200 HEIs / 87% / 26%, ILIA, CMU + Gates **$55M**, OpenAI's eight national partners, TCS + Pearson, LearnUpon Sydney, Chile's 2021 policy, Mexico's non-binding SEP/ANUIES. 🟢 **Stated as an informed gap, not republished as `🆕`** |
+
+### Probes committed this pass
+
+| probe | action | verdict |
+|---|---|---|
+| [`p141-schema-location`](../compose/code/p141-schema-location/README.md) | `CX` | 🔴 **NOT REFUTED** — learner-linked, append-only, RLS-forced; and 96 of 118 tables are Go-only |
+| [`p141-repo-origin-layer`](../compose/code/p141-repo-origin-layer/README.md) | `CY` | 🔴 **REFUTED** — 0 of 6 placed; 4 of 6 have no reachable repository |
+| [`p141-agent-surface-gate`](../compose/code/p141-agent-surface-gate/README.md) | `CZ` | 🔴 **REFUTED** — 0 of 5 gated; dynamic registration is 50% of this tier |
+| [`p141-package-grant-layer`](../compose/code/p141-package-grant-layer/README.md) | `DA` | 🔴 **NOT REFUTED** — 6 of 6 `SILENT`: 0 licences, 0 SPDX, 0 copyright in 237 files |
+| [`p141-contact-migration`](../compose/code/p141-contact-migration/README.md) | `DB` | 🔴 **REFUTED** — both addresses rewritten in 2026 by the same Arbisoft campaign |
+| [`p141-pom-chain-sweep`](../compose/code/p141-pom-chain-sweep/README.md) | `DC` | 🔴 **REFUTED on three rows** — inheritance is 5 of 9, the majority shape |
+
+### 🔴 Three of this KB's own instruments corrected or scoped this pass, two of them before publishing
+
+- 🔴 **`p141-schema-location`'s first draft counted a table named `is`**, matched out of the
+  comment `// Serialize migration across the fleet. CREATE TABLE IF NOT EXISTS is not`. Every
+  Go-side figure was one too high. 🔵 **A comment that quotes DDL is not DDL**; the published
+  figures are the corrected, smaller ones and the line is pinned as a fixture. *Second
+  consecutive pass whose instrument was wrong in the inflating direction.*
+- 🔴 **`p141-agent-surface-gate`'s first draft reported `mcp-tutor` as `GATED`** off `if
+  CONFIG.auto_open_browser:` sitting in the body of an *earlier* tool function, 64 lines above.
+  🔵 **Proximity is not enclosure.** Gating is now decided by indentation and brace depth.
+- 🔴 **Its Go lane FAILS ITS CONTROL and no Go verdict is published.** Against `tutor-mcp` —
+  which p140 proved *is* gated — it returns `BOUNDED_STATIC`. 🔵 **The gate is two indirections
+  above the name**: `tools/tools.go` calls `registerGetNextActivity(server, deps)` inside the
+  `deps.Institution` conditional, while the literal lives in an `addTool(…)` helper. **No
+  lexical test at the registration site can see call-site gating** — a structural limit of this
+  probe *and* p140's, pinned as a test rather than left as a comment. The `0 of 5` verdict
+  survives only because all four servers register at module top level, checked by hand after
+  the control failed.
+- 🔴 **`curl -sI https://github.com/…` answers `403` for every repository** through this
+  proxy — live, private or nonexistent alike. 🔵 **An earlier draft nearly read four `403`s as
+  four dead repositories.** The only valid probe is `git ls-remote` against a nonexistent
+  control, which now runs on every invocation.
+
+---
+
+
 ## 2026-10-12 — Pass 140
 
 **The pass that was refused the probe it registered, answered the question from source anyway,

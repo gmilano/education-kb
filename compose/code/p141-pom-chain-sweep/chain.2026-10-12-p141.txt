@@ -1,0 +1,11 @@
+    org.imsglobal:basiclti-util:1.2.0                            declares: The Apache Software License, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0.txt>
+    org.verapdf:verapdf-library:1.30.3                           no <licenses>
+    org.verapdf:verapdf-parent:1.30.1                            declares: GNU General Public License, version 3 (GPL-3.0) <https://opensource.org/licenses/GPL-3.0>; Mozilla Public License 2.0 (MPL-2.0) <https://opensource.org/licenses/MPL-2.0>
+    org.sonatype.oss:oss-parent:7                                no <licenses>
+    org.jasig.ssp:ssp:2.8.0                                      no <licenses>
+    org.jasig.parent:jasig-parent:39                             declares: Apache License Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0.txt>
+    org.sonatype.oss:oss-parent:7                                no <licenses>
+    org.sakaiproject:kernel:23.3                                 no <licenses>
+    org.sakaiproject:master:23.3                                 no <licenses>
+    org.sakaiproject:oss-parent:1                                declares: Educational Community License, Version 2.0 <http://www.opensource.org/licenses/ecl2.txt>
+    uk.ac.ox.ctl:spring-security-lti13:0.3.7                     declares: Apache License, Version 2.0 <https://www.apache.org/licenses/LICENSE-2.0.txt>

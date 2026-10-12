@@ -1,0 +1,4 @@
+
+# distribution layer: 1 licence file(s), 35139 bytes: openedx_core-1.9.1.dist-info/licenses/LICENSE.txt
+# package layer: 6 packages, 237 .py files, 0 licence files, 0 SPDX, 0 copyright
+# SILENT packages: 6 of 6 -> ['openedx_catalog', 'openedx_content', 'openedx_core', 'openedx_django_lib', 'openedx_learning', 'openedx_tagging']

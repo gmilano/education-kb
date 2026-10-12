@@ -6,6 +6,128 @@ updated: 2026-10-12
 
 # Education — foundational repos
 
+**Pass 141, 2026-10-12.** 🔴 **`ACTION DC` applied p140's parent-chain walk to every Maven
+coordinate this KB cites, and three further rows change verdict — so `T26` is not a property of
+two artefacts but of Maven's inheritance model.** 🔴 **`ACTION DA` found the opposite failure
+one layer below `openedx-core`'s distribution: not a disagreement between layers, but silence
+in all of them below the wheel.**
+
+### 🔴 `ACTION DC` — 5 of 9 coordinates on this shelf do not declare their own licence
+
+[`p141-pom-chain-sweep`](../compose/code/p141-pom-chain-sweep/README.md). The walker is p140's,
+re-used **unchanged** so that a changed verdict cannot be mistaken for a changed method; only
+the population is new.
+
+| coordinate | own POM | inherits from | inherited licence | depth |
+|---|---|---|---|---|
+| 🟢 `org.imsglobal:basiclti-util:1.2.0` | Apache-2.0 | — | — | 1 |
+| 🆕 🔴 **`org.verapdf:verapdf-library:1.30.3`** | 🔴 **NONE** | `org.verapdf:verapdf-parent:1.30.1` | 🔴 **GPL-3.0 *or* MPL-2.0** | **3** |
+| 🆕 🔴 `org.jasig.ssp:ssp:2.8.0` | 🔴 **NONE** | `org.jasig.parent:jasig-parent:39` | Apache-2.0 | **3** |
+| 🆕 🔴 `org.sakaiproject:kernel:23.3` | 🔴 **NONE** | `org.sakaiproject:oss-parent:1` | ECL-2.0 | **3** |
+| 🆕 🟢 `uk.ac.ox.ctl:spring-security-lti13:0.3.7` | Apache-2.0 | — | — | 1 |
+
+Cumulative, p140 + p141: 🔴 **`INHERITS_FROM_PARENT` 5** (`net.oauth.core:oauth`,
+`sakai-kernel-impl`, `verapdf-library`, `jasig.ssp:ssp`, `sakaiproject:kernel`) against 🟢
+**`DECLARES_OWN` 4** (`sakai-kernel-api`, `lti-launch`, `basiclti-util`,
+`spring-security-lti13`). 🔵 **56% inherit. An audit that reads one POM per coordinate is wrong
+more often than right on this shelf.**
+
+🟢 **`org.imsglobal:basiclti-util:1.2.0` is also now walked rather than carried.** p140's prose
+table listed it as *"Apache-2.0 (own)"* on an earlier pass's authority while its committed TSV
+held only four rows. 🟢 **The walk confirms it — `DECLARES_OWN`, depth 1** — so the cell is
+now evidenced by the same instrument as its neighbours rather than inherited from prose.
+
+### 🔴 The row that should change a delivery decision: veraPDF
+
+`org.verapdf:verapdf-library` is the **PDF/UA accessibility validator** — in an education
+engagement, the component reached for to prove course material meets an accessibility duty.
+
+🔴 **Its own POM carries no `<licenses>` block at all. The grant is two levels up, and it is a
+dual GPL-3.0 / MPL-2.0 offer** — at once the strongest reciprocal licence anywhere on these
+shelves and, through MPL-2.0, the route out of it. 🟢 **MPL-2.0 is the obvious election for a
+studio, and it cannot be elected by a team that does not know it is offered.** 🔴 A scanner
+reading the named coordinate reports *"no licence"*, which invites the *"permissive by default"*
+error p140 corrected on `net.oauth.core:oauth` — this time on a component whose licence
+genuinely constrains redistribution.
+
+🔵 **And there is no payload to inspect for a second opinion.** `verapdf-library` is
+`<packaging>pom` with modules `core` and `xmp-core`; 🔴 **`verapdf-library-1.30.3.jar` is 404 on
+Central**, because no jar is published under that name — consumers resolve `org.verapdf:core`.
+`org.jasig.ssp:ssp:2.8.0` is the same class, `<packaging>war`. 🔵 **The coordinate a dependency
+declaration names has no own grant and no bytes: the licence lives in a parent and the code
+lives in siblings.** `org.sonatype.oss:oss-parent:7` is the shared grandparent of both chains
+and declares nothing, so the walk must continue *past* a silent ancestor rather than stop there.
+
+### 🟢 The cleanest Maven row on this shelf, and it places itself in EMEA
+
+🆕 `uk.ac.ox.ctl:spring-security-lti13:0.3.7` — **Apache-2.0, declared in its own POM, depth 1**,
+LTI 1.3 for Spring Security. 🔵 **Its `groupId` is the origin evidence**: `uk.ac.ox` is the
+University of Oxford's reverse-DNS namespace and `.ac.uk` maps to 🟢 **EMEA** with no inference
+required. A Maven `groupId` is a stronger origin signal than an npm author field — it is a
+namespace the organisation had to control in order to publish — and this is the first row this
+KB has placed that way.
+
+🔴 **It still ships no licence text** — no `LICENSE` or `NOTICE` among the jar's 72 entries. So
+`T21`'s gradient firms up on a sixth Maven row rather than softening:
+
+| ecosystem | declares a licence, ships no text |
+|---|---|
+| PyPI | 🟢 **0%** — 0 of 10 *(after p140's `openedx-learning` correction)* |
+| npm | 33% |
+| 🔴 **Maven** | 🔴 **83% — 5 of 6** *(p140: 80%, 4 of 5)* |
+
+🔴 **`edu.ksu.ome.lti:lti-launch` 1.4.7 remains the worst row on the shelf** — LGPL-3.0 declared
+in its own POM, no text in the jar, and pattern `P13` still depends on it.
+
+### 🔴 `ACTION DA` — `openedx-core` is clean at the distribution layer and SILENT below it
+
+[`p141-package-grant-layer`](../compose/code/p141-package-grant-layer/README.md). p140 called
+`openedx-core` **1.9.1** the cleanest licence payload this KB has measured. 🟢 **That stands.**
+🔴 **One layer down there is nothing.**
+
+| package | `.py` files | licence files | SPDX headers | copyright lines |
+|---|---|---|---|---|
+| `openedx_catalog` | 12 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_content` | **132** | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_core` | 1 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_django_lib` | 7 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_learning` | 29 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_tagging` | 56 | 🔴 0 | 🔴 0 | 🔴 0 |
+| **total** | **237** | 🔴 **0** | 🔴 **0** | 🔴 **0** |
+
+🟢 Distribution layer, for contrast: `License-Expression: AGPL-3.0-only` (PEP 639) plus
+`dist-info/licenses/LICENSE.txt`, **35 139 bytes**, Metadata-Version 2.4.
+
+🔵 **p140's falsifier expected DISAGREEMENT between layers. The measured answer is SILENCE — and
+for a studio that is the worse one.** Nobody vendors a wheel; they lift `openedx_tagging/` or
+`openedx_content/` into their own tree. 🔴 **The moment a subtree leaves `dist-info/`'s company
+it carries no grant, no holder and no notice** — while **AGPL-3.0-only** is the most reciprocal
+obligation anywhere on these shelves. 🔵 **The licence is correct, current and complete in
+exactly the one place the copy does not come from.** A `T21`-clean artefact can be `T18`-silent;
+this is the clearest instance of it, and both findings are true of different layers.
+
+🟢 **One thing this confirms rather than discovers:** `openedx_learning` survives as a **package
+inside** the distribution even though the *distribution* `openedx-learning` was retired to a
+shim. 🔵 **The name was demoted, not killed** — the 29 files under it are live code at 1.9.1,
+not the 1 479-byte husk `openedx-learning` 0.33.1 publishes. A row keyed on the string alone
+cannot distinguish those, which is exactly why `T27` reads the `Development Status` classifier.
+
+### 🟡 One citation on this page, re-checked and confirmed
+
+`uk.ac.ox.ctl:spring-lti13` is **404 on Maven Central**, as the row below already records. 🟢
+The real artefact is `spring-security-lti13`; the shorter coordinate has never existed. 🔵
+Recorded as a confirmation, not republished as a finding — and the kind of re-check `T24` exists
+to force.
+
+### 🔴 A method note: a `429` from Central is not a `404`
+
+Maven Central answered **429** on two of six metadata fetches and on the `basiclti-util` jar,
+clearing after 8–24 s of backoff. 🔴 **An earlier draft of this sweep recorded
+`uk.ac.ox.ctl:spring-security-lti13` as "not on Central" off a single un-retried `429`** — which
+would have deleted the cleanest row in the table above. Every fetch retries with backoff and a
+failure is reported as a failure, never as an absence.
+
+
 **Pass 140, 2026-10-12.** 🔴 **Two of p139's findings on this page are refuted, and both
 refutations make the underlying defect worse rather than milder.** `ACTION CR` resolved the Maven
 parent chains p139 recorded as "no signal"; `ACTION CS` established that the one PyPI hit was

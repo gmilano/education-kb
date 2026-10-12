@@ -6,6 +6,158 @@ updated: 2026-10-12
 
 # Education — trending repos (append-only log)
 
+## 2026-10-12 — Pass 141
+
+🔵 **p140 asked whether a licence that looks missing really is, and twice the answer was no.
+This pass asked the same question of the whole Maven population — and of a layer BELOW the
+distribution, where the answer flips the other way.**
+
+### 🔴 `ACTION DC` — inheritance is the majority shape, and the sharpest row is an accessibility validator
+
+p140's walker, re-used unchanged so that a changed verdict cannot be confused with a changed
+method. Only the population is new.
+[`p141-pom-chain-sweep`](../compose/code/p141-pom-chain-sweep/README.md).
+
+| coordinate | own POM | inherits from | inherited licence | depth |
+|---|---|---|---|---|
+| 🟢 `org.imsglobal:basiclti-util:1.2.0` | Apache-2.0 | — | — | 1 |
+| 🆕 🔴 **`org.verapdf:verapdf-library:1.30.3`** | 🔴 **NONE** | `org.verapdf:verapdf-parent:1.30.1` | 🔴 **GPL-3.0 *or* MPL-2.0** | **3** |
+| 🆕 🔴 `org.jasig.ssp:ssp:2.8.0` | 🔴 **NONE** | `org.jasig.parent:jasig-parent:39` | Apache-2.0 | **3** |
+| 🆕 🔴 `org.sakaiproject:kernel:23.3` | 🔴 **NONE** | `org.sakaiproject:oss-parent:1` | ECL-2.0 | **3** |
+| 🆕 🟢 `uk.ac.ox.ctl:spring-security-lti13:0.3.7` | Apache-2.0 | — | — | 1 |
+
+🔴 **`org.verapdf:verapdf-library` is the PDF/UA accessibility validator** — in an education
+engagement, the component you reach for to prove course material meets an accessibility duty.
+🔴 **Its own POM declares nothing; the grant is two levels up and it is a dual GPL-3.0 /
+MPL-2.0 offer.** Simultaneously the strongest reciprocal licence on these shelves and, through
+MPL-2.0, the way out of it. 🟢 **Choosing MPL-2.0 is available — you cannot choose it without
+knowing it is offered**, and a scanner reading the named coordinate reports "no licence" and
+invites the "permissive by default" error p140 corrected on `net.oauth.core:oauth`.
+
+🔵 **And there is nothing to inspect for a second opinion.** `verapdf-library` is
+`<packaging>pom` with modules `core` and `xmp-core`; 🔴 **`verapdf-library-1.30.3.jar` is 404 on
+Central** because no jar is published under that name. `org.jasig.ssp:ssp:2.8.0` is the same
+class — `<packaging>war`. 🔵 **The coordinate a dependency declaration names has no own grant
+and no payload: the licence is in a parent and the bytes are in siblings.**
+`org.sonatype.oss:oss-parent:7` is the shared grandparent of both chains and declares nothing,
+so the walk has to continue *past* a silent ancestor rather than stop at it.
+
+**Cumulatively, across p140 and p141 — nine coordinates walked:**
+
+| verdict | rows |
+|---|---|
+| 🔴 `INHERITS_FROM_PARENT` | 🔴 **5** — `net.oauth.core:oauth`, `sakai-kernel-impl`, `verapdf-library`, `jasig.ssp:ssp`, `sakaiproject:kernel` |
+| 🟢 `DECLARES_OWN` | 4 — `sakai-kernel-api`, `lti-launch`, `basiclti-util`, `spring-security-lti13` |
+
+🔵 **5 of 9 (56%) do not declare their own licence. `T26` is not about two artefacts — it is how
+Maven works**, and any audit of a Java education stack that reads one POM per coordinate is
+wrong more often than right.
+
+### 🆕 🟢 The cleanest Maven row on the shelf, and it places EMEA by its own namespace
+
+`uk.ac.ox.ctl:spring-security-lti13:0.3.7` — **Apache-2.0, declared in its own POM, depth 1.**
+🔵 **The `groupId` is the origin evidence**: `uk.ac.ox` is the University of Oxford's
+reverse-DNS namespace and `.ac.uk` maps to 🟢 **EMEA** with no inference. A Maven groupId is a
+stronger origin signal than an npm author field — it is a namespace the organisation had to
+control in order to publish — and this is the first row this KB has placed that way.
+
+🔴 **It still ships no licence text**: no `LICENSE` or `NOTICE` across the jar's 72 entries. So
+`T21`'s gradient firms up on a sixth Maven row:
+
+| ecosystem | declares a licence and ships no text |
+|---|---|
+| PyPI | 🟢 **0%** *(0 of 10, after p140's `openedx-learning` correction)* |
+| npm | 33% |
+| 🔴 **Maven** | 🔴 **83% — 5 of 6** *(p140: 80%, 4 of 5)* |
+
+🟡 **One KB citation confirmed rather than corrected:** `uk.ac.ox.ctl:spring-lti13` is **404 on
+Central**, exactly as `repos/foundations.md` already records. The real artefact is
+`spring-security-lti13`; the shorter name has never existed. 🟢 Recorded as a confirmation, not
+republished as a finding.
+
+### 🔴 `ACTION DA` — `openedx-core` is `T21`-clean at the distribution layer and SILENT at every layer below it
+
+p140 called `openedx-core` **1.9.1** the cleanest licence payload this KB has measured, and that
+stands. 🔴 **One layer down there is nothing at all.**
+[`p141-package-grant-layer`](../compose/code/p141-package-grant-layer/README.md).
+
+| package | `.py` files | licence files | SPDX headers | copyright lines |
+|---|---|---|---|---|
+| `openedx_catalog` | 12 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_content` | **132** | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_core` | 1 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_django_lib` | 7 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_learning` | 29 | 🔴 0 | 🔴 0 | 🔴 0 |
+| `openedx_tagging` | 56 | 🔴 0 | 🔴 0 | 🔴 0 |
+| **total** | **237** | 🔴 **0** | 🔴 **0** | 🔴 **0** |
+
+🟢 Distribution layer: `License-Expression: AGPL-3.0-only` (PEP 639) plus
+`dist-info/licenses/LICENSE.txt`, **35 139 bytes**, Metadata-Version 2.4.
+
+🔵 **p140's falsifier expected DISAGREEMENT between layers; the measured defect is SILENCE** —
+and silence is the worse answer for a studio. Nobody vendors a wheel. They lift
+`openedx_tagging/` or `openedx_content/` into their own tree, and 🔴 **the moment a subtree
+leaves `dist-info/`'s company it carries no grant, no holder and no notice**, while
+AGPL-3.0-only is the most reciprocal obligation anywhere on these shelves. 🔵 **The licence is
+correct, current and complete in exactly the one place the copy does not come from.** A
+`T21`-clean artefact can be `T18`-silent; this is the clearest case of it.
+
+🟢 **One confirmation:** `openedx_learning` survives as a **package inside** the distribution
+even though the *distribution* `openedx-learning` was retired to a shim. 🔵 **The name was
+demoted, not killed** — and the 29 files under it are live code at 1.9.1, not the 1 479-byte
+husk 0.33.1 publishes. A row keyed on the string alone cannot tell those apart, which is why
+`T27` reads the `Development Status` classifier.
+
+### 🔴 `ACTION DB` — the Open edX contact split is a live migration, not neglect
+
+[`p141-contact-migration`](../compose/code/p141-contact-migration/README.md). Both addresses
+were rewritten **in 2026**, three months apart, by two contributors **at the same company**,
+under the same `chore: modernize` banner:
+
+```diff
+# openedx/codejail  0b38ff8  2026-09-14  farhan@arbisoft.com
+-    author_email="oscm@edx.org",
++    {name = "Open edX Project", email = "oscm@openedx.org"},
+
+# openedx/XBlock    94a759c  2026-06-05  salman.nawaz@arbisoft.com
+-    author_email='oscm@edx.org',
++    {name = "edX", email = "oscm@edx.org"},
+```
+
+🔵 **Read together the cause is unmistakable**: both migrated the legacy `setup.py` field into
+PEP 621 `authors = [...]`. September corrected the organisation *and* the domain. 🔴 **June
+retyped the stale organisation name and the stale domain into the new syntax** — it had the
+line open and carried it forward verbatim. So p140's falsifier is **refuted**: neither address
+predates the rename untouched, and the divergence is a convention that changed mid-campaign and
+was never backported.
+
+🔴 **The consequence is live.** `oscm@edx.org` is at `HEAD` in `openedx/XBlock`'s
+`pyproject.toml` — the `edx.org` domain p140 established **2U** operates — while the steward is
+**Axim Collaborative**. 🔴 **XBlock today directs maintainer and security correspondence for an
+Open edX core component to a domain controlled by a different company than its steward, and the
+line was looked at four months ago and kept.** `openedx/codejail` — the sandbox that executes
+untrusted learner-submitted code — now points at `oscm@openedx.org`. 🟢 **The remedy is already
+written: the September commit is the template.** One line in `pyproject.toml`.
+
+🔵 **And the campaign places a region.** Both 2026 commits are `@arbisoft.com` at `+0500` —
+p140 recorded Arbisoft, whose edtech arm **Edly** acquired Overhang.IO (Tutor) on 2023-03-27,
+as an APAC market fact. It is also, measurably, the contractor modernising Open edX core
+repositories. 🟡 The 2017 commit that first introduced `oscm@edx.org` is authored
+`rraposa@edx.org` — the organisation's own domain, when it still was. 🔵 **So a US non-profit
+holds the stewardship and an APAC contractor holds the commit bit on the files recording who to
+contact.** Neither is a defect; the field that disagrees with both is.
+
+### 🔴 A method note: Maven Central's `429` is not a `404`
+
+Central answered **429** on two of six metadata fetches and on the `basiclti-util` jar, clearing
+after 8–24 s of backoff. 🔴 **An earlier draft of this sweep recorded
+`uk.ac.ox.ctl:spring-security-lti13` as "not on Central" off a single un-retried `429`** — which
+would have deleted the cleanest row in the table. Every fetch retries; a failure is reported as
+a failure.
+
+---
+
+
 ## 2026-10-12 — Pass 140
 
 🔵 **p139 asked whose fault a missing licence file is and answered "the build tool". This pass

@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 141 — 2026-10-12
+
+⏱️ **Fourth pass of this date.** 🔴 **Four of the six pre-registered falsifiers FIRED — `CY`,
+`CZ`, `DB`, `DC` — and all six actions are resolved.** 🟢 **None is re-registered unchanged.**
+🔵 **The headline is not any single finding but a pattern across three of them: three of this
+KB's own trends were published as claims about education software when they were claims about a
+packaging tier.** That is now `T30`, written so it cannot happen a fourth time.
+
+| finding | verdict | figure |
+|---|---|---|
+| `P141-A` | 🔴 **`ACTION CX` DISCHARGED, NOT REFUTED — and stronger than asked** | `pedagogical_decisions` lives in `db/pedagogical_contract_schema.go` as Go-embedded DDL. `learner_id TEXT NOT NULL REFERENCES learners(id)`; append-only by trigger on **both** engines; `ENABLE` **and** `FORCE ROW LEVEL SECURITY`; bound 1:1 to `assessment_attempts` by `idx_assessment_decision_once`, with a trigger refusing the insert unless the attempt's concept matches the decision snapshot's `target_concept`. 🔵 **`P19` does not rest on the affect tables** |
+| `P141-B` | 🔴 **…and the larger finding is a review-method defect** | `db/*.sql` declares **22** tables; non-test `db/*.go` declares **111**; 🔴 **96 `GO_ONLY`** — a `.sql` reader sees **19%**. 🔴 **The split falls ACROSS a DPIA**: `learners` and `interactions` are `SQL_ONLY`, while `pedagogical_decisions`, `assessment_attempts` and `audit_events` are all Go-only → `T31` |
+| `P141-C` | 🔴 **`ACTION CY` DISCHARGED and REFUTED — 0 of 6 placed** | 🔴 **3 of 6 declare no `repository` field in ANY published version**; a 4th declares one that is not publicly readable, confirmed against a nonexistent control. Neither reachable row ships a funding file. 🔵 **`T29` narrows: origin is in the code when the code must REACH a named host** |
+| `P141-D` | 🆕 🟢 **…and a new origin channel was built because the registered one was empty** | The **UTC offset in each commit** places **6 of 7** agent-tier rows — including 🟢 `MisterCommand/mcp-canvas-lms` at `+0800` **20 of 20**, independently corroborating p140's `canvas.ust.hk` booking from a second channel. 🔴 **And it REFUSED two bookings**: `-0600` and `-0400` are shared between North America and LATAM |
+| `P141-E` | 🔴 **`ACTION CZ` DISCHARGED and REFUTED — 0 of 5 gated** | Only **4 of 5 are MCP servers at all**. 🔵 **`T28` is `tutor-mcp`'s maturity, not a tier property.** 🔴 **And the unasked-for finding inverts p140's headline**: dynamic registration is **1 of 8 (12%)** on npm connectors, 🔴 **2 of 4 (50%)** here → `T30` |
+| `P141-F` | 🔴 **`ACTION DA` DISCHARGED, NOT REFUTED — 6 of 6 `SILENT`** | `openedx-core` 1.9.1: 🔴 **0 licence files, 0 SPDX headers, 0 copyright lines across 237 `.py` files in six packages**, under a distribution shipping **35 139 B** of AGPL-3.0-only text. 🔵 **p140 expected disagreement between layers; the answer is silence, which is worse for a studio that lifts subtrees** |
+| `P141-G` | 🔴 **`ACTION DB` DISCHARGED and REFUTED** | Both addresses rewritten **in 2026**, three months apart, by two contributors at **the same company**, under the same `chore: modernize` banner. September corrected name and domain; 🔴 **June retyped the stale ones into the new syntax.** A live migration, not neglect — and `oscm@edx.org` (a **2U** domain) is at `HEAD` in `openedx/XBlock` |
+| `P141-H` | 🔴 **`ACTION DC` DISCHARGED and REFUTED on three rows** | 🔴 **`org.verapdf:verapdf-library` is dual GPL-3.0 / MPL-2.0 at depth 3** and is `<packaging>pom` with **no jar on Central**; `jasig.ssp:ssp` and `sakaiproject:kernel` also inherit. 🔵 **Cumulatively 5 of 9 (56%) declare nothing — `T26` is how Maven works.** `T21`'s Maven figure rises to **83%** |
+| `P141-I` | 🔴 **The search channel returned ZERO new findings — a THIRD consecutive null pass** | Eight queries, four regions and Global. Every candidate already held. 🟢 **Stated as an informed gap; `T10` restated as a budgeting instruction** |
+
+### `P141-E` — why a refuted falsifier was again the best outcome
+
+`ACTION CZ` was written against p140's own interest, and it fired. 🔵 **But the reason it fired
+is worth more than a confirmation would have been.** p140's instruction — *"apply
+`p140-live-surface-bound`"* — assumed the five rows resembled the eight it was built for. They do
+not: two are Python `FastMCP`, one is hand-rolled PHP, one is not an MCP server at all. Asking
+the question properly meant reimplementing it per language, and that is what surfaced the real
+defect: 🔴 **`ahmedEid1/lumen` serves 10 tools where a name-literal count returns 1**, and
+🔴 **`nirholas/ai-tutor-mcp` serves 2 where it returns 0** — the *identical* idiom behind p140's
+61-tool blind spot. 🔵 **So that blind spot was never an outlier. It is the ordinary shape of a
+table-driven server, and the majority shape on this tier.**
+
+### 🟢 The pass's happiest finding, and it is in a two-commit repository
+
+`nirholas/ai-tutor-mcp` — **Apache-2.0, 2 commits** — ships the entry-point guard p139 recorded
+as missing from `canvas-lms-mcp`, with `realpathSync` on both sides *"because npm bin shims are
+symlinks"*, plus a `buildServer()` returning a registered server with no transport: 🟢 **exactly
+the seam p139 found unreachable by import in the 19-version package.** 🔵 **Commit count is not
+maturity, in either direction** — which the same pass measured from the other end: 🔴 **151 of
+191 commits (79%)** in `zijinz456/OpenTutor` carry a `Co-Authored-By: Claude` trailer, upgrading
+`T25` from inference to declaration.
+
+### Regions this pass
+
+| region | what moved |
+|---|---|
+| **North America** | 🔴 **No new market instrument; the channel returned only held rows.** 🆕 Measured instead: `ACTION DB` resolved the Open edX contact split as a **live migration**, not neglect — `openedx/XBlock` carries `{name = "edX", email = "oscm@edx.org"}` at `HEAD`, set **2026-06-05**, on the `edx.org` domain **2U** operates, while `openedx/codejail` was corrected **2026-09-14**. 🟢 One-line remedy, template already committed. 🔴 And `openedx-core`'s six packages declare **nothing** across 237 files. 🔴 **One booking refused here**: `canvas-mcp-server`'s `-0600` is shared with Mexico and Central America |
+| **EMEA** | 🟢 **Four rows placed, three on a new channel.** 🆕 🟢 **A Maven `groupId` is origin evidence**: `uk.ac.ox.ctl:spring-security-lti13` 0.3.7 places EMEA because `uk.ac.ox` is a namespace Oxford had to control to publish — 🟢 **and it is the cleanest Maven row on these shelves** (own POM, depth 1, Apache-2.0), 🔴 shipping no licence text. 🆕 `ahmedEid1/lumen` **+0200 828/828**, 🆕 `hesham0-0nasser/tutor-lms-mcp` **+0300 7/7**, `ArnaudGuiovanna/tutor-mcp` **+0200**. 🔴 **The EMEA search channel is the thinnest of the four** — its only education-specific return was a 2024 conference |
+| **APAC** | 🟢 **Corroborated from a second channel for the first time**: `MisterCommand/mcp-canvas-lms` is `+0800` on **20 of 20** commits, agreeing with p140's hardcoded `canvas.ust.hk`. 🆕 Two further rows: `zijinz456/OpenTutor` **+1100** (Australia), `mohaneesh-03/mcp-tutor` **+0530** (India). 🆕 🔵 **And APAC holds the commit bit on Open edX core** — both 2026 contact-migration commits are `@arbisoft.com`, the firm whose Edly arm acquired Overhang.IO. 🔴 Ministry-level policy still absent, fifth pass |
+| **LATAM** | 🔴 **Tenth consecutive pass with no LATAM-owned row — 🟢 and now measured on TWO channels.** p140's suffix probe matched zero of fifteen; this pass's offset channel placed six rows in APAC and EMEA and **zero** here. 🔴 **Two bookings were available and both were refused**: `-0600` and `-0400` are each shared between North America and LATAM. 🟢 **The probe's tests pin that no entry in its bookable table maps to LATAM at all**, so placing one later requires changing that test in the open. 🟡 The one LATAM signal is a *target*, not an owner: `brightspace-mcp-server`'s `javeriana` institution module |
+| **Global** | 🔴 **Third consecutive null demand channel while the artefact channel produced six verdicts and four refutations.** 🔵 **That asymmetry is the global finding**, and four numbers from this hour say why: **5 of 8** connectors declare no repository, **5 of 9** Maven coordinates hide their licence in a parent, **96 of 118** tables are invisible to a `.sql` reader, **0 of 237** files in `openedx-core` carry a notice. 🟢 **None is in any market report; all four are a day's work** → `P20` |
+
+### Verdicts on p140's actions
+
+- 🔴 **`ACTION CX` — DISCHARGED, NOT REFUTED.** Learner-linked, append-only, RLS-forced, FK-bound
+  to the assessment. Plus the 96-table review-method finding, which was not asked for.
+- 🔴 **`ACTION CY` — DISCHARGED and REFUTED.** 0 of 6. 4 of 6 have no reachable repository.
+- 🔴 **`ACTION CZ` — DISCHARGED and REFUTED.** 0 of 5 gated; 4 of 5 are servers; 50% dynamic.
+- 🔴 **`ACTION DA` — DISCHARGED, NOT REFUTED.** 6 of 6 `SILENT`.
+- 🔴 **`ACTION DB` — DISCHARGED and REFUTED.** A live migration by one contractor, two repos.
+- 🔴 **`ACTION DC` — DISCHARGED and REFUTED on three rows**, and the trend it threatened got
+  stronger: 56% inherit.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, and NOT re-registered**, for the
+  fourth pass. The cause is a network allowlist and belongs to whoever owns this environment.
+
+### Pre-registered for p142
+
+🟡 **`ACTION DD`** — test `T31` on a **second** non-`.sql` component: run
+`p141-schema-location` over `nitsuah/bb-mcp` (TypeScript) and one Python education component as a
+control, and report the `.sql`-visible share for each. 🔴 *Refuted if the majority of tables in
+the second component are declared in `.sql` — which would make `T31` a property of `tutor-mcp`
+rather than of embedded-migration stacks, and it must then be withdrawn rather than narrowed.*
+
+🔴 **`ACTION DE`** — resolve what happened to `owentaylor/canvas-mcp`. Read
+`@owen-x-tech/canvas-mcp` 1.1.0's own tarball for any surviving pointer — CI config, source-map
+`sources` paths, `.npmignore` residue, issue or changelog URLs — and `git ls-remote` any candidate
+owner spellings. 🔴 *Refuted if the payload carries no pointer beyond the dead URL, which would
+make "declared repository unreadable" terminal for this row and would mean the 62-tool
+`MULTI_SURFACE` surface can never be audited anywhere but the tarball.*
+
+🟢 **`ACTION DF`** — resolve which licence `org.verapdf:core` and `org.verapdf:xmp-core` — the
+modules a consumer actually pulls — declare, and whether either ships licence text. 🔴 *Refuted
+if either declares its own licence differing from the parent's dual GPL-3.0 / MPL-2.0 offer,
+which would mean the election a studio has to make is per-module rather than per-project and
+`P20` step 2 is wrong as written.*
+
+🔴 **`ACTION DG`** — test the Arbisoft prediction. `openedx/XBlock` was modernised 2026-06-05 and
+kept `oscm@edx.org`; `openedx/codejail` was modernised 2026-09-14 and corrected it. Clone five
+further `openedx/*` repositories, read each `pyproject.toml` for the contact address, and
+correlate against the date of its own `chore: modernize` commit. 🔴 *Refuted if no further
+repository carries `oscm@edx.org`, which would make `XBlock` a one-off rather than a cohort and
+would reduce the finding from a campaign defect to a single typo.*
+
+🟡 **`ACTION DH`** — apply the commit-offset channel at scale: run `p141-repo-origin-layer` over
+the **43-row GitHub connector population** on `agents/top.md`, which is not npm-published and so
+was never in `ACTION CY`'s subject set. 🔴 *Refuted if the offset channel places no row that the
+payload channel could not — which would mean it is a redundant instrument rather than an
+additional one, and `T29` should not have gained a second clause.* 🔵 **And report the LATAM
+count explicitly, including when it is zero** — this is the largest population this KB can ask
+that question of, and an eleventh null is a stronger statement than a tenth.
+
+🔴 **`ACTION DI`** — test `T30` on a third tier: run the `P18`(a)/(b) enumeration over the ten
+largest **GitHub-only** connector rows and report the dynamic-registration share. 🔴 *Refuted if
+the share matches the npm tier's 12% rather than the agent tier's 50% — which would mean the
+split is npm-vs-everything rather than connector-vs-agent, and `T30`'s worked example must be
+re-cut along the right axis.*
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **No `tools/list` was called, for the third consecutive pass**, and no third-party connector
+  was executed. Every tool count here is static, and the two `DYNAMIC_UNBOUNDED` rows are the
+  honest admission that static cannot settle them.
+- 🔴 **`p141-agent-surface-gate`'s Go lane FAILS ITS CONTROL and publishes no Go verdict.**
+  Against `tutor-mcp` — which p140 proved is gated — it returns `BOUNDED_STATIC`. 🔵 **The gate
+  is two indirections above the name literal**, and no lexical test at the registration site can
+  see call-site gating. Pinned as a test, not left as a comment. The `0 of 5` verdict survives
+  only because all four servers register at module top level, hand-checked after the failure.
+- 🔴 **No primary regulatory source was read, for the fourth consecutive pass.** The allowlist
+  cause is unchanged; 🆕 one hazard is added to the ledger — rendered `github.com` HTML answers
+  `403` for **every** repository, and an earlier draft of this pass nearly read four `403`s as
+  four dead repositories.
+- 🔴 **`T24` fired on this pass and caught two rows before publication.** An earlier draft
+  re-presented the Canvas packages' publish ages and the `2.3.1`-vs-`2.2.3` repo/registry gap as
+  new; both are already in `agents/trending.md` from an earlier pass. 🟢 **Withdrawn and
+  credited in place**, with only the new denominator kept.
+- 🔴 **Two probes' first drafts were wrong in the inflating direction**, and the published
+  figures are the smaller, corrected ones: a table named `is` matched out of a comment quoting
+  DDL, and a `GATED` verdict matched out of a conditional 64 lines away in another function.
+  🔵 **Second consecutive pass where that was true.**
+- 🟡 **`T31` rests on ONE subject.** It is published with its tier named and a falsifier
+  attached (`ACTION DD`), not as a rate.
+
+
 ## Pass 140 — 2026-10-12
 
 ⏱️ **Third pass of this date.** 🔴 **The pass was refused the probe it registered, answered the

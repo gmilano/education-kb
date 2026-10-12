@@ -1,0 +1,4 @@
+
+# 4 of 5 subjects are MCP servers
+# GATED: 0 of 4 servers
+# DYNAMIC (static count does NOT bound live): 2 of 4 servers

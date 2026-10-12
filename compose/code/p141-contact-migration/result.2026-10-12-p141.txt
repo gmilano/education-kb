@@ -1,0 +1,15 @@
+######## /clones/openedx_XBlock  (HEAD 7c34adc 2026-10-07T12:29:20-04:00)
+--- [oscm@edx.org]
+    at HEAD in: pyproject.toml 
+    2026-06-05T14:53:46+05:00 94a759c salmannawaz <salman.nawaz@arbisoft.com> | chore: modernize the repo
+    2017-11-16T11:04:23-05:00 f7e5daf Robert Raposa <rraposa@edx.org> | Have Travis deploy to PyPI for new tags.
+--- [oscm@openedx.org]
+    at HEAD in: 
+######## /clones/openedx_codejail  (HEAD f17b934 2026-10-05T19:45:36-04:00)
+--- [oscm@edx.org]
+    at HEAD in: 
+    2026-09-14T13:03:12+05:00 0b38ff8 farhan <farhan.khan@arbisoft.com> | chore: modernize codejail to use uv and pyproject.toml
+    2021-04-15T12:46:23+05:00 6f77bcb Soban Javed <iamsobanjaved@gmail.com> | build: release to pypi
+--- [oscm@openedx.org]
+    at HEAD in: pyproject.toml 
+    2026-09-14T13:03:12+05:00 0b38ff8 farhan <farhan.khan@arbisoft.com> | chore: modernize codejail to use uv and pyproject.toml

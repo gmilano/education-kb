@@ -11,6 +11,158 @@ from a row that already SHIPS the control rather than needing one wrapped around
 is amended at step 5**: enumerate per *deployment configuration*, not per package — because
 `ACTION CP` established that a connector's tool surface is a property of its flags.
 
+## 🔁 `P18` amended again at step 5 — a static tool count is a BOUND only on the npm connector tier *(p141 — Global)*
+
+p140 amended step 5 to enumerate per **configuration**, because `tutor-mcp`'s surface moves with
+`deps.Institution` and `REGULATION_GOAL`. 🔴 **`ACTION CZ` shows the amendment was both too
+narrow and too broad.**
+
+| | npm connector tier | 🔴 agent-server tier |
+|---|---|---|
+| rows measured | 8 *(p140)* | 4 *(p141)* |
+| 🔴 **dynamic registration** — name from an expression | 1 — **12%** | 🔴 **2 — 50%** |
+| flag-gated registration | 0 | 🔴 **0** |
+
+🔵 **So gating is one row's maturity, not a tier property — and the thing that actually defeats a
+static enumeration is DYNAMIC registration, which is the majority shape one tier up.**
+
+### The amended step 5
+
+> 5. **Enumerate the tool surface with the method the tier requires, and say which you used.**
+>
+>    a. **Grep for name literals** at registration sites. 🟢 On the npm connector tier this is
+>       sufficient and *provably* so: a single server instance + literal names + no gate forces
+>       the live `tools/list` to equal the static count, for 7 of 8 measured rows.
+>
+>    b. 🔴 **Then count registration sites whose name comes from an EXPRESSION** —
+>       `for (const t of TOOLS) server.registerTool(t.name, …)`,
+>       `@mcp.tool(name=name)` inside a walk over a spec table. **If that count is non-zero,
+>       step (a)'s number is meaningless and must not be reported.** Resolve the collection
+>       instead: `ahmedEid1/lumen` serves **10** tools from 10 `ToolSpec(` entries where a
+>       literal count returns **1**; `nirholas/ai-tutor-mcp` serves **2** where it returns **0**.
+>
+>    c. 🔴 **Then look for gating ONE INDIRECTION UP, not at the registration site.**
+>       `tutor-mcp` gates in `tools/tools.go`, where `registerGetNextActivity(server, deps)` is
+>       called inside `if deps != nil && deps.Institution` — while the name literal sits in an
+>       `addTool(…)` helper two frames away. 🔵 **No lexical test at the name site can see this**,
+>       which is why `p141-agent-surface-gate`'s Go lane fails its own control and publishes no
+>       Go verdict. Read the central register function by hand.
+>
+>    d. **Report the method, the tier and the residual uncertainty**, in the delivery document.
+>       🔴 **"62 tools" with no method attached is the number that produced p140's 61-tool blind
+>       spot.**
+
+🟢 **Tooling**: [`p140-live-surface-bound`](code/p140-live-surface-bound/README.md) for
+TypeScript/JavaScript, [`p141-agent-surface-gate`](code/p141-agent-surface-gate/README.md) for
+Python `FastMCP`, JavaScript and hand-rolled PHP. 🔴 **Neither covers Go**; that one is manual.
+
+---
+
+## 🆕 `P20` — The three-layer due-diligence gate: run it before the first sprint, in under an hour *(new, p141 — Global)*
+
+🔵 **This pass measured four numbers a buyer would want before signing, none of which appears in
+any market report on `intel/market.md`, all four from published artefacts in under an hour.**
+`P20` is that hour, written down as a gate with named components.
+
+### What it answers, and why each question has burned this KB
+
+| layer | the question | what goes wrong if you skip it |
+|---|---|---|
+| **1. Grant** | Where is the licence, really? | 🔴 **5 of 9 Maven coordinates declare nothing in their own POM.** `org.verapdf:verapdf-library` — the PDF/UA accessibility validator — is **dual GPL-3.0 / MPL-2.0** two levels up, and a scanner reading the named coordinate reports *"no licence"* |
+| **2. Payload** | Does the grant travel with the code you will copy? | 🔴 **`openedx-core` 1.9.1: 0 licence files, 0 SPDX headers, 0 copyright lines in 237 files across six packages**, under an **AGPL-3.0-only** distribution. Lift `openedx_tagging/` and the obligation travels silently |
+| **3. Data** | What does it actually store about a learner? | 🔴 **96 of 118 tables in `tutor-mcp` are declared only in Go source.** A DPIA that enumerates `db/*.sql` finds `learners.email` and misses `pedagogical_decisions`, `assessment_attempts` and `audit_events` |
+
+### The stack
+
+| role | component | licence |
+|---|---|---|
+| grant resolution, Maven | [`p140-pom-parent-chain`](code/p140-pom-parent-chain/README.md) — walks `<parent>` upward, XML-parsed, `<licenses>` only as a direct child of `<project>` | KB-internal |
+| grant resolution, npm/PyPI | [`p138-npm-payload-licence`](code/p138-npm-payload-licence/README.md) + [`p141-package-grant-layer`](code/p141-package-grant-layer/README.md) | KB-internal |
+| notice injection | `P17`'s build step — the remedy for layer 2 | — |
+| schema enumeration | [`p141-schema-location`](code/p141-schema-location/README.md) — `CREATE TABLE` across `.sql` **and** embedded migration bodies, comments stripped | KB-internal |
+| tool-surface enumeration | `P18` as amended above | — |
+| origin / accountability | [`p141-repo-origin-layer`](code/p141-repo-origin-layer/README.md) — compiled-in hosts, Maven `groupId`, commit offsets, with ambiguous offsets refused | KB-internal |
+
+### How it wires together
+
+1. **Resolve every coordinate's grant to a file, not a field.** For Maven, run the parent-chain
+   walk and record the **depth** at which the grant appears. 🔴 **Continue past a silent
+   ancestor** — `org.sonatype.oss:oss-parent:7` is the shared grandparent of two chains on this
+   shelf and declares nothing. For an artefact that is `<packaging>pom` or `war`
+   (`verapdf-library`, `org.jasig.ssp:ssp`), 🔴 **there is no jar to inspect**; resolve the
+   modules consumers actually pull.
+2. **For every dual or multi-licence grant, ELECT in writing.** veraPDF offers MPL-2.0 beside
+   GPL-3.0; the election is free and is irrecoverable later if nobody made it.
+3. **Decide what will be COPIED rather than depended on**, and run `P17`'s notice injection on
+   exactly that subtree. 🔵 **This is the step that pays for the whole gate**: `openedx_tagging/`
+   is 56 files that today carry no grant at all.
+4. **Enumerate the schema from source, not from `.sql`.** Then diff the result against the DPIA's
+   table list. 🔴 **On the one subject measured, that diff is 96 tables wide.**
+5. **Enumerate the tool surface per `P18` (a)–(d)**, and treat any non-zero dynamic-registration
+   count as a hard stop on reporting a tool number.
+6. **Record accountability, or record that you cannot.** 🔴 **5 of 8 npm connector rows on these
+   shelves declare no repository in any published version**, and one declares an unreadable one —
+   so for those rows the honest entry in a vendor register is *"no accountable publisher
+   identified"*, not a guess from the package name.
+
+### Shape of the engagement
+
+**1 day**, run by one engineer before the first sprint, on a laptop. No vendor contact, no NDA,
+no running of third-party code — 🟢 **every measurement above was taken from published
+registry artefacts and `git clone`**, which is why it fits in a day and why it can be re-run on
+every dependency bump.
+
+### Why it wins the room
+
+🔵 **Because every one of its findings is a sentence a procurement officer can act on, and none
+of them requires trusting the vendor's description.** *"Your accessibility validator is
+GPL-3.0-or-MPL-2.0 and nobody has elected"*; *"the 56 files you are about to copy carry an AGPL
+obligation and no notice"*; *"your DPIA lists 22 tables and the system has 118"*. 🟢 **And the
+gate's own instruments are committed with tests, controls and their failures recorded** — three
+of them corrected themselves this pass, one withheld a verdict because its control failed. 🔵
+**A due-diligence tool that publishes its own limits is the only kind a client should accept.**
+
+---
+
+## 🔁 `P19` STRENGTHENED — the oversight primitive is enforced by the DATABASE, not by the agent *(p141 — EMEA)*
+
+p140 adopted `tutor-mcp`'s one-way `mark_domain_high_stakes` as `P19`, on the strength of a
+missing inverse tool and a typed evidence policy. 🟢 **`ACTION CX` found the layer underneath it,
+and it is stronger than p140 could claim.**
+
+`pedagogical_decisions` — declared in `db/pedagogical_contract_schema.go`, not in any `.sql` file
+([`p141-schema-location`](code/p141-schema-location/README.md)):
+
+| guarantee | mechanism | enforced by |
+|---|---|---|
+| append-only | `pedagogical_decisions_no_update BEFORE UPDATE … RAISE(ABORT, 'pedagogical decisions are immutable')`; Postgres `tutor_immutable_pedagogical_decision()` `FOR EACH ROW` | 🟢 **the engine** |
+| tenant isolation the table owner cannot bypass | `ENABLE` **and** `FORCE ROW LEVEL SECURITY` + policy on `current_setting('app.current_tenant')` | 🟢 **the engine** |
+| one decision per graded attempt | `assessment_attempts.decision_id REFERENCES pedagogical_decisions(id)` + `CREATE UNIQUE INDEX idx_assessment_decision_once … WHERE decision_id IS NOT NULL` | 🟢 **the engine** |
+| 🟢 **the recommendation and the assessment cannot drift apart** | `assessment_decision_scope` refuses the insert unless `json_extract(p.snapshot_json, '$.contract.target_concept') = NEW.concept_id` **and** the recommended activity type matches, at the pinned `curriculum_version` | 🟢 **the engine** |
+
+### What to steal, concretely
+
+🔵 **Not the code — the shape.** Three rules, portable to any stack and cheap to add:
+
+1. **Make the decision log append-only in the database**, with a trigger that raises. 🔴 **An
+   application-level "we never update this" is not an audit trail**; it is a convention that
+   survives until the next migration script.
+2. **Bind the decision to the artefact it produced, with a unique index and an immutability
+   trigger on the identity columns.** 🟢 This is what lets you answer *"was this learner graded
+   against the thing the system recommended?"* with a query instead of an investigation.
+3. **Type the evidence that can clear a safety gate.** `tutor-mcp`'s own policy string:
+   `"trusted human_review evidence is required; host_llm and external_service evaluations do not
+   satisfy this gate"`. 🔵 **The model cannot certify itself** — and `FORCE ROW LEVEL SECURITY`
+   is what stops a privileged service account from editing the record of that refusal.
+
+🟡 **The caveats are unchanged and still belong in the room**: alpha, one maintainer, 🔴 its
+institutional tier is undocumented, and 🔴 **three undocumented writes in that tier —
+`draft_formation`, `publish_formation`, `add_formation_concepts` — author the curriculum a cohort
+is assessed against.** 🟢 **Adopt the three rules; do not adopt the dependency without `P20`
+step 4.**
+
+---
+
 ## 🔁 `P18` amended at step 5 — enumerate per CONFIGURATION, because the surface moves with the flags *(p140 — Global)*
 
 p139 wrote `P18` step 5 as *"call `tools/list` on the running server and diff again — because

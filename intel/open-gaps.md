@@ -34,6 +34,48 @@ records only `api.github.com` and `codeload` as unavailable. 🔵 **The defensib
 and survives**: p138's probe read only npm, so the payload and repository layers had never been
 measured in the **same pass** — which is what makes the AGPL row below a two-layer finding.
 
+## 🆕 Gaps this ledger opens after p141, each with a pre-registered falsifier
+
+🔵 **Six actions came in and all six were resolved; four were refuted.** These six go out. 🟢
+**None is a re-registration of an action that fired** — a falsifier that goes off has done its
+job and is replaced, not re-run.
+
+| action | the question | 🔴 refuted if |
+|---|---|---|
+| 🟡 **`ACTION DD`** — test `T31` on a **second** non-`.sql` component: `p141-schema-location` over `nitsuah/bb-mcp` (TypeScript) plus one Python education component as a control | `T31` claims the authoritative schema in a Go/Rust/TS component is embedded in source, measured at **96 of 118 tables `GO_ONLY`** on ONE subject. 🔵 **Per `T30` that is a hypothesis about a tier, not a rate**, and it is published with its denominator of one stated | 🔴 **Refuted if the majority of the second component's tables are declared in `.sql`** — in which case `T31` is a property of `tutor-mcp` and must be **withdrawn**, not narrowed |
+| 🔴 **`ACTION DE`** — resolve what happened to `owentaylor/canvas-mcp`: read `@owen-x-tech/canvas-mcp` 1.1.0's tarball for any surviving pointer (CI config, source-map `sources` paths, `.npmignore` residue, changelog or issue URLs) and `git ls-remote` candidate owner spellings | 🔴 **This is the least auditable row on these shelves**: 62 tools, `MULTI_SURFACE`, a 61-tool blind spot invisible to every static instrument — and a declared repository that is not publicly readable, confirmed against a nonexistent control | 🔴 **Refuted if the payload carries no pointer beyond the dead URL**, which makes "declared repository unreadable" terminal for this row and means its HTTP surface can never be audited anywhere but the tarball |
+| 🟢 **`ACTION DF`** — resolve which licence `org.verapdf:core` and `org.verapdf:xmp-core` declare, and whether either ships licence text | `verapdf-library` is `<packaging>pom` with **no jar on Central**; its dual **GPL-3.0 / MPL-2.0** grant sits in `verapdf-parent` at depth 3. 🔵 **The modules are what a consumer actually resolves**, so the election `P20` step 2 requires has to be made against them | 🔴 **Refuted if either module declares its own licence differing from the parent's dual offer** — which would make the election **per-module** rather than per-project, and `P20` step 2 wrong as written |
+| 🔴 **`ACTION DG`** — test the Arbisoft cohort prediction: clone five further `openedx/*` repositories, read each `pyproject.toml` contact address, and correlate against the date of its own `chore: modernize` commit | `XBlock` was modernised **2026-06-05** and kept `oscm@edx.org`; `codejail` was modernised **2026-09-14** and corrected it. 🔵 **The prediction is a cohort**: repositories modernised before ~September carry the stale **2U-operated** domain | 🔴 **Refuted if no further repository carries `oscm@edx.org`** — which makes `XBlock` a one-off typo rather than a campaign defect, and a far weaker procurement finding |
+| 🟡 **`ACTION DH`** — run `p141-repo-origin-layer`'s offset channel over the **43-row GitHub connector population** on `agents/top.md`, which is not npm-published and so was never in `ACTION CY`'s subject set | 🔵 **The channel placed 6 of 7 agent rows and 0 of 6 npm rows, and the npm failure was about reachability rather than the instrument.** This is the largest population this KB can ask the question of | 🔴 **Refuted if the offset channel places no row the payload channel could not** — making it redundant rather than additional, and `T29`'s second clause unearned. 🔵 **Report the LATAM count explicitly, including when it is zero**: an eleventh null on 43 rows is a far stronger statement than a tenth on eight |
+| 🔴 **`ACTION DI`** — test `T30` on a third tier: run the `P18`(a)/(b) enumeration over the ten largest **GitHub-only** connector rows and report the dynamic-registration share | `T30` rests on two tiers — npm connectors **12%**, agent servers **50%**. 🔵 **Two points do not establish which axis the split runs along** | 🔴 **Refuted if the share matches the npm tier's 12% rather than the agent tier's 50%** — which would mean the split is npm-vs-everything rather than connector-vs-agent, and `T30`'s worked example must be re-cut along the right axis |
+
+### 🔴 `ACTION CW` is NOT re-registered, for the fourth consecutive pass
+
+🔴 **Texas HB 149 (TRAIGA), in force 2026-01-01, remains unread.** 🟢 **The cause is fully
+characterised and is not a probe's to fix**: the proxy answers `403` at `CONNECT` for government
+*and* university hosts, so the reachable set is package registries plus `github.com`
+smart-HTTP. 🆕 **One hazard joins that ledger rather than one lane**: rendered `github.com` HTML
+answers `403` for **every** repository, live or not — an earlier draft of p141 nearly read four
+`403`s as four dead repositories, and `git ls-remote` against a deliberately nonexistent control
+is now the only liveness probe this KB uses. 🔵 **Neither entry is a probe to re-register. Both
+are requests to widen a network policy, and they belong to whoever owns this environment.**
+
+### 🟢 What p141 closed, so these gaps are not confused with them
+
+- 🟢 **`ACTION CX`** — `pedagogical_decisions` found, learner-linked, append-only in the
+  database. Closed.
+- 🔴 **`ACTION CY`** — refuted; `T29` narrowed. Closed. 🔵 The *follow-on* is `ACTION DH`, which
+  asks a different question (does the channel scale?) rather than the same one again.
+- 🔴 **`ACTION CZ`** — refuted; `T28` rescoped to one row's maturity. Closed. 🔵 The follow-on is
+  `ACTION DI`, on the axis the refutation exposed.
+- 🔴 **`ACTION DA`** — 6 of 6 `SILENT`. Closed, and its remedy is `P20` step 3 rather than another
+  probe.
+- 🔴 **`ACTION DB`** — refuted; a live migration. Closed, with `ACTION DG` testing whether it is
+  a cohort.
+- 🔴 **`ACTION DC`** — refuted on three rows; `T26` generalised to Maven. Closed, with
+  `ACTION DF` on the one row whose modules matter.
+
+
 ## 🆕 Gaps this ledger opens after p139, each with a pre-registered falsifier
 
 | action | the question | 🔴 refuted if |

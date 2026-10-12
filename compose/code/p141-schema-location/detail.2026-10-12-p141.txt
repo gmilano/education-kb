@@ -1,0 +1,3 @@
+
+# 118 distinct tables: 22 in db/*.sql, 111 in db/*.go (non-test), 96 GO_ONLY, 7 SQL_ONLY, 15 BOTH
+# a reviewer reading only db/*.sql sees 22 of 118 (19%)

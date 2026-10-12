@@ -1,0 +1,11 @@
+# control https://github.com/gmilano/definitely-not-a-real-repo-p141 readable=False (must be False)
+
+# rows placed by the repository layer: 6 of 7
+{
+  "ArnaudGuiovanna/tutor-mcp": "EMEA",
+  "zijinz456/OpenTutor": "APAC",
+  "ahmedEid1/lumen": "EMEA",
+  "mohaneesh-03/mcp-tutor": "APAC",
+  "hesham0-0nasser/tutor-lms-mcp": "EMEA",
+  "MisterCommand/mcp-canvas-lms": "APAC"
+}

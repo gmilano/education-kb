@@ -6,6 +6,228 @@ updated: 2026-10-12
 
 # Education — AI agents shelf
 
+## Pass 141 — 2026-10-12 — the shelf's gating is one row's maturity, its registration is half dynamic, and its best engineering is in a two-commit repo
+
+🔴 **`ACTION CZ` is REFUTED: none of the five tutoring rows p139 added is flag-gated, so
+p140's `T28` belongs to `tutor-mcp` and not to agent servers.** 🔴 **And `ACTION CY` is
+REFUTED too: the repository layer places no row this shelf's payloads could not, because for
+four of six rows there is no reachable repository at all.** 🟢 **`ACTION CX` is the one that
+came back stronger than asked** — `tutor-mcp`'s pedagogical decision log is real, learner-linked
+and immutable in the database rather than in application code.
+
+### 🔴 `ACTION CZ` — only four of the five are MCP servers, and none gates registration
+
+[`p141-agent-surface-gate`](../compose/code/p141-agent-surface-gate/README.md).
+
+| row | licence | language | MCP server? | literal | 🔴 dynamic | gated | verdict |
+|---|---|---|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | Python + TSX | 🔴 **NO** | — | — | — | 🔴 `NOT_AN_MCP_SERVER` |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 GPL-3.0 | Python | yes | 1 | 🔴 **9** | **0** | 🔴 `DYNAMIC_UNBOUNDED` |
+| [`mohaneesh-03/mcp-tutor`](https://github.com/mohaneesh-03/mcp-tutor) | 🟢 MIT | Python | yes | **5** | 0 | **0** | 🟢 `BOUNDED_STATIC` |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | 🟢 Apache-2.0 | JavaScript | yes | 0 | 🔴 **1** | **0** | 🔴 `DYNAMIC_UNBOUNDED` |
+| [`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) | 🔴 **no licence file** | PHP | yes | **1** | 0 | **0** | 🟢 `BOUNDED_STATIC` |
+
+🔵 **p140 wrote "apply `p140-live-surface-bound`", and that instruction assumed a homogeneity
+this tier does not have.** That probe reads TypeScript/JavaScript and the
+`@modelcontextprotocol` idioms. Here two rows are Python `FastMCP`, one is hand-rolled PHP, and
+one has no MCP at all — so the question had to be reimplemented per language rather than
+applied.
+
+### 🔴 The unasked-for finding inverts p140's own headline: `BOUNDED_STATIC` is TIER-SCOPED
+
+| tier | rows | 🔴 dynamic registration | share |
+|---|---|---|---|
+| npm connectors *(p140)* | 8 | 1 — `@owen-x-tech/canvas-mcp` | 12% |
+| 🔴 **agent servers *(this pass)*** | 4 | 🔴 **2** — `lumen`, `ai-tutor-mcp` | 🔴 **50%** |
+
+🔴 **`ahmedEid1/lumen` serves 10 tools and a name-literal count returns 1.** It walks
+`TOOL_SPECS` — 10 `ToolSpec(` entries in `app/mcp/tools.py` — calling `_register_tool(mcp,
+spec)`, where the decorator reads `@mcp.tool(name=name, description=description)` from
+variables and the literals live in an `if name == "list_courses":` dispatch chain one layer
+away. 🔴 **`nirholas/ai-tutor-mcp` serves 2 and a literal count returns 0**, through the
+*identical* `for (const tool of TOOLS) server.registerTool(tool.name, …)` idiom that p140
+identified as a 61-tool blind spot in `@owen-x-tech/canvas-mcp`.
+
+🔵 **So that blind spot was never an outlier. It is the ordinary shape of a table-driven server
+and the majority shape on this tier.** p140's *"7 of 8 provable without execution"* stands where
+it was measured and must not be carried past it — the second rescoping-by-tier in three passes,
+after `ACTION CV` did the same to `T18`. Recorded as `T30`.
+
+### 🟢 The best engineering on this shelf is in its smallest repository
+
+`nirholas/ai-tutor-mcp` — **Apache-2.0, 2 commits** — ships the remedy p139 recorded as missing
+from `canvas-lms-mcp`, whose `dist/http.js` calls `main()` at module top level with no
+entry-point guard and so `process.exit(1)`s any importer:
+
+```js
+// Connect stdio ONLY when this file is the process entry point. Importing the
+// module (tests, embedding) must not grab the transport. realpath both sides:
+// npm bin shims are symlinks, so argv[1] may differ from import.meta.url.
+function isProcessEntryPoint() {
+  if (!process.argv[1]) return false;
+  try { return import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href; }
+  catch { return false; }
+}
+```
+
+🟢 **Its `buildServer()` returns a fully-registered server with no transport attached — exactly
+the seam p139 found unreachable by import in the 19-version package** — and it declares its own
+ungatedness in a comment: *"Registration is env-free, so this is safe to import from tests."*
+🔵 **Two commits solved what nineteen versions did not.** Commit count is not maturity, in
+either direction.
+
+### 🔴 Two rows corrected: one is not an MCP server, the other is a WordPress plugin
+
+🔴 **`zijinz456/OpenTutor` is not an MCP server.** 425 Python and 184 TSX files, and the token
+`mcp` occurs **once** in the entire tree — no SDK import, no `tools/list`. Its only `Server(`
+is `ThreadingHTTPServer` in `scripts/mock_openai_server.py`, a test double. 🟢 It remains a
+real, MIT-licensed, active tutoring **application** — 191 commits, HEAD **2026-10-08**, 🟢
+**APAC** on a `+1100` offset — but it has no tool surface to bound and p139 shelved it beside
+connectors it does not resemble.
+
+🔴 **`hesham0-0nasser/tutor-lms-mcp` is a WordPress plugin**, not a standalone server: six PHP
+files, `MCP_PLUGIN_DIR`, and a hand-rolled JSON-RPC router serving `tools/list` and `tools/call`
+over a `register_rest_route`, with its own OAuth class. Measured now:
+
+| measure | value |
+|---|---|
+| tools | **31**, from a single static `TLMS_MCP_Tools::list_tools()` array, 0 conditionals |
+| 🔴 write tools | 🔴 **17 of 33 distinct names** — `tutor_create_course`, `tutor_update_course`, 🔴 **`tutor_delete_course`**, topic and lesson writes |
+| licence | 🔴 **no file at `HEAD`** (7 commits, HEAD 2026-05-26) |
+| region | 🟢 **EMEA** — `+0300`, 7 of 7 commits |
+
+🔵 **A WordPress plugin with no licence is a sharper defect than it first looks**: the platform's
+own distribution terms assume GPL-compatibility, so there is no "permissive by omission" reading
+available. Unusable — and the reason is now specific rather than generic.
+
+### 🟢 `ACTION CX` — `tutor-mcp`'s decision log is enforced by the database, not by the application
+
+[`p141-schema-location`](../compose/code/p141-schema-location/README.md). `pedagogical_decisions`
+is declared in **`db/pedagogical_contract_schema.go`**, as Go-embedded DDL applied as a
+migration body — which is why p140 did not find it in `db/schema.sql`.
+
+| guarantee | mechanism |
+|---|---|
+| learner-linked | `learner_id TEXT NOT NULL REFERENCES learners(id)`, plus a composite FK on `(tenant_id, learner_id)` |
+| 🟢 **append-only** | `pedagogical_decisions_no_update BEFORE UPDATE … RAISE(ABORT, 'pedagogical decisions are immutable')` (SQLite) and `tutor_immutable_pedagogical_decision()` `FOR EACH ROW` (Postgres) |
+| 🟢 **tenant isolation the owner cannot bypass** | `ENABLE` **and** `FORCE ROW LEVEL SECURITY`, policy on `current_setting('app.current_tenant')` |
+| 🟢 **one decision per graded attempt, immutably** | `assessment_attempts.decision_id REFERENCES pedagogical_decisions(id)` + `CREATE UNIQUE INDEX idx_assessment_decision_once` + two identity-immutability triggers |
+
+🔵 **The guarantee worth stealing is the last one.** `assessment_decision_scope` refuses the
+insert unless the attempt matches the decision's own snapshot:
+
+```sql
+AND json_extract(p.snapshot_json, '$.contract.target_concept')            = NEW.concept_id
+AND json_extract(p.snapshot_json, '$.contract.recommended_activity_type') = NEW.activity_type
+```
+
+🟢 **So the recommendation a learner was given and the assessment they were graded against are
+bound to each other at write time, at a pinned `curriculum_version`, and neither side can be
+edited afterwards.** That is what *"auditable pedagogical decision"* has to mean to survive an
+EU AI Act **Article 14** / **Annex III** review, and it is enforced by the engine. 🔵 **`P19`
+does not rest on the affect tables alone**, and the falsifier does not fire.
+
+### 🔴 …and 96 of this row's 118 tables are invisible to a `.sql` reader
+
+| population | tables |
+|---|---|
+| `db/*.sql` *(both files exist)* | **22** |
+| `db/*.go`, non-test, 60 files | **111** |
+| 🔴 **`GO_ONLY`** | 🔴 **96** |
+| distinct total | **118** |
+
+🔴 **A reviewer who reads `db/*.sql` sees 19%** — and the split falls **across** a DPIA rather
+than along it: `learners` (holding `email TEXT UNIQUE NOT NULL`) and `interactions` are
+`SQL_ONLY`, while 🔴 `pedagogical_decisions`, `assessment_attempts` and `audit_events` are all
+Go-only. 🔵 **A records-of-processing exercise that enumerates `db/*.sql` finds the learner's
+email and misses every table recording what was decided about them** — the opposite of the
+omission one would guess. The project is not at fault; Go-embedded migrations are ordinary
+practice. **The defect is in the review method this KB had been assuming**, and it generalises
+to every Go, Rust or TypeScript component on these shelves.
+
+### 🔴 `ACTION CY` — this shelf does not publish a repository to audit
+
+[`p141-repo-origin-layer`](../compose/code/p141-repo-origin-layer/README.md):
+
+| row | declared `repository` | readable |
+|---|---|---|
+| 🔴 `@imazhar101/mcp-canvas-server` 2.1.3 | 🔴 **NONE** in 13 versions | n/a |
+| 🔴 `@ink-waffle/moodle-mcp` 0.2.0 | 🔴 **NONE** in 1 version | n/a |
+| 🔴 `@n35da/brightspace-mcp` 0.4.0 | 🔴 **NONE** in 5 versions | n/a |
+| 🔴 `@owen-x-tech/canvas-mcp` 1.1.0 | `owentaylor/canvas-mcp` | 🔴 **NO** |
+| `canvas-mcp-server` 2.2.3 | `DMontgomery40/mcp-canvas-lms` | 🟢 yes |
+| `moodle-mcp-server-aql` 0.1.7 | `csmediapro/moodle-mcp-server` | 🟢 yes |
+| *(context)* `eth-moodle-mcp` 1.3.3 | 🔴 **NONE** in 10 versions | n/a |
+| *(context)* `mcp-canvas-lms` 1.0.5 | 🔴 **NONE** in 4 versions | n/a |
+
+🔴 **5 of the 8 npm rows on this shelf declare no repository in any published version**, and
+neither reachable row ships a funding file. 🔴 **`@owen-x-tech/canvas-mcp` — the `MULTI_SURFACE`
+row with p140's 61-tool blind spot — is the worst of them**: its declared repository is not
+publicly readable, confirmed against a deliberately nonexistent control that fails identically,
+so **the only auditable artefact is the tarball, which is exactly where the blind spot is
+invisible**.
+
+🔵 **A method warning that nearly cost this pass four false findings:** `curl -sI
+https://github.com/…` answers **403 for every repository** through this environment's proxy —
+live, private or nonexistent alike. The only valid liveness probe here is `git ls-remote`
+against a control, which now runs on every invocation of the probe.
+
+### 🆕 🟢 Six of seven agent rows place themselves on a commit offset — and two bookings were refused
+
+🟡 **A weaker evidence kind than p140's compiled-in hostname, and labelled as such**: a UTC
+offset places a *person at a keyboard*, not an institution. It is still unreviewable by a later
+reader and it is cheap.
+
+| repository | offset | region |
+|---|---|---|
+| 🟢 `MisterCommand/mcp-canvas-lms` | `+0800` **20 of 20** | 🟢 **APAC** — 🔵 **independently corroborates p140's `canvas.ust.hk`** |
+| 🆕 🟢 `zijinz456/OpenTutor` | `+1100` 135 *(+`+1000` ×6)* | 🟢 **APAC** — Australia |
+| 🆕 🟢 `ahmedEid1/lumen` | `+0200` **828 of 828** | 🟢 **EMEA** |
+| 🆕 🟢 `mohaneesh-03/mcp-tutor` | `+0530` 5 of 5 | 🟢 **APAC** — India / Sri Lanka only |
+| 🆕 🟢 `hesham0-0nasser/tutor-lms-mcp` | `+0300` 7 of 7 | 🟢 **EMEA** |
+| 🟢 `ArnaudGuiovanna/tutor-mcp` | `+0200` 76 *(383 at `+0000`)* | 🟢 **EMEA** |
+| 🔴 `nirholas/ai-tutor-mcp` | both commits `+0000` | 🔴 `UNMAPPED` |
+
+🔴 **And the two npm rows it could have booked were refused.** `canvas-mcp-server` is 13 of 16
+commits at `-0600` and `moodle-mcp-server-aql` 9 at `-0400`. 🔴 **Both offsets are shared
+between North America and LATAM** — `-0600` is US Central **and** Mexico City, Guatemala, Costa
+Rica, Honduras, El Salvador, Nicaragua and Belize. 🔵 **Booking either would have manufactured
+coverage in the exact direction of the gap this KB has reported honestly for ten passes.** The
+probe's tests pin that **no entry in its bookable table maps to LATAM at all**.
+
+### 🆕 🔴 A measurable, self-declared AI-authorship share
+
+| repository | authored `Claude <noreply@anthropic.com>` | `Co-Authored-By: Claude` trailers | of total |
+|---|---|---|---|
+| `zijinz456/OpenTutor` | 49 | 🔴 **151** | of **191** — 🔴 **79%** |
+| `ArnaudGuiovanna/tutor-mcp` | 30 | 51 | of **459** — 11% |
+
+🔵 **`T25` upgraded from inference to declaration.** p139 *inferred* synthetic history from
+commits spaced 7 316 seconds apart; these two projects state it in their own commit trailers.
+🟢 **Not a defect** — `tutor-mcp` ships **286 test files against 279 source files** and the
+database-enforced audit log above — but a studio reading commit count as a proxy for human
+engineering effort, or for bus factor, now has a number telling it not to.
+
+### 🔴 What this pass did NOT establish about this shelf
+
+- 🔴 **No `tools/list` was called, for the third consecutive pass.** Executing an installed
+  connector remains refused by sandbox policy. Every tool count here is static, and the two
+  `DYNAMIC_UNBOUNDED` rows are the honest statement that static cannot settle them.
+- 🔴 **The Go lane of `p141-agent-surface-gate` fails its control and no Go verdict is
+  published.** Against `tutor-mcp` — which p140 proved *is* gated — it returns
+  `BOUNDED_STATIC`. 🔵 **The gate is two indirections above the name**: `tools/tools.go` calls
+  `registerGetNextActivity(server, deps)` inside the `deps.Institution` conditional, while the
+  literal sits in an `addTool(…)` helper. **No lexical test at the registration site can see
+  call-site gating** — a structural limit of this probe *and* p140's. The `0 of 5` verdict
+  survives only because all four servers register at module top level, which was checked by
+  hand, row by row, after the control failed.
+- 🔴 **`@owen-x-tech/canvas-mcp`'s 62-tool HTTP surface is still unverified against a running
+  server**, and now its repository cannot be read either. It is the least auditable row here.
+- 🔴 **`T24` fired on this pass.** An earlier draft re-presented the Canvas publish ages and the
+  `2.3.1`-vs-`2.2.3` repo/registry gap as new; both are already in `agents/trending.md`.
+  Withdrawn and credited.
+
+
 ## Pass 140 — 2026-10-12 — the shelf's tool counts are confirmed by reimplementation, and one row ships the gate the others need
 
 🟢 **An independently written extractor reproduced `p139-tool-count-drift`'s registered-tool

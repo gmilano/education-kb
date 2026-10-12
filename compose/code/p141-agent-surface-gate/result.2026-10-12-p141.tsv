@@ -1,0 +1,6 @@
+subject	languages	is_mcp_server	literal_sites	dynamic_sites	gated_sites	static_bounds_live	verdict
+zijinz456/OpenTutor	js,python	NO	0	0	0	n/a	NOT_AN_MCP_SERVER (1 'mcp' tokens, no SDK import)
+ahmedEid1/lumen	python	YES	1	9	0	NO	DYNAMIC_UNBOUNDED
+mohaneesh-03/mcp-tutor	python	YES	5	0	0	YES	BOUNDED_STATIC
+nirholas/ai-tutor-mcp	js	YES	0	1	0	NO	DYNAMIC_UNBOUNDED
+hesham0-0nasser/tutor-lms-mcp	php	YES	1	0	0	YES	BOUNDED_STATIC

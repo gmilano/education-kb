@@ -6,6 +6,115 @@ updated: 2026-10-12
 
 # Education — current trends
 
+## Pass 141 — 2026-10-12
+
+🔴 **Four of six pre-registered falsifiers fired, and three of this KB's own trends are rescoped
+rather than extended.** 🔵 **The pattern across all three is the same: a claim measured on one
+tier was carried as a claim about education software.** `T18` was rescoped by `ACTION CV` two
+passes ago; `T28` and `T29` are rescoped here, and `T30` is the general rule that keeps it from
+happening a fourth time.
+
+### 🔁 `T28` RESCOPED — flag-gated tool registration is one row's maturity, not a property of agent servers
+
+| | |
+|---|---|
+| **p140's claim** | *"A tool surface is a property of a DEPLOYMENT, not of a package"* — generalised from `tutor-mcp`'s `deps.Institution` / `REGULATION_GOAL` gates |
+| 🔴 **what fired it** | `ACTION CZ`. 🔴 **0 of 5** tutoring-agent rows is flag-gated — and only **4 of 5** are MCP servers at all. [`p141-agent-surface-gate`](../compose/code/p141-agent-surface-gate/README.md) |
+| 🔵 **the rescoped claim** | 🟡 **Gating is a maturity signal, not a tier property.** Exactly one row on these shelves gates registration, and it is the one with 459 commits, 286 test files and a database-enforced audit log. 🔴 **For every other row, the deployment cannot change the surface — which means the static count IS the surface, and nobody is hiding an institutional tier behind a flag because nobody has built one.** |
+| 🔴 **what would overturn it** | A second row that gates registration on configuration. 🔵 **This is now a thing to look for rather than a thing to assume** — and `EduBase/MCP`'s `EDUBASE_READONLY` is the nearest candidate on the shelf, though it gates *behaviour* rather than registration and the distinction is the whole point of `T28`. |
+
+### 🔁 `T29` NARROWED — origin is in the code only when the code must REACH somewhere
+
+| | |
+|---|---|
+| **p140's claim** | *"Origin lives in the code, not in the metadata, and nine passes looked in the wrong place"* |
+| 🔴 **what fired it** | `ACTION CY`. 🔴 **The repository layer places 0 of 6 rows**, and for **4 of the 6 there is no reachable repository at all**: 3 declare no `repository` field in any published version, and a 4th declares one that is not publicly readable. [`p141-repo-origin-layer`](../compose/code/p141-repo-origin-layer/README.md) |
+| 🔵 **the narrowed claim** | 🟢 **Origin is in the code when the code has to reach a named host to work.** A compiled-in `moodle-app2.let.ethz.ch` is a *binding* — the server does not function pointed elsewhere. 🔴 **Nothing else in "the code" carries origin**, and repository metadata carries none at all: 5 of 8 npm rows declare no repository, 6 of 8 maintainer addresses are free-mail, and **0 of 8 ship a funding file.** |
+| 🟢 **and one layer DOES work that p140 did not try** | A **Maven `groupId`**: `uk.ac.ox.ctl:spring-security-lti13` places EMEA with no inference, because `uk.ac.ox` is a namespace the University of Oxford had to control in order to publish. 🔵 **Stronger than an npm author field for exactly that reason** — publishing to a reverse-DNS namespace is gated, filling in an author field is not. |
+
+### 🆕 `T30` — a measurement's TIER is part of its claim, and this KB has now broken that rule three times
+
+| | |
+|---|---|
+| **the claim** | 🔴 **A property measured on one packaging tier must be published with that tier named, because the tiers differ by more than noise.** Three instances, all this KB's own: `T18`'s per-file notice (1 of 21) was npm/TypeScript only, and `ACTION CV` rescoped it. `T28`'s gating was one Go repository, and `ACTION CZ` rescoped it. 🔴 **And `BOUNDED_STATIC` — p140's *"7 of 8, provable without execution"* — inverts one tier up: dynamic registration is **1 of 8 (12%)** on npm connectors and 🔴 **2 of 4 (50%)** on agent servers.** |
+| 🔵 **why it keeps happening** | Each measurement was *correct*. The error is in the sentence, not the instrument: a shelf is written as though it were one population when it is several, and the honest denominator is per tier. 🔵 **`T21`'s licence-payload gradient is the counter-example that proves the rule** — PyPI **0%**, npm **33%**, Maven **83%** — because it was stated per ecosystem from the start and has survived four falsifiers. |
+| 🔴 **the operational consequence** | 🔴 **A static tool count bounds the live surface on npm connectors and does NOT on agent servers.** `ahmedEid1/lumen` serves 10 tools where a literal count returns 1; `nirholas/ai-tutor-mcp` serves 2 where it returns 0 — the same `for (const t of TOOLS) registerTool(t.name, …)` idiom as p140's 61-tool blind spot. 🔵 **So p140's blind spot was never an outlier; it is the ordinary shape of a table-driven server.** |
+| 🔴 **what would overturn it** | A trend on these shelves that holds at the same rate across npm, PyPI, Maven and repository-only tiers. 🔵 **`T21` is the only candidate and it holds as a GRADIENT, not a constant** — which is the rule restated, not an exception to it. |
+
+### 🆕 `T31` — a schema has a LOCATION, and `.sql` files are increasingly not it
+
+| | |
+|---|---|
+| **the claim** | 🔴 **In a Go, Rust or TypeScript component, the authoritative schema is embedded in source as migration bodies, and the `.sql` files that exist alongside it are a minority.** Measured on `ArnaudGuiovanna/tutor-mcp`: `db/*.sql` declares **22** tables, non-test `db/*.go` declares **111**, 🔴 **96 are `GO_ONLY`** — a reviewer reading the conventional place sees **19%**. [`p141-schema-location`](../compose/code/p141-schema-location/README.md) |
+| 🔴 **why it is a compliance trend and not a tidiness one** | 🔴 **The split falls ACROSS a DPIA rather than along it.** `learners` (holding `email TEXT UNIQUE NOT NULL`) and `interactions` are `SQL_ONLY`; 🔴 `pedagogical_decisions`, `assessment_attempts` and `audit_events` are **all Go-only**. 🔵 **A records-of-processing exercise that enumerates `db/*.sql` finds the learner's email and misses every table recording what was decided about them** — the opposite of the omission one would guess, and the half that an EU AI Act **Annex III** review needs most. |
+| 🔵 **the generalisation** | `T26` said a licence grant has a depth. `T31` says a **schema** has a location. 🔵 **Both are instances of the same error: looking in the file whose name matches the question.** The component is not at fault — embedded migrations are ordinary practice — and the defect is in the review method. |
+| 🔴 **what would overturn it** | A Go or TypeScript education component whose `.sql` files are authoritative and complete. 🔵 **One subject is one subject**, and per `T30` this claim is published with its tier named: it is measured on a single Go row and is a *hypothesis* about that tier, not a rate. 🔴 **Refuted if the next Go or Rust row measured declares the majority of its tables in `.sql`.** |
+
+### 🟢 `T26` STRENGTHENED — inheritance is the majority shape, not two artefacts' quirk
+
+`ACTION DC` walked every Maven coordinate this KB cites. 🔴 **Three further rows change
+verdict**, so cumulatively 🔴 **5 of 9 (56%) declare no licence in their own POM.** The sharpest
+is `org.verapdf:verapdf-library:1.30.3` — the PDF/UA **accessibility validator** — whose grant
+is a **dual GPL-3.0 / MPL-2.0** offer two levels up, on a coordinate that is `<packaging>pom`
+and publishes **no jar at all**. 🔵 **`org.sonatype.oss:oss-parent:7` is the shared grandparent
+of two chains and declares nothing**, so a walk must continue past a silent ancestor rather
+than stop at it. [`p141-pom-chain-sweep`](../compose/code/p141-pom-chain-sweep/README.md).
+
+### 🔵 `T21` holds and sharpens, on a layer below the one it was measured on
+
+`ACTION DA` found `openedx-core` **1.9.1** — p140's cleanest licence payload — carrying 🔴
+**zero licence files, zero SPDX headers and zero copyright lines across 237 Python files in six
+packages**, under a distribution that ships 35 139 bytes of AGPL-3.0-only text.
+
+🔵 **Both findings are true of different layers, and the pair is the useful statement: a
+`T21`-clean artefact can be `T18`-silent.** 🔴 **And the layer that matters for a studio is the
+silent one**, because the normal use is lifting a subtree, not installing a wheel — at which
+point the most reciprocal obligation on these shelves travels with code that announces nothing
+about itself.
+
+### 🟢 `T25` upgraded from inference to DECLARATION
+
+p139 inferred synthetic history from commits spaced 7 316 seconds apart. 🔵 **Two rows now
+declare it themselves**: `zijinz456/OpenTutor` carries a `Co-Authored-By: Claude` trailer on 🔴
+**151 of 191 commits (79%)**, `ArnaudGuiovanna/tutor-mcp` on 51 of 459 (11%). 🟢 **Not a
+defect** — `tutor-mcp` ships 286 test files against 279 source files — 🔴 **but commit count is
+now unusable as a proxy for human engineering effort or for bus factor**, and the signal is
+free to read.
+
+### 🔵 p141 on `T10`: the search channel returned ZERO new findings — a THIRD consecutive null pass
+
+Four global queries and four regional ones, run as mandated. Every candidate returned is already
+in this KB: the Digital Education Council LATAM 2026 survey (**92%** students / **79%** faculty,
+30 000+ responses, 29 institutions) and its **~30%** published-policy figure; UNESCO IESALC +
+UNU-IAS (**200 HEIs, 19 countries, 87% using AI, 26% with a strategy**); **ILIA**; CMU + Gates
+Foundation **$55M**; OpenAI's **eight** national education partners; TCS + Pearson; LearnUpon's
+Sydney HQ; Chile's 2021 national AI policy; Mexico's explicitly non-binding SEP/ANUIES guidance.
+
+🔵 **Three passes of nulls is no longer a sampling accident; it is a finding about the channel.**
+The demand side of this industry is being described by the same handful of surveys, re-quoted;
+the artefact side produced **six verdicts and four refutations** in the same hour at a fraction
+of the cost. 🟢 **`T10` is restated as a budgeting instruction**: the regional search sweep is
+worth running to *confirm* saturation, not to find rows, and a pass should not be judged by what
+it returns.
+
+### 🔴 The refusal ledger, unchanged in substance and extended by one channel
+
+| channel | status |
+|---|---|
+| 🟢 `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org`, `repo1.maven.org`, `github.com` (smart-HTTP), `raw.githubusercontent.com` | reachable |
+| 🔴 `api.github.com` | `403` |
+| 🔴 government **and** university hosts | `403` at `CONNECT` |
+| 🔴 executing an installed npm connector | refused by sandbox policy |
+| 🆕 🔴 **rendered `github.com` HTML (`curl -sI`)** | 🔴 **`403` for EVERY repository — live, private or nonexistent alike** |
+
+🔵 **The new entry is a measurement hazard rather than a blocked lane.** An earlier draft of this
+pass nearly read four `403`s as four dead repositories. 🟢 **`git ls-remote` against a
+deliberately nonexistent control is the only valid liveness probe here**, and it now runs on
+every invocation of `p141-repo-origin-layer`. 🔴 **A fourth consecutive pass with no primary
+regulatory source read**; the cause remains an allowlist, and it belongs to whoever owns this
+environment rather than to a probe.
+
+
 ## Pass 140 — 2026-10-12
 
 🔵 **This pass was refused the probe it registered, answered the question from source instead,

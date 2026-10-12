@@ -6,6 +6,94 @@ updated: 2026-10-12
 
 # Education — vertical platforms you can customise
 
+**Pass 141, 2026-10-12.** 🔴 **Two of this page's platform rows change character.** Sakai's
+`org.sakaiproject:kernel` aggregator is added to the inheritance ledger — it declares nothing
+and inherits ECL-2.0 at depth 3, like its `impl` sibling. 🆕 **And a platform category this page
+has never carried arrives through a connector: WordPress + Tutor LMS**, measured at 31 tools and
+17 writes, with no licence.
+
+### 🆕 🔴 The platform layer this page was missing: WordPress + Tutor LMS
+
+[`hesham0-0nasser/tutor-lms-mcp`](https://github.com/hesham0-0nasser/tutor-lms-mcp) is not a
+standalone MCP server. It is a **WordPress plugin** that exposes **Tutor LMS** — the WordPress
+LMS plugin — to an agent over a hand-rolled JSON-RPC router mounted on `register_rest_route`,
+with its own OAuth class. 🔵 **That makes WordPress an education platform tier on this page, and
+it is the only one whose attachment point is a CMS plugin rather than an LTI launch or a REST
+API.**
+
+| measure | value |
+|---|---|
+| tools | **31**, from one static `TLMS_MCP_Tools::list_tools()` array — **0 conditionals**, so the surface is fixed by the build |
+| 🔴 writes | 🔴 **17 of 33 distinct names** — `tutor_create_course`, `tutor_update_course`, 🔴 **`tutor_delete_course`**, plus topic and lesson writes |
+| 🔴 licence | 🔴 **no file at `HEAD`** — 7 commits, HEAD **2026-05-26** |
+| region | 🟢 **EMEA** — `+0300` on 7 of 7 commits |
+| files | 6 PHP: `class-mcp-router.php`, `class-mcp-tools.php`, `class-mcp-auth.php`, `class-mcp-oauth.php`, `class-mcp-admin.php` |
+
+🔴 **The missing licence is a harder stop here than elsewhere on this page.** WordPress's own
+distribution terms assume GPL-compatibility for plugins, so the *"permissive by omission"*
+reading that a reader might attempt on a bare npm package is not available — and p140's `T26`
+cuts the other way too: there is no parent manifest to inherit from in a WordPress plugin.
+🔴 **Unusable as shipped**, and worth watching precisely because the shape is right: a
+course-authoring write surface on a platform with an enormous installed base.
+
+🔵 **The architectural point for a studio is the attachment pattern, which is reusable
+regardless of this row's licence**: WordPress already solves authentication, roles and REST
+routing, so an MCP surface over a WP LMS is a router class plus a tool table. The licence is a
+one-file fix the maintainer has not made.
+
+### 🔴 Sakai: the aggregator declares nothing either, and now the whole family is measured
+
+p140 corrected this page's claim that `sakai-kernel-api` and `sakai-kernel-impl` have *"opposite
+licence posture"* — both are **ECL-2.0**, one by inheritance at depth 4. 🆕 **`ACTION DC` adds
+the third member.**
+
+| coordinate | own POM | inherits from | licence | depth |
+|---|---|---|---|---|
+| 🟢 `org.sakaiproject.kernel:sakai-kernel-api:25.2` | ECL-2.0 | — | ECL-2.0 | 2 |
+| 🔴 `org.sakaiproject.kernel:sakai-kernel-impl:23.3` | **NONE** | `org.sakaiproject:oss-parent:1` | ECL-2.0 | 4 |
+| 🆕 🔴 `org.sakaiproject:kernel:23.3` | 🔴 **NONE** | `org.sakaiproject:master:23.3` → `org.sakaiproject:oss-parent:1` | ECL-2.0 | **3** |
+
+🟢 **So Sakai's grant is consistent — ECL-2.0 throughout — and 2 of 3 artefacts state it
+nowhere in their own files.** 🔵 **The whole family's licence rests on a single POM,
+`org.sakaiproject:oss-parent:1`**, and `org.sakaiproject:master:23.3` between them declares
+nothing, so a walk that stops at the first silent ancestor finds no grant at all. 🟡 A European
+university's review burden on Sakai is therefore procedural rather than legal: the licence is
+fine, the paperwork proving it is three fetches away, and **none of the jars ships the text**.
+
+🟡 **p140's `org.sakaiproject:kernel:25.2` is 404 on Central, confirmed again** — Central holds
+60 versions of that coordinate, latest **23.3**. 🔵 **So `sakai-kernel-api:25.2`'s parent chain
+is genuinely broken upstream: its POM names a parent version that was never published**, and no
+amount of walking fixes it. The row survives only because it declares its own licence. 🟢 A
+clean example of why the walker reports a fetch failure as a failure rather than as an absence.
+
+### 🔴 Open edX: the licence is impeccable at the wheel and absent in everything inside it
+
+`ACTION DA` measured the six top-level packages inside `openedx-core` **1.9.1**: 🔴 **zero
+licence files, zero SPDX headers and zero copyright lines across 237 Python files**, against a
+distribution that declares `AGPL-3.0-only` and ships **35 139 bytes** of licence text in
+`dist-info/licenses/`.
+[`p141-package-grant-layer`](../compose/code/p141-package-grant-layer/README.md).
+
+🔵 **For this page the consequence is concrete and routine.** The normal way a studio uses Open
+edX's learning core is not `pip install` — it is lifting `openedx_tagging/` or
+`openedx_content/` into a service. 🔴 **A subtree lifted out of that wheel carries no grant, no
+holder and no notice, and the obligation it silently carries is the most reciprocal on this
+page.** 🟢 **The fix is one file per package and it costs nothing**: `P17`'s notice-injection
+step already exists for exactly this, and this is the clearest case on the shelf for running it.
+
+🟢 **And `openedx_learning` is confirmed alive as a package name** even though the *distribution*
+`openedx-learning` is a retired shim: 29 files of live code at 1.9.1. 🔵 **Demoted from
+distribution to subpackage, not killed** — the distinction `T27` exists to catch.
+
+### 🟡 No platform row was added or removed from the ERP/LMS tier this pass, and that is stated rather than padded
+
+Moodle, Open edX, Canvas, Sakai, OpenOLAT, Kolibri, OpenEduCat, BigBlueButton, H5P, Tutor and
+the national K-12 systems below are unchanged. 🔴 **Four global searches and four regional ones
+returned no new platform**, and the single addition above arrived through the connector shelf
+rather than the market channel — 🔵 **the third consecutive pass in which the artefact channel
+produced what the demand channel did not.**
+
+
 **Pass 140, 2026-10-12.** 🔴 **Two claims this page made about Sakai last pass are wrong, and the
 correction is published here rather than quietly dropped.** 🆕 **A third platform row changes
 identity entirely**: the package Open edX's learning core ships under has been renamed, and this

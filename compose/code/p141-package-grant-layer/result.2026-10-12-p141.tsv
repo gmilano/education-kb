@@ -1,0 +1,7 @@
+package	py_files	licence_files	spdx_headers	copyright_lines	verdict
+openedx_catalog	12	0	0	0	SILENT
+openedx_content	132	0	0	0	SILENT
+openedx_core	1	0	0	0	SILENT
+openedx_django_lib	7	0	0	0	SILENT
+openedx_learning	29	0	0	0	SILENT
+openedx_tagging	56	0	0	0	SILENT

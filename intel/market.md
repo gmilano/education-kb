@@ -6,6 +6,47 @@ updated: 2026-10-12
 
 # Education — market map and opportunities
 
+**Pass 141, 2026-10-12.** 🔴 **No market figure changed this pass, for the THIRD consecutive
+time, and the cause is now a finding about the channel rather than about the pass.** Eight
+searches ran — four global plus one per region for North America, EMEA, APAC and LATAM — and
+yielded 🔴 **0 new rows and 0 corrections.** 🔵 **Every candidate is already on this page**, and
+each was grepped against `intel/` before being written. Per-region outcomes, including the empty
+ones, are recorded under [**What the regional channel returned this pass *(p141)***](#-what-the-regional-channel-returned-this-pass-p141).
+
+🔵 **Three nulls in a row is no longer a sampling accident.** The demand side of this industry is
+being described by the same handful of surveys, re-quoted; the artefact side produced **six
+verdicts and four refutations** in the same hour. 🟢 **So `T10` is restated as a budgeting
+instruction**: run the regional sweep to *confirm* saturation, not to find rows.
+
+🟢 **What moved is placement, and it moved by measurement again.** A new origin channel — the
+**UTC offset recorded in each commit** — placed **six** repository rows across APAC and EMEA,
+including an independent corroboration of p140's APAC booking from a second channel. 🔴 **And it
+REFUSED two bookings it could have made**, because the offsets involved are shared between North
+America and LATAM. 🔵 **A regional map that declines the rows it cannot prove is the only kind
+worth filtering on.**
+
+🔴 **`ACTION CW` (Texas HB 149 / TRAIGA, in force 2026-01-01) remains UNREAD and is NOT
+published**, for the same reason p140 characterised: the proxy answers `403` at `CONNECT` for
+government and university hosts. 🆕 **One hazard is added to that ledger rather than a lane**:
+rendered `github.com` HTML answers `403` for *every* repository, live or not, so an HTTP status
+from that channel is not evidence of existence. 🔵 **Neither is a probe to re-register; both are
+requests to widen a network policy.**
+
+## 🔵 What the regional channel returned this pass *(p141)*
+
+🔵 **Recorded per region, including the empty results**, because an unrecorded empty region is
+indistinguishable from a covered one. Queries as mandated: the four global ones, plus
+`AI education {region} 2026 adoption regulation players` once per region.
+
+| region | what the channel returned | verdict |
+|---|---|---|
+| **North America** | CMU + Gates Foundation **$55M** gateway-course courseware; OpenAI's country-level programme with **eight** national partners (Q1 2026); **71%** of US teachers untrained, **10%** of institutions with formal AI guidelines; ~$951M 2024 → ~$2.3B 2029 (15.9% CAGR); 36% regional share; fragmented state regulation (Colorado, Texas) | 🔴 **0 new** — all held |
+| **EMEA** | CompTIA's 94%-will-invest-in-AI-training figure (not education-sector); Workday's 2023 EU AI Act commentary; a Council of Europe working conference from **October 2024** | 🔴 **0 new, and the channel is THIN**: the only education-specific item returned predates the window by two years. 🟡 **Stated as a gap in the channel, not in the region** |
+| **APAC** | TCS + Pearson multi-year AI learning alliance; LearnUpon's Sydney HQ with Create+ authoring; OpenAI's ANZ policy lead; Singapore's financial-sector AI consultations (**not** education); 49% citing insufficient real-time data infrastructure | 🔴 **0 new** — all held. 🔴 **Ministry-level education policy and edtech market data: still absent**, fifth consecutive pass |
+| **LATAM** | Digital Education Council LATAM 2026 — **92%** students / **79%** faculty, 30 000+ responses, 29 institutions, with Tec de Monterrey's IFE; **~30%** of LatAm universities with a published policy; UNESCO IESALC + UNU-IAS — **200 HEIs, 19 countries**, 87% using AI, 26% with a strategy; Chile's 2021 national policy + bill; Brazil and Colombia strategies without education rules; Mexico's SEP/ANUIES explicitly non-binding; **ILIA** | 🟢 **Best-evidenced region in the channel — and 0 new.** Every figure held since pass 33 |
+| **Global** | IMARC $6.4B (2025) → $79.6B (2034); TBRC $7.52B → $10.6B; AI-tutors $1.63B (2024) → $7.99B (2030); student AI use 66% → 92% | 🔴 **0 new** — the spread is already recorded as a **scope disagreement**, not a measurement conflict |
+
+
 **Pass 140, 2026-10-12.** 🔴 **No market figure changed this pass either, and for the second
 consecutive pass the reason is that the channel which produces them returned nothing at all.**
 Ten searches ran — global plus **one per region for North America, EMEA, APAC and LATAM** —
@@ -257,6 +298,48 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 🔴 p141 — an Open edX core component sends security mail to a domain its steward does not own, and the line was edited four months ago
+
+🔴 **No new North American market instrument; the channel returned only held rows.** What is new
+is measured and it is a procurement finding.
+
+`ACTION DB` resolved the three-way contact split p140 found across Open edX's layers. Both
+addresses were rewritten **in 2026**, three months apart, by two contributors **at the same
+company**, under the same `chore: modernize` banner
+([`p141-contact-migration`](../compose/code/p141-contact-migration/README.md)):
+
+| repository | at `HEAD` | commit | date |
+|---|---|---|---|
+| 🔴 `openedx/XBlock` | 🔴 **`{name = "edX", email = "oscm@edx.org"}`** | `94a759c` | **2026-06-05** |
+| 🟢 `openedx/codejail` | 🟢 `{name = "Open edX Project", email = "oscm@openedx.org"}` | `0b38ff8` | **2026-09-14** |
+
+🔵 **Both migrated the legacy `setup.py` field into PEP 621 `authors = [...]`. September corrected
+the organisation and the domain. 🔴 June retyped the stale organisation name and the stale domain
+into the new syntax** — it had the line open and carried it forward. 🔴 **So this is a live,
+in-flight migration that reached one repository and not the other, not neglect** — and p140's
+falsifier is refuted in the direction that makes the finding stronger.
+
+🔴 **The consequence is live today.** `edx.org` is a domain p140 established **2U** operates,
+while the steward is **Axim Collaborative** (`dave@axim.org`). 🔴 **`openedx/XBlock` — the
+component every XBlock-based course component builds against — directs maintainer and security
+correspondence to a domain controlled by a different company than its steward.**
+`openedx/codejail`, the sandbox that executes untrusted learner-submitted code, now points
+correctly. 🟢 **The remedy is one line in `pyproject.toml` and the template is already committed
+in the September change.**
+
+🔴 **And a second US-stewarded artefact is silent where it matters.** `ACTION DA` measured
+`openedx-core` **1.9.1**: 🔴 **0 licence files, 0 SPDX headers and 0 copyright lines across 237
+Python files in six packages**, under a distribution declaring **AGPL-3.0-only** with 35 139
+bytes of text. 🔵 **A subtree lifted out of that wheel — the normal way a studio uses it —
+carries the most reciprocal obligation on these shelves and announces nothing about itself.**
+
+🔴 **One booking this pass refused to make here.** `canvas-mcp-server`'s repository commits are
+**13 of 16 at `-0600`**, and `-0600` is US Central **and** Mexico City, Guatemala, Costa Rica,
+Honduras, El Salvador, Nicaragua and Belize. 🔵 **Left `UNMAPPED` rather than booked North
+America**, because an offset LATAM shares cannot place a row in a region whose emptiness this
+page reports honestly.
+
 
 #### 🆕 p140 — the Open edX steward is a US non-profit, and its own repositories disagree about where to send a notice
 
@@ -571,6 +654,40 @@ written down so the K-12 richness above is not mistaken for regional completenes
 
 ### EMEA
 
+#### 🆕 🟢 p141 — EMEA gains four rows on measured evidence, and the cleanest Maven artefact on the shelf is Oxford's
+
+🟢 **🆕 A Maven `groupId` is origin evidence, and it is stronger than an npm author field.**
+`uk.ac.ox.ctl:spring-security-lti13` **0.3.7** — LTI 1.3 for Spring Security — places 🟢 **EMEA**
+with no inference: `uk.ac.ox` is the University of Oxford's reverse-DNS namespace, and
+publishing into it requires controlling it, where filling in an author field does not. 🟢 **It is
+also the cleanest Maven row on these shelves** — Apache-2.0 declared in its own POM at depth 1,
+against a population where **5 of 9 declare nothing**
+([`p141-pom-chain-sweep`](../compose/code/p141-pom-chain-sweep/README.md)). 🔴 **It ships no
+licence text in its 72-entry jar**, so `T21`'s Maven figure rises to **83%**.
+
+🆕 🟢 **Three further EMEA rows placed on commit offsets**
+([`p141-repo-origin-layer`](../compose/code/p141-repo-origin-layer/README.md)):
+
+| row | evidence | note |
+|---|---|---|
+| 🟢 `ahmedEid1/lumen` | `+0200` on **828 of 828** commits | 🔴 GPL-3.0 — course-scoped RAG + MCP, **10 tools, all dynamically registered** |
+| 🟢 `hesham0-0nasser/tutor-lms-mcp` | `+0300` on 7 of 7 | 🆕 **WordPress + Tutor LMS**, 31 tools, 🔴 17 writes, 🔴 **no licence file** |
+| 🟢 `ArnaudGuiovanna/tutor-mcp` | `+0200` on 76 commits | 🟢 MIT; the only row on these shelves with a **database-enforced immutable pedagogical audit log** |
+
+🔵 **`tutor-mcp` is the EMEA row that matters for a regulated engagement**, and `ACTION CX`
+established why: its `pedagogical_decisions` table is append-only by database trigger on both
+SQLite and Postgres, `FORCE ROW LEVEL SECURITY`-isolated per tenant, and bound one-to-one to the
+assessment it produced — with a trigger refusing the insert unless the attempt's concept matches
+the decision snapshot's own `target_concept`. 🟢 **That is EU AI Act Article 14 / Annex III
+auditability implemented in the engine**, by one MIT maintainer, ahead of any vendor on this
+page.
+
+🔴 **The EMEA search channel is the thinnest of the four**: the only education-specific item
+eight queries returned was a Council of Europe working conference from **October 2024**. 🔵
+**That is a gap in the channel, not in the region** — the artefact reads above placed four EMEA
+rows in the same hour the demand channel placed none.
+
+
 #### 🆕 p140 — EMEA is the first region this KB has placed on MEASURED evidence, and it took nine passes
 
 🟢 **🆕 `ACTION CU` booked EMEA on a hostname compiled into shipped code.**
@@ -879,6 +996,34 @@ slugs are now known to be one repository.
 (Skolverket, UNIwise, Cito) this KB already lists. Both are coverage holes.
 
 ### APAC
+
+#### 🆕 🟢 p141 — APAC is corroborated from a second channel, gains two rows, and holds the commit bit on Open edX core
+
+🟢 **p140 placed `mcp-canvas-lms` in APAC on a hardcoded `canvas.ust.hk`. An independent channel
+now agrees**: its repository, 🆕 `MisterCommand/mcp-canvas-lms`, carries `+0800` on **20 of 20
+commits** — UTC+8, consistent with HKUST. 🔵 **Two unrelated instruments, one conclusion** — the
+first cross-channel regional confirmation this KB has recorded.
+
+🆕 🟢 **Two further APAC rows placed on commit offsets:**
+
+| row | evidence | note |
+|---|---|---|
+| 🟢 `zijinz456/OpenTutor` | `+1100` ×135, `+1000` ×6 of 191 | AEDT — **Australia**. 🟢 MIT, active (HEAD 2026-10-08). 🔴 **Not an MCP server** — a tutoring application; 🔴 **79% of its commits carry a `Co-Authored-By: Claude` trailer** |
+| 🟢 `mohaneesh-03/mcp-tutor` | `+0530` 5 of 5 | **India / Sri Lanka only.** 🟢 MIT, FastMCP, 5 tools, 🟢 `BOUNDED_STATIC` |
+
+🆕 🔵 **And the APAC supply story extends into Open edX core itself.** `ACTION DB` found both
+2026 contact-migration commits on `openedx/XBlock` and `openedx/codejail` authored from
+**`@arbisoft.com`** at `+0500`. 🔵 **p140 recorded Arbisoft — whose edtech arm Edly acquired
+Overhang.IO (Tutor) on 2023-03-27 — as an APAC market fact; it is also, measurably, the
+contractor modernising Open edX core repositories.** 🟢 **So the division is a US non-profit
+holding the stewardship and an APAC firm holding the commit bit** — a procurement-relevant fact
+about where change actually originates, and neither half is a defect.
+
+🔴 **Ministry-level education policy and edtech market sizing for APAC remain absent from the
+search channel, a fifth consecutive pass.** Everything eight queries returned was
+enterprise-general or already held (TCS + Pearson, LearnUpon Sydney, OpenAI's ANZ policy lead,
+Singapore's *financial-sector* AI consultations).
+
 
 #### 🆕 p140 — APAC gets its first measured row AND turns out to own the Open edX deployment layer
 
@@ -1201,6 +1346,51 @@ China or Singapore. The mandate side of this region is well covered here; the **
 commercial map is not**.
 
 ### LATAM
+
+#### 🔴 p141 — a TENTH consecutive pass with no LATAM-owned row, and this pass actively declined two chances to fake one
+
+🔴 **No LATAM-owned artefact, and the emptiness is measured on a second channel now.** p140's
+origin probe carried fifteen LATAM domain suffixes and matched zero. 🆕 **This pass added the
+commit-offset channel, which placed six rows across APAC and EMEA and 🔴 zero in LATAM.** 🔵
+**Two independent instruments, both working — demonstrably, since both placed other regions —
+and both empty here. The supply absence is now evidenced rather than assumed.**
+
+🔴 **And two bookings were available this pass, both refused**
+([`p141-repo-origin-layer`](../compose/code/p141-repo-origin-layer/README.md)):
+
+| row | offset | why it was NOT booked |
+|---|---|---|
+| `canvas-mcp-server` | **13 of 16 at `-0600`** | 🔴 US/Canada Central **and** Mexico City, Guatemala, Costa Rica, Honduras, El Salvador, Nicaragua, Belize |
+| `moodle-mcp-server-aql` | **9 at `-0400`** | 🔴 US Eastern DST / Atlantic Canada **and** Bolivia, Paraguay, Chile, Amazonas |
+
+🔵 **Both were left `UNMAPPED`, in both directions.** Booking either "North America" would have
+been the convenient answer; booking either "LATAM" would have manufactured exactly the coverage
+this page has spent ten passes reporting it does not have. 🟢 **The probe's tests pin that no
+entry in its bookable table maps to LATAM at all**, so a future pass that wants to place a LATAM
+row must change that test in the open, with its reasoning written down. 🔵 **`T24`'s discipline,
+applied against this pass's own interest.**
+
+🟡 **One LATAM-adjacent artefact signal stands, and it is not ownership.** The Brightspace
+connector `RohanMuppa/brightspace-mcp-server` ships a named institution module for
+**`javeriana`** — Pontificia Universidad Javeriana Cali, Colombia — among its eight. 🔵 **That
+places a LATAM institution as a *target*, not as an owner**, which is precisely the asymmetry
+this section exists to record: the region appears in these artefacts as a customer and not yet
+as a publisher.
+
+🟢 **The demand-side picture remains the best-evidenced of the four regions and is unchanged**:
+the DEC LATAM 2026 survey (**92%** students / **79%** faculty, 30 000+ responses, 29
+institutions, with Tec de Monterrey's IFE), **~30%** of universities with a published policy,
+UNESCO IESALC + UNU-IAS (**200 HEIs, 19 countries**, 87% using AI, **26%** with a formal
+strategy), Chile's 2021 national policy and pending bill, Brazil's and Colombia's strategies
+without education-specific rules, Mexico's explicitly non-binding SEP/ANUIES recommendations,
+and **ILIA**. 🔴 **0 new, held since pass 33.**
+
+🔵 **The opportunity that follows from the asymmetry is unchanged and now better evidenced**: a
+LATAM engagement is served by *composing* permissive rows published elsewhere, and the
+governance layer around them is where regional value is added — because **~70% of LatAm
+universities have no published AI policy** and 🔴 **not one of the artefacts they would adopt is
+accountable to a LATAM owner.**
+
 
 #### 🆕 p140 — the ninth consecutive pass with no LATAM-owned row, and this time the emptiness is MEASURED
 
@@ -1611,6 +1801,34 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🔵 p141 — the asymmetry between the two channels is now the global finding
+
+🔴 **Third consecutive pass in which the demand channel produced nothing** — eight queries, zero
+new rows, zero corrections — 🟢 **while the artefact channel produced six verdicts, four of them
+refutations of this KB's own prior findings.** 🔵 **That asymmetry is the global statement worth
+carrying**: the governance gap this page calls "the market" is measurable at the artefact layer
+and wider there than any survey reports.
+
+Four measurements from this pass that no survey on this page captures:
+
+| measurement | figure |
+|---|---|
+| 🔴 npm education connectors declaring **no repository** in any published version | 🔴 **5 of 8** |
+| 🔴 Maven coordinates whose licence is **not in their own POM** | 🔴 **5 of 9 (56%)** |
+| 🔴 tables in a flagship agent's schema **invisible to a `.sql` reader** | 🔴 **96 of 118 (81%)** |
+| 🔴 licence/SPDX/copyright notices inside `openedx-core`'s six packages | 🔴 **0 of 237 files** |
+
+🔵 **Each is a number a buyer would want before signing, none is in any market report, and all
+four were measured in under an hour from published artefacts.** 🟢 **That is the global
+opportunity in one line: the due-diligence layer for open-source education software does not
+exist, and it is cheap to build.**
+
+🟡 **One global caution, stated against this pass's own output.** `T30` records that three of
+this KB's trends were published as claims about education software when they were claims about a
+packaging tier. 🔵 **The market-level reading of any artefact finding on this page must name its
+tier**, and the four figures above do.
+
 
 #### 🆕 p140 — the demand channel has stopped producing information, and the supply channel produced five corrections
 
