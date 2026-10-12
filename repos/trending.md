@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 146 — the trending channel could not be read, and the reason is new
+
+🔴 **No repository was cloned, measured or star-counted this pass.** Every `git clone` of a
+third-party repository is refused in this session with `Untrusted Code Integration`
+(`P146-A`) — 🔴 **one pass after `P145-X` certified 44 of 44 census repositories cloning
+cleanly, on this same date.**
+
+🔵 **The channel map, re-measured rather than assumed** (🆕 `T60`):
+
+| channel | p145 | 🆕 p146 |
+|---|---|---|
+| `git clone` third-party | 🟢 **44 of 44** | 🔴 **REFUSED** (policy, not network) |
+| `curl -sI` on `github.com` | 🔴 **403** | 🔴 **403** — holds |
+| 🆕 `WebFetch` on `github.com` repo pages | ⬜ **never tested** | 🟢 **WORKS** |
+| `WebFetch` on `capitol.texas.gov` | ⬜ untested | 🔴 **`ENOTFOUND`** |
+| `eur-lex.europa.eu`, `unesco.org`, `oecd.org` | 🔴 unreachable | 🔴 unreachable — holds |
+
+🟢 **So licences and star counts ARE readable this pass**, on a channel no previous pass
+had tried — and that is how the LMS licence layer below was read. 🔴 **Payload measurement
+is not**, so no tool count, origin census or grant read appears anywhere in pass 146.
+
+### 🟢 What the open channel produced — the major LMS layer, licence by licence
+
+🔵 Read off each repository's own page, **2026-10-12**:
+
+| repo | licence | ★ |
+|---|---|---|
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (Apache-2.0 derivative, non-copyleft) | 1.2k |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 8.2k |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 6.9k |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 6.2k |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 | 1.0k |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 | 886 |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 | 505 |
+
+🔴 **Six of seven are copyleft.** 🟢 **One passes this KB's MIT/Apache/BSD bar, and it is
+not the largest.** Full reasoning in `verticals/solutions.md`.
+
+### 🔴 Declared null, stated rather than left silent
+
+🔴 **No GitHub trending data was obtained.** `github.com/trending` was not read; the
+third-party trackers the search returned are 🔴 **undated or stale** (one's
+"top trending 2026" page was last updated **2026-06-21**) and 🔴 **no trending repository
+is adopted from them.** 🔵 **A tracker's ranking is not a measurement, and this file has
+been burned by exactly that class of source before** (`T57`, this pass, on a legislative
+tracker).
+
+---
+
 # Education — trending repos (append-only log)
 
 ## 2026-10-12 — Pass 145

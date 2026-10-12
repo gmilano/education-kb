@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 2026-10-12 — pass 146 — seventh consecutive null, and the regulator is the story instead
+
+🔴 **No new agent signal for the seventh pass running.** Six queries (two global, four
+regional). 🔴 **Every education-specific hit is a course.** 🟢 **Recorded as a dated null
+rather than padded**, because an informed gap is information and silence is not.
+
+| query class | result | verdict |
+|---|---|---|
+| open source AI agents education 2026 MIT | general-purpose agents + curated lists | 🔴 **null for the domain** |
+| github trending education AI 2026 | `microsoft/ai-edu`, `AIcademy` (**309★**), `ML-For-Beginners` | 🔴 **all courses** |
+| per-region × 4 (NA / EMEA / APAC / LATAM) | policy and adoption material, no repositories | 🔴 **null for agents, 🟢 rich for intel** |
+
+🔵 **The regional queries stopped returning agents and started returning regulators**, and
+that is this week's actual trend signal in this domain:
+
+### 🆕 🔴 What moved this week is the compliance surface, not the shelf
+
+- 🆕 🔴 **Korea's AI Basic Act names education.** Article 2(4)(j) — **student evaluation**,
+  early childhood through secondary. In force **2026-01-22**; penalties after an MSIT grace
+  period of **at least one year**. 🔴 **This KB published the opposite claim for two
+  passes** (`T40`, now withdrawn).
+- 🟢 **The EU clock is final.** **Regulation (EU) 2026/1744** in force **2026-07-27**;
+  Annex III education obligations **2027-12-02**. 🟢 **Article 4 AI-literacy has been live
+  since 2025-02-02** and emotion recognition in classrooms has been **banned since
+  2025-02**.
+- 🆕 🔴 **Korea withdrew its AI textbook programme.** Statutory textbook status removed
+  **2025-08-04**; adoption **37% → 19%** of classes within 2025; schools **~4 190 →
+  2 095**. 🆕 **`T56`** — the first *negative* adoption slope this file has recorded.
+- 🆕 🔴 **A US prohibition that does not exist.** "Texas HB 2400 bans AI classroom
+  instruction" circulated as current law; 🔴 **it died in committee in 2025.** 🆕 **`T57`**.
+- 🆕 🟢 **Sakai is the only permissive major LMS** — **ECL-2.0**, an Apache-2.0 derivative.
+  Moodle GPL-3.0, Open edX and Canvas **AGPL-3.0**, Chamilo and ILIAS GPL-3.0, OpenEduCat
+  LGPL-3.0.
+
+🔵 **Why a regulator belongs on an agents-trending page.** Three of the four use cases the
+EU places in Annex III — **learning-outcome assessment, level assignment, exam
+monitoring** — are the three most common things an education agent is built to do, and the
+fourth, **admissions**, is the most common thing a client asks for first. 🔴 **The shelf
+did not move this week; the ceiling over it did.**
+
+---
+
 # Education — trending agents (append-only log)
 
 ## 2026-10-12 — Pass 145
@@ -5436,6 +5478,8 @@ freshest `ai-tutor` repos cannot be composed into client work. Probe the payload
 
 🔴 **Pass 85 recorded: "the autograding tier placed 4 EMEA, 3 North America, 0 APAC, 0 LATAM — an informed gap, not coverage."** 🟢 **Both limbs are now placed on artefact evidence read from the repository itself:**
 
+<!-- p240-scope: LATAM, APAC -->
+
 | limb | row | evidence (read from the payload / README, not inferred) |
 |---|---|---|
 | 🟢 **LATAM** | [`JuezUN/INGInious`](https://github.com/JuezUN/INGInious) — **UNCode**, 8★, 🔴 AGPL-3.0, 34 840 B, `master` · `4a45903` | 🟢 README, verbatim: *"UNCode is currently used at the Universidad Nacional De Colombia, Campus Bogotá."* 🟢 Autograding for C/C++, Java, Python 3, **Verilog/VHDL** and Jupyter, with an LMS bridge. 🟢 Named courses incl. Data Structures, ML, **Quantum Programming**. |
@@ -8011,6 +8055,8 @@ instead of the acronym returned national policy instruments for both EMEA and AP
 🔴 **Pass 40 filed `P505` as *"the **EMEA** regulatory channel is reproducibly stale on the Annex III
 date."* 🔴 **This pass found the same stale claim in the North America and LATAM sweeps, and did not find
 it in the EMEA sweep at all** (which returned no education content to be stale about):
+
+<!-- p240-scope: North America, EMEA, LATAM -->
 
 | Sweep | Stale claim returned |
 |---|---|

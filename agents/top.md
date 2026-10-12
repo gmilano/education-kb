@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 146 — 2026-10-12 — a second instrument can return a verdict over nothing, and five rows carry that verdict
+
+🔴 **No row on this shelf was re-measured this pass.** Every `git clone` of a third-party
+repository is refused by this environment (`P146-A`), so the payload lane that produced
+every verdict below is closed. 🔵 **What changed is the confidence attached to five of them.**
+
+🆕 🔴 **`p141-agent-surface-gate/surface_gate.py` carries `P145-A`'s defect** — the agent
+tier's own gate. It excludes `dist` and `build` in an **inline literal set inside
+`walk()`**, with no named constant to audit and no re-admission path. 🟢 **Pinned by test**:
+on a payload whose only code is under `dist/`, `walk()` yields **0 files**, `is_mcp_server`
+returns **`(False, 0)`**, and the row reads `NOT_AN_MCP_SERVER (0 'mcp' tokens, no SDK
+import)`. 🟢 **The same bytes at the repository root read as a server.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🆕 🔴 `P146-B` | 🆕 🔴 **The agent tier's gate carries the defect** | `surface_gate.py` `walk()`, inline `{… "dist", "build" …}`. 🟢 **0 files walked, `(False, 0)` returned** on a dist-only fixture |
+| 🟢 `P146-C` | 🟢 **The negative control separates path from payload** | 🟢 **Identical bytes at root → `sdk=True`, hits>0.** 🔵 **The verdict was a function of the path** |
+| 🆕 🔴 `P146-D` | 🆕 🔴 **0 of 35 traversing instruments can notice the condition** | **5** exclude `dist`/`build` with no re-admission while emitting a verdict |
+| 🔴 `P146-A` | 🔴 **The clone channel is refused — nothing here is re-checkable** | `Untrusted Code Integration`, 1 of 1 single and 1 of 1 bulk |
+| 🔴 `P146-U` | 🔴 **SEVENTH consecutive null for new agent rows** | 🔴 **Every education-specific hit is a COURSE**: `microsoft/ai-edu`, `ML-For-Beginners`, `rohitg00/ai-engineering-from-scratch`, `AIcademy` (**309★**) |
+
+### 🔴 The five rows whose verdict is now provisional
+
+These carry `NOT_AN_MCP_SERVER`, and that verdict is the exact output `P146-B` shows a gate
+producing from an empty walk. 🔴 **Whether any of the five is a `T42` artefact is unknown
+and needs a clone.** `ACTION EI` is registered for p147 with the clone channel as a stated
+precondition.
+
+| row | tier | published verdict | status after p146 |
+|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | agent | `NOT_AN_MCP_SERVER (1 'mcp' tokens)` | 🔴 **provisional** — measured by the gate `P146-B` indicts |
+| [`BetterSEQTA/BetterSEQTA-Plus`](https://github.com/BetterSEQTA/BetterSEQTA-Plus) | github-only | `NOT_AN_MCP_SERVER (0 'mcp' tokens)` | 🔴 **provisional** |
+| [`BetterSEQTA/DesQTA`](https://github.com/BetterSEQTA/DesQTA) | github-only | `NOT_AN_MCP_SERVER (0 'mcp' tokens)` | 🔴 **provisional** |
+| [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) | github-only | `NOT_AN_MCP_SERVER (0 'mcp' tokens)` | 🔴 **provisional** |
+| [`juliancasaburi/siu-guarani-promedio-extension`](https://github.com/juliancasaburi/siu-guarani-promedio-extension) | github-only | `NOT_AN_MCP_SERVER (0 'mcp' tokens)` | 🔴 **provisional** |
+
+🔵 **Why "provisional" and not "wrong".** Four of the five are browser extensions and
+calendar tools, where `NOT_AN_MCP_SERVER` is very likely correct on the merits — these are
+not MCP servers and nobody claimed they were. 🔴 **But a `0 'mcp' tokens` reading is
+produced identically by "this is not a server" and by "I read no files"**, and this shelf
+cannot currently tell those apart for any row. 🟢 **That is the whole point of `T42`**, and
+it is why the guard withholds a verdict rather than guessing.
+
+### 🔴 The seventh agent null, and the one thing this pass learned from it
+
+Six queries — two global, four regional — returned the same class of result as p144 and
+p145. 🔴 **Not one education-domain agent.** The hits are:
+
+| candidate | licence | ★ | why it is not a row |
+|---|---|---|---|
+| [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | — | — | 🔴 **AI teaching materials, not an education agent** |
+| `microsoft/ML-For-Beginners` | MIT | — | 🔴 **a curriculum** |
+| `rohitg00/ai-engineering-from-scratch` | — | — | 🔴 **a course, carried from p144** |
+| `aicademyorg/AIcademy` | — | **309** | 🔴 **a learning project** |
+| `microsoft/ai-agents-for-beginners` | MIT | **67 223** | 🔴 **a course, carried from p144/p145** |
+
+🔵 **`T10`'s mechanism, restated once more because it keeps holding**: the token
+"education" matches a repository's **pedagogy**, not its **domain**. A search for
+education agents returns agents that teach you about agents. 🟢 **The rows on this shelf
+were all found by naming the SYSTEM OF RECORD instead** — Canvas, Moodle, Blackboard,
+Librus, EduPage, SIGAA, VTOP, SIU-Guaraní — and that remains the only formulation that has
+ever produced one. 🟢 **Not re-registered as an action**; it is a standing method note.
+
 # Education — AI agents shelf
 
 ## Pass 145 — 2026-10-12 — the npm tier was never measured, and `T30` is withdrawn outright

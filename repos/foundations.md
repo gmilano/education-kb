@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 146 — 2026-10-12 — the platform layer's licence map, and a shelf-wide instrument defect
+
+🔴 **No foundational repo was cloned this pass** (`P146-A`). 🟢 **But the licence axis of the
+major platform layer was read for the first time, on a channel no previous pass had
+tried** — and it changes which platform a studio should reach for.
+
+### 🆕 🟢 The platform layer, read on the licence axis — one permissive row out of seven
+
+| repo | licence | ★ | what it is | build bar |
+|---|---|---|---|---|
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 1.2k | Learning, teaching, research and collaboration platform. 🟢 **ECL-2.0 is Apache-2.0 with a narrowed §3 patent grant — OSI-approved, copyleft: no** | 🟢 **PASSES** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 8.2k | The Open edX LMS and Studio. MOOC-grade, Python/Django | 🔴 **network copyleft** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 6.9k | Instructure's open LMS, alongside its commercial SaaS | 🔴 **network copyleft** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 6.2k | The most-deployed LMS worldwide; deepest plugin ecosystem | 🔴 copyleft |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility | 🔴 copyleft |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 | 886 | 🟢 **LMS + SIS + fees + parent app on ONE database**, on the Odoo framework | 🔴 weak copyleft |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 | 505 | Official ILIAS release and development branches | 🔴 copyleft |
+
+🔵 **Why this is a foundations finding and not a verticals one.** A foundational repo is
+one you build **on**. 🔴 **Six of these seven cannot be built on in the fork-and-modify
+sense without a reciprocal obligation**, and the two largest carry AGPL's network clause,
+which triggers on precisely the hosted multi-tenant shape these platforms are deployed in.
+🟢 **Sakai is the only row where fork-and-modify is also on the table** — and it is the
+fourth-largest, which is why no previous pass noticed.
+
+🟢 **The API-boundary pattern remains the default on every copyleft row** and is unaffected:
+a separate agent service speaking REST/LTI to the platform incurs no obligation on the
+agent's own code. 🔵 **The licence map changes which platform you pick when the client
+needs core changes, not whether the shelf's patterns work.**
+
+### 🆕 🔴 The instrument layer under this page has a shelf-wide defect
+
+🔴 **`T42` is a property of this shelf, not an incident.** `p146-exclusion-reach` reads every
+traversing instrument in `compose/code/`:
+
+| | count |
+|---|---|
+| instruments that traverse a tree | **35** |
+| …carrying an **empty-walk guard** | 🔴 **0** |
+| …excluding `dist`/`build` with no re-admission while emitting a verdict | 🔴 **5** |
+| …that **cannot read anything but a git clone** | 🔴 **16** |
+
+🆕 🔴 **`T59`**: 16 of 35 instruments traverse by `git ls-tree`/`ls-files`, so a clone is a
+**precondition**, not a convenience — and 🔴 **the entire region-placement lane is in that
+set** (`americas`, `cctld_urlctx`, `origin_scale`, `repo_origin`, `tenancy`). 🔵 **A
+published npm package is not a git tree, so the 8 npm rows on this shelf are structurally
+unplaceable on the region axis this KB exists to serve.** 🔴 **No pass had said so.**
+`ACTION EK` asks whether a non-git channel can place any of them.
+
+🟢 **`p146-empty-walk-guard` is the four-line fix**, with the distinction it exists to
+preserve pinned by test: *zero files walked* withholds a verdict; *files walked, none
+matched* is a finding and keeps its verdict.
+
+### 🔴 What this page did NOT do this pass
+
+- 🔴 **No star count, commit count, HEAD date or licence file was read for any existing
+  shelf row** — all of those need a clone.
+- 🔴 **The seven platform licences above are page readings, not `LICENSE`-file reads.** A
+  licence badge is a declaration; `T21`/`P145-I` is this KB's own evidence that a
+  declaration and a shipped grant diverge. 🔵 **They are published as declarations.**
+- 🔴 **OpenEduCat's Odoo dependency chain was not read** — upstream is LGPL-3.0 with a
+  proprietary Enterprise edition, and the obligation interaction is unknown.
+
 # Education — foundational repos
 
 **Pass 145, 2026-10-12.** 🔴 **The npm rows on this page were never read.** The instrument

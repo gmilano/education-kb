@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-12
 ---
 
+**Pass 146, 2026-10-12.** 🆕 🟢 **The whole major-LMS layer was read on the licence axis for
+the first time, and it has exactly ONE permissive member.** 🔴 **Six of the seven platforms
+a studio would reach for are copyleft** — and the exception is not the one this page or the
+wider market would have guessed.
+
+### 🆕 🟢 The major open-source LMS/SIS layer, every licence read off its own page
+
+🔵 **Read on the `WebFetch` channel, which `P146-I` found open while `clone` is refused and
+`curl -sI` answers 403.** Each row's licence and star count is what the repository page
+displayed on **2026-10-12**.
+
+| platform | repo | licence | ★ | build bar |
+|---|---|---|---|---|
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 1.2k | 🟢 **PASSES — the only one** |
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 6.2k | 🔴 copyleft |
+| Open edX | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 8.2k | 🔴 **network copyleft** |
+| Canvas LMS | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 6.9k | 🔴 **network copyleft** |
+| OpenEduCat | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 | 886 | 🔴 weak copyleft |
+| Chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 | 1.0k | 🔴 copyleft |
+| ILIAS | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 | 505 | 🔴 copyleft |
+
+### 🆕 🟢 Why Sakai is the finding, and it is not a star-count finding
+
+🟢 **ECL-2.0 is Apache-2.0 with one change**: its §3 patent grant is narrowed to the needs
+of educational institutions. The rest of the text is Apache's. 🟢 **OSI-approved,
+copyleft: no.** It is GPLv3-compatible and 🔴 **not GPLv2-compatible**.
+
+🔵 **So the permissive/copyleft split in this vertical does not track maturity, adoption or
+stars.** Sakai is the fourth-largest row here and the only one a studio can build a
+proprietary derivative on without a reciprocal obligation. 🔴 **The two largest rows —
+Open edX and Canvas — are both AGPL-3.0, the strongest copyleft in the set**, and AGPL's
+network clause is triggered by exactly the deployment shape these platforms are used in:
+hosted, multi-tenant, served over a network.
+
+🔴 **What this does NOT say.** Copyleft is not a disqualification; it is a constraint on
+where the boundary goes. The practical pattern on every GPL/AGPL row is unchanged and is
+the one this page has recommended for twenty passes:
+
+| approach | obligation | verdict |
+|---|---|---|
+| fork the platform, modify core, host it | 🔴 **source disclosure (AGPL: to every user)** | 🔴 avoid |
+| 🟢 **build a separate agent service, talk to it over the REST/LTI API** | 🟢 **none on your code** | 🟢 **the pattern** |
+| write a plugin inside the platform's tree | 🔴 likely derivative | 🔴 counsel first |
+
+🟢 **Sakai is the row where the first option is also available**, which is worth knowing
+before a client's procurement forces the question.
+
+### 🔴 OpenEduCat — the Odoo-shaped candidate, read and licence-flagged
+
+The vertical search for *"open source platform education ERP/CRM"* surfaced
+**OpenEduCat** as the closest education analogue to Odoo's position in ERP: 🟢 **LMS, SIS,
+fees and a parent app on one database**, built on the Odoo framework. 🔴 **It is
+LGPL-3.0**, 886★ — 🔴 **outside this KB's MIT/Apache/BSD bar.**
+
+🔵 **Recorded rather than dropped**, because the single-database LMS+SIS consolidation is a
+real architectural position and this page had no row for it. 🔴 **An integrated system of
+record is also the highest-copyleft-risk place to put agent logic**, since the agent and
+the records live in one tree.
+
+🔴 **Not verified this pass**: whether OpenEduCat's Odoo dependency pulls additional
+licence obligations. Its upstream framework is itself LGPL-3.0 with a proprietary
+Enterprise edition, and the interaction was not read.
+
 # Education — vertical platforms you can customise
 
 **Pass 145, 2026-10-12.** 🔴 **The Moodle copyleft warning this page carried is corrected:

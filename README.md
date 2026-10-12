@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 146 — 2026-10-12
+
+⏱️ **Ninth pass of this date.** 🔴 **The clone channel p145 certified clean, hours earlier
+and on this same date, is refused in this session.** Every `git clone` of a third-party
+repository is denied by this environment's policy classifier — bulk and single alike — so
+🔴 **the entire payload-measurement lane this shelf has run for seven passes is dark.**
+
+🟢 **What the pass did instead is the better finding.** `P145-A` found one instrument
+returning a verdict over an empty file set. Asked of the whole shelf, the answer is that
+🔴 **the defect is a class, a second instrument carries it, and not one of 35 traversing
+instruments can notice it.**
+
+| finding | verdict | figure |
+|---|---|---|
+| 🆕 🔴 `P146-A` | 🔴 **The clone channel is REFUSED, one pass after being certified** | `Untrusted Code Integration` on **1 of 1** single clone and **1 of 1** bulk attempt. 🔴 **`P145-X`'s "44 of 44 cloned, zero dead" cannot be re-run.** 🔵 Not a network block — a policy refusal, and a different one from `P139`'s execution refusal |
+| 🆕 🔴 `P146-B` | 🆕 🔴 **A SECOND instrument carries `P145-A`'s defect** | `p141-agent-surface-gate/surface_gate.py` excludes `dist`/`build` in an **inline literal set inside `walk()`** — no named constant, no re-admission. 🟢 **Pinned**: `walk()` yields **0 files** on a dist-only payload and `is_mcp_server` returns **`(False, 0)`** → `NOT_AN_MCP_SERVER` |
+| 🟢 `P146-C` | 🟢 **…and the negative control separates the two states** | 🟢 **The identical bytes at the repository root read as a server** (`sdk=True`, hits>0). 🔵 **So the verdict is a function of the path, not the payload** |
+| 🆕 🔴 `P146-D` | 🆕 🔴 **`T42` is a property of the shelf, and the shelf cannot detect it** | **35** traversing instruments. 🔴 **0 carry an empty-walk guard.** 🔴 **5 exclude `dist`/`build` with no re-admission while emitting a verdict**: `surface_gate.py`, `surface_gate2.py`, `americas.py`, `schema_tiers.py`, `tenancy.py` |
+| 🆕 🔴 `P146-E` | 🆕 🔴 **16 of 35 instruments cannot read a loose payload AT ALL** | They traverse by `git ls-tree`/`ls-files`, so a clone is a precondition, not a convenience. 🔴 **The entire region-placement lane is in that set** — `americas`, `cctld_urlctx`, `origin_scale`, `repo_origin`, `tenancy` |
+| 🆕 🔵 `P146-F` | 🆕 🔵 **…so the 8 npm rows can never be region-placed by any instrument this KB owns** | A published package is not a git tree. 🔴 **A third of the shelf's subjects are structurally unplaceable on the axis this KB exists to serve** — and no pass had said so |
+| 🟢 `P146-G` | 🟢 **p145's own repair verified independently** | `surface_gate3.payload_trees` ∩ `SKIP_DIRS` → `admit` re-admits a `dist/` the `package.json` declares. 🟢 **Pinned by test on the same fixture that breaks the other two** |
+| 🆕 🔴 `P146-H` | 🆕 🔴 **This probe inflated its OWN headline, in the reassuring direction** | First run: **36** instruments, **1** guarded, **2** `REPAIRED`. 🔴 **Both extra rows were its own source** — it carries the guard and re-admission token sets *as regexes* and read itself as compliant. 🟢 **Found before publication**; honest baseline **35 / 0** |
+| 🆕 🟢 `P146-I` | 🆕 🟢 **The channel map INVERTS `P145-X`** | clone 🔴 **refused**; `curl -sI` 🔴 **403** on `github.com` (`P144-X` holds); 🟢 **`WebFetch` reads `github.com` repository pages cleanly** — a channel p145 never tested, and the only payload-adjacent one open this pass |
+| 🔴 `P146-J` | 🔴 **`ACTION CW` UNREAD an EIGHTH pass, now on BOTH channels** | `capitol.texas.gov` answers 🔴 **`ENOTFOUND` to `WebFetch`** as well as to `curl`. 🟢 **Its content arrived through the search channel anyway** — see `P146-P`. 🔵 Still an environment allowlist request, 🟢 **not re-registered** |
+| 🆕 🔴 `P146-K` | 🆕 🔴 **`ACTION EH` DISCHARGED — `T40` REFUTED and WITHDRAWN** | Korea's AI Basic Act **Article 2(4)** lists ten high-impact domains and 🔴 **student evaluation is item (j)**, cross-referencing **Article 9(1) of the Framework Act on Education**. 🟢 **Four independent sources**, incl. the Georgetown CSET translation and ECIPE |
+| 🆕 🟢 `P146-L` | 🆕 🟢 **…and the correction is sharper than the reversal — `T58` ADOPTED** | Korea covers **one use case, K-12 only** (early childhood, elementary, secondary). The EU's Annex III covers **four, at every level**. 🔵 **Both are vertical; they differ in SCOPE, not in presence** |
+| 🆕 🔴 `P146-M` | 🆕 🔴 **…and Korea's education clock bites ELEVEN MONTHS BEFORE the EU's** | Korea in force **2026-01-22**, with an MSIT grace period of **at least one year** before penalties → ~**2027-01**. EU Annex III → **2027-12-02**. 🔴 **This KB had the sequence backwards** |
+| 🟢 `P146-N` | 🟢 **`T3` RESOLVED — `P144-U`'s sixteen-month conflict closes** | Digital Omnibus on AI: EP **2026-06-16**, Council **2026-06-29**, signed **2026-07-08**, in force **2026-07-27**, cited as **Regulation (EU) 2026/1744**. Annex III **2027-12-02**, Annex I **2028-08-02** |
+| 🟢 `P146-O` | 🟢 **`P145-Q`'s conflicted item resolved too** | 🟢 **The Article 4 AI-literacy duty has applied since 2025-02-02** and the Omnibus does NOT defer it. 🔵 **An EMEA engagement has one duty in force, one prohibition in force (`T43`), and one classification 14 months out** |
+| 🆕 🔴 `P146-P` | 🆕 🔴 **A North American claim REFUSED before this KB published it — `T57` ADOPTED** | The first search returned *"Texas HB 2400 bans AI from providing direct classroom instruction"* as current law. 🔴 **It is not law.** Last recorded action **2025-03-14**, referral to House Public Education. 🔴 **One tracker labels it "Became Law", contradicting its own last-action field** |
+| 🆕 🔴 `P146-Q` | 🆕 🔴 **`P145-W`'s APAC null is REFUTED, and the figures point DOWN — `T56` ADOPTED** | Korea's AI digital textbooks: amendment **2025-08-04** stripped them of textbook status and the funding attached to it. Adoption **37% of classes → 19%** within 2025; schools **~4,190 → 2,095** |
+| 🆕 🔴 `P146-R` | 🆕 🔴 **…and China is the opposite pole of the same region** | AI a **compulsory subject from age 6**, reported from **2025-09**. 🔵 **APAC is not one market: it holds the only statutory education item, the only national rollback AND the only universal mandate** |
+| 🟢 `P146-S` | 🟢 **`T1` gets a third instance, and its first in K-12** | Brazil: 🔴 **53% of school administrators use AI against 22% of schools holding guidelines.** With `P144-R`'s LAC higher-ed **87% / 26%** and EMEA **10% of 450+**, `T1` holds at **three levels in three regions** |
+| 🟢 `P146-T` | 🟢 **A LATAM figure that IS adoptable, unlike `P145-V`'s residual** | Google.org **$4.6M**, implemented by the **Raspberry Pi Foundation**: **24 000 educators**, **1.25M students by 2028**, **nine countries** incl. Brazil and Mexico. 🔵 **Named donor, named implementer, named horizon — a programme, not a market size** |
+| 🔴 `P146-U` | 🔴 **SEVENTH consecutive null for new agent rows** | Two global queries, four regional. 🔴 **Every education-specific hit is a COURSE** — `microsoft/ai-edu`, `ML-For-Beginners`, `rohitg00/ai-engineering-from-scratch`, `AIcademy` (**309★**). 🟢 **Not re-registered** |
+| 🆕 🔴 `P146-V` | 🆕 🔴 **A vertical candidate read on the open channel and REJECTED on licence** | `openeducat/openeducat_erp` — the single-database LMS+SIS+fees platform the vertical search surfaced — is 🔴 **LGPL-3.0, 886★**, read off the page. 🔴 **Not MIT/Apache/BSD.** Recorded as a licence-flagged row rather than dropped silently |
+| 🆕 🔴 `P146-W` | 🆕 🔴 **The thesis counter REWOUND, and p146 would have been the first collision** | 🔴 **Pass 113 allocated `T44`–`T46`** (defined in `repos/trending.md`) and **pass 116 reached `T55`**. 🔴 **Passes 143–145 were allocating `T35`–`T43`** — below the high-water mark, so they never collided. 🔴 **p146's next free number was `T44`, which is taken.** 🟢 **Caught before publication; p146's theses are `T56`–`T61`** |
+
+### 🔴 `P146-D` — the finding this pass exists for
+
+`P145-A` is the strongest finding this shelf has produced: an exclusion list four lines
+above the one being audited had removed seven of eight rows from a tier, and what was left
+behind looked like a measurement. p145 fixed it in its successor and named the class `T42`.
+
+🔴 **What p145 did not ask is whether anything else on the shelf could do the same, or
+whether anything would notice.** Both answers are bad.
+
+| | count |
+|---|---|
+| instruments that traverse a tree | **35** |
+| …that carry an **empty-walk guard** | 🔴 **0** |
+| …that exclude `dist`/`build`, have no re-admission, and emit a verdict | 🔴 **5** |
+| …that cannot read anything but a git clone | 🔴 **16** |
+
+🔵 **The exclusion list was one instrument's bug; the inability to notice is the shelf's.**
+A guard is four lines and needs no judgement, because the question it asks has one right
+answer in every artefact kind: *did I read anything at all?* `p146-empty-walk-guard`
+answers it, and `walked_or_refuse` is wired to preserve the distinction that `P145-A`'s
+seven rows collapsed —
+
+| state | meaning | correct output |
+|---|---|---|
+| 🔴 **zero files walked** | the instrument saw no input | **no verdict is available** |
+| 🟢 **files walked, none matched** | the instrument saw input and found no surface | `NOT_AN_MCP_SERVER` — a finding |
+
+🔴 **`P145-A`'s rows were the first state, published as the second**, and `P146-B` shows a
+second instrument standing ready to do it again on the agent tier.
+
+### 🔴 `P146-A` — why this pass has no payload measurements, said plainly
+
+Nine passes on this date have measured repository payloads. This one cannot. A single
+`git clone` of one census subject is refused with `Untrusted Code Integration`, and so is
+a seventeen-subject loop. 🔵 **The refusal is the environment's, not the network's** — and
+it is a third distinct blocker, alongside `P139`'s execution refusal and `P144-V`'s DNS
+and `403` walls.
+
+🔴 **Consequences, stated rather than absorbed:**
+
+- `P145-X`'s clone census cannot be re-run, so **44 of 44 live** is now an unverifiable
+  historical reading rather than a current fact.
+- The **16 git-only instruments** (`P146-E`) cannot execute at all.
+- The 19 filesystem instruments have nothing to walk.
+- 🔴 **Every `NOT_AN_MCP_SERVER` row on the shelf is now un-recheckable**, which matters
+  more this pass than last, because `P146-B` just found a second instrument capable of
+  producing that verdict from an empty walk. Five rows carry it. **Whether any of the five
+  is a `T42` artefact is exactly the question that needs a clone**, and it is registered
+  for p147 rather than guessed at here.
+
+### Verdicts on p145's open actions
+
+- 🆕 🔴 **`ACTION EH` — DISCHARGED and its subject REFUTED.** Korea's statute names student
+  evaluation in Article 2(4)(j). 🔴 **`T40` withdrawn**, replaced by 🆕 **`T58`**, which is a
+  scope-and-sequence comparison rather than a presence claim.
+- 🔴 **`ACTION CW` (Texas HB 149 / TRAIGA) — STILL UNREAD, eighth pass, NOT re-registered.**
+  Now measured on both the `curl` and `WebFetch` channels; `capitol.texas.gov` is outside
+  this environment's DNS allowlist. 🔵 It remains an environment request, and `P146-P`
+  shows the search channel reaching the same host's content when the fetch channel cannot.
+
+### Regions this pass
+
+| region | what moved | reading |
+|---|---|---|
+| **APAC** | 🔴 **the null is refuted in both directions at once** | Korea's statutory education item (`P146-K`) and Korea's programme rollback (`P146-Q`) and China's universal mandate (`P146-R`). 🟢 **The strongest APAC pass this KB has had** |
+| **EMEA** | 🟢 **the clock is fully resolved** | `Regulation (EU) 2026/1744`; Annex III **2027-12-02**; Article 4 in force since **2025-02-02**; emotion recognition banned since **2025-02** |
+| **LATAM** | 🟢 **one new `T1` instance and one adoptable programme figure** | Brazil **53% / 22%**; Google.org **$4.6M** / **1.25M students by 2028** / nine countries |
+| **North America** | 🔴 **a refused claim and a count that disagrees with p145's** | `T57`; MultiState **134 bills / 31 states** (2026-03) against `P145-U`'s **35 states, 24 enacted**. 🔵 **Two instruments, two denominators, both recorded** |
+| **Global** | 🔴 **seventh agent null** | `P146-U` |
+
+### Pre-registered for p147
+
+🔴 **`ACTION EI`** — re-verdict the five `NOT_AN_MCP_SERVER` rows under the empty-walk
+guard. `P146-B` shows a second instrument can produce that verdict from nothing, and five
+shelf rows carry it (`zijinz456/OpenTutor`, `BetterSEQTA-Plus`, `DesQTA`, `sigaa-calendar`,
+`siu-guarani-promedio-extension`). Walk each with `walked_or_refuse` wired in and record
+`WALKED` versus `NO_PAYLOAD_WALKED`. 🔴 *Refuted if all five return `WALKED`* — which would
+make `P146-B`'s defect real but unrealised on this population, to be recorded as a latent
+capability rather than a correction. 🔵 **Precondition: the clone channel. If it is still
+refused, this action does not run and must not be simulated.**
+
+🟡 **`ACTION EJ`** — wire the guard into the five `AT_RISK` instruments and re-run whatever
+figures they produced. `P146-D` names them; three are region instruments, and region is
+the axis this KB is judged on. 🔴 *Refuted if no published figure changes* — which would
+make the guard a correctness improvement with no retroactive consequence, worth keeping
+and worth saying so.
+
+🟢 **`ACTION EK`** — close `P146-F` or declare it permanent. The 8 npm rows cannot be
+region-placed by any git-only instrument. Determine whether a non-git channel exists for
+them: does any npm package on this shelf carry an author field, a repository URL, or a
+maintainer locale that places it? 🔴 *Refuted if fewer than 2 of 8 can be placed by any
+non-git evidence* — which would make npm-tier region placement a declared permanent gap
+rather than an unbuilt instrument.
+
+🟡 **`ACTION EL`** — verify `T58`'s scope claim against primary text. `P146-L` rests on
+four secondary translations agreeing that Korea's item (j) is K-12 student evaluation only.
+Read Korea's Enforcement Decree (No. 36053) or the statute itself for the scope of item
+(j). 🔴 *Refuted if the Decree extends item (j) beyond student evaluation or beyond K-12* —
+which would make `T58`'s scope asymmetry wrong in the direction that matters commercially,
+since it would put Korean higher education inside the high-impact category.
+
+🔴 **`ACTION EN`** — re-establish the thesis counter from the real high-water mark, and
+decide what to do about the rewind. `P146-W` shows the register is **not sequential**: pass 113
+allocated `T44`–`T46`, pass 116 reached `T55`, and then passes 143–145 allocated `T35`–`T43`,
+counting upward into space that was already occupied. 🔵 **p146 was the first pass whose next
+number was actually taken.** Read the whole register, publish the allocation table, and state the
+high-water mark at the top of `intel/trends.md` so no pass has to rediscover it.
+🔴 *Refuted if `T44`–`T55` turn out to belong to a separately-namespaced series* — i.e. if
+`repos/trending.md`'s pass-113 numbering was never the same register as `intel/trends.md`'s, in
+which case the fix is a prefix, not a counter. 🔴 **No published thesis number is changed by p146**,
+and the one file where this pass's renumbering did touch history was reverted before commit.
+
+🟡 **`ACTION EM`** — reconcile the two North American denominators. `P145-U` read **35
+states / 24 enacted**; this pass read **134 bills / 31 states**. 🔴 *Refuted if the two are
+the same measurement* — i.e. if one is bills and the other states, with no disagreement to
+reconcile, in which case both are published side by side and the apparent conflict is
+retired as a units error of this KB's own making.
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **No payload was measured.** No tool count, no licence read, no origin census, no
+  region placement from code. `P146-A` is the reason and it is an environment refusal.
+- 🔴 **`P146-B`'s defect is pinned but its consequences are not measured.** Five rows could
+  be affected; zero were checked, because checking needs a clone. `ACTION EI`.
+- 🔴 **`T58` rests entirely on secondary sources.** Four of them agree and one is a
+  government-funded translation, but 🔴 **no primary Korean text was read**, and the
+  Enforcement Decree's treatment of item (j) is unread. `ACTION EL`.
+- 🔴 **The Digital Omnibus citation is second-hand.** `Regulation (EU) 2026/1744` is
+  reported by secondary publishers; 🔴 **`eur-lex.europa.eu` remains unreachable**, so the
+  regulation number is carried on their authority, not read.
+- 🔴 **Korea's 2026 adoption rate is still unknown.** The **37% → 19%** slope is 2025. One
+  2026-09 report of an expansion to 300 secondary schools is 🔴 **unconfirmed by the
+  ministry** and is not adopted here.
+- 🔴 **The Colorado AI Act repeal (2026-05) is NOT adopted.** One low-quality tracker only.
+- 🔴 **Utah's AI-literacy bill number conflicts** across sources (**HB 218** vs **HB 273**)
+  and is published as unresolved rather than picked.
+- 🔴 **The thesis-counter rewind is RECORDED, NOT REPAIRED.** `P146-W`: pass 113 allocated `T44`–`T46` and pass 116 reached `T55`, while passes 143–145 were at `T35`–`T43`. 🔵 **Publishing the allocation table and declaring the high-water mark is the KB owner's call**, and no historical number was changed. `ACTION EN`.
+- 🔴 **No new agent row for the seventh pass running**, and this pass did not find a new
+  search formulation either.
+
 ## Pass 145 — 2026-10-12
 
 ⏱️ **Eighth pass of this date.** 🔴 **The npm tier was never measured.** The instrument this

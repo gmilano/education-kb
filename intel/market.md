@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 146 — 2026-10-12
+
+🔴 **The APAC entry on this page was a declared null one pass ago. It is now the
+best-evidenced region on it** — and the evidence points in three directions at once.
+🟢 **The EU clock is fully resolved and citable.** 🔴 **A North American claim was refused
+before publication**, and the refusal is a finding about this page's sources.
+
+🔵 **Regional detail is filed under the canonical `## Opportunities by region` block
+below.** This section records what MOVED and what was refused.
+
+### 🆕 🔴 APAC — the null is refuted, and the region splits three ways
+
+| country | figure | date | reading |
+|---|---|---|---|
+| **South Korea** | AI Basic Act **Art. 2(4)(j)** names **student evaluation** as high-impact | in force **2026-01-22** | 🔴 **the only statutory education item in the region** |
+| **South Korea** | penalties after an MSIT grace period of **at least one year** | ≈ **2027-01** | 🔴 **eleven months before the EU's Annex III date** |
+| **South Korea** | AI digital textbooks **stripped of textbook status** | **2025-08-04** | 🔴 **a national rollback — the first this page has recorded** |
+| **South Korea** | adoption **37% of classes → 19%**; schools **~4 190 → 2 095** | within **2025** | 🔴 **the slope is negative** |
+| **China** | AI a **compulsory subject from age 6** | reported **2025-09** | 🟢 **the only universal mandate on this page** |
+| **Japan** | innovation-first, **no categorical prohibitions** | — | 🔵 **the lightest-touch major APAC market** |
+| **India** | 🔴 **no binding cross-sector AI law**; obligations run through data protection | — | 🔵 **a privacy engagement, not a compliance one** |
+
+🔵 **Why this matters more than a market size would.** `P145-W` recorded an explicit APAC
+null and observed that *"the region with the clearest statutes has the weakest adoption
+data."* 🟢 **Both halves are now answered, and the second answer is the surprise**: the
+adoption data exists, it is Korean, and 🔴 **it is a decline caused by the withdrawal of
+the statute that funded it** (`T56`).
+
+🔴 **Still missing, and named rather than left blank:** no 2026 Korean adoption rate, no
+Japanese or Indian classroom-adoption figure, no APAC market size from a primary
+publisher. The **35.3% APAC CAGR** in circulation is vendor research and is 🔴 **not
+adopted**.
+
+### 🔴 North America — a claim refused, and two denominators that disagree
+
+🔴 **Refused before publication.** *"Texas HB 2400 bans AI from providing direct classroom
+instruction"* reached this page as current law. It is a **2025** bill from the 89th
+Legislature — proposed Education Code **§28.0028**, *"prohibited use of artificial
+intelligence technology"*, barring districts from using AI to instruct students or to
+replace or supplement a teacher's role. 🔴 **Its last recorded action is a 2025-03-14
+referral to House Public Education**, and a 2026-09 Texas report describes it in the past
+tense. 🔴 **One tracker labels it "Became Law" while its own last-action field contradicts
+that.** 🆕 `T57`.
+
+🔵 **Why it nearly landed.** A prohibition on AI-delivered instruction would invalidate the
+single most common pattern on this shelf. 🟢 **It does not exist** — but a page that quotes
+trackers by their status label would have published it.
+
+| NA reading | source class | figure |
+|---|---|---|
+| bills introduced this session | legislative tracker, **2026-03** | **134 bills in 31 states** |
+| states introducing since 2025 | state policy brief (`P145-U`) | **35 states + DC + PR** |
+| states **enacted** | same | 🟢 **24** |
+| departments publishing guidance | teacher-facing tracker | **35+ states** |
+
+🔴 **The two denominators are not reconciled** — one counts bills, one counts states, and
+this page has quoted both as though they measured the same thing. `ACTION EM`.
+
+🟢 **Named instruments worth quoting, with their subject rather than their status:**
+**Oklahoma SB 1734** (human-in-the-loop; bars AI as the main basis for grading or
+discipline), **California AB 1159** (bars student data from training), **Idaho SB 1227**
+(privacy rules for school AI tools), **Maryland SB 720** (state guidance, district AI
+coordinators), **Alabama HB 329** (AI instruction required for graduation). 🔴 **Utah's
+AI-literacy bill is cited as HB 218 and HB 273 by different sources and is published
+unresolved.** 🔴 **The Colorado AI Act repeal (2026-05) is NOT adopted** — one low-quality
+tracker only.
+
+### 🟢 EMEA — the clock is resolved, and two obligations are already live
+
+| instrument | date | status |
+|---|---|---|
+| Digital Omnibus on AI — EP vote | **2026-06-16** | 🟢 passed |
+| Council final adoption | **2026-06-29** | 🟢 adopted |
+| signed / in force | **2026-07-08** / **2026-07-27** | 🟢 **Regulation (EU) 2026/1744** |
+| AI Act generally applicable | **2026-08-02** | 🟢 in force |
+| 🔴 **Annex III high-risk, incl. education** | 🔴 **2027-12-02** | deferred from 2026-08 |
+| Annex I (product-safety route) | **2028-08-02** | deferred |
+| 🟢 **Article 4 AI-literacy duty** | 🟢 **2025-02-02** | 🟢 **in force, NOT deferred** |
+| 🟢 **emotion recognition in education** | 🟢 **2025-02** | 🟢 **prohibited** |
+
+🔵 **The sales consequence.** The EMEA conversation is not "a 2027 deadline". 🟢 **Two
+obligations are live today** — an AI-literacy duty on every deployer and an outright ban on
+affect inference in classrooms — 🔴 **and this KB holds two shelf rows in the
+affect-detection class** (`T43`, carried from p145). Public institutions additionally face
+an **Article 27 Fundamental Rights Impact Assessment**.
+
+🔴 **`eur-lex.europa.eu` is still unreachable from this environment**, so the regulation
+number is carried on secondary authority and marked as such.
+
+### 🟢 LATAM — a `T1` instance in K-12, and a programme figure worth quoting
+
+| figure | publisher | reading |
+|---|---|---|
+| 🔴 **53% of school administrators use AI / 22% of schools hold guidelines** | UNESCO-reported, Brazil | 🟢 **`T1`'s first K-12 instance** |
+| **Google.org $4.6M**, delivered by the **Raspberry Pi Foundation** | named donor + implementer | 🟢 **24 000 educators, 1.25M students by 2028, nine countries** |
+| 56% of Brazilian secondary teachers used AI (2024), OECD **36%** | TALIS via UNESCO | 🟢 **`T41`, carried** |
+| LATAM EdTech concentration is **instructional support**, not consumer tutoring | sector list, **2026** | 🔵 **sells to institutions, not parents** |
+| named players: **Teachy** (BR, lesson prep), **Elevify** (BR, **US$1.35M** seed), **Ginia** (MX, employability) | sector reporting | 🟢 **three placed companies** |
+| UNESCO **Observatory on AI in Education for LAC** held its first member meeting | UNESCO | 🔵 **a convening body to be in the room with** |
+
+🟢 **Why the Google.org figure is adoptable where `P145-V`'s was not.** p145 refused *"Rest
+of Latin America $18.2M → $36M"* because it was a publisher's residual — a LATAM total
+minus Brazil and Mexico, not a market size. 🟢 **This figure is a programme**: named donor,
+named implementer, named horizon, named country count. 🔵 **It bounds a budget, not a
+market, and it is honest about which.**
+
 # Education — market map and opportunities
 
 ## Pass 145 — 2026-10-12
@@ -547,6 +653,23 @@ nor audit trail. **The sellable work is governance, integration and evidence —
 
 ### North America
 
+#### 🔴 p146 — a claim refused, and two denominators that disagree
+
+🔴 **`T57`: "Texas HB 2400 bans AI from providing direct classroom instruction" is NOT
+law.** A 2025 bill (89R), proposed Education Code **§28.0028**; last recorded action
+**2025-03-14**, referral to House Public Education. 🔴 **One tracker labels it
+"Became Law" against its own last-action field.** 🔵 **Had this page quoted the label, it
+would have published a prohibition on the most common pattern on this shelf.**
+
+🔴 **Two counts, not reconciled**: **134 bills in 31 states** (tracker, 2026-03) against
+**35 states + DC + PR introducing, 24 enacted** (`P145-U`). `ACTION EM`.
+
+🟢 **Quotable instruments, by subject**: **Oklahoma SB 1734** (bars AI as the main basis
+for grading or discipline), **California AB 1159** (no student data in training),
+**Idaho SB 1227** (school AI privacy), **Maryland SB 720** (district AI coordinators),
+**Alabama HB 329** (AI instruction for graduation). 🔴 **Utah: HB 218 vs HB 273,
+unresolved.** 🔴 **Colorado repeal (2026-05) not adopted** — single weak source.
+
 **p145:** 🟢 **35 states + DC + Puerto Rico introduced AI education legislation since 2025; 24 states enacted; 35+ published guidance.** 🔵 **Introduced-to-enacted is 24 of 35 — in this region the deadline is the trigger.** 🆕 **Arizona HB 4040 would reach public universities by statute.** See [Pass 145](#pass-145--2026-10-12).
 
 #### 🆕 p144 — the first state DEADLINE has passed, and the buyer now has an obligation rather than a plan
@@ -991,6 +1114,22 @@ written down so the K-12 richness above is not mistaken for regional completenes
 
 ### EMEA
 
+#### 🟢 p146 — the clock is RESOLVED, and two obligations are already live
+
+🟢 **`T3` resolved.** Digital Omnibus on AI: EP **2026-06-16** → Council **2026-06-29** →
+signed **2026-07-08** → in force **2026-07-27**, as **Regulation (EU) 2026/1744**. 🔴 **Annex
+III, which carries education, moves to 2027-12-02**; Annex I to **2028-08-02**. The AI Act
+became generally applicable **2026-08-02**. 🔴 **`P144-U`'s sixteen-month conflict closes in
+favour of the later date.**
+
+🟢 **The two live duties, which are the actual EMEA conversation today:**
+**Article 4 AI-literacy, in force since 2025-02-02 and NOT deferred**, and the
+**prohibition on emotion recognition in education, in force since 2025-02** (`T43`).
+Public institutions also owe an **Article 27 Fundamental Rights Impact Assessment**.
+
+🔴 **`eur-lex.europa.eu` remains unreachable here**, so the regulation number is carried on
+secondary authority and flagged as such.
+
 **p145:** 🟢 **High-risk education obligations at `2027-12-02` on two independent sources** (Digital Omnibus). 🔴 **The Article 4 AI-literacy duty is now the conflicted item.** 🆕 🟢 **`T43`: emotion-recognition AI in schools prohibited since 2025-02 — undisputed.** 🟢 Germany, ≈**€6.9M**, 8 universities, **2026-01 → 2029-03**. See [Pass 145](#pass-145--2026-10-12).
 
 #### 🆕 p144 — the regime makes admissions screening high-risk, and 90% of institutions have no guidelines to meet it
@@ -1433,6 +1572,30 @@ slugs are now known to be one repository.
 
 ### APAC
 
+#### 🆕 🔴 p146 — `P145-W`'s null is REFUTED, and the region splits three ways
+
+🔴 **This region was a declared null one pass ago.** It now carries the strongest evidence
+on this page, pointing in three directions:
+
+| country | figure | date |
+|---|---|---|
+| **Korea** | AI Basic Act **Art. 2(4)(j)** names **student evaluation** high-impact | in force **2026-01-22** |
+| **Korea** | penalties after ≥1-year MSIT grace | ≈ **2027-01** — 🔴 **before the EU** |
+| **Korea** | AI digital textbooks **stripped of textbook status** and its funding | **2025-08-04** |
+| **Korea** | adoption **37% of classes → 19%**, schools **~4 190 → 2 095** | within **2025** |
+| **China** | AI a **compulsory subject from age 6** | reported **2025-09** |
+| **Japan** | innovation-first, **no categorical prohibitions** | — |
+| **India** | 🔴 **no binding cross-sector AI law** — a privacy engagement | — |
+
+🔵 **`T58`**: Korea's item is **one use case, K-12 only**, against the EU's **four at every
+level** — so 🟢 **Korean higher education sits OUTSIDE the high-impact category** while EU
+higher education is squarely inside Annex III. 🔴 **`T56`**: the same country holds the
+region's only statutory education item *and* its only national rollback.
+
+🔴 **Named gaps**: no 2026 Korean adoption rate; no Japanese or Indian classroom figure; no
+APAC market size from a primary publisher. The **35.3% APAC CAGR** in circulation is vendor
+research and is 🔴 **not adopted**.
+
 **p145:** 🔴 **`T40` CHALLENGED** — one source puts **education inside Korea's high-impact category**; truncated, primary text unreachable, adoption withheld (`ACTION EH`). 🔴 **Explicit null: no classroom-adoption rate, no edtech policy figure, no ministry guidance for Korea, Japan, China or India.** See [Pass 145](#pass-145--2026-10-12).
 
 #### 🆕 p144 — three binding AI statutes are in force, and not one of them is about education
@@ -1868,6 +2031,22 @@ commercial map is not**.
 
 ### LATAM
 
+#### 🟢 p146 — `T1`'s first K-12 instance, and a programme figure that IS quotable
+
+🟢 **Brazil, K-12: 53% of school administrators use AI; 22% of schools hold guidelines.**
+With LAC higher-ed **87% / 26%** (`P144-R`) and EMEA **10% of 450+**, 🟢 **`T1` now holds at
+three levels in three regions** — it is not a LATAM feature and not a higher-ed feature.
+
+🟢 **Google.org $4.6M**, implemented by the **Raspberry Pi Foundation**: **24 000
+educators**, **1.25M students by 2028**, **nine countries** including Brazil and Mexico.
+🔵 **Adoptable where `P145-V`'s residual was not** — named donor, named implementer, named
+horizon. 🔴 **It bounds a budget, not a market, and says so.**
+
+🟢 **Placed players**: **Teachy** (BR, lesson preparation), **Elevify** (BR, **US$1.35M**
+seed), **Ginia** (MX, employability). 🔵 **Sector concentration is instructional support,
+not consumer tutoring** — the buyer is the institution. UNESCO's **Observatory on AI in
+Education for LAC** has convened its member institutions for the first time.
+
 **p145:** 🟢 **`T41` corroborated by a second publisher** — Tec de Monterrey observatory: student **86% → 92%**, teacher **61% → 79%**; 🔴 **65% of students fear superficial learning**. 🔴 **The "$18.2M Rest of Latin America" figure is a residual category and must not be quoted as LATAM.** 🔴 **Three of the eight unlicensed connector rows are on this region's system-of-record tier.** See [Pass 145](#pass-145--2026-10-12).
 
 #### 🆕 🟢 p144 — the governance gap has a number now, from a named primary publisher
@@ -1953,7 +2132,7 @@ hook interface that third-party Open edX customisation runs through is maintaine
 Colombian company. 🔵 **For a LATAM Open edX engagement that is a partner or a competitor, and
 either way it is not a US vendor.**
 
-### 🔴 The published LATAM market figure, and why this page refuses to quote it as LATAM
+#### 🔴 The published LATAM market figure, and why this page refuses to quote it as LATAM
 
 🔴 **Publisher A's LATAM line is labelled "Rest of Latin America": $18.2M (2024) → $36M
 (2029).** That is a **residual** category — this publisher breaks out the large national
@@ -1966,7 +2145,7 @@ page does not know the ceiling.** 🔵 **An unqualified $18.2M on a LATAM engage
 be the most damaging single number this KB could carry**, because it is sourced, specific and
 wrong by construction.
 
-### 🟢 And the supply side is now the strongest part of this region's entry
+#### 🟢 And the supply side is now the strongest part of this region's entry
 
 **13 of 19** American-ambiguous connector rows are LATAM (Brazil 9, Argentina 3, Peru 1), over
 three national platforms — **SIGAA**, **SUAP**, **SIU-Guaraní** — naming 15 real institutional
@@ -2478,6 +2657,22 @@ history-rewritten copies**, which means the layer is **thinner than its row coun
 `agents/top.md`'s *"no standards-native row originates in LATAM"* survives a sixth pass.
 
 ### Global
+
+#### 🔴 p146 — the seventh agent null, and a licence rejection
+
+🔴 **`T10` confirmed a seventh time.** Six queries, two global and four regional; every
+education-specific hit is a **course**, not an agent — `microsoft/ai-edu`,
+`ML-For-Beginners`, `rohitg00/ai-engineering-from-scratch`, `AIcademy` (**309★**).
+🟢 **Not re-registered.**
+
+🔴 **`openeducat/openeducat_erp`** — the single-database LMS+SIS+fees platform the vertical
+search surfaced, and the closest thing in education to Odoo's position in ERP — is
+**LGPL-3.0, 886★**, read off its own page. 🔴 **Not MIT/Apache/BSD**, so it fails this KB's
+build bar and is carried as a licence-flagged row rather than dropped silently.
+
+🔴 **Market sizes remain unusable.** 2026 estimates in circulation span **$7.5B–$10.6B**
+with 2030s projections from **$57.2B to $79.6B** and CAGRs from **25% to 45%** — vendor
+research, divergent methodologies, 🔴 **none adopted**.
 
 **p145:** 🔴 **`T30` withdrawn outright** — its npm figure and its other-tier figures came from two instruments measuring two different properties. 🆕 **`T42` adopted: a measurement's population filter is part of its instrument.** 🔴 **Supply-side: 9 of 52 connector rows carry no licence at all, 18 of 52 ship no grant, and 0 of 8 npm packages ship a licence file.** See [Pass 145](#pass-145--2026-10-12).
 

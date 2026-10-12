@@ -1,0 +1,22 @@
+claim_id	region	claim	figure	date	source_class	sources	verdict
+P146-K	APAC	Korea AI Basic Act Art.2(4)(j) names student evaluation as a high-impact domain	1 of 10 listed domains; cross-refs Art.9(1) Framework Act on Education	in force 2026-01-22	statute translations + policy analysis	4 independent (CSET translation, ECIPE, AI Basic Act Explorer, data-governance publisher)	ADOPTED - T40 refuted and withdrawn
+P146-L	APAC	Korea education item is narrower than EU Annex III	Korea 1 use case K-12 only; EU 4 use cases all levels	2026-10-12 reading	secondary translations	same 4	ADOPTED as T58 - primary text UNREAD (ACTION EL)
+P146-M	APAC	Korea education obligations bite before the EU	penalties ~2027-01 (>=1yr MSIT grace) vs EU 2027-12-02	2026-01-22 + grace	regulatory analysis	2	ADOPTED - reverses this KB's prior sequencing
+P146-N	EMEA	Digital Omnibus on AI adopted and in force	EP 2026-06-16; Council 2026-06-29; signed 2026-07-08; in force 2026-07-27; Reg (EU) 2026/1744	2026-07-27	law-firm + compliance publishers	4+	ADOPTED - T3 RESOLVED; eur-lex unreachable, cite is second-hand
+P146-N2	EMEA	Annex III high-risk education deadline	2027-12-02 (Annex I 2028-08-02)	2027-12-02	same	4+	ADOPTED - P144-U conflict closed toward later date
+P146-O	EMEA	Article 4 AI-literacy duty in force and NOT deferred	since 2025-02-02	2025-02-02	2 publishers	2	ADOPTED - resolves P145-Q conflicted item
+P146-O2	EMEA	Emotion recognition in education prohibited	in force since 2025-02	2025-02	3 publishers across 2 passes	3	CORROBORATED 3rd time - T43 holds
+P146-P	North America	Texas HB 2400 bans AI classroom instruction	proposed Education Code 28.0028	last action 2025-03-14	bill text + trackers + news	4	REFUSED - NOT LAW; died in committee. T57 adopted
+P146-P2	North America	NA legislative volume	134 bills / 31 states	2026-03	legislative tracker	1	RECORDED - conflicts with P145-U's 35 states/24 enacted (ACTION EM)
+P146-Q	APAC	Korea AI digital textbooks stripped of statutory textbook status	amendment 2025-08-04; funding lost with status	2025-08-04	news + legal + privacy press	4	ADOPTED as T56 - refutes P145-W's APAC null
+P146-Q2	APAC	Korea AI textbook adoption decline	37% of classes H1-2025 -> 19% H2-2025; schools ~4190 -> 2095	within 2025	policy analysis citing Korea Herald	2	ADOPTED - 2026 rate still UNKNOWN
+P146-R	APAC	China AI compulsory subject from age 6	nationwide, all students	reported 2025-09	regional policy survey	1	RECORDED - single source, not corroborated
+P146-S	LATAM	Brazil K-12 governance gap	53% of administrators use AI; 22% of schools hold guidelines	2026 reporting	UNESCO-reported	1	ADOPTED - T1's first K-12 instance
+P146-T	LATAM	Google.org AI education programme	USD 4.6M; Raspberry Pi Foundation; 24000 educators; 1.25M students by 2028; 9 countries	2026	edtech press + donor	2	ADOPTED - a programme, not a market size
+P146-U	Global	Seventh consecutive null for new education-domain agent rows	6 queries (2 global, 4 regional); all hits are courses	2026-10-12	search channel	6 queries	NULL DECLARED - T10 confirmed 7th time
+P146-V	Global	OpenEduCat licence	LGPL-3.0, 886 stars	2026-10-12	repository page via WebFetch	1 (primary page)	ADOPTED - fails MIT/Apache/BSD bar
+P146-V2	Global	Major LMS layer licences	sakai ECL-2.0 1.2k; edx-platform AGPL-3.0 8.2k; canvas-lms AGPL-3.0 6.9k; moodle GPL-3.0 6.2k; chamilo GPL-3.0 1.0k; openeducat LGPL-3.0 886; ILIAS GPL-3.0 505	2026-10-12	repository pages via WebFetch	7 (primary pages)	ADOPTED - 6 of 7 copyleft; Sakai only permissive
+P146-V3	Global	ECL-2.0 is Apache-2.0 with narrowed s3 patent grant	OSI-approved; copyleft: no; GPLv3-compatible, not GPLv2	2026-10-12	SPDX + choosealicense + EU vocabulary + Wikipedia	4	ADOPTED - licence-text diff NOT read
+P146-A	Global	Third-party git clone refused in this environment	Untrusted Code Integration; 1 of 1 single, 1 of 1 bulk	2026-10-12	environment	direct observation	BLOCKER - inverts P145-X same date
+P146-I	Global	WebFetch reads github.com repository pages	7 of 7 attempted pages returned licence and stars	2026-10-12	environment	direct observation	CHANNEL OPEN - never tested before p146
+P146-J	North America	capitol.texas.gov unreachable on both channels	ENOTFOUND (WebFetch); 000/403 (curl)	2026-10-12	environment	direct observation	ACTION CW unread 8th pass - not re-registered

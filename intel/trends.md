@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-12
 ---
 
+## Pass 146 — 2026-10-12
+
+🔴 **`T40` is WITHDRAWN and `T3` is RESOLVED** — the two longest-running open questions on
+this register close in the same pass, in opposite directions. 🆕 **`T56`, `T57` and `T58`
+adopted.** 🔴 **`T42` is promoted from an incident to a shelf property**, and 🔴 **`P145-W`'s
+APAC null is refuted by figures that point down rather than up.**
+
+| thesis | movement this pass |
+|---|---|
+| 🔴 **`T40` — APAC's compliance surface is horizontal, EMEA's is vertical** | 🔴 **WITHDRAWN.** Korea's AI Basic Act **Article 2(4)(j)** names **student evaluation**, cross-referencing Article 9(1) of the Framework Act on Education. 🔴 **"Three binding statutes and not one is about education" is false** — one of the three names it in a numbered item |
+| 🆕 🟢 **`T58` — the EU and Korea both regulate education; they differ in SCOPE and SEQUENCE** | 🆕 **ADOPTED**, replacing `T40`. **Korea: one use case, K-12 only.** **EU: four use cases, every level** (access/admissions, learning-outcome assessment, level assignment, exam monitoring). 🔴 **And Korea bites first** — in force **2026-01-22** + ~1-year MSIT grace ≈ **2027-01**, against Annex III at **2027-12-02** |
+| 🟢 **`T3` — the EU high-risk clock is a sales window** | 🟢 **RESOLVED.** Digital Omnibus on AI: EP **2026-06-16** → Council **2026-06-29** → signed **2026-07-08** → in force **2026-07-27**, as **Regulation (EU) 2026/1744**. Annex III **2027-12-02**, Annex I **2028-08-02**. 🔴 **`P144-U`'s sixteen-month conflict closes in favour of the later date** |
+| 🟢 **`T43` — one prohibition is already in force and nobody disputes it** | 🟢 **CORROBORATED a third time**, and now with its companion: 🟢 **the Article 4 AI-literacy duty has applied since 2025-02-02 and the Omnibus does not defer it.** 🔵 **Two live obligations and one deferred classification — the EMEA conversation is not "2027"** |
+| 🆕 🔴 **`T56` — adoption and policy can point opposite ways in one country, and policy moves the budget** | 🆕 **ADOPTED.** Korea holds APAC's only statutory education item **and** withdrew its flagship classroom programme: amendment **2025-08-04** removed AI digital textbooks from the legal definition of a textbook, taking the attached funding with it. Adoption **37% of classes → 19%** inside 2025; schools **~4 190 → 2 095** |
+| 🆕 🔴 **`T57` — a legislative tracker's status field is not a legal fact** | 🆕 **ADOPTED.** *"Texas HB 2400 bans AI from providing direct classroom instruction"* arrived as current law. 🔴 **Last recorded action: 2025-03-14 referral to committee.** One tracker says **"Became Law"** while its own last-action field says otherwise. 🔵 **Read the action, never the label** |
+| 🔴 **`T42` — a measurement's population filter is part of its instrument** | 🔴 **PROMOTED from incident to shelf property.** **35** traversing instruments, 🔴 **0 with an empty-walk guard**, 🔴 **5** excluding `dist`/`build` with no re-admission while emitting a verdict. 🆕 **A second instrument pinned carrying it** (`p141/surface_gate.py`) |
+| 🆕 🔴 **`T59` — an instrument's TRAVERSAL CHANNEL is part of its reach** | 🆕 **ADOPTED.** 🔴 **16 of 35 instruments read only `git ls-tree`/`ls-files`**, so a clone is a precondition. 🔵 **The whole region-placement lane is in that set, so the 8 npm rows are structurally unplaceable on this KB's primary axis** — and no pass had said so |
+| 🟢 **`T1` — the governance gap is the market** | 🟢 **STRENGTHENED to three levels in three regions.** 🆕 Brazil K-12: **53% of administrators using AI against 22% of schools with guidelines**, joining LAC higher-ed **87% / 26%** (`P144-R`) and EMEA **10% of 450+**. 🔵 **The gap is not a LATAM feature and not a higher-education feature** |
+| 🟢 **`T41` — LATAM adoption leads the OECD** | 🟢 **HELD, not re-measured.** No new teacher-adoption figure this pass; the Brazil administrator figure is a different instrument and is recorded as `T1`, not as `T41` |
+| 🔴 **`T10` — the agent search channel is saturated for this domain** | 🔴 **CONFIRMED a seventh time.** Six queries, and every education-specific hit is a course: `microsoft/ai-edu`, `ML-For-Beginners`, `rohitg00/ai-engineering-from-scratch`, `AIcademy` (**309★**). 🟢 **Not re-registered** |
+| 🆕 🔴 **`T60` — the channel map is not stable across passes, so it must be re-measured, not assumed** | 🆕 **ADOPTED.** 🔴 **p145's clone channel is refused in p146**, same date. 🟢 **And `WebFetch` on `github.com` works, which p145 never tested.** 🔵 **Every "unreachable" in this KB is dated, not permanent — and so is every "reachable"** |
+| 🆕 🔴 **`T61` — a register's NUMBER SPACE is part of its data** | 🆕 **ADOPTED.** 🔴 **This register is not sequential.** Pass 113 allocated `T44`–`T46`; pass 116 reached `T55`; 🔴 **passes 143–145 then allocated `T35`–`T43`**, counting up into occupied space. 🔵 **p146 was the first pass whose next free number was already taken** — its theses are `T56`–`T61`. 🔴 **Not repaired — `ACTION EN`** |
+
+### 🆕 🟢 `T58` — what replaces `T40`, and why the replacement is more useful
+
+`T40` was adopted in p144 on a real observation: Korea, Vietnam and Taiwan all brought
+horizontal AI statutes into force, and none of them is an education law. 🟢 **That framing
+survives for Vietnam and Taiwan.** 🔴 **It fails for Korea**, and Korea is the one that
+matters, because its statute reaches education through a numbered item rather than through
+general applicability.
+
+| | EU (Annex III, as amended) | Korea (AI Basic Act, Art. 2(4)(j)) |
+|---|---|---|
+| **named education use cases** | **4** — access/admission, learning-outcome assessment, level assignment, exam monitoring | 🔴 **1** — student evaluation |
+| **levels covered** | 🔴 **all, including higher and vocational** | 🟢 **early childhood, elementary, secondary only** |
+| **obligations bite** | **2027-12-02** | **2026-01-22**, penalties after ~1-year MSIT grace ≈ 🔴 **2027-01** |
+| **route in** | listed high-risk category | listed high-impact domain **+** a significance test |
+| **escape hatch** | conformity route | 🟢 **a formal MSIT determination can be requested** |
+
+🔵 **The commercial reading, and it reverses this KB's prior sequencing.** A Korean K-12
+grading or assessment engagement is inside a statutory high-impact category **now**, with
+penalties roughly eleven months before the EU's deadline. 🟢 **A Korean higher-education
+engagement is outside item (j) entirely** — which is the opposite of the EU, where higher
+education is squarely inside Annex III. 🔴 **"APAC is lighter-touch than EMEA" is wrong at
+the K-12 layer and right at the university layer**, and it was published as a single claim.
+
+🔴 **Both halves of the asymmetry rest on secondary translations.** `ACTION EL` sends the
+scope of item (j) to primary text, because if the Enforcement Decree widens it, the
+commercially load-bearing half of `T58` is the half that breaks.
+
+### 🆕 🔴 `T56` — the reversal channel, and why this KB had not looked for it
+
+Every adoption figure this register holds measures uptake. 🔴 **None measured withdrawal**,
+and Korea supplies the first instance: a national programme that ran, was funded, was
+measured, and was then removed from the statute that funded it.
+
+| stage | date | figure |
+|---|---|---|
+| programme running | 2025 H1 | **37%** of classes, **~4 190** schools |
+| statutory status removed | 🔴 **2025-08-04** | textbook definition narrowed to print and e-books |
+| funding consequence | following | 🔴 **subscription support lost with the status** |
+| programme running | 2025 H2 | 🔴 **19%** of classes, **2 095** schools |
+| delivery model | after | voluntary, school by school |
+
+🔵 **Why it belongs on a trends register rather than in the news.** `T1` says the market is
+the adoption-governance gap. `T56` says the gap can close from the wrong side: not
+governance catching up to adoption, but adoption collapsing when the governance that
+funded it is withdrawn. 🔴 **A pipeline built on a national mandate carries that risk and a
+pipeline built on institutional demand does not** — and this KB had no way to express the
+difference before this pass.
+
 # Education — current trends
 
 ## Pass 145 — 2026-10-12

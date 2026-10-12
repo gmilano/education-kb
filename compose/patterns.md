@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-12
 ---
 
+## 🆕 🟢 `P30` — the all-permissive education stack, end to end *(new, p146 — all regions)*
+
+🟢 **This KB can now name a complete education stack with no copyleft anywhere in it.** It
+could not before p146, because the licence of the platform layer had never been read
+(`P146-V`) and 🔴 **the platform everyone reaches for first is the wrong one for this**:
+Open edX and Canvas are both **AGPL-3.0**, whose network clause triggers on exactly the
+hosted multi-tenant shape they are deployed in.
+
+| layer | repo | licence | why this row |
+|---|---|---|---|
+| **LMS core** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 🟢 **Apache-2.0 with a narrowed §3 patent grant. OSI-approved, copyleft: no.** The only major LMS you may fork and modify without reciprocal obligation |
+| **tool launch** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | LTI 1.3 Advantage tool provider — OIDC launch, Deep Linking, AGS grade passback, NRPS. **373★**, pushed **2026-10-06** |
+| **launch (Python)** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** | Where the agent framework is Python. 🔴 **Dormant since 2024-08-18 — pin it and expect to maintain it** |
+| **rostering** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** | OneRoster 1.2 API over an Ed-Fi ODS, **from the standards body's own org** |
+| **rostering SDK** | [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** | 🟢 **Drops even the attribution requirement.** 🟡 Single-individual holder on an org-named repo |
+| **conformance proof** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** | 🟢 **How you prove the rostering connector is correct, maintained by Google's own org** |
+| **statistics / benchmarks** | [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | 🟢 **MIT** | UNESCO UIS + OECD EAG over SDMX, no API key. **10 tools, all `readOnlyHint: true`**, `tools.lock.json` SHA-256 pin |
+| **instrument hygiene** | `compose/code/p146-empty-walk-guard` | — | 🟢 **In CI, so no verdict is ever formed over an empty file set** (`T42`) |
+
+### How to wire it
+
+1. **Sakai is the system of record.** Deploy it as-is first; do not fork on day one. 🟢 **The
+   ECL-2.0 escape hatch is worth having and not worth using early.**
+2. **The agent is a separate service, launched over LTI 1.3** via `ltijs`. The institution
+   issues a client ID and can revoke it. 🔴 **No stored student password, no scraping** —
+   this is the answer to the credential blocker this KB has carried since p135.
+3. **Rostering comes from `edfi-oneroster`, not from the agent.** The agent asks
+   OneRoster who is in the class; it never reads the SIS directly.
+4. **Grades go back over AGS**, which `ltijs` implements — so the write surface is the
+   standard's, not yours. 🔵 **Pair this with `P24`'s draft-first gate: write a draft, never
+   a final grade** (and see `P29`, because in two jurisdictions this is now the regulated
+   act).
+5. **Prove it with the Google conformance suite** before the client's security review asks.
+6. **`global-education-mcp` supplies benchmark context** — read-only, annotation-complete.
+   🔴 **Its upstream hosts (`api.uis.unesco.org`, `sdmx.oecd.org`) are blocked in this
+   environment**, so it is unexercised here; the licence and annotations are read, the
+   runtime is not.
+
+🔴 **What this pattern does NOT claim.** No row above was re-measured this pass — the clone
+channel is refused (`P146-A`) — so licences are **page and payload readings carried from
+p134–p145**, not fresh `LICENSE`-file reads. 🔴 **`T21`/`P145-I` is this KB's own evidence
+that a declaration and a shipped grant diverge**, and the Sakai row in particular is a
+badge reading only. 🔵 **Verify the three load-bearing rows (`sakai`, `ltijs`,
+`edfi-oneroster`) against their payloads before a contract depends on them.**
+
+---
+
+## 🆕 🔴 `P29` — the jurisdiction gate: build against the clock that bites FIRST *(new, p146 — all regions)*
+
+🔴 **This KB had the regulatory sequence backwards for two passes.** `T40` said APAC's
+compliance surface was horizontal and not about education. 🔴 **Korea's AI Basic Act names
+student evaluation in Article 2(4)(j)**, it has been in force since **2026-01-22**, and
+with MSIT's grace period its penalties bite around **2027-01** — 🔴 **roughly eleven months
+BEFORE the EU's Annex III date of 2027-12-02.**
+
+### Step 1 — place the engagement, then read the clock, in this order
+
+🔵 **The region is the field; the jurisdiction is its own column** — a cell reading
+`APAC — Korea` is not a region cell, and this KB's own `P240` gate enforces that.
+
+| region | jurisdiction | instrument | education in scope? | bites |
+|---|---|---|---|---|
+| **APAC** | Korea, K-12 | AI Basic Act, Art. 2(4)(j) | 🔴 **YES — student evaluation** (early childhood, elementary, secondary) | **2026-01-22**, penalties ≈ 🔴 **2027-01** |
+| **APAC** | Korea, higher ed | same | 🟢 **NO — outside item (j)** | — |
+| **APAC** | Japan | innovation-first, no categorical prohibitions | 🟢 no vertical item | — |
+| **APAC** | India | 🔴 no binding cross-sector AI law | via data protection | 🔵 **a privacy engagement** |
+| **EMEA** | EU | AI Act Annex III, as amended by **Reg. (EU) 2026/1744** | 🔴 **YES — 4 use cases, EVERY level** | 🔴 **2027-12-02** |
+| **EMEA** | EU | 🔴 **emotion recognition in education** | 🔴 **PROHIBITED OUTRIGHT** | 🔴 **in force since 2025-02** |
+| **EMEA** | EU | Article 4 AI-literacy duty | applies to deployers | 🟢 **in force since 2025-02-02** |
+| **EMEA** | EU, public institutions | Article 27 FRIA | impact assessment | with Annex III |
+| **North America** | US states | state law, **no federal instrument** | varies by state | 🔴 **read the bill's LAST ACTION, not a tracker's label** (`T57`) |
+| **LATAM** | region-wide | 🔴 **no national AI-in-education regulation found** | — | 🔵 **the absence of a deadline is the sales trigger** (`T1`) |
+
+### Step 2 — check the build against the four regulated use cases, by name
+
+🔵 **The EU's Annex III education entries are not abstract — they are the four things an
+education agent is usually built to do:**
+
+| use case | regulated in EU | regulated in Korea |
+|---|---|---|
+| **admission / access to a programme** | 🔴 **yes** | 🟢 no |
+| **assessment of learning outcomes** | 🔴 **yes** | 🔴 **yes (K-12)** |
+| **assignment of education level** | 🔴 **yes** | 🟢 no |
+| **monitoring/proctoring during tests** | 🔴 **yes** | 🟢 no |
+| tutoring, practice, content generation, lesson prep | 🟢 **none of the above** | 🟢 none |
+
+🟢 **The gate's output is a scope decision, and it is usually cheap.** A tutoring, practice
+or lesson-preparation agent touches none of the four. 🔴 **A grading agent touches one in
+both jurisdictions, and a proctoring agent touches a prohibited class in the EU if it
+infers affect at all** — and this KB holds two shelf rows in the affect-detection class.
+
+### Step 3 — make the deadline the proposal, not the risk section
+
+🔵 **`T1` says the market is the adoption-governance gap, and the gap has a different shape
+in each region** — so the same stack is sold three ways:
+
+- **North America** — 🟢 **the deadline is the trigger.** 24 of 35 states that introduced
+  AI-education legislation have enacted something; a district with a compliance date needs
+  an audit trail. 🔴 **Verify the instrument's last action before you quote it.**
+- **EMEA** — 🟢 **two duties are already live.** Article 4 AI-literacy and the emotion-
+  recognition ban are in force today; Annex III is 14 months out. 🔵 **Sell readiness for
+  the live ones, preparation for the deferred one.**
+- **APAC** — 🔴 **the K-12 layer is regulated NOW in Korea and the university layer is
+  not.** 🔵 **The inverse of the EU, and the one place this KB's prior framing would have
+  mispriced the work.**
+- **LATAM** — 🔴 **no deadline exists.** Brazil: **53% of administrators using AI, 22% of
+  schools with guidelines.** 🟢 **The governance artefact IS the deliverable** — the policy,
+  the audit trail and the staff training, not only the agent.
+
+### 🔴 What this gate cannot do
+
+- 🔴 **It is built on secondary sources.** `eur-lex.europa.eu` and `capitol.texas.gov` are
+  unreachable from this environment, and no primary Korean text was read. 🔵 **`Reg. (EU)
+  2026/1744` and the scope of Korea's item (j) are both carried on secondary authority.**
+  `ACTION EL`.
+- 🔴 **It is not legal advice and the significance test is not mechanical.** Korea's listed
+  domain is necessary, not sufficient: a system qualifies only if it may significantly
+  affect life, safety or fundamental rights, 🟢 **and a formal MSIT determination can be
+  requested.** The EU's Annex III has its own carve-outs.
+- 🔴 **`T56` is a risk this gate does not price.** Korea both regulates education and
+  withdrew its flagship classroom programme — statutory status removed **2025-08-04**,
+  adoption **37% → 19%** within 2025. 🔵 **A pipeline resting on a national mandate can
+  lose the mandate**, and nothing in a compliance gate detects that.
+
+---
+
 # Education — compose patterns
 
 **Pass 145, 2026-10-12.** 🆕 **`P27` is added: the measurement-population gate — prove your
