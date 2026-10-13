@@ -1,0 +1,24 @@
+# ACTION JH, p170. P169-A (folded, TREE-WIDE) across the 7 PLATFORM rows of verticals/solutions.md,
+# which p168 read under the UNFOLDED, ROOT-ONLY instrument.
+# FALSIFIER: "refuted if any p168 licence verdict changes." SILENT -- all 7 root verdicts reproduce.
+# name_matches = paths matching licen|copying|notice (case-insensitive, tree-wide, exhaustive ls-tree -r)
+# with_body    = of those, how many actually contain a licence GRANT body (content test)
+# The spread between the two columns is the finding: a filename is not a grant.
+repo	head	head_date	root_grants	nonroot_grants	name_matches	with_body	false_name_matches	root_family_and_file
+sakaiproject/sakai	10a1d904d379	2026-10-09	1	164	165	129	36	ECL-2.0@LICENSE
+learningequality/kolibri	5d47c94a8ecc	2026-10-12	1	10	11	6	5	MIT@LICENSE
+openedx/edx-platform	3368a6b14b96	2026-10-12	1	26	27	15	12	AGPL-3.0@LICENSE
+moodle/moodle	f20534726a59	2026-10-03	1	216	217	193	24	GPL(v?)@COPYING.txt
+ILIAS-eLearning/ILIAS	866b8e6d594d	2026-10-13	1	6	7	2	5	GPL(v?)@LICENSE
+openeducat/openeducat_erp	1c95cefebc17	2026-09-07	1	14	15	1	14	LGPL-3.0@LICENSE
+jcputney/scorm-again	882f3b8c7498	2026-10-09	1	0	1	1	0	MIT@LICENSE
+# ROOT VERDICTS, all 7 reproduced against p168/p169 as published: Sakai ECL-2.0, Kolibri MIT,
+# edx-platform AGPL-3.0, Moodle GPL (COPYING.txt), ILIAS GPL, OpenEduCat LGPL-3.0, scorm-again MIT.
+# ACTION JH DISCHARGED, falsifier SILENT.
+# WHAT THE TREE-WIDE READING ADDS, and it is not small: the published licence column describes
+# 1 grant surface per platform. Sakai carries 129 grant BODIES, Moodle 193, edx-platform 15.
+# A client's scanner reads all of them. The column is the OUTER grant only -- same shape as
+# gap 109 on OpenEduCat, but two orders of magnitude larger and on the rows this KB recommends.
+# OpenEduCat CROSS-VALIDATES p169's ACTION JC: 15 name matches, 1 body. The other 14 are all the
+# SAME file -- static/description/notice-board-icon.svg, copied into 14 Odoo modules. p169 said
+# "1 grant file in 1 345 files" under a canonical-filename regex and p169 was RIGHT.

@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — Pass 170 *(append-only; history below is preserved)*
+
+🆕 🟢 **A PERMISSIVE INSTITUTIONAL LMS re-enters this KB's routing — and it was never new.**
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), HEAD `e4be14f0d1bb` at `2026-10-12`
+(`1` day old), root `LICENSE` `10 982` B: **`Apache-2.0` with sections `1`–`9` VERBATIM**, the
+appendix replaced by two attribution statements (the original OLAT base at the University of Zurich;
+openolat.org, initiated by frentix GmbH) that add no term.
+🔴 **`T216` — this KB verified that at PASS 138, recorded the same `10 982` bytes, and called it
+*"the cleanest fork target of any LMS on this shelf"* — then published *"the permissive LMS route is
+exactly two"* for `32` passes, in the same file, `745` lines above it.** p170 re-measured from scratch
+without consulting that block and got `10 982` B to the byte. 🔵 **The append-only convention loses
+any row a pass does not re-state; `P170-C` is the gate for it.**
+
+🆕 🔴 **`Forma LMS` REFUTED before it reached the shelf.**
+[`formalms/formalms`](https://github.com/formalms/formalms), HEAD `446a77a9b9cb` at `2026-07-17`.
+A secondary source calls it *"Apache 2.0"*. It has **NO root grant file at all**; its grant is at
+`html/license.txt`, `18 346` B, and it is **`GNU GENERAL PUBLIC LICENSE Version 2, June 1991`,
+verbatim** — `0` occurrences of *"Apache"* in the body.
+🆕 🔴 **New hazard class:** it ships its licence in **NINE languages** (english, spanish, portuguese,
+italian, german, french, croatian, bosnian, tamil) under `html/lib/System/license/`, with **nothing
+naming which governs**. For a LATAM or EMEA engagement, name the English text as controlling in
+writing before building on it.
+
+🆕 🔴 **Tree-wide grant surfaces for the `7` platform rows, measured for the first time** (`ACTION JH`,
+falsifier SILENT — all `7` root verdicts reproduce):
+
+| repo | grant-named paths | actual grant BODIES |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `217` | 🔴 **`193`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `165` | 🔴 **`129`** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `27` | 🟡 **`15`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `11` | 🟡 **`6`** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `7` | 🟢 **`2`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `15` | 🟢 **`1`** |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **`1`** | 🟢 **`1`** |
+
+🔵 **The licence cell this shelf prints is the OUTER grant. For `scorm-again` it is the whole truth;
+for `Moodle` it is `1` of `193`.** 🟢 **No verdict changes — the value is that the inner audit is now
+ESTIMABLE, which makes it billable. `ACTION JK` classifies those bodies.**
+🟡 **`Moodle`'s root grant is at `COPYING.txt`, not `LICENSE` — a gate probing only `LICENSE` reads
+`Moodle` as unlicensed.**
+
+🆕 🟢 **p169's `OpenEduCat` finding VINDICATED by an instrument with the opposite bias.** p169 used a
+narrow regex and said `1` grant file in `1 345` files. p170 used a deliberately broad match, found
+`15`, content-tested all `15`, and got `1`. The other `14` are
+`static/description/notice-board-icon.svg`, once per Odoo module — an **icon**.
+🟢 **Two passes, two opposite biases, one answer.**
+
+🟢 **Active SIS rows re-verified:** [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis)
+`GPL-2.0`, HEAD `232819b4c07e` at `2026-10-12` (`1` d) — still the most active SIS this KB holds;
+[`os4ed/openSIS-Classic`](https://github.com/os4ed/openSIS-Classic) `GPL-2.0`, HEAD `5d546f20117e` at
+`2026-10-05`, **no root grant file** (confirming p169 — its grant is at `docs/License.txt`).
+🔴 **PERMISSIVE SIS: still NONE, ninth consecutive pass** — but this pass the hole was tested, not
+just re-asserted.
+
+🔴 **`github trending education AI 2026` returned no education-vertical trending list.** The
+`ai-education` GitHub topic holds `288` public repositories; `ChatTutor` and `education-agent-skills`
+were the only education-specific names returned, and `ChatTutor` is already on this shelf at `277`
+days stale. Microsoft's `generative-ai-for-beginners` (~`121k` ★, updated `2026-10-12`) is the
+large mover and is a course, not an education platform.
+
 ## 2026-10-13 — Pass 169
 
 🔴 **Repo DISCOVERY is closed on every channel in this container and p169 re-measured it rather than

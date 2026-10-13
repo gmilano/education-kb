@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P170-A` — the licence gate, with a PREDICATE at last *(replaces `P169-A`, p170 — Global)*
+
+🟢 **`P169-A` fixed the gate's denominator (enumerate the tree) and its typography (the fold). p170
+found the remaining defect is the PREDICATE: it decides a legal question from a path string, and it is
+wrong in both directions — by `58%` under on `penecho`, by `93%` over on `OpenEduCat` (`T213`).**
+
+```sh
+# step 0  FOLD typography before any diff (unchanged from P169-A step 0)
+#         curly quotes -> ASCII, (C) for ©, http:// -> https://
+# step 1  CANDIDATES: broad name match, tree-wide, exhaustive. Never root-only.
+git -C "$repo" ls-tree -r --name-only HEAD | grep -Ei 'licen|copying|notice' > candidates.txt
+# step 2  PREDICATE (NEW): content-test every candidate. A filename is not a grant.
+while IFS= read -r p; do
+  git -C "$repo" cat-file -p "HEAD:$p" \
+    | grep -qiE 'Permission is hereby granted|Apache License|GNU (GENERAL|LESSER|AFFERO)|Eclipse Public License|Mozilla Public License|Redistributions of source code|Permission to use, copy, modify, and/or distribute|Educational Community License' \
+    && echo "$p"
+done < candidates.txt > grants.txt
+# step 3  DEDUP by blob, not by path. 32 paths in penecho hold 26 distinct grants.
+while IFS= read -r p; do git -C "$repo" rev-parse "HEAD:$p"; done < grants.txt | sort -u | wc -l
+# step 4  MULTI-FAMILY: count families PER FILE, never first-match-wins.
+#         ink-lab-LICENSE.txt bundles 3 packages and 2 families; an ordered
+#         case statement reads it as whichever family it tests for first.
+# step 5  ELECTION: a dual licence is an OPTION, not an obligation.
+#         JSZip "MIT or GPLv3" -> elect MIT, record the election.
+#         EPL-2.0 Exhibit A naming GPL-3.0-or-later is an unfilled FORM, not an election.
+# step 6  Diff the root body against canonical, folded, and locate every hunk BY SECTION.
+#         An APPENDIX deviation is not an operative deviation (OpenOLAT, DeepTutor).
+```
+
+🟢 **Why step `6`'s section locating matters, with both outcomes from this pass:**
+
+| repo | folded diff vs canonical | where the hunks are | verdict |
+|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 `90` added / `159` removed | 🟢 **ALL at or after word `1410` — entirely inside the `APPENDIX`** | 🟢 **`Apache-2.0`. Operative §`1`–`9` identical. Carry the `2` attribution notices** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟡 `40` added / `29` removed | 🔴 **`3` in §`1` and §`4(d)`, `1` in the `APPENDIX`** | 🟡 **`Apache-2.0` in effect — `0` of `4` deviations change a right, ALL `4` defeat a hash scanner** |
+
+🔵 **Same instrument, two different answers, and neither is *"the badge says Apache so it's Apache"*.**
+
+## 🆕 🟢 `P170-B` — the duplicate-action-label gate *(p170 — Global)*
+
+🔴 **`ACTION JF` was registered twice in one pass, by `agents/top.md` and `intel/open-gaps.md`, for
+two unrelated tasks (`T218`). Both were done, so nothing was lost — but *"`ACTION JF` was
+discharged"* is now ambiguous in the permanent record.**
+
+🔴 **p170's first three attempts at this gate were unsound, and they are recorded because the gate IS
+the deliverable:**
+
+| attempt | what it produced | why it was unsound |
+|---|---|---|
+| 🔴 **`grep -c` on the raw label** | 🔴 **`10` labels with `19`–`41` *"definitions"* each** | 🔴 **a label appears legitimately in every pass that JUDGES it. Counting occurrences flags the whole tree — which is `P471`: a gate that marks everything controls nothing** |
+| 🔴 **the same, plus `awk '{print $2}'`** | 🔴 **the string `` `ACTION `` on every row** | 🔴 **`awk` splits on the space INSIDE the label, so the gate could not name what it flagged** |
+| 🔴 **restricted to register SECTIONS** | 🔴 **flagged p170's OWN `JJ`–`JN`** | 🔴 **`README.md` summarises the register in prose and `agents/top.md` links to it; both sit inside register-titled sections and neither DEFINES anything** |
+| 🟢 **restricted to register TABLE ROWS** | 🟢 **`0` duplicates among p170's own labels** | 🟢 **a definition is the row carrying the action's FALSIFIER. Prose in the same section is a reference** |
+
+🟢 **The gate, with its reasoning in the docstring:
+[`code/p170-newest-block-gate/check_action_labels.py`](code/p170-newest-block-gate/check_action_labels.py)**
+
+```sh
+python3 -I compose/code/p170-newest-block-gate/check_action_labels.py \
+  README.md agents/top.md intel/open-gaps.md intel/market.md intel/trends.md \
+  verticals/solutions.md repos/foundations.md repos/trending.md \
+  agents/trending.md compose/patterns.md
+```
+
+🟢 **From p171 actions are registered in ONE place — `intel/open-gaps.md`, with falsifiers —
+`README.md` summarises and `agents/top.md` links, neither defining.**
+🟡 **Standing backlog, measured rather than hidden: `17` HISTORICAL labels are defined in a register
+table in BOTH `README.md` and `intel/open-gaps.md`. They predate `T218` and are not retro-fixed. The
+gate exists to stop the eighteenth.**
+
+## 🆕 🟢 `P170-C` — the cross-block consistency gate *(p170 — Global)*
+
+🔴 **`T216`: `OpenOLAT` is licence-verified at `verticals/solutions.md:784` and absent from the
+routing table at line `39` of the same file. Append-only plus *"only the newest block is canonical"*
+means a row not re-stated is lost from the compiled view while staying true in the history.**
+
+```sh
+# For each repo URL that appears anywhere in a file WITH a verified licence verdict,
+# assert it also appears in that file's NEWEST routing table. Report, do not auto-fix:
+# a row may be absent deliberately (refuted, archived, superseded) and that is a
+# human call -- but it must be a CALL, not an omission nobody noticed.
+```
+
+🟢 **Run it over `verticals/solutions.md`, `repos/foundations.md` and `agents/top.md` — the three
+files with routing tables. Pre-registered as `ACTION JM`.**
+
+## 🆕 🟢 `P170-D` — a permissive education stack, every row licence-verified at p170
+
+🟢 **Concrete, and every licence below was read as a BODY on the open channel this pass or last. No
+row is here on the strength of a badge.**
+
+| layer | repo | licence *(body read)* | HEAD | why this one |
+|---|---|---|---|---|
+| 🟢 **LMS core** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** §`1`–`9` verbatim | 🟢 `2026-10-12` | 🟢 **the only PERMISSIVE institutional LMS with `QTI`, `SCORM`, curriculum and assessment built in. Patent grant included** |
+| 🟢 **lightweight / offline LMS** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | 🟢 `2026-10-12` | 🟢 offline-first — the low-connectivity LATAM and APAC deployments |
+| 🟢 **SCORM interop** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🟢 `2026-10-09` | 🟢 **`SCORM` `1.2` / `2004` + `AICC`. The only repo on this shelf where grant-named paths and grant bodies agree exactly (`1` and `1`)** |
+| 🟢 **course delivery + licence hygiene** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | 🟢 `2026-10-10` | 🟢 **ships `licenses.config.yaml` — `19` allowed identifiers, `13` package exceptions. Lift this file as the project's own gate** |
+| 🟢 **tutoring agent** | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | 🟢 **`2026-10-13` (`0` d)** | 🟢 the most active permissive tutoring agent on the shelf |
+| 🟢 **spaced-repetition / recall** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | 🟢 `2026-10-11` | 🟢 **`MCP` server — composes into an agent runtime without a fork** |
+| 🟢 **courseware / AI literacy** | 🟢 `P168-C` tier | 🟢 `MIT` | 🟢 carried | 🟢 **`53` verified locales including `es` and `pt-BR` — the India Class-`3` and Alabama mandates** |
+
+### 🟢 How to wire it, and the two decisions to record before writing code
+
+🟢 **1. `OpenOLAT` as the system of record; `scorm-again` at the content boundary.** `OpenOLAT` already
+speaks `QTI` and `SCORM`, so `scorm-again` is for the packages it must EMIT to a client's existing
+LMS — and `mentingo` emits `SCORM` `1.2` only (`gap 103`), so `2004` export belongs here.
+🟢 **2. `ai-shifu` and `anki-mcp-server` behind an agent boundary, not inside the LMS.** Both are
+permissive, so a fork is legally cheap; keeping them behind `MCP` keeps the `AGPL-3.0` question from
+ever arising if a copyleft component is added later.
+🟢 **3. Lift `mentingo`'s `licenses.config.yaml` on day one and run `P170-A` against it.** Two things
+it will catch immediately, both verified this pass: `ECL-2.0` is NOT in its `19` identifiers, so
+`Sakai` is refused (`T208`); and `OpenOLAT`'s body is not byte-identical to canonical `Apache-2.0`,
+so a hash-matching scanner flags a clean licence.
+🔴 **4. RECORD TWO DECISIONS IN WRITING, before code:**
+
+| decision | why it cannot be deferred |
+|---|---|
+| 🟢 **`OpenOLAT`'s `2` attribution statements will be carried into every redistribution** | 🟢 **it is the only obligation its appendix swap creates, and it is trivial to honour and easy to lose in a build** |
+| 🔴 **the scanner's hash-match failures are EXPECTED for `OpenOLAT` and `DeepTutor`** | 🔴 **`P169-A`/`P170-A` establish both are permissive in effect; without a recorded decision a scanner stops the build and someone swaps a clean component for a worse one** |
+
+🔵 **If the engagement needs a SIS, there is no permissive option — ninth consecutive pass. The
+routes are `RosarioSIS` or `openSIS-Classic` (both `GPL-2.0`, both active) or `OpenEduCat`
+(`LGPL-3.0`, `1` grant file in `1 345` files, cleanest to audit). `Forma LMS` is NOT an option: a
+source calls it `Apache-2.0` and it is `GPL-2.0` verbatim.**
+
 ## 🆕 🟢 `P169-A` — the licence gate, folded and tree-wide *(replaces `P168-A`, p169 — Global)*
 
 🔴 **Why it replaces `P168-A`: both of p169's own first readings were wrong, in two different places,

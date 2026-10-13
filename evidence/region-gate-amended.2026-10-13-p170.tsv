@@ -1,0 +1,25 @@
+# ACTION JF (open-gaps limb), p170. gap 112 said P383's region gate counts grow by 1 per pass by
+# construction, because the convention is append-only. The amendment judges ONE block.
+# TWO instrument defects surfaced while implementing it, and both were in the gate, not the convention:
+#  (1) ACTION JF said judge the LAST canonical block. This KB's convention is newest-FIRST: every
+#      pass PREPENDS. The last block is the OLDEST. Implemented as FIRST, and recorded.
+#  (2) P383 collected every ### up to the next ##, so finding headings like
+#      "### T203 - the verification rule this KB publishes cannot be executed" were judged as
+#      region labels. That is where most of OUT-OF-VOCAB 13 came from.
+instrument	OUT_OF_VOCAB	MISSING_REGION	MULTIPLE_BLOCKS	total_findings	real_defects
+P383 (p169, as published)	13	11	4	28	unknown -- the classes are not separable
+P170-A (amended, newest block only)	0	1	0 (4 reported as informational)	1	1
+# THE ONE REAL DEFECT: intel/market.md's newest block (line 123) carries North America, EMEA, APAC
+# and LATAM -- and NOT Global. 4 of the 5 closed-vocabulary regions.
+# SO ACTION JF's FALSIFIER FIRES. It read: "refuted if the amended gate's count is NOT
+# OUT-OF-VOCAB 0 / MISSING-REGION 0 for the newest block -- which would mean the newest block is
+# non-compliant and this gap was a misdiagnosis of the gate rather than of the convention."
+# MISSING-REGION is 1, not 0. Both limbs are true at once: the gate WAS mis-shaped (27 of 28
+# findings were noise) AND the newest block IS non-compliant. gap 112 was a misdiagnosis in both
+# directions. p169 wrote the falsifier that catches its own claim; recorded as fired, not softened.
+# 27 of 28 findings were instrument noise. The amendment is a 96% false-positive reduction on a
+# gate that has been reported as a growing defect count for three passes.
+# CONSEQUENCE for the convention, stated because it is the real lesson: if only the newest block is
+# canonical, then every row a pass does not RE-STATE is lost from the compiled view. That is
+# exactly how OpenOLAT fell off the permissive-LMS route while staying verified elsewhere in the
+# same file (T216). The gate and T216 are one defect seen from two sides.

@@ -1,0 +1,22 @@
+# ACTION JI, p170. Does DeepTutor's paraphrased Apache-2.0 appear in any OTHER repository?
+# Instrument: GitHub code search on the distinctive phrase, then git-level verification of the
+# BODY HASH of each non-obvious carrier. The phrase search alone would not have settled it.
+# DeepTutor LICENSE: blob ae1dbfc5e74c6c9e, sha256 cd2f54e1e5066644, 11 408 bytes.
+query	total_hits	reading
+"umbrella trademark for a collection of Open Source projects"	37	37 indexed files across ~30 repositories
+"Alarm is the umbrella trademark" NOT deeptutor	0	no occurrence outside the DeepTutor lineage
+# VERIFIED CARRIERS whose repo name gives NO hint of DeepTutor provenance:
+repo	license_blob_sha12	body_sha256_12	identical_to_DeepTutor	carries_HKU_copyright
+dhaual125/Axonai	ae1dbfc5e74c	cd2f54e1e506	YES	yes
+Bitshank-2338/Lumo	ae1dbfc5e74c	cd2f54e1e506	YES	yes
+yosiwizman/WiseTutor	ae1dbfc5e74c	cd2f54e1e506	YES	yes
+# VERDICT: T206 is an INSTANCE, not a class. Every occurrence is byte-identical to DeepTutor's own
+# blob, and the exclusion query returns 0 -- consistent with COPYING from DeepTutor, not with a
+# shared upstream template or a rewriting tool generating the same paraphrase independently.
+# BUT it PROPAGATES: ~30 downstream repositories now ship a non-canonical Apache-2.0 body, and the
+# three verified above carry no "DeepTutor" in their name. Name-based provenance fails on them.
+# MEASUREMENT CONTAMINATION, declared: 3 of the 37 indexed hits are gmilano/education-kb's OWN
+# fixtures (p169-licence-fold, p184-holder-mismatch, p118-licence-column-sweep). This KB is inside
+# the corpus it searched. The true external population is 34, not 37.
+# INTERNAL CONFIRMATION: the sha256 prefix cd2f54e1e5066644 is the FILENAME of this KB's own p118
+# evidence blob, recorded 52 passes ago. Two instruments, 52 passes apart, one hash.

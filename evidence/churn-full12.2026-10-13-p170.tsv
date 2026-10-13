@@ -1,0 +1,28 @@
+# ACTION JG, p170. Full-12 sweep at t1 = 2026-10-13T08:45:53Z, diffed against p169's RECORDED
+# full-12 baseline t0 = 2026-10-13T07:48:09Z. Interval 57 min 44 s, DENOMINATOR 12.
+# The >=6 h reading ACTION JG asked for is AGAIN NOT TAKEN and again could not be: the oldest
+# full-12 anchor is p168's 06:46:52Z, so the earliest possible >=6 h full-12 reading is
+# 2026-10-13T12:46:52Z. p170 ran at 08:45:53Z -- 4 h 00 min 59 s short. Recorded as not-taken.
+# Third consecutive pass to report on this clock. NOT smoothed to a denominator that fits.
+repo	p169_t0_sha	p170_t1_sha	changed
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	no
+CaviraOSS/PageLM	a6646794661b	a6646794661b	no
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	no
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	no
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	no
+Selleo/mentingo	242a9324fe48	242a9324fe48	no
+ai-shifu/ai-shifu	2ff4af09b7bb	523ad3741dc1	YES
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	no
+echo-loop/Echo-Loop	d14130b6c47d	9a787eb45759	YES
+penecho/penecho	076c1ad54a85	076c1ad54a85	no
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	no
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	no
+# READING: 2 of 12 changed over 57 min 44 s, denominator 12.
+# ai-shifu/ai-shifu 2ff4af09b7bb -> 523ad3741dc1 ; echo-loop/Echo-Loop d14130b6c47d -> 9a787eb45759
+# p169 read 0 of 12 over a comparable 1 h 01 min 17 s. So the shelf is NOT static; p169's zero was
+# an interval artefact, not a property. ACTION JD's falsifier (>=3 of 12 over >=6 h) stays SILENT
+# because the >=6 h reading still does not exist -- 2 of 12 over <1 h cannot discharge it.
+# T215 - this table was rebuilt once before publication. A first join keyed on a line-offset
+# (NR>8) silently dropped the 2 rows that matter, printing 10 data rows under a comment asserting
+# "2 of 12". A denominator in prose and a row count in the artifact that disagree is the exact
+# defect class P449 exists to catch; caught here by counting the rows, not by reading them.

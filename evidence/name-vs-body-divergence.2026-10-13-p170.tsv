@@ -1,0 +1,20 @@
+# T213, p170. A FILENAME IS NOT A GRANT, and the error runs in BOTH directions.
+# Measured on real trees at pinned HEADs. Two instruments:
+#   narrow = canonical filenames only  (^LICENSE$ ^COPYING$ ^NOTICE$ *.LICENSE)
+#   broad  = any path containing licen|copying|notice (case-insensitive)
+#   bodies = broad INTERSECT a content test for an actual grant body
+repo	head	narrow	broad	bodies	narrow_under_read	broad_over_read	why
+penecho/penecho	076c1ad54a85	15	36	34	21	2	grants named katex-LICENSE, architecture-LICENSES.txt, gif.js-README.md escape the narrow regex
+HKUDS/DeepTutor	6cf793bd868b	-	10	5	-	5	React components and tests named *Notice*.tsx / *notice*.py match the broad regex
+openeducat/openeducat_erp	1c95cefebc17	1	15	1	0	14	14 copies of static/description/notice-board-icon.svg, one per Odoo module
+sakaiproject/sakai	10a1d904d379	-	165	129	-	36	a large Java tree with licence-named source and resource files
+moodle/moodle	f20534726a59	-	217	193	-	24	same shape as Sakai, at the largest scale on this shelf
+learningequality/kolibri	5d47c94a8ecc	-	11	6	-	5	-
+openedx/edx-platform	3368a6b14b96	-	27	15	-	12	-
+ILIAS-eLearning/ILIAS	866b8e6d594d	-	7	2	-	5	-
+jcputney/scorm-again	882f3b8c7498	-	1	1	-	0	the only row on which name and body agree exactly
+# READING: the narrow instrument under-reads by 58% (21 of 36) on a heavily vendoring repo.
+# The broad instrument over-reads by up to 93% (14 of 15) on a repo with notice-named assets.
+# NEITHER is sound alone. The fix is cheap and is P170-A step 2: name-match to find CANDIDATES,
+# then a content test to decide. p169's step 5 ("enumerate the TREE") was the right correction and
+# an incomplete one -- it fixed the denominator and left the predicate alone.

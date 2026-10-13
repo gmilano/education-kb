@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🆕 🟢 **`ACTION JH` DISCHARGED with a silent falsifier: `7` of `7` platform root verdicts reproduce
+under the folded, TREE-WIDE gate that p168 could only run root-only. The licence column survives a
+stricter instrument for the second consecutive pass.**
+🆕 🔴 **What the tree-wide reading adds is not a correction but a change of scale. `Sakai` carries
+`129` grant BODIES below its root and `Moodle` `193`, where this shelf prints one licence cell each.
+`gap 109`'s shape — *"the published licence is the OUTER grant only"* — is confirmed at two orders of
+magnitude larger than the repo it was found on.**
+🆕 🟢 **And p169's `ACTION JC` verdict on `OpenEduCat` is INDEPENDENTLY VINDICATED. A broad instrument
+finds `15` grant-named paths in that tree; `1` carries a body. The other `14` are the same
+`notice-board-icon.svg`, copied into `14` Odoo modules.**
+🆕 🔴 **A new candidate was tested and REFUTED before it reached the shelf: `Forma LMS`, called
+*"Apache 2.0"* by a secondary source, carries the GNU `GPL` version `2` verbatim and has no root grant
+file at all.**
+[`evidence/platform-tree-grants.2026-10-13-p170.tsv`](../evidence/platform-tree-grants.2026-10-13-p170.tsv)
+[`evidence/name-vs-body-divergence.2026-10-13-p170.tsv`](../evidence/name-vs-body-divergence.2026-10-13-p170.tsv)
+[`evidence/permissive-lms-candidates.2026-10-13-p170.tsv`](../evidence/permissive-lms-candidates.2026-10-13-p170.tsv)
+
+### 🆕 🟢 `ACTION JH` — the `7` platform rows, folded and tree-wide
+
+🟢 **Falsifier: *"refuted if any p168 licence verdict changes."* SILENT — all `7` reproduce.**
+🟢 **Instrument: treeless clone, exhaustive `ls-tree -r`, root body read and family-matched, plus a
+content test on every grant-named path.**
+
+| repo | HEAD | HEAD date | root grant | root verdict *(reproduced)* | grant-named paths | 🆕 **actual bodies** |
+|---|---|---|---|---|---|---|
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `10a1d904d379` | `2026-10-09` | `LICENSE` | 🟢 `ECL-2.0` | `165` | 🔴 **`129`** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `5d47c94a8ecc` | `2026-10-12` | `LICENSE` | 🟢 `MIT` | `11` | 🟡 **`6`** |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `3368a6b14b96` | `2026-10-12` | `LICENSE` | 🔴 `AGPL-3.0` | `27` | 🟡 **`15`** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `f20534726a59` | `2026-10-03` | 🟡 **`COPYING.txt`** | 🔴 `GPL-3.0` | `217` | 🔴 **`193`** |
+| 🟡 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `866b8e6d594d` | `2026-10-13` | `LICENSE` | 🔴 `GPL-3.0` | `7` | 🟢 **`2`** |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `1c95cefebc17` | `2026-09-07` | `LICENSE` | 🟡 `LGPL-3.0` | `15` | 🟢 **`1`** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `882f3b8c7498` | `2026-10-09` | `LICENSE` | 🟢 `MIT` | 🟢 **`1`** | 🟢 **`1`** |
+
+🟢 **`6` of `7` rows have a HEAD inside `11` days; `ILIAS` is `0` days old at this pass.**
+🟡 **`Moodle`'s root grant is at `COPYING.txt`, not `LICENSE` — recorded because a gate that probes
+only `LICENSE` reads `Moodle` as unlicensed, which is `P169-A` step `5`'s original failure mode.**
+🔵 **The column to read twice is the last one. This shelf has been publishing one licence per platform
+for `170` passes. For `scorm-again` that one cell is the whole truth. For `Sakai` it is `1` of `129`
+and for `Moodle` `1` of `193`.**
+
+### 🆕 🔴 What `129` and `193` mean, stated so it is not mistaken for alarm
+
+🟢 **None of this overturns a verdict. The outer grant is what governs the project's own code, and all
+`7` reproduced.** 🔴 **What it governs is a fraction of what a client ships.**
+
+| the question a client actually asks | what this shelf could answer before p170 | what it can answer now |
+|---|---|---|
+| 🟢 *"what licence is Moodle?"* | 🟢 **`GPL-3.0`, body read, verbatim** | 🟢 **unchanged** |
+| 🔴 *"what licences will my scanner find in Moodle?"* | 🔴 **unknown** | 🟡 **`193` grant bodies exist; their families are NOT yet classified** |
+| 🔴 *"how long is the inner audit?"* | 🔴 **unestimable** | 🟢 **countable: `129` for `Sakai`, `193` for `Moodle`, `15` for `Open edX`, `1` for `scorm-again`** |
+
+🟢 **So the deliverable p170 adds is an ESTIMATE, not a verdict — and estimable work is billable
+work.** 🟢 **Classifying those bodies is pre-registered as `ACTION JK`, with `P170-A` as the
+procedure and `penecho`'s `32`-file classification as the worked precedent.**
+🔴 **The caution that comes with it, from `T213`: do not count grant files by filename. On these same
+trees the name match over-reads by `36` on `Sakai` and `24` on `Moodle`, and on `OpenEduCat` by `14`
+out of `15`.**
+
+### 🆕 🟢 `gap 109` — p169's `OpenEduCat` answer re-measured by a different instrument
+
+🟢 **p169 used a canonical-filename regex and concluded `1` grant file in `1 345` tracked files.
+p170 used a deliberately broad name match and found `15` candidates — then content-tested all `15`.**
+
+| probe | result | reading |
+|---|---|---|
+| 🔴 **grant-named paths, broad match** | 🔴 **`15`** | 🔴 **looks like a `15`-grant tree** |
+| 🟢 **of those, carrying a grant body** | 🟢 **`1`** — the root `LICENSE` | 🟢 **p169 was RIGHT** |
+| 🟢 **what the other `14` are** | 🟢 **`static/description/notice-board-icon.svg`, once per Odoo module** | 🟢 **an ICON. The string *"notice"* is in a filename, not a grant** |
+
+🔵 **Two passes, two instruments with opposite biases, one answer. That is the strongest form of
+confirmation this KB can produce from a single container, and it is worth more than either reading
+alone.** 🟢 **`T201` stands untouched: the root body still promises the `GPL-3.0` text *"at the
+bottom"* and still contains `0` occurrences of it.**
+
+### 🆕 🔴 `Forma LMS` — refuted at the artifact, and a hazard class this shelf has not held before
+
+| probe | result |
+|---|---|
+| 🔴 **claimed by a secondary source** | 🔴 **`Apache-2.0`** |
+| 🔴 **root grant file** | 🔴 **NONE — no `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` at the root** |
+| 🟢 **actual grant** | 🟢 **`html/license.txt`, `18 346` B — `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`, verbatim** |
+| 🟢 **occurrences of *"Apache"* in that body** | 🟢 **`0`** *(the only Apache text in the tree is a vendored jsdoc prettify file)* |
+| 🟡 **HEAD** | 🟡 **`446a77a9b9cb`, `2026-07-17` — `88` days** |
+| 🆕 🔴 **licence shipped in** | 🔴 **NINE languages — english, spanish, portuguese, italian, german, french, croatian, bosnian, tamil — with NOTHING naming which governs** |
+
+🔵 **The multilingual grant is the new hazard. A translated copyleft licence is not a second licence
+and not a choice; it is a convenience that leaves the governing text unnamed. For a LATAM or EMEA
+engagement that is a question for counsel, and the right move is to name the English text as
+controlling in writing before anything is built on it.**
+🟢 **Cost of this refutation: two treeless clones. Value: a `GPL-2.0` platform did not enter a shelf
+that exists to identify what Globant can build on permissively.**
+
+### 🆕 🟢 The foundations shelf — permissive rows, re-verified this pass
+
+🟢 **Every row below had its root grant body read on the open channel at p170 or p169, and its HEAD
+confirmed by `git ls-remote`.**
+
+| repo | licence *(body read)* | HEAD date | role |
+|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0` — §`1`–`9` VERBATIM, appendix replaced by `2` attribution statements** | 🟢 **`2026-10-12`** | 🆕 🟢 **institutional LMS — `QTI`, `SCORM`, curriculum, assessment. RESTORED to the permissive route (`T216`)** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | 🟢 `2026-10-12` | 🟢 offline-first learning platform |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🟢 `2026-10-09` | 🟢 **`SCORM` `1.2` / `2004` + `AICC` runtime — the interop layer** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | 🟢 `2026-10-10` | 🟢 **LMS, and the only repo on any shelf shipping a dependency-licence GATE (`T208`)** |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `ECL-2.0` | 🟢 `2026-10-09` | 🟡 institutional LMS — patent limb (`T200`), gate conflict (`T208`) |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | 🟢 `2026-10-12` | 🟡 MOOC platform — RPC carve-out (`gap 107`) |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` *(at `COPYING.txt`)* | 🟢 `2026-10-03` | 🟡 the incumbent LMS |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `GPL-2.0` | 🟢 `2026-10-12` | 🟡 **the most active SIS this KB holds** |
+
+🟢 **`4` rows permissive (`MIT` / `Apache-2.0`) and all `4` with a HEAD inside `5` days.**
+🔴 **`0` permissive SIS, for a NINTH pass — now with `Forma LMS` tested and refuted rather than the
+hole merely re-asserted.**
+
 ## Pass 169 — 2026-10-13
 
 🆕 🟢 **`ACTION JC` is DISCHARGED and `gap 109` closes in the direction nobody expected: there are no

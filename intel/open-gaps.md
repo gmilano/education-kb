@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p169 registered — `3` DISCHARGED with silent falsifiers, `1`
+DISCHARGED WITH ITS FALSIFIER FIRED, `1` NOT TAKEN for the third consecutive pass.**
+🔴 **Standing caveat unchanged: p170 judges actions p169 wrote, and p170 did the work. These are
+self-assessments.**
+🆕 🔴 **`T218` — `ACTION JF` was registered TWICE in one pass, by `agents/top.md` (penecho's grant
+files) and by this file (the `P383` region gate), for two unrelated tasks. Both were carried out and
+both are reported. From p171, actions are registered HERE ONLY and `agents/top.md` links to them;
+`P170-B` is the three-line duplicate-label gate.**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION JF`** *(agents limb)* | 🔴 *refuted if `EPL-2.0` is NOT among penecho's non-root grants* | 🟢 **`2` files carry `EPL-2.0`, one blob `286f4fcb048f`, naming `ELK / elkjs 0.12.0` at line `25`** | 🟢 **DISCHARGED, falsifier SILENT. `21` `MIT`, `5` `Apache-2.0`, `1` `ISC`, `3` multi-family, `2` bodyless; `26` distinct blobs behind `32` paths** |
+| 🔴 **`ACTION JG`** | 🔴 *refuted if `≥3` of `12` change over `≥6` h* | 🔴 **the `≥6` h reading DOES NOT EXIST. Gate `12:46:52Z`; p170 ran `08:45:53Z`, `4 h 00 min 59 s` short. Taken instead, with its denominator: `2` of `12` over `57 min 44 s`** | 🔴 **NOT TAKEN, third pass running. Falsifier SILENT by default, not by measurement — recorded as such** |
+| 🟢 **`ACTION JH`** | 🔴 *refuted if any p168 licence verdict changes* | 🟢 **`7` of `7` root verdicts reproduce under the folded tree-wide gate** | 🟢 **DISCHARGED, falsifier SILENT — and the tree-wide reading adds `Sakai` `129` and `Moodle` `193` grant bodies where the column holds `1`** |
+| 🟢 **`ACTION JI`** | 🔴 *refuted if the paraphrase appears in a repo OUTSIDE the `DeepTutor` lineage, which would make `T206` a class* | 🟢 **`0` hits outside the lineage; `3` non-obvious carriers verified byte-identical at blob `ae1dbfc5e74c`** | 🟢 **DISCHARGED, falsifier SILENT. An INSTANCE that propagates by copying — `~30` repos, `3` of them not naming `DeepTutor`** |
+| 🔴 **`ACTION JF`** *(this file's limb)* | 🔴 *refuted if the amended gate's count is NOT `OUT-OF-VOCAB 0` / `MISSING-REGION 0` for the newest block* | 🔴 **`MISSING-REGION` is `1`: `market.md`'s newest block carries `4` of the `5` regions — `Global` is absent** | 🔴 **DISCHARGED IN MECHANISM, FALSIFIER FIRED. `28` findings → `1`, a `96%` false-positive cut, AND the newest block really is non-compliant. `gap 112` was a misdiagnosis in BOTH directions** |
+
+### 🆕 🔴 `gap 112` — CLOSED, and it closes by being wrong twice
+
+🟢 **p169 predicted this outcome precisely enough to catch its own claim, which is the register working
+as intended.** 🔴 **Both limbs are true at once:**
+
+| limb | p169's claim | p170's measurement |
+|---|---|---|
+| 🟢 **the gate WAS mis-shaped** | 🟢 ***"the finding count grows by `1` per pass by construction"*** | 🟢 **CONFIRMED and larger than claimed: `27` of `28` findings were noise. `13` *"out-of-vocab"* headings were FINDING headings the gate swept up because its block extent runs to the next `##`; `11` *"missing regions"* were in historical blocks** |
+| 🔴 **but the newest block IS non-compliant** | 🔴 ***"p168's own block is fully compliant and carries all `5` regions"*** | 🔴 **REFUTED for p169's own block: `North America`, `EMEA`, `APAC`, `LATAM` — and NO `Global`** |
+
+🟢 **A third defect surfaced in the ACTION's own wording: it asked to judge the **LAST** canonical
+block. This KB's convention is newest-FIRST — every pass PREPENDS — so the last block is the OLDEST.
+Implemented as FIRST, and recorded rather than silently corrected.**
+🟢 **p170's own `market.md` block carries all `5` regions under one canonical heading, closed
+vocabulary, `###` per region.** 🟢 **New gate: [`compose/code/p170-newest-block-gate/`](../compose/code/p170-newest-block-gate/).**
+🔵 **The consequence that matters more than the gate: once only the newest block is canonical, every
+row a pass does not RE-STATE is lost from the compiled view. That is `T216`, and it is how a verified
+permissive LMS fell off the routing table for `32` passes. The gate and `T216` are one defect seen
+from two sides.**
+
+### 🔴 Gaps OPENED or RE-STATED by p170
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`gap 113`** | 🔴 **the global *"top open source AI agents education"* query has returned `0` new education-vertical permissive agents for several consecutive passes** | 🔴 **Either the query is EXHAUSTED for this vertical or the vertical genuinely has ~`12` maintained permissive agents. Those are different worlds: one says search differently, the other says a studio should BUILD rather than compose. `ACTION JN`** |
+| 🆕 🔴 **`gap 114`** | 🔴 **EMEA sources disagree on the Annex III high-risk date: `2026-08` against `2027-12-02`** | 🟡 **Narrower than it looks — both readings are consistent with an amending act delaying high-risk duties. Budget to the earlier, build to the later. Unresolvable here (`T203`)** |
+| 🆕 🔴 **`gap 115`** | 🔴 **`Sakai`'s `129` and `Moodle`'s `193` inner grant BODIES are counted and NOT classified** | 🟡 **The inner audit is now estimable but not done. On penecho's `32` the answer was benign — every family `MIT`, `Apache-2.0`, `ISC` or an unelected option. If that holds at `193`, the inner-audit anxiety is procedural. `ACTION JK`** |
+| 🆕 🟡 **`gap 116`** | 🟡 **`Forma LMS` ships its licence in `9` languages with nothing naming which GOVERNS** | 🟡 **A translated copyleft licence is not a second licence. Any engagement touching it must name the English text as controlling, in writing, first** |
+| 🆕 🔴 **`T217`** | 🔴 **this KB cites `Regulation (EU) 2026/1744` `86` times across `7` files and names `Regulation (EU) 2024/1689` — the AI Act itself — `0` times in any current content file** | 🔴 **A deck built from this KB would cite an instrument no primary channel here can confirm while omitting the one every EMEA counsel knows. Repetition accumulated the APPEARANCE of sourcing. `ACTION JL`** |
+| 🆕 🔴 **`T216`** | 🔴 **`OpenOLAT` is licence-verified at `verticals/solutions.md:784` and absent from the routing table at line `39` of the same file** | 🔴 **`32` passes of routing EMEA and institutional-LMS engagements to `Sakai` (patent limb, gate conflict) and `Kolibri` (not institutional) while a clean `Apache-2.0` option sat verified in the history. `ACTION JM`** |
+| 🔴 **re-stated** | 🔴 **`gap 104` — no education-specific AI regulation anywhere in LATAM** | 🔵 **FIFTH independent confirmation. Peru's `Ley 31814` is general-purpose. Institutional governance only** |
+| 🔴 **re-stated** | 🔴 **no SIS and no education ERP under `MIT` or `Apache-2.0`** | 🟢 **NINTH pass — and this pass the hole was TESTED: `Forma LMS` was the candidate and it is `GPL-2.0` verbatim** |
+| 🔴 **re-stated** | 🔴 **no APAC or LATAM originated open-source education PLATFORM, and nothing education-specific from AFRICA or the MIDDLE EAST** | 🔵 **Fifth consecutive. Stated plainly: a KB built for a company with largely LATAM delivery cannot name one education platform originating there** |
+| 🟡 **unresolved** | 🟡 **`gap 107` — the `edx-platform` RPC carve-out is a licensor statement, not counsel** | 🟢 **Carried. Still flag it as such in any client deck** |
+| 🟡 **unresolved** | 🟡 **`gap 110` — Article 113, the provision that SETS application dates, has never been quoted by any source** | 🔴 **`eur-lex` unreachable on every channel (`T203`, environmental). One fetch from a container with egress closes it** |
+| 🟡 **unresolved** | 🟡 **`gap 103` — `mentingo` emits `SCORM` `1.2` only** | 🟢 **Carried. `scorm-again` is the `2004` export route (`P170-D`)** |
+
+## 🔜 Registered for p171 — pre-registered with falsifiers
+
+🟢 **Registered HERE ONLY, per `T218`. `agents/top.md` links to these rather than re-defining them.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION JJ`** — take the full-`12` `≥6`-hour churn reading, now genuinely reachable: p170's RECORDED `t0` is `2026-10-13T08:45:53Z`, so any pass at or after `2026-10-13T14:45:53Z` can take it against a recorded baseline, and p168's `06:46:52Z` anchor makes `12:46:52Z` sufficient | 🔴 *Refuted if `≥3` of `12` change over `≥6` h, which reinstates `T173` as a rate. Also refuted in the other direction if a FOURTH consecutive pass reports on this clock without taking the reading — at which point the action is unexecutable by this schedule and must be retired rather than re-registered* |
+| 🟢 **`ACTION JK`** — settle `gap 115`: classify the grant BODIES found by `P170-A` across `Sakai` (`129`) and `Moodle` (`193`), by family, deduplicated by blob | 🔴 *Refuted if any family appears that is INCOMPATIBLE with the repo's outer grant — a non-elected copyleft inside `Sakai`'s `ECL-2.0`, or a proprietary/non-commercial body inside either. That would turn the inner audit from procedural into substantive and change what this KB tells a client* |
+| 🟢 **`ACTION JL`** — settle `T217`: name `Regulation (EU) 2024/1689` as the base instrument in every current content file that cites `2026/1744`, and mark `2026/1744` as an UNVERIFIED amendment wherever it appears | 🔴 *Refuted if a primary source becomes reachable and shows `2026/1744` IS the operative consolidated instrument for education, in which case the base-Act framing is wrong and the `86` citations were right. Also refuted if `2026/1744` cannot be found in ANY source outside this KB, which would make it this KB's own fabrication and a retraction rather than a re-framing* |
+| 🟢 **`ACTION JM`** — settle `T216`: run `P170-C` over the three files with routing tables (`verticals/solutions.md`, `repos/foundations.md`, `agents/top.md`) and list every repository that is licence-verified in the history and absent from the newest routing table | 🔴 *Refuted if `OpenOLAT` is the ONLY such row across all three files — which would make `T216` an isolated omission rather than a cost of the append-only convention, and `P170-C` unnecessary* |
+| 🟢 **`ACTION JN`** — settle `gap 113`: determine whether the education-agent query is exhausted or the vertical is small, by enumerating the `ai-education` GitHub topic (`288` repositories) and counting those that are permissive, education-vertical and active within `180` days | 🔴 *Refuted if `≥5` such repositories exist that are NOT already on this shelf — which would mean the query was the limitation all along and `12` rows is an artefact of how this KB searches, not a fact about the ecosystem* |
+
 ## 🟢 Verdicts on the FOUR actions p167 registered, judged by p168 — `3` DISCHARGED, `1` DISCHARGED AT A SMALLER DENOMINATOR
 
 🟢 **Thirteenth consecutive register, third with FOUR actions.** 🔴 **Standing caveat unchanged:

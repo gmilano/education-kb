@@ -4,6 +4,175 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🟢 **Five pre-registered actions — four from `agents/top.md`, one from `intel/open-gaps.md` under a
+COLLIDING label. `3` DISCHARGED with silent falsifiers, `1` DISCHARGED WITH ITS FALSIFIER FIRED, and
+`1` NOT TAKEN for the third consecutive pass because the clock it needs has still not struck.**
+🆕 🔴 **`ACTION JF` was registered TWICE, by two files, for two unrelated tasks. `agents/top.md` gave
+`JF` to penecho's grant files; `intel/open-gaps.md` gave `JF` to the `P383` region gate. Both were
+carried out and both are reported, but the register has no uniqueness control (`T218`).**
+🆕 🔴 **`ACTION JF`'s penecho limb reproduces p169's `4 + 32` EXACTLY — and only because the
+instrument was broadened first. A canonical-filename regex finds `15` of those `36`. The licence gate
+this KB has corrected twice still had the wrong PREDICATE (`T213`).**
+🆕 🟢 **`ACTION JI` settles `T206`: the paraphrased `Apache-2.0` is an INSTANCE, not a class — and it
+PROPAGATES. `~30` repositories ship a byte-identical copy, `3` of them verified here with no
+`DeepTutor` in their name.**
+🔴 **The shelf is NOT static after all. `2` of `12` HEAD shas moved in `57 min 44 s`, where p169 read
+`0` of `12` over a comparable hour.**
+[`evidence/churn-full12.2026-10-13-p170.tsv`](../evidence/churn-full12.2026-10-13-p170.tsv)
+[`evidence/penecho-nonroot-grants.2026-10-13-p170.tsv`](../evidence/penecho-nonroot-grants.2026-10-13-p170.tsv)
+[`evidence/name-vs-body-divergence.2026-10-13-p170.tsv`](../evidence/name-vs-body-divergence.2026-10-13-p170.tsv)
+[`evidence/deeptutor-paraphrase-propagation.2026-10-13-p170.tsv`](../evidence/deeptutor-paraphrase-propagation.2026-10-13-p170.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION JF`** *(agents limb)* — classify penecho's `32` non-root grant files | 🟢 **DISCHARGED, falsifier SILENT. `EPL-2.0` IS among them and is now LOCATED at `elkjs 0.12.0`, confirming p169's attribution off the artifact. `21` are `MIT`-only, `5` `Apache-2.0`, `1` `ISC`, `3` carry TWO families, `2` carry none** |
+| 🟡 **`ACTION JG`** — the full-`12` `≥6` h churn reading | 🔴 **NOT TAKEN, third pass running. The gate is `12:46:52Z`; p170 ran at `08:45:53Z`, `4 h 00 min 59 s` short. What WAS taken, with its denominator: `2` of `12` over `57 min 44 s`** |
+| 🟢 **`ACTION JH`** — `P169-A` folded and tree-wide across the `7` PLATFORM rows | 🟢 **DISCHARGED, falsifier SILENT. `7` of `7` p168 root verdicts reproduce. And the tree-wide reading is an order of magnitude larger than the column: `Sakai` `129` grant bodies, `Moodle` `193`** |
+| 🟢 **`ACTION JI`** — is `DeepTutor`'s paraphrase a class or an instance? | 🟢 **DISCHARGED, falsifier SILENT. An INSTANCE: `0` hits outside the lineage, and every verified carrier is byte-identical to `DeepTutor`'s own blob `ae1dbfc5e74c`. But `~30` repos carry it** |
+| 🔴 **`ACTION JF`** *(open-gaps limb)* — amend `P383` to judge one block | 🔴 **DISCHARGED IN MECHANISM, FALSIFIER FIRED. `28` findings → `1`, a `96%` false-positive cut. And the `1` is real: `market.md`'s newest block is missing `Global`. `gap 112` was a misdiagnosis in BOTH directions** |
+
+### 🔴 The agent shelf — re-verified at p170, `2` of `12` moved
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T08:45:53Z`.** 🔴 **`2` of `12`
+HEAD shas moved against p169's RECORDED full-`12` baseline at `07:48:09Z` — an interval of
+`57 min 44 s` at DENOMINATOR `12`.**
+🔵 **This matters beyond the number. p169 read `0` of `12` over `1 h 01 min 17 s` and the shelf has
+now shown `2` of `12` over a SHORTER interval. So p169's zero was an interval artefact and not a
+property of the shelf, and any claim that these rows are quiet should be read as *"quiet in the hour
+we looked"*.** 🟢 **`ACTION JD`'s falsifier — `≥3` of `12` over `≥6` h — stays SILENT, because a
+sub-hour reading cannot discharge a `≥6` h condition in either direction.**
+🟢 **No row enters or leaves. Licence cells carry forward from p169's body reads, with penecho's now
+fully enumerated.** 🔴 **The `★` column stays closed (`T149`).**
+
+| repo | licence *(body read)* | grant files *(root + below)* | HEAD date | age | moved at p170 |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN, placeholder filled | `1` + `3` | `2026-10-13` | 🟢 **`0` d** | 🔴 **YES — `2ff4af09b7bb` → `523ad3741dc1`** |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)**; vendored: `MIT` `Apache-2.0` `EPL-2.0` `ISC` | 🔴 **`4` + `32`** *(`26` distinct blobs)* | `2026-10-12` | 🟢 `1` d | 🟢 no |
+| 🟡 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `1` + `6` | `2026-10-13` | 🟢 **`0` d** | 🔴 **YES — `d14130b6c47d` → `9a787eb45759`** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | `1` + `0` | `2026-10-11` | 🟢 `2` d | 🟢 no |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | `3` + `6` | `2026-10-10` | 🟢 `3` d | 🟢 no |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)** — and now known to PROPAGATE (`T219`) | `2` + `8` *(only `3` of the `8` are grants)* | `2026-10-08` | 🟢 `5` d | 🟢 no |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | `1` + `0` | `2026-10-08` | 🟢 `5` d | 🟢 no |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | `1` + `0` | `2026-10-08` | 🟢 `5` d | 🟢 no |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | `1` + `8` | `2026-09-21` | 🟡 `22` d | 🟢 no |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `1` + `0` | `2026-01-09` | 🔴 **`277` d** | 🟢 no |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | `1` + `0` | `2025-11-13` | 🔴 **`334` d** | 🟢 no |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | `0` + `0` | `2025-09-30` | 🔴 **`378` d** | 🟢 no |
+
+🟢 **`6` rows permissive and active (`≤5` d), unchanged for a fifth pass. `2` rows now at `0` d.**
+🔴 **`3` over the `180`-day drop line, unchanged.**
+
+### 🆕 🔴 `T213` — a filename is not a grant, and the error runs in BOTH directions
+
+🟢 **`P169-A` step `5` corrected the gate's DENOMINATOR: enumerate the tree, not the root. p170 found
+that the PREDICATE was still wrong, and wrong in two opposite ways at once.**
+
+| repo | narrow regex | broad name match | actual grant BODIES | error |
+|---|---|---|---|---|
+| 🔴 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`15`** | `36` | `34` | 🔴 **narrow UNDER-reads by `21` — `58%`** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 `1` | 🔴 **`15`** | 🟢 **`1`** | 🔴 **broad OVER-reads by `14` — `93%`** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | — | `10` | `5` | 🔴 **broad OVER-reads by `5`** |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | — | `165` | `129` | 🔴 **broad OVER-reads by `36`** |
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | — | `217` | `193` | 🔴 **broad OVER-reads by `24`** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `1` | 🟢 `1` | 🟢 `1` | 🟢 **the only row where name and body agree exactly** |
+
+🟢 **Why the narrow instrument fails on penecho: the grants are named `katex-LICENSE`,
+`architecture-LICENSES.txt` — plural — and `gif.js-README.md`, a grant inside a README.**
+🟢 **Why the broad instrument fails on `OpenEduCat`: `14` of its `15` matches are the SAME file,
+`static/description/notice-board-icon.svg`, copied once into each Odoo module. An icon.**
+🔵 **Both are the same mistake: deciding a legal question from a path string.** 🟢 **The fix is
+`P170-A` step `2` — name-match to find CANDIDATES, content-test to decide — and it costs one
+`cat-file` per candidate.**
+🟢 **Recorded in the direction that matters: p169's `ACTION JC` conclusion on `OpenEduCat` —
+*"`1` grant file in `1 345` files"* — is INDEPENDENTLY VINDICATED here. The narrow regex was right
+on that tree. No instrument is right on every tree, which is the whole finding.**
+
+### 🆕 🟢 `ACTION JF`, penecho limb — `32` files, `26` distinct grants, `4` families
+
+🟢 **HEAD `076c1ad54a85` is UNCHANGED since p169, so this is a controlled re-read: every difference is
+instrument, not tree.**
+
+| | |
+|---|---|
+| 🟢 **`MIT`-only files** | 🟢 **`21` of `32`** |
+| 🟢 **`Apache-2.0`** | 🟢 **`5`** — MathJax, mhchemparser, mj-context-menu, speech-rule-engine |
+| 🔴 **`EPL-2.0`** | 🔴 **`2` files, ONE blob (`286f4fcb048f`) — `architecture-LICENSES.txt` and `workflow-LICENSES.txt` are BYTE-IDENTICAL** |
+| 🟢 **`ISC`** | 🟢 **`1`** — earcut `3.2.3` |
+| 🔴 **files carrying TWO families** | 🔴 **`3`** — a grant FILE is not a grant |
+| 🟡 **files carrying NO body** | 🟡 **`2`** — third-party NOTICE manifests, tables not grants |
+| 🔴 **distinct blobs behind `32` paths** | 🔴 **`26`** — *"`36` grant surfaces"* counts PATHS |
+
+🟢 **`gap 111`'s `EPL-2.0` is CONFIRMED and p169's attribution HOLDS, read off the artifact: line `25`
+of that bundle names** *"ELK / elkjs 0.12.0"* **and the `EPL-2.0` body begins at line `26`.**
+🔴 **Two traps inside those bundles, both of which would mislead an automated scanner:**
+- 🔴 **The `EPL-2.0` bundles carry Exhibit A naming `GNU General Public License v3.0 or later` as a
+  SECONDARY licence.** 🟢 **It is the unfilled FORM, and the file says so itself —** *"Simply including
+  a copy of this Agreement, including this Exhibit A is not sufficient to license the Source Code
+  under Secondary Licenses."* 🔵 **So no `GPL-3.0` obligation is elected. A scanner keying on that
+  string reports a `GPL-3.0` dependency that does not exist.**
+- 🔴 **`ink-lab-LICENSE.txt` is `36 054` B bundling THREE packages — Nerdamer `1.1.13`, PptxGenJS
+  `4.0.0`, JSZip `3.10.1` — and contains a full `GPL-3.0` body.** 🟢 **It is JSZip's own dual option:
+  *"JSZip is dual licensed. At your choice you may use it under the MIT license *or* the GPLv3
+  license."* The redistributor elects `MIT` and no copyleft enters.**
+🔵 **A first pass of p170's own classifier read that file as `GPL` because it tested families in
+sequence and stopped at the first hit. Caught before publication and recorded as the eleventh
+false-positive class: ORDER-DEPENDENT family matching on a concatenated grant file.**
+
+### 🆕 🟢 `T219` — `ACTION JI`: the paraphrase is an instance, and it travels
+
+🟢 **`DeepTutor`'s `LICENSE`: blob `ae1dbfc5e74c6c9e`, sha256 `cd2f54e1e5066644`, `11 408` B.**
+🟢 **The folded word-diff against canonical `Apache-2.0` is `40` added / `29` removed, and the hunks
+resolve into exactly FOUR deviations:**
+
+| # | where | canonical | DeepTutor | operative? |
+|---|---|---|---|---|
+| `1` | §`1` Definitions | *"submitted to Licensor"* | *"submitted to the Licensor"* | 🟢 **no — inert** |
+| `2` | §`1` Definitions | *"incorporated within Work"* | *"incorporated within the Work"* | 🟢 **no — inert** |
+| `3` | 🔴 **§`4(d)` Redistribution** | *"excluding **those** notices"* | 🔴 ***"excluding **any** notices"*** | 🔴 **YES — and semantically inert** |
+| `4` | 🟡 **`APPENDIX`** | *"We also recommend that a file or class name ... "* | 🔴 ***"Please also get an "Alarm or alarm" copyright header ... (Alarm is the umbrella trademark for a collection of Open Source projects)"*** | 🟢 **no — the APPENDIX is non-operative boilerplate** |
+
+🟢 **So p169's claim that §`4(d)` is altered HOLDS, now located to a single word.** 🔵 **And the
+client-facing reading is better than p169 could state: `0` of the `4` deviations change any right or
+obligation, `3` of `4` are outside the operative text or semantically inert, and ALL `4` will defeat a
+hash- or byte-comparison scanner. The risk is operational, not legal — which is `T206`'s own trend,
+now quantified on the worst row this KB holds.**
+🔴 **What `ACTION JI` adds, and it is the part a client would not expect:**
+
+| probe | result |
+|---|---|
+| 🟢 **code search, distinctive phrase** | `37` indexed files across `~30` repositories |
+| 🟢 **same phrase, excluding the lineage** | 🟢 **`0`** — no independent generation |
+| 🔴 **non-obvious carriers verified at blob level** | 🔴 **`dhaual125/Axonai`, `Bitshank-2338/Lumo`, `yosiwizman/WiseTutor` — all blob `ae1dbfc5e74c`, all sha256 `cd2f54e1e506`, all byte-IDENTICAL, none naming `DeepTutor`** |
+
+🟢 **VERDICT: an INSTANCE that propagates by copying, not a class produced by a shared template.**
+🔴 **But `~30` repositories now ship a non-canonical `Apache-2.0`, and on the three verified here the
+repository name gives no hint of where it came from. Name-based provenance fails.**
+🔴 **MEASUREMENT CONTAMINATION, declared rather than discovered later: `3` of the `37` hits are THIS
+KB's own fixtures (`p169-licence-fold`, `p184-holder-mismatch`, `p118-licence-column-sweep`). The KB
+is inside the corpus it searched; the true external population is `34`.**
+🟢 **An internal confirmation worth keeping: `cd2f54e1e5066644` is the FILENAME of this KB's own p118
+evidence blob. Two instruments, `52` passes apart, one hash.**
+
+### 🆕 🔴 `T218` — the register has no uniqueness control
+
+🔴 **`ACTION JF` was issued twice in the same pass by two different files for two unrelated tasks.**
+🟢 **Both were executed and both are reported above, so nothing was lost this time.** 🔵 **But the
+register is the mechanism this KB uses to hold itself to account across passes, and a duplicated label
+makes *"`ACTION JF` was discharged"* ambiguous in the permanent record.**
+🟢 **Fix, applied from p171: actions are registered in ONE place — `intel/open-gaps.md` — and
+`agents/top.md` links to them. `P170-B` is the three-line gate that fails a tree carrying two
+definitions of the same action label.**
+
+### 🔜 Registered for p171
+
+🟢 **Registered in `intel/open-gaps.md` with falsifiers, per `T218`. Summarised here, not defined
+here: `ACTION JJ` (the `≥6` h churn reading, now genuinely reachable), `ACTION JK` (`P170-A`'s content
+test across all `12` agent rows and `9` platform rows), `ACTION JL` (settle `T217` — name the base AI
+Act instrument everywhere, or state that it cannot be), `ACTION JM` (does `T216`'s lost-row defect
+affect shelves other than the LMS route?).**
+
 ## Pass 169 — 2026-10-13
 
 🟢 **Four pre-registered actions. `3` DISCHARGED with silent falsifiers, `1` HALF-DISCHARGED and its

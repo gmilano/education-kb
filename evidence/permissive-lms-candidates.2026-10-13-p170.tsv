@@ -1,0 +1,27 @@
+# p170. The permissive-LMS hole, re-opened on purpose. verticals/solutions.md has said the
+# permissive LMS route is "exactly two" (Sakai ECL-2.0, Kolibri MIT) for EIGHT passes.
+# p170's vertical-platform query named two candidates it had not tested. Both were verified on the
+# open channel (treeless clone, root grant body read, folded word-diff against canonical Apache-2.0).
+repo	head	head_date	root_grant_file	declared_by_source	MEASURED	verdict
+formalms/formalms	446a77a9b9cb	2026-07-17	html/license.txt	Apache-2.0 (secondary source)	GPL-2.0 verbatim, 18 346 B	REFUTED -- the source is wrong
+OpenOLAT/OpenOLAT	e4be14f0d1bb	2026-10-12	LICENSE	Apache-2.0	Apache-2.0, sections 1-9 VERBATIM, 10 982 B	CONFIRMED -- a real permissive LMS
+# formalms: NO root grant file at all. The grant is at html/license.txt and it is the GNU GPL
+# version 2, June 1991, verbatim (5 occurrences of "GNU GENERAL PUBLIC LICENSE", 0 of "Apache").
+# The only Apache text in its tree is a vendored jsdoc prettify file. A secondary source called
+# Forma LMS "Apache 2.0"; the artifact says GPL-2.0. Caught BEFORE it entered the shelf.
+# Also recorded: formalms ships its licence in NINE languages (english, spanish, portuguese,
+# italian, german, french, croatian, bosnian, tamil) under html/lib/System/license/. Localised
+# licence text is a hazard, not a feature -- nothing in the tree says which language governs.
+# OpenOLAT: folded word-diff vs canonical Apache-2.0 is 90 added / 159 removed, and EVERY hunk is
+# at or after word 1410 -- i.e. entirely inside the APPENDIX. The operative sections 1-9 are
+# IDENTICAL. What replaces the appendix is two ATTRIBUTION statements (the original OLAT base at
+# the University of Zurich; the openolat.org base initiated by frentix GmbH). They add no term,
+# grant no right and impose no restriction beyond preserving the notices. NOTICE.TXT independently
+# states "Licensed under the Apache License, Version 2.0" and names the copyright holders.
+# NOT A NEW FINDING, and that is the point: agents/top.md recorded this at PASS 138, in these
+# words -- "Apache-2.0 verbatim with the appendix replaced by attribution notices" -- and recorded
+# the byte count 10 982 B. p170 re-measured 10 982 B independently, 32 passes later.
+# THE DEFECT IS INTERNAL: verticals/solutions.md:784 (an older block) carries OpenOLAT as
+# "Apache-2.0, the cleanest fork target of any LMS on this shelf". Line 39, p169's CURRENT routing
+# table, omits it, and line 49 says the permissive route is "exactly two". Same file, two blocks,
+# contradicting each other. See T216.

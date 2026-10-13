@@ -1,0 +1,30 @@
+# p170 regional sweep. Eight queries: four global, one per region. Year computed at runtime (2026),
+# never hardcoded. Every row states what was RETURNED and what tier it sits at.
+# TIER NOTE (T203, re-confirmed by p169 in a fresh container): eur-lex.europa.eu and
+# digital-strategy.ec.europa.eu are unreachable on every channel in this container, so EVERY
+# regulatory and market figure below is tier `search-summary` BY NECESSITY and none is promotable
+# under T160. This is a property of the environment, not a choice.
+scope	query	returned	tier	gap
+Global	top open source AI agents education 2026 github MIT	0 NEW education-specific MIT agents. Returns were general frameworks (CrewAI, LangGraph, OpenHands) and course repos (Microsoft AI Agents for Beginners, HuggingFace Agents Course), none education-vertical	search-summary	gap 113 OPENED
+Global	github trending education AI 2026	0 education-vertical trending list exists. The ai-education GitHub topic holds 288 public repos; ChatTutor and education-agent-skills named	search-summary	-
+Global	open source platform education SIS LMS MIT Apache	2 candidates named and BOTH tested: formalms REFUTED (GPL-2.0, not Apache-2.0), OpenOLAT CONFIRMED (Apache-2.0)	VERIFIED on open channel	-
+Global	AI education industry trends 2026	Shift from general chatbots to education-specific platforms; agentic/multimodal; evidence-driven procurement; governance; micro-credentials; teacher-first	search-summary	-
+North America	AI education North America 2026 adoption regulation players	RICHEST return. ~134 bills / 31 states; Ohio first to require district AI policy by 2026-07-01; CA AB 1159 (no training on student data); Idaho SB 1227; OK + MD human oversight; H.R. 8747 advanced 2026-07-21; NYC + LAUSD moratoria; ~60% of K-12 teachers used AI in 2024-25, 32% weekly; NA ~36% market share	search-summary	-
+EMEA	AI education EMEA 2026 adoption regulation players	AI Act = Regulation (EU) 2024/1689 (BASE instrument). Annex III covers education/vocational training. Schools bind as DEPLOYERS. Emotion recognition in schools prohibited. European Schools guidelines approved 2025-04. Commission ethical AI guidance for education 2026-05. Timeline CONFLICT: 2026-08 vs 2027-12 for high-risk	search-summary	gap 114 OPENED
+APAC	AI education APAC 2026 adoption regulation players	China: AI compulsory from age 6; most binding regime (6 rules in 4 years), algorithm registration. India: AI + computational thinking compulsory from Class 3 in AY 2026-27. Singapore: no AI statute; Model AI Governance Framework + AI Verify; agentic AI governance framework 2026-01; leads APAC adoption (60.9% diffusion)	search-summary	-
+LATAM	AI education LATAM 2026 adoption regulation players	Brazil PL 2338/2023 still DEBATED, fines to BRL 50M / 2% turnover; EU-Brazil digital partnership 2026-06 (5th country, 1st global south). Mexico: no federal AI law. Chile: Boletin 16821-19 pending; CENIA runs Latam-GPT. Peru Ley 31814 (2023) is the region's ONLY enacted AI law. UNESCO LAC observatory launched 2026-04-14, Mexico pilot with CONALEP + DGETI. CENIA: 13 of 19 LAC countries do NOT teach early AI	search-summary	gap 104 RE-CONFIRMED (5th)
+# MEASURED SILENCES, written down so they cannot be mistaken for coverage:
+# - AFRICA and the MIDDLE EAST: no education-specific AI instrument returned. 5th consecutive pass.
+# - No APAC or LATAM open-source education PLATFORM was named by any query. 5th consecutive pass.
+#   Every platform on this KB's shelf originates in North America or Europe. That is a real gap in
+#   a KB built for a company whose delivery centres are largely in LATAM.
+# - gap 104 RE-CONFIRMED a FIFTH time: still no education-SPECIFIC AI regulation anywhere in LATAM.
+#   Peru's Ley 31814 is general-purpose, not education-specific. Institutional governance only.
+# - gap 113 OPENED: the "top open source AI agents {industry}" query has now returned ZERO new
+#   education-vertical MIT/Apache agents for several consecutive passes. The 12-row agent shelf is
+#   not growing from this query. Either the query is exhausted for this vertical or the vertical
+#   genuinely has ~12 maintained permissive agents. Worth settling rather than re-running blindly.
+# - gap 114 OPENED: EMEA sources disagree on the Annex III high-risk date (2026-08 vs 2027-12), and
+#   p170 has found a SEPARATE problem -- see T217. This KB cites "Regulation (EU) 2026/1744" in 18
+#   files and has NEVER named Regulation (EU) 2024/1689, the base AI Act, in any CURRENT content
+#   file. 2024/1689 appears only in trending history and in a dead-URL ledger.

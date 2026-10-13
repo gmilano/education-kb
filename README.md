@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` DISCHARGED WITH ITS
+FALSIFIER FIRED, `1` NOT TAKEN for the third consecutive pass and recorded as not-taken rather than
+answered at a denominator that fits.**
+🆕 🔴 **The pass's most consequential finding is about this KB, not the ecosystem. A permissive,
+actively-developed institutional LMS has been missing from this KB's routing table for `32` passes
+while sitting licence-verified `745` lines below it in the same file. `OpenOLAT` is `Apache-2.0` with
+sections `1`–`9` verbatim; pass `138` recorded that and recorded `10 982` bytes; p170 re-measured
+`10 982` bytes from scratch — and the current routing table says the permissive LMS route is
+*"exactly two"* (`T216`). The permissive LMS route is THREE.**
+🆕 🔴 **The pass's most uncomfortable finding: this KB cites `Regulation (EU) 2026/1744` **`86`**
+times across `7` files and names `Regulation (EU) 2024/1689` — the AI Act itself, the instrument that
+puts education in Annex III — **`0`** times in any current content file. Repetition accumulated the
+appearance of sourcing (`T217`).**
+🆕 🟢 **The pass's most satisfying finding: `ACTION JI` settles `T206`. `DeepTutor`'s paraphrased
+`Apache-2.0` is an INSTANCE, not a class — `0` occurrences outside its lineage — but it PROPAGATES to
+`~30` repositories, and `3` verified here ship a byte-identical blob while naming nothing about
+`DeepTutor`. Confirmed by a hash this KB recorded `52` passes ago at p118.**
+🆕 🔴 **Four of this pass's own instruments produced wrong answers before producing findings, all
+caught before publication. One of them, a confident NEGATIVE, would have overturned a correct p169
+finding; only a blob hash disagreed with it.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION JF`** *(agents limb)* — classify penecho's `32` non-root grants | 🟢 **DISCHARGED, falsifier SILENT. `21` `MIT`, `5` `Apache-2.0`, `2` `EPL-2.0`, `1` `ISC`, `3` multi-family, `2` bodyless. `26` distinct blobs behind `32` paths. `gap 111`'s `EPL-2.0` located at `elkjs 0.12.0`, exactly where p169 said** |
+| 🔴 **`ACTION JG`** — the full-`12` `≥6` h churn reading | 🔴 **NOT TAKEN, third pass running. Gate `12:46:52Z`, p170 ran `08:45:53Z` — `4 h 00 min 59 s` short. Taken instead with its denominator: `2` of `12` over `57 min 44 s`** |
+| 🟢 **`ACTION JH`** — `P169-A` folded and tree-wide over the `7` platforms | 🟢 **DISCHARGED, falsifier SILENT. `7` of `7` root verdicts reproduce — and `Sakai` carries `129` grant bodies, `Moodle` `193`, where the column holds `1`** |
+| 🟢 **`ACTION JI`** — is the paraphrase a class or an instance? | 🟢 **DISCHARGED, falsifier SILENT. An INSTANCE that propagates by copying** |
+| 🔴 **`ACTION JF`** *(open-gaps limb)* — amend `P383` to judge one block | 🔴 **DISCHARGED IN MECHANISM, FALSIFIER FIRED. `28` findings → `1` (`96%` noise) AND the `1` is real: p169's own block carries `4` of `5` regions. `gap 112` was a misdiagnosis in both directions** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T213` — a filename is not a grant, and the error runs in BOTH directions.**
+  🔴 **A canonical-filename regex finds `15` of penecho's `36` grant paths — a `58%` UNDER-read,
+  because its grants are named `katex-LICENSE`, `architecture-LICENSES.txt` and `gif.js-README.md`.**
+  🔴 **A broad name match finds `15` in `OpenEduCat` where `1` carries a body — a `93%` OVER-read,
+  because the other `14` are copies of `notice-board-icon.svg`. An icon.**
+  🟢 **`P170-A` step `2` adds the content test that reconciles them, at one `cat-file` per candidate.**
+- 🆕 🟢 **p169's `OpenEduCat` verdict VINDICATED by an instrument with the opposite bias.** 🟢 **p169
+  said `1` grant file in `1 345` files using a narrow regex; p170 used a tool that wanted to find `15`
+  and got `1`. Two passes, opposite biases, one answer.**
+- 🆕 🔴 **`T216` — the measured cost of append-only.** 🟢 **The convention protects predecessors'
+  findings, which is why this KB works.** 🔴 **Its cost, never measured until now: once only the
+  newest block is canonical, every row a pass does not RE-STATE leaves the compiled view while staying
+  true in the history. `P170-C` is the gate; `ACTION JM` asks whether other shelves lost rows too.**
+- 🆕 🔴 **`T218` — the register has no uniqueness control.** 🔴 **`ACTION JF` was issued twice in one
+  pass by two files for two unrelated tasks. Both were executed and reported, so nothing was lost —
+  but *"`ACTION JF` was discharged"* is now ambiguous in the permanent record.** 🟢 **From p171
+  actions are registered in `intel/open-gaps.md` only; `P170-B` is the three-line gate.**
+- 🆕 🔴 **`Forma LMS` refuted at the artifact.** 🔴 **A secondary source calls it *"Apache 2.0"*. It
+  has NO root grant file, and its grant at `html/license.txt` is the GNU `GPL` version `2`, verbatim.**
+  🆕 🔴 **New hazard class: it ships its licence in NINE languages with nothing naming which governs.**
+- 🆕 🔴 **Two scanner traps inside penecho, neither creating an obligation.** 🔴 **The `EPL-2.0`
+  bundles carry Exhibit A naming `GPL-3.0-or-later` as a secondary licence — an UNFILLED form, and the
+  file says so itself.** 🔴 **`ink-lab-LICENSE.txt` carries a full `GPL-3.0` body that is JSZip's
+  declined dual option.** 🟢 **Both will be reported as `GPL-3.0` by a string-matching scanner.**
+- 🆕 🔴 **False-positive classes `11`–`14`, all caught pre-publication.** 🔴 **`11`: order-dependent
+  family matching on a concatenated grant file. `12`: a line-anchored grep against a line-WRAPPED
+  phrase, which produced a confident negative and was settled by blob hash. `13`: a join keyed on a
+  line offset, printing `10` rows under a comment asserting `2` of `12`. `14`: a gate whose block
+  extent runs past what it judges.**
+- 🆕 🟢 **The external trend with new evidence: compulsory AI curricula are now the APAC driver.**
+  🟢 **China from age `6`; India from Class `3` in academic year `2026-27` — dated, national, inside
+  twelve months. An age and an academic year are verifiable facts about demand; a CAGR is a model,
+  and the three market figures this pass returned still disagree.**
+
+### 🔴 The shelf moved — `2` of `12`
+
+🔴 **`ai-shifu/ai-shifu` and `echo-loop/Echo-Loop` both moved in `57 min 44 s`, where p169 read `0` of
+`12` over a comparable hour.** 🔵 **So p169's zero was an interval artefact, not a property. Any claim
+that these rows are quiet should read *"quiet in the hour we looked"*.**
+
+### 🔜 Registered for p171
+
+🟢 **`ACTION JJ`** (the `≥6` h churn reading, now genuinely reachable — and retired rather than
+re-registered if a fourth pass reports without taking it), **`ACTION JK`** (classify `Sakai`'s `129`
+and `Moodle`'s `193` inner grant bodies), **`ACTION JL`** (settle `T217`), **`ACTION JM`** (settle
+`T216` — did other shelves lose rows?), **`ACTION JN`** (settle `gap 113` — is the agent query
+exhausted, or is the vertical small?). 🟢 **All five with falsifiers, in
+[`intel/open-gaps.md`](intel/open-gaps.md).**
+
 ## Pass 169 — 2026-10-13
 
 🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` HALF-DISCHARGED with its

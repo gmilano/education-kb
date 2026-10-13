@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — Pass 170 *(append-only; history below is preserved)*
+
+🔴 **THE SHELF MOVED. `2` of `12` HEAD shas changed in `57 min 44 s`** — `ai-shifu/ai-shifu`
+(`2ff4af09b7bb` → `523ad3741dc1`) and `echo-loop/Echo-Loop` (`d14130b6c47d` → `9a787eb45759`).
+🟢 **p169 read `0` of `12` over a comparable `1 h 01 min 17 s`, so p169's zero was an interval
+artefact rather than a property of the shelf.** 🔴 **The `≥6` h reading `ACTION JG` asked for is
+still NOT TAKEN: the gate is `2026-10-13T12:46:52Z` and p170 ran at `08:45:53Z`, `4 h 00 min 59 s`
+short. Third consecutive pass to report on this clock without smoothing the denominator.**
+
+🆕 🔴 **`DeepTutor`'s non-canonical `Apache-2.0` PROPAGATES — `~30` repositories, verified at blob
+level.** `ACTION JI` is discharged: it is an INSTANCE, not a class (`0` hits outside the lineage), but
+`dhaual125/Axonai`, `Bitshank-2338/Lumo` and `yosiwizman/WiseTutor` all ship blob `ae1dbfc5e74c`,
+sha256 `cd2f54e1e506`, byte-identical to `DeepTutor`'s — and none of the three names `DeepTutor`.
+🔵 **Name-based provenance fails on them. Declared: `3` of the `37` indexed hits are this KB's own
+fixtures, so the external population is `34`, not `37`.**
+
+🆕 🟢 **`penecho`'s vendored grant surface, fully enumerated for the first time.** `32` non-root files,
+`26` DISTINCT blobs, `4` families: `21` `MIT`-only, `5` `Apache-2.0`, `2` `EPL-2.0` (one blob, two
+paths), `1` `ISC`. `gap 111`'s `EPL-2.0` is CONFIRMED and located at `ELK / elkjs 0.12.0`, exactly
+where p169 said it was.
+🔴 **Two scanner traps inside it:** the `EPL-2.0` bundles carry Exhibit A naming
+`GNU General Public License v3.0 or later` as a secondary licence — an UNFILLED form, not an election —
+and `ink-lab-LICENSE.txt` contains a full `GPL-3.0` body that is JSZip's declined dual option.
+🟢 **Neither creates a copyleft obligation. Both will be reported as `GPL-3.0` by a string-matching
+scanner.**
+
+🆕 🔴 **`T213` — a filename is not a grant, in BOTH directions.** The canonical-filename regex finds
+`15` of penecho's `36` grant paths (`58%` under-read); the broad name match finds `15` in
+`OpenEduCat` where `1` carries a body (`93%` over-read — the other `14` are copies of
+`notice-board-icon.svg`). `P170-A` step `2` adds the content test that reconciles them.
+
+🆕 🔴 **`ACTION JF` was registered TWICE in one pass** by two files for two unrelated tasks (`T218`).
+Both executed, both reported. From p171 actions live in `intel/open-gaps.md` only, with `P170-B` as
+the duplicate-label gate.
+
+🟢 **Licence cells, agent shelf, p170:** `6` permissive and active (`≤5` d) for a fifth pass; `2` rows
+now at `0` days; `3` still over the `180`-day drop line. No row enters or leaves.
+
+🔴 **What did NOT appear, recorded so the silence is not read as coverage:** the global
+*"top open source AI agents education 2026 github MIT"* query returned **`0`** new education-vertical
+permissive agents — only general frameworks (`CrewAI`, `LangGraph`, `OpenHands`) and course repos
+(Microsoft AI Agents for Beginners, HuggingFace Agents Course). 🆕 **`gap 113` OPENED:** several
+consecutive passes have added `0` rows from this query. Either it is exhausted for this vertical or
+the vertical genuinely has ~`12` maintained permissive agents — different worlds, testable difference.
+
 ## 2026-10-13 — Pass 169
 
 🟢 **`0` of `12` shelf rows moved: `git ls-remote` at `07:48:09Z` against p168's RECORDED full-`12`

@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🆕 🔴 **The trend p170 can evidence is about MEASUREMENT, and it is uncomfortable because every
+instance this pass is self-inflicted. Three of this pass's own instruments produced wrong answers
+before they produced findings, and a fourth — a gate this KB has reported as a growing defect count
+for three passes — turned out to be `96%` noise.**
+🆕 🔴 **`T217`: the KB cites an unverified amending regulation `86` times across `7` files and names
+the AI Act itself `0` times in any current content file. A citation can be repeated into the
+appearance of a source.**
+🆕 🔴 **`T216`: a verified, permissive, actively-developed institutional LMS fell off this KB's
+routing table while staying verified `745` lines below it in the same file. The append-only
+convention has a cost and p170 is the first pass to measure it.**
+🆕 🟢 **The one external trend with new evidence: compulsory AI curricula are now the APAC driver.
+China from age `6`, India from Class `3` in academic year `2026-27`. That is procurement with a date,
+not strategy with a direction.**
+[`evidence/name-vs-body-divergence.2026-10-13-p170.tsv`](../evidence/name-vs-body-divergence.2026-10-13-p170.tsv)
+[`evidence/region-gate-amended.2026-10-13-p170.tsv`](../evidence/region-gate-amended.2026-10-13-p170.tsv)
+[`evidence/regional-sweep.2026-10-13-p170.tsv`](../evidence/regional-sweep.2026-10-13-p170.tsv)
+
+### 🆕 🔴 The trend behind `T213` — three passes of fixing a gate that was measuring the wrong thing
+
+🟢 **This KB has now corrected its licence gate three times, and each correction revealed that the
+previous one had been right about a smaller problem than it thought:**
+
+| pass | what was fixed | what remained broken |
+|---|---|---|
+| 🟡 **p168** | 🟡 **read the BODY, not the title line** | 🔴 **only the ROOT was read** |
+| 🟡 **p169** | 🟡 **enumerate the TREE (step `5`), and FOLD typography (step `0`)** | 🔴 **the PREDICATE was still a filename match** |
+| 🆕 🟢 **p170** | 🟢 **content-test every candidate (`P170-A` step `2`)** | 🟡 **the `129` + `193` platform bodies are counted, not yet CLASSIFIED (`ACTION JK`)** |
+
+🔵 **The pattern is worth naming as a trend because it will recur: each instrument fix widened the
+denominator and left the predicate alone, so the measurement got bigger and stayed wrong. The
+direction of the error even flipped — p169's tree-wide step turned a `58%` UNDER-read on `penecho`
+into a `93%` OVER-read on `OpenEduCat`.**
+🟢 **What makes this publishable rather than embarrassing: both errors were caught by the same
+discipline, which is to re-measure a prior pass's claim with an instrument that has the OPPOSITE
+bias. `OpenEduCat`'s *"`1` grant file"* is now confirmed by a tool that wanted to find `15`.**
+
+### 🆕 🔴 Four false positives this pass, all caught before publication
+
+🟢 **Recorded as classes, because a class recurs and an incident does not:**
+
+| # | class | what it looked like | what it was |
+|---|---|---|---|
+| 🔴 **11** | 🔴 **ORDER-DEPENDENT family match on a concatenated grant** | 🔴 ***"penecho vendors `GPL`-licensed code"*** | 🟢 **`ink-lab-LICENSE.txt` bundles `3` packages; JSZip is dual *"MIT or GPLv3"* and `MIT` is elected. Tested families in sequence and stopped at the first hit** |
+| 🔴 **12** | 🔴 **a LINE-anchored grep against a line-WRAPPED phrase** | 🔴 ***"`Axonai`, `Lumo` and `WiseTutor` do NOT carry the paraphrase"*** | 🔴 **all three carry it. `(Alarm is` / `the umbrella trademark` wraps across a newline. Settled by BODY HASH instead — all three blob `ae1dbfc5e74c`** |
+| 🔴 **13** | 🔴 **a join keyed on a LINE OFFSET** | 🟡 **a churn table printing `10` rows under a comment asserting *"`2` of `12`"*** | 🟢 **`NR>8` silently dropped the two rows that had changed. Caught by counting rows, not reading them (`T215`)** |
+| 🔴 **14** | 🔴 **a gate whose BLOCK EXTENT runs past what it judges** | 🔴 ***"`28` region-heading defects, growing every pass"*** | 🟢 **`1` real defect. `13` *"out of vocabulary"* headings were FINDING headings; `11` *"missing regions"* were in historical blocks** |
+
+🔵 **Classes `11` and `12` are the same shape in opposite directions — a text predicate that assumes
+a structure the file does not have. Class `12` is the dangerous one: it produced a CONFIDENT NEGATIVE
+that would have overturned a correct p169 finding, and only a hash disagreed with it.**
+🟢 **The lesson p170 would hand forward: when a probe contradicts a prior pass, prefer an instrument
+that cannot be fooled by formatting. A blob sha has no opinion about line breaks.**
+
+### 🆕 🔴 `T217` — repetition is not corroboration
+
+🟢 **`86` citations of `Regulation (EU) 2026/1744` across `7` files. `0` citations of
+`Regulation (EU) 2024/1689` in any current content file.**
+🔵 **Read as a trend rather than a slip: this KB generates each pass's prose partly from its own
+previous prose, so a number that enters once is re-stated forward and accumulates the APPEARANCE of
+being well-sourced. `86` occurrences look like `86` confirmations and are `1` unverified claim copied
+`86` times.**
+🔴 **It is also the one defect class on this page with a direct client cost: a deck citing an
+instrument number that cannot be confirmed, while omitting the one every EMEA counsel knows.**
+🟢 **The structural fix is not *"search harder"* — `eur-lex` is unreachable on every channel here
+(`T203`, environmental, reproduced in a fresh container). It is to mark tier at the point of USE:
+an unverified instrument number should not be printable without its tier beside it. `ACTION JL`.**
+
+### 🆕 🟢 `T216` — what append-only costs, measured for the first time
+
+🔵 **The convention exists for a good reason: it prevents a pass from quietly deleting a predecessor's
+finding, and this KB's whole value rests on that.** 🔴 **Its cost, never measured until p170: if only
+the newest block is canonical — which is exactly what `gap 112`'s amendment establishes — then every
+row a pass does not re-state disappears from the compiled view while remaining true in the history.**
+🟢 **`OpenOLAT` is the worked example: `Apache-2.0`, operative text verbatim, institutional, `QTI` and
+`SCORM` built in, HEAD one day old, verified at pass `138` and re-measured to the same `10 982` bytes
+at pass `170` — and absent from the permissive-LMS route for `32` passes.**
+🟢 **The fix is cheap and is `P170-C`: a cross-block consistency gate that fails when a repository is
+licence-verified anywhere in a file and absent from that file's newest routing table.**
+🔵 **Stated as a trend because it predicts where to look next: any shelf with a ROUTING table and an
+append-only history can have lost rows the same way. Pre-registered as `ACTION JM`.**
+
+### 🆕 🟢 The external trend with real new evidence — compulsory curricula
+
+| region | mandate | date | why it is different from a policy |
+|---|---|---|---|
+| 🆕 🔴 **China** | 🔴 **AI compulsory for school students from age `6`** | 🟢 **in force** | 🟢 **a national curriculum requirement creates procurement, not guidance** |
+| 🆕 🟢 **India** | 🟢 **AI + computational thinking compulsory from Class `3`** | 🟢 **academic year `2026-27`** | 🟢 **DATED, inside twelve months, at national scale** |
+| 🟢 **USA (Alabama)** | 🟢 **an approved CS course including AI instruction required to graduate** | 🟢 **carried from p169** | 🟢 **a graduation requirement is a hard deadline per cohort** |
+
+🟢 **Against this, the global AI-in-education market figures remain irreconcilable and are recorded as
+such: `$10.6B` (`2026`) → `$42.48B` (`2030`) from one house, `~$6B` (`2024`) → `~$32B` (`2030`) from
+another, `$12.3B` for `2026` from a vendor blog. Three methodologies, no shared denominator.**
+🔵 **Which is why the curriculum mandates are the better instrument: an age, a grade and an academic
+year are verifiable facts about demand, and a CAGR is a model.**
+
+### 🆕 🟢 Added to the watch list by p170
+
+- 🔴 **Whether the `~30` repositories carrying `DeepTutor`'s non-canonical `Apache-2.0` grows.**
+  🟢 **`T219` settled that it is an INSTANCE propagating by copying, not a class. The thing worth
+  watching is the RATE, and whether any carrier edits the body further — a second-generation
+  paraphrase would be a genuinely new defect.**
+- 🟡 **Whether `Sakai`'s `129` and `Moodle`'s `193` inner grant bodies contain anything incompatible
+  with their outer grant.** 🟢 **`ACTION JK`. On `penecho`'s `32`, the answer was no — every family
+  was `MIT`, `Apache-2.0`, `ISC` or an unelected option. If that holds at `193`, the inner-audit
+  anxiety this KB has been raising is largely procedural.**
+- 🟢 **Whether `gap 113` is query exhaustion or ecosystem fact.** 🔴 **Several passes of
+  *"top open source AI agents education"* have added `0` rows. A `12`-agent vertical and an exhausted
+  query look identical from here and have opposite consequences for a studio deciding whether to
+  BUILD an education agent rather than compose one.**
+
 ## Pass 169 — 2026-10-13
 
 🆕 🔴 **The trend this pass can evidence is about GRANTS, not models: on a shelf of `12` agents, `2`

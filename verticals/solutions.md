@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🆕 🔴 **The permissive LMS route is THREE, not two — and the third was already verified by this KB,
+in this file, `32` passes ago. `verticals/solutions.md:784` carries `OpenOLAT` as `Apache-2.0` at
+`10 982` B and calls it *"the cleanest fork target of any LMS on this shelf"*. p169's routing table,
+`745` lines above it, says the permissive route is *"exactly two"*. Same file, two blocks,
+contradicting each other (`T216`).**
+🆕 🟢 **p170 re-measured `OpenOLAT` from scratch without consulting that block: `10 982` B, sections
+`1`–`9` of `Apache-2.0` VERBATIM, appendix replaced by two attribution statements that add no term.
+The byte count matches to the byte, `32` passes apart.**
+🆕 🔴 **And a candidate was REFUTED before it could enter: a secondary source calls `Forma LMS`
+*"Apache 2.0"*. Its grant is the GNU `GPL` version `2`, verbatim, at `html/license.txt`. There is no
+root grant file at all.**
+🆕 🟢 **`ACTION JH` DISCHARGED: `7` of `7` platform root verdicts reproduce under the folded,
+tree-wide gate. The licence COLUMN survives; what it DESCRIBES does not — `Sakai` carries `129` grant
+bodies and `Moodle` `193` where this page prints one cell.**
+[`evidence/permissive-lms-candidates.2026-10-13-p170.tsv`](../evidence/permissive-lms-candidates.2026-10-13-p170.tsv)
+[`evidence/platform-tree-grants.2026-10-13-p170.tsv`](../evidence/platform-tree-grants.2026-10-13-p170.tsv)
+[`evidence/name-vs-body-divergence.2026-10-13-p170.tsv`](../evidence/name-vs-body-divergence.2026-10-13-p170.tsv)
+
+### 🆕 🔴 `T216` — a verified row fell off the routing table and stayed verified elsewhere
+
+🟢 **Both statements below are in `verticals/solutions.md` right now, and both are this KB's own:**
+
+| line | block | what it says |
+|---|---|---|
+| 🔴 **`39`, `49`** | 🔴 **p169's routing table — the CURRENT one** | 🔴 ***"LMS, permissive → Sakai · Kolibri"*** and ***"still exactly two"*** |
+| 🟢 **`784`** | 🟢 **an earlier pass's block** | 🟢 ***"`OpenOLAT` · `Apache-2.0` (`10 982` B) · Full institutional LMS, permissive, with a patent grant · the cleanest fork target of any LMS on this shelf"*** |
+
+🔵 **Nobody deleted anything and nobody lied. The append-only convention means each pass writes a
+fresh block, and a row a pass does not RE-STATE silently leaves the current view while remaining true
+in the history below.** 🔴 **That is not a cosmetic defect: a client engagement reading the top of
+this page is told its permissive options are `Sakai` (which has a known patent limb, `T200`, and a
+known gate problem, `T208`) and `Kolibri` (which is not an institutional LMS) — when a clean
+`Apache-2.0` Java LMS with `QTI`, `SCORM` and assessment built in was verified and is one day old.**
+🟢 **`T216` and `gap 112` are ONE defect from two sides. The region gate's amendment (`ACTION JF`)
+establishes that only the newest block is canonical; the moment that is true, every row not re-stated
+is LOST. The gate made the convention's cost measurable.**
+🟢 **Pre-registered as `ACTION JM`: is the LMS route the only shelf this has happened to?**
+
+### 🆕 🟢 `OpenOLAT` verified from scratch — and why the appendix swap is not a defect
+
+| probe | measurement |
+|---|---|
+| 🟢 **HEAD** | 🟢 **`e4be14f0d1bb`, `2026-10-12` — `1` day old** |
+| 🟢 **root grant** | 🟢 **`LICENSE`, `10 982` B, blob `e8870c0f5f52`** |
+| 🟢 **folded word-diff vs canonical `Apache-2.0`** | 🟡 **`90` added / `159` removed — and EVERY hunk at or after word `1410`** |
+| 🟢 **operative sections `1`–`9`** | 🟢 **IDENTICAL to canonical, `0` deviations** |
+| 🟡 **what replaces `END OF TERMS` + `APPENDIX`** | 🟡 **two ATTRIBUTION statements: the original OLAT base at the University of Zurich, and openolat.org initiated by frentix GmbH** |
+| 🟢 **second grant surface** | 🟢 **`NOTICE.TXT` — independently states *"Licensed under the Apache License, Version 2.0"* and names the holders** |
+
+🔵 **Read correctly: this is the GOOD case, and it is worth stating plainly because `8` of the `26`
+bodies this KB has read deviate from what they are published as and most of those deviations are
+hazards. Here the deviation is `0` in the operative text and the replacement adds no obligation
+beyond preserving notices — which `Apache-2.0` §`4` already requires.**
+🟢 **The only real duty it creates: carry both attribution statements into any redistribution.**
+🔴 **The one caution: because the body is not byte-identical to canonical `Apache-2.0`, a
+hash-matching scanner will flag it — the same operational, non-legal risk as `T206`.**
+
+### 🆕 🔴 `Forma LMS` — REFUTED, and the shape of the refutation is the lesson
+
+| | |
+|---|---|
+| 🔴 **what a secondary source said** | 🔴 ***"Forma LMS, a fork of Docebo, is Apache 2.0 and aimed at corporate training"*** |
+| 🔴 **root grant file** | 🔴 **NONE. `formalms/formalms` has no `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` at its root** |
+| 🟢 **where the grant actually is** | 🟢 **`html/license.txt`, `18 346` B** |
+| 🔴 **what it actually is** | 🔴 **`GNU GENERAL PUBLIC LICENSE Version 2, June 1991` — verbatim. `5` occurrences of the GPL title, `0` of *"Apache"*** |
+| 🟡 **HEAD** | 🟡 **`446a77a9b9cb`, `2026-07-17` — `88` days** |
+
+🟡 **A second finding in the same tree, recorded because it is a hazard this KB has not seen before:
+`Forma LMS` ships its licence in NINE languages under `html/lib/System/license/` — english, spanish,
+portuguese, italian, german, french, croatian, bosnian, tamil.** 🔴 **Nothing in the tree states which
+language GOVERNS.** 🔵 **For a LATAM or EMEA engagement that looks like a convenience and is a
+question: a translated copyleft licence is not a second licence, and a client's counsel will want the
+English text named as controlling.**
+🟢 **Caught BEFORE the shelf, which is the point. The permissive-SIS hole has been re-searched for
+eight passes; this pass the query finally returned new names, and testing them cost two treeless
+clones.**
+
+### 🆕 🟢 Platform routing — corrected, with `OpenOLAT` restored and grant surfaces counted
+
+| need | route | licence | grant bodies *(tree-wide)* | status |
+|---|---|---|---|---|
+| 🆕 🟢 **LMS, permissive — institutional** | 🆕 🟢 [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim)* | 🔴 **`154` name matches** | 🆕 🟢 **RESTORED (`T216`). HEAD `1` d. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive** | 🟡 [**Sakai**](https://github.com/sakaiproject/sakai) · [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 `ECL-2.0` · 🟢 `MIT` | 🔴 **`129`** · 🟡 **`6`** | 🟡 **`Sakai` keeps its gate problem (`T208`) and patent limb (`T200`) — now with `129` inner grants measured** |
+| 🟢 **LMS, behind an API boundary** | 🟢 [**Open edX**](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | 🟡 **`15`** | 🟢 **unchanged — the RPC carve-out, `gap 107` stands** |
+| 🟢 **LMS, plain copyleft** | 🟢 [**Moodle**](https://github.com/moodle/moodle) · [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | 🔴 **`193`** · 🟢 **`2`** | 🟢 **root verdicts reproduce. `Moodle` has the largest inner grant surface on this shelf** |
+| 🆕 🔴 **LMS, corporate training** | 🆕 🔴 [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`, no root grant)* | — | 🆕 🔴 **NEW ROW, REFUTED as permissive. A source called it `Apache-2.0`; the artifact is `GPL-2.0` verbatim. Licence shipped in `9` languages, none named as governing** |
+| 🟡 **SIS, active** | 🟡 [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟡 **`11`** | 🟢 **re-verified — HEAD `2026-10-12`, `1` d. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | 🟡 [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(not at the root)* | 🟡 **`22`** | 🟢 **re-verified — HEAD `2026-10-05`. NO root grant file, confirming p169. `gap 112`'s CKEditor grants still unread** |
+| 🟡 **SIS / education ERP, weak copyleft** | 🟡 [**OpenEduCat**](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | 🟢 **`1`** | 🟢 **p169's `gap 109` finding VINDICATED by a second instrument: `15` name matches, `1` body, the other `14` an icon** |
+| 🔴 **SIS, PERMISSIVE** | 🔴 **none** | — | — | 🔴 **NINTH pass. `Fedena` stays settled-and-abandoned (`T212`); `Forma LMS` was this pass's candidate and is `GPL-2.0`** |
+| 🟢 **SCORM `2004` export** | 🟢 [**scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🟢 **`1`** | 🟢 **unchanged — and the ONLY row where name matches and grant bodies agree exactly** |
+
+🟢 **The permissive LMS route is now THREE: `OpenOLAT` (`Apache-2.0`, institutional), `Sakai`
+(`ECL-2.0`, with two known caveats) and `Kolibri` (`MIT`, not institutional).**
+🔴 **The permissive SIS route is still EMPTY, for a ninth pass — and now with one more name tested and
+refuted rather than merely re-searched.**
+
+### 🆕 🔴 What the tree-wide count changes for a client engagement
+
+🔵 **The honest sentence to lead with: the licence cell on this page is the OUTER grant. For `Sakai`
+it describes `1` of `129` grant bodies in the tree; for `Moodle`, `1` of `193`.**
+🟢 **That is not a reason to distrust the column — `7` of `7` root verdicts reproduced this pass under
+a stricter instrument.** 🔴 **It is a reason to budget the inner audit as work: a client's scanner
+reads all `129`, and `T213` shows that counting them by filename alone is wrong by `36` on that repo
+in the over-reading direction.**
+🟢 **`P170-A` is the procedure, and its step `2` is the content test that makes the count mean
+something.**
+
 ## Pass 169 — 2026-10-13
 
 🆕 🟢 **The SIS row on the platform table changes for the first time in seven passes — not because a

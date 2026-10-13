@@ -1,0 +1,55 @@
+# ACTION JF (agents limb), p170. penecho/penecho at HEAD 076c1ad54a85 -- UNCHANGED since p169, so
+# every difference below is INSTRUMENT, not tree. p169 recorded "4 root + 32 below". p170 reproduces
+# 4 + 32 EXACTLY under a broad name match (any path containing licen|copying|notice, case-insensitive).
+# A CANONICAL-FILENAME regex (^LICENSE$|^COPYING$|^NOTICE$|*.LICENSE) finds only 15 of the 36 --
+# it under-reads by 21, i.e. 58%, because these grants live in names like katex-LICENSE,
+# architecture-LICENSES.txt (plural) and gif.js-README.md.
+# distinct_families counts licence FAMILIES whose body is present in that one file.
+path	bytes	blob_sha12	distinct_families	families
+integrations/penecho-cloud/LICENSE	1366	0e09fe8b2177	1	MIT
+integrations/penecho-cloud/hermes/portable/LICENSE	1366	0e09fe8b2177	1	MIT
+public/playground/three-LICENSE.txt	1080	8ada2a5f9829	1	MIT
+public/vendor/antv-infographic.LICENSE	1060	d52dc4b1325f	1	MIT
+public/vendor/architecture-LICENSES.txt	15651	286f4fcb048f	2	MIT EPL-2.0
+public/vendor/html2canvas.LICENSE	1061	a73ffc9143ed	1	MIT
+public/vendor/ink-lab-LICENSE.txt	36054	8e60f0fa7575	2	MIT GPL
+public/vendor/manim-web-licenses/THIRD-PARTY-NOTICES.md	1313	04272beacc18	0	NONE-manifest-only
+public/vendor/manim-web-licenses/earcut-LICENSE	737	e8c743021ce8	1	ISC
+public/vendor/manim-web-licenses/gif.js-README.md	4135	52011a641485	1	MIT
+public/vendor/manim-web-licenses/katex-LICENSE	1106	37c6433e3bed	1	MIT
+public/vendor/manim-web-licenses/mathjax-LICENSE	11357	d64569567334	1	Apache-2.0
+public/vendor/manim-web-licenses/mhchemparser-LICENSE.txt	11356	8dada3edaf50	1	Apache-2.0
+public/vendor/manim-web-licenses/mj-context-menu-LICENSE	11356	261eeb9e9f8b	1	Apache-2.0
+public/vendor/manim-web-licenses/opentype.js-LICENSE	1084	023e618778ff	1	MIT
+public/vendor/manim-web-licenses/polygon-clipping-LICENSE.md	1326	0c7f4283a413	1	MIT
+public/vendor/manim-web-licenses/speech-rule-engine-LICENSE	10173	f433b1a53f5b	1	Apache-2.0
+public/vendor/manim-web-licenses/splaytree-README.md	7735	2fb7493dec16	1	MIT
+public/vendor/manim-web-licenses/three-LICENSE	1080	8ada2a5f9829	1	MIT
+public/vendor/manim-web-licenses/typia-LICENSE	1067	8b6e08c44e2f	1	MIT
+public/vendor/manim-web.LICENSE	1069	48a2e837dd19	1	MIT
+public/vendor/mathjax-3.2.2/LICENSE	11357	d64569567334	1	Apache-2.0
+public/vendor/scene/anime.LICENSE	1074	f999fa58ebdd	1	MIT
+public/vendor/scene/matter.LICENSE	1092	0e1ed72ff003	1	MIT
+public/vendor/scene/zdog.LICENSE	1292	1548efb8ca1b	1	MIT
+public/vendor/sequence-LICENSES.txt	1152	de21784e3d14	1	MIT
+public/vendor/three-0.184.0/LICENSE	1080	8ada2a5f9829	1	MIT
+public/vendor/workflow-LICENSES.txt	15651	286f4fcb048f	2	MIT EPL-2.0
+scripts/manim-web-third-party-notices.md	1313	04272beacc18	0	NONE-manifest-only
+src/architecture/vendor/archify/LICENSE	1101	0f9f9397a049	1	MIT
+src/server/canvas-agent/public-api-data/LICENSE.public-apis	1067	196b23b178fb	1	MIT
+src/server/canvas-agent/vendor/LICENSE	1064	c1f7a78e89e4	1	MIT
+# TALLY over the 32 non-root files: 21 MIT-only, 5 Apache-2.0, 1 ISC, 3 carrying TWO families,
+# 2 carrying no body at all (third-party NOTICE manifests, tables not grants).
+# gap 111's EPL-2.0 is CONFIRMED and LOCATED: architecture-LICENSES.txt and workflow-LICENSES.txt,
+# BYTE-IDENTICAL (blob 286f4fcb048f), both bundling Archify 2.17 + "ELK / elkjs 0.12.0" -- so p169's
+# attribution of the EPL-2.0 to elkjs HOLDS, read off the artifact at line 25.
+# Those bundles also carry EPL-2.0's Exhibit A naming GPL-3.0-or-later as a SECONDARY licence. The
+# Exhibit is the unfilled FORM, and the file itself says "Simply including a copy of this Agreement,
+# including this Exhibit A is not sufficient to license the Source Code under Secondary Licenses."
+# So the secondary licence is NOT elected here. Recorded because a scanner keying on the string
+# "GNU General Public License v3.0 or later" will report a GPL-3.0 dependency that does not exist.
+# The one GPL body: ink-lab-LICENSE.txt, a 3-package bundle (Nerdamer 1.1.13, PptxGenJS 4.0.0,
+# JSZip 3.10.1). JSZip is DUAL "MIT or GPLv3" by its own words, so the GPL-3.0 body is an OPTION
+# the redistributor declines by electing MIT. No GPL obligation enters penecho from it.
+# DEDUP: the 32 paths hold only 26 DISTINCT blobs. three-LICENSE appears 3x (blob 8ada2a5f9829),
+# and 4 further blobs appear twice. "36 grant surfaces" counts PATHS, not grants.

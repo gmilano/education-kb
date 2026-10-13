@@ -4,6 +4,179 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 170 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region, with the year computed at runtime.**
+🆕 🔴 **`T217` is this page's finding and it is about this page: the KB cites `Regulation (EU)
+2026/1744` **`86`** times across `7` files, and names `Regulation (EU) 2024/1689` — the AI Act itself,
+the instrument that puts education in Annex III — **`0`** times in `intel/market.md`,
+`intel/trends.md`, `README.md`, `compose/patterns.md`, `verticals/solutions.md`,
+`repos/foundations.md` or `agents/top.md`.**
+🆕 🔴 **`gap 112`'s region gate, amended this pass, finds exactly ONE real defect in the whole tree —
+and it is in this file: p169's block carries `North America`, `EMEA`, `APAC` and `LATAM` and NOT
+`Global`. `4` of the `5` closed-vocabulary regions. p170's block below carries all `5`.**
+🆕 🟢 **`gap 104` RE-CONFIRMED a FIFTH time: still no education-specific AI regulation anywhere in
+LATAM. Peru's `Ley 31814` is the region's only enacted AI law and it is general-purpose.**
+🔴 **`T203` stands: every regulatory and market figure on this page is tier `search-summary` BY
+NECESSITY and none is promotable under `T160`.**
+[`evidence/regional-sweep.2026-10-13-p170.tsv`](../evidence/regional-sweep.2026-10-13-p170.tsv)
+[`evidence/region-gate-amended.2026-10-13-p170.tsv`](../evidence/region-gate-amended.2026-10-13-p170.tsv)
+
+### 🆕 🔴 `T217` — the KB cites the amendment `86` times and the Act `0` times
+
+| instrument | what it is | citations in CURRENT content |
+|---|---|---|
+| 🔴 **`Regulation (EU) 2026/1744`** | 🔴 **an amending instrument this KB has never read on a primary channel** | 🔴 **`86`** — `market.md` `22`, `open-gaps.md` `20`, `README.md` `13`, `trends.md` `8`, `patterns.md` `3`, trending files `20` |
+| 🟢 **`Regulation (EU) 2024/1689`** | 🟢 **the AI Act — the instrument that makes education high-risk under Annex III** | 🔴 **`0`** in every current content file. `4` occurrences exist, all in Spanish trending history and one dead-URL ledger |
+
+🟢 **p170's EMEA query returned `2024/1689` independently, as the AI Act's identity, from a source
+that had no contact with this KB.**
+🔵 **Why this matters more than a citation style: a client deck generated from this KB would name an
+instrument number that cannot be confirmed from this container, while omitting the number every EMEA
+counsel recognises. If `2026/1744` is wrong, every date hung on it is unsourced. If it is right, it is
+an AMENDMENT and the base Act still has to be named for the Annex III duty to make sense.**
+🟢 **What p170 does NOT claim: that `2026/1744` is fabricated. The Annex III delay it encodes
+(`2027-12-02`) is independently corroborated this pass by a source describing the high-risk assessment
+deadline moving from `2026-08` to `2027-12`. An amending act is plausible.** 🔴 **What p170 does
+claim: it is UNVERIFIED on every channel open here, it is cited `86` times, and the base instrument is
+cited `0` times. That asymmetry is the defect.**
+🟢 **Pre-registered as `ACTION JL` with an explicit falsifier.**
+
+### 🆕 🟢 EMEA — the regulatory surface, re-read
+
+| finding | value | engagement consequence |
+|---|---|---|
+| 🟢 **the instrument** | 🟢 **`Regulation (EU) 2024/1689`** | 🟢 **name THIS in client material, with `2026/1744` flagged as an unverified amendment (`T217`)** |
+| 🟢 **how schools bind** | 🟢 **as DEPLOYERS, not providers** | 🟢 **duties attach to the institution's USE — the sellable work is deployment governance, not model conformity** |
+| 🔴 **Annex III scope** | 🔴 **education and vocational training: admissions, assignment to training, outcome assessment** | 🔴 **the three highest-value AI features in education are all high-risk** |
+| 🔴 **date CONFLICT, unresolved** | 🔴 **`2026-08` against `2027-12-02` for high-risk obligations** | 🟡 **`gap 114`. Budget to the earlier date and build to the later one** |
+| 🔴 **prohibited outright** | 🔴 **emotion inference in educational contexts** | 🔴 **engagement detection and attention tracking are a FEATURE REMOVAL, not a compliance task** |
+| 🟢 **institutional precedent** | 🟢 **European Schools guidelines approved `2025-04`: GDPR + AI Act compliance, no compelled use of unapproved genAI** | 🟢 **a template a ministry client can be shown** |
+| 🟢 **a second legal layer** | 🟢 **Commission ethical AI guidance for education, `2026-05`; Council of Europe instrument in progress** | 🟢 **policy and readiness work with a second deadline behind it** |
+
+### 🆕 🟢 APAC — compulsory AI curricula are now the regional driver
+
+| finding | value | engagement consequence |
+|---|---|---|
+| 🆕 🔴 **China** | 🔴 **AI compulsory for school students from age `6`; the region's most binding regime — `6` rules in `4` years, algorithm registration required** | 🔴 **largest curriculum market, highest compliance barrier. Registration is a local-entity obligation** |
+| 🆕 🟢 **India** | 🟢 **AI and computational thinking compulsory from Class `3`, from academic year `2026-27`** | 🟢 **a DATED national curriculum mandate — courseware and teacher training at national scale, inside `12` months** |
+| 🟢 **Singapore** | 🟢 **no AI statute. Model AI Governance Framework + AI Verify; agentic AI governance framework `2026-01`; leads APAC adoption at `60.9%` diffusion** | 🟢 **voluntary frameworks act as de facto procurement requirements — AI Verify conformance is the sellable artifact** |
+| 🟡 **Korea** | 🟡 **AI Basic Act in force; education a *"high-impact"* use; `2026` signalled as a pilot period with limited enforcement** | 🟢 **carried from p169 — still the cheapest window to deploy and document** |
+
+🟢 **The APAC shape has changed: where prior passes held policy statements, p170 holds two COMPULSORY
+CURRICULUM mandates with ages and dates attached. That is procurement, not strategy.**
+
+### 🆕 🟢 LATAM — adoption without oversight, and the region's only enacted law
+
+| finding | value | engagement consequence |
+|---|---|---|
+| 🟢 **Brazil** | 🟡 **`PL 2338/2023` still DEBATED — risk-based, fines to `BRL 50M` or `2%` of turnover. EU–Brazil digital partnership signed `2026-06` — fifth country, first from the global south** | 🟢 **the partnership is the tell: Brazil is converging on the EU shape, so EU conformity work PORTS** |
+| 🔴 **Mexico** | 🔴 **no federal AI law; multiple bills introduced, none passed. A deepfake criminal reform pending** | 🔴 **no statutory hook — sell institutional governance** |
+| 🟡 **Chile** | 🟡 **`Boletín 16821-19` pending; CENIA runs `Latam-GPT`, trained on regional data** | 🟢 **`Latam-GPT` is a regional sovereignty story a public-sector client can be sold on** |
+| 🟢 **Peru** | 🟢 **`Ley 31814` (`2023`) — the region's ONLY enacted AI law** | 🟡 **general-purpose, NOT education-specific. Does not close `gap 104`** |
+| 🆕 🟢 **UNESCO** | 🟢 **LAC observatory on AI in education launched `2026-04-14`; Mexico pilot with CONALEP and DGETI** | 🟢 **a named, funded, multilateral programme with an institutional counterpart — the most concrete LATAM entry point this KB holds** |
+| 🔴 **the capability gap** | 🔴 **CENIA: `13` of `19` LAC countries do NOT teach early AI** | 🟢 **teacher-capability and curriculum work is the unmet need, and it is measured** |
+
+🔴 **`gap 104` RE-CONFIRMED a FIFTH time. Education-specific AI regulation in LATAM: NONE. What exists
+is institutional governance and one general-purpose statute.**
+
+### 🆕 🔴 Measured silences — written down so they cannot be read as coverage
+
+| what was searched | what came back | pass count |
+|---|---|---|
+| 🔴 **AFRICA, MIDDLE EAST — education-specific AI instrument** | 🔴 **NOTHING** | 🔴 **fifth consecutive** |
+| 🔴 **an APAC or LATAM open-source education PLATFORM** | 🔴 **NOTHING. Every platform on this KB's shelf originates in North America or Europe** | 🔴 **fifth consecutive** |
+| 🔴 **new education-vertical `MIT`/`Apache` AGENTS** | 🔴 **ZERO. The global agent query returned general frameworks (`CrewAI`, `LangGraph`, `OpenHands`) and course repos, none education-vertical** | 🆕 🔴 **`gap 113` OPENED** |
+
+🔵 **The platform silence deserves naming rather than repeating: this KB is built for a company whose
+delivery centres are largely in LATAM, and after five passes it cannot name one open-source education
+platform that originated there. That is a finding about the ecosystem, not a failure of the query.**
+🟢 **`gap 113` is the honest form of the agent silence: either the *"top open source AI agents"* query
+is exhausted for this vertical, or the vertical genuinely has about `12` maintained permissive agents.
+Those are different worlds and the difference is testable. Pre-registered.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The region with the most statutory pull, and the pull has not moved this pass: `~134` bills across
+`31` states, Ohio first to require a district AI policy (deadline `2026-07-01`), Tennessee alongside
+it.** 🟢 **Sell the policy-and-controls engagement, not the tutor — a per-state compliance matrix
+instantiated as district templates, at the volume of thousands of districts.**
+🔴 **Two hard architectural constraints, both statutory: California `AB 1159` forbids training on
+student data, and Oklahoma and Maryland require human oversight with AI barred from high-stakes
+decisions. A product that grades autonomously or trains on tenant data is unsellable in those states.**
+🔴 **Lead with the objection, because a client will raise it: New York City and LAUSD have both
+suspended or restricted student-facing generative AI. The sellable shape is TEACHER-facing with the
+teacher in the loop.**
+🟢 **The funded framing is AI LITERACY — `H.R. 8747` advanced in committee `2026-07-21`, and the ED
+grant-priority rule points the same way.** 🟢 **Adoption is real, not aspirational: `~60%` of K-12
+teachers used AI tools in `2024-25`, `32%` weekly, and North America holds `~36%` of the market.**
+
+### EMEA
+
+🟢 **Sell CONFORMITY work: this is the region where the rules are mapped and uptake is not.**
+🟢 **Name `Regulation (EU) 2024/1689` in the deck (`T217`), and treat the `2026-08` vs `2027-12`
+Annex III conflict as a budgeting question — budget to the earlier date, build to the later.**
+🔴 **One feature class is removed rather than documented: emotion inference is PROHIBITED in
+educational contexts. Engagement detection is not a compliance task, it is a deletion.**
+🟢 **Schools bind as DEPLOYERS, which is the commercially useful fact — the work attaches to the
+institution's use, where the budget and the anxiety both sit.**
+🆕 🟢 **The architecture that fits just improved: `OpenOLAT` (`Apache-2.0`, §`1`–`9` verbatim, HEAD
+`1` day old, `QTI` and `SCORM` built in, Swiss/German institutional heritage) is the permissive
+institutional LMS this page should have been routing EMEA engagements to for `32` passes (`T216`).**
+🟢 **`Open edX` behind an API boundary stays the `AGPL-3.0` route; `Sakai` stays available with
+`ECL-2.0` decided in writing first (`T208`, `P169-C`).**
+
+### APAC
+
+🆕 🟢 **The timing argument is now a CURRICULUM argument, which is stronger than a compliance one.**
+🟢 **India is the single largest dated opportunity on this page: AI and computational thinking
+compulsory from Class `3` starting academic year `2026-27`. That is courseware, teacher training and
+assessment at national scale with a deadline inside twelve months, and `P168-C`'s `MIT` courseware
+tier — `53` verified locales — is the asset to take into it.**
+🔴 **China is the largest market and the highest barrier: compulsory AI from age `6`, six binding
+instruments, and algorithm registration that requires a local entity. Treat as partner-led.**
+🟢 **Singapore is the cheapest credential: no statute, but AI Verify conformance functions as a de
+facto procurement requirement, and the `2026-01` agentic governance framework means an agent product
+can be certified against something that exists.**
+🟡 **Korea's pilot period (`2026`, limited enforcement) remains the lowest-risk window to deploy and
+document, carried from p169.**
+
+### LATAM
+
+🟢 **The concrete entry point is UNESCO's LAC observatory, launched `2026-04-14`, with a Mexico pilot
+running through CONALEP and DGETI — a named programme with an institutional counterpart, which is
+rarer and more actionable than a market figure.**
+🟢 **Brazil is the convergence play: `PL 2338/2023` is risk-based and the EU–Brazil digital
+partnership (`2026-06`) signals alignment with the EU shape, so EMEA conformity work PORTS here
+rather than being rebuilt.**
+🔴 **The honest constraint, fifth confirmation: there is NO education-specific AI regulation anywhere
+in LATAM (`gap 104`). Peru's `Ley 31814` is general-purpose. So compliance cannot be the pitch —
+institutional governance, teacher capability and curriculum can.**
+🟢 **The measured need: `13` of `19` LAC countries do not teach early AI (CENIA). That is the gap to
+sell into, and `Latam-GPT` is the regional-sovereignty narrative to sell alongside it.**
+🔴 **Stated plainly because it is this KB's own blind spot: after five passes, no open-source
+education platform originating in LATAM has been named by any query. Delivery capability here is not
+matched by regional open-source supply.**
+
+### Global
+
+🟢 **The cross-regional thesis this pass supports: procurement is shifting from *"does it work"* to
+*"can you evidence it"*, and that is a documentation-and-controls market before it is a model market.**
+🟢 **Three independent signals agree — EMEA conformity duties, US state statutes requiring human
+oversight, and APAC frameworks (AI Verify, Korea's high-impact classification) functioning as
+procurement gates.**
+🟢 **What Globant can build on today, licence-verified this pass: `OpenOLAT` (`Apache-2.0`,
+institutional LMS, `1` d), `Kolibri` (`MIT`), `scorm-again` (`MIT`), `Selleo/mentingo` (`MIT`, and it
+ships a working dependency-licence gate), `anki-mcp-server` (`MIT`), `ai-shifu` (`Apache-2.0`, `0` d).**
+🔴 **What is still missing globally, and is a real hole rather than a search failure: no permissive
+SIS (ninth pass), no education-vertical permissive agent added in several passes (`gap 113`), and no
+APAC or LATAM originated platform at all.**
+🔴 **The global licence caution that now has numbers behind it: the licence NAME on a repository
+describes its outer grant only. `Sakai` carries `129` grant bodies, `Moodle` `193`. Budget the inner
+audit, and run it with a content test rather than a filename match (`T213`, `P170-A`).**
+
 ## Pass 169 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region.** 🆕 🟢 **North America is this pass's real gain:
