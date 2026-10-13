@@ -1,0 +1,20 @@
+# ACTION JW (p173) -- gap 122 / T238. For each of the 12 shelf rows, the GitHub topics as the
+# repository itself declares them, read from the rendered About sidebar at github.com/<slug>
+# (channel stated per T227; api.github.com refuses these paths, see the channel note below).
+# FALSIFIER: "refuted if >=6 of the 12 carry at least one of ai-education, ai-tutor, edtech,
+# education". IT FIRES AT 12 OF 12 -- the maximum. But only 1 of 12 carries ai-education, which is
+# the topic every 485/357/135 figure this KB has published was measured on.
+repo	topics_declared	has_ai_education	has_ai_tutor	has_edtech	has_education	carries_any
+ai-shifu/ai-shifu	agent, ai, education, llm, teaching-assistant	no	no	no	YES	YES
+penecho/penecho	ai, canvas, claude, codex, education, handwriting, nodejs, visual-thinking	no	no	no	YES	YES
+echo-loop/Echo-Loop	ai, education, english-learning, flutter, language-learning, listening-practice, spaced-repetition, speaking-practice	no	no	no	YES	YES
+ankimcp/anki-mcp-server	ai, ai-learning-tool, ai-tutor, anki, anki-addon, anki-flashcards	no	YES	no	no	YES
+Selleo/mentingo	ai-lms, ai-mentor, ai-tutor, compliance-training, corporate-training, docebo-alternative, edtech, hrtech, learning-management-system, lms, moodle-alternative, open-source-lms, openedx-alternative, roleplay, scorm, self-hosted, training, typescript, white-label, xapi	no	YES	YES	no	YES
+HKUDS/DeepTutor	ai-agents, ai-tutor, clawbot, cli-tool, deepresearch, interactive-learning, learning, multi-agent-systems, rag	no	YES	no	no	YES
+CaviraOSS/PageLM	ai, docker, edtech, education, flashcards, javascript, langchain, nodejs, notebooklm, notes, oss, pagelm, podcast, quizzes, rag, react, study-tools, tailwindcss, typescript, vite	no	no	YES	YES	YES
+zijinz456/OpenTutor	adaptive-learning, ai, ai-tutor, edtech, education, fastapi, knowledge-graph, learning, llm, local-first, nextjs, open-source, python, self-hosted, spaced-repetition, typescript	no	YES	YES	YES	YES
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	ai, animated-presenters, education, generative-ai, lip-sync, local-ai, python, react, rust, tauri, text-to-speech, tutorials, typescript, video-editor, video-generation, windows	no	no	no	YES	YES
+HugeCatLab/ChatTutor	ai, ai-education, education, llm, stem	YES	no	no	YES	YES
+plastic-labs/tutor-gpt	ai, education, hacktoberfest, literacy, machine-learning, o1, prompt-engineering, reasoning, theory-of-mind, tutoring	no	no	no	YES	YES
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ai, education, gpt-4, llm	no	no	no	YES	YES
+# TALLY: carries_any 12/12 | ai-education 1/12 | ai-tutor 4/12 | edtech 3/12 | education 9/12

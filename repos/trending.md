@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p173
+
+🆕 🔴 **The population this page has been counting for six passes has a name now, and it is not
+*"the education vertical"*. It is *"repositories that tag themselves `ai-education`"*. Same
+filters, different tag: `topic:education` returns **`8.2k`** against `ai-education`'s `135`
+(`~61×`), and `9` of this KB's `12` shelf rows carry `education` while `1` carries `ai-education`
+(`T255`, `ACTION JW`).**
+🆕 🔴 **And `25.2%` of the `135` have not been pushed to in `90` days — `47.4%` in `60` and `71.1%` in
+`30`. The `180`-day liveness bar this KB has used on every population figure admits a
+quarter of its rows as *"active"* while nobody works on them (`T242`, `gap 121` CLOSED).**
+🆕 🔴 **`T252` — and this channel ROUNDS above `1 000`. It answers *"8.2k"*, not `8 214`. `T227`
+says record the query string; p173 adds: record the channel's PRECISION. Every exact count on this
+page is exact because it happens to be under `1 000`, which is luck and not method (`gap 125`).**
+
+### 🆕 🟢 Dormancy by band — four queries, no enumeration, no API
+
+| query *(verbatim)* | count | dormant at the band | % of `135` |
+|---|---|---|---|
+| `topic:ai-education pushed:>=2026-04-16 license:mit` *(the `180`-d bar)* | `135` | — | — |
+| `topic:ai-education pushed:>=2026-09-13 license:mit` | `39` | 🔴 **`96`** | 🔴 **`71.1%`** |
+| `topic:ai-education pushed:>=2026-08-14 license:mit` | `71` | 🔴 **`64`** | 🔴 **`47.4%`** |
+| `topic:ai-education pushed:>=2026-07-15 license:mit` | `101` | 🔴 **`34`** | 🔴 **`25.2%`** |
+| 🆕 `topic:ai-education created:>=2026-09-13` | `29` | *(creation cohort, see [`agents/trending.md`](../agents/trending.md))* | — |
+
+🟡 **Limit stated rather than buried: `pushed:` is PUSH recency and `ACTION JV` asked for COMMIT
+recency. These are a LOWER bound on commit dormancy — a tag, a merge or a side branch keeps a dead
+default branch inside the band. Report them as *"not pushed to in N days"*.**
+
+### 🆕 🔴 The denominator queries, side by side
+
+| query *(verbatim)* | count | vs `135` | shelf rows carrying the tag |
+|---|---|---|---|
+| `topic:ai-education pushed:>=2026-04-16 license:mit` | `135` | `1×` | 🔴 **`1` of `12`** |
+| 🔴 `topic:education pushed:>=2026-04-16 license:mit` | 🔴 **`8.2k`** *(rounded)* | 🔴 **~`61×`** | 🟢 **`9` of `12`** |
+| 🔴 `topic:edtech pushed:>=2026-04-16 license:mit` | 🔴 **`1.3k`** *(rounded)* | ~`10×` | `3` of `12` |
+| `topic:ai-tutor pushed:>=2026-04-16` *(no licence filter)* | `581` | ~`4×` | `4` of `12` |
+
+🆕 🟢 **What to do with this, stated so the next pass does not re-litigate it: keep `ai-education`
+as a SHORTLIST generator — it is small, exact and permissively filtered — and stop using it as a
+DENOMINATOR. Any sentence of the form *"the vertical is N repositories"* must either say which tag
+it counted or not be written.**
+
+🟢 **`T251` — channel note corrected.** This page said since p172 that *"`api.github.com` answers
+`403` at the proxy"*. Measured at p173: `/rate_limit` answers `200`, core limit `15 000`,
+remaining `15 000`. The refusals are **session repo-binding**, not a proxy policy —
+`search/repositories` returns `403` with *"sessions are bound to their configured repositories. Use
+repository-scoped endpoints"*. 🟢 **Four channels to GitHub from this container, four answers:
+`api.github.com` scoped-`200`, `raw.githubusercontent.com` `200` at ARBITRARY shas,
+`github.com` HTML `403` to `curl` but readable rendered, and `git` over https fully working except
+sha-in-`want`.**
+[`compose/code/p173-dormancy-bands/`](../compose/code/p173-dormancy-bands/)
+· [`evidence/dormancy-bands-135.2026-10-13-p173.tsv`](../evidence/dormancy-bands-135.2026-10-13-p173.tsv)
 ## 2026-10-13 — p172
 
 🆕 🟢 **The seven `ai-education` topic counts p171 recorded were re-run one hour later and ALL SEVEN

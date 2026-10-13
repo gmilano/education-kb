@@ -1,0 +1,13 @@
+# ACTION JT (p173) -- gap 118. Middle East and Africa searched as their OWN region, not as a tail
+# of "EMEA". Query strings recorded per T227. Channel: WebSearch (US-indexed), 2026-10-13.
+# FALSIFIER LIMB 1: "refuted if the searches return substantive, placeable findings for >=2
+# countries". IT FIRES: 8 countries returned placeable findings. p172's silence was a QUERY
+# artefact, not a coverage gap -- the same defect ACTION JN found in the agent query.
+# LIMB 2 ("refuted if 0 of ~6 formulations returns anything") is SILENT: 6 of 6 returned.
+query_string	formulation_n	returned_substantive	countries_placed	strongest_finding
+AI education adoption Middle East 2026 regulation players	1	yes	UAE, Saudi Arabia	UAE mandatory AI curriculum K-12 from 2025/26; Coursera-sponsored benchmark puts UAE+KSA in top Gulf regulatory tier
+AI education Africa 2026 adoption regulation edtech	2	yes	Kenya, Rwanda, South Africa, Nigeria	WISE/Ashesi survey of 47 African HEIs: 6 in 10 have NO formal AI governance framework; 64pct of startups are K-12, <2pct build for higher ed
+edtech AI Gulf GCC UAE Saudi Arabia 2026 schools adoption	3	yes	UAE, Saudi Arabia, Bahrain	Both UAE and KSA have made AI education compulsory in public schools; private-school adoption lags and is admin-first
+AI curriculum policy Nigeria Kenya South Africa 2026	4	yes	Nigeria, Kenya, South Africa	South Africa Draft National AI Policy Framework gazetted for comment March 2026, implementation targeted 2027-2028; Kenya National AI Strategy 2025-2030
+artificial intelligence education strategy Egypt Morocco Israel 2026	5	partial	Egypt, Morocco	Egypt AI curricula in schools from 2025-26 academic year + National AI Strategy 2025-2030; Morocco pushing an Arab-wide AI-in-education strategy. ISRAEL RETURNED NOTHING
+African open source edtech AI startups 2026 funding github	6	partial	Kenya, Nigeria, Tanzania	Gates Foundation ~USD 4.0M (July 2026) to Fab AI Foundation to fine-tune OPEN-SOURCE small models for Sub-Saharan classrooms. NO African-origin open-source edtech repo surfaced

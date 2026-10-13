@@ -1,0 +1,56 @@
+# ACTION JU (p173), FALSIFIER LIMB 1: "refuted if the corrected classifier changes 0 verdicts
+# outside Sakai". Population: every licence BODY committed in this repository's own instrument
+# fixtures -- 50 files under compose/code/**/fixtures and lib/fixtures-*, the corpus this KB's
+# 14 regression suites are built on. Offline, no network, reproducible from the clone alone.
+# RESULT: 0 of 50 verdicts change. THE LIMB FIRES.
+fixture_path_flattened	sha256_12	bytes	family_before	family_after	changed
+grant-ladder-v4__fixtures__OpenEduCat-openeducat_erp.1c95cef.LICENSE	528f84036800	8241	LGPL-3.0	LGPL-3.0	no
+grant-ladder-v4__fixtures__celtic-project-LTI-PHP.0ef9cc9.LICENSE	da7eabb7bafd	7651	LGPL-3.0	LGPL-3.0	no
+grant-ladder-v4__fixtures__francoisjacquet-rosariosis.541c509.LICENSE	d954e14e5c75	15214	GPL-2.0	GPL-2.0	no
+grant-ladder-v4__fixtures__lukeslp-awesome-accessibility.d146ae6.LICENSE	be7faaa11ec1	6464	CC0-1.0	CC0-1.0	no
+grant-ladder-v4__fixtures__negative-agpl.LICENSE	e12d78569742	35136	AGPL-3.0	AGPL-3.0	no
+grant-ladder-v4__fixtures__negative-apache.LICENSE	c71d239df917	11357	Apache-2.0	Apache-2.0	no
+grant-ladder-v4__fixtures__negative-bsd.LICENSE	7069c7e8d60e	1475	BSD	BSD	no
+grant-ladder-v4__fixtures__negative-ccby.LICENSE	7e7170e3cebf	18650	CC-BY-4.0	CC-BY-4.0	no
+grant-ladder-v4__fixtures__negative-ecl.LICENSE	0688f62d04f1	11120	ECL-2.0	ECL-2.0	no
+grant-ladder-v4__fixtures__negative-gpl3.LICENSE	8ceb4b9ee5ad	35147	GPL-3.0	GPL-3.0	no
+grant-ladder-v4__fixtures__negative-mit.LICENSE	d9bb52f2e354	1072	MIT	MIT	no
+grant-ladder-v4__fixtures__oat-sa-tao-core.d9d462a.LICENSE	a01259a1b522	18025	GPL-2.0	GPL-2.0	no
+grant-ladder-v4__fixtures__portabilis-i-educar.cd1da68.LICENSE	8177f9751321	18092	GPL-2.0	GPL-2.0	no
+lib__fixtures-p551__cc-by-nc-nd-4.0-ud-portuguese-cintil.LICENSE	73c169eb6bbf	224	CC-BY-NC-ND-4.0	CC-BY-NC-ND-4.0	no
+lib__fixtures-p551__cc-by-sa-3.0-ud-portuguese-pud.LICENSE	b278eb53fe50	19556	CC-BY-SA-3.0	CC-BY-SA-3.0	no
+lib__fixtures-p551__cc-by-sa-4.0-ud-portuguese-bosque.LICENSE	ab3a36080055	269	CC-BY-SA-4.0	CC-BY-SA-4.0	no
+lib__fixtures-p613__cc-by-4.0-ud-spanish-ancora-r2.9.LICENSE	653702c7fdee	189	CC-BY-4.0	CC-BY-4.0	no
+lib__fixtures-p613__cc-by-sa-4.0-ud-spanish-gsd.LICENSE	899b1804a12e	202	CC-BY-SA-4.0	CC-BY-SA-4.0	no
+lib__fixtures-p613__gpl-2.0-spdx-canonical.LICENSE	aaf135472f81	17337	GPL-2.0	GPL-2.0	no
+lib__fixtures-p613__gpl-3.0-numeric-ud-spanish-ancora-r2.8.LICENSE	774ef882362a	68	GPL-3.0	GPL-3.0	no
+lib__fixtures-p613__gpl-3.0-spdx-canonical.LICENSE	fb981668c18a	34674	GPL-3.0	GPL-3.0	no
+lib__fixtures-p613__lgpl-3.0-spdx-canonical.LICENSE	996af0513df2	42098	LGPL-3.0	LGPL-3.0	no
+lib__fixtures-p845__psf-2.0-typing-extensions-4.16.0.LICENSE	3b2f81fe21d1	13936	PSF-2.0	PSF-2.0	no
+lib__fixtures-p990__noncommercial-uchicago-student-early-warning.LICENSE	11f9627267d7	2069	NONCOMMERCIAL-NOT-OSI	NONCOMMERCIAL-NOT-OSI	no
+p288-agpl-casefold__fixtures__agpl-3.0-kuali-kfs-reflowed.LICENSE	55618c37d2ae	33755	AGPL-3.0	AGPL-3.0	no
+p308-phrase-anchor-sweep__fixtures__apache-autolab-Autolab.LICENSE	a8ad31b1c3f4	11324	Apache-2.0	Apache-2.0	no
+p308-phrase-anchor-sweep__fixtures__bsd3-YuanGongND-gopt.LICENSE	d501f3b58c95	1517	BSD	BSD	no
+p308-phrase-anchor-sweep__fixtures__gpl-Ovsyanka83-autograder.LICENSE	3972dc9744f6	35149	GPL-3.0	GPL-3.0	no
+p308-phrase-anchor-sweep__fixtures__inginious-INGInious.LICENSE	6d1ebe4ddf66	34764	AGPL-3.0	AGPL-3.0	no
+p308-phrase-anchor-sweep__fixtures__mit-Halleck45-OpenPronounce.LICENSE	6f4d9645aa9f	1113	MIT	MIT	no
+p308-phrase-anchor-sweep__fixtures__mit-adlnet-xapi-lab.LICENSE	7625cb30bac8	1082	MIT	MIT	no
+p308-phrase-anchor-sweep__fixtures__mit-mikhailvs-loqui.LICENSE	4b166a7ed02b	1074	MIT	MIT	no
+p308-phrase-anchor-sweep__fixtures__mit-speechsuper-API-Samples.LICENSE	431d9d1b787b	1068	MIT	MIT	no
+p308-phrase-anchor-sweep__fixtures__unlicense-FWU-DE-mem-mcp.LICENSE	6b0382b16279	1211	Unlicense	Unlicense	no
+p473-probe-commercial-gate__fixtures-pending__agpl-3.0-classroomio.LICENSE	8486a10c4393	34523	AGPL-3.0	AGPL-3.0	no
+p473-probe-commercial-gate__fixtures-pending__gpl-3.0-lmscloud.LICENSE	8b1ba204bb69	35148	GPL-3.0	GPL-3.0	no
+p473-probe-commercial-gate__fixtures__apache-2.0-osss.LICENSE	ccf32a3c6ae1	11363	Apache-2.0	Apache-2.0	no
+p473-probe-commercial-gate__fixtures__cc-by-nc-4.0-crss-ai.LICENSE	7e1882bbc37f	822	CC-BY-NC-4.0	CC-BY-NC-4.0	no
+p473-probe-commercial-gate__fixtures__ecl-2.0-sakai.LICENSE	0688f62d04f1	11120	ECL-2.0	ECL-2.0	no
+p473-probe-commercial-gate__fixtures__mit-bandup.LICENSE	c4411a4cb83b	1071	MIT	MIT	no
+p560-epl-mpl-version-read__fixtures__dual-mpl-2.0-or-epl-1.0-h2database.LICENSE	efaa000f29ef	27753	MPL-2.0	MPL-2.0	no
+p560-epl-mpl-version-read__fixtures__epl-1.0-junit4.LICENSE	9648bb2891b9	11376	EPL-1.0	EPL-1.0	no
+p560-epl-mpl-version-read__fixtures__epl-2.0-huly.LICENSE	209fe24bf556	14196	EPL-2.0	EPL-2.0	no
+p560-epl-mpl-version-read__fixtures__epl-2.0-jersey.LICENSE	77e1e3387c3a	35081	EPL-2.0	EPL-2.0	no
+p560-epl-mpl-version-read__fixtures__epl-2.0-paho-with-edl-1.0.LICENSE	44ad51523c20	519	EPL-2.0	EPL-2.0	no
+p560-epl-mpl-version-read__fixtures__mit-krayin-webkul.LICENSE	c6dca3b0db5b	1077	MIT	MIT	no
+p560-epl-mpl-version-read__fixtures__mpl-1.1-spdx-canonical.LICENSE	6214f8b1300b	23669	MPL-1.1	MPL-1.1	no
+p560-epl-mpl-version-read__fixtures__mpl-2.0-rhino-partial-grant.LICENSE	4f8466f820f3	16779	MPL-2.0	MPL-2.0	no
+p784-licence-scope-map__fixtures__gpl2-real-lxhive.LICENSE	8177f9751321	18092	GPL-2.0	GPL-2.0	no
+p784-licence-scope-map__fixtures__gpl2-uppercased-lxhive.LICENSE	6ad1439e711b	18092	LGPL	LGPL	no

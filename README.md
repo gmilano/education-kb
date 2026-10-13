@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🟢 **Five pre-registered actions: `2` DISCHARGED with silent falsifiers, `3` DISCHARGED WITH A LIMB
+FIRED. All three firings make this KB's claims SMALLER.**
+🆕 🔴 **The pass's most consequential finding for a client: this KB has been measuring the size of
+the education vertical with a query only `1` of its own `12` shelf rows would match.
+`topic:ai-education` returns `135` permissive active repositories; `topic:education`, same filters,
+returns **`8.2k`** — `~61×`. Every *"the vertical is N repositories"* sentence needs the words
+*"that tag themselves `ai-education`"* in it or it is wrong by one to two orders of magnitude
+(`T255`).**
+🆕 🔴 **The pass's most uncomfortable finding: `gap 118` — *"Middle East and Africa returned
+NOTHING"* — was never a coverage gap. Six formulations naming COUNTRIES returned placeable findings
+for `8` of them. A region named for three continents was being searched with a term that can only
+answer about one (`T254`).**
+🆕 🟢 **The pass's most satisfying finding: a sha the git server REFUSES is not an unreachable sha.
+`raw.githubusercontent.com/<owner>/<repo>/<sha>/<path>` served all `86` paths of `Sakai`'s manifest
+at p172's pinned commit, byte-identical to p172's recorded hashes, after
+`git fetch` answered `fatal: couldn't find remote ref`. That retires *"the repository moved, so the
+re-read is uncontrolled"* for any population whose per-path hashes were written down (`T249`).**
+🆕 🔴 **The pass's sharpest single datum: the one line where the shelf's best-equipped row builds a
+C2PA record for an asset it generated itself writes `C2paStatus.NOT_APPLICABLE`. With `50` days to
+Article `50(2)`, the most provenance-literate project on this shelf declares its own synthetic
+output out of scope — deliberately, in one line.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION JT`** — search the Middle East and Africa as their OWN region | 🔴 **DISCHARGED, LIMB 1 FIRED. `8` countries placed from `6` of `6` formulations. `gap 118` CLOSED as mis-specified** |
+| 🟡 **`ACTION JU`** — teach the shared classifier to see `Apache-1.1` | 🟡 **DISCHARGED, LIMB 1 FIRED. `25` of `86` verdicts change inside `Sakai`, `0` of `50` outside. Suite `199/199` → `207/207`** |
+| 🟢 **`ACTION JV`** — is the `180`-day liveness bar wrong? | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `25.2%` of the `135` unpushed for `90` days, `71.1%` for `30`. No API call needed** |
+| 🔴 **`ACTION JW`** — do the shelf and the topic overlap? | 🔴 **DISCHARGED, FALSIFIER FIRED AT THE CEILING: `12` of `12`. But `1` of `12` carries `ai-education`** |
+| 🟢 **`ACTION JX`** — can the provenance-literate row mark its output? | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `0` emitters in `905` files; the gate exists, the flag defaults off, the signer does not exist** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`P173-A`** — `Apache-1.1` / `Apache-1.0` / `Apache-1.x-UNVERSIONED` in the shared hardened
+  classifier, anchored on the TITLE BLOCK plus the clause-`3` attribution signature, with the real
+  `2 383` B body as fixture and a FABRICATED negative control that must stay `BSD`. `8` new
+  assertions, `207` of `207`.
+- 🆕 🟢 **`P173-B`** — dormancy by `pushed:>=` BANDING: four queries, no enumeration, no API, and a
+  reproducible `25.2%` / `47.4%` / `71.1%` at `90` / `60` / `30` days.
+- 🆕 🟢 **`P173-C`** — the region-query rule: a region bucket is searched by naming its COUNTRIES,
+  and a region's silence is a finding only after `≥4` of its countries have been named individually.
+- 🆕 🟢 **`P173-D`** — the Article `50(2)` emitter gap specified to the line: which of the seven
+  pieces marking needs are built, which is defaulted off, and which two are genuinely absent
+  (a signer, and a certificate — the second one procurement, not code).
+- 🆕 🟢 **Middle East and Africa placed in [`intel/market.md`](intel/market.md) for the first
+  time**, with two compulsory national curricula and a `47`-institution governance survey.
+- 🆕 🔴 **`T251`, a channel correction this KB had in writing and wrong:** `api.github.com` is not
+  `403` at the proxy. It answers `200` with a `15 000` core budget and refuses only paths outside
+  this session's bound repositories, in its own words.
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`gap 110` stays open and p173 added nothing to it. Article `113` verbatim is still unread;
+  `eur-lex.europa.eu` is `403` at the CONNECT layer by organisation policy.**
+- 🔴 **This KB cannot state the size of the education vertical to better than one significant
+  figure. The channel that answers returns *"`8.2k`"*, not a count (`gap 125`).**
+- 🔴 **`0` open-source education repositories originating in the Middle East or Africa, against the
+  strongest policy mandate in the whole market. Measured once, by one person's queries, and
+  registered rather than concluded (`gap 124`, `ACTION JY`).**
+- 🔴 **Seventh consecutive pass with no LATAM-originated open-source education repository at any
+  star level — though p173 does name the first LATAM edtech VENDOR and funder in five passes.**
+- 🔴 **Whether Article `50(2)` marking is addable to the video row FROM OUTSIDE the project is
+  specified but not answered. p173 read the gate and the domain model, not the export path.**
 ## Pass 171 — 2026-10-13
 
 🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `2` DISCHARGED WITH THEIR

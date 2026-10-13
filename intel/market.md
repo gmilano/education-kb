@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🆕 🔴 **`gap 118` — *"Middle East and Africa returned NOTHING"* — is CLOSED as mis-specified. It was
+never a coverage gap. Six formulations that name COUNTRIES returned placeable findings for `8` of
+them, and p172's *"EMEA"* queries could not have returned otherwise: a region abbreviation is not a
+search term (`T254`).**
+🆕 🟢 **The region field stays the closed vocabulary — `Global` / `North America` / `EMEA` / `APAC`
+/ `LATAM`. The Middle East and Africa are EMEA and are written into that bucket, with the countries
+in the prose. This KB does not get a sixth bucket; it gets an EMEA section that is finally about
+three continents.**
+🆕 🔴 **And the substantive finding is a shape, not a list: the Middle East leads the world on
+MANDATE and Africa leads on GOVERNANCE DEBT, and for Globant they are the same offer from opposite
+ends. Two national curricula are already compulsory; `6` in `10` African universities have no AI
+policy at all.**
+
+### 🆕 🟢 The Middle East and Africa, placed — query strings recorded per `T227`
+
+| finding | where | source class |
+|---|---|---|
+| 🟢 **AI compulsory in ALL public schools from the `2025/26` year, kindergarten → grade `12`, covering ethics, concepts and applications** | 🟢 **UAE** | government announcements + press |
+| 🟢 **`24 000`+ teachers, school leaders and specialists through the national AI upskilling week for `2026–2027`** | 🟢 **UAE** | ministry via state news agency |
+| 🟢 **AI and coding embedded into core curricula across all school levels; *"Introduction to AI"* for high schoolers** | 🟢 **Saudi Arabia** | press, vendor-adjacent |
+| 🟡 **Top *"advanced"* tier of Gulf AI regulatory maturity for UAE + KSA, ahead of Qatar and Bahrain; Kuwait early-stage** | 🟡 **Gulf** | 🔴 **vendor-sponsored benchmark (Coursera) — cite as sponsored** |
+| 🟢 **AI curricula in schools from the `2025-26` academic year; National AI Strategy `2025–2030` naming education; first two specialised AI colleges established** | 🟢 **Egypt** | ministry statements |
+| 🟢 **Calling for an Arab-wide AI-in-education strategy at the 14th Conference of Arab Ministers of Education (Doha); AI aimed at dropout reduction and teacher training under the `2021–2026` reform** | 🟢 **Morocco** | regional press |
+| 🔴 **`6` in `10` of `47` higher-education institutions surveyed have NO formal AI governance framework; adoption *"low to moderate"*** | 🔴 **Africa, continental** | 🟢 **WISE + Ashesi University survey, February `2026`** |
+| 🔴 **`64%` of African edtech startups build for K-12; UNDER `2%` build AI for higher education** | 🔴 **Africa, continental** | 🟢 **same survey** |
+| 🟢 **National AI Strategy `2025–2030` putting higher-education institutions at the centre of implementation** | 🟢 **Kenya** | national strategy *(draft released for public input)* |
+| 🟢 **National AI Policy (`2023`) emphasising university education and research** | 🟢 **Rwanda** | national policy |
+| 🟡 **Draft National AI Policy Framework gazetted for comment March `2026`, implementation targeted `2027–2028`, curriculum from basic to tertiary in scope; North-West University first SA university with an official AI policy (January `2026`); UCT framework calls AI detection tools unreliable** | 🟡 **South Africa** | gazette + university announcements |
+| 🟡 **NERDC directed to work AI and robotics into primary education; phased-implementation policy briefs circulating** | 🟡 **Nigeria** | policy review, recommendation not yet rule |
+| 🟢 **~`US$4.0M` (July `2026`) to the Fab AI Foundation to fine-tune OPEN-SOURCE small models for Sub-Saharan classrooms and build a local edtech ecosystem** | 🟢 **Sub-Saharan Africa** | 🟢 **Gates Foundation committed-grants record** |
+| 🔴 **Israel returned NOTHING across the formulation that named it** | 🔴 **Israel** | — |
+
+🔴 **And the column that is empty: `0` open-source education repositories ORIGINATING in the Middle
+East or Africa, at any star level. `gap 124`, and `ACTION JY` is registered to test whether that
+`0` is the ecosystem or the query — because `ACTION JT` just proved the same `0` was the query
+once.**
+
+## Opportunities by region
+
+### Global
+
+🟢 **The denominator correction belongs here before any regional number is read.** Every *"size of
+the vertical"* figure this KB has published — `485`, `357`, `135` — counts **repositories that tag
+themselves `ai-education`**. `1` of this KB's own `12` shelf rows does. `topic:education` with the
+same filters returns **`~8.2k`** (`T255`). 🔴 **Do not put a repository-count market size in a
+client deck from this KB yet: the channel that answers rounds above `1 000` (`gap 125`).**
+🔴 **The marking cliff is `50` days out and unchanged: Article `50(2)` of `Regulation (EU)
+2024/1689` requires machine-readable marking of synthetic content from **`2 December 2026`**, and
+`0` of `13` generating shelf rows can do it. p173 read the best-equipped row to the line and found
+the signer absent and the gate defaulted off (`ACTION JX`).**
+🟢 **The liveness bar is now quantified: `25.2%` of the *"active"* population is unpushed for `90`
+days. Any shortlist handed to a client should be filtered on COMMIT date, which costs one blobless
+clone per repository and no API access.**
+
+### North America
+
+🔴 **CARRIED, and `gap 119` stays open and unaddressed by p173: every *"North America"* figure in
+this KB is a United States fact under a continental heading. Canada and Mexico returned nothing
+when p172 asked.** The `36%` adoption share and `$3.68B` figure, and the `134`-bill regulatory map,
+are US readings. 🟢 **The honest engagement line: this KB can brief a US client on the state
+legislative surface and cannot yet brief a Canadian or Mexican one.**
+
+### EMEA
+
+🟢 **Europe, carried:** the Digital Omnibus on AI — **`Regulation (EU) 2026/1744`**, in force
+**`27 July 2026`** — amends the AI Act, moved Annex III high-risk to **`2 December 2027`** and left
+**Article `50` transparency at `2 December 2026`**. 🔴 **`gap 110` unchanged: Article `113`
+verbatim is still unread because `eur-lex.europa.eu` is `403` at the CONNECT layer by organisation
+policy, so every date here is `search-summary` tier however many sources agree.** 🔴 **`T239`
+still bites: sources written between `16` and `29 June 2026` say the Council has yet to adopt, are
+undated on the page, and are still being cited.**
+🆕 🟢 **Middle East — the strongest mandate in this KB's whole policy surface.** The UAE and Saudi
+Arabia have made AI education **compulsory in public schools**, the UAE from age four across all
+grades, with a national teacher-upskilling programme at `24 000`+ participants. 🟢 **The
+opportunity is not persuasion, it is DELIVERY: curriculum content, teacher enablement at national
+scale, and assessment integrity for a cohort that will have used AI since kindergarten.** 🔴 **The
+constraint is that private-school adoption lags and is administrative-first, so the buying centre
+for the next `18` months is ministries and large public systems, not schools.**
+🆕 🔴 **Africa — governance debt is the product.** `6` in `10` of `47` surveyed higher-education
+institutions have **no formal AI governance framework**, adoption is *"low to moderate"*, and
+**under `2%`** of African edtech startups build AI for higher education against `64%` building for
+K-12. 🟢 **South Africa's Draft National AI Policy Framework (comment March `2026`, implementation
+`2027–2028`), Kenya's National AI Strategy `2025–2030` and Rwanda's `2023` policy give three
+anchor instruments for a governance-first offer: policy scaffolding, AI-use rules for assessment,
+and staff capability — ahead of any platform build.** 🔴 **Say the equity constraint out loud: the
+reported South African pilots skew to well-resourced schools, and the sources themselves warn AI
+education becomes an elite preserve without rural targeting.**
+🔴 **Measured silence inside EMEA: `0` open-source education repositories originating anywhere in
+the Middle East or Africa. Two live EMEA-placed rows exist on the agent shelf and both are
+European (`Selleo/mentingo`, Poland; `TovTechOrg/Tov-learn`).**
+
+### APAC
+
+🟢 **CARRIED and extended.** Compulsory and near-compulsory AI curricula remain the regional
+driver. 🆕 🟢 **India–Japan is now an explicit bilateral channel: at the 16th India–Japan Annual
+Summit (`2 July 2026`) both governments adopted a dedicated Joint Statement on AI cooperation,
+reaffirmed inviting `500` highly skilled Indian AI professionals to Japan by `2030`, and signed an
+MoU between IIT Bombay, the BharatGen Technology Foundation and Japan's National Institute of
+Informatics for joint LLM research.** 🟡 **India's own `2026` education story is consolidation:
+clearer rules on AI use, tighter industry alignment, measurable outcomes five years into NEP
+`2020`.** 🟡 **Japan has published guidelines permitting *"limited"* generative-AI use in schools
+— the source is older than the `2026` items and should be re-dated before use.**
+🟢 **APAC is also where this KB's repository column is NOT empty: `4` APAC-placed rows
+(`echo-loop/Echo-Loop`, `niansia/taiwan-exam`, `jeliael/fakao-ai-exam-engine`,
+`SenmuuuuW/universal-diagnostic-tutor-skill`), and the assessment route this KB holds is APAC on
+both candidates.**
+
+### LATAM
+
+🆕 🟢 **The commercial map improves for the first time in five passes, and it is still thin.**
+🟢 **A named vendor:** **Luca** (Mexico), an AI-powered K-12 platform, closed a **`US$8M` Series A**
+led by **6 Degrees Capital**, serving `30 000`+ students in Mexico and expanding regionally.
+🟢 **A named funder and programme:** **Google.org** is putting **`US$4.6M`** behind **Raspberry Pi's
+*Experience AI*** across Latin America — target `24 000` educators and `1.25M` students by `2028`,
+with partners in nine countries including Brazil, Colombia and Mexico.
+🟡 **Market size, inconsistent and labelled as such:** one report puts LATAM AI-in-education at
+~`$105.6M` (`2024`) → `$204.7M` (`2029`), `11.7%` CAGR, **and the same page also shows `$26.32M`**.
+🔴 **Do not quote a LATAM market size from this KB.**
+🟡 **Demand driver, which is the honest pitch:** `66%` of Mexican students did not reach the minimum
+PISA `2022` level in mathematics; a `2024` regional index ranks Chile first and Mexico sixth on AI
+implementation.
+🔴 **Still missing after five passes: AI-in-education REGULATION anywhere in LATAM. Brazil and
+Colombia returned no country-specific adoption, player or policy result at all.**
+🔴 **And seventh consecutive pass with `0` LATAM-originated open-source education repositories at
+any star level — now measured against a `485`-repository sweep whose denominator this pass also
+proved `~61×` too small, so the next sweep must be run on `topic:education` before this silence is
+reported again.**
+
+## 🆕 🔴 Measured silences this pass — written down so they cannot be read as coverage
+
+| silence | what was actually asked |
+|---|---|
+| 🔴 **Israel** | `artificial intelligence education strategy Egypt Morocco Israel 2026` — Egypt and Morocco returned, Israel returned nothing. One formulation only; not yet a finding |
+| 🔴 **Canada, Mexico as *"North America"*** | NOT re-asked this pass. `gap 119` carried verbatim from p172 |
+| 🔴 **Any open-source repository from the Middle East or Africa** | `African open source edtech AI startups 2026 funding github` returned funding directories and one Geneva-based grantee. `0` repositories |
+| 🔴 **LATAM regulation** | `AI education LATAM Brazil Mexico Colombia 2026 adoption regulation edtech players` — adoption and funding returned, regulation did not |
+| 🔴 **APAC-wide adoption figures and a regional regulatory map** | the APAC formulation returned bilateral and national items only; no regional map |
+[`evidence/mea-region-queries.2026-10-13-p173.tsv`](../evidence/mea-region-queries.2026-10-13-p173.tsv)
 ## Pass 172 — 2026-10-13
 
 🆕 🟢 **`Regulation (EU) 2026/1744` now has its FULL CHRONOLOGY, which p171 did not have and which

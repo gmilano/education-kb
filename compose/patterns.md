@@ -4,6 +4,218 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🟢 **Four recipes. Three are new; one CORRECTS p172's Pattern `1` step `4`, which told a reader the
+hard part of Article `50(2)` marking was already built. p173 read that code and it is not.**
+🔴 **Citation rule unchanged, per `ACTION IQ`: a non-commercial or no-grant repository may appear
+as EVIDENCE but never as a build step. [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)
+(revocable Community License) and [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+(no grant file) are cited nowhere below as components.**
+
+### 🆕 🔴 Pattern 1 — CORRECTION to p172's marking wrapper, step `4`
+
+🔴 **p172 wrote: *"Extend its gates from INPUT provenance to OUTPUT marking — the hard part is
+built, pointed the other way."* p173 read the subsystem at `9c260890214d` and that sentence is
+half wrong in the expensive direction.**
+
+| what p172 implied was built | what is actually there |
+|---|---|
+| a provenance subsystem that could be pointed at output | 🟢 **TRUE and better than implied** — `AssetProvenance`, `ConsentRecord`, `Ingredient`, `ExportProvenanceManifest`, `347`-line `gates.py`, `20`+ tests |
+| *"the hard part is built"* | 🔴 **FALSE. The hard part is a SIGNER and there is none in `905` files** — the four C2PA states in the Python enum (`NOT_APPLICABLE`, `ABSENT`, `VALID`, `INVALID`) are all VERIFICATION states |
+| a gate you could flip on | 🟡 **It exists and defaults OFF**: `ExportGateInput.c2pa_required: bool = False` |
+| the pipeline's own generated output | 🔴 **`generation/workflow.py:3018` writes `c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE)`** |
+
+🟢 **So wire it this way instead, and the order is the point — the certificate is the critical path,
+not the code:**
+
+1. **Procure the signing identity FIRST.** An X.509 certificate from a CA in the C2PA trust list.
+   A self-signed certificate produces a manifest every validator marks untrusted, which is worse
+   than no manifest in a compliance conversation. 🔴 **Lead time here, not in engineering.**
+2. **Add the emitter at the mux/encode boundary** — [`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs)
+   (🟢 **`MIT OR Apache-2.0`**, dual-licensed; the crate is `c2pa`, still `0.x` beta with breaking
+   changes in minor versions, and v`2` claims by default). `c2patool` from the same org for the CLI
+   path. 🔴 **Beware the search result: `iptc/c2pa-rs` also resolves. `contentauth/c2pa-rs` is the
+   one whose README carries the CAI badges and the dual `LICENSE-MIT` / Apache files.**
+3. **Add `SIGNED` to the Python enum** so the gate can distinguish *"we signed this"* from
+   *"someone else's manifest verified"*. The TypeScript contract at
+   `packages/contracts/src/media.ts:21` **already has the word** (`"signed" | "verified" | ...`) —
+   the vocabulary exists in the repo and is missing from the layer that enforces (`T245`).
+4. **Flip `c2pa_required` to `True`** and run the project's own suite. 🟡 **`ACTION KA` is
+   registered to measure whether it passes unmodified — if it does, the gate was never the
+   obstacle.**
+5. **Stop the transcode from eating the mark.** `packages/themes/src/starterKitCatalog.ts:92` sets
+   `c2paStatus: derived ? "absent" : "present-embedded"` with the note *"the optimized WebP
+   derivative does not"*. 🔴 **Every derivative step is a place a credential dies (`T256`). Re-sign
+   after each one, or carry a sidecar and say in the deliverable that it is a sidecar.**
+6. **Add the HUMAN-readable notice separately.** `ConsentRecord.synthetic_media_disclosure` is the
+   SUBJECT's consent, not the LEARNER's notice. Article `50(2)` marking is machine-readable;
+   Article `50(4)` deepfake disclosure is human-readable. **Two obligations, and this shelf has
+   neither pointed at the learner (`T246`).**
+
+🔵 **Keep p172's steps `1`–`3` for text and packaging — the SCORM choke point, the marking emitters
+in `compose/code/aiact-50-2-*`, and the exposure scan. The correction is to step `4` only.**
+
+### 🆕 🟢 Pattern 2 — a shortlist that does not lie about size or liveness
+
+**Problem.** Two independent defects measured this pass: the tag this KB counts on is one `1` of
+`12` of its own shelf rows use (`T255`), and the `180`-day *"active"* filter admits `25.2%`
+repositories unpushed for `90` days (`T242`). **A shortlist built the usual way is both too narrow
+and too dead.**
+
+**Wire it — three steps, no `api.github.com`, no paid data:**
+
+| step | how | why it is this and not the obvious thing |
+|---|---|---|
+| 1. **widen the tag** | run the sweep on `topic:education`, `topic:edtech`, `topic:ai-tutor` AND `topic:ai-education`, with the same `license:` + `pushed:` filters. Strings in [`compose/code/p173-dormancy-bands/queries.txt`](../compose/code/p173-dormancy-bands/queries.txt) | `ai-education` is a research-flavoured tag; practitioners tag the thing they built. `~61×` difference on the same filters |
+| 2. **band for dormancy before enumerating** | re-run each query with a moving `pushed:>=` bound and subtract. `4` queries give the whole distribution without listing a single repository | enumeration costs `14` rendered pages per population; banding costs `4` and is exact under `1 000` |
+| 3. **confirm liveness by COMMIT, per candidate** | `git clone --depth 1 --filter=blob:none --no-checkout <url>` then `git log -1 --format=%cI` | `pushed:` counts tags, merges and side branches. The commit date is the only field that means *"someone is working on this"* |
+
+🔴 **And record the channel's PRECISION with the count (`T252`): above `1 000` the rendered page
+returns *"8.2k"*. A four-figure number from this channel is an order of magnitude. Do not put it in
+a deck as a market size.**
+
+### 🆕 🟢 Pattern 3 — Gulf compulsory-curriculum delivery, with the attribution handled
+
+**Where this applies.** The UAE and Saudi Arabia have made AI education compulsory across public
+schooling (UAE from age four, `KG`→grade `12`; `24 000`+ educators through the national upskilling
+week for `2026–2027`). Egypt started AI curricula in the `2025-26` year. 🟢 **The buying centre is
+a ministry or a large public system, and the ask is DELIVERY AT SCALE, not persuasion.**
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| institutional LMS | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` *(§`1`–`9` verbatim)* | `QTI` + `SCORM` + curriculum + assessment in one tree. Carry its `2` attribution statements |
+| low-connectivity edge | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 `MIT` | the offline row; the same choice that serves rural LATAM and Africa |
+| teacher-facing AI mentor | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) `242a9324fe48` | 🟢 `MIT` | AI mentor inside an LMS, `SCORM` in AND out, and it ships `licenses.config.yaml` — a licence gate to LIFT, not just a dependency |
+| rostering | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` | `OneRoster 1.2`, `24` GETs, `0` write routes — read-only by construction, which a ministry security review will like |
+| assessment integrity | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) | 🟡 `MIT` root | 🔴 **swap `PyMuPDF` (`AGPL-3.0`-or-commercial) for `pypdf` (`BSD-3`), already in the same `requirements.txt`, BEFORE routing** |
+| packaging | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | the delivery choke point, and where marking goes |
+
+🆕 🟢 **The step this pass adds, and it is cheap insurance: run the licence manifest before the
+deliverable, not after.** If the stack pulls a Java-era component tree —
+[`Sakai`](https://github.com/sakaiproject/sakai) is the live example — a scanner will report
+*"`34` BSD"* over `licenses/` and **`25` of those are `Apache-1.1`**, which carries a clause-`3`
+acknowledgment BSD does not: *"This product includes software developed by the Apache Software
+Foundation"*. 🟢 **Use `compose/code/p173-apache11-family/sweep_family.sh` against the manifest
+directory and put the acknowledgment in the end-user documentation. Attribution debt found after
+delivery is a re-release; found before, it is a line of text.**
+🔴 **`0` of this stack originates in the region (`gap 124`). Say so, and price localisation —
+Arabic-first content, ministry reporting formats — as build and not as configuration.**
+
+### 🆕 🟢 Pattern 4 — Africa governance-first, because the policy is the gap
+
+**Where this applies.** `6` in `10` of `47` surveyed African higher-education institutions have no
+formal AI governance framework (WISE/Ashesi, February `2026`); adoption is *"low to moderate"*;
+under `2%` of African edtech startups build AI for higher education against `64%` for K-12.
+🟢 **Unlike the Gulf, the first deliverable here is not a platform.**
+
+| phase | what ships | anchored on |
+|---|---|---|
+| 1. **policy scaffolding** | institutional AI-use policy, assessment-integrity rules, staff capability baseline | South Africa's Draft National AI Policy Framework *(comment March `2026`, implementation `2027–2028`)*, Kenya's National AI Strategy `2025–2030`, Rwanda's `2023` National AI Policy |
+| 2. **assessment integrity before tutoring** | detection-sceptical rules *(UCT's own framework calls AI detection tools unreliable)*, plus oral/viva and process-evidence designs | the `5` of `12` assessment-CARRYING shelf rows (`T234`), and 🔴 **`sgaofen/vibe-schooling` as a THREAT MODEL, never a dependency** |
+| 3. **platform, offline-first** | [**Kolibri**](https://github.com/learningequality/kolibri) (🟢 `MIT`) at the edge, [**Moodle**](https://github.com/moodle/moodle) (🔴 `GPL-3.0`, `88` grant documents) where an institution already runs it | the routing table in [`verticals/solutions.md`](../verticals/solutions.md) |
+| 4. **only then, AI on top** | the permissive tutor stack of p172's Pattern `2` | all `MIT`/`Apache-2.0`, `HEAD`-verified |
+
+🔴 **Two constraints to state in the proposal rather than discover: the equity skew is documented —
+sources warn AI education becomes an elite preserve without rural targeting — and `0` of the
+components above originate in Africa, so local capability transfer is part of the scope or the
+engagement leaves nothing behind.**
+🟢 **The donor channel is real and is aimed at exactly this: the Gates Foundation committed
+~`US$4.0M` in July `2026` to fine-tune OPEN-SOURCE small models for Sub-Saharan classrooms and
+build a local edtech ecosystem. An open-source-first proposal is funding-aligned here in a way it
+is not in most regions.**
+### 🟢 The component roster — RE-STATED IN FULL at p173, per `P170-C`/`T216`
+
+🟢 **`74` rows covering `83` distinct repositories, carried forward from p172's six recipes. Under
+*"only the newest block is canonical"* a component this KB once routed and does not re-state is
+LOST from the compiled view however true it remains below — and p173's first draft dropped `77` of
+them. The gate caught it before commit, which is the second consecutive pass where
+[`check_lost_rows.py`](../compose/code/p171-cross-block-gate/check_lost_rows.py) has fired on the
+pass that ran it.**
+🟡 **Licences and `HEAD`s are p172's reads carried forward verbatim. p173 re-read none of them and
+this line is the disclosure. The only component whose STATUS p173 changes is step `4` of Pattern
+`1`, corrected above.**
+
+| layer | component | licence | from |
+|---|---|---|---|
+| tutoring engine | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) `7e3a34e24354` | 🟢 `Apache-2.0` | p172 P2 |
+| retention scheduler | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) `f0142f28e8ed` — FSRS | 🟢 `MIT` | p172 P2 |
+| practice surface | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) `e0e347f7f399` | 🟢 `MIT` | p172 P2 |
+| host LMS | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) `242a9324fe48` — **EMEA** | 🟢 `MIT` | p172 P2 |
+| rostering | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` | p172 P2 |
+| packaging | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | p172 P2 |
+| 🟢 **assessment delivery** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | p172 P6 |
+| 🆕 🟢 **item generation reference** | [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | 🟢 **`MIT`** | p172 P6 |
+| 🆕 🟡 **threat model, not a dependency** | [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** | p172 P6 |
+| 🟢 **lightweight / offline LMS** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | p172 P6 |
+| 🟡 **or, if Moodle is already deployed** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`GPL-3.0`** | p172 |
+| 🔴 **do NOT use** | 🔴 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | 🔴 **`GPL-3.0`** | p172 |
+| 3. **Where the learning happens** | 🟢 Any permissive tutor from `agents/top.md` — [`DeepTutor`](https://github.com/HKUDS/DeepTutor) *(Apache-2.0)*, [`Bloom`](https://github.com/Li-Evan/Bloom) *(MIT)*, [`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) *(MIT)* | 🟢 **Apache-2.0 / MIT** | p172 |
+| 5. 🟢 **OB 3.0 AUTHORING — already built and permissive** | 🟢 [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **MIT** *(`LICENSE`, 1 080 B)* | p172 |
+| 6. 🔴 **The build: OB 3.0 ISSUANCE and SIGNING** | 🔴 **Nothing permissive ISSUES one.** [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) is **LGPL-3.0** *(`LICENSE.txt`, 7 650 B)*, `1 ★` | 🔴 **copyleft, and unmaintained-thin** | p172 |
+| 7. **Mastery evidence independent of the rule** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** *(1 066 B)* | p172 |
+| 1. **Experiment design and assignment** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** (`LICENSE`, 11 323 B, resolves on `main` and `master`) | p172 |
+| 2. **Evidence capture** | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** (🆕 `LICENSE.md`, 1 094 B — 🔴 **plain `LICENSE` is `404`, a `P50` instance**) | p172 |
+| 1. **System of record** — leave it alone | [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 GPL *(`COPYING.txt`)* **or** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) 🔴 AGPL-3.0 | copyleft | p172 |
+| 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | p172 |
+| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | p172 |
+| Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** | p172 |
+| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 |
+| 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | p172 |
+| 🟢 **Institutional boundary** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) *(Apache-2.0, 376 ★)* for LTI, or an external MCP server — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(MIT, 290 ★)* | 🟢 **Apache-2.0 / MIT** | p172 |
+| 🟢 **Platform, if greenfield** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(92 ★)* · [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **MIT, 1 062 B** · 🟢 **Apache-2.0, 10 982 B** | p172 |
+| 🟢 **SIS inputs** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | p172 |
+| records + agent surface | [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) **v1.2.0** | 🟢 **Apache-2.0** | p172 |
+| **LMS core** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | p172 |
+| **tool launch** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | p172 |
+| **launch (Python)** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** | p172 |
+| **rostering SDK** | [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 🟢 **0BSD** | p172 |
+| **conformance proof** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 **Apache-2.0** | p172 |
+| **statistics / benchmarks** | [`malkreide/global-education-mcp`](https://github.com/malkreide/global-education-mcp) | 🟢 **MIT** | p172 |
+| tutoring engine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | p172 |
+| LMS connector | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (Canvas) | MIT | p172 |
+| launch into LMS | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) (LTI 1.3) | MIT | p172 |
+| mastery reference model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (BKT) | MIT | p172 |
+| 🆕 **orchestration (start here)** | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | **Apache-2.0** | p172 |
+| content pipeline | [`learningequality/studio`](https://github.com/learningequality/studio) | MIT | p172 |
+| interactive content | [`h5p/h5p-interactive-video`](https://github.com/h5p/h5p-interactive-video) | MIT | p172 |
+| single-machine pilot | [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟡 UNREAD | p172 |
+| tool inventory | LMS connectors as discovery instruments: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | MIT | p172 |
+| sandboxing | [`openedx/codejail`](https://github.com/openedx/codejail) | Apache-2.0 | p172 |
+| platform | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) or [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) or Moodle | GPL-3.0 | p172 |
+| public portal | [`openfun/richie`](https://github.com/openfun/richie) | MIT | p172 |
+| step-level feedback | [`ideas-edu/ideas`](https://github.com/ideas-edu/ideas) | Apache-2.0 | p172 |
+| content generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | MIT | p172 |
+| pedagogy/skill library | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **NOASSERTION — review first** | p172 |
+| platform | [`frappe/lms`](https://github.com/frappe/lms) or Moodle | AGPL-3.0 / GPL-3.0 | p172 |
+| structured lesson model | [`oppia/oppia`](https://github.com/oppia/oppia) | Apache-2.0 | p172 |
+| multi-agent baseline | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | CC0-1.0 | p172 |
+| **pedagogical benchmark** | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (ETH Zurich, EMNLP 2025 oral) | 🔴 **none declared** — run/cite only | p172 |
+| **failure-mode dataset** | [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) (Khan Academy) | 🔴 **bespoke eval-dataset licence** — run/cite only | p172 |
+| connector | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | p172 |
+| assessment + gradebook | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | **MIT** | p172 |
+| build velocity | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) + [`claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | **MIT** | p172 |
+| API surface map | [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) · [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) · [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) · [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) | MIT *(🔴 `librus-mcp`: MIT 2.x only — `legacy_reference/` is **GPL-3.0-only**)* | p172 |
+| identity | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) as the reference shape — Okta OIDC/SAML, OAuth 2.0, **SCIM** | 🔴 unlicensed — **pattern only, do not vendor the code** | p172 |
+| system of record | [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | p172 |
+| — or — | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (payload-read) | p172 |
+| — or — | [`frappe/education`](https://github.com/frappe/education) | 🔴 **read `LICENSE` first** (API says `NOASSERTION`) | p172 |
+| agent scaffold | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | **MIT** | p172 |
+| optimiser | [`saytooyum/AI-Based-Timetable-Generation-System`](https://github.com/saytooyum/AI-Based-Timetable-Generation-System) | **MIT** | p172 |
+| reference: grade passback | [`filipecalegario/auto-sigaa`](https://github.com/filipecalegario/auto-sigaa) | **MIT** | p172 |
+| reference: workload report | [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) | 🔴 **AGPL-3.0** | p172 |
+| reference: Argentina | [`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) | 🔴 **unlicensed** | p172 |
+| API surface: SUAP | [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) (**MIT**) + [`frjunioalves/suap-mcp`](https://github.com/frjunioalves/suap-mcp) (🔴 unlicensed) | mixed | p172 |
+| API surface: SIGAA | [`Agso-o/sigaa-calendar`](https://github.com/Agso-o/sigaa-calendar) (🟡 GPL-3.0), [`RubsNeto/SigaaUI`](https://github.com/RubsNeto/SigaaUI) (**MIT**), [`trindadetiago/sigaa-caiu`](https://github.com/trindadetiago/sigaa-caiu) (**MIT**) | mixed | p172 |
+| **PoC scaffold** | [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | **MIT** | p172 |
+| **learner state / audit** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | p172 |
+| **analytics surface** | [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | p172 |
+| **enterprise auth** | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) (pattern only), plus the second instance against a real institution — [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp) (UQ, Okta SSO) | 🔴 **both UNLICENSED — read, do not fork** | p172 |
+| **Broker** | 🔴 **"your ~300 lines"** | 🟢 **BUY**: [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) (**Apache-2.0**, Go, MCP auth spec **2025-11-25**, RFC 9728 + 8707 + 9068, JWKS-verified upstream OIDC, PKCE, DPoP, token exchange, **56 test files**) — or [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) (**Apache-2.0**, 60★) to front an existing MCP server *"without code modification"* | p172 |
+
+🟢 **Gate output at commit: `routed-in-history: 83 | routed in newest block: 83 | LOST: 0` across
+[`verticals/solutions.md`](../verticals/solutions.md) and this file.**
+
 ## Pass 172 — 2026-10-13
 
 🟢 **Six recipes. Every repository named below is `HEAD`-verified this pass or carries a body-read

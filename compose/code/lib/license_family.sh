@@ -376,6 +376,50 @@ osi_family_of() {
      echo "GPL-UNVERSIONED"; return; fi
   printf '%s' "$t" | grep -qi 'Educational Community License' && { echo "ECL-2.0"; return; }
   printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
+  # -------------------------------------------------------------------------
+  # `T232` / `gap 120` (pase 172), CORREGIDO EN EL PASE 173.  ESTE CLASIFICADOR NO PODIA VER
+  # `Apache-1.1`, Y CONTESTABA `BSD` SOBRE ELLA -- incluido el archivo que se llama
+  # literalmente `apache1.1.license.txt`.  Medido, no supuesto: de los 86 paths de
+  # `licenses/` en `sakaiproject/sakai` (`88f8e09c0a38`), 25 son `Apache-1.1` y los 25
+  # volvian `BSD`.
+  #
+  # EL MECANISMO ES EL TITULO, y es la razon por la que la rama de arriba no alcanza:
+  # `Apache-1.1` NO se titula «Apache License».  Se titula «The Apache Software LICENSE,
+  # Version 1.1», asi que cae por el ancla de `Apache License`, sigue cayendo, y al final
+  # matchea la frase de concesion BSD --«Redistribution and use in source and binary
+  # forms»-- que `Apache-1.1` SI contiene porque es BSD-SHAPED.  El veredicto `BSD` no era
+  # un error de lectura: era la respuesta correcta a la unica pregunta que se hacia.
+  #
+  # LA DIRECCION DEL ERROR IMPORTA Y NO ES LA PELIGROSA: `BSD` y `Apache-1.1` son las dos
+  # permisivas y las dos OSI, asi que ningun veredicto comercial publicado por esta base
+  # fue incorrecto por esto (`commercial_use_ok` responde ALLOWED por la compuerta de
+  # familia en ambos casos).  Lo que se perdia es la CLAUSULA 3: `Apache-1.1` exige un
+  # acuse de recibo en la documentacion de usuario final --«This product includes software
+  # developed by the Apache Software Foundation»-- y `BSD-3-Clause` no exige ninguno.  Un
+  # entregable que reporta `BSD` sobre un componente `Apache-1.1` omite una obligacion de
+  # atribucion que el cliente tiene que cumplir.  Es deuda de ATRIBUCION, no de permiso.
+  #
+  # LAS DOS ANCLAS SON DE TITULO Y DE CLAUSULA, en ese orden, y ninguna es la sigla suelta:
+  #   1. titulo «Apache Software License» + «Version 1.1» -> `Apache-1.1`
+  #   2. titulo «Apache Software License» + «Version 1.0» -> `Apache-1.0`
+  #   3. titulo «Apache Software License» SIN version + la firma de la clausula 3 ->
+  #      `Apache-1.x-UNVERSIONED`, con la misma honestidad que `GPL-UNVERSIONED`: no se
+  #      inventa un numero de version que el payload no dice.
+  # Un payload que trae la firma de atribucion PERO NO el titulo se queda en `BSD` a
+  # proposito: el acuse de recibo aparece en avisos BSD de proyectos que acreditan a la
+  # ASF, y una clausula sin titulo describe una cortesia, no concede.  Es la regla de
+  # evidencia de `P304`/`P312` aplicada a esta familia.
+  #
+  # Y VA ANTES DE LA RAMA BSD POR CONSTRUCCION, no por suerte: las dos matchean el mismo
+  # payload y la primera que retorna gana, que es exactamente `P845`.
+  if printf '%s' "$t" | grep -qiE 'apache software licen[cs]e'; then
+     printf '%s' "$t" | grep -qiE 'version[[:space:]]*,?[[:space:]]*1\.1([^0-9]|$)' \
+         && { echo "Apache-1.1"; return; }
+     printf '%s' "$t" | grep -qiE 'version[[:space:]]*,?[[:space:]]*1\.0([^0-9]|$)' \
+         && { echo "Apache-1.0"; return; }
+     printf '%s' "$n" | grep -qiE 'this product includes software developed by the[[:space:]]+apache[[:space:]]+(software[[:space:]]+foundation|group)' \
+         && { echo "Apache-1.x-UNVERSIONED"; return; }
+  fi
   printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }
   # -------------------------------------------------------------------------
   # `P845` (pase 76 del 2026-10-09).  ESTA RAMA VA ANTES DE LA DE 0BSD, Y EL ORDEN ES EL

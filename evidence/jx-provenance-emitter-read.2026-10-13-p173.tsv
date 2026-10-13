@@ -1,0 +1,19 @@
+# ACTION JX (p173) -- T233. Read the one shelf row that already has provenance machinery and say
+# what extending it to Article 50(2) OUTPUT marking would take.
+# Repo: AkshitIreddy/AI-Powered-Video-Tutorial-Generator at 9c260890214d (the sha the action named).
+# FALSIFIER LIMB 1: "refuted if the subsystem already emits an output-side mark". SILENT -- it does
+#   not. The ONE place the pipeline builds a C2PA record for its own GENERATED asset writes
+#   C2paStatus.NOT_APPLICABLE (generation/workflow.py:3018).
+# FALSIFIER LIMB 2: "refuted if the two files are fixtures or stubs". SILENT -- 905 tracked files,
+#   272 Python files, a 347-line gates.py with export and release gates, 20+ real assertions.
+# PATH CORRECTION (T248): p172 cited `security/provenance.py` and `test_provenance_gates.py`. Both
+#   are 404 at those paths. The real paths are below. An abbreviated path in a handoff is a 404.
+artefact	real_path	lines	what_it_does	input_or_output_side
+provenance domain model	services/pipeline/src/alystria/security/provenance.py	167	frozen dataclasses: AssetProvenance, ConsentRecord, Ingredient, C2paRecord, ExportProvenanceManifest; validates sha256 identity, tz-aware timestamps, licence id presence, model revision for generated assets	INPUT (records what came in)
+regression suite	services/pipeline/tests/security/test_provenance_gates.py	335	20+ tests: licence evaluation per use, consent scope/expiry/revocation, CC-BY attribution, NC/ND blocking, import+model gates fail-closed, export gate, release-candidate gate	INPUT
+the gates	services/pipeline/src/alystria/security/gates.py	347	export_gate() checks licence, consent, synthetic-media disclosure CONSENT, captions, quality, provenance-manifest PRESENCE, and C2PA status only when c2pa_required is set	INPUT (verifies), c2pa_required defaults False
+the C2PA vocabulary (Python)	services/pipeline/src/alystria/security/provenance.py:38	4 states	C2paStatus = NOT_APPLICABLE | ABSENT | VALID | INVALID -- all four are VERIFICATION states. There is no SIGNED and no emitter	INPUT
+the C2PA vocabulary (TypeScript)	packages/contracts/src/media.ts:21	5 states	c2paStatus: "signed" | "verified" | "absent" | "invalid" | "unsupported" -- the TS contract HAS a "signed" state the Python enum the gate reads does not (T245)	contract disagreement
+what the pipeline writes for its OWN generated asset	services/pipeline/src/alystria/generation/workflow.py:3018	1 line	c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE)	OUTPUT -- and it declares itself out of scope
+the sidecar it does emit	docs/media/demo-video-provenance.json	152	schemaVersion 2, build record: binary sha256s, capture tool (Gifsmith), CDP surface, frame anchors, per-file sha256 of the produced mp4/webp. NO c2pa field, no synthetic-content declaration, no AI-generated marker	OUTPUT, but a BUILD RECORD not a content credential
+the mark it inherits and drops	packages/themes/src/starterKitCatalog.ts:92	1 line	c2paStatus: derived ? "absent" : "present-embedded" -- with the note "The retained source PNG carries embedded C2PA provenance; the optimized WebP derivative does not"	OUTPUT -- the credential comes from the upstream image generator and the repo's own transcode drops it, knowingly and in writing

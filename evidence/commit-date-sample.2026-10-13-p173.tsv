@@ -1,0 +1,18 @@
+# ACTION JV (p173), second limb: the COMMIT-date reading the action actually asked for, on the
+# subsample where the members are NAMED. Rows 1-5 are the 5 members of
+# `topic:ai-education pushed:>=2026-04-16 license:mit stars:>=20` as p172 enumerated them -- i.e.
+# a named subset OF THE 135. Rows 6-10 are shelf rows, which T238 showed are a different
+# population (0 of the 12 carry ai-education + MIT + >=20 stars).
+# Method: git clone --depth 1 --filter=blob:none --no-checkout, then `git log -1 --format=%cI`.
+# No api.github.com. days_since computed against 2026-10-13.
+repo	in_the_135	head	last_commit_iso	days_since_commit	dormant_30	dormant_60	dormant_90
+SenmuuuuW/universal-diagnostic-tutor-skill	YES	075c1895d255	2026-09-24T14:12:09-04:00	18	no	no	no
+TovTechOrg/Tov-learn	YES	290af750671a	2026-09-28T16:39:36+03:00	14	no	no	no
+pguso/agents-from-scratch	YES	da3f9df28a9c	2026-07-25T17:42:35+02:00	79	YES	YES	no
+sgaofen/vibe-schooling	YES	7c2f87a4641b	2026-07-17T00:25:25+08:00	88	YES	YES	no
+NickScherbakov/codementor-ai-platform	YES	a0a33cd6d4f8	2026-07-20T12:50:25+03:00	85	YES	YES	no
+ankimcp/anki-mcp-server	no (T238: shelf row)	e0e347f7f399	2026-10-11T19:23:14+03:00	1	no	no	no
+Selleo/mentingo	no (T238: shelf row)	242a9324fe48	2026-10-10T11:23:52+02:00	3	no	no	no
+zijinz456/OpenTutor	no (T238: shelf row)	f0142f28e8ed	2026-10-08T23:19:26+00:00	4	no	no	no
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	no (T238: shelf row)	9c260890214d	2026-09-21T11:39:26+05:30	22	no	no	no
+ai-shifu/ai-shifu	no (T238: shelf row)	7e3a34e24354	2026-10-13T18:45:22+08:00	0	no	no	no

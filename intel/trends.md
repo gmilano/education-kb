@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🆕 🔴 **The trend this pass can prove rather than cite: the open-source AI-education landscape is
+measured with a tag `1` in `12` of its own best projects uses, and a quarter of what the tag returns
+has been abandoned for a quarter. Both halves are measured this pass; neither was known last pass.**
+
+### 🆕 🔴 1. The vertical is `~61×` bigger than this KB has been saying, and nobody can state it exactly
+
+🟢 **Measured: `topic:ai-education pushed:>=2026-04-16 license:mit` = `135`. Same filters on
+`topic:education` = **`~8.2k`**. On `topic:edtech` = `~1.3k`. And `9` of this KB's `12` shelf rows
+carry `education` while `1` carries `ai-education`.**
+🔴 **The trend statement: `ai-education` is a RESEARCH-FLAVOURED tag and practitioners do not use
+it.** They tag `education`, `edtech`, `ai-tutor`, `lms`, `spaced-repetition` — the vocabulary of
+the thing they are building, not of the category an analyst would file it under. **A topic query is
+a hypothesis about how a community labels itself, and this one was wrong by one to two orders of
+magnitude.**
+🔴 **And it cannot currently be fixed to a number: the channel that answers rounds above `1 000`
+(`T252`). Anyone quoting a count of the open-source education vertical — this KB included — is
+quoting one significant figure.**
+
+### 🆕 🔴 2. Abandonment, not growth, is the dominant state of the tagged population
+
+| band | unpushed | share of `135` |
+|---|---|---|
+| `30` days | `96` | 🔴 **`71.1%`** |
+| `60` days | `64` | 🔴 **`47.4%`** |
+| `90` days | `34` | 🔴 **`25.2%`** |
+
+🔴 **And the star head is worse than the tail, which is the counter-intuitive half.** The `5`
+members of the `≥20`★ permissive head last committed `14`, `18`, `79`, `85` and `88` days before
+this pass — `3` of `5` dormant at `60` days. **Five shelf rows sampled the same way: `0`, `1`, `3`,
+`4`, `22` days.** 🟢 **The trend statement: a star count is a record of past attention and a commit
+date is a statement about the present, and in this vertical they point in opposite directions
+(`T253`).** 🔴 **Practical consequence for any shortlist: `pushed:` + `180` days — the filter this
+KB and most tooling uses — admits a quarter of its population as *"active"* while nobody works on
+it.**
+
+### 🆕 🔴 3. The marking cliff, now specified to the line — and the critical path is a certificate
+
+🔴 **`50` days to Article `50(2)`. `0` of `13` generating shelf rows can mark output. p173 read the
+one row that had the machinery (`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`, `9c260890214d`)
+and the result is more precise and less hopeful than `T233` suggested:**
+
+| piece | state |
+|---|---|
+| per-asset provenance record, export manifest, licence/consent gates | 🟢 **BUILT, real, `20`+ tests** |
+| a gate that CAN refuse an unmarked export | 🟡 **BUILT and OFF — `c2pa_required` defaults `False`** |
+| a signer / embedder | 🔴 **ABSENT in `905` files** |
+| a signing identity | 🔴 **ABSENT — and it is a certificate, not code** |
+
+🔴 **The single line that tells the story: `generation/workflow.py:3018` is the only place the
+pipeline builds a C2PA record for an asset it generated itself, and it writes
+`C2paStatus.NOT_APPLICABLE`.**
+🆕 🔴 **And the trend generalises past this repo, which is why it is in this file: the credential
+survives GENERATION and dies in POST-PRODUCTION.** The same project records, in a code comment,
+that its presenter PNG *"carries embedded C2PA provenance"* from the upstream image generator while
+*"the optimized WebP derivative does not"* (`T256`). **Vendors are shipping marks; pipelines are
+transcoding them off.** 🟢 **For anyone building to the deadline, the engineering is small —
+`c2pa-rs` / `c2patool` are **`MIT OR Apache-2.0`** (`contentauth`) — and the procurement is the
+critical path: an X.509 certificate from a CA in the C2PA trust list. Self-signed validates as
+untrusted.**
+🆕 🔴 **`T246` — and there are TWO obligations being confused as one.** Article `50(2)` marking is
+machine-readable and about the artefact; Article `50(4)` deepfake disclosure is human-readable and
+about the viewer. The shelf's most advanced row has a boolean called
+`synthetic_media_disclosure` — and it records that the SUBJECT of a likeness consented, not that
+the LEARNER was told. **Nothing on this shelf tells a learner anything.**
+
+### 🆕 🟢 4. Compulsory AI curricula have reached the Gulf, and the mandate now leads the tooling
+
+🟢 **The UAE and Saudi Arabia have made AI education compulsory across public schooling — the UAE
+from age four, `KG`→grade `12`, with `24 000`+ educators through a national upskilling week for
+`2026–2027`. Egypt began AI curricula in the `2025-26` academic year under a National AI Strategy
+`2025–2030`.**
+🟢 **The trend statement, and it is the opposite of the usual one: in the Gulf the POLICY is ahead
+of the PRODUCT.** Three national systems are obliged to teach AI and the open-source shelf that
+could serve them contains `0` repositories originating in the region. 🔴 **Compare Africa, where
+the mandate is absent and the gap is governance: `6` in `10` of `47` surveyed universities have no
+AI policy, and under `2%` of African edtech startups build AI for higher education.**
+🟡 **What to watch: whether the Gulf mandate pulls assessment-integrity tooling into the market
+faster than Europe's Article `50` pulls marking tooling. Both deadlines are now inside `14` months
+and the first has `30M`+ students attached to it.**
+
+### 🟢 5. Carried trends, unchanged by p173
+
+🟢 **The administrative layer is still agentless** — `7` platforms, `0` rostering- or
+analytics-primary agents (`gap 123`). 🟢 **Assessment is deeper than the shelf admits** — `2` of
+`12` assessment-PRIMARY, `5` of `12` assessment-CARRYING (`T234`). 🟢 **The copyleft wall in
+education ERP/SIS holds for a twelfth pass** — no `MIT`/`Apache` education ERP, no permissive SIS,
+though p173 is the first pass to note that verdict rests on a denominator it has now measured as
+`~61×` too small.
+[`evidence/dormancy-bands-135.2026-10-13-p173.tsv`](../evidence/dormancy-bands-135.2026-10-13-p173.tsv)
+· [`evidence/aiact-50-2-emitter-gap.2026-10-13-p173.tsv`](../evidence/aiact-50-2-emitter-gap.2026-10-13-p173.tsv)
 ## Pass 172 — 2026-10-13
 
 🆕 🔴 **The trend this pass can prove rather than cite: `0` of `13` open-source education agents

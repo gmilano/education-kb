@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🆕 🟢 **One row changes and it is a MEASUREMENT, not a status: the `Sakai` row's scanner-output
+line. p170–p172 all reported *"`34` `BSD`"* over `Sakai`'s `licenses/`; the shared classifier was
+blind to `Apache-1.1` and is not any more. The manifest is `25` `Apache-1.1` + `9` `BSD`
+(`ACTION JU`). Nothing about whether to route `Sakai` changes — `Apache-1.1` is permissive and OSI
+— but the ATTRIBUTION the client owes does.**
+🆕 🟢 **No platform root grant was re-read this pass and this file says so. Every row below carries
+its p168–p172 verdict forward except the `Sakai` scanner line.**
+🟢 **The routing table RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block is
+canonical"* a row not re-stated is lost however true it remains below. Verified with
+[`compose/code/p171-cross-block-gate/check_lost_rows.py`](../compose/code/p171-cross-block-gate/check_lost_rows.py)
+before commit.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p173
+
+| need | route | licence *(body read)* | status at p173 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED unchanged. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The LATAM and APAC low-bandwidth row — and now the Africa row too: `gap 124` places two compulsory curricula and `6`-in-`10` HEIs without AI policy against an empty repository column** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🆕 🟡 **CARRIED WITH THE SAME THREE FLAGS, one of them now MEASURED CORRECTLY. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); `8` of `86` `licenses/` paths are NOT open-source grants (`ACTION JO`). 🆕 **And `25` of the `86` are `Apache-1.1`, not `BSD` — clause `3` attribution is owed (`ACTION JU`)** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B)* | 🟢 **CARRIED, EMEA. HEAD `242a9324fe48`, last commit `2026-10-10` — `3` days before this pass. `SCORM` import AND export, ships `licenses.config.yaml`, the gate to LIFT. `20` declared topics, the most of any row this KB holds** |
+| 🟢 **Rostering, permissive** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED unchanged. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. The only permissive rostering route verified here** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **CARRIED unchanged. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The only row where grant-named paths and grant bodies agree exactly** |
+| 🟡 **Assessment / exam generation, permissive** | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🟡 **CARRIED as CANDIDATE, not production. `taiwan-exam` is the stronger tree (`593` files, `129` commits in `30` d, `89` tests) but depends on **`PyMuPDF`, `AGPL-3.0`-or-Artifex-commercial**, so the `MIT` root does not reach the closure (`ACTION JR`). Swap for `pypdf` — already in the same `requirements.txt` — or buy the commercial limb BEFORE routing** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, TWELFTH pass with no `MIT`/`Apache` education ERP. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED unchanged. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED unchanged. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED unchanged. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟢 **CARRIED unchanged. No root grant file, confirmed twice. The bundled CKEditor grants remain unread** |
+| 🔴 **SIS, PERMISSIVE** | 🔴 **none exists** | — | 🔴 **TWELFTH pass. 🆕 And the re-test is now honest about its own denominator: the sweep that keeps returning nothing was `topic:ai-education`, which `1` of this KB's `12` shelf rows carries. `topic:education` is `~8.2k` repositories and has NOT been swept for an SIS (`T255`, `gap 125`). `Fedena` stays settled-and-abandoned (`T212`)** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🔴 **CARRIED as REFUTED. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔴 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔴 **DELIBERATELY NOT ROUTED, fourth pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package. 🆕 **And `ACTION JV` puts a number on why this call was right: `25.2%` of the *"active"* population is unpushed for `90` days (`T242`)** |
+
+🟢 **Permissive routes available: `6` of `16` needs** — institutional LMS, offline LMS, AI-native
+LMS, rostering, credentials, SCORM. 🟡 **`1` permissive-with-a-caveat:** assessment generation.
+🔴 **`5` copyleft-only.** 🔴 **`1` need with NO option at all: a permissive SIS** — and p173 is the
+first pass to say that verdict rests on a denominator it has now measured as `~61×` too small.
+
+### 🆕 🟢 The one line in the `Sakai` engagement that changes
+
+| | |
+|---|---|
+| 🔴 **what p170–p172 would have said** | 🔴 ***"A scanner reports `34` BSD files in `licenses/`."*** |
+| 🟢 **what p173 says** | 🟢 ***"`25` of those `34` are the Apache Software License 1.1, not BSD. `Apache-1.1` carries the same redistribution grant as BSD plus clause `3`: the end-user documentation must say 'This product includes software developed by the Apache Software Foundation'. That is an attribution line in the deliverable, not a permission problem."*** |
+| 🟢 **why the correction is safe to state** | 🟢 **Both families are permissive and OSI, so no commercial verdict moves. `0` of the manifest's bodies withhold commercial use — the problems remain the `8` proprietary Sun click-through paths and the `3` stale component files, both unchanged from `ACTION JO`** |
+
+🟡 **And the liveness bar used on every row above is now known to be loose.** `ACTION JV` measured
+the `180`-day *"active"* bar admitting `25.2%` of repositories unpushed for `90` days. **For a
+routing decision, read the COMMIT date** — `git clone --depth 1 --filter=blob:none --no-checkout`
+then `git log -1 --format=%cI`, no API needed. The `5` rows sampled that way this pass committed
+`0`, `1`, `3`, `4` and `22` days before p173.
 ## Pass 172 — 2026-10-13
 
 🆕 🔴 **The `Sakai` row changes, and it is the only row whose STATUS this pass moves. p171 routed it

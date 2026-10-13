@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p173
+
+🆕 🔴 **The week's measurable finding is a NEGATIVE one and it is about this page's own feed. `29`
+repositories carried `topic:ai-education` and were CREATED in the last `30` days
+(`topic:ai-education created:>=2026-09-13`, rendered-page channel). Sorted by stars, the top of
+that cohort is `6`★, then `2`, then `1`, `1`, `1` — and the page shows NO licence for any of the
+five. 🔴 **The topic's creation edge is unlicensed and unstarred: there is nothing on it to
+route.****
+🆕 🔴 **And the `≥20`★ head that p172 enumerated is going DORMANT rather than growing. Measured by
+COMMIT date this pass, `3` of those `5` have not been touched in `60` days — `pguso/agents-from-scratch`
+(`79` d), `NickScherbakov/codementor-ai-platform` (`85` d, which p172 already flagged) and
+`sgaofen/vibe-schooling` (`88` d). The two live ones are the two TUTORS (`T253`).**
+🆕 🟢 **Which means this page should stop reporting the topic's head as *"what is new this week"*.
+It is a leaderboard of things that happened in summer.**
+
+| repo *(the `≥20`★ head, re-read by COMMIT date)* | ★ band | licence | HEAD at p173 | last commit | days | verdict at p173 |
+|---|---|---|---|---|---|---|
+| 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | `≥20` | 🟢 `MIT` *(body read p172)* | `290af750671a` | `2026-09-28` | 🟢 **`14`** | 🟢 **LIVE. EMEA, tutoring, non-profit (`tovtech.org`)** |
+| 🟢 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | `≥20` | 🟢 `MIT` *(body read p172)* | `075c1895d255` | `2026-09-24` | 🟢 **`18`** | 🟢 **LIVE. APAC, tutoring, Markdown-only skill — the row that models when to STOP teaching** |
+| 🔴 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `≥20` | 🟢 `MIT` | `da3f9df28a9c` | `2026-07-25` | 🔴 **`79`** | 🔴 **DORMANT, and still NOT EDTECH — education ABOUT AI (`T228`)** |
+| 🔴 [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | `≥20` | 🟢 `MIT` | `a0a33cd6d4f8` | `2026-07-20` | 🔴 **`85`** | 🔴 **DORMANT, confirmed independently of p172's reading. Not routable** |
+| 🔴 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | `≥20` | 🟢 `MIT` | `7c2f87a4641b` | `2026-07-17` | 🔴 **`88`** | 🔴 **DORMANT. Assessment-CIRCUMVENTION; this KB holds it as a THREAT MODEL, not a dependency** |
+
+🟢 **Channel and precision stated, per `T227` + `T252`: rendered `github.com/search` pages for the
+counts, `git clone --depth 1 --filter=blob:none --no-checkout` + `git log -1 --format=%cI` for the
+dates. Counts under `1 000` are exact; the channel ROUNDS above it, so no four-figure number on
+this page is a count.**
+🆕 🟢 **`T251`, a correction to this page's own standing channel note:** p172 wrote
+*"`api.github.com` answers `403` at the proxy from this container"*. It does not.
+`https://api.github.com/rate_limit` answers `200` with `15 000` core requests remaining. What
+refuses is every path outside this session's BOUND repositories — `repos/moodle/moodle` and
+`search/repositories` both `403` — and it refuses in its own words: *"sessions are bound to their
+configured repositories"*. **The limitation is real and its CAUSE was wrong, which matters because
+the remedy exists where it matters: attach the repository.**
+
+🔴 **What this page still cannot show, fourth consecutive pass: a single trending education-AI
+repository originating in LATAM, the Middle East or Africa.** p173 searched the Middle East and
+Africa properly for the first time (`ACTION JT`, `6` formulations, `8` countries placed) and found
+**national curricula, surveys and donor money — and `0` repositories.** The nearest thing is a
+Gates Foundation grant of **~`US$4.0M` (July `2026`)** to the **Fab AI Foundation** (Geneva) to
+fine-tune **open-source small models** for Sub-Saharan classrooms: open-source money aimed at the
+region, from outside it, with no public repository this KB could name. `ACTION JY` is registered to
+test whether that `0` is the ecosystem or the query — because `ACTION JT` just proved the same
+`0` was the query once already.
+[`evidence/dormancy-bands-135.2026-10-13-p173.tsv`](../evidence/dormancy-bands-135.2026-10-13-p173.tsv)
+· [`evidence/commit-date-sample.2026-10-13-p173.tsv`](../evidence/commit-date-sample.2026-10-13-p173.tsv)
 ## 2026-10-13 — p172
 
 🆕 🔴 **p171's `≥20`★ permissive population is `5` repositories, it NAMES them, and `0` of the `5`

@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🆕 🔴 **`ACTION JW` DISCHARGED WITH ITS FALSIFIER FIRED AT THE CEILING. `T238` said the `12`-row
+shelf and the `ai-education` topic are *"nearly DISJOINT populations"* and left the impression these
+rows are untagged outliers. Read from each repository's own About sidebar: `12` of `12` carry at
+least one of `ai-education`, `ai-tutor`, `edtech` or `education`. `9` of `12` carry plain
+`education`. 🔴 **`1` of `12` carries `ai-education` — the topic every `485`/`357`/`135` figure this
+KB has published was measured on.** The shelf is not narrow. The QUERY is (`T255`).**
+🆕 🔴 **And the one row that DOES carry `ai-education` — `HugeCatLab/ChatTutor` — is `AGPL-3.0`, so
+`license:mit` excludes it anyway. The overlap between this shelf and the measured population is
+exactly `0`, for two independent reasons.**
+🆕 🟢 **Licence cells and regions carry forward from p171/p172 body reads. `HEAD`s are p173's own
+blobless-clone sweep for the `5` rows it needed commit dates from, and carry forward for the other
+`7` — the column says which.**
+🟢 **Actions are registered in [`intel/open-gaps.md`](../intel/open-gaps.md) ONLY, per `T218`.**
+
+### 🆕 🟢 The `12`-row shelf, with the TOPIC axis added
+
+| repo | licence *(body read, p171)* | primary shape *(p172)* | region | 🆕 **topics it declares** | 🆕 **carries one of the four?** |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | `agent`, `ai`, **`education`**, `llm`, `teaching-assistant` | 🟢 **YES** — `education` |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | `ai`, `canvas`, `claude`, `codex`, **`education`**, `handwriting`, `nodejs`, `visual-thinking` | 🟢 **YES** — `education` |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | `ai`, **`education`**, `english-learning`, `flutter`, `language-learning`, `listening-practice`, `spaced-repetition`, `speaking-practice` | 🟢 **YES** — `education` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | `ai`, `ai-learning-tool`, **`ai-tutor`**, `anki`, `anki-addon`, `anki-flashcards` | 🟢 **YES** — `ai-tutor` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | `ai-lms`, `ai-mentor`, **`ai-tutor`**, `compliance-training`, `corporate-training`, `docebo-alternative`, **`edtech`**, `hrtech`, `learning-management-system`, `lms`, `moodle-alternative`, `open-source-lms`, `openedx-alternative`, `roleplay`, `scorm`, `self-hosted`, `training`, `typescript`, `white-label`, `xapi` *(`20` topics — the most of any row)* | 🟢 **YES** — `ai-tutor` + `edtech` |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | `ai-agents`, **`ai-tutor`**, `clawbot`, `cli-tool`, `deepresearch`, `interactive-learning`, `learning`, `multi-agent-systems`, `rag` | 🟢 **YES** — `ai-tutor` |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | `ai`, `docker`, **`edtech`**, **`education`**, `flashcards`, `javascript`, `langchain`, `nodejs`, `notebooklm`, `notes`, `oss`, `pagelm`, `podcast`, `quizzes`, `rag`, `react`, `study-tools`, `tailwindcss`, `typescript`, `vite` | 🟢 **YES** — `edtech` + `education` |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | `adaptive-learning`, `ai`, **`ai-tutor`**, **`edtech`**, **`education`**, `fastapi`, `knowledge-graph`, `learning`, `llm`, `local-first`, `nextjs`, `open-source`, `python`, `self-hosted`, `spaced-repetition`, `typescript` | 🟢 **YES** — `3` of the `4` |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | `ai`, `animated-presenters`, **`education`**, `generative-ai`, `lip-sync`, `local-ai`, `python`, `react`, `rust`, `tauri`, `text-to-speech`, `tutorials`, `video-editor`, `video-generation`, `windows` | 🟢 **YES** — `education` |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | `ai`, 🔴 **`ai-education`**, **`education`**, `llm`, `stem` | 🔴 **YES — AND IT IS THE ONLY ROW CARRYING `ai-education`**, and `AGPL-3.0` excludes it from `license:mit` regardless |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | `ai`, **`education`**, `hacktoberfest`, `literacy`, `machine-learning`, `o1`, `prompt-engineering`, `reasoning`, `theory-of-mind`, `tutoring` | 🟢 **YES** — `education` |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | tutoring | Global | `ai`, **`education`**, `gpt-4`, `llm` | 🟢 **YES** — `education` |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` need one:** `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1` paraphrased
+`Apache-2.0`, `1` with no grant at all.
+
+### 🆕 🔴 The topic tally, and what it does to every population figure in this KB
+
+| topic | shelf rows carrying it | the population it returns *(`pushed:>=2026-04-16 license:mit`)* |
+|---|---|---|
+| 🔴 **`ai-education`** | 🔴 **`1` of `12`** | `135` — **every figure this KB has published** |
+| `ai-tutor` | `4` of `12` | `581` *(no licence filter)* |
+| `edtech` | `3` of `12` | 🔴 **`1.3k`** |
+| 🟢 **`education`** | 🟢 **`9` of `12`** | 🔴 **`8.2k`** — `~61×` the figure in use |
+| 🔴 **any of the four** | 🔴 **`12` of `12`** | — |
+
+🆕 🔴 **`T255` — `T238` had the fact and missed the cause, and the cause is the actionable half.**
+These rows are not untagged. They are tagged the way practitioners tag education software —
+`education`, `edtech`, `ai-tutor` — and this KB has been counting the one tag that reads like a
+research category. **A query is a hypothesis about how a community labels itself, and this one was
+never tested until it was made a falsifier.**
+🆕 🟢 **What that means for an engagement, which is the only reason it is in this file:** when a
+client asks *"how big is the open-source AI-education landscape"*, the honest answer is **a
+four-figure number this KB cannot yet state precisely** (`gap 125`), not `135`. The `135` is a
+usable SHORTLIST and a useless denominator.
+
+### 🆕 🟢 Liveness, measured by COMMIT date rather than inferred from `pushed:`
+
+🟢 **Channel: `git clone --depth 1 --filter=blob:none --no-checkout` then
+`git log -1 --format=%cI`. No `api.github.com`. `5` of `12` rows sampled, chosen because p173
+needed them for `ACTION JV`'s comparison.**
+
+| repo | HEAD at p173 | last commit | days |
+|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `7e3a34e24354` | `2026-10-13` | 🟢 **`0`** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `e0e347f7f399` | `2026-10-11` | 🟢 **`1`** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `242a9324fe48` | `2026-10-10` | 🟢 **`3`** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `f0142f28e8ed` | `2026-10-08` | 🟢 **`4`** |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | `9c260890214d` | `2026-09-21` | 🟢 **`22`** |
+
+🆕 🔴 **`T253` — and the comparison is the finding: the `ai-education` topic's `≥20`★ HEAD is deader
+than the shelf it cannot see.** Those five rows last committed `14`, `18`, `79`, `85` and `88` days
+ago — `3` of `5` dormant at `60` days. **The shelf: `0` of `5` dormant at `30`.** A deck built from
+the topic's star ranking would recommend three projects nobody has touched since July.
+[`evidence/shelf-topic-overlap.2026-10-13-p173.tsv`](../evidence/shelf-topic-overlap.2026-10-13-p173.tsv)
+· [`evidence/commit-date-sample.2026-10-13-p173.tsv`](../evidence/commit-date-sample.2026-10-13-p173.tsv)
 ## Pass 172 — 2026-10-13
 
 🆕 🟢 **`ACTION JP` DISCHARGED AT TWO DENOMINATORS, and the answer flips between them. `T229` said

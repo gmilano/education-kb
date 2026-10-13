@@ -1,0 +1,11 @@
+# ACTION JX (p173), the concrete extension. What Article 50(2) machine-readable marking needs, and
+# which pieces this row already has. 50 days to 2 December 2026 at p172; 50 days from 2026-10-13 is
+# 2026-12-02, so the deadline is 50 days from this pass too (the interval did not move; the pass did).
+piece	status_in_this_repo	what_is_missing	cost_shape
+a provenance record per asset	BUILT -- AssetProvenance with sha256, origin, model id + immutable revision, ingredients	nothing	0
+an export-time manifest	BUILT -- ExportProvenanceManifest(project_id, revision_id, assets, generated_at, c2pa)	its c2pa field is populated from INPUTS, never from a signature over the output	small
+a gate that can refuse an unmarked export	BUILT -- export_gate checks asset.c2pa when c2pa_required is True	c2pa_required defaults to False, so the check is off unless a caller turns it on	1 line + a test
+a C2PA signer/embedder	ABSENT -- nothing in 905 files signs or embeds a manifest	c2pa-rs / c2patool (MIT OR Apache-2.0, contentauth) wired into the export step after mux	days, not weeks
+a signing identity	ABSENT and NOT a code problem	an X.509 certificate from a CA in the C2PA trust list, or a self-signed one that validators will mark untrusted	procurement, the real critical path
+a human-readable disclosure	PARTIAL -- ConsentRecord.synthetic_media_disclosure records that the SUBJECT consented to disclosure	nothing renders a notice to the LEARNER. Art 50(2) marking is machine-readable; Art 50(4) deepfake disclosure is human-readable. Two obligations, one flag (T246)	small, and it is a product decision
+a marking state in the domain enum	ABSENT in Python, PRESENT in TypeScript	add SIGNED to C2paStatus so the gate can tell "we signed it" from "someone else's manifest verified"	1 line + a test

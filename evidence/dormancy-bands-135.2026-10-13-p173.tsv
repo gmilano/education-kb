@@ -1,0 +1,23 @@
+# ACTION JV (p173) -- gap 121 / T242. Does the "active within 180 days" bar count repositories
+# nobody is working on? Measured by PUSH-RECENCY BANDING over the 135, taken on the rendered
+# github.com/search channel. Every query string recorded verbatim, per T227.
+# t0 = 2026-10-13. 30d = 2026-09-13, 60d = 2026-08-14, 90d = 2026-07-15.
+# FALSIFIER LIMB 1: "refuted if <10pct are dormant at 90 days". SILENT -- 25.2pct are.
+# FALSIFIER LIMB 2: "refuted if the measurement cannot be taken without api.github.com". SILENT --
+#   it was taken without it. And the api.github.com diagnosis in this KB is WRONG, see below.
+# LIMIT STATED: `pushed:` is PUSH recency, not COMMIT recency, and the action asked for days since
+# last COMMIT. See commit-date-sample...p173.tsv for the subsample where both are known.
+query_string	count	band	dormant_at_band	dormant_pct
+topic:ai-education pushed:>=2026-04-16 license:mit	135	180d (the KB's existing bar)	0	0.0
+topic:ai-education pushed:>=2026-09-13 license:mit	39	pushed within 30d	96	71.1
+topic:ai-education pushed:>=2026-08-14 license:mit	71	pushed within 60d	64	47.4
+topic:ai-education pushed:>=2026-07-15 license:mit	101	pushed within 90d	34	25.2
+# CHANNEL CORRECTION (T251): this KB has recorded "api.github.com answers 403 at the proxy" since
+# p172 and earlier. Measured this pass: https://api.github.com/rate_limit answers HTTP 200 with
+# core limit 15000 / remaining 15000. What refuses is every path outside the session's BOUND
+# repositories, and it refuses with its own message: "This GitHub API path is not available:
+# sessions are bound to their configured repositories. Use repository-scoped endpoints". So
+# repos/moodle/moodle is 403 and search/repositories is 403, but the cause is session repo-binding,
+# not a blanket proxy denial -- which means the remedy exists (attach the repo) where it matters.
+# ALSO MEASURED: github.com HTML is 403 to curl while raw.githubusercontent.com is 200 and
+# git ls-remote/clone over https succeeds. Four channels, four different answers.

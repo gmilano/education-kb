@@ -1,0 +1,12 @@
+# ACTION JV (p173) — the five query strings, verbatim, in the order run. Channel: rendered
+# github.com/search pages (WebFetch). t0 = 2026-10-13. Recorded per T227 so the next pass can
+# reproduce the counts instead of re-deriving the question.
+topic:ai-education pushed:>=2026-04-16 license:mit
+topic:ai-education pushed:>=2026-09-13 license:mit
+topic:ai-education pushed:>=2026-08-14 license:mit
+topic:ai-education pushed:>=2026-07-15 license:mit
+topic:ai-education created:>=2026-09-13
+# — and the three DENOMINATOR queries that ACTION JW's second limb needed (T252):
+topic:education pushed:>=2026-04-16 license:mit
+topic:edtech pushed:>=2026-04-16 license:mit
+topic:ai-tutor pushed:>=2026-04-16

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🆕 🟢 **`ACTION JU` DISCHARGED. The shared hardened classifier can now see `Apache-1.1`, and
+`Sakai`'s manifest re-reads as `25` `Apache-1.1` paths + `9` `BSD` where p170–p172 all read
+`34 BSD`. `207` of `207` regression assertions, `8` of them new, `13` of `14` dependent suites
+byte-identical.**
+🆕 🔴 **But the falsifier's first limb FIRES and it narrows the gap: the corrected classifier
+changes `0` verdicts across the `50` licence bodies committed in this repository's own fixtures. On
+the evidence available offline `T232` is a property of ONE 2005-era manifest, not a live defect in
+a shared control. The error was LATENT, and `gap 120`'s *"every instrument inherits this"* is true
+in principle and empty in practice.**
+🆕 🟢 **And the re-read was CONTROLLED where p171's was not. `git fetch` refused the pinned sha —
+`fatal: couldn't find remote ref 88f8e09c0a38` — and `raw.githubusercontent.com` served all `86`
+paths at that exact commit anyway. `86` of `86` bodies byte-identical to p172's recorded hashes
+(`T249`).**
+
+### 🆕 🟢 What `Sakai`'s `licenses/` manifest actually contains, corrected
+
+| family *(shared classifier, p173)* | paths | was read as |
+|---|---|---|
+| 🆕 🟢 **`Apache-1.1`** | 🆕 **`25`** *(`20` distinct blobs)* | 🔴 **`BSD`** at p170, p171 and p172 |
+| 🟢 `Apache-2.0` | `24` | unchanged |
+| 🔴 `UNCLASSIFIED` | `16` | unchanged — this is where the `8` proprietary Sun agreements live |
+| 🟡 `BSD` | 🆕 **`9`** | was `34` |
+| 🟡 `LGPL-2.1` | `5` | unchanged — includes the `2` generic-blob mismatches (`T230`) |
+| 🟢 `MIT` | `3` | unchanged |
+| 🟡 `MPL-1.1` | `1` | unchanged |
+| 🔴 `CC-BY-2.5` | `1` | unchanged |
+| ⬜ binary PDF, not read | `2` | unchanged |
+
+🟢 **The `25` are the ASF components of a 2005-era Java stack and they are exactly who you would
+expect: `log4j-1.2.8`, `lucene`, `struts-1.1`, `struts-legacy`, `velocity`, `poi`, `oro`, `batik`,
+`fop`, `james`, `axis`, `xalan-2.5.2`, `xercesImpl-2.5.0`, `xml-apis`, `jasper-compiler`,
+`jasper-runtime`, `avalon-framework`, `cornerstone`, `excaliber`, `logkit`, `db-ojb-1.0.rc6`,
+`commons-id-0.1-dev`, `stxx-1.3`, `xmlform` — and `apache1.1.license.txt` itself.**
+
+### 🆕 🟡 What changes for a client, and what does not
+
+| | |
+|---|---|
+| 🟢 **permission** | 🟢 **NOTHING changes. `Apache-1.1` and `BSD-3-Clause` are both permissive and both OSI; `commercial_use_ok()` answered ALLOWED before and after. No verdict this KB published was wrong** |
+| 🔴 **attribution** | 🔴 **THIS is what was lost. `Apache-1.1` clause `3` requires the end-user documentation to carry *"This product includes software developed by the Apache Software Foundation (http://www.apache.org/)"*. `BSD-3-Clause` requires no acknowledgment at all. A deliverable that reported `BSD` over these `25` paths dropped an attribution obligation the client has to meet** |
+| 🟡 **what it does NOT prove** | 🟡 **These are manifest files for components `Sakai` may no longer ship. p173 read the MANIFEST, not the build — same limit p172 stated and it still applies** |
+| 🟢 **the scanner line to use in a deck** | 🟢 ***"A tool reporting `34 BSD` over `Sakai`'s `licenses/` is reporting `25` `Apache-1.1` files as BSD. `Apache-1.1` is BSD-shaped — it carries the same redistribution grant — plus an attribution clause BSD does not have."*** |
+
+### 🆕 🟢 The classifier change itself
+
+🟢 **Three anchors, all on the TITLE BLOCK except the third's confirming signature, and the order is
+load-bearing because `Apache-1.1` CONTAINS the BSD grant phrase:**
+
+| anchor | answer |
+|---|---|
+| title says `Apache Software License` + `Version 1.1` | `Apache-1.1` |
+| title says `Apache Software License` + `Version 1.0` | `Apache-1.0` |
+| title says `Apache Software License`, no version, body carries the clause-`3` acknowledgment | `Apache-1.x-UNVERSIONED` *(following `GPL-UNVERSIONED`: never invent a version the payload does not state)* |
+
+🔴 **A payload carrying the acknowledgment but NOT the title stays `BSD`, deliberately** — the ASF
+acknowledgment appears in BSD notices of projects that merely credit the ASF, and the suite pins
+this with a FABRICATED negative control that says so in its filename.
+🟢 **The `7` platform rows, `Moodle`'s `88` grant documents and `OpenOLAT`'s root verdict are
+CARRIED UNCHANGED from p168–p172. p173 re-read no platform root and says so.**
+[`compose/code/p173-apache11-family/`](../compose/code/p173-apache11-family/)
+· [`evidence/apache11-reclassification-sakai86.2026-10-13-p173.tsv`](../evidence/apache11-reclassification-sakai86.2026-10-13-p173.tsv)
+· [`evidence/apache11-outside-sakai-corpus.2026-10-13-p173.tsv`](../evidence/apache11-outside-sakai-corpus.2026-10-13-p173.tsv)
+· [`evidence/lib-test-surface-pristine-vs-patched.2026-10-13-p173.tsv`](../evidence/lib-test-surface-pristine-vs-patched.2026-10-13-p173.tsv)
 ## Pass 172 — 2026-10-13
 
 🆕 🔴 **`ACTION JO` settled `gap 117` and found something larger beside it. `8` of the `86` paths in

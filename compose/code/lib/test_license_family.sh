@@ -1008,5 +1008,57 @@ else
   check "P854 fixtures-p854 presente" si no
 fi
 
+# ---------------------------------------------------------------------------
+# `T232` / `gap 120`, CORREGIDO EN EL PASE 173.  `Apache-1.1` contestaba `BSD`.
+#
+# El fixture POSITIVO es el cuerpo REAL de `licenses/apache1.1.license.txt` de
+# `sakaiproject/sakai` en `88f8e09c0a38` (2.383 B, `sha256[0:12] = 705c81dd9e54`), leido por
+# `raw.githubusercontent.com` A ESE SHA y verificado byte a byte contra la lectura del p172.
+# No es un texto tipeado de memoria: es el payload que produjo el defecto.
+#
+# Y EL CONTROL NEGATIVO ES EL QUE IMPORTA, porque la clausula 3 de `Apache-1.1` aparece en
+# avisos BSD de proyectos que acreditan a la ASF.  `crafted-bsd3-plus-asf-acknowledgment`
+# ES FABRICADO --y lo dice en el nombre-- : es el `BSD-3-Clause` real de
+# `YuanGongND/gopt` con el acuse de recibo de la ASF agregado al final y SIN titulo
+# `Apache Software License`.  Tiene que seguir contestando `BSD`: una clausula sin titulo
+# describe una cortesia, no concede.
+_A11="$(dirname "$0")/../p173-apache11-family/fixtures/apache1.1-real-sakai-manifest.LICENSE"
+_A11NEG="$(dirname "$0")/../p173-apache11-family/fixtures/crafted-bsd3-plus-asf-acknowledgment.LICENSE"
+if [ -f "$_A11" ] && [ -f "$_A11NEG" ]; then
+  check "T232 Apache-1.1 real NO es BSD"            Apache-1.1 "$(family_of "$(cat "$_A11")")"
+  # el fixture tiene que seguir siendo el blob medido, o el caso de arriba pasa por la
+  # razon equivocada (es la regla de `T197` aplicada a un fixture).
+  check "T232 el fixture es el blob 705c81dd9e54"   705c81dd9e54 "$(sha256sum "$_A11" | cut -c1-12)"
+  # Apache-1.1 ES BSD-SHAPED: trae la frase de concesion BSD.  Se afirma, porque es la
+  # razon por la que la rama nueva tiene que ir ANTES de la de BSD y no despues.
+  if grep -qi 'redistribution and use in source and binary forms' "$_A11"; then
+    check "T232 el payload Apache-1.1 SI trae la concesion BSD" si si
+  else
+    check "T232 el payload Apache-1.1 SI trae la concesion BSD" si no
+  fi
+  check "T232 clausula 3 SIN titulo sigue siendo BSD" BSD "$(family_of "$(cat "$_A11NEG")")"
+  check_ok "Apache-1.1 (permisiva OSI: el eje comercial viaja)" "$(cat "$_A11")"
+  # Apache-2.0 y BSD-3 REALES no se los roba la rama nueva.  `$APACHE` es el title block
+  # real de Apache-2.0 que esta suite ya traia; el BSD-3 real es el fixture de `p308`.
+  check "T232 Apache-2.0 real sigue siendo Apache-2.0" Apache-2.0 "$(family_of "$APACHE")"
+  _BSD3="$(dirname "$0")/../p308-phrase-anchor-sweep/fixtures/bsd3-YuanGongND-gopt.LICENSE"
+  check "T232 BSD-3 real sigue siendo BSD"           BSD "$(family_of "$(cat "$_BSD3")")"
+  # La version NO se inventa: un titulo `Apache Software License` sin numero y con la
+  # firma de atribucion contesta `Apache-1.x-UNVERSIONED`, como `GPL-UNVERSIONED`.
+  _A1X='The Apache Software License
+
+Copyright (c) 2000 The Apache Software Foundation.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+3. The end-user documentation included with the redistribution, if any, must include the
+following acknowledgment: "This product includes software developed by the Apache Software
+Foundation (http://www.apache.org/)."'
+  check "T232 ASL sin version no inventa el numero" Apache-1.x-UNVERSIONED "$(family_of "$_A1X")"
+else
+  check "T232 fixtures de p173 presentes" si no
+fi
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

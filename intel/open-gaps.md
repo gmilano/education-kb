@@ -4,6 +4,235 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 173 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p172 registered — `2` DISCHARGED with silent falsifiers, `3`
+DISCHARGED WITH A LIMB FIRED. Every one of the three firings makes this KB's claim SMALLER, which
+is the direction a self-assessment almost never goes.**
+🔴 **Standing caveat unchanged and it applies in full: p173 judges actions p172 wrote, and p173 did
+the work. These are self-assessments.**
+🆕 🔴 **The headline is that `gap 118` was never a coverage gap. Six query formulations returned
+placeable findings for `8` countries across the Middle East and Africa. p172 searched a region
+named for three continents with queries that could only answer about one, and recorded the silence
+as absence — the same defect `ACTION JN` found in the agent query, now found in the region query.**
+🆕 🟢 **The most useful correction for this container: `api.github.com` is NOT `403` at the proxy.
+It answers `200` with a `15 000`-request core budget, and refuses only paths outside this session's
+BOUND repositories, in its own words. Four channels to GitHub, four different answers, and this KB
+had one of them wrong in writing since p172 (`T251`).**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🔴 **`ACTION JT`** | 🔴 *refuted if `≥2` countries return substantive placeable findings; ALSO refuted if `0` of `~6` formulations returns anything* | 🔴 **`8` countries placed: UAE, Saudi Arabia, Egypt, Morocco, Kenya, South Africa, Nigeria, Rwanda. `6` of `6` formulations returned** | 🔴 **DISCHARGED, LIMB 1 FIRED, limb 2 silent. `gap 118` was a QUERY artefact. CLOSED and re-stated as `gap 124`, which is narrower and real** |
+| 🟡 **`ACTION JU`** | 🔴 *refuted if the corrected classifier changes `0` verdicts outside `Sakai`; ALSO refuted if the fix breaks any existing test* | 🟡 **`25` of `86` change inside `Sakai`; `0` of `50` change outside it. `13` of `14` suites byte-identical, `lib` goes `199/199` → `207/207`** | 🟡 **DISCHARGED, LIMB 1 FIRED, limb 2 SILENT. The fix ships; `gap 120`'s *"every instrument inherits this"* is true in principle and EMPTY in practice** |
+| 🟢 **`ACTION JV`** | 🔴 *refuted if `<10%` are dormant at `90` days; ALSO refuted if the measurement needs `api.github.com`* | 🟢 **`25.2%` dormant at `90` d, `47.4%` at `60` d, `71.1%` at `30` d. Measured with `0` API calls** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. The `180`-day bar is wrong by a factor this KB can now state** |
+| 🔴 **`ACTION JW`** | 🔴 *refuted if `≥6` of `12` carry `ai-education`, `ai-tutor`, `edtech` or `education`* | 🔴 **`12` of `12` carry at least one — the maximum. But `1` of `12` carries `ai-education`** | 🔴 **DISCHARGED, FALSIFIER FIRED AT THE CEILING. `T238` was right about the disjointness and wrong about the reason: the topic is narrow, the vertical is not** |
+| 🟢 **`ACTION JX`** | 🔴 *refuted if the subsystem already emits an output-side mark; ALSO refuted if the two files are stubs* | 🟢 **`0` emitters in `905` files; the one line that builds a C2PA record for a generated asset writes `NOT_APPLICABLE`. `347`-line gate, `20`+ real tests** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `ACTION JQ`'s `0` of `13` CONFIRMED on the best-equipped row, and `T233`'s *"the hard part is built"* is HALF true** |
+
+### 🆕 🔴 `ACTION JT` — `gap 118` was a question, not a hole
+
+🟢 **Query strings recorded verbatim, per `T227`, in
+[`evidence/mea-region-queries.2026-10-13-p173.tsv`](../evidence/mea-region-queries.2026-10-13-p173.tsv).
+Channel: `WebSearch`, US-indexed, `2026-10-13`. Six formulations, `6` returned.**
+
+| formulation | returned | countries placed |
+|---|---|---|
+| `AI education adoption Middle East 2026 regulation players` | 🟢 yes | UAE, Saudi Arabia |
+| `AI education Africa 2026 adoption regulation edtech` | 🟢 yes | Kenya, Rwanda, South Africa, Nigeria |
+| `edtech AI Gulf GCC UAE Saudi Arabia 2026 schools adoption` | 🟢 yes | UAE, Saudi Arabia, Bahrain |
+| `AI curriculum policy Nigeria Kenya South Africa 2026` | 🟢 yes | Nigeria, Kenya, South Africa |
+| `artificial intelligence education strategy Egypt Morocco Israel 2026` | 🟡 partial | Egypt, Morocco — 🔴 **Israel returned NOTHING** |
+| `African open source edtech AI startups 2026 funding github` | 🟡 partial | Kenya, Nigeria, Tanzania — 🔴 **no African-origin open-source repo** |
+
+🆕 🔴 **`T254` — p172's EMEA queries could not have returned Middle East or Africa, and the gap
+recorded their silence as the region's.** A region abbreviation is not a search term. *"EMEA"*
+indexes European coverage because European institutions publish in the languages and venues the
+index is built from; the Middle East and Africa answer to **country names**. `gap 118` said *"the
+largest unexamined bucket"* and the bucket was unexamined because of how it was asked for.
+🟢 **Register rule: a region bucket is searched by naming its COUNTRIES, and a region that returns
+nothing is only a finding once `≥4` of its countries have been named individually.**
+
+🆕 🔴 **And the substantive finding, which is a market statement and not a methodology one:
+the Middle East leads the world on MANDATE and Africa leads on GOVERNANCE DEBT, and they are the
+same opportunity from opposite ends.** The UAE and Saudi Arabia have made AI education
+**compulsory** in public schools from the `2025/26` year — the UAE from age four, KSA embedding AI
+and coding across all school levels — while a WISE/Ashesi survey of `47` African higher-education
+institutions (February `2026`) found **`6` in `10` have no formal AI governance framework at all**,
+and that `64%` of African edtech startups build for K-12 while **under `2%`** build AI for higher
+education. 🔴 **`gap 124` replaces `gap 118`: this KB has the policy surface for both and `0`
+open-source repositories originating in either.**
+
+### 🆕 🟡 `ACTION JU` — the fix is right, the gap's scope was wrong
+
+🟢 **Full write-up in
+[`compose/code/p173-apache11-family/`](../compose/code/p173-apache11-family/). Two populations,
+both stated per `T197`.**
+
+| population | size | changed |
+|---|---|---|
+| `sakaiproject/sakai` `licenses/` at `88f8e09c0a38` | `86` paths, `20` distinct blobs affected | 🔴 **`25`** `BSD` → `Apache-1.1` |
+| 🟢 every licence body in this repo's own fixtures | `50` | 🟢 **`0`** |
+
+🆕 🟢 **`T249` — a sha the git server REFUSES is not an unreachable sha, and this retires
+*"the repository moved, so the re-read is uncontrolled"*.** p171 recorded its `Sakai` limb as
+uncontrolled because the server refused the pinned sha in `want`; p173 hit the identical refusal
+(`fatal: couldn't find remote ref 88f8e09c0a38`) and then fetched all `86` paths from
+`raw.githubusercontent.com/<owner>/<repo>/<sha>/<path>`, which serves arbitrary commits. **`86` of
+`86` came back byte-identical to p172's recorded hashes.** The hash is the control, and it is
+stronger than a ref because it does not depend on the server's negotiation policy.
+🆕 🔴 **`T247` — p172's own instrument cannot run in this container.**
+`p172-manifest-attribution/classify_bodies.sh` sources the shared lib from the absolute path
+`/tmp/education-kb/...`; this clone is at `/home/user/education-kb`. An instrument that hardcodes
+the clone location is a transcript, not a tool — and this repository ships `p355-cwd-portability`
+as the control for exactly that, which never reached p172's script.
+🆕 🔵 **`T250` — and `p355-cwd-portability` is itself not location-portable.** It is the one suite
+of `14` whose result differs between the real tree and a copy: it FAILS in the copy and passes in
+the real tree, before and after the patch. A control that proves portability by assuming its own
+path proves it in one place.
+🆕 🟢 **The direction of the `Apache-1.1` error, stated because it bounds the damage:** `BSD` and
+`Apache-1.1` are both permissive and both OSI, so `commercial_use_ok()` answered ALLOWED for both
+and **no commercial verdict this KB published was wrong**. What was dropped is clause `3`'s
+end-user-documentation acknowledgment. **Attribution debt, not permission debt** — and it is the
+kind a client's reviewer finds after the deliverable ships.
+
+### 🆕 🟢 `ACTION JV` — the `180`-day bar, measured
+
+| band | query *(verbatim)* | count | dormant | % of `135` |
+|---|---|---|---|---|
+| `180` d *(the bar in use)* | `topic:ai-education pushed:>=2026-04-16 license:mit` | `135` | — | — |
+| `30` d | `… pushed:>=2026-09-13 …` | `39` | 🔴 **`96`** | 🔴 **`71.1%`** |
+| `60` d | `… pushed:>=2026-08-14 …` | `71` | 🔴 **`64`** | 🔴 **`47.4%`** |
+| `90` d | `… pushed:>=2026-07-15 …` | `101` | 🔴 **`34`** | 🔴 **`25.2%`** |
+
+🔴 **Both limbs silent, so `gap 121` closes with a number: every population figure this KB has
+published on `pushed:>=` + `180` d includes roughly `25%` repositories unpushed for a quarter and
+`71%` unpushed for a month.** 🟡 **Limit stated and not buried: `pushed:` is PUSH recency and the
+action asked for COMMIT recency. The band figures are a LOWER bound on commit dormancy, never an
+upper one — a tag or a merge keeps a dead default branch inside the band.**
+🆕 🔴 **`T253` — the topic's star head is DEADER than the shelf it cannot see.** The `5` named
+members of the `≥20`★ head last committed `14`, `18`, `79`, `85` and `88` days ago (`3` of `5`
+dormant at `60` d). Five shelf rows sampled the same way: `0`, `1`, `3`, `4`, `22` days —
+`0` of `5` dormant at `30` d. **A client shown *"the vertical's leading permissive projects"* from
+the topic head is being shown three projects nobody has touched since July.**
+
+### 🆕 🔴 `ACTION JW` — `12` of `12`, and the denominator finally has a name
+
+| topic asked for | shelf rows carrying it |
+|---|---|
+| 🔴 **`ai-education`** — the topic EVERY published figure was measured on | 🔴 **`1` of `12`** *(`HugeCatLab/ChatTutor`, which is `AGPL-3.0` and so excluded by `license:mit` anyway)* |
+| `ai-tutor` | `4` of `12` |
+| `edtech` | `3` of `12` |
+| 🟢 **`education`** | 🟢 **`9` of `12`** |
+| 🔴 **at least one of the four** | 🔴 **`12` of `12` — the ceiling** |
+
+🆕 🔴 **`T255` — `T238` was right that the populations are disjoint and wrong about why, and the
+correction matters more than the original.** p172 concluded *"the shelf's rows do not carry the
+`ai-education` topic, so a topic query cannot see them"* and left the impression that this KB's
+rows are untagged outliers. They are not: **`12` of `12` are tagged, `9` of them with plain
+`education`.** The narrow thing is the QUERY. Same filters, different topic:
+
+| query | count | vs `135` |
+|---|---|---|
+| `topic:ai-education pushed:>=2026-04-16 license:mit` | `135` | `1×` |
+| 🔴 `topic:education pushed:>=2026-04-16 license:mit` | 🔴 **`8.2k`** | 🔴 **~`61×`** |
+| 🔴 `topic:edtech pushed:>=2026-04-16 license:mit` | 🔴 **`1.3k`** | ~`10×` |
+| `topic:ai-tutor pushed:>=2026-04-16` | `581` | ~`4×` |
+
+🟢 **So the answer to *"what population do `485`/`357`/`135` describe"* is exact: repositories that
+self-apply the tag `ai-education`. That is a tagging convention, not a vertical.** Every sentence
+this KB has written of the form *"the vertical is N repositories"* needs the phrase *"that tag
+themselves `ai-education`"* in it, or it is false by one to two orders of magnitude.
+🆕 🔴 **`T252` — and this channel ROUNDS above `1 000`.** It returns *"8.2k"*, not `8 214`. `T227`
+says record the query string; add: **record the channel's precision.** Every exact count this KB
+holds is exact because it happens to be under `1 000`.
+
+### 🆕 🟢 `ACTION JX` — the hard part is NOT built, and the one line that proves it
+
+🟢 **Both limbs silent. Full read in
+[`evidence/jx-provenance-emitter-read.2026-10-13-p173.tsv`](../evidence/jx-provenance-emitter-read.2026-10-13-p173.tsv)
+and [`evidence/aiact-50-2-emitter-gap.2026-10-13-p173.tsv`](../evidence/aiact-50-2-emitter-gap.2026-10-13-p173.tsv).**
+
+🔴 **The sharpest single datum in this pass:
+`services/pipeline/src/alystria/generation/workflow.py:3018` is the ONLY place the pipeline
+constructs a C2PA record for an asset it has itself GENERATED, and it writes
+`c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE)`.** The best-equipped row on the shelf declares its own
+synthetic output out of scope for content credentials, in one line, on purpose.
+
+🟢 **It is emphatically not a stub: `905` tracked files, `272` Python files, a `347`-line
+`gates.py` with `export_gate()` and `release_candidate_gate()`, and `20`+ assertions covering
+licence-per-use, consent scope/expiry/revocation, CC-BY attribution, NC/ND blocking and
+fail-closed import gates.**
+
+| piece Article `50(2)` needs | here |
+|---|---|
+| per-asset provenance record | 🟢 **BUILT** |
+| export-time manifest | 🟢 **BUILT** — `ExportProvenanceManifest`, with its own `c2pa` field |
+| a gate that can refuse an unmarked export | 🟡 **BUILT but OFF** — `c2pa_required` defaults `False` |
+| 🔴 **a signer/embedder** | 🔴 **ABSENT in `905` files** |
+| 🔴 **a signing identity** | 🔴 **ABSENT, and not a code problem — a certificate in a C2PA trust list** |
+| human-readable disclosure to the learner | 🟡 **PARTIAL** — a consent flag, not a notice |
+
+🆕 🔴 **`T245` — the TypeScript contract has a word the Python domain does not, and the gate reads
+the Python one.** `packages/contracts/src/media.ts:21` declares
+`c2paStatus: "signed" | "verified" | "absent" | "invalid" | "unsupported"`. The Python enum the gate
+reads is `NOT_APPLICABLE | ABSENT | VALID | INVALID` — **all four are verification states; there is
+no `SIGNED`.** The vocabulary for emission exists in the repository and is absent from the layer
+that could enforce it.
+🆕 🔴 **`T246` — `synthetic_media_disclosure` is consent, not disclosure, and the name hides it.**
+It records that the SUBJECT of a likeness agreed to synthetic-media disclosure. Article `50(2)`
+marking is machine-readable and about the ARTEFACT; Article `50(4)` deepfake disclosure is
+human-readable and about the VIEWER. **Two obligations, one boolean, and neither of them is the
+learner being told.**
+🆕 🟢 **`T256` — the repo already documents losing an inherited mark, in writing.**
+`packages/themes/src/starterKitCatalog.ts:92` sets `c2paStatus: derived ? "absent" :
+"present-embedded"` with the note *"The retained source PNG carries embedded C2PA provenance; the
+optimized WebP derivative does not."* 🟢 **The credential arrives from the upstream image generator
+and this repo's own transcode step drops it — knowingly. That is the whole ecosystem problem in one
+ternary: marking survives generation and dies in post-production.**
+
+### 🆕 🔴 The gate fired on the pass that ran it, for the second consecutive pass
+
+🔴 **p173's first draft of [`compose/patterns.md`](../compose/patterns.md) dropped `77` of the `83`
+components p172 had routed.** The pass wrote four good recipes and, by writing only four, deleted
+six patterns' worth of routing from the compiled view.
+[`p171-cross-block-gate/check_lost_rows.py`](../compose/code/p171-cross-block-gate/check_lost_rows.py)
+reported `routed in newest block: 6` against `routed-in-history: 83` and the roster was re-stated
+in full before commit.
+🆕 🔵 **`T257` — and the gate's own output was `1` short after the first repair, which is a finding
+about the REPAIR and not the gate.** The reconstruction carried `4` cells per row and
+`P1ckle3/blackboard-mcp` lived in a FIFTH — a repository routed inside another row's notes column.
+🟢 **A re-statement must be keyed on the SLUGS a row carries, never on the row's shape.** The gate
+caught that too, because it counts slugs.
+🟢 **p171 wrote: *"a gate that catches the pass that wrote it is the only kind worth keeping."*
+p173 is the second pass it has caught, and the first where what it caught was a `93%` deletion.**
+
+### 🔴 Gaps OPENED, CLOSED or RE-STATED by p173
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🟢 **`gap 118`** | 🟢 **CLOSED as mis-specified. `6` formulations, `8` countries, `6` of `6` returned** | 🟢 **It was a query artefact (`T254`). Replaced by `gap 124`, which is narrower and survives measurement** |
+| 🟢 **`gap 120`** | 🟡 **CLOSED with a correction: the classifier is FIXED (`207/207`) and the defect changes `0` verdicts outside one 2005-era manifest** | 🟡 **Latent, not live. Record it that way rather than as *"every instrument inherits an error"*** |
+| 🟢 **`gap 121`** | 🟢 **CLOSED with numbers: `25.2%` / `47.4%` / `71.1%` dormant at `90` / `60` / `30` days** | 🟢 **Any population figure this KB quotes on the `180`-day bar now carries a known inflation** |
+| 🟢 **`gap 122`** | 🟢 **CLOSED and INVERTED: `12` of `12` shelf rows are tagged; `1` carries `ai-education`; `topic:education` is `8.2k`** | 🟢 **The denominator has a name now: *"repositories that tag themselves `ai-education`"*** |
+| 🆕 🔴 **`gap 124`** | 🔴 **The Middle East and Africa have the strongest MANDATE and the weakest GOVERNANCE in this KB's policy surface, and `0` open-source repositories originating in either** | 🔴 **Replaces `gap 118`. Two compulsory national curricula (UAE, KSA) and `6`-in-`10` African HEIs with no AI policy, against an empty repository column. `ACTION JY`** |
+| 🆕 🔴 **`gap 125`** | 🔴 **`T252`: the rendered-search channel rounds above `1 000`, so `topic:education` = *"`8.2k`"* is an order of magnitude and not a count** | 🔴 **This KB cannot currently state the size of the education vertical to better than one significant figure. `ACTION JZ`** |
+| 🆕 🔴 **`gap 126`** | 🔴 **`T245`/`T246`: the shelf's best-equipped row has the C2PA vocabulary in TypeScript, the gate in Python, the flag defaulted off and no signer — and `0` of `13` can mark output with `50` days to go** | 🔴 **The remedy is now specified to the line. Whether it is BUILDABLE from outside the project is not, and that is what a client would pay for. `ACTION KA`** |
+| 🟡 **`gap 110`** *(carried)* | 🟡 **Article `113` verbatim is unread; `eur-lex` is `403` by proxy POLICY** | 🟡 **Unchanged, and p173 adds nothing. Every AI Act date in this KB is `search-summary` tier** |
+| 🔴 **`gap 123`** *(carried)* | 🟡 **`0` of `12` agent rows are rostering- or analytics-primary** | 🟡 **Unchanged. `7` platforms, no agent, in the administrative layer** |
+| 🔴 **LATAM commercial map** *(carried, 5th pass)* | 🟡 **IMPROVED but not closed: p173 names `Luca` (Mexico, `US$8M` Series A, `6` Degrees Capital) and Google.org's `US$4.6M` for Raspberry Pi *Experience AI* across `9` countries** | 🟡 **First named LATAM edtech VENDOR and funder in five passes. Still `0` LATAM-originated open-source education repositories at any star level — seventh consecutive pass** |
+
+## 🔜 Registered for p174 — pre-registered with falsifiers
+
+🟢 **Five actions. Each names the OLDEST sufficient anchor on disk where it needs one, per `T220`;
+each names its CLASSIFICATION RULE where it depends on one, per `T234`; and each names the CHANNEL
+and its precision where it depends on a count, per `T227` + `T252`.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION JY`** — settle `gap 124`'s empty repository column: search GitHub for education-AI repositories ORIGINATING in the Middle East or Africa, using the country-name rule `T254` establishes. Formulations must name countries (`Nigeria`, `Kenya`, `South Africa`, `Egypt`, `UAE`, `Saudi Arabia`) and the language surfaces (`Arabic`, `Swahili`, `Hausa`, `Amharic`, `isiZulu`), not the region. Record every query string and the channel's precision | 🔴 *Refuted if `≥3` permissive, active, education-vertical repositories originating in the Middle East or Africa exist and are nameable with licence body read and `HEAD` verified — which would make the empty column a query artefact for the SECOND consecutive pass on the same region. ALSO refuted in the other direction if `≥10` country+language formulations return `0` such repositories, which makes the absence a measured fact about the ecosystem and this KB must stop re-registering it and say so to clients instead* |
+| 🟢 **`ACTION JZ`** — settle `gap 125`: establish whether an EXACT count above `1 000` is obtainable from this container at all. Try the rendered page's own pagination tail, the `type=repositories` facet counts, and `api.github.com/search` once more now that `T251` corrects the channel claim. The anchor is `topic:education pushed:>=2026-04-16 license:mit`, recorded as *"`8.2k`"* at p173 | 🔴 *Refuted if an exact four-figure count is obtainable by any channel available here, in which case `T252` is a WebFetch summarisation artefact rather than a channel limit and every rounded figure in this KB can be sharpened. ALSO refuted if the three channels disagree with each other by `>10%`, in which case the number is not a measurement at all and this KB must stop quoting vertical sizes* |
+| 🟢 **`ACTION KA`** — act on `gap 126`: establish whether Article `50(2)` marking is addable to `AkshitIreddy/AI-Powered-Video-Tutorial-Generator` FROM OUTSIDE the project. Read the export path that produces the final artefact (the mux/encode step, not the gate), and state concretely where a `c2pa-rs`/`c2patool` call would sit, what it would sign, and whether the repo's own tests would still pass with `c2pa_required=True`. Anchor: `9c260890214d`, `services/pipeline/src/alystria/security/gates.py:253` and `generation/workflow.py:3018`, both read at p173 | 🔴 *Refuted if the export path turns out to hand its final artefact to a closed or vendored binary this KB cannot instrument, which would make the fix a FORK and not a patch. ALSO refuted if `c2pa_required=True` already passes the repo's suite unmodified, which would mean the gate was never the obstacle and the only missing piece is the certificate — a procurement answer, not an engineering one* |
+| 🟢 **`ACTION KB`** — settle whether `T253` holds beyond `5` repositories: take the COMMIT date (not the push date) of `20` members of the `135`, selected as the first `20` the rendered search returns at `s=stars&o=desc`, using `git clone --depth 1 --filter=blob:none --no-checkout` + `git log -1 --format=%cI`. Anchor: the `4` band counts committed at p173 (`135`/`101`/`71`/`39`) | 🔴 *Refuted if `<25%` of the `20` are dormant at `60` days by COMMIT date, which would mean the `3`-of-`5` reading was a small-sample artefact and the topic head is no deader than the shelf. ALSO refuted if `≥5` of the `20` cannot be cloned at all, in which case the population is partly unreachable and every count over it — p173's included — is an upper bound on something unmeasured* |
+| 🟢 **`ACTION KC`** — close the loop `T247` opened: sweep every instrument in `compose/code/` for a hardcoded `/tmp/education-kb` or other absolute clone path, and fix each to resolve relative to itself. Anchor: `p172-manifest-attribution/classify_bodies.sh`, found broken at p173 | 🔴 *Refuted if `p172-manifest-attribution` is the ONLY instrument with a hardcoded clone path, which would make `T247` a single typo rather than a class — and would mean `p355-cwd-portability` is working and only missed one file. ALSO refuted if `≥5` instruments carry one, in which case the portability control has never been enforced on new instruments and the gate belongs in a pre-commit check rather than in a test suite nobody runs before writing a script* |
 ## Pass 172 — 2026-10-13
 
 🟢 **Verdicts on the FIVE actions p171 registered — `2` DISCHARGED with silent falsifiers, `2`

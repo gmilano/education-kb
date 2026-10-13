@@ -1,0 +1,24 @@
+# ACTION JU (p173), FALSIFIER LIMB 2: "refuted if the fix breaks any existing test in
+# lib/test_license_family.sh". Taken wider than the limb asked: EVERY test in this repository that
+# sources the shared classifier -- 14 suites across 14 instruments, found by
+# `grep -rl license_family.sh --include=test_*`. 42 non-test instruments also source it.
+# pristine = compose/code with lib/license_family.sh restored from HEAD (git show), run in a COPY.
+# patched  = the working tree. Each suite run from its OWN directory.
+# RESULT: 13 of 14 byte-identical. The 1 difference is p355-cwd-portability, which fails in the
+# COPY and passes in the real tree both before and after -- a location artefact of the copy, and
+# T250: the control that exists to prove cwd-portability is itself not location-portable.
+suite	pristine_rc	pristine_last_line	patched_rc	patched_last_line	same
+./grant-ladder-v4/test_ladder.sh	0	16 passed, 0 failed	0	16 passed, 0 failed	yes
+./lib/test_license_family.sh	0	199/199	0	199/199	yes
+./p206-erp-layer-license/test_family.py	0	5/5 passed	0	5/5 passed	yes
+./p255-holder-shared-control/test_holder_of.sh	0	13/13	0	13/13	yes
+./p288-agpl-casefold/test_casefold.sh	0	9/9	0	9/9	yes
+./p289-maven-manifest/test_maven_license.py	0	11/11 checks passed	0	11/11 checks passed	yes
+./p308-phrase-anchor-sweep/test_anchors.sh	0	PASS 100   FAIL 0	0	PASS 100   FAIL 0	yes
+./p312-nc-gate-inversion/test_nc_gate.sh	0	21/21 checks passed	0	21/21 checks passed	yes
+./p355-cwd-portability/test_p355.py	1	FAILED (failures=1)	0	OK	NO
+./p441-tree-licence-enumeration/test_enumerate.py	0	40/40 assertions pass, no network	0	40/40 assertions pass, no network	yes
+./p550-duplicate-definition-sweep/test_sweep.sh	0	26/26	0	26/26	yes
+./p560-epl-mpl-version-read/test_versions.sh	0	22/22	0	22/22	yes
+./p784-licence-scope-map/test_scope_map.sh	0	  passed=17 failed=0	0	  passed=17 failed=0	yes
+./p845-dist-payload/test_dist_payload.sh	0	ALL CHECKS PASSED	0	ALL CHECKS PASSED	yes
