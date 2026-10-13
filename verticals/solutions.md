@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🆕 🟢 **The routing table gains TWO permissive routes and loses a feature it had been crediting to a
+row for three passes.** 🟢 **[`Selleo/mentingo`](https://github.com/Selleo/mentingo) was finally
+read past its `MIT` licence (`ACTION LH`) and is ROUTE-grade — 🔴 **but its `xAPI` and `LTI` support
+do not exist**, and this KB had been publishing them since p178.
+
+🆕 🟢 **The second new route is the one a studio should hear about first:**
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, `44`★)* is the
+only row on this shelf that is **multi-tenant out of the box** — `tenant_id` resolved in three Go
+auth handlers, an `Institution` selector in its own login template, and `cohorts`,
+`cohort_trainers`, `cohort_statistics`, `account_tokens`, `audit_events` and
+`billing_provider_events` among `240` `CREATE TABLE` statements.
+
+### 🟢 The platform table, re-graded
+
+🔵 **Grades: ROUTE** *(owns its data + its own auth + speaks a standard, or is multi-tenant — build
+the engagement on it)*, **APPLIANCE** *(owns its data, deploys cleanly, no usable identity — one
+learner or one cohort per deployment)*, **COMPONENT** *(neither — compose it into something else)*,
+**integrate-only** *(copyleft reach makes a fork or hosted derivative a legal conversation)*.
+
+| platform | layer | licence *(payload-verified)* | grade | standards, MEASURED | what it means for an engagement |
+|---|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | full LMS | 🟢 **`Apache-2.0`**, `10 982` B | 🟢 **ROUTE** | 🟢 `LTI 1.3` `252` files, `QTI` `1 201`, `SCORM` `355`, `OpenBadges` `263` | 🟢 **START HERE for a permissive full-LMS engagement.** `440` `@Entity`, own `Shibboleth`/`LDAP` auth, `openai` already in `33` files. 🆕 🔴 **Budget the discovery honestly: `385` tables in the shipped PostgreSQL schema and `186` Maven dependencies** |
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | multi-tenant tutoring + assessment | 🟢 `MIT`, `1 073` B | 🟢 **ROUTE — the MULTI-TENANT one** | 🟡 `MCP` server; 🔴 **no `LTI`, no `SCORM`, no `QTI`** | 🟢 **START HERE when the client sells to MANY institutions.** Tenancy, cohorts, billing events and an audit trail are already modelled. 🔴 You bring the standards layer |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | LMS *(TypeScript)* | 🟢 `MIT`, `1 062` B, `md5 88f104b7644947b4a8b6e71f4972c02f` | 🟢 **ROUTE** *(promoted from PLATFORM-unread)* | 🟢 **`SCORM 1.2` BOTH WAYS** *(own generator + runtime player packages; `imsmanifest.xml` fixtures; import e2e spec)*; 🔴 **`xAPI` `0`, `LTI` `0`** | 🟢 **START HERE for a JS/TS studio.** `123` `pgTable`, `tenant` in `305` files, `pnpm` workspaces, `docker-compose`. 🔴 **It cannot receive an `LTI` launch — so it does not plug into a university; it replaces one** |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | automated grading | 🟢 `Apache-2.0`, `10 785` B | 🟢 **ROUTE** *(institutional)* | 🟡 own checker protocol; 🔴 no `LTI`/`SCORM` measured | 🟢 **A working university grading system with a SEPARATE `fbs-identity-service` and `Keycloak`/`auth0` federation** — the deployment shape an institution's IT will recognise. Kotlin/Spring + Angular |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning **+ assessment** | 🟢 `MIT`, `1 091` B | 🟢 **ROUTE** | 🟢 `LTI 1.3` with grade passback, nightly Moodle interop test | 🟢 The assessment specialist: `257` entities, `528` write endpoints, `passkey` `136` files. 🔵 **Pair with `OpenOLAT` rather than choosing** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | AI tutor platform | 🟢 `MIT`, `1 068` B | 🟢 ROUTE | 🔴 none | 🟢 The smallest route a studio can hold in its head: `34` tables, `141` endpoints, `10+` LLM providers, local-first |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | assessment + content pipeline | 🟢 `MIT`, `1 067` B | 🟡 **APPLIANCE+** | 🔴 none | 🟡 **`84` tables with `assessment_policy_versions`, `content_schema_versions` and `agent_tool_receipts`.** 🟢 **The audit shape is the asset here** — borrow the schema even if you do not deploy the app |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | AI tutor | 🟢 `Apache-2.0`, `11 408` B | 🟡 **APPLIANCE** | 🔴 none | 🟡 `69` tables of real learning state. 🔴 **No `users` table: identity is a JSON file plus an optional PocketBase proxy. One deployment per cohort, or you add the identity layer** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | full LMS | `GPL-3.0`, `35 147` B | 🟡 integrate-only | 🟢 full `LTI`/`SCORM`/`QTI` | 🟡 The default institutional incumbent. Plugin-shaped AI work is normal; a closed fork is not |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0`, `11 120` B | 🟡 integrate-only | 🟢 `LTI`, `QTI` | 🟡 Permissive in practice, 🔴 **but the patent grant is scoped to educational use — read it before a commercial resale** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0`, `35 136` B | 🔴 integrate-only | 🟢 full | 🔴 Network copyleft: a hosted AI layer that links into it inherits the obligation |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | full LMS | `AGPL-3.0`, `34 520` B | 🔴 integrate-only | 🟢 full | 🔴 Same reach. Integrate over `LTI`, never fork |
+
+🟢 **`6` of the `17` routing rows are now CODE-verified, up from `4` at p180.**
+
+### 🆕 🔴 The standards gap, now the sharpest thing in this table
+
+🔴 **Every permissive route this KB has found is missing the interoperability layer, and the two are
+almost mutually exclusive:**
+
+| | speaks `LTI 1.3` | does NOT |
+|---|---|---|
+| 🟢 **permissive** | 🟢 `OpenOLAT` *(Apache-2.0, Java, `385` tables)*, `Artemis` *(MIT, Java)* | 🟢 `tutor-mcp` *(Go, multi-tenant)*, `mentingo` *(TS, `SCORM` only)*, `OpenTutor`, `feedbacksystem`, `civil-ai`, `DeepTutor` |
+| 🔴 **copyleft** | 🔴 `Moodle`, `Open edX`, `Canvas`, `Chamilo`, `ILIAS` | — |
+
+🔵 **`T305`: a studio choosing a permissive education route in a language that is NOT Java is
+choosing a system that cannot receive an `LTI` launch. The `LTI` layer is then the engagement's
+first build, not an integration task — and it is the single most reusable asset a studio could
+carry between education clients.**
+
+🆕 🟢 **The one bridge that exists is `SCORM`, and `mentingo` holds both ends of it.** It generates
+`SCORM 1.2` packages *(`manifest-builder.ts`, `package-builder.ts`, a standalone browser runtime
+player)* and imports them *(`scorm.service.ts`, tenant-scoped storage prefixes, real
+`imsmanifest.xml` fixtures)*. 🔵 **So content can move permissively between a `mentingo` deployment
+and any `SCORM`-speaking incumbent, including `Moodle`, without touching the incumbent's copyleft
+code.**
+
+### 🔴 The wider LMS market, from prose search — and what it did not yield
+
+🟡 **A dedicated search for a permissively licensed `Moodle` alternative returned no MIT-licensed
+full LMS at all.** 🟢 **It confirms `OpenOLAT` as the Apache-2.0 option** *(upstream stable `20.3.4`,
+June `2026`; this KB reads `21.2-SNAPSHOT` at `HEAD 8494a140b2ca`)*, 🟡 **names `Sakai` as
+`ECL-2.0`**, and 🔴 **reports `formalms/formalms` as `Apache-2.0` in one listing and `GPL` in
+another — unresolved, and still unprobed here for a third pass.** 🔵 **Searching for licences
+produces disagreement; reading payloads produces answers. This KB keeps doing the second.**
+
 ## Pass 180 — 2026-10-13
 
 🆕 🟢 **The routing recommendation CHANGES this pass, and for the first time it changes in the

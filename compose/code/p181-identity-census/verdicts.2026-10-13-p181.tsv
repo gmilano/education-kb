@@ -1,0 +1,15 @@
+repo	stars_as_listed_p79	licence	licence_bytes	identity_class	grade
+HKUDS/DeepTutor	41000	Apache-2.0	11408	OWN-FILE-BACKED+optional-DELEGATED	APPLIANCE
+open-spaced-repetition/fsrs4anki	4100	MIT	1079	NONE	COMPONENT
+GarethManning/education-agent-skills	837	CC-BY-SA-4.0	1230	NONE	NOT-A-SOFTWARE-LICENCE
+zijinz456/OpenTutor	137	MIT	1068	OWN-SCHEMA	ROUTE
+GeminiLight/gen-mentor	133	CC0-1.0	7048	NONE	COMPONENT
+PrepLabsAI/InterviewMentor	112	MIT	1071	NONE	COMPONENT
+Selleo/mentingo	91	MIT	1062	OWN-SCHEMA+TENANT	ROUTE
+ahmedEid1/lumen	88	GPL-3.0	35149	OWN-SCHEMA	ROUTE-INELIGIBLE-COPYLEFT
+luffycodes/Tutorbot-Spock	56	NO-GRANT-ANYWHERE	0	NONE	UNUSABLE
+ArnaudGuiovanna/tutor-mcp	44	MIT	1073	OWN-SCHEMA+TENANT	ROUTE
+zhangl1001/civil-ai	43	MIT	1067	OWN-SCHEMA(candidate_profiles)	APPLIANCE+
+towardsai/ai-tutor-app	31	Apache-2.0	11386	NONE	COMPONENT
+thm-mni-ii/feedbacksystem	24	Apache-2.0	10785	OWN-SCHEMA+FEDERATED(Keycloak)	ROUTE
+brownplt/LTLTutor	12	GPL-3.0	35148	OWN-SCHEMA	ROUTE-INELIGIBLE-COPYLEFT

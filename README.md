@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🟢 **Seven pre-registered actions discharged, five with a limb FIRED, one carried action finally
+executed rather than planned — and the pass's own three method hypotheses tested, with one
+FALSIFIED and reported at the same length as the two that held.**
+
+🆕 🟢 **The pass's most client-useful finding: the most engagement-ready permissive row this KB has
+ever read sits at `44`★.** `ACTION LK` measured `14` `ai-tutor` rows and
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, Go)* carries
+genuine multi-tenancy — `tenant_id` resolved in three auth handlers, an `Institution` selector in
+its own login template, and `cohorts`, `cohort_trainers`, `cohort_statistics`, `account_tokens`,
+`audit_events`, `billing_provider_events` and `assessment_adjudications` among `240` `CREATE TABLE`
+statements. 🔵 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) has `932`× more stars and
+no `users` table at all.**
+
+🆕 🟢 **`T290` is CONFIRMED and PROMOTED from a guess to a screening rule.** Of `3` rows at
+`≥500`★: `0` have identity a cohort can use. Of `11` rows below `500`★: `7` do. 🔵 **Rank permissive
+edtech candidates by entity declarations whose names you have READ — never by stars.**
+
+🆕 🔴 **The pass's sharpest self-correction is about this KB's own probe, four times over.**
+🟢 **`2` confirmed defects** — counting `CREATE TABLE` only in `*.sql` reported `0` tables for
+`DeepTutor`, which has `69`; widening the scope then counted `InterviewMentor`'s `dim_`/`fact_`
+warehouse *exercises* and `feedbacksystem`'s student SQL *playground* as schema. 🔴 **`1`
+falsified** — the English-only-vocabulary hypothesis is false: every non-English user word in all
+`14` rows is an i18n catalogue or a fixture, and every real entity declaration is English.
+🆕 🔴 **`1` found by accident** — `git grep -ilw` without `-I` reported `LTI` support in `mentingo`
+from a `.webp`, a `.png` and an `.mp4`.
+
+🆕 🔴 **The pass's most consequential retraction for the routing table: `mentingo`'s `xAPI` and
+`LTI` support do not exist, and this KB has published them since p178.** `ACTION LH` found `scorm`
+in `257` files — real, and BIDIRECTIONAL — but `xapi` matches exactly ONE file: an HTML comment, in
+Polish, on `README.md:246`, on an internal checklist that says not to publish the item without
+confirmation. `lti` is `0`.
+
+🆕 🟢 **And the best news about this KB's own capacity is a correction to three passes of
+confusion: `gap 139` is not about language.** `ACTION LG`'s `mvn package` was refused by the same
+external-code policy that refused `Bloom`'s `pytest` at p180, while `npm`-installed `dolos` ran `8`
+analyses this pass. 🔵 **`T303`: the boundary is the code's PROVENANCE. A registry package is a tool
+this session runs; a cloned repository is someone else's program, and this harness will not execute
+one.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LK`** — test `T290` on the next `10` `ai-tutor` rows by identity class | 🟢 **DISCHARGED on `14` rows, LIMB `1` FIRED. `0` of `3` rows above `500`★ have cohort-usable identity; `7` of `11` below do. The identity axis goes from `3` values to `5` — OWN-schema / OWN-file-backed / DELEGATED / BORROWED / NONE — and a sixth row needed a vocabulary note (`civil-ai` says `candidate_profiles`)** |
+| 🟢 **`ACTION LH`** — read [`Selleo/mentingo`](https://github.com/Selleo/mentingo) past its `MIT` licence, specifically `scorm` and `xapi` | 🟢 **DISCHARGED and it SPLITS. `SCORM 1.2` is real in BOTH directions — two own workspace packages, a browser runtime player, `imsmanifest.xml` fixtures, tenant-scoped storage, import AND export e2e specs. 🔴 `xAPI` is one HTML comment; `LTI` is `0`. 🆕 And the README UNDER-claims: it claims export only, while the code imports (`T302`)** |
+| 🟢 **`ACTION LB`** *(carried from p180)* — `dolos`'s `-i` effect vs template-to-submission ratio | 🟢 **DISCHARGED over `7` rungs, ratio `0.0033`–`1.6842`. LIMB `1` fires on the letter (crosses `0.02` at ratio `0.51`) but the effect is NOT monotonic: below `0.05` it does nothing, between `0.1` and `0.5` it widens separation by `+0.0588`, and above `1.0` it is HARMFUL. Pattern `1` gains an UPPER bound** |
+| 🟢 **`ACTION LJ`** — apply the `c2paStatus` propagation and run the `53`-test suite | 🟢 **DISCHARGED, LIMB `2` FIRED. No permitted execution route exists, now proved on a second language and a second build system. `ACTION KZ` moves to the standing register below and stops being carried as live work** |
+| 🔴 **`ACTION LG`** — stand up a running `OpenOLAT` and record the wall-clock cost | 🔴 **LIMB `2`, for a POLICY reason rather than a property of `OpenOLAT`. 🟢 Static cost proxies measured instead: `1` Maven module, `186` declared dependencies, `24` plugins, and `385` `CREATE TABLE` in `322 754` B of shipped PostgreSQL schema. 🟢 `2 624 333` lines of Java REPRODUCES p180 exactly from an independent clone** |
+| 🟡 **`ACTION LI`** — settle whether Regulation (EU) `2026/1744` kept the *"conditional on harmonised standards"* framing | 🟡 **SPLITS. 🟢 LIMB `1` on CONTENT: the conditional trigger was DROPPED for fixed calendar dates, agreed across `3` independent channels; the recitals still cite late `JTC 21` standards as a REASON, but the dates no longer depend on them. 🔴 LIMB `2` on CHANNEL: `eur-lex.europa.eu` fails on a FOURTH channel — with a WORKING CONTROL on that same channel, so the refusal is target-specific** |
+| 🟡 **`ACTION KN`** *(carried, eighth — and CLOSED)* | 🟡 **LIMB `2` evidence on this pass's own `12` fresh licence reads: a `7`-name list resolved `11`/`12`, and the one absence survives a grant-text grep over every tracked file. `Tutorbot-Spock` is genuinely UNLICENSED. 🟢 Closing as cosmetic, as `T292` pointed** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **Two ROUTE-grade permissive rows, taking the shelf from `4` to `6`**
+  ([`verticals/solutions.md`](verticals/solutions.md)):
+  [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, the only MULTI-TENANT row)*
+  and [`mentingo`](https://github.com/Selleo/mentingo) *(`MIT`, promoted after `4` passes carried
+  unread)*. 🟢 **`6` of `17` routing rows are now code-verified, up from `4`.**
+- 🆕 🟢 **A third institutional route:** [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)
+  *(`Apache-2.0`, TH Mittelhessen)* — a production university grading system with a separate
+  `fbs-identity-service` module and `Keycloak` federation.
+- 🆕 🟢 **Pattern `22`** ([`compose/patterns.md`](compose/patterns.md)) — the multi-tenant route for
+  a client selling to many institutions, built on `tutor-mcp`'s shipped tenancy, cohorts, billing
+  events and audit trail.
+- 🆕 🟢 **Pattern `23`** — the permissive `SCORM` bridge: author in a permissive stack, export
+  `SCORM 1.2` with `mentingo`'s own generator and runtime player, hand the package to a copyleft
+  incumbent without linking against its code.
+- 🆕 🟢 **Pattern `1` amended with a measured UPPER bound** on template exclusion, and the `0.85`
+  threshold's shrinking margin stated *(`0.1398` → `0.0412` as the template grows)*.
+- 🆕 🟢 **Pattern `20` finally has a cost line** — `385` tables and `186` dependencies as the thing
+  a discovery spike is sized against.
+- 🆕 🟢 **A reusable screening recipe** at the end of [`compose/patterns.md`](compose/patterns.md),
+  with the four probe defects baked in as steps.
+- 🆕 🟢 **Three licence identifications that change eligibility:** `education-agent-skills` is
+  **`CC BY-SA 4.0`** *(a CONTENT licence with `ShareAlike` reach, not a software grant)*,
+  `gen-mentor` is **`CC0 1.0`** *(the most permissive grant on this shelf)*, and `Tutorbot-Spock`
+  has **no grant at all**. 🔵 **`T304`: `3` of the `12` rows newly licence-read this pass were not
+  under a software licence.**
+- 🆕 🟢 **Two code artefacts** — [`compose/code/p181-identity-census/`](compose/code/p181-identity-census/)
+  and [`compose/code/p181-dolos-ratio/`](compose/code/p181-dolos-ratio/), each with its negative
+  results written down.
+
+### 🔴 Declared gaps and absences
+
+- 🔴 **`gap 141` — regional SUPPLY evidence from prose search is ZERO for a second pass.** Four
+  regional searches named `0` region-originated repositories. Every placement in
+  [`intel/market.md`](intel/market.md) comes from reading trees. 🟢 **EMEA `6` rows, APAC `4`,
+  Global `1`, North America `1` *(and it is `GPL-3.0`)*, LATAM `0`.**
+- 🆕 🔴 **The LATAM asymmetry is now the most actionable fact in this KB, and it is uncomfortable.**
+  UNESCO IESALC: **`87`% of `200` institutions across `19` countries use `AI`, and only `26`% have
+  a formal strategy** — `61` points of gap — against **`0` LATAM-origin supply rows on any pass**.
+  🔴 **And no row on this shelf has a Spanish or Portuguese message catalogue.** The one
+  localisation depth this KB has measured is Arabic, in a `GPL-3.0` row.
+- 🟡 **`gap 124` (MEA) narrows on CAPABILITY, stays open on supply.**
+  [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) is the first row read with first-class
+  Arabic and RTL *(`rtl` `37` files, a complete `ar.ts` catalogue, an `i18n-parity.test.ts`)*.
+  🔴 **It is `GPL-3.0`, and its holder's country is NOT established — a tree shows a product, not a
+  location.**
+- 🔴 **`gap 110` — the EU primary corpus is unreachable on a FOURTH channel.** `eur-lex.europa.eu`
+  is `ENOTFOUND` on the fetch channel, 🟢 **with a working control on that same channel in the same
+  pass**, so this is target-specific rather than channel-wide. 🔴 **EU legal text is hereby declared
+  PERMANENTLY SECONDARY in this KB.** One sub-point is left unresolved and carried as `ACTION LM`:
+  whether Article `50` duties truly began `2` August `2026`, on which one source dissents and
+  Pattern `2`'s ordering depends.
+- 🔴 **`gap 140` — ★ counts remain unobtainable.** `api.github.com`, `github.com` and
+  `codeload.github.com` all `403`. Every star figure here is this KB's own p79 census, labelled.
+  🟢 **`git clone` over smart-HTTP works, so `14` trees were read this pass.**
+- 🔴 **`gap 139` RESTATED, not narrowed.** Registry packages install and run; cloned subject trees
+  cannot be built or tested, in Java *(p181)* or Python *(p180)* alike *(`T303`)*.
+- 🔴 **Market size is still a factor-of-two problem, and it got WORSE: the range for a SINGLE year
+  widened.** Two houses put `2026` at `$9.58` B and `$11.4` B; sub-segment definitions differ enough
+  that the headline numbers are not comparable. **No point estimate should be quoted to a client.**
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed for a
+  third pass. 🟡 `formalms` is listed `Apache-2.0` in one source and `GPL` in another.
+- 🔴 **`OpenOLAT`'s boot time is unknown and will stay unknown here.**
+
+### 🟡 Standing register — specified but unverifiable in this environment
+
+🔵 **New this pass, so that work which cannot be done here stops consuming a pre-registration slot
+every pass.** An entry leaves this register only if the environment changes.
+
+| item | what is specified | why it cannot be verified here |
+|---|---|---|
+| 🟡 **`ACTION KZ`** *(carried `3` passes)* | the one-line `c2paStatus` propagation through `_artifact_provenance`, beside `6` keys already forwarded the same way; `generated_schema_registry.py:106` already REQUIRES the field | 🔴 The target tree is not in this repository, and no execution route exists for the `53`-test suite *(`T303`)*. Diagnosis is complete; verification is not possible |
+| 🔴 **`OpenOLAT` first boot** | `mvn package`, a PostgreSQL schema load, a Tomcat deploy | 🔴 External-code execution policy refuses the build *(`ACTION LG`, limb `2`)* |
+| 🔴 **EU primary legal text** | Regulation (EU) `2026/1744` article-by-article | 🔴 `eur-lex.europa.eu` unreachable on `4` channels *(`gap 110`)* |
+| 🔴 **★ counts** | any primary popularity figure | 🔴 `403` on all three GitHub surfaces *(`gap 140`)* |
+
+### 🟢 Pre-registered for p182, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION LN`** | read [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)'s tenancy past its SCHEMA: is `tenant_id` ENFORCED at the query layer, or is it a column that handlers happen to read? | **limb `1`:** tenant scoping is enforced where rows are fetched *(a repository layer, a middleware, a `WHERE tenant_id` discipline)* → Pattern `22`'s *"do not add a tenant key"* claim HOLDS and the multi-tenant route is genuinely free. **limb `2`:** it is a column with ad-hoc reads → Pattern `22` must quote the enforcement build, and this KB learns that *"multi-tenant"* needs the same read-past-the-count discipline as *"has auth"* |
+| 🆕 🟢 **`ACTION LO`** | read [`civil-ai`](https://github.com/zhangl1001/civil-ai)'s `agent_tool_receipts` and `assessment_policy_versions` past their NAMES — are there write sites? | **limb `1`:** the audit tables are written by real code paths → the audit shape is a genuine asset and the North America / LATAM opportunity lines in [`intel/market.md`](intel/market.md) stand. **limb `2`:** tables with no writers → 🔴 **`T285` extends from dependency manifests to SCHEMAS**, which would be the most dangerous false-competence surface this KB has found, because a schema reads as architecture |
+| 🆕 🟡 **`ACTION LP`** | probe LATAM supply by LANGUAGE rather than by region — search in Spanish and Portuguese, and probe trees for `es`/`pt-BR` message catalogues | **limb `1`:** a permissive LATAM-origin or LATAM-localised row exists → `gap 141` breaks and the region finally has supply evidence to match its demand evidence. **limb `2`:** none is found on a language-native channel either → declare LATAM supply absent BY MEASUREMENT rather than by silence, and make the Spanish/Portuguese localisation layer an explicit engagement line item |
+| 🆕 🟡 **`ACTION LQ`** | is [`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)'s `Keycloak` a deployment OPTION or a hard dependency? | **limb `1`:** optional, with a local fallback → the institutional route works without the client owning an IdP. **limb `2`:** required → Pattern `20`/`22` must list *"the client operates a Keycloak"* as a precondition, which is a procurement conversation, not a build |
+| 🆕 🔴 **`ACTION LM`** | settle whether `AI` Act Article `50` duties began `2` August `2026`, on any channel that is not a vendor blog | **limb `1`:** a quasi-primary channel agrees → Pattern `2`'s ordering is confirmed and the one dissenting source is dismissed. **limb `2`:** the dissent cannot be resolved → Pattern `2` must present the date as CONTESTED to clients, not as settled |
+| 🆕 🟡 **`ACTION LR`** | test the p181 screening recipe against its own promise: run it blind on `10` UNREAD rows and record how many verdicts the subsequent READ overturns | **limb `1`:** `≤1` of `10` overturned → the recipe is a reliable triage and can be published as guidance outside this KB. **limb `2`:** `≥3` overturned → the recipe is a pointer to a read and must say so in every place it appears |
+
 ## Pass 180 — 2026-10-13
 
 🟢 **Six pre-registered actions discharged, five with a limb FIRED, and the one this KB most needed

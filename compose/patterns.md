@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🆕 🟢 **Two new patterns, one amendment that ADDS A BOUND rather than a step, and one pattern whose
+cost line finally has numbers in it.** 🔵 **Everything below names specific repositories at
+specific commits, with the measurement that justifies each choice.**
+
+### 🆕 🟢 Pattern `22` — the MULTI-TENANT route, for a client who sells to many institutions
+
+🔵 **Why this is new:** every route this KB has published assumed ONE institution per deployment.
+🟢 **[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, `1 073` B,
+`md5 6ef9d4b578ace4e94d9ae2f1e6054688`)* is the first row on this shelf that models tenancy
+itself** — `tenant_id` resolved in `auth/console.go`, `auth/oauth.go` and `auth/learn.go`, an
+`Institution` selector in its own login template, and `cohorts`, `cohort_trainers`,
+`cohort_statistics`, `cohort_concept_statistics`, `cohort_badge_statistics`, `account_tokens`,
+`audit_events`, `billing_provider_events` and `assessment_adjudications` among `240` `CREATE TABLE`
+statements across `694` files of Go.
+
+**The wiring, part by part:**
+
+1. 🟢 **Tenancy + identity + billing — `tutor-mcp` as shipped.** Do not add a tenant key; it is
+   already the axis the schema turns on *(`tenant` in `151` files, `bcrypt` in `29`, `oauth` in
+   `84`)*. 🟢 **`billing_provider_events` means per-tenant commercial metering is modelled, which is
+   the part a studio usually writes from scratch.**
+2. 🔴 **The interoperability layer is YOURS to build.** `tutor-mcp` has **no `LTI`, no `SCORM`, no
+   `QTI`** *(measured `0`)*. 🔵 **This is the pattern's one real cost and it must be quoted up
+   front** — see Pattern `23` for the cheapest way to buy the `SCORM` half instead of building it.
+3. 🟢 **Integrity — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) `2.9.3` at threshold
+   `0.85`**, with `-i` supplied only when the assignment ships a real handout *(Pattern `1`, as
+   amended below)*.
+4. 🟢 **Audit evidence — already present.** `audit_events` + `assessment_adjudications` are what a
+   human-oversight mandate *(Oklahoma, Maryland)* and an EU Annex III file both ask to see.
+5. 🟡 **Model surface — bring your own.** It is an `MCP` server, so the agent runtime is the
+   client's choice rather than a vendor lock.
+
+🟢 **Where it fits:** a ministry, a university system, a training provider, or any client reselling
+to institutions. 🔵 **Quote the `LTI` build as a discovery item, not a line item, until the client's
+institutions are known — half of them may accept `SCORM` instead.**
+
+### 🆕 🟢 Pattern `23` — the permissive `SCORM` bridge, which replaces a build with a configuration
+
+🔵 **The problem it solves:** a permissive non-Java route cannot receive an `LTI 1.3` launch
+*(`T305`)*, so content and results cannot flow to the institution's incumbent LMS. 🟢 **But
+`SCORM 1.2` CAN flow, and [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(`MIT`,
+`1 062` B, `md5 88f104b7644947b4a8b6e71f4972c02f`, `HEAD 242a9324fe48`)* implements BOTH
+directions** — verified in code this pass, not in its README.
+
+| direction | what exists in the tree | where |
+|---|---|---|
+| 🟢 **export** | own workspace packages `@repo/scorm-export-generator` *(`manifest-builder.ts`, `package-builder.ts`, `course-json-builder.ts`, `runtime-assets.ts`)* and `@repo/scorm-export-runtime` *(a standalone browser player: `src/player/index.html`, `main.ts`)*; `scorm-again@3.0.4` on the web app | `packages/scorm-export-*` |
+| 🟢 **import** | `apps/api/src/scorm/scorm.service.ts`, `scorm-storage-paths.ts` with a TENANT-scoped prefix `getScormPackagePrefix(tenantId, packageId)`, `native-archive-import-scorm.e2e-spec.ts`, and real `imsmanifest.xml` fixtures *(`single`, `multi`)* | `apps/api/src/scorm/`, `apps/api/src/native-archive/` |
+
+**The wiring:**
+
+1. 🟢 **Author in the permissive stack** — `mentingo` *(or your own)*.
+2. 🟢 **Export `SCORM 1.2`** with `@repo/scorm-export-generator`; the runtime player ships inside the
+   package, so the incumbent LMS needs no plugin.
+3. 🟢 **Hand the package to the incumbent** — `Moodle` *(`GPL-3.0`)*, `Canvas` *(`AGPL-3.0`)*,
+   `Open edX` *(`AGPL-3.0`)*. 🟢 **You never link against their code, so no copyleft obligation
+   arises on your side.**
+4. 🟡 **Accept the limit honestly:** `SCORM 1.2` carries completion and a score. 🔴 **It does not
+   carry the rich interaction data `xAPI` would — and `mentingo` has NO `xAPI`** *(`1` match, inside
+   an HTML comment)*. 🔵 **If the client needs per-interaction telemetry, this pattern does not
+   deliver it and nothing permissive on this shelf does.**
+
+🔵 **`T311`: for a studio, `SCORM` is the permissive interoperability floor and `LTI` is the
+ceiling. The floor is reachable today with `MIT` code; the ceiling is Java-only.**
+
+### 🟢 Pattern `1` — AMENDED at step `2` with an UPPER bound *(`ACTION LB`, discharged)*
+
+🔴 **What p179 did:** made the `-i` template-exclusion step CONDITIONAL on a scaffolded assignment,
+reasoning that a bigger handout would matter. 🔴 **That reasoning was never measured.** 🟢 **It is
+now, over `7` rungs spanning a `510`× ratio range on a real `MIT` corpus with a ground truth:**
+
+| template | lines | ratio *(template ÷ mean submission)* | median `\|Δsim\|` | honest-work ceiling | separation |
+|---|---|---|---|---|---|
+| *(none — baseline)* | `0` | `0` | — | `0.6720` | `+0.3178` |
+| shared imports *(`≥6` modules)* | `1` | `0.0033` | `0.00000` | `0.6720` | `+0.3178` |
+| shared imports *(`≥3`)* — p179's template | `10` | `0.0329` | `0.00064` | `0.6720` | `+0.3066` |
+| shared imports *(`≥2`)* | `13` | `0.0428` | `0.00025` | `0.6720` | `+0.3083` |
+| 🟢 **one handout module** | `42` | `0.1382` | `0.00816` | 🟢 **`0.6004`** | 🟢 **`+0.3766`** |
+| 🟢 **three handout modules** | `155` | `0.5099` | 🟢 **`0.02347`** | `0.5951` | `+0.3581` |
+| 🔴 shared lines *(`≥3`)* | `300` | `0.9868` | `0.00862` | `0.6251` | `+0.2922` |
+| 🔴 shared lines *(`≥2`)* | `512` | `1.6842` | `0.01412` | `0.6016` | 🔴 **`+0.2897`** |
+
+🟢 **Limb `1` fires on the letter — the effect crosses `0.02` at ratio `0.51`.** 🔴 **But it is NOT
+monotonic, and the honest reading is more useful than the limb was:**
+
+- 🔴 **Below ratio `0.05`, `-i` does nothing.** Median `|Δsim|` `≤0.00064`. 🔵 **p179's limb-`2`
+  result was correct FOR ITS RATIO and was over-generalised to the step.**
+- 🟢 **Between ratio `0.1` and `0.5`, `-i` earns its place** — the honest-work ceiling drops
+  `0.6720` → `0.6004` and the separation a grader relies on WIDENS by up to `+0.0588`.
+- 🔴 **Above ratio `1.0`, `-i` is HARMFUL.** The known positive erodes from `0.9898` to `0.8912` and
+  the separation falls BELOW the no-template baseline.
+
+**So step `2` of Pattern `1` now reads:**
+
+> 🟢 **Supply `-i` with the assignment's actual handout — and only that.** 🔴 **Never a
+> machine-generated *"shared lines"* template, and never a template approaching the submission's own
+> size: past ratio `1.0` it removes the evidence.** 🟢 **If there is no handout, skip `-i`; at
+> header scale it changes nothing.**
+
+🆕 🟡 **And one caution on the published threshold: `0.85`'s margin is not constant.** The worst
+known positive falls from `0.9898` *(no template)* to `0.8912` *(ratio `1.68`)* — so the headroom
+above `0.85` shrinks from `0.1398` to `0.0412`. 🔵 **The threshold survives the whole ladder, but a
+team that both raises the threshold AND supplies a large template will start missing renames.**
+
+### 🟡 Pattern `20` — the cost line it was missing *(`ACTION LG`, limb `2`)*
+
+🔴 **p180 pre-registered *"stand up a running `OpenOLAT` and record the wall-clock cost"*. It was
+not measured, and the reason is a policy, not a property of `OpenOLAT`:** `mvn package` on a cloned
+subject tree is refused by this harness's external-code policy *(`T303`)*. 🟢 **So the pattern gets
+STATIC cost proxies, which are honest and still useful:**
+
+| line item | measured | how to quote it |
+|---|---|---|
+| 🟢 build shape | **`1`** Maven module → one WAR | 🟢 Simple build graph; CI is not the risk |
+| 🟡 dependency resolution | `186` declared dependencies, `24` plugins | 🟡 One slow first resolution; nothing exotic |
+| 🔴 **schema discovery** | 🔴 **`385` `CREATE TABLE` in `322 754` B of shipped PostgreSQL schema** | 🔴 **This is the spike. Quote a discovery sprint sized against `385` tables** — against `257` entities for `Artemis` and `34` tables for `OpenTutor` |
+| 🟢 runtime | Tomcat `10.0`/`10.1` + PostgreSQL | 🟢 Standard institutional hosting |
+
+🔵 **`T294` stands, restated: this KB has NO evidence about `OpenOLAT`'s boot time and will not get
+any here. Pattern `20` quotes a sized discovery spike, and now says what it is sized against.**
+
+### 🔴 Pattern status board
+
+| pattern | status after p181 |
+|---|---|
+| **`1`** academic integrity | 🟢 **AMENDED — step `2` gains an upper bound, measured** |
+| **`2`** Article `50` marking | 🟡 **Ordering holds** *(transparency before conformity)*. 🔴 One sub-point unresolved: whether Article `50` began `2` Aug `2026` is secondary-only *(`gap 110`, carried as `ACTION LM`)* |
+| **`18`** appliance → cohort | 🟢 Unchanged, and cheaper now: 🆕 **`tutor-mcp` supplies the tenancy that Pattern `18` told a studio to build** |
+| **`19`** buy the adapter shape | 🟢 Unchanged |
+| **`20`** permissive institutional stack | 🟡 **Cost line added** *(`385` tables, `186` deps)*; boot time still unknown |
+| **`21`** grafting identity onto an appliance | 🆕 🟢 **A third route added: `DeepTutor`'s `USERS_FILE` + optional PocketBase proxy is a MIGRATION target, not a greenfield build** — the concepts *(roles, admin bootstrap, a user store)* already exist and need moving into the schema |
+| **`22`** multi-tenant route | 🆕 🟢 **NEW** |
+| **`23`** permissive `SCORM` bridge | 🆕 🟢 **NEW** |
+
+### 🆕 🟢 The screening recipe, promoted out of the pass notes because it is reusable
+
+🟢 **`T290` is now a procedure, and it costs about `3` seconds per candidate:**
+
+1. `git clone --depth 1` the candidate.
+2. Count entity declarations **across all file types**, not just `*.sql` — 🔴 `DeepTutor` scores
+   `0` on a `*.sql`-only probe and has `69`.
+3. 🔴 **READ the table names.** `InterviewMentor`'s `20` tables are `dim_customer`/`fact_orders`
+   teaching fixtures; `feedbacksystem`'s German tables are a SQL playground for students.
+   🔵 **In an education corpus, teaching SQL is a product feature, so a table count over-reports
+   by design *(`T300`)*.**
+4. Probe identity by CONCEPT, not by one word — `users`, `candidate_profiles`, `learners`,
+   `benutzer` — and 🔴 **check whether the store is in the schema at all** *(`DeepTutor`: a JSON
+   file)*.
+5. 🔴 **Always pass `git grep -I`.** Without it, `mentingo` reports `LTI` support from a `.webp`, a
+   `.png` and an `.mp4` *(`T301`)*.
+6. Only now look at ★ — and treat it as a measure of how easy the thing is to TRY, not of whether a
+   cohort can use it.
+
 ## Pass 180 — 2026-10-13
 
 🆕 🟢 **Two new patterns, two amendments, and the amendment to Pattern `2` is a CORRECTION rather

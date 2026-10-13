@@ -1,0 +1,20 @@
+BASELINE (no -i): pairs=105  worst_positive=0.9898  best_honest_negative=0.6720  separation=+0.3178
+
+rung            lines   ratio  pairs  lost     med|Δ|     max|Δ|   worstPos    bestNeg  separation
+--------------------------------------------------------------------------------------------------
+imports_ge6         1  0.0033    105     0    0.00000    0.00000     0.9898     0.6720     +0.3178
+imports_ge3        10  0.0329    105     0    0.00064    0.04515     0.9786     0.6720     +0.3066
+imports_ge2        13  0.0428    105     0    0.00025    0.04515     0.9803     0.6720     +0.3083
+handout_1mod       42  0.1382    105     0    0.00816    0.17701     0.9770     0.6004     +0.3766
+handout_3mod      155  0.5099    105     0    0.02347    0.17701     0.9532     0.5951     +0.3581
+anyline_ge3       300  0.9868    105     0    0.00862    0.07255     0.9172     0.6251     +0.2922
+anyline_ge2       512  1.6842    105     0    0.01412    0.09854     0.8912     0.6016     +0.2897
+
+LIMB TEST — threshold 0.02 on median |Δsim|, fixed at p180:
+  ratios measured: 0.0033 .. 1.6842  (510x span)
+  rungs crossing 0.02: 1 of 7
+  first crossing at ratio 0.5099 (handout_3mod, 155 lines, median |Δ| 0.02347)
+  VERDICT: LIMB 1 — the effect is ratio-dependent and crosses the threshold.
+
+  separation vs baseline: largest move +0.0588 (handout_1mod)
+  sign change anywhere: NO

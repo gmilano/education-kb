@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week, measured rather than ranked: `6` rows entered this KB's agent census
+for the first time, and the one worth a client call is the lowest-starred of them.**
+
+| row | ★ *(secondary, `gap 140`)* | what is NEW this week in this KB's record |
+|---|---|---|
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `44` | 🟢 **First read. The shelf's only genuinely multi-tenant row** — `cohorts`, `cohort_trainers`, `cohort_statistics`, `account_tokens`, `audit_events`, `billing_provider_events`, `tenant_id` resolved in three Go auth handlers, an `Institution` selector in its own login template. `MIT` |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `91` | 🟢 **Read past its licence after `4` passes carried unread.** `SCORM 1.2` is real and BIDIRECTIONAL; 🔴 `xAPI` and `LTI` are **not implemented at all** — see the retraction below |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `24` | 🟢 **First read. A real university system** *(TH Mittelhessen)*: Kotlin/Spring, `@Entity class User`, a dedicated `fbs-identity-service` module, `Keycloak` federation. `Apache-2.0` |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | `43` | 🟡 **First read. `84` tables** including `assessment_policy_versions` and `agent_tool_receipts` — policy VERSIONING and tool-call RECEIPTS, which is an auditability shape this KB has not seen in permissive edtech before. `MIT` |
+| 🆕 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `41 000` | 🔴 **First read past its licence, and it corrects a standing assumption: `0` `users` tables.** Users live in a JSON `USERS_FILE`; login optionally proxies to **PocketBase**. Carries a GitHub-trending badge and a Trendshift badge in its own `README` |
+| 🆕 🟡 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | `88` | 🟡 **First read. First row on this shelf with first-class Arabic + RTL** *(`rtl` `37` files, a full `ar.ts` catalogue, an i18n-parity test)*, published to the **MCP registry**, with public evals *(`3.85/5`, `n=10`)* and — unusually — the weak scores left in. 🔴 `GPL-3.0` |
+
+### 🔴 The retraction this week: `mentingo`'s `xAPI`/`LTI` claim never existed
+
+🔴 **p179 and p180 both recorded `mentingo` as *"the only shelf row that DECLARES both `scorm` and
+`xapi`"*.** 🟢 **Read this pass: `xapi` matches exactly ONE file — `README.md:246` — and that line
+is inside an HTML comment, written in Polish, on an internal checklist that says not to publish the
+item without team confirmation.** 🔵 **It is not a claim, not a dependency and not a feature. It is
+a note-to-self that a grep found.**
+
+🆕 🟢 **The inverse also holds, and it is the more useful half: `mentingo`'s README claims `SCORM`
+EXPORT in four visible places and does NOT claim import — while the code has
+`native-archive-import-scorm.e2e-spec.ts`, `apps/api/src/scorm/scorm.service.ts` and real
+`imsmanifest.xml` fixtures.** 🔵 **`T302`: a README over-claims AND under-claims. Triage from the
+manifest misses capability in both directions — which is why this KB reads trees.**
+
+### 🟢 The trend under the numbers, stated for a studio
+
+🟢 **Across `14` rows measured this pass, engagement-readiness ran OPPOSITE to ★.** The `3` rows
+above `500`★ hold `0` cohort-usable identities between them; `7` of the `11` below `500`★ hold one.
+🔵 **The week's practical lesson is a screening order, not a repo: clone shallow, count entity
+declarations, READ their names, and only then look at stars.**
+
 ## 2026-10-13 — p180 — the week's movement is a RETRACTION, and a `140`★ row turns out to be the shelf's third platform
 
 🆕 🔴 **The most important thing to record this week is not an arrival. It is that this file's

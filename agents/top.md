@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🟢 **Seven pre-registered actions discharged, and the one this pass most needed to be right about —
+`T290`, that ★ rank and engagement-readiness are uncorrelated — is CONFIRMED on `14` rows and
+becomes a usable triage rule.** 🔴 **Two of the three hypotheses this pass invented about its own
+method were FALSIFIED by reading, which is the pass's second finding.**
+
+🆕 🟢 **The headline for a client engagement: the most engagement-ready permissive row this KB has
+ever read sits at `44`★.** [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+*(`MIT`)* carries real multi-tenancy — `tenant_id` resolved in `auth/console.go`, `auth/oauth.go`
+and `auth/learn.go`, an institution selector in its own login template, and `cohorts`,
+`cohort_trainers`, `cohort_statistics`, `cohort_concept_statistics`, `cohort_badge_statistics`,
+`account_tokens`, `audit_events`, `billing_provider_events` and `assessment_adjudications` among
+`240` `CREATE TABLE` statements. 🔵 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) has
+`932`× more stars and cannot hold a cohort.**
+
+🆕 🔴 **And the most-starred education repository in this supply keeps its users in a JSON FILE.**
+`DeepTutor` *(`41 000`★, `Apache-2.0`)* has `69` `CREATE TABLE` statements and **no `users` table**;
+`deeptutor/multi_user/identity.py` reads a `USERS_FILE`, assigns `admin` to the first entry,
+bootstraps from `AUTH_USERNAME`/`AUTH_PASSWORD_HASH`, and optionally proxies login to **PocketBase**.
+🔵 **`T298`: p180's identity probe looks for identity in the SCHEMA. The largest row in the supply
+keeps it outside the schema, so a schema-shaped probe reports `NONE` where a user store exists.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LK`** — test `T290` on the next `10` `ai-tutor` rows by identity class | 🟢 **DISCHARGED on `14` rows, LIMB `1` FIRED. Of `3` rows at `≥500`★, `0` have own persistence and `0` have identity. Of `11` rows below `500`★, `7` have schema-backed identity. The triage rule is earned — with a correction: sort by TABLE NAMES READ, not by table counts** |
+| 🟢 **`ACTION LH`** — read [`Selleo/mentingo`](https://github.com/Selleo/mentingo) past its `MIT` licence, specifically `scorm` and `xapi` | 🟢 **DISCHARGED and it SPLITS. `SCORM` is real and BIDIRECTIONAL (`257` files, `2` own workspace packages, `imsmanifest.xml` fixtures, import AND export e2e specs). 🔴 `xAPI` is ONE match — an HTML COMMENT in Polish on `README.md:246`. 🔴 `LTI` is `0`: its `4` matches are that same comment plus a `.webp`, a `.png` and an `.mp4`** |
+| 🟢 **`ACTION LB`** *(carried from p180)* — `dolos`'s `-i` effect vs template-to-submission ratio | 🟢 **DISCHARGED over `7` rungs, ratio `0.0033`–`1.6842`. LIMB `1` fires on the letter — median `\|Δsim\|` crosses `0.02` at ratio `0.51` — but the effect is NOT monotonic, and above ratio `1.0` it goes NEGATIVE in value. Pattern `1` gains an UPPER bound** |
+| 🔴 **`ACTION LG`** — stand up a running `OpenOLAT` instance and record the wall-clock cost | 🔴 **LIMB `2`, for a POLICY reason rather than a technical one: `mvn package` on a cloned subject tree is refused by this harness's external-code policy. 🟢 Static cost proxies measured instead: `186` declared dependencies, `24` plugins, `1` Maven module, and a PostgreSQL schema of `385` `CREATE TABLE` in `322 754` B** |
+| 🟡 **`ACTION LI`** — settle whether Regulation (EU) `2026/1744` kept the *"conditional on harmonised standards"* framing | 🟡 **SPLITS: LIMB `1` on CONTENT — the conditional trigger was DROPPED for fixed calendar dates, agreed across `3` independent secondary channels. 🔴 LIMB `2` on CHANNEL — `eur-lex.europa.eu` fails on a FOURTH channel, with a working control on that same channel. EU primary legal text is now declared PERMANENTLY secondary here** |
+| 🟢 **`ACTION LJ`** — apply the `c2paStatus` propagation and run the `53`-test suite | 🟢 **DISCHARGED, LIMB `2` FIRED. No permitted execution route exists, now proved on a second language and a second build system. `ACTION KZ` moves to a standing *"specified but unverifiable here"* register and stops being carried as live work** |
+| 🟡 **`ACTION KN`** *(carried, eighth)* — migrate the `76` grant-path probe lists | 🟡 **LIMB `2` evidence, on this pass's own `12` fresh licence reads: a `7`-name list resolved `11`/`12`, and the one absence survives a grant-text grep over every tracked file. 🟢 `Tutorbot-Spock` is genuinely UNLICENSED, not falsely absent. Closing as cosmetic** |
+
+### 🟢 `ACTION LK` — the `14`-row identity census, read past every count
+
+🔵 **★ counts are from this KB's own p79 census and remain SECONDARY (`gap 140`: `api.github.com`,
+`github.com` and `codeload.github.com` all `403`). Everything else below was measured this pass from
+`--depth 1` clones with word-bounded `git grep -Ilw` over tracked files — `-I` added deliberately,
+because this pass found `git grep` without it reporting `LTI` support from a `.mp4`.**
+
+| row | ★ *(secondary)* | licence *(payload-verified this pass)* | entity evidence | identity | region |
+|---|---|---|---|---|---|
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `41 000` | 🟢 `Apache-2.0`, `11 408` B, `md5 48e65e4facf86c33198db013e838c41e` | `3 763` files. `69` `CREATE TABLE` in `18` files — `mastery_paths`, `mastery_events`, `assessment_attempts`, `reading_progress`, `notebook_entries`, `llm_calls`, `cards` … 🔴 **no `users` table** | 🆕 🟡 **OWN-BUT-FILE-BACKED + optional DELEGATED.** `USERS_FILE` JSON store with `admin`/`user` roles, env bootstrap admin, optional **PocketBase** proxy | APAC *(HKUDS)* |
+| 🔴 [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `4 100` | 🟢 `MIT`, `1 079` B, `md5 5e7dac3f33fd2a6a821cca7f61d4d39a` | `51` files. `0` tables, `0` servers | 🔴 **NONE** — and correctly so: it is a **scheduling algorithm**, not an application | Global |
+| 🔴 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `837` | 🆕 🔴 **`CC BY-SA 4.0`** *(NOT a software licence)*, `1 230` B, `md5 c6defaf82fba619e3688938c04e45412` | `241` files. `0` tables | 🔴 **NONE** *(skill/curriculum pack)* | Global |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `137` | 🟢 `MIT`, `1 068` B | `890` files. `34` `__tablename__` incl. `users`, `auth_sessions` | 🟢 **OWN** *(schema; `jose` refresh tokens, `bcrypt`)* | APAC |
+| 🔴 [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `133` | 🆕 🟢 **`CC0 1.0`** *(public-domain dedication — the most permissive grant on this shelf)*, `7 048` B, `md5 65d3616852dbf7b1a6d4b53b00626032` | `378` files. `0` tables | 🔴 **NONE** *(research code)* | APAC |
+| 🔴 [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | `112` | 🟢 `MIT`, `1 071` B, `md5 27d1923531cdeaddb7fea92f458e5d3d` | `152` files. 🔴 **`20` `CREATE TABLE` that are TEACHING FIXTURES** — `dim_customer`, `dim_date`, `dim_geography`, `fact_orders`, `events_20240101` | 🔴 **NONE.** 🆕 The tables are a data-warehouse exercise corpus, not the app's schema | Global |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `91` | 🟢 `MIT`, `1 062` B, `md5 88f104b7644947b4a8b6e71f4972c02f`, `HEAD 242a9324fe48` | `4 753` files. `123` `pgTable` + `128` `CREATE TABLE`; `tenant` in `305` files | 🟢 **OWN + MULTI-TENANT** *(`auth` `199`, `login` `249`, `jwt` `34`, `oauth` `55`, `bcrypt` `6`)* | EMEA *(Selleo, PL)* |
+| 🆕 🟡 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | `88` | 🔴 **`GPL-3.0`**, `35 149` B, `md5 1ebbd3e34237af26da5dc08a4e440464` | `1 082` files. `34` tables, `2` user-entity sites, `auth` `290`, `jwt` `42` | 🟢 **OWN** — 🔴 **but copyleft, so not shelf-eligible as a ROUTE** | 🆕 🟡 **MEA candidate** *(see below)* |
+| 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | `56` | 🔴 **NO LICENCE FILE, and no grant text in ANY tracked file** | `17` files: training/eval scripts + `4` datasets | 🔴 **NONE** — 🔴 **unusable: no grant means all rights reserved** | Global |
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **`44`** | 🟢 `MIT`, `1 073` B, `md5 6ef9d4b578ace4e94d9ae2f1e6054688` | `694` files, Go. `240` `CREATE TABLE` incl. `cohorts`, `cohort_trainers`, `cohort_statistics`, `account_tokens`, `audit_events`, `billing_provider_events`, `assessment_adjudications`, `affect_states`, `calibration_records` | 🟢 **OWN + GENUINELY MULTI-TENANT** — `tenant_id` resolved in `auth/console.go`, `auth/oauth.go`, `auth/learn.go`; an `Institution` selector in its own template; `bcrypt` `29` files | EMEA *(French-language design docs)* |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | `43` | 🟢 `MIT`, `1 067` B, `md5 cca3ca58c914ad4c1b1f992ec9d585c4` | `795` files. **`84`** `CREATE TABLE` — `assessment_policy_versions`, `agent_tool_receipts`, `ai_invocations`, `capability_nodes`/`capability_edges`, `content_schema_versions`, `conversation_sessions`, `ability_calibration_snapshots` | 🟡 **OWN, under a different noun: `candidate_profiles`, not `users`** — which is why a `users` probe scores it `0` | APAC |
+| 🔴 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | `31` | 🟢 `Apache-2.0`, `11 386` B, `md5 40a4e9e8486a1d138796aeb1b1a3a6d0` | `172` files. `0` tables | 🔴 **NONE** | Global |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `24` | 🟢 `Apache-2.0`, `10 785` B, `md5 a3d40cf5ce6af0822ae6fbb6b0767a94` | `1 452` files, Kotlin/Spring. `@Entity class User`, `UserGroup`, `Group`; a whole `fbs-identity-service` module | 🟢 **OWN + FEDERATED** *(`Keycloak` `12` files, `auth0` `8`, wired in `app/service/auth.service.ts`)* | EMEA *(TH Mittelhessen, DE)* |
+| 🟡 [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `12` | 🔴 **`GPL-3.0`**, `35 148` B, `md5 e49f4652534af377a713df3d9dec60cb` | `132` files. `9` tables, `1` user-entity site | 🟢 OWN *(small)* — 🔴 copyleft | North America *(Brown PLT)* |
+
+### 🟢 The `T290` verdict, stated as the number a studio can act on
+
+| ★ band | rows | own persistence | identity a cohort can use |
+|---|---|---|---|
+| 🔴 **`≥ 500`★** | `3` *(`41 000`, `4 100`, `837`)* | 🔴 **`1` of `3`** *(and its users are in a JSON file)* | 🔴 **`0` of `3`** |
+| 🟢 **`< 500`★** | `11` | 🟢 **`8` of `11`** | 🟢 **`7` of `11`** |
+
+🟢 **`T290` is CONFIRMED and PROMOTED to a triage rule:** when screening permissive edtech, rank
+candidates by **entity declarations whose names you have read**, never by ★. 🔵 **The rule's cost is
+one `--depth 1` clone and one `git grep` per candidate — about `3` seconds each at the sizes
+measured here.**
+
+🆕 🔴 **But `T290` must not be over-read in the other direction either.** `fsrs4anki` at `4 100`★ has
+`0` tables and that is CORRECT — it is a scheduling algorithm, and ranking it low on
+engagement-readiness says nothing against it as a COMPONENT. 🔵 **`T299`: the triage rule ranks
+candidates for the ROUTE slot only. A COMPONENT is chosen on what it computes, not on whether it
+has a user.**
+
+### 🔴 Three hypotheses about this KB's own probe — `2` confirmed, `1` falsified
+
+🔵 **All three were written down before the reads that tested them, and the falsified one is
+reported at the same length as the confirmed ones.**
+
+| # | hypothesis | verdict |
+|---|---|---|
+| **`1`** | 🟢 **CONFIRMED — false ABSENCE by file-extension scope.** Counting `CREATE TABLE` only in `*.sql` reports `0` for `DeepTutor`, which has `69` of them in `.py`, and `0` for `InterviewMentor`, which has `20` | 🟢 **Would have published `2` false absences in this very table** |
+| **`2`** | 🟢 **CONFIRMED — false PRESENCE by unread table names.** Widening the scope then reports `20` tables for `InterviewMentor` *(a `dim_`/`fact_` warehouse exercise)* and German tables for `feedbacksystem` *(a SQL-playground recipe-and-auction template for students)* | 🆕 🔵 **`T300`: an EDUCATION corpus is uniquely prone to this, because teaching SQL is itself a product feature. A table count is not evidence in this industry until the NAMES are read** |
+| **`3`** | 🔴 **FALSIFIED — the probe is not defeated by language.** The hypothesis was that an English-only entity vocabulary hides identity. Non-English hits are real and numerous *(`用户` `82` files in `DeepTutor`, `benutzer` `13` in `feedbacksystem`, `utilisateur` `10` in `tutor-mcp`, `usuario` `5` in `mentingo`)* — 🔴 **and every one of them is an i18n message catalogue, a design doc or a student fixture. Every actual entity declaration in all `14` rows is in English** | 🔵 **A plausible, cheap, global-sounding hypothesis that the evidence does not support. Recorded so it is not re-proposed** |
+
+🆕 🔴 **A fourth defect was found by accident and is the cheapest to fix: `git grep -ilw` without
+`-I` matches BINARY files.** `mentingo` scored `4` files for `lti` — one HTML comment and
+`review.webp`, `ai-mentor-avatar.png` and `content-video.mp4`. 🔵 **`T301`: every capability probe
+in this repository must pass `-I`, or it will report standards support from a video file.**
+
+### 🟡 `gap 124` (MEA supply) — its first CANDIDATE, placed by capability, not by guess
+
+🟡 **[`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) is the first row this KB has read with
+FIRST-CLASS Arabic and RTL support:** a complete `ar.ts` message catalogue, `rtl` in `37` files,
+`arabic` in `20`, a `locale-switcher`, and an `i18n-parity.test.ts` that holds the catalogues
+level. 🔵 **That is a capability an MEA engagement actually needs, and it is measurable from the
+tree.** 🔴 **What is NOT established: the holder's country. The tree shows an Arabic-first product,
+not a location, and this KB does not infer a person's nationality from a name or a language.**
+🔴 **And the licence blocks the ROUTE slot regardless: `GPL-3.0`.** 🔵 **So `gap 124` narrows on
+CAPABILITY and stays open on PERMISSIVE MEA-origin supply.**
+
+### 🟢 The shelf after p181 — `12` rows, every one read past its code
+
+| row | licence | grade | identity | region |
+|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` | 🟢 **ROUTE** *(permissive platform)* | 🟢 OWN *(federated)* | EMEA |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | EMEA |
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` | 🟢 **ROUTE — the only MULTI-TENANT row on this shelf** | 🟢 OWN + tenant | EMEA |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | 🟢 **ROUTE** *(promoted — read past its licence after `4` passes)* | 🟢 OWN + tenant | EMEA |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | APAC |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` | 🟢 **ROUTE** *(institutional, Keycloak-federated)* | 🟢 OWN + federated | EMEA |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 `MIT` | 🟡 **APPLIANCE+** *(`84` tables, policy versioning, tool receipts)* | 🟡 OWN *(`candidate_profiles`)* | APAC |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` | 🟢 COMPONENT *(executed + calibrated, p179 and p181)* | n/a | EMEA |
+| 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` | 🟡 APPLIANCE | 🔴 NONE | APAC |
+| 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | 🟡 COMPONENT | 🟡 BORROWED | Global |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+| 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+
+🟢 **`6` ROUTE-grade permissive rows, up from `4`.** 🔴 **North America still holds `0` ROUTE rows
+and LATAM `0` rows of any grade** *(`gap 141`, second consecutive pass with `0` region-originated
+repositories from prose search — and a third, below, where LATAM DEMAND evidence is the richest of
+any region)*.
+
 ## Pass 180 — 2026-10-13
 
 🆕 🟢 **`T286` — this KB's newest standing claim, made one pass ago — is FALSIFIED, and the row that

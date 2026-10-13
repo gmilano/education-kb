@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🆕 🟢 **`ACTION LI` settles the question p180 left open, and the answer is the one that makes a
+roadmap simpler: the *"conditional on harmonised standards"* trigger was DROPPED from the adopted
+text.** 🟢 **Regulation (EU) `2026/1744` sets FIXED CALENDAR DATES. There is no
+standards-readiness trigger and no further automatic delay.** 🔵 **Three independent secondary
+channels agree. 🔴 `eur-lex.europa.eu` failed on a FOURTH channel, so this remains secondary by
+necessity.**
+
+🆕 🔴 **And the market figure moved the wrong way: the range for a SINGLE year WIDENED.** Two
+vendor houses now put `2026` at **`$9.58` B** and **`$11.4` B** — while a third's `2025` figure is
+`$8.3` B and another's `2025` figure is `$7.05` B. 🔵 **`T306`: three passes of re-checking have not
+narrowed this. The honest deliverable to a client is a RANGE and a method note, and this KB should
+stop treating convergence as achievable.**
+
+### 🟢 The regulatory calendar — `ACTION LI` resolution in bold
+
+| in force | jurisdiction | instrument | what it reaches in education |
+|---|---|---|---|
+| **Jan `2026`** | 🟢 South Korea | `AI` Basic Act | *"high-impact"* `AI`; education named explicitly. 🆕 🟡 **Foreign providers must appoint a LOCAL REPRESENTATIVE** |
+| **`1` Mar `2026`** | 🟢 Vietnam | Law No. `134/2025/QH15` | education named HIGH-RISK — automated assessment and behavioural monitoring given as the examples. 🆕 🟡 **Compliance due `1` Mar `2027`; it reaches foreign companies** |
+| **`1` Jul `2026`** | 🟢 Ohio, USA | state mandate | first US state requiring EVERY district to adopt a formal `AI` use policy |
+| **`2` Aug `2026`** | 🟢 European Union | `AI` Act — general application + Article `50` transparency | 🟢 **NOT amended by the omnibus.** Enforcement by the `AI` Office and national authorities began on this date |
+| **`2` Dec `2026`** | 🟡 European Union | two NEW Article `5` prohibitions added by the omnibus | 🟡 read before deploying behavioural or emotion-inferring classroom tooling |
+| **`2` Dec `2027`** | 🔴 European Union | Annex III high-risk — deferred from `2` Aug `2026` | 🔴 systems determining access, evaluating learning outcomes, screening applicants, or monitoring candidates during examinations |
+| **`2` Aug `2028`** | 🔴 European Union | Annex I embedded high-risk — deferred from `2` Aug `2027` | high-risk `AI` inside regulated products |
+| **`1` Mar `2027`** | 🆕 🟡 Vietnam | Law `134/2025/QH15` compliance deadline | 🟡 the first hard non-EU deadline a LATAM- or EMEA-based studio will hit on an APAC engagement |
+
+🆕 🟢 **The mechanism, now stated correctly:** the Commission's November proposal tied the high-risk
+start date to the availability of harmonised standards, with a backstop. 🔴 **The adopted text
+dropped that and fixed the dates instead.** 🟢 **The recitals still cite the delay in CEN-CENELEC
+`JTC 21` standards as a REASON for moving the dates — but the dates no longer depend on the
+standards arriving.** 🔵 **`T307`: a client cannot plan around *"the standards are late, so the
+deadline will move again"*. It will not move again automatically.**
+
+🔴 **The one sub-point still unresolved: one secondary source questions whether Article `50` duties
+truly began on `2` August `2026`.** 🟢 **The weight of this pass's sources says the general
+application date was not amended** — but **`gap 110` means this KB cannot settle it on a primary
+channel, and Pattern `2`'s ordering depends on it.** 🔵 **Carried as `ACTION LM`.**
+
+### 🔴 Market size — the range, with the spread named
+
+| source | `2025` | `2026` | horizon | note |
+|---|---|---|---|---|
+| Precedence Research | `$7.05` B | **`$9.58` B** | `$136.79` B by `2035` *(`34.52`% CAGR)* | 🔴 a `9`-year compounding assumption — the least reliable part |
+| Grand View Research | `$8.3` B | **`$11.4` B** | `$57.2` B by `2033` | 🔴 `19`% above Precedence for the same year |
+| *(AI tutors sub-segment)* Grand View | — | `$2.7` B | `$17.7` B by `2033` *(`30.5`% CAGR)* | North America largest share |
+| *(AI tutoring platforms)* intelmarketresearch | — | `$4.12` B | `$12.89` B by `2034` *(`16.3`% CAGR)* | 🔴 scope differs from the row above; do not compare |
+| *(AI tutoring)* marketintelo | `$6.6` B | — | `$80.4` B by `2034` | 🔴 `2.4`× the other tutoring estimate for an adjacent year |
+
+🔴 **All vendor-published. No point estimate should be quoted to a client.** 🟢 **What IS safe to
+say: every house agrees on the DIRECTION and on a CAGR above `16`%, and the sub-segment definitions
+(*"AI tutors"* vs *"AI tutoring platforms"* vs *"AI in education"*) differ enough that their
+headline numbers are not comparable.**
+
+## Opportunities by region
+
+🔵 **Supply placements come from reading TREES; demand and regulation come from prose search. Where
+a region has demand evidence and no supply evidence, this section says so rather than leaving the
+asymmetry to be inferred.**
+
+### North America
+
+🟢 **Demand: the strongest policy-driven procurement trigger of any region, and it is live now.**
+`134` bills on `AI` in education were introduced across `31` states in `2026`. **Ohio** is the first
+state to require every K-12 district to adopt a formal `AI` use policy *(deadline `1` July
+`2026` — already passed)*. **Oklahoma** and **Maryland** bar `AI` from high-stakes decisions about
+students, requiring human oversight. **New York City** runs a one-year moratorium on student-facing
+`AI` through `8`th grade; **Katy ISD (Texas)** bans generative chatbots for K-6 and widens access in
+later grades. Federally, the **K-12 AI Literacy and Readiness Act of 2026 (H.R. `8747`)** advanced in
+House committee markup in July. `30`+ states already publish guidance. Reported adoption: `60`% of
+US K-12 teachers used `AI` tools in the `2024`-`25` school year; North America is put at `36`% of the
+global market *(aggregator figure, treat loosely)*.
+
+🔴 **Supply: `0` ROUTE-grade permissive rows.** The one North-American row read this pass —
+[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor), Brown PLT — is **`GPL-3.0`**.
+
+🟢 **The opportunity, specifically:** every Ohio district needs a *policy* and the *evidence* that
+its tools comply, and Oklahoma/Maryland need a demonstrable **human-in-the-loop** record. 🟢 **That
+is exactly [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai)'s
+`assessment_policy_versions` + `agent_tool_receipts` shape (`MIT`), or
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)'s `audit_events` +
+`assessment_adjudications` (`MIT`).** 🔵 **Sell the audit trail, not the tutor. The mandate is for a
+policy with proof, and the permissive supply for proof exists — just not from this region.**
+
+### EMEA
+
+🟢 **Demand + the clearest regulatory calendar.** The `AI` Act is the binding instrument and
+education sits squarely in Annex III — admissions, learning-outcome evaluation, exam monitoring —
+now at **`2` December `2027`**, while **Article `50` transparency applies already**. Enforcement by
+the `AI` Office and national authorities began `2` August `2026`. One vendor estimate puts the
+European `AI`-in-education market at `$2.64` B in `2026` growing to `$8.0` B by `2030` *(`31.9`%
+CAGR)*, naming **Finland, Estonia and the Netherlands** as K-12 leaders. The **UK** put ~`£4` M into
+`AI` lesson-planning and marking tools. The **OECD** `2026` Digital Education Outlook argues for
+purpose-built educational `AI` over general-purpose tools; **UNESCO**'s generative-`AI` guidance
+remains the international reference.
+
+🟢 **Supply: this is where the permissive supply actually lives — `5` of the `6` ROUTE rows.**
+`OpenOLAT` *(Apache-2.0, Swiss-led consortium)*, `Artemis` *(MIT, TU München)*, `mentingo` *(MIT,
+Selleo, Poland)*, `tutor-mcp` *(MIT, French-language design docs)*, `feedbacksystem` *(Apache-2.0,
+TH Mittelhessen)*, plus `dolos` *(MIT, Ghent)*.
+
+🟡 **Middle East and Africa, inside this region's vocabulary:** the UAE's mandated nationwide K-12
+`AI` curriculum *(~`1` M pupils, `7` strands)*, Saudi and Qatari national strategies, Alef Education
+and Classera as named platforms, and national frameworks in Nigeria *(`2024`)* and Kenya *(`2025`)*
+all stand from p180. 🆕 🟡 **New this pass: the first shelf row with first-class Arabic + RTL
+(`lumen` — `rtl` in `37` files, a complete `ar.ts` catalogue, an i18n-parity test).** 🔴 **It is
+`GPL-3.0`, and its holder's country is NOT established.** 🔴 **`0` permissive MEA-origin repositories
+still (`gap 124`, supply half).**
+
+🟢 **The opportunity, specifically:** `OpenOLAT` *(Apache-2.0, `LTI 1.3` + `QTI` + `SCORM` +
+`OpenBadges`, own `Shibboleth`/`LDAP`)* is the only permissive full LMS anywhere, and it is
+EMEA-held — so an EMEA engagement can be built on a permissive system of record that already speaks
+the institutional standards. 🔴 **Budget the `385`-table discovery spike explicitly.** For the Gulf
+curriculum mandates, the Arabic/RTL layer is the scarce asset and `lumen`'s copyleft licence means
+it is a reference implementation, not a base.
+
+### APAC
+
+🟢 **Demand + the most binding near-term obligations outside the EU.** **South Korea**'s `AI` Basic
+Act took effect January `2026` with education inside *"high-impact"*, and foreign providers must
+appoint a local representative. **Vietnam**'s Law `134/2025/QH15` took effect `1` March `2026`, names
+education as high-risk with automated assessment and behavioural monitoring as the examples, reaches
+foreign companies, and sets compliance for `1` March `2027`. **Japan** is light-touch and voluntary;
+**Singapore** and Japan work through governance toolkits; **China** has binding content rules;
+**Australia/New Zealand** are light-touch with a safety emphasis. Market reports name Google,
+Microsoft, IBM, Pearson and Byju's as regional players, put China, India and Japan in the lead, and
+project a `28.1`% CAGR for `2026`-`2033` *(vendor figures)*. UNESCO notes readiness varies sharply:
+China and Singapore have education-`AI` policies while others are still meeting basic needs. The
+Ipsos Education Monitor `2026` finds LOWER support for banning `AI` in schools across Asian markets
+than in Australia and New Zealand.
+
+🟢 **Supply: `4` rows, all individual- or lab-held** — `DeepTutor` *(Apache-2.0, HKUDS)*, `OpenTutor`
+*(MIT)*, `civil-ai` *(MIT)*, `gen-mentor` *(`CC0`)*, plus `Bloom`, `Study-Mate` and
+`universal-examprep-skill` at COMPONENT/APPLIANCE grade.
+
+🟢 **The opportunity, specifically:** Vietnam's `1` March `2027` deadline is the one date a studio
+can sell against right now, and what it requires for automated assessment is traceability.
+🟢 **`civil-ai` is `MIT`, APAC-origin, and already models `assessment_policy_versions`,
+`ai_invocations` and `agent_tool_receipts`.** 🔵 **Korea's local-representative requirement is a
+delivery-model question, not a build question — flag it in the engagement's commercial terms, not
+its architecture.**
+
+### LATAM
+
+🟢 **Demand: the richest adoption evidence of ANY region this pass — and it is institutional, not
+anecdotal.** UNESCO IESALC surveyed `200` higher-education institutions across `19` countries:
+**`87`% use `AI` in at least one area, `74`% in teaching and learning — and only `26`% have a formal
+`AI` strategy.** Uptake is highest at private non-profit universities *(`84`%)*. TALIS `2024` puts
+secondary teachers' `AI` use well above the OECD average of `36`%: **Brazil `56`%, Chile `55`%,
+Colombia `53`%, Costa Rica `52`%**. UNESCO launched an **Observatory on `AI` in Education for Latin
+America and the Caribbean** in April `2026`, at ECLAC headquarters in Santiago. The Digital Education
+Council's `2026` LATAM survey covered `30 000`+ respondents at `29` institutions. Generative `AI`
+*(ChatGPT, Copilot, Gemini)* is the default entry point, driven by free or low-cost access.
+
+🟡 **Regulation is moving but not landed.** Brazil's **PL `2.338/2023`** passed the Senate in
+December `2024` and sits in the Chamber of Deputies, so the text can still change. Chile's
+government bill is in its first constitutional stage. Colombia relies on national policy
+**CONPES `4144`** with a budget through `2030` rather than binding statute. UNESCO ran `AI`
+regulation and ethics capacity courses for officials in Ecuador and Chile.
+
+🔴 **Supply: `0` rows. On every pass this KB has run.** 🔵 **And the asymmetry is now the single
+most actionable fact in this file: `87`% adoption against `26`% strategy, and no regional
+open-source supply to build on.**
+
+🟢 **The opportunity, specifically — and it is the clearest in this document:** `61` percentage
+points of LATAM institutions are using `AI` without a formal strategy. 🟢 **That gap is a
+governance-and-evidence engagement, not a model engagement**, and it can be delivered on permissive
+components that already exist elsewhere: `civil-ai`'s versioned assessment policy *(`MIT`)*,
+`tutor-mcp`'s `audit_events` and multi-tenancy for a ministry or university-system deployment
+*(`MIT`)*, `dolos` for integrity at the calibrated `0.85` threshold *(`MIT`)*. 🔴 **What a studio
+must supply itself: Spanish and Portuguese localisation.** 🔵 **No row on this shelf has a
+Spanish or Portuguese message catalogue — the one localisation depth this KB has measured is Arabic,
+in a `GPL-3.0` row. For a region with the highest measured adoption, that is the supply gap worth
+naming to a client.**
+
+### Global
+
+🟢 **Cross-cutting and region-neutral:** `Article 50`-style synthetic-content marking is the
+obligation most likely to apply wherever a studio delivers, and it is live in the EU now. The
+permissive integrity component *(`dolos`, `MIT`)* is calibrated in this KB with numbers rather than
+defaults — threshold `0.85`, an honest-work band topping out at `0.6720`, and a measured rule for
+when template exclusion helps *(see [`compose/patterns.md`](../compose/patterns.md))*.
+🔵 **`T308`: the cheapest globally reusable asset in education `AI` is not a model or a tutor — it
+is the evidence layer: versioned policy, per-call receipts, an audit trail, and a defensible
+integrity threshold. Three permissive rows now supply pieces of it, from three different regions,
+and none of them is famous.**
+
 ## Pass 180 — 2026-10-13
 
 🆕 🔴 **`ACTION LF` is DISCHARGED WITH LIMB `1` FIRED, and it corrects the single most

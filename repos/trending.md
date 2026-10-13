@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🔴 **The trending question cannot be answered from GitHub's own surfaces here, and this pass states
+that before listing anything.** `api.github.com`, `github.com` and `codeload.github.com` all answer
+`403` through this environment's proxy (`gap 140`), so there is **no trending feed, no star count
+and no star delta available on any channel this KB can reach.** 🟢 **What IS reachable:
+`git clone` over smart-HTTP, and `raw.githubusercontent.com`.**
+
+🔵 **So the entries below are *"newly measured by this KB this week"*, which is an honest and
+different thing from *"trending on GitHub"*. Each is dated and carries the evidence that placed it.**
+
+### 🟢 Newly measured this week
+
+| repo | licence | measured this pass | why it is worth a second look |
+|---|---|---|---|
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` | `694` files, Go, `240` `CREATE TABLE`, `tenant` `151` files, `bcrypt` `29`, `oauth` `84` | 🟢 **Cohort + tenant + billing + audit in one permissive schema. Nothing else on this shelf has that** |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | `4 753` files, `123` `pgTable`, `scorm` `257` files, `xapi` `1`, `lti` `0` | 🟢 **A `SCORM` bridge in TypeScript.** 🔴 Its `xAPI`/`LTI` reputation in this KB was a grep artefact and is retracted |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` | `1 452` files, Kotlin/Spring, `@Entity User`/`UserGroup`/`Group`, `Keycloak` `12` files | 🟢 **Institutional grading with federated identity, from a German university of applied sciences** |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 `MIT` | `795` files, `84` `CREATE TABLE`, `agent_tool_receipts`, `ai_invocations`, `assessment_policy_versions` | 🟡 **Per-call receipts and versioned assessment policy — an audit shape, built in from the start** |
+| 🆕 🟡 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 `GPL-3.0` | `1 082` files, `34` tables, `rtl` `37` files, full `ar.ts` catalogue, `i18n-parity.test.ts`, MCP registry entry, public evals `3.85/5` *(`n=10`)* | 🟡 **Arabic-first and RTL-complete, and it publishes its own weak eval scores.** 🔴 Copyleft |
+| 🆕 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `3 763` files, `69` `CREATE TABLE`, `0` `users` tables, `USERS_FILE` JSON store, optional PocketBase | 🔴 **The biggest name in the supply, and the identity layer is a file.** Read it before promising a cohort deployment |
+
+### 🔴 What this file did NOT find, said plainly
+
+- 🔴 **`0` region-originated repositories from four regional prose searches, for the second
+  consecutive pass** (`gap 141`). Every regional placement in this KB comes from reading trees —
+  i18n catalogues, design-doc language, institutional holders — never from a search result.
+- 🔴 **`0` LATAM-origin repositories, on any pass.** 🔵 **And this pass makes that absence sharper
+  rather than softer: LATAM now has the RICHEST demand evidence of any region in
+  [`intel/market.md`](../intel/market.md) — `87`% institutional AI use across `19` countries — and
+  still `0` supply rows here.**
+- 🔴 **`0` North-American ROUTE-grade permissive rows.** The one North-American row read this pass
+  *([`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor), Brown PLT)* is `GPL-3.0`.
+- 🔴 **No star figure in this file is primary.** Every one is this KB's own p79 census, carried
+  forward and labelled.
+
 ## 2026-10-13 — p180 — `17`/`17` payloads land on the published figure, and the capture defect is proved cosmetic
 
 🆕 🟢 **The week's repository finding is a clean negative, and it closes a defect class this KB has

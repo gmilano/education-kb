@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🆕 🟢 **`T290` — ★ rank and engagement-readiness are uncorrelated — was p180's best guess from `3`
+rows. Tested on `14` this pass, it HOLDS, and it is now a screening rule with a measured cost.**
+
+| ★ band | rows | own persistence | identity a cohort can use |
+|---|---|---|---|
+| 🔴 **`≥ 500`★** | `3` | 🔴 `1` of `3` *(users in a JSON file)* | 🔴 **`0` of `3`** |
+| 🟢 **`< 500`★** | `11` | 🟢 `8` of `11` | 🟢 **`7` of `11`** |
+
+🔵 **The sharpest single comparison: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at
+`41 000`★ has no `users` table; [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+at `44`★ has tenants, cohorts, billing events and an audit trail. `932`× the stars, and it is the
+one that cannot hold a class.**
+
+### 🟢 The trend, stated as the mechanism rather than the correlation
+
+🟢 **Stars measure how easy something is to TRY. Education engagements are bought on whether a
+COHORT can be enrolled, graded and audited.** 🔵 **Those requirements pull in opposite directions:
+an identity layer, a tenant key and an audit table are exactly the things that make a repository
+harder to run in five minutes — so the rows that optimise for a fast first impression systematically
+shed them.**
+
+🆕 🟢 **The corollary a studio should hear: the identity layer is the most reliably ABSENT thing in
+permissive edtech, which makes it the most reliably BILLABLE.** `5` of the `14` rows measured this
+pass have no usable identity at all; `1` keeps users in a JSON file; `1` delegates to an external
+`BaaS`; `1` borrows an agent runtime's credential.
+
+### 🆕 🟡 Four identity shapes, and what each one costs to fix
+
+🔵 **p180 published a three-valued axis *(OWN / BORROWED / NONE)*. `14` rows needed five values, and
+the two new ones are the ones that fool a probe.**
+
+| shape | rows | what a studio must supply |
+|---|---|---|
+| 🟢 **OWN, in the schema** | `OpenOLAT`, `Artemis`, `OpenTutor`, `mentingo`, `tutor-mcp`, `feedbacksystem`, `lumen`, `LTLTutor` | 🟢 **Nothing. Configure it** *(and for `tutor-mcp` and `mentingo`, the tenant key is already there)* |
+| 🆕 🟡 **OWN, but FILE-BACKED** | `DeepTutor` *(`USERS_FILE` JSON, roles assigned by insertion order, env bootstrap admin)* | 🟡 **A migration, not a build.** The concepts exist; they are not in the database, so they do not join, index or audit |
+| 🆕 🟡 **DELEGATED to a service** | `DeepTutor` *(optional PocketBase proxy)*, `feedbacksystem` *(`Keycloak`, `auth0`)* | 🟡 **An identity provider the client must own and operate** — often the right answer at an institution that already runs one |
+| 🟡 **BORROWED from the host** | `anki-mcp-server` *(all `21` `auth` files are `MCP` CLIENT credentials)* | 🟡 Whatever the agent runtime has. It authenticates clients, not learners |
+| 🔴 **NONE** | `Bloom`, `Study-Mate`, `universal-examprep-skill`, `fsrs4anki`, `education-agent-skills`, `gen-mentor`, `InterviewMentor`, `ai-tutor-app`, `Tutorbot-Spock` | 🔴 **The whole identity layer — or an `LTI` launch that borrows the institution's** |
+
+🆕 🟡 **One row needed a sixth description and got a footnote instead:
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) owns its identity under a different
+noun — `candidate_profiles`, not `users`.** 🔵 **`T309`: the identity probe is a VOCABULARY, and a
+vocabulary mis-grades a row that models the same concept with a domain word. Assessment systems say
+*candidate*; LMSes say *user*; MOOCs say *learner*.**
+
+### 🔴 The trend this pass tried to find and did NOT
+
+🔴 **A language barrier in the probe.** The hypothesis was that an English-only entity vocabulary
+hides identity in non-English repositories — a plausible trend for a global studio. 🔴 **It is
+false here.** `用户` appears in `82` files of `DeepTutor`, `benutzer` in `13` of `feedbacksystem`,
+`utilisateur` in `10` of `tutor-mcp`, `usuario` in `5` of `mentingo` — 🔴 **and every one is an i18n
+message catalogue, a design document or a student fixture.** 🟢 **Every real entity declaration in
+all `14` rows is in English.** 🔵 **Recorded as refuted so it is not re-proposed, and because the
+refutation is itself a finding: this supply writes its product in English and its UI in everything
+else.**
+
+### 🆕 🔴 The trend that should worry a studio: standards and permissiveness are nearly disjoint
+
+🔴 **Of `6` permissive ROUTE rows, exactly `2` speak `LTI 1.3` — and both are Java.** `tutor-mcp`
+*(Go)*, `mentingo` *(TypeScript)*, `OpenTutor` *(Python)*, `feedbacksystem` *(Kotlin)* and
+`civil-ai` *(Python)* cannot receive an `LTI` launch. 🔵 **`T305`: outside Java, choosing a
+permissive education route means the interoperability layer is the engagement's first BUILD. It is
+also the most portable thing a studio could carry between education clients — which makes it an
+investment, not a cost.**
+
+🟢 **The one standards bridge that does exist permissively is `SCORM`, and `mentingo` holds both
+ends:** a generator and a browser runtime it wrote itself, plus an importer with real
+`imsmanifest.xml` fixtures. 🟢 **Content can therefore move between a permissive deployment and a
+copyleft incumbent without touching the incumbent's code.**
+
+### 🟢 Integrity detection now has a RULE, not just a threshold
+
+🟢 **p179 gave this KB a number: `0.85`, with honest sibling code topping out at `0.6720` and an
+empty band of `0.3066` above it.** 🆕 🟢 **p181 adds the condition that number depends on
+(`ACTION LB`, `7` rungs, template-to-submission ratio `0.0033`–`1.6842`):**
+
+- 🔴 **A boilerplate header buys nothing.** At ratio `≤0.04`, median `|Δsim|` is `0.00064` —
+  template exclusion is cargo cult at the scale most teams use it.
+- 🟢 **A real handout helps, and the effect peaks mid-range.** At ratio `0.14`, the honest-work
+  ceiling falls from `0.6720` to `0.6004` and the positive/negative separation WIDENS to `0.3766`.
+- 🔴 **An over-broad template HURTS.** At ratio `1.68` the known positive erodes from `0.9898` to
+  `0.8912` and the separation drops to `0.2897`, **below** the no-template baseline of `0.3178`.
+
+🔵 **`T310`: template exclusion is not a hygiene step to always-enable or always-skip. It has an
+optimum, it is on the order of one handout module, and past the submission's own size it eats the
+signal it was meant to clean.**
+
 ## Pass 180 — 2026-10-13
 
 🆕 🔴 **`T286` — *"the permissive education supply is not short of intelligence, it is short of

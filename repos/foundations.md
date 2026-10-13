@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 181 — 2026-10-13
+
+🆕 🔴 **`ACTION LG` fired limb `2`, and the reason matters more than the verdict: `OpenOLAT` was not
+proved un-bootable here — it was never built, because this harness REFUSES to build a cloned
+subject tree.** 🟢 **`mvn -B -ntp -Dmaven.test.skip=true -T 1C package` was declined by the
+external-code policy, exactly as `Bloom`'s `pytest` was at p180.**
+
+🆕 🟢 **That turns a three-pass-old confusion into one sentence. `gap 139` is NOT about language.**
+
+| channel | verdict | evidence |
+|---|---|---|
+| 🟢 **install a package FROM A REGISTRY** | 🟢 **WORKS** | `npm` installed `@dodona/dolos@2.9.3` and it RAN `8` analyses this pass; `PyPI` installed `15`/`15` of `Bloom`'s declared packages at p180 |
+| 🔴 **build or test a CLONED SUBJECT TREE** | 🔴 **REFUSED** | `mvn package` on `OpenOLAT` *(p181, Java)*; `pytest` on `Bloom` *(p180, Python)* |
+| 🟢 **READ a cloned subject tree** | 🟢 **WORKS** | `14` repositories cloned and measured this pass; `git clone` over smart-HTTP remains the one reliable channel *(`T291`)* |
+
+🔵 **`T303`: the boundary is the code's PROVENANCE, not its language. A registry package is a tool
+this session runs; a cloned repository is someone else's program, and this harness will not execute
+one. p179's *"a JavaScript subject is executable here and a Python one is not"* was a coincidence of
+which artefact happened to be a tool.**
+
+### 🟢 `OpenOLAT` — the static cost line Pattern `20` needed, since the dynamic one is unavailable
+
+🟢 **`HEAD 8494a140b2ca`, re-cloned independently this pass in `14` s to `340` MB.** 🟢 **`14 809`
+`.java` files and `2 624 333` lines of Java — which REPRODUCES p180's figure exactly, from a
+separate clone.**
+
+| build fact | measured | what it costs a studio |
+|---|---|---|
+| 🟢 **Maven modules** | **`1`** | 🟢 **A single WAR, not a `20`-module reactor. The build graph is simple even though the tree is huge** |
+| 🟡 **declared dependencies** | **`186`** | 🟡 The first resolution is the slow one; `186` direct dependencies is a normal enterprise Java footprint |
+| 🟡 **build plugins** | `24` | 🟡 Includes the `tomcat`/`jetty` wiring the README's Eclipse path depends on *(`10` references in `pom.xml`)* |
+| 🔴 **PostgreSQL schema** | 🔴 **`385` `CREATE TABLE` in `322 754` B** *(`setupDatabase.sql`)* | 🔴 **This is the real discovery cost, and it is the number to quote: `385` tables to learn before a confident extension. `Artemis` by comparison is `257` entities; `OpenTutor` is `34`** |
+| 🟢 **target runtime** | Tomcat `10.0`/`10.1`, PostgreSQL *(MySQL supported, deprecated upstream)* | 🟢 Standard institutional hosting; nothing exotic to procure |
+
+🔵 **`T294` STANDS but must be restated honestly: this KB has no evidence about `OpenOLAT`'s boot
+time, and will not get any here. Pattern `20` quotes a discovery spike — and now it quotes `385`
+tables and `186` dependencies as the thing the spike is sizing, instead of an unqualified
+*"spike"."***
+
+### 🟢 The foundations shelf, with this pass's additions
+
+🔵 **Licences below were payload-verified this pass unless marked carried. Grants are identified by
+reading the TEXT, not by matching a byte size — `feedbacksystem`'s `Apache-2.0` is `10 785` B
+against the canonical `11 358`, and is still `Apache-2.0`.**
+
+| repo | licence *(payload)* | layer | why it is foundational |
+|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0`, `10 982` B | full LMS | 🟢 **The permissive system of record.** `440` `@Entity`, `385` tables in the shipped schema, own federated auth, `LTI 1.3` + `QTI` + `SCORM` + `OpenBadges` |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT`, `1 091` B | assessment | 🟢 `257` entities, `528` write endpoints, `LTI 1.3` grade passback, nightly Moodle interop test |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT`, `1 062` B, `md5 88f104b7644947b4a8b6e71f4972c02f` | LMS *(TypeScript)* | 🆕 🟢 **The permissive LMS a JS studio can actually staff.** `4 753` files, `123` `pgTable`, `tenant` in `305` files, `pnpm` workspaces, `docker-compose`, and **bidirectional `SCORM 1.2`** |
+| 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT`, `1 073` B, `md5 6ef9d4b578ace4e94d9ae2f1e6054688` | multi-tenant tutoring + assessment | 🆕 🟢 **The only row with cohorts AND tenants AND billing AND audit events in one schema.** Go, `694` files, `240` `CREATE TABLE` |
+| 🆕 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0`, `10 785` B, `md5 a3d40cf5ce6af0822ae6fbb6b0767a94` | automated grading *(institutional)* | 🆕 🟢 **A production university grading system with a SEPARATE identity service and `Keycloak` federation** — the shape an institution's IT department expects |
+| 🆕 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 `MIT`, `1 067` B | assessment + content pipeline | 🆕 🟡 **`assessment_policy_versions`, `content_schema_versions`, `agent_tool_receipts`, `ai_invocations`** — versioned policy and per-call receipts, which is what an audited deployment needs |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT`, `1 084` B | integrity | 🟢 **Calibrated in this KB twice** *(p179, p181)*: threshold `0.85`, and now a measured template-ratio rule |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT`, `1 068` B | AI tutor platform | 🟢 `34` tables, `141` endpoints, `jose` refresh tokens, `alembic` migrations |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, `11 408` B, `md5 48e65e4facf86c33198db013e838c41e` | AI tutor *(single-deployment)* | 🟡 **`69` tables of genuine learning state** *(`mastery_paths`, `mastery_events`, `assessment_attempts`, `reading_progress`)* — 🔴 **but no `users` table, so it is a per-deployment appliance until an identity layer is added** |
+| 🔴 [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 `MIT`, `1 079` B | spaced-repetition algorithm | 🟢 **Foundational as a COMPONENT, not a platform:** `51` files of scheduler. 🔵 Its `0` tables are correct, not a defect *(`T299`)* |
+
+### 🔴 Licence findings that change eligibility
+
+| row | published before | 🆕 corrected this pass |
+|---|---|---|
+| 🔴 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `1 230` B, grant unidentified | 🔴 **`CC BY-SA 4.0` — a CONTENT licence, not a software grant.** `ShareAlike` reaches derivative curriculum. 🔵 **A studio adapting these materials owes `SA` on what it ships back** |
+| 🟢 [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `7 048` B, grant unidentified | 🟢 **`CC0 1.0` — public-domain dedication.** The most permissive grant anywhere on this shelf |
+| 🔴 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | unread | 🔴 **`GPL-3.0`** — ROUTE-ineligible despite owning its identity |
+| 🔴 [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | unread | 🔴 **`GPL-3.0`** |
+| 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | unread | 🔴 **NO GRANT AT ALL** — no licence file, and no grant text in any of its `17` tracked files. Unusable, and this survives the wider name list *(`ACTION KN`, limb `2`)* |
+
+🔵 **`T304`: in an education corpus, *"open source"* collapses into three different things — a code
+grant, a CONTENT grant with `ShareAlike` reach, and no grant at all. `3` of the `12` rows newly
+licence-read this pass were not under a software licence.**
+
 ## Pass 180 — 2026-10-13
 
 🆕 🟢 **`ACTION LE` is DISCHARGED with limb `1` FIRED, and it is the most consequential finding this
