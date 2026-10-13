@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🆕 🟢 **`ACTION LE` is DISCHARGED with limb `1` FIRED, and it is the most consequential finding this
+file has carried in `20` passes: [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is not
+merely the shelf's only permissive full LMS — it is a complete, data-owning, auth-carrying,
+standards-speaking PLATFORM.** 🔵 **p179 found the `Apache-2.0` grant and correctly refused to call
+it a route. It is a route.**
+
+### 🟢 `ACTION LE` — OpenOLAT read past its licence
+
+🟢 **`HEAD 8494a140b2ca`, `25 824` tracked files, `14 809` `.java` source files,
+`2 624 333` lines of Java, built with `pom.xml`.** 🔴 **Limb `2` — *"it is a thin layer over
+something else"* — is dead on arrival at that size.**
+
+| capability | measured | what it means |
+|---|---|---|
+| 🟢 **owns its data** | **`440`** `@Entity` classes, **`419`** `@Table(name…)` annotations, `497` `DAO`/`Manager` classes, `199` schema/migration `SQL` files | 🟢 **More entities than [`Artemis`](https://github.com/ls1intum/Artemis)' `257`. This is the system of record, not a client of one** |
+| 🟢 **portable storage** | `oracle` `69` files, `postgresql` `68`, `mysql` `68` | 🟢 Three production RDBMS targets — an institution's existing DB standard is not a blocker |
+| 🟢 **carries its own auth** | `AuthenticationProviderSPI`, `AuthenticationProvider`, `LDAPAuthenticationProvider`, `OAuthAuthenticationProvider`, `RestApiAuthenticationProvider`; `authentication` `300` files, `login` `1 248`, `password` `678`, 🟢 **`shibboleth` `147`**, `ldap` `158`, `oauth` `137`, `jwt` `43` | 🟢 **`Shibboleth` in `147` files is the tell: this is built for federated institutional sign-on, which is what a university actually has** |
+| 🟢 **speaks the standards** | 🟢 **`LTI` `4 987` files** *(`252` of them `LTI 1.3`-specific — `lti13`/`AssignmentAndGradeService`/`DeepLinking`)*, `QTI` `1 201`, `IMS` `1 394`, `SCORM` `355`, `OpenBadges` `263` | 🟢 **Broader than any row on this shelf. `Artemis` brought `LTI 1.3`; `OpenOLAT` brings `LTI 1.3` + `QTI` + `SCORM` + `OpenBadges`** |
+| 🆕 🟢 **already has an AI surface** | `openai` `33` files, `llm` `34`, `ollama` `13`, `457` `restapi` files | 🟢 **A studio EXTENDS an existing integration point here rather than inventing one — and `ollama` in `13` files means a self-hosted model path already exists upstream** |
+| 🟡 identity model | `IdentityImpl`, `Identity`, `TransientIdentity`, `DeletedIdentity` in `org.olat.basesecurity` | 🟡 A first-class `Identity` abstraction with a deletion path — relevant to `GDPR` erasure requests |
+
+🔵 **`T293`: the permissive-vs-copyleft question and the platform-vs-component question are
+INDEPENDENT, and this shelf confused them for `20` passes.** 🟢 **Every full LMS was assumed to be
+copyleft because the three biggest ones are. `OpenOLAT` is `Apache-2.0` AND bigger than any of the
+permissive rows this KB had read.**
+
+### 🟢 The foundation set — licences re-read to a FILE this pass, `17`/`17` exact
+
+🟢 **Every row below was fetched to a file and measured with `wc -c`, never captured into a shell
+variable** *(the full census with `md5`s and deltas is in [`repos/trending.md`](trending.md))*.
+🔵 **`17` of `17` reproduce the published figure exactly, so this table's licence column is now
+agreed across three independent channels.**
+
+| repo | layer | licence *(payload-verified)* | bytes | region | grade |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | full LMS | 🟢 **`Apache-2.0`** | `10 982` | EMEA *(Swiss-led consortium)* | 🟢 **ROUTE — permissive, `440` entities, own auth, `LTI 1.3`+`QTI`+`SCORM`** |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning + assessment | 🟢 `MIT` | `1 091` | EMEA *(TU München)* | 🟢 ROUTE *(p178)* — `257` entities, `528` write endpoints |
+| 🆕 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | AI tutor platform | 🟢 `MIT` | `1 068` | APAC | 🟢 **ROUTE — `34` tables, own `JWT`+`bcrypt` auth, `141` endpoints, `alembic`** |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | academic integrity | 🟢 `MIT` | `1 084` | EMEA *(KU Leuven / Ghent)* | 🟢 COMPONENT — **calibrated at p179**, threshold `0.85` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | LMS *(commercial OSS)* | 🟢 `MIT` | `1 062` | EMEA *(Poland)* | 🟡 **the only shelf row DECLARING both `scorm` and `xapi`** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | full LMS | `GPL-3.0` *(at `COPYING.txt`)* | `35 147` | Global | 🟡 incumbent; plugin-shaped AI work only |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0` | `35 136` | Global | 🔴 network copyleft reaches a hosted AI layer |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | full LMS | `AGPL-3.0` | `34 520` | North America | 🔴 integrate over `LTI`, do not fork |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0` | `11 120` | North America | 🟡 patent grant scoped to educational use |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP + LMS + SIS *(Odoo)* | `LGPL-3.0` | `8 241` | APAC *(India)* | 🟡 the one integrated LMS+SIS route; `LGPL` permits a separate AI module |
+| 🔴 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 `AGPL-3.0` | `35 121` | APAC *(Hong Kong)* | 🔴 network copyleft on a SIS |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | EMEA *(France)* | 🟡 on-premise is the comfortable case |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte ASSERTION, no grant text** | `19` | APAC *(India)* | 🔴 **UNVERIFIED — intended `GPL-3.0`; the file contains `License: GNU GPL V3` and nothing else** |
+| 🟡 [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | LLM microservice for Artemis | 🟢 `MIT` | `1 089` | EMEA | 🟡 a dependency, not a product *(p178)* |
+
+🔵 **`14` rows; `6` carry a permissive grant** *(`Apache-2.0` ×`1`, `MIT` ×`4`, `ECL-2.0` ×`1`)*,
+🔴 **`4` are `AGPL`/`GPL` network- or strong-copyleft, `1` is `LGPL`, and `1` has no readable grant
+at all.** 🟢 **`3` rows are now ROUTE-grade and code-verified — `OpenOLAT`, `Artemis`,
+`OpenTutor` — up from `1` at p178.**
+
+### 🔴 Still unresolved, carried honestly
+
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent.** Unchanged from
+  p179; not probed this pass, which spent its fetch budget on the `17`-row census instead.
+- 🔴 **`ACTION KN` — the `76` grant-path probe lists — is carried for a SIXTH pass.** 🆕 🟡 **Its
+  urgency drops, though, and the reason is measurable:** this pass fetched `moodle/moodle` at
+  `COPYING.txt` directly and got `35 147` B with the canonical `GPL-3.0` `md5`, so the one FALSE
+  ABSENCE `gap 135` produced is now corrected in the published table. 🔵 **The debt is real but it
+  is hygiene, not a live wrong answer.**
+- 🔴 **`0` repositories originating in North America or LATAM reached this foundation set as a
+  permissive route.** 🔵 **`Canvas` and `Sakai` are North American and both are copyleft or
+  education-scoped; LATAM contributes no row at all (`gap 141`).**
+
 ## Pass 179 — 2026-10-13
 
 🆕 🟢 **Eight platform licences re-read from the payload this pass, on a repaired channel, and the

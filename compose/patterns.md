@@ -4,6 +4,159 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🆕 🟢 **Two new patterns, two amendments, and the amendment to Pattern `2` is a CORRECTION rather
+than a refinement: its clock was wrong in kind, not in value.** 🟢 **The pass's new capability is
+that Python dependencies now install here (`ACTION LC`, limb `1` fired), which changes what a
+pattern may prescribe as verifiable.**
+
+### 🆕 🟢 Pattern `20` — the PERMISSIVE institutional stack, which this KB could not write until now
+
+🔵 **Why it could not be written before:** every full LMS on this shelf was `AGPL-3.0`, `GPL-3.0`,
+`LGPL-3.0` or education-scoped `ECL-2.0`, so every institutional recipe had to route around a
+copyleft core. 🟢 **`ACTION LE` read [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+past its `Apache-2.0` grant and it is a full platform: `440` `@Entity`, `419` `@Table`, `497`
+DAO/Manager classes, `199` schema files, Oracle+PostgreSQL+MySQL, its own auth, and `LTI 1.3`.**
+
+**The wiring, named part by part:**
+
+1. 🟢 **System of record —
+   [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** *(`Apache-2.0`, `10 982` B,
+   `md5 6ba3198de8e95979d5895c0827d34bc0`, `HEAD 8494a140b2ca`)*. Courses, enrolments, grades and
+   `QTI` *(`1 201` files)* item banks live here. 🟢 **Apache-2.0 means a white-labelled deployment
+   and a proprietary AI module beside it need no copyleft conversation.**
+2. 🟢 **Identity — OpenOLAT's own.** Wire the institution's existing IdP through
+   `LDAPAuthenticationProvider` *(`ldap` in `158` files)* or `Shibboleth` *(`147` files)*; add
+   nothing. 🔵 **This is the step every other pattern in this file has had to BUILD.**
+3. 🟢 **Assessment — [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)** *(`MIT`,
+   `1 091` B)* attached over `LTI 1.3`. 🟢 **Both ends are verified: OpenOLAT carries `252`
+   `LTI 1.3`-specific files (`lti13`/`AssignmentAndGradeService`/`DeepLinking`); Artemis ships
+   `LTI 1.3` with Assignment-and-Grade-Services and a nightly Moodle interop test (p178).**
+   🔵 **Grades flow back over AGS — do not build a grade bridge.**
+4. 🟢 **Integrity — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)** *(`MIT`,
+   `1 084` B)*, `@dodona/dolos@2.9.3` from npm. 🟢 **Threshold `0.85`, as MEASURED at p179:
+   identifier renaming scores `1.0000`, honest sibling code reaches `0.6720`, and the empty band
+   between them is `0.3066` wide.** 🔴 **Do not ship the `0.7` clients ask for — it sits `0.028`
+   above the honest-work band.**
+5. 🟢 **The AI layer — extend, do not invent.** 🟢 **OpenOLAT already carries `openai` in `33`
+   files, `llm` in `34` and `ollama` in `13`, with `457` `restapi` files.** 🔵 **`ollama` upstream
+   means a self-hosted model path exists before the studio arrives — which is what answers both the
+   EU's data questions and California `AB 1159`'s training-data restriction.**
+6. 🟢 **Provenance — Article `50(2)` marking from DAY ONE.** 🔴 **Not deferred: see Pattern `2`'s
+   amendment below.**
+
+🔴 **The honest cost line, because this pattern is the one most likely to be over-sold:**
+🔴 **`OpenOLAT` is `14 809` Java files and `2 624 333` lines, built with `pom.xml`. This KB READ it;
+it has not BUILT or RUN it.** 🔵 **Quote a discovery spike to stand up a dev instance before quoting
+the engagement.** 🟢 **Pre-registered as `ACTION LG`.**
+
+### 🆕 🟢 Pattern `21` — grafting identity onto an APPLIANCE, two ways, with the cheaper one named
+
+🔵 **The problem this solves is now precisely bounded:** 🟢 **`3` of `8` read shelf rows have no
+identity at all** — [`Bloom`](https://github.com/Li-Evan/Bloom) *(`7` tables, `16` write endpoints,
+`docker-compose`, `auth` `0`)*, [`Study-Mate`](https://github.com/Miaotofu01/Study-Mate) *(`0` DBs,
+`0` servers)* and
+[`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) *(`auth` `0`)*.
+🔴 **Each serves exactly one learner per deployment, and a cohort is what a client buys.**
+
+**Route A — BORROW the institution's identity *(cheaper; prefer it)*.** Put the appliance behind an
+`LTI 1.3` launch from Pattern `20`'s `OpenOLAT` *(or the client's Moodle/Canvas)*. The launch
+carries a stable subject identifier and a context (course) claim; key every appliance row on those
+instead of adding a user table. 🟢 **Nothing in `Bloom` has to learn about passwords, and the
+institution stays the system of record for who the learner is.** 🔴 **Limit: the appliance still
+cannot tell two learners apart in its own UI — it inherits per-launch scope, so it suits a
+single-course tool, not a persistent portfolio.**
+
+**Route B — GRAFT a real identity layer.** 🟢 **Copy the shape from
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor), which is `MIT` and already has
+it:** `users` and `auth_sessions` tables, `class User(Base)`, `services/auth/jwt.py` with
+`create_access_token` + `create_refresh_token` + `decode_token` over `jose`, `bcrypt` hashing,
+`alembic` migrations, and `user_id` threaded through `202` files. 🔵 **`Bloom` even DECLARES the
+right dependencies — `python-jose[cryptography]`, `bcrypt`, `email-validator` — with `0` import
+sites for any of them, so the graft is additive, not a rewrite** *(`T285`)*.
+
+🟢 **Verification is now possible for this pattern, which it was not at p179:** 🟢 **`Bloom`'s full
+declared dependency set — `15` packages including the `dev` group — installs cleanly here
+(`fastapi`, `sqlalchemy 2.1.4`, `uvicorn 0.54.0`, `python-jose`, `bcrypt`, `pytest`,
+`ruff 0.17.0`), exit `0`.** 🔴 **Running the subject's own suite is still gated — by harness policy
+now, not by the network.**
+
+### 🔴 Pattern `2`, amendment — the clock was wrong in KIND, and the fix inverts the advice
+
+🔴 **Pattern `2` sequenced an EU engagement against *"two clocks"*, treating `2` December `2027` as
+a secondary-sourced date under an UNAMENDED AI Act, with the November `2025` *"digital omnibus"*
+flagged as a live risk that might move it.** 🟢 **`ACTION LF` settles it: the omnibus was ADOPTED as
+Regulation (EU) `2026/1744` — signed `8` July `2026`, OJ `24` July `2026`, in force `27` July
+`2026`.**
+
+| obligation | Pattern `2` said | 🆕 corrected |
+|---|---|---|
+| Annex III high-risk *(admissions, learning-outcome evaluation, exam monitoring)* | `2` Dec `2027`, secondary, at risk of moving | 🟢 **`2` Dec `2027`, now the ADOPTED legal date — deferred from `2` Aug `2026`** |
+| Annex I embedded high-risk | not sequenced | 🆕 `2` Aug `2028` *(deferred from `2` Aug `2027`)* |
+| Article `50` transparency / synthetic-content marking | treated as part of the same clock | 🔴 **UNCHANGED AND LIVE SINCE `2` Aug `2026`. The omnibus did not touch it** |
+| Article `5` prohibitions | not sequenced | 🆕 🟡 two NEW prohibitions phase in `2` Dec `2026` |
+
+🔵 **`T295`: *"the AI Act was delayed"* is false as said to an education client, and the error is
+expensive in the wrong direction.** 🟢 **The step a studio can defer is the conformity
+documentation for an assessment engine. The step it CANNOT defer is marking synthetic output —
+which is the one teams assume the delay covers.** 🟢 **So Pattern `2`'s ordering INVERTS: ship the
+Article `50(2)` marking work FIRST, then the Annex III conformity file against a `2` December
+`2027` date that is now legally fixed rather than provisional.**
+
+🟡 **Carried risk, recorded not relied on:** whether the adopted text kept the *"conditional on
+harmonised standards"* framing. 🔴 **`eur-lex.europa.eu` is `403` on `curl` and `ENOTFOUND` on the
+second channel; `gap 110` holds on three channels.** 🔵 **Quote the date; do not quote the
+mechanism.**
+
+### 🟢 Pattern `2`'s Article `50(2)` recipe — `ACTION KZ`'s diagnosis DISCHARGED, and p178's note refined
+
+🟢 **The subject is unmoved for a sixth pass:**
+[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator),
+`HEAD 9c260890214d`. 🟢 **`/usr/bin/python3.13` is present, as p178 required.**
+
+🔴 **p178 recorded that `_artifact_provenance` *"is the ONLY producer of the `provenanceRecords`
+list the gate reads, and its returned dict has no `c2paStatus` key"*.** 🟢 **The second half is
+confirmed by direct read. The first half needs refining, and the refinement makes the repair
+smaller:**
+
+| finding, read this pass | consequence |
+|---|---|
+| 🟢 `_artifact_provenance` is at `services/pipeline/src/alystria/generation/workflow.py:2492`; it reads `metadata_json` out of the `artifacts` table and forwards `6` metadata keys by `metadata.get(...)` — `origin`, `rightsStatus`, `licenseId`, `creator`, `attribution`, `sourceUri`, `modelRevision` | 🟢 **The propagation mechanism already exists and is used seven times. `c2paStatus` is simply not among the keys forwarded** |
+| 🆕 🟢 **`c2paStatus` IS produced upstream — by `licensed_media_workflow.py:259` and `:290`, which write `"c2paStatus": "absent"` into the artifact metadata AND into the candidate record** | 🔴 **So p178's *"only producer"* is not right: a producer it did not name writes the field into the very store `_artifact_provenance` reads from** |
+| 🆕 🟢 **`contracts/generated_schema_registry.py:106` lists `c2paStatus` among the REQUIRED properties of `AssetProvenance`** | 🟢 **The schema already demands the field. `ACTION KZ` limb `2` — *"it breaks → the repair is a schema change"* — is REFUTED in advance: the schema is already right** |
+
+🟢 **So the repair is one line in the returned dict —
+`"c2paStatus": str(metadata.get("c2paStatus", "absent"))` — placed beside the six keys already
+forwarded the same way.** 🔴 **`ACTION KZ`'s VERIFICATION limb is NOT discharged: executing the
+subject's own suite from inside its tree was refused this pass by the harness's external-code
+policy, so the `53`/`53` claim is unproven and is not asserted.** 🔵 **`T298`: a diagnosis, a
+specified one-line repair and an honest *"not verified"* is a better carry than a third consecutive
+*"NOT ATTEMPTED"* — the next pass starts from a line number instead of a question.**
+
+🆕 🟡 **A citation-hygiene note this pass owes itself:** 🟡 **p178 cited `generation/workflow.py:2515-2516`
+and `:2520-2534`; the file is at `services/pipeline/src/alystria/generation/workflow.py` and the
+function begins at `2492`.** 🔵 **Same pinned `HEAD`, so the drift is in the CITATION, not the
+subject. Cite paths from the repository root or the next pass re-finds the file by hand.**
+
+### 🟢 Pattern `7`, amendment — the institutional assessment stack gains a permissive base
+
+🟢 **Pattern `7` wired `Artemis` + `dolos` + an institutional LMS and had to assume the LMS was
+copyleft.** 🟢 **Replace the base with `OpenOLAT` (Pattern `20`, step `1`) and every link in the
+chain is both code-verified AND permissive:** `Apache-2.0` → `MIT` → `MIT`. 🔵 **`4` of the
+`17` routing rows in [`verticals/solutions.md`](../verticals/solutions.md) are code-verified, and
+this chain uses three of them.**
+
+### 🔴 What this pass did NOT verify
+
+- 🔴 **`ACTION LB` — `dolos`'s `-i` as a function of template-to-submission ratio — NOT ATTEMPTED.**
+  Carried to p181. 🔵 **Pattern `1` step `2` therefore keeps its CONDITION as written at p179 and
+  gains no new evidence.**
+- 🔴 **No subject repository was BUILT or RUN.** 🟢 Dependencies install; execution is
+  policy-gated *(`T297`)*.
+- 🔴 **`Selleo/mentingo` is still unread past its licence for a fourth pass** — the cheapest
+  outstanding read on the shelf, and the only row claiming both `scorm` and `xapi`.
+
 ## Pass 179 — 2026-10-13
 
 🆕 🟢 **`ACTION KW` is DISCHARGED after being carried unattempted through two passes, and it

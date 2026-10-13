@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p180 — the week's movement is a RETRACTION, and a `140`★ row turns out to be the shelf's third platform
+
+🆕 🔴 **The most important thing to record this week is not an arrival. It is that this file's
+newest thesis was wrong within one pass.** p179 closed with `T286`: *"the permissive education
+supply is not short of INTELLIGENCE, it is short of IDENTITY."* 🔵 **It is retracted. The supply
+read so far is short of identity in `3` of `8` rows, not in general — and the strongest
+counterexample was already on this shelf, unread, at `140`★.**
+
+### 🆕 🟢 `zijinz456/OpenTutor` — the week's real mover, and it moved by being READ
+
+🟢 **[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)** — `MIT`, `1 068` B,
+`md5 31ab063baf1136e15447ee82dd1f79c1`, `HEAD f0142f28e8ed`, `890` tracked files. 🟢 **`34`
+database entities, `141` route decorators, `sqlalchemy` in `225` files, `fastapi` in `89`,
+`alembic` migrations dated `2026-02-27` → `2026-03-01`, a `Dockerfile`, and `user_id` threaded
+through `202` files.** 🟢 **It carries its own auth for real** — `from jose import jwt`,
+`create_access_token` and `create_refresh_token` in `services/auth/jwt.py`, `bcrypt` in `3` files,
+`users` and `auth_sessions` tables, and `tests/test_auth_jwt.py`.
+
+🔵 **Why this is a trend line and not a correction notice:** 🔴 **this row sat on the shelf at
+`140`★ while the two rows at `925`★ and `284`★ got read, and the `140`★ row is the only one of the
+three that a cohort can log into.** 🟢 **`T290`: in this supply, ★ rank and ENGAGEMENT-READINESS
+are uncorrelated — the fastest-growing permissive education repository this KB has ever seen
+(`Study-Mate`, `26` days to `925`★) has `0` databases, `0` servers and `0` auth.**
+
+### 🟡 The other two reads, both COMPONENT
+
+🟡 **[`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server)** — `MIT`, `1 074` B,
+`md5 ca551ae2483bf315b98b34cc430617fa`, `HEAD e0e347f7f399`, `271` files, shipping as
+`@ankimcp/anki-mcp-server@0.27.0`. 🟡 **The shelf's only `MCP` server, and its identity is
+BORROWED:** `auth` in `21` files, every one an `MCP` client credential — `CLIENT_ID` `5`,
+`authClientId` `9` — with `0` table definitions and `0` user classes. 🔵 **It is a bridge to a
+learner's own Anki collection, which is a real and narrow job.**
+
+🔴 **[`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)** —
+`MIT`, `1 065` B, `md5 7b28829314723a252f8edbb65a50a5d7`, `HEAD b9e84f5fef3a`, `581` files.
+🔴 **`auth` `0`, `login` `0`, `oauth` `0`, no ORM, no server.** 🆕 🔴 **And it is where this file
+learns to distrust its own instrument: `session` matches `57` files, and every one is a STUDY
+session.** 🔵 **`T288`: a word-bounded count is a pointer to a read, not a finding. The same probe
+shape is what produced `T286`.**
+
+### 🟢 What is executable here changed this week — and it is a bigger deal than any row
+
+🆕 🟢 **`PyPI` answers `200` from this environment.** p179 recorded it as
+`client error (Connect) / tunnel error: unsuccessful` and concluded the harness might be
+permanently JavaScript-only for execution. 🟢 **`Bloom`'s entire declared dependency set — `15`
+packages including the `dev` group — resolved and installed into a clean `uv` venv, exit `0`:**
+`fastapi`, `sqlalchemy 2.1.4`, `uvicorn 0.54.0`, `starlette 1.8.0`, `python-jose`, `bcrypt`,
+`openai`, `pypdf`, `pytest`, `pytest-asyncio`, `ruff 0.17.0`. 🔵 **So the Python half of this
+shelf is now INSTALLABLE** *(`ACTION LC`, limb `1` fired — see
+[`compose/patterns.md`](../compose/patterns.md))*. 🔴 **It is not yet RUNNABLE: executing a subject
+repository's own suite from inside its tree was refused this pass by the harness's external-code
+policy, which is a different blocker from the network one and must be recorded as such
+(`gap 139`, narrowed).**
+
+### 🔴 What did NOT move, measured rather than assumed
+
+| channel | result this pass | p179 |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **`200`** — `17`/`17` licence payloads | 🟢 `200` |
+| `git` smart-HTTP *(`clone --depth 1`)* | 🟢 **`200`** — `5` subject repositories cloned | *(not stated as a channel)* |
+| `registry.npmjs.org` | 🟢 `200` | 🟢 `200` |
+| 🆕 `pypi.org` | 🟢 **`200` — CHANGED** | 🔴 unreachable |
+| `api.github.com` | 🔴 `403` | 🔴 `403` |
+| `github.com` *(pages)* | 🔴 `403` | 🔴 `403` |
+| 🆕 `codeload.github.com` | 🔴 **`403`** | *(unmeasured)* |
+| 🆕 `eur-lex.europa.eu` | 🔴 **`403` on `curl`, `ENOTFOUND` on the second channel** | 🔴 unreachable |
+
+🔵 **`T291`: `git clone` works here while `codeload` and the search API are both `403`. Trees are
+readable; ★ counts are not.** 🟢 **Every star figure in this file therefore remains secondary and
+inherited (`gap 140`), while every CODE figure in it is now first-hand.**
+
 ## 2026-10-13 — p179 — two reads, two classes, and `dolos` finally measured on real code
 
 🆕 🟢 **The week's movement is not a new repository. It is the two biggest rows of p178's wider tag

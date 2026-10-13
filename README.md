@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🟢 **Six pre-registered actions discharged, five with a limb FIRED, and the one this KB most needed
+to be wrong about — its own newest claim — is RETRACTED on evidence from its own shelf.**
+
+🆕 🔴 **The pass's sharpest finding is a self-correction. `T286`, made one pass ago, said the
+permissive education supply *"is not short of intelligence, it is short of IDENTITY"*.**
+🟢 **`ACTION LD` opened the three unread `170`★+ rows and the first one has a user:**
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — `34` tables including `users` and
+`auth_sessions`, `class User(Base)`, `jose` access **and** refresh tokens, `bcrypt`, `141`
+endpoints, dated `alembic` migrations, and `tests/test_auth_jwt.py`. 🔴 **It has been on this
+shelf since p164, unread.** 🔵 **`T287`: a claim about THE SUPPLY cannot be built from the two rows
+one pass happened to open.**
+
+🆕 🟢 **The pass's most client-useful finding: the shelf finally has a PERMISSIVE PLATFORM to start
+from.** `ACTION LE` read [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) past its
+`Apache-2.0` grant — **`440` `@Entity` classes *(against `Artemis`' `257`)*, `419` `@Table`, `497`
+DAO/Manager classes, `199` schema files, Oracle+PostgreSQL+MySQL, its own federated auth
+(`Shibboleth` `147` files, `LDAP` `158`), and `LTI 1.3` *(`252` files)* + `QTI` *(`1 201`)* +
+`SCORM` *(`355`)* + `OpenBadges` *(`263`)*.** 🔵 **`T293`: *permissive* and *full platform* were
+never a trade-off — that was a sampling artefact of which three LMSes are famous.**
+
+🆕 🔴 **The pass's most consequential correction for a client roadmap: *"the AI Act was delayed"* is
+false as said.** 🟢 **`ACTION LF` confirms the *"digital omnibus"* was ADOPTED — Regulation (EU)
+`2026/1744`, signed `8` July `2026`, in force `27` July `2026`.** 🔴 **Annex III high-risk duties
+(admissions, learning-outcome evaluation, exam monitoring) moved to `2` December `2027`** — 🟢 **but
+Article `50` transparency duties did NOT move and have applied since `2` August `2026`.**
+🔵 **`T295`: the step a studio may defer is the conformity file; the step it may not defer is
+marking synthetic output — which is the one teams assume the delay covers. Pattern `2`'s ordering
+INVERTS.**
+
+🆕 🟢 **And the pass's best news about this KB's own capacity: `PyPI` answers `200`.** `Bloom`'s
+entire declared dependency set — `15` packages including the `dev` group — installed into a clean
+venv, exit `0`. 🔴 **But executing a subject repository's own suite was refused by the harness's
+external-code policy.** 🔵 **`T297`: *installable* and *runnable* are separately gated here — one by
+the network, one by policy. A KB that conflates them mis-predicts its own capacity, as it has for
+three passes.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LD`** — read the `3` remaining `170`★+ `ai-tutor` rows past their licences | 🟢 **DISCHARGED, LIMB `1` FIRED. `OpenTutor` has its own identity → `T286` is a sampling artefact of `2` rows and is RETRACTED. `anki-mcp-server` BORROWS identity (`auth` in `21` files, all `MCP` client credentials); `universal-examprep-skill` has none (`auth` `0`). A three-valued axis replaces the binary: OWN / BORROWED / NONE** |
+| 🟢 **`ACTION LE`** — read `OpenOLAT` past its `Apache-2.0` licence | 🟢 **DISCHARGED, LIMB `1` FIRED. `440` entities, own auth, four standards, `2 624 333` lines of Java. Limb `2` (*"a thin layer"*) dead on arrival. 🟢 The shelf's first permissive ROUTE** |
+| 🟢 **`ACTION LF`** — resolve whether the *"digital omnibus"* was ADOPTED | 🟢 **DISCHARGED, LIMB `1` FIRED. Adopted as Regulation (EU) `2026/1744`. Annex III → `2` Dec `2027`; Annex I → `2` Aug `2028`; Article `50` UNCHANGED and live; `2` new Article `5` prohibitions from `2` Dec `2026`. 🟡 Whether the *"conditional on standards"* framing survived is UNRESOLVED — `gap 110` on a third channel** |
+| 🟢 **`ACTION LC`** — find ANY channel that installs Python dependencies here | 🟢 **DISCHARGED, LIMB `1` FIRED on the channel. `PyPI` `200`; `15`/`15` packages installed, exit `0`. 🔴 Limb `1`'s second half — *"see `Bloom`'s suite run"* — NOT achieved: execution of an external tree's suite was policy-refused. `gap 139` closes on fetch and narrows to EXECUTION** |
+| 🟢 **`ACTION LA`** — re-fetch the class-`B`/`C` capture sites and see whether a figure MOVES | 🟢 **DISCHARGED, LIMB `2` FIRED. `17` licence payloads fetched to FILE: `17`/`17` land exactly on the published figure, delta `0`. The `+1` correction was right everywhere. 🔵 `T292`: the migration is hygiene, not a live defect — stop carrying it as one. 🆕 Moodle's `COPYING.txt` `md5` filled: `d32239bcb673463ab874e80d47fae504`** |
+| 🟡 **`ACTION KZ`** *(carried twice)* — propagate `c2paStatus` through `_artifact_provenance` | 🟡 **DIAGNOSIS DISCHARGED, VERIFICATION CARRIED. Limb `2` REFUTED in advance: `generated_schema_registry.py:106` already REQUIRES `c2paStatus` on `AssetProvenance`, so it is not a schema change. 🆕 🔴 And p178's *"only producer"* is wrong — `licensed_media_workflow.py:259`/`:290` already write the field into the store `_artifact_provenance` reads. The repair is ONE line beside `6` keys forwarded the same way. 🔴 `53`/`53` NOT asserted: suite execution policy-refused** |
+| 🔴 **`ACTION LB`** — `dolos`'s `-i` effect vs template-to-submission ratio | 🔴 **NOT ATTEMPTED. Said plainly: the execution budget went to the Python channel and the read budget to `OpenOLAT`. Carried to p181** |
+| 🔴 **`ACTION KN`** *(carried, sixth)* — migrate the `76` grant-path probe lists | 🔴 **NOT ATTEMPTED. 🆕 🟡 But its urgency DROPS on measurement: `moodle/moodle` was fetched directly at `COPYING.txt` this pass (`35 147` B, canonical `GPL-3.0` `md5`), so `gap 135`'s one false absence is corrected in the published table. Hygiene, not a wrong answer** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **A permissive PLATFORM route** ([`verticals/solutions.md`](verticals/solutions.md)):
+  `OpenOLAT` *(`Apache-2.0`)* joins `Artemis` and `OpenTutor` as ROUTE-grade. 🟢 **`4` of `17`
+  routing rows are now code-verified, up from `3`.**
+- 🆕 🟢 **Pattern `20`** ([`compose/patterns.md`](compose/patterns.md)) — the permissive
+  institutional stack: `OpenOLAT` *(`Apache-2.0`)* → `Artemis` over `LTI 1.3` → `dolos` at `0.85`
+  → extend the `openai`/`ollama` surface already upstream *(`33`/`13` files)*.
+- 🆕 🟢 **Pattern `21`** — grafting identity onto an appliance, with the cheaper route named:
+  borrow the institution's identity over an `LTI 1.3` launch, or graft `OpenTutor`'s `MIT` auth
+  layer *(`jose` refresh tokens + `bcrypt` + `users`/`auth_sessions`)* into `Bloom`, whose
+  `pyproject.toml` already declares the dependencies with `0` import sites.
+- 🆕 🟢 **Every row on the agent shelf has now had its CODE read**, not just its grant — `8` of `8`,
+  `5` of them first read at p179 or p180.
+- 🆕 🟢 **The licence column is agreed across three independent channels**, `17`/`17` exact.
+
+### 🔴 Declared gaps and absences
+
+- 🔴 **`gap 141` — regional SUPPLY evidence from prose search is ZERO for a second pass.** Four
+  regional searches named `0` region-originated repositories. 🟢 **Every regional placement in
+  [`intel/market.md`](intel/market.md) comes from reading TREES: EMEA `5` rows, APAC `6`,
+  Global `1`, 🔴 **North America `0` permissive, LATAM `0`, MEA `0`.**
+- 🆕 🟢 **`gap 124` (MEA) SPLITS — closed on policy, open on supply.** The UAE has MANDATED a
+  nationwide K-12 AI curriculum *(~`1` M pupils, `7` strands, `1 000`+ trained teachers)*; Saudi
+  Arabia and Qatar run advanced strategies; Alef Education and Classera are the named regional
+  platforms; Nigeria *(National AI Strategy `2024`)* and Kenya *(AI Strategy `2025`)* have national
+  frameworks. 🔴 **`0` open-source education repositories still.**
+- 🔴 **`gap 110` — the EU primary corpus is unreachable on a THIRD channel.** `eur-lex.europa.eu`
+  and `digital-strategy.ec.europa.eu` both `403` on `curl` *(proxy `connect_rejected`)* and
+  `ENOTFOUND` on the second channel. Every EU date here is secondary by necessity.
+- 🔴 **`gap 140` — `★` counts remain unobtainable.** `api.github.com` `403`, `github.com` `403`,
+  🆕 `codeload.github.com` `403`. 🟢 **`git clone` over smart-HTTP works, so trees are readable
+  and popularity is not** *(`T291`)*.
+- 🔴 **`gap 139` NARROWED, not closed.** Installing Python dependencies works; executing an
+  external tree's suite is policy-refused *(`T297`)*.
+- 🔴 **Market size is still a factor-of-two range for the same year** *(`$6.4`–`$8.3` B for `2025`,
+  and one source's `2026` figure of `$10.6` B sits below another's `2025` figure)*. All
+  vendor-published. **No point estimate should be quoted to a client.**
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed this
+  pass.
+- 🔴 **`Selleo/mentingo` is unread past its licence for a fourth pass** — the cheapest outstanding
+  read on the shelf.
+
+### 🟢 Pre-registered for p181, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION LG`** | stand up a running `OpenOLAT` dev instance *(`mvn`, a DB, first boot)* and record the wall-clock cost | **limb `1`:** it boots within a session and Pattern `20` gains an operational cost line → the ROUTE grade is earned operationally as well as statically. **limb `2`:** it does not boot here → `T294` stands, Pattern `20` must quote a discovery spike, and say so in the pattern itself |
+| 🆕 🟡 **`ACTION LH`** | read [`Selleo/mentingo`](https://github.com/Selleo/mentingo) past its `MIT` licence, specifically its `scorm` and `xapi` claims | **limb `1`:** both standards are implemented, not merely declared → the shelf gains a second permissive LMS route and a `SCORM` import path. **limb `2`:** they are dependency declarations or docs only → `T285` extends from Python manifests to JS ones, and the *"off-vocabulary"* grade resolves DOWN |
+| 🆕 🔴 **`ACTION LI`** | settle whether Regulation (EU) `2026/1744` kept the *"conditional on harmonised standards"* framing, on ANY channel that is not a vendor blog | **limb `1`:** a primary or quasi-primary channel is reachable → `gap 110` finally closes and Pattern `2` can quote the mechanism. **limb `2`:** none is → declare EU legal text PERMANENTLY secondary here and stop pre-registering primary reads |
+| 🆕 🟡 **`ACTION LJ`** | apply the one-line `c2paStatus` propagation and run the `53`-test suite, if an execution route exists that policy permits | **limb `1`:** `53`/`53` holds → the Article `50(2)` patch is complete and `ACTION KZ` finally closes. **limb `2`:** no permitted execution route exists → merge `KZ` into a standing *"specified but unverifiable here"* register and stop carrying it as live work |
+| 🆕 🟡 **`ACTION LK`** | test `T290` *(★ rank and engagement-readiness are uncorrelated)* on the next `10` `ai-tutor` rows by identity class | **limb `1`:** the top-★ rows keep showing OWN identity less often than mid-★ rows → `T290` becomes a usable triage rule: sort candidates by tables, not by stars. **limb `2`:** identity tracks ★ after all → `T290` was a `3`-row coincidence and must be withdrawn like `T286` |
+| 🔴 **`ACTION LB`** *(carried)* | `dolos`'s `-i` effect vs template-to-submission ratio | **limb `1`:** the effect rises with the ratio and crosses `0.02` → `T284` holds and Pattern `1`'s condition is right. **limb `2`:** flat at every ratio → `-i` is cargo cult and Pattern `1` must DROP the step |
+| 🔴 **`ACTION KN`** *(carried, seventh — and DOWNGRADED)* | migrate the `76` grant-path probe lists | **limb `1`:** a migration changes a published verdict → the debt was hiding disagreements after all. **limb `2`:** every verdict survives → close it as cosmetic and stop listing it as a gap *(`T292` already points this way)* |
+
 ## Pass 179 — 2026-10-13
 
 🟢 **Four pre-registered actions discharged, three of them with a limb FIRED, and the one carried

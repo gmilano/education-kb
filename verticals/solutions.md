@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🆕 🟢 **The routing recommendation CHANGES this pass, and for the first time it changes in the
+client's favour: there is now a permissive platform to start FROM, rather than a copyleft platform
+to integrate AROUND.** 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) was read
+past its `Apache-2.0` licence (`ACTION LE`, limb `1` fired) and it owns its data, carries its own
+federated auth and speaks four education standards.**
+
+### 🟢 The platform table, with the routing grade each row actually earns
+
+🔵 **Grades: ROUTE** *(owns its data + its own auth + speaks a standard — build the engagement on
+it)*, **APPLIANCE** *(owns its data, deploys cleanly, no user — one learner per deployment)*,
+**COMPONENT** *(neither — compose it into something else)*.
+
+| platform | layer | licence *(payload-verified)* | bytes | grade | what it means for an engagement |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | full LMS | 🟢 **`Apache-2.0`** | `10 982` | 🟢 **ROUTE** | 🟢 **START HERE for a permissive full-LMS engagement.** `440` `@Entity`, `419` `@Table`, `497` DAO/Manager classes, `199` schema files, Oracle+PostgreSQL+MySQL. Own auth incl. `Shibboleth` (`147` files) and `LDAP` (`158`). `LTI 1.3` (`252` files), `QTI` (`1 201`), `SCORM` (`355`), `OpenBadges` (`263`). 🟢 **`openai` already in `33` files and `ollama` in `13` — the AI extension point exists upstream.** A closed derivative, a white-label deployment and a proprietary AI layer are all available without a copyleft conversation |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning **+ assessment** | 🟢 `MIT` | `1 091` | 🟢 **ROUTE** | 🟢 The assessment specialist: `257` entities, `528` write endpoints, own auth (`passkey` `136` files, `saml2` `54`), `LTI 1.3` with grade passback and a nightly Moodle interop test. 🔵 **Pair it with `OpenOLAT` rather than choosing between them** |
+| 🆕 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | AI tutor platform | 🟢 `MIT` | `1 068` | 🟢 **ROUTE** *(promoted)* | 🟢 **The APAC-origin route, and the smallest one a studio can actually hold in its head**: `34` tables, `141` endpoints, `jose` access+refresh tokens, `bcrypt`, `alembic` migrations, `Dockerfile`, `user_id` in `202` files. `10+` LLM providers, local-first |
+| 🟡 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | LMS *(commercial OSS)* | 🟢 `MIT` | `1 062` | 🟡 PLATFORM *(not read past its licence)* | 🟡 **Still the only shelf row that DECLARES both `scorm` and `xapi`**, and it ships a licence gate (`T208`). 🔴 Carried unread for a fourth pass — a candidate for p181 |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | full LMS | `GPL-3.0` *(`COPYING.txt`, `md5 d32239bcb673463ab874e80d47fae504`)* | `35 147` | 🟡 integrate-only | 🟡 The default institutional incumbent. Plugin-shaped AI work is normal; a closed fork is not |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0` | `35 136` | 🔴 integrate-only | 🔴 Network copyleft: a hosted AI layer that links into it inherits the obligation |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | full LMS | `AGPL-3.0` | `34 520` | 🔴 integrate-only | 🔴 Same reach. Integrate over `LTI`, never fork |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0` | `11 120` | 🟡 integrate-only | 🟡 Permissive in practice, but the patent grant is scoped to educational use — read it before a commercial resale |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **ERP + LMS + SIS** *(Odoo)* | `LGPL-3.0` | `8 241` | 🟡 ERP route | 🟡 The one integrated LMS+SIS+fees route. `LGPL` permits a separately licensed AI module beside it, which is the natural shape |
+| 🔴 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 `AGPL-3.0` | `35 121` | 🔴 integrate-only | 🔴 Network copyleft on a SIS — the hosted-deployment question arrives on day one |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | 🟡 on-prem | 🟡 Classic copyleft; on-premise deployments are the comfortable case |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte assertion, `md5 2884e131cfab2111873ff0eb5ba55997`** | **`19`** | 🔴 **DO NOT RELY** | 🔴 **There is no grant text in the file — only the string `License: GNU GPL V3`.** Intended `GPL-3.0`; treat as unverified until upstream ships the body |
+| 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | single-learner study app | 🟢 `MIT` | `1 069` | 🟡 **APPLIANCE** | 🟡 `7` tables, `16` write endpoints, `docker-compose` with a healthcheck. 🔴 **No user, no auth, no tenant — one learner per deployment** |
+| 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | spaced-repetition bridge *(`MCP`)* | 🟢 `MIT` | `1 074` | 🟡 **COMPONENT** | 🟡 The shelf's only `MCP` server. Identity is **BORROWED** — its `auth` files are `MCP` client credentials, not learners |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | multi-host skill adapter | 🟢 `MIT` | `1 064` | 🔴 **COMPONENT** | 🔴 `0` databases, `0` servers. `199` files whose job is to run one skill set inside four vendor runtimes |
+| 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | exam-prep skill pack | 🟢 `MIT` | `1 065` | 🔴 **COMPONENT** | 🔴 `auth` `0`, no ORM, no server. Declares `anti-hallucination` and page citations — relevant to Article `50(2)` provenance work |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | academic integrity | 🟢 `MIT` | `1 084` | 🟢 **COMPONENT, CALIBRATED** | 🟢 Executed at p179: threshold belongs near `0.85`; `0.7` sits `0.028` above the honest-work band |
+
+### 🟢 The routing consequence, stated plainly
+
+🟢 **`4` of this table's `17` rows are now code-verified** — `OpenOLAT`, `Artemis`, `OpenTutor` and
+`dolos` — 🟢 **up from `3` at p179, and the new one is the largest and the only `Apache-2.0`
+platform.**
+
+🆕 🟢 **The recommendation a Globant engagement should hear, in one line:** 🟢 **build on
+`OpenOLAT` (`Apache-2.0`, owns the data, owns the auth, speaks `LTI 1.3`), attach `Artemis` over
+`LTI 1.3` where assessment matters, gate submissions with `dolos` at `0.85`, and treat
+`Bloom`/`Study-Mate`/`examprep` as parts to harvest rather than products to deploy.**
+
+🔴 **The honest caveat on that line:** 🔴 **`OpenOLAT` is `2.6` million lines of Java with a
+`pom.xml`. It was READ this pass, not BUILT or RUN.** 🔵 **`T294`: *"owns its data"* is a static
+property and this KB proved it statically; *"deploys in a week"* is an operational claim and
+nothing here supports it yet.** 🟢 **Pre-registered as `ACTION LG`.**
+
+🆕 🟡 **One vocabulary note that matters for the compiler:** 🟡 **`Selleo/mentingo` has been carried
+as grade *"PLATFORM (off-vocabulary)"* for four passes.** 🔵 **It is off-vocabulary because it has
+never been read past its licence, not because it resists the vocabulary. Reading it is the cheapest
+way to resolve a stale grade on this page.**
+
 ## Pass 179 — 2026-10-13
 
 🆕 🟢 **The platform table gets the column it has always needed and never had: the licence as READ

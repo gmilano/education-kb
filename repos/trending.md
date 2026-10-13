@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p180 — `17`/`17` payloads land on the published figure, and the capture defect is proved cosmetic
+
+🆕 🟢 **The week's repository finding is a clean negative, and it closes a defect class this KB has
+chased for four passes.** `ACTION LA` asked whether re-fetching the `10` byte-capture sites would
+MOVE a published figure. 🟢 **`17` licence payloads were fetched to a FILE and measured with
+`wc -c` — never through a shell variable — and `17` of `17` land EXACTLY on the figure this KB has
+already published. Delta `0`, every row.**
+
+| repo | path | bytes *(payload → file)* | `md5` | published | Δ |
+|---|---|---|---|---|---|
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `LICENSE` | `1 069` | `d3ac8ed0a50bd8de7d9c2ad5be4248ab` | `1 069` | 🟢 `0` |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `LICENSE` | `1 091` | `021aaec73f7b974dc5edf4ef703f941b` | `1 091` | 🟢 `0` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `LICENSE` | `1 062` | `88f104b7644947b4a8b6e71f4972c02f` | `1 062` | 🟢 `0` |
+| [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | `LICENSE` | `1 089` | `5cc3b9844f092545a99800eb9edce880` | `1 089` | 🟢 `0` |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | `LICENSE` | `1 084` | `00ffc342d555c4129ee54e3286818d50` | `1 084` | 🟢 `0` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `LICENSE` | `10 982` | `6ba3198de8e95979d5895c0827d34bc0` | `10 982` | 🟢 `0` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `LICENSE` | `11 120` | `ca5955eea85a5d171ce51c891797aafa` | `11 120` | 🟢 `0` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🆕 `COPYING.txt` | `35 147` | 🆕 🟢 **`d32239bcb673463ab874e80d47fae504`** | `35 147` | 🟢 `0` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `LICENSE` | `35 136` | `47e2062a6393f45a2bd32dca8f8b53d1` | `35 136` | 🟢 `0` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `LICENSE` | `34 520` | `73f1eb20517c55bf9493b7dd6e480788` | `34 520` | 🟢 `0` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `LICENSE` | `35 121` | `28480d6422e52c304753119903a184b2` | `35 121` | 🟢 `0` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LICENSE` | `8 241` | `f18b2e83f16ffef283395deccff2c341` | `8 241` | 🟢 `0` |
+| [`frappe/education`](https://github.com/frappe/education) | `license.txt` | 🔴 **`19`** | `2884e131cfab2111873ff0eb5ba55997` | `19` | 🟢 `0` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `LICENSE` | `1 068` | `31ab063baf1136e15447ee82dd1f79c1` | `1 068` | 🟢 `0` |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `LICENSE` | `1 074` | `ca551ae2483bf315b98b34cc430617fa` | `1 074` | 🟢 `0` |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `LICENSE` | `1 065` | `7b28829314723a252f8edbb65a50a5d7` | `1 065` | 🟢 `0` |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | `LICENSE` | `1 064` | `5ebdff604182e1633fc88ea842500b97` | `1 064` | 🟢 `0` |
+
+🟢 **`ACTION LA` limb `2` FIRED, limb `1` SILENT.** 🔵 **The `+1` arithmetic correction p178 applied
+by hand was right at every site it touched. The class-`C` ambiguity cost RIGOUR, not bytes —
+and the honest way to say that is that the figures were never wrong, the INSTRUMENT was.**
+
+🆕 🟢 **Moodle's `COPYING.txt` `md5` is filled in for the first time.** p179 published the byte
+count with *"(re-probed, see below)"* in the hash column. 🟢 **`d32239bcb673463ab874e80d47fae504`
+at `35 147` B — the canonical `GPL-3.0` body.**
+
+### 🆕 🟢 The method consequence, which is worth more than the census
+
+🔵 **Two channels available here never pass a payload through a shell variable at all: `curl -o`
+to a file, and `git clone`.** 🟢 **Both make the whole stripping-defect class unreachable by
+construction, because the byte count is taken from a file on disk.** 🔴 **`ACTION LA`'s planned
+remedy was to migrate `10` call sites onto `lib/fetch_payload_to_file.sh`; this pass shows the
+migration is worth doing for hygiene and will change `0` published figures.** 🔵 **`T292`: when a
+repair is proved to change no output, say so and downgrade it — do not carry it as a live defect
+for a fifth pass.**
+
+### 🟢 New HEADs pinned this week
+
+- 🆕 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** — `HEAD 8494a140b2ca`,
+  `25 824` tracked files, `14 809` `.java` files, **`2 624 333` lines of Java**. `Apache-2.0`
+  confirmed on a THIRD channel *(clone)*. 🟢 **The largest tree this KB has read, by a factor of
+  `28` on file count over the next-largest new row.**
+- 🆕 🟢 **[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)** — `HEAD f0142f28e8ed`,
+  `890` files.
+- 🆕 🟢 **[`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server)** —
+  `HEAD e0e347f7f399`, `271` files, npm `0.27.0`.
+- 🆕 🟢 **[`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)** —
+  `HEAD b9e84f5fef3a`, `581` files.
+- 🟢 **[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator)** —
+  `HEAD 9c260890214d`, **unmoved for a SIXTH consecutive pass**. `/usr/bin/python3.13` is present
+  in this environment, as p178 required.
+
+🔴 **`★` figures are again absent and again for the same measured reason:** `api.github.com` and
+`github.com` both `403`, and 🆕 `codeload.github.com` `403` as well. 🟢 **`git clone` over
+smart-HTTP works** — so this file's code numbers are first-hand and its popularity numbers are
+inherited from p178 (`gap 140`).
+
 ## 2026-10-13 — p179 — `COPYING.txt`, a `19`-byte grant, and the harness that runs JS but not Python
 
 🆕 🔴 **The week's most useful repository fact is not about a repository, it is about this KB's

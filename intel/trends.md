@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🆕 🔴 **`T286` — *"the permissive education supply is not short of intelligence, it is short of
+IDENTITY"* — was this file's headline one pass ago. It is RETRACTED, on evidence from this KB's own
+shelf.** 🔵 **The trend is real but it is narrower and more useful than the claim that was made of
+it.**
+
+### 🟢 The axis, repaired: whose identity?
+
+| | own identity | borrowed identity | no identity |
+|---|---|---|---|
+| **adjudicates** | 🟢 `Artemis` *(`528` write endpoints, `passkey` `136` files, `LTI 1.3` grade passback)*; 🆕 🟢 `OpenOLAT` *(`440` entities, `Shibboleth` `147` files, `QTI` `1 201`)* | *(no row)* | *(no row — and the cell is probably incoherent: adjudicating without an identity has no subject)* |
+| **does not adjudicate** | 🆕 🟢 `OpenTutor` *(`34` tables, `users` + `auth_sessions`, `jose` refresh tokens, `141` endpoints)* | 🆕 🟡 `anki-mcp-server` *(`auth` `21` files, every one an `MCP` CLIENT credential)* | 🟡 `Bloom` *(`7` tables, `0` auth)*; 🔴 `Study-Mate` *(`0` DBs, `0` servers)*; 🆕 🔴 `universal-examprep-skill` *(`auth` `0`)* |
+
+🔵 **`T287`: a claim about THE SUPPLY cannot be built from the two rows one pass happened to open.**
+🟢 **`3` of `8` read rows have no identity, `1` borrows, `4` own one. *"Short of identity"* is a
+property of the COMPONENT tier, not of the supply.**
+
+🆕 🟢 **And the sharper trend underneath the retraction — this is the line worth carrying forward:**
+🔴 **★ rank and engagement-readiness are UNCORRELATED in this supply.** `Study-Mate` reached `925`★
+in `26` days with `0` databases, `0` servers and `0` auth; `OpenTutor` sat at `140`★ with `34`
+tables, its own `JWT` auth and dated migrations. 🔵 **`T290`: in permissive edtech, popularity
+measures how easy a thing is to TRY, and engagement-readiness measures whether a cohort can log
+into it. Those are close to opposite properties.**
+
+### 🆕 🔴 The trend this file must apply to itself: the count that looked like a finding
+
+🟢 **`universal-examprep-skill` matches `session` in `57` files. Not one is an auth session — they
+are STUDY sessions.** 🟢 **`anki-mcp-server` matches `auth` in `21` files. Not one is a learner —
+they are `MCP` client credentials (`CLIENT_ID`, `authClientId`).**
+
+🔵 **`T288`: a word-bounded count is a POINTER TO A READ, never a substitute for one.** 🔴 **This
+matters beyond hygiene, because the probe shape that produced those two near-misses is the probe
+shape that produced `T286`.** 🟢 **The cure is the one p179 already named and this pass actually
+applied: open the file and read the import sites.**
+
+### 🟢 The regulatory trend reverses the headline
+
+🆕 🟢 **Regulation (EU) `2026/1744` was adopted on `8` July `2026` and has been in force since
+`27` July.** 🔴 **Annex III high-risk duties — the ones that reach admissions, learning-outcome
+evaluation and exam monitoring — moved from `2` August `2026` to `2` December `2027`.** 🟢 **Article
+`50` transparency duties did NOT move and have applied since `2` August `2026`.**
+
+🔵 **`T295`: *"the AI Act was delayed"* is false as said to an education client.** 🟢 **The duty
+that binds a content-generating tutor today is live; the duty that binds an assessment engine is
+`14` months out.** 🔴 **Any roadmap that treats the deferral as general cover for provenance work
+is wrong on the live obligation.**
+
+🟡 **Unresolved and recorded as such:** whether the adopted text retained the Commission's
+*"conditional on harmonised standards"* framing. 🔴 **Not settleable here — `eur-lex.europa.eu` is
+`403` on `curl` and `ENOTFOUND` on the second channel; `gap 110` now holds on three channels.**
+
+### 🟢 The platform trend: permissive and full-sized are not opposites
+
+🆕 🟢 **`OpenOLAT` is `Apache-2.0`, `2 624 333` lines of Java, `440` `@Entity` classes, `497`
+DAO/Manager classes, its own federated auth and four education standards.** 🔵 **`T293`: this KB
+spent `20` passes treating *permissive* and *full platform* as a trade-off because the three
+largest LMSes it knew were `AGPL`, `AGPL` and `GPL`. The trade-off was a sampling artefact of which
+platforms are famous.**
+
+🟡 **The counter-trend, stated so the recommendation stays honest:** 🟡 **`OpenOLAT` already carries
+`openai` in `33` files and `ollama` in `13`.** 🔵 **Upstream is building its own AI layer. A studio
+that forks rather than contributes will be maintaining a parallel integration against a moving
+target — which is an argument for plugin-shaped work even where the licence permits a fork.**
+
+### 🟢 Adoption has outrun governance everywhere, and each region shows it differently
+
+| region | the gap, measured |
+|---|---|
+| North America | 🟢 **`134` bills in `31` states** in one session — governance arriving as a patchwork, with reversals *(NYC's K-8 moratorium)* alongside mandates *(Ohio)* |
+| EMEA | 🟡 ~`10%` of `450`+ institutions have formal AI guidelines, under the world's most detailed AI statute |
+| APAC | 🟡 Korea and Vietnam bind education explicitly; Japan and India stay light-touch; AU/NZ public opinion favours BANS more than Asian markets do |
+| LATAM | 🟢 **`87%` of `200` institutions use AI; `26%` have a strategy** — the cleanest statement of the gap in this KB |
+| MEA | 🟢 UAE MANDATES a K-12 AI curriculum for ~`1` M pupils — 🔵 **curriculum ahead of regulation, the inverse of the EU** |
+
+🟢 **`T296`: the one product that sells into all five regions is the EVIDENCE LAYER — provenance,
+audit trail, human-in-the-loop record, per-jurisdiction policy configuration — because every region
+is converging on demanding it and none of them is converging on the same model, vendor or
+pedagogy.**
+
+### 🔴 Trends this pass could not test
+
+- 🔴 **`ACTION LB` — `dolos`'s `-i` effect as a function of template-to-submission ratio — NOT
+  ATTEMPTED.** 🔵 Stated plainly rather than deferred silently: the pass spent its execution budget
+  on the Python channel and its read budget on `OpenOLAT`. Carried to p181.
+- 🔴 **No row was BUILT or RUN this pass.** 🟢 Dependencies now install *(`ACTION LC`)*, but
+  executing a subject repository's own suite was refused by the harness's external-code policy.
+  🔵 **`T297`: *"installable"* and *"runnable"* are now separately gated here, by a network limit
+  and a policy limit respectively. A KB that conflates them will mis-predict its own capacity for a
+  third consecutive pass.**
+
 ## Pass 179 — 2026-10-13
 
 🆕 🟢 **p177 introduced the axis *does the system ADJUDICATE?* and p178 put a row on both sides.

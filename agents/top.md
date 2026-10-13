@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 180 — 2026-10-13
+
+🆕 🟢 **`T286` — this KB's newest standing claim, made one pass ago — is FALSIFIED, and the row that
+falsifies it was ALREADY ON THIS SHELF.** `ACTION LD` went to read the three unread `170`★+ rows of
+p178's `ai-tutor` head and found a user on the first one it opened.
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) has a `users` table, an
+`auth_sessions` table, `class User(Base)`, `jose` access **and** refresh tokens, `bcrypt`, and a
+test file named `tests/test_auth_jwt.py`.
+
+🔵 **`T287`: a claim about THE SUPPLY cannot be built from the two rows a single pass happened to
+open. p179 read `2` rows, found no identity in either, and generalised. The counterexample was on
+its own shelf, carried since p164.**
+
+🆕 🟢 **And the axis p179 introduced survives in a REPAIRED form, which is the useful part.** The
+question is not *does the row have a user* — it is **WHOSE IDENTITY DOES IT USE?** Three answers,
+and the middle one is new:
+
+| identity | rows read past their code | what a studio must supply |
+|---|---|---|
+| 🟢 **OWN** | [`OpenTutor`](https://github.com/zijinz456/OpenTutor) *(`34` tables, `141` endpoints)*, [`Artemis`](https://github.com/ls1intum/Artemis) *(p178)*, 🆕 [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(`440` entities)* | 🟢 **nothing. Configure it** |
+| 🆕 🟡 **BORROWED** | [`anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) — `auth` in `21` files, and **every one of them is an `MCP` CLIENT credential** *(`CLIENT_ID`, `authClientId`)*, not a user of its own | 🟡 the host's identity. It inherits whatever the agent runtime has |
+| 🔴 **NONE** | [`Bloom`](https://github.com/Li-Evan/Bloom), [`Study-Mate`](https://github.com/Miaotofu01/Study-Mate), 🆕 [`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🔴 **the whole identity layer, or an `LTI` launch that borrows the institution's** |
+
+### 🆕 🟢 `ACTION LD` — the three rows, read past their licences
+
+🟢 **All three licences were re-read to a FILE on the clone channel this pass** *(see
+[`repos/foundations.md`](../repos/foundations.md) for the `17`-row census that makes this channel
+trustworthy)*. 🔵 **Measurements are word-bounded `git grep -ilw` over TRACKED files only, in a
+`--depth 1` clone — no search-API star counts, which remain unreachable (`gap 140`).**
+
+| row | licence *(payload)* | what it IS, from code | identity verdict |
+|---|---|---|---|
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT`, `1 068` B, `md5 31ab063baf1136e15447ee82dd1f79c1`, `HEAD f0142f28e8ed` | `890` files. 🟢 **`34` `__tablename__` entities** — `users`, `auth_sessions`, `user_preferences`, `integration_credentials`, `courses`, `assignments`, `knowledge_nodes`, `knowledge_edges`, `concept_mastery`, `mastery_snapshots`, `study_plans`, `practice_results`, `intervention_outcomes`, `usage_events` … `141` route decorators. `sqlalchemy` in `225` files, `fastapi` in `89`, `sqlite` in `88`. `alembic/versions/` carries dated migrations from `2026-02-27` to `2026-03-01`. `user_id` appears in `202` files | 🟢 **OWN, and it is not decorative: `from jose import jwt`, `create_access_token` + `create_refresh_token` + `decode_token` in `services/auth/jwt.py`, `bcrypt` in `3` files, and a dedicated `tests/test_auth_jwt.py`** |
+| 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT`, `1 074` B, `md5 ca551ae2483bf315b98b34cc430617fa`, `HEAD e0e347f7f399` | `271` files. npm `@ankimcp/anki-mcp-server@0.27.0`. `express` in `10` files, `sqlite` in `2`. 🔴 **`0` `__tablename__`, `0` `CREATE TABLE`, `0` `class User`** — the single match for an own-user probe was a binary `.apkg` fixture | 🟡 **BORROWED. `auth` `21` / `login` `19` / `oauth` `9` / `session` `23` all resolve to `MCP` client-server credentials — `CLIENT_ID` `5`, `authClientId` `9`, `clientId` `5`. 🔵 It authenticates CLIENTS to itself; it does not know learners** |
+| 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT`, `1 065` B, `md5 7b28829314723a252f8edbb65a50a5d7`, `HEAD b9e84f5fef3a` | `581` files — the largest tree of the three. 🔴 **`auth` `0`, `login` `0`, `oauth` `0`, `passkey` `0`, `saml` `0`; `0` web frameworks beyond `express` `3`; `0` ORM** | 🔴 **NONE. 🆕 And it carries a LEXICAL TRAP: `session` matches `57` files and not one is an auth session — they are STUDY sessions. `T288`: an identity probe that counts `session` without reading it will report auth where there is none** |
+
+🆕 🔴 **`T288` is a correction this KB owes its own method.** The word-bounded probe is cheap and it
+is how `anki-mcp-server` and `examprep` both looked auth-bearing at a glance. 🔵 **A count is a
+pointer to a read, never a substitute for one — and that is exactly how p179 reached `T286`.**
+
+### 🟢 Bloom re-measured independently — p179's numbers REPRODUCE exactly
+
+🟢 **`Li-Evan/Bloom` `HEAD b3918981bb34`, measured again from an independent clone this pass:**
+`auth` `0`, `login` `0`, `jwt` `0`, `oauth` `0`, `password` `0`, `tenant` `0`, `7`
+`__tablename__`, and 🔴 **`0` import sites for `jose`, `bcrypt` or `email_validator` despite all
+three being declared in `pyproject.toml`.** 🔵 **So `T285` — a declared dependency is not an
+implemented capability — is CONFIRMED on a second measurement by a different operator.** 🟢 **What
+was wrong at p179 was never the measurement of `Bloom`. It was the leap from `Bloom` to the
+supply.**
+
+### 🟢 The shelf — `7` rows read past their code, licences payload-verified this pass
+
+| row | licence *(payload, this pass)* | grade | region | identity |
+|---|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`**, `10 982` B, `md5 6ba3198de8e95979d5895c0827d34bc0` | 🟢 **ROUTE — and the first PERMISSIVE PLATFORM route this shelf has had** | EMEA | 🟢 **OWN** *(`AuthenticationProviderSPI`, `LDAP`, `OAuth`, `Shibboleth` in `147` files)* |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT`, `1 091` B, `md5 021aaec73f7b974dc5edf4ef703f941b` | 🟢 ROUTE *(p178)* | EMEA | 🟢 **OWN** *(`passkey` `136` files, `saml2` `54`)* |
+| 🆕 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT`, `1 068` B | 🟢 **PROMOTED to ROUTE** *(was a shelf row never read past its licence)* | APAC | 🟢 **OWN** |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT`, `1 084` B, `md5 00ffc342d555c4129ee54e3286818d50` | 🟢 COMPONENT — **executed and calibrated at p179** | EMEA | n/a *(refuses to adjudicate by design)* |
+| 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT`, `1 069` B | 🟡 APPLIANCE | APAC | 🔴 **NONE** |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT`, `1 064` B | 🔴 COMPONENT *(multi-host adapter, `4` vendor runtimes)* | APAC | 🔴 **NONE** |
+| 🆕 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT`, `1 074` B | 🟡 COMPONENT *(the shelf's only `MCP` server)* | Global | 🟡 **BORROWED** |
+| 🆕 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT`, `1 065` B | 🔴 COMPONENT *(skill pack)* | APAC | 🔴 **NONE** |
+
+🔵 **`8` rows, `8` payload-verified permissive licences, `8` read past their licences — `5` of them
+read for the first time at p179 or p180.** 🟢 **This is the first pass at which every row on the
+agent shelf has had its CODE read, not just its grant.**
+
+🆕 🟡 **The regional shape of that shelf, stated because it is uncomfortable:** 🟢 **`2` EMEA rows
+are institution-held** *(`OpenOLAT` a Swiss-led consortium, `Artemis` at TU München)*, 🟡 **`4`
+APAC rows are individual-held**, `1` is Global, and 🔴 **North America and LATAM hold `0` rows on
+this shelf.** 🔵 **`T289`: the permissive education supply this KB can actually read is EMEA
+institutions and APAC individuals. Four regional prose searches this pass again named `0`
+region-originated repositories (`gap 141`) — the placement above comes from reading trees, not
+from search.**
+
 ## Pass 179 — 2026-10-13
 
 🆕 🟢 **`ACTION KX` is DISCHARGED and it splits: the two largest new rows of p178's wider tag were
