@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🆕 🟢 **Two rows carried as *"unprobed"* for five passes are settled, and one of them was never
+probeable.** 🟢 **A third row enters as the first foundational component whose holder declares a
+North American affiliation.**
+
+### 🟡 `formalms/formalms` — `GPL-2.0`, and a real LMS domain model
+
+🟢 **Settled by payload, not by roundup.** `HEAD 446a77a`, `5 321` tracked files. The grant is at
+**`html/license.txt`** — **`18 346` B**, `md5 65dd37ccb3e888dc57e47d925b80b38a`, **`GNU GENERAL
+PUBLIC LICENSE Version 2, June 1991`**, with **`0`** occurrences of *"Lesser"* anywhere in the
+file. 🔵 **That zero matters: `P960` is the bifurcation where a GPL-2.0 preamble's reference to the
+LGPL makes a naive classifier print `LGPL-3.0`, and it has already cost this KB two rows. It is
+excluded here by measurement.** Localised installer copies exist in `8` languages
+*(`license_english.txt` at `15 146` B, plus Bosnian, Croatian, French, German, Italian, Portuguese,
+Spanish)*.
+
+🔴 **Every PHP source carries the same header:** *"FORMA - The E-Learning Suite … License
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt … from docebo 4.0.5 CE 2008-2012"*.
+🔵 **The lineage is Docebo's `GPL-2.0` community edition, which is why a `2026` roundup printing
+`Apache-2.0` is not a near-miss — it is the wrong family.** 🔴 **Third correction of this class,
+after `frappe/lms` *(`AGPL-3.0`, printed `MIT`)* and `oat-sa/tao-core`.**
+
+🟡 **And it is entity-RICH, which is what makes the copyleft expensive rather than irrelevant:
+`405` `CREATE TABLE` statements**, including `learning_course`, `learning_coursepath`,
+`learning_coursepath_courses`, `learning_course_editions`, `learning_course_date`,
+`learning_certificate_course`, `learning_competence_course`, `learning_assessment_rule`,
+`learning_assessment_user`, `learning_catalogue`, `learning_coursereport_score` — plus a
+`conference_*` family *(BigBlueButton, Teleskill, DimDim)* and a `core_customfield_*` extension
+system. 🟢 **Price it as a copyleft DEPLOYMENT with AI in a separate permissive service — the
+Pattern `26` shape — never as a component to absorb.**
+
+🆕 🔴 **`Gap 370` reproduced on this row.** The root-anchored licence probe finds **`0`** files; the
+per-path probe finds **`19`**. 🔵 **A row with a complete, canonical `GPL-2.0` text reads
+*"UNLICENSED"* to the instrument this KB has carried unconnected since p183.** 🟢 **Every licence
+read in p184 used the per-path probe.**
+
+### 🔴 `apereo/opencast` — the row was never probeable
+
+🔴 **`git ls-remote --symref https://github.com/apereo/opencast HEAD` returns `exit 128`**, with
+the same message as `apereo/this-slug-does-not-exist-xyz` run in the same second as a control.
+🟢 **The project is real and lives at [`opencast/opencast`](https://github.com/opencast/opencast)** —
+`exit 0`, `HEAD e7655449f3a8172fbba37d79ff5a85505545c8a9`, default branch **`develop`**.
+🔵 **This KB has carried the dead slug as *"UNPROBED"* for five passes while holding, since p93,
+the one-second oracle that discriminates.** 🟢 **`T316`: when a row survives three passes as
+unprobed, test its EXISTENCE before scheduling its reading.** 🟢 `ACTION ME` probes the real slug at
+p185 — the lecture-capture layer this shelf has `0` rows for.
+
+### 🟢 `shmercer/writeAlizer` — `MIT`, and the honest restatement of `Gap 372`
+
+🟢 **[`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer)** — **`MIT`**
+*(`DESCRIPTION`: *"License: MIT + file LICENSE"*, with `LICENSE.md` at `1 076` B)*, **v`1.7.4`
+dated `2026-09-16`**, `100` tracked files, **`37` test files**, and `4` GitHub Actions workflows
+*(`R-CMD-check`, `rhub`, `test-coverage`, `pkgdown`)*. 🔵 **A CRAN-shaped, actively maintained R
+package — not a research dump.** Imports are ordinary CRAN *(`caret`, `cli`, `digest`, `dplyr`,
+`glue`, `rlang`, `tidyselect`)*; model fits load `cubist`, `earth`, `gbm`, `glmnet`, `kernlab` on
+demand.
+
+🔴 **`Gap 372` said no permissive production-grade essay-scoring library exists, and that all
+permissive supply was *"a `2`★ research repo"*. That is WRONG and is corrected here.** 🟢 **What is
+right is the practical conclusion, for a different reason:**
+
+| layer | what `writeAlizer` provides | what it needs from elsewhere |
+|---|---|---|
+| 🟢 scoring | `predict_quality()` over **`18` model variants** *(`rb_mod1`…`rb_mod3per_v2`, `coh_mod1`…`coh_mod3per`, `gamet_cws1`)*, peer-reviewed with DOIs | — |
+| 🔴 features | — | 🔴 **`Coh-Metrix`** *(registration-gated, `soletlab.asu.edu`)*, **`GAMET`** *(free download)* or 🟢 **`ReaderBench`** *(open source, `readerbench/readerbench-java`)* |
+| 🔴 models | `wa_download()`, an artifact registry, a cache | 🔴 **`0` model objects committed — `18` fetched at RUNTIME** under OSF-published terms |
+
+🔵 **So the blocker on automated writing assessment was never the licence. It is the upstream
+feature-extraction chain, and exactly one of the three options is open source.** 🟢 **`ACTION MF`
+tests whether the `rb_mod*` variants run from `ReaderBench` output alone — if they do, a fully
+permissive path exists for the activity the EU `AI Act` names high-risk most explicitly.**
+
+🆕 🔴 **And this row opens `Gap 414`: a model or corpus fetched at runtime is invisible to every
+instrument on this shelf.** 🔵 **`ACTION LZ` swept `17` trees for committed indexes and found one.
+It could not have found this one, because there is nothing to find in the tree — the second grant
+arrives over the network.**
+
+### 🟢 `openeducat_erp` — the entity count, corrected
+
+🔴 **p183 published *"`141` Odoo models across `13` modules"*. At the same `HEAD 46a5d7d`, that
+does not reproduce.** 🟢 **Measured with a line-start-anchored probe:**
+
+| measurement | value |
+|---|---|
+| 🟢 distinct `op.*` business models | **`59`** |
+| 🟡 wizard and report models | `29` |
+| 🟢 total `_name` declarations | **`88`** |
+| 🟡 model classes *(`models.Model` / `AbstractModel` / `TransientModel`)* | `112` |
+| 🔴 `_inherit` in-place extensions | `55` |
+| 🟢 module manifests | **`14`** *(not `13`)* |
+
+🔵 **`88 + 55 = 143`, which is how a count reaches ~`141`: by adding in-place extensions to
+declarations.** 🔴 **An `_inherit` extension is not a new entity.** 🟢 **The number a client should
+see is `59`** — `op.course`, `op.admission`, `op.exam`, `op.marksheet.register`,
+`op.attendance.sheet`, `op.academic.year`, `op.fees.terms`, `op.library.card`, `op.program.level`,
+`op.result.template`, `op.room.distribution`, `op.subject.registration` among them.
+
+🆕 🔴 **`P1048`, a generic probe defect found and repaired mid-pass:** an unanchored `_name *=`
+pattern also matches **`_rec_name`** *(`17` occurrences here)*, whose values are FIELD names
+*(`course_id`, `student_id`, `marks`, `application_number`)*. 🔵 **The defect manufactures entities
+that are columns — a first count said `102` distinct names where the anchored count says `88`.**
+
 ## Pass 183 — 2026-10-13
 
 🆕 🟢 **`T309` was re-tested on a channel p182 never used, and it HOLDS — which matters, because a

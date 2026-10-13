@@ -1,0 +1,11 @@
+slug	published_metadata_summary	pred_licence	read_licence	pred_grade	read_grade	pred_entities	read_entities	overturned	axis
+AmirhosseinHonardoust/AI-Personal-Study-Tracker	Streamlit study-session logger, Random Forest (Python, 31*)	MIT	MIT (1061 B)	COMPONENT	COMPONENT	none	study_sessions + metadata (SQLite)	YES	entities
+AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	early-warning engine, attendance/engagement (Python, 18*)	MIT	MIT (1061 B)	COMPONENT	COMPONENT	none	none	NO	-
+ZQR1101/xueyoujing-companion	adaptive learning companion, diagnosis+planning, RAG (Python, 2*)	MIT	NO GRANT (0 licence files, 0 markers, 33 md files)	APPLIANCE	blocked: unlicensed	learner entities present	22 tables incl students/concepts/mastery_states/rag_traces	YES	licence
+tianshuo/trainingllm	LLM tutor used internally to train interns (TypeScript, 2*)	MIT	MIT (README prose, bare word, no LICENSE file)	APPLIANCE	COMPONENT	course + user entities, identity present	0 tables, 0 identity	YES	entities+identity
+cmkumar87/NUS-MOOC-Transacts-Corpus	annotated MOOC forum corpus (Perl, 10*)	not a software licence / absent	MIT (1083 B) on a 250-CSV data repo	NONE (data)	NONE (data)	none	none	YES	licence
+gautamyadavs/AVLTree	ITS for AVL Tree using CTAT (CSS, 8*)	absent/unlicensed	NO GRANT (confirmed, 0 markers)	NONE	NONE	none	none	NO	-
+siyuanzhao/automated-essay-grading	paper code, memory-augmented grading model (Python, 121*)	MIT	MIT (1068 B)	COMPONENT	COMPONENT	none	none	NO	-
+Gaurav-Pande/AES_DL	Automated Essay Scoring using BERT (Jupyter, 45*)	MIT	NO GRANT (0 licence files, 0 markers)	COMPONENT	blocked: unlicensed	none	none	YES	licence
+shmercer/writeAlizer	R package for automated writing quality scores (R, 3*)	GPL (R convention)	MIT (DESCRIPTION: MIT + file LICENSE), v1.7.4 2026-09-16	COMPONENT	COMPONENT (37 tests, 4 CI workflows)	none	none (18 models DOWNLOADED at runtime)	YES	licence
+travismoore3/aes_system	AES system for ESL essays in Python (6*)	absent/unlicensed	MIT (1069 B)	COMPONENT	COMPONENT	none	none	YES	licence

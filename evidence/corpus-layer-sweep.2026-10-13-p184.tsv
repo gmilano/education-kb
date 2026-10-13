@@ -1,0 +1,18 @@
+slug	tracked_files	name_screen_hits	resolution	is_corpus
+Priyamakeshwari/TeachGPT	18	6	db/chroma.sqlite3 + 4 HNSW .bin + documents/Machine - Learning - Tom Mitchell.pdf	YES (third-party textbook + prebuilt index)
+OpenOLAT/OpenOLAT	25824	1	Thumbs.db (Windows thumbnail cache)	NO (false positive)
+ls1intum/Artemis	13847	9	2 doc PDFs + 6 Java sources in packages named embedding/	NO (false positive)
+zijinz456/OpenTutor	890	6	apps/api/services/embedding/*.py - embedding PROVIDER source	NO (false positive)
+ArnaudGuiovanna/tutor-mcp	694	0	-	NO
+Selleo/mentingo	4753	0	16 committed docs, all e2e fixtures (presentation-e2e.pptx)	NO
+thm-mni-ii/feedbacksystem	1452	0	-	NO
+Open-TutorAi/open-tutor-ai-CE	4702	0	-	NO
+zhangl1001/civil-ai	795	0	-	NO
+dodona-edu/dolos	513	0	10 docs, own documentation	NO
+Li-Evan/Bloom	118	0	learning-log.jsonl (own log)	NO
+ankimcp/anki-mcp-server	271	0	-	NO
+fborrasumh/tutoria	4	0	-	NO
+Miaotofu01/Study-Mate	348	0	-	NO
+ZeKaiNie/universal-examprep-skill	581	0	27 jsonl, own benchmark fixtures (good_session/bad_quiz_invention)	NO
+ai-shifu/ai-shifu	3249	0	-	NO
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	905	0	-	NO

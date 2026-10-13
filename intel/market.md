@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🆕 🟢 **EMEA stops being a regulation-only region after five passes.** 🔴 **And every figure below
+is SEARCH-INDEX SECONDARY by this environment's construction, not by choice** — `T309` was
+re-confirmed twice this pass on `ec.europa.eu` and `assets.publishing.service.gov.uk`, both
+`ENOTFOUND` on the fetch channel while GitHub-family hosts answered throughout. 🔵 **The figures
+are attributed to named publications so a client's own analyst can pull the primary.**
+
+### 🟢 EMEA adoption — the figures, with their denominators
+
+| figure | value | source, as named by the channel |
+|---|---|---|
+| 🟢 EU individuals `16`–`74` using generative AI | **`32.7`%** *(ref. year `2025`)* | **Eurostat** |
+| 🟢 …of those users, for FORMAL EDUCATION | **`9.4`%** | **Eurostat** |
+| 🟢 teachers in England using GenAI for school activities | **`44`%** | 🟢 **UK DfE, *Technology in Schools survey 2024 to 2025*, Nov `2025`** |
+| 🟢 …lesson planning / live lessons / marking | **`35`% / `7`% / `5`%** | same |
+| 🟢 school leaders already offering GenAI training | **`21`%** primary, **`25`%** secondary | same |
+| 🟢 EU teachers with AI-in-teaching CPD | **`29.7`%** | **European Commission, *Friend or foe?*** |
+| 🟢 EU education systems with an AI strategy, guidance or policy framework | **nearly two-thirds** | **Eurydice, *Digital education at school in Europe 2026*** |
+
+🔵 **The engagement reading, and it is the mirror image of LATAM's:** EMEA has **policy supply**
+*(two-thirds of systems have a framework)* against **capability scarcity** *(`29.7`% of teachers
+trained, `21`–`25`% of schools offering training)*. 🟢 **LATAM's `87`/`26` gap sells governance to
+institutions that already adopted. EMEA's gap sells CAPABILITY — training, enablement and
+classroom practice — to systems that already wrote the policy.** 🔵 **Same two-sided gap,
+opposite sides.**
+
+### 🔴 Two provenance traps, recorded before use
+
+- 🔴 **The *"`82`% primary / `78`% secondary"* DfE figure is NOT USED.** It circulates through
+  secondary blogs attributed to the DfE and **does not match the DfE publication**, which reports
+  `44`%. 🔵 **The gap is question wording — *ever used in your role* against *used at least
+  sometimes for school activities*.** 🟢 **Rule: quote `44`% with its wording, or quote nothing.**
+- 🔴 **The Eurostat `16`–`24` education figure appears as both *"`62`%"* and *"four in ten"***
+  depending on the denominator *(share of genAI users against share of all young people)*.
+  🔵 **Same house, same reference year, two numbers. Name the denominator beside the figure or
+  leave it out.**
+
+### 🔴 What EMEA still does not have
+
+- 🔴 **`0` institution-level adoption rate from the European University Association.** Its January
+  `2026` report is a task-and-finish group output across ethics, strategies, training, regulation
+  and sustainability — **not a survey, and it reports no percentage.** 🔵 **Recorded as an informed
+  absence so no later pass re-probes it expecting numbers.**
+- 🔴 **`0` national statistical office figure for Germany, the Netherlands or the Nordics.** The
+  channel returned aggregator sites and US/UK data only. 🔵 **The in-language probe
+  *(`Lehrkräfte KI Umfrage`, `leraren AI onderzoek`)* is untried and is the next cheap step — the
+  instrument that worked for LATAM supply at p182 and MEA supply at p183.**
+
+### 🟡 Regional balance after this pass
+
+| region | regulation evidence | adoption evidence | supply evidence |
+|---|---|---|---|
+| 🟢 EMEA | 🟢 **deep** *(AI Act, Art. `50` incl. `C(2026) 5054 final`, Reg. (EU) `2026/1744`, Commission ethics guidelines `5` Mar `2026`)* | 🆕 🟢 **present** *(Eurostat, DfE, Commission, Eurydice)* | 🟢 **strongest** *(`6` of `7` ROUTE rows)* |
+| 🟡 North America | 🟢 present *(EO `14365`, EO `14277`, CA SB `1288`, SREB, H.R. `8747` **not enacted**)* | 🟡 secondary *(Gallup, NPR/Ipsos ~`50`–`80`% of teachers)* | 🆕 🟡 **`1` row placed** *(`writeAlizer`, COMPONENT)*, 🔴 `0` ROUTE |
+| 🔴 APAC | 🟡 partial *(India AICTE secondary + undated; UGC no instrument)* | 🔴 **`0`** *(the one figure measures AI FAMILIARITY: China `98`%, Singapore `96`%, Japan `94`%)* | 🟢 **`3` rows incl. a new ROUTE** *(`ai-shifu`)* |
+| 🟡 LATAM | 🟡 **`716`** instruments across `23` countries *(U. de los Andes)*, 🔴 `0` education-specific | 🟢 **best in this KB** *(UNESCO IESALC, `9` Sep `2026`: `200` institutions, `19` countries, `87`% use AI, `26`% have a strategy, 🔴 **`9`% evaluate it**)* | 🔴 **`0` rows** *(ABSENT BY MEASUREMENT, Spanish + Portuguese probes)* |
+| 🔴 MEA | 🟢 UAE curriculum mandatory K–`12` *(cabinet-approved, May `2025`)* | 🔴 `0` | 🔴 **`0` permissive MEA-origin** *(ABSENT BY MEASUREMENT, Arabic + French probes)* |
+
+🆕 🟢 **One LATAM line item gets cheaper this pass.** `ai-shifu` ships an **`es-ES`** catalogue —
+the first Spanish locale on this shelf. 🔵 **`es-ES` is not `es-419`, so a LATAM engagement pays
+for DIALECT ADAPTATION rather than first-language localisation.** 🔴 **`pt-BR` remains absent from
+every row.**
+
+🔴 **Market size is unchanged and still must not be quoted as a point estimate** *(`T306`)*: `2026`
+sits at **`$9.58` B–`$11.4` B** across four houses, `2025` at `$6.4` B–`$8.3` B, and
+MarketsandMarkets' own regional series sums to **≈`$2.07` B** for `2024` — a SCOPE disagreement, not
+a date one. 🟢 **Standing rule: never put a market size in an education deck without naming the
+scope beside it.**
+
 ## Pass 183 — 2026-10-13
 
 🆕 🟢 **`ACTION LW` is answered, and the answer is better news for this KB than for the channel

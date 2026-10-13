@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: `0` education repositories, for a sixth consecutive pass.** 🟢 **And this
+pass stopped treating that as news and measured the alternative channel instead.**
+
+🟢 **Six topic pages read, `62` candidates taken, `13` absent from this KB's census:**
+
+| topic page | listed | taken | already in census | new |
+|---|---|---|---|---|
+| `topics/autograding` | `20` of `94` | `12` | 🔴 **`12`** | **`0`** |
+| `topics/ai-tutor` | `20` of `692` | `13` | `11` | `2` |
+| `topics/intelligent-tutoring-system` | `20` of `39` | `13` | `8` | `5` |
+| `topics/adaptive-learning` | `20` of `579` | `8` | `7` | `1` |
+| `topics/learning-analytics` | `20` of `373` | `8` | `5` | 🟢 **`3`** |
+| `topics/automated-essay-scoring` | `20` of `37` | `8` | `6` | `2` |
+| **total** | — | **`62`** | **`49`** | **`13`** |
+
+🟢 **`79`% census coverage of the discoverable topic supply.** 🔵 **This is the number that justifies
+p93's *"spend the budget elsewhere"* — and it also says where the remaining budget goes:
+`learning-analytics` is the only page that returned more than two new rows, and it is the page
+whose rows carry STANDARDS** *(`openfun/ralph` is a Learning Record Store;
+`Apereo-Learning-Analytics-Initiative/OpenLRW` is a learning record warehouse;
+`kltn-moolde/moodle-adaptive-learning-plugin` integrates over `LTI 1.3`)*. 🔴 **All three were
+already in the census and none has been READ — which is `T313` again, one layer up: the census
+records the existence, not the schema.**
+
+🟢 **Foundational rows settled this pass, both after five passes of being carried as *"unprobed"*:**
+
+- 🟡 **[`formalms/formalms`](https://github.com/formalms/formalms) — `GPL-2.0`, entity-rich.**
+  `HEAD 446a77a`, `5 321` files, **`405` `CREATE TABLE`** including `learning_course`,
+  `learning_coursepath`, `learning_course_editions`, `learning_certificate_course`,
+  `learning_competence_course`, `learning_assessment_rule`, `learning_catalogue`. Payload read at
+  `html/license.txt` *(`18 346` B, `md5 65dd37cc…`, **`0`** occurrences of *"Lesser"*)*, with
+  installer copies in `8` languages. 🔴 **Not the `Apache-2.0` a `2026` roundup printed.**
+- 🔴 **`apereo/opencast` DOES NOT EXIST.** `git ls-remote --symref` returns **`exit 128`**, the same
+  signature as a slug invented as a control in the same second. 🟢 **The project is
+  [`opencast/opencast`](https://github.com/opencast/opencast)** — `HEAD e7655449`, default branch
+  `develop`, never read by this KB. 🔵 **Five passes of *"unprobed"* for a row that was never
+  reachable, against a one-second existence test documented here since p93** *(`T316`)*.
+
+🆕 🔴 **And `formalms` reproduced `Gap 370` on a live row:** a root-anchored licence probe finds `0`
+licence files in that tree; the per-path probe finds `19`. 🔵 **The row reads *"UNLICENSED"* to the
+unconnected instrument — the escalator's blind spot now has a victim, not just a test case.**
+
 ## Pass 183 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

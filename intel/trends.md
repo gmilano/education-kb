@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🆕 🔴 **The trend this pass can prove, and it is about the supply rather than the technology: `3` of
+`10` open-source education repositories screened at random from GitHub's own topic pages carry NO
+LICENCE AT ALL.** 🔵 **Not restrictive — absent. All rights reserved by default, which makes them
+unusable for a client engagement regardless of quality.** 🟢 **And the quality is not the problem:
+the richest learner model in the sample is one of the three.**
+
+🆕 🔴 **Second measurable trend: published metadata has stopped carrying licence information.**
+`5` of `10` licence predictions made from topic-page descriptions, star counts and languages were
+wrong — **in both directions** *(`T315`)*. 🔵 **This is a change in what a star count is worth. A
+`2026` education repository's grant is not inferable from anything GitHub renders, and the error is
+noise rather than bias, so no heuristic recovers it.**
+
+🆕 🟢 **Third, and the most useful for planning: the discoverable supply is substantially
+CATALOGUED, at least for this KB.** `49` of `62` candidates across `6` topic pages were already in
+the census — **`79`%**. 🔵 **The marginal value of another discovery sweep is now measurable and
+low; the marginal value of READING a catalogued row is high, because the census records existence
+and licence, not schema** *(`T313`)*. 🟢 **`learning-analytics` is the exception worth mining: it
+returned the most new rows, and its rows are the ones carrying STANDARDS — a Learning Record Store
+*(`openfun/ralph`)*, a learning record warehouse *(`OpenLRW`)*, an `LTI 1.3` integration
+*(`moodle-adaptive-learning-plugin`)*. All three catalogued, none read.**
+
+🟢 **Fourth: the education vocabulary of the supply is diverging from the education vocabulary of
+the domain.** 🔵 **`ai-shifu` runs a versioned course-authoring model, per-learner progress and an
+entitlement table, and calls them `shifu`, `outline_item`, `progress_record` and `course_auth` —
+`0` of its `71` tables is named `course`, `lesson` or `enrollment`.** 🔴 **Meanwhile rows named for
+education model chats, jobs and CRMs** *(`T310`)*. 🟢 **`T314`: the naming layer is uninformative in
+both directions, so the shortlist must be built from read entity lists, not from greps.**
+
+🆕 🔴 **Fifth: the commerce layer is moving INTO the pedagogy layer.** `29` of `ai-shifu`'s `71`
+tables are billing, orders, promotions, credit wallets and referral campaigns — and **state `604`
+of its learner-progress enum is `refund`.** 🔵 **An open-source tutoring platform built for direct
+consumer sales encodes its business model in the learning state machine.** 🟢 **For a B2B or public
+sector engagement that is a cost to find in week `1`, not week `6`.**
+
+🟢 **Sixth, regulation into capability:** EMEA's documented position is now **two-thirds of
+education systems with an AI policy framework against `29.7`% of teachers trained** and
+**`21`–`25`% of schools offering training**. 🔵 **The regulatory wave of `2024`–`2026` has produced
+policy faster than practice, which is a training-and-enablement market rather than a software
+market.** 🔴 **The mirror in LATAM: `87`% of institutions using AI, `26`% with a strategy, `9`%
+evaluating it.** 🟢 **Both are governance-and-capability engagements, entered from opposite ends.**
+
+🟡 **Seventh: automated writing assessment is permissively licensed and still not deliverable —
+and the blocker is not the licence.** 🟢 `writeAlizer` *(`MIT`, v`1.7.4`, `2026-09-16`)* scores
+writing quality from feature files. 🔴 **It needs `Coh-Metrix` *(registration-gated)*, `GAMET`
+*(free download)* or `ReaderBench` *(open source)* upstream, and fetches its `18` models at
+runtime.** 🔵 **The open-source essay-scoring gap is a FEATURE-EXTRACTION gap. Anyone sizing the
+AI Act's most explicitly high-risk education activity should price that chain, not the scorer.**
+
+🔴 **Eighth, unchanged and worth repeating because it is a trend by persistence: GitHub Trending
+has shown `0` education repositories for six consecutive passes.** 🔵 **Trending measures velocity;
+this industry's useful supply is slow, small and tagged — `writeAlizer` is `3`★ with `37` tests and
+`4` CI workflows.**
+
 ## Pass 183 — 2026-10-13
 
 🆕 🔵 **Eight trends. Six are new this pass, one is carried and labelled as such, and the first is

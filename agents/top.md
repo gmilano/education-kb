@@ -4,6 +4,142 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🟢 **`ACTION LR` ran at full size with the census pre-check p183 bought the hard way, and it fires
+LIMB `2`: `7` of `10` blind verdicts overturned by reading.** 🆕 🔴 **`5` of the `7` were overturned
+on the LICENCE, and the error is SYMMETRIC — `2` rows predicted permissive have no grant at all,
+`3` predicted restrictive or absent are plain `MIT`.** 🔵 **`T315`: published metadata carries no
+licence signal at all. A symmetric error has no safety margin to hide behind — it can only be
+read.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LR`** — the recipe, blind on `10` census-absent rows | 🟢 **DISCHARGED, LIMB `2` FIRED. `7`/`10` overturned. Licence axis `5`/`10`, entity axis `2`/`10`** |
+| 🟡 **`ACTION LX`** — schema of two settled-grant rows never entity-counted | 🟡 **SPLITS, one row per limb. 🆕 `T314`: the entity-name probe fails in BOTH directions** |
+
+### 🟢 `ACTION LR` — the `10`-row screening, blind verdict against read
+
+🔵 **Step `0` first, as re-registered:** every slug below was confirmed ABSENT from this KB's
+census before a verdict was written, and the predictions were pinned
+*(`md5 eaf7abba9d937b9fb289a72f96162096`, `2026-10-13T22:57:28Z`)* **before the first clone.**
+🟢 Full evidence: [`evidence/lr-screening-n10.2026-10-13-p184.tsv`](../evidence/lr-screening-n10.2026-10-13-p184.tsv).
+
+| row | blind verdict, from published metadata | what reading found | overturned |
+|---|---|---|---|
+| 🔴 [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | `MIT`, APPLIANCE, learner entities present | 🔴 **NO GRANT** *(`0` licence files, `0` markers, `33` `.md` files, `0` uses of the word)*. 🟢 **`22` tables and the best learner model in this sample** | 🔴 **YES — licence** |
+| 🔴 [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) | `MIT`, APPLIANCE, course + user entities, identity present | 🟢 `MIT` — but as the **bare word in a `README` heading**. 🔴 **`0` tables, `0` identity, `80` files** | 🔴 **YES — entities + identity** |
+| 🔴 [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | `GPL` *(R package convention)*, COMPONENT | 🟢 **`MIT`** *(`DESCRIPTION`: *"MIT + file LICENSE"*)*, v`1.7.4` **`2026-09-16`**, `37` tests, `4` CI workflows | 🔴 **YES — licence, favourably** |
+| 🔴 [`cmkumar87/NUS-MOOC-Transacts-Corpus`](https://github.com/cmkumar87/NUS-MOOC-Transacts-Corpus) | not a software licence / absent | 🟢 **`MIT`** *(`1 083` B)* — **on a repository that is `250` CSVs of annotated forum data** | 🔴 **YES — licence** |
+| 🔴 [`Gaurav-Pande/AES_DL`](https://github.com/Gaurav-Pande/AES_DL) | `MIT`, COMPONENT | 🔴 **NO GRANT.** 🟡 Ships `data/training_set_rel3.tsv` — a third-party essay dataset | 🔴 **YES — licence** |
+| 🔴 [`travismoore3/aes_system`](https://github.com/travismoore3/aes_system) | absent/unlicensed, COMPONENT | 🟢 **`MIT`** *(`1 069` B)*. `5` files | 🔴 **YES — licence** |
+| 🔴 [`AmirhosseinHonardoust/AI-Personal-Study-Tracker`](https://github.com/AmirhosseinHonardoust/AI-Personal-Study-Tracker) | `MIT`, COMPONENT, `0` entities | 🟢 `MIT`, COMPONENT — 🔴 but `2` real tables: `study_sessions`, `metadata` | 🔴 **YES — entities** |
+| 🟢 [`AmirhosseinHonardoust/Academic-Instability-Early-Warning-System`](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | `MIT`, COMPONENT, `0` entities, `0` identity | 🟢 Exactly that. `11` files, CSV in / metrics out | 🟢 **NO** |
+| 🟢 [`gautamyadavs/AVLTree`](https://github.com/gautamyadavs/AVLTree) | unlicensed, NONE, `0` entities | 🟢 Exactly that — a CTAT-authored tutor artefact | 🟢 **NO** |
+| 🟢 [`siyuanzhao/automated-essay-grading`](https://github.com/siyuanzhao/automated-essay-grading) | `MIT`, COMPONENT, `0` entities | 🟢 Exactly that. `121`★ of paper code, `12` files | 🟢 **NO** |
+
+🆕 🔴 **The licence axis, stated as a studio must hear it: `5` wrong out of `10`, in both
+directions.** 🔵 **Predicting permissive and finding nothing is a project that cannot ship.
+Predicting copyleft and finding `MIT` is a row wrongly discarded. Both happened this pass, in the
+same sample, and nothing in a topic page, a star count or a description separates them.**
+
+🆕 🔴 **`3` of `10` rows carry NO GRANT, and the richest schema in the sample is one of them.**
+`xueyoujing-companion` declares `students`, `concepts`, `mastery_states`, `mastery_snapshots`,
+`diagnosis_reports`, `evidences`, `exercises`, `questions`, `attempts`, `assessments`, `goals`,
+`plans`, `path_decisions`, `decisions`, `learning_reflections`, `rag_traces`, `memory_facts`,
+`sessions`, `tasks`, `events`, `llm_usage`, `idempotency_records`. 🟢 **That is a mastery model WITH
+the decision-audit layer Pattern `24` has to build by hand — at `2`★.**
+🔵 **`T290` *(rank by entity declarations, never by stars)* has never been confirmed this hard: the
+`41.3`k★ row at the top of the same tag has no `users` table.** 🟢 **`ACTION MC` is pre-registered
+to ask the holder for a grant, because that is one issue and the alternative is building this
+schema from scratch.**
+
+### 🟡 `ACTION LX` — `ai-shifu` is a real education platform its own vocabulary hides
+
+🟢 **[`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu)** — `Apache-2.0` *(`LICENSE.txt`,
+`11 342` B; *"Grant of Copyright License"*, *"Grant of Patent License"*, *"Redistribution"*,
+*"trademark"* and *"APPENDIX"* all present, so **not** the `P971` notice-for-licence trap),
+`HEAD ca75a29`, `3 249` files, **`71` distinct `__tablename__` declarations.**
+
+🔴 **`0` of those `71` tables is named `course`, `lesson`, `enrollment`, `assessment`, `quiz`,
+`grade`, `student`, `classroom`, `cohort` or `teacher`.** 🟢 **And it models all of it anyway:**
+
+| concern | tables | verdict |
+|---|---|---|
+| 🟢 **authoring** | `shifu_draft_shifus`, `shifu_draft_outline_items`, `shifu_published_shifus`, `shifu_published_outline_items`, `shifu_log_draft_structs`, `shifu_log_published_structs` | 🟢 **a versioned course-structure model** — draft/published split, business identifiers, deadlock-aware composite indexes |
+| 🟢 **learner progress** | `learn_progress_records` | 🟢 per `user_bid` × `shifu_bid` × `outline_item_bid`, **`8` states**, block position index |
+| 🟢 **entitlement** | `ai_course_auth` | 🟢 `course_id` × `user_id` × `auth_type` × `status` — **enrolment, named `auth`** |
+| 🟢 **generated content** | `learn_generated_blocks`, `learn_generated_elements`, `learn_generated_audios`, `learn_lesson_feedbacks` | 🟢 per-learner generated material, persisted |
+| 🟢 **identity** | `user_users` *(+ `user_auth_credentials`, `user_token`, `user_onboarding_states`)* | 🟢 **OWN.** 🔴 **`0` `tenant_id`, `0` `organization_id`, `0` `institution` — single-tenant** |
+| 🔴 **commerce** | `bill_*` *(`15`)*, `order_*` *(`6`)*, `promo_*` *(`4`)*, `credit_*` *(`4`)*, `referral_*` *(`6`)* | 🔴 **`29` of `71` tables.** Stripe, WeChat Pay, Alipay, Pingxx, coupons, wallets, reward rules |
+
+🆕 🔴 **The fact that decides whether a studio can lift the progress model: state `604` of
+`learn_progress_records.status` is `refund`.** 🔵 *(`learn/models.py:62`, and the same comment in
+`185e37df3252_initial_migration.py`.)* **The billing vocabulary is inside the pedagogy state
+machine — `601` not started, `602` in progress, `603` completed, `604` refund, `605` locked, `606`
+unavailable, `607` branch, `608` reset.** 🟢 `ACTION MG` is pre-registered to measure how deep that
+coupling goes.
+
+🆕 🟢 **And the locale finding, which corrects a gap statement this KB has repeated for three
+passes:** `ai-shifu` ships **`ar-SA`, `de-DE`, `en-US`, `es-ES`, `fr-FR`, `th-TH`, `ur-PK`,
+`zh-CN`**. 🟢 **The first `es` catalogue on this shelf.** 🔵 **`es-ES`, so a LATAM engagement pays
+for dialect adaptation rather than first-language localisation — and `pt-BR` is still absent
+everywhere.**
+
+🔴 **The other row fires limb `2`.**
+[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator)
+*(`MIT`, `HEAD 9c26089`, `905` files)* declares `15` tables and every one belongs to a build
+pipeline: `jobs`, `job_attempts`, `job_dependencies`, `job_events`, `artifacts`, `revisions`,
+`revision_artifacts`, `revision_navigation`, `dependency_nodes`, `dependency_edges`,
+`generation_controls`, `provider_acceptance_checkpoints`, `task_cache`, `usage_records`,
+`project_meta`. 🔴 **`0` identity store, `0` education entity.** 🔵 **A render DAG that emits
+videos — real engineering, and not a tutoring system.**
+
+🆕 🔵 **`T314`, the thesis `ACTION LX` actually bought: the entity-NAME probe fails in both
+directions.** 🔴 `T310` named the false positive *(education in the names, chats in the schema)*.
+🆕 🔴 **This pass names the false negative** *(a real course/progress/entitlement model that a
+`course|lesson|enrollment` grep scores at `0`)*. 🟢 **Only the read entity LIST decides. Pattern
+`25` step `3` is amended, and the census column is the list — never the grep.**
+
+### 🟢 The shelf after p184 — `16` rows, every one read past its code
+
+| row | licence | grade | identity | region |
+|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` | 🟢 **ROUTE** | 🟢 OWN *(federated)* | EMEA |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | EMEA |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` | 🟢 **ROUTE** *(tenancy enforcement-verified)* | 🟢 OWN + tenant *(fail-closed)* | EMEA |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN + tenant | EMEA |
+| 🆕 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` *(payload-verified)* | 🟢 **ROUTE** *(versioned authoring + progress + entitlement)* | 🟢 OWN, 🔴 **no tenant** | APAC 🟢 **first `es-ES` catalogue** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | APAC |
+| 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` | 🟢 **ROUTE** *(no IdP required)* | 🟢 OWN + optional federation | EMEA |
+| 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 `BSD-3-Clause` | 🟡 APPLIANCE+ *(🔴 no course entity)* | 🟢 OWN | 🟡 MEA-targeted *(`ar-MA`+`fr-FR`)* |
+| 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 `MIT` | 🟡 APPLIANCE+ *(audit tables write-verified)* | 🟡 OWN *(`candidate_profiles`)* | APAC |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` | 🟢 COMPONENT *(executed + calibrated)* | n/a | EMEA |
+| 🆕 🟢 [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | 🟢 `MIT` *(v`1.7.4`, `37` tests)* | 🟢 **COMPONENT** *(writing-quality scoring)* | n/a | 🟢 **North America** *(holder-declared, UBC)* |
+| 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` | 🟡 APPLIANCE | 🔴 NONE | APAC |
+| 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | 🟡 COMPONENT | 🟡 BORROWED | Global |
+| 🟡 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 `MIT` | 🔴 COMPONENT *(single file, DOI-published)* | 🔴 NONE | EMEA *(Spain)* |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+| 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+
+🟢 **`7` ROUTE-grade permissive rows, up from `6` — the first addition in three passes, and the
+first ever placed in APAC at ROUTE grade with its own identity store.**
+🔴 **North America still holds `0` ROUTE rows**, but no longer `0` rows: `writeAlizer` is placed as
+a COMPONENT on its holder's own declared affiliation. 🔴 **LATAM still holds `0` rows of any
+grade.**
+
+🔴 **Blocked candidate, recorded because its schema outranks most of the shelf:**
+[`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) — `22`-table
+learner model with a decision-audit layer, **and no grant.** 🔵 **It cannot enter the shelf and it
+should not be forgotten; `ACTION MC` asks for the licence.**
+
+🔵 **Verification note: every licence above is a payload read from a clone, now with the PER-PATH
+probe** *(`formalms` proved this pass that a root-anchored probe reports `0` where the tree holds
+`19` — `Gap 370`)*. **`github.com` and `api.github.com` answer `403` here (`gap 140`), so a
+successful `git clone` of the exact path is the existence test — and
+`git ls-remote --symref` is the cheaper one, which `apereo/opencast` failed with `exit 128`.**
+
+
 ## Pass 183 — 2026-10-13
 
 🆕 🔴 **The most important thing this pass learned is about its own method, and it cost the pass

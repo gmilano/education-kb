@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🆕 🟢 **One new pattern, two amendments, and both amendments are repairs to steps that this pass
+measured failing.**
+
+### 🆕 🟢 Pattern `27` — the unlicensed-supply triage
+
+🔴 **The number that forces this pattern: `3` of `10` rows screened from GitHub's own education
+topic pages have NO grant** — no licence file on any path, no grant text anywhere, not even the
+word in `33` `.md` files. 🔴 **And the best schema in the sample is one of them:**
+[`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion), `22` tables
+including `students`, `concepts`, `mastery_states`, `mastery_snapshots`, `diagnosis_reports`,
+`evidences`, `path_decisions`, `learning_reflections` and `rag_traces` — **a mastery model with the
+decision-audit layer Pattern `24` otherwise builds by hand.** 🔵 **At `2`★.**
+
+**The triage, in order, when a shortlisted row has no grant:**
+
+1. 🔴 **Confirm the absence with THREE probes, not one.** A per-path licence-file search
+   *(`Gap 370`: a root-anchored probe reported `0` on `formalms`, which holds `19`)*; a grant-TEXT
+   search *(*"Permission is hereby granted"*, *"GNU GENERAL PUBLIC"*, *"Apache License"*)*; and
+   🆕 **a BARE-TOKEN search over `README` headings** *(`P1049` — `trainingllm`'s entire grant is the
+   word `MIT` under `## License`, invisible to the first two)*.
+2. 🟢 **Price the ASK before pricing the build.** A low-star holder is a reachable person: one issue
+   naming `MIT` or `Apache-2.0`, with the engagement context, costs minutes. 🔵 **`ACTION MC` runs
+   this on `xueyoujing-companion` and records the latency, so the next proposal can quote a real
+   response time instead of a hope.**
+3. 🔴 **Never ship against an unlicensed tree while the ask is open.** 🔵 **Unlicensed is all rights
+   reserved; a permissive-looking README, a star count and an open issues tab change nothing.**
+4. 🟢 **Extract the SCHEMA, which is not the code.** 🔵 **A table list read from a repository is a
+   design fact, and this KB's own patterns are built from design facts** *(Pattern `24` came from
+   reading `civil-ai`'s audit tables)*. 🟢 **Re-implementing a `22`-table design you have read is a
+   normal engagement; copying its code is not.** 🔴 **Where the design is itself protected is
+   counsel's question, and a studio asks it before it builds.**
+5. 🟡 **Carry the row as BLOCKED, not as rejected.** 🔵 **A grant can arrive in one commit, and a
+   row that was blocked for a licence is the cheapest row to promote later** — the reading is
+   already done.
+
+🔵 **Where this pattern applies: at the point a shortlist is handed to a delivery lead. 🟢 Its
+output is a row-by-row *buildable / blocked / ask-pending* split, with the ask already sent.**
+
+### 🔴 Pattern `25`, amendment — step `3` was measuring a vocabulary, not a schema
+
+🔵 **Step `3` said: *"count the DOMAIN entities — grep the persistence models for `course`,
+`lesson`, `enrollment`, `assessment`."*** 🔴 **Measured this pass, that step fails in BOTH
+directions:**
+
+| direction | row | what the grep says | what is true |
+|---|---|---|---|
+| 🔴 false POSITIVE *(`T310`)* | `open-tutor-ai-CE` | packages named `courses/`, `classrooms/`, `learners/` | 🔴 `4` of them are `30`-byte docstrings; the schema is OpenWebUI's chats |
+| 🆕 🔴 false NEGATIVE *(`T314`)* | `ai-shifu` | **`0`** tables named `course`, `lesson`, `enrollment`, `assessment`, `quiz`, `grade`, `student`, `classroom`, `cohort`, `teacher` | 🟢 **a versioned authoring model, `8`-state per-learner progress, and an entitlement table — under `shifu`, `outline_item`, `progress_record`, `course_auth`** |
+
+🟢 **Step `3`, replaced:** **LIST the entity declarations and READ the list.** Dump every
+`__tablename__`, `CREATE TABLE`, `_name` or model class in the tree, then read the names and the
+columns of the three or four that look load-bearing. 🔵 **The list is bounded — `71` for
+`ai-shifu`, `15` for a render pipeline, `22` for `xueyoujing-companion` — so reading it is cheaper
+than defending a grep.** 🔴 **A vocabulary grep is never a read, in either direction.**
+
+🆕 🔴 **And two probe defects this pass measured, both generic enough to carry into the recipe:**
+
+- 🔴 **`P1048`: anchor your declaration pattern.** `_name *=` also matches `_rec_name`, whose values
+  are FIELD names — `17` occurrences in `openeducat_erp`, which is why a first count said `102`
+  distinct models where the anchored count says `88`. 🔵 **An unanchored probe manufactures entities
+  that are columns.**
+- 🔴 **The corpus screen has a `75`% false-positive rate** *(`ACTION LZ`, `3` of `4` flags)*:
+  `Thumbs.db` matched `\.db$`; a SOURCE directory named `embedding/` matched twice; documentation
+  PDFs matched a `documents/` rule. 🟢 **Keep the corpus check as a screen with a PROVENANCE read
+  attached** — the file name cannot tell `example_upload_images.pdf` *(own fixture)* from
+  `Machine - Learning - Tom Mitchell.pdf` *(a publisher's book)*. 🔴 **It is not a census column.**
+- 🆕 🔴 **And it cannot see the runtime case at all** *(`Gap 414`)*: `writeAlizer` commits `0` model
+  objects and downloads `18` at runtime. 🔵 **Any row with a `download()` entry point has a second
+  grant that no clone will show — add a one-line check for one.**
+
+### 🟢 Pattern `26`, amendment — the boundary is MEASURED, and the line is `_inherit`
+
+🔵 **Pattern `26` proposed the SIS engagement as modules: deploy `openeducat_erp` unmodified, add
+nothing inside `openeducat_*`, build the missing `OneRoster` / `LTI 1.3` / `Ed-Fi` layer as new
+addons, keep the AI in a separate permissive service.** 🟢 **The architectural claim is now
+measured at `HEAD 46a5d7d`:**
+
+- 🟢 **`0`** occurrences of `odoo.addons.openeducat` in any `.py` file in the tree.
+- 🟢 **`218`** `env['op.*']` accesses by model-name string — *openeducat's own* `14` modules cross
+  their own boundaries exactly this way.
+- 🟢 Inter-module coupling is `__manifest__.py` `depends`, which is **data, not an import**.
+
+🟢 **So *"add, do not patch"* is architecturally sound: a new addon reads and writes the `59` `op.*`
+business models through the registry without importing openeducat's Python.**
+
+🟡 **The amendment: `_inherit` is the line.** `55` anchored `_inherit` declarations exist in the
+tree, and `_inherit = 'op.course'` from a new addon **extends openeducat's model in place.**
+🔵 **Reading `op.*` and extending `op.*` are different acts — the first adds a model beside the
+library, the second alters the library's own.** 🔴 **Whether `LGPL-3.0` §`5` treats
+registry-mediated inheritance as *"a work that uses the Library"* is a question for counsel, and
+the pattern now carries that line instead of a one-liner that implies an answer.** 🟢 **Practical
+instruction unchanged and now justified: new models and `env[]` reads, yes; `_inherit` into
+`op.*`, ask first.**
+
+🔴 **Entity count corrected inside the pattern: `59` business models, not `141`** *(`88` `_name`
+declarations + `55` `_inherit` extensions = `143`, which is how that figure arose)*. 🔵 **Budget
+modules against `59` entities.**
+
+### 🟡 Pattern `5`, amendment — the LATAM localisation line item shrinks
+
+🟢 **`ai-shifu` ships `ar-SA`, `de-DE`, `en-US`, `es-ES`, `fr-FR`, `th-TH`, `ur-PK`, `zh-CN` — the
+first `es` catalogue on this shelf.** 🔵 **So Pattern `5`'s *"every LATAM build carries an explicit
+localisation line item"* becomes: **a DIALECT ADAPTATION line item** *(`es-ES` → `es-419`)* for a
+row that already has Spanish, and a full localisation line item everywhere else. 🔴 **`pt-BR` is
+still absent from every row on the shelf, so a Brazilian engagement pays the full price.**
+
 ## Pass 183 — 2026-10-13
 
 🆕 🟢 **One new pattern, two amendments, and the amendment to Pattern `25` is a repair: the recipe

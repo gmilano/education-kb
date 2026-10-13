@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🆕 🟢 **Three changes to the routing table, and all three change what a studio can PROMISE: one
+platform's licence family is corrected, one platform's integration boundary is now MEASURED rather
+than argued, and one row leaves the table because it does not exist.**
+
+### 🟢 `openeducat_erp` — the SIS boundary is real, and the project proves it on itself
+
+🔵 **Pattern `26` told a studio to deploy `openeducat_erp` unmodified, add nothing inside
+`openeducat_*`, and build the missing `OneRoster` / `LTI 1.3` / `Ed-Fi` layer as NEW addons. The
+open question was whether that is architecturally possible or merely a licence slogan.**
+🟢 **It is possible, and the evidence is openeducat's own `14` modules:**
+
+| measurement at `HEAD 46a5d7d` | value | what it means |
+|---|---|---|
+| 🟢 `odoo.addons.openeducat*` Python imports, tree-wide | **`0`** | 🟢 **no module imports another's Python** |
+| 🟢 `env['op.*']` accesses by model-name string | **`218`** | 🟢 **this is how the tree crosses its own boundaries** |
+| 🟢 inter-module coupling | `__manifest__.py` `depends` *(`7` modules depend on `openeducat_core`)* | 🟢 **declared as DATA, not as an import** |
+| 🟡 `_inherit` declarations | `55` | 🟡 **the grey zone — see below** |
+
+🟢 **So a new addon reads and writes `op.course`, `op.student`, `op.exam` and the other `59`
+business models through the registry, by name, with no `openeducat_*` import anywhere.**
+🔵 **`env['op.session']` appears `22` times, `env['op.student']` `21`, `env['op.course']` `19` —
+inside openeducat itself.**
+
+🟡 **The caveat, and it is the line Pattern `26` is actually drawing:** `_inherit = 'op.course'`
+from a new addon **extends openeducat's model in place**, which is a different act from reading it.
+🔵 **Read `op.*` and add your own models: clean. Extend `op.*` in place: that is the *"patch"* in
+*"add, do not patch"*.** 🔴 **Whether `LGPL-3.0` §`5` treats registry-mediated inheritance as *"a
+work that uses the Library"* is counsel's question — this KB measured the technical boundary and
+says so, rather than implying a legal answer.**
+
+🔴 **And the entity count is corrected: `59` business models, not the `141` p183 published**
+*(`88` `_name` declarations + `55` `_inherit` extensions = `143`, which is how that number was
+reached)*. 🟢 **`59` is what belongs in a proposal.**
+
+### 🟡 `formalms` — `GPL-2.0`, entity-rich, and it stays on the copyleft side of the table
+
+🟢 **Settled: `GPL-2.0`**, payload at `html/license.txt` *(`18 346` B, `md5 65dd37cc…`, `0`
+occurrences of *"Lesser"*)*, installer copies in `8` languages, every PHP header naming
+`gpl-2.0.txt` and the Docebo `4.0.5` CE lineage. 🔴 **Not `Apache-2.0`.**
+
+🟡 **It is a genuine LMS, which is why this matters:** `405` `CREATE TABLE`, with
+`learning_course`, `learning_coursepath`, `learning_course_editions`, `learning_certificate_course`,
+`learning_competence_course`, `learning_assessment_rule`, `learning_catalogue`, and a
+`conference_*` family that already integrates BigBlueButton. 🟢 **Routing verdict: a copyleft
+DEPLOYMENT — deploy it, keep the AI in a separate permissive service, and never absorb its code
+into a client's product.** 🔵 **Same engagement shape as Moodle and Open edX, now with a verified
+grant instead of a quoted one.**
+
+### 🔴 `apereo/opencast` leaves the table; `opencast/opencast` enters as UNREAD
+
+🔴 **`apereo/opencast` does not exist** *(`git ls-remote` `exit 128`, identical to an invented
+control slug)*. 🟢 **The real project is
+[`opencast/opencast`](https://github.com/opencast/opencast)**, `HEAD e7655449`, default branch
+`develop`. 🔵 **The lecture-capture layer therefore has `0` read rows in this KB, not one unprobed
+one — a different and more honest statement.** 🟢 `ACTION ME` reads it at p185.
+
+### 🟢 The routing table, unchanged where it was already measured
+
+🔵 **For reference, the rows this pass did not touch keep their verdicts:** `Moodle` *(`GPL-3.0`,
+deployment)*, `Open edX` *(`AGPL-3.0`, deployment — the strongest copyleft on the table)*,
+`Canvas LMS` *(`AGPL-3.0`)*, `BigBlueButton` *(`LGPL-3.0`)*, `H5P` *(`MIT`, absorbable)*,
+`Kolibri` *(`MIT`, offline-first)*, `Sakai` *(`Apache-2.0`)*, `OpenOLAT` *(`Apache-2.0`, the
+permissive ROUTE)*, `Artemis` *(`MIT`)*. 🔴 **`0` permissive student-information systems still
+exist** — `RosarioSIS` and `Gibbon` are `GPL`, `openeducat_erp` is `LGPL-3.0`, and `formalms` is
+now a measured `GPL-2.0`. 🟢 **Which is exactly why Pattern `26` is a module boundary and not a
+licence hope.**
+
 ## Pass 183 — 2026-10-13
 
 🆕 🟢 **Two amendments to the routing table, both to rows this KB has carried for passes, and both

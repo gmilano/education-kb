@@ -4,6 +4,255 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🟢 **Six pre-registered actions reached: `4` DISCHARGED with a limb FIRED, `1` SPLIT across its two
+rows, and `1` DISCHARGED on a premise that turned out to be broken.** 🟢 **`ACTION LR` finally ran
+at full size with its step `0`, and it fires LIMB `2` decisively.**
+
+🆕 🔴 **The headline is a number this KB can now put in front of a studio lead: `7` of `10` blind
+verdicts were overturned by reading, and `5` of the `7` were overturned on the LICENCE.** 🔵 **And
+the licence error is SYMMETRIC — `2` rows predicted permissive carry NO GRANT AT ALL, while `3`
+predicted restrictive or absent are plain `MIT`.** 🟢 **`T315`: published metadata carries no
+licence signal. Not a biased signal — no signal.** 🔴 **A symmetric error cannot be corrected with
+a safety margin, which is what *"assume copyleft until proven otherwise"* would be. It can only be
+read.**
+
+🆕 🔴 **And the sharpest client-facing fact of the pass: `3` of `10` screened rows are legally
+unusable, and the best schema of the ten is one of them.**
+[`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) declares `22`
+tables — `students`, `concepts`, `mastery_states`, `mastery_snapshots`, `diagnosis_reports`,
+`evidences`, `path_decisions`, `learning_reflections`, `rag_traces`, `attempts`, `assessments` —
+**a complete learner model WITH the decision-audit layer the EU Annex III patterns need.**
+🔴 **It has `0` licence files, `0` grant markers of any kind, and `33` `.md` files that never use
+the word.** 🔵 **At `2`★. `T290` has never been confirmed this hard: a `2`★ repository with a richer
+schema than the `41.3`k★ row at the top of the same tag.** 🟢 **Which makes it an ASK, not a dead
+end — a `2`★ holder usually answers a licensing request, and that request costs one issue.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LR`** — the screening recipe, blind on `10` rows, census-checked FIRST | 🟢 **DISCHARGED, LIMB `2` FIRED. `7`/`10` overturned. 🆕 And step `0` paid a second dividend: `49` of `62` candidates across `6` tag pages were ALREADY in the census** |
+| 🟡 **`ACTION LX`** — the schema of two settled-grant rows never entity-counted | 🟡 **SPLITS, one row per limb. `ai-shifu` carries a REAL education domain *(limb `1`)*; `AI-Powered-Video-Tutorial-Generator` is a render pipeline with `0` identity *(limb `2`)*. 🆕 They fail the probe in OPPOSITE directions — `T314`** |
+| 🟢 **`ACTION LY`** — can a new Odoo addon read `op.*` without importing `openeducat_*`? | 🟢 **DISCHARGED, LIMB `1` FIRED, with the strongest evidence available: `0` `odoo.addons.openeducat*` imports tree-wide against `218` `env['op.*']` accesses. 🔴 And p183's *"`141` models"* does not reproduce at the same `HEAD`** |
+| 🟢 **`ACTION LZ`** — the corpus layer across the shelf | 🟢 **DISCHARGED, LIMB `1` FIRED. `1` of `17` rows ships a committed corpus. 🔴 But the name screen's own false-positive rate was `3` of `4` flags, which is why it stays a footnote and NOT a census column** |
+| 🟢 **`ACTION MA`** — EMEA adoption off a channel that is not a law blog | 🟢 **DISCHARGED, LIMB `1` FIRED. Eurostat and the UK `DfE` both carry real figures. 🟢 EMEA stops being regulation-only after five passes** |
+| 🟡 **`ACTION MB`** — `formalms` and `apereo/opencast`, unprobed for five passes | 🟡 **DISCHARGED, LIMB `2` for both, for two DIFFERENT reasons. `formalms` is `GPL-2.0` and entity-rich. 🔴 **`apereo/opencast` DOES NOT EXIST** — this KB carried a dead slug for five passes** |
+
+### 🔴 `ACTION MB` — one of the two rows was never probeable, and one second would have shown it
+
+🔴 **`apereo/opencast` returns `exit 128` from `git ls-remote --symref`, the exact signature of a
+slug invented as a control** *(`apereo/this-slug-does-not-exist-xyz`, run in the same second, same
+message)*. 🟢 **The project is real and lives at
+[`opencast/opencast`](https://github.com/opencast/opencast)** — `HEAD e7655449`, default branch
+`develop`. 🔵 **So *"UNPROBED for five passes"* was never a budget problem. The row was
+unreachable, and the oracle that says so has been documented in this KB since p93 and costs one
+second.** 🟢 **`T316`, adopted: when a row survives three passes as *"unprobed"*, probe its
+EXISTENCE before scheduling its reading.**
+
+🟢 **`formalms/formalms` is settled and it is `GPL-2.0`** — payload read at `html/license.txt`,
+**`18 346` B**, `md5 65dd37ccb3e888dc57e47d925b80b38a`, **`0` occurrences of *"Lesser"*** *(so the
+`P960` bifurcation trap is excluded by measurement, not by assumption)*, with localised installer
+copies in `8` languages. 🔴 **Not the `Apache-2.0` a `2026` roundup printed — the third such
+correction, after `frappe/lms` and `tao-core`.** 🟡 **And it is entity-RICH: `405` `CREATE TABLE`,
+including `learning_course`, `learning_coursepath`, `learning_course_editions`,
+`learning_certificate_course`, `learning_competence_course` and `learning_assessment_rule`.**
+🔵 **A real LMS domain model behind a copyleft grant: price it as a copyleft deployment, never as a
+component to absorb.**
+
+🆕 🔴 **And `formalms` reproduced `Gap 370` on a live row.** A root-anchored licence probe finds
+**`0`** files; the per-path probe finds **`19`**. 🔵 **The row reads UNLICENSED to the instrument
+this KB has been carrying unconnected since p183 — the escalator is no longer a hypothetical
+defect.**
+
+### 🟢 `ACTION LY` — Pattern `26`'s boundary is real, and openeducat's own `13` modules prove it
+
+🟢 **The measurement, at `HEAD 46a5d7d`:** **`0`** occurrences of `odoo.addons.openeducat` in any
+`.py` file in the tree, against **`218`** `env['op.*']` accesses by model-name string
+*(`env['op.session']` `22`, `env['op.student']` `21`, `env['op.course']` `19`)*. 🟢 **Inter-module
+coupling is declared in `__manifest__.py` `depends` — which is DATA, not a Python import.**
+🔵 **openeducat's own modules cross their own boundaries exactly the way Pattern `26` tells a
+studio to: by model name, through the registry.**
+
+🟡 **The caveat, stated because the limb does not cover it:** `55` anchored `_inherit`
+declarations exist, and `_inherit = 'op.course'` from a new addon EXTENDS openeducat's model in
+place rather than reading it. 🔵 **Reading `op.*` and extending `op.*` are different acts, and
+Pattern `26`'s *"add, do not patch"* is the line between them.** 🔴 **Whether `LGPL-3.0` §`5`
+treats registry-mediated inheritance as *"a work that uses the Library"* is counsel's question,
+not a `git grep`'s** — the pattern now says so instead of implying an answer.
+
+🆕 🔴 **And a correction this pass owes p183: *"`141` Odoo models across `13` modules"* does not
+reproduce at the same `HEAD`.** Measured, anchored at line start: **`59`** distinct `op.*` business
+models, **`29`** wizard and report models, **`88`** `_name` declarations in total, **`112`** model
+classes, **`55`** `_inherit` extensions, **`14`** module manifests. 🔵 **`88 + 55 = 143`, which is
+how a count reaches ~`141` — by adding in-place extensions to declarations.** 🔴 **An `_inherit`
+extension is not a new entity, so the number a client should see is `59`.**
+
+🆕 🔴 **A probe defect found and repaired mid-pass, worth naming because it is generic
+(`P1048`):** an unanchored `_name *=` pattern also matches `_rec_name` — `17` occurrences here,
+and they are why a first count said `102` distinct names where the anchored count says `88`.
+🔵 **In Odoo trees `_rec_name` values are FIELD names *(`course_id`, `student_id`, `marks`)*, so the
+defect manufactures entities that are columns.**
+
+### 🟡 `ACTION LX` — the two rows fail in opposite directions, and that is the finding
+
+🟢 **[`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) carries a real education domain,
+and an entity-name probe cannot see it.** `Apache-2.0` *(`LICENSE.txt`, `11 342` B, all five
+canonical section markers present, so NOT the `P971` notice-instead-of-licence trap)*,
+`HEAD ca75a29`, `3 249` files, **`71` distinct `__tablename__` declarations** — and **`0` of them
+is named `course`, `lesson`, `enrollment`, `assessment`, `quiz`, `grade`, `student`, `classroom`,
+`cohort` or `teacher`.**
+
+🟢 **What it actually models, under its own vocabulary:**
+
+| concern | tables | what it is |
+|---|---|---|
+| 🟢 authoring | `shifu_draft_shifus`, `shifu_draft_outline_items`, `shifu_published_shifus`, `shifu_published_outline_items`, `shifu_log_draft_structs`, `shifu_log_published_structs` | 🟢 **a VERSIONED course-structure model** with a draft/published split and deadlock-aware indexes |
+| 🟢 learner progress | `learn_progress_records` | 🟢 **per-user, per-outline-item, `8`-state** *(`601` not started → `603` completed)* |
+| 🟢 enrolment | `ai_course_auth` | 🟢 `course_id` × `user_id` × `auth_type` × `status` — **an entitlement table named `auth`** |
+| 🟢 identity | `user_users` | 🟢 OWN *(nickname, avatar, birthday, language)*. 🔴 `0` `tenant_id`, `0` `organization_id`, `0` `institution` |
+| 🔴 commerce | `bill_*`, `order_*`, `promo_*`, `credit_*`, `referral_*` | 🔴 **`29` of `71` tables** — Stripe, WeChat Pay, Alipay, Pingxx, coupons, wallets, referral reward rules |
+
+🆕 🔴 **And the detail a studio must see before it quotes the progress model: state `604` of
+`learn_progress_records.status` is `refund`.** 🔵 **The billing semantics are inside the pedagogy
+state machine, in `learn/models.py:62` and in the initial migration — you cannot adopt the
+progress table without inheriting them.**
+
+🆕 🟢 **The best news in this pass for a LATAM engagement, and it corrects a standing gap
+statement:** `ai-shifu` ships **`8` locale catalogues — `ar-SA`, `de-DE`, `en-US`, `es-ES`,
+`fr-FR`, `th-TH`, `ur-PK`, `zh-CN`.** 🟢 **`es-ES` is the first Spanish catalogue on this shelf.**
+🔵 **It is European Spanish, so the LATAM line item SHRINKS to a dialect adaptation rather than
+disappearing — and `pt-BR` is still absent everywhere.**
+
+🔴 **[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator)
+fires the other limb.** `MIT`, `HEAD 9c26089`, `905` files, `15` `CREATE TABLE`: `jobs`,
+`job_attempts`, `job_dependencies`, `job_events`, `artifacts`, `revisions`, `revision_artifacts`,
+`revision_navigation`, `dependency_nodes`, `dependency_edges`, `generation_controls`,
+`provider_acceptance_checkpoints`, `task_cache`, `usage_records`, `project_meta`. 🔴 **`0` identity
+store, `0` education entity.** 🔵 **It is a render DAG — a build system that emits videos. Useful,
+and not a tutoring system.**
+
+🆕 🔵 **`T314`, which is what `ACTION LX` actually bought:** **the entity-NAME probe fails in BOTH
+directions.** 🔴 **`T310` named the false positive — education in the naming layer, chats in the
+schema.** 🆕 🔴 **This pass names the false NEGATIVE — a genuine course/progress/entitlement model
+that a `course|lesson|enrollment` grep scores at `0`.** 🟢 **So the census column is the ENTITY
+LIST, read; it is never a vocabulary grep. Pattern `25` step `3` is amended accordingly.**
+
+### 🟢 `ACTION MA` — EMEA has adoption figures, on official channels, after five passes of silence
+
+🟢 **Limb `1` fires on the first channel tried that was not a law blog.** 🔴 **All figures remain
+SEARCH-INDEX SECONDARY** *(`T309` re-confirmed twice this pass: `ec.europa.eu` and
+`assets.publishing.service.gov.uk` both `ENOTFOUND` on the fetch channel, while GitHub-family
+hosts answered throughout)*.
+
+- 🟢 **Eurostat, reference year `2025`:** **`32.7`%** of EU individuals aged `16`–`74` used
+  generative AI tools; **`9.4`%** of those users used them for formal education.
+- 🟢 **UK Department for Education, *Technology in Schools survey 2024 to 2025* (November
+  `2025`) — a named official publication:** **`44`%** of teachers used GenAI for school
+  activities; **lesson planning `35`%, live lessons `7`%, marking `5`%**; GenAI training already
+  offered by **`21`%** of primary and **`25`%** of secondary school leaders.
+- 🟢 **European Commission, *Friend or foe?*:** only **`29.7`%** of EU teachers have taken
+  continuing professional development on AI in teaching.
+- 🟢 **Nearly two-thirds of EU education systems** have strategies, guidance or other policy
+  frameworks addressing AI; *Digital education at school in Europe 2026* (Eurydice, Publications
+  Office) is the standing reference.
+- 🔴 **`0` institution-level adoption rate from the European University Association.** Its January
+  `2026` report is a task-group output on ethics, strategies, training, regulation and
+  sustainability — **not a survey.** 🔵 An informed absence, recorded so it is not re-probed.
+
+🆕 🔴 **Two provenance traps, both recorded before use:** the **`82`% primary / `78`% secondary**
+figure attributed to the DfE circulates through blogs and **does not match the DfE publication** —
+the gap is question wording *(ever-used against at-least-sometimes)*, so **quote `44`% with its
+wording or nothing.** 🔴 And the Eurostat `16`–`24` figure appears as both **`62`%** and ***"four
+in ten"*** depending on the denominator. 🔵 **Same house, same year, two numbers: name the
+denominator beside the figure.**
+
+### 🟢 `ACTION LZ` — the corpus layer is one row, and the screen that finds it is mostly wrong
+
+🟢 **LIMB `1`. `1` of `17` rows ships a committed corpus or index:**
+`Priyamakeshwari/TeachGPT`, already on record *(`db/chroma.sqlite3`, `4` HNSW `.bin` files, and a
+commercial textbook PDF)*. 🟢 **`0` other rows commit third-party copyrighted content.**
+
+🔴 **But the screen that produced the `4` flags was wrong `3` times, and the failure modes are
+worth more than the result:** `Thumbs.db` matched `\.db$` in `OpenOLAT`; a SOURCE directory named
+`embedding/` matched in `Artemis` and `OpenTutor`; documentation PDFs matched a `documents/` rule.
+🟢 **Every other committed document on the shelf is a self-made fixture** — `Test_pdf_indexing.pdf`,
+`content-file-preview.pdf`, `good_session.jsonl`, `bad_quiz_invention.jsonl`.
+🔵 **So: a `75`% false-positive rate makes this a SCREEN with a provenance read attached, never a
+census column — the file name cannot tell `example_upload_images.pdf` from
+`Machine - Learning - Tom Mitchell.pdf`, and only the second one is a second grant.**
+
+🆕 🔴 **And `ACTION LR` found the form this probe can NEVER see.** `shmercer/writeAlizer` commits
+**`0`** model objects and **downloads `18` scoring models at runtime** from its own artifact
+registry, under terms published as OSF DOIs. 🔵 **A corpus grant that arrives over the network is
+invisible to every instrument on this shelf.** 🟢 **`Gap 414` opened for it.**
+
+### 🟢 What this pass added
+
+- 🆕 🟢 **Two rows enter the shelf.** [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu)
+  as **ROUTE** *(`Apache-2.0`, APAC, OWN identity, no tenant, `8` locales including `es-ES`)*, and
+  [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) as **COMPONENT** — 🟢 **the
+  shelf's first permissive row whose holder is NORTH AMERICAN by his own declaration**
+  *(`sterett.mercer@ubc.ca` with an ORCID in `DESCRIPTION`, which is a statement, not an inference
+  from a name or a locale)*.
+- 🆕 🟢 **`Gap 372` is RESTATED, not closed — and the restatement is the useful part.** A
+  permissive, maintained, tested automated-writing-scoring library DOES exist: `writeAlizer`,
+  **`MIT`**, **v`1.7.4` dated `2026-09-16`**, `37` test files, `4` CI workflows, `18` model
+  variants, CRAN-shaped. 🔴 **It is NOT end-to-end:** it scores from feature files produced by
+  `Coh-Metrix` *(registration-gated)*, `GAMET` *(free download)* or `ReaderBench` *(open source)*,
+  and fetches its models at runtime. 🔵 **So the blocker was never the licence — it is the upstream
+  feature-extraction chain. Price that chain, and the `AI Act`'s most explicitly high-risk activity
+  stops being a promise with nothing behind it.**
+- 🆕 🟢 **A coverage statistic for this KB's own census, measured rather than felt:** `49` of `62`
+  candidates across `6` GitHub topic pages were already recorded — **`79`%**. 🔵 **The topic
+  channel is `~80`% exhausted, which prices every future screening pass and justifies p93's
+  *"spend the budget elsewhere"* with a number.**
+- 🆕 🟢 **Pattern `27`** — the unlicensed-supply triage, built on this pass's `3`-in-`10`: what to do
+  when the best schema in a shortlist has no grant.
+- 🆕 🟢 **Pattern `25` step `3` amended** *(`T314`: read the entity list, never grep a vocabulary)*
+  **and Pattern `26` amended** *(the ORM boundary is MEASURED; `_inherit` is named as the line)*.
+
+### 🔴 Declared gaps and absences
+
+- 🆕 🔴 **`Gap 414`: a runtime-downloaded model or corpus is invisible to every instrument here.**
+  `writeAlizer` is the measured case. 🔵 Any row with a `download()` entry point has a second grant
+  that no clone will show.
+- 🆕 🔴 **`3` of `10` screened rows carry NO GRANT** — `xueyoujing-companion`, `AES_DL`, `AVLTree`,
+  all confirmed by per-path probe, grant-text markers AND a bare-word search over every `.md`.
+  🔵 **Unlicensed is not permissive-by-default: it is all rights reserved.**
+- 🆕 🔴 **A new trap, and it is this KB's own probes that it defeats: the ONE-WORD GRANT.**
+  `tianshuo/trainingllm`'s entire licence is the bare word **`MIT`** under a `## License` heading in
+  `README.md`. 🔴 **It has `0` licence files and `0` grant-TEXT markers, so both of this KB's
+  instruments report *"no grant"* and both are wrong.** 🟢 **`P1049`: the grant probe needs a
+  bare-token pass over `README` headings.**
+- 🔴 **`0` permissive North-American-origin ROUTE rows, fifth pass.** 🟢 **The NA count is no longer
+  `0` at every grade** — `writeAlizer` is placed, as a COMPONENT.
+- 🔴 **`0` EMEA institution-level adoption rate** *(the EUA report is not a survey)*, and
+  **`0` APAC education adoption statistics**, unchanged.
+- 🔴 **`T309` re-confirmed on two further hosts** — `ec.europa.eu` and
+  `assets.publishing.service.gov.uk`. 🔵 Every figure in `ACTION MA` is secondary by this
+  environment's construction, not by choice.
+- 🔴 **★ counts remain unobtainable** *(`gap 140`)*. 🟢 The ★ figures quoted in `ACTION LR` come
+  from the topic pages' own rendering and are the PUBLISHED metadata under test — not evidence.
+- 🟢 **`formalms` and `apereo/opencast` are CLOSED OUT** after five passes: one is `GPL-2.0`, the
+  other does not exist. 🔵 Neither is carried as *"unprobed"* again.
+
+### 🟢 Pre-registered for p185, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION MC`** | ask the `xueyoujing-companion` holder for a licence — open one issue naming `Apache-2.0` or `MIT`, then record the response | **limb `1`:** any grant is added → 🟢 **the richest learner model this KB has measured becomes usable, and the ASK becomes a standing play for the `3`-in-`10` unlicensed supply.** **limb `2`:** no response in `3` passes → 🔴 record the latency, and Pattern `27` prices the ask as a lottery rather than a step |
+| 🆕 🔴 **`ACTION MD`** | run the bare-token grant pass (`P1049`) over every census row recorded as UNLICENSED or grant-absent | **limb `1`:** `≥1` row has a one-word grant this KB missed → 🔴 **the *"unlicensed"* population is partly a probe artefact and every absence must be re-read.** **limb `2`:** `0` found → 🟢 `trainingllm` is an outlier and the current probe is sound |
+| 🆕 🟡 **`ACTION ME`** | probe `opencast/opencast` — the real slug, never read | **limb `1`:** permissive with real course/recording entities → 🟢 a new ROUTE or COMPONENT candidate in the lecture-capture layer this shelf has `0` rows for. **limb `2`:** copyleft or entity-less → 🔴 close it out properly this time |
+| 🆕 🟢 **`ACTION MF`** | price the `writeAlizer` chain end to end: can `ReaderBench` *(open source)* alone feed `predict_quality`, with no `Coh-Metrix` and no `GAMET`? | **limb `1`:** the `rb_mod*` variants run from `ReaderBench` output alone → 🟢 **a fully permissive essay-scoring path exists and `Gap 372` closes on capability, not just licence.** **limb `2`:** the usable models need the gated tools → 🔴 `Gap 372` stands with its blocker correctly named as the FEATURE chain |
+| 🆕 🟡 **`ACTION MG`** | measure the commerce coupling in `ai-shifu`: how many of the `7` `learn_*` and `10` `shifu_*` tables carry a foreign key or status value that reaches `bill_*`/`order_*`? | **limb `1`:** the learning tables are separable → 🟢 ROUTE grade holds and the `29` commerce tables are droppable. **limb `2`:** the coupling is structural *(as state `604` suggests)* → 🔴 **the row is a ROUTE only for a paid-course engagement, and the shelf needs that qualifier** |
+| 🆕 🔴 **`ACTION MH`** | close the APAC adoption gap the way `ACTION MA` just closed EMEA — statistical offices and ministries, in-language | **limb `1`:** any APAC classroom-use statistic → 🟢 the last regulation-only region gains adoption evidence. **limb `2`:** nothing on an in-language official channel → 🔴 declare APAC adoption ABSENT BY MEASUREMENT, joining LATAM supply and MEA supply |
+
+🔵 **Note for p185 on method, and it is the cheapest lesson this KB has bought in ten passes:
+before you schedule a reading, test that the thing exists.** `apereo/opencast` cost five passes of
+*"unprobed"* and one second of `git ls-remote`. 🔵 **And its mirror: before you trust an absence,
+check that your probe can see the thing it is looking for — `trainingllm`'s grant is one word, and
+two instruments missed it.**
+
 ## Pass 183 — 2026-10-13
 
 🟢 **Six pre-registered actions reached: `3` DISCHARGED on limb `1` or `2`, `1` DISCHARGED with a

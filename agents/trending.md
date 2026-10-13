@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 184 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week: `2` rows entered the shelf, `1` was blocked by the absence of a
+licence, and the discovery channel was measured rather than described — `49` of `62` candidates
+across `6` GitHub topic pages were ALREADY in this KB's census.**
+
+🟢 **Entering the shelf:**
+
+- 🆕 🟢 **[`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) — ROUTE, `Apache-2.0`, APAC.**
+  `71` tables, a versioned authoring model *(`shifu_draft_outline_items` / `shifu_published_outline_items`)*,
+  `learn_progress_records` at `8` states per learner per outline item, `ai_course_auth` as the
+  entitlement table, and `user_users` as its own identity store. 🟢 **`8` locales including the
+  shelf's first `es-ES`.** 🔴 **`29` of `71` tables are commerce, and state `604` of the learner
+  progress enum is `refund`.**
+- 🆕 🟢 **[`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) — COMPONENT, `MIT`,
+  North America.** v`1.7.4` dated **`2026-09-16`**, `37` test files, `4` CI workflows, `18` scoring
+  model variants. 🟢 **The shelf's first row whose holder declares a North American affiliation**
+  *(`sterett.mercer@ubc.ca` + ORCID, in `DESCRIPTION` — a declaration, not an inference)*.
+
+🔴 **Blocked, and worth more than most of what entered:**
+[`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) — `22` tables
+*(`students`, `concepts`, `mastery_states`, `mastery_snapshots`, `diagnosis_reports`, `evidences`,
+`path_decisions`, `learning_reflections`, `rag_traces`, `attempts`, `assessments`, `goals`,
+`plans`, `memory_facts`, `idempotency_records`, …)*, **`0` licence files, `0` grant markers, `33`
+`.md` files that never use the word.** 🔵 **At `2`★. The most complete learner model this KB has
+measured, including the decision-audit layer Pattern `24` builds by hand — and legally unusable
+until someone asks.**
+
+🆕 🔴 **The week's method finding, from `10` blind screenings: published metadata carries no
+licence signal.** `5` of `10` licence predictions were wrong **in both directions** — `2`
+predicted-permissive rows have no grant, `3` predicted-restrictive rows are plain `MIT`
+*(`T315`)*. 🔵 **A star count, a topic tag and a one-line description are not evidence about a
+grant, favourably or unfavourably.**
+
+🆕 🔴 **And a new trap that defeats this KB's own instruments: the ONE-WORD GRANT.**
+[`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm)'s entire licence is the bare word
+**`MIT`** under a `## License` heading in `README.md`. 🔴 **`0` licence files and `0` grant-TEXT
+markers, so both the file probe and the marker probe report *"no grant"*, and both are wrong**
+*(`P1049`; `ACTION MD` re-reads every recorded absence)*.
+
+🟢 **Channel coverage, measured:** [`evidence/census-channel-coverage.2026-10-13-p184.tsv`](../evidence/census-channel-coverage.2026-10-13-p184.tsv).
+`autograding` returned **`12` of `12` candidates already in the census**; `learning-analytics`
+returned the most new ones *(`3`)*. 🔵 **At `~79`% coverage the topic channel is near exhaustion,
+which prices the next screening pass instead of guessing at it.**
+
 ## Pass 183 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
