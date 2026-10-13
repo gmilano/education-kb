@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `2` DISCHARGED WITH A LIMB
+FIRED. Both firings make a claim of this KB's sharper, and one of them promotes a row by reading its
+code rather than its licence.**
+🆕 🟢 **The pass's most satisfying finding: a PREDICTION this KB labelled as a prediction survived
+its own measurement.** p175 read the Article `50(2)` patch and said `2` of `46` tests would break,
+naming both from a static reading of `__post_init__` ordering. 🟢 **p176 ran it: `2` of `46` break,
+and they are exactly those two.** 🔵 **Which is the only thing that makes the label worth using — a
+KB that marks predictions and never tests them has invented a politer word for a guess.**
+🆕 🔴 **The pass's most uncomfortable finding: the one-line fix p175 was most pleased with passes
+`46` of `46`, and that is bad news.** `c2paStatus` appears **`0`** times at word-boundary precision
+in the entire test tree, and **`0`** tests reach the gate that discards it. 🔵 **The field whose loss
+IS the defect is untested, so the defect and its repair are indistinguishable to the suite
+(`T270`).**
+🆕 🔴 **The pass's sharpest single datum, and it is about this KB's own instruments: `35` of `36`
+test-suite *"crashes"* were the FLAG, not the suite.** `python3 -I` implies `-P` from Python `3.11`,
+so the script's own directory is not placed on `sys.path` — and `python3 -I test_x.py` is the exact
+command this repository's READMEs prescribe (`T271`).
+🆕 🟢 **The pass's most useful finding for a client: `ucfopen/canvasapi` is better than the row that
+admitted it.** `612` named REST calls, `127` `POST` / `89` `PUT` / `74` `DELETE`, `Bearer` auth,
+real pagination, `10` typed exceptions, `1 112` test methods, rostering routes named outright.
+🔴 **And `0` word-boundary matches for OneRoster, Ed-Fi, SCORM, xAPI or Caliper: it speaks Canvas,
+not a standard, and Canvas's own core is `AGPL-3.0`.**
+🆕 🟢 **The pass's quietest good result: the word *"exhaustive"* is EARNED for the first time.**
+`ACTION KJ` probed `16` paths including every British spelling on four published absence claims —
+`0` hits — then **enumerated all `5` branches** of the shelf row carrying the word: `55`
+file-paths, `0` grant-shaped at any case.
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION KI`** — take the measurement `ACTION KH` could only predict | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `2` of `46`, exactly the predicted pair, on a third independent runner. `gap 132` CLOSED** |
+| 🟢 **`ACTION KJ`** — re-probe every licence-absence verdict for the British spelling | 🟢 **DISCHARGED, BOTH LIMBS SILENT, and limb `2`'s PRECONDITION is false — which is the finding. `gap 133` CLOSED; `gap 135` opens `19×` wider** |
+| 🔴 **`ACTION KK`** — which COUNTRY does each *"North America"* artefact name? | 🔴 **DISCHARGED, LIMB 2 FIRED. `0` of `6` name a country; `4` name only an organisation. `gap 119` SETTLED after four carries** |
+| 🟢 **`ACTION KL`** — the full-suite exit-code rate | 🟢 **DISCHARGED, BOTH LIMBS SILENT at `39.1%`. p175's `9`/`28` was the right order of magnitude — and `T271` says why the first reading was `44.1%`** |
+| 🔴 **`ACTION KM`** — verify one holder-grade row past its licence | 🔴 **DISCHARGED, LIMB 1 FIRED. PROMOTED from candidate to ROUTE. `gap 123` closes for the administrative layer, conditionally** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`P176-A`** — the full-suite exit-code sweep
+  ([`compose/code/p176-suite-exit-sweep/`](compose/code/p176-suite-exit-sweep)): `665` executions
+  run BOTH WAYS, a failure classifier whose rule is stated in prose before it is coded, `16` offline
+  tests including a FABRICATED negative that prints every cue and must stay silent, a control run in
+  both invocations so `T271` is demonstrated rather than asserted, and one known limit frozen as a
+  fixture so fixing it changes the suite.
+- 🆕 🟢 **`P176-B`** — one grant-path vocabulary
+  ([`compose/code/p176-grant-path-vocabulary/`](compose/code/p176-grant-path-vocabulary)):
+  `16` paths, versioned, with `NOTICE` probed last and flagged as NOT a grant, claim renderers that
+  carry their own falsifier, an enumeration threshold stated as a judgement, and `19` offline tests
+  including three fabricated negatives drawn from this KB's own past errors.
+- 🆕 🟢 **A ROUTE where there was a candidate** in
+  [`verticals/solutions.md`](verticals/solutions.md): `ucfopen/canvasapi` promoted on an artefact
+  read, with both conditions attached — Canvas-only, and `0` standards interop.
+- 🆕 🔴 **A THREAT MODEL row**, `sgaofen/vibe-schooling` (`MIT`, `80`★, third-most-starred on
+  `topic:ai-education`): Canvas-targeted exam automation. 🔵 **The platform this KB now routes a
+  rostering client for is the platform the tag's third row automates cheating against, and the
+  permissive defence (`dolos`) does not operate on the same surface.**
+- 🆕 🟢 **Three new `MIT` candidate rows**, licence body read and `HEAD` verified, deliberately NOT
+  promoted — `universal-diagnostic-tutor-skill` (`244`★), `verichalk` (APAC, `4 198` files) and
+  `cn-primary-math-knowledge-graph` (APAC) — plus one row examined and EXCLUDED on the vertical test
+  with the exclusion recorded.
+- 🆕 🟢 **A measured TREND with a denominator:** `7` of `topic:ai-education`'s top `30` declare an
+  agent-SKILL topic and `11` name a specific harness. 🔵 **The vertical's new supply is
+  harness-coupled skills; this KB's shelf is applications. That is a difference in SHAPE, not size,
+  and a skill cannot answer a procurement questionnaire about where student data goes.**
+- 🆕 🔴 **Two of this pass's own errors were caught before publication, and both were arithmetic.**
+  🔴 **The routing table's draft tally read `7` + `5` + `6` + `4` = `22` — which matched the row
+  count and was wrong twice: it counted a one-row entry as two because it names two repositories,
+  and it gave `Sakai` no bucket.** 🔵 **Two compensating errors summing to the right total is the
+  failure [`verticals/solutions.md`](verticals/solutions.md) keeps warning about; it was caught by
+  counting rows rather than trusting the sum, and the corrected tally is published with both.**
+  🔴 **And the pass's URL verification had to be re-done: `curl -sI` returns `403` for every
+  `github.com` repository URL here, real or not, so the first check verified the proxy. `git
+  ls-remote` confirmed `44` of `44`.**
+- 🆕 🔴 **`T270`–`T274` — five method theses, four of them about this KB's own habits:** a field no
+  test sets makes a defect unfalsifiable; a sweep that runs one invocation measures its own argv; a
+  probe list copied `76` times is a migration not an edit; `master` on `raw` can be an alias wearing
+  a branch name; and a continental heading is an evidence grade rather than a geography error.
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`T273`'s MECHANISM.** p176 observed that `raw.githubusercontent.com` answers `200` for
+  `master` on repositories that have no `master`, with four controls — but it read behaviour, not
+  server code, and has not re-checked this KB's existing *"verified on `master`"* claims
+  (`ACTION KO`).
+- 🔴 **`0` of `76` grant-path probe lists are migrated to `P176-B`'s vocabulary.** The instrument and
+  its tests exist; the call sites do not (`gap 135`, `ACTION KN`).
+- 🔴 **The two test fixes `ACTION KI` showed are needed were not written**, so the Article `50(2)`
+  patch has never been seen GREEN — and nobody has run a real record through the patched gate
+  (`gap 136`, `ACTION KR`).
+- 🔴 **`3` of p175's `4` holder-grade rows are still licence-verified and nothing else**, `dolos`
+  among them — which is the one a client asks about first (`gap 134`, `ACTION KQ`).
+- 🔴 **`49` of `665` script exits remain unexplained after two classifier iterations**, and one class
+  inside them — a usage line in Spanish — is identified and deliberately unfixed (`gap 137`).
+- 🔴 **`10` instruments in this repository are broken or disagree with it**, named in
+  `P176-A`'s README and not fixed this pass (`ACTION KP`).
+- 🔴 **TENTH consecutive pass with no LATAM-originated open-source education repository** — `0` of
+  `30` fresh rows on top of p175's `0` of `100`. 🟢 **The demand evidence, by contrast, is now the
+  best-sourced in this KB: UNESCO IESALC / UNU-IAS across `200` institutions in `19` countries, and
+  LATAM teacher use up `18` points in a year.**
+- 🔴 **Primary legal text remains unread for both markets.** Article `113` verbatim and China's
+  labelling measures are unreachable for the same reason — `9` of `11` hosts NXDOMAIN (`gap 110`,
+  `T267`), re-declared once rather than rediscovered.
+- 🔴 **The APAC vendor and regulator map is EMPTY and p176 writes that down rather than leaving
+  silence to look like coverage:** the regional sweep returned `0` education-specific AI vendors and
+  `0` education-specific regulators for the region with the strongest compulsory-curriculum mandate
+  in this KB.
+
 ## Pass 175 — 2026-10-13
 
 🟢 **Five pre-registered actions: `2` DISCHARGED WITH A LIMB FIRED, `2` DISCHARGED with silent

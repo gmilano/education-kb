@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🟢 **No promotion and no demotion: the shelf is the same `12` rows, re-stated in full below because
+under *"only the newest block is canonical"* a row this file does not re-state leaves the compiled
+view (`T216`, `P170-C`).**
+🆕 🟢 **The headline is that p175's prediction was TAKEN and it was RIGHT, to the test name.**
+`ACTION KI` re-applied p175's Article `50(2)` edits `1`+`2` to a controlled clone of the shelf's
+best-equipped row and ran the suite. **`2` of `46` break, and they are exactly the two tests p175
+named from a static reading of `__post_init__` ordering.** 🔵 **A prediction this KB labelled as a
+prediction survived its own measurement — which is the only way a label like that earns anything.**
+🆕 🔴 **And the honest half, which is larger than the limb: the ONE-LINE fix p175 was most pleased
+with passes `46` of `46` tests, and that is not good news.** `c2paStatus` appears **`0`** times at
+word-boundary precision in the entire test tree, and **`0`** tests reach the quality gate that drops
+it. 🔵 **The field whose loss IS the defect is untested, so the suite can neither catch the defect
+nor confirm the repair (`T270`).**
+🆕 🔴 **The sharpest single datum, and it changes what a client should be told: all three writers
+that already store the status store the string `"absent"`.** `C2paStatus("absent")` resolves to
+`ABSENT`, and `ABSENT` is the one status the export gate refuses. 🔵 **So the one-line fix does not
+quietly improve the record — it turns the export gate RED on every real asset, which is the correct
+compliance position `50` days out and a breaking change on the same line.**
+
+### 🟢 The `12`-row shelf — RE-STATED IN FULL at p176
+
+🟡 **Licence cells, shapes and regions are p171/p172 body reads carried forward. p176 re-read the
+LICENCE of none of them and the SOURCE TREE of one (the video row, fourth controlled re-read).
+This line is the disclosure.**
+
+| repo | licence *(body read, p171/p172)* | primary shape *(p172)* | region | status at p176 |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | CARRIED |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | CARRIED |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | CARRIED |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | CARRIED |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | 🟢 **CARRIED. Still the only shelf row that DECLARES `scorm` and `xapi`** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | CARRIED |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | CARRIED |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | CARRIED |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | 🆕 🟢 **CARRIED, and now the only row whose patch has been MEASURED rather than predicted. `HEAD` still `9c260890214d` — a FOURTH controlled re-read of the same `905` files. `272` Python, `46` security tests** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | 🟡 **CARRIED. Still the only row carrying `ai-education` — a tag re-counted at `135` for the THIRD time at p176** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | CARRIED |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — and *"exhaustive"* is EARNED at p176** | tutoring | Global | 🆕 🟢 **CARRIED, and the doubt p175 raised is RESOLVED IN THE VERDICT'S FAVOUR. `ACTION KJ` probed `16` paths including every British spelling and `COPYING.md` — `0` of `16`. Then it enumerated **all `5` branches the remote advertises**: `0` grant-shaped paths at any case, in `55` file-paths. `HEAD` `ea29bcf196d2`, unmoved** |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` still need one** — `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1`
+paraphrased `Apache-2.0`, `1` with no grant anywhere on any branch.
+
+### 🆕 🟢 `ACTION KI` — the measurement, taken on a third independent runner
+
+🔵 **Subject:** `AkshitIreddy/AI-Powered-Video-Tutorial-Generator`, `MIT`, pinned at
+`9c260890214df68ad8fd0d681d3e77a6a7b7ea9f` — **still `HEAD`**, so this is a controlled re-read of
+the same `905` files for the fourth consecutive pass.
+🟢 **Runner, stated because it is the third distinct one and the differences matter:** `python3.12`,
+stdlib `unittest`, `PIL` stubbed, `sys.path` set **inside a runner script rather than through
+`PYTHONPATH`** — because `python3 -I` ignores the environment, which is the same mechanism that
+`T271` turns out to be about.
+
+| stage | tests | failures | errors | which tests | class |
+|---|---|---|---|---|---|
+| 🟢 **pristine** | `46` | `0` | `0` | — | 🟢 **MEASURED** — baseline reproduced a third time, on a third runner |
+| 🔴 **edits `1`+`2`** | `46` | `0` | 🔴 **`2`** | `test_apache_two_generated_asset_allows_transformed_commercial_export`, `test_mit_starter_audio_allows_transformed_commercial_export` | 🟢 **MEASURED — and identical to p175's PREDICTED set, name for name** |
+| 🟢 **edit `4` ALONE** | `46` | `0` | 🟢 **`0`** | — | 🟢 **MEASURED** |
+| 🔴 **edits `1`+`2`+`4`** | `46` | `0` | 🔴 **`2`** | the same two | 🟢 **MEASURED — edit `4` adds no breakage of its own** |
+
+🟢 **`ACTION KI`'s falsifier had two limbs and BOTH ARE SILENT.** Limb `1` required the failure set
+to be anything other than those two names; it is exactly those two. Limb `2` required edit `4`
+alone to break `≥1` test; it breaks `0`.
+🟡 **One refinement to p175's own record, offered because this KB corrects its own arithmetic:** the
+two tests break as **`ERROR`s, not `FAILURE`s** — `ValidationError` is raised during
+`AssetProvenance.__post_init__`, so the test never reaches an assertion. p175 said *"breaks"*, which
+is right; *"fails"* would not have been. And p176's diff measures **`12` insertions / `5` deletions
+across `2` files**, against the `13`/`2` p175 recorded — one line of shape difference in the gate
+edit, recorded rather than smoothed over.
+
+### 🆕 🔴 The finding that outranks both limbs: the repair is invisible to the suite
+
+🔴 **`c2paStatus` — word-boundary count in `services/pipeline/tests/`: `0`.**
+🔴 **Tests reaching `_provenance_quality_gate`, the function that drops the field: `0`.**
+🟢 **So edit `4` passing `46`/`46` says nothing about edit `4`.** It is not evidence the fix is safe;
+it is evidence the suite cannot see the line at all.
+🆕 🔵 **`T270` — when the datum whose loss is the defect is untested, the defect and its repair are
+indistinguishable to the suite.** This is `T258`'s sibling and it is worse: `T258` found a flag no
+test sets, which makes a control a label. `T270` finds a FIELD no test sets, which makes a
+**data-loss defect unfalsifiable from inside the project.** 🔵 **The diligence question stops being
+*"which test fails when you turn it off?"* and becomes *"which test would notice if this field were
+replaced by a constant?"* — and here the answer, measured, is none.**
+
+### 🆕 🔴 And what the one-line fix actually does in production, which is not what *"repair"* suggests
+
+🟢 **`C2paStatus` has four members, read from the enum: `NOT_APPLICABLE` (`"not-applicable"`),
+`ABSENT` (`"absent"`), `VALID` (`"valid"`), `INVALID` (`"invalid"`).**
+🔴 **All three writers that already store the field store `"absent"`** —
+`licensed_media_workflow.py:259`, `:290` and `project_assets.py:246` — and both readers default to
+`"absent"` (`visual_candidates.py:276`, `:611`).
+🔴 **`C2paStatus("absent")` resolves to `ABSENT`, and `ABSENT` is precisely the status the export
+gate refuses.** So reading the stored value instead of hardcoding `NOT_APPLICABLE` converts every
+real record from **silently passing** to **correctly failing**.
+🟢 **State it to a client in one sentence:** the gate is green today because the pipeline throws away
+the field that would make it red, and the fix is one line — after which nothing exports until
+somebody procures a signing certificate. 🔵 **The blocker was never the code. The code was hiding
+the blocker (`gap 136`).**
+
 ## Pass 175 — 2026-10-13
 
 🟢 **No promotion and no demotion this pass: the shelf is the same `12` rows, and it is re-stated in

@@ -1,0 +1,39 @@
+#	ACTION KL - the full-suite exit-code sweep, both invocations
+#	population	665 script executions across 259 instrument directories in compose/code/	timeout 12s	jobs 10	4 shards
+#	baseline to beat	p175's 9 of 28 (32.1%) on a 5-instrument sample
+invocation	kind	verdict	count
+python3 -I	instrument	ok	216
+python3 -I	instrument	other	82
+python3 -I	instrument	usage	76
+python3 -I	instrument	timeout	63
+python3 -I	instrument	input	17
+python3 -I	instrument	crash	8
+python3 -I	test	ok	156
+python3 -I	test	crash	36
+python3 -I	test	other	4
+python3 -I	test	timeout	3
+python3 -I	test	assert	3
+python3 -I	test	network	1
+python3	instrument	ok	216
+python3	instrument	other	83
+python3	instrument	usage	76
+python3	instrument	timeout	66
+python3	instrument	input	17
+python3	instrument	crash	4
+python3	test	ok	189
+python3	test	timeout	7
+python3	test	other	5
+python3	test	assert	2
+#	RATE	python3 -I	293 of 665 non-zero	44.1%
+#	RATE	python3	260 of 665 non-zero	39.1%
+#	T271	tests crashing under -I	36	of which 35 PASS under plain python3
+#	T271	cause	python3 -I implies -P from Python 3.11, so the script's own directory is not placed on sys.path; every test importing its sibling instrument raises ModuleNotFoundError
+#	T271	consequence	this repository's own documented reproduce line (python3 -I test_x.py) cannot run a whole class of its own tests, and P175-A's rerun_dated.py used the same flag
+#	ITERATION 2	rows reclassified out of "other"	36 of 88	35 -> usage (shell $1 refusals), 4 -> assert (prose tallies, e.g. "7/10 controls passed")
+#	RESIDUE	rows still "other"	49	one identified class NOT fixed: a usage line in SPANISH ("uso:") - frozen as a fixture, asserted as a limit (gap 137)
+#	THAT MATTER	assert + crash, plain python3	10 of 665	1.5%
+#	THAT ARE THIS SWEEP'S ARGV OR THE EGRESS POLICY	usage + input	128 of 665	19.2%
+#	SIDE EFFECTS	committed files rewritten by the sweep	11 files in 7 instruments	+2 created; all restored to HEAD. ACTION KF measured 1 instrument on a 5-instrument sample
+#	FALSIFIER limb 1	refuted if the full-suite non-zero rate is <10%	SILENT at 39.1%
+#	FALSIFIER limb 2	refuted if >60% fail	SILENT at 39.1%
+#	VERDICT	DISCHARGED, BOTH LIMBS SILENT. p175's 32% was the right order of magnitude. gap 131 CLOSED as a rate and RE-STATED as a meaning: the rate is dominated by scripts invoked without their arguments, and only 1.5% of executions mean the suite disagrees with the repository or cannot run.

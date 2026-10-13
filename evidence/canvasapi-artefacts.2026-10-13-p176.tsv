@@ -1,0 +1,25 @@
+#	ACTION KM - ucfopen/canvasapi read PAST its licence, applying T265: name the ARTEFACT that would have to exist, not the standard's name
+#	subject	ucfopen/canvasapi	HEAD=513588f3077fbc7470c28ae56fa541b5ddce6849	default branch master
+#	tree	318 tracked files	158 python	76 test files	1112 test methods	last commit 2026-04-16
+artefact	measurement	value	verdict
+licence	path / bytes / blob	LICENSE / 1130 B / f105f1b3670db14354889ebdc714b3f1f3e9731c (md5 37cd0f927f3fdf7f68cf09edaebfb010)	MIT. p175 recorded 1 129 B - corrected to 1 130 at the same HEAD
+licence	holder line	"Copyright (c) 2017 University of Central Florida - Center for Distributed Learning"	HOLDER-grade institutional placement
+rostering	modules present	enrollment.py; enrollment_term.py; section.py; course.py; user.py; account.py; grading_period.py	all PRESENT
+rostering	named routes	courses/{}/enrollments; courses/{}/enrollments/{}; /accept; /reactivate; /reject; courses/{}/sections; courses/{}/sections/{}; sections/{}/enrollments; enrollment_terms; sections/{}/crosslist	named, not inferred
+write reach	verbs tallied across the client	GET 322; POST 127; PUT 89; DELETE 74	WRITES. Compare edfi-oneroster: 24 GETs, 0 writes
+write reach	enrollments addressed by	POST at course.py:748 and GET at course.py:1226	read AND write on the rostering object
+pagination	mechanism	paginated_list.py - per_page defaulting to 100, _next_url followed by the iterator, __getitem__ growing on demand	REAL, not a thin wrapper
+auth	model	requester.py:187 - "Authorization: Bearer {access_token}", token held on the requester	its own auth model
+errors	typed exceptions	CanvasException; BadRequest; InvalidAccessToken; Unauthorized; Forbidden; RateLimitExceeded; ResourceDoesNotExist; RequiredFieldMissing; Conflict; UnprocessableEntity	10 classes incl. rate limiting
+SIS interop	identifier addressing	sis_course_id (3); sis_section_id (1); sis_account_id (1); sis_group_id (2); sis_import_id (2)	addresses objects by the SIS's OWN ids - interop at the identifier layer
+standards	OneRoster (word boundary)	0	NONE
+standards	Ed-Fi / edfi	0 / 0	NONE
+standards	SCORM / scorm	0 / 0	NONE
+standards	xAPI / xapi	0 / 0	NONE
+standards	Caliper / caliper	0 / 0	NONE
+standards	LTI / lti	3 / 4	7 total, incidental
+activity	last commit	2026-04-16	180 days - EXACTLY at this KB's pushed:>= liveness bar, which is why it appeared in p175's sweep at all
+condition	what it is a client FOR	Canvas LMS - Instructure publishes the core AGPL-3.0 and sells the operated product	the permissive layer is the CLIENT; the system of record is not permissive
+#	FALSIFIER limb 1	refuted if it covers rostering objects AND carries its own auth model	FIRES on both
+#	FALSIFIER limb 2	refuted if it is a thin generated wrapper with no pagination or error semantics	SILENT
+#	VERDICT	DISCHARGED, LIMB 1 FIRED. Promoted from CANDIDATE to ROUTE in verticals/solutions.md. gap 123 CLOSES for the administrative layer, CONDITIONALLY: Canvas-run institutions only, no standards interop, and the system of record stays non-permissive. gap 138 opened on that condition. gap 134 narrows from 4 unverified holder-grade rows to 3.

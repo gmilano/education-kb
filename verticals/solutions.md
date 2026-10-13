@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🆕 🟢 **One CANDIDATE becomes a ROUTE, and it is the first time this file has promoted a row by
+reading its code rather than its licence.** `ACTION KM` read
+[`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) past its grant: `612` named REST calls,
+`127` `POST` / `89` `PUT` / `74` `DELETE` among them, a `Bearer`-token auth model of its own,
+`per_page`-driven pagination that follows the next link, `10` typed exceptions including
+`RateLimitExceeded`, and rostering routes named outright — `courses/{}/enrollments`,
+`sections/{}/enrollments`, `enrollment_terms`.
+🔴 **It routes under one condition that must be said in the same breath: it is a CLIENT for Canvas,
+and Canvas's own core is `AGPL-3.0` with the operated product sold.** 🔵 **The permissive layer is
+the client. The system of record is not permissive, and this file should never let that elide.**
+🆕 🔴 **And a threat-model row enters, from the same tag this KB samples its agents from.** The
+third-most-starred repository on `topic:ai-education` is
+[`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) (`MIT`, `1 063` B,
+`HEAD` `7c2f87a4641b`, `80`★) — *"Get 4.0 GPA without learning"*, naming **Canvas `19` times**,
+`quiz` `7`, `exam` `6`, `answer` `10`, with topics `canvas-lms` and `exam-automation`.
+🔵 **The platform this file now routes a rostering client FOR is the platform the tag's third row
+automates cheating against.** 🟢 **Both are `MIT`, both are real, and the defence row
+(`dodona-edu/dolos`) entered one pass ago. Name all three together or the engagement finds out in
+week two.**
+🟢 **The routing table RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block is
+canonical"* a row not re-stated is lost however true it remains below.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p176
+
+| need | route | licence *(body read)* | status at p176 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED unchanged. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The LATAM, APAC low-bandwidth and Africa row. 🆕 🟡 `ACTION KK` downgrades its PLACEMENT evidence, not the row: its artefact names *"Learning Equality"* and no country** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🟡 **CARRIED WITH THE SAME THREE FLAGS. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); `8` of `86` `licenses/` paths are NOT open-source grants; `25` of `86` are `Apache-1.1`, so clause `3` attribution is owed (`ACTION JU`)** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B)* | 🟢 **CARRIED, EMEA. `SCORM` import AND export, ships `licenses.config.yaml`, the gate to LIFT. Still the only row in this KB DECLARING both `scorm` and `xapi`** |
+| 🟡 **LMS, permissive — university-OWNED exercise + exam platform** | 🟡 [**ls1intum/Artemis**](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** *(`1 090` B, *"© 2026 TUM Applied Education Technologies"*)* | 🟡 **CARRIED as CANDIDATE, EMEA, HOLDER-GRADE. `HEAD` `09266581a02c`, `818`★. 🔴 Still licence-, holder- and `HEAD`-verified ONLY — p176 spent its code-reading budget on `canvasapi` instead, and says so (`gap 134`)** |
+| 🟢 **Assessment integrity — plagiarism detection, permissive** | 🟢 [**dodona-edu/dolos**](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** *(`1 083` B, *"© 2019 Team Dolos <dolos@ugent.be>"*)* | 🟢 **CARRIED, EMEA, HOLDER-GRADE. `HEAD` `44925b867ce7`, `350`★. 🆕 🔴 And its urgency rises: the tag's third row is Canvas-targeted exam automation under `MIT`. 🟡 CANDIDATE still — language coverage and false-positive behaviour UNVERIFIED** |
+| 🟢 **Rostering, permissive — standards-native, READ-ONLY** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED unchanged. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. Still the only STANDARDS-native permissive rostering route here** |
+| 🆕 🟢 **Rostering, permissive — Canvas-native, READ AND WRITE** | 🆕 🟢 [**ucfopen/canvasapi**](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** *(🆕 `1 130` B, *"© 2017 University of Central Florida — Center for Distributed Learning"*)* | 🆕 🟢 **PROMOTED from candidate to ROUTE, North America. `HEAD` `513588f3077f`, `682`★. `ACTION KM`: `enrollments`, `sections`, `enrollment_terms` reached with READ AND WRITE; `Bearer` auth; `per_page=100` pagination following the next link; `10` typed exceptions; `sis_*_id` addressing; `1 112` test methods. 🔴 **CONDITIONS:** `0` word-boundary matches for OneRoster, Ed-Fi, SCORM, xAPI or Caliper — it speaks Canvas, not a standard; and it is a client for an `AGPL-3.0` core. 🟡 Last commit `2026-04-16` — `180` d, exactly at the liveness bar** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **CARRIED unchanged. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The only row where grant-named paths and grant bodies agree exactly** |
+| 🟡 **Assessment / exam generation, permissive** | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🟡 **CARRIED as CANDIDATE, not production. `taiwan-exam` depends on **`PyMuPDF`, `AGPL-3.0`-or-Artifex-commercial**, so the `MIT` root does not reach the closure (`ACTION JR`). Swap for `pypdf` — already in the same `requirements.txt` — or buy the commercial limb BEFORE routing. 🆕 Both re-confirmed present and `MIT`-filtered in p176's `topic:ai-education` census, at `18`★ and `10`★** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, FOURTEENTH pass with no `MIT`/`Apache` education ERP. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED unchanged. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED unchanged. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED unchanged. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🆕 🟢 **CARRIED, and the doubt `gap 133` cast on it is LIFTED: `ACTION KJ` probed `16` paths including every British spelling and `COPYING.md` — `0` of `16`. The *"no root grant"* verdict was right, and its `GPL-2.0` is still at `docs/License.txt`** |
+| 🔴 **SIS, PERMISSIVE and institutional-scale** | 🔴 **none** | — | 🔴 **CARRIED, FOURTEENTH pass. `ACTION KE` refuted the one candidate at p175 (`eagles-edu/sis` is a portal: `0` interop tokens at word-boundary precision, a `SisConfigMirror` model). 🆕 🔵 And `ACTION KM` sharpens what *"none"* means rather than softening it: a permissive rostering CLIENT with write reach now exists for Canvas-run institutions, which is a different thing from a permissive system of record** |
+| 🟡 **SIS, permissive — remaining candidates** | 🟡 [**opensacorg/learning-blocks**](https://github.com/opensacorg/learning-blocks) *(`849` files, **Code for Sacramento**)* · [**Arux-Software/Bright**](https://github.com/Arux-Software/Bright) *(toolkit, not a system of record)* | 🟢 **both `MIT`** — bodies read at p174: `1 075` B, and `1 075` B at `LICENSE.txt` | 🟡 **CARRIED as CANDIDATES. NEITHER has been probed the way `ACTION KE` probed the third one. 🔴 Do not quote either as rostering-capable — that is exactly the claim that failed at p175. 🆕 `learning-blocks` is placed to the United States at SUBNATIONAL grade by `ACTION KK` (*"Sacramento"* in the artefact)** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🆕 🔴 **CARRIED as REFUTED, and the refutation is now probe-complete: `ACTION KJ` found `0` of `16` grant paths at the root, British spellings included. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔵 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔵 **DELIBERATELY NOT ROUTED, sixth pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package** |
+| 🆕 🔴 **THREAT MODEL — not a dependency** | 🆕 🔴 [**sgaofen/vibe-schooling**](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** *(`1 063` B, *"© 2026 sgaofen"*)* | 🆕 🔴 **NEW ROW, recorded as an ATTACK SURFACE exactly as `P171-D` records the proctoring-attack tool. `HEAD` `7c2f87a4641b`, `56` files, `80`★, third-most-starred on `topic:ai-education`. Canvas named `19`×, `quiz` `7`, `exam` `6`, topics `canvas-lms` + `exam-automation`. 🔵 Any Canvas engagement that routes `canvasapi` should assume this exists on the student side** |
+
+🆕 🟢 **The tally, RE-COUNTED against the `22` rows above — and the first count was WRONG, by two
+errors that cancelled.** 🔴 **The draft tally read `7` + `5` + `6` + `4` = `22`, which matched the
+row count and was still wrong twice: it counted the exam-generation row as TWO rows because it names
+two repositories, and it gave `Sakai` no bucket at all.** 🔵 **Two compensating errors summing to the
+right total is the exact failure this file keeps warning about, and it was caught by counting the
+rows rather than trusting the sum.**
+
+| verdict | rows | which |
+|---|---|---|
+| 🟢 **permissive and ROUTABLE** | 🟢 **`7`** | institutional LMS, offline LMS, AI-native LMS, standards rostering *(read-only)*, 🆕 **Canvas rostering *(read+write)***, credentials, SCORM interop |
+| 🟡 **permissive CANDIDATE — licence verified, code not** | 🟡 **`4`** | `Artemis`, `dolos`, exam generation *(ONE row, two named repositories)*, remaining SIS candidates |
+| 🟡 **permissive WITH FLAGS — a narrowed grant, not a clean one** | 🟡 **`1`** | `Sakai` (`ECL-2.0`) — the bucket the draft tally forgot |
+| 🔴 **copyleft only, no permissive option** | 🔴 **`6`** | education ERP/SIS, MOOC platform, mass-market LMS, second copyleft LMS, `2` active SIS |
+| 🔴 **refuted, not routed, or a threat model** | 🔴 **`4`** | `Forma LMS`, `openlxp-xia`, permissive institutional SIS *(none exists)*, 🆕 `vibe-schooling` |
+
+🔵 **`7` + `4` + `1` + `6` + `4` = `22`, against `22` rows counted one by one.** 🟢 **The sum and the
+row count are both shown, because this pass has just demonstrated that agreeing with the total is
+not the same as being right.**
+
 ## Pass 175 — 2026-10-13
 
 🆕 🔴 **The row p174 was most pleased with is REFUTED, and the twelve-pass sentence it overturned is

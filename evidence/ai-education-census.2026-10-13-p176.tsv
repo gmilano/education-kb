@@ -1,0 +1,37 @@
+#	p176 - topic:ai-education license:mit pushed:>=2026-04-16, top 30 by stars. Shape counted by DECLARED TOPIC, not by prose.
+repo	stars	skill_topic	names_a_harness	shape	licence_body_read	head
+pguso/agents-from-scratch	1045	no	no	AI-literacy course	MIT 1091 B "AI Agents from Scratch Contributors"	-
+SenmuuuuW/universal-diagnostic-tutor-skill	244	YES	YES	agent skill - diagnosis-first tutor	MIT 1101 B "universal-diagnostic-tutor-skill contributors"	075c1895d255
+sgaofen/vibe-schooling	80	no	YES (mcp)	THREAT MODEL - Canvas exam automation	MIT 1063 B "sgaofen"	7c2f87a4641b
+TovTechOrg/Tov-learn	36	no	YES (claude-code)	agent skill - tutor with spaced repetition	-	-
+NickScherbakov/codementor-ai-platform	22	no	no	application	-	-
+niansia/taiwan-exam	18	YES	YES	exam generation, APAC	already routed	-
+minicoursegenerator/skills-for-course-creators	15	YES	YES	skills directory	-	-
+vesperchinn/learn-anything-skill	12	YES	YES	agent skill pack	-	-
+thisisandreeeee/llms-in-10-words	11	no	no	glossary	-	-
+dulanjayabhanu/mononeural	11	no	no	application	-	-
+timothywarner-org/ai901-cert-buddy-claude	10	YES	YES	agent skill - exam prep	-	-
+jeliael/fakao-ai-exam-engine	10	no	no	exam engine, APAC	already routed	-
+BridgingAISocietySummerSchools/Python-for-Data-Science-Workshop	7	no	no	courseware	-	-
+wwlwgo/cn-primary-math-knowledge-graph	7	no	no	DATASET - prerequisite graph, APAC	MIT 1117 B "Contributors to the China Primary Mathematics Knowledge Graph"	3b6f38f0e4fb
+Scorpioyyy/verichalk	6	no	no	verified item generation agent, APAC	MIT 1066 B "Scorpioyyy"	9f963ab192a1
+behnia137/ai-for-beginners-visual	6	no	no	explainer	-	-
+UdeepChowdary/emotionDetectionLearningSupportEngine	4	no	no	application	-	-
+Duncan-maker117/toefl-ai-skills	4	YES	YES	agent skill - TOEFL coach	-	-
+2022764025/Lecture-Hunter	3	no	no	application	-	-
+zmuxuny/hy3-learning-agent	3	no	no	agent runtime	-	-
+Supermikeka/ai-mcu-simulab	3	no	no	application	-	-
+fanqin314/english-study-club	3	no	no	application	-	-
+michael-borck/hands-on-ai	3	no	no	toolkit	-	-
+dreamnight16/see-ai	3	no	no	courseware	-	-
+ezra-y/agent-trajectory	3	no	YES (claude-code)	developer tool	-	-
+joelaharris98/legal-ai-engineering-lab	2	no	YES (claude-code)	courseware	-	-
+CappuccinaVC/ai-learning-tracker	2	no	no	application	-	-
+2023Anita/openai-agents-medical-research-guide	2	no	no	courseware	-	-
+ai-educademy/ai-platform	2	no	no	application	-	-
+dreamdavidmit-glitch/rviewer	2	YES	YES	agent skill - quiz engine	-	-
+#	TALLY	declares a SKILL topic	7 of 30
+#	TALLY	names a specific agent HARNESS (Claude Code, Codex, MCP)	11 of 30
+#	TALLY	deployable application or dataset	19 of 30
+#	TALLY	LATAM-originated	0 of 30 - tenth consecutive pass
+#	READING	the vertical's new supply is harness-coupled skills; this KB's 12-row shelf is almost entirely applications. The tag's new supply differs from the shelf in SHAPE, not merely in size.

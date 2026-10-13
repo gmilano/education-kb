@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p176
+
+🟢 **The two population counts, re-taken on the one-request authenticated channel, same `180`-day
+window as p175 so the figures are comparable:**
+
+| query *(recorded verbatim, per `T227`)* | p173 | p174 | p175 | 🆕 **p176** |
+|---|---|---|---|---|
+| `topic:education license:mit pushed:>=2026-04-16` | 🔴 *"`8.2k`"* | 🟡 `8 191` *(17-window partition)* | 🟢 `8 197` | 🆕 🟢 **`8 198`** |
+| `topic:ai-education license:mit pushed:>=2026-04-16` | 🟢 `135` | — | 🟢 `135` | 🆕 🟢 **`135`** |
+
+🔵 **The narrow tag has now returned `135` exactly, three times, across three passes. The wide tag
+moved `+1` in a day.** 🟢 **Both are exact integers from one request each; p174's `17`-request
+partition stays retired as a method and kept as a fallback (`T264`).**
+
+🆕 🔴 **A channel-precision measurement that should stop a habit: a keyword search does not reach
+this vertical.** `tutor OR tutoring OR grading agent license:apache-2.0 pushed:>=2026-08-01
+stars:>100` returns **`1 684`** repositories, and **`0` of its top `25` by stars are
+education-vertical** — the head is `JavaGuide`, `awesome-llm-apps`, `openai/codex`, `caveman`,
+`TradingAgents`, `gemini-cli`, `ragflow`, `crawl4ai`, `mem0`, `cline`, `goose`. 🔵 **At this star
+level the generic agent population drowns the vertical completely. The tag is the only usable
+sampling frame, which is why `T266`'s warning about WHICH tag matters so much.**
+
+🆕 🔴 **And a channel defect found by control, which puts a class of this KB's branch claims in
+doubt.** Probing candidate licences, four repositories answered `200` on **both** `main` and
+`master` with byte-identical bodies. Controls settle what is happening:
+
+| probe | result | what it shows |
+|---|---|---|
+| `Scorpioyyy/verichalk/main/LICENSE` | `200` | the real default branch |
+| `Scorpioyyy/verichalk/master/LICENSE` | 🔴 **`200`** | 🔴 **and `git ls-remote` advertises only `dev` and `main` — there IS no `master`** |
+| `Scorpioyyy/verichalk/nonexistent-branch-p176/LICENSE` | `404` | the channel does not serve arbitrary refs |
+| `uccser/cs-field-guide/master/LICENCE` | `200` | its real default branch |
+| `uccser/cs-field-guide/main/LICENCE` | 🟢 **`404`** | 🟢 **`main` is NOT aliased** |
+| `uccser/cs-field-guide/master/NOPE.md` | `404` | a missing path on a real branch still `404`s |
+
+🆕 🔵 **`T273` — on `raw.githubusercontent.com`, `master` is served as an alias of the default branch
+for repositories that have no `master`, and `main` is not aliased the same way.** 🔴 **So any
+*"verified on `master`"* claim in this KB taken through `raw` may be a DEFAULT-BRANCH read wearing a
+branch name.** 🟢 **The mechanism is not established — p176 observed behaviour, not server code —
+and the fix is cheap: resolve the default branch with `git ls-remote` first, then probe that ref by
+name.** 🔵 **`ACTION KJ`'s own results are unaffected: its four subjects answered `0` of `16` at
+every path on every ref tried, and its positive control was confirmed on the ref
+`git ls-remote` reports.**
+
+🆕 🟡 **Web-channel sweep, run because the task asks for it and recorded with its tier attached.**
+🔴 **The open-web search channel returned NO primary GitHub trending page this pass** — results were
+third-party trackers, listicles and aggregator blogs. 🟡 **What it did return, and what it is worth:**
+
+| finding | source tier | check against the authenticated channel |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` *(`MIT`, agent course)* named as the leading education-shaped agent repo at *"`~67 000`★"* | 🔴 secondary listicle | 🟡 **not re-counted here; its SHAPE is courseware, which is why this KB files Microsoft's two courseware repos under placement rather than routing** |
+| `pguso/agents-from-scratch` at *"`796`★"* | 🔴 secondary listicle | 🔴 **WRONG by `~24%` — the authenticated channel says `1 045`. Recorded as a worked example of why star counts from blogs are not evidence** |
+| `rohitg00/ai-engineering-from-scratch` reported `#1` on GitHub Trending on `2026-05-24` | 🔴 secondary tracker | 🔴 **not verified; and AI-engineering courseware is not education-vertical under `T228`** |
+| *"`9` of the top `10` monthly trending projects were AI-related in February `2026`"* | 🔴 secondary blog | 🔵 **unverifiable here and not actionable; recorded so the next pass does not re-fetch it** |
+
+🔵 **The standing lesson, now with a measured instance: the open web gives SHAPE and the
+authenticated channel gives NUMBERS. Mixing them produces a KB that is `24%` wrong and confident.**
+
+🆕 🔴 **And a verification method this KB should stop prescribing: `curl -sI` against a
+`github.com` repository URL returns **`403` for every repository, real or not**, because the egress
+proxy denies `github.com` HTML to `curl` — consistent with p174's finding that `github.com/search`
+is `403` to `curl` and `200` to `WebFetch`.** 🔴 **So a `curl`-based URL check in this container
+cannot tell a live repository from a `404`: it verifies the proxy.**
+🟢 **The channel that works is `git ls-remote --exit-code --heads`, and p176 ran it over every
+`github.com` URL it wrote: `44` of `44` EXIST, `0` failures.** 🔵 **Recorded in
+[`evidence/channel-ledger.2026-10-13-p176.tsv`](../evidence/channel-ledger.2026-10-13-p176.tsv) so
+no later pass re-derives it.**
+
+🟢 **New permissive repository rows this pass, licence body READ — full rows, bytes and holders in
+[`agents/trending.md`](../agents/trending.md) and
+[`repos/foundations.md`](../repos/foundations.md):**
+`SenmuuuuW/universal-diagnostic-tutor-skill` (`MIT`, `1 101` B, `244`★),
+`Scorpioyyy/verichalk` (`MIT`, `1 066` B, `4 198` files, APAC),
+`wwlwgo/cn-primary-math-knowledge-graph` (`MIT`, `1 117` B, APAC),
+`sgaofen/vibe-schooling` (`MIT`, `1 063` B — 🔴 **THREAT MODEL, not a component**).
+🔴 **`0` LATAM-originated rows, tenth consecutive pass, now against two exactly-counted tags.**
+
 ## 2026-10-13 — p175
 
 🆕 🟢 **This page's headline is that p174's headline is retired, one pass later, by a channel nobody

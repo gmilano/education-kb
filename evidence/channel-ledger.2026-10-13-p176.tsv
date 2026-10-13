@@ -1,0 +1,31 @@
+#	p176 channel ledger - every count's request form and precision, per T227 + T252 + T264
+channel	request	result	precision
+github MCP search_repositories	topic:education license:mit pushed:>=2026-04-16	8198	EXACT, one request (p175: 8197 one day earlier)
+github MCP search_repositories	topic:ai-education license:mit pushed:>=2026-04-16	135	EXACT, one request - identical at p173, p175, p176
+github MCP search_repositories	tutor OR tutoring OR grading agent license:apache-2.0 pushed:>=2026-08-01 stars:>100	1684	EXACT - but 0 of its top 25 by stars are education-vertical
+raw.githubusercontent.com	GET <owner>/<repo>/<ref>/<path>	200/404	RESOLVES. The only hosts that resolve here are github.com and raw.githubusercontent.com (T267)
+git clone --depth 1 (proxy)	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	905 files	WORKED
+git clone --depth 1 (proxy)	ucfopen/canvasapi	318 files	WORKED
+git clone --depth 1 (proxy)	JushBJJ/Mr.-Ranedeer-AI-Tutor + 5 branch fetches	55 file-paths	WORKED
+git ls-remote --heads (proxy)	branch enumeration	WORKED	the channel that settles T273
+open web search	github trending education AI 2026	NO primary trending page	third-party trackers and listicles only
+open web search	star counts from listicles	pguso/agents-from-scratch "796" vs authenticated 1045	WRONG by ~24% - secondary star counts are not evidence
+execution-permission layer	backgrounded sweep of repository code (nohup)	DENIED "[Code from External]"	the foreground sharded run was ALLOWED - p175's 3 refusals were not reproduced
+#	T273 - raw.githubusercontent.com serves `master` as an alias of the default branch where no `master` exists, and does NOT alias `main` the same way
+probe	result	ls-remote says	reading
+Scorpioyyy/verichalk/main/LICENSE	200	main EXISTS	true default-branch read
+Scorpioyyy/verichalk/master/LICENSE	200	NO master branch (only dev, main)	ALIAS - a default-branch read wearing a branch name
+Scorpioyyy/verichalk/nonexistent-branch-p176/LICENSE	404	-	the channel does not serve arbitrary refs
+Scorpioyyy/verichalk/zzz99/LICENSE	404	-	control
+uccser/cs-field-guide/master/LICENCE	200	master EXISTS (default)	true read
+uccser/cs-field-guide/main/LICENCE	404	NO main branch	`main` is NOT aliased - the asymmetry
+uccser/cs-field-guide/master/NOPE.md	404	-	a missing path on a real branch still 404s
+sgaofen/vibe-schooling/master/LICENSE	200	NO master branch (only main)	ALIAS, second instance
+#	MECHANISM	NOT ESTABLISHED - p176 observed behaviour, not server code
+#	CONSEQUENCE	any "verified on master" claim in this KB taken through raw may be a DEFAULT-BRANCH read. Fix: resolve the default branch with git ls-remote first, then probe that ref by name.
+#	ACTION KJ UNAFFECTED	its 4 subjects answered 0 of 16 at every path on every ref tried, and its positive control was confirmed on the ref git ls-remote reports.
+#	URL VERIFICATION - the prescribed method does not work here, and the substitute does
+curl -sI https://github.com/<owner>/<repo>	403 for ALL 44 URLs written in this pass	UNUSABLE - the egress proxy denies github.com HTML to curl (consistent with p174's "github.com/search is 403 to curl")
+git ls-remote --exit-code --heads https://github.com/<owner>/<repo>	44 EXISTS / 0 FAILED of 44	THE USABLE CHANNEL - verifies that a repository exists and advertises branches
+#	CONSEQUENCE	a curl -sI URL check in this container cannot tell a real repository from a 404: it returns 403 for both. Any pass that "verified URLs with curl" verified the proxy.
+#	ROW-LEVEL	all 44 github URLs written into p176's blocks were confirmed to EXIST via git ls-remote. Full list in the pass's working record.

@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p176 — new candidates, licence bodies READ, deliberately NOT promoted
+
+🟢 **Four `MIT` rows enter as CANDIDATES. Licence BODY, byte count, copyright HOLDER and `HEAD` sha
+are verified for every one; NOTHING ELSE IS.** 🔵 **That restraint is the direct lesson of
+`ACTION KE` at p175, which refuted a row admitted on a licence check — and of `gap 134`, which p176
+narrowed by reading one row's code instead of admitting six more.**
+🔴 **One of the four is recorded as a THREAT MODEL, not a component.**
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | files | ★ | region *(`P800`)* | what it is, and why it is not promoted |
+|---|---|---|---|---|---|---|
+| 🆕 🟡 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **`MIT`** — `1 101` B, 🟡 *"© 2026 universal-diagnostic-tutor-skill contributors"* — a PROJECT, not an institution or a person | `075c1895d255` | `173` | `244` | 🔴 **UNPLACED** — nothing in the artefact names an institution, curriculum or standard | a diagnosis-first tutor for STEM and CS with no mode menu: it picks the next teaching step, checks understanding, then builds mastery. 🟢 **Second-most-starred row on `topic:ai-education`.** 🔴 **NOT PROMOTED: it is an agent SKILL, so it inherits its host harness's auth and data path — which is exactly the shape question this pass's trends block opens** |
+| 🆕 🟡 [`Scorpioyyy/verichalk`](https://github.com/Scorpioyyy/verichalk) | 🟢 **`MIT`** — `1 066` B, 🟡 holder is an INDIVIDUAL | `9f963ab192a1` | 🟢 **`4 198`** | `6` | 🟢 **APAC** — placed by the national curriculum boundary it verifies against | a verifiable problem-setting agent for Chinese primary mathematics: generated items are checked by a solver, by a blind re-solve, and against a curriculum-standard boundary before delivery. 🟢 **The `4 198`-file tree and a `eval/` directory make it the most substantial new row.** 🔴 **NOT PROMOTED: `6`★ and created `2026-10-05` — eight days old at this pass** |
+| 🆕 🟡 [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | 🟢 **`MIT`** — `1 117` B, 🟡 *"Contributors to the China Primary Mathematics Knowledge Graph"* | `3b6f38f0e4fb` | `113` | `7` | 🟢 **APAC** — placed by *"Chinese primary mathematics"* in the artefact | a traceable, verifiable micro-learning-objective DEPENDENCY dataset with a JSON schema. 🔵 **Not an agent — the prerequisite graph an adaptive tutor needs underneath it, which this KB has never had a permissive row for.** 🔴 **NOT PROMOTED: a dataset belongs in `repos/`, and its coverage and accuracy are unverified** |
+| 🆕 🔴 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** — `1 063` B, *"© 2026 sgaofen"* | `7c2f87a4641b` | `56` | `80` | 🔴 **UNPLACED** | 🔴 **RECORDED AS A THREAT MODEL, NOT A COMPONENT, exactly as `P171-D` records the proctoring-attack tool.** *"Get 4.0 GPA without learning"* — Canvas named `19`×, `quiz` `7`, `exam` `6`, `answer` `10`, topics `canvas-lms` and `exam-automation`. 🟢 **Third-most-starred row on `topic:ai-education`.** 🔵 **It is in this file because an engagement that routes a Canvas client should know what the student side has** |
+
+🟡 **One row examined and EXCLUDED on the vertical test, recorded so the exclusion is auditable:**
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) — `MIT`, `1 091` B,
+*"© 2025 AI Agents from Scratch Contributors"*, **`1 045`★ and the most-starred row on
+`topic:ai-education`**. 🔴 **It teaches building agents on a local LLM; it is AI literacy, not an
+education-vertical tool.** 🔵 **`T228` measured this tag at roughly `46%` not-edtech, and the
+tag's own head is an instance of it.** 🟡 **Also worth recording because it contradicts a secondary
+source: a `2026` listicle surfaced in p176's web sweep put it at `796`★; the authenticated channel
+says `1 045`. The listicle is stale by `~24%`.**
+
+🟢 **Channel and precision, per `T227` + `T264`:** every count above is from the authenticated
+GitHub MCP search channel, one request per query, exact.
+🔴 **Not verified for any row above: dependency closure, build, tests, operator evidence, data
+path, or whether anyone runs them.**
+
 ## 2026-10-13 — p175
 
 🆕 🟢 **`ACTION KD` is DISCHARGED with both limbs silent, and the finding is not the silence — it is

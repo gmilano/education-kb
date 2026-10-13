@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🆕 🟢 **One of p175's four holder-grade rows has now been read PAST its licence, and it is better
+than the row claimed.** `ACTION KM` applied `T265`'s rule — name the artefact that would have to
+exist and look for THAT, not for the standard's name — to
+[`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi). 🟢 **It reaches rostering objects with
+READ AND WRITE, carries its own auth model, paginates properly and raises typed errors.**
+🔴 **`ACTION KM`'s falsifier limb `1` therefore FIRES, and `gap 123` closes for the administrative
+layer — conditionally, and the condition is the whole finding: it is a CLIENT, and the system of
+record it clients for is Canvas, whose own core is not permissive.**
+🆕 🔴 **`ACTION KJ` converted `0` licence verdicts and found a bigger defect than the one it was
+sent for.** No repository this KB ever recorded as grant-free carries a grant at a British spelling
+— `0` of `16` paths on each of four subjects. 🔴 **But the probe-list census underneath that answer
+is the finding: this repository contains `76` independent hardcoded grant-path lists. `48` carry
+`LICENCE`. `3` carry `COPYING.md`.** 🔵 **The defect was never a spelling. It is that the list is
+copied `76` times and cannot be extended (`T272`).**
+🟢 **No new rows ENTER this pass, and that is deliberate.** p175 admitted six on a licence read and
+registered `gap 134` against itself for doing so; p176 spends the pass verifying one of them instead
+of admitting more. 🔵 **One row read past its licence is worth more than six read up to it.**
+
+### 🟢 The `6` p175 rows — RE-STATED, with the verification state of each made explicit
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | region *(`P800`)* | verified PAST the licence? |
+|---|---|---|---|---|
+| 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** — 🆕 **`1 130` B** *(p175 said `1 129`; blob `f105f1b3670d`, `md5 37cd0f92…`)*, *"© 2017 University of Central Florida — Center for Distributed Learning"* | `513588f3077f` | 🟢 **North America** — 🆕 🟡 **subnational grade, see `ACTION KK`** | 🆕 🟢 **YES — `ACTION KM`, in full below** |
+| 🟡 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** — `1 090` B, *"© 2026 TUM Applied Education Technologies"* | `09266581a02c` | 🟢 **EMEA** — HOLDER-grade | 🔴 **NO — licence, holder and `HEAD` only (`gap 134`)** |
+| 🟡 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** — `1 083` B, *"© 2019 Team Dolos <dolos@ugent.be>"* | `44925b867ce7` | 🟢 **EMEA** — HOLDER-grade | 🔴 **NO — and it is the row a client will ask about first, because it is the only assessment-integrity route here** |
+| 🟡 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **`MIT`** — at **`LICENCE`**, `1 128` B, *"© 2016-2022 University of Canterbury CSER Group"* | `7e323930cf6f` | 🟢 **APAC** — HOLDER-grade, New Zealand | 🟡 **PARTLY — it served as `ACTION KJ`'s known positive and reproduced at `1 128` B on `master`** |
+| 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **`MIT`** — `1 082` B, 🔴 **holder is an INDIVIDUAL: *"© 2021 John McCann Cunniff Junior"*** | `894ed020997f` | 🔴 **North America — DESCRIPTION-grade only, and `ACTION KK` downgrades it further: the artefact names *"NYU"* and NO country** | 🔴 **NO** |
+| 🟡 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | 🟢 **`MIT`** — `1 072` B, 🟡 **holder is an INDIVIDUAL** | `1142d8e14cdc` | 🟡 **APAC** — DESCRIPTION-grade, `showlab` + *"[ICML 2026]"* | 🔴 **NO** |
+
+🔴 **So `gap 134` narrows from `4` unverified holder-grade rows to `3`, and does not close.**
+
+### 🆕 🟢 `ACTION KM` — `ucfopen/canvasapi` read past its licence, artefact by artefact
+
+🟢 **Controlled: `HEAD` `513588f3077f`, `318` tracked files, `158` Python, `76` test files,
+`1 112` test methods.**
+🔵 **The rule, per `T265`: do not count the standard's NAME. Count the route that would have to
+exist.**
+
+| artefact the row would need | measured | verdict |
+|---|---|---|
+| 🟢 **rostering objects as modules** | `enrollment.py`, `enrollment_term.py`, `section.py`, `course.py`, `user.py`, `account.py`, `grading_period.py` — all PRESENT | 🟢 **reaches them** |
+| 🟢 **rostering routes, as named request strings** | `courses/{}/enrollments`, `courses/{}/enrollments/{}`, `/accept`, `/reactivate`, `/reject`, `courses/{}/sections`, `sections/{}/enrollments`, `enrollment_terms`, `sections/{}/crosslist` | 🟢 **named, not inferred** |
+| 🟢 **WRITE reach** | 🟢 **`322` `GET`, `127` `POST`, `89` `PUT`, `74` `DELETE`** — and `courses/{}/enrollments` is addressed by `POST` at `course.py:748` as well as `GET` at `:1226` | 🟢 **writes. Compare `edfi-oneroster`: `24` `GET`s, `0` writes** |
+| 🟢 **pagination** | `paginated_list.py` — `per_page` defaulting to `100`, a `_next_url` the iterator follows, `__getitem__` growing the list on demand | 🟢 **real, not a thin wrapper** |
+| 🟢 **auth model** | `requester.py:187` — `Authorization: Bearer {access_token}`, token held on the requester | 🟢 **its own** |
+| 🟢 **error semantics** | `CanvasException` + `BadRequest`, `InvalidAccessToken`, `Unauthorized`, `Forbidden`, `RateLimitExceeded`, `ResourceDoesNotExist`, `RequiredFieldMissing`, `Conflict`, `UnprocessableEntity` | 🟢 **typed, including rate limiting** |
+| 🟡 **SIS identifier addressing** | `sis_course_id`, `sis_section_id`, `sis_account_id`, `sis_group_id`, `sis_import_id` | 🟡 **addresses objects by the SIS's OWN ids — interop at the identifier layer** |
+| 🔴 **STANDARDS interop, word-boundary** | 🔴 **OneRoster `0`, Ed-Fi `0`, SCORM `0`, xAPI `0`, Caliper `0`.** `LTI` `7` | 🔴 **none. It speaks Canvas, not a standard** |
+| 🟡 **activity** | last commit **`2026-04-16`** | 🟡 **`180` days — EXACTLY at this KB's liveness bar, which is why it appeared in p175's sweep at all** |
+
+🟢 **Falsifier limb `1` FIRES: rostering objects AND its own auth model.** Limb `2` is SILENT — it is
+not a thin generated wrapper by any of the three tests the action named.
+🔴 **And the condition that must travel with the row, because without it the row oversells:**
+`canvasapi` is a permissive CLIENT for a system of record that is not permissive. Instructure
+publishes Canvas's core under `AGPL-3.0` and sells the operated product.
+🔵 **So the honest sentence is: the administrative layer finally has an `MIT` client with write
+reach and real auth — for institutions that already run Canvas.** It does not give this KB a
+permissive SIS, and the row underneath it is still 🔴 **none** (fourteenth pass).
+
+### 🆕 🔴 `ACTION KJ` — `0` verdicts converted, and a defect `19×` wider than the one registered
+
+🟢 **The four subjects, every one of them a published absence claim in this KB, probed at `16` paths
+on the default branch — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`,
+`LICENCE.txt`, `COPYING`, `COPYING.md`, `COPYING.txt`, `License`, `License.md`, `license`,
+`license.md`, `LICENSE-MIT`, `LICENSE-APACHE`, `NOTICE`:**
+
+| subject | paths answering `200` | verdict |
+|---|---|---|
+| 🟢 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🟢 **`0` of `16`** | 🟢 **verdict STANDS, and strengthens — see the branch enumeration below** |
+| 🟢 [`os4ed/openSIS-Classic`](https://github.com/os4ed/openSIS-Classic) | 🟢 **`0` of `16`** | 🟢 **the *"no root grant"* verdict STANDS. Its `GPL-2.0` is still at `docs/License.txt` (`T209`)** |
+| 🟢 [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`0` of `16`** | 🟢 **STANDS. `GPL-2.0` at `html/license.txt`, `9` languages, none named as governing (`gap 116`)** |
+| 🟢 [`spdx/license-list-data`](https://github.com/spdx/license-list-data) | 🟢 **`0` of `16`** | 🟢 **STANDS. The canonical SPDX token list still publishes no licence of its own** |
+| 🟢 **CONTROL — the known positive** [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **`1` of `16` — `LICENCE`, `1 128` B** | 🟢 **the instrument is validated by a positive it was required to find, and it reproduced p175's byte count exactly** |
+
+🆕 🟢 **And the word *"exhaustive"* is EARNED for the first time, on the row that was carrying it
+without earning it.** p169's `T209` enumerated `Mr.-Ranedeer`'s default branch — `12` files, `0`
+grants. 🟢 **p176 enumerated EVERY branch the remote advertises:**
+
+| branch | tracked files | grant-shaped paths *(case-insensitive `licen[cs]e`/`copying`/`notice`)* |
+|---|---|---|
+| `main` | `12` | 🟢 **`0`** |
+| `v2.6.2` | `12` | 🟢 **`0`** |
+| `v2.6.3` | `13` | 🟢 **`0`** |
+| `dev/v2.7` | `9` | 🟢 **`0`** |
+| `Speedrun-Brother` | `9` | 🟢 **`0`** |
+
+🟢 **`55` file-paths across `5` branches, `0` grants.** 🔵 **Before p176 the word meant *"the default
+branch"*; now it means *"every branch the remote advertises"*, and the claim is the same claim.**
+
+### 🆕 🔴 The probe-list census — why `gap 133` was the wrong shape
+
+🟢 **`76` grant-path probe lists found in `compose/code/`, counted by the lines that enumerate two
+or more grant paths together:**
+
+| property | count | share |
+|---|---|---|
+| 🟢 carry `LICENSE` | `76` | `100%` |
+| 🟡 **carry the British `LICENCE`** | 🟡 **`48`** | 🟡 **`63.2%`** |
+| 🔴 **carry `COPYING.md`** | 🔴 **`3`** | 🔴 **`3.9%`** |
+
+🔴 **`28` lists cannot find a British-spelled grant and `73` cannot find `COPYING.md`** — and
+`p120-unread-grant-resolution/probe.sh` has carried `LICENCE LICENCE.md` all along, which is how
+this KB found `cs-field-guide` in the first place.
+🆕 🔵 **`T272` — a probe list copied `76` times is not a list, it is `76` lists, and extending it is
+not an edit but a migration.** p175 wrote *"`P50`'s probe list misses `LICENCE`"*, which implies one
+list and one fix. 🔵 **The fix is a shared vocabulary in `compose/code/lib/`, imported rather than
+retyped, and `gap 135` registers it as the migration it is.** 🟢 **The reassurance that belongs next
+to it: `0` published verdicts change, so this is debt, not error.**
+
 ## Pass 175 — 2026-10-13
 
 🆕 🔴 **One row LEAVES this file and it is the one p174 admitted with the most confidence.**

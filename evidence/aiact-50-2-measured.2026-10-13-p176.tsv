@@ -1,0 +1,38 @@
+#	ACTION KI - the measurement ACTION KH could only predict
+#	subject	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	HEAD=9c260890214df68ad8fd0d681d3e77a6a7b7ea9f (unmoved, 4th controlled re-read)
+#	tree	905 files	272 python	46 security tests	last commit 2026-09-21
+#	runner	python3.12 + stdlib unittest; sys.path set INSIDE a runner script (NOT via PYTHONPATH, because python3 -I ignores the environment - T271); PIL stubbed; ALYSTRIA_RENDERER_MODE=fixture; ALYSTRIA_MEDIA_MODE=fixture
+#	note	p175's 3 refusals by the execution-permission layer were NOT reproduced this pass; the run was allowed
+stage	measurement	value	evidence_class
+pristine	tests run	46	MEASURED
+pristine	failures	0	MEASURED
+pristine	errors	0	MEASURED
+pristine	verdict	46/46 - baseline reproduced on a THIRD independent runner	MEASURED
+edit1	file	services/pipeline/src/alystria/security/provenance.py	MEASURED
+edit1	insertions	7	MEASURED
+edit2	file	services/pipeline/src/alystria/security/gates.py	MEASURED
+edit2	insertions/deletions	5 / 5	MEASURED
+edit1+2	diff total	12 insertions / 5 deletions over 2 files (p175 recorded 13/2 - one line of shape difference, recorded not smoothed)	MEASURED
+edit1+2	tests run	46	MEASURED
+edit1+2	failures	0	MEASURED
+edit1+2	errors	2	MEASURED
+edit1+2	broken test 1	test_provenance_gates.LicensingTests.test_apache_two_generated_asset_allows_transformed_commercial_export	MEASURED
+edit1+2	broken test 2	test_provenance_gates.LicensingTests.test_mit_starter_audio_allows_transformed_commercial_export	MEASURED
+edit1+2	failure CLASS	ERROR not FAILURE - ValidationError raised in AssetProvenance.__post_init__, so no assertion is reached	MEASURED
+edit1+2	agreement with p175's PREDICTED set	EXACT, name for name	MEASURED
+edit4	file/line	services/pipeline/src/alystria/generation/workflow.py:3018	MEASURED
+edit4	insertions/deletions	5 / 1	MEASURED
+edit4	tests run (edit 4 ALONE, pristine tree)	46	MEASURED
+edit4	failures + errors (ALONE)	0	MEASURED
+edit1+2+4	errors	2 - the same two; edit 4 adds no breakage of its own	MEASURED
+coverage	c2paStatus word-boundary hits in services/pipeline/tests/	0	MEASURED
+coverage	tests reaching _provenance_quality_gate	0	MEASURED
+coverage	tests passing a c2pa= kwarg	0	MEASURED
+enum	C2paStatus members	NOT_APPLICABLE="not-applicable"; ABSENT="absent"; VALID="valid"; INVALID="invalid"	MEASURED
+production	writers storing the field	licensed_media_workflow.py:259, :290; project_assets.py:246 - all store the string "absent"	MEASURED
+production	C2paStatus("absent") resolves to	ABSENT	MEASURED
+production	gate treatment of ABSENT	REFUSED - emits export.c2pa	MEASURED
+production	consequence of edit 4 in production	every real record flips from silently PASSING to correctly FAILING; nothing exports until a signing certificate exists	MEASURED
+#	FALSIFIER limb 1	refuted if the failure set is anything other than those two names	SILENT - it is exactly those two
+#	FALSIFIER limb 2	refuted if edit 4 alone breaks >=1 test	SILENT - it breaks 0
+#	VERDICT	DISCHARGED, BOTH LIMBS SILENT. gap 132 CLOSED. T270 opened: the field whose loss IS the defect is untested, so defect and repair are indistinguishable to the suite. gap 136 opened on the production consequence.

@@ -1,0 +1,17 @@
+#	ACTION KK - settle gap 119 after four carries: which COUNTRY does each "North America" artefact NAME?
+#	rule	country > subnational > institution > none. A weaker grade is recorded only when every stronger one is absent. The artefact means the files, not the GitHub description and not the maintainer's name (P800).
+repo	grade	country_named	subnational_named	institution_named	note
+ucfopen/canvasapi	subnational	-	Florida	University of Central Florida - Center for Distributed Learning	LICENSE holder. United States, fixed by the state name
+opensacorg/learning-blocks	subnational	-	Sacramento	Code for Sacramento	United States, fixed by the city name
+AnubisLMS/Anubis	institution	-	-	"NYU" (abbreviation only)	LICENSE holder is an INDIVIDUAL (John McCann Cunniff Junior); no country, no state, no expansion of the abbreviation
+learningequality/kolibri	institution	-	-	Learning Equality	no country in the artefact
+microsoft/Web-Dev-For-Beginners	institution	-	-	Microsoft Corporation	no country in the artefact
+microsoft/ML-For-Beginners	institution	-	-	Microsoft Corporation	no country in the artefact
+#	TALLY	naming a country outright: 0 of 6
+#	TALLY	naming a subnational place that fixes the country: 2 of 6 (both United States)
+#	TALLY	naming only an organisation whose address is NOT in the artefact: 4 of 6
+#	CANADA	ucfopen/canvasapi README.md:164 names the University of British Columbia as a documented OPERATOR of the library (a "who uses this" entry) - OPERATOR grade, not holder grade. First Canadian evidence in this KB.
+#	MEXICO	0 occurrences anywhere in the 6 artefacts
+#	FALSIFIER limb 1	refuted if >=1 North American row is placed by a Canadian or Mexican INSTITUTION	SILENT at holder grade - the Canadian datum is operator grade
+#	FALSIFIER limb 2	refuted if the artefacts of >=2 rows name no country at all	FIRES at 4 of 6
+#	VERDICT	DISCHARGED, LIMB 2 FIRED. gap 119 SETTLED: the continental heading is not a geography error, it is the strongest precision the evidence supports for two thirds of the rows. Publish the split and the grade; do not rename the heading. T274.

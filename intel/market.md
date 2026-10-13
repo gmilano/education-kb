@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🆕 🟢 **The two population figures are re-counted on the one-request channel, same window, and the
+narrow one reproduces for the THIRD time:** `topic:education license:mit pushed:>=2026-04-16` =
+**`8 198`** *(p175: `8 197`, one day earlier — `+1`)*; `topic:ai-education`, same filters =
+**`135`**, identical at p173, p175 and p176. 🔵 **A figure reproduced three times on two different
+channels is this KB's only exactly-known market size, and it is a repository count, not a revenue.**
+🆕 🔴 **`gap 119` is SETTLED after four carries, and not in the direction the action expected.**
+`ACTION KK` asked the artefact of every *"North America"* row which COUNTRY it names.
+🔴 **`0` of `6` name a country. `2` name a subnational place that fixes it (Florida, Sacramento).
+`4` name only an organisation whose address is nowhere in the artefact.** 🔵 **The continental
+heading is not a geography error — it is the strongest precision the evidence supports for two
+thirds of the rows (`T274`).**
+🆕 🟡 **One datum cuts the other way and is worth more than the heading argument:** `canvasapi`'s
+README names the **University of British Columbia** as a documented operator of the library.
+🔵 **That is the first Canadian evidence in this KB — at OPERATOR grade, not holder grade. The
+holder is still Florida.** 🟢 **So *"North America"* finally has a non-US datum, and it is about who
+RUNS the software rather than who wrote it.**
+🔴 **`T267` applies in full and p176 re-declares it rather than rediscovering it: every regulatory
+and market figure below is `search-summary` tier.** `eur-lex.europa.eu` and every other legal-text
+host are NXDOMAIN in this container; `github.com` and `raw.githubusercontent.com` are the only hosts
+that resolve. 🔵 **Nothing below is a primary-source read, and no deck should imply it is.**
+
+## Opportunities by region
+
+### Global
+
+🟢 **State the size with the tag attached or do not state it. `8 198` repositories tag themselves
+`education`, carry an `MIT` licence and were pushed inside `180` days** — exact, one request,
+reproduced against p175's `8 197` the day before. 🔴 **`135` tag themselves `ai-education` on the
+same filters, a ratio of `60.7×`, and that narrower tag places `0` rows in North America
+(`T266`).**
+🟢 **The commercially useful consequence for any engagement, in one line:** the permissive education
+layer that exists is LMS, interop, credentials and now a Canvas rostering client; the permissive
+layer that does not exist is a system of record. 🔴 **Fourteenth consecutive pass with no
+`MIT`/`Apache` education ERP or institutional-scale permissive SIS.**
+🆕 🔴 **And a channel precision measurement a buyer should know about: a keyword search for
+education agents does not return education.** `tutor OR tutoring OR grading agent
+license:apache-2.0 pushed:>=2026-08-01 stars:>100` returns `1 684` repositories, and **`0` of its
+top `25` by stars are education-vertical** — they are coding agents, RAG engines and agent
+runtimes. 🔵 **The tag is the only usable sampling frame; keyword reach is noise at this star level.**
+
+### North America
+
+🟢 **Market, `search-summary` tier and the figures do not reconcile with each other:** one
+geography report puts the region at **`~US$951M` (2024) rising to `~US$2.3B` by 2029 at `15.9%`
+CAGR**; a separate roundup claims **`36%` of global share** and cites no primary source for it.
+🔵 **Carry the first; do not quote the second.**
+🟢 **Demand signals with dates and named parties, which is what a brief can use:** **OpenAI** ran a
+country-level education programme with **`8` national partners** in Q1 `2026`; **Carnegie Mellon**
+and the **Gates Foundation** put **`US$55M`** into AI courseware aimed at gateway college courses.
+🔴 **Institutional readiness is the gap, and it is the sales opening:** reporting puts **`10%` of
+institutions with formal AI guidelines** and **`71%` of US teachers without AI training**, against
+student use reported at **`92%`**. 🔵 **A governance-and-training engagement is better supported by
+this evidence than a tooling engagement.**
+🔴 **Regulation is fragmented by design:** no education-specific federal instrument, with
+state-level requirements appearing piecemeal — **Colorado** and **Texas** are the two named.
+🔴 **NOT ESTABLISHED: p176 did not reach a single primary policy document** — no federal guidance,
+no state statute text, no district rule. The regulatory sentences above are secondary coverage
+(`T267`).
+🟢 **Repository layer, from `ACTION KK`:** `5` rows place here — `ucfopen/canvasapi` (University of
+Central Florida, subnational grade), `opensacorg/learning-blocks` (Code for Sacramento, subnational
+grade), `AnubisLMS/Anubis` (*"NYU"*, no country in the artefact), `learningequality/kolibri`
+(*"Learning Equality"*, no country), and Microsoft's two courseware repositories (*"Microsoft
+Corporation"*, no country). 🟡 **Canada appears once, at operator grade, in `canvasapi`'s README.
+Mexico appears `0` times anywhere.**
+
+### EMEA
+
+🟢 **Market, `search-summary` tier, two reports that define the market differently and therefore do
+not reconcile:** Europe AI-in-education **`~US$512.6M` (2024) → `~US$1.33B` by 2029**; Europe
+AI-for-kids **`~US$289M` (2024) → `~US$649M` by 2034**. 🔵 **Use one or the other, never the sum.**
+🟢 **Leading adopters named: the UK, Germany, France and Scandinavia.** Vendors named in the
+AI-for-kids segment: **LEGO Education**, **Oxford University Press** and **Seppo** (Finland), all
+described as carrying **GDPR-K**-compliant portfolios — which is a procurement fact, not a
+marketing one.
+🟢 **Policy is the densest of any region and it is dated:** the **EU AI Act** is in force, with the
+**AI Continent Action Plan** adopted and the **Apply AI Strategy** underway; the **Commission
+updated its ethical guidelines on AI in education in June**; the **Council of Europe** runs a
+standing AI-and-education expert group and held a second working conference on the **regulatory
+dimensions of AI in education in October**. 🔴 **The UK diverges from the EU in posture:** its first
+**AI Adoption Summit** committed **`£200M+`**, delivered through government funding, **Cisco, IBM
+and BT**, with **Skills England** setting the curriculum framework — and *few traditional education
+providers named in the delivery model*. 🔵 **The EU is buying institutional capacity; the UK is
+buying deployment speed. A studio proposal should be shaped differently in each.**
+🟢 **Public demand is measurable: `64%` of Europeans agree that by `2030` everyone will need to be
+AI-literate**, with country-level variance in whether generative AI use in formal education is
+encouraged or still taboo.
+🔴 **Article `50`'s transparency duty remains the hard commercial deadline here, and it is `50` days
+out.** 🆕 🔴 **p176 adds something concrete to it rather than restating it:** the one permissive
+shelf row with provenance tooling can be brought into Article `50(2)` compliance by **one line** —
+and the measured consequence is that its export gate then **refuses every real asset** until a
+signing certificate is procured (`gap 136`). 🔵 **That is the honest EMEA conversation: the code is
+a line, the blocker is procurement, and today's green gate is green because the field is discarded.**
+🟢 **Repository layer: `2` rows, both HOLDER-GRADE** — `ls1intum/Artemis` (TUM) and
+`dodona-edu/dolos` (Ghent). 🔵 **Both are university-owned, which is the strongest placement
+evidence `P800` admits, and neither has been read past its licence yet.**
+
+### APAC
+
+🟢 **Market, `search-summary` tier:** **`~US$591.6M` (2024) → `~US$1 848.1M` by 2029**, with the
+region repeatedly described as the fastest-growing, driven by internet penetration and
+government-led digital education reform.
+🟢 **Adoption evidence is broad rather than education-specific:** `56%` of APAC businesses have
+deployed chatbots, copilots or AI assistants; `57%` of organisations in Asia have incorporated AI
+into at least one area of operations.
+🔴 **Regulation is fragmented, with three distinct postures named:** **Singapore** promoting
+responsible AI with mature guidelines; **China** legislating against algorithmic misconduct; the
+**ASEAN Guide on AI Governance and Ethics** still early-stage. 🟢 **China's labelling duty, recorded
+at p175 from `ACTION KG` and carried: Art. `4` explicit / Art. `5` implicit marking, live since
+`1 Sep 2025`, and BROADER than the EU's** — the implicit duty applies to all synthetic content
+regardless of confusion potential.
+🔴 **WRITTEN DOWN AS A GAP, because silence looks exactly like coverage: the APAC sweep returned
+`0` education-specific AI vendors and `0` education-specific regulators.** No ministry programme,
+no student-data rule, no classroom-use guidance, no named edtech company. 🔵 **The region with the
+strongest compulsory-curriculum mandate in this KB is the region whose vendor map is emptiest, and
+that is a finding about this KB's channels, not about APAC.**
+🟢 **Repository layer is the opposite: APAC is the best-served region at the repository level.**
+`5` of `topic:education`'s top `50` and `6` of `topic:ai-education`'s `7` placeable rows sit here.
+🆕 🟢 **p176 adds three `MIT` rows at licence-body grade** — `wwlwgo/cn-primary-math-knowledge-graph`
+(`1 117` B, *"Contributors to the China Primary Mathematics Knowledge Graph"*, `HEAD`
+`3b6f38f0e4fb`), `Scorpioyyy/verichalk` (`1 066` B, `HEAD` `9f963ab192a1`, `4 198` files) and the two
+national-examination engines already routed. 🔵 **Both new rows are grounded in a national
+curriculum, which is what `P800` accepts as placement.**
+
+### LATAM
+
+🔴 **TENTH consecutive pass with no LATAM-ORIGINATED open-source education repository, and the
+statement is a measurement rather than a silence:** `0` of `100` rows across two exactly-counted
+tags at p175, placement rule applied row by row; p176 re-counted both tags and added no LATAM row.
+🔵 **The nearest miss is still `kelvins/algorithms-and-data-structures` (`1 088`★), maintained from
+Brazil with nothing in the artefact saying so — which is exactly what `P800` exists to refuse.**
+🟢 **But the DEMAND evidence is now the strongest of any region, and it is institutional:** a
+**UNESCO IESALC / UNU-IAS** working paper maps AI use across teaching, research, administration and
+governance in Latin American and Caribbean universities, from a survey of **`200` institutions in
+`19` countries, fielded August–October `2025`**. 🔵 **That is a named, dated, multi-country
+instrument — better sourcing than any market figure in this file.**
+🟢 **Uptake, from a `2026` regional survey: student use `92%` (from `86%`), teacher use `79%` (from
+`61%`), and `65%` of students fear AI will make their learning superficial.** 🔵 **Teacher adoption
+rising `18` points in a year is the sharpest adoption delta in this file, and the `65%` is a
+pedagogical-design opening, not an objection.**
+🔴 **Market sizing here is the weakest in the file and should be used with the caveat attached:** the
+*"Rest of Latin America"* segment is put at **`~US$18.2M` (2024) → `~US$36M` by 2029** — a residual
+category that **excludes the region's largest markets**, so it measures the tail, not LATAM.
+🔴 **WRITTEN DOWN AS A GAP: the LATAM sweep returned `0` education-specific `2026` regulations.**
+CEPAL's **ILIA `2025`** index carries a regulation sub-dimension, and p176 reached only its table of
+contents. Commentary describes *a patchwork of pilot policies vulnerable to being discarded with
+each administration*, with **Chile** named as the counterexample — early digital infrastructure and
+an AI roadmap that survived a change of government.
+🟢 **The commercial map, carried: `Luca`, `BeConfident` (`US$15.8M`, Prosus Ventures) and `Teachy`
+(`US$7M`, Goodwater + Reach).** 🔵 **The vendor column fills while the repository column stays
+empty, and after ten passes that pattern is itself the finding: LATAM edtech is being built as
+product, not as commons.** 🟢 **For a studio, that is an opportunity statement rather than a
+complaint — the permissive layer a LATAM engagement needs will have to be brought, not found.**
+
 ## Pass 175 — 2026-10-13
 
 🆕 🟢 **The vertical's exact size is now a ONE-REQUEST fact, not a `17`-request method: `8 197`

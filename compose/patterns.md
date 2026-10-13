@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🟢 **Five patterns. Pattern `1` is REFINED by a measurement; patterns `2`–`5` are new, and every one
+of them names the repositories, the licences and the wiring rather than a capability.**
+
+### 🆕 🟢 Pattern `1` — Article `50(2)` marking on a permissive video pipeline, MEASURED
+
+🔵 **Component:** [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator),
+`MIT`, pinned at `9c260890214df68ad8fd0d681d3e77a6a7b7ea9f` — **still `HEAD` at a fourth consecutive
+controlled re-read**. `905` files, `272` Python, `46` security tests.
+🟢 **p175 specified this patch and labelled its effect a PREDICTION. p176 ran it. The prediction was
+right to the test name, so the recipe below is measured, not proposed.**
+
+| step | file and line | edit | measured effect |
+|---|---|---|---|
+| `1` | `security/provenance.py`, after the provider/model/revision clause *(line `143`)* | refuse `C2paStatus.NOT_APPLICABLE` when `origin == GENERATED`, in `AssetProvenance.__post_init__` | **`7` insertions** |
+| `2` | `security/gates.py`, the accepted-status set *(lines `260`–`262`)* + `OriginKind` added to the import at line `11` | accepted set becomes `{VALID}`, plus `NOT_APPLICABLE` only when origin is not `GENERATED` | **`5` insertions / `5` deletions** |
+| `4` | `generation/workflow.py:3018` | 🟢 **read `value.get("c2paStatus")` instead of hardcoding `C2paRecord(C2paStatus.NOT_APPLICABLE)`** — the gate already reads twelve other fields off the same record | **`5` insertions / `1` deletion** |
+
+🟢 **Run it on `python3.12` with stdlib `unittest`, `PIL` stubbed, and `sys.path` set INSIDE a runner
+script — not via `PYTHONPATH`, because `python3 -I` ignores the environment (`T271`).**
+
+| stage | result |
+|---|---|
+| pristine | 🟢 **`46`/`46`** |
+| edits `1`+`2` | 🔴 **`2` errors**: `test_apache_two_generated_asset_allows_transformed_commercial_export`, `test_mit_starter_audio_allows_transformed_commercial_export` |
+| edit `4` alone | 🟢 **`46`/`46`** |
+| `1`+`2`+`4` | 🔴 **the same `2`** |
+
+🟢 **How to fix the two breakages, concretely:** both are `GENERATED`-asset constructions that pass
+no `c2pa=` keyword, so they inherit the `NOT_APPLICABLE` default that edit `1` now refuses. **Pass
+`c2pa=C2paRecord(C2paStatus.VALID)` in those two test constructions.** 🔵 **`0` tests in the
+repository pass a `c2pa=` kwarg today, so there is no existing convention to match — you are
+establishing it.**
+🔴 **The production consequence, which is the part that belongs in the statement of work rather than
+the pull request:** all three writers store `"absent"`, `C2paStatus("absent")` is `ABSENT`, and
+`ABSENT` is what the gate refuses. **After edit `4`, nothing exports until a signing certificate
+exists.** 🟢 **That is correct behaviour `50` days out, and it has to be scoped as procurement plus
+code, never as code alone (`gap 136`).**
+
+### 🆕 🟢 Pattern `2` — the Canvas-institution stack, with its own threat model wired in
+
+🔵 **For the engagement shape this KB sees most: an institution already running Canvas that wants AI
+on top without replacing the system of record.** 🟢 **Every component is `MIT`.**
+
+| layer | component | licence | wiring |
+|---|---|---|---|
+| roster + sections | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 `MIT`, `1 130` B | `Canvas(base_url, token)` → `course.get_enrollments()`, `course.get_sections()`, `account.get_enrollment_terms()`. `Bearer` auth, `per_page=100` pagination that follows the next link, `RateLimitExceeded` to back off on. 🟡 **`sis_section_id:`/`sis_course_id:` prefixes address objects by the SIS's own ids — use them as the join key, not Canvas's internal ids** |
+| integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT`, `1 083` B | run as a BATCH over each assignment's submissions pulled through `canvasapi`; key reports by the `sis_*` id so results survive a Canvas re-import |
+| content interop | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | wrap third-party `SCORM`/`AICC`/`xAPI` packages so Canvas's own player is not the constraint |
+| credentials | [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 `MIT`, `1 080` B | issue **Open Badges `3.0`** on completion. 🔴 `OpenOLAT`'s badge module is `OB2` only — do not pair those two and expect W3C VCs |
+| 🔴 **threat model** | 🔴 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | 🟢 `MIT`, `1 063` B | 🔴 **NOT a dependency. Read it to see what the student side automates against Canvas quizzes — `canvas-lms` + `exam-automation`, `80`★ — and test the assessment design against it** |
+
+🔴 **The condition that must appear on the slide: `canvasapi` is `MIT`, Canvas is not.** Instructure
+publishes the core under `AGPL-3.0` and sells the operated product, so this stack is permissive
+**around** a non-permissive system of record.
+🔴 **And `0` word-boundary matches for OneRoster, Ed-Fi, SCORM, xAPI or Caliper inside `canvasapi`:
+it speaks Canvas's API, not a standard.** 🟢 **If the client needs standards-native rostering
+instead, the route is [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+(`Apache-2.0`) — `OneRoster 1.2`, `24` GETs, `0` writes.** 🔵 **Pick by which you need: writes, or
+portability. No permissive row here gives both.**
+
+### 🆕 🟢 Pattern `3` — adaptive tutoring with a real prerequisite graph underneath it
+
+🔴 **The hole this closes: every adaptive-tutoring recipe in this KB has had a tutor and a scheduler
+and no DEPENDENCY GRAPH — the thing that says which objective unlocks which.**
+
+| layer | component | licence | wiring |
+|---|---|---|---|
+| 🆕 prerequisite graph | [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | 🟢 `MIT`, `1 117` B, `113` files | a JSON-schema'd micro-objective dependency dataset. Load as the DAG; topologically sort to get the next unlocked objective |
+| tutoring | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | drives the session; take the next objective from the DAG rather than from the model's judgement |
+| spaced repetition | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | schedule review of MASTERED objectives over MCP, keyed by objective id |
+| 🆕 item generation, verified | [`Scorpioyyy/verichalk`](https://github.com/Scorpioyyy/verichalk) | 🟢 `MIT`, `1 066` B, `4 198` files | generate practice items for an objective and verify each one three ways — solver, blind re-solve, curriculum-boundary check — before it reaches a learner |
+
+🔵 **Why the pairing is more than a list: the graph and the generator are grounded in the SAME
+national curriculum, so objective ids and item scope agree without a mapping layer.**
+🔴 **Limits, stated: both new rows are APAC-curriculum-specific, `7`★ and `6`★, licence-verified and
+nothing else. Coverage, accuracy and item quality are UNMEASURED.** 🟢 **Treat the pattern as the
+SHAPE to build and these two as the reference implementations to read, not to ship.**
+
+### 🆕 🟢 Pattern `4` — grading an inherited codebase's test suite without grading your own argv
+
+🔵 **Reusable on any client codebase, and p176 learned it the expensive way on its own.**
+🔴 **Running `665` scripts in this repository with `python3 -I` reported `36` test files CRASHING.
+`35` of those `36` pass without the flag.** `-I` implies `-P` from Python `3.11`, so the script's
+own directory is NOT placed on `sys.path` — and every test that imports the module beside it raises
+`ModuleNotFoundError`.
+🟢 **The recipe:**
+1. Run every script from inside its own directory, with a timeout, recording the **exit code**.
+2. Run the whole sweep **twice** — isolated and non-isolated — and report both rates. A rate from
+   one invocation is a statement about that invocation.
+3. Classify every non-zero exit by what the script PRINTED, and separate *"wanted an argument"* and
+   *"the network is denied here"* from *"it disagrees with the repository"* and *"it cannot execute"*.
+4. 🔴 **Expect the classifier to be wrong first.** p176's first iteration left `88` exits unnamed;
+   a second iteration named `36` of them — `35` shell scripts refusing a missing `$1`, and `4` suites
+   reporting their own score in prose (*"`7`/`10` controls passed"*) that no `FAILED`-matching rule
+   could see. 🔵 **A third class remains: a usage line in SPANISH (`uso:`), which an English-only
+   cue list cannot find.**
+5. Restore the tree to `HEAD` afterwards, unconditionally — **`11` committed files in `7`
+   instruments were rewritten by the sweep**, plus `2` created.
+🟢 **Instrument: [`compose/code/p176-suite-exit-sweep/`](compose/code/p176-suite-exit-sweep).**
+
+### 🆕 🟢 Pattern `5` — one grant-path vocabulary instead of seventy-six
+
+🔴 **The defect, measured: `76` independent hardcoded grant-path probe lists in this repository.
+`48` carry the British `LICENCE`. `3` carry `COPYING.md`.** 🔵 **So *"extend the probe list"* is not
+an edit, it is a migration across `76` call sites (`T272`).**
+🟢 **The recipe, and it is deliberately boring:** put ONE ordered path vocabulary in
+`compose/code/lib/`, import it, and make the absence claim name the vocabulary VERSION it was
+reached with. 🟢 **Then an absence claim is falsifiable: *"`0` of `16` paths, vocabulary `v1`"* can
+be re-run when the vocabulary grows; *"no grant file"* cannot.**
+🟢 **And the stronger test, when the tree is small enough to afford it: ENUMERATE instead of
+probing.** `ACTION KJ` settled a shelf row by listing **all `5` branches** of
+`JushBJJ/Mr.-Ranedeer-AI-Tutor` — `55` file-paths, `0` grant-shaped at any case — which is a claim
+no longer path-list-dependent at all. 🔵 **Probe when you must; enumerate when you can; and say
+which one you did.**
+🟢 **Instrument: [`compose/code/p176-grant-path-vocabulary/`](compose/code/p176-grant-path-vocabulary).**
+
 ## Pass 175 — 2026-10-13
 
 🆕 🟢 **p174's headline recipe gets CHEAPER and p174's headline count gets CORRECTED, in the same

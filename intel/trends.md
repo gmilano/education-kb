@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 176 — 2026-10-13
+
+🆕 🟢 **The trend with the hardest evidence this pass, and it changes what *"open source AI agent
+for education"* can be bought for: the vertical's new supply is shipping as HARNESS-COUPLED SKILLS,
+not as applications.** Measured on `topic:ai-education`'s top `30` by stars, counted by declared
+topic rather than by prose:
+
+| shape, by DECLARED topic | rows of `30` | which |
+|---|---|---|
+| 🟡 **declares a SKILL topic** *(`skill`, `agent-skills`, `claude-skills`, `codex-skill`, `skill-pack`)* | 🟡 **`7`** | `universal-diagnostic-tutor-skill`, `taiwan-exam`, `skills-for-course-creators`, `learn-anything-skill`, `ai901-cert-buddy-claude`, `toefl-ai-skills`, `rviewer` |
+| 🟡 **names a specific agent HARNESS** *(Claude Code, Codex, MCP)* with or without a skill topic | 🟡 **`11`** | the `7` above plus `Tov-learn`, `vibe-schooling`, `agent-trajectory`, `legal-ai-engineering-lab` |
+| 🟢 **deployable application or dataset** | 🟢 **`19`** | the remainder, including both national-examination engines and both APAC curriculum datasets |
+
+🔵 **Why it matters commercially rather than as a curiosity:** a skill is not a deployable product
+for an institution. It runs inside somebody's agent harness, inherits that harness's auth, logging
+and data path, and cannot be handed to a school district as a system. 🟢 **For a studio this is
+good news in one direction and a trap in the other** — the authoring and tutoring layer can now be
+assembled in days from permissive skills, and NONE of it satisfies a procurement questionnaire about
+where student data goes. 🔴 **This KB's own `12`-row shelf is almost entirely applications, so the
+tag's new supply differs from the shelf in SHAPE, not merely in size.**
+
+🆕 🔴 **The second trend is an arms race, and both sides are `MIT` on the same platform.**
+🔴 **Attack:** [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) — *"Get 4.0
+GPA without learning"*, `80`★ and the **third-most-starred row on `topic:ai-education`** — names
+Canvas `19` times, `quiz` `7`, `exam` `6`, `answer` `10`, and declares `canvas-lms` and
+`exam-automation` as topics. `MIT`, `1 063` B, `HEAD` `7c2f87a4641b`, `56` files.
+🟢 **Defence:** [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos), Ghent University's
+source-code similarity detector, `MIT`, entered this KB one pass ago.
+🔵 **The two are not symmetric, and that is the finding.** The attack is a student-side browser and
+MCP automation against a specific LMS; the defence is an institution-side batch similarity analysis
+over submitted code. 🔴 **They do not meet.** 🟢 **The design consequence for any assessment
+engagement: integrity has to be built into the ASSESSMENT SHAPE — oral defence, process evidence,
+in-session artefacts — because the permissive detector and the permissive cheat tool are not
+operating on the same surface.** 🔵 **This KB has recorded that conclusion as a design pattern since
+`P171-D`; p176 is the first pass that can name a tool on each side.**
+
+🆕 🔴 **The third trend is a compliance SHAPE this KB can now state as a class, from a measurement
+rather than a reading: the AI Act exposure on an education pipeline shows up as DATA LOSS, not as a
+missing control.**
+🟢 **Measured on the shelf's best-equipped row (`ACTION KI`):** the project stores a
+`c2paStatus` — its generated schema registry lists the field as REQUIRED, and three writers set it.
+🔴 **Its export quality gate reads twelve fields off each stored provenance record and discards the
+thirteenth, substituting the one status that makes the gate pass.** 🟢 **The repair is one line.**
+🔴 **And all three writers store `"absent"`, which the gate refuses — so the repair turns a green
+gate red on every real asset, `50` days before Article `50`'s transparency duty.**
+🔵 **The pattern to look for in a client's pipeline, stated so it is reusable: find the compliance
+gate, list the fields it reads, and check each one against the field the pipeline actually stores.
+A gate that substitutes a default for a stored value cannot fail, and it will pass an audit of its
+own tests.** 🔴 **In this case `0` tests in the whole repository reference the field, so neither the
+defect nor its repair is visible to the suite (`T270`).**
+
+🆕 🟡 **Fourth, carried forward and now reproduced three times: the vertical's exactly-known size is
+a repository count and the tag you choose moves it by `60.7×`.** `topic:education license:mit
+pushed:>=2026-04-16` = **`8 198`**; `topic:ai-education` = **`135`**, stable across p173, p175 and
+p176. 🔴 **And a keyword search is not an alternative frame: `tutor OR tutoring OR grading agent
+license:apache-2.0 stars:>100` returns `1 684` rows of which `0` of the top `25` are
+education-vertical.**
+
+🟡 **Carried trends, re-stated in one line each because a trend not re-stated leaves the compiled
+view (`T216`):**
+
+- 🟢 **Compulsory AI curricula are the APAC demand driver** — China from age `6`; India from Class `3`
+  in academic year `2026-27`. 🔵 **An age and an academic year are verifiable facts about demand; a
+  CAGR is a model.**
+- 🟢 **Two markets now carry a synthetic-content marking duty, and the Chinese one is broader and
+  already live** — Art. `4` explicit / Art. `5` implicit, since `1 Sep 2025`, applying to all
+  synthetic content regardless of confusion potential; the EU's Article `50` transparency duty is
+  `50` days out. 🔴 **Both read from secondary coverage only: every legal-text host is NXDOMAIN
+  here (`T267`).**
+- 🟡 **Market forecasts for AI in education do not reconcile and should be quoted singly, never
+  summed** — p176's sweep returned `2025`-base figures from `US$7.52B` to `US$8.3B`, a `2026` figure
+  of `US$10.6B`, a `2034` projection of `US$79.6B` and CAGRs from `15.9%` (North America) to
+  `46.12%` (global). 🔵 **One sector-maturity rating in the same sweep — `35`/`100`, *"most
+  institutions still in pilot mode"* — is more useful to a studio than any of the revenue lines,
+  because it names the stage rather than the size.**
+- 🔴 **Institutional readiness, not model capability, is the binding constraint in every region
+  where p176 found evidence** — `10%` of North American institutions with formal AI guidelines,
+  `71%` of US teachers untrained, `65%` of LATAM students fearing superficial learning, and the
+  Council of Europe convening on regulation while the UK funds deployment. 🟢 **Governance,
+  assessment redesign and teacher enablement are better supported by this pass's evidence than any
+  tooling pitch.**
+
 ## Pass 175 — 2026-10-13
 
 🆕 🟢 **The trend this pass can prove rather than cite: four of this KB's standing statements were
