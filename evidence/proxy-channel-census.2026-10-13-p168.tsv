@@ -1,0 +1,37 @@
+# p168 channel census. The KB's published quality rule is "verify every URL before writing it
+# (curl -sI)". This pass measured whether that rule is EXECUTABLE in this container. It is not,
+# for any non-GitHub web host. Three refusal classes, measured, not assumed.
+host_or_channel	channel	result	class
+https://raw.githubusercontent.com/...	curl	200	ALLOWED
+https://www.apache.org/licenses/LICENSE-2.0.txt	curl	200	ALLOWED
+https://pypi.org/simple/	curl	200	ALLOWED (in proxy noProxy list - direct, not proxied)
+https://registry.npmjs.org/scorm-again	curl	200	ALLOWED (in proxy noProxy list)
+git ls-remote https://github.com/<any>	git	OK	ALLOWED - the primary channel for repo identity
+git clone --depth 1 https://github.com/<any>	git	OK	ALLOWED - 10 of 10 trees cloned, 623 MB, 11 684 tracked files
+https://github.com/<owner>/<repo>	curl	403	POLICY DENIAL at gateway (CONNECT rejected)
+https://api.github.com/repos/<owner>/<repo>	curl	403	POLICY DENIAL - confirms the KB's long-standing "github-api-proxy-blocked"
+https://codeload.github.com/...	curl	403	POLICY DENIAL
+https://www.gnu.org/licenses/gpl-3.0.txt	curl	403	POLICY DENIAL - recorded by the gateway as connect_rejected at 06:49:40Z
+https://github.com/<owner>/<repo>/tree/...	WebFetch	OK	ALLOWED on the WebFetch channel though 403 on curl - the two channels DISAGREE
+https://github.com/search?q=...	WebFetch	0 results	UNUSABLE - repo DISCOVERY is closed on all three channels
+https://eur-lex.europa.eu/eli/reg/2026/1744/oj	curl + WebFetch	000 / ENOTFOUND	UNREACHABLE - no DNS, no route
+https://digital-strategy.ec.europa.eu/...	curl + WebFetch	000 / ENOTFOUND	UNREACHABLE
+https://www.iesalc.unesco.org/...	curl + WebFetch	000 / ENOTFOUND	UNREACHABLE
+https://www.unesco.org/...	curl	000	UNREACHABLE
+https://www.multistate.us/...	curl	000	UNREACHABLE
+https://xenoss.io/...	curl	000	UNREACHABLE
+https://www.lw.com/...	curl	000	UNREACHABLE
+https://www.grandviewresearch.com/...	curl	000	UNREACHABLE
+https://www.insidehighered.com/...	curl	000	UNREACHABLE
+https://www.technavio.com/...	curl	000	UNREACHABLE
+https://www.timeshighereducation.com/...	curl	000	UNREACHABLE
+https://www.whitecase.com/...	WebFetch	ENOTFOUND	UNREACHABLE
+https://www.orrick.com/...	WebFetch	ENOTFOUND	UNREACHABLE
+https://example.com	curl	000	UNREACHABLE - so this is not about these sites
+https://en.wikipedia.org/wiki/SCORM	curl	000	UNREACHABLE
+# CONSEQUENCE, stated so it is not mistaken for laziness: 0 of the 15 non-GitHub web URLs this pass
+#   would otherwise publish can be verified on ANY available channel. Every regional and market claim
+#   below is therefore tier=search-summary by NECESSITY, not by choice, and T160's promotion rule
+#   keeps it unpromotable until a pass runs in a container that can reach the primary.
+# The repo claims are UNAFFECTED: git ls-remote and raw.githubusercontent are both open, and every
+#   repo, branch, sha, licence body and source file cited this pass was read on one of those two.

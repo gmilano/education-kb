@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 168 — 2026-10-13
+
+🆕 🔴 **Two cells in the platform routing table change what a client may build, and one changes what
+they may CONTRIBUTE — which this page had never distinguished.**
+🔴 **`mentingo`'s SCORM export is `1.2`-ONLY, hardcoded, and a `2004` package imported into it is
+re-exported DECLARED as `1.2` with its sequencing silently dropped.**
+🔴 **`Sakai`'s `ECL-2.0` narrows the patent grant specifically for contributors employed by an
+institution or organisation — the exact shape of a university engagement.**
+[`evidence/scorm-export-manifest.2026-10-13-p168.tsv`](../evidence/scorm-export-manifest.2026-10-13-p168.tsv)
+[`evidence/licence-canonical-diff.2026-10-13-p168.tsv`](../evidence/licence-canonical-diff.2026-10-13-p168.tsv)
+
+### 🆕 🔴 `gap 103` CLOSED — `mentingo` exports SCORM `1.2` only, and the import path makes it lossy
+
+🟢 **`ACTION IY` read all `7` files of `packages/scorm-export-generator` on the raw channel
+(`HTTP 200` on every one), pinned at `Selleo/mentingo` `242a9324fe48`.**
+🟢 **The manifest emitter is `src/manifest-builder.ts`, `202` lines: ONE template literal, ONE
+`return`, and no version parameter anywhere in the package.**
+
+| line | emitted, verbatim | binds to |
+|---|---|---|
+| `:27` | `xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"` | 🔴 **IMS CP `1.1.2`** |
+| `:27` | `xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"` | 🔴 **SCORM `1.2`** |
+| `:29` | `<schema>ADL SCORM</schema>` | — |
+| `:30` | `<schemaversion>1.2</schemaversion>` | 🔴 **HARDCODED `1.2`** |
+
+🔴 **ABSENT from the whole package, each probed: `2004`, `adlcp_rootv1p3`, `adlseq`, `adlnav`,
+`imsss`, `CAM 1.3`.** 🟢 **Without `imsss`/`adlseq`/`adlnav` no `2004` manifest can be valid, so
+this is not *"`2004` untested"* — it is `2004` not emitted.**
+🔴 **`ACTION IY`'s falsifier was *"refuted if the generator emits a valid `2004` manifest"*. SILENT.**
+
+🆕 🔴 **The hazard, sharper than `gap 103` stated it.** 🟢 **p167 established that the SCORM IMPORT
+pipeline is real (`4` endpoints, a tus resumable upload, a worker).** 🔴 **`renderLessonResources()`
+filters `lesson.type === "scorm"` and re-emits each imported `SCO` as
+`<resource type="webcontent" adlcp:scormtype="sco">` INSIDE the `1.2` manifest.**
+🔴 **So: import a SCORM `2004` package, export the course, and you get a package DECLARING `1.2`
+whose `2004` sequencing rules were never carried over. The round trip is lossy and nothing warns.**
+🟢 **The `103` `scorm_2004` markers p166 counted are therefore the IMPORT/player side, not the
+export capability — `gap 103` was asking the right question of the wrong half of the pipeline.**
+
+| what to tell a client | 🟢 safe | 🔴 not safe |
+|---|---|---|
+| **export courses to an LMS that accepts SCORM `1.2`** | 🟢 **yes — this is what the generator is** | |
+| **export to an LMS that requires SCORM `2004` sequencing** | | 🔴 **no. Build the `2004` manifest yourself or route via `jcputney/scorm-again`** |
+| **re-export a `2004` package you imported** | | 🔴 **no — it will be declared `1.2` and lose its sequencing** |
+
+### 🆕 🔴 Platform routing — the patent column this page never had
+
+🟡 **Every row below was already correct on LICENCE. What is added is the CONTRIBUTION column,
+because three of this page's recommended platforms carry a grant that is not what its family name
+implies.**
+
+| platform | published licence | 🆕 what the body adds | engagement consequence |
+|---|---|---|---|
+| 🟡 [**Sakai**](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** *(`11 120 B`)* | 🔴 **patent grant narrowed for contributors employed by an institution or organisation (`T200`)** | 🟡 **Build on it freely. Diligence the patent limb before contributing code back from a university engagement** |
+| 🔴 [**OpenEduCat**](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | 🔴 **the body PROMISES the `GPL-3.0` text and contains `0` of it; bundled libraries declared to be *"other GPL-compatible licenses"*, unnamed (`T201`)** | 🔴 **The outer grant is `LGPL-3.0`. Bundled components are unaudited and the grant on disk is incomplete by its own construction** |
+| 🔴 [**Chamilo**](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` | 🆕 🟡 **a SECOND root grant file elects `-or-later`; both of its pointers are `404` (`T202`)** | 🟡 **More permissive than published — `-or-later`, in the file every source header cites. The contributor list it promises is unrecoverable** |
+| 🟢 [**Open edX**](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | 🟢 **RPC carve-out, re-confirmed by a second instrument this pass** | 🟢 **Still the one copyleft LMS usable behind an API boundary. `gap 107` stands: licensor statement, not counsel** |
+| 🟢 [**OpenOLAT**](https://github.com/openolat/OpenOLAT) | 🟢 `Apache-2.0` | 🟡 **an *"Additional license statement"* replaces the `APPENDIX`** | 🟢 **Permissive. Read the statement before redistribution** |
+| 🟢 [**Moodle**](https://github.com/moodle/moodle) · [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | 🟢 **CLEAN — verbatim FSF text, older URL revision only** | 🟢 **Plain `GPL-3.0`. No surprises in the grant** |
+
+🟢 **The permissive LMS route is unchanged and still short: `Sakai` (`ECL-2.0`) and `Kolibri`
+(`MIT`).** 🔴 **And the oldest hole on this page is unchanged for a SEVENTH pass: no SIS and no
+education ERP under `MIT` or `Apache-2.0`. p168 re-ran the query on an independent sweep and the
+only candidate the web named was `OpenEduCat` itself — `LGPL-3.0`, and now with `T201` against it.**
+
 ## Pass 167 — 2026-10-13
 
 🆕 🟢 **Two cells in last pass's routing table were wrong in a way that changes what you can sell,

@@ -5,6 +5,49 @@ updated: 2026-10-13
 ---
 
 
+## 2026-10-13 — Pass 168
+
+### 🆕 🔴 What is new this week: the web channel names five education agents, and none of them is one
+
+🟢 **`5` repos were named by this pass's sweep for *"top open source AI agents education"*. All `5`
+EXIST on the git channel. All `5` are `MIT`. `0` are education-sector agents.**
+
+| repo | git channel | licence *(body-read)* | what it ACTUALLY is | verdict |
+|---|---|---|---|---|
+| 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 `92d833e9df9a` | 🟢 **`MIT` (`1 141 B`)** | 🔴 **a `12`-lesson COURSE about building agents** | 🟢 **new COURSEWARE tier** |
+| 🟢 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 `da3f9df28a9c` | 🟢 **`MIT` (`1 091 B`)** | 🔴 **a tutorial that builds ONE agent** | 🟢 **COURSEWARE tier** |
+| 🟢 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 `d640c7f735f3` | 🟢 **`MIT` (`1 070 B`)** | 🔴 **a lesson path over agent runtimes** | 🟢 **COURSEWARE tier** |
+| 🟡 [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | 🟢 `a80de737dc2c` | 🟢 `MIT` | 🔴 **a link directory — not software** | 🔴 **not a row** |
+| 🟡 [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | 🟢 `63d0b9412002` | 🟢 `MIT` | 🔴 **general-purpose agent, no education surface** | 🔴 **not education** |
+
+🔵 **`T199`: the query *"AI agents education"* reads both ways and the web answers the wrong one —
+education ABOUT AI, not AI FOR education. That is why twelve passes of this sweep have added no
+agent row, and it is a defect in the question, not an absence in the market.**
+🔴 **A search summary put `hermes-agent` at *"180 000+ stars since its February 2026 launch"*. The
+repo is confirmed; the figure has no git-channel primary and is NOT published (`T149`).**
+🟢 **Salvage, and it is real: `3` `MIT` AI-literacy curricula, one shipping `53` locales — `es`,
+`pt-BR`, `23` APAC languages, `28` EMEA including `pcm`. Wired up as `P168-C`.**
+
+### 🟢 The shelf itself: `0` of `12` moved, and `10` of `12` had their dates READ this week
+
+🟢 **`12` of `12` re-verified by `git ls-remote` at `2026-10-13T06:46:52Z`. `0` moved since p167's
+closing sweep `6 min` earlier.** 🟢 **`10` of the `12` were CLONED for `ACTION IZ`, so their HEAD
+dates come from `git log` rather than from a carried value — and all `10` CONFIRM p167.**
+🟢 **Clone cost, measured: `623 MB`, `11 684` tracked files, `10` of `10` succeeded.**
+🔴 **Repo DISCOVERY was closed this week: `github.com/search` returns `0` results on all three
+channels, so no new row could enter by search even if one existed (`T203`).**
+
+### 🆕 🔴 `0` of `10` agent rows carries any interop standard — now on `13` terms, not `5`
+
+🟢 **`ACTION IZ` re-probed all `10` zero-hit trees with the synonyms p167's `5`-term list missed:
+`LRS`, *"learning record store"*, `imsmanifest.xml`, `SCO`/`SCOs`, `QTI`, `Caliper`, *"Learning
+Tools Interoperability"* spelled out, and the `-inspired`/`-like`/`-compatible` analogy class.**
+🟢 **Result: `0` of `10`, after resolving one false positive — `\bQTI\b` inside a `sha512` integrity
+hash in a `pnpm-lock.yaml` (`T198`).**
+🔵 **So the shelf's standing shape is CONFIRMED rather than merely re-asserted: these are tutoring
+and study-tool agents, and not one of them speaks `LTI`, `SCORM`, `xAPI`, `OneRoster`, `Ed-Fi`,
+`QTI` or `Caliper`. Every institutional integration on this shelf is still a build.**
+
 ## 2026-10-13 — Pass 167
 
 ### 🆕 🔴 What is new this week: the guard built to catch naming collisions had three of its own

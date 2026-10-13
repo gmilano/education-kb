@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 168 — 2026-10-13
+
+🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` discharged at a SMALLER
+DENOMINATOR than it asked for and recorded as such. `gap 103`, `gap 105` and `gap 106` all close.**
+🆕 🔴 **The pass's most important finding is that one falsifier FIRED and then un-fired: the
+`13`-term interop probe returned `1` hit across `11 684` files, and the hit was `\bQTI\b` matching
+inside a `sha512` integrity hash in a `pnpm-lock.yaml`. Published raw, it would have overturned a
+CORRECT finding on a base64 blob — and shown a falsifier firing, which is the most
+trustworthy-looking outcome this shelf produces. Recorded as `T198`.**
+🆕 🟢 **The finding that changes what a client may build: `Sakai` is `ECL-2.0`, and `ECL-2.0` is
+`Apache-2.0` with an inserted paragraph that NARROWS the patent grant for contributors employed by
+an institution or organisation — which is the exact shape of a university engagement.**
+🆕 🟢 **And APAC is no longer a measured silence: p167 recorded `0` named education vendors and `0`
+national education-AI policies; p168 returned both, plus Vietnam's Law No. `134/2025/QH15`, the
+first APAC instrument this KB holds that names EDUCATION high-risk by statute.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IX`** — body-read every recommended-but-unread licence | 🟢 **DISCHARGED, falsifier SILENT. `3` of `7` deviate, and *"addendum"* turns out to be too narrow a word for the class** |
+| 🟢 **`ACTION IY`** — does `mentingo` export SCORM `2004`? | 🟢 **DISCHARGED, falsifier SILENT. `1.2` ONLY, hardcoded, no branch — and the import path makes the round trip lossy** |
+| 🟢 **`ACTION IZ`** — `13` interop terms against the `10` zero-hit trees | 🟢 **DISCHARGED, falsifier SILENT after one hit was resolved as a hash collision. `0` of `10`** |
+| 🟡 **`ACTION JA`** — push the churn ledger past `6` hours | 🟡 **DISCHARGED AT DENOMINATOR `6`. `0` of `6` over `11 h 37 min`. The blocker is COVERAGE, not pass length — and both prior passes mis-diagnosed it (`T197`)** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T197` — the churn ledger's reach is bounded by its COVERAGE HISTORY, not by pass
+  length.** 🟢 **p168 reached `12 h 39 min` six minutes after p167 committed, by using `p155`/`p156`
+  sha columns p167 did not know were on disk — but those cover `3` and `6` of `12` rows. The full
+  `12`-row set only exists from `p164`, making the oldest full-population anchor `3 h 36 min` old.**
+  🟢 **Register rule added: state the DENOMINATOR beside the interval.**
+- 🆕 🔴 **`T198` — the eighth false-positive class: base64 / integrity-hash collision in
+  lockfiles.** 🔴 **A `3`-letter uppercase acronym under `\b…\b` hits base64 payloads, and the fix
+  is a FILE CLASS, not a pattern — `\bqti\b` case-insensitive returns the identical hit.**
+- 🆕 🔴 **`T199` — twelve passes of web sweep added no agent row because the QUERY collides.**
+  🟢 **`5` repos named for *"open source AI agents education"*: all `5` exist, all `5` are `MIT`,
+  `0` are education agents. `4` are AI-literacy courseware, `1` is a general agent. The phrase reads
+  both ways and the web answers *education ABOUT AI*.** 🟢 **Salvaged as a COURSEWARE tier
+  (`P168-C`) with `53` verified locales, `es` and `pt-BR` among them.**
+- 🆕 🔴 **`T200` — `Sakai`'s `ECL-2.0` narrows the patent grant for institutionally employed
+  contributors.** 🟢 **`+137`/`−13` words vs canonical `Apache-2.0`, `95.44%` similarity, and the
+  licence's own preamble states the derivation.** 🔴 **No `MIT`/`Apache`/`BSD` allow-list contains
+  `ECL-2.0` at all, so a gate will either refuse a safe platform or wave through an unread clause.**
+- 🆕 🔴 **`T201` — `OpenEduCat`'s `LICENSE` promises the `GPL-3.0` text *"at the bottom"* and
+  contains `0` of it.** 🔵 **`LGPL-3.0` is DEFINED as additional permissions over `GPL-3.0`, so the
+  grant on disk is incomplete by its own construction. Its third paragraph also declares bundled
+  libraries to be *"other GPL-compatible licenses"* and names none (`gap 109`).**
+- 🆕 🔴 **`T202` — `Chamilo` has TWO root grant files that disagree.** 🔴 **`LICENSE` is a bare
+  `GPL-3.0` body with no election; `license.txt` elects **`-or-later`**, which is MORE permissive —
+  and both of `license.txt`'s own pointers are `404`.**
+- 🆕 🔴 **`T203` — this KB's published verification rule is not executable in this container.**
+  🔴 **Measured across `26` hosts and channels: `0` of `15` non-GitHub URLs reachable; `gnu.org`,
+  `github.com` HTML via `curl`, `api.github.com` and `codeload` are `403` policy denials;
+  `github.com/search` returns `0` results on all three channels, so repo DISCOVERY is closed.**
+  🟢 **`git ls-remote`, `git clone` and `raw.githubusercontent.com` ARE open, which is why every
+  repo, sha, licence body and source line this pass cites is verified and every market figure is not.**
+- 🆕 🟢 **`P168-A`** — the licence-body gate, six steps: title-line family, canonical word diff,
+  permissive-set membership, body-contains-its-family, ALL root grant files, resolve every pointer.
+  🟢 **Both p167 controls reproduced before any new finding was believed.**
+- 🆕 🟢 **`P168-B`** — verify a SCORM claim from the emitted manifest, never the feature list.
+- 🆕 🟢 **`P168-C`** — the courseware tier: three `MIT` AI-literacy curricula, placed by region.
+- 🆕 🟡 **`P168-D`** — the cross-pass baseline, with the denominator named.
+- 🟢 **The `2`-byte mystery that broke p167's band test is SOLVED:** `35 147` and `35 149` are the
+  same `GPL-3.0` at two FSF revisions, one URL apart (`philosophy/` → `licenses/why-not-lgpl.html`).
+- 🟢 **The shelf: `0` of `12` HEAD shas moved; `10` of `12` had their HEAD dates READ from a clone
+  rather than carried, and all `10` confirm p167. No row enters or leaves.**
+- 🔴 **`gap 104` re-confirmed a THIRD time: no education-specific AI regulation anywhere in LATAM.**
+  🟢 **What LATAM does have is the best-evidenced demand on this shelf — UNESCO IESALC: `87%` of
+  `200` institutions in `19` countries using AI, `26%` with a formal strategy — and a named
+  deployment at scale, `PUC Chile`'s `194` pedagogical agents over `~100` courses.**
+- 🆕 🔴 **The first NEGATIVE efficacy datum this shelf holds:** AI tutor gains reported at *"about
+  half the effect size of high-quality human tutoring"*, engagement dropping without teacher
+  reinforcement. 🔵 **Held because eighteen passes of market material have been uniformly bullish.**
+
+### 🔜 Registered for p169
+
+🟢 **`ACTION JB`** — settle `gap 108` (Article 50's dates) from a primary source, with the refusal
+itself as the alternative finding. 🟢 **`ACTION JC`** — enumerate `OpenEduCat`'s unnamed bundled
+grants. 🟢 **`ACTION JD`** — take the full-`12` `≥6`-hour churn reading p168 could not, and re-measure
+the channel census to test whether `T203` is environmental or per-container. 🟢 **`ACTION JE`** — run
+`P168-A` steps `3`–`6` across the `12` agent rows, which have only ever had steps `1`–`2`.
+
 ## Pass 167 — 2026-10-13
 
 🟢 **Four pre-registered actions, all FOUR DISCHARGED with silent falsifiers — the first clean sweep

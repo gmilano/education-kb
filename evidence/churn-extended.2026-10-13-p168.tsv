@@ -1,0 +1,36 @@
+# ACTION JA - extend the churn ledger past 6 hours. p168 diffed its own sweep against p167's RECORDED
+# t0/t1 shas AND against two anchors p167 did not know were on disk: p155's and p156's sha columns.
+# p168_t0 = 2026-10-13T06:46:52Z (RECORDED). Anchors before p164 are PASS COMMIT timestamps, which
+# p167 calibrated as a safe UPPER bound on that pass's sweep (sweep-to-commit lag 2 min 33 s at p166).
+repo	p164_sha	p167_t0_sha	p167_t1_sha	p168_t0_sha	changed_vs_p164	changed_vs_p167_t1	pre_p164_anchor	pre_p164_sha	changed_vs_pre_p164	tags
+ai-shifu/ai-shifu	2da98b19a15c	2ff4af09b7bb	2ff4af09b7bb	2ff4af09b7bb	yes	no	-	-	-	43
+penecho/penecho	076c1ad54a85	076c1ad54a85	076c1ad54a85	076c1ad54a85	no	no	-	-	-	16
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	d14130b6c47d	d14130b6c47d	no	no	-	-	-	42
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	e0e347f7f399	e0e347f7f399	no	no	p155+p156	e0e347f7f399	no	57
+Selleo/mentingo	242a9324fe48	242a9324fe48	242a9324fe48	242a9324fe48	no	no	p155+p156	242a9324fe48	no	118
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	6cf793bd868b	6cf793bd868b	no	no	p155+p156	6cf793bd868b	no	86
+CaviraOSS/PageLM	a6646794661b	a6646794661b	a6646794661b	a6646794661b	no	no	p156	a6646794661b	no	0
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	no	no	p156	f0142f28e8ed	no	0
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	9c260890214d	9c260890214d	no	no	-	-	-	3
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	no	no	p156	7d9e9052bc5a	no	2
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	5c2f92416c04	5c2f92416c04	no	no	-	-	-	0
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	no	no	-	-	-	3
+# INTERVAL LEDGER, p168 - every span to p168_t0 = 2026-10-13T06:46:52Z, anchor named, denominator named
+#   vs p155 commit 2026-10-12T18:07:53Z   12 h 38 min 59 s   0 of 3  changed   denom 3  (anki-mcp, mentingo, DeepTutor)
+#   vs p156 commit 2026-10-12T19:09:24Z   11 h 37 min 28 s   0 of 6  changed   denom 6  (+ PageLM, OpenTutor, ChatTutor)
+#   vs p164 commit 2026-10-13T03:10:47Z    3 h 36 min 05 s   1 of 12 changed   denom 12 (ai-shifu)
+#   vs p165 commit 2026-10-13T04:15:10Z    2 h 31 min 42 s   1 of 12 changed   denom 12 (ai-shifu)
+#   vs p166_t0 RECORDED 04:46:17Z          2 h 00 min 35 s   1 of 12 changed   denom 12 (ai-shifu)
+#   vs p167_t0 RECORDED 05:46:23Z          1 h 00 min 29 s   0 of 12 changed   denom 12
+#   vs p167_t1 RECORDED 06:40:30Z          0 h 06 min 22 s   0 of 12 changed   denom 12
+# ACTION JA FALSIFIER: >=3 of 12 changed over an interval of >=6 hours.
+#   The >=6 h observation exists ONLY at denominator 6 (p156) and 3 (p155), and measured 0.
+#   SILENT - but NOT at the denominator the action asked for, and that is recorded as T197 rather
+#   than smoothed over. The binding constraint is COVERAGE, not elapsed time: the full 12-row sha
+#   set first exists at p164 (03:10:47Z), so the oldest full-12 anchor available to p168 is 3.60 h old.
+#   p168_t0 -> p168_t1 RECORDED 07:16:28Z   0 h 29 min 36 s   0 of 12 changed   denom 12
+# CLOSING SWEEP: p168_t1 = 2026-10-13T07:16:28Z, all 12 shas IDENTICAL to p168_t0. Two independent
+#   sweeps 29 min 36 s apart, 0 of 12 moved. Both timestamps are RECORDED, so the next pass may
+#   anchor on either without the T196 reconstruction p167 needed.
+# HANDOFF: p168_t0 above is a RECORDED full-12 baseline. The first pass to run at or after
+#   2026-10-13T12:46:52Z (t0) or 13:16:28Z (t1) can take the full-12 >=6 h reading with no new instrument.

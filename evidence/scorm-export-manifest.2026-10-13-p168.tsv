@@ -1,0 +1,25 @@
+# ACTION IY - read Selleo/mentingo's packages/scorm-export-generator manifest builder and settle gap 103:
+# does the generator emit a SCORM 2004 manifest, or only 1.2?
+# Channel: raw.githubusercontent.com (HTTP 200 on all 7 files). Tree listing via github.com HTML.
+# Repo pinned at Selleo/mentingo 242a9324fe48 (unchanged since p155).
+file	bytes	lines	finding
+packages/scorm-export-generator/src/manifest-builder.ts	6814	202	THE manifest emitter - ONE template literal, ONE return, NO version branch
+packages/scorm-export-generator/src/package-builder.ts	3923	131	zips the package; no manifest versioning
+packages/scorm-export-generator/src/types.ts	4430	176	ScormExportImportedScormLessonSnapshot - imported SCOs re-emitted as resources
+packages/scorm-export-generator/src/runtime-assets.ts	1088	39	player asset list
+packages/scorm-export-generator/src/course-json-builder.ts	748	24	course.json payload
+packages/scorm-export-generator/src/index.ts	169	5	re-exports
+packages/scorm-export-generator/package.json	821	36	package manifest, no SCORM version declared
+# VERSION TOKENS found in the whole package - the complete list, 3 hits, all on one line range:
+#   manifest-builder.ts:27  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"     <- SCORM 1.2 binding
+#   manifest-builder.ts:27  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"     <- IMS CP 1.1.2
+#   manifest-builder.ts:29  <schema>ADL SCORM</schema>
+#   manifest-builder.ts:30  <schemaversion>1.2</schemaversion>                         <- HARDCODED
+# ABSENT, each probed and 0 hits in the package: 2004, adlcp_rootv1p3, adlseq, adlnav, imsss, CAM 1.3
+#   -> no SCORM 2004 sequencing namespace is emitted, so no 2004 manifest can be valid.
+# ACTION IY FALSIFIER: refuted if the generator emits a valid 2004 manifest. It emits ONLY 1.2,
+#   with no parameter, no branch and no second template. SILENT. gap 103 CLOSED.
+# THE HAZARD, sharper than gap 103 stated it: renderLessonResources() filters lesson.type === "scorm"
+#   and re-emits each IMPORTED SCO as <resource type="webcontent" adlcp:scormtype="sco"> INSIDE the
+#   1.2 manifest. A SCORM 2004 package that mentingo imported is therefore re-exported DECLARED AS 1.2,
+#   with its imsss/adlseq sequencing rules not carried over. Import 2004 -> export 1.2 is lossy, silently.

@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P168-A` — the licence-body gate: read the grant, not the family name *(replaces the family-name check, p168 — Global)*
+
+🔵 **What changed from `P167-D`:** 🟢 **`P167-D` replaced body-substring matching with a TITLE-LINE
+probe, which is correct and cheap. `ACTION IX` ran it across `10` bodies and found that the title
+line is only STEP 1: `3` of `7` recommended platforms carry a grant the title line does not describe.**
+
+### 🟢 The gate, in the order the failures actually occur
+
+| step | probe | what it catches | measured this pass |
+|---|---|---|---|
+| 🟢 **1** | TITLE-LINE family (`P167-D`) | 🟢 the family, correctly — including `GPL-3.0` §13's Affero string (`T190`) | 🟢 **`10` of `10` families correct** |
+| 🆕 🟢 **2** | **word-level diff vs canonical, after whitespace normalisation** | 🟢 appended paragraphs, removed appendices, substituted clauses | 🟢 **`+615` chars in `edx-platform`, `+97/−166` words in `OpenOLAT` — both CONTROLS reproduced** |
+| 🆕 🟢 **3** | **is the family name in SPDX's permissive set at all?** | 🔴 **`ECL-2.0` — a real OSI licence that no `MIT`/`Apache`/`BSD` allow-list contains (`T200`)** | 🔴 **`1` of `7`** |
+| 🆕 🟢 **4** | **does the body CONTAIN the family it declares?** | 🔴 **`OpenEduCat` promises the `GPL-3.0` text and ships `0` of it (`T201`)** | 🔴 **`1` of `7`** |
+| 🆕 🟢 **5** | **enumerate ALL root grant files, not the first one found** | 🔴 **`Chamilo`'s `license.txt` elects `-or-later` where `LICENSE` elects nothing (`T202`)** | 🔴 **`1` of `7`** |
+| 🆕 🟢 **6** | **resolve every pointer the grant file makes** | 🔴 **`Chamilo`'s `documentation/license.html` and `credits.html` are both `404`** | 🔴 **`2` of `2` dead** |
+
+### 🔴 The canonical channel is a dependency, and it can be denied
+
+🔴 **`gnu.org` is a `403` POLICY DENIAL at this container's gateway, so the FSF plain text is NOT
+available as canonical.** 🟢 **SPDX's `license-list-data` on `raw.githubusercontent.com` is `200`
+and is what `P168-A` uses.** 🔴 **SPDX REFLOWS its text, so a byte diff against it is meaningless —
+the diff MUST be word-level after collapsing whitespace, and `©`/`'`/`"` must be folded first.**
+🟢 **Calibration that proves the point: `35 147` and `35 149` are the SAME `GPL-3.0` at two FSF
+revisions, one URL apart (`philosophy/` → `licenses/why-not-lgpl.html`). Byte size is not identity,
+and p167 was right to retire the band.**
+
+### 🟢 Wiring it
+
+```
+for each recommended repo:
+  branch := git ls-remote --symref <repo> HEAD        # the git channel, always open
+  for name in LICENSE LICENSE.txt LICENSE.md COPYING COPYING.txt LICENCE license.txt:
+      body := curl raw.githubusercontent.com/<repo>/<branch>/<name>   # 200 or skip
+      # enumerate ALL of them - step 5 exists because Chamilo has two
+  family := first title line matching a known licence name       # step 1
+  diff   := word-diff(normalise(body), normalise(SPDX[family]))  # step 2
+  flag if family not in PERMISSIVE_SET                           # step 3
+  flag if family's own body text is absent from body             # step 4
+  for each path the body references: curl it, flag 404            # step 6
+```
+
+🟡 **Cost, measured: `10` bodies over `9` repos in one pass, `0` clones, all on `raw`. This is the
+cheapest gate on the shelf and it changed `3` of `7` verdicts.**
+
+## 🆕 🟢 `P168-B` — SCORM export: verify the MANIFEST, never the feature list *(new, p168 — Global)*
+
+🔵 **Why:** 🔴 **`mentingo`'s prose says *"can export courses as SCORM 1.2 packages"*; p166 counted
+`103` `scorm_2004` markers in the tree; `gap 103` asked which was right. Both were — of different
+halves of the pipeline.**
+
+### 🟢 The probe, and it is four lines
+
+🟢 **Read the manifest emitter and grep the EMITTED XML, not the repo:**
+
+| probe | `mentingo` `242a9324fe48` | reads as |
+|---|---|---|
+| `<schemaversion>` | 🔴 **`1.2`, hardcoded at `manifest-builder.ts:30`** | 🔴 **SCORM `1.2`** |
+| `xmlns:adlcp` | 🔴 **`adlcp_rootv1p2`** | 🔴 **SCORM `1.2`** |
+| `xmlns` | 🔴 **`imscp_rootv1p1p2`** | 🔴 **IMS CP `1.1.2`** |
+| `imsss` / `adlseq` / `adlnav` | 🔴 **`0` occurrences in the whole package** | 🔴 **no `2004` sequencing is possible** |
+
+🟢 **One template literal, one `return`, no version parameter — so this is `1.2`-ONLY by
+construction, not `2004`-untested.**
+
+### 🔴 The lossy round trip, which is the part worth selling against
+
+🔴 **`renderLessonResources()` filters `lesson.type === "scorm"` and re-emits each IMPORTED `SCO` as
+`<resource type="webcontent" adlcp:scormtype="sco">` inside the `1.2` manifest.**
+🔴 **Import a SCORM `2004` package → export the course → the output DECLARES `1.2` and the `2004`
+sequencing rules were never carried. Nothing warns.**
+🟢 **Recipe when a client needs `2004`: keep `mentingo` (`MIT`) for authoring and delivery, and put
+`jcputney/scorm-again` (`MIT`, `1 072 B` clean licence body, verified this pass) on the runtime
+side, emitting the `2004` manifest yourself. Both permissive, both auditable, neither forked.**
+
+## 🆕 🟢 `P168-C` — the courseware tier: an AI-literacy engagement that starts translated *(new, p168 — all four regions)*
+
+🔵 **Why:** 🟢 **`T199` found that *"open source AI agents education"* returns AI-literacy CURRICULA,
+not education agents. Rather than discard them, `P168-C` places them — because `H.R. 8747` proposes
+to fund exactly this in US schools and LATAM's `26%`-strategy figure demands exactly this training.**
+
+| repo | licence *(body-read)* | what it is | wire it as |
+|---|---|---|---|
+| 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **`MIT` (`1 141 B`)** | 🟢 **`12`-lesson course, `53` locales** | 🟢 **the spine — fork, strip the vendor SDK lessons, keep the structure** |
+| 🟢 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **`MIT` (`1 091 B`)** | 🟢 **builds ONE agent, local LLM, no frameworks** | 🟢 **the no-cloud track for a data-resident institution** |
+| 🟢 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **`MIT` (`1 070 B`)** | 🟢 **model internals → retrieval → agent runtimes** | 🟢 **the advanced track for a CS faculty** |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) or [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🔴 `GPL-3.0` / 🟢 `MIT` | the delivery platform | 🟢 **`mentingo` if you need `MIT` end-to-end; `Moodle` if the institution already runs it** |
+
+🟢 **Locale coverage, verified file by file on the raw channel — this is what makes it a regional
+pattern rather than a US one:** 🟢 **LATAM `es` + `pt-BR` + `pt-PT`; APAC `23` locales
+(`ja ko zh-CN zh-HK zh-MO zh-TW hi bn ta te ml mr pa ne ur km kn my th vi id ms tl`); EMEA `28`
+including `ar he fa tr sw` and `pcm`; `53` distinct locales in total.**
+🔴 **Instrument note, and it is a trap: probing bare `zh` or bare `pt` returns `404`. Chinese and
+Portuguese exist ONLY region-qualified. A locale probe that reports *"no Chinese"* is wrong.**
+🟡 **Honest scoping: this is courseware, not an agent. It does not belong on the agent shelf and
+`T199` says why. What it gives a studio is a `4`-week AI-literacy engagement with the content cost
+already paid and the translation cost already paid.**
+
+## 🆕 🟡 `P168-D` — the cross-pass baseline, and the denominator that actually blocks it *(amends `P166`'s churn instrument, p168 — Global)*
+
+🔵 **What changed:** 🔴 **p166 held `ACTION IR` open believing the constraint was PASS LENGTH.
+p167 agreed and solved it by committing a baseline. p168 measured it and the constraint is
+COVERAGE.**
+
+| anchor | span to p168 `t0` | changed | denominator |
+|---|---|---|---|
+| 🟢 `p155` commit | 🟢 **`12 h 38 min 59 s`** | 🟢 **`0`** | 🔴 **`3` of `12` rows only** |
+| 🟢 `p156` commit | 🟢 **`11 h 37 min 28 s`** | 🟢 **`0`** | 🔴 **`6` of `12` rows only** |
+| 🟡 `p164` commit | 🟡 `3 h 36 min 05 s` | 🔴 `1` *(`ai-shifu`)* | 🟢 **`12` — the oldest FULL-`12` anchor that exists** |
+| 🟢 `p167` `t1` RECORDED | `0 h 06 min 22 s` | 🟢 `0` | 🟢 `12` |
+
+🔵 **So an action asking for `≥6` hours at denominator `12` cannot discharge at p168 however long
+the pass runs — the full-`12` sha set is only `3.6` hours old.** 🟢 **The rule this adds, and it
+generalises past churn: an instrument's reach is bounded by its COVERAGE HISTORY, so a pass should
+commit the full-population baseline BEFORE the question that needs it is registered, and a register
+should state the denominator alongside the interval.**
+🟢 **Handoff, exact: p168's `t0` is a RECORDED full-`12` baseline at `2026-10-13T06:46:52Z`. The
+first pass at or after `12:46:52Z` takes the `≥6`-hour full-`12` reading with no new instrument.**
+
 ## 🆕 🟢 `P167-A` — the capability census, with the GUARD'S OWN three defects measured and closed *(amends `P166-A`, p167 — Global)*
 
 🔵 **What changed from `P166-A`:** 🟢 **`P166-A` added comment-stripping and asked whether the

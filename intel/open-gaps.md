@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🟢 Verdicts on the FOUR actions p167 registered, judged by p168 — `3` DISCHARGED, `1` DISCHARGED AT A SMALLER DENOMINATOR
+
+🟢 **Thirteenth consecutive register, third with FOUR actions.** 🔴 **Standing caveat unchanged:
+p168 judges actions p167 wrote, and p168 did the work. These are self-assessments.**
+🆕 🔴 **One action's falsifier FIRED on the raw measurement and went silent only after the hit was
+resolved as a false positive — the first time that has happened on this shelf, and it is recorded
+as `T198` rather than reported as a clean pass.**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION IX`** | 🔴 *`0` of them carries any appended or removed paragraph* | 🟢 **`3` of `7` deviate: `Sakai` SUBSTITUTED (`ECL-2.0`, `+137/−13` words vs `Apache-2.0`), `OpenEduCat` PREAMBLE + BODY-OMISSION, `Chamilo` a SECOND GRANT SURFACE electing `-or-later`. Both controls reproduced** | 🟢 **DISCHARGED, falsifier SILENT** |
+| 🟢 **`ACTION IY`** | 🔴 *the generator emits a valid `2004` manifest* | 🟢 **`<schemaversion>1.2</schemaversion>` HARDCODED, `adlcp_rootv1p2`, and `0` occurrences of `imsss`/`adlseq`/`adlnav`/`2004` in the package. One template, one `return`, no branch** | 🟢 **DISCHARGED, falsifier SILENT. `gap 103` CLOSED** |
+| 🟢 **`ACTION IZ`** | 🔴 *`≥1` of the `10` returns a synonym hit* | 🔴 **raw probe: `1` hit — then RESOLVED as `\bQTI\b` inside a `sha512` hash in a `pnpm-lock.yaml`. Lockfiles excluded: `0` of `10` on all `13` terms** | 🟢 **DISCHARGED, falsifier SILENT after resolution. `gap 106` CLOSED** |
+| 🟡 **`ACTION JA`** | 🔴 *`≥3` of `12` change over an interval of `≥6` hours* | 🟡 **`0` of `6` over `11 h 37 min` and `0` of `3` over `12 h 39 min`. The `≥6`-hour reading does NOT exist at denominator `12`: `1` of `12` over `3 h 36 min` is the longest full-population span available** | 🟡 **DISCHARGED AT DENOMINATOR `6`, NOT `12` — and that is the finding (`T197`)** |
+
+### 🆕 🔴 `ACTION IZ` is the first action whose falsifier fired and then un-fired
+
+🔴 **The falsifier was *"refuted if `≥1` of the `10` returns a synonym hit"*, and the `13`-term probe
+returned exactly `1` across `11 684` tracked files.** 🟢 **Cited in full:
+`plastic-labs/tutor-gpt` `pnpm-lock.yaml:1263`,
+`integrity: sha512-grOjVNN8P3hjJn/eIETF1wwd12DdnwFDoyceUJLYYdkpbwq3nLi+4fqrTAONx7XDALqlL220wC/RHSC/QTI/0w==`
+— `\bQTI\b` matching inside base64, because `/` is a word boundary.**
+🟢 **Excluding `17` lockfiles across `8` of the `10` trees takes every one of the `13` terms to `0`
+of `10`, and p167's published *"`10` of `15` trees have no interop standard"* SURVIVES on `13` terms
+instead of `5`.**
+🔵 **Why it is recorded loudly rather than quietly fixed: a pass that had published the raw number
+would have overturned a CORRECT finding on the strength of a hash, and the register would have shown
+a falsifier firing — the most trustworthy-looking outcome this shelf produces.**
+🔴 **The fix is a FILE CLASS, not a pattern: `\bqti\b` case-insensitive returns the same single hit,
+so no amount of regex tightening would have caught it.**
+
+### 🆕 🔴 `T197` — the constraint on the churn ledger is COVERAGE, and both prior passes mis-diagnosed it
+
+🔴 **p166 held `ACTION IR` open saying a pass is `~40`–`60` min and the action needed hours. p167
+agreed and solved it by committing a baseline. Both diagnosed PASS LENGTH.**
+🟢 **p168 ran `6 min` after p167 committed and still reached `12 h 39 min`, by using anchors p167
+did not know were on disk: `p155` and `p156` recorded shelf shas on `2026-10-12`.**
+🔴 **But those files cover `3` and `6` of the `12` rows. The full `12`-row sha set first exists at
+`p164` (`03:10:47Z`), so the oldest FULL-population anchor available to p168 is `3 h 36 min` old.**
+🔵 **So the ledger's reach was never bounded by how long a pass runs. It is bounded by how long the
+full population has been RECORDED — and an action asking `≥6` hours of a `3.6`-hour instrument
+cannot discharge at the next pass however the pass is scheduled.**
+🟢 **Register rule this adds: state the DENOMINATOR beside the interval, and commit the
+full-population baseline BEFORE registering the question that needs it.**
+🟢 **Handoff, exact and already on disk: p168's `t0` is a RECORDED full-`12` baseline at
+`2026-10-13T06:46:52Z`. The first pass at or after `12:46:52Z` takes the reading with no new instrument.**
+[`evidence/churn-extended.2026-10-13-p168.tsv`](../evidence/churn-extended.2026-10-13-p168.tsv)
+
+### 🟢 `gap 103` CLOSED · `gap 105` ANSWERED and WIDENED · `gap 106` CLOSED
+
+🟢 **`gap 103`** — mentingo's `103` `scorm_2004` markers against a generator naming only `1.2`.
+🟢 **ANSWER: both channels were right about different halves. The EXPORT generator is `1.2`-only by
+construction; the `2004` markers are the IMPORT/player side. And the real hazard is the join — an
+imported `2004` package is re-exported DECLARED `1.2` with its sequencing silently dropped.**
+🟢 **`gap 105`** — how many recommended-but-unread bodies carry an addendum.
+🟢 **ANSWER: `3` of `7`, and *addendum* is the wrong word for the class. It contains SUBSTITUTION
+(`Sakai`'s `ECL-2.0`), BODY-OMISSION (`OpenEduCat` promising the `GPL` text and shipping none) and a
+SECOND GRANT SURFACE (`Chamilo`'s `license.txt` electing `-or-later` where `LICENSE` elects nothing).
+`P168-A` now gates all five shapes plus dead pointers.**
+🟢 **`gap 106`** — whether the `5`-term interop probe produced a false absence.
+🟢 **ANSWER: no. `0` of `10` on `13` terms. The published absence stands, and the probe that tested
+it found a new false-positive class in itself (`T198`).**
+
+### 🟡 `gap 104` RE-CONFIRMED a third time · the APAC silence BROKEN · `T178` NAMED but still unpromotable
+
+🔴 **`gap 104`** — no education-specific AI regulation anywhere in LATAM. 🔴 **RE-CONFIRMED on an
+independent sweep: Brazil's `PL 2.338/2023` is still in the Chamber of Deputies, Chile's executive
+bill is in its first constitutional stage, Colombia's `CONPES 4144` is a policy and not a statute.
+What LATAM has instead is institutional: UNESCO's regional Observatory on AI in Education, launched
+`14 April`.**
+🟢 **The APAC silence p167 recorded is BROKEN** — and the record is what made it visible. 🟢 **Korea's
+AI Basic Act (in force `January 2026`) places education inside *"high-impact"*; Vietnam's Law No.
+`134/2025/QH15` (`1 March 2026`) names EDUCATION high-risk, citing automated assessment and
+behavioural monitoring; China and Singapore have established AI-in-Education policies; and the
+vendor map has names at last — Squirrel AI, Byju's, Google, Microsoft, IBM, Pearson.**
+🟡 **`T178`** — the Annex III instrument. 🟢 **NAMED for the first time: `Regulation (EU) 2026/1744`,
+OJ `24 July 2026`, in force `27 July 2026`, Annex III from `2 December 2027`, Annex I from
+`2 August 2028`.** 🔴 **Still tier `search-summary`: `eur-lex.europa.eu` and
+`digital-strategy.ec.europa.eu` are UNREACHABLE on every channel in this container (`T203`), so the
+Official Journal text was not read. The gap narrows from *"two sources disagree"* to *"one named
+instrument, one unreachable primary"*.**
+
+### 🔴 Gaps OPENED or RE-STATED by p168
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`gap 108`** | 🔴 **Article 50 transparency: one source puts the `50(2)` watermarking grace period at `2 December 2026`, another says Article 50 has applied since `2 August 2026`** | 🔴 **Education is squarely inside Article 50 — every AI-generated assignment, feedback note and synthetic teaching asset. The two readings are `15` months apart on a duty that is live either way. `ACTION JB`** |
+| 🆕 🔴 **`gap 109`** | 🔴 **`OpenEduCat`'s grant file declares bundled libraries to be *"other GPL-compatible licenses"* and names NONE of them** | 🔴 **The published `LGPL-3.0` is the OUTER grant only. Any client shipping `OpenEduCat` ships unaudited third-party grants. `ACTION JC`** |
+| 🆕 🟡 **`gap 110`** | 🟡 **`Chamilo`'s `-or-later` election lives in `license.txt`, whose own pointers to `documentation/license.html` and `credits.html` are both `404`** | 🟡 **The election itself is stated in the file and holds. The contributor attribution it promises is unrecoverable from the repository** |
+| 🆕 🔴 **`gap 111`** | 🔴 **this KB's published verification rule (*"verify every URL with `curl -sI`"*) is NOT EXECUTABLE here: `0` of `15` non-GitHub URLs reachable on any channel** | 🔴 **Either the rule changes to *verify on the strongest channel that is open and record which one*, or every regional claim stays permanently unpromotable. `ACTION JD`** |
+| 🆕 🟡 **`gap 112`** | 🟡 **`P383`’s region gate demands EXACTLY ONE canonical `## Opportunities by region` block, and this file’s convention is APPEND-ONLY, so every pass adds a block and the finding count grows by `1` per pass by construction** | 🟡 **p168 verified the split: `OUT-OF-VOCAB` `13` and `MISSING-REGION` `10` are UNCHANGED from p167 (all in historical blocks, p168’s own block is fully compliant with the closed vocabulary and carries all `5` regions), and the ONLY delta is `MULTIPLE-BLOCKS` `2`→`3`. Either the gate learns that only the NEWEST block is canonical, or its count is uninterpretable from here on. `ACTION JF`** |
+| 🔴 **re-stated** | 🔴 **`gap 104` — no education-specific AI regulation anywhere in LATAM** | 🔵 **Third consecutive independent confirmation. Institutional governance only** |
+| 🔴 **re-stated** | 🔴 **no SIS and no education ERP under `MIT` or `Apache-2.0`** | 🟢 **`P9`'s *"real hole"*, unchanged for a SEVENTH pass. p168 re-queried independently; the only name returned was `OpenEduCat` itself, `LGPL-3.0`, now with `T201` against it** |
+| 🔴 **re-stated** | 🔴 **AFRICA and the MIDDLE EAST returned nothing education-specific; INDIA returned no national instrument; no APAC or LATAM open-source education PLATFORM was named** | 🔵 **Measured silences, recorded so they cannot be mistaken for coverage** |
+| 🟡 **unresolved** | 🟡 **`gap 107` — the `edx-platform` RPC carve-out is a licensor statement in the grant file, not counsel** | 🟢 **Re-confirmed by a second instrument this pass. Still flag it as such in any client deck** |
+
+## 🔜 Registered for p169 — pre-registered with falsifiers
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION JB`** — settle `gap 108`. Read `Regulation (EU) 2026/1744` and the consolidated AI Act Article 50 from a PRIMARY source (`eur-lex.europa.eu`, the Official Journal, or the Commission's own page) and state which Article 50 duties bind on which dates for an education provider | 🔴 *Refuted if the primary is reachable and says Article 50(2) has NO grace period at all — which would mean this KB has been carrying a vendor-invented deadline for two passes. Also refuted in the other direction if the primary is STILL unreachable, in which case `T203` is the finding and `gap 108` must be stated as unresolvable from this container rather than merely open* |
+| 🟢 **`ACTION JC`** — settle `gap 109`. Walk `openeducat/openeducat_erp`'s tree for every `LICENSE`, `COPYING` and `*.LICENSE` file below the root and every per-file licence header, and enumerate the actual set of bundled grants the root file refers to without naming | 🔴 *Refuted if the tree contains NO second grant file and NO non-LGPL per-file header — which would make the root file's *"other GPL-compatible licenses"* a boilerplate inherited from Odoo with nothing behind it, and `gap 109` a phantom* |
+| 🟢 **`ACTION JD`** — take the full-`12` `≥6`-hour churn reading that `T197` showed p168 could not, diffing against p168's RECORDED `t0` (`2026-10-13T06:46:52Z`), and in the same pass re-measure the channel census to test whether `T203`'s refusals are stable or per-container | 🔴 *Refuted if `≥3` of `12` change over `≥6` hours (which reinstates `T173` as a rate), OR if the channel census comes back materially different — which would mean `T203` is a per-container accident and not a property of this environment, and every *"unverifiable"* tier on this shelf is re-openable* |
+| 🟢 **`ACTION JE`** — run `P168-A` steps `3`–`6` (permissive-set membership, body-contains-its-family, ALL root grant files, resolve every pointer) across the `12` agent-shelf rows, which have only ever had steps `1`–`2` applied | 🔴 *Refuted if `0` of the `12` fails any of the four new steps — which would mean the gate's new steps only ever fire on PLATFORMS, and the agent shelf needs no more than a title-line probe* |
+| 🟢 **`ACTION JF`** — settle `gap 112`: amend `P383` so that only the LAST canonical `## Opportunities by region` block in an append-only file is judged, and re-run it over all `10` content files with the amended rule | 🔴 *Refuted if the amended gate’s count on p168’s tree is NOT `OUT-OF-VOCAB 0` / `MISSING-REGION 0` for the newest block — which would mean p168’s own block is non-compliant and this gap was a misdiagnosis of the gate rather than of the convention* |
+
 ## 🟢 Verdicts on the FOUR actions p166 registered, judged by p167 — all FOUR DISCHARGED
 
 🟢 **Twelfth consecutive register, second with FOUR actions, and the first in which every action was

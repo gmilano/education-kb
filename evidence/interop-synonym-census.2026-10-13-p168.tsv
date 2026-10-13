@@ -1,0 +1,36 @@
+# ACTION IZ - re-probe the 10 zero-hit trees with the SYNONYMS p167's 5-term list missed.
+# 13 terms in total: LRS, "learning record store", imsmanifest.xml, SCO/SCOs, QTI, Caliper,
+# "Learning Tools Interoperability" spelled out, and the ANALOGY class (-inspired/-like/-style/-compatible)
+# that T191 established at p167. All 10 trees CLONED at --depth 1; denominator is git ls-files.
+# CONTROL SUITE RUN FIRST (P167-A step: every new probe inherits the old probe's controls). Two
+# defects were found in the probe BEFORE publication and are recorded in the footer.
+repo	tracked_files	LRS	LRS_spelled	imsmanifest	SCO	QTI	Caliper	LTI_spelled	analogy	total
+AkshitIreddy_AI-Powered-Video-Tutorial-Generator	905	0	0	0	0	0	0	0	0	0
+CaviraOSS_PageLM	195	0	0	0	0	0	0	0	0	0
+HKUDS_DeepTutor	3763	0	0	0	0	0	0	0	0	0
+HugeCatLab_ChatTutor	351	0	0	0	0	0	0	0	0	0
+JushBJJ_Mr.-Ranedeer-AI-Tutor	12	0	0	0	0	0	0	0	0	0
+ai-shifu_ai-shifu	3231	0	0	0	0	0	0	0	0	0
+ankimcp_anki-mcp-server	271	0	0	0	0	0	0	0	0	0
+echo-loop_Echo-Loop	1705	0	0	0	0	0	0	0	0	0
+penecho_penecho	1093	0	0	0	0	0	0	0	0	0
+plastic-labs_tutor-gpt	158	0	0	0	0	1	0	0	0	1
+# TOTAL: 1 hit across 11 684 tracked files in 10 trees - and it is a FALSE POSITIVE.
+#   plastic-labs/tutor-gpt pnpm-lock.yaml:1263
+#   resolution: {integrity: sha512-grOjVNN8P3hjJn/eIETF1wwd12DdnwFDoyceUJLYYdkpbwq3nLi+4fqrTAONx7XDALqlL220wC/RHSC/QTI/0w==}
+#   \bQTI\b matched inside a base64 sha512 integrity hash, because "/" is a word boundary.
+# AFTER excluding 17 lockfiles (pnpm-lock.yaml, package-lock.json, yarn.lock, poetry.lock, uv.lock,
+#   Cargo.lock, composer.lock, Pipfile.lock, bun.lock) across 8 of the 10 trees: QTI=0 SCO=0 LRS=0
+#   in ALL TEN trees. Re-measured term by term, every one of the 13 terms is 0 of 10.
+# ACTION IZ FALSIFIER: refuted if >=1 of the 10 returns a synonym hit. The raw probe returned 1;
+#   resolved, it returns 0. SILENT. gap 106 CLOSED: p167's "10 of 15 trees have no interop standard"
+#   SURVIVES, and now rests on 13 terms instead of 5.
+# NEW FALSE-POSITIVE CLASS - T198, the eighth: BASE64 / INTEGRITY-HASH COLLISION IN LOCKFILES.
+#   A 3-letter uppercase acronym under \b...\b will hit base64 payloads. Case-insensitivity was NOT
+#   the cause: \bqti\b case-insensitive returns the same single lockfile hit.
+#   Had this probe been published unresolved it would have FIRED ITS OWN FALSIFIER on a hash.
+# PROBE DEFECTS CAUGHT BY THE CONTROL SUITE BEFORE PUBLICATION:
+#   1. \bcalipers?\b matched "calipers were used to measure the part" - the measuring tool, not the
+#      IMS standard. CORRECTED to case-SENSITIVE singular \bCaliper\b.
+#   2. the negative fixture itself contained the literal string "SCOs", so the SCO limb appeared to
+#      fail. A FIXTURE defect, not a probe defect - recorded because p167's T194 was the same shape.

@@ -1,0 +1,12 @@
+# microsoft/ai-agents-for-beginners (MIT, 92d833e9df9a) translation coverage, read from the repo's own
+# README link row on the raw channel and spot-verified file by file with HTTP status codes.
+# This is the first REGION-PLACED, git-verified asset this shelf holds for all four regions at once.
+region	languages_present	count
+LATAM	es, pt-BR, pt-PT	3
+North America	en (source), es, fr	3
+EMEA	ar, he, fa, de, fr, nl, it, pl, cs, sk, sl, sr, hr, hu, ro, el, bg, et, lt, fi, sv, da, no, ru, uk, tr, sw, pcm	28
+APAC	ja, ko, zh-CN, zh-HK, zh-MO, zh-TW, hi, bn, ta, te, ml, mr, pa, ne, ur, km, kn, my, th, vi, id, ms, tl	23
+# TOTAL distinct locales in the README link row: 53.
+# INSTRUMENT NOTE, same class as T194/T198: a probe for bare "zh" and bare "pt" returns HTTP 404 and
+#   would publish a FALSE ABSENCE for Chinese and Portuguese. Both exist only region-qualified
+#   (zh-CN/zh-HK/zh-MO/zh-TW, pt-BR/pt-PT). Locale tags must be probed region-qualified.

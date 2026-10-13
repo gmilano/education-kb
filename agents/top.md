@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 168 — 2026-10-13
+
+🟢 **Four pre-registered actions. `3` DISCHARGED with silent falsifiers, `1` DISCHARGED AT A SMALLER
+DENOMINATOR THAN IT ASKED FOR and recorded as such rather than smoothed over.**
+🆕 🔴 **`ACTION IZ` fired its own falsifier and then un-fired it: the synonym probe returned `1` hit
+across `11 684` files, and the hit was `\bQTI\b` matching inside a `sha512` integrity hash in a
+`pnpm-lock.yaml`. Published unresolved, it would have overturned a correct finding on a base64 blob.**
+🆕 🟢 **`ACTION IX` found that `3` of the `7` platforms this shelf recommends carry a licence body
+that is not the licence it is published as — including `Sakai`, whose `ECL-2.0` narrows the patent
+grant specifically for people employed by institutions.**
+🟢 **No row enters or leaves the agent shelf. `12` of `12` re-verified; `0` of `12` HEAD shas moved
+since p167's closing sweep.**
+[`evidence/churn-extended.2026-10-13-p168.tsv`](../evidence/churn-extended.2026-10-13-p168.tsv)
+[`evidence/interop-synonym-census.2026-10-13-p168.tsv`](../evidence/interop-synonym-census.2026-10-13-p168.tsv)
+[`evidence/courseware-candidates.2026-10-13-p168.tsv`](../evidence/courseware-candidates.2026-10-13-p168.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IX`** — body-read every recommended-but-never-read licence | 🟢 **DISCHARGED, falsifier SILENT. `3` of `7` deviate, and the class is wider than *"addendum"*: SUBSTITUTION, BODY-OMISSION and a SECOND GRANT SURFACE** |
+| 🟢 **`ACTION IY`** — does `mentingo` export SCORM 2004 or only `1.2`? | 🟢 **DISCHARGED, falsifier SILENT. `1.2` ONLY — hardcoded, no branch. `gap 103` CLOSED, and the hazard is sharper than the gap stated it** |
+| 🟢 **`ACTION IZ`** — re-probe the `10` zero-hit trees with `13` terms | 🟢 **DISCHARGED, falsifier SILENT after resolution. `0` of `10`. `gap 106` CLOSED and p167's published absence SURVIVES** |
+| 🟡 **`ACTION JA`** — extend the churn ledger past `6` hours | 🟡 **DISCHARGED AT DENOMINATOR `6`, NOT `12`. `0` of `6` over `11 h 37 min`. The binding constraint is COVERAGE, not elapsed time (`T197`)** |
+
+### 🟢 The agent shelf — re-verified at p168, `0` of `12` moved
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T06:46:52Z` (RECORDED).**
+🟢 **`0` of `12` HEAD shas moved since p167’s `t1` at `06:40:30Z`, and `0` of `12` moved again between p168’s two sweeps — `t1` at `2026-10-13T07:16:28Z`, `29 min 36 s` later.** 🟢 **`10` of the `12` were also
+CLONED this pass for `ACTION IZ`, so their HEAD dates are read from `git log` rather than inferred —
+and all `10` CONFIRM the dates p167 published.** 🔴 **The `★` column stays closed (`T149`).**
+
+| repo | licence *(title-line probe)* | HEAD date | age | tags | HEAD date channel |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | `2026-10-13` | 🟢 **`0` d** | `43` | 🟢 **`git log` in clone** |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 `AGPL-3.0` | `2026-10-12` | 🟢 `1` d | `16` | 🟢 **`git log` in clone** |
+| 🟡 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` | `2026-10-12` | 🟢 `1` d | `42` | 🟢 **`git log` in clone** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | `2026-10-11` | 🟢 `2` d | `57` | 🟢 **`git log` in clone** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | `2026-10-10` | 🟢 `3` d | `118` | 🟡 carried — sha unmoved since p155 |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `2026-10-08` | 🟢 `5` d | `86` | 🟢 **`git log` in clone** |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | `2026-10-08` | 🟢 `5` d | `0` | 🟢 **`git log` in clone** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | `2026-10-08` | 🟢 `5` d | `0` | 🟡 carried — sha unmoved since p156 |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` | `2026-09-21` | 🟡 `22` d | `3` | 🟢 **`git log` in clone** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` | `2026-01-09` | 🔴 **`277` d** | `2` | 🟢 **`git log` in clone** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` | `2025-11-13` | 🔴 **`334` d** | `0` | 🟢 **`git log` in clone** |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO LICENCE FILE** | `2025-09-30` | 🔴 **`378` d** | `3` | 🟢 **`git log` in clone** |
+
+🟢 **`6` rows permissive and active (`≤5` d), unchanged for a third pass.** 🔴 **`3` over the
+`180`-day drop line.** 🟢 **Clone cost, measured: `10` trees, `11 684` tracked files, `623 MB`.**
+
+### 🆕 🔴 `T197` — the `6`-hour question a `1`-hour cadence cannot answer, and what actually blocks it
+
+🔴 **`ACTION JA` asked for `≥6` hours at denominator `12`. p168 ran `6 min` after p167 committed.**
+🟢 **p168 did find anchors p167 did not know it had: `p155` and `p156` recorded shelf shas on
+`2026-10-12`, giving spans of `12 h 39 min` and `11 h 37 min`.** 🔴 **But those files cover `3` and
+`6` of the `12` rows, so the `≥6`-hour reading exists only at denominator `6`.**
+🔵 **So the constraint is NOT the pass length, which is what p166 and p167 both concluded. It is
+COVERAGE: the full `12`-row sha set first exists at `p164`, making the oldest full-`12` anchor
+`3 h 36 min` old. An action asking for `6` hours of a `3.6`-hour instrument cannot discharge,
+however long the pass runs.**
+🟢 **The handoff is exact, not aspirational: p168's `t0` is a RECORDED full-`12` baseline, so the
+first pass at or after `2026-10-13T12:46:52Z` takes the reading with no new instrument.**
+🟢 **The partial datum: `0` of `6` changed over `11 h 37 min`, and `1` of `12` over `3 h 36 min` —
+still `ai-shifu`, still alone. `T173`'s withdrawal stands.**
+
+### 🆕 🔴 `T198` — the eighth false-positive class: a licence acronym inside a base64 hash
+
+🔴 **`ACTION IZ`'s falsifier was *"refuted if `≥1` of the `10` returns a synonym hit"*. The raw
+probe returned exactly `1`.** 🟢 **Cited in full:
+`plastic-labs/tutor-gpt` `pnpm-lock.yaml:1263` —
+`integrity: sha512-grOjVNN8P3hjJn/eIETF1wwd12DdnwFDoyceUJLYYdkpbwq3nLi+4fqrTAONx7XDALqlL220wC/RHSC/QTI/0w==`.**
+🔴 **`\bQTI\b` matched inside the base64 payload, because `/` is a word boundary.**
+🟢 **After excluding `17` lockfiles across `8` of the `10` trees, every one of the `13` terms is `0`
+of `10`, and the falsifier is SILENT.** 🔵 **Case was not the cause: `\bqti\b` case-insensitive
+returns the same single hit. The fix is the FILE CLASS, not the pattern.**
+🔴 **Published unresolved, this would have overturned a correct absence on a hash — the same shape
+as `T194`, one pass later, in a probe that inherited `T194`'s control suite and still needed a
+ninth control.**
+
+### 🆕 🟢 `T199` — why `12` passes of web sweep have added no agent row: the query collides
+
+🟢 **`5` repos were named by this pass's sweep for *"top open source AI agents education"*. All `5`
+EXIST on the git channel and all `5` are `MIT`.** 🔴 **`0` of `5` are education-sector agents.**
+
+| repo | what the search implied | 🆕 what the git + raw channel shows | tier |
+|---|---|---|---|
+| 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | an education agent | 🔴 **a `12`-lesson COURSE about building agents** | 🟢 **COURSEWARE** |
+| 🟢 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | an education agent | 🔴 **a tutorial that builds ONE agent, no frameworks** | 🟢 **COURSEWARE** |
+| 🟢 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | an education agent | 🔴 **a lesson path over model internals and agent runtimes** | 🟢 **COURSEWARE** |
+| 🟡 [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | an education agent | 🔴 **a curated link directory — not software** | 🔴 **not a row** |
+| 🟡 [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | *"fastest-growing OSS agent framework of 2026"* | 🟡 **a general-purpose agent with no education surface** | 🔴 **not education** |
+
+🔵 **The collision is in the QUERY: *"AI agents education"* reads both ways, and the web answers the
+wrong one — education ABOUT AI, not AI FOR education.** 🟢 **The three courseware rows are real,
+permissive and useful, and they belong on a COURSEWARE tier that this shelf did not have until now.**
+🔴 **A search summary put `hermes-agent` at *"180 000+ stars"*. The repo is confirmed; the figure has
+no git-channel primary and is NOT published (`T149`).**
+🟢 **And the one genuinely region-placed datum of the pass:
+`microsoft/ai-agents-for-beginners` ships `53` locales — `es` and `pt-BR` for LATAM, `23` APAC
+locales, `28` EMEA locales including `pcm` (Nigerian Pidgin), each spot-verified by HTTP status.**
+🔴 **Instrument note in the `T194`/`T198` family: probing bare `zh` and bare `pt` returns `404`.
+Chinese and Portuguese exist ONLY region-qualified, so a naive locale probe publishes a false absence.**
+[`evidence/translation-coverage.2026-10-13-p168.tsv`](../evidence/translation-coverage.2026-10-13-p168.tsv)
+
 ## Pass 167 — 2026-10-13
 
 🟢 **Four pre-registered actions, all FOUR DISCHARGED with silent falsifiers — including

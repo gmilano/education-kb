@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 168 — 2026-10-13
+
+🟢 **`ACTION IX` is DISCHARGED, falsifier SILENT: of the `7` repos this shelf RECOMMENDS but had
+never body-read, `3` carry a licence body that is not the licence they are published as.**
+🆕 🟢 **And the instrument retired at p167 is now EXPLAINED rather than merely retired: the
+`35 147` / `35 149` byte spread that defeated the band test is ONE URL — `philosophy/why-not-lgpl.html`
+against `licenses/why-not-lgpl.html` — between two FSF revisions of the same `GPL-3.0`.**
+🆕 🔴 **The canonical channel had to change: `gnu.org` is a `403` POLICY DENIAL at this container's
+gateway, so the FSF plain text could not be used. SPDX's registry on `raw.githubusercontent.com`
+is `200`, and because SPDX reflows its text the diff is WORD-level after whitespace normalisation —
+never byte-level.**
+[`evidence/licence-canonical-diff.2026-10-13-p168.tsv`](../evidence/licence-canonical-diff.2026-10-13-p168.tsv)
+[`evidence/proxy-channel-census.2026-10-13-p168.tsv`](../evidence/proxy-channel-census.2026-10-13-p168.tsv)
+
+### 🆕 🟢 Every recommended licence body, now READ — `10` bodies, `7` repos, `2` controls
+
+| repo | file | bytes | title-line family | verdict | what the diff found |
+|---|---|---|---|---|---|
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | `COPYING.txt` | `35 147` | 🔴 `GPL-3.0` | 🟢 **CLEAN** | `±4` words, all `http://fsf.org/` → `https://fsf.org/` |
+| 🟢 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `LICENSE` | `35 147` | 🔴 `GPL-3.0` | 🟢 **CLEAN** | the same `4` URL-scheme hunks |
+| 🟢 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | `LICENSE` | `35 149` | 🔴 `GPL-3.0` | 🟢 **CLEAN** | `±1` word — the `why-not-lgpl.html` path. **This is the whole `2`-byte spread** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `LICENSE` | `1 072` | 🟢 `MIT` | 🟢 **CLEAN** | `<year> <copyright holders>` → `2020 Jonathan Putney` |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `LICENSE` | `11 120` | 🟡 **`ECL-2.0`** | 🔴 **SUBSTITUTED LICENCE** | `+137`/`−13` words vs `Apache-2.0`, `95.44%` similar — a DIFFERENT licence, not an amended one |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LICENSE` | `8 241` | 🟡 `LGPL-3.0` | 🔴 **PREAMBLE ADDENDUM + BODY OMISSION** | `3` added paragraphs, and `5 644` canonical words missing |
+| 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `LICENSE` + **`license.txt`** | `35 147` + `1 614` | 🔴 `GPL-3.0` | 🔴 **TWO GRANT SURFACES** | `LICENSE` is clean; a SECOND root file declares **`-or-later`** |
+| 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `LICENSE` | `35 136` | 🔴 `AGPL-3.0` | 🟢 **CONTROL — addendum REPRODUCED** | canonical CONTAINED, `+615` chars appended |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | `LICENSE` | `10 982` | 🟢 `Apache-2.0` | 🟢 **CONTROL — addendum REPRODUCED** | inserts an *"Additional license statement"* AND drops the `APPENDIX` |
+
+🟢 **Both controls reproduced, so the instrument is calibrated before its new findings are believed.**
+🟢 **`4` of `7` are clean — and *clean* now has a measured meaning: the only deviation is an FSF text
+revision or a filled-in copyright holder.**
+
+### 🆕 🔴 `T200` — `Sakai` is not Apache-2.0, and the clause that differs is the one that matters to us
+
+🟢 **This KB has published `Sakai` as `ECL-2.0` since p131 and was RIGHT.** 🔴 **What was never
+published is WHAT `ECL-2.0` changes, and it is not cosmetic.**
+🟢 **The licence says so itself, in its own preamble — a licensor statement, the strongest channel
+available here:** *"The Educational Community License version 2.0 (`"ECL"`) consists of the Apache
+2.0 license, modified to change the scope of the patent grant in section 3 to be specific to the
+needs of the education communities using this license."*
+🔴 **The inserted paragraph, verbatim:** *"Any patent license granted hereby with respect to
+contributions by an individual employed by an institution or organization is limited to patent
+claims where the individual that is the author of the Work is also the inventor of the patent
+claims licensed, and where the organization or institution has the right to grant such license
+under applicable grant and research funding agreements. No other express or implied licenses are
+granted."*
+🔴 **Read for a services firm: a contribution made by someone EMPLOYED by an institution carries a
+patent grant narrowed to claims that person personally invented AND that their employer had the
+right to license. `Apache-2.0`'s broad grant does not apply.** 🟢 **`+137`/`−13` words and
+`95.44%` word similarity measured independently of the preamble's own claim.**
+🟡 **Consequence for the routing table: `Sakai` stays the permissive LMS route and stays
+recommended. The patent limb is a diligence item for any engagement that contributes code back,
+and it is now stated instead of implied by *"Apache-derived"*.**
+
+### 🆕 🔴 `T201` — `OpenEduCat`'s `LICENSE` promises the GPL text and does not contain it
+
+🟢 **p164 published this body as *"`8 241 B`, INCOMPLETE"*. p168 names exactly what is missing and,
+more usefully, that the file itself says it should be there.**
+🔴 **The file's own words:** *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE,
+Version 3 (LGPLv3), as included below. Since the LGPL is a set of additional permissions on top of
+the GPL, **the text of the GPL is included at the bottom as well**."*
+🔴 **Measured: `0` occurrences of `"GNU GENERAL PUBLIC LICENSE"` in the whole file. The body ends
+mid-`LGPL`, and the `~35 KB` of `GPL-3.0` it promises is absent.** 🔵 **This matters because
+`LGPL-3.0` is defined AS a set of additional permissions over `GPL-3.0`: without the `GPL` text,
+the grant on disk is incomplete by its own construction, not merely short.**
+🔴 **And a third added paragraph carries a carve-out no licence gate would catch:** *"Some external
+libraries and contributions bundled with OpenEduCat may be published under other GPL-compatible
+licenses."* 🟡 **So the row's published `LGPL-3.0` is the OUTER grant only; bundled components are
+declared to be something else, unnamed.**
+🔵 **Provenance, stated because it bounds the finding: this wording is Odoo's, and `OpenEduCat` is
+an Odoo application — the defect is almost certainly inherited, not authored.**
+
+### 🆕 🔴 `T202` — `Chamilo` has TWO root grant files, and they do not say the same thing
+
+| surface | bytes | what it declares |
+|---|---|---|
+| 🟢 `LICENSE` | `35 147` | 🔴 the bare `GPL-3.0` body — **no version election at all** |
+| 🆕 🔴 `license.txt` | `1 614` | 🔴 **`GPL-3.0`-OR-LATER:** *"either version 3 of the License, or (at your option) any later version"* |
+
+🔴 **A gate that reads `LICENSE` sees `GPL-3.0-only`. A gate that reads `license.txt` sees
+`GPL-3.0-or-later`, which is MORE permissive for a client.** 🟢 **`license.txt` is also the surface
+the code itself points at: it states the in-source header convention
+`/* For licensing terms, see /license.txt */`.**
+🆕 🔴 **And both of `license.txt`'s own pointers are DEAD at `master` `440496d70ef0`:
+`documentation/license.html` → `404`, `documentation/credits.html` → `404`.**
+🔵 **So the file that carries the or-later election, and that every source header cites, refers for
+its full text and its contributor list to two paths that no longer exist.** 🟡 **The or-later
+reading still holds — it is stated in the file itself, not in the dead pointer — but the
+contributor attribution it promises is unrecoverable from the repository.**
+
+### 🔴 What `ACTION IX` means for `gap 105`, restated
+
+🟢 **`gap 105` asked about ADDENDA. The answer is that *addendum* is too narrow a word for the class.**
+
+| deviation class | found in | why a licence gate misses it |
+|---|---|---|
+| 🔴 **appended paragraph** | `edx-platform`, `OpenOLAT` | canonical still matches as a substring — the extra text is invisible to a containment test |
+| 🔴 **substituted licence** | `Sakai` | the title line is honest, but `"ECL-2.0"` matches no entry in an `MIT`/`Apache`/`GPL` allow-list |
+| 🔴 **body omission** | `OpenEduCat` | the file declares a family it does not fully contain |
+| 🔴 **second grant surface** | `Chamilo` | each file is internally consistent; only reading BOTH shows the conflict |
+| 🟢 **text revision / template fill** | `moodle`, `ILIAS`, `oneroster`, `scorm-again` | 🟢 **benign, and now measured so it stops being mistaken for a deviation** |
+
 ## Pass 167 — 2026-10-13
 
 🟢 **`ACTION IV` is DISCHARGED, falsifier SILENT: `Ed-Fi-Alliance-OSS/edfi-oneroster` serves `12`

@@ -1,0 +1,42 @@
+# p168 regional sweep. 8 queries: 4 global, 4 per-region (North America, EMEA, APAC, LATAM).
+# EVERY row here is tier=search-summary and UNPROMOTABLE this pass: see
+# proxy-channel-census.2026-10-13-p168.tsv - 0 of 15 non-GitHub URLs are reachable on any channel.
+# The one thing that CAN be verified - repo identity - was, and is in courseware-candidates.
+region	finding	figure	channel	tier	already_held_by_this_KB
+Global	AI-in-education market, Research and Markets scope	$10.6B 2026 -> $42.48B 2030, 41.5% CAGR	search-summary	unverified	YES - published since p54
+Global	AI TUTORS market, Grand View scope - a NARROWER definition	$2.7B 2026 -> $17.7B 2033	search-summary	unverified	NO - new scope, and it is why T168's incoherence persists
+Global	the shift named by Technavio	"experimental generative AI" -> "autonomous agentic workflows"	search-summary	unverified	YES - T182
+Global	evidence AGAINST the tutoring claim	AI tutor learning gains ~half the effect size of high-quality human tutoring; engagement drops without teacher reinforcement (attributed to EdSurge Research 2025, not seen)	search-summary	unverified	NO - the first NEGATIVE efficacy datum this KB holds
+North America	state legislative volume	134 AI-in-education bills across 31 states in 2026	search-summary	unverified	NO
+North America	named bills	California AB 1159 (bars student data for model training); Idaho SB 1227 (privacy for AI tools in schools)	search-summary	unverified	NO
+North America	human-oversight mandates	Oklahoma and Maryland bar AI from high-stakes decisions about students	search-summary	unverified	NO
+North America	federal	K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747) cleared House committee markup 21 July 2026	search-summary	unverified	NO
+North America	restriction	New York City one-year moratorium on student-facing AI through 8th grade	search-summary	unverified	NO
+North America	teacher adoption	60% of US K-12 teachers used AI tools in the 2024-25 school year	search-summary	unverified	NO
+North America	regional share	36% of the global AI-in-education market	search-summary	unverified-vendor-page	NO
+EMEA	THE INSTRUMENT, named at last	Regulation (EU) 2026/1744 - the AI Omnibus. OJ 24 July 2026, in force 27 July 2026	search-summary	unverified - EUR-Lex UNREACHABLE	PARTIAL - T178 had the date, never the number
+EMEA	Annex III (education is Annex III) high-risk obligations	apply from 2 December 2027	search-summary	unverified	YES - T178
+EMEA	Annex I embedded high-risk	apply from 2 August 2028	search-summary	unverified	NO
+EMEA	unchanged by the Omnibus	Article 4 AI-literacy obligation has applied since 2 February 2025	search-summary	unverified	NO
+EMEA	CONFLICT, unresolved	Article 50 transparency: one source says the 50(2) watermarking grace period runs to 2 December 2026, another says Article 50 has applied since 2 August 2026	search-summary	CONTRADICTION	NO - gap 108
+EMEA	prohibited practice touching schools directly	AI that infers emotions in workplaces or educational institutions is banned	search-summary	unverified	NO
+EMEA	readiness	78% of organisations had taken no meaningful compliance step as of April 2026 (sector not stated)	search-summary	unverified	NO
+APAC	Korea	AI Basic Act in force January 2026; covers "high-impact" uses INCLUDING education; MSIT signalled 2026 as a pilot period with limited enforcement	search-summary	unverified	PARTIAL - the Act was held, the EDUCATION limb was not
+APAC	Vietnam	Law No. 134/2025/QH15 dated 1 March 2026; an implementing decision lists EDUCATION among high-risk sectors, citing automated assessment and behavioural monitoring	search-summary	unverified	NO - FIRST APAC education-specific high-risk designation this KB holds
+APAC	China	algorithm filings, synthetic-content labelling, security review for public models - already enforced	search-summary	unverified	YES
+APAC	Japan	light-touch, voluntary governance	search-summary	unverified	YES
+APAC	national education-AI policy, named	UNESCO: China and Singapore have established AI-in-Education policies and guidelines	search-summary	unverified	NO - this is what p167 recorded as a 0
+APAC	named education vendors	Squirrel AI (China), Byju's (India), plus Google, Microsoft, IBM, Pearson	search-summary	unverified	NO - this is what p167 recorded as a 0
+APAC	public opinion	lower support for banning AI in schools across Asian markets; Australia and New Zealand show HIGHER support for a ban (Ipsos Education Monitor 2026)	search-summary	unverified	NO
+LATAM	higher-education adoption, the strongest LATAM datum this KB has	UNESCO IESALC: 200 institutions, 19 countries - 87% use AI in at least one area, 74% in teaching and learning, only 26% have a formal AI strategy	search-summary	unverified	NO
+LATAM	by institution type	private non-profit 84% implementing, public 68%, private for-profit 52%	search-summary	unverified	NO
+LATAM	school-level teacher use, OECD TALIS 2024	Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% - against an OECD average of 36%	search-summary	unverified	NO
+LATAM	a NAMED production deployment, with numbers	Pontificia Universidad Catolica de Chile: 194 pedagogical agents across ~100 courses, 4 600+ students, February 2026, instructor-configured and grounded in course content; learning outcomes NOT yet measured	search-summary	unverified	NO - the first named LATAM agentic deployment at scale
+LATAM	regional governance instrument	UNESCO Observatory on AI in Education for Latin America and the Caribbean, launched 14 April	search-summary	unverified	NO
+LATAM	Uruguay	Ceibal 2026 data: 75% of public-school teachers report using these tools	search-summary	unverified	NO
+LATAM	regulation - gap 104 RE-CONFIRMED a third time	Brazil PL 2.338/2023 still in the Chamber of Deputies; Chile's executive AI bill in first constitutional stage; Colombia CONPES 4144 (Feb 2025) is a POLICY, not a statute. NONE is education-specific	search-summary	unverified	YES - gap 104, third consecutive confirmation
+# DECLARED GAPS, so a silence is never mistaken for coverage:
+#   - AFRICA and the MIDDLE EAST returned nothing education-specific again. EMEA's findings are all EU.
+#   - INDIA returned no national education-AI instrument, only Byju's as a vendor name.
+#   - 0 new open-source education AGENT repos were named by any of the 8 queries (see T199).
+#   - No LATAM or APAC open-source education platform was named by any query, for a 13th pass.

@@ -1,0 +1,16 @@
+# Every repo NAMED by this pass's web sweep, verified on the git channel (ls-remote) and the raw
+# channel (LICENSE body). T160's promotion rule: a search summary names a repo, the git channel decides.
+# The question asked was "top open source AI agents for EDUCATION". Of 5 named, 0 are education agents.
+repo	git_channel	default_branch	head_sha	licence_file	licence_bytes	licence_family	what_it_ACTUALLY_is	shelf_verdict
+microsoft/ai-agents-for-beginners	EXISTS	main	92d833e9df9a	LICENSE	1141	MIT	"AI Agents for Beginners - A Course", 12 lessons, 53 translations	COURSEWARE tier, not the agent shelf
+pguso/agents-from-scratch	EXISTS	main	da3f9df28a9c	LICENSE	1091	MIT	"A gentle, local-first introduction to AI agents" - builds ONE agent, no frameworks	COURSEWARE tier
+rohitg00/ai-engineering-from-scratch	EXISTS	main	d640c7f735f3	LICENSE	1070	MIT	lesson path: model internals, retrieval pipelines, agent runtimes	COURSEWARE tier
+avinash201199/free-ai-agents-resources	EXISTS	main	a80de737dc2c	LICENSE	1070	MIT	curated link directory, not software	NOT a shelf row - a directory
+NousResearch/hermes-agent	EXISTS	main	63d0b9412002	LICENSE	1070	MIT	general-purpose agent + desktop app, no education surface	NOT education - general agent
+# T199 - THE SEARCH-TERM COLLISION. "open source AI agents education" returns AI-LITERACY CURRICULA
+#   (education ABOUT AI) and not education-sector agents (AI FOR education). 4 of 5 named repos are
+#   courseware, 1 is a general agent, 0 are education agents. The collision is in the QUERY, not in
+#   the results, and it is why 12 passes of this sweep have added no row from the web channel.
+# A search summary reported NousResearch/hermes-agent at "180 000+ stars since its February 2026
+#   launch". The repo EXISTS and is MIT. The star figure has no git-channel primary and is NOT
+#   published here (T149 keeps the star column closed).

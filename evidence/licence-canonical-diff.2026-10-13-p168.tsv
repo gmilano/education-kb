@@ -1,0 +1,24 @@
+# ACTION IX - P167-D's title-line probe PLUS a canonical-text word diff, run against every repo this
+# shelf RECOMMENDS but had never body-read, with openedx/edx-platform and openolat/OpenOLAT as CONTROLS
+# (p167 published both as carrying an addendum; a correct instrument must reproduce that).
+# Canonical channel: SPDX license-list-data (raw.githubusercontent.com, HTTP 200). gnu.org is 403 at
+# the gateway, so the FSF plain-text distribution could NOT be used as the canonical; see the
+# proxy census for the measured refusal. SPDX text is reflowed, so the diff is WORD-level after
+# whitespace normalisation, never byte-level.
+repo	branch	file	bytes	title_line_family	verdict	added_words	removed_words	hunks	deviation_class
+moodle/moodle	main	COPYING.txt	35147	GPL-3.0	TEXT-REVISION-ONLY	4	4	4	http://fsf.org/ vs https://fsf.org/ - older FSF revision, NOT an addendum
+chamilo/chamilo-lms	master	LICENSE	35147	GPL-3.0	TEXT-REVISION-ONLY	4	4	4	same 4 URL-scheme hunks as moodle
+ILIAS-eLearning/ILIAS	release_11	LICENSE	35147	GPL-3.0	TEXT-REVISION-ONLY	4	4	4	same 4 URL-scheme hunks as moodle
+moodlehq/moodle-enrol_oneroster	main	LICENSE	35149	GPL-3.0	TEXT-REVISION-ONLY	1	1	1	gnu.org/philosophy/why-not-lgpl.html vs gnu.org/licenses/why-not-lgpl.html - the 2-byte spread EXPLAINED
+jcputney/scorm-again	master	LICENSE	1072	MIT	TEMPLATE-FILL-ONLY	3	3	1	<year> <copyright holders> -> 2020 Jonathan Putney
+sakaiproject/sakai	master	LICENSE	11120	ECL-2.0	SUBSTITUTED-LICENCE	137	13	12	NOT Apache-2.0. ECL-2.0 = Apache-2.0 with an INSERTED section-3 paragraph. 95.44% word similarity
+openeducat/openeducat_erp	19.0	LICENSE	8241	LGPL-3.0	PREAMBLE-ADDENDUM + BODY-OMISSION	82	5644	2	3-para preamble added; file PROMISES the GPL-3.0 text "at the bottom" and 0 of it is present
+openedx/edx-platform	master	LICENSE	35136	AGPL-3.0	CANONICAL-CONTAINED + ADDENDUM	615 chars	0	1	CONTROL - p167's addendum REPRODUCED by the new instrument
+openolat/OpenOLAT	master	LICENSE	10982	Apache-2.0	ADDENDUM + APPENDIX-REMOVED	97	166	6	CONTROL - inserts "Additional license statement" where the APPENDIX should be, and drops the APPENDIX
+chamilo/chamilo-lms	master	license.txt	1614	none (notice file)	SECOND-GRANT-SURFACE	n/a	n/a	n/a	a SECOND root grant file - declares GPL-3.0-OR-LATER, which LICENSE alone does not
+# ACTION IX FALSIFIER: refuted if 0 of the 7 carries any appended or removed paragraph. MEASURED 3 of 7.
+#   SILENT. gap 105's class is REAL - and wider than "addendum": it includes SUBSTITUTION (Sakai),
+#   BODY-OMISSION (OpenEduCat) and a SECOND GRANT SURFACE (Chamilo).
+# 4 of 7 are clean: the only deviations are an FSF text revision or a filled-in copyright holder.
+# INSTRUMENT: byte size is confirmed unusable as licence identity (p167 already retired it) - 35147
+#   and 35149 are the SAME licence at two FSF revisions, one URL apart.

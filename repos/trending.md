@@ -5,6 +5,50 @@ updated: 2026-10-13
 ---
 
 
+## 2026-10-13 — Pass 168
+
+### 🆕 🔴 What is new this week: three of the seven platforms we recommend carry a grant we had never read
+
+🟢 **`ACTION IX` body-read every repo this shelf RECOMMENDS but had never opened, with
+`edx-platform` and `OpenOLAT` as controls. Both controls reproduced; `3` of the `7` new ones deviate.**
+
+| repo | published as | 🆕 what the body says | class |
+|---|---|---|---|
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `ECL-2.0`, *"Apache-derived"* | 🔴 **`Apache-2.0` with an INSERTED paragraph narrowing the patent grant for contributors employed by an institution. `+137/−13` words, `95.44%` similar** | 🔴 **SUBSTITUTED LICENCE** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | 🔴 **the body PROMISES the `GPL-3.0` text *"at the bottom"* and contains `0` of it; bundled libraries declared *"other GPL-compatible licenses"*, unnamed** | 🔴 **BODY OMISSION** |
+| 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` | 🆕 🟡 **a SECOND root grant file, `license.txt` (`1 614 B`), elects `-or-later`; both of its own pointers are `404`** | 🔴 **TWO GRANT SURFACES** |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) · [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) · [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) · [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🔴 `GPL-3.0` / 🟢 `MIT` | 🟢 **CLEAN — an FSF URL revision or a filled-in copyright holder, nothing more** | 🟢 **no deviation** |
+
+### 🆕 🟢 The `2`-byte mystery that broke the band test is solved
+
+🟢 **p167 retired licence byte-size as an identity test because the bodies on disk matched no band.**
+🟢 **p168 names the mechanism: `35 147` and `35 149` are the SAME `GPL-3.0` at two FSF revisions,
+differing by ONE URL — `gnu.org/philosophy/why-not-lgpl.html` against
+`gnu.org/licenses/why-not-lgpl.html`.** 🟢 **`moodle`, `Chamilo` and `ILIAS` all carry the older
+revision with `http://fsf.org/`; `moodle-enrol_oneroster` and `plastic-labs/tutor-gpt` carry the
+newer one.** 🔵 **Byte size was never licence identity, and now the shelf can say why rather than
+only that.**
+
+### 🆕 🔴 `mentingo`'s SCORM export is `1.2`-only, and the import path makes it lossy
+
+🟢 **`ACTION IY` read all `7` files of `packages/scorm-export-generator` on the raw channel.**
+🔴 **`<schemaversion>1.2</schemaversion>` is HARDCODED at `manifest-builder.ts:30`, with
+`adlcp_rootv1p2` and `imscp_rootv1p1p2` namespaces and `0` occurrences of `imsss`, `adlseq`,
+`adlnav` or `2004` anywhere in the package. One template literal, one `return`, no version branch.**
+🔴 **And imported SCOs are re-emitted INSIDE that `1.2` manifest, so a SCORM `2004` package imported
+into `mentingo` comes back out declared `1.2` with its sequencing dropped, silently.**
+🟢 **`gap 103` CLOSED. The `103` `scorm_2004` markers p166 counted are the import/player side —
+the gap was asking the right question of the wrong half of the pipeline.**
+
+### 🔴 The channel census, because it bounds everything above
+
+🟢 **`git ls-remote`, `git clone` and `raw.githubusercontent.com` are OPEN, and every repo claim
+this week rests on them.** 🔴 **`github.com` HTML (`curl`), `api.github.com`, `codeload` and
+`gnu.org` are `403` POLICY DENIALS; `github.com/search` returns `0` results on all channels; every
+non-GitHub web host is `000`/`ENOTFOUND`.**
+🔵 **So the canonical licence text had to come from SPDX on `raw` rather than from the FSF, and
+because SPDX reflows its text every diff this week is word-level after whitespace normalisation.**
+
 ## 2026-10-13 — Pass 167
 
 ### 🆕 🟢 What is new this week: the permissive OneRoster server, read route by route

@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 168 — 2026-10-13
+
+### 1. 🆕 🔴 `T198` — the probe that nearly overturned a correct finding on a base64 hash — *Global, measured*
+
+🔴 **`ACTION IZ` re-probed `10` trees with `13` interop terms instead of `5`, to test whether
+p167's published *"`10` of `15` trees have no interop standard"* was a FALSE ABSENCE.**
+🟢 **It returned exactly `1` hit across `11 684` tracked files — and the hit was `\bQTI\b` matching
+inside a `sha512` integrity hash in `plastic-labs/tutor-gpt`'s `pnpm-lock.yaml:1263`, because `/`
+is a word boundary in base64.**
+
+| stage | hits | what changed |
+|---|---|---|
+| 🔴 raw `13`-term probe | `1` | would have FIRED the falsifier and overturned a correct finding |
+| 🟢 lockfiles excluded (`17` files, `8` of `10` trees) | 🟢 **`0`** | 🟢 **falsifier SILENT, `gap 106` CLOSED, p167's absence SURVIVES** |
+
+🔵 **The lesson is not *"exclude lockfiles"*. It is that the fix was a FILE CLASS, not a pattern:
+`\bqti\b` case-insensitive returns the same single hit, so tightening the regex would have changed
+nothing.** 🔴 **Eighth false-positive class, one pass after `T194`, in a probe that inherited
+`T194`'s control suite and still needed a ninth control.**
+
+### 2. 🆕 🔴 `T200` — the licence whose family name hides the clause that matters — *Global, measured*
+
+🔴 **`Sakai` is `ECL-2.0`, which this KB has published correctly since p131 and has described as
+*"Apache-derived, fork freely"*.** 🟢 **p168 diffed the body against canonical `Apache-2.0`:
+`+137`/`−13` words, `95.44%` word similarity, and the licence's own preamble states the derivation.**
+🔴 **The inserted paragraph narrows the patent grant for contributions by *"an individual employed
+by an institution or organization"* to claims that person personally invented and that their
+employer had the right to license.**
+🔵 **Why it is a trend and not a trivium: education's open source is written by university
+employees, so an education-specific licence family exists precisely to narrow institutional patent
+exposure. A permissive-licence allow-list built from `MIT`/`Apache`/`BSD` will not contain
+`ECL-2.0` at all, and the gate will either refuse a safe platform or wave through a clause nobody read.**
+
+### 3. 🆕 🔴 `T201`/`T202` — grant files that promise what they do not contain, and repos with two of them — *Global, measured*
+
+| repo | the defect | measured |
+|---|---|---|
+| 🔴 `openeducat/openeducat_erp` | 🔴 the body says *"the text of the GPL is included at the bottom as well"* | 🔴 **`0` occurrences of `"GNU GENERAL PUBLIC LICENSE"`. `LGPL-3.0` is DEFINED as additional permissions over `GPL-3.0`, so the grant on disk is incomplete by its own construction** |
+| 🔴 `chamilo/chamilo-lms` | 🔴 two root grant files that disagree | 🔴 **`LICENSE` is a bare `GPL-3.0` body (no election); `license.txt` elects **`-or-later`** — and both of `license.txt`'s own pointers are `404`** |
+
+🔵 **The trend across `T200`–`T202`: the licence FAMILY is the easy question and it is the one
+every tool answers. What a client actually needs — which grant, over which code, from which
+surface, with which carve-out — is only in the body, and `3` of the `7` bodies read this pass do not
+match what their family name implies.**
+
+### 4. 🆕 🔴 `T203` — a verification rule that cannot be executed is a rule that is not being followed — *Global, measured*
+
+🔴 **This KB publishes *"verify every URL before writing it (`curl -sI`)"*. p168 measured `26`
+hosts and channels: `0` of the `15` non-GitHub URLs this pass would cite are reachable.**
+🟢 **What IS open: `git ls-remote`, `git clone`, `raw.githubusercontent.com`, `apache.org` and the
+package registries — which is why every repo, sha, licence body and source line cited this pass is
+verified while every market and regulatory figure is not.**
+🔴 **`github.com` HTML answers `403` on `curl` and OPENS on `WebFetch`; `github.com/search` returns
+`0` results on all three channels, so repo DISCOVERY is closed and no shelf row could enter by
+search this pass.**
+🔵 **The useful form of this finding is a rule change, not a complaint: the bar should read *verify
+on the strongest channel that is open, and record which one* — which is what the evidence files
+have been doing in practice for twenty passes while the stated rule described something else.**
+
+### 5. 🆕 🟢 APAC stops being a silence, and the two statutes name the same feature — *APAC, search-summary*
+
+🟢 **p167 recorded `0` named APAC education vendors and `0` national education-AI policies,
+explicitly so it could not be read as coverage. p168's sweep returned both.**
+🟢 **Korea's AI Basic Act (in force `January 2026`) places education inside *"high-impact"* uses,
+with MSIT signalling `2026` as a limited-enforcement pilot. Vietnam's Law No. `134/2025/QH15`
+(`1 March 2026`) names EDUCATION among high-risk sectors and cites AUTOMATED ASSESSMENT and
+BEHAVIOURAL MONITORING as the examples.**
+🔵 **The convergence is the trend: automated assessment is simultaneously the most-requested
+feature and the named high-risk trigger in APAC statute, EU Annex III, and the US state bills
+(Oklahoma and Maryland barring AI from high-stakes student decisions). Three regions, three legal
+traditions, one feature.** 🟢 **Which means the architecture that satisfies one satisfies all
+three — human decision point, evidence trail, data boundary — and it is the same posture
+`P167-B`'s read-only rostering already takes.**
+🟡 **ANZ is the exception inside its own region: support for BANNING AI in schools is higher there
+than across Asian markets, so scope it with EMEA-style transparency expectations.**
+
+### 6. 🆕 🟢 LATAM's `61`-point gap between using AI and governing it — *LATAM, search-summary*
+
+🟢 **UNESCO IESALC, `200` institutions across `19` countries: `87%` use AI in at least one area,
+`74%` in teaching and learning, `26%` have a formal AI strategy.** 🟢 **Private non-profit
+institutions lead implementation at `84%`, public `68%`, private for-profit `52%`.**
+🟢 **`PUC Chile` is the named deployment: `194` pedagogical agents, `~100` courses, `4 600+`
+students, `February 2026` — instructor-configured, grounded in course content, learning outcomes
+not yet measured.**
+🔵 **The trend is the ORDER of adoption: LATAM institutions deployed first and are governing second,
+which is the reverse of EMEA's regulation-led sequence. It makes the sellable first engagement
+governance rather than build — and it makes measurement the second one, because the region's
+flagship deployment cannot yet say whether it worked.**
+🔴 **And no regulator is forcing it: `gap 104` holds for a third pass. The work will be bought on
+assessment integrity and teacher workload, not on a compliance date.**
+
+### 7. 🆕 🔴 The first negative efficacy datum this shelf has held — *Global, search-summary*
+
+🔴 **AI tutor learning gains reported at *"approximately half the effect size of high-quality human
+tutoring"*, with engagement dropping significantly without teacher reinforcement — attributed to
+EdSurge Research (`2025`), a source not seen on any channel.**
+🔵 **Held deliberately: eighteen passes of market material have been uniformly pro-adoption, and a
+shelf that only carries the bull case is marketing. Quote it to a client as a design constraint —
+the teacher stays in the loop — not as a finding.**
+
+### 8. 🆕 🔴 `T199` — twelve passes of web sweep added no agent row because the QUERY collides — *Global, measured*
+
+🟢 **`5` repos named by this pass's *"open source AI agents education"* sweep. All `5` exist on the
+git channel, all `5` are `MIT`, `0` are education-sector agents: `4` are AI-literacy courseware and
+`1` is a general-purpose agent.**
+🔵 **The phrase reads both ways and the web answers the wrong one — education ABOUT AI, not AI FOR
+education. That is a QUERY defect, and it explains a pattern this KB has recorded as a market
+absence for twelve passes.**
+🟢 **The salvage is real: three `MIT` AI-literacy curricula, one of them shipping `53` locales
+including `es`, `pt-BR` and `23` APAC languages — which is a COURSEWARE tier this shelf did not
+have, arriving exactly as `H.R. 8747` proposes to fund AI literacy in US schools.**
+
 ## Pass 167 — 2026-10-13
 
 ### 1. 🆕 🔴 `T194` — the instrument that catches naming collisions reproduced the collision it was built to catch — *Global, measured*
