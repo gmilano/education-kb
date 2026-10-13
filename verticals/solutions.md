@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🆕 🔴 **`ACTION JM`'s falsifier FIRED, and `T216` is not one omission — it is SIX. Besides
+`OpenOLAT`, which p170 restored, six repositories were routed by an earlier pass and are absent from
+the newest routing table. `T216` is SYSTEMIC in this file, and `P170-C` is necessary.**
+🆕 🟢 **The remedy is this block: the routing table below RE-STATES every row, because under
+*"only the newest block is canonical"* a row not re-stated is lost however true it remains below.**
+🆕 🟢 **One of the six is a DELIBERATE removal and is NOT restored — which is precisely why
+`P170-C` reports and never auto-fixes.**
+[`evidence/routing-table-lost-rows.2026-10-13-p171.tsv`](../evidence/routing-table-lost-rows.2026-10-13-p171.tsv)
+
+### 🆕 🟢 THE ROUTING TABLE — re-stated in full, every licence a BODY READ
+
+| need | route | licence *(body read)* | grant bodies | status at p171 |
+|---|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | `154` name matches | 🟢 **CARRIED from p170. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **`6`** of `11` | 🟢 **CARRIED. The LATAM and APAC low-bandwidth row** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** | 🟡 **`129`** *(`72` blobs, `0` hostile)* | 🟡 **CARRIED with both flags: narrowed patent grant (`T200`) and it FAILS `mentingo`'s own licence gate (`T208`). Inner audit now classified, `0` hostile** |
+| 🆕 🟢 **LMS, permissive — AI-native / corporate L&D** | 🆕 🟢 [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B)* | `3` + `6` | 🆕 🟢 **RESTORED (`ACTION JM`). `SCORM` is import AND export — `4` import endpoints, a resumable-upload service, an import worker, `119` `SCORM` paths. Ships `licenses.config.yaml`, the gate to LIFT** |
+| 🆕 🟢 **Rostering, permissive** | 🆕 🟢 [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | n/a | 🆕 🟢 **RESTORED. `OneRoster 1.2`, `24` GETs over `12` entities, per-scope auth, `0` write routes in the tree. The only permissive rostering route this KB has verified** |
+| 🆕 🟢 **Portable credentials — Open Badges `3.0` authoring** | 🆕 🟢 [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | `1` | 🆕 🟢 **RESTORED. The only clean permissive active row in the Open Badges topic, and the `v3` half of `P159-A`. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **`1`** of `1` | 🟢 **CARRIED. `SCORM 1.2` / `2004` + `AICC`. The only row where grant-named paths and grant bodies agree exactly** |
+| 🔴 **Education ERP / SIS** | 🆕 🔴 [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on 🆕 🔴 [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or 🆕 🔴 [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | `1` of `15` *(`openeducat`)* | 🆕 🔴 **RESTORED, all three, as the COPYLEFT-ONLY row. TENTH pass with no `MIT`/`Apache` education ERP, now tested against a `485`-repository topic sweep. Dropping this row HID the finding rather than stating it** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟡 **`15`** of `27` | 🟢 **CARRIED. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🆕 🔴 **`88` documents** *(was published as `193`)* | 🆕 🟡 **CARRIED, COUNT CORRECTED. `105` of the `193` were PHP source files, not grants (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **`2`** of `7` | 🆕 🟢 **RE-STATED (`ACTION JM`, caught by `P170-C` against p171's OWN first draft). The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟡 **`11`** | 🆕 🟢 **RE-STATED. Still the most active SIS this KB holds — HEAD was `1` d old at p170** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟡 **`22`** | 🆕 🟢 **RE-STATED. No root grant file, confirmed twice. The bundled CKEditor grants remain unread** |
+| 🔴 **SIS, PERMISSIVE** | 🔴 **none exists** | — | — | 🔴 **TENTH pass. Tested this pass against a `485`-repository topic sweep (`ACTION JN`) as well as the usual queries. `Fedena` stays settled-and-abandoned (`T212`); `Forma LMS` was p170's candidate and is `GPL-2.0`** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | — | 🔴 **CARRIED as REFUTED. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+
+### 🆕 🔴 The one row p171 did NOT restore, and why that matters more than the five it did
+
+| | |
+|---|---|
+| 🔴 **the row** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) — `Apache-2.0`, `11 357` B, routed by an earlier pass as *"learning-record plumbing"*, then as *"metadata cataloguing"* |
+| 🔴 **why it was dropped** | 🔴 **p169 MEASURED it stale: last commit `2026-02-26` (a README edit), `Django<4.0` (EOL April `2024`), `0` matches for `xapi`, `caliper` or `statement`, and its `openlxp-xsr-aws` sibling does not resolve** |
+| 🟢 **p171's call** | 🟢 **DO NOT RESTORE. p169's verdict — *"vendor the V-T-V-L idea, do not ship the package"* — stands** |
+
+🔵 **A gate that had *"corrected"* this row back onto the routing table would have re-recommended a
+package this KB's own measurement calls abandoned. `P170-C` reports; a human decides. Five RESTORE,
+one DELIBERATE, and the call is recorded either way.**
+
+### 🆕 🟡 What the classified inner audit changes for a platform engagement
+
+🟢 **`ACTION JK` closes `gap 115` on the procedural side: `217` third-party grant documents across
+the two leading institutional LMSes, `12` families, and `0` that withhold commercial use or
+redistribution.**
+
+| | `Sakai` | `Moodle` |
+|---|---|---|
+| 🟢 **grant DOCUMENTS** | 🟢 **`129`** *(`72` distinct blobs)* | 🆕 🟡 **`88`** *(`80` distinct blobs)* |
+| 🔴 **source files miscounted as grants** | 🟢 **`0`** | 🔴 **`105`** |
+| 🟢 **families** | 🟢 **`BSD` `29`, `Apache-2.0` `21`, `ECL-2.0` `10`, `MIT` `7`, `LGPL` `2`, `IPL-1.0` `1`, `2` multi-family** | 🟢 **`MIT` `47`, `BSD` `12`, `Apache-2.0` `8`, `LGPL` `3`, `GPL` `2`, `6` multi-family** |
+| 🟢 **withholding commercial use** | 🟢 **`0`** | 🟢 **`0`** |
+
+🔴 **The number to quote a client is `Moodle` `88`, not `193` — and then warn them their scanner will
+report something closer to `193`, because `105` Moodle PHP files carry a GPL header and live under
+filenames containing *"license"* (`gap 118`). That is a review-cost hazard, not a legal one, and it
+is now sized before anyone bills for it.**
+🆕 🟡 **New caution on `Sakai`, and it is small but real: its `licenses/` directory is a MANIFEST and
+it MISLABELS at least `3` components. `aopalliance.license.txt` and `dnsjava-1.2.3.license.txt` both
+carry the `LGPL-2.1` text, but AOP Alliance is public domain upstream and dnsjava is `BSD`;
+`junit-3.8.1.license.txt` carries `IPL-1.0` where JUnit `3.8.1` shipped under `CPL-1.0`. Do not use
+that directory as a per-component attribution map (`gap 117`, `ACTION JO`).**
 ## Pass 170 — 2026-10-13
 
 🆕 🔴 **The permissive LMS route is THREE, not two — and the third was already verified by this KB,

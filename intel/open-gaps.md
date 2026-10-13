@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p170 registered — `3` DISCHARGED, `2` DISCHARGED WITH THEIR
+FALSIFIERS FIRED. The headline is that `ACTION JJ` was taken: the `≥6` h full-`12` churn reading
+that three consecutive passes recorded as non-existent EXISTS, and the anchor that makes it
+possible has been on disk since p164.**
+🔴 **Standing caveat unchanged: p171 judges actions p170 wrote, and p171 did the work. These are
+self-assessments.**
+🆕 🔴 **Two of this pass's five actions were MIS-SPECIFIED by their own authors, in the same way:
+each cited a count (`288` repositories, `86` citations) that p171 cannot reproduce and whose QUERY
+STRING was never recorded (`T227`).**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION JJ`** | 🔴 *refuted if `≥3` of `12` change over `≥6` h; also refuted if a FOURTH pass reports without taking the reading* | 🟢 **`2` of `12` over `6 h 37 min 08 s` at DENOMINATOR `12`** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. The reading was taken, against p164's recorded full-`12` anchor** |
+| 🟢 **`ACTION JK`** | 🔴 *refuted if any family is INCOMPATIBLE with the outer grant — non-elected copyleft in `Sakai`, or a proprietary/non-commercial body in either* | 🟡 **`0` hostile bodies after resolution; `6` raw hits in `Moodle` all false. `3` of `Sakai`'s `72` are reciprocal, all third-party NOTICES** | 🟡 **DISCHARGED. Limb `2` FIRED then went SILENT on reading; limb `1` FIRES ON THE LETTER and is recorded as a reading, not a measurement** |
+| 🟢 **`ACTION JL`** | 🔴 *refuted if a primary source shows `2026/1744` IS operative; ALSO refuted if `2026/1744` appears in NO source outside this KB, making it this KB's fabrication* | 🟢 **`2026/1744` is REAL and is the *"Digital Omnibus on AI"*, which AMENDS `2024/1689`. Found outside this KB on `eur-lex` ELI, the NI Assembly register and `~8` law firms** | 🟢 **DISCHARGED, falsifier SILENT ON BOTH LIMBS — and the prescribed wording was WRONG: `2026/1744` is a VERIFIED amendment, not an unverified one** |
+| 🔴 **`ACTION JM`** | 🔴 *refuted if `OpenOLAT` is the ONLY such row across all three files* | 🔴 **`6` other repositories were routed by an earlier pass and are absent from the newest routing table** | 🔴 **DISCHARGED, FALSIFIER FIRED. `T216` is SYSTEMIC in `verticals/solutions.md`, and `P170-C` is necessary** |
+| 🔴 **`ACTION JN`** | 🔴 *refuted if `≥5` permissive, education-vertical, active repositories exist that are NOT already on this shelf* | 🔴 **`5` — body-read `MIT`, `HEAD`-verified, `10`–`80` ★** | 🔴 **DISCHARGED, FALSIFIER FIRED. `gap 113` ANSWERED: the QUERY was the limitation** |
+
+### 🆕 🟢 `ACTION JJ` — the reading three passes called impossible, and it was on disk all along
+
+🔴 **p168 computed the earliest possible `≥6` h full-`12` reading as `12:46:52Z` — its OWN `t0` plus
+six hours — and handed that number forward. p169 inherited it. p170 inherited it and went further:
+*"the oldest full-`12` anchor is p168's `06:46:52Z`"*.**
+🟢 **That is false, and this repository carried the refutation in THREE committed files. The
+full-`12` sha set exists at p164, whose column appears in `churn-baseline...p166.tsv`,
+`churn-multihour...p167.tsv` and `churn-extended...p168.tsv`. p168's own prose says so —
+*"the full 12-row sha set first exists at p164 (`03:10:47Z`)"* — and then re-anchored the handoff
+on itself anyway.**
+
+| | |
+|---|---|
+| 🔴 **the gate as handed forward** | 🔴 **`2026-10-13T12:46:52Z`** |
+| 🟢 **the TRUE gate** | 🟢 **p164 `+ 6` h `= 2026-10-13T09:10:47Z`** |
+| 🔴 **what p170 recorded as its shortfall** | 🔴 ***"`4 h 00 min 59 s` short"*** |
+| 🟢 **p170's ACTUAL shortfall** | 🟢 **`24 min 54 s`. It ran `08:45:53Z`** |
+| 🟢 **p171** | 🟢 **ran `09:47:55Z` — `37 min 08 s` past the true gate** |
+
+🔵 **`T220` — the defect is a HANDOFF that re-anchors on the writer. Each pass computed "when is
+this answerable" from the baseline IT had just committed, so the reachable date walked forward one
+hour per pass and never arrived. Three passes, one arithmetic error, inherited verbatim.**
+🟢 **Register rule this adds: a handoff states the OLDEST sufficient anchor on disk, never the
+writer's own.**
+[`evidence/churn-full12-6h.2026-10-13-p171.tsv`](../evidence/churn-full12-6h.2026-10-13-p171.tsv)
+
+🆕 🔵 **And the reading itself says something the action did not ask: `T221` — churn is
+CONCENTRATED, not time-dependent. The changed set is a SUBSET of `{ai-shifu, echo-loop}` at EVERY
+interval from `1 h 02 min` to `15 h 40 min`. Widening the window from `1 h` to `6.6 h` added not one
+repository. `≥3` of `12` could never have been reached by waiting — only by a third repo waking up.**
+🆕 🔴 **`T222` — and the metric undercounts: `ai-shifu` moved FOUR times in the window
+(`2da98b19a15c → d88488cdc347 → 2ff4af09b7bb → 523ad3741dc1 → f69bd425f299`), `echo-loop` once. That
+is `5` transitions across `2` repositories, reported as *"`2` of `12`"*. A falsifier phrased on
+repositories cannot see a repository that moves hourly.**
+
+### 🆕 🟡 `ACTION JK` — `gap 115` closes procedural, and `P170-A`'s own count was `54%` source code
+
+🟢 **`Moodle` re-read at HEAD `f20534726a59`, IDENTICAL to p170's — a CONTROLLED re-read.**
+🔴 **`Sakai` moved (`10a1d904d379` → `88f8e09c0a38`, committed `09:46:58Z` this pass) and the server
+refused the pinned sha, so that limb is UNCONTROLLED and says so.**
+
+| repo | `P170-A` paths | source-file over-read | DOCUMENT bodies | distinct blobs | hostile | reciprocal |
+|---|---|---|---|---|---|---|
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `129` | 🟢 **`0`** | 🟢 **`129`** | `72` | 🟢 **`0`** | 🟡 **`3`** *(2 `LGPL-2.1`, 1 `IPL-1.0`)* |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `193` | 🔴 **`105`** | 🔴 **`88`** | `80` | 🟢 **`0`** | 🟡 **`8`** |
+
+🆕 🔴 **`T223` — `P170-A` OVER-READS BY COUNTING SOURCE CODE AS GRANTS, and asymmetrically.
+`Moodle` headers EVERY php file with a GPL notice AND ships an `admin/tool/licensemanager/`
+subsystem whose filenames all contain *"license"*. The two conventions multiply: `105` of `193`
+*"grant bodies"* are source code. `Sakai`'s contamination is `0` of `129`, because its grants live
+in `licenses/*.txt`.**
+🔴 **So p170's published pair — *"`Sakai` `129`, `Moodle` `193`"* — invited a comparison that cannot
+be made. The corrected pair is `Sakai` `129`, `Moodle` `88`: the LARGER tree carries FEWER grants.**
+🟢 **The `6` raw hostile hits resolved `0` real, in two classes worth knowing: `4` were GPL-3.0's own
+§`6(b)` — *"allowed only occasionally and noncommercially"*, a condition on one conveying METHOD,
+which every full GPL-3.0 body carries, `Moodle`'s own `COPYING.txt` among them. `2` were Moodle PHP
+source files carrying *"Creative Commons — NonCommercial"* as DATA: the licence menu Moodle offers
+its users for uploaded content.**
+🆕 🔵 **`T224` — EVERY DEFEAT OF THIS INSTRUMENT THIS PASS WAS FORMATTING, NOT LAW. Four, all caught
+by its own regression tests before publication: a family name matched anywhere in the body read
+`LGPL-2.1` as `GPL+LGPL` (LGPL §`3` names the ordinary GPL); `junit-3.8.1` read as `GPL+MPL+Python`
+when it is `IPL-1.0`; hard wrapping at ~`70` columns split `GNU General Public\nLicense` so a flat
+search MISSED it; and a Markdown heading `# Apache License` plus a Markdown link
+`[GNU General Public License ...](...)` defeated both pattern styles. `10` of `10` tests now pass.**
+[`evidence/inner-grant-families.2026-10-13-p171.tsv`](../evidence/inner-grant-families.2026-10-13-p171.tsv)
+
+### 🆕 🟢 `ACTION JL` — `T217` settled, `gap 114` CLOSED, and the nearest deadline is not the one this KB was watching
+
+🟢 **`Regulation (EU) 2026/1744` is REAL. It is the *"Digital Omnibus on AI"*, signed `8 July 2026`,
+and it AMENDS `Regulation (EU) 2024/1689` (the AI Act) together with `2018/1139` and `2023/1230`.
+Confirmed outside this KB on three independent non-vendor channels: the `eur-lex` ELI identifier
+`eli/reg/2026/1744/oj/eng`, the Northern Ireland Assembly's Windsor Framework scrutiny register,
+and `~8` law-firm notes.**
+🟢 **So BOTH limbs of the falsifier are SILENT — it is not a fabrication, and it is not the base
+instrument either.** 🔴 **And the ACTION's own prescribed wording was wrong: it told p171 to mark
+`2026/1744` as an *"UNVERIFIED amendment"*. It is a VERIFIED amendment. Corrected rather than
+executed literally.**
+
+| | |
+|---|---|
+| 🟢 **the BASE instrument — name THIS first in client material** | 🟢 **`Regulation (EU) 2024/1689`, the AI Act. Annex III point `3` puts education in scope: admission, evaluating learning outcomes *(including steering the learning process)*, assessing the appropriate level of education, and monitoring prohibited behaviour during tests** |
+| 🟢 **the AMENDING instrument** | 🟢 **`Regulation (EU) 2026/1744`, Digital Omnibus on AI** |
+| 🟢 **`gap 114` — the `2026-08` vs `2027-12-02` disagreement** | 🟢 **CLOSED. BOTH dates were right about DIFFERENT instruments: `2 August 2026` is Article `113`'s original date under the base Act; `2 December 2027` is the deferred date under the amendment** |
+| 🔴 **what did NOT move** | 🔴 **Article `50` transparency. The `2 December 2026` marking deadline STANDS** |
+
+🆕 🔴 **The consequence this KB had backwards: it has been treating Annex III high-risk as the
+binding date. The nearest binding date is Article `50(2)` marking — `2 December 2026`, **`50` days
+from this pass** — and this KB already has the tooling for it in `compose/code/aiact-50-2-*`.
+Annex III is `2 December 2027`, and is a BACKSTOP conditioned on harmonised standards being
+available. Budget the marking work now; the high-risk work has a year more than assumed.**
+🟡 **Tier unchanged and stated: `search-summary`. `eur-lex.europa.eu` is `403` at the CONNECT layer
+from this container — the egress proxy DENIES it by policy, which is a stronger statement than
+*"unreachable"* and means no retry and no alternate transport will help (`T203`). The Official
+Journal text is still unread, so `gap 110` (Article `113` verbatim) stays open.**
+
+### 🔴 Gaps OPENED or RE-STATED by p171
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`T227`** | 🔴 **TWO of p170's registered actions cite counts p171 cannot reproduce, and NEITHER recorded its query string: `ACTION JN` says the topic has `288` repositories (p171 measures `485` hours later); `T217` says `86` citations (p171 measures `78` English full-form, `82` Spanish, `95` lines, `223` bare — `86` is none of them)** | 🔴 **Both numbers may have been right for a query nobody wrote down. Register rule: record the QUERY STRING beside any count. This is `T197`'s lesson — state the denominator — one level up: state the INSTRUMENT** |
+| 🆕 🔴 **`T228`** | 🔴 **the `ai-education` topic is NOT a clean population: of its `100` top-starred permissive active repos, `35` are edtech, `18` are education ABOUT AI, `11` both, `36` neither** | 🔴 **~`46%` is not AI-for-education. *"The topic has N repos"* has never been a statement about this vertical's size, and `gap 113`'s two hypotheses were BOTH wrong** |
+| 🆕 🔴 **`T229`** | 🔴 **the vertical's live edge is EXAM-SHAPED: `4` of the `5` new finds are assessment (entrance exams, bar exams, vendor certification, and one tool for DEFEATING proctoring); this shelf's `12` rows are almost all tutoring** | 🔴 **The shelf is not a small sample of the vertical, it is a BIASED one, and the bias is toward the tutor shape. `ACTION JP`** |
+| 🆕 🟡 **`gap 117`** | 🟡 **`Sakai`'s `licenses/` manifest MISLABELS components: `aopalliance.license.txt` and `dnsjava-1.2.3.license.txt` both carry the `LGPL-2.1` text, but AOP Alliance is public domain upstream and dnsjava is `BSD`; `junit-3.8.1.license.txt` carries `IPL-1.0` where JUnit `3.8.1` shipped under `CPL-1.0`** | 🟡 **The manifest is not a reliable per-component map. An engagement that reads it as one will attribute the wrong licence to three dependencies. `ACTION JO`** |
+| 🆕 🔴 **`gap 118`** | 🔴 **`105` Moodle source files will be read as licence grants by any scanner matching on filename plus body phrase** | 🟡 **Not a legal hazard — a REVIEW-COST hazard, and now sized. A client's SBOM review of Moodle starts `105` findings in the hole** |
+| 🔴 **re-stated** | 🔴 **no APAC or LATAM originated open-source education PLATFORM** | 🟡 **SIXTH consecutive — but NARROWED for the first time: `2` of p171's `5` finds are APAC-originated (`niansia/taiwan-exam`, `jeliael/fakao-ai-exam-engine`). Neither is a platform; both are single-purpose exam engines. LATAM returned nothing at any star level** |
+| 🔴 **re-stated** | 🔴 **`gap 104` — no education-specific AI regulation anywhere in LATAM** | 🔵 **SIXTH confirmation. Chile leads with a 2021 national AI policy and a bill in its first constitutional stage; Brazil's `PL 2.338/2023` and Colombia's `CONPES 4144` are not sector statutes** |
+| 🔴 **re-stated** | 🔴 **no SIS and no education ERP under `MIT` or `Apache-2.0`** | 🟢 **TENTH pass. `ACTION JN` swept `485` topic repositories and found none** |
+| 🟡 **unresolved** | 🟡 **`gap 110` — Article `113` has never been quoted by any source** | 🔴 **`eur-lex` is `403` at CONNECT by PROXY POLICY, and `artificialintelligenceact.eu` does not resolve. Environmental, and now diagnosed rather than described** |
+| 🟡 **unresolved** | 🟡 **`gap 107` — the `edx-platform` RPC carve-out is a licensor statement, not counsel** | 🟢 **Carried** |
+| 🟡 **unresolved** | 🟡 **`gap 116` — `Forma LMS` ships its licence in `9` languages with nothing naming which GOVERNS** | 🟢 **Carried. Name the English text as controlling, in writing, first** |
+
+## 🔜 Registered for p172 — pre-registered with falsifiers
+
+🟢 **Registered HERE ONLY, per `T218`. `P170-B`'s table-row rule applies: the row carrying the
+falsifier is the definition, and prose elsewhere is a reference.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION JO`** — settle `gap 117`: for each of `Sakai`'s `72` licence-manifest blobs, compare the component named in the FILENAME against the licence its upstream actually ships, and count the mismatches | 🔴 *Refuted if the mismatch rate is `0` outside the `3` p171 already found, which would make `gap 117` three stale files rather than a defective manifest. Also refuted in the other direction if `≥20` of `72` mismatch, which would mean the manifest cannot be used for attribution at all and the finding is about `Sakai`, not about three dependencies* |
+| 🟢 **`ACTION JP`** — settle `T229`: take the `5` new finds and the `12` shelf rows and classify every one by SHAPE (tutoring, assessment, rostering, authoring, analytics), to establish whether the shelf's tutor bias is real or an artefact of `12` being a small number | 🔴 *Refuted if assessment is `≥25%` of the existing `12` shelf rows, which would mean the shelf was never tutor-biased and `T229` is a reading of `5` repositories mistaken for a reading of the vertical* |
+| 🟢 **`ACTION JQ`** — act on the `50`-day Article `50(2)` finding: run the existing `compose/code/aiact-50-2-exposure` instrument over the `7` platform rows and the `12` agent rows and report which carry ANY provenance-marking surface | 🔴 *Refuted if `≥1` row already emits a conformant `2 December 2026` marking, which would mean the deadline is partly met on this shelf and the exposure framing overstates it. Also refuted if the instrument cannot run offline, in which case it is not the asset this KB has been treating it as* |
+| 🟢 **`ACTION JR`** — assess `NickScherbakov/codementor-ai-platform` and `niansia/taiwan-exam` past their licences: tree shape, dependency licence closure, activity, and whether either is a ROUTABLE row rather than a candidate | 🔴 *Refuted if either carries a non-permissive dependency closure, which would make the `MIT` root grant misleading in the same way `penecho`'s was (`T207`), or if either has `0` commits in the `30` days before p172, which would make "active within `180` days" the wrong liveness bar* |
+| 🟢 **`ACTION JS`** — test `T227`'s rule by re-running `ACTION JN`'s exact recorded query strings and asserting the counts reproduce within one pass-interval | 🔴 *Refuted if any of the `7` recorded counts moves by `>10%` in under `24` h, which would mean the topic index is too volatile for a count to be a finding at all, and every topic figure this KB publishes needs an as-of timestamp rather than a pass number* |
 ## Pass 170 — 2026-10-13
 
 🟢 **Verdicts on the FIVE actions p169 registered — `3` DISCHARGED with silent falsifiers, `1`

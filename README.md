@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `2` DISCHARGED WITH THEIR
+FALSIFIERS FIRED. Both firings are findings this KB wanted.**
+🆕 🟢 **The pass's most satisfying finding: `ACTION JJ` was TAKEN. The `≥6` h full-`12` churn reading
+that p168, p169 and p170 each recorded as non-existent was reachable from `09:10:47Z`, against an
+anchor committed at p164 and sitting in three files on disk. p170 missed it by `24 min 54 s` and
+recorded its shortfall as `4 h 00 min 59 s`. The defect was a HANDOFF that re-anchored on whoever
+wrote it, so the "reachable" date walked forward one hour per pass and never arrived (`T220`).**
+🆕 🟢 **The pass's most consequential finding for a client: this KB has been reading the EU
+regulatory clock from the wrong end. `Regulation (EU) 2026/1744` is REAL — it is the *"Digital
+Omnibus on AI"*, and it AMENDS `Regulation (EU) 2024/1689`, the AI Act. It moved Annex III high-risk
+to `2 December 2027`. It did NOT move Article `50` transparency, which is **`2 December 2026` — `50`
+days from this pass** — and that is the obligation this shelf already has offline tooling for.**
+🆕 🔴 **The pass's most uncomfortable finding: of `9` defects found, `0` were legal questions. Eight
+were formatting or arithmetic. A knowledge base about licences keeps being defeated by text layout.**
+🆕 🔴 **`ACTION JM` found `T216` is not one lost row but SIX — and then the new gate caught p171's
+own first draft dropping THREE more that p170 had carried. The gate working against the pass that
+wrote it is the only real test of a gate like this.**
+🆕 🔴 **`ACTION JN` answered `gap 113` by refuting both of its hypotheses: the query was not
+exhausted and the vertical is not `12` repositories. `5` permissive, active, education-vertical
+repositories exist that this shelf had never named, and `4` of the `5` are ASSESSMENT tools against
+a shelf that is almost all tutoring (`T229`).**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION JJ`** — the full-`12` `≥6` h churn reading | 🟢 **DISCHARGED, BOTH limbs SILENT. `2` of `12` over `6 h 37 min 08 s`, denominator `12`, against p164's recorded anchor** |
+| 🟡 **`ACTION JK`** — classify `Sakai`'s `129` and `Moodle`'s `193` inner grant bodies | 🟡 **DISCHARGED. `0` hostile after resolution; `6` raw hits all false. And `Moodle`'s `193` is really `88` — `105` were PHP source files (`T223`)** |
+| 🟢 **`ACTION JL`** — settle `T217` | 🟢 **DISCHARGED, both limbs SILENT, and the ACTION's own prescribed wording was WRONG: `2026/1744` is a VERIFIED amendment, not an unverified one. `gap 114` CLOSED** |
+| 🔴 **`ACTION JM`** — is the LMS route the only shelf that lost rows? | 🔴 **DISCHARGED, FALSIFIER FIRED. `6` more routed-then-dropped rows. `5` RESTORED, `1` deliberate** |
+| 🔴 **`ACTION JN`** — is the education-agent query exhausted, or is the vertical small? | 🔴 **DISCHARGED, FALSIFIER FIRED. Neither. `5` new permissive rows, and the topic is ~`46%` not-edtech (`T228`)** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`P171-A`** — the licence predicate with family identity taken from the TITLE, source files
+  excluded, whitespace normalised, Markdown stripped, reciprocal families named, and GPL-3.0 §`6(b)`
+  carved out. `10` of `10` regression tests, each case a body p171 actually read.
+- 🆕 🟢 **`P171-B`** — `P170-C` implemented, with its population fixed from *"every repo near a
+  licence word"* (`372` findings, `P471`) to *"routing tables only"* (`6`), plus slug casefolding.
+- 🆕 🟢 **`P171-C`** — the `50`-day Article `50(2)` marking pattern, wiring the four
+  `aiact-50-2-*` instruments this KB already has to the deadline that is actually next.
+- 🆕 🟢 **`P171-D`** — an assessment-integrity stack, the shape the vertical and three regulators are
+  all pointing at, including the `80`-★ tool that documents the attack path against proctoring and
+  which this KB records as a THREAT MODEL rather than a dependency.
+- 🆕 🟢 **The routing table in [`verticals/solutions.md`](verticals/solutions.md) RE-STATED in full**
+  — `16` of `17` historically routed rows, with the `1` omission a recorded call rather than an
+  accident.
+- 🆕 🔴 **`T227`, a register rule earned twice in one pass:** record the QUERY STRING beside any
+  count. p170's *"`288` repositories"* and *"`86` citations"* each reconcile with nothing p171 can
+  measure, and neither recorded how it was counted.
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`gap 110` stays open: Article `113` has never been quoted. `eur-lex.europa.eu` is `403` at the
+  CONNECT layer — the egress proxy DENIES it by organisation policy, which means no retry and no
+  alternate transport from this container will close it. `artificialintelligenceact.eu` does not
+  resolve. Diagnosed rather than merely described, and still unread.**
+- 🔴 **`Sakai`'s limb of `ACTION JK` is an UNCONTROLLED re-read: it moved mid-pass and the server
+  refused the pinned sha. `Moodle`'s limb was controlled at p170's exact `HEAD`.**
+- 🔴 **Whether `Sakai`'s `3` reciprocal third-party NOTICES count as *"copyleft inside an `ECL-2.0`
+  repository"* is counsel's reading, not an instrument's. Recorded as fired-on-the-letter.**
+- 🔴 **`5` of the new finds are licence-verified and `HEAD`-verified and NOTHING more — no dependency
+  closure, no activity depth, no code read (`ACTION JR`).**
+- 🔴 **Sixth consecutive pass with no LATAM-originated open-source education repository at any star
+  level, now measured against a `485`-repository sweep rather than inferred from silence.**
 ## Pass 170 — 2026-10-13
 
 🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` DISCHARGED WITH ITS

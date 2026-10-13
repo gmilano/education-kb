@@ -1,0 +1,71 @@
+# ACTION JN, p171 - enumerate the `ai-education` GitHub topic and settle gap 113: is the
+# education-agent query EXHAUSTED, or is the vertical genuinely small?
+# Channel: MCP relay search_repositories (P117-A: curl to api.github.com is 403 at CONNECT, gh api
+# is repo-scope gated, the relay returns full objects for arbitrary public repos). Every candidate
+# below was then re-verified on the PRIMARY channel (git ls-remote) and its grant body READ.
+#
+# FALSIFIER: "refuted if >=5 such repositories exist that are NOT already on this shelf -- which
+#   would mean the query was the limitation all along and 12 rows is an artefact of how this KB
+#   searches, not a fact about the ecosystem."
+# VERDICT: FALSIFIER FIRED. 5 education-vertical, permissive, active repositories that this KB has
+#   never named. gap 113 ANSWERED: the QUERY was the limitation.
+#
+## POPULATION, query strings recorded verbatim
+query	total_count
+topic:ai-education	485
+topic:ai-education pushed:>=2026-04-16	357
+topic:ai-education pushed:>=2026-04-16 license:mit	135
+topic:ai-education pushed:>=2026-04-16 license:apache-2.0	14
+topic:ai-education pushed:>=2026-04-16 license:bsd-3-clause	0
+topic:ai-education pushed:>=2026-04-16 license:isc	0
+topic:ai-education pushed:>=2026-04-16 license:mit stars:>=20	5
+# PERMISSIVE AND ACTIVE: 135 + 14 = 149 of 357 active (42%). 0 BSD, 0 ISC -- in this topic the
+# permissive choice is MIT or nothing, and Apache-2.0 is 14 repos of 485.
+#
+# T227 - THE DENOMINATOR DISAGREES WITH p170 AND p171 CANNOT SAY WHY. ACTION JN was registered
+#   against "the ai-education GitHub topic (288 repositories)". p171 measures 485 on the bare
+#   topic query, hours later the same day. A 68% rise in hours is not credible, so one of the two
+#   numbers answers a different question -- but p170 did not record its query string, so the
+#   discrepancy is UNRESOLVABLE from the record. Register rule this adds, and it is the same shape
+#   as T197's: record the QUERY STRING beside any count, not just the count.
+#
+## COMPOSITION - why the global query felt exhausted while the topic grew
+# Classified over the 100 top-starred of the 135 MIT+active, by description and topics:
+bucket	n	meaning
+edtech only	35	AI applied TO education - what this KB is for
+AI-literacy only	18	education ABOUT AI - "build an LLM from scratch", "learn ML". NOT edtech
+both signals	11	e.g. a tutor that teaches AI
+neither	36	in the topic but matching no education signal at all
+# T228 - THE TOPIC IS NOT A CLEAN POPULATION: ~46% of it is not AI-for-education. `ai-education`
+#   conflates two different things -- building AI for learners, and teaching people about AI --
+#   plus a third of the tag that signals neither. So "the ai-education topic has N repos" has
+#   never been a statement about this vertical's size, and gap 113's two hypotheses were BOTH
+#   wrong: the query was not exhausted, and the vertical is not 12 repos.
+#
+## THE FINDS - permissive, active <=180 d, education-vertical, >=10 stars, ABSENT from this shelf
+# Every licence below is a BODY READ at HEAD through P171-A, not a badge. All 6 are MIT, each a
+# single grant file and a single blob -- no dual grants, no deviations, no second surfaces.
+repo	stars	HEAD	grant	licence (body-read)	bytes	tree files	region	what it is	p171 call
+sgaofen/vibe-schooling	80	7c2f87a4641b	LICENSE	MIT	1063	56	Global	Canvas-LMS + MCP exam automation. Its own description is "Get 4.0 GPA without learning"	DO NOT ROUTE - it is an academic-integrity CIRCUMVENTION tool. Recorded because it is evidence about the vertical, and because Annex III point 3 names exactly the proctoring it defeats
+NickScherbakov/codementor-ai-platform	22	a0a33cd6d4f8	LICENSE	MIT	1071	208	Global	Adaptive programming tutor: real-time code execution, interactive challenges, learning analytics. Next.js/TypeScript	CANDIDATE - the only genuine permissive edtech PLATFORM in this sweep. Unassessed beyond licence and tree size
+niansia/taiwan-exam	18	e2193181c95c	LICENSE	MIT	1063	593	APAC	Generates original Taiwan university-entrance (學測) mock exams: item authoring, worked solutions, official layout, two PDFs	CANDIDATE - and it bears on the standing APAC gap. The largest tree of the six
+thisisandreeeee/llms-in-10-words	11	312d44be0f5c	LICENSE	MIT	1065	4	Global	LLM concepts explained in 10 words or less	EXCLUDE - NOT edtech and not a tool: 4 files, README-only. p171's own edtech regex misclassified it, and that is recorded rather than counted
+timothywarner-org/ai901-cert-buddy-claude	10	40572f77f573	LICENSE	MIT	1066	72	Global	Azure AI-901 certification study buddy, built as a Claude Code skill	CANDIDATE - vendor-certification prep, a real engagement shape (corporate L&D) this shelf does not cover
+jeliael/fakao-ai-exam-engine	10	60a25699f2fb	LICENSE	MIT	1062	35	APAC	Chinese bar-exam (法考) AI preparation engine, 8 subjects, statute cross-checking	CANDIDATE - APAC origin, and it is the LEGAL-education crossover this KB has not had
+#
+# COUNT FOR THE FALSIFIER: 6 found, 1 excluded on reading (llms-in-10-words), so 5 education-vertical
+#   permissive active repositories absent from this shelf. >=5. FIRED.
+#
+# WHY THE GLOBAL QUERY MISSED ALL FIVE, which is the actionable half of gap 113:
+#   the standing query asks for "top open source AI agents education". These are 10-80 star
+#   single-purpose SKILLS and exam engines -- below any "top" threshold, and not "agents". The
+#   query was selecting on prominence and on a word, and the vertical's live edge is neither
+#   prominent nor called an agent. 0 new rows for several passes was the query working as written.
+# T229 - AND THE EDGE IS EXAM-SHAPED. 4 of the 5 are assessment: entrance exams, bar exams,
+#   vendor certification, and a tool for DEFEATING proctoring. 1 is tutoring. This shelf's 12 rows
+#   are almost all tutoring. So the shelf is not a small sample of the vertical -- it is a biased
+#   one, and the bias is toward the tutor shape.
+# STANDING GAP SURVIVES, narrowed: 2 of the 5 are APAC-ORIGINATED (Taiwan, China), which is the
+#   first APAC-origin education code this KB has named. But neither is a PLATFORM -- both are
+#   single-purpose exam engines -- so "no APAC or LATAM originated open-source education PLATFORM"
+#   stands for a sixth consecutive pass, and LATAM returned nothing at any star level.

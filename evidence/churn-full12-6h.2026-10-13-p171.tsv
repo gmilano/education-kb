@@ -1,0 +1,54 @@
+# ACTION JJ, p171 - THE FULL-12 >=6 h CHURN READING, TAKEN. Primary channel: git ls-remote.
+# p171_t0 = 2026-10-13T09:47:55Z (RECORDED, 12 of 12 reachable, 0 UNREACHABLE).
+#
+# WHY THIS PASS COULD TAKE A READING THREE PASSES CALLED NON-EXISTENT:
+# p168 computed the earliest possible >=6 h full-12 reading as 12:46:52Z -- p168_t0 + 6 h -- and
+# handed that number forward. p169 and p170 inherited it. p170 went further and asserted "the oldest
+# full-12 anchor is p168's 06:46:52Z". That is FALSE, and this repo carried the refutation in three
+# committed files: the full-12 sha set exists at p164, whose column appears in
+# churn-baseline.2026-10-13-p166.tsv, churn-multihour.2026-10-13-p167.tsv and
+# churn-extended.2026-10-13-p168.tsv. p168's own prose says so ("the full 12-row sha set first
+# exists at p164 (03:10:47Z)") and then re-anchored the handoff on itself anyway.
+# The TRUE gate was p164 + 6 h = 2026-10-13T09:10:47Z. p170 ran 08:45:53Z and missed it by
+# 24 min 54 s -- not by the "4 h 00 min 59 s" it recorded. p171 ran 09:47:55Z, 37 min 08 s past it.
+# p164's anchor is its COMMIT, which p167 calibrated as a safe UPPER bound on that pass's sweep
+# (sweep-to-commit lag 2 min 33 s at p166), so 6 h 37 min 08 s is a CONSERVATIVE interval: the true
+# span is that or longer. This is T220.
+repo	p164_sha	p166_t0_sha	p168_t0_sha	p170_t1_sha	p171_t0_sha	changed_vs_p164	changed_vs_p170_t1
+ai-shifu/ai-shifu	2da98b19a15c	d88488cdc347	2ff4af09b7bb	523ad3741dc1	f69bd425f299	YES	YES
+penecho/penecho	076c1ad54a85	076c1ad54a85	076c1ad54a85	076c1ad54a85	076c1ad54a85	no	no
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	d14130b6c47d	9a787eb45759	9a787eb45759	YES	no
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	e0e347f7f399	e0e347f7f399	e0e347f7f399	no	no
+Selleo/mentingo	242a9324fe48	242a9324fe48	242a9324fe48	242a9324fe48	242a9324fe48	no	no
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	6cf793bd868b	6cf793bd868b	6cf793bd868b	no	no
+CaviraOSS/PageLM	a6646794661b	a6646794661b	a6646794661b	a6646794661b	a6646794661b	no	no
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	no	no
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	9c260890214d	9c260890214d	9c260890214d	no	no
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	no	no
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	5c2f92416c04	5c2f92416c04	5c2f92416c04	no	no
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	no	no
+# INTERVAL LEDGER, p171 - every span measured to p171_t0, ANCHOR and DENOMINATOR named
+#   vs p155 commit   2026-10-12T18:07:53Z   15 h 40 min 02 s    0 of 3  changed   denom 3
+#   vs p156 commit   2026-10-12T19:09:24Z   14 h 38 min 31 s    0 of 6  changed   denom 6
+#   vs p164 commit   2026-10-13T03:10:47Z    6 h 37 min 08 s    2 of 12 changed   denom 12  <-- THE READING
+#   vs p165 commit   2026-10-13T04:15:10Z    5 h 32 min 45 s    2 of 12 changed   denom 12
+#   vs p166_t0 REC   2026-10-13T04:46:17Z    5 h 01 min 38 s    2 of 12 changed   denom 12
+#   vs p167_t0 REC   2026-10-13T05:46:23Z    4 h 01 min 32 s    2 of 12 changed   denom 12
+#   vs p168_t0 REC   2026-10-13T06:46:52Z    3 h 01 min 03 s    2 of 12 changed   denom 12
+#   vs p169_t0 REC   2026-10-13T07:48:09Z    1 h 59 min 46 s    2 of 12 changed   denom 12
+#   vs p170_t1 REC   2026-10-13T08:45:53Z    1 h 02 min 02 s    1 of 12 changed   denom 12
+#
+# ACTION JJ FALSIFIER: ">=3 of 12 changed over an interval of >=6 hours", which reinstates T173 as a rate.
+#   MEASURED: 2 of 12 over 6 h 37 min 08 s at DENOMINATOR 12. FALSIFIER SILENT.
+#   The second limb -- "refuted if a FOURTH consecutive pass reports on this clock without taking the
+#   reading" -- is also SILENT: p171 took it. The action is DISCHARGED, not retired.
+#
+# T221 - CHURN IS CONCENTRATED, NOT TIME-DEPENDENT. The changed set is a SUBSET of
+#   {ai-shifu, echo-loop} at EVERY interval from 1 h 02 min to 15 h 40 min. Ten of the twelve rows
+#   have not moved in 6 h 37 min; two have. Widening the window from 1 h to 6.6 h did not add a
+#   single repository. So "N of 12 over T" saturates at 2, and the >=3 threshold could not have been
+#   crossed by waiting -- only by a third repo waking up.
+# T222 - THE METRIC UNDERCOUNTS: repos-changed is not events. ai-shifu's sha trail over this window
+#   is 2da98b19a15c -> d88488cdc347 -> 2ff4af09b7bb -> 523ad3741dc1 -> f69bd425f299: FOUR
+#   transitions, ~1 per 1 h 39 min. echo-loop moved ONCE. So 5 transitions across 2 repositories
+#   counted as "2 of 12". A falsifier phrased on repositories cannot see a repo that moves hourly.

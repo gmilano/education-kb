@@ -1,0 +1,243 @@
+# ACTION JK, p171 - the inner grant bodies P170-A COUNTED, now CLASSIFIED by family and
+# deduplicated by blob. Instrument: compose/code/p171-inner-grant-classify/ (P171-A).
+# Sakai  HEAD 88f8e09c0a38 (2026-10-13T09:46:58Z) -- p170 read 10a1d904d379. The tree MOVED, and the
+#        server would not serve the pinned sha (`fatal: couldn't find remote ref`), so this limb is
+#        an UNCONTROLLED re-read: any difference is tree OR instrument and cannot be separated.
+#        The name-match count is 165 at both HEADs and the body count 129 at both, so nothing
+#        observed here actually moved -- but that is a result, not a control.
+# Moodle HEAD f20534726a59 (2026-10-03) -- IDENTICAL to p170's recorded HEAD. CONTROLLED re-read.
+#
+# P170-A's denominator counts any name-matched file whose body contains a licence phrase. P171-A
+# adds the step after it: a grant body must BE a licence document, not a SOURCE FILE that mentions
+# one. That distinction is worth 105 of Moodle's 193 and 0 of Sakai's 129.
+
+## sakaiproject/sakai	head	88f8e09c0a38	outer	ECL-2.0
+# P170-A paths 129	source-file over-read 0	DOCUMENT paths 129	distinct document blobs 72
+blob	families	n_fam	election	hostile	prose_mentions	bytes	n_paths	example_path
+3c489448ad24	ECL-2.0	1	no	-	-	566	38	webcomponents/tool/src/main/frontend/packages/sakai-account/LICENSE
+f25d10ebb4c0	BSD	1	no	-	-	2381	4	licenses/apache1.1.license.txt
+fc31f6885e9b	Apache-2.0	1	no	-	-	11327	4	licenses/apache2.0.license.txt
+18a964aa3d0f	BSD	1	no	-	-	2396	3	licenses/avalon-framework-cvs-20020806.license.txt
+623c17f2a02a	LGPL	1	no	-	GPL	26426	3	licenses/LGPL2.1.license.txt
+8ba6bfa600c2	ECL-2.0	1	no	-	-	11110	3	delegatedaccess/LICENSE
+970738dc1b66	Apache-2.0	1	no	-	-	11327	3	licenses/commons-discovery-0.2.license.txt
+03b48ea67f68	ECL-2.0	1	no	-	-	919	2	rwiki/rwiki-api/LICENSE.txt
+34c600a6d9ac	Apache-2.0	1	no	-	-	13161	2	lti/lti-common/LICENSE
+97b7a5c7dcb8	Apache-2.0	1	no	-	-	5119	2	licenses/naming-common.license.txt
+9c4b3bffac3c	Apache-2.0	1	no	-	-	11324	2	licenses/jsp-api.license.txt
+9f4e87c496a7	LGPL	1	no	-	GPL	26415	2	licenses/hibernate-2.1.license.txt
+aeff8859cf03	Apache-2.0	1	no	-	-	5118	2	licenses/naming-factory.license.txt
+0476e8b2d856	BSD	1	no	-	-	2845	1	licenses/jasper-compiler.license.txt
+07e909e9d564	BSD	1	no	-	-	2379	1	licenses/fop.license.txt
+08ab86c3d354	BSD	1	no	-	-	1515	1	libs/tomahawk/src/main/resources/META-INF/licenses/i18n-LICENSE.txt
+0b972e56d59e	Apache-2.0	1	no	-	-	11320	1	licenses/commons-dbcp-1.1.license.txt
+0dce1ad32ea9	Apache-2.0	1	no	-	-	11307	1	licenses/commons-resources.license.txt
+161e6d07c088	Apache-2.0	1	no	-	-	11316	1	licenses/commons-lang-1.0.1.license.txt
+1921df7cc6cc	BSD	1	no	-	-	1701	1	licenses/htmlLib.license.txt
+1f14520b8793	Apache-2.0	1	no	-	-	11317	1	licenses/commons-pool-1.1.license.txt
+27d187aa708b	BSD	1	no	-	-	2823	1	licenses/db-ojb-1.0.rc6.license.txt
+29f81d812f3e	Apache-2.0	1	no	-	-	11357	1	libs/pluto/LICENSE
+2c42b7bb2210	BSD	1	no	-	-	2573	1	licenses/jdom.license.txt
+2d2098a91927	ECL-2.0	1	no	-	-	11119	1	LICENSE
+32ac404a5b4c	BSD	1	no	-	-	1597	1	licenses/htmlarea.license.txt
+3a204b289b4b	ECL-2.0	1	no	-	-	702	1	external-calendaring-service/NOTICE
+3bf98131ad2f	BSD	1	no	-	-	2693	1	licenses/xml-apis.license.txt
+3c4051415172	BSD	1	no	-	-	2782	1	licenses/commons-id-0.1-dev.license.txt
+43483af62896	Apache-2.0	1	no	-	-	11319	1	licenses/commons-jxpath-1.1.license.txt
+46f8435213ce	ECL-2.0	1	no	-	-	993	1	delegatedaccess/NOTICE
+480fa0c3fe24	ECL-2.0	1	no	-	-	763	1	roster2/NOTICE
+4d7b4800ed7f	BSD	1	no	-	-	2615	1	licenses/xpp3-1.1.3.4.G.license.txt
+509d475cf673	BSD	1	no	-	-	2559	1	licenses/saxpath.license.txt
+5473f446b21e	BSD	1	no	-	-	2846	1	licenses/jasper-runtime.license.txt
+552d9bd2d285	BSD	1	no	-	-	2825	1	rwiki/rwiki-util/jrcs/LICENSE.txt
+5993bedd32dc	MIT	1	no	-	-	2333	1	samigo/samigo-app/src/resources/org/sakaiproject/tool/assessment/ui/bean/print/fonts/FONT-COPYRIGHT-NOTICE
+689d2e86565b	BSD	1	no	-	-	4967	1	licenses/hsqldb-1.7.2RC6b.license.txt
+6ceb8f113311	BSD	1	no	-	-	1521	1	libs/tomahawk/src/main/resources/META-INF/licenses/kupu-LICENSE.txt
+6d1340dbc161	MIT	1	no	-	-	1106	1	libs/tomahawk/src/main/resources/META-INF/licenses/scriptaculous-LICENSE.txt
+6e40c016883a	Apache-2.0	1	no	-	-	13178	1	lti/tsugi-util/LICENSE
+6ea40d9598ab	MIT	1	no	-	-	1082	1	licenses/MIT.license.txt
+72bc4c0233e2	Apache-2.0	1	no	-	-	11381	1	licenses/commons-digester-1.5.license.txt
+73c2a5e1f944	BSD	1	no	-	-	2845	1	licenses/james.license.txt
+79c314332370	BSD	1	no	-	-	2553	1	licenses/jaxen-full.license.txt
+825f5eb20c62	Apache-2.0	1	no	-	-	11394	1	licenses/commons-beanutils-1.6.1.license.txt
+84ad35b67951	MIT	1	no	-	-	1056	1	content/content-tool/tool/src/webapp/js/jstree/LICENSE-MIT
+8698792714b0	BSD	1	no	-	-	5660	1	licenses/struts-legacy.license.txt
+905d8003a791	IPL-1.0	1	no	-	CPL,GPL,MPL	12500	1	licenses/junit-3.8.1.license.txt
+92c9adccf4c2	BSD	1	no	-	-	2569	1	licenses/axis.license.txt
+99ac35566a8c	Apache-2.0	1	no	-	-	11390	1	licenses/commons-codec-1.2.license.txt
+a5de65a20128	BSD+MIT	2	yes	-	-	3119	1	licenses/jing.license.txt
+a85d23e77c8c	ECL-2.0	1	no	-	-	11085	1	site/admin-perms-tool/LICENSE
+a927364682f7	BSD	1	no	-	-	1294	1	libs/elfinder/LICENSE
+abf2d12ce0da	BSD	1	no	-	-	2694	1	licenses/xalan-2.5.2.license.txt
+ac2a78fcf646	ECL-2.0	1	no	-	-	557	1	site/admin-perms-tool/LICENSE_HEADER
+c01a0a7820e6	MIT	1	no	-	-	1150	1	licenses/isorelax.20030108.license.txt
+c23d0d85491e	Apache-2.0	1	no	-	-	11317	1	licenses/commons-logging-1.0.3.license.txt
+c3c071638444	Apache-2.0+BSD	2	yes	-	-	16300	1	licenses/jakarta-oro-2.0.7.license.txt
+cc666124cb67	ECL-2.0	1	no	-	-	887	1	samigo/samigo-app/src/webapp/jsf/qti/xmlDisplay.jsp.license.txt
+ce5ff1b809c3	Apache-2.0	1	no	-	-	11325	1	licenses/spring.license.txt
+cffa4944ecba	MIT	1	no	-	-	1070	1	libs/tomahawk/src/main/resources/META-INF/licenses/jscookmenu-LICENSE.txt
+d0b45d3d8ecc	BSD	1	no	-	-	1516	1	libs/tomahawk/src/main/resources/META-INF/resources/oam.custom.inputHtml.i18n/LICENSE.txt
+d64569567334	Apache-2.0	1	no	-	-	11357	1	libs/tomahawk/LICENSE
+d9a10c0d8e86	Apache-2.0	1	no	-	-	10172	1	rwiki/rwiki-util/radeox/license.txt
+dae983e16fbc	Apache-2.0	1	no	-	-	13174	1	lti/tsugi-util/src/main/resources/META-INF/LICENSE
+ddf0611f8364	BSD	1	no	-	-	2846	1	licenses/xercesImpl-2.5.0.license.txt
+e89fb6988e12	BSD	1	no	-	-	2537	1	licenses/mx4j.license.txt
+f102c3d8162c	BSD	1	no	-	-	2826	1	licenses/struts-1.1.license.txt
+f18ac7059fa2	BSD	1	no	-	-	11323	1	libs/tomahawk/src/main/resources/META-INF/licenses/dojo-LICENSE.TXT
+fd42d6c8c9d5	BSD	1	no	-	-	1996	1	licenses/dom4j.license.txt
+fe0966e77ece	MIT	1	no	-	-	934	1	libs/tomahawk/src/main/resources/META-INF/licenses/prototype-LICENSE.txt
+# FAMILY TALLY by distinct DOCUMENT blob (72 blobs)
+#     29  BSD
+#     21  Apache-2.0
+#     10  ECL-2.0
+#      7  MIT
+#      2  LGPL
+#      1  IPL-1.0
+#      1  BSD+MIT
+#      1  Apache-2.0+BSD
+# HOSTILE (withholds commercial use or redistribution): 0
+# COPYLEFT / RECIPROCAL document blobs: 3  {'LGPL': 2, 'IPL-1.0': 1}
+#   All 3 sit in licenses/ -- a THIRD-PARTY NOTICE MANIFEST, not Sakai's own grant:
+#     LGPL-2.1 verbatim  x2 blobs / 5 paths  (LGPL2.1, aopalliance, dnsjava-1.2.3, hibernate-2.1, jboss-j2ee)
+#     IBM Public License 1.0  x1 blob / 1 path  (junit-3.8.1.license.txt)
+#   NOTE a separate defect, not this action's question: the FILENAME names a component whose real
+#   upstream licence differs from the body. aopalliance is public domain upstream and dnsjava is
+#   BSD, yet both files carry the LGPL-2.1 text; junit 3.8.1 shipped under CPL-1.0, and this file
+#   is its IPL-1.0 predecessor. The manifest is not a reliable per-component map.
+
+## moodle/moodle	head	f20534726a59	outer	GPL-3.0-or-later@COPYING.txt
+# P170-A paths 193	source-file over-read 105	DOCUMENT paths 88	distinct document blobs 80
+blob	families	n_fam	election	hostile	prose_mentions	bytes	n_paths	example_path
+a148ba564bf2	Apache-2.0	1	no	-	-	10253	4	public/lib/google/LICENSE
+3f1559b2ad6a	MIT	1	no	-	-	1063	2	public/lib/psr/event-dispatcher/LICENSE
+66a27ec5ff94	Apache-2.0	1	no	-	-	10172	2	public/lib/giggsey/libphonenumber-for-php-lite/LICENSE
+94a9ed024d38	GPL	1	no	-	LGPL	35146	2	COPYING.txt
+b71ec5dfc20e	MIT	1	no	-	-	1102	2	public/lib/psr/http-server-handler/LICENSE
+d64569567334	Apache-2.0	1	no	-	-	11357	2	public/lib/maxmind/GeoIp2/LICENSE
+0133494d8c2b	GPL+MIT	2	yes	-	-	33456	1	public/admin/tool/brickfield/LICENSE_QUAIL.txt
+04a90f083e8f	MIT	1	no	-	-	1083	1	public/lib/phpspreadsheet/phpspreadsheet/LICENSE
+0580d1b76c75	MIT	1	no	-	-	1122	1	public/lib/webauthn/LICENSE
+0c0d08a79bd8	MIT	1	no	-	-	1058	1	public/lib/minify/matthiasmullie-minify/LICENSE
+0ed3a246553b	MIT	1	no	-	-	1067	1	public/lib/symfony/deprecation-contracts/LICENSE
+11c0146651c5	BSD	1	no	-	-	1528	1	public/lib/php-jwt/LICENSE
+153b926a152a	BSD	1	no	-	-	1469	1	public/media/player/videojs/ogvjs/COPYING-vorbis.txt
+153d126beb47	MIT	1	no	-	-	1118	1	public/lib/editor/tiny/plugins/html/amd/src/beautify/LICENSE
+167ec4d66df8	Apache-2.0	1	no	-	-	9573	1	public/lib/openspout/LICENSE-for-cc42c1d
+17b1deabca43	MIT	1	no	-	-	1116	1	public/media/player/videojs/ogvjs/COPYING
+1c693e3d44d9	MIT	1	no	-	-	1335	1	public/lib/jquery/MIT-LICENSE.txt
+1ce44343c4a3	BSD	1	no	-	-	1535	1	public/media/player/videojs/ogvjs/LICENSE-vpx.txt
+20d40b6bceca	GPL	1	no	-	LGPL	35146	1	public/h5p/h5plib/v128/joubel/core/LICENSE.txt
+2877a4894ee5	MIT	1	no	-	-	1144	1	public/lib/psr/container/LICENSE
+2e686ede84a8	MIT	1	no	-	-	1085	1	public/lib/mustache/LICENSE
+32012336bbc4	BSD	1	no	-	-	1592	1	public/lib/yui/license.txt
+37313ac2dd7f	BSD	1	no	-	-	1568	1	public/lib/phpxmlrpc/license.txt
+38ce746d6471	MIT	1	no	-	-	1065	1	public/lib/openspout/LICENSE
+474c952b4b50	MIT	1	no	-	-	1084	1	public/lib/psr/log/LICENSE
+478e7641e93d	BSD	1	no	-	-	1490	1	public/lib/nikic/fast-route/LICENSE
+491295ad30ea	MIT	1	no	-	-	1058	1	public/lib/minify/matthiasmullie-pathconverter/LICENSE
+4a5bddd55ef7	BSD	1	no	-	-	1635	1	public/lib/markdown/License.md
+4e446a12f300	GPL+LGPL	2	yes	-	-	43681	1	public/lib/tcpdf/LICENSE.TXT
+51c7ec81cb82	MIT	1	no	-	-	1398	1	public/lib/guzzlehttp/psr7/LICENSE
+5769475db97c	MIT	1	no	-	-	1903	1	public/lib/requirejs/LICENSE
+5b4b156196a4	MIT	1	no	-	-	1100	1	public/lib/phpspreadsheet/markbaker/complex/license.md
+5c970a421926	MIT	1	no	-	-	1088	1	public/lib/jmespath/LICENSE
+6111c6c5a6b9	BSD	1	no	-	-	1465	1	public/media/player/videojs/ogvjs/COPYING-ogg.txt
+6510caced04b	MIT	1	no	-	-	1059	1	public/lib/rtlcss/LICENSE
+686a4e311f9f	MIT	1	no	-	-	1103	1	public/lib/php-css-parser/LICENSE
+6f7dc6252edb	BSD+MIT	2	yes	-	-	4018	1	public/lib/aws-sdk/THIRD-PARTY-LICENSES
+70454a638719	GPL	1	no	-	-	300	1	public/lib/editor/tiny/js/tinymce/license.md
+7329058f52be	MIT	1	no	-	-	1100	1	public/lib/phpspreadsheet/markbaker/matrix/license.md
+78108290c409	MIT	1	no	-	-	1817	1	public/lib/jquery/ui-1.14.1/LICENSE.txt
+79810c848f8b	MIT	1	no	-	-	1074	1	public/lib/laravel/serializable-closure/LICENSE.md
+814f7de993f6	Apache-2.0	1	no	-	-	11342	1	public/lib/lti1p3/LICENSE.md
+84e590c1164a	MIT	1	no	-	-	1114	1	public/mod/assign/feedback/editpdf/fpdi/LICENSE.txt
+875b138ecf6f	BSD	1	no	-	-	1315	1	public/media/player/videojs/ogvjs/COPYING-dav1d.txt
+89f0591697f2	MIT	1	no	-	-	1070	1	public/enrol/lti/ims-blti/LICENSE.txt
+8add30ad590a	LGPL	1	no	-	GPL	26429	1	public/lib/bennu/LICENSE.txt
+8c88a20d4558	LGPL	1	no	-	GPL	26455	1	public/lib/htmlpurifier/LICENSE
+8d53e9f5e884	Apache-2.0	1	no	-	-	9201	1	public/lib/aws-sdk/LICENSE
+8dada3edaf50	Apache-2.0	1	no	-	-	11356	1	public/lib/ltiprovider/LICENSE
+91acaca67302	MIT	1	no	-	-	2403	1	public/admin/tool/mfa/factor/totp/extlib/ParagonIE/ConstantTime/LICENSE.txt
+97db2e64c93e	MIT	1	no	-	-	1081	1	public/lib/geopattern-php/LICENSE
+97f7ccef41b2	MIT	1	no	-	-	2166	1	public/h5p/h5plib/v128/joubel/editor/ckeditor5/LICENSE.md
+9b2ca37b3ffc	MIT+OFL	2	yes	-	-	4379	1	public/h5p/h5plib/v128/joubel/core/fonts/inter/LICENSE.txt
+9c739c34a3a9	BSD	1	no	-	-	1927	1	public/media/player/videojs/ogvjs/COPYING-opus.txt
+9f0f943be883	MIT	1	no	-	-	1283	1	public/lib/guzzlehttp/promises/LICENSE
+aa2a0426c390	MIT	1	no	-	-	1062	1	public/lib/monolog/LICENSE
+afcfdfb264ee	MIT	1	no	-	-	1093	1	public/lib/scssphp/LICENSE.md
+b1c2c97b9d42	MIT	1	no	-	-	1079	1	public/lib/psr/cache/LICENSE.txt
+b2b04161b166	MIT	1	no	-	-	1076	1	public/lib/php-di/invoker/LICENSE
+bccf12495d2d	MIT	1	no	-	-	1085	1	public/lib/spatie/php-cloneable/LICENSE.md
+be5540c2af75	MIT	1	no	-	-	1079	1	public/lib/ralouphie/getallheaders/LICENSE
+be6834212327	MIT	1	no	-	-	1079	1	public/lib/psr/clock/LICENSE
+c2b9aa4420c6	MIT	1	no	-	-	1076	1	public/lib/php-di/php-di/LICENSE
+c2d8e452de1b	MIT	1	no	-	-	1084	1	public/lib/psr/http-message/LICENSE
+c3f6f760feec	MIT	1	no	-	-	1147	1	public/lib/plist/LICENSE.md
+c5a282ff42a0	MIT	1	no	-	-	1051	1	public/lib/composer/pcre/LICENSE
+c8ccce4ffb5d	BSD	1	no	-	-	1469	1	public/media/player/videojs/ogvjs/COPYING-theora.txt
+cd5e0020afc2	MIT	1	no	-	-	1084	1	public/lib/psr/http-client/LICENSE
+d00e2b1f2d64	BSD+LGPL	2	yes	-	GPL	26332	1	public/lib/adodb/LICENSE.md
+d6fd559c7874	MIT	1	no	-	-	1061	1	public/lib/slim/slim/LICENSE.md
+d8550c98ab1e	BSD	1	no	-	-	1482	1	public/lib/simplepie/LICENSE.txt
+d9a10c0d8e86	Apache-2.0	1	no	-	-	10172	1	public/lib/xhprof/LICENSE
+e231afd7aba9	Apache-2.0	1	no	-	-	637	1	public/lib/aws-sdk/NOTICE
+e49a7c85a10d	MIT	1	no	-	-	1136	1	public/lib/psr/simple-cache/LICENSE.md
+e69c5e39a30c	MIT+OFL	2	yes	-	-	7422	1	lib/bundles/fontawesome/LICENSE.txt
+e6a673e34dda	MIT	1	no	-	-	1087	1	public/admin/tool/mfa/factor/totp/extlib/OTPHP/LICENSE
+ebe7fe2f8a1b	MIT	1	no	-	-	1263	1	public/lib/zipstream/LICENSE
+f166cc57b278	LGPL	1	no	-	GPL	26529	1	public/lib/phpmailer/LICENSE
+f56457772c02	MIT	1	no	-	-	1079	1	public/lib/guzzlehttp/kevinrob/guzzlecache/LICENSE
+fd2375d888b2	MIT	1	no	-	-	1456	1	public/lib/guzzlehttp/guzzle/LICENSE
+# FAMILY TALLY by distinct DOCUMENT blob (80 blobs)
+#     47  MIT
+#     12  BSD
+#      9  Apache-2.0
+#      3  GPL
+#      3  LGPL
+#      2  MIT+OFL
+#      1  GPL+MIT
+#      1  GPL+LGPL
+#      1  BSD+MIT
+#      1  BSD+LGPL
+# HOSTILE (withholds commercial use or redistribution): 0
+# COPYLEFT / RECIPROCAL document blobs: 9  {'GPL': 3, 'GPL+MIT': 1, 'GPL+LGPL': 1, 'LGPL': 3, 'BSD+LGPL': 1}
+
+# ============================ ACTION JK VERDICT ============================
+# FALSIFIER: "refuted if any family appears that is INCOMPATIBLE with the repo's outer grant -- a
+#   non-elected copyleft inside Sakai's ECL-2.0, or a proprietary/non-commercial body inside either."
+#
+# LIMB 2, proprietary / non-commercial: FIRED ON THE RAW MEASUREMENT, SILENT AFTER RESOLUTION.
+#   6 raw hostile hits in Moodle, 0 real, in two classes:
+#     4 of 6 were GPL-3.0's OWN section 6(b) -- "allowed only occasionally and noncommercially" --
+#       a condition on one alternative conveying METHOD inside the GPL. Moodle's own COPYING.txt
+#       was one of them. Every full GPL-3.0 body on earth trips a naive search.
+#     2 of 6 were Moodle PHP SOURCE FILES: lang/en/license.php and lib/tests/licenselib_test.php,
+#       which carry "Creative Commons - NonCommercial" as DATA -- the licence menu Moodle offers
+#       its users for uploaded content. Not a grant over Moodle at all.
+#   0 bodies in either repository withhold commercial use or redistribution.
+#
+# LIMB 1, non-elected copyleft inside Sakai's ECL-2.0: FIRES ON THE LETTER, and p171 does NOT
+#   claim it silent. 3 of Sakai's 72 blobs are reciprocal (2 LGPL-2.1, 1 IPL-1.0) and none offers a
+#   permissive election. What p171 CAN state as measurement: all 3 are notice files in licenses/,
+#   describing third-party components, and 0 copyleft grant governs Sakai's own code. Whether a
+#   dependency notice is "copyleft inside the repo" is a READING, and it is counsel's, not an
+#   instrument's. Recorded as FIRED-ON-THE-LETTER / RESOLVED-ON-THE-FACTS rather than smoothed.
+#
+# SO: gap 115's substantive anxiety is DISCHARGED -- the inner audit is procedural, as penecho's 32
+#   predicted. The procedural cost is NOT small and is now sized: 129 + 88 = 217 document bodies
+#   across 12 families, and a client scanner will read 105 Moodle source files as licences too.
+#
+# T223 - P170-A OVER-READS BY COUNTING SOURCE CODE AS GRANTS, and asymmetrically.
+#   Moodle headers EVERY php file with a GPL notice, and ships an admin/tool/licensemanager/
+#   subsystem whose filenames all contain "license". The two conventions multiply: 105 of 193
+#   "grant bodies" (54%) are source code. Sakai's contamination is 0 of 129, because its grants
+#   live in licenses/*.txt. So p170's published pair -- "Sakai 129, Moodle 193" -- invited a
+#   comparison that cannot be made: 129 is 129 documents, 193 is 88 documents plus 105 php files.
+#   The corrected pair is Sakai 129, Moodle 88 -- and Moodle, the larger tree, carries FEWER.
+# T224 - EVERY DEFEAT OF THIS INSTRUMENT THIS PASS WAS FORMATTING, NOT LAW. Four, all caught by
+#   its own regression tests before publication: (1) a family name matched anywhere in the body
+#   read LGPL-2.1 as GPL+LGPL, from LGPL's section 3 naming the ordinary GPL; (2) junit-3.8.1 read
+#   as GPL+MPL+Python when it is IPL-1.0, a family the predicate did not know; (3) hard wrapping
+#   at ~70 columns split "GNU General Public\nLicense" so a flat phrase search MISSED it; (4) a
+#   Markdown heading "# Apache License" and a Markdown link "[GNU General Public License ...](...)"
+#   both defeated line-anchored and phrase patterns. None of the four was a legal question.

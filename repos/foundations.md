@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🆕 🔴 **`ACTION JK` classified the inner grant bodies this page has been COUNTING, and the count
+itself was wrong in one direction only: `105` of `Moodle`'s `193` *"grant bodies"* are PHP SOURCE
+FILES, not grants. `Sakai`'s contamination is `0` of `129`. The published pair invited a comparison
+that cannot be made (`T223`).**
+🆕 🟢 **The substantive answer is reassuring and now measured: `217` third-party grant documents
+across the two leading institutional LMSes, `12` families, `0` that withhold commercial use or
+redistribution. `gap 115`'s anxiety was procedural, as `penecho`'s `32` predicted.**
+
+### 🆕 🟡 The licence column, with the inner audit CLASSIFIED
+
+| repo | HEAD at p171 | root verdict | name matches | `P170-A` bodies | 🆕 **DOCUMENT bodies** | 🆕 **source-file over-read** | 🆕 **hostile** |
+|---|---|---|---|---|---|---|---|
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 **`88f8e09c0a38`** *(MOVED from `10a1d904d379`)* | 🟢 `ECL-2.0` | `165` | `129` | 🟢 **`129`** *(`72` blobs)* | 🟢 **`0`** | 🟢 **`0`** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `f20534726a59` *(UNCHANGED — controlled re-read)* | 🔴 `GPL-3.0` @ `COPYING.txt` | `217` | `193` | 🆕 🔴 **`88`** *(`80` blobs)* | 🔴 **`105`** | 🟢 **`0`** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `5d47c94a8ecc` | 🟢 `MIT` | `11` | 🟡 `6` | 🟡 *not re-swept this pass* | — | — |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `3368a6b14b96` | 🔴 `AGPL-3.0` | `27` | 🟡 `15` | 🟡 *not re-swept this pass* | — | — |
+| 🟡 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `866b8e6d594d` | 🔴 `GPL-3.0` | `7` | 🟢 `2` | 🟡 *not re-swept this pass* | — | — |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `1c95cefebc17` | 🟡 `LGPL-3.0` | `15` | 🟢 `1` | 🟡 *not re-swept this pass* | — | — |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `882f3b8c7498` | 🟢 `MIT` | 🟢 `1` | 🟢 `1` | 🟢 **`1`** | 🟢 **`0`** | 🟢 **`0`** |
+
+🔴 **Control honestly stated: `Moodle` was re-read at p170's EXACT `HEAD`, so every difference there
+is INSTRUMENT. `Sakai` moved (committed `09:46:58Z` this pass) and the server refused the pinned sha
+(`fatal: couldn't find remote ref`), so that limb is UNCONTROLLED — though its name-match count
+(`165`) and body count (`129`) are identical at both `HEAD`s, which is a result rather than a control.**
+
+### 🆕 🟢 Family tally — what a client's scanner will actually report
+
+| family | `Sakai` *(72 blobs)* | `Moodle` *(80 blobs)* |
+|---|---|---|
+| 🟢 **`MIT`** | `7` | 🟢 **`47`** |
+| 🟢 **`BSD`** | 🟢 **`29`** | `12` |
+| 🟢 **`Apache-2.0`** | `21` | `8` |
+| 🟢 **`ECL-2.0`** | `10` | — |
+| 🟡 **`LGPL`** | `2` | `3` |
+| 🔴 **`GPL`** | — | `2` |
+| 🟡 **`IPL-1.0`** | `1` | — |
+| 🟡 **multi-family blobs** | `2` | `6` |
+| 🟢 **withholding commercial use** | 🟢 **`0`** | 🟢 **`0`** |
+
+🟢 **`Sakai`'s `3` reciprocal bodies (`2` `LGPL-2.1`, `1` `IPL-1.0`) all sit in `licenses/` — a
+third-party NOTICE manifest. `0` copyleft grant governs `Sakai`'s own code.** 🔴 **Whether a
+dependency notice counts as *"copyleft inside an `ECL-2.0` repository"* is a READING, and it is
+counsel's, not an instrument's. Recorded as such rather than declared silent.**
+🆕 🟡 **`gap 117` — and that manifest MISLABELS: `aopalliance.license.txt` and
+`dnsjava-1.2.3.license.txt` both carry `LGPL-2.1` text, where AOP Alliance is public domain
+upstream and dnsjava is `BSD`; `junit-3.8.1.license.txt` carries `IPL-1.0` where JUnit `3.8.1`
+shipped `CPL-1.0`. Do not read that directory as a per-component attribution map (`ACTION JO`).**
+
+### 🆕 🔴 `T223` — why `Moodle`'s number was `54%` source code, and why `Sakai`'s was not
+
+| | |
+|---|---|
+| 🔴 **convention one** | 🔴 **`Moodle` puts a GPL notice header in EVERY php file, so any Moodle source file satisfies `P170-A` step `2`'s body test** |
+| 🔴 **convention two** | 🔴 **`Moodle` ships an `admin/tool/licensemanager/` subsystem — a licence-manager FEATURE — whose filenames all contain *"license"*, so they all satisfy the name match** |
+| 🔴 **the product** | 🔴 **the two multiply: `105` of `193` are source code, including `lang/en/license.php` and `lib/tests/licenselib_test.php`** |
+| 🟢 **why `Sakai` is clean** | 🟢 **its grants live in `licenses/*.txt`. `73` of its `129` paths are `.txt`; `0` are source** |
+
+🟢 **`P171-A` is the fix and it is one predicate: a grant body must BE a licence document, not a
+source file that mentions one.** 🔴 **`gap 118` is the residue, and it is a REVIEW-COST hazard rather
+than a legal one: a client's scanner will still report ~`193`, so an SBOM review of `Moodle` starts
+`105` findings in the hole. Now sized before anyone bills for it.**
+[`evidence/inner-grant-families.2026-10-13-p171.tsv`](../evidence/inner-grant-families.2026-10-13-p171.tsv)
 ## Pass 170 — 2026-10-13
 
 🆕 🟢 **`ACTION JH` DISCHARGED with a silent falsifier: `7` of `7` platform root verdicts reproduce

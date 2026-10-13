@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🆕 🟢 **`ACTION JJ` DISCHARGED — the `≥6` h full-`12` churn reading that p168, p169 and p170 each
+recorded as non-existent EXISTS, and the anchor making it possible has been on disk since p164.
+`2` of `12` over `6 h 37 min 08 s` at DENOMINATOR `12`. Falsifier SILENT on both limbs.**
+🆕 🔴 **`ACTION JN`'s falsifier FIRED. A sweep of the whole `ai-education` topic — `485`
+repositories — found `5` permissive, active, education-vertical repositories this shelf has never
+named. `gap 113` is answered: the QUERY was the limitation, not the ecosystem.**
+🆕 🔴 **And the shelf has a SHAPE BIAS it had not noticed: `4` of the `5` new finds are ASSESSMENT
+tools; these `12` rows are almost all tutoring (`T229`).**
+🟢 **Actions are registered in [`intel/open-gaps.md`](../intel/open-gaps.md) ONLY, per `T218`. This
+file links to them and defines none.**
+
+### 🆕 🟢 The `12`-row shelf — re-stated, with the churn reading attached
+
+🟢 **Every licence below is a BODY READ. `HEAD`s are p171's own `git ls-remote` sweep at
+`t0 = 2026-10-13T09:47:55Z`, `12` of `12` reachable.**
+
+| repo | licence *(body read)* | HEAD at p171 | moved since p164 *(`6 h 37 min`)* |
+|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN, placeholder filled | `f69bd425f299` | 🔴 **YES — `4` transitions, ~`1` per `1 h 39 min`** |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)**; vendored `MIT` `Apache-2.0` `EPL-2.0` `ISC` | `076c1ad54a85` | 🟢 no |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `9a787eb45759` | 🔴 **YES — `1` transition** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | `e0e347f7f399` | 🟢 no |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | `242a9324fe48` | 🟢 no |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | `6cf793bd868b` | 🟢 no |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | `a6646794661b` | 🟢 no |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | `f0142f28e8ed` | 🟢 no |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | `9c260890214d` | 🟢 no |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `7d9e9052bc5a` | 🟢 no |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | `5c2f92416c04` | 🟢 no |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | `ea29bcf196d2` | 🟢 no |
+
+🔵 **`T221` — the churn column is the finding, not the HEADs. Ten of twelve rows have not moved in
+`6 h 37 min`; two have, and the changed set is the SAME `{ai-shifu, echo-loop}` at every interval
+from `1 h 02 min` to `15 h 40 min`. Widening the window added not one repository. `≥3` of `12` was
+never reachable by waiting.**
+🔴 **`T222` — and *"`2` of `12`"* undercounts the activity: `5` sha transitions happened across
+those `2` repositories. A falsifier phrased on repositories cannot see one that moves hourly.**
+[`evidence/churn-full12-6h.2026-10-13-p171.tsv`](../evidence/churn-full12-6h.2026-10-13-p171.tsv)
+
+### 🆕 🔴 `ACTION JN` — five repositories this shelf's query could not see
+
+🟢 **Every row below: `HEAD` verified on the primary channel, grant body READ through `P171-A`.
+All `5` are `MIT`, one grant file, one blob, no dual grants, no deviations.**
+
+| repo | ★ | HEAD | licence *(body read)* | region | what it is |
+|---|---|---|---|---|---|
+| 🆕 🟡 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | `80` | `7c2f87a4641b` | 🟢 **`MIT`** *(`1 063` B)* | Global | 🔴 **Canvas-LMS + `MCP` exam automation. Its own description: *"Get 4.0 GPA without learning"*. DO NOT ROUTE — an academic-integrity CIRCUMVENTION tool, recorded because Annex III point `3` names exactly the proctoring it defeats** |
+| 🆕 🟢 [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | `22` | `a0a33cd6d4f8` | Global | 🟢 **`MIT`** *(`1 071` B)* — 🟢 **adaptive programming tutor: real-time code execution, interactive challenges, learning analytics. `208` files. The only genuine permissive edtech PLATFORM in the sweep (`ACTION JR`)** |
+| 🆕 🟢 [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | `18` | `e2193181c95c` | APAC | 🟢 **`MIT`** *(`1 063` B)* — 🟢 **generates original Taiwan university-entrance (`學測`) mock exams with worked solutions and official layout. `593` files, the largest tree of the five (`ACTION JR`)** |
+| 🆕 🟡 [`timothywarner-org/ai901-cert-buddy-claude`](https://github.com/timothywarner-org/ai901-cert-buddy-claude) | `10` | `40572f77f573` | Global | 🟢 **`MIT`** *(`1 066` B)* — 🟡 **Azure `AI-901` certification study buddy as an agent skill. Vendor-cert prep is a corporate-L&D shape this shelf does not cover** |
+| 🆕 🟡 [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | `10` | `60a25699f2fb` | APAC | 🟢 **`MIT`** *(`1 062` B)* — 🟡 **Chinese bar exam (`法考`) preparation engine, `8` subjects, statute cross-checking. The legal-education crossover this KB has not had** |
+
+🔴 **A sixth candidate was EXCLUDED on reading rather than counted:
+[`thisisandreeeee/llms-in-10-words`](https://github.com/thisisandreeeee/llms-in-10-words) (`11` ★,
+`MIT`) is `4` files and a README — not edtech and not a tool. p171's own edtech regex misclassified
+it, and that is recorded rather than smoothed into the total.**
+🟢 **Why the standing query missed all five: it asks for *"top open source AI agents education"*.
+These are `10`–`80` ★ single-purpose SKILLS and exam engines — below any *"top"* threshold, and not
+called *"agents"*. Several passes of `0` new rows was the query working exactly as written.**
+🔴 **`T228` — and the topic itself is not a clean population: of its `100` top-starred permissive
+active repos, `35` are edtech, `18` are education ABOUT AI (*"build an LLM from scratch"*), `11`
+both, `36` neither. ~`46%` is not AI-for-education, which is why a topic count was never a
+statement about this vertical's size.**
+[`evidence/ai-education-topic-census.2026-10-13-p171.tsv`](../evidence/ai-education-topic-census.2026-10-13-p171.tsv)
 ## Pass 170 — 2026-10-13
 
 🟢 **Five pre-registered actions — four from `agents/top.md`, one from `intel/open-gaps.md` under a

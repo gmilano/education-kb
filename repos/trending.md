@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p171
+
+🆕 🔴 **The `ai-education` topic measured end to end for the first time, and the headline is that a
+topic count has never been a statement about this vertical's size.**
+
+| query *(recorded verbatim, per `T227`)* | total_count |
+|---|---|
+| `topic:ai-education` | `485` |
+| `topic:ai-education pushed:>=2026-04-16` | `357` |
+| `topic:ai-education pushed:>=2026-04-16 license:mit` | 🟢 **`135`** |
+| `topic:ai-education pushed:>=2026-04-16 license:apache-2.0` | 🟡 **`14`** |
+| `topic:ai-education pushed:>=2026-04-16 license:bsd-3-clause` | 🔴 **`0`** |
+| `topic:ai-education pushed:>=2026-04-16 license:isc` | 🔴 **`0`** |
+| `topic:ai-education pushed:>=2026-04-16 license:mit stars:>=20` | 🔴 **`5`** |
+
+🟢 **`149` of `357` active repositories are permissive — and in this vertical permissive means `MIT`
+or nothing: `0` `BSD`, `0` `ISC`, and `Apache-2.0` is `14` repositories out of `485`.**
+🔴 **`T228` — the topic is ~`46%` not-edtech. Of the `100` top-starred permissive active repos: `35`
+edtech, `18` education ABOUT AI, `11` both, `36` neither. *"`ai-education`"* tags both building AI
+for learners and teaching people about AI.**
+🔴 **`T227` — and the denominator DISAGREES with p170, which registered this action against
+*"`288` repositories"*. p171 measures `485` hours later the same day. A `68%` rise in hours is not
+credible, so one number answers a different question — but p170 recorded no query string, so it is
+unresolvable from the record. Every count on this page now carries the query that produced it.**
+🔴 **The same defect, found twice in one pass: `T217`'s *"`86` citations"* reconciles with none of
+p171's measurements (`78` English full-form, `82` Spanish, `95` lines, `223` bare).**
+🟢 **At `≥20` ★ the permissive active population is `6` repositories and `4` were already on this
+shelf. The vertical's significant tail is genuinely thin; its long tail is large and single-author.**
+🟢 **Instrument-naming correction that applies to every dated section BELOW this one in this file: where this file cites `Regulation (EU) 2026/1744`, the BASE instrument is `Regulation (EU) 2024/1689` — the AI Act, whose Annex III point `3` puts education in scope. `2026/1744` is the *"Digital Omnibus on AI"*, a VERIFIED AMENDING act (`ACTION JL`, `T217`). Name `2024/1689` first in any client material.**
+🟢 **Platform grant surfaces re-measured: `Sakai` `129` document bodies across `72` blobs,
+`Moodle` `88` across `80` — the latter corrected DOWN from `193`, because `105` were PHP source
+files carrying Moodle's per-file GPL header (`T223`).**
 ## 2026-10-13 — Pass 170 *(append-only; history below is preserved)*
 
 🆕 🟢 **A PERMISSIVE INSTITUTIONAL LMS re-enters this KB's routing — and it was never new.**

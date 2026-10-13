@@ -1,0 +1,56 @@
+# ACTION JM, p171 - P170-C implemented and run. Does T216's lost-row defect affect shelves other
+# than the LMS route? Instrument: compose/code/p171-cross-block-gate/check_lost_rows.py
+#
+# FALSIFIER: "refuted if OpenOLAT is the ONLY such row across all three files -- which would make
+#   T216 an isolated omission rather than a cost of the append-only convention, and P170-C
+#   unnecessary."
+# VERDICT: FALSIFIER FIRED. SIX other repositories were routed by an earlier pass and are absent
+#   from the newest routing table. OpenOLAT is not among them only because p170 RESTORED it.
+#   T216 is systemic in verticals/solutions.md, and P170-C is necessary.
+#
+# T225 - THE FIRST SHAPE OF THIS GATE WAS UNSOUND, and it is recorded because the gate is the
+#   deliverable. Attempt 1 took the population to be "every repo on a line that also carries a
+#   licence identifier" and reported 372 lost rows across 3 files -- P471, a gate that marks
+#   everything controls nothing. The population was wrong, not the threshold: these files carry
+#   large CENSUS tables (190+ MCP servers, LTI libraries, QTI players, OneRoster implementations)
+#   that no pass ever offered as recommendations. A newest block that does not re-state a 190-row
+#   census has lost nothing. Attempt 2 restricts the population to ROUTING tables -- in this KB,
+#   the tables headed `need`, `engagement` or `layer`, which answer "what should a client use".
+#   372 -> 7, a 98% cut, and the 7 survive reading.
+# T226 - SLUG CASE. Attempt 2 reported 7, including `openolat/OpenOLAT` -- which p170 HAD restored,
+#   as `OpenOLAT/OpenOLAT`. GitHub owner names are case-insensitive and this KB writes this one
+#   both ways in the same file. A case-sensitive slug match reports a restored row as still lost.
+#   Normalised with casefold: 7 -> 6. Any future gate keyed on a GitHub slug needs this.
+#
+# SCOPE LIMIT, stated rather than smoothed: ACTION JM asked for three files. Only ONE of them has
+#   a routing table in this sense. repos/foundations.md and agents/top.md carry verification and
+#   census tables (`repo | HEAD | root grant | ...`, `candidate | licence | why it is not a row`)
+#   and route nothing directly -- the agent and repo ROUTING function lives in compose/patterns.md,
+#   as P170-D, which this gate reads as 80 of 80 rows intact, 0 lost. So the honest answer to
+#   "which shelves lost rows" is: the one shelf that routes by need lost 6, and the shelf that
+#   routes by stack layer lost 0.
+#
+# Each row below is a CALL, per P170-C's spec -- report, never auto-fix. A row may be absent
+# deliberately, and one of these six is.
+repo	licence (body-read, from history)	routed as	dropped from	p171 call
+Selleo/mentingo	MIT (1 062 B)	Permissive AI-native LMS / corporate L&D; SCORM import AND export	solutions.md:264 (p169 table)	RESTORE - active, MIT, and it is the row that ships licenses.config.yaml (T208)
+Ed-Fi-Alliance-OSS/edfi-oneroster	Apache-2.0 (10 173 B)	OneRoster 1.2 rostering, permissive; 24 GETs over 12 entities, 0 write routes	solutions.md:266 (p169 table)	RESTORE - it is the only permissive rostering route this KB has verified
+frappe/erpnext	GPL-3.0	Education ERP / SIS, copyleft route	solutions.md:607,641,684	RESTORE - as the COPYLEFT-ONLY row. Dropping it hides the standing "no permissive education ERP" finding rather than stating it
+openlxp/openlxp-xia	Apache-2.0 (11 357 B)	Metadata cataloguing plumbing	solutions.md:640,683	DELIBERATE - DO NOT RESTORE. p169 measured it stale: last commit 2026-02-26 (228 d, a README edit), Django<4.0 (EOL Apr 2024), 0 matches for xapi/caliper/statement, sibling package unresolvable. p169's call was "vendor the idea, do not ship the package" and that call stands
+opensalt/OB3DefinitionWidget	MIT (1 080 B)	Open Badges 3.0 achievement-definition authoring, pairs with OpenOLAT's OB2 module	solutions.md:682,793	RESTORE - the only clean permissive active row in the Open Badges topic, and the v3 half of P159-A
+odoo/odoo	LGPL-3.0	Base platform under openeducat_erp for education ERP	solutions.md:684	RESTORE - OpenEduCat is an Odoo module; routing to OpenEduCat without naming its platform understates the commitment
+# 6 flagged, 5 RESTORE, 1 DELIBERATE. That 1 is why P170-C reports and does not auto-fix: a gate
+# that had "corrected" openlxp-xia back onto the routing table would have re-recommended a package
+# its own KB measured as abandoned.
+
+## verticals/solutions.md  (newest block: pass 170)
+#  routed-in-history: 17 | routed in newest block: 11 | LOST FROM THE ROUTING TABLE: 6
+   LOST  selleo/mentingo	last/first routed at line 264
+   LOST  ed-fi-alliance-oss/edfi-oneroster	last/first routed at line 266
+   LOST  frappe/erpnext	last/first routed at line 607
+   LOST  openlxp/openlxp-xia	last/first routed at line 640
+   LOST  opensalt/ob3definitionwidget	last/first routed at line 682
+   LOST  odoo/odoo	last/first routed at line 684
+
+## repos/foundations.md  (newest block: pass 170)
+#  routed-in-history: 0 | routed in newest block: 0 | LOST FROM THE ROUTING TABLE: 0

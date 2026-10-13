@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P171-A` — family identity comes from the TITLE *(p171 — Global)*
+
+🟢 **`P170-A` decides IF a candidate carries a grant. `P171-A` is the step after it: WHICH grant,
+and is it compatible with the outer one. It exists because p170's `129` and `193` were counts
+without families, and because p171's first attempt at families was wrong on `3` of `Sakai`'s `72`
+blobs — caught by READING them, not by the tally.**
+
+```sh
+# step 7  SOURCE FILES ARE NOT GRANTS. Exclude .php/.js/.java/.py/... before classifying.
+#         Moodle headers every php file with a GPL notice AND ships admin/tool/licensemanager/,
+#         whose filenames all contain "license". The conventions multiply: 105 of 193.
+# step 8  IDENTITY FROM THE TITLE, line-anchored -- never a family name matched anywhere in
+#         the body. LGPL-2.1 section 3 names the ordinary GPL, so an anywhere-match reads
+#         LGPL as dual GPL+LGPL. Keep prose references in a SEPARATE column.
+# step 9  NORMALISE WHITESPACE before any phrase match. Legal text is hard-wrapped at ~70
+#         columns: "GNU General Public\nLicense" defeats a flat search.
+# step 10 STRIP MARKDOWN before title matching: "# Apache License", "**TinyMCE**",
+#         "[GNU General Public License ...](http://...)". Formatting, not law, is what
+#         defeats these patterns -- so tolerate formatting.
+# step 11 KNOW THE RECIPROCAL FAMILIES BY NAME: EPL, MPL, CDDL, IPL-1.0, CPL-1.0. An unknown
+#         family does not fail loudly -- it falls through to whatever prose it happens to
+#         contain. junit-3.8.1's IPL-1.0 was read as GPL+MPL+Python.
+# step 12 CARVE OUT GPL-3.0 section 6(b): "allowed only occasionally and noncommercially" is
+#         a condition on a conveying METHOD, not a non-commercial restriction. Every full
+#         GPL-3.0 body trips a naive search, including Moodle's own COPYING.txt.
+```
+
+🟢 **Implementation and `10` of `10` regression tests:
+[`compose/code/p171-inner-grant-classify/`](code/p171-inner-grant-classify/). Every test case is a
+body p171 actually read, and the first five are the five it first got wrong.**
+
+## 🆕 🟢 `P171-B` — the cross-block gate, with the population fixed *(p171 — Global)*
+
+🔴 **`P170-C` was specified at p170 and implemented at p171, and its first shape reported `372` lost
+rows across `3` files — `P471`, a gate that marks everything controls nothing.**
+
+| attempt | produced | why it was unsound |
+|---|---|---|
+| 🔴 **every repo on a line carrying a licence identifier** | 🔴 **`372` findings** | 🔴 **wrong POPULATION: these files carry `190`-row CENSUS tables (MCP servers, LTI libraries, QTI players) that no pass offered as recommendations. A newest block that does not re-state a census has lost nothing** |
+| 🟢 **restricted to ROUTING tables — headed `need`, `engagement` or `layer`** | 🟢 **`7` findings, `98%` cut** | 🟢 **a routing table answers *"what should a client use"*. A census answers *"what exists"*** |
+| 🟢 **plus `casefold` on the slug** | 🟢 **`6`** | 🟢 **GitHub owners are case-insensitive and this KB writes `openolat/OpenOLAT` and `OpenOLAT/OpenOLAT` in one file (`T226`)** |
+
+🟢 **And it caught p171's OWN first draft dropping `3` rows p170 had carried (`ILIAS`, `RosarioSIS`,
+`openSIS-Classic`) — the gate working against the pass that wrote it, which is the only real test of
+a gate like this.**
+🔴 **It reports and never auto-fixes. Of `6` flagged rows, `5` were RESTORED and `1`
+([`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia)) was a DELIBERATE removal: p169
+measured it abandoned. A gate that had *"corrected"* it back would have re-recommended a dead
+package.**
+🟢 **Implementation: [`compose/code/p171-cross-block-gate/`](code/p171-cross-block-gate/).**
+
+## 🆕 🟢 `P171-C` — the `50`-day Article `50(2)` marking pattern *(p171 — EMEA)*
+
+🔴 **The nearest binding EMEA obligation on this shelf is NOT Annex III high-risk. The BASE
+instrument is `Regulation (EU) 2024/1689` — the AI Act, whose Annex III point `3` puts education in
+scope and whose Article `50` carries the transparency duty. `Regulation (EU) 2026/1744`, the
+*"Digital Omnibus on AI"*, is a VERIFIED AMENDING act: it moved Annex III high-risk to
+`2 December 2027` and left Article `50` untouched at `2 December 2026` (`ACTION JL`, `T217`).
+Name `2024/1689` first in any client material.**
+🟢 **This KB is unusually well placed for it — the tooling already exists and runs offline:**
+
+| layer | asset | what it does |
+|---|---|---|
+| 🟢 **marking** | [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/) | 🟢 **emits the provenance marking, with a fixtures provenance policy** |
+| 🟢 **packaging** | [`compose/code/aiact-50-2-pack/`](code/aiact-50-2-pack/) | 🟢 **packs it against `aiact-50-2.xsd`** |
+| 🟢 **exposure** | [`compose/code/aiact-50-2-exposure/`](code/aiact-50-2-exposure/) | 🟢 **scans a tree for which surfaces are exposed** |
+| 🟢 **spans** | [`compose/code/aiact-50-2-spans/`](code/aiact-50-2-spans/) | 🟢 **locates the spans that need marking** |
+
+🟢 **Wiring, concretely: run `aiact-50-2-exposure` over the delivery repo; for every generative
+surface it finds, emit marking via `aiact-50-2-marking` and validate with `aiact-50-2-pack` against
+the `XSD` in CI. On an LMS engagement the surfaces are the ones that generate learner-facing text —
+in [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) the assessment and feedback paths; in
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) the course-content paths.**
+🔴 **Pre-registered as `ACTION JQ`: no row on this shelf has yet been shown to emit a conformant
+marking, so treat the above as a BUILD, not an integration.**
+
+## 🆕 🟢 `P171-D` — an assessment-integrity stack, which is the gap the vertical is pointing at
+
+🔴 **`ACTION JN` found the vertical's live edge is assessment (`4` of `5` new finds), that Annex III
+point `3` names *"monitoring and detecting prohibited behaviour of students during tests"*, that
+Vietnam's and Korea's statutes name automated assessment — and that a `80`-★ `MIT` tool exists whose
+stated purpose is defeating exactly that.**
+
+| layer | repo | licence *(body read)* | role |
+|---|---|---|---|
+| 🟢 **assessment delivery** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | 🟢 **`QTI` + `SCORM` + assessment built in, and the only permissive institutional LMS verified here** |
+| 🟢 **item interop** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **`SCORM 1.2`/`2004` + `AICC` at the content boundary** |
+| 🆕 🟢 **item generation reference** | [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | 🟢 **`MIT`** | 🆕 🟢 **original item authoring WITH worked solutions and formal layout — the shape a client asks for and nobody on this shelf had** |
+| 🆕 🟡 **threat model, not a dependency** | [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** | 🔴 **READ IT, DO NOT SHIP IT. It documents the Canvas + `MCP` + TTS + smart-glasses attack path against proctored assessment. An integrity design that has not read it is guessing** |
+| 🟢 **marking / disclosure** | [`compose/code/aiact-50-2-*`](code/) | — | 🟢 **`P171-C`. Generated items are synthetic content and fall under Article `50`** |
+| 🟢 **licence gate** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) → `licenses.config.yaml` | 🟢 **`MIT`** | 🟢 **lift the file on day one; `3` of its `19` identifiers are not SPDX, so tighten before trusting** |
+
+🔴 **Two decisions to RECORD before writing code, both from this shelf's own measurements: (1) a
+North American district engagement may not use AI to assign grades or make disciplinary decisions
+(New York City, March `2026`), so the human-decision boundary is architecture, not policy; (2)
+`Sakai` would FAIL `mentingo`'s gate (`T208`), so if both are in scope the gate's allowlist is a
+negotiated artefact, not a default.**
 ## 🆕 🟢 `P170-A` — the licence gate, with a PREDICATE at last *(replaces `P169-A`, p170 — Global)*
 
 🟢 **`P169-A` fixed the gate's denominator (enumerate the tree) and its typography (the fold). p170

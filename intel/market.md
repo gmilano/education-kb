@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🆕 🟢 **`T217` is SETTLED and the answer is better than either side of it. `Regulation (EU)
+2026/1744` is REAL — it is the *"Digital Omnibus on AI"*, signed `8 July 2026`, and it AMENDS
+`Regulation (EU) 2024/1689`, the AI Act. This KB was neither fabricating nor mis-citing; it was
+naming the amendment and omitting the Act.**
+🆕 🔴 **And the consequence this KB had BACKWARDS: it has been watching the Annex III high-risk
+date. That date moved to `2 December 2027`. The date that did NOT move is Article `50`
+transparency — **`2 December 2026`, `50` days from this pass** — and it is the nearest binding
+obligation on every row of this shelf.**
+🆕 🟢 **`gap 114` CLOSED: the `2026-08` vs `2027-12-02` disagreement was two sources being right
+about two different instruments.**
+
+### 🆕 🟢 The instrument stack, named correctly, for any EMEA client deck
+
+| | instrument | what it does | tier |
+|---|---|---|---|
+| 🟢 **BASE — name this FIRST** | 🟢 **`Regulation (EU) 2024/1689`** | 🟢 **the AI Act. Annex III point `3` puts education in scope: access and admission, evaluating learning outcomes *(including steering the learning process)*, assessing the appropriate level of education, and monitoring and detecting prohibited behaviour during tests** | 🟡 `search-summary` |
+| 🟢 **AMENDMENT** | 🟢 **`Regulation (EU) 2026/1744`** | 🟢 **Digital Omnibus on AI. Defers stand-alone Annex III high-risk duties to `2 December 2027` and Annex I embedded systems to `2 August 2028`. Adds two Article `5(1)` prohibitions (non-consensual intimate imagery, CSAM)** | 🟡 `search-summary`, confirmed on `3` independent non-vendor channels |
+| 🔴 **UNMOVED** | 🔴 **Article `50` of the base Act** | 🔴 **transparency and machine-readable marking of synthetic content. `2 December 2026`. NOT deferred by the omnibus** | 🟡 `search-summary`, consistent across `~8` sources |
+
+🔵 **Read the dates in the order a client will feel them: marking in `50` days, high-risk in `~14`
+months, embedded systems in `~22` months. A deck that leads with Annex III leads with the furthest
+deadline.**
+🟡 **Honest limit, unchanged: `eur-lex.europa.eu` returns `403` at the CONNECT layer from this
+container — the egress proxy DENIES it by organisation policy, not a site outage, so no retry and
+no alternate transport closes it. `artificialintelligenceact.eu` does not resolve. The Official
+Journal text remains UNREAD and Article `113` remains unquoted (`gap 110`).**
+
+## Opportunities by region
+
+🟢 **All five values from the closed vocabulary appear below, each as its own `###` subsection.**
+
+### Global
+
+🟢 **The permissive supply is now sized rather than estimated. A sweep of the whole `ai-education`
+GitHub topic — `485` repositories, `357` active within `180` days — yields `149` that are permissive
+and active (`135` `MIT`, `14` `Apache-2.0`, `0` `BSD`, `0` `ISC`). In this vertical the permissive
+choice is `MIT` or nothing.**
+🔴 **But at `≥20` ★ the permissive active population is `6` repositories, `4` of which this shelf
+already carries. The vertical's significant tail is genuinely thin; its long tail is large and
+mostly single-author.**
+🟢 **Opportunity: the `217` third-party grant documents inside `Sakai` and `Moodle` are now
+classified, `0` of them hostile. Licence review of the two leading institutional LMSes is a
+PROCEDURAL cost a studio can quote with confidence rather than a risk it must discover.**
+🔴 **Counter-opportunity, and it is the honest one: `10` passes have now failed to find a SIS or an
+education ERP under `MIT` or `Apache-2.0`. Anyone needing one is choosing between copyleft
+(`openeducat_erp` `LGPL-3.0` on `odoo/odoo` `LGPL-3.0`, `frappe/erpnext` `GPL-3.0`) and a build.**
+
+### North America
+
+🟢 **Policy is the demand driver and it is fragmented by design. Federal: the April `2025` executive
+order on AI education for youth sets priorities, and the Department of Education finalised an
+AI grant-priority rule on `13 April 2026` favouring proposals that build AI literacy into teaching.**
+🟡 **States: sources disagree on the count — `37` states plus Puerto Rico with official guidance by
+June `2026` on one tracker, `33`–`35` on another. Legislation is moving faster than guidance: `68`
+bills across `27` states this session, `10` enacted in `2026`. Ohio required every public, community
+and STEM school to adopt an AI framework by `1 July 2026`; Tennessee's `2024` law already required
+district AI policies.**
+🔴 **A procurement constraint worth naming: New York City's March `2026` guidance BARS using AI to
+assign grades or make disciplinary decisions. Any assessment-automation pitch into a US district
+needs a human-decision boundary in the architecture, not in the appendix.**
+🟢 **Opportunity: `37` states' worth of guidance documents and `0` interoperability standard between
+them. Policy-to-configuration tooling — mapping a district's adopted framework onto an LMS's actual
+settings — is a repeatable engagement, and `Selleo/mentingo`'s `licenses.config.yaml` is the shape of
+the artefact.**
+🔴 **Informed gap: this pass found little on HIGHER-ED adoption in North America beyond campus-wide
+vendor deals and some institutions turning AI detection off. Not searched to exhaustion; recorded
+so the next pass does not read silence as coverage.**
+
+### EMEA
+
+🟢 **The regulatory calendar above IS the EMEA opportunity, and the `50`-day Article `50(2)` marking
+deadline is the entry point. This KB already carries offline tooling for it
+(`compose/code/aiact-50-2-marking`, `-pack`, `-exposure`, with an `XSD`), which is a rare case of the
+shelf being ahead of the deadline rather than behind it.**
+🟢 **Institutional demand is documented and unmet: the DEC Leadership Summit EMEA (Paris, May `2026`,
+`27` institutions across `15` countries) found `51%` of employers already expect AI proficiency as a
+baseline graduate competency while only `3%` believe higher education is keeping pace. The EUA's
+February `2026` report frames adoption around institutional VALUES, not tooling.**
+🟢 **Sovereignty is a live procurement axis with named actors: a French university consortium
+including Paris-Saclay is deploying with Mistral AI and EdTech France explicitly on sovereignty
+grounds; Estonia runs a national ChatGPT Edu integration, which cuts the other way. Both are
+reference shapes a studio can be asked to replicate.**
+🟢 **Opportunity: `OpenOLAT` (`Apache-2.0`, §`1`–`9` verbatim, Swiss/German institutional lineage) is
+the only permissive institutional LMS this KB has verified, and it is the natural core of a
+sovereign EMEA stack. Pair with self-hosted inference; the licence carries a patent grant.**
+🔴 **Informed gap: no EMEA-originated permissive AI-education AGENT was found this pass at any star
+level. The EMEA strength is platforms and policy, not agents.**
+
+### APAC
+
+🟢 **Binding, education-naming regulation exists here and nowhere else. Korea's Framework Act on AI
+took effect `22 January 2026` with extraterritorial reach and places education inside
+*"high-impact"*. Vietnam's Law on AI took effect `1 March 2026` — the first comprehensive
+standalone AI statute in Southeast Asia — and names EDUCATION high-risk, citing automated
+assessment and behavioural monitoring. China regulates in a targeted way; Japan, Singapore and
+Australia remain voluntary and principles-based. India has no dedicated AI statute.**
+🆕 🟢 **And for the first time this KB can name APAC-ORIGINATED education code: `niansia/taiwan-exam`
+(`MIT`, `593` files, Taiwan university-entrance mock exams with worked solutions and official
+layout) and `jeliael/fakao-ai-exam-engine` (`MIT`, Chinese bar exam, `8` subjects, statute
+cross-checking). Both licence bodies READ, both `HEAD`-verified.**
+🔴 **Both are single-purpose exam engines, not platforms, so the standing gap — no APAC-originated
+open-source education PLATFORM — survives a sixth pass. What changed is that the silence broke.**
+🟢 **Opportunity: Vietnam and Korea both name automated ASSESSMENT specifically, and `4` of this
+pass's `5` new finds are assessment tools. The regulatory requirement and the open-source supply
+point at the same place — assessment with an auditable decision trail — which is the clearest
+regulation-to-build match on this shelf.**
+
+### LATAM
+
+🔴 **Adoption is the highest in the world and governance the thinnest, and that gap IS the
+engagement. A Digital Education Council study across `29` institutions including UNAM measures
+`91.5%` of students and `75%` of faculty using AI tools; student use rose from `86%` in `2024` to
+`92%` in `2026`. Only `30%` of students and staff think their university integrates AI effectively
+or resources it adequately. UNESCO IESALC's September `2026` study reports the same split:
+widespread adoption, lagging governance.**
+🔴 **`gap 104` re-confirmed a SIXTH time: there is no education-specific AI regulation anywhere in
+LATAM. Chile leads with a `2021` national AI policy and a bill in its first constitutional stage;
+Brazil's `PL 2.338/2023` sits in the Chamber of Deputies; Colombia's `CONPES 4144` is a policy
+instrument, not a statute. What LATAM has instead is institutional.**
+🟢 **Opportunity, and it is the one this KB keeps arriving at: institutional AI governance as a
+deliverable — acceptable-use policy, assessment-integrity boundary, data-protection posture and the
+licence gate — because no regulator will supply it. `65%` of students fear AI makes their learning
+shallower and over half worry about data privacy, so the governance artefact has internal demand,
+not just compliance demand.**
+🟢 **`learningequality/kolibri` (`MIT`) remains the offline-first row for low-connectivity
+deployments, and `47` of this topic's permissive repositories are `MIT`-licensed single-purpose
+tools that can be composed without a procurement cycle.**
+🔴 **Informed gap, stated plainly for a sixth pass: a KB built for a company with largely LATAM
+delivery cannot name ONE education platform originating in the region, and p171's `485`-repository
+topic sweep returned no LATAM-originated permissive education repository at any star level. This is
+a measured absence on a named channel, not an unsearched one.**
 ## Pass 170 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region, with the year computed at runtime.**

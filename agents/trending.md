@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p171
+
+🆕 🔴 **Five permissive, active, education-vertical repositories entered this shelf's view for the
+first time, and none of them came from the query this KB has been running for several passes. They
+came from enumerating the `ai-education` topic directly (`485` repositories, `357` active within
+`180` days, `149` permissive-and-active).**
+🆕 🔴 **The week's shape finding: `4` of the `5` are ASSESSMENT tools. One of them exists to DEFEAT
+assessment.**
+
+| repo | ★ | licence *(body read)* | region | note |
+|---|---|---|---|---|
+| 🆕 🟡 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | `80` | 🟢 **`MIT`** | Global | 🔴 **Canvas-LMS + `MCP` exam automation, *"Get 4.0 GPA without learning"*. NOT routable — recorded as evidence about the vertical. It automates precisely what Annex III point `3` calls high-risk monitoring** |
+| 🆕 🟢 [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | `22` | 🟢 **`MIT`** | Global | 🟢 **adaptive programming tutor, `208` files, learning analytics. The only real permissive edtech PLATFORM in the sweep** |
+| 🆕 🟢 [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | `18` | 🟢 **`MIT`** | APAC | 🟢 **Taiwan `學測` mock-exam generation, `593` files. First APAC-originated education code this KB has named** |
+| 🆕 🟡 [`timothywarner-org/ai901-cert-buddy-claude`](https://github.com/timothywarner-org/ai901-cert-buddy-claude) | `10` | 🟢 **`MIT`** | Global | 🟡 **Azure `AI-901` cert study buddy as an agent skill — the corporate-L&D shape** |
+| 🆕 🟡 [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | `10` | 🟢 **`MIT`** | APAC | 🟡 **Chinese bar exam, `8` subjects, statute cross-checking** |
+
+🔴 **EXCLUDED on reading, not counted:
+[`thisisandreeeee/llms-in-10-words`](https://github.com/thisisandreeeee/llms-in-10-words) (`11` ★,
+`MIT`) — `4` files and a README, and it is education ABOUT AI rather than AI for education.**
+🟢 **Churn, measured at last over the interval three passes could not reach: `2` of `12` shelf rows
+moved in `6 h 37 min`, and they are the same two that move at every interval —
+[`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) (`4` transitions, ~`1` per `1 h 39 min`)
+and [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) (`1`). The other ten are
+static over `6.6` hours.**
+🟢 **Instrument-naming correction that applies to every dated section BELOW this one in this file: where this file cites `Regulation (EU) 2026/1744`, the BASE instrument is `Regulation (EU) 2024/1689` — the AI Act, whose Annex III point `3` puts education in scope. `2026/1744` is the *"Digital Omnibus on AI"*, a VERIFIED AMENDING act (`ACTION JL`, `T217`). Name `2024/1689` first in any client material.**
+🔴 **Licence note for the week, and it is about instruments rather than repositories: `4` separate
+formatting defects defeated p171's own licence classifier before its regression tests caught them —
+`LGPL-2.1` read as dual `GPL`, `IPL-1.0` read as `GPL+MPL+Python`, a hard-wrapped phrase missed, and
+Markdown headings and links defeating both pattern styles (`T224`). None was a legal question.**
 ## 2026-10-13 — Pass 170 *(append-only; history below is preserved)*
 
 🔴 **THE SHELF MOVED. `2` of `12` HEAD shas changed in `57 min 44 s`** — `ai-shifu/ai-shifu`

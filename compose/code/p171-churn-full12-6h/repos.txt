@@ -1,0 +1,12 @@
+ai-shifu/ai-shifu
+penecho/penecho
+echo-loop/Echo-Loop
+ankimcp/anki-mcp-server
+Selleo/mentingo
+HKUDS/DeepTutor
+CaviraOSS/PageLM
+zijinz456/OpenTutor
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator
+HugeCatLab/ChatTutor
+plastic-labs/tutor-gpt
+JushBJJ/Mr.-Ranedeer-AI-Tutor

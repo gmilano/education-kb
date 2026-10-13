@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 171 — 2026-10-13
+
+🆕 🔴 **The trend this pass is about THIS KB's instruments, and it is the most consistent signal on
+the shelf: of the `9` defects p171 found, `0` were legal questions and `8` were FORMATTING or
+ARITHMETIC. A knowledge base about licences keeps being defeated by text layout, not by law.**
+
+| # | what broke | what it actually was |
+|---|---|---|
+| 🔴 **1** | 🔴 **three passes called a measurement impossible** | 🔴 **arithmetic: each handoff re-anchored on the pass that WROTE it, so the reachable date walked forward one hour per pass (`T220`)** |
+| 🔴 **2** | 🔴 **`LGPL-2.1` classified as dual `GPL+LGPL`** | 🔴 **LGPL §`3` names the ordinary GPL in prose. A family name matched anywhere in a body is not a grant (`T224`)** |
+| 🔴 **3** | 🔴 **`junit-3.8.1` classified `GPL+MPL+Python`** | 🔴 **it is `IPL-1.0`, a family the predicate did not know, so every hit was a prose reference (`T224`)** |
+| 🔴 **4** | 🔴 **a phrase search returned `0` where the phrase was present** | 🔴 **legal text is hard-wrapped at ~`70` columns: `GNU General Public\nLicense` (`T224`)** |
+| 🔴 **5** | 🔴 **`Apache-2.0` and a GNU notice both read as NO family** | 🔴 **Markdown: `# Apache License` and `[GNU General Public License ...](...)` (`T224`)** |
+| 🔴 **6** | 🔴 **`6` *"non-commercial"* findings in `Moodle`** | 🔴 **`4` were GPL-3.0's own §`6(b)`; `2` were PHP files listing Creative Commons options as DATA (`T223`)** |
+| 🔴 **7** | 🔴 **`193` grant bodies in `Moodle`** | 🔴 **`105` were source files carrying a per-file GPL header (`T223`)** |
+| 🔴 **8** | 🔴 **a cross-block gate reporting `372` lost rows** | 🔴 **wrong POPULATION, not wrong threshold: census tables counted as routing tables (`T225`)** |
+| 🔴 **9** | 🔴 **the same gate reporting a RESTORED row as lost** | 🔴 **GitHub slug case: `openolat/OpenOLAT` vs `OpenOLAT/OpenOLAT` (`T226`)** |
+
+🔵 **Every one was caught before publication, `5` of them by regression tests written in the same
+pass. The pattern worth carrying: when this KB is wrong, it is almost never wrong about a licence —
+it is wrong about a string.**
+
+### 🆕 🟢 Trend — the regulatory clock was being read from the wrong end
+
+🔴 **This KB has been watching the Annex III high-risk date for several passes. That date moved to
+`2 December 2027` under `Regulation (EU) 2026/1744`, the Digital Omnibus on AI. The date that did
+NOT move is Article `50` transparency: `2 December 2026`, `50` days from this pass.**
+🟢 **So the trend is a REVERSAL of urgency. The obligation this shelf is tooled for
+(`compose/code/aiact-50-2-*`) is the one arriving first, and the obligation it has been anxious
+about has a year more than assumed.**
+🟢 **`gap 114` closed as a non-conflict: `2 August 2026` and `2 December 2027` were two sources
+being right about the base Act and its amendment.**
+
+### 🆕 🔴 Trend — the vertical's live edge is ASSESSMENT, and this shelf is a tutoring shelf
+
+| | |
+|---|---|
+| 🔴 **what `ACTION JN` found** | 🔴 **`4` of `5` new permissive finds are assessment: entrance exams, bar exams, vendor certification, and one tool for DEFEATING proctoring** |
+| 🔴 **what this shelf holds** | 🔴 **`12` rows, almost all tutoring** |
+| 🔵 **the reading** | 🔵 **the shelf is not a small SAMPLE of the vertical, it is a BIASED one, and the bias has a direction (`T229`, `ACTION JP`)** |
+| 🟢 **why it matters commercially** | 🟢 **Vietnam's and Korea's statutes name automated ASSESSMENT specifically, and Annex III point `3` names evaluating learning outcomes and monitoring during tests. Regulation and open-source supply point at the same place, and this shelf points elsewhere** |
+
+### 🆕 🟡 Trend — permissive means `MIT` or nothing in this vertical
+
+🟢 **Measured across the whole `ai-education` topic: `135` `MIT`, `14` `Apache-2.0`, `0` `BSD`,
+`0` `ISC` among active repositories. A studio planning to compose rather than fork should expect
+`MIT` and should expect it WITHOUT a patent grant — which is the one thing `OpenOLAT`'s
+`Apache-2.0` adds over the whole long tail.**
+🔴 **And the copyleft floor has not moved in TEN passes: no SIS and no education ERP exists under
+`MIT` or `Apache-2.0`, now tested against a `485`-repository sweep as well as the usual queries.**
 ## Pass 170 — 2026-10-13
 
 🆕 🔴 **The trend p170 can evidence is about MEASUREMENT, and it is uncomfortable because every
