@@ -1,0 +1,10 @@
+host	tool	surfaced_error	real_cause_per_proxy_status	class
+www.digitaleducationcouncil.com	WebFetch	getaddrinfo ENOTFOUND	connect_rejected: gateway answered 403 to CONNECT	policy denial, NOT DNS
+newsletters.qs.com	WebFetch	getaddrinfo ENOTFOUND	connect_rejected: gateway answered 403 to CONNECT	policy denial, NOT DNS
+www.moe.gov.sg	curl -I	000 / CONNECT tunnel failed, response 403	connect_rejected: gateway answered 403 to CONNECT	policy denial, NOT DNS
+www.tutopiya.com	curl -I	000	connect_rejected: gateway answered 403 to CONNECT	policy denial, NOT DNS
+www.oecd.org	curl -I	000	(same class; CONNECT refused)	policy denial, NOT DNS
+www.ei-ie.org	curl -I	000	(same class; CONNECT refused)	policy denial, NOT DNS
+github.com	curl -I	403 (HTTP, tunnel opened)	developer-host allowlist: host reachable, path policy applies	allowlisted host
+api.github.com	curl -I	403 (HTTP, tunnel opened)	per-repository authorisation, see attach-third-party-probe	allowlisted host
+note	-	-	$HTTPS_PROXY/__agentproxy/status lists recentRelayFailures with host + timestamp + cause	the refusal is NAMEABLE per host

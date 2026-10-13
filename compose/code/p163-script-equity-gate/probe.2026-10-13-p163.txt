@@ -1,0 +1,66 @@
+==============================================================================
+PROBE 1 -- letter-ratio margin, and the critical combining-mark density
+==============================================================================
+Analytic: whitespace is stripped first, so ratio = letters/units.
+With a mark fraction m (marks are NOT Java letters), ratio = 1 - m.
+A reject needs ratio < 0.45, i.e. m > 0.55.
+
+tag           units    marks mark_frac     ratio    margin
+en              296        0     0.000     0.976     0.526
+de              348        0     0.000     0.977     0.527
+es              304        0     0.000     0.977     0.527
+zh               93        0     0.000     0.935     0.485
+ja              118        0     0.000     0.941     0.491
+ko              107        0     0.000     0.953     0.503
+ar              245        0     0.000     0.980     0.530
+ar-voc          308      135     0.438     0.552     0.102
+hi              235       92     0.391     0.591     0.141
+th              200       37     0.185     0.815     0.365
+
+Empirical check -- add full tashkeel to the UNVOCALISED Arabic answer
+by marking a rising fraction of its letters, and find where it rejects:
+   1 mark(s)/letter on  40% of letters -> ratio 0.566  passed
+   1 mark(s)/letter on  60% of letters -> ratio 0.539  passed
+   1 mark(s)/letter on  80% of letters -> ratio 0.496  passed
+   1 mark(s)/letter on 100% of letters -> ratio 0.495  passed
+   2 mark(s)/letter on  40% of letters -> ratio 0.398  REJECTED (letter-ratio)
+   2 mark(s)/letter on  60% of letters -> ratio 0.372  REJECTED (letter-ratio)
+   2 mark(s)/letter on  80% of letters -> ratio 0.332  REJECTED (letter-ratio)
+   2 mark(s)/letter on 100% of letters -> ratio 0.331  REJECTED (letter-ratio)
+
+==============================================================================
+PROBE 2 -- the astral-Han margin, and how little punctuation closes it
+==============================================================================
+18 CJK Ext B ideographs, no punctuation:
+   letters=18 (code points)  units=36 (UTF-16)  ratio=0.500  -> passed
+   An equivalent BMP-Han answer of 18 ideographs would score ratio 1.000.
+
+Now add ideographic full stops (U+3002), one unit each, not a letter:
+   +0 punctuation -> units=36 ratio=0.500  passed
+   +1 punctuation -> units=37 ratio=0.486  passed
+   +2 punctuation -> units=38 ratio=0.474  passed
+   +3 punctuation -> units=39 ratio=0.462  passed
+   +4 punctuation -> units=40 ratio=0.450  passed
+   +5 punctuation -> units=41 ratio=0.439  REJECTED (letter-ratio)
+   +6 punctuation -> units=42 ratio=0.429  REJECTED (letter-ratio)
+   +7 punctuation -> units=43 ratio=0.419  REJECTED (letter-ratio)
+
+==============================================================================
+PROBE 3 -- the word-count branch, and the scripts that fall off it
+==============================================================================
+case                                 words  cjk_ratio branch             tier
+BMP Han x40                             13      1.000 cjk-charcount/3    SHORT
+Ext A Han x40 (U+3400+)                  1      0.000 whitespace-split   SHORT
+Compatibility Han x40 (U+F900+)          1      0.000 whitespace-split   SHORT
+Hangul Jamo, NFD x45                     1      0.000 whitespace-split   SHORT
+
+The Thai consequence, measured: one valid answer, then the same answer repeated.
+   Thai x1    chars=   203  words=   4  branch=whitespace-split  tier=SHORT
+   Thai x5    chars=  1019  words=  20  branch=whitespace-split  tier=SHORT
+   Thai x20   chars=  4079  words=  80  branch=whitespace-split  tier=SHORT
+   Thai x100  chars= 20399  words= 400  branch=whitespace-split  tier=MEDIUM
+
+   For comparison, the English answer repeated to a similar length:
+   Eng  x1    chars=   351  words=  56  branch=whitespace-split  tier=SHORT
+   Eng  x5    chars=  1759  words= 280  branch=whitespace-split  tier=MEDIUM
+   Eng  x20   chars=  7039  words=1120  branch=whitespace-split  tier=LONG

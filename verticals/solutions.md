@@ -3,6 +3,88 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 163 — 2026-10-13
+
+🔴 **This page's routing table splits on *"does the engagement GRADE?"* and sends grading
+engagements to OpenOLAT.** 🆕 🔴 **p163 adds the question that decides a regulated deployment and
+that the table has never asked: *can the grading be TURNED OFF?*** 🟢 **The answer separates the
+two platforms more sharply than licence does.**
+[`evidence/mentingo-judge-controls.2026-10-13-p163.tsv`](../evidence/mentingo-judge-controls.2026-10-13-p163.tsv)
+[`evidence/openeducat-grant.2026-10-13-p163.tsv`](../evidence/openeducat-grant.2026-10-13-p163.tsv)
+
+### 🆕 🔴 `T157` — `mentingo` has NO off switch for its AI judge, and `enabled: false` is a provider selector
+
+🟢 **Measured in `apps/api/src/ai/services/ai-runtime.service.ts:360-369` at HEAD `242a9324`:**
+
+```js
+async resolveSource(capability) {
+  const capabilityStatus = configuration?.capabilities?.[capability];
+  if (capabilityStatus?.enabled && capabilityStatus.provider === AiCapabilityProvider.Luma)
+    return AI_RUNTIME_SOURCES.LUMA;
+  return AI_RUNTIME_SOURCES.CORE;        // <-- enabled:false lands HERE
+}
+```
+
+🔴 **Setting `AiMentorJudge.enabled = false` does not disable the judge. It routes it to the
+CORE provider.** 🟢 **And `AI_RUNTIME_SOURCES` has exactly two members — `{CORE, LUMA}` — with
+**no `OFF`**, so the router cannot decline to run.** 🟢 **The request path
+`ai.controller.ts:152 → ai.service.ts:437 → judge.service.ts:41` carries no feature flag at all;
+its only guards are `thread.status === ACTIVE` and *a rubric must exist*.**
+
+🟡 **The one honest caveat: configuring no rubric DOES stop it** —
+`BadRequestException("common.error.aiJudgeConfigurationMissing")`. 🔵 **But that is an off switch
+by OMISSION, not a control an administrator can find, document or audit.**
+
+🟢 **Contrast, and this is what the routing table needs:** 🟢 **OpenOLAT's `essay-grading` flag
+SHIPS `false`** *(`T145`, p162)*. 🔴 **mentingo's judge surface is present by default and has no
+deliberate way to stop it.**
+
+### 🟢 The routing table, with the new column
+
+| the engagement… | platform | licence | grading | 🆕 **can grading be switched OFF?** |
+|---|---|---|---|---|
+| 🟢 must NOT grade with AI | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3.0 | 🟢 **none** — `4` actions, `0` evaluative | 🟢 **n/a — nothing to switch** |
+| 🟢 may grade, must be able to STOP | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🔴 `essay-grading` | 🟢 **YES — and the flag ships `false`** |
+| 🟡 grades, wants MIT + multi-tenancy | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🔴 **`ai_judge`, `7` tables** | 🔴 **NO — `enabled:false` re-routes, it does not disable** |
+| 🟡 needs an education **ERP** (admissions, fees, library, timetable) | 🆕 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** *(body `8 241 B`, INCOMPLETE)* | 🟢 **none AI-evaluative** | 🟢 **n/a** |
+| 🔴 must avoid network copyleft | 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🔴 `0` AI files | 🟢 **n/a** |
+
+🔵 **How to read the new column in an Annex III engagement:** 🟢 **the AI Act's Article 14
+oversight expectations are much easier to evidence on a platform whose evaluative feature has a
+documented default-off than on one where the only way to stop it is to leave a rubric
+unconfigured.** 🟢 **That makes OpenOLAT the lower-risk grading platform despite mentingo's more
+permissive licence and better-designed verdict controls** — 🔵 **which is the first time on this
+page that licence has NOT been the deciding field.**
+
+### 🆕 🟡 `openeducat/openeducat_erp` — a real ERP row, and the reason it is amber not green
+
+🟢 **Verified at source this pass, not from the vendor's pages: LGPL-3.0 read from the `LICENSE`
+body (`8 241 B`, blob `ef163fea`, sha256 `528f8403…47a9`), the only licence-bearing path in
+`1 345` tracked files, head `1c95cef`, last commit `2026-09-07`, default branch `19.0`.**
+
+🟢 **What it is:** 🟢 **an Odoo-based education ERP with `14` installable modules in-tree —
+`admission`, `fees`, `library`, `timetable`, `exam`, `attendance`, `classroom`, `facility`,
+`parent`, `activity`, `assignment`, `core`, `erp`, plus a web theme.** 🔵 **This is the
+administrative surface Moodle does not have and that UNESCO IESALC's LATAM decomposition shows is
+the LEAST-adopted and most governance-relevant area** *(admin `34.1%` against teaching `73.5%`)*.
+
+🔴 **Why amber:** 🔴 **LGPL-3.0 is copyleft, so it is an INTEGRATION target, never a fork.**
+🔴 **And its grant is defective on its own terms** — the body promises the GPL text *"at the
+bottom as well"* and at `8 241 B` cannot contain it, while the `COPYRIGHT` file it directs the
+reader to is absent from all `1 345` paths. 🟢 **Both defects are in
+[`repos/foundations.md`](../repos/foundations.md) with the measurements.**
+
+🟡 **Its OneRoster / Ed-Fi / LTI 1.3 claims are VENDOR-STATED and unverified in the tree.**
+🟢 **Registered as `ACTION IJ`, not repeated as fact.**
+
+### 🔴 What this page still cannot do, after p163
+
+- 🔴 **Recommend a PERMISSIVE education ERP.** 🟢 **Searched this pass; OpenEduCat (LGPL-3.0) is
+  the closest real system and it is copyleft.** 🔵 **The gap is declared, not padded.**
+- 🟡 **`ACTION IJ` is open on OpenEduCat's rostering standards.**
+- 🟡 **The grading column now rests on two platforms read at one HEAD each.** 🔵 **Concentration
+  noted.**
+
 ## Pass 162 — 2026-10-13
 
 🔴 **One pass ago this page split its routing table on *"does the engagement GRADE?"* and sent

@@ -3,6 +3,150 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 🆕 🟢 `P163-A` — make a graded-AI pre-filter fair across writing systems *(new, p163 — Global; strongest in APAC and EMEA)*
+
+🔵 **The problem this solves:** 🟢 **`ACTION IG` found OpenOLAT's two graded-path gates passing
+valid answers in nine scripts** — 🔴 **but with `5×` less tolerance for Devanagari and `10×` less
+for astral Han than for English, and with `0` non-Latin regression tests to stop that drifting
+into refusals.** 🔵 **A gate that refuses an answer never reaches a human, so this is an ACCESS
+control, not a quality one.**
+
+🟢 **The repos and the measured facts, all at `openolat/openolat` HEAD `e4be14f0`:**
+
+| component | what it is | the measured defect |
+|---|---|---|
+| 🟢 `GibberishPreFilter.java` *(124 LOC)* | letter-ratio floor `0.45` + trigram-entropy floor `1.5` | 🔴 `Character.isLetter()` is false for `Mn`/`Mc`, so Devanagari matras and Arabic harakat are not letters. Vocalised Arabic margin **`0.102`** vs English **`0.526`** |
+| 🟢 the same, `letterRatio()` | `letters` per CODE POINT ÷ `text.length()` in CODE UNITS | 🔴 astral Han scores exactly **`0.500`**; **`5`** ideographic full stops push an 18-ideograph answer under the floor |
+| 🟢 `AiGradingTier.java` *(123 LOC)* | word count, with a CJK `chars/3` branch | 🔴 `isCJK` lists `3040–30FF`, `4E00–9FFF`, `AC00–D7AF` only. Ext A, Compatibility Ideographs and NFD Jamo fall off it. 🔴 Thai has no branch at all and is undercounted **`~14×`** |
+| 🔴 `GibberishPreFilterTest.java` | the regression net | 🔴 **`6` cases: English, German, mash, symbols, blank, short. ZERO non-Latin** |
+| 🔴 `AiGradingTierTest.java` | the regression net | 🔴 **its only CJK cases are `"好".repeat(150)` and `"字".repeat(300)`** — one repeated character, which is not language |
+
+🟢 **How to wire it, in the order that survives review:**
+
+1. 🟢 **Port the corpus first, as TESTS, not as a patch.**
+   [`compose/code/p163-script-equity-gate/`](code/p163-script-equity-gate/README.md) ships a
+   Python replication validated against **all `15` upstream oracle cases** plus a nine-script
+   corpus of content-matched answers. 🟢 **Those nine rows go straight into
+   `src/test/java/org/olat/core/commons/services/ai/essay/` as JUnit cases.** 🔵 **They PASS today
+   — which is exactly why they are contributable: a test that locks in current correct behaviour
+   is an easy merge, and it is the thing that makes the later fixes safe.**
+2. 🟢 **Fix `letterRatio()`'s denominator** — count both numerator and denominator in code
+   points (`text.codePointCount(0, text.length())`). 🟢 **One line; it moves astral Han from
+   `0.500` to `1.000` and removes the `10×` margin collapse.**
+3. 🟢 **Count combining marks as letters for the ratio's purpose** — a `Mn`/`Mc` code point is
+   part of a letter, not symbol spam. 🟢 **`Character.getType(cp)` against
+   `NON_SPACING_MARK`/`COMBINING_SPACING_MARK`.** 🟢 **This moves vocalised Arabic from `0.552` to
+   `~0.99` and Hindi from `0.591` to `~0.98`, and it does NOT weaken the control: the symbol-spam
+   case stays rejected at `0.000` because digits and punctuation are neither letters nor marks.**
+4. 🟢 **Extend `isCJK`** with `3400–4DBF` (Ext A), `F900–FAFF` (Compatibility),
+   `20000–2A6DF` (Ext B) and `1100–11FF` (Jamo).
+5. 🟢 **Give Thai, Khmer, Lao and Burmese a branch.** 🔵 **They have no inter-word spaces, so
+   `split("\\s+")` is meaningless on them. 🟢 **The `chars/3` heuristic already in the file is the
+   cheap, consistent answer; a segmenter (ICU `BreakIterator`) is the correct one.** 🟡 **Pick the
+   heuristic for parity with CJK and say so in the comment.**
+6. 🟢 **Re-run the nine-script corpus and confirm the controls still reject.**
+
+🟢 **Why it is billable and upstreamable at once:** 🟢 **Apache-2.0 with a patent grant, a `7.0 MB`
+sparse working tree, `~400` LOC of production code in scope, and a test suite whose gap is
+demonstrable in one command.** 🔵 **An engagement that contributes steps 1–4 upstream and keeps
+step 5's segmenter as client work gets goodwill and a differentiator from the same budget.**
+
+🟢 **Effort: `1.5`–`2` weeks** *(step 1 alone is `2`–`3` days and is worth shipping on its own)*.
+
+---
+
+## 🆕 🟢 `P163-B` — pin the provenance of an evaluative prompt *(new, p163 — Global; strongest in EMEA)*
+
+🔵 **The problem this solves:** 🔴 **`T156` — `Selleo/mentingo` fetches its AI judge's system
+prompt from an external prompt-management service FIRST and treats the repository's own template
+as a silent fallback, skipping the schema check on the remote path.** 🔴 **So for a high-risk
+Annex III evaluative feature, the instructions that governed a given mark are not in the artifact
+store and are not recorded with the mark.** 🔵 **And this is the DEFAULT integration shape for
+prompt-management tooling, so the pattern is reusable far beyond this repository.**
+
+🟢 **The four facts to put in front of a client, all at `242a9324`,
+`apps/api/src/ai/services/prompt.service.ts:275-293`:**
+
+| # | fact |
+|---|---|
+| 1 | 🔴 remote-first: `langfuseClient.prompt.get(id)` is tried before `this.prompts.get(id)` |
+| 2 | 🔴 the remote branch compiles `vars as Record<string,string>` and **never reaches** the `Value.Check(prompt.varsSchema, vars)` that guards the local branch |
+| 3 | 🔴 activation is by env var presence (`LANGFUSE_PUBLIC_KEY` + `LANGFUSE_SECRET_KEY`), `baseUrl` from `LANGFUSE_BASE_URL`/`LANGFUSE_HOST`, default `http://localhost:3002` |
+| 4 | 🔴 `.catch(() => undefined)` — an outage substitutes a different prompt **silently** |
+
+🟢 **The recipe, and every piece of it already exists in the repo:**
+
+1. 🟢 **Record the prompt identity ON the judgement.** 🟢 **`ai_mentor_judgements` already stores
+   `max_score_at_judgement` per criterion for exactly this reason — editing a rubric later must
+   not rewrite a past mark.** 🟢 **Add `prompt_source` (`'repo'` | `'remote'`),
+   `prompt_version` and `prompt_sha256` alongside it.** 🔵 **The precedent is in the schema; this
+   is applying the platform's own principle to the prompt.**
+2. 🟢 **Make the resolution order a CONFIGURED decision, not an accident of env vars.** 🟢 **A
+   `PROMPT_SOURCE` setting with three values — `repo-only`, `repo-preferred`, `remote-preferred` —
+   defaulting to `repo-only` for evaluative capabilities.**
+3. 🟢 **Apply `Value.Check` on BOTH branches.** 🟢 **One moved line; it closes fact 2 outright.**
+4. 🟢 **Fail CLOSED on an evaluative capability.** 🔴 **A silent fallback is acceptable for a
+   welcome message and not for a mark.** 🟢 **For `judgePrompt`, a remote-fetch failure under
+   `remote-preferred` should refuse to grade rather than grade under different instructions.**
+5. 🟢 **Emit the Annex IV artifact.** 🟢 **A per-deployment report: every prompt id, its source,
+   its hash, and the count of judgements rendered under each.** 🔵 **This is the deliverable a
+   regulator or an appeal actually asks for, and nothing else in the stack produces it.**
+
+🟢 **Why it is the strongest EMEA deliverable on this shelf:** 🟢 **two of the three platforms in
+the Annex III evaluative tier are EU/EEA-built, and the one with the MOST permissive licence is
+the one with this gap.** 🔵 **The engagement is small, defensible, and jurisdiction-neutral — an
+auditability control sells into the North American *"regulatory vacuum"* on the same evidence.**
+
+🟢 **Effort: `3`–`4` weeks**, of which steps 2–4 are a few days and step 5 is most of the work.
+
+---
+
+## 🆕 🟢 `P163-C` — an auditable off switch for an AI grader *(new, p163 — Global; strongest in LATAM and APAC)*
+
+🔵 **The problem this solves:** 🔴 **`T157` — `Selleo/mentingo` has NO off switch for its AI
+judge.** 🔴 **`AI_RUNTIME_SOURCES` is `{CORE, LUMA}` with no `OFF` member, and
+`resolveSource()`'s `enabled: false` branch returns `CORE` — it changes the PROVIDER, it does not
+stop the grading.** 🟡 **The only way to stop it is to leave a rubric unconfigured, which throws
+`aiJudgeConfigurationMissing`** — 🔵 **an off switch by omission, not a control anyone can find,
+document or audit.**
+
+🟢 **The contrast that makes the case:** 🟢 **OpenOLAT's `essay-grading` flag SHIPS `false`**
+*(`T145`)*. 🔵 **Same regulatory tier, same evaluative function, opposite default.**
+
+🟢 **The recipe:**
+
+1. 🟢 **Add `OFF` to the source enum.**
+   `AI_RUNTIME_SOURCES = {OFF:"off", CORE:"core", LUMA:"luma"}`. 🟢 **Then
+   `resolveSource()` returns `OFF` when `capabilityStatus?.enabled === false`,** and
+   `judgeMentor()` throws a typed `AiCapabilityDisabledException` instead of calling
+   `judgeCore()`. 🔵 **The three-line change is the whole mechanism; everything below is what makes
+   it auditable.**
+2. 🟢 **Default evaluative capabilities to OFF.** 🟢 **`AiMentorJudge` ships disabled; an
+   administrator turns it on deliberately, and that act is what the audit trail records.**
+3. 🟢 **Make the switch per-tenant.** 🟢 **All `7` judge tables already carry `tenant_id` with an
+   RLS default and an FK to `tenants`** *(`T145`)* — 🟢 **so a per-tenant flag needs no new
+   isolation model, only a row.** 🔵 **This is what a LATAM or APAC rollout actually needs: one
+   institution's policy committee can disable AI grading without affecting another's.**
+4. 🟢 **Log every transition.** 🟢 **Who enabled or disabled grading, for which tenant, when, and
+   under which `prompt_sha256`** *(from `P163-B`, which is why the two compose)*.
+5. 🟢 **Surface it in the learner-facing path.** 🟢 **When the judge is `OFF`, the lesson completes
+   through the human-marking route rather than erroring** — 🔵 **otherwise the switch is a kill
+   switch nobody dares use, which is the same as not having one.**
+
+🟢 **Why it lands in LATAM and APAC first:** 🔴 **LATAM has roughly three institutions in four
+using AI with NO published policy** *(UNESCO IESALC `26%`, DEC `30%` — corroborated this pass)*.
+🟢 **An institution in that position needs an evaluative feature it can switch off while the
+policy is written, and `T157` says the MIT platform cannot do it today.** 🟢 **In APAC, Singapore's
+exams are proctored with AI prohibited while `75%` of its teachers use AI in their work — a
+boundary that is only enforceable if the grading feature has a real, documented off state.**
+
+🟢 **Effort: `2`–`3` weeks.** 🟢 **Composes directly with `P162-D` (multi-tenant AI assessment on
+MIT) and `P163-B` (prompt provenance): together they are a single coherent Annex III readiness
+engagement on a permissive platform** — 🔵 **`P162-D` builds the feature, `P163-C` lets the client
+turn it off, `P163-B` lets them prove what it did.**
+
+---
+
 ## 🆕 🟢 `P162-B` — close the injection gap on the path that GRADES *(new, p162 — Global; strongest in EMEA and APAC)*
 
 🔵 **The problem this solves:** 🔴 **`T144` — OpenOLAT hardens the AUTHOR's course content in code

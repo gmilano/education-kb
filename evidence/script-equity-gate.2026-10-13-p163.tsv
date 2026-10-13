@@ -1,0 +1,15 @@
+tag	script	label	utf16_len	nonws_units	letter_ratio	ratio_verdict	entropy	entropy_verdict	gibberish	gib_reason	words	cjk_ratio	branch	tier
+en	Latin	English	351	296	0.976	PASS	7.790	PASS	passed	-	56	0.000	whitespace-split	SHORT
+de	Latin	German	405	348	0.977	PASS	8.015	PASS	passed	-	58	0.000	whitespace-split	SHORT
+es	Latin	Spanish	371	304	0.977	PASS	7.901	PASS	passed	-	68	0.000	whitespace-split	SHORT
+zh	Han	Chinese (Simplified)	93	93	0.935	PASS	6.464	PASS	passed	-	31	0.935	cjk-charcount/3	SHORT
+ja	Han+Kana	Japanese	118	118	0.941	PASS	6.755	PASS	passed	-	39	0.941	cjk-charcount/3	SHORT
+ko	Hangul	Korean	136	107	0.953	PASS	6.676	PASS	passed	-	35	0.953	cjk-charcount/3	SHORT
+ar	Arabic	Arabic (unvocalised)	290	245	0.980	PASS	7.533	PASS	passed	-	46	0.000	whitespace-split	SHORT
+ar-voc	Arabic	Arabic (vocalised, as in a primary reader)	340	308	0.552	PASS	7.714	PASS	passed	-	33	0.000	whitespace-split	SHORT
+hi	Devanagari	Hindi	285	235	0.591	PASS	7.614	PASS	passed	-	51	0.000	whitespace-split	SHORT
+th	Thai	Thai	203	200	0.815	PASS	7.440	PASS	passed	-	4	0.000	whitespace-split	SHORT
+CTRL-mash	Latin	CONTROL: keyboard mash (must be REJECTED)	49	49	1.000	PASS	0.000	REJECT	REJECTED	entropy	1	0.000	whitespace-split	SHORT
+CTRL-symbols	n/a	CONTROL: symbol spam (must be REJECTED)	40	40	0.000	REJECT	-	-	REJECTED	letter-ratio	1	0.000	whitespace-split	SHORT
+CTRL-extA	Han ExtA	CONTROL: Han outside the listed ranges (Ext A + Compatibility)	29	29	1.000	PASS	4.755	PASS	passed	-	9	0.448	cjk-charcount/3	SHORT
+CTRL-extB	Han ExtB	CONTROL: astral Han (CJK Extension B, surrogate pairs)	36	36	0.500	PASS	5.087	PASS	passed	-	1	0.000	whitespace-split	SHORT

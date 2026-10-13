@@ -1,0 +1,10 @@
+probe	target	call	answer	consequence
+1	gmilano/education-kb	add_repo access=push	status=appended, workspace granted	control: an account repo DOES attach
+2	gmilano/education-kb	GET api.github.com/repos/{r}	200, full metadata incl. stargazers_count	control: metadata available once attached
+3	openolat/OpenOLAT	add_repo access=read	status=read_available — "Nothing was attached to the session"	anonymous git read only; no session attachment
+4	openolat/OpenOLAT	add_repo access=push	REFUSED — "you need push access to openolat/openolat"	the remedy the 403 names is itself closed
+5	openolat/openolat	GET api.github.com/repos/{r}	403 "GitHub access to this repository is not enabled for this session"	no star count
+6	Selleo/mentingo	GET api.github.com/repos/{r}	403 (same body)	no star count
+7	HKUDS/DeepTutor	GET api.github.com/repos/{r}	403 (same body)	no star count
+8	moodle/moodle	GET api.github.com/repos/{r}	403 (same body)	no star count
+verdict	ACTION IF	-	REFUTED, falsifier FIRED on both limbs	the twelve agents/top.md rows are third-party; the star column is PERMANENTLY unrefreshable on this channel

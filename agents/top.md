@@ -3,6 +3,98 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 163 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three judged. `ACTION IG` and `ACTION IH` DISCHARGED with
+their falsifiers SILENT.** 🔴 **`ACTION IF` is REFUTED, and its falsifier fired on BOTH limbs —
+which closes a question this page has carried as a to-do for six passes and converts it into a
+permanent, labelled limitation.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION IF`** — does `add_repo` attach a THIRD-PARTY public repository and return its metadata? | 🔴 **REFUTED. Falsifier FIRED on both limbs. The `★` column is NOT refreshable — not now, not next pass** |
+| 🟢 **`ACTION IG`** — are OpenOLAT's graded-path gates equitable across non-Latin scripts? | 🟢 **DISCHARGED, falsifier SILENT: `0 of 10` valid answers in nine scripts rejected or down-tiered.** 🔴 **But the MARGINS differ by up to `10×`, and that is measured** |
+| 🟢 **`ACTION IH`** — does `Selleo/mentingo` harden the learner turn, and is there an off switch for its judge? | 🟢 **DISCHARGED, falsifier SILENT. It does NOT harden in code, and there is NO off switch** |
+
+### 🆕 🔴 `ACTION IF` — REFUTED. `T148`'s optimism was an over-read, and the `★` column is closed
+
+[`evidence/attach-third-party-probe.2026-10-13-p163.tsv`](../evidence/attach-third-party-probe.2026-10-13-p163.tsv)
+
+🔴 **p162's `T148` concluded that *"per-repository GitHub metadata returns `200` once a repo is
+attached, so the `★` column is refreshable row by row"*.** 🟢 **The first half is true and is
+re-confirmed here as a control. The second half does not follow, because the twelve rows on this
+shelf are all THIRD-PARTY repositories and a third-party public repository cannot be attached.**
+
+| probe | target | answer |
+|---|---|---|
+| 🟢 **control** | `gmilano/education-kb` *(this account)* | 🟢 `add_repo` → `status=appended`; `GET /repos/{r}` → **`200`**, full metadata including `stargazers_count` |
+| 🔴 **limb 1** | `openolat/OpenOLAT` | 🔴 `add_repo access=read` → `status=read_available`, and in its own words ***"Nothing was attached to the session"*** — anonymous git read only |
+| 🔴 **limb 2** | `openolat/OpenOLAT` | 🔴 `add_repo access=push` → **REFUSED: *"you need push access to openolat/openolat"***  |
+| 🔴 **consequence** | `openolat`, `Selleo/mentingo`, `HKUDS/DeepTutor`, `moodle/moodle` | 🔴 **`GET /repos/{r}` → `403` on all four, identical body** |
+
+🔵 **The `403` body names a remedy — *"call `add_repo` again with `access:"push"` to attach the
+repository with credentials"* — and limb 2 was run precisely because judging a falsifier on an
+untried path is the error this shelf keeps correcting.** 🔴 **The named remedy is itself closed:
+push access to a repository this account does not own is refused, as it should be.**
+
+🆕 **`T149`** — 🔴 **per-repository GitHub metadata is recoverable only for repositories this
+account can PUSH to.** 🔴 **That is `0` of the twelve rows below.** 🟢 **`T148` is AMENDED, not
+withdrawn: its control holds, its reach does not.**
+
+🔵 **What this changes in practice:** 🟢 **the `★` column stops being a stale field awaiting a
+refresh and becomes a *dated historical reading*, which is a different and more honest kind of
+column.** 🟢 **Licence, content and recency all remain measurable on the clone channel — and
+licence is the field that decides an engagement, not the star count.**
+
+### 🆕 🔴 `T150` — and the stale `★` is now EVIDENCED as unresolvable, not merely declared
+
+🔴 **This pass's discovery queries returned THREE mutually incompatible star counts for the
+single most-starred row on this shelf.**
+
+| source | `HKUDS/DeepTutor` ★ |
+|---|---|
+| 🟢 this shelf, read p157 | **41 210** |
+| 🔴 an aggregator, this pass | **34.7 K** |
+| 🔴 a second secondary source, this pass | **"over 17,000 (April 2026)"** |
+
+🆕 **`T150`:** 🔴 **the secondary star channel does not merely lag — it DISAGREES with itself by
+more than `2×`.** 🟢 **So substituting a search summary for the API would have been worse than
+carrying a dated figure honestly.** 🔵 **Taken with `ACTION IF`, the right move is the one taken:
+label the column, date it, and stop promising a refresh.**
+
+### 🟢 The agent shelf — `0` new rows, FIFTH consecutive pass, and the `★` column RELABELLED
+
+🔴 **`T110` corroborated a SEVENTH time: four global discovery queries returned AI CURRICULUM
+again** — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, Karpathy's *Zero to Hero* — 🔴 **none of them an
+education-domain agent.**
+
+🟡 **The twelve rows of the p157 shelf stand unchanged on licence and content.** 🆕 **The column
+heading changes, and this is the only edit to the table this pass:**
+
+| was | is now |
+|---|---|
+| 🟡 `★ (p157, stale)` | 🟢 **`★ (read p157-10-12; NOT refreshable — see ACTION IF)`** |
+
+🔵 **Two rows carry a p162/p163 content note rather than a new number:**
+
+| agent | ★ *(read p157-10-12; NOT refreshable)* | licence *(body-read)* | note added this pass |
+|---|---|---|---|
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **93** | 🟢 **MIT** (`LICENSE`, 1 062 B) | 🆕 🔴 **`ACTION IH`: its AI judge has NO off switch, and the learner turn reaches it untransformed.** 🔴 **`enabled: false` routes the judge to a different provider; it does not stop it.** 🟡 **Adopting it is an Annex III decision with no default-off** |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41 210** | 🟢 **Apache-2.0** (`LICENSE`, 11 408 B) | 🟡 **`T150`: two secondary sources this pass give `34.7 K` and `"over 17,000"`. The `41 210` reading is p157's and is kept BECAUSE it was measured, not because it is current** |
+
+### 🔴 What this page still cannot do, after p163
+
+- 🔴 **Refresh a single `★`. Settled this pass rather than carried: `ACTION IF` is refuted and
+  the channel is closed.** 🟢 **Recorded as CLOSED, not as pending.**
+- 🔴 **Discover a new education-domain agent. `T110`'s seventh corroboration; the shelf has not
+  grown in five passes.** 🟡 **`search/repositories` stays `403`, so ranking and new-entrant
+  discovery remain shut.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** — unchanged for five passes.
+- 🟡 **Three of the twelve rows have not had a licence body re-probed since p157.** 🔵 **Deliberate:
+  licence bodies are stable and the clone channel is the expensive one; recorded so the age is
+  visible.**
+
 ## Pass 162 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three DISCHARGED, all three falsifiers SILENT — and the

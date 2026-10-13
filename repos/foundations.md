@@ -3,6 +3,74 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 163 — 2026-10-13
+
+🟢 **One new platform row, licence read from the body at source, with TWO grant defects measured
+rather than inferred.** 🟢 **And p162's cheap-census instrument (`P162-A`) corroborated a second
+time on a second repository, at a cost that makes the clone channel the default rather than the
+fallback.**
+[`evidence/openeducat-grant.2026-10-13-p163.tsv`](../evidence/openeducat-grant.2026-10-13-p163.tsv)
+
+### 🆕 🟡 `openeducat/openeducat_erp` — the Odoo-based education ERP, LGPL-3.0, and its grant is INCOMPLETE BY ITS OWN WORDS
+
+🔵 **Why it was probed:** 🟢 **the vertical-platform query returned a single vendor's marketing
+pages and one claim worth testing — that OpenEduCat is an LGPLv3 Python/Odoo alternative to
+Moodle with OneRoster, Ed-Fi and LTI 1.3.** 🔴 **A vendor page is not a grant, so the grant was
+read from the tree.**
+
+| field | measurement |
+|---|---|
+| 🟢 repo | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) |
+| 🟢 head | `1c95cefebc176a011e3c16269c5a8691fd1ac9cb` |
+| 🟡 **default branch** | 🟡 **`19.0`** — *not* `main` or `master`; it tracks the Odoo major version |
+| 🟢 last commit | `2026-09-07` |
+| 🟢 tracked paths | `1 345` |
+| 🟢 licence path | `LICENSE` — 🟢 **the ONLY licence-bearing path in the whole tree** |
+| 🟢 licence body | **LGPL-3.0**, `8 241 B`, `178` lines, blob `ef163fea`, sha256 `528f8403…47a9` |
+| 🟢 name line | *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* |
+
+🆕 🔴 **Defect 1 — the body promises the GPL and does not contain it.** 🟢 **Its own fourth line
+says the LGPL *"is a set of additional permissions on top of the GPL"* and that *"the text of the
+GPL is included at the bottom as well"*.** 🔴 **At `8 241 B` it cannot be: GPL-3.0 alone is
+~`35 kB`, and the file ends at the LGPL's proxy clause.** 🔵 **LGPL-3.0 is not a standalone
+licence by its own construction, so the grant is incomplete on the terms it sets itself.**
+
+🆕 🔴 **Defect 2 — the file it points at is ABSENT.** 🟢 **Line 2 reads *"For copyright
+information, please see the COPYRIGHT file"*.** 🔴 **`0` of `1 345` tracked paths match
+`/copyright/i`.** 🔵 **This is `P49`'s pattern again — a file named `LICENSE` is not evidence of a
+complete grant — now with a dangling reference as well as a short body.**
+
+🟢 **The engagement consequence, stated plainly:** 🔴 **LGPL-3.0 is copyleft, so OpenEduCat is
+outside Globant's permissive lane whatever the body says.** 🟢 **It earns a row because it is a
+REAL, maintained, self-hostable education ERP with rostering standards — the integration-target
+class, not the fork class** — 🔵 **and because the two defects are exactly what a client's licence
+review would raise in week one, so finding them now is cheaper than finding them then.**
+
+### 🟢 `P162-A` corroborated a second time — the clone channel is now the DEFAULT instrument
+
+🟢 **p162 measured `--depth=1 --filter=blob:none --no-checkout` at `3.1 MB` for Moodle's
+`67 589` paths.** 🟢 **Two independent repeats this pass:**
+
+| repo | `.git` after blobless shallow clone | tracked paths | sparse working tree |
+|---|---|---|---|
+| 🟢 `openolat/openolat` | **`1.3 MB`** | `25 823` | **`7.0 MB`** for the whole AI subsystem |
+| 🟢 `Selleo/mentingo` | **`408 KB`** | `4 753` | **`4.2 MB`** for `apps/api/src/ai` + `packages/prompts` |
+| 🟢 `openeducat/openeducat_erp` | *(blobless, no checkout)* | `1 345` | 🟢 **licence read by `cat-file` on a single blob — no checkout at all** |
+
+🔵 **The `cat-file` path is the cheapest grant read this shelf has: resolve the blob id from
+`ls-tree`, fetch exactly that object, read the body, hash it.** 🟢 **No working tree, no checkout,
+and the sha256 is recorded so the next pass can prove identity without re-reading.**
+
+### 🔴 What this page still cannot do, after p163
+
+- 🔴 **Rank anything. `search/repositories` stays `403` and `ACTION IF` establishes that attaching
+  repositories does not reopen it** *(`T149`)*.
+- 🟡 **Three passes of OpenOLAT findings and now four rest on ONE tree** (`e4be14f0`, unchanged
+  since p160, re-confirmed as HEAD this pass with a `2026-10-12` last commit). 🔵 **Carried
+  forward as a concentration risk, not a defect.**
+- 🔴 **OpenEduCat's rostering claims (OneRoster, Ed-Fi, LTI 1.3) are VENDOR-STATED and were not
+  verified in the tree this pass.** 🟢 **Registered as `ACTION IJ` rather than repeated as fact.**
+
 ## Pass 162 — 2026-10-13
 
 🟢 **`ACTION ID` ran on this page's two most load-bearing platform rows and returned the result

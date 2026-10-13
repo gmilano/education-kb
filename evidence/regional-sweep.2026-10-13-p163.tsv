@@ -1,0 +1,22 @@
+region	query_class	fact	figure	source_class	host_reachable	status	new_this_pass
+APAC	TALIS-2024 (vocabulary CHANGED from this shelf's standing queries)	lower-secondary teachers who report having used AI in their work, Singapore	75%	OECD country note (primary), via search summary	NO — oecd.org CONNECT 403	search-summary, NOT promoted	YES — first APAC education adoption figure in 9 passes
+APAC	TALIS-2024	same measure, Japan	17%	OECD country note (primary), via search summary	NO	search-summary	YES
+APAC	TALIS-2024	OECD average for the same measure	36%	OECD country notes	NO	search-summary	YES
+APAC	TALIS-2024 — DISAGREEMENT	the same OECD average, per Education International's summary	~41%	EI summary	NO — ei-ie.org CONNECT 403	RECORDED AS A CONFLICT, 5 points	YES
+APAC	policy	Singapore MOE: P4-P6 pupils use AI only in school tools designed for education, under teacher supervision; national exams remain proctored with AI prohibited	n/a	moe.gov.sg parliamentary reply 2026-05-06 (primary)	NO — CONNECT 403	search-summary	YES
+APAC	policy	South Korea: AI textbook adoption below 30% by March; National Assembly later removed their official status	<30%	secondary (Analytics Insight)	not probed	search-summary, weak source	YES
+APAC	REFUSED	"57% of organisations in Asia have incorporated AI" — ENTERPRISE, not education	57%	Diligent Institute	n/a	REFUSED under T143's gate, not re-regionalised	gate honoured
+EMEA	TALIS-2024	teachers using AI in their work, UAE	~75%	OECD highlights	NO	search-summary	YES
+EMEA	TALIS-2024	teachers using AI in their work, France	<20%	OECD highlights	NO	search-summary	YES
+EMEA	policy/funding	UK AI Adoption Summit committed £200m+ to AI adoption; model is government funding with Big Tech as delivery partners	£200m+	QS/HolonIQ Europe EdTech 200 newsletter	NO — newsletters.qs.com CONNECT 403	search-summary	YES — breaks p162's "0 new EMEA facts"
+EMEA	CODE channel	two EU/EEA-built platforms inside Annex III both keep the verdict in server code: OpenOLAT (CH, Apache-2.0) and mentingo (PL, MIT)	n/a	clone-verified this pass	YES — git lane	VERIFIED	carried + deepened
+LATAM	CORROBORATION PAIR	universities with a published AI policy: UNESCO IESALC 26% (p162) vs Digital Education Council LATAM Survey 2026 30%	26% / 30%	UNESCO IESALC + DEC	NO — digitaleducationcouncil.com CONNECT 403	search-summary, but TWO independent instruments agreeing within 4 points	YES — first LATAM corroboration pair on this shelf
+LATAM	adoption	DEC LATAM Survey 2026: 92% of students and 79% of faculty actively engaging with AI, across 29 institutions	92% / 79% / n=29	DEC	NO	search-summary	YES
+LATAM	regulation	no unified regional framework; Chile National AI Policy since 2021 with a law in discussion; Brazil and Colombia have national strategies but no education-sector rule; Mexico SEP/ANUIES recommendations are non-binding	n/a	multiple	NO	search-summary	carried from p162, re-corroborated
+North America	adoption	students across 16 countries already using AI	86%	secondary roundup (azumo)	not probed	search-summary	YES (figure differs from p162's channel)
+North America	market	North America AI-in-education: $951M (2024) -> $2,303.2M (2029), CAGR 15.9%	$951M / $2303.2M / 15.9%	MarketsandMarkets	not probed	search-summary	YES
+North America	regulation	"relative regulatory vacuum"; no FDA-equivalent for edtech; state-level piecemeal requirements named for Colorado and Texas	n/a	secondary commentary	not probed	search-summary	YES (states now NAMED)
+North America	VERIFIED	nothing. FOURTH consecutive pass with no North America fact verified at source	-	-	-	DECLARED GAP	gap, stated
+Global	market incoherence	AI-in-education 2025 base year: $6.4B (IMARC) vs $8.3B (second vendor) — a $1.9B spread in the BASE YEAR; 2026 projected $10.6B (TBRC)	$1.9B spread	three vendors	not probed	T122 corroborated a SEVENTH time, spread WIDENED from p162's ~$1B	widened
+Global	discovery	4 global agent-discovery queries returned AI CURRICULUM again, not education-domain agents: microsoft/ai-agents-for-beginners, pguso/agents-from-scratch, rohitg00/ai-engineering-from-scratch, Karpathy Zero-to-Hero	0 agents	search	n/a	T110 corroborated a SEVENTH time	no growth, 5th pass
+Global	star-count disagreement	HKUDS/DeepTutor reported at 34.7K and at "over 17,000 (April 2026)" by two aggregators; this shelf carries 41,210 from p157	3 incompatible figures	aggregators	n/a	the stale-star label is now EVIDENCED, not just declared	YES — and ACTION IF shows it cannot be resolved

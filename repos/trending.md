@@ -3,6 +3,70 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 2026-10-13 — pass 163 — 🔴 GitHub trending stays shut, and this pass proved it cannot be reopened by attaching repositories
+
+🔴 **GitHub trending unreadable for the SEVENTH pass running. `search/repositories` answers
+`403`.** 🆕 🟢 **And `ACTION IF` closes the standing hope: a third-party public repository cannot
+be attached to this session at all, so no amount of attaching reopens ranking or new-entrant
+discovery** *(`T149`)*.
+🟢 **Recency measured on the clone channel again — `git ls-remote --symref` for the true default
+branch, then `git log -1` on a blobless shallow clone.**
+[`evidence/openeducat-grant.2026-10-13-p163.tsv`](../evidence/openeducat-grant.2026-10-13-p163.tsv)
+[`evidence/attach-third-party-probe.2026-10-13-p163.tsv`](../evidence/attach-third-party-probe.2026-10-13-p163.tsv)
+
+| repo | licence *(body-read)* | default branch | head | last commit | stale | tracked files | verdict |
+|---|---|---|---|---|---|---|---|
+| 🟢 [`openolat/openolat`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | `master` | `e4be14f` | 🟢 **`2026-10-12`** | 🟢 **1 day** | `25 823` | 🟢 **ACTIVE.** 🟡 **Same tree as p160–p162 — a fourth pass on identical bytes** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | `main` | `242a932` | 🟢 **`2026-10-10`** | 🟢 **3 days** | `4 753` | 🟢 **ACTIVE** |
+| 🆕 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** *(`8 241 B`, INCOMPLETE — see `repos/foundations.md`)* | 🟡 **`19.0`** | `1c95cef` | 🟡 **`2026-09-07`** | 🟡 **36 days** | `1 345` | 🟡 **MAINTAINED, slower cadence.** 🔴 **Grant defective on its own terms** |
+
+🆕 🟡 **A default-branch note worth carrying:** 🟡 **OpenEduCat's default branch is `19.0`, named
+for the Odoo major version it targets.** 🔵 **Any instrument that assumes `main`/`master` reads
+the wrong tree on this row — which is why `ls-remote --symref` is in the recipe and not an
+assumption.**
+
+### 🆕 🔴 `T158` — the proxy's refusal is NAMEABLE per host, and `WebFetch`'s error surface is misleading
+
+🔵 **This belongs on the trending page because it decides which sources this shelf can ever
+verify.**
+[`evidence/proxy-refusal.2026-10-13-p163.tsv`](../evidence/proxy-refusal.2026-10-13-p163.tsv)
+
+🔴 **`WebFetch` reported `getaddrinfo ENOTFOUND` for two hosts this pass.** 🔴 **That error says
+DNS. It is not DNS.** 🟢 **`curl -v` through the same proxy shows the tunnel being opened and then
+refused:**
+
+```
+> CONNECT www.moe.gov.sg:443 HTTP/1.1
+< HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+```
+
+🆕 🟢 **And the proxy keeps a ledger. `$HTTPS_PROXY/__agentproxy/status` returns
+`recentRelayFailures`, each entry naming the host, an ISO timestamp, and
+`kind: "connect_rejected"` with `detail: "gateway answered 403 to CONNECT (policy denial or
+upstream failure)"`.**
+
+| host | surfaced error | real cause |
+|---|---|---|
+| `www.oecd.org` | `000` | 🔴 CONNECT `403` — policy |
+| `www.moe.gov.sg` | `000` | 🔴 CONNECT `403` — policy |
+| `www.digitaleducationcouncil.com` | 🔴 `getaddrinfo ENOTFOUND` | 🔴 CONNECT `403` — policy |
+| `newsletters.qs.com` | 🔴 `getaddrinfo ENOTFOUND` | 🔴 CONNECT `403` — policy |
+| `github.com`, `api.github.com` | `403` *(HTTP, tunnel OPENED)* | 🟢 allowlisted host; the `403` is per-repository authorisation |
+
+🆕 **`T158`:** 🟢 **`T134` keeps its label for a seventh pass and now has a verifiable, per-host,
+timestamped cause — and a way for any future pass to check it in one call instead of inferring
+it from a tool's error string.** 🔵 **The lesson generalises: when two tools disagree about why a
+host is unreachable, ask the proxy, not the tool.**
+
+### 🔴 What this channel did NOT produce
+
+- 🔴 **`0` trending repositories, seventh pass.** 🟢 **Now recorded as structurally closed rather
+  than pending** *(`T149`)*.
+- 🔴 **`0` of five regional source hosts reachable** — `oecd.org`, `ei-ie.org`, `moe.gov.sg`,
+  `digitaleducationcouncil.com`, `newsletters.qs.com` all refused at the proxy. 🟢 **Every regional
+  figure this pass is therefore labelled *search-summary* and none was promoted.**
+
 ## 2026-10-13 — pass 162 — 🟢 the recency instrument got `240×` cheaper and one platform committed three days ago
 
 🔴 **GitHub trending was unreadable for the sixth pass running — `search/repositories` answers

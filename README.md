@@ -3,6 +3,120 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 163 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three judged: two DISCHARGED with silent falsifiers, and
+one REFUTED with its falsifier firing on both limbs.**
+🟢 **Three long-standing droughts broke — APAC's eight-pass adoption gap, EMEA's news channel,
+and LATAM's single-survey dependence — and all three broke because the INSTRUMENT changed, not
+because the effort increased.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION IF`** — does `add_repo` attach a third-party public repo and return its metadata? | 🔴 **REFUTED, falsifier FIRED on both limbs. The `★` column is closed, not pending** |
+| 🟢 **`ACTION IG`** — are OpenOLAT's graded-path gates equitable across non-Latin scripts? | 🟢 **DISCHARGED, falsifier SILENT: `0 of 10` valid answers in nine scripts rejected.** 🔴 **The MARGINS differ by up to `10×`** |
+| 🟢 **`ACTION IH`** — does mentingo harden the learner turn, and can its judge be switched off? | 🟢 **DISCHARGED, falsifier SILENT. No code hardening, and NO off switch** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T149` — the `★` column is CLOSED, not slow.** 🟢 **A third-party public repository cannot
+  be attached (`status=read_available`, *"Nothing was attached"*), and the `403` body's own named
+  remedy — `access:"push"` — is refused. `GET /repos/{r}` is `403` for all four shelf
+  repositories and `200` for this account's.** 🟢 **`T148` AMENDED: per-repo metadata is
+  recoverable only where this account can push, which is `0` of twelve rows.**
+- 🆕 🔴 **`T150` — and the substitute channel is worse than the dated figure.** 🔴 **Three
+  incompatible star counts for `HKUDS/DeepTutor` in one pass: `41 210` (measured, p157),
+  `34.7 K`, *"over 17,000"* — a `>2×` spread.** 🟢 **So the column is relabelled and frozen.**
+- 🆕 🔴 **`T151` — a quality gate can be script-NEUTRAL in verdict and script-BIASED in margin.**
+  🟢 **Nine scripts, content-matched answers, `0` rejections** — 🔴 **but vocalised Arabic clears
+  the `0.45` letter-ratio floor by `0.102` and astral Han by `0.050`, against English's `0.526`.**
+- 🆕 🟢 **`T152` — the breaking density is MEASURED.** 🟢 **One combining mark per letter never
+  rejects (floor `0.495`); two always do (`0.398`).** 🔵 **Shadda-plus-vowel is two marks on one
+  letter in ordinary Arabic orthography.** 🟢 **And `5` ideographic full stops reject an
+  eighteen-ideograph astral-Han answer.**
+- 🆕 🔴 **`T153` — `countWords` has no branch for the scripts that most need one.** 🔴 **Thai is
+  undercounted `~14×` (a `20 399`-character Thai answer is still `MEDIUM` where a `7 039`-character
+  English one is `LONG`), and CJK Ext A, Compatibility Ideographs and NFD Jamo all fall off the
+  CJK branch.** 🟢 **The failure direction is PERMISSIVE — a cost and truncation exposure, not an
+  equity rejection — and it is silent, which is the part worth fixing.**
+- 🆕 🔴 **`T154` — nothing guards any of that.** 🔴 **`GibberishPreFilterTest` has `6` cases, all
+  Latin; `AiGradingTierTest`'s only CJK inputs are one repeated character.** 🟢 **Which is what
+  makes `P163-A` a TEST contribution before it is a code one.**
+- 🆕 🔴 **`T155` — the inverted-incentive asymmetry generalises to a SECOND platform.**
+  🔴 **mentingo has `0` occurrences of `harden`/`sanitiz` in `94` files; the learner's whole
+  message history is concatenated into a bare `<student_submission>` fence.** 🟡 **All `7`
+  `untrusted` mentions sit on the AUTHOR's configuration JSON.** 🟢 **Said fairly and it cuts both
+  ways: mentingo's graded-path PROSE guard is much stronger than OpenOLAT's one sentence, so the
+  ordering is *mentingo better in prose, OpenOLAT better in code, neither hardening the
+  adversarial input*.**
+- 🆕 🔴 **`T156` — the AI Act oversight artifact is not in version control.** 🔴 **mentingo fetches
+  its judge's system prompt from Langfuse FIRST and falls back to the repository template
+  silently, skipping the schema check the local branch enforces; activation is by env-var
+  presence and `.catch(() => undefined)` hides an outage.** 🔵 **The largest finding of the pass,
+  and nobody registered it.** 🟢 **`P163-B`.**
+- 🆕 🔴 **`T157` — mentingo's AI judge has NO off switch.** 🟢 **`AI_RUNTIME_SOURCES` is
+  `{CORE, LUMA}` with no `OFF`; `resolveSource()`'s `enabled:false` branch returns `CORE`.**
+  🟡 **The only stop is leaving a rubric unconfigured.** 🟢 **Contrast: OpenOLAT's grading flag
+  ships `false`.** 🟢 **`P163-C`.**
+- 🆕 🟢 **`T158` — the proxy's refusal is NAMEABLE per host.** 🔴 **`WebFetch` says
+  `getaddrinfo ENOTFOUND`; the truth is `CONNECT … 403`, and
+  `$HTTPS_PROXY/__agentproxy/status` returns a `recentRelayFailures` ledger with host, timestamp
+  and cause.** 🟢 **`T134` keeps its label for a seventh pass and finally has a checkable cause.**
+- 🆕 🟡 **One new verticals row, read at source: `openeducat/openeducat_erp`** — 🟡 **LGPL-3.0
+  (`8 241 B`, blob `ef163fea`), `14` in-tree ERP modules, default branch `19.0`.** 🔴 **Its grant is
+  incomplete on its own terms: the body promises the GPL text *"at the bottom as well"* and cannot
+  contain it, and the `COPYRIGHT` file it points to is absent from all `1 345` paths.**
+
+### 🟢 Corrections to earlier passes, made explicitly
+
+- 🔴 **p162's `T148` over-read its own result.** 🟢 **It established that an ATTACHED repository
+  returns `200` and inferred the `★` column was refreshable. The twelve rows are all third-party
+  and cannot be attached.** 🟢 **The control holds; the reach does not. `T149`.**
+- 🟡 **`T134`'s cause was restated once more.** 🟢 **p162 corrected *"DNS"* to *"proxy policy"*;
+  p163 adds the per-host, timestamped ledger that proves it and the note that one tool's error
+  string actively misleads. `T158`.**
+- 🟢 **No figure was promoted from *search-summary* this pass, and none was quietly upgraded.**
+  🔵 **The source class improved — OECD country notes and a ministry reply instead of vendor blogs
+  — and the label stayed, because the discipline is about verification rather than prestige.**
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **APAC** | 🆕 🟢 **EIGHT-PASS DROUGHT BROKEN with a primary instrument: OECD TALIS 2024 — Singapore `75%`, Japan `17%`, OECD average `36%` teachers using AI in their work** · 🔵 **a `58`-point intra-region spread, so "APAC readiness" is not a planning unit** · 🆕 🟡 **Singapore MOE: P4–P6 only in school-designed tools, exams proctored and AI-prohibited; South Korea's AI textbooks below `30%` and stripped of official status** · 🟢 **`T143`'s gate honoured again — the `57%` enterprise figure REFUSED** · 🟢 **`P163-A` lands here too** |
+| **LATAM** | 🆕 🟢 **FIRST corroboration pair on this shelf: UNESCO IESALC `26%` and DEC LATAM 2026 `30%` for published AI policy — two collectors, `7×` sample-size difference, `4` points apart** · 🟢 **DEC also gives `92%` students / `79%` faculty across `29` institutions** · 🆕 🟢 **and the administrative platform the `39`-point governance gap needs now has a row** · 🟢 **`P163-C`** |
+| **EMEA** | 🆕 🟢 **p162's `0`-fact channel REOPENED by changing the query vocabulary: UAE `~75%`, France `<20%` (TALIS 2024), UK AI Adoption Summit `£200m+`** · 🆕 🔴 **and the deepest finding is again from the CODE channel — `T156` in a Poland-built MIT platform inside Annex III** · 🟢 **`P163-B`** |
+| **North America** | 🔴 **FOURTH consecutive pass with no fact verified at source** · 🆕 🟡 **state-level rules NAMED for the first time (Colorado, Texas) inside a described *"regulatory vacuum"*** · 🟡 **`$951M` (2024) → `$2 303.2M` (2029) at `15.9%`, single vendor** · 🟢 **`P162-C` ports unchanged; `P163-B` is jurisdiction-neutral** |
+| **Global** | 🔴 **Market incoherent a FOURTEENTH pass and the spread WIDENED to `$1.9B` in the base year** · 🔴 **`T110` and `T122` each a SEVENTH time** · 🟢 **the auditability finding (`T156`) is the real global opportunity, because remote-first prompt resolution is the DEFAULT shape of the tooling** |
+
+### 🔜 Pre-registered for p164
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IJ`** — verify OpenEduCat's vendor-stated OneRoster, Ed-Fi and LTI 1.3 support in the tree, not on the marketing pages | 🔴 *Refuted if any one of the three has no implementing code in `openeducat_erp` at `1c95cef` — in which case the vertical row must be amended to say so* |
+| 🟢 **`ACTION IK`** — measure `T156`'s reach: across the open education platforms on this shelf, how many resolve an LLM prompt from a remote service BEFORE their own repository template? | 🔴 *Refuted if mentingo is the only one, in which case `T156` is a single-repository defect and `P163-B`'s industry-wide framing must be withdrawn* |
+| 🟢 **`ACTION IL`** — port `P163-A` step 1 (the nine-script corpus as JUnit cases) and step 3 (counting `Mn`/`Mc` as letters) and measure whether the symbol-spam control still rejects at `0.000` | 🔴 *Refuted if treating combining marks as letters lets ANY of the two negative controls through — which would mean the fix trades a real guard for the equity gain* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The agent shelf did not GROW, FIFTH consecutive pass.** 🟢 **`T110`'s seventh corroboration;
+  `0` education-domain agents from four global discovery queries, which returned AI curriculum
+  again.**
+- 🔴 **Not one regional figure could be verified at source, FIFTH pass.** 🟢 **All five source hosts
+  — `oecd.org`, `ei-ie.org`, `moe.gov.sg`, `digitaleducationcouncil.com`, `newsletters.qs.com` —
+  refused at the proxy, and every figure is labelled *search-summary*.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** — unchanged for five passes.
+- 🟡 **Four passes of OpenOLAT findings now rest on ONE tree** (`e4be14f0`, re-confirmed as HEAD
+  this pass). 🔵 **Recorded as a concentration risk, not a defect.**
+- 🔴 **`T156`'s industry-wide framing rests on ONE repository.** 🟢 **Registered as `ACTION IK`
+  rather than asserted.**
+- 🔴 **`P163-A`'s fixes were DESIGNED and not applied.** 🟢 **Deliberate: the corpus passes today,
+  so the tests are contributable now and the code changes need the upstream project's review, not
+  this shelf's.** 🟢 **`ACTION IL`.**
+- 🔴 **The rotation defect is confirmed for a SIXTH pass.** 🟢 **`rotation.json` is advanced on this
+  pass's branch as required, and will not reach the next run without a human merge.**
+  🟡 **Not registered — it is not a research task.**
+
 ## Pass 162 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three DISCHARGED, all three falsifiers SILENT.**

@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 2026-10-13 — pass 163 — 🔴 the discovery channel is closed, and this pass CLOSED the question of whether it reopens
+
+🔴 **No new agent rows from discovery, FIFTH consecutive pass.** 🟢 **`T110` corroborated a
+SEVENTH time: the four prescribed global queries returned AI CURRICULUM again —
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, *Dive into Deep Learning* —
+none of them an education-domain agent.**
+[`evidence/regional-sweep.2026-10-13-p163.tsv`](../evidence/regional-sweep.2026-10-13-p163.tsv)
+[`evidence/attach-third-party-probe.2026-10-13-p163.tsv`](../evidence/attach-third-party-probe.2026-10-13-p163.tsv)
+
+🔵 **What is different about this pass is not the result but its STATUS.** 🟢 **For six passes the
+`★` column has been labelled *stale, refresh pending*. `ACTION IF` settles it: there is nothing
+to wait for.**
+
+### 🆕 🔴 `T149` — the star channel is CLOSED, not slow
+
+| probe | answer |
+|---|---|
+| 🟢 an account repository, `add_repo access=push` → `GET /repos/{r}` | 🟢 **`200`**, metadata including `stargazers_count` |
+| 🔴 a third-party public repository, `add_repo access=read` | 🔴 `status=read_available` — ***"Nothing was attached to the session"*** |
+| 🔴 the same repository, `add_repo access=push` *(the remedy the `403` body names)* | 🔴 **REFUSED — *"you need push access"*** |
+| 🔴 `GET /repos/{r}` for all four shelf repos | 🔴 **`403`, identical body** |
+
+🟢 **Reported as refuted rather than retried, and the second limb was run specifically so the
+verdict would not rest on an untried path.**
+
+### 🆕 🔴 `T150` — and the substitute channel is worse than the dated figure
+
+🔴 **Three mutually incompatible star counts for `HKUDS/DeepTutor` surfaced in ONE pass's
+searches: `41 210` (this shelf, p157, measured), `34.7 K` (an aggregator), and *"over 17,000,
+April 2026"* (a second secondary source).** 🔴 **A spread of more than `2×`.**
+🟢 **So the dated-but-measured figure is kept and the column is relabelled
+`★ (read p157-10-12; NOT refreshable)`.** 🔵 **An honest date beats a fresh-looking guess.**
+
+### 🟢 What the CODE channel carried instead — two agents, re-read in depth
+
+🔵 **The shelf did not grow, so the pass spent its budget reading what is already on it.**
+🟢 **Both readings produced new facts about EXISTING rows, which is the only growth available
+while discovery is shut.**
+
+| row | what was measured this pass | where it landed |
+|---|---|---|
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **`ACTION IG`: the two graded-path gates run over nine writing systems.** 🟢 **`0 of 10` valid answers rejected** — 🔴 **but vocalised Arabic clears the letter-ratio floor by `0.102` where English clears it by `0.526`** | 🟢 **`T151`, `T152`, `T153`, `T154`; `P163-A`** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🔴 **`ACTION IH`: `0` occurrences of `harden`/`sanitiz` in `94` files of its AI module; the learner turn is concatenated into a bare `<student_submission>` fence.** 🔴 **And its judge has NO off switch** | 🟢 **`T155`, `T156`, `T157`; `P163-B`, `P163-C`** |
+
+🆕 🔴 **`T155` — the inverted-incentive asymmetry generalises to a SECOND platform.**
+🟢 **p162's `T144` found OpenOLAT hardening the AUTHOR's input in code and defending the
+STUDENT's answer with prose.** 🔴 **mentingo has no code-level hardening on either path — and all
+four of its *"untrusted data"* prose sentences sit on the AUTHOR's configuration JSON, none on the
+learner.** 🟢 **Stated fairly: mentingo's GRADED-path prose guard is substantially STRONGER than
+OpenOLAT's — a five-rule `<instruction_priority_and_security>` block against one sentence.**
+🔵 **So the ordering is: mentingo better in prose, OpenOLAT better in code, neither hardening the
+adversarial input.**
+
+### 🔴 What this channel did NOT produce, said rather than hidden
+
+- 🔴 **`0` new agent rows, fifth pass.** 🟡 **The live GitHub trending page remains unreadable and
+  `search/repositories` remains `403`.**
+- 🔴 **`0` agents discovered in any region.** 🟢 **The regional queries produced ADOPTION and POLICY
+  facts this pass — see `intel/market.md` — but not one repository.**
+- 🟡 **No `★` refreshed, and now none ever will be on this channel.** 🟢 **`T149`.**
+
 ## 2026-10-13 — pass 162 — 🔴 the discovery channel is still closed, 🟢 but HALF of what it carried is recoverable
 
 🔴 **No new agent rows from discovery, FOURTH consecutive pass.** 🟢 **`T110` corroborated a

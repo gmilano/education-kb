@@ -3,6 +3,53 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 163 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region — and for the dry regions the VOCABULARY was
+changed rather than the query repeated, which is what p162 said the saturation required.**
+🟢 **APAC broke an EIGHT-pass adoption drought. LATAM gained its first corroboration PAIR.**
+🔴 **North America produced no fact verifiable at source for a FOURTH pass, and the global
+market spread WIDENED.**
+🟢 **Regional detail is filed under the canonical `## Opportunities by region` block below as
+`#### p163` entries. ONE region block, not one per pass** *(`ACTION HK`'s rule, honoured).*
+[`evidence/regional-sweep.2026-10-13-p163.tsv`](../evidence/regional-sweep.2026-10-13-p163.tsv)
+[`evidence/proxy-refusal.2026-10-13-p163.tsv`](../evidence/proxy-refusal.2026-10-13-p163.tsv)
+
+### 🟢 The instrument change, stated before its results
+
+🔴 **p162 reported `0` new EMEA facts and named the cause: *"saturated at this shelf's query
+vocabulary"*.** 🔵 **A saturated channel re-queried identically returns the same nothing, so the
+honest response is to change the instrument, not the effort.** 🟢 **This pass dropped the standing
+`AI {industry} {region} {year} adoption regulation players` phrasing for the dry regions and
+substituted NAMED-INSTRUMENT queries — asking for a specific survey rather than for a topic.**
+
+🟢 **It worked, and the result is attributable to the change:** 🟢 **the standing phrasing returned
+APAC *enterprise* content for a ninth time; the named-instrument query returned OECD **TALIS
+2024** country notes, which are education-specific, per-jurisdiction and primary.**
+🔵 **Recorded as a reusable lesson: when a regional channel saturates, name the instrument you
+want rather than the subject you want.**
+
+### 🔴 Not one regional figure could be verified at source — fifth consecutive pass, and now with a NAMED cause
+
+🔴 **All five source hosts refused at the proxy: `oecd.org`, `ei-ie.org`, `moe.gov.sg`,
+`digitaleducationcouncil.com`, `newsletters.qs.com`.** 🟢 **Every figure below is labelled
+*search-summary* and NONE was promoted.**
+
+🆕 🟢 **What is new is that the refusal is now NAMEABLE rather than guessed.** 🔴 **`WebFetch`
+reports `getaddrinfo ENOTFOUND`, which says DNS and is wrong.** 🟢 **`curl -v` shows
+`CONNECT … 403 Forbidden`, and `$HTTPS_PROXY/__agentproxy/status` returns a
+`recentRelayFailures` ledger naming each host, a timestamp, and
+`kind: "connect_rejected"`.** 🟢 **`T158`; see [`repos/trending.md`](../repos/trending.md).**
+🔵 **The practical gain: a future pass can establish in ONE call whether a source is reachable
+before spending a query on it.**
+
+🟡 **One quality change worth recording even though the label is unchanged: the source CLASS
+improved.** 🟢 **p162's regional figures came from market-research and vendor blogs; this pass's
+APAC and EMEA figures come from OECD country notes and a national ministry's parliamentary
+reply.** 🔵 **Still *search-summary*, because the discipline is about VERIFICATION, not about
+prestige — but a search summary of a primary source is a better lead than a search summary of a
+secondary one.**
+
 ## Pass 162 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region.** 🟢 **LATAM broke a three-pass drought and
@@ -458,6 +505,32 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p163
+
+🔴 **FOURTH consecutive pass with no North America fact verified at source.** 🟡 **Three figures
+arrived, all *search-summary*, and one of them NAMES states for the first time.**
+
+| finding | figure | status |
+|---|---|---|
+| 🟡 students across `16` countries already using AI | **`86%`** | 🟡 search-summary; 🔵 note this is a MULTI-COUNTRY figure being carried on the NA row because that is where the channel surfaced it — it is not a North America rate |
+| 🟡 North America AI-in-education market | **`$951M` (2024) → `$2 303.2M` (2029), CAGR `15.9%`** | 🟡 search-summary, single vendor |
+| 🆕 🟡 regulatory shape | 🔴 *"relative regulatory vacuum"*, no FDA-equivalent for edtech, state-level piecemeal requirements — 🆕 **`Colorado` and `Texas` NAMED** | 🟡 search-summary |
+
+🟢 **Carried unchanged from p162 because the channel re-returned them: `10%` of institutions with
+formal AI guidelines, `71%` of US teachers untrained.**
+
+🆕 🔵 **The opportunity, and it is a consequence of the vacuum rather than of a programme:**
+🔴 **a *"regulatory vacuum"* with per-state requirements emerging is the hardest environment to
+build a single compliant product for, and the EASIEST to sell a per-jurisdiction assessment
+into.** 🟢 **`P162-C` (the Annex III gate Moodle core does not enforce) ports directly: the gate is
+the same, only the citation changes from the AI Act to a state rule.** 🟢 **And `P163-B`
+(prompt provenance) is jurisdiction-neutral — it is an auditability control, so it sells in a
+vacuum as readily as under a statute.**
+
+🔴 **Declared gap:** 🔴 **this page still has no US or Canadian FEDERAL instrument, and no named
+vendor landscape.** 🟡 **`$169M` and the `8`-partner OpenAI programme from p162 remain
+unattributed to any named government and were not re-corroborated this pass.**
+
 #### p162
 
 🆕 🟡 **Two governance figures, both SEARCH-SUMMARY, both from an aggregator whose host refused at
@@ -696,6 +769,38 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p163
+
+🟢 **p162 recorded `0` new EMEA facts from the news channel. The vocabulary change broke that**
+— 🟢 **two EMEA figures and one funding fact, plus the pass's deepest CODE findings are both
+EMEA-built platforms.**
+
+| finding | figure | status |
+|---|---|---|
+| 🆕 🟢 **OECD TALIS 2024** — teachers reporting AI use in their work, **UAE** | **`~75%`** | 🟡 search-summary *(`oecd.org` refused)* |
+| 🆕 🔴 the same measure, **France** | **`<20%`** | 🟡 search-summary |
+| 🆕 🟢 **UK AI Adoption Summit** commitment to AI adoption | **`£200m+`** | 🟡 search-summary *(`newsletters.qs.com` refused)*; 🔵 delivery model described as government funding with Big Tech as partners and *"few traditional education providers"* |
+| 🟢 **2026 Europe EdTech 200** exists as a ranked list | n/a | 🟡 search-summary; 🟢 **registered as a CHANNEL for a future pass, not quoted as a finding** |
+
+🔴 **A `55`-point intra-EMEA spread** *(UAE `~75%`, France `<20%`)* 🔵 **says the same thing the
+APAC spread says: the region is not the planning unit. EMEA includes Africa by definition and
+this pass's EMEA evidence is Europe-and-Gulf weighted — p153's Africa findings are CARRIED, not
+re-queried.**
+
+🆕 🟢 **The pass's strongest EMEA finding came from the CODE channel, not the news channel, for a
+second consecutive pass.** 🟢 **Both open-source platforms inside the AI Act's Annex III
+evaluative tier are EU/EEA-built — `openolat/OpenOLAT` (Switzerland, Apache-2.0) and
+`Selleo/mentingo` (Poland, MIT) — and this pass measured a governance gap in the Polish one that
+is squarely an AI Act problem: its judge's system prompt is fetched from an external
+prompt-management service at call time, with the repository's own template as a silent fallback
+and the schema check skipped on the remote path** *(`T156`)*.
+
+🟢 **The opportunity:** 🟢 **`P163-B` is an EMEA-first deliverable.** 🔵 **An EU institution
+deploying an evaluative AI feature must be able to show WHICH instructions governed a given
+mark; *"they are fetched from a SaaS, and we do not log which version answered"* is not an
+answer Article 14 accepts.** 🟢 **`P163-C` (a real, auditable off switch) is the companion, and
+`T157` shows the MIT platform ships without one.**
 
 #### p162
 
@@ -972,6 +1077,55 @@ skills body and whose delivery is outsourced is a programme that needs an integr
 
 ### APAC
 
+#### p163
+
+🆕 🟢 **THE EIGHT-PASS ADOPTION DROUGHT IS BROKEN — with an education-specific, per-jurisdiction,
+primary-source instrument.**
+
+🟢 **OECD **TALIS 2024** country notes, teachers reporting they have used AI in their work:**
+
+| jurisdiction | figure | against the OECD average |
+|---|---|---|
+| 🟢 **Singapore** | **`75%`** | 🟢 **`+39`** |
+| 🔴 **Japan** | **`17%`** | 🔴 **`−19`** |
+| 🟡 OECD average | `36%` | — |
+
+🟡 **Labelled *search-summary* and NOT promoted — `oecd.org` and `ei-ie.org` both refused at the
+proxy** *(`T158`)*. 🔴 **And one conflict is recorded rather than smoothed: Education
+International's summary of the same study gives the OECD average as `~41%` against the country
+notes' `36%`.** 🟡 **Singapore's ministry frames its figure narrowly — *"to teach or facilitate
+student learning"* — so the three renderings are not measuring an identical thing.**
+
+🟢 **`T143`'s gate fired and was HONOURED for a second pass: the `57%` *"organisations in Asia"*
+figure is ENTERPRISE and was REFUSED rather than re-regionalised into an education number.**
+
+🆕 **Policy, newly surfaced:**
+
+- 🟢 **Singapore MOE** *(parliamentary reply, `2026-05-06`, primary host refused)*: P4–P6 pupils
+  use AI **only** in school tools designed for education and under teacher supervision; **national
+  exams remain proctored with AI prohibited.**
+- 🟡 **South Korea**: AI textbook adoption **below `30%`** by March, and the National Assembly
+  subsequently **removed their official status.** 🟡 **Secondary source, weak.**
+- 🟡 **Japan**: ministry guidance that students must not submit AI-produced work as their own;
+  digital textbooks possibly official from the `2030` school year.
+
+🆕 🔵 **The opportunity, and the `58`-point spread is the whole argument:** 🔴 **Singapore `75%`
+and Japan `17%` are both high-capacity systems, so the gap is not capability — it is policy
+posture and teacher training.** 🟢 **Two distinct engagement shapes follow, and quoting an "APAC
+rate" would hide both:**
+
+| jurisdiction class | shape |
+|---|---|
+| 🟢 **high-use, policy-tight** *(Singapore)* | 🟢 **assurance and auditability work** — the tools are in classrooms and exams are AI-prohibited, so the demand is for provable boundaries. 🟢 **`P163-B` + `P163-C` + `P162-C`** |
+| 🔴 **low-use** *(Japan, and `<20%` France for the same instrument)* | 🟢 **enablement work with a sovereignty constraint** — 🟢 **`LocalOnnxSPI` remains the strongest answer on this shelf: for embeddings there is no endpoint to localise** |
+
+🆕 🟢 **And one APAC-specific technical consequence from `ACTION IG`, measured not asserted:**
+🔴 **OpenOLAT's graded-path pre-filter gives astral Han (`CJK Extension B`) a letter-ratio margin
+of `0.050` against English's `0.526`, and FIVE ideographic full stops reject an eighteen-ideograph
+answer.** 🔴 **Three Han/Hangul families — Extension A, Compatibility Ideographs and NFD Jamo —
+fall off the CJK word-count branch entirely.** 🟢 **`P163-A` is therefore an APAC deliverable as
+much as an equity one.**
+
 #### p162
 
 🔴 **NO ADOPTION RATE, EIGHTH consecutive pass.** 🟢 **`T143`'s gate fired again and was
@@ -1222,6 +1376,50 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p163
+
+🆕 🟢 **LATAM gains its FIRST corroboration pair on this shelf — two independent instruments, at
+different scales, agreeing within `4` points on the measure that matters most.**
+
+| measure | UNESCO IESALC *(p162)* | 🆕 **DEC LATAM Survey 2026** *(p163)* |
+|---|---|---|
+| 🟢 sample | `200` institutions, `19` countries | `29` institutions |
+| 🟢 **institutions with a formal / published AI policy** | **`26%`** | **`30%`** |
+| 🟢 student engagement | — | **`92%`** |
+| 🟢 faculty engagement | — | **`79%`** |
+| 🟢 institutional AI use somewhere | `87%` | — |
+
+🟢 **Why the agreement is informative rather than circular:** 🟢 **different collectors, a `7×`
+difference in sample size, and slightly different questions — *"a formal framework"* against
+*"a published policy"* — converging on roughly **three of four institutions using AI without
+one.*** 🔵 **p162 carried the `26%` as a single survey's claim; it is now a measured regional
+fact.**
+
+🟡 **Both remain *search-summary*: `digitaleducationcouncil.com` refused at the proxy**
+*(`T158`)*. 🟢 **p162's decomposition is CARRIED and unchanged — teaching `73.5%`, research
+`57.0%`, admin `34.1%`, community `20.0%`; private non-profit `84%`, public `68%`, for-profit
+`52%`.**
+
+🟢 **Regulation, re-corroborated and unchanged:** 🔴 **no unified regional framework;** 🟢 **Chile
+with a National AI Policy since 2021 and a law in discussion; Brazil and Colombia with national
+strategies but no education-sector rule; Mexico's SEP/ANUIES recommendations non-binding.**
+🟢 **The IDB's `ILIA` index across `19` countries is named again as an available instrument.**
+
+🆕 🟢 **The opportunity, sharpened by the new row rather than repeated:** 🔵 **p162 observed that
+LATAM adoption concentrates in the evaluative surface while governance would live in admin,
+`39` points lower.** 🆕 🟢 **This pass adds the administrative platform that gap needs:
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) — an Odoo-based
+education ERP with `14` in-tree modules covering admission, fees, library, timetable, exam and
+attendance.** 🔴 **It is LGPL-3.0 with a grant that is incomplete on its own terms, so it is an
+INTEGRATION target and never a fork** *(measurements in [`repos/foundations.md`](../repos/foundations.md))*.
+
+🟢 **So the LATAM shape is now concrete: `P162-D` (multi-tenant AI assessment on MIT) for the
+evaluative surface that institutions already have, plus an OpenEduCat integration for the
+administrative surface where the policy gap actually sits** — 🔵 **and `P163-C`, because a region
+where `70%`+ of institutions have no published AI policy needs an evaluative feature that can be
+switched OFF while the policy is written.** 🔴 **`T157` shows the MIT platform cannot do that
+today.**
 
 #### p162
 
@@ -1514,6 +1712,43 @@ public institutions (68%) are the volume.** 🟢 **Permissive LATAM-native rows 
   the global ones by more than the global ones disagree with each other.
 
 ### Global
+
+#### p163
+
+🔴 **Market size incoherent a FOURTEENTH pass, and the spread WIDENED rather than narrowed.**
+
+| vendor | base-year figure | projection |
+|---|---|---|
+| 🔴 IMARC | **`$6.4B` (2025)** | `$79.6B` by 2034, CAGR `31.35%` |
+| 🔴 a second vendor | **`$8.3B` (2025)** | `$57.2B` by 2033, CAGR `25.9%` |
+| 🔴 The Business Research Company | **`$10.6B` (2026)** | — |
+
+🔴 **A `$1.9B` spread in the SAME base year**, up from p162's `~$1B`. 🔴 **And the two
+projections disagree by `$22.4B` on a horizon one year apart.** 🟢 **`T122` corroborated a
+SEVENTH time.**
+
+🟢 **The structural reading is unchanged and now twelve passes old: these are vendor forecasts
+with undisclosed segment definitions, so the SPREAD is the only honest datum.** 🔵 **What IS
+quotable to a client is the direction plus the survey figures with stated samples — TALIS 2024's
+`36%` OECD teacher average, UNESCO IESALC's `26%` and DEC's `30%` for LATAM policy coverage.**
+
+🔴 **`T110` corroborated a SEVENTH time: `0` education-domain agents from four global discovery
+queries, which returned AI CURRICULUM again.**
+
+🆕 🔴 **`T150` — a new global finding about this page's own data quality.** 🔴 **Three mutually
+incompatible star counts for `HKUDS/DeepTutor` surfaced in one pass: `41 210` (measured, p157),
+`34.7 K` and *"over 17,000 (April 2026)"*.** 🔴 **A `>2×` spread.** 🟢 **Taken with `ACTION IF`'s
+refutation — third-party repository metadata is permanently `403` on this channel — the
+conclusion is that the `★` column must be DATED and frozen rather than refreshed from secondary
+sources.** 🔵 **A fresh-looking guess would have been worse than an honest date.**
+
+🆕 🟢 **The global opportunity of the pass is an auditability one, and it is jurisdiction-neutral.**
+🟢 **`T156`: an evaluative AI feature whose governing prompt is fetched from an external
+prompt-management service at call time — repo template as silent fallback, schema check skipped
+on the remote path — cannot show which instructions produced a given mark.** 🔵 **That pattern is
+the DEFAULT integration shape for prompt-management tooling, so the exposure is industry-wide
+rather than specific to the one repository where it was measured.** 🟢 **`P163-B` is the audit and
+it is small enough to run inside a discovery phase.**
 
 #### p162
 

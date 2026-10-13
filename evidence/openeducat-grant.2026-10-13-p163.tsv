@@ -1,0 +1,16 @@
+field	value
+repo	https://github.com/openeducat/openeducat_erp
+head	1c95cefebc176a011e3c16269c5a8691fd1ac9cb
+last_commit	2026-09-07 17:27:28 +0530
+tracked_paths	1345
+licence_path	LICENSE (root, the only licence-bearing path in the tree)
+licence_blob	ef163fea81aad62011c51b8af5347d638dae0af7
+licence_bytes	8241
+licence_lines	178
+licence_sha256	528f84036800168df9579d7e3b19ca902a69def77294b3515751265ed7ef47a9
+name_line	"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"
+body_read	GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+verdict	LGPL-3.0, verified from the body
+defect_1	the body says the GPL text is "included at the bottom as well"; at 8241 B it is NOT — the file ends at the LGPL proxy clause. GPL-3.0 alone is ~35 kB. LGPL-3.0 is by its own words "a set of additional permissions on top of the GPL", so the grant is incomplete by its own construction
+defect_2	the body says "For copyright information, please see the COPYRIGHT file" — 0 of 1345 tracked paths match /copyright/i. The referenced file is ABSENT
+engagement	copyleft, so outside Globant's permissive lane regardless; the two defects are what a licence review would raise first
