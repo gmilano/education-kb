@@ -1,0 +1,42 @@
+# p169 regional sweep. 8 queries: 4 global + 1 per region. EVERY row below is tier search-summary BY
+# NECESSITY - T203 is re-confirmed environmental this pass (proxy-channel-census.2026-10-13-p169.tsv),
+# so 0 of the primary sources named here were reachable on curl or WebFetch. Nothing here is promotable
+# under T160 until a pass runs from a container where the primary resolves.
+region	finding	figure_or_instrument	status_vs_prior_passes
+North America	US state AI-in-education bills introduced in 2026	134 bills across 31 states	NEW to this KB
+North America	state departments of education publishing official AI guidance	33-35 states plus Puerto Rico, by June 2026	NEW figure
+North America	student-data training ban	California AB 1159	NEW - named statute
+North America	school AI tool privacy requirement	Idaho SB 1227	NEW - named statute
+North America	human oversight required, AI barred from high-stakes student decisions	Oklahoma, Maryland	NEW
+North America	district-must-write-its-own-policy model	Ohio HB 96, Tennessee SB 1711	SHARPENS p136's Ohio watch item with a bill number
+North America	AI instruction required for graduation	Alabama HB 329	NEW
+North America	district AI policy deadline	Maryland AI Ready Schools Act - 24 districts, 120 days from state guidance	NEW
+North America	largest district restriction	New York City moratorium on student-facing generative AI, elementary and middle school	NEW - and the first MORATORIUM this KB holds
+North America	federal posture	ED grant-priority rule finalised April 2026; H.R. 8747 K-12 AI Literacy and Readiness Act advanced in committee July 2026	NEW
+North America	ABSENT	no Canada and no Mexico coverage returned by the regional query	STATED ABSENCE - North America read as US-only again
+EMEA	AI Act enforcement by the AI Office and national authorities	began 2 August 2026	consistent with p168
+EMEA	AI Omnibus	adopted June 2026, in force 27 July 2026	consistent with p168's Regulation (EU) 2026/1744
+EMEA	education as high-risk	Annex III - access to education, assessment of learning outcomes, steering learning paths; admissions screening and remote proctoring named	consistent
+EMEA	prohibition	emotion-inference systems prohibited in educational contexts	NEW to this KB - a PROHIBITION, not a high-risk duty
+EMEA	member-state readiness	Council of Europe survey: 4 of 23 responding member states had AI-in-education policies (2022)	NEW - and the only member-state readiness datum this KB holds
+EMEA	regional instrument in progress	Council of Europe pursuing a legally binding instrument on AI in education, human-rights framed	NEW
+EMEA	ABSENT	no 2026 EMEA adoption RATE returned on any query	STATED ABSENCE - second pass running
+APAC	Korea	AI Basic Act in force January 2026; education is a "high-impact" use; MSIT signalled 2026 as a pilot period with limited enforcement	re-confirmed, p168
+APAC	Vietnam	Law No. 134/2025/QH15 effective 1 March 2026; high-risk list includes education, automated assessment named	re-confirmed, p168
+APAC	Japan	light-touch, voluntary AI governance model	NEW framing - contrasts with p136's Ver.2.0 guideline finding
+APAC	China	algorithm filings, synthetic-content labelling, security review for public models - enforced already	NEW - the labelling duty bears directly on AI-generated courseware
+APAC	public opinion	Ipsos Education Monitor 2026 - lower support for banning AI in schools across Asian markets; Australia and New Zealand the exception	re-confirmed, p168
+APAC	ABSENT	no APAC open-source education platform named by any of the 8 queries	STATED ABSENCE - FOURTEENTH consecutive pass
+APAC	ABSENT	India returned no national education-AI instrument	STATED ABSENCE - re-confirmed
+LATAM	higher-education adoption	UNESCO IESALC - 200 institutions, 19 countries: 87% using AI in at least one area, 74% in teaching and learning, 26% with a formal AI strategy	re-confirmed, p168
+LATAM	by institution type	private non-profit 84% implementing	re-confirmed
+LATAM	school level	OECD TALIS 2024 - Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% of secondary teachers; OECD average 36%	re-confirmed
+LATAM	national systems	Uruguay Ceibal - 75% of public-school teachers using these tools	re-confirmed
+LATAM	regional governance	UNESCO Observatory on AI in Education for Latin America and the Caribbean, launched 14 April 2026	re-confirmed
+LATAM	capacity building	UNESCO AI ethics and regulation courses for officials in Ecuador and Chile	NEW
+LATAM	regulation	Brazil PL 2.338/2023 in the Chamber of Deputies; Chile's executive bill in its first constitutional stage; Colombia CONPES 4144 a policy, not a statute	re-confirmed
+LATAM	ABSENT	no education-specific AI regulation anywhere in the region	gap 104 RE-CONFIRMED a FOURTH time
+LATAM	ABSENT	no comprehensive 2026 LATAM vendor or investment report returned	STATED ABSENCE - the player map stays incomplete
+Global	direction of travel	1EdTech, HolonIQ: governance structures, evaluation processes, evidence of instructional benefit; movement from generic AI tools to education-purpose-built platforms	consistent with T168's directional claim
+Global	market incoherence	$10.6B (2026, 40.9-41.5% CAGR, Research and Markets) vs $12.3B by 2026 (HolonIQ) vs ~$6B 2024 -> $32B 2030 (K12 Academics)	T168 re-confirmed - three denominators, not three disagreements
+Global	ABSENT	no education AI agent entered the shelf by web search	THIRTEENTH consecutive pass - T199's query collision re-confirmed: the web answers "education ABOUT AI"

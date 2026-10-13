@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — Pass 169
+
+🟢 **`0` of `12` shelf rows moved: `git ls-remote` at `07:48:09Z` against p168's RECORDED full-`12`
+baseline at `06:46:52Z` — `1 h 01 min 17 s`, DENOMINATOR `12`.**
+🆕 🔴 **The week's movement is not in the code, it is in the GRANTS: `17` root bodies read for the first
+time, and `2` of `12` licence cells turn out to be incomplete in the direction that matters to a client.**
+🆕 🔴 **`T204` — p169's own first tag reading was WRONG and looked like a release burst.
+`git ls-remote --tags | grep -c refs/tags` counts the `^{}` dereference line every ANNOTATED tag emits,
+so `mentingo` read `233` against p168's `118` and `anki-mcp-server` `113` against `57`. Stripping `^{}`
+and uniquing reproduces p168 EXACTLY on all `12` rows. No release burst happened.**
+
+| repo | what changed this week | verdict |
+|---|---|---|
+| 🔴 [`penecho/penecho`](https://github.com/penecho/penecho) | 🆕 🔴 **nothing in the code — but the shelf now knows it is DUAL-LICENSED: `AGPL-3.0-only` + a negotiable commercial path + a CLA + `32` non-root grant files** | 🔴 **`T207` — the cell said `AGPL-3.0` and that was true and incomplete** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🆕 🔴 **its `Apache-2.0` body read for the first time: `40` words added, `29` removed vs canonical, including section `4(d)`** | 🔴 **`T206` — NON-VERBATIM `Apache-2.0`** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🆕 🟢 **found to ship `licenses.config.yaml` — a working `19`-identifier dependency licence gate** | 🟢 **`T208` — and it refuses `Sakai`, confirming p168's prediction** |
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 HEAD `2026-10-13`, `0` d old — the only row that has moved at all in five passes | 🟢 **`Apache-2.0`, body CLEAN** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 **`GPL-3.0` body read: `1` word from canonical, and that word is p168's `why-not-lgpl.html` hunk** | 🟢 **CLEAN — an independent confirmation of p168 from a different licence family** |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **no grant file in ANY of its `12` tracked files — exhaustive, not a root probe** | 🔴 **`378` d stale, unlicensed. Verdict upgraded in confidence, not changed** |
+
+🟢 **New this week, verified on the open channel and NOT agents — two active student information
+systems, which this KB has wanted for seven passes:**
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (`GPL-2.0`, HEAD
+`2026-10-12`) and [`os4ed/openSIS-Classic`](https://github.com/os4ed/openSIS-Classic) (`GPL-2.0`, HEAD
+`2026-10-05`).
+🔴 **Still `0` for a THIRTEENTH consecutive pass: no education AI agent entered this shelf by web
+search. `T199`'s query collision holds — the web reads *"AI agents education"* as education ABOUT AI,
+and this week returned Microsoft's `AI Agents for Beginners` and the Hugging Face Agents Course again.**
+🔴 **Still `0` for a FOURTEENTH consecutive pass: no APAC open-source education platform named by any
+query.**
+
+
 
 ## 2026-10-13 — Pass 168
 

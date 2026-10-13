@@ -1,0 +1,25 @@
+# ACTION JC - enumerate OpenEduCat's unnamed bundled grants (gap 109). p168 recorded that the LICENSE
+# body declares bundled libraries to be "other GPL-compatible licenses" and names none.
+# Instrument: treeless clone of openeducat/openeducat_erp at HEAD 1c95cefebc17, exhaustive ls-tree -r.
+# FALSIFIER, pre-registered: refuted if vendored third-party code carrying its own grant is found.
+probe	result	interpretation
+tracked files in tree	1345	-
+grant files anywhere in tree	1 (root LICENSE)	the whole repository has ONE grant surface
+files matching node_modules/	0	no vendored JS dependency tree
+files matching vendor/	0	no vendored directory
+files matching static/lib/	0	no vendored front-end libraries
+files matching *.min.js	0	no minified third-party bundles
+requirements.txt / setup.py / pyproject.toml	0	no declared Python dependency manifest
+Odoo module manifests (__manifest__.py)	14	the real packaging unit
+manifests declaring 'license': 'LGPL-3'	14 of 14	UNIFORM - every module agrees with the published licence
+manifests declaring any other licence	0	no divergence
+# VERDICT: ACTION JC DISCHARGED, FALSIFIER SILENT. gap 109 CLOSES, and it closes in the direction
+# nobody expected: the "bundled libraries ... other GPL-compatible licenses" clause has NO REFERENT in
+# this repository. There is nothing bundled. The clause is inherited boilerplate from Odoo's own
+# licence notice, not a description of this tree.
+# CONSEQUENCE: the hazard p168 flagged was mis-shaped. OpenEduCat's grant surface is UNIFORM LGPL-3.0
+# across 14 of 14 modules and 1 of 1 grant files. What remains true from p168 is the OTHER defect
+# (T201): the body promises the GPL-3.0 text "at the bottom" and contains 0 occurrences of it.
+# WHAT THE REAL THIRD-PARTY EXPOSURE IS: the Odoo runtime these 14 modules are built on, which is a
+# DEPENDENCY and not in this tree. That is where a licence review must look, and it is out of scope
+# of any probe of this repository.

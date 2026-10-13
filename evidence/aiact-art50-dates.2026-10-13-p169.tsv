@@ -1,0 +1,32 @@
+# ACTION JB - settle gap 108 (Article 50's dates) from a primary source, with the refusal itself as the
+# alternative finding. BOTH halves ran. The primary is UNREACHABLE; the contradiction RESOLVES anyway,
+# and it resolves by being dissolved rather than decided.
+channel	target	result
+curl -sI	https://eur-lex.europa.eu/eli/reg/2024/1689/oj	000 - no route
+WebFetch	https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689	ENOTFOUND - no DNS
+curl -sI	https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai	000 - no route
+WebSearch	"EU AI Act Article 50 transparency obligations application date Article 113"	9 results, all secondary
+# WHAT THE SEARCH CHANNEL RETURNED, converging across independent law-firm and standards-body sources:
+claim	value	sources_agree
+Article 50(1), (2) and (5) applicable from	2 August 2026	multiple, consistent
+Commission guidelines on Article 50 adopted	20 July 2026	single source
+transitional for the Article 50(2) machine-readable MARKING duty	2 December 2026, for generative systems PLACED ON THE MARKET BEFORE 2 August 2026	two sources, consistent in scope
+penalty exposure	up to EUR 15 000 000 or 3% of worldwide annual turnover, whichever is higher	single source
+Article 113's own text	NOT QUOTED BY ANY SOURCE	0 of 9
+# T210 - gap 108 WAS NOT A CONTRADICTION. p168 recorded "one source puts 50(2) watermarking at
+# 2 December 2026 and another says Article 50 has applied since 2 August 2026" as two readings 15 months
+# apart. They are both correct and they do not conflict: 2 August 2026 is the APPLICATION DATE of the
+# duty; 2 December 2026 is a TRANSITIONAL CARVE-OUT that applies only to the machine-readable marking
+# limb and only to systems already on the market before the application date. The gap was a SCOPE
+# confusion between a duty's start and a grandfathering window, and this KB manufactured it by placing
+# two true statements side by side without their scopes.
+# WHAT STAYS OPEN, narrower (gap 110): the legal basis is still unread. Article 113 is the provision
+# that sets application dates and NOT ONE of the 9 sources quotes it. So the 2 August 2026 date rests
+# on nine secondary sources agreeing, which is not the same as reading the article. Tier
+# search-summary, not promotable under T160.
+# ALTERNATIVE FINDING, as pre-registered: the refusal is recorded and it is now CHARACTERISED. eur-lex
+# fails as ENOTFOUND on WebFetch and 000 on curl - no DNS and no route, NOT a policy denial. Combined
+# with T211 (gnu.org moved 403 -> 000 between containers), the 403-vs-000 distinction p168 drew cannot
+# be read as "the gateway refuses this host on policy". For a FUTURE pass: this question needs a
+# container whose egress allows eur-lex.europa.eu, and it needs ONE fetch of Article 113. Nothing
+# else about it is worth re-litigating.

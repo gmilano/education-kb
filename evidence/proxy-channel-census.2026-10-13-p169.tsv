@@ -1,0 +1,24 @@
+# ACTION JD, second half: is T203 environmental or per-container? This container is NEW - cloned fresh
+# at 07:44Z, a different container from p168's. Same probe, curl -sI, 12 s timeout.
+host_or_channel	channel	p168_result	p169_result	stable	class
+https://raw.githubusercontent.com/...	curl	200	200	yes	ALLOWED
+https://www.apache.org/licenses/LICENSE-2.0.txt	curl	200	200	yes	ALLOWED
+https://pypi.org/simple/	curl	200	200	yes	ALLOWED
+git ls-remote https://github.com/<any>	git	OK	OK	yes	ALLOWED
+git clone --depth 1 --filter=blob:none https://github.com/<any>	git	not probed	OK	-	ALLOWED (P169-B)
+https://github.com/<owner>/<repo>	curl	403	403	yes	POLICY DENIAL
+https://api.github.com/repos/<owner>/<repo>	curl	403	403	yes	POLICY DENIAL
+https://codeload.github.com/...	curl	403	403	yes	POLICY DENIAL
+https://www.gnu.org/licenses/gpl-3.0.txt	curl	403	000	NO	CLASS MOVED - policy denial -> no route
+https://spdx.org/licenses/ECL-2.0.html	curl	not probed	000	-	UNREACHABLE (but SPDX text via raw.githubusercontent = 200)
+https://eur-lex.europa.eu/...	curl	000	000	yes	UNREACHABLE
+https://eur-lex.europa.eu/...	WebFetch	ENOTFOUND	ENOTFOUND	yes	UNREACHABLE - ACTION JB's primary
+https://digital-strategy.ec.europa.eu/...	curl	000	000	yes	UNREACHABLE
+https://www.unesco.org/...	curl	000	000	yes	UNREACHABLE
+https://en.wikipedia.org/wiki/SCORM	curl	000	000	yes	UNREACHABLE
+https://example.com	curl	000	000	yes	UNREACHABLE - the allow-list is explicit, not a blocklist
+# VERDICT: T203 is ENVIRONMENTAL, not per-container. 15 of 16 comparable probes reproduce exactly in a
+# container built 57 min after p168's. ACTION JD's second clause is DISCHARGED.
+# T211 - but the REFUSAL CLASS of a host is NOT a stable property. gnu.org was a 403 policy denial at
+# p168 and is 000 no-route at p169. What is stable is the ALLOW-LIST. So p168's 403-vs-000 distinction
+# describes the gateway's state at a moment, not the host - and must not be cited as a host property.

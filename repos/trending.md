@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — Pass 169
+
+🔴 **Repo DISCOVERY is closed on every channel in this container and p169 re-measured it rather than
+assuming it: `github.com/search` returns `0` results, `api.github.com` and `codeload` are `403`, and
+`github.com` HTML is `403` on `curl`. So nothing below entered by browsing GitHub trending.**
+🟢 **What DID enter came from the web sweep and was then verified by `git ls-remote` plus a treeless
+clone — `5` new slugs probed, `4` real, `1` not found.**
+[`evidence/sis-permissive-settled.2026-10-13-p169.tsv`](../evidence/sis-permissive-settled.2026-10-13-p169.tsv)
+[`evidence/proxy-channel-census.2026-10-13-p169.tsv`](../evidence/proxy-channel-census.2026-10-13-p169.tsv)
+
+| repo | licence | HEAD | why it is here |
+|---|---|---|---|
+| 🆕 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** *(root `LICENSE`, `15 214 B`)* | 🟢 **`2026-10-12`** | 🟢 **the most ACTIVE student information system this KB has ever verified — `1` day old at this pass** |
+| 🆕 🟡 [`os4ed/openSIS-Classic`](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(at `docs/License.txt`)* | 🟢 **`2026-10-05`** | 🔴 **active SIS — and the counter-example that broke this KB's root-only grant probe (`T209`)** |
+| 🆕 🔴 [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟡 **`Apache-2.0` by `NOTICE` licensor statement, body ABSENT** | 🔴 **`2016-07-20`** | 🔴 **the web's one `Apache-2.0` SIS answer, now SETTLED as abandoned (`T212`)** |
+| 🆕 🔴 [`foradian/fedena`](https://github.com/foradian/fedena) | 🟡 **same grant, body ABSENT** | 🔴 **`2012-10-12`** | 🔴 **the original tree — fourteen years stale** |
+| 🔴 `AlekSIS/AlekSIS` · `aleksis/AlekSIS-Core` | — | — | 🔴 **`NOT FOUND` on `git ls-remote`. Named by the sweep; neither slug exists on github.com. Recorded so p170 does not chase it — the project is hosted elsewhere** |
+
+🟢 **Verified unmoved and still the foundation set, all `6` re-probed by `ls-remote` this pass:**
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) `5d47c94a8ecc` ·
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) `882f3b8c7498` ·
+[`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) `b91b12857aac` ·
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) `10a1d904d379` ·
+[`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) `e4be14f0d1bb` ·
+[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) `440496d70ef0`.
+
+🆕 🟢 **The instrument note worth carrying forward (`P169-B`): `13` repositories were inventoried this
+pass for `3.1 MB` using `git clone --depth 1 --filter=blob:none --no-checkout`, against p168's `623 MB`
+for `10` full trees — and the treeless answer is strictly larger, because every path in the tree is
+present while no blob is downloaded. Bodies then come from `raw.githubusercontent.com` pinned at the
+HEAD sha.**
+🔴 **Declared gap, unchanged for a FOURTEENTH pass: no APAC-origin open-source education repository has
+ever been named by this sweep. Not *"none exists"* — none has been NAMED, on a channel where discovery
+is closed and the web is answering in English.**
+
+
 
 ## 2026-10-13 — Pass 168
 

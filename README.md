@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 169 — 2026-10-13
+
+🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` HALF-DISCHARGED with its
+other half recorded as NOT TAKEN rather than taken at a denominator that would fit. `gap 108` and
+`gap 109` both close.**
+🆕 🔴 **The pass's most consequential finding: `2` of the `12` agent licence cells have been incomplete
+for fourteen passes, and in both cases the missing part is the part a client's procurement stops on.
+`HKUDS/DeepTutor` is published `Apache-2.0` and its `LICENSE` is not the Apache text — section `4(d)`
+is altered and the `APPENDIX` names a trademark that does not exist. `penecho/penecho` is not simply
+`AGPL-3.0`: it is dual-licensed, with a negotiable commercial path, a CLA, a trademark reservation and
+`36` grant surfaces where the shelf held one cell.**
+🆕 🟢 **The pass's most satisfying finding: a prediction p168 made from reasoning alone is confirmed by
+an artifact in the wild. `Selleo/mentingo` — a repo this shelf recommends — ships a real `19`-identifier
+dependency licence gate, and `ECL-2.0` is not in it. The gate p168 said would refuse `Sakai` exists, on
+this shelf.**
+🆕 🔴 **And both of this pass's own instruments produced false positives before they produced findings.
+A tag count that looked like a release burst was `git ls-remote --tags` double-counting annotated-tag
+dereference lines (`T204`). A `GPL-3.0` body that looked rewritten was SPDX's `246` curly quotes against
+the FSF's ASCII (`T205`). Recorded as the ninth and tenth false-positive classes, both caught before
+publication.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION JB`** — settle `gap 108`'s dates from a primary source | 🟢 **DISCHARGED. The primary is unreachable; the contradiction DISSOLVES anyway. It was a scope confusion this KB manufactured — an application date beside a grandfathering window (`T210`)** |
+| 🟢 **`ACTION JC`** — enumerate `OpenEduCat`'s unnamed bundled grants | 🟢 **DISCHARGED, falsifier SILENT. There are none: `1` grant file in `1 345` files, `0` vendored anything, `14` of `14` manifests `LGPL-3`. The clause has NO referent** |
+| 🟡 **`ACTION JD`** — the full-`12` `≥6` h churn reading; re-measure the channel census | 🟡 **HALF. Census DISCHARGED — `T203` is ENVIRONMENTAL, reproduced in a fresh container. The `≥6` h half NOT TAKEN: earliest possible `12:46:52Z`, this pass ran `07:48Z`** |
+| 🟢 **`ACTION JE`** — `P168-A` steps `3`–`6` across the `12` agent rows | 🟢 **DISCHARGED. `17` root bodies read, `63` non-root grant files enumerated, `6` new `T`-numbers, `2` licence cells corrected** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T204` — the ninth false-positive class: annotated-tag dereference.**
+  🔴 **`git ls-remote --tags | grep -c refs/tags` counts the `refs/tags/X^{}` line every ANNOTATED tag
+  emits, so `mentingo` read `233` against p168's `118` and `anki-mcp-server` `113` against `57`.**
+  🟢 **Stripping `^{}` and uniquing reproduces p168 EXACTLY on all `12` rows. The dangerous direction:
+  it MANUFACTURES activity, and `tags` is a liveness signal here.**
+- 🆕 🔴 **`T205` — the tenth false-positive class: typography.** 🔴 **SPDX's canonical texts carry `246`
+  curly quotation marks and `1` `©`; FSF ASCII bodies carry `0`. Unfolded, a clean `GPL-3.0` reads as
+  `71` added / `71` removed words.** 🟢 **Folded, it reads `1`/`1` — and the one word is
+  `philosophy/` vs `licenses/why-not-lgpl.html`, which is p168's `2`-byte mystery confirmed by a
+  different instrument on a different repository that was not looking for it.**
+- 🆕 🔴 **`T206` — `HKUDS/DeepTutor`'s `Apache-2.0` body is NON-VERBATIM.** 🟢 **Canonical title and
+  version lines; `40` words added and `29` removed against `apache.org`'s own text.** 🔴 **Section
+  `4(d)` reads *"excluding **any** notices"* where canonical reads *"excluding **those** notices"*, and
+  the `APPENDIX` instruction paragraph is replaced by one naming an *"**Alarm** ... umbrella trademark"*
+  that does not exist.** 🔵 **A paraphrase artifact, not a substitution — no new terms, no permission
+  withdrawn. But a text-matching scanner will not resolve it, and the project has no verbatim grant of
+  record. Stays recommended; the verdict becomes *"`Apache-2.0`, non-verbatim"*.**
+- 🆕 🔴 **`T207` — `penecho/penecho` is DUAL-LICENSED and the shelf's one cell said `AGPL-3.0`.**
+  🟢 **The `AGPL-3.0` body is verbatim (`0`/`0` folded) — and it is `1` of `36` grant surfaces:
+  `COMMERCIAL-LICENSE.md` (a negotiable proprietary path), a CLA, a `NOTICE` reserving the wordmark and
+  excluding vendored `elkjs 0.12.0` under **`EPL-2.0`**, plus `32` grant files below the root.**
+  🔵 **Better news than `AGPL-3.0` alone — it is the only named escape hatch on this shelf — at the
+  cost of a procurement negotiation with no published terms (`P169-D`).**
+- 🆕 🟢 **`T208` — p168's `ECL-2.0` prediction CONFIRMED by an artifact.** 🟢 **`Selleo/mentingo` ships
+  `licenses.config.yaml`: `19` allowed identifiers, `13` package exceptions WITH reasoning.** 🔴 **No
+  `ECL-2.0` (so `Sakai` is refused) and no `EPL-2.0` (so `penecho`'s layout worker is refused). `3` of
+  the `19` entries are not SPDX ids, so the gate matches declared strings. And `licenses.comment.md`,
+  where the reasoning belongs, is `0` BYTES.**
+- 🆕 🔴 **`T209` — the root-only grant probe is unsound.** 🔴 **`os4ed/openSIS-Classic` is an ACTIVE SIS
+  whose `GPL-2.0` lives at `docs/License.txt` with no root grant file: a root probe calls it
+  *"unlicensed"*.** 🟢 **`P169-A` step `5` now enumerates the TREE. The shelf's one *"no licence"*
+  verdict SURVIVES the stronger test — `Mr.-Ranedeer` tracks `12` files and `0` is a grant file.**
+- 🆕 🟢 **`T210` — `gap 108` was never a contradiction.** 🟢 **Article 50(1),(2),(5) apply from
+  `2 August 2026`; `2 December 2026` is a transitional for the machine-readable MARKING limb ONLY, and
+  only for systems placed on the market BEFORE the application date.** 🔵 **Two true statements this KB
+  set side by side without their scopes. `gap 110` opens narrower: Article 113 — the provision that sets
+  application dates — is quoted by `0` of `9` sources.**
+- 🆕 🔴 **`T211` — a host's REFUSAL CLASS is not stable across containers.** 🔴 **`gnu.org` was a `403`
+  policy denial at p168 and is `000` no-route at p169.** 🟢 **What IS stable is the allow-list: `15` of
+  `16` comparable probes reproduce exactly in a container built `57` min later, so `T203` is
+  ENVIRONMENTAL, not per-container.** 🔵 **Consequence: p168's `403`-vs-`000` distinction describes the
+  gateway at a moment, not a host, and must not be cited as a host property.**
+- 🆕 🔴 **`T212` — the `Fedena` question is SETTLED and closes a seven-pass search loop.** 🟢 **The
+  web's only `Apache-2.0` SIS answer has a REAL grant — a licensor statement in `NOTICE`, *"Licensed
+  under the Apache License, Version 2.0"*, `Copyright 2011 Foradian Technologies"*.** 🔴 **And no licence
+  body in either tree, with newest commits of `2016-07-20` and `2012-10-12`.** 🟢 **The absence
+  restates usefully: not *"no permissive SIS exists"* but *"no permissive AND MAINTAINED SIS exists"*.**
+- 🆕 🟢 **`gap 109` CLOSED in an unexpected direction.** 🟢 **`OpenEduCat` bundles NOTHING: `0`
+  `node_modules`, `0` `vendor/`, `0` `static/lib/`, `0` `*.min.js`, `1` grant file in `1 345` files, and
+  `14` of `14` Odoo manifests declaring the same `LGPL-3`.** 🔵 **The *"bundled libraries ... other
+  GPL-compatible licenses"* clause is inherited Odoo boilerplate with no referent in this tree. The real
+  third-party exposure is the Odoo runtime — a dependency, outside the repo, and out of scope of any
+  probe of it.**
+- 🆕 🟢 **`P169-A`** — the licence gate, corrected by its own failures: a step `0` FOLD and a step `5`
+  that enumerates the TREE. 🟢 **Shipped as a tested script:
+  [`compose/code/p169-licence-fold/`](compose/code/p169-licence-fold/) — `7` cases, `7` passing, and
+  `3` of them are CONTROLS asserting the fold does NOT silence `DeepTutor`'s real modification.**
+- 🆕 🟢 **`P169-B`** — the treeless clone: `13` repositories inventoried for `3.1 MB` against p168's
+  `623 MB` for `10`, for a strictly LARGER answer. 🔵 **A path list is free; a blob is not.**
+- 🆕 🟢 **`P169-C`** — fork `mentingo`'s `licenses.config.yaml` as an engagement's licence gate, with
+  `ECL-2.0` and `EPL-2.0` added and a decision recorded against each.
+- 🆕 🟡 **`P169-D`** — the dual-licence escape hatch, priced honestly: which AGPL limb actually binds,
+  and when the answer is a procurement conversation rather than an engineering one.
+- 🟢 **The shelf: `0` of `12` HEAD shas moved over `1 h 01 min 17 s` at DENOMINATOR `12` — stated
+  together, as `T197`'s register rule now requires. No row enters or leaves.**
+- 🆕 🟢 **North America is this pass's regional gain and it is large:** `134` bills across `31` states,
+  `33`–`35` states publishing guidance, California `AB 1159` (no training on student data), Idaho
+  `SB 1227`, Oklahoma and Maryland requiring human oversight, Ohio `HB 96` and Tennessee `SB 1711`
+  (districts write their own), Alabama `HB 329` (AI instruction to graduate), Maryland's AI Ready
+  Schools Act (`24` districts, `120` days), the ED grant-priority rule (`April 2026`), `H.R. 8747` —
+  🔴 **and New York City's MORATORIUM on student-facing generative AI, the first this KB holds.**
+- 🆕 🔴 **EMEA yields the first PROHIBITION touching education this KB has recorded:** emotion-inference
+  systems are prohibited in educational contexts — engagement detection and attention tracking are not
+  a compliance task, they are a removal. 🟡 **Plus the only member-state readiness datum held: `4` of
+  `23` responding Council of Europe states had AI-in-education policies (`2022`), with a binding CoE
+  instrument on AI in education in progress.**
+- 🔴 **Declared gaps, stated so they are not mistaken for coverage:** `0` Canada and `0` Mexico findings
+  for a second pass · no `2026` EMEA adoption RATE for a second pass · `0` APAC open-source education
+  platforms for a FOURTEENTH pass · `0` education-specific AI regulation in LATAM (`gap 104`, FOURTH
+  confirmation) · no `2026` LATAM vendor or investment report, so that region has no competitive map ·
+  `0` agents entered by web search for a THIRTEENTH pass (`T199`'s query collision holds).
+- 🆕 🔴 **`gap 111`** — `63` non-root grant files across the `12` agent rows are enumerated and unread,
+  `32` of them in `penecho`. 🆕 🔴 **`gap 112`** — `openSIS-Classic`'s vendored `CKEditor` grants unread.
+
+### 🔜 Registered for p170
+
+🟢 **`ACTION JF`** — read the `32` non-root grant files in `penecho` and classify every one that is not
+`MIT`, since `EPL-2.0` is already known to be among them (`gap 111`).
+🟢 **`ACTION JG`** — take the full-`12` `≥6` h churn reading, now that the `12:46:52Z` gate has passed.
+🟢 **`ACTION JH`** — run `P169-A` (folded, tree-wide) across the `7` PLATFORM rows read at p168 under
+the unfolded root-only instrument. 🔴 **Falsifier, explicit: refuted if any p168 licence verdict
+changes.**
+🟢 **`ACTION JI`** — probe whether `DeepTutor`'s paraphrased `Apache-2.0` appears in any other
+repository; a shared upstream template or rewriting tool would make `T206` a CLASS rather than an
+instance.
+
+
 ## Pass 168 — 2026-10-13
 
 🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` discharged at a SMALLER

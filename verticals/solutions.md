@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 169 — 2026-10-13
+
+🆕 🟢 **The SIS row on the platform table changes for the first time in seven passes — not because a
+permissive option appeared, but because the absence is now DATED and two active copyleft routes are
+verified.**
+🆕 🔴 **And the licence gate a client would actually run is no longer hypothetical. `Selleo/mentingo`,
+a platform this page recommends, ships one — and it would REFUSE `Sakai`, which is the permissive LMS
+route this same page recommends.**
+[`evidence/sis-permissive-settled.2026-10-13-p169.tsv`](../evidence/sis-permissive-settled.2026-10-13-p169.tsv)
+[`evidence/agent-grant-surface.2026-10-13-p169.tsv`](../evidence/agent-grant-surface.2026-10-13-p169.tsv)
+
+### 🆕 🔴 The gate conflict a client hits on day one, with both sides on this page
+
+🟢 **p168 established that `Sakai` is `ECL-2.0` and that `ECL-2.0` narrows the patent grant for
+institutionally employed contributors (`T200`). It then PREDICTED that no permissive allow-list would
+contain `ECL-2.0`.** 🟢 **p169 found a real allow-list on this shelf and the prediction holds (`T208`).**
+
+| | |
+|---|---|
+| 🟢 **the gate** | 🟢 **`Selleo/mentingo` → `licenses.config.yaml`: `19` allowed licence identifiers, `13` named package exceptions** |
+| 🔴 **what it refuses** | 🔴 **`ECL-2.0` (`Sakai`) and `EPL-2.0` (`penecho`'s vendored `elkjs` layout worker) — neither is in the list** |
+| 🟡 **how loose it is** | 🟡 **`3` of `19` entries are not SPDX identifiers (`Apache`, `BSD`, `Apache License 2.0`), so it matches declared STRINGS** |
+| 🔴 **its own gap** | 🔴 **`licenses.comment.md`, where the reasoning belongs, is `0` bytes** |
+
+🔵 **What to tell a client, in one sentence: your scanner will stop on `Sakai`, and the right response
+is a recorded decision about `ECL-2.0`'s patent limb — not a swap to a copyleft LMS, and not a waiver
+nobody read.** 🟢 **`P169-C` is that decision, pre-written.**
+
+### 🆕 🟢 Platform routing — the SIS row, finally with dates
+
+| need | route | licence | status |
+|---|---|---|---|
+| 🟢 **LMS, permissive** | 🟡 [**Sakai**](https://github.com/sakaiproject/sakai) · [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 `ECL-2.0` · 🟢 `MIT` | 🟡 **unchanged — and `Sakai` now has a known gate problem (`T208`) and a known patent limb (`T200`)** |
+| 🟢 **LMS, behind an API boundary** | 🟢 [**Open edX**](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | 🟢 **unchanged — the RPC carve-out, `gap 107` stands** |
+| 🟢 **LMS, plain copyleft** | 🟢 [**Moodle**](https://github.com/moodle/moodle) · [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | 🟢 **unchanged — verbatim FSF text** |
+| 🆕 🟡 **SIS, active** | 🆕 🟡 [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🆕 🟢 **NEW ROW — HEAD `2026-10-12`, `1` day old at this pass. The most active SIS this KB has verified** |
+| 🆕 🟡 **SIS, active** | 🆕 🟡 [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(at `docs/License.txt`, not the root)* | 🆕 🟡 **NEW ROW — HEAD `2026-10-05`. Vendors `CKEditor` with its own grants, unread (`gap 112`)** |
+| 🟡 **SIS / education ERP, weak copyleft** | 🟡 [**OpenEduCat**](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | 🆕 🟢 **IMPROVED: uniform across `14` of `14` modules, nothing vendored (`gap 109` CLOSED). `T201`'s incomplete body stands** |
+| 🔴 **SIS, PERMISSIVE** | 🔴 **none** | — | 🆕 🔴 **SETTLED, not merely absent (`T212`): the web's one `Apache-2.0` answer, `Fedena`, is a real grant on abandoned code — newest commit `2016-07-20`, and no licence body in either tree** |
+| 🟢 **SCORM `2004` export** | 🟢 [**scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🟢 **unchanged — `mentingo` emits `1.2` only (`gap 103`, p168)** |
+| 🆕 🟡 **courseware / AI literacy** | 🟢 `P168-C` tier | 🟢 `MIT` | 🟢 **unchanged — `53` verified locales including `es` and `pt-BR`** |
+
+🟢 **The permissive LMS route is still short and still exactly two: `Sakai` (`ECL-2.0`) and `Kolibri`
+(`MIT`).** 🔴 **The permissive SIS route is still empty, for an EIGHTH pass — but for the first time
+the search behind it is closed rather than pending.**
+
+### 🆕 🔴 What `penecho` changes for a client engagement
+
+🟢 **`penecho` is the only copyleft row on any of this KB's shelves with a NAMED commercial path
+(`T207`).** 🔵 **That makes it the one `AGPL-3.0` component this page can route to for a client who
+cannot accept `AGPL-3.0` — with the costs stated.**
+
+| what the client wants to do | 🟢 safe under `AGPL-3.0-only` | 🔴 needs the commercial path |
+|---|---|---|
+| **run an unmodified copy internally or commercially** | 🟢 **yes — the project says so in `COMMERCIAL-LICENSE.md`** | |
+| **ship it, or a derivative, inside a proprietary product** | | 🔴 **yes** |
+| **run a MODIFIED copy as a network service without releasing source** | | 🔴 **yes — this is the AGPL limb** |
+| **combine it with AGPL-incompatible code** | | 🔴 **yes** |
+| **get support, warranty or indemnity** | | 🔴 **yes** |
+
+🔴 **The procurement facts: terms are *"negotiated separately with the applicable PenEcho copyright
+holder"*, on no published timeline; a CLA assigns contributions so the owner can keep offering the dual
+licence; and the name, wordmark and logo are reserved separately from the code.**
+🟡 **One sub-component is NOT under the repository default and must be handled on its own terms:
+`elkjs 0.12.0` under **`EPL-2.0`**, which is also the licence `mentingo`'s gate does not allow.**
+
+
 ## Pass 168 — 2026-10-13
 
 🆕 🔴 **Two cells in the platform routing table change what a client may build, and one changes what

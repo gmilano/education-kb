@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 169 — 2026-10-13
+
+🆕 🔴 **The trend this pass can evidence is about GRANTS, not models: on a shelf of `12` agents, `2`
+licence cells that had been correct for fourteen passes turn out to be incomplete the moment the bodies
+are read — and in both cases the missing part is the part a client's procurement would stop on.**
+🆕 🟢 **`Selleo/mentingo` shipping a `19`-identifier dependency licence gate is the first evidence this
+KB holds that open-source education projects are doing licence compliance as ENGINEERING. That is a
+maturity signal, and it arrived on the newest, most active row on the shelf.**
+🆕 🔴 **Two of this pass's own instruments produced false positives before they produced findings
+(`T204`, `T205`). Both looked like signal: a release burst and a rewritten licence. Neither existed.**
+
+### 🆕 🔴 The trend behind `T206`, `T207` and `T212` — a licence NAME is not a licence
+
+🟢 **Across three passes this KB has now read `26` grant bodies. The pattern is consistent enough to
+state as a trend rather than a set of incidents:**
+
+| defect class | instances | what it looks like from outside |
+|---|---|---|
+| 🔴 **a body that is not the licence it names** | 🔴 **`Sakai` (`ECL-2.0` as *"Apache-derived"*), `DeepTutor` (paraphrased `Apache-2.0`)** | 🟢 **a clean `Apache-2.0` badge** |
+| 🔴 **a body that promises text it does not contain** | 🔴 **`OpenEduCat` (`T201`), both `Fedena` trees (`T212`)** | 🟢 **a named, familiar licence** |
+| 🔴 **more than one grant surface, disagreeing or narrowing** | 🔴 **`Chamilo` (`T202`), `penecho` (`T207`)** | 🟢 **one licence cell** |
+| 🔴 **no grant at all** | 🔴 **`Mr.-Ranedeer-AI-Tutor`** | 🟡 **`378` d stale, so at least the staleness shows** |
+
+🔵 **`8` of `26` bodies read deviate from what their project is published as. That is high enough that
+*"the repo says MIT"* is not diligence, and low enough that the fix is cheap — `P169-A` is six steps
+plus a fold.** 🟢 **The direction of the errors is worth noting: most are HARMLESS in substance
+(a paraphrase, a filled placeholder, a more permissive second file) and ALL of them are capable of
+stopping an automated gate. The risk is operational, not legal.**
+
+### 🆕 🟢 What `mentingo`'s licence gate says about where this ecosystem is going
+
+🟢 **The file is `1 119` bytes and it is the most sophisticated compliance artifact this KB has found in
+an education repository.** 🟢 **It allows `19` identifiers, names `13` package exceptions, and records
+REASONING against several of them —** *"sublib of sharp - not modified - not embedded in software"*
+**— including the `LGPL-3.0-or-later` sub-libraries of `sharp` that a naive gate would simply refuse.**
+🟢 **Several exceptions exist because an upstream package asserts a licence on npm or in a README and
+ships no `LICENSE` file — which is `T201`'s and `T212`'s defect class, caught by a working team on a
+different shelf.**
+🔵 **Read as a trend: the compliance burden the EU AI Act and the US state statutes are creating is
+arriving in these repositories as CONFIG, checked into git. That is the shape to meet a client with —
+not a PDF policy.**
+🔴 **The counter-evidence in the same repo: `licenses.comment.md`, the file where the reasoning belongs,
+is `0` bytes. The practice is ahead of the documentation.**
+
+### 🆕 🟢 Added to the watch list by p169
+
+- 🔴 **Whether `DeepTutor`'s paraphrased `Apache-2.0` appears in any OTHER repository.** 🟢 **If a
+  shared upstream template or a rewriting tool produced it, `T206` is a CLASS and worth a corpus-wide
+  probe; if it is unique to `HKUDS`, it is an instance and closes here.** 🟢 **Pre-registered as
+  `ACTION JI`.**
+- 🟡 **Whether `penecho`'s commercial path is ever actually exercised.** 🔴 **Terms are *"negotiated
+  separately"* with no published price, timeline or standard agreement — so today it is an option in
+  principle. 🟡 Watch for any public evidence of a granted commercial licence: that is what turns the
+  only named escape hatch from `AGPL-3.0` on this shelf into something a client can plan around.**
+- 🟢 **Whether `RosarioSIS` sustains its pace.** 🟢 **`GPL-2.0`, HEAD `1` day old at this pass, and the
+  most active SIS this KB has verified. If it holds, it is the SIS route for copyleft-tolerant clients;
+  if it stalls, the SIS layer has no live option at all.**
+- 🔴 **Whether the EU's emotion-inference PROHIBITION gets tested in an education setting.** 🔴 **This
+  KB has recorded many high-risk DUTIES and this is its first outright prohibition touching education.
+  Watch for the first enforcement action or withdrawn feature — engagement detection and attention
+  tracking are shipped in commercial proctoring today.**
+- 🟡 **Whether New York City's moratorium spreads or is lifted.** 🔴 **It is the first district
+  moratorium this KB holds, in the largest US district. 🟡 Watch for a second large district following,
+  because that would change the North American pitch from *"teacher-facing first"* to *"teacher-facing
+  only"*.**
+- 🟡 **Whether `AlekSIS` can be located at all.** 🔴 **Named by this pass's sweep; `AlekSIS/AlekSIS` and
+  `aleksis/AlekSIS-Core` both return `NOT FOUND` on `git ls-remote`, so it is hosted off github.com and
+  therefore invisible to every channel open in this container. 🟡 Worth one probe from a container with
+  wider egress — it may be the permissive SIS this shelf has been looking for.**
+- 🟡 **Whether `openSIS-Classic`'s vendored `CKEditor` grants hold any surprise (`gap 112`).**
+
+
 ## Pass 168 — 2026-10-13
 
 ### 1. 🆕 🔴 `T198` — the probe that nearly overturned a correct finding on a base64 hash — *Global, measured*

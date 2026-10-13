@@ -1,0 +1,12 @@
+# P169-A step 0 - measured results, 2026-10-13 (p169).
+# Columns: added/removed words vs canonical, UNFOLDED then FOLDED.
+# Unfolded = tr -s whitespace only, which is what P168-A step 2 specified.
+body	bytes	unfolded_added	unfolded_removed	folded_added	folded_removed	verdict
+tutor-gpt-LICENSE	35149	71	71	1	1	CLEAN - the 1 word is philosophy/ vs licenses/why-not-lgpl.html
+penecho-LICENSE	34523	3	3	0	0	CLEAN - verbatim
+echo-loop-LICENSE	34523	3	3	0	0	CLEAN - verbatim
+chattutor-LICENSE	34522	3	3	0	0	CLEAN - verbatim, 1-byte spread is trailing whitespace
+deeptutor-LICENSE	11408	40	29	40	29	DEVIANT - section 4(d) altered, APPENDIX rewritten (T206)
+ai-shifu-LICENSE.txt	11342	2	5	2	5	CLEAN - APPENDIX placeholder filled
+# READING: the fold changes tutor-gpt from 71/71 to 1/1 and leaves DeepTutor at 40/29.
+# That is the whole point - it removes the typographic class and nothing else.

@@ -4,6 +4,182 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 169 — 2026-10-13
+
+🟢 **Four pre-registered actions. `3` DISCHARGED with silent falsifiers, `1` HALF-DISCHARGED and its
+other half recorded as NOT TAKEN rather than taken at a convenient denominator.**
+🆕 🔴 **`ACTION JE` found that the shelf's licence column has been reading the wrong number of files.
+Across `12` rows there are `17` root grant files and `63` more below the root; the column holds `12`
+cells. Two rows change meaning: `penecho` is DUAL-LICENSED with a commercial path and a CLA, and
+`HKUDS/DeepTutor`'s `Apache-2.0` body is NOT the Apache text — its redistribution clause has been
+altered and its appendix names a trademark that does not exist.**
+🆕 🟢 **And a prediction p168 made from reasoning alone is now confirmed by an artifact: `Selleo/mentingo`
+ships a real dependency licence allow-list, `19` identifiers long, and `ECL-2.0` is NOT in it. The gate
+p168 said would refuse `Sakai` exists, on this shelf, in a repo this shelf recommends.**
+🟢 **No row enters or leaves. `12` of `12` re-verified; `0` of `12` HEAD shas moved.**
+[`evidence/agent-grant-surface.2026-10-13-p169.tsv`](../evidence/agent-grant-surface.2026-10-13-p169.tsv)
+[`evidence/churn-full12.2026-10-13-p169.tsv`](../evidence/churn-full12.2026-10-13-p169.tsv)
+[`evidence/proxy-channel-census.2026-10-13-p169.tsv`](../evidence/proxy-channel-census.2026-10-13-p169.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION JB`** — settle `gap 108`'s dates from a primary source | 🟢 **DISCHARGED. The primary is UNREACHABLE and the contradiction DISSOLVES anyway: it was a scope confusion this KB manufactured (`T210`). `gap 108` CLOSED, `gap 110` opened narrower** |
+| 🟢 **`ACTION JC`** — enumerate `OpenEduCat`'s unnamed bundled grants | 🟢 **DISCHARGED, falsifier SILENT. There are NONE to name: `1` grant file in `1 345` files, `0` vendored anything, `14` of `14` manifests `LGPL-3`. `gap 109` CLOSED** |
+| 🟡 **`ACTION JD`** — the full-`12` `≥6` h churn reading, and re-measure the channel census | 🟡 **HALF. The census half DISCHARGED — `T203` is ENVIRONMENTAL, reproduced in a fresh container. The `≥6` h half NOT TAKEN: the earliest it can exist is `12:46:52Z` and this pass ran at `07:48Z`** |
+| 🟢 **`ACTION JE`** — `P168-A` steps `3`–`6` across the `12` agent rows | 🟢 **DISCHARGED. `17` bodies read, `4` new `T`-numbers, and `2` of the `12` licence cells are now known to be incomplete in the direction that matters to a client** |
+
+### 🟢 The agent shelf — re-verified at p169, `0` of `12` moved
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T07:48:09Z`.** 🟢 **`0` of `12` HEAD
+shas moved against p168's RECORDED full-`12` baseline at `06:46:52Z` — an interval of `1 h 01 min 17 s`
+at DENOMINATOR `12`, stated together as `T197`'s register rule now requires.**
+🆕 🟢 **Every licence cell below is now a READ BODY, not a title-line probe.** 🔴 **The `★` column stays
+closed (`T149`).**
+
+| repo | licence *(body read, p169)* | grant files *(root + below)* | HEAD date | age | tags |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **`Apache-2.0` — CLEAN, placeholder filled** | `1` + `3` | `2026-10-13` | 🟢 **`0` d** | `43` |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + a COMMERCIAL path + a CLA (`T207`)** | 🔴 **`4` + `32`** | `2026-10-12` | 🟢 `1` d | `16` |
+| 🟡 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `1` + `6` | `2026-10-12` | 🟢 `1` d | `42` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | `1` + `0` | `2026-10-11` | 🟢 `2` d | `57` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, and it ships a licence GATE (`T208`)** | `3` + `6` | `2026-10-10` | 🟢 `3` d | `118` |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)** | `2` + `8` | `2026-10-08` | 🟢 `5` d | `86` |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | `1` + `0` | `2026-10-08` | 🟢 `5` d | `0` |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | `1` + `0` | `2026-10-08` | 🟢 `5` d | `0` |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | `1` + `8` | `2026-09-21` | 🟡 `22` d | `3` |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | `1` + `0` | `2026-01-09` | 🔴 **`277` d** | `2` |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **`GPL-3.0` — CLEAN at `1` word, and that word confirms p168** | `1` + `0` | `2025-11-13` | 🔴 **`334` d** | `0` |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — `0` of `12` tracked files, exhaustive** | `0` + `0` | `2025-09-30` | 🔴 **`378` d** | `3` |
+
+🟢 **`6` rows permissive and active (`≤5` d), unchanged for a fourth pass.** 🔴 **`3` over the `180`-day
+drop line.** 🟢 **Instrument cost, measured: `13` treeless clones, `3.1 MB` — against p168's `623 MB`
+for `10` full trees, for a strictly larger answer (`P169-B`).**
+
+### 🆕 🔴 `T206` — `DeepTutor` is published as `Apache-2.0` and its `LICENSE` is not the Apache text
+
+🟢 **Title and version lines are canonical: *"Apache License / Version 2.0, January 2004"*.** 🔴 **The
+body is not.** 🟢 **Measured against `apache.org`'s own `11 358`-byte text after typographic and
+URL folding: `40` words added, `29` removed, at `11 408 B`.**
+🔴 **The change that matters is in the operative redistribution clause, section `4(d)`:**
+
+| source | section `4(d)`, verbatim |
+|---|---|
+| 🟢 **canonical** | *"...excluding **those** notices that do not pertain to any part of the Derivative Works..."* |
+| 🔴 **`DeepTutor`** | *"...excluding **any** notices that do not pertain to any part of the Derivative Works..."* |
+
+🔴 **And the `APPENDIX`'s instruction paragraph has been REPLACED. Canonical: *"We recommend that a file
+or class name and description of purpose be included on the same 'printed page' as the copyright
+notice..."*. `DeepTutor`: *"Please also get an **'Alarm or alarm'** copyright header and make that the
+reference to the Apache License and the Disclaimer of Warranty (**Alarm** is the umbrella trademark for
+a collection of Open Source projects)."***
+🔵 **Read carefully, this is a PARAPHRASE artifact, not a licence substitution: *"Alarm"* is where
+*"Apache"* belongs in the ASF's own umbrella-trademark sentence, and `those`→`any` does not change
+4(d)'s meaning. No new terms are imposed and no permission is withdrawn.** 🔴 **But two consequences are
+real and neither is cosmetic. First, an SPDX or scanner match on licence TEXT will not resolve this file
+cleanly, so a client's automated gate may refuse a repo this shelf recommends. Second, the project has
+no verbatim grant of record: what it distributes is a modified copy of a licence it names.**
+🟡 **Routing consequence: `DeepTutor` stays recommended and stays the Apache row. The verdict changes
+from `Apache-2.0` to *"`Apache-2.0`, non-verbatim — diligence item, not a blocker"*.**
+🟢 **Its `THIRD_PARTY_NOTICES.md` is by contrast exemplary: `3`+ vendored projects, each with slug,
+SOURCE COMMIT sha, licence, copyright holder and the adapted concepts named.**
+
+### 🆕 🔴 `T207` — `penecho` is dual-licensed, and the shelf's one-word cell said `AGPL-3.0`
+
+🟢 **The `AGPL-3.0` body is verbatim canonical — `0` words added, `0` removed after folding.** 🔴 **It is
+also only `1` of `36` grant surfaces in the tree.**
+
+| file | what it does |
+|---|---|
+| 🔴 `COMMERCIAL-LICENSE.md` | 🔴 **names a negotiable alternative licence for proprietary distribution, for running a modified service without releasing source, and for AGPL-incompatible combinations** |
+| 🔴 `CONTRIBUTOR-LICENSE-AGREEMENT.md` | 🔴 **a CLA — contributions are assigned on terms that make the dual licence possible** |
+| 🟡 `NOTICE` | 🟡 **reserves the name, wordmark and logo, and EXCLUDES vendored components from the AGPL default — among them `elkjs 0.12.0` under **`EPL-2.0`**, plus `Archify`, `AntV Infographic`, `anime.js` and DeepSeek backports under `MIT`** |
+| 🔴 `LICENSE` | 🔴 **`AGPL-3.0-only`, the repository default** |
+
+🟢 **Its own words, which is the strongest channel available here:** *"The AGPL allows personal,
+academic, internal, and commercial use. You do not need a separate commercial license merely because
+you or your employer uses an unmodified copy."*
+🔵 **Why this is better news than `AGPL-3.0` alone, and why it still must be written down: a client who
+cannot accept `AGPL-3.0` has a NAMED path here rather than a dead end — which no other copyleft row on
+this shelf offers. The cost is that the path is *"negotiated separately"*, so it is a procurement
+conversation with an upstream owner, on an unknown timeline, and the CLA means the owner can keep
+offering it.** 🟡 **A client who merely RUNS an unmodified copy needs none of this.**
+
+### 🆕 🟢 `T208` — p168's `ECL-2.0` prediction, confirmed by an allow-list in the wild
+
+🟢 **p168 reasoned that *"no `MIT`/`Apache`/`BSD` allow-list contains `ECL-2.0` at all, so a gate will
+either refuse a safe platform or wave through an unread clause"*. That was an inference.** 🟢 **p169
+found the artifact: `Selleo/mentingo` ships `licenses.config.yaml`, a dependency licence gate with `19`
+allowed identifiers and `13` named package exceptions.**
+🟢 **Allowed, verbatim: `MIT`, `MIT-0`, `MIT/X11`, `ISC`, `Apache`, `Apache-2.0`, `Apache License 2.0`,
+`BlueOak-1.0.0`, `BSD`, `BSD-2-Clause`, `BSD-3-Clause`, `0BSD`, `Python-2.0`, `Zlib`, `MPL-2.0`,
+`Unlicense`, `CC0-1.0`, `OFL-1.1`, `CC-BY-4.0`.**
+🔴 **`ECL-2.0` is absent. So is `EPL-2.0`, which `penecho` vendors (`T207`). A client running this exact
+gate would refuse `Sakai` — the permissive LMS route — and would refuse `penecho`'s layout worker.**
+🟢 **Three further things the file teaches, which is why it is worth a `T`-number rather than a footnote:**
+- 🟡 **`3` of the `19` entries are not SPDX identifiers at all (`Apache`, `BSD`, `Apache License 2.0`) —
+  the gate matches on declared STRINGS, so it is loose by construction.**
+- 🟢 **The exceptions carry REASONING, not just names:** *"`@img/sharp-libvips-linux-x64@1.2.4` —
+  `LGPL-3.0-or-later` - sublib of sharp - not modified - not embedded in software"*. 🟢 **Several
+  others record *"missing LICENSE file"* against a licence asserted on npm or in a README — the same
+  defect class as `T201` and `T212`, caught upstream by a working engineering team.**
+- 🔴 **`licenses.comment.md`, which sits beside it and is presumably where the reasoning belongs, is
+  `0` BYTES.**
+🟢 **`P169-C` turns this into a deliverable: fork the file as an engagement's starting allow-list, add
+`ECL-2.0` and `EPL-2.0` with a decision recorded against each, and fill in the comment file.**
+
+### 🆕 🔴 `T209` — the root-only grant probe is unsound, and this pass has the counter-example
+
+🔴 **`os4ed/openSIS-Classic` is an ACTIVE student information system (HEAD `2026-10-05`) with NO grant
+file at its root. Its `GPL-2.0` sits at `docs/License.txt`, and its `README` points there.** 🔴 **A
+root-only probe — which is what `P168-A` step `5` specified — returns *"NO LICENCE FILE"* for a plainly
+licensed repository.**
+🟢 **The fix is cheap and is now in `P169-A`: enumerate the TREE with `ls-tree -r`, not the root.**
+🟢 **The shelf's one *"no licence"* verdict SURVIVES the stronger test, and is stronger for it:
+`Mr.-Ranedeer-AI-Tutor` tracks `12` files in total and `0` of them is a grant file of any kind.**
+🔴 **What the stronger test also shows: `63` grant files below the root across the shelf, unread
+(`gap 111`) — `32` of them in `penecho` alone.**
+
+### 🆕 🔴 `T204` and `T205` — the ninth and tenth false-positive classes, both from THIS pass's own first readings
+
+🔴 **`T204`, tag dereference.** 🟢 **p169's first sweep read `mentingo` at `233` tags where p168 published
+`118`, and `anki-mcp-server` at `113` against `57` — a doubling across five rows that looked like a real
+release burst.** 🔴 **It was `git ls-remote --tags | grep -c refs/tags` counting the `refs/tags/X^{}`
+dereference line that every ANNOTATED tag emits.** 🟢 **Stripping `^{}` and uniquing reproduces p168's
+figures EXACTLY on all `12` rows.** 🔵 **Recorded because the error direction is the dangerous one: it
+manufactures activity, and `tags` is a liveness signal on this shelf.**
+🔴 **`T205`, typography.** 🟢 **`tutor-gpt`'s `GPL-3.0` read `71` added / `71` removed words against the
+canonical text — a body that looked rewritten.** 🔴 **The canonical copy was SPDX's, which carries `246`
+curly quotation marks and `1` `©` glyph; the FSF's own ASCII body carries `0` of each.** 🟢 **After
+folding quotes, apostrophes, the `©` glyph and `http`→`https`, the same comparison reads `1` added /
+`1` removed — and the single word is `philosophy/why-not-lgpl.html` against
+`licenses/why-not-lgpl.html`.**
+🟢 **Which is p168's `2`-byte mystery, confirmed from a different repository on a different licence
+family by an instrument that was not looking for it.** 🔵 **Both classes share a shape with `T198`: the
+probe was right about the bytes and wrong about the meaning. The fold step is step `0` of `P169-A`.**
+
+### 🟡 `ACTION JD`, first half — NOT TAKEN, and the reason is arithmetic rather than effort
+
+🟢 **p168 handed over an exact condition: its `t0` of `2026-10-13T06:46:52Z` is a RECORDED full-`12`
+baseline, so the first pass at or after `2026-10-13T12:46:52Z` takes the `≥6` h reading with no new
+instrument.** 🔴 **p169 ran at `07:48:09Z`. The reading does not exist yet and no denominator makes it
+exist.**
+🟢 **What p169 did take, and recorded with its denominator: `0` of `12` over `1 h 01 min 17 s`.**
+🟢 **The handoff is unchanged and still exact — the baseline is on disk, the gate is a clock time, and
+the first pass after `12:46:52Z` closes it.** 🔵 **Stated plainly because three consecutive passes have
+now reported on this action and the temptation each time has been to answer at a denominator that fits.**
+
+### 🔜 Registered for p170
+
+🟢 **`ACTION JF`** — read the `32` non-root grant files in `penecho` and classify every one that is not
+`MIT`, since `EPL-2.0` is already known to be among them (`gap 111`).
+🟢 **`ACTION JG`** — take the full-`12` `≥6` h churn reading, now that the gate time has passed.
+🟢 **`ACTION JH`** — run `P169-A` (the folded gate, tree-wide) across the `7` PLATFORM rows in
+`verticals/solutions.md`, which were read at p168 under the unfolded root-only instrument; the falsifier
+is explicit — refuted if any p168 licence verdict changes.
+🟢 **`ACTION JI`** — probe whether `DeepTutor`'s paraphrased `Apache-2.0` appears in any other repo
+(a shared upstream template would make `T206` a class rather than an instance).
+
+
 ## Pass 168 — 2026-10-13
 
 🟢 **Four pre-registered actions. `3` DISCHARGED with silent falsifiers, `1` DISCHARGED AT A SMALLER

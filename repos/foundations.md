@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 169 — 2026-10-13
+
+🆕 🟢 **`ACTION JC` is DISCHARGED and `gap 109` closes in the direction nobody expected: there are no
+unnamed bundled grants in `OpenEduCat` to name. `1 345` tracked files, `1` grant file, `0` vendored
+anything, and `14` of `14` Odoo manifests declaring the same `LGPL-3`. The *"bundled libraries ... other
+GPL-compatible licenses"* clause has NO REFERENT in the tree.**
+🆕 🟢 **And the oldest hole on this shelf — no permissive SIS, re-searched for seven passes — is now
+SETTLED rather than merely re-confirmed. The web's one `Apache-2.0` answer, `Fedena`, is real as a
+grant and abandoned as software: a licensor statement in `NOTICE`, no licence body in either of its two
+trees, and a newest commit of `2016-07-20`.**
+🆕 🟢 **Two ACTIVE copyleft SIS options are verified and dated for the first time: `RosarioSIS`
+(`GPL-2.0`, HEAD `1` day old) and `openSIS-Classic` (`GPL-2.0`, HEAD `8` days old).**
+[`evidence/openeducat-bundled-grants.2026-10-13-p169.tsv`](../evidence/openeducat-bundled-grants.2026-10-13-p169.tsv)
+[`evidence/sis-permissive-settled.2026-10-13-p169.tsv`](../evidence/sis-permissive-settled.2026-10-13-p169.tsv)
+[`evidence/agent-grant-surface.2026-10-13-p169.tsv`](../evidence/agent-grant-surface.2026-10-13-p169.tsv)
+
+### 🆕 🟢 `gap 109` CLOSED — `OpenEduCat` bundles nothing, and the clause is inherited boilerplate
+
+🟢 **`ACTION JC`'s falsifier was *"refuted if vendored third-party code carrying its own grant is
+found"*. SILENT.** 🟢 **Instrument: a treeless clone at HEAD `1c95cefebc17`, then an exhaustive
+`ls-tree -r` — not a sampled probe.**
+
+| probe | result | reading |
+|---|---|---|
+| tracked files | `1 345` | — |
+| 🟢 **grant files anywhere in the tree** | 🟢 **`1`** — the root `LICENSE` | 🟢 **ONE grant surface in the whole repository** |
+| `node_modules/` · `vendor/` · `static/lib/` · `*.min.js` | 🟢 **`0` · `0` · `0` · `0`** | 🟢 **nothing is vendored** |
+| `requirements.txt` · `setup.py` · `pyproject.toml` | 🟢 **`0`** | 🟡 **no declared dependency manifest either** |
+| 🟢 **Odoo `__manifest__.py` files** | `14` | 🟢 **the real packaging unit** |
+| 🟢 **manifests declaring `'license': 'LGPL-3'`** | 🟢 **`14` of `14`** | 🟢 **UNIFORM — every module agrees with the published licence** |
+
+🔵 **So the hazard p168 flagged was mis-shaped, and saying so is the finding. The clause is Odoo's own
+licence-notice boilerplate carried into a derived repository, not a description of this tree. A licence
+review of `openeducat_erp` has `1` file to read, not an unknown number.**
+🔴 **What survives from p168 untouched is the OTHER defect, `T201`: the body still promises the
+`GPL-3.0` text *"at the bottom"* and still contains `0` occurrences of it.**
+🟡 **Where the real third-party exposure lives, stated so it is not mistaken for a clean bill: the Odoo
+runtime these `14` modules require. That is a DEPENDENCY, outside this tree, and no probe of this
+repository can speak to it.**
+
+### 🆕 🔴 `T212` — the `Fedena` question is settled, and the hole does not close
+
+🟢 **p169's vertical-platform query named exactly one new candidate, and a secondary source called it
+*"Apache 2.0"*. Instead of recording the claim, p169 verified it on the open channel.**
+
+| repo | HEAD | last commit | root grant files | licence BODY | declared licence |
+|---|---|---|---|---|---|
+| 🔴 [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | `68a84ac445bf` | 🔴 **`2016-07-20`** | 🟡 `NOTICE` only | 🔴 **ABSENT** | 🟢 `Apache-2.0`, by licensor statement |
+| 🔴 [`foradian/fedena`](https://github.com/foradian/fedena) | `333477b06f1d` | 🔴 **`2012-10-12`** | 🟡 `NOTICE` only | 🔴 **ABSENT** | 🟢 `Apache-2.0`, by licensor statement |
+
+🟢 **Verbatim from `projectfedena/fedena`'s `NOTICE`:** *"Fedena / Copyright 2011 Foradian Technologies
+Private Limited. ... Licensed under the Apache License, Version 2.0 (the `"License"`)"*.
+🟢 **So the grant IS real — a licensor statement, the strongest channel this container has.** 🔴 **And
+the software is an abandoned `2011` Rails application: over ten years since the newer tree moved,
+fourteen since the older one.** 🔴 **Neither tree contains the Apache text it names — the same defect
+class as `T201`.**
+🔵 **Why this is worth a `T`-number: it CLOSES A SEARCH LOOP. Seven passes have re-run this query and
+`Fedena` is the only name it has ever produced. It is now settled with a reason, so p170 should not
+spend the query again.**
+🟢 **The absence restates more usefully than before: not *"no permissive SIS exists"* but **"no
+permissive AND MAINTAINED SIS exists"** — and the permissive one that did exist is datable.**
+
+### 🆕 🟢 Two active SIS routes, verified — new rows on this shelf
+
+| repo | licence | where the grant lives | HEAD | age | note |
+|---|---|---|---|---|---|
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** *(`15 214 B`, *"Version 2, June 1991"*)* | 🟢 root `LICENSE` | `232819b4c07e` | 🟢 **`1` d** | 🟢 **the most active SIS this KB has verified** |
+| 🟡 [`os4ed/openSIS-Classic`](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** | 🔴 **`docs/License.txt` — NOT the root (`T209`)** | `5d546f20117e` | 🟢 `8` d | 🔴 **vendors `CKEditor` and plugins with their own grants, unread (`gap 112`)** |
+
+🔵 **Routing consequence: a client who can accept `GPL-2.0` now has two live SIS routes with dates
+attached, where this shelf previously had only `OpenEduCat`'s `LGPL-3.0`. A client who cannot accept
+copyleft still has nothing, and that is now a measured statement rather than an open search.**
+
+### 🆕 🟢 `P169-A` — the licence gate, corrected in two places by its own failures
+
+🟢 **`P168-A`'s six steps stand. p169 adds a step `0` and rewrites step `5`, because this pass's own
+first readings were wrong in both places.**
+
+| step | what it does | why |
+|---|---|---|
+| 🆕 🟢 **`0`. FOLD** | 🟢 **normalise curly quotes, apostrophes, the `©` glyph and `http`→`https` BEFORE any diff** | 🔴 **`T205` — SPDX's canonical texts carry `246` curly quotes and `1` `©`; FSF ASCII bodies carry `0`. Unfolded, a clean `GPL-3.0` reads as `71` deviations** |
+| 🟢 `1`–`4` | 🟢 title-line family · canonical word diff · permissive-set membership · body-contains-its-family | 🟢 unchanged |
+| 🆕 🔴 **`5`. TREE, not root** | 🔴 **enumerate grant files with `ls-tree -r` across the whole tree** | 🔴 **`T209` — `openSIS-Classic` keeps its `GPL-2.0` in `docs/`, so a root probe calls an active, plainly licensed SIS *"unlicensed"*** |
+| 🟢 `6` | 🟢 resolve every pointer | 🟡 **`fsf.org` and `gnu.org` are unresolvable here (`T211`), so those pointers are UNRESOLVED, not broken** |
+
+### 🆕 🟢 `P169-B` — the treeless clone: a `200×` cheaper instrument for every inventory question
+
+🔴 **p168 answered *"which grant files exist?"* by cloning `10` full trees: `623 MB`, `11 684` files.**
+🟢 **p169 answered it for `13` repos with `git clone --depth 1 --filter=blob:none --no-checkout`
+followed by `ls-tree -r`: `3.1 MB` total.**
+🟢 **The answer is strictly LARGER — `17` root plus `63` non-root grant files across `12` rows, plus the
+`1 345`-file `OpenEduCat` census and `4` SIS candidates — because a treeless clone carries every path in
+the tree while downloading no blob.**
+🟢 **Pair it with `raw.githubusercontent.com` pinned at the HEAD sha for the bodies you actually want.
+Both channels are confirmed open in a fresh container this pass.**
+🔵 **The rule: clone blobs only when you need to read MANY files. For *"does this file exist"*,
+*"what is in this tree"*, or *"what is the HEAD date"*, blobs are pure cost.**
+
+### 🟢 The foundation shelf — licence verdicts carried from p168
+
+🟢 **p168 body-read these `9` under the unfolded, root-only instrument. `ACTION JH` re-runs them under
+`P169-A`; until then the verdicts stand as published, with the instrument named.**
+
+| repo | licence | p168 verdict | p169 status |
+|---|---|---|---|
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` | 🟢 CLEAN | 🟡 carried — re-read pending (`ACTION JH`) |
+| 🟢 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | 🟢 CLEAN | 🟡 carried |
+| 🟢 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | 🔴 `GPL-3.0` | 🟢 CLEAN | 🟡 carried |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 CLEAN | 🟢 **still the SCORM `2004` route (`P168-B`)** |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** | 🔴 SUBSTITUTED LICENCE | 🔴 **and now known to fail a real allow-list (`T208`)** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` | 🔴 BODY OMISSION | 🟢 **`gap 109` CLOSED this pass — nothing bundled** |
+| 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` | 🔴 TWO GRANT SURFACES | 🟡 carried |
+| 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 `AGPL-3.0` | 🟢 RPC carve-out | 🟡 carried — `gap 107` stands |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 `Apache-2.0` | 🟢 addendum reproduced | 🟡 carried |
+
+
 ## Pass 168 — 2026-10-13
 
 🟢 **`ACTION IX` is DISCHARGED, falsifier SILENT: of the `7` repos this shelf RECOMMENDS but had

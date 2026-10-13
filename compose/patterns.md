@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P169-A` — the licence gate, folded and tree-wide *(replaces `P168-A`, p169 — Global)*
+
+🔴 **Why it replaces `P168-A`: both of p169's own first readings were wrong, in two different places,
+and each error produced a finding that looked real. A gate that fires on typography or misses a grant
+file in `docs/` is worse than no gate, because its output looks authoritative.**
+
+**Recipe, seven steps. Every step runs on a channel confirmed open in a fresh container (p169).**
+
+```bash
+REPO=HKUDS/DeepTutor
+SHA=$(git ls-remote https://github.com/$REPO HEAD | cut -c1-12)
+
+# STEP 5 FIRST (T209): enumerate the TREE, not the root. Treeless clone - no blobs (P169-B).
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/$REPO /tmp/t
+git -C /tmp/t ls-tree -r --name-only HEAD | grep -Ei 'licen|copying|notice|legal'
+#   -> root LICENSE *and* THIRD_PARTY_NOTICES.md *and* anything under docs/ or vendor/
+
+# STEP 1: title-line family, from the body - never from a badge or a repo page
+curl -sS "https://raw.githubusercontent.com/$REPO/$SHA/LICENSE" -o /tmp/body
+grep -m1 -v '^[[:space:]]*$' /tmp/body
+
+# STEP 0: FOLD before diffing (T205). SPDX texts carry 246 curly quotes and 1 (c) glyph;
+#         FSF ASCII bodies carry none. Unfolded, a clean GPL-3.0 reads as 71 deviations.
+fold(){ perl -CSD -pe 's/[\x{201C}\x{201D}]/"/g; s/[\x{2018}\x{2019}]/\x27/g;
+                       s/\x{00A9}/(C)/g; s|http://|https://|g' "$1" \
+        | tr -s '[:space:]' '\n' | grep -v '^$'; }
+
+# STEP 2: canonical word diff. Apache from apache.org; everything else from SPDX on raw.
+curl -sS https://www.apache.org/licenses/LICENSE-2.0.txt -o /tmp/canon
+#   or: raw.githubusercontent.com/spdx/license-list-data/main/text/<SPDX-ID>.txt
+diff <(fold /tmp/canon) <(fold /tmp/body)
+```
+
+| step | what it answers | the failure it prevents |
+|---|---|---|
+| 🆕 🟢 **`0`. FOLD** | 🟢 **is a difference typographic or real?** | 🔴 **`T205` — `71` phantom word hunks on a clean `GPL-3.0`** |
+| 🟢 `1`. title-line family | 🟢 what does the body CALL itself? | 🔴 `Sakai` published as *"Apache-derived"* |
+| 🟢 `2`. canonical word diff | 🟢 is it the licence it names? | 🔴 **`T206` — `DeepTutor`'s altered section `4(d)`** |
+| 🟢 `3`. permissive-set membership | 🟢 will a real gate accept it? | 🔴 **`T208` — `ECL-2.0` and `EPL-2.0` are in NO allow-list** |
+| 🟢 `4`. body-contains-its-family | 🟢 does it contain the text it promises? | 🔴 `T201` — `OpenEduCat`; `T212` — `Fedena` |
+| 🆕 🔴 **`5`. ALL grant files, TREE-WIDE** | 🔴 **how many grant surfaces are there?** | 🔴 **`T209` — `openSIS-Classic`'s `GPL-2.0` lives in `docs/`; `T207` — `penecho` has `36`** |
+| 🟢 `6`. resolve every pointer | 🟡 do its references exist? | 🔴 `T202` — `Chamilo`'s two `404`s |
+
+🟡 **Honest limit: step `6` cannot complete in this container. `fsf.org` and `gnu.org` are unreachable
+(`T211`), so `GPL`/`AGPL` pointers come back UNRESOLVED — which is not the same as broken, and must be
+recorded as unresolved.**
+
+## 🆕 🟢 `P169-B` — the treeless clone: inventory without blobs *(new, p169 — Global)*
+
+🔴 **p168 answered *"which grant files exist?"* with `10` full clones: `623 MB`, `11 684` files.**
+🟢 **p169 answered it for `13` repositories in `3.1 MB` — and got a strictly LARGER answer.**
+
+```bash
+git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/$REPO /tmp/t
+git -C /tmp/t ls-tree -r --name-only HEAD        # every path, no blob downloaded
+git -C /tmp/t log -1 --format=%cs                # HEAD date, read not inferred
+curl -sS "https://raw.githubusercontent.com/$REPO/$SHA/<path>"   # only the bodies you want
+```
+
+🟢 **Use it for: does this file exist · what is in this tree · how many files · what is the HEAD date ·
+which modules declare which licence.** 🔴 **Clone blobs only when you must read MANY files from one
+tree.** 🔵 **The rule in one line: a path list is free, a blob is not.**
+🟢 **Measured this pass: `1 345` files censused in `OpenEduCat`, `63` non-root grant files found across
+`12` agent rows, `4` SIS candidates dated — all without downloading a single source file.**
+
+## 🆕 🟢 `P169-C` — the engagement licence gate, forked from a real one *(new, p169 — all four regions)*
+
+🔵 **Every engagement needs a licence allow-list and most are written from scratch, badly. `p169` found
+a working one on this shelf and it is `1 119` bytes.**
+
+**Recipe:**
+1. 🟢 **Fork [`Selleo/mentingo`](https://github.com/Selleo/mentingo)'s `licenses.config.yaml`
+   (`MIT`, so you may) as the starting allow-list: `19` identifiers, `13` package exceptions.**
+2. 🔴 **Add the two licences this KB has measured as MISSING from it, each with a recorded decision:**
+   - 🔴 **`ECL-2.0`** — `Sakai`, the permissive LMS route. The decision to record is `T200`'s patent
+     limb: contributions by institutionally employed authors carry a narrowed grant. **Allow for USE;
+     flag for CONTRIBUTION.**
+   - 🔴 **`EPL-2.0`** — `penecho`'s vendored `elkjs 0.12.0` layout worker. **Allow as an unmodified,
+     separately licensed component; refuse if modified.**
+3. 🟢 **Add `ECL-2.0` and `EPL-2.0` to the scanner's identifier map too — `3` of `mentingo`'s `19`
+   entries (`Apache`, `BSD`, `Apache License 2.0`) are not SPDX ids, so the gate matches declared
+   strings and will silently miss a correctly-tagged `ECL-2.0`.**
+4. 🟢 **Fill in `licenses.comment.md` — `0` bytes upstream. One line per exception: what it is, why it
+   is allowed, and whether the component is modified or embedded.**
+5. 🟢 **Run `P169-A` on every repo the gate admits, because the gate reads DECLARATIONS and `P169-A`
+   reads BODIES. `8` of `26` bodies this KB has read deviate from their declaration.**
+
+🟢 **Deliverable shape: a checked-in config, a one-page decision record per exception, and a CI step.
+That is the form the compliance burden is already taking in these repositories — meet the client there
+rather than with a policy PDF.**
+
+## 🆕 🟡 `P169-D` — the dual-licence escape hatch, priced honestly *(new, p169 — Global)*
+
+🔵 **For a client who wants an `AGPL-3.0` component and cannot accept `AGPL-3.0`.** 🟢 **`penecho` is
+the only row on this shelf with a NAMED commercial path (`T207`), so this recipe exists — but its cost
+is procurement, not engineering, and it must be said first.**
+
+| step | what to do |
+|---|---|
+| 🟢 **`1`** | 🟢 **Establish which limb actually binds. Running an UNMODIFIED copy — internally or commercially — needs nothing: the project says so in `COMMERCIAL-LICENSE.md`. Most clients stop here** |
+| 🔴 **`2`** | 🔴 **If the client will modify and offer it as a network service, or ship it inside a proprietary product, or combine it with AGPL-incompatible code — the commercial licence is required** |
+| 🔴 **`3`** | 🔴 **Open the negotiation BEFORE the architecture depends on it. Terms are *"negotiated separately with the applicable copyright holder"*, with no published price or timeline** |
+| 🟡 **`4`** | 🟡 **Handle the carve-outs separately: `elkjs 0.12.0` (`EPL-2.0`) and several `MIT` vendored modules are NOT under the repository default, per the `NOTICE`** |
+| 🟡 **`5`** | 🟡 **Note the CLA and the trademark reservation: contributions are assigned on terms that let the owner keep dual-licensing, and the name, wordmark and logo are not granted with the code** |
+
+🔴 **The alternative to price against: `Open edX`'s `AGPL-3.0` RPC carve-out behind an API boundary
+(`gap 107` — a licensor statement, not counsel), which needs no negotiation at all.**
+
+
 ## 🆕 🟢 `P168-A` — the licence-body gate: read the grant, not the family name *(replaces the family-name check, p168 — Global)*
 
 🔵 **What changed from `P167-D`:** 🟢 **`P167-D` replaced body-substring matching with a TITLE-LINE

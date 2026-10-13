@@ -1,0 +1,33 @@
+# ACTION JE - P168-A steps 3-6 across all 12 agent rows, which had only ever had steps 1-2.
+# Instrument: treeless clone (git clone --depth 1 --filter=blob:none --no-checkout) for the FILE
+# INVENTORY, raw.githubusercontent.com pinned at the p169 HEAD sha for every BODY. Canonical texts:
+# Apache-2.0 from apache.org (11 358 B), AGPL-3.0-only and GPL-3.0-only from spdx/license-list-data
+# on raw.githubusercontent.com. Word diff after typographic + URL-scheme folding (T205).
+repo	root_grant_files	nonroot_grant_files	tracked_files	body_read	bytes	title_line	canonical_added	canonical_removed	verdict
+ai-shifu/ai-shifu	LICENSE.txt	3	3231	yes	11342	Apache License 2.0	2	5	CLEAN - APPENDIX placeholder filled (2024 / ai-shifu.com)
+penecho/penecho	LICENSE,NOTICE,COMMERCIAL-LICENSE.md,CONTRIBUTOR-LICENSE-AGREEMENT.md	32	1093	yes	34523	AGPL-3.0	0	0	DUAL-LICENSED - body verbatim, but 4 root + 32 non-root grant surfaces (T207)
+echo-loop/Echo-Loop	LICENSE	6	1705	yes	34523	AGPL-3.0	0	0	CLEAN - verbatim after folding
+ankimcp/anki-mcp-server	LICENSE	0	271	yes	1074	MIT	-	-	CLEAN - holder Anatoly Tarnavsky, 2026
+Selleo/mentingo	LICENSE,licenses.config.yaml,licenses.comment.md	6	4753	yes	1062	MIT	-	-	CLEAN + ships its own dependency allow-list (T208)
+HKUDS/DeepTutor	LICENSE,THIRD_PARTY_NOTICES.md	8	3763	yes	11408	Apache License 2.0	40	29	NON-VERBATIM Apache-2.0 - section 4(d) altered, APPENDIX rewritten (T206)
+CaviraOSS/PageLM	LICENSE.md	0	195	yes	8563	PageLM Community License	-	-	NOT OPEN SOURCE - re-confirmed, non-commercial and revocable
+zijinz456/OpenTutor	LICENSE	0	890	yes	1068	MIT	-	-	CLEAN - holder Zijin Zhang, 2026
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	LICENSE	8	905	yes	1070	MIT	-	-	CLEAN - holder Akshit Ireddy, 2026
+HugeCatLab/ChatTutor	LICENSE	0	351	yes	34522	AGPL-3.0	0	0	CLEAN - the 1-byte spread vs the other two AGPL bodies is TRAILING WHITESPACE
+plastic-labs/tutor-gpt	LICENSE	0	158	yes	35149	GPL-3.0	1	1	CLEAN - the single word is philosophy/ vs licenses/why-not-lgpl.html (confirms p168)
+JushBJJ/Mr.-Ranedeer-AI-Tutor	NONE	0	12	n/a	0	-	-	-	NO GRANT FILE ANYWHERE - exhaustive: 0 of 12 tracked files
+# TOTALS: 17 root grant files READ this pass. 63 non-root grant files enumerated and NOT read (gap 111).
+# STEP 3, permissive-set membership: 4 MIT + 2 Apache-2.0 = 6 of 12 permissive. 3 AGPL-3.0 + 1 GPL-3.0
+#   = 4 copyleft. 1 proprietary community licence. 1 with no grant at all. Unchanged from p168.
+# STEP 4, body-contains-its-family: 11 of 11 bodies read contain their own family's operative text.
+#   No repeat of the OpenEduCat defect (a body that promises a licence it does not contain).
+# STEP 6, pointers resolved: apache.org/licenses/LICENSE-2.0 = 200. fsf.org and gnu.org/licenses = not
+#   resolvable from this container (T211), so the AGPL/GPL pointers are UNRESOLVED, not broken.
+# T205 - TENTH FALSE-POSITIVE CLASS, typographic. SPDX's canonical texts carry 246 curly quotation
+#   marks and 1 (c) glyph; the FSF's own ASCII bodies carry 0 of each. Diffed raw, tutor-gpt reads
+#   71 added / 71 removed words against SPDX and looks heavily modified. After folding curly quotes,
+#   apostrophes, the (c) glyph and http->https, it reads 1 / 1. The deviation was the INSTRUMENT.
+# T209 - step 5 must enumerate the TREE, not the root. os4ed/openSIS-Classic (ACTIVE, HEAD 2026-10-05)
+#   keeps its GPL-2.0 at docs/License.txt and has NO root grant file: a root-only probe returns
+#   "NO LICENCE FILE" on a repo that is plainly licensed. Mr.-Ranedeer's verdict survives the stronger
+#   test - 0 grant files across all 12 tracked files, not merely absent from the root.

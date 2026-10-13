@@ -1,0 +1,23 @@
+# ACTION JD, first half. p169 swept all 12 agent rows at t0 = 2026-10-13T07:48:09Z and diffed against
+# p168's RECORDED full-12 baseline t0 = 2026-10-13T06:46:52Z. Interval 1 h 01 min 17 s, DENOMINATOR 12.
+# The >=6 h reading at denominator 12 that ACTION JD asked for is NOT TAKEN and could not be: the
+# oldest full-12 anchor is p168's 06:46:52Z, so the earliest possible full-12 >=6 h reading is
+# 2026-10-13T12:46:52Z. p169 ran at 07:48Z, 4 h 59 min short. Recorded as not-taken, not smoothed.
+repo	p168_t0_sha	p169_t0_sha	changed	tags_unique	tags_raw_grep	deref_refs
+ai-shifu/ai-shifu	2ff4af09b7bb	2ff4af09b7bb	no	43	43	0
+penecho/penecho	076c1ad54a85	076c1ad54a85	no	16	32	16
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	no	42	47	5
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	no	57	113	56
+Selleo/mentingo	242a9324fe48	242a9324fe48	no	118	233	115
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	no	86	135	49
+CaviraOSS/PageLM	a6646794661b	a6646794661b	no	0	0	0
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	no	0	0	0
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	no	5	5	0
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	no	2	2	0
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	no	0	0	0
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	no	3	3	0
+# READING: 0 of 12 changed over 1 h 01 min 17 s, denominator 12.
+# T204 - the tag column is INSTRUMENT-DEPENDENT. `git ls-remote --tags | grep -c refs/tags` counts the
+# `refs/tags/X^{}` dereference line emitted for every ANNOTATED tag, so it reads 233 where mentingo has
+# 118 tags. The sound instrument strips `^{}` and uniques. tags_unique reproduces p168's column EXACTLY
+# on all 12 rows, so p168's figures were right and p169's first reading was wrong. Ninth FP class.

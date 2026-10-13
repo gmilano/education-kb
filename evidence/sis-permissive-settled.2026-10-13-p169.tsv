@@ -1,0 +1,20 @@
+# The oldest hole on this shelf - no SIS and no education ERP under MIT/Apache/BSD - has been
+# re-searched for seven consecutive passes. p169's sweep named ONE new candidate, Fedena, described by a
+# secondary source as Apache 2.0. p169 VERIFIED it on the open channel instead of recording the claim.
+repo	ls-remote	HEAD_sha	HEAD_date	root_grant_files	licence_body	declared_licence	verdict
+foradian/fedena	OK	333477b06f1d	2012-10-12	NOTICE only	ABSENT	Apache-2.0, by NOTICE licensor statement	REAL GRANT, DEAD CODE - 14 years since last commit
+projectfedena/fedena	OK	68a84ac445bf	2016-07-20	NOTICE only	ABSENT	Apache-2.0, by NOTICE licensor statement	REAL GRANT, DEAD CODE - over 10 years since last commit
+os4ed/openSIS-Classic	OK	5d546f20117e	2026-10-05	NONE at root	docs/License.txt	GPL-2.0	ACTIVE, COPYLEFT - and the row that proves T209
+francoisjacquet/rosariosis	OK	232819b4c07e	2026-10-12	LICENSE	15 214 B, "Version 2, June 1991"	GPL-2.0	ACTIVE, COPYLEFT - 1 day old at this pass
+openeducat/openeducat_erp	OK	1c95cefebc17	-	LICENSE	8 241 B, INCOMPLETE (T201)	LGPL-3.0	ACTIVE, WEAK COPYLEFT - uniform across 14 of 14 modules (ACTION JC)
+# FEDENA, verbatim from projectfedena/fedena NOTICE: "Fedena / Copyright 2011 Foradian Technologies
+# Private Limited. ... Licensed under the Apache License, Version 2.0 (the "License")".
+# T212 - the Fedena question is SETTLED and should not be re-searched. The grant is real: a licensor
+# statement in NOTICE, which is the strongest channel available here. But there is NO licence body in
+# either tree, and the newest of the two trees has not moved in over ten years. So the web's one
+# Apache-2.0 SIS answer is an abandoned 2011 Rails application, and the hole does NOT close.
+# WHAT CHANGES ANYWAY: two ACTIVE copyleft SIS options are now verified and dated, which this KB did
+# not hold. For a client who can accept GPL-2.0, RosarioSIS (HEAD 1 day old) and openSIS-Classic
+# (HEAD 8 days old) are live routes. The absence is now specifically "no PERMISSIVE and MAINTAINED
+# SIS", which is a narrower and more useful statement than "no permissive SIS".
+# gap 112, NEW: openSIS-Classic vendors CKEditor and its plugins with their own grant files, unread.
