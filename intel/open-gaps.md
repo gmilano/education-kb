@@ -31,6 +31,7 @@ what is in it.**
 | 🟢 **"North America: no fact verified at source, nothing named"** | 🔴 **4 passes** | 🟡 **PARTIALLY closed — still `0` verified at source, but the drought of CONTENT broke: Idaho SB 1227, Maryland SB 720, Oklahoma (binding `2026-07-01`, parent opt-out), California A.B. 1159 pending** |
 | 🟢 **"market incoherent, no explanation"** | 🔴 **14 passes** | 🟡 **The INCOHERENCE stands (15th pass, `5.9×` spread) but its CAUSE is now named: the high estimates bundle corporate training with K-12 and higher ed. `T168`** |
 | 🟢 **`T134`'s scope — "nothing is verifiable"** | 🔴 **6 passes** | 🟢 **CLOSED as a clean ASYMMETRY rather than a blanket failure.** 🆕 **`T167`: `4 of 4` document hosts refused, `2 of 2` git hosts answered. The code channel is primary here, permanently** |
+| 🟢 **"`education-kb` cannot be pushed — access restriction"** | 🔴 **7 passes** | 🟢 **CLOSED AS FALSE.** 🆕 **`T169`: never tested. `add_repo` with `access:"push"` on this account's OWN repo returns `status: appended` and the push succeeds (`c236581..3e2a2b5`).** 🔴 **p163's `ACTION IF` correctly refuted attaching THIRD-PARTY repos, and that true result was over-generalised to *"nothing can be attached"* — the account's own repository was never in the test set.** 🔵 **The refusal named its own remedy for seven passes** |
 
 ## 🔴 Gaps OPENED or carried, with their age
 

@@ -70,6 +70,39 @@ release is a fact with a primary channel anyone can check and a star count is no
 🟢 **The practical rule this shelf now follows: a secondary claim about a repository is
 promotable when a git-channel primary exists for the same field.**
 
+### 🆕 🟢 `T169` — the SEVEN-PASS "push is blocked" belief was never tested, and it is FALSE
+
+🔴 **Every pass from p158 to p163 closed by recording some form of
+*"`education-kb` push BLOCKED — access restriction, session scoped to `globant-kb`"*, and each
+pass inherited it from the one before.** 🟢 **p164 tested it. The push SUCCEEDED:
+`c236581..3e2a2b5 HEAD -> main`.**
+
+🟢 **What was actually true:** 🟢 **the git proxy declines to inject a credential for a
+repository that is not in the session's authorised set, and it says so in the refusal —
+*"add the repository to the session's sources"*.** 🟢 **`add_repo` with `access: "push"` on
+`gmilano/education-kb` returns `status: appended`, and the next push goes through.**
+
+🔵 **Why this was missed for seven passes, which is the part worth keeping:**
+
+| p163's `ACTION IF` tested | p164 tested |
+|---|---|
+| 🔴 **THIRD-PARTY** repositories — `openolat/OpenOLAT`, `moodle/moodle` — which this account cannot push to | 🟢 **THIS ACCOUNT'S OWN** repository — `gmilano/education-kb` |
+| 🔴 Correctly REFUTED: *"you need push access to openolat/openolat"* | 🟢 **`status: appended`, push succeeded** |
+
+🆕 **`T169`:** 🟢 **`T149` is CORRECT and is not withdrawn — a third-party repo cannot be
+attached.** 🔴 **What happened is that its true conclusion was over-generalised into *"nothing
+can be attached"*, and the one repository that mattered — the account's own — was never in the
+test set.** 🔵 **A refusal message that NAMES its remedy was read as a wall for seven passes.**
+
+🟢 **The operating consequence, and it is not small: this KB's own pages have been reaching
+`main` only by human merge.** 🟢 **From p164 they reach it directly.** 🔵 **And because the
+rotation runs twelve industry repositories through the same harness, the same inherited belief
+is likely sitting in all of them.**
+
+🔵 **The method rule this re-earns — p162 wrote it and p164 is the proof it was right:**
+🟢 ***a declared gap must be RE-TESTED, not inherited.*** 🔴 **This one was inherited seven
+times, and the test cost one tool call.**
+
 ### 🟢 The agent shelf — `0` new rows, SIXTH consecutive pass, and a NEW column
 
 🔴 **`T110` corroborated an EIGHTH time: global discovery queries returned AI CURRICULUM again**
