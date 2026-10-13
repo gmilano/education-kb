@@ -1,0 +1,19 @@
+# T145 — the AI Act Annex III evaluative tier, re-cut: it contains TWO open-source platforms, one MIT
+# read 2026-10-13 from clones, file content not metadata
+platform	licence	evaluative action	default state	who produces the raw number	who computes the verdict	range guard	veto	provenance kept
+moodle/moodle	GPL-3.0	NONE (4 generative actions)	n/a	n/a	n/a	n/a	n/a	ai_action_register, 15 cols
+openolat/OpenOLAT	Apache-2.0	essay-grading	ai.feature.essay-grading.enabled = false	model returns SIGNALS; holistic score "advisory only"	OpenOLAT server-side weighting	typed confidence + off-topic enums	3 pre-filters refuse before provider is paid	a_prompt_template_version + a_content_hash_at_call; o_ai_usage_log 33 cols
+Selleo/mentingo	MIT	ai judge (ai_mentor roleplay practice)	schema present; ai_mentor_lessons.type default 'roleplay'	model awards PER-CRITERION awardedScore	server: sum(awardedScore) vs ceil(maxScore * passingThresholdPercent/100)	THROWS "AI Judge awarded a score outside the configured range" if awardedScore > maxScore	blocking errors veto pass, each re-verified by a SECOND LLM call	max_score_at_judgement per criterion
+openedx/edx-platform	AGPL-3.0	0 AI files	n/a	n/a	n/a	n/a	n/a	none
+# mentingo ai_judge schema, 0162_add_ai_judge_schema.sql, 7 tables:
+#   ai_judge_configurations (passing_threshold_percent, UNIQUE per ai_mentor_lesson_id)
+#   ai_judge_criteria (max_score, expected_behavior)
+#   ai_judge_score_guidance (score, description, example; UNIQUE(criterion_id, score)) — rubric anchors
+#   ai_judge_blocking_errors (description)
+#   ai_mentor_judgements (earned_points, max_score, percentage, passed BOOLEAN NOT NULL, UNIQUE per thread)
+#   ai_mentor_judgement_criteria (awarded_points, max_score_at_judgement, status, learner_safe_feedback)
+#   ai_mentor_judgement_blocking_errors (blocking_error_description + learner_safe_feedback)
+# every one of the 7 is tenant_id scoped, default current_setting('app.tenant_id'), FK to tenants, RLS
+# scoring code: apps/api/src/ai/utils/judgeEvaluation.ts:26,50-58,74-85
+# judge service: apps/api/src/ai/services/judge.service.ts:100-165 (two-stage blocking-error verification)
+# both evaluative platforms keep the FINAL VERDICT in server code. That is the reusable Art-14 pattern.

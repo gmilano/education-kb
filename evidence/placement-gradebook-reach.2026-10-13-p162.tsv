@@ -1,0 +1,15 @@
+# ACTION IE — can a Moodle aiplacement_* plugin reach a gradebook write?
+# moodle/moodle HEAD f20534726	read 2026-10-13	sparse checkout of public/ai (677 files)
+question	evidence	path	answer
+core placements shipped	courseassist, editor	public/ai/placement/{courseassist,editor}	2, neither evaluative
+core actions shipped	generate_text, generate_image, summarise_text, explain_text	public/ai/classes/aiactions/	4, 0 evaluative (confirms p160)
+is a placement a full plugin?	version.php + db/access.php + db/services.php + lang/ + classes/external/ + classes/privacy/	public/ai/placement/*/	YES — standard Moodle subplugin anatomy, no sandbox
+can a placement declare its own action?	get_action_list(): array returns action CLASS NAMES, declared by the placement	public/ai/classes/placement.php:34	YES
+does core restrict which action classes exist?	get_supported_actions() calls $pluginclassname::get_action_list() with no allowlist	public/ai/classes/manager.php:75-77	NO allowlist
+does the dispatcher restrict action type?	process_action(base $action) accepts any instance of core_ai\aiactions\base	public/ai/classes/manager.php:191	type constraint only
+who decides where an action writes?	abstract public function store(response_base $response): int	public/ai/classes/aiactions/base.php:50	the ACTION — plugin-implemented
+is the write target overridable?	protected function get_tablename()	public/ai/classes/aiactions/base.php:118	YES
+is the gradebook reachable from plugin code?	function grade_update($source, $courseid, $itemtype, ...) — global function, $source is a free-text label	public/lib/gradelib.php:64	YES, no caller allowlist
+# falsifier: "refuted if a placement plugin cannot reach a gradebook write" => NOT REFUTED. FALSIFIER SILENT.
+# consequence: the Annex III boundary at Moodle's core/plugin line is a FACT ABOUT WHAT CORE SHIPS,
+#   not a technical gate. Core ships 0 evaluative actions; nothing stops a placement adding one that writes grades.

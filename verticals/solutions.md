@@ -3,6 +3,49 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 162 — 2026-10-13
+
+🔴 **One pass ago this page split its routing table on *"does the engagement GRADE?"* and sent
+every grading engagement to OpenOLAT as the only open-source platform that does it.**
+🔴 **That is now wrong in two ways: a MIT-licensed platform on this shelf also grades, and the
+platform this page recommends for grading defends its authored content in code while defending
+the graded answer with a sentence in a prompt.**
+[`evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv`](../evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv)
+
+### 🆕 🟢 The routing table, re-cut on licence × evaluative, which is the cut a client actually faces
+
+| engagement | platform | licence *(body-read)* | why — and what changed this pass |
+|---|---|---|---|
+| 🟢 **Governed AI inside an existing LMS, NO grading** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) core AI | 🟡 **GPL-3.0** | 🟢 **UNCHANGED, and now measured twice: `4` actions, `0` evaluative, so CORE cannot be configured into Annex III.** 🆕 🔴 **But a PLUGIN can — `ACTION IE` proved an `aiplacement_*` plugin reaches `grade_update()`. The boundary is what core SHIPS, not a gate core ENFORCES.** 🔴 **Ledger keeps prompt and response forever — pair with `P161-B`** |
+| 🆕 🟢 **AI that GRADES, and the client needs a PERMISSIVE licence with a patent grant** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🟢 **Still the strongest oversight design on the shelf: model returns signals, server computes the mark, consent modal, `3` pre-filters, `a_prompt_template_version` for re-running a contested mark, `33`-column ledger.** 🆕 🔴 **Ships with NO code-level injection guard on the student answer — close that before go-live (`P162-B`), it is a four-hour change** |
+| 🆕 🟢 **AI that GRADES, and the client needs MIT and MULTI-TENANCY from day one** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** (`LICENSE`, 1 062 B) | 🆕 🟢 **NEW ROW. A `7`-table AI judge: author-set `passing_threshold_percent`, rubric score ANCHORS with worked examples, `passed` computed server-side, blocking errors re-verified by a second model call before they can fail a learner, `max_score_at_judgement` so editing a rubric never rewrites a past mark.** 🟢 **All `7` tables tenant-scoped with RLS — the only platform here that is multi-tenant by construction.** 🔴 **`4 753` files against Moodle's `67 589`: far less platform, so far more to build** |
+| 🟢 **Content, courseware, no AI governance requirement** | 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 🔴 **UNCHANGED and still not in the permissive tier.** 🔴 **`0` AI files — nothing to govern, and nothing to build on either** |
+| 🟢 **SCORM authoring / export** | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🆕 🟢 **Confirmed by a second instrument this pass: `@repo/scorm-export-generator` + `@repo/scorm-export-runtime` in-tree, player `scorm-again@3.0.4` (MIT, registry-read).** 🟢 **Licence closure MIT over MIT** |
+
+### 🆕 🔴 The question that now decides a grading engagement, and it is not the licence
+
+🔴 **Both grading platforms keep the final verdict in server code. Neither hardens the student
+answer in code.** 🟢 **So the delivery question is no longer *"which platform grades"* — two do —
+but *"who owns the injection surface on the graded path"*, and on both platforms the answer today
+is nobody.**
+
+| platform | guard on AUTHOR content | guard on STUDENT answer | verdict authority |
+|---|---|---|---|
+| 🟢 OpenOLAT | 🟢 **`AiContentHardener`: `14` regexes, `5` HTML tags, `javascript:`, tested** | 🔴 **prompt instruction + `-----` fence only** | 🟢 server-side weighting |
+| 🟢 mentingo | 🟡 **not assessed this pass** | 🟡 **not assessed this pass** | 🟢 **server sum vs author threshold, + double-verified veto** |
+
+🔵 **This is a selling point, not a disqualification: the oversight apparatus a regulator asks
+about is already built on both platforms, and the gap that remains is small, specific and
+cheap — which is exactly the shape of work a studio should want to be holding.**
+🔜 **mentingo's two unassessed cells are registered as `ACTION IH`.**
+
+### 🟡 The platform inventory, carried unchanged
+
+🟢 **Moodle, Open edX, Canvas, BigBlueButton, H5P, Kolibri, OpenEduCat, Sakai, Richie and
+Tutor-CLI stand as previously recorded.** 🔴 **`OpenEduCat` is re-confirmed LGPLv3 from the
+vendor's own glossary this pass — NOT MIT and NOT Apache, which the global ERP query has now
+asserted six passes running** *(`T122`)*. 🔵 **It is built on Odoo, so the ERP primitives are
+Odoo's and the licence question is Odoo's too.**
 ## Pass 161 — 2026-10-12
 
 🔴 **This page routed *"governed AI inside an existing LMS"* to Moodle one pass ago on the

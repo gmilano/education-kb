@@ -3,6 +3,100 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 162 — 2026-10-13
+
+🟢 **`ACTION ID` ran on this page's two most load-bearing platform rows and returned the result
+this page wanted: `0 of 8` published capabilities fail STEP 7 or STEP 8.**
+🔴 **It also found that the audit cannot see what the page never claimed, and that STEP 7 has a
+HORIZON on Moodle that it does not have on Django.**
+[`evidence/step7-step8-audit.2026-10-13-p162.tsv`](../evidence/step7-step8-audit.2026-10-13-p162.tsv)
+
+### 🟢 `ACTION ID` — DISCHARGED, falsifier SILENT. Every capability this page publishes survives
+
+🔴 **The falsifier was: *"refuted if `≥1` capability currently published for either platform fails
+STEP 7 or STEP 8"*.** 🟢 **Eight audited, zero failures.**
+
+| platform | published capability | STEP 7 — deleted by migration? | STEP 8 — out of repo? |
+|---|---|---|---|
+| 🟡 `moodle/moodle` | Open Badges, `306` paths, OB v2 | 🟡 **NARROWED — `badge.imageauthorname` / `imageauthoremail` / `imageauthorurl` dropped at `2025013100.01`** | 🟢 no |
+| 🟡 `moodle/moodle` | xAPI, `78` paths | 🟢 no | 🟢 no |
+| 🟡 `moodle/moodle` | LTI 1.3 / `ltiadvantage` | 🟢 no | 🟢 no |
+| 🟡 `moodle/moodle` | core AI subsystem, `372` files | 🟢 **no — `ai_provider` CREATED at `2025011700.02`, actively evolving** | 🟢 no |
+| 🟢 `Selleo/mentingo` | SCORM, `119` files *(`T135`)* | 🟢 no | 🆕 🟡 **PARTLY — the player is `scorm-again@3.0.4`, an EXTERNAL npm dependency** |
+| 🟢 `Selleo/mentingo` | xAPI — published ABSENT *(`T127`)* | n/a | 🟢 **ABSENCE CONFIRMED by a second instrument: `0` `xapi`/`tincan`/`caliper` entries across `7` manifests** |
+
+🟢 **`Open Badges` is narrowed, not deleted — the capability stands and the `306`-path figure is
+not retracted.** 🔵 **But a field drop IS the shape `T141` warned about, caught one level down
+from where it was expected.**
+
+🆕 🟢 **The SCORM row improves on audit rather than degrading.** 🟢 **`T135` said mentingo ships
+SCORM; STEP 8 confirms it from a different channel and names the player:
+`@repo/scorm-export-generator` + `@repo/scorm-export-runtime` in-tree, plus
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) `3.0.4` at the registry.**
+🟢 **Licence closure read from `registry.npmjs.org`: `MIT` over `MIT`. Clean.**
+
+### 🆕 🔴 `T146` — a STEP 7 / STEP 8 audit is structurally blind to a capability nobody published
+
+🔴 **Both steps take the PUBLISHED LIST as their input, so they can only ever confirm or retract
+what a previous pass chose to write down.** 🔴 **While auditing mentingo's SCORM row, the
+migration directory produced `0162_add_ai_judge_schema.sql` — a complete evaluative AI subsystem
+that five passes of this shelf never recorded** *(`T145`, `agents/top.md`)*.
+
+🟢 **`P160-A` gains STEP 9:**
+
+```bash
+# STEP 9 (T146) — enumerate the platform's OWN capability vocabulary before auditing the list
+#   you already have. The schema and migration names are the platform's self-description.
+ls $DIR/**/migrations/*.sql | sed 's/.*[0-9]\{4\}_//;s/\.sql$//' | tr '_' ' ' | sort -u
+grep -rhoE 'CREATE TABLE[^"]*"([a-z_]+)"' $DIR --include=*.sql | sort -u
+# A capability named in the schema and absent from your published list is a MISS, not a pass.
+```
+
+### 🆕 🔴 STEP 7 has a HORIZON on Moodle that it does not have on Django
+
+🟢 **Measured: `public/lib/db/upgrade.php` is `108 269 B` and `90` upgrade steps, covering
+`$oldversion < 2022112802` through `< 2026092300`.**
+🔴 **Moodle TRUNCATES upgrade history at major releases. Django migrations are RETAINED forever.**
+🔵 **So STEP 7 saw every badge deletion in `edx-platform` back to 2023 (`T141`) but can only see
+the current window on Moodle — a capability deleted before 2022 is invisible to this instrument,
+and the honest form of a Moodle STEP 7 result is *"no deletion in the current upgrade window"*,
+not *"never deleted"*.**
+
+🟢 **What STEP 7 did find in the window, in full:** 🔴 **`1` table dropped —
+`moodlenet_share_progress` at `2026030600.02`, removing MoodleNet OUTBOUND SHARING along with
+`moodlenetprofile` and the MoodleNet OAuth2 config.** 🟢 **No false presence on this shelf:
+`moodlenet/moodlenet` was REJECTED on liveness at `2023-07-07` and never published as a
+capability.** 🟡 **`8` field drops, of which `3` are the badge attribution fields above and one is
+`grade_grades.overriddenmark` at `2025040700.00`.**
+
+### 🟢 STEP 8's verdict on Moodle, which is the useful negative
+
+🟢 **`composer.json` and `package.json` carry `0` matches for `lti`, `xapi`, `caliper`,
+`credential` or `badge`.** 🔵 **Moodle vendors its capabilities IN-TREE, so `T142` — the false
+absence that a single-repo census publishes on a plugin platform — does NOT apply to Moodle.**
+🟢 **Every path count this page publishes for Moodle is therefore safe from the `edx-platform`
+defect, and that is now measured rather than assumed.**
+
+### 🆕 🟢 `P162-A` — the path census, PRICED. P161-C's untested prescription is a `240×` saving
+
+🔴 **p160 spent `746 MB` on a Moodle clone. p161 spent `752 MB` trying to avoid it and recorded
+that `--filter=blob:none` saves NOTHING with a checkout, correctly prescribing `--no-checkout`
+without pricing it.** 🟢 **Priced this pass, same repository, same question:**
+[`evidence/clone-instrument-cost.2026-10-13-p162.tsv`](../evidence/clone-instrument-cost.2026-10-13-p162.tsv)
+
+| instrument | disk | wall | what it buys |
+|---|---|---|---|
+| 🟢 `git ls-remote --symref` | ~`0` | `<1s` | default branch + HEAD |
+| 🆕 🟢 **`--depth=1 --filter=blob:none --no-checkout`** | 🟢 **`3.1 MB`** | 🟢 **`1s`** | 🟢 **all `67 589` paths** |
+| 🆕 🟢 **`+ cone sparse-checkout` of the directories under test** | 🟢 **`26 MB`** | 🟢 **`2s`** | 🟢 **`677` files of CONTENT, the whole `public/ai` subsystem** |
+| 🟢 `raw.githubusercontent.com`, path known | 🟢 **`108 KB`** | `<1s` | 🟢 **`ACTION ID`'s entire Moodle limb** |
+| 🔴 `--depth=1` full shallow clone | 🔴 **`746 MB`** | — | the same `67 589` paths |
+
+🟢 **Agreement check, because a cheaper instrument is worthless if it disagrees: `67 589` paths
+from the `3.1 MB` clone is byte-identical to p161's `67 589` from the `746 MB` clone.**
+🔵 **`240×` cheaper for the census, `28×` cheaper for the subsystem read, same answer.**
+🟢 **STEP 1 of `P160-A` splits: STEP 1a paths, STEP 1b sparse content, STEP 1c a full clone only
+when the question is genuinely tree-wide.**
 ## Pass 161 — 2026-10-12
 
 🟢 **Two pre-registered actions discharged on this page: `ACTION HZ` (`OpenOLAT`'s AI surface,

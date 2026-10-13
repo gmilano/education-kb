@@ -1,0 +1,20 @@
+# ACTION ID — P160-A STEP 7 (deleted-by-migration) + STEP 8 (out-of-repo) over the two targets
+# run 2026-10-13	moodle/moodle HEAD f20534726 (unchanged since p160)	Selleo/mentingo HEAD 242a9324 (2026-10-10)
+platform	step	published_capability	instrument	result	verdict
+moodle/moodle	STEP 7	Open Badges (306 paths, OB v2)	public/lib/db/upgrade.php drop_table/drop_field	badge.imageauthorname/imageauthoremail/imageauthorurl DROPPED at 2025013100.01	NARROWED, not deleted — capability PRESENT
+moodle/moodle	STEP 7	xAPI (78 paths)	public/lib/db/upgrade.php	no drop	PRESENT
+moodle/moodle	STEP 7	LTI 1.3 / ltiadvantage	public/lib/db/upgrade.php	no drop	PRESENT
+moodle/moodle	STEP 7	core AI subsystem (372 files, 4 actions)	public/lib/db/upgrade.php	ai_provider CREATED 2025011700.02 + upgrade_convert_ai_providers_to_instances()	PRESENT, actively evolving
+moodle/moodle	STEP 7	(not published)	public/lib/db/upgrade.php	moodlenet_share_progress DROPPED 2026030600.02; moodlenetprofile field dropped; MoodleNet outbound sharing REMOVED	no false presence — shelf REJECTED moodlenet/moodlenet on liveness, never published it
+moodle/moodle	STEP 7	(not published)	public/lib/db/upgrade.php	grade_grades.overriddenmark DROPPED 2025040700.00	not a shelf claim
+moodle/moodle	STEP 8	LTI / xAPI / badges / credential	composer.json + package.json	0 matches in either manifest	IN-TREE — T142 out-of-repo defect does NOT apply to Moodle
+Selleo/mentingo	STEP 7	SCORM (119 files, T135)	429 migration files, DROP scan	no SCORM drop; 0111_implement_scorm_tables.sql present	PRESENT
+Selleo/mentingo	STEP 8	SCORM (119 files, T135)	package.json x7 workspaces	@repo/scorm-export-generator + @repo/scorm-export-runtime (in-tree) AND scorm-again@3.0.4 (external npm)	CONFIRMED by 2nd instrument; player is OUT OF REPO
+Selleo/mentingo	STEP 8	SCORM licence closure	registry.npmjs.org/scorm-again/3.0.4	license MIT, repo jcputney/scorm-again	MIT + MIT — closure clean
+Selleo/mentingo	STEP 8	xAPI (published ABSENT, T127)	package.json x7	0 xapi/tincan/caliper matches	ABSENT CONFIRMED by 2nd instrument
+Selleo/mentingo	STEP 7+8	ai_judge (NEVER PUBLISHED)	0162_add_ai_judge_schema.sql	7 tables incl. ai_mentor_judgements.passed boolean NOT NULL	MISSED CAPABILITY — invisible to an audit that takes the published list as input
+# falsifier: "refuted if >=1 capability currently published for either platform fails STEP 7 or STEP 8"
+# published capabilities audited: 8	failing STEP 7: 0	failing STEP 8: 0	=> FALSIFIER SILENT
+# STEP 7 horizon defect: Moodle upgrade.php covers oldversion 2022112802 -> 2026092300 only (90 steps, 108269 B).
+#   Moodle TRUNCATES upgrade history at major releases; Django migrations are RETAINED. STEP 7 sees all history on
+#   edx-platform and only the current window on Moodle. A pre-2022 deletion is invisible to this instrument.

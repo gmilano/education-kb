@@ -3,6 +3,112 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 162 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three DISCHARGED, all three falsifiers SILENT.**
+🔴 **And the pass still refuted four things: two of this shelf's own instruments, one of its
+theses, and one of its own registrations.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IC`** — OpenOLAT's injection defence: IMPLEMENTED or NAMED? | 🟢 **DISCHARGED, falsifier SILENT. `AiContentHardener` transforms, with `194` LOC of tests.** 🔴 **It defends the AUTHORED path; the GRADED path has prose only** |
+| 🟢 **`ACTION ID`** — STEP 7 + STEP 8 over `moodle/moodle` + `Selleo/mentingo` | 🟢 **DISCHARGED, falsifier SILENT: `0 of 8` published capabilities fail.** 🔴 **The audit found an unpublished capability instead** |
+| 🟢 **`ACTION IE`** — can an `aiplacement_*` plugin reach a gradebook write? | 🟢 **DISCHARGED, falsifier SILENT. It can, through `grade_update()`** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T144` — injection defence tracks the org chart, not the threat model.**
+  🟢 **`harden()` has exactly ONE call site in `src/main`: the author's course markdown.**
+  🔴 **The student answer — the one input with a grade incentive — reaches the prompt unscrubbed,
+  defended by a system-message sentence and a `-----` fence.** 🟢 **Stated fairly: the model
+  returns advisory signals and the server owns the mark, so the exposure is BIAS of the inputs,
+  not capture of the output.** 🟢 **`P162-B` is the four-hour fix, and it FLAGS rather than
+  rewrites — rewriting a learner's submission before grading it is indefensible in an appeal.**
+- 🆕 🔴 **`T145` — the Annex III evaluative tier holds TWO open-source platforms, and the second
+  is MIT.** 🔴 **`Selleo/mentingo` has been on this shelf for five passes as *"the only
+  MIT-licensed LMS"*; it ships a `7`-table AI judge with `ai_mentor_judgements.passed BOOLEAN NOT
+  NULL`.** 🔵 **So *"pick the permissive one to stay simple"* no longer keeps a client out of the
+  high-risk tier. `T140` AMENDED.**
+- 🆕 🟢 **Human oversight is now a PATTERN, not an existence proof.** 🟢 **OpenOLAT (Java, Apache-2.0,
+  Switzerland) and mentingo (TypeScript, MIT, Poland) independently refuse to let the model own
+  the outcome: both compute the verdict in server code, mentingo THROWS on an out-of-range model
+  score, and it re-verifies every blocking error with a second model call before failing a
+  learner.** 🟢 **`P162-D`.**
+- 🆕 🔴 **`T147` — a regulatory boundary at a core/plugin line is a FACT, not a GATE.**
+  🟢 **`process_action(base $action)` accepts any subclass, `store()` is abstract and
+  plugin-implemented, and `grade_update()` is a global function whose `$source` is a free-text
+  label.** 🟢 **`P162-C` sells the gate core does not enforce.**
+- 🆕 🔴 **`T146` — a STEP 7/STEP 8 audit cannot see a capability nobody published,** because both
+  steps take the published list as input. 🟢 **`P160-A` gains STEP 9: enumerate the platform's own
+  schema vocabulary first.**
+- 🆕 🟢 **`P162-A` — the census instrument is `240×` cheaper than three passes have believed.**
+  🟢 **`--depth=1 --filter=blob:none --no-checkout` = `3.1 MB` and `1` second for all `67 589`
+  Moodle paths, AGREEING exactly with p161's `746 MB` figure; `+ sparse-checkout` = `26 MB` for
+  `677` files of content.** 🟢 **`ACTION ID`'s whole Moodle limb ran on `115 KB` of `raw` reads.**
+- 🆕 🟢 **`T148` — two inherited gaps re-tested and both were wrong.** 🟢 **Per-repository GitHub
+  metadata returns `200` once a repo is attached, and the `403` body named the remedy all along —
+  so the `★` column is refreshable row by row.** 🔴 **`search/repositories` stays `403`, so
+  ranking and new-entrant discovery really are closed.** 🔴 **And the *"hosts that do not
+  resolve"* resolve: the PROXY refuses `CONNECT` with `403` on a developer-host allowlist, so
+  `T134` keeps its label and loses its stated cause.**
+- 🟢 **`ACTION ID` in full: `0 of 8` published capabilities fail.** 🟡 **Moodle's Open Badges is
+  NARROWED — `badge.imageauthorname`/`imageauthoremail`/`imageauthorurl` dropped at
+  `2025013100.01` — not deleted.** 🟢 **Moodle's manifests carry `0` LTI/xAPI/badge entries, so
+  `T142`'s out-of-repo defect does NOT apply to Moodle.** 🟢 **mentingo's SCORM is confirmed by a
+  second instrument and its player named: `scorm-again@3.0.4`, MIT over MIT.**
+- 🆕 🔴 **STEP 7 has a HORIZON on Moodle.** 🟢 **`upgrade.php` covers `2022112802` → `2026092300`
+  only (`90` steps, `108 269 B`); Moodle truncates upgrade history at major releases where Django
+  retains migrations forever.** 🔵 **So a Moodle STEP 7 result means *"no deletion in the current
+  window"*, never *"never deleted"*.**
+
+### 🟢 Corrections to earlier passes, made explicitly
+
+- 🔴 **p161 registered `AiPromptRules` as a prompt-injection defence. It is house TYPOGRAPHY** —
+  `58` LOC, constants only, no em dashes and Swiss German `ss`. 🔵 **The registration was a guess
+  from a file name.**
+- 🟡 **p161's *"`0` scheduled tasks in `public/ai`"* is imprecise. There is `1` task CLASS,
+  `backfill_action_courseid`, and it extends `adhoc_task`, not `scheduled_task`.** 🟢 **No `db/`
+  directory, so no periodic schedule — p161's CONCLUSION (no periodic minimisation, `P161-B` is
+  still needed) HOLDS; only the measurement is restated.**
+- 🔴 **`T134`'s cause was wrong for six passes** — proxy policy, not DNS. 🟢 **See `T148`.**
+- 🔴 **`T137`'s reach was overstated for six passes** — per-repo metadata is recoverable.
+  🟢 **See `T148`.**
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **LATAM** | 🆕 🟢 **A three-pass drought BROKEN with structure: UNESCO IESALC, `200` institutions / `19` countries — `87%`/`26%` confirmed and DECOMPOSED (teaching `73.5%`, research `57.0%`, admin `34.1%`, community `20.0%`; private non-profit `84%`, public `68%`, for-profit `52%`)** · 🔵 **adoption concentrates in the evaluative surface while governance would live in admin, `39` points lower** · 🆕 🟡 **Chile policy since 2021 + law in discussion; Mexico's guidance non-binding** · 🟢 **`P162-D` lands here** |
+| **EMEA** | 🔴 **`0` new facts from the news channel — saturated at this shelf's query vocabulary** · 🆕 🔴 **but the pass's biggest finding is an EMEA one from the CODE channel: two EU/EEA-built platforms, Poland and Switzerland, both inside Annex III, both with server-side verdicts** · 🟢 **`P161-A` + `P162-B`** |
+| **North America** | 🆕 🟡 **`10%` formal AI guidelines, `71%` of teachers untrained — SEARCH-SUMMARY, host refused** · 🟡 **OpenAI `8`-partner programme; CMU+Gates `$55M`; a `$169M` commitment with NO named government** · 🔴 **third consecutive pass with no VERIFIED new fact** · 🟢 **and a third consecutive larger deliverable: `P162-C`** |
+| **APAC** | 🔴 **NO adoption rate, EIGHTH pass** · 🟢 **`T143`'s gate fired and was honoured — the `57%` figure is ENTERPRISE and was REFUSED, not re-regionalised** · 🟢 **`LocalOnnxSPI` remains the strongest sovereignty answer: for embeddings there is no endpoint to localise** |
+| **Global** | 🔴 **Market size incoherent a THIRTEENTH pass, now by `~$1B` in the BASE YEAR** · 🔴 **`T110` and `T122` each a SIXTH time, `T122` now measured at `10 of 10` results from one vendor in `7` locales** · 🟢 **the instrument corrections above are the real global finding** |
+
+### 🔜 Pre-registered for p163
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IF`** — does `add_repo` attach a THIRD-PARTY public repository and return its metadata? If so, refresh the `★` column on `agents/top.md`'s twelve rows | 🔴 *Refuted if a public repository outside this account cannot be attached, or attaches without granting `/repos/{owner}/{name}`* |
+| 🟢 **`ACTION IG`** — assess `GibberishPreFilter` (`entropy ≥ 1.5`, `letter ratio ≥ 0.45`) and `AiGradingTier.classify()` for equity across non-Latin scripts | 🔴 *Refuted if either threshold rejects or down-tiers a valid CJK, Arabic or Devanagari answer that a Latin-script equivalent would pass* |
+| 🟢 **`ACTION IH`** — run `T144`'s reading over `Selleo/mentingo`: is the student turn hardened before it reaches the judge, and is there ANY off switch for the judge? | 🔴 *Refuted if mentingo hardens the learner turn in code — which would make it the only platform on this shelf that defends the graded path* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The agent shelf did not GROW, FOURTH consecutive pass.** 🟢 **`T110` sixth corroboration;
+  `0` education-domain agents from `4` global discovery queries.** 🟡 **One row — `Selleo/mentingo`
+  — was REWRITTEN on content, not added.**
+- 🔴 **No `★` was refreshed, although `T148` now makes it possible.** 🟢 **Deliberate: `ACTION IF`
+  establishes first whether third-party repos attach, before spending attaches on twelve rows.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** — unchanged for four passes.
+- 🔴 **Not one regional figure this pass could be verified at source.** 🟢 **All five source hosts
+  refused at the proxy; every figure is labelled *search-summary* and none was promoted.**
+- 🟡 **Three passes of Moodle findings now rest on ONE tree** (`f20534726`, unchanged since p160).
+  🔵 **Recorded as a concentration risk, not a defect.**
+- 🔴 **mentingo's injection surface and its missing off switch were found but NOT assessed**
+  — 🟢 **registered as `ACTION IH` rather than guessed at.**
+- 🔴 **The rotation defect is confirmed for a FIFTH pass.** 🟢 **`rotation.json` is advanced on this
+  pass's branch as required, and will not reach the next run without a human merge.**
+  🟡 **Not registered — it is not a research task.**
 ## Pass 161 — 2026-10-12
 
 🔵 **Clock note, because this shelf dates everything: the pass ran `23:45` → `00:00` UTC

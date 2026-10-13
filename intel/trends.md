@@ -3,6 +3,104 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 162 — 2026-10-13
+
+### 1. 🆕 🔴 The Annex III evaluative tier has TWO open-source platforms in it, and the permissive one is MIT — *Global, strongest in EMEA and APAC, measured*
+
+🔴 **`T140` placed the AI Act's evaluative boundary BETWEEN Moodle and OpenOLAT. There is a third
+platform, it was already on this shelf, and nobody had read its schema.**
+🟢 **`Selleo/mentingo` (MIT) ships `ai_judge`: `7` tables, an author-set
+`passing_threshold_percent`, rubric score anchors with worked examples, and
+`ai_mentor_judgements.passed BOOLEAN NOT NULL` — a persisted pass/fail verdict on a learner.**
+🔴 **Unlike OpenOLAT's `essay-grading`, it is not behind a feature flag that ships `false`; it is
+schema, and `ai_mentor_lessons.type` already defaults to `roleplay`.**
+🔵 **Consequence for a studio: *"use the MIT one to stay simple"* is no longer a way to stay out
+of the high-risk tier. The permissive choice and the regulated choice are now the same choice.**
+🟢 **`T145`.**
+[`evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv`](../evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv)
+
+### 2. 🆕 🟢 Two independent teams converged on the same human-oversight design, which makes it a PATTERN — *Global, measured*
+
+🟢 **OpenOLAT (Java, Apache-2.0, Switzerland) and mentingo (TypeScript, MIT, Poland) both refuse
+to let the model own the outcome, and they do it differently:**
+
+| control | OpenOLAT | mentingo |
+|---|---|---|
+| what the model returns | 🟢 raw SIGNALS; its holistic score is *"advisory only"* | 🟡 per-criterion `awardedScore` |
+| who computes the outcome | 🟢 **server-side weighting** | 🟢 **`sum(awardedScore)` vs `ceil(maxScore × passingThresholdPercent / 100)`** |
+| out-of-range model output | 🟢 typed confidence + off-topic enums | 🟢 **THROWS — refuses rather than clamping silently** |
+| the veto | 🟢 `3` pre-filters refuse before the provider is paid | 🟢 **blocking errors, each re-verified by a SECOND model call before it can fail a learner** |
+| re-runnability of a contested mark | 🟢 `a_prompt_template_version` + `a_content_hash_at_call` | 🟢 **`max_score_at_judgement` per criterion** |
+
+🔵 **One implementation is an existence proof. Two, in different languages and jurisdictions, is a
+design consensus — and it is the single most reusable artefact this shelf has for an Article 14
+conversation.** 🟢 **Neither was built by a vendor selling AI governance.**
+
+### 3. 🆕 🔴 Injection defence tracks the ORGANISATION CHART, not the threat model — *Global, measured*
+
+🔴 **OpenOLAT's `AiContentHardener` is real: `169` LOC, `14` injection regexes, HTML and
+`javascript:` stripping, redaction markers, typed issues, `194` LOC of tests.** 🔴 **Its one call
+site is the AUTHOR's course page. The STUDENT's answer — the only input written by somebody with
+an incentive to manipulate the grade — reaches the prompt unscrubbed, defended by a system-message
+sentence and a `-----` fence.** 🟢 **`T144`.**
+🔵 **The generalisable claim: engineering teams harden the input they think of as *content* and
+trust the input they think of as *an answer*. The threat model is the reverse.**
+🟢 **Fix is `P162-B` and it is hours, not weeks.**
+
+### 4. 🆕 🔴 A capability audit cannot find a capability nobody claimed — *Global, methodological*
+
+🔴 **STEP 7 and STEP 8 both take the PUBLISHED list as input, so they can only confirm or retract
+what an earlier pass wrote down.** 🟢 **`0 of 8` published capabilities failed. The pass's real
+finding — a complete evaluative AI subsystem — came from a migration filename that no audit step
+asked about.** 🟢 **`T146`, and `P160-A` gains STEP 9: enumerate the platform's OWN vocabulary
+from its schema before auditing the list you already hold.**
+
+### 5. 🆕 🔴 A regulatory boundary drawn at a core/plugin line is a FACT, not a GATE — *Global, strongest in EMEA, measured*
+
+🟢 **`ACTION IE`: `core_ai\placement` is an abstract class with `4` declarative methods and no
+sandbox. `get_supported_actions()` simply calls the placement's own `get_action_list()` with no
+allowlist. `process_action(base $action)` accepts ANY subclass. `store()` is abstract and
+plugin-implemented, `get_tablename()` is overridable, and `grade_update()` is a GLOBAL function in
+`public/lib/gradelib.php` whose `$source` argument is a free-text label with no caller check.**
+🔴 **So *"Moodle core is outside Annex III"* is true and nearly useless as a control: the first
+third-party placement that grades carries the institution in, and core offers no technical means
+to prevent it.** 🟢 **`T147`.**
+🔵 **What a studio sells here is the governance that core does not enforce: a plugin allowlist, a
+review gate on `aiplacement_*` installs, and the `ai_action_register` report that already exists.**
+[`evidence/placement-gradebook-reach.2026-10-13-p162.tsv`](../evidence/placement-gradebook-reach.2026-10-13-p162.tsv)
+
+### 6. 🆕 🔴 This shelf's own instruments were wrong about cost and wrong about reach — *Global, methodological*
+
+🔴 **Three self-corrections in one pass, all cheap to test and all left untested for six:**
+
+| belief | measured this pass |
+|---|---|
+| 🔴 *"the Moodle path census costs `746 MB`"* | 🟢 **`3.1 MB` and `1` second with `--filter=blob:none --no-checkout`, and it AGREES at `67 589` paths** |
+| 🔴 *"GitHub metadata is gone (`T137`)"* | 🟢 **Per-repository metadata returns `200` once the repo is attached; the `403` body named the remedy all along.** 🔴 **Ranking and new-entrant discovery really are gone** |
+| 🔴 *"the source hosts do not resolve (`T134`)"* | 🔴 **They resolve. The PROXY refuses `CONNECT` with `403` on a developer-host allowlist** |
+🔵 **The methodological lesson, worth more than any single figure: a declared gap must be
+re-tested, not inherited. This shelf inherited three.** 🟢 **`T148`, `P162-A`.**
+
+### 7. 🟡 The market series is incoherent for a THIRTEENTH pass, and the incoherence is now in the BASE YEAR — *Global, search-summary*
+
+🔴 **IMARC: `$6.4B` (2025) → `$79.6B` (2034). The Business Research Company: `$7.52B` (2025) →
+`$10.6B` (2026) at `40.9%` CAGR.** 🔴 **The two disagree by roughly `$1B` on the year that has
+already happened.** 🟡 **AI tutors as a sub-segment: `$1.63B` (2024) → `$7.99B` (2030).**
+🔴 **No open-source vendor appears in any market source, THIRTEENTH pass.**
+🔵 **Stop quoting a market size in a client deck from this channel; quote adoption and governance
+gaps, which are measured on populations rather than modelled.**
+
+### 8. 🆕 🟢 LATAM's adoption/governance gap now has a FUNCTION and INSTITUTION-TYPE breakdown — *LATAM, search-summary*
+
+🟢 **UNESCO IESALC, `200` institutions across `19` countries: `87%` use AI somewhere, `26%` have
+any formal framework — a figure this shelf already held — and now the shape underneath it.**
+🟢 **By function: teaching and learning `73.5%`, research `57.0%`, administration `34.1%`,
+community engagement `20.0%`.** 🟢 **By institution type: private non-profit `84%`, public `68%`,
+private for-profit `52%`.**
+🔵 **The engagement reading: adoption is concentrated in teaching, which is precisely the
+evaluative, student-facing surface that `T145` just showed is a high-risk tier — and
+administration, at `34.1%`, is where the governance plumbing would have to live.**
+🔴 **Labelled search-summary: all four source hosts refused at the proxy (`T148`).**
 ## Pass 161 — 2026-10-12
 
 ### 1. 🆕 🔴 The AI Act's high-risk boundary runs BETWEEN two open-source LMS platforms, and it is a property file — *Global, strongest in EMEA and APAC, measured*

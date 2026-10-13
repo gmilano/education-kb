@@ -1,0 +1,13 @@
+# P162-A — the path-census instrument, measured. Confirms and PRICES P161-C's untested prescription.
+# target moodle/moodle, 67589 tracked paths, HEAD f20534726 — same repo, same question, four instruments
+instrument	disk	wall	paths_available	content_available	pass_measured
+git ls-remote --symref	~0	<1s	0	no	p160 (P53/P54)
+--depth=1 clone (full shallow)	746 MB	not recorded	67589	ALL	p160
+--depth=1 --filter=blob:none (WITH checkout)	752 MB	not recorded	67589	ALL (checkout refetches every blob)	p161 — P161-C, NO saving
+--depth=1 --filter=blob:none --no-checkout	3.1 MB	1s	67589	no	p162 — THIS PASS
+  + cone sparse-checkout public/ai + public/grade/classes + public/lib/classes/task	26 MB	2s	67589	677 files	p162 — THIS PASS
+raw.githubusercontent.com, path known	108269 B (upgrade.php)	<1s	0	1 file	p162 — ACTION ID ran entirely on this
+# ratio: 746 MB -> 3.1 MB = 240x for the path census; 746 MB -> 26 MB = 28x for the AI-subsystem question
+# P161-C said "add --no-checkout if you only need paths" and did not price it. Priced: 3.1 MB / 1 s.
+# agreement check: 67589 paths from the 3.1 MB clone == p161's 67589 from the 746 MB clone. Instruments AGREE.
+# ACTION ID bought its entire Moodle limb for 115 KB of raw reads instead of a clone.

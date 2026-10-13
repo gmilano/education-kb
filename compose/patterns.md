@@ -3,6 +3,153 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 🆕 🟢 `P162-B` — close the injection gap on the path that GRADES *(new, p162 — Global; strongest in EMEA and APAC)*
+
+🔵 **The problem this solves:** 🔴 **`T144` — OpenOLAT hardens the AUTHOR's course content in code
+and defends the STUDENT's answer with a sentence in a system message. The evaluative path is the
+Annex III path, and it is the one with an adversarial author.** 🟢 **The platform already contains
+everything the fix needs; nothing has to be invented.**
+
+🟢 **What exists, measured in the tree at `e4be14f0`:**
+
+| asset | where |
+|---|---|
+| 🟢 `AiContentHardener.harden()` — `14` injection regexes, `5` HTML tags, `javascript:` URLs, redaction markers, typed `Issue(severity, patternId, match, offset)` | `src/main/java/org/olat/core/commons/services/ai/content/AiContentHardener.java` |
+| 🟢 `INJECTION_PATTERNS`, already `public static final` and already reused once | same file; reused at `GeneratedItemValidator.java:163` |
+| 🟢 The pre-filter chain the fix slots into | `EssayFormativeFeedbackService.java:143` → `:154` → `:163` |
+| 🟢 The rejection vocabulary to extend | `RejectionReason`, `EssayGradingPreFilterException` |
+| 🟢 The ledger that will evidence it | `o_ai_usage_log`, `33` columns; `logPreFilterRejection()` at `:279` |
+
+🟢 **The recipe, and note which of the two options to pick:**
+
+```java
+// A FOURTH pre-filter, alongside LengthPreFilter / GibberishPreFilter / LanguagePreFilter.
+// Place it in EssayFormativeFeedbackService.grade() AFTER the length check (so a megabyte of
+// injection is refused on length first) and BEFORE AiGradingTier.classify().
+public final class InjectionPreFilter {
+    public static final String WARNING_INJECTION = "ai.essay.warn.injection.detected";
+
+    public static Optional<RejectionReason> check(String studentAnswer) {
+        if (studentAnswer == null || studentAnswer.isEmpty()) return Optional.empty();
+        for (Pattern p : AiContentHardener.INJECTION_PATTERNS) {
+            if (p.matcher(studentAnswer).find()) {
+                // FLAG, do not refuse: a refusal is a denial of assessment to a learner who may
+                // simply have quoted the phrase. Route to human marking instead.
+                return Optional.of(new RejectionReason(WARNING_INJECTION, p.pattern(), null));
+            }
+        }
+        return Optional.empty();
+    }
+}
+```
+
+🔴 **Do NOT call `harden()` on the student answer.** 🔵 **`harden()` REWRITES its input, and
+rewriting a learner's submission before grading it is indefensible in an appeal — the mark would
+be computed against text the student did not write.** 🟢 **Scrub the AUTHOR's content; FLAG the
+learner's.**
+
+🟢 **The three-line policy decision the client must make, and it is theirs not ours:**
+
+| on detection | consequence | who it suits |
+|---|---|---|
+| 🟢 **Flag + route to human marking** | 🟢 no learner is graded by a manipulated prompt; no learner is refused | 🟢 **the default — recommend this** |
+| 🟡 Flag + grade anyway, annotate for the coach | 🟡 cheap, keeps throughput | 🟡 low-stakes formative practice |
+| 🔴 Refuse the submission | 🔴 denies assessment on a regex match | 🔴 **only with an appeals route attached** |
+
+🟢 **Effort: `~4` hours plus the policy conversation. One new class, one call site, one language
+string, one test class modelled on `AiContentHardenerTest` (`194` LOC, already in the repo).**
+🔵 **Sell it as the first work package of an Annex III engagement, never as a vulnerability
+report — the platform's oversight design is the reason it is worth adopting.**
+[`evidence/injection-defence-by-path.2026-10-13-p162.tsv`](../evidence/injection-defence-by-path.2026-10-13-p162.tsv)
+
+---
+
+## 🆕 🟢 `P162-C` — the Annex III gate Moodle core does NOT enforce *(new, p162 — Global; strongest in North America and EMEA)*
+
+🔵 **The problem this solves:** 🟢 **This shelf has been telling clients that Moodle core sits
+outside the AI Act's evaluative tier because it ships `4` actions and `0` of them grade.**
+🔴 **`ACTION IE` established that this is a fact about what core SHIPS, not a gate core ENFORCES.**
+
+🟢 **The reach, measured:**
+
+| link in the chain | evidence |
+|---|---|
+| a placement is an ordinary subplugin | `version.php` + `db/access.php` + `db/services.php` + `classes/external/` in both core placements |
+| it declares its own actions | `placement::get_action_list(): array` returns class NAMES |
+| core does not filter them | `manager.php:75-77` calls `$pluginclassname::get_action_list()`; no allowlist |
+| the dispatcher takes any subclass | `manager.php:191` — `process_action(base $action)` |
+| the action owns its own writes | `aiactions/base.php:50` — `abstract public function store(...): int`; `get_tablename()` overridable at `:118` |
+| the gradebook is a global function | `public/lib/gradelib.php:64` — `grade_update($source, ...)`, `$source` a free-text label, no caller check |
+
+🔴 **So: install one third-party `aiplacement_*` plugin that grades, and the institution is in the
+high-risk tier, with no technical signal that it happened.**
+
+🟢 **The recipe — three controls, all configuration and reporting, no platform fork:**
+
+```bash
+# 1. INVENTORY. What AI plugins are installed, and which are not core?
+#    Core ships exactly two placements. Anything else is a third-party evaluative risk.
+php admin/cli/cfg.php --component=core_ai          # provider + action state
+ls public/ai/placement/                             # expect: courseassist, editor. Anything else -> review
+# 2. GATE. Pin the plugin set and make installs a reviewed event, not an admin convenience.
+#    $CFG->disableupdateautodeploy = true;  in config.php
+#    plus a code-review step on any aiplacement_* / aiprovider_* addition.
+# 3. EVIDENCE. The ledger already exists -- turn it into a standing report.
+#    ai_action_register  -> per-call: user, course, context, provider, model, tokens, success, timings
+#    ai_policy_register  -> per-user policy acceptance, with a reportbuilder report shipped
+```
+
+🟢 **Deliverable: a one-page *"which AI actions can write to a gradebook in this installation"*
+report, a pinned plugin set, and the two reports core already provides, scheduled.**
+🔴 **Pair it with `P161-B`** — 🔴 **the ledger retains `prompt` and `generatedcontent` verbatim and
+nothing ever deletes them, so standing up the evidence without the retention job creates a new
+problem while solving an old one.**
+🟢 **Effort: `~1` week including the policy write-up. Sells to any public institution already on
+Moodle, which is most of them.**
+[`evidence/placement-gradebook-reach.2026-10-13-p162.tsv`](../evidence/placement-gradebook-reach.2026-10-13-p162.tsv)
+
+---
+
+## 🆕 🟢 `P162-D` — multi-tenant AI assessment on MIT, using the judge that already ships *(new, p162 — Global; strongest in LATAM and APAC)*
+
+🔵 **The problem this solves:** 🔴 **A client who needs AI assessment, a permissive licence AND
+multi-tenancy has had no answer on this shelf: Moodle core does not grade, OpenOLAT is
+single-tenant in this respect, `edx-platform` is AGPL with `0` AI files, and every greenfield
+recipe meant building rubric storage, score provenance and an oversight story from nothing.**
+🟢 **`Selleo/mentingo` (MIT) ships all three.**
+
+🟢 **What you are adopting, read from `242a9324` this pass:**
+
+| requirement | the code that answers it |
+|---|---|
+| 🟢 **Author owns the bar, not the model** | 🟢 `ai_judge_configurations.passing_threshold_percent`; the model never receives the threshold |
+| 🟢 **Rubric with worked anchors** | 🟢 `ai_judge_score_guidance(score, description, example)`, `UNIQUE(criterion_id, score)` — a description AND an example per score point |
+| 🟢 **Verdict computed in server code** | 🟢 `judgeEvaluation.ts:74-85` — `passed = score >= ceil(maxScore × passingThresholdPercent / 100) && blockingErrors.length === 0` |
+| 🟢 **Model cannot exceed its allowance** | 🟢 `judgeEvaluation.ts:26` THROWS *"AI Judge awarded a score outside the configured range"* — refuses rather than silently clamping |
+| 🟢 **No learner failed on a hallucinated blocker** | 🟢 `judge.service.ts:100-125` re-sends each candidate blocking error in a SECOND verification call and drops it unless confirmed |
+| 🟢 **A past mark survives a rubric edit** | 🟢 `ai_mentor_judgement_criteria.max_score_at_judgement` |
+| 🟢 **Internal vs learner-facing text separated** | 🟢 `blocking_error_description` vs `learner_safe_feedback`, two columns by design |
+| 🟢 **Multi-tenancy** | 🟢 **all `7` judge tables carry `tenant_id` with an RLS default and an FK to `tenants`** |
+| 🟢 **SCORM interop** | 🟢 in-tree generator + runtime, player `scorm-again@3.0.4` (MIT) — closure MIT over MIT |
+
+🔴 **What you must add, stated up front so the estimate is honest:**
+
+- 🔴 **`4 753` tracked files against Moodle's `67 589`.** 🔵 **This is a product, not a platform:
+  no LTI, no xAPI** *(`T127`, re-confirmed by manifest this pass)*, **no Open Badges issuance.**
+- 🔴 **The judge is schema-present and NOT behind a feature flag** — 🟢 **unlike OpenOLAT's
+  `ai.feature.essay-grading.enabled=false`, there is no off switch to point a regulator at.**
+  🟢 **Add one, as an explicit configuration gate, in week one.**
+- 🟡 **The injection surface on its graded path was NOT assessed this pass** *(`ACTION IH`)* —
+  🟢 **run `P162-B`'s reasoning over it before go-live, not after.**
+
+🟢 **Effort: `6`–`8` weeks to a governed pilot — rubric authoring UI exists, judge exists,
+tenancy exists; the work is the off switch, the injection filter, the retention policy and the
+institution's appeals route.** 🔵 **In LATAM this lands directly on the `87%`/`26%` gap: a
+tenant-per-institution deployment with the governance artefacts built in is cheaper than
+retrofitting policy onto `200` institutions' existing tools.**
+[`evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv`](../evidence/evaluative-tier-tri-platform.2026-10-13-p162.tsv)
+
+---
 ## 🆕 🟢 `P161-A` — AI that GRADES, on a platform that already implements the oversight the regulator will ask for *(new, p161 — Global; strongest in EMEA and APAC)*
 
 🔵 **The problem this solves:** 🔴 **Evaluative AI in education is high-risk under the EU AI

@@ -1,0 +1,35 @@
+# T148 — the refusal channel, characterised. T134 and T137 are the SAME defect: an allowlist, not dead hosts.
+# run 2026-10-13
+host_or_endpoint	result	interpretation
+https://api.github.com/rate_limit	200	quota unspent (confirms p160)
+https://api.github.com/repos/gmilano/education-kb  [ATTACHED to session]	200	FULL metadata: stargazers_count, pushed_at, default_branch, license.spdx_id, topics
+https://api.github.com/repos/moodle/moodle  [not attached]	403	body: "GitHub access to this repository is not enabled for this session. Use add_repo to request access."
+https://api.github.com/repos/openolat/OpenOLAT  [not attached]	403	same body
+https://api.github.com/repos/Selleo/mentingo  [not attached]	403	same body
+https://api.github.com/search/repositories?q=...	403	NOT repo-scoped, so NOT recoverable by attaching. DISCOVERY STAYS CLOSED.
+https://raw.githubusercontent.com/...	200/301	open — the content channel
+https://registry.npmjs.org/scorm-again/3.0.4	200	open — package metadata + licence
+https://pypi.org/	200	open
+https://github.com (clone over smart-HTTP)	clone OK	open
+https://www.digitaleducationcouncil.com/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+https://unu.edu/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+https://www.timeshighereducation.com/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+https://ess.iesalc.unesco.org/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+https://www.unesco.org/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+https://openolat.org/	CONNECT tunnel failed, 403	proxy allowlist refusal, NOT DNS
+# CORRECTION to T134: six passes recorded source hosts as "does not resolve". They resolve; the PROXY refuses
+#   CONNECT with 403. The source-verification channel is closed by POLICY, on a developer-host allowlist.
+#   Consequence: an unverifiable market figure is unverifiable BY THIS SESSION, which is not the same as
+#   the source being dead or wrong. The "search-summary" label stays, the stated CAUSE changes.
+# CORRECTION to T137's reach: per-repository metadata is RECOVERABLE via add_repo (proven, 1 repo, same account).
+#   Star counts on agents/top.md are therefore refreshable per row, at one attach each. Bulk/new-entrant
+#   discovery is NOT recoverable. UNTESTED: whether a third-party public repo attaches. Registered as ACTION IF.
+# INSTRUMENT WARNING for any future pass using `curl -sI` as a URL-existence gate:
+#   https://github.com/<owner>/<repo>  -> 403 for ALL repositories in this session, real ones included.
+#   Measured 2026-10-13 on 6 repos that demonstrably exist: openolat/OpenOLAT, moodle/moodle,
+#   Selleo/mentingo, openedx/edx-platform, jcputney/scorm-again, microsoft/ai-agents-for-beginners.
+#   github.com root answers 400. The HTML host is proxy-refused; only the smart-HTTP git endpoint works.
+#   A curl -sI existence gate in THIS session would therefore reject every real repository as absent.
+#   The correct gate is P54: `git ls-remote --symref https://github.com/<owner>/<repo> HEAD`.
+#   All 6 above pass it: master/e4be14f0, main/f2053472, main/242a9324, master/3368a6b1,
+#   master/882f3b8c, main/4c9a2759.

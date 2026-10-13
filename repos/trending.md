@@ -3,7 +3,62 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
-## 2026-10-12 — pass 161 — 🟢 the currency instrument, re-run, and one platform committed TODAY again
+## 2026-10-13 — pass 162 — 🟢 the recency instrument got `240×` cheaper and one platform committed three days ago
+
+🔴 **GitHub trending was unreadable for the sixth pass running — `search/repositories` answers
+`403` and `T148` establishes that this limb does not reopen by attaching repositories.**
+🟢 **Recency measured on the clone channel again: `git ls-remote --symref` for the real default
+branch, then `git log -1` on the shallow clone.**
+[`evidence/clone-instrument-cost.2026-10-13-p162.tsv`](../evidence/clone-instrument-cost.2026-10-13-p162.tsv)
+
+| repo | licence | default branch | head | last commit | stale | tracked files | verdict |
+|---|---|---|---|---|---|---|---|
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🔴 **`master`** | `e4be14f0` | `2026-10-12` | 🟢 **`1` day** | `25 823` | 🟢 **ACTIVE** · 🔵 **HEAD UNCHANGED from p161, so this pass's `ACTION IC` read the very same bytes — a deeper read, not a newer version** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🟢 `main` | `242a9324` | `2026-10-10` | 🟢 **`3` days** | `4 753` | 🟢 **ACTIVE** · 🆕 🔴 **`429` migration files, and one of them is a complete AI judge** |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** | 🟢 `main` | `f20534726` | `2026-10-03` | 🟡 **`10` days** | `67 589` | 🟢 **ACTIVE** · 🔵 **HEAD unchanged for a THIRD pass — p160, p161 and p162 all read one tree** |
+
+🟢 **`3 of 3` default branches resolved before any probe (`P53`); `1 of 3` is `master`.**
+
+### 🆕 🟢 `P162-A` — the census instrument, re-priced, and it is the cheap one after all
+
+🟢 **p161 recorded that `--filter=blob:none` saved nothing on Moodle (`752 MB` against `746 MB`)
+because the checkout re-fetches every blob, and prescribed `--no-checkout` without measuring it.**
+🟢 **Measured:**
+
+| instrument | disk | wall | paths | content |
+|---|---|---|---|---|
+| 🔴 `--depth=1` (p160) | 🔴 **`746 MB`** | — | `67 589` | all |
+| 🔴 `--depth=1 --filter=blob:none` WITH checkout (p161) | 🔴 **`752 MB`** | — | `67 589` | all |
+| 🆕 🟢 **`--depth=1 --filter=blob:none --no-checkout`** | 🟢 **`3.1 MB`** | 🟢 **`1s`** | 🟢 **`67 589`** | 🔴 none |
+| 🆕 🟢 **the same, `+ git sparse-checkout set <dirs>`** | 🟢 **`26 MB`** | 🟢 **`2s`** | 🟢 **`67 589`** | 🟢 **`677` files** |
+
+🟢 **And it AGREES: `67 589` tracked paths, identical to the figure p161 bought for `746 MB`.**
+🔵 **The instrument that has been treated as a `746 MB` platform-tier purchase for three passes is
+a `3.1 MB` one-second purchase, and could have been run over far more repositories than it was.**
+
+### 🆕 🟢 `T148` — one limb of the metadata blackout lifts, and it is not the limb that matters
+
+🟢 **A repository ATTACHED to the session answers `/repos/{owner}/{name}` with `200` and the full
+field set: `stargazers_count`, `pushed_at`, `default_branch`, `license.spdx_id`, `topics`.**
+🔴 **An unattached one answers `403` with a body naming `add_repo` as the remedy — a body this
+shelf had never read in six passes of publishing the metadata as gone.**
+🔴 **`search/repositories` stays `403` and is not repository-scoped, so trending, star ranking and
+new-entrant discovery remain CLOSED.**
+[`evidence/proxy-channel-census.2026-10-13-p162.tsv`](../evidence/proxy-channel-census.2026-10-13-p162.tsv)
+
+🔵 **Read together with `P162-A`, the lesson of this pass is about instruments, not about
+education: this shelf has twice been wrong about what it could afford and once about what it
+could reach, and all three errors were cheap to test and expensive to leave untested.**
+
+### 🔴 What did NOT come back
+
+- 🔴 **No GitHub trending list, SIXTH pass.** 🔴 **No new-entrant tier. No star refresh.**
+- 🔴 **`moodle/moodle` has not moved in `10` days and has been at one HEAD for three passes** —
+  🟡 **so three passes of Moodle findings rest on a single tree, and a `6.0dev` branch moving
+  under them would invalidate the lot at once.** 🟢 **Recorded as a concentration, not a defect.**
+- 🟢 **`Selleo/mentingo` measured at `4 753` tracked files** — small enough that the
+  whole tree is readable in one pass, which is why its AI judge was found by reading rather than
+  by searching for it.
 
 🔴 **GitHub trending could not be read this pass either — `api.github.com` is closed to this
 session (`T137`) and the web channel returned AI *courses* for the fifth pass running

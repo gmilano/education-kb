@@ -3,6 +3,82 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 2026-10-13 — pass 162 — 🔴 the discovery channel is still closed, 🟢 but HALF of what it carried is recoverable
+
+🔴 **No new agent rows from discovery, FOURTH consecutive pass.** 🟢 **`T110` corroborated a
+SIXTH time: the four prescribed queries returned AI CURRICULUM again —
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`,
+`ai-engineering-hub`, Karpathy's *Zero to Hero*, *Made With ML* — none of them an
+education-domain agent, and the live GitHub trending page still unreadable.**
+[`evidence/regional-sweep.2026-10-13-p162.tsv`](../evidence/regional-sweep.2026-10-13-p162.tsv)
+
+### 🆕 🟢 `T148` — the refusal is PER-REPOSITORY and REVERSIBLE, and the refusal body said so all along
+
+🔴 **For six passes this shelf has published GitHub metadata as lost. The `403` body was never
+read. It reads:**
+
+> `GitHub access to this repository is not enabled for this session. Use add_repo to request access.`
+
+🟢 **Tested, endpoint by endpoint, this pass:**
+[`evidence/proxy-channel-census.2026-10-13-p162.tsv`](../evidence/proxy-channel-census.2026-10-13-p162.tsv)
+
+| endpoint | result | what it means |
+|---|---|---|
+| 🟢 `/rate_limit` | `200` | quota unspent — as p160 found |
+| 🔴 `/repos/moodle/moodle`, `/repos/openolat/OpenOLAT`, `/repos/Selleo/mentingo` | `403` | not attached to this session |
+| 🆕 🟢 **`/repos/gmilano/education-kb`** *(ATTACHED)* | 🟢 **`200`** | 🟢 **`stargazers_count`, `pushed_at`, `default_branch`, `license.spdx_id`, `topics` — the COMPLETE field set `T137` declared gone** |
+| 🔴 `/search/repositories?q=…` | `403` | 🔴 **NOT repository-scoped, so NOT recoverable by attaching** |
+
+🆕 **`T148`:** 🟢 **Per-repository metadata is recoverable at one attach per repository.**
+🔴 **Ranking, star-ordered discovery and new-entrant detection are NOT — that limb of `T137`
+stands and is the one that matters for finding agents nobody has told us about.**
+🔵 **So the shelf's `★` column is refreshable row by row, as a deliberate purchase, while the
+reason the shelf has found no new agent in four passes is unchanged.**
+🟡 **Measured on ONE repository, in the same account as this KB. Whether a third-party public
+repository attaches is UNTESTED and is registered as `ACTION IF` rather than assumed.**
+
+### 🆕 🔴 The new evaluative agent this pass is not on GitHub trending — it is a SCHEMA already on our own shelf
+
+🔴 **`Selleo/mentingo` has been on the agent shelf for five passes described as *"the only
+MIT-licensed LMS"*.** 🔴 **It ships a complete AI JUDGE, and no pass had looked.**
+
+🟢 **`0162_add_ai_judge_schema.sql`, `7` tables, every one tenant-scoped:**
+
+| table | the column that matters |
+|---|---|
+| `ai_judge_configurations` | 🔴 **`passing_threshold_percent`** — the author sets the bar |
+| `ai_judge_criteria` | `max_score`, `expected_behavior` |
+| `ai_judge_score_guidance` | 🟢 **`score` + `description` + `example`, `UNIQUE(criterion_id, score)`** — rubric ANCHORS, not just weights |
+| `ai_judge_blocking_errors` | the disqualifying conditions |
+| 🔴 **`ai_mentor_judgements`** | 🔴 **`earned_points`, `max_score`, `percentage`, `passed BOOLEAN NOT NULL`** |
+| `ai_mentor_judgement_criteria` | 🟢 **`awarded_points`, `max_score_at_judgement`, `status`, `learner_safe_feedback`** |
+| `ai_mentor_judgement_blocking_errors` | 🟢 **`blocking_error_description`** *(internal)* **vs `learner_safe_feedback`** *(shown)* |
+
+🔵 **Three instruments, three blind spots, and this pass found the third:** 🔴 **a topic query
+cannot see a MODULE (`T133`), a schema census cannot see an EXPORT PIPELINE (`T135`), and a
+STEP 7/STEP 8 AUDIT cannot see a capability NOBODY REGISTERED (`T146`, below) — because both
+steps take the published list as their input.**
+
+### 🟢 `ACTION IC` — OpenOLAT's injection defence is IMPLEMENTED, and tested, and on the wrong path
+
+🟢 **`AiContentHardener` is `169` LOC with `194` LOC of tests asserting that `<script>`,
+`<iframe>`, `<object>`, `<style>` and `javascript:` are actually removed and the redaction marker
+actually inserted.** 🔴 **Its one call site is the AUTHOR's content.** 🔴 **The student answer —
+the input with a grade incentive attached — reaches the prompt unscrubbed, defended by a sentence
+in the system message and a `-----` fence.** 🟢 **`T144`.**
+[`evidence/injection-defence-by-path.2026-10-13-p162.tsv`](../evidence/injection-defence-by-path.2026-10-13-p162.tsv)
+
+🔴 **And `AiPromptRules`, registered by p161 as a defence, is house TYPOGRAPHY: no em dashes,
+Swiss German `ss`, real umlauts.** 🔵 **A registration built on a file name, measured and wrong.**
+
+### 🔴 What did NOT come back, said rather than hidden
+
+- 🔴 **`0` education-domain agents from `4` global discovery queries.** 🔵 **Sixth pass running.**
+- 🔴 **`0` new agent rows from any region.** 🔴 **APAC returned enterprise AI; EMEA returned
+  enterprise AI; LATAM returned university surveys; North America returned market reports.**
+- 🔴 **No star count was refreshed this pass** — 🟢 **`T148` makes it possible, `ACTION IF`
+  establishes whether it is possible for repositories we do not own, and only then is it worth
+  spending attaches on the shelf's twelve rows.**
 ## 2026-10-12 — pass 161 — 🔴 the discovery channel is still CLOSED, and what replaced it found a grading agent inside a platform
 
 🔴 **No new agent rows from discovery, THIRD consecutive pass.** 🟢 **`T137` holds: four queries

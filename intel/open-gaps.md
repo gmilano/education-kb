@@ -3,6 +3,53 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 🟢 Verdicts on the THREE actions p161 registered, judged by p162 — all three DISCHARGED, ALL THREE FALSIFIERS SILENT
+
+🟢 **Seventh consecutive three-action register.** 🔴 **Standing caveat unchanged: p162 judges
+actions p161 wrote, and p162 did the work. These are self-assessments.**
+🔵 **And a new caveat this pass earns: a register can only judge what it registered. All three
+falsifiers were silent, yet the pass's largest finding (`T145`) was not registered by anybody and
+the pass's own registration (`AiPromptRules`) was factually wrong about the file it named.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🟢 **`ACTION IC`** — read `AiPromptRules` + `AiContentHardener` + `GeneratedItemValidator`: is prompt-injection defence IMPLEMENTED or NAMED? | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if `AiContentHardener` performs no transformation on untrusted course content before it reaches a prompt."* 🟢 **It transforms: `14` injection regexes plus `5` HTML tags and `javascript:` URLs, each match replaced by `[redacted by content hardener]`, every event recorded as a typed `Issue(severity, patternId, match, offset)`; `194` LOC of tests assert the removals actually happen. Wired at `EssayGenerationService.java:174` on `request.pageMarkdown()`, before chunking and before the prompt.** 🔴 **But `harden()` has exactly ONE call site in `src/main` and the GRADED path is not it — `T144`.** 🔴 **And `AiPromptRules` is not a defence at all: `58` LOC of house TYPOGRAPHY (no em dashes, Swiss German `ss`, real umlauts). The registration guessed from a file name.** [`evidence/injection-defence-by-path.2026-10-13-p162.tsv`](../evidence/injection-defence-by-path.2026-10-13-p162.tsv) |
+| 🟢 **`ACTION ID`** — run `P160-A` STEP 7 + STEP 8 over `moodle/moodle` and `Selleo/mentingo` | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if `≥1` capability currently published for either platform fails STEP 7 or STEP 8."* 🟢 **`0 of 8` fail.** 🟡 **Moodle's Open Badges is NARROWED — `badge.imageauthorname`/`imageauthoremail`/`imageauthorurl` dropped at `2025013100.01` — but the capability stands and `306` paths is not retracted.** 🟢 **Moodle's `composer.json` + `package.json` carry `0` LTI/xAPI/badge/credential entries, so `T142` does NOT apply to Moodle.** 🟢 **mentingo's SCORM is CONFIRMED by a second instrument and its player named: `scorm-again@3.0.4`, MIT over MIT.** 🆕 🔴 **The real finding is the instrument's blind spot — `T146`: both steps take the PUBLISHED list as input, so the `7`-table AI judge they stumbled over could never have been found by the audit itself.** 🆕 🔴 **And STEP 7 has a HORIZON on Moodle: `upgrade.php` covers `2022112802`→`2026092300` only.** [`evidence/step7-step8-audit.2026-10-13-p162.tsv`](../evidence/step7-step8-audit.2026-10-13-p162.tsv) |
+| 🟢 **`ACTION IE`** — can Moodle's AI actions be made evaluative by an `aiplacement_*` PLUGIN? | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if a placement plugin cannot reach a gradebook write."* 🔴 **It can.** 🟢 **`core_ai\placement` is abstract with `4` declarative methods and no sandbox; each core placement is a full plugin (`version.php`, `db/access.php`, `db/services.php`, `classes/external/`); `manager.php:75-77` reads the placement's OWN `get_action_list()` with no allowlist; `manager.php:191` dispatches any `base` subclass; `aiactions/base.php:50` makes `store()` abstract and `:118` makes `get_tablename()` overridable; and `grade_update()` is a GLOBAL function at `public/lib/gradelib.php:64` whose `$source` is a free-text label with no caller check.** 🔴 **`T147`: *"Moodle core is outside Annex III"* is a fact about what core SHIPS, not a gate it ENFORCES.** 🟢 **`P162-C` sells the missing gate.** [`evidence/placement-gradebook-reach.2026-10-13-p162.tsv`](../evidence/placement-gradebook-reach.2026-10-13-p162.tsv) |
+
+## 🆕 🟢 Three gaps CLOSED that were never registered as gaps — they were inherited as settled facts
+
+🔴 **This is the pass's methodological result and it is worth more than any of the three verdicts
+above: three things this shelf had stopped testing were all wrong, and all three were cheap.**
+
+| inherited belief | passes it stood | measured this pass |
+|---|---|---|
+| 🔴 *"the Moodle path census costs `746 MB`"* | 3 | 🟢 **`3.1 MB` and `1` second** with `--filter=blob:none --no-checkout`, AGREEING at `67 589` paths; `26 MB` with a sparse checkout for `677` files of content. 🟢 **`P162-A`** |
+| 🔴 *"GitHub metadata is gone"* *(`T137`)* | 6 | 🟢 **Per-repository metadata answers `200` once the repo is ATTACHED, and the `403` body named `add_repo` as the remedy all along.** 🔴 **`search/repositories` really is closed — ranking and new-entrant discovery do not come back.** 🟢 **`T148`** |
+| 🔴 *"the source hosts do not resolve"* *(`T134`)* | 6 | 🔴 **They resolve. The PROXY refuses `CONNECT` with `403` on a developer-host allowlist.** 🔵 **`T134` keeps its *search-summary* label and loses its stated cause — these figures are unverifiable BY THIS SESSION, which is not evidence they are wrong.** 🟢 **`T148`** |
+
+🆕 🔴 **A fourth, found while verifying this pass's own URLs: `curl -sI https://github.com/<owner>/<repo>`
+returns `403` for ALL repositories in this session, including the six that demonstrably exist.**
+🟢 **A naive `curl -sI` existence gate would reject every real repository on this shelf. The
+correct gate is `P54` — `git ls-remote --symref` — and all six pass it.**
+
+🔵 **The rule this pass would add to the register's own method: a declared gap must be RE-TESTED,
+not inherited. Four of them were inherited, for `3`, `6`, `6` and an unknown number of passes.**
+
+## 🟡 Standing gaps, carried with their age
+
+| gap | passes open | state after p162 |
+|---|---|---|
+| 🔴 **No APAC education adoption RATE** | 8 | 🔴 **OPEN.** 🟢 **`T143`'s gate fired again and was honoured — the `57%` enterprise figure was REFUSED rather than re-regionalised** |
+| 🔴 **No coherent market size** | 13 | 🔴 **OPEN and WORSE — the two live series now disagree by `~$1B` in the BASE YEAR** |
+| 🔴 **No open-source vendor in any market source** | 13 | 🔴 **OPEN** |
+| 🔴 **`374` of `669` `ai-tutor` rows unread** | 4 | 🔴 **OPEN, unchanged** |
+| 🔴 **Agent shelf has not grown from discovery** | 4 | 🔴 **OPEN.** 🟢 **`T110` corroborated a SIXTH time; `T148` confirms the discovery limb does not reopen** |
+| 🔴 **`0 of 6` platforms issue an OB 3.0 / W3C VC** | 3 | 🔴 **OPEN, not re-probed this pass** |
+| 🟡 **No EMEA fact from the news channel** | 1 | 🔴 **`0` new EMEA facts this pass** — 🟢 **but the pass's largest finding is an EMEA one from the CODE channel (`T145`)** |
+| 🟡 **Three passes of Moodle findings rest on ONE tree** | new | 🟡 **`f20534726` unchanged since p160. A concentration, recorded not resolved** |
+| 🟡 **mentingo's injection surface + missing off switch** | new | 🔜 **registered as `ACTION IH`** |
+| 🟡 **Pre-filter thresholds unassessed for script equity** | new | 🔜 **registered as `ACTION IG`** |
 ## 🔴 Verdicts on the THREE actions p160 registered, judged by p161 — all three DISCHARGED, ONE FALSIFIER FIRED
 
 🟢 **Sixth consecutive three-action register.** 🔴 **The first FIRING in three passes, and it
