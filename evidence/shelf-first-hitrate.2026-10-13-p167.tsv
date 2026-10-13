@@ -1,0 +1,32 @@
+# ACTION IS's instrument, re-run at p167 as a standing control. Each term this pass's channels produced, grepped against the KB BEFORE publication.
+channel	term	shelf_hits	already_held
+WEB	SB 26-189	14	yes
+WEB	Council of Europe	65	yes
+WEB	IESALC	388	yes
+WEB	ILIA	1537	yes
+WEB	Tec de Monterrey	100	yes
+WEB	ethical guidelines	9	yes
+WEB	Gates Foundation	16	yes
+WEB	AI Adoption Summit	58	yes
+WEB	AI Continent Action Plan	1	yes
+WEB	Apply AI Strategy	0	NO
+WEB	GDPR-K	0	NO
+WEB	Seppo	0	NO
+WEB	Lalilo	1	yes
+WEB	ASEAN Guide	13	yes
+WEB	OpenEduCat	789	yes
+WEB	Chamilo	355	yes
+WEB	Sakai	533	yes
+WEB	ILIAS	434	yes
+CODE	ScormImportJobData	0	NO
+CODE	scormTusUploadService	0	NO
+CODE	xAPI-inspired	0	NO
+CODE	OneRoster-style	0	NO
+CODE	authorizeEndpoint	0	NO
+CODE	oneRosterController	0	NO
+CODE	EdX Inc. wishes to state	0	NO
+CODE	Additional license statement	2	yes
+CODE	scorm-import.worker	0	NO
+CODE	GNU Affero General Public License	98	yes
+# WEB 15 of 18 already held = 83% (p166: 91%). CODE 2 of 10 already held = 20% (p166: 81%).
+# Second independent sample agreeing with T175's direction: the web channel mostly re-derives; the code channel mostly adds.

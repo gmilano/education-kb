@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region, with the shelf grepped BEFORE publication.**
+🔴 **`T186` CONFIRMED on a second sample: `15` of the `18` terms this web sweep produced were already
+here — `83%` re-derivation, against `20%` on the code channel.**
+🔴 **The market remains incoherent for an EIGHTEENTH pass, `T168`'s cause unchanged.**
+🆕 🔴 **`gap 104` is RE-CONFIRMED by an independent sweep: still no EDUCATION-SPECIFIC AI regulation
+anywhere in LATAM — national AI frameworks only. And APAC returned `0` named education vendors and
+`0` national education-AI policies, which is recorded here as a measured silence, not as coverage.**
+[`evidence/shelf-first-hitrate.2026-10-13-p167.tsv`](../evidence/shelf-first-hitrate.2026-10-13-p167.tsv)
+
+### 🆕 🔴 What the web channel produced that this KB did NOT already hold — `3` of `18`
+
+| term | region | channel | why it is worth a row |
+|---|---|---|---|
+| 🆕 🟡 **EU `Apply AI Strategy`** | EMEA | 🔴 *search-summary* | 🟡 **Named alongside the `AI Continent Action Plan` as the Commission's deployment arm. The shelf held the Action Plan and the `Apply AI Alliance` but not this** |
+| 🆕 🟡 **`GDPR-K`** | EMEA | 🔴 *search-summary* | 🟡 **Used as a compliance label for children's edtech portfolios in European market reporting. If it is a procurement checkbox, it is a requirement line in an EMEA bid** |
+| 🆕 🟡 **`Seppo`** *(Finland)* | EMEA | 🔴 *search-summary* | 🟡 **A named European AI-for-kids vendor, with LEGO Education and Oxford University Press** |
+
+🔴 **Everything else the sweep surfaced was already on the shelf:** Colorado `SB 26-189`, the Council
+of Europe's regulatory work, UNESCO `IESALC`, `ILIA` / CEPAL, Tec de Monterrey's observatory, the
+Commission's updated ethical guidelines, the Gates Foundation courseware money, the UK's
+`£200m+` adoption commitment, the `92%` student-use figure, the `ASEAN Guide`, `OpenEduCat`,
+`Chamilo`, `Sakai` and `ILIAS`.
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **The build this shelf can now quote end-to-end is district rostering, and `ACTION IV` removed
+its last unknown.** 🟢 **`P167-B`: `12` OneRoster 1.2 entities — users, students, teachers,
+enrolments, classes, courses, orgs, schools, academicSessions, gradingPeriods, terms, demographics —
+read-only, per-scope authorisation, on `Apache-2.0` with no copyleft obligation and no abandoned
+dependency *(measured)*.** 🔴 **Write-back is a build: `0` write routes in the tree *(measured)*.**
+🟢 **OneRoster is the de-facto district expectation here, and the regulatory pull named in earlier
+passes — Colorado `SB 26-189`'s safe harbour, Oklahoma's and Maryland's human-oversight bills —
+lands on the same deliverable.**
+🆕 🟢 **New this pass: `openedx/edx-platform`'s RPC carve-out (`P167-C`) opens US higher-education
+MOOC engagements that a bare `AGPL-3.0` reading would have refused — a separately deployed AI
+tutoring or analytics service may stay closed-source *(measured, body-read)*.**
+🔴 **Unchanged caution: `~134` AI-in-education bills across `31` states is a *search-summary* figure
+this KB has never verified at source, and no US federal instrument exists.**
+
+### 🟢 EMEA
+
+🟢 **This is the region where `P167-C` and `P167-D` are worth the most, because the EU AI Act puts
+education AI in the high-risk tier and a high-risk file is built from TERMS, not from licence-family
+labels.** 🟢 **A per-dependency sheet whose rows are obligations — and that catches an addendum like
+`edx-platform`'s or an attribution clause like `OpenOLAT`'s — is directly billable preparation
+*(measured instrument, `1`–`2` days per twenty dependencies)*.**
+🟡 **Policy context this sweep returned, all *search-summary*: the AI Act in force; the `AI Continent
+Action Plan` and 🆕 the `Apply AI Strategy`; the Commission's updated ethical guidelines on AI in
+education; a Council of Europe working conference on the regulation of AI systems in education; the
+UK's `£200m+` adoption commitment; `GDPR-K` as a children's-edtech compliance label.**
+🟡 **Named vendors: LEGO Education, Oxford University Press, 🆕 `Seppo` (Finland), Cornelsen with
+Lalilo.**
+🆕 🔵 **A measured EMEA signal nobody searched for: this shelf's one `MIT`-licensed LMS,
+`Selleo/mentingo`, publishes its README in ENGLISH and writes its unpublished roadmap comments in
+POLISH — both anti-claims (`xAPI`/`LTI` at `README.md:246`, SCORM import at `:293`) are Polish, and
+the first cites `art. 8e KSC`, Poland's national cybersecurity act, alongside NIS-2.**
+🔵 **So the published surface is English and the honest internal surface is not. That is precisely
+where an English-only probe goes blind, and it is a European permissive vendor — the population this
+shelf has the least of.**
+
+### 🟡 APAC
+
+🔴 **DECLARED GAP, measured this pass: the regional query returned `0` named education-sector
+vendors, `0` national education-AI policies and `0` open-source education repositories for APAC.**
+🔵 **Saying so is the result. A reader who sees nothing under APAC cannot tell a quiet region from
+an unsearched one.**
+🟡 **What it did return is non-education context, all *search-summary*: regulation is fragmented with
+no regional framework; Singapore's responsible-AI guidelines are the mature case; China's emphasis
+is on algorithmic-misconduct law; the `ASEAN Guide on AI Governance and Ethics` remains early-stage;
+APAC is the fastest-growing region on vendor forecasts (`~20.9%` CAGR) and `56%` of APAC businesses
+report deploying assistants.**
+🟢 **The actionable consequence is unchanged from earlier passes: multi-jurisdiction policy logic has
+to be a FIRST-CLASS part of an APAC build, because there is no single instrument to conform to.**
+🔴 **Until a tree-level APAC signal exists, this section stays honest about being thin.**
+
+### 🟡 LATAM
+
+🆕 🔴 **`gap 104` RE-CONFIRMED on an independent sweep: no EDUCATION-SPECIFIC AI regulation found
+anywhere in the region. What exists is national AI frameworks plus `ILIA`'s governance scoring, and
+one commentary describing regional policy as *"a patchwork of pilot policies, vulnerable to being
+tossed out with each new administration"*, with Chile the exception whose AI roadmap survived a
+change of government *(all search-summary)*.**
+🟡 **Adoption evidence, *search-summary*: UNESCO `IESALC` with UNU-IAS surveyed `200` higher-education
+institutions across `19` countries; Tec de Monterrey's observatory reports student use at `92%`
+(from `86%`) and teacher use at `79%` (from `61%`), with `65%` of students fearing superficial
+learning.** 🔴 **Market sizing for *"Rest of Latin America"* is `$18.2M` → `$36M` by 2029 — two
+orders of magnitude below the global forecasts in the same sweep, which is itself the clearest
+evidence that these numbers measure different things (`T168`).**
+🟢 **The opportunity this shelf can actually serve: the `65%`-fear-superficial-learning finding and
+the absence of binding education rules together argue for `P164-C`'s provenance port and
+`P163-C`'s off switch as DIFFERENTIATORS rather than compliance costs — a studio can ship oversight
+no regulation yet requires, and say so.**
+🟡 **`Selleo/mentingo` (`MIT`) and `edfi-oneroster` (`Apache-2.0`) remain the two permissive
+starting points with no copyleft obligation, which matters more where public-sector procurement
+cannot absorb legal review.**
+
+### 🟢 Global
+
+🟢 **The strongest global asset this pass produced is an instrument, not a market read.**
+🟢 **`P167-A`'s census now carries eight steps and seven named false-positive classes, with STEP 8 —
+*an anti-claim is evidence, never a verdict* — added because the same repository both understates
+one standard in its docs and overstates two others in a comment.**
+🟢 **`P167-D` retires the licence size band (`13 B` between families, `1 235 B` within one) in favour
+of a title-line probe verified on `14` bodies.**
+🔴 **Standing global gaps, unchanged: no SIS or ERP under `MIT` or `Apache-2.0` *(fifth pass)*; no
+open-source agent marketed for EDUCATION on the listicle channel; and `10` of the `15` trees probed
+this pass — including `10` of the `12` shelf agent rows — contain NO education interop standard at
+all, which is the measured version of that second gap.**
+
+
 ## Pass 166 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region.**

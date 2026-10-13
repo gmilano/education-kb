@@ -5,6 +5,72 @@ updated: 2026-10-13
 ---
 
 
+## 2026-10-13 — Pass 167
+
+### 🆕 🟢 What is new this week: the permissive OneRoster server, read route by route
+
+🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster` was added to the shelf at p166 on a summary. p167 read its
+routes, and the capability is REAL and bigger than published.**
+
+| | p166 published | 🆕 p167 measured |
+|---|---|---|
+| 🔴 **GET endpoints** | *"`14`"* | 🟢 **`24` rostering GETs — `12` entities × `2` shapes** |
+| 🟡 **entities** | unknown | 🟢 **users, students, teachers, enrollments, classes, courses, orgs, schools, academicSessions, gradingPeriods, terms, demographics** |
+| 🟡 **write-back** | unmeasured | 🟢 **`0` `post`/`put`/`patch`/`delete` routes — read-only, confirmed** |
+| 🟢 **substance** | — | 🟢 **`oneRosterController.js` `264` LOC, `OneRosterQueryService.js` `594` LOC, `261` paths** |
+
+🔴 **Neither the code nor the upstream README ever said `14` — the README's own endpoint table lists
+the same `24` rows and the same `12` entities, so the two channels AGREE and the published figure
+had no channel behind it.** 🟢 **`gap 102` CLOSES and `P166-B` becomes `P167-B`, amended not
+withdrawn, because users AND enrolments are both served.**
+
+### 🆕 🔴 A licence body that changes what you may build — `openedx/edx-platform`
+
+🔴 **`ACTION IW` read all `14` licence bodies on disk. `openedx/edx-platform` is `AGPL-3.0`
+(`35 136 B`) with `10` APPENDED lines from EdX Inc.:**
+
+> 🟢 *"any public, independently available web service offered over the network and communicating
+> with edX's copyrighted works by any form of inter-service communication, including but not limited
+> to Remote Procedure Call (RPC) interfaces, is not a work based on our copyrighted work within the
+> meaning of the license"* — and Corresponding Source *"do not include source code files for
+> programs used solely to provide those public, independently available web services."*
+
+🔵 **Bare `AGPL-3.0` §13 is this shelf's stop-ship gate. The licensor has narrowed it in writing for
+exactly the service-to-service shape an AI studio builds.** 🔴 **It does NOT reach in-process code —
+an XBlock, a Django app, a patch or a fork stays `AGPL-3.0`.**
+🟡 **Second addendum found: `openolat/OpenOLAT`'s `Apache-2.0` body carries two *"Additional license
+statement"* attribution sections — no grant change, but `809 B` of why its body is not canonical.**
+
+### 🆕 🔴 The licence SIZE BAND is retired, not corrected
+
+| family | n | min | max | own spread |
+|---|---|---|---|---|
+| 🟢 `MIT` | `4` | `1 062` | `1 074` | `12 B` |
+| 🔴 `PROPRIETARY` *(PageLM)* | `1` | `8 563` | `8 563` | — |
+| 🟢 `Apache-2.0` | `4` | `10 173` | `11 408` | 🔴 **`1 235 B`** |
+| 🔴 `AGPL-3.0` | `4` | `34 522` | `35 136` | 🔴 **`614 B`** |
+| 🔴 `GPL-3.0` | `1` | `35 149` | `35 149` | — |
+
+🔴 **`P48`'s published bands (`11 357`–`11 358`, `35 121`–`35 147`) match NOTHING on disk — `T184`
+was drift, falsifier SILENT.** 🔴 **And the test is unsound, not stale: `13 B` separates AGPL's
+maximum from GPL's minimum, while Apache's own spread is `1 235 B` — `95×` larger.**
+🆕 🔴 **Worse, the obvious body probe is broken too: searching a body for *"GNU AFFERO GENERAL PUBLIC
+LICENSE"* matches EVERY `GPL-3.0` file, because GPL-3.0 §13 is titled *"Use with the GNU Affero
+General Public License"* — `plastic-labs/tutor-gpt` carries the string at lines `552`, `556`, `559`
+while its title line reads `GNU GENERAL PUBLIC LICENSE`.**
+🟢 **`P167-D` replaces both with a TITLE-LINE probe, verified on all `14` bodies with `0`
+misclassifications.**
+
+### 🟢 `10` of `15` trees probed contain NO education interop standard at all
+
+🔴 **`ai-shifu`, `penecho`, `Echo-Loop`, `anki-mcp-server`, `DeepTutor`, `PageLM`,
+`AI-Powered-Video-Tutorial-Generator`, `ChatTutor`, `tutor-gpt` and `Mr.-Ranedeer-AI-Tutor` return
+`0` hits for OneRoster, Ed-Fi, LTI, SCORM and xAPI across every tracked path.**
+🔵 **That is the measured form of a gap this KB has asserted for several passes: the agent layer and
+the interop layer are disjoint populations. An agent on this shelf does not integrate with a school
+system — it has to be composed with something that does (`P167-B`).**
+
+
 ## 2026-10-13 — Pass 166
 
 ### 🆕 🔴 What is new this week: the morphology collision reproduces on two more codebases, in a THIRD naming convention

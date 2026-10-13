@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+🟢 **Four pre-registered actions, all FOUR DISCHARGED with silent falsifiers — including
+`ACTION IT`, which p166 held open as not measurable inside a single pass.**
+🆕 🔴 **The pass's hardest finding is about this shelf's instruments, not about education: running
+p166's new comment guard across `15` trees found THREE defects in the guard, and one of them is the
+missing-word-boundary error that this entire census method exists to correct.**
+🆕 🟢 **No row enters or leaves the shelf. `12` of `12` licence families re-derived from the body on
+disk and `12` of `12` CONFIRM what p166 published.**
+[`evidence/comment-guard-census.2026-10-13-p167.tsv`](../evidence/comment-guard-census.2026-10-13-p167.tsv)
+[`evidence/licence-bands.2026-10-13-p167.tsv`](../evidence/licence-bands.2026-10-13-p167.tsv)
+[`evidence/churn-multihour.2026-10-13-p167.tsv`](../evidence/churn-multihour.2026-10-13-p167.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IT`** — the multi-hour churn count p166 could not take | 🟢 **DISCHARGED, falsifier SILENT. `1` of `12` over `3 h 29 min` — and the instrument that made it possible was p166's committed baseline, not a longer pass** |
+| 🟢 **`ACTION IU`** — is `T187` a class or a one-repo curiosity? | 🟢 **DISCHARGED, falsifier SILENT. `5` repositories carry capability terms in comments — but on the LANGUAGE axis mentingo is still alone, and the guard had `3` defects** |
+| 🟢 **`ACTION IV`** — which OneRoster entities does `edfi-oneroster` serve? | 🟢 **DISCHARGED, falsifier SILENT. `12` entities over `24` GETs, users AND enrolments both present. `gap 102` CLOSED** |
+| 🟢 **`ACTION IW`** — re-derive the licence size bands | 🟢 **DISCHARGED, falsifier SILENT — and the result is that the BAND TEST cannot work at all, not that its numbers drifted** |
+
+### 🟢 The agent shelf — re-verified at p167, with every licence body now read
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T05:46:23Z` and again at the
+closing sweep.** 🟢 **`1` of `12` HEAD shas moved since p166's `t0` — `ai-shifu`, for the second
+consecutive pass.** 🔴 **The `★` column stays closed (`T149`).**
+🔵 **Age convention, stated so it stops drifting: age is the CALENDAR-day difference from
+`2026-10-13`, not an exact `86 400`-second division — the two disagree by `±1` day on five rows.**
+
+| repo | licence *(title-line probe)* | body | HEAD date | age |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | `11 342 B` *(with APPENDIX)* | `2026-10-13` 🆕 | 🟢 **`0` d** |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 `AGPL-3.0` | `34 523 B` | `2026-10-12` | 🟢 `1` d |
+| 🟡 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` | `34 523 B` | `2026-10-12` | 🟢 `1` d |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | `1 074 B` | `2026-10-11` | 🟢 `2` d |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | `1 062 B` | `2026-10-10` | 🟢 `3` d |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `11 408 B` *(with APPENDIX)* | `2026-10-08` | 🟢 `5` d |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | `8 563 B` | `2026-10-08` | 🟢 `5` d |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | `1 068 B` | `2026-10-08` | 🟢 `5` d |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` | `1 070 B` | `2026-09-21` | 🟡 `22` d |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` | `34 522 B` | `2026-01-09` | 🔴 **`277` d** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` *(NOT AGPL — see below)* | `35 149 B` | `2025-11-13` | 🔴 **`334` d** |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO LICENCE FILE** | — | `2025-09-30` | 🔴 **`378` d** |
+
+🟢 **`6` rows permissive and active (`≤5` d).** 🔴 **`3` over the `180`-day drop line, `1` of those
+with no grant at all.** 🟢 **`12` of `12` families CONFIRMED against p166's published values.**
+
+### 🆕 🔴 `T190` — the licence probe that reads every GPL-3.0 body as AGPL-3.0
+
+🔴 **A substring probe for `"GNU AFFERO GENERAL PUBLIC LICENSE"` matches EVERY GPL-3.0 body, because
+GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"*.**
+🟢 **Cited: `plastic-labs/tutor-gpt`'s `LICENSE` carries the Affero string at lines `552`, `556` and
+`559`, while its title line reads `GNU GENERAL PUBLIC LICENSE`.**
+🟢 **The shelf's published verdict for that row — `GPL-3.0` — is CORRECT. What p167 found is that a
+plausible instrument would have got it wrong, and `P167-D` replaces body-substring matching with a
+TITLE-LINE probe verified on all `14` bodies.**
+🔵 **Direction of the error matters: it reads a copyleft licence as a STRONGER copyleft, so it
+over-restricts rather than over-permits — the one error direction a licence gate can survive.**
+
+### 🆕 🔴 `T191` — `zijinz456/OpenTutor` says `xAPI` twice, and means *"resembles"*
+
+🟡 **`ACTION IU` measured `2` hits for `xapi` in this shelf row, and `0` of them are code:
+`apps/api/services/analytics/events.py:1` and `:36`, both reading `xAPI-inspired`.**
+🟢 **The module is a first-party learning-event emitter with its own verb list; xAPI is named as the
+thing it is MODELLED ON.** 🔴 **Verdict: `xAPI` ABSENT in `zijinz456/OpenTutor`. No LRS will accept
+its payloads, and a client who reads *"xAPI"* on a feature list has bought an integration that does
+not exist.** 🟢 **This is the seventh false-positive class — the ANALOGY claim — and it is now in
+`P167-A`'s probe as `(inspired|like|style|flavoured|compatible)`.**
+
+### 🆕 🟢 `T192` — the anti-claim that UNDERSTATES, and why `T187` needs STEP 8
+
+🔴 **`ACTION IU` found a SECOND Polish anti-claim in `Selleo/mentingo` that p166 never cited —
+`README.md:293`, under the heading *"Does Mentingo support SCORM?"*: *"TODO(verification): is there
+SCORM import? if yes, add a sentence. if not — leave as is."*** 🔴 **The published prose says only
+*"can export courses as SCORM 1.2 packages."*** 🟢 **The code says otherwise: `4` import endpoints
+(`import/init`, `import/tus`, `import/tus/:packageId`, `import/:packageId/complete`), a
+`scorm-import.worker.ts`, a tus resumable-upload service, typed job payloads (`ScormImportJobData`,
+`StreamedScormImportJobData`) and two e2e specs.**
+🟢 **So `T187`'s reading holds for xAPI and LTI 1.3, where the code channel independently reads `0`
+outside the comment — and would have been WRONG for SCORM import.**
+🟢 **`P167-A` STEP 8: an anti-claim is EVIDENCE for a code probe, never a verdict on its own.**
+
+
 ## Pass 166 — 2026-10-13
 
 🟢 **Four actions registered by p165; `3` DISCHARGED with silent falsifiers and `1` HELD OPEN as

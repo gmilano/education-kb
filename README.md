@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+🟢 **Four pre-registered actions, all FOUR DISCHARGED with silent falsifiers — the first clean sweep
+of a four-action register, and it includes the action p166 had to hold open as not executable.**
+🆕 🔴 **The pass's most useful finding is against this shelf's own instruments: p166's brand-new
+comment guard had THREE defects, and one of them — a missing trailing `\b`, so `para` matched
+*"parallel"* — is the exact error class the census method was built to correct two passes earlier.
+`98.3%` of the *"non-English comment"* population was that one character. Recorded as `T194`.**
+🆕 🟢 **And one finding changes what a client may build: `openedx/edx-platform`'s `AGPL-3.0` body
+carries an EdX Inc. addendum declaring that a service talking to it over RPC is NOT a derivative
+work — a carve-out this shelf's stop-ship gate would otherwise have refused.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IT`** — the multi-hour churn count p166 could not take | 🟢 **DISCHARGED, falsifier SILENT. `1` of `12` over `3 h 29 min`. The enabler was p166's committed baseline — and p167 found the baseline's own interval ledger to be wrong (`T196`), anchoring on commit timestamps instead** |
+| 🟢 **`ACTION IU`** — is `T187` a class or a one-repo curiosity? | 🟢 **DISCHARGED, falsifier SILENT. `5` repositories carry capability terms in comments — and the guard itself had `3` defects** |
+| 🟢 **`ACTION IV`** — which OneRoster entities does `edfi-oneroster` serve? | 🟢 **DISCHARGED, falsifier SILENT. `12` entities over `24` GETs, users AND enrolments present. `gap 102` CLOSED** |
+| 🟢 **`ACTION IW`** — re-derive the licence size bands | 🟢 **DISCHARGED, falsifier SILENT — and the band test is retired as UNSOUND, not merely corrected** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T194` — the guard's three defects, each measured separately.** 🔴 **Marker collision
+  (`/*` in a template literal, `//` in `https://`): `1 140` → `934` comment hits, `18.1%` killed.
+  Unterminated span (`<code>/*</code>` in OpenOLAT's doc HTML opens a comment that never closes, so
+  it swallows the rest of the file): `934` → `925`. Language limb missing its trailing `\b`:
+  `176` → `3`, `98.3%` killed.** 🟢 **The control that makes the correction publishable:
+  `T187`'s anti-claim at `Selleo/mentingo` `README.md:246` survives all three fixes unchanged, so
+  p166's headline is intact and only the population around it collapsed.**
+- 🆕 🟢 **`ACTION IU` answered on both axes, honestly split.** 🟢 **`7 723` capability-term
+  occurrences across `15` pinned trees; `925` (`12.0%`) sit in a comment.** 🟢 **`5` repositories
+  carry them — edx-platform `387`, OpenOLAT `275`, edfi-oneroster `238`, mentingo `23`, OpenTutor
+  `2` — so `T187` IS a class on the comment axis.** 🟡 **But only `3` of those `925` are in a
+  non-English comment, and all `3` are in mentingo's Polish README, so the LANGUAGE limb remains a
+  single-repository observation and is published as one.**
+- 🆕 🟢 **`T192` — the second anti-claim, pointing the OTHER way.** 🔴 **`README.md:293`, under
+  *"Does Mentingo support SCORM?"*: *"TODO(verification): is there SCORM import? if yes, add a
+  sentence."* The prose claims export only.** 🟢 **The code has `4` import endpoints, a dedicated
+  import worker, a tus resumable-upload service, typed job payloads and two e2e specs.**
+  🟢 **So an anti-claim can UNDERSTATE a capability. `P167-A` STEP 8: an anti-claim is evidence for a
+  code probe, never a verdict.**
+- 🆕 🟡 **`T191` / the seventh false-positive class — the ANALOGY claim.**
+  🔴 **`zijinz456/OpenTutor` names `xapi` twice, both in comments, both `xAPI-inspired`, `0` in code:
+  verdict xAPI ABSENT.** 🔵 **`-inspired` / `-like` / `-style` / `-compatible` is the class most
+  likely to reach a client's requirements document intact, because it reads as a standard.**
+- 🆕 🟢 **`T189` — the OneRoster server, read route by route.** 🟢 **`12` entities × `2` shapes =
+  `24` rostering GETs, every route behind `authorizeEndpoint`, `0` write routes anywhere in the app,
+  `oneRosterController.js` `264` LOC + `OneRosterQueryService.js` `594` LOC.** 🔴 **p166's *"`14` GET
+  endpoints"* is corrected: the code says `24`, the upstream README's table says `24`, and nothing
+  said `14`.** 🟢 **`gap 102` CLOSED; `P166-B` → `P167-B`, amended.**
+- 🆕 🔴 **`T193` / `P167-D` — the licence size band is UNSOUND, not stale.** 🔴 **`AGPL-3.0`'s
+  measured max (`35 136 B`) and `GPL-3.0`'s measured min (`35 149 B`) are `13 B` apart, while
+  `Apache-2.0`'s spread within its own family is `1 235 B` — `95×` larger.** 🟢 **Replaced by a
+  TITLE-LINE probe, verified on all `14` bodies with `0` misclassifications.**
+- 🆕 🔴 **`T190` — and the obvious body probe is broken too.** 🔴 **Searching a licence body for
+  *"GNU AFFERO GENERAL PUBLIC LICENSE"* matches EVERY `GPL-3.0` file, because GPL-3.0 §13 is titled
+  *"Use with the GNU Affero General Public License"*.** 🟢 **`plastic-labs/tutor-gpt` carries the
+  string at lines `552`, `556`, `559`; its title line reads `GNU GENERAL PUBLIC LICENSE`. The
+  shelf's published verdict for it was right; a plausible instrument would have been wrong.**
+- 🆕 🟢 **`T195` / `P167-C` — the addendum that changes the architecture.** 🟢 **EdX Inc.: *"any
+  public, independently available web service … communicating with edX's copyrighted works by any
+  form of inter-service communication, including but not limited to Remote Procedure Call (RPC)
+  interfaces, is not a work based on our copyrighted work"*, and Corresponding Source excludes that
+  service's files.** 🔴 **It does NOT reach in-process code — an XBlock, a Django app, a patch or a
+  fork stays `AGPL-3.0`.** 🟡 **Read from the grant file, which is the strongest channel available
+  here and still not legal advice (`gap 107`).**
+- 🆕 🔴 **`T196` — the churn baseline's interval ledger is wrong, and this repo's own git log is
+  what caught it.** 🔴 **The ledger's *"`p164_sweep` → `p165_sweep` = `37` min"* places p164's sweep
+  `27` min `30` s AFTER p164's commit at `03:10:47Z`. On the commit channel the gap is `1 h 04 min`.**
+  🟢 **Calibrated by p166's own sweep-to-commit lag of `2 min 33 s`, a pass commit is a safe upper
+  bound on that pass's sweep — so this KB has had an independent clock all along and never used it.**
+  🔴 **`T173`'s *"`1` of `12` per `37` minutes"* loses its denominator: the real interval was `~64`
+  min, the rate overstated `~1.7×`, and `T173` should not be cited as a rate in any form.**
+- 🟢 **`T186` CONFIRMED on a second independent sample.** 🔴 **Web channel `15` of `18` terms already
+  held — `83%` re-derivation. Code channel `2` of `10` — `20%`.** 🟢 **Every substantive p167 finding
+  came from a tree. The `3` new web terms were the EU `Apply AI Strategy`, `GDPR-K`, and `Seppo`.**
+- 🆕 🟢 **The measured version of a long-asserted gap: `10` of the `15` trees probed — including `10`
+  of the `12` shelf agent rows — contain `0` hits for OneRoster, Ed-Fi, LTI, SCORM and xAPI.**
+  🔵 **The agent layer and the interop layer are disjoint populations on this shelf.**
+  🔴 **Qualified as `gap 106`: the probe used `5` terms and no synonyms. `ACTION IZ` tests it.**
+
+### 🟢 Regional placement
+
+🟢 **North America** — `P167-B` is quotable end-to-end: `12` rostering entities, read-only,
+`Apache-2.0`, no copyleft obligation; and `P167-C` opens US higher-education MOOC work.
+🟢 **EMEA** — where `P167-C`/`P167-D` are worth the most, because the AI Act's high-risk file is
+built from TERMS, not licence-family labels; plus a measured signal nobody searched for — this
+shelf's one `MIT` LMS is Polish and documents itself in Polish, which is where an English-only probe
+goes blind. 🔴 **APAC** — `0` named education vendors, `0` national education-AI policies returned;
+recorded as a measured silence. 🔴 **LATAM** — `gap 104` RE-CONFIRMED: no education-specific AI
+regulation in the region, national frameworks only.
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IX`** — body-read the licences this shelf recommends but never read (`moodle`, `scorm-again`, `enrol_oneroster`, `Chamilo`, `Sakai`, `ILIAS`, `OpenEduCat`): how many carry an ADDENDUM? | 🔴 *Refuted if `0` carries any appended paragraph — making `edx-platform` and `OpenOLAT` a two-repo curiosity, not `gap 105`'s class* |
+| 🟢 **`ACTION IY`** — read mentingo's `scorm-export-generator` manifest builder and settle `gap 103`: SCORM 2004, or `1.2` only? | 🔴 *Refuted if it emits a valid 2004 manifest — which would mean `gap 103` was mis-stated* |
+| 🟢 **`ACTION IZ`** — re-probe the `10` zero-hit trees with SYNONYMS (`LRS`, *"learning record store"*, `imsmanifest.xml`, `SCO`, `QTI`, `Caliper`, `-inspired`) | 🔴 *Refuted if `≥1` returns a hit — making p167's *"`10` of `15`"* a FALSE ABSENCE* |
+| 🟢 **`ACTION JA`** — extend the churn ledger past `6` hours against p167's RECORDED shas | 🔴 *Refuted if `≥3` of `12` change over `≥6` hours — which would reinstate `T173` as a rate* |
+
+
 ## Pass 166 — 2026-10-13
 
 🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` HELD OPEN because its
@@ -48,8 +147,8 @@ evidence for xAPI and LTI in this shelf's one MIT-licensed LMS is a Polish HTML 
   the direction reversed: the shelf held the sibling and filed it as core.**
 - 🆕 🟢 **`T182` — the permissive OneRoster path exists, and the shelf already held it at `89` hits.**
   🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster`, `Apache-2.0` body-read `10 173 B`, HEAD `2026-10-12`
-  (`1` day), `261` paths, serving OneRoster 1.2 over `14` GET endpoints.** 🟢 **`P166-B` composes
-  it.** 🟡 **`14` GET endpoints is READ rostering; write-back is unmeasured (`gap 102`).**
+  (`1` day), `261` paths, serving OneRoster 1.2 over 🔴 ~~`14`~~ → **`24`** GET endpoints over `12` entities (`T189`, p167).** 🟢 **`P166-B` composes
+  it.** 🟡 **It is READ rostering; p167 measured write-back at `0` routes and CLOSED `gap 102`.**
 - 🆕 🟢 **`T183` — `gap 79` CLOSED, by commit authorship rather than by dates alone.**
   🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster` is upstream: `21` days ahead, `9` more paths, and its
   newest commit is authored BY `CSR2017` — the individual committing INTO the Alliance repo. The

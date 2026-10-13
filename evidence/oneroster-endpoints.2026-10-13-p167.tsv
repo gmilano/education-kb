@@ -1,0 +1,18 @@
+# ACTION IV - Ed-Fi-Alliance-OSS/edfi-oneroster rostering GET endpoints, read from src/routes/oneRoster.js at HEAD 7442047368fa (2026-10-12, 261 paths, branch main).
+# p166 published '14 GET endpoints'. Measured: 12 entities x 2 shapes = 24 rostering GETs. Neither the code nor the README says 14.
+entity	collection_route	single_route	authz_scope	in_readme_table
+academicSessions	/ims/oneroster/rostering/v1p2/academicSessions	/ims/oneroster/rostering/v1p2/academicSessions/:id	academicsessions	yes
+classes	/ims/oneroster/rostering/v1p2/classes	/ims/oneroster/rostering/v1p2/classes/:id	classes	yes
+courses	/ims/oneroster/rostering/v1p2/courses	/ims/oneroster/rostering/v1p2/courses/:id	courses	yes
+demographics	/ims/oneroster/rostering/v1p2/demographics	/ims/oneroster/rostering/v1p2/demographics/:id	demographics	yes
+enrollments	/ims/oneroster/rostering/v1p2/enrollments	/ims/oneroster/rostering/v1p2/enrollments/:id	enrollments	yes
+gradingPeriods	/ims/oneroster/rostering/v1p2/gradingPeriods	/ims/oneroster/rostering/v1p2/gradingPeriods/:id	academicsessions	yes
+orgs	/ims/oneroster/rostering/v1p2/orgs	/ims/oneroster/rostering/v1p2/orgs/:id	orgs	yes
+schools	/ims/oneroster/rostering/v1p2/schools	/ims/oneroster/rostering/v1p2/schools/:id	orgs	yes
+students	/ims/oneroster/rostering/v1p2/students	/ims/oneroster/rostering/v1p2/students/:id	users	yes
+teachers	/ims/oneroster/rostering/v1p2/teachers	/ims/oneroster/rostering/v1p2/teachers/:id	users	yes
+terms	/ims/oneroster/rostering/v1p2/terms	/ims/oneroster/rostering/v1p2/terms/:id	academicsessions	yes
+users	/ims/oneroster/rostering/v1p2/users	/ims/oneroster/rostering/v1p2/users/:id	users	yes
+# users PRESENT (3 shapes: users, students, teachers) AND enrollments PRESENT -> ACTION IV falsifier SILENT, P166-B amended not withdrawn, gap 102 CLOSED.
+# WRITE-BACK: router.post/put/patch/delete = 0 across the whole app. READ-ONLY confirmed, not merely unmeasured.
+# Not stubs: oneRosterController.js 264 LOC + OneRosterQueryService.js 594 LOC. Also 1 catch-all 404, health, discovery routes (34 router.get total).

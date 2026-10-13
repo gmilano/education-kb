@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+🟢 **`ACTION IV` is DISCHARGED, falsifier SILENT: `Ed-Fi-Alliance-OSS/edfi-oneroster` serves `12`
+OneRoster 1.2 entities, users and enrolments among them, and `gap 102` CLOSES.**
+🆕 🔴 **And this page's own published figure is CORRECTED: it is not `14` GET endpoints. It is `24`
+rostering GETs over `12` entities, and neither the code nor the upstream README ever said `14`.**
+🆕 🟢 **Every licence body on this shelf is now READ rather than banded — `14` bodies, `5` families,
+and the size-band test is retired as unsound.**
+[`evidence/oneroster-endpoints.2026-10-13-p167.tsv`](../evidence/oneroster-endpoints.2026-10-13-p167.tsv)
+[`evidence/licence-bands.2026-10-13-p167.tsv`](../evidence/licence-bands.2026-10-13-p167.tsv)
+
+### 🆕 🟢 `T189` — the OneRoster server, read route by route
+
+🟢 **Pinned tree: `Ed-Fi-Alliance-OSS/edfi-oneroster`, `Apache-2.0` body-read `10 173 B`, `261`
+tracked paths, HEAD `2026-10-12`.** 🟢 **Routes read from `src/routes/oneRoster.js`, controllers
+sized to rule out stubs.**
+
+| entity | collection | `/:id` | authz scope |
+|---|---|---|---|
+| 🟢 `users` | 🟢 yes | 🟢 yes | `users` |
+| 🟢 `students` | 🟢 yes | 🟢 yes | `users` |
+| 🟢 `teachers` | 🟢 yes | 🟢 yes | `users` |
+| 🟢 `enrollments` | 🟢 yes | 🟢 yes | `enrollments` |
+| 🟢 `classes` | 🟢 yes | 🟢 yes | `classes` |
+| 🟢 `courses` | 🟢 yes | 🟢 yes | `courses` |
+| 🟢 `orgs` | 🟢 yes | 🟢 yes | `orgs` |
+| 🟢 `schools` | 🟢 yes | 🟢 yes | `orgs` |
+| 🟢 `academicSessions` | 🟢 yes | 🟢 yes | `academicsessions` |
+| 🟢 `gradingPeriods` | 🟢 yes | 🟢 yes | `academicsessions` |
+| 🟢 `terms` | 🟢 yes | 🟢 yes | `academicsessions` |
+| 🟢 `demographics` | 🟢 yes | 🟢 yes | `demographics` |
+
+🟢 **`12` entities × `2` shapes = `24` rostering GETs, plus a catch-all `404`, a discovery route and
+a health route — `34` `router.get` registrations in total.**
+🟢 **Not stubs: `oneRosterController.js` `264` LOC and `OneRosterQueryService.js` `594` LOC.**
+🟢 **The upstream README's endpoint table lists the SAME `24` rows and the SAME `12` entities, so
+the two channels AGREE and the published `14` has no channel behind it at all.**
+
+🟢 **`ACTION IV`'s falsifier required that users and enrolments NOT both be present. Both are.**
+🟢 **So `P166-B` is amended into `P167-B` rather than withdrawn.**
+
+### 🆕 🟢 Write-back, measured instead of deferred
+
+🟢 **`router.post`, `router.put`, `router.patch` and `router.delete` all read `0` across the entire
+application.** 🔴 **So this is READ rostering — not *"probably read-only"*, but zero write routes in
+the tree.** 🔵 **The sentence a client gets: *`12` rostering entities, read-only, per-scope
+authorisation, Apache-2.0; any enrolment write-back INTO the SIS is a build.*** 🟡 **Ed-Fi ODS
+itself remains a separate, unmeasured decision.**
+
+### 🆕 🔴 `T193` — the licence size band is retired, and `edx-platform` is why it mattered
+
+🟢 **`ACTION IW` read all `14` licence bodies this shelf has on disk.** 🔴 **`P48`'s published bands
+(`11 357`–`11 358` for Apache-2.0, `35 121`–`35 147` for GPL-3.0) match NOTHING on disk.**
+🔴 **And the band test is not merely stale: `AGPL-3.0`'s measured maximum `35 136 B` and `GPL-3.0`'s
+measured minimum `35 149 B` are `13 B` apart, while `Apache-2.0`'s spread within its OWN family is
+`1 235 B` — `95×` larger. A discriminator cannot work in that geometry.**
+
+| family | n | min | max | own spread |
+|---|---|---|---|---|
+| 🟢 `MIT` | `4` | `1 062` | `1 074` | `12 B` |
+| 🔴 `PROPRIETARY` | `1` | `8 563` | `8 563` | — |
+| 🟢 `Apache-2.0` | `4` | `10 173` | `11 408` | 🔴 **`1 235 B`** |
+| 🔴 `AGPL-3.0` | `4` | `34 522` | `35 136` | 🔴 **`614 B`** |
+| 🔴 `GPL-3.0` | `1` | `35 149` | `35 149` | — |
+
+🟢 **The four mechanisms behind the spread, each measured: `http://` vs `https://` in the FSF URLs
+(`1 B`); line re-wrapping (`~1 B`); the *"APPENDIX: How to apply"* section present or absent
+(`~1 200 B`); and a licensor ADDENDUM — the only one that changes TERMS.**
+🔴 **`openedx/edx-platform` carries such an addendum, and it is the most consequential sentence this
+pass read: EdX Inc. declares that a public, independently available web service communicating with
+its code over RPC is NOT a derivative work, and that Corresponding Source excludes that service's
+files.** 🟢 **`P167-C` turns that into a composition; `P167-D` replaces the band with a TITLE-LINE
+probe.**
+
+
 ## Pass 166 — 2026-10-13
 
 🟢 **`ACTION IP` is DISCHARGED, falsifier SILENT: the false-NEGATIVE guards changed `4` verdicts
@@ -75,7 +150,7 @@ the shelf at `89` hits before p166 measured anything:**
 |---|---|---|---|---|---|
 | 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`**, body-read **`10 173 B`** | `7442047368fa` | 🟢 **`1` d** | `261` | 🟢 **OneRoster 1.2 over `14` GET endpoints** |
 
-🟢 **`P166-B` composes it.** 🟡 **Scoping honesty: `14` GET endpoints is READ rostering. Write-back
+🟢 **`P166-B` composes it.** 🟡 **Scoping honesty: `14` GET endpoints is READ rostering. 🔴 **AMENDED p167 (`T189`): `24` GETs over `12` entities; write-back measured at `0` routes.** Write-back
 and the Ed-Fi ODS proper are a separate decision this shelf has NOT measured.**
 
 ### 🆕 🟢 `T183` — `gap 79` CLOSED, by commit authorship rather than by guesswork

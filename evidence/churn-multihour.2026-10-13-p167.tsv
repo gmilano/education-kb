@@ -1,0 +1,29 @@
+# ACTION IT - the MULTI-HOUR churn count p166 held open as not executable inside one pass.
+# p167 diffed its own two sweeps against p166's committed baseline sha columns.
+# p167_t0 = 2026-10-13T05:46:23Z   p167_t1 = 2026-10-13T06:40:30Z (both RECORDED, not derived)
+repo	p164_sha	p166_t0_sha	p167_t0_sha	p167_t1_sha	changed_vs_p164	changed_vs_p166_t0	tags	latest_tag
+ai-shifu/ai-shifu	2da98b19a15c	d88488cdc347	2ff4af09b7bb	2ff4af09b7bb	yes	yes	43	v2.3.4
+penecho/penecho	076c1ad54a85	076c1ad54a85	076c1ad54a85	076c1ad54a85	no	no	16	v1.4.0
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	d14130b6c47d	d14130b6c47d	no	no	42	v1.0.41
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	e0e347f7f399	e0e347f7f399	no	no	57	v0.27.0
+Selleo/mentingo	242a9324fe48	242a9324fe48	242a9324fe48	242a9324fe48	no	no	118	v4.22.0
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	6cf793bd868b	6cf793bd868b	no	no	86	v1.6.14
+CaviraOSS/PageLM	a6646794661b	a6646794661b	a6646794661b	a6646794661b	no	no	0	-
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	no	no	0	-
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	9c260890214d	9c260890214d	no	no	3	v1.8.1
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	no	no	2	v0.1.0
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	5c2f92416c04	5c2f92416c04	no	no	0	-
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	no	no	3	v2.7-Reboot
+# INTERVAL LEDGER, p167 - every span measured to p167_t1, with its ANCHOR named
+#   vs p164 sha      3 h 29 min   1 of 12 changed (ai-shifu)   anchor: p164's COMMIT 03:10:47Z = UPPER bound on its sweep
+#   vs p165 sha      2 h 25 min   1 of 12 changed (ai-shifu)   anchor: p165's COMMIT 04:15:10Z = UPPER bound
+#   vs p166_t0 sha   1 h 54 min   1 of 12 changed (ai-shifu)   anchor: RECORDED UTC in the baseline
+#   vs p166_t1 sha   1 h 32 min   1 of 12 changed (ai-shifu)   anchor: RECORDED UTC in the baseline
+#   p167_t0 -> t1      54 min     0 of 12 changed              anchor: RECORDED UTC, both sweeps
+# ACTION IT FALSIFIER: >=3 of 12 over an interval of >=3 hours. Measured 1 of 12 over 3 h 29 min. SILENT.
+# T196 - the p166 ledger is INTERNALLY INCONSISTENT with this repo's commit history:
+#   it claims p164_sweep -> p165_sweep = 37 min, which places p164's sweep at 03:38:17Z,
+#   27 min 30 s AFTER p164's own commit (03:10:47Z). Impossible. Commit channel says 1 h 04 min.
+#   Calibration: p166's closing sweep 05:07:50Z precedes its commit 05:10:23Z by 2 min 33 s,
+#   so a pass commit is a safe UPPER bound on that pass's sweep. T173's 37-min denominator is WITHDRAWN.
+# Tag counts re-verified at t1 and IDENTICAL to p166's published table on all 12 rows (no tag churn in ~2 h).

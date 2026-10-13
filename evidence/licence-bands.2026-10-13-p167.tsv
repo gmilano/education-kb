@@ -1,0 +1,26 @@
+# ACTION IW - every licence body this shelf has on disk, re-derived. Family from the TITLE LINE, never from size.
+repo	file	bytes	lines	family_title_probe	appendix	addendum	note
+Selleo/mentingo	LICENSE	1062	20	MIT	no	no	-
+zijinz456/OpenTutor	LICENSE	1068	21	MIT	no	no	-
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	LICENSE	1070	21	MIT	no	no	-
+ankimcp/anki-mcp-server	LICENSE	1074	18	MIT	no	no	-
+CaviraOSS/PageLM	LICENSE.md	8563	130	PROPRIETARY (Community License)	no	no	non-commercial, revocable; opens with MIT's grant sentence verbatim
+Ed-Fi-Alliance-OSS/edfi-oneroster	LICENSE	10173	176	Apache-2.0	no	no	ends at END OF TERMS AND CONDITIONS
+openolat/OpenOLAT	LICENSE	10982	196	Apache-2.0	no	yes	TWO 'Additional license statement' sections (OLAT/Univ. Zurich, frentix GmbH) + 2 leading blank lines
+ai-shifu/ai-shifu	LICENSE.txt	11342	201	Apache-2.0	yes	no	-
+HKUDS/DeepTutor	LICENSE	11408	202	Apache-2.0	yes	no	-
+HugeCatLab/ChatTutor	LICENSE	34522	660	AGPL-3.0	no	no	https:// FSF URLs
+echo-loop/Echo-Loop	LICENSE	34523	661	AGPL-3.0	no	no	-
+penecho/penecho	LICENSE	34523	661	AGPL-3.0	no	no	-
+openedx/edx-platform	LICENSE	35136	671	AGPL-3.0	no	yes	MATERIAL: EdX Inc. RPC/network-service carve-out appended, see note below
+plastic-labs/tutor-gpt	LICENSE	35149	674	GPL-3.0	no	no	contains 'GNU Affero General Public License' 3x at lines 552/556/559 - GPL-3.0 section 13
+JushBJJ/Mr.-Ranedeer-AI-Tutor	-	0	0	NO LICENCE FILE	-	-	confirmed absent at p167 as at p166
+# MEASURED BANDS (n=14 bodies): MIT 1062-1074 (n4, spread 12) | PROPRIETARY 8563 (n1) | Apache-2.0 10173-11408 (n4, spread 1235) | AGPL-3.0 34522-35136 (n4, spread 614) | GPL-3.0 35149 (n1)
+# PUBLISHED BANDS 11357-11358 (Apache) and 35121-35147 (GPL) match NOTHING on disk -> ACTION IW falsifier SILENT; T184 is drift, not two outliers.
+# THE BAND TEST IS BROKEN, not merely stale: AGPL max 35136 -> GPL min 35149 is a 13 B gap, while Apache's own spread is 1235 B - 95x larger.
+# EdX addendum, verbatim consequence: 'any public, independently available web service ... communicating with edX's copyrighted works by any form of inter-service communication, including but not limited to Remote Procedure Call (RPC) interfaces, is not a work based on our copyrighted work within the meaning of the license.' Corresponding Source excludes those services' files.
+# Trees pinned for the non-shelf rows read this pass (git ls-files at the cloned HEAD):
+#   openolat/OpenOLAT HEAD e4be14f0d1bb 2026-10-12, 25823 paths, default branch master
+#   openedx/edx-platform HEAD 3368a6b14b96 2026-10-12, 9276 paths, default branch master
+#   Ed-Fi-Alliance-OSS/edfi-oneroster HEAD 7442047368fa 2026-10-12, 261 paths, default branch main
+#   (edfi-oneroster corroborates p166's published HEAD prefix 7442047.)

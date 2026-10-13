@@ -4,6 +4,222 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P167-A` — the capability census, with the GUARD'S OWN three defects measured and closed *(amends `P166-A`, p167 — Global)*
+
+🔵 **What changed from `P166-A`:** 🟢 **`P166-A` added comment-stripping and asked whether the
+anti-claim it found was a one-repo curiosity or a class. `ACTION IU` ran it across `15` pinned trees
+(`7 723` capability-term occurrences) and the answer is: a CLASS on the comment axis, a SINGLE REPO
+on the language axis.** 🔴 **And running it at scale found THREE defects in the guard itself, one of
+which is the exact error class this shelf exists to catch.**
+
+### 🆕 🔴 The three defects in `P166-A`'s comment limb, each measured separately
+
+| defect | mechanism | citation | before → after | killed |
+|---|---|---|---|---|
+| 🆕 🔴 **(a) marker collision** | 🔴 **`/*` inside a TypeScript template literal, `//` inside `https://`, `#` inside `#fff`** | `Selleo/mentingo` `apps/web/app/config/routeAccessConfig.ts:140` | `1 140` → `934` | 🔴 **`206` — `18.1%`** |
+| 🆕 🔴 **(b) unterminated span** | 🔴 **`<code>/*</code>` in documentation HTML opens a block comment that never closes, so the span runs to EOF and EVERY later hit in that file is misreported as a comment** | `openolat/OpenOLAT` `doc/openolat-architecture.html:679` | `934` → `925` | 🔴 **`9`** |
+| 🆕 🔴 **(c) language limb** | 🔴 **a missing TRAILING `\b`: `para` matched *"**para**llel"* and *"**para**meter"*, `sin` matched *"**sin**ce"* and *"**sin**gle"*** | `openolat/OpenOLAT` `src/test/java/org/olat/selenium/AssessmentTest.java:90` | `176` → `3` | 🔴 **`173` — `98.3%`** |
+
+🔴 **Defect (c) is the finding that should sting.** 🔵 **`P164-A` exists because a naive `lti` grep
+matched `facu`+`lti`+`es`. p167 then wrote the language limb that detects the anti-claim and omitted
+the trailing boundary on its own stopword list — reproducing the shelf's founding error class inside
+the instrument built to catch it.** 🟢 **`98.3%` of the *"non-English comment"* population was that
+one missing character.**
+
+🟢 **THE CONTROL THAT MAKES THE CORRECTION PUBLISHABLE:** 🟢 **`Selleo/mentingo` `README.md:246` —
+the `T187` anti-claim — survives all three corrections unchanged.** 🟢 **So p166's headline finding
+is untouched; what collapsed is only the population around it.**
+
+### 🟢 What `ACTION IU` measured — `15` trees, `5` standards
+
+| | measured |
+|---|---|
+| 🟢 capability-term occurrences | **`7 723`** across `15` pinned trees |
+| 🟢 in code | **`6 798`** — `88.0%` |
+| 🟡 **in a comment or doc block** | **`925`** — `12.0%` |
+| 🔴 **in a NON-ENGLISH comment** | 🔴 **`3`** — `0.04%`, and **all `3` are in `Selleo/mentingo`'s README** |
+| 🔴 **trees with ZERO capability terms** | 🔴 **`10` of `15`** |
+
+🟢 **`ACTION IU`'s falsifier required `0` repositories other than `Selleo/mentingo` to carry a
+capability term inside a comment. Measured: `5` repositories do** — `openedx/edx-platform` (`387`),
+`openolat/OpenOLAT` (`275`), `Ed-Fi-Alliance-OSS/edfi-oneroster` (`238`), `Selleo/mentingo` (`23`),
+`zijinz456/OpenTutor` (`2`). 🟢 **Falsifier SILENT: `T187` is a class on the comment axis.**
+🟡 **But split the axes honestly — on the LANGUAGE axis mentingo is still the only instance on this
+shelf, so the anti-claim's *foreign-language* limb remains a one-repo observation.**
+
+### 🆕 🔴 STEP 8, new: an anti-claim is EVIDENCE, not a VERDICT — resolve it against code
+
+🔴 **`ACTION IU` found a SECOND Polish anti-claim in mentingo that p166 never cited —
+`README.md:293`, immediately under the heading *"Does Mentingo support SCORM?"*:**
+
+> `<!-- TODO(weryfikacja): czy jest import SCORM? jeśli tak, dopisać zdanie. jeśli nie - zostaw jak jest -->`
+> 🟢 *"TODO(verification): is there SCORM import? if yes, add a sentence. if not — leave as is."*
+
+🟢 **The published prose above that comment says only: *"Mentingo can export courses as SCORM 1.2
+packages."*** 🔴 **The code says otherwise, and emphatically:**
+
+| evidence | measured |
+|---|---|
+| 🟢 import endpoints | **`4`** — `@Post("import/init")`, `@Post("import/tus")`, `@Patch("import/tus/:packageId")`, `@Post("import/:packageId/complete")` |
+| 🟢 import worker | `apps/api/src/scorm/scorm-import.worker.ts` |
+| 🟢 resumable upload service | `scorm-tus-upload.service.ts` *(tus protocol)*, `scormTusUploadService` |
+| 🟢 typed job payloads | `InitScormImportBody` ×`21`, `ScormImportResult` ×`17`, `ScormImportJobData` ×`13`, `StreamedScormImportJobData` ×`12` |
+| 🟢 e2e coverage | `native-archive-import-scorm.e2e-spec.ts`, `scorm.controller.e2e-spec.ts` |
+| 🟢 service size | `scorm.service.ts` `2 014` LOC, `scorm.controller.ts` `518` LOC, `119` SCORM paths |
+
+🔴 **So this anti-claim UNDERSTATES a capability that is fully in-tree.** 🔵 **`T187` read the first
+anti-claim as *"upstream is telling you the capability is not there"* — and for xAPI and LTI 1.3
+that reading survives, because the code channel independently reads `0` outside the comment.**
+🔴 **For SCORM import it would have been WRONG. The comment is a stale documentation TODO, not a
+capability statement.** 🟢 **STEP 8: every anti-claim gets a code probe for the SAME capability
+before it becomes a verdict, and the verdict is the CODE's.**
+
+### 🆕 🟡 The seventh false-positive class: the ANALOGY claim
+
+🟡 **`zijinz456/OpenTutor` returns exactly `2` hits for `xapi`, and `0` of them are code:
+`apps/api/services/analytics/events.py:1` and `:36`, both reading `xAPI-inspired`.**
+🟢 **The module emits its own event schema with its own verb list and names xAPI only as the thing
+it RESEMBLES.** 🔴 **Verdict: `xAPI` ABSENT in `zijinz456/OpenTutor` — not conformant, not
+integrable, no LRS will accept it.** 🟡 **Also found: `OneRoster-style` ×`1` in
+`Ed-Fi-Alliance-OSS/edfi-oneroster` `docs/PRD.md`, where the capability IS real, so the marker is a
+trigger for a code probe and never a verdict on its own.**
+🔵 **Add `(inspired|like|style|flavoured|compatible)` to the probe: it is cheap, and a client who
+reads *"xAPI"* on a feature list and gets *"xAPI-inspired"* has bought an integration that does not
+exist.**
+
+🟢 **Deliverable: `P166-A`'s matrix, plus a per-hit comment/code/anti-claim/analogy classification.**
+🟢 **Effort: unchanged, `2`–`4` days for a five-platform landscape.**
+[`evidence/comment-guard-census.2026-10-13-p167.tsv`](../evidence/comment-guard-census.2026-10-13-p167.tsv)
+[`evidence/comment-guard-defects.2026-10-13-p167.tsv`](../evidence/comment-guard-defects.2026-10-13-p167.tsv)
+
+---
+
+## 🆕 🟢 `P167-B` — `P166-B` AMENDED: read rostering, now entity-by-entity *(amends `P166-B`, p167 — Global; strongest in North America)*
+
+🟢 **`ACTION IV` discharged `P166-B`'s one unshippable dependency (`gap 102`) by reading
+`Ed-Fi-Alliance-OSS/edfi-oneroster`'s routes at HEAD rather than its summary.**
+
+| field | p166 published | 🆕 p167 measured |
+|---|---|---|
+| 🔴 **GET endpoints** | 🔴 *"`14` GET endpoints"* | 🟢 **`24` rostering GETs — `12` entities × `2` shapes (collection + `/:id`)**. 🔴 **Neither the code nor the README says `14`** |
+| 🟡 **entities** | 🟡 **unestablished — the whole of `gap 102`** | 🟢 **`12`: `academicSessions`, `gradingPeriods`, `terms`, `classes`, `courses`, `demographics`, `enrollments`, `orgs`, `schools`, `users`, `students`, `teachers`** |
+| 🟡 **write-back** | 🟡 *"a separate decision this shelf has not measured"* | 🟢 **MEASURED: `router.post` / `.put` / `.patch` / `.delete` = `0` across the entire app. READ-ONLY, confirmed rather than assumed** |
+| 🟢 **not a stub** | — | 🟢 **`oneRosterController.js` `264` LOC + `OneRosterQueryService.js` `594` LOC, `261` tracked paths** |
+| 🟢 **authorisation** | — | 🟢 **every route carries `authorizeEndpoint('<scope>')`; `6` scopes: `users`, `orgs`, `classes`, `courses`, `enrollments`, `academicsessions`** |
+
+🟢 **`ACTION IV`'s falsifier required that the endpoints NOT include both users and enrolments.**
+🟢 **Both are present — `users` in three shapes (`users`, `students`, `teachers`) and `enrollments`
+in two. Falsifier SILENT. `P166-B` is AMENDED, not withdrawn, and `gap 102` is CLOSED.**
+
+🟢 **The wiring is unchanged from `P166-B`** — `edfi-oneroster` (Apache-2.0, body-read `10 173 B`)
+in front of the district's system of record; the LMS consumes OneRoster 1.2 over HTTP rather than
+through a platform plugin, keeping rostering OUTSIDE the GPL boundary (`P156-A`); LTI 1.3 carries
+tools and grade passback. 🟢 **What changes is the SCOPING SENTENCE a client can now be given:**
+
+> 🟢 **`12` rostering entities, read-only, with per-scope authorisation, on Apache-2.0.**
+> 🔴 **Any write-back — enrolment changes flowing INTO the SIS — is a build, not a configuration.**
+
+🟢 **Effort: `4`–`6` weeks for read rostering into an existing LMS, unchanged.**
+[`evidence/oneroster-endpoints.2026-10-13-p167.tsv`](../evidence/oneroster-endpoints.2026-10-13-p167.tsv)
+
+---
+
+## 🆕 🟢 `P167-C` — read the licence BODY for an addendum, because `edx-platform`'s changes what you may build *(new, p167 — Global)*
+
+🔵 **The problem this solves:** 🔴 **this shelf's licence gate classifies a family and stops.**
+🔴 **`ACTION IW` read all `14` bodies on disk and found that `2` of them carry APPENDED text the
+family name does not predict — and in one case the addendum is the most commercially significant
+sentence in the file.**
+
+🟢 **`openedx/edx-platform`, `LICENSE` `35 136 B`, AGPL-3.0 by title probe, with `10` appended lines:**
+
+> 🟢 **"EdX Inc. wishes to state, in clarification of the above license terms, that any public,
+> independently available web service offered over the network and communicating with edX's
+> copyrighted works by any form of inter-service communication, including but not limited to Remote
+> Procedure Call (RPC) interfaces, is not a work based on our copyrighted work within the meaning of
+> the license."** 🟢 **And: *"Corresponding Source" … do not include source code files for programs
+> used solely to provide those public, independently available web services.*"**
+
+🔴 **Bare AGPL-3.0 §13 is this shelf's stop-ship gate (`P37`) precisely because a network service
+triggers source disclosure.** 🟢 **This addendum carves out exactly that case: a separately
+deployed service talking to Open edX over RPC is declared not a derivative work, and its source is
+declared outside Corresponding Source.** 🔵 **So an architecture this shelf would have refused on
+licence grounds is explicitly permitted by the licensor — IF the integration stays service-to-service
+over the network and does not link into the platform.**
+
+| 🟢 what the addendum permits | 🔴 what it does NOT touch |
+|---|---|
+| 🟢 **a separate AI tutoring / analytics service called over RPC or HTTP** | 🔴 **in-process code: an XBlock, a Django app, a patch, a fork — all still AGPL-3.0** |
+| 🟢 **keeping THAT service's source closed** | 🔴 **modifications to `edx-platform` itself, which must still be offered to users under §13** |
+
+🟢 **The recipe:** 🟢 **(1) classify the family from the TITLE LINE (`P167-D`); (2) `diff` the body
+against the canonical FSF/ASF text for that family; (3) read every appended or removed paragraph and
+record it as a TERM, not as a byte count; (4) decide the integration boundary from the addendum.**
+🔴 **Second instance found: `openolat/OpenOLAT`'s Apache-2.0 body carries two *"Additional license
+statement"* attribution sections (OLAT / University of Zurich, and frentix GmbH). Attribution, not a
+grant change — but it is why its body is `10 982 B` and not `10 173 B`.**
+🟢 **Deliverable: a per-dependency licence sheet whose rows are TERMS, not family names.**
+🟢 **Effort: `1`–`2` days for a twenty-dependency closure, and it is the cheapest legal risk
+reduction on this shelf.**
+[`evidence/licence-bands.2026-10-13-p167.tsv`](../evidence/licence-bands.2026-10-13-p167.tsv)
+
+---
+
+## 🆕 🟢 `P167-D` — classify a licence by its TITLE LINE; the size band is formally broken *(replaces `P48`'s bands, p167 — Global)*
+
+🔴 **`P48` published size bands — Apache-2.0 `11 357`–`11 358 B`, GPL-3.0 `35 121`–`35 147 B`.**
+🔴 **`ACTION IW` re-derived them from all `14` bodies on disk: the published bands match NOTHING.**
+🟢 **Falsifier SILENT — `T184` was drift, not an artefact of two outliers.**
+
+| family | n | measured min | measured max | own spread |
+|---|---|---|---|---|
+| 🟢 `MIT` | `4` | `1 062` | `1 074` | `12 B` |
+| 🔴 `PROPRIETARY` *(PageLM Community)* | `1` | `8 563` | `8 563` | — |
+| 🟢 `Apache-2.0` | `4` | `10 173` | `11 408` | 🔴 **`1 235 B`** |
+| 🔴 `AGPL-3.0` | `4` | `34 522` | `35 136` | 🔴 **`614 B`** |
+| 🔴 `GPL-3.0` | `1` | `35 149` | `35 149` | — |
+
+🔴 **The band test is not stale — it is UNSOUND, and one comparison shows why: `AGPL-3.0`'s measured
+maximum (`35 136`) and `GPL-3.0`'s measured minimum (`35 149`) are `13 B` apart, while `Apache-2.0`'s
+spread WITHIN one family is `1 235 B` — `95×` larger.** 🔵 **A discriminator whose between-class gap
+is two orders of magnitude smaller than its within-class spread cannot classify. No correction to
+the numbers fixes that; the instrument has to be replaced.**
+
+🟢 **And the four mechanisms behind the spread are all measurable, none of them a terms difference
+except the last:**
+
+| mechanism | evidence | Δ |
+|---|---|---|
+| 🟢 `http://` vs `https://` in the FSF URLs | `ChatTutor` `34 522` vs `Echo-Loop` / `penecho` `34 523` | 🟢 **`1 B`** |
+| 🟢 line re-wrapping of the *"how to apply"* block | same two bodies, `660` vs `661` lines | 🟢 **`~1 B`** |
+| 🟢 the *"APPENDIX: How to apply"* section present or absent | `edfi-oneroster` `10 173` *(`0` × `APPENDIX`)* vs `DeepTutor` `11 408` | 🟡 **`~1 200 B`** |
+| 🔴 **a licensor ADDENDUM** | `openolat/OpenOLAT` `+809 B`, `openedx/edx-platform` `+613 B` | 🔴 **the only one that changes TERMS** |
+
+### 🆕 🔴 And the family probe itself has a false-positive class
+
+🔴 **A substring probe for `"GNU AFFERO GENERAL PUBLIC LICENSE"` matches EVERY GPL-3.0 body.**
+🟢 **Mechanism, cited: GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"* —
+`plastic-labs/tutor-gpt`'s `LICENSE` contains the Affero string `3` times, at lines `552`, `556` and
+`559`, while its title line reads `GNU GENERAL PUBLIC LICENSE`.**
+🔴 **Probe the body and `tutor-gpt` reads AGPL-3.0. It is GPL-3.0.**
+
+🟢 **`P167-D`, the replacement instrument:**
+
+1. 🟢 **Read the TITLE LINE only** — `head -3`, matched against `GNU (AFFERO )?GENERAL PUBLIC
+   LICENSE`, `Apache License` + `Version 2.0`, `MIT License`. 🟢 **Verified on all `14` bodies:
+   `tutor-gpt` → GPL-3.0, `edx-platform` → AGPL-3.0, `ChatTutor` → AGPL-3.0, no misclassification.**
+2. 🔴 **Never infer a family from byte size** — size is now a CORROBORATION field only.
+3. 🟢 **`diff` against the canonical text and read every appended paragraph** (`P167-C`).
+4. 🟡 **A title that names a family is still not a grant** — `CaviraOSS/PageLM` opens with MIT's
+   grant sentence verbatim at `8 563 B` and is non-commercial and revocable (`T160`).
+5. 🟢 **A missing file is a verdict, not an error** — `JushBJJ/Mr.-Ranedeer-AI-Tutor` has no licence
+   body at p167 as at p166.
+
+🟢 **Effort: minutes per dependency, and it replaces a test that could not have worked.**
+[`evidence/licence-bands.2026-10-13-p167.tsv`](../evidence/licence-bands.2026-10-13-p167.tsv)
+
+---
+
 ## 🆕 🟢 `P166-A` — the capability census, with the SIXTH false-positive class and the guard that FINDS the capability but cannot make it usable *(amends `P165-A`, p166 — Global)*
 
 🔵 **What changed from `P165-A`:** 🟢 **`P165-A` added false-NEGATIVE guards and asked whether they
@@ -106,7 +322,7 @@ OneRoster rostering with no copyleft obligation and no abandoned dependency.** �
 North America, where OneRoster is the de-facto district rostering expectation and where Oklahoma's
 and Maryland's human-oversight bills and Colorado `SB 26-189`'s safe harbour (`T177`) all land on
 the same build.**
-🟡 **Honest scoping note: `edfi-oneroster` serves `14` GET endpoints — this is READ rostering.**
+🟡 **Honest scoping note: `edfi-oneroster` serves 🔴 ~~`14`~~ → **`24`** GET endpoints over `12` entities — this is READ rostering, and p167 measured `0` write routes (`T189`, superseded by `P167-B`).**
 🔴 **Write-back, and Ed-Fi ODS itself, are a separate decision this shelf has not measured.**
 🟢 **Effort: `4`–`6` weeks for read rostering into an existing LMS.**
 

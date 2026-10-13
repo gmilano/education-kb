@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+🆕 🟢 **Two cells in last pass's routing table were wrong in a way that changes what you can sell,
+and both are corrected here by reading code instead of prose.**
+🔴 **`mentingo`'s SCORM is not export-only — it has a full import pipeline the upstream README
+itself is unsure about.** 🟢 **And `edx-platform` is AGPL-3.0 with an RPC carve-out that makes it
+usable in an architecture this page would otherwise have refused.**
+[`evidence/comment-guard-census.2026-10-13-p167.tsv`](../evidence/comment-guard-census.2026-10-13-p167.tsv)
+[`evidence/licence-bands.2026-10-13-p167.tsv`](../evidence/licence-bands.2026-10-13-p167.tsv)
+[`evidence/oneroster-endpoints.2026-10-13-p167.tsv`](../evidence/oneroster-endpoints.2026-10-13-p167.tsv)
+
+### 🆕 🟢 Platform routing — p167 corrections
+
+| need | platform | licence *(title-line probe, body read)* | correction this pass |
+|---|---|---|---|
+| 🟢 **Permissive AI-native LMS / corporate L&D** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** (`1 062 B`) | 🆕 🟢 **SCORM is import AND export: `4` import endpoints, a tus resumable-upload service, a dedicated import worker, `2` e2e specs, `119` SCORM paths. The README says export-only; the code says both** |
+| 🆕 🟡 **Already-deployed MOOC platform at scale** | 🆕 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** (`35 136 B`) 🟢 **+ RPC CARVE-OUT** | 🆕 🟢 **The licence body carries an EdX Inc. addendum: a public, independently available service talking to it over RPC is NOT a derivative work, and its source is outside Corresponding Source. `P167-C`** |
+| 🟢 **OneRoster rostering, permissive** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** (`10 173 B`) | 🆕 🟢 **`12` entities over `24` GETs, per-scope authorisation; `0` write routes in the tree** |
+| 🟢 **Permissive LMS, standards-native** | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **`Apache-2.0`** (`10 982 B`) | 🆕 🟡 **The body carries two *"Additional license statement"* attribution sections (OLAT / University of Zurich, frentix GmbH) — attribution only, no grant change** |
+
+🔵 **Read the `edx-platform` row against this page's own history: for several passes AGPL-3.0 has
+been a stop-ship (`P37`), and on the bare licence text that is right.** 🟢 **Here the licensor has
+narrowed §13 in writing for exactly the service-to-service shape an AI studio builds.**
+🔴 **The carve-out does NOT reach in-process code — an XBlock, a Django app, a patch or a fork is
+still AGPL-3.0, and modifications to the platform itself must still be offered to users.**
+
+### 🆕 🟢 The `mentingo` SCORM cell, in full
+
+| capability | evidence | verdict |
+|---|---|---|
+| 🟢 **SCORM export** | `course-scorm-export.service.ts`, `scorm-export.types.ts`, SCORM 1.2 named in the README | 🟢 **IN-TREE** |
+| 🆕 🟢 **SCORM import** | `@Post("import/init")`, `@Post("import/tus")`, `@Patch("import/tus/:packageId")`, `@Post("import/:packageId/complete")`, `scorm-import.worker.ts`, `scorm-tus-upload.service.ts` | 🆕 🟢 **IN-TREE — upstream's own docs understate it** |
+| 🟢 **runtime / player** | `@Get("runtime/launch")`, `@Post("runtime/commit")`, `@Post("runtime/finish")`; player is `jcputney/scorm-again` (MIT, pinned `3.0.4`) | 🟢 **IN-TREE + MIT sibling** |
+| 🔴 **SCORM 2004 parity** | `scorm_2004` markers ×`103` against a generator naming only `1.2` | 🔴 **UNESTABLISHED — `gap 103` stands, do not sell it** |
+| 🔴 **xAPI / LTI 1.3** | `1` hit each, both inside one Polish HTML comment marked *"DO NOT PUBLISH WITHOUT VERIFICATION"*; `0` in code | 🔴 **ABSENT — unchanged from p166** |
+
+🔵 **The asymmetry is the lesson: the same repository understates one standard in its docs and
+over-states two others in an unpublished comment. Neither direction is discoverable from prose.**
+
+
 ## Pass 166 — 2026-10-13
 
 🟢 **The routing table gains the row it has lacked since p156: OneRoster rostering on a PERMISSIVE
@@ -22,7 +62,7 @@ vendor claim, and every sibling named carries its own licence.**
 | 🟢 **Permissive LMS, standards-native** | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **`Apache-2.0`** | 🟢 **in-tree, `145` files / `18 067` LOC** | 🟢 **in-tree, `65` Java files** | 🔴 **ABSENT** | 🔴 **ABSENT** | 🔴 **ABSENT** |
 | 🟡 **Already-deployed LMS at scale** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`GPL-3.0`** | 🟢 **in-tree, `423` paths** | 🟢 **in-tree, `166` paths** | 🟢 **in-tree, `99` paths** | 🟡 **SIBLING only — 🔴 `GPL-3.0`, `2 091` d stale** | 🔴 **ABSENT** |
 | 🟢 **Permissive AI-native LMS / corporate L&D** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** | 🔴 **ABSENT** | 🟢 **in-tree + MIT player** | 🔴 **ABSENT** | 🔴 **ABSENT** | 🔴 **ABSENT** |
-| 🆕 🟢 **OneRoster rostering, permissive** | 🆕 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** (`10 173 B`) | n/a | n/a | n/a | 🟢 **OneRoster 1.2, `14` GET endpoints** | 🟡 **Ed-Fi ODS is a separate, unmeasured decision** |
+| 🆕 🟢 **OneRoster rostering, permissive** | 🆕 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** (`10 173 B`) | n/a | n/a | n/a | 🟢 **OneRoster 1.2, 🔴 ~~`14`~~ → **`24`** GET endpoints over `12` entities (`T189`, p167)** | 🟡 **Ed-Fi ODS is a separate, unmeasured decision** |
 
 🟢 **Read the OneRoster column across the first three rows and the engagement writes itself:**
 🔴 **no permissive platform on this shelf rosters, and the one copyleft platform that does, does it

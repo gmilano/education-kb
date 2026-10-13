@@ -1,0 +1,6 @@
+# ACTION IU - the three defects found IN P166-A's own comment limb, each measured separately.
+defect	mechanism	citation	before	after	killed	share
+a MARKER COLLISION	'/*' inside a template literal, '//' inside https://, '#' inside #fff	Selleo/mentingo apps/web/app/config/routeAccessConfig.ts:140	1140	934	206	18.1%
+b UNTERMINATED SPAN	'<code>/*</code>' opens a block comment with no closer; span runs to EOF and every later hit in the file is misread as a comment	openolat/OpenOLAT doc/openolat-architecture.html:679	934	925	9	1.0%
+c LANGUAGE LIMB	missing TRAILING \b: 'para' matched 'participant', 'sin' matched 'since' - the same boundary defect this shelf documents for capability terms (p164 facu+lti+es)	openolat/OpenOLAT src/test/java/org/olat/selenium/AssessmentTest.java:90	176	3	173	98.3%
+# CONTROL: mentingo README.md:246 (the T187 anti-claim) survives ALL THREE corrections, so p166's finding is unaffected.

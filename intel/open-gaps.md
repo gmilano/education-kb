@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🟢 Verdicts on the FOUR actions p166 registered, judged by p167 — all FOUR DISCHARGED
+
+🟢 **Twelfth consecutive register, second with FOUR actions, and the first in which every action was
+discharged with a silent falsifier — including the one p166 had to hold open.**
+🔴 **Standing caveat unchanged: p167 judges actions p166 wrote, and p167 did the work. These are
+self-assessments.**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION IT`** | 🔴 *`≥3` of `12` changed over an interval of `≥3` hours* | 🟢 **`1` of `12` over `3 h 29 min`** *(derived baseline)*, **`1` of `12` over `1 h 54 min`** *(recorded baseline)* | 🟢 **DISCHARGED, falsifier SILENT** |
+| 🟢 **`ACTION IU`** | 🔴 *`0` repositories other than `Selleo/mentingo` carry a capability term inside a comment* | 🟢 **`5` repositories do: edx-platform `387`, OpenOLAT `275`, edfi-oneroster `238`, mentingo `23`, OpenTutor `2`** | 🟢 **DISCHARGED, falsifier SILENT — with the language limb split out as still one-repo** |
+| 🟢 **`ACTION IV`** | 🔴 *the endpoints do NOT include both users and enrolments* | 🟢 **Both present — `users` in `3` shapes, `enrollments` in `2`, across `12` entities / `24` GETs** | 🟢 **DISCHARGED, falsifier SILENT. `P166-B` AMENDED, not withdrawn** |
+| 🟢 **`ACTION IW`** | 🔴 *the re-derived bands MATCH the published `11 357`–`11 358` and `35 121`–`35 147`* | 🟢 **They match nothing on disk. Measured: Apache `10 173`–`11 408`, AGPL `34 522`–`35 136`, GPL `35 149`, MIT `1 062`–`1 074`** | 🟢 **DISCHARGED, falsifier SILENT — and the band test is retired as UNSOUND** |
+
+### 🟢 Why `ACTION IT` became answerable — the mechanism, not a longer pass
+
+🟢 **p166 held this open because a pass is `~40`–`60` minutes and the action asked for hours.**
+🔴 **p167 is no longer than p166.** 🟢 **What made the difference is the baseline p166 committed:
+with `p164`, `p165`, `p166_t0` and `p166_t1` sha columns on disk, p167 could diff against a KNOWN
+earlier moment instead of against its own two sweeps.**
+🔵 **The register's lesson, worth more than the datum: an action that is not executable inside one
+pass can be made executable by the pass that cannot execute it — by committing the instrument
+instead of the answer.**
+🆕 🔴 **And the baseline's INTERVAL LEDGER does not survive this repository's own commit history
+(`T196`): the ledger's *"`p164_sweep` → `p165_sweep` = `37` min"* places p164's sweep `27` min `30` s
+AFTER p164's commit at `03:10:47Z`. On the commit channel that gap is `1 h 04 min`.**
+🟢 **So p167 anchors the `p164` column on p164's COMMIT — an upper bound on its sweep, calibrated by
+p166's own sweep-to-commit lag of `2 min 33 s` — rather than on the ledger's arithmetic.**
+🟢 **The verdict does not depend on the anchor: the count is `1` of `12` under every
+baseline and the falsifier needed `≥3`.** 🔴 **`T173`'s denominator is withdrawn with it.**
+🟢 **p167 commits absolute UTC for both of its sweeps, and the pass commit timestamp is now a
+standing independent clock.**
+
+### 🆕 🔴 The finding p167 did not expect: the guard had the defect it was built to catch
+
+🔴 **`ACTION IU` found THREE defects in `P166-A`'s own comment limb — a marker collision
+(`18.1%` of the population), an unterminated span that runs to EOF, and a language limb missing its
+TRAILING `\b` so that `para` matched *"parallel"* and `sin` matched *"since"* (`98.3%`).**
+🟢 **`T187`'s anti-claim survives all three corrections, so p166's published finding is intact.**
+🔵 **But `98.3%` of a published-ready population was one missing character, in the instrument built
+to correct exactly that error class two passes earlier.** 🟢 **Recorded as `T194`; the method
+consequence is in `P167-A`: every new probe inherits the old probe's control suite.**
+
+### 🟢 `gap 102` CLOSED
+
+🟢 **Open since p166: which rostering entities `edfi-oneroster`'s GET endpoints cover.**
+🟢 **ANSWER: `12` — users, students, teachers, enrollments, classes, courses, orgs, schools,
+academicSessions, gradingPeriods, terms, demographics — each in collection and `/:id` form, each
+behind `authorizeEndpoint('<scope>')`.** 🟢 **Write-back measured at `0` routes, so READ-ONLY is now
+confirmed rather than assumed.** 🔴 **And the published *"`14` GET endpoints"* is corrected to `24`
+over `12` entities; neither channel ever said `14`.**
+[`evidence/oneroster-endpoints.2026-10-13-p167.tsv`](../evidence/oneroster-endpoints.2026-10-13-p167.tsv)
+
+### 🔴 Gaps OPENED or RE-STATED by p167
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`gap 105`** | 🔴 **`2` of `14` licence bodies on disk carry an ADDENDUM, and this KB has body-read only the `14`** | 🔴 **Every platform this shelf recommends but has not body-read may carry one. `ACTION IX`** |
+| 🆕 🔴 **`gap 106`** | 🔴 **the *"`10` of `15` trees have no interop standard"* claim rests on a `5`-term probe — synonyms (`LRS`, *"learning record store"*, `imsmanifest.xml`, `SCO`, `QTI`, `Caliper`) were NOT probed** | 🔴 **If a synonym hits, a published ABSENCE is a false absence. `ACTION IZ`** |
+| 🆕 🟡 **`gap 107`** | 🟡 **the `edx-platform` RPC carve-out is read from the licence body only — no counsel, no upstream FAQ, no case law** | 🟡 **It is a licensor statement in the grant file, which is the strongest channel available to this KB, and still not legal advice. Flag it as such in any client deck** |
+| 🔴 **re-stated** | 🔴 **`gap 103` — mentingo's `scorm_2004` ×`103` markers vs a generator naming only `1.2`** | 🔴 **Now sharper, because p167 established the import pipeline is real: parity is the only SCORM unknown left. `ACTION IY`** |
+| 🔴 **re-stated** | 🔴 **`gap 104` — no EDUCATION-SPECIFIC AI regulation anywhere in LATAM** | 🔵 **RE-CONFIRMED on an independent sweep. National frameworks and `ILIA` governance scoring only** |
+| 🆕 🔴 **re-stated** | 🔴 **APAC returned `0` named education vendors and `0` national education-AI policies this pass** | 🔵 **A measured silence, recorded so it cannot be mistaken for coverage** |
+| 🔴 **re-stated** | 🔴 **no SIS or ERP under `MIT` or `Apache-2.0`** | 🟢 **`P9`'s *"real hole"*, unchanged for a sixth pass** |
+| 🟡 **unresolved** | 🟡 **the Annex III `2027-12-02` instrument — published, or awaiting the Official Journal?** | 🔴 **two incompatible sources for a third pass. `T178` stays `search-summary`** |
+
+## 🔜 Registered for p168 — pre-registered with falsifiers
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IX`** — run `P167-D`'s title-line probe plus a canonical-text `diff` against the licence body of every repo this shelf RECOMMENDS but has never body-read (`moodle/moodle`, `jcputney/scorm-again`, `moodlehq/moodle-enrol_oneroster`, and the `verticals` platforms `Chamilo`, `Sakai`, `ILIAS`, `OpenEduCat`): how many carry an ADDENDUM? | 🔴 *Refuted if `0` of them carries any appended or removed paragraph — which would make `edx-platform` and `OpenOLAT` a two-repo curiosity rather than `gap 105`'s class* |
+| 🟢 **`ACTION IY`** — read `Selleo/mentingo`'s `packages/scorm-export-generator` manifest builder and settle `gap 103`: does it emit a SCORM 2004 manifest, or only `1.2`? | 🔴 *Refuted if the generator emits a valid 2004 manifest — which would mean `gap 103` was mis-stated and the `103` `scorm_2004` markers were the capability, not a hazard* |
+| 🟢 **`ACTION IZ`** — re-probe the `10` zero-hit trees with SYNONYMS the `5`-term list misses (`LRS`, *"learning record store"*, *"Learning Tools Interoperability"* spelled out, `imsmanifest.xml`, `SCO`, `QTI`, `Caliper`, `-inspired`/`-like`/`-compatible`) | 🔴 *Refuted if `≥1` of the `10` returns a synonym hit — which would make p167's published *"`10` of `15` have no interop standard"* a FALSE ABSENCE and `gap 106` real* |
+| 🟢 **`ACTION JA`** — extend the churn ledger past `6` hours by diffing p168's sweep against p167's RECORDED `t0` / `t1` shas, and report `changed / 12` with the exact span | 🔴 *Refuted if `≥3` of `12` change over an interval of `≥6` hours — which would mean the shelf's churn is not `ai-shifu` alone and `T173` deserves reinstating as a rate* |
+
+
 ## 🟡 Verdicts on the FOUR actions p165 registered, judged by p166 — `3` DISCHARGED, `1` HELD OPEN
 
 🟢 **Eleventh consecutive register, and the first with FOUR actions.** 🔴 **Standing caveat

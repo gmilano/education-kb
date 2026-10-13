@@ -5,6 +5,92 @@ updated: 2026-10-13
 ---
 
 
+## 2026-10-13 — Pass 167
+
+### 🆕 🔴 What is new this week: the guard built to catch naming collisions had three of its own
+
+🔴 **`ACTION IU` ran p166's brand-new comment-stripping guard across `15` pinned trees —
+`7 723` capability-term occurrences — and the guard failed three ways:**
+
+| defect | mechanism, with a citation | population |
+|---|---|---|
+| 🔴 **marker collision** | `/*` inside a TypeScript template-literal type (`Selleo/mentingo` `apps/web/app/config/routeAccessConfig.ts:140`), `//` inside `https://`, `#` inside `#fff` | `1 140` → `934`, **`18.1%` killed** |
+| 🔴 **unterminated span** | `<code>/*</code>` in `openolat/OpenOLAT` `doc/openolat-architecture.html:679` opens a block comment with no closer, so the span runs to END OF FILE and every later hit in that file is misreported as a comment | `934` → `925` |
+| 🔴 **missing trailing `\b`** | the language limb matched `para` inside *"**para**llel"* and `sin` inside *"**sin**ce"* — `openolat/OpenOLAT` `src/test/java/org/olat/selenium/AssessmentTest.java:90` | `176` → `3`, **`98.3%` killed** |
+
+🔵 **The third one is the story. `P164-A` exists in this KB because a naive `lti` grep matched
+`facu`+`lti`+`es`. Two passes later, the instrument written to extend that guard omitted the
+trailing boundary on its own stopword list.** 🟢 **An instrument inherits its predecessor's error
+classes, so it must inherit its predecessor's control suite.**
+🟢 **The control that lets the correction be published at all: `T187`'s anti-claim at
+`Selleo/mentingo` `README.md:246` survives all three fixes unchanged.**
+
+### 🆕 🟢 `T187` is a CLASS on the comment axis — and still one repo on the language axis
+
+🟢 **`ACTION IU`'s falsifier needed `0` repositories other than mentingo to carry a capability term
+inside a comment. Measured: `5` do.**
+
+| repo | capability terms in comments | in a NON-ENGLISH comment |
+|---|---|---|
+| 🔴 `openedx/edx-platform` | **`387`** | 🟢 `0` |
+| 🔴 `openolat/OpenOLAT` | **`275`** | 🟢 `0` |
+| 🔴 `Ed-Fi-Alliance-OSS/edfi-oneroster` | **`238`** | 🟢 `0` |
+| 🔴 `Selleo/mentingo` | **`23`** | 🔴 **`3` — all of them** |
+| 🔴 `zijinz456/OpenTutor` | **`2`** | 🟢 `0` |
+
+🟢 **Falsifier SILENT: the comment axis is a class.** 🟡 **But stated honestly, the LANGUAGE limb is
+still a single-repository observation — `3` of `925` comment hits on this entire shelf are in a
+language other than English, and all `3` are in one Polish README.**
+
+### 🆕 🔴 The second anti-claim, and it points the OTHER way
+
+🔴 **`README.md:293` in the same repository, under *"Does Mentingo support SCORM?"*:
+*"TODO(verification): is there SCORM import? if yes, add a sentence. if not — leave as is."***
+🔴 **The published prose claims export only. The code has `4` import endpoints, a dedicated
+`scorm-import.worker.ts`, a tus resumable-upload service, typed job payloads and two e2e specs.**
+🟢 **So an anti-claim can UNDERSTATE a capability as easily as deny one.** 🟢 **New rule, `P167-A`
+STEP 8: an anti-claim is evidence for a code probe, never a verdict.**
+
+### 🆕 🟡 The seventh false-positive class — the ANALOGY claim
+
+🟡 **`zijinz456/OpenTutor` names `xapi` twice, both in comments, both `xAPI-inspired`, `0` in code.**
+🔴 **Verdict: xAPI ABSENT. Its event emitter is first-party with its own verbs; no LRS will take it.**
+🔵 **`-inspired`, `-like`, `-style`, `-compatible` is the class most likely to survive into a
+client's requirements document, because it reads as a standard rather than as a resemblance.**
+
+### 🟢 Shelf churn, now with a MULTI-HOUR interval — `ACTION IT` discharged
+
+🟢 **p166 could not answer this: a pass is `~40`–`60` minutes and the action asked for hours.**
+🟢 **p166's committed baseline is what made it answerable — p167 diffed its own sweeps against the
+`p164`, `p165`, `p166_t0` and `p166_t1` sha columns instead of against itself.**
+
+| interval | span | anchor | changed / 12 |
+|---|---|---|---|
+| 🟢 `p166_t0` → `p167_t0` | `1 h 00 min` | 🟢 **recorded UTC in the baseline** | 🟢 **`1`** — `ai-shifu` |
+| 🟢 `p166_t0` → `p167_t1` | **`1 h 54 min`** | 🟢 **recorded UTC in the baseline** | 🟢 **`1`** |
+| 🟢 **`p164` → `p167_t1`** | 🟢 **`3 h 29 min` — the first interval on this shelf to clear `3` hours** | 🟡 **p164's COMMIT at `03:10:47Z`, an UPPER bound on its sweep** | 🟢 **`1`** |
+
+🟢 **`ACTION IT`'s falsifier required `≥3` of `12` over an interval of `≥3` hours. Measured:
+`1`.** 🟢 **Falsifier SILENT.**
+🔴 **`ai-shifu` has now moved in both of the last two passes while `11` of `12` rows have not moved
+at all. The shelf's churn is ONE repository.**
+
+### 🆕 🔴 And the baseline's interval ledger does not survive the repo's own git log — `T196`
+
+🔴 **The baseline's sha columns are sound; its INTERVAL LEDGER is not.** 🔴 **The ledger's
+*"`p164_sweep` → `p165_sweep` = `37` min"* places p164's sweep at `03:38:17Z` — `27` min `30` s
+AFTER p164's own commit at `03:10:47Z`, which cannot happen.** 🟢 **On the commit channel the gap is
+`1 h 04 min`.**
+🟢 **Calibration: p166's closing sweep (`05:07:50Z`) precedes its commit (`05:10:23Z`) by `2 min
+33 s`, so a commit timestamp is a safe UPPER bound on that pass's sweep.**
+🔴 **So `T173`'s *"`1` of `12` per `37` minutes"* has an unsupported denominator — the real interval
+was `~64` min and the rate was overstated `~1.7×`. `T173` should not be cited as a rate in any
+form.** 🟢 **ACTION IT's verdict does NOT depend on this: the count is `1` under every baseline and
+the falsifier needed `≥3`.**
+🟢 **p167 records absolute UTC for both of its own sweeps, and from now on the pass's own commit
+timestamp is the shelf's independent clock — a primary channel that was free all along.**
+
+
 ## 2026-10-13 — Pass 166
 
 ### 🆕 🔴 What is new this week: a capability hit that means its own opposite

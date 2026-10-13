@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 167 — 2026-10-13
+
+### 1. 🆕 🔴 `T194` — the instrument that catches naming collisions reproduced the collision it was built to catch — *Global, measured*
+
+🔴 **`P166-A` added a comment-stripping guard to find anti-claims. p167 ran it across `15` trees and
+`7 723` capability-term occurrences, and found THREE defects in the guard — one of them the exact
+error class the whole census method exists to correct.**
+
+| defect | mechanism | population before → after |
+|---|---|---|
+| 🔴 **marker collision** | `/*` in a template literal, `//` in `https://`, `#` in `#fff` | `1 140` → `934` *(`18.1%` killed)* |
+| 🔴 **unterminated span** | `<code>/*</code>` opens a block comment that never closes; the span runs to EOF and every later hit in the file is misread as a comment | `934` → `925` |
+| 🔴 **missing trailing `\b`** | `para` matched *"**para**llel"*, `sin` matched *"**sin**ce"* | `176` → `3` *(`98.3%` killed)* |
+
+🔵 **`P164-A` exists because a naive `lti` grep matched `facu`+`lti`+`es`. Two passes later the
+instrument written to extend it omitted the trailing boundary on its own word list.**
+🟢 **The trend worth recording at `167` passes: an instrument's error classes recur in the
+instrument's own successors, so every new probe gets the OLD probe's control suite — not just a
+fresh one.** 🟢 **The control that makes the correction publishable: `T187`'s anti-claim survives
+all three fixes unchanged.**
+
+### 2. 🆕 🟢 `T195` — a licence FAMILY is not a licence, and two bodies on this shelf prove it — *Global, measured*
+
+🟢 **`14` licence bodies read byte for byte. `2` carry appended text their family name does not
+predict.** 🔴 **`openedx/edx-platform`'s AGPL-3.0 body ends with an EdX Inc. clause declaring that
+a public, independently available web service communicating with its code over RPC is NOT a
+derivative work, and that Corresponding Source excludes that service's source files.**
+🟡 **`openolat/OpenOLAT`'s Apache-2.0 body carries two attribution statements — no grant change, but
+`809 B` of why its body is not the canonical one.**
+🔵 **The industry consequence: licence-family metadata, which is what every SBOM and every GitHub
+API field gives you, is insufficient for an architecture decision. `P167-C`'s rows are TERMS.**
+
+### 3. 🆕 🔴 `T191` — *"xAPI-inspired"* is a feature-list claim with no integration behind it — *Global, measured*
+
+🔴 **`zijinz456/OpenTutor` names `xapi` exactly twice, both in comments, both reading
+`xAPI-inspired`, with `0` code hits.** 🟢 **Its event emitter is first-party with its own verb list.**
+🔵 **The analogy claim — `-inspired`, `-like`, `-style`, `-compatible` — is the seventh
+false-positive class on this shelf, and it is the one most likely to reach a client's requirements
+document intact, because it reads as a standard rather than as a resemblance.**
+🟢 **Counter-example from the same sweep: `OneRoster-style` in `edfi-oneroster`'s `docs/PRD.md`,
+where the capability IS real — so the marker triggers a code probe and never a verdict.**
+
+### 4. 🟢 `T186` CONFIRMED on a second independent sample — the web channel keeps saturating — *Global, measured*
+
+🟢 **p167 ran the full eight-query sweep again, globally and once per region, and measured the
+re-derivation rate on both channels before publishing anything:**
+
+| channel | terms probed | already on the shelf | re-derivation | p166 |
+|---|---|---|---|---|
+| 🔴 **web / search** | `18` | `15` | 🔴 **`83%`** | 🔴 `91%` |
+| 🟢 **code / git** | `10` | `2` | 🟢 **`20%`** | 🟢 `81%` |
+
+🔵 **Two passes, same direction, and p167's code channel is sharper still: `8` of `10` code-channel
+terms were new to this KB, against `3` of `18` on the web.** 🟢 **Every substantive p167 finding —
+the three guard defects, the second anti-claim, the `24` endpoints, the RPC carve-out, the band
+collapse — came from a tree.** 🔴 **The `3` genuinely new web terms were the EU `Apply AI Strategy`,
+`GDPR-K` as a compliance label in European children's edtech, and the Finnish vendor `Seppo`.**
+
+### 5. 🆕 🔴 `T196` — the churn ledger is internally inconsistent, and the repo's OWN git log is what catches it — *Global, measured*
+
+🟢 **`ACTION IT` required diffing against `evidence/churn-baseline.2026-10-13-p166.tsv`. Its sha
+columns are sound. Its INTERVAL LEDGER is not, and the falsifying channel is this repository's own
+commit history, which no earlier pass had thought to use as a clock.**
+
+| ledger claim | what the commit channel says | verdict |
+|---|---|---|
+| 🟡 *"`p165_sweep` → `p166_t0` = `31` min"* | 🟡 **places p165's sweep at `04:15:17Z`, `7` seconds AFTER p165's own commit (`04:15:10Z`)** | 🟡 **rounded — a sweep cannot post-date the commit that carries it, but `7` s is within rounding** |
+| 🔴 *"`p164_sweep` → `p165_sweep` = `37` min"* | 🔴 **places p164's sweep at `03:38:17Z` — `27` min `30` s AFTER p164's commit at `03:10:47Z`** | 🔴 **IMPOSSIBLE** |
+| — | 🟢 **`p164` commit → `p165` commit = `1 h 04 min`** | 🟢 **the defensible figure** |
+
+🟢 **Calibration that makes the commit channel usable as a clock: p166's own closing sweep
+(`05:07:50Z`) precedes its commit (`05:10:23Z`) by `2 min 33 s`. So a sweep sits a couple of minutes
+BEFORE its pass's commit, and a commit timestamp is a safe UPPER bound on the sweep time.**
+
+🔴 **Consequence for `T173`, whose claim was *"`1` of `12` per `37` minutes"*: the denominator is
+unsupported. On the commit channel the interval in which `ai-shifu` moved is `~64` minutes, so the
+rate was overstated by `~1.7×` even as a single repository's cadence.**
+🟢 **p166 had already narrowed `T173` from a shelf-wide rate to one repository sampled once; p167
+corrects its denominator as well, and `T173` should not be cited as a rate in any form.**
+🔵 **The method lesson: a relative-minute ledger is a derived instrument, and this KB had no
+independent clock until it noticed it was sitting inside one. Every pass commits with a UTC
+timestamp — that is a primary channel, and it is free.**
+
+### 6. 🔴 The market, EIGHTEENTH pass — still unverifiable at source, cause unchanged — *Global, search-summary*
+
+🔴 **The same sweep returned AI-in-education forecasts of `$6.4B`→`$79.6B` (`31.35%` CAGR),
+`$8.3B`→`$57.2B`, and `$10.6B` at `40.9%` CAGR — for overlapping definitions of the same market.**
+🟢 **`T168`'s named cause is unchanged and now eighteen passes old: the high estimates bundle
+corporate L&D with K-12 and higher education.** 🔵 **This page's policy stands — regional figures are
+recorded with their channel and never promoted to measurements (`T160`).**
+
+
 ## Pass 166 — 2026-10-13
 
 ### 1. 🆕 🔴 `T186` — the search channel has saturated on this shelf, and it is measurable — *Global, measured*
