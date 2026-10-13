@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🆕 🟢 **p181 found that engagement-readiness runs OPPOSITE to ★. p182 adds the layer underneath
+it, and it is more useful: the things that make a repository engagement-ready are the things
+nobody puts in a README, so they cannot be found by searching — only by reading.**
+
+### 🟢 The trend, stated as a measurement
+
+🔵 **`6` trees read this pass. For each, the capability that decides whether a studio can build on
+it, and whether that capability was discoverable without cloning.**
+
+| row | the deciding capability | visible without reading the tree? |
+|---|---|---|
+| 🟢 [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | tenancy ENFORCED fail-closed at a typed boundary | 🔴 **No.** The schema showed a `tenant_id` column; enforcement lives in `models/principal.go` and `auth/middleware.go` |
+| 🟢 [`civil-ai`](https://github.com/zhangl1001/civil-ai) | audit tables actually WRITTEN, with a state machine | 🔴 **No.** The table NAMES were visible; the `INSERT` sites were not |
+| 🟢 [`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | no external IdP required | 🔴 **No — and the visible signal pointed the WRONG WAY.** `keycloak` appears in `12` files; it is a default registration name and a demo compose file |
+| 🟡 [`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 no course/lesson/enrollment/assessment entity | 🔴 **No.** It is called an educational platform |
+| 🔴 [`plataforma-agentes-ia`](https://github.com/henriquemathias/plataforma-agentes-ia) | 🔴 it is a CRM | 🔴 **No.** Described as an educational agent platform, and it scores `157` on an education-vocabulary probe |
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 `AGPL-3.0` | 🔴 **No — a `2026` roundup published it as `MIT`** |
+
+🔴 **`6` of `6`.** 🔵 **Not one deciding capability was visible from the manifest, the README, the
+description or a published roundup. In three of the six the visible signal actively misled.**
+
+### 🆕 🔴 `T310` — the published layer and the deciding layer are disjoint
+
+🟢 **This is the generalisation p181's `T290` was reaching for.** ★ counts, READMEs, descriptions
+and roundups describe what a repository is FOR. 🔵 **Whether a studio can build on it is decided
+by tenancy enforcement, identity ownership, audit write paths, standards support and the licence
+PAYLOAD — none of which is marketing, so none of which is published.**
+
+🟢 **The operational consequence, and it is a cost a studio can quote:** a triage from published
+metadata has, on this pass's evidence, a **`3`-in-`4` overturn rate** *(`ACTION LR`, `n=4`)*.
+🔵 **Budget one clone-and-read per candidate. On these trees that cost seconds, not hours — the
+expensive thing is believing the metadata.**
+
+### 🟢 The four lexical traps, now a named set
+
+🔵 **Each one is a word that scores high on a probe and means something else. They have cost this
+KB a retraction each.**
+
+| word | looks like | actually was | pass |
+|---|---|---|---|
+| 🔴 `session` | an auth session | **STUDY** sessions *(`57` files)* | p180, `T288` |
+| 🔴 `xapi` | a standards integration | **an HTML comment in Polish** on a README | p181, `T302` |
+| 🆕 🔴 `enrollment` | a learner enrolment | **`AgentDynamicFollowupEnrollment`** — a marketing contact entering a follow-up sequence *(`157` hits)* | p182, `T308` |
+| 🆕 🔴 `keycloak` | a hard IdP dependency | **a default SAML registration NAME** plus a demo compose file | p182, `ACTION LQ` |
+
+🆕 🔵 **The newest two are the instructive pair, because they fail in OPPOSITE directions.**
+`enrollment` invented a capability that was not there; `keycloak` invented a REQUIREMENT that was
+not there. 🟢 **A probe that only looks for missing features will catch the first kind and never
+the second — and the second is the one that loses a deal, because it adds a procurement to an
+estimate for no reason.**
+
+### 🟢 What is reliably absent, and therefore reliably billable
+
+🔵 **Carried from p181 and extended with this pass's rows.**
+
+| layer | absent in | what a studio supplies |
+|---|---|---|
+| 🔴 **identity a cohort can use** | `DeepTutor` *(JSON file)*, `Bloom`, `Study-Mate`, `examprep`, `tutoria` | the whole identity layer, or an `LTI` launch that borrows the institution's |
+| 🔴 **course / enrollment / assessment entities** | 🆕 `open-tutor-ai-CE` *(`0` of each, despite the name)*, `DeepTutor` | the domain model itself — this is bigger than it sounds |
+| 🔴 **tenancy** | every shelf row except `tutor-mcp` and `mentingo` | a tenant key, scoping discipline and the tests that assert refusal |
+| 🔴 **audit / policy versioning** | every shelf row except `civil-ai` and `tutor-mcp` | the thing North American districts and EU Annex III both ask for |
+| 🔴 **`es` / `pt-BR` localisation** | 🆕 **EVERY shelf row, measured** | a quotable line item on every LATAM engagement *(`ACTION LP`)* |
+| 🔴 **a permissive SIS** | the whole ecosystem | integrate with the incumbent, deploy copyleft, or build |
+
+### 🆕 🔴 `T309` — and a trend about this KB's own evidence
+
+🔴 **The fetch channel resolves GitHub-family hosts only** *(`7` non-GitHub hosts tried, `7`
+`ENOTFOUND`, GitHub control passing — see [`repos/foundations.md`](../repos/foundations.md))*.
+
+🔵 **So this KB has two grades of evidence and should stop mixing them:**
+
+| grade | what it covers | how strong |
+|---|---|---|
+| 🟢 **MEASURED** | anything in a cloned tree: licences, schemas, enforcement, entities, locales | 🟢 **Primary. Reproducible — p181 reproduced p180's `Bloom` and `OpenOLAT` figures exactly from independent clones** |
+| 🟡 **SEARCH-INDEX SECONDARY** | every market figure, regulatory date, adoption percentage and named player | 🟡 **Never read from its own page. Trustworthy when several unrelated publishers agree, and labelled when they do not** |
+
+🟢 **The honest line for a client deck: this KB's repository claims are measurements and its
+market claims are a reconciled reading of the public record. 🔵 Those are different promises, and
+conflating them is how a `19`%-wide market band gets quoted as a number.**
+
+
 ## Pass 181 — 2026-10-13
 
 🆕 🟢 **`T290` — ★ rank and engagement-readiness are uncorrelated — was p180's best guess from `3`

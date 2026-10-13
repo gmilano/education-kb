@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🆕 🟢 **Two amendments that make existing patterns CHEAPER, one new pattern that is the audit
+stack a North American district and an EU Annex III deployment both need, and one new pattern that
+turns this pass's `3`-in-`4` overturn rate into a priced pre-engagement step.**
+
+### 🟢 Pattern `22`, amendment — the multi-tenant claim is VERIFIED, so the estimate stands
+
+🔵 **Pattern `22` told a studio not to budget for adding a tenant key when starting from
+[`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp). That rested on a schema read.
+🆕 `ACTION LN` read the query layer and the claim HOLDS.**
+
+🟢 **What you are actually inheriting, and it is more than a column:**
+
+1. 🟢 **A typed boundary.** `models/principal.go:33` — `TenantScope{TenantID, UserID,
+   MembershipID, EnrollmentID, LearnerID}`. **`36`** `Store` methods across **`14`** files take it
+   as their first argument after `ctx`, so an unscoped persistence call does not compile.
+2. 🟢 **Fail-closed admission.** `TenantScope.Validate()` rejects absent or ambiguous identity;
+   `auth/middleware.go:171` `WithPrincipal` *"admits only a fully validated, single-tenant
+   identity into a business context"* and errors otherwise; `GetPrincipal` re-validates on read.
+3. 🟢 **Predicates where rows are fetched.** **`350`** `tenant_id` predicates across **`75`**
+   files in `db/`.
+4. 🟢 **Anti-replay you did not have to think of.** `SessionBindingID()` =
+   `sha256(tenantID ‖ membershipID ‖ userID)`, to stop a session opened in tenant A being replayed
+   with another membership of the same global user in tenant B.
+5. 🟢 **Tests that assert REFUSAL**, not just success: `TestWithPrincipalRejectsMissingTenant`,
+   `TestAssessmentReviewRejectsForeignTenantAndInvalidPages`,
+   `TestClientCredentialsGrantIssuesTenantBoundAccessTokenOnly`,
+   `TestVerifyJWTClaimsRejectsTenantlessAndOldTokens`, `saas_noisy_neighbor_load_test.go`.
+
+🟡 **The one thing to check in week `1`:** the code says `LearnerID` is *"retained during the
+expand/backfill migration"* and `EnrollmentID` is optional until an enrollment is selected.
+🟡 **Read the migration state before you quote a date — not because tenancy is unfinished, but
+because the learner key is mid-move.** 🟢 `LegacyTenantID = "tenant_legacy"` is documented as a
+real tenant, not a wildcard, so legacy rows are inside the model rather than exempt from it.
+
+### 🟢 Pattern `20`, amendment — delete the IdP precondition
+
+🔴 **Pattern `20` was about to carry *"the client operates a Keycloak"* as a precondition for the
+institutional route.** 🆕 🟢 **`ACTION LQ` establishes it does not.**
+
+| step | before | 🆕 after |
+|---|---|---|
+| identity | 🔴 *"client must operate a Keycloak / IdP"* — a procurement conversation | 🟢 **Nothing required.** `app.saml.enabled` defaults to `false` in [`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)'s `application.yaml`; `SecurityConfig.kt:184` has an unconditional `formLogin`; `saml2Login` is the conditional branch |
+| what you can offer instead | — | 🟢 **`fbs-identity-service` is ITSELF an OIDC provider** — client `fbs-web-shell`, signing key alias `identity-signing`, its own access-token and authorization-code TTLs. Put other services behind it |
+| when the client's IT asks for SSO | 🔴 blocked on procurement | 🟢 **A configuration**: set `APP_SAML_ENABLED=true` and the IdP metadata vars. `docs/saml-local-keycloak.md` + `application-saml-local.yaml` are the worked local example |
+
+🟢 **Net effect: the institutional route starts in week `1` instead of after an identity-platform
+decision.**
+
+### 🆕 🟢 Pattern `24` — the auditable assessment stack, for North America and EU Annex III at once
+
+🔵 **The problem both regimes pose is the same one: prove a human decided, prove which policy was
+in force, and prove what the agent did.** 🟢 **Every piece below is permissive and was measured
+this pass or last.**
+
+| layer | repo | licence | what it contributes |
+|---|---|---|---|
+| **1. platform + identity** | [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(institutional)* or [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(multi-tenant SaaS)* | `Apache-2.0` / `MIT` | cohorts, roles, own auth. `tutor-mcp` additionally gives enforced tenancy |
+| **2. the audit schema — borrow it, do not invent it** | [`civil-ai`](https://github.com/zhangl1001/civil-ai) | `MIT` | 🆕 **`assessment_policy_versions`** *(`001_foundation.sql:104`, referenced by FK with **`ON DELETE RESTRICT`** at `:211`)* and **`agent_tool_receipts`** *(`032_agent_tool_receipts.sql`, indices on `status, updated_at` and `business_idempotency_key`)* |
+| **3. the receipt write path** | same | `MIT` | 🆕 **A real state machine to copy**: `claim()` → `Prepared` → `Running` → `Succeeded`/`Failed`/`Unknown`, via `DurableAgentToolExecutor.ts`, with `replace(receipt, expectedVersion, guard)` optimistic concurrency and a `120 000`-char content cap |
+| **4. grading with a human checkpoint** | [`feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `Apache-2.0` | automated checkers whose output a human adjudicates — 🆕 and no IdP needed |
+| **5. integrity evidence** | [`dolos`](https://github.com/dodona-edu/dolos) | `MIT` | similarity detection, executed and calibrated by this KB *(Pattern `1`, with its upper bound)* |
+| **6. adjudication record** | [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `MIT` | `assessment_adjudications`, `assessment_review`, `assessment_review_journal` already modelled, all tenant-scoped |
+
+🟢 **How to wire it.** Keep the agent NON-ADJUDICATING *(Pattern `3`)*: the agent writes a
+`agent_tool_receipts` row before acting and transitions it after, the grade it proposes lands in
+`assessment_review`, and a human's decision writes `assessment_adjudications`. Pin every automated
+decision to the `assessment_policy_versions` row in force at that moment — the `ON DELETE RESTRICT`
+FK means the policy cannot later be deleted out from under the decision it governed.
+
+🟢 **What it buys, per region.** 🇺🇸 **North America:** Oklahoma/Maryland-style *"human oversight,
+no high-stakes AI decision"* is satisfied structurally, and per-state policy becomes a row rather
+than a branch. 🇪🇺 **EMEA:** Annex III *(access decisions, outcome evaluation, exam monitoring,
+`2` Dec `2027`)* asks for exactly this record. 🌏 **APAC:** Vietnam's `1` Mar `2027` compliance
+date arrives first and names automated assessment explicitly.
+
+🔵 **Honest scope note: steps `2` and `3` are a SCHEMA and a pattern to port, not a library to
+import — `civil-ai` is an app, not a package. Budget the port; it is still cheaper than designing
+the audit model.**
+
+### 🆕 🟢 Pattern `25` — the pre-engagement read, priced
+
+🔴 **This pass screened `4` unread candidates from published metadata and reading overturned `3`
+of them** *(`ACTION LR`, `n=4`)*: an `MIT`-listed LMS that is `AGPL-3.0`, an *"educational agent
+platform"* that is a CRM, and an *"educational platform"* with `0` course entities.
+🟢 **So make the read a step, not an assumption.**
+
+**The recipe, in order, per candidate. Each step is a few seconds on these trees.**
+
+1. 🟢 **Clone shallow.** `git clone --depth 1 <url>`. 🔵 **In this environment that is also the
+   only reliable existence check: `github.com` and `api.github.com` answer `403` (`gap 140`), so
+   `curl -sI` verifies nothing and a successful clone of the exact path verifies more.**
+2. 🔴 **Read the LICENCE as a FILE and size it.** Not the roundup, not the badge, not the API
+   field. `frappe/lms` is `33 893` B of Affero where a `2026` roundup printed `MIT`.
+3. 🔴 **Count the DOMAIN entities, not the tables.** Grep the persistence models for `course`,
+   `lesson`, `enrollment`, `assessment`. 🔵 `open-tutor-ai-CE` has `4 702` files and `0` of them.
+4. 🔴 **Find the identity STORE, not the word `auth`.** A `users` table or a `class User`.
+   `DeepTutor` keeps users in a JSON file; `anki-mcp-server`'s `auth` is an MCP client credential.
+5. 🟢 **For any claimed capability, find the WRITE SITE or the ENFORCEMENT POINT.** `INSERT INTO`
+   for an audit table; a scope type and a middleware for tenancy. 🔵 This is what separated
+   `civil-ai` and `tutor-mcp` *(real)* from a schema that merely reads as architecture.
+6. 🔴 **Check the four lexical traps before believing a probe:** `session` *(study, not auth)*,
+   `xapi` *(a README comment)*, `enrollment` *(a marketing follow-up sequence)*, `keycloak`
+   *(a default registration name, not a dependency)*.
+7. 🟢 **Check the locale catalogue** for the engagement's language. 🔴 **No shelf row carries `es`
+   or `pt-BR`** — on a LATAM engagement that is a line item, found in step `7` rather than in
+   week `6`.
+
+🔵 **Where this pattern applies: before a shelf row enters a proposal. 🟢 Its output is a verdict
+plus the evidence that produced it, which is also what a client should be shown instead of a star
+count** *(none is obtainable here anyway — `gap 140`)*.
+
+### 🟡 Pattern `5`, amendment — LATAM, with the gap now measured
+
+🔵 **Pattern `5` said *"import the components, sell the governance"*. 🆕 Both halves get sharper.**
+
+🟢 **Sell the governance — the number is `87`/`26`.** UNESCO IESALC `2026`: `87`% of `200`
+institutions across `19` countries use AI somewhere, **`26`% have a formal AI strategy**. 🔵 **That
+`61`-point gap IS the engagement: policy, oversight checkpoints and the audit trail from Pattern
+`24`, sold to institutions that already have the adoption and cannot defend it.** Anchor to the
+UNESCO LAC Observatory *(April `2026`: CAF, CENIA, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo,
+Fundación Ceibal)*, Colombia's CONPES `4144` and Uruguay's Council of Europe convention signature.
+
+🔴 **Import the components — and price the localisation.** `ACTION LP` searched in Spanish and
+Portuguese, cloned every candidate, and found **`0` LATAM-origin and `0` LATAM-localised rows**.
+🟢 **No shelf row has an `es` or `pt-BR` catalogue. So every LATAM build carries an explicit
+localisation line item** — and the one row that proves it is achievable is
+[`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE), which maintains `ar-MA`,
+`fr-FR` and `en-US` side by side *(and `lumen`, p181, which holds an i18n-parity TEST — copy that
+idea regardless of its `GPL-3.0`)*.
+
+
 ## Pass 181 — 2026-10-13
 
 🆕 🟢 **Two new patterns, one amendment that ADDS A BOUND rather than a step, and one pattern whose

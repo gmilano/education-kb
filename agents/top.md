@@ -4,6 +4,162 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🟢 **Five pre-registered actions reached, `3` DISCHARGED on limb `1`, `1` on limb `2` with a row
+found anyway, and `1` SPLIT — and the split one re-scopes this KB's oldest channel gap from a
+single stubborn domain to a rule about the whole environment.**
+
+🆕 🔴 **The headline is a method correction, not a repository.** `gap 110` has been recorded for
+four passes as *"`eur-lex.europa.eu` is unreachable"*, target-specific, with a working control.
+🟢 **This pass tried `7` non-GitHub hosts on the fetch channel and every one failed
+`ENOTFOUND`** — the Commission's own `digital-strategy.ec.europa.eu`, the AI Act Explorer, the
+Austrian AI Service Desk, a standards body, a law firm, Wikipedia and arXiv — 🟢 **while
+`raw.githubusercontent.com` returned `100 338` characters on that same channel in the same pass.**
+🔵 **`T309`: the fetch channel resolves GitHub-family hosts ONLY. A GitHub control cannot tell
+*"this domain is blocked"* from *"every domain but ours is blocked"*, which is exactly the
+inference p181 made.**
+
+🆕 🟢 **The most client-useful finding: `tutor-mcp`'s multi-tenancy is REAL at the enforcement
+layer, not just in the schema.** 🔵 **So the one genuinely multi-tenant permissive row on this
+shelf stays genuinely multi-tenant after being read past its `CREATE TABLE` statements — which is
+the first time this KB has confirmed a capability claim rather than retracting one.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LN`** — is `tutor-mcp`'s `tenant_id` ENFORCED, or a column handlers happen to read? | 🟢 **DISCHARGED, LIMB `1` FIRED. Enforced, fail-closed, at a typed boundary: `TenantScope.Validate()`, `WithPrincipal`, `36` `Store` methods taking the scope, `350` `tenant_id` predicates across `75` files, and a session binding hash that exists specifically to stop cross-tenant replay** |
+| 🟢 **`ACTION LO`** — do `civil-ai`'s audit tables have WRITE SITES, or are they schema theatre? | 🟢 **DISCHARGED, LIMB `1` FIRED. Real writers on both, with a status state machine, optimistic concurrency and two storage adapters. 🔵 `T285` does NOT extend to schemas** |
+| 🟢 **`ACTION LQ`** — is `feedbacksystem`'s `Keycloak` an option or a hard dependency? | 🟢 **DISCHARGED, LIMB `1` FIRED. `app.saml.enabled` defaults to `false`; `formLogin` is unconditional; the service is itself an OIDC PROVIDER. `Keycloak` is the default SAML registration NAME, not a requirement** |
+| 🟡 **`ACTION LP`** — probe LATAM supply by LANGUAGE, not by region | 🟡 **DISCHARGED, LIMB `2` FIRED. Two language-native searches, `4` trees cloned, `0` LATAM-origin or LATAM-localised rows. 🟢 `gap 141` is now ABSENT BY MEASUREMENT. 🆕 And the probe found a permissive MEA-shaped row instead** |
+| 🟡 **`ACTION LM`** — settle Article `50`'s start date off a vendor blog | 🟡 **SPLITS. CONTENT limb `1`: `8` independent non-vendor channels agree on `2` Aug `2026`. 🔴 CHANNEL limb `2`: none of them is fetchable, and `T309` above now explains why** |
+| 🔴 **`ACTION LR`** — run the p181 screening recipe blind on `10` unread rows | 🔴 **PARTIAL at `n=4`, and the early evidence fires LIMB `2`: `3` of `4` unread verdicts were OVERTURNED by reading. Re-registered at full size** |
+
+### 🟢 `ACTION LN` — tenancy read past the schema, and it holds
+
+🟢 **[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) `HEAD 812eff7`,
+`694` tracked files, `571` of them Go.** 🔵 **p181 credited this row with multi-tenancy from `240`
+`CREATE TABLE` statements and a `tenant_id` column. That is precisely the evidence this KB has
+learned not to trust, so `ACTION LN` went to the query layer.**
+
+| enforcement surface | measured | what it means |
+|---|---|---|
+| 🟢 **a typed scope, not a string** | `type TenantScope struct { TenantID; UserID; MembershipID; EnrollmentID; LearnerID }` in `models/principal.go:33` | 🟢 **Tenancy is a TYPE that persistence methods demand, so an unscoped call does not compile** |
+| 🟢 **fail-closed validation** | `TenantScope.Validate()` rejects an absent or ambiguous identity over `tenant_id`, `user_id`, `membership_id` | 🟢 Its own comment: *"IDs are opaque and must already be canonical: silently trimming them could select another row"* |
+| 🟢 **one admission gate** | `auth/middleware.go:171` — `WithPrincipal` *"admits only a fully validated, single-tenant identity into a business context"*, and returns an error otherwise | 🟢 **`GetPrincipal` re-validates on every read, so a context cannot carry a half-built principal** |
+| 🟢 **scope reaches persistence** | **`36`** `Store` methods take `models.TenantScope` as their first argument after `ctx`, across **`14`** files in `db/` | 🟢 The discipline is structural, not per-handler |
+| 🟢 **predicates at the query** | **`350`** `tenant_id` predicate occurrences across **`75`** files in `db/` | 🟢 `badges.go`, `catalog.go`, `saas_governance.go` and `formation_versions.go` alone carry `22`, `19`, `28` and `20` |
+| 🟢 **cross-tenant replay is named and blocked** | `SessionBindingID()` = `sha256(tenantID \0 membershipID \0 userID)` | 🟢 Its comment: *"prevents a transport session initialized in tenant A from being replayed with another valid membership of the same global user in tenant B"* |
+| 🟢 **tests that assert the negative** | `TestWithPrincipalRejectsMissingTenant`, `TestAssessmentReviewRejectsForeignTenantAndInvalidPages`, `TestClientCredentialsGrantIssuesTenantBoundAccessTokenOnly`, `TestVerifyJWTClaimsRejectsTenantlessAndOldTokens`, `TestCohortCapacityTrainerScopeAndTenantCompositeFKs`, `saas_noisy_neighbor_load_test.go` | 🟢 **A row that tests for REFUSAL has thought about the failure mode, not just the happy path** |
+
+🟡 **The one honest caveat, and it is in the code's own words:** `EnrollmentID` is *"optional until a
+learning enrollment has been selected"* and `LearnerID` is *"retained during the expand/backfill
+migration"* — 🟡 **a tenancy migration is in flight.** 🟢 **And `LegacyTenantID = "tenant_legacy"`
+is documented as *"a real tenant identifier, not a wildcard"***, so pre-multi-tenancy data was
+moved INTO the model rather than exempted from it. 🔵 **That is the right shape; a studio should
+still read the migration state before quoting a date.**
+
+🟢 **Pattern `22`'s *"do not budget for adding a tenant key"* HOLDS, and is now evidence-backed
+rather than schema-backed.**
+
+### 🟢 `ACTION LO` — `civil-ai`'s audit tables are written, not decorative
+
+🟢 **[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) `HEAD 37ba5e2`, `795` files.**
+🔵 **p181 flagged `agent_tool_receipts` and `assessment_policy_versions` as an audit shape worth
+borrowing. `ACTION LO` pre-registered the dangerous possibility: a schema with no writers, which
+would extend `T285`'s false-competence finding from dependency manifests to SCHEMAS.**
+
+| table | write sites | shape |
+|---|---|---|
+| 🟢 **`agent_tool_receipts`** | `INSERT OR IGNORE INTO` *(`SqliteAgentToolReceiptRepository.ts:34`)*, `UPDATE … SET` *(:69)*, plus a second adapter `IndexedDbAgentToolReceiptRepository.ts` | 🟢 **A real state machine**: `claim()` → `Prepared` → `Running` → `Succeeded`/`Failed`/`Unknown`, driven from `DurableAgentToolExecutor.ts` and `CreateDurableAgentLoop.ts` |
+| 🟢 **`assessment_policy_versions`** | `INSERT INTO` **twice** *(`SqliteCurriculumRepository.ts:194` and `:293`)*, read at `:235` | 🟢 Declared at `001_foundation.sql:104` and referenced by a FK with **`ON DELETE RESTRICT`** at `:211` — a policy version cannot be deleted out from under the assessment that used it |
+
+🟢 **The concurrency control is the tell.** `replace(receipt, expectedVersion, guard)` is
+version-checked optimistic concurrency with a `AgentToolReceiptMutationGuard`, and the executor
+caps receipt content at `120 000` characters. 🔵 **Nobody builds idempotency keys
+(`agent_tool_receipts_business_key_idx`), a version column and an `Unknown` terminal state for a
+table they never write.**
+
+🟢 **`T285` does NOT extend to schemas — at least not here.** 🔵 **But note what made the
+difference: the test was *"find the INSERT"*, not *"count the tables"*. The `84`-table figure p181
+published would have looked identical either way.**
+
+### 🟡 `ACTION LP` — LATAM probed in its own languages, and the answer is still zero
+
+🔵 **Two language-native searches** *(Spanish and Portuguese, both naming licence and platform
+terms)*, **`4` trees cloned and measured.** 🔴 **`0` LATAM-origin rows. `0` LATAM-localised rows.**
+
+| row | licence *(payload-verified)* | what the tree actually is |
+|---|---|---|
+| 🟡 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 `MIT`, `1 120` B | 🟡 **Real, and genuinely interesting — but `4` tracked files.** One `index.html` of `137 829` B, no server, no account. Carries a Zenodo **DOI `10.5281/zenodo.23066871`** and traces its design to the Kestin et al. *(2025)* RCT in *Scientific Reports*. 🔴 **Holder is Universidad Miguel Hernández — SPAIN. Spanish-language is not LATAM** |
+| 🔴 [`henriquemathias/plataforma-agentes-ia`](https://github.com/henriquemathias/plataforma-agentes-ia) | 🟢 `MIT`, `1 073` B | 🔴 **Described as a *"plataforma educacional de agentes de IA"* and it is a CRM.** `CRM_v4.tsx`, `CustomerManagement.tsx`, `ContactsList.tsx`, `LeadCustomFieldsConfig.tsx`, `WebhookManager.tsx` |
+| 🆕 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`**, `1 531` B | 🟢 **`4 702` files, OWN identity** *(`data/models/user.py`, `accounts/users/repository.py`, `gateway/http/routers/auth.py`, `tests/test_auth.py`)*. 🔴 **Locales are exactly `ar-MA`, `en-US`, `fr-FR` — no `es`, no `pt`** |
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`**, `33 893` B | 🔴 Pulled because a `2026` LMS roundup listed it as `MIT`. **It is not.** See [`verticals/solutions.md`](../verticals/solutions.md) |
+
+🆕 🔴 **`T308` — `enrollment` is a lexical trap, and it is a worse one than p180's `session`.**
+`plataforma-agentes-ia` returns `157` word-bounded hits on an education vocabulary probe. 🟢 **Read,
+they resolve to `AgentDynamicFollowupEnrollment` — enrolling a CONTACT into a marketing follow-up
+sequence.** 🔵 **Marketing automation and edtech share the whole word. A region-and-vocabulary
+probe would have added a CRM to this shelf as a LATAM edtech row.**
+
+🆕 🟢 **The consolation prize is better than the thing being looked for: `gap 124` (MEA) gets its
+first PERMISSIVE candidate.** `open-tutor-ai-CE` ships `ar-MA` — **country-coded** Arabic — beside
+`fr-FR`, which is a Maghreb localisation signature, and it is `BSD-3-Clause` where p181's
+`lumen` was `GPL-3.0`. 🔴 **The holder's country is still NOT established, and this KB does not
+infer one from a locale code or a name. What is established is the localisation TARGET.**
+
+🆕 🔴 **And it carries the same defect as the biggest name on this shelf.** `open-tutor-ai-CE`'s
+`data/models/` holds `chat`, `config`, `feedback`, `file`, `knowledge`, `model`, `support`, `user`
+— 🔴 **`0` course entities, `0` lesson, `0` enrollment, `0` assessment** *(an education-vocabulary
+probe over the whole model directory returns `2` matches, both in `support.py`)*. 🔵 **A platform
+that calls itself educational and models chats.**
+
+### 🔴 `ACTION LR` — the screening recipe, tested early and failing
+
+🔵 **`ACTION LR` asked for `10` unread rows screened blind, then read, counting overturned
+verdicts. This pass only reached `4`** *(the `ACTION LP` candidates)*, **so the action is PARTIAL
+and is re-registered.** 🔴 **But the early count is not encouraging: `3` of `4`.**
+
+| row | verdict from the manifest alone | verdict after reading | overturned? |
+|---|---|---|---|
+| `frappe/lms` | `MIT` LMS *(per a `2026` roundup)* | 🔴 `AGPL-3.0` | 🔴 **YES** |
+| `plataforma-agentes-ia` | `MIT` educational agent platform | 🔴 CRM | 🔴 **YES** |
+| `open-tutor-ai-CE` | educational platform, permissive | 🟡 permissive and real, 🔴 but no course/assessment entity | 🔴 **YES, partially** |
+| `tutoria` | `MIT` AI tutor | 🟢 `MIT` AI tutor *(single file)* | 🟢 no |
+
+🔵 **At `n=4` that is limb `2` territory — the recipe is a pointer to a read, not a substitute for
+one. 🟢 Which, note, is exactly what `T288` already said about counts. The recipe inherited the
+flaw of the probe it was built from.**
+
+### 🟢 The shelf after p182 — `14` rows, every one read past its code
+
+| row | licence | grade | identity | region |
+|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` | 🟢 **ROUTE** *(permissive platform)* | 🟢 OWN *(federated)* | EMEA |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | EMEA |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` | 🟢 **ROUTE — multi-tenancy now ENFORCEMENT-verified** | 🟢 OWN + tenant *(fail-closed)* | EMEA |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN + tenant | EMEA |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | 🟢 ROUTE | 🟢 OWN | APAC |
+| 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` | 🟢 **ROUTE** *(no IdP required — `ACTION LQ`)* | 🟢 OWN + optional federation | EMEA |
+| 🆕 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`** | 🟡 **APPLIANCE+** *(own identity, 🔴 no course entity)* | 🟢 OWN | 🟡 **MEA-targeted** *(`ar-MA`+`fr-FR`)* |
+| 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 `MIT` | 🟡 **APPLIANCE+** *(audit tables now WRITE-verified)* | 🟡 OWN *(`candidate_profiles`)* | APAC |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` | 🟢 COMPONENT *(executed + calibrated)* | n/a | EMEA |
+| 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` | 🟡 APPLIANCE | 🔴 NONE | APAC |
+| 🟡 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` | 🟡 COMPONENT | 🟡 BORROWED | Global |
+| 🆕 🟡 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 `MIT` | 🔴 COMPONENT *(single file, DOI-published)* | 🔴 NONE | EMEA *(Spain)* |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+| 🔴 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 `MIT` | 🔴 COMPONENT | 🔴 NONE | APAC |
+
+🟢 **`6` ROUTE-grade permissive rows, unchanged in count but one of them is now verified a layer
+deeper.** 🔴 **North America still holds `0` ROUTE rows. LATAM still holds `0` rows of any grade —
+now established on a language-native channel** *(`gap 141`, `ACTION LP` limb `2`)*.
+
+🔵 **Verification note for this pass: every licence above is a payload read from a clone, and every
+measurement is `git grep` over tracked files in a `--depth 1` clone. `github.com`, `api.github.com`
+and `codeload.github.com` all answer `403` here (`gap 140`), so `curl -sI` cannot verify a repo URL
+in this environment — a successful `git clone` of the exact path is the stronger check, and it is
+the one used.**
+
+
 ## Pass 181 — 2026-10-13
 
 🟢 **Seven pre-registered actions discharged, and the one this pass most needed to be right about —

@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🆕 🔴 **The foundational finding this pass is about the ENVIRONMENT, and it changes how every
+non-code fact in this KB should be labelled.** 🟢 **`gap 110` is not a stubborn domain. It is an
+allowlist.**
+
+🔵 **p181 recorded `eur-lex.europa.eu` as unreachable *"on a FOURTH channel, with a working control
+on that same channel"*, and concluded the failure was target-specific. 🆕 `ACTION LM` tested that
+conclusion properly this pass by trying hosts that have nothing to do with the EU.**
+
+| host tried on the fetch channel | result | what it is |
+|---|---|---|
+| 🟢 `raw.githubusercontent.com` | 🟢 **`200`, `100 338` characters returned** | the control |
+| 🔴 `digital-strategy.ec.europa.eu` | 🔴 `ENOTFOUND` | the European Commission's own AI Act page |
+| 🔴 `artificialintelligenceact.eu` | 🔴 `ENOTFOUND` | the AI Act Explorer |
+| 🔴 `ai-at.eu` | 🔴 `ENOTFOUND` | the Austrian AI Service Desk *(a national authority channel)* |
+| 🔴 `www.bsigroup.com` | 🔴 `ENOTFOUND` | a standards body |
+| 🔴 `www.cooley.com` | 🔴 `ENOTFOUND` | a law firm |
+| 🔴 `en.wikipedia.org` | 🔴 `ENOTFOUND` | a general reference |
+| 🔴 `arxiv.org` | 🔴 `ENOTFOUND` | the preprint server this KB cites for papers |
+
+🆕 🔵 **`T309`: the fetch channel resolves GitHub-family hosts ONLY.** 🔴 **Therefore every
+non-GitHub fact in this KB — every market figure, every regulatory date, every adoption
+percentage — rests on SEARCH-RESULT SUMMARIES and has never been read from the page it cites.**
+🟢 **That is not a reason to drop those facts; it is a reason to label them as a class, which this
+pass starts doing in [`intel/market.md`](../intel/market.md).**
+
+🔵 **And it retires a bad inference: a GitHub-hosted control cannot distinguish *"this domain is
+blocked"* from *"every domain but ours is blocked"*. p181 ran exactly that control and drew
+exactly the wrong conclusion. 🟢 `gap 110` is hereby restated as CHANNEL-WIDE and merged with the
+reachability picture below.**
+
+### 🟢 The channel census after p182 — what works here, stated once
+
+| channel | verdict | evidence this pass |
+|---|---|---|
+| 🟢 **`git clone` over smart-HTTP** | 🟢 **WORKS** | `6` repositories cloned and measured this pass *(`tutor-mcp`, `civil-ai`, `feedbacksystem`, `open-tutor-ai-CE`, `plataforma-agentes-ia`, `tutoria`, `lms`)* |
+| 🟢 **`raw.githubusercontent.com` fetch** | 🟢 **WORKS** | `DeepTutor`'s README returned in full |
+| 🟢 **install a package FROM A REGISTRY** | 🟢 **WORKS** | p181: `npm` installed `@dodona/dolos@2.9.3` and ran `8` analyses |
+| 🔴 **GitHub web / API / codeload** | 🔴 **`403`** | `github.com`, `api.github.com`, `codeload.github.com` re-confirmed this pass *(`gap 140`)* |
+| 🆕 🔴 **fetch ANY non-GitHub host** | 🔴 **`ENOTFOUND`** | `7` hosts, `7` failures, `1` GitHub control passing *(`T309`)* |
+| 🔴 **build or test a CLONED subject tree** | 🔴 **REFUSED** | `mvn package` on `OpenOLAT` *(p181)*, `pytest` on `Bloom` *(p180)* — the external-code policy *(`T303`)* |
+| 🆕 🟡 **compound shell over a cloned tree** | 🟡 **PARTIALLY REFUSED** | several multi-stage `grep` pipelines over cloned trees were declined this pass; plain file reads and the dedicated search tools were not. 🔵 Measurement is unaffected, the ergonomics are |
+
+🔵 **The practical rule for the next pass: measure with the dedicated search tools over a clone.
+Do not build pipelines, do not expect a page, do not expect a star.**
+
+### 🟢 The permissive foundations shelf, re-graded on licence PAYLOADS read this pass
+
+🔵 **Every licence below was read as a file from a `--depth 1` clone and sized. A roundup's licence
+column is not evidence — this pass has a counterexample.**
+
+| repo | licence *(payload-verified this pass)* | size | what it founds |
+|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` | `10 982` B | 🟢 **The permissive full-LMS foundation.** `385` `CREATE TABLE`, `186` Maven dependencies — budget the discovery |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT` | `1 091` B | 🟢 Assessment + `LTI 1.3` grade passback; `257` entities |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` | `1 073` B | 🟢 **The multi-tenant foundation, enforcement-verified this pass.** `240` `CREATE TABLE`, `36` scope-taking store methods |
+| 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` | `10 785` B | 🟢 **Institutional grading with its OWN OIDC provider** — no external IdP required *(`ACTION LQ`)* |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` | `1 062` B | 🟢 The TypeScript LMS route; `SCORM 1.2` both ways |
+| 🆕 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`** | `1 531` B | 🟡 **`4 702` files, own identity, `ar-MA`/`fr-FR` locales.** 🔴 No course or assessment entity — a tutoring layer, not a platform |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` | `1 068` B | 🟢 The smallest complete route: `34` tables, `141` endpoints |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` | — | 🟢 Plagiarism/similarity, executed and calibrated here |
+| 🆕 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** | **`33 893` B** | 🔴 **DISQUALIFIED as a permissive foundation.** A `2026` roundup listed it `MIT`; its own `license.txt` is the GNU Affero GPL v3 |
+
+🆕 🔴 **The `frappe/lms` correction is the kind this KB exists to make.** 🔵 **A secondary roundup
+put it in an MIT column; `1 632` tracked files later, the payload is Affero. 🟢 For a Globant
+engagement that is the difference between a buildable foundation and a hosted-derivative legal
+conversation.**
+
+### 🟡 Still unresolved, carried honestly
+
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNPROBED** for a fourth pass. 🟡 `formalms`
+  is listed `Apache-2.0` in one source and `GPL` in another — and after `frappe/lms`, a listing is
+  not a licence.
+- 🔴 **`OpenOLAT`'s boot time stays unknown** — the build is refused here *(`T303`)*.
+- 🔴 **`0` permissive SIS of any origin.** The only student-information systems surfaced this pass
+  are `RosarioSIS` and `Gibbon`, both `GPL`, both PHP. 🔵 **An MIT/Apache SIS does not appear to
+  exist, and a studio should assume the SIS layer is either copyleft or bespoke.**
+
+
 ## Pass 181 — 2026-10-13
 
 🆕 🔴 **`ACTION LG` fired limb `2`, and the reason matters more than the verdict: `OpenOLAT` was not

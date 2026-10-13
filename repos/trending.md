@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🔴 **Stated before anything is listed, for the third consecutive pass: the trending question cannot
+be answered from GitHub's own surfaces here.** `api.github.com`, `github.com` and
+`codeload.github.com` all answer `403` through this environment's proxy (`gap 140`), so there is
+**no trending feed, no star count and no star delta on any channel this KB can reach.**
+
+🆕 🔴 **And this pass establishes the limit is wider than GitHub.** The fetch channel resolves
+GitHub-family hosts ONLY — `7` non-GitHub hosts tried, `7` `ENOTFOUND`, with a GitHub control
+passing in the same pass (`T309`, see [`repos/foundations.md`](foundations.md)). 🔵 **So a
+*"trending"* claim here could not be sourced from HackerNews, a newsletter, or a vendor index
+either. What follows is *"newly measured by this KB this week"*, dated, with the evidence that
+placed it.**
+
+### 🟢 Newly measured this week
+
+| repo | licence *(payload)* | measured this pass | why it is worth a second look |
+|---|---|---|---|
+| 🆕 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`**, `1 531` B | `4 702` files, `HEAD 196c547`. `data/models/user.py`, `accounts/users/repository.py`, `gateway/http/routers/auth.py`, `tests/test_auth.py`. Locales: `ar-MA`, `en-US`, `fr-FR` | 🟢 **The first `BSD` row on this shelf and the first with COUNTRY-CODED Arabic.** 🔴 `0` course/lesson/enrollment/assessment entities — a tutoring layer wearing a platform's name |
+| 🆕 🟡 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🟢 `MIT`, `1 120` B | `4` tracked files, `HEAD 65b2903`, one `index.html` of `137 829` B, `CITATION.cff`, DOI `10.5281/zenodo.23066871` | 🟡 **The smallest thing on this shelf and the only one with a citable DOI and an RCT behind its design** *(Kestin et al., *Scientific Reports* 15:17458, 2025)*. 🔴 No server, no account, no persistence |
+| 🆕 🔴 [`henriquemathias/plataforma-agentes-ia`](https://github.com/henriquemathias/plataforma-agentes-ia) | 🟢 `MIT`, `1 073` B | `700` files, `HEAD 4f630b7`, FastAPI + React + PostgreSQL. `157` word-bounded education-vocabulary hits — **all `AgentDynamicFollowupEnrollment`** | 🔴 **Not education. A CRM with WhatsApp flows.** Listed here as the measured counterexample behind `T308` |
+| 🆕 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`**, `33 893` B | `1 632` files, `HEAD a888bcf`, `license.txt` = GNU Affero GPL v3 | 🔴 **Pulled because a `2026` LMS roundup put it in an `MIT` column. It is not `MIT`.** Integrate-only for a hosted derivative |
+
+### 🟢 Re-measured this week, and the claim survived
+
+| repo | what was re-tested | result |
+|---|---|---|
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | is `tenant_id` ENFORCED or decorative? | 🟢 **Enforced.** `HEAD 812eff7`, `694` files. Typed `TenantScope` + fail-closed `Validate()` + one admission gate + `36` scope-taking `Store` methods + `350` `tenant_id` predicates across `75` files + anti-replay `SessionBindingID()` + `6` tests asserting REFUSAL |
+| 🟢 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | do the audit tables have WRITERS? | 🟢 **Yes, both.** `HEAD 37ba5e2`. `INSERT OR IGNORE`/`UPDATE` on `agent_tool_receipts` across two adapters, driven by a `Prepared→Running→Succeeded/Failed/Unknown` state machine with version-checked concurrency; `INSERT INTO assessment_policy_versions` twice, FK `ON DELETE RESTRICT` |
+| 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | is `Keycloak` required? | 🟢 **No.** `HEAD 202c92c`, `1 452` files. `app.saml.enabled` defaults `false`; `formLogin` unconditional at `SecurityConfig.kt:184`; the module is its own OIDC provider with its own signing key |
+
+### 🔴 What this file did NOT find, said plainly
+
+- 🔴 **`0` region-originated repositories from prose search, for a third consecutive pass**
+  (`gap 141`). Every regional placement in this KB comes from reading trees — locale catalogues,
+  institutional holders, design-doc language — never from a search result.
+- 🔴 **`0` LATAM-origin or LATAM-localised repositories, now probed in Spanish AND Portuguese.**
+  🟢 **This is the first pass where that zero is a MEASUREMENT rather than an absence of looking**
+  (`ACTION LP`, limb `2`). Of the candidates the language-native channel produced: one is Spanish
+  *(Spain)*, one is a Brazilian-authored CRM, one is Maghreb-localised, one is AGPL.
+- 🔴 **`0` North-American rows of any grade.**
+- 🔴 **`0` permissive student-information systems.** `RosarioSIS` and `Gibbon` are both `GPL`.
+- 🔴 **`0` star counts.** Not estimated, not carried forward, not inferred.
+
+
 ## Pass 181 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

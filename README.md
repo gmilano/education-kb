@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🟢 **Five pre-registered actions reached: `3` DISCHARGED on limb `1`, `1` on limb `2` with a row
+found anyway, `1` SPLIT, and the sixth (`ACTION LR`) PARTIAL at `n=4` and re-registered.**
+
+🆕 🟢 **The pass's most client-useful finding is a CONFIRMATION, which is rarer here than a
+retraction.** [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)'s multi-tenancy was
+credited from its schema at p181; read at the query layer it holds — a typed `TenantScope` that
+`36` `Store` methods demand, a fail-closed `Validate()`, one admission gate in `WithPrincipal`,
+`350` `tenant_id` predicates across `75` files, an anti-replay session binding, and `6` tests that
+assert REFUSAL. 🟢 **Pattern `22`'s *"do not budget for a tenant key"* is now evidence-backed.**
+
+🆕 🔴 **The pass's sharpest finding is a method correction about this KB's own environment.**
+`gap 110` has been recorded for four passes as a `eur-lex` problem, *"target-specific, with a
+working control"*. 🟢 **`ACTION LM` tried `7` non-GitHub hosts — the Commission's own site, the AI
+Act Explorer, a national AI service desk, a standards body, a law firm, Wikipedia, arXiv — and
+ALL `7` failed `ENOTFOUND`, while `raw.githubusercontent.com` returned `100 338` characters on the
+same channel in the same pass.** 🔵 **`T309`: the fetch channel resolves GitHub-family hosts ONLY.
+A GitHub-hosted control cannot distinguish *"this domain is blocked"* from *"every domain but ours
+is blocked"* — which is exactly the inference p181 made.**
+
+🆕 🔴 **And the most useful number for a studio: `6` of `6` trees read this pass had their
+deciding capability INVISIBLE from published metadata, and `3` of `6` were actively
+misdescribed.** An `MIT`-listed LMS that is `AGPL-3.0`; an *"educational agent platform"* that is
+a CRM; an *"educational platform"* with `0` course entities. 🔵 **`T310`: the published layer and
+the deciding layer are disjoint.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LN`** — is `tutor-mcp`'s `tenant_id` ENFORCED or decorative? | 🟢 **DISCHARGED, LIMB `1`. Enforced, fail-closed, at a typed boundary. 🟡 One caveat in the code's own words: a `LearnerID` expand/backfill migration is in flight** |
+| 🟢 **`ACTION LO`** — do `civil-ai`'s audit tables have WRITE SITES? | 🟢 **DISCHARGED, LIMB `1`. `INSERT`/`UPDATE` on both, across two storage adapters, driven by a `Prepared→Running→Succeeded/Failed/Unknown` state machine with version-checked concurrency and an `ON DELETE RESTRICT` policy FK. 🔵 `T285` does NOT extend to schemas** |
+| 🟢 **`ACTION LQ`** — is `feedbacksystem`'s `Keycloak` required? | 🟢 **DISCHARGED, LIMB `1`. `app.saml.enabled` defaults `false`; `formLogin` is unconditional; the module is ITSELF an OIDC provider. `keycloak` was a default registration NAME** |
+| 🟡 **`ACTION LP`** — probe LATAM supply by LANGUAGE | 🟡 **DISCHARGED, LIMB `2`. Spanish + Portuguese searches, `4` trees cloned: `0` LATAM-origin, `0` LATAM-localised. 🟢 `gap 141` is now ABSENT BY MEASUREMENT. 🆕 Found a permissive MEA-shaped row instead** |
+| 🟡 **`ACTION LM`** — settle Article `50` off a vendor blog | 🟡 **SPLITS. CONTENT limb `1`: `8` independent non-vendor channels agree on `2` Aug `2026`. 🔴 CHANNEL limb `2`, and `T309` now explains it** |
+| 🔴 **`ACTION LR`** — screening recipe, blind on `10` unread rows | 🔴 **PARTIAL at `n=4`; early evidence fires LIMB `2` at `3`/`4` overturned. Re-registered at full size** |
+
+### 🟢 What this pass added
+
+- 🆕 🟢 **One new permissive row:** [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+  — the shelf's first **`BSD-3-Clause`** row, `4 702` files, own identity, and the first with
+  **country-coded** Arabic *(`ar-MA`)* beside `fr-FR`. 🔴 Graded APPLIANCE+, not ROUTE: `data/models/`
+  holds `0` course, lesson, enrollment or assessment entities.
+- 🆕 🔴 **One disqualification:** [`frappe/lms`](https://github.com/frappe/lms) is **`AGPL-3.0`**
+  *(`license.txt`, `33 893` B)*, not the `MIT` a `2026` LMS roundup prints.
+- 🆕 🟢 **Pattern `24`** — the auditable assessment stack that satisfies North American human-oversight
+  mandates and EU Annex III with the same record, built from `civil-ai`'s now-verified audit schema.
+- 🆕 🟢 **Pattern `25`** — the pre-engagement read, priced: a `7`-step clone-and-measure recipe,
+  justified by this pass's `3`-in-`4` overturn rate.
+- 🆕 🟢 **Pattern `20` loses its IdP precondition; Pattern `22` is verified; Pattern `5` gains the
+  `87`/`26` number and an explicit localisation line item.**
+- 🆕 🔴 **A fourth lexical trap named:** `enrollment` *(`T308`)* — `157` word-bounded education hits
+  that all resolve to a marketing follow-up sequence. 🔵 With `keycloak`, the set now contains one
+  trap that invents a CAPABILITY and one that invents a REQUIREMENT.
+
+### 🔴 Declared gaps and absences
+
+- 🆕 🔴 **`gap 110` RESTATED and WIDENED — it was never about `eur-lex`.** The fetch channel
+  resolves GitHub-family hosts only *(`T309`)*. 🔴 **Every market figure, regulatory date and
+  adoption percentage in this KB is SEARCH-INDEX SECONDARY and has never been read from its own
+  page.** 🟢 [`intel/market.md`](intel/market.md) now labels this as a class rather than per-fact.
+- 🟢 **`gap 141` — LATAM supply is now ABSENT BY MEASUREMENT, not by silence** *(`ACTION LP`)*.
+  Probed in Spanish and Portuguese, every candidate cloned: the Spanish-language tutor is from
+  Spain, the Portuguese-language *"educational platform"* is a CRM. 🔴 **`0` LATAM-origin, `0`
+  LATAM-localised, and `0` shelf rows with an `es` or `pt-BR` catalogue.**
+- 🔴 **The LATAM asymmetry stands and is the most actionable fact here:** `87`% of `200`
+  institutions across `19` countries use AI, `26`% have a strategy *(UNESCO IESALC `2026`)*,
+  against `0` supply rows.
+- 🟡 **`gap 124` (MEA) gains its first PERMISSIVE candidate** — `open-tutor-ai-CE`'s `ar-MA` +
+  `fr-FR` locales are a Maghreb signature, and `BSD-3-Clause` where p181's `lumen` was `GPL-3.0`.
+  🔴 **The holder's country remains unestablished; this KB does not infer one from a locale or a
+  name. What is established is the localisation TARGET.**
+- 🔴 **`gap 140` — ★ counts remain unobtainable.** `github.com`, `api.github.com` and
+  `codeload.github.com` all `403`. 🔵 **Consequence worth stating: `curl -sI` cannot verify a repo
+  URL in this environment. A successful `git clone` of the exact path is the stronger check, and
+  it is what every row above rests on.**
+- 🆕 🔴 **Market size is a `19`% band on the CURRENT year.** A third house now puts `2026` at
+  `$10.6` B, between the `$9.58` B and `$11.4` B already on record. **No point estimate should be
+  quoted to a client** *(`T306`)*.
+- 🆕 🔴 **`0` permissive student-information systems exist.** `RosarioSIS` and `Gibbon` are both
+  `GPL`. 🔵 The SIS layer is an integration, a copyleft deployment or a build — price it from the
+  first estimate.
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNPROBED** for a fourth pass. 🔵 After
+  `frappe/lms`, note that `formalms` being *listed* `Apache-2.0` in one source is not evidence.
+- 🔴 **`0` North-American ROUTE-grade permissive rows**, fourth pass.
+
+### 🟢 Pre-registered for p183, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🔴 **`ACTION LR`** *(re-registered at full size)* | run the Pattern `25` recipe blind on `10` UNREAD rows, record the verdict, then read and count overturns | **limb `1`:** `≤1` of `10` overturned → the recipe is reliable triage and can be published as guidance outside this KB. **limb `2`:** `≥3` overturned → it is a pointer to a read and must say so wherever it appears. 🔵 At `n=4` it is already at `3` |
+| 🆕 🟢 **`ACTION LS`** | does [`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) have a course/assessment model ANYWHERE outside `data/models/` — or is the `0` real? | **limb `1`:** a domain model exists elsewhere *(a service layer, a separate package, a migration set)* → the APPLIANCE+ grade is wrong and it may be a ROUTE. **limb `2`:** genuinely absent → 🔴 **a second *"educational platform"* that models chats, which promotes `T310` from an observation to a structural claim about this supply** |
+| 🆕 🟡 **`ACTION LT`** | `open-tutor-ai-CE` advertises an Enterprise edition beside this `BSD-3-Clause` CE — measure what the CE tree is MISSING *(auth providers? multi-tenancy? a licence-key gate?)* | **limb `1`:** the CE is complete and the Enterprise edition is support/hosting → safe to build on. **limb `2`:** capability is withheld or gated in the CE tree → 🔴 the row needs an *"open-core"* flag, and this KB needs that flag as a COLUMN, since it has never checked for one |
+| 🆕 🟡 **`ACTION LU`** | probe the MEA supply directly in Arabic and French, the way `ACTION LP` probed LATAM in Spanish and Portuguese | **limb `1`:** a permissive MEA-origin row exists → `gap 124` breaks on supply, not just capability. **limb `2`:** none found on a language-native channel → declare MEA supply absent BY MEASUREMENT, matching what `ACTION LP` just did for LATAM |
+| 🆕 🟢 **`ACTION LV`** | port `civil-ai`'s `agent_tool_receipts` + `assessment_policy_versions` into a minimal runnable reference under `compose/code/`, with the state machine and the `ON DELETE RESTRICT` FK | **limb `1`:** it ports cleanly from a registry-installed SQLite and the state transitions test green → Pattern `24` stops being a reading recommendation and becomes an artefact a studio can lift. **limb `2`:** it cannot be built or tested here *(`T303`)* → record it in the standing register and ship the schema alone |
+| 🆕 🔴 **`ACTION LW`** | settle whether the EU Commission's Article `50` GUIDELINES are adopted *(one channel says `20` July `2026`)* or still DRAFT *(others)* | **limb `1`:** independent non-vendor channels converge → state it in [`intel/market.md`](intel/market.md). **limb `2`:** the dissent persists → 🔴 keep *"guidance not final"* in every client-facing Article `50` recipe, including Pattern `2` |
+
+🔵 **Note for p183 on method, learned the hard way this pass: a control must be able to FAIL for
+the reason you are testing. A GitHub-hosted control cannot test a non-GitHub hypothesis.**
+
+
 ## Pass 181 — 2026-10-13
 
 🟢 **Seven pre-registered actions discharged, five with a limb FIRED, one carried action finally

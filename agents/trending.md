@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week: `4` rows entered this KB's census, `1` existing row was verified a
+layer deeper, and `1` widely-listed row was DISQUALIFIED on its licence payload.**
+
+| row | ★ *(unavailable, `gap 140`)* | what is NEW this week in this KB's record |
+|---|---|---|
+| 🆕 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 n/a | 🟢 **First read, and the first `BSD-3-Clause` row this shelf has carried.** `4 702` files, own identity layer, locales `ar-MA` + `fr-FR` + `en-US`. 🔴 **`0` course, lesson, enrollment or assessment entities in `data/models/`** |
+| 🆕 🟡 [`fborrasumh/tutoria`](https://github.com/fborrasumh/tutoria) | 🔴 n/a | 🟡 **First read. `MIT`, and the first row here with a published DOI** *(`10.5281/zenodo.23066871`)* **and a design traced to a randomised trial** *(Kestin et al., *Scientific Reports*, 2025)*. 🔴 `4` tracked files — one `index.html`, no server, no account |
+| 🆕 🔴 [`henriquemathias/plataforma-agentes-ia`](https://github.com/henriquemathias/plataforma-agentes-ia) | 🔴 n/a | 🔴 **First read, and REJECTED from the shelf. Described as an educational agent platform; the tree is a CRM** *(`CRM_v4.tsx`, `CustomerManagement.tsx`, `LeadCustomFieldsConfig.tsx`)* |
+| 🆕 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔴 n/a | 🔴 **First read, and it corrects a `2026` roundup: listed as `MIT`, its `license.txt` is `AGPL-3.0`** *(`33 893` B)*. Network copyleft, so integrate-only |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🔴 n/a | 🟢 **Re-read one layer deeper and the claim HELD.** Multi-tenancy is enforced fail-closed, not merely modelled — `36` scope-taking `Store` methods, `350` `tenant_id` predicates, anti-replay session binding |
+| 🟢 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🔴 n/a | 🟢 **Audit tables confirmed WRITTEN**, with a status state machine and version-checked concurrency — not schema theatre |
+
+### 🟢 The week's confirmation, which is rarer here than a retraction
+
+🔵 **This KB's recent weeks have been corrections: `mentingo`'s `xAPI` (p181), `T286` (p180),
+`T285` (p177).** 🆕 🟢 **This week a capability claim survived a deeper read.**
+[`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) was credited with multi-tenancy from
+its schema; read at the query layer it has a typed `TenantScope` that persistence methods demand,
+a fail-closed `Validate()`, a single admission gate in `WithPrincipal`, and a
+`sha256(tenantID‖membershipID‖userID)` session binding whose stated purpose is to stop a session
+opened in tenant A being replayed in tenant B.
+
+🟢 **For a studio that means the multi-tenant route is real and free. 🟡 Read the migration state
+first: the code says `LearnerID` is *"retained during the expand/backfill migration"*.**
+
+### 🔴 The week's trap: `enrollment`
+
+🆕 🔴 **`T308`.** A word-bounded education-vocabulary probe scored
+`plataforma-agentes-ia` at `157` hits across `8` backend files — a strong edtech signal by every
+counting method this KB uses. 🟢 **Read, every one resolves to
+`AgentDynamicFollowupEnrollment`: enrolling a CONTACT into a marketing follow-up sequence.**
+🔵 **`session` fooled a probe at p180; `enrollment` is worse, because marketing automation and
+education share the entire word and the surrounding grammar.**
+
+### 🔴 What this file did NOT find, said plainly
+
+- 🔴 **`0` trending data of any kind, for the third consecutive pass.** `api.github.com`,
+  `github.com` and `codeload.github.com` all answer `403` here (`gap 140`). There is no star
+  count, no star delta and no trending feed on any channel this KB can reach. 🔵 **Everything
+  above is *"newly measured by this KB this week"*, which is an honest and different thing.**
+- 🔴 **`0` LATAM-origin and `0` LATAM-localised rows — now on a LANGUAGE-NATIVE channel.**
+  `ACTION LP` searched in Spanish and Portuguese and cloned every plausible hit. The Spanish-language
+  row found is Spanish *(Universidad Miguel Hernández)*; the Portuguese-language row is a CRM.
+  🟢 **`gap 141` is absent by measurement now, not by silence.**
+- 🔴 **`0` North-American rows, again.**
+- 🔴 **`0` fetchable primary sources.** See `T309` in [`agents/top.md`](top.md): the fetch channel
+  resolves GitHub-family hosts only.
+
+
 ## Pass 181 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

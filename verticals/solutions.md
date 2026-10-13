@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 182 — 2026-10-13
+
+🆕 🟢 **Two changes to the routing table, and they point in opposite directions.**
+🟢 **[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) loses the
+precondition this KB was about to attach to it** — `ACTION LQ` establishes that its `Keycloak` is
+an OPTION, not a dependency, so the institutional route does not require the client to operate an
+identity provider. 🔴 **[`frappe/lms`](https://github.com/frappe/lms) is DISQUALIFIED from the
+permissive column on its licence payload.**
+
+🆕 🟢 **And the multi-tenant route is now verified at the layer that matters.**
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)'s tenancy was credited
+from its schema at p181; `ACTION LN` read it at the query layer and it holds *(see
+[`agents/top.md`](../agents/top.md))*.
+
+### 🟢 `ACTION LQ` — `feedbacksystem` needs no IdP, and that is a procurement saving
+
+| measured | value | what it means for an engagement |
+|---|---|---|
+| 🟢 **SAML default** | `app.saml.enabled: ${APP_SAML_ENABLED:false}` | 🟢 **Federation is OFF out of the box.** The system boots and authenticates without any external IdP |
+| 🟡 **the `keycloak` string** | `registration-id: ${APP_SAML_REGISTRATION_ID:keycloak}` | 🟡 **This is why it looked required.** It is the default NAME of a SAML registration, not a dependency |
+| 🟢 **local fallback** | `SecurityConfig.kt:184` — `formLogin { loginPage("/login").permitAll() }`, unconditional; `saml2Login` is the conditional branch at `:195` | 🟢 A local login path always exists |
+| 🟢 **it is itself an IdP** | own OIDC provider: client `fbs-web-shell`, signing key alias `identity-signing`, access-token and authorization-code TTLs, `post-logout-redirect-uri` set | 🟢 **It ISSUES tokens. A studio can put other services behind it** |
+| 🔵 **where `Keycloak` actually appears** | `docs/saml-local-keycloak.md`, `application-saml-local.yaml` *(a local profile)*, `docker-compose.demo.yml` | 🔵 Dev and demo scaffolding — the normal way to test SAML locally |
+
+🟢 **Pattern `20` and Pattern `22` do NOT need *"the client operates a Keycloak"* as a
+precondition.** 🔵 **Federation is a configuration the client can turn on when their IT asks for
+it, which is a much easier conversation than a procurement.**
+
+### 🟢 The platform table, re-graded
+
+🔵 **Grades: ROUTE** *(owns its data + its own auth + speaks a standard, or is multi-tenant — build
+the engagement on it)*, **APPLIANCE** *(owns its data, deploys cleanly, no usable identity — one
+learner or one cohort per deployment)*, **COMPONENT** *(neither — compose it into something else)*,
+**integrate-only** *(copyleft reach makes a fork or hosted derivative a legal conversation)*.
+
+| platform | layer | licence *(payload-verified)* | grade | standards, MEASURED | what it means for an engagement |
+|---|---|---|---|---|---|
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | full LMS | 🟢 **`Apache-2.0`**, `10 982` B | 🟢 **ROUTE** | 🟢 `LTI 1.3` `252` files, `QTI` `1 201`, `SCORM` `355`, `OpenBadges` `263` | 🟢 **START HERE for a permissive full-LMS engagement.** `440` `@Entity`, own `Shibboleth`/`LDAP` auth. 🔴 Budget `385` tables and `186` Maven dependencies of discovery |
+| 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | multi-tenant tutoring + assessment | 🟢 `MIT`, `1 073` B | 🟢 **ROUTE — the MULTI-TENANT one, now ENFORCEMENT-verified** | 🟡 `MCP` server; 🔴 no `LTI`, `SCORM` or `QTI` | 🟢 **START HERE when the client sells to MANY institutions.** 🆕 Tenancy is fail-closed at a typed boundary, not a column: `36` scope-taking store methods, `350` `tenant_id` predicates, anti-replay session binding, `6` tests asserting refusal. 🟡 Read the in-flight `LearnerID` backfill before quoting |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | LMS *(TypeScript)* | 🟢 `MIT`, `1 062` B | 🟢 **ROUTE** | 🟢 **`SCORM 1.2` BOTH WAYS**; 🔴 `xAPI` `0`, `LTI` `0` | 🟢 **START HERE for a JS/TS studio.** `123` `pgTable`, `tenant` in `305` files. 🔴 **It cannot receive an `LTI` launch — it replaces a university's LMS rather than plugging into one** |
+| 🟢 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | automated grading | 🟢 `Apache-2.0`, `10 785` B | 🟢 **ROUTE** *(institutional)* | 🟡 own checker protocol; 🔴 no `LTI`/`SCORM` | 🆕 🟢 **No IdP precondition** *(`ACTION LQ`)*: `SAML` defaults off, local `formLogin` always present, and the `fbs-identity-service` module is **itself an OIDC provider**. Kotlin/Spring + Angular, from a German university |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning **+ assessment** | 🟢 `MIT`, `1 091` B | 🟢 **ROUTE** | 🟢 `LTI 1.3` with grade passback, nightly Moodle interop test | 🟢 The assessment specialist: `257` entities, `528` write endpoints. 🔵 **Pair with `OpenOLAT` rather than choosing** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | AI tutor platform | 🟢 `MIT`, `1 068` B | 🟢 ROUTE | 🔴 none | 🟢 The smallest route a studio can hold in its head: `34` tables, `141` endpoints, `10+` LLM providers |
+| 🆕 🟡 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | AI tutoring layer | 🟢 **`BSD-3-Clause`**, `1 531` B | 🟡 **APPLIANCE+** | 🔴 none | 🟡 **`4 702` files with OWN identity** *(`user.py`, `users/repository.py`, `routers/auth.py`, `tests/test_auth.py`)*. 🔴 **But `data/models/` has `0` course, lesson, enrollment or assessment entities** — it models chats and knowledge. 🟢 **Its `ar-MA` + `fr-FR` locales make it the Maghreb-facing option** |
+| 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | assessment + content pipeline | 🟢 `MIT`, `1 067` B | 🟡 **APPLIANCE+** | 🔴 none | 🆕 🟢 **The audit shape is REAL, not named**: `agent_tool_receipts` and `assessment_policy_versions` both have write sites, a status state machine, version-checked concurrency and an `ON DELETE RESTRICT` policy FK. 🟢 **Borrow the schema even if you do not deploy the app** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | AI tutor | 🟢 `Apache-2.0`, `11 408` B | 🟡 **APPLIANCE** | 🔴 none | 🟡 `69` tables of real learning state. 🔴 **No `users` table: identity is a JSON file plus an optional PocketBase proxy** |
+| 🆕 🔴 [`frappe/lms`](https://github.com/frappe/lms) | full LMS *(Frappe/Python)* | 🔴 **`AGPL-3.0`**, **`33 893` B** | 🔴 **integrate-only** | 🟡 not measured | 🔴 **A `2026` roundup lists this as the `MIT` LMS. Its own `license.txt` is the GNU Affero GPL v3.** 🔵 A hosted AI layer that links into it inherits the network-copyleft obligation — the same conversation as Open edX, not the easy one the roundup implies |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | full LMS | `GPL-3.0`, `35 147` B | 🟡 integrate-only | 🟢 full `LTI`/`SCORM`/`QTI` | 🟡 The default institutional incumbent. Plugin-shaped AI work is normal; a closed fork is not |
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0`, `11 120` B | 🟡 integrate-only | 🟢 `LTI`, `QTI` | 🟡 Permissive in practice, 🔴 **but the patent grant is scoped to educational use — read it before a commercial resale** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0`, `35 136` B | 🔴 integrate-only | 🟢 full | 🔴 Network copyleft: a hosted AI layer that links into it inherits the obligation |
+
+### 🔴 The SIS layer — a gap a studio should price, not shop for
+
+🆕 🔴 **This pass looked for a permissive student-information system and found none.** The only
+SIS platforms surfaced are **`RosarioSIS`** and **`Gibbon`**, both `GPL`, both PHP, both K-12.
+🔵 **There appears to be no MIT/Apache/BSD SIS. For an engagement that means the student record
+system is either an integration against the client's incumbent, a copyleft deployment, or
+bespoke — and that should be a line item from the first estimate, not a discovery.**
+
+### 🔵 A standing note on licence columns
+
+🆕 🔴 **`frappe/lms` is the second time in three passes that a published capability or licence
+claim has not survived a read** *(`mentingo`'s `xAPI` was the first)*. 🟢 **Every licence in the
+table above is a file read from a clone and sized in bytes. 🔵 When this KB cannot verify one, it
+says so rather than copying a column.**
+
+
 ## Pass 181 — 2026-10-13
 
 🆕 🟢 **The routing table gains TWO permissive routes and loses a feature it had been crediting to a
