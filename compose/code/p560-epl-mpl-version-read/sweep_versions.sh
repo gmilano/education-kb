@@ -59,7 +59,13 @@ printf 'payload\tbytes\ttitle_version_in_payload\tfamily_of\tverdict\n'
 collapsed=0
 for p in "${payloads[@]}"; do
   body=$(cat "$p")
-  sz=$(printf '%s' "$body" | wc -c | tr -d ' ')
+  # `ACTION KY` (p179): this was `printf '%s' "$body" | wc -c`, which is `P834` — the capture on
+  # the line above has already dropped the entire trailing newline run.  This site is the ONLY
+  # one of the `12` the gate found where the payload is also on DISK, so it is the only one the
+  # mechanical swap to `lib/payload_measure.sh:size_of_file` can repair.  Inlined rather than
+  # sourced on purpose: `$LIB` is the library UNDER TEST here, and sourcing `payload_measure.sh`
+  # would re-source `license_family.sh` behind it and measure the wrong classifier.
+  sz=$(wc -c < "$p" | tr -d ' ')
   norm=$(printf '%s' "$body" | tr -s '[:space:]' ' ' | head -c 4000)
 
   # What the PAYLOAD states, read independently of the classifier under test.

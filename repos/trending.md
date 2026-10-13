@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p179 — `COPYING.txt`, a `19`-byte grant, and the harness that runs JS but not Python
+
+🆕 🔴 **The week's most useful repository fact is not about a repository, it is about this KB's
+ability to read one: npm is reachable from this environment and PyPI is not.** Measured in the
+same pass, minutes apart:
+
+| channel | probe | result |
+|---|---|---|
+| npm | `npm view @dodona/dolos version` → `2.9.3`, then `npm install` of `60` packages | 🟢 **`200`, installed, and RUN** |
+| PyPI | `uv sync --group dev` on `Li-Evan/Bloom`'s backend | 🔴 **`client error (Connect)` / `tunnel error: unsuccessful`** |
+| `raw.githubusercontent.com` | `LICENSE` payloads, `10` repositories | 🟢 **`200`** |
+| `github.com` | repository pages | 🔴 **`403`** |
+| `api.github.com` | repository metadata | 🔴 **`403`** |
+
+🔵 **So a JavaScript subject can be executed and measured here, and a Python one can only be
+read.** 🟢 **That is why `ACTION KW` (a Node CLI) is discharged this pass and `Bloom`'s test suite
+is not: the asymmetry is in the harness, not in the subjects (`gap 139`).** 🔴 **And it means every
+`★` figure in this file is secondary, because the only two hosts that serve counts answer `403`
+(`gap 140`).**
+
+### 🟢 Two `HEAD`s pinned
+
+- 🟢 **[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate)** — `HEAD 23387dbc4118`,
+  `348` files, `MIT` `1 064` B / `md5 5ebdff60…`. Cloned and read. Ships as
+  `@yunmiao/studymate@2.0.1`.
+- 🟢 **[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom)** — `HEAD b3918981bb34`, `118` files,
+  `MIT` `1 069` B / `md5 d3ac8ed0…`. Cloned, read, and used as this pass's `dolos` corpus.
+- 🔵 **Both `md5`s were obtained on TWO independent channels — a `git clone` working tree and a
+  `raw` fetch — and agree byte for byte.** 🟢 **That is the first time this KB has cross-channel
+  confirmation on a new row's grant in the same pass it admitted it.**
+
+### 🔴 Two filename findings a trending file should carry, because they change verdicts
+
+- 🔴 **`moodle/moodle` has no `LICENSE`. Its grant is `COPYING.txt`, `35 147` B, `GPL-3.0`.**
+  This KB's `p117` probe list does not carry `COPYING.txt` and published `NO-LICENCE-FILE` for the
+  largest LMS in the world before the name was re-probed by hand. 🔵 **`p250`'s list DOES carry it:
+  the lists disagree, which is `gap 135` producing a wrong answer rather than a debt.**
+- 🔴 **`frappe/education`'s `license.txt` is `19` bytes: `License: GNU GPL V3`, no trailing
+  newline, no grant text, no holder.** `md5 2884e131cfab2111873ff0eb5ba55997`. 🔵 **A licence
+  assertion in the slot where a licence belongs.**
+
+### 🟢 `@dodona/dolos@2.9.3` — the first third-party tool this KB has EXECUTED rather than read
+
+Node `v22.22.0`, tree-sitter `^0.25.0`, `60` packages, `105` pairs per run, two runs.
+🟢 **Identifier renaming scores `1.0000` against it; honest sibling code tops out at `0.6720`.**
+🔴 **Template exclusion moved the ranking by a median of `0.00064` — limb `2` of `ACTION KW` —
+on a corpus whose template is `10` lines, which is the condition the result is bounded by.**
+Full numbers: [`compose/code/p179-dolos-real-corpus/`](../compose/code/p179-dolos-real-corpus/).
+
+### 🔴 Not advanced this window
+
+- 🔴 **`3` rows above `170`★ from p178's `ai-tutor` head are still unread**
+  (`universal-examprep-skill` `304`★, `kaogong-skill` `173`★, and the fifth unnamed row) —
+  `ACTION LD`.
+- 🔴 **No new tag census was run.** p178's `298` against `135` stands unre-measured, so the supply
+  figure in this file is one pass old by construction.
+- 🔴 **`10` of the `12` byte-count sites remain on the broken channel** — `4` class `B`, `6` class
+  `C` (`ACTION LA`).
+
+
 ## 2026-10-13 — p178 — `Artemis` verified; `Pyris` admitted at `12`★; the second tag found
 
 🆕 🟢 **The week's biggest movement in this file is not a new repository, it is a repository that

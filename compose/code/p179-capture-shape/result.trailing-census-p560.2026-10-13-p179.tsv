@@ -1,0 +1,10 @@
+payload	full	stripping	trailing_run
+dual-mpl-2.0-or-epl-1.0-h2database.LICENSE	27753	27753	0
+epl-1.0-junit4.LICENSE	11376	11374	2
+epl-2.0-huly.LICENSE	14196	14196	0
+epl-2.0-jersey.LICENSE	35081	35081	0
+epl-2.0-paho-with-edl-1.0.LICENSE	519	519	0
+mit-krayin-webkul.LICENSE	1077	1077	0
+mpl-1.1-spdx-canonical.LICENSE	23669	23668	1
+mpl-2.0-rhino-partial-grant.LICENSE	16779	16779	0
+# p179: 8 payloads, 2 with a trailing run, 1 with a run LONGER THAN 1

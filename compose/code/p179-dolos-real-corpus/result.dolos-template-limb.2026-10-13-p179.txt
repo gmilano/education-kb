@@ -1,0 +1,49 @@
+pairs: A=105 B=105
+
+== TOP 8, run A (no template exclusion) ==
+  1. 1.0000  POSITIVE  p_rename.py <-> recommendations.py
+  2. 0.9898  POSITIVE  p_rename.py <-> p_rename_reorder.py
+  3. 0.9898  POSITIVE  p_rename_reorder.py <-> recommendations.py
+  4. 0.6720  negative  test_courses.py <-> test_full_flow.py
+  5. 0.6642  negative  test_full_flow.py <-> test_lessons.py
+  6. 0.6459  negative  test_courses.py <-> test_lessons.py
+  7. 0.5500  negative  test_calendar.py <-> test_courses.py
+  8. 0.5020  negative  test_courses.py <-> test_recommendations.py
+
+== TOP 8, run B (-i template.py) ==
+  1. 0.9889  POSITIVE  p_rename.py <-> recommendations.py
+  2. 0.9786  POSITIVE  p_rename.py <-> p_rename_reorder.py
+  3. 0.9786  POSITIVE  p_rename_reorder.py <-> recommendations.py
+  4. 0.6720  negative  test_courses.py <-> test_full_flow.py
+  5. 0.6642  negative  test_full_flow.py <-> test_lessons.py
+  6. 0.6459  negative  test_courses.py <-> test_lessons.py
+  7. 0.5520  negative  test_calendar.py <-> test_courses.py
+  8. 0.5020  negative  test_courses.py <-> test_recommendations.py
+
+== the known positives, in both runs ==
+  p_rename.py <-> p_rename_reorder.py
+      A: rank   2  sim 0.9898        B: rank   2  sim 0.9786
+  p_rename.py <-> recommendations.py
+      A: rank   1  sim 1.0000        B: rank   1  sim 0.9889
+  p_rename_reorder.py <-> recommendations.py
+      A: rank   3  sim 0.9898        B: rank   3  sim 0.9786
+
+== the four pre-registered criteria ==
+  M1 top-5 membership changes .................. False   A=
+       A top5: [('p_rename.py', 'p_rename_reorder.py'), ('p_rename.py', 'recommendations.py'), ('p_rename_reorder.py', 'recommendations.py'), ('test_courses.py', 'test_full_flow.py'), ('test_full_flow.py', 'test_lessons.py')]
+       B top5: [('p_rename.py', 'p_rename_reorder.py'), ('p_rename.py', 'recommendations.py'), ('p_rename_reorder.py', 'recommendations.py'), ('test_courses.py', 'test_full_flow.py'), ('test_full_flow.py', 'test_lessons.py')]
+  M2 a known positive moves >= 2 ranks ......... False   moves={('p_rename.py', 'recommendations.py'): 0, ('p_rename.py', 'p_rename_reorder.py'): 0, ('p_rename_reorder.py', 'recommendations.py'): 0}
+  M3 median |delta sim| >= 0.02 ................ False   median=0.00064  max=0.04515
+  M4 positive/negative separation changes sign .. False   A=1 B=1
+
+VERDICT: LIMB 2 — template exclusion does NOT change the ranking on this corpus; the `-i`
+         step is cargo cult HERE, and Pattern 1 must say on what corpus it would matter
+
+== detection, which is the question a client actually asks ==
+  p_rename.py <-> p_rename_reorder.py: A sim 0.9898 (rank 2), B sim 0.9786 (rank 2)
+  p_rename.py <-> recommendations.py: A sim 1.0000 (rank 1), B sim 0.9889 (rank 1)
+  p_rename_reorder.py <-> recommendations.py: A sim 0.9898 (rank 3), B sim 0.9786 (rank 3)
+  highest-scoring KNOWN NEGATIVES in run A (the false-positive surface):
+    0.6720  test_courses.py <-> test_full_flow.py  (overlap 1307, longest fragment 56)
+    0.6642  test_full_flow.py <-> test_lessons.py  (overlap 1183, longest fragment 28)
+    0.6459  test_courses.py <-> test_lessons.py  (overlap 1089, longest fragment 28)

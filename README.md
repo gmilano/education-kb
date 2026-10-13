@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🟢 **Four pre-registered actions discharged, three of them with a limb FIRED, and the one carried
+twice without being attempted — `ACTION KW` — is finally EXECUTED rather than planned.**
+
+🆕 🔴 **The pass's sharpest finding is about a repair this KB prescribed for itself and could not
+have performed: `ACTION KY` was pre-registered as *"fix all `12` stripping call sites"*, limb `1`
+being *"a mechanical swap works at every site → one commit closes it."* `1` of `12` sites can take
+that swap.** `size_of_file` takes a PATH, and at `11` sites the payload is a shell variable whose
+trailing bytes died at the CAPTURE, one line above the line p178's gate flags. 🔵 **`T283`: a gate
+must flag the line where the INFORMATION is lost, not the line where the loss becomes visible.**
+
+🆕 🔴 **And `6` of those `11` cannot be repaired by arithmetic at all. The class-`C` channel is
+AMBIGUOUS, not lossy** — proved offline: payloads of `38`, `39` and `41` B all recover to the same
+`38` bytes with the same `md5 597f938a7b321f71d6e6b15d9ff99190`. 🔵 **There is no trailing run left
+to add back, so p178's remedy — add the run back — is not implementable on half the sites. They can
+only be RE-FETCHED.**
+
+🆕 🟢 **The pass's most client-useful finding: academic integrity now has a NUMBER.** `dolos`
+`2.9.3` was installed and run over `15` real `MIT` education files with a ground truth this KB
+built. 🟢 **Identifier renaming — the transform students actually perform — scores `1.0000`
+against it, which is to say it does not work.** 🔴 **Honest sibling code sharing a framework scores
+up to `0.6720`.** 🔵 **The gap is `0.3066` and empty, so the threshold belongs near `0.85`; the
+`0.7` every client reaches for sits `0.028` above the honest-work band.**
+
+🆕 🟡 **And the pass's most useful finding about the SUPPLY: the two largest new permissive rows
+are well-built, `MIT`, and have no user.** [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) has
+`7` tables, `16` write endpoints and a `docker-compose` — with `auth` `0`, `login` `0`, `jwt` `0`,
+`oauth` `0`, `users` `0`, `tenant` `0` and no `User` entity.
+[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) has `0` databases and `0`
+servers and is a `199`-file adapter layer for FOUR vendor agent runtimes. 🔵 **`T286`: the
+permissive education supply is not short of intelligence, it is short of IDENTITY — and identity
+is what a studio supplies.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION KX`** — read `Miaotofu01/Study-Mate` and `Li-Evan/Bloom` past their licences | 🟢 **DISCHARGED, and it SPLITS rather than firing one limb. `Study-Mate` is limb `2` but not the predicted class — a MULTI-HOST ADAPTER, `0` persistence, `0` auth, `0` server, adapters for `4` vendor runtimes. `Bloom` is limb `1` on persistence and deployability (`7` tables, `16` write endpoints, `docker-compose`) and 🔴 **limb `2` on identity: no user, no auth, no tenant**. A new grade — APPLIANCE — enters the shelf between ROUTE and COMPONENT** |
+| 🔴 **`ACTION KY`** — fix all `12` stripping sites and see `check_channel.sh` exit `0` | 🔴 **DISCHARGED, LIMB `1` FALSIFIED. `1` of `12` takes the mechanical swap; `5` need a fetch-shape change; `6` are AMBIGUOUS and can only be re-fetched. `2` sites REPAIRED and verified, the gate drops `12` → `10`, a SECOND gate ships that flags the capture (`24` sites, `14` instruments), and the missing vocabulary — `lib/fetch_payload_to_file.sh` — is written. `14`/`14` on its own suite** |
+| 🟢 **`ACTION KW`** *(carried twice, never attempted)* — run a real corpus through `dolos` | 🟢 **DISCHARGED, LIMB `2` FIRED. Template exclusion changed nothing material on `4` of `4` pre-registered criteria (median `|Δ|` `0.00064`). 🟢 But the detection numbers it produced are the pass's best deliverable: `1.0000` on rename, `0.9898` on rename+reorder, `0.6720` on honest sibling code** |
+| 🟢 **`ACTION KZ`-adjacent licence re-read** *(opened mid-pass)* | 🟢 **`10` platform licences re-read on the repaired channel. `sakaiproject/sakai` settled as `ECL-2.0`; `GibbonEdu/core` CORRECTED to `AGPL-3.0`; `OpenOLAT` confirmed `Apache-2.0` and is the ONLY permissive full LMS on the shelf; 🔴 `frappe/education`'s licence file is `19` bytes of assertion with no grant text** |
+| 🔴 **`ACTION KZ`** — propagate `c2paStatus` through `_artifact_provenance` | 🔴 **NOT ATTEMPTED. Carried to p180 unchanged** |
+| 🔴 **`ACTION KN`** *(carried, FOURTH pass)* — migrate the `76` grant-path probe lists | 🔴 **NOT ATTEMPTED — and it stopped being cosmetic. `p117`'s name list lacks `COPYING.txt`, so `moodle/moodle` was published `NO-LICENCE-FILE` until the name was tried by hand; `p250`'s list carries it. `gap 135` has now produced a FALSE ABSENCE on the world's largest LMS** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **A third grade in the routing table** ([`verticals/solutions.md`](verticals/solutions.md)):
+  ROUTE *(owns data + own auth + speaks a standard — `Artemis`)*, 🆕 **APPLIANCE** *(owns data,
+  deploys cleanly, no user — `Bloom`)*, COMPONENT *(neither — `Study-Mate`)*. 🔵 **`3` of `22`
+  routing rows remain code-verified; this pass widened the LICENCE evidence, not the code
+  evidence, and says so.**
+- 🆕 🟢 **The permissive-LMS answer changed:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+  is genuinely `Apache-2.0`, confirmed on the payload at `10 982` B
+  (`md5 6ba3198de8e95979d5895c0827d34bc0`). 🔵 **Every other full LMS on this shelf is `AGPL-3.0`,
+  `GPL`, `LGPL-3.0` or `ECL-2.0`, and two of the three biggest are AFFERO — which for a hosted AI
+  layer is the difference between an integration and a disclosure obligation.**
+- 🆕 🟢 **Two new patterns, both concrete** ([`compose/patterns.md`](compose/patterns.md)):
+  **Pattern `18`** takes an appliance to a cohort *(buy the OAuth broker —
+  [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) or
+  [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway), both `Apache-2.0`,
+  `11 353` B and `11 360` B — add a `User` and a tenant key across all `7` tables, gate the `16`
+  write endpoints, reach the cohort over `LTI 1.3` rather than forking an `AGPL` LMS)*, and
+  **Pattern `19`** buys the adapter shape rather than the adapter.
+- 🆕 🟢 **Pattern `1` amended at two steps with measurements rather than opinions:** step `4` gets
+  the `0.85` threshold and the `0.3066` gap; step `2`'s `-i` becomes CONDITIONAL on a scaffolded
+  assignment, because on an unscaffolded corpus it buys a median of `0.0006`.
+- 🆕 🟢 **A regulatory CALENDAR rather than a forecast** ([`intel/market.md`](intel/market.md)):
+  four education-AI obligations already in force in `2026` — Korea's `AI` Basic Act (Jan),
+  Vietnam's Law `134/2025/QH15` (`1` Mar), Ohio's district-policy mandate (`1` Jul), EU `AI` Act
+  enforcement (`2` Aug). 🔵 **The EU is no longer the pacesetter for education AI.**
+- 🆕 🟢 **`lib/fetch_payload_to_file.sh`** — the fetch idiom this repository has needed since
+  pass `74`, when `payload_measure.sh` shipped a sizing primitive that takes a path to a
+  repository full of instruments that never make one.
+
+### 🔴 What is NOT true of this pass, declared
+
+- 🔴 **`10` of the `12` byte-count sites are still on the broken channel** — `4` class `B`, `6`
+  class `C`. They are a fetch-shape migration across `10` instruments, pre-registered as
+  `ACTION LA` rather than half-done.
+- 🔴 **`capture_gate.sh` over-reports, and the amount is stated: `24` capture sites against the
+  `12` proven to reach a count.** Step `2` of its rule is FILE-granular. 🔵 **`T276`: a gate that
+  over-reports is still a gate, but it must say so.**
+- 🔴 **No `★` count was re-verified this pass.** `github.com` and `api.github.com` both answer
+  `403` through this environment's proxy; only `raw.githubusercontent.com` serves. Every star
+  figure in this KB is SECONDARY (`gap 140`).
+- 🔴 **`Bloom`'s test suite was READ, never SEEN GREEN: PyPI is unreachable** (`uv sync` →
+  `tunnel error: unsuccessful`), while npm installed `60` packages in the same pass. 🔵 **A
+  JavaScript subject is executable in this harness and a Python one is not (`gap 139`) — which is
+  precisely why `KW` could finally be discharged and `Bloom` could not be run.**
+- 🔴 **`Study-Mate` was read and NOT run.** Its architecture claim is from the tree and the
+  manifest.
+- 🔴 **`3` rows above `170`★ from p178's `ai-tutor` head remain unread** —
+  `universal-examprep-skill` (`304`★), `kaogong-skill` (`173`★), and the fifth unnamed row
+  (`ACTION LD`). **No new tag census was run**, so the supply figure is one pass old.
+- 🔴 **`formalms/formalms` and `apereo/opencast` are UNRESOLVED, not absent:** `404` on one
+  filename is an unprobed name.
+- 🔴 **Regional SUPPLY evidence this pass is ZERO.** Four regional searches produced policy,
+  adoption and market material and named `0` region-originated open-source education
+  repositories. 🔵 **Prose search does not see this supply; only the tag census does.** MEA
+  remains a measured absence (`gap 124`).
+- 🔴 **Market size is a range spanning a factor of two for the same year** (`$6`–`$12.3` B for
+  `2026`), all vendor-sourced. No point estimate should be quoted to a client.
+
+### 🟢 Pre-registered for p180, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🔴 **`ACTION LA`** | migrate the `4` class-`B` and `6` class-`C` sites onto `lib/fetch_payload_to_file.sh`, and narrow `capture_gate.sh`'s `24` → `12` | **limb `1`:** the `6` class-`C` sites re-fetch cleanly and a published figure MOVES by more than `1` → the ambiguity was costing real bytes, not just rigour. **limb `2`:** every re-fetched figure lands where the `+1` correction already put it → the correction was lucky, and say so |
+| 🆕 🟡 **`ACTION LB`** | measure `dolos`'s `-i` effect as a function of TEMPLATE-TO-SUBMISSION ratio, on a scaffolded corpus | **limb `1`:** the effect rises with the ratio and crosses the `0.02` criterion → `T284` holds and Pattern `1`'s condition is correct as written. **limb `2`:** it stays flat at every ratio → `-i` is cargo cult unconditionally and Pattern `1` must DROP the step |
+| 🆕 🔴 **`ACTION LC`** | find ANY channel that installs Python dependencies here, and see `Bloom`'s suite run | **limb `1`:** a channel exists *(vendored wheels, a proxy route, a prebuilt image)* → the Python half of this shelf becomes executable and `gap 139` closes. **limb `2`:** none exists → declare the harness PERMANENTLY JavaScript-only for execution and stop pre-registering Python test runs |
+| 🆕 🟡 **`ACTION LD`** | read the `3` remaining `170`★+ `ai-tutor` rows past their licences | **limb `1`:** at least one has a user → the *"no identity"* thesis (`T286`) is a sampling artefact of `2` rows. **limb `2`:** none has a user → `T286` is confirmed on `5` and becomes this KB's standing claim about the permissive supply |
+| 🆕 🟡 **`ACTION LE`** | read `OpenOLAT/OpenOLAT` past its `Apache-2.0` licence | **limb `1`:** it owns its data and carries its own auth → the shelf gains its first PERMISSIVE platform route and the recommendation hardens. **limb `2`:** it is a thin layer over something else → the `Apache-2.0` finding is a licence fact and not a route |
+| 🆕 🔴 **`ACTION LF`** | resolve whether the November `2025` *"digital omnibus"* was ADOPTED | **limb `1`:** adopted → the EU education deadline becomes a dependency on harmonised standards, not `2` December `2027`, and Pattern `2`'s clock is wrong. **limb `2`:** still a proposal → Pattern `2` stands and the risk is recorded as pending |
+| 🔴 **`ACTION KN`** *(carried, fifth)* | migrate the `76` grant-path probe lists | **limb `1`:** a migration changes a published verdict → the lists were hiding disagreements, as `COPYING.txt` just proved. **limb `2`:** every verdict survives → the debt was cosmetic after all |
+| 🔴 **`ACTION KZ`** *(carried)* | propagate `c2paStatus` through `_artifact_provenance` | **limb `1`:** `53`/`53` holds → the Article `50(2)` patch is complete. **limb `2`:** it breaks → the repair is a schema change, not an edit |
+
+
 ## Pass 178 — 2026-10-13
 
 🟢 **Four pre-registered actions discharged, three with a limb fired, and the oldest live debt in

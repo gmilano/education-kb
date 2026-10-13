@@ -1,0 +1,26 @@
+CAPTURE-THEN-SIZE	compose/code/p250-commercial-use-axis/sweep_commercial.sh:13	out=$(curl -s --max-time 25 -w "\n%{http_code}" "https://raw.githubusercontent.com/${slug}/HEAD/
+CAPTURE-THEN-SIZE	compose/code/p176-grant-path-vocabulary/probe_spellings.sh:30	bytes=$(curl -s "https://raw.githubusercontent.com/$REPO/$BRANCH/$p" | wc -c | tr -d ' ')
+CAPTURE-THEN-SIZE	compose/code/p784-licence-scope-map/probe.sh:89	body=$(curl -sf --max-time 25 "https://raw.githubusercontent.com/$repo/$sha/$n" 2>/dev/null) || 
+CAPTURE-THEN-SIZE	compose/code/p324-corpus-upstream-cession/resolve_upstream.sh:24	out=$(curl -s --max-time 25 -w $'\n%{http_code}' "https://raw.githubusercontent.com/$slug/HEAD/$
+CAPTURE-THEN-SIZE	compose/code/p121-stale-token-crosspage/probe.sh:15	code=$(curl -sS -o "/tmp/p121.body" -w '%{http_code}' --max-time 25 "$u" 2>/dev/null || echo 000
+CAPTURE-THEN-SIZE	compose/code/p251-cohort-lineage/sweep_lineage.sh:43	pj=$(curl -s "$RAW/$slug/HEAD/package.json" 2>/dev/null)
+CAPTURE-THEN-SIZE	compose/code/p251-cohort-lineage/sweep_lineage.sh:49	rd=$(curl -s "$RAW/$slug/HEAD/README.md" 2>/dev/null)
+CAPTURE-THEN-SIZE	compose/code/p206-erp-layer-license/sweep_erp.sh:31	out=$(curl -s --max-time 25 -w $'\n%{http_code}' "https://raw.githubusercontent.com/${slug}/HEAD
+CAPTURE-THEN-SIZE	compose/code/p198-identity-sweep/holder_of.sh:16	tgz=$(curl -sf --max-time 30 "https://registry.npmjs.org/$enc" \
+CAPTURE-THEN-SIZE	compose/code/p198-identity-sweep/holder_of.sh:24	url=$(curl -sf --max-time 30 "https://pypi.org/pypi/$pkg/json" \
+CAPTURE-THEN-SIZE	compose/code/p342-license-claim-vs-file/actionC.sh:10	code=$(curl -sS -o /tmp/acq -w '%{http_code}' --max-time 25 "$url" 2>/dev/null || echo 000)
+CAPTURE-THEN-SIZE	compose/code/p342-license-claim-vs-file/sweep_p340.sh:13	code=$(curl -sS -o /tmp/p340.body -w '%{http_code}' --max-time 20 "$url" 2>/dev/null || echo 000
+CAPTURE-THEN-SIZE	compose/code/p170-headref-license-sweep/sweep_headref.sh:33	out=$(curl -s --max-time 25 -w $'\n%{http_code}' "https://raw.githubusercontent.com/${slug}/HEAD
+CAPTURE-THEN-SIZE	compose/code/p211-case-retro-sweep/sweep_retro.sh:43	out=$(curl -s --max-time 25 -w $'\n%{http_code}' "https://raw.githubusercontent.com/${1}/HEAD/$2
+CAPTURE-THEN-SIZE	compose/code/p759-four-layer-grant-probe/probe.sh:59	code=$(curl -s -o /tmp/p759.body -m 20 -w "%{http_code}" "$RAW/$slug/$ref/$n")
+CAPTURE-THEN-SIZE	compose/code/p759-four-layer-grant-probe/probe.sh:76	code=$(curl -s -o /tmp/p759.m -m 15 -w "%{http_code}" "$RAW/$slug/$ref/$m")
+CAPTURE-THEN-SIZE	compose/code/p759-four-layer-grant-probe/probe.sh:82	code=$(curl -s -o /tmp/p759.h -m 15 -w "%{http_code}" "$RAW/$slug/$ref/$h")
+CAPTURE-THEN-SIZE	compose/code/p759-four-layer-grant-probe/probe.sh:123	hdr=$(curl -s -m 15 "$RAW/onbirdev/moodle-webservice_mcp/198246e5d7121b7658e72e44549006753136ac7
+CAPTURE-THEN-SIZE	compose/code/p117-second-channel/title.sh:6	body=$(curl -sS --max-time 20 -f "https://raw.githubusercontent.com/$slug/$br/$p" 2>/dev/null) |
+CAPTURE-THEN-SIZE	compose/code/p117-second-channel/licence.sh:8	body=$(curl -sS --max-time 20 -f "https://raw.githubusercontent.com/$slug/$br/$p" 2>/dev/null) |
+CAPTURE-THEN-SIZE	compose/code/p326-titleholder-book-license/controls.sh:13	h=$(curl -sS --max-time 25 "$RAW/$t" 2>/dev/null | head -1 | tr -d '\r')
+CAPTURE-THEN-SIZE	compose/code/p326-titleholder-book-license/controls.sh:18	s=$(curl -sS --max-time 25 "$RAW/openstax/osbooks-calculus-bundle/$b/collections/calculus-volume
+CAPTURE-THEN-SIZE	compose/code/p326-titleholder-book-license/controls.sh:23	f=$(curl -sS --max-time 25 "$RAW/openstax/$r/main/LICENSE" 2>/dev/null)
+CAPTURE-THEN-SIZE	compose/code/p326-titleholder-book-license/sweep_titleholder.sh:14	cxml=$(curl -sS --max-time 30 -w '\n%{http_code}' "$RAW/$repo/main/collections/$coll.collection.
+CAPTURE-THEN-SIZE	compose/code/p326-titleholder-book-license/sweep_titleholder.sh:23	raw_lic=$(curl -sS --max-time 30 "$RAW/$repo/main/LICENSE" 2>/dev/null)
+capture-then-size sites: 25

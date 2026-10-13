@@ -1,0 +1,9 @@
+fixture	true_size	classC_recovered_size	classC_md5_of_recovery	full_channel_size
+run0	38	38	597f938a7b321f71d6e6b15d9ff99190	38
+run1	39	38	597f938a7b321f71d6e6b15d9ff99190	39
+run3	41	38	597f938a7b321f71d6e6b15d9ff99190	41
+
+p179 VERDICT: AMBIGUOUS — payloads of 3 different sizes recover to ONE identical byte
+              string. The trailing run is not recoverable from the capture, so no
+              arithmetic correction to a class-C figure can be right for all three.
+              A class-C figure can only be repaired by RE-FETCHING to a file.

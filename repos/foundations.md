@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🆕 🟢 **Eight platform licences re-read from the payload this pass, on a repaired channel, and the
+re-read settles one standing CONFLICT, corrects one published family, and finds one "licence" that
+is not a licence.**
+
+The channel matters, so it is stated first: these figures come from
+`compose/code/p117-second-channel/licence.sh` **after** `ACTION KY` rewrote it onto
+`lib/fetch_payload_to_file.sh`. 🟢 **The body now goes to a file and the HTTP code comes back on
+stdout, so the byte count is exact and an `md5` travels with every row.** 🔵 **The repaired
+instrument reproduces p178's FULL-channel figures exactly — `dolos` `1 084`, `Artemis` `1 091`,
+`mentingo` `1 062`, `Pyris` `1 089` — which is how this pass knows the repair is a repair and not
+a new defect.**
+
+| repo | branch | file | family *(from the payload)* | bytes | `md5` |
+|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `LICENSE` | 🟢 **`Apache-2.0`** | `10 982` | `6ba3198de8e95979d5895c0827d34bc0` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `LICENSE` | 🟡 **`ECL-2.0`** | `11 120` | `ca5955eea85a5d171ce51c891797aafa` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `HEAD` | 🔴 **`COPYING.txt`** | `GPL-3.0` | `35 147` | *(re-probed, see below)* |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | `AGPL-3.0` | `35 136` | `47e2062a6393f45a2bd32dca8f8b53d1` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | `AGPL-3.0` | `34 520` | `73f1eb20517c55bf9493b7dd6e480788` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `main` | `LICENSE` | 🔴 **`AGPL-3.0`** | `35 121` | `28480d6422e52c304753119903a184b2` |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `master` | `LICENSE` | `GPL` | `15 214` | `4fcab427efca2a10f4b242b15d3d1f34` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `HEAD` | `LICENSE` | `LGPL-3.0` | `8 241` | `f18b2e83f16ffef283395deccff2c341` |
+| [`frappe/education`](https://github.com/frappe/education) | `HEAD` | `license.txt` | 🔴 **see below** | **`19`** | `2884e131cfab2111873ff0eb5ba55997` |
+
+### 🟢 What the re-read settled
+
+- 🟢 **`sakaiproject/sakai` is `ECL-2.0`, and that closes a live disagreement.** Secondary sources
+  consulted this pass report Sakai as `Apache-2.0` in one place and `ECL-2.0` in another.
+  🔵 **The payload says *"Educational Community License"*, so the permissive-but-not-Apache reading
+  is the correct one — and the distinction is not academic, because `ECL-2.0` adds a patent clause
+  scoped to educational use that `Apache-2.0` does not have.**
+- 🟢 **`OpenOLAT/OpenOLAT` is genuinely `Apache-2.0`, confirmed on the payload at `10 982` B.**
+  🔵 **It is the ONLY permissively licensed full LMS in this table, which makes it the one row here
+  Globant can build a closed derivative on without a copyleft conversation.** Every other LMS in
+  the set is `AGPL-3.0`, `GPL`, `LGPL-3.0` or `ECL-2.0`.
+- 🔴 **`GibbonEdu/core` is `AGPL-3.0`, not `GPL`.** Secondary sources describe it as a *"GPL
+  all-in-one school management tool"*; the payload is the Affero text at `35 121` B.
+  🔵 **For a hosted deployment that difference is the whole engagement: `AGPL-3.0` reaches users
+  over a network and `GPL` does not.**
+
+### 🔴 `frappe/education`'s licence file is `19` bytes and contains no grant
+
+Read verbatim, with `od -c`, because a figure this small invites disbelief:
+
+```
+License: GNU GPL V3
+```
+
+🔴 **That is the entire file: `19` bytes, no trailing newline, no grant text, no copyright holder,
+no version URL, `md5 2884e131cfab2111873ff0eb5ba55997`.** 🔵 **It is a licence ASSERTION, not a
+licence — the same defect class as a `README` badge, and it sits in the repository slot where the
+grant is supposed to live.** 🟡 **It is almost certainly intended as `GPL-3.0` and a client
+should be told it is intended; what a client cannot be told is that the grant was READ, because
+there is no grant here to read.**
+
+### 🔴 And the pass found the defect in its own probe before it published the wrong answer
+
+🔴 **`moodle/moodle` came back `NO-LICENCE-FILE` on `4` branches × `6` filenames — and that verdict
+was WRONG.** Moodle's grant is at **`COPYING.txt`**, which answers `200` at `35 147` B with
+*"GNU GENERAL PUBLIC LICENSE"* on its first line. `p117`'s name list carries `COPYING` and not
+`COPYING.txt`. 🔵 **`p250-commercial-use-axis`'s list DOES carry `COPYING.txt`.** 🔴 **So this KB's
+probe lists disagree with each other about the canonical filename of the largest LMS in the
+world, which is `gap 135` — the `76` unmigrated grant-path lists — showing up as a concrete wrong
+answer rather than as a debt.** 🟢 **`ACTION KN` stops being cosmetic this pass: it has now
+produced a false absence on a flagship row.**
+
+🟡 **Two rows remain UNRESOLVED and are not recorded as absences:** `formalms/formalms` and
+`apereo/opencast` both `404` on `LICENSE` at `HEAD`. 🔵 **Per `ACTION JY`'s standard, a `404` on one
+filename is not a measured absence — it is an unprobed name (`gap 135` again).**
+
+### 🟢 New shared instrument: the fetch idiom this repository was missing
+
+🆕 🟢 **[`compose/code/lib/fetch_payload_to_file.sh`](../compose/code/lib/fetch_payload_to_file.sh)**
+— body to a file, `%{http_code}` to stdout, nothing round-tripping through a shell variable.
+`lib/payload_measure.sh` has shipped the correct SIZING primitive (`size_of_file`, a PATH) since
+pass `74`, and **`11` of the `12` stripping sites could not reach it because they never had a
+path.** 🔵 **The missing vocabulary was never the counter. It was the fetch (`ACTION KY`,
+[`compose/code/p179-capture-shape/`](../compose/code/p179-capture-shape/)).**
+
+
 ## Pass 178 — 2026-10-13
 
 🆕 🟢 **`ACTION KT` is DISCHARGED, LIMB `1` FIRED, and `gap 134` is CLOSED.**

@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🆕 🟢 **`ACTION KW` is DISCHARGED after being carried unattempted through two passes, and it
+AMENDS Pattern `1` at two steps — one of which Pattern `1` prescribed unconditionally and should
+not have.** 🟢 **`dolos` has now been EXECUTED by this KB rather than read: `@dodona/dolos@2.9.3`
+from npm, Node `v22.22.0`, two full runs over a `15`-file corpus of real `MIT` education code with
+a ground truth this KB built itself.**
+
+### 🟢 Pattern `1`, amendment `1` — step `4` finally has a NUMBER instead of a warning
+
+p178's step `4` said: *"treat the report threshold as a per-dataset guess, never as a policy"* —
+correct, and unusable, because a client has to pick one anyway.
+
+| what was measured | similarity |
+|---|---|
+| 🟢 **every identifier renamed** *(the transform students actually perform)* | 🟢 **`1.0000`** |
+| 🟢 renamed **and** top-level blocks reordered | 🟢 `0.9898` |
+| 🔴 **honest sibling code** sharing a framework, an ORM, a test style and an author | 🔴 **`0.6720`** |
+
+🟢 **So: identifier renaming does not work against `dolos` at all — it fingerprints the parse
+tree.** 🔴 **And the false-positive surface is real and high: structurally similar honest work
+reaches `0.6720`, with `1 307` tokens of overlap and a longest common fragment of `56`.**
+
+🟢 **The usable number is the GAP: `0.3066`, empty.** 🔵 **Put the threshold in the empty band,
+near `0.85`.** 🔴 **A `0.7` threshold — the round number every client reaches for — sits `0.028`
+above the honest-work band and will flag honest work on the next, slightly more similar, pair.**
+🟡 **This is a defensible sentence for an academic-integrity committee, and it is derived from a
+corpus rather than asserted.**
+
+### 🔴 Pattern `1`, amendment `2` — step `2`'s `-i` is CONDITIONAL, and it was prescribed as a rule
+
+p178's step `2` said: *"supply the template before the first run: `dolos run -M 0.5 -i template.js`"*.
+🔴 **Measured against four criteria fixed BEFORE the numbers were seen, template exclusion changed
+NOTHING on this corpus:**
+
+| criterion | result |
+|---|---|
+| top-`5` pair membership changes | 🔴 `False` — identical sets |
+| a known positive moves `≥ 2` ranks | 🔴 `False` — all three moved `0` |
+| median `|Δ similarity| ≥ 0.02` | 🔴 `False` — median **`0.00064`**, max `0.04515` |
+| positive/negative separation changes sign | 🔴 `False` |
+
+🔵 **`T284`, and this is the honest reading rather than the flattering one: `-i` can only matter
+when the handed-out template is a LARGE FRACTION of the submission.** Here the template was `10`
+shared `import` lines against modules of `2`–`63` KB, so the excluded fingerprints were
+negligible.
+
+🟢 **Pattern `1` keeps `-i`, and step `2` now carries the CONDITION:**
+
+> **Supply `-i template` when the assignment is SCAFFOLDED** — a handed-out skeleton the student
+> fills in, where the template is a double-digit percentage of the submitted file. 🔴 **For
+> free-form assignments over a shared framework, `-i` buys a median `0.0006` and the step should
+> not be sold as a control.** 🟢 **`-M <fraction>` (automatic common-code detection) is the
+> control that does the work on an unscaffolded corpus, and it was already step `3`.**
+
+### 🆕 🟢 Pattern `18` — taking an APPLIANCE to a cohort, which is the shape the new supply forces
+
+🔵 **Why this pattern exists:** the two largest new permissive rows this pass read are
+`MIT`, well-built, and have **no user**. 🔴 **`Bloom`: `7` tables, `16` write endpoints,
+`docker-compose` — and `auth` `0`, `login` `0`, `jwt` `0`, `oauth` `0`, `users` `0`, `tenant` `0`,
+no `User` entity.** 🟢 **One learner per deployment. The gap between that and a class of `30` is
+an engagement, and it is a well-shaped one.**
+
+**Components, every one licence-body read in this KB:**
+
+| component | licence | role |
+|---|---|---|
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) `HEAD b3918981bb34` | 🟢 `MIT`, `1 069` B, `md5 d3ac8ed0a50bd8de7d9c2ad5be4248ab` | the pedagogy and the data model you keep: `FastAPI` + `SQLAlchemy`, `7` entities, React `19` front end |
+| [`giantswarm/mcp-oauth`](https://github.com/giantswarm/mcp-oauth) **or** [`atrawog/mcp-oauth-gateway`](https://github.com/atrawog/mcp-oauth-gateway) | 🟢 both `Apache-2.0` | 🟢 **BUY the identity layer, do not build it** — p136's standing finding, and `Bloom` is the case it was waiting for |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT`, `1 091` B | the enrolment and `LTI 1.3` + AGS surface if the institution needs grade passback into its LMS |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) `@2.9.3` | 🟢 `MIT`, `1 084` B | integrity, at the `0.85` threshold measured above — only if the appliance ever collects code |
+
+| step | what you actually do | why, measured |
+|---|---|---|
+| `1` | **Read the manifest LAST.** Count import sites before scoping the auth work | 🔴 **`Bloom`'s `pyproject.toml` declares `python-jose[cryptography]`, `bcrypt`, `email-validator` and `python-multipart`. Import sites: `0`, `0`, `0`, `0`. A manifest-based estimate scopes this at zero and is wrong (`T285`)** |
+| `2` | **Add the `User` entity and a tenant key to all `7` tables** — `courses`, `syllabi`, `lessons`, `annotations`, `feedbacks`, `learning_events`, `learning_recommendations` | 🔴 **Every one of them is currently single-tenant by omission, so this is a migration on the whole schema, not a new table** |
+| `3` | **Put the bought OAuth broker in front of the `16` write endpoints** *(`12` `POST`, `1` `PUT`, `3` `DELETE`)* before anything else ships | 🔴 **Behind **P13**, mandatory: these endpoints write to the learner record with no identity today** |
+| `4` | **Keep `SQLite` only through the pilot.** `docker-compose.yml` pins `DATABASE_URL=sqlite:///./data/bloom.db` on a named volume | 🟡 **Fine for one learner, wrong for a cohort — and the swap is cheap now and expensive after the migration in step `2`** |
+| `5` | **Do NOT fork the LMS to reach the cohort.** Integrate over `LTI 1.3` — `Artemis` already ships it with AGS grade passback and a nightly Moodle interop test | 🔴 **The two biggest LMS options are `AGPL-3.0` (`openedx/edx-platform` `35 136` B, `instructure/canvas-lms` `34 520` B): a hosted fork inherits the disclosure obligation** |
+| `6` | 🔴 **Budget the test suite as UNKNOWN, not as present.** `backend/tests/` has unit and integration directories | 🔴 **This KB could NOT run them: PyPI is unreachable from this environment (`uv sync` → `tunnel error`), so the suite is READ and not SEEN GREEN (`gap 139`, `ACTION LC`)** |
+
+🟢 **Timeline shape:** the identity migration (steps `2`–`3`) is the critical path and it touches
+every table; the `LTI` limb (step `5`) is parallelisable and well-specified; the pedagogy — the
+part the client is actually buying — needs no work at all. 🔵 **That inversion is the pattern's
+whole point: with this new supply, the differentiating logic is free and the plumbing is the
+engagement.**
+
+### 🟡 Pattern `19` — when the client's agent host is not decided, buy the ADAPTER shape
+
+🔵 **[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate)** *(`MIT`, `1 064` B,
+`md5 5ebdff604182e1633fc88ea842500b97`, `HEAD 23387dbc4118`)* is not shelf-eligible as a product —
+`0` databases, `0` web frameworks, `0` auth libraries. 🟢 **It is worth reading anyway, as a
+reference architecture for a problem Globant clients have: `199` files of TypeScript and ESM that
+run ONE skill set inside FOUR vendor runtimes — DeepSeek Harness (`cordis.patch.yml`,
+`dsh-plugin.mjs`), Google Antigravity, OpenAI Codex and ChatGPT Work.**
+
+| step | what you actually do |
+|---|---|
+| `1` | **Separate the skill CONTENT from the host ADAPTER in the repository layout from day one** — `Study-Mate` keeps `preset/`, `templates/` and `schemas/` away from `bin/*-plugin.mjs`, and that is why four hosts cost it one tree |
+| `2` | **Write the adapter per host, never the skill per host.** A skill rewritten per runtime is the cost this pattern exists to avoid |
+| `3` | **Treat the host as a swappable dependency in the contract**, because the author of a `925`★ project is betting it is |
+| `4` | 🔴 **Do not promise state.** There is no persistence here at all; anything the client needs remembered across sessions is yours to build (see Pattern `18`) |
+
+🟡 **Status, declared: `Study-Mate` was read past its licence (`ACTION KX`) but NOT run.** 🔵 **The
+architecture claim above is from the file tree and the manifest; the behaviour is unverified.**
+
+### 🔴 Still unexecuted in this file
+
+- 🔴 **`ACTION KN` — the `76` grant-path probe lists — is carried a FOURTH pass**, and this pass
+  it finally cost something real: `p117`'s name list lacks `COPYING.txt`, so
+  [`moodle/moodle`](https://github.com/moodle/moodle) was published `NO-LICENCE-FILE` until the
+  name was tried by hand. `p250`'s list carries it. 🔵 **A cosmetic debt that produces a false
+  absence on the world's largest LMS is not cosmetic (`gap 135`).**
+- 🔴 **`ACTION KZ` — propagating `c2paStatus` through `_artifact_provenance` — NOT ATTEMPTED.**
+  Pattern `2`'s Article `50(2)` recipe therefore still rests on p178's `53`/`53`, with edit `4`
+  reading its own default rather than the store.
+
+
 ## Pass 178 — 2026-10-13
 
 🆕 🟢 **`gap 136` — the oldest live debt in this KB, carried for three passes — is CLOSED, and the

@@ -1,0 +1,14 @@
+site	var	capture_line	class	repair
+compose/code/p560-epl-mpl-version-read/sweep_versions.sh:68	body	body=$(cat "$p")	REPAIRED	already on the FULL channel
+compose/code/p250-commercial-use-axis/sweep_commercial.sh:17	content	content=$(printf '%s' "$out" | sed '$d')	C	curl -o FILE -w %{http_code}; boundary is AMBIGUOUS as written
+compose/code/p170-headref-license-sweep/sweep_headref.sh:37	content	content=$(printf '%s' "$out" | sed '$d')	C	curl -o FILE -w %{http_code}; boundary is AMBIGUOUS as written
+compose/code/p206-erp-layer-license/sweep_erp.sh:54	body	body=$(get "$f") || continue	C	helper appends %{http_code} then strips it — fetch-shape + boundary
+compose/code/p211-case-retro-sweep/sweep_retro.sh:67	body	body=$(get "$slug" "$f") || continue	C	helper appends %{http_code} then strips it — fetch-shape + boundary
+compose/code/p122-prose-licence-census/scan_licences.sh:24	body	body="${body%$'\n'HTTPCODE:*}"	C	curl -o FILE -w %{http_code}; boundary is AMBIGUOUS as written
+compose/code/p324-corpus-upstream-cession/resolve_upstream.sh:27	body	code=$(printf '%s' "$out" | tail -1); body=$(printf '%s' "$out" | sed '$d')	C	curl -o FILE -w %{http_code}; boundary is AMBIGUOUS as written
+compose/code/p784-licence-scope-map/probe.sh:91	body	body=$(curl -sf --max-time 25 "https://raw.githubusercontent.com/$repo/$sha/$n" 2>/dev/null) || continue	B	curl -o FILE, then size_of_file — FETCH-SHAPE change
+compose/code/p117-second-channel/licence.sh:50	body	body=$(cat "$dest")                 # the CLASSIFIER's copy — never the size's	REPAIRED	already on the FULL channel
+compose/code/p117-second-channel/title.sh:10	body	body=$(curl -sS --max-time 20 -f "https://raw.githubusercontent.com/$slug/$br/$p" 2>/dev/null) || continue	B	curl -o FILE, then size_of_file — FETCH-SHAPE change
+compose/code/p326-titleholder-book-license/sweep_titleholder.sh:24	raw_lic	raw_lic=$(curl -sS --max-time 30 "$RAW/$repo/main/LICENSE" 2>/dev/null)	B	curl -o FILE, then size_of_file — FETCH-SHAPE change
+compose/code/p326-titleholder-book-license/controls.sh:24	f	f=$(curl -sS --max-time 25 "$RAW/openstax/$r/main/LICENSE" 2>/dev/null)	B	curl -o FILE, then size_of_file — FETCH-SHAPE change
+# p179: A(mechanical)=0  B(fetch-shape)=4  C(fetch-shape+ambiguous)=6  missing=0

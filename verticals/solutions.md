@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🆕 🟢 **The platform table gets the column it has always needed and never had: the licence as READ
+from the payload, with bytes and an `md5`, on a channel this pass repaired.** Eight platforms
+re-read. 🔵 **Three verdicts in this table changed, and one of them changes which platform a
+Globant engagement should start from.**
+
+| platform | layer | licence *(payload-verified)* | bytes | what it means for an engagement |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 **`Apache-2.0`** | `10 982` | 🟢 **THE permissive LMS of this set, and the only one.** A closed derivative, a white-labelled deployment and a proprietary AI layer are all available without a copyleft conversation |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 **`ECL-2.0`** *(settles the `Apache-2.0` vs `ECL-2.0` conflict)* | `11 120` | 🟡 Permissive in practice, but the patent grant is scoped to educational use — read it before a commercial resale |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS | `GPL-3.0` *(at `COPYING.txt`)* | `35 147` | 🟡 The default institutional incumbent. Plugin-shaped AI work is normal here; a closed fork is not |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0` | `35 136` | 🔴 Network copyleft. A hosted AI layer that links into it inherits the obligation |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | `AGPL-3.0` | `34 520` | 🔴 Same reach. Integrate over `LTI`, do not fork |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning **+ assessment** | 🟢 `MIT`, `1 091` B | `1 091` | 🟢 **Still the strongest route in this table** *(p178)*: `257` entities, `528` write endpoints, its own auth, `LTI 1.3` with grade passback |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 **`AGPL-3.0`** *(not `GPL`, as secondary sources say)* | `35 121` | 🔴 Network copyleft on a SIS — the hosted-deployment question arrives immediately |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | 🟡 Classic copyleft; on-premise deployments are the comfortable case |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP + LMS + SIS *(Odoo)* | `LGPL-3.0` | `8 241` | 🟡 The one integrated LMS+SIS route. `LGPL` permits a separately licensed module alongside it, which is the natural AI shape |
+| [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte ASSERTION: `License: GNU GPL V3`** | **`19`** | 🔴 **The grant was NOT read because there is no grant in the file.** Intended as `GPL-3.0`; treat as unverified until upstream ships the text |
+
+### 🟢 The routing consequence, stated plainly
+
+🟢 **`3` of this table's rows are code-verified** — `Artemis`, `dolos` and now the appliance row
+below — and that denominator is unchanged from p178 because this pass verified LICENCES broadly
+rather than one platform deeply.
+
+🆕 🟢 **For a client who needs a permissive LMS base, the answer changed this pass: it is
+`OpenOLAT`, on `Apache-2.0`, confirmed at `10 982` B.** 🔵 **Every other full LMS in this set is
+copyleft, and two of the three biggest are AFFERO copyleft — which for a hosted AI layer is the
+difference between an integration and a disclosure obligation.** 🟡 **`OpenOLAT` has NOT been read
+past its licence, so it is a LICENCE verdict and not yet a route (`ACTION LE`).**
+
+### 🆕 🟡 A new shelf row, and a new grade below "route": the APPLIANCE
+
+🟡 **[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom)** — `MIT`, `1 069` B,
+`md5 d3ac8ed0a50bd8de7d9c2ad5be4248ab`, `HEAD b3918981bb34` — owns its data (`7` tables), writes
+to it (`16` write endpoints), and deploys in one command (`docker-compose`, `2` `Dockerfile`s,
+healthcheck, named volume). 🔴 **And it has no user: `auth` `0`, `login` `0`, `jwt` `0`,
+`oauth` `0`, `password` `0`, `users` `0`, `tenant` `0`, and no `User` entity.**
+
+🔵 **So this table now needs three grades, not two:**
+
+| grade | test | example |
+|---|---|---|
+| **ROUTE** | owns its data, has its own auth, speaks a standard | 🟢 `Artemis` *(`LTI 1.3` + AGS, `passkey`, `saml2`)* |
+| 🆕 **APPLIANCE** | owns its data, deploys cleanly, **but has no user and no tenant** | 🟡 `Bloom` — one learner per deployment |
+| **COMPONENT** | neither; it is a library or a plugin inside someone else's runtime | 🔴 `Study-Mate` *(adapters for `4` vendor runtimes, `0` databases)* |
+
+🔴 **An appliance cannot hold a cohort, and that is the whole cost line: taking `Bloom` to a
+class of `30` means building the user, the tenant and the enrolment model that `Artemis` already
+has.** 🔴 **Its `pyproject.toml` declares `python-jose`, `bcrypt`, `email-validator` and
+`python-multipart` with `0` import sites each — so a reader who scopes the auth work from the
+manifest will scope it at zero and be wrong (`T285`).**
+
+### 🔴 Declared, so the table is not read as more verified than it is
+
+- 🔴 **`formalms/formalms` and `apereo/opencast` are UNRESOLVED, not absent:** both `404` on
+  `LICENSE` at `HEAD`, and a `404` on one filename is an unprobed name, not a measured absence.
+- 🔴 **`moodle/moodle` was published `NO-LICENCE-FILE` by this KB's own probe** until
+  `COPYING.txt` was tried by hand. The probe lists disagree about that filename (`gap 135`).
+- 🔴 **No platform in this table was deployed this pass.** `Bloom` could not even have its test
+  suite run, because PyPI is unreachable from this environment (`gap 139`).
+
+
 ## Pass 178 — 2026-10-13
 
 🆕 🟢 **The platform row stops being a candidate, and it is the strongest route in this table.**

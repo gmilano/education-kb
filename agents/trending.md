@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p179 — two reads, two classes, and `dolos` finally measured on real code
+
+🆕 🟢 **The week's movement is not a new repository. It is the two biggest rows of p178's wider tag
+becoming known quantities, and splitting.**
+
+🟢 **[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate)** — `MIT`, `1 064` B,
+`md5 5ebdff604182e1633fc88ea842500b97`, `HEAD 23387dbc4118`, `348` tracked files. Published to npm
+as `@yunmiao/studymate@2.0.1`. 🔴 **It stores nothing and serves nothing: `0` database drivers,
+`0` web frameworks, `0` auth libraries, measured word-bounded across `.ts`/`.mjs`/`.js`/`.json`.**
+🔵 **It is a MULTI-HOST ADAPTER — `199` files of TypeScript and ESM whose entire job is to run one
+skill set inside four runtimes owned by other vendors: DeepSeek Harness, Google Antigravity,
+OpenAI Codex and ChatGPT Work.** 🟢 **That is a NEW class for this file, and it is the week's most
+interesting trend line: the permissive education supply is starting to ship PORTABILITY across
+agent hosts rather than agents.**
+
+🟢 **[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom)** — `MIT`, `1 069` B,
+`md5 d3ac8ed0a50bd8de7d9c2ad5be4248ab`, `HEAD b3918981bb34`. `FastAPI` + `SQLAlchemy` + `React 19`,
+`7` tables, `16` write endpoints, `docker-compose` with a healthcheck and a named volume,
+`4 009` lines of Python and `3 450` of JS/JSX, with a unit **and** an integration test directory.
+🟡 **It is the first row in this file that owns its data and deploys in one command — and it has
+no user.** `auth` `0`, `login` `0`, `jwt` `0`, `oauth` `0`, `password` `0`, `users` `0`,
+`tenant` `0`, and no `User` entity. 🔵 **One learner per deployment. The trend it marks is real
+and narrow: single-learner appliances are now shippable by one person, and they are not
+platforms.**
+
+🔴 **And the trap inside it:** `pyproject.toml` declares `python-jose[cryptography]`, `bcrypt`,
+`email-validator` and `python-multipart`; **import sites for all four: `0`.** 🔵 **The manifest
+describes an auth stack the code does not contain (`T285`).**
+
+### 🟢 `dolos` stops being a claim about detection and becomes a number
+
+`@dodona/dolos@2.9.3` installed from npm and run twice over a `15`-file corpus of real `MIT`
+education code with a ground truth this KB built (`ACTION KW`, carried unattempted since p177,
+discharged here):
+
+- 🟢 **identifier rename: `1.0000`.** The transform students actually use does not work at all.
+- 🟢 **rename + block reorder: `0.9898`.**
+- 🔴 **honest sibling code that merely shares a framework: `0.6720`** — so the false-positive
+  surface is real, and the usable threshold is near `0.85`, not the `0.7` a client reaches for.
+- 🔴 **Template exclusion (`-i`) changed nothing material:** top-`5` membership identical,
+  positives moved `0` ranks, median `|Δ similarity|` `0.00064`. 🔵 **Limb `2` fired — but the
+  template was `10` lines against modules of up to `63` KB, so the honest reading is that `-i`
+  needs a SCAFFOLDED corpus to matter, not that it never does (`T284`).**
+
+### 🔴 Declared gaps for this window
+
+- 🔴 **No `★` count was re-verified.** `github.com` and `api.github.com` answer `403` through this
+  environment's proxy; `raw.githubusercontent.com` answers `200`. Every star figure in this file
+  is secondary (`gap 140`).
+- 🔴 **`Bloom`'s suite was not run: PyPI is unreachable** (`uv sync` → `tunnel error`), while npm
+  worked in the same pass. A JavaScript subject is executable here and a Python one is not
+  (`gap 139`).
+- 🔴 **Prose web search returned no education-specific permissive agent** across four
+  formulations — only general-purpose agent listicles and two course repositories. 🔵 **This
+  supply is visible to a tag census and invisible to a search engine.**
+- 🔴 **No new candidate entered the census this window**, because the pass spent its budget
+  reading the two it already had and discharging `KW`. The `3` remaining unread rows above `170`★
+  from p178's `ai-tutor` head — `universal-examprep-skill` (`304`★), `kaogong-skill` (`173`★) and
+  the fifth unnamed row — are still unread (`ACTION LD`).
+
+
 ## 2026-10-13 — p178 — the census was measuring a tag: `298` against `135`, and `5` unnamed rows above `170`★
 
 🔴 **This section exists because the trend this file has been recording for five passes —

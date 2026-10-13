@@ -21,7 +21,12 @@
 # Exit 0 = no unmarked stripping site. Exit 1 = at least one.
 set -u
 ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
-ALLOW='compose/code/lib/payload_measure.sh|compose/code/p178-byte-channel-census/two_channels.sh|compose/code/p178-byte-channel-census/test_check_channel.sh'
+# p179 note: `ACTION KY`'s three instruments were caught by THIS gate on their first run, which
+# is the gate working — `trailing_census.sh` measures the stripping channel on purpose,
+# `ambiguity_proof.sh` RUNS the class-C pipeline as its subject, and `test_capture_shape.sh`
+# carries the fixture. Allowlisted rather than reworded, on exactly p178's own reasoning: the
+# measurement IS the control (`T276`). Whole folder, because the three are one instrument set.
+ALLOW='compose/code/lib/payload_measure.sh|compose/code/p178-byte-channel-census/two_channels.sh|compose/code/p178-byte-channel-census/test_check_channel.sh|compose/code/p179-capture-shape/'
 found=0
 while IFS= read -r hit; do
   f="${hit%%:*}"; rest="${hit#*:}"; l="${rest%%:*}"

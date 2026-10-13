@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🆕 🟢 **p177 introduced the axis *does the system ADJUDICATE?* and p178 put a row on both sides.
+p179 adds the axis that turns out to matter more for what a client can BUY: does the system have a
+USER?**
+
+| | adjudicates | does not adjudicate |
+|---|---|---|
+| **has a user** | 🟢 `Artemis` — `257` entities, `528` write endpoints, `passkey` in `136` files, `saml2` in `54`, `LTI 1.3` with grade passback | *(no row yet)* |
+| 🆕 **has NO user** | *(no row — and this cell may be empty for a reason: adjudicating without an identity is incoherent)* | 🟡 `Bloom` — `7` tables, `16` write endpoints, `0` auth files; 🔴 `Study-Mate` — `0` databases, `0` servers, `0` auth |
+
+🔵 **`T286`: the permissive education supply is not short of INTELLIGENCE, it is short of IDENTITY.**
+🟢 **Both of the largest new rows this pass read can plan a lesson, sequence a syllabus and adapt
+to a learner. Neither can tell one learner from another.** 🔴 **And an education client's first
+question is always about the second thing: whose record is this, who may see it, who signed off
+on the grade.**
+
+### 🆕 🔴 The trend this pass would most like to un-see: the manifest as a competence claim
+
+`Bloom` declares `python-jose[cryptography]`, `bcrypt`, `email-validator` and `python-multipart`
+in `pyproject.toml`. 🔴 **Import sites, measured: `0`, `0`, `0`, `0`.** 🔵 **`T285`: a declared
+dependency is not an implemented capability.** 🟡 **This is worth a trend line rather than a
+footnote, because the fast way to triage a shelf of candidates is to read manifests — and a
+manifest is the cheapest place in a repository to look finished.** 🟢 **The cure is the one this
+KB already practises: read the code, count the call sites, publish the count.**
+
+### 🟢 Agentic education is arriving as PORTABILITY, not as agents
+
+🆕 🟢 **`Study-Mate` is the clearest signal in this KB of where the supply side is actually
+spending its effort: `199` files of TypeScript and ESM whose only job is to run one skill set
+inside FOUR runtimes owned by other vendors — DeepSeek Harness, Google Antigravity, OpenAI Codex
+and ChatGPT Work.** 🔵 **The author's bet is not on an agent. It is on the host market staying
+fragmented.** 🟡 **For a studio that bet is directly useful: if the adapter layer is where the
+work is, then the durable asset in an engagement is the skill content plus the adapter, and the
+host is a swappable dependency.**
+
+### 🟢 Regulation stopped being a forecast this year
+
+🟢 **Four education-AI obligations are in force in `2026`, on four dates:** Korea's `AI` Basic Act
+(Jan), Vietnam's Law `134/2025/QH15` (`1` Mar), Ohio's district-policy mandate (`1` Jul), and EU
+`AI` Act enforcement (`2` Aug). 🔵 **The trend is that the EU is no longer the pacesetter for
+education `AI` — two APAC statutes landed first, and one US state moved before the EU's
+machinery started.** 🟡 **The EU's Annex III education date (`2` December `2027`) remains a
+SECONDARY figure in this KB by declaration (`ACTION KV`), and the November `2025` *"digital
+omnibus"* may convert it from a date into a dependency on harmonised standards.**
+
+🔴 **And the trend that cuts the other way:** New York City imposed a one-year moratorium on
+student-facing `AI` through eighth grade. 🔵 **Student-facing K-8 is now a regulatory liability in
+the largest US district while teacher-facing deployment is being publicly funded in the UK
+(£`4` M for lesson planning and marking). The market is converging on the TEACHER as the user,
+from two unrelated directions.**
+
+### 🟢 Academic integrity stops being a position and becomes a number
+
+🟢 **Measured this pass on real code (`ACTION KW`): identifier renaming scores `1.0000` against
+`dolos` — it is completely ineffective — and rename-plus-reorder scores `0.9898`.**
+🔴 **Honest sibling code that merely shares a framework, an ORM and a test style scores up to
+`0.6720`.**
+
+🔵 **So the integrity conversation has a shape it never had before: a `0.7` threshold sits
+`0.028` above the honest-work band, and the empty band between `0.6720` and `0.9786` is where the
+threshold belongs — near `0.85`.** 🟢 **That is a sentence a university committee can adopt, and
+it is derived rather than asserted.**
+
+### 🟡 The adoption/governance gap is the actual product, and it is measured in two regions
+
+- 🟢 **LATAM: `87`% of `200` higher-education institutions use `AI` in at least one area; `26`%
+  have a formal strategy** (UNESCO IESALC / UNU-IAS). `79`% of faculty use `AI` in teaching while
+  `88`% engage only minimally to moderately (Digital Education Council `2026`).
+- 🟡 **Europe and North America: ~`70`% of institutions have or are developing `AI` guidance**
+  *(single vendor-style source)*.
+- 🔵 **Read together, the trend is not "adoption is coming" — adoption has happened, ungoverned.
+  1EdTech's own watch-list says institutions are now building governance structures and
+  evaluation processes rather than picking tools.** 🟢 **The billable work for the next two years
+  is retrofitting governance onto use that already exists.**
+
+### 🔴 What this file still cannot say
+
+- 🔴 **Nothing here is measured on a regional SUPPLY channel.** Four regional searches returned
+  policy and market material and named `0` region-originated open-source education repositories.
+  🔵 **Regional supply remains visible only through the tag census.**
+- 🔴 **The market size is a range spanning a factor of two for the same year** (`$6`–`$12.3` B for
+  `2026` across sources), all vendor-sourced. No point estimate should be quoted.
+- 🔴 **The *"has a user"* axis is populated from `3` rows.** It is a sharp axis on thin evidence,
+  and `ACTION LD` (read the `3` remaining `170`★+ rows) is what would widen it.
+
+
 ## Pass 178 — 2026-10-13
 
 🆕 🟢 **The axis this file introduced at p177 — does the system ADJUDICATE? — now has a row on both

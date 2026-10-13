@@ -1,0 +1,14 @@
+payload	full	stripping	trailing_run
+apache-autolab-Autolab.LICENSE	11324	11323	1
+bsd3-Submitty-Submitty.LICENSE-md.txt	1542	1541	1
+bsd3-YuanGongND-gopt.LICENSE	1517	1516	1
+gpl-Ovsyanka83-autograder.LICENSE	35149	35148	1
+inginious-INGInious.LICENSE	34764	34763	1
+kaldi-asr-kaldi.COPYING	17264	17263	1
+mit-Halleck45-OpenPronounce.LICENSE	1113	1113	0
+mit-TITLELESS-Priyamakeshwari-TeachGPT.LICENSE-md.txt	1057	1057	0
+mit-adlnet-xapi-lab.LICENSE	1082	1080	2
+mit-mikhailvs-loqui.LICENSE	1074	1073	1
+mit-speechsuper-API-Samples.LICENSE	1068	1067	1
+unlicense-FWU-DE-mem-mcp.LICENSE	1211	1210	1
+# p179: 12 payloads, 10 with a trailing run, 1 with a run LONGER THAN 1

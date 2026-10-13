@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 179 — 2026-10-13
+
+🆕 🟢 **`ACTION KX` is DISCHARGED and it splits: the two largest new rows of p178's wider tag were
+read past their licences, and they land in DIFFERENT classes — neither of which is the class p178
+predicted.** Limb `2` said both would be *"prompt-and-markdown skill packs that run inside someone
+else's agent runtime"*. 🔴 **One is a skill pack and it is nothing like prompt-and-markdown; the
+other is a deployable application with a database.**
+
+🆕 🔴 **And the axis that separates them is one this KB has never applied: DOES THE ROW HAVE A
+USER?** `Artemis` has `passkey` in `136` files and `saml2` in `54`. [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom)
+has `7` database tables, `16` write endpoints, a `docker-compose` — and **`0` files mentioning
+`auth`, `login`, `jwt`, `oauth`, `password`, `users` or `tenant`, and no `User` table at all**.
+🔵 **A row with no user cannot hold a cohort, and a cohort is what an education client buys.**
+
+| row | licence *(payload)* | what it IS, from code | verdict |
+|---|---|---|---|
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT`, `1 064` B, `md5 5ebdff604182e1633fc88ea842500b97`, `HEAD 23387dbc4118` | `348` files: `121` `.mjs`, `78` `.ts`, `34` `.md`. npm `@yunmiao/studymate@2.0.1`. 🔴 **`0` of `sqlite`/`postgres`/`mysql`/`mongodb`/`prisma`/`drizzle`/`sequelize`; `0` of `express`/`fastify`/`koa`; `0` of `auth`/`passport`/`jwt`/`oauth`/`bcrypt`** | 🔴 **NOT shelf-eligible, and the CLASS is new: a MULTI-HOST ADAPTER.** It carries adapters for FOUR vendor runtimes — DeepSeek Harness (`cordis.patch.yml`, `dsh-plugin.mjs`), Google Antigravity, OpenAI Codex and ChatGPT Work. 🔵 **`199` files of TypeScript/ESM that exist only to make one skill set run in four places someone else owns** |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT`, `1 069` B, `md5 d3ac8ed0a50bd8de7d9c2ad5be4248ab`, `HEAD b3918981bb34` | `118` files: `4 009` lines Python *(FastAPI + SQLAlchemy)*, `3 450` JS/JSX *(React `19`)*, `7` `__tablename__` entities — `courses`, `syllabi`, `lessons`, `annotations`, `feedbacks`, `learning_events`, `learning_recommendations` — `16` write endpoints *(`12` `POST`, `1` `PUT`, `3` `DELETE`)*, `2` `Dockerfile`s, `docker-compose` with a healthcheck and a named volume, `SQLite` | 🟡 **APPLIANCE grade, not platform grade.** It owns its data and deploys in one command. 🔴 **It has no user, no auth and no tenant, so it serves exactly one learner per deployment** |
+
+🆕 🔴 **The most client-relevant defect found this pass, and it is a trap for anyone who reads the
+manifest instead of the code.** `Bloom`'s `pyproject.toml` declares `python-jose[cryptography]`,
+`bcrypt`, `email-validator` and `python-multipart` — the dependency set of an auth stack.
+🔴 **Import sites for each, measured: `0`, `0`, `0`, `0`.** Only `pypdf` and `openai` are actually
+imported. 🔵 **`T285`: a declared dependency is not an implemented capability, and a manifest is
+the cheapest place in a repository to look competent.**
+
+🆕 🟢 **`dolos` gets its first real numbers in this KB (`ACTION KW`, discharged — see
+[`compose/patterns.md`](../compose/patterns.md) and
+[`compose/code/p179-dolos-real-corpus/`](../compose/code/p179-dolos-real-corpus/)).**
+`@dodona/dolos@2.9.3`, `15`-file corpus of real `MIT` education code with a KB-controlled ground
+truth:
+
+| transform the student actually performs | `dolos` similarity |
+|---|---|
+| every identifier renamed | 🟢 **`1.0000`** — a perfect score. It fingerprints the parse tree, so the rename is invisible |
+| renamed **and** top-level blocks reordered | 🟢 `0.9898` |
+| 🔵 *honest* sibling code sharing a framework, ORM and test style | 🔴 **up to `0.6720`** |
+
+🟢 **So the detection claim this KB has carried since p176 is now MEASURED, and it holds.**
+🔴 **And the operational number nobody had: the gap between honest work and copied work is
+`0.3066`, which means a `0.7` threshold sits `0.028` above the honest-work band.** 🔵 **The
+threshold belongs near `0.85`, and Pattern `1` now says so with the measurement behind it.**
+
+### 🔴 What this pass could NOT verify, stated so no reader mistakes it for coverage
+
+- 🔴 **No star count on this page was re-verified this pass.** `github.com` and `api.github.com`
+  both answer `403` through this environment's proxy *(re-measured at p179; `raw.githubusercontent.com`
+  answers `200`)*. Every `★` figure here is inherited from p178's census and is **secondary**
+  (`gap 110`, and now `gap 140`).
+- 🔴 **`Bloom`'s test suite was NOT run.** `uv sync` fails with `tunnel error: unsuccessful` —
+  **PyPI is unreachable from this environment, while npm is reachable** *(`@dodona/dolos@2.9.3`
+  installed and run in the same pass)*. 🔵 **So this KB can execute a JavaScript subject and
+  cannot execute a Python one, which is a property of the harness and not of the subjects
+  (`gap 139`, `ACTION LC`).**
+- 🔴 **General web search still does not see this supply.** Four formulations of
+  *"top open source AI agents education 2026 github MIT"* returned general-purpose agent
+  listicles — `OpenHands`, `CrewAI`, `LangChain`, `OpenCode` — plus two course repositories, and
+  **not one education-specific permissive agent**. 🔵 **p178 found this supply through
+  `topic:ai-tutor`; it is not reachable by prose search, which is why the tag census is the
+  instrument and a search engine is not (`T279` corroborated on a second channel).**
+
+
 ## Pass 178 — 2026-10-13
 
 🆕 🔴 **The headline is a correction to this file's own evidence base, and it is bigger than any
