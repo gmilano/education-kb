@@ -1,0 +1,9 @@
+sibling_repo	exists	head_sha	head_date	age_days	tracked_paths	licence_file	licence_bytes	licence_family	maintenance_verdict_P164D
+moodlehq/moodle-enrol_oneroster	YES	b91b12857aac	2021-01-20	2091	134	LICENSE	35149	GPL-3.0	DROP - 2091 d stale, 11.6x the 180 d threshold
+jcputney/scorm-again	YES	882f3b8c7498	2026-10-09	3	1014	LICENSE	1072	MIT	KEEP - active, 3 d
+Ed-Fi-Alliance-OSS/edfi-oneroster	YES	7442047368fa	2026-10-12	1	261	LICENSE	10173	Apache-2.0	KEEP - active, 1 d
+CSR2017/edfi-oneroster	YES	937248be66de	2026-09-22	21	252	LICENSE	10173	Apache-2.0	KEEP but FORK - see gap79 TSV
+moodle/moodle-enrol_oneroster	NO	-	-	-	-	-	-	-	absent - wrong org
+moodlehq/moodle-local_oneroster	NO	-	-	-	-	-	-	-	absent
+moodlehq/moodle-enrol_lti	NO	-	-	-	-	-	-	-	absent - enrol_lti is IN moodle core
+Selleo/mentingo-scorm	NO	-	-	-	-	-	-	-	absent - SCORM is in the monorepo

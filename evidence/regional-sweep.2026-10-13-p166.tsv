@@ -1,0 +1,30 @@
+region	instrument_or_datum	date	status	channel	shelf_held_before	note
+North America	134 AI-in-education bills across 31 states	2026 session	search-summary	web	partly	data privacy, classroom restrictions, curriculum
+North America	California AB 1159 - bar student data for AI training	2026	search-summary	web	check	would prohibit training on student data
+North America	Idaho SB 1227 - privacy protections for school AI tools	2026	search-summary	web	YES	already on shelf
+North America	Oklahoma + Maryland - human oversight, no AI in high-stakes student decisions	2026	search-summary	web	check	maps directly to P163-C off switch and P164-C provenance
+North America	H.R. 8747 K-12 AI Literacy and Readiness Act - cleared House cttee	2026-07-21	search-summary	web	YES	committee stage only, not law
+North America	Colorado SB 26-189 deemed-compliance safe harbour	2027-01-01 eff.	shelf (T177)	prior pass	YES	education stays IN scope
+North America	NYC one-year moratorium on student-facing AI through grade 8	2026	search-summary	web	check	a procurement-blocking fact for K-8 engagements
+EMEA	AI Act enforcement by AI Office + national authorities began	2026-08-02	search-summary	web	check	the enforcement machinery is now live
+EMEA	Annex III standalone high-risk deadline moved to 2027-12-02	2026-07	UNRESOLVED CONFLICT	web	YES (T178)	one source: Reg (EU) 2026/1744 published 2026-07-24; another: Council green light but AWAITING Official Journal
+EMEA	Commission updated ethical AI guidelines for education	2026-05	search-summary	web	check	-
+EMEA	Council conclusions on human-centred AI in education	2026-05-11	search-summary	web	check	-
+EMEA	Apply AI Alliance - provider/industry/academia forum	2026	search-summary	web	NO - NEW	the only genuinely new item in p166's whole web sweep
+EMEA	education named high-risk where it determines access or course of professional life	in force	search-summary	web	YES	exam scoring is the Commission's own example
+APAC	South Korea AI Framework Act in effect; 2026 a pilot year, limited enforcement	2026-01	search-summary	web	check	high-impact includes education
+APAC	Vietnam AI law, extraterritorial, education in high-risk list	2026-03-01	search-summary	web	YES	shelf has P16 on Vietnam Decision 33
+APAC	Japan - light-touch voluntary governance	current	search-summary	web	check	-
+APAC	China - algorithm filings, synthetic-content labelling, public-model security review	current	search-summary	web	check	-
+APAC	Ipsos Education Monitor 2026 - AU/NZ show HIGHER support for banning AI in schools	2026	search-summary	web	check	the one APAC market where the political default is restriction
+LATAM	UNESCO IESALC + UNU-IAS: 87% of 200 institutions in 19 countries use AI, 26% have a formal strategy	2026	search-summary	web	YES	P156-B is built on exactly this gap
+LATAM	Digital Education Council LATAM: 79% of faculty use AI, 88% minimal-to-moderate engagement	2026	search-summary	web	check	different sample and method - not comparable to the 87% figure
+LATAM	UNESCO Observatory on AI in Education for LATAM launched	2026-04-14	search-summary	web	check	partners incl. CAF, CENIA (Chile), CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Fundacion Ceibal
+LATAM	Uruguay first in region to sign CoE Framework Convention on AI	2025	search-summary	web	check	-
+LATAM	Colombia CONPES 4144 national AI policy	2025-02	search-summary	web	check	policy, not binding regulation
+LATAM	Peru - risk classification + regulatory sandboxes	current	search-summary	web	check	-
+LATAM	DECLARED GAP: no EDUCATION-SPECIFIC AI regulation found in LATAM	2026-10-13	measured absence	web	-	the sweep returned national AI frameworks only; education-specific instruments were NOT found
+Global	DECLARED GAP: no open-source agent marketed specifically for EDUCATION in the agent sweep	2026-10-13	measured absence	web	-	the agent sweep returned general-purpose and CODING agents only (OpenClaw, OpenHands, SWE-agent, CrewAI, LangGraph); none evaluated tutoring, grading or student management
+Global	DECLARED GAP: no SIS/ERP under MIT or Apache	2026-10-13	measured absence	web	YES	OpenEduCat is LGPL-3.0, RosarioSIS GPL-2.0, OpenOLAT is Apache-2.0 but is an LMS not an SIS. Confirms this shelf's standing administrative hole (P9)
+Global	DeepTutor secondary channel reports "updated Oct 12 2026"; git primary says HEAD 2026-10-08, sha unchanged	2026-10-13	CONFLICT - git primary wins	both	YES	another instance of the secondary-channel unreliability thesis (T150/T160)
+Global	DeepTutor star count reported ~41.2k by search summary	2026-10-13	NOT PROMOTABLE	web	YES	T160 rule: no git-channel primary exists for stars, so it stays unpublished (T149)

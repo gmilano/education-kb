@@ -1,0 +1,7 @@
+family	band_published_in_patterns_md	observed_on_this_shelf	source_row	outside_published_band	cause
+Apache-2.0	11357-11358 B	10173 B	Ed-Fi-Alliance-OSS/edfi-oneroster (p166)	YES - 1184 B BELOW	body omits the APPENDIX: How to apply section; ends at END OF TERMS AND CONDITIONS
+Apache-2.0	11357-11358 B	11342 B	ai-shifu/ai-shifu (p165)	YES - 15 B below	-
+Apache-2.0	11357-11358 B	11408 B	HKUDS/DeepTutor (p165)	YES - 50 B above	-
+GPL-3.0	35121-35147 B	35149 B	plastic-labs/tutor-gpt (p165)	YES - 2 B above	-
+GPL-3.0	35121-35147 B	35149 B	moodlehq/moodle-enrol_oneroster (p166)	YES - 2 B above	reproduces the 35149 value on a second repository
+AGPL-3.0	34-35 KB	34522-34523 B	ChatTutor, penecho, Echo-Loop (p165)	within	-

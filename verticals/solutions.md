@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+🟢 **The routing table gains the row it has lacked since p156: OneRoster rostering on a PERMISSIVE
+licence.** 🔴 **It is not a platform — it is a server you put in front of one, because `3` of the
+`3` platforms this page recommends measure `0`.**
+[`evidence/capability-census.2026-10-13-p166.tsv`](../evidence/capability-census.2026-10-13-p166.tsv)
+[`evidence/sibling-licences.2026-10-13-p166.tsv`](../evidence/sibling-licences.2026-10-13-p166.tsv)
+
+### 🆕 🟢 Platform routing, with OneRoster and Ed-Fi now MEASURED on all three
+
+🔵 **Every cell below was measured with `P166-A`'s guarded grep against a pinned tree. No cell is a
+vendor claim, and every sibling named carries its own licence.**
+
+| need | platform | licence | LTI 1.3 | SCORM | xAPI | OneRoster | Ed-Fi |
+|---|---|---|---|---|---|---|---|
+| 🟢 **Permissive LMS, standards-native** | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **`Apache-2.0`** | 🟢 **in-tree, `145` files / `18 067` LOC** | 🟢 **in-tree, `65` Java files** | 🔴 **ABSENT** | 🔴 **ABSENT** | 🔴 **ABSENT** |
+| 🟡 **Already-deployed LMS at scale** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`GPL-3.0`** | 🟢 **in-tree, `423` paths** | 🟢 **in-tree, `166` paths** | 🟢 **in-tree, `99` paths** | 🟡 **SIBLING only — 🔴 `GPL-3.0`, `2 091` d stale** | 🔴 **ABSENT** |
+| 🟢 **Permissive AI-native LMS / corporate L&D** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** | 🔴 **ABSENT** | 🟢 **in-tree + MIT player** | 🔴 **ABSENT** | 🔴 **ABSENT** | 🔴 **ABSENT** |
+| 🆕 🟢 **OneRoster rostering, permissive** | 🆕 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** (`10 173 B`) | n/a | n/a | n/a | 🟢 **OneRoster 1.2, `14` GET endpoints** | 🟡 **Ed-Fi ODS is a separate, unmeasured decision** |
+
+🟢 **Read the OneRoster column across the first three rows and the engagement writes itself:**
+🔴 **no permissive platform on this shelf rosters, and the one copyleft platform that does, does it
+through a plugin last touched in January 2021.** 🟢 **`P166-B` is the composition that fixes it.**
+
+### 🆕 🟢 mentingo's SCORM row, CORRECTED upward — it is first-party, not just a bundled player
+
+🔴 **This page has been carrying mentingo's SCORM as *"it DOES ship SCORM — `119` files … with a
+bundled player"*, and `repos/foundations.md` recorded the player as *"an EXTERNAL npm
+dependency"*.** 🟢 **Both are true and both understate it. Measured at HEAD `242a9324fe48`:**
+
+| component | what it is | size |
+|---|---|---|
+| 🟢 **`@repo/scorm-export-generator`** | 🟢 **first-party, in-tree — *"Node-side SCORM 1.2 export package generator"*** | `9` files, **`585` LOC** |
+| 🟢 **`@repo/scorm-export-runtime`** | 🟢 **first-party, in-tree — *"Standalone browser runtime for exported SCORM packages"*** | `9` files, **`1 381` LOC** |
+| 🟢 **[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) `3.0.4`** | 🟢 **the PLAYER, an external dependency pinned in `apps/web/package.json`** | 🟢 **`MIT`, `1 072 B`, HEAD `2026-10-09` — `3` d** |
+
+🟢 **Standard markers in-tree: `scorm_2004` ×`103`, `SCORM 1.2` ×`58`, `cmi.core` ×`50`,
+`adlcp` ×`20`, `imsmanifest` ×`8`.** 🟡 **The generator names `1.2` explicitly; the `2004` markers
+are present but p166 did not establish 2004 export parity.** 🔵 **So the honest sentence for a
+client is *"SCORM 1.2 export is first-party and the player is MIT"*, which is both narrower and
+stronger than *"SCORM support"*.**
+
+### 🆕 🔴 mentingo's xAPI is ABSENT — and upstream says so itself
+
+🔴 **mentingo's whole tree returns `1` hit for `xapi` and `1` for `lti`: the SAME line,
+`README.md:246`, inside an HTML comment, in Polish, reading *"STAGE 3 — to be confirmed by the
+team, DO NOT PUBLISH WITHOUT VERIFICATION: … pentest, xAPI/LTI, mapping to NIS-2 / art. 8e KSC,
+retention and data deletion."*** 🟢 **mentingo's actual published interoperability claim, in
+English, in the body of the README, is exactly one sentence and it is accurate: *"SCORM 1.2 export,
+so content authored in Mentingo can be handed to another LMS."***
+🟢 **So `T127` is CONFIRMED a third time, and now EXPLAINED rather than merely measured: the
+capability is absent and upstream has not claimed it.** 🔵 **This is the strongest form an absence
+can take on this shelf — do not price xAPI into a mentingo engagement, and do not open an
+upstream issue asking where it is.**
+
+### 🔴 The administrative / SIS hole, confirmed again on the search channel
+
+🔴 **p166's vertical-platform sweep returned NO student-information or ERP system under `MIT` or
+`Apache-2.0`.** 🟡 **`OpenEduCat` is `LGPL-3.0`** 🔴 **· `RosarioSIS` is `GPL-2.0`** 🟡 **·
+`OpenOLAT` is `Apache-2.0` but is an LMS, not an SIS** 🔴 **· `Fedena` and `openSIS` gate finance
+and multi-campus behind paid tiers, and `SchoolTool` is discontinued.**
+🟢 **`P9` has described this as *"the real hole"* since p132 and it is unchanged at p166.**
+🔵 **Recorded as a declared gap, not as silence: the sweep ran and returned nothing, which is
+different from not having looked.**
+
 ## Pass 165 — 2026-10-13
 
 🟢 **`ACTION IM` is DISCHARGED and the routing table gains the one thing it lacked: a row that is

@@ -1,0 +1,5 @@
+platform	probe	hits	paths	note
+moodle/moodle	ed-fi (literal substring, UNGUARDED)	514	22	p165's T170 collision class reproduces on a SECOND codebase
+moodle/moodle	\bed-fi\b (word-boundary guarded)	0	0	guard kills 100% of them
+Selleo/mentingo	ed-fi (literal substring, UNGUARDED)	8	5	and on a THIRD codebase
+Selleo/mentingo	\bed-fi\b (word-boundary guarded)	0	0	guard kills 100% of them

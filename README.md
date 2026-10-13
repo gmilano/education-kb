@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+🟢 **Four pre-registered actions: `3` DISCHARGED with silent falsifiers, `1` HELD OPEN because its
+instrument does not fit inside a pass — and saying so is the result, not a gap.**
+🆕 🔴 **The pass's most useful finding is a capability hit that means its own opposite: the only
+evidence for xAPI and LTI in this shelf's one MIT-licensed LMS is a Polish HTML comment reading
+"DO NOT PUBLISH WITHOUT VERIFICATION". Recorded as `T187`, a sixth false-positive class.**
+🆕 🔴 **And `ACTION IS` measured something the register should act on: the WEB channel re-derived
+`91%` of what it returned. All four substantive findings came from the code channel.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IP`** — `P165-A`'s corrected census on Moodle + one permissive platform | 🟢 **DISCHARGED, falsifier SILENT. `4` verdict changes — but `2` of `3` FN guards did all the flipping** |
+| 🟢 **`ACTION IQ`** — decide `PageLM`'s `6` pattern citations | 🟢 **DISCHARGED, falsifier SILENT. `0` of `6` are build dependencies — the action's PREMISE was wrong** |
+| 🔴 **`ACTION IR`** — is `T173`'s churn rate representative over a MULTI-HOUR interval? | 🔴 **HELD OPEN. A pass is `~40`–`60` min; p166's longest window was `52`. A cross-pass baseline is now committed so p167 CAN answer it** |
+| 🟢 **`ACTION IS`** — measure the shelf-first discipline | 🟢 **DISCHARGED, falsifier SILENT. `23` of `27` terms already held — `85%`** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T187` — the ANTI-CLAIM, a SIXTH false-positive class.** 🔴 **`Selleo/mentingo` returns
+  exactly `1` hit for `xapi` and `1` for `lti` across `4 753` paths, and both are the SAME line:
+  `README.md:246`, inside an HTML comment, in Polish — *"STAGE 3 — to be confirmed by the team, DO
+  NOT PUBLISH WITHOUT VERIFICATION: … pentest, xAPI/LTI, mapping to NIS-2 / art. 8e KSC, retention
+  and data deletion."*** 🟢 **So upstream has not claimed these standards and has marked them
+  unverified. The absence is now EXPLAINED, not merely measured.** 🟢 **No boundary, binary or i18n
+  guard catches this: the text is prose and it is in the tree on purpose. Strip comments.**
+- 🆕 🟢 **`T179` — the census, `2` platforms × `5` standards, every cell measured.** 🟢 **Moodle
+  (`67 589` paths): LTI 1.3 `423` paths, SCORM `166`, xAPI `99` — all IMPLEMENTED-IN-TREE.**
+  🔴 **OneRoster `0`, Ed-Fi `0`.** 🟢 **mentingo (`4 753` paths): SCORM IMPLEMENTED-IN-TREE and
+  first-party.** 🔴 **The other four ABSENT.**
+- 🆕 🔴 **`T180` — a verdict that is YES and UNUSABLE in the same breath.** 🟢 **The sibling probe
+  flips Moodle's OneRoster to IMPLEMENTED-IN-SIBLING via `moodlehq/moodle-enrol_oneroster`.**
+  🔴 **That plugin is `GPL-3.0` (`35 149 B` body-read) and `2 091` days stale — `11.6×` the
+  `180`-day threshold.** 🔵 **The two guards this shelf added in consecutive passes pull in opposite
+  directions, and reporting only the flip gives a client a WORSE answer than a flat *"no"*: they
+  budget for an integration instead of a build.** 🟢 **`P166-A` STEP 7 makes the maintenance read on
+  every named sibling non-negotiable.**
+- 🆕 🔴 **`T181` — a correction to this shelf, for the price of one `grep`.** 🔴 **`agents/trending.md`
+  has been carrying *"Moodle's in-tree `enrol_oneroster`"*. It is NOT in-tree — `moodle/moodle`
+  returns `0` on the name probe AND on `imsglobal.org/spec/oneroster`. The plugin is a separate
+  repository under a different org (`moodlehq`, not `moodle`).** 🔵 **`T142`'s out-of-repo class with
+  the direction reversed: the shelf held the sibling and filed it as core.**
+- 🆕 🟢 **`T182` — the permissive OneRoster path exists, and the shelf already held it at `89` hits.**
+  🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster`, `Apache-2.0` body-read `10 173 B`, HEAD `2026-10-12`
+  (`1` day), `261` paths, serving OneRoster 1.2 over `14` GET endpoints.** 🟢 **`P166-B` composes
+  it.** 🟡 **`14` GET endpoints is READ rostering; write-back is unmeasured (`gap 102`).**
+- 🆕 🟢 **`T183` — `gap 79` CLOSED, by commit authorship rather than by dates alone.**
+  🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster` is upstream: `21` days ahead, `9` more paths, and its
+  newest commit is authored BY `CSR2017` — the individual committing INTO the Alliance repo. The
+  personal fork's newest commit is a `dependabot[bot]` bump.**
+- 🆕 🔴 **`T184` — three published licence SIZE bands are wrong, and every correction makes the test
+  WORSE.** 🔴 **Apache-2.0 is BIMODAL: `10 173 B` without the *"APPENDIX: How to apply"* section
+  (`0` occurrences of `APPENDIX`, ends at *"END OF TERMS AND CONDITIONS"*), ~`11.3`–`11.4 KB` with
+  it. The published band was `11 357`–`11 358`.** 🔴 **GPL-3.0's `35 149 B` sits `2 B` outside its
+  band and has now reproduced on two unrelated repositories a pass apart.** 🔴 **And the published
+  *"GPL vs AGPL, `11 B` apart"* adjacency is not reproduced: observed GPL `35 149`, observed AGPL
+  `34 522`–`34 523`, about `626 B` apart.** 🟢 **Net effect: `P48`'s thesis — classify by the NAME
+  LINE — comes out stronger from all three.**
+- 🆕 🔴 **`T186` — the web channel has SATURATED on this shelf, measured.** 🔴 **`10` of `11` web
+  terms already held (`91%`); `13` of `16` code terms (`81%`) but with `3` new measurements and `1`
+  correction.** 🟢 **The only genuinely new item the entire web sweep produced was the EU's
+  `Apply AI Alliance`.** 🔵 **Operational conclusion for the next pass: another identical web sweep
+  is near-zero marginal value. Spend the pass on trees.**
+- 🆕 🟢 **`T185` — `ACTION IQ`'s premise was wrong, and that is the useful part.** 🟢 **All `6`
+  `PageLM` citations use it as the licence gate's TEST FIXTURE; `0` are build dependencies.**
+  🟢 **`4` already carried the non-commercial warning inline, `2` were AMENDED.** 🔵 **Substituting a
+  permissive repo would have DESTROYED the citations, because the thing illustrated is precisely
+  non-permissiveness.**
+- 🆕 🟢 **`T188` — the secondary channel disagrees with the git primary again, on a field where the
+  primary EXISTS.** 🔴 **A search summary dates `DeepTutor` to *"Oct 12, 2026"*; git says
+  `2026-10-08` and the sha has not moved across three sweeps.** 🟢 **`T160`'s rule resolves it: the
+  primary wins.** 🔴 **The same summary reports *"~41.2k stars"* — no git primary exists for stars,
+  so it is NOT published and `T149` keeps the `★` column closed.**
+- 🆕 🔴 **T170 EXTENDED to a third naming convention.** 🔴 **p165's collision tokens were camelCase
+  and underscore; Moodle's and mentingo's are KEBAB-CASE, and one token does almost all the damage —
+  `labeled-field` ×`457` of Moodle's `510` literal `ed-fi` hits.** 🟢 **Never carry a token denylist
+  between repositories; carry the guard.**
+- 🟢 **Two new patterns:** 🟢 **`P166-A`** *(the census with the sixth false-positive class, the
+  `2`-of-`3` FN-guard result, and STEP 7's mandatory maintenance read on every sibling)* and
+  🟢 **`P166-B`** *(OneRoster rostering on a permissive licence, for platforms that have none)*.
+- 🔴 **An instrument fault caught before publication:** 🔴 **the first `t0` capture wrote repo and
+  sha on ALTERNATING lines, because `git ls-remote --symref` emits the `ref:` record and the sha
+  separately. A naive `$1`/`$2` parse of that file reported `12 of 12` HEAD shas changed in `21`
+  minutes.** 🟢 **Re-parsed by pairing the `ref:` line with the one following it, the true answer is
+  `0 of 12`.** 🔵 **Second pass in a row where the naive number was the one that happened to answer
+  the question asked.**
+
+### 🟡 Why `ACTION IR` was held open, and the partial datum it still produced
+
+🔴 **`ACTION IR` asks for a MULTI-HOUR interval. A pass is `~40`–`60` minutes, so the longest window
+p166 could construct was `52` minutes.** 🟢 **Reporting that as *multi-hour* would have been exactly
+the fault above, so it was not reported.**
+🟢 **The structural fix: [`evidence/churn-baseline.2026-10-13-p166.tsv`](evidence/churn-baseline.2026-10-13-p166.tsv)
+now carries every row's `t0` sha with a UTC timestamp, so p167 diffs against a KNOWN earlier moment
+instead of against itself. `ACTION IT`.**
+
+| interval | span | changed |
+|---|---|---|
+| p164 sweep → p165 sweep | `37` min | 🔴 **`1` of `12`** *(`ai-shifu` only — `T173`)* |
+| p165 sweep → p166 `t0` | `31` min | 🟢 **`0` of `12`** |
+| p166 `t0` → p166 `t1` | `21` min | 🟢 **`0` of `12`** |
+| **p165 sweep → p166 `t1`** | **`52` min** | 🟢 **`0` of `12`** *(two independent sweeps)* |
+| p164 sweep → p166 `t1` | `89` min | 🔴 **`1` of `12`** |
+
+🟢 **So `T173`'s *"`1` of `12` per `37` minutes"* was never a shelf-wide rate — it was one
+repository's commit cadence, sampled once.** 🔴 **`9` of `12` rows have not moved in `≥3` days;
+`3` have not moved in `≥277` days.** 🟡 **This NARROWS `T173` without firing `ACTION IR`'s falsifier,
+because the multi-hour count the falsifier names still has not been taken.**
+
+### 🔜 Registered for p167 — pre-registered with falsifiers
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IT`** — diff p167's sweep against p166's committed baseline; report `changed / 12` and the EXACT interval in hours | 🔴 *Refuted if the count over `≥3` hours is `≥3` — which would vindicate `T173` as a shelf-wide rate and make p166's "one repository's cadence" explanation wrong* |
+| 🟢 **`ACTION IU`** — run `P166-A`'s comment-stripping guard across all `12` rows plus `OpenOLAT` and `edx-platform` | 🔴 *Refuted if `0` repositories other than `Selleo/mentingo` carry a capability term inside a comment — which would make `T187` a one-repo curiosity, not the sixth CLASS* |
+| 🟢 **`ACTION IV`** — read `edfi-oneroster`'s `14` GET endpoints and name the OneRoster entities they serve | 🔴 *Refuted if the `14` do NOT include both users and enrolments — which would mean `P166-B` cannot roster and must be WITHDRAWN, not amended* |
+| 🟢 **`ACTION IW`** — re-derive licence body sizes per family from every body on disk; replace `P48`'s bands with measured min/max | 🔴 *Refuted if the re-derived bands match the published `11 357`–`11 358` and `35 121`–`35 147` — which would make `T184` an artefact of two outliers* |
+
 ## Pass 165 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three DISCHARGED with silent falsifiers.**

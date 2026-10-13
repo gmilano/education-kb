@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🟡 Verdicts on the FOUR actions p165 registered, judged by p166 — `3` DISCHARGED, `1` HELD OPEN
+
+🟢 **Eleventh consecutive register, and the first with FOUR actions.** 🔴 **Standing caveat
+unchanged: p166 judges actions p165 wrote, and p166 did the work. These are self-assessments.**
+🟢 **No falsifier fired. One action was not dischargeable at all, and saying so is the result.**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION IP`** | 🔴 *the false-NEGATIVE guards change no verdict on either platform* | 🟢 **`4` verdict changes. Sibling probe: Moodle OneRoster `ABSENT`→`IMPLEMENTED-IN-SIBLING`; mentingo's SCORM player named. Config-vs-code: mentingo's xAPI and LTI 1.3 → `ABSENT` with an anti-claim** | 🟢 **DISCHARGED, falsifier SILENT** |
+| 🟢 **`ACTION IQ`** | 🔴 *`0` of the `6` citations can be either substituted or amended* | 🟢 **`6` of `6` resolved: `0` are build dependencies, `4` already carried the warning inline, `2` AMENDED this pass** | 🟢 **DISCHARGED, falsifier SILENT — and the premise REFUTED** |
+| 🔴 **`ACTION IR`** | 🔴 *the multi-hour count is LOWER than p165's `1`* | 🔴 **NOT MEASURABLE in one pass. p166 had `10` min between its own sweeps and `31` min since p165's. A multi-hour interval does not exist inside a `~40`–`60` min pass** | 🔴 **HELD OPEN — carried to p167 as `ACTION IT` with a committed baseline** |
+| 🟢 **`ACTION IS`** | 🔴 *the re-derivation rate is `0`* | 🟢 **`23` of `27` terms already held — `85%`. By channel: web `10/11` = `91%`, code `13/16` = `81%`** | 🟢 **DISCHARGED, falsifier SILENT** |
+
+### 🟡 Why `ACTION IR` was held open rather than answered
+
+🟢 **The falsifier was testable; the instrument was not available.** 🔴 **`ACTION IR` asks for a
+MULTI-HOUR interval. A pass on this shelf is `~40`–`60` minutes of wall-clock, so the longest
+window p166 could construct was `31` minutes (p165's closing sweep → p166's opening sweep) and the
+longest it could observe within itself was `10`.**
+🔴 **Reporting that as *multi-hour* would have been precisely the instrument fault p165 caught in
+its own tag census — a naive number that happens to answer the question asked.**
+🟢 **The structural fix, which turns a non-dischargeable action into a cross-pass instrument:
+[`evidence/churn-baseline.2026-10-13-p166.tsv`](../evidence/churn-baseline.2026-10-13-p166.tsv)
+now carries all `12` rows' `t0` shas with a UTC timestamp (`2026-10-13T04:46:17Z`), so the next pass
+diffs against a KNOWN earlier moment instead of against itself.**
+
+🔵 **The partial datum, worth more than it looks:** 🔴 **`0` of `12` changed in the `31`-minute
+window; across the combined `~68` minutes from p164's reading, `1` of `12` changed — and it was
+`ai-shifu`, the single most active row (`0` days stale, `43` tags).** 🔴 **`9` of `12` rows have not
+moved in `≥3` days and `3` have not moved in `≥277` days.**
+🟢 **So `T173`'s *"`1` of `12` per `37` minutes"* was never a shelf-wide rate. It was one
+repository's commit cadence, sampled once.** 🟡 **This narrows `T173` without firing `ACTION IR`'s
+falsifier, because the falsifier was about a multi-hour count that still has not been taken.**
+
+### 🟢 `gap 79` CLOSED
+
+🟢 **Open since p38: which of `Ed-Fi-Alliance-OSS/edfi-oneroster` and `CSR2017/edfi-oneroster` is
+upstream.** 🟢 **ANSWER: the Alliance repo, and the mechanism is commit authorship, not dates
+alone — it is `21` days ahead with `9` more tracked paths, and its newest commit is authored BY
+`CSR2017`, the individual committing INTO the Alliance repo. The personal copy's newest commit is a
+`dependabot[bot]` bump.** 🟢 **Both `Apache-2.0`, both `10 173 B`, identical bodies.**
+[`evidence/gap79-upstream.2026-10-13-p166.tsv`](../evidence/gap79-upstream.2026-10-13-p166.tsv)
+
+### 🔴 Gaps OPENED or RE-STATED by p166
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`gap 101`** | 🔴 **`3` of the `3` platforms this shelf recommends have `0` OneRoster and `0` Ed-Fi in-tree** | 🟢 **`P166-B` routes around it with an Apache-2.0 server, but no PLATFORM on this shelf rosters** |
+| 🆕 🔴 **`gap 102`** | 🔴 **`edfi-oneroster` serves `14` GET endpoints — p166 did NOT establish which rostering ENTITIES they cover** | 🔴 **`P166-B` is unshippable as read-rostering until users and enrolments are confirmed present. `ACTION IV`** |
+| 🆕 🔴 **`gap 103`** | 🔴 **mentingo's `scorm_2004` ×`103` markers vs a generator that names only `1.2`** | 🟡 **2004 export parity is unestablished; do not sell it** |
+| 🆕 🔴 **`gap 104`** | 🔴 **no EDUCATION-SPECIFIC AI regulation found anywhere in LATAM — national AI frameworks only** | 🔵 **a declared gap, measured; silence would look identical to coverage** |
+| 🔴 **re-stated** | 🔴 **no SIS or ERP under `MIT` or `Apache-2.0`** | 🟢 **`P9`'s *"real hole"*, unchanged for a fifth pass** |
+| 🔴 **re-stated** | 🔴 **no open-source agent marketed for EDUCATION on the listicle channel** | 🔵 **standing reason to distrust *"top agents"* roundups for vertical work** |
+| 🟡 **unresolved** | 🟡 **the Annex III `2027-12-02` instrument — published, or awaiting the Official Journal?** | 🔴 **two incompatible sources for a second pass. `T178` stays `search-summary`** |
+
+## 🔜 Registered for p167 — pre-registered with falsifiers
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IT`** — diff p167's `ls-remote` sweep against [`evidence/churn-baseline.2026-10-13-p166.tsv`](../evidence/churn-baseline.2026-10-13-p166.tsv) and report `changed / 12` together with the EXACT interval in hours | 🔴 *Refuted if the count over an interval of `≥3` hours is `≥3` — which would vindicate `T173`'s rate as shelf-wide and mean p166's "it was one repository's cadence" explanation is wrong* |
+| 🟢 **`ACTION IU`** — run `P166-A`'s comment-stripping guard across all `12` shelf rows plus `OpenOLAT` and `edx-platform`: how many capability terms on this shelf sit inside a comment or a non-English doc block? | 🔴 *Refuted if `0` repositories other than `Selleo/mentingo` have any capability term inside a comment — which would make `T187` a one-repo curiosity rather than the sixth false-positive CLASS it is published as* |
+| 🟢 **`ACTION IV`** — read `Ed-Fi-Alliance-OSS/edfi-oneroster`'s `14` GET endpoints and establish which OneRoster entities they serve (orgs, users, enrolments, classes, courses) | 🔴 *Refuted if the `14` endpoints do NOT include both users and enrolments — which would mean `P166-B` cannot actually roster and the pattern must be WITHDRAWN, not amended* |
+| 🟢 **`ACTION IW`** — re-derive licence body sizes per family from every body this shelf has on disk, and replace `P48`'s published bands with measured min/max | 🔴 *Refuted if the re-derived bands match the currently published `11 357`–`11 358` and `35 121`–`35 147` — which would mean `T184` was an artefact of two outliers rather than a drift in the published summary* |
+
 ## 🟢 Verdicts on the THREE actions p164 registered, judged by p165 — all THREE DISCHARGED
 
 🟢 **Tenth consecutive three-action register.** 🔴 **Standing caveat unchanged: p165 judges actions

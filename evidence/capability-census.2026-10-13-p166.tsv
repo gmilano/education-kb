@@ -1,0 +1,11 @@
+platform	head_sha	head_date	default_branch	tracked_paths	standard	naive_hits	guarded_hits	guarded_paths	verdict	implementing_repo	that_repo_licence
+moodle/moodle	f20534726a59	2026-10-03	main	67589	OneRoster	0	0	0	IMPLEMENTED-IN-SIBLING	moodlehq/moodle-enrol_oneroster	GPL-3.0 (35149 B)
+moodle/moodle	f20534726a59	2026-10-03	main	67589	Ed-Fi	0	0	0	ABSENT	-	-
+moodle/moodle	f20534726a59	2026-10-03	main	67589	LTI 1.3	3472	3415	423	IMPLEMENTED-IN-TREE	moodle/moodle	GPL-3.0
+moodle/moodle	f20534726a59	2026-10-03	main	67589	SCORM	3158	3149	166	IMPLEMENTED-IN-TREE	moodle/moodle	GPL-3.0
+moodle/moodle	f20534726a59	2026-10-03	main	67589	xAPI	409	406	99	IMPLEMENTED-IN-TREE	moodle/moodle	GPL-3.0
+Selleo/mentingo	242a9324fe48	2026-10-10	main	4753	OneRoster	0	0	0	ABSENT	-	-
+Selleo/mentingo	242a9324fe48	2026-10-10	main	4753	Ed-Fi	0	0	0	ABSENT	-	-
+Selleo/mentingo	242a9324fe48	2026-10-10	main	4753	LTI 1.3	1	1	1	ABSENT (hit is an HTML comment)	-	-
+Selleo/mentingo	242a9324fe48	2026-10-10	main	4753	SCORM	1660	1660	254	IMPLEMENTED-IN-TREE + player IN-SIBLING	Selleo/mentingo + jcputney/scorm-again	MIT + MIT (1072 B)
+Selleo/mentingo	242a9324fe48	2026-10-10	main	4753	xAPI	1	1	1	ABSENT (hit is an HTML comment)	-	-

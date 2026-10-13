@@ -5,6 +5,59 @@ updated: 2026-10-13
 ---
 
 
+## 2026-10-13 — Pass 166
+
+### 🆕 🔴 What is new this week: a capability hit that means its own opposite
+
+🔴 **`Selleo/mentingo` — the only MIT-licensed LMS on this shelf — returns exactly `1` hit for
+`xapi` and exactly `1` for `lti` across `4 753` tracked paths. Both are the SAME line.**
+🔴 **It is `README.md:246`, inside an HTML comment, in Polish, and it reads *"STAGE 3 — to be
+confirmed by the team, DO NOT PUBLISH WITHOUT VERIFICATION: … pentest, xAPI/LTI, mapping to NIS-2 /
+art. 8e KSC, retention and data deletion."***
+🟢 **So the sole evidence for two standards across the whole repository is an unpublished internal
+roadmap item that upstream has explicitly flagged as unverified. That is not a weak claim — it is an
+ANTI-claim, and it makes the absence stronger than a plain `0` would.**
+🆕 🔴 **Recorded as a SIXTH false-positive class (`T187`). No boundary, binary or i18n guard catches
+it, because the text is prose and it is in the tree on purpose. The census must strip comments
+before counting a documentation hit.**
+
+### 🟢 No row enters or leaves the shelf — and that is the honest headline
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T04:46:17Z`. `0` of `12` HEAD
+shas moved since p165's closing sweep.** 🟢 **`6` rows are permissive and active (`≤5` days);
+`3` are past the `180`-day drop line; `1` of those still has no licence file at all.**
+🔴 **p166's agent sweep on the web channel found NOTHING to add: the query
+`top open source AI agents education 2026 github MIT` returned general-purpose and CODING agents
+only — `OpenClaw`, `OpenHands`, `SWE-agent`, `CrewAI`, `LangGraph` — and not one result evaluated
+tutoring, grading or student management.** 🔵 **Written down as a declared gap rather than left as
+silence: the sweep ran, and the listicle channel does not serve vertical work.**
+
+### 🟢 `PageLM`'s six citations, resolved — the feared dependency does not exist
+
+🟢 **`ACTION IQ` asked whether there is a permissive substitute for each of `PageLM`'s `6` pattern
+citations. All six were located and `0` of `6` are build dependencies.** 🟢 **Every one cites it as
+the licence gate's TEST FIXTURE: the proprietary body that opens with MIT's grant sentence verbatim
+at `8 563 B`.** 🟢 **`4` of `6` already carried the non-commercial warning inline; the other `2`
+were AMENDED this pass.**
+🔵 **Substituting a permissive repo here would have destroyed the citations, because the thing being
+illustrated is precisely non-permissiveness. An action can be discharged by showing its question was
+mis-framed.**
+
+### 🟡 One action HELD OPEN, with the reason measured
+
+🔴 **`ACTION IR` asked whether `T173`'s *"`1` of `12` HEAD shas per `37` minutes"* holds over a
+multi-hour interval. It is NOT dischargeable by a single pass: a pass is `~40`–`60` minutes of
+wall-clock, and p166 had `10` minutes between its own two sweeps.**
+🟢 **Reporting a one-hour window as *multi-hour* would have been exactly the instrument fault this
+shelf catches before publication, so it was not reported.**
+🟢 **Instead p166 commits a cross-pass baseline — every row's `t0` sha plus a UTC timestamp — so
+p167 can diff against it and compute a genuinely multi-hour, multi-pass churn rate.**
+🔵 **Partial datum, recorded for the next pass to use: p165's closing sweep → p166's opening sweep
+is `0` of `12` changed in `31` minutes; across the combined `~68`-minute window from p164's reading,
+`1` of `12` changed, and that one was `ai-shifu` — the single most active row. So *"`1` of `12` per
+`37` minutes"* was never a shelf-wide rate; it was one repository's commit cadence.**
+
+
 ## 2026-10-13 — Pass 165
 
 ### 🆕 🔴 What is new this week: the shelf caught ITSELF re-discovering six things it already knew

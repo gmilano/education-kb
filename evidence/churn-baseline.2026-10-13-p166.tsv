@@ -1,0 +1,25 @@
+# ACTION IR cross-pass baseline. p166 could NOT measure a multi-hour interval: the pass itself is ~40-60 min.
+# The NEXT pass must diff its own ls-remote sweep against the p166_t0_sha column below and against p166_t0_utc.
+repo	p164_sha	p165_sha	p166_t0_sha	p166_t0_utc	changed_p165_to_p166	head_date	age_days	p166_t1_sha	p166_t1_utc	changed_t0_to_t1
+ai-shifu/ai-shifu	2da98b19a15c	d88488cdc347	d88488cdc347	2026-10-13T04:46:17Z	no	2026-10-13	0	d88488cdc347	2026-10-13T05:07:50Z	no
+penecho/penecho	076c1ad54a85	076c1ad54a85	076c1ad54a85	2026-10-13T04:46:17Z	no	2026-10-12	1	076c1ad54a85	2026-10-13T05:07:50Z	no
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	d14130b6c47d	2026-10-13T04:46:17Z	no	2026-10-12	1	d14130b6c47d	2026-10-13T05:07:50Z	no
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	e0e347f7f399	2026-10-13T04:46:17Z	no	2026-10-11	2	e0e347f7f399	2026-10-13T05:07:50Z	no
+Selleo/mentingo	242a9324fe48	242a9324fe48	242a9324fe48	2026-10-13T04:46:17Z	no	2026-10-10	3	242a9324fe48	2026-10-13T05:07:50Z	no
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	6cf793bd868b	2026-10-13T04:46:17Z	no	2026-10-08	5	6cf793bd868b	2026-10-13T05:07:50Z	no
+CaviraOSS/PageLM	a6646794661b	a6646794661b	a6646794661b	2026-10-13T04:46:17Z	no	2026-10-08	5	a6646794661b	2026-10-13T05:07:50Z	no
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	f0142f28e8ed	2026-10-13T04:46:17Z	no	2026-10-08	5	f0142f28e8ed	2026-10-13T05:07:50Z	no
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	9c260890214d	2026-10-13T04:46:17Z	no	2026-09-21	22	9c260890214d	2026-10-13T05:07:50Z	no
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	7d9e9052bc5a	2026-10-13T04:46:17Z	no	2026-01-09	277	7d9e9052bc5a	2026-10-13T05:07:50Z	no
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	5c2f92416c04	2026-10-13T04:46:17Z	no	2025-11-13	334	5c2f92416c04	2026-10-13T05:07:50Z	no
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	ea29bcf196d2	2026-10-13T04:46:17Z	no	2025-09-30	378	ea29bcf196d2	2026-10-13T05:07:50Z	no
+# INTERVAL LEDGER (all measured by git ls-remote, the primary channel)
+# p164_sweep -> p165_sweep   37 min   1 of 12 changed (ai-shifu only)        [T173]
+# p165_sweep -> p166_t0      31 min   0 of 12 changed
+# p166_t0    -> p166_t1      21 min   0 of 12 changed
+# p165_sweep -> p166_t1      52 min   0 of 12 changed  (two independent sweeps)
+# p164_sweep -> p166_t1      89 min   1 of 12 changed
+# INSTRUMENT FAULT caught before publication: the first t0 capture wrote repo and sha on
+# ALTERNATING lines (git ls-remote --symref emits "ref:" and the sha as separate records).
+# A naive $1/$2 parse of that file reported 12 of 12 changed. Re-parsed with
+# awk '$2=="ref:"{r=$1;next} r!=""{print r"\t"$1;r=""}' the true answer is 0 of 12.

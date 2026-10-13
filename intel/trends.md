@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+### 1. 🆕 🔴 `T186` — the search channel has saturated on this shelf, and it is measurable — *Global, measured*
+
+🔴 **p166 ran the full eight-query sweep, globally and once per region, and `10` of the `11` terms it
+surfaced were already on the shelf — a `91%` re-derivation rate.** 🟢 **The code channel, over the
+same pass, re-derived `13` of `16` but produced `3` new measurements and `1` correction to a
+published claim.**
+
+| channel | re-derivation | new | what it produced at p166 |
+|---|---|---|---|
+| 🔴 **web / search** | 🔴 **`91%`** | `1` | 🟡 **the EU `Apply AI Alliance`, and nothing else** |
+| 🟢 **code / git** | 🟢 **`81%`** | `3` | 🟢 **`T179`–`T184`: the census, the unusable sibling, the shelf correction, the permissive OneRoster path, `gap 79`, three licence bands** |
+
+🔵 **This is a trend about the instrument, which at `166` passes is the trend that matters: a shelf
+this deep stops learning from the channel that any competitor also reads, and keeps learning from
+the one that requires a clone.** 🟢 **`T175` said *grep the shelf before measuring*; `T186` says
+*and when you do, expect the web to tell you nothing*.**
+
+### 2. 🆕 🔴 `T187` — the ANTI-CLAIM: a capability hit can be upstream telling you NO — *Global, measured*
+
+🔴 **`Selleo/mentingo` returns exactly `1` hit for `xapi` and exactly `1` for `lti` across `4 753`
+tracked paths. Both are the SAME line — `README.md:246` — inside an HTML comment, in Polish,
+reading *"STAGE 3 — to be confirmed by the team, DO NOT PUBLISH WITHOUT VERIFICATION: … pentest,
+xAPI/LTI, mapping to NIS-2 / art. 8e KSC, retention and data deletion."***
+
+🟢 **Three things follow, and the third is the trend:**
+1. 🟢 **The verdict is ABSENT, and it is now the strongest kind of absent — upstream has not
+   claimed the capability and has explicitly marked it unverified.**
+2. 🟢 **mentingo's real published interop claim is one accurate English sentence: *"SCORM 1.2
+   export."*** 🔵 **Upstream is being MORE careful than the ecosystem that summarises it.**
+3. 🆕 🔴 **A capability census must strip comments before counting a documentation hit.** 🔴 **This
+   is a sixth false-positive class and no boundary, binary or i18n guard touches it, because the
+   text is prose and it is in the repository deliberately.**
+
+🔵 **Why it generalises: the GitHub topic list, the vendor page and the README body are all channels
+this shelf already distrusts. The commented-out roadmap is a FOURTH documentation channel, it reads
+as a feature list to any grep, and it means the opposite.**
+
+### 3. 🆕 🔴 `T180` — the maintenance-first filter and the sibling probe pull in OPPOSITE directions — *Global, measured*
+
+🟢 **`P165-A` added the sibling probe to catch false absences, and it works: Moodle's OneRoster goes
+`ABSENT` → `IMPLEMENTED-IN-SIBLING` on one `ls-remote`.**
+🔴 **But the sibling it finds — `moodlehq/moodle-enrol_oneroster` — is `GPL-3.0` and `2 091` days
+stale, `11.6×` `P164-D`'s drop threshold.**
+
+🔵 **So the two guards this shelf added in consecutive passes systematically disagree, and the
+disagreement is the useful signal: the FN guard says *the capability exists*, the maintenance filter
+says *you cannot depend on it*. Both are true.** 🟢 **A census that reports only the first has
+handed the client a worse answer than one that reported a flat absence, because they will budget
+for an integration instead of a build.** 🟢 **`P166-A` STEP 7 makes running `P164-D` on every named
+sibling non-negotiable.**
+
+### 4. 🆕 🔴 `T184` — three published licence size bands were wrong, and correcting them made the test WORSE — *Global, measured*
+
+🔴 **Apache-2.0 is BIMODAL. Bodies carrying the *"APPENDIX: How to apply the Apache License"*
+section run ~`11.3`–`11.4 KB`; bodies ending at *"END OF TERMS AND CONDITIONS"* run ~`10.2 KB`.
+`Ed-Fi-Alliance-OSS/edfi-oneroster` is the latter at `10 173 B`, with `0` occurrences of
+`APPENDIX`.** 🔴 **GPL-3.0's observed value, `35 149 B`, sits `2 B` outside the published band and
+has now reproduced on two unrelated repositories a pass apart.** 🔴 **And the published
+*"GPL-3.0 vs AGPL-3.0, `11 B` apart"* adjacency is not reproduced by the bodies this shelf has
+actually read — observed GPL clusters at `35 149` and AGPL at `34 522`–`34 523`, about `626 B`
+apart.**
+🟢 **Every correction WIDENS a band or breaks an adjacency, so each one makes the size heuristic
+less usable and `P48`'s thesis — classify by the NAME LINE — stronger.**
+🔵 **The trend: on a shelf that body-reads licences for `166` passes, the published summary
+statistics drift away from the evidence unless something re-derives them. `T184` is the second
+pass in a row where a reproducibility check paid for itself.**
+
+### 5. 🟡 `T178` UNRESOLVED for a second pass — the Annex III date still has two incompatible stories — *EMEA, search-summary*
+
+| p165's reading | p166's sweep |
+|---|---|
+| 🟡 **`Regulation (EU) 2026/1744`, published `2026-07-24`, in force `2026-07-27`** | 🟡 **Council gave final green light to the Digital Omnibus, but the act *"awaits publication in the Official Journal"*** |
+
+🔴 **Both cannot be current.** 🟢 **`T178` is NOT promoted and stays `search-summary`.**
+🟢 **What is NOT in dispute, and is what an engagement should be priced against: the AI Office and
+national authorities began enforcing from `2026-08-02`; education is high-risk where it determines
+access to education or the course of a professional life, with exam scoring the Commission's own
+example; and the emotion-recognition ban in education is live on every reading.**
+🔵 **`T167`'s infrastructure explanation still holds — this shelf's document channel is secondary
+by construction, so an EU legal-publication question is exactly the kind it cannot close.**
+
+### 6. 🟢 `T188` — the secondary channel disagrees with the git primary again, on a field where the primary EXISTS — *Global, measured*
+
+🔴 **A p166 search summary reports `HKUDS/DeepTutor` as *"last updated Oct 12, 2026"*.** 🟢 **The
+git channel says HEAD `6cf793bd868b`, commit date `2026-10-08`, and the sha has not moved across
+p165's two sweeps and p166's.**
+🟢 **`T160`'s promotion rule resolves it without argument: a secondary claim is promotable only when
+a git-channel primary exists for the same field — and here one does, so the primary wins and
+`2026-10-08` stands.**
+🔴 **The same summary reports `DeepTutor` at *"~41.2k stars"*. No git-channel primary exists for
+stars, so it is NOT published — `T149` keeps the `★` column closed.**
+🔵 **Two claims from one source, one resolvable and one not, by a rule written three passes ago.
+That is the register doing its job.**
+
 ## Pass 165 — 2026-10-13
 
 ### 1. 🆕 🟢 `T177` — an exemption and a safe harbour are different things, and p164's Colorado lead had them confused — *North America, search-summary*

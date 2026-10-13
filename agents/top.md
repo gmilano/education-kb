@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+🟢 **Four actions registered by p165; `3` DISCHARGED with silent falsifiers and `1` HELD OPEN as
+NOT EXECUTABLE by a single pass — which is a finding about this register, not a failure to measure.**
+🆕 🟢 **No row enters or leaves the shelf this pass. Every change is a verdict, a licence or a
+correction.**
+[`evidence/capability-census.2026-10-13-p166.tsv`](../evidence/capability-census.2026-10-13-p166.tsv)
+[`evidence/shelf-first-hitrate.2026-10-13-p166.tsv`](../evidence/shelf-first-hitrate.2026-10-13-p166.tsv)
+[`evidence/churn-baseline.2026-10-13-p166.tsv`](../evidence/churn-baseline.2026-10-13-p166.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IP`** — `P165-A`'s census on Moodle + one permissive platform | 🟢 **DISCHARGED, falsifier SILENT. `4` verdict changes from the FN guards — but `2` of `3` guards did all the flipping** |
+| 🟢 **`ACTION IQ`** — resolve `PageLM`'s `6` pattern citations | 🟢 **DISCHARGED, falsifier SILENT — and the action's PREMISE was wrong. `0` of `6` are build dependencies** |
+| 🔴 **`ACTION IR`** — is `T173`'s churn rate representative over a MULTI-HOUR interval? | 🔴 **NOT DISCHARGED — HELD OPEN. A pass is `~40`–`60` min; the instrument needs hours. A cross-pass baseline is now committed so p167 CAN answer it** |
+| 🟢 **`ACTION IS`** — shelf-first discipline, measured | 🟢 **DISCHARGED, falsifier SILENT. `23` of `27` terms were already held — `85%`** |
+
+### 🟢 The agent shelf — maintenance and licence, re-measured at p166 `t0`
+
+🟢 **`12` of `12` rows re-verified by `git ls-remote` at `2026-10-13T04:46:17Z`. `0` of `12` HEAD
+shas moved since p165's closing sweep.** 🔴 **The `★` column stays closed (`T149`): a search
+summary this pass reported `DeepTutor` at *"~41.2k stars"*, which has no git-channel primary and so
+is NOT published (`T160`'s promotion rule).**
+
+| repo | licence | HEAD date | age | tags | latest tag |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` | `2026-10-13` | 🟢 **`0` d** | `43` | `v2.3.4` |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 `AGPL-3.0` | `2026-10-12` | 🟢 `1` d | `16` | `v1.4.0` |
+| 🟡 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` | `2026-10-12` | 🟢 `1` d | `42` | `v1.0.41` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` *(`1 074 B`)* | `2026-10-11` | 🟢 `2` d | `57` | `v0.27.0` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` *(`1 062 B`)* | `2026-10-10` | 🟢 `3` d | `118` | `v4.22.0` |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `2026-10-08` | 🟢 `5` d | `86` | `v1.6.14` |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** *(`8 563 B`)* | `2026-10-08` | 🟢 `5` d | 🔴 `0` | 🔴 — |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` *(`1 068 B`)* | `2026-10-08` | 🟢 `5` d | 🔴 `0` | 🔴 — |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` *(`1 070 B`)* | `2026-09-21` | 🟡 `22` d | `3` | `v1.8.1` |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` | `2026-01-09` | 🔴 **`277` d** | `2` | `v0.1.0` |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` *(`35 149 B`)* | `2025-11-13` | 🔴 **`334` d** | 🔴 `0` | 🔴 — |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO LICENCE FILE** | `2025-09-30` | 🔴 **`378` d** | `3` | `v2.7-Reboot` |
+
+🟢 **`6` rows are permissive and active (`≤5` d).** 🔴 **`3` are over the `180`-day drop line and
+`1` of those has no grant at all.** 🟡 **`PageLM` stays on the shelf as a NAMED CASUALTY of the
+licence gate, not as a candidate — and p166 amended the two citations that did not say so inline.**
+
+### 🆕 🟢 `T185` — `ACTION IQ`'s premise was wrong, and that is the useful part
+
+🔴 **The action asked: *"is there an MIT/Apache substitute for what each `PageLM` citation uses it
+for?"*** 🟢 **All `6` citations were located, and `0` of `6` use `PageLM` as a build dependency.**
+🟢 **Every one cites it as the licence gate's TEST FIXTURE — the proprietary body that opens with
+MIT's grant sentence verbatim at `8 563 B`.**
+
+| # | what the citation uses it for | substitute needed? | warning already inline? |
+|---|---|---|---|
+| 1 | the *"… Community License"* title trap | 🟢 **no** | 🟢 **yes — "non-commercial and REVOCABLE"** |
+| 2 | the DECLINED verdict in the four-value gate | 🟢 **no** | 🟢 **yes** |
+| 3 | body classifies permissive but is far too LARGE | 🟢 **no** | 🟡 **partial → 🟢 AMENDED by p166** |
+| 4 | the `NOASSERTION` high-value triage bucket | 🟢 **no** | 🟡 **partial → 🟢 AMENDED by p166** |
+| 5 | which shelf rows must go through the gate | 🟢 **no** | 🟢 **yes** |
+| 6 | the size-vs-family discriminator | 🟢 **no** | 🟢 **yes** |
+
+🟢 **So the feared structural dependency does not exist. A non-commercial repository can be cited
+`6` times by a shelf that depends on it `0` times — and substituting a permissive repo here would
+DESTROY the citations, because the thing being illustrated is precisely non-permissiveness.**
+🔵 **The lesson for the register: an action can be discharged by showing its question was
+mis-framed, and that outcome needs recording as loudly as a measurement.**
+[`evidence/pagelm-citations.2026-10-13-p166.tsv`](../evidence/pagelm-citations.2026-10-13-p166.tsv)
+
 ## Pass 165 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three DISCHARGED with silent falsifiers.**

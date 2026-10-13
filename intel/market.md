@@ -4,6 +4,151 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region.**
+🆕 🔴 **And the pass's most decision-relevant market result is about the CHANNEL, not the market:
+`10` of the `11` terms this web sweep produced were already on the shelf. The web channel has
+saturated. All four of p166's substantive findings came from the CODE channel.**
+🔴 **The market remains incoherent for a SEVENTEENTH pass, with `T168`'s named cause unchanged —
+the high estimates bundle corporate training with K-12 and higher education.**
+[`evidence/regional-sweep.2026-10-13-p166.tsv`](../evidence/regional-sweep.2026-10-13-p166.tsv)
+[`evidence/shelf-first-hitrate.2026-10-13-p166.tsv`](../evidence/shelf-first-hitrate.2026-10-13-p166.tsv)
+
+### 🆕 🔴 `T186` — the web channel is saturated at p166, measured
+
+| channel | terms probed | already on the shelf | genuinely new | re-derivation rate |
+|---|---|---|---|---|
+| 🔴 **web / search** | `11` | `10` | 🔴 **`1`** | 🔴 **`91%`** |
+| 🟢 **code / git** | `16` | `13` *(one of them held INCORRECTLY)* | 🟢 **`3`** | 🟢 **`81%`** |
+| **total** | **`27`** | **`23`** | **`4`** | **`85%`** |
+
+🟢 **The single new item the entire web sweep produced is the EU's `Apply AI Alliance`.** 🔴 **Every
+other instrument, statistic, repository and author it surfaced — `OATutor`, `Open TutorAI`, `CAHLR`,
+`RosarioSIS`, Idaho `SB 1227`, `H.R. 8747`, the Digital Omnibus, arXiv `2602.07176`, LATAM's
+`87% / 26%` gap, the `2027-12-02` Annex III date — was already here.**
+🔵 **The operational conclusion for whoever runs the next pass: another identical web sweep is
+near-zero marginal value. Spend the pass on trees.**
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **The strongest signal is REGULATORY DEMAND converging on things this shelf can already build.**
+🔴 **`~134` AI-in-education bills across `31` states this session** *(search-summary)*, and the
+named ones map one-to-one onto existing patterns:
+
+| instrument | what it demands | the pattern that answers it |
+|---|---|---|
+| 🔴 **Oklahoma + Maryland** — human oversight, no AI in high-stakes student decisions | 🟢 an auditable human-review path and an off switch | 🟢 **`P163-C`** *(off switch)* + 🟢 **`P164-C`** *(provenance port)* |
+| 🟢 **Colorado `SB 26-189`** — FERPA-compliant notice + human review DEEMED COMPLIANT, effective `2027-01-01` | 🟢 a documented review-and-correction process | 🟢 **`P165-B`** *(`T177`; this is a safe harbour, not an exemption)* |
+| 🔴 **California `AB 1159`** — bar student data from training AI models | 🟢 data-residency and retention controls | 🟢 **`P161-B`** *(retention)* + 🟢 **`P156-C`** |
+| 🟡 **`H.R. 8747`** K-12 AI Literacy and Readiness Act — cleared House committee `2026-07-21` | 🟡 federal funds usable for AI curriculum | 🟡 **committee stage only; a pipeline signal, not a budget** |
+| 🔴 **NYC** — one-year moratorium on student-facing AI through grade 8 | 🔴 **nothing to sell into K-8 there** | 🔴 **a procurement-blocking fact; qualify it before scoping** |
+
+🆕 🟢 **The new opportunity p166 creates here: OneRoster rostering is the de-facto district
+expectation in North America, and `P166-B` is the first composition on this shelf that delivers it
+with no copyleft obligation and no abandoned dependency.**
+🟡 **Adoption context: `60%` of US K-12 teachers used AI in 2024-25, `32%` at least weekly; faculty
+intent in the US and Canada DECLINED `9` points, `76%` → `67%`** *(search-summary, vendor
+aggregators — treat as rough).*
+
+### 🟢 EMEA
+
+🟢 **Enforcement machinery is now live: from `2026-08-02` the AI Office and national authorities
+began enforcing the AI Act** *(search-summary).* 🟢 **Education is named high-risk where it
+determines access to education or the course of a professional life, with exam scoring as the
+Commission's own example — which is exactly the graded path this shelf has been building for.**
+
+🔴 **The Annex III deadline conflict is UNRESOLVED for a second pass.** 🔴 **p165's `T178` reported
+`Regulation (EU) 2026/1744`, published `2026-07-24`, in force `2026-07-27`, moving standalone
+Annex III obligations to `2027-12-02`. p166's sweep returns a source saying the Council gave final
+green light to the Digital Omnibus but that the act *awaits publication in the Official Journal*.**
+🟢 **These cannot both be current. `T178` stays `search-summary` and is NOT promoted.**
+🟢 **The emotion-recognition ban in education is unaffected and live, on every reading.**
+
+🆕 🟢 **New EMEA instruments this pass** *(all search-summary)*: 🟢 **the Commission's updated
+ethical AI guidelines for education (`2026-05`)** 🟢 **· Council conclusions on a human-centred
+approach to AI in education (`2026-05-11`)** 🆕 🟢 **· the `Apply AI Alliance`, a provider /
+industry / public-sector / academia forum — the only genuinely new item in p166's whole web sweep.**
+
+🟢 **Opportunity:** 🟢 **`P165-B` on `OpenOLAT` remains the strongest EMEA build — `Apache-2.0`,
+Swiss-originated, LTI 1.3 and SCORM in-tree, and `o_ai_essay_correction` already persisting
+prompt-template version, content hash and tier.** 🟡 **Price the `2027-12-02` date as *do it
+properly*, not *do it yesterday* — but do not let the conflicting dates become a reason to wait,
+because the transparency and AI-literacy obligations are not the ones that moved.**
+
+### 🟡 APAC
+
+🟢 **Two dated statutes, both naming education, both now in force or imminent** *(search-summary)*:
+
+| jurisdiction | instrument | education status |
+|---|---|---|
+| 🟢 **South Korea** | AI Framework Act, in effect `2026-01` | 🟢 **education within *"high-impact"*.** 🟡 **MSIT signals `2026` as a pilot year with limited enforcement** |
+| 🟢 **Vietnam** | AI law, `2026-03-01`, EXTRATERRITORIAL | 🔴 **education in the high-risk list — automated assessment and behavioural monitoring named** |
+| 🟡 **Japan** | light-touch, voluntary governance | 🟡 no binding education obligation |
+| 🔴 **China** | algorithm filings, synthetic-content labelling, security review for public models | 🔴 **already enforced; a different compliance shape entirely** |
+
+🔴 **The political default is not uniform, and this matters for pipeline: Ipsos's Education Monitor
+2026 finds LOWER support for banning AI in schools across most Asian markets — with Australia and
+New Zealand the exception, showing HIGHER support for a ban.**
+🟢 **Opportunity:** 🟢 **Vietnam's extraterritorial reach plus a named high-risk education list
+makes `P16`'s conformity dossier the sharpest APAC offer, and South Korea's pilot year is the window
+to do it before enforcement bites.** 🟡 **Treat AU/NZ as restriction-first: lead with teacher-facing
+and administrative tooling, not student-facing AI.**
+🔴 **Declared gap: UNESCO's own framing is that adoption needs reliable IT infrastructure, internet
+access and teacher training — and this shelf still has no measured instrument for any of the three.**
+
+### 🟡 LATAM
+
+🟢 **The governance gap gets a SECOND independent measurement, and the two do not agree on method**
+*(search-summary)*:
+
+| source | finding | sample |
+|---|---|---|
+| 🟢 **UNESCO IESALC + UNU-IAS** | 🔴 **`87%` use AI in at least one area; `74%` in teaching and learning; only `26%` have a formal AI strategy** | `200` institutions, `19` countries |
+| 🟢 **Digital Education Council LATAM** | 🔴 **`79%` of faculty use AI; `88%` report *minimal to moderate* engagement** | faculty survey |
+
+🔴 **Different samples and methods — not comparable, and not to be averaged.** 🟢 **But they point
+the same way, and `P156-B` is built on exactly this gap: high adoption, near-absent governance.**
+
+🆕 🟢 **A new regional institution to route engagements through: UNESCO launched the
+Observatory on AI in Education for Latin America and the Caribbean on `2026-04-14`, with CAF,
+`CENIA` (Chile), `CETIC.br` (Brazil), ECLAC, Tecnológico de Monterrey, ProFuturo and Fundación
+Ceibal (Uruguay) among its partners.** 🟢 **UNESCO also signed with Tec de Monterrey, and a Mexico
+pilot runs with CONALEP and DGETI.**
+
+🟡 **Regulation is national and fragmented, not education-specific:** 🟢 **Uruguay first in the
+region to sign the Council of Europe Framework Convention on AI (`2025`)** 🟡 **· Colombia's
+`CONPES 4144` national AI policy (`2025-02`) — policy, not binding regulation** 🟡 **· Peru's risk
+classification plus regulatory sandboxes** 🟡 **· Mexico's federal AI bill still in the Senate.**
+🔴 **DECLARED GAP: p166's LATAM sweep returned NO education-specific AI regulation. National AI
+frameworks only.** 🔵 **Written down because an informed gap is information; silence would look
+identical to coverage.**
+🟢 **Opportunity:** 🟢 **`P156-B` (governance retrofit) and `P156-C` (offline / data residency)
+remain the LATAM-primary offers, and the Observatory's partner list is the shortest path to a
+reference engagement.**
+
+### 🟡 Global
+
+🔴 **DECLARED GAP — the agent sweep found NO open-source agent marketed for education.** 🔴 **The
+query `top open source AI agents education 2026 github MIT` returned general-purpose and CODING
+agents only — `OpenClaw`, `OpenHands`, `SWE-agent`, `CrewAI`, `LangGraph`, `OpenCode` — and not one
+result evaluated tutoring, grading or student management.** 🔵 **This is why this shelf's `12` rows
+were found on the code channel and not on the agent-listicle channel, and it is a standing reason to
+distrust *"top agents"* roundups for vertical work.**
+
+🔴 **DECLARED GAP — no SIS or ERP under `MIT` or `Apache-2.0`.** 🟢 **Confirms `P9`'s *"real hole"*
+for a fifth pass.**
+
+🟡 **Market figures, recorded but NOT promoted** *(all vendor-aggregator search-summary; `T168`'s
+bundling defect applies to every one)*: 🟡 **edtech `$199.74 B` (2025) → `$236.25 B` (2026)** 🟡 **·
+AI-in-education `~$6 B` (2024) → `~$32 B` (2030)** 🟡 **· North America `36%` of the global
+AI-in-education market at `$3.68 B` (2026)** 🟡 **· APAC CAGR `28.1%` (2026–2033)** 🔴 **· VC funding
+DOWN to `$1 B` in H1 2026, `−26%` YoY.**
+🔵 **The funding decline is the one figure here that would change a studio's posture, and it is the
+one with the weakest sourcing. Do not quote it to a client without a primary.**
+
 ## Pass 165 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region.**

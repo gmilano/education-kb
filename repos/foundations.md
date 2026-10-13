@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 166 — 2026-10-13
+
+🟢 **`ACTION IP` is DISCHARGED, falsifier SILENT: the false-NEGATIVE guards changed `4` verdicts
+across `2` platforms — but only `2` of the `3` guards did any flipping.**
+🆕 🔴 **The pass's sharpest result is a verdict that is YES and UNUSABLE at the same time: Moodle
+DOES get OneRoster, from a sibling plugin that is `GPL-3.0` and has not been touched in
+`2 091` days.**
+🆕 🔴 **And a claim this shelf itself published is CORRECTED: `enrol_oneroster` is not *"in-tree"*.**
+[`evidence/capability-census.2026-10-13-p166.tsv`](../evidence/capability-census.2026-10-13-p166.tsv)
+[`evidence/fn-guard-verdict-changes.2026-10-13-p166.tsv`](../evidence/fn-guard-verdict-changes.2026-10-13-p166.tsv)
+[`evidence/sibling-licences.2026-10-13-p166.tsv`](../evidence/sibling-licences.2026-10-13-p166.tsv)
+
+### 🟢 `T179` — the capability census, `2` platforms × `5` standards, every cell measured
+
+🟢 **Trees pinned before probing:** 🟢 **`moodle/moodle` HEAD `f20534726a59`, `2026-10-03`, default
+branch `main`, `67 589` tracked paths** 🟢 **· `Selleo/mentingo` HEAD `242a9324fe48`, `2026-10-10`,
+`main`, `4 753` paths.**
+
+| platform | standard | naive | guarded | paths | verdict | implementing repo | its licence |
+|---|---|---|---|---|---|---|---|
+| 🟡 `moodle/moodle` | 🔴 **OneRoster** | `0` | `0` | `0` | 🟡 **IMPLEMENTED-IN-SIBLING** | 🔴 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | 🔴 **`GPL-3.0`** (`35 149 B`) |
+| 🟡 `moodle/moodle` | 🔴 **Ed-Fi** | `0` | `0` | `0` | 🔴 **ABSENT** | — | — |
+| 🟡 `moodle/moodle` | 🟢 **LTI 1.3** | `3 472` | `3 415` | **`423`** | 🟢 **IMPLEMENTED-IN-TREE** | `moodle/moodle` | 🟡 `GPL-3.0` |
+| 🟡 `moodle/moodle` | 🟢 **SCORM** | `3 158` | `3 149` | **`166`** | 🟢 **IMPLEMENTED-IN-TREE** | `moodle/moodle` | 🟡 `GPL-3.0` |
+| 🟡 `moodle/moodle` | 🟢 **xAPI** | `409` | `406` | **`99`** | 🟢 **IMPLEMENTED-IN-TREE** | `moodle/moodle` | 🟡 `GPL-3.0` |
+| 🟢 `Selleo/mentingo` | 🔴 **OneRoster** | `0` | `0` | `0` | 🔴 **ABSENT** | — | — |
+| 🟢 `Selleo/mentingo` | 🔴 **Ed-Fi** | `0` | `0` | `0` | 🔴 **ABSENT** | — | — |
+| 🟢 `Selleo/mentingo` | 🔴 **LTI 1.3** | `1` | `1` | `1` | 🔴 **ABSENT — the hit is an ANTI-CLAIM** | — | — |
+| 🟢 `Selleo/mentingo` | 🟢 **SCORM** | `1 660` | `1 660` | **`254`** | 🟢 **IMPLEMENTED-IN-TREE**, player IN-SIBLING | `Selleo/mentingo` + [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **`MIT` + `MIT`** (`1 072 B`) |
+| 🟢 `Selleo/mentingo` | 🔴 **xAPI** | `1` | `1` | `1` | 🔴 **ABSENT — the hit is an ANTI-CLAIM** | — | — |
+
+🟢 **Where Moodle's hits actually live, because a count is not a location:**
+🟢 **LTI 1.3 — `public/lib/lti1p3` (`43`), `public/enrol/lti` (`19`), `public/mod/lti`** 🟢 **·
+SCORM — `public/mod/scorm` (`121`)** 🟢 **· xAPI — `public/lib/xapi` (`56`) plus
+`public/mod/h5pactivity` (`14`).** 🟢 **All code. The config-vs-code guard changed nothing on
+Moodle, which is itself the result: Moodle's three standards are implementations, not declarations.**
+
+### 🆕 🔴 `T180` — a verdict that is YES and UNUSABLE in the same breath
+
+🔴 **`moodlehq/moodle-enrol_oneroster` is the reason Moodle can claim OneRoster. Measured the moment
+it was named, with `P164-D`:**
+
+| field | measured | consequence |
+|---|---|---|
+| 🟢 existence | 🟢 **EXISTS** — `134` tracked paths | 🟢 the capability is real, and it is out of tree |
+| 🔴 **HEAD** | 🔴 **`b91b12857aac`, `2021-01-20`** | 🔴 **`2 091` days — `11.6×` the `180`-day drop threshold** |
+| 🔴 **licence** | 🔴 **`GPL-3.0`, body-read `35 149 B`** | 🔴 **`P37`'s stop-ship gate applies; no permissive path** |
+
+🟢 **Report the capability and its maintenance state together, in that order, always.**
+🔵 **A verdict of *"yes, via a plugin"* that omits *"last touched January 2021, and it is GPL"* is
+worse for a client than a flat *"no"* — because they budget for an integration instead of a build.
+`P166-A` STEP 7.**
+
+### 🆕 🔴 `T181` — a correction to this shelf, found by grepping the shelf FIRST
+
+🔴 **`agents/trending.md` has been carrying the phrase *"Moodle's in-tree `enrol_oneroster`"*.**
+🔴 **It is not in-tree. `moodle/moodle` returns `0` OneRoster hits across `67 589` paths, on the
+name probe AND on the language-independent `imsglobal.org/spec/oneroster` probe.**
+🟢 **`enrol_oneroster` is a separate repository under a different org (`moodlehq`, not `moodle`).**
+🔵 **This is `T142`'s out-of-repo class, recorded with the direction reversed: the shelf had the
+sibling and filed it as core.** 🟢 **Found by `ACTION IS`'s step 0, at a cost of one `grep`.**
+
+### 🆕 🟢 `T182` — the permissive OneRoster path exists, and the shelf already held it
+
+🟢 **`ACTION IP` leaves `3` of `3` recommended platforms with no OneRoster. The substitute was on
+the shelf at `89` hits before p166 measured anything:**
+
+| repo | licence | HEAD | age | paths | what it serves |
+|---|---|---|---|---|---|
+| 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`**, body-read **`10 173 B`** | `7442047368fa` | 🟢 **`1` d** | `261` | 🟢 **OneRoster 1.2 over `14` GET endpoints** |
+
+🟢 **`P166-B` composes it.** 🟡 **Scoping honesty: `14` GET endpoints is READ rostering. Write-back
+and the Ed-Fi ODS proper are a separate decision this shelf has NOT measured.**
+
+### 🆕 🟢 `T183` — `gap 79` CLOSED, by commit authorship rather than by guesswork
+
+🔵 **Open since p38: which of `Ed-Fi-Alliance-OSS/edfi-oneroster` and `CSR2017/edfi-oneroster` is
+upstream.**
+
+| repo | HEAD | date | HEAD commit author | paths | verdict |
+|---|---|---|---|---|---|
+| 🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster`** | `7442047368fa` | 🟢 **`2026-10-12`** | 🟢 **`CSR2017`** | **`261`** | 🟢 **UPSTREAM** |
+| 🟡 `CSR2017/edfi-oneroster` | `937248be66de` | `2026-09-22` | 🔴 **`dependabot[bot]`** | `252` | 🟡 **FORK** |
+
+🟢 **The mechanism, not just the dates: the Alliance copy is `21` days ahead with `9` more paths,
+and its newest commit is authored BY `CSR2017` — the individual commits INTO the Alliance repo.
+The personal copy's newest commit is a dependabot bump, which is what a fork on autopilot looks
+like.** 🟢 **Both are `Apache-2.0` at `10 173 B`, identical.** 🟢 **Depend on the Alliance repo.**
+
+### 🆕 🔴 `T184` — three published licence SIZE bands are wrong, and the corrections make the test LESS usable
+
+🔴 **`P48` publishes size bands as a family confirmer. p166 body-read a `10 173 B` Apache-2.0 and
+went looking:**
+
+| family | published band | measured on this shelf | outside? |
+|---|---|---|---|
+| 🔴 **Apache-2.0** | `11 357`–`11 358 B` | 🔴 **`10 173`** · `11 342` · `11 408` | 🔴 **all three** |
+| 🔴 **GPL-3.0** | `35 121`–`35 147 B` | 🔴 **`35 149`** *(on TWO repos)* | 🔴 **yes, by `2 B`** |
+| 🟢 AGPL-3.0 | `34`–`35 KB` | 🟢 `34 522`–`34 523` | 🟢 within |
+
+🟢 **Cause of the Apache outlier, confirmed not guessed: the `10 173 B` body contains `0`
+occurrences of `APPENDIX` and ends at *"END OF TERMS AND CONDITIONS"*.** 🟢 **Apache-2.0 is
+BIMODAL — with the *"APPENDIX: How to apply"* section it runs ~`11.3`–`11.4 KB`, without it
+~`10.2 KB`. Both are Apache-2.0.**
+🔵 **And `35 149 B` reproducing on a second, unrelated repository one pass later is the
+licence-reproducibility check working.**
+🟢 **Net effect: every correction here WIDENS a band, so `P48`'s own thesis — classify by the NAME
+LINE, never the size — comes out stronger.** [`evidence/licence-band-correction.2026-10-13-p166.tsv`](../evidence/licence-band-correction.2026-10-13-p166.tsv)
+
 ## Pass 165 — 2026-10-13
 
 🟢 **`ACTION IM` is DISCHARGED, falsifier SILENT: `P164-A`'s guards flipped a verdict on BOTH

@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 🆕 🟢 `P166-A` — the capability census, with the SIXTH false-positive class and the guard that FINDS the capability but cannot make it usable *(amends `P165-A`, p166 — Global)*
+
+🔵 **What changed from `P165-A`:** 🟢 **`P165-A` added false-NEGATIVE guards and asked whether they
+earn their keep. `ACTION IP` ran it on `moodle/moodle` (`67 589` paths) and `Selleo/mentingo`
+(`4 753` paths) and the answer is `2` of `3`.** 🔴 **It also found a sixth false-positive class that
+no boundary, binary or i18n guard catches, because the text is prose and it is in the repository on
+purpose.**
+
+### 🆕 🔴 The sixth false-positive class: the ANTI-CLAIM
+
+🔴 **`Selleo/mentingo` returns exactly `1` hit for `xapi` and exactly `1` for `lti` — the SAME
+line, `README.md:246`. It is inside an HTML comment, in Polish, and it reads:**
+
+> `<!-- ETAP 3 - do potwierdzenia przez zespół, NIE publikować bez weryfikacji: … pentest,`
+> `xAPI/LTI, mapowanie na NIS-2 / art. 8e KSC, retencja i usuwanie danych. -->`
+
+🟢 **“STAGE 3 — to be confirmed by the team, DO NOT PUBLISH WITHOUT VERIFICATION.”**
+🔴 **So the only hit for two standards across the whole tree is an unpublished internal roadmap item
+that upstream has explicitly marked as unverified.** 🔵 **This is not a weak claim. It is an
+ANTI-claim: upstream is telling you the capability is not there.**
+
+| guard | what it kills | p166 status |
+|---|---|---|
+| 🟢 `\b` word boundaries | 🔴 kebab-case collisions — 🆕 **`labeled-field` ×`457` in Moodle, `changed-files`, `selected-file`, `localized-field` in mentingo** | 🆕 🟢 **`510` of `514` literal `ed-fi` hits on Moodle are ONE token; the guard takes both trees to `0`** |
+| 🟢 `grep -I` | 🔴 raw bytes in assets | 🟢 kept |
+| 🟢 `--exclude='*.po'` | 🔴 i18n catalogue collisions | 🟢 kept |
+| 🟢 `--exclude-dir={node_modules,vendor,build,dist}` | 🔴 vendored bundles | 🟢 kept |
+| 🆕 🔴 **strip HTML/code COMMENTS before counting a doc hit** | 🆕 🔴 **the anti-claim** | 🆕 🟢 **flipped `2` mentingo verdicts** |
+
+🆕 🔴 **And note WHERE p165's and p166's collisions differ. p165 found camelCase and underscore
+tokens (`ableExtendedFilter`, `uploadedFile`, `lastModifiedField`); p166 found kebab-case
+(`labeled-field`, `changed-files`). The class spans at least three naming conventions and the
+DOMINANT token is different in every codebase**, so a reviewer who memorised p165's token list
+would not have recognised Moodle's. 🟢 **Never carry a token denylist between repositories; carry
+the GUARD.**
+
+### 🟢 Which false-negative guard earned its keep — `2` of `3`
+
+| guard | verdicts changed | the finding |
+|---|---|---|
+| 🔴 **spec-URL probe** | 🔴 **`0`** | 🔵 **It CORROBORATED every verdict and flipped none. `imsglobal.org/spec/lti` ×`287` and `purl.imsglobal.org` ×`441` on Moodle, where the name probe had already answered; `imsglobal.org/spec/oneroster` ×`0` and `ed-fi.org` ×`0`, which is an absence confirmed on a second, language-independent channel.** 🟢 **Keep it — a corroborated absence is worth more to a client than a bare one** |
+| 🟢 **sibling probe** | 🟢 **`2`** | 🟢 **`moodlehq/moodle-enrol_oneroster` EXISTS. Moodle's OneRoster goes ABSENT → IMPLEMENTED-IN-SIBLING. And mentingo's SCORM PLAYER is `jcputney/scorm-again` (MIT), pinned `3.0.4`** |
+| 🟢 **config-vs-code split** | 🟢 **`2`** | 🟢 **mentingo's xAPI and LTI 1.3 go from *"1 hit, indeterminate"* to ABSENT-with-an-anti-claim. On Moodle it changed nothing: the hits are in `public/lib/lti1p3`, `public/mod/scorm`, `public/lib/xapi` — code, not manifests** |
+
+🟢 **`ACTION IP`'s falsifier is SILENT: `4` verdict changes across `2` guards.**
+🔵 **But `T176`'s lesson repeats with a new face — the guard that earns nothing on one axis
+(spec-URL) is the one that makes an ABSENCE defensible, which is a different kind of value from
+flipping a verdict.**
+
+### 🆕 🔴 STEP 7, new and non-negotiable: run `P164-D` on the SIBLING, immediately
+
+🔴 **The sibling probe is the guard most likely to flip a verdict TO a capability — and that is
+exactly when it is most dangerous, because a flip reads like good news.**
+
+🟢 **`moodlehq/moodle-enrol_oneroster`, measured the moment it was named:**
+
+| field | value | consequence |
+|---|---|---|
+| 🟢 existence | 🟢 **EXISTS**, `134` tracked paths | 🟢 the capability is real |
+| 🔴 **HEAD date** | 🔴 **`2021-01-20`** | 🔴 **`2 091` days stale — `11.6×` `P164-D`'s `180`-day threshold** |
+| 🔴 **licence** | 🔴 **`GPL-3.0`, `35 149 B` body-read** | 🔴 **no permissive path, and `P37`'s stop-ship gate applies** |
+
+🔴 **So Moodle's OneRoster verdict is IMPLEMENTED-IN-SIBLING and UNUSABLE in the same breath.**
+🟢 **Report both, in that order, always.** 🔵 **A verdict of *"yes, via a plugin"* that omits
+*"last touched in January 2021, and it is GPL"* is worse than a verdict of *"no"*, because the
+client budgets for integration instead of for a build.**
+
+🟢 **Deliverable: the per-platform matrix of `P165-A`, plus a SIBLING row carrying HEAD date, age in
+days, tracked paths and licence family for every sibling named.** 🟢 **Effort: unchanged, `2`–`4`
+days for a five-platform landscape.**
+
+---
+
+## 🆕 🟢 `P166-B` — OneRoster rostering on a PERMISSIVE licence, for a platform that has none *(new, p166 — Global; strongest in North America)*
+
+🔵 **The problem this solves:** 🔴 **`P165-B` priced OneRoster rostering as *"bespoke, never
+assume"* because OpenOLAT measured `0`. `ACTION IP` now measures `0` in `moodle/moodle` too, and
+mentingo's `0` as well — so `3` of the `3` platforms this shelf recommends have NO OneRoster.**
+🔴 **The one Moodle plugin that does it is `GPL-3.0` and `2 091` days stale.**
+🟢 **But the shelf already held the answer, and nobody had composed it: `ACTION IS` found it on
+the shelf at `89` hits before p166 measured anything.**
+
+| layer | choice | licence | measured basis |
+|---|---|---|---|
+| 🟢 **OneRoster server** | 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`**, body-read `10 173 B` | 🟢 **HEAD `7442047`, `2026-10-12` — `1` day old. `261` tracked paths. Serves **OneRoster 1.2** over `14` GET endpoints** |
+| 🟢 **LMS / system of record** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **`Apache-2.0`** | 🟢 **LTI 1.3 in-tree, `145` files / `18 067` LOC (`T171`)** |
+| 🟡 **or, if Moodle is already deployed** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`GPL-3.0`** | 🟢 **LTI 1.3 `423` paths, SCORM `166`, xAPI `99` — all in-tree (p166)**. 🔴 **OneRoster and Ed-Fi `0`** |
+| 🟢 **content interop** | 🟢 **SCORM, in-tree on both** | 🟢 — | 🟢 **Moodle `public/mod/scorm` `121` paths; OpenOLAT `65` Java files** |
+| 🔴 **do NOT use** | 🔴 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | 🔴 **`GPL-3.0`** | 🔴 **`2 091` days stale. `P164-D` says drop it** |
+
+🟢 **Wiring:** 🟢 **(1) stand `edfi-oneroster` up as the rostering API in front of the district's
+system of record — it is Apache-2.0, so it can be relicensed into a client product; (2) the LMS
+consumes rosters from it over OneRoster 1.2 rather than through a platform plugin, which keeps the
+rostering surface OUTSIDE the GPL boundary (`P156-A`); (3) LTI 1.3 carries tools and grade
+passback, in-tree on both candidate platforms; (4) `P164-C`'s provenance port and `P163-C`'s off
+switch ship with any evaluative AI, not after.**
+
+🟢 **Why it holds up in a room:** 🟢 **it is the first composition on this shelf that gives a client
+OneRoster rostering with no copyleft obligation and no abandoned dependency.** 🔵 **Strongest in
+North America, where OneRoster is the de-facto district rostering expectation and where Oklahoma's
+and Maryland's human-oversight bills and Colorado `SB 26-189`'s safe harbour (`T177`) all land on
+the same build.**
+🟡 **Honest scoping note: `edfi-oneroster` serves `14` GET endpoints — this is READ rostering.**
+🔴 **Write-back, and Ed-Fi ODS itself, are a separate decision this shelf has not measured.**
+🟢 **Effort: `4`–`6` weeks for read rostering into an existing LMS.**
+
+---
+
 ## 🆕 🟢 `P165-A` — the capability census, corrected for BOTH its biases *(amends `P164-A`, p165 — Global)*
 
 🔵 **The problem this solves:** 🟢 **`P164-A` guarded against FALSE POSITIVES and was right to —
@@ -1240,6 +1348,11 @@ the pairs that matter most to a studio
 | 🔴 **Apache-2.0 vs ECL-2.0** | 10 982 *(and 10 227–11 408 across Apache bodies)* vs **11 120** | 🔴 **138 B** — 🔴 **and the Apache range BRACKETS ECL entirely** | 🔴 ECL-2.0's narrowed patent grant |
 | 🔴 **GPL-3.0 vs AGPL-3.0** | 35 147 vs **35 136** | 🔴 **11 B** | 🔴 **"Network use counts as distribution"** |
 
+🆕 🔴 **p166 footnote on the `11 B` figure:** 🔴 **the canonical texts may sit `11 B` apart, but the
+bodies THIS SHELF has actually body-read do not reproduce that adjacency — observed GPL-3.0 clusters
+at `35 149 B` and observed AGPL-3.0 at `34 522`–`34 523 B`, about `626 B` apart.**
+🟢 **Do not build a discriminator on either number.** 🔵 **Read the name line.**
+
 ### The recipe
 
 **Inputs:** a repository slug. **Cost:** one `curl`.
@@ -1271,7 +1384,8 @@ the pairs that matter most to a studio
      `frappe/education` = **19 B** `License: GNU GPL V3`; `24kchengYe/human-skill-tree` =
      **1 134 B** AGPL-3.0. 🔴 **Neither is classifiable by any detector, GitHub's included.**
    - 🔴 **Body that classifies as a permissive family but is far too LARGE → a proprietary
-     licence wearing a permissive opening** (`P411`: `PageLM`, 8 563 B "MIT").
+     licence wearing a permissive opening** (`P411`: `PageLM`, 8 563 B "MIT" —
+     🔴 **NON-COMMERCIAL and REVOCABLE; amended inline by `ACTION IQ`, p166**).
    - 🔴 **A size inside the right band proves nothing** — that is the whole point of this gate.
 5. 🟢 **Then run `P47`**: the root grant may be a property of the PATH. 🔵 **Two instances now
    — `scibly-dev/scibly` (`ee/` proprietary) and `openeducat/openeducat_erp`, whose own
@@ -1365,7 +1479,8 @@ session. 🟢 **So the API tells you WHICH bodies to read, and the body channel 
      before you quote it (`P38`).
    - 🟡 **`"spdx_id": "NOASSERTION"`** → 🟢 **a licence file EXISTS and could not be matched.
      THIS IS THE HIGH-VALUE BUCKET.** Every bespoke, open-core and proprietary-masquerading
-     licence this shelf has been burned by lands here: `PageLM` (`P411`), `scibly` (`T92`).
+     licence this shelf has been burned by lands here: `PageLM` (`P411` —
+     🔴 **NON-COMMERCIAL and REVOCABLE; amended inline by `ACTION IQ`, p166**), `scibly` (`T92`).
      🔴 **Read the body. Always.**
    - 🔴 **the `license` key ABSENT** → no licence file at all. 🔴 **No grant: do not ship.**
      3 of 3 such rows were confirmed by probing 8 paths each this pass.
@@ -1489,7 +1604,16 @@ need the body** (`P45`).
    🔴 **An AGPL body contains the string `GNU GENERAL PUBLIC LICENSE` in its own preamble**,
    so a naive marker order reads `canvas-lms` as GPL. Pin the order with a test.
 4. 🟢 **Check the body SIZE against the family.** MIT ≈ **1 062–1 105 B**, Apache-2.0 ≈
-   **11 357–11 358 B**, GPL-3.0 ≈ **35 121–35 147 B**, AGPL-3.0 ≈ **34–35 KB**.
+   🆕 🔴 **CORRECTED by p166 — the bands published here were too narrow and this shelf's own
+   evidence already contradicted them.** 🟢 **Measured, body-read, on this shelf:**
+   Apache-2.0 = **10 173 B** *(appendix-less variant — `edfi-oneroster`)* **· 11 342 B · 11 408 B**;
+   GPL-3.0 = **35 149 B** *(reproduced on TWO repositories: `tutor-gpt` p165, `moodle-enrol_oneroster`
+   p166)*; AGPL-3.0 = **34 522–34 523 B**.
+   🔴 **The Apache-2.0 spread is `1 235 B` wide and BIMODAL: bodies that carry the
+   *"APPENDIX: How to apply the Apache License"* section run ~`11.3`–`11.4 KB`; bodies that end at
+   *"END OF TERMS AND CONDITIONS"* run ~`10.2 KB`. Both are Apache-2.0.**
+   🔵 **Which is the point of this gate: these corrections make the size test LESS usable, not
+   more, and `P48`'s thesis — classify by the NAME LINE — is strengthened by every one of them.**
    🔴 **A 1 070-byte file that classifies MIT is probably MIT; an 8 563-byte one that
    classifies MIT is `PageLM`** (`P411`) — a proprietary licence opening with the MIT grant
    verbatim. 🔴 **And a ~20-byte file is a GRANT BY REFERENCE** (`frappe/education`:

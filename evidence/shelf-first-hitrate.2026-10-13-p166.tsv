@@ -1,0 +1,28 @@
+channel	term_probed	shelf_held_BEFORE_measuring	shelf_hits	status	note
+code	moodle x OneRoster	YES-BUT-WRONG	1	HELD-INCORRECTLY	agents/trending.md:2434 called it "Moodle's in-tree enrol_oneroster" - it is NOT in-tree (0 of 67589 paths)
+code	moodle x Ed-Fi	no	0	NEW	-
+code	moodle x LTI 1.3	YES	32	HELD	mod/lti 254 files, enrol/lti+auth/lti 154, lib/lti1p3
+code	moodle x SCORM	YES	11	HELD	226 paths published earlier
+code	moodle x xAPI	YES	21	HELD	public/lib/xapi, 78 paths
+code	mentingo x OneRoster	no	0	NEW	-
+code	mentingo x Ed-Fi	no	0	NEW	-
+code	mentingo x LTI 1.3	YES	33	HELD	ACTION HR falsifier fired - published ABSENT
+code	mentingo x SCORM	YES	39	HELD	T135: 119 files, scorm-export-generator + runtime
+code	mentingo x xAPI	YES	25	HELD	T127 amended - topic claim unsupported
+code	moodlehq/moodle-enrol_oneroster	YES	1	HELD	existence held; characterisation wrong
+code	jcputney/scorm-again	YES	55	HELD	MIT, 3.0.4 pinned
+code	Ed-Fi-Alliance-OSS/edfi-oneroster	YES	89	HELD	Apache-2.0, OneRoster 1.2, 14 GET endpoints
+code	ed-fi collision class	YES	n/a	HELD	T170 - extended by p166 to kebab-case
+code	PageLM 6 pattern citations	YES	6	HELD	all six located
+code	Apache-2.0 / GPL-3.0 size bands	YES	n/a	HELD	published in patterns.md:1492 - CORRECTED by p166
+web	OATutor	YES	146	HELD	-
+web	Open TutorAI	YES	10	HELD	-
+web	CAHLR	YES	101	HELD	-
+web	RosarioSIS	YES	98	HELD	-
+web	Idaho SB 1227	YES	41	HELD	-
+web	H.R. 8747 K-12 AI Literacy	YES	52	HELD	-
+web	EU Digital Omnibus	YES	79	HELD	-
+web	arXiv 2602.07176 Open TutorAI	YES	4	HELD	-
+web	LATAM 87% / 26% governance gap	YES	n/a	HELD	P156-B is built on it
+web	Annex III 2027-12-02	YES	n/a	HELD	T178 / T163
+web	EU Apply AI Alliance	no	0	NEW	the ONLY genuinely new item the whole web sweep produced

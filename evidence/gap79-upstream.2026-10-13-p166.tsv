@@ -1,0 +1,3 @@
+repo	head_sha	head_date	head_commit_author	tracked_paths	licence_bytes	verdict
+Ed-Fi-Alliance-OSS/edfi-oneroster	7442047368fa	2026-10-12	CSR2017	261	10173	UPSTREAM - 21 d ahead, 9 more paths, and its HEAD is authored BY CSR2017
+CSR2017/edfi-oneroster	937248be66de	2026-09-22	dependabot[bot]	252	10173	FORK - behind, and its HEAD is a dependabot commit

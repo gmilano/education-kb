@@ -1,0 +1,11 @@
+fn_guard	platform	standard	verdict_WITHOUT_guard	verdict_WITH_guard	changed	evidence
+spec-URL probe	moodle/moodle	LTI 1.3	IMPLEMENTED-IN-TREE	IMPLEMENTED-IN-TREE	no	imsglobal.org/spec/lti x287; purl.imsglobal.org x441 - corroborates, does not flip
+spec-URL probe	moodle/moodle	OneRoster	ABSENT	ABSENT	no	imsglobal.org/spec/oneroster x0 - corroborates the in-tree absence
+spec-URL probe	moodle/moodle	Ed-Fi	ABSENT	ABSENT	no	ed-fi.org x0 - corroborates
+spec-URL probe	moodle/moodle	SCORM+xAPI	IMPLEMENTED-IN-TREE	IMPLEMENTED-IN-TREE	no	adlnet.gov x23
+spec-URL probe	Selleo/mentingo	all five	unchanged	unchanged	no	imsglobal.org x0, ed-fi.org x0, adlnet.gov x0 - no IMS surface at all
+sibling probe	moodle/moodle	OneRoster	ABSENT	IMPLEMENTED-IN-SIBLING	YES	moodlehq/moodle-enrol_oneroster EXISTS (134 paths, GPL-3.0, HEAD 2021-01-20)
+sibling probe	Selleo/mentingo	SCORM	IMPLEMENTED-IN-TREE	IMPLEMENTED-IN-TREE + player IN-SIBLING	YES	jcputney/scorm-again MIT, HEAD 2026-10-09, pinned 3.0.4 in apps/web/package.json
+config-vs-code split	Selleo/mentingo	xAPI	1 hit - indeterminate	ABSENT (anti-claim)	YES	sole hit is README.md:246 inside an HTML comment marked NIE publikowac bez weryfikacji
+config-vs-code split	Selleo/mentingo	LTI 1.3	1 hit - indeterminate	ABSENT (anti-claim)	YES	same line, same HTML comment
+config-vs-code split	moodle/moodle	LTI/SCORM/xAPI	IMPLEMENTED-IN-TREE	IMPLEMENTED-IN-TREE	no	hits are in public/lib/lti1p3, public/mod/scorm, public/lib/xapi - code, not manifests

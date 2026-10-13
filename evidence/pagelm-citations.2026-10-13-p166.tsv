@@ -1,0 +1,7 @@
+n	file	line	what_the_citation_USES_PageLM_FOR	is_it_a_build_dependency	substitute_needed	warning_already_inline	action
+1	compose/patterns.md	954	negative example: a licence titled "... Community License" opening with MIT's grant sentence	no	no	YES - "non-commercial and REVOCABLE"	none
+2	compose/patterns.md	1058	negative example: the DECLINED verdict in a four-value licence gate	no	no	YES - "the author states private, personal-use or non-commercial"	none
+3	compose/patterns.md	1274	negative example: body classifies permissive but is far too LARGE	no	no	PARTIAL - says "proprietary licence wearing a permissive opening", not non-commercial	AMEND - add non-commercial + revocable
+4	compose/patterns.md	1368	negative example: the NOASSERTION high-value triage bucket	no	no	PARTIAL - says only "burned by"	AMEND - add non-commercial + revocable
+5	compose/patterns.md	1457	negative example: which shelf rows must go through the gate	no	no	YES - "a proprietary licence opening with the MIT grant verbatim"	none
+6	compose/patterns.md	1494	negative example: size-vs-family discriminator	no	no	YES - "a proprietary licence opening with the MIT grant"	none
