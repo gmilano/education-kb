@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🔵 **Eight trends. Six are new this pass, one is carried and labelled as such, and the first is
+a finding about this KB's own research method rather than about education.**
+🟢 **Every trend below is labelled by the evidence it rests on: `CLONED` *(first-hand, measured in
+a tree)* or `SECONDARY` *(search-index summary, never read from its own page — `T309`)*.**
+
+### 🆕 🔴 1. A secondary channel can be months behind a fact this KB already holds — `SECONDARY`
+
+🔵 **`ACTION LW` asked the search channel about EU Article `50` guidance. What came back, in
+October `2026`, described the Annex III education deferral to `2` December `2027` as *"pending
+formal adoption and publication in the Official Journal"*.** 🟢 **This KB settled that at p180:
+the omnibus was ADOPTED as **Regulation (EU) `2026/1744`**, signed `8` July `2026`, OJ `24` July
+`2026`, in force `27` July `2026`.** 🆕 🔵 **`T312`: a secondary source's *"pending"* is not
+evidence of pending — it is evidence of when the page was written.**
+
+🔴 **The trend, and it is about research practice rather than about education: law-firm and
+tracker commentary is the fastest channel to FIND a regulatory fact and an unreliable one for its
+STATUS.** 🟢 **A studio that re-researches a date it already holds will often make its own record
+worse.** 🔵 **Consequence for this file: the regulatory calendar in
+[`intel/market.md`](market.md) is unchanged this pass, and the pass's contribution to it is
+CORROBORATION plus three procedural facts, not a correction.**
+
+### 🆕 🔴 2. *"Educational platform"* now often means a chat app with education in the directory names — `CLONED`
+
+🔵 **Three independent instances now, all measured in trees rather than inferred:**
+
+| row | what it is called | what its SCHEMA models |
+|---|---|---|
+| 🔴 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | *"AI-powered educational platform"* | 🔴 `chats`, `files`, `knowledge_bases`, `feedbacks`, `users` — **`10` tables, `0` courses**. `learning/courses/` is a `30`-byte docstring and `MIGRATION.md` names the mechanism: a renamed OpenWebUI |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | *"AI tutor powered by Theory-of-Mind reasoning"*, `~903`★ | 🔴 **`users`, `customers`, `products`, `prices`, `subscriptions`** — a Stripe schema |
+| 🔴 `plataforma-agentes-ia` *(p182)* | *"educational agent platform"* | 🔴 a CRM |
+
+🆕 🔵 **The trend has a cause worth naming: a chat interface plus a vector store is a weekend, and
+a course/enrollment/assessment model is a quarter.** 🟢 **So the market fills with the former
+wearing the latter's vocabulary.** 🔵 **`T310`, promoted this pass from observation to structural
+claim: the published layer and the deciding layer are disjoint, and the ENTITY LIST is the one
+layer that cannot be renamed into existence.** 🟢 **Screening rule: count tables before reading
+prose.**
+
+### 🆕 🔴 3. An aggregator can tell you what a repo DOES and never what you may DO with it — `CLONED`
+
+🔵 **`ACTION LR` finished at `n=7`: `4` blind verdicts overturned by reading, and `4` of `4`
+overturns were on the LICENCE. Grade predictions went `3`/`3` this pass.** 🆕 🔵 **`T311`: the
+published layer predicts capability, not grant.** 🔴 **The clearest case is the `900`★ row whose
+aggregator listings print a star count, a last-push date and a shields licence BADGE, while the
+payload is `GPL-3.0` at `35 149` B.** 🟢 **Trend for anyone building a shelf: star-count
+directories are getting better at discovery and are no evidence at all about licensing.**
+
+### 🆕 🟡 4. Open core is arriving in education OSS, and it is invisible from a clone — `CLONED` + `SECONDARY`
+
+🔵 **Two of this KB's platform rows now declare a proprietary edition of the same codebase:**
+`open-tutor-ai-CE` *(README: *"the foundation for a proprietary Enterprise Edition"*, offering
+theming, SLA, LTS *"and more"*)* and `openeducat_erp` *(free self-hosted Community Edition against
+paid Enterprise staff seats)*. 🟢 **Neither GATES anything measurable — `ACTION LT` found `0`
+licence-key, entitlement or feature-flag hits across `4 702` files.** 🔴 **The exposure is
+governance, not code: the holder's incentive is the other edition, and the next release is their
+decision.** 🆕 🔵 **And the channel problem is the real trend: an open-core edition cannot be seen
+in a clone, so the one axis that matters here is the one axis `git clone` cannot measure.**
+
+### 🆕 🔴 5. The licence on the code is not the licence on the corpus — `CLONED`
+
+🔵 **`Priyamakeshwari/TeachGPT` is cleanly `MIT` *(`1 057` B, full text)* and ships
+`db/chroma.sqlite3` with its HNSW index binaries, built from a commercial textbook committed at
+`documents/Machine - Learning - Tom Mitchell.pdf`.** 🔴 **A vector index is a derivative of its
+corpus, and `MIT` grants nothing over a publisher's book.** 🟢 **Trend: as RAG becomes the default
+education architecture, prebuilt indexes ship inside repositories, and the second grant is never
+in `LICENSE`.** 🔵 **Check for a committed index, corpus or checkpoint before quoting a licence.**
+
+### 🆕 🔴 6. *"Agentic AI in education"* has stopped being a measurable category — `SECONDARY`
+
+🔴 **One house prices agentic AI in education and learning technologies at `$2.1` B for `2026` at a
+`4.5`% CAGR, while the broader category is quoted at `30`%+ by several.** 🔵 **A `4.5`% CAGR
+describes a mature niche; a `30`% CAGR describes a land grab. The gap is definitional, not
+empirical.** 🟢 **Trend with a defence: ask which definition a number priced; if the source cannot
+say, discard it.** 🔴 **The `2026` market-size band across four houses is now `$9.58` B–`$11.4` B,
+and the `2025` band `$6.4` B–`$8.3` B — the houses disagree about the DIRECTION of the step into
+the current year *(`T306`)*.**
+
+### 🟢 7. In LATAM the students have adopted and the institutions have not integrated — `SECONDARY`, carried
+
+🔵 **Carried from earlier passes, not new this pass, and repeated because it is the single most
+useful framing this KB has for a LATAM engagement.** 🟢 **`92`% of LATAM students use an AI tool
+regularly; `30`% of students and faculty think their university integrates AI effectively**
+*(Digital Education Council with Tecnológico de Monterrey)*. 🔵 **With `87`% of `200` institutions across `19` countries using AI somewhere and
+`26`% holding a formal framework** *(UNESCO IESALC)*, **and the new application breakdown:
+teaching and learning `73.5`%, research `57.0`%, administration `34.1`%, extension `20.0`%.**
+🟢 **Trend: the LATAM engagement is institutional, not persuasive — governance, frameworks and
+integration, not adoption.** 🔵 **The regional institutional layer is forming to match: the UNESCO–CEPAL
+LATAM-and-Caribbean AI-in-education Observatory, April `2026`** *(carried)*. 🆕 🟡 **New this
+pass, as scale rather than detail: `716` AI regulatory instruments across `23` countries and
+territories** *(Universidad de los Andes)* — **`0` of them education-specific.**
+🔴 **Supply is still `0` rows, by measurement.**
+
+### 🆕 🟢 8. The audit record is becoming the differentiator, and it is portable — `CLONED`
+
+🔵 **North American human-oversight expectations and EU Annex III documentation requirements want
+the same artefact: a durable record of what an agent did, under which rule, that cannot be quietly
+edited.** 🟢 **`ACTION LV` ported one from
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) *(`MIT`)* and it runs: `18` checks
+green on stdlib `sqlite3`** — see
+[`compose/code/agent-tool-receipts-port/`](../compose/code/agent-tool-receipts-port/README.md).
+🆕 🔴 **And the port found two things reading could not.** 🔴 **SQLite's `foreign_keys` pragma is
+OFF by default, so a correct `ON DELETE RESTRICT` schema audits NOTHING until a connection opts
+in — the orphan is reproducible.** 🔴 **And the asymmetry: the policy side is `RESTRICT` while the
+receipt side is `CASCADE`, so deleting a parent run deletes the evidence that an agent applied the
+rule.** 🟢 **Trend and the lesson under it: *"we have audit tables"* is a claim about a schema;
+*"the record survives a delete"* is a claim about a deployment, and only the second one is worth
+anything to a regulator.**
+
 ## Pass 182 — 2026-10-13
 
 🆕 🟢 **p181 found that engagement-readiness runs OPPOSITE to ★. p182 adds the layer underneath

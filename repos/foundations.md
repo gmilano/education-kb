@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🟢 **`T309` was re-tested on a channel p182 never used, and it HOLDS — which matters, because a
+thesis about an environment should not rest on one tool.**
+
+🔵 **p182 established that the fetch channel resolves GitHub-family hosts only, by trying `7`
+non-GitHub hosts through the fetch TOOL. 🆕 This pass ran the census again through plain `curl` in
+a shell — a different code path with a different resolver — and added one more non-GitHub host on
+the fetch tool.**
+
+| channel, measured this pass | result | what it means |
+|---|---|---|
+| 🔴 `curl -sI https://github.com/<slug>` | 🔴 **`403 Forbidden`**, after a `200` CONNECT to the proxy | 🔴 `gap 140` re-confirmed on a SECOND tool. **The proxy connects; GitHub's web layer refuses** |
+| 🔴 `curl https://api.github.com/repos/<slug>` | 🔴 **`403`** | 🔴 **No ★, no licence field, no `pushed_at`.** The metadata API is shut on `curl` as well |
+| 🟢 `curl https://raw.githubusercontent.com/…` | 🟢 **`200`** | 🟢 The payload channel is open on `curl` too |
+| 🔴 `curl https://www.unesco.org/en` | 🔴 **`000`** — no HTTP response at all | 🆕 🟢 **`T309` CONFIRMED on a second tool.** Not a quirk of one fetcher — a resolver boundary |
+| 🔴 fetch tool, `www.unesco.org` | 🔴 **`ENOTFOUND`** | 🆕 An eighth non-GitHub host, eighth failure |
+| 🟢 `git clone --depth 1` of an arbitrary public repo | 🟢 **WORKS — `5` of `5` attempts** *(`open-tutor-ai-CE`, `civil-ai`, `tutor-gpt`, `TeachGPT`, `openeducat_erp`)* | 🟢 **The strong channel. Existence, licence payload, schema and file counts all come from here** |
+| 🆕 🟢 **run code THIS KB wrote, stdlib only** | 🟢 **WORKS** — `18` checks green in [`compose/code/agent-tool-receipts-port/`](../compose/code/agent-tool-receipts-port/README.md) | 🆕 🟢 **`T303` bars building or testing a CLONED SUBJECT tree. It does not bar running this repository's own code.** First pass to use that distinction deliberately |
+| 🟡 web SEARCH *(not fetch)* | 🟡 **WORKS, summaries only** | 🔴 **And it can be MONTHS STALE on a fact this KB already holds — `T312`, see [`intel/market.md`](../intel/market.md)** |
+
+🆕 🔵 **The rule, stated once rather than rediscovered: this KB has ONE primary-source channel and
+it is `git clone`.** 🟢 **A pass that spends its budget cloning buys evidence; a pass that spends
+it searching buys leads.** 🔴 **And `curl -sI` cannot verify that a repository exists here, so a
+successful clone of the exact path is the existence test.**
+
+### 🆕 🟢 The foundations shelf — `0` new rows, and `2` rows that stop being licence entries
+
+🔴 **No repository was added to this shelf this pass, and that is the correct outcome: every
+candidate the discovery channel produced was already on it.** 🟢 **What changed is that two
+carried rows now have a measured domain model instead of only a verified grant.**
+
+| row | what this shelf held | 🆕 measured this pass |
+|---|---|---|
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0`, `8 241` B, APAC *(India)*, `16` passes carried, `T162` *(vendor-stated standards absent)* | 🆕 🟢 **`141` Odoo models, `13` modules, `1 345` files.** Real `op.course`, `op.admission`, `op.exam`, `op.marksheet.register`, `op.attendance.sheet`, `op.academic.year`, `op.fees.terms`. 🟢 **The SIS entities exist; it was only ever the interoperability layer that did not** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0`, *"CLEAN at `1` word"*, carried since p176 | 🆕 🔴 **Its only tables are `users`, `customers`, `products`, `prices`, `subscriptions`.** `course`/`lesson`/`enrollment`/`assessment`/`quiz`/`grade`/`tenant` = `0` each across `158` files. 🔴 **A copyleft chat product with a billing schema — it was never a foundation and now this shelf can say why** |
+
+🆕 🔵 **`T313`, from the pass's own mis-step: a row with a verified licence is not a read row.**
+🔴 **This shelf has been optimising for the grant, because the grant is cheap and binary. The
+entity list is the expensive half and the deciding half, and `3` carried rows turned out never to
+have had one.**
+
+### 🆕 🔴 The grant that is never in `LICENSE`
+
+🔵 **`Priyamakeshwari/TeachGPT` is already on this KB's record as `MIT` *(`1 057` B, *"title-less,
+grant line only"*, `P645`)*. 🆕 Cloned this pass, it is `18` files — and it COMMITS its corpus:
+`db/chroma.sqlite3` plus the HNSW index binaries, built from
+`documents/Machine - Learning - Tom Mitchell.pdf`, a commercial textbook.**
+
+🔴 **A vector index is a derivative of what it was built from.** 🟢 **`MIT` grants the three
+scripts. It grants nothing over a publisher's book or over embeddings of it.** 🟢 **Shelf rule
+adopted: when a row ships a prebuilt index, a corpus or a model checkpoint, there is a SECOND
+grant to check and `LICENSE` does not cover it.** 🔵 **This extends
+[`compose/code/p317-data-license-layer/`](../compose/code/p317-data-license-layer/README.md) into
+a repository whose code licence is perfectly clean — which is the case the data-layer axis had not
+yet seen.**
+
 ## Pass 182 — 2026-10-13
 
 🆕 🔴 **The foundational finding this pass is about the ENVIRONMENT, and it changes how every

@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🔴 **The most important thing this pass learned is about its own method, and it cost the pass
+its headline action.** `ACTION LR` was pre-registered to run the Pattern `25` screening recipe
+*"blind on `10` UNREAD rows"*. 🔴 **This pass screened `3` rows without checking the census first,
+and ALL THREE were already in it** — [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt)
+*(carried since p176 at `GPL-3.0`, same `HEAD`)*,
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(carried `16` passes
+at `LGPL-3.0`, same `HEAD`, same `8 241` B)* and `TeachGPT` *(already recorded `MIT`, `P645`)*.
+🔵 **A prediction about a row this KB has already read is a test of RECALL, not of prediction.**
+🟢 **`ACTION LR` is therefore NOT discharged. It stays PARTIAL at `n=4` and is re-registered with
+a precondition it should always have had.**
+
+🆕 🟢 **The three reads were still worth their clone time, because each produced a fact this KB did
+NOT hold — and in each case it is the fact that decides an engagement, sitting underneath a
+licence the KB had already settled.** 🔵 **`T313`: a row with a verified licence is not a read
+row. This KB has been treating the grant as the finish line and it is the entry fee.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LS`** — does `open-tutor-ai-CE` model courses ANYWHERE outside `data/models/`? | 🟢 **DISCHARGED, LIMB `2` FIRED. Genuinely absent tree-wide: `10` `__tablename__` in `4 702` files, all chat/file/user. `learning/courses/` is a `30`-byte docstring. 🆕 And `MIGRATION.md` names the MECHANISM** |
+| 🟢 **`ACTION LT`** — what is the `BSD-3-Clause` CE MISSING against its Enterprise edition? | 🟢 **DISCHARGED, LIMB `1` on the measurable part: `0` licence-key, entitlement, feature-flag or `enterprise` gates in the whole tree. 🔴 But the README DECLARES a proprietary EE, which resolves `Gap 362` for this row** |
+| 🟢 **`ACTION LV`** — port `civil-ai`'s audit schema to a runnable reference | 🟢 **DISCHARGED, LIMB `1` FIRED. `18` checks, `0` failures, stdlib only. 🆕 The port found TWO deployment facts the reading could not** |
+| 🟡 **`ACTION LU`** — probe MEA supply in Arabic and French | 🟡 **DISCHARGED, LIMB `2` FIRED. `0` permissive MEA-origin rows on either language-native channel. `gap 124` joins `gap 141` as ABSENT BY MEASUREMENT** |
+| 🔴 **`ACTION LW`** — are the Article `50` guidelines adopted or draft? | 🔴 **SPLITS, limb `2`. 🆕 Reconciled with a document number *(`C(2026) 5054 final`)*, and the channel turned out to be MONTHS STALE on a date this KB already holds — `T312`, see [`intel/market.md`](../intel/market.md)** |
+| 🔴 **`ACTION LR`** — the screening recipe, blind on `10` unread rows | 🔴 **MIS-EXECUTED and NOT discharged. `3` of `3` rows screened were already in the census. Stays at `n=4`, re-registered with a census pre-check** |
+
+### 🟢 `ACTION LS` — the `0` is real, and `MIGRATION.md` explains it
+
+🟢 **[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+`HEAD 196c547`, `4 702` tracked files — `4 500` of them under `ui/`.** 🔵 **p182 graded it
+APPLIANCE+ on `0` course entities in `data/models/` and pre-registered `ACTION LS` because an
+absence in one directory is not an absence.**
+
+🔴 **It is an absence. Every `__tablename__` in the tree, all `10`:** `users`, `chats`, `files`,
+`support_files`, `knowledge_bases`, `knowledge_files`, `supports`, `feedbacks`, `model_configs`,
+`app_configs`.
+
+🔴 **`0` course. `0` lesson. `0` enrollment. `0` assessment. `0` classroom. `0` learner. `0`
+teacher. `0` cohort. `0` tenant** *(`0` occurrences of `tenant`, `tenant_id`, `organization_id` or
+`institution` in any `.py`)*.
+
+🆕 🔵 **And the tree promises every one of them at the PACKAGE layer.** `learning/` has six
+subpackages; **four contain exactly one file, and that file is a docstring:**
+
+| package | bytes | entire contents |
+|---|---|---|
+| 🔴 `learning/courses/__init__.py` | **`30`** | `"""Course domain boundary."""` |
+| 🔴 `learning/classrooms/__init__.py` | **`33`** | `"""Classroom domain boundary."""` |
+| 🔴 `learning/learners/__init__.py` | **`31`** | `"""Learner domain boundary."""` |
+| 🔴 `learning/teachers/__init__.py` | **`31`** | `"""Teacher domain boundary."""` |
+| 🔴 `learning/sessions/` | `4 635` + `5 170` | 🔴 **`service.py`'s docstring is `"""Chats service."""`; its class is `ChatsService`; it operates on `data.models.Chat`** |
+| 🟡 `learning/supports/` | `1 314` + `4 976` | 🟡 the `supports` table — the only implemented learning concept |
+
+🔴 **`governance/self_regulation/models.py`** — a directory named for a learning-science
+construct — **is `623` B of Pydantic with `0` tables, and its docstring is
+`"""Pydantic models for feedback API."""`** *(`SubmitFeedbackRequest`, `FeedbackResponse`,
+`feedback_type: # positive, negative, neutral`)*.
+
+🆕 🟢 **The mechanism, in the repository's own `MIGRATION.md`:** *"OpenTutorAI has been
+restructured from a nested `backend/open_tutorai/gateway/` hierarchy with OpenWebUI dependencies
+to a root-driven, domain-based architecture… OpenWebUI and Hermes remain references for UI
+contract and implementation techniques; they are not runtime dependencies and **their package
+names are not used as internal domains**."*
+
+🔵 **That last clause is the finding.** 🟢 **The migration renamed OpenWebUI's packages into
+education-shaped domains and shipped the boundaries empty.** `chats` → `learning/sessions/`;
+`response_feedbacks` → `governance/self_regulation/`; `courses`, `classrooms`, `learners`,
+`teachers` → docstrings. 🔵 **The schema is still OpenWebUI's: `chats`, `files`,
+`knowledge_bases`, `feedbacks`, `model_configs` — and the devops tree still carries
+`docker-compose.a1111-test.yaml`, `run-ollama-docker.sh` and a disabled
+`deploy-to-hf-spaces` workflow.**
+
+🟢 **`T310` *(the published layer and the deciding layer are disjoint)* now has a named mechanism,
+which promotes it from observation to structural claim: a directory rename is the cheapest way to
+look vertical, and the ENTITY LIST is the one layer that cannot be renamed into existence.**
+🔵 **The grade stays APPLIANCE+ — `4 702` files with a working account lifecycle are worth
+something — 🔴 but the row must never be offered as a course platform.**
+
+### 🟢 `ACTION LT` — nothing is gated, and `Gap 362` closes for this row
+
+🔵 **The question was whether the `BSD-3-Clause` CE withholds capability — the difference between
+*"safe to build on"* and *"a trap with a sales call at the end"*.** 🟢 **This KB has carried
+`Gap 362` *(open-core unverified)* and `P822` *(the open-core signal)* for several passes without
+a row where the question was actually settled. 🆕 It is settled for this one.**
+
+| probe | measured | verdict |
+|---|---|---|
+| 🟢 **licence payload** | `LICENSE`, `1 531` B — the three BSD conditions verbatim, holder *"Mohamed El hajji On behalf of all R2D-dev"*, `0` added clauses | 🟢 **A clean `BSD-3-Clause`.** 🔵 Notably NOT OpenWebUI's branding-restricted variant, despite the lineage |
+| 🟢 **gates in code** | **`0`** hits for `license_key`, `is_enterprise`, `feature_flag`, `entitlement`, `paywall`, `upgrade_required` across every `.py` | 🟢 **Nothing in the CE refuses to run** |
+| 🟢 **auth completeness** | `accounts/users/service.py`: `authenticate`, `create_user`, `update_password`, `update_role`, `get_user_settings`, `delete_user` | 🟢 Identity is not the withheld piece |
+| 🆕 🔴 **what the README DECLARES** | *"This public edition is the foundation for a proprietary **Enterprise Edition (EE)**"*; the EE *"includes custom theming & branding, SLA support, LTS versions, **and more**"* | 🔴 **Self-declared open core — and the named items are packaging and support, not capability** |
+| 🔴 **multi-tenancy** | `0` tenancy references anywhere | 🔴 **Absent, not withheld.** Nothing indicates the EE adds it |
+
+🟢 **Limb `1` fires on the measurable question.** 🔴 **The honest limit: the EE tree is not public,
+so *"and more"* cannot be measured from outside, and this KB does not grade a tree it cannot
+clone.** 🆕 🔵 **Which is the generalisable finding — an open-core edition is INVISIBLE to
+`git clone`, so `Gap 362` cannot be closed by this KB's strongest channel. It closes here only
+because the holder wrote it down.** 🟢 **Operational rule: read the README's own commercial
+language as evidence about the HOLDER, and treat silence as unknown rather than as absence.**
+
+### 🔴 `ACTION LR` — mis-executed, and the fix is one cheap step
+
+🔵 **p182 ran the recipe on `4` unread rows, `3` came back overturned, limb `2` fired early and the
+action was re-registered at full size. 🔴 This pass screened `3` more rows and then discovered all
+`3` were already in this KB's census, with their licences already settled:**
+
+| row screened | what this KB ALREADY held | so the prediction was |
+|---|---|---|
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — *"CLEAN at `1` word"*, carried since p176, `HEAD 5c2f92416c04` | 🔴 **not blind** — and the prediction *(permissive)* was worse than the record |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0`, `8 241` B, `HEAD 46a5d7d40082`, APAC *(India)*, carried `16` passes, plus `T162` | 🟡 **not blind** — the prediction merely reproduced the record |
+| 🟢 `Priyamakeshwari/TeachGPT` | 🟢 `MIT` — *"title-less, grant line only"* *(`P645`)* | 🟢 **not blind** |
+
+🔴 **`n` stays at `4`. The `57`% overturn rate this pass nearly published is withdrawn before it
+was ever quoted.** 🟢 **`ACTION LR` is re-registered with the precondition it needed from the
+start: grep the census for the slug BEFORE writing a blind verdict, and discard any row that is
+already there.**
+
+🆕 🔵 **`T313`, and it is the useful residue of the error: a row with a verified licence is not a
+read row.** 🔴 **All three of these rows had settled grants and NONE had a settled schema — and in
+all three cases the schema is what decides whether a studio can use it.** 🟢 **This KB's census
+has been optimising for the grant because the grant is cheap to verify and binary. The entity list
+is the expensive half and the deciding half.**
+
+### 🆕 🟢 Three facts this KB did not hold, from rows it had already *"read"*
+
+| row | 🟢 licence, already settled | 🆕 what the schema says, measured this pass |
+|---|---|---|
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `GPL-3.0`, `35 149` B, `0` Affero clauses *(re-confirmed)* | 🆕 🔴 **Its ONLY tables are `users`, `customers`, `products`, `prices`, `subscriptions`** — a Stripe subscription schema, in `schema.sql` and one Supabase migration. **`course`, `lesson`, `enrollment`, `assessment`, `quiz`, `grade`, `tenant` = `0` each** across `158` files; `student` appears `4` times. 🟡 Real idea, real paper *(`arXiv:2310.06983`)*, `104` TS/TSX files |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LGPL-3.0`, `8 241` B, `HEAD 46a5d7d` *(re-confirmed)* | 🆕 🟢 **`141` Odoo models across `13` modules, and the entity names this KB never recorded:** `op.course`, `op.admission`, `op.admission.register`, `op.exam`, `op.exam.session`, `op.held.exam`, `op.marksheet.register`, `op.marksheet.line`, `op.attendance.sheet`, `op.academic.year`, `op.academic.term`, `op.batch`, `op.classroom`, `op.faculty`, `op.grade.configuration`, `op.fees.terms`, `op.library.card`. 🟢 **The SIS domain model is REAL** — `T162` was about missing STANDARDS, not missing entities |
+| 🟢 `Priyamakeshwari/TeachGPT` | `MIT`, `1 057` B *(re-confirmed)* | 🆕 🔴 **`18` files, `0` `CREATE TABLE` — and it COMMITS its corpus:** `db/chroma.sqlite3` with its HNSW index binaries, built from `documents/Machine - Learning - Tom Mitchell.pdf`, a commercial textbook |
+
+🆕 🔴 **The `TeachGPT` finding generalises and it is new to this KB: the licence on the code is not
+the licence on the corpus.** 🔵 **A vector index is a derivative of what it was built from. `MIT`
+grants the three scripts and nothing over a publisher's book.** 🟢 **Shelf rule adopted: when a
+row ships a prebuilt index, a corpus, or a checkpoint, there is a SECOND grant to check and it is
+never in `LICENSE`.** 🔵 This extends the data layer at
+[`compose/code/p317-data-license-layer/`](../compose/code/p317-data-license-layer/README.md) into
+a repository whose code licence is perfectly clean.
+
+🆕 🔵 **And the `tutor-gpt` finding is the second instance in two passes of a tutor whose persisted
+domain is commerce** *(p182's `plataforma-agentes-ia` was a CRM)*. 🟢 **With `open-tutor-ai-CE`
+modelling chats, that is three independent trees whose education is in the naming layer.**
+
 ## Pass 182 — 2026-10-13
 
 🟢 **Five pre-registered actions reached, `3` DISCHARGED on limb `1`, `1` on limb `2` with a row

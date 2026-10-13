@@ -4,6 +4,238 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🟢 **`ACTION LW` is answered, and the answer is better news for this KB than for the channel
+that answered it: the search channel is roughly three months BEHIND this KB's own record on the
+one date a studio is most likely to get wrong.**
+
+🔴 **Read what the channel returned this pass, in October `2026`:** the Annex III high-risk
+deadline for education *"has been deferred to `2` December `2027`, **pending formal adoption and
+publication in the Official Journal**"*, following the AI Act Omnibus political agreement of
+`7` May `2026`. 🟢 **This KB settled that at p180, `ACTION LF`: the omnibus was ADOPTED as
+**Regulation (EU) `2026/1744`**, signed `8` July `2026`, OJ `24` July `2026`, in force `27` July
+`2026`.**
+
+🆕 🔵 **`T312`: on a regulatory date, a secondary channel's *"pending"* is not evidence of
+pending — it is evidence of when that page was written.** 🔴 **A studio researching this today
+from search results would tell an EMEA client the deferral is provisional, and would be wrong by
+one adopted Regulation.** 🟢 **The calendar in this file is unchanged by this pass and keeps its
+dates.** 🔵 **What changes is the confidence note: the legal dates here are now corroborated as
+the ones a current, independent, non-vendor channel also reports, while that channel's STATUS
+language lags.**
+
+### 🆕 🟢 `ACTION LW` — the Article `50` guidance split, closed as far as this channel can close it
+
+🔵 **p182 left the question split: did the Commission ADOPT the Article `50` guidelines on `20`
+July `2026`, or only approve their content?** 🆕 🟢 **This pass found the document identifier, and
+with it the reconciliation.**
+
+| | what the channels say |
+|---|---|
+| 🟢 **agreed by all** | the Commission acted on **`20` July `2026`** |
+| 🟢 **the majority reading** | the **final** Guidelines on Article `50` transparency were adopted that day |
+| 🆕 🟡 **the dissenting reading, now with a document number** | the Commission approved the CONTENT of the draft — **`C(2026) 5054 final`** — with formal adoption to follow *"once all language versions are available"*, and applicability only from that moment |
+| 🟢 **not in dispute** | the Guidelines are **non-binding**; only the CJEU can give an authoritative interpretation |
+| 🟢 **not in dispute** | the Article `50` **obligation** date was never contested — `2` Aug `2026`, in force |
+
+🟢 **Both readings describe one sequence: content approved `20` July `2026`, translation and formal
+publication administrative and following.** 🔴 **So limb `2` fires — the dissent persists — and
+*"guidance not final"* stays in every client-facing Article `50` recipe, Pattern `2` included.**
+🟢 **But the sentence to say to a client improves: not *"the sources disagree"* but *"the content
+is settled as `C(2026) 5054 final`, the publication step is administrative, and the obligation
+date was never in doubt."***
+
+### 🆕 🟢 Three additions to the EU picture this KB did not have
+
+| 🆕 fact | status | why it is worth a line in a proposal |
+|---|---|---|
+| 🆕 🟢 **A voluntary Code of Practice on Transparency of AI-Generated Content, published by the EU AI Office on `31` July `2026`** | 🟡 voluntary | 🟢 **Cheap to adopt, visible to a procurement reviewer, and a safe-harbour signal rather than a requirement.** This KB had `0` record of it |
+| 🆕 🟢 **Conformity assessment for most Annex III education systems is INTERNAL CONTROL** — unless the system uses real-time biometrics | 🟢 procedural | 🟢 **The single most reassuring sentence available to an EMEA education client, and it was missing here: no notified body, no external queue — a documented internal process, which is exactly what a studio delivers** |
+| 🆕 🟡 **Annex III §3's four education uses, enumerated as the channel states them** | 🟢 unchanged | 🟡 admissions and **access**; **evaluating learning outcomes**; assessing the **appropriate level** of education; **monitoring students for prohibited behaviour during tests**. 🔵 The fourth *"covers most commercial exam-proctoring software"*; research-integrity screening and grant-evaluation tools are described as a **grey area** — which is a scoping question, not an answer |
+
+### 🔴 The market size — a FOURTH house, and an agentic figure that contradicts the category
+
+🔵 **p182 recorded a `19`% band on the current year. 🆕 A fourth house widens the `2025` end of it,
+and an agentic-specific number arrived that cannot be reconciled with the rest.**
+
+| house | `2025` | `2026` | horizon |
+|---|---|---|---|
+| 🟡 *(on record)* | — | **`$9.58` B** | — |
+| 🟡 *(on record)* | `$8.3` B | **`$11.4` B** | — |
+| 🟡 *(on record)* | — | **`$10.6` B** | — |
+| 🆕 🟡 IMARC *(re-read this pass)* | **`$6.4` B** | — | **`$79.6` B by `2034`** |
+| 🆕 🔴 **Research and Markets — *agentic* AI in education and learning technologies** | — | **`$2.1` B** | 🔴 **at a `4.5`% CAGR** |
+| 🆕 🔴 Technavio *(flagged an outlier by the channel itself)* | — | — | 🔴 `45`% CAGR `2025`–`2030` |
+
+🔴 **The `2026` point estimates span `$9.58` B–`$11.4` B and the `2025` figures `$6.4` B–`$8.3` B,
+so the houses do not agree on the size of the step into the current year.** 🔵 **`T306` stands:
+quote the band and the number of houses, never a point estimate.**
+
+🆕 🔴 **The agentic figure needs its own warning, because it is the number a studio is most likely
+to be handed by a client.** `$2.1` B at **`4.5`%** against `30`%+ for the broader category is not
+a disagreement about size — it is a disagreement about the word. 🔵 **A `4.5`% CAGR describes a
+mature niche; a `30`% CAGR describes a land grab.** 🟢 **Ask which definition a source priced; if
+it cannot say, discard the number.**
+
+## Opportunities by region
+
+🔵 **One subsection per region, same five values as the frontmatter vocabulary. Where a region has
+no supply, that is stated — an informed gap is information.** 🆕 **This pass adds to North America
+and LATAM, narrows the APAC gap rather than restating it, and closes MEA as a measurement.**
+
+### North America
+
+🔴 **The supply fact is unchanged and is now four passes old: `0` permissive,
+North-American-origin, ROUTE-grade rows.** 🟢 **The permissive routes are European, so a North
+American engagement is an integration or localisation of European code — priced openly in week
+one, not discovered in week three.**
+
+🆕 🟢 **New this pass on the demand side, all of it policy rather than technology:**
+
+| 🆕 signal *(search-index secondary, `T309`)* | what it is | what a studio does with it |
+|---|---|---|
+| 🆕 🔴 **EO `14365`** *(Dec `2025`)* | an executive order seeking to **restrict states from enacting AI laws misaligned with federal policy** | 🔴 **The federal–state conflict is now named.** Do not promise regulatory certainty on a US education engagement — promise a rule layer that can be re-pointed |
+| 🆕 🟢 **EO `14277`** *(Apr `2025`)* | created the **White House Task Force on AI Education** and the Presidential AI Challenge; teacher training and AI apprenticeships | 🟢 Federal tailwind language for a public-sector proposal, and a funding-adjacent channel |
+| 🆕 🟢 **California SB `1288`** | a Department of Education workgroup producing **guidance AND model policies** for all districts, due mid-`2026` | 🟢 **A model-policy template is the reusable asset** — one build, many districts |
+| 🆕 🟢 **SREB AI Commission** | **`9`** recommendations *(`2025`)* for states, schools and colleges: statewide AI networks, group-specific guidance, professional development, workforce-aligned curricula, risk management | 🟢 A ready-made vocabulary for a Southern-US public-sector bid |
+| 🟢 *(carried)* **`35`** states + D.C. + Puerto Rico introduced AI education legislation; **`24`** enacted; **`35`**+ published guidance; **`134`** bills across **`31`** states in `2026` | 🟢 on record from earlier passes | 🔴 **The target moves faster than an annual compliance review — ship the rule set as DATA, never as code** |
+
+🔵 **The counter-evidence stays on the record** *(carried)*: a Brookings study *(Jan `2026`)* found
+the risks of AI in education currently outweigh the benefits for children's foundational
+development, while the better-evidenced positive case is narrow — targeted, high-dose support.
+🟢 **A studio opening with *"narrow, high-dose, measured"* is aligned with both the strongest
+evidence and the most defensible procurement position.**
+
+### EMEA
+
+🟢 **EMEA holds all four of this KB's permissive ROUTE rows — `OpenOLAT` *(`Apache-2.0`)*,
+`Artemis` *(`MIT`)*, `feedbacksystem` *(`Apache-2.0`)*, `mentingo` *(`MIT`)* — and now, from
+`ACTION LT`, the cleanest statement this KB can make about a European appliance: `open-tutor-ai-CE`
+is `BSD-3-Clause` with `0` capability gates across `4 702` files.**
+
+🆕 🟢 **What this pass adds to the EMEA engagement is not a date — the calendar below this section
+is unchanged — but two procedural facts that make the proposal easier to write:**
+
+1. 🟢 **Conformity assessment is INTERNAL CONTROL** for most Annex III education systems absent
+   real-time biometrics. 🔵 **No notified body. Say so early.**
+2. 🟢 **The voluntary Code of Practice on transparency *(`31` July `2026`)* is available to adopt**
+   — cheap, visible, and it signals maturity to a reviewer who cannot assess architecture.
+
+🆕 🟢 **And one new buildable asset, which is the pass's own output:** the auditable record the
+Annex III documentation and human-oversight obligations both want is now a running artefact at
+[`compose/code/agent-tool-receipts-port/`](../compose/code/agent-tool-receipts-port/README.md) —
+`18` checks green, stdlib only. 🔴 **With the deployment caveat the port itself discovered: a
+correct `ON DELETE RESTRICT` schema enforces NOTHING while SQLite's `foreign_keys` pragma is off,
+which is its default.**
+
+🔴 **The EMEA gap this pass did NOT close, stated so the silence is not read as coverage: `0`
+EMEA-wide adoption statistics were obtainable.** 🔵 The channel returned legal explainers only.
+🟡 **So this KB has EMEA regulation in depth and EMEA adoption not at all** — the mirror image of
+LATAM, where adoption is the best-evidenced thing here and supply is zero.
+
+### APAC
+
+🟢 **The APAC gap is NARROWER than a fresh search would suggest, and the reason is worth stating:
+this KB's own calendar already carries the two APAC instruments that name education, and this
+pass's search channel returned neither.**
+
+| already on record *(carried, and better than this pass's channel)* | why it matters |
+|---|---|
+| 🟢 **South Korea — AI Basic Act, in force Jan `2026`** | *"High-impact"* AI with **education named explicitly**. 🟡 **Foreign providers must appoint a LOCAL REPRESENTATIVE** — a corporate step, not an engineering one |
+| 🟢 **Vietnam — Law No. `134/2025/QH15`, in force `1` Mar `2026`, compliance `1` Mar `2027`** | **Education named HIGH-RISK**, with automated assessment and behavioural monitoring as the given examples. 🟡 **It reaches foreign companies** — the first hard non-EU deadline a LATAM- or EMEA-based studio hits on an APAC engagement |
+
+🆕 🟡 **What this pass adds is general AI governance only, and the read-across to education must
+NOT be assumed:**
+
+| jurisdiction | posture *(general AI)* | the education read-across |
+|---|---|---|
+| 🟡 **China** | Interim AI Measures in force since Aug `2023`: service registration, security review, **labelling of AI-generated content** | 🟡 **Content labelling plainly reaches an education product.** The rest is unmeasured here |
+| 🟡 **Japan** | light-touch voluntary governance; a newer law encouraging R&D with transparency and risk-mitigation expectations | 🔴 No education-specific instrument found |
+| 🔴 **Singapore** | consulting on AI use **in financial institutions** | 🔴 **Not education. Do not cite it as education guidance** |
+| 🔴 **India, Australia** | national frameworks still in progress | 🔴 Nothing to map |
+
+🟡 **One adoption figure, measuring the wrong thing:** AI *familiarity* in a `2025` nine-market
+consumer survey — **China `98`%, Singapore `96`%, Japan `94`%**. 🔴 **Awareness, not classroom
+use.** 🔵 Quoting it as adoption would be the exact error this KB retracts elsewhere.
+
+🆕 🟢 **And one correction to how this KB has been describing APAC supply: it is not empty.**
+🔵 **[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) is recorded here
+as APAC-origin *(India)*, and this pass measured its `141` Odoo models** *(see
+[`verticals/solutions.md`](../verticals/solutions.md))*. 🔴 **It is `LGPL-3.0`, so the accurate
+statement is `0` PERMISSIVE APAC-origin rows — not `0` APAC-origin rows.** 🟢 **For an APAC
+engagement that distinction is the whole proposal: there is an Indian-origin `141`-entity SIS
+under weak copyleft to build modules against.**
+
+🔴 **The APAC gap, precisely: `0` permissive APAC-origin rows, and `0` education adoption
+statistics.** 🟢 **Regulation for South Korea and Vietnam is covered and is the strongest part of
+an APAC conversation.**
+
+### LATAM
+
+🟢 **LATAM stays this KB's best-evidenced demand story and its most complete supply absence. The
+headline figures are carried, not new** — `87`% of `200` institutions across `19` countries using
+AI with `26`% holding a formal framework *(UNESCO IESALC)*; the `73.5`% / `57.0`% / `34.1`% /
+`20.0`% application split; `92`% of students using AI against `30`% who think their university
+integrates it *(Digital Education Council with Tecnológico de Monterrey)*; the UNESCO–CEPAL
+regional Observatory.
+
+🆕 🟢 **What this pass adds is one number that sizes the compliance surface:**
+
+- 🆕 🟡 **`716` regulatory instruments, binding norms and draft norms across `23` countries and
+  territories**, from a Universidad de los Andes public-policy report on its *Sistemas de
+  Algoritmos Públicos* database. 🔴 **General AI, not education-specific** — so it tells a studio
+  how much regulatory surface exists without telling it what applies to a school.
+  🔵 **Useful precisely as a scale argument: *"`716` instruments, `23` jurisdictions, and none of
+  them written for your faculty"* is the case for a configurable governance layer.**
+
+🔴 **Supply remains `0` rows, and it is `0` BY MEASUREMENT** *(`gap 141`, closed at p182 on
+Spanish- and Portuguese-language probes with every candidate cloned)*: `0` LATAM-origin, `0`
+LATAM-localised, `0` shelf rows with an `es` or `pt-BR` catalogue. 🟢 **So the LATAM proposal is
+explicit: European permissive code, localised, with localisation as a priced line item.**
+
+🟡 **Country-level regulation, carried:** 🔴 **Mexico** — no national law; SEP and ANUIES proposals
+non-binding. 🔴 **Brazil** — national AI strategy advanced, no education-sector instrument.
+
+### Global
+
+🆕 🔴 **`ACTION LU` closes the last regional silence: MEA supply is ABSENT BY MEASUREMENT.**
+🔵 **Probed on two language-native channels — Arabic and French — exactly as `ACTION LP` probed
+LATAM in Spanish and Portuguese. `0` permissive MEA-origin repositories on either.**
+
+🟡 **What the MEA probe did find is demand with CLOSED supply:**
+
+- 🟡 **Morocco** — UM6P deployed **ChatGPT Edu**, a commercial product; *Digital Morocco 2030*
+  places digital skills among national priorities; **GITEX Africa Morocco `2026`** centres AI in
+  the digital economy; a responsible-AI platform exists at UM6SS *(`InteliGIS`)* with no
+  open-source indication.
+- 🟡 **Tunisia / Algeria** — a joint digital platform for research and AI announced March `2026`
+  via Université de Tunis El Manar. 🔴 **A research-collaboration tool, not a tutor, and no
+  open-source indication.**
+- 🔴 **Senegal** — `0` relevant results.
+
+🔴 **So MEA is: public strategy, commercial deployment, `0` permissive local supply.**
+🟢 **`open-tutor-ai-CE` remains the only Maghreb-FACING row on the shelf** — its `ar-MA` and
+`fr-FR` locales are an established localisation TARGET — **and `gap 124` keeps the caveat it
+earned at p182: the holder's country is NOT established, and this KB does not infer one from a
+locale or a name.**
+
+🆕 🔵 **The shape of this KB by region, stated once so an engagement can be scoped honestly:**
+
+| region | supply *(first-hand, from clones)* | demand *(secondary)* | regulation *(secondary)* |
+|---|---|---|---|
+| 🔴 **North America** | 🔴 **`0` permissive ROUTE rows**, fourth pass | 🟢 strong — `134` bills, `24` states enacted | 🟡 **strong but CONTESTED** — EO `14365` versus state law |
+| 🟢 **EMEA** | 🟢 **all four permissive ROUTE rows** | 🔴 **nil — no adoption statistics obtainable** | 🟢 **deepest coverage in this KB** |
+| 🟡 **APAC** | 🟡 **`1` row, `LGPL-3.0`** — `openeducat_erp` *(India)*, `141` entities. 🔴 `0` permissive | 🔴 `0` education statistics | 🟢 **South Korea + Vietnam name education; China labels content** |
+| 🔴 **LATAM** | 🔴 `0` rows, **by measurement** | 🟢 **best-evidenced in this KB** — `92`% vs `30`% | 🟡 `716` instruments, none education-specific |
+| 🔴 **MEA** | 🔴 `0` rows, **by measurement** *(new this pass)* | 🟡 public strategy, commercial supply | 🔴 not measured |
+
+🔴 **Every figure in this section is search-index secondary and was never read from its own page
+*(`T309`, `gap 110`)*. 🆕 And `T312` adds the sharper warning: a secondary channel can be months
+stale on a fact this KB already holds first-hand.** 🟢 **Licences, entity counts and enforcement
+sites elsewhere in this KB come from clones. The two kinds of fact should never be quoted in the
+same breath.**
+
 ## Pass 182 — 2026-10-13
 
 🆕 🔴 **Everything in this file is SEARCH-INDEX SECONDARY, and this pass can finally say why

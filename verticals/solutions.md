@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🟢 **Two amendments to the routing table, both to rows this KB has carried for passes, and both
+change what a studio can PROMISE rather than what it can pick.**
+
+🟢 **`Gap 362` — *"open-core unverified"* — closes for
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE), in both
+directions at once: `0` capability gates in `4 702` files, and an Enterprise Edition the README
+declares in its own words.** 🟢 **And
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) — the SIS route this
+KB has carried for `16` passes on its licence alone — finally has its domain model MEASURED:
+`141` Odoo models, and they are real.**
+
+### 🆕 🟢 `openeducat_erp`, amendment — `T162` was about standards, not about entities
+
+🔵 **This KB's record on this row has been a licence, a byte count and an absence: `LGPL-3.0`,
+`8 241` B, APAC *(India)*, and `T162` — its vendor-stated OneRoster / Ed-Fi / `LTI 1.3` support is
+absent from the open tree. 🔴 What was never measured is whether the SIS underneath those missing
+standards exists at all.** 🟢 **It does.**
+
+| measured this pass *(`HEAD 46a5d7d`, `1 345` tracked files)* | value |
+|---|---|
+| 🟢 **Odoo models** | **`141`** `_name = ` declarations |
+| 🟢 **modules** | **`13`**: `core`, `admission`, `exam`, `assignment`, `attendance`, `classroom`, `timetable`, `fees`, `library`, `parent`, `facility`, `activity`, `erp` |
+| 🟢 **admissions** | `op.admission`, `op.admission.register`, `op.admission.fees.line` |
+| 🟢 **academic structure** | `op.course`, `op.batch`, `op.classroom`, `op.department`, `op.academic.year`, `op.academic.term`, `op.faculty` |
+| 🟢 **assessment** | `op.exam`, `op.exam.type`, `op.exam.session`, `op.exam.room`, `op.exam.attendees`, `op.held.exam`, `op.marksheet.register`, `op.marksheet.line`, `op.grade.configuration` |
+| 🟢 **attendance** | `op.attendance.register`, `op.attendance.sheet`, `op.attendance.line`, `op.attendance.type` |
+| 🟢 **operations** | `op.fees.terms`, `op.fees.terms.line`, `op.fees.element`, `op.library.card`, `op.media`, `op.media.movement`, `op.facility`, `op.activity` |
+
+🟢 **The grade is unchanged — `LGPL-3.0` keeps it integrate-only — but the SENTENCE a studio says
+about it changes.** 🔴 **Before: *"the one integrated LMS+SIS route, copyleft, and its standards
+claims do not survive a read."*** 🟢 **Now: *"a `141`-entity SIS with admissions, examinations,
+marksheets, attendance and fees already modelled, under weak copyleft, with the interoperability
+layer missing and therefore in scope."*** 🔵 **`T162`'s absence stops being a disqualification and
+becomes the deliverable: the missing standards are exactly where a studio's work goes.**
+
+🟢 **The `LGPL` engagement rule, stated once:** 🔵 **weak copyleft reaches the MODULE you modify,
+not the application that calls it.** 🟢 **Add `openeducat_`-adjacent modules of your own and keep
+them closed — a OneRoster or `LTI 1.3` bridge is a NEW module, which is the easy side of that
+line.** 🔴 **Patch `openeducat_core` in place and you publish that module.** 🔵 **So: add, do not
+patch.**
+
+🔴 **Three caveats, none of them a measurement.** 🔴 The tree is **Odoo-coupled**, so adopting it
+adopts Odoo's licence posture and upgrade cadence. 🔴 **`LGPL` linking semantics for Python/Odoo
+addons are a legal reading** — say *"weak copyleft, scoped to the modules you edit"* and route a
+commercial-resale question to counsel, the same discipline this KB applies to `sakai`'s
+educational-use patent grant. 🔴 **The holder's own licence header warns that bundled external
+libraries *"may be published under other GPL-compatible licenses"*** — the tree is not
+single-grant, and a dependency closure is a separate job.
+
+### 🆕 🟢 `open-tutor-ai-CE`, amendment — ungated, open core DECLARED, and never a course platform
+
+| axis | verdict this pass |
+|---|---|
+| 🟢 **capability gating** | 🟢 **NONE.** `0` hits for `license_key`, `is_enterprise`, `feature_flag`, `entitlement`, `paywall`, `upgrade_required` across every `.py` in `4 702` files. A full account lifecycle is present |
+| 🔴 **open core** | 🔴 **DECLARED**, resolving `Gap 362` for this row: *"the foundation for a proprietary **Enterprise Edition (EE)**"*, which *"includes custom theming & branding, SLA support, LTS versions, **and more"*** |
+| 🔴 **domain model** | 🔴 **`10` tables tree-wide, all chat/file/user.** `learning/courses/` is a `30`-byte docstring; `learning/sessions/service.py` is `"""Chats service."""` *(`ACTION LS`)* |
+| 🔴 **tenancy** | 🔴 `0` references anywhere |
+| 🟢 **what it is still good for** | 🟢 **An ungated `BSD-3-Clause` chat-and-RAG appliance with real identity and `ar-MA` + `fr-FR` locales** — the Maghreb-facing option, and the cheapest permissive place to put a tutoring conversation |
+
+🔵 **Reading the open-core verdict correctly: `declared` is not a disqualification.** 🟢 **The CE
+runs, complete, today.** 🔴 **It is a dependency on a vendor's roadmap, and it belongs in a
+proposal's risk section rather than a footnote.** 🆕 🔵 **And it is the axis this KB's strongest
+channel cannot see: an open-core edition is invisible to `git clone`. `Gap 362` stays OPEN for
+every other row, because silence in a README is not evidence of absence.**
+
+### 🔴 What the routing table still cannot do
+
+🔴 **`0` permissive, North-American-origin, ROUTE-grade rows — fourth pass.** 🔵 The permissive
+routes remain European *(`OpenOLAT` `Apache-2.0`, `Artemis` `MIT`, `feedbacksystem` `Apache-2.0`,
+`mentingo` `MIT`)*.
+
+🔴 **`0` permissive student-information systems — and that absence is now better described.**
+🔵 **`RosarioSIS` and `Gibbon` are `GPL`; `openeducat_erp` and `odoo/odoo` are `LGPL-3.0`;
+`frappe/erpnext` is `GPL-3.0`.** 🟢 **So the honest line for an estimate is not *"budget a
+build"* but *"budget modules against a weak-copyleft SIS whose `141` entities are already
+there"*** — a materially cheaper proposal, and the first pass at which this KB can say which.
+
 ## Pass 182 — 2026-10-13
 
 🆕 🟢 **Two changes to the routing table, and they point in opposite directions.**

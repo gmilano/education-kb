@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🆕 🟢 **One new pattern, two amendments, and the amendment to Pattern `25` is a repair: the recipe
+was missing the cheapest step in it.**
+
+### 🆕 🟢 Pattern `26` — the SIS engagement, which is modules and not a build
+
+🔵 **The problem this pattern answers has been in this KB as an absence for `16` passes: a client
+needs a student-information system, `0` permissive ones exist, and *"budget a build"* is the
+answer that absence implies.** 🆕 🟢 **`ACTION LR`'s by-product makes a cheaper answer defensible:
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`,
+`HEAD 46a5d7d`)* carries **`141` Odoo models across `13` modules** — admissions, examinations,
+marksheets, attendance, fees, library — and `T162`'s missing interoperability layer is exactly
+where a studio's work goes.**
+
+**The recipe:**
+
+1. 🟢 **Deploy `openeducat_erp` unmodified**, on Odoo. 🔵 `op.admission`, `op.course`, `op.batch`,
+   `op.exam`, `op.marksheet.register`, `op.attendance.sheet`, `op.academic.year`, `op.fees.terms`
+   and `op.grade.configuration` are already modelled. **Do not re-model them.**
+2. 🔴 **Write NOTHING inside `openeducat_core` or any `openeducat_*` module.** 🔵 **`LGPL-3.0`
+   reaches the module you modify; a module you ADD beside it is yours.** 🟢 **This is the whole
+   licence strategy and it is one sentence: add, do not patch.**
+3. 🟢 **Build the interoperability layer as new modules** — the `T162` gap. 🔵 A `OneRoster`
+   roster-sync module, an `LTI 1.3` launch module, an `Ed-Fi` export module. 🟢 **Each is a new
+   addon that reads `op.*` records through Odoo's ORM, so each stays closed if the client wants it
+   closed.**
+4. 🟢 **Put the AI layer in a separate service, not in an addon.** 🔵 Pair with
+   [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(`MIT`)* for assessment or
+   [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) *(`Apache-2.0`)*
+   for automated grading — both `ROUTE`-grade and both permissive, so the AI work carries no
+   copyleft at all.
+5. 🟢 **Make every agent action auditable from day one** with
+   [`compose/code/agent-tool-receipts-port/`](code/agent-tool-receipts-port/README.md) — the
+   schema is `MIT`-derived and runs on stdlib `sqlite3`.
+6. 🔴 **Price three risks explicitly, because none of them is an engineering surprise:** Odoo
+   coupling *(its licence posture and upgrade cadence come with the choice)*; the bundled-dependency
+   warning in `openeducat`'s own licence header *(*"external libraries… may be published under
+   other GPL-compatible licenses"* — a dependency closure is a separate job)*; and the open-core
+   declaration *(a free self-hosted Community Edition against paid Enterprise staff seats)*.
+7. 🟡 **Route the resale question to counsel.** 🔵 **`LGPL` linking semantics for Python/Odoo
+   addons are a legal reading, not a measurement.** 🟢 Say *"weak copyleft, scoped to the modules
+   you edit"* and stop there.
+
+🟢 **What this pattern replaces:** a from-scratch SIS estimate. 🔵 **What it costs:** an `LGPL`
+conversation and an Odoo dependency. 🟢 **What it buys:** `141` entities a studio does not write,
+and a deliverable — the standards layer — that is genuinely missing rather than invented.
+
+### 🔴 Pattern `25`, amendment — the recipe was missing its first step
+
+🔵 **Pattern `25` is the pre-engagement read: clone, count tables, read the licence payload,
+grade.** 🔴 **`ACTION LR` ran it on `3` rows this pass and all `3` turned out to be already in
+this KB's census, with settled licences. A screening recipe that re-screens read rows measures
+recall, not prediction.**
+
+🟢 **Step `0`, adopted:** **grep the census for the slug BEFORE anything else.** 🔵 **If the row is
+already there, the question is not *"what is this"* — it is *"which layer is still unmeasured"*,
+which is a different and usually cheaper read.
+
+🆕 🔵 **And `T313`, which is why step `0` pays for itself: a row with a verified licence is not a
+read row.** 🔴 **All `3` rows re-read this pass had settled grants and `0` had a settled schema —
+and in all `3` the schema is what decided them** *(a Stripe billing schema; `141` real SIS
+entities; a committed textbook corpus)*. 🟢 **So the census pre-check does not skip work, it
+RE-TARGETS it: from the grant, which is cheap and binary and already done, to the entity list,
+which is expensive and deciding and usually missing.**
+
+🆕 🟢 **Step added to the body of the recipe — the corpus check:** 🔴 **after reading `LICENSE`,
+look for a committed index, corpus or model checkpoint** *(`db/*.sqlite3`, `*.bin`, `documents/`,
+`*.pdf`, `*.safetensors`)*. 🔵 **A vector index is a derivative of what it was built from, and the
+code licence does not reach it.** 🟢 **`TeachGPT` is cleanly `MIT` and ships a commercial textbook
+plus its embeddings — the trap is invisible in the licence file.**
+
+### 🟢 Pattern `24`, amendment — the auditable assessment stack now has a RUNNING artefact
+
+🔵 **Pattern `24` was written at p182 as a reading recommendation: borrow `civil-ai`'s
+`agent_tool_receipts` and `assessment_policy_versions`.** 🟢 **`ACTION LV` ported them. `18`
+checks, `0` failures, stdlib `sqlite3` only, at
+[`compose/code/agent-tool-receipts-port/`](code/agent-tool-receipts-port/README.md).** 🔵 **The
+pattern can now hand a client code instead of a citation.**
+
+🆕 🔴 **Two amendments the port forced, and both are deployment facts the schema cannot express:**
+
+| 🆕 finding | what Pattern `24` must now say |
+|---|---|
+| 🔴 **SQLite's `PRAGMA foreign_keys` is OFF by default** | 🔴 **An `ON DELETE RESTRICT` policy FK enforces NOTHING until a connection turns it on.** 🟢 **The pattern's verification step is no longer *"the migration has the FK"* — it is *"a live connection refuses the delete"*, which the port asserts in a test, and which also reproduces the ORPHAN when the pragma is off |
+| 🔴 **`RESTRICT` on the policy, `CASCADE` on the receipt** | 🔴 **Deleting the parent agent run deletes its receipts.** 🟢 **So the pattern gains a requirement the source does not have: if the record must survive, the receipt's parent FK cannot be `CASCADE`.** 🔵 **The rule a grade was given under is protected; the evidence that an agent applied it is not** |
+
+🟢 **The honest framing for a client, which is better than the one Pattern `24` had:**
+🔵 ***"we have audit tables"* is a claim about a schema; *"the record survives a delete"* is a
+claim about a deployment.** 🟢 **Only the second is worth anything to a regulator, and only the
+second can be demonstrated — which is what the `18` checks do.**
+
+🟢 **Where this lands in a proposal:** North American human-oversight expectations and EU Annex III
+documentation want the same artefact, and the EU date is `2` December `2027` *(Regulation (EU)
+`2026/1744`)*, so this is build-now work with a known deadline rather than remediation. 🔵 **Two
+procedural facts worth adding to the Annex III conversation this pass** *(see
+[`intel/market.md`](../intel/market.md))*: **conformity assessment is INTERNAL CONTROL** for most
+Annex III education systems absent real-time biometrics, and **a voluntary Code of Practice on
+transparency has been available since `31` July `2026`** — cheap to adopt, visible to a reviewer.
+
 ## Pass 182 — 2026-10-13
 
 🆕 🟢 **Two amendments that make existing patterns CHEAPER, one new pattern that is the audit

@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved on the REPOSITORY side: `5` trees cloned and measured, `0` repositories added to
+the shelf — and the week's most durable addition is code this KB wrote rather than code it
+found.**
+
+| tree cloned this week | `HEAD` | tracked files | licence *(payload)* | outcome |
+|---|---|---|---|---|
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d` | **`1 345`** | 🟡 `LGPL-3.0`, `8 241` B *(re-confirmed)* | 🆕 🟢 **Domain model measured at last: `141` Odoo models, `13` modules** |
+| 🟡 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547` | **`4 702`** *(`4 500` under `ui/`)* | 🟢 `BSD-3-Clause`, `1 531` B | 🆕 🔴 **`10` tables tree-wide; `0` gates; `0` tenancy; EE declared** |
+| 🟡 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | `37ba5e2` | **`795`** | 🟢 `MIT`, `1 067` B | 🆕 🟢 **Schema PORTED OUT and running** *(`ACTION LV`)* |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `5c2f924` | **`158`** | 🔴 `GPL-3.0`, `35 149` B *(re-confirmed)* | 🆕 🔴 **Schema read: Stripe's, not education's** |
+| 🟢 `Priyamakeshwari/TeachGPT` | `287f71c` | **`18`** | 🟢 `MIT`, `1 057` B *(re-confirmed)* | 🆕 🔴 **Ships a prebuilt index built from a commercial textbook** |
+
+🟢 **`5` of `5` clone attempts succeeded.** 🔵 **Worth recording as a channel fact: `git clone` is
+the existence test here, because `curl -sI https://github.com/<slug>` returns `403` even for
+repositories that plainly exist** *(`gap 140`, re-confirmed on `curl` this pass)*.
+
+### 🆕 🟢 The week's addition is a repository of this KB's own
+
+🟢 **[`compose/code/agent-tool-receipts-port/`](../compose/code/agent-tool-receipts-port/README.md)**
+— `civil-ai`'s `agent_tool_receipts` and `assessment_policy_versions`, ported to stdlib `sqlite3`
+with the status state machine, optimistic concurrency, the `ON DELETE RESTRICT` policy FK and
+**`18` checks that pass**.
+
+🆕 🔵 **The channel finding underneath it: `T303` bars building or testing a CLONED SUBJECT tree.
+It does not bar running code this KB wrote.** 🟢 **This is the first pass to use that distinction
+deliberately, and it converts a reading recommendation into an artefact a studio can lift.**
+
+🆕 🔴 **Two findings the port produced that reading the source could not:**
+
+| finding | why only running it shows this |
+|---|---|
+| 🔴 **`PRAGMA foreign_keys` is OFF by default in SQLite** | 🔴 `ON DELETE RESTRICT` reads as enforcement in the migration file. **With the pragma off, the bound policy deletes and leaves an ORPHAN binding — reproduced in a test** |
+| 🔴 **`RESTRICT` on the policy, `CASCADE` on the receipt** | 🔴 **Deleting the parent run deletes the receipts.** The rule a grade was given under survives; the evidence that an agent applied it does not |
+
+🟢 **Both are DEPLOYMENT facts, and both are what a client's auditor actually asks about.**
+🔵 ***"We have audit tables"* is a claim about a schema; *"the record survives a delete"* is a
+claim about a deployment.**
+
+### 🟡 Trending claims this week, labelled secondary
+
+🔴 **`T309`, and `api.github.com` is `403` on two tools.**
+
+- 🟡 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — reported **`#2` on GitHub Trending,
+  `9` April `2026`**. 🔵 This KB's own read still grades it APPLIANCE *(no `users` table)*.
+- 🟡 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) — **`~903`★, last push
+  `20` Feb `2026`**, two aggregators one star apart. 🔴 Both silent on the `GPL-3.0` payload.
+- 🔴 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — **`62`★ / `12` forks**
+  claimed, **conflicting with `~900`★ recorded for the same slug in Globant's rotation log.**
+  🟢 Logged as an open conflict; the star channel cannot settle it here.
+- 🔴 **`0` new APAC-, LATAM- or MEA-origin repositories on any channel this week.** 🟢 MEA is now
+  measured rather than assumed *(`ACTION LU`, `gap 124`)*, as LATAM already was *(`gap 141`)*.
+
 ## Pass 182 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **What moved this week: nothing entered the census, and that is the week's finding.** 🔵 **The
+discovery channel produced `3` candidates — `tutor-gpt`, `openeducat_erp`, `TeachGPT` — and all
+`3` were already here, with their licences already settled.** 🟢 **`3` trees were cloned anyway,
+and all `3` yielded a fact this KB did not hold: in every case the SCHEMA, sitting underneath a
+grant that had been verified passes ago.**
+
+| row | ★ *(unavailable, `gap 140`)* | what is NEW this week in this KB's record |
+|---|---|---|
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 n/a *(`~903` claimed, secondary)* | 🆕 🔴 **Schema read for the first time: its ONLY tables are `users`, `customers`, `products`, `prices`, `subscriptions`** — a Stripe subscription schema, in `schema.sql` and one Supabase migration. **`course`/`lesson`/`enrollment`/`assessment`/`quiz`/`grade`/`tenant` = `0` each** across `158` files. 🟢 Licence unchanged *(`GPL-3.0`, re-confirmed at the same `HEAD`)* |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 n/a | 🆕 🟢 **Domain model measured for the first time in `16` passes: `141` Odoo models, `13` modules** — `op.course`, `op.admission`, `op.exam`, `op.marksheet.register`, `op.attendance.sheet`, `op.academic.year`, `op.fees.terms`. 🟢 **`T162` was about missing STANDARDS; the SIS entities were always there** |
+| 🟢 `Priyamakeshwari/TeachGPT` | 🔴 n/a | 🆕 🔴 **`18` files, `0` tables — and it COMMITS its corpus:** `db/chroma.sqlite3` with HNSW index binaries, built from a commercial textbook in `documents/`. 🔴 **The `MIT` grant does not reach it** |
+| 🟡 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 n/a | 🆕 🔴 **p182's `0` is CONFIRMED tree-wide:** `10` `__tablename__` in `4 702` files; `learning/courses/` = `30` bytes of docstring; `learning/sessions/service.py` = `"""Chats service."""`. 🆕 🟢 **And ungated: `0` licence-key/entitlement/feature-flag hits, with a proprietary EE declared in the README — `Gap 362` closes for this row** |
+| 🟢 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🔴 n/a | 🆕 🟢 **Its audit schema is now a RUNNING artefact here**, not a reading recommendation: `18` checks green at [`compose/code/agent-tool-receipts-port/`](../compose/code/agent-tool-receipts-port/README.md) |
+
+### 🔴 The week's correction is to this KB's own screening method
+
+🔵 **`ACTION LR` was pre-registered to screen `10` UNREAD rows blind. 🔴 This pass wrote blind
+verdicts for `3` rows and only afterwards checked the census, where all `3` already sat.**
+🔵 **A prediction about a row this KB has already read tests RECALL, not prediction.**
+🟢 **So the action is NOT discharged, `n` stays at `4`, and the overturn rate this pass nearly
+published is withdrawn before it was quoted.**
+
+🆕 🔵 **`T313`: a row with a verified licence is not a read row.** 🔴 **All three rows had settled
+grants; none had a settled schema; and in all three the schema is what decides whether a studio
+can use it.**
+
+### 🟡 Trending claims this week, labelled secondary
+
+🔴 **`T309`: none of these was read from its own page, and `api.github.com` is `403` on two
+tools.**
+
+| claim | source type | this KB's position |
+|---|---|---|
+| 🟡 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) reached **`#2` on GitHub Trending, `9` April `2026`** | a trending aggregator | 🟡 **Plausible, unverifiable here.** 🔵 Note the shape: this KB's own read grades `DeepTutor` an APPLIANCE with **no `users` table**. Trending rank and engagement-readiness are orthogonal |
+| 🟡 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) at **`~903`★, last push `20` Feb `2026`** | two aggregators, one star apart | 🔴 **Both printed a star count and a licence BADGE; neither printed the `GPL-3.0` payload or the billing schema** |
+| 🔴 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) at **`62`★ / `12` forks** | one aggregator | 🔴 **CONFLICTS with `~900`★ recorded for the same slug in Globant's rotation log.** 🔵 Unresolvable here *(`gap 140`)*. 🟢 **Logged as an open conflict rather than resolved in favour of the newer source** |
+
+🆕 🔵 **The week's lesson about this very file: a trending list is a DISCOVERY channel and nothing
+more.** 🟢 **It did its job — it is why `tutor-gpt` got re-read.** 🔴 **It was silent on both facts
+that decide a row: the grant and the schema.**
+
+🔴 **`0` new APAC-, LATAM- or MEA-origin repositories surfaced on any channel this week.** 🟢 For
+MEA that absence is now MEASURED rather than assumed *(`ACTION LU`, Arabic and French
+language-native probes, `gap 124`)*, as it already was for LATAM *(`gap 141`)*.
+
 ## Pass 182 — 2026-10-13
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

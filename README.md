@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 183 — 2026-10-13
+
+🟢 **Six pre-registered actions reached: `3` DISCHARGED on limb `1` or `2`, `1` DISCHARGED with a
+limb fired and a gap closed by MEASUREMENT, `1` SPLIT and now explained, and `1` MIS-EXECUTED and
+reported as such rather than quietly counted.**
+
+🆕 🔴 **The pass's most useful finding is a correction to this KB's own census habit, and it cost
+the pass its headline action.** `ACTION LR` was to screen `10` UNREAD rows blind. 🔴 **This pass
+screened `3` and only then checked the census, where all `3` already sat with settled licences.**
+🔵 **`T313`: a row with a verified licence is not a read row.** 🟢 **All `3` had settled grants,
+`0` had a settled schema — and in all `3` the schema is what decides whether a studio can use
+it.** 🔴 **The `57`% overturn rate this pass nearly published is withdrawn before it was quoted;
+`n` stays at `4`.**
+
+🆕 🟢 **The most client-useful finding is a cheaper proposal.**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) has been carried for
+`16` passes on a licence and an absence. 🟢 **Measured this pass: `141` Odoo models across `13`
+modules — `op.course`, `op.admission`, `op.exam`, `op.marksheet.register`, `op.attendance.sheet`,
+`op.academic.year`, `op.fees.terms`.** 🔵 **`T162` was about missing STANDARDS, not missing
+entities, which turns *"budget an SIS build"* into *"budget modules against a weak-copyleft SIS"*
+— see **Pattern `26`**.
+
+🆕 🔴 **And the sharpest single measurement: a `900`★ *"AI tutor"* whose only tables are
+`users`, `customers`, `products`, `prices`, `subscriptions`.**
+[`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt)'s `GPL-3.0` was already on
+this KB's record; its schema was not. 🔵 **With `open-tutor-ai-CE` modelling chats and p182's
+`plataforma-agentes-ia` modelling a CRM, that is THREE independent trees whose education lives in
+the naming layer** *(`T310`, now a structural claim)*.
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION LS`** — does `open-tutor-ai-CE` model courses outside `data/models/`? | 🟢 **DISCHARGED, LIMB `2`. `10` `__tablename__` in `4 702` files, all chat/file/user. `learning/courses/` is a `30`-byte docstring, and `MIGRATION.md` names the mechanism: a renamed OpenWebUI** |
+| 🟢 **`ACTION LT`** — what does the `BSD-3-Clause` CE withhold? | 🟢 **DISCHARGED, LIMB `1` on the measurable part: `0` licence-key, entitlement or feature-flag gates tree-wide. 🔴 But the README declares a proprietary EE — `Gap 362` closes for this row and stays open for every other** |
+| 🟢 **`ACTION LV`** — port `civil-ai`'s audit schema | 🟢 **DISCHARGED, LIMB `1`. `18` checks, `0` failures, stdlib only. 🆕 And it found `2` deployment facts the reading could not** |
+| 🟡 **`ACTION LU`** — probe MEA supply in Arabic and French | 🟡 **DISCHARGED, LIMB `2`. `0` permissive MEA-origin rows on either language-native channel. `gap 124` joins `gap 141` as ABSENT BY MEASUREMENT** |
+| 🔴 **`ACTION LW`** — are the Article `50` guidelines adopted or draft? | 🔴 **SPLITS, limb `2`, now reconciled via `C(2026) 5054 final`. 🆕 And the channel proved MONTHS STALE on a date this KB already holds first-hand *(`T312`)*** |
+| 🔴 **`ACTION LR`** — the screening recipe, blind on `10` unread rows | 🔴 **MIS-EXECUTED, NOT discharged. `3` of `3` rows were already in the census. Re-registered with a census pre-check** |
+
+### 🟢 What this pass added
+
+- 🆕 🟢 **Pattern `26` — the SIS engagement as MODULES, not a build.** Deploy `openeducat_erp`
+  unmodified, add nothing inside `openeducat_*`, build the missing `OneRoster` / `LTI 1.3` /
+  `Ed-Fi` layer as new addons, keep the AI in a separate permissive service.
+  🔵 **`LGPL-3.0` reaches the module you modify — so: add, do not patch.**
+- 🆕 🟢 **A running artefact:** [`compose/code/agent-tool-receipts-port/`](compose/code/agent-tool-receipts-port/README.md)
+  — `civil-ai`'s `agent_tool_receipts` + `assessment_policy_versions` with the status state
+  machine, optimistic concurrency and the `ON DELETE RESTRICT` policy FK. **`18` checks green.**
+- 🆕 🔴 **Pattern `24` amended by two findings only running it could produce.** 🔴 **SQLite's
+  `foreign_keys` pragma is OFF by default, so a correct `RESTRICT` schema audits NOTHING until a
+  connection opts in — the orphan is reproduced in a test.** 🔴 **And `RESTRICT` on the policy
+  against `CASCADE` on the receipt means deleting a run deletes the evidence.**
+- 🆕 🔴 **Pattern `25` gains step `0` *(grep the census before writing a blind verdict)* and a
+  corpus check** *(a committed index, corpus or checkpoint is a SECOND grant, never in `LICENSE`)*.
+- 🆕 🔴 **A new trap class named: the corpus layer inside a clean `MIT` row.** `TeachGPT` is
+  cleanly `MIT` and commits `db/chroma.sqlite3` plus the commercial textbook it was built from.
+- 🆕 🟢 **Three EU procedural facts this KB did not hold:** the Article `50` guidance document
+  number **`C(2026) 5054 final`**; a **voluntary Code of Practice on transparency published `31`
+  July `2026`**; and **conformity assessment by INTERNAL CONTROL** for most Annex III education
+  systems absent real-time biometrics.
+- 🆕 🟢 **North America gains four policy signals:** **EO `14365`** *(Dec `2025`, federal
+  restriction on misaligned state AI laws)*, **EO `14277`** *(Apr `2025`, White House Task Force
+  on AI Education)*, **California SB `1288`** *(district guidance AND model policies)*, and the
+  **SREB AI Commission's `9` recommendations**.
+- 🆕 🟡 **LATAM gains a scale number:** **`716`** AI regulatory instruments across **`23`**
+  countries and territories *(Universidad de los Andes)* — 🔴 **`0` of them education-specific.**
+
+### 🔴 Declared gaps and absences
+
+- 🆕 🔴 **`Gap 362` *(open core)* is the axis `git clone` cannot see.** It closed for
+  `open-tutor-ai-CE` only because the holder wrote the Enterprise Edition into the README.
+  🔴 **Silence in a README is not evidence of absence, so it stays open everywhere else.**
+- 🆕 🔴 **`T312` — a secondary channel can be MONTHS behind this KB.** In October `2026` the
+  search channel still described the Annex III education deferral as *"pending formal adoption and
+  publication in the Official Journal"*; this KB settled it at p180 as **Regulation (EU)
+  `2026/1744`**, OJ `24` July `2026`. 🟢 **The regulatory calendar is unchanged by this pass —
+  the contribution is corroboration, not correction.**
+- 🆕 🔴 **`gap 124` (MEA) is now ABSENT BY MEASUREMENT.** Arabic and French language-native probes
+  found **`0`** permissive MEA-origin repositories. 🟡 What exists is public strategy and
+  commercial deployment: UM6P on ChatGPT Edu, *Digital Morocco 2030*, GITEX Africa Morocco `2026`,
+  a Tunisia–Algeria research platform *(March `2026`)*, and `0` relevant results for Senegal.
+- 🆕 🟡 **The APAC description is corrected: it is `0` PERMISSIVE APAC-origin rows, not `0`
+  APAC-origin rows.** `openeducat_erp` is Indian-origin and `LGPL-3.0`.
+- 🔴 **`0` EMEA-wide adoption statistics were obtainable** — the channel returned legal explainers
+  only. 🔵 **This KB has EMEA regulation in depth and EMEA adoption not at all**, the mirror image
+  of LATAM.
+- 🔴 **`0` APAC education adoption statistics.** 🟡 The one figure found measures AI *familiarity*
+  *(China `98`%, Singapore `96`%, Japan `94`%)*, which is awareness, not classroom use.
+- 🔴 **`0` permissive North-American-origin ROUTE rows, fourth pass.** The permissive routes are
+  European.
+- 🔴 **Market size is now a FOUR-house spread** — `2026` at `$9.58` B–`$11.4` B, `2025` at
+  `$6.4` B–`$8.3` B, so the houses disagree on the direction of the step into the current year
+  *(`T306`)*. 🔴 **And an *"agentic AI in education"* figure arrived at `$2.1` B / `4.5`% CAGR
+  against `30`%+ for the category — a definitional disagreement, not an empirical one.**
+- 🔴 **★ counts remain unobtainable** *(`gap 140`)*, re-confirmed on `curl` this pass:
+  `github.com` and `api.github.com` both `403`. 🔵 **A successful `git clone` of the exact path is
+  the existence test.**
+- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNPROBED** for a fifth pass.
+
+### 🟢 Pre-registered for p184, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🔴 **`ACTION LR`** *(re-registered, with step `0`)* | run Pattern `25` on `10` rows that are **confirmed absent from the census first**, record the verdict, then read and count overturns | **limb `1`:** `≤1` of `10` overturned → the recipe is reliable triage and can be published outside this KB. **limb `2`:** `≥3` overturned → it is a pointer to a read and must say so wherever it appears. 🔵 p182's `n=4` at `3` overturns does not carry: those rows were screened without step `0` |
+| 🆕 🟢 **`ACTION LX`** | measure the SCHEMA of the shelf rows whose grant is settled and whose entity list has never been counted — start with `ai-shifu` *(`Apache-2.0`)* and `AI-Powered-Video-Tutorial-Generator` *(`MIT`)*, both of which this KB has measured by file count and `0` times by entity | **limb `1`:** they carry education entities → `T313` is a procedural gap in this KB's census only. **limb `2`:** either models chats, billing or CRM → 🔴 **`T310` generalises to the whole shelf and the census needs an entity-count COLUMN.** 🔵 Prior evidence already leans limb `2`: `anki-mcp-server` is on record at **`0` `__tablename__`, `0` `CREATE TABLE`, `0` `class User`** |
+| 🆕 🟡 **`ACTION LY`** | does `openeducat_erp` actually permit the Pattern `26` boundary — can a NEW Odoo addon read `op.*` records without importing `openeducat_*` Python modules? | **limb `1`:** the ORM boundary suffices *(`env['op.course']` by model name)* → 🟢 Pattern `26`'s *"add, do not patch"* is architecturally sound and not just a licence slogan. **limb `2`:** a real integration must import `openeducat_*` classes → 🔴 the `LGPL` boundary is thinner than Pattern `26` claims and the pattern needs a counsel line, not a one-liner |
+| 🆕 🟡 **`ACTION LZ`** | probe the corpus layer across the shelf: how many rows ship a committed index, corpus or checkpoint? | **limb `1`:** `≤1` → `TeachGPT` is an outlier and the corpus check is a footnote. **limb `2`:** `≥3` → 🔴 **the corpus grant becomes a required census field**, because the code licence is then routinely the wrong licence to quote |
+| 🆕 🔴 **`ACTION MA`** | close the EMEA adoption gap on a channel that is not a law blog — try statistical offices, Eurostat-shaped sources and university associations | **limb `1`:** any EMEA adoption statistic obtainable → 🟢 the region stops being regulation-only. **limb `2`:** nothing on any channel → 🔴 declare EMEA adoption ABSENT BY MEASUREMENT, as `ACTION LP` and `ACTION LU` did for LATAM and MEA supply |
+| 🆕 🟡 **`ACTION MB`** | probe `formalms/formalms` and `apereo/opencast`, unprobed for five passes | **limb `1`:** either is permissive with real course entities → 🟢 a new ROUTE candidate. **limb `2`:** copyleft or entity-less → 🔴 close them out and stop carrying them as *"unprobed"* |
+
+🔵 **Note for p184 on method, learned the expensive way this pass: check your own record before
+you measure. The cheapest step in a screening recipe is the one that tells you the work is already
+done — and skipping it does not just waste a clone, it manufactures a statistic.**
+
 ## Pass 182 — 2026-10-13
 
 🟢 **Five pre-registered actions reached: `3` DISCHARGED on limb `1`, `1` on limb `2` with a row
