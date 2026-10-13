@@ -3,6 +3,37 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## Pass 165 — 2026-10-13
+
+🟢 **`ACTION IM` is DISCHARGED and the routing table gains the one thing it lacked: a row that is
+measured GREEN on licence and on standards simultaneously.**
+[`evidence/interop-guarded-grep.2026-10-13-p165.tsv`](../evidence/interop-guarded-grep.2026-10-13-p165.tsv)
+
+### 🆕 🟢 Platform routing, with interop MEASURED and every sibling licensed
+
+🔵 **Every interop cell was measured with `P164-A`'s guarded grep against a pinned tree. No cell is
+a vendor claim.**
+
+| platform | licence *(body-read)* | LTI 1.3 | SCORM | xAPI | OneRoster / Ed-Fi | route here when |
+|---|---|---|---|---|---|---|
+| 🆕 🟢 **[`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT)** | 🟢 **`Apache-2.0`** | 🟢 **IN-TREE — `145` files, `18 067` LOC** | 🟢 **IN-TREE — `65` files** | 🔴 ABSENT | 🔴 ABSENT | 🟢 **standards interop AND a permissive licence are both required. The only row that satisfies both** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟡 **sibling** — `xblock-lti-consumer`, 🔴 **AGPL** | 🟡 **sibling** — `overhangio/openedx-scorm-xblock`, 🔴 **AGPL** | 🟡 **sibling** — `event-routing-backends`, 🔴 **AGPL** | 🔴 ABSENT | 🟡 **capability and scale outweigh licence, and counsel has cleared AGPL for the deployment model** |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `LGPL-3.0` | 🔴 **ABSENT** *(`T161`)* | 🔴 ABSENT | 🔴 ABSENT | 🔴 **ABSENT — vendor claim REFUTED** | 🔴 **only for its `14` ERP modules. Every integration is bespoke** |
+| 🟡 Moodle | 🟡 `GPL-3.0` *(`P56`)* | 🟡 core *(spells it `ltiadvantage` — `T142`)* | 🟡 core | 🟡 core | 🟡 plugin ecosystem | 🟡 **the institution already runs it — retrofit, do not replace** |
+
+🆕 **`T172` makes the second row a decision rather than a preference:** 🔴 **the Open edX interop
+surface is `AGPL-3.0` at EVERY layer — core, each plugin, and each published PyPI package. There is
+no permissive path through it.**
+🔵 **Stated fairly: AGPL is a GATE, not a defect, and Open edX remains the most capable OSS LMS
+here. Whether the gate binds turns on whether the client distributes or offers the platform as a
+network service — their counsel's call, not this shelf's.**
+
+🔵 **And the honest limit on the new top row:** 🔴 **OpenOLAT's `OneRoster`, `Ed-Fi` and `xAPI` are
+measured ABSENT (`620` naive Ed-Fi hits, `0` real — `T170`).** 🟢 **Rostering and analytics are a
+BUILD on this platform, and must be priced as one. What you get for free is the tool-integration
+and content-packaging surface, which is where most integrations actually live.**
+
 ## Pass 164 — 2026-10-13
 
 🔴 **`ACTION IJ` is REFUTED and its falsifier fired on ALL THREE limbs.** 🟢 **The routing

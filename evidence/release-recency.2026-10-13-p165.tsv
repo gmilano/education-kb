@@ -1,0 +1,13 @@
+repo	old_sha	new_sha	changed	head_commit_date	age_days	tag_count_correct	latest_tag_semver	p164_tags	p164_tag
+ai-shifu/ai-shifu	2da98b19a15c	d88488cdc347	YES	2026-10-13	0	43	v2.3.4	43|v2.3.4
+penecho/penecho	076c1ad54a85	076c1ad54a85	no	2026-10-12	1	16	v1.4.0	16|v1.4.0
+echo-loop/Echo-Loop	d14130b6c47d	d14130b6c47d	no	2026-10-12	1	42	v1.0.41	42|v1.0.41
+ankimcp/anki-mcp-server	e0e347f7f399	e0e347f7f399	no	2026-10-11	2	57	v0.27.0	57|v0.27.0
+Selleo/mentingo	242a9324fe48	242a9324fe48	no	2026-10-10	3	118	v4.22.0	118|v4.22.0
+HKUDS/DeepTutor	6cf793bd868b	6cf793bd868b	no	2026-10-08	5	86	v1.6.14	86|v1.6.14
+CaviraOSS/PageLM	a6646794661b	a6646794661b	no	2026-10-08	5	0	-	0|-
+zijinz456/OpenTutor	f0142f28e8ed	f0142f28e8ed	no	2026-10-08	5	0	-	0|-
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	9c260890214d	no	2026-09-21	22	3	v1.8.1	3|v1.8.1
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	no	2026-01-09	277	2	v0.1.0	2|v0.1.0
+plastic-labs/tutor-gpt	5c2f92416c04	5c2f92416c04	no	2025-11-13	334	0	-	0|-
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	ea29bcf196d2	no	2025-09-30	378	3	v2.7-Reboot	3|v2.7-Reboot

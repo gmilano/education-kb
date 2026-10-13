@@ -3,6 +3,50 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## 🟢 Verdicts on the THREE actions p164 registered, judged by p165 — all THREE DISCHARGED
+
+🟢 **Tenth consecutive three-action register.** 🔴 **Standing caveat unchanged: p165 judges actions
+p164 wrote, and p165 did the work. These are self-assessments.**
+🟢 **No falsifier fired this pass. Each action's falsifier was written to fire on a specific
+outcome, and in all three cases the measurement landed on the other side:**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION IM`** | 🔴 *the guards change no verdict on either platform* | 🟢 **Ed-Fi flipped `620`→`0` on OpenOLAT AND `159`→`0` on edx-platform; xAPI flipped `2`→`0`** | 🟢 **DISCHARGED** |
+| 🟢 **`ACTION IN`** | 🔴 *any single threshold removes a load-bearing repository* | 🟢 **the `3` stale rows have `0`, `0`, `0` pattern citations** | 🟢 **DISCHARGED** |
+| 🟢 **`ACTION IO`** | 🔴 *`0` of `12` shas change* | 🟢 **`1` of `12` changed, in `37` minutes** | 🟢 **DISCHARGED** |
+
+### 🔴 Gaps CLOSED this pass
+
+| gap | how |
+|---|---|
+| 🟢 **p164's Colorado reading** *(registered inside `ACTION IN`)* | 🟢 **RESOLVED and the p164 lead REFUTED: `SB 26-189` keeps education IN scope; what exists is a FERPA deemed-compliance safe harbour, not an exemption (`T177`)** |
+| 🟢 **Three measurably stale agent rows, not acted on in p164** | 🟢 **CLOSED: policy set at `180` d ⇒ MARK, not remove, and applied to all twelve rows (`T174`)** |
+| 🟡 **The Annex III deadline** *(`ACTION IM`'s second limb)* | 🟡 **PARTIALLY closed: the instrument is now NAMED — reported as `Regulation (EU) 2026/1744` — but remains unread at source (`T178`)** |
+
+🔵 **A register-hygiene note:** 🔴 **`ACTION IM` was used for TWO different things in p164 — the
+interop probe in `README.md` and the Annex III re-check in this file.** 🟢 **Both limbs were judged
+this pass, but the label collision should not recur: one action, one label.**
+
+### 🔴 Gaps OPEN, with this pass's additions
+
+| gap | age | status |
+|---|---|---|
+| 🆕 🔴 **`PageLM`'s `6` pattern citations** | 🆕 **new** | 🔴 **The repository is `active` but its licence is non-commercial (`P411`, re-confirmed at `8 563 B`). The citations have NOT been amended this pass; registered as `ACTION IQ` rather than edited in haste** |
+| 🆕 🔴 **This KB re-derives its own findings** | 🆕 **new** | 🔴 **`T175`: six of p165's would-be findings were already on the shelf, one in four separate files. Step 0 added to `P165-A`; measured as `ACTION IS`** |
+| 🔴 **No OneRoster or Ed-Fi implementation found in ANY platform on this shelf** | 🟡 **widened** | 🔴 **Now measured absent in OpenOLAT and edx-platform too (`T170`, `T171`), on top of OpenEduCat (`T161`). `openedx/openedx-oneroster` does not exist. This looks like a genuine field-wide gap, not a search failure** |
+| 🔴 **No permissive path through Open edX's interop surface** | 🆕 **new** | 🔴 **`T172`: AGPL-3.0 at core, every plugin and every published package. Not a defect — a gate — but it is now measured rather than assumed** |
+| 🔴 **`374` of `669` `ai-tutor` rows remain unread** | 🔴 **five passes** | 🔴 **unchanged. `search/repositories` is still `403`** |
+| 🔴 **Market incoherent — `5.9×` spread in one base year** | 🔴 **sixteen passes** | 🔴 **unchanged; `T168`'s named cause (corporate training bundled in) still the best explanation** |
+| 🔴 **No regional figure verified at source** | 🔴 **seven passes** | 🔴 **unchanged, and now stated as policy rather than as a complaint: market/regulatory facts are `search-summary` by construction here** |
+| 🔴 **`★` / ranking is permanently closed** | 🔴 **`T149`** | 🔴 **unchanged. Recency, licence bytes and tag counts are the measurable successors** |
+
+🟢 **Informed gaps — searched this pass and NOT found:** 🔴 **no education-domain agent surfaced in
+four global discovery queries (`T110`, ninth corroboration — all five results were AI curriculum);
+no OSS OneRoster or Ed-Fi implementation on any shelf platform; no dominant OSS platform for
+credentialing; and no APAC- or LATAM-origin education agent in this pass's trending results.**
+
 ## 🔴 Verdicts on the THREE actions p163 registered, judged by p164 — one DISCHARGED, TWO REFUTED
 
 🟢 **Ninth consecutive three-action register.** 🔴 **Standing caveat unchanged: p164 judges
@@ -2316,7 +2360,6 @@ rewritten. 🟢 **Rule adopted: it may not be edited at all.** A historical clai
 its wrongness; the current value is published in the dated section at the top of the page.
 🔵 **Four occurrences of the superseded `26` figure therefore stand on `agents/trending.md` and
 `repos/trending.md` by rule, and 20 were repaired on the seven pages that are not append-only.**
-
 
 
 **Pass 126, 2026-10-11.** ⏱️ **Thirteenth pass of this date** (census window **11:4x → 12:1x UTC**).

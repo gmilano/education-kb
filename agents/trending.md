@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-13
 ---
 
+
+## 2026-10-13 — Pass 165
+
+### 🆕 🔴 What is new this week: the shelf caught ITSELF re-discovering six things it already knew
+
+🔴 **p165 measured first and read the shelf second. Six findings were ready to publish as new;
+all six were already here, one of them in four separate files.**
+🔴 **One was worse than redundant: concluding from `getaddrinfo ENOTFOUND` that the blocked hosts
+are DNS-blocked, when this shelf had already established with `curl -v` that the message *"says
+DNS and is wrong"*.** 🟢 **It was caught before publication, which is the only reason it is a
+process note rather than a correction.**
+
+| re-derived | already recorded as |
+|---|---|
+| 🔴 `PageLM`'s non-commercial licence with the MIT incipit, `8 563 B` | 🟢 **`P411` — in `agents/top.md`, `repos/foundations.md`, `repos/trending.md`, `agents/trending.md`** |
+| 🔴 licence-body byte-count as an instrument | 🟢 **in use since `P411`** |
+| 🔴 probing `LICENSE.md` / `.txt` before concluding unlicensed | 🟢 **`P158-B`, which probes `9` paths** |
+| 🔴 `Mr.-Ranedeer` is unlicensed | 🟢 **already `NONE (404 on 9 paths)` → `DO NOT SHIP`** |
+| 🔴 Open edX's standards live in sibling packages | 🟢 **`T142`** |
+| 🔴 `ENOTFOUND` ⇒ DNS block | 🔴 **refuted already; the shelf's own warning names this exact trap** |
+
+🆕 **`T175` — the rule that follows: at `165` passes, grep the shelf for every term in the
+question BEFORE measuring.** 🔵 **It is the cheapest instrument available and it was used last.**
+
+🟢 **What the re-run did legitimately yield: a reproducibility check.** 🟢 **Every row where this
+shelf has published a licence byte count reproduced EXACTLY one pass later, same default branch —
+`anki-mcp-server` `1 074`, `mentingo` `1 062`, `AI-Powered-Video-Tutorial-Generator` `1 070`,
+`PageLM` `8 563`.** 🔵 **A check, not a finding — p161's wording, and it was right.**
+
+### 🆕 🟢 Three registered actions, all three discharged
+
+| action | result |
+|---|---|
+| 🟢 **`ACTION IM`** | 🟢 **guards flipped Ed-Fi `620`→`0` (OpenOLAT) and `159`→`0` (edx-platform). Falsifier silent** |
+| 🟢 **`ACTION IN`** | 🟢 **staleness policy set: `180` d ⇒ MARK, not remove. The `3` stale rows have `0` pattern citations each** |
+| 🟢 **`ACTION IO`** | 🟢 **`1` of `12` HEAD shas moved — in `37` minutes** |
+
+🟢 **`ai-shifu/ai-shifu` moved `2da98b19a15c` → `d88488cdc347` between p164's commit (`03:10:47Z`)
+and this sweep (`03:47:43Z`), advancing its HEAD date to `2026-10-13`.** 🔵 **`8%` churn per `37`
+minutes is the first such figure on this shelf — from one observation of one interval, so it bounds
+nothing.**
+
+### 🆕 🔴 A near-miss: the naive re-run would have FALSELY REFUTED p164's one promoted finding
+
+🔴 **Re-running the tag census naively gave `anki-mcp-server` `113` tags (not `57`) and
+`DeepTutor`'s latest tag as `v1.6.9` (not `v1.6.14`) — reading exactly like a refutation of
+`T160`.** 🟢 **Both were instrument faults:** `ls-remote --tags` emits a second `^{}` line per
+ANNOTATED tag (`57` + `56` peeled = `113`); `tail -1` takes the LEXICOGRAPHIC max, and
+`v1.6.9 > v1.6.14`, `v0.9.0 > v0.27.0`.
+🟢 **With `grep -v '\^{}$'` and `sort -V`, all twelve rows reproduce p164 exactly.**
+🔵 **Transferable rule: a re-measurement that contradicts a VERIFIED prior finding is a suspect
+instrument before it is a refutation.**
+
+### 🆕 🟢 The positive find of the week: OpenOLAT's interop surface, sized
+
+🟢 **`openolat/OpenOLAT` (`Apache-2.0`, HEAD `e4be14f0`, `2026-10-12`): LTI 1.3 implemented
+in-tree at `org/olat/ims/lti13/` — `145` files, `18 067` Java LOC, including `LTI13Platform`,
+`LTI13Dispatcher`, `LTI13Key` (JWKS) and `LTI13DeepLinkingEnum` — and SCORM in `65` Java files.**
+🔴 **OneRoster, Ed-Fi and xAPI measured ABSENT.**
+🔴 **Against it: the whole Open edX interop constellation is `AGPL-3.0` at every layer — core,
+`xblock-lti-consumer`, `event-routing-backends`, `overhangio/openedx-scorm-xblock` — corroborated
+on PyPI.** 🟢 **`T171`, `T172`. For a client needing standards interop on a permissive licence this
+is now a one-row answer, and it is `P165-B`.**
+
+### 🔴 `T110`, ninth corroboration — global discovery still returns AI CURRICULUM, not education agents
+
+🔴 **Four global queries again returned `microsoft/ai-agents-for-beginners`, the Hugging Face
+Agents Course, `LLMs-from-scratch`, `developer-roadmap` and
+`microsoft/generative-ai-for-beginners` (~`121k★`).** 🔴 **None is an education-domain agent.**
+🔵 **At nine corroborations this is a settled property of the field: *"AI agents for education"*
+retrieves material for TEACHING AI, not software for RUNNING a school — which is why these twelve
+rows were assembled by hand.**
+
+
 ## 2026-10-13 — Pass 164
 
 ### 🆕 🟢 What is new this week: the shelf found a way to measure maintenance after losing the ability to measure attention
@@ -2452,7 +2526,6 @@ listing over-counts this layer by 67 %, and one `curl` per address fixes it.**
 🔴 **And it is the benchmark layer AGAIN.** `srs-benchmark` 🔴 no grant, `MRBench` 🔴 no grant
 (`Gap 393`), `researchrubrics` 🟡 defective grant. 🔵 **Three for three: in this industry the code
 gets a licence and the yardstick does not.**
-
 
 
 ## 🟢 Pass 127 — 2026-10-11 (fourteenth pass of this date), 12:4x–13:0x UTC
@@ -18370,7 +18443,6 @@ denominador = *slugs publicados que el clon resuelva*, los que fallen **declarad
 no un sustituto de otro canal.**
 
 ---
-
 
 
 ## 2026-10-04 — pase 102: la predicción propia FALSIFICADA, y debajo un corpus `NonCommercial` dentro de una fila MIT

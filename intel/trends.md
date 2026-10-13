@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## Pass 165 — 2026-10-13
+
+### 1. 🆕 🟢 `T177` — an exemption and a safe harbour are different things, and p164's Colorado lead had them confused — *North America, search-summary*
+
+🔴 **p164's open-gaps carried a tracker claim that Colorado had repealed its AI Act and
+*"carved out FERPA-covered institutions — i.e. education EXEMPTED"*.** 🟢 **The repeal is real.
+The exemption is not.**
+
+| p164's lead | what this pass's sources say |
+|---|---|
+| 🟢 *"repealed"* | 🟢 **CORRECT — `SB 26-189`, signed `2026-05-14`, repeals AND REPLACES the 2024 Colorado AI Act; effective `2027-01-01`** |
+| 🔴 *"education exempted"* | 🔴 **REFUTED. Education stays in scope — the law reaches decisions affecting *educational enrollment or opportunity*, and sources state there is NO exemption for public or nonprofit educational institutions** |
+| — | 🟢 **What exists is a DEEMED-COMPLIANCE SAFE HARBOUR: FERPA-compliant notices are deemed to satisfy the notice duty; an existing FERPA-compliant correction and human-review process is deemed to satisfy human review** |
+
+🆕 **`T177`:** 🔵 **the distinction IS the engagement.** 🔴 **An exemption means no work. A safe
+harbour means the institution must POSSESS a FERPA-aligned notice, a documented
+correction-and-human-review process, and evidence of both — and must be able to show them.**
+🟢 **That is three concrete artefacts against a `2027-01-01` date, and `P160-B`, `P161-A`,
+`P163-C` and `P165-B` already build them.**
+🟡 **The replacement is otherwise LIGHTER than the 2024 Act: it reframes around *"automated
+decision-making technology"* and drops the impact-assessment and risk-management-framework duties.**
+🔵 **Generalisable beyond Colorado: when a tracker says *"carve-out"*, establish whether it is an
+EXCLUSION or a SAFE HARBOUR before scoping anything. They point in opposite commercial directions.**
+
+### 2. 🆕 🟢 `T178` — the Annex III deadline now has a named instrument — *EMEA, search-summary, UNVERIFIED at source*
+
+🟢 **A real advance on p164, which carried the claim with no instrument attached.**
+🟡 **Reported consistently across several independent law-firm and compliance analyses: the
+Digital Omnibus was adopted as `Regulation (EU) 2026/1744`, published `2026-07-24`, in force
+`2026-07-27`, moving the Annex III STANDALONE high-risk obligations from `2026-08-02` to
+`2027-12-02`.**
+
+| moved | did NOT move |
+|---|---|
+| 🟡 Annex III standalone high-risk obligations → **`2027-12-02`** | 🟢 **Article 50 transparency — unchanged, original schedule** |
+| 🟡 machine-readable marking for existing generative systems → `2026-12-02` *(grace period)* | 🟢 **the emotion-recognition ban in education — in force since `2025-02-02`, reported unaffected. LIVE TODAY** |
+
+🔴 **One source still describes the Omnibus as a Commission PROPOSAL in negotiation rather than
+adopted law.** 🔵 **That disagreement keeps the cluster a strong LEAD rather than a finding, even
+though most sources now agree.**
+🔴 **Not one character was read at source, consistent with every prior pass.** 🟢 **So the shelf's
+position is: carry the named instrument, carry the date, label it `search-summary`, and tell the
+client to verify `Regulation (EU) 2026/1744` against the published text with their counsel.**
+🔵 **Education remains in Annex III point 3 — admission and access, assignment to institutions,
+evaluation of learning outcomes where those outcomes steer the learning, level assessment, and
+monitoring for prohibited behaviour during tests.**
+
+🟢 **What does not depend on the date, and it is most of this shelf's value:** 🟢 **every code
+finding is a fact about a repository. `T161`, `T170`, `T171`, `T172` and OpenOLAT's
+`o_ai_essay_correction` provenance schema hold whatever the deadline turns out to be.**
+🔵 **A delay is a budget for doing it properly, not a reason to stop.**
+
+### 3. 🆕 🔴 `T175` — the trend inside this KB: at `165` passes, re-discovery is a real cost
+
+🔵 **Not an education trend, but the one this pass can state from its own evidence.**
+🔴 **Six of p165's would-be findings were already on the shelf — `P411` (`PageLM`'s non-commercial
+licence, same `8 563 B`), the licence-byte instrument, `P158-B`'s `9`-path licence probe,
+`Mr.-Ranedeer`'s unlicensed status, and `T142`'s plugin finding.** 🔴 **A seventh conclusion
+contradicted a better-evidenced prior finding and was dropped before publication.**
+🆕 **`T175`:** 🟢 **a knowledge base deep enough to be valuable is deep enough to be re-derived
+from, and the defence is procedural: grep the shelf for every term in the question before
+measuring. It is now step 0 of `P165-A`.**
+🔵 **Worth carrying to the other industry shelves, because they are younger and will hit this at
+the same depth.**
+
+### 4. 🟡 The second-hand trends, carried with their labels — *Global*
+
+🟡 **Workflow-first deployment over broad personalisation claims; institutions reported to favour
+tools showing instructional value, ethics and transparency, with the clearest gains in course
+design support and teacher productivity (HolonIQ).** 🟡 **Movement away from generic chatbots
+toward platforms built around curriculum and learning objectives.** 🟡 **Agentic task execution —
+planning a teaching sequence, drafting an assessment — named as the 2026 shift (Educativa).**
+🟡 **Career-navigation and credentialing tools spreading across K-12, post-secondary and workforce
+contexts.** 🟡 **Adoption: `54%` of K-12 students and `92%` of university students reported using
+AI; `60%` of US K-12 teachers used AI tools in 2024-2025, `32%` at least weekly; most education
+organisations reported to lack a policy despite widespread generative-AI use.**
+🔴 **All `search-summary`, none read at source. The `83%` / `42%`-style figures from vendor blogs
+are deliberately NOT carried.**
+
 ## Pass 164 — 2026-10-13
 
 ### 1. 🆕 🔴 The deadline this shelf has been planning against MOVED — Annex III education obligations now apply from 2 December 2027 — *EMEA, search-summary, UNVERIFIED at source*

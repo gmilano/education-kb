@@ -3,6 +3,109 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## Pass 165 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three DISCHARGED with silent falsifiers.**
+🆕 🔴 **And the most useful thing this pass learned is about the KB's own process, not about
+education: I measured first and read the shelf second, and SIX of the findings I was ready to
+publish were already here, some for five passes. That is recorded as `T175` because it is a
+repeatable failure mode for a shelf this deep.**
+[`evidence/release-recency.2026-10-13-p165.tsv`](../evidence/release-recency.2026-10-13-p165.tsv)
+[`evidence/licence-reproducibility.2026-10-13-p165.tsv`](../evidence/licence-reproducibility.2026-10-13-p165.tsv)
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION IM`** — probe OpenOLAT + edx-platform interop with `P164-A`'s guards | 🟢 **DISCHARGED, falsifier SILENT. The guards flipped a verdict on BOTH platforms: Ed-Fi `620`→`0` on OpenOLAT, `159`→`0` on edx-platform** |
+| 🟢 **`ACTION IN`** — set the staleness policy explicitly | 🟢 **DISCHARGED, falsifier SILENT. The `3` stale rows have `0` pattern citations each** |
+| 🟢 **`ACTION IO`** — measure HEAD-sha churn p164→p165 | 🟢 **DISCHARGED, falsifier SILENT. `1` of `12` moved — in a `37`-minute interval** |
+
+### 🆕 🔴 `T175` — six findings re-derived from scratch that the shelf already held
+
+🔵 **Recorded in full because the lesson is cheap here and expensive later.** 🔴 **Each of these
+was measured this pass as if new, then found already present on re-reading the shelf:**
+
+| what I "found" | where it already was |
+|---|---|
+| 🔴 `PageLM` is a non-commercial licence wearing MIT's opening sentence | 🟢 **`P411`, with the same `8 563 B`, in `agents/top.md`, `repos/foundations.md`, `repos/trending.md` AND `agents/trending.md`** |
+| 🔴 The licence-body-by-byte-count instrument | 🟢 **in use since `P411`; `repos/foundations.md` explains *why* bytes are published beside the licence** |
+| 🔴 Trying `LICENSE.md` / `LICENSE.txt` before concluding *unlicensed* | 🟢 **`P158-B` already probes `9` paths — four more than I used** |
+| 🔴 `Mr.-Ranedeer-AI-Tutor` has no licence at all | 🟢 **already recorded `NONE (404 on 9 paths)` → `DO NOT SHIP`** |
+| 🔴 edx-platform's standards live in sibling packages, not core | 🟢 **`T142`, plus the note that *"read alone, the clone publishes FALSE"* absences** |
+| 🔴 `getaddrinfo ENOTFOUND` means the hosts are DNS-blocked | 🔴 **the shelf investigated this with `curl -v` and concluded the opposite: the message *"says DNS and is wrong"*. I used the exact signal it warns about** |
+
+🆕 **`T175`:** 🟢 **at `165` passes the shelf's own index is the cheapest instrument available and
+I used it last.** 🟢 **The fix is procedural and goes into `P165-A` step 0: grep the shelf for
+every term in the question BEFORE measuring anything.** 🔵 **Cost of skipping it this pass: most
+of a pass's measurement budget spent re-confirming settled facts — and one conclusion
+(`ENOTFOUND` ⇒ DNS) that would have CONTRADICTED a better-evidenced prior finding had it been
+published.**
+
+🔵 **What the re-derivation did legitimately produce is a reproducibility check, and it is worth
+keeping:** 🟢 **every row where this shelf has published a licence byte count reproduced
+EXACTLY, one pass later, on the same default branch — `anki-mcp-server` `1 074`, `mentingo`
+`1 062`, `AI-Powered-Video-Tutorial-Generator` `1 070`, and `PageLM` `8 563`.**
+🟢 **That extends p161's `10 of 10` check to the current shelf and says the licence instrument is
+stable. It is a CHECK, not a finding** *(p161's own wording, and it was right).*
+
+### 🆕 🟢 `T173` — churn has a measured rate, and it is faster than the instrument was built for
+
+🟢 **`ACTION IO` asked how many of twelve HEAD shas change between passes, and braced for `0`.**
+🔵 **The interval turned out to be `37` minutes — p164 committed `03:10:47Z`, this sweep ran
+`03:47:43Z`.**
+🟢 **In that window `ai-shifu/ai-shifu` moved `2da98b19a15c` → `d88488cdc347`, its HEAD commit
+date advancing to `2026-10-13`.** 🟢 **`1` of `12`, falsifier silent.**
+🔵 **So the sweep is worth running every pass even at sub-hour spacing — the opposite of what the
+falsifier anticipated — and `8%` per `37` minutes is the first churn figure this shelf can quote.**
+🔴 **Stated with its limit: one observation of one interval. It bounds nothing.**
+
+### 🆕 🟢 `T174` — the staleness policy, and the FIELD matters more than the threshold *(`ACTION IN`)*
+
+🟢 **Policy: `180` days since HEAD commit ⇒ the row is MARKED 🔴 stale and excluded from
+shortlists and new patterns. It is NOT removed.**
+
+| decision | measurement behind it |
+|---|---|
+| 🟢 **`180` days is safe** | 🟢 **ages are `0,1,1,2,3,5,5,5,22,277,334,378` d. ANY threshold in `[23, 276]` yields the SAME partition — `9` active / `3` stale. The policy is insensitive to the number** |
+| 🟢 **Nothing load-bearing is lost** | 🟢 **`ChatTutor`, `tutor-gpt` and `Mr.-Ranedeer` are cited `0`, `0`, `0` times in `compose/patterns.md`. The falsifier required a load-bearing removal; it did not fire** |
+| 🟢 **MARK, not REMOVE** | 🔵 **`agents/trending.md` exists to record a trend; deleting a decayed row destroys the evidence that it decayed** |
+| 🆕 🔴 **The real risk is the FIELD, not the threshold** | 🔴 **had the shelf chosen TAG COUNT as the staleness signal, it would have dropped `PageLM` (`0` tags, `5` d, `6` citations) and `OpenTutor` (`0` tags, `5` d) — and the falsifier WOULD have fired. Age is sufficient; tag count is not** |
+
+🔵 **Generalisable: when a policy's falsifier is written against a THRESHOLD, check whether the
+sensitivity actually lives in the FIELD. Here a `12.6×` gap (`22` → `277` days) made the
+threshold irrelevant and the field decisive.**
+
+### 🟢 The shelf, recency refreshed and the staleness policy applied
+
+🔵 **Licences below are the shelf's existing body-read values, re-confirmed where published
+(`T175`). `★` stays dead (`T149`).**
+
+| agent | licence | HEAD | age | tags | latest tag | status |
+|---|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` *(`LICENSE.txt`, `11 342 B`)* | 🆕 `2026-10-13` | `0 d` | `43` | `v2.3.4` | 🟢 **active — HEAD moved mid-pass** |
+| 🟢 [`penecho/penecho`](https://github.com/penecho/penecho) | 🟡 `AGPL-3.0` *(`34 523 B`)* | `2026-10-12` | `1 d` | `16` | `v1.4.0` | 🟢 **active** |
+| 🟢 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🟡 `AGPL-3.0` *(`34 523 B`)* | `2026-10-12` | `1 d` | `42` | `v1.0.41` | 🟢 **active** |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` *(`1 074 B`, re-confirmed)* | `2026-10-11` | `2 d` | `57` | `v0.27.0` | 🟢 **active** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `MIT` *(`1 062 B`, re-confirmed)* | `2026-10-10` | `3 d` | `118` | `v4.22.0` | 🟢 **active — most-cited row (`17`)** |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` *(`11 408 B`)* | `2026-10-08` | `5 d` | `86` | `v1.6.14` | 🟢 **active** |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **`PageLM Community License`** *(`8 563 B`, re-confirmed — `P411`)* | `2026-10-08` | `5 d` | `0` | — | 🔴 **active but NON-COMMERCIAL — do not ship** |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` *(`1 068 B`)* | `2026-10-08` | `5 d` | `0` | — | 🟢 **active** |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` *(`1 070 B`, re-confirmed)* | `2026-09-21` | `22 d` | `3` | `v1.8.1` | 🟢 **active** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🟡 `AGPL-3.0` *(`34 522 B`)* | `2026-01-09` | 🔴 **`277 d`** | `2` | `v0.1.0` | 🔴 **STALE — marked, `0` citations** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟡 `GPL-3.0` *(`35 149 B`)* | `2025-11-13` | 🔴 **`334 d`** | `0` | — | 🔴 **STALE — marked, `0` citations** |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NONE** *(`404` on `9` paths — `P158-B`)* | `2025-09-30` | 🔴 **`378 d`** | `3` | `v2.7-Reboot` | 🔴 **STALE + UNLICENSED** |
+
+🆕 🟢 **A correction to the tag column's INSTRUMENT, caught before it was published, and it
+nearly refuted a correct finding.** 🔴 **A naive re-run gave `anki-mcp-server` `113` tags and
+`DeepTutor`'s latest tag as `v1.6.9` — which would have looked like a refutation of `T160`,
+p164's one promoted finding.** 🟢 **Both were my instrument:**
+`ls-remote --tags` emits a second `^{}` line per ANNOTATED tag (`57` real + `56` peeled = `113`),
+and `tail -1` returns the LEXICOGRAPHIC max (`v1.6.9 > v1.6.14`, `v0.9.0 > v0.27.0`).
+🟢 **With `grep -v '\^{}$'` and `sort -V`, all twelve rows reproduce p164 EXACTLY on tag count and
+latest tag.** 🔵 **The shelf already documents this pitfall; `T175`'s step 0 would have found it.**
+🔵 **The transferable rule: a re-measurement that contradicts a VERIFIED prior finding is a
+suspect instrument before it is a refutation.**
+
 ## Pass 164 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three judged. `ACTION IK` and `ACTION IL` DISCHARGED;

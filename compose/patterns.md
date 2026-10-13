@@ -3,6 +3,88 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## 🆕 🟢 `P165-A` — the capability census, corrected for BOTH its biases *(amends `P164-A`, p165 — Global)*
+
+🔵 **The problem this solves:** 🟢 **`P164-A` guarded against FALSE POSITIVES and was right to —
+`620` naive `Ed-Fi` hits on OpenOLAT, `0` real.** 🔴 **p165 established that the same instrument is
+biased in the OPPOSITE direction too, and a probe correcting only one bias still gives a client the
+wrong answer — in `T142`'s case a FALSE ABSENCE.**
+
+🟢 **The recipe:**
+
+0. 🆕 🟢 **GREP THE SHELF FIRST.** 🔴 **p165 re-derived six findings this KB already held, because
+   it measured before it read (`T175`).** 🟢 **Before any clone: grep the KB for the platform, the
+   standard and the instrument. It is the cheapest step and it was the one skipped.**
+1. 🟢 **Pin the tree** — `git ls-remote --symref`, then `git clone --depth=1`.
+   🔵 **Plain depth-1 for content work, not blobless** *(`P164-B`)*. 🔴 **Resolve the default
+   branch; do not assume `main` — OpenOLAT and edx-platform are both `master`.**
+2. 🟢 **Guard the FALSE POSITIVES — five classes now:**
+
+   | guard | class it kills |
+   |---|---|
+   | 🟢 `\b` word boundaries | 🔴 `facu`*`lti`*`es-icon.svg` *(p164)* and 🆕 **the `-ed`+`fi` camelCase collision: `ableExtendedFilter` ×`577`, `lastModifiedField`, `uploadedFile` (`T170`)** |
+   | 🟢 `grep -I` | 🔴 raw bytes in PNG/JPEG assets *(p164)* |
+   | 🟢 `--exclude='*.po'` | 🔴 Danish `Samlet` matching `saml` *(p164)* |
+   | 🟢 `--exclude-dir={node_modules,vendor,build,dist,static/js}` | 🔴 vendored bundles — xAPI's only OpenOLAT hits were inside `pdf.js` build artefacts |
+
+   🔴 **Keep all of them even when one contributes nothing: on `lti` in OpenOLAT boundaries did
+   `93%` and binaries `0.3%`; on OpenEduCat the weighting was reversed (`T176`).**
+3. 🆕 🔴 **Guard the FALSE NEGATIVES, which `P164-A` did not address:**
+
+   | risk | fix |
+   |---|---|
+   | 🔴 **naming convention** | 🔴 **`lti_1p3` (Python/Django, `15` files in edx-platform) returns `0` in OpenOLAT, which implements LTI 1.3 in `145` files as `LTI13`.** 🟢 **Probe the SPEC URL — `imsglobal.org/spec/lti` — which is language-independent and hits both** |
+   | 🔴 **plugin architecture** | 🟢 **`T142`. Read migration and config filenames: `..._move_course_edit_lti_fields_enabled_flag_model_to_lti_consumer.py` names its own sibling** |
+   | 🔴 **config vs code** | 🔴 **edx-platform's only SCORM hits are `envs/mock.yml`; its xAPI hits are `requirements/*.txt`, `uv.lock`, a migration, an ADR. Declaring a dependency is not implementing a standard** |
+4. 🟢 **Report FOUR verdicts:** 🟢 **IMPLEMENTED-IN-TREE · IMPLEMENTED-IN-SIBLING *(name the repo
+   AND read its licence)* · CONFIG-ONLY · ABSENT.**
+5. 🔴 **Licence every sibling you name.** 🟢 **This step produced `T172`: the Open edX constellation
+   is AGPL at every layer, so "use the plugin" does not escape the gate.** 🟢 **Corroborate on
+   PyPI/npm, which agreed with all three `LICENSE` bodies.**
+6. 🟢 **Quantify what you find.** 🔵 **"LTI 1.3 is present" and "LTI 1.3 is `145` files and
+   `18 067` LOC of platform-side implementation" are different sentences in an estimate.**
+
+🟢 **Deliverable: a per-platform matrix — standard × naive × guarded × path hits × verdict ×
+implementing repo × that repo's licence — plus the TSV.** 🟢 **Effort: `2`–`4` days for a
+five-platform landscape.**
+
+## 🆕 🟢 `P165-B` — standards-based AI assessment on a PERMISSIVE licence *(new, p165 — Global; strongest in EMEA and North America)*
+
+🔵 **The problem this solves:** 🔴 **every prior assessment pattern here had to trade capability
+against licence. Open edX has the interop surface and is AGPL at every layer (`T172`); Moodle is
+GPL-3.0; OpenEduCat has no standards surface at all (`T161`).** 🟢 **`T171` measured a platform
+that resolves the trade-off.**
+
+| layer | choice | measured basis |
+|---|---|---|
+| 🟢 **platform** | 🟢 **[`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT), `Apache-2.0`** | 🟢 **licence body-read; HEAD `e4be14f0`, `2026-10-12`, `25 823` paths** |
+| 🟢 **tool interop** | 🟢 **LTI 1.3, in-tree** | 🟢 **`145` files / `18 067` LOC: `LTI13Platform`, `LTI13Dispatcher`, `LTI13Key` (JWKS), `LTI13DeepLinkingEnum`, `LTI13ContentItem`** |
+| 🟢 **content interop** | 🟢 **SCORM, in-tree** | 🟢 **`65` Java files: `ScormCourseNode`, `ScormAssessmentHandler`, `ScormAssessmentConfig`** |
+| 🟢 **grading provenance** | 🟢 **port OpenOLAT's own `o_ai_essay_correction`** | 🟢 **`T165` (p164): already persists `a_prompt_template_version`, `a_content_hash_at_call`, `a_tier`, and the answer as an immutable `@Lob`** |
+| 🟢 **rubric as data** | 🟢 **`P158-A`** | 🟢 **precondition for re-grading an old submission against the rubric it was actually graded by** |
+| 🟢 **the off switch** | 🟢 **`P163-C`** | 🟢 **auditable disable path for the grader** |
+| 🟢 **retention** | 🟢 **`P161-B`** | 🟢 **~`4` hours, and mandatory wherever provenance is retained** |
+| 🔴 **what you must BUILD** | 🔴 **OneRoster / Ed-Fi rostering, and xAPI** | 🔴 **measured ABSENT (`T170`, `T171`). Price as bespoke; never assume** |
+
+🟢 **Wiring:** 🟢 **(1) OpenOLAT is the system of record AND the LTI 1.3 platform, so external
+tools attach as tools; (2) the AI grader runs OUTSIDE core as an LTI 1.3 tool — which satisfies
+`P160-B`'s *"keep the evaluative action outside core"* rule by a STANDARD rather than a convention;
+(3) grades return over AGS line-item/score endpoints, present in-tree; (4) every correction writes
+prompt-template version, content hash and tier, ported from `o_ai_essay_correction`; (5) the rubric
+is a versioned data artefact (`P158-A`); (6) `P163-C`'s off switch and `P161-B`'s retention job
+ship WITH it, not after.**
+
+🟢 **Why it holds up in a room:** 🟢 **the regulator's likely question — *which prompt graded this
+student, against which rubric, and who could switch it off* — is answered by a schema that already
+ships upstream, on a platform a studio can relicense into a client product, with the two standards
+that carry most integrations implemented in-tree.**
+🔵 **Strongest in EMEA (Annex III point 3 evidence posture; OpenOLAT is Swiss-originated) and in
+North America, where Colorado `SB 26-189`'s deemed-compliance safe harbour requires exactly a
+documented human-review-and-correction process (`T177`).**
+🟢 **Effort: `8`–`12` weeks for a graded pilot on one course, including retention job and off
+switch.** 🔴 **Add rostering only against a measured requirement.**
+
 ## 🆕 🟢 `P164-A` — the capability-claim audit *(new, p164 — Global)*
 
 🔵 **The problem this solves:** 🔴 **`ACTION IJ` measured three vendor-stated interoperability

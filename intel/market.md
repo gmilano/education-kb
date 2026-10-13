@@ -3,6 +3,50 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## Pass 165 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region.**
+🆕 🟢 **North America produced a CORRECTION rather than another statistic: p164's
+*"education EXEMPTED in Colorado"* lead is REFUTED, and what actually exists is a
+deemed-compliance safe harbour — which is billable work, not an exemption (`T177`).**
+🆕 🟢 **EMEA's Annex III claim now has a NAMED INSTRUMENT (`T178`).**
+🟢 **LATAM's governance gap gained a second, larger, independent measurement and a new regional
+institution. APAC gained two dated statutes.**
+🔴 **The market remains incoherent for a SIXTEENTH pass, with `T168`'s named cause unchanged.**
+🟢 **Regional detail is filed under the canonical `## Opportunities by region` block below as
+`#### p165` entries. ONE region block, not one per pass** *(`ACTION HK`'s rule, honoured).*
+
+### 🔴 The market, sixteenth pass — carried forward, still unverifiable
+
+🔴 **2026 base-year readings, unchanged from p164:** MarketsReportsWorld `$1.94B` ·
+Future Data Stats `$7.50B` · Precedence Research `$9.58B` · Research and Markets `$10.6B` ·
+Grand View Research `$11.4B`. 🔴 **A `5.9×` spread in one base year; long-range CAGRs `19%`–`43%`.**
+🟢 **`T168`'s mechanism stands: the higher figures bundle CORPORATE TRAINING with K-12 and higher
+education; an independent bottom-up estimate of the education-only market was `~$11B` for 2026.**
+🟡 **New regional slices this pass, same caveat attached:** 🟡 **Grand View projects APAC at
+`28.1%` CAGR `2026`–`2033` off a `$2 282.9M` 2025 base; Azumo puts North America at `36%` of the
+global market, `$3.68B` in 2026.**
+🔵 **The rule is unchanged and is the only defensible one: quote a market size with its SCOPE
+attached, or do not quote it.**
+
+### 🔵 A note on what this page can and cannot be, now stated as policy rather than as a complaint
+
+🟢 **This page's regional and regulatory content is `search-summary` and, on the evidence of
+many passes, will stay that way: the primary publishers it needs — EU institutions, UNESCO,
+standards bodies, law firms — do not answer in this environment, while the git and
+package-registry channels answer reliably.**
+🟢 **So the division of labour is explicit:**
+
+| class of fact | channel | standard it is held to |
+|---|---|---|
+| 🟢 **repository / code** | 🟢 **git, licence bodies, package registries — primary** | 🟢 **MEASURED. Never summarised, and quantified where it matters** |
+| 🔴 **market / regulatory** | 🔴 **search summaries** | 🔴 **labelled `search-summary`, NAME the instrument, and tell the client to verify at source with counsel** |
+
+🔵 **Written down because it is the honest shape of the deliverable: naming
+`Regulation (EU) 2026/1744` and saying *"verify this with your counsel"* is worth more to a client
+than a confident citation this shelf cannot stand behind.**
+
 ## Pass 164 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region.** 🆕 🟢 **North America broke a FOUR-PASS
@@ -559,6 +603,43 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p165
+
+🟢 **Colorado is CORRECTED, and the correction is the opposite of what p164's lead suggested.**
+🔴 **p164's open-gaps recorded a tracker claim that Colorado had *"repealed its AI Act and carved
+out FERPA-covered institutions — i.e. education EXEMPTED"*.** 🔴 **That is wrong in the part that
+matters.**
+
+| what p164 carried | what p165's sources say |
+|---|---|
+| 🔴 *"repealed"* | 🟢 **CORRECT — `SB 26-189`, signed `2026-05-14`, repeals AND REPLACES the 2024 Colorado AI Act; effective `2027-01-01`** |
+| 🔴 *"education exempted"* | 🔴 **WRONG. Education remains in scope — the law reaches decisions affecting *educational enrollment or opportunity*, and sources state it imposes NO exemption for public or nonprofit educational institutions** |
+| — | 🟢 **What actually exists is a DEEMED-COMPLIANCE SAFE HARBOUR: a FERPA-covered institution giving FERPA-compliant notices is deemed to satisfy the notice requirement, and an institution with a FERPA-compliant correction and human-review process is deemed to satisfy human review** |
+
+🆕 **`T177`:** 🔵 **an exemption and a deemed-compliance safe harbour are not the same thing, and
+the difference is the whole engagement.** 🔴 **An exemption means no work. A safe harbour means the
+institution must HAVE a FERPA-aligned notice and a documented human-review-and-correction process,
+and must be able to show it.** 🟢 **For a studio that is a concrete, scoped build: notice
+generation, a correction workflow, and the audit trail that evidences human review —
+which is exactly what `P160-B`, `P161-A` and `P163-C` already construct.**
+🟡 **Also noted: the replacement is LIGHTER — it reframes around *"automated decision-making
+technology"* and drops the impact-assessment and risk-management-framework duties of the 2024 Act.**
+
+🟡 **Federal and state movement, labelled as search-summary:** 🟡 **`134` AI-in-education bills
+across `31` states in 2026; California `AB 1159` (limiting student data for model training) and
+Idaho `SB 1227` (privacy protections for school AI tools) named as the data-privacy archetypes;
+Oklahoma and Maryland reported to require human oversight and to bar AI from high-stakes decisions
+about students; the `K-12 AI Literacy and Readiness Act of 2026` (`H.R. 8747`) advanced from
+committee on `2026-07-21`.** 🟡 **District practice is diverging sharply — Katy ISD bans generative
+AI for K-6 with scaffolded access to grade 12; New York City is reported to hold a one-year
+moratorium on student-facing AI through grade 8.**
+
+🟢 **Opportunity, stated as work rather than as a market:** 🟢 **the regulatory shape in North
+America is converging on three artefacts — a notice, a human-review-and-correction process, and a
+provable audit trail. All three are buildable, none requires a model, and `SB 26-189`'s
+`2027-01-01` effective date gives a real deadline to sell against.**
+
+
 #### p164
 
 🆕 🟢 **FOUR-PASS DROUGHT BROKEN — and with named, dated statutes rather than a vendor
@@ -855,6 +936,44 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p165
+
+🟢 **The Annex III date now has a NAMED INSTRUMENT, which is a real advance on p164 — and it is
+still not verifiable from this session, for the reason this page has already documented across
+several passes: the primary publishers it needs do not answer here.**
+
+| field | p164 | p165 |
+|---|---|---|
+| 🟡 the claim | 🟡 *"the Digital Omnibus delays Annex III high-risk obligations to `2027-12-02`"* | 🟡 **unchanged, and now corroborated across several independent law-firm and compliance sources** |
+| 🔴 the instrument | 🔴 **unnamed** | 🟢 **NAMED: reported as `Regulation (EU) 2026/1744`, published `2026-07-24`, in force `2026-07-27`** |
+| 🔴 verification | 🔴 *"all three EU hosts refused at the proxy"* | 🔴 **STILL UNVERIFIED — and the channel closure is already documented and is not EU-specific** |
+| 🟡 internal consistency | 🔴 **sources disagreed on a neighbouring date** | 🟡 **one source still describes the Omnibus as a PROPOSAL in negotiation; the others as adopted law. Treat as a strong lead, not a finding** |
+
+🟡 **What the sources agree on, all labelled search-summary:** 🟡 **Annex III standalone high-risk
+obligations move from `2026-08-02` to `2026-12-02`→`2027-12-02`; education sits in Annex III
+point 3 (admission and access, assignment to institutions, evaluation of learning outcomes where
+those outcomes steer the learning, level assessment, and monitoring for prohibited behaviour
+during tests); Article 50 transparency is UNCHANGED on its original schedule; the machine-readable
+marking grace period for existing generative systems is reported as `2026-12-02`.**
+
+🟢 **The two things that do NOT move, and they are what keeps this shelf's EMEA work valid either
+way:** 🟢 **(1) the emotion-recognition ban in education has been in force since `2025-02-02` and
+is reported unaffected — it is live TODAY; (2) every code finding on this shelf is a fact about a
+repository. `T161`, `T170`, `T171`, `T172` and the OpenOLAT provenance schema do not depend on a
+deadline.**
+
+🔵 **The engagement line, unchanged and now better founded: a delay is a budget for doing it
+properly, not a reason to stop.** 🟢 **And the honest client sentence is *"this date must be
+verified with your counsel against the published regulation"* — which this shelf can now say
+while naming the instrument to check.**
+
+🟢 **Where EMEA is the strongest market for what this shelf has actually built:** 🟢 **OpenOLAT is
+Swiss-originated, `Apache-2.0`, and now measured to carry LTI 1.3 and SCORM in-tree plus
+per-correction AI-grading provenance (`T165`, p164).** 🟢 **That combination — permissive licence,
+standards interop, and an audit schema that already ships — is precisely the Annex III evidence
+posture, and it is the basis of `P165-C`.**
+
 
 #### p164
 
@@ -1189,6 +1308,41 @@ skills body and whose delivery is outsourced is a programme that needs an integr
 
 ### APAC
 
+#### p165
+
+🟡 **APAC gains two dated statutes and keeps its defining property: it is the region where
+*"compliance"* has no single meaning, and that is itself the commercial opportunity.**
+
+🟡 **Labelled search-summary throughout:** 🟡 **South Korea's `AI Basic Act` takes effect
+`2026-01`, after a one-year preparation period, and names education among its *"high-impact AI"*
+domains alongside healthcare, finance and employment.** 🟡 **Vietnam is reported to have enacted an
+AI law effective `2026-03-01`, with systems already operating before `2026-08-15` in healthcare,
+education and finance receiving an additional six-month grace period — though one source instead
+describes it as a *Digital Technology Industry Law*, so the name and status need checking.**
+🟡 **Japan maintains a light-touch voluntary model; Japan and Taiwan are drafting laws while
+standing up testing and assurance institutes; China already enforces algorithm filings and
+synthetic-content labelling; Indonesia and Thailand are moving toward binding frameworks that
+name education among covered sectors.**
+
+🟡 **Adoption and sentiment:** 🟡 **UNESCO reports readiness varying widely — China and Singapore
+have established AI-in-education policies while other countries are still meeting basic
+educational needs.** 🟡 **The Ipsos Education Monitor 2026 finds LOWER support for banning AI in
+schools across the Asian markets surveyed, while Australia and New Zealand record HIGHER support
+for a ban** — 🔵 **a split worth carrying, because it means an ANZ engagement and a Southeast Asian
+engagement face opposite public-opinion headwinds.**
+🟡 **Named commercial players: Google, Microsoft, IBM, Pearson, Byju's. Grand View Research
+projects `28.1%` CAGR `2026`–`2033` off a `2025` base of `$2 282.9M`** — 🔴 **subject to `T168`'s
+scope warning, below.**
+
+🟢 **The opportunity, and APAC's is structurally different from every other region:** 🟢 **a
+multi-jurisdiction institution here must satisfy Korea's high-impact regime, Vietnam's grace
+period, China's labelling rules and Japan's voluntary posture AT ONCE.** 🟢 **That is an
+argument for policy-as-configuration rather than policy-as-code: one audited pipeline whose
+gates are data, with per-jurisdiction rule sets.** 🟢 **`P158-A` already makes the rubric data
+rather than a prompt, and `P163-A` already handles non-Latin writing systems — the two
+APAC-critical pieces exist.**
+
+
 #### p164
 
 🆕 🟢 **A NEW JURISDICTION for this shelf, education-specific and dated — which is a better
@@ -1511,6 +1665,39 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p165
+
+🟢 **LATAM's `87% / 26%` gap is CORROBORATED again and now has a second, larger, independent
+measurement beside it — and a new regional institution to anchor an engagement to.**
+
+| finding | source | status |
+|---|---|---|
+| 🟢 **`87%` of institutions use AI in at least one area; only `26%` have a formal AI strategy** | 🟢 **UNESCO IESALC + UNU-IAS, `200` higher-education institutions, `19` countries** | 🟢 **corroborated, third pass running** |
+| 🆕 🟡 **`79%` of faculty use AI in teaching, but `88%` report only *"minimal"* to *"moderate"* engagement** | 🟡 **Digital Education Council LATAM survey, `7 319` faculty, with Tecnológico de Monterrey** | 🆕 🟡 **NEW — a much larger sample, and it points the same way** |
+| 🟡 `74%` use in teaching and learning; `57%` in data analysis and research quality | 🟡 UNESCO IESALC | 🟡 corroborated |
+| 🟡 **private institutions have greater capacity for strategic planning, training and governance; public institutions face stronger constraints** | 🟡 UNESCO IESALC | 🆕 🟡 **NEW — and it says WHERE the governance gap is worst** |
+
+🆕 🟢 **A new institution worth naming in a proposal:** 🟢 **UNESCO's regional
+**Observatory on Artificial Intelligence in Education for Latin America and the Caribbean**
+launched `2026-04-14` in Santiago, Chile. Partners include CAF, CENIA (Chile), CETIC.br (Brazil),
+ECLAC, Fundación Santillana, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal (Uruguay).**
+🔵 **For a studio this is a credibility anchor and a channel, not just a news item.**
+
+🟡 **Regulation, search-summary:** 🟡 **Mexico has a federal AI bill in the Senate proposing an
+oversight authority; Uruguay was the first Latin American country to sign the Council of Europe
+Framework Convention on AI (2025); Colombia adopted a national AI policy via `CONPES 4144` in
+February 2025.** 🟡 **Earlier passes' figure that ~`45%` of institutions in Latin America and the
+Caribbean have or are developing AI guidance — against ~`70%` in Europe and North America — stands
+as the cross-regional contrast.**
+
+🟢 **The opportunity, and it is the clearest-specified of the five regions:** 🟢 **`87%` adoption
+against `26%` strategy is a governance-retrofit market with a measured size, and `P156-B` was
+built for exactly this gap.** 🟢 **The public/private split sharpens the targeting: public
+institutions have the greater need and the weaker capacity, which argues for a packaged,
+low-configuration governance kit rather than bespoke consulting.** 🟢 **`P156-C`'s
+offline/data-residency build remains the companion where connectivity and residency bind.**
+
 
 #### p164
 

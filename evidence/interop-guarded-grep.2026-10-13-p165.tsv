@@ -1,0 +1,11 @@
+platform	standard	naive_files	guarded_files	path_hits
+OpenOLAT	LTI	4987	354	361
+OpenOLAT	OneRoster	0	0	0
+OpenOLAT	Ed-Fi	620	0	13
+OpenOLAT	SCORM	355	338	163
+OpenOLAT	xAPI	2	0	0
+edx-platform	LTI	1240	202	109
+edx-platform	OneRoster	0	0	0
+edx-platform	Ed-Fi	159	0	0
+edx-platform	SCORM	2	2	0
+edx-platform	xAPI	14	9	1
