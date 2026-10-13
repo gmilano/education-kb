@@ -3,7 +3,117 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
-## 🆕 🟢 `P163-A` — make a graded-AI pre-filter fair across writing systems *(new, p163 — Global; strongest in APAC and EMEA)*
+## 🆕 🟢 `P164-A` — the capability-claim audit *(new, p164 — Global)*
+
+🔵 **The problem this solves:** 🔴 **`ACTION IJ` measured three vendor-stated interoperability
+standards on `openeducat/openeducat_erp` and found `0` of `3` implemented — while a naive grep
+reported `23` hits.** 🔴 **A client inherits claims like these from a vendor page, an RFP answer
+or a previous integrator, and the cost of discovering they are false lands in week six.**
+
+🟢 **The recipe, which runs in minutes per repository and needs no API:**
+
+1. 🟢 **Establish the repo exists and pin the tree** — `git ls-remote --symref`, then
+   `git clone --depth=1 --filter=blob:none --no-checkout`. 🟢 **Record HEAD sha, default branch
+   and last-commit date in the report; a capability claim without a tree is not checkable.**
+2. 🟢 **Path census first** — `git ls-tree -r --name-only HEAD`. 🟢 **Costs `236 KB` on a
+   `1 345`-path repo and often answers the question outright.**
+3. 🔴 **Then the content sweep, and use a PLAIN `--depth=1` clone for it, not the blobless one**
+   *(`P164-B`: checking out a blobless clone fetches blobs one at a time and is slower than
+   downloading everything once).*
+4. 🟢 **Grep with all three guards, because each one caught a real false positive here:**
+
+   | guard | the false positive it kills |
+   |---|---|
+   | 🟢 `grep -I` *(skip binaries)* | 🔴 `lti` matched raw bytes in `2` PNG + `2` JPEG assets |
+   | 🟢 `\b` word boundaries | 🔴 `facu`*`lti`*`es-icon.svg` ×14; `requir`*`ed-fi`*`eld` in a comment |
+   | 🟢 `--exclude='*.po'` *(i18n catalogues)* | 🔴 Danish `Samlet` (*"total"*) matched `saml` ×`10` |
+
+5. 🟢 **Probe the sibling-repository hypothesis before concluding** — 🔵 **the capability may
+   legitimately live elsewhere.** 🟢 **`git ls-remote --symref` against the obvious names costs
+   seconds; five candidates were ABSENT here, which is what made the verdict safe.**
+6. 🟢 **Report the three outcomes separately: IMPLEMENTED, ABSENT, or ABSENT-FROM-OPEN-TREE
+   (may exist in a commercial edition).** 🔵 **The third is the honest verdict for OpenEduCat and
+   it is the one a client can act on without accusing a vendor of lying.**
+
+🟢 **Deliverable: a one-page table per platform — claim, path hits, verified hits, verdict —
+plus the TSV.** 🟢 **Effort: `2`–`4` days for a five-platform landscape.**
+🔵 **Why it sells: it is cheap, it is adversarial in the client's favour, and it produces a
+procurement artifact rather than an opinion.**
+
+---
+
+## 🆕 🟢 `P164-C` — pin evaluative-AI provenance by PORTING OpenOLAT's schema *(replaces `P163-B`'s build, p164 — Global; strongest in EMEA)*
+
+🔵 **What changed from `P163-B`:** 🟢 **`P163-B` designed this. `ACTION IK` found it already
+SHIPPED, in Apache-2.0, in production** *(`T165`)*. 🔵 **A port of working code is a far easier
+sell than a bespoke compliance build, so the pattern is restated around the reference
+implementation.**
+
+🟢 **The reference, read at `openolat/openolat` HEAD `e4be14f0`,
+`EssayAiCorrection.java:120-127`, `@Table(name = "o_ai_essay_correction")` — one row per graded
+correction:**
+
+| column | what it pins | why a regulator cares |
+|---|---|---|
+| 🟢 `a_prompt_template_version` *(40)* | WHICH prompt graded this answer | 🟢 the instructions governing the model are part of the documentation obligation |
+| 🟢 `a_content_hash_at_call` *(64)* | WHICH rubric content it was graded against | 🟢 editing a rubric later cannot silently rewrite a past mark |
+| 🟢 `a_tier` | the length tier assigned | 🟢 makes the pre-filter's decision auditable |
+| 🟢 `a_student_answer` *(`@Lob`, `updatable = false`)* | the answer itself, immutable | 🟢 the artifact cannot drift after the fact |
+
+🟢 **The upstream comment is itself the design rationale worth quoting to a client: these fields
+*"used to live on `o_ai_usage_log`"* and were moved because *"they belong to the correction,
+which is the context of the AI call"*.** 🔵 **Audit provenance belongs on the graded artifact,
+not on the cost ledger.**
+
+🟢 **How to wire it, per platform on this shelf:**
+
+| target | the gap | the port |
+|---|---|---|
+| 🔴 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(MIT)* | 🔴 Langfuse resolves the judge prompt FIRST; repo YAML is a silent, schema-unchecked fallback (`T156`) | 🟢 **Add `prompt_source` (`remote`\|`repo`), `prompt_version` and `prompt_sha256` to `ai_mentor_judgements`, written at judgement time.** 🟢 **Then make the `.catch(() => undefined)` fallback LOUD: record the substitution rather than swallowing it** |
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) *(GPL-3.0)* | 🔴 the effective system instruction is admin `actionconfig` JSON on `ai_providers`; `ai_action_register` stores `model`, `prompttokens`, `completiontokens` — **no prompt identity** (`T164`) | 🟢 **Add an instruction hash column to `ai_action_register` and write it in `abstract_processor`.** 🟢 **One column; it makes every Moodle AI action reconstructable** |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) *(Apache-2.0)* | 🟢 **nothing — this IS the reference** | 🟢 **Use it as the upstream exemplar in the client's design review** |
+
+🟢 **Why `OpenOLAT` is the one to start from:** 🟢 **Apache-2.0 with a patent grant, a `1.4 MB`
+sparse checkout for the whole AI subsystem (`107` Java files), and a schema that already passed
+someone's review.** 🔵 **The engagement is *"port a proven audit schema into your LMS"*, not
+*"let us invent your compliance model"*.**
+
+🟢 **Effort: `2`–`3` weeks per platform.** 🟡 **Honest scoping note: this buys RECONSTRUCTABILITY,
+which is one input to an Article 12 / Article 14 story — not a compliance certificate.**
+🔵 **And per `T163` the Annex III deadline may now be `2027-12-02`, which makes this
+*do it properly* work rather than *do it yesterday* work.**
+
+---
+
+## 🆕 🟢 `P164-D` — the maintenance-first shortlist *(new, p164 — Global)*
+
+🔵 **The problem this solves:** 🔴 **`T149` closed the `★` column permanently: this session
+cannot read a star count for any third-party repository, and `T150` showed the secondary channel
+disagreeing with itself by `>2×`.** 🔴 **So the usual shortlist heuristic — *"pick the
+most-starred"* — is unavailable AND was never the right question.**
+
+🟢 **The substitute, measured for all twelve shelf rows this pass at `3 060 KB` total
+(`P164-A`'s recipe in [`repos/foundations.md`](../repos/foundations.md)):**
+
+| signal | command | what it tells an engagement |
+|---|---|---|
+| 🟢 **HEAD commit age** | `git log -1 --format=%cI` on a blobless clone | 🟢 **is anyone still here?** `3` of this shelf's `12` rows are `277`, `334` and `378` days old |
+| 🟢 **Tag count + latest tag** | `git ls-remote --tags` | 🟢 **release DISCIPLINE.** `118` tags (mentingo) is a team; `0` tags is a prototype — `3` of `12` have none |
+| 🟢 **Tracked paths** | `git ls-tree -r --name-only HEAD \| wc -l` | 🟢 **is it a project or a prompt?** One row has `12` files |
+| 🟢 **Existence** | `git ls-remote --symref` *(`P54`)* | 🟢 survives the `curl -sI` trap, which `403`s on every repo in this session |
+
+🟢 **Apply as a filter before any licence or capability work:** 🔴 **drop anything over `~180`
+days stale unless it is a spec or a frozen reference** 🟢 **· prefer tagged releases for anything
+a client will depend on** 🟢 **· read the licence body only for what survives** *(licence reads
+are the expensive step; this ordering saves most of them).*
+
+🔵 **Why this is better than stars even where stars ARE available:** 🟢 **a star count measures
+attention at an unknown past moment; a HEAD date and a tag list measure whether the project will
+still be there at the end of the engagement.** 🟢 **`T159`.**
+
+---
+
+## 🟢 `P163-A` — make a graded-AI pre-filter fair across writing systems *(new, p163 — Global; strongest in APAC and EMEA)*
 
 🔵 **The problem this solves:** 🟢 **`ACTION IG` found OpenOLAT's two graded-path gates passing
 valid answers in nine scripts** — 🔴 **but with `5×` less tolerance for Devanagari and `10×` less
@@ -55,7 +165,7 @@ step 5's segmenter as client work gets goodwill and a differentiator from the sa
 
 ---
 
-## 🆕 🟢 `P163-B` — pin the provenance of an evaluative prompt *(new, p163 — Global; strongest in EMEA)*
+## 🟡 `P163-B` — pin the provenance of an evaluative prompt *(new, p163 — Global; strongest in EMEA)*
 
 🔵 **The problem this solves:** 🔴 **`T156` — `Selleo/mentingo` fetches its AI judge's system
 prompt from an external prompt-management service FIRST and treats the repository's own template
@@ -101,7 +211,7 @@ auditability control sells into the North American *"regulatory vacuum"* on the 
 
 ---
 
-## 🆕 🟢 `P163-C` — an auditable off switch for an AI grader *(new, p163 — Global; strongest in LATAM and APAC)*
+## 🟢 `P163-C` — an auditable off switch for an AI grader *(new, p163 — Global; strongest in LATAM and APAC)*
 
 🔵 **The problem this solves:** 🔴 **`T157` — `Selleo/mentingo` has NO off switch for its AI
 judge.** 🔴 **`AI_RUNTIME_SOURCES` is `{CORE, LUMA}` with no `OFF` member, and

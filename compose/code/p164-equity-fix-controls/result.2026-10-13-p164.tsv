@@ -1,0 +1,15 @@
+tag	script	label	ratio_upstream	ratio_fixed	margin_upstream	margin_fixed	rejected_upstream	rejected_fixed	reason_upstream	reason_fixed
+en	Latin	English	0.976	0.976	0.526	0.526	False	False		
+de	Latin	German	0.977	0.977	0.527	0.527	False	False		
+es	Latin	Spanish	0.977	0.977	0.527	0.527	False	False		
+zh	Han	Chinese (Simplified)	0.935	0.935	0.485	0.485	False	False		
+ja	Han+Kana	Japanese	0.941	0.941	0.491	0.491	False	False		
+ko	Hangul	Korean	0.953	0.953	0.503	0.503	False	False		
+ar	Arabic	Arabic (unvocalised)	0.980	0.980	0.530	0.530	False	False		
+ar-voc	Arabic	Arabic (vocalised, as in a primary reader)	0.552	0.990	0.102	0.540	False	False		
+hi	Devanagari	Hindi	0.591	0.983	0.141	0.533	False	False		
+th	Thai	Thai	0.815	1.000	0.365	0.550	False	False		
+CTRL-mash	Latin	CONTROL: keyboard mash (must be REJECTED)	1.000	1.000	0.550	0.550	True	True	entropy	entropy
+CTRL-symbols	n/a	CONTROL: symbol spam (must be REJECTED)	0.000	0.000	-0.450	-0.450	True	True	letter-ratio	letter-ratio
+CTRL-extA	Han ExtA	CONTROL: Han outside the listed ranges (Ext A + Compatibility)	1.000	1.000	0.550	0.550	False	False		
+CTRL-extB	Han ExtB	CONTROL: astral Han (CJK Extension B, surrogate pairs)	0.500	1.000	0.050	0.550	False	False		

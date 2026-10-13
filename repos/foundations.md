@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+🟢 **No new platform row this pass.** 🔴 **The row p163 added is DOWNGRADED on measurement, and
+p162's cheap-census instrument (`P162-A`) is CORRECTED — it has a failure mode that cost this
+pass real time and that the shelf had not recorded.**
+
+### 🆕 🔴 `openeducat/openeducat_erp` — DOWNGRADED from 🟡 to 🔴 on `ACTION IJ`
+
+🟡 **p163 gave it an amber row as *"a REAL, maintained, self-hostable education ERP with
+rostering standards — the integration-target class"*.** 🔴 **The rostering standards are not
+there.**
+[`evidence/openeducat-interop-probe.2026-10-13-p164.tsv`](../evidence/openeducat-interop-probe.2026-10-13-p164.tsv)
+
+| field | p163 | p164 |
+|---|---|---|
+| 🟢 repo / head | `1c95cef`, branch `19.0` | 🟢 **unchanged, re-confirmed** |
+| 🟢 licence | 🔴 LGPL-3.0, body `8 241 B`, INCOMPLETE on its own terms | 🟢 **unchanged** |
+| 🟡 **OneRoster / Ed-Fi / LTI 1.3** | 🟡 *vendor-stated, registered as `ACTION IJ`* | 🔴 **ALL THREE ABSENT — `0` implementing code (`T161`)** |
+| verdict | 🟡 amber — integration target | 🔴 **red — bespoke integration only** |
+
+🔵 **Why it keeps a row at all:** 🟢 **it is still a real, maintained ERP with `14` in-tree
+modules covering admissions, fees, library and timetable, and those are domains the other four
+platforms do not touch.** 🔴 **What changed is the cost of using it: with no standards surface,
+every integration is bespoke, and that is a different line in an estimate.**
+
+🔵 **The generalisable lesson, which is worth more than the row:** 🟢 **p163 wrote the claim down
+as *vendor-stated* and registered it instead of repeating it. One pass later it was measured and
+was false.** 🔴 **Had it been written as fact, this shelf would now be recommending a rostering
+integration path that does not exist.**
+
+### 🆕 🔴 `P162-A` is CORRECTED — blobless clones have a failure mode, and it is the obvious one
+
+🟢 **p162 and p163 established `--depth=1 --filter=blob:none --no-checkout` as the default
+instrument, at `3.1 MB` for Moodle's `67 589` paths.** 🟢 **That measurement is CORRECT and is
+re-confirmed this pass.** 🔴 **What was never stated is what happens when you then need the
+FILE CONTENTS.**
+
+🔴 **Measured this pass on `openeducat_erp`, `1 345` paths — the smallest tree on this shelf:**
+
+| approach | result |
+|---|---|
+| 🟢 blobless clone, path census only | 🟢 **`236 KB`, seconds** |
+| 🔴 **blobless clone + `git checkout` of the whole tree** | 🔴 **fetches blobs ONE AT A TIME; still running at `35 MB` after several minutes, and was abandoned** |
+| 🟢 **plain `--depth=1` clone (one packfile)** | 🟢 **`65 MB`, completed in a single transfer** |
+
+🆕 **`P164-B` — the corrected rule, in three lines:**
+
+1. 🟢 **Path census, licence read, single-file read → blobless `--no-checkout`, then
+   `git cat-file`.** 🟢 **Cheapest by a wide margin; `236 KB` beat `65 MB` by `275×` here.**
+2. 🔴 **Whole-tree CONTENT sweep → plain `--depth=1`.** 🔴 **Never `checkout` a blobless clone:
+   on-demand fetch is per-blob and is slower than downloading everything once.**
+3. 🟢 **Subsystem content sweep → blobless + `git sparse-checkout set <dir>`.** 🟢 **Measured
+   this pass at `1.4 MB` for OpenOLAT's AI subsystem (`107` Java files) and `3.3 MB` for
+   Moodle's (`279` PHP files).**
+
+🔵 **Why this belongs on the foundations page rather than in a footnote: three passes have now
+been planned around *"the clone channel is cheap"*, and it is cheap only for the operations it
+is cheap for.**
+
+### 🆕 🟢 `P164-A` — the twelve-row recency sweep, and what it costs
+
+🟢 **`T159`'s instrument, stated as a recipe because it is the one this shelf will run every
+pass from now on.** 🟢 **Per repository, with no GitHub API and no authentication:**
+
+```sh
+git ls-remote --symref https://github.com/$R HEAD     # existence, default branch, HEAD sha
+git ls-remote --tags   https://github.com/$R          # full tag list -> release cadence
+git clone -q --depth=1 --filter=blob:none --no-checkout https://github.com/$R $D
+git -C $D log -1 --format=%cI                         # HEAD commit DATE
+git -C $D ls-tree -r --name-only HEAD | wc -l         # tracked paths
+```
+
+🟢 **Twelve repositories in parallel: `3 060 KB` total, one pass.** 🟢 **Yields existence
+(`P54`), maintenance age, release discipline and project size — four fields, all primary, none
+of which the dead `★` column ever provided.**
+
+### 🟢 The foundations shelf — unchanged otherwise
+
+🟡 **No new foundational repository was added this pass.** 🔵 **Deliberate rather than empty: the
+three pre-registered actions were all code-channel probes of platforms already on the shelf, and
+global discovery returned `0` education-domain candidates for an eighth consecutive pass
+(`T110`).** 🟢 **Recorded so the absence is visible as a decision, not an oversight.**
+
 ## Pass 163 — 2026-10-13
 
 🟢 **One new platform row, licence read from the body at source, with TWO grant defects measured

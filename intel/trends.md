@@ -3,6 +3,144 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+### 1. 🆕 🔴 The deadline this shelf has been planning against MOVED — Annex III education obligations now apply from 2 December 2027 — *EMEA, search-summary, UNVERIFIED at source*
+
+🔵 **If this is right, it is the most consequential fact on this page, because four passes of
+findings have been framed as *"an Annex III decision"* with an implied 2026 horizon.**
+[`evidence/regional-sweep.2026-10-13-p164.tsv`](../evidence/regional-sweep.2026-10-13-p164.tsv)
+
+🟡 **What the named-instrument query returned:** 🔴 **the EU *Digital Omnibus*, reported in force
+since `2026-07-27`, DELAYS the standalone Annex III high-risk obligations to `2027-12-02`.**
+🟡 **Education sits in Annex III point 3 — admission and access, assignment to institutions,
+evaluating learning outcomes where those outcomes steer the learning, level assessment, and
+monitoring for prohibited behaviour during tests.**
+
+🔴 **Stated with the label it has earned and no more:** 🔴 **`eur-lex.europa.eu`,
+`digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` ALL refused at the proxy
+(`000`, connect rejected), so not one character of this was read at source.**
+[`evidence/proxy-refusal.2026-10-13-p164.tsv`](../evidence/proxy-refusal.2026-10-13-p164.tsv)
+🟡 **Sources also disagree among themselves on a neighbouring date — GenAI transparency is given
+as `2026-11-02` by one and `2026-12-02` by another.** 🔵 **That internal disagreement is a reason
+to treat the whole cluster as a LEAD, not a finding.**
+
+🆕 **`T163`:** 🟡 **the regulatory premise under four passes of this shelf's work may have moved
+by sixteen months, and this session structurally cannot confirm it.** 🟢 **Registered as
+`ACTION IM`, and flagged here because a client would rather hear *"verify this date with
+counsel"* than inherit a silent assumption.**
+
+🟢 **Two things do NOT change, and they are what keeps the shelf's work valid either way:**
+
+| unaffected | why |
+|---|---|
+| 🟢 **The emotion-recognition ban in education** | 🟢 **In force since `2025-02-02` and reported NOT affected by the Omnibus. It is live today** |
+| 🟢 **Every code finding on this shelf** | 🔵 **`T156`, `T157`, `T161` and the provenance results below are facts about repositories. A deadline moving changes WHEN they must be fixed, never WHETHER they are true** |
+
+🔵 **The honest engagement line: a delay is a budget for doing it properly, not a reason to stop.
+Article 27(1)'s fundamental-rights impact assessment for public bodies — which covers public
+schools and universities — is exactly the kind of artifact that is cheap to build alongside a
+deployment and expensive to retrofit.**
+
+### 2. 🆕 🔴 `ACTION IK` REFUTED — remote-first prompt resolution is NOT industry-wide, and the real axis is wider and worse — *Global, measured in code*
+
+[`evidence/prompt-provenance-reach.2026-10-13-p164.tsv`](../evidence/prompt-provenance-reach.2026-10-13-p164.tsv)
+
+🔴 **p163's `T156` found `Selleo/mentingo` fetching its AI judge's system prompt from Langfuse
+with the repository template as a silent fallback, and claimed the pattern was *"the DEFAULT
+integration shape"* industry-wide.** 🟢 **`ACTION IK` was registered to test that, with the
+falsifier: *refuted if mentingo is the only one.* 🔴 **Mentingo is the only one.**
+
+| platform | remote prompt service? | evidence |
+|---|---|---|
+| 🔴 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🔴 **YES** | `@langfuse/client 5.10.1` in `apps/api/package.json` |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **NO** | `0` hits for langfuse/langsmith/promptlayer/helicone/humanloop/braintrust/portkey across the AI subsystem; its only HTTP clients are LangChain4j provider calls |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **NO** | `0` such dependencies in `public/ai` |
+| 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟢 **n/a** | `0` AI prompt files in `9 276` paths |
+| 🟢 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟢 **n/a** | `0` files matching `openai\|anthropic\|llm\|langchain\|gpt-` in `1 345` paths |
+
+🟢 **`T156` keeps its finding and LOSES its reach. `P163-B`'s industry-wide framing is
+WITHDRAWN**, exactly as the registration required.
+
+🆕 **And the measurement found the better question.** 🔵 **"Is the prompt fetched remotely?" was
+the wrong axis; "is the prompt that actually ran the one in version control, and can you prove
+which one it was?" is the right one.** 🔴 **On that axis the picture is worse, not better:**
+
+| platform | where the EFFECTIVE prompt comes from | in version control? | provenance pinned to the result? |
+|---|---|---|---|
+| 🟢 **OpenOLAT** | 🟢 a code constant — `PROMPT_TEMPLATE_VERSION = "essay-grading-v1"` | 🟢 **YES** | 🟢 **YES** |
+| 🔴 **Moodle** | 🔴 **admin-set `actionconfig` JSON on `ai_providers`**; the repo lang string is only the DEFAULT | 🔴 **NO, once an admin edits it** | 🔴 **NO** |
+| 🔴 **mentingo** | 🔴 Langfuse, repo YAML as silent fallback | 🔴 **NO** | 🔴 **NO** |
+
+🆕 **`T164`:** 🔴 **`2` of the `3` AI-bearing platforms run an effective evaluative prompt that is
+NOT the one in their repository — one remote, one in a database — and only `1` of `3` records
+which prompt produced a given result.** 🔵 **Moodle's case is the quieter and more common one:
+no exotic SDK, just an admin textarea that silently overrides a versioned default.**
+
+### 3. 🆕 🟢 `T165` — the fix for all of it already SHIPS, in Apache-2.0, and this shelf had not noticed — *Global, measured in code*
+
+🟢 **`P163-B` designed a provenance-pinning pattern. `ACTION IK`'s sweep found it already
+implemented upstream, in the one platform on this shelf with a permissive licence.**
+
+🟢 **`openolat/OpenOLAT` at `e4be14f0`, `EssayAiCorrection.java:120-127`, JPA entity
+`@Table(name = "o_ai_essay_correction")` — one row per graded correction:**
+
+| column | what it pins |
+|---|---|
+| 🟢 `a_prompt_template_version` *(40)* | 🟢 **WHICH prompt template graded this answer** |
+| 🟢 `a_content_hash_at_call` *(64)* | 🟢 **WHICH rubric/config content it was graded against** |
+| 🟢 `a_tier` | 🟢 the length tier the answer was classified into |
+| 🟢 `a_student_answer` *(`@Lob`, `updatable = false`)* | 🟢 **the answer itself, immutable after insert** |
+
+🟢 **And the design is deliberate, not accidental.** 🔵 **The code comment says these fields
+*"used to live on `o_ai_usage_log`"* and were moved because *"they belong to the correction,
+which is the context of the AI call"* — 🟢 **a team that moved audit fields from a cost ledger
+onto the graded artifact has understood the obligation, not just the feature.**
+
+🆕 **`T165`:** 🟢 **the Article 12 / Article 14 record-keeping artifact for AI grading exists, in
+production, under Apache-2.0, with a patent grant.** 🔴 **Moodle and mentingo each lack it.**
+🔵 **That converts `P163-B` from a pattern this shelf invented into a PORT of a shipped
+reference implementation — a different and much easier sell.**
+
+### 4. 🆕 🟢 `T166` — an equity fix can be proved not to cost its control, by construction rather than by luck — *Global, strongest in APAC and EMEA, measured*
+
+🟢 **`ACTION IL` applied `P163-A`'s steps 2 and 3 to the p163 replication.**
+[`compose/code/p164-equity-fix-controls/`](../compose/code/p164-equity-fix-controls/README.md)
+
+🟢 **Result: the letter-ratio margin spread across ten content-matched answers in nine scripts
+collapses from `5.2×` to `1.1×`, and BOTH negative controls still reject.**
+
+| row | ratio before | ratio after | margin before | margin after |
+|---|---|---|---|---|
+| 🔴 **vocalised Arabic** | `0.552` | 🟢 **`0.990`** | 🔴 **`0.102`** | 🟢 **`0.540`** |
+| 🔴 **Hindi** | `0.591` | 🟢 **`0.983`** | 🔴 **`0.141`** | 🟢 **`0.533`** |
+| 🟡 **Thai** | `0.815` | 🟢 **`1.000`** | `0.365` | 🟢 **`0.550`** |
+| 🔴 **astral Han** | `0.500` | 🟢 **`1.000`** | 🔴 **`0.050`** | 🟢 **`0.550`** |
+| 🟢 **symbol spam** *(control)* | `0.000` | 🟢 **`0.000`** | — | 🟢 **still REJECTED** |
+| 🟢 **keyboard mash** *(control)* | `1.000` | `1.000` | — | 🟢 **still REJECTED (entropy)** |
+
+🆕 **`T166`:** 🟢 **the controls are untouchable BY CONSTRUCTION, which is stronger than
+"measured and happened to pass".** 🟢 **Symbol spam is digits and punctuation — neither `L*` nor
+`Mn`/`Mc` — so widening the predicate adds exactly zero to its numerator. Keyboard mash already
+scored `1.000` on the ratio and was rejected by ENTROPY, so a ratio change cannot move a verdict
+the ratio was not making.**
+
+🟢 **And p163's three numeric predictions — `~0.99`, `~0.98`, `1.000` — are confirmed at
+`0.990`, `0.983` and `1.000`.** 🔵 **The first quantitative prediction this shelf has made in one
+pass and confirmed in the next.**
+
+### 5. 🟢 Carried, with their corroboration count
+
+- 🔴 **`T110` — global agent discovery returns AI curriculum, not education agents.** 🔴 **EIGHTH
+  corroboration.** 🔵 **At eight passes this stops being a limitation of the query and becomes a
+  finding about the field.**
+- 🔴 **`T134` / `T158` — no regional figure verifiable at source.** 🔴 **SIXTH pass.** 🟢 **Now
+  measured as a clean asymmetry rather than a blanket failure: `4 of 4` document hosts refused,
+  `2 of 2` git hosts answered.** 🆕 **`T167`: this shelf's CODE channel is primary and its
+  DOCUMENT channel is secondary, permanently and by infrastructure, not by effort.**
+- 🔴 **Market incoherent a FIFTEENTH pass** — 🆕 🟢 **but with a NAMED cause for the first time;
+  see [`intel/market.md`](market.md).**
+
 ## Pass 163 — 2026-10-13
 
 ### 1. 🆕 🔴 The AI Act oversight artifact is not in version control — a grading prompt is fetched from a mutable external service at call time — *Global, strongest in EMEA, measured in code*

@@ -3,6 +3,107 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three judged: one DISCHARGED with a silent falsifier and
+TWO REFUTED — the most falsifier firings in any single pass on this shelf.**
+🟢 **Both firings REMOVED a claim this KB was carrying, which is the register working.**
+🆕 🟢 **And the pass's largest result was not an action: p163 closed the `★` column as
+permanently unmeasurable, and p164 replaced it with four fields that ARE measurable, at source,
+for all twelve rows, for `3.0 MB`.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION IJ`** — are OpenEduCat's OneRoster / Ed-Fi / LTI 1.3 claims in the tree? | 🔴 **REFUTED, falsifier FIRED on ALL THREE limbs. `0 of 3` implemented; `23` raw grep hits, `0` real** |
+| 🔴 **`ACTION IK`** — is remote-first prompt resolution industry-wide? | 🔴 **REFUTED, falsifier FIRED. `1 of 5`. `T156`'s reach WITHDRAWN — and a better axis found** |
+| 🟢 **`ACTION IL`** — does the equity fix cost the symbol-spam control? | 🟢 **DISCHARGED, falsifier SILENT. Both controls hold; margin spread `5.2×` → `1.1×`** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`T159` — the `★` column has a SUCCESSOR.** 🟢 **`git ls-remote` + a blobless clone give
+  existence, HEAD commit date, tag count, latest tag and tracked-path count for every row with
+  no GitHub API. All twelve measured: `3 060 KB` total.** 🔴 **Three rows are `277`, `334` and
+  `378` days stale; three have `0` tags; one has `12` tracked files.** 🟢 **`P164-D`.**
+- 🆕 🟢 **`T160` — the first promotion from *search-summary* in five passes.** 🟢 **DeepTutor
+  `v1.6.14` / `2026-10-08`, claimed secondarily and confirmed on the git channel, both fields.**
+  🔵 **Rule extracted: a secondary claim is promotable when a git-channel primary exists for the
+  same field — which `T150`'s star counts never had.**
+- 🆕 🔴 **`T161` / `T162` — a vendor interoperability claim measured to `0`.** 🔴 **OpenEduCat's
+  OneRoster, Ed-Fi and LTI 1.3 are all ABSENT from `1 345` paths, and every apparent hit was a
+  false positive: `facu(lti)es-icon.svg`, `requir(ed-fi)eld`, raw bytes in four images, and
+  Danish `Samlet` in a `.po` catalogue.** 🟢 **`P164-A` packages the guard.**
+- 🆕 🔴 **`T163` — the Annex III deadline may have moved to `2027-12-02`** *(Digital Omnibus,
+  reported in force `2026-07-27`)*. 🔴 **Unverifiable here: all three EU hosts refused.**
+  🟢 **Flagged loudly rather than absorbed silently; `ACTION IM`.**
+- 🆕 🔴 **`T164` — the better axis `ACTION IK` found.** 🔴 **`2 of 3` AI-bearing platforms run an
+  effective evaluative prompt that is NOT in their repository — mentingo remotely, Moodle via an
+  admin `actionconfig` override — and only `1 of 3` records which prompt produced a result.**
+- 🆕 🟢 **`T165` — the fix already SHIPS, Apache-2.0.** 🟢 **OpenOLAT's `o_ai_essay_correction`
+  persists `a_prompt_template_version`, `a_content_hash_at_call`, `a_tier` and an immutable
+  answer per graded correction.** 🟢 **`P163-B` becomes `P164-C`: a PORT, not a build.**
+- 🆕 🟢 **`T166` — an equity fix proved not to cost its control BY CONSTRUCTION**, and p163's
+  three numeric predictions confirmed at `0.990`, `0.983`, `1.000`.
+- 🆕 🟢 **`T167` — the verification boundary measured: `4 of 4` document hosts refused, `2 of 2`
+  git hosts answered.** 🔵 **This shelf's code channel is primary and its document channel is
+  secondary, by infrastructure.**
+- 🆕 🟢 **`T168` — the 15-pass market incoherence has a NAMED cause:** the high estimates bundle
+  corporate training with K-12 and higher education.
+- 🆕 🔴 **`P162-A` CORRECTED (`P164-B`):** 🔴 **never `checkout` a blobless clone — per-blob fetch
+  was abandoned at `35 MB` where a plain `--depth=1` finished in one `65 MB` transfer.**
+
+### 🟢 Corrections to earlier passes, made explicitly
+
+- 🔴 **`P163-B`'s industry-wide framing is WITHDRAWN**, exactly as `ACTION IK`'s falsifier
+  required. 🟢 **`T156` keeps its finding and loses its reach.**
+- 🔴 **p163's OpenEduCat row is DOWNGRADED 🟡 → 🔴.** 🟢 **p163 wrote the interop claims down as
+  *vendor-stated* and registered them instead of repeating them; one pass later they measured to
+  zero. Had they been written as fact, this shelf would now recommend a rostering path that does
+  not exist.**
+- 🟡 **p163's reading of Colorado may be BACKWARDS** — trackers now report a May 2026 repeal that
+  carves out FERPA-covered institutions, i.e. education exempted rather than regulated.
+  🟢 **Registered as part of `ACTION IN`, not silently flipped.**
+- 🔴 **A self-correction inside this pass's own code:** the first draft of `fixed_gate.py`
+  omitted upstream's whitespace strip and disagreed with p163's committed TSV. 🟢 **Caught by the
+  previous pass's committed numbers — the argument for committing the TSV, not just the prose —
+  and a fidelity gate now makes that failure loud.**
+- 🟡 **`T101` held against a repeat offence:** the `134 bills / 31 states` figure arrived again
+  from the same single tracker with no range attached. 🟢 **It is published with `T101`'s
+  `68`–`134` spread attached, not as fact.**
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **North America** | 🆕 🟢 **FOUR-PASS DROUGHT BROKEN, with named dated statutes rather than a vendor percentage: Idaho SB 1227 (bars AI replacing teachers), Maryland SB 720, Oklahoma binding `2026-07-01` with a parent opt-out, California A.B. 1159 pending** · 🟡 **`~33`–`35` states + DC + PR publish guidance** · 🆕 🟡 **and p163's Colorado reading may be backwards** · 🔴 **still `0` verified at source** |
+| **EMEA** | 🆕 🔴 **`T163` — Annex III education obligations reportedly DELAYED to `2027-12-02`, and all three EU hosts refused at the proxy** · 🟢 **what stays live: the emotion-recognition ban (since `2025-02-02`) and Article 27(1) FRIA for public bodies** · 🟢 **`P164-C` is the delay-proof offer** |
+| **APAC** | 🆕 🟢 **NEW JURISDICTION: Vietnam's AI Law lists education as high-risk — compliance `2027-03-01`, `+6` months for systems live before `2026-08-15`** · 🟡 **DEC: `57%` of faculty excited, LOWEST future adoption intent of any region** · 🟢 **`T143`'s gate honoured — the number's collision with p163's refused `57%` is recorded, not laundered** |
+| **LATAM** | 🟢 **Adoption resolved to `91.5%` students / `75%` faculty (`n = 22 941` / `7 319`)** · 🆕 🔴 **governance measured far harder than policy: `8%` of institutions have an AI BUDGET, `9%` have evaluation mechanisms — an `83`-point gap** · 🟡 **honesty note: this is the SAME survey as p163's, resolved, NOT a second corroboration** · 🔴 **one outlet's `$412M` Colombia claim REFUSED and named** |
+| **Global** | 🔴 **Market incoherent a FIFTEENTH pass, spread WIDENED to `5.9×`** — 🆕 🟢 **cause named (`T168`)** · 🔴 **`T110` an EIGHTH time** · 🟢 **the auditability opportunity is now a PORT of shipped Apache-2.0 code, which is a much easier sell** |
+
+### 🔜 Pre-registered for p165
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IM`** — probe OpenOLAT's and edx-platform's rostering/interop surfaces (LTI 1.3, OneRoster, Ed-Fi, SCORM, xAPI) with `P164-A`'s guarded grep, and record each as IMPLEMENTED / ABSENT / ABSENT-FROM-OPEN-TREE | 🔴 *Refuted if `P164-A`'s three guards change no verdict on either platform — which would mean the guards are ceremony rather than instrument, and `T162` was a property of one repository* |
+| 🟢 **`ACTION IN`** — set the staleness policy explicitly: pick a day threshold, apply it to all twelve rows, and state what happens to a stale row (marked, demoted or removed) | 🔴 *Refuted if applying any single threshold to the twelve rows removes a repository this shelf has cited as load-bearing in a pattern — in which case age alone is not a sufficient criterion and the policy needs a second field* |
+| 🟢 **`ACTION IO`** — re-run `P164-A`'s recency sweep and measure CHURN: how many of the twelve HEAD shas changed between p164 and p165? | 🔴 *Refuted if `0` of `12` shas change, which would mean a single pass is below the resolution of this instrument and the sweep should be run every N passes rather than every pass* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The agent shelf did not GROW, SIXTH consecutive pass** (`T110`, eighth corroboration).
+  🔵 **Now read as a fact about the population rather than the query.**
+- 🔴 **Not one regional figure verified at source, SIXTH pass.** 🟢 **But the boundary is now
+  measured rather than lamented (`T167`).**
+- 🔴 **`T163` — the single most consequential regulatory fact this pass found is UNVERIFIABLE by
+  this session.** 🟢 **Stated as a lead with its hosts' refusals listed, not as a finding.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** — unchanged for six passes.
+- 🔴 **Three stale rows were identified and NOT acted on.** 🟢 **Deliberate: `ACTION IN`.**
+- 🟡 **`P163-A` steps 4 and 5 remain designed-not-measured.** 🟢 **`ACTION IL` registered steps 1
+  and 3 only; the scope was honoured rather than quietly widened.**
+- 🔴 **The rotation defect is confirmed for a SEVENTH pass.** 🟢 **`rotation.json` is advanced on
+  this pass's branch as required, and will not reach the next run without a human merge.**
+  🟡 **Not registered — it is not a research task.**
+
 ## Pass 163 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three judged: two DISCHARGED with silent falsifiers, and

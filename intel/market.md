@@ -3,6 +3,60 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+🟢 **Eight queries, run globally and once per region.** 🆕 🟢 **North America broke a FOUR-PASS
+drought and did it with named, dated statutes rather than a vendor percentage.**
+🆕 🔴 **EMEA returned the single most consequential fact this page has carried — and this session
+cannot verify it.** 🟢 **LATAM corroborated, APAC gained a new jurisdiction.**
+🔴 **The market remains incoherent for a FIFTEENTH pass — but for the first time the incoherence
+has a NAMED CAUSE.**
+🟢 **Regional detail is filed under the canonical `## Opportunities by region` block below as
+`#### p164` entries. ONE region block, not one per pass** *(`ACTION HK`'s rule, honoured).*
+[`evidence/regional-sweep.2026-10-13-p164.tsv`](../evidence/regional-sweep.2026-10-13-p164.tsv)
+[`evidence/proxy-refusal.2026-10-13-p164.tsv`](../evidence/proxy-refusal.2026-10-13-p164.tsv)
+
+### 🆕 🟢 The market has been incoherent for 15 passes — and the cause is now NAMED
+
+🔴 **2026 base-year readings collected this pass:**
+
+| source | 2026 market size |
+|---|---|
+| 🔴 MarketsReportsWorld | **`$1.94B`** |
+| 🟡 Future Data Stats | `$7.50B` |
+| 🟡 Precedence Research | `$9.58B` |
+| 🟡 Research and Markets | `$10.6B` |
+| 🔴 Grand View Research | **`$11.4B`** |
+
+🔴 **A `5.9×` spread in a single base year — WIDER than p163's `$1.9B` absolute spread.**
+🔴 **Long-range CAGRs run `19%`–`43%`.**
+
+🆕 🟢 **What is new is not another number. An independent analysis in this pass's results states
+the MECHANISM: the higher figures bundle CORPORATE TRAINING in with K-12 and higher education,
+and its own bottom-up estimate of the education-only market is `~$11B` for 2026.**
+
+🆕 **`T168`:** 🟢 **these reports are not contradicting each other about one market; they are
+measuring different markets under one name.** 🔵 **The practical consequence for an engagement:
+a market-size citation is useless here unless its SCOPE is stated, and this shelf should quote
+a range with the scope attached rather than a single headline number.**
+🟡 **Still *search-summary* — every research host refused at the proxy — so `T168` is recorded
+as the best available explanation, not as a verified fact.**
+
+### 🔴 Not one regional figure verified at source — SIXTH pass — but the failure is now a clean ASYMMETRY
+
+🟢 **p163 made the refusal nameable per host (`T158`). This pass measures the boundary.**
+
+| channel | hosts | result |
+|---|---|---|
+| 🔴 **document channel** | `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`, `oecd.org` | 🔴 **`000` — connect rejected, `4 of 4`** |
+| 🟢 **git channel** | `github.com`, `raw.githubusercontent.com` | 🟢 **`400` / `301` — the host ANSWERED, `2 of 2`** |
+
+🆕 **`T167`:** 🔵 **this is not a flaky network, it is a stable policy boundary, and it defines
+what kind of knowledge base this can be.** 🟢 **Every CODE finding on this shelf is primary and
+reproducible. Every MARKET and REGULATORY figure is secondary and always will be.**
+🟢 **The right response is the one this pass took: spend the budget where the channel is
+primary, and label the rest honestly.**
+
 ## Pass 163 — 2026-10-13
 
 🟢 **Eight queries, run globally and once per region — and for the dry regions the VOCABULARY was
@@ -505,6 +559,38 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p164
+
+🆕 🟢 **FOUR-PASS DROUGHT BROKEN — and with named, dated statutes rather than a vendor
+percentage.** 🔴 **Still `0` verified at source: every host refused.**
+
+| finding | figure |
+|---|---|
+| 🟢 **Guidance coverage** | 🟡 **`~33`–`35` states + DC + Puerto Rico** have K-12 AI guidance, up from `~28` in early 2025. 🔴 **Two trackers disagree on the exact count, so the RANGE is the finding** |
+| 🆕 🟢 **Enacted, named and dated** | 🟢 **Idaho SB 1227** — statewide framework, AI literacy standards, and a bar on AI REPLACING human teachers · 🟢 **Maryland SB 720** — state guidance + mandatory local policies · 🟢 **Oklahoma** — binding, effective `2026-07-01`, with a **parent opt-out** from student-facing AI tools |
+| 🟢 **Teacher training** | Virginia and Maryland enacted educator-training measures; Utah enacted middle-school AI literacy |
+| 🟡 **Pending** | California **A.B. 1159** would bar training AI on student data unless it directly benefits the school |
+| 🟡 **Volume** | 🟡 **`134` bills across `31` states** — 🔴 **re-arrived from the same single tracker `T101` already ranged.** 🟢 **`T101` holds: that is the TOP of a `68`–`134` spread between trackers counting one session, so the robust figures remain ENACTED laws (`~10`) and guidance states (`~33`–`35`)** |
+
+🆕 🔵 **An instrument note, recorded because it is evidence the guard WORKS:** 🔴 **the
+`134 / 31` figure arrived again this pass, from the same tracker, with no range attached —
+and would have been published as fact for a second time had `T101` not been on this page.**
+🟢 **A correction is only worth writing down if a later pass actually reads it; this one was.**
+
+🆕 🔴 **A CORRECTION to p163, and it cuts against this shelf's own reading.** 🔴 **p163 named
+Colorado as a state-level rule inside a *"regulatory vacuum"*. This pass's trackers report that
+Colorado REPEALED its general AI Act in May 2026 and replaced it with a narrower framework that
+**carves out FERPA-covered educational institutions**.** 🟡 **If that is right, Colorado is an
+example of education being EXEMPTED, not regulated — close to the opposite of how p163 used it.**
+🔴 **Labelled *search-summary*; `ACTION IN` registers the re-check rather than silently flipping
+the claim.**
+
+🟢 **The engagement consequence:** 🟢 **North America is now the region with the most CONCRETE
+near-term compliance work on this shelf — a parent opt-out and a bar on AI-as-teacher are
+product requirements, not principles** — 🔵 **and they bind on dates that are already here,
+while EMEA's may have moved to `2027-12-02` (`T163`).**
+
+
 #### p163
 
 🔴 **FOURTH consecutive pass with no North America fact verified at source.** 🟡 **Three figures
@@ -769,6 +855,32 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p164
+
+🆕 🔴 **The headline is a DATE MOVE, and it is the most consequential single fact this page has
+carried.** 🔴 **The EU *Digital Omnibus*, reported in force since `2026-07-27`, DELAYS the
+standalone Annex III high-risk obligations to `2027-12-02`.** 🟡 **Education is Annex III point
+3 — admission and access, assignment to institutions, evaluating learning outcomes that steer
+the learning, level assessment, and prohibited-behaviour monitoring during tests.**
+
+🔴 **Verification status, stated plainly: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`
+and `artificialintelligenceact.eu` ALL refused at the proxy (`000`).** 🔴 **Not one character
+was read at source, and the sources disagree among themselves on a neighbouring date (GenAI
+transparency given as `2026-11-02` and `2026-12-02`).** 🟢 **Recorded as `T163` and registered
+as `ACTION IM`.**
+
+| still live TODAY, unaffected by the delay | date |
+|---|---|
+| 🟢 **Emotion-recognition ban in education** | 🟢 **in force since `2025-02-02`** |
+| 🟢 **Article 27(1) FRIA for bodies governed by public law** | 🟢 required before deploying an Annex III system — covers public schools and universities |
+
+🟢 **The EMEA opportunity, re-framed by the delay rather than cancelled by it:** 🔵 **sixteen
+extra months is a budget for doing the oversight artifact properly instead of retrofitting it.**
+🟢 **`P164-C` is the concrete offer, and it is now a PORT of shipped Apache-2.0 code
+(`T165`) rather than a bespoke build.** 🔴 **And `T156`'s defect remains a defect in a
+Poland-built MIT platform whatever the deadline is.**
+
 
 #### p163
 
@@ -1077,6 +1189,29 @@ skills body and whose delivery is outsourced is a programme that needs an integr
 
 ### APAC
 
+#### p164
+
+🆕 🟢 **A NEW JURISDICTION for this shelf, education-specific and dated — which is a better
+result than another adoption percentage.**
+
+| finding | detail |
+|---|---|
+| 🆕 🟢 **Vietnam AI Law** | 🔴 **education is on the HIGH-RISK list** — automated assessment and behavioural monitoring named. 🟢 **Compliance by `2027-03-01`; systems already running before `2026-08-15` get a `+6`-month grace period** |
+| 🟡 **Digital Education Council, higher ed** | 🟡 **`57%` of APAC faculty excited about AI** — 🔴 **and the region has the LOWEST future AI adoption intent of any region** |
+| 🟢 **National moves** | South Korea expanding AI language tools; Japan transitioning to official digital textbooks — 🟢 **directionally consistent with p163's Korea and Japan findings** |
+
+🟡 **A `57%` caveat recorded rather than buried:** 🔴 **p163 REFUSED a `57%` APAC figure under
+`T143` because it was an ENTERPRISE statistic being passed off as education.** 🟡 **This `57%`
+is a different instrument — Digital Education Council, higher-education faculty — and the
+coincidence of the number is exactly the kind of thing that produces a laundered statistic.**
+🟢 **Recorded with its instrument named and NOT promoted.**
+
+🔵 **The enthusiasm/intent inversion is the planning-relevant fact:** 🟢 **the most AI-positive
+faculty in the world sit in the region with the lowest intent to adopt further.** 🔵 **That gap
+is a governance and procurement problem, not a persuasion problem — which is what Globant
+actually sells.** 🟢 **`P164-A`'s Vietnam deadline gives it a date to sell against.**
+
+
 #### p163
 
 🆕 🟢 **THE EIGHT-PASS ADOPTION DROUGHT IS BROKEN — with an education-specific, per-jurisdiction,
@@ -1376,6 +1511,37 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p164
+
+🟢 **CORROBORATED — and the governance gap got two much sharper numbers.**
+
+| finding | figure |
+|---|---|
+| 🟢 **Adoption, DEC + Tec de Monterrey** | 🟢 **`91.5%` of students and `75%` of faculty use AI tools**, `n = 22 941` students / `7 319` faculty |
+| 🆕 🔴 **Governance, UNESCO IESALC + UNU-IAS** | 🔴 **`8%` of institutions have a specific AI BUDGET** · 🔴 **`9%` have formal mechanisms to EVALUATE AI's effects** |
+| 🟡 **National frameworks** | Chile: national AI policy since 2021 + a law in discussion. Brazil and Colombia: national strategies, **no education-sector regulation** |
+
+🟡 **An honesty note on the corroboration, because it would be easy to overclaim.** 🟢 **p163
+recorded DEC LATAM 2026 at `92%` students / `79%` faculty across `29` institutions; this pass
+has `91.5%` / `75%` with sample sizes.** 🔴 **These are near-identical and are almost certainly
+the SAME survey reported twice, not two independent collectors.** 🟢 **So this is a
+RESOLUTION of p163's figure to a more precise one, NOT a second corroboration — p163's
+UNESCO/DEC pair remains the only genuine pair on this page.**
+
+🆕 🔴 **The gap, restated with this pass's numbers: `~91%` of students use AI, `8%` of
+institutions fund governing it.** 🔴 **That is an `83`-point gap, wider than the `39`-point
+policy gap p163 recorded, because budget is a harder test than a published policy.**
+
+🔴 **One source REFUSED and named so the refusal is auditable:** 🔴 **a single outlet reporting
+a `$412M` Colombian roadmap, licences at `64` universities and a `71%` weekly-use figure
+attributed to Anthropic.** 🔴 **It contradicts the academic source in the same result set and is
+uncorroborated.** 🟢 **Not recorded as a finding.**
+
+🟢 **The engagement consequence:** 🟢 **LATAM remains this shelf's clearest *governance-gap*
+market, and `P163-C` ports unchanged.** 🔵 **The `8%`-budget figure is the one to quote: it says
+the work is unfunded, not unwanted, which is a procurement conversation.**
+
 
 #### p163
 

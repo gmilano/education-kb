@@ -3,6 +3,51 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## 🔴 Verdicts on the THREE actions p163 registered, judged by p164 — one DISCHARGED, TWO REFUTED
+
+🟢 **Ninth consecutive three-action register.** 🔴 **Standing caveat unchanged: p164 judges
+actions p163 wrote, and p164 did the work. These are self-assessments.**
+🟢 **TWO falsifiers fired this pass — the most in any single pass on this shelf — and both
+firings removed a claim this KB was carrying. That is the register doing its job.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🔴 **`ACTION IJ`** — verify OpenEduCat's vendor-stated OneRoster, Ed-Fi and LTI 1.3 support in the tree | 🔴 **REFUTED — falsifier FIRED on ALL THREE limbs** | Condition: *"refuted if any one of the three has no implementing code in `openeducat_erp` at `1c95cef` — in which case the vertical row must be amended to say so."* 🔴 **All three have none.** 🟢 **Full checkout of `1 345` tracked paths at the registered HEAD: `0` text-file hits for OneRoster, Ed-Fi, LTI 1.3, IMS/1EdTech, Caliper, SCORM, xAPI, Turnitin and Proctorio.** 🆕 🔴 **`T162`: every apparent hit was a false positive in one of three classes — `facu(lti)es-icon.svg` ×14 and `requir(ed-fi)eld` (substring), raw bytes in 2 PNG + 2 JPEG (binary), and Danish `Samlet` ×10 in `da_DK.po` (another natural language). `23` raw hits, `0` real.** 🟢 **The sibling-repository hypothesis was tested, not assumed: `5 of 5` candidate repos ABSENT under `P54`.** 🟡 **Verdict stated as ABSENT-FROM-OPEN-TREE, since a commercial edition is unreadable here and is not claimed to have been tested.** 🟢 **The vertical row is amended and DOWNGRADED 🟡→🔴, as the registration required.** [`evidence/openeducat-interop-probe.2026-10-13-p164.tsv`](../evidence/openeducat-interop-probe.2026-10-13-p164.tsv) |
+| 🔴 **`ACTION IK`** — measure `T156`'s reach: how many shelf platforms resolve an LLM prompt from a remote service BEFORE their own repository template? | 🔴 **REFUTED — falsifier FIRED** | Condition: *"refuted if mentingo is the only one, in which case `T156` is a single-repository defect and `P163-B`'s industry-wide framing must be withdrawn."* 🔴 **Mentingo is the only one. `1 of 5`.** 🟢 **OpenOLAT: `0` prompt-service dependencies, its only HTTP clients being LangChain4j provider calls. Moodle: `0` in `public/ai`. edx-platform: `0` AI prompt files in `9 276` paths. openeducat: `0` AI of any kind in `1 345` paths.** 🟢 **`P163-B`'s industry-wide framing is WITHDRAWN as required, and `P164-C` replaces it.** 🆕 **And the measurement found the better axis: `T164` — on *"is the EFFECTIVE prompt the one in version control?"*, `2 of 3` AI-bearing platforms fail (mentingo remotely, Moodle via admin `actionconfig` JSON on `ai_providers`) and only `1 of 3` pins provenance.** 🆕 🟢 **`T165`, the pass's largest finding and again UNREGISTERED: OpenOLAT already SHIPS the audit schema `P163-B` was designing.** [`evidence/prompt-provenance-reach.2026-10-13-p164.tsv`](../evidence/prompt-provenance-reach.2026-10-13-p164.tsv) |
+| 🟢 **`ACTION IL`** — port `P163-A` steps 1 and 3 and measure whether the symbol-spam control still rejects at `0.000` | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if treating combining marks as letters lets ANY of the two negative controls through."* 🟢 **Neither goes through, under `step3` or `step2+3`. Symbol spam rejects at exactly `0.000`, the value the falsifier named; keyboard mash still rejects on ENTROPY.** 🟢 **`T166`: both controls are untouchable BY CONSTRUCTION — digits and punctuation are neither `L*` nor `Mn`/`Mc`, and mash already scored `1.000` on a limb that was not deciding it.** 🟢 **Margin spread across ten valid answers in nine scripts: `5.2×` → `1.1×`.** 🟢 **p163's three numeric predictions CONFIRMED: `~0.99`→`0.990`, `~0.98`→`0.983`, `1.000`→`1.000` — the first cross-pass quantitative prediction this shelf has confirmed.** 🔴 **One self-correction recorded rather than hidden: the first p164 draft omitted upstream's whitespace strip and disagreed with p163's committed TSV; a fidelity gate now asserts `0` mismatches before any result is read.** [`compose/code/p164-equity-fix-controls/`](../compose/code/p164-equity-fix-controls/README.md) |
+
+🔵 **The register's recurring lesson, now THREE passes running: the pass's largest finding was
+not registered by anybody.** 🟢 **p162 said it of `T145`, p163 of `T156`, and p164 of `T165`.**
+🔵 **The pattern is stable enough to name: a registration forces a READ, and the read finds
+something else. The register's value is that it makes you open the file, not that it predicts
+what is in it.**
+
+## 🆕 🟢 Gaps CLOSED this pass
+
+| gap | age | how it closed |
+|---|---|---|
+| 🟢 **"the `★` column is dead and nothing replaces it"** | 🟡 **1 pass** | 🟢 **CLOSED WITH A SUBSTITUTE, not reopened.** 🆕 **`T159`: `git ls-remote` + a blobless clone give existence, HEAD date, tag count, latest tag and tracked paths for all `12` rows at `3 060 KB` total — four primary fields the `★` never provided. `P164-D`** |
+| 🟢 **"no figure promoted from *search-summary* in five passes"** | 🔴 **5 passes** | 🟢 **CLOSED.** 🆕 **`T160`: DeepTutor `v1.6.14` / `2026-10-08` claimed by a secondary listing and CONFIRMED on the git channel, both fields.** 🔵 **With the rule that generalises it: a secondary claim is promotable when a git-channel primary exists for the same field** |
+| 🟢 **"North America: no fact verified at source, nothing named"** | 🔴 **4 passes** | 🟡 **PARTIALLY closed — still `0` verified at source, but the drought of CONTENT broke: Idaho SB 1227, Maryland SB 720, Oklahoma (binding `2026-07-01`, parent opt-out), California A.B. 1159 pending** |
+| 🟢 **"market incoherent, no explanation"** | 🔴 **14 passes** | 🟡 **The INCOHERENCE stands (15th pass, `5.9×` spread) but its CAUSE is now named: the high estimates bundle corporate training with K-12 and higher ed. `T168`** |
+| 🟢 **`T134`'s scope — "nothing is verifiable"** | 🔴 **6 passes** | 🟢 **CLOSED as a clean ASYMMETRY rather than a blanket failure.** 🆕 **`T167`: `4 of 4` document hosts refused, `2 of 2` git hosts answered. The code channel is primary here, permanently** |
+
+## 🔴 Gaps OPENED or carried, with their age
+
+| gap | age | status |
+|---|---|---|
+| 🆕 🔴 **The Annex III deadline may have MOVED to `2027-12-02`** | 🆕 **new** | 🔴 **`T163`. Four passes of this shelf's framing rest on the old horizon, and all three EU hosts refused at the proxy. Registered as `ACTION IM`** |
+| 🆕 🟡 **p163's Colorado reading may be BACKWARDS** | 🆕 **new** | 🟡 **Trackers report Colorado repealed its AI Act in May 2026 and carved out FERPA-covered institutions — i.e. education EXEMPTED, not regulated. Registered inside `ACTION IN`** |
+| 🆕 🟡 **Three agent rows are measurably stale** (`277`, `334`, `378` days) | 🆕 **new** | 🟡 **Not removed. Staleness policy registered as `ACTION IN` rather than applied row by row** |
+| 🆕 🟡 **OpenOLAT's and edx-platform's rostering surfaces have NEVER been probed** | 🆕 **new** | 🟡 **`ACTION IJ` is a direct reason to doubt every unverified interop claim on the verticals page, including the two never asked about** |
+| 🔴 **`search/repositories` is `403`** | 🔴 **8 passes** | 🔴 **Structural. 🟢 Mitigated by `T159`: the shelf now ranks by maintenance instead of attention** |
+| 🔴 **The agent shelf has not grown** | 🔴 **6 passes** | 🔴 **`T110`'s eighth corroboration.** 🔵 **Reinterpreted: at eight passes this is evidence about the population, not the query** |
+| 🔴 **`374` of `669` `ai-tutor` rows unread** | 🔴 **6 passes** | 🔴 **Unchanged** |
+| 🔴 **No regional figure verified AT SOURCE** | 🔴 **6 passes** | 🔴 **Unchanged in fact. 🟢 Changed in understanding — `T167` makes it a measured boundary rather than a recurring failure** |
+| 🔴 **Market size incoherent** | 🔴 **15 passes** | 🔴 **WIDENED to `5.9×` in the 2026 base year (`$1.94B`–`$11.4B`). 🟢 Cause named (`T168`)** |
+| 🟡 **Five passes of OpenOLAT findings rest on ONE tree** (`e4be14f0`) | 🟡 **5 passes** | 🟡 **Concentration risk, recorded not remedied. 🟢 Re-confirmed as current HEAD this pass** |
+| 🟡 **`P163-A` steps 4 and 5 remain unmeasured** | 🟡 **1 pass** | 🟡 **`ACTION IL` registered steps 1 and 3 only; `isCJK` extension and a Thai branch are still designed-not-measured** |
+
 ## 🔴 Verdicts on the THREE actions p162 registered, judged by p163 — two DISCHARGED, ONE REFUTED
 
 🟢 **Eighth consecutive three-action register.** 🔴 **Standing caveat unchanged: p163 judges

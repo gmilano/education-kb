@@ -1,0 +1,22 @@
+region	fact	figure	instrument	source_class	verified_at_source	note
+Global	AI-in-education market, 2026 base year	$1.94B (MarketsReportsWorld) .. $11.4B (Grand View)	market-size query	search-summary	NO - all research hosts refused at proxy	~5.9x spread; WIDER than p163's $1.9B absolute spread
+Global	CAUSE of the market incoherence, named for the first time	higher estimates bundle CORPORATE TRAINING with K-12 + higher ed	same query, independent analysis	search-summary	NO	15th pass incoherent, 1st pass with a stated mechanism
+Global	other 2026 base-year readings	Precedence $9.58B; Research and Markets $10.6B; Future Data Stats $7.50B	market-size query	search-summary	NO	
+Global	long-range CAGR spread	19% .. 43%	market-size query	search-summary	NO	Precedence $136.79B by 2035 @34.52%; GrandView $57.2B by 2033 @25.9%; R&M $42.48B by 2030 @41.5%
+EMEA	EU AI Act Annex III standalone high-risk obligations DELAYED	applies from 2 December 2027 (was 2 August 2026)	named-instrument query (Digital Omnibus)	search-summary	NO - eur-lex.europa.eu and digital-strategy.ec.europa.eu both refused	Digital Omnibus reported in force since 27 July 2026
+EMEA	Annex III point 3 scope (education)	admission/access, assignment to institutions, evaluating learning outcomes that steer learning, level assessment, prohibited-behaviour monitoring in tests	same	search-summary	NO	unchanged in substance from this shelf's prior reading
+EMEA	emotion-recognition ban in education	in force since 2 February 2025, NOT affected by the Omnibus delay	same	search-summary	NO	the one education obligation that is live today
+EMEA	Article 27(1) FRIA for public bodies	required before deploying an Annex III system	same	search-summary	NO	applies to public schools and universities
+EMEA	CONFLICT recorded, not resolved	GenAI transparency deadline given as 2 Nov 2026 by one source and 2 Dec 2026 by another	same	search-summary	NO	recorded as a conflict; neither promoted
+APAC	Vietnam AI Law lists education as high-risk	compliance by 1 March 2027; systems running before 15 Aug 2026 get +6 months	regional query	search-summary	NO	NEW jurisdiction for this shelf, education-specific and dated
+APAC	Digital Education Council, higher ed	57% of APAC faculty excited about AI; region has the LOWEST future adoption intent	regional query	search-summary	NO	see T143 note - a different 57% from the refused enterprise figure; recorded, not promoted
+APAC	national moves	South Korea expanding AI language tools; Japan transitioning to official digital textbooks	regional query	search-summary	NO	directionally consistent with p163's Korea finding
+LATAM	DEC + Tec de Monterrey, higher ed	91.5% of students and 75% of faculty use AI tools	regional query	search-summary	NO	n = 22,941 students / 7,319 faculty
+LATAM	UNESCO IESALC + UNU-IAS governance	8% of institutions have a specific AI budget; 9% have formal evaluation mechanisms	regional query	search-summary	NO	deepens p163's 26% published-policy figure
+LATAM	national frameworks	Chile national AI policy since 2021 + a law in discussion; Brazil and Colombia have national strategies without education-sector regulation	regional query	search-summary	NO	
+LATAM	REFUSED - not recorded as a finding	a $412M Colombian roadmap, 64 university licences, and a "71% weekly use" Anthropic figure	regional query	single low-quality source, self-contradicting with the academic source	NO	explicitly refused; named here so the refusal is auditable
+North America	state AI guidance coverage	~33-35 states + DC + Puerto Rico have K-12 AI guidance, up from ~28 in early 2025	regional query	search-summary	NO	two trackers disagree on the exact count
+North America	Colorado REPEALED its general AI Act	May 2026, replaced by a narrower framework that CARVES OUT FERPA-covered institutions	regional query	search-summary	NO	cuts against p163's reading of Colorado as a named state-level rule
+North America	enacted education-specific measures	Idaho SB 1227 (bars AI replacing teachers); Maryland SB 720; Oklahoma binding, effective 1 July 2026, with parent opt-out	regional query	search-summary	NO	first dated, named statutes on this shelf for NA
+North America	legislative volume	134 bills across 31 states in 2026	regional query	search-summary	NO	mostly student data privacy and classroom restrictions
+North America	pending	California A.B. 1159 would bar training AI on student data unless it directly benefits the school	regional query	search-summary	NO	pending, not enacted

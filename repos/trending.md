@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## 2026-10-13 — Pass 164
+
+### 🆕 🔴 What is new this week: a vendor interoperability claim was measured and `0` of `3` standards existed
+
+🔴 **`openeducat/openeducat_erp` (LGPL-3.0, HEAD `1c95cef`) is advertised with OneRoster, Ed-Fi
+and LTI 1.3.** 🔴 **Across `1 345` tracked paths, fully checked out and content-searched:
+`0` implementing code for all three** *(`T161`)*.
+[`evidence/openeducat-interop-probe.2026-10-13-p164.tsv`](../evidence/openeducat-interop-probe.2026-10-13-p164.tsv)
+
+🆕 🔴 **`T162` — and a naive grep would have CONFIRMED the claim.** 🔴 **`23` raw hits, `0` real,
+in three distinct false-positive classes:**
+
+| raw hit | reality |
+|---|---|
+| `14` paths matching `lti` | 🔴 `facu`*`lti`*`es-icon.svg`, the same icon in 14 modules |
+| `4` files matching `lti` | 🔴 **raw bytes inside `2` PNG and `2` JPEG images** |
+| `1` file matching `ed-fi` | 🔴 `requir`*`ed-fi`*`eld` in a code comment |
+| `4` files matching `saml` | 🔴 **Danish `Samlet` (*"total"*) in `da_DK.po`** |
+
+🟢 **The guard is three flags: `grep -I`, `\b` word boundaries, `--exclude='*.po'`.**
+🟢 **Packaged as `P164-A` in [`compose/patterns.md`](../compose/patterns.md).**
+
+### 🆕 🟢 The positive find of the week: an AI-grading audit schema that already ships, Apache-2.0
+
+🟢 **Looking for remote prompt resolution across five platforms (`ACTION IK`), the sweep found
+the opposite — `openolat/OpenOLAT` persisting per-correction provenance in
+`o_ai_essay_correction`:** 🟢 **`a_prompt_template_version`, `a_content_hash_at_call`, `a_tier`,
+and the student answer as an immutable `@Lob`.**
+🔵 **The upstream comment says these fields were deliberately MOVED off the usage log because
+*"they belong to the correction"*.** 🟢 **`T165`; it converts `P163-B` from a design into
+`P164-C`, a port.**
+
+### 🆕 🔴 `P162-A` is corrected — blobless clones are not cheap for content
+
+| operation | cost, measured this pass |
+|---|---|
+| 🟢 path census, blobless `--no-checkout` | 🟢 **`236 KB`** for `1 345` paths |
+| 🔴 **`git checkout` of a blobless clone** | 🔴 **per-blob fetch; abandoned at `35 MB` after minutes** |
+| 🟢 plain `--depth=1`, one packfile | 🟢 **`65 MB`, single transfer** |
+| 🟢 blobless + `sparse-checkout` of one subsystem | 🟢 **`1.4 MB`** (OpenOLAT AI, `107` files) · **`3.3 MB`** (Moodle AI, `279` files) |
+
+🟢 **`P164-B` in [`repos/foundations.md`](../repos/foundations.md).**
+
+### 🔴 The verification boundary, measured rather than described
+
+| channel | hosts | result |
+|---|---|---|
+| 🔴 document | `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`, `oecd.org` | 🔴 **`000`, `4 of 4` refused** |
+| 🟢 git | `github.com`, `raw.githubusercontent.com` | 🟢 **`400` / `301` — answered, `2 of 2`** |
+
+🆕 **`T167`: the code channel is primary here and the document channel is secondary, by
+infrastructure rather than by effort.** 🔵 **That is why this pass spent its budget on trees.**
+
+---
+
 ## 2026-10-13 — pass 163 — 🔴 GitHub trending stays shut, and this pass proved it cannot be reopened by attaching repositories
 
 🔴 **GitHub trending unreadable for the SEVENTH pass running. `search/repositories` answers

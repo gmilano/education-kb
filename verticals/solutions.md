@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+🔴 **`ACTION IJ` is REFUTED and its falsifier fired on ALL THREE limbs.** 🟢 **The routing
+table's newest row — `openeducat/openeducat_erp`, added p163 on a vendor-stated interoperability
+claim — is AMENDED here, exactly as the registration required.**
+[`evidence/openeducat-interop-probe.2026-10-13-p164.tsv`](../evidence/openeducat-interop-probe.2026-10-13-p164.tsv)
+
+### 🆕 🔴 `T161` — OpenEduCat's OneRoster, Ed-Fi and LTI 1.3 are NOT in the repository
+
+🟢 **Measured at the registered tree: HEAD `1c95cef`, branch `19.0`, last commit `2026-09-07`,
+`1 345` tracked paths, full content read.**
+
+| claim | path names | file CONTENT | verdict |
+|---|---|---|---|
+| 🔴 **OneRoster** | `0` | 🔴 **`0`** | 🔴 **ABSENT** |
+| 🔴 **Ed-Fi** | `0` | 🔴 **`0` once verified** | 🔴 **ABSENT** |
+| 🔴 **LTI 1.3** | `0` once verified | 🔴 **`0` once verified** | 🔴 **ABSENT** |
+| 🔴 IMS / 1EdTech, Caliper, SCORM, xAPI, Turnitin, Proctorio | `0` | `0` | 🔴 **ABSENT** |
+
+🆕 **`T161`:** 🔴 **`0` of the three vendor-stated standards has implementing code.** 🟢 **The
+p163 row said the claims were vendor-stated and registered them rather than repeating them as
+fact. That was the right call, and this is the payoff.**
+
+### 🆕 🔴 `T162` — and EVERY apparent hit was a false positive, in three distinct classes
+
+🔵 **This is the part worth carrying to other industries, because a naive capability grep would
+have CONFIRMED the vendor claim.**
+
+| raw hit | what it actually was | class |
+|---|---|---|
+| 🔴 `14` path hits for `lti` | 🔴 **`facu`*`lti`*`es-icon.svg`**, the same asset in 14 modules | 🔴 **substring inside a longer word** |
+| 🔴 `1` content hit for `ed-fi` | 🔴 **`requir`*`ed-fi`*`eld`** in a code comment, `openeducat_timetable/tests/test_compute_timing.py:47` | 🔴 **substring inside a longer word** |
+| 🔴 `4` content hits for `lti` | 🔴 **raw bytes inside `2` PNG and `2` JPEG assets** | 🔴 **binary file matched as text** |
+| 🔴 `4` content hits for `saml` | 🔴 **Danish `Samlet` (= *"total"*) ×6, `samlet` ×3, `saml` ×1 in `da_DK.po`** | 🔴 **a word in another natural language** |
+
+🆕 **`T162`:** 🔴 **an unguarded capability grep over this repository reports `23` hits across
+four standards and the true count is `0`.** 🟢 **The guard is three flags and one exclusion:
+`grep -I` (skip binaries), `\b` word boundaries, and exclude `*.po` i18n catalogues.**
+🔵 **Recorded as a reusable instrument because *"the repo mentions OneRoster"* is exactly the
+kind of claim a client engagement inherits without checking.**
+
+### 🟢 The one thing that would have made the claim true, tested and ABSENT
+
+🔵 **A fair reading has to allow that the capability might live in a SIBLING repository and that
+the vendor page is describing a product rather than this tree.** 🟢 **Tested with `P54`:**
+
+| candidate | `git ls-remote --symref` |
+|---|---|
+| 🟢 `openeducat/openeducat_erp` | 🟢 **EXISTS** *(the row's repo)* |
+| 🔴 `openeducat/openeducat_lti` · `openeducat_oneroster` · `openeducat_enterprise` · `openeducat_core` · `openeducat_lms` | 🔴 **ABSENT, all five** |
+
+🟢 **So the capability is not in an adjacent open repository under any obvious name.**
+🟡 **Stated fairly: it may still exist in OpenEduCat's commercial edition, which this shelf
+cannot read and does not claim to have tested. What is settled is narrower and is what the
+routing table needed — it is not in the open-source tree the row points at.**
+
+### 🟢 The routing table, with the amended row
+
+| the engagement… | platform | licence | grading | can grading be switched OFF? | 🆕 **rostering standards, VERIFIED** |
+|---|---|---|---|---|---|
+| 🟢 must NOT grade with AI | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3.0 | 🟢 **none** — `4` actions, `0` evaluative | 🟢 **n/a** | 🟡 **LTI + Open Badges confirmed p162** |
+| 🟢 may grade, must be able to STOP | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🔴 `essay-grading` | 🟢 **YES — flag ships `false`** | 🟡 not probed |
+| 🟡 grades, wants MIT + multi-tenancy | 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 🔴 **`ai_judge`, `7` tables** | 🔴 **NO** | 🟢 **SCORM confirmed** (`scorm-again@3.0.4`) |
+| 🟡 needs an education **ERP** | 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** *(body `8 241 B`, INCOMPLETE)* | 🟢 **none AI-evaluative** | 🟢 **n/a** | 🆕 🔴 **NONE. OneRoster, Ed-Fi and LTI 1.3 all ABSENT from the tree (`T161`)** |
+| 🔴 must avoid network copyleft | 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🔴 `0` AI files | 🟢 **n/a** | 🟡 not probed |
+
+🔵 **How the OpenEduCat row should now be used:** 🟡 **it remains a real, maintained,
+self-hostable education ERP, and that is why it keeps its row** — 🔴 **but it is an
+INTEGRATION-TARGET with no standards-based integration surface of its own, which is a materially
+worse starting point than p163's row implied.** 🔴 **Combined with its copyleft licence and its
+incomplete grant, it drops from 🟡 amber to 🔴 red for anything but a scoped, bespoke
+integration.**
+
+### 🟡 What this page still carries unverified
+
+- 🟡 **OpenOLAT's and edx-platform's rostering surfaces have never been probed.** 🟢 **Registered
+  as `ACTION IM` rather than left implicit** — 🔵 **the OpenEduCat result is a reason to doubt
+  every unverified interoperability claim on this page, including the two this shelf has simply
+  never asked about.**
+
 ## Pass 163 — 2026-10-13
 
 🔴 **This page's routing table splits on *"does the engagement GRADE?"* and sends grading

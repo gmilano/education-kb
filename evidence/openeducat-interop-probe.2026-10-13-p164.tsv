@@ -1,0 +1,12 @@
+probe	pattern	raw_hits	verified_hits	false_positive_class
+OneRoster	oneroster|one[_-]roster	0	0	n/a — no hit at all
+Ed-Fi	ed[_-]fi|edfi	1	0	substring: 'requir(ed-fi)eld' in a code comment, test_compute_timing.py:47
+LTI 1.3	\blti\b|lti1p3	4	0	binary bytes in 2 PNG + 2 JPEG assets
+LTI (path names)	lti	14	0	substring: 'facu(lti)es-icon.svg' x14
+IMS/1EdTech	imsglobal|1edtech	0	0	n/a — no hit at all
+Caliper	caliper	0	0	n/a
+SCORM	scorm	0	0	n/a
+xAPI	xapi|tincan	0	0	n/a
+SAML/Shibboleth	saml|shibboleth	4	0	Danish i18n: 'Samlet'(=total) x6, 'samlet' x3, 'saml' x1 in da_DK.po
+Turnitin	turnitin	0	0	n/a
+Proctorio	proctorio	0	0	n/a

@@ -3,6 +3,102 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+## Pass 164 — 2026-10-13
+
+🟢 **Three pre-registered actions, all three judged. `ACTION IK` and `ACTION IL` DISCHARGED;
+`ACTION IJ` is REFUTED with its falsifier firing on ALL THREE limbs.**
+🆕 🟢 **And the headline is not an action at all: p163 closed the `★` column as unmeasurable, and
+this pass gives it a SUCCESSOR that is measurable at source, in-session, for all twelve rows at
+a total cost of `3.0 MB`.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION IJ`** — are OpenEduCat's OneRoster / Ed-Fi / LTI 1.3 claims in the tree? | 🔴 **REFUTED. Falsifier FIRED on all three limbs — `0` implementing code for all three, and every apparent hit is a false positive** |
+| 🔴 **`ACTION IK`** — how many shelf platforms resolve a prompt remotely BEFORE their own template? | 🔴 **REFUTED as registered: mentingo is the ONLY one.** 🟢 **`T156`'s industry-wide framing is WITHDRAWN, and a better-measured axis replaces it** |
+| 🟢 **`ACTION IL`** — does the equity fix cost the symbol-spam control? | 🟢 **DISCHARGED, falsifier SILENT. Both controls still reject; symbol spam at exactly `0.000`** |
+
+### 🆕 🟢 `T159` — the `★` column is dead, but RECENCY is alive, and it is a better column anyway
+
+[`evidence/release-recency.2026-10-13-p164.tsv`](../evidence/release-recency.2026-10-13-p164.tsv)
+
+🔴 **p163 established (`T149`) that no star count on this shelf can be refreshed: third-party
+public repositories cannot be attached, `GET /repos/{r}` is `403`, and `search/repositories` is
+closed.** 🔵 **What p163 did not ask is whether a DIFFERENT column could carry the same job.**
+
+🟢 **It can, and the channel was open the whole time.** 🟢 **`git ls-remote` and a blobless
+`--depth=1` clone return, per repository and without any GitHub API: existence, default branch,
+HEAD sha, HEAD commit DATE, the full tag list and the tracked-path count.** 🟢 **All twelve rows,
+measured this pass:**
+
+| agent | HEAD date | age | tags | latest tag | paths |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `2026-10-12` | 🟢 **1 d** | `43` | `v2.3.4` | `3 224` |
+| 🟢 [`penecho/penecho`](https://github.com/penecho/penecho) | `2026-10-12` | 🟢 **1 d** | `16` | `v1.4.0` | `1 093` |
+| 🟢 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `2026-10-12` | 🟢 **1 d** | `42` | `v1.0.41` | `1 705` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `2026-10-11` | 🟢 **2 d** | `57` | `v0.27.0` | `271` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `2026-10-10` | 🟢 **3 d** | 🟢 **`118`** | `v4.22.0` | `4 753` |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `2026-10-08` | 🟢 **5 d** | `86` | 🟢 **`v1.6.14`** | `3 763` |
+| 🟢 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `2026-10-08` | 🟢 **5 d** | 🔴 **`0`** | 🔴 **none** | `195` |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `2026-10-08` | 🟢 **5 d** | 🔴 **`0`** | 🔴 **none** | `890` |
+| 🟡 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | `2026-09-21` | 🟡 **22 d** | `3` | `v1.8.1` | `905` |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `2026-01-09` | 🔴 **277 d** | `2` | `v0.1.0` | `351` |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `2025-11-13` | 🔴 **334 d** | 🔴 **`0`** | 🔴 **none** | `158` |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `2025-09-30` | 🔴 **378 d** | `3` | `v2.7-Reboot` | 🔴 **`12`** |
+
+🟢 **Total cost for all twelve: `3 060 KB` of `.git`, in parallel, in one pass.** 🔵 **For
+comparison, the star count this replaces could not be obtained at ANY cost.**
+
+🆕 **`T159`:** 🟢 **a shelf that cannot rank by attention can still rank by MAINTENANCE, and
+maintenance is the field an engagement actually needs.** 🔵 **A `378`-day-old repository with
+`12` tracked paths is a prompt, not a project — and no star count would have told you that.**
+
+### 🆕 🟢 `T160` — and the new column immediately PROMOTED a search summary to verified
+
+🔴 **This shelf has not promoted a figure from *search-summary* in five passes.** 🟢 **This pass
+promotes one, and the promotion is exact.**
+
+| channel | claim |
+|---|---|
+| 🟡 discovery query, this pass | *"DeepTutor … most recent release is **v1.6.14**, dated **October 8, 2026**"* — a secondary listing |
+| 🟢 **`git ls-remote --tags` + blobless clone, this pass** | 🟢 **latest tag `v1.6.14`; HEAD commit `2026-10-08`** |
+
+🆕 **`T160`:** 🟢 **the two agree on BOTH fields.** 🔵 **Contrast with `T150`, where three secondary
+sources gave three incompatible star counts for this same repository: the secondary channel is
+not uniformly unreliable — it is unreliable about STARS and reliable about RELEASES, because a
+release is a fact with a primary channel anyone can check and a star count is not.**
+
+🟢 **The practical rule this shelf now follows: a secondary claim about a repository is
+promotable when a git-channel primary exists for the same field.**
+
+### 🟢 The agent shelf — `0` new rows, SIXTH consecutive pass, and a NEW column
+
+🔴 **`T110` corroborated an EIGHTH time: global discovery queries returned AI CURRICULUM again**
+— `microsoft/ai-agents-for-beginners`, the Hugging Face Agents Course, `LLMs-from-scratch`,
+`developer-roadmap` — 🔴 **none of them an education-domain agent.** 🟡 **Two education-domain
+names did surface (`HKUDS/DeepTutor`, `Open-TutorAi/open-tutor-ai-CE`) and BOTH are already
+known to this shelf, which is corroboration of saturation rather than discovery.**
+
+🆕 **The table change this pass:**
+
+| was | is now |
+|---|---|
+| 🔴 `★ (read p157-10-12; NOT refreshable — see ACTION IF)` | 🟢 **`★ (frozen p157-10-12)` + 🆕 `HEAD date / age / tags` — measured p164 and REFRESHABLE every pass** |
+
+🟢 **`12 of 12` rows pass `P54` (`git ls-remote --symref`), so the existence verification is also
+re-confirmed this pass rather than inherited.**
+
+### 🔴 What this page still cannot do, after p164
+
+- 🔴 **Rank by attention.** 🟢 **Settled in p163 and NOT re-litigated.** 🆕 🟢 **Superseded in
+  practice: `T159` ranks by maintenance instead.**
+- 🔴 **Discover a new education-domain agent. `T110`'s eighth corroboration; the shelf has not
+  grown in six passes.** 🔵 **Six passes of the same four queries returning the same curriculum
+  is now strong evidence about the WORLD, not about the instrument: there is no stream of new
+  open-source education-domain agents to find.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** — unchanged for six passes.
+- 🆕 🟡 **Three rows are now measurably STALE** (`277`, `334`, `378` days). 🔵 **Not removed this
+  pass — removal is a shelf-composition decision and is registered as `ACTION IN`.**
+
 ## Pass 163 — 2026-10-13
 
 🟢 **Three pre-registered actions, all three judged. `ACTION IG` and `ACTION IH` DISCHARGED with

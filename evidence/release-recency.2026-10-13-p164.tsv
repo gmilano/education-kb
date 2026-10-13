@@ -1,0 +1,14 @@
+repo	head_sha	default_branch	head_commit_date	age_days	tag_count	latest_tag	tracked_paths	gitdir
+ai-shifu/ai-shifu	2da98b19a15c	main	2026-10-12	1	43	v2.3.4	3224	324KB
+penecho/penecho	076c1ad54a85	main	2026-10-12	1	16	v1.4.0	1093	236KB
+echo-loop/Echo-Loop	d14130b6c47d	main	2026-10-12	1	42	v1.0.41	1705	276KB
+ankimcp/anki-mcp-server	e0e347f7f399	main	2026-10-11	2	57	v0.27.0	271	204KB
+Selleo/mentingo	242a9324fe48	main	2026-10-10	3	118	v4.22.0	4753	408KB
+HKUDS/DeepTutor	6cf793bd868b	main	2026-10-08	5	86	v1.6.14	3763	356KB
+CaviraOSS/PageLM	a6646794661b	main	2026-10-08	5	0	-	195	200KB
+zijinz456/OpenTutor	f0142f28e8ed	main	2026-10-08	5	0	-	890	228KB
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	9c260890214d	main	2026-09-21	22	3	v1.8.1	905	236KB
+HugeCatLab/ChatTutor	7d9e9052bc5a	main	2026-01-09	277	2	v0.1.0	351	204KB
+plastic-labs/tutor-gpt	5c2f92416c04	main	2025-11-13	334	0	-	158	196KB
+JushBJJ/Mr.-Ranedeer-AI-Tutor	ea29bcf196d2	main	2025-09-30	378	3	v2.7-Reboot	12	192KB
+# TOTAL	12 repos							3060KB

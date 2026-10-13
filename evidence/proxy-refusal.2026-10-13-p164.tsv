@@ -1,0 +1,7 @@
+host	channel	result	meaning
+eur-lex.europa.eu	curl https	000	connect rejected at proxy - primary EU legal text UNREACHABLE
+digital-strategy.ec.europa.eu	curl https	000	connect rejected - EC AI Act pages UNREACHABLE
+artificialintelligenceact.eu	curl https	000	connect rejected
+oecd.org	curl https	000	connect rejected - 6th consecutive pass
+github.com	curl https	400	REACHABLE (400 is the host answering, not a refusal)
+raw.githubusercontent.com	curl https	301	REACHABLE - redirect, i.e. the host answered

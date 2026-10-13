@@ -3,6 +3,57 @@ industry: education
 region: Global
 updated: 2026-10-13
 ---
+
+## 2026-10-13 — Pass 164
+
+### 🆕 🟢 What is new this week: the shelf found a way to measure maintenance after losing the ability to measure attention
+
+🔴 **p163 closed the `★` column permanently (`T149`): a third-party public repository cannot be
+attached, `GET /repos/{r}` is `403`, and `search/repositories` has been shut for seven passes.**
+🟢 **This pass established that the git protocol answers every question that actually matters
+for an engagement, for all twelve rows, at `3 060 KB` total.**
+[`evidence/release-recency.2026-10-13-p164.tsv`](../evidence/release-recency.2026-10-13-p164.tsv)
+
+| 🟢 active this week | 🔴 measurably abandoned |
+|---|---|
+| 🟢 `ai-shifu/ai-shifu` — `2026-10-12`, `43` tags, `v2.3.4` | 🔴 `HugeCatLab/ChatTutor` — **`277` days** since HEAD |
+| 🟢 `penecho/penecho` — `2026-10-12`, `v1.4.0` | 🔴 `plastic-labs/tutor-gpt` — **`334` days**, `0` tags |
+| 🟢 `echo-loop/Echo-Loop` — `2026-10-12`, `v1.0.41` | 🔴 `JushBJJ/Mr.-Ranedeer-AI-Tutor` — **`378` days**, and only **`12` tracked files** |
+| 🟢 `ankimcp/anki-mcp-server` — `2026-10-11`, `v0.27.0` | |
+| 🟢 `Selleo/mentingo` — `2026-10-10`, **`118` tags**, `v4.22.0` | |
+| 🟢 `HKUDS/DeepTutor` — `2026-10-08`, **`v1.6.14`** | |
+
+🆕 🟢 **`T160` — a search summary was PROMOTED to verified, the first promotion in five passes.**
+🟡 **A secondary listing claimed DeepTutor's *"most recent release is v1.6.14, dated October 8,
+2026"*.** 🟢 **`git ls-remote --tags` returns latest tag `v1.6.14`; the blobless clone returns
+HEAD commit `2026-10-08`. Both fields agree.**
+🔵 **Set against `T150` — where three secondary sources gave `41 210`, `34.7 K` and *"over
+17,000"* stars for this same repository — the lesson is precise: the secondary channel is
+unreliable about STARS and reliable about RELEASES, because a release has a primary channel
+anyone can check.**
+
+### 🔴 `T110`, eighth corroboration — and at eight it is a fact about the field, not the query
+
+🔴 **Four global discovery queries returned AI CURRICULUM again:**
+`microsoft/ai-agents-for-beginners`, the Hugging Face Agents Course, `LLMs-from-scratch`,
+`developer-roadmap`. 🔴 **None is an education-domain agent.**
+🟡 **Two education-domain names did appear — `HKUDS/DeepTutor` and
+`Open-TutorAi/open-tutor-ai-CE` — and this shelf already carries both.**
+
+🔵 **Six passes of the same queries returning the same curriculum, with the only education hits
+being repositories already on the shelf, is no longer evidence that the instrument is weak.**
+🟢 **It is evidence that the population is small and this shelf has most of it.**
+
+### 🔴 Three rows are now measurably stale, and removal is a DECISION not a cleanup
+
+🔴 **`277`, `334` and `378` days.** 🟡 **Not removed this pass.** 🔵 **A `378`-day-old repository
+with `12` files is still the single most recognisable name in open-source AI tutoring, and a
+shelf that silently drops it is less useful than one that carries it marked.**
+🟢 **Registered as `ACTION IN`: decide the staleness policy explicitly, with a stated threshold,
+rather than letting it happen row by row.**
+
+---
+
 ## 2026-10-13 — pass 163 — 🔴 the discovery channel is closed, and this pass CLOSED the question of whether it reopens
 
 🔴 **No new agent rows from discovery, FIFTH consecutive pass.** 🟢 **`T110` corroborated a
