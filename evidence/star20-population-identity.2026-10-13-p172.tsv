@@ -1,0 +1,9 @@
+# ACTION JS, second limb: p171 published "at >=20 star the permissive active population is 6
+# repositories and 4 were already on this shelf". The query names its members; p172 read them.
+# 0 of 5 are on the 12-row shelf. 2 are p171's own new finds. 3 had never been named.
+repo	stars_band	licence_body_read	head	on_12row_shelf	named_by_p171	shape	region
+pguso/agents-from-scratch	>=20	MIT (1091 B)	da3f9df28a9c	no	no	EDUCATION-ABOUT-AI (not edtech)	Global
+SenmuuuuW/universal-diagnostic-tutor-skill	>=20	MIT (1102 B)	075c1895d255	no	no	TUTORING	APAC
+sgaofen/vibe-schooling	>=20	MIT (1063 B)	7c2f87a4641b	no	YES	ASSESSMENT-CIRCUMVENTION	Global
+TovTechOrg/Tov-learn	>=20	MIT (1064 B)	290af750671a	no	no	TUTORING	EMEA
+NickScherbakov/codementor-ai-platform	>=20	MIT (1071 B)	a0a33cd6d4f8	no	YES	TUTORING+ANALYTICS	Global

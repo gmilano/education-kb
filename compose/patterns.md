@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🟢 **Six recipes. Every repository named below is `HEAD`-verified this pass or carries a body-read
+licence from a named prior pass, and every copyleft or non-commercial component is flagged AT the
+point it is named rather than in a footnote.**
+🔴 **Citation rule this file follows, per `ACTION IQ`: a non-commercial or no-grant repository may
+appear as EVIDENCE but never as a build step. [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)
+(revocable Community License) and [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+(no grant file) are therefore cited nowhere below as components.**
+
+### 🆕 🔴 Pattern 1 — the Article `50(2)` marking wrapper (`50` days, build this first)
+
+**Problem.** `0` of `13` generating rows on this shelf can mark output as synthetic
+(`ACTION JQ`). The deadline is `2 December 2026`.
+
+**Why a wrapper and not a patch.** The exposure is spread across `13` repositories in `4`
+languages. Marking at the *delivery boundary* is one component; marking inside each generator is
+thirteen forks you then maintain.
+
+**Wire it:**
+1. **Delivery boundary** — [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (`MIT`, `882f3b8c7498`). Every generated lesson becomes a SCORM/xAPI package here. This is the single choke point for text, and the only row this KB classifies as `pack`.
+2. **Mark on the way through** — `compose/code/aiact-50-2-marking` emits the marking; `aiact-50-2-spans` computes WHICH spans are synthetic when a lesson mixes human and generated text; `aiact-50-2-pack` bundles the declaration.
+3. **Prove coverage** — `compose/code/aiact-50-2-exposure` + `compose/code/p172-aiact-shelf19/scan_p172.sh` re-run per release. 🔴 **Both need network — they clone and fetch. Budget for that in an air-gapped review (`ACTION JQ` limb 2 FIRED).**
+4. **For synthetic audio/video** — route through [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) (`MIT`, `9c260890214d`), which already ships `services/pipeline/src/alystria/security/provenance.py` and `test_provenance_gates.py`. 🟡 **Extend its gates from INPUT provenance to OUTPUT marking — the hard part is built, pointed the other way.**
+
+🔵 **What this does not do: Article `50(2)` wants a machine-readable mark, and a SCORM manifest
+field is machine-readable to a SCORM player, not to a general detector. Pair with `C2PA` on media
+assets. Say this limit out loud rather than claiming conformity.**
+
+### 🆕 🟢 Pattern 2 — permissive adaptive tutor, no licence conversation
+
+**Components, all `MIT`/`Apache-2.0`, all `HEAD`-verified at `t0 = 2026-10-13T10:55:53Z`:**
+
+| layer | component | licence |
+|---|---|---|
+| tutoring engine | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) `7e3a34e24354` | 🟢 `Apache-2.0` |
+| retention scheduler | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) `f0142f28e8ed` — FSRS | 🟢 `MIT` |
+| practice surface | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) `e0e347f7f399` | 🟢 `MIT` |
+| host LMS | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) `242a9324fe48` — **EMEA** | 🟢 `MIT` |
+| rostering | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` |
+| packaging | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` |
+
+**Wiring.** `edfi-oneroster` supplies the class list → `mentingo` holds enrolment and the record →
+`ai-shifu` generates the lesson for a learner profile → `OpenTutor`'s FSRS decides WHEN the learner
+sees it again → `anki-mcp-server` is where the review actually happens → `scorm-again` packages it
+and carries the Pattern 1 mark.
+🟢 **`mentingo` ships `licenses.config.yaml`, a licence gate. LIFT IT — point it at your own
+dependency set. It is the only row on this shelf that ships its own compliance control.**
+🔴 **Known gap: `mentingo`'s gate FAILS `Sakai` (`T208`). If the client is a Sakai institution, the
+gate will reject the host platform; expect that conversation and have `OpenOLAT` (`Apache-2.0`)
+ready as the alternative.**
+
+### 🆕 🟡 Pattern 3 — exam generation, with the dependency fixed before you ship
+
+**This is the assessment route this KB routed for the first time this pass, and it needs one repair.**
+
+1. **Generator** — [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) (`MIT`, `e2193181c95c`, `593` files, `129` commits in the 30 days to p172, `89` test files). Produces original mock exams with worked solutions and official layout.
+2. 🔴 **REPAIR FIRST.** Its `requirements.txt` pins **`PyMuPDF`**, whose PyPI metadata reads *"Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License"*. The `MIT` root does not reach the closure (`ACTION JR`).
+   🟢 **The fix is cheap: `pypdf` (`BSD-3-Clause`) is ALREADY a dependency in the same file.** Move parsing to `pypdf`; `PyMuPDF`'s `AGPL` limb is its rendering path. If rendering is genuinely needed, buy the Artifex commercial licence and record it.
+3. **Honour its DATA carve-out.** `references/attribution-and-forks.md` states that third-party exam papers, passages, photographs and fonts *"remain separately governed and are not licensed by this project's MIT declaration."* 🟢 **Generate; do not redistribute the bundled reference PDFs.**
+4. **Delivery** — [`ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) has the strongest built-in exam tooling of any platform here. 🔴 **`GPL-3.0` — reciprocal. For a permissive delivery path use [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (`Apache-2.0`), whose `QTI` support is the exchange format you want anyway.**
+5. 🔴 **Threat-model integrity.** [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) (`MIT`, `80`★) is Canvas-LMS + `MCP` exam automation advertising *"get 4.0 GPA without learning"*. 🔴 **CITED AS A THREAT, NEVER A COMPONENT.** The attack tooling is permissive and deployable; design proctoring assuming it is present. 🔴 **And note Annex III point `3` makes the DEFENCE high-risk: monitoring prohibited behaviour during tests is in scope from `2 December 2027`.**
+
+### 🆕 🟢 Pattern 4 — the licence-evidence pack a client reviewer will actually ask for
+
+**Problem this pass proved.** A root grant is not a closure, a manifest is not a map, and a
+classifier's family name is not a licence. All three failed on real trees this pass.
+
+**Wire it, in this order — each step catches what the previous one cannot:**
+1. **Root grant** — `compose/code/grant-ladder-v4`. Reads the body, not the GitHub badge.
+2. **Tree-wide grants** — `compose/code/p441-tree-licence-enumeration`. 🔴 **`Moodle` reports `193` grant-named paths and only `88` are grant DOCUMENTS; `105` are PHP files carrying a per-file header (`T223`). Classify, do not count.**
+3. **Dependency closure** — `compose/code/dependency-licence-closure` + `p438-depth2-closure`. 🔴 **This is the step that catches `taiwan-exam`'s `AGPL` `PyMuPDF` under an `MIT` root. A root-only review passes that repository.**
+4. **Manifest attribution** — `compose/code/p172-manifest-attribution`. 🔴 **New this pass. On `Sakai`'s `licenses/`: `8` of `86` paths are proprietary Sun click-through agreements, `8` are copies of a generic family file carrying no component evidence, `1` is a 130-byte pointer and not a grant at all.**
+5. **Family identity** — `compose/code/lib/license_family.sh`, 🔴 **with the `Apache-1.1` correction applied by hand (`T232`): it answers `BSD` for the Apache Software License 1.1, which is `25` of `Sakai`'s `86` paths. A scanner report saying *"34 BSD"* over that tree is `~25` files wrong.**
+
+🔵 **Run them in order and report the DISAGREEMENTS, not just the verdicts. Every finding this pass
+came from two instruments disagreeing about one payload.**
+
+### 🆕 🟢 Pattern 5 — the LATAM governance engagement (`87%` deployed, `26%` governed)
+
+**The fact it rests on.** UNESCO IESALC: `200` institutions, `19` countries, `87%` using AI in at
+least one area, `74%` in teaching and learning, **`26%` with a formal AI strategy**.
+
+**This is not a tooling engagement.** Deliver, in this order:
+1. **An AI-use policy and an approval process.** The **European Schools** network is the quotable precedent for *"we have not approved anything yet, and here is the process"* — defensible, and it exists.
+2. **Oversight gates in the workflow, not in a document.** `compose/code/grading-draft-gate` — an AI-proposed grade stays a DRAFT until a human commits it. 🟢 **This is literally the control Oklahoma and Maryland now require of US districts, which means one build serves both regions.**
+3. **Evidence of instructional benefit.** The thing HolonIQ and `1EdTech` both report buyers now demanding, and the thing `26%`-governance institutions cannot produce.
+4. **Low-connectivity substrate** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `5d47c94a8ecc`), offline-first.
+5. **Partner channel** — UNESCO's **Observatory on AI in Education for Latin America and the Caribbean** (launched `14 April 2026`) and **Ceibal** in Uruguay (`75%` of public-school teachers already using these tools).
+
+🔴 **Scope honestly: this KB has no commercial map of LATAM edtech vendors or funders. Four passes
+have searched and four have found multilateral and public actors only. Do not present a competitive
+landscape this KB does not have.**
+
+### 🆕 🟢 Pattern 6 — pedagogy-as-skill, the cheapest thing on this page
+
+**Observation.** The three repositories that entered this KB this pass with real teaching logic
+ship **no runtime at all** — they are agent skills and Markdown.
+
+| component | licence | region | what it contributes |
+|---|---|---|---|
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) `075c1895d255` | 🟢 `MIT` | **APAC** | 🟢 **decides whether to explain, ask, drill or STOP — a stopping rule, which no other row on this shelf models** |
+| [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) `290af750671a` | 🟢 `MIT` | **EMEA** | interactive tutor as an agent skill |
+| [`timothywarner-org/ai901-cert-buddy-claude`](https://github.com/timothywarner-org/ai901-cert-buddy-claude) | 🟢 `MIT` | Global | vendor-certification prep — the corporate-L&D shape |
+
+**Wire it.** Load the skill into the host agent; put [`Selleo/mentingo`](https://github.com/Selleo/mentingo)
+(`MIT`, enterprise L&D, **EMEA**) underneath it for enrolment, records and SCORM; let the skill
+decide pedagogy and the LMS own the record.
+🔴 **Article `50(2)` still applies.** This KB classifies these rows `gen-ind` — the host agent
+generates, so the obligation lands on the deployer. 🟢 **A skill with no runtime cannot mark its own
+output; the mark has to come from Pattern 1's boundary. This is the clearest case for marking at
+delivery rather than at generation.**
 ## 🆕 🟢 `P171-A` — family identity comes from the TITLE *(p171 — Global)*
 
 🟢 **`P170-A` decides IF a candidate carries a grant. `P171-A` is the step after it: WHICH grant,

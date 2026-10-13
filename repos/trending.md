@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p172
+
+🆕 🟢 **The seven `ai-education` topic counts p171 recorded were re-run one hour later and ALL SEVEN
+reproduce to the unit. `0.0%` movement across the board (`ACTION JS`, falsifier SILENT).**
+🆕 🔵 **Which settles `T227` in the direction it could not reach: the index is stable to the unit
+over an hour, so p170's *"`288`"* and p171's *"`485`"* on the same day were not drift. They were two
+different questions, and only one of them was written down (`T237`).**
+
+| query *(verbatim)* | p171 `09:47Z` | p172 `~10:50Z` | Δ |
+|---|---|---|---|
+| `topic:ai-education` | `485` | 🟢 `485` | 🟢 `0.0%` |
+| `topic:ai-education pushed:>=2026-04-16` | `357` | 🟢 `357` | 🟢 `0.0%` |
+| `… license:mit` | `135` | 🟢 `135` | 🟢 `0.0%` |
+| `… license:apache-2.0` | `14` | 🟢 `14` | 🟢 `0.0%` |
+| `… license:bsd-3-clause` | `0` | 🟢 `0` | 🟢 `0.0%` |
+| `… license:isc` | `0` | 🟢 `0` | 🟢 `0.0%` |
+| `… license:mit stars:>=20` | `5` | 🟢 `5` | 🟢 `0.0%` |
+
+🟢 **Channel stated: rendered `github.com/search` pages. `api.github.com` answers `403` at the
+proxy from this container and `curl` on `github.com/search` returns `0` results, both unchanged
+since p150. The rendered page is the only working count channel and it costs one fetch per query.**
+
+### 🆕 🔴 The `≥20`★ head of the topic, NAMED — and `0` of `5` are on this shelf
+
+🔴 **p171 published *"at `≥20`★ the permissive active population is `6` repositories and `4` were
+already on this shelf."* The query lists its members. They are:**
+
+| repo | licence *(body read)* | HEAD | region | shape | on the `12`-row shelf? |
+|---|---|---|---|---|---|
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 `MIT` | `da3f9df28a9c` | Global | 🔴 **education ABOUT AI** | 🔴 no |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 `MIT` | `075c1895d255` | 🟢 **APAC** | tutoring | 🔴 no |
+| [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | 🟢 `MIT` | `7c2f87a4641b` | Global | 🔴 circumvention | 🔴 no |
+| [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 `MIT` | `290af750671a` | 🟢 **EMEA** | tutoring | 🔴 no |
+| [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | 🟢 `MIT` | `a0a33cd6d4f8` | Global | tutoring | 🔴 no |
+
+🔴 **`0` of `5`, not `4` of `6`. The twelve shelf rows do not carry the `ai-education` topic, so a
+topic query cannot see them — which is the real reason several passes returned *"no new rows"*, and
+it is a different reason from the one p171 gave.**
+🆕 🔴 **`T238` — TOPIC MEMBERSHIP IS NOT COVERAGE AND THIS KB HAS BEEN READING IT AS BOTH. The
+shelf's `12` rows and the topic's `485` are nearly disjoint populations. Every figure this page has
+published about *"the vertical's size"* measured repositories that TAG THEMSELVES, and the rows
+this KB actually routes do not.**
+
+### 🆕 🔴 `T229`'s *"exam-shaped edge"* does not survive the exhaustive read
+
+🔴 **p171 read `5` repositories and concluded the vertical's live edge is assessment. The full
+`≥20`★ head is `3` tutors, `1` assessment tool and `1` tool for DEFEATING assessment. On the
+`12`-row shelf, assessment is `2` of `12` primary and `5` of `12` carried — so the shelf is
+tutor-LEANING, not tutor-only, and the edge is not exam-shaped.**
+🟢 **What IS true and is the more useful version: `4` of p171's `5` finds were assessment, and
+assessment tools are the ones this KB had never catalogued. The gap was in the CATALOGUE, not in
+the ecosystem.**
+
+### 🟢 Platform trees this week
+
+🔴 **`2` of the `7` platform rows moved: [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)
+(`88f8e09c0a38 → ad60834ff1f8`, twice in one day) and
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+(`1c95cefebc17 → 46a5d7d40082`, its first movement this KB has recorded).**
+🆕 🔴 **`Sakai`'s `licenses/` manifest measured end to end for the first time: `86` paths, `69`
+distinct blobs, and `8` paths that are proprietary click-through agreements rather than open-source
+grants. `25` paths carry `Apache-1.1` and this KB's shared classifier calls every one of them
+`BSD`.** See [`repos/foundations.md`](foundations.md).
 ## 2026-10-13 — p171
 
 🆕 🔴 **The `ai-education` topic measured end to end for the first time, and the headline is that a

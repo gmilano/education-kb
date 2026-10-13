@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🆕 🟢 **`ACTION JP` DISCHARGED AT TWO DENOMINATORS, and the answer flips between them. `T229` said
+these `12` rows are *"almost all tutoring"*. Read from each repository's own `README` at p172:
+tutoring is `6` of `12` on PRIMARY shape — a lean, not a monopoly — and `5` of `12` carry
+ASSESSMENT capability. The falsifier is SILENT at `2/12` primary (`17%`) and FIRES at `5/12`
+carried (`42%`).**
+🆕 🔴 **Two rows are in the WRONG REGION, and both have been on this shelf for passes.
+[`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) is Chinese-language, supervised at
+中央民族大学 — **APAC**. [`Selleo/mentingo`](https://github.com/Selleo/mentingo) is Selleo, a Polish
+house, with Polish prose still in its `README` — **EMEA**. Both were recorded `Global`.**
+🆕 🔴 **So p171's *"first APAC-originated education code this KB has named"* is REFUTED by a row
+that was already on the shelf when it wrote that.**
+🟢 **Actions are registered in [`intel/open-gaps.md`](../intel/open-gaps.md) ONLY, per `T218`.**
+
+### 🆕 🟢 The `12`-row shelf, with the SHAPE axis and the regions corrected
+
+🟢 **`HEAD`s are p172's own `git ls-remote` sweep at `t0 = 2026-10-13T10:55:53Z`, `12` of `12`
+reachable. Licence cells carry forward from p171's body reads — no grant was re-read this pass and
+this column says so.**
+
+| repo | licence *(body read, p171)* | 🆕 **primary shape** | 🆕 **also carries** | 🆕 **region** | HEAD at p172 |
+|---|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | 🆕 authoring, **assessment** | Global | 🔴 **`7e3a34e24354`** *(MOVED)* |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | 🆕 **authoring** | — | Global | `076c1ad54a85` |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | 🆕 **assessment** | tutoring | 🆕 🔴 **APAC** *(was `Global`)* | `9a787eb45759` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | 🆕 **assessment** | — | Global | `e0e347f7f399` |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | 🆕 🔴 **PLATFORM** *(off-vocabulary)* | tutoring, rostering | 🆕 🔴 **EMEA** *(was `Global`)* | `242a9324fe48` |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | — | Global | `6cf793bd868b` |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | 🆕 **authoring** | **assessment** | Global | `a6646794661b` |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | 🆕 **assessment** | Global | `f0142f28e8ed` |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | 🆕 **authoring** | — | Global | `9c260890214d` |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | — | Global | `7d9e9052bc5a` |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | 🆕 analytics | Global | `5c2f92416c04` |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | tutoring | — | Global | `ea29bcf196d2` |
+
+🟢 **Routable without a licence conversation — `5` of `12`:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` need one:** `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1` paraphrased
+`Apache-2.0`, `1` with no grant at all.
+
+### 🆕 🟢 `ACTION JP` — the shape tally, at both denominators
+
+| shape | PRIMARY *(of 12)* | CARRIED *(of 12)* |
+|---|---|---|
+| 🟢 **tutoring** | **`6`** *(`50%`)* | `8` |
+| 🟡 **authoring** | `3` | `4` |
+| 🔴 **assessment** | `2` *(`17%`)* | 🔴 **`5`** *(`42%`)* |
+| 🟡 **PLATFORM** *(not in the registered vocabulary)* | `1` | `1` |
+| 🔵 **analytics** | `0` | `2` |
+| 🔵 **rostering** | `0` | `1` |
+
+🆕 🔵 **`T234` — the falsifier's verdict was decided by a word the action never defined.** `ACTION
+JP` said *"refuted if assessment is `≥25%` of the existing `12` shelf rows"* and did not say whether
+a row's shape is what it is FOR or what it CAN DO. At PRIMARY the falsifier is silent and `T229`
+survives; at CARRIED it fires and `T229` is overstated. Both are reported because neither is the
+reading the action asked for. **Register rule this adds: a falsifier phrased on a CLASSIFICATION
+must name the classification rule, not only the threshold.** This is `T197` — state the
+denominator — applied to the PREDICATE instead of the population.
+🆕 🔴 **`T235` — and `0` of the `12` rows is `rostering` or `analytics`-primary. The shelf's real
+hole is not assessment: assessment is `5` rows deep once you read capability. It is the
+ADMINISTRATIVE layer — enrolment, rostering, learning analytics — where this KB has `7` platforms
+and not one agent.**
+🆕 🟡 **`T236` — the registered vocabulary is short by one. `mentingo` is an LMS with an AI mentor
+inside it; it is not tutoring, assessment, rostering, authoring or analytics, and forcing it into
+one of those would have lost what it is. `PLATFORM` is added here and marked off-vocabulary rather
+than smuggled in.**
+[`evidence/shelf-shape-axis.2026-10-13-p172.tsv`](../evidence/shelf-shape-axis.2026-10-13-p172.tsv)
+
+### 🆕 🔴 The region reads, and why they are not cosmetic
+
+🟢 **Evidence is in-tree and quotable, per `P800`:**
+
+| repo | recorded | 🆕 read | evidence |
+|---|---|---|---|
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `Global` | 🔴 **APAC** | `README` is Chinese throughout *(「精听 · 跟读 · 盲听 · 复述 · 复习」)*; credits 中央民族大学 外国语学院 and links `muc.edu.cn` |
+| 🔴 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `Global` | 🔴 **EMEA** | Polish prose left in the `README` *(«Selleo czy tylko zgodność procesów?»)*; Selleo is a Polish software house; the product targets corporate L&D and compliance training |
+
+🔵 **Why it matters: this KB's `Global` default is doing the work of *"we did not look"*.** Two of
+twelve rows were mis-placed, and the correction moves this shelf from `0` placed rows to `2` — one
+APAC, one EMEA. 🔴 **An `intel/market.md` region filter run over the old column returned the APAC
+and EMEA buckets EMPTY while two rows sat in them.**
+🆕 🔴 **And `mentingo` refutes a second p171 statement. p171 described
+[`timothywarner-org/ai901-cert-buddy-claude`](https://github.com/timothywarner-org/ai901-cert-buddy-claude)
+as *"the corporate-L&D shape this shelf does not cover"*. `mentingo`'s own `README` opens
+*"open-source AI-mentor LMS for enterprise L&D, built for corporate L&D, employee onboarding and
+compliance training"*. The shelf covered it, on a row p171 re-verified in the same pass.**
+
+### 🟢 Churn — `1` of `12` over `1 h 07 min 58 s`, and `T221` holds
+
+🟢 **Measured against p171's recorded full-`12` baseline at `09:47:55Z`.
+[`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) moved `f69bd425f299 → 7e3a34e24354`.
+The other `11` are static.**
+🔵 **`T221` — churn is CONCENTRATED, not time-dependent — survives a tenth interval: the changed
+set is again a SUBSET of `{ai-shifu, echo-loop}`. Across every interval this KB has measured, from
+`57 min` to `6 h 37 min`, no third repository has ever woken up.**
+[`evidence/churn-full12.2026-10-13-p172.tsv`](../evidence/churn-full12.2026-10-13-p172.tsv)
 ## Pass 171 — 2026-10-13
 
 🆕 🟢 **`ACTION JJ` DISCHARGED — the `≥6` h full-`12` churn reading that p168, p169 and p170 each

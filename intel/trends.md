@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🆕 🔴 **The trend this pass can prove rather than cite: `0` of `13` open-source education agents
+that generate content can MARK it as generated, `50` days before Article `50(2)` requires it.
+Measured over `18 360` files, `0` marking artefacts, `0` marking dependencies (`ACTION JQ`).**
+
+### 🆕 🔴 1. The marking cliff — `50` days, `0%` readiness
+
+🟢 **Article `50(2)` of `Regulation (EU) 2024/1689` requires machine-readable marking of synthetic
+content from **`2 December 2026`**. The Digital Omnibus (`2026/1744`, in force `27 July 2026`)
+deferred Annex III high-risk to `2027` and left Article `50` alone.**
+🔴 **`13` of this KB's `19` shelf rows put generated content in front of a learner. None of them can
+mark it.** 🟡 **`4` rows carry INPUT provenance — where source material came from — which is a
+different obligation, and the row with the MOST provenance machinery is the one generating synthetic
+VIDEO and marking nothing.**
+🔵 **The trend statement: provenance was built because engineers wanted to trust their inputs.
+Marking has to be built because a regulator wants learners to distrust their outputs. The ecosystem
+built the first and skipped the second, and the deadline is for the second.**
+
+### 🆕 🟢 2. Compulsory AI literacy is already late, and nobody is selling it
+
+🟢 **Article `4` AI literacy and the Article `5` ban on **emotion recognition in education
+institutions** have been binding since **`2 February 2025`**. Both predate every deadline this KB
+has been tracking.**
+🔴 **Decks open on Annex III — `2 December 2027` — which is the FURTHEST date. The two obligations
+already in force get no mention.** 🟢 **Staff training is a live, overdue, billable obligation in
+every EU institution, and it needs no model and no platform.**
+
+### 🆕 🟢 3. Governance is the product now, not personalisation
+
+🟢 **Convergent across `1EdTech`, HolonIQ and the non-vendor coverage: buyers have moved from
+*"does it personalise?"* to *"can you show oversight, policy and evidence?"***
+- 🟢 **`1EdTech`: institutions are building governance structures and compliance processes around AI.**
+- 🟢 **HolonIQ: focus shifting to ethics, transparency and **proven instructional benefit** over broad personalisation promises.**
+- 🔴 **Procurement has dates attached. **Ohio** required every K-12 district to adopt a formal AI use policy by `1 July 2026`; **Oklahoma** and **Maryland** mandate human oversight and bar AI from high-stakes student decisions.**
+
+🔴 **And the measurement that makes this the dominant trend: UNESCO IESALC finds **`87%`** of `200`
+LATAM institutions using AI and **`26%`** with a formal AI strategy. A `61`-point gap between
+deployment and governance is the market.**
+
+### 🆕 🟢 4. Purpose-built platforms displacing generic chatbots
+
+🟢 **The stated reason, and it is an operational one: general chatbots left teachers doing the
+prompt engineering and the fact-checking. The shift is to tools that arrive knowing the curriculum,
+the rubric and the record.**
+🟢 **Visible on this KB's own shelf: `6` of `12` agent rows are tutoring-primary, and the ones
+gaining are the ones carrying a SCHEDULER or a KNOWLEDGE MODEL — `OpenTutor` (FSRS),
+`anki-mcp-server` (spaced repetition), `SenmuuuuW/universal-diagnostic-tutor-skill` (decides whether
+to explain, ask, drill **or stop**). 🔵 **Knowing when NOT to generate is becoming a feature.**
+
+### 🆕 🔴 5. Assessment is where the new code is, and the catalogues missed it
+
+🟢 **`4` of the `5` repositories that entered this KB last pass are assessment tools — entrance
+exams, bar exams, vendor certification — and one exists to DEFEAT proctoring.**
+🔴 **But the full read corrects the strength of the claim: the `≥20`★ permissive head of the
+`ai-education` topic is `3` tutors, `1` assessment tool and `1` circumvention tool. Assessment is
+where the CATALOGUE was thin, not where the ecosystem suddenly moved (`T229`, corrected).**
+🔴 **The circumvention shape is a genuine new category and it is adversarial: `MIT`-licensed,
+`80`★, Canvas-LMS + `MCP`, advertising *"get 4.0 GPA without learning"*. It automates precisely
+what Annex III point `3` names as high-risk monitoring. 🟢 **Any assessment engagement now needs an
+integrity threat model, because the attack tooling is permissively licensed and trivially
+deployable.**
+
+### 🆕 🟢 6. Skills-based credentials, driven by employers
+
+🟢 **`1EdTech` names employer demand pushing the shift to skills-based credentials; HolonIQ reports
+growing interest in competency frameworks and career-navigation tools.**
+🟡 **This KB's exposure is partial and honest about it: `OB3DefinitionWidget` (`MIT`) covers Open
+Badges `3.0` AUTHORING, and `OpenOLAT`'s badge module is `2.0`-only with no W3C Verifiable
+Credentials. The `v3` issuance and verification path is still unrouted.**
+
+### 🆕 🔴 7. Regional divergence is now structural, not a lag
+
+🟢 **Three regulatory models are operating simultaneously and they are not converging:**
+
+| model | where | what it means for a build |
+|---|---|---|
+| 🔴 **ex-ante, risk-tiered** | EMEA (`2024/1689` + `2026/1744`), **South Korea** (`AI Basic Act`, Jan 2026, education a named high-impact domain), **Vietnam** (in force `1 Mar 2026`, education gets a `6`-month grace) | conformity work before deployment; marking by `2 Dec 2026` in EMEA |
+| 🟡 **operational labelling, already live** | **China** — algorithm filings, **synthetic-content labelling**, security review for public models | the EMEA marking obligation, in production today |
+| 🟡 **state-by-state / policy-first** | **US** (`134` bills, `31` states, `>30` guidance documents), **Colombia** (`CONPES 4144`, policy before statute), **Japan** (voluntary) | per-jurisdiction configuration, not one compliance build |
+
+🔵 **The practical consequence: marking tooling written for EMEA ships to China with a different
+label and no new engineering, and ships to the US as an optional feature nobody requires yet. Build
+it once, for the strictest, and gate it per region.**
+
+### 🆕 🟡 8. The market-size number is not knowable, and saying so is the trend
+
+🔴 **Research and Markets: **`~$10.6B` (2026) → `$42.48B` (2030)**. K-12 Academics:
+**`~$6B` (2024) → `~$32B` (2030)**. Grand View for APAC alone: **`$18.21B` by 2033 at `28.1%`
+CAGR**. These do not reconcile and they are measuring different scopes.**
+🟢 **Report the range with both sources named. A client who checks finds both, and a KB that
+published one looks like it only read one.**
+🔴 **`T240` — and the sourcing is uneven in a way that correlates with confidence: the APAC and
+LATAM claims on this page rest on UNESCO, OECD TALIS, Ipsos and Grand View; the NA and EMEA
+adoption claims rest substantially on consultancy and vendor blogs selling compliance services.
+**The two regions with the weakest sourcing carry the most confident numbers.****
 ## Pass 171 — 2026-10-13
 
 🆕 🔴 **The trend this pass is about THIS KB's instruments, and it is the most consistent signal on

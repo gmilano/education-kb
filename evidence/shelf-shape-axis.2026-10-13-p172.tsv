@@ -1,0 +1,25 @@
+# ACTION JP -- SHAPE classification of the 12 shelf rows and the 5 new finds, read from each
+# repository's own README at p172, not from this KB's prior descriptions.
+# TWO denominators are reported because the action did not say which it meant (T197):
+#   shape_primary   = the one thing the repository is FOR
+#   shapes_carried  = every shape its own README claims a capability in
+# Vocabulary as registered: tutoring | assessment | rostering | authoring | analytics
+#   + PLATFORM, which the registered vocabulary does not contain and 1 of 12 rows needs.
+set	repo	shape_primary	shapes_carried	region_recorded	region_read	evidence
+shelf	ai-shifu/ai-shifu	tutoring	tutoring,authoring,assessment	Global	Global	README: "interactive probing, assessments"; "Rapid course assembly"
+shelf	penecho/penecho	authoring	authoring	Global	Global	README: "AI that shows, not just tells" -- sketch to diagram+widget on a canvas
+shelf	echo-loop/Echo-Loop	assessment	assessment,tutoring	Global	APAC	README: 英语听说训练; 精听/跟读/盲听/复述/复习 drill cycle; muc.edu.cn, 中央民族大学 外国语学院
+shelf	ankimcp/anki-mcp-server	assessment	assessment	Global	Global	README: MCP surface over Anki -- spaced-repetition retrieval practice
+shelf	Selleo/mentingo	PLATFORM	PLATFORM,tutoring,rostering	Global	EMEA	README: "open-source AI-mentor LMS for enterprise L&D"; Polish prose in README; Selleo = PL
+shelf	HKUDS/DeepTutor	tutoring	tutoring	Global	Global	README: tutor
+shelf	CaviraOSS/PageLM	authoring	authoring,assessment	Global	Global	README: "transforms study materials into interactive learning experiences"; quizzes, flashcards
+shelf	zijinz456/OpenTutor	tutoring	tutoring,assessment	Global	Global	FSRS scheduling over generated explanations
+shelf	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	authoring	authoring	Global	Global	generates video tutorials
+shelf	HugeCatLab/ChatTutor	tutoring	tutoring	Global	Global	conversational tutor
+shelf	plastic-labs/tutor-gpt	tutoring	tutoring,analytics	Global	Global	conversational tutor with learner modelling
+shelf	JushBJJ/Mr.-Ranedeer-AI-Tutor	tutoring	tutoring	Global	Global	prompt framework, packaged pedagogy
+new	sgaofen/vibe-schooling	assessment	assessment	Global	Global	Canvas-LMS + MCP exam automation -- circumvention, NOT routable
+new	NickScherbakov/codementor-ai-platform	tutoring	tutoring,analytics	Global	Global	adaptive programming tutor, learning analytics
+new	niansia/taiwan-exam	assessment	assessment,authoring	APAC	APAC	GSAT mock-exam generation with worked solutions
+new	timothywarner-org/ai901-cert-buddy-claude	assessment	assessment,tutoring	Global	Global	Azure AI-901 cert study buddy
+new	jeliael/fakao-ai-exam-engine	assessment	assessment	APAC	APAC	Chinese bar exam, 8 subjects, statute cross-checking

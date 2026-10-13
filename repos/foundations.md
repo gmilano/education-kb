@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🆕 🔴 **`ACTION JO` settled `gap 117` and found something larger beside it. `8` of the `86` paths in
+`Sakai`'s `licenses/` manifest are NOT OPEN-SOURCE GRANTS AT ALL — they are Sun Microsystems
+click-through agreements and one single-seat proprietary licence. p171 swept this same population
+and published `0` hostile.**
+🆕 🟢 **On the question the action actually asked — does the manifest MISLABEL components? — the
+answer is no: `3` mismatches, the same `3` p171 found, verified this pass against authoritative
+upstream metadata. The first falsifier limb FIRES; the manifest is three stale files on the licence
+question.**
+🆕 🔴 **And `25` of the `86` paths carry the **Apache Software License 1.1**, which this KB's shared
+hardened classifier reports as `BSD` — including the file named `apache1.1.license.txt` (`T232`).**
+
+### 🆕 🟡 The `7` platform rows — HEADs at p172
+
+🟢 **`git ls-remote` at `t0 = 2026-10-13T10:5xZ`, `7` of `7` reachable. Root verdicts carry forward
+from p168–p171 body reads; no root grant was re-read this pass.**
+
+| repo | HEAD at p172 | root verdict | moved since p171 | what it is |
+|---|---|---|---|---|
+| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 **`ad60834ff1f8`** | 🟢 `ECL-2.0` | 🔴 **YES** *(from `88f8e09c0a38`)* | institutional LMS, Java |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `f20534726a59` | 🔴 `GPL-3.0` @ `COPYING.txt` | 🟢 no | the world's most deployed LMS, PHP |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `5d47c94a8ecc` | 🟢 **`MIT`** | 🟢 no | **offline-first** learning platform — the low-connectivity row |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `3368a6b14b96` | 🔴 `AGPL-3.0` | 🟢 no | MOOC-scale courseware, Python |
+| 🟡 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `866b8e6d594d` | 🔴 `GPL-3.0` | 🟢 no | LMS with strong assessment/exam tooling, PHP; EMEA-rooted |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`46a5d7d40082`** | 🟡 `LGPL-3.0` | 🔴 **YES** *(from `1c95cefebc17`)* | education **ERP** on Odoo — enrolment, fees, timetabling. 🔴 **Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`, p164)** |
+| 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `882f3b8c7498` | 🟢 **`MIT`** | 🟢 no | SCORM 1.2 / 2004 + AICC + xAPI runtime — the packaging layer |
+
+🟢 **Permissive and buildable without a licence conversation: `2` of `7` — `kolibri` (`MIT`) and
+`scorm-again` (`MIT`). `Sakai`'s `ECL-2.0` is an Apache-2.0 variant with a teaching-use patent
+carve-out and is the third practical route (`p170`).** 🔴 **`Moodle`, `ILIAS` (`GPL-3.0`) and
+`edx-platform` (`AGPL-3.0`) are reciprocal; `AGPL` reaches network use, which is the form most
+client deployments take.**
+
+### 🆕 🔴 `ACTION JO` — `8` paths in `Sakai`'s manifest are proprietary agreements
+
+🔴 **Control stated honestly: the measurement was taken at `HEAD 88f8e09c0a38`, and `Sakai` has
+since moved to `ad60834ff1f8`. The manifest is `licenses/`, which Sakai has not touched in years,
+but this reading is pinned to a sha that is no longer HEAD and says so.**
+
+| class *(read on the TITLE BLOCK, per `P237`)* | paths | what it withholds |
+|---|---|---|
+| 🔴 **Sun Binary Code License Agreement** | `activation`, `jta`, `jdbc2_0-stdext` | 🔴 **redistribution** *(one archival copy)*, modification, decompilation; `jta` adds *"internal use only … for which the corresponding fee has been paid"* |
+| 🔴 **Sun Software License Agreement + Entitlement** | `servlet` | 🔴 redistribution |
+| 🔴 **Sun Specification click-through** | `jsf-api`, `jsf-impl`, `standard` | 🟡 a specification grant, not an implementation grant |
+| 🔴 **proprietary single-seat** | `java2html` | 🔴 **one copy, one person**, no decompile |
+
+🔴 **Why p171 read `0`: `ACTION JK` tested hostility with `commercial_use_ok()`, a NONCOMMERCIAL
+**phrase** test. None of these eight uses the word *"noncommercial"*. They withhold redistribution
+instead, and a phrase test for the wrong word is silent on the right finding (`T231`).**
+🆕 🔴 **The manifest also contradicts ITSELF about one component: `servlet.license.txt` carries
+Sun's proprietary Entitlement while `jsp-api.license.txt` — the sibling API, same upstream, same
+directory — carries `Apache-2.0`. The servlet API as Tomcat ships it is `Apache-2.0`.**
+🟡 **What this does and does not mean for an engagement: these are 2005-era manifest files for
+components `Sakai` may no longer ship. The finding is about the MANIFEST a client's reviewer will
+read, not a proven claim that proprietary jars are in today's build. State it that way — and then
+check the build, which this pass did not.**
+
+### 🆕 🟢 The three mismatches, verified upstream rather than remembered
+
+| file | body | upstream | verified against |
+|---|---|---|---|
+| 🔴 `aopalliance.license.txt` | `LGPL-2.1` | 🟢 **Public Domain** | mojohaus third-party report; Apache CXF licence listing |
+| 🔴 `dnsjava-1.2.3.license.txt` | `LGPL-2.1` | 🟢 **BSD** | Maven Central POM |
+| 🟡 `junit-3.8.1.license.txt` | `IPL-1.0` | 🟡 **`CPL-1.0`** | `repo1.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom` declares *"Common Public License Version 1.0"* |
+
+🟢 **The JUnit row is a mismatch by IDENTIFIER and barely by EFFECT — `CPL-1.0` is the IBM Public
+License re-stewarded, near-identical text. Report it as an identifier error, not a licence risk.**
+🆕 🟢 **`T230` — the MECHANISM of both `LGPL` mismatches is generic-blob reuse. Their blob is
+byte-identical to the manifest's own generic `LGPL2.1.license.txt`, so neither file carries a
+component-specific copyright line. `8` of `86` paths are copies of a family file; `2` of the `8`
+are wrong and the other `6` are right by luck, not by evidence.**
+
+### 🆕 🔴 `T232` — the shared classifier cannot see `Apache-1.1`, and it is `25` of `86` paths here
+
+| family as the classifier reports it | paths | corrected |
+|---|---|---|
+| 🔴 **`BSD` `34`** | 34 | 🔴 **`9` BSD + `25` `Apache-1.1`** |
+| 🟢 `Apache-2.0` | 24 | 24 |
+| 🟡 `UNCLASSIFIED` | 16 | 🔴 **`8` of them are proprietary, `1` is not a grant** |
+| `LGPL-2.1` | 5 | 5 |
+| `MIT` | 3 | 🟡 **`2` — `jing` is `BSD-3-Clause`** |
+
+🔴 **A client scanner reporting *"34 BSD"* over this tree is reporting `25` `Apache-1.1` files as
+BSD. `Apache-1.1` is BSD-SHAPED — four clauses on the same skeleton — but carries its own
+attribution clause (*"This product includes software developed by the Apache Software
+Foundation"*), which is how p172 detects it.**
+🆕 🔵 **`T224` re-fired, on p172's own instrument. p172's FIRST hostility test searched for
+withholding language in bodies and returned `34` raw hits, `26` of them ordinary `Apache-2.0` and
+`LGPL` text matched on phrases like *"shall not modify"*. The finding survived only because the
+test was moved to the title block — which is `P237`, a rule written in this KB since pass 77 and
+broken again here on the first attempt. A rule that has to be remembered is not a control.**
+[`evidence/sakai-manifest-component-vs-upstream.2026-10-13-p172.tsv`](../evidence/sakai-manifest-component-vs-upstream.2026-10-13-p172.tsv)
+· [`evidence/sakai-manifest-nonopen.2026-10-13-p172.tsv`](../evidence/sakai-manifest-nonopen.2026-10-13-p172.tsv)
+· [`evidence/sakai-manifest-generic-blob-reuse.2026-10-13-p172.tsv`](../evidence/sakai-manifest-generic-blob-reuse.2026-10-13-p172.tsv)
+· [`compose/code/p172-manifest-attribution/`](../compose/code/p172-manifest-attribution/)
 ## Pass 171 — 2026-10-13
 
 🆕 🔴 **`ACTION JK` classified the inner grant bodies this page has been COUNTING, and the count

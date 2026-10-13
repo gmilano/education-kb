@@ -1,0 +1,11 @@
+# ACTION JS -- p171's SEVEN recorded query strings, re-run at 2026-10-13T10:4x-10:5xZ via the
+# rendered-page channel (WebFetch on github.com/search). p171's t0 was 09:47:55Z.
+# Interval: ~1 h. Falsifier: any count moving >10% in under 24 h.
+query	p171_count	p172_count	delta_pct	verdict
+topic:ai-education	485	485	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16	357	357	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16 license:mit	135	135	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16 license:apache-2.0	14	14	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16 license:bsd-3-clause	0	0	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16 license:isc	0	0	0.0	REPRODUCES EXACTLY
+topic:ai-education pushed:>=2026-04-16 license:mit stars:>=20	5	5	0.0	REPRODUCES EXACTLY

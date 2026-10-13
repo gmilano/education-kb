@@ -1,0 +1,24 @@
+# ACTION JO -- gap 117 settled. Population stated (T197): the 86 paths of licenses/ at
+# sakaiproject/sakai HEAD 88f8e09c0a38, 69 distinct blobs, 2 of them binary PDFs not read.
+# body_family: read by the SHARED hardened classifier (compose/code/lib/license_family.sh).
+# upstream: the licence the named component actually ships, verified where a source is cited.
+# verdict: MISMATCH | MATCH | NOT-A-GRANT | NOT-OPEN-SOURCE
+file	body_family_read	component_upstream	verdict	upstream_source
+aopalliance.license.txt	LGPL-2.1 (generic blob d8d3eda70e29)	Public Domain	MISMATCH	mojohaus license-maven-plugin third-party report; Apache CXF licence listing
+dnsjava-1.2.3.license.txt	LGPL-2.1 (generic blob d8d3eda70e29)	BSD (3-Clause per POM; 2-Clause per one report)	MISMATCH	Maven Central POM for dnsjava; mvnrepository 3.6.0
+junit-3.8.1.license.txt	IPL-1.0 (IBM Public License 1.0, title block read)	CPL-1.0 (Common Public License 1.0)	MISMATCH-BY-IDENTIFIER	repo1.maven.org junit/junit/3.8.1 POM declares "Common Public License Version 1.0"
+jing.license.txt	BSD-3-Clause (Thai Open Source Software Center, no-endorsement clause)	BSD-3-Clause	MATCH	body read; p172's first classifier pass answered MIT and was wrong
+isorelax.20030108.license.txt	MIT	MIT	MATCH	body read
+hibernate-2.1.license.txt	LGPL-2.1	LGPL-2.1	MATCH	body read
+jboss-j2ee.license.txt	LGPL-2.1 (same blob as hibernate-2.1)	LGPL-2.1	MATCH	body read
+mx4j.license.txt	classifier says BSD; body title is "The MX4J License, Version 1.0"	MX4J License 1.0	MATCH	body read; classifier mislabels, manifest is correct
+odmg-3.0.license.txt	custom (E. Wray Johnson, redistribution permitted with advertising clause)	that custom licence	MATCH	body read
+concurrent.license.txt	NO GRANT -- 130 B pointing at gee.cs.oswego.edu	Public Domain (Doug Lea)	NOT-A-GRANT	body read: "Doug Lea's concurrent utilities. See the Notes at <url>"
+activation.license.txt	Sun Microsystems Binary Code License Agreement	n/a -- proprietary	NOT-OPEN-SOURCE	title block read; single archival copy only, no modify/decompile
+jta.license.txt	Sun Microsystems Binary Code License Agreement	n/a -- proprietary	NOT-OPEN-SOURCE	title block read; "internal use only", fee-bearing
+jdbc2_0-stdext.license.txt	Sun Microsystems Binary Code License Agreement	n/a -- proprietary	NOT-OPEN-SOURCE	title block read
+servlet.license.txt	Sun SOFTWARE LICENSE AGREEMENT and ENTITLEMENT	Apache-2.0 as shipped by Tomcat	NOT-OPEN-SOURCE	title block read; sibling jsp-api.license.txt in the SAME manifest carries Apache-2.0
+jsf-api.license.txt	Sun Specification click-through (JSR-127)	n/a -- specification licence	NOT-OPEN-SOURCE	title block read
+jsf-impl.license.txt	Sun Specification click-through (same blob 69659274e9c5)	n/a -- specification licence	NOT-OPEN-SOURCE	title block read
+standard.license.txt	Sun Specification click-through (JSTL 1.1)	n/a -- specification licence	NOT-OPEN-SOURCE	title block read
+java2html.license.txt	proprietary: "personal, non-exclusive, non-transferable license to use one copy"	n/a -- proprietary	NOT-OPEN-SOURCE	title block read; no decompile

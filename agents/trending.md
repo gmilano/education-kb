@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p172
+
+🆕 🔴 **p171's `≥20`★ permissive population is `5` repositories, it NAMES them, and `0` of the `5`
+are on this shelf. p171 published *"`6` repositories and `4` were already on this shelf"*. The
+query answers the question directly and the answer is `0`.**
+🆕 🟢 **`3` of those `5` had never been named by this KB at all. All `3` are `MIT` with the grant
+body read and the `HEAD` verified — and `2` of the `3` are TUTORS.**
+🆕 🔴 **Which cuts against last pass's week-finding. `T229` read `4` of `5` new finds as assessment
+and concluded *"the vertical's live edge is EXAM-SHAPED"*. Reading the SAME query exhaustively
+instead of its top five, the edge is `3` tutors, `1` assessment tool and `1` circumvention tool.
+The exam shape was a property of p171's sample, not of the population.**
+
+| repo | ★ band | licence *(body read)* | HEAD | region | shape | note |
+|---|---|---|---|---|---|---|
+| 🆕 🟢 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | `≥20` | 🟢 **`MIT`** *(`1 102` B)* | `075c1895d255` | 🟢 **APAC** | tutoring | 🟢 **Diagnostic tutor that decides whether to explain, ask, drill or STOP — «它先判断你真正卡在哪里». Markdown-only, no runtime. The pedagogy-as-skill shape, and the only row on this page that models when to stop teaching** |
+| 🆕 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | `≥20` | 🟢 **`MIT`** *(`1 064` B)* | `290af750671a` *(branch `master`)* | 🟢 **EMEA** | tutoring | 🟢 **Interactive AI tutor built as an agent skill, by TovTech (`tovtech.org`), a non-profit. Second EMEA-placed row this KB has** |
+| 🆕 🔴 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `≥20` | 🟢 **`MIT`** *(`1 091` B)* | `da3f9df28a9c` | Global | 🔴 **NOT EDTECH** | 🔴 **Education ABOUT AI, not AI for education — *"builds one agent step by step from a single local LLM call"*. Recorded as a confirmed instance of `T228`'s `18%` class, NOT as a candidate** |
+
+🟢 **Why `pguso/agents-from-scratch` is written down rather than dropped: `T228` claimed the
+`ai-education` topic is ~`46%` not-edtech, measured over a `100`-repo sample. The topic's `≥20`★
+`MIT` head is `5` repositories and `1` of them is in that class — `20%` at the top of the
+distribution against `46%` across it. The contamination is real and it is THINNER where the stars
+are.**
+
+### 🆕 🟢 `ACTION JS` — all seven of p171's counts reproduce EXACTLY, `0.0%` movement
+
+🔴 **`T227` was registered because TWO of p170's actions cited counts nobody could reproduce and
+neither recorded its query string. p171 fixed the recording. p172 tested the fix.**
+
+| query *(verbatim, as p171 recorded it)* | p171 | p172 | Δ |
+|---|---|---|---|
+| `topic:ai-education` | `485` | 🟢 **`485`** | 🟢 `0.0%` |
+| `topic:ai-education pushed:>=2026-04-16` | `357` | 🟢 **`357`** | 🟢 `0.0%` |
+| `… license:mit` | `135` | 🟢 **`135`** | 🟢 `0.0%` |
+| `… license:apache-2.0` | `14` | 🟢 **`14`** | 🟢 `0.0%` |
+| `… license:bsd-3-clause` | `0` | 🟢 **`0`** | 🟢 `0.0%` |
+| `… license:isc` | `0` | 🟢 **`0`** | 🟢 `0.0%` |
+| `… license:mit stars:>=20` | `5` | 🟢 **`5`** | 🟢 `0.0%` |
+
+🟢 **Falsifier SILENT: nothing moved by `>10%`, and nothing moved at all, over `~1 h`. The topic
+index is NOT too volatile for a count to be a finding — `T227`'s worry was about RECORDING, and
+recording was the whole defect.**
+🆕 🔵 **`T237` — and `0.0%` across seven queries one hour apart is itself worth stating: it means
+p170's *"`288`"* and p171's *"`485`"* cannot be reconciled by drift. The counts are stable to the
+unit over an hour, so two passes reading `288` and `485` on the same day were reading two different
+questions, exactly as `T227` suspected and could not prove. It is now proven.**
+[`evidence/topic-count-reproduction.2026-10-13-p172.tsv`](../evidence/topic-count-reproduction.2026-10-13-p172.tsv)
+· [`evidence/star20-population-identity.2026-10-13-p172.tsv`](../evidence/star20-population-identity.2026-10-13-p172.tsv)
+
+### 🆕 🔴 Two shelf rows moved REGION this week, and neither is new
+
+🔴 **[`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) → **APAC** (中央民族大学,
+`muc.edu.cn`) and [`Selleo/mentingo`](https://github.com/Selleo/mentingo) → **EMEA** (Selleo,
+Poland; Polish prose still in the `README`). Both were carried as `Global` for every pass that has
+listed them.**
+🔴 **So p171's *"`niansia/taiwan-exam` — first APAC-originated education code this KB has named"* is
+REFUTED, by a row p171 re-verified in the same pass it wrote that sentence. The claim was about the
+shelf's own contents and the shelf already contradicted it.**
+🔵 **A `Global` region cell in this KB means *"not placed"* more often than it means *"global"*.
+Treat the column as unmeasured unless a row cites its evidence.**
+
+### 🟢 Churn this week
+
+🟢 **`1` of `12` over `1 h 07 min 58 s`: `ai-shifu` again (`f69bd425f299 → 7e3a34e24354`).
+`T221` holds for the tenth consecutive interval — the changed set has never left
+`{ai-shifu, echo-loop}`.**
 ## 2026-10-13 — p171
 
 🆕 🔴 **Five permissive, active, education-vertical repositories entered this shelf's view for the

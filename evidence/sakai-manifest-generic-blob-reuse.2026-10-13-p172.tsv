@@ -1,0 +1,9 @@
+# ACTION JO, the MECHANISM behind gap 117: a component file whose blob is byte-identical to a
+# GENERIC family file carries no component-specific copyright line, so it is evidence of a
+# FAMILY and never of that component's grant. 8 of 86 paths are in this class.
+generic_file	blob	component_files_pointing_at_it	n	of_which_mismatch
+LGPL2.1.license.txt	d8d3eda70e29	aopalliance.license.txt, dnsjava-1.2.3.license.txt	2	2
+apache1.1.license.txt	705c81dd9e54	oro.license.txt, poi.license.txt, velocity.license.txt	3	0
+apache2.0.license.txt	2d9052938940	catalina-5.5.9.license.txt, cglib-full-2.0.1.license.txt, myfaces.license.txt	3	0
+MIT.license.txt	79d3f7c12cf5	NONE	0	0
+creative-commons-2.5.license.txt	7f6a8af14ad9	NONE	0	0

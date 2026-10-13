@@ -1,0 +1,14 @@
+layer	repo	verdict	files	mark_hits	prov_hits	manifests	manifest_dep_hits
+agent	ai-shifu/ai-shifu	gen	3245	0	1	0	0
+agent	penecho/penecho	gen	1093	0	0	1	0
+agent	echo-loop/Echo-Loop	gen	1710	0	0	0	0
+agent	ankimcp/anki-mcp-server	gen-ind	271	0	0	1	0
+agent	Selleo/mentingo	gen-ind	4753	0	0	1	0
+agent	HKUDS/DeepTutor	gen	3763	0	3	2	0
+agent	CaviraOSS/PageLM	gen	195	0	0	1	0
+agent	zijinz456/OpenTutor	gen	890	0	1	1	0
+agent	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	gen	905	0	7	1	0
+agent	HugeCatLab/ChatTutor	gen	351	0	0	1	0
+agent	plastic-labs/tutor-gpt	gen	158	0	0	1	0
+agent	JushBJJ/Mr.-Ranedeer-AI-Tutor	gen-ind	12	0	0	0	0
+platform	jcputney/scorm-again	pack	1014	0	0	1	0

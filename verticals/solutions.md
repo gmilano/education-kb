@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🆕 🔴 **The `Sakai` row changes, and it is the only row whose STATUS this pass moves. p171 routed it
+with *"inner audit now classified, `0` hostile"*. p172 read the manifest end to end: `8` of its
+`86` paths are proprietary click-through agreements — Sun Binary Code Licenses, Sun Specification
+licences and one single-seat licence. The `0` was a phrase test looking for the wrong word
+(`T231`).**
+🆕 🟢 **Two rows get their REGION placed for the first time: `mentingo` is **EMEA** (Selleo, Poland)
+and this file's `Kolibri` low-bandwidth claim now has an APAC-placed sibling on the agent shelf.**
+🆕 🟢 **One row is ADDED — the assessment/exam-generation route, which `T229` showed this KB had
+never catalogued despite permissive candidates existing.**
+🟢 **The routing table below RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block
+is canonical"* a row not re-stated is lost however true it remains below.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p172
+
+| need | route | licence *(body read)* | status at p172 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED, HEAD `5d47c94a8ecc` unchanged. The LATAM and APAC low-bandwidth row** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🆕 🔴 **CARRIED WITH A THIRD FLAG. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); and 🔴 **`8` of the `86` paths in `licenses/` are NOT open-source grants** (`ACTION JO`). HEAD moved TWICE today → `ad60834ff1f8`** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B)* | 🆕 🟢 **CARRIED, REGION PLACED → **EMEA** (Selleo, Poland; Polish prose still in the `README`). `SCORM` import AND export, `119` `SCORM` paths. Ships `licenses.config.yaml`, the gate to LIFT** |
+| 🟢 **Rostering, permissive** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. The only permissive rostering route this KB has verified** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **CARRIED. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED, HEAD `882f3b8c7498` unchanged. The only row where grant-named paths and grant bodies agree exactly** |
+| 🆕 🟡 **Assessment / exam generation, permissive** | 🆕 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🆕 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🆕 🔴 **NEW ROW, routed as CANDIDATE not PRODUCTION. `taiwan-exam` is the stronger tree (`593` files, `129` commits in `30` d, `89` tests) but depends on **`PyMuPDF`, which is `AGPL-3.0`-or-Artifex-commercial** — so the `MIT` root does not reach the whole closure (`ACTION JR`). Swap `PyMuPDF` for `pypdf` (already a dependency) or buy the commercial limb BEFORE routing** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, ELEVENTH pass with no `MIT`/`Apache` education ERP. `openeducat` HEAD moved → `46a5d7d40082`, its first movement this KB has recorded. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED, HEAD `f20534726a59` unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling, which matters now that the assessment row exists** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟢 **CARRIED. No root grant file, confirmed twice. The bundled CKEditor grants remain unread** |
+| 🔴 **SIS, PERMISSIVE** | 🔴 **none exists** | — | 🔴 **ELEVENTH pass. Re-tested this pass against the same `485`-repository topic sweep, now with its query strings recorded and reproduced (`ACTION JS`). `Fedena` stays settled-and-abandoned (`T212`) despite secondary sources still listing it as `Apache-2.0`** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🔴 **CARRIED as REFUTED. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔴 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔴 **DELIBERATELY NOT ROUTED, third pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package** |
+
+🟢 **Permissive routes available: `6` of `16` needs — institutional LMS, offline LMS, AI-native LMS,
+rostering, credentials, SCORM.** 🟡 **`1` permissive-with-a-caveat: assessment generation.**
+🔴 **`5` copyleft-only.** 🔴 **`1` need with NO option at all: a permissive SIS.**
+
+### 🆕 🔴 What `ACTION JO` changes for a `Sakai` engagement
+
+🟡 **Say this in the engagement, and say it in this order:**
+
+| | |
+|---|---|
+| 🟢 **`Sakai`'s OWN grant** | 🟢 **`ECL-2.0`, clean — an `Apache-2.0` variant whose patent grant is narrowed to the licensor's own contributions. Buildable** |
+| 🔴 **what a reviewer will find in `licenses/`** | 🔴 **`8` paths that are proprietary agreements: `activation`, `jta`, `jdbc2_0-stdext` (Sun Binary Code License — one archival copy, no modification, and `jta` says *"internal use only … for which the corresponding fee has been paid"*), `servlet` (Sun Entitlement), `jsf-api`, `jsf-impl`, `standard` (Sun Specification click-through), `java2html` (single seat)** |
+| 🟡 **what that does NOT prove** | 🟡 **These are 2005-era manifest files for components `Sakai` may no longer ship. The finding is about the MANIFEST a reviewer reads, not a demonstrated proprietary jar in today's build. p172 did not check the build, and says so** |
+| 🔴 **the self-contradiction to expect a question about** | 🔴 **`servlet.license.txt` carries Sun's proprietary Entitlement while `jsp-api.license.txt` — sibling API, same upstream, same directory — carries `Apache-2.0`. The servlet API as Tomcat ships it IS `Apache-2.0`** |
+| 🔴 **the scanner-output correction** | 🔴 **A tool reporting *"34 BSD"* over this tree is reporting `25` **`Apache-1.1`** files as BSD (`T232`). `Apache-1.1` carries an attribution clause BSD does not** |
+| 🟢 **the reassuring part, which is still true** | 🟢 **`0` of the manifest's bodies withhold COMMERCIAL use. The problem is redistribution and modification on eight paths, not commercial use anywhere** |
+
+### 🆕 🟡 The assessment row, and why it is a candidate rather than a route
+
+🔴 **This KB routed tutoring, authoring, rostering, credentials and packaging, and never routed
+ASSESSMENT — while `4` of p171's `5` new finds were assessment tools. The hole was in the catalogue.**
+🟡 **But the strongest candidate does not route cleanly, and the reason is one line in a
+`requirements.txt`:**
+
+| | |
+|---|---|
+| 🟢 **root grant** | 🟢 **`MIT`, `1 063` B, body read** |
+| 🔴 **the closure** | 🔴 **`PyMuPDF` — PyPI metadata reads *"Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License"*. An `AGPL` dependency under an `MIT` root** |
+| 🟢 **the fix, and it is cheap** | 🟢 **`pypdf` (`BSD-3-Clause`) is ALREADY in the same `requirements.txt`. The `AGPL` limb is `PyMuPDF`'s rendering path, not its parsing path** |
+| 🟢 **what the project itself discloses** | 🟢 **Its `references/attribution-and-forks.md` states that *"third-party examination papers, literary passages, photographs and fonts remain separately governed and are not licensed by this project's MIT declaration."* It carves out its DATA layer honestly and in writing** |
+| 🔴 **what it does NOT disclose** | 🔴 **the `AGPL` dependency. A project can be scrupulous about one layer and silent about another, and `ACTION JR` found exactly that** |
+
+🔵 **Contrast with `penecho` (`T207`), where the root grant itself was the trap. Here the root grant
+is clean and honest, the DATA carve-out is volunteered, and the risk is one transitive dependency.
+Those need different conversations and this KB should stop calling both *"licence risk"*.**
 ## Pass 171 — 2026-10-13
 
 🆕 🔴 **`ACTION JM`'s falsifier FIRED, and `T216` is not one omission — it is SIX. Besides

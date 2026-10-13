@@ -4,6 +4,232 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 172 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p171 registered — `2` DISCHARGED with silent falsifiers, `2`
+DISCHARGED WITH THEIR FALSIFIERS FIRED, `1` DISCHARGED AT TWO DENOMINATORS WITH THE VERDICT
+DEPENDING ON WHICH.**
+🔴 **Standing caveat unchanged and it applies in full: p172 judges actions p171 wrote, and p172 did
+the work. These are self-assessments.**
+🆕 🔴 **The headline is that `ACTION JO` asked the wrong question. It suspected `Sakai`'s manifest
+of MISLABELLING components; it does not, beyond the three files already known. What it does carry is
+`8` paths that are not open-source grants at all — and p171's own sweep of the same population
+published `0` hostile.**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🔴 **`ACTION JO`** | 🔴 *refuted if the mismatch rate is `0` outside the `3` p171 found; ALSO refuted in the other direction if `≥20` of `72` mismatch* | 🔴 **`3` of `86` paths mismatch — exactly p171's `3`, now verified upstream. `0` new** | 🔴 **DISCHARGED, LIMB 1 FIRED, limb 2 silent. `gap 117` is three stale files on the licence question — and `8` proprietary paths on a question nobody asked** |
+| 🟡 **`ACTION JP`** | 🔴 *refuted if assessment is `≥25%` of the existing `12` shelf rows* | 🟡 **`2` of `12` (`17%`) assessment-PRIMARY; `5` of `12` (`42%`) assessment-CARRYING** | 🟡 **DISCHARGED AT TWO DENOMINATORS. Falsifier SILENT on primary, FIRED on carried. The action never said which it meant (`T234`)** |
+| 🔴 **`ACTION JQ`** | 🔴 *refuted if `≥1` row already emits a conformant `2 Dec 2026` marking; ALSO refuted if the instrument cannot run offline* | 🔴 **`0` of `13` mark anything across `18 360` files. And the instrument needs `git` + `curl` per repo** | 🔴 **DISCHARGED, LIMB 1 SILENT, LIMB 2 FIRED. The exposure VERDICT table is offline; the MEASUREMENT is a network instrument** |
+| 🔴 **`ACTION JR`** | 🔴 *refuted if either carries a non-permissive dependency closure; OR if either has `0` commits in the `30` days before p172* | 🔴 **BOTH limbs fired, one on each repository: `taiwan-exam` depends on `AGPL-3.0` `PyMuPDF`; `codementor-ai-platform` has `0` commits in `30` d (last commit `2026-07-20`)** | 🔴 **DISCHARGED, FALSIFIER FIRED ON BOTH LIMBS. Neither is a routable row as it stands** |
+| 🟢 **`ACTION JS`** | 🔴 *refuted if any of the `7` recorded counts moves by `>10%` in under `24` h* | 🟢 **`7` of `7` reproduce EXACTLY. `0.0%` movement over `~1 h`** | 🟢 **DISCHARGED, falsifier SILENT. `T227`'s rule WORKS, and the volatility it feared does not exist** |
+
+### 🆕 🔴 `ACTION JO` — the manifest is not a liar, it is a museum
+
+🟢 **Population stated, per `T197`: the `86` paths of `licenses/` at `sakaiproject/sakai`
+`HEAD 88f8e09c0a38`, `69` distinct blobs, `2` binary PDFs not read. Sparse checkout of `licenses/*`
+at `--depth 1`, so no full Sakai clone was needed.**
+🔴 **Control stated: `Sakai` moved TWICE today and is now at `ad60834ff1f8`. This reading is pinned
+to a sha that is no longer HEAD and says so.**
+
+| finding | measure |
+|---|---|
+| 🟢 **licence-family mismatches** | 🟢 **`3`** — `aopalliance` (`LGPL-2.1` body, upstream **public domain**), `dnsjava-1.2.3` (`LGPL-2.1` body, upstream **BSD**), `junit-3.8.1` (`IPL-1.0` body, upstream **`CPL-1.0`**) |
+| 🔴 **paths that are NOT open-source grants** | 🔴 **`8`** *(`7` distinct blobs)* — Sun Binary Code License ×`3`, Sun Entitlement ×`1`, Sun Specification click-through ×`3`, proprietary single-seat ×`1` |
+| 🟡 **paths that are copies of a GENERIC family file** | 🟡 **`8`** — carrying no component-specific copyright line |
+| 🔴 **paths that are not a grant at all** | 🔴 **`1`** — `concurrent.license.txt`, `130` B, a URL |
+| 🔴 **paths the shared classifier mis-families** | 🔴 **`26`** — `25` `Apache-1.1` read as `BSD`, `1` `BSD-3-Clause` (`jing`) read as `MIT` |
+
+🟢 **The two `LGPL` mismatches were verified against authoritative upstream metadata rather than
+memory — mojohaus/Apache CXF for `aopalliance`, the Maven Central POM for `dnsjava` — and the JUnit
+row against `repo1.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom`, which declares *"Common
+Public License Version 1.0"* in its own `<licenses>` block.**
+🟢 **The JUnit mismatch is by IDENTIFIER, barely by EFFECT: `CPL-1.0` is the IBM Public License
+re-stewarded. Report it as an identifier error and do not inflate it.**
+
+🆕 🟢 **`T230` — the MECHANISM of `gap 117` is generic-blob reuse.** Both `LGPL` mismatches have a
+blob byte-identical to the manifest's own generic `LGPL2.1.license.txt`. A component file that is a
+copy of a family file is evidence of a FAMILY and never of that component's grant. `8` of `86`
+paths are in this class; `2` are wrong and `6` are right by coincidence.
+🆕 🔴 **`T231` — p171 read `0` hostile because it tested the wrong WORD.** `ACTION JK` used
+`commercial_use_ok()`, a NONCOMMERCIAL-phrase test. `jta.license.txt` grants *"internal use only …
+for which the corresponding fee has been paid"* and forbids modification and decompilation, and
+never says *"noncommercial"*. **A phrase test is silent on every proprietary licence that withholds
+redistribution instead of commerce.** The `0` was true about the question asked and false about the
+question meant.
+🆕 🔴 **`T232` — `compose/code/lib/license_family.sh` cannot see `Apache-1.1`.** It answers `BSD`
+for the Apache Software License 1.1, including for the file named `apache1.1.license.txt`. That is
+`25` of `86` paths here. `Apache-1.1` is BSD-SHAPED but carries its own attribution clause
+(*"This product includes software developed by the Apache Software Foundation"*), which is how p172
+detects it. 🔴 **This is a defect in a SHARED hardened control, so every instrument that sources it
+inherits the error.**
+🆕 🔵 **`T224` RE-FIRED, on p172's own instrument.** p172's first hostility test searched bodies for
+withholding language and returned `34` raw hits, `26` of them ordinary `Apache-2.0` and `LGPL` text
+caught on phrases like *"shall not modify"*. The finding survived only by moving to the title
+block — which is `P237`, written in this KB since pass 77. **Three consecutive passes have now
+broken the same rule on first attempt. A rule that has to be remembered is not a control.**
+[`evidence/sakai-manifest-component-vs-upstream.2026-10-13-p172.tsv`](../evidence/sakai-manifest-component-vs-upstream.2026-10-13-p172.tsv)
+· [`evidence/sakai-manifest-nonopen.2026-10-13-p172.tsv`](../evidence/sakai-manifest-nonopen.2026-10-13-p172.tsv)
+· [`compose/code/p172-manifest-attribution/`](../compose/code/p172-manifest-attribution/)
+
+### 🆕 🟡 `ACTION JP` — a falsifier decided by a word the action never defined
+
+| shape | PRIMARY *(of 12)* | CARRIED *(of 12)* |
+|---|---|---|
+| 🟢 tutoring | **`6`** *(`50%`)* | `8` |
+| 🟡 authoring | `3` | `4` |
+| 🔴 **assessment** | `2` *(`17%` — falsifier SILENT)* | 🔴 **`5`** *(`42%` — falsifier FIRES)* |
+| 🟡 PLATFORM *(off-vocabulary)* | `1` | `1` |
+| 🔵 analytics | `0` | `2` |
+| 🔵 rostering | `0` | `1` |
+
+🆕 🔵 **`T234` — a falsifier phrased on a CLASSIFICATION must name the classification RULE, not only
+the threshold.** `ACTION JP` said *"assessment `≥25%` of the `12` rows"* without saying whether a
+row's shape is what it is FOR or what it CAN DO. Both readings are reported because neither is the
+one the action asked for. This is `T197` — state the denominator — moved from the POPULATION to the
+PREDICATE.
+🟢 **Substantive verdict on `T229`: HALF RIGHT and overstated. The shelf IS tutor-leaning (`6` of
+`12` primary) but *"almost all tutoring"* is wrong, and assessment is carried by `5` of `12` once
+capability is read instead of assumed.**
+🆕 🔴 **`T235` — the shelf's real hole is not assessment.** `0` of `12` rows are rostering- or
+analytics-primary. The ADMINISTRATIVE layer — enrolment, rostering, learning analytics — has `7`
+platforms and not one agent.
+🆕 🟡 **`T236` — the registered shape vocabulary is short by one.** `mentingo` is an LMS with an AI
+mentor inside it and fits none of the five. `PLATFORM` is added and marked off-vocabulary rather
+than smuggled in.
+[`evidence/shelf-shape-axis.2026-10-13-p172.tsv`](../evidence/shelf-shape-axis.2026-10-13-p172.tsv)
+
+### 🆕 🔴 `ACTION JQ` — `0` of `13`, and the asset is half what this KB thought
+
+| magnitude | value |
+|---|---|
+| shelf rows judged | `19` *(`12` agents + `7` platforms)* |
+| 🔴 **exposed** *(`gen` / `gen-ind` / `pack`)* | 🔴 **`13`** — **every agent row**, plus `scorm-again` |
+| not exposed | `6` — **all `6` are the institutional platforms** |
+| files listed | `18 360` |
+| 🔴 **marking artefacts** | 🔴 **`0`** |
+| 🔴 **marking dependencies in `11` root manifests** | 🔴 **`0`** |
+| 🟡 provenance artefacts *(a different obligation)* | 🟡 **`12`, in `4` repos** |
+
+🆕 🔵 **`T233` — INPUT provenance is not OUTPUT marking, and the shelf has built the first while the
+deadline is for the second.** The sharpest case is the highest-exposure row:
+`AI-Powered-Video-Tutorial-Generator` emits synthetic AUDIOVISUAL content and carries the most
+provenance machinery on the shelf — a real `security/provenance.py`, a `test_provenance_gates.py`,
+per-asset `*-provenance.json` — and marks nothing it produces. 🟢 **Not negligence: it answered the
+question it was asked. Provenance was built so engineers could trust inputs; marking must be built
+so learners distrust outputs.**
+🔴 **LIMB 2 FIRED: `scan_marking.sh` needs `git ls-remote`, a blob-filtered clone per repo and
+`curl` to `raw.githubusercontent.com` per manifest. The `rows.tsv` verdict table is genuinely
+offline and reusable; the measuring half is not. This KB has been calling the whole thing an
+offline asset.**
+[`evidence/aiact-50-2-exposure-shelf19.2026-10-13-p172.tsv`](../evidence/aiact-50-2-exposure-shelf19.2026-10-13-p172.tsv)
+· [`compose/code/p172-aiact-shelf19/`](../compose/code/p172-aiact-shelf19/)
+
+### 🆕 🔴 `ACTION JR` — both limbs fired, one on each repository
+
+| | [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) |
+|---|---|---|
+| HEAD | `a0a33cd6d4f8` | `e2193181c95c` |
+| tracked files | `208` | 🟢 **`593`** |
+| total commits / authors | `343` / `7` | `171` / `2` |
+| last commit | 🔴 **`2026-07-20`** | 🟢 `2026-09-29` |
+| 🔴 **commits in the `30` d before p172** | 🔴 **`0`** | 🟢 **`129`** |
+| root grant | 🟢 `MIT`, body read | 🟢 `MIT`, body read |
+| dependency closure | 🟢 **PERMISSIVE** — `flask`/`langchain`/`chromadb` `MIT`, `tensorflow`/`transformers` `Apache-2.0`, `torch` `BSD-3` | 🔴 **`PyMuPDF` = *"Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License"*** |
+| verdict | 🔴 **CANDIDATE — dormant `85` days** | 🟡 **ROUTABLE once the `AGPL` limb is resolved** |
+
+🆕 🟢 **`T241` — a project can be scrupulous about one licence layer and silent about another, and
+this is the clean instance.** `taiwan-exam` SHIPS its own data-layer carve-out in writing —
+*"third-party examination papers, literary passages, photographs and fonts remain separately
+governed and are not licensed by this project's MIT declaration"* — and discloses nothing about its
+`AGPL` dependency. 🔵 **Contrast `penecho` (`T207`), where the ROOT grant was the trap. These need
+different conversations and this KB should stop calling both *"licence risk"*.**
+🟢 **And the repair is cheap and must be named with the finding: `pypdf` (`BSD-3-Clause`) is ALREADY
+in the same `requirements.txt`. `PyMuPDF`'s `AGPL` limb is its rendering path, not its parsing path.**
+🔴 **`T242` — *"active within `180` days"* is the wrong liveness bar, and `ACTION JR` was registered
+to test exactly that. `codementor-ai-platform` passes `180` days and is `85` days dormant. Every
+population figure this KB has built on `pushed:>=` + `180` d includes repositories nobody is
+working on.**
+[`evidence/jr-candidate-assessment.2026-10-13-p172.tsv`](../evidence/jr-candidate-assessment.2026-10-13-p172.tsv)
+
+### 🆕 🟢 `ACTION JS` — `7` of `7` reproduce exactly, and that settles `T227` the other way
+
+🟢 **All seven counts: `485`, `357`, `135`, `14`, `0`, `0`, `5` — identical at `~1 h`. `0.0%`.**
+🆕 🔵 **`T237` — so p170's *"`288`"* and p171's *"`485`"* cannot be reconciled by drift.** An index
+stable to the unit over an hour does not move `68%` in hours. Two passes reading `288` and `485` on
+the same day were reading two different questions, which is exactly what `T227` suspected and could
+not prove. **It is now proven, and `T227`'s remedy — record the query string — is the whole fix.**
+🆕 🔴 **`T238` — but the SECOND limb of p171's claim is refuted, and it is the more important one.**
+p171 published *"at `≥20`★ the permissive active population is `6` repositories and `4` were already
+on this shelf."* The query NAMES its five members and **`0` of the `5` are on the `12`-row shelf**.
+🔴 **TOPIC MEMBERSHIP IS NOT COVERAGE AND THIS KB HAS BEEN READING IT AS BOTH.** The shelf's rows do
+not carry the `ai-education` topic, so a topic query cannot see them. Every figure this KB has
+published about *"the vertical's size"* measured repositories that TAG THEMSELVES, and the rows it
+actually routes are a nearly disjoint population.
+🟢 **`3` of the `5` had never been named here: `SenmuuuuW/universal-diagnostic-tutor-skill` (`MIT`,
+APAC, tutoring), `TovTechOrg/Tov-learn` (`MIT`, EMEA, tutoring), `pguso/agents-from-scratch`
+(`MIT`, education ABOUT AI — a confirmed `T228` instance, not a candidate).**
+🔴 **And `2` of the `3` are TUTORS, which cuts against `T229`'s *"the vertical's live edge is
+exam-shaped"*. Read exhaustively instead of top-five, the edge is `3` tutors, `1` assessment tool
+and `1` circumvention tool.**
+[`evidence/topic-count-reproduction.2026-10-13-p172.tsv`](../evidence/topic-count-reproduction.2026-10-13-p172.tsv)
+· [`evidence/star20-population-identity.2026-10-13-p172.tsv`](../evidence/star20-population-identity.2026-10-13-p172.tsv)
+
+### 🆕 🔴 Region: two shelf rows were in the wrong bucket, and neither is new
+
+| repo | recorded | 🆕 read | evidence |
+|---|---|---|---|
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `Global` | 🔴 **APAC** | `README` is Chinese throughout; credits 中央民族大学 外国语学院 and links `muc.edu.cn` |
+| 🔴 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `Global` | 🔴 **EMEA** | Polish prose left in the `README`; Selleo is a Polish software house; targets corporate L&D |
+
+🔴 **So p171's *"`taiwan-exam` — first APAC-originated education code this KB has named"* is
+REFUTED by a row p171 re-verified in the same pass it wrote that sentence.**
+🔴 **And p171's *"vendor-cert prep is a corporate-L&D shape this shelf does not cover"* is refuted
+by `mentingo`, whose `README` opens *"open-source AI-mentor LMS for enterprise L&D … corporate L&D,
+employee onboarding and compliance training"*.**
+🆕 🔵 **`T243` — `Global` in this KB's region column means *"not placed"* more often than it means
+*"global"*.** An `intel/market.md` region filter over the old column returned the APAC and EMEA
+buckets empty while two rows sat in them. **Treat `Global` as UNMEASURED unless the row cites its
+evidence.** After this pass: APAC `4` rows, EMEA `2`, Global `10`, North America `0`, LATAM `0`.
+
+### 🆕 🟢 `gap 114` stays closed, and `2026/1744` now has its full chronology
+
+🟢 **Parliament `16 June 2026` → Council adoption `29 June 2026` → signature `8 July 2026` →
+**Official Journal `24 July 2026`** → **in force `27 July 2026`**.**
+🆕 🔴 **`T239` — and that chronology explains a contradiction a client WILL hit. Sources written
+between `16` and `29 June 2026` say *"Parliament approved; the Council still needs to formally
+adopt."* They are still online, still undated on the page, and still being cited. STALE, not wrong.
+p172 met one this pass while researching EMEA adoption.**
+🔴 **`gap 110` STAYS OPEN: the Official Journal text of Article `113` is still unread.
+`eur-lex.europa.eu` is `403` at the CONNECT layer — the egress proxy DENIES it by policy, which is
+a stronger statement than *"unreachable"* and means no retry and no alternate transport will help
+(`T203`).**
+
+### 🔴 Gaps OPENED or RE-STATED by p172
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🆕 🔴 **`gap 118`** | 🔴 **Middle East and Africa returned NOTHING on adoption, regulation or players. Every *"EMEA"* result this pass was European** | 🔴 **A region named for three continents is being answered about one. This is now the largest unexamined bucket in `intel/market.md`, and an empty bucket looks exactly like a covered one. `ACTION JT`** |
+| 🆕 🔴 **`gap 119`** | 🔴 **Canada and Mexico returned nothing. Every *"North America"* result was about the United States** | 🔴 **The NA section's `36%`/`$3.68B` and its `134`-bill regulatory map are US facts presented under a continental heading** |
+| 🆕 🔴 **`gap 120`** | 🔴 **`T232`: the SHARED hardened classifier `lib/license_family.sh` cannot distinguish `Apache-1.1` from `BSD`, and `25` of `Sakai`'s `86` manifest paths are `Apache-1.1`** | 🔴 **Every instrument sourcing the shared lib inherits this. It is a defect in a CONTROL, not in a one-off script. `ACTION JU`** |
+| 🆕 🔴 **`gap 121`** | 🔴 **`T242`: `codementor-ai-platform` satisfies *"active within `180` days"* while being `85` days dormant** | 🔴 **Every population count this KB has built on `pushed:>=` + `180` d — including the `357`, the `149` and the `135` — counts repositories nobody is working on. `ACTION JV`** |
+| 🆕 🔴 **`gap 122`** | 🔴 **`T238`: the `12`-row shelf and the `ai-education` topic are nearly DISJOINT populations, and `0` of the topic's `≥20`★ permissive head is on the shelf** | 🔴 **Every *"size of the vertical"* figure this KB has published measured self-tagging repositories. The denominator was never the vertical. `ACTION JW`** |
+| 🆕 🟡 **`gap 123`** | 🟡 **`T235`: `0` of `12` agent rows are rostering- or analytics-primary** | 🟡 **The administrative layer has `7` platforms and no agent. If a client asks for enrolment or learning-analytics automation this KB has nothing to route** |
+| 🟡 **`gap 110`** *(carried)* | 🟡 **Article `113` verbatim is unread; `eur-lex` is `403` by proxy POLICY** | 🟡 **Unchanged. Every AI Act date in this KB is `search-summary` tier, however many sources agree** |
+| 🔴 **LATAM commercial map** *(carried, 4th pass)* | 🔴 **No LATAM edtech vendor or funder named in any source** | 🔴 **Four passes, four times multilateral actors only. Do not present a competitive landscape this KB does not have** |
+
+## 🔜 Registered for p173 — pre-registered with falsifiers
+
+🟢 **Five actions. Each names the OLDEST sufficient anchor on disk where it needs one, per `T220`,
+and each names its CLASSIFICATION RULE where it depends on one, per `T234`.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION JT`** — settle `gap 118`: search Middle East and Africa education-AI adoption, regulation and players as their OWN region, not as a tail of *"EMEA"*. Record the query strings, per `T227` | 🔴 *Refuted if the searches return substantive, placeable findings for `≥2` countries, which would mean p172's silence was a QUERY artefact and not a coverage gap — the same defect `ACTION JN` found in the agent query. ALSO refuted in the other direction if `0` of `~6` query formulations returns anything, which would make this a channel limitation to record once and stop re-registering* |
+| 🟢 **`ACTION JU`** — fix `gap 120`: add `Apache-1.1` detection to `compose/code/lib/license_family.sh` on the TITLE BLOCK plus the clause-`3` attribution signature, ship it with a regression fixture, and re-run every instrument that sources the lib over `Sakai`'s `86` paths | 🔴 *Refuted if the corrected classifier changes `0` verdicts outside `Sakai` — which would make `T232` a property of one 2005-era manifest rather than a defect in a shared control. ALSO refuted if the fix breaks any existing test in `lib/test_license_family.sh`, in which case `Apache-1.1` and `BSD` are not separable on the title block and the correction must be a documented manual step instead* |
+| 🟢 **`ACTION JV`** — settle `gap 121`: for the `135` repositories of `topic:ai-education pushed:>=2026-04-16 license:mit`, measure the distribution of DAYS SINCE LAST COMMIT and report what fraction is dormant at `30`, `60` and `90` days | 🔴 *Refuted if `<10%` are dormant at `90` days, which would make `codementor-ai-platform` an outlier rather than evidence that the `180`-day bar is wrong. ALSO refuted if the measurement cannot be taken without `api.github.com` — `403` at the proxy — in which case the liveness bar is unfixable from this container and must be stated as a known limitation on every population figure* |
+| 🟢 **`ACTION JW`** — settle `gap 122`: measure the OVERLAP directly. For each of the `12` shelf rows, read its GitHub topics and report how many carry `ai-education`, `ai-tutor`, `edtech` or `education`; then state what population this KB's `485`/`357`/`135` figures actually describe | 🔴 *Refuted if `≥6` of the `12` carry at least one of those topics, which would mean the populations overlap substantially and `T238` is an artefact of one narrow topic rather than a statement about this KB's denominators* |
+| 🟢 **`ACTION JX`** — act on `T233`: take the ONE row that already has provenance machinery — `AkshitIreddy/AI-Powered-Video-Tutorial-Generator`, `9c260890214d`, with `security/provenance.py` and `test_provenance_gates.py` — read those two files, and report concretely what it would take to extend them from INPUT provenance to Article `50(2)` OUTPUT marking | 🔴 *Refuted if the provenance subsystem turns out to already emit an output-side mark, which would mean `ACTION JQ`'s `0` of `13` is wrong and the file-list scan missed it. ALSO refuted if the two files are fixtures or stubs rather than a working subsystem, in which case `T233`'s *"the hard part is built"* is false and the row has no advantage over the other twelve* |
 ## Pass 171 — 2026-10-13
 
 🟢 **Verdicts on the FIVE actions p170 registered — `3` DISCHARGED, `2` DISCHARGED WITH THEIR

@@ -1,0 +1,5 @@
+# ACTION JR -- the two candidates assessed past their root grants. Both falsifier limbs fired,
+# one on each repository.
+repo	head	files	total_commits	last_commit	commits_30d_pre_p172	authors	root_grant	dependency_closure	verdict
+NickScherbakov/codementor-ai-platform	a0a33cd6d4f8	208	343	2026-07-20T12:50:25+03:00	0	7	MIT (1071 B, body read)	PERMISSIVE: flask/langchain/chromadb MIT, tensorflow+transformers+accelerate Apache-2.0, torch BSD-3; express/mongoose/helmet MIT	CANDIDATE, NOT ROUTABLE -- dormant 85 days
+niansia/taiwan-exam	e2193181c95c	593	171	2026-09-29T16:46:37+08:00	129	2	MIT (1063 B, body read)	NOT PERMISSIVE: PyMuPDF is "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License" (PyPI metadata). beautifulsoup4 MIT, pypdf BSD-3, latex2mathml MIT	ROUTABLE ONLY WITH THE AGPL LIMB RESOLVED -- swap PyMuPDF or take the Artifex commercial licence

@@ -1,0 +1,23 @@
+# ACTION JQ (p172): Article 50(2) exposure of the CURRENT shelf -- the 12 agent rows of
+# agents/top.md and the 7 platform rows of repos/foundations.md. Verdict vocabulary is
+# pass 45's, unchanged: gen | gen-ind | gen-cond | pack | no
+# layer	repo	verdict	why
+agent	ai-shifu/ai-shifu	gen	AI-guided course delivery: the lesson text a learner reads is model output
+agent	penecho/penecho	gen	generates study material from uploaded sources
+agent	echo-loop/Echo-Loop	gen	generates learning loops/content for the learner
+agent	ankimcp/anki-mcp-server	gen-ind	MCP surface over Anki: cards are authored by the host agent through it
+agent	Selleo/mentingo	gen-ind	LMS with AI course assistance; generation runs through the host model
+agent	HKUDS/DeepTutor	gen	tutor: every explanation a learner reads is generated
+agent	CaviraOSS/PageLM	gen	turns documents into notes, quizzes and flashcards
+agent	zijinz456/OpenTutor	gen	tutor with FSRS scheduling over generated explanations
+agent	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	gen	generates VIDEO tutorials -- synthetic audiovisual output
+agent	HugeCatLab/ChatTutor	gen	conversational tutor
+agent	plastic-labs/tutor-gpt	gen	conversational tutor with learner modelling
+agent	JushBJJ/Mr.-Ranedeer-AI-Tutor	gen-ind	packaged pedagogy: a prompt framework whose output the host model generates
+platform	sakaiproject/sakai	no	LMS: moves, records and grades; does not itself generate
+platform	moodle/moodle	no	LMS: moves, records and grades; does not itself generate
+platform	learningequality/kolibri	no	offline content distribution
+platform	openedx/edx-platform	no	LMS/courseware delivery
+platform	ILIAS-eLearning/ILIAS	no	LMS
+platform	openeducat/openeducat_erp	no	education ERP: enrolment, fees, timetabling
+platform	jcputney/scorm-again	pack	the SCORM/xAPI runtime where generated content BECOMES the course a learner opens
