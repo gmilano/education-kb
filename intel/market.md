@@ -4,6 +4,164 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🆕 🟢 **The vertical's exact size is now a ONE-REQUEST fact, not a `17`-request method: `8 197`
+repositories** on `topic:education license:mit pushed:>=2026-04-16`, against p174's partition sum of
+`8 191`. 🔵 **p174's achievement is retired as a method and kept as a fallback (`T264`).**
+🆕 🔴 **And the correction that matters for every regional claim this file has ever made: the tag
+this KB sampled from for eleven passes places `0` rows in North America.** `topic:ai-education`'s
+top `50` is `6`-of-`7` APAC and holder-grade nowhere; `topic:education`'s top `50` places `5` in
+North America, `5` in APAC and `2` in EMEA, four of them by the institution named in the licence
+body. 🔵 **"North America is thin at the repository layer" was a statement about the query (`T266`).**
+🆕 🔴 **The twelve-pass market claim p174 overturned is RESTORED, one pass later.** The permissive
+student information system it found is a parent-and-student portal: `0` interop tokens at
+word-boundary precision, and a schema model called `SisConfigMirror` (`T265`).
+🆕 🟢 **The Article `50(2)` cost estimate on the shelf's best-equipped row DROPS, and the signing
+certificate stops being the blocker for half of it** — the metadata repair is one line, because the
+project already stores the status its gate throws away (`T269`).
+🆕 🔴 **`eur-lex.europa.eu` is NXDOMAIN here, not a `CONNECT` `403` — and so is every other
+legal-text host, and `en.wikipedia.org`.** 🔵 **Every regulatory date in this file is
+`search-summary` tier as a STANDING property of this container (`T267`), and p175 declares it once
+instead of rediscovering it.**
+
+## Opportunities by region
+
+### Global
+
+🟢 **State the size with the tag attached or do not state it.** **`8 197`** repositories tag
+themselves `education`, carry an `MIT` licence and were pushed inside `180` days — exact, one
+request. **`135`** tag themselves `ai-education` under the same filters — also exact, reproduced for
+a third pass. 🔴 **The ratio is `60.7×`, and the two populations describe different worlds: the
+narrow one is single-maintainer tutor skills, the wide one is institutional software.**
+🟢 **Market frame, directional and source-conflicted, which is how it should be quoted.** Published
+2026 global AI-in-education figures cluster between **`US$8.7B`** and **`US$10.4B`**, with
+ten-year projections between `US$100B` and `US$137B` at CAGRs of `34–41%`. 🔴 **The spread is a
+SCOPE artefact — some include corporate training, hardware and services — so a deck should name the
+publisher and the scope or give a range, never a single figure.**
+🟢 **The one compliance instrument that is live in two markets at once, with article numbers:**
+
+| market | duty | article | in force |
+|---|---|---|---|
+| 🟢 **EU** | transparency / machine-readable marking of synthetic content | **Art. `50`**; `50(2)` backstop for systems already on the market | 🟢 Art. `50` since **`2 Aug 2026`**; backstop 🔴 **`2 Dec 2026`** |
+| 🔴 **China** | EXPLICIT label on text, image, audio, video, virtual scenes — retained on download and export | **Art. `4`** | 🔴 **`1 Sep 2025`** |
+| 🔴 **China** | IMPLICIT label in file METADATA — content attribute, provider name or code, content reference number | **Art. `5`** | 🔴 **`1 Sep 2025`** |
+
+🔴 **The Chinese implicit duty is BROADER than the EU's: it applies to all AI-generated synthetic
+content regardless of whether anyone could be confused, where Art. `50` is aimed at deception.**
+🟢 **And the EU high-risk regime moved while Art. `50` did not** — the Digital Omnibus put Annex III
+(which carries education) at `2 Dec 2027` and Annex I at `2 Aug 2028`. 🔵 **So a client's
+transparency obligation is live NOW and their high-risk obligation has `26` months. Those are two
+different programmes and a deck that merges them will over-sell urgency on one and under-sell it on
+the other.**
+🔴 **Said rather than implied: not one of those dates was read in primary form.** `9` of `11` hosts
+are NXDOMAIN, `eur-lex` among them.
+
+### North America
+
+🟢 **This is the region p175 corrects most, and the correction is favourable.** The repository layer
+is not thin — it was invisible to the query. **`5` of the `12` placeable rows** in the wide tag's
+top `50` are North American, and two are holder-grade:
+[`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) (`MIT`, `1 129` B, *"University of
+Central Florida — Center for Distributed Learning"*) and
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, Learning Equality).
+🟡 **Plus [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) — a distributed LMS on
+Kubernetes, *"From NYU"*, `MIT`** — description-grade, because its copyright holder is an individual.
+🟢 **The opportunity: the administrative layer finally has a permissive client under it.**
+`canvasapi` is a Canvas LMS client, and Canvas is the dominant North American institutional LMS.
+🔵 **An engagement that previously had to choose between writing a Canvas integration from scratch
+and buying one now has a university-maintained `MIT` option to extend.**
+🟢 **Market frame:** North America is the largest regional market on every published split —
+`36–38%` of global spend, with regional 2025 estimates around `US$3.1B` growing at `24%` CAGR on
+the conservative scope and `41.7%` on the aggressive one. Teacher adoption in the US is reported
+around `60%`.
+🔴 **`gap 119`, fourth carry, and p175 makes it sharper rather than quieter: all `5` of those
+placements are UNITED STATES institutions under a heading that says *"North America"*.** 🔵 **No
+Canadian or Mexican institution has ever placed a row in this KB.** `ACTION KK` settles it next pass
+— either the heading gets the country split or it gets renamed.
+
+### EMEA
+
+🟢 **Two holder-grade institutional placements in one sweep, both university-OWNED teaching
+software released permissively, and this is the region's distinctive asset.**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) is the Technical University of Munich's
+own exercise and exam platform — programming, modelling and text exercises, autograding, exam mode —
+`MIT`, `818`★. [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) is Ghent University's
+source-code plagiarism detector, `MIT`, `350`★.
+🟢 **The opportunity, and it is the most concrete one in this file: `Dolos` fills a need this KB has
+never had a permissive row for.** Assessment integrity under AI has been answered here with design
+patterns — oral defence, process evidence, detection-scepticism — because no tool existed to name.
+🔵 **Now one does, and it comes from a university rather than a vendor, which is the provenance a
+European institutional buyer trusts most.**
+🟢 **Regulatory position, and it is an advantage rather than only a cost.** Art. `50` transparency
+is live since `2 Aug 2026`; Annex III high-risk — which covers admissions screening, automated
+grading, proctoring and student monitoring — moved to `2 Dec 2027`. 🔵 **Deployer duties were NOT
+postponed:** human oversight, monitoring, logging and informing affected people under Art. `26`,
+and a Fundamental Rights Impact Assessment under Art. `27` before a high-risk system goes into use.
+🟢 **So the sellable EMEA engagement is a compliance-shaped one: `26` months to build the Annex III
+file, and an Art. `50` marking obligation that is already due.** The marking recipe is Pattern `1`
+in [`compose/patterns.md`](../compose/patterns.md).
+🔴 **A tutoring chatbot that does not grade is probably NOT high-risk** — a distinction worth making
+early, because it decides whether an engagement carries an Annex III programme at all.
+
+### APAC
+
+🟢 **The most placeable region in both populations, and the only one that was ever visible through
+the narrow tag** — `6` of `7` there, `5` of `12` in the wide one. 🔵 **That asymmetry is itself the
+finding: APAC's education-AI output is tutor-and-exam shaped and tags itself accordingly.**
+🟢 **Holder-grade this pass: [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide)** —
+*"University of Canterbury Computer Science Education Research Group"*, `MIT` at `LICENCE`, an
+interactive high-school CS textbook from New Zealand.
+🟡 **Description-grade: [`showlab/Code2Video`](https://github.com/showlab/Code2Video)** (`MIT`,
+`2 123`★, ICML 2026) — educational video generation via CODE rather than pixels, which is a
+genuinely different architecture from the shelf's video-authoring route and worth a technical look.
+🟢 **Curriculum-anchored rows are the region's signature, and they are an asset for engagement
+work:** `taiwan-exam` (學測 / 大考), `fakao-ai-exam-engine` (法考, NPC statute database),
+`cn-primary-math-knowledge-graph` (中国小学数学), `sparks-ai-math-tutor` (**NCERT**, India),
+`genki-study-resources` (a named Japanese textbook), `Auto_courseGrabber` (正方教务系统, tested at
+universities across several provinces).
+🟢 **Policy, which is moving faster here than anywhere:** China made AI a compulsory subject from age
+six by September 2025, with Beijing mandating at least eight hours a year, and already enforces
+algorithm filings, synthetic-content labelling and security review for public models. South Korea's
+**AI Basic Act took effect `22 Jan 2026`** and classes education as *"high-impact"*, requiring human
+oversight and documentation. Japan's AI Promotion Act carries no penalties and works through
+guidance. 🔴 **India has no AI statute yet, though it signalled in July 2026 it may pursue one.**
+🔴 **A cautionary datum for anyone selling an AI-textbook programme: South Korea's mandatory AI
+textbooks were stripped of official status after adoption stayed under `30%` and teacher unions
+objected that the pace had outrun preparation.** 🔵 **Korea redirected to a `US$960M` plan for AI
+talent centres and vocational schools through 2030. The lesson sells better than the product did:
+teacher readiness is the binding constraint, not content.**
+
+### LATAM
+
+🔴 **Ninth consecutive pass with no LATAM-originated open-source education repository, and the claim
+is finally a MEASUREMENT rather than a search that came back quiet: `0` of `100` rows across two
+exactly-counted tags, with `P800` applied row by row.**
+🔵 **The nearest miss is instructive:
+[`kelvins/algorithms-and-data-structures`](https://github.com/kelvins/algorithms-and-data-structures)
+(`1 088`★, `MIT`) is maintained from Brazil and its artefact names no institution, curriculum or
+standard.** Placing it would be guessing from a person's name — the one inference `P800` forbids.
+🟢 **So the region's story in this KB is COMMERCIAL, and it is a strong one.** `BeConfident`
+(`US$15.8M`, Prosus Ventures), `Teachy` (`US$7M`, Goodwater + Reach) and `Luca`, with Brazil
+carrying close to half of the 2026 regional edtech cohort and the clear majority of deal activity.
+🟢 **Adoption is the region's real asset and it is above the OECD average, not below it:** teacher
+AI use at `56%` in Brazil, `55%` in Chile, `53%` in Colombia and `52%` in Costa Rica against an
+OECD average of `36%`, and nine in ten 15-year-olds in the region's PISA 2025 countries reporting
+chatbot use for schoolwork. 🔴 **Governance lags that adoption — UNESCO IESALC finds widespread
+higher-education adoption with institutional governance behind it.**
+🟢 **Regulation, with the status flagged because the sources are dated:** Brazil's **PL 2338/2023**
+is the most advanced bill and classes education as high-risk, bringing mandatory impact assessments
+and human oversight — though a 2024 analysis describes a legislative setback after amendments.
+Colombia has issued mostly non-binding ethical frameworks. Mexico's bill mirrors the EU risk model
+without an explicit ban on unacceptable-risk systems.
+🟢 **The engagement shape this implies, stated plainly so a LATAM pitch is not weaker than an EMEA
+one: start from a global permissive base — `Kolibri` for offline reach, `mentingo` or `Artemis` for
+the platform, `Dolos` for integrity — and pair with a local commercial partner.** 🔵 **The one thing
+a LATAM deck should not do is imply there is a regional repository to fork. There is not, and this
+KB has now measured that twice on exact denominators.**
+[`evidence/regional-sweep.2026-10-13-p175.tsv`](../evidence/regional-sweep.2026-10-13-p175.tsv)
+· [`evidence/channel-ledger.2026-10-13-p175.tsv`](../evidence/channel-ledger.2026-10-13-p175.tsv)
+
 ## Pass 174 — 2026-10-13
 
 🆕 🟢 **The vertical has an exact size for the first time: `8 191` repositories** —

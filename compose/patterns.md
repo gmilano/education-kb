@@ -4,6 +4,198 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🆕 🟢 **p174's headline recipe gets CHEAPER and p174's headline count gets CORRECTED, in the same
+pass and for the same reason: `ACTION KH` wrote the patch instead of specifying it.**
+🔴 **The correction first, because a client reads the number: *"four edits"* is wrong as published.**
+Edit `3` cannot be made in four files — the signer path has to come from
+`native_controls.py:1113`, a FIFTH file — unless it is given a default of `None`, which keeps the
+count at four and makes the marking step inert unless a caller opts in. 🔵 **That is `T258`'s own
+defect reproduced by the fix for it: a compliance step nothing sets.**
+🆕 🟢 **The improvement second, and it is larger than the correction: edit `4` needs no signer, no
+`c2patool` and no certificate.** The project already stores a real `c2paStatus` and its export
+quality gate throws it away.
+
+### 🆕 🟢 Pattern 1 — Article `50(2)` and China's Art. `5`: the ONE-LINE half, and the procurement half
+
+🔵 **Subject:** [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator)
+`MIT`, pinned at `9c260890214d` — **still `HEAD` at p175**, so this is a third controlled re-read of
+the same `905` files.
+🔵 **Why this row:** it is the most provenance-literate project on the shelf, and the thing it
+generates — synthetic video with a presenter voice — is in scope of **both** the EU's Art. `50(2)`
+marking backstop (`2 Dec 2026`) and China's Art. `4` explicit and Art. `5` implicit labelling duties
+(live since `1 Sep 2025`).
+
+#### 🟢 Step A — the metadata duty, in ONE line, for free
+
+🟢 **The finding that makes this cheap.** The project's own generated schema registry lists
+`c2paStatus` as a **REQUIRED** property of `AssetProvenance`. Three writers set it:
+`licensed_media_workflow.py:259`, `licensed_media_workflow.py:290` and `project_assets.py:246` all
+write `"absent"`, and `visual_candidates.py:276` and `:611` read it with `"absent"` as the default.
+🔴 **Then `_provenance_quality_gate` (`generation/workflow.py:2979`) reads TWELVE fields off each
+stored provenance record — `assetId`, `sha256`, `origin`, `rightsStatus`, `licenseId`, `creator`,
+`attribution`, `sourceUri`, `providerId`, `modelId`, `modelRevision`, `consentIds` — and DISCARDS
+the thirteenth, hardcoding `C2paRecord(C2paStatus.NOT_APPLICABLE)` at line `3018`.**
+
+| status the pipeline stores | status the gate is handed | what the gate does with `c2pa_required=True` |
+|---|---|---|
+| 🟢 `"absent"` | 🔴 **`NOT_APPLICABLE`** | 🔴 **passes — the finding is laundered away** |
+| 🟢 `"absent"` | 🟢 **`ABSENT`** *(after the fix)* | 🟢 **fires `['export.c2pa']`** |
+
+🟢 **The edit:**
+
+```python
+# generation/workflow.py:3018 — before
+                    c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE),
+# after
+                    c2pa=C2paRecord(C2paStatus(str(value.get("c2paStatus", "absent")))),
+```
+
+🔵 **`T269` — the defect is DATA LOSS, not a missing control.** `ABSENT` is the one status that makes
+the gate fire and `NOT_APPLICABLE` is the one that makes it pass; the code reads the first and writes
+the second. 🟢 **No certificate, no external tool, no fifth file. This is the cheapest compliance
+movement available anywhere on this shelf.**
+🔴 **And the diligence question it generalises into, for any pipeline a client brings:** *"which
+field does your gate read, and which one does your writer store?"* A gate fed a constant is a gate
+that cannot fail.
+
+#### 🟡 Step B — fail closed on synthetic origin, `2` edits, `13` insertions, WRITTEN
+
+🟢 **Applied this pass by exact-string replacement, so a silent miss is impossible, and the diff
+exists:**
+
+| # | file : line | edit |
+|---|---|---|
+| `1` | `security/provenance.py` : after `143` | refuse `C2paStatus.NOT_APPLICABLE` when `origin == GENERATED`, in `AssetProvenance.__post_init__`, immediately after the existing provider/model/revision clause |
+| `2` | `security/gates.py` : `260-262` + the import at `11` | build the accepted set per asset — `{VALID}` always, plus `NOT_APPLICABLE` only when `origin is not GENERATED`, which keeps the exemption for `USER` and `SCREEN_CAPTURE` where marking genuinely does not apply |
+
+🔴 **Cost, PREDICTED and labelled as such: `2` of the `46` security tests break** —
+`test_apache_two_generated_asset_allows_transformed_commercial_export` and
+`test_mit_starter_audio_allows_transformed_commercial_export`, both of which construct a `GENERATED`
+asset with full provider/model/revision and **no `c2pa=` kwarg**, so both are born
+`NOT_APPLICABLE`. 🟢 **A third `GENERATED` construction,
+`test_generated_assets_require_model_revision`, is already inside `assertRaises` and the
+pre-existing clause fires first, so it is unaffected.**
+🔴 **p175's post-patch run was REFUSED three times by this session's execution-permission layer
+after the pristine run was allowed, so that cost is a static reading rather than a measurement
+(`gap 132`). `ACTION KI` takes it.**
+🔵 **What the prediction means for an upstream conversation, if it holds: the project's own tests
+ENCODE the permissive default, so this is a behaviour change to negotiate, not a defect to report.**
+🟢 **`0` tests in the repository pass a `c2pa=` kwarg at all — which is the sentence to open that
+conversation with.**
+
+#### 🔴 Step C — the visible marking duty, and the honest cost
+
+🔴 **`c2patool` appears in `0` of the `905` files.** The encoder is external FFmpeg, invoked
+shell-free by `argv` through `SubprocessEditorExportRunner.run` with a caller-supplied `ffmpeg_path`
+(`editor_export.py:93-113`), so **the seam is real** — but a signer path has to reach it.
+🟢 **The insertion point is a line number, not a layer:** after `verify_editor_delivery`
+(`editor_export.py:885`) and **BEFORE** `store.cas.add_file` (`:907`). 🔴 **Sign after the
+content-addressed insert and the recorded hash is the hash of UNMARKED bytes.**
+🔴 **Two ways to write it, and both carry a cost a client should choose deliberately:**
+
+| option | files touched | the catch |
+|---|---|---|
+| 🟡 `c2patool_path: Path | None = None` on `render_editor_timeline` | 🟢 **`4`** | 🔴 **inert unless a caller opts in — `T258`'s defect, rebuilt** |
+| 🟢 thread it from `native_controls.py:1113` | 🔴 **`5`** | 🟢 **actually runs; p174's *"four edits"* figure is wrong** |
+| 🟢 **recommended** | `5` + a test | 🟢 **take the fifth file, and add the test the project does not have: assert the gate FIRES when the flag is on and the status is absent** |
+
+🔵 **Still not engineering: a signing certificate.** `C2paRecord` structurally requires a `signer`
+for `VALID` (`provenance.py:55-60`), and no certificate exists in the tree. 🟢 **That is now the ONLY
+procurement line item on this path, and it buys the VISIBLE marking duty alone — Step A already
+satisfies the metadata half.**
+
+#### 🟢 The build order, with what each step buys
+
+| step | effort | buys |
+|---|---|---|
+| 🟢 **A** — read the stored status | 🟢 **`1` line, `0` dependencies** | 🟢 **the gate starts working. China Art. `5` metadata posture becomes truthful** |
+| 🟡 **B** — fail closed on `GENERATED` | 🟡 **`13` insertions, `2` files, `2` tests to renegotiate** | 🟡 **synthetic output can no longer ship unmarked by default** |
+| 🔴 **C** — sign the artefact | 🔴 **`5` files + a certificate** | 🟢 **EU Art. `50(2)` and China Art. `4` visible marking** |
+
+🔵 **Run them in that order.** A, B and C are independent, and A is the one that makes the other two
+observable — until the gate reads a real status, every change to it is untestable.
+
+### 🆕 🟢 Pattern 2 — size any population exactly, in one request *(SUPERSEDES p174's partition)*
+
+🟢 **Use the authenticated MCP repository search.** `topic:education license:mit pushed:>=<t0-180d>`
+returns **`total_count: 8197`** — an exact integer, no rounding, one request, with the top `100` rows
+and their full topic lists in the same response.
+🔴 **Do NOT reach for p174's `17`-window `pushed:` partition first.** It works, it agreed to
+`-0.07%`, and it costs `17` paced requests around a `429` that arrived after `3` reads this pass.
+🟢 **Keep it as the fallback for when the authenticated channel is unavailable** — the windows must
+be disjoint, each must come back under `~1 000` to read as an exact integer, and each rounded parent
+should be split until its parts sum to it.
+🔴 **The new channel's limit, so nobody plans around a capability it lacks: it answers SEARCH and
+refuses per-repository FILE reads by session scope.** 🟢 **Wire all three:**
+
+| job | channel |
+|---|---|
+| 🟢 population counts, star-ordered rows, topics | 🟢 **MCP repository search** — `1` request, exact |
+| 🟢 licence BODY and byte count | 🟢 **`raw.githubusercontent.com/<owner>/<repo>/HEAD/<path>`** via `curl` |
+| 🟢 `HEAD` sha without a clone | 🟢 **`git ls-remote <url> HEAD`** |
+| 🟢 tree size, file counts, greps | 🟢 **`git clone`**, then measure locally |
+
+### 🆕 🟢 Pattern 3 — verify an interop claim by ARTEFACT, never by token
+
+🔴 **The failure this pattern exists to prevent, measured this pass:** `grep -ri "ed-fi"` returned
+`55` files on a candidate SIS and the matches were `red-fill`; `edfi` returned `176` and the matches
+were `normalizedField`; `lti` returned `325` and the matches were `LevelTile` and `ModalTitle`.
+**`0` survived at word-boundary precision.**
+🟢 **The recipe, which is two commands and a table:**
+
+```bash
+# 1. the honest count — word boundaries, and report BOTH numbers
+grep -riE '\bed[-_]?fi\b|\boneroster\b|\blti\b|\bscorm\b|\bxapi\b|\bcmi5\b' --exclude-dir=.git .
+# 2. when a token survives, show what it matched before believing it
+grep -rioh '........<token>........' --exclude-dir=.git . | sort | uniq -c | sort -rn | head
+```
+
+🟢 **Then look for the ARTEFACT, not the name:**
+
+| claim | the artefact that must exist |
+|---|---|
+| rostering | an `/ims/oneroster/v1p1/` route, or an `EdFi` client class with named resources |
+| content packaging | a `imsmanifest.xml` reader, or a `cmi5`/`SCORM` runtime |
+| tracking | an xAPI or Caliper STATEMENT emitter with an LRS endpoint |
+| multi-tenancy | a tenant column, a schema-per-customer migration, or a row-level policy |
+| federated auth | an OIDC discovery URL, a SAML metadata endpoint, or a JWKS fetch |
+
+🔵 **Report both counts in any deliverable.** *"`55` mentions, `0` implementations"* is a finding a
+client can act on; *"`55` mentions"* alone is a claim that will not survive their own engineer.
+🟢 **And when the answer is negative, say what the repository DOES have** — the candidate SIS has
+`48` real school-shaped Prisma models and hand-rolled cookie sessions. 🔵 **A row that is only
+negative tells a client nothing about whether to fork it.**
+
+### 🆕 🟢 Pattern 4 — EMEA assessment-integrity stack, now buildable permissively
+
+🔴 **Until this pass this KB answered assessment integrity with design patterns only** — oral
+defence, process evidence, detection-scepticism — because no permissive tool existed to name.
+🟢 **Now one does, and the stack is three `MIT` repositories from three institutions:**
+
+| layer | repo | licence *(body read)* | institution |
+|---|---|---|---|
+| 🟢 **integrity — code similarity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | `MIT`, `1 083` B | 🟢 **Ghent University** (`ugent.be`) |
+| 🟢 **exercises, autograding, exam mode** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `MIT`, `1 090` B | 🟢 **TU Munich** |
+| 🟢 **LMS of record / corporate L&D** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `MIT`, `1 062` B | — *(ships a licence GATE, `T208`)* |
+
+🟢 **How to wire it:** `Artemis` owns the exercise and exam lifecycle and already autogrades;
+`Dolos` runs over the submission corpus `Artemis` collects and reports similarity clusters rather
+than verdicts; `mentingo` carries `SCORM` import AND export, so it is the row that moves content in
+and out of an existing institutional estate.
+🔵 **Why the provenance matters commercially: two of the three are owned by universities, which is
+the provenance a European institutional buyer trusts most** — and `Artemis` is a teaching system TUM
+runs itself, not a research artefact.
+🔴 **What is NOT verified, and must be said in the same breath: licence body, holder and `HEAD` only.**
+No interop, tenancy, auth model, dependency closure or build for any of the three new rows
+(`gap 134`). 🟢 **`ACTION KM` verifies the first of them by artefact, per Pattern `3` — which is the
+discipline that should have been applied to p174's SIS row.**
+🔵 **And pair it with the regulatory frame from [`intel/market.md`](../intel/market.md): automated
+grading and proctoring are Annex III high-risk with `26` months to `2 December 2027`, while Art. `26`
+and `27` deployer duties are live now.** An integrity stack is the part of that programme a client
+can start this quarter.
+
 ## Pass 174 — 2026-10-13
 
 🆕 🟢 **The headline recipe of this pass is a PATCH, not a platform: Article `50(2)` marking is

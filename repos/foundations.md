@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🆕 🔴 **One row LEAVES this file and it is the one p174 admitted with the most confidence.**
+`ACTION KE` read [`eagles-edu/sis`](https://github.com/eagles-edu/sis) past its licence, as
+registered, by grepping the tree rather than the README — and found that **every interop and auth
+signal it appeared to carry is a substring artefact.** 🔴 **Word-boundary count: `0` for OneRoster,
+`0` for Ed-Fi, `0` for LTI, `0` for SCORM, `0` for xAPI, `0` for `tenant`, `0` for `tenancy`, and
+`0` for OAuth, OIDC, SAML, JWT, LDAP and SSO.**
+🆕 🟢 **Six repositories ENTER, and four of them are placed by the institution named in their own
+licence body** — the strongest evidence class `P800` admits, and the first time this file has
+obtained holder-grade institutional placement in three regions in one pass.
+
+### 🆕 🟢 Entering — institutional, permissive, licence body READ this pass
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | ★ | region *(`P800`)* | what it is |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** — `1 129` B, *"© 2017 University of Central Florida — Center for Distributed Learning"* | `513588f3077f` | `682` | 🟢 **North America** — HOLDER-grade | a Python client for **Canvas LMS**: courses, users, gradebooks. The first rostering-ADJACENT permissive row this KB has ever been able to name |
+| 🆕 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** — `1 090` B, *"© 2026 TUM Applied Education Technologies"* | `09266581a02c` | `818` | 🟢 **EMEA** — HOLDER-grade | an institutional **interactive-learning platform with automated feedback**: programming, modelling and text exercises, autograding, an exam mode. A university's own teaching system, `MIT` |
+| 🆕 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** — `1 083` B, *"© 2019 Team Dolos <dolos@ugent.be>"* | `44925b867ce7` | `350` | 🟢 **EMEA** — HOLDER-grade | **source-code plagiarism detection**. Directly serves the assessment-integrity layer this KB routes around every pass |
+| 🆕 🟢 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **`MIT`** — 🔴 at **`LICENCE`**, `1 128` B, *"© 2016-2022 University of Canterbury Computer Science Education Research Group"* | `7e323930cf6f` | `381` | 🟢 **APAC** — HOLDER-grade, New Zealand | an interactive high-school **computer-science textbook**, maintained by a university education-research group |
+| 🆕 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **`MIT`** — `1 082` B, 🟡 **holder is an INDIVIDUAL** | `894ed020997f` | `381` | 🟡 **North America** — DESCRIPTION-grade, *"From NYU"* | a **distributed LMS** that automates computing-science courses on Kubernetes, with a cloud IDE |
+| 🆕 🟡 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | 🟢 **`MIT`** — `1 072` B, 🟡 **holder is an INDIVIDUAL** | `1142d8e14cdc` | `2 123` | 🟡 **APAC** — DESCRIPTION-grade, `showlab` + *"[ICML 2026]"* | **educational video generation via CODE** rather than pixels — the only peer-reviewed row in this sweep, and a direct alternative shape to the shelf's video-authoring route |
+
+🔴 **What is verified and what is not, stated so the rows cannot be over-read — and this discipline
+is the direct lesson of `ACTION KE`:** licence BODY, byte count, copyright HOLDER and `HEAD` sha.
+🔴 **NOT verified: interop (`OneRoster`, Ed-Fi, `LTI`, `SCORM`, xAPI), multi-tenancy, auth model,
+dependency closure, build, or whether anyone operates them.** 🟡 **They are CANDIDATES, exactly as
+`gap 134` records — not routes.** The one thing p175 will not do is repeat p174's mistake of
+publishing a capability claim on top of a licence check.
+
+### 🆕 🔴 Leaving — `eagles-edu/sis`, and the grep that over-reported it
+
+🟢 **The clone is controlled: `HEAD` `7e5fbccad5a0`, `2 598` tracked files — both identical to what
+p174 recorded, so this is a re-read of the same tree and not a moved target.**
+
+| token | case-insensitive FILE hits | 🔴 **word-boundary LINE hits** | what it was actually matching |
+|---|---|---|---|
+| `ed-fi` | `55` | 🔴 **`0`** | `red-fill`, `disabled-fill`, `chip-red-fill` — CSS custom properties |
+| `edfi` | `176` | 🔴 **`0`** | `normalizedField`, `normalizedFilters`, `mutatedFields` |
+| `lti` | `325` | 🔴 **`0`** | `LevelTile`, `LevelTiles`, `ModalTitle`, `DetailTitle` |
+| `oidc` | `29` | 🔴 **`0`** | `autoIdCount` |
+| `jwt` | `16` | 🔴 **`0`** | base64 noise inside lockfiles |
+| `oneroster`, `scorm`, `xapi`, `caliper`, `clever` | `0` | `0` | — nothing, at either precision |
+| `tenant`, `tenancy`, `oauth`, `saml`, `ldap`, `sso`, `bcrypt`, `argon2` | `0`–`4` | 🔴 **`0`** | — |
+
+🆕 🔵 **`T265` — a substring grep is not an interop measurement, and its error is one-directional.**
+It can only over-report, so it fails in the direction that flatters the candidate. 🔵 **The rule this
+file now uses: name the ARTEFACT that would have to exist — an `EdFi` client class, an
+`/ims/oneroster/v1p1` route, a `cmi5` or xAPI statement emitter — and look for that, not for the
+standard's name.**
+🟢 **What the repository genuinely has, so the row is not merely negative:** `48` Prisma models
+with a real school-shaped schema — `Student`, `StudentEnrollmentPeriod`, `StudentAttendance`,
+`StudentGradeRecord`, `ParentPortalAccount`, `StudentPortalAccount`, `Family` — and hand-rolled
+cookie sessions (`ADMIN_SESSION_TTL`) in place of any federated protocol.
+🔴 **And the model that settles the routing question is called `SisConfigMirror`** — `id`,
+`payloadJson`, `updatedBy`, two timestamps. 🔵 **A system of record does not mirror its own
+configuration from somewhere else. This is a parent-and-student PORTAL in front of an SIS.**
+🟡 **One hygiene figure a client should hear before quoting the size: `374` of the `2 598` tracked
+files sit under `.backup/` and `.codex-backups/`.** The tree is `14.4%` prior drafts.
+🟢 **p174's denominator correction STANDS and is independently reproduced** — `"student information
+system" license:mit pushed:>=2026-04-16` is a real population, and `topic:education` is `8 197`
+exactly. 🔴 **What does not stand is the conclusion drawn from it.** The twelve-pass row
+*"no institutional-scale permissive student information system"* is **RESTORED** in
+[`verticals/solutions.md`](../verticals/solutions.md), with the denominator correction kept and the
+verdict unchanged.
+
+### 🆕 🔴 A licence path this file has never probed, and what it does to five earlier verdicts
+
+🔴 **`uccser/cs-field-guide` carries its `MIT` grant at `LICENCE` — the British spelling — and
+returns `404` at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `license`.**
+🔵 **`P50` taught that a licence-absence claim is a claim about the PATHS probed. `gap 133` is the
+same lesson at a spelling this KB's probe list never contained**, and the Commonwealth spelling is
+not rare in exactly the institutional population p175 just started sampling.
+🔴 **Consequence, stated rather than deferred: every *"NO GRANT FILE — exhaustive"* verdict in this
+KB was reached with an incomplete probe list** — including `JushBJJ/Mr.-Ranedeer-AI-Tutor` on the
+`12`-row shelf. `ACTION KJ` re-probes them all.
+
+### 🟢 The count, and the channel that makes it cheap
+
+| figure | channel | cost | precision |
+|---|---|---|---|
+| 🆕 🟢 **`8 197`** | 🟢 **authenticated MCP repository search** | 🟢 **`1` request** | 🟢 **EXACT** |
+| 🟡 `8 191` | `github.com/search` via `WebFetch`, `17` disjoint `pushed:` windows | 🔴 `17` requests, paced around a `429` | 🟢 exact, and off by `6` |
+| 🔴 *"`8.2k`"* | the same page, unpartitioned | `1` request | 🔴 two significant figures |
+
+🆕 🔵 **`T264` — a channel ledger is only as good as the request forms somebody thought to try.**
+p174's ledger was careful, complete about what it tested, and missed the best channel entirely.
+🟢 **The partition method is retained as a FALLBACK, not retired as wrong** — it is the only method
+that works when the authenticated channel is unavailable, and it agreed to within `0.07%`.
+🔴 **One limit of the new channel, measured and worth writing down: it answers SEARCH and refuses
+per-repository file reads by session scope.** Licence bodies in the table above came from
+`raw.githubusercontent.com`, `HEAD` shas from `git ls-remote`.
+[`evidence/sis-interop-probe.2026-10-13-p175.tsv`](../evidence/sis-interop-probe.2026-10-13-p175.tsv)
+· [`evidence/regional-sweep.2026-10-13-p175.tsv`](../evidence/regional-sweep.2026-10-13-p175.tsv)
+
 ## Pass 174 — 2026-10-13
 
 🆕 🟢 **Three foundational repositories enter this file, and none of them is new software. They were

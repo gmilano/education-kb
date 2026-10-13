@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🆕 🟢 **The trend this pass can prove rather than cite: four of this KB's standing statements were
+artefacts of its own INSTRUMENTS, not of the world — a channel ledger, a tag, a grep and a
+falsifier sentence. Each one had a measurement behind it. Each measurement was taken correctly. All
+four conclusions were wrong anyway, because the thing measured was not the thing claimed.**
+
+### 🆕 🟢 1. A channel ledger is only as good as the request forms somebody thought to try
+
+🟢 **Measured: the authenticated MCP repository-search channel returns `8 197` — an exact integer,
+one request — where p174 needed `17` paced requests partitioning a page that rounds to reach
+`8 191`.** p174's ledger named `7` request forms and correctly identified the `2` that answer.
+🔴 **The eighth form was an authenticated tool already loaded in the session, and nothing in the
+ledger's method would ever have found it, because the ledger enumerated HTTP shapes rather than
+capabilities.**
+🔵 **`T264`, and it generalises past GitHub: a negative result about reachability is a claim about
+the forms enumerated, exactly as `P50` is a claim about the paths probed.** The two rules are the
+same rule at different layers.
+🔵 **What it costs: one request. What it buys: every four-figure population figure in this KB
+becomes free, and the `17`-window partition becomes a fallback with a `-0.07%` agreement control
+rather than the method of record.**
+🔴 **And the new channel's limit, measured: it answers SEARCH and refuses per-repository file reads
+by session scope. Three channels, three jobs — MCP for counts, `raw.githubusercontent.com` for
+licence bodies, `git ls-remote` for `HEAD`s.**
+
+### 🆕 🔴 2. A tag is a sampling frame, and this one sampled a continent out
+
+🟢 **Measured, like-for-like, `P800` applied row by row to the top `50` by stars of each
+population:** `topic:education` places `12` rows — `5` North America, `5` APAC, `2` EMEA, `4` of
+them holder-grade. `topic:ai-education` places `7` — `6` APAC, `1` EMEA, **`0` North America, `0`
+holder-grade.**
+🔴 **The trend statement, and it is about this KB rather than the market: eleven passes of *"the
+agent tier is APAC-weighted and North America is thin at the repository layer"* described the
+sampling frame.** `T255` found the tag was `60.7×` too small. 🔵 **`T266` finds something worse than
+small: it is BIASED, and in the dimension this KB reports on most.**
+🟢 **Why the bias has a mechanism rather than being bad luck:** what tags itself `ai-education` is
+mostly a single-maintainer tutor skill built against one national examination — and those cluster in
+APAC, where curriculum-anchored exam prep is a large consumer category. 🔵 **Institutional education
+software does not tag itself `ai-education`, because it is not an AI product.** `Artemis` is a
+university's exercise platform. `canvasapi` is a Canvas client. `Dolos` is a plagiarism detector.
+**They are the substrate AI gets added to, and that is what an engagement actually starts from.**
+🟢 **The practical consequence: use the narrow tag for a shortlist of AI-native tools, and the wide
+tag for anything regional, institutional or procurement-shaped.**
+
+### 🆕 🔴 3. A substring grep fails only in the direction that flatters its subject
+
+🟢 **Measured on p174's new student information system:** `ed-fi` `55` file hits → **`0`** at word
+boundary (it was matching `red-fill`); `edfi` `176` → **`0`** (`normalizedField`); `lti` `325` →
+**`0`** (`LevelTile`, `ModalTitle`); `oidc` `29` → **`0`** (`autoIdCount`); `jwt` `16` → **`0`**
+(base64 in lockfiles). 🔴 **`0` of `17` interop and auth tokens survive at word-boundary precision.**
+🔵 **`T265` — the error is ONE-DIRECTIONAL, which is what makes it dangerous.** A substring match can
+only ever over-report, so this class of mistake always makes a candidate look better than it is, and
+never worse. **A measurement whose errors all point one way is not noisy; it is biased.**
+🔴 **And p174 had already taken the right precaution.** Its instruction was *"grep the tree rather
+than the README"* — a good rule, correctly followed, which still produced three false positives.
+🔵 **The repair is not a better rule about WHERE to look. It is a rule about WHAT to look for: name
+the artefact that would have to exist** — an `/ims/oneroster/v1p1` route, an `EdFi` client class, a
+`cmi5` or xAPI statement emitter, a tenant column — **and look for that.** A standard's NAME appears
+in CSS variables; a standard's IMPLEMENTATION does not.
+
+### 🆕 🟡 4. One falsifier sentence can ask two questions with different answers
+
+🟢 **Measured: `6` instruments WRITE a hardcoded dated evidence file. `1` instrument actually
+REWROTE one when re-run.** `ACTION KF` asked both in a single sentence — *"sweep for scripts that
+write a dated file … and measure how many dated results differ after a re-run"* — and set its
+falsifier at *"`≤1` instrument"*. 🔴 **At `6` the limb is silent; at `1` it fires.**
+🔵 **`T268` — a falsifier that names a threshold must also name the denominator it counts, and
+`T234` already taught this KB that a limb can be decided by a word the action never defined.** p175
+publishes both readings and marks which limb lands on which, rather than selecting the one that
+reads better.
+🔴 **And the finding worth more than either number: `9` of `28` script executions exit NON-ZERO,
+and two of the four instruments whose dated files did not change are among them.** 🔵 **They did not
+hold their evidence steady — they could not run.** An instrument that fails reports identically to
+an instrument that is deterministic, in any sweep that does not record the exit code. **A third of
+this repository's sampled instrument suite does not execute cleanly at `HEAD`, and that is the
+larger defect.**
+
+### 🆕 🔴 5. An egress allowlist is not a host's policy, and the difference changes what you promise
+
+🟢 **Measured at the resolver, `11` hosts:** `cac.gov.cn`, `www.gov.cn`, `npc.gov.cn`,
+`chinalawtranslate.com`, `agora.eto.tech`, `twobirds.com`, **`eur-lex.europa.eu`** and
+`en.wikipedia.org` are all **NXDOMAIN**. Only `github.com` and `raw.githubusercontent.com` resolve.
+🔴 **`gap 110` has been carried for many passes as *"`eur-lex` is `403` at the `CONNECT` layer by
+organisation policy"*. It does not resolve, and neither does Wikipedia.**
+🔵 **`T267` — p174 attributed to one host's policy what is a property of the whole egress layer.**
+The practical difference is large: a host policy might be argued with or routed around, and an
+allowlist cannot be. 🟢 **The correct statement, declared once rather than rediscovered per
+instrument: no primary legal text is directly reachable from this container by any channel, and
+every legal date in this KB is `search-summary` tier until the allowlist changes.**
+🔵 **`WebSearch` and `WebFetch` traverse a different path and are not bound by the resolver — which
+is exactly why `github.com/search` answers through one tool and refuses `curl`.**
+
+### 🆕 🟢 6. A compliance defect can be data loss rather than a missing control
+
+🟢 **Measured on the shelf's most provenance-literate row.** p173 found the C2PA flag *"defaults
+off"*. p174 found that turning it ON changes nothing, because the gate accepts the
+`NOT_APPLICABLE` status every asset is born with. 🟢 **p175 found the level underneath: the project
+ALREADY STORES a real status and the gate never sees it.**
+🔴 **Its generated schema registry lists `c2paStatus` as a REQUIRED property of `AssetProvenance`.
+Three writers set it to `"absent"`. And `_provenance_quality_gate` reads TWELVE fields off each
+stored record and discards the thirteenth, substituting `NOT_APPLICABLE` at one line.**
+🔵 **`T269` — `ABSENT` is the status that makes the gate FIRE and `NOT_APPLICABLE` is the status that
+makes it PASS. The code reads the first and writes the second.** That is not a missing feature; it
+is a one-line laundering of the project's own evidence.
+🟢 **The trend statement for the `50` days to the EU's `2 December 2026` marking backstop — and for
+China's Art. `5`, live since `1 Sep 2025`: the cheapest compliance movement available on this shelf
+is not building a signer. It is stopping the pipeline from throwing away what it already knows.**
+🔵 **The signing certificate is still procurement, but it is now procurement for the VISIBLE
+marking duty only. The metadata duty is free.**
+
+### 🆕 🔴 7. The regulatory split a deck must not merge
+
+🟢 **Confirmed against multiple secondary sources this pass, and one of them against this KB's own
+carried figure:** the EU's Digital Omnibus moved **Annex III high-risk** obligations — which carry
+education, including admissions screening, automated grading, proctoring and student monitoring — to
+**`2 December 2027`**, and Annex I to `2 August 2028`. 🔴 **It did NOT move Article `50`.**
+Transparency has applied since `2 August 2026`, with the `2 December 2026` backstop for
+machine-readable marking of systems already on the market — the date this KB quotes as *"`50`
+days"*, and it survives the check.
+🔵 **Why this is a trend and not a footnote: a client's transparency obligation is live NOW and
+their high-risk obligation has `26` months.** Those are two programmes with different budgets,
+different owners and different artefacts, and a deck that merges them will over-sell urgency on one
+and under-sell it on the other.
+🟢 **And the deployer duties that were never postponed are the ones an engagement actually bills
+for:** human oversight, monitoring, logging and informing affected people (Art. `26`), plus a
+Fundamental Rights Impact Assessment before deployment (Art. `27`).
+🔴 **Said rather than implied: none of those dates was read in primary form, for the reason trend
+`5` measures.**
+
+### 🆕 🟢 8. Teacher readiness is the binding constraint, and one market has now proved it expensively
+
+🟢 **South Korea legislated AI textbooks into schools and then stripped them of official status
+after adoption stayed under `30%` and teacher unions objected that the pace had outrun
+preparation.** 🟢 **The redirect was a `US$960M` programme for AI talent centres and vocational
+schools through 2030 — capacity rather than content.**
+🔵 **Set that against the adoption numbers from the other end of the distribution:** teacher AI use
+at `56%` in Brazil, `55%` in Chile, `53%` in Colombia and `52%` in Costa Rica, against an OECD
+average of `36%` — in markets with far less mandated rollout. 🔴 **UNESCO IESALC finds the governance
+behind that adoption, not ahead of it.**
+🟢 **The trend statement: mandating the artefact does not move adoption, and not mandating it does
+not stop adoption.** 🔵 **What an engagement can actually sell into is the gap between those two
+facts — teacher capability, and the governance that lets an institution say yes.**
+[`evidence/channel-ledger.2026-10-13-p175.tsv`](../evidence/channel-ledger.2026-10-13-p175.tsv)
+· [`evidence/sis-interop-probe.2026-10-13-p175.tsv`](../evidence/sis-interop-probe.2026-10-13-p175.tsv)
+· [`evidence/dated-rerun.2026-10-13-p175.tsv`](../evidence/dated-rerun.2026-10-13-p175.tsv)
+
 ## Pass 174 — 2026-10-13
 
 🆕 🟢 **The trend this pass can prove rather than cite: three of the four things this KB called

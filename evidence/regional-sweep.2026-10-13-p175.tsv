@@ -1,0 +1,33 @@
+#	ACTION KD - P800 placement applied row by row to the top 50 by stars of each population
+#	query_a	topic:education license:mit pushed:>=2026-04-16	total_count=8197	channel=mcp.github.search_repositories	sort=stars	order=desc
+#	query_b	topic:ai-education license:mit pushed:>=2026-04-16	total_count=135	channel=mcp.github.search_repositories	sort=stars	order=desc
+#	rule	P800 - a region comes from an institution the artefact names, never from a person's name
+#	grade	HOLDER = institution is the copyright holder in the licence body. DESCRIPTION/ORG/CURRICULUM/SYSTEM/COURSE = the artefact names it elsewhere.
+population	rank	repo	stars	region	grade	placed_by	licence_bytes	head
+education	1	TheAlgorithms/Python	225217	unplaced	-	community org, no institution	-	-
+education	2	microsoft/Web-Dev-For-Beginners	96945	North America	ORG	corporate org in the repo path	-	-
+education	3	microsoft/ML-For-Beginners	91449	North America	ORG	corporate org in the repo path	-	-
+education	11	showlab/Code2Video	2123	APAC	DESCRIPTION	showlab + "[ICML 2026]"; holder is an individual	1072	1142d8e14cdc
+education	21	learningequality/kolibri	1143	North America	HOLDER	Learning Equality	carried	carried
+education	23	SethClydesdale/genki-study-resources	1091	APAC	CURRICULUM	"Genki: An Integrated Course in Elementary Japanese"	-	-
+education	24	kelvins/algorithms-and-data-structures	1088	unplaced	-	NEAREST LATAM MISS - maintained from Brazil, artefact names nothing	-	-
+education	26	ceilf6/Auto_courseGrabber	983	APAC	SYSTEM	正方教务系统 + 多省市高校实测	-	-
+education	28	ls1intum/Artemis	818	EMEA	HOLDER	"(c) 2026 TUM Applied Education Technologies"	1090	09266581a02c
+education	29	LearningOS/os-lectures	815	APAC	COURSE	learningos.cn + 2026年春季OS课程	-	-
+education	34	ucfopen/canvasapi	682	North America	HOLDER	"(c) 2017 University of Central Florida - Center for Distributed Learning"	1129	513588f3077f
+education	44	AnubisLMS/Anubis	381	North America	DESCRIPTION	"Computing Science Courses From NYU" + topic nyu; holder is an individual	1082	894ed020997f
+education	45	uccser/cs-field-guide	381	APAC	HOLDER	"(c) 2016-2022 University of Canterbury Computer Science Education Research Group" - at LICENCE	1128	7e323930cf6f
+education	47	dodona-edu/dolos	350	EMEA	HOLDER	"(c) 2019 Team Dolos <dolos@ugent.be>"	1083	44925b867ce7
+education	49	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	314	unplaced	-	shelf row; artefact names no institution	carried	9c260890214d
+ai-education	6	niansia/taiwan-exam	18	APAC	CURRICULUM	學測 / 大考 / 會考 / 分科測驗 - a named national examination	-	-
+ai-education	12	jeliael/fakao-ai-exam-engine	10	APAC	CURRICULUM	法考 / Chinese Bar Exam + NPC statute database	-	-
+ai-education	14	wwlwgo/cn-primary-math-knowledge-graph	7	APAC	CURRICULUM	面向中国小学数学 - the national primary curriculum	-	-
+ai-education	15	Scorpioyyy/verichalk	6	APAC	CURRICULUM	课标边界 - the curriculum-standard boundary	-	-
+ai-education	21	Supermikeka/ai-mcu-simulab	3	APAC	SYSTEM	火山杯 Agent 创新大赛 - a named competition	-	-
+ai-education	32	thegauravmahto/sparks-ai-math-tutor	2	APAC	CURRICULUM	NCERT - India's national curriculum body	-	-
+ai-education	40	berylinureye/alevel-assistant	1	EMEA	CURRICULUM	Cambridge A-Level Mathematics - a named awarding body	-	-
+#	TALLY
+education	-	TOTAL PLACEABLE	12	NA=5 EMEA=2 APAC=5 LATAM=0	holder_grade=4	-	-	-
+ai-education	-	TOTAL PLACEABLE	7	NA=0 EMEA=1 APAC=6 LATAM=0	holder_grade=0	-	-	-
+#	VERDICT	ACTION KD both limbs SILENT: 0 LATAM in 100 rows; 12 placeable > 7, so the wider tag buys size AND placement
+#	T266	the narrow tag places 0 North American rows - it is regionally BIASED, not merely 60.7x too small

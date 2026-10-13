@@ -1,0 +1,38 @@
+#	ACTION KH - the Article 50(2) patch, WRITTEN rather than specified
+#	subject	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	HEAD=9c260890214df68ad8fd0d681d3e77a6a7b7ea9f (= 9c260890214d, p174's anchor, unmoved)
+#	tree	905 files	272 python	46 security tests (10+15+8+13)
+#	runner	python3.12 + stdlib unittest; src/ on sys.path; ALYSTRIA_RENDERER_MODE=fixture; ALYSTRIA_MEDIA_MODE=fixture; PIL stubbed (Image, ImageDraw, ImageFont)
+#	note	the suite needs NO pytest - all 46 tests are unittest.TestCase methods
+stage	measurement	value	evidence_class
+baseline	tests run	46	MEASURED
+baseline	failures	0	MEASURED
+baseline	errors	0	MEASURED
+baseline	skipped	0	MEASURED
+baseline	PIL stubbed	yes	MEASURED
+edit1	file	services/pipeline/src/alystria/security/provenance.py	MEASURED
+edit1	what	refuse C2paStatus.NOT_APPLICABLE when origin == GENERATED, in AssetProvenance.__post_init__	MEASURED
+edit1	inserted after line	143 (the existing provider/model/revision clause)	MEASURED
+edit1	insertions	7	MEASURED
+edit2	file	services/pipeline/src/alystria/security/gates.py	MEASURED
+edit2	what	accepted set = {VALID}, plus NOT_APPLICABLE only when origin is not GENERATED	MEASURED
+edit2	lines	260-262 replaced; import at line 11 extended with OriginKind	MEASURED
+edit2	insertions/deletions	6 / 5	MEASURED
+edit3	c2patool occurrences in the whole repo	0	MEASURED
+edit3	encoder	external FFmpeg, argv-invoked via SubprocessEditorExportRunner.run, caller-supplied ffmpeg_path (editor_export.py:93-113)	MEASURED
+edit3	insertion point	between editor_export.py:885 (verify_editor_delivery) and :907 (store.cas.add_file)	MEASURED
+edit3	caller of render_editor_timeline	native_controls.py:1113 - the ONLY caller, and a FIFTH file	MEASURED
+edit3	verdict	limb 2 FIRES - "four edits" is wrong unless the signer path defaults to None, which makes it inert	MEASURED
+edit4	C2paRecord construction sites in src	2 (provenance.py:125 default, workflow.py:3018)	MEASURED
+edit4	c2paStatus in the generated schema registry	REQUIRED property of AssetProvenance	MEASURED
+edit4	writers that already store it	licensed_media_workflow.py:259, :290 and project_assets.py:246 - all "absent"	MEASURED
+edit4	readers with an "absent" default	visual_candidates.py:276, :611	MEASURED
+edit4	fields _provenance_quality_gate reads off each stored record	12	MEASURED
+edit4	field it DISCARDS	c2paStatus - replaced with C2paRecord(C2paStatus.NOT_APPLICABLE) at workflow.py:3018	MEASURED
+edit4	verdict	REFINED - one line, no signer, no certificate, no fifth file. T269: the defect is DATA LOSS	MEASURED
+patched	post-patch suite run	REFUSED 3x by the execution-permission layer ("Code from External")	NOT TAKEN
+patched	test_generated_assets_require_model_revision	PASSES - pre-existing clause raises first, inside assertRaises	PREDICTED
+patched	test_apache_two_generated_asset_allows_transformed_commercial_export	BREAKS - GENERATED, full provider/model/revision, no c2pa= kwarg	PREDICTED
+patched	test_mit_starter_audio_allows_transformed_commercial_export	BREAKS - same shape	PREDICTED
+patched	tests in the repo that pass a c2pa= kwarg	0	MEASURED
+patched	predicted failure count	2 of 46	PREDICTED
+#	VERDICT	limb 1 PREDICTED to fire at 2/46; limb 2 FIRES on edit 3 either way. gap 132 opened; ACTION KI takes the measurement.

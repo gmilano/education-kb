@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p175
+
+🆕 🟢 **`ACTION KD` is DISCHARGED with both limbs silent, and the finding is not the silence — it is
+that the tag this page has been sampling from could not see North America.**
+🟢 **Both populations counted EXACTLY, one authenticated request each:** `topic:education` = **`8 197`**,
+`topic:ai-education` = **`135`**, same filters (`license:mit pushed:>=2026-04-16`), ratio `60.7×`.
+🟢 **`P800` then applied row by row to the top `50` by stars of EACH, which is the like-for-like
+comparison the action's second limb needed and nobody had run:**
+
+| population | placeable | North America | EMEA | APAC | 🔴 **LATAM** |
+|---|---|---|---|---|---|
+| 🟢 **`topic:education`** | 🟢 **`12` of `50`** | 🟢 **`5`** | 🟢 **`2`** | 🟢 **`5`** | 🔴 **`0`** |
+| 🔴 `topic:ai-education` | `7` of `50` | 🔴 **`0`** | `1` | `6` | 🔴 **`0`** |
+
+🆕 🔵 **`T266` — a tag is a sampling frame, and this one sampled a continent out.** What tags itself
+`ai-education` is largely a single-maintainer tutor skill built against one national examination;
+institutional education software tags itself `education`. 🔴 **The consequence for this page: eleven
+passes of *"the APAC agent tier is the placeable one and North America is thin"* was a property of
+the query, not of the world.**
+
+### 🆕 🟢 The `12` placeable rows on `topic:education`, with the EVIDENCE CLASS stated per row
+
+🔵 **`P800` admits two grades and p175 separates them, because p174's `mitodl` row showed what
+happens when they are merged.** **HOLDER-GRADE** = the institution is the copyright holder in the
+licence body. **DESCRIPTION-GRADE** = the artefact names the institution, curriculum or standard in
+its description, topics or title, but the licence holder is an individual.
+
+| repo | ★ | licence *(body READ this pass, bytes)* | `HEAD` | placed by | grade |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | `682` | 🟢 **`MIT`** — `1 129` B, *"© 2017 **University of Central Florida — Center for Distributed Learning**"* | `513588f3077f` | 🟢 **North America** | 🟢 **HOLDER** |
+| 🆕 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `818` | 🟢 **`MIT`** — `1 090` B, *"© 2026 **TUM Applied Education Technologies**"* | `09266581a02c` | 🟢 **EMEA** — Technical University of Munich | 🟢 **HOLDER** |
+| 🆕 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | `350` | 🟢 **`MIT`** — `1 083` B, *"© 2019 Team Dolos <dolos@**ugent.be**>"* | `44925b867ce7` | 🟢 **EMEA** — Ghent University | 🟢 **HOLDER** |
+| 🆕 🟢 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | `381` | 🟢 **`MIT`** — 🔴 at **`LICENCE`**, `1 128` B, *"© 2016-2022 **University of Canterbury Computer Science Education Research Group**"* | `7e323930cf6f` | 🟢 **APAC** — New Zealand | 🟢 **HOLDER** |
+| 🆕 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `381` | 🟢 **`MIT`** — `1 082` B, 🟡 holder is an INDIVIDUAL | `894ed020997f` | 🟡 **North America** — *"Computing Science Courses From **NYU**"* + topic `nyu` | 🟡 **DESCRIPTION** |
+| 🆕 🟡 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | `2 123` | 🟢 **`MIT`** — `1 072` B, 🟡 holder is an INDIVIDUAL | `1142d8e14cdc` | 🟡 **APAC** — `showlab` + *"[**ICML 2026**]"* | 🟡 **DESCRIPTION** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 143` | *(carried — p16x body read)* | *(carried)* | 🟢 **North America** — Learning Equality | 🟢 **HOLDER** |
+| 🟡 [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) | `96 945` | *(not read this pass)* | *(not read)* | 🟡 **North America** — corporate org | 🟡 **ORG** |
+| 🟡 [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | `91 449` | *(not read this pass)* | *(not read)* | 🟡 **North America** — corporate org | 🟡 **ORG** |
+| 🟡 [`SethClydesdale/genki-study-resources`](https://github.com/SethClydesdale/genki-study-resources) | `1 091` | *(not read this pass)* | *(not read)* | 🟡 **APAC** — *"**Genki: An Integrated Course in Elementary Japanese**"* | 🟡 **CURRICULUM** |
+| 🟡 [`ceilf6/Auto_courseGrabber`](https://github.com/ceilf6/Auto_courseGrabber) | `983` | *(not read this pass)* | *(not read)* | 🟡 **APAC** — *"正方教务系统"* + *"多省市高校实测"* | 🟡 **SYSTEM** |
+| 🟡 [`LearningOS/os-lectures`](https://github.com/LearningOS/os-lectures) | `815` | *(not read this pass)* | *(not read)* | 🟡 **APAC** — `learningos.cn`, *"2026年春季OS课程"* | 🟡 **COURSE** |
+
+🟢 **Four HOLDER-GRADE institutional placements in THREE regions in a single sweep, which this page
+has never managed before.** 🔴 **And `6` of the `12` are carried at a grade this page has to label,
+because their licences were not read this pass.**
+
+### 🆕 🔴 The `7` placeable rows on `topic:ai-education`, for the comparison
+
+| repo | ★ | placed by | region |
+|---|---|---|---|
+| 🟡 [`niansia/taiwan-exam`](https://github.com/niansia/taiwan-exam) | `18` | 學測 / 大考 / 分科測驗 — a named national examination | 🟡 **APAC** — Taiwan |
+| 🟡 [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | `10` | 法考 — the Chinese Bar Examination, plus an NPC statute database | 🟡 **APAC** — China |
+| 🟡 [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | `7` | *"面向中国小学数学"* — the national primary curriculum | 🟡 **APAC** — China |
+| 🟡 [`Scorpioyyy/verichalk`](https://github.com/Scorpioyyy/verichalk) | `6` | 课标边界 — the curriculum-standard boundary | 🟡 **APAC** — China |
+| 🟡 [`Supermikeka/ai-mcu-simulab`](https://github.com/Supermikeka/ai-mcu-simulab) | `3` | 火山杯 Agent 创新大赛 — a named competition | 🟡 **APAC** — China |
+| 🟡 [`thegauravmahto/sparks-ai-math-tutor`](https://github.com/thegauravmahto/sparks-ai-math-tutor) | `2` | **NCERT** — India's national curriculum body | 🟡 **APAC** — India |
+| 🟡 [`berylinureye/alevel-assistant`](https://github.com/berylinureye/alevel-assistant) | `1` | **Cambridge A-Level Mathematics** — a named awarding body | 🟡 **EMEA** — United Kingdom |
+
+🔴 **Not one holder-grade placement, not one North American placement, and the whole placeable set
+fits under `20`★ except the first row.** 🔵 **That is the shortlist this KB has been reporting the
+world from for eleven passes.**
+
+### 🔴 LATAM, ninth consecutive pass — and the claim is finally a MEASUREMENT
+
+🔴 **`0` of `100` rows, across two tags, both counted exactly, placement rule applied row by row.**
+🔵 **The near-miss is worth naming because it is exactly what `P800` exists to refuse:**
+[`kelvins/algorithms-and-data-structures`](https://github.com/kelvins/algorithms-and-data-structures)
+(`1 088`★, `MIT`) is maintained from Brazil, and **the artefact says nothing about it** — no
+institution, no curriculum, no standard, no deployment. Placing it would be guessing from a person's
+name, which is the one inference this rule forbids.
+🟢 **What a client should hear instead: the LATAM story in this KB is COMMERCIAL, not
+repository-side** — `BeConfident` (`US$15.8M`, Prosus Ventures), `Teachy` (`US$7M`, Goodwater +
+Reach) and `Luca`, with Brazil carrying close to half of the 2026 regional edtech cohort. 🔵 **A
+LATAM engagement starts from a global permissive base and a local commercial partner, and this page
+should stop implying a local repository exists to fork.**
+
+### 🆕 🟡 Four `MIT` candidates carried from p174, unchanged and still NOT promoted
+
+🟡 **`kirilxd/claude-tutor` (`139`★), `Scorpioyyy/verichalk`, `2022764025/Lecture-Hunter`,
+`zmuxuny/hy3-learning-agent`** — licence body read at p174, `HEAD` verified, and nothing else.
+🟢 **One of them gains a placement this pass:** `verichalk` is `P800`-placeable in APAC on the
+curriculum-standard token its own description carries. 🔴 **It is still a `6`★ repository `8` days
+old at p174 and it is not shelf material.**
+[`evidence/regional-sweep.2026-10-13-p175.tsv`](../evidence/regional-sweep.2026-10-13-p175.tsv)
+
 ## 2026-10-13 — p174
 
 🆕 🔴 **`ACTION JY` is DISCHARGED and the limb that fired is the one that closes a question this

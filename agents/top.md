@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🟢 **No promotion and no demotion this pass: the shelf is the same `12` rows, and it is re-stated in
+full below because under *"only the newest block is canonical"* a row this file does not re-state
+leaves the compiled view (`T216`, `P170-C`).**
+🆕 🟢 **What changed is what can be SAID about the best-equipped row, and it got CHEAPER.** `ACTION
+KH` wrote p174's Article `50(2)` patch instead of specifying it, and found that the hardest-looking
+of the four edits is not needed in the form p174 described. **The project already stores a
+`c2paStatus`** — its own generated schema registry lists the field as REQUIRED on `AssetProvenance`,
+and three separate writers set it. 🔴 **Its export quality gate then reads TWELVE fields off each
+stored record and discards the thirteenth, substituting the one status that makes the gate pass
+(`workflow.py:3018`).** 🟢 **So the fix is one line, needs no `c2patool` and needs no signing
+certificate: `T269`.**
+🆕 🔴 **And the honest half, stated before the table because a reader should not have to find it:
+p175's post-patch test run was REFUSED by this session's execution-permission layer, three times,
+after the pristine run had been allowed.** The `46`/`46` baseline is MEASURED — reproduced
+independently, on stdlib `unittest` under `python3.12` with `PIL` stubbed, which is a different
+runner from p174's. 🔴 **The effect of the patch is PREDICTED: `2` of `46` tests break, both of them
+`GENERATED`-asset constructions that pass no `c2pa=` kwarg. `0` tests in the repository pass one.
+That is a static reading, not a run, and `ACTION KI` takes the measurement (`gap 132`).**
+🆕 🔴 **One figure on this shelf's denominator changes again, and this time the METHOD is what
+changes.** p174 reached `8 191` by partitioning a rounding search into `17` paced requests. The
+authenticated MCP search channel answers **`8 197`, exactly, in one request**. 🔵 **The shortlist
+figure — `135` on `topic:ai-education` — was exact all along, and is reproduced a third time.**
+
+### 🟢 The `12`-row shelf — RE-STATED IN FULL at p175
+
+🟡 **Licence cells, shapes and regions are p171/p172 body reads carried forward. p175 re-read the
+LICENCE of none of them and the SOURCE TREE of one. This line is the disclosure.**
+
+| repo | licence *(body read, p171/p172)* | primary shape *(p172)* | region | status at p175 |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | CARRIED |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | CARRIED |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | CARRIED |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | CARRIED |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | 🟡 **CARRIED, and now the only shelf row that DECLARES `scorm` and `xapi` — which `ACTION KE` makes worth saying out loud, since the candidate SIS declared neither** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | CARRIED |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | CARRIED |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | CARRIED |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | 🆕 🟢 **CARRIED, and the only row with a WRITTEN patch rather than a specified one. `HEAD` still `9c260890214d` at p175 — a third controlled re-read of the same `905` files. `314`★** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | 🟡 **CARRIED. Still the only row carrying `ai-education` — the tag `T266` now shows is regionally blind as well as narrow** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | CARRIED |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | tutoring | Global | 🔴 **CARRIED, with the word *"exhaustive"* now IN DOUBT: `gap 133` found a `MIT` grant at the British spelling `LICENCE` on another repository, and that path was never probed here. `ACTION KJ` re-probes it** |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` still need one** — `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1`
+paraphrased `Apache-2.0`, `1` with no grant found at the paths probed.
+
+### 🆕 🟢 The Article `50(2)` path on the shelf's best-equipped row, as written rather than specified
+
+🔵 **Subject:** `AkshitIreddy/AI-Powered-Video-Tutorial-Generator`, `MIT`, pinned at
+`9c260890214d`, still `HEAD`. **`905` files, `272` of them Python, `46` security tests.**
+
+| state | what is true at p175 | evidence class |
+|---|---|---|
+| 🟢 pristine suite | `46` / `46` pass | 🟢 **MEASURED** — stdlib `unittest`, `python3.12`, `PIL` stubbed, `src/` on `sys.path`, `conftest.py`'s two env vars replicated |
+| 🟢 edits `1`+`2` | applied, `13` insertions / `5` deletions in `2` files, by exact-string replacement | 🟢 **MEASURED** — the diff exists |
+| 🔴 patched suite | `2` of `46` predicted to break | 🔴 **PREDICTED** — the run was refused `3`× (`gap 132`) |
+| 🔴 edit `3` *(the signer)* | needs `native_controls.py:1113` — a FIFTH file — or an opt-in default nothing sets | 🟢 **MEASURED** — `c2patool` appears in `0` of `905` files |
+| 🆕 🟢 edit `4` *(the record)* | 🟢 **ONE LINE, no signer, no certificate** | 🟢 **MEASURED** — the status is already stored and already discarded |
+
+🔴 **The trap p174 found was the DEFAULT. The trap p175 found is one level down: the code reads the
+right value and writes the wrong one.** `ABSENT` is the status that makes the gate fire;
+`NOT_APPLICABLE` is the status that makes it pass; three writers store `"absent"`, and
+`_provenance_quality_gate` replaces it with `NOT_APPLICABLE` on the way in.
+🔵 **Why this belongs in `agents/top.md` and not only in `compose/patterns.md`:** a client asking
+*"can this shelf row be made Article `50(2)`-ready?"* now gets a one-line answer for the metadata
+half and a procurement answer for the visible-marking half — and those are different conversations
+with different costs. The recipe is Pattern `1` in
+[`compose/patterns.md`](../compose/patterns.md).
+
+### 🆕 🔴 The number this file quotes for the vertical, corrected a second time in two passes
+
+| figure | what it counts | status at p175 |
+|---|---|---|
+| `135` | `topic:ai-education`, `MIT`, pushed in `180` d | 🟢 **EXACT, reproduced a third time — and now known to place `0` rows in North America (`T266`)** |
+| 🔴 `8 191` | p174's `17`-window partition of `topic:education` | 🟡 **superseded as the METHOD, and off by `6` against the one-request answer** |
+| 🆕 🟢 **`8 197`** | 🟢 **the same query, ONE authenticated request** | 🆕 🟢 **EXACT. `gap 125` closes better; the `17`-window partition is retained only as a fallback** |
+
+🔵 **What that does to the brief, which is the only reason it is in this file:** the shortlist a
+client should look at is still `135` rows long, and it is now known to be an **APAC-weighted**
+shortlist. 🟢 **For a North American or EMEA engagement the right frame is `topic:education`, where
+the institutional software actually lives** — and the six rows p175 admitted to
+[`repos/foundations.md`](../repos/foundations.md) came from exactly there.
+[`evidence/regional-sweep.2026-10-13-p175.tsv`](../evidence/regional-sweep.2026-10-13-p175.tsv)
+· [`evidence/aiact-50-2-patch.2026-10-13-p175.tsv`](../evidence/aiact-50-2-patch.2026-10-13-p175.tsv)
+
 ## Pass 174 — 2026-10-13
 
 🟢 **No promotion and no demotion this pass: the shelf is the same `12` rows, and it is re-stated in

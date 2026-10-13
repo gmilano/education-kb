@@ -1,0 +1,28 @@
+repo	head	tracked_files	token	ci_file_hits	wordboundary_line_hits	actual_match	verdict
+eagles-edu/sis	7e5fbccad5a0	2598	oneroster	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	ed-fi	55	0	red-fill / disabled-fill / chip-red-fill (CSS custom properties)	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	edfi	176	0	normalizedField / normalizedFilters / mutatedFields	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	lti	325	0	LevelTile / LevelTiles / ModalTitle / DetailTitle	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	scorm	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	xapi	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	tin can	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	qti	12	0	-	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	caliper	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	clever	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	tenant	1	0	-	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	tenancy	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	oauth	4	0	-	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	oidc	29	0	autoIdCount	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	saml	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	jwt	16	0	base64 noise inside lockfiles	SUBSTRING ARTEFACT
+eagles-edu/sis	7e5fbccad5a0	2598	ldap	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	sso	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	ferpa	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	gdpr	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	bcrypt	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	argon2	0	0	-	ABSENT
+eagles-edu/sis	7e5fbccad5a0	2598	session	303	REAL	ADMIN_SESSION_TTL / session?.user - hand-rolled cookie sessions	PRESENT
+#	what the repository DOES have
+eagles-edu/sis	7e5fbccad5a0	2598	prisma_models	48	-	Student / StudentEnrollmentPeriod / StudentAttendance / StudentGradeRecord / Family / ParentPortalAccount / StudentPortalAccount / AdminUser	PRESENT
+eagles-edu/sis	7e5fbccad5a0	2598	SisConfigMirror	1	REAL	model with id + payloadJson + updatedBy + timestamps - it MIRRORS an SIS config	DECISIVE
+eagles-edu/sis	7e5fbccad5a0	2598	backup_dir_files	374	-	.backup/ and .codex-backups/ = 14.4% of the tracked tree	HYGIENE

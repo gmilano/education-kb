@@ -4,6 +4,245 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p174 registered — `2` DISCHARGED WITH A LIMB FIRED, `2`
+DISCHARGED with silent falsifiers, `1` DISCHARGED ON A PREDICTION with its measurement REFUSED and
+re-registered.**
+🔴 **Standing caveat unchanged and it applies in full: p175 judges actions p174 wrote, and p175 did
+the work. These are self-assessments.**
+🆕 🟢 **The headline is a CHANNEL, and it retires a method this KB published one pass ago as its
+own.** p174 spent `17` paced requests partitioning a search that rounds, to reach `8 191`. The
+authenticated GitHub MCP search tool answers the same query **exactly, in one request**:
+**`8 197`**. 🔴 **p174's channel ledger named `7` request forms and found `2` that answer; the form
+that answers best was never asked for (`T264`).**
+🆕 🔴 **The uncomfortable one: `ACTION KE` read p174's new student information system past its
+licence and found that EVERY interop and auth token it appeared to carry is a SUBSTRING ARTEFACT.**
+`ed-fi` was matching `red-fill`; `edfi` was matching `normalizedField`; `lti` was matching
+`LevelTile` and `ModalTitle`; `oidc` was matching `autoIdCount`. Word-boundary counts: **`0` of
+`17` tokens, including `0` for OneRoster, Ed-Fi, LTI, SCORM, xAPI, tenancy and every federated auth
+protocol (`T265`).**
+🆕 🟢 **The most useful one for a client: `ACTION KD` ran the regional sweep on BOTH tags and the
+wider one buys size AND placement — `12` placeable rows against `7`.** 🔴 **And it exposes a bias
+nobody had measured: `topic:ai-education`'s top `50` places **`0`** rows in North America. The tag
+this KB used for eleven passes could not see the region it reports on most (`T266`).**
+🆕 🔴 **The sharpest single datum: `eur-lex.europa.eu` is **NXDOMAIN** here, not a `CONNECT` `403`.**
+`9` of `11` probed hosts do not resolve at all — every legal-text host in this KB's ledger, plus
+`en.wikipedia.org` as a control. Only `github.com` and `raw.githubusercontent.com` resolve
+(`T267`).
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🟢 **`ACTION KD`** | 🔴 *refuted if `≥1` LATAM-ORIGINATED repository is found; ALSO refuted if `topic:education` contains FEWER placeable rows than `topic:ai-education` did* | 🟢 **`0` LATAM in `100` rows across two tags. `12` placeable on `topic:education` against `7` on `topic:ai-education`** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. Ninth consecutive pass with no LATAM-originated repository — now measured on an exact denominator and across two tags. `4` NEW holder-grade institutional placements** |
+| 🔴 **`ACTION KE`** | 🔴 *refuted if it carries NONE of rostering, standards interop or tenancy; ALSO refuted if it carries ALL FOUR* | 🔴 **`0` word-boundary matches for OneRoster, Ed-Fi, LTI, SCORM, xAPI, `tenant`, `tenancy`, OAuth, OIDC, SAML, JWT, LDAP, SSO, FERPA, GDPR, `bcrypt`, `argon2`** | 🔴 **DISCHARGED, LIMB 1 FIRED. The twelve-pass *"no institutional-scale permissive SIS"* row is RESTORED, with p174's denominator correction kept and the verdict unchanged** |
+| 🟡 **`ACTION KF`** | 🔴 *refuted if `≤1` instrument rewrites a dated file; ALSO refuted if `≥10` do* | 🟡 **STATIC: `14` hardcoded dated writes in `6` instruments. DYNAMIC: `1` instrument, `2` files CHANGED. And `9` of `28` script runs exit NON-ZERO** | 🟡 **DISCHARGED, LIMB 1 FIRED ON ONE READING AND SILENT ON THE OTHER — the action never said whether *"instrument"* meant *writes one* or *rewrites one*, and the two readings give `6` and `1` (`T268`). The dynamic figure is CONFOUNDED: `2` of the `4` non-offenders could not run** |
+| 🟢 **`ACTION KG`** | 🔴 *refuted if the primary text is reachable from this container; ALSO refuted if the labelling duty does not apply to education content or synthetic video of the kind this shelf generates* | 🟢 **`9` of `11` hosts NXDOMAIN. Article numbers RECORDED: Art. `4` explicit, Art. `5` implicit, Interim Measures Art. `12` → Deep Synthesis Provisions Art. `17`. Implicit marking applies to ALL synthetic content regardless of confusion potential** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `gap 129` becomes a MEASURED channel absence like `gap 110` — and `gap 110`'s cause is CORRECTED from `CONNECT` policy to DNS. The two-market claim STRENGTHENS: China's implicit duty is broader than the EU's and has been live since `1 Sep 2025`** |
+| 🟡 **`ACTION KH`** | 🔴 *refuted if the four edits break `≥1` existing test; ALSO refuted if the edits cannot be made without touching a fifth file* | 🟡 **Baseline `46`/`46` REPRODUCED under an independent stdlib runner. Edits `1`+`2` WRITTEN (`13` insertions, `2` files). Post-patch run REFUSED `3`×by the execution-permission layer. Edit `3` needs a fifth file OR an opt-in nothing sets** | 🟡 **DISCHARGED ON A PREDICTION, NOT A MEASUREMENT, and said so. Limb 1 is PREDICTED to fire at `2` of `46` by static reading; limb 2 fires on edit `3` either way. And edit `4` is REFINED to something better than p174 specified — see below** |
+
+### 🆕 🟢 `ACTION KD` — the wider tag buys placement, and the narrow one was regionally blind
+
+🟢 **Both populations counted EXACTLY, one request each, on the channel `T264` found:**
+`topic:education license:mit pushed:>=2026-04-16` = **`8 197`**;
+`topic:ai-education`, same filters = **`135`** — identical to p173's figure, so that one was exact
+all along. **Ratio `60.7×`.**
+🟢 **`P800` applied to the top `50` by stars of each, with the evidence class recorded per row:**
+
+| population | placeable | North America | EMEA | APAC | 🔴 **LATAM** |
+|---|---|---|---|---|---|
+| 🟢 **`topic:education`** *(top `50`)* | 🟢 **`12`** | 🟢 **`5`** | 🟢 **`2`** | 🟢 **`5`** | 🔴 **`0`** |
+| 🔴 `topic:ai-education` *(top `50`)* | 🔴 `7` | 🔴 **`0`** | `1` | `6` | 🔴 **`0`** |
+
+🆕 🔵 **`T266` — a tag is a sampling frame, and this one sampled a continent out.** The narrow tag
+does not merely return fewer rows; it returns a different WORLD. `6` of its `7` placeable rows are
+APAC and **none** is North American, because what tags itself `ai-education` is mostly a
+single-maintainer tutor skill built against a national exam, while institutional education software
+tags itself `education`. 🔴 **Every *"North America is thin"* sentence this KB has written about the
+repository layer was a statement about its query.**
+🟢 **Four placements are HOLDER-GRADE — the institution is in the LICENCE body, which is the
+strongest evidence `P800` admits**, and this is the first pass to get holder-grade institutional
+placement in three regions at once.
+🔴 **LATAM stays empty and the statement is now much stronger than *"we found nothing"*:** `0` of
+`100` rows across two tags, both counted exactly, with the placement rule applied row by row.
+🔵 **And the near-miss is worth naming because it is what `P800` exists to refuse:**
+`kelvins/algorithms-and-data-structures` (`1 088`★) is maintained from Brazil, and **nothing in the
+artefact says so** — no institution, no curriculum, no standard. Placing it would be guessing from
+a person's name.
+
+### 🆕 🔴 `ACTION KE` — the tree was grepped, and the grep was the problem
+
+🔴 **p174's instruction was *"grep the tree rather than the README"*, and that was followed. It
+still produced three false positives, because the tokens are substrings of ordinary identifiers.**
+
+| token | case-insensitive FILE hits | word-boundary LINE hits | what it was actually matching |
+|---|---|---|---|
+| `ed-fi` | `55` | 🔴 **`0`** | `red-fill`, `disabled-fill`, `chip-red-fill` — CSS custom properties |
+| `edfi` | `176` | 🔴 **`0`** | `normalizedField`, `normalizedFilters`, `mutatedFields` |
+| `lti` | `325` | 🔴 **`0`** | `LevelTile`, `ModalTitle`, `DetailTitle`, `multi…` |
+| `oidc` | `29` | 🔴 **`0`** | `autoIdCount` |
+| `jwt` | `16` | 🔴 **`0`** | base64 noise in lockfiles |
+
+🆕 🔵 **`T265` — a substring grep is not an interop measurement, and the error is one-directional.**
+It can only ever over-report, so it fails in the direction that flatters a candidate. 🔵 **The
+cheap fix is a word boundary; the honest fix is to name the artefact that would have to exist** — an
+`EdFi` client, an `/ims/oneroster/v1p1` route, a `cmi5` or `xapi` statement emitter — **and look for
+THAT.**
+🟢 **What the repository does carry, stated so the row is not merely negative:** `48` Prisma models
+with a genuine school-shaped schema (`Student`, `StudentEnrollmentPeriod`, `StudentAttendance`,
+`StudentGradeRecord`, `ParentPortalAccount`, `StudentPortalAccount`), and hand-rolled cookie
+sessions (`ADMIN_SESSION_TTL`) rather than any federated protocol.
+🔴 **And the model that settles the routing question is named `SisConfigMirror`** — `id`,
+`payloadJson`, `updatedBy`, timestamps. 🔵 **A system of record does not mirror its own config from
+somewhere else.** It is a portal in front of an SIS, not an SIS.
+🟡 **One measurement that is about hygiene rather than capability:** `374` of its `2 598` tracked
+files sit under `.backup/` and `.codex-backups/`, so the *"`2 598` files"* figure p174 published is
+`14.4%` build-up of prior drafts.
+
+### 🆕 🟡 `ACTION KF` — one action, two readings, and `6` versus `1`
+
+🟢 **STATIC, by a rule stated in the instrument and testable against fixtures:** a script is an
+offender when it WRITES a path whose basename carries an ISO date AND no clock call reaches that
+path. **`14` such writes in `6` instruments** — `p120-unread-grant-resolution` (`3` files, and
+p174 named only `2` of them), `p1040-ecl-corpus-census`, `p1026-archive-regression-census`,
+`p164-equity-fix-controls`, `p326-titleholder-book-license`, `p345-oer-four-forms`.
+🟢 **DYNAMIC, re-running `5` of them and restoring to `HEAD` afterwards:** `28` script executions,
+and **exactly `1` instrument rewrote dated evidence with different bytes** — `p120`'s
+`score.2026-10-11.tsv` and `phantom-claims.2026-10-11.tsv`, by both `score.py` and `score_after.py`.
+🆕 🔵 **`T268` — *"how many instruments rewrite a dated file"* and *"how many dated results differ
+after a re-run"* are different questions, and `ACTION KF` asked both in one sentence.** The answers
+are `6` and `1`. p175 publishes both and marks which reading each limb lands on, rather than
+picking the one that reads better.
+🔴 **And the dynamic figure is CONFOUNDED, which is the finding worth more than either number:
+`9` of `28` script executions exit non-zero** — and `p326/census_items.py` and
+`p345/corte_figuras.py`, two of the four instruments whose dated files did NOT change, are among
+them. 🔵 **They did not hold their evidence steady; they could not run.** An instrument that fails
+is not an instrument that is deterministic, and a re-run sweep that does not report exit codes
+cannot tell the two apart.
+🔴 **The residue a client should hear: a third of the sampled instrument suite in this repository
+does not execute cleanly at `HEAD`**, and that is a bigger problem than the overwrite `ACTION KF`
+was written to chase.
+🟡 **One distinction p174 blurred:** of the three files it named, `p121`'s `action-p.tsv` carries
+**no date at all**. An undated record being overwritten and a dated record whose date lies are
+different defects, and only the second one misleads a reader about WHEN the measurement was taken.
+
+### 🆕 🟢 `ACTION KG` — the article numbers, and a corrected cause for `gap 110`
+
+🟢 **Recorded, which is what the action asked for:**
+
+| instrument | duty | article | in force |
+|---|---|---|---|
+| 🟢 **Measures for Labeling of AI-Generated Synthetic Content** | 🟢 **EXPLICIT label** — a visible/audible notice on text, image, audio, video and virtual scenes, retained on download and export | 🟢 **Art. `4`** | 🔴 **`1 Sep 2025`** |
+| 🟢 **same** | 🟢 **IMPLICIT label** — file METADATA carrying content attribute, provider name or code, and a content reference number | 🟢 **Art. `5`** | 🔴 **`1 Sep 2025`** |
+| 🟡 Interim Measures for the Management of Generative AI Services | labelling, by cross-reference | 🟡 **Art. `12`** → Deep Synthesis Provisions Art. `17` | `15 Aug 2023` |
+
+🔴 **PRIMARY TEXT NOT READ, and the refusal is now measured rather than assumed.** `11` hosts
+probed at the resolver:
+
+| host | result |
+|---|---|
+| `www.cac.gov.cn`, `cac.gov.cn`, `www.gov.cn`, `npc.gov.cn` | 🔴 **NXDOMAIN** |
+| `www.chinalawtranslate.com`, `agora.eto.tech`, `www.twobirds.com` | 🔴 **NXDOMAIN** |
+| 🔴 **`eur-lex.europa.eu`** | 🔴 **NXDOMAIN** — *not* a `CONNECT` `403` |
+| `en.wikipedia.org` *(control)* | 🔴 **NXDOMAIN** |
+| 🟢 `github.com`, `raw.githubusercontent.com` *(controls)* | 🟢 **resolve** |
+
+🆕 🔵 **`T267` — this container resolves an ALLOWLIST, and p174 attributed to one host's policy what
+is a property of the whole egress layer.** `gap 110` has been carried for many passes as
+*"`eur-lex` is `403` at the `CONNECT` layer by organisation policy"*. Measured: it does not resolve,
+and neither does Wikipedia. 🟢 **The correct, general statement, which should stop being
+re-discovered per instrument: no primary legal text is directly reachable from this container by any
+channel. Every legal date in this KB is `search-summary` tier and will stay there until the
+allowlist changes.** 🔵 **`WebSearch` and `WebFetch` traverse a different path and are not bound by
+the resolver — which is why `github.com/search` answers and `curl` to the same host does not.**
+🟢 **Limb 2 is silent and the claim it tested gets STRONGER, not narrower.** The implicit-metadata
+duty under Art. `5` applies to **all** AI-generated synthetic content irrespective of whether it
+could confuse anyone, where the EU's Art. `50(2)` is a transparency duty aimed at deception. 🔵 **So
+the marking instrument this KB is specifying has a second market whose obligation is both LIVE and
+BROADER — and synthetic video with a presenter voice, which is precisely what the shelf's
+best-equipped row generates, is in scope of Art. `4` as well.**
+🟢 **One figure independently CONFIRMED rather than carried:** Art. `50` has applied since
+`2 August 2026` and the Digital Omnibus moved the **Annex III high-risk** regime to
+`2 December 2027` and Annex I to `2 August 2028` — it did **not** move Art. `50`. The
+`2 December 2026` backstop for machine-readable marking of systems already on the market, which is
+the date this KB quotes as *"`50` days"*, survives the check.
+
+### 🆕 🟡 `ACTION KH` — the patch is written, the measurement was refused, and edit `4` gets better
+
+🟢 **Baseline REPRODUCED on an independent runner, which is worth more than re-running p174's.**
+`46` of `46` pass under `python3.12` with stdlib `unittest`, `src/` on `sys.path`, the two
+fixture-mode env vars from `conftest.py`, and a `PIL` stub for `Image`/`ImageDraw`/`ImageFont`.
+🔵 **The suite needs no `pytest`: all `46` tests are `unittest.TestCase` methods** — `10` + `15` +
+`8` + `13` across the four `tests/security/` modules, which is exactly p174's `46`.
+🟢 **Edits `1` and `2` are WRITTEN and the diff exists** — `13` insertions, `5` deletions, `2`
+files, applied by exact-string replacement so a silent miss is impossible.
+🔴 **The post-patch run was REFUSED three times by this session's execution-permission layer**
+(*"Code from External"*), after the pristine run had been allowed. 🔵 **So the verdict below is a
+STATIC PREDICTION and is labelled as one. It is not a measurement, and `ACTION KI` re-registers it.**
+
+| test | shape | predicted effect of edit `1` |
+|---|---|---|
+| `test_generated_assets_require_model_revision` | `GENERATED`, inside `assertRaises`, missing provider/model/revision | 🟢 **PASSES** — the pre-existing clause raises first |
+| 🔴 `test_apache_two_generated_asset_allows_transformed_commercial_export` | `GENERATED`, full provider/model/revision, **no `c2pa=` kwarg** | 🔴 **BREAKS** — born `NOT_APPLICABLE`, now refused at construction |
+| 🔴 `test_mit_starter_audio_allows_transformed_commercial_export` | same shape | 🔴 **BREAKS** |
+
+🔴 **If that prediction holds, limb 1 fires at `2` of `46` and the conversation with an upstream
+maintainer is the harder one the action warned about: the project's own tests ENCODE the permissive
+default.** 🔵 **`0` tests in the repository pass a `c2pa=` kwarg at all.**
+🔴 **Limb 2 fires on edit `3` whichever way it is written, and this is a firm finding rather than a
+prediction.** `c2patool` appears **nowhere** in the `905` files. `render_editor_timeline` takes
+`ffmpeg_path` from its caller, and its only caller is `native_controls.py:1113` — **a fifth file.**
+🟡 **p175 wrote edit `3` the other way, as `c2patool_path: Path | None = None`, which keeps the
+count at four files and makes the signing step inert unless a caller opts in.** 🔵 **That is
+`T258`'s own defect reproduced by the fix for it: a compliance step nothing sets.** Either the
+figure *"four edits"* is wrong, or the fourth edit does nothing by default. **p174's figure must be
+corrected in `compose/patterns.md`, and it is.**
+🆕 🟢 **And the pass's most useful finding sits under edit `4`, which p174 specified as *"replace the
+hand-written record with the record the signer returns"*.** Measured: **the project ALREADY stores a
+`c2paStatus`.** The generated schema registry lists it as a REQUIRED property of `AssetProvenance`;
+`licensed_media_workflow.py:259` and `:290` and `project_assets.py:246` write it as `"absent"`, and
+`visual_candidates.py:276` and `:611` read it with `"absent"` as the default.
+🔴 **`_provenance_quality_gate` (`workflow.py:2979`) reads TWELVE fields off each stored provenance
+record — `assetId`, `sha256`, `origin`, `rightsStatus`, `licenseId`, `creator`, `attribution`,
+`sourceUri`, `providerId`, `modelId`, `modelRevision`, `consentIds` — and DISCARDS the thirteenth,
+substituting `C2paRecord(C2paStatus.NOT_APPLICABLE)` at line `3018`.**
+🆕 🔵 **`T269` — the defect is data loss, not a missing signer.** `ABSENT` is the one status that
+makes the gate FIRE; `NOT_APPLICABLE` is the one that makes it pass. The code reads the first and
+writes the second. 🟢 **So edit `4` needs no `c2patool`, no certificate and no procurement line
+item: it is a one-line repair that makes the gate see the status the project already records.**
+🟢 **That is the cheapest Article `50(2)` and Art. `5` movement available on this shelf, and it is
+now Pattern `1` in [`compose/patterns.md`](../compose/patterns.md).**
+
+### 🔴 Gaps OPENED, CLOSED or RE-STATED by p175
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🟢 **`gap 125`** | 🟢 **CLOSED BETTER. `8 197` exactly, ONE request, on a channel p174 never probed. The `17`-window partition is retired as the method of record and kept only as a fallback** | 🟢 **Every population figure in this KB is now a single cheap request, and `T264` says why the ledger missed it** |
+| 🟢 **`gap 130`** | 🔴 **CLOSED AGAINST THE CANDIDATE. `eagles-edu/sis` carries `0` of rostering, standards interop and tenancy, by word-boundary count** | 🔴 **The twelve-pass *"no institutional-scale permissive SIS"* row is RESTORED. p174's denominator correction stands; its routing conclusion does not** |
+| 🟡 **`gap 129`** | 🟡 **RE-STATED as MEASURED: article numbers recorded (Art. `4`, Art. `5`), primary text NXDOMAIN on every host** | 🟢 **Stops being *"never even asked for"*. The duty is confirmed broader than the EU's and live since `1 Sep 2025`** |
+| 🟡 **`gap 110`** | 🟡 **CAUSE CORRECTED. `eur-lex` is NXDOMAIN, not `CONNECT` `403`, and so is `en.wikipedia.org`. The limit is an egress ALLOWLIST, not one host's policy** | 🟢 **Generalises: `search-summary` tier is a STANDING property of this container, not a per-instrument accident. It should be declared once, and it now is** |
+| 🟡 **`gap 128`** | 🟡 **NARROWED TWICE. Edits `1`+`2` are written as a real diff; edit `4` turns out to need no signer at all; only edit `3` still needs a certificate AND a fifth file** | 🟢 **The procurement line item shrinks to the EXPLICIT marking step. The metadata-status repair is free** |
+| 🆕 🔴 **`gap 131`** | 🔴 **`9` of `28` script executions in `5` of this KB's own instruments exit non-zero at `HEAD`, and `2` of those failures silently flattered `ACTION KF`'s dynamic figure** | 🔴 **A broken instrument reports as a clean one in any sweep that does not record exit codes. Every re-run claim in this repository needs the rc column** |
+| 🆕 🟡 **`gap 132`** | 🟡 **p175's post-patch suite run was REFUSED by the execution-permission layer after the pristine run was allowed, so `ACTION KH`'s limb 1 is a PREDICTION** | 🟡 **A measurement this KB has published as pending must not be read as taken. `ACTION KI`** |
+| 🆕 🔴 **`gap 133`** | 🔴 **`P50`'s probe list is incomplete: `uccser/cs-field-guide` carries `MIT` at `LICENCE`, the British spelling, and `404`s at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `license`** | 🔴 **Every *"no grant file — exhaustive"* verdict in this KB was reached with a probe list that misses a spelling used across the Commonwealth. `ACTION KJ`** |
+| 🆕 🟡 **`gap 134`** | 🟡 **The `4` new holder-grade institutional repositories are verified for licence body, bytes, copyright holder and `HEAD` sha and NOTHING else** | 🟡 **Same discipline as `gap 130`, learned from it: no interop, tenancy, dependency closure or operator evidence. They are candidates** |
+| 🔴 **`gap 119`** *(carried)* | 🟡 **Every *"North America"* figure is a United States fact under a continental heading** | 🔴 **Fourth consecutive carry, and p175 makes it WORSE: `4` of the `5` new North American placements are US, the fifth is US too. `ACTION KK`** |
+| 🔴 **`gap 127`** *(carried)* | 🟡 **The MEA fork path is still UNTESTED — nobody here has built `37743/Classroom-VR`** | 🟡 **Unchanged, unasked this pass, and still a fork this KB recommends without compiling** |
+| 🔴 **`gap 123`** *(carried)* | 🟢 **IMPROVED but not closed: `ucfopen/canvasapi` is a rostering-adjacent row at last — a Canvas LMS API client, `MIT`, UCF-held** | 🟡 **Still `0` rostering-PRIMARY agent rows, but the administrative layer now has a permissive client library under it** |
+| 🟢 **LATAM repository map** *(carried, 9th pass)* | 🔴 **`0` of `100` rows across two exactly-counted tags. The nearest miss is maintained from Brazil and says nothing about it** | 🟢 **The claim is now as strong as this KB can make it, and it is a MEASUREMENT. The commercial map stays the LATAM story** |
+
+## 🔜 Registered for p176 — pre-registered with falsifiers
+
+🟢 **Five actions. Each names the OLDEST sufficient anchor on disk where it needs one, per `T220`;
+each names its CLASSIFICATION RULE where it depends on one, per `T234`; and each names the CHANNEL
+and its precision where it depends on a count, per `T227` + `T252` + `T264`.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION KI`** — TAKE the measurement `ACTION KH` could only predict: re-apply p175's edits `1`+`2` to a clone of `AkshitIreddy/AI-Powered-Video-Tutorial-Generator` at `9c260890214d` and run `tests/security/` under the stdlib runner, recording the pass/fail name list. Then apply edit `4` as p175 REDEFINED it — read `value.get("c2paStatus")` at `workflow.py:3018` instead of hardcoding `NOT_APPLICABLE` — and run again. Anchor: the `46`/`46` pristine baseline and the `13`-insertion diff committed at p175 | 🔴 *Refuted if the measured failure set is anything other than exactly `test_apache_two_generated_asset_allows_transformed_commercial_export` and `test_mit_starter_audio_allows_transformed_commercial_export`, which would mean p175's static reading of a `__post_init__` ordering was wrong and every *"predicted"* claim in that block needs re-reading. ALSO refuted if edit `4` alone breaks `≥1` test, which would mean the project's tests depend on the laundering and not merely on the default* |
+| 🟢 **`ACTION KJ`** — settle `gap 133`: re-probe every repository this KB has ever recorded as *"NO GRANT FILE"* or *"licence absent"* for `LICENCE`, `LICENCE.md`, `LICENCE.txt` and `COPYING.md`, and extend `P50`'s probe list in the shared classifier with offline tests. Anchor: `JushBJJ/Mr.-Ranedeer-AI-Tutor`'s *"NO GRANT FILE — exhaustive"* verdict on the `12`-row shelf, and `uccser/cs-field-guide` as the known positive | 🔴 *Refuted if `≥1` repository previously recorded as grant-free turns out to carry a grant at a British spelling, which converts a published licence verdict and means the word *"exhaustive"* has been used wrongly in this KB. ALSO refuted if `0` of them do AND the probe list was already complete for every path but `LICENCE`, in which case `gap 133` is one repository's quirk and needs no rule change* |
+| 🟢 **`ACTION KK`** — settle `gap 119` after four carries rather than carrying it a fifth time: for every row this KB places in *"North America"*, record the COUNTRY the artefact itself names, and either rename the heading or publish the country split. Anchor: p175's `5` North American placements — `ucfopen/canvasapi` (UCF), `AnubisLMS/Anubis` (NYU), `learningequality/kolibri`, and `microsoft/Web-Dev-For-Beginners` and `microsoft/ML-For-Beginners` | 🔴 *Refuted if `≥1` North American row is placed by a Canadian or Mexican institution, which would mean the continental heading is honest and `gap 119` should close. ALSO refuted if the artefacts of `≥2` rows name no country at all, in which case they are `P800`-placed to a CONTINENT by an organisation's address and the heading is the only available precision* |
+| 🟢 **`ACTION KL`** — give `gap 131` a gate: sweep every instrument in `compose/code/` by RUNNING it and recording the exit code, and report the non-zero rate against the `9`/`28` p175 measured on a `5`-instrument sample. Anchor: p175's rc column in `evidence/dated-rerun.2026-10-13-p175.tsv` | 🔴 *Refuted if the full-suite non-zero rate is `<10%`, which would mean p175's `32%` was a sampling artefact of five instruments chosen for a different reason. ALSO refuted if `>60%` fail, in which case `compose/code/` is not a suite at all and every claim anchored on *"the instrument says"* has to be re-derived from committed outputs rather than re-runs* |
+| 🟢 **`ACTION KM`** — verify ONE of p175's `4` holder-grade institutional repositories past its licence, applying `T265`'s lesson: pick [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) (`HEAD` `513588f3077f`, `MIT`, `1 129` B, UCF Center for Distributed Learning) and look for the ARTEFACT rather than the token — named Canvas REST endpoints, pagination handling, an auth model, and whether it reaches rostering objects (`enrollments`, `sections`, `terms`) or only content. Anchor: the `6` rows committed to `repos/foundations.md` at p175 | 🔴 *Refuted if it covers rostering objects AND carries its own auth model, which would make it a routable rostering client and close `gap 123` for the administrative layer. ALSO refuted if it is a thin generated wrapper with no pagination or error semantics, in which case *"institutional-grade"* is a statement about its copyright holder and not about the code, and p175's promotion of all four rows needs the same caveat* |
+
 ## Pass 174 — 2026-10-13
 
 🟢 **Verdicts on the FIVE actions p173 registered — `2` DISCHARGED with silent falsifiers, `3`

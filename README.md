@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 175 — 2026-10-13
+
+🟢 **Five pre-registered actions: `2` DISCHARGED WITH A LIMB FIRED, `2` DISCHARGED with silent
+falsifiers, `1` DISCHARGED ON A PREDICTION whose measurement was refused and re-registered.**
+🆕 🟢 **The pass's most consequential finding for this KB's own method: p174's headline achievement
+is retired one pass later.** It reached an exact population count by partitioning a rounding search
+into `17` paced requests. The authenticated GitHub MCP search tool answers the same query exactly in
+**one** request: **`8 197`**, against p174's partition sum of `8 191`. 🔴 **p174's channel ledger
+named `7` request forms and found the `2` that answer. The form that answers best was never in the
+ledger (`T264`).**
+🆕 🔴 **The pass's most consequential finding for a client: the tag this KB used for eleven passes
+was not merely `60.7×` too small — it was regionally BLIND.** `topic:ai-education`'s top `50` places
+**`0`** rows in North America and `6` of its `7` in APAC. `topic:education`'s top `50` places `5` in
+North America, `5` in APAC and `2` in EMEA. 🔵 **Every *"North America is thin at the repository
+layer"* sentence in this KB was a statement about its query (`T266`).**
+🆕 🔴 **The pass's most uncomfortable finding: p174's new student information system carries none of
+what it appeared to carry, and the reason is a substring.** `ed-fi` was matching `red-fill`; `edfi`
+was matching `normalizedField`; `lti` was matching `LevelTile`. **Word-boundary count: `0` of `17`
+tokens**, including OneRoster, Ed-Fi, LTI, SCORM, xAPI, tenancy and every federated auth protocol.
+The twelve-pass *"no institutional-scale permissive SIS"* row is RESTORED (`T265`).
+🆕 🟢 **The pass's most satisfying finding: the Article `50(2)` fix is cheaper than p174 thought and
+needs no certificate.** The shelf's best-equipped row already STORES a `c2paStatus` — its schema
+registry requires the field and three writers set it — and its export quality gate reads twelve
+fields off each stored provenance record and **discards that one**, substituting the single status
+that makes the gate pass. 🔵 **The defect is data loss, not a missing signer (`T269`).**
+🆕 🔴 **The pass's sharpest single datum: `eur-lex.europa.eu` is NXDOMAIN here, not a `CONNECT`
+`403`.** `9` of `11` probed hosts do not resolve, `en.wikipedia.org` among them; only `github.com`
+and `raw.githubusercontent.com` do. 🔵 **`gap 110`'s cause was a property of the egress allowlist all
+along, not of one host's policy (`T267`).**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION KD`** — regional sweep on the corrected denominator | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `0` LATAM in `100` rows across two exactly-counted tags; `12` placeable rows against `7`, so the wider tag buys size AND placement. `4` NEW holder-grade institutional placements in `3` regions** |
+| 🔴 **`ACTION KE`** — verify the new SIS past its licence | 🔴 **DISCHARGED, LIMB 1 FIRED. `0` word-boundary matches across `17` interop and auth tokens. A model named `SisConfigMirror` settles it: a portal in front of an SIS, not an SIS** |
+| 🟡 **`ACTION KF`** — do instruments destroy their own evidence? | 🟡 **DISCHARGED, LIMB 1 FIRED ON ONE READING AND SILENT ON THE OTHER — `6` instruments WRITE a hardcoded dated file, `1` actually rewrites one. And `9` of `28` script runs exit non-zero, which confounds the second figure** |
+| 🟢 **`ACTION KG`** — read China's labelling text | 🟢 **DISCHARGED, BOTH LIMBS SILENT. Art. `4` explicit / Art. `5` implicit, live `1 Sep 2025`, and BROADER than the EU's. Primary text NXDOMAIN on `9` of `11` hosts** |
+| 🟡 **`ACTION KH`** — write the Article `50(2)` patch | 🟡 **DISCHARGED ON A PREDICTION, and labelled as one. Baseline `46`/`46` reproduced on an independent runner; edits `1`+`2` written as a real diff; the post-patch run REFUSED `3`× by the permission layer; edit `3` needs a fifth file or an opt-in nothing sets; edit `4` turns out to need no signer** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`P175-A`** — the dated-evidence gate
+  ([`compose/code/p175-dated-evidence-gate/`](compose/code/p175-dated-evidence-gate)): a
+  WRITE-versus-MENTION classifier with the rule stated in prose before it is coded, offline tests
+  including a fabricated negative control that must stay silent, and a re-run harness that records
+  the EXIT CODE next to every verdict — which is the column whose absence confounded `ACTION KF`.
+- 🆕 🟢 **`P175-B`** — the one-request exact count: the authenticated MCP search channel, with both
+  populations (`8 197` and `135`) and the agreement check against p174's `17`-window partition.
+- 🆕 🟢 **`P175-C`** — the word-boundary interop probe: `17` tokens, the case-insensitive count and
+  the word-boundary count side by side, and the substring each false positive was actually matching.
+- 🆕 🟢 **Six institutional repositories in [`repos/foundations.md`](repos/foundations.md)**, four of
+  them placed by the INSTITUTION IN THE LICENCE BODY — `ucfopen/canvasapi` (University of Central
+  Florida, Center for Distributed Learning), `ls1intum/Artemis` (TUM Applied Education
+  Technologies), `dodona-edu/dolos` (`ugent.be`) and `uccser/cs-field-guide` (University of
+  Canterbury CSER Group) — plus `AnubisLMS/Anubis` (NYU) and `showlab/Code2Video` (ICML 2026) placed
+  one grade weaker and marked as such.
+- 🆕 🟢 **A refined Pattern `1` in [`compose/patterns.md`](compose/patterns.md)**: the Article
+  `50(2)` / Art. `5` metadata repair as ONE line, with the three writers that already store the
+  status and the twelve fields the gate reads before it drops the thirteenth.
+- 🆕 🔴 **`T264`–`T269` — six method theses, five of them about this KB's own habits:** a channel
+  ledger is only as good as the forms it thought to try; a tag is a sampling frame and can sample a
+  continent out; a substring grep fails only in the direction that flatters its subject; one
+  falsifier sentence can ask two questions with different answers; an egress allowlist is not a
+  host's policy; and a compliance defect can be data loss rather than a missing control.
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`ACTION KH`'s limb-1 verdict is a PREDICTION, not a measurement.** The post-patch suite run
+  was refused three times by the execution-permission layer after the pristine run had been allowed.
+  `2` of `46` tests are predicted to break, by a static reading of `__post_init__` ordering.
+  Nothing in that block should be read as measured (`gap 132`, `ACTION KI`).
+- 🔴 **`9` of `28` script executions in this KB's own sampled instruments exit non-zero at `HEAD`,**
+  and two of those failures made `ACTION KF`'s dynamic figure look better than it is. The full-suite
+  rate is unmeasured (`gap 131`, `ACTION KL`).
+- 🔴 **`P50`'s probe list misses `LICENCE`.** `uccser/cs-field-guide` carries `MIT` at the British
+  spelling and `404`s at five other paths, so every *"no grant file — exhaustive"* verdict in this
+  KB was reached with an incomplete probe (`gap 133`, `ACTION KJ`).
+- 🔴 **The four new holder-grade rows are verified for licence body, bytes, holder and `HEAD` and
+  NOTHING else** — no interop, tenancy, dependency closure or operator evidence. That discipline is
+  the direct lesson of `ACTION KE` (`gap 134`, `ACTION KM`).
+- 🔴 **Ninth consecutive pass with no LATAM-originated open-source education repository** — but the
+  claim is now a measurement: `0` of `100` rows across two exactly-counted tags, placement rule
+  applied row by row. The nearest miss, `kelvins/algorithms-and-data-structures` (`1 088`★), is
+  maintained from Brazil and its artefact says nothing about it, which is what `P800` exists to
+  refuse.
+- 🔴 **`gap 119` carried a FOURTH time and p175 makes it worse:** all `5` new *"North America"*
+  placements are United States institutions under a continental heading (`ACTION KK`).
+- 🔴 **Primary legal text remains unread for BOTH markets.** Article `113` verbatim and China's
+  labelling measures are now known to be unreachable for the same reason, which generalises
+  `gap 110` rather than fixing it.
+
 ## Pass 174 — 2026-10-13
 
 🟢 **Five pre-registered actions: `2` DISCHARGED with silent falsifiers, `3` DISCHARGED WITH A LIMB

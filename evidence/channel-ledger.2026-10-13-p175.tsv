@@ -1,0 +1,30 @@
+channel	request	result	precision	notes
+mcp.github.search_repositories	topic:education license:mit pushed:>=2026-04-16	total_count=8197	EXACT	one request; 50 rows + topics in the same response
+mcp.github.search_repositories	topic:ai-education license:mit pushed:>=2026-04-16	total_count=135	EXACT	identical to p173 and p174 - that figure was exact all along
+mcp.github.get_file_contents	ucfopen/canvasapi LICENSE	REFUSED	-	"repository not configured for this session" - session scope, not auth
+mcp.github.get_file_contents	ls1intum/Artemis LICENSE	REFUSED	-	same refusal
+webfetch	github.com/search ... &p=1	200, "8.2k results"	2 significant figures	reproduces p174's rounding observation
+webfetch	github.com/search ... &p=2	200, 10 rows	-	-
+webfetch	github.com/search ... &p=3	200, 10 rows	-	-
+webfetch	github.com/search ... &p=4	429 Too Many Requests	-	after 3 page reads this pass, against p174's 7-10
+webfetch	en.wikipedia.org/wiki/Interim_Measures...	getaddrinfo ENOTFOUND	-	WebFetch is bound by the same resolver for non-allowlisted hosts
+webfetch	www.chinalawtranslate.com/en/ai-labeling/	getaddrinfo ENOTFOUND	-	-
+webfetch	agora.eto.tech/instrument/2096	getaddrinfo ENOTFOUND	-	-
+webfetch	www.cac.gov.cn/2025-03/14/c_1743654684782215.htm	getaddrinfo ENOTFOUND	-	primary text of the labelling Measures
+resolver	www.cac.gov.cn	NXDOMAIN	-	-
+resolver	cac.gov.cn	NXDOMAIN	-	-
+resolver	www.gov.cn	NXDOMAIN	-	-
+resolver	npc.gov.cn	NXDOMAIN	-	-
+resolver	www.chinalawtranslate.com	NXDOMAIN	-	-
+resolver	agora.eto.tech	NXDOMAIN	-	-
+resolver	www.twobirds.com	NXDOMAIN	-	-
+resolver	eur-lex.europa.eu	NXDOMAIN	-	CORRECTS p174: recorded there as a CONNECT tunnel 403 by org policy
+resolver	en.wikipedia.org	NXDOMAIN	-	CONTROL - a benign host, also refused, so this is an allowlist
+resolver	github.com	140.82.112.3	-	CONTROL - resolves
+resolver	raw.githubusercontent.com	185.199.110.133	-	CONTROL - resolves; serves licence bodies
+curl	https://github.com/	400	-	HTTP-layer refusal on a host that resolves
+curl	https://raw.githubusercontent.com/<o>/<r>/HEAD/LICENSE	200	-	the licence-body channel of record
+git	ls-remote <url> HEAD	ok, 6 of 6	-	the HEAD-sha channel of record, no clone needed
+git	clone eagles-edu/sis	ok, 2598 files	-	-
+git	clone AkshitIreddy/AI-Powered-Video-Tutorial-Generator	ok, 905 files	-	HEAD still 9c260890214d
+websearch	standard + extended, 6 queries	ok	search-summary tier	the ONLY channel that reaches legal text here

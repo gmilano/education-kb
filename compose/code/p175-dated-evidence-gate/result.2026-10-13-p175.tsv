@@ -1,0 +1,15 @@
+script	dated_target	date_source
+p1026-archive-regression-census/test_census.sh	held-only-in-a-worklist.2026-01-01.txt	hardcoded
+p1026-archive-regression-census/test_census.sh	result.2026-01-01.tsv	hardcoded
+p1040-ecl-corpus-census/packagist.sh	result.packages-packagist.2026-10-10.tsv	hardcoded
+p1040-ecl-corpus-census/packagist.sh	result.types-packagist.2026-10-10.tsv	hardcoded
+p1040-ecl-corpus-census/retry.sh	result.packages-packagist.2026-10-10.tsv	hardcoded
+p120-unread-grant-resolution/resolve.sh	verdict.2026-10-11.tsv	hardcoded
+p120-unread-grant-resolution/score.py	phantom-claims.2026-10-11.tsv	hardcoded
+p120-unread-grant-resolution/score.py	score.2026-10-11.tsv	hardcoded
+p120-unread-grant-resolution/score_after.py	phantom-claims.2026-10-11.tsv	hardcoded
+p120-unread-grant-resolution/score_after.py	score.2026-10-11.tsv	hardcoded
+p164-equity-fix-controls/run_fix.py	result.2026-10-13-p164.tsv	hardcoded
+p326-titleholder-book-license/census_items.py	census-items.2026-10-05.tsv	hardcoded
+p326-titleholder-book-license/census_items.py	por-curso.2026-10-05.tsv	hardcoded
+p345-oer-four-forms/corte_figuras.py	corte-figuras.2026-10-05.tsv	hardcoded

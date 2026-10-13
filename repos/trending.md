@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p175
+
+🆕 🟢 **This page's headline is that p174's headline is retired, one pass later, by a channel nobody
+had asked.** p174 established that an exact count above `1 000` was obtainable by partitioning
+`pushed:` into `17` disjoint windows and summing — `8 191` repositories, `17` paced requests, a
+`429` to work around. 🟢 **The authenticated GitHub MCP search tool answers the same query in ONE
+request, exactly: `8 197`.**
+
+| figure | channel | requests | precision | agreement |
+|---|---|---|---|---|
+| 🆕 🟢 **`8 197`** | 🟢 **authenticated MCP repository search** | 🟢 **`1`** | 🟢 **EXACT integer** | — |
+| 🟡 `8 191` | `github.com/search` + `WebFetch`, `17` windows | 🔴 `17` | 🟢 exact, summed | 🟢 **`-0.07%`** |
+| 🔴 *"`8.2k`"* | the same page, one query | `1` | 🔴 `2` significant figures | — |
+| 🟢 **`135`** *(`topic:ai-education`)* | 🟢 **MCP, `1` request** | 🟢 **`1`** | 🟢 **EXACT** | 🟢 **identical to p173 and p174** |
+
+🆕 🔵 **`T264` — a channel ledger is only as good as the request forms somebody thought to try.**
+p174's ledger was honest and complete about what it tested: `api.github.com/search` and
+`api.github.com/graphql` both `403` by session binding, `github.com/search` `403` to `curl` and
+`200` to `WebFetch`, `repos.ecosyste.ms` denied at the tunnel. 🔴 **It named `7` forms. The eighth
+was an authenticated MCP tool already loaded in the session.**
+🟢 **The partition is kept as a FALLBACK rather than deleted** — it is the method that still works
+when the authenticated channel is gone, and `-0.07%` over two days of drift is a good agreement
+control, not a discrepancy.
+🔴 **And the new channel's limit, measured so nobody over-trusts it: it answers SEARCH and REFUSES
+per-repository file reads**, by session scope (*"not configured for this session"*). Licence bodies
+this pass came from `raw.githubusercontent.com`; `HEAD` shas from `git ls-remote`. 🔵 **Three
+channels, three jobs.**
+
+### 🆕 🔴 The trending population is regionally skewed, and the skew was in the query
+
+🟢 **`P800` applied to the top `50` by stars of BOTH tags, row by row, this pass:**
+
+| population | total | placeable | North America | EMEA | APAC | 🔴 **LATAM** | holder-grade |
+|---|---|---|---|---|---|---|---|
+| 🟢 **`topic:education`** | 🟢 **`8 197`** | `12` of `50` | 🟢 **`5`** | 🟢 **`2`** | `5` | 🔴 **`0`** | 🟢 **`4`** |
+| 🔴 `topic:ai-education` | `135` | `7` of `50` | 🔴 **`0`** | `1` | `6` | 🔴 **`0`** | 🔴 **`0`** |
+
+🆕 🔵 **`T266` — a tag is a sampling frame, and this one sampled a continent out.** Not one of the
+`135`-row shortlist's placeable members is North American, and not one is holder-grade. 🔴 **Eleven
+passes of *"APAC places the agent rows and North America is thin"* described the frame, not the
+field.**
+🟢 **What the wider tag surfaces that the narrow one structurally cannot: university-OWNED teaching
+software.** `ls1intum/Artemis` is the Technical University of Munich's own exercise and exam
+platform under `MIT`; `dodona-edu/dolos` is Ghent's plagiarism detector; `ucfopen/canvasapi` is the
+University of Central Florida's Canvas client; `uccser/cs-field-guide` is a University of Canterbury
+textbook. 🔵 **None of these would ever tag itself `ai-education`, because none of them is an AI
+product. They are the institutional substrate AI gets added to** — which is precisely the shape an
+engagement needs.
+
+### 🆕 🟢 New this window — six rows, all permissive, licence bodies read
+
+| repo | ★ | licence | `HEAD` | region | shape |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | `2 123` | `MIT`, `1 072` B | `1142d8e14cdc` | 🟡 APAC | educational video generation **via code**, ICML 2026 |
+| 🆕 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `818` | `MIT`, `1 090` B | `09266581a02c` | 🟢 **EMEA** | institutional exercise + exam platform, autograding |
+| 🆕 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | `682` | `MIT`, `1 129` B | `513588f3077f` | 🟢 **North America** | Canvas LMS API client — rostering-adjacent |
+| 🆕 🟢 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | `381` | `MIT`, `1 128` B at **`LICENCE`** | `7e323930cf6f` | 🟢 **APAC** | interactive high-school CS textbook |
+| 🆕 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `381` | `MIT`, `1 082` B | `894ed020997f` | 🟡 North America | distributed LMS on Kubernetes, cloud IDE |
+| 🆕 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | `350` | `MIT`, `1 083` B | `44925b867ce7` | 🟢 **EMEA** | source-code plagiarism detection |
+
+🟡 **All six are licence-, holder-, byte- and `HEAD`-verified and NOTHING else.** 🔴 **No interop, no
+tenancy, no dependency closure, no build** — `gap 134`, and the discipline is the direct lesson of
+the row that left [`repos/foundations.md`](foundations.md) this pass.
+
+### 🔴 What this window did NOT find, said rather than left as silence
+
+🔴 **No LATAM-originated repository, ninth consecutive pass — and now `0` of `100` rows** across two
+exactly-counted tags with the placement rule applied row by row. 🔵 **The nearest miss,
+[`kelvins/algorithms-and-data-structures`](https://github.com/kelvins/algorithms-and-data-structures)
+(`1 088`★, `MIT`), is maintained from Brazil and its artefact says nothing about it.**
+🔴 **No Middle East or Africa row, and p174 established that as a MEASURED absence** (`16`
+formulations, `0` qualifying) rather than a coverage gap. It is not re-registered.
+🔴 **No rostering-PRIMARY row.** `canvasapi` is a CLIENT for someone else's rostering surface, which
+improves `gap 123` without closing it.
+🔴 **And the `429` that shaped p174's method is still there on the `WebFetch` channel** — it arrived
+after `3` page reads this pass, earlier than p174's `7`–`10`. 🔵 **Another reason to prefer the
+authenticated channel for counts and keep `WebFetch` for pages.**
+[`evidence/regional-sweep.2026-10-13-p175.tsv`](../evidence/regional-sweep.2026-10-13-p175.tsv)
+· [`evidence/channel-ledger.2026-10-13-p175.tsv`](../evidence/channel-ledger.2026-10-13-p175.tsv)
+
 ## 2026-10-13 — p174
 
 🆕 🟢 **This page can state the size of the open-source education vertical exactly, for the first
