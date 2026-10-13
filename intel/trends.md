@@ -1,8 +1,100 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
+
+### 1. 🆕 🔴 The AI Act's high-risk boundary runs BETWEEN two open-source LMS platforms, and it is a property file — *Global, strongest in EMEA and APAC, measured*
+
+🟢 **Three platforms read from clones this pass.** 🟡 **Moodle: `372` AI files, `4` actions —
+`generate_text`, `generate_image`, `summarise_text`, `explain_text` — `0` of them evaluative.**
+🟢 **OpenOLAT: `149` AI files, `4` features — and one of them is `essay-grading`.**
+🔴 **`edx-platform`: `0` AI files of any kind.**
+🔴 **So an institution crosses into Annex III's evaluative tier by setting
+`ai.feature.essay-grading.enabled=true` in `olat.properties`, a line that ships `false`.**
+🔵 **The consequence for a studio: the regulatory scoping conversation now has a concrete
+artefact in it. Not *"will the LMS do AI"* but *"which of these four flags, and does any of them
+grade"*.** 🟢 **`T140`.**
+
+### 2. 🆕 🟢 Human oversight has an OPEN-SOURCE REFERENCE IMPLEMENTATION, and it is not a policy document — *Global, strongest in EMEA, measured*
+
+🟢 **OpenOLAT's grading path was read line by line.** 🟢 **The model returns raw signals only and
+its own holistic score is documented in the code as *"advisory only, server-side weighting is
+authoritative"*, so the number that reaches the gradebook is computed by the platform.**
+🟢 **A consent modal offers `allow-once` / `allow-always` / `deny`.** 🟢 **Three pre-filters —
+gibberish by trigram entropy, language mismatch, length — refuse the call BEFORE a provider is
+paid.** 🟢 **Confidence, off-topic flag and issue severity are typed enums, not prose.**
+🟢 **`a_content_hash_at_call` and `a_prompt_template_version` make a contested mark
+re-runnable against the exact prompt that produced it.**
+🔵 **Every one of these is something a studio has been writing into a governance deck. One of
+them is now `Apache-2.0` code a client can read.** 🟢 **`P161-A`.**
+
+### 3. 🆕 🔴 Both platforms that ship AI retain prompts and responses, and NEITHER deletes them — *Global, measured*
+
+🔴 **Moodle stores `prompt` and `generatedcontent` verbatim in `ai_action_generate_text`,
+`ai_action_summarise_text` and `ai_action_explain_text`, and `prompt` + `revisedprompt` +
+`sourceurl` in `ai_action_generate_image`.** 🔴 **`grep -riE 'retention|purge|cleanup|expiry'`
+over `public/ai` returns nothing; there is no `db/` directory, no scheduled task and no
+settings page in the subsystem.** 🔴 **OpenOLAT's `AiUsageLogDAO` has no delete method and
+`o_ai_essay_correction.a_student_answer` is `text NOT NULL` — the essay itself.**
+🟢 **Moodle's GDPR surface is nonetheless complete — `806` LOC, export plus three delete paths,
+all six tables declared — so erasure works on REQUEST.** 🟡 **And `tool_dataprivacy` can expire
+contexts on a schedule, gated behind `automaticdatadeletionapproval`, which ships `0`.**
+🔵 **The pattern across the industry: GOVERNANCE shipped, RETENTION not. Consent and audit are
+features a product manager can demo; a deletion job is not.** 🟢 **`P161-B`.**
+
+### 4. 🆕 🔴 A capability census must read the MIGRATIONS, because a platform can delete a feature and keep its files — *Global, measured*
+
+🔴 **`edx-platform` has `23` non-test `badge` paths and a whole `lms/djangoapps/badges` app.**
+🔴 **`migrations/0005_delete_all_models.py`, dated 2023-10-24, drops `BadgeClass`,
+`BadgeAssertion`, `CourseEventBadgesConfiguration` and `CourseCompleteImageConfiguration`.
+`models.py` is a `25`-line stub.**
+🔵 **`T136` showed a path census over-counts by NAME. `T141` is the fourth contamination and it
+over-counts by HISTORY — the files are real, the feature is gone.** 🟢 **`P160-A` gains a
+STEP 7: read the migration directory before publishing a capability as present.**
+
+### 5. 🆕 🔴 On a plugin-architecture platform, a single-repo census publishes FALSE ABSENCES — *Global, measured*
+
+🔴 **In `edx-platform`, `lti13`, `lti1p3` and `ltiadvantage` all return `0`; `xapi` returns one
+migration.** 🟢 **Both capabilities exist — as `lti-consumer-xblock` and
+`event-routing-backends`, pinned in `requirements/edx/base.txt`.**
+🔵 **`T142`: the dependency manifest is the second instrument, and on a platform whose
+`9 243` tracked files are a tenth of Moodle's, it is the more informative one.**
+🔵 **It also changes how a capability is SCOPED commercially: an Open edX LTI deliverable is a
+dependency with its own licence and its own maintainer, not a platform feature.**
+
+### 6. 🆕 🟢 Europe finally has an adoption number, and the belief number underneath it is the finding — *EMEA, search-summary*
+
+🟢 **`63%` of European teachers now use AI — more than `20 000` teachers, `14` countries, Sanoma
+Learning's 2026 European Teacher Survey.** 🔴 **`16%` believe general-purpose AI improves
+learning outcomes, *"changed only marginally"* year on year.**
+🔵 **A `63%` / `16%` split is the clearest statement of the market this shelf has recorded:
+teachers are using tools they do not believe in, which is a demand signal for
+education-specific systems and a warning to anyone selling a general assistant with a
+mortarboard on the landing page.**
+🔴 **Labelled *search-summary* — the primary release host does not resolve from this session,
+sixth measurement of the egress boundary.**
+
+### 7. 🆕 🟡 The enthusiasm gap between APAC and North America is `31` points in the same instrument — *APAC and North America, measured*
+
+🟡 **`57%` of Asia-Pacific faculty are excited about AI's potential to make learning more
+effective; `26%` of US+Canada faculty are (DEC 2026, `45 398` responses, `35` countries).**
+🟢 **It sits directly underneath the intent decline this shelf already held — US+Canada faculty
+intent `76% → 67%`, the lowest of any region DEC tracked.**
+🔵 **Read together they say the Western market is in a disillusionment phase while APAC is still
+in an expansion one** — 🔴 **but an APAC adoption RATE still does not exist after seven passes,
+so the expansion is measured by sentiment, not by use.**
+
+### 8. 🆕 🔴 The aggregator layer re-regionalises figures, and only a second query catches it — *Global, measured*
+
+🔴 **This pass's APAC search returned a figure this shelf holds as US+Canada, attached to
+Asia-Pacific and described as the region with the lowest intent.** 🟢 **A targeted re-query
+settled it in the shelf's favour; nothing was changed.**
+🔵 **`T143` is a gate, not an anecdote: a held figure arriving with a NEW region attached is a
+provenance event. Re-query naming the instrument before the shelf is touched.**
+🔵 **It also bounds what regional saturation means — the channel is not merely repeating itself,
+it is repeating itself with drift.**
 
 ## Pass 160 — 2026-10-12
 

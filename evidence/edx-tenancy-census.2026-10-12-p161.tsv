@@ -1,0 +1,14 @@
+# p161 ACTION IB — P160-A run over openedx/edx-platform at 3368a6b (9 243 tracked files, 207 MB clone).
+# Falsifier was: "refuted if edx-platform has NO multi-tenancy". It HAS multi-tenancy. SILENT.
+dimension	probe	raw	after_disambiguation	verdict
+tenancy	ipath *tenant*	0	0	a token census says ABSENT and is WRONG — the capability is spelled 'site'
+tenancy	ipath *site_configuration* + grep django.contrib.sites	39 paths	66 files importing django.contrib.sites	PRESENT — SiteConfiguration is OneToOne with Site, site_values JSONField overrides settings per tenant
+LTI	ipath *lti* (T136a: strip 'multi')	122	102	PRESENT but mostly references — the implementation is the separate lti-consumer-xblock package
+LTI 1.3 spelling	lti13 / lti1p3 / lti_1p3 / ltiadvantage	0 / 0 / 0 / 0	0	FALSE ABSENCE if read alone — Open edX spells it lti_consumer and ships it out of repo
+badges	ipath *badge*	38	23 non-test	CONTAMINATED — migration 0005_delete_all_models.py (2023-10-24) DELETES BadgeClass, BadgeAssertion, CourseEventBadgesConfiguration, CourseCompleteImageConfiguration; models.py is a 25-line stub
+OB 3.0 / W3C VC	grep -rilE 'OpenBadgeCredential|VerifiableCredential|credentialSubject|ob/v3p0'	0	0	ABSENT — extends the shelf's run to 0 of 6 platforms issuing
+xAPI / Caliper	ipath *xapi* / *caliper*	1	1	only a migration adding external_user_id types; emission lives in event-routing-backends, a separate repo
+SCORM	ipath *scorm*	0	0	ABSENT from core
+QTI	ipath *qti*	2	2	ABSENT in practice
+AI surface	type d ipath */ai* (disambiguated) + grep openai|anthropic|ollama|llm	0	0	NO AI subsystem of any kind in core
+licence	LICENSE, 35 136 B, body read	AGPL-3.0	AGPL-3.0	NOT in the permissive tier

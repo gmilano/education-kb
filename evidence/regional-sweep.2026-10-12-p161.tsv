@@ -1,0 +1,15 @@
+# p161 regional sweep — every query run globally and once per region, with the verdict on what came back.
+region	query	new_this_pass	verdict
+Global	top open source AI agents education 2026 github MIT	no	returned general-purpose agent tooling and AI COURSES; Hermes Agent, ai-engineering-from-scratch, microsoft/ai-agents-for-beginners all already held. T110 corroborated
+Global	AI education industry trends 2026	no	IMARC, 40.9% CAGR, 79.6B, 92% student use — every figure already on the shelf. Market size, TWELFTH pass unchanged
+Global	github trending education AI 2026	no	returned AI curriculum repos, no education-DOMAIN repository. T110 corroborated a fifth time
+Global	open source platform education ERP CRM MIT Apache	no	openeducat.org glossary in FIVE locales plus ERPNext (GPL-3.0) and Twenty (BSL-1.1). T122 corroborated a FIFTH time, FOURTEENTH pass with no permissive education ERP
+North America	AI education North America 2026 adoption regulation players	partial	NEW: 26% of US+Canada faculty excited about AI improving learning (DEC 2026). Held: 36% regional share, ~10% with formal guidance, 71% of teachers untrained, Gates/CMU $55M, $951M->$2 303.2M M&M series
+EMEA	AI education EMEA 2026 adoption regulation players	no	Europe EdTech 200, UK AI Adoption Summit GBP200m+, Skills England — all already held
+EMEA	percentage of European schools universities using AI 2026 survey adoption rate (extended)	YES	NEW: Sanoma Learning 2026 European Teacher Survey — 63% of European teachers now use AI, n>20 000 across 14 countries, 16% believe general-purpose AI improves learning. First EMEA-wide adoption RATE in twelve passes. Gap 370 PARTIALLY DISCHARGED
+EMEA	(same query)	quarantined	'EUA March 2026: 68% of EU HEIs run >=1 AI teaching tool, up from 34% in 2024' — single secondary blog, EUA report not locatable, and the shelf already records EUA as returning nothing. NOT adopted
+APAC	AI education APAC 2026 adoption regulation players	no	returned enterprise-AI material; TCS+Pearson, LearnUpon, Alteryx, OpenAI ANZ policy lead all already held
+APAC	percentage teachers students using AI Asia Pacific 2026 survey (extended)	partial	NEW: 57% of Asia-Pacific faculty excited about AI's potential vs 26% in US+Canada (DEC 2026). An ATTITUDE measure, not an adoption rate — the APAC adoption-RATE gap stands, SEVENTH pass
+APAC	(same query)	instrument defect	The summary attributed the 76%->67% faculty-intent decline to ASIA-PACIFIC. A second query established it is US+Canada, 'the lowest of any region DEC tracked'. The shelf's attribution was already correct
+LATAM	AI education LATAM 2026 adoption regulation players	no	IESALC/UNU-IAS 200 institutions / 19 countries, Tec de Monterrey 92%/79%, ILIA, Brookings, and the 'Rest of Latin America $18.2M -> $36M' scope trap — all already held and the trap already refused. THIRD consecutive pass with 0 new LATAM facts
+Global	Digital Education Council 2026 survey regional split	partial	NEW provenance anchor: 45 398 responses — 27 284 students, 18 114 faculty — across 35 countries. The figures this shelf carries now have their denominator

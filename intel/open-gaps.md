@@ -1,8 +1,63 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## 🔴 Verdicts on the THREE actions p160 registered, judged by p161 — all three DISCHARGED, ONE FALSIFIER FIRED
+
+🟢 **Sixth consecutive three-action register.** 🔴 **The first FIRING in three passes, and it
+refutes a platform claim this shelf made one pass ago and had already routed engagements on.**
+🔴 **Standing caveat unchanged: p161 judges actions p160 wrote, and p161 did the work. These are
+self-assessments.**
+
+| action | verdict | evidence |
+|---|---|---|
+| 🔴 **`ACTION HZ`** — read `OpenOLAT`'s AI surface as `HX` read Moodle's | 🔴 **DISCHARGED — falsifier FIRED** | Condition: *"refuted if OpenOLAT ships a per-call AI audit ledger comparable to `ai_action_register`."* 🔴 **It ships `o_ai_usage_log` with `33` columns against Moodle's `15`, including request parameters (`temperature`, `top_p`, `max_output_tokens`), cache and reasoning tokens, `a_duration_millis`, `a_resp_finish_reason` and a four-field call correlation.** 🆕 🔴 **And the larger finding nobody registered: OpenOLAT ships an EVALUATIVE action (`essay-grading`) where Moodle core ships none — `T140`.** [`evidence/ai-surface-tri-platform.2026-10-12-p161.tsv`](../evidence/ai-surface-tri-platform.2026-10-12-p161.tsv) |
+| 🟢 **`ACTION IA`** — read Moodle's AI ledger as a SCHEMA: retention, purge, privacy exporters, prompt/response storage | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if the ledger retains neither prompt nor response text."* 🔴 **It retains BOTH: `ai_action_generate_text` / `summarise_text` / `explain_text` each hold `prompt text` + `generatedcontent text`; `ai_action_generate_image` holds `prompt`, `revisedprompt`, `sourceurl`.** 🟢 **Privacy: `806`-LOC provider implementing metadata + subsystem + `core_userlist`, with export and three delete paths, all six tables declared.** 🔴 **Retention: ABSENT — `0` matches for `retention|purge|cleanup|expiry` in `public/ai`, no `db/`, no scheduled task, no settings page.** [`evidence/moodle-ai-ledger-schema.2026-10-12-p161.tsv`](../evidence/moodle-ai-ledger-schema.2026-10-12-p161.tsv) |
+| 🟢 **`ACTION IB`** — run `P160-A` over `openedx/edx-platform` | 🟢 **DISCHARGED — falsifier SILENT** | Condition: *"refuted if `edx-platform` has NO multi-tenancy."* 🟢 **It HAS it: `SiteConfiguration` is a `OneToOneField` on `django.contrib.sites.Site` with a `site_values` JSON override; `66` files import the sites framework.** 🔴 **A token census says the opposite — `ipath *tenant*` returns `0`.** 🆕 🔴 **Two new census defects found on the way: `T141` (badges DELETED by migration, `23` paths left standing) and `T142` (LTI 1.3 and xAPI live in separate packages).** 🔴 **Licence AGPL-3.0, `35 136 B`, body-read.** [`evidence/edx-tenancy-census.2026-10-12-p161.tsv`](../evidence/edx-tenancy-census.2026-10-12-p161.tsv) |
+
+## 🔴 The control nobody registered this pass — and it cost `752 MB`
+
+🔴 **This pass reached for `git clone --depth=1 --filter=blob:none` on Moodle expecting a
+treeless discount, and measured `752 MB` on disk against p160's `746 MB` full shallow clone.**
+🟢 **The filter is real; the CHECKOUT defeats it by re-fetching every blob in the working tree.**
+🟢 **`--no-checkout`, or a sparse checkout of the directory under test, is the instrument that
+actually saves.** 🔴 **And in this specific case neither was needed: the two files the pass
+wanted — `public/lib/db/install.xml` and `public/ai/classes/privacy/provider.php` — are two
+`raw` reads once the paths are known.**
+🔵 **`P161-C` records it so the next pass does not re-buy the same `752 MB`.**
+
+## 🟢 Gaps CLOSED, CORRECTED or NARROWED by p161
+
+| gap | outcome |
+|---|---|
+| 🟡 **`Gap 370`** — an EMEA-wide adoption percentage | 🟢 **PARTIALLY DISCHARGED after twelve passes.** 🟢 **Sanoma Learning 2026 European Teacher Survey: `63%` of European teachers use AI, n > `20 000`, `14` countries; `16%` believe general-purpose AI improves learning outcomes.** 🔴 **Labelled *search-summary* — `globenewswire.com` does not resolve.** 🔴 **Still open for HIGHER EDUCATION institutions; the EUA `68%` claim is QUARANTINED, report not locatable** |
+| 🟢 **p160's `T139` reading** — *"the governed-AI plumbing is Moodle's"* | 🔴 **CORRECTED. It is BOTH platforms', and OpenOLAT's log is the richer one. `T140`** |
+| 🟢 **`edx-platform` tenancy** — an open question since the platform shelf was built | 🟢 **CLOSED: present, configuration-scoped via the Django sites framework, one database. Not row-level like `mentingo`'s RLS** |
+| 🟢 **OB 3.0 / W3C VC issuance** | 🔴 **`0 of 6` now, extending p159's `0 of 5`. `P157-C` and `P159-A` remain BUILDS, with one more platform ruled out** |
+| 🟢 **`edx-platform`'s licence** | 🔴 **CORRECTED where this shelf was loose: AGPL-3.0, body-read. It is not in the permissive tier** |
+
+## 🔴 Gaps OPEN after p161, with the measurement behind each
+
+| gap | measurement |
+|---|---|
+| 🔴 **`Gap 372` (new) — NEITHER AI-shipping platform has a retention policy** | 🔴 **Moodle: `0` matches for `retention|purge|cleanup|expiry` in `public/ai`, `0` scheduled tasks, no settings page. OpenOLAT: `AiUsageLogDAO` has no delete method; `o_ai_essay_correction.a_student_answer` is `text NOT NULL`.** 🟢 **`P161-B` is the remedy and it is the shelf's, not the projects'** |
+| 🔴 **`Gap 373` (new) — this shelf's published path counts have not been re-run through STEP 7 or STEP 8** | 🔴 **`T141` and `T142` were found on `edx-platform` and there is no reason they are confined to it.** 🟢 **`ACTION ID` registered** |
+| 🔴 **An APAC adoption RATE** | 🔴 **NOT FOUND, SEVENTH pass. An extended query naming Singapore, Japan, Australia and India returned global or US-only figures.** 🟡 **The `57%` APAC faculty-enthusiasm datum is an ATTITUDE and is not being promoted** |
+| 🔴 **No open-source vendor in any market source** | 🔴 **TWELFTH pass** |
+| 🔴 **A coherent market size** | 🔴 **TWELFTH pass. Three live series this pass, none reconcilable** |
+| 🔴 **`T122` — a permissive education ERP** | 🔴 **FOURTEENTH pass; the query returned one vendor's glossary in FIVE locales** |
+| 🔴 **New-entrant and star-ranked discovery** | 🔴 **CLOSED by `T137`, third pass. `374` of `669` `ai-tutor` rows unread** |
+| 🔴 **`Gap 359` — the egress oracle** | 🔴 **RE-CONFIRMED, SIXTH measurement: `globenewswire.com` does not resolve. Not retried per host (`P950`)** |
+| 🆕 🔴 **`Gap 374` (new) — the aggregator layer re-regionalises figures** | 🔴 **`T143`: a held US+Canada figure came back attached to Asia-Pacific. Caught by a second query; the shelf was right. 🟢 The gate is now written, but every regional attribution taken from a summary before p161 was taken WITHOUT it** |
+
+## 🔜 Pre-registered for p162 — THREE actions, each with a falsifier
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IC`** — read OpenOLAT's `AiPromptRules`, `AiContentHardener` and `GeneratedItemValidator`: is prompt-injection defence IMPLEMENTED or merely named? | 🔴 *Refuted if `AiContentHardener` performs no transformation on untrusted course content before it reaches a prompt* |
+| 🟢 **`ACTION ID`** — run `P160-A` STEP 7 (migrations) and STEP 8 (dependency manifest) over `moodle/moodle` and `Selleo/mentingo` against the capabilities this shelf currently publishes for them | 🔴 *Refuted if `≥1` published capability for either platform fails STEP 7 or STEP 8* |
+| 🟢 **`ACTION IE`** — establish whether a Moodle `aiplacement_*` plugin can reach a gradebook write, which would move the Annex III boundary INSIDE Moodle | 🔴 *Refuted if a placement plugin cannot reach a gradebook write* |
 
 ## 🟢 Verdicts on the THREE actions p159 registered, judged by p160 — all three DISCHARGED, all three falsifiers SILENT
 

@@ -1,9 +1,96 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
 
+🔵 **Clock note, because this shelf dates everything: the pass ran `23:45` → `00:00` UTC
+and CROSSED MIDNIGHT.** 🟢 **Every measurement in it — clone HEADs, last-commit dates, the
+evidence filenames — is `2026-10-12` UTC, which is when the instruments ran.**
+🟡 **The frontmatter `updated` field says `2026-10-13`, which is when the pass was
+published. They differ on purpose.**
+
+🔴 **Three pre-registered actions, all three DISCHARGED — and one falsifier FIRED, which is the
+first time this shelf has had a pre-registered expectation refuted by the platform it was
+recommending.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION HZ`** — read `OpenOLAT`'s AI surface as `HX` read Moodle's | 🔴 **DISCHARGED, falsifier FIRED. OpenOLAT ships `o_ai_usage_log`: `33` columns against Moodle's `15`** |
+| 🟢 **`ACTION IA`** — read Moodle's AI ledger as a SCHEMA | 🟢 **DISCHARGED, falsifier SILENT. It retains prompt AND response — and nothing ever deletes them** |
+| 🟢 **`ACTION IB`** — run `P160-A` over `openedx/edx-platform` | 🟢 **DISCHARGED, falsifier SILENT. Tenancy is PRESENT and spelled `site`. Two new census defects found on the way** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🔴 **`T140` — the AI Act's Annex III boundary runs BETWEEN two open-source platforms.**
+  🟡 **Moodle: `372` AI files, `4` actions, `0` evaluative.** 🟢 **OpenOLAT: `149` AI files,
+  `4` features, and `essay-grading` is one of them.** 🔴 **`edx-platform`: `0` AI files.**
+  🔴 **An institution enters the high-risk tier by setting one property that ships `false`.**
+- 🆕 🟢 **Human oversight has an open-source reference implementation.** 🟢 **OpenOLAT's grading
+  path: model returns signals only *("advisory only, server-side weighting is authoritative")*,
+  consent modal with `allow-once`/`allow-always`/`deny`, three pre-filters that refuse before
+  the provider is paid, typed confidence and off-topic enums, and
+  `a_prompt_template_version` + `a_content_hash_at_call` so a contested mark is re-runnable.**
+  🟢 **`P161-A`.**
+- 🆕 🔴 **`ACTION IA`: Moodle keeps the text.** 🔴 **`prompt` + `generatedcontent` verbatim in
+  three tables, `prompt` + `revisedprompt` + `sourceurl` in a fourth, with `0` scheduled tasks,
+  no `db/` directory and no settings page in `public/ai`.** 🟢 **Erasure on REQUEST is complete
+  (`806`-LOC privacy provider, all six tables declared).** 🔴 **Periodic minimisation does not
+  exist on either platform.** 🟢 **`P161-B` is the four-hour fix.**
+- 🆕 🔴 **`T141` — a path census cannot see a capability DELETED BY MIGRATION.**
+  🔴 **`edx-platform` has `23` non-test `badge` paths and `migrations/0005_delete_all_models.py`
+  dropped every badge model in 2023.** 🟢 **`P160-A` gains STEP 7.**
+- 🆕 🔴 **`T142` — a single-repo census publishes FALSE ABSENCES on a plugin platform.**
+  🔴 **`lti13`/`lti1p3`/`ltiadvantage` = `0`, `xapi` = `1` migration; both capabilities live in
+  `lti-consumer-xblock` and `event-routing-backends`, pinned in `requirements/edx/base.txt`.**
+  🟢 **`P160-A` gains STEP 8.**
+- 🆕 🟢 **The EMEA adoption gap is PARTIALLY DISCHARGED after twelve passes:** 🟢 **`63%` of
+  European teachers use AI (Sanoma Learning 2026, n > `20 000`, `14` countries)** —
+  🔴 **against `16%` who believe general-purpose AI improves learning outcomes.**
+  🔴 **Labelled *search-summary*; the release host does not resolve (`T134`, sixth measurement).**
+- 🆕 🔴 **`T143` — the aggregator layer RE-REGIONALISES figures.** 🔴 **This pass's APAC query
+  returned the `76% → 67%` intent decline attached to Asia-Pacific; a second query established
+  it is US+Canada, as the shelf already had it.** 🟢 **Nothing changed; the gate is recorded.**
+- 🆕 🔴 **`P161-C` — the cost correction: `--filter=blob:none` saved NOTHING on Moodle (`752 MB`
+  against p160's `746 MB`), because the checkout re-fetches every blob.**
+- 🔴 **`0 of 6` platforms issue an OB 3.0 / W3C VC** — `edx-platform` extends p159's `0 of 5`.
+- 🔴 **`edx-platform` is AGPL-3.0, body-read at `35 136 B`** — it is not, and never was, in the
+  permissive tier this shelf recommends from.
+
+### Regions this pass
+
+| region | what landed |
+|---|---|
+| **EMEA** | 🆕 🟢 **The first EMEA-wide teacher adoption rate on this shelf: `63%`, `14` countries, n > `20 000` — `Gap 370` partially discharged** · 🔴 **`16%` believe it improves outcomes, which is the real finding** · 🔴 **EUA's *"`68%` of EU HEIs"* QUARANTINED — report not locatable** · 🟢 **`P161-A` is the Annex III engagement, with `LocalOnnxSPI` answering residency without an endpoint** |
+| **North America** | 🆕 🟡 **`26%` faculty enthusiasm (DEC 2026), the sentiment under the intent decline already held** · 🔴 **`0` other new facts, second consecutive pass** · 🆕 🔴 **the oversight clauses now have a retention problem attached: Moodle's ledger answers them and never deletes** · 🟢 **two deliverables now, `P160-B` + `P161-B`** |
+| **APAC** | 🆕 🟡 **`57%` faculty enthusiasm — `31` points above North America in the same instrument** · 🔴 **no adoption RATE, SEVENTH pass, extended query naming four countries** · 🆕 🔴 **`T143` was caught here** · 🟢 **`AiGradingTier.classify()` is CJK-aware — the only APAC-conscious code found in a European platform** |
+| **LATAM** | 🔴 **`0` new facts, THIRD consecutive pass — the most saturated region in this channel** · 🟢 **the `$18.2M → $36M` residual returned and was refused again** · 🟢 **the `92%`/`26%` governance gap now has a cheaper instrument: a configured `ai_policy_register` plus `P161-B`, not a build** |
+| **Global** | 🔴 **Market size TWELFTH pass, three live series, still incoherent** · 🆕 🟢 **the DEC denominator is now on the shelf: `45 398` responses, `35` countries** · 🔴 **`T122` a FIFTH time — the ERP query returned one vendor's glossary in FIVE locales** · 🔴 **`T110` a FIFTH time** |
+
+### 🔜 Pre-registered for p162
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION IC`** — read OpenOLAT's `AiPromptRules` + `AiContentHardener` + `GeneratedItemValidator`: is prompt-injection defence IMPLEMENTED or named? | 🔴 *Refuted if `AiContentHardener` performs no transformation on untrusted course content before it reaches a prompt* |
+| 🟢 **`ACTION ID`** — run `P160-A` STEP 7 + STEP 8 over `moodle/moodle` and `Selleo/mentingo`: how many capabilities this shelf has published are deleted-by-migration or out-of-repo? | 🔴 *Refuted if `≥1` capability currently published for either platform fails STEP 7 or STEP 8* |
+| 🟢 **`ACTION IE`** — establish whether Moodle's four AI actions can be made evaluative by a PLUGIN *(`aiplacement_*`)*, which would move the Annex III boundary inside Moodle too | 🔴 *Refuted if a placement plugin cannot reach a gradebook write* |
+
+### 🔴 What this pass did NOT achieve, said rather than hidden
+
+- 🔴 **The agent shelf did not GROW, THIRD consecutive pass.** 🟢 **`T137` stands; four discovery
+  queries returned AI curriculum.** 🟡 **`agents/top.md`'s star column is now TWO passes old and
+  is labelled as such; no licence was re-probed this pass.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread.**
+- 🔴 **This pass's one new EMEA figure could NOT be verified at source** — `globenewswire.com`
+  does not resolve. 🟢 **Recorded as *search-summary*, not promoted.**
+- 🔴 **No APAC adoption rate, SEVENTH pass. No open-source vendor in any market source, TWELFTH.
+  No coherent market size, TWELFTH.**
+- 🔴 **`752 MB` was spent on a treeless Moodle clone that two `raw` reads would have replaced.**
+  🟢 **Recorded in `P161-C` so the next pass does not re-buy it.**
+- 🔴 **The rotation defect is confirmed for the FOURTH pass running.** 🟢 **`rotation.json` was
+  advanced on this pass's branch as required, and will not reach the next run without a human
+  merge.** 🟡 **Not registered — it is not a research task.**
 ## Pass 160 — 2026-10-12
 
 🟢 **Three pre-registered actions, all three DISCHARGED, all three falsifiers SILENT.**

@@ -1,8 +1,41 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
+
+🔴 **This page routed *"governed AI inside an existing LMS"* to Moodle one pass ago on the
+strength of a ledger only Moodle was thought to have.** 🔴 **OpenOLAT has one too, with `33`
+columns to Moodle's `15` — so the row is REWRITTEN, and it now splits on the question that
+actually decides it: does the engagement GRADE?**
+
+### 🆕 🟢 The routing table, re-cut on the dimension that changed
+
+| engagement | platform | licence *(body-read)* | why — and what changed this pass |
+|---|---|---|---|
+| 🆕 🟢 **Client wants governed AI inside an LMS and does NOT grade with it** | 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) core AI | 🟡 **GPL-3.0** | 🟢 **UNCHANGED recommendation, now for a stated reason: `4` actions, `0` evaluative, so core cannot be configured into the AI Act's Annex III tier.** 🟢 **Ledger keeps prompt AND response, which is what a regulator asks for.** 🔴 **And keeps them FOREVER — pair with `P161-B` or do not turn it on** |
+| 🆕 🔴 **Client wants AI to GRADE free-text** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🆕 🔴 **The ONLY open-source platform on this shelf that ships it: `ai.feature.essay-grading.enabled`, default `false`.** 🟢 **And it is built for oversight — model returns signals only, server computes the score, student consent modal, three pre-filters, `a_prompt_template_version` for re-running a contested mark.** 🔴 **Turning the flag on is an Annex III decision, not a feature decision.** 🟢 **`P161-A`** |
+| 🆕 🟢 **Cost / reliability engineering on an AI estate** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🆕 🟢 **`o_ai_usage_log` carries `a_req_temperature`, `a_req_top_p`, `a_cached_input_tokens`, `a_reasoning_tokens`, `a_duration_millis`, `a_resp_finish_reason` and a call-correlation id.** 🔴 **Moodle's ledger has none of these.** 🔵 **FinOps for AI is a reporting job here, not a build** |
+| 🆕 🟢 **Data-residency / air-gapped engagement** | 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) **or** 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | mixed | 🆕 🟢 **Two different answers, both CONFIGURATION: Moodle's `ollama` provider plugin, and OpenOLAT's `GenericAiSPI` (any OpenAI-compatible `base.url`) PLUS `LocalOnnxSPI`, which runs an admin-uploaded ONNX embedding model IN-PROCESS.** 🔵 **For embeddings OpenOLAT needs no server at all — the strongest residency answer on this shelf** |
+| 🆕 🟡 **Large consortium / MOOC estate wanting many branded sites** | 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** `35 136 B` | 🆕 🟢 **Tenancy CONFIRMED (`ACTION IB`): `SiteConfiguration` one-to-one on `django.contrib.sites.Site`, `66` files on the sites framework.** 🟡 **It is CONFIGURATION-scoped tenancy, not row-level isolation like `mentingo`'s RLS — brand and settings per site, one database.** 🔴 **AGPL, so the licence conversation happens before the architecture one** |
+| 🆕 🔴 **Credentialing on Open edX** | 🔴 **none — do not plan on core** | — | 🆕 🔴 **`lms/djangoapps/badges` still EXISTS as `23` paths and its models were DELETED by `migrations/0005_delete_all_models.py` in 2023.** 🔴 **`0` matches for OB 3.0 / W3C VC.** 🟢 **`0 of 6` platforms issue a modern verifiable credential; `P159-A` / `P157-C` remain BUILDS** |
+| 🆕 🔴 **LTI 1.3 or xAPI on Open edX** | 🟡 **separate packages, not core** | mixed | 🆕 🔴 **`T142`: `lti13`/`lti1p3`/`ltiadvantage` return `0` in the platform repo — the capability is `lti-consumer-xblock`, and learning records are `event-routing-backends`.** 🟡 **Both are pinned in `requirements/edx/base.txt`. Scope them as dependencies with their own licences, not as platform features** |
+| 🔴 **Education ERP / SIS** | 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(LGPL-3.0)*, [`frappe/erpnext`](https://github.com/frappe/erpnext) *(GPL-3.0)* | 🔴 copyleft | 🔴 **FOURTEENTH pass with no MIT/Apache education ERP.** 🆕 🔴 **`T122` a FIFTH time: this pass's query returned the same vendor's glossary page in FIVE locales, plus ERPNext (GPL-3.0) and Twenty (BSL-1.1). The query has stopped measuring the market** |
+
+### 🔴 The one thing a studio must put in writing before either AI row is sold
+
+🔴 **Neither platform deletes AI data.** 🔴 **Moodle stores `prompt` and `generatedcontent`
+verbatim in three tables and `prompt` + `revisedprompt` + `sourceurl` in a fourth, with NO
+scheduled cleanup and NO retention setting.** 🔴 **OpenOLAT's `AiUsageLogDAO` has no delete
+method, and `o_ai_essay_correction.a_student_answer` is `text NOT NULL` — the student's essay
+itself, retained.**
+🟢 **What each DOES have:** 🟢 **Moodle — a complete GDPR provider (`806` LOC) so erasure works
+on REQUEST, plus `tool_dataprivacy` retention periods that are off by default
+(`automaticdatadeletionapproval = 0`).** 🟡 **OpenOLAT — `UserDataDeletable` on
+`EssayAiCorrectionService`, so corrections die with the user account; the usage log is NOT
+covered by it.**
+🔵 **Say this before the pilot, not after the first subject-access request.** 🟢 **`P161-B`.**
 
 ## Pass 160 — 2026-10-12
 

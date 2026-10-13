@@ -1,8 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
+
+🟢 **Twelve queries, run globally and once per region, and for the first time in twelve passes
+the EMEA query produced an ADOPTION RATE.** 🔴 **Everything else corroborated.**
+🟢 **Regional detail is filed under the canonical `## Opportunities by region` block below as
+`#### p161` entries. ONE region block, not one per pass** *(`ACTION HK`'s rule, honoured).*
+[`evidence/regional-sweep.2026-10-12-p161.tsv`](../evidence/regional-sweep.2026-10-12-p161.tsv)
+
+### 🆕 🟢 What the regional channel produced — the EMEA gap is PARTIALLY DISCHARGED
+
+| region | genuinely NEW this pass | returned, and already held |
+|---|---|---|
+| **EMEA** | 🆕 🟢 **An EMEA-WIDE TEACHER ADOPTION RATE, the first in twelve passes: the Sanoma Learning 2026 European Teacher Survey reports `63%` of European teachers now use AI, from more than `20 000` teachers across `14` European countries. The same survey reports only `16%` of teachers believe general-purpose AI improves learning outcomes, *"changed only marginally"* year on year** | 🟢 2026 Europe EdTech 200; the UK AI Adoption Summit's `£200m+`; Skills England; the EU AI Act's Annex III education tier; OECD 2026 Digital Education Outlook; UNESCO guidance; the `$2.64B` → `$8.0B` EMEA series |
+| **North America** | 🆕 🟡 **`26%` of US+Canada faculty say they are excited about AI's potential to make learning more effective (DEC 2026)** — 🔵 **the attitude figure that explains the intent decline this shelf already held** | 🟢 `134` bills / `31` states; CA `A.B. 1159`; ID `S.B. 1227`; OK + MD oversight clauses; Ohio's `2026-07-01` deadline; `36%` regional share; ~`10%` with formal guidance; `71%` of teachers untrained; Gates/CMU `$55M`; the `$951M (2024) → $2 303.2M (2029)` M&M series |
+| **APAC** | 🆕 🟡 **`57%` of Asia-Pacific faculty are excited about AI's potential — against North America's `26%`, a `31`-point gap in the same instrument** | 🟢 Korea's AI Basic Act in force `2026-01-22` with education named high-impact; Vietnam's `134/2025/QH15` effective `2026-03-01`; TCS × Pearson; LearnUpon's Sydney HQ; OpenAI's ANZ policy lead |
+| **LATAM** | 🔴 **NOTHING, THIRD consecutive pass** | 🟢 IESALC + UNU-IAS `200` institutions / `19` countries; DEC LATAM `92%` students / `79%` faculty; ILIA; `CONPES 4144`; the LAC Observatory; 🟢 **and the *"Rest of Latin America `$18.2M → $36M`"* scope trap, returned again and refused again** |
+| **Global** | 🆕 🟢 **The DEC survey's DENOMINATOR, which this shelf has been quoting figures from without it: `45 398` responses — `27 284` students and `18 114` faculty — across `35` countries** | 🔴 **Market size, TWELFTH pass: IMARC `$6.4B (2025) → $79.6B (2034)` at ~`31%`, a `$10.6B` 2026 figure at `40.9%`, and `$8.3B → $57.2B (2033)` — all already held and still mutually incoherent** |
+
+### 🆕 🔴 `T143` — a regional figure can arrive attached to the WRONG REGION, and only a second query catches it
+
+🔴 **This pass's APAC query returned the Digital Education Council's `76% → 67%` faculty-intent
+decline attributed to ASIA-PACIFIC, described as *"the lowest future AI adoption intent among
+all regions"*.** 🟢 **This shelf holds that figure as US+CANADA.** 🟢 **A second, targeted query
+settled it: the decline is US+Canada, *"the lowest of any region DEC tracked"*, and the APAC
+number from the same instrument is the `57%` enthusiasm figure, not an intent decline.**
+🟢 **The shelf's attribution was CORRECT and is unchanged.**
+🔵 **`T143`:** 🔴 **the aggregator layer re-regionalises figures, so a regional claim from a
+search summary is not evidence of REGION — only of the figure.** 🟢 **The gate: when a summary
+attaches a held figure to a different region, re-query naming the instrument before touching
+the shelf.**
+
+### 🔴 Informed gaps — searched this pass, and NOT found
+
+| gap | status |
+|---|---|
+| 🟡 **`Gap 370` — an EMEA-wide adoption percentage** | 🟢 **PARTIALLY DISCHARGED at last: `63%` of European TEACHERS, `14` countries, n > `20 000`.** 🔴 **Still missing: an institutional (HEI) adoption rate for Europe.** 🔴 **An aggregator's *"EUA March 2026: `68%` of EU HEIs run ≥1 AI teaching tool, up from `34%` in 2024"* is QUARANTINED — the EUA report is not locatable and this shelf already records EUA as returning nothing** |
+| 🔴 **An APAC adoption RATE** | 🔴 **NOT FOUND, SEVENTH pass.** 🟡 **The `57%` enthusiasm figure is an ATTITUDE, and is not being promoted into an adoption rate** |
+| 🔴 **An open-source vendor in any market source** | 🔴 **NOT FOUND, TWELFTH pass** |
+| 🔴 **A coherent market size** | 🔴 **TWELFTH pass. Four live series, no two reconcilable** |
+| 🔴 **Primary-source verification of this pass's new EMEA figure** | 🔴 **BLOCKED — `globenewswire.com` does not resolve from this session (`T134` / `Gap 359`, sixth measurement). The `63%` is labelled *search-summary* and must stay labelled** |
 
 ## Pass 160 — 2026-10-12
 
@@ -365,6 +405,28 @@ Strategy; South Africa draft National AI Policy 2026, one source marking it abro
 
 ### North America
 
+#### p161
+
+🆕 🟡 **One new datum, and it is an ATTITUDE: `26%` of US+Canada faculty say they are excited
+about AI's potential to make learning more effective (Digital Education Council 2026).**
+🔵 **It is the missing half of a figure this page already held — faculty INTENT fell `76% → 67%`
+here, *"the lowest of any region DEC tracked"*, and now the sentiment underneath it is measured
+too.** 🟢 **The survey's denominator is also newly on this page: `45 398` responses, `18 114` of
+them faculty, across `35` countries.**
+🔴 **Everything else returned unchanged for the second consecutive pass** — `134` bills across
+`31` states, the OK and MD human-oversight clauses, Ohio's `2026-07-01` policy deadline, `36%`
+regional share, ~`10%` of institutions with formal guidance, `71%` of teachers untrained.
+
+🟢 **Opportunity, sharpened by this pass's code reading.** 🔴 **The oversight clauses ask a
+district to evidence who used AI, where, and under what policy — and p160 answered that with
+Moodle's ledger.** 🆕 🔴 **This pass found the other half of the answer: the ledger keeps every
+prompt and every response FOREVER, because `core_ai` ships no retention task and no retention
+setting.** 🔵 **In a `K-12` estate that is student text held indefinitely under state law that
+was written about oversight, not about retention.** 🟢 **So the North America engagement is now
+TWO deliverables, not one: the compliance reporting (`P160-B`) and the retention policy that
+makes it survivable (`P161-B`).** 🟢 **Both are configuration and a small plugin on an existing
+GPL platform; neither is a build.**
+
 #### p160
 
 🔴 **`0` new facts. The United States/Canada query returned p156–p159's set unchanged**, and an
@@ -560,6 +622,33 @@ warning, `nbgrader` (BSD-3) and `pedal` (MIT) for assessment, `haxcms-php` (Apac
 courseware.** 🔵 **Gateway-course remediation is where the $55M says the money is.**
 
 ### EMEA
+
+#### p161
+
+🆕 🟢 **The gap this page has declared open for twelve passes is PARTIALLY DISCHARGED.**
+🟢 **The Sanoma Learning 2026 European Teacher Survey reports `63%` of European teachers now
+use AI, from more than `20 000` teachers across `14` European countries** — 🟢 **the first
+EMEA-wide, education-specific adoption rate this shelf has been able to record.**
+🔴 **Labelled *search-summary*: `globenewswire.com` does not resolve from this session
+(`T134` / `Gap 359`, sixth measurement), so the primary release was not read.**
+🔴 **The same survey carries the number that matters more: only `16%` of teachers believe
+general-purpose AI improves learning outcomes, and that figure *"changed only marginally"*
+year on year.** 🔵 **Adoption at `63%` with belief at `16%` is not an adoption market. It is a
+market for tools that are built for teaching and can show it.**
+🔴 **QUARANTINED, not adopted:** an aggregator's *"EUA March 2026 — `68%` of EU HEIs run at
+least one AI-powered teaching tool, up from `34%` in 2024"*. 🔴 **The EUA report is not
+locatable and this shelf has already recorded EUA as returning nothing twice.**
+🔴 **Still missing: an institutional adoption rate for European higher education.**
+
+🟢 **Opportunity, and this pass changes which platform carries it.** 🔴 **Annex III makes an
+evaluative education system high-risk, and this pass established that exactly one open-source
+platform on this shelf ships an evaluative action: OpenOLAT's `essay-grading`, behind a flag
+that ships `false`.** 🟢 **That is a European engagement with the obligations and the evidence
+in the same repository — Apache-2.0, model returns signals only, server computes the score,
+consent modal, pre-filters, and `a_prompt_template_version` so a contested mark can be
+re-run.** 🟢 **`P161-A` is the EMEA-weighted pattern.** 🟢 **And for the residency objection,
+`LocalOnnxSPI` runs the embedding model in-process from an admin-uploaded file: for embeddings
+there is no endpoint to notify and no transfer to justify.**
 
 #### p160
 
@@ -789,6 +878,33 @@ skills body and whose delivery is outsourced is a programme that needs an integr
 
 ### APAC
 
+#### p161
+
+🆕 🟡 **One new datum, and it inverts the Western reading: `57%` of Asia-Pacific faculty say
+they are excited about AI's potential to make learning more effective, against `26%` in
+US+Canada — a `31`-point gap inside the SAME instrument (DEC 2026).**
+🔴 **It is an ATTITUDE measure and this page is not promoting it into an adoption rate.**
+🔴 **An APAC adoption RATE was searched for again, with an extended query naming Singapore,
+Japan, Australia and India, and was NOT FOUND — SEVENTH pass.** 🟢 **What came back was global
+or US-only: the DEC `88%` student figure across `35` countries, Gallup's `60%` of US public
+school teachers, England's `44%`.**
+🆕 🔴 **`T143` was discovered here: the first APAC summary this pass attached the `76% → 67%`
+intent decline to Asia-Pacific. A second query established it is US+Canada. The shelf was
+right; the channel was wrong; nothing on this page changed.** 🔵 **Record the near-miss, not
+just the correction.**
+🟢 **Corroborated again:** Korea's AI Basic Act in force `2026-01-22` with education named
+high-impact and a one-year penalty grace; Vietnam's Law `134/2025/QH15` effective `2026-03-01`
+with automated assessment in the high-risk list.
+🔴 **Every named APAC player is still proprietary — FOURTEENTH pass.**
+
+🟢 **Opportunity.** 🔵 **Two statutory high-risk regimes plus the region's highest faculty
+enthusiasm is the best conversion setting on this shelf, and the thing being converted is
+assessment.** 🟢 **`P161-A` applies directly — and one detail in it is APAC-shaped on purpose:
+`AiGradingTier.classify()` counts CJK codepoints rather than whitespace-delimited words, so the
+tiering does not collapse on Chinese, Japanese or Korean answers.** 🔵 **It is the only
+APAC-conscious code this shelf has found inside a European platform, and it is worth naming in
+a Korea or Japan engagement.**
+
 #### p160
 
 🔴 **`0` new facts, and the gaps are the same two.**
@@ -990,6 +1106,28 @@ the supported, licence-clean version of it. 🔴 **Note the licences: the retrof
 GPL/AGPL, so it is a reference implementation, not a codebase to fork.**
 
 ### LATAM
+
+#### p161
+
+🔴 **`0` new facts, THIRD consecutive pass.** 🟢 **The query returned IESALC + UNU-IAS's `200`
+institutions across `19` countries, DEC LATAM's `92%` students / `79%` faculty, ILIA's
+regulation sub-index, Brookings on slow regional rulemaking, and Tec de Monterrey's
+observatory — every one already on this page.** 🟢 **The *"Rest of Latin America `$18.2M (2024)
+→ $36M (2029)"`* residual came back a second time and is REFUSED a second time: it is a
+publisher's leftover bucket, not a LATAM market size, and this page has already recorded the
+scope trap.**
+🔵 **Three passes of the same return is a property of the channel, not of the region. LATAM is
+the best-evidenced region on this shelf and the most saturated.**
+
+🟢 **Opportunity, and this pass gives the `87% / 26%` governance gap a cheaper instrument.**
+🔴 **The region's problem is not adoption — `92%` of students and `79%` of faculty are already
+using AI — it is that `26%` of institutions have a strategy.** 🆕 🟢 **A governance retrofit no
+longer needs a build: Moodle's `ai_policy_register` records per-user policy acceptance with a
+`reportbuilder` report, and `ai_action_register` records who invoked what, where, and under
+which provider.** 🟢 **For a ministry or a university consortium running Moodle — which most of
+the region does — the first governance deliverable is a configured ledger, a retention period
+(`P161-B`, because the default is forever) and a report, inside one term.**
+🔵 **`P156-B` and `P160-B` stand; `P161-B` is what makes them safe to leave running.**
 
 #### p160
 
@@ -1228,6 +1366,32 @@ public institutions (68%) are the volume.** 🟢 **Permissive LATAM-native rows 
   the global ones by more than the global ones disagree with each other.
 
 ### Global
+
+#### p161
+
+🔴 **Market size, TWELFTH pass: unchanged and still incoherent.** 🟢 **This pass's queries
+returned IMARC's `$6.4B (2025) → $79.6B (2034)` at ~`31%`, a `$10.6B` 2026 figure at `40.9%`,
+and `$8.3B → $57.2B (2033)` — three live series, no two reconcilable, all already held.**
+🟢 **One genuinely new thing, and it is a DENOMINATOR rather than a number: the Digital
+Education Council's 2026 global survey is `45 398` responses — `27 284` students and `18 114`
+faculty — across `35` countries, opt-in through member institutions.** 🔵 **Every DEC figure on
+this shelf now carries its sample, and its selection bias, explicitly.**
+🔴 **`T122` corroborated a FIFTH time: the ERP/CRM query returned one vendor's glossary page in
+FIVE locales, plus ERPNext (GPL-3.0) and Twenty (BSL-1.1). FOURTEENTH pass with no permissive
+education ERP.**
+🔴 **`T110` corroborated a FIFTH time: *"education"* in a trending query still means *"learning
+to code"* — this pass it returned `ai-engineering-from-scratch`, `ai-agents-for-beginners` and
+Karpathy's *Zero to Hero*.**
+🆕 🔴 **`T143` is new and is global: the aggregator layer re-regionalises figures, so a regional
+attribution from a search summary is evidence of the FIGURE and not of the REGION.**
+
+🟢 **Opportunity.** 🔵 **The saturation is itself the positioning: this shelf now knows the
+market's numbers better than the market's sources agree on them, and the differentiator has
+moved from WHAT is adopted to WHAT CAN BE EVIDENCED.** 🟢 **Three platforms were read to the
+schema this pass and the finding is the same in all three: the governed-AI plumbing is either
+already there (Moodle, OpenOLAT) or entirely absent (`edx-platform`, `0` AI files) — and in no
+case is there a retention policy.** 🟢 **That is a services engagement in every region, and
+`P161-B` is four hours of work on a platform the client already runs.**
 
 #### p160
 

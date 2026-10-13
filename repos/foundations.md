@@ -1,8 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
+
+🟢 **Two pre-registered actions discharged on this page: `ACTION HZ` (`OpenOLAT`'s AI surface,
+falsifier FIRED) and `ACTION IB` (`P160-A` over `openedx/edx-platform`, falsifier SILENT).**
+🔴 **Between them they correct one claim this page has been making and add a fourth contamination
+to the path census.**
+
+### 🔴 `ACTION HZ` — REFUTED. OpenOLAT's AI ledger is RICHER than Moodle's, not absent
+
+🔴 **The falsifier was: *"refuted if OpenOLAT ships a per-call AI audit ledger comparable to
+`ai_action_register`"*. It ships one, and *comparable* understates it.**
+[`evidence/ai-surface-tri-platform.2026-10-12-p161.tsv`](../evidence/ai-surface-tri-platform.2026-10-12-p161.tsv)
+
+| dimension | Moodle `ai_action_register` | OpenOLAT `o_ai_usage_log` |
+|---|---|---|
+| columns | `15` | 🟢 **`33`** |
+| who / where | `userid`, `contextid`, `courseid` | `fk_identity`, `a_usage_context_type`, `a_usage_context_id`, `a_resource_type`, `a_resource_id`, `a_resource_sub_id`, `a_locale` |
+| provider / model | `provider`, `model` | `a_model_provider`, `a_req_model`, 🟢 **`a_resp_model`** *(what was ASKED FOR vs what ANSWERED)* |
+| request parameters | 🔴 **none** | 🟢 **`a_req_temperature`, `a_req_top_p`, `a_req_max_output_tokens`, `a_req_num_messages`, `a_req_text_length`** |
+| tokens | `prompttokens`, `completiontokens` | `a_input_tokens`, `a_output_tokens`, `a_total_tokens`, 🟢 **`a_cached_input_tokens`, `a_reasoning_tokens`, `a_cache_creation_input_tokens`** |
+| outcome | `success`, `errorcode`, `errormessage` | `a_status`, `a_error_code`, `a_error_message`, 🟢 **`a_resp_finish_reason`** |
+| timing | `timecreated`, `timecompleted` | `creationdate`, 🟢 **`a_duration_millis`** |
+| correlation | 🔴 **none** | 🟢 **`a_invocation_id`, `a_resp_id`, `a_service_interface`, `a_service_method`** |
+| prompt / response TEXT | 🔴 **yes — in four per-action tables** *(`ACTION IA`, below)* | 🟢 **NO in the log; yes in `o_ai_essay_correction` for the grading feature only** |
+
+🔵 **The honest reading:** 🟢 **OpenOLAT's log is a better COST and RELIABILITY instrument
+(parameters, cache tokens, latency, finish reason, call correlation).** 🟢 **Moodle's is a better
+EVIDENCE instrument for a regulator, because it keeps what was asked and what came back.**
+🔴 **Neither has a retention policy.**
+
+### 🆕 🔴 `ACTION IA` — Moodle's ledger retains BOTH prompt and response, and nothing ever deletes them
+
+🔴 **Falsifier SILENT: the ledger retains prompt AND response text.**
+[`evidence/moodle-ai-ledger-schema.2026-10-12-p161.tsv`](../evidence/moodle-ai-ledger-schema.2026-10-12-p161.tsv)
+
+- 🔴 **`ai_action_register` is an INDEX, not the payload.** 🟢 **`actionid` points into one of four
+  per-action tables, and three of them —`ai_action_generate_text`, `ai_action_summarise_text`,
+  `ai_action_explain_text` — store `prompt text` and `generatedcontent text` verbatim.**
+  🔴 **`ai_action_generate_image` stores `prompt`, `revisedprompt` and `sourceurl`.**
+- 🟢 **Subject access and erasure are IMPLEMENTED and complete:**
+  `core_ai\privacy\provider`, `806` LOC, implements `metadata\provider` +
+  `request\subsystem\provider` + `core_userlist_provider`, with `export_user_data`,
+  `delete_data_for_user`, `delete_data_for_users`, `delete_data_for_all_users_in_context` and
+  `get_users_in_context`. 🟢 **All six AI tables are declared in the privacy metadata.**
+- 🔴 **Retention is ABSENT.** 🔴 **`grep -riE 'retention|purge|cleanup|expiry' public/ai/` returns
+  nothing but a UI modal's `cleanUp()`; `public/ai` has NO `db/` directory, NO scheduled task and
+  NO `settings.php`.** 🟡 **The only task in the subsystem is an adhoc `backfill_action_courseid`.**
+- 🟡 **A generic remedy exists and is OFF by default:** `tool_dataprivacy` purposes carry retention
+  periods and `tool_dataprivacy\task\delete_expired_contexts` executes them — 🔴 **gated on
+  `tool_dataprivacy/automaticdatadeletionapproval`, which ships `0`, and no AI-specific purpose
+  ships at all.**
+- 🔵 **The client-facing consequence:** 🔴 **a Moodle site that enables AI accumulates every student
+  prompt and every model response indefinitely, in a table a GDPR subject-access request will
+  correctly export.** 🟢 **`P161-B` is the bounded fix.**
+
+### 🆕 🟢 `ACTION IB` — `edx-platform` HAS tenancy, and the census found a capability that was DELETED
+
+🟢 **Falsifier SILENT.** 🔴 **But a token census says the opposite, and that is the finding.**
+[`evidence/edx-tenancy-census.2026-10-12-p161.tsv`](../evidence/edx-tenancy-census.2026-10-12-p161.tsv)
+
+- 🔴 **`ipath '*tenant*'` returns `0`.** 🟢 **Tenancy is PRESENT and is spelled `site`:
+  `SiteConfiguration` is a `OneToOneField` on `django.contrib.sites.Site` with a `site_values`
+  `JSONField` that overrides settings per tenant; `66` files import `django.contrib.sites`.**
+  🔵 **`T136c` — take the vocabulary from the platform — generalises beyond `lti`.**
+- 🆕 🔴 **`T141` — a path census cannot see a capability DELETED BY MIGRATION.**
+  🔴 **`ipath '*badge*'` returns `38` paths, `23` of them non-test, including a whole
+  `lms/djangoapps/badges` app — and `migrations/0005_delete_all_models.py` (2023-10-24) drops
+  `BadgeClass`, `BadgeAssertion`, `CourseEventBadgesConfiguration` and
+  `CourseCompleteImageConfiguration`. `models.py` is a `25`-line stub.**
+  🔵 **The fourth contamination: `T136` over-counts by NAME, this one over-counts by HISTORY.
+  The gate is the migration directory, and `P160-A` gains a STEP 7.**
+- 🔴 **`T142` — a single-repo clone census UNDER-reads a plugin-architecture platform.**
+  🔴 **`lti13` / `lti1p3` / `ltiadvantage` all return `0`; `lti_consumer` returns `3` references —
+  the implementation is the separate `lti-consumer-xblock` package, pinned in
+  `requirements/edx/base.txt`. `xapi` returns ONE path, a migration adding external-ID types;
+  emission lives in `event-routing-backends`.** 🔵 **Read alone, the clone publishes FALSE
+  ABSENCES for LTI 1.3 and xAPI. The dependency manifest is the second instrument.**
+- 🔴 **`0` AI files, `0` references to any LLM provider — `edx-platform` core has no AI subsystem
+  at all**, against Moodle's `372` and OpenOLAT's `149`.
+- 🔴 **Licence: AGPL-3.0, body read, `35 136 B`.** 🔴 **It is NOT in the permissive tier and never
+  was; this page should say so wherever it recommends Open edX.**
+- 🟢 **OB 3.0 / W3C VC: `0` matches.** 🔴 **`0 of 6` platforms on this shelf issue a modern
+  verifiable credential** — p159's `0 of 5` extended, and `P159-A` stands as a build.
 
 ## Pass 160 — 2026-10-12
 

@@ -1,8 +1,49 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## 2026-10-12 — pass 161 — 🔴 the discovery channel is still CLOSED, and what replaced it found a grading agent inside a platform
+
+🔴 **No new agent rows from discovery, THIRD consecutive pass.** 🟢 **`T137` holds: four queries
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`AI education industry trends 2026`, `open source platform education ERP CRM MIT Apache`)
+returned AI CURRICULUM — `microsoft/ai-agents-for-beginners`, `ai-engineering-from-scratch`,
+Karpathy's *Zero to Hero*, Hermes Agent — every one of them already on this shelf and none of
+them an education-domain agent.** 🔵 **`T110` corroborated a FIFTH time.**
+[`evidence/regional-sweep.2026-10-12-p161.tsv`](../evidence/regional-sweep.2026-10-12-p161.tsv)
+
+### 🆕 🔴 The new row this pass is not on GitHub trending — it is a FEATURE FLAG
+
+🟢 **`ai.feature.essay-grading.enabled`, `olat.properties` line `1259`, shipped `false`.**
+🔴 **Behind it is a complete essay-grading agent: `AiEssayGradingServiceImpl`, a
+`GradingSuggestion` record with content and language signals, key-point hit/miss extraction,
+grammar and spelling issues typed by severity, per-paragraph annotated spans, and a
+`EssayAiCorrectionTask` queued through `AiTaskExecutorService`.**
+🔵 **A topic query cannot see it (`T133`), a schema census can only see its table (`T135`), and a
+path census over-counts around it (`T136`). It took a clone and a read of
+`olat.properties` to find.**
+
+| the four flags OpenOLAT ships, all `false` | line | kind |
+|---|---|---|
+| `ai.feature.mc-question-generator.enabled` | `1234` | 🟢 generative |
+| `ai.feature.image-description-generator.enabled` | `1244` | 🟢 generative *(accessibility)* |
+| `ai.feature.essay-generation.enabled` | `1252` | 🟢 generative |
+| 🔴 **`ai.feature.essay-grading.enabled`** | `1259` | 🔴 **EVALUATIVE — Annex III** |
+
+🟢 **Provider surface, measured:** `OpenAiSPI`, `AnthropicAiSPI`, `GenericAiSPI` *(an
+OpenAI-compatible `base.url` + `api.key` + model list, so vLLM / Ollama / a sovereign endpoint is
+CONFIGURATION)*, and 🆕 🟢 **`LocalOnnxSPI`, which runs an ONNX embedding model IN-PROCESS from a
+model file the admin uploads — not bundled in the WAR.** 🔵 **That is a stronger data-residency
+answer than *"point it at a local server"*, because for embeddings there is no server.**
+
+### 🔴 What did NOT come back, said rather than hidden
+
+- 🔴 **No new education-domain agent repository, in any of the four discovery queries.**
+- 🔴 **No star figures anywhere on this shelf this pass** — `api.github.com` answers `403` on
+  `search/repositories` and on `repos/{owner}/{repo}` alike while `rate_limit` answers `200`
+  with the full quota unspent *(`T137`, p160)*.
+- 🟡 **`agents/top.md`'s star column is now TWO passes old** and is labelled as such.
 
 ## 2026-10-12 — pass 160 — 🔴 the discovery channel is CLOSED, and the replacement is measured
 

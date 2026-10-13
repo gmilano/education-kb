@@ -1,7 +1,163 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
+---
+## 🆕 🟢 `P161-A` — AI that GRADES, on a platform that already implements the oversight the regulator will ask for *(new, p161 — Global; strongest in EMEA and APAC)*
+
+🔵 **The problem this solves:** 🔴 **Evaluative AI in education is high-risk under the EU AI
+Act's Annex III, named in Korea's AI Basic Act as high-impact, and listed in Vietnam's
+`134/2025/QH15`.** 🔴 **Every studio answer to date has been a governance deck wrapped around a
+general LLM call.** 🆕 🟢 **`openolat/OpenOLAT` (Apache-2.0) ships the whole oversight apparatus
+as code, and it ships it OFF.**
+
+🟢 **What you are adopting, all verified in the tree at `e4be14f0` this pass:**
+
+| requirement a regulator or auditor raises | the code that answers it |
+|---|---|
+| *"Is the human the decision-maker?"* | 🟢 `GradingSuggestion` carries RAW SIGNALS; its own holistic score is documented *"advisory only, server-side weighting is authoritative"*. 🟢 The gradebook number is computed by OpenOLAT |
+| *"Did the student consent?"* | 🟢 `AiCorrectionConsentController` — `allow-once` / `allow-always` / `deny`, at quiz start |
+| *"What stops a nonsense call?"* | 🟢 `GibberishPreFilter` *(trigram entropy `1.5` bits, letter ratio `0.45`)*, `LanguagePreFilter`, `LengthPreFilter` — all BEFORE the provider is called |
+| *"How do you express uncertainty?"* | 🟢 `Confidence{LOW,MEDIUM,HIGH}`, `OffTopicFlag{NONE,LIKELY_OFF_TOPIC,GIBBERISH,LANGUAGE_MISMATCH}`, `Severity{MINOR,MAJOR}` |
+| *"Reproduce this mark."* | 🟢 `o_ai_essay_correction.a_content_hash_at_call` + `a_prompt_template_version` |
+| *"Where did the data go?"* | 🟢 `o_ai_usage_log`, `33` columns: provider, requested model vs responding model, temperature, `top_p`, token counts including cache and reasoning tokens, latency, finish reason, invocation id |
+| *"Does it leave the country?"* | 🟢 `GenericAiSPI` takes any OpenAI-compatible `base.url` *(vLLM, Ollama, a sovereign endpoint)*; 🟢 `LocalOnnxSPI` runs an admin-uploaded ONNX embedding model IN-PROCESS |
+
+### The recipe
+
+```bash
+# 0. Fork-and-own. Apache-2.0, default branch is `master`, committed today.
+git clone --depth=1 https://github.com/openolat/OpenOLAT
+
+# 1. Decide the regulatory posture FIRST. These four lines are the scope boundary.
+#    olat.properties — all four ship `false`.
+ai.feature.mc-question-generator.enabled       # generative, low risk
+ai.feature.image-description-generator.enabled # generative, accessibility win
+ai.feature.essay-generation.enabled            # generative, low risk
+ai.feature.essay-grading.enabled               # EVALUATIVE -> Annex III. This one is the decision.
+
+# 2. Keep the inference inside the jurisdiction.
+ai.generic.preset.enabled=true
+ai.generic.preset.base.url=https://llm.internal.<client>/v1   # vLLM or Ollama
+#    Embeddings need no endpoint at all: upload model.onnx via LocalOnnxModelAdminController.
+
+# 3. Wire the evidence BEFORE the pilot, not after.
+#    - o_ai_usage_log  -> the per-call record (AiUsageLogAdminController ships the UI)
+#    - o_ai_essay_correction -> the mark, its prompt template version and its content hash
+#    - add the retention job from P161-B. Neither table purges itself.
+
+# 4. Calibrate the pre-filters on the client's own corpus.
+#    GibberishPreFilter.ENTROPY_THRESHOLD = 1.5 and MIN_LETTER_RATIO = 0.45 are
+#    the project's own stated defaults, annotated "tune after the first real corpus".
+#    For CJK cohorts check AiGradingTier.classify() — it counts CJK codepoints, not words.
+```
+
+🟢 **What the studio actually sells:** 🔴 **not the grading** *(it is in the box)* —
+🟢 **the calibration run, the retention policy, the Annex III conformity file assembled from
+`o_ai_usage_log` and `o_ai_essay_correction`, and the human-in-the-loop workflow around
+`GradingSuggestion`.** 🔵 **`6–8` weeks, and the client owns an Apache-2.0 platform at the end
+of it.**
+
+🔴 **Say this plainly in the first workshop:** 🔴 **turning the flag on is the moment the
+institution becomes a deployer of a high-risk AI system.** 🟢 **Leaving the other three on while
+that one stays off is a perfectly coherent product, and is where most clients should start.**
+
+---
+
+## 🆕 🟢 `P161-B` — the retention job neither platform ships, and it is four hours of work *(new, p161 — Global; mandatory wherever `P160-B` or `P161-A` is deployed)*
+
+🔵 **The problem this solves:** 🔴 **Moodle's AI subsystem keeps every prompt and every response
+forever** *(`ai_action_generate_text`, `ai_action_summarise_text`, `ai_action_explain_text`
+hold `prompt` + `generatedcontent`; `ai_action_generate_image` holds `prompt`, `revisedprompt`
+and `sourceurl`)*. 🔴 **`public/ai` has no `db/` directory, no scheduled task, no settings page
+and `0` matches for `retention|purge|cleanup|expiry`.** 🔴 **OpenOLAT is the same shape:
+`AiUsageLogDAO` has no delete method, and `o_ai_essay_correction.a_student_answer` is
+`text NOT NULL`.**
+🟢 **This is not a defect report. Both projects implemented subject-access and erasure
+properly** *(Moodle: `806`-LOC privacy provider, export plus three delete paths, all six tables
+declared; OpenOLAT: `UserDataDeletable` on `EssayAiCorrectionService`)*. 🔴 **They implemented
+erasure ON REQUEST and left periodic minimisation to the deployer. The deployer is the client,
+and the client does not know.**
+
+### The recipe — Moodle
+
+```php
+// local/aiRetention/classes/task/purge_ai_actions.php  (GPL-3.0, lives beside core)
+// Scheduled task. Deletes the PAYLOAD rows, keeps the ai_action_register INDEX row,
+// so the audit trail a regulator asks for survives and the student text does not.
+foreach (['generate_text','summarise_text','explain_text','generate_image'] as $a) {
+    $DB->delete_records_select("ai_action_{$a}",
+        "id IN (SELECT actionid FROM {ai_action_register}
+                 WHERE actionname = :a AND timecreated < :cutoff)",
+        ['a' => $a, 'cutoff' => time() - $retentiondays * DAYSECS]);
+}
+// Then null the free-text error column on the index rows older than the same cutoff.
+```
+
+🟢 **Why payload-only:** 🟢 **`ai_action_register` carries no student text — `userid`,
+`contextid`, `courseid`, `provider`, `model`, token COUNTS, timings.** 🔵 **Keeping it is what
+answers Oklahoma's and Maryland's oversight clauses and Ohio's policy deadline; deleting the
+payload is what answers GDPR Article `5(1)(e)`.** 🟢 **They are not in tension once the two
+tables are treated differently.**
+
+🟡 **The generic alternative, if the client will not take a plugin:** `tool_dataprivacy`
+purposes with retention periods plus `tool_dataprivacy\task\delete_expired_contexts` —
+🔴 **remember it is gated on `tool_dataprivacy/automaticdatadeletionapproval`, which ships `0`,
+and that it expires whole CONTEXTS, so it cannot keep the index and drop the payload.**
+
+### The recipe — OpenOLAT
+
+```sql
+-- Nightly. The usage log has no student text, so it can be kept long and aggregated.
+-- The corrections table holds the essay itself and is the one with a clock on it.
+DELETE FROM o_ai_essay_correction
+ WHERE creationdate < now() - interval '180 days'
+   AND a_status IN ('DONE','FAILED');
+-- Keep o_ai_usage_log: 33 columns of cost, latency and provider behaviour, no PII payload
+-- beyond fk_identity, which UserDataDeletable already handles on account deletion.
+```
+
+🟢 **Deliverable, and it is small:** 🟢 **a retention period agreed with the DPO, one scheduled
+task, one line in the privacy notice, and a report that shows the job ran.**
+🔵 **Four hours of engineering attached to a conversation nobody has had.** 🔴 **Sell it with
+`P160-B` and `P161-A`, never after them.**
+
+---
+
+## 🆕 🟢 `P161-C` — `P160-A`, with STEP 7 and the cost note the last pass could not have written *(amends `P160-A`, p161 — Global)*
+
+🟢 **`P160-A` stands. Two additions, both measured this pass.**
+
+🆕 **STEP 7 — read the MIGRATIONS before publishing a capability as present.**
+
+```bash
+# T141: edx-platform has 23 non-test `badge` paths and a whole lms/djangoapps/badges app.
+# Its models were DELETED in 2023 and the files stayed.
+find $DIR -path '*/migrations/*' -name '*.py' | xargs grep -l 'DeleteModel\|RemoveField' \
+  | sed 's|/migrations/.*||' | sort -u
+# For a non-Django platform the equivalent is the schema-upgrade directory:
+#   Moodle  -> public/lib/db/upgrade.php
+#   OpenOLAT-> src/main/resources/database/postgresql/alter_*.sql
+```
+
+🆕 **STEP 8 — on a plugin-architecture platform, the dependency manifest is a SECOND instrument.**
+
+```bash
+# T142: lti13 / lti1p3 / ltiadvantage all return 0 in edx-platform. The capability is real and
+# it is `lti-consumer-xblock`; learning records are `event-routing-backends`.
+grep -nE 'lti|xapi|caliper|credential' $DIR/requirements/edx/base.txt   # or package.json, pom.xml
+# A zero in the tree + a hit in the manifest = PRESENT, out of repo, with its own licence.
+```
+
+🔴 **And the cost correction, because this pass bought it:**
+
+| instrument | measured cost | verdict |
+|---|---|---|
+| 🟢 `git ls-remote --symref` | ~`0` | always first *(`P53`, `P54`)* |
+| 🟢 `--depth=1` clone | `339 MB` OpenOLAT, `207 MB` edx-platform | 🟢 the right instrument for DISCOVERY |
+| 🔴 `--depth=1 --filter=blob:none` | 🔴 **`752 MB` on Moodle — NO saving** | 🔴 **the checkout re-fetches every blob. Add `--no-checkout` if you only need paths** |
+| 🟢 `raw.githubusercontent.com` | kilobytes | 🟢 **the right instrument once the path is KNOWN** — two reads would have replaced the `752 MB` above |
+
 ---
 
 ## 🆕 🟢 `P160-A` — the capability census when the API is CLOSED, with the three contaminations removed *(new, p160 — Global)*

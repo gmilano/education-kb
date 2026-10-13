@@ -1,8 +1,61 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## Pass 161 — 2026-10-12
+
+🔴 **`ACTION HZ`'s falsifier FIRED, and it is the most consequential refutation this shelf has
+recorded about its own platform advice.** 🟢 **OpenOLAT ships a per-call AI audit ledger —
+`o_ai_usage_log`, `33` columns against Moodle's `15` — so p160's reading that the governed-AI
+plumbing is *Moodle's* distinguishing asset is WRONG.** 🔴 **And OpenOLAT ships something Moodle
+core does not: an EVALUATIVE action. It grades essays.**
+
+### 🆕 🔴 `T140` — the AI Act's Annex III boundary runs BETWEEN two open-source platforms, not around them
+
+🟢 **Read from `depth=1` clones this pass, file content not metadata** *(`P160-A`,
+`api.github.com` still closed per `T137`).*
+[`evidence/ai-surface-tri-platform.2026-10-12-p161.tsv`](../evidence/ai-surface-tri-platform.2026-10-12-p161.tsv)
+
+| platform | AI files | actions / features shipped | EVALUATIVE? | per-call ledger | ledger columns |
+|---|---|---|---|---|---|
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) *(GPL-3.0)* | `372` | `generate_text`, `generate_image`, `summarise_text`, `explain_text` | 🟢 **NO — `0 of 4`** | 🟢 `ai_action_register` | `15` |
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) *(Apache-2.0)* | `149` | `mc-question-generator`, `image-description-generator`, `essay-generation`, 🔴 **`essay-grading`** | 🔴 **YES — `1 of 4`** | 🟢 `o_ai_usage_log` | 🟢 **`33`** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(AGPL-3.0)* | 🔴 **`0`** | 🔴 **none** | n/a | 🔴 **none** | `0` |
+
+🆕 **`T140`:** 🔴 **Choosing OpenOLAT and turning on `ai.feature.essay-grading.enabled` puts the
+institution inside the AI Act's Annex III evaluative tier on a config flag.** 🟢 **Choosing
+Moodle core cannot, because core has no evaluative action to turn on** *(`T139`, p160).*
+🔵 **This is not an argument against OpenOLAT — it is the first time this shelf can tell a client
+WHERE the regulatory line sits, and it sits at a property in `olat.properties`, shipped
+`false`.**
+
+### 🟢 The in-platform agent surface, and OpenOLAT's grading agent is built for Article 14 oversight
+
+🟢 **Every item below was read from the source tree at `e4be14f0`, not from a feature table.**
+
+| control | what the code does |
+|---|---|
+| 🟢 **Score authority** | 🟢 **The model returns RAW SIGNALS ONLY.** `GradingSuggestion` documents its own holistic score as *"advisory only, server-side weighting is authoritative"* — 🟢 **the number that reaches the gradebook is computed by OpenOLAT, not by the LLM** |
+| 🟢 **Consent** | 🟢 `AiCorrectionConsentController` — a modal at quiz start with three outcomes: `allow-once`, `allow-always`, `deny` |
+| 🟢 **Refusal before inference** | 🟢 **Three pre-filters run BEFORE the provider is called:** `GibberishPreFilter` *(trigram entropy `1.5` bits, min letter ratio `0.45`)*, `LanguagePreFilter`, `LengthPreFilter` *(empty / too-long)* |
+| 🟢 **Uncertainty is typed** | 🟢 `Confidence{LOW,MEDIUM,HIGH}`, `OffTopicFlag{NONE,LIKELY_OFF_TOPIC,GIBBERISH,LANGUAGE_MISMATCH}`, `Severity{MINOR,MAJOR}` |
+| 🟢 **Reproducibility** | 🟢 `o_ai_essay_correction` stores `a_content_hash_at_call` and `a_prompt_template_version` — 🟢 **a contested mark can be re-run against the exact prompt version that produced it** |
+| 🟡 **Tiering** | 🟡 `AiGradingTier.classify()` by word count, 🟢 **CJK-aware** — 🔵 the only APAC-conscious code this shelf has found in a European platform |
+| 🔴 **Retention** | 🔴 **NONE.** `a_student_answer` is `text NOT NULL` and `AiUsageLogDAO` has no delete method |
+
+🟢 **`P161-A` is written from this** *(see `compose/patterns.md`)*. 🔵 **It is the first pattern on
+this shelf whose human-oversight story is CODE a client can read rather than a policy a client
+must write.**
+
+### 🔴 What this page still cannot do, after p161
+
+- 🔴 **The agent shelf did not GROW, third consecutive pass.** 🟢 **`T137` stands: four discovery
+  queries this pass returned AI *courses* and one vendor's glossary in five locales.** 🟢 **The
+  rows below are p160's, with p160's licences; nothing in them was re-probed this pass and the
+  star column is now TWO passes old.**
+- 🔴 **`374` of `669` `ai-tutor` rows remain unread** and still need API access rather than a
+  better plan.
 
 ## Pass 160 — 2026-10-12
 

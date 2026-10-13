@@ -1,0 +1,14 @@
+# p161 ACTION IA — Moodle's AI ledger read as a SCHEMA, from public/lib/db/install.xml at f20534726.
+# Falsifier was: "refuted if the ledger retains neither prompt nor response text". It retains BOTH. SILENT.
+table	fields	retains_prompt	retains_response	declared_in_privacy_metadata
+ai_providers	id, name, provider, enabled, config, actionconfig	no	no	no (site config, not user data)
+ai_policy_register	id, userid, contextid, timeaccepted	no	no	yes
+ai_action_register	id, actionname, actionid, success, userid, contextid, provider, errorcode, errormessage, timecreated, timecompleted, model, prompttokens, completiontokens, courseid	no (token COUNTS only)	no	yes (11 of 15 fields)
+ai_action_generate_text	id, prompt, responseid, fingerprint, generatedcontent, finishreason	YES	YES	yes
+ai_action_summarise_text	id, prompt, responseid, fingerprint, generatedcontent, finishreason	YES	YES	yes
+ai_action_explain_text	id, prompt, responseid, fingerprint, generatedcontent, finishreason	YES	YES	yes
+ai_action_generate_image	id, prompt, numberimages, quality, aspectratio, style, sourceurl, revisedprompt	YES	YES (revisedprompt + sourceurl)	yes
+# Retention probe: grep -riE 'retention|purge|cleanup|expiry|delete_old' over public/ai/ -> 0 matches outside UI modal cleanUp().
+# public/ai has no db/ directory and no settings.php: the subsystem exposes NO retention setting.
+# Generic remedy exists but is off by default: tool_dataprivacy purposes + retention periods, deleted by the
+# scheduled task tool_dataprivacy\task\delete_expired_contexts, gated on tool_dataprivacy/automaticdatadeletionapproval (default 0).

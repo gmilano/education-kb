@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-12
+updated: 2026-10-13
 ---
+## 2026-10-12 — pass 161 — 🟢 the currency instrument, re-run, and one platform committed TODAY again
+
+🔴 **GitHub trending could not be read this pass either — `api.github.com` is closed to this
+session (`T137`) and the web channel returned AI *courses* for the fifth pass running
+(`T110`).** 🟢 **Recency was measured on the clone channel: `git ls-remote` for the real default
+branch and HEAD, then `git log -1` on a `depth=1` clone for the real last-commit date.**
+[`evidence/ai-surface-tri-platform.2026-10-12-p161.tsv`](../evidence/ai-surface-tri-platform.2026-10-12-p161.tsv)
+
+| repo | licence | default branch | head | last commit | stale | tracked files | verdict |
+|---|---|---|---|---|---|---|---|
+| 🟢 [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | 🟢 **Apache-2.0** | 🔴 **`master`** | `e4be14f0` | 🟢 **2026-10-12** | 🟢 **`0` days — committed TODAY, second consecutive pass** | `25 823` | 🟢 **ACTIVE.** 🆕 Its AI subsystem is `149` files and includes a grading agent |
+| 🟢 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** | 🔴 **`master`** | `3368a6b` | 🟢 **2026-10-12** | 🟢 **`0` days — committed TODAY** | 🟡 **`9 243`** | 🟢 **ACTIVE** · 🟡 **the file count is small because the platform is PLUGINS: LTI, xAPI and the MFEs are separate repositories** *(`T142`)* |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** | 🟢 `main` | `f20534726` | 🟢 **2026-10-03** | 🟢 `9` days | `67 589`+ | 🟢 **ACTIVE — unchanged HEAD since p160, so `T139` and this pass's `ACTION IA` read the SAME tree** |
+
+🟢 **`3 of 3` default branches resolved before any probe (`P53`); `2 of 3` are `master`, which is
+the third pass running where the `master` default would have produced a false absence on a
+`raw` read.**
+
+### 🆕 🔴 `P161-C` — the treeless clone is NOT the cheap instrument it looks like
+
+🟢 **Measured, because this pass tried it:** 🔴 **`git clone --depth=1 --filter=blob:none` over
+`moodle/moodle` produced `752 MB` on disk — essentially the same as p160's full `746 MB`
+shallow clone — because the CHECKOUT re-fetches every blob in the working tree.**
+🟢 **The filter only pays when paired with `--no-checkout` (paths only) or with a sparse
+checkout of the directory under test.** 🔵 **Recorded so the next pass does not re-buy the same
+`752 MB` expecting a discount.**
+
+| instrument | cost this pass | what it bought |
+|---|---|---|
+| 🟢 `git ls-remote --symref` | ~`0` | default branch + HEAD for `3` repos, before any absence meant anything |
+| 🟢 `--depth=1` clone, OpenOLAT | `339 MB` | `149`-file AI subsystem, `4` feature flags, `33`-column ledger schema, the oversight design |
+| 🟢 `--depth=1` clone, edx-platform | `207 MB` | tenancy CONFIRMED, badges DELETED, `0` AI files, AGPL body |
+| 🔴 `--filter=blob:none` clone, Moodle | 🔴 **`752 MB`** | the `install.xml` schema and the privacy provider — 🔴 **which two `raw` reads would have bought for kilobytes, had the paths been known** |
+
+### 🆕 🔴 `P53` has FOUR default-branch variants now, and the fourth is a VERSION NUMBER
+
+🟢 **Every repository URL this pass cites was re-resolved before publication**
+[`evidence/url-verification.2026-10-12-p161.tsv`](../evidence/url-verification.2026-10-12-p161.tsv) —
+🔴 **and the verifier had to change.** 🔴 **`curl -sI https://github.com/<owner>/<repo>` returns
+`403` for EVERY repository from this session, including ones that clone successfully: HEAD
+against `github.com` is not a usable existence check here, the same boundary as `T137`.**
+🟢 **`git ls-remote --symref` works, resolved `8 of 8`, and is the verifier of record.**
+
+| default branch | repos |
+|---|---|
+| 🟢 `main` | `moodle/moodle`, `Selleo/mentingo`, `openlxp/openlxp-xia` |
+| 🟡 `master` | `openolat/OpenOLAT`, `openedx/edx-platform`, `openfun/richie` |
+| 🔴 `develop` | `frappe/erpnext` |
+| 🔴 **`19.0`** | 🔴 **`openeducat/openeducat_erp` — the default branch is a VERSION NUMBER** |
+
+🔴 **A `raw.githubusercontent.com/openeducat/openeducat_erp/main/LICENSE` probe `404`s and the
+repository is fine.** 🟢 **`P53` already said resolve the branch first; this is the row that
+shows why a two-value assumption (`main` or `master`) is not enough.**
+
+
+🔵 **The rule this yields: when you KNOW the path, use `raw`. When you need to DISCOVER the path,
+clone — and clone `--no-checkout` if all you need is the path list.**
 
 ## 2026-10-12 — pass 160 — 🟢 a recency instrument that does NOT need the API
 

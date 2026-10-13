@@ -1,0 +1,13 @@
+# p161 URL verification — every repository URL this pass cites, checked before publication.
+# INSTRUMENT NOTE: `curl -sI https://github.com/<owner>/<repo>` returns 403 for ALL repos from this
+# session, including ones that demonstrably exist and clone. HEAD against github.com is not a usable
+# verifier here (same boundary as T137). `git ls-remote --symref` works and is the verifier used.
+repo	url	ls_remote	default_branch	head	note
+moodle/moodle	https://github.com/moodle/moodle	RESOLVES	main	f20534726	unchanged since p160 — ACTION IA read the same tree as p160's T139
+openolat/OpenOLAT	https://github.com/openolat/OpenOLAT	RESOLVES	master	e4be14f0	committed 2026-10-12, second consecutive pass
+openedx/edx-platform	https://github.com/openedx/edx-platform	RESOLVES	master	3368a6b	committed 2026-10-12
+Selleo/mentingo	https://github.com/Selleo/mentingo	RESOLVES	main	242a9324	carried from p160, re-resolved
+openfun/richie	https://github.com/openfun/richie	RESOLVES	master	8b14aeca	carried from p160, re-resolved
+openlxp/openlxp-xia	https://github.com/openlxp/openlxp-xia	RESOLVES	main	fd594e11	carried; HEAD unchanged, still 228+ days stale
+frappe/erpnext	https://github.com/frappe/erpnext	RESOLVES	develop	5379bbaf	P53 variant THREE — the default branch is `develop`
+openeducat/openeducat_erp	https://github.com/openeducat/openeducat_erp	RESOLVES	19.0	1c95cefe	P53 variant FOUR — the default branch is a VERSION NUMBER. Any raw read on main/ or master/ 404s and would publish a FALSE ABSENCE
