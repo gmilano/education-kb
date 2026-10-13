@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🟢 **No promotion and no demotion: the shelf is the same `12` rows, re-stated in full below because
+under *"only the newest block is canonical"* a row this file does not re-state leaves the compiled
+view (`T216`, `P170-C`).**
+🆕 🔴 **The headline is about this KB's own instruments, and it invalidates a column rather than a
+row: `8` of `12` licence byte counts in this repository are short by exactly `1` byte, and the
+mechanism is now proven.** `ACTION KS` re-measured every row whose licence size this KB has
+published. **`8` short by one, `4` exact.** 🔵 **The split is not random: all `8` short files end in
+a line feed and their recorded figure equals the file size MINUS that line feed, while the `2` exact
+files that end in `LF` were read by a different channel and the `2` with no trailing `LF` have
+nothing to strip.** 🔴 **So this KB has two byte-count channels, one of which silently drops a
+trailing newline, and their outputs sit in the same tables with nothing marking which is which.**
+🆕 🔴 **And the uncomfortable half: p176 already saw this and treated it as a typo.** It corrected
+`canvasapi` from p175's `1 129` to `1 130` — which is exactly the stripped value against the true
+one — recorded the correction without diagnosing it, and then **re-introduced the same defect on all
+`4` of its own new candidate rows** (`T275`).
+🆕 🟢 **The repair is not a better byte count, it is a different key: `md5` reproduces exactly.**
+p176 published `canvasapi`'s as `37cd0f92…`; p177 measures `37cd0f927f3fdf7f68cf09edaebfb010` on an
+independent read. 🔵 **A byte count that is ambiguous by one cannot distinguish two licence texts;
+a digest can. Byte counts stay in this KB as a weak corroborator, not as an identity.**
+🆕 🟢 **The supply side is STABLE, and the stability is measured rather than assumed.**
+`topic:ai-education license:mit pushed:>=2026-04-16` returns **`135`** for the **fourth consecutive
+pass**, and the tag's head is UNCHANGED from p176 row for row — `agents-from-scratch` `1 045`★,
+`universal-diagnostic-tutor-skill` `244`★, `vibe-schooling` `80`★. 🔵 **No new agent reached
+candidate grade this pass, which is why nothing enters the shelf.**
+
+### 🟢 The `12`-row shelf — RE-STATED IN FULL at p177
+
+🟡 **Licence cells, shapes and regions are p171/p172 body reads carried forward. p177 re-read the
+LICENCE of none of them; it re-measured the licence BYTE COUNT of the rows that carry one and
+re-read the source tree of none. This line is the disclosure.**
+
+| repo | licence *(body read, p171/p172)* | primary shape *(p172)* | region | status at p177 |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | CARRIED |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | CARRIED |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | CARRIED |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | CARRIED |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | 🟢 **CARRIED. Still the only shelf row that DECLARES `scorm` and `xapi`. 🆕 🟢 Its `1 062` B is one of the `4` byte counts `ACTION KS` found EXACT — its licence carries no trailing `LF`, so there was nothing to strip** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | CARRIED |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | CARRIED |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | CARRIED |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | 🟡 **CARRIED. Still the only row whose patch has been MEASURED rather than predicted (`905` files, `272` Python, `46` security tests at `9c260890214d`). 🔴 And still the row whose Article `50(2)` repair has never been seen GREEN — `gap 136` is untouched at p177** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | 🟡 **CARRIED. Still the only row carrying `ai-education` — a tag re-counted at `135` for the FOURTH time at p177** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | CARRIED |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — *"exhaustive"* EARNED at p176 across all `5` branches, `55` file-paths, `HEAD` `ea29bcf196d2`** | tutoring | Global | CARRIED |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` still need one** — `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1`
+paraphrased `Apache-2.0`, `1` with no grant anywhere on any branch.
+
+### 🆕 🔴 `ACTION KS` — the licence byte count is a defective key, and the defect is reproducible
+
+🔵 **Why this ran at all:** `ACTION KQ` went to read `dodona-edu/dolos` past its licence and
+measured its `LICENSE` at `1 084` B against this KB's published `1 083` B. 🟢 **One byte is exactly
+the kind of discrepancy that is easier to overwrite than to explain, so it was treated as a signal
+and not as noise.**
+
+🔵 **The falsifier, stated before the measurement:** if the `1`-byte gap is a transcription slip, it
+will appear on `dolos` and on nothing else. If it is an instrument, it will appear on a
+well-defined CLASS of rows and the class will have a mechanism.
+
+| row | recorded | measured | Δ | last byte `LF`? | size − trailing `LF` | matches recorded? |
+|---|---|---|---|---|---|---|
+| 🟢 `ucfopen/canvasapi` | `1 130` | `1 130` | `0` | YES | `1 129` | 🟡 **full size — non-stripping channel** |
+| 🟢 `uccser/cs-field-guide` | `1 128` | `1 128` | `0` | YES | `1 127` | 🟡 **full size — non-stripping channel** |
+| 🟢 `pguso/agents-from-scratch` | `1 091` | `1 091` | `0` | 🔵 **NO** | `1 091` | 🟢 **nothing to strip** |
+| 🟢 `Selleo/mentingo` | `1 062` | `1 062` | `0` | 🔵 **NO** | `1 062` | 🟢 **nothing to strip** |
+| 🔴 `dodona-edu/dolos` | `1 083` | **`1 084`** | `+1` | YES | `1 083` | 🔴 **STRIPPED** |
+| 🔴 `ls1intum/Artemis` | `1 090` | **`1 091`** | `+1` | YES | `1 090` | 🔴 **STRIPPED** |
+| 🔴 `AnubisLMS/Anubis` | `1 082` | **`1 083`** | `+1` | YES | `1 082` | 🔴 **STRIPPED** |
+| 🔴 `showlab/Code2Video` | `1 072` | **`1 073`** | `+1` | YES | `1 072` | 🔴 **STRIPPED** |
+| 🔴 `sgaofen/vibe-schooling` | `1 063` | **`1 064`** | `+1` | YES | `1 063` | 🔴 **STRIPPED** |
+| 🔴 `Scorpioyyy/verichalk` | `1 066` | **`1 067`** | `+1` | YES | `1 066` | 🔴 **STRIPPED** |
+| 🔴 `wwlwgo/cn-primary-math-knowledge-graph` | `1 117` | **`1 118`** | `+1` | YES | `1 117` | 🔴 **STRIPPED** |
+| 🔴 `SenmuuuuW/universal-diagnostic-tutor-skill` | `1 101` | **`1 102`** | `+1` | YES | `1 101` | 🔴 **STRIPPED** |
+
+🔴 **Limb `2` of the falsifier FIRES: `8` of `12`, and the class is exactly *"files ending in `LF`,
+read by the stripping channel"*.** 🟢 **Limb `1` is SILENT — this was never a slip.**
+🔵 **The `2` rows that end in `LF` and are nonetheless recorded at full size are the proof that two
+channels exist: `canvasapi` was re-read at p176 and `cs-field-guide` was read by `ACTION KJ`'s
+grant-path probe, which is a different instrument from the licence-body reader.**
+🔴 **And the sharpest consequence, because it is about a pass that was already congratulating
+itself: p176 corrected one row by hand and left the instrument alone, so every row it admitted in
+the same breath carries the defect it had just worked around.**
+🟢 **Evidence, row by row with digests:**
+[`evidence/licence-byte-audit.2026-10-13-p177.tsv`](../evidence/licence-byte-audit.2026-10-13-p177.tsv).
+🔵 **`T275`: an instrument that is wrong by one is worse than an instrument that is wrong by a
+hundred, because nobody re-reads a number that looks right.**
+
+
 ## Pass 176 — 2026-10-13
 
 🟢 **No promotion and no demotion: the shelf is the same `12` rows, re-stated in full below because

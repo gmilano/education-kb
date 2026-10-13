@@ -1,0 +1,11 @@
+host	resolves	purpose_attempted	consequence
+github.com	YES	repo pages, ls-remote, clone	available
+raw.githubusercontent.com	YES	licence bodies, any public repo	available - NOT gated to session repos
+api.github.com	YES (resolves)	git trees	HTTP 403 - proxy-gated to session repos only
+eur-lex.europa.eu	NO	AI Act primary text	gap 110 carried - no primary legal text
+digital-strategy.ec.europa.eu	NO	EU AI approach, official dates	NEW - AI Act dates unverifiable at source
+www.joneswalker.com	NO	Art 50 / Omnibus date reconciliation	NEW - law-firm secondary unreachable
+www.gibsondunn.com	NO	Annex III delay dates	NEW - law-firm secondary unreachable
+www.iesalc.unesco.org	NO	LATAM higher-ed AI adoption study	NEW - UNESCO primary unreachable
+dig.watch	NO	UNESCO study figures	NEW - secondary unreachable
+www.multistate.us	NO	US state AI-in-education bill tracker	NEW - secondary unreachable

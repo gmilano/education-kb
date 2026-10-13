@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🟢 **Five patterns. Patterns `1`–`3` are buildable today from rows this KB has now read past their
+licences; pattern `4` is the method that produced them, with the two traps that fired while it ran;
+pattern `5` is the region where the components must be imported and says so.**
+
+### 🆕 🟢 Pattern `1` — assessment integrity, with a VERIFIED detector and its wiring cost named
+
+🔵 **Components, both `MIT`, both licence-body read:**
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) at `HEAD` `44925b867ce7` *(`1 084` B,
+`md5 00ffc342d555c4129ee54e3286818d50`)* — 🟢 **read past its licence at p177, `ACTION KQ`** — plus
+[`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) at `513588f3077f` for rostering if the
+institution runs Canvas.
+
+| step | what you actually do | why, measured |
+|---|---|---|
+| `1` | **Pick the tokenizer by extension, from the registry — not from the docs page.** `20` languages ship: `bash c cpp c-sharp python php modelica ocaml java javascript elm go groovy r rust scala sql typescript tsx verilog`, with `19` vendored `tree-sitter` grammars | 🔴 **`docs/about/languages.md` lists `11` and trails off. Quoting the docs undersells the tool by `9` languages, `Modelica`, `Verilog`, `R`, `Scala`, `Groovy` and `OCaml` among them — which is exactly the set an engineering faculty needs** |
+| `2` | **Supply the template before the first run:** `dolos run -M 0.5 -i template.js solutions/*.js` | 🔴 **`options.ts:54` sets `defaultMinSimilarity = 0`: an unconfigured run filters NOTHING, and the docs themselves warn the shared scaffolding will dominate the similarity score** |
+| `3` | **Add automatic common-code detection:** `-m <int>` *(max files a fragment may appear in)* or `-M <fraction>`; combinable with `-i` | 🟢 **These three controls ARE the false-positive story — `falsePositive` and `confidence` appear `0` times in `513` files** |
+| `4` | **Treat the report threshold as a per-dataset guess, never as a policy.** `guessSimilarityThreshold` in `web/src/api/utils/cutoff.ts` takes a local minimum and floors it at the mean of pairwise similarities; `SingleLinkageClustering` drops edges below it | 🔴 **It moves with the cohort. A client who hears *"the threshold"* will think it is a standard they can cite in an appeal** |
+| `5` | **Budget the LMS wiring as custom work.** `Moodle` `0`, `webhook` `0`, Canvas LMS `0` | 🔴 **The `29` `canvas` hits are the HTML5 element and `D3` rendering. There is NO LMS integration — `Dodona` (`193` hits) is the one platform it is built for** |
+| `6` | **Deploy from the shipped images:** `Dockerfile.cli`, `Dockerfile.web`, `docker-compose.yml` | 🟢 **CLI for batch, web for the report** |
+| `7` | **Name the student side in the same meeting.** [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) *(`MIT`, `1 064` B, `80`★)* — Canvas named `19`×, topics `canvas-lms` + `exam-automation` | 🔴 **The attack is browser and MCP automation against a live LMS; the defence is batch similarity over submitted code. 🔵 They do not operate on the same surface, so integrity has to be designed into the ASSESSMENT SHAPE — oral defence, process evidence, in-session artefacts** |
+
+🔴 **What this pattern does NOT buy:** `0` interop standards (`OneRoster`, `Ed-Fi`, `SCORM`, `xAPI`,
+`Caliper`, `LTI`, `QTI` all `0`) and `0` mentions of `FERPA` or `GDPR`. 🔵 **The data-protection
+story is the integrator's to write, and in EMEA it is the deliverable.**
+
+### 🆕 🟢 Pattern `2` — sequencing an EU education engagement against TWO clocks, not one
+
+🔴 **The mistake this pattern exists to prevent: being told *"education is high-risk under the AI
+Act, act now"*, which is true about classification and wrong about timing by `14` months.**
+
+| duty | applies from | what you build, in this engagement |
+|---|---|---|
+| 🔴 **Article `50` transparency** | **`2` August `2026`** — in force | disclosure in the tutoring and authoring surfaces |
+| 🔴 **Article `50(2)` marking of synthetic content** | **`2` December `2026`** — 🔴 **`50` days** | 🟢 **p176's MEASURED patch, below** |
+| 🟡 **Annex III stand-alone high-risk** *(access, progression, assessment, exam scoring — where education sits)* | 🟡 **`2` December `2027`** *(Digital Omnibus)* | conformity-assessment roadmap, not code |
+| 🟡 **Annex I embedded** | 🟡 **`2` August `2028`** | out of scope for most education work |
+
+🟢 **So the marking work is the only part with a deadline inside a normal engagement, and it is
+already specified against a named repository at named lines** —
+[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator),
+`MIT`, pinned `9c260890214df68ad8fd0d681d3e77a6a7b7ea9f`: edit `1` in `security/provenance.py`,
+edit `2` in `security/gates.py`, edit `4` the one-liner at `generation/workflow.py:3018`.
+🔴 **Carry p176's two warnings with it or the patch misleads:** the suite goes `2`/`46` red on edits
+`1`+`2` *(fix: pass `c2pa=C2paRecord(C2paStatus.VALID)` in the two `GENERATED` test
+constructions)*, and the one-line edit `4` passes `46`/`46` **because `0` tests reference the field
+at all** — 🔴 **all three writers store `"absent"`, which the export gate refuses, so the correct
+repair turns the gate RED on every real asset. That is the right compliance position and a breaking
+change on the same line.**
+🔴 **Every date here is search-layer secondary — `eur-lex` and `digital-strategy.ec.europa.eu` are
+NXDOMAIN from this environment (`gap 110`), and sources conflict on the Omnibus's operative status
+and on whether `50(2)` is `2` December `2026` or `2` February `2027`.** 🔵 **Sequence work against
+this table; put a date in a contract only on counsel.**
+
+### 🆕 🟢 Pattern `3` — the non-adjudicating architecture, because it is the only one that clears both regimes
+
+🔵 **The rule: keep the EVIDENCE inside the system and push the JUDGEMENT outside it.**
+
+| layer | component | licence | what it must NOT do |
+|---|---|---|---|
+| rostering | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) *(Canvas institutions)* or [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(standards-native, read-only)* | `MIT` / `Apache-2.0` | 🔴 **never write a grade back automatically** |
+| integrity evidence | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | `MIT` | 🟢 **it structurally cannot adjudicate — no `confidence`, no verdict, `0` pass/fail in `513` files** |
+| delivery | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(`SCORM` in AND out)* or [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(`QTI`, `SCORM`, `Apache-2.0`)* | `MIT` / `Apache-2.0` | 🔴 **no automated progression decision** |
+| decision | 🟢 **a human review queue — the deliverable, not the gap** | — | 🔴 **no auto-escalation, no auto-sanction** |
+
+🟢 **Why this is commercial and not merely ethical, in two regions at once:** Annex III attaches
+high-risk status to systems that *determine* access, progression or assessment, and **Oklahoma and
+Maryland bar AI from high-stakes decisions about students while requiring human oversight.**
+🔵 **The same architectural property — no verdict — keeps the build out of the EU's high-risk class
+AND inside what two US states permit at all.** 🔴 **Invert it and you buy a conformity assessment,
+a prohibition, and an appeals process (`T277`).**
+
+### 🆕 🟢 Pattern `4` — read a repository past its licence, with the two traps that fired doing it
+
+🔵 **The recipe that produced `ACTION KQ`, written down because both of its failure modes are
+seductive:**
+
+| step | do this | the trap |
+|---|---|---|
+| `1` | **Clone at the `HEAD` you already recorded**, `git clone --depth 1 --single-branch`, and re-assert the sha | 🟢 **`dolos` was `44925b867ce7` at p175 and p177 — a controlled read, not a fresh one** |
+| `2` | **Name the artefact that would have to exist, then look for THAT** *(`T265`)* | 🔴 **not the standard's name. `canvasapi` names `LTI` `7` times and implements `0` standards** |
+| `3` | **Grep the WHOLE repository, never a subset** | 🔴 **`ACTION KQ`'s first probe searched `lib/`, `cli/`, `docs/` and was about to publish *"`threshold` `0`"* and *"`cluster` `0`"*. True counts: `16` and `178`. 🔵 A scope-limited grep reports its scope, and it fails in the flattering direction (`T276`)** |
+| `4` | **Disambiguate every token before reporting it** | 🔴 **`canvas` matched `29` times in `dolos` and `0` were Canvas LMS — every hit was the HTML5 element or `D3`. Check `Canvas LMS`/`canvas-lms`/`instructure` separately (`T265`)** |
+| `5` | **Quote `md5`, not a byte count, as the identity of a licence** | 🔴 **`8` of `12` byte counts in this KB are short by exactly `1` — a trailing `LF` the reading channel drops. `md5` reproduced exactly on independent reads (`T275`)** |
+| `6` | **Enumerate branches before trusting a branch label** | 🔴 **`raw` serves `master` as an alias to the default branch where no `master` exists, `200` and byte-identical; it does NOT do the reverse (`T273`, `ACTION KO`)** |
+
+### 🆕 🟡 Pattern `5` — LATAM: import the components, sell the governance
+
+🔴 **Stated plainly because it is the eleventh pass it has been true: there is `0` LATAM-originated
+open-source education supply in this KB.** 🟢 **The demand evidence, by contrast, is the best this KB
+holds anywhere — UNESCO IESALC with UNU-IAS across `200` institutions in `19` countries.**
+
+| finding | figure | what it means for the build |
+|---|---|---|
+| 🟢 adoption | **`87%`** use AI in ≥`1` area; **`74%`** in teaching and learning | the pilot phase is over |
+| 🔴 governance | 🔴 **`26%`** have a formal AI strategy | 🟢 **the engagement is the policy layer, not the model layer** |
+| 🟢 operator precedent | Uruguay's **Ceibal: `75%`** of public-school teachers using AI tools | a national reference to design against |
+| 🟢 K-12 demand | Brazil **`56%`** of secondary teachers *(TALIS `2024`)* vs OECD **`36%`** | teacher-facing, not student-facing, is the wedge |
+| 🟡 regulation | Brazil PL `2.338/2023` in the Chamber; Chile risk-based bill; Colombia CONPES `4144` to `2030` | 🔴 **nothing in force — design to the EU's shape and you are ahead of all three** |
+
+🟢 **The stack:** [`Kolibri`](https://github.com/learningequality/kolibri) (`MIT`, offline-first) as
+the spine for low-connectivity deployment, [`Selleo/mentingo`](https://github.com/Selleo/mentingo)
+(`MIT`, `SCORM` both directions) where connectivity allows, and Pattern `3`'s non-adjudicating
+architecture as the governance artefact the `74%`-adopting, `26%`-strategy institution actually
+needs. 🔵 **Localisation into Spanish and Portuguese and the governance deliverable are the value
+added. There is no local open-source leverage to claim, and claiming it would be the one thing this
+file has never done.**
+
+
 ## Pass 176 — 2026-10-13
 
 🟢 **Five patterns. Pattern `1` is REFINED by a measurement; patterns `2`–`5` are new, and every one

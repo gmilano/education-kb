@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p177 — byte counts CORRECTED on every p176 candidate; two deployable candidates enter
+
+🆕 🔴 **Every candidate row this file admitted at p176 carries a licence byte count that is short by
+exactly `1` byte.** `ACTION KS` re-measured all four and all four are wrong in the same direction,
+by the same amount, for the same reason: the channel that read them drops a trailing line feed.
+🟢 **Corrected here, with digests, because a digest is reproducible and a byte count has turned out
+not to be.**
+
+| repo | p176 published | 🆕 **p177 measured** | `md5` *(the key to quote from now on)* |
+|---|---|---|---|
+| 🔴 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | `1 101` B | 🆕 **`1 102` B** | `b5f0abbd7a99746b7f5316b386938b2f` |
+| 🔴 [`Scorpioyyy/verichalk`](https://github.com/Scorpioyyy/verichalk) | `1 066` B | 🆕 **`1 067` B** | `01c4667e69d9e77d56d708faf045f8d3` |
+| 🔴 [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | `1 117` B | 🆕 **`1 118` B** | `a39324071a7aaeb9a0fb394d67018f78` |
+| 🔴 [`sgaofen/vibe-schooling`](https://github.com/sgaofen/vibe-schooling) | `1 063` B | 🆕 **`1 064` B** | `baac807a0f37f24d13058e6a3562306d` |
+
+🔵 **The licence VERDICTS are unaffected — all four are `MIT` and the bodies were read. What was
+wrong is the figure this KB was using to identify them, which is a worse kind of error precisely
+because it looked fine.**
+
+🟢 **The tag's head is UNCHANGED from p176, row for row:** `agents-from-scratch` `1 045`★,
+`universal-diagnostic-tutor-skill` `244`★, `vibe-schooling` `80`★, and
+`topic:ai-education license:mit pushed:>=2026-04-16` returns **`135`** for the fourth consecutive
+pass. 🔵 **A stable population, not a re-sample that happens to agree.**
+
+### 🆕 🟡 Two CANDIDATES enter — and they are deployable APPLICATIONS, which is the test p176's trend needed
+
+🔵 **Why these two and not the higher-starred rows: p176 found that `7` of the tag's top `30`
+declare an agent-SKILL topic and concluded the vertical's new supply is harness-coupled rather than
+deployable. A skill cannot answer a procurement questionnaire. These are the counter-examples, so
+they are worth the licence read even at low star counts.**
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | ★ | region *(`P800`)* | what it is, and why it is not promoted |
+|---|---|---|---|---|---|
+| 🆕 🟡 [`NickScherbakov/codementor-ai-platform`](https://github.com/NickScherbakov/codementor-ai-platform) | 🟢 **`MIT`** — `1 072` B, `md5 ea0f08c76b7d9cc21041e8762d2601fa`, 🟡 *"© 2025 Nick Scherbakov"* — an INDIVIDUAL | `a0a33cd6d4f8` | `22` | 🔴 **UNPLACED** — nothing in the artefact names a country, institution or curriculum | a programming-learning platform: adaptive tutoring, real-time code execution, challenges, learning analytics. 🟢 **A deployable TypeScript application, not a skill — the shape p176 said the new supply lacks.** 🔴 **NOT PROMOTED, and the reason is the branch list: `44` branches, nearly all machine-authored (`copilot/…`, `codex/…`), including `copilot/plan-to-get-first-thousand-stars` and `copilot/remove-false-developer-count`. 🔵 The second name implies the project had published a false developer count. Treat its `22`★ as a growth artefact, not a quality signal** |
+| 🆕 🟡 [`dulanjayabhanu/mononeural`](https://github.com/dulanjayabhanu/mononeural) | 🟢 **`MIT`** — `1 072` B, `md5 5c5a7a41ac6dc812fca183a1a9517d1d`, 🟡 *"© 2026 Dulanjaya Bhanu"* — an INDIVIDUAL | `90015a5a27a0` | `11` | 🔴 **UNPLACED** — 🔵 **the holder's name is NOT placement evidence; `P800` exists to refuse exactly that inference** | an AI-literacy platform: build, train and test neurons visually with no code. 🟢 **Also a deployable application, single `main` branch, clean. 🔵 It teaches AI rather than teaching WITH AI** — 🔴 **so it fails the same vertical test that excluded `agents-from-scratch` at p176, and is recorded here only as evidence about the tag's shape** |
+
+🔴 **Neither is routable and neither enters the shelf.** 🔵 **But together they qualify p176's trend
+rather than overturn it: deployable education applications DO exist in the permissive supply, and
+the two most visible ones are an individual's side project with machine-generated branches and an
+AI-literacy toy. The shape finding stands — what is missing is not applications, it is applications
+with an institution behind them.**
+🟢 **Evidence:**
+[`evidence/licence-byte-audit.2026-10-13-p177.tsv`](../evidence/licence-byte-audit.2026-10-13-p177.tsv),
+[`evidence/topic-count-reproduction.2026-10-13-p177.tsv`](../evidence/topic-count-reproduction.2026-10-13-p177.tsv).
+
+
 ## 2026-10-13 — p176 — new candidates, licence bodies READ, deliberately NOT promoted
 
 🟢 **Four `MIT` rows enter as CANDIDATES. Licence BODY, byte count, copyright HOLDER and `HEAD` sha

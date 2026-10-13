@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p177
+
+🟢 **The two population counts, re-taken on the one-request authenticated channel, same `180`-day
+window as p175/p176 so the figures stay comparable:**
+
+| query *(recorded verbatim, per `T227`)* | p173 | p174 | p175 | p176 | 🆕 **p177** |
+|---|---|---|---|---|---|
+| `topic:education license:mit pushed:>=2026-04-16` | 🔴 *"`8.2k`"* | 🟡 `8 191` *(17-window partition)* | 🟢 `8 197` | 🟢 `8 198` | 🆕 🟢 **`8 199`** |
+| `topic:ai-education license:mit pushed:>=2026-04-16` | 🟢 `135` | — | 🟢 `135` | 🟢 `135` | 🆕 🟢 **`135`** |
+
+🟢 **The narrow tag has now returned `135` exactly, FOUR times, across four passes — and at p177 the
+population is confirmed stable rather than merely equal in total: the top `30` are the same
+repositories in the same order, with `agents-from-scratch` `1 045`★,
+`universal-diagnostic-tutor-skill` `244`★ and `vibe-schooling` `80`★ all unmoved.**
+🟡 **The wide tag moved `+1` for the second consecutive day, which is the only thing in this table
+that is moving at all.**
+
+🆕 🔴 **A channel boundary found this pass, and it retires half of `P175-B`'s claim.** The
+authenticated GitHub MCP channel is still the only instrument here that answers an exact population
+in one request — `135` and `8 199` above are both from it. 🔴 **But it refuses CONTENT outside this
+session's attached repositories: `get_file_contents` on `dodona-edu/dolos` returned an access
+denial, and `api.github.com/repos/dodona-edu/dolos/git/trees/<sha>` returned `403` carrying the same
+message.**
+🟢 **What DOES serve any public repository, measured this pass:** `raw.githubusercontent.com`
+(licence bodies for `14` repositories), `git ls-remote --heads` (branch enumeration — `50` branches
+on `dolos`, `44` on `codementor-ai-platform`), and a read-only `git clone --depth 1`, which is how
+`ACTION KQ` read `513` files.
+🔵 **So the channel ledger needs two columns: SEARCH reach and CONTENT reach are separate
+permissions and p175's ledger collapsed them (`T278`).**
+
+🆕 🔴 **`T273` is no longer an observation, it has a MECHANISM — and the mechanism is asymmetric.**
+`ACTION KO` probed `raw.githubusercontent.com` with both `master` and `main` against repositories
+whose advertised branches were enumerated first:
+
+| repo | literal `master`? | literal `main`? | `raw/master/LICENSE` | `raw/main/LICENSE` |
+|---|---|---|---|---|
+| `pguso/agents-from-scratch` | 🔴 **NO** | YES | 🔴 **`200`, `1 091` B** | `200`, `1 091` B |
+| `dodona-edu/dolos` | 🔴 **NO** *(of `50` branches)* | YES | 🔴 **`200`, `1 084` B** | `200`, `1 084` B |
+| `ucfopen/canvasapi` *(control)* | YES | 🔴 **NO** | `200`, `1 130` B | 🟢 **`404`, `14` B** |
+
+🔴 **`raw` serves `master` as an ALIAS to the default branch on repositories that have no `master`
+ref at all, returning `200` and byte-identical content.** 🟢 **It does NOT do the reverse: `main`
+`404`s at the documented `14`-byte body where no `main` exists.**
+🔵 **Consequence for this KB's back catalogue, stated precisely because it is narrower than it
+sounds: every *"verified on `master`"* claim against a `main`-default repository read the DEFAULT
+BRANCH and got the right bytes under the wrong label. The content is sound; the provenance string
+is wrong.** 🟢 **`ACTION KO` DISCHARGED; the branch label is demoted from evidence to annotation.**
+🟢 **Evidence:**
+[`evidence/branch-alias-probe.2026-10-13-p177.tsv`](../evidence/branch-alias-probe.2026-10-13-p177.tsv),
+[`evidence/host-reachability.2026-10-13-p177.tsv`](../evidence/host-reachability.2026-10-13-p177.tsv).
+
+🔴 **ELEVENTH consecutive pass with `0` LATAM-originated open-source education repository** — `0` of
+the `135`-row tag's top `30`, on top of p175's `0` of `100`. 🔵 **Written down rather than left to
+look like coverage. The nearest rows remain APAC (`verichalk`, `cn-primary-math-knowledge-graph`,
+`taiwan-exam`, `fakao-ai-exam-engine`) and EMEA (`dolos`, `Artemis`, `mentingo`).**
+
+
 ## 2026-10-13 — p176
 
 🟢 **The two population counts, re-taken on the one-request authenticated channel, same `180`-day

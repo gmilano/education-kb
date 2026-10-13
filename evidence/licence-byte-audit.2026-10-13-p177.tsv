@@ -1,0 +1,13 @@
+slug	path	branch	http	measured_bytes	kb_recorded_bytes	delta	last_byte_is_LF	bytes_excl_trailing_LF	md5	recorded_by_pass	verdict
+ucfopen/canvasapi	LICENSE	master	200	1130	1130	0	YES	1129	37cd0f927f3fdf7f68cf09edaebfb010	p176 (corrected p175's 1129)	EXACT - non-stripping channel
+uccser/cs-field-guide	LICENCE	master	200	1128	1128	0	YES	1127	99b58b5c4e30de12e69228065a5bd553	p176 (ACTION KJ probe)	EXACT - non-stripping channel
+pguso/agents-from-scratch	LICENSE	main	200	1091	1091	0	NO	1091	b6c776589d40412fd09b4db4c32a6421	p176	EXACT - no trailing LF to strip
+Selleo/mentingo	LICENSE	main	200	1062	1062	0	NO	1062	88f104b7644947b4a8b6e71f4972c02f	p176	EXACT - no trailing LF to strip
+dodona-edu/dolos	LICENSE	main	200	1084	1083	1	YES	1083	00ffc342d555c4129ee54e3286818d50	p175	SHORT BY 1 - trailing LF stripped
+ls1intum/Artemis	LICENSE	main	200	1091	1090	1	YES	1090	021aaec73f7b974dc5edf4ef703f941b	p175	SHORT BY 1 - trailing LF stripped
+AnubisLMS/Anubis	LICENSE	main	200	1083	1082	1	YES	1082	9633492b4368ec2c3f77f7116694ad23	p175	SHORT BY 1 - trailing LF stripped
+showlab/Code2Video	LICENSE	main	200	1073	1072	1	YES	1072	2a1660298c8c5a8b41d28eed30f7fde2	p175	SHORT BY 1 - trailing LF stripped
+sgaofen/vibe-schooling	LICENSE	main	200	1064	1063	1	YES	1063	baac807a0f37f24d13058e6a3562306d	p176	SHORT BY 1 - trailing LF stripped
+Scorpioyyy/verichalk	LICENSE	main	200	1067	1066	1	YES	1066	01c4667e69d9e77d56d708faf045f8d3	p176	SHORT BY 1 - trailing LF stripped
+wwlwgo/cn-primary-math-knowledge-graph	LICENSE	main	200	1118	1117	1	YES	1117	a39324071a7aaeb9a0fb394d67018f78	p176	SHORT BY 1 - trailing LF stripped
+SenmuuuuW/universal-diagnostic-tutor-skill	LICENSE	main	200	1102	1101	1	YES	1101	b5f0abbd7a99746b7f5316b386938b2f	p176	SHORT BY 1 - trailing LF stripped

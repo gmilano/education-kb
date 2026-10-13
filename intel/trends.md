@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🆕 🟢 **The trend that should change how an education engagement is SEQUENCED, and it comes from a
+regulatory clock that moved while this KB was reading code: the education-AI duty that binds in
+`2026` is TRANSPARENCY, and the high-risk duty everyone quotes at education has been pushed to
+`2027`.**
+
+| duty | class education falls in | applies from | distance from p177 |
+|---|---|---|---|
+| 🔴 **Article `50` transparency** — disclose that a user is interacting with AI | 🟢 **applies to the tutoring and authoring layer directly** | 🔴 **`2` August `2026`** | 🔴 **ALREADY IN FORCE** |
+| 🔴 **Article `50(2)` marking of synthetic content** — grace period for systems already on the market | 🟢 **applies to every generated-content pipeline in this KB** | 🔴 **`2` December `2026`** | 🔴 **`50` days** |
+| 🟡 **Annex III stand-alone high-risk** — access, progression, assessment, exam scoring | 🔴 **THIS is where education sits** | 🟡 **`2` December `2027`** *(moved by the Digital Omnibus)* | 🟡 **`~14` months** |
+| 🟡 **Annex I embedded high-risk** | 🟡 rarely education | 🟡 **`2` August `2028`** | 🟡 **`~22` months** |
+
+🔵 **Why this is a trend and not a date table:** for three passes this KB has built its compliance
+work around Article `50(2)` on the grounds that it was the nearest deadline, and that choice is now
+VINDICATED from outside — an independent channel puts the `50(2)` grace period at `2` December
+`2026`, which is exactly the *"`50` days out"* this KB has been asserting. 🟢 **The first external
+corroboration of a figure this KB derived on its own.**
+🔴 **And the half that changes advice: a client told *"education is high-risk under the AI Act, act
+now"* is being told something that is true about classification and wrong about timing by `14`
+months.** 🟢 **The defensible sequence is marking and disclosure inside this engagement, conformity
+assessment on a `2027` roadmap.**
+🔴 **Held as a CONFLICT, not resolved:** the Omnibus is reported both as Regulation (EU)
+`2026/1744` in force `27` July `2026` and as adopted `29` June `2026` / signed `8` July `2026`
+awaiting publication; one source dates the `50(2)` grace period `2` February `2027` instead.
+🔴 **No primary is reachable from here — `eur-lex`, `digital-strategy.ec.europa.eu` and both
+law-firm hosts are NXDOMAIN (`gap 110`, widened).** 🔵 **Every one of these dates is secondary. The
+sequencing conclusion survives the conflict; a specific date in a contract does not.**
+
+🆕 🟢 **The second trend is a PRODUCT CLASS this KB can now name, because `ACTION KQ` measured an
+instance of it: the non-adjudicating tool, and in education it is about to be the only kind that
+sells.**
+🟢 **Measured on [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos): `falsePositive` `0`,
+`confidence` `0`, no pass/fail anywhere in `513` files.** It reports similarity and clusters pairs;
+the threshold is GUESSED per dataset in the report UI; the engine's default `minSimilarity` is `0`.
+🔵 **It cannot tell a student they cheated. It can only rank pairs for someone who can.**
+🟢 **Now place that against the regulation, in two regions at once:** Annex III makes a system
+high-risk where it determines access, progression or assessment — and Oklahoma and Maryland
+**bar AI from high-stakes decisions about students and require human oversight** outright.
+🔵 **So the same architectural property — no verdict — is what keeps a tool out of the EU's
+high-risk class AND inside what two US states will permit at all.**
+🟢 **The design rule, stated so it is reusable beyond this one repository: in education, push the
+JUDGEMENT out of the system and keep the EVIDENCE in it.** 🔴 **The inverse — a product that scores
+a student and reports a verdict — buys a conformity assessment in the EU, a prohibition in parts of
+the US, and a procurement conversation nobody wins (`T277`).**
+
+🆕 🔴 **The third trend is about this KB's own instruments and it is the most embarrassing finding
+of the pass, which is why it is published at the top of three files: a measurement that is wrong by
+one is never re-read.**
+🟢 **`8` of `12` published licence byte counts in this repository are short by exactly `1` byte, and
+the mechanism is proven** — the stripping channel drops a trailing line feed, and the `4` exact rows
+are exact for two different reasons that both confirm it (`2` have no trailing `LF` to lose; `2`
+were read by the other channel).
+🔴 **p176 saw one instance, corrected it by hand as a typo, and then re-introduced the defect on all
+`4` rows it admitted in the same pass.** 🔵 **The lesson is not *"count more carefully"*. It is that a
+figure used as an IDENTITY must come from a channel whose failure mode is loud: `md5` reproduced
+exactly across independent reads where the byte count did not (`T275`).**
+🆕 🔴 **And a second instrument thesis from the same pass, caught before publication rather than
+after: a scope-limited grep reports its scope, not the repository, and it fails in the direction
+that flatters the finding.** `ACTION KQ`'s first probe searched `lib/`, `cli/` and `docs/` and was
+about to publish *"`threshold` `0`"* and *"`cluster` `0`"* — repository-wide the true counts are
+`16` and `178`. 🔵 **Both would have been sharper, quotable, and false (`T276`).**
+
+🆕 🟡 **Fourth: the vertical's visible permissive supply has STOPPED MOVING, and four passes of the
+same integer is now evidence rather than coincidence.**
+`topic:ai-education license:mit pushed:>=2026-04-16` = **`135`** at p173, p175, p176 and p177.
+🟢 **The tag's head is unchanged row for row — `agents-from-scratch` `1 045`★,
+`universal-diagnostic-tutor-skill` `244`★, `vibe-schooling` `80`★ — so this is a stable population,
+not a re-sample that happens to total the same.** The wide frame `topic:education license:mit` moved
+`8 198` → **`8 199`**, `+1` for the second consecutive day.
+🔵 **Consequence for p176's harness-coupled-skills trend: it HOLDS, and nothing new arrived to test
+it. `7` of the top `30` declare an agent-skill topic and `11` name a specific harness; none of them
+can answer a procurement questionnaire about where student data goes.** 🟢 **For a studio, the
+stability is good news: the shelf does not rot between engagements, and the scarce work is
+verification rather than discovery.**
+
+🆕 🔴 **Fifth, a channel boundary that retires part of p175's celebrated finding.** `P175-B` made
+the authenticated GitHub MCP channel this KB's best instrument, on the strength of exact population
+counts in one request — which still holds, at `135` and `8 199`. 🔴 **But that channel refuses
+CONTENT outside this session's attached repositories: `get_file_contents` on `dodona-edu/dolos`
+returned an access denial, and `api.github.com` returned `403` with the same message.**
+🟢 **What does serve any public repository: `raw.githubusercontent.com`, `git ls-remote`, and a
+read-only `git clone` — which is how `ACTION KQ` was taken at all.**
+🔵 **So the channel ledger needs two columns, not one: SEARCH reach and CONTENT reach are different
+permissions, and p175's ledger collapsed them (`T278`).**
+
+
 ## Pass 176 — 2026-10-13
 
 🆕 🟢 **The trend with the hardest evidence this pass, and it changes what *"open source AI agent

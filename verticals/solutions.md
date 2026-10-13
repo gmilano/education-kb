@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🆕 🟢 **The assessment-integrity row stops being a candidate.** `ACTION KQ` read
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) past its grant at the `HEAD` this KB
+recorded at p175: `20` programming languages in the registry against `11` in its own docs, `19`
+vendored `tree-sitter` grammars, `513` files, `57` test files, `103` test declarations, and three
+shipped controls for the false-positive problem its docs name in their own words.
+🟢 **It is the second row in two passes promoted by reading code rather than a licence, and the
+only defence this file holds against the threat-model row it admitted one pass ago.**
+🔴 **Two conditions travel with it and neither is optional in a deck: it has NO LMS integration of
+any kind — `Moodle` `0`, `webhook` `0`, and Canvas LMS `0` once the `29` `canvas` hits are read as
+the HTML5 element they are — and it returns NO verdict.** 🔵 **The second is the feature. An
+integrity tool that adjudicates a student is an Annex III decision system; one that ranks pairs for
+a human is not, which is why this row survives contact with both the EU and the US statutes
+([`intel/trends.md`](../intel/trends.md)).**
+🆕 🔴 **And the arms race this file opened at p176 is now asymmetric in a MEASURED way, not a
+rhetorical one.** The attack row automates a specific LMS from the student's browser; the defence
+row has no LMS integration at all and no concept of a verdict. 🔵 **They do not meet, and the gap
+between them is where the engagement's design work actually is.**
+🆕 🔴 **`ACTION KS` corrects a licence byte count in `4` of this table's rows.** 🔵 **The figures
+were never load-bearing for routing, but they were published as identity keys, and `8` of `12`
+across this KB were short by exactly one byte.** 🟢 **Corrected inline and marked `CORRECTED`.**
+🟢 **The routing table RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block is
+canonical"* a row not re-stated is lost however true it remains below.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p177
+
+| need | route | licence *(body read)* | status at p177 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED unchanged. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The LATAM, APAC low-bandwidth and Africa row. 🟡 Its PLACEMENT evidence stays downgraded (`ACTION KK`): the artefact names *"Learning Equality"* and no country** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🟡 **CARRIED WITH THE SAME THREE FLAGS. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); `8` of `86` `licenses/` paths are NOT open-source grants; `25` of `86` are `Apache-1.1`, so clause `3` attribution is owed (`ACTION JU`)** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B — 🆕 CONFIRMED EXACT by `ACTION KS`; its licence carries no trailing `LF`)* | 🟢 **CARRIED, EMEA. `SCORM` import AND export, ships `licenses.config.yaml`, the gate to LIFT. Still the only row in this KB DECLARING both `scorm` and `xapi`** |
+| 🟡 **LMS, permissive — university-OWNED exercise + exam platform** | 🟡 [**ls1intum/Artemis**](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** *(🆕 **`1 091` B — CORRECTED** from `1 090`, *"© 2026 TUM Applied Education Technologies"*)* | 🟡 **CARRIED as CANDIDATE, EMEA, HOLDER-GRADE. `HEAD` `09266581a02c`, `818`★. 🔴 Now the LAST fully unverified holder-grade row in this KB — `gap 134`'s remainder, and the obvious subject for p178** |
+| 🟢 **Assessment integrity — plagiarism detection, permissive** | 🟢 [**dodona-edu/dolos**](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** *(🆕 **`1 084` B — CORRECTED** from `1 083`; `md5 00ffc342d555c4129ee54e3286818d50`; *"© 2019 Team Dolos <dolos@ugent.be>"*)* | 🆕 🟢 **PROMOTED from CANDIDATE to verified ROUTE, EMEA. `HEAD` `44925b867ce7`, unmoved. `ACTION KQ`: `20` languages / `19` vendored grammars (docs claim `11`); `char` tokenizer also reaches `.txt`/`.md`; false positives handled by template exclusion (`-i`) plus auto-detection (`-m`, `-M`); `defaultMinSimilarity = 0`; the only threshold is GUESSED in the report UI. 🔴 **CONDITIONS:** `0` LMS integration, `0` interop standards, `0` of `FERPA`/`GDPR` named, and NO verdict — decision support only** |
+| 🟢 **Rostering, permissive — standards-native, READ-ONLY** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED unchanged. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. Still the only STANDARDS-native permissive rostering route here** |
+| 🟢 **Rostering, permissive — Canvas-native, READ AND WRITE** | 🟢 [**ucfopen/canvasapi**](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** *(`1 130` B — 🆕 CONFIRMED EXACT, `md5 37cd0f92…` reproduced independently)* | 🟢 **CARRIED as ROUTE, North America. `HEAD` `513588f3077f`, `682`★. `enrollments`, `sections`, `enrollment_terms` with READ AND WRITE; `Bearer` auth; `per_page=100` pagination; `10` typed exceptions; `1 112` test methods. 🔴 CONDITIONS unchanged: `0` standards interop, and a client for an `AGPL-3.0` core. 🟡 Last commit `2026-04-16` — now `180` d, AT the liveness bar** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **CARRIED unchanged. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The only row where grant-named paths and grant bodies agree exactly** |
+| 🟡 **Assessment / exam generation, permissive** | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🟡 **CARRIED as CANDIDATE, not production. `taiwan-exam` depends on **`PyMuPDF`, `AGPL-3.0`-or-Artifex-commercial**, so the `MIT` root does not reach the closure (`ACTION JR`). Swap for `pypdf` — already in the same `requirements.txt` — or buy the commercial limb BEFORE routing. 🆕 Both re-confirmed present and `MIT`-filtered in p177's census, at `18`★ and `10`★** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, FIFTEENTH pass with no `MIT`/`Apache` education ERP. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED unchanged. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED unchanged. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED unchanged. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟢 **CARRIED. `ACTION KJ` probed `16` paths including every British spelling and `COPYING.md` — `0` of `16`; its `GPL-2.0` is at `docs/License.txt`** |
+| 🔴 **SIS, PERMISSIVE and institutional-scale** | 🔴 **none** | — | 🔴 **CARRIED, FIFTEENTH pass. `ACTION KE` refuted the one candidate at p175 (`eagles-edu/sis` is a portal: `0` interop tokens at word-boundary precision). 🔵 `canvasapi` remains a permissive rostering CLIENT with write reach, which is a different thing from a permissive system of record** |
+| 🟡 **SIS, permissive — remaining candidates** | 🟡 [**opensacorg/learning-blocks**](https://github.com/opensacorg/learning-blocks) *(`849` files, **Code for Sacramento**)* · [**Arux-Software/Bright**](https://github.com/Arux-Software/Bright) *(toolkit, not a system of record)* | 🟢 **both `MIT`** — bodies read at p174 | 🟡 **CARRIED as CANDIDATES. NEITHER has been probed the way `ACTION KE` probed the third one. 🔴 Do not quote either as rostering-capable. 🆕 🔴 Their published byte counts (`1 075` B each) are now suspect under `ACTION KS` and were NOT re-measured this pass** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🔴 **CARRIED as REFUTED, probe-complete. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔵 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔵 **DELIBERATELY NOT ROUTED, seventh pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package** |
+| 🔴 **THREAT MODEL — not a dependency** | 🔴 [**sgaofen/vibe-schooling**](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** *(🆕 **`1 064` B — CORRECTED** from `1 063`, *"© 2026 sgaofen"*)* | 🔴 **CARRIED as an ATTACK SURFACE, per `P171-D`. `HEAD` `7c2f87a4641b`, `56` files, `80`★ — still the third-most-starred row on `topic:ai-education` and UNMOVED in stars this pass. Canvas named `19`×, topics `canvas-lms` + `exam-automation`. 🔵 Any Canvas engagement that routes `canvasapi` should assume this exists on the student side** |
+
+🟢 **The tally, counted by ROW rather than by summing buckets — the discipline p176 adopted after
+two compensating arithmetic errors cancelled into a right-looking total.**
+**`22` rows: `11` permissive and routable** *(OpenOLAT, Kolibri, mentingo, dolos, edfi-oneroster,
+canvasapi, OB3DefinitionWidget, scorm-again, plus the `3` candidate entries — Artemis, the
+exam-generation pair counted as ONE row, and the SIS-candidate pair counted as ONE row)*, **`1`
+permissive-with-a-patent-limb** *(Sakai)*, **`7` copyleft or non-permissive** *(education ERP, Open
+edX, Moodle, ILIAS, RosarioSIS, openSIS-Classic, Forma LMS)*, **`1` declared EMPTY** *(permissive
+institutional SIS)*, **`1` deliberately not routed** *(openlxp-xia)*, **`1` threat model**
+*(vibe-schooling)*. 🔵 **`11 + 1 + 7 + 1 + 1 + 1 = 22`, and the `22` is the row count, not a
+reconciliation of it.**
+🆕 🟢 **Verified ROUTES promoted by reading code rather than a licence: `2` of `22`** — `canvasapi`
+(p176) and `dolos` (p177). 🔴 **That is the honest denominator for this table's maturity.**
+
+
 ## Pass 176 — 2026-10-13
 
 🆕 🟢 **One CANDIDATE becomes a ROUTE, and it is the first time this file has promoted a row by

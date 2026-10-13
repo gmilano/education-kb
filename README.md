@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🟢 **Two pre-registered actions discharged, both with a limb fired, and a THIRD action opened and
+discharged inside the pass because a `1`-byte discrepancy turned out to be an instrument.**
+🆕 🟢 **The pass's most useful finding for a client: the row this KB said a client asks about first
+is now read past its licence, and it is better than the row claimed.**
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) ships `20` programming languages and `19`
+vendored `tree-sitter` grammars against a docs page that lists `11`; handles false positives by
+template exclusion plus two automatic controls; and **returns no verdict at all** — `falsePositive`
+`0`, `confidence` `0` in `513` files. 🔴 **It also has `0` LMS integration and `0` interop
+standards, so the wiring is custom work.**
+🆕 🔴 **The pass's most embarrassing finding, published at the top of three files because it is
+about this KB's own instruments: `8` of `12` licence byte counts here are short by exactly `1`
+byte.** The mechanism is proven — one of two byte-count channels drops a trailing line feed — and
+🔴 **p176 saw a single instance, corrected it by hand as a typo, and then re-introduced the defect
+on all `4` rows it admitted in the same pass.**
+🆕 🟢 **The pass's most satisfying finding: a deadline this KB derived on its own is CORROBORATED
+from outside.** Three passes of compliance work were built on Article `50(2)` falling *"`50` days
+out"*; an independent channel puts the `50(2)` marking grace period at **`2` December `2026`**, which
+is `50` days from today.
+🆕 🔴 **And the same channel reorders the advice: the Digital Omnibus moved Annex III stand-alone
+high-risk — the class education actually sits in — to `2` December `2027`.** 🔵 **A client told
+*"education is high-risk, act now"* is being told something true about classification and wrong
+about timing by `14` months. Marking now; conformity assessment on a `2027` roadmap.**
+🆕 🟢 **The pass's quietest good result: p176's declared APAC vendor-and-regulator gap is CLOSED** —
+`6` jurisdictions with named instruments and dates, `5` named vendors, and **Vietnam's high-risk
+list names education outright**, giving APAC a second statute besides the EU's that classes
+education AI as high-risk.
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION KO`** — does `raw` serve `master` on repositories that have none, and what does that do to this KB's claims? | 🔴 **DISCHARGED, LIMB FIRED, and `T273` now has a MECHANISM. `raw` serves `master` as an alias to the default branch, `200` and byte-identical, on `2` of `2` `main`-default subjects; the control proves it is NOT symmetric — `main` `404`s at `14` B where no `main` exists. 🟢 Narrower than feared: those claims read the right bytes under the wrong label** |
+| 🔴 **`ACTION KQ`** — verify a holder-grade row past its licence, `dolos` first | 🔴 **DISCHARGED, LIMB 1 FIRED. PROMOTED from CANDIDATE to verified ROUTE. Both of p176's named unknowns — language coverage and false-positive behaviour — measured, and both better than claimed. `gap 134` narrows `3` → `2`** |
+| 🆕 🔴 **`ACTION KS`** — is the `1`-byte gap on `dolos` a slip or an instrument? *(opened mid-pass)* | 🔴 **DISCHARGED, LIMB 2 FIRED. An INSTRUMENT: `8` of `12` short by exactly `1`, and the `4` exact rows are exact for two different reasons that both confirm the mechanism. `md5` reproduces where the byte count does not** |
+| 🔴 **`ACTION KN`** — migrate the `76` grant-path probe lists to `P176-B` | 🔴 **NOT ATTEMPTED. `gap 135` carried unchanged** |
+| 🔴 **`ACTION KP`** — fix the `10` broken instruments | 🔴 **NOT ATTEMPTED, and now one worse: `ACTION KS` identifies an eleventh defect, the stripping byte-count channel itself** |
+| 🔴 **`ACTION KR`** — see the Article `50(2)` patch GREEN, and run a real record through it | 🔴 **NOT ATTEMPTED. `gap 136` carried unchanged, and it is the oldest live debt in this KB** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **A second ROUTE verified by reading CODE rather than a licence** in
+  [`verticals/solutions.md`](verticals/solutions.md): `dolos` promoted, with both conditions
+  attached — no LMS integration, and no verdict. 🔵 **`2` of `22` routing-table rows are now
+  code-verified, which is the honest denominator for this table's maturity.**
+- 🆕 🟢 **`20` languages and `19` grammars measured** against `11` in the project's own docs — the
+  difference between a CS-department tool and one that reaches an engineering faculty.
+- 🆕 🔴 **`8` corrected licence byte counts**, published inline and marked, with digests
+  ([`evidence/licence-byte-audit.2026-10-13-p177.tsv`](evidence/licence-byte-audit.2026-10-13-p177.tsv)).
+  🟢 **`md5` replaces the byte count as this KB's licence identity.**
+- 🆕 🟢 **The AI Act as a SEQUENCE rather than a date** in [`intel/trends.md`](intel/trends.md) and
+  Pattern `2`: transparency in force, marking at `50` days, Annex III at `~14` months, Annex I at
+  `~22`.
+- 🆕 🟢 **A product class this KB can now name — the non-adjudicating tool** (`T277`), measured on
+  `dolos` and placed against Annex III AND the Oklahoma/Maryland oversight statutes. 🔵 **The same
+  architectural property clears both regimes.**
+- 🆕 🟢 **The APAC regulator and vendor map, from empty to `6` jurisdictions and `5` vendors**, with
+  Vietnam's education-naming high-risk list as the sharpest row
+  ([`intel/market.md`](intel/market.md)).
+- 🆕 🟡 **Two deployable-application candidates** admitted in
+  [`agents/trending.md`](agents/trending.md) — `codementor-ai-platform` (`22`★) and `mononeural`
+  (`11`★) — licence body, bytes, `md5` and `HEAD` read, 🔴 **neither promoted, and the first one's
+  `44` machine-authored branches include `copilot/plan-to-get-first-thousand-stars` and
+  `copilot/remove-false-developer-count`.** 🔵 **They qualify p176's shape trend rather than
+  overturn it: what the permissive supply lacks is not applications, it is applications with an
+  institution behind them.**
+- 🆕 🟢 **A stable population, measured as stable:** `topic:ai-education license:mit` = `135` for the
+  FOURTH consecutive pass, with the top `30` unchanged row for row and star for star.
+- 🆕 🔴 **`T275`–`T278` — four method theses, three about this KB's own habits:** a measurement wrong
+  by one is never re-read; a scope-limited grep reports its scope and fails in the flattering
+  direction; a branch label can be an alias wearing a name; and SEARCH reach and CONTENT reach are
+  different permissions on the same channel.
+- 🆕 🔴 **Two of this pass's own errors were caught before publication.** 🔴 **`ACTION KQ`'s first
+  probe was about to publish *"`threshold` `0`"* and *"`cluster` `0`"* from a three-directory grep;
+  repository-wide they are `16` and `178`.** 🔴 **And `canvas` matched `29` times in `dolos` with `0`
+  Canvas LMS among them — the `T265` substring trap, caught before *"Canvas-integrated"* reached a
+  table.**
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **The stripping byte-count channel is IDENTIFIED but not FIXED.** `ACTION KS` proved the
+  mechanism and corrected `12` rows; it did not find the call site, and **every byte count this KB
+  published outside those `12` remains unaudited** — `learning-blocks` and `Bright` at `1 075` B are
+  named as suspect and were not re-measured (`gap 138`, `ACTION KU`).
+- 🔴 **`ls1intum/Artemis` is now the LAST fully unverified holder-grade row** — licence, holder and
+  `HEAD` and nothing else, carried a third pass (`gap 134`, `ACTION KT`).
+- 🔴 **`gap 136` is untouched for a second pass: the Article `50(2)` patch has never been seen
+  GREEN**, the two test fixes are still unwritten, and no real provenance record has been run
+  through the patched gate (`ACTION KR`).
+- 🔴 **`0` of `76` grant-path probe lists are migrated to `P176-B`'s vocabulary** (`gap 135`,
+  `ACTION KN`), and **`10`+`1` instruments remain broken or in disagreement with this repository**
+  (`ACTION KP`).
+- 🔴 **Every AI Act date in this pass is search-layer secondary, and two conflicts are recorded
+  UNRESOLVED:** the Omnibus is reported both as Regulation (EU) `2026/1744` in force `27` July
+  `2026` and as awaiting Official Journal publication, and `50(2)`'s grace period is given as both
+  `2` December `2026` and `2` February `2027`. 🔴 **`gap 110` is WIDENED, not merely carried:
+  `eur-lex`, `digital-strategy.ec.europa.eu`, both law-firm hosts, `iesalc.unesco.org`, `dig.watch`
+  and `multistate.us` are ALL NXDOMAIN** (`ACTION KV`).
+- 🔴 **ELEVENTH consecutive pass with no LATAM-originated open-source education repository** — `0` of
+  the tag's top `30`. 🟢 **The demand evidence remains the best-sourced in this KB and the supply
+  evidence remains empty; Pattern `5` now says so in the pattern itself rather than in a footnote.**
+- 🔴 **DECLARED REGIONAL GAPS, written down so silence cannot read as coverage:** `0`
+  Canada-specific results returned, so *"North America"* in this pass is United States evidence
+  under a continental heading; and `0` named EMEA EdTech vendors were recoverable — the sweep
+  returned policy bodies only.
+- 🔴 **`dolos`'s language coverage is read from its REGISTRY, not exercised.** No corpus was run
+  through it, so detection quality and the real false-positive rate are still unmeasured — only the
+  controls that exist to manage them (`ACTION KW`).
+
+### 🟢 Pre-registered for p178 — each with the falsifier stated BEFORE the measurement
+
+| action | question | falsifier |
+|---|---|---|
+| 🟢 **`ACTION KT`** | read `ls1intum/Artemis` past its licence and close `gap 134` | **limb `1`:** it reaches exercise/exam objects with write access and its own auth → routes. **limb `2`:** it is a thin front end over a system of record, as `eagles-edu/sis` was → refuse it and say so |
+| 🟢 **`ACTION KU`** | find the CALL SITE that strips the trailing `LF`, and audit every byte count this KB published beyond the `12` | **limb `1`:** one instrument explains all `8` → fix it once. **limb `2`:** more than one call site strips → it is a vocabulary problem like `gap 135`, not a bug |
+| 🟢 **`ACTION KR`** *(carried, third pass)* | write the two test fixes, see `46`/`46` GREEN with edits `1`+`2`+`4`, then run a REAL provenance record through the patched gate | **limb `1`:** the gate goes red on a real `"absent"` record → the compliance position is confirmed and the breaking change is real. **limb `2`:** it passes → the defect was misdiagnosed and `T269` needs retracting |
+| 🟢 **`ACTION KV`** | resolve the `50(2)` date and the Omnibus's operative status on a channel that is actually reachable | **limb `1`:** a reachable primary or official source exists → publish the date and retire the conflict. **limb `2`:** none is reachable → declare the figure permanently secondary and stop re-deriving it each pass |
+| 🟡 **`ACTION KW`** | run a real corpus through `dolos` and measure detection and false positives rather than its controls | **limb `1`:** template exclusion materially changes the pair ranking → the `-i` step in Pattern `1` is load-bearing. **limb `2`:** it does not → the step is cargo cult and the pattern should drop it |
+| 🔴 **`ACTION KN`** *(carried)* | migrate the `76` grant-path probe lists to `P176-B` | **limb `1`:** a migration changes a published verdict → the `76` lists were hiding disagreements. **limb `2`:** every verdict survives → the lists agreed and the debt is cosmetic |
+
+
 ## Pass 176 — 2026-10-13
 
 🟢 **Five pre-registered actions: `3` DISCHARGED with silent falsifiers, `2` DISCHARGED WITH A LIMB

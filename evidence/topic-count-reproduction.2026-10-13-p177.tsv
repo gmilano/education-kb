@@ -1,0 +1,3 @@
+query_verbatim	p173	p174	p175	p176	p177	channel
+topic:ai-education license:mit pushed:>=2026-04-16	135	-	135	135	135	authenticated MCP search_repositories, one request
+topic:education license:mit pushed:>=2026-04-16	8.2k (rounded)	8191 (17-window partition)	8197	8198	8199	authenticated MCP search_repositories, one request

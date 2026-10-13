@@ -1,0 +1,4 @@
+slug	literal_master_advertised	literal_main_advertised	branches_advertised_total	raw_master_http	raw_master_bytes	raw_main_http	raw_main_bytes	verdict
+pguso/agents-from-scratch	NO	YES	1	200	1091	200	1091	T273 CONFIRMED - raw serves master as alias to default branch
+dodona-edu/dolos	NO	YES	50	200	1084	200	1084	T273 CONFIRMED - raw serves master as alias to default branch
+ucfopen/canvasapi	YES	NO	2	200	1130	404	14	CONTROL - main 404s at 14 B where no main exists; alias is NOT symmetric

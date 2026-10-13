@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 177 — 2026-10-13
+
+🆕 🟢 **`ACTION KQ` is DISCHARGED and the row a client asks about first is now read past its
+licence.** [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) — Ghent University's
+source-code similarity detector, the only assessment-integrity route this KB holds — was cloned at
+its recorded `HEAD` and read artefact by artefact. 🟢 **Both of the things p176 named as UNVERIFIED
+are now measured, and both come out better than the row claimed.**
+🆕 🟢 **Language coverage: `20` programming languages in the registry and `19` vendored
+`tree-sitter` grammars, against a docs page that lists `11` and trails off in an ellipsis.** 🔵 **The
+project undersells itself by `9` languages, `Modelica`, `Verilog`, `R`, `Groovy`, `Scala` and
+`OCaml` among them — which is the difference between a CS-department tool and one that reaches an
+engineering faculty.**
+🆕 🟢 **False-positive behaviour: it has none of the machinery a client will ask about and that is
+the correct answer.** `falsePositive` **`0`**, `confidence` **`0`** across the whole repository.
+🟢 **What ships instead is template exclusion — `-i/--ignore`, plus `-m/--max-fingerprint-count`
+and `-M/--max-fingerprint-percentage` to detect shared code automatically — and the docs state the
+problem in their own words before offering the controls.**
+🔴 **The core engine's `defaultMinSimilarity` is `0`: it filters nothing unless told to.** The only
+threshold lives in the report UI and is **GUESSED** (`guessSimilarityThreshold`, a local minimum
+floored at the mean of pairwise similarities), and single-linkage clustering drops edges beneath it.
+🔵 **So `dolos` reports similarity and clusters; it never returns a verdict. That is decision
+support, not adjudication, and it is the single most useful sentence in this file for a `2026`
+education engagement — see [`intel/trends.md`](../intel/trends.md) for why the regulation agrees.**
+🆕 🔴 **`ACTION KS` invalidates a COLUMN of this table rather than a row: `8` of `12` published
+licence byte counts in this KB are short by exactly `1` byte**, including `4` of the `6` rows below.
+🟢 **Corrected figures are published inline and marked; the mechanism and the full audit are in
+[`agents/top.md`](../agents/top.md) and
+[`evidence/licence-byte-audit.2026-10-13-p177.tsv`](../evidence/licence-byte-audit.2026-10-13-p177.tsv).**
+🟢 **No new rows ENTER this pass, for the second pass running and for the same stated reason:
+`gap 134` is a debt of verification, and admitting rows while it is open makes it bigger.**
+
+### 🟢 The `6` p175 rows — RE-STATED, with byte counts CORRECTED and verification state explicit
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | region *(`P800`)* | verified PAST the licence? |
+|---|---|---|---|---|
+| 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** — `1 130` B *(🆕 CONFIRMED exact; `md5 37cd0f927f3fdf7f68cf09edaebfb010` reproduced independently)*, *"© 2017 University of Central Florida — Center for Distributed Learning"* | `513588f3077f` | 🟡 **North America** — subnational grade (`ACTION KK`) | 🟢 **YES — `ACTION KM`, p176** |
+| 🟡 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** — 🆕 **`1 091` B** *(CORRECTED from `1 090`; `md5 021aaec73f7b974dc5edf4ef703f941b`)*, *"© 2026 TUM Applied Education Technologies"* | `09266581a02c` | 🟢 **EMEA** — HOLDER-grade | 🔴 **NO — licence, holder and `HEAD` only. The LAST fully unverified holder-grade row (`gap 134`)** |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** — 🆕 **`1 084` B** *(CORRECTED from `1 083`; `md5 00ffc342d555c4129ee54e3286818d50`)*, *"© 2019 Team Dolos <dolos@ugent.be>"* | `44925b867ce7` — 🟢 **unmoved since p175** | 🟢 **EMEA** — HOLDER-grade | 🆕 🟢 **YES — `ACTION KQ`, in full below. `513` files, `57` test files, `103` test declarations** |
+| 🟡 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **`MIT`** — at **`LICENCE`**, `1 128` B *(🆕 CONFIRMED exact — read by a non-stripping channel, which is part of `ACTION KS`'s proof)* , *"© 2016-2022 University of Canterbury CSER Group"* | `7e323930cf6f` | 🟢 **APAC** — HOLDER-grade, New Zealand | 🟡 **PARTLY — grant-path probe only** |
+| 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **`MIT`** — 🆕 **`1 083` B** *(CORRECTED from `1 082`)*, 🔴 **holder is an INDIVIDUAL: *"© 2021 John McCann Cunniff Junior"*** | `894ed020997f` | 🔴 **North America — DESCRIPTION-grade only; the artefact names *"NYU"* and NO country** | 🔴 **NO** |
+| 🟡 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | 🟢 **`MIT`** — 🆕 **`1 073` B** *(CORRECTED from `1 072`)*, 🟡 **holder is an INDIVIDUAL** | `1142d8e14cdc` | 🟡 **APAC** — DESCRIPTION-grade, `showlab` + *"[ICML 2026]"* | 🔴 **NO** |
+
+🟢 **`gap 134` narrows from `3` unverified holder-grade rows to `2`** — `Artemis` outright, and
+`cs-field-guide` partly. 🔵 **Two passes, two rows read past their licence, no new admissions: the
+debt is being paid down rather than refinanced.**
+
+### 🆕 🟢 `ACTION KQ` — `dodona-edu/dolos` read past its licence, artefact by artefact
+
+🟢 **Controlled: cloned at `HEAD` `44925b867ce737206c1debce0add731e294025d5`, the sha this KB
+recorded at p175, UNMOVED. `513` tracked files, `57` test files, `103` test declarations.**
+🔵 **The rule, per `T265`: do not count the standard's NAME. Count the route that would have to
+exist — and check what each token is actually matching before reporting it.**
+
+| artefact the row would need | measured | verdict |
+|---|---|---|
+| 🟢 **grant-path exclusivity** | `LICENSE` only. `LICENCE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` all `404` at the `14` B body | 🟢 **one grant, unambiguous** |
+| 🟢 **language coverage — registry** | `LanguagePicker.languages` declares `21` entries: `20` programming languages + a `char` tokenizer | 🟢 **MEASURED** |
+| 🟢 **which languages** | `bash` `c` `cpp` `c-sharp` `python` `php` `modelica` `ocaml` `java` `javascript` `elm` `go` `groovy` `r` `rust` `scala` `sql` `typescript` `tsx` `verilog` | 🟢 **`20`, and `6` of them are not in the docs** |
+| 🟢 **vendored grammars** | `19` `tree-sitter` grammar directories under `parsers/` | 🟢 **ships its own parsers; no install-time fetch** |
+| 🔴 **the docs' own claim** | `docs/about/languages.md` lists `11` and ends in *"..."* | 🔴 **UNDERSELLS BY `9`. Quote the registry, never the docs page** |
+| 🟡 **prose, not just code** | `CustomTokenizerLanguage("char", [".txt", ".md"])` via `charTokenizer.ts` | 🟡 **NOT code-only — but character-level. 🔴 Do NOT sell this as essay plagiarism detection** |
+| 🟢 **the false-positive problem, named** | `docs/docs/running.md:55` — *"Dolos will often detect these code fragments as similar and include them in the similarity score, making it harder to spot actual plagiarism."* | 🟢 **the project names it before it sells the cure** |
+| 🟢 **false-positive control `1`** | `-i` / `--ignore <path>` — a template/boilerplate file whose fragments stop counting toward similarity | 🟢 **ships** |
+| 🟢 **false-positive controls `2` and `3`** | `-m/--max-fingerprint-count <int>` and `-M/--max-fingerprint-percentage <fraction>` — auto-detect shared code by how many files a fragment occurs in; combinable with `-i` | 🟢 **ships, and automatic** |
+| 🔴 **engine default** | `options.ts:54` — `defaultMinSimilarity = 0` | 🔴 **filters NOTHING out of the box. An unconfigured run is the noisy run the docs warn about** |
+| 🟡 **the threshold** | report UI only: `guessSimilarityThreshold` in `web/src/api/utils/cutoff.ts` — a local minimum, floored at the mean of pairwise similarities; `SingleLinkageClustering` drops edges below it | 🟡 **GUESSED per dataset, not a policy you set. Say so before a client calls it a standard** |
+| 🟢 **adjudication** | `falsePositive` `0`, `confidence` `0`, no pass/fail anywhere in `513` files | 🟢 **DECISION SUPPORT, not an adjudicator — and see `intel/trends.md`: this is what makes it routable under Annex III and the US oversight statutes** |
+| 🔴 **STANDARDS interop, word-boundary** | 🔴 **OneRoster `0`, Ed-Fi `0`, SCORM `0`, xAPI `0`, Caliper `0`, LTI `0`, QTI `0`** | 🔴 **none. Same shape as `canvasapi`: it speaks its own platform, not a standard** |
+| 🔴 **privacy regimes named** | 🔴 **`FERPA` `0`, `GDPR` `0`** | 🔴 **names neither. The data-protection story is the integrator's to write** |
+| 🔴 **LMS integration** | 🔴 **Canvas `0` in the product sense, `Moodle` `0`, `webhook` `0`** | 🔴 **NONE. Wiring it into an LMS is custom work — budget it** |
+| 🟡 **`canvas` — the trap, caught** | `29` case-insensitive hits, **`0`** of them Canvas LMS: every one is the HTML5 `<canvas>` element or `D3` rendering, and `Canvas LMS`/`canvas-lms`/`instructure` match `0` | 🟡 **`T265` fired exactly as designed. A narrower grep would have published *"Canvas-integrated"*** |
+| 🟡 **home platform** | `Dodona` — `193` hits | 🟡 **built for Ghent's own platform; that is the integration it has** |
+| 🟢 **deployability** | `Dockerfile.cli`, `Dockerfile.web`, `docker-compose.yml`, `docker` `114` hits | 🟢 **deployable as CLI or as a web report** |
+
+🟢 **Verdict: `dolos` ROUTES, and it is stronger than the row that admitted it on language coverage
+and honest on everything else.** 🔴 **Two conditions travel with it: there is NO LMS integration of
+any kind, and it returns NO verdict.** 🔵 **The second condition is a feature. The first is a line
+item.**
+🔴 **A method note recorded against this pass's own work: the first run of this probe grepped only
+`lib/`, `cli/` and `docs/` and was about to publish *"`threshold` `0`"* and *"`cluster` `0`"*. Both
+are false — `16` and `178` hits repository-wide. 🔵 **A scope-limited grep reports the scope, not
+the repository (`T276`), and it fails in the direction that makes the finding sound sharper.**
+🟢 **Full artefact ledger:**
+[`evidence/dolos-artefact-read.2026-10-13-p177.tsv`](../evidence/dolos-artefact-read.2026-10-13-p177.tsv).
+
+
 ## Pass 176 — 2026-10-13
 
 🆕 🟢 **One of p175's four holder-grade rows has now been read PAST its licence, and it is better

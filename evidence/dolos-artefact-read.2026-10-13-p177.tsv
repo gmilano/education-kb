@@ -1,0 +1,25 @@
+artefact_the_row_would_need	measured	verdict
+licence body	MIT, 1084 B (corrected from 1083), md5 00ffc342d555c4129ee54e3286818d50, "Copyright (c) 2019 Team Dolos <dolos@ugent.be>"	CLEAN, holder-grade EMEA
+HEAD	44925b867ce737206c1debce0add731e294025d5 - unmoved since p175	controlled
+tracked files	513	real project
+grant-path exclusivity	LICENSE only; LICENCE, LICENSE.md, LICENSE.txt, COPYING all 404 at 14 B	single grant, unambiguous
+language coverage - registry	LanguagePicker.languages declares 21 entries: 20 programming languages + 1 char tokenizer	MEASURED
+language coverage - languages	bash c cpp c-sharp python php modelica ocaml java javascript elm go groovy r rust scala sql typescript tsx verilog	20 languages
+language coverage - vendored grammars	19 tree-sitter grammar directories in parsers/	ships its own parsers
+language coverage - docs claim	docs/about/languages.md lists 11 and ends with an ellipsis	DOCS UNDERSELL BY 9
+prose capability	CustomTokenizerLanguage("char", [".txt", ".md"]) via charTokenizer.ts	NOT code-only - but character-level, weak for essays
+false-positive vocabulary	falsePositive 0 hits, confidence 0 hits, whole repo	NO confidence score, NO verdict
+false-positive problem named	docs/docs/running.md:55 "Dolos will often detect these code fragments as similar and include them in the similarity score, making it harder to spot actual plagiarism."	named without the phrase
+false-positive control 1	-i / --ignore <path> template-or-boilerplate exclusion; matching fingerprints do not count toward similarity	ships
+false-positive control 2	-m / --max-fingerprint-count <int> max files a fragment may occur in before being ignored	ships, auto-detect
+false-positive control 3	-M / --max-fingerprint-percentage <fraction> same as a fraction of analysed files; combinable with -i	ships, auto-detect
+core engine default	options.ts:54 defaultMinSimilarity = 0	filters NOTHING by default
+threshold location	web report UI only: guessSimilarityThreshold in web/src/api/utils/cutoff.ts, local minimum floored at the mean of pairwise similarities	GUESSED, not configured
+clustering	SingleLinkageClustering drops edges below the similarity threshold; cluster 178 hits / 27 files	threshold-driven
+adjudication	no confidence, no verdict, no pass/fail anywhere	DECISION SUPPORT, not an adjudicator
+test surface	57 test files, 103 test declarations	real
+interop standards word-boundary	OneRoster 0, Ed-Fi 0, edfi 0, SCORM 0, xAPI 0, Caliper 0, LTI 0, QTI 0	NONE
+privacy regimes word-boundary	FERPA 0, GDPR 0	names neither
+LMS integration	Canvas 0 in the product sense (all 29 canvas hits are the HTML5 element or D3 rendering - T265 substring trap, caught), Moodle 0, webhook 0	NONE - wiring is custom work
+home platform	Dodona 193 hits	built for Ghent's own platform
+deployability	Dockerfile.cli, Dockerfile.web, docker-compose.yml, docker 114 hits	deployable
