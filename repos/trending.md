@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p178 — `Artemis` verified; `Pyris` admitted at `12`★; the second tag found
+
+🆕 🟢 **The week's biggest movement in this file is not a new repository, it is a repository that
+stops being a claim.** [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — `818`★, `396`
+forks, `256` open issues, `MIT`, TUM — was cloned and read: `13 810` files, `257` JPA entities,
+`528` write endpoints, `LTI 1.3` with grade passback, a nightly Moodle interop test, and an AI
+surface of `~1 400` file-hits across `Iris`, `Hyperion`, `Athena` and `Pyris`. 🔵 **Full read in
+[`repos/foundations.md`](../repos/foundations.md); the one-line version is that this is the only
+institution-held, permissive, standards-speaking, AI-native education platform this KB has ever
+verified.**
+🆕 🔴 **And the week's most useful warning comes with it: the AI path's self-hosted limb is a `12`★
+repository.** [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) — `MIT`, `1 089` B,
+`md5 5cc3b9844f092545a99800eb9edce880`, `HEAD` `d7b2c095204e`, `16` open issues, last push
+`2026-09-17`, topics `ollama` · `weaviate` · `langchain`. 🟢 **Good news, measured from `Artemis`'s
+own admin documentation rather than inferred: `Hyperion` — the authoring half — does NOT need it.
+*"The functionality is provided by Artemis and Spring AI, so no EduTelligence service needs to be
+deployed."* `Pyris` is required only for semantic lecture search, and quiz generation
+*"falls back gracefully"* without it.**
+
+### 🆕 🔴 The census correction — `topic:ai-tutor license:mit` = `298`
+
+🟢 **`topic:ai-education license:mit pushed:>=2026-04-16` = `135`, fifth consecutive pass, head
+unchanged.** 🔴 **`topic:ai-tutor license:mit pushed:>=2026-04-16` = `298`, with `5` `MIT`
+repositories above `170`★ this KB has never named, none of them carrying `ai-education`.** Full
+rows, licences, `md5`s and holders in [`agents/trending.md`](../agents/trending.md).
+🔵 **For this file the operational consequence is narrow and concrete: the trending instrument needs
+BOTH tags from p179 on, and any *"the supply is stable"* sentence needs the query printed next to
+it.**
+
+### 🆕 🟢 Trending, by what moved rather than by what is new
+
+| repo | ★ | what moved this pass |
+|---|---|---|
+| 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **`925`** | 🔴 **created `2026-09-17` — `26` days to `925`★.** The fastest-growing permissive education repository this KB has seen. `MIT`, Chinese-language, `ai-tutor` + `learning-agents` + `spaced-repetition` |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `515` | 🟡 **a shelf row this KB had never SIZED.** Second-largest row on the agent shelf, and the only `MCP` server there |
+| 🟢 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `304` | 🆕 declares `anti-hallucination` and *"page citations"* — provenance as a FEATURE, in a study tool. Relevant to the Article `50(2)` work in [`compose/patterns.md`](../compose/patterns.md) |
+| 🟢 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `284` | 🆕 **skill pack AND self-hostable `fastapi`+`react` app.** One of only two rows in the tag's head with a deployment surface |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `140` | 🟡 already on the shelf; surfaced this pass through the tag the KB was not counting. `local-first`, `10+` LLM providers, `self-hosted` |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `818` | 🆕 🟢 **VERIFIED. `develop` moved from `8c158741c38e` to `6aae3ae2655c` DURING this pass** |
+| 🔴 [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | `12` | 🆕 admitted as a dependency, not a product |
+
+🔴 **A liveness note that is also a method note:** `Artemis`'s default branch is `develop`, `main`
+exists as a DIFFERENT commit (`07f43f8e0b71`), and `develop` advanced inside the hour this pass
+ran. 🔵 **`T281`: on a repository with two live branches, a bare `HEAD` is not an identity. Every
+`Artemis` count published this pass is labelled `develop@8c158741c38e`, and `ACTION LB` is
+pre-registered to find out how many other rows in this KB are under-labelled the same way.**
+
+### 🆕 🔴 What the GitHub-trending sweep did NOT return, said out loud
+
+🔴 **`0` education-specific repositories appeared in any general *"GitHub trending `2026`"* source
+this pass.** Every such list the sweep reached was dominated by agent frameworks, coding tools and
+LLM training codebases. 🔵 **That is a real signal rather than a failed search: education AI is
+growing inside topic tags and agent-skill registries, not on the front page — which is exactly why
+the tag census is this KB's primary supply instrument and why getting the tag wrong mattered.**
+🔴 **`0` LATAM-originated repositories, on an English tag census AND on a Spanish-language query of
+`128` results whose best education-AI rows are `2`★ and `1`★.**
+🔴 **`0` Canada-originated education-AI repositories surfaced; Canada appears this pass as policy
+only.**
+
 ## 2026-10-13 — p177
 
 🟢 **The two population counts, re-taken on the one-request authenticated channel, same `180`-day

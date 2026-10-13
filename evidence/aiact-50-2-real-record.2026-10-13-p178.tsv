@@ -1,0 +1,6 @@
+case	origin reaching the gate	c2pa reaching the gate	gate verdict	mechanism
+licensed stock visual, BEFORE edit 4	licensed-media	not-applicable (reader constant)	PASSES	T269 data loss: the stored value never reaches the gate
+licensed stock visual relabelled by workflow.py:2515-2516, BEFORE edit 4	generated	not-applicable (reader constant)	REFUSED AT CONSTRUCTION	edit 1 - and the asset is licensed media, not generated
+licensed stock visual, AFTER edit 4	generated	absent (READER DEFAULT, not the store)	FIRES - export.c2pa	_artifact_provenance:2520-2534 has NO c2paStatus key
+generated asset, VALID with hash+signer+time	generated	valid	PASSES	the only passing configuration for a GENERATED asset
+any asset, C2paRecord(C2paStatus.VALID) alone	-	construction refused	N/A	VALID structurally requires hash+signer+verified_at

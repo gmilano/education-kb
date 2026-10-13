@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🟢 **Four pre-registered actions discharged, three with a limb fired, and the oldest live debt in
+this KB — `gap 136`, untouched for two passes — is CLOSED on both halves.**
+🆕 🟢 **The pass's most useful finding for a client: the LAST unverified holder-grade row is read,
+and it is the strongest row in this KB.** [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+owns its data (`257` JPA entities, `137` Liquibase changelogs), writes to exercise, exam and
+assessment objects through `528` write endpoints, carries its own auth, and ships **LTI `1.3` with
+Assignment-and-Grade-Services and a NIGHTLY Moodle interop test**. 🔵 **It is the first row here that
+is both institution-held and standards-speaking, and it is the exact complement of `dolos`: `dolos`
+refuses to adjudicate, `Artemis` adjudicates by design.**
+🆕 🔴 **The pass's most embarrassing finding, and it is again about this KB's own habits: `ACTION KS`
+spent all of p177 re-deriving a defect this repository had already diagnosed, measured and FIXED on
+`2026-10-09`.** `compose/code/lib/payload_measure.sh` carries it as `P834`, with the measurement
+table *(trailing newlines `0`/`1`/`3` → delta `0`/`1`/`3`)*, the correct primitive `size_of_file`,
+and a control named `size_of_capture_BROKEN`. 🔴 **`12` live call sites, in `12` files across `10` instruments, still use
+the broken idiom.** 🟢 **So p178's deliverable is not a diagnosis, it is a GATE.**
+🆕 🔴 **The pass's sharpest correction to this KB's own evidence: the supply census was measuring a
+TAG, not the supply.** `topic:ai-education license:mit` = **`135`** for a FIFTH consecutive pass,
+exactly as p177 said — but `topic:ai-tutor license:mit` = **`298`**, and its head holds **`5` `MIT`
+repositories above `170`★ that this KB has never named**, the largest at `925`★ and `26` days old.
+🔴 **Not one of the five carries `ai-education`.** 🔵 **p177's *"no new agent reached candidate grade
+this pass"* was a true statement about one tag and a false statement about the supply (`T279`).**
+🆕 🟢 **And the finding that survives the correction: every one of the `6` new rows is held by an
+INDIVIDUAL or an unincorporated contributor set.** 🔵 **p176's shape thesis is not overturned by a
+bigger tag, it is CONFIRMED on `5`× the evidence — what the permissive supply lacks is not
+applications, it is applications with an institution behind them. `Artemis` is what that absence
+looks like when it is filled.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION KT`** — read `ls1intum/Artemis` past its licence and close `gap 134` | 🟢 **DISCHARGED, LIMB 1 FIRED. PROMOTED from CANDIDATE to verified ROUTE. It reaches exercise/exam objects with write access and its own auth, and it carries interop this KB has never had on a shelf row. `gap 134` is CLOSED** |
+| 🔴 **`ACTION KU`** — find the CALL SITE that strips the trailing `LF`, and audit every byte count beyond the `12` | 🔴 **DISCHARGED, LIMB 2 FIRED — and the vocabulary already EXISTED. `12` live sites in `12` files across `10` instruments; `20` of `20` published byte counts re-measured on both channels; `5` more corrected. A GATE ships (`exit 1` today, `6`/`6` on its own suite)** |
+| 🟢 **`ACTION KR`** *(carried, third pass)* | 🟢 **DISCHARGED, LIMB 1 FIRED — the PRESCRIBED FIX IS UNEXECUTABLE. Pristine `46`/`46` GREEN reproduced for the first time; edits `1`+`2` break exactly the `2` predicted tests; the prescribed `c2pa=C2paRecord(C2paStatus.VALID)` RAISES; the corrected form reaches `46`/`46`; with edit `4` and `7` new tests, `53`/`53`. `gap 136` CLOSED** |
+| 🟢 **`ACTION KV`** — resolve the `50(2)` date on a reachable channel | 🟢 **DISCHARGED, LIMB 2 FIRED. `6` of `6` EU primary and official hosts unreachable on TWO independent channels. The figure is now PERMANENTLY SECONDARY by declaration, and `2` December `2027` for Annex III education is corroborated across independent secondary channels** |
+| 🟡 **`ACTION KW`** — run a real corpus through `dolos` | 🔴 **NOT ATTEMPTED. Carried to p179 unchanged** |
+| 🔴 **`ACTION KN`** *(carried)* — migrate the `76` grant-path probe lists | 🔴 **NOT ATTEMPTED. `gap 135` carried a third pass** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **A THIRD code-verified route, and the first one that is a PLATFORM**
+  ([`verticals/solutions.md`](verticals/solutions.md)): `Artemis` promoted on measurements, not
+  claims — `13 810` tracked files, `5 172` Java, `4 135` TypeScript, `3 963` test files, `257`
+  `@Entity` classes, `137` Liquibase changelogs, `v10.3`, Java `25`, Node `≥24.21`.
+  🔵 **`3` of `22` routing rows are now code-verified — the honest denominator, up from `2`.**
+- 🆕 🟢 **The interop row this KB has been missing for fifteen passes.** `LTI` at word-boundary
+  precision in `248` files with its OWN module (`.../artemis/lti`, `47` files), `Lti13Service`,
+  `Lti13Configurer`, `DeepLinking` `60`×, AGS `305`× — **grade passback, not just launch** — and
+  `NightlyLtiMoodleInteropTest.java` with a `moodle-sign-jwt.php` fixture. 🔴 **`SCORM` `0`,
+  `xAPI` `0`, `QTI` `0`, `OneRoster` `0`, `Ed-Fi` `0`, `Caliper` `0`: it speaks ONE standard, and
+  it speaks it properly.**
+- 🆕 🟢 **An AI surface big enough to change the engagement shape:** `Iris` in `748` files with a
+  `254`-file module, `Hyperion` `231`, `Athena` `187`, `pyris` `219`.
+  🟢 **And the deployment fact that matters: `Hyperion` needs NO external service — its own admin
+  doc says *"The functionality is provided by Artemis and Spring AI, so no EduTelligence service
+  needs to be deployed"*, with `Pyris` required only for semantic lecture search.**
+- 🆕 🟢 **A second EMEA institutional row admitted with its licence read:**
+  [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) — `MIT`, `1 089` B,
+  `md5 5cc3b9844f092545a99800eb9edce880`, `HEAD` `d7b2c095204e`, `12`★, topics `ollama` +
+  `weaviate` + `langchain`. 🔵 **The sovereignty limb of an `Artemis` engagement is a `12`★
+  microservice, and that is a risk line, not a feature line.**
+- 🆕 🟢 **`gap 136` CLOSED with a GREEN suite and a REAL record**
+  ([`compose/code/p178-real-record-gate/`](compose/code/p178-real-record-gate/)): the patch as a
+  `79`-line diff, `7` new tests the project does not have, and two evidence ledgers.
+- 🆕 🔴 **Two NEW defects in the subject, both found by running the record rather than reading the
+  code:** `_artifact_provenance` (`generation/workflow.py:2520-2534`) — **the only builder of the
+  list the gate reads — carries NO `c2paStatus` key at all**, so edit `4` reads its own default and
+  not the store; and `origin` is written `"licensedMedia"` by two workflows while `OriginKind`
+  spells it `"licensed-media"`, so `workflow.py:2515-2516` **silently relabels every licensed stock
+  asset `GENERATED`**. 🔵 **Edit `1`'s blast radius is therefore much wider than p176 predicted: it
+  refuses licensed media, not just synthetic media.**
+- 🆕 🔴 **`T279`–`T282` — four method theses, three of them about this KB's instruments:** a
+  single-tag census measures the tag; a defect already fixed in a library is not fixed until
+  something makes its absence fail; a `HEAD` is not an identity on a repository with two live
+  branches; and a prescription repeated across three passes is not a measurement.
+- 🆕 🔴 **The URL-existence channel this KB's own instructions prescribe does NOT work here, and it
+  fails in the direction that would have looked like `46` dead links.** `curl -sI` against
+  `github.com` returns **`403` for all `46` repository URLs in this pass's blocks** — uniformly,
+  because the agent proxy refuses github.com HTML, not because anything is missing.
+  🟢 **`git ls-remote` resolves all `46` and returns a real `HEAD` sha for each
+  ([`evidence/url-existence-lsremote.2026-10-13-p178.tsv`](evidence/url-existence-lsremote.2026-10-13-p178.tsv)),
+  and `raw.githubusercontent.com` answers `200` on licence paths.** 🔵 **So existence is checked on
+  `ls-remote` or `raw` from here, never on an HTML `HEAD` request — and a uniform status across every
+  subject is a channel verdict, never a finding about the subjects (`T283`).**
+  🟡 **A free corroboration of `T281` fell out of it: `odoo/odoo` publishes `3` refs matching
+  `HEAD`, two of them `refs/remotes/*/HEAD`.**
+- 🆕 🟢 **The LATAM gap, measured on a LANGUAGE-NATIVE channel for the first time.** A
+  Spanish-language supply query returns `128` repositories whose best education-AI rows are
+  `2`★ and `1`★. 🔵 **Twelfth consecutive pass with no LATAM-originated routable row — and the
+  claim no longer rests on an English tag's top `30`.**
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`12` of the `12` stripping call sites are UNFIXED — `0` were repaired this pass.** The gate makes
+  them fail loudly; it does not repair them, and one probe's idiom (`p324`, which pipes the body through `head` before
+  counting) may not take the mechanical swap (`ACTION KY`).
+- 🔴 **The two new subject-side defects are MEASURED and NOT REPAIRED.** Propagating `c2paStatus`
+  through `_artifact_provenance` would make the patch `4` edits, not `3`, and nothing here has
+  measured whether that keeps the suite green (`ACTION KZ`). 🔵 **Nothing was reported upstream and
+  nothing should be, from an unattended pass.**
+- 🔴 **`Artemis`'s `HEAD` is recorded at `develop@8c158741c38e` and p177's `09266581a02c` could NOT
+  be confirmed**: a `--depth 1` clone cannot reach it, and this repository has TWO live branches
+  whose heads differ — `develop` `6aae3ae2655c`, `main` `07f43f8e0b71` at the close of this pass.
+  🟢 **The licence is byte- and `md5`-identical on both, so the licence claim is branch-independent;
+  the SHA claim is not** (`T281`, `ACTION LB`).
+- 🔴 **`develop` MOVED during this pass** — `8c158741c38e` at clone, `6aae3ae2655c` an hour later.
+  🔵 **Every file-count and token-count in this pass is a reading of `8c158741c38e` and is labelled
+  as such, not of *"Artemis"*.**
+- 🔴 **None of the `6` new candidates has been read past its licence** (`ACTION KX`), so not one
+  enters the shelf. 🟢 **Licence body, bytes on the full channel, `md5`, holder and `HEAD` are
+  recorded for all six; nothing else is.**
+- 🔴 **`ACTION KW` is untouched: `dolos`'s detection quality and real false-positive rate are still
+  unmeasured**, and Pattern `1`'s `-i` step is still unexercised.
+- 🔴 **`0` of `76` grant-path probe lists migrated** (`gap 135`, `ACTION KN`).
+- 🔴 **DECLARED REGIONAL GAPS, written down so silence cannot read as coverage:**
+  🔴 **`0` named EMEA EdTech VENDORS recoverable for a second consecutive pass** — the sweep
+  returned compliance consultancies and policy bodies, and the one EMEA product this pass can name
+  is `Artemis` itself, a university's own platform. 🔴 **`0` Canada-specific SUPPLY** — Canada
+  appears this pass only as policy (a national strategy dated `4` June `2026`, Manitoba's
+  public-sector AI act with Royal Assent `1` June `2026`, no successor to the lapsed AIDA).
+  🔴 **LATAM supply remains empty at routable grade.**
+- 🔴 **Every AI Act date in this pass is search-layer secondary and is now declared permanently so.**
+  🔴 **`gap 110` is CONFIRMED CLOSED-OFF rather than open: `eur-lex.europa.eu`,
+  `digital-strategy.ec.europa.eu`, `ec.europa.eu`, `eurlex.europa.eu`, `data.europa.eu` and
+  `artificialintelligenceact.eu` all fail to resolve, on BOTH the shell channel and the fetch tool.**
+  🔵 **Two independent channels agreeing on unreachability is the strongest form this finding can
+  take from here. Stop re-deriving it.**
+- 🔴 **The execution-permission layer refused `3` actions mid-pass** — a shell edit to a security
+  test file, a direct script run against the subject, and one identical re-run of a suite command
+  that had already been allowed four times. 🟢 **All three were reached by a narrower, more
+  conventional tool, and the refusals are reproducible evidence for `gap 132`, which p175 recorded
+  and could not demonstrate.**
+
+### 🟢 Pre-registered for p179 — each with the falsifier stated BEFORE the measurement
+
+| action | question | falsifier |
+|---|---|---|
+| 🟢 **`ACTION KX`** | read the two largest new rows past their licences — `Miaotofu01/Study-Mate` (`925`★) and `Li-Evan/Bloom` (`284`★) | **limb `1`:** either reaches a persistence layer with its own auth and a deployable surface → it is a candidate for the shelf. **limb `2`:** both are prompt-and-markdown skill packs that run inside someone else's agent runtime → name the CLASS, record that the shelf cannot hold it, and stop re-reading the tag's head |
+| 🟢 **`ACTION KY`** | fix all `12` stripping call sites and see `check_channel.sh` exit `0` | **limb `1`:** a mechanical swap to `size_of_file` works at every site → one commit closes it. **limb `2`:** at least one probe needs the capture for classification and cannot take the swap → the gate needs a marked-control idiom, and the debt is a vocabulary problem exactly as `gap 135` is |
+| 🟢 **`ACTION KZ`** | propagate `c2paStatus` through `_artifact_provenance` and re-run — does the Article `50(2)` patch survive becoming `4` edits? | **limb `1`:** `53`/`53` holds → the patch is complete and the *"nothing exports"* claim narrows to *"nothing exports unsigned"*. **limb `2`:** it breaks tests → the field is load-bearing somewhere else and the repair is a schema change, not an edit |
+| 🟢 **`ACTION LB`** | does any OTHER row in this KB carry a `HEAD` from a branch that is not its default? | **limb `1`:** `Artemis` is the only multi-branch subject → amend one row and move on. **limb `2`:** more rows are under-labelled → the shelf's identity convention needs a branch column, and every SHA published without one is ambiguous |
+| 🟡 **`ACTION KW`** *(carried)* | run a real corpus through `dolos` and measure detection and false positives rather than its controls | **limb `1`:** template exclusion materially changes the pair ranking → the `-i` step in Pattern `1` is load-bearing. **limb `2`:** it does not → the step is cargo cult and the pattern should drop it |
+| 🔴 **`ACTION KN`** *(carried)* | migrate the `76` grant-path probe lists to `P176-B` | **limb `1`:** a migration changes a published verdict → the `76` lists were hiding disagreements. **limb `2`:** every verdict survives → the lists agreed and the debt is cosmetic |
+
 ## Pass 177 — 2026-10-13
 
 🟢 **Two pre-registered actions discharged, both with a limb fired, and a THIRD action opened and

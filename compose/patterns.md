@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🆕 🟢 **`gap 136` — the oldest live debt in this KB, carried for three passes — is CLOSED, and the
+pattern it blocked is now the only compliance recipe here whose every step has been EXECUTED.**
+🆕 🔴 **And the way it closed matters more than that it closed: the fix this KB prescribed for three
+passes is UNEXECUTABLE as written.**
+
+### 🆕 🟢 Pattern `2` — Article `50(2)` marking, MEASURED END TO END
+
+🟢 **Subject, pinned:**
+[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator),
+`MIT`, `9c260890214df68ad8fd0d681d3e77a6a7b7ea9f` — **still `HEAD` at a fifth consecutive pass**,
+`905` files, `272` Python, `46` security tests.
+
+🔴 **Step `0`, and nobody had hit it because nobody had run the suite: the project needs Python
+`≥3.12`.** `src/alystria/providers/types.py:414` declares `class ProviderResult[T]`, PEP `695`
+generic syntax. 🔴 **On this environment's default `python3` (`3.11.17`) the security suite cannot
+even IMPORT — `37` tests run, `1` import error, `10` tests never collected.** 🟢 **Under
+`/usr/bin/python3.13` it is `46`/`46` GREEN.** 🔵 **Record the interpreter next to the test count or
+the number means nothing. p175 and p176 both published *"`46` security tests"* without one.**
+
+| stage | result | note |
+|---|---|---|
+| pristine, `python3.11` | 🔴 **`37` run, `1` import ERROR** | PEP `695` syntax — environmental, not a defect |
+| pristine, `python3.13` | 🟢 **`46`/`46` GREEN** | 🟢 **first reproduction of this baseline in this KB** |
+| + edits `1`+`2` | 🔴 **`2` errors, exactly the `2` PREDICTED** | `test_apache_two_generated_asset_allows_transformed_commercial_export`, `test_mit_starter_audio_allows_transformed_commercial_export` |
+| + the PRESCRIBED test fix | 🔴 **STILL `2` errors — the prescription is WRONG** | `ValidationError: valid C2PA records require a hash, signer, and verification time` |
+| + the CORRECTED test fix | 🟢 **`46`/`46` GREEN** | `C2paRecord(C2paStatus.VALID, HASH, "Alystria", NOW)` |
+| + edit `4` + `7` new real-record tests | 🟢 **`53`/`53` GREEN** | the whole patch, exercised |
+
+🔴 **Why the prescription could not work, and it is a self-inflicted error this KB had the facts to
+avoid:** `ACTION KI`/`ACTION KR` prescribed *"pass `c2pa=C2paRecord(C2paStatus.VALID)` in the two
+`GENERATED` test constructions"*. 🔴 **`C2paRecord.__post_init__` (`provenance.py:52-60`) raises
+unless a `VALID` record also carries `manifest_sha256`, `signer` AND `verified_at`.**
+🔵 **p174 ALREADY recorded that constraint — *"`C2paRecord` structurally requires a `signer` for
+`VALID` (`provenance.py:55-60`)"* — and called the certificate the only procurement line item. Two
+published facts in the same file contradicted each other for three passes because nobody executed
+either (`T282`'s sibling: a prescription repeated is not a prescription tested).**
+🟢 **The corrected fix is still `2` insertions and it reaches `46`/`46`.**
+
+🔴 **And the compliance consequence of that constraint, which is the real finding for a client:
+after edits `1`+`2` there is NO status a `GENERATED` asset can carry that passes the export gate
+without a signing certificate.** `NOT_APPLICABLE` is refused by edit `1`; `ABSENT` and `INVALID` are
+refused by the gate; `VALID` is structurally impossible without `manifest_sha256` + `signer` +
+`verified_at`. 🔵 **So p176's *"no certificate, no external tool, no fifth file — the cheapest
+compliance movement available anywhere on this shelf"* is WRONG for generated assets. The metadata
+half is cheap; the moment the gate refuses `NOT_APPLICABLE`, the certificate moves from Step `C`
+onto the critical path. Price it at the start of the engagement, not at the end.**
+
+#### 🆕 🔴 Two NEW defects, found by running a real record instead of reading the code
+
+🟢 **The record used is not invented: its key names are the ones `_provenance_quality_gate` reads,
+and its shape is the dict `_artifact_provenance` returns.**
+
+| # | defect | evidence | consequence |
+|---|---|---|---|
+| 🆕 🔴 **`1`** | **the builder never carries the field the gate needs** | `_artifact_provenance` (`generation/workflow.py:2520-2534`) is the ONLY producer of the `provenanceRecords` list, and its returned dict has **no `c2paStatus` key** | 🔴 **edit `4` reads its own DEFAULT (`"absent"`), not the store. `gap 136`'s *"nothing exports"* claim HOLDS — but the mechanism is a missing field, not a refused value. 🔵 Worse, because it is silent** |
+| 🆕 🔴 **`2`** | **`origin` is written in a spelling the enum does not have** | `licensed_media_workflow.py:259`/`:290` and `music_workflow.py:159`/`:301` store `"origin": "licensedMedia"`; `OriginKind` spells it `"licensed-media"`; `workflow.py:2515-2516` rewrites anything unrecognised to `GENERATED` | 🔴 **every licensed stock asset reaches the gate labelled GENERATED. So edit `1` refuses LICENSED MEDIA, not just synthetic media — a blast radius p176 did not predict** |
+
+🟢 **Both are asserted as tests, not as prose:**
+[`compose/code/p178-real-record-gate/test_p178_real_record_marking.py`](code/p178-real-record-gate/test_p178_real_record_marking.py)
+— `7` tests, all passing, including the CONTROL that an unpatched reader lets an unmarked record
+through a gate that requires marking. 🔵 **That control is the test the project does not have, and
+patterns.md has been asking for it since p174.**
+🟢 **The patch as a diff:**
+[`aiact-50-2-edits-1-2-4.p178.patch`](code/p178-real-record-gate/aiact-50-2-edits-1-2-4.p178.patch)
+— `79` lines; `7` insertions in `provenance.py`, `5` changed in `gates.py`, `1` in
+`generation/workflow.py`, `2` in the test file.
+🟢 **Ledgers:**
+[`evidence/aiact-50-2-green.2026-10-13-p178.tsv`](../evidence/aiact-50-2-green.2026-10-13-p178.tsv)
+and
+[`evidence/aiact-50-2-real-record.2026-10-13-p178.tsv`](../evidence/aiact-50-2-real-record.2026-10-13-p178.tsv).
+🔴 **Nothing was reported upstream and nothing should be from an unattended pass. The diff is here
+for a human to take.**
+
+#### 🟢 The build order for a client, with what each step now costs
+
+| step | effort | buys | measured? |
+|---|---|---|---|
+| `1` — honour the stored status *(edit `4`)* | 🟢 **`1` line** | the gate stops being fed a constant | 🟢 **YES — and it exposes defect `1`: the field is never propagated** |
+| `2` — propagate `c2paStatus` through `_artifact_provenance` | 🟡 **`1`–`2` lines, UNMEASURED** | the gate reads the STORE instead of a default | 🔴 **NO — `ACTION KZ`** |
+| `3` — fail closed on synthetic origin *(edits `1`+`2`)* | 🟢 **`12` insertions** | `GENERATED` can no longer self-exempt | 🟢 **YES — `2` predicted breaks, both fixed in `2` insertions** |
+| `4` — fix the `origin` spelling in the two writers | 🟡 **`4` lines, UNMEASURED** | licensed media stops being relabelled `GENERATED` | 🔴 **NO — and until it is done, step `3` refuses stock photos** |
+| `5` — procure a signing certificate | 🔴 **procurement, not engineering** | 🔴 **the ONLY way a `GENERATED` asset exports at all after step `3`** | 🟢 **the necessity is now MEASURED, not inferred** |
+| `6` — thread `c2patool` from `native_controls.py:1113` | 🟡 **`5` files + a test** | the VISIBLE marking duty | 🔴 **NO — insertion point known (`editor_export.py`, after `:885`, BEFORE `:907`)** |
+
+🔵 **Sequence note that survives every date conflict: steps `1`–`4` are code and can ship inside a
+normal engagement; step `5` is a purchase order with a lead time; step `6` is the only part that
+touches the encoder. Marking is a `2026` duty, Annex III conformity is a `2027` roadmap
+([`intel/trends.md`](../intel/trends.md)).**
+
+### 🆕 🟢 Pattern `7` — the institutional assessment stack, every link code-verified
+
+🔵 **New this pass because `ACTION KT` made it possible: for the first time this KB can hand a
+university a topology in which every component has been read past its licence, and name what each
+one does NOT do.**
+
+| layer | component | licence · pin | why this one |
+|---|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) *(or [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) for permissive)* | 🔴 `GPL-3.0` *(at `COPYING.txt`)* · 🟢 `Apache-2.0` | the institution almost always already has one; `Moodle` is the LMS `Artemis` is nightly-tested against |
+| exercises, exams, grading | 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`**, `1 091` B · pin `develop@8c158741c38e`, `v10.3` | `257` JPA entities, `528` write endpoints, own auth, `LTI 1.3` tool with Deep Linking + AGS |
+| the wire between them | `LTI 1.3` + **AGS** | — | `Lti13Configurer` `27`, `Lti13AgsClaim` `9`, `ags` `305`, `DeepLinking` `60`, **`NightlyLtiMoodleInteropTest` in CI** — grades flow BACK, which is the limb that usually fails in integrations |
+| AI authoring | 🟢 **`Hyperion`, inside `Artemis`** | — | verified variant generation *(programming variants built, quiz variants validity-checked)*, MCQ generation, consistency checks. 🟢 **needs Spring AI + an LLM endpoint only** |
+| AI tutoring / lecture search | 🟡 [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | 🟡 **`MIT`**, `1 089` B · pin `d7b2c095204e` | 🔴 **`12`★, `16` open issues — OPTIONAL. Deploy only if semantic lecture search is in scope** |
+| integrity | 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`**, `1 084` B · pin `44925b867ce7` | `20` languages, `19` vendored grammars; 🟢 **returns NO verdict, which is what keeps it outside Annex III** |
+| SCORM / xAPI, if contractual | 🟢 [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🔴 **`Artemis` declares `SCORM` `0` and `xAPI` `0`. This row is not optional if the contract names them** |
+| rostering | 🟢 [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(read)* / [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) *(Canvas read+write)* | 🟢 `Apache-2.0` / 🟢 `MIT` | 🔴 **`Artemis` has `OneRoster` `0` and `Ed-Fi` `0`; enrolment is a separate integration, always** |
+| local inference, where sovereignty requires | `ollama` + `weaviate` | — | 🟡 **the path EXISTS — `ollama` in the Iris test stack and the Weaviate global-search config — and it is NOT the paved road: `spring.ai.openai` has `7` config keys, `spring.ai.model` has `1`** |
+
+🔴 **Wiring order, because the usual mistake is to start with the AI:**
+**(`1`)** stand `Artemis` up from `deployment/docker/docker-compose.yml` on a PINNED sha — `develop`
+moved during the hour this pass ran; **(`2`)** register it as an `LTI 1.3` tool in the LMS and prove
+Deep Linking + a grade round-trip through AGS *before* any AI work — this is the limb with a nightly
+test to copy from; **(`3`)** turn on `Hyperion` with an LLM endpoint and NO `Pyris`; **(`4`)** add
+`dolos` as a separate service and keep it non-adjudicating — a human reads the clusters;
+**(`5`)** add `scorm-again` and the rostering layer only if the contract names them;
+**(`6`)** decide the inference location LAST, because it is the only choice the architecture does
+not force.
+🔴 **The four conditions, carried verbatim into any deck:** `Artemis` **adjudicates** and is
+therefore an Annex III stand-alone high-risk system in the EU *(`2` December `2027`)*; it speaks
+**ONE standard**; it names **`FERPA` nowhere**, so a US deployment inherits that work; and its
+**self-hosted AI limb rests on a `12`★ microservice**.
+🟢 **What it buys that nothing else in this KB does: `proctor` `0`, `webcam` `0`, `emotion` `0`.
+The Article `5` prohibition on emotion recognition is cleared ARCHITECTURALLY, and that is a
+property you cannot retrofit onto a proctoring vendor.**
+
+### 🆕 🟢 Pattern `8` — the instrument-adoption gate, generalised for client platform teams
+
+🔵 **This pass found that a correct primitive had sat unused in this repository's own library for
+`103` passes while `10` instruments kept the broken idiom
+([`intel/trends.md`](../intel/trends.md), `T280`). The pattern is the remedy, and it transfers
+directly to any client with a platform team.**
+
+| step | here | at a client |
+|---|---|---|
+| `1` — name the defect as a CLASS, not an incident | `P834`: a command substitution strips the whole trailing newline run | *"which of our measurements round-trip through a shell variable?"* |
+| `2` — ship the correct primitive | `size_of_file` in `lib/payload_measure.sh` | the shared helper, in the shared place |
+| `3` — keep the BROKEN form as a named control | `size_of_capture_BROKEN`, with *"never use this to publish a figure"* | the anti-pattern, executable, so the suite can assert the divergence |
+| 🆕 **`4` — make the absence FAIL** | [`check_channel.sh`](code/p178-byte-channel-census/check_channel.sh): exits `1` on any unmarked stripping site; `6`/`6` on its own suite | 🔵 **the step everyone skips. Steps `1`–`3` are documentation; step `4` is the control** |
+| 🆕 **`5` — allowlist deliberate controls, and say why in the source** | `2` controls, plus this gate's own test fixture — 🟢 **which the gate caught on its first run** | a gate that cannot be allowlisted gets disabled; one that logs its exceptions stays on |
+
+🟢 **Measured result: `12` findings in `12` files across `10` instruments, `0` false positives after the
+comment-line filter, `6`/`6` suite including the `0`/`1`/`3` trailing-newline control.**
+🔴 **Honest state: the gate makes the debt visible and does NOT repair it — `0` of the `12` sites were
+repaired this pass. `ACTION KY` takes all `12`, and one of them (`p324`, which pipes the body through `head` before counting)
+may not accept the mechanical swap.**
+
 ## Pass 177 — 2026-10-13
 
 🟢 **Five patterns. Patterns `1`–`3` are buildable today from rows this KB has now read past their

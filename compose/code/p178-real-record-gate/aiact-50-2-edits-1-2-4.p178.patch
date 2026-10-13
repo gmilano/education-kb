@@ -1,0 +1,79 @@
+diff --git a/services/pipeline/src/alystria/generation/workflow.py b/services/pipeline/src/alystria/generation/workflow.py
+index 8c8b23f..ddbdb91 100644
+--- a/services/pipeline/src/alystria/generation/workflow.py
++++ b/services/pipeline/src/alystria/generation/workflow.py
+@@ -3015,7 +3015,7 @@ def _provenance_quality_gate(
+                         str(value["modelRevision"]) if value.get("modelRevision") else None
+                     ),
+                     consent_ids=tuple(str(item) for item in value.get("consentIds", [])),
+-                    c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE),
++                    c2pa=C2paRecord(C2paStatus(str(value.get("c2paStatus", "absent")))),
+                 )
+             # Runs created before the provider adapter recorded ElevenLabs'
+             # output terms are upgraded conservatively: private and attributed
+diff --git a/services/pipeline/src/alystria/security/gates.py b/services/pipeline/src/alystria/security/gates.py
+index fd2299f..0572a23 100644
+--- a/services/pipeline/src/alystria/security/gates.py
++++ b/services/pipeline/src/alystria/security/gates.py
+@@ -8,7 +8,7 @@ from enum import StrEnum
+ 
+ from .licensing import AssetUse, evaluate_license
+ from .privacy import RouteDecision
+-from .provenance import AssetProvenance, C2paStatus, ConsentRecord
++from .provenance import AssetProvenance, C2paStatus, ConsentRecord, OriginKind
+ 
+ 
+ class GateKind(StrEnum):
+@@ -257,10 +257,10 @@ class SecurityGates:
+             findings.extend(
+                 _finding("export.license", reason, asset.asset_id) for reason in decision.reasons
+             )
+-            if value.c2pa_required and asset.c2pa.status not in {
+-                C2paStatus.VALID,
+-                C2paStatus.NOT_APPLICABLE,
+-            }:
++            accepted = {C2paStatus.VALID}
++            if asset.origin is not OriginKind.GENERATED:
++                accepted.add(C2paStatus.NOT_APPLICABLE)
++            if value.c2pa_required and asset.c2pa.status not in accepted:
+                 findings.append(
+                     _finding(
+                         "export.c2pa",
+diff --git a/services/pipeline/src/alystria/security/provenance.py b/services/pipeline/src/alystria/security/provenance.py
+index 46a976b..cd85cdb 100644
+--- a/services/pipeline/src/alystria/security/provenance.py
++++ b/services/pipeline/src/alystria/security/provenance.py
+@@ -141,6 +141,13 @@ class AssetProvenance:
+             raise ValidationError(
+                 "generated assets require provider, model, and immutable revision"
+             )
++        if (
++            self.origin == OriginKind.GENERATED
++            and self.c2pa.status == C2paStatus.NOT_APPLICABLE
++        ):
++            raise ValidationError(
++                "generated assets cannot mark content credentials as not-applicable"
++            )
+         if self.origin == OriginKind.LICENSED_MEDIA and not self.source_uri:
+             raise ValidationError("licensed media requires a source URI")
+ 
+diff --git a/services/pipeline/tests/security/test_provenance_gates.py b/services/pipeline/tests/security/test_provenance_gates.py
+index 9e2917a..147ef76 100644
+--- a/services/pipeline/tests/security/test_provenance_gates.py
++++ b/services/pipeline/tests/security/test_provenance_gates.py
+@@ -133,6 +133,7 @@ class LicensingTests(unittest.TestCase):
+             provider_id="nvidia-nim",
+             model_id="black-forest-labs/flux.2-klein-4b",
+             model_revision="black-forest-labs/flux.2-klein-4b",
++            c2pa=C2paRecord(C2paStatus.VALID, HASH, "Alystria", NOW),
+         )
+         use = AssetUse(
+             DistributionPurpose.PUBLIC_COMMERCIAL,
+@@ -157,6 +158,7 @@ class LicensingTests(unittest.TestCase):
+                 provider_id="alystria-project-asset",
+                 model_id="alystria-project-asset",
+                 model_revision="cas-v1",
++                c2pa=C2paRecord(C2paStatus.VALID, HASH, "Alystria", NOW),
+             )
+ 
+         use = AssetUse(

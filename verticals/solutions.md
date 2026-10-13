@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🆕 🟢 **The platform row stops being a candidate, and it is the strongest route in this table.**
+`ACTION KT` read [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) past its grant:
+`13 810` files, `257` `@Entity` classes, `137` Liquibase changelogs, `528` write endpoints across
+exercise, exam and assessment, its own auth *(`passkey` in `136` files, `saml2` in `54`)*, and
+**`LTI 1.3` with Deep Linking AND Assignment-and-Grade-Services, tested nightly against Moodle in
+CI.** 🔵 **Fifteen passes of *"no permissive institutional platform"* end here.**
+🆕 🟢 **Three code-verified routes out of `22`, and this one is the first PLATFORM among them.**
+`canvasapi` (p176) is a client, `dolos` (p177) is a tool, `Artemis` is a system of record.
+🆕 🔵 **The pairing this table has been circling for three passes is now explicit, and it is an
+ARCHITECTURAL pairing rather than a feature list:** `dolos` ranks pairs and returns NO verdict;
+`Artemis` grades, scores and adjudicates by design. 🔴 **Routing them together means routing one
+Annex III high-risk system and one deliberately non-adjudicating tool, and the compliance work
+attaches to exactly one of them — see [`intel/trends.md`](../intel/trends.md).**
+🆕 🔴 **The condition that will decide an `Artemis` engagement's budget is not the licence, it is
+the standard count: ONE.** `LTI` in `248` files; `SCORM` `0`, `xAPI` `0`, `QTI` `0`, `OneRoster`
+`0`, `Ed-Fi` `0`, `Caliper` `0`. 🟢 **So `Artemis` + `mentingo` is not a redundant pair: `mentingo`
+is still the only row here DECLARING `scorm` and `xapi`, and `Artemis` is the only row speaking
+`LTI 1.3` with grade passback.**
+🆕 🔴 **And a new dependency row, admitted because the AI path cannot be quoted without it:**
+[`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), `MIT`, **`12`★**. 🟢 **Measured mitigation
+from `Artemis`'s own admin doc: the authoring half (`Hyperion`) needs Spring AI and an LLM endpoint,
+NOT `Pyris`; `Pyris` is required only for semantic lecture search and quiz generation falls back
+without it.**
+🟢 **The routing table RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block is
+canonical"* a row not re-stated is lost however true it remains below.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p178
+
+| need | route | licence *(body read)* | status at p178 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED unchanged. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The LATAM, APAC low-bandwidth and Africa row. 🟡 Its PLACEMENT evidence stays downgraded (`ACTION KK`): the artefact names *"Learning Equality"* and no country** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🟡 **CARRIED WITH THE SAME THREE FLAGS. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); `8` of `86` `licenses/` paths are NOT open-source grants; `25` of `86` are `Apache-1.1`, so clause `3` attribution is owed (`ACTION JU`)** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B — EXACT; its licence carries no trailing `LF`)* | 🟢 **CARRIED, EMEA. `SCORM` import AND export, ships `licenses.config.yaml`, the gate to LIFT. 🆕 Still the only row in this KB DECLARING both `scorm` and `xapi` — which is now a COMPLEMENT to `Artemis` rather than an alternative to it** |
+| 🆕 🟢 **LMS / exercise + exam platform, permissive — university-OWNED, AI-native, `LTI 1.3`** | 🟢 [**ls1intum/Artemis**](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** *(`1 091` B, `md5 021aaec73f7b974dc5edf4ef703f941b`, identical on `main` and `develop`; *"© 2026 TUM Applied Education Technologies"*)* | 🆕 🟢 **PROMOTED from CANDIDATE to verified ROUTE, EMEA, HOLDER-GRADE. `develop@8c158741c38e`, `v10.3`, `818`★. `ACTION KT`: `257` JPA entities, `137` migrations, `528` write endpoints, own auth, `LTI 1.3` + Deep Linking + AGS, nightly Moodle interop test, `Iris`/`Hyperion`/`Athena` AI modules, compose-deployable, `proctor`/`webcam`/`emotion` all `0`. 🔴 **CONDITIONS:** it ADJUDICATES (Annex III); ONE standard only; `FERPA` `0`; AI default provider is OpenAI/Azure** |
+| 🆕 🟡 **LLM microservice for `Artemis` — semantic lecture search** | 🟡 [**ls1intum/Pyris**](https://github.com/ls1intum/Pyris) | 🟢 **`MIT`** *(`1 089` B, `md5 5cc3b9844f092545a99800eb9edce880`)* | 🆕 🟡 **ADMITTED as a DEPENDENCY, not a product, EMEA. `HEAD` `d7b2c095204e`, 🔴 **`12`★, `16` open issues, last push `2026-09-17`**. `ollama` + `weaviate` + `langchain`. 🟢 NOT required for `Hyperion` authoring — only for lecture search** |
+| 🟢 **Assessment integrity — plagiarism detection, permissive** | 🟢 [**dodona-edu/dolos**](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** *(`1 084` B; `md5 00ffc342d555c4129ee54e3286818d50`; *"© 2019 Team Dolos <dolos@ugent.be>"*)* | 🟢 **CARRIED as verified ROUTE, EMEA. `HEAD` `44925b867ce7`, unmoved for a third pass. `20` languages / `19` vendored grammars (docs claim `11`); false positives handled by `-i` plus `-m`/`-M`; `defaultMinSimilarity = 0`; the only threshold is GUESSED in the report UI. 🔴 CONDITIONS: `0` LMS integration, `0` interop standards, NO verdict — decision support only. 🆕 🔵 Its `0` LMS integration is now priced: `Artemis` is the row that HAS one** |
+| 🟢 **Rostering, permissive — standards-native, READ-ONLY** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED unchanged. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. Still the only STANDARDS-native permissive rostering route here — and `Artemis` does NOT change that: `OneRoster` `0`, `Ed-Fi` `0`** |
+| 🟢 **Rostering, permissive — Canvas-native, READ AND WRITE** | 🟢 [**ucfopen/canvasapi**](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** *(`1 130` B — EXACT, `md5 37cd0f92…`)* | 🟢 **CARRIED as verified ROUTE, North America. `HEAD` `513588f3077f` on `master`, `682`★. `enrollments`, `sections`, `enrollment_terms` READ AND WRITE; `Bearer` auth; `per_page=100`; `10` typed exceptions; `1 112` test methods. 🔴 CONDITIONS: `0` standards interop, and a client for an `AGPL-3.0` core. 🟡 Last commit `2026-04-16` — `180` d, AT the liveness bar** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B — 🆕 CONFIRMED EXACT by `ACTION KU`)* | 🟢 **CARRIED unchanged. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The only row where grant-named paths and grant bodies agree exactly. 🆕 🔵 The row that fills `Artemis`'s `SCORM` `0` and `xAPI` `0`** |
+| 🟡 **Assessment / exam generation, permissive** | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🟡 **CARRIED as CANDIDATE, not production. `taiwan-exam` depends on **`PyMuPDF`, `AGPL-3.0`-or-Artifex-commercial**, so the `MIT` root does not reach the closure (`ACTION JR`). Swap for `pypdf` — already in the same `requirements.txt` — or buy the commercial limb BEFORE routing. 🆕 Both re-confirmed at `18`★ and `10`★ in p178's census. 🆕 🔵 `Artemis`'s `Hyperion` generates VERIFIED quiz variants in-platform, which is the institutional alternative to both** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, SIXTEENTH pass with no `MIT`/`Apache` education ERP. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED unchanged. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`). 🆕 🟢 And as of p178 it is also the LMS `Artemis` is nightly-tested against, which makes a Moodle-plus-Artemis topology the best-evidenced hybrid in this table** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED unchanged. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED unchanged. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟢 **CARRIED. `ACTION KJ` probed `16` paths including every British spelling and `COPYING.md` — `0` of `16`; its `GPL-2.0` is at `docs/License.txt`** |
+| 🔴 **SIS, PERMISSIVE and institutional-scale** | 🔴 **none** | — | 🔴 **CARRIED, SIXTEENTH pass. `ACTION KE` refuted the one candidate at p175 (`eagles-edu/sis` is a portal: `0` interop tokens at word-boundary precision). 🆕 🔵 `Artemis` does NOT fill this row and must not be sold as filling it: it owns exercises, exams and assessments, not enrolment, fees or guardians** |
+| 🟡 **SIS, permissive — remaining candidates** | 🟡 [**opensacorg/learning-blocks**](https://github.com/opensacorg/learning-blocks) *(`849` files, **Code for Sacramento**)* · [**Arux-Software/Bright**](https://github.com/Arux-Software/Bright) *(toolkit, not a system of record)* | 🟢 **both `MIT`** — bodies read at p174 | 🟡 **CARRIED as CANDIDATES. NEITHER has been probed the way `ACTION KE` probed the third one. 🔴 Do not quote either as rostering-capable. 🆕 🟢 Their byte counts are no longer suspect — `ACTION KU` measured both: `1 076` B each, **CORRECTED** from `1 075`** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🔴 **CARRIED as REFUTED, probe-complete. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔵 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔵 **DELIBERATELY NOT ROUTED, eighth pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package** |
+| 🔴 **THREAT MODEL — not a dependency** | 🔴 [**sgaofen/vibe-schooling**](https://github.com/sgaofen/vibe-schooling) | 🟢 **`MIT`** *(`1 064` B, *"© 2026 sgaofen"*)* | 🔴 **CARRIED as an ATTACK SURFACE, per `P171-D`. `HEAD` `7c2f87a4641b`, `56` files, `80`★ — UNMOVED in stars for a second pass. Canvas named `19`×, topics `canvas-lms` + `exam-automation`. 🔵 Any Canvas engagement that routes `canvasapi` should assume this exists on the student side** |
+
+🟢 **The tally, counted by ROW rather than by summing buckets.**
+**`24` rows: `13` permissive and routable** *(OpenOLAT, Kolibri, mentingo, **Artemis**, **Pyris**,
+dolos, edfi-oneroster, canvasapi, OB3DefinitionWidget, scorm-again, plus the exam-generation pair as
+ONE row and the SIS-candidate pair as ONE row)*, **`1` permissive-with-a-patent-limb** *(Sakai)*,
+**`7` copyleft or non-permissive** *(education ERP, Open edX, Moodle, ILIAS, RosarioSIS,
+openSIS-Classic, Forma LMS)*, **`1` declared EMPTY** *(permissive institutional SIS)*, **`1`
+deliberately not routed** *(openlxp-xia)*, **`1` threat model** *(vibe-schooling)*.
+🔵 **`13 + 1 + 7 + 1 + 1 + 1 = 24`, and the `24` is the row count, not a reconciliation of it.**
+🆕 🟢 **Verified ROUTES promoted by reading code rather than a licence: `3` of `24`** — `canvasapi`
+(p176), `dolos` (p177), `Artemis` (p178). 🔴 **That is the honest denominator for this table's
+maturity, and it moved for the third pass running.**
+
+### 🆕 🟢 The topology this table now supports, named once so a deck can reuse it
+
+🔵 **An institution that wants permissive AI-assisted assessment can now be given a real answer
+rather than a list:**
+**`Moodle` or `OpenOLAT` as the LMS of record** → **`Artemis` as the exercise and exam platform**,
+wired in as an `LTI 1.3` tool with Deep Linking and grades flowing back through AGS *(the limb that
+is nightly-tested against Moodle)* → **`dolos` for integrity**, ranking pairs and refusing to
+adjudicate → **`Hyperion` inside `Artemis` for authoring**, needing only an LLM endpoint →
+**`scorm-again` where SCORM or xAPI is contractually required**, because `Artemis` declares neither.
+🔴 **And the four conditions carried verbatim into the deck: `Artemis` adjudicates and is therefore
+Annex III; it speaks one standard; it names `FERPA` nowhere; and its self-hosted AI limb rests on a
+`12`★ microservice.** 🟢 **Concrete wiring, with the version pins, in
+[`compose/patterns.md`](../compose/patterns.md).**
+
 ## Pass 177 — 2026-10-13
 
 🆕 🟢 **The assessment-integrity row stops being a candidate.** `ACTION KQ` read

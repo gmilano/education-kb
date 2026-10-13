@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🆕 🟢 **The axis this file introduced at p177 — does the system ADJUDICATE? — now has a row on both
+sides, read from code, and it is the most useful distinction this KB holds for an education
+engagement.**
+
+| | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) *(p177)* | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(p178)* |
+|---|---|---|
+| what it returns | 🟢 **similarity and clusters. `falsePositive` `0`, `confidence` `0`, no pass/fail in `513` files** | 🔴 **grades. `AutomaticAssessment` in `14` files, `score` `581`, `feedback` `720`** |
+| EU classification | 🟢 **decision support — outside Annex III on its own behaviour** | 🔴 **Annex III stand-alone high-risk: automated grading and exam scoring are named** |
+| US oversight statutes *(MD, OK, VA)* | 🟢 **satisfies human-oversight requirements BY CONSTRUCTION** | 🟡 **satisfiable, but the human-review workflow is something you BUILD** |
+| Article `5` emotion-recognition ban | 🟢 **not applicable** | 🟢 **CLEARS IT ARCHITECTURALLY: `proctor` `0`, `webcam` `0`, `emotion` `0`; `ExamSession` anomaly detection instead** |
+| conformity work in an engagement | 🟢 **none attaches to the tool** | 🔴 **real, and it lands on the `2` December `2027` roadmap, not this quarter** |
+
+🔵 **`T277` generalises into a design rule a studio can apply to any product a client brings:
+*architecture decides regulatory class, and it decides it before a single policy document is
+written.* A tool that ranks and refuses to conclude is cheap to deploy and cheap to defend. The
+same capability, wired to emit a verdict, becomes a high-risk system with an audit trail, a
+conformity assessment and a human-review obligation.** 🟢 **Both options are now routable from this
+KB with their costs attached, which is the difference between advice and a catalogue.**
+
+### 🆕 🟢 `ACTION KV` — the AI Act is a SEQUENCE, and the dates are now permanently secondary
+
+🔴 **The method finding first, because it changes how this file should be read: `6` of `6` EU
+primary and official hosts are unreachable from this environment, on TWO independent channels.**
+`eur-lex.europa.eu`, `eurlex.europa.eu`, `digital-strategy.ec.europa.eu`, `ec.europa.eu`,
+`data.europa.eu` and `artificialintelligenceact.eu` all fail to resolve from the shell, and the
+fetch tool returns `ENOTFOUND` for the same host it was pointed at.
+🟢 **LIMB `2` of `ACTION KV` FIRES: no reachable primary or official source exists. The figure is
+hereby declared PERMANENTLY SECONDARY, and `gap 110` stops being re-derived every pass.**
+🔵 **What that licenses, and what it forbids: this KB may SEQUENCE the duties, because the sequence
+is agreed across every independent channel it reaches; it may NOT publish a single day as
+authoritative, and no deck should put a delivery date on one.**
+
+| duty | applies from *(secondary, corroborated)* | what you build, in this engagement |
+|---|---|---|
+| 🔴 **Article `50` transparency** | **`2` August `2026`** — in force | disclosure in the tutoring and authoring surfaces |
+| 🔴 **Article `50(2)` marking of synthetic content** | **`2` December `2026`** — 🔴 **`50` days** | 🆕 🟢 **the patch is MEASURED and GREEN — `53`/`53` at p178, in [`compose/patterns.md`](../compose/patterns.md)** |
+| 🟡 **Annex III stand-alone high-risk** *(access, progression, assessment, exam scoring — where education sits)* | 🟡 **`2` December `2027`** *(Digital Omnibus, reported as `+16` months)* | conformity-assessment roadmap, not code |
+| 🟡 **Annex I embedded** | 🟡 **`2` August `2028`** | out of scope for most education work |
+| 🔴 **Article `5` — emotion recognition of students and staff** | 🔴 **PROHIBITED, present tense** | 🆕 🟢 **an ARCHITECTURAL check, and `Artemis` passes it: `emotion` `0`, `webcam` `0`, `face` `2`** |
+
+🔴 **The conflict that remains UNRESOLVED and is now closed to further work: `50(2)` is reported as
+both `2` December `2026` and `2` February `2027`, and the Omnibus as both in force since July `2026`
+and awaiting adoption.** 🔵 **A client told *"education is high-risk, act now"* is being told
+something TRUE about classification and wrong about timing by roughly `14` months. Mark now;
+assess by `2027`. That sentence is this file's single most load-bearing output.**
+
+### 🆕 🔴 `T279` — a census measures its query, and this one was measuring the smaller tag
+
+🔴 **`topic:ai-education license:mit` = `135`, five consecutive passes, head unchanged — and
+`topic:ai-tutor license:mit` = `298`, with five `MIT` repositories above `170`★ that this KB had
+never named, none of them carrying `ai-education`.**
+🔵 **The trend statement that has to be retracted: *"the supply is stable."* The correct statement
+is *"the `ai-education` tag is stable at `135`, the `ai-tutor` tag stands at `298`, and the two
+share exactly ONE row in their heads."* 🔴 **This KB does not know the size of their UNION and
+should not imply one: nothing here has de-duplicated the two populations (`ACTION KX` territory).****
+🟢 **The trend that SURVIVES, and strengthens: `0` of the `6` new rows is held by an institution.**
+🔵 **Two instruments, five passes apart, agreeing that the permissive supply is individually held is
+a much stronger claim than either made alone.**
+
+### 🆕 🔴 `T280` — a fix that lives in a library is not a fix until something makes its absence fail
+
+🔵 **p177 spent its sharpest action, `ACTION KS`, deriving from outputs a defect that this
+repository had already diagnosed, measured and repaired on `2026-10-09`.**
+`compose/code/lib/payload_measure.sh` names it `P834`, tabulates it *(trailing newlines `0`/`1`/`3`
+→ delta `0`/`1`/`3`)*, ships `size_of_file` as the correct primitive, and preserves the broken form
+as `size_of_capture_BROKEN` with *"NEVER use this to publish a figure"* written above it.
+🔴 **`12` live call sites, in `12` files across `10` instruments, still use the broken idiom.**
+🟢 **The industry-facing version of this thesis, which is why it belongs in a trends file and not
+just in a changelog: every client with a platform team has a `payload_measure.sh` — a correct
+primitive nobody adopted. The diligence question is not *"do you have a standard?"* but *"what fails
+when someone ignores it?"*** 🔵 **The answer this pass shipped is a gate that exits `1`.
+[`compose/code/p178-byte-channel-census/`](../compose/code/p178-byte-channel-census/)**
+
+### 🆕 🔴 `T281` — a `HEAD` is not an identity on a repository with two live branches
+
+🔵 **`Artemis`'s default branch is `develop`; `main` exists as a DIFFERENT commit
+(`07f43f8e0b71`); `develop` was `8c158741c38e` when this pass cloned it and `6aae3ae2655c` an hour
+later.** 🟢 **The licence is byte- and `md5`-identical on both, so licence claims are
+branch-independent — but no file count, token count or test count is.**
+🔴 **p177 recorded `09266581a02c` for this row with no branch label, and a `--depth 1` clone cannot
+reach it to say which branch it was on.** 🔵 **For a client this is the same discipline that makes a
+lockfile matter: on a repository with `396` forks and `256` open issues, *"we read HEAD"* is not
+reproducible evidence. Pin the SHA, name the branch, record the date. `ACTION LB` audits how many
+rows in this KB are under-labelled this way.**
+
+### 🆕 🟢 `T282` — the deployment dependency you assume is the one to measure
+
+🔵 **The natural reading of `Artemis`'s AI surface is that the LLM work lives in `Pyris`, a `12`★
+microservice, and that routing the AI means routing that risk.** 🔴 **That reading is wrong, and the
+project's own admin documentation says so: *"The functionality is provided by Artemis and Spring AI,
+so no EduTelligence service needs to be deployed."*** `Pyris` is required only for semantic lecture
+search, and quiz generation *"falls back gracefully"* without it.
+🟢 **So the AI authoring path needs an LLM endpoint and nothing else, and the `12`★ dependency sits
+on an optional feature rather than on the critical path.** 🔵 **The general rule: read the admin
+guide before pricing the architecture. A `231`-file subsystem and a `12`★ repository in the same
+tree do not imply a dependency between them.**
+
+### 🆕 🔴 `T283` — a uniform status across every subject is a verdict about the channel
+
+🔴 **`curl -sI https://github.com/<owner>/<repo>` returns `403` for `46` of `46` repositories named
+in this pass.** 🟢 **All `46` resolve under `git ls-remote` with a real `HEAD` sha, and
+`raw.githubusercontent.com` answers `200` on their licence paths.**
+🔵 **The rule, which transfers to any client's dependency audit: when a check fails identically for
+every subject, it has measured the path and not the subjects. A dependency scanner reporting `100`%
+unreachable is reporting its own egress. Check one known-good subject before believing a sweep —
+and prefer the protocol channel (`ls-remote`, a registry API) over the HTML one.**
+
+### 🟢 Carried trends, re-stated because the newest block is canonical
+
+- 🟢 **Adoption outruns governance, in every region measured.** `86`% of education organisations use
+  generative AI and most have no policy; LATAM higher education is `87`% adopted against `26`% with
+  a formal strategy. 🔵 **The governance engagement is the market.**
+- 🔴 **Teacher capability is the bottleneck, and it is widening in one region:** only `29`% of
+  students think their instructors are equipped, while US and Canadian faculty INTENT to use AI fell
+  `76`% → `67`% year over year. 🔵 **A capability programme needs no licence review and no
+  conformity assessment, which makes it the fastest-starting work in this file.**
+- 🆕 🟢 **The permissive supply's head is AGENT SKILL PACKS.** At least `6` of the top `12` on
+  `topic:ai-tutor license:mit` declare `agent-skills`, `claude-code` or `codex`. 🔵 **This is a real
+  shift in what *"open-source education AI"* means: the unit of distribution is becoming a prompt
+  asset that rides inside a runtime the buyer already has, which is cheaper to adopt and impossible
+  to own.**
+- 🔴 **The permissive institutional SIS still does not exist** — sixteenth pass. 🟢 **And `Artemis`
+  must not be sold as filling it: it owns exercises, exams and assessments, not enrolment, fees or
+  guardians.**
+- 🟡 **APAC regulation is a per-jurisdiction sequence, not a regional posture:** China binding and
+  registration-based, Singapore voluntary-framework-plus-data-protection *(IMDA's agentic AI
+  framework, `22` January `2026`)*, Japan innovation-first under the AI Promotion Act *(AI Basic
+  Plan, `14` July `2026`)*, India mandating AI from Class `3` in `2026`–`27`, Vietnam naming
+  education in its high-risk list. 🔵 **Sequence per country; never quote *"APAC compliance"*.**
+
 ## Pass 177 — 2026-10-13
 
 🆕 🟢 **The trend that should change how an education engagement is SEQUENCED, and it comes from a

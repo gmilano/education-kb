@@ -1,0 +1,62 @@
+channel	file	line	idiom
+STRIPPING	compose/code/p250-commercial-use-axis/sweep_commercial.sh	17	bytes=$(printf '%s' "$content" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p784-licence-scope-map/probe.sh	91	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p560-epl-mpl-version-read/sweep_versions.sh	62	sz=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p178-byte-channel-census/two_channels.sh	6	# Channel B (STRIPPING): body=$(curl ...); printf '%s' "$body" | wc -c
+STRIPPING	compose/code/p178-byte-channel-census/two_channels.sh	40	strip=$(printf '%s' "$body" | wc -c | tr -d ' ')  # channel B
+STRIPPING	compose/code/p122-prose-licence-census/scan_licences.sh	24	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p324-corpus-upstream-cession/resolve_upstream.sh	27	printf '%s|%s|%sB' "$(printf '%s' "$body" | head -3 | tr -d '\n' | cut -c1-40)" "$f" "$(printf '%s' "$body" | wc -c)"
+STRIPPING	compose/code/p206-erp-layer-license/sweep_erp.sh	54	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p170-headref-license-sweep/sweep_headref.sh	37	bytes=$(printf '%s' "$content" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p211-case-retro-sweep/sweep_retro.sh	67	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/lib/probe_payload.sh	50	# payload's trailing newline run, so `printf '%s' "$body" | wc -c` was low by that run on
+STRIPPING	compose/code/lib/payload_measure.sh	35	#     sz=$(printf '%s' "$body" | wc -c | tr -d ' ')  # <- so this is low by that many bytes
+STRIPPING	compose/code/lib/payload_measure.sh	73	printf '%s' "$b" | wc -c | tr -d ' '
+STRIPPING	compose/code/p117-second-channel/title.sh	10	printf '%-42s %-14s %-7s %s | %s\n' "$slug" "$br/$p" "$(printf '%s' "$body"|wc -c)" "$title" "$ver"
+STRIPPING	compose/code/p117-second-channel/licence.sh	22	printf '%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$p" "$spdx" "$(printf '%s' "$body" | wc -c)"
+STRIPPING	compose/code/p326-titleholder-book-license/controls.sh	24	printf '  %-34s bytes=%s lineas=%s sha256=%s\n' "$r" "$(printf '%s' "$f" | wc -c | tr -d ' ')" "$(printf '%s' "$f" | wc -l | tr -d ' ')" "$(printf '%s' "$f" | sha256sum | cut -c1-16)"
+STRIPPING	compose/code/p326-titleholder-book-license/sweep_titleholder.sh	24	bytes=$(printf '%s' "$raw_lic" | wc -c | tr -d ' ')
+FULL	compose/code/p308-phrase-anchor-sweep/window_probe.sh	35	b=$(wc -c < "$f" | tr -d ' ')
+FULL	compose/code/p176-grant-path-vocabulary/probe_spellings.sh	30	bytes=$(curl -s "https://raw.githubusercontent.com/$REPO/$BRANCH/$p" | wc -c | tr -d ' ')
+FULL	compose/code/p294-pom-in-production/sweep_pom_production.sh	42	sz=$(wc -c < "$pom" | tr -d ' ')
+FULL	compose/code/p1035-regrant-holder-ecl/regrant.sh	47	bytes=$(wc -c < "$TMP/payload" | tr -d ' ')
+FULL	compose/code/p1035-regrant-holder-ecl/regrant.sh	56	[ "$ctl" = "200" ] && ctl="200/$(wc -c < "$TMP/ctl" | tr -d ' ')B"
+FULL	compose/code/p1035-regrant-holder-ecl/ecl.sh	81	bytes=$(wc -c < "$TMP/p" | tr -d ' ')
+FULL	compose/code/p125-retraction-cue/false_permissive.sh	29	sz="$(wc -c <"$out" | tr -d ' ')"
+FULL	compose/code/p204-writesurface-axis/sweep_payload_license.UNGATED-SUPERSEDED-2026-10-04.sh	11	b=$(wc -c < body.tmp | tr -d ' ')
+FULL	compose/code/p204-writesurface-axis/sweep_payload_license.sh	29	b=$(wc -c < body.tmp | tr -d ' ')
+FULL	compose/code/p178-byte-channel-census/two_channels.sh	5	# Channel A (FULL)     : curl | wc -c          - a pipe. Nothing is stripped.
+FULL	compose/code/p178-byte-channel-census/two_channels.sh	38	full=$(wc -c <"$tmp" | tr -d ' ')                 # channel A
+FULL	compose/code/p178-byte-channel-census/call_sites.sh	11	#               path: `wc -c < file`, or `curl ... | wc -c`.
+FULL	compose/code/p121-stale-token-crosspage/probe.sh	17	sz=$(wc -c < /tmp/p121.body)
+FULL	compose/code/p344-claim-class-denominator/sweep_claim.MARKDOWN-ONLY-SUPERSEDED-2026-10-05.sh	33	if [ "$c" = "200" ]; then rref="$b/$r"; rbytes=$(wc -c < /tmp/rm.$$ | tr -d ' '); fi
+FULL	compose/code/p251-cohort-lineage/sweep_lineage.sh	34	bytes=$(wc -c <"$tmp" | tr -d ' ')
+FULL	compose/code/p332-figure-layer/remeasure_family.sh	40	b=$(wc -c < /tmp/lic.$$ | tr -d ' ')
+FULL	compose/code/p118-licence-column-sweep/classify2.sh	92	if [ "$(wc -c < "$f")" -lt 220 ] && grep -qiE '^(YEAR|COPYRIGHT HOLDER)' "$f"; then
+FULL	compose/code/p118-licence-column-sweep/unknown-class.sh	8	sz=$(wc -c < "$f" | tr -d ' ')
+FULL	compose/code/p118-licence-column-sweep/dedup-evidence.sh	24	printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$p" "$sha" "$(wc -c < "$f" | tr -d ' ')" "$d"
+FULL	compose/code/p118-licence-column-sweep/measure.sh	49	printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$p" "$spdx" "$(wc -c < "$f" | tr -d ' ')" "$title"
+FULL	compose/code/p118-licence-column-sweep/measure2.sh	22	printf '%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$p" "$(./classify2.sh "$f")" "$(wc -c < "$f" | tr -d ' ')"
+FULL	compose/code/p1040-ecl-corpus-census/census.sh	52	bytes=$(wc -c < "$tmp/payload" | tr -d ' ')
+FULL	compose/code/p1040-ecl-corpus-census/census.sh	63	[ "$ctl" = "200" ] && ctl="200/$(wc -c < "$tmp/ctl" | tr -d ' ')B"
+FULL	compose/code/p1040-ecl-corpus-census/manifest.sh	26	[ "$lb" = "200" ] && lb=$(wc -c < "$TMP/l" | tr -d ' ') || lb="HTTP-$lb"
+FULL	compose/code/p1040-ecl-corpus-census/unread.sh	28	bytes=$(wc -c < "$TMP/p" | tr -d ' ')
+FULL	compose/code/p1040-ecl-corpus-census/test_p1040.sh	46	ck "ECL fixture is the byte count pass 105 pinned" 11120 "$(wc -c < $F | tr -d ' ')"
+FULL	compose/code/p190-holder-package-layer/sweep_pkg_holder.sh	98	printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$pkg" "$ch" "$basis" "$ident" "${verdict:-EXTRACT-FAILED}" "${holder:--}" "$fam" "$(wc -c <"$TMP/lic")" "$lf"
+FULL	compose/code/p845-dist-payload/test_dist_payload.sh	144	want=$(wc -c < "$T/e1/LICENSE" | tr -d ' ')
+FULL	compose/code/p198-identity-sweep/holder_of.sh	49	b=$(wc -c < "$TMP/L" | tr -d ' '); s=$(sha256sum "$TMP/L" | cut -c1-12)
+FULL	compose/code/p198-identity-sweep/sweep_identity.sh	44	bytes=$(wc -c < "$TMP/L" | tr -d ' '); sha=$(sha256sum "$TMP/L" | cut -c1-12); }; }
+FULL	compose/code/p198-identity-sweep/sweep_identity.sh	78	[ -n "$ent" ] && [ -s "$TMP/L" ] && { lf="${ent#*/}"; bytes=$(wc -c < "$TMP/L" | tr -d ' '); sha=$(sha256sum "$TMP/L" | cut -c1-12); }; }
+FULL	compose/code/p742-grant-body-vs-reference/grant_body.sh	102	bytes="$(wc -c < "$tmp" | tr -d ' ')"
+FULL	compose/code/p342-license-claim-vs-file/actionC.sh	12	b=$(wc -c < /tmp/acq)
+FULL	compose/code/p342-license-claim-vs-file/sweep_p340.sh	16	bytes=$(wc -c < /tmp/p340.body)
+FULL	compose/code/p1029-lost-address-recovery/probe.sh	54	bytes=$(wc -c < "$TMP/payload" | tr -d ' ')
+FULL	compose/code/p1029-lost-address-recovery/probe.sh	64	ctl="200/$(wc -c < "$TMP/ctl" | tr -d ' ')B"
+FULL	compose/code/lib/test_license_family.sh	891	"$(wc -c < "$PSF_REAL" | tr -d ' ')"
+FULL	compose/code/lib/payload_measure.sh	47	# 🟢 `size_of_file` is the byte-exact primitive: `wc -c < file` never round-trips through a
+FULL	compose/code/p759-four-layer-grant-probe/probe.sh	61	hits=$((hits+1)); bytes=$(wc -c < /tmp/p759.body)
+FULL	compose/code/p135-licence-sha-identity/fetch_licences.sh	14	printf "%s\t%s\t%s\t%s\t%s\n" "$repo" "$branch" "$f" "$code" "$(wc -c < "$OUT/$safe.payload")"
+FULL	compose/code/p473-probe-commercial-gate/discover_probe.sh	48	sz=$(wc -c < "$tmp")
+FULL	compose/code/p120-unread-grant-resolution/probe.sh	29	size=$(wc -c < "$f")
+FULL	compose/code/p120-unread-grant-resolution/probe2.sh	35	printf '%s\t%s\t%s\t%s\n' "$1" "$3" "$code" "$(wc -c <"$f")" >> "$OUT/manifest.tsv"
+FULL	compose/code/p120-unread-grant-resolution/classify3.sh	118	if [ "$(wc -c < "$f")" -lt 220 ] && grep -qiE '^(YEAR|COPYRIGHT HOLDER)' "$f"; then

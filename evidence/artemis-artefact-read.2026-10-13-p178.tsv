@@ -1,0 +1,40 @@
+artefact	measured	verdict	note
+subject	ls1intum/Artemis	-	read at develop@8c158741c38e1fd684b38dc6eb54993b1731af89
+branch_identity	develop=8c158741c38e (clone) -> 6aae3ae2655c (close of pass); main=07f43f8e0b71	AMBIGUOUS	two live branches with different heads; p177 recorded 09266581a02c, unreachable at depth 1
+licence	MIT 1091 B md5 021aaec73f7b974dc5edf4ef703f941b	CLEAN	byte- and md5-identical on main and develop
+holder	(c) 2026 TUM Applied Education Technologies	HOLDER-GRADE	EMEA, Germany
+release	version = "10.3"; JavaLanguageVersion.of(25); node >=24.21.0	-	build.gradle, package.json
+tracked_files	13810	-	git ls-files
+java_files	5172	-	
+ts_files	4135	-	
+test_files	3963	-	path or name match on test/spec
+jpa_entities	257	SYSTEM OF RECORD	files containing @Entity under src/main
+schema_migrations	137	SYSTEM OF RECORD	liquibase/changelog paths
+exercise_exam_domain_files	74	ROUTES	src/main/java/**/domain/** matching exercise|exam
+write_endpoints_total	POST 261 / PUT 143 / PATCH 21 / DELETE 103 (GET 538)	ROUTES	528 write endpoints
+write_endpoints_exam_web	POST 21 / PUT 7 / DELETE 8	ROUTES	
+write_endpoints_exercise_web	POST 8 / PUT 15 / DELETE 7	ROUTES	
+write_endpoints_assessment_web	POST 14 / PUT 7 / DELETE 7	ROUTES	
+own_auth	@PreAuthorize 24 / SecurityConfiguration 9 / jwt 63 / passkey 136 / saml2 54 / oauth2 26	ROUTES	passkey surface larger than jwt
+lti	248 files word-bounded; own module .../artemis/lti with 47 files	INTEROP	Lti13Configurer 27, Lti13Service 12, Lti13LaunchRequest 14
+lti_ags	ags 305; Lti13AgsClaim 9; DeepLinking 60	GRADE PASSBACK	Assignment and Grade Services
+lms_integration_tested	NightlyLtiMoodleInteropTest.java + test/resources/lti/nightly/moodle-sign-jwt.php; moodle in 10 files	INTEROP	nightly CI interop against Moodle
+scorm	0	ABSENT	word-bounded, src
+xapi	0	ABSENT	word-bounded, src
+qti	0 in src (.java/.ts/.yml); 5 repo-wide, all binaries/docs data	ABSENT	T276: the wide grep is the misleading one here
+oneroster	0	ABSENT	
+edfi	0	ABSENT	
+caliper	0	ABSENT	
+canvas_trap	canvas 45 files; canvas-lms/instructure/"Canvas LMS" 0	T265 CAUGHT	every hit is the HTML5 element
+ai_surface_iris	748 files; own module with 254 files	AI-NATIVE	LLM tutor
+ai_surface_hyperion	231	AI-NATIVE	AI authoring: consistency check, variant generation, MCQ generation
+ai_surface_athena	187	AI-NATIVE	automated feedback
+ai_surface_pyris_refs	219; pyris-url config key	DEPENDENCY	external microservice
+hyperion_dependency	"provided by Artemis and Spring AI, so no EduTelligence service needs to be deployed"; Pyris only for semantic lecture search, graceful fallback	BUDGET-RELEVANT	documentation/docs/admin/hyperion.mdx
+model_providers	openai 103 / gpt-5 27 / azure 13 / ollama 10 / gpt-4o 3; spring.ai.openai 7 keys	CONDITION	OpenAI-Azure is the paved road; ollama path exists in the Iris test stack and Weaviate config
+adjudication	AutomaticAssessment 14 files; automatic 378; score 581; feedback 720	ADJUDICATES	Annex III stand-alone high-risk in the EU
+proctoring	proctor 0 / webcam 0 / emotion 0 / face 2; ExamSession 21; SuspiciousExamSessions 15	CLEARS ARTICLE 5	session anomaly detection, no biometrics
+privacy_regimes	GDPR 42 / DSGVO 5 / FERPA 0	EMEA-NATIVE	US deployment inherits the FERPA work
+deployability	deployment/docker/docker-compose.yml; src/test/playwright/support/iris-stack/docker-compose.yml; 10 docker paths	DEPLOYABLE	separate compose for the AI stack
+liveness	818 stars / 396 forks / 256 open issues; develop moved during the pass	ALIVE	pin a SHA in any engagement
+dependency_licence	ls1intum/Pyris MIT 1089 B md5 5cc3b9844f092545a99800eb9edce880 HEAD d7b2c095204e 12 stars	ADMITTED	topics: ollama, weaviate, langchain

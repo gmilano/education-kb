@@ -4,6 +4,156 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🆕 🔴 **The headline is a correction to this file's own evidence base, and it is bigger than any
+row: the supply census was measuring a TAG, not the supply.**
+`topic:ai-education license:mit pushed:>=2026-04-16` returns **`135`** for a **FIFTH** consecutive
+pass, with the head unchanged row for row — `agents-from-scratch` `1 045`★,
+`universal-diagnostic-tutor-skill` `244`★, `vibe-schooling` `80`★. 🟢 **That number is right.**
+🔴 **`topic:ai-tutor license:mit pushed:>=2026-04-16` returns `298`, and its head holds FIVE `MIT`
+repositories above `170`★ that this KB has never named:**
+
+| repo | ★ | licence *(body READ, full-channel bytes, `md5`, holder)* | `HEAD` | carries `ai-education`? |
+|---|---|---|---|---|
+| 🆕 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **`925`** | 🟢 **`MIT`** — `1 064` B, `md5 5ebdff604182e1633fc88ea842500b97`, 🔴 *"© 2026 Cattofu"* — a HANDLE | `23387dbc4118` | 🔴 **NO** |
+| 🆕 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `304` | 🟢 **`MIT`** — `1 065` B, `md5 7b28829314723a252f8edbb65a50a5d7`, 🔴 *"© 2026 ZeKaiNie"* — a HANDLE | `b9e84f5fef3a` | 🔴 **NO** |
+| 🆕 [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | `288` | 🟢 **`MIT`** — `1 081` B, `md5 bdeea8c02836cf5dd315dd478492339b`, 🟡 *"© 2025 Algo Sensei Contributors"* | `25ea970f82c5` | 🔴 **NO** |
+| 🆕 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `284` | 🟢 **`MIT`** — `1 069` B, `md5 d3ac8ed0a50bd8de7d9c2ad5be4248ab`, 🔴 *"© 2026 Li Zhengping"* — an INDIVIDUAL | `b3918981bb34` | 🔴 **NO** |
+| 🆕 [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | `173` | 🟢 **`MIT`** — `1 083` B, `md5 e8f1df25d94bc518494985b40590b127`, 🟡 *"© 2026 kaogong-skill contributors"* | `2af2115291bd` | 🔴 **NO** |
+
+🔵 **The mechanism, and it is mundane: `Study-Mate` is tagged `ai-tutor`, `education`,
+`learning-agents`, `self-study` and `spaced-repetition`. It is not tagged `ai-education`. Neither
+are the other four.** 🔴 **So p177's *"no new agent reached candidate grade this pass"* was a true
+statement about one tag and a false statement about the supply (`T279`).**
+🟢 **What survives the correction, and it survives STRONGER: `5` of `5` holders are individuals,
+handles or unincorporated contributor sets.** 🔵 **p176's shape thesis — *"what the permissive
+supply lacks is not applications, it is applications with an institution behind them"* — was built
+on two `22`★ and `11`★ candidates. It now rests on the head of a `298`-repository tag, and it says
+the same thing.**
+🟢 **And four of the five are APAC-originated** (`Study-Mate`, `universal-examprep-skill` and
+`kaogong-skill` are Chinese-language; `taiwan-exam` and `fakao-ai-exam-engine`, already here, are
+Taiwan and PRC). 🔵 **APAC is now demonstrably the most productive region for permissive education
+AI, and this KB's regional claim is a measurement rather than an impression
+([`intel/market.md`](../intel/market.md)).**
+🔴 **NOTHING ENTERS THE SHELF THIS PASS, and the reason is the same discipline that kept p176 and
+p177 honest: a licence body is an identity, not a verification.** 🟢 **`ACTION KX` is pre-registered
+to read the two largest past their licences at p179.**
+🆕 🟢 **`ACTION KU` closes the byte-count story this file opened at p177: `20` of `20` published
+counts re-measured on BOTH channels in the same second, `13` short by exactly `1`, `7` exact, and
+the class is unchanged — *"ends in `LF`, read by the stripping channel"*.** 🔵 **The repair shipped
+this pass is not a better number; it is a gate that fails when an instrument sizes a payload through
+a command substitution. The vocabulary to do it right has existed since `2026-10-09`.**
+
+### 🟢 The `12`-row shelf — RE-STATED IN FULL at p178
+
+🟡 **Licence cells, shapes and regions are p171/p172 body reads carried forward. p178 re-read the
+LICENCE BODY of none of these `12` and re-measured the byte count of all `12` on both channels. This
+line is the disclosure.**
+
+| repo | licence *(body read, p171/p172)* | primary shape *(p172)* | region | status at p178 |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | CARRIED |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | CARRIED |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | CARRIED |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | 🟡 **CARRIED. 🆕 Star count recorded for the first time: `515`★, which makes it the second-largest row on this shelf and the only one this KB had never sized** |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | 🟡 **CARRIED. Still the only shelf row that DECLARES `scorm` and `xapi` — 🆕 and as of p178 no longer the only EMEA platform route: `Artemis` is verified in [`repos/foundations.md`](../repos/foundations.md), speaks `LTI 1.3` with grade passback, and declares neither** |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | CARRIED |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | CARRIED |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | 🟡 **CARRIED. 🆕 `140`★, and it surfaced this pass on `topic:ai-tutor` rather than `ai-education` — it was inside the tag this KB was not counting, which is how `T279` was found** |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | 🆕 🟢 **CARRIED, and PROMOTED in substance: the only row whose Article `50(2)` repair has now been SEEN GREEN. `46`/`46` pristine, `53`/`53` with the patch and `7` new tests, at `9c260890214d`. `gap 136` CLOSED — see [`compose/patterns.md`](../compose/patterns.md)** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | 🟡 **CARRIED. Still the only row carrying `ai-education` — a tag now re-counted at `135` for the FIFTH time, and now known to be the smaller of the two relevant tags** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | CARRIED |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — *"exhaustive"* EARNED at p176 across all `5` branches, `55` file-paths, `HEAD` `ea29bcf196d2`** | tutoring | Global | CARRIED |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` still need one** — `3` `AGPL-3.0`, `1` `GPL-3.0`, `1` non-commercial, `1`
+paraphrased `Apache-2.0`, `1` with no grant anywhere on any branch.
+🔵 **And the sentence to say out loud in a studio review: `5` of these `12` rows are routable, `1`
+of the `12` has ever been read past its licence, and the `6` rows with the most stars in this
+industry are not on this shelf at all. The shelf is a licence ledger that is becoming a product
+ledger one action at a time.**
+
+### 🆕 🔴 `ACTION KU` — the byte count is not just defective, the fix was already here
+
+🔵 **Why this ran:** `ACTION KS` (p177) proved from its OUTPUTS that one of two byte-count channels
+drops a trailing line feed. `ACTION KU` was pre-registered to find the CALL SITE. 🟢 **It found
+`12`, and then it found the repair, dated `2026-10-09`, already committed to this repository.**
+
+🔵 **The falsifier, stated before the census ran:** limb `1` if ONE instrument explains the short
+counts and can be fixed once; limb `2` if more than one does, which makes it a vocabulary defect.
+
+🔴 **LIMB `2` FIRES. `12` live sites, in `12` files, across `10` instruments:**
+
+| instrument | line |
+|---|---|
+| `p117-second-channel/licence.sh` · `title.sh` | `22` · `10` |
+| `p122-prose-licence-census/scan_licences.sh` | `24` |
+| `p170-headref-license-sweep/sweep_headref.sh` | `37` |
+| `p206-erp-layer-license/sweep_erp.sh` | `54` |
+| `p211-case-retro-sweep/sweep_retro.sh` | `67` |
+| `p250-commercial-use-axis/sweep_commercial.sh` | `17` |
+| `p324-corpus-upstream-cession/resolve_upstream.sh` | `27` |
+| `p326-titleholder-book-license/sweep_titleholder.sh` · `controls.sh` | `24` · `24` |
+| `p560-epl-mpl-version-read/sweep_versions.sh` | `62` |
+| `p784-licence-scope-map/probe.sh` | `91` |
+
+🔴 **And the finding that should have been p177's:**
+[`compose/code/lib/payload_measure.sh`](../compose/code/lib/payload_measure.sh), written at pass `74`
+of `2026-10-09`, **already names this defect `P834`, already measures it at trailing newlines
+`0`/`1`/`3` → delta `0`/`1`/`3`, already ships the correct primitive `size_of_file`, and already
+keeps the broken form as a control called `size_of_capture_BROKEN` with the comment *"NEVER use this
+to publish a figure"*.** 🔵 **`P834` even corrects `ACTION KS`'s own statement of the rule: the
+error is not *"one byte"*, it is the ENTIRE trailing newline run. Licence files happen to carry one.**
+🔴 **So the vocabulary existed for `103` passes, `10` instruments never adopted it, and p177 spent a
+whole action re-deriving it from the outputs. `T280`: a defect fixed in a library is not fixed until
+something makes its absence FAIL.**
+
+🟢 **The deliverable is therefore a gate, not a number:**
+[`compose/code/p178-byte-channel-census/check_channel.sh`](../compose/code/p178-byte-channel-census/check_channel.sh),
+with [`test_check_channel.sh`](../compose/code/p178-byte-channel-census/test_check_channel.sh) at
+**`6`/`6`** — including the `0`/`1`/`3` trailing-newline control, a fixture proving a COMMENTED
+idiom is not a defect, and a scratch-tree build so the suite does not depend on the repository it
+guards. 🔴 **Against the live tree it exits `1` with `12` findings, which is the correct result.**
+🟡 **Two sites are allowlisted as deliberate controls, and a third — this gate's OWN test fixture —
+was caught by the gate on its first run and allowlisted rather than reworded: the measurement IS the
+control, and `T276` says a gate reports its scope.**
+
+### 🆕 🟢 The `20`-row byte-count census — both channels, same bytes, same second
+
+🟢 **Full ledger, with `md5` and trailing-`LF` state:**
+[`evidence/byte-channel-census.2026-10-13-p178.tsv`](../evidence/byte-channel-census.2026-10-13-p178.tsv).
+🟢 **`18` of `20` licences end in `LF`; the `2` that do not are `agents-from-scratch` and
+`mentingo`, which is why their figures were always exact.**
+
+| row | published | measured FULL | verdict at p178 |
+|---|---|---|---|
+| `ucfopen/canvasapi` | `1 130` | `1 130` | 🟢 EXACT |
+| `uccser/cs-field-guide` | `1 128` | `1 128` | 🟢 EXACT |
+| `pguso/agents-from-scratch` | `1 091` | `1 091` | 🟢 EXACT — no trailing `LF` |
+| `Selleo/mentingo` | `1 062` | `1 062` | 🟢 EXACT — no trailing `LF` |
+| `NickScherbakov/codementor-ai-platform` | `1 072` | `1 072` | 🟢 **EXACT — and this REFUTES p177's claim that p176 re-introduced the defect on *all `4`* of its candidate rows** |
+| `dulanjayabhanu/mononeural` | `1 072` | `1 072` | 🟢 **EXACT — same refutation** |
+| `opensalt/OB3DefinitionWidget` | `1 080` | `1 080` | 🟢 EXACT |
+| `dodona-edu/dolos` | `1 083` → `1 084` | `1 084` | 🟡 corrected at p177 |
+| `ls1intum/Artemis` | `1 090` → `1 091` | `1 091` | 🟡 corrected at p177 |
+| `AnubisLMS/Anubis` | `1 082` → `1 083` | `1 083` | 🟡 corrected at p177 |
+| `showlab/Code2Video` | `1 072` → `1 073` | `1 073` | 🟡 corrected at p177 |
+| `sgaofen/vibe-schooling` | `1 063` → `1 064` | `1 064` | 🟡 corrected at p177 |
+| `Scorpioyyy/verichalk` | `1 066` → `1 067` | `1 067` | 🟡 corrected at p177 |
+| `wwlwgo/cn-primary-math-knowledge-graph` | `1 117` → `1 118` | `1 118` | 🟡 corrected at p177 |
+| `SenmuuuuW/universal-diagnostic-tutor-skill` | `1 101` → `1 102` | `1 102` | 🟡 corrected at p177 |
+| 🆕 `37743/Classroom-VR` | `1 078` | **`1 079`** | 🔴 **CORRECTED at p178** |
+| 🆕 `Arux-Software/Bright` | `1 075` | **`1 076`** | 🔴 **CORRECTED at p178** — at `LICENSE.txt`, on `master` |
+| 🆕 `opensacorg/learning-blocks` | `1 075` | **`1 076`** | 🔴 **CORRECTED at p178** — p177 named it suspect and did not measure it |
+| 🆕 `eagles-edu/sis` | `1 066` | **`1 067`** | 🔴 **CORRECTED at p178** |
+| 🆕 `kirilxd/claude-tutor` | `1 063` | **`1 064`** | 🔴 **CORRECTED at p178** |
+
+🟢 **`13` short, `7` exact, `0` unaudited: every byte count this KB has published is now measured on
+the non-stripping channel and carries an `md5`.** 🔵 **`ACTION KU`'s audit limb is CLOSED. Its repair
+limb is `ACTION KY`, and the gate is what will make it stay closed.**
+
 ## Pass 177 — 2026-10-13
 
 🟢 **No promotion and no demotion: the shelf is the same `12` rows, re-stated in full below because

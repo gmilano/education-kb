@@ -1,0 +1,7 @@
+stage	interpreter	tests_run	result	note
+pristine	python3.11.17	37	ERROR-1	import fails: PEP 695 `class ProviderResult[T]` needs >=3.12
+pristine	python3.13	46	OK	46/46 GREEN - first reproduction of this baseline in this KB
+edits 1+2	python3.13	46	FAILED-errors-2	test_apache_two_generated_asset_allows_transformed_commercial_export; test_mit_starter_audio_allows_transformed_commercial_export
+edits 1+2 + prescribed fix c2pa=C2paRecord(C2paStatus.VALID)	python3.13	46	FAILED-errors-2	REFUTED: ValidationError "valid C2PA records require a hash, signer, and verification time" (provenance.py:55-60)
+edits 1+2 + corrected fix C2paRecord(VALID, HASH, signer, NOW)	python3.13	46	OK	46/46 GREEN
+edits 1+2+4 + corrected fix + 7 real-record tests	python3.13	53	OK	53/53 GREEN

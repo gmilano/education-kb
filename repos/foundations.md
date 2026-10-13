@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 178 — 2026-10-13
+
+🆕 🟢 **`ACTION KT` is DISCHARGED, LIMB `1` FIRED, and `gap 134` is CLOSED.**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — the Technical University of Munich's
+interactive-learning platform, and the last fully unverified holder-grade row in this KB — was
+cloned and read artefact by artefact. 🟢 **Both limbs of the pre-registered falsifier were put to
+the same clone, and limb `1` fires on every criterion it names: it reaches exercise, exam and
+assessment objects with WRITE access, through its OWN auth, over data it OWNS.**
+🆕 🟢 **The number that settles the *"thin front end"* question: `257` `@Entity` classes and `137`
+Liquibase changelogs.** 🔵 **`eagles-edu/sis` was refused at p175 because it was a portal over
+somebody else's system of record. `Artemis` IS the system of record — it ships its own schema and
+migrates it.**
+🆕 🟢 **The finding with the most commercial value in this file: `Artemis` is the first row in this
+KB that speaks a real interop standard as a TOOL, with grade passback.** `LTI` at word-boundary
+precision in `248` files, its own module at `.../artemis/lti` with `47` files, `Lti13Service`,
+`Lti13Configurer`, `Lti13DeepLinkingResponse`, `Lti13AgsClaim`, `DeepLinking` `60`×, AGS `305`× —
+**and `NightlyLtiMoodleInteropTest.java` with a `moodle-sign-jwt.php` fixture, so the Moodle
+interop is TESTED, nightly, in CI.** 🔴 **And it speaks exactly ONE: `SCORM` `0`, `xAPI` `0`,
+`QTI` `0`, `OneRoster` `0`, `Ed-Fi` `0`, `Caliper` `0`.**
+🆕 🔴 **The `T265` trap fired again and was caught again: `canvas` matches `45` files, and
+`canvas-lms`, `instructure` and `Canvas LMS` match `0`.** 🔵 **Same shape as `dolos`: every hit is
+the HTML5 element. A narrower grep would have published *"Canvas-integrated"* for the second pass
+running.**
+🆕 🟡 **`QTI` is a second trap, and it is instructive about scope.** `0` hits in `src` across
+`.java`, `.ts` and `.yml`; a repository-wide grep returns `5`, and all `5` are a `.zip`, an emoji
+PNG sheet, a `.webm`, a system-design PNG and the project's own LMS-comparison data file.
+🔵 **`T276` again: the scope-limited grep is the HONEST one here, and the wide grep is the one that
+would have published a standard this platform does not implement.**
+🆕 🟢 **A second EMEA institutional row ENTERS, because `Artemis` cannot be routed without it being
+named:** [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), the LLM microservice. 🔴 **`12`★,
+and that is the risk sentence, not a footnote.**
+🟢 **No other rows enter. `gap 134` closed by verification, not by admission.**
+
+### 🟢 The `7` rows — RE-STATED, with `Artemis` verified and `Pyris` admitted
+
+| repo | licence *(body READ, bytes, holder)* | `HEAD` | region *(`P800`)* | verified PAST the licence? |
+|---|---|---|---|---|
+| 🟢 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 **`MIT`** — `1 130` B *(EXACT, `md5 37cd0f927f3fdf7f68cf09edaebfb010`)*, *"© 2017 University of Central Florida — Center for Distributed Learning"* | `513588f3077f` *(on `master`)* | 🟡 **North America** — subnational grade (`ACTION KK`) | 🟢 **YES — `ACTION KM`, p176** |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** — `1 091` B, `md5 021aaec73f7b974dc5edf4ef703f941b` *(🆕 identical on `main` AND `develop`)*, *"© 2026 TUM Applied Education Technologies"* | 🆕 **`develop@8c158741c38e`** 🔴 *(and `main@07f43f8e0b71` is a DIFFERENT commit; `develop` moved to `6aae3ae2655c` during this pass)* | 🟢 **EMEA** — HOLDER-grade, Germany | 🆕 🟢 **YES — `ACTION KT`, in full below. `13 810` files, `5 172` Java, `4 135` TS, `3 963` test files, `v10.3`** |
+| 🟢 [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **`MIT`** — `1 084` B, `md5 00ffc342d555c4129ee54e3286818d50`, *"© 2019 Team Dolos <dolos@ugent.be>"* | `44925b867ce7` — 🟢 **unmoved since p175** | 🟢 **EMEA** — HOLDER-grade, Belgium | 🟢 **YES — `ACTION KQ`, p177** |
+| 🆕 🟡 [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | 🟢 **`MIT`** — `1 089` B, `md5 5cc3b9844f092545a99800eb9edce880` | `d7b2c095204e` | 🟢 **EMEA** — HOLDER-grade by LINEAGE *(same `ls1intum` org as `Artemis`)* | 🔴 **NO — licence, `md5` and `HEAD` only. 🔴 `12`★, `16` open issues, last push `2026-09-17`: the smallest dependency this KB has ever put on a critical path** |
+| 🟡 [`uccser/cs-field-guide`](https://github.com/uccser/cs-field-guide) | 🟢 **`MIT`** — at **`LICENCE`**, `1 128` B *(EXACT, `md5 99b58b5c4e30de12e69228065a5bd553`)*, *"© 2016-2022 University of Canterbury CSER Group"* | `7e323930cf6f` *(on `master`)* | 🟢 **APAC** — HOLDER-grade, New Zealand | 🟡 **PARTLY — grant-path probe only** |
+| 🟡 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **`MIT`** — `1 083` B, `md5 9633492b4368ec2c3f77f7116694ad23`, 🔴 **holder is an INDIVIDUAL: *"© 2021 John McCann Cunniff Junior"*** | `894ed020997f` | 🔴 **North America — DESCRIPTION-grade only; the artefact names *"NYU"* and NO country** | 🔴 **NO** |
+| 🟡 [`showlab/Code2Video`](https://github.com/showlab/Code2Video) | 🟢 **`MIT`** — `1 073` B, `md5 2a1660298c8c5a8b41d28eed30f7fde2`, 🟡 **holder is an INDIVIDUAL** | `1142d8e14cdc` | 🟡 **APAC** — DESCRIPTION-grade, `showlab` + *"[ICML 2026]"* | 🔴 **NO** |
+
+🟢 **`gap 134` is CLOSED: `0` fully unverified holder-grade rows remain.** `cs-field-guide` is still
+only partly read and `Pyris` is new and unread, so **`3` of `7` rows are verified past their
+licence** — `canvasapi`, `Artemis`, `dolos`. 🔵 **Three passes, three rows read, two new admissions
+in total: the debt is being paid down faster than it is taken on, which is the first time that
+sentence has been true in this file.**
+
+### 🆕 🟢 `ACTION KT` — `ls1intum/Artemis` read past its licence, artefact by artefact
+
+🟢 **Controlled: cloned `--depth 1 --single-branch`, which lands on the DEFAULT branch `develop`,
+at `8c158741c38e1fd684b38dc6eb54993b1731af89`. `13 810` tracked files, `5 172` `.java`, `4 135`
+`.ts`, `3 963` test files, `version = "10.3"`, `JavaLanguageVersion.of(25)`, `node >=24.21.0`.**
+🔴 **p177 recorded `HEAD` `09266581a02c`. A `--depth 1` clone cannot reach that object, so this pass
+can neither confirm nor place it on a branch, and this repository has two live branches whose heads
+differ.** 🔵 **Every count below is a reading of `develop@8c158741c38e` and is labelled as such
+(`T281`).**
+
+| artefact the row would need | measured | verdict |
+|---|---|---|
+| 🟢 **grant-path exclusivity** | `LICENSE`, `MIT`, byte- and `md5`-identical on `main` and `develop` | 🟢 **one grant, and branch-independent** |
+| 🟢 **does it OWN the data?** | `257` classes carrying `@Entity`; `137` Liquibase/changelog paths | 🟢 **SYSTEM OF RECORD. This is limb `1` and limb `2`'s refutation in one measurement** |
+| 🟢 **exercise and exam DOMAIN objects** | `74` files under `**/domain/**` matching exercise/exam, among them `Exam`, `StudentExam`, `ExamSession`, `ExamUser`, `ExerciseGroup`, `ExamRoom`, `Exercise`, `BaseExercise`, `Result`, `GradeStep`, `ExampleSubmission` | 🟢 **the objects the falsifier named, by name** |
+| 🟢 **WRITE access to them** | repository-wide `@PostMapping` `261`, `@PutMapping` `143`, `@PatchMapping` `21`, `@DeleteMapping` `103` against `@GetMapping` `538`. In the exam/exercise/assessment web layers specifically: exam `21`/`7`/`8`, exercise `8`/`15`/`7`, assessment `14`/`7`/`7` | 🟢 **`528` write endpoints. Not a read-only front end** |
+| 🟢 **its OWN auth** | `@PreAuthorize` in `24` files, `SecurityConfiguration` `9`, `jwt` `63`, **`passkey` `136`**, `saml2` `54`, `oauth2` `26` | 🟢 **own auth, and a passkey surface larger than its JWT surface — unusual and worth a slide** |
+| 🟢 **interop — `LTI`, word-bounded** | `248` files; own module `.../artemis/lti` with `47` files; `Lti13Configurer` `27`, `Lti13LaunchRequest` `14`, `Lti13Service` `12`, `Lti13PlatformConfiguration` `12`, `Lti13ClientRegistration` `12`, `Lti13DeepLinkingResponse` `12`, `Lti13TokenRetriever` `9`, `Lti13AgsClaim` `9`, `DeepLinking` `60`, `ags` `305` | 🟢 **`LTI 1.3` as a TOOL, with Deep Linking and Assignment-and-Grade-Services — it can receive a launch AND push grades back** |
+| 🟢 **LMS integration, TESTED** | `src/test/java/.../lti/nightly/NightlyLtiMoodleInteropTest.java` + `src/test/resources/lti/nightly/moodle-sign-jwt.php`; `moodle` in `10` files | 🟢 **a nightly interop test against a REAL LMS. `dolos` has `0` LMS integration; this row has one in CI** |
+| 🔴 **every OTHER standard** | 🔴 **`SCORM` `0`, `xAPI` `0`, `QTI` `0` *(in `src`)*, `OneRoster` `0`, `Ed-Fi` `0`, `Caliper` `0`** | 🔴 **one standard only. Rostering and learning-record plumbing stay integrator work** |
+| 🟡 **`canvas` — the trap, caught** | `45` files case-insensitively; `canvas-lms`/`instructure`/`Canvas LMS` **`0`** | 🟡 **`T265` fired as designed, for the second consecutive pass on a different subject** |
+| 🟢 **the AI surface** | `Iris` `748` files *(own module, `254` files)*, `Hyperion` `231`, `Athena` `187`, `pyris` `219`, `llm` `193` | 🟢 **this is not an LMS with AI bolted on; the AI surface is `~5`% of a `13 810`-file tree and has its own modules** |
+| 🟢 **what `Hyperion` DOES** | its own admin doc: consistency checks on problem statements, rewriting instructions, **verified exercise-variant generation** *(programming variants verified with real template and solution builds; quiz variants by validity-checking generated questions)*, MCQ generation from a topic or from competencies, bulk MCQ refinement | 🟢 **AI AUTHORING with a verification step — the thing most authoring tools skip** |
+| 🟢 **deployment dependency, measured not assumed** | the same doc: *"The functionality is provided by Artemis and Spring AI, so no EduTelligence service needs to be deployed"*; `Pyris` is *"used only for semantic lecture search"* and quiz generation *"falls back gracefully"* without it | 🟢 **`Hyperion` needs an LLM endpoint, NOT the microservice. 🔵 This is the single most budget-relevant sentence in the artefact** |
+| 🟡 **model providers named** | `openai` `103`, `gpt-5` `27`, `azure` `13`, `ollama` `10`, `gpt-4o` `3`; `spring.ai.openai` `7` config keys against `spring.ai.model` `1` | 🟡 **OpenAI/Azure is the paved road. `ollama` appears in the Iris test stack and in the Weaviate global-search config, so a local path EXISTS and is not the default** |
+| 🔴 **adjudication** | `AutomaticAssessment` in `14` files, `automatic` `378`, `score` `581`, `feedback` `720` | 🔴 **IT ADJUDICATES. This is the opposite of `dolos`, and it is the whole regulatory difference — see [`intel/trends.md`](../intel/trends.md)** |
+| 🟢 **proctoring and biometrics** | 🟢 **`proctor` `0`, `webcam` `0`, `emotion` `0`, `face` `2`** — what exists instead is `ExamSession` `21` and `SuspiciousExamSessions` `15`, i.e. session-level anomaly detection | 🟢 **NO biometric surveillance. It stays clear of the Article `5` emotion-recognition PROHIBITION entirely, which is a harder bar than Annex III** |
+| 🟡 **privacy regimes named** | `GDPR` `42` files, `DSGVO` `5`, 🔴 **`FERPA` `0`** | 🟡 **EMEA-native by construction. A North America engagement writes the FERPA story itself** |
+| 🟢 **deployability** | `deployment/docker/docker-compose.yml`, plus an `iris-stack/docker-compose.yml` for the AI path in tests; `10` docker paths | 🟢 **compose-deployable, with a separate compose file for the AI stack** |
+| 🟡 **liveness** | `818`★, `396` forks, `256` open issues, and `develop` moved **during this pass** | 🟡 **very much alive — and fast enough that a pinned SHA is mandatory in any engagement, not optional** |
+
+🟢 **Verdict: `Artemis` ROUTES, and it is the strongest row in this KB.** It is institution-held,
+`MIT`, a system of record, AI-native with a verification step, `LTI 1.3` with grade passback, and
+nightly-tested against Moodle. 🔴 **Four conditions travel with it and none is optional in a deck:**
+**(`1`)** it ADJUDICATES, so in the EU it is an Annex III stand-alone high-risk system and the
+conformity work is real *(timing in [`intel/trends.md`](../intel/trends.md))*; **(`2`)** it speaks
+ONE standard — no rostering, no SCORM, no xAPI; **(`3`)** `FERPA` is named nowhere, so a US
+deployment inherits that work; **(`4`)** the AI path's default provider is OpenAI/Azure, and the
+self-hosted limb runs through a `12`★ microservice.
+🟢 **Full artefact ledger:**
+[`evidence/artemis-artefact-read.2026-10-13-p178.tsv`](../evidence/artemis-artefact-read.2026-10-13-p178.tsv).
+
 ## Pass 177 — 2026-10-13
 
 🆕 🟢 **`ACTION KQ` is DISCHARGED and the row a client asks about first is now read past its

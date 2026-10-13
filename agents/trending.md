@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p178 — the census was measuring a tag: `298` against `135`, and `5` unnamed rows above `170`★
+
+🔴 **This section exists because the trend this file has been recording for five passes —
+*"the supply is STABLE"* — was a property of the query, not of the supply.**
+
+🟢 **Both censuses, run in the same pass, same filters, same freshness window
+(`pushed:>=2026-04-16`), through the GitHub API:**
+
+| query | total | head |
+|---|---|---|
+| `topic:ai-education license:mit` | **`135`** — 🟢 **FIFTH consecutive pass at `135`**, head unchanged row for row | `agents-from-scratch` `1 045`★ · `universal-diagnostic-tutor-skill` `244`★ · `vibe-schooling` `80`★ |
+| 🆕 `topic:ai-tutor license:mit` | 🔴 **`298`** | `Study-Mate` **`925`★** · `anki-mcp-server` `515`★ · `universal-examprep-skill` `304`★ · `algo-sensei` `288`★ · `Bloom` `284`★ · `universal-diagnostic-tutor-skill` `244`★ · `kaogong-skill` `173`★ · `OpenTutor` `140`★ |
+
+🔵 **The two tags overlap in exactly one head row — `universal-diagnostic-tutor-skill`. Everything
+else above `170`★ on `ai-tutor` is absent from `ai-education`, because those projects simply did not
+apply that tag.** 🔴 **`T279`: a single-tag census measures the tag. It is the sibling of `T276`
+(a scope-limited grep reports its scope) and it fails in the same flattering direction — *"stable
+supply"* is a more comfortable sentence than *"we were counting one tag"*.**
+
+### 🆕 🟡 Five new rows, licences READ, deliberately NOT promoted
+
+🟢 **Every row below has its licence body read, its bytes measured on the NON-stripping channel, an
+`md5`, a holder and a `HEAD`. 🔴 Not one has been read past its licence, so not one enters the
+shelf — the same discipline p176 and p177 held.**
+
+| repo | ★ | licence | bytes *(full channel)* | `md5` | holder | `HEAD` |
+|---|---|---|---|---|---|---|
+| 🆕 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **`925`** | 🟢 `MIT` | `1 064` B | `5ebdff604182e1633fc88ea842500b97` | 🔴 *"© 2026 Cattofu"* | `23387dbc4118` |
+| 🆕 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `304` | 🟢 `MIT` | `1 065` B | `7b28829314723a252f8edbb65a50a5d7` | 🔴 *"© 2026 ZeKaiNie"* | `b9e84f5fef3a` |
+| 🆕 [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | `288` | 🟢 `MIT` | `1 081` B | `bdeea8c02836cf5dd315dd478492339b` | 🟡 *"© 2025 Algo Sensei Contributors"* | `25ea970f82c5` |
+| 🆕 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `284` | 🟢 `MIT` | `1 069` B | `d3ac8ed0a50bd8de7d9c2ad5be4248ab` | 🔴 *"© 2026 Li Zhengping"* | `b3918981bb34` |
+| 🆕 [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | `173` | 🟢 `MIT` | `1 083` B | `e8f1df25d94bc518494985b40590b127` | 🟡 *"© 2026 kaogong-skill contributors"* | `2af2115291bd` |
+| 🆕 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | `36` | 🟢 `MIT` | `1 064` B | `1e6bd39e5e10a1ac1d4254338157922c` | *(org)* | on `master` |
+
+🔴 **`6` of `6` holders are individuals, handles or unincorporated contributor sets. `0` of `6` is an
+institution.** 🔵 **This is p176's shape thesis holding on `5`× the evidence: the permissive supply
+is not short of applications, it is short of applications with an institution behind them. The
+contrast row landed in the same pass — [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis),
+TUM's own platform, `818`★, verified past its licence in
+[`repos/foundations.md`](../repos/foundations.md).**
+
+### 🆕 🔴 The SHAPE trend, now measurable: the tag's head is agent SKILLS, not products
+
+🔵 **Read the topics, not the descriptions.** `universal-examprep-skill` declares `agent-skill`,
+`claude-code`, `codex`, `cursor`, `antigravity`, `windsurf`. `algo-sensei` declares `claude-skills`.
+`kaogong-skill` declares `agent-skills`. `universal-diagnostic-tutor-skill` declares `codex-skill`.
+`Tov-learn` declares `claude-code`. `Study-Mate` declares `dsh-plugin` and `learning-agents`.
+🔴 **At least `6` of the top `12` on `ai-tutor license:mit` are packs that run INSIDE somebody
+else's agent runtime.**
+🟢 **The two exceptions are the interesting ones:** `Bloom` ships *"Bloom's 2-Sigma research as a
+Claude Code skill **+ self-hostable web app**"* with `fastapi` and `react` topics, and `OpenTutor`
+is *"the first block-based adaptive learning workspace that runs locally"* with `10+` LLM providers
+and `self-hosted` declared. 🔵 **Those two are where `ACTION KX` should go first, because a skill
+pack has no deployment surface for a studio to integrate and a self-hostable app does.**
+🔴 **The commercial consequence, stated plainly: a client cannot buy a `925`★ skill pack as a
+platform. It is a prompt asset. It composes WITH an agent runtime the client already has, and that
+is a different line item from an LMS.**
+
+### 🆕 🔴 LATAM — the gap, measured on a language-native channel for the first time
+
+🔵 **Why this ran: eleven consecutive passes have declared *"no LATAM-originated open-source
+education repository"* on the strength of an ENGLISH tag's top `30`. That is a weak instrument for a
+Spanish- and Portuguese-speaking region.**
+🟢 **So p178 asked in Spanish:** `educación inteligencia artificial tutor in:name,description,readme
+pushed:>=2026-04-16` → **`128` repositories**.
+🔴 **And the head is not supply. It is link lists and personal profiles:**
+`repositorio-del-todo` `30`★ *(a curated links vault)*, `Lecturas` `20`★ *(a reading list)*,
+`enlaces-para-desarrolladores` `12`★ *(a links list)*, two personal profile repositories at `2`★ and
+`1`★, a .NET course index, `socratic-study-buddy-gemma4` **`2`★** *(a tutorial outline, not a
+system)*, and `AIHelpMath` **`1`★** — *"Backend impulsado por IA para educación personalizada"*,
+which is the only thing in the head that is even shaped like an education-AI product.
+🔴 **TWELFTH consecutive pass with no LATAM-originated routable row — and the claim now rests on two
+independent channels instead of one.** 🟢 **The demand evidence for LATAM remains the best-sourced
+in this KB *(UNESCO IESALC: `200` institutions, `19` countries, `87`% using AI somewhere, `26`% with
+a formal strategy; Uruguay's Ceibal at `75`% of public-school teachers)*, and the supply evidence is
+empty on both instruments.** 🔵 **That asymmetry is the LATAM engagement thesis, and it is in
+[`intel/market.md`](../intel/market.md) as a measurement rather than a lament.**
+
 ## 2026-10-13 — p177 — byte counts CORRECTED on every p176 candidate; two deployable candidates enter
 
 🆕 🔴 **Every candidate row this file admitted at p176 carries a licence byte count that is short by

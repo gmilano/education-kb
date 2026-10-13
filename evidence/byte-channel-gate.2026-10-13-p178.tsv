@@ -1,0 +1,13 @@
+STRIPPING	compose/code/p250-commercial-use-axis/sweep_commercial.sh:17	bytes=$(printf '%s' "$content" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p784-licence-scope-map/probe.sh:91	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p560-epl-mpl-version-read/sweep_versions.sh:62	sz=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p122-prose-licence-census/scan_licences.sh:24	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p324-corpus-upstream-cession/resolve_upstream.sh:27	printf '%s|%s|%sB' "$(printf '%s' "$body" | head -3 | tr -d '\n' | cut -c1-40)" "$f" "$(printf '%s' "$body" | wc -c)"
+STRIPPING	compose/code/p206-erp-layer-license/sweep_erp.sh:54	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p170-headref-license-sweep/sweep_headref.sh:37	bytes=$(printf '%s' "$content" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p211-case-retro-sweep/sweep_retro.sh:67	bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+STRIPPING	compose/code/p117-second-channel/title.sh:10	printf '%-42s %-14s %-7s %s | %s\n' "$slug" "$br/$p" "$(printf '%s' "$body"|wc -c)" "$title" "$ver"
+STRIPPING	compose/code/p117-second-channel/licence.sh:22	printf '%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$p" "$spdx" "$(printf '%s' "$body" | wc -c)"
+STRIPPING	compose/code/p326-titleholder-book-license/controls.sh:24	printf '  %-34s bytes=%s lineas=%s sha256=%s\n' "$r" "$(printf '%s' "$f" | wc -c | tr -d ' ')" "$(printf '%s' "$f" | wc -l | tr -d ' ')" "$(printf '%s' "$f" | sha256sum | cut -c1-16)"
+STRIPPING	compose/code/p326-titleholder-book-license/sweep_titleholder.sh:24	bytes=$(printf '%s' "$raw_lic" | wc -c | tr -d ' ')
+unmarked stripping sites: 12
