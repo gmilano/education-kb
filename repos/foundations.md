@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🆕 🟢 **Three foundational repositories enter this file, and none of them is new software. They were
+invisible because this KB was counting the wrong tag.** `ACTION JZ` made `topic:education`
+countable (`8 191`, exactly); the sweep p173 recorded as never-run was then run, and
+`"student information system" license:mit pushed:>=2026-04-16` returns **`54` results — an exact
+integer, not a rounded one**.
+
+| repo | licence *(body READ this pass, bytes)* | `HEAD` | last commit | tree | what it is |
+|---|---|---|---|---|---|
+| 🆕 🟢 [`eagles-edu/sis`](https://github.com/eagles-edu/sis) | 🟢 **`MIT`** — `LICENSE`, `1 066` B | `7e5fbccad5a0` | `2026-09-26` → `17` d | 🟢 **`2 598` files** | the largest permissive student information system this KB has ever been able to name |
+| 🆕 🟢 [`opensacorg/learning-blocks`](https://github.com/opensacorg/learning-blocks) | 🟢 **`MIT`** — `LICENSE`, `1 075` B, *"Copyright (c) 2022 Code for Sacramento"* | `5bc137c972c7` | `2026-09-15` → `28` d | 🟢 **`849` files** | an SIS built by a **Code for America brigade** — a civic-tech institution, which also PLACES it (`P800`) |
+| 🆕 🟡 [`Arux-Software/Bright`](https://github.com/Arux-Software/Bright) | 🟢 **`MIT`** — 🔴 at `LICENSE.txt`, `1 075` B *(a `P50` instance: plain `LICENSE` is absent)* | `7d15ccb7c2e9` | — | — | a framework for working WITH student information systems — a client library, not a system of record |
+
+🔴 **What is verified and what is not, stated so the rows cannot be over-read (`ACTION JR`):**
+licence BODY, `HEAD` sha, tree size and commit date. 🔴 **Not verified: `OneRoster`, `SCORM`, xAPI,
+multi-tenancy, authentication, dependency closure, or whether anyone operates them.** They are
+candidates in [`verticals/solutions.md`](../verticals/solutions.md), not routes.
+🔴 **And the residue a client should hear: the head of that `54`-repository population is `31`★** —
+a browser extension for a Dutch SIS. There is still no institutional-scale permissive SIS. The
+twelve-pass sentence *"none exists"* was stronger than the evidence, and it was never re-tested on
+a denominator that could have refuted it.
+
+### 🆕 🟢 The `P50` instance, because this file keeps finding them
+
+🔵 `Arux-Software/Bright` carries its grant at **`LICENSE.txt`** and nothing at `LICENSE`. This KB
+has now recorded the same shape at `openfun/ralph` (`LICENSE.md`), `moodle/moodle` (`COPYING.txt`),
+`formalms/formalms` (`html/license.txt`) and `os4ed/openSIS-Classic` (not at the root at all).
+🟢 **The probe ladder in [`compose/code/grant-ladder-v4/`](../compose/code/grant-ladder-v4) exists
+for exactly this reason, and a `404` on `LICENSE` is never a finding on its own.**
+
+### 🟢 Carried forward unchanged
+
+🟡 **Every p168–p173 verdict in this file stands; p174 re-read no platform root grant.** The
+`Sakai` manifest reading corrected at p173 (`25` `Apache-1.1` + `9` `BSD`, not `34` `BSD`) is
+unchanged, and the `Apache-1.1` support added to the shared classifier at p173 is now also
+exercised by p174's own gate suite — `12` of `12`, offline.
+[`evidence/exact-count-partition.2026-10-13-p174.tsv`](../evidence/exact-count-partition.2026-10-13-p174.tsv)
 ## Pass 173 — 2026-10-13
 
 🆕 🟢 **`ACTION JU` DISCHARGED. The shared hardened classifier can now see `Apache-1.1`, and

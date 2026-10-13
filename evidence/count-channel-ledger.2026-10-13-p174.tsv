@@ -1,0 +1,15 @@
+# ACTION JZ (p174) -- the channel ledger behind the partition. Every count channel this container
+# can reach, the exact request made, and the response in the server's OWN words where it refused.
+# Measured 2026-10-13. Extends T251, which corrected this KB's "api.github.com is 403" claim.
+channel	request	http	verdict	server_words_or_note
+api.github.com REST search	GET /search/repositories?q=topic:education+pushed:>=2026-04-16+license:mit&per_page=1	403	REFUSED	"This GitHub API path is not available: sessions are bound to their configured repositories. Use repository-scoped endpoints (repos/{owner}/{repo}/...)."
+api.github.com rate_limit	GET /rate_limit	200	ANSWERS	core limit 15000 remaining 15000 -- AND it advertises a `search` resource with limit 30, a budget this session cannot spend on any search path
+api.github.com GraphQL	POST /graphql {search(query:"topic:education",type:REPOSITORY){repositoryCount}}	403	REFUSED	"GitHub GraphQL is not available from Claude Code sessions; use the REST API (gh api repos/{owner}/{repo}/...)"
+github.com rendered search (curl)	GET /search?q=topic:education&type=repositories	403	REFUSED	HTML search is 403 to curl; the same URL answers through WebFetch
+github.com rendered search (WebFetch)	GET /search?q=...&type=repositories	200	ANSWERS	exact integer at or below ~1000, two-significant-figure rounding above it (T252); 429 after roughly 7-10 requests in a short window, which is what paced this sweep
+github.com rendered search page 100	GET /search?q=topic:education+pushed:>=2026-04-16+license:mit&type=repositories&p=100	200	ANSWERS	results 991-1000 are served and page navigation stops at 100 -- the 1000-result cap is real and carries NO on-page message saying so, so the tail cannot yield a total
+repos.ecosyste.ms API	GET /api/v1/topics/education	000	DENIED AT CONNECT	curl: (56) CONNECT tunnel failed, response 403 -- denied by egress POLICY, same layer as eur-lex.europa.eu in gap 110, so no retry and no alternate transport will reach it
+raw.githubusercontent.com	GET /<owner>/<repo>/<sha>/<path>	200	ANSWERS	the licence-body and README channel this pass used; unaffected
+# NET: 2 of 7 request forms answer. The exact count was obtained by PARTITIONING the one that does,
+# not by finding a channel that reports it. T252 stands as a property of the channel's RENDERING,
+# and is no longer a limit on what this KB can state.

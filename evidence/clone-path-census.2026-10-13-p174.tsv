@@ -1,0 +1,43 @@
+# ACTION KC (p174) -- T247. Sweep every instrument in compose/code/ for a hardcoded KB clone
+# root and fix each to resolve relative to itself.
+# CLASSIFICATION RULE (stated per T234): a hit is LIVE when the line, with any '#' comment
+#   stripped and outside any triple-quoted block, still contains the path. Otherwise COMMENT.
+#   /tmp scratch files (/tmp/lic.$$) and example INPUT dirs (/tmp/edu-trees) are NOT clone
+#   roots and are not hits at all.
+# CHANNEL: compose/code/p174-clone-path-gate/check_clone_paths.py, 12/12 offline tests.
+# FALSIFIER LIMB 1: 'refuted if p172-manifest-attribution is the ONLY instrument with one'.
+#   IT FIRES -- 4 instruments, 9 files, 13 lines.
+# FALSIFIER LIMB 2: 'ALSO refuted if >=5 instruments carry one'. SILENT at the stated rule --
+#   4 instruments carry one in LIVE code. 4 more files mention a path in NARRATIVE only and
+#   were deliberately left readable; counting those would give 8 and is a different question.
+# PRE-PATCH (commit f5cdcf0): hits=17 LIVE=13 COMMENT=4. POST-PATCH: hits=4 LIVE=0 COMMENT=4.
+instrument	file	line	pre_patch_text	fix
+p120-unread-grant-resolution	depth.sh	11	wc -l < "/home/user/education-kb/$pg"	KB=${KB_ROOT:-$(cd "$(dirname "$0")/../../.." && pwd)}
+p120-unread-grant-resolution	repair.py	17	KB = '/home/user/education-kb'	KB = str(pathlib.Path(__file__).resolve().parents[3])
+p120-unread-grant-resolution	score.py	76,91	os.path.join('/home/user/education-kb', page)	os.path.join(KB, page), KB from parents[3]
+p120-unread-grant-resolution	score_after.py	76,91	os.path.join('/home/user/education-kb', page)	os.path.join(KB, page), KB from parents[3]
+p120-unread-grant-resolution	test_p120.sh	105,114,115	cd /home/user/education-kb; git -C /home/user/education-kb	KB=${KB_ROOT:-$(cd ../../.. && pwd)} after the script's own cd
+p121-stale-token-crosspage	test_p121.sh	5	ROOT="${1:-/tmp/education-kb}"	default is now the script's own clone; the argument still overrides
+p172-manifest-attribution	classify_bodies.sh	6	. /tmp/education-kb/compose/code/lib/license_family.sh	. "$(cd "$(dirname "$0")/.." && pwd)/lib/license_family.sh"
+p996-promotion-ledger	build_ledger.py	2	KB = pathlib.Path("/home/user/education-kb")	KB = pathlib.Path(__file__).resolve().parents[3]
+p996-promotion-ledger	reconcile_code_shelf.py	2	KB = pathlib.Path("/home/user/education-kb")	KB = pathlib.Path(__file__).resolve().parents[3]
+# LEFT ALONE ON PURPOSE -- narrative about the defect, which the repair must not delete:
+#   p121-stale-token-crosspage/crosspage.py:23, p173-apache11-family/sweep_family.sh:6,
+#   p355-cwd-portability/test_p355.py:139, p550-duplicate-definition-sweep/test_sweep.sh:145
+# BEHAVIOUR CONTROLS, run from a FOREIGN cwd (/home/user) before and after the repair:
+control	pre_patch	post_patch
+p172-manifest-attribution/classify_bodies.sh	DEAD -- 'No such file or directory' on line 6	RUNS -- sources the shared classifier
+p120-unread-grant-resolution/test_p120.sh	51 passed / 4 failed	51 passed / 4 failed -- IDENTICAL
+p121-stale-token-crosspage/test_p121.sh (no arg)	22 passed / 6 failed	22 passed / 6 failed -- IDENTICAL
+p996-promotion-ledger/build_ledger.py	runs	runs
+p996-promotion-ledger/reconcile_code_shelf.py	runs	runs
+p355-cwd-portability/test_p355.py	24/24 OK	24/24 OK
+# WHY THREE CONTROLS READ 'IDENTICAL': this pass's clone happens to sit at
+#   /home/user/education-kb, the very path those four instruments hardcoded, so they were
+#   ACCIDENTALLY CORRECT here. p172's was not, because it hardcoded /tmp/education-kb. The
+#   repair is therefore invisible in this container and decisive in the next one -- which is
+#   exactly why a gate, and not a one-time fix, is the deliverable.
+# NOTE RECORDED, NOT ACTED ON: running p120's and p121's suites REWRITES their own dated
+#   result files (score.2026-10-11.tsv, phantom-claims.2026-10-11.tsv, action-p.tsv) with
+#   today's measurement. p174 restored all three to HEAD. An instrument that overwrites the
+#   dated evidence it is named for destroys the record -- registered as ACTION KF.

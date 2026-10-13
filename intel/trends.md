@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🆕 🟢 **The trend this pass can prove rather than cite: three of the four things this KB called
+absences were artefacts of its own measurements, and the fourth one just stopped being a question.
+A permissive SIS, an exact vertical size and a buildable marking path all existed last pass. What
+was missing was a denominator, a method and a line number.**
+
+### 🆕 🟢 1. A rounded number is a method problem, not a channel limit
+
+🟢 **Measured: the rendered search channel reports an exact integer at or below ~`1 000` and two
+significant figures above it. `pushed:` holds one value per repository, so date windows are
+disjoint. `17` windows later: `8 191`, against *"`8.2k`"*.**
+🔴 **The trend statement, and it generalises past GitHub: an API that refuses and a page that
+rounds are different failures, and this KB spent two passes treating the second as the first.**
+`api.github.com/search` and GraphQL both refuse here by session binding; `repos.ecosyste.ms` is
+denied at the CONNECT layer by egress policy. 🟢 **The channel that answers was always sufficient —
+once asked `17` smaller questions instead of one big one.**
+🔵 **What it costs: `17` requests paced around a `429` that arrives after roughly `7`–`10` reads.
+What it buys: every four-figure figure in this KB becomes exact.**
+
+### 🆕 🔴 2. A negative re-tested on an unchanged denominator is not re-tested — it is repeated
+
+🔴 **Measured: *"SIS, permissive: none exists"* was carried for TWELVE passes and refuted in one
+query once the denominator was fixed.** `"student information system" license:mit
+pushed:>=2026-04-16` → **`54`**, exactly. Two have real trees:
+[`eagles-edu/sis`](https://github.com/eagles-edu/sis) (`2 598` files, committed `17` days ago) and
+[`opensacorg/learning-blocks`](https://github.com/opensacorg/learning-blocks) (`849` files, Code
+for Sacramento, `28` days).
+🟢 **The trend statement: in an append-only knowledge base, a repeated negative accumulates the
+appearance of evidence.** Each pass that re-states it adds a date and no information. 🔵 **The fix
+is a rule, not a correction: a carried negative must name the QUERY that would refute it, and the
+query must change when the population's definition changes (`T259`).**
+🔴 **The residue, stated so the correction is not over-read: the head of that `54` is `31`★.** There
+is still no institutional-scale permissive SIS — which is a procurement finding and not an absence.
+
+### 🆕 🔴 3. A compliance flag nothing exercises is a label, not a control
+
+🔴 **Measured on the shelf's most provenance-literate row: `46` of `46` of its own security tests
+pass with `c2pa_required=False` and `46` of `46` pass with it `True` — byte-identical. The flag is
+never set in any test in the repository, and the gate accepts the *"not applicable"* status that
+every generated asset is born carrying.**
+🟢 **The trend statement for the `50` days to Article `50(2)`: the market's provenance readiness
+cannot be read off the presence of C2PA vocabulary, a gate, or a manifest type. All three are
+present here and `0` bytes get marked.** 🔵 **The diligence question that separates a label from a
+control is *"which test fails when you turn it off?"* — and on this row the answer is none
+(`T258`).**
+
+### 🆕 🔴 4. A star count and a commit date disagree — but only against the right denominator
+
+🔴 **Measured: the top `20` of the tagged population by stars is dormant at `65.0%` / `40.0%` /
+`10.0%` (`30` / `60` / `90` days by COMMIT date), against the whole population's
+`71.1%` / `47.4%` / `25.2%`.** 🟢 **So the star head is FRESHER than its own tail, not deader —
+p173's wording, corrected here by the larger sample it asked for.**
+🔴 **What does hold, and it is the one that matters for a shortlist: the head is far deader than
+this KB's curated shelf**, whose sampled rows last committed `0`, `1`, `3`, `4` and `22` days ago.
+🔵 **The trend statement: curation beats ranking in this vertical, and *"popular"* and *"tagged"*
+are both worse liveness proxies than *"someone picked it and checked"* (`T263`).**
+
+### 🆕 🟡 5. The regions' obligations are converging and the instrument is the same one
+
+🟢 **Measured this pass: China's Interim AI Measures have required LABELLING of AI-generated content
+since `15 August 2023`; the EU requires machine-readable marking of synthetic content from
+`2 December 2026`; and China additionally mandates `≥8` hours of AI instruction per school year from
+`2025`.**
+🟢 **The trend statement: the Article `50(2)` tooling this KB has been building for one jurisdiction
+is a two-market instrument already, and the second market's deadline is three years in the past.**
+🔴 **Neither primary text has been read here** — `eur-lex` is `403` at the CONNECT layer (`gap 110`)
+and the Chinese measures were never asked for. 🔵 **Two obligations, two secondary-source readings,
+one instrument. The instrument is the asset; the dates are the liability.**
+
+### 🆕 🟡 6. Absence has a shape, and the shape is sellable
+
+🔴 **Measured: `16` formulations across two channels returned `0` MEA-originated permissive active
+education-vertical repositories. Of the four candidates whose licence body was read at a verified
+`HEAD`, three fail only on ACTIVITY (`191`–`334` days) and the fourth only on LICENCE (`GPL-3.0`).**
+🟢 **The trend statement: *"nothing exists"* and *"three exist and each is one criterion short"* are
+different briefs, and only the second one has work in it.** A dormant `MIT` repository grounded in
+the Egyptian national curriculum is a fork with no licence conversation.
+🔵 **And the method rule that produced it, worth more than the finding: a four-way filter should be
+reported as four columns, never as one verdict.** This KB reported the AND for seven passes.
+[`evidence/exact-count-partition.2026-10-13-p174.tsv`](../evidence/exact-count-partition.2026-10-13-p174.tsv)
+· [`evidence/aiact-50-2-insertion-point.2026-10-13-p174.tsv`](../evidence/aiact-50-2-insertion-point.2026-10-13-p174.tsv)
+· [`evidence/mea-candidate-licences.2026-10-13-p174.tsv`](../evidence/mea-candidate-licences.2026-10-13-p174.tsv)
 ## Pass 173 — 2026-10-13
 
 🆕 🔴 **The trend this pass can prove rather than cite: the open-source AI-education landscape is

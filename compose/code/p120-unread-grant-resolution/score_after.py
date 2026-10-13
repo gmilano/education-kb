@@ -29,7 +29,11 @@ The scoring rule is the finding, so it is stated here rather than implied:
   INCOMPLETE - the resolution found MORE grants than the row names, none of the
                row's own tokens being wrong.
 """
-import csv, sys, re, os
+import csv, sys, re, os, pathlib
+
+# P174-KC: the KB root comes from THIS file, never from a clone path. The
+# instrument lives at <kb>/compose/code/<instrument>/, so parents[3] is <kb>.
+KB = str(pathlib.Path(__file__).resolve().parents[3])
 
 # A row ALREADY REPAIRED by an earlier pass carries both tokens by this KB's
 # convention: the measured grant plus the superseded one, marked "was X" or
@@ -73,7 +77,7 @@ CORRECTION_HDR = re.compile(
     r'|\|[^|]*\bthis KB published\b[^|]*\|', re.I)
 
 def in_correction_table(page, line, lookback=14):
-    fp = os.path.join('/home/user/education-kb', page)
+    fp = os.path.join(KB, page)
     try:
         lines = open(fp, encoding='utf-8').read().splitlines()
     except OSError:
@@ -88,7 +92,7 @@ def in_correction_table(page, line, lookback=14):
     return False
 
 def row_text(page, line):
-    fp = os.path.join('/home/user/education-kb', page)
+    fp = os.path.join(KB, page)
     try:
         with open(fp, encoding='utf-8') as fh:
             for i, t in enumerate(fh, 1):

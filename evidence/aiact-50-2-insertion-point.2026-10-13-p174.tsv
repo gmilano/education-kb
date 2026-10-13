@@ -1,0 +1,52 @@
+# ACTION KA (p174) -- gap 126. Is Article 50(2) marking addable to the shelf's best-equipped row
+# FROM OUTSIDE the project, and would its own tests still pass with c2pa_required=True?
+# SUBJECT: AkshitIreddy/AI-Powered-Video-Tutorial-Generator, MIT, shelf row (authoring).
+# ANCHOR: 9c260890214df68ad8fd0d681d3e77a6a7b7ea9f -- p173's pinned sha, and it is STILL HEAD, so
+#   this is a CONTROLLED re-read and not a moved target. 905 files, as p173 recorded.
+# CHANNEL: git clone --filter=blob:none + targeted checkout. Tests run with python3.12 -I.
+# FALSIFIER LIMB 1: "refuted if the export path hands its artefact to a closed or vendored binary
+#   this KB cannot instrument, which would make the fix a FORK". SILENT -- the encoder is EXTERNAL
+#   FFmpeg, invoked shell-free by argv with a caller-supplied `ffmpeg_path`. Nothing is vendored.
+# FALSIFIER LIMB 2: "ALSO refuted if c2pa_required=True already passes the repo's suite unmodified".
+#   IT FIRES -- 46 of 46 tests pass either way, byte-identical, because the gate ALLOWS the status
+#   that generated assets carry BY DEFAULT.
+layer	file	line	what_is_there	what_it_means_for_marking
+domain	services/pipeline/src/alystria/security/provenance.py	38-43	C2paStatus = NOT_APPLICABLE / ABSENT / VALID / INVALID	the vocabulary exists and is complete
+domain	services/pipeline/src/alystria/security/provenance.py	45-60	C2paRecord enforces hash+signer+verified_at whenever status is VALID	the record cannot be faked green; a signer is structurally required
+domain	services/pipeline/src/alystria/security/provenance.py	125	AssetProvenance.c2pa DEFAULTS to C2paRecord(C2paStatus.NOT_APPLICABLE)	every asset, INCLUDING OriginKind.GENERATED, is born "marking does not apply"
+domain	services/pipeline/src/alystria/security/provenance.py	138-143	GENERATED assets are already REQUIRED to carry provider+model+revision	the project already treats synthetic origin as a distinct, stricter case -- but not for C2PA
+domain	services/pipeline/src/alystria/security/provenance.py	154-160	ExportProvenanceManifest carries a REQUIRED c2pa: C2paRecord	an export-level manifest type exists; nothing populates it with a signature
+gate	services/pipeline/src/alystria/security/gates.py	110	ExportGateInput.c2pa_required: bool = False	the flag p173 found defaulted off
+gate	services/pipeline/src/alystria/security/gates.py	260-262	the gate accepts {VALID, NOT_APPLICABLE} when c2pa_required is True	THE DEFECT: NOT_APPLICABLE is both the DEFAULT and an ACCEPTED value, so the flag is a no-op for defaulted assets
+producer	services/pipeline/src/alystria/generation/workflow.py	3018	c2pa=C2paRecord(C2paStatus.NOT_APPLICABLE) written for a generated asset	p173's "sharpest single datum", now explained: it is the default repeated by hand
+export	services/pipeline/src/alystria/editor_export.py	816	def render_editor_timeline(...)	the orchestrator: plan -> FFmpeg -> verify -> sidecars -> CAS
+export	services/pipeline/src/alystria/editor_export.py	93-113	SubprocessEditorExportRunner.run builds argv and calls EXTERNAL FFmpeg	instrumentable: no vendored encoder, so limb 1 cannot fire
+export	services/pipeline/src/alystria/editor_export.py	878-883	verify_editor_delivery probes the finished file with ffprobe	the artefact exists on disk and is already being re-opened here
+export	services/pipeline/src/alystria/editor_export.py	886-906	caption .vtt/.srt sidecars and an alystria.editor.credits.v1 attribution sidecar are written	the project ALREADY has the sidecar habit -- a c2pa manifest fits its existing shape
+export	services/pipeline/src/alystria/editor_export.py	907-917	store.cas.add_file(selected_output, ...) -- content-addressed insert	THE INSERTION POINT: sign BEFORE this line or the recorded hash is the hash of UNMARKED bytes
+# THE PATCH, stated as a client would need it -- 4 edits, none of them a fork:
+#  1. provenance.py:138-143 -- extend the GENERATED validation clause to reject NOT_APPLICABLE.
+#  2. gates.py:260-262 -- drop NOT_APPLICABLE from the accepted set when origin is GENERATED
+#     (keep it for USER and SCREEN_CAPTURE, where marking genuinely does not apply).
+#  3. editor_export.py, between line 885 and line 907 -- c2patool sign `selected_output` in place
+#     (or sign to a temp and replace), then hash; the CAS insert at 907 then records signed bytes.
+#  4. workflow.py:3018 -- carry the signer's record instead of the hand-written NOT_APPLICABLE.
+# STILL PROCUREMENT, NOT ENGINEERING: a signing certificate. C2paRecord requires a `signer` for
+# VALID, and no certificate exists in the tree.
+# SUITE MEASUREMENT (the limb-2 firing), python3.12 -I, unittest, PIL stubbed because an unrelated
+# vision adapter imports Pillow at package-import time and the container has none:
+measurement	modules	tests	failures	errors	verdict
+baseline c2pa_required=False	test_provenance_gates + test_content_boundaries + test_files_archive + test_network_privacy	46	0	0	OK
+flipped c2pa_required=True	same four	46	0	0	OK -- IDENTICAL
+# GATE TRUTH TABLE, measured by constructing ExportGateInput directly (GENERATED asset, Apache-2.0,
+# PUBLIC_COMMERCIAL use). "findings" is the set of finding codes the gate returns:
+c2pa_required	asset c2pa status	findings
+False	NOT_APPLICABLE (the default)	[]
+False	ABSENT	[]
+False	VALID	[]
+True	NOT_APPLICABLE (the default)	[]  <-- synthetic output passes a gate that is switched ON
+True	ABSENT	['export.c2pa']
+True	VALID	[]
+# AND THE REASON THE SUITE CANNOT CATCH THIS: `c2pa_required` is never set in any test in the
+# repository. All 4 ExportGateInput constructions in tests/security/test_provenance_gates.py pass
+# positional arguments that stop before it, so every test sees the default, whatever the default is.

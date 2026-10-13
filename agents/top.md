@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🟢 **No promotion and no demotion this pass: the shelf is the same `12` rows, and it is re-stated in
+full below because under *"only the newest block is canonical"* a row this file does not re-state
+leaves the compiled view (`T216`).**
+🆕 🟢 **What changed is what can be SAID about one row.** `ACTION KA` read the export path of
+[`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator)
+at the sha p173 pinned — **still `HEAD`, so a controlled re-read** — and Article `50(2)` marking is
+now specified as **four edits at named lines**, not as a gap. The recipe is Pattern `1` in
+[`compose/patterns.md`](../compose/patterns.md).
+🆕 🔴 **And the finding that matters for anyone quoting this shelf's compliance posture: p173 said
+the project's C2PA flag *"defaults off"*. Flipping it ON changes nothing.** The gate accepts
+`{VALID, NOT_APPLICABLE}` and `NOT_APPLICABLE` is the default every asset is born with, so a
+`GENERATED` asset passes a gate that is switched on. `46` of `46` of the project's own security
+tests pass either way, because **no test in the repository ever sets that flag** (`T258`).
+🆕 🟡 **Four new `MIT` candidates are recorded in
+[`agents/trending.md`](trending.md) and deliberately NOT promoted here** —
+`kirilxd/claude-tutor` (`139`★), `Scorpioyyy/verichalk`, `2022764025/Lecture-Hunter`,
+`zmuxuny/hy3-learning-agent`. Licence body read, `HEAD` verified, and nothing else; the `ACTION JR`
+discipline says that is a candidate, not a shelf row.
+🟢 **Actions are registered in [`intel/open-gaps.md`](../intel/open-gaps.md) ONLY, per `T218`.**
+
+### 🟢 The `12`-row shelf — RE-STATED IN FULL at p174
+
+🟡 **Licence cells, shapes and regions are p171/p172 body reads carried forward. p174 re-read the
+LICENCE of none of them and the EXPORT PATH of one. This line is the disclosure.**
+
+| repo | licence *(body read, p171/p172)* | primary shape *(p172)* | region | status at p174 |
+|---|---|---|---|---|
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 `Apache-2.0` — CLEAN | tutoring | Global | CARRIED |
+| 🟡 [`penecho/penecho`](https://github.com/penecho/penecho) | 🔴 **`AGPL-3.0-only` + COMMERCIAL path + CLA (`T207`)** | authoring | Global | CARRIED |
+| 🔴 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 🔴 `AGPL-3.0` — CLEAN, verbatim | assessment | APAC | CARRIED |
+| 🟢 [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 `MIT` — CLEAN | assessment | Global | CARRIED |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT` — CLEAN, ships a licence GATE (`T208`)** | PLATFORM *(off-vocabulary)* | EMEA | CARRIED |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **NON-VERBATIM `Apache-2.0` (`T206`)**, and it PROPAGATES (`T219`) | tutoring | Global | CARRIED |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **Community License — non-commercial, revocable** | authoring | Global | CARRIED |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` — CLEAN | tutoring | Global | CARRIED |
+| 🟢 [`AkshitIreddy/AI-Powered-Video-Tutorial-Generator`](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 🟢 `MIT` — CLEAN | authoring | Global | 🆕 🟢 **CARRIED, and the only row whose Article `50(2)` path is now specified to the LINE (`ACTION KA`). `HEAD` still `9c260890214d` — a controlled re-read** |
+| 🔴 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` — CLEAN, verbatim | tutoring | Global | 🟡 **CARRIED. Still the only row carrying `ai-education`, the tag every pre-p174 population figure was measured on** |
+| 🔴 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 `GPL-3.0` — CLEAN at `1` word | tutoring | Global | CARRIED |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NO GRANT FILE — exhaustive** | tutoring | Global | CARRIED |
+
+🟢 **Routable without a licence conversation — `5` of `12`, unchanged:** `ai-shifu` (`Apache-2.0`),
+`anki-mcp-server`, `mentingo`, `OpenTutor`, `AI-Powered-Video-Tutorial-Generator` (all `MIT`).
+🔴 **The other `7` still need one.**
+
+### 🆕 🔴 The number this file has to stop quoting, and the one that replaces it
+
+| figure | what it actually counts | status at p174 |
+|---|---|---|
+| `135` | repositories tagging themselves `ai-education`, `MIT`, pushed in `180` d | 🟢 **exact, reproduced this pass, and a usable SHORTLIST** |
+| 🔴 *"`8.2k`"* | the same filters on `topic:education` — the tag `9` of `12` shelf rows carry | 🔴 **superseded: it was two significant figures, not a count** |
+| 🆕 🟢 **`8 191`** | 🟢 **the same query, counted by `17` disjoint `pushed:` windows and summed** | 🆕 🟢 **EXACT. `gap 125` closed; the method is Pattern `2` in `compose/patterns.md`** |
+
+🔵 **Why that matters here rather than only in `repos/trending.md`:** every *"the vertical is N
+repositories"* sentence this shelf has supported was off by `~61×` **and** rounded. The shortlist
+was never wrong; the denominator was, twice over.
+[`evidence/aiact-50-2-insertion-point.2026-10-13-p174.tsv`](../evidence/aiact-50-2-insertion-point.2026-10-13-p174.tsv)
+· [`evidence/exact-count-partition.2026-10-13-p174.tsv`](../evidence/exact-count-partition.2026-10-13-p174.tsv)
 ## Pass 173 — 2026-10-13
 
 🆕 🔴 **`ACTION JW` DISCHARGED WITH ITS FALSIFIER FIRED AT THE CEILING. `T238` said the `12`-row

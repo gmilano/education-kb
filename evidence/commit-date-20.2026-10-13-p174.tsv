@@ -1,0 +1,46 @@
+# ACTION KB (p174) -- T253 / gap 121. Is the `ai-education` topic head really deader than this
+# shelf, or was p173's 3-of-5 a small-sample artefact?
+# POPULATION: the first 20 rows the rendered search returns for the p173 anchor at s=stars&o=desc.
+# ANCHOR QUERY (verbatim, per T227): topic:ai-education pushed:>=2026-04-16 license:mit
+#   -- reproduced this pass at EXACTLY 135 results, matching p173's recorded band count.
+# CHANNEL: git clone --depth 1 --filter=blob:none --no-checkout, then git log -1 --format=%cI.
+#   0 api.github.com calls. Clone and read, then the clone is deleted.
+# t0 = 2026-10-13. days = days since last COMMIT (not push).
+# FALSIFIER LIMB 1: "refuted if <25pct of the 20 are dormant at 60 days by COMMIT date". SILENT --
+#   8 of 20 = 40.0pct.
+# FALSIFIER LIMB 2: "ALSO refuted if >=5 of the 20 cannot be cloned at all". SILENT -- 20 of 20
+#   cloned, 0 failures, so no part of this population is unreachable.
+rank	slug	stars	clone	head_sha12	last_commit	days	dormant_60d	listing_updated_shown	push_vs_commit_gap_days
+1	pguso/agents-from-scratch	1000	OK	da3f9df28a9c	2026-07-25	79	YES	Jul 25	0
+2	SenmuuuuW/universal-diagnostic-tutor-skill	244	OK	075c1895d255	2026-09-24	18	no	18 days ago	~1
+3	sgaofen/vibe-schooling	80	OK	7c2f87a4641b	2026-07-17	88	YES	Jul 16	0 (timezone)
+4	TovTechOrg/Tov-learn	36	OK	290af750671a	2026-09-28	14	no	13 days ago	~2
+5	NickScherbakov/codementor-ai-platform	22	OK	a0a33cd6d4f8	2026-07-20	85	YES	Jul 20	0
+6	niansia/taiwan-exam	18	OK	e2193181c95c	2026-09-29	14	no	14 days ago	0
+7	minicoursegenerator/skills-for-course-creators	15	OK	a8209b4096c9	2026-08-27	46	no	Aug 27	0
+8	vesperchinn/learn-anything-skill	12	OK	2886af46b67b	2026-07-28	77	YES	Jul 28	0
+9	thisisandreeeee/llms-in-10-words	11	OK	312d44be0f5c	2026-09-16	27	no	27 days ago	0
+10	dulanjayabhanu/mononeural	11	OK	90015a5a27a0	2026-08-02	71	YES	Aug 2	0
+11	timothywarner-org/ai901-cert-buddy-claude	10	OK	40572f77f573	2026-06-19	115	YES	Jun 29	10
+12	jeliael/fakao-ai-exam-engine	10	OK	60a25699f2fb	2026-08-18	56	no	Aug 18	0
+13	BridgingAISocietySummerSchools/Python-for-Data-Science-Workshop	7	OK	94930a6fc3f3	2026-08-24	49	no	Aug 24	0
+14	wwlwgo/cn-primary-math-knowledge-graph	7	OK	3b6f38f0e4fb	2026-07-30	75	YES	Jul 30	0
+15	Scorpioyyy/verichalk	6	OK	9f963ab192a1	2026-10-11	2	no	2 days ago	0
+16	behnia137/ai-for-beginners-visual	6	OK	e150b06a5a9b	2026-09-12	30	no	Sep 12	0
+17	UdeepChowdary/emotionDetectionLearningSupportEngine	4	OK	0480ff96917d	2026-08-23	51	no	Aug 23	0
+18	Duncan-maker117/toefl-ai-skills	4	OK	3d885359a275	2026-07-13	92	YES	Jul 12	0 (timezone)
+19	2022764025/Lecture-Hunter	3	OK	7004ddf08e74	2026-10-08	5	no	5 days ago	0
+20	zmuxuny/hy3-learning-agent	3	OK	593155b9d239	2026-10-10	3	no	3 days ago	0
+# TALLY (counted from the days column, not eyeballed): 20 cloned / 0 failed.
+#   Dormant at 30 d: 13 of 20 = 65.0pct. At 60 d: 8 of 20 = 40.0pct. At 90 d: 2 of 20 = 10.0pct.
+# T253 HOLDS AGAINST THE SHELF and FAILS AGAINST THE POPULATION, which p174 states rather than
+#   picking the half it likes:
+#   - vs this KB's 12-row shelf (sampled rows last committed 0, 1, 3, 4, 22 days ago) the topic's
+#     star head is far deader. That is the comparison T253 was about, and it holds at 4x the sample.
+#   - vs the 135-repository population p173 banded (71.1 / 47.4 / 25.2 pct dormant at 30 / 60 / 90 d)
+#     the top 20 by stars is SLIGHTLY FRESHER at every band (65.0 / 40.0 / 10.0). So "the star head
+#     is deader than the tail" -- p173's wording -- is REFUTED on this sample. The head is deader
+#     than the SHELF and fresher than its own population, and the two statements are not the same.
+# AND THE LIMIT p173 STATED IS RETIRED: the push/commit gap is 0 days for 19 of the 20 and 10 days
+#   for the twentieth. `pushed:` banding and commit banding are the same measurement on this
+#   population to within a day, so p173's 25.2/47.4/71.1pct bands need no commit-date caveat.

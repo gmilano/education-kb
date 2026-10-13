@@ -1,0 +1,17 @@
+# ACTION JY (p174) -- the candidates, measured rather than described. HEAD via git ls-remote, licence
+# BODY via raw.githubusercontent.com at that sha, commit date via
+# `git clone --depth 1 --filter=blob:none --no-checkout` + `git log -1 --format=%cI`. No api.github.com.
+# PLACEMENT per P800: grep of the README for institution/curriculum/standard markers. A name never places.
+# t0 = 2026-10-13. "days" is days since last COMMIT. Active bar = 180 d.
+slug	head_sha12	licence_file	licence_bytes	licence_family	commit_date	days	placement_evidence	region_verdict	education_vertical	FAILS_ON
+37743/Classroom-VR	48e70069a13d	LICENSE	1078	MIT (canonical)	2025-11-24	323	README: "Egyptian secondary senior biology curriculum"; contact yousef.gomaa@ejust.edu.eg (Egypt-Japan University of Science and Technology)	EMEA/MEA -- EGYPT, placed by curriculum + institution	YES -- VR classroom with curriculum-RAG tutors	ACTIVITY (323 d, 1.8x the bar)
+Hawary00/AI-Tutor	ea48f038ea32	LICENSE	11557	Apache-2.0	2025-11-12	334	README: "Arab" token only -- no institution, no curriculum, no standard	Global (P800: not placed)	YES -- modular LLM study assistant	ACTIVITY (334 d) and PLACEMENT
+OmarSalah26/Awesome-Arabic-AI	fa425fb40391	LICENSE	11358	Apache-2.0	2026-04-04	191	README names Egypt, Saudi Arabia, UAE and institutions; dialectal Egyptian (Masri) resources	EMEA/MEA -- placed	NO -- curated resource index, not an education tool	VERTICAL, and ACTIVITY by 11 d
+ahmedEid1/lumen	07635d3c81ad	LICENSE	35148	GPL-3.0	2026-06-07	127	README: "deploy" only -- nothing placing it	Global (P800: not placed)	YES -- learner-owned course builder, 88 stars	LICENCE (GPL-3.0) and PLACEMENT
+fanuelal/askuala_link_API	--	--	0	--	--	--	listed as the open repository of Askuala Link, an IRCAI Top-100 Ethiopian school platform	would be MEA if it resolved	YES per the listing	EXISTENCE -- git ls-remote cannot read it; 404 or private
+FADHILI-Josue/kinlang	--	--	0	--	--	--	MIT and Kinyarwanda-teaching per a third-party index (awesome.ecosyste.ms); last push reported March 2024	would be MEA if it resolved	YES per the index	EXISTENCE at this slug -- git ls-remote cannot read it -- and ACTIVITY
+mohameddsalmann/chatbot_for_education_learning	c0210d73fbdd	NONE	0	NO GRANT FILE	--	--	README: "Arab" token only	Global (P800: not placed)	YES -- bilingual Arabic/English tutor	LICENCE (absence of a licence reads as permission -- P118-K) and PLACEMENT
+# NET: 7 candidates, 4 with a licence body READ and a HEAD VERIFIED, 0 clearing all four criteria.
+# THE SHAPE OF THE ABSENCE: of the 4 measurable candidates, 3 fail ACTIVITY (191-334 d) and the only
+# ACTIVE one fails LICENCE (GPL-3.0). Not one of them fails on being nonexistent or non-educational.
+# This is a different statement from "there is nothing", and it is the one a client should hear.

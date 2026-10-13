@@ -6,9 +6,11 @@
 # without a new measurement: if depth predicts wrongness, these should cluster
 # in the tail too.
 set -u
+# P174-KC: KB root from THIS script, never a clone path. <kb>/compose/code/<inst>/ -> ../../..
+KB="${KB_ROOT:-$(cd "$(dirname "$0")/../../.." && pwd)}"
 printf '%-10s %-22s %-7s %-7s %-7s %s\n' verdict page line lines depth slug
 awk -F'\t' '$1=="OVERSTATED"||$1=="UNGRANTED"' score.2026-10-11.tsv | while IFS="$(printf '\t')" read -r v pg ln slug rest; do
-  total=$(wc -l < "/home/user/education-kb/$pg")
+  total=$(wc -l < "$KB/$pg")
   d=$(awk -v l="$ln" -v t="$total" 'BEGIN{printf "%.1f", (l/t)*100}')
   printf '%-10s %-22s %-7s %-7s %-7s %s\n' "$v" "$pg" "$ln" "$total" "$d%" "$slug"
 done

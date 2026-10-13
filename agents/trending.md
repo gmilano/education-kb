@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p174
+
+🆕 🔴 **`ACTION JY` is DISCHARGED and the limb that fired is the one that closes a question this
+page has re-opened four passes running. `16` formulations across two channels — `11` WebSearch
+country-and-language queries and `5` rendered `github.com/search` queries — returned **`0`**
+repositories that are permissive AND active AND education-vertical AND placed in the Middle East or
+Africa by the `P800` rule. The action's own instruction for this outcome was explicit: *"this KB
+must stop re-registering it and say so to clients instead."* 🟢 **So: said.**
+🆕 🟢 **But the SHAPE of the absence is the finding, and it is not *"there is nothing there"*.** Of
+the four candidates whose licence body this pass actually read at a verified `HEAD`, **three fail on
+ACTIVITY and the only ACTIVE one fails on LICENCE.** Not one fails on being nonexistent, and not one
+fails on not being about education.
+
+| candidate | licence *(body read, bytes)* | last commit | placed by *(`P800`)* | fails on |
+|---|---|---|---|---|
+| 🟡 [`37743/Classroom-VR`](https://github.com/37743/Classroom-VR) | 🟢 `MIT` — canonical, `1 078` B | `2025-11-24` → 🔴 **`323` d** | 🟢 **EGYPT** — *"Egyptian secondary senior biology curriculum"* + `ejust.edu.eg` | 🔴 **ACTIVITY**, at `1.8×` the `180`-day bar |
+| 🔴 [`Hawary00/AI-Tutor`](https://github.com/Hawary00/AI-Tutor) | 🟢 `Apache-2.0` — `11 557` B | `2025-11-12` → 🔴 **`334` d** | 🔴 none — `Arab` token only | 🔴 **ACTIVITY** *and* **PLACEMENT** |
+| 🔴 [`OmarSalah26/Awesome-Arabic-AI`](https://github.com/OmarSalah26/Awesome-Arabic-AI) | 🟢 `Apache-2.0` — `11 358` B | `2026-04-04` → 🔴 **`191` d** | 🟢 Egypt, KSA, UAE, institutions | 🔴 **VERTICAL** — a resource index, not a tool — and `ACTIVITY` by `11` d |
+| 🟡 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **`GPL-3.0` — `35 148` B** | `2026-06-07` → 🟢 `127` d | 🔴 none — `deploy` token only | 🔴 **LICENCE**, and placement |
+
+🆕 🔴 **Two further candidates do not exist to be measured, and one of them was named by a
+curated Top-`100`.** `fanuelal/askuala_link_API` is listed as the open repository of **Askuala
+Link**, an Ethiopian school platform in IRCAI's Top-`100`; `git ls-remote` cannot read it — `404`
+or private. `FADHILI-Josue/kinlang` (Rwanda, `MIT` per `awesome.ecosyste.ms`) does not resolve at
+that slug either. 🔵 **A third-party index listing a repository is not the repository.**
+
+### 🆕 🟢 Four new `MIT` rows this page can name, licence body read and `HEAD` verified
+
+🟢 **All four were absent from this KB before this pass** — `0` mentions in any content file or
+evidence TSV written up to p173 — and all four come off the `topic:ai-education` ranked list that `ACTION KB` enumerated.
+
+| repo | ★ | licence *(body read, bytes)* | `HEAD` | last commit | days | what it is | region |
+|---|---|---|---|---|---|---|---|
+| 🟢 [`kirilxd/claude-tutor`](https://github.com/kirilxd/claude-tutor) | `139` | 🟢 `MIT` — `1 063` B | `ce194694eca9` | — | — | study plans + adaptive quizzes + `SM-2` spaced repetition over a CLI agent | Global |
+| 🟢 [`Scorpioyyy/verichalk`](https://github.com/Scorpioyyy/verichalk) | `6` | 🟢 `MIT` — `1 066` B | `9f963ab192a1` | `2026-10-11` | 🟢 **`2`** | the freshest thing on the topic head | Global |
+| 🟢 [`2022764025/Lecture-Hunter`](https://github.com/2022764025/Lecture-Hunter) | `3` | 🟢 `MIT` — `1 074` B | `7004ddf08e74` | `2026-10-08` | 🟢 **`5`** | lecture capture/retrieval | Global |
+| 🟢 [`zmuxuny/hy3-learning-agent`](https://github.com/zmuxuny/hy3-learning-agent) | `3` | 🟢 `MIT` — `1 090` B | `593155b9d239` | `2026-10-10` | 🟢 **`3`** | learning companion agent | Global |
+
+🔴 **Stated so it is not over-read, per `ACTION JR`:** these four are licence-verified and
+`HEAD`-verified and **nothing more.** No dependency closure, no activity depth, no code read, no
+region evidence. They are candidates for the shelf, not members of it.
+
+### 🆕 🟢 `ACTION KB`: the topic head's dormancy, at `4×` p173's sample
+
+🟢 **`20` of `20` cloned, `0` failures — so no part of this population is unreachable.** Measured by
+**COMMIT** date and counted from the column rather than eyeballed: 🔴 **`13` of `20` (`65.0%`)
+dormant at `30` days, `8` of `20` (`40.0%`) at `60`, `2` of `20` (`10.0%`) at `90`.**
+🆕 🔴 **And the comparison splits, so p174 states both halves instead of the flattering one.**
+Against this KB's `12`-row shelf — sampled rows last committed `0`, `1`, `3`, `4` and `22` days
+ago — the topic's star head is far deader, which is what `T253` was about and it **holds** at `4×`
+the sample. 🔴 **Against its OWN population it does not:** p173 banded the `135` at
+`71.1% / 47.4% / 25.2%` dormant at `30` / `60` / `90` days, and the top `20` by stars comes in
+**fresher at every band**. 🔵 **So *"the star head is deader than the tail"* — p173's wording — is
+REFUTED on this sample; *"deader than the shelf"* survives. They were never the same claim.**
+🆕 🟢 **And a limit p173 declared is now RETIRED: `pushed:` and the last commit are the same
+measurement here.** The gap is `0` days for `19` of the `20` and `10` days for the twentieth, so
+p173's `25.2% / 47.4% / 71.1%` push-recency bands need no commit-date caveat.
+🔴 **What this page still cannot show, fifth consecutive pass: one trending education-AI repository
+originating in LATAM, the Middle East or Africa.** p174 stops calling that an open question for
+MEA — `16` formulations is a measurement — and keeps it open for LATAM, where the sweep now names
+**three** funded vendors and **zero** repositories.
+[`evidence/mea-origin-queries.2026-10-13-p174.tsv`](../evidence/mea-origin-queries.2026-10-13-p174.tsv)
+· [`evidence/mea-candidate-licences.2026-10-13-p174.tsv`](../evidence/mea-candidate-licences.2026-10-13-p174.tsv)
+· [`evidence/commit-date-20.2026-10-13-p174.tsv`](../evidence/commit-date-20.2026-10-13-p174.tsv)
 ## 2026-10-13 — p173
 
 🆕 🔴 **The week's measurable finding is a NEGATIVE one and it is about this page's own feed. `29`

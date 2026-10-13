@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🆕 🔴 **One row changes and it is the one this file has carried as *"none exists"* for twelve
+passes. A PERMISSIVE student information system does exist — three of them, `MIT`, bodies read, and
+two with real trees (`2 598` and `849` files) committed inside the last month. 🟢 **Nothing new was
+written by anyone: the DENOMINATOR was wrong.** p173 found that every population figure here was
+measured on `topic:ai-education`, which `1` of this KB's `12` shelf rows carries (`T255`). p174 made
+`topic:education` countable (`ACTION JZ`, `8 191` exactly), ran the sweep p173 said had never been
+run, and `"student information system" license:mit pushed:>=2026-04-16` returned **`54`**.**
+🆕 🟡 **They are routed as CANDIDATES and not as routes, deliberately.** Licence body, `HEAD`, tree
+size and commit date are verified; `OneRoster`, `SCORM`, tenancy and dependency closure are not.
+🔴 **The honest residue: the head of that `54` is `31`★.** *"No institutional-scale permissive SIS"*
+survives this pass. *"None exists"* does not, and it should never have been stated on a denominator
+`~61×` too small.
+🆕 🟢 **The Africa line on the Kolibri row is now a measurement, not an inference** — `16` query
+formulations, `0` MEA-originated permissive active education repositories (`ACTION JY`).
+🟢 **No platform root grant was re-read this pass and this file says so.** Every other row carries
+its p168–p173 verdict forward unchanged.
+🟢 **The routing table RE-STATES EVERY ROW, per `P170-C`/`T216`: under *"only the newest block is
+canonical"* a row not re-stated is lost however true it remains below. Verified with
+[`compose/code/p171-cross-block-gate/check_lost_rows.py`](../compose/code/p171-cross-block-gate/check_lost_rows.py)
+before commit.**
+
+### 🟢 THE ROUTING TABLE — re-stated in full at p174
+
+| need | route | licence *(body read)* | status at p174 |
+|---|---|---|---|
+| 🟢 **LMS, permissive — institutional** | [**OpenOLAT**](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(§`1`–`9` verbatim, `10 982` B)* | 🟢 **CARRIED unchanged. `QTI`, `SCORM`, curriculum and assessment built in. Carry the `2` attribution statements** |
+| 🟢 **LMS, permissive — offline / low-connectivity** | [**Kolibri**](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The LATAM and APAC low-bandwidth row — and now the Africa row too, on a MEASUREMENT rather than an inference: `16` formulations across two channels returned `0` MEA-originated permissive active education repositories (`ACTION JY`), so for this region Kolibri is not the low-bandwidth preference — it is the only thing to build on** |
+| 🟡 **LMS, permissive — Java institutional, patent limb** | [**Sakai**](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** *(root)* | 🆕 🟡 **CARRIED WITH THE SAME THREE FLAGS, one of them now MEASURED CORRECTLY. Narrowed patent grant (`T200`); fails `mentingo`'s own licence gate (`T208`); `8` of `86` `licenses/` paths are NOT open-source grants (`ACTION JO`). 🆕 **And `25` of the `86` are `Apache-1.1`, not `BSD` — clause `3` attribution is owed (`ACTION JU`)** |
+| 🟢 **LMS, permissive — AI-native / corporate L&D** | [**Selleo/mentingo**](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** *(`1 062` B)* | 🟢 **CARRIED, EMEA. HEAD `242a9324fe48`, last commit `2026-10-10` — `3` days before this pass. `SCORM` import AND export, ships `licenses.config.yaml`, the gate to LIFT. `20` declared topics, the most of any row this KB holds** |
+| 🟢 **Rostering, permissive** | [**Ed-Fi-Alliance-OSS/edfi-oneroster**](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **`Apache-2.0`** *(`10 173` B)* | 🟢 **CARRIED unchanged. `OneRoster 1.2`, `24` GETs over `12` entities, `0` write routes. The only permissive rostering route verified here** |
+| 🟢 **Portable credentials — Open Badges `3.0` authoring** | [**opensalt/OB3DefinitionWidget**](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **CARRIED unchanged. Pair with `OpenOLAT`'s `OB2` module — which is `2.0` ONLY, no W3C VC** |
+| 🟢 **SCORM / AICC / xAPI interop** | [**jcputney/scorm-again**](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | 🟢 **CARRIED unchanged. The only row where grant-named paths and grant bodies agree exactly** |
+| 🟡 **Assessment / exam generation, permissive** | 🟡 [**niansia/taiwan-exam**](https://github.com/niansia/taiwan-exam) *(`MIT`, APAC)* or 🟡 [**jeliael/fakao-ai-exam-engine**](https://github.com/jeliael/fakao-ai-exam-engine) *(`MIT`, APAC)* | 🟡 **`MIT` root, with a dependency caveat** | 🟡 **CARRIED as CANDIDATE, not production. `taiwan-exam` is the stronger tree (`593` files, `129` commits in `30` d, `89` tests) but depends on **`PyMuPDF`, `AGPL-3.0`-or-Artifex-commercial**, so the `MIT` root does not reach the closure (`ACTION JR`). Swap for `pypdf` — already in the same `requirements.txt` — or buy the commercial limb BEFORE routing** |
+| 🔴 **Education ERP / SIS** | [**openeducat_erp**](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`)* on [**odoo/odoo**](https://github.com/odoo/odoo) *(`LGPL-3.0`)*, or [**frappe/erpnext**](https://github.com/frappe/erpnext) *(`GPL-3.0`)* | 🔴 **copyleft — no permissive option exists** | 🔴 **CARRIED, TWELFTH pass with no `MIT`/`Apache` education ERP. Its vendor-stated OneRoster / Ed-Fi / LTI 1.3 support is ABSENT from the open tree (`T162`)** |
+| 🔴 **Full-stack MOOC platform** | [**openedx/edx-platform**](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | 🟢 **CARRIED unchanged. The RPC carve-out is a LICENSOR statement, not counsel (`gap 107`) — flag it as such in any deck** |
+| 🔴 **LMS, mass-market copyleft** | [**moodle/moodle**](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** *(at `COPYING.txt`, not `LICENSE`)* | 🟢 **CARRIED unchanged. `88` grant documents, corrected down from `193` — `105` were PHP source files (`T223`)** |
+| 🔴 **LMS, plain copyleft — second option** | [**ILIAS**](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **`GPL-3.0`** | 🟢 **CARRIED unchanged. The cleanest inner grant surface of any copyleft LMS here — `2` bodies against `Moodle`'s `88`. Strong built-in exam/assessment tooling** |
+| 🟡 **SIS, active** | [**RosarioSIS**](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** | 🟢 **CARRIED unchanged. Still the most active SIS this KB holds** |
+| 🟡 **SIS, active** | [**openSIS-Classic**](https://github.com/os4ed/openSIS-Classic) | 🔴 **`GPL-2.0`** *(NOT at the root)* | 🟢 **CARRIED unchanged. No root grant file, confirmed twice. The bundled CKEditor grants remain unread** |
+| 🆕 🟡 **SIS, PERMISSIVE** | 🆕 🟡 [**eagles-edu/sis**](https://github.com/eagles-edu/sis) *(`2 598` files)* · [**opensacorg/learning-blocks**](https://github.com/opensacorg/learning-blocks) *(`849` files, **Code for Sacramento**)* · [**Arux-Software/Bright**](https://github.com/Arux-Software/Bright) *(toolkit, not a system of record)* | 🟢 **all three `MIT` — bodies read: `1 066` B, `1 075` B, `1 075` B at `LICENSE.txt`** | 🆕 🔴 **TWELVE PASSES OF *"none exists"* REFUTED, and by a DENOMINATOR fix rather than by new software. `ACTION JZ` made `topic:education` countable, so the sweep p173 said had never been run was run: `"student information system" license:mit pushed:>=2026-04-16` returns `54` — EXACTLY, not `~`. `eagles-edu/sis` last committed `2026-09-26` (`17` d) and `learning-blocks` `2026-09-15` (`28` d). 🟡 **CANDIDATE, NOT ROUTE:** licence, `HEAD`, tree size and commit date are verified and NOTHING else — no OneRoster, no SCORM, no tenancy, no dependency closure (`ACTION JR` discipline). The head of this population is `31`★, so *"no institutional-scale permissive SIS"* survives; *"none exists"* does not** |
+| 🔴 **LMS, corporate training** | [**Forma LMS**](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** *(at `html/license.txt`; NO root grant)* | 🔴 **CARRIED as REFUTED. A secondary source calls it *"Apache 2.0"*; its body is the GNU `GPL` v`2` verbatim, shipped in `9` languages with nothing naming which governs (`gap 116`)** |
+| 🔴 **Learning-record plumbing** | 🔴 [`openlxp/openlxp-xia`](https://github.com/openlxp/openlxp-xia) | 🟢 `Apache-2.0` *(`11 357` B)* | 🔴 **DELIBERATELY NOT ROUTED, fourth pass. Last commit `2026-02-26`, `Django<4.0` (EOL April `2024`), `0` matches for `xapi`/`caliper`/`statement`. Vendor the idea, do not ship the package. `ACTION JV` put a number on why this call was right: `25.2%` of the *"active"* population is unpushed for `90` days (`T242`). 🆕 **And `ACTION KB` removes that reading's last caveat: `pushed:` and the last COMMIT are the same measurement to within a day on `19` of `20` sampled repositories** |
+
+🆕 🟢 **The tally, RE-COUNTED against the `17` rows above rather than carried — p171's lesson was
+that this file keeps being defeated by arithmetic, and p173's *"`6` of `16`"* did not add up:**
+
+| verdict | rows | which |
+|---|---|---|
+| 🟢 **permissive and routable** | 🟢 **`6`** | institutional LMS, offline LMS, AI-native LMS, rostering, credentials, SCORM |
+| 🟡 **permissive with a caveat** | 🟡 **`3`** | `Sakai` (`ECL-2.0`, three flags), assessment generation (dependency closure), 🆕 the SIS row (candidate, not route) |
+| 🔴 **copyleft only** | 🔴 **`7`** | education ERP, MOOC platform, `Moodle`, `ILIAS`, `RosarioSIS`, `openSIS-Classic`, `Forma LMS` |
+| 🔵 **permissive but DELIBERATELY not routed** | 🔵 **`1`** | learning-record plumbing (`openlxp-xia`, dead tree) |
+| 🟢 **needs with NO option at all** | 🟢 **`0`** | — |
+
+🟢 **`6 + 3 + 7 + 1 + 0 = 17`, which is the number of rows.** 🔴 **And the last line is the finding:
+the *"no option at all"* column is EMPTY for the first time in twelve passes — because a query was
+fixed, not because software appeared.**
+
+### 🆕 🔴 What the SIS correction changes about how this file states a negative
+
+| | |
+|---|---|
+| 🔴 **what p173 and the passes before it said** | 🔴 ***"SIS, permissive: none exists. Twelfth pass."*** |
+| 🟢 **what p174 says** | 🟢 ***"`54` permissive student-information-system repositories are active right now. The two with substantial trees are `eagles-edu/sis` (`2 598` files, committed `17` days ago) and `opensacorg/learning-blocks` (`849` files, Code for Sacramento, `28` days). Neither is verified for OneRoster, SCORM or tenancy. The head of the population is `31`★, so there is still no institutional-scale option — which is a procurement statement, not an absence."*** |
+| 🔴 **why the old sentence survived twelve passes** | 🔴 **It was re-tested every pass on the SAME query. `T255` found the query was the `1`-in-`12` tag; `ACTION JZ` made the wider one countable. 🔵 **A negative re-tested on an unchanged denominator is not re-tested — it is repeated.** |
+
+🟡 **The liveness bar used on every row above, with its last caveat removed.** `ACTION JV` measured
+the `180`-day *"active"* bar admitting `25.2%` of repositories unpushed for `90` days, and declared
+a limit: it had measured PUSH recency where a routing decision wants COMMIT recency. 🟢 **`ACTION KB`
+retires that limit:** across `20` repositories the push/commit gap is `0` days for `19` and `10`
+days for the twentieth. **For a routing decision, read the commit date anyway** — `git clone
+--depth 1 --filter=blob:none --no-checkout` then `git log -1 --format=%cI`, no API, `20` of `20`
+reachable — but p173's bands need no asterisk.
 ## Pass 173 — 2026-10-13
 
 🆕 🟢 **One row changes and it is a MEASUREMENT, not a status: the `Sakai` row's scanner-output

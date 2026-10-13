@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🟢 **Verdicts on the FIVE actions p173 registered — `2` DISCHARGED with silent falsifiers, `3`
+DISCHARGED WITH A LIMB FIRED. All three firings make a claim of this KB's SMALLER or SHARPER, and
+two of them retire a sentence this KB had been repeating for twelve passes.**
+🔴 **Standing caveat unchanged and it applies in full: p174 judges actions p173 wrote, and p174 did
+the work. These are self-assessments.**
+🆕 🟢 **The headline is that three of this pass's four *"we cannot"* statements were method
+problems.** An exact count above `1 000` was obtainable all along by partitioning (`ACTION JZ`); a
+permissive SIS existed all along behind a wrong denominator; and Article `50(2)` marking is four
+edits at named lines rather than an open question (`ACTION KA`).
+🆕 🔴 **The uncomfortable one: `ACTION KA`'s second limb found that flipping the C2PA gate ON changes
+nothing — `46` of `46` tests pass either way, because no test in that repository ever sets the flag
+and the gate accepts the default it ships with (`T258`).**
+
+| action | falsifier required | measured | verdict |
+|---|---|---|---|
+| 🔴 **`ACTION JY`** | 🔴 *refuted if `≥3` qualifying MEA repositories exist and are nameable; ALSO refuted if `≥10` country+language formulations return `0`* | 🔴 **`16` formulations across `2` channels. `0` qualifying. `4` candidates with licence body READ and `HEAD` verified, each failing on exactly ONE criterion** | 🔴 **DISCHARGED, LIMB 2 FIRED, limb 1 silent. `gap 124` becomes a MEASURED ABSENCE and stops being re-registered, per the action's own instruction** |
+| 🟢 **`ACTION JZ`** | 🔴 *refuted if an exact four-figure count is obtainable by any channel here; ALSO refuted if the three channels disagree by `>10%`* | 🟢 **`8 191`, by `17` disjoint `pushed:` windows, each window an exact integer. `2` of `7` request forms answer at all** | 🟢 **DISCHARGED, LIMB 1 FIRED. `gap 125` CLOSED. Limb 2 could not fire as written: two of the three named channels do not answer here** |
+| 🟢 **`ACTION KA`** | 🔴 *refuted if the export path hands its artefact to a closed or vendored binary (a FORK, not a patch); ALSO refuted if `c2pa_required=True` already passes the suite unmodified* | 🟢 **External FFmpeg, `argv`-invoked, caller-supplied path — instrumentable. And `46`/`46` tests pass with the flag either way, byte-identical** | 🟢 **DISCHARGED, LIMB 2 FIRED, limb 1 SILENT. The patch is `4` edits at named lines; the obstacle was never the gate, and it is not only the certificate either — it is the DEFAULT** |
+| 🟢 **`ACTION KB`** | 🔴 *refuted if `<25%` of the `20` are dormant at `60` days by COMMIT date; ALSO refuted if `≥5` cannot be cloned* | 🟢 **`13` of `20` (`65.0%`) at `30` d, `8` of `20` (`40.0%`) at `60` d, `2` of `20` (`10.0%`) at `90` d. `20` of `20` cloned, `0` failures** | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `T253` holds against the SHELF and is REFUTED against the POPULATION — the top `20` by stars is fresher than the `135` at every band (`71.1`/`47.4`/`25.2`). p173's push/commit caveat is RETIRED: the gap is `0` days on `19` of `20`** |
+| 🔴 **`ACTION KC`** | 🔴 *refuted if `p172-manifest-attribution` is the ONLY instrument with a hardcoded clone path; ALSO refuted if `≥5` instruments carry one* | 🔴 **`4` instruments, `9` files, `13` lines in LIVE code. `4` more files mention one in NARRATIVE only** | 🔴 **DISCHARGED, LIMB 1 FIRED, limb 2 silent at `4 < 5`. All `9` fixed to resolve from the script's own location, plus a gate with `12`/`12` offline tests** |
+
+### 🆕 🔴 `ACTION JY` — the absence is real, and it has a shape
+
+🟢 **`16` query strings recorded verbatim, per `T227`, in
+[`evidence/mea-origin-queries.2026-10-13-p174.tsv`](../evidence/mea-origin-queries.2026-10-13-p174.tsv);
+the candidates and their measurements in
+[`evidence/mea-candidate-licences.2026-10-13-p174.tsv`](../evidence/mea-candidate-licences.2026-10-13-p174.tsv).**
+🔵 **Inclusion, all four required and all four reported separately:** permissive (body read) AND
+active (`≤180` d) AND education-vertical AND placed in MEA by `P800` (an institution, curriculum or
+standard the artefact itself names — never a maintainer's name).
+
+| candidate | permissive | active | vertical | placed | fails on |
+|---|---|---|---|---|---|
+| `37743/Classroom-VR` | 🟢 `MIT`, `1 078` B | 🔴 `323` d | 🟢 yes | 🟢 **Egypt** — curriculum + `ejust.edu.eg` | 🔴 ACTIVITY |
+| `Hawary00/AI-Tutor` | 🟢 `Apache-2.0`, `11 557` B | 🔴 `334` d | 🟢 yes | 🔴 no | 🔴 ACTIVITY + PLACEMENT |
+| `OmarSalah26/Awesome-Arabic-AI` | 🟢 `Apache-2.0`, `11 358` B | 🔴 `191` d | 🔴 index, not a tool | 🟢 yes | 🔴 VERTICAL |
+| `ahmedEid1/lumen` | 🔴 `GPL-3.0`, `35 148` B | 🟢 `127` d | 🟢 yes | 🔴 no | 🔴 LICENCE |
+
+🆕 🔵 **`T260` — a four-way filter must be reported as four columns, never as one verdict.** For
+seven passes this KB published the AND of these criteria as *"`0` repositories"*. The columns say
+something a client can act on: **three forks are available and the licences permit it.**
+🆕 🔴 **And two candidates could not be measured at all because they do not resolve:**
+`fanuelal/askuala_link_API` — named as the open repository of an **IRCAI Top-`100`** Ethiopian
+school platform — and `FADHILI-Josue/kinlang` (Rwanda, `MIT` per `awesome.ecosyste.ms`). 🔵 **A
+third-party index listing a repository is not the repository.**
+
+### 🆕 🟢 `ACTION JZ` — the rounding was never the limit
+
+🟢 **`17` windows, every one an exact integer, summing to `8 191`** against p173's *"`8.2k`"*.
+🟢 **Two agreement controls:** both windows that first returned rounded were split until exact, and
+each rounded parent matches the sum of its parts (`1 231` → *"`1.2k`"*, `2 170` → *"`2.2k`"*).
+🔴 **Channel ledger, `2` of `7` request forms answer:** `api.github.com/search` and
+`api.github.com/graphql` both `403` by session binding (GraphQL in its own words: *"GitHub GraphQL
+is not available from Claude Code sessions"* — new to this KB); `github.com/search` is `403` to
+`curl` and `200` to `WebFetch`, with a `429` after roughly `7`–`10` reads;
+`repos.ecosyste.ms` is **`CONNECT` tunnel `403`**, denied by egress policy exactly like
+`eur-lex.europa.eu`. 🟡 **And `api.github.com/rate_limit` advertises a `search` budget of `30`
+that no search path will accept.**
+🆕 🔵 **`T261` — an API that refuses and a page that rounds are different failures.** This KB spent
+two passes treating the second as the first, and `gap 125` existed only because of that.
+🟢 **Immediate consequence, acted on in this pass:** the sweep p173 said had never been run was run.
+`"student information system" license:mit pushed:>=2026-04-16` = **`54`**, and the twelve-pass
+*"no permissive SIS exists"* row is refuted.
+
+### 🆕 🟢 `ACTION KA` — the patch, and the trap underneath it
+
+🔵 **Anchor `9c260890214d` is STILL `HEAD`, so this is a controlled re-read of the same `905` files.**
+🟢 **The insertion point is a line number, not a layer:** between
+`editor_export.py:885` (post delivery-verification) and `editor_export.py:907`
+(`store.cas.add_file`). Sign after the content-addressed insert and the recorded hash is the hash of
+**unmarked** bytes.
+🔴 **The trap: the gate accepts `{VALID, NOT_APPLICABLE}` and `NOT_APPLICABLE` is the default every
+asset is born with (`provenance.py:125`), so a `GENERATED` asset passes a gate that is switched on.**
+Measured directly: `c2pa_required=True` + default status → `[]` findings; `ABSENT` →
+`['export.c2pa']`.
+🆕 🔴 **`T258` — a compliance flag no test sets is a label, not a control.** `46`/`46` tests pass
+with the flag off and `46`/`46` with it on, byte-identical. All four `ExportGateInput` constructions
+in that repository's tests pass positional arguments that stop before the flag. 🔵 **The diligence
+question is *"which test fails when you turn it off?"***
+
+### 🆕 🔴 `ACTION KB` — the same measurement answers two different questions, and p173 merged them
+
+🟢 **`20` of `20` cloned, `0` failures. Dormancy by COMMIT date: `65.0%` at `30` d, `40.0%` at
+`60` d, `10.0%` at `90` d.**
+🔴 **p173 wrote *"the star head is worse than the tail"*. On this sample it is not:** the top `20`
+by stars is FRESHER than the `135`-repository population at every band (`65.0` vs `71.1`, `40.0` vs
+`47.4`, `10.0` vs `25.2`). 🟢 **What survives is the comparison `T253` actually made — the head is
+far deader than this KB's own `12`-row shelf, whose sampled rows last committed `0`, `1`, `3`, `4`
+and `22` days ago.**
+🆕 🔵 **`T263` — *"deader than the tail"* and *"deader than the shelf"* are different claims with
+different denominators, and a single percentage cannot carry both.** p174 publishes both and marks
+which one failed.
+🟢 **And the limit p173 declared on its own bands is retired: the push/commit gap is `0` days for
+`19` of the `20` and `10` days for the twentieth**, so `pushed:`-recency banding and commit-recency
+banding are the same measurement on this population.
+
+### 🆕 🔴 `ACTION KC` — a portability control that was never enforced on new instruments
+
+🟢 **`13` LIVE lines in `9` files across `4` instruments at commit `f5cdcf0`, `0` after the repair,
+and all `13` frozen verbatim in the gate's own positive-control fixture so it can be shown to
+CATCH them.**
+🔴 **Why it survived `p355-cwd-portability`:** that suite exists and passes (`24`/`24`), and three of
+the four offenders hardcoded **`/home/user/education-kb`** — the path this pass's clone happens to
+occupy. 🔵 **They were accidentally correct, so every control that ran them agreed with them.** Only
+p172's, which hardcoded `/tmp/education-kb`, was visibly dead.
+🆕 🔵 **`T262` — a control that only ever runs in one location cannot test location-dependence.**
+The gate belongs in a pre-commit check, which is where `ACTION KC`'s falsifier said it would belong
+if the defect turned out to be a class. It is one.
+🔴 **And a side finding recorded rather than acted on: running `p120`'s and `p121`'s suites
+OVERWRITES their own dated result files** (`score.2026-10-11.tsv`, `phantom-claims.2026-10-11.tsv`,
+`action-p.tsv`) with today's measurement. p174 restored all three to `HEAD`. `ACTION KF`.
+
+### 🔴 Gaps OPENED, CLOSED or RE-STATED by p174
+
+| gap | statement | why it matters |
+|---|---|---|
+| 🟢 **`gap 125`** | 🟢 **CLOSED. `8 191` exactly, by partition. The channel rounds; the method does not** | 🟢 **Every four-figure population figure in this KB is now sharpenable, and one of them refuted a twelve-pass row the same day** |
+| 🟢 **`gap 126`** | 🟢 **CLOSED as *"is it buildable from outside?"* — yes: `4` edits at named lines, external FFmpeg, no fork** | 🟢 **Replaced by `gap 128`, which is narrower: specified is not implemented, and the certificate is procurement** |
+| 🟡 **`gap 124`** | 🟡 **RE-STATED as MEASURED: `16` formulations, `0` qualifying, `4` candidates each one criterion short** | 🟢 **Stops being re-registered. The brief changes from *"nothing exists"* to *"three forks are available and the licences permit it"*** |
+| 🆕 🔴 **`gap 127`** | 🔴 **The MEA fork path is UNTESTED: nobody here has built `37743/Classroom-VR`, read its dependency closure, or checked whether its curriculum data ships with the code** | 🔴 **p174 sells a fork it has not compiled. `ACTION KE` is about a different repository; this one is registered and unowned** |
+| 🆕 🟡 **`gap 128`** | 🟡 **The Article `50(2)` patch is SPECIFIED, not written. No diff exists, the four edits have never run together, and `C2paRecord` structurally requires a signer that no certificate backs** | 🟡 **`50` days. A specification a client cannot run is a slide. `ACTION KH`** |
+| 🆕 🔴 **`gap 129`** | 🔴 **China's Interim AI Measures require LABELLING of AI-generated content since `15 Aug 2023` and this KB has never read the text — the twin of `gap 110`, and never even asked** | 🔴 **The marking instrument has a second market whose obligation is already live, resting entirely on secondary coverage. `ACTION KG`** |
+| 🆕 🟡 **`gap 130`** | 🟡 **The three new `MIT` SIS candidates are verified for licence, `HEAD`, tree size and commit date and NOTHING else — no OneRoster, SCORM, xAPI, tenancy, auth or dependency closure** | 🟡 **They are routed as candidates. An SIS that cannot roster is not an SIS for an engagement. `ACTION KE`** |
+| 🟡 **`gap 110`** *(carried)* | 🟡 **Article `113` verbatim is unread; `eur-lex` is `403` by proxy POLICY** | 🟡 **Unchanged, and p174 adds nothing except a twin (`gap 129`). Every AI Act date here is `search-summary` tier** |
+| 🔴 **`gap 119`** *(carried)* | 🟡 **Every *"North America"* figure is a United States fact under a continental heading** | 🟡 **Unchanged — not re-asked this pass, third consecutive carry** |
+| 🔴 **`gap 123`** *(carried)* | 🟡 **`0` of `12` agent rows are rostering- or analytics-primary** | 🟡 **Unchanged. `7` platforms, no agent, in the administrative layer — and now `3` candidate SIS repositories underneath it** |
+| 🔴 **LATAM repository map** *(carried, 8th pass)* | 🟡 **Commercial map DOUBLES — `BeConfident` (`US$15.8M`, Prosus) and `Teachy` (`US$7M`, Goodwater + Reach) join `Luca` — and the repository column stays empty** | 🔴 **But the excuse is gone: the denominator is countable now, so the sweep can be run on `topic:education`. `ACTION KD`** |
+
+## 🔜 Registered for p175 — pre-registered with falsifiers
+
+🟢 **Five actions. Each names the OLDEST sufficient anchor on disk where it needs one, per `T220`;
+each names its CLASSIFICATION RULE where it depends on one, per `T234`; and each names the CHANNEL
+and its precision where it depends on a count, per `T227` + `T252` + `T261`.**
+
+| action | falsifier |
+|---|---|
+| 🟢 **`ACTION KD`** — run the regional repository sweep on the CORRECTED denominator, which `ACTION JZ` made countable. For LATAM, then North America: partition `topic:education license:mit pushed:>=<t0-180d>` and apply the `P800` placement rule to every row in the top `50` by stars, recording the query string and the exact window counts. Anchor: `8 191` and the `17` windows committed at p174 | 🔴 *Refuted if `≥1` LATAM-ORIGINATED repository (placed by an institution, curriculum or standard the artefact names) is found, which ends an eight-pass silence and proves it was a denominator artefact exactly as `gap 124`'s was. ALSO refuted if the `topic:education` population turns out to contain FEWER placeable rows than `topic:ai-education` did, in which case the wider tag buys size and not placement and this KB should keep using the narrow one for regional questions* |
+| 🟢 **`ACTION KE`** — verify ONE of p174's new SIS candidates past its licence: read [`eagles-edu/sis`](https://github.com/eagles-edu/sis) (`2 598` files, `HEAD` `7e5fbccad5a0`) for OneRoster or Ed-Fi endpoints, SCORM or xAPI, multi-tenancy and an auth model, by grepping the tree rather than the README. Anchor: the `3` rows committed to `repos/foundations.md` at p174 | 🔴 *Refuted if it carries NONE of rostering, standards interop or tenancy, in which case it is a CRUD application with a school-shaped schema and the twelve-pass *"no permissive SIS"* row should be restored with the denominator correction noted but the verdict unchanged. ALSO refuted if it carries ALL FOUR, in which case this KB has been missing a routable permissive SIS for twelve passes and the shelf, not the query, is what failed* |
+| 🟢 **`ACTION KF`** — settle whether instruments destroy their own evidence: sweep `compose/code/` for scripts that WRITE a dated result file whose date is hardcoded rather than taken from the clock, and measure how many dated results in the tree differ from their committed bytes after a re-run. Anchor: the three files p174 had to restore — `p120-unread-grant-resolution/score.2026-10-11.tsv`, `.../phantom-claims.2026-10-11.tsv`, `p121-stale-token-crosspage/action-p.tsv` | 🔴 *Refuted if `≤1` instrument rewrites a dated file, which makes p174's observation a property of one suite rather than a class and needs no gate. ALSO refuted if `≥10` do, in which case every dated TSV in this repository is a LATEST-RUN artefact and not a record, and every claim anchored on *"the value committed at pass N"* has to be re-checked against git history rather than the file* |
+| 🟢 **`ACTION KG`** — read a PRIMARY text of China's AI-content labelling obligation (the Interim Measures for the Management of Generative AI Services, and the `2025` labelling measures if they are separate instruments), or establish and record the exact channel refusal that prevents it, as `gap 110` does for `eur-lex`. Record the article number that carries the labelling duty | 🔴 *Refuted if the primary text is reachable from this container, which would mean `gap 129` was never a channel problem and this KB simply never asked — and would make `gap 110`'s `eur-lex` denial the exception rather than the rule. ALSO refuted if the labelling duty turns out NOT to apply to education content or to synthetic video of the kind this shelf generates, in which case the *"two-market instrument"* claim in `intel/trends.md` is overstated and must be narrowed* |
+| 🟢 **`ACTION KH`** — WRITE the Article `50(2)` patch rather than specifying it: apply p174's four edits to a local clone of `AkshitIreddy/AI-Powered-Video-Tutorial-Generator` at `9c260890214d`, run the security suite under `python3.12` with `PIL` stubbed, and record which tests fail. Anchor: `provenance.py:138-143`, `gates.py:260-262`, `editor_export.py:885-907`, `workflow.py:3018`, all read at p174, and the `46`/`46` baseline | 🔴 *Refuted if the four edits break `≥1` existing test, which would mean the project's own expectations ENCODE the permissive default and the fix is a behaviour change rather than a defect repair — a much harder conversation with an upstream maintainer. ALSO refuted if the edits cannot be made without touching a fifth file, in which case the *"four edits"* figure published at p174 is wrong and must be corrected in `compose/patterns.md` where a client would read it* |
 ## Pass 173 — 2026-10-13
 
 🟢 **Verdicts on the FIVE actions p172 registered — `2` DISCHARGED with silent falsifiers, `3`

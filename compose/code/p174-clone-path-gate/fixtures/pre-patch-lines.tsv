@@ -1,0 +1,17 @@
+# p174 POSITIVE CONTROL. The 13 executable lines that carried an absolute KB clone
+# root at commit f5cdcf0 (p173's HEAD), verbatim, with the file and line they came
+# from. The repair removed them from the tree; the gate must still catch every one.
+# Columns: path, line, source text.
+compose/code/p120-unread-grant-resolution/depth.sh	11	  total=$(wc -l < "/home/user/education-kb/$pg")
+compose/code/p120-unread-grant-resolution/repair.py	17	KB = '/home/user/education-kb'
+compose/code/p120-unread-grant-resolution/score.py	76	    fp = os.path.join('/home/user/education-kb', page)
+compose/code/p120-unread-grant-resolution/score.py	91	    fp = os.path.join('/home/user/education-kb', page)
+compose/code/p120-unread-grant-resolution/score_after.py	76	    fp = os.path.join('/home/user/education-kb', page)
+compose/code/p120-unread-grant-resolution/score_after.py	91	    fp = os.path.join('/home/user/education-kb', page)
+compose/code/p120-unread-grant-resolution/test_p120.sh	105	   "$(cd /home/user/education-kb && grep -c "$(printf '\U0001F534') \*\*$(printf '\U0001F534') \*\*" \
+compose/code/p120-unread-grant-resolution/test_p120.sh	114	  now=$(short_rows < "/home/user/education-kb/$f")
+compose/code/p120-unread-grant-resolution/test_p120.sh	115	  was=$(git -C /home/user/education-kb show HEAD:"$f" | short_rows)
+compose/code/p121-stale-token-crosspage/test_p121.sh	5	ROOT="${1:-/tmp/education-kb}"
+compose/code/p172-manifest-attribution/classify_bodies.sh	6	. /tmp/education-kb/compose/code/lib/license_family.sh
+compose/code/p996-promotion-ledger/build_ledger.py	2	KB = pathlib.Path("/home/user/education-kb")
+compose/code/p996-promotion-ledger/reconcile_code_shelf.py	2	KB = pathlib.Path("/home/user/education-kb")

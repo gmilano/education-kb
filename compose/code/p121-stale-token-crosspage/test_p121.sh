@@ -2,7 +2,8 @@
 # P121 suite. Fully offline: every assertion runs against fixtures or the
 # committed pages. No network.
 set -u
-ROOT="${1:-/tmp/education-kb}"
+# P174-KC: the DEFAULT root is this script's own clone, not the path p121 used.
+ROOT="${1:-$(cd "$(dirname "$0")/../../.." && pwd)}"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 pass=0; fail=0
 ok(){ pass=$((pass+1)); printf '  ok   %s\n' "$1"; }

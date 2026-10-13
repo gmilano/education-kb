@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🆕 🟢 **The vertical has an exact size for the first time: `8 191` repositories** —
+`topic:education license:mit pushed:>=2026-04-16`, counted as `17` disjoint `pushed:` windows and
+summed, against the *"`~8.2k`"* p173 could only round to. 🟢 **`gap 125` closes and every rounded
+figure in this KB becomes sharpenable by the same partition.**
+🆕 🔴 **And the first thing that correction overturns is a twelve-pass market claim of this KB's
+own: *"no permissive SIS exists."* Three `MIT` ones do, two with real trees.** The sweep had been
+re-run every pass on the tag `1` of `12` shelf rows carries.
+🆕 🟢 **Article `50(2)` moves from *"nobody can comply"* to *"four edits at named lines"* on the
+best-equipped shelf row (`ACTION KA`) — `50` days out.**
+🆕 🔴 **MEA's empty repository column is now a MEASUREMENT, not a question: `16` formulations across
+two channels, `0` qualifying repositories (`ACTION JY`).**
+
+## Opportunities by region
+
+### Global
+
+🟢 **State the size with the tag attached or do not state it.** `8 191` repositories tag themselves
+`education`, declare `MIT` and were pushed inside `180` days. `135` tag themselves `ai-education`
+under the same filters — a usable **shortlist** and a useless denominator (`T255`). 🔵 **Both
+numbers are now exact; the difference between them is a labelling convention, not a market.**
+🔴 **The marking cliff is `50` days out: Article `50(2)` of `Regulation (EU) 2024/1689` requires
+machine-readable marking of synthetic content from `2 December 2026`.** 🆕 🟢 **What changed is the
+answer, not the deadline.** On the shelf's most provenance-literate row the remedy is four edits —
+reject the synthetic default, stop the gate exempting it, sign between delivery-verification and the
+content-addressed insert, carry the signer's record — plus **a certificate, which is procurement.**
+🆕 🔴 **The compliance trap worth repeating to any client with a C2PA story: that project's
+`c2pa_required` flag can be switched ON and nothing changes**, because the gate accepts the
+*"not applicable"* status that generated assets are born with, and no test in the repository sets
+the flag (`T258`). 🔵 **A compliance switch nothing exercises is a label, not a control.**
+🟢 **Liveness, with its last caveat removed:** `25.2%` of the *"active"* population is unpushed for
+`90` days, and `pushed:` matches the last COMMIT to within a day on `19` of `20` sampled rows
+(`ACTION KB`), so a `pushed:`-filtered shortlist needs no asterisk — but still filter on it.
+
+### North America
+
+🆕 🟢 **The adoption curve, dated:** district teacher AI training nearly **doubled, `24%` → `48%`**,
+and student use of chatbots for schoolwork doubled, **`13%` → `26%`**; `60%` of US K-12 teachers
+used AI tools in `2024/25` and `32%` weekly. 🔴 **Governance has not followed: only `40%` of
+districts had an AI policy by spring `2025`, `~10%` of institutions have formal AI guidelines and
+`71%` of teachers report no AI training.** 🟢 **That asymmetry — use doubling, policy flat — is the
+engagement: policy, assessment integrity and teacher enablement, not tooling.**
+🟢 **Scale precedent for a deck:** Miami-Dade moved from banning chatbots to deploying Gemini to
+**`100 000`** high-schoolers. 🟢 **Vendor posture:** Anthropic's Claude for Education with Learning
+Mode, Google's free Gemini for students through `2026`, OpenAI's `US$50M` university research
+commitment — the model vendors are buying the channel, so differentiation is integration and
+governance.
+🆕 🟢 **And North America's repository column is no longer empty of institutional code:**
+[`opensacorg/learning-blocks`](https://github.com/opensacorg/learning-blocks) is an `MIT` SIS whose
+grant names **Code for Sacramento**, a Code for America brigade — an institution, so the row is
+PLACED under `P800` rather than guessed.
+🔴 **`gap 119` carried and not addressed: every other *"North America"* figure here is a United
+States fact under a continental heading.** Canada and Mexico were not re-asked this pass.
+🔴 **And still no binding US federal or state rule specific to AI in education surfaced** — the
+regulatory column for the largest market is empty, which is itself the reason governance work sells
+there on reputational rather than statutory risk.
+
+### EMEA
+
+🟢 **Europe, carried and sharpened on scope.** The AI Act's **Annex III point `3`** names two
+education uses — **access determination** and **assessment or monitoring** — so the exposed vendors
+are the ones that rank applicants, grade work or proctor exams, not edtech generally. 🟢 **A
+deployer duty already in force: emotion-recognition AI has been banned in schools since February
+`2025`.** 🔴 **The DATE is contested in the retrievable sources — August `2026` in several, `2
+December 2027` in others via the `2026` Digital Omnibus — and `gap 110` is why this KB cannot
+settle it: Article `113` verbatim is unread because `eur-lex.europa.eu` is `403` at the CONNECT
+layer by organisation policy.** 🔵 **This KB's reading stands as: Article `50` transparency
+`2 December 2026`, Annex III high-risk `2 December 2027`, both `search-summary` tier.**
+🟢 **Middle East — unchanged and still the strongest mandate in this policy surface:** the UAE and
+Saudi Arabia have made AI education compulsory in public schools from `2025/26`, the UAE from age
+four. The opportunity is DELIVERY at ministry scale, not persuasion.
+🔴 **Africa — governance debt is the product:** `6` in `10` of `47` surveyed higher-education
+institutions have no formal AI governance framework, and under `2%` of African edtech startups
+build AI for higher education against `64%` for K-12.
+🆕 🔴 **The repository column for the Middle East and Africa is EMPTY, and p174 is the pass that
+stops calling that an open question.** `16` formulations — `11` naming countries and languages,
+`5` on the rendered search channel — returned `0` repositories that are permissive AND active AND
+education-vertical AND placed in the region.
+🆕 🟢 **But the SHAPE of that zero is the sellable part, and it is not *"nothing exists"*.** Of the
+four candidates whose licence body p174 read at a verified `HEAD`, **three fail only on ACTIVITY
+and the fourth only on LICENCE.** [`37743/Classroom-VR`](https://github.com/37743/Classroom-VR) is
+`MIT`, grounded in the **Egyptian** senior-secondary biology curriculum, contact at
+`ejust.edu.eg` — and `323` days dormant. 🟢 **A dormant `MIT` repository is a fork with no licence
+conversation.** The MEA engagement is therefore *fork-and-localise*, not *greenfield*.
+🔴 **Say the equity constraint out loud, carried from p173: reported pilots skew to well-resourced
+schools, and the sources themselves warn AI education becomes an elite preserve without rural
+targeting.**
+
+### APAC
+
+🆕 🟢 **China is the most concrete school mandate in this KB's entire policy surface, and it has a
+number: from `2025`, schools — Beijing first — must deliver **at least `8` hours of AI instruction
+per year**, phased by grade, after the Ministry of Education directed all primary and secondary
+schools to embed AI in regular teaching.** 🟢 **Delivery at that scale is curriculum, teacher
+enablement and assessment — the same shape as the Gulf mandate, an order of magnitude larger.**
+🆕 🔴 **And the finding that matters for the marking work above: China's Interim AI Measures, in
+force since `15 August 2023`, already require service registration and **LABELLING of AI-generated
+content**.** 🟢 **So the Article `50(2)` marking instrument this KB has been building for an EU
+deadline has a SECOND market where the obligation is already live** — and 🔴 **this KB has never
+read the Chinese text either, which is `gap 110`'s twin and is registered rather than glossed.**
+🟡 **Rest of region:** South Korea has a comprehensive **AI Basic Act**; Japan remains light-touch
+and voluntary, with older guidance permitting *"limited"* generative-AI use in schools; India is
+still building its national framework, and its `2026` education story is consolidation under NEP
+`2020`. 🔴 **No regional adoption map or regulatory comparison returned — asked, not answered.**
+🟢 **APAC's repository column remains the non-empty one: `4` APAC-placed shelf rows, and the
+assessment route this KB holds is APAC on both candidates.**
+
+### LATAM
+
+🆕 🟢 **The commercial map doubles in one pass and is now three funded vendors deep.**
+🟢 **New this pass:** **BeConfident** (Brazil) raised **`US$15.8M` Series A led by Prosus
+Ventures** for conversational AI tutoring delivered over **WhatsApp** — the channel decision is the
+market insight — and **Teachy** (Brazil) raised **`US$7M` Series A led by Goodwater Capital and
+Reach Capital**, reported as their largest Brazilian education investment.
+🟢 **Carried:** **Luca** (Mexico), `US$8M` Series A led by **6 Degrees Capital**, K-12, `30 000`+
+students; and **Google.org**'s `US$4.6M` behind **Raspberry Pi *Experience AI*** across nine
+countries.
+🟡 **Demand drivers, which are the honest pitch:** `66%` of Mexican students did not reach the
+minimum PISA `2022` level in mathematics, and only `~20%` of Mexican teachers have been trained in
+digital competencies. 🟢 **Public programmes are moving too: Aguascalientes opened a student AI
+lab in March `2026`.**
+🔴 **Do not quote a LATAM market size from this KB** — the one retrievable report shows two
+irreconcilable figures on the same page.
+🔴 **Still no education-specific AI regulation in Brazil or Mexico, and Brazil's AI bill status
+cannot be confirmed from anything retrievable here** — the one source predates `2025`.
+🔴 **Eighth consecutive pass with `0` LATAM-originated open-source education repositories at any
+star level.** 🆕 🔵 **What is new is that the excuse is gone: the denominator is now countable, so
+the LATAM sweep can finally be run on `topic:education` rather than on the tag `1`-in-`12` rows
+carry. p174 did not run it — `ACTION KD` does.**
+
+## 🆕 🔴 Measured silences this pass — written down so they cannot be read as coverage
+
+| silence | what was actually asked |
+|---|---|
+| 🔴 **A permissive INSTITUTIONAL-scale SIS** | `"student information system" license:mit pushed:>=2026-04-16` returned `54` exactly; the head is `31`★ and nothing in the top `10` is a system of record at institutional scale |
+| 🔴 **Any MEA-ORIGINATED permissive active education repository** | `16` formulations, recorded verbatim in [`evidence/mea-origin-queries.2026-10-13-p174.tsv`](../evidence/mea-origin-queries.2026-10-13-p174.tsv). `0` qualifying. This is now a measured fact, not a gap in the query |
+| 🔴 **The text of China's AI-content labelling duty** | not asked of any primary source. The obligation is named in secondary coverage only — `gap 110`'s twin, now registered |
+| 🔴 **Canada, Mexico as *"North America"*** | NOT re-asked. `gap 119` carried verbatim from p172 and p173 |
+| 🔴 **A LATAM repository sweep on the corrected denominator** | not run this pass. `ACTION KD` registers it |
+| 🔴 **An EXACT count above `1 000` from any channel that reports one** | `api.github.com/search` and GraphQL both refuse by session binding; `repos.ecosyste.ms` is denied at the CONNECT layer. `8 191` was obtained by PARTITIONING the one channel that answers, which is a method and not a channel |
+[`evidence/regional-sweep.2026-10-13-p174.tsv`](../evidence/regional-sweep.2026-10-13-p174.tsv)
+· [`evidence/exact-count-partition.2026-10-13-p174.tsv`](../evidence/exact-count-partition.2026-10-13-p174.tsv)
 ## Pass 173 — 2026-10-13
 
 🆕 🔴 **`gap 118` — *"Middle East and Africa returned NOTHING"* — is CLOSED as mis-specified. It was

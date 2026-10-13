@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-13
 ---
 
+## 2026-10-13 — p174
+
+🆕 🟢 **This page can state the size of the open-source education vertical exactly, for the first
+time in `174` passes: `8 191` repositories.** `topic:education`, `license:mit`,
+`pushed:>=2026-04-16` — p173's own anchor, the one it could only report as *"`8.2k`"*.
+🆕 🟢 **The method is the finding, and it is reusable on every rounded figure in this KB.** The
+rendered `github.com/search` channel reports an **exact integer at or below ~`1 000`** and rounds
+to two significant figures above it (`T252`). `pushed:` holds **one** value per repository, so a
+set of date windows is **disjoint**. Partition the query into windows that each come back under
+`1 000`, read each exact integer, and **sum**:
+
+| window | exact | window | exact |
+|---|---|---|---|
+| `2026-04-16..04-29` | `173` | `2026-08-20..09-02` | `641` |
+| `2026-04-30..05-13` | `189` | `2026-09-03..09-16` | `861` |
+| `2026-05-14..05-27` | `190` | `2026-09-17..09-23` | `448` |
+| `2026-05-28..06-10` | `271` | `2026-09-24..09-30` | `783` |
+| `2026-06-11..06-24` | `317` | `2026-10-01..10-05` | `655` |
+| `2026-06-25..07-08` | `416` | `2026-10-06..10-08` | `389` |
+| `2026-07-09..07-22` | `548` | `2026-10-09..10-10` | `307` |
+| `2026-07-23..08-05` | `597` | `2026-10-11..10-13` | `819` |
+| `2026-08-06..08-19` | `587` | 🟢 **`17` windows, TOTAL** | 🟢 **`8 191`** |
+
+🟢 **Two agreement controls, because a sum of seventeen readings needs them.** Both windows that
+first came back rounded were split until every part was exact, and each rounded parent matches its
+parts: `448 + 783 = 1 231` → *"`1.2k`"*, and `655 + 389 + 307 + 819 = 2 170` → *"`2.2k`"*. The
+grand total `8 191` → *"`8.2k`"*, the figure p173 recorded. 🔵 **The rounding was never wrong. It
+was two significant figures, and this KB read it as a limit on what could be known.**
+🔴 **One honest caveat on the digit, stated rather than buried:** the `17` readings span ~`40`
+minutes, not an instant. A repository pushed mid-sweep is counted in its old window and again in
+the last one, so `8 191` is an **upper bound**; at the last window's own rate (`819` over `3` days
+≈ `11`/h) the overlap is a handful of rows, not a digit.
+
+### 🆕 🔴 The channel ledger behind that number — `2` of `7` request forms answer at all
+
+| channel | verdict | in the server's own words |
+|---|---|---|
+| 🔴 `api.github.com/search/repositories` | `403` | *"sessions are bound to their configured repositories. Use repository-scoped endpoints"* |
+| 🔴 `api.github.com/graphql` | `403` | 🆕 *"GitHub GraphQL is not available from Claude Code sessions; use the REST API"* — **new to this KB** |
+| 🟡 `api.github.com/rate_limit` | `200` | `15 000` core remaining — 🆕 **and it advertises a `search` budget of `30` that no search path will accept** |
+| 🔴 `github.com/search` via `curl` | `403` | HTML search refuses `curl` and serves the same URL to `WebFetch` |
+| 🟢 `github.com/search` via `WebFetch` | `200` | exact ≤ ~`1 000`, rounded above; 🔴 **`429` after roughly `7`–`10` requests in a short window — this is what paced the sweep** |
+| 🔴 `repos.ecosyste.ms/api/v1/topics/education` | 🔴 **`CONNECT` tunnel `403`** | denied by egress **policy** — the same layer as `eur-lex.europa.eu` in `gap 110`, so no retry and no alternate transport reaches it |
+| 🟢 `raw.githubusercontent.com` | `200` | the licence-body and `README` channel, unaffected |
+
+🟢 **And the `1 000`-result cap is confirmed by walking to it:** page `100` of the anchor query
+serves results `991`–`1000` and the pager stops there, 🔴 **with no on-page message saying a cap
+exists.** A tail cannot produce a total; a partition can.
+🟢 **What this does for every other figure on these pages:** `135` for `topic:ai-education` was
+always exact and remains the usable shortlist. `1.3k` for `edtech` and `581` for `ai-tutor` are
+now **sharpenable by the same partition**, and `gap 125` is closed.
+[`evidence/exact-count-partition.2026-10-13-p174.tsv`](../evidence/exact-count-partition.2026-10-13-p174.tsv)
+· [`evidence/count-channel-ledger.2026-10-13-p174.tsv`](../evidence/count-channel-ledger.2026-10-13-p174.tsv)
 ## 2026-10-13 — p173
 
 🆕 🔴 **The population this page has been counting for six passes has a name now, and it is not

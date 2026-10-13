@@ -10,6 +10,8 @@
 #   D. p119's four ACTION F answers are REPRODUCED from scratch (the control)
 set -u
 cd "$(dirname "$0")"
+# P174-KC: KB root from THIS script, never a clone path. <kb>/compose/code/<inst>/ -> ../../..
+KB="${KB_ROOT:-$(cd ../../.. && pwd)}"
 pass=0; fail=0
 ok()   { pass=$((pass+1)); printf '  \033[32mok\033[0m   %s\n' "$1"; }
 no()   { fail=$((fail+1)); printf '  \033[31mFAIL\033[0m %s\n     want: %s\n     got:  %s\n' "$1" "$2" "$3"; }
@@ -102,7 +104,7 @@ eq "repair.py is idempotent (run 2)" "0 repaired, 6 already clean" \
 # and the guard that v2 exists for: no row this pass WROTE was repaired into a
 # doubled marker.
 eq "no doubled correction marker anywhere in the live pages" "0" \
-   "$(cd /home/user/education-kb && grep -c "$(printf '\U0001F534') \*\*$(printf '\U0001F534') \*\*" \
+   "$(cd "$KB" && grep -c "$(printf '\U0001F534') \*\*$(printf '\U0001F534') \*\*" \
         agents/top.md repos/foundations.md verticals/solutions.md intel/market.md \
         intel/trends.md compose/patterns.md README.md 2>/dev/null | awk -F: '{s+=$2} END{print s+0}')"
 # The property is that the repair introduced no NEW malformed row - not that the
@@ -111,8 +113,8 @@ eq "no doubled correction marker anywhere in the live pages" "0" \
 # forever. The count is therefore compared against git HEAD.
 short_rows() { awk -F'|' '/^[ \t]*\|/ {if (NF<3) n++} END{print n+0}'; }
 for f in agents/top.md verticals/solutions.md intel/market.md compose/patterns.md; do
-  now=$(short_rows < "/home/user/education-kb/$f")
-  was=$(git -C /home/user/education-kb show HEAD:"$f" | short_rows)
+  now=$(short_rows < "$KB/$f")
+  was=$(git -C "$KB" show HEAD:"$f" | short_rows)
   eq "$f introduced no new malformed table row" "$was" "$now"
 done
 

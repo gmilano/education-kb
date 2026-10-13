@@ -1,0 +1,6 @@
+file	line	verdict	text
+compose/code/p121-stale-token-crosspage/crosspage.py	23	COMMENT	Path is a parameter: p120's score.py hardcoded /home/user/education-kb, which
+compose/code/p173-apache11-family/sweep_family.sh	6	COMMENT	# ABSOLUTE path /tmp/education-kb/... and this pass's clone is at /home/user/education-kb,
+compose/code/p355-cwd-portability/test_p355.py	139	COMMENT	`. /home/user/education-kb/compose/code/lib/license_family.sh`, o sea que la suite solo
+compose/code/p550-duplicate-definition-sweep/test_sweep.sh	145	COMMENT	#     . /home/user/education-kb/compose/code/lib/license_family.sh
+# hits=4 LIVE=0 COMMENT=4

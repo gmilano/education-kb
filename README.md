@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-13
 ---
 
+## Pass 174 — 2026-10-13
+
+🟢 **Five pre-registered actions: `2` DISCHARGED with silent falsifiers, `3` DISCHARGED WITH A LIMB
+FIRED.**
+🆕 🟢 **The pass's most consequential finding for a client: three of this KB's four standing
+*"we cannot"* statements were METHOD problems, and fixing one of them refuted a twelve-pass market
+claim on the same day. An exact count above `1 000` was always obtainable — partition the query into
+`pushed:` windows that each come back under `1 000` and sum. The education vertical is **`8 191`**
+repositories, not *"`8.2k`"*. Then the sweep p173 said had never been run was run: **a permissive
+student information system exists** — three of them, `MIT`, two with real trees — against *"none
+exists"*, a row carried for twelve passes (`T259`, `T261`).**
+🆕 🔴 **The pass's most uncomfortable finding: the shelf's most provenance-literate project ships a
+C2PA compliance gate that cannot fail. `46` of `46` of its own security tests pass with
+`c2pa_required=False` and `46` of `46` pass with it `True`, byte-identical — because the gate accepts
+the *"not applicable"* status every generated asset is born carrying, and **no test in the repository
+ever sets the flag**. p173 reported the flag *"defaults off"*; switching it on changes nothing
+(`T258`).**
+🆕 🟢 **The pass's most satisfying finding: Article `50(2)` marking is `4` edits at named lines, not
+an open question. `50` days out, the encoder is EXTERNAL FFmpeg invoked by `argv`, so there is a seam
+— and the signing call belongs between `editor_export.py:885` and `:907`, because signing after the
+content-addressed insert records the hash of UNMARKED bytes.**
+🆕 🔴 **The pass's sharpest single datum: `0` of `16` query formulations returned a Middle East- or
+Africa-originated repository that is permissive AND active AND education-vertical AND placed — but
+`3` of the `4` measurable candidates fail on ACTIVITY alone and the fourth on LICENCE alone. A
+dormant `MIT` repository grounded in the Egyptian national curriculum is a fork with no licence
+conversation (`T260`).**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION JY`** — do MEA-originated education repositories exist? | 🔴 **DISCHARGED, LIMB 2 FIRED. `16` formulations, `2` channels, `0` qualifying. `gap 124` becomes a MEASURED absence and stops being re-registered** |
+| 🟢 **`ACTION JZ`** — is an exact count above `1 000` obtainable here? | 🟢 **DISCHARGED, LIMB 1 FIRED. `8 191` by `17` disjoint windows. `2` of `7` request forms answer at all. `gap 125` CLOSED** |
+| 🟢 **`ACTION KA`** — is Article `50(2)` marking addable from outside? | 🟢 **DISCHARGED, LIMB 2 FIRED. `4` edits at named lines; and the gate was never the obstacle — the DEFAULT is** |
+| 🟢 **`ACTION KB`** — does `T253` hold beyond `5` repositories? | 🟢 **DISCHARGED, BOTH LIMBS SILENT. `20` of `20` cloned; `65.0%`/`40.0%`/`10.0%` dormant at `30`/`60`/`90` d. Holds against the SHELF, REFUTED against the population (`T263`)** |
+| 🔴 **`ACTION KC`** — is the hardcoded clone path a typo or a class? | 🔴 **DISCHARGED, LIMB 1 FIRED. `4` instruments, `9` files, `13` lines. All fixed, plus a gate at `12`/`12`** |
+
+### 🟢 What this pass added to the shelf
+
+- 🆕 🟢 **`P174-A`** — the clone-path gate
+  ([`compose/code/p174-clone-path-gate/`](compose/code/p174-clone-path-gate)): a `LIVE` / `COMMENT`
+  classifier with the rule stated, `12`/`12` offline tests, a **fabricated** negative control that
+  must stay silent, and all `13` removed lines frozen as the positive control so the gate can be
+  shown to CATCH and not merely to pass.
+- 🆕 🟢 **`P174-B`** — the exact-count partition: `17` disjoint `pushed:` windows, two rounding
+  agreement controls, and a channel ledger naming all `7` request forms and which `2` answer.
+- 🆕 🟢 **`P174-C`** — the Article `50(2)` patch, specified to the line, with the ordering constraint
+  (sign BEFORE the content-addressed insert) and the measured truth table of the gate it fixes.
+- 🆕 🟢 **Three `MIT` student information systems in
+  [`repos/foundations.md`](repos/foundations.md)** — `eagles-edu/sis` (`2 598` files, `17` d),
+  `opensacorg/learning-blocks` (`849` files, **Code for Sacramento**, which also PLACES it in North
+  America under `P800`) and `Arux-Software/Bright` — and the routing table's *"no option at all"*
+  column is EMPTY for the first time in twelve passes.
+- 🆕 🟢 **Four new `MIT` agent candidates** in [`agents/trending.md`](agents/trending.md), licence
+  body read and `HEAD` verified, deliberately NOT promoted to the shelf.
+- 🆕 🔴 **`T258`–`T263` — six method theses, five of them about this KB's own habits:** a flag no
+  test sets is a label; a negative re-tested on an unchanged denominator is repeated rather than
+  re-tested; a four-way filter must be reported as four columns; a refusing API and a rounding page
+  are different failures; a control that only ever runs in one location cannot test
+  location-dependence; and *"deader than the tail"* and *"deader than the shelf"* are different
+  claims that one percentage cannot carry — p174 publishes both and marks which of p173's failed.
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **`gap 110` stays open and p174 adds a TWIN rather than a fix.** Article `113` verbatim is still
+  unread (`eur-lex` is `403` at the CONNECT layer by organisation policy), and China's AI-content
+  labelling text — an obligation live since `15 August 2023` — has never even been asked for
+  (`gap 129`).
+- 🔴 **The Article `50(2)` patch is SPECIFIED, not written.** No diff exists, the four edits have
+  never run together, and the signer still needs a certificate nobody has procured (`gap 128`).
+- 🔴 **The MEA fork this pass recommends has not been compiled, dependency-closed, or checked for
+  whether its curriculum data ships with the code** (`gap 127`).
+- 🔴 **The three new SIS candidates are licence-, `HEAD`-, size- and date-verified and nothing more.
+  No OneRoster, no SCORM, no tenancy, no auth, no dependency closure** (`gap 130`).
+- 🔴 **Eighth consecutive pass with no LATAM-originated open-source education repository** — though
+  the commercial map doubles, with `BeConfident` (`US$15.8M`, Prosus Ventures) and `Teachy`
+  (`US$7M`, Goodwater + Reach) joining `Luca`. The denominator is countable now, so the excuse for
+  not sweeping is gone (`ACTION KD`).
+- 🔴 **`gap 119` carried a third time, unasked: every *"North America"* figure in this KB is a
+  United States fact under a continental heading.**
 ## Pass 173 — 2026-10-13
 
 🟢 **Five pre-registered actions: `2` DISCHARGED with silent falsifiers, `3` DISCHARGED WITH A LIMB

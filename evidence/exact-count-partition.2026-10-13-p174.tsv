@@ -1,0 +1,45 @@
+# ACTION JZ (p174) -- gap 125 / T252. Is an EXACT count above 1 000 obtainable from this container?
+# METHOD: the rendered github.com/search channel reports an EXACT integer at or below ~1 000 and a
+# ROUNDED figure above it. So partition the anchor query into `pushed:` windows that each return
+# under 1 000, read each window's exact integer, and sum. `pushed:` is a SINGLE value per
+# repository, so the windows are DISJOINT and the sum is a count, not an estimate.
+# ANCHOR (p173, recorded as "8.2k"): topic:education pushed:>=2026-04-16 license:mit
+# CHANNEL: WebFetch over github.com/search?q=...&type=repositories. Query strings verbatim, per T227.
+# t0 = 2026-10-13.
+# FALSIFIER LIMB 1: "refuted if an exact four-figure count is obtainable by any channel available
+#   here". IT FIRES -- 8191, by partition, on the one channel that answers at all.
+# FALSIFIER LIMB 2: "ALSO refuted if the three channels disagree by >10pct". CANNOT FIRE AS WRITTEN:
+#   two of the three channels the action named do not answer here at all (see
+#   count-channel-ledger...p174.tsv). The partition total and the rounded total of the SAME channel
+#   agree to 0.1pct (8191 -> "8.2k").
+# LIMIT STATED: the 17 windows were read over ~40 min, not in one instant. A repository pushed
+#   DURING the sweep is counted in its old window and again in the last one, so 8191 is an upper
+#   bound; at the measured rate of the last window (819 over 3 days = ~11/h) the overlap is a
+#   handful of rows, not a digit.
+query_string	window	exact_count
+topic:education license:mit pushed:2026-04-16..2026-04-29	2026-04-16..2026-04-29	173
+topic:education license:mit pushed:2026-04-30..2026-05-13	2026-04-30..2026-05-13	189
+topic:education license:mit pushed:2026-05-14..2026-05-27	2026-05-14..2026-05-27	190
+topic:education license:mit pushed:2026-05-28..2026-06-10	2026-05-28..2026-06-10	271
+topic:education license:mit pushed:2026-06-11..2026-06-24	2026-06-11..2026-06-24	317
+topic:education license:mit pushed:2026-06-25..2026-07-08	2026-06-25..2026-07-08	416
+topic:education license:mit pushed:2026-07-09..2026-07-22	2026-07-09..2026-07-22	548
+topic:education license:mit pushed:2026-07-23..2026-08-05	2026-07-23..2026-08-05	597
+topic:education license:mit pushed:2026-08-06..2026-08-19	2026-08-06..2026-08-19	587
+topic:education license:mit pushed:2026-08-20..2026-09-02	2026-08-20..2026-09-02	641
+topic:education license:mit pushed:2026-09-03..2026-09-16	2026-09-03..2026-09-16	861
+topic:education license:mit pushed:2026-09-17..2026-09-23	2026-09-17..2026-09-23	448
+topic:education license:mit pushed:2026-09-24..2026-09-30	2026-09-24..2026-09-30	783
+topic:education license:mit pushed:2026-10-01..2026-10-05	2026-10-01..2026-10-05	655
+topic:education license:mit pushed:2026-10-06..2026-10-08	2026-10-06..2026-10-08	389
+topic:education license:mit pushed:2026-10-09..2026-10-10	2026-10-09..2026-10-10	307
+topic:education license:mit pushed:2026-10-11..2026-10-13	2026-10-11..2026-10-13	819
+# SUBDIVISION CONTROL: two windows first came back ROUNDED and were split until each part was exact.
+topic:education license:mit pushed:2026-09-17..2026-09-30	rounded parent of 448+783=1231	"1.2k"
+topic:education license:mit pushed:2026-10-01..2026-10-13	rounded parent of 655+389+307+819=2170	"2.2k"
+# AGREEMENT CONTROL: each rounded parent agrees with the sum of its exact parts: 1231 -> "1.2k",
+# 2170 -> "2.2k". The rounding is to two significant figures, which is why 8.2k hid 8191.
+# TOTAL: 17 disjoint windows, every one an exact integer, SUM = 8191.
+# The vertical, as this KB has been describing it with one significant figure, is 8191 repositories
+# that tag themselves `education`, carry an MIT licence declaration and were pushed in the last
+# 180 days. p173 could only say "8.2k".

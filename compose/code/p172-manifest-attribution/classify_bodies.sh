@@ -3,7 +3,9 @@
 # BODY carries, keyed by the component named in its FILENAME.
 # Classifier is the shared hardened one (compose/code/lib/license_family.sh), per P237.
 set -u
-. /tmp/education-kb/compose/code/lib/license_family.sh
+# P174-KC: the shared classifier is a SIBLING of this instrument. Resolve it from
+# this script's own location, never from the clone path the pass happened to use.
+. "$(cd "$(dirname "$0")/.." && pwd)/lib/license_family.sh"
 DIR="$1"
 printf 'file\tsha256_12\tbytes\tbody_family\n'
 for f in "$DIR"/*; do

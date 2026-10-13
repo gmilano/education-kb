@@ -1,5 +1,7 @@
 import re, pathlib, collections
-KB = pathlib.Path("/home/user/education-kb")
+# P174-KC: resolve the KB root from THIS file, never from a clone path. The
+# instrument lives at <kb>/compose/code/<instrument>/, so parents[3] is <kb>.
+KB = pathlib.Path(__file__).resolve().parents[3]
 SHELF = ["agents/top.md","repos/foundations.md","verticals/solutions.md",
          "intel/market.md","intel/trends.md","compose/patterns.md"]
 HIST  = ["agents/trending.md","repos/trending.md"]

@@ -12,9 +12,11 @@ where that row still carries the superseded token. The script refuses to write
 unless it matches exactly the expected number of rows, so a page that has
 drifted fails loudly instead of silently repairing nothing.
 """
-import sys, os, re
+import sys, os, re, pathlib
 
-KB = '/home/user/education-kb'
+# P174-KC: the KB root comes from THIS file, never from a clone path. The
+# instrument lives at <kb>/compose/code/<instrument>/, so parents[3] is <kb>.
+KB = str(pathlib.Path(__file__).resolve().parents[3])
 G, R, W = '\U0001F7E2', '\U0001F534', '⚠️'
 
 # (page, slug, old-token, new-token, expected row count)

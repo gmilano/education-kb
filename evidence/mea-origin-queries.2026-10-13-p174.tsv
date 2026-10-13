@@ -1,0 +1,32 @@
+# ACTION JY (p174) -- gap 124. Does an open-source, permissively-licensed, ACTIVE, education-vertical
+# repository ORIGINATING in the Middle East or Africa exist and is it nameable?
+# RULE APPLIED (P800): a region comes from an INSTITUTION, CURRICULUM or STANDARD the artefact
+#   itself names. A maintainer's name never places a row. Unplaced = Global.
+# RULE APPLIED (T254, p173): a region bucket is searched by naming its COUNTRIES and its LANGUAGES.
+# INCLUSION, all four required: permissive (MIT/Apache/BSD/CC0, body read) AND active (pushed or
+#   committed within 180 d) AND education-vertical AND placed in MEA by the P800 rule.
+# CHANNELS: WebSearch (US-indexed) for formulations 1-11; rendered github.com/search via WebFetch
+#   for 12-16. Every query string verbatim, per T227.
+# FALSIFIER LIMB 1: "refuted if >=3 qualifying repositories exist and are nameable". SILENT -- 0.
+# FALSIFIER LIMB 2: "ALSO refuted if >=10 country+language formulations return 0 such repositories,
+#   which makes the absence a measured fact and this KB must stop re-registering it and say so to
+#   clients instead". IT FIRES -- 16 formulations, 0 qualifying.
+n	channel	query_string	returned_anything	named_candidates	qualifying
+1	WebSearch	open source AI tutor github Nigeria 2026 MIT license education	yes	EduNaija AI Tutor (AfricaNLP 2026 paper, NO repo link); AfriLearn (hackathon, no licence)	0
+2	WebSearch	github open source education AI Kenya Swahili 2026 repository	yes	FADHILI-Josue/kinlang (MIT per third-party index, Rwanda); MilanGrujicic/Swahili_Flashcard (2023)	0
+3	WebSearch	open source edtech AI South Africa github 2026 license	yes	EIDU (open-sourced, BERLIN-origin, deploys in Kenya)	0
+4	WebSearch	Egypt Arabic open source AI education github 2026 Apache	yes	OmarSalah26/Awesome-Arabic-AI (Apache-2.0); TokenAI Horus Taleeq (MIT, no repo URL found); Edraky-AI (HF, not GitHub)	0
+5	WebSearch	UAE Saudi Arabia open source AI education github repository 2026 Arabic tutor	yes	ALLaM / HUMAIN Chat / Jais (models, no education repo); Arabic.AI courses (not OSS)	0
+6	WebSearch	Hausa Yoruba Amharic isiZulu language learning open source github AI 2026	yes	InkubaLM (Lelapa, South Africa -- model, non-commercial); Masakhane (translation, not education)	0
+7	WebSearch	Rwanda Kinyarwanda open source education AI github repository	yes	FADHILI-Josue/kinlang; Digital Umuganda datasets (no repo in results)	0
+8	WebSearch	Swahili Kiswahili education LLM open source github 2026 dataset learning	yes	tabularis-ai/Synthetic-Data-Generation-Pipeline-... (sentiment, not education)	0
+9	WebSearch	MBZUAI TII open source education LLM github 2026 Arabic students learning	yes	Jais 2, K2-65B (Apache-2.0 models, not education-vertical)	0
+10	WebSearch	Nigeria AI tutor open source github WAEC JAMB students repository 2026	yes	EduNaija (paper); Aveliq / ExamPrep NG / PassAbi (products, not OSS)	0
+11	WebSearch	Ghana Tanzania Uganda Ethiopia open source AI learning platform github 2026 school	yes	Askuala Link (Ethiopia, IRCAI top-100, repo listed as fanuelal/askuala_link_API)	0
+12	WebFetch github search	education AI Egypt pushed:>=2026-04-16 (s=stars&o=desc)	yes -- EXACTLY 1 result	Momad-Y/RoboCup-at-HomeEDU-2024 (service robot, not education-AI)	0
+13	WebFetch github search	arabic curriculum school learning pushed:>=2026-04-16	NO -- 0 results	--	0
+14	WebFetch github search	education tutor AI Nigeria OR Kenya OR Egypt OR Ethiopia (s=stars&o=desc)	yes -- 586 results, 10 read	37743/Classroom-VR; Hawary00/AI-Tutor; ahmedEid1/lumen	0
+15	WebFetch github search	arabic education tutor llm (s=stars&o=desc)	yes -- 2 results	mohameddsalmann/chatbot_for_education_learning (NO licence file); m0shaban/Echo-Tutor-different-versions (404 at HEAD)	0
+16	WebFetch github search	amharic OR tigrinya OR oromo education learning tutor (s=stars&o=desc)	yes -- 429 results, 10 read	no MEA-placed row among them	0
+# NET: 16 formulations across 2 channels; 11 named at least one candidate; 0 cleared all four
+# inclusion criteria. See mea-candidate-licences...p174.tsv for which criterion each one failed.
