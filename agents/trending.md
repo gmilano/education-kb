@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week: the `MCP`-over-the-LMS layer turned out to be a populated CATEGORY
+rather than the one-off p186 took it for — `11` repositories, `7` of them new to this KB, and the
+five major Western LMS/SIS products each now have at least one permissively licensed server.**
+
+🔴 **The week's sharpest finding is an asymmetry between the code and the commentary.** 🟢 A
+targeted search for *agentic tutoring + `MCP` + learning management* returned **nothing at all on
+`MCP`** and suggested a follow-up search as a next step, while the same week's topic-page census
+returned eleven working repositories with verified grants. 🔵 **The layer is real and unnamed. A
+studio can hold that position only until someone writes it down.**
+
+🟢 **Entering the shelf:**
+
+- 🆕 🟢 **[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) — `MIT` *(`1 063` B)*, APAC.**
+  An agent operating Moodle **courses, assignments and grades**. `10`★ and the category's
+  most-starred row that actually carries a grant.
+- 🆕 🟢 **[`CloudDown/polymtl-moodle-connect`](https://github.com/CloudDown/polymtl-moodle-connect)
+  — `MIT` *(`1 065` B)*, North America.** 🟢 **Ships installers**, which is the tell that it was
+  built for university staff to deploy rather than to demonstrate.
+- 🆕 🟢 **[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) —
+  `GPL-3.0-or-later`, Global.** 🔴 **The grant is in the PHP file headers; there is no licence
+  file.** The only in-tree member of the category — `MCP` as a Moodle **web service plugin**.
+- 🆕 🟢 **[`kemalyy/edumints-scorm-skill`](https://github.com/kemalyy/edumints-scorm-skill) —
+  `MIT` *(`1 068` B)*, EMEA.** An agent **skill** for `SCORM` authoring, paired with the same
+  author's `MCP` server. 🔵 The skill-plus-server pair is becoming a shipping unit.
+- 🆕 🟢 **[`MathTrail/canvas-api`](https://github.com/MathTrail/canvas-api) + [`mathtrail-standalone`](https://github.com/MathTrail/mathtrail-standalone)
+  — `MIT` *(`1 065` B each)*, Global.** Step-by-step maths checking on a whiteboard, and Olympiad
+  task generation served as **interactive `MCP` widgets**.
+- 🆕 🔴 **[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP) — NO GRANT, EMEA.**
+  Remote `MCP` for Moodle on Cloudflare Workers. 🔴 Probed at `10` paths plus the README; nothing.
+
+### 🆕 🔴 The second new category, and it was hiding behind a compliance acronym
+
+🆕 🟢 **`topics/ferpa?s=updated` returned a cluster this KB had no row for: COMPLIANCE AS CODE for
+student data.** 🔵 **Not tutors — the guardrails a tutor has to pass through.**
+
+- 🆕 🟢 **[`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) —
+  `Apache-2.0` *(`11 357` B, full text)*, `8`★, Global.** **Rego** policies for AI compliance,
+  `FERPA` among them. 🟢 Policy-as-code, so it drops into an `OPA` gate a client may already run.
+- 🆕 🟢 **[`Polycentric-Labs/regrails`](https://github.com/Polycentric-Labs/regrails) —
+  `Apache-2.0` *(`11 282` B)*, North America.** A guardrail for **`FERPA` and Title IV** together
+  — 🔵 the first row on this shelf that treats student *funding* rules as an AI compliance surface.
+- 🆕 🟢 **[`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter)
+  — `Apache-2.0` *(`12 101` B)*, Global.** A `FERPA` pre-filter for **Haystack RAG pipelines**.
+  🔴 One account publishes five adjacent repos here *(`ferpa-haystack`, `regulated-ai-governance`,
+  `voice-ai-governance`, `enterprise-rag-patterns`)*, two with the same description — 🟡 **treat the
+  cluster as one author's body of work, not five independent corroborations.**
+- 🆕 🟢 **[`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) — `MIT`
+  *(`1 072` B)*, `5`★, North America.** A **`FERPA`-safe** AI-assisted Canvas toolkit.
+- 🆕 🟢 **[`siskinskai/spedlex`](https://github.com/siskinskai/spedlex) — `MIT` *(`1 076` B)*,
+  North America.** A **special-education vocabulary for de-identifying student PII/PHI** — the
+  unglamorous asset nobody budgets for and every SPED engagement needs.
+- 🆕 🟢 **[`ZachRouan/district-brain`](https://github.com/ZachRouan/district-brain) — `MIT`
+  *(`1 066` B)*, North America** *(role-scoped district RAG, locally hosted)* and
+  🆕 🟢 **[`zhamanov-seabus/nau-ai-advisor`](https://github.com/zhamanov-seabus/nau-ai-advisor) —
+  `Apache-2.0` *(`11 375` B)*, North America** *(a self-hostable `FERPA`-aware academic advisor)*.
+
+🔵 **Why this cluster matters more than its star counts suggest.** 🟢 The regulatory sweep below
+found **Oklahoma and Maryland moving to require human review and bar AI from high-stakes decisions
+about students**, and the EU already naming educational assessment high-risk. 🟢 **This is the first
+week this KB can answer *"what do we put in front of the model"* with permissively licensed code
+instead of a statement of work.**
+
+### 🔴 The licence trap of the week: MIT's body with a clause bolted on
+
+🔴 **[`willwearing/graspful`](https://github.com/willwearing/graspful)** looks like the best find of
+the pass — agent-first course authoring, courses as `YAML` knowledge graphs, CLI or `MCP`. 🔴 **Its
+`LICENSE.md` is MIT's operative paragraph verbatim under the title *"O'Saasy License Agreement"*,
+followed by a clause forbidding use to compete with the licensor as a hosted or SaaS product.**
+🟢 **Not open source. Excluded.** Instrument + `14` passing tests:
+[`compose/code/p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/README.md).
+🔵 **`P971` was a licence file missing its terms; `P1054` is a licence file whose terms were
+narrowed. Both pass a body-matching classifier.**
+
+### 🟡 And a correction this KB owes itself: a uniform absence is a broken instrument
+
+🔴 **This pass's first grant sweep returned `NO-GRANT-FOUND` for `36` of `36` repositories.** 🟢 The
+cause was mine, not the world's: `git ls-remote --symref` emits **two** lines ending in `<TAB>HEAD`,
+the first being `ref: refs/heads/main`, so the SHA field read `ref:` and every `raw` URL `404`'d.
+🟢 **Fixed, then validated against a positive control — `fsrs4anki-helper` re-measured at `MIT`,
+`1 079` B, file named `License`, reproducing p186's published value exactly — and a negative
+control that still fails.** 🔵 **Rule for the next pass, cheap and general: a probe that returns
+the SAME verdict for every row has not measured anything. Check a known-positive before believing
+a sweep.**
+
 ## Pass 186 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

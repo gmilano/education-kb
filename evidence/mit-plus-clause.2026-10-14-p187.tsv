@@ -1,0 +1,23 @@
+# p187 — P1054, the MIT-BODY-PLUS-A-CLAUSE trap.
+# willwearing/graspful ships MIT's operative text VERBATIM and appends a field-of-use
+# (anti-SaaS, anti-compete) restriction under the title 'O'Saasy License Agreement'.
+# A body grep for 'Permission is hereby granted, free of charge' returns MIT and is WRONG.
+# Cheap discriminator, measured on this pass's 15 genuine MIT rows: canonical MIT clusters
+# at 1062-1093 B. graspful is 1438 B — 368 B of ADDED TERMS — and hits 2 restriction keywords.
+slug	bytes	mit_body	restriction_hits	verdict
+CloudDown/polymtl-moodle-connect	1065	1	0	OK-MIT
+DecoyLex/ltix	1067	1	0	OK-MIT
+G36maid/moodle-mcp	1063	1	0	OK-MIT
+MathTrail/canvas-api	1065	1	0	OK-MIT
+MathTrail/mathtrail-standalone	1065	1	0	OK-MIT
+ZachRouan/district-brain	1066	1	0	OK-MIT
+chaz-clark/canvas-toolbox	1071	1	0	OK-MIT
+elimu-ai/ml-event-simulator	1064	1	0	OK-MIT
+iblai/lms	1062	1	0	OK-MIT
+kemalyy/edumints-scorm-skill	1068	1	0	OK-MIT
+openfun/ralph	1093	1	0	OK-MIT
+redmodd/tessera	1077	1	0	OK-MIT
+scormflow/scorm-engine	1078	1	0	OK-MIT
+siskinskai/spedlex	1076	1	0	OK-MIT
+wingkwong/react-quiz-component	1069	1	0	OK-MIT
+willwearing/graspful	1438	1	2	NOT-OPEN-SOURCE:added-restriction

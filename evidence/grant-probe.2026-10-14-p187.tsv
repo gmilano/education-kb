@@ -1,0 +1,48 @@
+# p187 — P1053. Grant probe over the shelf-material candidates ACTION MR surfaced.
+# Oracles (this KB's measured map, re-confirmed this pass):
+#   existence : git ls-remote --symref  — an invented slug exits 128
+#   grant     : raw.githubusercontent.com/<slug>/<SHA>/<path>, HTTP CODE checked, never bytes
+# Path set is P1052's: LICENSE-cased variants AND the ecosystem manifest.
+# INSTRUMENT BUG FOUND AND FIXED MID-PASS: 'git ls-remote --symref' emits TWO lines ending
+# in <TAB>HEAD, the first being 'ref: refs/heads/main'. Taking $1 off the wrong line gave
+# sha='ref:' and every raw URL 404'd — 36 of 36 rows read NO-GRANT-FOUND. A UNIFORM ABSENCE
+# IS AN INSTRUMENT FAILURE, NOT A MEASUREMENT. Positive control after the fix:
+# open-spaced-repetition/fsrs4anki-helper -> MIT, 1079 B, file named 'License' — reproducing
+# p186's own published value exactly. Negative control still exits NOT-FOUND.
+slug	where_the_grant_is	classified	bytes	branch@sha
+CloudDown/polymtl-moodle-connect	GRANT-FILE:LICENSE	mit license	1066B	main@23ae57c
+DecoyLex/ltix	GRANT-FILE:LICENSE	mit license	1068B	main@0a67ea3
+G36maid/moodle-mcp	GRANT-FILE:LICENSE	mit license	1064B	main@c6de7b6
+INRIA/scikit-learn-mooc	GRANT-FILE:LICENSE	creative commons	18658B	main@1b294d9
+MathTrail/canvas-api	GRANT-FILE:LICENSE	mit license	1066B	main@8b1fe03
+MathTrail/mathtrail-standalone	GRANT-FILE:LICENSE	mit license	1066B	main@014e8a4
+Nasus20202/MoodleMCP	NO-GRANT-FOUND	-	-	main@6e535a4
+Polycentric-Labs/regrails	GRANT-FILE:LICENSE	apache license	11282B	main@1d4a812
+Principled-Evolution/gopal	GRANT-FILE:LICENSE	apache license	11357B	main@e565a60
+Schroedinger-Hat/certo	GRANT-FILE:LICENSE	gnu general public	33820B	main@6fd0a11
+ZachRouan/district-brain	GRANT-FILE:LICENSE	mit license	1067B	main@ea20f2f
+acanas/swad-core	GRANT-FILE:LICENSE	gnu general public	34501B	master@85242a4
+alfredang/AI-LMS-TMS	NO-GRANT-FOUND	-	-	main@3fcd69b
+ashutoshrana/haystack-ferpa-filter	GRANT-FILE:LICENSE	apache license	12101B	main@5f87c54
+chaz-clark/canvas-toolbox	GRANT-FILE:LICENSE	mit license	1072B	main@8504031
+elimu-ai/ml-event-simulator	GRANT-FILE:LICENSE	mit license	1065B	main@7eb44c6
+fedora-infra/tahrir	GRANT-FILE:LICENSE	gnu general public	34917B	develop@ddbff5c
+iblai/lms	GRANT-FILE:LICENSE	mit license	1063B	main@e1bf305
+kemalyy/edumints-scorm-skill	GRANT-FILE:LICENSE	mit license	1069B	main@d9f7638
+luisgf/openbadgeslib	GRANT-FILE:LICENSE.txt	gnu lesser	7650B	master@7d19141
+memphis-iis/MoFaCTS	GRANT-FILE:LICENSE	gnu general public	34523B	main@c93e16e
+mohamurshid/ElimuAnalytics	NO-GRANT-FOUND	-	-	main@063410b
+numbas/numbas-lti-provider	GRANT-FILE:LICENSE.md	apache license	560B	master@d57d77d
+openfun/ralph	GRANT-FILE:LICENSE.md	mit license	1094B	main@91fef11
+rage/secret-project-331	GRANT-FILE:LICENSE	apache license	11357B	master@8c9fa04
+redmodd/tessera	GRANT-FILE:LICENSE	mit license	1078B	main@2c0d7a2
+scormflow/scorm-engine	GRANT-FILE:LICENSE	mit license	1079B	main@1f2242d
+siskinskai/spedlex	GRANT-FILE:LICENSE	mit license	1077B	main@6698a9a
+solin-repo/moodle-block_atrisk	GRANT-FILE:LICENSE	gnu general public	703B	main@1ecc3d9
+terracotta-education/terracotta	GRANT-FILE:LICENSE	apache license	11323B	development@754d858
+valentineus/moodle-webhooks	GRANT-FILE:LICENSE.txt	gnu general public	35200B	master@2720063
+willianmano/moodle-theme_moove	GRANT-FILE:LICENSE.md	gnu general public	34903B	main@1e0e60f
+willwearing/graspful	GRANT-FILE:LICENSE.md	UNCLASSIFIED	1439B	main@e058de1
+wingkwong/react-quiz-component	GRANT-FILE:LICENSE	mit license	1070B	develop@9221794
+xiaochong0302/course-tencent-cloud	GRANT-FILE:LICENSE	gnu general public	18092B	v2@ef3c656
+zhamanov-seabus/nau-ai-advisor	GRANT-FILE:LICENSE	apache license	11375B	master@41e3528

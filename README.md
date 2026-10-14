@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, all five with a limb
+FIRED decisively, and two of them fired by correcting a cheap wrong guess rather than by finding
+anything new. The sixth is NOT RUN for the third pass running, and the reason is unchanged: it is
+an outward-facing write on a third party's repository and this run is unattended.**
+
+🆕 🟢 **The headline is an asymmetry, and it is the most commercially useful thing on these pages
+this week.** 🟢 **The `MCP`-over-the-LMS layer is `11` repositories deep with verified permissive
+grants, and the analyst literature has not named it** — a targeted search returned, verbatim,
+*"nothing specific on `MCP`"* and suggested a follow-up search as the next step. 🔵 **The market is
+not early here; the commentary is late.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION MR`** — re-sort the `12` remaining censused topic pages by `s=updated`, record absent AND not-shelf-material rates | 🔴 **DISCHARGED, LIMB `1` FIRED at more than double threshold. `189` of `240` rows absent (`79`%), against the `37`% it had to hold near. LIMB `2` FALSIFIED in the opposite direction — the PLATFORM topics are the worst, `moodle` at `20`/`20`. The stars-only census is dead and p186's `37`% is retired too** |
+| 🟢 **`ACTION MO`** — extend `P1052` to Moodle/WordPress plugin FILE HEADERS | 🟢 **DISCHARGED, LIMB `1` FIRED. `onbirdev/moodle-webservice_mcp` carries `GPL-3.0-or-later` in `version.php` and `lib.php` and in no licence file. 🔴 The `37` was a floor of "not where we looked"** |
+| 🟢 **`ACTION MP`** — reach `dotty-tutor`'s review tables by READING the named routers | 🟢 **DISCHARGED, LIMB `1` FIRED. `Gap 422` is NOT structural — it was a monorepo root (`apps/api/`) missing from p186's guess. 🔴 And it corrects the premise: there is NO `quality_review_*` cluster and the surface is ONE table, not `12`** |
+| 🔴 **`ACTION MQ`** — does `readerbench-java` ship a PORTUGUESE pipeline? | 🔴 **DISCHARGED, LIMB `2` FIRED. `core-services/pom.xml` declares `de/en/es/fr/it/nl/ro` and no `pt`. Blocker is FEATURE EXTRACTION, Pattern `29` takes step `2b`, `pt-BR` estimate doubles. 🔴 And worse: `es` is PARTIAL too — no `wordnet-es`, no `wordlists-es`** |
+| 🟢 **`ACTION MS`** — is `AI_Tutor_Release` source, or packaged builds only? | 🟢 **DISCHARGED, LIMB `1` FIRED. `package.json` and `requirements.txt` resolve at `HEAD`: source IS present, the `MIT` grant is usable, the row is an APPLIANCE. p186's "builds only" caveat RETIRED** |
+| 🔴 **`ACTION MN`** *(for a human)* — may this KB open licensing issues on third-party repositories? | 🔴 **NOT RUN, third pass running. An outward-facing write on someone else's repository by an unattended run with no live authorisation. Recorded as a decision for a human, not dropped** |
+
+### 🔴 `ACTION MR` — the measurement that retires two published figures
+
+| topic page, `?s=updated` | says exist | rendered | absent | % |
+|---|---|---|---|---|
+| 🔴 `topics/moodle` | `2 149` | `20` | 🔴 **`20`** | 🔴 **`100`** |
+| `topics/lms` · `learning-analytics` · `mooc` · `edtech` · `e-learning` | `2 454` · `373` · `640` · `4 426` · `1 207` | `20` ea. | `17` ea. | `85` |
+| `topics/lti` · `scorm` | `184` · `228` | `20` ea. | `16` ea. | `80` |
+| `topics/adaptive-learning` · `student-information-system` | `579` · `183` | `20` ea. | `15` ea. | `75` |
+| `topics/ferpa` | `40` | `20` | `13` | `65` |
+| 🟢 `topics/open-badges` | `30` | `20` | `9` | `45` |
+| **total** | **`12 493`** | **`240`** | 🔴 **`189`** | 🔴 **`79`** |
+
+🟢 **`open-badges` is the control that makes the result credible** — the one small topic *(`30`
+repositories)* and the one page where this KB really does hold most of the population.
+🔵 **The absent rate tracks topic SIZE, not topic age**, which is why limb `2`'s prediction inverted.
+
+🔴 **The honest counterweight: precision fell further than yield rose.** Roughly half the `189` are
+not shelf material, and **two noise mechanisms are now named**: the 🔴 **`api-evangelist` flood**
+*(`23` of `189` — one account publishing "third-party profile of X's API" stubs)* and 🔴
+**course-completion automation** *(`6` rows on `topics/mooc` — tools to beat the LMS, including
+`yatori-go-console` at `548`★)*. 🔵 **`Gap 426`: both are account- or intent-shaped, so a per-topic
+precision estimate cannot see them.**
+
+### 🟢 What the pass is actually worth: two new categories
+
+🟢 **`MCP` over the LMS** — Moodle *(three independent servers)*, Canvas, Brightspace/D2L, Sisu and
+`SCORM` each now have at least one permissively licensed agent-tool surface. 🔴 **`Gap 427`: `AGPL`
+Open edX has none, nor do Chamilo, OpenOLAT or Sakai — so an Open edX client is an adapter build and
+should be priced as one** *(`4`–`6` weeks against `12`–`14`)*.
+
+🟢 **`FERPA` compliance as code** — off `topics/ferpa`, a `40`-repository page this KB had never
+read at any sort order: [`gopal`](https://github.com/Principled-Evolution/gopal) *(`Apache-2.0`,
+`Rego`)*, [`regrails`](https://github.com/Polycentric-Labs/regrails) *(`FERPA` + Title IV)*,
+[`haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter),
+[`spedlex`](https://github.com/siskinskai/spedlex), [`district-brain`](https://github.com/ZachRouan/district-brain),
+[`canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox), [`nau-ai-advisor`](https://github.com/zhamanov-seabus/nau-ai-advisor).
+🔵 **A `40`-row topic page returned a whole category while the `4 426`-row page returned mostly
+noise. That is the opposite of how this KB has been allocating its budget.**
+
+### 🔴 The finding to take into a client conversation
+
+🔴 **The human-oversight audit record is the artefact nobody is protecting.**
+`dotty-tutor`'s `teacher_review_events` is well designed where it counts — `action` is
+`CHECK`-constrained to `('reviewed','overturned','mastery_override')` — but
+🔴 **`corrected_assessment`, the teacher's overturning of an AI grade, is `ondelete="CASCADE"` from
+TWO parents** *(`learning_classes` and `assignments`)*, while `knowledge_point_id` has no
+`ondelete` at all. 🔵 **Course-shaped schemas make the class the aggregate root and cascade
+everything under it: right for pedagogy, wrong for audit.** 🟢 Three regimes now require that
+record — NA *(Oklahoma, Maryland)*, EU *(high-risk assessment)* and 🔴 **Vietnam, the second
+jurisdiction to put educational assessment in a statutory high-risk tier.** 🟢 Pattern `32` is the
+fix, and step `2` — moving the log out of the course aggregate — is the whole value.
+
+### 🔴 New licence traps, and a correction this KB owes itself
+
+- 🔴 **`P1054` — MIT's body with a clause bolted on.** [`willwearing/graspful`](https://github.com/willwearing/graspful)'s
+  *"O'Saasy License Agreement"* is MIT verbatim plus an anti-SaaS non-compete. 🔴 **Not open
+  source**, and 🔴 **every body-matching classifier on this shelf returns `MIT` for it.** 🟢 New
+  instrument, `14` tests passing, validated against live bytes:
+  [`compose/code/p1054-mit-plus-clause`](compose/code/p1054-mit-plus-clause/README.md).
+  🔵 Discriminator is two-signal — restriction vocabulary decides, size catches the rest *(canonical
+  MIT measured at `1 062`–`1 093` B over `15` genuine rows; `graspful` is `1 439`)*.
+- 🔴 **`P971`, instances three and four**: `numbas-lti-provider` *(`Apache-2.0` in `560` B)* and
+  `moodle-block_atrisk` *(`GPL-3` in `703` B)*. 🔵 Say **"by reference"**, not "Apache-2.0" — §`3`,
+  the patent grant, is the only strong reason to prefer it and it travels as a URL.
+- 🔴 **And the instrument failure: this pass's first sweep returned `NO-GRANT-FOUND` for `36` of
+  `36` repositories.** `git ls-remote --symref` emits **two** lines ending `<TAB>HEAD`, the first
+  being `ref: refs/heads/main`; the SHA field read `ref:` and every `raw` URL `404`'d. 🟢 Fixed and
+  validated against a positive control *(`fsrs4anki-helper` → `MIT`, `1 079` B, `License` — p186's
+  own published value, reproduced)*. 🔵 **Rule: a probe returning the SAME verdict for every row has
+  measured nothing. Run a known-positive through any sweep before believing it.**
+
+### 🟢 The regional sweep: two inversions and three declared gaps
+
+- 🔴 **LATAM is ABOVE the OECD average on teacher AI use, not behind it.** `TALIS` `2024`: Brazil
+  `56`%, Chile `55`%, Colombia `53`%, Costa Rica `52`% against an OECD mean of `36`%; Uruguay `75`%
+  of public-school teachers *(Ceibal `2026`)*. 🟢 **The regional deficit is governance and
+  measurement** — `87`% of institutions use AI, `26`% have a strategy, `9`% evaluate it.
+  🆕 🟢 New counterparties: **UNESCO's Observatory on AI in Education for LAC, launched
+  `2026-04-14` at `ECLAC`, Santiago** — a standing body, not a one-off report. 🆕 🟢 And a named
+  in-region production reference at last: **PUC Chile**, instructor-configured agents grounded in
+  validated course content, Canvas-integrated, centrally governed.
+- 🟢 **North America:** `134` AI-in-education bills across `31` states; `60`% of K-12 teachers used
+  AI in `2024`–`25`, `32`% weekly; 🔴 restriction is a trend too *(NYC's one-year moratorium on
+  student-facing AI through grade `8`)*. 🟢 `H.R. 8747` re-confirmed exactly as p93 read it —
+  funding **eligibility** under the `ESEA`, not a mandate.
+- 🟡 **APAC:** 🔴 **Vietnam names education high-risk** *(automated assessment, behavioural
+  monitoring; dates CONFLICTED — `2026-03-01` per one source, `2027-09` per another, recorded
+  unresolved)*. 🟢 **South Korea's `AI Basic Act` in force `2026-01-22` with `2026` a pilot year and
+  a one-year grace on penalties** — 🔵 a grace period is a sales window.
+- 🔴 **The `AI Act` wrong date appeared for the SIXTH time in six passes.** 🔵 **Six instances means
+  the wrong deadline is the market's majority reading** — assume the client's installed adviser gave
+  them `2026-08-02` and open with the correction *(`2027-12-02` / `2028-08-02`)*.
+- 🔴 **Declared gaps, written down because silence looks like coverage.** `1` **No Middle East or
+  Africa**: the EMEA query returned EU material only — no MEA vendor, no Gulf programme, no African
+  ministry instrument. 🔵 *"EMEA" is being answered as "EU" by every channel reachable here.*
+  `2` **No education-specific APAC adoption statistics for `2026`.** `3` **Market scope still
+  unresolvable** — `marketsandmarkets.com` stays blocked by the egress allowlist.
+
+### 🟢 Pre-registered for p188, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION MT`** | the `api-evangelist` filter: exclude that one account and re-derive p187's absent rate and not-shelf-material rate per topic | **limb `1`:** the absent rate stays `≥70`% → 🟢 **the `79`% survives its largest noise source and is publishable as a census figure.** **limb `2`:** it falls below `70`% → 🔴 **one account was carrying the headline, and the figure needs re-basing before any deck quotes it** |
+| 🆕 🟢 **`ACTION MU`** | extend `ACTION MO`'s plugin-header channel to EVERY Moodle-shaped row this KB records as grant-absent *(`Gap 425`)* | **limb `1`:** `≥3` further `GPL` grants recovered → 🟢 **"no licence file" is formally uninformative for plugin-shaped repos and the rule enters the probe.** **limb `2`:** `0`–`2` → 🔵 `onbirdev` was conventional, not representative |
+| 🆕 🔴 **`ACTION MV`** | settle `Gap 427`: does an `MCP` or agent-tool surface exist for Open edX ANYWHERE — `topics/open-edx` at both sort orders, plus the Open edX org | 🟢 **limb `1`:** one exists → **Pattern `33`'s `12`–`14` week Open edX estimate collapses to `4`–`6`.** 🔴 **limb `2`:** none → **the adapter build is confirmed and `AGPL` is the likely cause; price it and say why** |
+| 🆕 🟢 **`ACTION MW`** | run `P1054` over EVERY row this KB currently publishes as `MIT`, from the stored byte counts where held and by re-probe where not | **limb `1`:** `≥1` further MIT-body-plus-a-clause found → 🔴 **`graspful` is a pattern, and this KB has published a wrong licence somewhere.** **limb `2`:** `0` → 🟢 the `MIT` column is clean and `P1054` becomes an intake check only |
+| 🆕 🟡 **`ACTION MX`** | read [`openfun/ralph`](https://github.com/openfun/ralph)'s retention/deletion surface: can an `xAPI` statement be deleted by course, and is there an immutability or append-only mode? | 🟢 **limb `1`:** append-only or retention-pinned → **Pattern `32` step `3` is sound as written.** 🔴 **limb `2`:** statements are freely deletable by actor/object → **step `3` needs a WORM store beside the LRS and the estimate grows** |
+| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → queue is `Nasus20202/MoodleMCP`, `mohamurshid/ElimuAnalytics` *(`IRT` for Kenya's `CBC`)*, `alfredang/AI-LMS-TMS`, then p186's `MoKangMedical/digital-sage`, `dotty-tutor`, `xueyoujing-companion`. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently and these rows stay unusable |
+
+🔵 **Note for p188 on method.** 🟢 p186's rule was *"an absence names its probe"*. 🟢 **p187 adds its
+twin: a probe that returns the SAME verdict for every row has not measured anything, and the cheap
+guard is a known-positive control run through every sweep before its results are believed.** 🔵 Both
+rules exist because the same error class — a wrong path, a wrong field, a wrong population — fired
+three separate times in this one pass, twice in p186's pre-registrations and once in this pass's own
+instrument.
+
 ## Pass 186 — 2026-10-14
 
 🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, `4` with a limb FIRED

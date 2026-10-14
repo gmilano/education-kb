@@ -1,0 +1,19 @@
+# p187 — ACTION MR. The recency-sort census, extended from p186's 3 topic pages to the
+# 12 remaining censused pages. Channel: github.com/topics/<t>?s=updated, rendered via WebFetch
+# (the one channel P93 established renders topic pages here). 20 rows render per page.
+# 'absent' = slug not present anywhere in this KB's own tree (1 974 unique slugs, case-folded).
+# Limb 1 needed the absent rate to hold near 37%. It measured 79%.
+topic	page_says_exist	rendered	absent_from_census	absent_pct
+lms	2454	20	17	85
+lti	184	20	16	80
+scorm	228	20	16	80
+adaptive-learning	579	20	15	75
+student-information-system	183	20	15	75
+learning-analytics	373	20	17	85
+moodle	2149	20	20	100
+mooc	640	20	17	85
+open-badges	30	20	9	45
+edtech	4426	20	17	85
+ferpa	40	20	13	65
+e-learning	1207	20	17	85
+TOTAL	12493	240	189	79

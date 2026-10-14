@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🆕 🟢 **Two new patterns and three amendments. Every repository named below had its grant read over
+the raw channel this pass with the HTTP code checked, and one amendment is a REPAIR to a step p186
+published as blocked.**
+
+### 🆕 🔴 Pattern `32` — the human-oversight record that survives the course being deleted
+
+🔵 **The regulatory driver is now in three regions at once:** Oklahoma and Maryland moving to
+require human review and bar AI from high-stakes student decisions; the EU `AI Act` naming
+education access and assessment high-risk; 🔴 **and Vietnam naming educational assessment a
+statutory high-risk sector.** 🟢 **All three require proof that a human reviewed the machine. This
+pattern is about not losing it.**
+
+🔴 **The failure this pattern exists to prevent, measured this pass.**
+[`dotty-tutor`](https://github.com/ningkaikok/dotty-tutor)'s `apps/api/persistence/schema.py`
+*(`19 405` B, `Apache-2.0`)* holds `teacher_review_events`, whose `corrected_assessment` column
+records a teacher overturning an AI grade. 🔴 **It carries `ondelete="CASCADE"` on TWO parents —
+`class_id → learning_classes` and `assignment_id → assignments`.** 🔵 **Delete a finished class, or
+one assignment, and the evidence that a human corrected the model is silently gone.** 🟢 This is not
+a defect peculiar to one project: **course-shaped schemas treat the class as the aggregate root and
+cascade everything below it, which is correct for pedagogy and wrong for audit.**
+
+| step | component | licence, as measured | what it contributes |
+|---|---|---|---|
+| `1` | 🟢 **ADOPT the vocabulary** — [`dotty-tutor`](https://github.com/ningkaikok/dotty-tutor)'s `teacher_review_events` | 🟢 `Apache-2.0` *(sidebar + full text)* | 🟢 **`action` is `CHECK`-constrained to `('reviewed','overturned','mastery_override')`** — "a human looked", "a human overruled the model", "a human set mastery directly". 🟢 **Take these three values as they stand**; they are very close to what a regulator means by meaningful oversight. Columns worth keeping: `learner_id`, `question_id`, `knowledge_point_id`, `mastery_score` *(`0`–`1`, `CHECK`ed)*, `corrected_assessment`, `note`, `created_at` |
+| `2` | 🔴 **REJECT the parentage.** Re-point the oversight log OUT of the course aggregate | — | 🔴 **Drop both `CASCADE`s.** The record's lifetime is the institution's retention obligation, not the class's. 🟢 Follow the same schema's own better instinct: `knowledge_point_id` has **no** `ondelete` |
+| `3` | 🟢 **PERSIST it as `xAPI`** — [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** *(`LICENSE.md`, `1 094` B)* | 🟢 An LRS **outside** the LMS, so deleting a course in the LMS cannot reach the record. `51`★, run at national scale by France Université Numérique. 🔵 `xAPI` is also what a procurement officer already knows how to ask for |
+| `4` | 🟢 **GATE the model** — [`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) | 🟢 **`Apache-2.0`** *(`11 357` B)* | `Rego` policies incl. `FERPA`; drops into an `OPA` gate a client may already run. 🟢 Add [`Polycentric-Labs/regrails`](https://github.com/Polycentric-Labs/regrails) *(`Apache-2.0`)* where **Title IV** is in scope |
+| `5` | 🟢 **DE-IDENTIFY before retrieval** — [`siskinskai/spedlex`](https://github.com/siskinskai/spedlex) + [`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter) | 🟢 **`MIT`** *(`1 076` B)* / 🟢 **`Apache-2.0`** *(`12 101` B)* | special-education PII/PHI vocabulary, and a `FERPA` pre-filter for Haystack pipelines |
+| `6` | 🟢 **SCOPE BY ROLE, not by filter** — [`ZachRouan/district-brain`](https://github.com/ZachRouan/district-brain) | 🟢 **`MIT`** *(`1 066` B)* | role-scoped district RAG, locally hosted. 🔵 Scoping at retrieval survives a review; filtering after it does not |
+
+🟢 **Why a client buys this:** it is the one deliverable that answers *"show me a human reviewed
+it"* in a form that outlives the course, the term and the LMS migration.
+🟡 **Estimate: `6`–`8` weeks** for steps `1`–`3` against one LMS, `+3`–`4` weeks for `4`–`6`.
+🔴 **Step `2` is the whole value and it is one schema decision — if a client declines it, the rest
+of the pattern is decoration.**
+
+### 🆕 🟢 Pattern `33` — the LMS as an agent tool surface, without writing an adapter
+
+🔵 **p186's Pattern `31` used `sisu-mcp` and read it as a SIS story. `ACTION MR` shows it was the
+first row of a populated layer — so this is the general form, per platform.**
+
+| if the client runs… | adopt | licence | what you still have to build |
+|---|---|---|---|
+| 🟢 **Moodle** | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(courses, assignments, grades)* **or** [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) *(in-tree, as a web-service plugin)* | 🟢 `MIT` *(`1 063` B)* / 🟢 `GPL-3.0-or-later` 🔴 **in the PHP file headers only** | 🟢 **nothing on the read path.** Add [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) *(`GPL`)* for push, since `MCP` is all pull |
+| 🟢 **Canvas** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) + 🟢 [`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) for the `FERPA`-safe wrapper | 🟢 `MIT` *(`1 072` B)* | the approval gate — 🔵 match **IgniteAI**'s shape, which is what Canvas clients will expect: permission-scoped, approval at key moments |
+| 🟢 **Brightspace / D2L** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(`57`★)* | *(recorded earlier)* | tenancy and audit |
+| 🟢 **A university SIS** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 `MIT` *(`package.json` only, `999` B)* | 🟢 nothing — **read-only is the server's design, not a promise in a SOW** |
+| 🟢 **`SCORM` content** | [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) + [`-skill`](https://github.com/kemalyy/edumints-scorm-skill) | 🟢 `MIT` *(`1 069` B)* | 🟢 authoring is covered; add [`scormflow/scorm-engine`](https://github.com/scormflow/scorm-engine) *(`MIT`, `1 079` B)* to **run** `SCORM`/`xAPI`/`cmi5` with an LRS |
+| 🔴 **Open edX** | 🔴 **nothing exists** | — | 🔴 **the whole adapter. Price it as a build** *(`Gap 427`)* |
+| 🔴 **Chamilo / OpenOLAT / Sakai** | 🔴 **nothing found** | — | 🔴 as above |
+
+🟢 **Then make it measurable** — [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+*(`Apache-2.0`, `11 323` B, `21`★, default branch `development`)* runs **randomised experiments on
+live assignments inside the LMS**. 🔵 **It is the only component on this shelf that lets a client
+find out whether the agent helped, rather than assert it** — and in a market where `9`% of LATAM
+institutions evaluate what they deployed, that is the differentiator, not the tutor.
+
+🟡 **Estimate: `4`–`6` weeks** to a governed pilot on Moodle, Canvas, Brightspace or Sisu;
+🔴 **`12`–`14` weeks** on Open edX, and the difference is entirely `Gap 427`.
+
+### 🟢 Amendment `1` — Pattern `29` takes step `2b`. `ACTION MQ` settled `Gap 424`
+
+🔴 **`readerbench-java` ships NO Portuguese pipeline.** `core-services/pom.xml` declares its
+language modules explicitly — `language-de`, `-en`, `-es`, `-fr`, `-it`, `-nl`, `-ro` — and
+🔴 **there is no `language-pt`.** 🟢 **The probe discriminates: it can see seven languages, and
+Portuguese is absent from all three resource families** *(language model, `wordlists-*`,
+`wordnet-*`)*.
+
+🔴 **Worse for LATAM than the limb anticipated: Spanish is PARTIAL too.** `language-es` exists but
+there is **no `wordnet-es` and no `wordlists-es`** — and the lexical resources are what the textual
+complexity features consume. 🟢 **So Pattern `29` takes step `2b`: the blocker is FEATURE
+EXTRACTION, not translation, and the `pt-BR` estimate doubles.** 🔵 **An `es` writing-assessment
+engagement must now carry the same warning** — previously this KB would have treated Spanish as
+served. 🔴 **`Gap 372` does NOT close**: there is still no permissive production-grade essay-scoring
+library, and the activity the `AI Act` names high-risk most explicitly remains the one with the
+least open supply.
+
+### 🟢 Amendment `2` — Pattern `24`'s human-review tables: the block was a wrong PATH, and the count was wrong
+
+🟢 **`ACTION MP` limb `1` FIRES, so `Gap 422` is NOT structural.** p186 probed
+`routers/review_routes.py`; the repository is a **monorepo** and the file is at
+`apps/api/routers/review_routes.py`. 🟢 Both named routers resolve, and their imports are flat
+module names on `apps/api`'s path *(`answer_evaluator`, `application.services.learning_funnel`,
+`domain.learning.mastery_policy`, `auth_context`, `observability`)*.
+
+🔴 **And the measurement corrects p186's premise rather than confirming it: there is NO
+`quality_review_*` cluster — `0` occurrences in the schema — and the human-review surface is not
+`12` tables. It is ONE table, `teacher_review_events`, with `11` columns and `2` `CHECK`
+constraints.** 🟢 Pattern `24`'s *"`12` human-review tables, UNVERIFIED"* row is therefore
+**retired and replaced** by Pattern `32` step `1`. 🔵 **Two of this pass's limbs fired by correcting
+a cheap wrong guess about a path or a population — the same lesson p186 wrote, now with a second
+and third instance.**
+
+### 🟢 Amendment `3` — Pattern `27` keeps its ASK step, unused, for a third pass
+
+🔴 **`ACTION MN` is NOT RUN for the third consecutive pass**, and the reason is unchanged: opening
+licensing issues on third parties' repositories is an outward-facing write, and this run is
+unattended with no live authorisation. 🟢 **Recorded as a decision for a human, not quietly
+dropped.** 🔵 The queue it would work, in order, is now longer and better evidenced:
+[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP) *(no grant, a clean `MCP`
+implementation)*, [`mohamurshid/ElimuAnalytics`](https://github.com/mohamurshid/ElimuAnalytics)
+*(no grant, `IRT` for Kenya's `CBC` — a rare regional asset)*,
+[`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) *(no grant, `19`★)*, then
+p186's `MoKangMedical/digital-sage`, `dotty-tutor` *(complete `Apache-2.0`, no named licensor)*
+and `xueyoujing-companion`.
+
 ## Pass 186 — 2026-10-14
 
 🆕 🟢 **Two new patterns and three amendments. Every repository named below had its licence read over

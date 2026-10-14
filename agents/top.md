@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🆕 🟢 **A whole CATEGORY enters this page, and the reason it was missing is now measured rather
+than guessed: the agent layer over the LMS is `11` repositories deep with real permissive grants,
+and NONE of it was visible to a stars-descending census.**
+
+🔴 **p187's headline is an asymmetry, and it is the most commercially useful thing on these eight
+pages this week.** 🟢 **The analyst literature has not named this layer at all** — a targeted
+search for *agentic tutoring + MCP + learning management* returned, verbatim, *"nothing specific on
+MCP (Model Context Protocol)"* and recommended a follow-up search as the next step. 🟢 **Meanwhile
+the repositories exist, carry `MIT`, and run.** 🔵 **The market is not early here; the commentary is
+late.** That gap is a sellable position for a studio, and it closes the moment an analyst writes
+the sentence.
+
+### 🟢 NEW CATEGORY — the LMS as an agent TOOL SURFACE (`MCP` over the gradebook)
+
+🔵 p186 opened this door with one row, `ink-waffle/sisu-mcp`, and read it as a SIS story. 🔴 **It
+was not a SIS story. It was the first row of a populated layer.** Every grant below was read over
+the raw channel this pass, HTTP code checked, and classified through `P1054`.
+
+| row | licence, as measured | region | what it actually is |
+|---|---|---|---|
+| 🆕 🟢 **[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp)** | 🟢 **`MIT`** *(`LICENSE`, `1 063` B)* | APAC | 🟢 **`MCP` server letting an agent operate Moodle courses, assignments AND grades.** `10`★ — the most-starred row in the category that has a grant |
+| 🆕 🟢 **[`CloudDown/polymtl-moodle-connect`](https://github.com/CloudDown/polymtl-moodle-connect)** | 🟢 **`MIT`** *(`LICENSE`, `1 065` B)* | North America | 🟢 a Moodle `MCP` connector **shipped with installers** — Polytechnique Montréal's shape, i.e. built for staff to deploy, not for a demo |
+| 🆕 🟢 **[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp)** | 🟢 **`GPL-3.0-or-later`** — 🔴 **and the grant is in the FILE HEADERS, not in any licence file** *(`ACTION MO`, below)* | Global | 🟢 `MCP` exposed as a **Moodle web service plugin** — `$plugin->component = 'webservice_mcp'`, `$plugin->version = 2026072300`. The in-tree route, where the other two are side-cars |
+| 🆕 🔴 **[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP)** | 🔴 **NO GRANT FOUND** at `10` paths plus the README | EMEA | a remote `MCP` server for Moodle on Cloudflare Workers. 🔴 **Unusable as a tree** until someone asks |
+| 🆕 🟢 **[`kemalyy/edumints-scorm-skill`](https://github.com/kemalyy/edumints-scorm-skill)** | 🟢 **`MIT`** *(`LICENSE`, `1 068` B)* | EMEA | 🟢 an **agent SKILL** for authoring `SCORM` courses, paired with `edumints-scorm-mcp` *(already shelved)*. The skill/server pair in one vendor's hands |
+| 🆕 🟢 **[`MathTrail/canvas-api`](https://github.com/MathTrail/canvas-api)** | 🟢 **`MIT`** *(`LICENSE`, `1 065` B)* | Global | a maths tutor on a virtual whiteboard that **checks each step**, not just the final answer |
+| 🆕 🟢 **[`MathTrail/mathtrail-standalone`](https://github.com/MathTrail/mathtrail-standalone)** | 🟢 **`MIT`** *(`LICENSE`, `1 065` B)* | Global | adaptive Olympiad task generation served as **interactive `MCP` widgets** |
+
+🟢 **Already on the shelf and now re-read as members of this category, not as curiosities:**
+[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) *(`MIT`, SIS, read-only by design)*,
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(`57`★,
+Brightspace/D2L)*, [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) *(`9`★)*,
+[`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) *(`8`★)* and
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, `48`★)*.
+
+🔵 **Read together, the five major LMS/SIS products in the Western market — Moodle, Canvas,
+Brightspace, Sisu and SCORM-as-a-format — each now have at least one permissively licensed `MCP`
+server.** 🟢 **For an engagement this means the integration question has changed shape: it is no
+longer "write an adapter" but "adopt a server and govern it".**
+
+### 🔴 EXCLUDED on its licence text — and it is the trap of the pass
+
+| row | what it looked like | what it is |
+|---|---|---|
+| 🔴 **[`willwearing/graspful`](https://github.com/willwearing/graspful)** | an agent-first course-authoring platform *(courses as `YAML` knowledge graphs, driven by CLI or `MCP`)* — 🟢 **exactly the shape a studio reaches for** | 🔴 **NOT OPEN SOURCE.** `LICENSE.md` is titled *"O'Saasy License Agreement"*: **MIT's operative paragraph verbatim**, then a clause forbidding use to *"directly compete with the original Licensor by offering it … as a hosted, managed, or Software-as-a-Service (SaaS) product"* |
+
+🔴 **Any classifier on this shelf that matches the MIT body returns `MIT` for that file.** 🟢 New
+instrument and `14`-test suite: [`compose/code/p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/README.md),
+all passing, validated end-to-end against the live bytes. 🔵 **The discriminator is two-signal:
+restriction vocabulary decides, and size catches what the vocabulary misses** — canonical `MIT`
+measured at `1 062`–`1 093` B across this pass's `15` genuine rows, against `graspful`'s `1 439` B.
+🔵 **Why it matters commercially and not just taxonomically: a studio that builds a client's hosted
+tutoring service on `graspful` breaches clause `2` on delivery.**
+
+### 🟢 `ACTION MO` — LIMB `1` FIRES. The `37` was never a floor of absences
+
+🔵 Pre-registered: extend `P1052` to Moodle/WordPress plugin **file headers** over the
+plugin-shaped rows inside the `37` absences that held. 🔴 **The population turned out to be `2`
+rows, not a cohort** — and that small number is itself the finding, because both are `MCP`.
+
+| row | probe | result |
+|---|---|---|
+| 🆕 🟢 **`onbirdev/moodle-webservice_mcp`** | `version.php`, `lib.php` | 🟢 **`GPL` grant PRESENT** — `3` *"GNU General Public License"* header hits in each of two files, plus the `$plugin->component` declaration |
+| 🟡 **`loyaniu/moodle-mcp`** | `7` canonical Moodle plugin paths | 🟡 **nothing at those `7` paths.** 🔵 Per p186's own rule the absence is recorded WITH ITS PROBE and claims nothing wider |
+
+🟢 **Limb `1` needed `≥1`. It got `1`, and the mechanism generalises further than the limb did:**
+Moodle's plugin rules *require* `GPL`, and the convention is a header block in every file. 🔴 **So
+for a Moodle-plugin-shaped repository, "no licence file" is close to uninformative** — the grant
+lives where this KB had never looked. 🔵 `Gap 425`: the plugin-header channel is unprobed across
+every Moodle-shaped row on these pages, not just the `2` in this population.
+
+### 🟢 `ACTION MS` — LIMB `1` FIRES. `AI_Tutor_Release` is a tree, not a drop
+
+🟢 **Source is present:** `package.json` *(`1 098` B)* and `requirements.txt` *(`149` B)* both
+resolve at `HEAD` `5d9fe6d`, alongside a `15 405` B README. 🟢 **So the `MIT` grant covers source,
+the row is an APPLIANCE rather than a product to evaluate, and p186's 🔴 caveat — *"a RELEASE repo,
+the grant may cover packaged builds only"* — is now RETIRED.**
+
+🔵 **Two of this pass's five limbs fired by correcting a cheap wrong guess rather than by finding
+anything new** *(`ACTION MO`'s population, `ACTION MP`'s path root)*. 🟢 **That is the same lesson
+p186 wrote and it now has a second instance: the probe's shape, not the world's, was the thing
+under test.**
+
 ## Pass 186 — 2026-10-14
 
 🆕 🟢 **Four permissive rows enter this page, and NOT ONE came from a new source. All four were

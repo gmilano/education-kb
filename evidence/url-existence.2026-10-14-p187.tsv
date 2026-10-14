@@ -1,0 +1,56 @@
+# p187 — existence verification for every github slug INTRODUCED by this pass.
+# Oracle: git ls-remote --symref https://github.com/<slug> HEAD.
+# Chosen because this KB measured (p93, re-confirmed p187) that 'curl -sI github.com/<slug>'
+# does NOT discriminate under this session's egress proxy: it returns 403 for a real slug and
+# an invented one alike. ls-remote exits 128 on a slug that does not exist.
+# Negative control run this pass: globant-kb-control/definitely-not-a-real-repo-p187 -> NOT-FOUND.
+# Result: 48 of 48 slugs resolve. 0 dead.
+status	slug
+OK	ArnaudGuiovanna/tutor-mcp
+OK	CloudDown/polymtl-moodle-connect
+OK	DecoyLex/ltix
+OK	G36maid/moodle-mcp
+OK	INRIA/scikit-learn-mooc
+OK	LaurentSta/Oneduc
+OK	MathTrail/canvas-api
+OK	MathTrail/mathtrail-standalone
+OK	Nasus20202/MoodleMCP
+OK	Polycentric-Labs/regrails
+OK	Principled-Evolution/gopal
+OK	RohanMuppa/brightspace-mcp-server
+OK	Schroedinger-Hat/certo
+OK	Selleo/mentingo
+OK	ZachRouan/district-brain
+OK	acanas/swad-core
+OK	alfredang/AI-LMS-TMS
+OK	ashutoshrana/haystack-ferpa-filter
+OK	bruchris/canvas-lms-mcp
+OK	chaz-clark/canvas-toolbox
+OK	elimu-ai/ml-event-simulator
+OK	fedora-infra/tahrir
+OK	iblai/lms
+OK	ink-waffle/sisu-mcp
+OK	kemalyy/edumints-scorm-mcp
+OK	kemalyy/edumints-scorm-skill
+OK	luisgf/openbadgeslib
+OK	memphis-iis/MoFaCTS
+OK	mohamurshid/ElimuAnalytics
+OK	ningkaikok/dotty-tutor
+OK	numbas/Numbas
+OK	numbas/numbas-lti-provider
+OK	onbirdev/moodle-webservice_mcp
+OK	openfun/ralph
+OK	rage/secret-project-331
+OK	readerbench/readerbench-java
+OK	redmodd/tessera
+OK	scormflow/scorm-engine
+OK	siskinskai/spedlex
+OK	solin-repo/moodle-block_atrisk
+OK	terracotta-education/terracotta
+OK	valentineus/moodle-webhooks
+OK	willianmano/moodle-theme_moove
+OK	willwearing/graspful
+OK	wingkwong/react-quiz-component
+OK	xiaochong0302/course-tencent-cloud
+OK	yatori-dev/yatori-go-console
+OK	zhamanov-seabus/nau-ai-advisor

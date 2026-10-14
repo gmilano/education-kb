@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🆕 🟢 **The trend this pass can prove is an ASYMMETRY between the code and the commentary, and it
+is the only finding on these eight pages with a shelf life measured in weeks rather than quarters.**
+
+### 🆕 🔴 Trend `1` — the `MCP`-over-the-LMS layer is real, populated, and UNNAMED
+
+🟢 **A targeted search for *agentic tutoring + `MCP` + learning management* returned, verbatim,
+*"nothing specific on `MCP` (Model Context Protocol)"* and recommended a follow-up search as the
+next step.** 🟢 **The same week's topic-page census returned `11` repositories implementing exactly
+that, `7` of them new to this KB, with grants verified byte by byte.**
+
+| what the commentary names | what the repositories do |
+|---|---|
+| 🟡 "agentic AI as institutional infrastructure", pilots → production | 🟢 **three independent `MCP` servers for Moodle alone**, one of them an in-tree web-service plugin |
+| 🟡 Instructure's **IgniteAI Agent** — retrieves course context, prepares changes, acts only within the user's existing permissions, with approval at key moments | 🟢 the same architecture, permissively licensed, per platform: Moodle, Canvas, Brightspace/D2L, Sisu, `SCORM` |
+| 🔴 **nothing on `MCP`** | 🟢 `MIT` on `5` of `7` new rows |
+
+🔵 **Read this as a timing statement, not a technology one.** 🟢 The incumbent *(IgniteAI)* has
+already defined the governance shape clients will expect — **permission-scoped, approval-gated**.
+🟢 **The open components to build that shape exist now.** 🔴 **The analyst sentence that makes it
+obvious has not been written yet, and when it is, the position stops being differentiating.**
+
+### 🆕 🟢 Trend `2` — compliance stopped being a clause and became a dependency
+
+🔵 For many passes this KB described student-data protection as a design obligation and a paragraph
+in a statement of work. 🟢 **`topics/ferpa` — a `40`-repository page this KB had never read at any
+sort order — returned it as installable software:** `Rego` policy bundles
+*([`gopal`](https://github.com/Principled-Evolution/gopal), `Apache-2.0`)*, a `FERPA` + Title IV
+guardrail *([`regrails`](https://github.com/Polycentric-Labs/regrails), `Apache-2.0`)*, a RAG
+pre-filter *([`haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter),
+`Apache-2.0`)*, a de-identification vocabulary for special education
+*([`spedlex`](https://github.com/siskinskai/spedlex), `MIT`)*.
+
+🟢 **Why now is legible from the regulation:** Oklahoma and Maryland moving to **require human
+review and bar AI from high-stakes student decisions**; the EU naming education access and
+assessment high-risk; 🔴 **and Vietnam becoming the second jurisdiction to put educational
+assessment in a statutory high-risk tier.** 🔵 **Guardrails become a dependency at the moment
+somebody can be fined. That moment is now, in three regions at once.**
+
+### 🆕 🔴 Trend `3` — the human-oversight AUDIT RECORD is the artefact nobody is protecting
+
+🟢 **This is the pass's most actionable finding and it came from reading one schema in full.**
+`ACTION MP` reached [`dotty-tutor`](https://github.com/ningkaikok/dotty-tutor)'s
+`apps/api/persistence/schema.py` *(`19 405` B, `Apache-2.0`)*.
+
+🟢 **The human-oversight surface is one table, `teacher_review_events`**, and it is well designed
+where it counts: `action` is `CHECK`-constrained to exactly `('reviewed', 'overturned',
+'mastery_override')` — 🟢 **a clean three-value vocabulary for "a human looked", "a human overruled
+the model", "a human set mastery directly"**, which is very close to what a regulator means by
+meaningful human oversight.
+
+🔴 **And its `corrected_assessment` column — the teacher's overturning of an AI grade — is
+destroyed by `ondelete="CASCADE"` on TWO independent parents**: `class_id → learning_classes` and
+`assignment_id → assignments`. 🔵 **Deleting a finished class or a single assignment silently
+erases the evidence that a human corrected the machine.** 🟢 By contrast `knowledge_point_id`
+carries **no** `ondelete`, so the pedagogical reference is protected while the audit trail is not.
+
+🔵 **Generalise it past this repository, because it is not a bug in one project.** 🟢 **Course-shaped
+data models treat a class as the aggregate root and cascade everything beneath it — which is right
+for pedagogy and wrong for audit.** 🔴 **The three regimes above all require the record that this
+default deletes.** 🟢 Pattern `32` is the fix: the oversight log must be **outside** the course
+aggregate, and an `xAPI` LRS *([`ralph`](https://github.com/openfun/ralph), `MIT`)* is a
+standards-shaped place to put it.
+
+### 🆕 🟢 Trend `4` — LATAM's deficit is measurement, not adoption
+
+🔴 **`TALIS` `2024`: Brazil `56`%, Chile `55`%, Colombia `53`%, Costa Rica `52`% of secondary
+teachers used AI in the prior year, against an OECD average of `36`%.** 🟢 Uruguay reports `75`% of
+public-school teachers *(Ceibal, `2026`)*. 🟢 UNESCO `IESALC`: `87`% of `200` institutions across
+`19` countries use AI, 🔴 **`26`% have a strategy and `9`% evaluate what they deployed.**
+
+🔵 **The standard regional narrative — LATAM as a late adopter needing to catch up — is
+contradicted by the teacher-level data.** 🟢 **The honest pitch is the inverse: adoption already
+happened, bottom-up and unmeasured, and the gap is governance and evaluation.** 🟢 And there is now
+a named production reference in-region — **PUC Chile**, instructor-configured agents grounded in
+validated course content, Canvas-integrated, centrally governed.
+
+### 🟡 Trend `5` — the licence traps are getting harder, not easier
+
+🟢 **Two new shapes, both of which defeat a body-matching classifier:**
+
+- 🔴 **`P1054` — MIT's body with a clause bolted on.** [`graspful`](https://github.com/willwearing/graspful)'s
+  *"O'Saasy License Agreement"* is MIT verbatim plus an anti-SaaS non-compete. 🟢 Instrument and
+  `14` passing tests: [`compose/code/p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/README.md).
+- 🔴 **`P971`, instances three and four** — `numbas-lti-provider` *(`Apache-2.0` in `560` B)* and
+  `moodle-block_atrisk` *(`GPL-3` in `703` B)*: correct title block, terms at a URL. 🔵 **The patent
+  grant is the only strong reason to prefer Apache over MIT, and it travels as a hyperlink.**
+- 🟢 **And the inverse trap, from `ACTION MO`: Moodle's plugin rules REQUIRE `GPL` and the
+  convention is a header block in every PHP file.** 🔴 **For a Moodle-shaped repository, "no licence
+  file" is close to uninformative** — `onbirdev/moodle-webservice_mcp`'s grant sits in
+  `version.php` and `lib.php` and nowhere else.
+
+🔵 **The through-line across all three: a licence verdict is only as good as the PATH the probe
+read, and "permissive" and "open source" have come apart.**
+
+### 🔴 Trend `6` — a method correction this KB owes itself
+
+🔴 **This pass's first grant sweep returned the same verdict — `NO-GRANT-FOUND` — for `36` of `36`
+repositories.** 🟢 The cause was the instrument: `git ls-remote --symref` emits **two** lines ending
+in `<TAB>HEAD`, the first being `ref: refs/heads/main`, so the SHA read `ref:` and every `raw` URL
+`404`'d. 🟢 Fixed, then validated against a **positive control** *(`fsrs4anki-helper` → `MIT`,
+`1 079` B, file named `License`, reproducing p186's published value exactly)* and a negative control
+that still fails.
+
+🔵 **The rule, cheap and general, and it belongs beside p186's "an absence names its probe":**
+🟢 **a probe that returns the SAME verdict for every row has measured nothing. Run a known-positive
+through any sweep before believing it.** 🔴 Had this gone unchecked, p187 would have published `36`
+repositories as unlicensed — and three of p186's four headline recoveries were rows a previous pass
+had wrongly closed exactly that way.
+
 ## Pass 186 — 2026-10-14
 
 🆕 🟢 **The method trend this pass can prove is a correction to p185's own correction, and it is the

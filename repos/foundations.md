@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🆕 🟢 **Fourteen foundational rows enter, every grant read over the raw channel this pass with the
+HTTP code checked, and the regional balance of this page changes materially: `7` of the `14` are
+EMEA and they are university-built infrastructure, not start-up demos.**
+
+### 🟢 The learning-record and analytics layer — the gap this page has carried longest
+
+| repo | licence, as measured | region | why it is foundational |
+|---|---|---|---|
+| 🆕 🟢 **[`openfun/ralph`](https://github.com/openfun/ralph)** | 🟢 **`MIT`** *(`LICENSE.md`, `1 094` B)* | EMEA | 🟢 **a Learning Record Store** — `xAPI` statements in, queryable analytics out. `51`★, from **France Université Numérique**. 🔵 **This page has recommended "stand up an LRS" for many passes without naming a permissive one. This is it** |
+| 🆕 🟢 **[`scormflow/scorm-engine`](https://github.com/scormflow/scorm-engine)** | 🟢 **`MIT`** *(`LICENSE`, `1 079` B)* | Global | 🟢 `SCORM` **+ `xAPI` + `cmi5` infrastructure with a built-in LRS** — the three content standards and the record store in one permissive tree |
+| 🆕 🟢 **[`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)** | 🟢 **`Apache-2.0`** *(`LICENSE`, `11 323` B, full text)* | North America | 🟢 **an LMS plug-in for RANDOMISED EXPERIMENTS on live assignments.** `21`★, default branch `development`. 🔵 The only row on this page that lets a client **measure whether the AI helped**, rather than assert it |
+| 🆕 🟡 **[`solin-repo/moodle-block_atrisk`](https://github.com/solin-repo/moodle-block_atrisk)** | 🟡 **`GPL-3.0-or-later` BY REFERENCE** — 🔴 `703` B, i.e. `P971`'s shape: correct title block, terms live at a URL | EMEA | a Moodle block flagging students falling behind — the early-warning seam, in-tree |
+| 🆕 🟢 **[`elimu-ai/ml-event-simulator`](https://github.com/elimu-ai/ml-event-simulator)** | 🟢 **`MIT`** *(`LICENSE`, `1 065` B)* | EMEA | 🟢 a **simulator for learning and assessment events** — how you load-test an analytics pipeline before real children generate the data |
+
+### 🟢 University-built platforms, which is a different risk profile from a start-up's
+
+| repo | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 **[`rage/secret-project-331`](https://github.com/rage/secret-project-331)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `320`★ — the **University of Helsinki** MOOC platform behind its courses. 🟢 Permissive, and running at national scale |
+| 🆕 🟢 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🟡 **`GPL-3.0`** *(`34 501` B, full text)* | EMEA | `76`★ — **SWAD**, Universidad de Granada's platform, in continuous use for two decades. 🔴 `GPL`: extend, do not absorb |
+| 🆕 🟢 **[`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS)** | 🟡 **`GPL-3.0`** *(`34 523` B)* | North America | adaptive practice driven by **cognitive models** — University of Memphis, built for research AND practice |
+| 🆕 🟢 **[`INRIA/scikit-learn-mooc`](https://github.com/INRIA/scikit-learn-mooc)** | 🟡 **Creative Commons** *(`18 658` B)* | EMEA | `1.4`k★ — **Inria**'s ML course. 🔵 A content grant, not a software one: reusable as **curriculum**, and that is the scarcer asset |
+| 🆕 🟢 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)** | 🟡 **`GPL-2.0`** *(`18 092` B — the `GPL-2` length, not `GPL-3`'s `~35` kB)* | APAC | `1.2`k★ — a PHP online-education system with Docker deployment, default branch `v2`. 🔵 **Per `P960`, `GPL-2` is NOT `LGPL`: "link, don't absorb" does not apply** |
+
+### 🟢 The credentialing layer — `Open Badges 3.0` is now the live version
+
+🔵 **`topics/open-badges` was the one page where the recency sort UNDER-performed *(`45`% absent
+against a `79`% mean)* — this KB already held its head. 🟢 But what it had missed is the version
+shift: the new rows implement `3.0`, i.e. Verifiable Credentials, where the shelf's older rows are
+`2.0` bakeries.**
+
+| repo | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 **[`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo)** | 🟡 **`GPL-3.0`** *(`33 820` B)* | EMEA | `62`★ — **`Open Badges 3.0`** issuance for event and course organisers |
+| 🆕 🟢 **[`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir)** | 🟡 **`GPL`** *(`34 917` B)* | Global | `85`★ — Fedora's own badge issuer, **a decade of production use**; default branch `develop` |
+| 🆕 🟡 **[`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib)** | 🟡 **`LGPL-3.0`** *(`LICENSE.txt`, `7 650` B)* | EMEA | a Python library + CLI to **issue, verify and revoke** `Open Badges 3.0`. 🟢 **`LGPL` is the one place "link, don't absorb" is the correct advice** *(`P960`)* |
+
+### 🟢 The `LTI` seam, and a `P971` instance worth naming
+
+| repo | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 **[`DecoyLex/ltix`](https://github.com/DecoyLex/ltix)** | 🟢 **`MIT`** *(`1 068` B)* | Global | **`LTI 1.3` for Elixir** — the first non-Python/PHP/JS `LTI` row on this page |
+| 🆕 🟡 **[`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider)** | 🟡 **`Apache-2.0` BY REFERENCE ONLY** — 🔴 `LICENSE.md` is `560` B against Apache's canonical `11 357` | EMEA | `11`★, Newcastle University; runs **Numbas** exams *(`215`★)* as an `LTI` tool |
+
+🔴 **`P971`, third and fourth instances, both this pass** *(`numbas-lti-provider` at `560` B,
+`moodle-block_atrisk` at `703` B)*. 🔵 **The recurring consequence is specific: the only strong
+reason to prefer `Apache-2.0` over `MIT` is §`3`, the patent grant — and in a `560` B file §`3`
+travels as a URL.** 🟢 A client's counsel will ask. Say "by reference" rather than "Apache-2.0".
+
+### 🟢 Components, which belong here because they remove a build
+
+| repo | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 **[`wingkwong/react-quiz-component`](https://github.com/wingkwong/react-quiz-component)** | 🟢 **`MIT`** *(`1 069` B)* | APAC | `403`★ — JSON-defined quizzes as a React component |
+| 🆕 🟢 **[`redmodd/tessera`](https://github.com/redmodd/tessera)** | 🟢 **`MIT`** *(`1 077` B)* | Global | a JS framework for interactive eLearning **built for AI-assisted authoring**, and it appeared on `4` of the `12` topic pages — the pass's most cross-listed new row |
+| 🆕 🟢 **[`iblai/lms`](https://github.com/iblai/lms)** | 🟢 **`MIT`** *(`1 062` B)* | North America | `14`★ — a skills/competency/credential platform; pairs with the same org's `wallet` |
+| 🆕 🟢 **[`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks)** | 🟡 **`GPL`** *(`LICENSE.txt`, `35 200` B)* | Global | `20`★ — lets an external application **subscribe to Moodle events**. 🔵 The push half of the `MCP` story, which is all pull |
+| 🆕 🟢 **[`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove)** | 🟡 **`GPL-3.0`** *(`LICENSE.md`, `34 903` B)* | LATAM | `192`★ — the most-used community Moodle theme, maintained from **Brazil** |
+
+### 🔴 Found, wanted, and NOT usable
+
+| repo | why it is here | why it stays off the shelf |
+|---|---|---|
+| 🔴 **[`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS)** | 🟢 `19`★, and a **`57 120` B README** documenting Singapore's `WSQ` / `SkillsFuture` / `SSG` assessment and funding workflow in extraordinary operational detail — assessor signature blocks, `TRAQOM` survey gating, per-method submission states | 🔴 **NO GRANT FOUND.** Probed at `10` paths plus the README. 🟡 **Read it as APAC domain intelligence — it is the best single description of that regime this KB has seen — and do not fork it** |
+| 🔴 **[`mohamurshid/ElimuAnalytics`](https://github.com/mohamurshid/ElimuAnalytics)** | IRT-based learning-gap detection for **Kenya's competency-based curriculum** — a genuinely rare regional asset | 🔴 **NO GRANT FOUND** at `10` paths plus the README |
+| 🔴 **[`willwearing/graspful`](https://github.com/willwearing/graspful)** | agent-first course authoring, `YAML` knowledge graphs | 🔴 **`P1054`: MIT's body with an anti-SaaS clause appended. Not open source** |
+
 ## Pass 186 — 2026-10-14
 
 🆕 🟢 **Two foundational rows enter, and the pass's two pre-registered measurements come back with

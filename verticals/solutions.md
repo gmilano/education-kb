@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🆕 🟢 **The routing table gains a LAYER it has never had — the learning record store — and the
+`MCP` row p186 added as a curiosity is promoted to a column, because every major LMS on this table
+now has one.**
+
+### 🟢 NEW LAYER — the Learning Record Store, named at last
+
+🔵 **This page has told implementers to "stand up an LRS" for many passes without naming a
+permissive one.** 🟢 **Two now exist on the shelf, and one of them is a national platform's.**
+
+| platform | licence | layer | tenancy | AI seam |
+|---|---|---|---|---|
+| 🆕 🟢 **[`openfun/ralph`](https://github.com/openfun/ralph)** | 🟢 **`MIT`** *(`LICENSE.md`, `1 094` B)* | 🟢 **LRS** — `xAPI` statements in, queryable analytics out | self-hosted; **France Université Numérique** runs it at national scale | 🟢 **the agent's MEMORY of what the learner actually did**, in a standard format, separable from the LMS |
+| 🆕 🟢 **[`scormflow/scorm-engine`](https://github.com/scormflow/scorm-engine)** | 🟢 **`MIT`** *(`LICENSE`, `1 079` B)* | 🟢 `SCORM` **+ `xAPI` + `cmi5` + LRS** in one tree | self-hosted | 🟢 content standards AND the record store without stitching two projects together |
+
+🔵 **Why a separate LRS layer changes an engagement.** 🔴 Every tutoring pattern on this shelf has
+had to answer *"where does the interaction history live?"* with either the LMS's own tables *(a fork)*
+or a bespoke store *(a migration later)*. 🟢 **An `xAPI` LRS is the answer that outlives the tutor:
+swap the model, keep the record.** 🔵 And `xAPI`/`cmi5` is what a procurement officer already knows
+how to ask for.
+
+### 🟢 PROMOTED TO A COLUMN — `MCP` availability per platform
+
+🟢 **p186 added `sisu-mcp` as a new layer. `ACTION MR` shows it was the first row of a populated
+one**: the agent-tool surface is now a property worth recording for every platform on this table.
+
+| platform | the `MCP`/agent surface, as found | licence of the surface |
+|---|---|---|
+| 🟢 **Moodle** *(`GPL-3`, `v5.x`)* | 🟢 **three independent servers**: [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(courses, assignments, grades)*, [`CloudDown/polymtl-moodle-connect`](https://github.com/CloudDown/polymtl-moodle-connect) *(with installers)*, [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) *(in-tree, as a web service plugin)*. 🟢 Plus [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) for **push** | 🟢 `MIT` / `MIT` / `GPL-3.0-or-later` *(file headers)* |
+| 🟢 **Canvas** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) *(`9`★)*; 🟢 **[`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) adds a `FERPA`-safe wrapper** | 🟢 `MIT` |
+| 🟢 **Brightspace / D2L** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(`57`★ — the category's most-starred row)* | *(on shelf; grant recorded earlier)* |
+| 🟢 **Sisu / Funidata** *(SIS)* | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) — 🟢 **read-only by design** | 🟢 `MIT` *(`package.json` only)* |
+| 🟢 **`SCORM`** *(as a format)* | [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) + [`-skill`](https://github.com/kemalyy/edumints-scorm-skill) | 🟢 `MIT` |
+| 🔴 **Open edX** *(`AGPL-3`)* | 🔴 **NO `MCP` server found** on any page read this pass | — |
+| 🔴 **Chamilo, OpenOLAT, Sakai** | 🔴 **none found** | — |
+
+🔴 **`Gap 427`, and it is the one to quote in a planning conversation: the agent-tool layer exists
+for the platforms with the most permissive or most commercial gravity, and NOT for `AGPL` Open edX
+nor for the European academic platforms.** 🔵 An Open edX client is therefore an adapter build, and
+should be priced as one.
+
+### 🟢 NEW LAYER — compliance as code, in front of the model
+
+🔵 **Every pattern on this shelf has described student-data protection as a design obligation.
+`topics/ferpa` returned it as SOFTWARE.**
+
+| component | licence | layer | what it does |
+|---|---|---|---|
+| 🆕 🟢 **[`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | 🟢 **`Rego` policy** | `8`★ — AI-compliance policies including `FERPA`, as policy-as-code. 🟢 Drops into an `OPA` gate a client may already run for other reasons |
+| 🆕 🟢 **[`Polycentric-Labs/regrails`](https://github.com/Polycentric-Labs/regrails)** | 🟢 **`Apache-2.0`** *(`11 282` B)* | guardrail | 🟢 **`FERPA` AND Title IV together** — the first row here treating student *funding* rules as an AI surface |
+| 🆕 🟢 **[`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter)** | 🟢 **`Apache-2.0`** *(`12 101` B)* | RAG pre-filter | a `FERPA` document filter for **Haystack** pipelines. 🟡 One author publishes five adjacent repos — one body of work, not five corroborations |
+| 🆕 🟢 **[`siskinskai/spedlex`](https://github.com/siskinskai/spedlex)** | 🟢 **`MIT`** *(`1 076` B)* | vocabulary | 🟢 **special-education terms for de-identifying student PII/PHI** — the asset nobody budgets for and every SPED engagement needs |
+| 🆕 🟢 **[`ZachRouan/district-brain`](https://github.com/ZachRouan/district-brain)** | 🟢 **`MIT`** *(`1 066` B)* | role-scoped RAG | locally hosted district assistant, **scoped by role** rather than filtered after retrieval |
+| 🆕 🟢 **[`zhamanov-seabus/nau-ai-advisor`](https://github.com/zhamanov-seabus/nau-ai-advisor)** | 🟢 **`Apache-2.0`** *(`11 375` B)* | application | a self-hostable **`FERPA`-aware academic advisor** |
+
+### 🟢 Platforms added to the routing table
+
+| platform | licence | region | layer / note |
+|---|---|---|---|
+| 🆕 🟢 **[`rage/secret-project-331`](https://github.com/rage/secret-project-331)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `320`★ — **University of Helsinki**'s MOOC platform. 🟢 The most permissive course-delivery platform on this table |
+| 🆕 🟡 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🟡 `GPL-3.0` *(`34 501` B)* | EMEA | `76`★ — Universidad de Granada, two decades in production |
+| 🆕 🟡 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)** | 🟡 `GPL-2.0` *(`18 092` B)* | APAC | `1.2`k★ — PHP, Docker, knowledge-sales oriented. 🔵 **`GPL-2`, so `P960` applies: NOT `LGPL`** |
+| 🆕 🟢 **[`iblai/lms`](https://github.com/iblai/lms)** | 🟢 `MIT` *(`1 062` B)* | North America | skills / competencies / credentials, with a `wallet` companion |
+| 🆕 🟡 **[`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc)** | *(grant unread this pass)* | EMEA | Laravel LMS with `SCORM` + native quizzes — recorded for a later probe |
+
+### 🔴 DO-NOT-FORK, recorded with the reason
+
+| row | verdict |
+|---|---|
+| 🔴 **[`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS)** | 🔴 **NO GRANT.** 🟡 But its `57 120` B README is the best description this KB holds of Singapore's `WSQ`/`SkillsFuture`/`SSG` assessment-and-funding regime — assessor signature blocks stamped into submitted documents, `TRAQOM` survey completion gating trainer payout, per-method submission states. 🟢 **Read as APAC domain intelligence; build your own** |
+| 🔴 **[`willwearing/graspful`](https://github.com/willwearing/graspful)** | 🔴 **NOT OPEN SOURCE** — `P1054`, MIT's body with an anti-SaaS non-compete appended |
+| 🔴 **[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP)** | 🔴 **NO GRANT** at `10` paths plus README |
+
 ## Pass 186 — 2026-10-14
 
 🆕 🟢 **The routing table gains a row in a layer it had only ever described as *"build an adapter"*,

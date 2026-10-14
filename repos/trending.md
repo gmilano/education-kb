@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 187 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: still `0` education repositories — a NINTH consecutive pass.** 🔵 The
+query is kept only as a record; p92 recommended spending the budget elsewhere and every pass since
+has been paid for doing so.
+
+### 🟢 `ACTION MR` — LIMB `1` FIRES at more than double its threshold. The stars census is dead
+
+🔵 Pre-registered: re-sort the `12` remaining censused topic pages by `?s=updated` and record BOTH
+the absent-row rate and the not-shelf-material rate. 🔵 Limb `1` needed the absent rate to **hold
+near `37`%** *(p186's figure, from `3` pages)*. 🔵 Limb `2` predicted it would **collapse on the
+platform topics**, where repositories are old.
+
+| topic page, `?s=updated` | page says exist | rendered | absent from census | absent % |
+|---|---|---|---|---|
+| 🔴 **`topics/moodle`** | `2 149` | `20` | 🔴 **`20`** | 🔴 **`100`%** |
+| `topics/lms` | `2 454` | `20` | `17` | `85`% |
+| `topics/learning-analytics` | `373` | `20` | `17` | `85`% |
+| `topics/mooc` | `640` | `20` | `17` | `85`% |
+| `topics/edtech` | `4 426` | `20` | `17` | `85`% |
+| `topics/e-learning` | `1 207` | `20` | `17` | `85`% |
+| `topics/lti` | `184` | `20` | `16` | `80`% |
+| `topics/scorm` | `228` | `20` | `16` | `80`% |
+| `topics/adaptive-learning` | `579` | `20` | `15` | `75`% |
+| `topics/student-information-system` | `183` | `20` | `15` | `75`% |
+| `topics/ferpa` | `40` | `20` | `13` | `65`% |
+| 🟢 `topics/open-badges` | `30` | `20` | `9` | `45`% |
+| **total** | **`12 493`** | **`240`** | 🔴 **`189`** | 🔴 **`79`%** |
+
+🔴 **Limb `1` needed `~37`%. It measured `79`%.** 🔴 **And limb `2` is FALSIFIED, in the opposite
+direction to its prediction: the platform topics are the WORST, not the best.** `moodle` returned
+`20` of `20` rows this KB had never seen, across a topic page claiming `2 149` repositories.
+
+🟢 **Consequences, stated plainly so a later pass cannot re-derive them:**
+
+1. 🔴 **Every "channel ~`80`% censused" figure this KB published before p185 described
+   stars-descending and nothing else.** The `37`% replacement from p186 is ALSO retired — it was
+   measured on the three youngest, most agent-shaped topics and was the optimistic end of the range.
+2. 🟢 **`189` unseen rows across `240` rendered is not a backlog to clear, it is evidence that
+   per-topic exhaustion is the wrong unit.** A topic page claiming thousands of repositories cannot
+   be censused `20` rows at a time.
+3. 🟢 **`open-badges` is the control that makes the finding credible.** It is the one small topic
+   *(`30` repositories)*, and it is the one page where this KB really does hold most of the
+   population — `45`%. 🔵 **The absent rate tracks topic SIZE, not topic age.**
+
+### 🔴 The honest counterweight: precision fell further than yield rose
+
+🟡 **Roughly half of the `189` absent rows are not shelf material**, and p186's warning about the
+recency sort's lower precision understated it. 🟢 **Two noise mechanisms are now NAMED, which makes
+them cheap to filter next pass:**
+
+| mechanism | size | what it is |
+|---|---|---|
+| 🔴 **the `api-evangelist` flood** | 🔴 **`23` of `189` absent rows (`12`%)** | ONE account mass-publishing "third-party profile of X's API" stubs — `turnitin`, `credly`, `coursera`, `powerschool`, `knewton`, `proctorio`, four universities, and more. 🔴 **Not software. It is the single largest source of absent rows on this pass** |
+| 🔴 **course-completion automation** | `6` rows, concentrated on `topics/mooc` | [`yatori-dev/yatori-go-console`](https://github.com/yatori-dev/yatori-go-console) *(`548`★)* and `-core`, `CourseFlow`, `chaoxing-auto-course`, two SJTU/BJTU downloaders. 🔵 **Tools to BEAT the LMS — auto-playing videos, auto-answering chapter exercises.** Real engineering, real stars, and 🔴 **the opposite of a studio asset** |
+
+🔵 **`Gap 426`: both mechanisms are account- or intent-shaped, not topic-shaped, so a per-topic
+precision estimate cannot see them.** 🟢 A `topics/mooc` row is `85`% absent and perhaps `35`%
+useful; `topics/ferpa` is `65`% absent and nearly all of it useful. **Yield and value are
+different measurements and this KB has been conflating them.**
+
+### 🟢 What the sweep was actually worth: two new categories
+
+🟢 **`11` rows of `MCP`-over-the-LMS** *(see [`agents/trending.md`](../agents/trending.md))* and
+🟢 **`10`+ rows of `FERPA` compliance-as-code**, the second of which came off a topic page
+— `topics/ferpa`, `40` repositories total — that this KB had never read at any sort order.
+🔵 **A `40`-repository topic page is cheap to exhaust and returned a whole category. The biggest
+pages returned the most noise. That is the opposite of how this KB has been allocating its budget.**
+
+### 🟢 Trending-adjacent rows worth naming, with grants verified
+
+| repo | licence | ★ | region |
+|---|---|---|---|
+| 🆕 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 `MIT` *(`1 094` B)* | `51` | EMEA |
+| 🆕 🟢 [`rage/secret-project-331`](https://github.com/rage/secret-project-331) | 🟢 `Apache-2.0` *(`11 357` B)* | `320` | EMEA |
+| 🆕 🟢 [`wingkwong/react-quiz-component`](https://github.com/wingkwong/react-quiz-component) | 🟢 `MIT` *(`1 069` B)* | `403` | APAC |
+| 🆕 🟢 [`INRIA/scikit-learn-mooc`](https://github.com/INRIA/scikit-learn-mooc) | 🟡 `CC` *(`18 658` B)* | `1.4`k | EMEA |
+| 🆕 🟢 [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 🟡 `GPL-2.0` *(`18 092` B)* | `1.2`k | APAC |
+| 🆕 🟢 [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | 🟡 `GPL-3.0` *(`34 903` B)* | `192` | LATAM |
+| 🆕 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(already shelved; re-seen)* | — | `94` | EMEA |
+| 🆕 🟢 [`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir) | 🟡 `GPL` *(`34 917` B)* | `85` | Global |
+| 🆕 🟢 [`acanas/swad-core`](https://github.com/acanas/swad-core) | 🟡 `GPL-3.0` *(`34 501` B)* | `76` | EMEA |
+| 🆕 🟢 [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟡 `GPL-3.0` *(`33 820` B)* | `62` | EMEA |
+| 🆕 🟢 [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 `Apache-2.0` *(`11 323` B)* | `21` | North America |
+
+🔴 **★ counts remain published metadata under test, not evidence** *(`gap 140`)* — every figure
+above is a topic page's own rendering.
+
+Evidence: [`evidence/recency-census.2026-10-14-p187.tsv`](../evidence/recency-census.2026-10-14-p187.tsv),
+[`evidence/grant-probe.2026-10-14-p187.tsv`](../evidence/grant-probe.2026-10-14-p187.tsv).
+
 ## Pass 186 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
