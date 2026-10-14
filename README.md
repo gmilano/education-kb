@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14
+
+### 🔴 First: the licence column assumes software, and this industry's best layer is content
+
+🟢 Read from its own blob this hour: [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— **`858★`**, `165` teacher-facing skills, **`Creative Commons Attribution-ShareAlike 4.0
+International`**. 🔴 **The second-largest agent-skill repository in this industry, and a
+one-word licence cell cannot say what that means:**
+
+- 🔴 **`ShareAlike` is copyleft on CONTENT.** Adapt a skill into a client deliverable and the
+  adaptation must be `CC-BY-SA-4.0`. **For a prompt payload that binds harder than AGPL does
+  for a server** — the skill *is* the deliverable, so there is no "we only call it over the
+  network" escape.
+- 🔴 **Its `mcp-server/` code has no software grant at all.** A CC licence carries **no
+  patent grant**, and Creative Commons advises against using CC for software.
+- 🟢 **The payloads are still usable** — `CC-BY-SA` permits commercial use. The constraint is
+  on keeping the adaptation closed. **That distinction is the whole engagement question.**
+
+🆕 🔴 **`Gap 459`, measured on `8` rows:** `pupilfirst` is MIT for code and **`CC-BY-SA-4.0`
+for `docs/`**; `human-skill-tree`'s `skills/` is **dual AGPL-OR-MIT**; `bncc-dev` splits
+`LICENSE-CODIGO`/`LICENSE-DADOS`. 🟢 **Ask what grant covers the PATH you are shipping, never
+what licence the repo is.**
+[`evidence/content-code-grant-split.2026-10-14-p202.tsv`](evidence/content-code-grant-split.2026-10-14-p202.tsv).
+
+### 🔴 `ACTION OS`: the LATAM corpus is permissively licensed, and three of four repos are bibliographies
+
+🟢 p201 sold `P201-2` on *"`~60 000★` of Spanish/Portuguese curriculum nobody has wired to an
+agent."* **All four named repos blob-read: `3`× MIT, `1`× Apache-2.0.** 🔴 **And that was the
+wrong question.**
+
+| repo | ★ | shape | grant's reach over the material |
+|---|---|---|---|
+| `mouredev/Hello-Python` | `37.8k` | 🟢 **real corpus** — `Basic/`, `Intermediate/`, `Backend/` in-repo | 🟢 **yes** |
+| `Universidade-Livre/ciencia-da-computacao` | `20.9k` | 🔴 **index** — `4` root files | 🔴 **none** |
+| `Universidade-Livre/matematica` | `1.4k` | 🔴 **index** — `4` files, no directories | 🔴 **none** |
+| `natayadev/dataengineering-roadmap` | `903` | 🟡 roadmap + own `books/` | 🟡 partial |
+
+🔴 **`~23 000★` of the headline is MIT over a hyperlink list** — `ciencia-da-computacao`'s own
+README says *"Apenas publique … os materiais que seu Curso permite que sejam publicados."*
+🟢 **`Hello-Python` is `63`% of the figure and the only row whose grant reaches the
+material.** 🆕 **`Gap 458`: `Gap 445`'s inverse — not an instrument's reach mistaken for the
+world, but a GRANT's reach mistaken for the ASSET.** P201-2 corrected in place.
+
+### 🟢 `ACTION OP`: `3 107` matches across `8` vocabularies, against a published population of `~520`
+
+`topic:moodle-plugin` **916** · `adaptive-learning` **582** · `open-educational-resources`
+**377** · `learning-analytics` **374** · `xapi` **300** · `scorm` **229** · `lti` **185** ·
+`proctoring` **144**. 🔴 **Discovery does not move to quarterly.** 🟢 **And it surfaced a
+foundational layer this KB had missed for `201` passes: `xAPI`+`SCORM`+`LTI`+analytics =
+`1 088` repositories, mature, institutionally adopted, mostly PERMISSIVE, and almost
+entirely pre-AI** — `lrsql` (**Apache-2.0**), `tsugi` (**Apache-2.0**), `scorm-again`
+(**MIT**), `ralph` (MIT). 🟢 **Every tutor in this KB invents its own progress model; xAPI
+standardised one a decade ago and an LRS already stores it.** `P202-1`.
+
+### 🟢 `ACTION OO`: the gate works, and NEITHER pre-registered limb was right
+
+Both limbs assumed a REJECTER. 🟢 **Measured over `160` rows: `0` of `23` homonyms admitted,
+`117` of `137` real rows auto-kept, `20` (`12.5`%) to review.** So the gate emits
+**`KEEP`/`REVIEW` and has no `REJECT`** — a contract asserted in its suite, because **an OER
+repo names its SUBJECT ("Programming with R") and never its pedagogy.**
+
+🟢 **The finding worth keeping: noise and recall are ANTI-correlated.**
+`adaptive-learning` is 🔴 **`70`% not-education** *(its two biggest rows are a maths library
+`1.2k★` and a screen-brightness daemon `948★`)* and the gate handles it perfectly;
+`open-educational-resources` is `0`% noise and the gate withholds `45`% of its real rows.
+🟢 **A vocabulary whose token is a product name (`moodle-plugin`) or a standard (`scorm`) is
+clean; one whose token is a generic technical phrase is majority noise — and for a clean
+vocabulary the correct gate is NO gate.**
+
+🔴 **And bare `learning` is NOISE in an education KB** — the most common token in both
+education and machine learning. 🔴 **This gate's own first version matched `grade` inside
+`Production-grade` and `exam` inside `example`.** Both committed as regressions. **44/44.**
+
+### 🟢 `ACTION OR`: the shared preamble does not defeat a reader — the FALLBACK clause does the work
+
+🔴 p201's *"the SAME sentence verbatim"* is imprecise: `leemons` and `pupilfirst` share a
+**template** and differ by two words (`"files or"`) plus the quoted licence name —
+**`"Fair code License"`** against **`"MIT"`**. 🆕 **Reading scope found a third grant on
+`pupilfirst` the KB did not have: `docs/` is `CC-BY-SA-4.0`.** 🔵 And the reader's own first
+version collapsed `AGPL-3.0 OR MIT, at your option` to `AGPL-3.0` — **discarding the only
+limb that makes those payloads shippable.** **23/23.**
+
+### 🟢 `ACTION NU-EU` closes: the EU AI Act instrument has a number, and education is in Annex III
+
+| | |
+|---|---|
+| **Regulation (EU) 2026/1744** *("Digital Omnibus on AI")* | OJ **`2026-07-24`**, in force **`2026-07-27`** |
+| 🔴 **Annex III high-risk — education, incl. `exam grading`** | 🔴 **deferred to `2027-12-02`** |
+| 🟢 **Article 50 transparency** | 🟢 **ALREADY IN FORCE since `2026-08-02`** |
+
+🟢 **So the compliance work due TODAY is synthetic-content marking — and this KB built those
+instruments `12` passes ago** (`compose/code/aiact-50-2-*`). 🔴 **Anything that grades a
+learner is a high-risk system with a `14`-month deadline.** `P202-2`. ⚠️ Secondhand:
+`eur-lex.europa.eu` does not resolve from this session.
+
+### 🟢 Regions: three of p201's declared gaps close, and MEA does not
+
+- 🟢 **APAC — China's MoE "AI + Education" plan (April 2026, five departments, to 2030) and
+  Indonesia's joint ministerial decree (March 2026).** 🔴 **Both forbid school students from
+  using AI that directly generates answers, while permitting purpose-built educational
+  tools.** 🟢 **Regulation has specified a PRODUCT SHAPE and the open-source shelf already
+  built it** — pedagogy in auditable tools *(RL, FSRS, BKT behind MCP calls)*, the LLM only
+  rendering. `P202-3`.
+- 🟢 **North America — the buyer arrived by statute.** `8` states now legally require
+  districts to adopt written AI policies (`ID` `IL` `MD` `OH` `OK` `TN` `UT` `VA`); **Maryland
+  requires a designated `AI coordinator` per district.** `33`–`35` states have guidance.
+  🔴 **Thousands of small buyers with a legal duty and no evaluation capacity.**
+- 🟢 **EMEA — adoption half closes:** OECD Digital Education Outlook 2026 reports a German
+  survey of `23 000`+ students at **`94`% AI use**. 🔴 **The procurement half does not: still
+  no named institutional buyer.** ⚠️ `www.oecd.org` does not resolve; secondhand.
+- 🟢 **LATAM — the governance gap reproduces and strengthens:** UNESCO IESALC `87`% use /
+  `26`% strategy, plus 🆕 **only `8`% of students can say what their institution's AI rules
+  are** *(Digital Education Council, `30 000`+ respondents)* and 🆕 **Brazil `53`%
+  administrator use / `22`% with guidelines.** 🟢 **That, not the corpus, is the region's
+  sellable position.**
+- 🔴 **MEA: still no education-specific regulation or adoption data. Third consecutive pass.
+  An informed absence, not coverage.**
+
+### 🔴 The market figures got worse, so the instruction stands
+
+🔴 **Two 2026 estimates for *agentic AI in education* disagree on the GROWTH RATE by `8`×:
+`36`% CAGR against `4.5`%.** p201 found `25.9`% against `40.9`%. 🟢 **Quote the range and the
+disagreement, ask whether corporate L&D is included, and never quote a single figure.**
+`Gap 457`'s regional irreconcilability (`4`× on North America, `230`× on LATAM) is unchanged.
+
+### 🟢 `ACTION OT`: the suite channel is not binary, and the seam was written at pass 74
+
+🔴 **In ONE session: offline suites RAN `415`/`415` while `test_probe_payload.sh` was DENIED
+`[Code from External]` and direct `curl` was denied.** 🟢 **The seam is the `curl` inside the
+script — exactly what `lib/README.md` recorded at pass 74: *"el seam real no es librería vs
+script, es RED vs NO-RED."*** 🔵 **So p201's framing — a per-session coin toss — was too
+coarse. Measure per CHANNEL.** 🟢 **p202 total: `415` inherited + `44` gate + `23` scope
+reader = `482` offline checks, `0` failures.** Census:
+[`evidence/channel-census.2026-10-14-p202.tsv`](evidence/channel-census.2026-10-14-p202.tsv).
+🔴 **`api.github.com` returns `403`, so no exact star count appears in this pass** — topic
+pages are exact below `1 000` and rounded above, and every figure says so.
+
+### 🔴 The one ask that remains for a human
+
+🔴 **`ACTION MN` *(fifteenth pass)* — may this KB open licensing issues on third-party
+repositories?** **Still NOT RUN, and correctly so: an outward-facing write on other people's
+repositories, on an unattended run.** 🆕 **p202 adds the strongest candidate yet, and it is a
+different kind of question:** `education-agent-skills` (`858★`) licenses a running
+`mcp-server/` under **`CC-BY-SA-4.0`** — **not a missing licence, but a licence that probably
+does not do what its author intends**, and the author is a named individual educator.
+
+
 ## Pass 201 — 2026-10-14
 
 ### 🔴 First: p200's most actionable sentence sent a studio to build something five universities maintain

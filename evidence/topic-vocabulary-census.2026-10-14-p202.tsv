@@ -1,0 +1,10 @@
+topic	total_matches_page_header	rows_read	real_edu_rows	homonym_rows	homonym_rate_pct	gate_auto_kept	gate_review_queue	gate_recall_pct	largest_row_is_noise	vocabulary_class
+proctoring	144	20	19	1	5	14	5	74	no	product/practice term
+learning-analytics	374	20	19	1	5	18	1	95	YES (paper_notes 170*)	field term
+xapi	300	20	17	3	15	17	0	100	YES (xcp-ng 1.6k*)	standard acronym, collides with virtualization + a trading API
+lti	185	20	17	3	15	15	2	88	no	standard acronym
+scorm	229	20	19	1	5	19	0	100	no	standard acronym
+adaptive-learning	582	20	6	14	70	5	1	83	YES (python-adaptive 1.2k*)	GENERIC ML PHRASE -- worst case measured in this KB
+open-educational-resources	377	20	20	0	0	11	9	55	no	field term, clean
+moodle-plugin	916	20	20	0	0	18	2	90	no	PRODUCT NAME -- cleanest case
+TOTAL	3107	160	137	23	14.4	117	20	85.4	--	--

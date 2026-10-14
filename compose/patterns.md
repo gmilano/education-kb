@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14
+
+### 🟢 P202-1 — The LRS-backed tutor: give the agent a standards-compliant memory *(Global, 6–8 wks)*
+
+🔴 **Every tutor in [`agents/top.md`](../agents/top.md) invents its own learner-progress
+store. `xAPI` standardised one a decade ago, and `1 088` repositories implement it.** This
+pattern is the join nobody has built.
+
+**Wire-up, all permissive:**
+
+1. **Event store** — [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+   (**Apache-2.0**, `144★`). A Learning Record Store on SQL, so the client's existing BI
+   stack reads the same tables. Conform against
+   [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+   (`78★`) — the MUST requirements of the spec, as a test suite you run in CI.
+2. **Statement vocabulary** — [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec)
+   (`954★`). The agent emits `actor + verb + object` for every interaction. 🟢 **Do not
+   invent verbs**: use the published profiles from
+   [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) (`60★`).
+3. **Pedagogy as tools, not prompts** —
+   [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**,
+   `48★`, Bayesian Knowledge Tracing in Go, over MCP) for mastery estimation, and
+   [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (**MIT**, `515★`)
+   for spaced repetition. The LLM selects and renders; it does not decide mastery.
+4. **Install path** — [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)
+   (**Apache-2.0**, `376★`) wraps the agent as an **LTI 1.3** tool, so every
+   Moodle/Canvas/Blackboard becomes a deployment target without a fork.
+5. **Proof it worked** —
+   [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+   (`21★`) runs a randomised controlled trial inside the live course.
+
+🟢 **Why it sells:** the BKT mastery estimate and the xAPI statement log together are an
+**audit trail of what the AI did and why** — which is simultaneously the Annex III
+conformity evidence *(due `2027-12-02`)*, the Maryland AI-coordinator's defence of a tool
+choice, and the thing that makes "our tutor improved outcomes" a claim rather than a hope.
+🔴 **Licence check: every component above is MIT or Apache-2.0.** Keep
+`LearningLocker` (GPL-3.0) out of the build and use it only as an integration target.
+
+### 🟢 P202-2 — Annex III readiness for a grading agent *(EMEA, 8–10 wks)*
+
+🔴 **`exam grading` is named in Annex III of the EU AI Act. Obligations bind `2027-12-02`.
+Article 50 transparency binds ALREADY.** Nobody is selling this engagement yet.
+
+1. **Do not build a grader.** Extend [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+   (**MIT**, `818★`, TU Munich, already carries `gen-ai` and `text-exercises`) or
+   [`Submitty/Submitty`](https://github.com/Submitty/Submitty) (**BSD-3**, `803★`, RPI,
+   TA-grading workflow already present). 🔵 p201's correction, carried.
+2. **The genuine white space, unchanged:** LLM free-text grading **with an audit trail**.
+   Every other row on that shelf grades by running deterministic tests.
+3. **Article 50 marking, due now** — the instruments are already in this repo:
+   [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/),
+   [`aiact-50-2-spans`](code/aiact-50-2-spans/),
+   [`aiact-50-2-exposure`](code/aiact-50-2-exposure/),
+   [`aiact-50-2-pack`](code/aiact-50-2-pack/).
+4. **Human-in-the-loop is not a feature, it is the risk control.** Submitty's TA-grading
+   path is the architecture; the LLM proposes, a human disposes, and the xAPI log records
+   both.
+5. **Sandbox** — [`autolab/Tango`](https://github.com/autolab/Tango) (`49★`) or
+   [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (**BSD-3**,
+   `161★`). 🔴 Keep [`INGInious`](https://github.com/INGInious/INGInious) (AGPL-3.0) as an
+   internal tool only — AGPL plus SaaS compels disclosure to the client's end users.
+
+⚠️ **Verify the dates against the Official Journal before this goes in a proposal.**
+`eur-lex.europa.eu` does not resolve from this session.
+
+### 🟢 P202-3 — The non-generative tutor, for China and Indonesia *(APAC, 6–8 wks)*
+
+🔴 **Both jurisdictions now forbid school students from using AI that directly generates
+answers, while permitting purpose-built educational tools.** A chatbot wrapper is not
+sellable there. 🟢 **The compliant architecture already exists, permissively licensed:**
+
+1. **Decision layer outside the model** —
+   [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent)
+   (**MIT**) states the rule outright: *RL picks the action, FSRS picks the timing, the LLM
+   only writes the quizzes.* Mastery from `tutor-mcp` (**MIT**, BKT).
+2. **Bounded generation** — the model renders questions and hints from a fixed curriculum;
+   it does not answer free-form student questions. 🟢 **Provenance-first, as
+   [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)
+   (**MIT**, `307★`) does — cite the page of the lecture slide and crop the figure.**
+3. **Demonstrable non-generation** — follow
+   [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator)
+   (`223★`): its default provider **makes no network calls at all**, and teachers choose
+   which materials the AI may use. 🔴 **GPL-3.0-or-later — plugin, never a fork.**
+4. **Curriculum alignment** — [`savvides/idstack`](https://github.com/savvides/idstack)
+   (**MIT**, `27★`) checks alignment and accessibility; China's plan mandates curriculum
+   integration, so alignment evidence is the deliverable.
+
+⚠️ Both regulations are secondhand here — `english.www.gov.cn` does not resolve from this
+session. Verify with the ministries before contracting.
+
+### 🔴 P201-2 CORRECTED — the LATAM corpus tutor does not have the corpus it was sold on
+
+🔴 **`ACTION OS` executed, and the pattern's step `1` does not hold as written.** p201 sold
+*"`~60 000★` of Spanish/Portuguese curriculum nobody has wired to an agent."* 🟢 **All four
+named repos are permissively licensed, read from their own blobs** — and that was the wrong
+question.
+
+| repo | licence *(blob)* | shape | grant's reach over the teaching material |
+|---|---|---|---|
+| [mouredev/Hello-Python](https://github.com/mouredev/Hello-Python) `37.8k★` | 🟢 **Apache-2.0** | 🟢 **REAL CORPUS** — `Basic/`, `Intermediate/`, `Backend/` in-repo | 🟢 **YES** for in-repo material; the YouTube lessons are outside it |
+| [Universidade-Livre/ciencia-da-computacao](https://github.com/Universidade-Livre/ciencia-da-computacao) `20.9k★` | 🟢 MIT | 🔴 **INDEX** — root tree is `CONTRIBUTING.md`, `HELP.md`, `LICENSE`, `README.md` | 🔴 **NONE.** README: *"Apenas publique … os materiais que seu Curso permite que sejam publicados."* |
+| [Universidade-Livre/matematica](https://github.com/Universidade-Livre/matematica) `1.4k★` | 🟢 MIT | 🔴 **INDEX** — `4` files, no directories | 🔴 **NONE** — links to third-party university courses |
+| [natayadev/dataengineering-roadmap](https://github.com/natayadev/dataengineering-roadmap) `903★` | 🟢 MIT | 🟡 **ROADMAP** + own `books/`, `challenges/` — *"no es un curso, es una lista de recursos"* | 🟡 **PARTIAL** |
+
+🔴 **So `~23 000★` of the `60 000★` headline is MIT over a list of hyperlinks.** The licence
+is real and it grants the index; the curriculum belongs to Brazilian universities and is not
+granted. 🟢 **`Hello-Python` alone is `63`% of the figure and is the only row whose grant
+reaches the material.**
+
+🟢 **The corrected pattern:** build on `Hello-Python`-shaped assets *(material in-repo,
+permissive)*, and for the rest **partner with the corpus owners** — universities, and the
+**UNESCO–CENIA** vehicle signed February 2026 — rather than ingesting an index. 🔵 **And the
+region's strongest sellable position is not the corpus at all: it is the governance layer.**
+`87`% institutional use against `26`% with a strategy and **`8`% of students able to say
+what their institution's AI rules are** *(UNESCO IESALC `200` institutions; Digital
+Education Council `30 000`+ respondents)*.
+
+### 🔵 `Gap 445`'s fifth recurrence, as a pattern-writing rule
+
+p200 told a studio to build a grader that five universities maintain. p201 told a studio to
+ingest a corpus that is a list of links. 🔴 **Both failures are the same shape: a property
+of the SEARCH published as a property of the WORLD.** 🟢 **Gate for every future pattern:
+before step `1` names a repository, state what the repository CONTAINS and what its grant
+REACHES — not what its badge says.**
+
+
 ## Pass 201 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
 
 🔵 **Every repo named below had its default branch resolved by `git ls-remote --symref` and its

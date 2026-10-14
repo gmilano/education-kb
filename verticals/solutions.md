@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14 — THE STANDARDS LAYER IS THE VERTICAL NOBODY SELLS, AND IT IS PERMISSIVE
+
+🔵 This page exists for the Odoo/OpenMRS/Moodle move: **start from something that already
+works and add the agentic layer on top.** 🟢 **This pass adds a vertical the KB had missed
+for `201` passes — and unlike the LMS layer, it is NOT copyleft.**
+
+### 🟢 The platforms, with the licence that decides whether you can ship on them
+
+| Platform | What it is | Licence *(source)* | ★ | Region | The agentic layer to add |
+|---|---|---|---|---|---|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | Interactive learning + automated feedback; exam mode | 🟢 **MIT** · `1 091` B *(p201 blob)* | **818** | TU Munich → **EMEA** | 🟢 **Still the best insertion point in this KB.** Already carries `gen-ai` and `text-exercises`. 🔴 **And `exam grading` is Annex III high-risk from `2027-12-02`** |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | Submission + automated **and TA** grading | 🟢 **BSD-3-Clause** *(p201 blob)* | **803** | RPI → North America | The human-in-the-loop half; add LLM free-text grading **behind** its existing TA workflow |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🆕 Learning Record Store on SQL | 🟢 **Apache-2.0** *(blob)* | **144** | North America | 🟢 **The permissive memory substrate.** Agent emits xAPI statements; your BI stack reads the same tables |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🆕 HTML5 course authoring, accessible + multilanguage | 🔴 **GPL-3.0, v3-only** *(blob + README)* | **631** | → EMEA | Agent authors the course JSON; Adapt renders it. 🔴 **GPL-3.0 v3-only: a SaaS wrapper is fine, a redistributed closed fork is not** |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🆕 Framework for building LTI tools | 🟢 **Apache-2.0** *(blob)* | **376** | North America | 🟢 **The install path.** Wrap any agent as an LTI 1.3 tool and every Moodle/Canvas/Blackboard becomes a deployment target |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | AI-native LMS, SCORM + xAPI, white-label | 🟢 **MIT** *(p201 blob)* | **95** | Selleo → **EMEA** | 🟢 **MIT LMS with the AI mentor already in it** — the fastest white-label demo in this KB |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Full university LMS | 🟢 **Apache-2.0** *(p199)* | **447** | Switzerland → **EMEA** | The permissive LMS exit. Carries `topic:scorm` natively |
+| [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🆕 AI tutoring/assessment **inside** Moodle | 🔴 **GPL-3.0-or-later** *(README)* | **223** | → UNDETERMINED | 🟢 **Teachers choose which materials the AI may use** — consent-by-design, and the default provider makes no network calls |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | Sandboxed assessment with LTI | 🔴 **AGPL-3.0** *(p201 blob)* | **243** | UCLouvain → **EMEA** | 🔴 **AGPL + SaaS compels disclosure to the client's end users.** Use as an internal sandbox, not a hosted product |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | Browser-based maths e-assessment | *(p117 evidence on disk)* | **215** | Newcastle Univ → **EMEA** | Agent generates question variants; Numbas marks them deterministically |
+| [moodle/moodle](https://github.com/moodle/moodle) · Chamilo · ILIAS | The installed base | 🔴 **GPL-3.0** — 🆕 **Chamilo is `-or-later`** | — | Global | Plugin layer, never a fork. **`916` `topic:moodle-plugin` repositories is the real market signal** |
+
+### 🔴 The licence map of this vertical, and it is the opposite of the LMS layer
+
+🔴 p201's finding stands and sharpens: **the modern LMS layer is AGPL** (`frappe/lms`,
+`learnhouse`, `classroomio`, `courselit`, `tutor`, `Claroline`), and **with `71`% cloud
+deployment AGPL + SaaS is the one combination that can compel disclosure to a client's end
+users.** 🟢 **But the standards layer added this pass is permissive almost throughout** —
+`Apache-2.0` for `lrsql` and `tsugi`, `MIT` for `scorm-again` and `ralph`, `BSD-3` for
+`Submitty`, `MIT` for `Artemis` and `mentingo`.
+
+🟢 **So the architecture that survives a commercial deliverable is: permissive standards
+layer (xAPI/LTI/SCORM) + permissive assessment core (`Artemis`/`Submitty`) + the copyleft
+LMS left strictly as an integration target you never fork.** That sentence decides more than
+any market figure on [`intel/market.md`](../intel/market.md).
+
+### 🔴 🆕 And a verdict a licence badge cannot give you: `CURRENTLY`
+
+[`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) (`31★`, K-12
+learning analytics, three dashboards) states in its README: **`"CURRENTLY, THIS PLATFORM IS
+LICENSED GPLv3."`** 🔴 **An express reservation of the right to change the grant.** The code
+you take today stays GPL-3.0 forever, but the project's future is not a dependency you can
+plan on. 🔵 **A new column this KB should carry: is the grant declared as permanent or as
+provisional?** `ACTION OU`.
+
+
 ## Pass 201 — 2026-10-14 — THREE PLATFORMS WHOSE LICENCE IS NOT WHAT A SCANNER SAYS
 
 🔵 **p200's SIS/ERP table stands.** What this pass adds is the class of platform where the

@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 🔜 Registered for p203 — pre-registered with falsifiers
+
+🟢 **p202 changed one thing about what a pass can do and one thing about what this KB
+measures.** **(a)** The suite channel is **NOT binary** — offline suites ran (`415`/`415`)
+while the network-bearing suite was denied in the same session, so `ACTION OT`'s question
+has a third answer and must be asked per-channel, not per-session. **(b)** The licence
+column's assumption — *one repository, one grant, over software* — is false for this
+industry's most valuable layer.
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🆕 🔴 **`ACTION OU`** — does a grant have a TENSE, and how often? | `PlaypowerLabs/EdOptimize` README: **`"CURRENTLY, THIS PLATFORM IS LICENSED GPLv3."`** — [`evidence/gpl-version-policy.2026-10-14-p202.tsv`](../evidence/gpl-version-policy.2026-10-14-p202.tsv) | 🟢 **limb `1`:** `3`+ more rows declare a grant as provisional *("currently", "for now", "we may relicense")* → **the licence column needs a `permanence` field** and relicensing risk becomes a sourcing criterion. 🔴 **limb `2`:** `EdOptimize` is alone → one-row curiosity, record and stop. 🔵 **Method: the README and the project's own notice, not the licence text** |
+| 🆕 🔴 **`ACTION OV`** — blob-read the `9` foundation rows p202 published WITHOUT reading | [`repos/foundations.md`](../repos/foundations.md) marks them `(not blob-read)`: `adlnet/ADL_LRS` `334★`, `g3i/lxHive` `79★`, `lrs-conformance-test-suite` `78★`, `SCOBot` `164★`, `scorm-h5p-wrapper` `58★`, `LiaScript-Exporter` `29★`, `CATAPULT` `59★`, `pylti1.3` `138★`, `packbackbooks/lti-1-3-php-library` `53★`, `oat-sa/lib-lti1p3-core` `37★`, `marsha` `151★`, `Edlib` `46★`, `ltiauthenticator` `73★` | 🟢 **limb `1`:** all permissive → **P202-1's wire-up is sellable as written**. 🔴 **limb `2`:** any is copyleft or non-OSI → **P202-1 names it and routes around it**. 🔵 **The prior is mixed: `adaptlearning` and `LearningLocker` are both GPL-3.0 on this same layer** |
+| 🆕 🟡 **`ACTION OW`** — read `openfun/ralph`'s grant from `LICENSE.md`, and sweep the `.md` path form | p202 found `LICENSE` is a `404` on `ralph` and published the **badge** rather than the blob — the only such row this pass, and it is declared | 🟢 **limb `1`:** `LICENSE.md` resolves and is MIT → one row fixed, and `licence_path.sh` already covers `license.*` so **no instrument change is needed**. 🔴 **limb `2`:** more rows across the shelf carry their grant ONLY at a `.md` path that earlier passes probed as bare `LICENSE` → **a historical under-read**, and say how many |
+| 🆕 🔴 **`ACTION OX`** — does the content/code grant split extend beyond the `8` rows measured? | [`evidence/content-code-grant-split.2026-10-14-p202.tsv`](../evidence/content-code-grant-split.2026-10-14-p202.tsv), and `compose/code/p202-grant-scope-reader/` reads it mechanically | 🟢 **limb `1`:** running `scope_reader.classify` over the OER and agent-skill shelves finds `10`+ more → **the licence column is restructured with a `scope` field, and "MIT" stops being publishable without a path**. 🔴 **limb `2`:** the `8` are the population → a named class, not a structural defect. 🔵 **Start with `topic:open-educational-resources`: `20`/`20` real education rows, and OER is where CC licences live** |
+| 🆕 🟢 **`ACTION OY`** — run the relevance gate over the `REVIEW` queue's own class | `20` rows went to `REVIEW`; `9` are Carpentries/lecture repos describing their SUBJECT not their pedagogy — [`compose/code/p202-topic-relevance-gate/shelf.tsv`](../compose/code/p202-topic-relevance-gate/shelf.tsv) | 🟢 **limb `1`:** a second signal *(repo NAME, or the owner org's other repos)* recovers `15`+ of the `20` with still-zero noise → **the gate gains a second channel and recall goes past `95`%**. 🔴 **limb `2`:** any second signal admits noise → **`REVIEW` is irreducible, and `12.5`% is the standing human cost of ingesting a topic page** |
+| 🟢 **`ACTION OT` RESTATED** — measure the suite channel per CHANNEL, not per session | p202: offline `415`/`415` RAN; `test_probe_payload.sh` **DENIED `[Code from External]`**; direct `curl` **DENIED**; `api.github.com` **403**; `github.com/topics/` + `raw.githubusercontent.com` via WebFetch **WORK** — [`evidence/channel-census.2026-10-14-p202.tsv`](../evidence/channel-census.2026-10-14-p202.tsv) | 🟢 **limb `1`:** the split reproduces *(offline yes / network-in-script no)* → **it is the `curl` inside the script, not the session, and the KB should split its suites into offline and network halves so a pass can always discharge the offline half**. 🔴 **limb `2`:** a pass runs `test_probe_payload.sh` again → it is genuinely a per-session coin toss. 🔵 **Inherit nothing; the census file is the form the answer takes** |
+| 🟡 **`ACTION NU`** *(carried)* — Vietnam's `2026-03-01` / `2027-03-01` | [`intel/market.md`](market.md) APAC | 🔵 Unchanged. **Publish both with the conflict attached and stop re-asking per pass.** p202 did not re-search it |
+| 🟢 **`ACTION NU-EU` DOWNGRADED from blocking to verification** | **Regulation (EU) 2026/1744**, OJ `2026-07-24`, in force `2026-07-27`; Annex III education → **`2027-12-02`**; Article 50 live since `2026-08-02` | 🔵 `eur-lex.europa.eu` **does not resolve from this session**, so this is `5` independent secondary legal sources agreeing on a number and two dates. **Verify at the Official Journal before a client deliverable — but stop treating the dates as unknown** |
+
+### 🔴 One ask that only a human can answer
+
+1. 🔴 **`ACTION MN` *(carried, FIFTEENTH pass)* — may this KB open licensing issues on
+   third-party repositories?** 🔵 **Still NOT RUN, and still correctly so: an outward-facing
+   write on other people's repositories on an unattended run.** 🆕 **p202 adds the strongest
+   candidate yet, and it is a different KIND of question:**
+   [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+   (`858★`) licenses a running `mcp-server/` under **`CC-BY-SA-4.0`**, a licence Creative
+   Commons itself advises against for software and which carries **no patent grant**. 🟢 **That
+   is not a missing licence — it is a licence that probably does not do what its author
+   intends**, and the author is a named individual educator rather than an unresponsive org.
+   **Queue unchanged otherwise:** `LMS-Laravel/LMS-Laravel` (`505★`), `LearnPress/learnpress`
+   (`275★`).
+
+### 🆕 Gaps opened and closed by p202
+
+- 🆕 🔴 **`Gap 458` — a licence's reach published as a property of the content it points
+  at.** `ACTION OS` asked whether the LATAM corpus is permissively licensed. 🟢 **It is —
+  `3`× MIT, `1`× Apache-2.0, all blob-read.** 🔴 **And three of the four repos are INDEXES
+  OF LINKS.** `Universidade-Livre/matematica`'s entire root tree is `4` files;
+  `ciencia-da-computacao`'s README says *"Apenas publique … os materiais que seu Curso
+  permite que sejam publicados."* **Their MIT grant covers the hyperlink list; the curriculum
+  belongs to third-party universities.** 🟢 **So `~23 000★` of p201's `60 000★` headline is
+  MIT over a bibliography.** 🔵 **`Gap 445`'s inverse: not an instrument's reach mistaken for
+  the world, but a GRANT's reach mistaken for the ASSET.** Gate: **before a pattern names a
+  repository, state what it CONTAINS and what its grant REACHES.** P201-2 corrected in place.
+- 🆕 🔴 **`Gap 459` — the licence column assumes software, and the agent payload is
+  content.** `8` rows measured. `education-agent-skills` (`858★`) is **`CC-BY-SA-4.0` across
+  its skills AND its `mcp-server/` code**, with no software grant anywhere;
+  `pupilfirst` is MIT for code and **`CC-BY-SA-4.0` for `docs/`**; `human-skill-tree`'s
+  `skills/` is **dual AGPL-OR-MIT**; `bncc-dev` splits `LICENSE-CODIGO`/`LICENSE-DADOS`.
+  🟢 **`ShareAlike` on a prompt payload binds harder than AGPL on a server, because the skill
+  IS the deliverable.** `ACTION OX`.
+- 🆕 🔴 **`Gap 460` — `Gap 445`, fifth recurrence, in its REGIONAL SOURCING form.** p201:
+  *"`0` of the `23` agent-skill tutors is North American or LATAM in origin. The West buys
+  this layer; it does not build it."* 🟢 **`vanderbilt-data-science/knowledge-spaces` —
+  MIT, Vanderbilt Data Science Institute, `29★`, `10` Claude Code skills implementing
+  Knowledge Space Theory.** 🔴 **p201's `0` was a property of `topic:ai-tutor`, which that
+  repo does not carry.** 🟢 **Rule: a claim about WHERE a technology is built must name the
+  query that measured it, or it is a claim about the query.**
+- 🟢 **`ACTION OO` CLOSED — and NEITHER pre-registered limb was right.** Both limbs assumed
+  the gate is a REJECTER. 🟢 **Measured over `160` rows: `0` of `23` homonyms admitted,
+  `117` of `137` real rows auto-kept, `20` to review.** So the gate has **`KEEP`/`REVIEW` and
+  no `REJECT` verdict, asserted as a contract in its suite** — a description naming no
+  education term is not evidence of irrelevance, because an OER repo names its subject and
+  not its pedagogy. 🟢 **Noise and recall are ANTI-correlated: `adaptive-learning` is `70`%
+  noise and the gate handles it perfectly; `open-educational-resources` is `0`% noise and the
+  gate withholds `45`% of its real rows.** 🟢 **Transferable rule: a vocabulary whose token
+  is a product name or a standard is clean; one whose token is a generic technical phrase is
+  majority noise. For a clean vocabulary the correct gate is NO gate.**
+  [`compose/code/p202-topic-relevance-gate/`](../compose/code/p202-topic-relevance-gate/),
+  **44/44**.
+- 🟢 **`ACTION OR` CLOSED, LIMB `1`.** The shared preamble does not defeat a reader. 🔴 **And
+  p201's *"the SAME sentence verbatim"* is itself imprecise — `leemons` and `pupilfirst`
+  share a TEMPLATE and differ by two words (`"files or"`) plus the quoted licence name.**
+  🟢 **The discriminator is the licence named in the FALLBACK clause.** 🆕 **Reading scope
+  also found a third grant on `pupilfirst` the KB did not have: `docs/` is `CC-BY-SA-4.0`.**
+  [`compose/code/p202-grant-scope-reader/`](../compose/code/p202-grant-scope-reader/),
+  **23/23**.
+- 🟢 **`ACTION OP` CLOSED, LIMB `1`, emphatically.** `8` unqueried vocabularies →
+  **`3 107` matches** against p201's published `~520`-row population. 🔴 **Discovery does NOT
+  move to quarterly; the population is discovery-limited by roughly an order of magnitude.**
+  🟢 Whole new foundational layer surfaced *(xAPI/SCORM/LTI/learning-analytics = `1 088`
+  repositories, mature, permissive, pre-AI)* — [`repos/foundations.md`](../repos/foundations.md).
+- 🟢 **`ACTION OQ` CLOSED, LIMB `1`, with a third state the action did not anticipate.** Of
+  `4` GPL rows read for version policy: `2` **or-later**, `2` naming **"Version 3"** with no
+  policy. 🟢 **Read from the GPL-3.0 § 14 fixture already committed in this repo
+  (`lib/fixtures-p613/gpl-3.0-spdx-canonical.LICENSE`): a numbered version without "or any
+  later version" governs alone; NO version number lets the licensee choose ANY.** 🔴 **So
+  silence is not `-only` in general — it depends on whether a number was named, and a flat
+  `GPL-3.0` label is wrong in both directions.** The copyleft column needs a version-policy
+  field. 🔵 **Method confirmed: the project's NOTICE, never the licence text, which is
+  byte-identical either way.**
+- 🟢 **`ACTION OS` CLOSED — limb `1` on the licences, and `Gap 458` on the substance.** See
+  above. **All four permissive; the pattern still had to be rewritten.**
+- 🟢 **`ACTION OT` MEASURED, and the answer is a THIRD state.** 🔴 **The channel is not
+  binary and p201's framing (*"a per-session coin toss"*) was too coarse:** offline suites
+  **RAN** `415`/`415` *(license_family `207`, licence_path `33`, reqname `22`, measure `27`,
+  licence_identity `47`, region `79`)* **in the same session** in which
+  `test_probe_payload.sh` was **DENIED `[Code from External]`** and direct `curl` was denied.
+  🟢 **The seam is the `curl` inside the script, exactly as `lib/README.md` wrote at pass
+  74 — "el seam real no es librería vs script, es RED vs NO-RED".** 🔵 **Consequence for the
+  KB's own structure: suites should split into offline and network halves so a pass can
+  always discharge the offline one.** `ACTION OT` restated above.
+- 🔴 **`4` hosts do not resolve from this session** — `www.oecd.org`,
+  `eur-lex.europa.eu`, `english.www.gov.cn`, and `digital-strategy.ec.europa.eu` *(still)*.
+  **Every regulatory and institutional figure published this pass is therefore secondhand,
+  and is marked so where it appears.** 🟢 Census committed so p203 does not re-spend the
+  fetches.
+- 🔴 **`api.github.com` returns `403`** through the agent proxy. **No exact star count
+  appears in p202.** Topic pages give exact figures below `1 000` and rounded above, and
+  every figure is labelled. 🔵 `Gap 452`'s lesson applied pre-emptively.
+- 🆕 🟡 **`Gap 461` — relevance is not suitability.** `3` rows on this pass's shelves are
+  education technology *and attacks on it*: `Batlez/CloakBox` (`403★`, **the second-largest
+  row on `topic:proctoring`**), `yoannchb-pro/MoodleGPT` (`87★`),
+  `Totsukawaii/writeup-on-scorm-cheat` (`24★`). 🟢 **The relevance gate keeps all three,
+  correctly. No topic-keyed instrument can tell a studio which of the two it measured**, so
+  `shelf.tsv` now carries an `adversarial` column and a proctoring recommendation that
+  ignores the opposition is not advice.
+- 🔴 **p202's own two instrument defects, recorded because they are the same family the KB
+  keeps paying for.** The gate's first version matched `grade` inside **`Production-grade`**
+  *(admitting its only noise row)* and `exam` inside **`example`** *(which would have read
+  half of GitHub as education)*. 🟢 **Both are `P248`'s family — a prefix match is a claim
+  about a word, and a word has two ends** — and both are committed as regression cases. 🔵
+  **The scope reader's first version collapsed `AGPL-3.0 OR MIT, at your option` to
+  `AGPL-3.0`, discarding the only limb that makes a payload shippable.** Caught by its own
+  suite.
+
+
 ## 🔜 Registered for p202 — pre-registered with falsifiers
 
 🟢 **p201 changed two things about what a pass can do, and the register reflects both.**

@@ -1,0 +1,5 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+- The SKILL.md files in the `skills/` directory may be used under either this AGPL-3.0 license OR the MIT license, at your option.
+- The application code in the `app/` directory is licensed under this AGPL-3.0 license only.

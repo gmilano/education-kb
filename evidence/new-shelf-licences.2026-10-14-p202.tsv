@@ -1,0 +1,12 @@
+repo	stars_as_displayed	licence_from_blob	title_line_read	holder_line	origin_region	note
+GarethManning/education-agent-skills	858	CC-BY-SA-4.0	Creative Commons Attribution-ShareAlike 4.0 International	Copyright (c) 2026 Gareth Manning	UNDETERMINED	165 SKILL.md payloads + an mcp-server/. Author states "20 years of international education experience across 27 countries"; NO country or institution stated, so region is NOT inferred.
+vanderbilt-data-science/knowledge-spaces	29	MIT	MIT License	Copyright (c) 2025 Vanderbilt Data Science Institute	North America	FIRST North-American agent-skill education row this KB has held. 10 Claude Code skills implementing Knowledge Space Theory.
+savvides/idstack	27	MIT	MIT License	Copyright (c) 2026 idstack contributors	UNDETERMINED	11 instructional-design skills for Claude Code: alignment, accessibility checks
+Hyr1sky/TheGrandQuiz	56	MIT	MIT License	Copyright (c) 2026 Hyr1sky	UNDETERMINED	assessment-driven local-first learning agent with an eval harness
+Berserk-hub150/moodle-ai-skill-navigator	223	GPL-3.0 (or-later per README)	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc.	UNDETERMINED	largest AI-in-Moodle plugin found. Default "prototype" provider makes NO network calls -- auditable by construction.
+jcputney/scorm-again	355	MIT	MIT License	Copyright (c) 2020 Jonathan Putney	UNDETERMINED	modern SCORM runtime; the row ACTION OO named as its limb-2 risk. Gate KEEPS it.
+adaptlearning/adapt_framework	631	GPL-3.0 (v3-only)	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc.	UNDETERMINED	HTML5 e-learning authoring toolkit; appears on BOTH topic:xapi and topic:scorm
+openfun/ralph	51	MIT (badge); blob at LICENSE.md	--	--	EMEA	LICENSE 404, LICENSE.md is the path. France Universite Numerique org. Grant NOT read from bytes this pass -- badge only.
+yetanalytics/lrsql	144	Apache-2.0	Apache License	appendix placeholder only	North America	SQL-based Learning Record Store
+tsugiproject/tsugi	376	Apache-2.0	Apache License	appendix placeholder only	North America	LTI framework (Chuck Severance). Gate sends it to REVIEW: description names no education term.
+PlaypowerLabs/EdOptimize	31	GPL-3.0 (v3-only, "CURRENTLY")	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc.	UNDETERMINED	K-12 learning analytics, 3 dashboards

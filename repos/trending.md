@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 🆕 Pass 202 — 2026-10-14 — `8` unqueried vocabularies, `3 107` matches, and one gate that admits no noise
+
+🔵 **APPEND-ONLY. History preserved below.**
+
+### 🟢 `ACTION OP` discharged — the census
+
+| vocabulary | matches *(page header)* | real edu in top `20` | homonyms | noise rate | largest row is noise? |
+|---|---|---|---|---|---|
+| `topic:moodle-plugin` | **916** | `20` | `0` | 🟢 `0`% | no |
+| `topic:adaptive-learning` | **582** | `6` | `14` | 🔴 **`70`%** | 🔴 YES — `python-adaptive` `1.2k★` |
+| `topic:open-educational-resources` | **377** | `20` | `0` | 🟢 `0`% | no |
+| `topic:learning-analytics` | **374** | `19` | `1` | `5`% | 🔴 YES — `paper_notes` `170★` |
+| `topic:xapi` | **300** | `17` | `3` | `15`% | 🔴 YES — `xcp-ng/xcp` `1.6k★` |
+| `topic:scorm` | **229** | `19` | `1` | `5`% | no |
+| `topic:lti` | **185** | `17` | `3` | `15`% | no |
+| `topic:proctoring` | **144** | `19` | `1` | `5`% | no |
+| **total** | 🟢 **3 107** | **137** | **23** | `14.4`% | `3`/`8` |
+
+🔴 **p201 published a `~520`-row population. One pass at eight new vocabularies returns
+`3 107` matches.** 🟢 **Limb `1`: the population is still discovery-limited by roughly an
+order of magnitude. Discovery does NOT move to quarterly.** Committed as
+[`evidence/topic-vocabulary-census.2026-10-14-p202.tsv`](../evidence/topic-vocabulary-census.2026-10-14-p202.tsv).
+
+### 🟢 Trending rows worth a studio's attention this week
+
+| Repo | ★ | Licence *(source)* | Why now |
+|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **858** | 🔴 **CC-BY-SA-4.0** *(blob)* | `165` teacher-facing skills. 🔴 **The largest education agent-skill repo outside DeepTutor, and it is licensed as CONTENT** |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | **631** | 🔴 **GPL-3.0, v3-only** *(blob + README)* | The authoring toolkit for accessible multilanguage HTML5 courses; present on `xapi` AND `scorm` |
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | **585** | 🔴 GPL-3.0 | The LRS everyone actually runs |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | **1.3k** | 🔴 AGPL *(p201)* | Create/sell courses + digital downloads on your own site |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **447** | 🟢 Apache-2.0 *(p199)* | Carried — still one of the permissive LMS exits, and it carries `topic:scorm` |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **355** | 🟢 **MIT** *(blob)* | 🟢 Modern SCORM runtime under MIT |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | **376** | 🟢 **Apache-2.0** *(blob)* | LTI tool framework |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | **215** | *(p117 evidence on disk)* | Browser-based maths e-assessment — Newcastle University → **EMEA** |
+| [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | **223** | 🔴 GPL-3.0-**or-later** *(README)* | 🟢 Largest AI-in-Moodle plugin; **default provider makes no network calls** |
+| [microsoft/o365-moodle](https://github.com/microsoft/o365-moodle) | **215** | *(not blob-read)* | Microsoft maintaining Moodle plugins — the enterprise identity bridge |
+| [csev/py4e](https://github.com/csev/py4e) | **3.1k** | *(not blob-read)* | Largest row on `topic:lti`. Python for Everybody — a real corpus with real reach |
+| [upb-lea/reinforcement_learning_course_materials](https://github.com/upb-lea/reinforcement_learning_course_materials) | **1.2k** | *(not blob-read)* | Paderborn → **EMEA**. Lecture notes + tutorials + videos |
+| [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | **29** | 🟢 **MIT** *(blob)* | 🟢 **The first North-American agent-skill education row this KB holds** |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **21** | *(not blob-read)* | 🟢 **Randomised controlled trials inside a live course** — how you prove a tutor worked |
+| [kltn-moolde/moodle-adaptive-learning-plugin](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | **7** | *(not blob-read)* | Q-learning personalised pathways, Moodle via **LTI 1.3** — the composable shape |
+
+### 🔴 The homonym roll, published so the next pass does not re-measure it
+
+Rejected as not-education, all `23` measured this pass:
+`xcp-ng/xcp` `1.6k★` · `python-adaptive/adaptive` `1.2k★` · `max-baz/wluma` `948★` ·
+`codelion/adaptive-classifier` `574★` · `cdslaborg/paramonte` `307★` ·
+`Western-OC2-Lab/PWPAE` `220★` · `vatesfr/xo` `210★` · `AkihikoWatanabe/paper_notes`
+`170★` *(twice — `learning-analytics` and `adaptive-learning`)* · `Bin-Cao/Bgolearn` `160★` ·
+`jrgenerative/fixed-wing-sim` `161★` · `mingyuyng/Dynamic_JSCC` `153★` ·
+`alipsgh/tornado` `129★` · `kmilo17pet/qlibs` `104★` · `edmozley/freeitsm` `102★` ·
+`loowid/loowid` `92★` · `Tibsfox/gsd-skill-creator` `71★` · `Blunde1/agtboost` `67★` ·
+`peterszombati/xapi-node` `65★` · `Totoketchup/Adaptive-MultiSpeaker-Separation` `50★` ·
+`mmalekzadeh/dana` `47★` · `chyp3r/KACHOW-Teknofest-2026` `46★` ·
+`theunstopabble/InterviewMinds` `13★`.
+
+🟢 **`0` of these `23` passed the gate.** 🔴 **And `20` real rows did not pass it either** —
+`9` of them Carpentries/lecture repositories whose descriptions name their *subject*
+("Programming with R", "Image Processing with Python") and never their pedagogy. 🟢 **Hence
+the gate's contract: `KEEP` or `REVIEW`, never `REJECT`.**
+[`compose/code/p202-topic-relevance-gate/`](../compose/code/p202-topic-relevance-gate/) —
+**44/44 offline**.
+
+
 ## 2026-10-14 — Pass 201
 
 🟢 **`ACTION NQ`/`OG`, limb `2`, SIXTH dated entry: `curl https://github.com/trending` → `403`**,

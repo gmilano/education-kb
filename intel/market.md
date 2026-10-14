@@ -4,6 +4,188 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14 — THE EU AI ACT DATE IS NAMED, AND THE MARKET FIGURES GOT WORSE
+
+### 🟢 `ACTION NU-EU` CLOSES — the instrument has a number, and education is in Annex III
+
+🔴 For fourteen passes this KB has carried EU AI Act dates as *"secondhand"* because
+`digital-strategy.ec.europa.eu` does not resolve. 🟢 **Named this pass, and corroborated
+across five independent legal-practice sources:**
+
+| | |
+|---|---|
+| instrument | 🟢 **Regulation (EU) 2026/1744** — the "Digital Omnibus on AI" |
+| published in the Official Journal | **2026-07-24** |
+| entered into force | **2026-07-27** |
+| 🔴 **Annex III high-risk obligations** *(education — incl. **exam grading**)* | 🔴 **deferred to `2027-12-02`** *(from `2026-08-02`)* |
+| Annex I *(AI in regulated products)* | `2028-08-02` |
+| 🟢 **Article 50 transparency** | 🟢 **ALREADY IN FORCE since `2026-08-02`** |
+| stated reason for the deferral | CEN-CENELEC harmonised standards not ready; national authorities and conformity-assessment bodies not designated |
+
+🔴 **The obligations were not rewritten — only the dates moved.** 🟢 **The sequencing this
+gives an EMEA engagement is exact, and it is the single most actionable thing on this page:**
+
+1. 🟢 **Article 50 marking of synthetic content is a requirement TODAY.** This KB already has
+   the instruments: [`compose/code/aiact-50-2-marking/`](../compose/code/aiact-50-2-marking/),
+   `aiact-50-2-spans`, `aiact-50-2-exposure`, `aiact-50-2-pack`. 🔵 **Built `12` passes ago
+   for the obligation that turns out to be the live one.**
+2. 🔴 **Anything that grades a learner is Annex III high-risk with a `2027-12-02` deadline** —
+   `14` months. Design for it now; it is not optional and it is not far away.
+
+⚠️ **Provenance, stated plainly:** `eur-lex.europa.eu` **does not resolve from this session**,
+so this is **not read from the Official Journal**. It is five independent secondary legal
+sources agreeing on a regulation number and two dates. 🔵 **Verify against the OJ before any
+client deliverable** — but this is a material upgrade on *"secondhand with no instrument
+number"*, and `ACTION NU-EU` is downgraded from blocking to verification.
+
+### 🔴 The market figures are now MORE contradictory, not less — `Gap 457` widens
+
+| segment | estimate A | estimate B | disagreement |
+|---|---|---|---|
+| **agentic AI in education** | `$1.72B` *(2025)*, CAGR **`36`%** | `$2.1B` *(2026)*, CAGR 🔴 **`4.5`%** | 🔴 **an `8`× disagreement on the GROWTH RATE of the same named segment** |
+| AI in education, global | `$9.58B` *(2026)* | KB carried `$6.4B`–`$12.3B` | consistent only as a range |
+| Europe | `$2.11B` *(2026)* → `$19.97B` *(2034)* | `$2.64B` *(2026)* | `25`% apart at the same base year |
+| AI tutors | `$1.63B` *(2024)* → `$7.99B` *(2030)* | — | — |
+
+🔴 **p201 found CAGRs of `25.9`% and `40.9`% for one market and called it a reason not to
+quote. This pass finds `36`% and `4.5`%.** 🟢 **The standing instruction is reinforced, not
+replaced: quote the RANGE and the DISAGREEMENT, ask whether the estimate includes corporate
+L&D, and never quote a single figure.** `Gap 457`'s regional irreconcilability (`4`× on North
+America, `230`× on LATAM) is unchanged and those figures remain unquotable.
+
+🟢 **Quote adoption instead. It reproduces across regions and sources, which the money does
+not.** And one new segmentation figure worth holding: **K-12 is `45.62`% of adoption**, with
+language learning the fastest-growing segment.
+
+## Opportunities by region
+
+### North America
+
+🟢 **`ACTION`-grade news: the buyer is now created by statute.** State K-12 AI policy moved
+from guidance to binding requirement during 2026.
+
+- **`33`–`35` states plus Puerto Rico** have issued official AI-in-education guidance, up
+  from `~28` in early 2025.
+- 🟢 **`8` states have LAWS requiring districts to adopt formal AI policies: `ID`, `IL`,
+  `MD`, `OH`, `OK`, `TN`, `UT`, `VA`.** Ohio's deadline was **`2026-07-01`** *(passed)*;
+  Oklahoma requires every district to adopt a written AI policy before the **`2027–28`**
+  school year.
+- 🟢 **Maryland S.B. 720 requires each district to designate an `AI coordinator`** plus
+  train-the-trainer professional development. 🔴 **That is a named, funded, statutory buyer
+  role — which is exactly what p201 declared missing for this region.**
+- Alabama requires AI instruction within a mandatory CS course for graduation. New Jersey
+  awarded **`$1.5M` to `12` districts**.
+- 🔴 **The burden falls on districts to evaluate tools themselves** — thousands of small
+  buyers with a legal duty and no evaluation capacity.
+
+🟢 **The opportunity: a policy-to-implementation kit.** `8` states × hundreds of districts
+each needing a written AI policy, an AI coordinator who can defend tool choices, and an
+audit trail. **Pair it with `Submitty` (BSD-3, North America, TA-grading workflow already
+built) and the `lrsql` (Apache-2.0) event log, so a district can show WHAT the AI did.**
+🔵 And the sourcing fact: `vanderbilt-data-science/knowledge-spaces` (**MIT**) is this
+region's first agent-skill education row in this KB — the layer is no longer imported-only.
+
+### EMEA
+
+🟢 **p201's declared gap — *"no education-specific EMEA adoption figure or named buyer for
+2026"* — CLOSES on the adoption half.**
+
+- 🟢 **OECD Digital Education Outlook 2026** *(published 2026-01)*: a German survey of
+  **`23 000`+ higher-education students found `94`% used AI in 2025.** ⚠️ **`www.oecd.org`
+  does not resolve from this session** — this figure is secondhand and must be verified at
+  source before quoting.
+- 🔴 **Regulation is the lever here, not adoption.** Regulation (EU) 2026/1744 above:
+  Article 50 live now, Annex III education obligations `2027-12-02`.
+- European market estimates: `$2.11B`–`$2.64B` for 2026. 🔴 **Mutually inconsistent at the
+  same base year; quote as a range or not at all.**
+
+🟢 **The opportunity, and it is time-boxed: an Annex III readiness engagement.** `14` months
+to `2027-12-02`, a concrete obligation set, and this KB already holds both halves — the
+Article 50 marking instruments, and the permissive EMEA assessment core (`Artemis` **MIT**,
+TU Munich; `INGInious` AGPL, UCLouvain; `Numbas`, Newcastle). **Nobody is selling
+"your grading agent is a high-risk system and here is the conformity file" yet.**
+
+### APAC
+
+🟢 **p201's declared gap — *"no new education-specific APAC regulation beyond Vietnam's Law
+134/2025/QH15"* — CLOSES, and with the two largest education systems in the region.**
+
+- 🆕 **China: Ministry of Education "AI + Education" action plan, April 2026**, issued by
+  five central departments, running to **2030** — K-12 courses, university curriculum
+  mandates, AI in teacher certification.
+- 🆕 **China's 2025 classroom guidelines set the product constraint: primary-school students
+  are PROHIBITED from independently using open-ended content generation, and teachers are
+  BARRED from using generative AI as a substitute for core teaching.** A minimum of `8`
+  hours a year of age-appropriate AI material for the youngest students.
+- 🆕 **Indonesia: joint ministerial decree, March 2026**, early childhood → higher
+  education — **primary and secondary students may not use instant AI applications that
+  directly generate answers**, while **AI tools built for educational purposes may be
+  permitted**.
+- 🟡 Singapore, Malaysia and Thailand are reported to have begun issuing sector-specific
+  directives. **Secondary source only; verify with the ministries.**
+- 🟡 **`ACTION NU` carried unchanged:** Vietnam's in-force date is still published as both
+  `2026-03-01` and `2027-03-01`. **Publish both with the conflict attached; stop re-asking.**
+- Carried: APAC **`87`% encourage agents / `47`% govern them**.
+
+🟢 **The opportunity, and it is the sharpest architectural fit in this KB: regulation in
+China and Indonesia has specified a PRODUCT SHAPE, and the open-source shelf already built
+it.** A tutor that may not "directly generate answers" but may be a purpose-built
+educational tool is precisely the architecture p201 measured on the tutor shelf — **pedagogy
+in auditable tools, the LLM only rendering**: `Smart-Study-Agent` (**MIT**, RL + FSRS +
+LLM-writes-quizzes-only), `tutor-mcp` (**MIT**, Bayesian Knowledge Tracing behind an MCP
+call), `anki-mcp-server` (**MIT**). 🔵 ⚠️ **`english.www.gov.cn` does not resolve from this
+session; both Chinese items are secondhand.**
+
+### LATAM
+
+🟢 **The governance gap reproduces, and the figures are stable across two passes — which is
+more than the money figures manage.**
+
+- **UNESCO IESALC**, `200` institutions, `19` countries: **`87`% use AI in at least one
+  area, `74`% in teaching and learning, `57`% in research — against `26`% with a formal AI
+  strategy.**
+- 🆕 **Digital Education Council**, `30 000`+ respondents across `29` LATAM institutions:
+  🔴 **only `8`% of students consider themselves fully informed about their institution's AI
+  guidelines.**
+- 🆕 **Brazil: `53`% of school administrators use AI; `22`% report their school has
+  guidelines** *(UNESCO)*.
+- 🆕 **UNESCO–CENIA agreement, February 2026**, promoting responsible AI in education across
+  Chile and Latin America — **a named regional institutional vehicle.**
+- 🔴 Carried and still unquotable: *"Rest of Latin America"* at `$18.2M` against this KB's
+  carried `$4.2B` — a `230`× contradiction.
+
+🔴 **And `ACTION OS` corrects the region's headline opportunity.** p201 sold **P201-2** on
+*"`~60 000★` of Spanish/Portuguese curriculum nobody has wired to an agent."* 🟢 **All four
+named repos are permissively licensed — `3`× MIT, `1`× Apache-2.0, read from their own
+blobs.** 🔴 **But three of the four are INDEXES OF LINKS, not corpora.**
+`Universidade-Livre/matematica`'s entire root tree is four files; `ciencia-da-computacao`'s
+README says *"Apenas publique … os materiais que seu Curso permite que sejam publicados."*
+🔴 **Their MIT grant covers the link list. The teaching material belongs to third-party
+universities and is not granted.** 🟢 **`mouredev/Hello-Python` (Apache-2.0, `37.8k★`) is the
+one genuine in-repo corpus — and it is `63`% of the `60 000★` headline.**
+
+🟢 **The corrected LATAM opportunity: the asset is `Hello-Python`-shaped, not
+index-shaped.** Partner with corpus OWNERS (universities, UNESCO–CENIA) rather than
+ingesting indexes, and the real first-mover position is **the governance layer** —
+`87`% use against `26`% strategy and `8`% student awareness is the engagement, reproduced
+across two independent surveys. 🔵 `Mcp-Brasil/mcp-brasil` (**MIT**, `1 808★`) remains the
+only LATAM-origin agent-infrastructure row this KB holds.
+
+### 🔴 Declared gaps — measured, not assumed
+
+- 🔴 **MEA: still NO education-specific regulation or adoption data.** Third consecutive
+  pass. **This is an informed absence, not coverage.**
+- 🔴 **No named institutional BUYER for EMEA** — the adoption half closed, the procurement
+  half did not. No tender, no framework agreement, no named university purchase found.
+- 🔴 **`4` hosts do not resolve from this session**: `www.oecd.org`, `eur-lex.europa.eu`,
+  `english.www.gov.cn`, `digital-strategy.ec.europa.eu`. **Every regulatory and
+  institutional figure on this page is therefore secondhand.** Census committed as
+  [`evidence/channel-census.2026-10-14-p202.tsv`](../evidence/channel-census.2026-10-14-p202.tsv)
+  so the next pass does not re-spend the fetches.
+- 🔴 **`api.github.com` returns `403`** through the proxy, so **no exact star count appears
+  in this pass.** Topic pages give exact figures below `1 000` and rounded above.
+
+
 ## Pass 201 — 2026-10-14 — MARKET SNAPSHOT
 
 🔵 **p199's framing — *"the spread is the finding, not the midpoint"* — survives a third pass and

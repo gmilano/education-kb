@@ -1,0 +1,5 @@
+repo	kb_published_label	version_policy_read_from	policy_as_written	gpl3_s14_effect
+Chamilo/chamilo-lms	GPL-3.0	license.txt (p201)	"either version 3 ... or (at your option) any later version"	OR-LATER: licensee may follow v3 or any later FSF version
+Berserk-hub150/moodle-ai-skill-navigator	(new row)	README.md	"GNU GPL v3 or later" (badge: "License: GPL v3 or later")	OR-LATER
+adaptlearning/adapt_framework	(new row)	README.md	"Adapt is licensed under the GNU General Public License, Version 3"	V3-ONLY: a numbered version is specified without "or later", so s14 grants no choice
+PlaypowerLabs/EdOptimize	(new row)	README.md	"CURRENTLY, THIS PLATFORM IS LICENSED GPLv3."	V3-ONLY by s14 -- and "CURRENTLY" is an express reservation to change the grant

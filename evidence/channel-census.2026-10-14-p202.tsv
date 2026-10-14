@@ -1,0 +1,13 @@
+channel	invocation	verdict	detail
+KB offline suites	bash / python3 -I on compose/code/lib	RUNS	415 checks, 0 failures: license_family 207, licence_path 33, reqname 22, measure --self-test 27, licence_identity 47, region 79
+KB network suite	bash test_probe_payload.sh	DENIED	[Code from External] -- the script contains curl. p201 ran this; p202 cannot.
+direct curl	curl raw.githubusercontent.com / api.github.com	DENIED	[Code from External] / refused in the same classifier decision as the suite above
+api.github.com	WebFetch	HTTP 403	blocked by the agent proxy. No exact star counts this pass.
+github.com/topics/<t>	WebFetch	WORKS	server-rendered: 20 rows/page with stars AND descriptions, plus a total match count in the header
+raw.githubusercontent.com	WebFetch	WORKS	licence blobs readable at HEAD; no branch guessing needed
+github.com/<o>/<r>	WebFetch	WORKS	licence badge, default branch, file tree, README
+WebSearch	tool	WORKS	market/regulation research
+www.oecd.org	WebFetch	ENOTFOUND	does not resolve from this session -- OECD Digital Education Outlook 2026 unreadable at source
+eur-lex.europa.eu	WebFetch	ENOTFOUND	does not resolve -- Regulation (EU) 2026/1744 unverifiable at the Official Journal
+english.www.gov.cn	WebFetch	ENOTFOUND	does not resolve -- China MoE plan unverifiable at source
+digital-strategy.ec.europa.eu	WebFetch	ENOTFOUND	still, per p201

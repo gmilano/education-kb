@@ -1,0 +1,161 @@
+topic	repo	stars	label	adversarial	description
+proctoring	vardanagarwal/Proctoring-AI	633	EDU	no	Creating a software for automatic monitoring in online proctoring
+proctoring	Batlez/CloakBox	403	EDU	yes	Make your virtual machine invisible to proctoring software
+proctoring	SafeExamBrowser/seb-win-refactoring	355	EDU	no	Safe Exam Browser for Windows.
+proctoring	narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	236	EDU	no	This is a AI Based Smart Exam Proctoring System using python flask, mysql as database, yolov4
+proctoring	tusharnankani/Aankh	86	EDU	no	Aankh - A real time proctoring solution
+proctoring	aesophor/hacklympics	69	EDU	no	Online programming examination system prototype, featuring anticheat mechanisms (keylogging, playback)
+proctoring	meefik/ITMOproctor	39	EDU	no	System of distant supervision
+proctoring	AgnellusX1/GodsEye	31	EDU	no	A Web-Based Smart Virtual Exam System, using Machine Learning
+proctoring	eLearning-BS23/moodle-quizaccess_proctoring	30	EDU	no	
+proctoring	N0v0cain3/Kuizu	22	EDU	no	Online auto proctoring quiz
+proctoring	oat-sa/devkit-lti1p3	20	EDU	no	LTI 1.3 development kit, acting as platform and / or tool.
+proctoring	sanket2000/proctoring	18	EDU	no	AI exam proctoring system using google mediapipe and python
+proctoring	theunstopabble/InterviewMinds	13	NOT	no	Production-grade AI Mock Interview Platform with 81 service modules.
+proctoring	narender-rk10/proctoring	12	EDU	no	
+proctoring	SanyamSavla/Automatic-proctoring-system_BE-Project	8	EDU	no	
+proctoring	Nuthi-Sriram/IntelliProc	7	EDU	no	Dual camera proctoring system - A automated proctoring system that uses the mobile camera and webcam
+proctoring	Felix-au/PrashnaSetu-Public	5	EDU	no	A secure, local-first quiz management system for academic institutions featuring a proctored JavaFX desktop client
+proctoring	devanshjsr/I.O.T.A	5	EDU	no	Interactive Online Test Application. The ultimate platform for continuous online evaluation.
+proctoring	AmnaaPatel/Proctoring-System-	5	EDU	no	an AI proctoring system using Machine Learning Algorithms , implementing object recognition, speech and audio recognition.
+proctoring	Yosef-AlSabbah/SecureGate.js-Anti-Emulator-VM-Sandbox-Motion-Verification-for-Web-Exams	4	EDU	no	A lightweight JavaScript library for protecting web-based exam pages from unauthorized access via emulators
+learning-analytics	AkihikoWatanabe/paper_notes	170	NOT	no	Daily notes on AI papers
+learning-analytics	Apereo-Learning-Analytics-Initiative/OpenLRW	62	EDU	no	Standards-based learning record warehouse built for a scalable learning analytics environment.
+learning-analytics	openfun/ralph	51	EDU	no	Ralph, the ultimate Learning Record Store (and more!) for your learning analytics
+learning-analytics	tl-its-umich-edu/my-learning-analytics	37	EDU	no	My Learning Analytics (MyLA)
+learning-analytics	AmirhosseinHonardoust/AI-Personal-Study-Tracker	31	EDU	no	An AI-driven productivity tracking app built with Python, Streamlit, SQLite, and Machine Learning. It logs and analyzes study sessions
+learning-analytics	PlaypowerLabs/EdOptimize	31	EDU	no	EdOptimize is an open-source learning analytics platform for K-12 digital learning systems.
+learning-analytics	vanderbilt-data-science/knowledge-spaces	29	EDU	no	AI-powered Knowledge Space Theory for adaptive education. 10 Claude Code skills implementing the full KST
+learning-analytics	ai-for-edu/time-series-analysis-for-education	22	EDU	no	The collection of related papers and resources for the paper Time Series Analysis for Education: Methods
+learning-analytics	terracotta-education/terracotta	21	EDU	no	Terracotta (a portmanteau of Tool for Education Research with RAndomized COnTrolled TriAls) is a plug-in
+learning-analytics	AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	18	EDU	no	An interpretable early-warning engine that detects academic instability before grades collapse.
+learning-analytics	laser-institute/aera-workshop	15	EDU	no	This workshop introduces participants to the Learning Analytics (LA), and provides a brief overview of LA methodologies
+learning-analytics	juno-hwang/juno-dkt	14	EDU	no	Scikit-learn style implementation of Deep Knowledge Tracing models based on pytorch.
+learning-analytics	Schlaflied/Plot-Ark	13	EDU	no	Evidence-driven curriculum operations: turn learning signals into reviewable course changes, then track outcomes
+learning-analytics	sonsoleslp/tna	13	EDU	no	Transition Network Analysis R package
+learning-analytics	cmkumar87/NUS-MOOC-Transacts-Corpus	10	EDU	no	An annotated corpus of discussion forum threads from Massive Open Online Courses.
+learning-analytics	la-process-and-theory/syllabus	10	EDU	no	HUDK 4051: Course syllabus
+learning-analytics	theaiagent/SynthEd	8	EDU	no	Agent-based simulation environment for Open & Distance Learning (ODL) research.
+learning-analytics	laser-institute/text-mining	8	EDU	no	Text Mining in Education Learning Labs demonstrate how text mining can be applied in STEM education research
+learning-analytics	kltn-moolde/moodle-adaptive-learning-plugin	7	EDU	no	Adaptive STEM learning system using Q-learning to personalize educational pathways. Integrated with Moodle via LTI 1.3.
+learning-analytics	wwlwgo/cn-primary-math-knowledge-graph	7	EDU	no	Traceable and verifiable micro-learning-objective dependency dataset for Chinese primary mathematics.
+xapi	xcp-ng/xcp	1600	NOT	no	Entry point for issues and wiki. Also contains some scripts and sources.
+xapi	adlnet/xAPI-Spec	954	EDU	no	The xAPI Specification describes communication about learner activity and experiences between technologies.
+xapi	adaptlearning/adapt_framework	631	EDU	no	A toolkit for creating responsive, accessible, multilanguage HTML5 e-learning courses.
+xapi	LearningLocker/learninglocker	585	EDU	no	Learning Locker - The Open Source Learning Record Store. Started in 2014.
+xapi	adlnet/ADL_LRS	334	EDU	no	ADL's Open Source Learning Record Store (LRS) is used to store learning data collected with the Experience API.
+xapi	adlnet/xAPIWrapper	223	EDU	no	Wrapper to simplify communication to an LRS
+xapi	vatesfr/xo	210	NOT	no	Merged with monorepo https://github.com/vatesfr/xen-orchestra
+xapi	RusticiSoftware/TinCanJS	208	EDU	no	JavaScript library for the Experience API (Tin Can API)
+xapi	yetanalytics/lrsql	144	EDU	no	A SQL-based Learning Record Store
+xapi	adlnet/SCORM-to-xAPI-Wrapper	99	EDU	no	APIWrapper.js file commonly used with SCORM with xAPI calls embedded
+xapi	Selleo/mentingo	95	EDU	no	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS
+xapi	RusticiSoftware/TinCan_Prototypes	90	EDU	no	Examples which use the Tin Can API
+xapi	davidpesce/moodle-logstore_xapi	82	EDU	no	A Moodle plugin to send xAPI statements to an LRS using events in the Moodle logstore.
+xapi	g3i/lxHive	79	EDU	no	A lightweight Experience API Learning Record Store (LRS)
+xapi	adlnet/lrs-conformance-test-suite	78	EDU	no	A NodeJS project that tests the MUST requirements of the xAPI Spec and is based on the ADL testing requirements repository.
+xapi	peterszombati/xapi-node	65	NOT	no	xStation5 Trading API for NodeJS/JS
+xapi	Apereo-Learning-Analytics-Initiative/OpenLRW	62	EDU	no	Standards-based learning record warehouse built for a scalable learning analytics environment.
+xapi	adlnet/xapi-profiles	60	EDU	no	A set of documents addressing the structure of and supporting services for xAPI Profiles.
+xapi	adlnet/CATAPULT	59	EDU	no	The goal of the cmi5 Advanced Testing Application and Player Underpinning Learning Technologies (CATAPULT) project
+xapi	RusticiSoftware/TinCanPython	54	EDU	no	Python Library for xAPI (originally Tin Can API)
+lti	csev/py4e	3100	EDU	no	Web site for www.py4e.com and source to the Python 3.0 textbook
+lti	tsugiproject/tsugi	376	EDU	no	Tsugi Admin, Developer, and Management Console (pls join the dev list)
+lti	INGInious/INGInious	243	EDU	no	INGInious is a secure and automated exercises assessment platform using your own tests, also providing a pluggable
+lti	csev/wa4e	217	EDU	no	Course materials for www.wa4e.com
+lti	jrgenerative/fixed-wing-sim	161	NOT	no	Matlab implementation to simulate the non-linear dynamics of a fixed-wing unmanned areal glider. Includes tools to
+lti	openfun/marsha	151	EDU	no	An opensource LTI Learning Content Management System (LCMS)
+lti	dmitry-viskov/pylti1.3	138	EDU	no	LTI 1.3 Advantage Tool
+lti	ucfopen/UDOIT	117	EDU	no	The Universal Design Online content Inspection Tool, or UDOIT (pronounced, You Do It) enables faculty to identify
+lti	kmilo17pet/qlibs	104	NOT	no	A collection of useful libraries for embedded systems : signal smoothing, PID control, Fuzzy Logic, fixed-point math
+lti	loowid/loowid	92	NOT	no	Webconference solution based on webrtc
+lti	scollovati/awesome-lti	78	EDU	no	List of awesome resources for learning and developing tools according to the Learning Tools Interoperability (LTI)
+lti	jupyterhub/ltiauthenticator	73	EDU	no	A JupyterHub authenticator for LTI
+lti	ucfopen/Obojobo	72	EDU	no	Next generation course content for your LMS. Easy for beginners, but powerful enough for researchers.
+lti	packbackbooks/lti-1-3-php-library	53	EDU	no	A library used for building IMS-certified LTI 1.3 tool providers in PHP.
+lti	ucfopen/Materia	52	EDU	no	Engage students with easily embedded apps for online courses. Supercharge your course with compelling experiences
+lti	ucfopen/lti-template-flask	47	EDU	no	DEPRECATED - LTI template written in Python using the Flask framework. Quickly create a new application
+lti	cerpus/Edlib	46	EDU	no	Edlib is an application for creating, sharing, storing and using rich interactive learning resources.
+lti	WebPA/WebPA	37	EDU	no	Web PA - open source online peer assessment tool
+lti	oat-sa/lib-lti1p3-core	37	EDU	no	PHP library for LTI 1.3 Core implementations as platforms and / or as tools.
+lti	dmitry-viskov/pylti1.3-django-example	31	EDU	no	PyLTI1p3 Django usage example
+scorm	adaptlearning/adapt_framework	631	EDU	no	A toolkit for creating responsive, accessible, multilanguage HTML5 e-learning courses.
+scorm	OpenOLAT/OpenOLAT	447	EDU	no	Learning Management System OpenOlat
+scorm	jcputney/scorm-again	355	EDU	no	A modern SCORM JavaScript runtime library.
+scorm	numbas/Numbas	215	EDU	no	A completely browser-based e-assessment/e-learning system, with an emphasis on mathematics
+scorm	dhodges47/SCORM-LearningManagementSystem	184	EDU	no	Open Source SCORM Learning Management System demo
+scorm	cybercussion/SCOBot	164	EDU	no	SCORM API for Content. JavaScript library, QUnit tests and examples.
+scorm	edmozley/freeitsm	102	NOT	no	A completely free ITSM tool
+scorm	adlnet/SCORM-to-xAPI-Wrapper	99	EDU	no	APIWrapper.js file commonly used with SCORM with xAPI calls embedded
+scorm	Selleo/mentingo	95	EDU	no	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS
+scorm	skfriese/simple-scorm-api	70	EDU	no	A simple SCORM1.2 SCO run-time test environment in one file (NOT MAINTAINED)
+scorm	S4-NetQuest/react-scorm-provider	67	EDU	no	Components to easily enable SCORM API communication in React projects.
+scorm	sr258/scorm-h5p-wrapper	58	EDU	no	A NodeJS application that packs H5P content into SCORM objects
+scorm	adlnet/xAPI-SCORM-Profile	42	EDU	no	Document describing how to report SCORM data to the Experience API.
+scorm	gamestdio/scorm	38	EDU	no	SCORM 1.2/2004 Wrapper for JavaScript/TypeScript
+scorm	raccoongang/edx_xblock_scorm	32	EDU	no	XBlock to display SCORM content within the Open edX LMS. Editable within Open edx Studio.
+scorm	greenpeace/gpes-html5-scorm-presentation	29	EDU	no	Create a presentation using html5. Use it independently or upload it as an elearning SCORM package.
+scorm	LiaScript/LiaScript-Exporter	29	EDU	no	Export LiaScript courses into SCORM, IMS, PDF, Android APK, xAPI, ePub or a standalone WEB project
+scorm	savvides/idstack	27	EDU	no	Evidence-based instructional design skills for Claude Code. 11 AI skills that check alignment, accessibility
+scorm	Totsukawaii/writeup-on-scorm-cheat	24	EDU	yes	A writeup on cheating SCORM packages using Chrome Developer Tools and TamperMonkey
+scorm	frumbert/scorm_debug	22	EDU	no	Scorm 1.2 & Scorm 2004 runtime test environment (php)
+adaptive-learning	python-adaptive/adaptive	1200	NOT	no	Adaptive: parallel active learning of mathematical functions
+adaptive-learning	max-baz/wluma	948	NOT	no	Automatic brightness adjustment based on screen contents and ALS
+adaptive-learning	GarethManning/education-agent-skills	858	EDU	no	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders-pedagogy, learning science
+adaptive-learning	codelion/adaptive-classifier	574	NOT	no	A flexible, adaptive classification system for dynamic text classification
+adaptive-learning	cdslaborg/paramonte	307	NOT	no	ParaMonte: Parallel Monte Carlo and Machine Learning Library for Python, MATLAB, Fortran, C++, C.
+adaptive-learning	Li-Evan/Bloom	284	EDU	no	Hire a private AI tutor for anything - it reads how you actually learn and teaches the next lesson just for you.
+adaptive-learning	Western-OC2-Lab/PWPAE-Concept-Drift-Detection-and-Adaptation	220	NOT	no	Data stream analytics: Implement online learning methods to address concept drift and model drift in data streams
+adaptive-learning	AkihikoWatanabe/paper_notes	170	NOT	no	Daily notes on AI papers
+adaptive-learning	Bin-Cao/Bgolearn	160	NOT	no	Offical implement of Bgolearn
+adaptive-learning	mingyuyng/Dynamic_JSCC	153	NOT	no	Codes for Deep Joint Source-Channel Coding for Wireless Image Transmission with Adaptive Rate Control, ICASSP 2022
+adaptive-learning	zijinz456/OpenTutor	141	EDU	no	The first block-based adaptive learning workspace that runs locally.
+adaptive-learning	alipsgh/tornado	129	NOT	no	The Tornado framework, designed and implemented for adaptive online learning and data stream mining in Python.
+adaptive-learning	sagefy/sagefy	120	EDU	no	Learn anything, adapted for you. Free.
+adaptive-learning	Tibsfox/gsd-skill-creator	71	NOT	no	Introduces a comprehensive agent-based framework for guided software development (GSD)
+adaptive-learning	Blunde1/agtboost	67	NOT	no	Adaptive and automatic gradient boosting computations.
+adaptive-learning	Hyr1sky/TheGrandQuiz	56	EDU	no	Assessment-driven, local-first learning agent built on an observable Agent Runtime and eval harness
+adaptive-learning	Totoketchup/Adaptive-MultiSpeaker-Separation	50	NOT	no	Adaptive and Focusing Neural Layers for Multi-Speaker Separation Problem
+adaptive-learning	ArnaudGuiovanna/tutor-mcp	48	EDU	no	An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed.
+adaptive-learning	mmalekzadeh/dana	47	NOT	no	DANA: Dimension-Adaptive Neural Architecture (UbiComp21)( ACM IMWUT)
+adaptive-learning	chyp3r/KACHOW-Teknofest-2026	46	NOT	no	Teknofest 2026 Dogal Dil Ajanlari Yarismasi 1. Senaryo kapsaminda gelistirilen
+open-educational-resources	codelitdev/courselit	1300	EDU	no	Create/Sell courses and digital downloads and publish blogs on your own branded website.
+open-educational-resources	upb-lea/reinforcement_learning_course_materials	1200	EDU	no	Lecture notes, tutorial tasks including solutions as well as online videos for the reinforcement learning course
+open-educational-resources	spatialaudio/digital-signal-processing-lecture	885	EDU	no	Digital Signal Processing - Theory and Computational Examples
+open-educational-resources	GarethManning/education-agent-skills	858	EDU	no	165 evidence-grounded AI skills for teachers, school leaders and EdTech builders-pedagogy, learning science,
+open-educational-resources	0voice/Awesome-CS-OpenCourse	644	EDU	no	Free public computer science courses from top global universities, MIT and Stanford core courses
+open-educational-resources	programminghistorian/jekyll	552	EDU	no	Jekyll-based static site for The Programming Historian
+open-educational-resources	spatialaudio/signals-and-systems-lecture	385	EDU	no	Continuous- and Discrete-Time Signals and Systems - Theory and Computational Examples
+open-educational-resources	swcarpentry/git-novice	379	EDU	no	Version Control with Git
+open-educational-resources	datacarpentry/R-ecology-lesson	338	EDU	no	Data Analysis and Visualization in R for Ecologists
+open-educational-resources	merely-useful/py-rse	261	EDU	no	Research Software Engineering with Python course material
+open-educational-resources	iansan5653/open-mcr	211	EDU	no	Exam bubble sheet scorer. Created with OpenCV and Python.
+open-educational-resources	tscheipel/HaDes-V	192	EDU	no	HaDes-V is an Open Educational Resource for learning microcontroller design.
+open-educational-resources	carpentries/instructor-training	189	EDU	no	Instructor Training
+open-educational-resources	swcarpentry/r-novice-inflammation	174	EDU	no	Programming with R
+open-educational-resources	spatialaudio/computational_acoustics	161	EDU	no	Collection of Jupyter notebooks illustrating various techniques in computational acoustics
+open-educational-resources	reamat/CalculoNumerico	152	EDU	no	Escrita colaborativa de recursos educacionais abertos sobre calculo numerico.
+open-educational-resources	programminghistorian/ph-submissions	152	EDU	no	The repository and website hosting the peer review process for new Programming Historian lessons
+open-educational-resources	datacarpentry/r-raster-vector-geospatial	119	EDU	no	Introduction to Geospatial Raster and Vector Data with R
+open-educational-resources	datacarpentry/image-processing	113	EDU	no	Image Processing with Python
+open-educational-resources	cagix/pandoc-lecture	109	EDU	no	Pandoc Markdown Lecture Template: This project defines a skeleton repo for creating lecture slides and handouts
+moodle-plugin	Berserk-hub150/moodle-ai-skill-navigator	223	EDU	no	AI-powered Moodle plugin for tutoring, quizzes, mind maps, RAG course materials and more.
+moodle-plugin	microsoft/o365-moodle	215	EDU	no	Office 365 and Azure Active Directory plugins for Moodle
+moodle-plugin	FMCorz/moodle-block_xp	161	EDU	no	A gamification plugin for Moodle allowing learners to gain experience points and level up.
+moodle-plugin	hit-moodle/moodle-local_onlinejudge	124	EDU	no	Online Judge plugin for Moodle 2.7-4.2.
+moodle-plugin	moodle-an-hochschulen/moodle-theme_boost_union	103	EDU	no	Theme Boost Union is an enhanced child theme of Boost which is intended, on the one hand, to make Boost simply more
+moodle-plugin	yoannchb-pro/MoodleGPT	87	EDU	yes	This extension allows you to hide CHAT-GPT in a Moodle quiz.
+moodle-plugin	open-lms-open-source/moodle-theme_snap	87	EDU	no	
+moodle-plugin	moodle/devdocs	74	EDU	no	Source of the Moodle Developer Resources and Documentation
+moodle-plugin	mudrd8mz/moodle-tool_pluginskel	59	EDU	no	Generator of Moodle plugins skeletons
+moodle-plugin	moodle-an-hochschulen/moodle-local_staticpage	47	EDU	no	Moodle plugin which displays static information pages which exist outside any course, imprint or faq pages for example
+moodle-plugin	Limekiller/moodle-block_openai_chat	42	EDU	no	An AI chat block for Moodle
+moodle-plugin	trema-tech/moodle-theme_trema	40	EDU	no	Theme trema, a Moodle LMS plugin.
+moodle-plugin	SaadRahman01/claude-moodle-dev	39	EDU	no	Moodle development toolkit for AI coding assistants. Skills for XMLDB, Hooks API, PHPUnit, Behat, AMD, privacy/GDPR,
+moodle-plugin	moodle-an-hochschulen/moodle-theme_boost_campus	39	EDU	no	Moodle 3.x Boost child theme which is intended to meet the needs of university campuses and adds several features
+moodle-plugin	michael-milette/moodle-filter_filtercodes	38	EDU	no	FilterCodes filter for Moodle enables content creators to easily customize and personalize course and site content
+moodle-plugin	moodle-an-hochschulen/moodle-local_boostnavigation	38	EDU	no	Moodle plugin which tries to overcome some fixed appearance behaviours of Boosts nav drawer in a clean way
+moodle-plugin	brendanheywood/moodle-local_cleanurls	36	EDU	no	Lets drag Moodles url structure into this century...
+moodle-plugin	middlebury/moodle-mod_adaptivequiz	35	EDU	no	Moodle Adaptive Quiz Module (archived). See moodle.org plugins mod_adaptivequiz for active forks and releases.
+moodle-plugin	catalyst/moodle-tool_mfa	34	EDU	no	A Multi-Factor Authentication Moodle plugin with flexible support for TOTP, Email, IP and more
+moodle-plugin	harregoces/moodle-enrol_mercadopago	31	EDU	no	Enrollment plugin with Mercado Pago

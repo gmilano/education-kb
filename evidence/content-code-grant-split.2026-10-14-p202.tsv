@@ -1,0 +1,8 @@
+repo	stars_as_displayed	repo_level_label	code_grant	content_grant	why_a_single_column_is_wrong
+GarethManning/education-agent-skills	858 (exact)	CC BY-SA 4.0	NONE STATED -- mcp-server/ falls under the repo notice	CC-BY-SA-4.0 over all 165 SKILL.md payloads, docs, examples, curriculum	Executable code under a content licence: no patent grant, and ShareAlike propagates to any adapted skill shipped to a client
+pupilfirst/pupilfirst	978 (p201)	MIT	MIT (fallback + client-side JS)	CC-BY-SA-4.0 over docs/	"MIT" is true of the code and false of the documentation
+24kchengYe/human-skill-tree	572 (p201)	AGPL-3.0	AGPL-3.0 (app/)	skills/ dual AGPL-3.0-OR-MIT at licensee's option	The repo label is the MOST restrictive grant; the shippable payload is the MIT limb the label hides
+leemonade/leemons	291 (p201)	presents as open source	Fair Code License v1.0 (non-OSI) fallback	n/a	Same notice TEMPLATE as pupilfirst, opposite outcome. Differs by two words ("files or") and the quoted licence name.
+bncc-dev/bncc-benchmark	(on disk, p119/p120)	--	LICENSE-CODIGO	LICENSE-DADOS	Two separate files; a root-only probe reads one and misses the other
+bncc-dev/bncc-pacotes	(on disk, p119)	--	LICENSE-CODIGO	LICENSE-DADOS	same
+Universidade-Livre/ciencia-da-computacao	20.9k (page-rounded)	MIT	MIT over the index	NOT GRANTED -- material belongs to third-party universities	The inverse failure: a permissive grant with no reach over the asset the pattern wants

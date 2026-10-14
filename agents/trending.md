@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 🆕 Pass 202 — 2026-10-14 — the skill layer is being licensed as content, and regulation just started asking for its architecture
+
+🔵 **APPEND-ONLY. The history below this section is intact.**
+
+### 1. 🔴 `CC-BY-SA-4.0` arrives on the agent-skill shelf at `858★`
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— `165` teacher-facing skills, **title line `Creative Commons Attribution-ShareAlike 4.0
+International`**, read from its own blob this hour. 🔴 **Why it is a trend and not a
+curiosity: a `SKILL.md` is markdown, markdown is content, and the content world's default
+licence is ShareAlike — which is copyleft on the deliverable itself.** The repo also ships
+an `mcp-server/` with **no software grant of its own**. 🟢 **Watch for this shape: the
+agent-skill layer drifting out of the MIT/Apache world and into the Creative Commons world
+without anyone announcing it.** `2` of the `4` largest skill repos this KB holds now carry a
+CC grant on some path.
+
+### 2. 🟢 China and Indonesia both outlawed the answer-generating tutor — and blessed the architecture the OSS shelf already built
+
+🆕 **China, MoE "AI + Education" action plan, April 2026**, issued by five central
+departments, running to **2030**: K-12 courses, university curriculum mandates, AI in
+teacher certification. Its **2025** classroom guidelines **prohibit primary-school students
+from independently using open-ended content generation** and **bar teachers from using
+generative AI as a substitute for core teaching**. 🆕 **Indonesia, joint ministerial decree,
+March 2026**, early childhood → higher education: **primary and secondary students may not
+use instant AI applications that directly generate answers**, while **AI tools built for
+educational purposes may be permitted**.
+
+🟢 **This is the most important trend in this file, because it is regulation specifying a
+PRODUCT SHAPE and the open-source shelf already converged on it.** p201 recorded the tutor
+shelf pulling pedagogy *out* of the model — `Smart-Study-Agent`'s *"RL picks the action,
+FSRS picks the timing, the LLM only writes the quizzes"*, `tutor-mcp` putting Bayesian
+Knowledge Tracing behind an MCP tool call, `anki-mcp-server` doing the same for spaced
+repetition. 🟢 **A tutor whose pedagogy lives in auditable tools and whose LLM only renders
+is exactly what "not an answer generator" means in a compliance document.** 🆕 And
+`Berserk-hub150/moodle-ai-skill-navigator` (`223★`) ships a default provider that **makes no
+network calls at all** — demonstrable non-generation.
+
+🔵 **Both regulatory items are secondhand.** `english.www.gov.cn` **does not resolve from
+this session**, so the China plan is not read at source. Verify before a deliverable.
+
+### 3. 🟢 `topic:` discovery is still finding whole shelves — `3 107` matches across `8` vocabularies p201 had never queried
+
+`ACTION OP` discharged, limb `1`. `topic:moodle-plugin` alone reports **`916`** repositories;
+`adaptive-learning` **`582`**; `open-educational-resources` **`377`**; `learning-analytics`
+**`374`**; `xapi` **`300`**; `scorm` **`229`**; `lti` **`185`**; `proctoring` **`144`**.
+🔴 **Against p201's published population of `~520` rows.** 🟢 **The population is still
+discovery-limited, and by roughly an order of magnitude — not quarterly-stable.**
+
+### 4. 🔴 `adaptive-learning` is `70`% not-education, and the two biggest rows are a maths library and a brightness daemon
+
+The worst homonym rate this KB has measured. `python-adaptive/adaptive` (`1.2k★`, *"parallel
+active learning of mathematical functions"*) and `max-baz/wluma` (`948★`, *"Automatic
+brightness adjustment based on screen contents"*) outrank every real education row on the
+page. 🟢 **Cause: `learning` is the most common token in both education and machine
+learning.** `Gap 455` widened; gate in [`compose/code/p202-topic-relevance-gate/`](../compose/code/p202-topic-relevance-gate/).
+
+### 5. 🟡 The standards layer is alive and almost entirely pre-AI
+
+`topic:xapi` and `topic:scorm` returned a dense, mature, permissive shelf nobody has wired
+an agent to: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) `954★`,
+[`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) `585★`,
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) `144★` **Apache-2.0**,
+[`openfun/ralph`](https://github.com/openfun/ralph) `51★` **MIT**,
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) `355★` **MIT**,
+[`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) `631★`
+**GPL-3.0**. 🟢 **An LRS is a complete, standardised event log of what every learner did —
+the retrieval substrate a tutoring agent needs and the one nobody is building on.** `P202-1`
+in [`compose/patterns.md`](../compose/patterns.md).
+
+### 6. 🔴 Three rows on this week's shelves are attacks on education technology
+
+[`Batlez/CloakBox`](https://github.com/Batlez/CloakBox) `403★` *("make your virtual machine
+invisible to proctoring software")*, [`yoannchb-pro/MoodleGPT`](https://github.com/yoannchb-pro/MoodleGPT)
+`87★` *("hide CHAT-GPT in a Moodle quiz")*,
+[`Totsukawaii/writeup-on-scorm-cheat`](https://github.com/Totsukawaii/writeup-on-scorm-cheat)
+`24★`. 🔴 **`CloakBox` is the second-largest row on `topic:proctoring`.** 🟢 **A relevance
+gate keeps all three, correctly — they are education technology. Relevance is not
+suitability, and the KB now carries an `adversarial` column because no topic-keyed
+instrument can make that call.**
+
+### 7. 🟢 The institutional analytics layer, newly visible
+
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+`62★`, [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+`37★` *(Michigan)*, [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize)
+`31★` *(K-12, three dashboards)*, [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+`21★` *(randomised controlled trials inside a course)*. 🟢 **Terracotta is the row to
+remember: it makes a course into an experiment, which is the only honest way to claim a
+tutoring agent improved anything.**
+
+
 ## 2026-10-14 — Pass 201
 
 🆕 🟢 **The window's new category is not a tutor at all — it is the GRADER, and it was here the

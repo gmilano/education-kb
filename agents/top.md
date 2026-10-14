@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14 — THE LICENCE COLUMN ASSUMES SOFTWARE, AND THE AGENT PAYLOAD IS CONTENT
+
+🔴 **The second-largest agent-skill repository in this industry is licensed `CC-BY-SA-4.0`,
+and this KB's licence column has no way to say what that means.**
+
+🟢 Read from its own blob this hour: [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— **`858★`**, `165` skills, title line **`Creative Commons Attribution-ShareAlike 4.0
+International`**, holder `Copyright (c) 2026 Gareth Manning`. 🔴 **It did not appear on
+p201's `23`-row shelf because it does not carry `topic:ai-tutor`** — it was found this pass
+on `topic:adaptive-learning` and `topic:open-educational-resources`.
+
+🔴 **Three things follow, and none of them is visible in a cell reading "CC-BY-SA-4.0":**
+
+1. 🔴 **`ShareAlike` is copyleft on CONTENT.** Adapt one of those `165` skills into a client
+   deliverable and the adaptation must be licensed `CC-BY-SA-4.0`. **For a prompt payload
+   that is a stronger constraint than AGPL is for a server**, because the skill *is* the
+   deliverable — there is no "we only call it over a network" escape.
+2. 🔴 **The repository's executable code has no software licence at all.** The README states
+   *"The educational skills, documentation, examples, and curriculum materials in this
+   repository are licensed under CC BY-SA 4.0"* and names **no separate grant for
+   `mcp-server/`**, which is a running server. A CC licence carries **no patent grant**, and
+   Creative Commons itself advises against using CC licences for software.
+3. 🟢 **The `skills/` payloads are still usable** — `CC-BY-SA` permits commercial use. The
+   constraint is on *keeping the adaptation closed*, not on using it. **That distinction is
+   the entire engagement question and a one-word licence cell cannot carry it.**
+
+### 🔴 The class, measured: `8` rows where one licence cell is wrong about the asset
+
+🟢 Committed as [`evidence/content-code-grant-split.2026-10-14-p202.tsv`](../evidence/content-code-grant-split.2026-10-14-p202.tsv).
+**`ACTION OR`'s reader emits the scope column; `ACTION OS` supplied the inverse case.**
+
+| Repo | repo-level label | the CODE grant | the CONTENT grant | what the single cell gets wrong |
+|---|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) `858★` | `CC-BY-SA-4.0` | 🔴 **none stated** — `mcp-server/` falls under the repo notice | `CC-BY-SA-4.0` over all `165` `SKILL.md` | a server under a content licence: no patent grant, ShareAlike on every adapted skill |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) `978★` | **MIT** | **MIT** *(fallback + client-side JS)* | 🔴 **`CC-BY-SA-4.0` over `docs/`** | 🔴 **"MIT" is true of the code and false of the documentation** |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) `572★` | `AGPL-3.0` | `AGPL-3.0` *(`app/`)* | 🟢 **`skills/` = `AGPL-3.0`-OR-`MIT`, licensee's option** | the label is the *most restrictive* grant; the **shippable** limb is the one it hides |
+| [leemonade/leemons](https://github.com/leemonade/leemons) `291★` | presents as open source | 🔴 **`Fair Code License v1.0`** *(non-OSI)* | — | same notice **template** as `pupilfirst`, opposite outcome |
+| `bncc-dev/bncc-benchmark` · `bncc-pacotes` | — | `LICENSE-CODIGO` | `LICENSE-DADOS` | two files; a root-only probe reads one |
+| [Universidade-Livre/ciencia-da-computacao](https://github.com/Universidade-Livre/ciencia-da-computacao) `20.9k★` | **MIT** | **MIT over an index of links** | 🔴 **not granted — the material is third-party** | 🔴 **the inverse: a true permissive grant with NO REACH over the asset** |
+
+🟢 **The rule this shelf now imposes: in education the valuable asset is often CONTENT, and
+content is licensed from a different instrument family than code.** A repo-level licence
+cell is the wrong shape for this industry's most interesting layer, and it fails in one
+specific expensive direction — **it reports `MIT` on a repository whose teaching material is
+`CC-BY-SA` (copyleft on derivatives) or `CC-BY-NC` (not sellable at all).**
+
+### 🟢 `0` North America became `1`, and it was p201's QUERY, not the world
+
+🔴 p201 published: *"`0` of the `23` agent-skill tutors read this pass is North American or
+LATAM in origin. The West buys this layer; it does not build it."* 🟢 **Read from its own
+blob this pass:** [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces)
+— **MIT**, `Copyright (c) 2025 Vanderbilt Data Science Institute`, `29★`, *"AI-powered
+Knowledge Space Theory for adaptive education. 10 Claude Code skills implementing the full
+KST"*. 🔴 **A North American university institute shipping an agent-skill education payload
+under MIT.**
+
+🔴 **`Gap 445`, fifth recurrence — and this is its *regional sourcing* form.** p201's claim
+was a property of `topic:ai-tutor`, which `knowledge-spaces` does not carry; it is tagged
+`learning-analytics`. 🟢 **The honest restatement: on `topic:ai-tutor` the agent-skill tutor
+is an APAC phenomenon; across the eight vocabularies queried this pass it is not.** The new
+rows below are `3` `UNDETERMINED`, `1` North America.
+
+| Repo | Licence *(blob)* | ★ | Origin → region | Shape |
+|---|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **CC-BY-SA-4.0** | **858** | 🔵 **UNDETERMINED** | `165` teacher/school-leader skills + an `mcp-server/`. 🔴 **Author states "20 years of international education experience across 27 countries" and names no country or institution — so this KB does NOT assign it a region** |
+| [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** | **29** | Vanderbilt DSI → 🟢 **North America** | 🆕 Knowledge Space Theory as `10` Claude Code skills — **a 1980s adaptive-assessment theory, not a chatbot** |
+| [savvides/idstack](https://github.com/savvides/idstack) | 🟢 **MIT** | **27** | 🔵 UNDETERMINED | `11` instructional-design skills that check **alignment and accessibility** — the reviewer role, not the author role |
+| [Hyr1sky/TheGrandQuiz](https://github.com/Hyr1sky/TheGrandQuiz) | 🟢 **MIT** | **56** | 🔵 UNDETERMINED | Assessment-driven local-first learning agent **with an eval harness in the repo** |
+| [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 **GPL-3.0-or-later** *(README)* | **223** | 🔵 UNDETERMINED | 🟢 **The largest AI-in-Moodle plugin found. Teachers choose which course materials the AI may use, and the default `prototype` provider makes NO network calls** — auditable by construction |
+| [SaadRahman01/claude-moodle-dev](https://github.com/SaadRahman01/claude-moodle-dev) | *(not blob-read)* | **39** | 🔵 UNDETERMINED | Moodle dev toolkit for AI coding assistants: XMLDB, Hooks API, PHPUnit, Behat, privacy/GDPR |
+| [Limekiller/moodle-block_openai_chat](https://github.com/Limekiller/moodle-block_openai_chat) | *(not blob-read)* | **42** | 🔵 UNDETERMINED | AI chat block for Moodle |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** *(p201)* | **48** | → EMEA | BKT behind an MCP tool call, in Go — **carried, and it reappears on `topic:adaptive-learning`** |
+
+🔵 **`UNDETERMINED` is a value, not a blank.** p201 assigned regions from naming and
+language cues; this pass declines to where the repository states nothing. **An inferred
+region becomes a filter bucket, and a wrong bucket is worse than an empty one** —
+`region.py` already enforces the closed vocabulary; it cannot enforce honest input.
+
+### 🟢 The autograding shelf, carried unchanged — and its one row that matters more now
+
+🔵 p201's correction stands: **do not build a grader.** `Artemis` (**MIT**, `818★`, TU
+Munich, already gen-AI capable) or `Submitty` (**BSD-3**, `803★`, RPI, has TA-grading
+workflow); `Tango` or `otter-grader` as the sandbox. 🔴 **What changed this pass is the
+regulatory clock, not the shelf:** `exam grading` is named in **Annex III** of the EU AI
+Act, whose high-risk obligations now bind from **`2027-12-02`** *(Regulation (EU)
+2026/1744)*. **Everything built on this shelf for an EMEA client is a high-risk system with
+a known deadline.** See [`intel/market.md`](../intel/market.md).
+
+🔵 **Shelf totals this pass:** `11` new rows above the 5-row bar, `9` licences read from
+their own blobs, **`0`** read from a GitHub badge alone except `openfun/ralph` *(declared)*.
+Star counts are **as the topic page displayed them** — exact below `1 000`, rounded above —
+because `api.github.com` returns **`403`** through this proxy. 🔵 `Gap 452`'s lesson,
+applied pre-emptively: the unit is stated with the figure.
+
+
 ## Pass 201 — 2026-10-14 — THE GRADING SHELF EXISTS, AND p200 TOLD A STUDIO TO BUILD IT
 
 🔴 **p200's most actionable sentence is false, and it is the most expensive kind of false this

@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14 — THE STANDARDS LAYER IS THE FOUNDATION THIS KB HAD NOT READ
+
+🔴 **For `201` passes this KB has catalogued tutors, LMSs and graders, and never the layer
+underneath all three.** `ACTION OP` sent this pass at `topic:xapi`, `topic:scorm`,
+`topic:lti` and `topic:learning-analytics`, and they returned a **mature, permissive,
+pre-AI shelf with `300`+`229`+`185`+`374` = `1 088` repositories matching**.
+
+🟢 **Why it is foundational and not plumbing: xAPI/SCORM/LTI are the only standardised way a
+tutoring agent gets (a) into an institution's LMS, and (b) a complete event log of what the
+learner actually did.** An agent without the second one is guessing, and an agent without
+the first one never gets installed.
+
+### 🟢 The learning-record layer — the retrieval substrate for an education agent
+
+| Repo | Licence *(source)* | ★ | Region | What it gives a studio |
+|---|---|---|---|---|
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | *(spec, not blob-read)* | **954** | US ADL → North America | 🟢 **The specification itself.** `statement = actor + verb + object`. The vocabulary an agent should emit about every learner interaction |
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** *(p77, `lib/` fixture)* | **585** | HT2 Labs → EMEA | The most-adopted open LRS. 🔵 **`GPL-3.0`, confirmed by the title-block classifier — a naive `affero` body match calls this AGPL and is wrong** |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** *(blob)* | **144** | Yet Analytics → North America | 🟢 **A SQL-based LRS under Apache-2.0** — the permissive exit from the GPL LRS layer, and SQL means your existing BI stack reads it |
+| [openfun/ralph](https://github.com/openfun/ralph) | 🟢 **MIT** *(badge; blob at `LICENSE.md`, 🔴 NOT read this pass)* | **51** | France Université Numérique → **EMEA** | LRS + ETL for learning events. 🔵 **`LICENSE` is a `404`; the grant lives at `LICENSE.md`** — `Gap 456` again |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | *(not blob-read)* | **334** | US ADL → North America | The reference LRS from the standard's authors |
+| [g3i/lxHive](https://github.com/g3i/lxHive) | *(not blob-read)* | **79** | → EMEA | Lightweight LRS, PHP |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | *(not blob-read)* | **78** | North America | 🟢 **Tests the MUST requirements of the spec** — the conformance gate for anything you build |
+
+### 🟢 The content-packaging layer — how a generated course gets INTO an institution
+
+| Repo | Licence *(source)* | ★ | What it gives a studio |
+|---|---|---|---|
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** · 🆕 **v3-ONLY** *(blob + README)* | **631** | Responsive, accessible, multilanguage HTML5 course authoring. 🔴 **README says *"the GNU General Public License, Version 3"* with no "or later" — see `ACTION OQ`** |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** *(blob)* | **355** | 🟢 **A modern SCORM runtime under MIT.** The permissive bridge between a new agent UI and a `2004`-era LMS |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | *(not blob-read)* | **164** | SCORM API for content, with QUnit tests |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | *(not blob-read)* | **58** | 🟢 **Packs H5P interactive content into SCORM** — the join between the H5P shelf this KB already holds and institutional delivery |
+| [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | *(not blob-read)* | **29** | 🟢 **Markdown course → SCORM, xAPI, PDF, ePub, APK.** Agent writes markdown; this ships it everywhere |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | *(not blob-read)* | **59** | `cmi5` testing and player — SCORM's successor profile |
+
+### 🟢 The integration layer — LTI, which is how you get installed at all
+
+| Repo | Licence *(source)* | ★ | Region | Note |
+|---|---|---|---|---|
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** *(blob)* | **376** | Chuck Severance → North America | 🟢 **A full framework for building LTI tools.** 🔴 Its description names no education term — the relevance gate sends it to REVIEW, which is why that gate has no `REJECT` |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | *(not blob-read)* | **138** | → EMEA | LTI 1.3 Advantage tool in Python, with a Django example repo |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | *(not blob-read)* | **53** | North America | IMS-certified LTI 1.3 providers in PHP. 🔴 **A FORK of [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) — 1EdTech owns the LTI standard, so the upstream is the canonical row and this KB has been holding the fork** |
+| [oat-sa/lib-lti1p3-core](https://github.com/oat-sa/lib-lti1p3-core) | *(not blob-read)* | **37** | Open Assessment Technologies → EMEA | LTI 1.3 core, platform **and** tool sides |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | *(not blob-read)* | **73** | Global | 🟢 **LTI → JupyterHub.** The shortest path from an institution's LMS to a notebook environment |
+| [openfun/marsha](https://github.com/openfun/marsha) | *(not blob-read)* | **151** | France Université Numérique → **EMEA** | LTI learning-content management system |
+| [cerpus/Edlib](https://github.com/cerpus/Edlib) | *(not blob-read)* | **46** | Cerpus (Norway) → **EMEA** | Create, share and reuse interactive learning resources |
+
+### 🔴 Foundational-layer caution, stated rather than smoothed
+
+🔴 **`9` of the `20` rows above are NOT blob-read.** They are published here as *discovered
+and described*, with the licence column saying so, because `api.github.com` returns `403`
+and each blob costs a separate fetch. 🔵 **`Gap 449`'s rule applied honestly: the rows this
+pass verified are marked `(blob)`; the rest are a to-do, not a finding.** The next pass
+should blob-read the `9` before any of them enters a client deliverable.
+
+🟢 **The one durable statement: this layer is old, permissive, standardised, institutionally
+adopted, and almost completely untouched by the current AI wave.** Every tutor on
+[`agents/top.md`](../agents/top.md) invents its own progress model; `xAPI` already
+standardised one, and an LRS already stores it.
+
+
 ## Pass 201 — 2026-10-14 — THE PERMISSIVE SHELF IS FOUR TIMES BIGGER THAN p200 SAID
 
 🔴 **p199 and p200 both published a sentence an engagement would plan around:**

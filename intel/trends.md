@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 202 — 2026-10-14
+
+### 🔴 T1 — The agent payload is content, and content licensing has different reach than software licensing
+
+**The structural trend of this pass.** A 2026 education agent ships as `SKILL.md` markdown,
+not as a service. 🔴 **Markdown is content, and the content world's licences are Creative
+Commons — which behave nothing like MIT.** Measured on `8` repositories this pass
+*(committed as [`evidence/content-code-grant-split.2026-10-14-p202.tsv`](../evidence/content-code-grant-split.2026-10-14-p202.tsv))*:
+`education-agent-skills` is **`CC-BY-SA-4.0`** across `858★` of skills *and* its
+`mcp-server/` code; `pupilfirst` is MIT for code and **`CC-BY-SA-4.0` for `docs/`**;
+`human-skill-tree` is AGPL with `skills/` **dual MIT**; `bncc-dev` splits
+`LICENSE-CODIGO`/`LICENSE-DADOS`.
+
+🟢 **Consequence for a studio: `ShareAlike` on a prompt payload is a stronger constraint
+than AGPL on a server**, because the skill *is* the deliverable — there is no "we only call
+it over the network" escape. **Ask "what grant covers the PATH I am shipping", never "what
+licence is the repo".**
+
+### 🟢 T2 — Regulation has started specifying a product SHAPE, and the OSS shelf already built it
+
+🆕 **China** *(MoE "AI + Education" plan, April 2026; 2025 classroom guidelines)* prohibits
+primary-school students from independently using open-ended content generation and bars
+teachers from substituting genAI for core teaching. 🆕 **Indonesia** *(joint ministerial
+decree, March 2026)* forbids school students from using instant AI applications that
+directly generate answers, while permitting **purpose-built educational AI tools**.
+
+🟢 **The two largest education systems in APAC have outlawed the chatbot tutor and licensed
+the instrumented one** — which is the architecture p201 measured arriving on its own:
+pedagogy in auditable tools *(RL, FSRS, Bayesian Knowledge Tracing behind MCP calls)*, the
+LLM confined to rendering. 🟢 **Better pedagogy and easier compliance now point the same
+way, which is rare and worth building on.**
+
+### 🔴 T3 — Article 50 is live; Annex III is 14 months out
+
+**Regulation (EU) 2026/1744** *(OJ `2026-07-24`, in force `2026-07-27`)*: Article 50
+transparency has applied **since `2026-08-02`**; Annex III high-risk obligations — which
+name **education and exam grading** — move to **`2027-12-02`**. 🟢 **So the compliance work
+that is due TODAY is synthetic-content marking, and this KB built those instruments `12`
+passes ago.** ⚠️ Secondhand: `eur-lex.europa.eu` does not resolve from this session.
+
+### 🟢 T4 — The standards layer is the untouched foundation
+
+`xAPI` + `SCORM` + `LTI` + `learning-analytics` = **`1 088` matching repositories**, mature,
+institutionally adopted, mostly **permissive**, and almost entirely pre-AI. 🔴 **Every tutor
+in [`agents/top.md`](../agents/top.md) invents its own progress model while `xAPI`
+standardised one a decade ago and an LRS already stores it.** 🟢 The composable gap of the
+year: agent ↔ LRS.
+
+### 🔴 T5 — "Adaptive learning" is now a majority-ML phrase
+
+`topic:adaptive-learning` is **`70`% not-education** in its top `20`, and its two largest
+rows are a maths library (`1.2k★`) and a screen-brightness daemon (`948★`). 🟢 **For a KB,
+a studio deck or a search: `learning` alone no longer denotes education.** Use `e-learning`,
+`learning record`, `learning analytics`, or a standard's name.
+
+### 🟢 T6 — Governance lag is the most reproducible finding in this industry
+
+Three regions, independent surveys, two passes: **LATAM `87`% use / `26`% strategy / `8`%
+student awareness** *(UNESCO IESALC `200` institutions; Digital Education Council `30 000`+
+respondents)*; **Brazil `53`% administrator use / `22`% with guidelines**; **APAC `87`%
+encourage / `47`% govern**; **Germany `94`% student use** *(OECD 2026, secondhand)*;
+**`10`% of institutions globally with formal guidelines, `71`% of US teachers untrained**.
+🟢 **A `40`–`80`-point gap that reproduces everywhere money figures contradict each other.
+It IS the engagement.**
+
+### 🟢 T7 — North America's buyer arrived by statute
+
+**`8` states now legally require districts to adopt written AI policies** *(`ID` `IL` `MD`
+`OH` `OK` `TN` `UT` `VA`)*; **Maryland requires a designated `AI coordinator` per district**.
+🔴 **Thousands of small buyers with a legal duty and no evaluation capacity** — a
+policy-to-implementation market, not a product market.
+
+### 🟡 T8 — Grants are declared as provisional
+
+🆕 `PlaypowerLabs/EdOptimize`: **`"CURRENTLY, THIS PLATFORM IS LICENSED GPLv3."`** The code
+taken today stays GPL-3.0, but the project's trajectory is not plannable. 🔵 **A grant has a
+tense, and this KB has never recorded it.** `ACTION OU`.
+
+### 🔴 T9 — The GPL version policy is unstated more often than it is stated
+
+Of `4` GPL rows read for version policy this pass, `2` say **or-later** *(Chamilo,
+`moodle-ai-skill-navigator`)* and `2` name **"Version 3"** with no policy at all
+*(`adapt_framework`, `EdOptimize`)*. 🟢 **Read from the GPL-3.0 § 14 fixture committed in
+this repo: naming a numbered version without "or any later version" means that version
+governs; specifying NO version means the licensee may choose ANY.** 🔴 **So a flat
+`GPL-3.0` label is wrong in both directions, and the policy lives in the project's NOTICE,
+never in the licence text — which is byte-identical either way.**
+
+### 🔴 T10 — Education technology has a live adversarial shelf
+
+`CloakBox` (`403★`, hides a VM from proctoring software) is the **second-largest row** on
+`topic:proctoring`; `MoodleGPT` (`87★`) hides ChatGPT inside a Moodle quiz. 🟢 **Proctoring
+is an arms race with a public open-source opposition, and a proctoring recommendation that
+does not acknowledge it is not advice.** 🔵 **Relevance is not suitability** — the KB's
+shelf data now carries an `adversarial` column because no topic-keyed instrument can make
+that call for a client.
+
+
 ## Pass 201 — 2026-10-14 — CURRENT TRENDS
 
 ### 1. 🆕 🔴 The grading shelf was never missing — the search term was
