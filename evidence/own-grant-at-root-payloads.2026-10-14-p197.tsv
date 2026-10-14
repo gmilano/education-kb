@@ -1,0 +1,5 @@
+slug	branch	path	http	family_bytes	grant	bytes	spdx_pristine	ratio	verdict
+kstateome/lti-launch	master	License.txt	200	LGPL-3.0	GRANT	7651	42098	0.182	REAL GRANT - addendum form, not the standalone form
+open-spaced-repetition/fsrs4anki-helper	main	License	200	MIT	GRANT	1079	1078	1.001	REAL GRANT
+openedx/XBlock	master	LICENSE.TXT	200	Apache-2.0	GRANT	11358	10280	1.105	REAL GRANT
+openedx/XBlock	master	NOTICE.txt	200	Apache-2.0	GRANT	545	-	-	NOTICE, not the grant itself

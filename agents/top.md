@@ -3,6 +3,126 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **A lane this KB has used since its first pass closed this pass: the KB's own `290`
+recipes are READABLE BUT NOT RUNNABLE.** `bash <repo script>` is denied by the session's
+permission classifier *(`[Code from External]`)*, re-tried on the documented invocation path
+and denied again. 🟢 So `P0a` ran first, found the prior art, and the pass re-derived **only**
+the minimal probe it needed as own-authored code — and that probe caught **two** defects: one
+in this KB's stored data, and one in the pass's own reasoning.
+
+| action *(pre-registered by p196)* | verdict |
+|---|---|
+| 🟢 **`P0a` — read the register before building** | 🟢 **FIRES on `6` of `7`.** `P441`, `P420`, `P419`, `P171`, `p206`-D2, `p176`, `p288`, `p560` and p192's population rule all had prior art. Cited, not re-derived |
+| 🟢 **Classify the `3` `OWN-GRANT-AT-ROOT` payloads** | 🟢 **All `3` are REAL grants**, not templates. 🔴 **But the limb's own prediction was mis-specified** — see below |
+| 🟢 **Re-read the interoperability-layer claim against `Lumi`'s `15` texts** | 🟢 **CLAIM SURVIVES, now on bytes.** `0` at the root; all `15` are vendored `H5P.*` libraries and bundled fonts |
+| 🟡 **Derive a notice-form band from a wider corpus** | 🟡 **SPLITS BY FAMILY.** Holds for `GPL-3.0`/`AGPL-3.0`/`Apache-2.0`/`ECL-2.0`; 🔴 **FAILS for `LGPL-3.0` and `GPL-2.0`**, each for a different reason |
+| 🔴 **Case-fold de-dup + re-run the `494` existence census** | 🔴 **BLOCKED — execution lane.** The extractors exist and cannot be run. Not silently dropped: recorded as blocked |
+| 🔴 **Probe the `26` unreached population rows** | 🔴 **BLOCKED — same lane** |
+| 🔴 **Fix `lib/test_license_family.sh` fixture resolution and re-run from `3` directories** | 🔴 **HALF-ANSWERED.** The defect is now NAMED by reading *(a `cd` on line `14` plus `${BASH_SOURCE[0]}`-relative paths below it)*, but a patch that cannot be run is not shipped into `lib/` |
+
+### 🔴 The limb that fired and still refuted its own arithmetic
+
+🔵 p196 pre-registered: *"real grants → the licensed count rises by `3` and `16.2`% falls
+further."* 🟢 **The first half is confirmed from bytes:**
+
+| slug | path | 🟢 family *(bytes)* | bytes | vs SPDX pristine | verdict |
+|---|---|---|---|---|---|
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | `License.txt` | 🟢 **`LGPL-3.0`** | `7 651` | `0.182`× | 🟢 **REAL GRANT** |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `License` | 🟢 **`MIT`** | `1 079` | `1.001`× | 🟢 **REAL GRANT** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `LICENSE.TXT` | 🟢 **`Apache-2.0`** | `11 358` | `1.105`× | 🟢 **REAL GRANT** |
+
+🔴 **The second half is arithmetically impossible, and p196 wrote it anyway.** p196's `16.2`%
+was computed as `(88 − 12)/≈470`, and those `12` grant-bearing rows **already included these
+`3`**. Confirming them cannot lower the figure; it can only hold it. 🟢 **So the finding is
+that `16.2`% STANDS** — and had the `3` been stubs it would have risen to `≈16.7`%, which is
+the number the limb should have named.
+
+🔵 **The lesson is about pre-registration itself:** a limb must state the arithmetic it would
+change, not just the direction it expects. 🟢 The register below does that from now on.
+
+### 🆕 🔴 This KB's stored data carries a wrong licence family, and the canonical text proves it
+
+🟢 **`GPL-3.0`'s section-13 trap has a twin, and it is in `GPL-2.0`'s PREAMBLE:**
+
+> *"(Some other Free Software Foundation software is covered by the GNU **Lesser** General
+> Public License instead.)"*
+
+🔴 **That sentence is inside the first `40` lines of every pristine `GPL-2.0`**, so a
+window-based classifier returns `LGPL?` for it. Proven against SPDX's own
+`GPL-2.0-only.txt` *(`17 337` B, one `Lesser` mention)*: the pre-`p197` control returns
+🔴 **`LGPL?`**, the title-line rule returns 🟢 **`GPL-2.0`**.
+
+🔴 **`p441-tree-licence-enumeration/result.2026-10-07.tsv` has carried `LGPL?` on four rows
+for ten passes. All four are `GPL-2.0`. ZERO are LGPL.**
+
+| slug | p441 stored | 🟢 `p197` from bytes | bytes | note |
+|---|---|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `17 286` | `0.997`× pristine — near-canonical |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `17 286` | byte-identical to the row above |
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `53 408` | *"v2 or later, with two special exceptions"* |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 `LGPL?` | 🟡 **`GPL-2.0`** | `66 467` | 🔴 a **vendored** `fckeditor` file, tri-licensed `GPL`+`LGPL`+`MPL` — first title only |
+
+🔵 The instrument, its negative controls and the limits it declares are in
+[`compose/code/p197-title-line-family/`](../compose/code/p197-title-line-family/); the
+unrun patch to `lib/` is recorded there as a **proposal**, deliberately not applied.
+
+### 🟢 The agents shelf — every licence read from BYTES this pass
+
+🔵 Branch resolved with `git ls-remote --symref HEAD` *(never guessed)*; licence classified on
+the **title line**; ★ and `pushed_at` from the GitHub MCP ranked channel.
+
+| agent | repo | 🟢 licence *(bytes)* | ★ | what it is |
+|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** · `11 408` B | `41 372` | Lifelong personalised tutoring; multi-agent + RAG. 🟢 **The largest education agent on this shelf**, and permissive |
+| **smolagents** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **`Apache-2.0`** · `11 357` B | — | Minimal code-writing agent loop; the cheapest harness to embed in a tutor |
+| **AutoGen** | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 **`LICENSE` is `CC-BY-4.0`** · `18 650` B · 🟢 **`LICENSE-CODE` is `MIT`** · `1 141` B | — | Multi-agent conversation framework. 🔴 **The code grant is NOT at `LICENSE`** — see the warning below |
+| **Educhain** | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **`MIT`** · `1 092` B | — | Generates courses, MCQs and lesson plans from source material |
+| **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **`MIT`** · `1 105` B | — | UC Berkeley intelligent tutor; Bayesian Knowledge Tracing, human-authored content |
+| **OpenTutor** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **`MIT`** · `1 068` B | `141` | Local-first block workspace: material → notes, quizzes, flashcards, adaptive tutor; `10`+ LLM providers |
+| **Open TutorAI CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`** · `1 531` B | — | Avatar-based tutoring platform with an arXiv paper behind it |
+| **Bloom** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **`MIT`** · `1 069` B | — | Self-hosted Socratic-method tutor 🆕 **new to this shelf** |
+| **ai-tutor** | [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | 🟢 **`MIT`** · `1 070` B | — | Adaptive quizzes + coding help + ethical guidance 🆕 **new to this shelf** |
+| **Tov-learn** | [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 **`MIT`** · `1 064` B | — | Spaced-repetition tutor packaged as an agent skill 🆕 **new to this shelf** |
+| **ChatTutor** | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **`AGPL-3.0`** · `34 522` B | — | Visual interactive tutor. 🔴 **Network-use disclosure — not a free pick for a hosted deliverable** |
+| **lumen** | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 **`GPL-3.0`** · `35 149` B | — | Learner-owned platform; course-scoped RAG with citations. 🔴 copyleft |
+
+🔵 `11` real rows, `3` of them new this pass. ★ is given only where the ranked channel returned
+it for that exact slug — 🔴 **this pass did not spend `11` channel calls to decorate a table**,
+and a blank is a blank, not a zero.
+
+### 🔴 The warning this table exists to carry: `microsoft/autogen`
+
+🔴 **A first-match filename list publishes the WRONG file for AutoGen.** The root holds both:
+
+| path | 🟢 family *(bytes)* | bytes | what it governs |
+|---|---|---|---|
+| 🔴 `LICENSE` | 🔴 **`CC-BY-4.0`** | `18 650` | *content* — **not a code grant** |
+| 🟢 `LICENSE-CODE` | 🟢 **`MIT`** | `1 141` | 🟢 **the code** |
+
+🔴 **And this pass made exactly that mistake, in writing, before its own next command refuted
+it.** It had reasoned that a filename list is unsound for a NEGATIVE *(which is `P441`)* but
+*"sufficient for a POSITIVE, because bytes in hand are bytes in hand."* 🟢 **Bytes in hand are
+only sound if they are the bytes of the right file** — and a list that stops at its first hit
+cannot know which that is. `17` passes of this KB recorded *"AutoGen (MIT)"*: right family,
+wrong file, and a sweep that trusted the list would have downgraded it to `CC-BY`.
+
+🟢 **Rule, now explicit:** enumerate the root on the tree channel, classify **every**
+licence-named entry, then decide. Never first-match-wins.
+
+### 🟢 Pre-registered for p198, each limb naming the ARITHMETIC it would change
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| **Read the register first** — fired on `6` of `7` this pass; keep it as step `0` | prior art found → cite and spend the pass elsewhere | nothing found → the build is genuinely new |
+| **Re-test whether `bash <repo script>` is permitted**, before planning any pass around the KB's instruments | permitted → run `lib/test_license_family.sh` from `3` directories and the `3` blocked limbs land | still denied → the `290` recipes are a **read-only register**, and that must be said on every page that cites one as runnable |
+| Apply the `GPL2_PREAMBLE` case + title-line rule to `lib/license_family.sh` **and run the suite** | `207`+`1`/`208` pass → the trap class closes in the canonical classifier | any regression → the title-line rule breaks a case the window rule got right, and name it |
+| Re-classify **all** of `p441`'s `families` column with the title-line rule | only the `4` `LGPL?` rows change → the defect was contained | other rows change → the stored column is **systematically** wrong, not locally wrong, and the count is the finding |
+| Enumerate the ROOT of all `494` shelf rows and count how many carry MORE THAN ONE licence-named entry | `≤5` rows → AutoGen is an exception and first-match costs little | `>5` → every licence column in this KB built from a list is suspect, and the number says how much |
+| Derive the `LGPL-3.0` **addendum-form** band from `≥10` rows | a stable `~7.6` KB band → `LGPL-3.0` gets a second anchor and the family becomes bandable | it scatters → `LGPL-3.0` is **full-text-only**, permanently |
+| Resolve `sonic-pi`'s `AGPL?` and every unresolved `?` family on the shelf | all resolve → the `?` class is a reading gap, not a corpus property | some cannot → name the document shape that defeats a title line |
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **p195 pre-registered four actions, and the FIRST one — *"read the KB before building any
@@ -7850,3 +7970,4 @@ is the point.**
   *"no tool writes anything"* is read from its README tool table and is consistent with its SDK
   surface — it is **not** a handler-by-handler source audit either, and is recorded at that
   strength.
+

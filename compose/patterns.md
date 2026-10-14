@@ -3,6 +3,166 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **`P0a` fired for the third consecutive pass and paid most in the pass where the
+instruments could not run: `6` of p196's `7` pre-registered actions were answered from the
+register alone, with `bash <repo script>` DENIED all pass.** 🟢 `P0a` stays step one, and this
+pass adds the gate its own data forced and the pattern APAC's new law opened.
+
+### 🟢 `P0a` — Read the register before building the instrument — **MEASURED THREE TIMES, keep it**
+
+🔵 Wiring unchanged *(see p195/p196 below)*. 🟢 **Yield this pass:**
+
+| p196's pre-registered action | what `P0a` returned | what it saved |
+|---|---|---|
+| classify the `3` root payloads | 🟢 `P441`'s `result.2026-10-07.tsv` + `p196-none-tree-reach` | the slugs and paths, already enumerated |
+| the interoperability-layer re-read | 🟢 `p196-none-tree-reach` *(`Lumi`, `own_subtree=15`)* | the `15` paths did not have to be rediscovered |
+| notice-form band | 🟢 `P420` *("size does not identify")*, `p196-copyleft-band` | the identity half; only the **anchor** half was new |
+| case-fold de-dup + `494` census | 🟢 `p288-agpl-casefold`, `p196-population-diff` | 🔴 **the instruments exist and could not be RUN** |
+| `${BASH_SOURCE[0]}` fixture fix | 🟢 `p560-epl-mpl-version-read/test_versions.sh` *(the pattern already done right)*, `p176-suite-exit-sweep` *(the silent-skip class)* | the correct idiom, already in the tree |
+| *(the seventh was `P0a` itself)* | — | — |
+
+🔴 **The honest footnote, and it is new:** `P0a` protects against re-deriving what exists. 🔴 **It
+does not tell you whether you can RUN what exists.** 🟢 **`P0b`-style lane census must precede
+`P0a`'s output being turned into a plan** — see `P197-D`.
+
+### 🆕 🟢 `P197-D` — Census the lanes BEFORE planning the pass *(new step zero)*
+
+🔵 **Why:** p196 pre-registered `7` actions. 🔴 **`3` were impossible before the pass began**,
+because the execution door had shut, and nothing in the plan would have revealed it.
+
+```
+  STEP -1   lane census  -> can I reach bytes?   (raw lane)
+                         -> can I reach trees?   (git clone --filter=blob:none)
+                         -> can I resolve HEAD?  (git ls-remote --symref)
+                         -> can I RANK?          (GitHub MCP search_repositories)
+                         -> can I EXECUTE MY OWN REGISTER?   <-- the row p196 lacked
+  STEP  0   P0a: grep compose/code/ + the four pages for prior art
+  STEP  1   plan only actions whose lane is OPEN; pre-register the rest as BLOCKED, named
+```
+
+🟢 **Wiring:** `evidence/lane-census.2026-10-14-p197.tsv` is the template — one row per lane,
+one column per pass, and the **door** named separately from the destination *(p196's rule)*.
+🟢 **Exit condition:** if a pre-registered action's lane is closed, it is recorded as **BLOCKED
+with the lane named**, never silently dropped and never attempted and half-reported.
+
+### 🆕 🟢 `P197-E` — The licence-truth gate, and it does NOT use a filename list
+
+🔵 **Why:** `5` education rows this pass have their grant somewhere other than where a reader
+looks, and 🔴 **this pass's own sweep would have published `AutoGen` as `CC-BY-4.0`** because a
+first-match list stopped at `LICENSE` and never reached `LICENSE-CODE`.
+
+```
+  ┌─ 1. RESOLVE the branch ──────────────────────────────────────────────┐
+  │  git ls-remote --symref <url> HEAD                                   │
+  │  NEVER guess main/master -- 10 of 30 education rows are neither,      │
+  │  and a guessed 404 is a FALSE ABSENCE                                 │
+  └───────────────────────────┬──────────────────────────────────────────┘
+  ┌───────────────────────────▼──────────────────────────────────────────┐
+  │  2. ENUMERATE the tree                                               │
+  │  git clone --filter=blob:none --no-checkout --depth 1 && ls-tree -r   │
+  │  the ONLY channel that sustains an absence  (P441)                    │
+  └───────────────────────────┬──────────────────────────────────────────┘
+  ┌───────────────────────────▼──────────────────────────────────────────┐
+  │  3. CLASSIFY EVERY licence-named entry -- not the first one           │
+  │  compose/code/p197-title-line-family/family_title_line.py             │
+  │  title line in DOCUMENT order; defeats GPL-3 §13 AND GPL-2 preamble   │
+  └───────────────────────────┬──────────────────────────────────────────┘
+  ┌───────────────────────────▼──────────────────────────────────────────┐
+  │  4. SEPARATE own-grant from vendored                                  │
+  │  root / own subtree  vs  node_modules, vendor/, assets/*/libraries/   │
+  │  (Lumi: 15 texts, ALL vendored, 0 own -- the layer grants nothing)    │
+  └───────────────────────────┬──────────────────────────────────────────┘
+  ┌───────────────────────────▼──────────────────────────────────────────┐
+  │  5. FAIL CLOSED on: CC-BY-NC, CC-BY-SA, any CC for CODE, AGPL for a   │
+  │     hosted deliverable, NOASSERTION, and <1 KB "pointer" licences     │
+  └──────────────────────────────────────────────────────────────────────┘
+```
+
+🟢 **Concrete wiring for a studio intake:** run steps `1`–`4` over the client's candidate
+dependency list; emit one row per repo with `slug`, `branch`, every licence path, family from
+bytes, byte count, and `own|vendored`. 🔴 **Gate the engagement on step `5`, not on a GitHub
+sidebar.** The five rows this pass caught —
+`autogen`/`formalms`/`fedena`/`frappe-education`/`openSIS` — are all rows a sidebar gets wrong.
+
+🔵 Declared limits are in [`compose/code/p197-title-line-family/README.md`](code/p197-title-line-family/README.md):
+English-only grant detection, and one family per file *(a multi-notice file needs `P441`'s
+`names_multiple`)*.
+
+### 🆕 🟢 `P197-F` — One assessment-conformance build, FOUR jurisdictions
+
+🔵 **Why now:** 🆕 **Vietnam's AI law *(`2026-03-01`)* names automated assessment and
+behavioural monitoring as high-risk, with compliance due `2027-03-01` and reach over foreign
+providers.** 🟢 Korea's AI Basic Act names education high-impact; the EU's Annex III names
+assessing learning outcomes; North American districts bar AI as the **sole basis** for
+high-stakes determinations. 🟢 **Four regulators, independently drafted, one component.**
+
+```
+            ┌─ the ASSESSMENT path, treated as the regulated path ─────────┐
+            │  tutor / assessment agent                                     │
+            │  DeepTutor (Apache-2.0) | oppia (Apache-2.0) | OATutor (MIT)  │
+            └───────────────────────┬──────────────────────────────────────┘
+      ┌─────────────────────────────▼───────────────────────────────────────┐
+      │ HUMAN-IN-THE-LOOP GATE   (Idaho: AI may not replace teachers;       │
+      │                           Charleston: not the SOLE basis)           │
+      │  -> compose/code/agent-tool-receipts-port/  per-action receipts      │
+      └─────────────────────────────┬───────────────────────────────────────┘
+      ┌─────────────────────────────▼───────────────────────────────────────┐
+      │ MARKING / PROVENANCE     (EU Art.50 in force 2026-08-02;            │
+      │                           China: binding content labelling)         │
+      │  -> compose/code/aiact-50-2-marking/   provenance fields             │
+      │  -> compose/code/aiact-50-2-pack/      aiact-50-2.xsd                │
+      │  -> compose/code/aiact-50-2-spans/     which spans are AI-authored   │
+      └─────────────────────────────┬───────────────────────────────────────┘
+      ┌─────────────────────────────▼───────────────────────────────────────┐
+      │ POLICY STATE, dated and diffable                                     │
+      │  OK S.B.1734's four clauses as a SCHEMA; VT H.B.650 vendor duty;      │
+      │  CA A.B.1159: student data must NOT train models                      │
+      │  -> compose/code/p598-register-freshness-gate/                        │
+      └─────────────────────────────┬───────────────────────────────────────┘
+      ┌─────────────────────────────▼───────────────────────────────────────┐
+      │ JURISDICTION PROFILE  (one policy node per market, same pipeline)    │
+      │  EU | Vietnam | Korea | US-state   -> LangGraph policy nodes          │
+      └─────────────────────────────────────────────────────────────────────┘
+```
+
+🟢 **Why the stack is permissive end to end:** `DeepTutor` `Apache-2.0` *(`11 408` B, from
+bytes)*, `oppia` `Apache-2.0` *(`11 358` B)*, `OATutor` `MIT` *(`1 105` B)*, `kolibri` `MIT`
+*(`1 097` B)* for the offline tier. 🔴 **Deliberately NOT in this stack:** `ChatTutor`
+*(`AGPL-3.0`)*, `lumen` *(`GPL-3.0`)*, `Open edX`/`Canvas`/`tutor` *(`AGPL-3.0`)* — a hosted
+assessment service under Affero owes source disclosure to its users.
+
+🔵 **Sequencing, from the dates:** Article `50` binds **now** → build the marking layer first.
+Vietnam's `2027-03-01` is the next hard deadline → the jurisdiction profile second. EU Annex III
+*(`2027-12-02`, contested)* → last. 🔴 **`4`–`6` weeks for the marking layer, `8`–`10` for the
+jurisdiction profile**, on the basis that every primitive above already exists in this KB.
+
+### 🆕 🟢 `P197-G` — The LATAM engagement IS the governance artefact
+
+🔵 **Why:** 🟢 **`87`% of `200` LATAM higher-ed institutions use AI in at least one area;
+`26`% hold a formal AI strategy** *(UNESCO IESALC, `19` countries)*. 🔴 A `61`-point gap. 🟡 EMEA
+shows the same shape at `10`% of `450`+ institutions.
+
+🟢 **So the deliverable is not a tutor. It is the instrument that lets an institution say what
+its tutors may do** — and it is the same four clauses North America already legislates:
+
+| clause | the artefact | the primitive |
+|---|---|---|
+| approved / prohibited uses | a machine-readable use register, enforced at the tool boundary | 🟢 `agent-tool-receipts-port/` |
+| data protection + minimisation | a data-flow inventory the system **emits** | 🔴 a vendor duty under VT H.B.`650` |
+| learner / family transparency | disclosure of which spans the AI authored | 🟢 `aiact-50-2-spans/` |
+| periodic review | dated, diffable policy state | 🟢 `p598-register-freshness-gate/` |
+
+🟢 **Deploy tier for the region:** `kolibri` *(MIT, offline-first)* where connectivity is the
+binding constraint; `chamilo-lms` has deep LATAM install base but is 🔴 `GPL-3.0`, so pair it
+rather than fork it. 🟢 **Institutional channel:** UNESCO's LAC Observatory *(launched
+`2026-04-14`, Santiago)* is the reference point a proposal can cite.
+
+🔴 **Named gap this pattern must not paper over:** no binding national AI-in-education
+regulation was found in any LATAM jurisdiction. 🟢 **That is why the artefact is institutional
+policy, not statutory compliance** — and the pattern is honest about selling the former.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **`P0a` was installed as a gate one pass ago. This pass it FIRED, and the saving is
@@ -8919,3 +9079,4 @@ screen as code** — the two education benchmarks that exist are both ungranted.
    **password** (p136). 🟢 **Before any auth or standards claim reaches a client deliverable, clone
    the repository and read the three files that matter** — the config loader, the HTTP client and the
    tool definitions. It took under ten minutes per repository in this environment.
+

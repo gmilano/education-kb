@@ -1,0 +1,6 @@
+slug	what_the_open_web_says	what_the_bytes_say	path_that_actually_grants	bytes	class	risk_direction
+microsoft/autogen	MIT	MIT - but NOT at LICENSE	LICENSE-CODE	1141	root LICENSE is CC-BY-4.0 (18650 B) content licence; a first-match list publishes CC-BY	mislabel in BOTH directions
+formalms/formalms	Apache-2.0	GPL-2.0	html/lib/System/license/license_english.txt	15146	licence shipped as a TRANSLATED UI ASSET; nothing at root	WEB IS WRONG, permissive direction
+foradian/fedena	Apache-2.0	Apache-2.0 DECLARED IN NOTICE ONLY	NOTICE (679 B) - no licence text anywhere	679	family right, but the repo ships NO licence text; root is NOTICE + README only	grant is weaker than it looks
+frappe/education	GPL-3.0 (sidebar)	NO GRANT IN BYTES	license.txt is 19 B: "License: GNU GPL V3"	19	bare pointer - no holder, no warranty disclaimer, no or-later clause	grant is weaker than it looks
+OS4ED/openSIS-Classic	-	GPL-2.0	docs/License.txt	17286	nothing at root; p441 stored it as LGPL?	wrong FAMILY in this KB's own data

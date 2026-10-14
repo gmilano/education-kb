@@ -3,6 +3,146 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **The trend this pass can state for the first time is that a silent channel is more
+dangerous than a wrong one — and the silence is BIASED.** 🟢 Across `15` licence rows the
+GitHub MCP channel has never once diverged from the bytes. 🔴 **But where it goes silent
+(`NOASSERTION`), half the rows turn out to be non-commercial or share-alike** — the exact
+licences that cannot ship in a client engagement.
+
+### 🆕 🔴 T1 — `NOASSERTION` is not "no licence"; it is "unread", and it hides the restrictive ones
+
+| channel verdict | n *(p196+p197)* | 🟢 agreement with bytes |
+|---|---|---|
+| a declared `spdx_id` | `15` | 🟢 **`15` agree, `0` diverge** |
+| 🔴 `NOASSERTION` | `6` | 🔴 **all `6` resolvable from bytes — the channel simply could not parse them** |
+
+🔴 **And of this pass's `4` `NOASSERTION` rows, `2` are undeliverable:**
+[`krahets/hello-algo`](https://github.com/krahets/hello-algo) at **`130 684`★** is
+🔴 **`CC-BY-NC`**, and `Auto-Empirical-Research-Skills` is 🔴 **`CC-BY-SA`** in a `620`-byte
+pointer. 🟢 **The rule: `NOASSERTION` must raise the flag, never lower it.** A reputation-led
+pick with a non-commercial licence is the most expensive mistake available on this page.
+
+### 🆕 🔴 T2 — Education's top-of-rank is licensed as CONTENT, not as code
+
+🟢 Of the `23` highest-ranked education repositories active in the last `30` days,
+🔴 **`6` carry a Creative Commons licence** *(`CC-BY-4.0`×`2`, `CC-BY-SA`×`2`, `CC-BY-NC`,
+`CC0`)*. 🔴 **CC licences were not drafted for software**: no patent grant, and `-NC`/`-SA`
+variants constrain exactly what an engagement does.
+
+🟢 **This is a structural property of the education industry, not a sampling artefact** — the
+sector's biggest repositories are curricula, book lists and algorithm courses, i.e. *content*.
+🔴 A studio that filters education repos by *"permissive"* and accepts `CC-BY` has mistaken a
+content licence for a code grant.
+
+### 🆕 🔴 T3 — The licence is drifting AWAY from the file a reader opens
+
+🔵 Four distinct shapes, all found this pass, all on real education rows:
+
+| shape | row | what a naive read returns |
+|---|---|---|
+| **dual-file**: content licence at `LICENSE`, code grant elsewhere | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 `CC-BY-4.0` instead of `MIT` |
+| **licence as a translated UI asset**, nothing at root | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 *"no licence"* |
+| **`NOTICE`-only**: family declared, 🔴 **no licence text shipped** | [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 *"Apache-2.0"* with nothing behind it |
+| **`19`-byte pointer** | [`frappe/education`](https://github.com/frappe/education) | 🔴 *"GPL-3.0"* with no grant text |
+
+🟢 **The trend to carry forward: `LICENSE` at the root is becoming an unreliable convention**,
+and tree enumeration plus per-file classification is becoming the only sound read. 🔴 Every
+licence column in this KB that was built from a first-match filename list is suspect to the
+degree this shape is common — and **counting how common is pre-registered for p198.**
+
+### 🆕 🟢 T4 — Every copyleft family has a sibling-naming sentence; classify on the TITLE LINE
+
+🟢 **The `GPL-3.0` §13 trap is not special. `GPL-2.0`'s PREAMBLE does the same thing**, and it
+sits inside the first `40` lines of the canonical text, so no window size avoids it:
+
+| family | the sentence | a window classifier returns |
+|---|---|---|
+| `GPL-3.0` | *"13. Use with the GNU Affero General Public License."* | 🔴 `AGPL-3.0` |
+| 🆕 `GPL-2.0` | *"(Some other FSF software is covered by the GNU **Lesser** GPL instead.)"* | 🔴 `LGPL?` |
+
+🟢 **One rule defeats both: take the first line in DOCUMENT order that matches a licence title.**
+The real title always precedes the sentence that names a sibling. 🔴 **This KB's stored data
+had the defect: `4` rows in `p441`'s `families` column read `LGPL?` and all `4` are `GPL-2.0`;
+zero are LGPL.**
+
+🔵 **The generalisation worth keeping:** *widening a filename list cannot fix a list* `(P441)`;
+🆕 **resizing a window cannot fix a window.** Both are the same error — a positional heuristic
+standing in for a structural read.
+
+### 🟡 T5 — Licence byte bands are family-dependent, and two families have no usable anchor
+
+🟢 Bands hold tightly where the text is distributed verbatim, and fail where it is not:
+
+| family | ratio to SPDX pristine | verdict |
+|---|---|---|
+| `GPL-3.0` *(n=`5`)* | `1.013`–`1.014`, 🟢 **`28` B spread** | 🟢 **HOLDS** |
+| `ECL-2.0` | `1.001` | 🟢 holds *(n=`1`)* |
+| `AGPL-3.0` *(n=`4`)* | `1.015`–`1.033` | 🟢 **HOLDS** |
+| `Apache-2.0` *(n=`4`)* | `1.068`–`1.110` | 🟢 **HOLDS** — the appendix is filled in |
+| `MIT` *(n=`15`)* | `0.982`–`1.058` | 🟡 **holds after excluding `1` row** that carries more than one notice |
+| 🔴 `GPL-2.0` *(n=`4`)* | 🔴 `0.874`–`0.997` | 🔴 **FAILS** — reflowed variants run `13`% **under** pristine |
+| 🔴 `LGPL-3.0` *(n=`3`)* | 🔴 **`0.182`–`0.196`** | 🔴 **FAILS — wrong anchor.** The shipped form is a `~7.6` KB addendum; SPDX publishes a `42 098` B standalone |
+
+🟢 **So a byte band is a legitimate instrument with a stated domain**, not a general one. 🔴 **A
+freshness or integrity gate that centres `LGPL-3.0` on SPDX's anchor flags every real
+repository** — that is a false-positive generator, not a control.
+
+### 🟢 T6 — The industry's own trend line: purpose-built is beating general-purpose
+
+🟢 **Independent convergence, and one source is institutional:** the **OECD `2026` Digital
+Education Outlook** recommends moving beyond general-purpose tools toward purpose-built
+educational AI designed for durable learning gains; vendor and practitioner sources describe
+the same shift away from generic chatbots because general tools **added** prompt-writing and
+fact-checking work for teachers.
+
+🟡 Adoption figures travel with it but are weaker: `92`% of university students using AI *(up
+from `66`%)* and `54`% of K-12 students *(RAND `2025`)* — 🔴 single-source, carried as
+indicative.
+
+🔴 **Market size remains irreconcilable:** $`10.6`B `2026`→$`42.48`B `2030` *(Research &
+Markets)* vs ≈$`6`B `2024`→$`32`B `2030` *(K-12 Academics)* vs $`12.3`B *(HolonIQ, via a vendor
+blog)*. 🟡 **Fifth consecutive pass carrying this as a conflict rather than a number.**
+
+### 🆕 🟢 T7 — Regulation is converging on ASSESSMENT as the regulated surface
+
+🟢 **Four jurisdictions, independently drafted, land on the same component:**
+
+| jurisdiction | what it names |
+|---|---|
+| EU *(Annex III)* | determining access to education, **assessing learning outcomes**, influencing an educational path |
+| 🆕 Vietnam *(law `2026-03-01`)* | 🔴 **automated assessment** and behavioural monitoring, high-risk |
+| South Korea *(AI Basic Act)* | education as **high-impact** |
+| North America *(Charleston County; Idaho)* | 🔴 AI not the **sole basis** for high-stakes determinations; no replacing teachers |
+
+🟢 **The engineering consequence is a single architectural rule that satisfies all four: the
+assessment path is the regulated path** — human-in-the-loop, per-action receipts, and
+learner-facing disclosure of which spans are AI-authored. 🟢 One build, four markets.
+
+### 🆕 🔴 T8 — The adoption/governance gap is the global pattern, and it is now measured on two continents
+
+| region | adopting | governed |
+|---|---|---|
+| 🟢 **LATAM higher ed** *(UNESCO IESALC, `200` institutions, `19` countries)* | 🟢 **`87`%** | 🔴 **`26`%** |
+| 🟡 **EMEA** *(`450`+ institutions)* | — | 🔴 **`10`% have formal guidelines** |
+| North America K-12 | — | 🟢 `33`–`35` states have **guidance**; few mandate policy |
+
+🔴 **The scarce artefact worldwide is not a model — it is a governance instrument**, and in
+LATAM the `61`-point gap makes the policy artefact itself the sellable deliverable. 🟢 This is
+the first pass where that claim rests on a survey rather than on inference.
+
+### 🆕 🔴 T9 — A method trend this KB must record about itself: the register outlived the instruments
+
+🔴 **`bash <repo script>` is denied this pass.** All `290` recipes are readable and none is
+runnable. 🟢 **`P0a` — read the register before building — was worth MORE in this state, not
+less:** it answered `6` of `7` pre-registered actions from prose and stored results alone.
+
+🔴 **But `3` pre-registered actions were blocked outright**, and the honest lesson is about
+sequencing: 🟢 **run the lane census BEFORE planning the pass.** p196 pre-registered seven
+actions against instruments that turned out to be unrunnable; a census first would have
+pre-registered seven that were.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **The trend this pass can state for the first time is about this KB's own method, and it
@@ -6827,3 +6967,4 @@ enough and this trend is an artefact of four unlucky examples.
   practice.** 847★, 122 forks, CC-BY-SA-4.0 by deed. Watch whether any fork publishes adaptations
   under the same licence — the first test of whether a content licence on an agent-skills pack is
   honoured or ignored.
+

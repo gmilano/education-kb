@@ -1,0 +1,5 @@
+slug	path	p441_stored_family	p197_family_from_bytes	bytes	gpl2_pristine	ratio	is_lgpl	note
+OS4ED/openSIS-Classic	docs/License.txt	LGPL?	GPL-2.0	17286	17337	0.997	NO	near-pristine GPL-2.0; preamble trap
+OS4ED/openSIS-Responsive-Design	docs/License.txt	LGPL?	GPL-2.0	17286	17337	0.997	NO	byte-identical to openSIS-Classic
+nvaccess/nvda	copying.txt	LGPL?	GPL-2.0	53408	17337	3.081	NO	"GPL v2 or later, with two special exceptions"; bundles further texts
+foradian/fedena	public/javascripts/fckeditor/license.txt	LGPL?	GPL-2.0	66467	17337	3.834	NO	VENDORED fckeditor, tri-licensed GPL+LGPL+MPL; first title only - see declared limit 2

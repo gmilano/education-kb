@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **The trending substitute keeps working, and this pass found the thing it HIDES.** The
+`NOASSERTION` rows are not unlicensed repositories — they are repositories the channel cannot
+parse. 🔴 **And the licences hiding behind `NOASSERTION` are biased toward exactly the ones
+that block commercial delivery.**
+
+🔵 Honest about what this is: a `pushed:>`-filtered ranked query measures **stock filtered by
+recency**, not flow. `github.com/trending` is `403` *(third consecutive pass)*. Star velocity
+remains unmeasurable from this session.
+
+### 🆕 🔴 `NOASSERTION` resolved from bytes — `4` of `4`, and `2` are undeliverable
+
+🔵 Query: `topic:education stars:>500 pushed:>2026-09-14`, `total_count` `69`, `25` returned.
+Every row below had its licence **read over the raw lane and classified on its title line**.
+
+| repo | ★ | 🔴 channel says | 🟢 bytes say | delivery verdict |
+|---|---|---|---|---|
+| [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | `130 684` | 🔴 `NOASSERTION` | 🔴 **`CC-BY-NC`** · `20 849` B | 🔴 **NON-COMMERCIAL — cannot ship in a client engagement** |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | `4 622` | 🔴 `NOASSERTION` | 🔴 **`CC-BY-SA`** · `620` B | 🔴 **SHARE-ALIKE, and a `620` B pointer, not a full text** |
+| [`sonic-pi-net/sonic-pi`](https://github.com/sonic-pi-net/sonic-pi) | `12 200` | 🔴 `NOASSERTION` | 🟡 **`AGPL?`** · `15 981` B | 🟡 Affero family; version unresolved — carried as `?` |
+| [`gsantner/markor`](https://github.com/gsantner/markor) | `6 283` | 🔴 `NOASSERTION` | 🟢 **`Apache-2.0`** · `10 462` B | 🟢 clear |
+
+🟢 **And where the channel DID declare a licence, it was right every time — `4`/`4` agree:**
+
+| repo | ★ | channel | 🟢 bytes | agreement |
+|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | `Apache-2.0` | 🟢 `Apache-2.0` · `11 358` B | 🟢 **AGREE** |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | `24 122` | `LGPL-2.1` | 🟢 `LGPL-2.1` · `24 480` B | 🟢 **AGREE** |
+| 🆕 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `4 179` | `AGPL-3.0` | 🟢 `AGPL-3.0` · `34 523` B | 🟢 **AGREE** |
+| [`frappe/lms`](https://github.com/frappe/lms) | `3 312` | `AGPL-3.0` | 🟢 `AGPL-3.0` · `33 893` B | 🟢 **AGREE** |
+
+🔵 Cumulative channel-vs-bytes record: **p196 `11` agree / `2` blind / `0` diverge; p197 `4`
+agree / `4` blind-RESOLVED / `0` diverge.** 🟢 **`0` divergences in `15` declared rows** — the
+channel does not lie. 🔴 **It goes silent, and it goes silent on `CC-BY-NC` and `CC-BY-SA`.**
+
+🔵 [`evidence/channel-vs-bytes.2026-10-14-p197.tsv`](../evidence/channel-vs-bytes.2026-10-14-p197.tsv).
+
+🟢 **The operational rule:** treat `NOASSERTION` as **"unread"**, never as *"no licence"* and
+never as *"permissive by default."* A `130 684`★ repository with a non-commercial licence is
+precisely the row a studio picks up by reputation and cannot ship.
+
+### 🆕 🟢 New agent rows this pass — all licensed from bytes
+
+| agent | repo | 🟢 licence *(bytes)* | why it is new here |
+|---|---|---|---|
+| **Bloom** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` · `1 069` B | self-hosted Socratic tutor; agent-skill packaging |
+| **ai-tutor** | [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | 🟢 `MIT` · `1 070` B | adaptive quizzes + coding help + ethics guidance in one loop |
+| **Tov-learn** | [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 `MIT` · `1 064` B | spaced repetition as an agent skill rather than an app |
+| **OpenTutor** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` · `1 068` B | `141`★, `30` forks, pushed `2026-10-13`; created `2026-02-26` — 🟢 **`8` months old** |
+| **lumen** | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 `GPL-3.0` · `35 149` B | learner-owned course-scoped RAG with citations |
+| **ChatTutor** | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 `AGPL-3.0` · `34 522` B | visual tutor; 🔴 Affero |
+
+🟢 **`DeepTutor` is measured, not quoted: `41 372`★, `5 214` forks, `195` open issues, pushed
+`2026-10-14`, created `2025-12-28`.** 🔵 The open web's *"`41.2`k"* is confirmed in band. 🟢 Its
+licence is `Apache-2.0` from bytes *(`11 408` B)* — 🟢 **the largest education agent in this KB
+is permissive**, which is the single most useful fact on this page for a studio.
+
+### 🔴 What the open web returned this week, and why little of it survived
+
+🔵 Four global sweeps ran. 🔴 **Three returned vendor listicles with no education specificity**
+*("`10` best open-source AI agents for `2026`")* and one returned GitHub topic pages. 🔴 **No
+true trending ranking for education AI exists in the sources reachable this pass** — the
+substitute above is the honest best available, and it is labelled as a substitute.
+
 ## Pass 196 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
@@ -31438,3 +31505,4 @@ Los star counts de ciclos anteriores estaban inflados por el pipeline, no medido
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+

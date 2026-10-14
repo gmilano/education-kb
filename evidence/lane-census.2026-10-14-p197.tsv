@@ -1,0 +1,11 @@
+lane	door	p195	p196	p197	yields
+raw.githubusercontent.com	curl	200	200	200	licence BYTES
+git clone --filter=blob:none + ls-tree	git	200	200	200	the complete tree; sustains an ABSENCE
+git ls-remote --symref HEAD	git	-	-	200	the REAL default branch (not a guess)
+GitHub MCP search_repositories	mcp	presumed-dead	ANSWERS	ANSWERS	ranked slugs + license.spdx_id + stars + pushed_at
+github.com HTML (incl. /trending)	curl	403	403	403	nothing
+api.github.com	curl	403	403	403	nothing
+gnu.org / mozilla.org	curl	403	403	000-CURL-FAIL	canonical licence texts - unreachable
+eur-lex.europa.eu	dns	NO-RESOLVE	NO-RESOLVE	NO-RESOLVE	primary OJ text - unreachable
+bash <repo script>	exec	used freely	used freely	DENIED-PERMISSION-CLASSIFIER	the KB's own 288 recipes - READABLE, NOT RUNNABLE
+python3 -I <own script>	exec	-	-	OK	re-derived instruments only

@@ -1,0 +1,11 @@
+slug	real_default_branch	would_main_or_master_have_worked
+francoisjacquet/rosariosis	mobile	NO - a guess yields a false 404, hence a FALSE ABSENCE
+openeducat/openeducat_erp	19.0	NO
+GibbonEdu/core	v31.0.00	NO
+bigbluebutton/bigbluebutton	v3.0.x-develop	NO
+overhangio/tutor	release	NO
+oppia/oppia	develop	NO
+learningequality/kolibri	develop	NO
+frappe/education	develop	NO
+sakaiproject/sakai	master	yes
+moodle/moodle	main	yes

@@ -1,0 +1,17 @@
+path	family_bytes	grant	bytes	class
+ROOT	NONE	-	0	Lumi grants NOTHING at its root - confirmed by tree enumeration
+assets/h5p/core/fonts/open-sans/LICENSE-2.0.txt	Apache-2.0	GRANT	11358	VENDORED - bundled font
+assets/h5p/libraries/H5P.Agamotto-1.6/license.txt	MIT	GRANT	1136	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.AudioRecorder-1.0/LICENCE.md	MIT	GRANT	1060	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.CKEditor-1.0/LICENSE.md	MIT	GRANT	2167	VENDORED - and carries MORE THAN ONE notice (band outlier)
+assets/h5p/libraries/H5P.Collage-0.3/LICENSE.md	MIT	GRANT	1068	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.CoursePresentation-1.25/LICENCE.md	MIT	GRANT	1067	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.CoursePresentation-1.26/LICENCE.md	MIT	GRANT	1067	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.DragText-1.10/LICENSE.md	MIT	GRANT	1060	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.IFrameEmbed-1.0/LICENSE.txt	MIT	GRANT	1073	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.InteractiveVideo-1.26/LICENCE.md	MIT	GRANT	1059	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.InteractiveVideo-1.27/LICENCE.md	MIT	GRANT	1059	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.MultiMediaChoice-0.3/LICENCE.md	MIT	GRANT	1059	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.SingleChoiceSet-1.11/LICENSE.md	MIT	GRANT	1067	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.ThreeImage-0.5/LICENSE.md	MIT	GRANT	1071	VENDORED - third-party H5P content library
+assets/h5p/libraries/H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt	Apache-2.0	GRANT	11358	VENDORED - bundled font

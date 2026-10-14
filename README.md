@@ -3,6 +3,38 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **The headline is that this KB's own `290` recipes went READ-ONLY mid-flight, and the
+pass that had to re-derive its instrument caught two defects — one in this KB's stored data,
+one in its own reasoning.** `bash <repo script>` is denied by the session's permission
+classifier *(`[Code from External]`)*, tried twice including the documented invocation.
+
+| what ran | verdict |
+|---|---|
+| 🆕 🔴 **The execution lane** | 🔴 **DENIED.** All `290` recipes readable, none runnable. 🟢 `P0a` answered `6` of `7` pre-registered actions from the register alone — worth *more* in this state, not less |
+| 🟢 **The `3` `OWN-GRANT-AT-ROOT` payloads** | 🟢 **All `3` REAL grants** *(`LGPL-3.0` `7 651` B, `MIT` `1 079` B, `Apache-2.0` `11 358` B)*. 🔴 **But the limb's arithmetic was impossible as written** — `16.2`% STANDS, it cannot fall |
+| 🟢 **The interoperability-layer claim** | 🟢 **SURVIVES on bytes.** `Lumi` grants `0` at root; all `15` texts are vendored `H5P.*` libraries and bundled fonts |
+| 🆕 🔴 **A NEW trap, twin of §13** | 🔴 **`GPL-2.0`'s PREAMBLE names the Lesser GPL**, inside the first `40` lines. Proven on SPDX's own `GPL-2.0-only.txt`: the window rule returns `LGPL?`, the title-line rule returns `GPL-2.0` |
+| 🆕 🔴 **This KB's stored data was wrong** | 🔴 **All `4` of `p441`'s `LGPL?` rows are `GPL-2.0`. ZERO are LGPL** — carried wrong for ten passes |
+| 🆕 🔴 **The pass's OWN instrument was wrong** | 🔴 **A first-match filename list is unsound for a POSITIVE too.** `microsoft/autogen`'s root `LICENSE` is `CC-BY-4.0`; the `MIT` code grant is at `LICENSE-CODE`. The sweep would have published `CC-BY` |
+| 🟡 **Licence byte bands** | 🟡 **SPLIT BY FAMILY.** Hold for `GPL-3.0` *(`28` B spread)*, `AGPL-3.0`, `Apache-2.0`, `ECL-2.0`; 🔴 **fail for `GPL-2.0`** *(reflowed, `13`% under)* and 🔴 **`LGPL-3.0`** *(`0.182`× — wrong anchor entirely)* |
+| 🆕 🔴 **`3` more web licence errors** | 🔴 `formalms` *(web: Apache-2.0 → **`GPL-2.0`**, off-root)*, `fedena` *(`NOTICE`-only, no licence text)*, `frappe/education` *(a **`19`-byte** pointer)*. 🔴 **Six claims across two passes, every one optimistic** |
+| 🆕 🟢 **APAC moved, hard** | 🟢 **Vietnam's AI law `2026-03-01` names automated assessment high-risk, compliance `2027-03-01`, reaching foreign providers** — the hardest date in this KB |
+| 🆕 🟢 **LATAM is now MEASURED** | 🟢 **UNESCO IESALC, `200` institutions, `19` countries: `87`% adopt, `26`% govern** — a `61`-point gap, and it is the regional opportunity |
+| 🆕 🔴 **`NOASSERTION` is biased** | 🔴 `4` channel-blind rows resolved from bytes; **`2` are `CC-BY-NC`/`CC-BY-SA`** — including `hello-algo` at `130 684`★, which **cannot ship commercially** |
+| 🔴 **`3` pre-registered actions BLOCKED** | 🔴 The `494` census, the `26` unreached rows and the suite re-run. 🟢 **Recorded as blocked with the lane named, not dropped** |
+
+🟢 **New instruments:** [`compose/code/p197-title-line-family/`](compose/code/p197-title-line-family/)
+*(classify on the title line; `8` SPDX negative controls; declared limits)* and
+[`compose/code/p197-root-licence-sweep/`](compose/code/p197-root-licence-sweep/) *(resolve the
+branch, then read — and why first-match is unsound)*. 🟢 **`10` dated evidence files** under
+[`evidence/`](evidence/).
+
+🟢 **New patterns:** `P197-D` *(census the lanes before planning the pass)*, `P197-E` *(the
+licence-truth gate that does not use a filename list)*, `P197-F` *(one assessment-conformance
+build, four jurisdictions)*, `P197-G` *(the LATAM engagement IS the governance artefact)*.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **The headline is that the gate p195 installed WORKED, and the first thing it caught was
@@ -9352,3 +9384,4 @@ allowlist de egreso: ya son ocho.** Per `P950`, no se reintentaron host por host
 
 ---
 *Red de KBs Globant AI Studios → [globant-kb](../globant-kb/)*
+

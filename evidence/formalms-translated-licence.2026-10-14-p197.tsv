@@ -1,0 +1,10 @@
+language	bytes	md5	family_title_line	grant_detector	note
+english	15146	a41ad1c85f8bc03e14593891be09cf09	GPL-2.0	GRANT	THE ONLY LEGALLY OPERATIVE TEXT (FSF: translations are unofficial)
+croatian	18011	eb723b61539feef013de476e68b5c50a	GPL-2.0	GRANT	BYTE-IDENTICAL to bosnian and tamil
+bosnian	18011	eb723b61539feef013de476e68b5c50a	GPL-2.0	GRANT	BYTE-IDENTICAL to croatian and tamil
+tamil	18011	eb723b61539feef013de476e68b5c50a	GPL-2.0	GRANT	BYTE-IDENTICAL to croatian and bosnian - three "translations", one file
+italian	22483	a73ad22b3417403cd29dc7643cfc54fb	GPL?	GRANT?-NON-EN	version not resolvable from a translated title line
+french	22154	-	LGPL?-on-window	GRANT?-NON-EN	a translated title misread as LESSER by the window classifier
+german	23652	-	GPL-2.0	GRANT?-NON-EN	-
+spanish	19978	-	NO-FAMILY	GRANT?-NON-EN	no title line this instrument recognises
+portuguese	20506	-	GPL?	GRANT?-NON-EN	-

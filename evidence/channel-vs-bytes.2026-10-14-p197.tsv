@@ -1,0 +1,9 @@
+slug	stars	channel_spdx	path_read	family_bytes	grant	bytes	agreement	delivery_flag
+krahets/hello-algo	130684	NOASSERTION	LICENSE	CC-BY-NC	GRANT?-NON-EN	20849	CHANNEL-BLIND-RESOLVED	NON-COMMERCIAL - not usable in client delivery
+sonic-pi-net/sonic-pi	12200	NOASSERTION	LICENSE.md	AGPL?	GRANT	15981	CHANNEL-BLIND-RESOLVED	AGPL family - network-use disclosure
+gsantner/markor	6283	NOASSERTION	LICENSE.txt	Apache-2.0	GRANT	10462	CHANNEL-BLIND-RESOLVED	permissive - clear
+brycewang-stanford/Auto-Empirical-Research-Skills	4622	NOASSERTION	LICENSE	CC-BY-SA	NON-GRANT	620	CHANNEL-BLIND-RESOLVED	SHARE-ALIKE, and a 620 B pointer not a full text
+echo-loop/Echo-Loop	4179	AGPL-3.0	LICENSE	AGPL-3.0	GRANT	34523	AGREE	AGPL - network-use disclosure
+frappe/lms	3312	AGPL-3.0	license.txt	AGPL-3.0	GRANT	33893	AGREE	AGPL - network-use disclosure
+oppia/oppia	6855	Apache-2.0	LICENSE	Apache-2.0	GRANT	11358	AGREE	permissive - clear
+processing/p5.js	24122	LGPL-2.1	license.txt	LGPL-2.1	GRANT	24480	AGREE	weak copyleft

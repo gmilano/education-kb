@@ -1,0 +1,8 @@
+family	n	min	max	spread	spdx_pristine	min_ratio	max_ratio	band_verdict	why
+GPL-3.0	5	35121	35149	28	34674	1.013	1.014	HOLDS	tightest band measured; 28 B across 5 unrelated repos
+ECL-2.0	1	11120	11120	0	11111	1.001	1.001	HOLDS	n=1, so indicative only
+AGPL-3.0	4	34520	35136	616	34020	1.015	1.033	HOLDS	-
+Apache-2.0	4	10982	11408	426	10280	1.068	1.110	HOLDS	appendix is filled in by distributors
+MIT	15	1059	1141	82	1078	0.982	1.058	HOLDS-AFTER-EXCLUSION	excludes H5P.CKEditor 2167 B, which carries MORE THAN ONE notice
+GPL-2.0	4	15146	17286	2140	17337	0.874	0.997	FAILS	band runs BELOW pristine; reflowed variants are 13pct short
+LGPL-3.0	3	7651	8241	590	42098	0.182	0.196	FAILS	WRONG ANCHOR - the shipped form is the ~7.6 KB addendum, not SPDX's 42 098 B standalone

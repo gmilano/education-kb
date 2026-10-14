@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **The open web was wrong about `2` of the `8` biggest platforms at p196. This pass swept
+wider and found `3` MORE errors — and all `3` run in the same permissive direction.** 🟢 Every
+platform row below carries a licence read from **bytes**, on a branch **resolved** rather than
+guessed.
+
+### 🔴 Five web licence claims, measured against bytes
+
+| platform | 🔴 the open web says | 🟢 the bytes say | verdict |
+|---|---|---|---|
+| 🆕 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 *"Apache 2.0"* | 🟢 **`GPL-2.0`** · `15 146` B — 🔴 **and nothing at the root** | 🔴 **WRONG.** Copyleft reported as permissive |
+| 🆕 🟡 [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 *"Apache 2.0"* | 🟡 Apache-2.0 **declared in `NOTICE`** `679` B — 🔴 **no licence text shipped anywhere** | 🟡 **family right, grant thinner than stated** |
+| 🆕 🔴 [`frappe/education`](https://github.com/frappe/education) | 🔴 `GPL-3.0` *(sidebar)* | 🔴 **`license.txt` = `19` bytes:** `License: GNU GPL V3` | 🔴 **a POINTER, not a grant** |
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 split: `AGPLv3` **or** `Apache-2.0` | 🟢 **`AGPL-3.0`** · `35 136` B | 🔴 the Apache claim is **WRONG** *(re-confirmed)* |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 *"Apache 2.0"* | 🟢 **`ECL-2.0`** · `11 120` B | 🔴 **WRONG** *(re-confirmed)*. ECL is Apache-*derived*, not the same grant |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 one source: *"Apache License 2.0"* | 🟢 **`AGPL-3.0`** · `34 520` B | 🔴 **WRONG** — 🆕 a **new** source made this error this pass |
+
+🔴 **Six claims, six errors or understatements, every one of them optimistic.** This is now
+measured across two consecutive passes and `10`+ sources. 🟢 **The structural conclusion:
+licence claims about education platforms on the open web are not merely noisy — they are
+BIASED, and the bias costs the client.** A studio that takes *"Open edX is Apache-2.0"* or
+*"Forma LMS is Apache-2.0"* from a comparison blog and ships a hosted deliverable has adopted
+a copyleft obligation it does not know it has.
+
+### 🆕 🔴 `formalms` ships its licence as a TRANSLATED UI ASSET, and `3` of the `9` are one file
+
+🔵 Tree enumeration *(`5 321` paths)* returns **nothing licence-named at the root.** The grant
+lives at `html/lib/System/license/license_english.txt` alongside `8` translations:
+
+| language | bytes | 🟢 family *(title line)* | note |
+|---|---|---|---|
+| 🟢 **english** | `15 146` | 🟢 **`GPL-2.0`** | 🟢 **THE ONLY LEGALLY OPERATIVE TEXT** — the FSF holds translations unofficial |
+| croatian | `18 011` | `GPL-2.0` | 🔴 **byte-identical** to bosnian + tamil |
+| bosnian | `18 011` | `GPL-2.0` | 🔴 **byte-identical** to croatian + tamil |
+| tamil | `18 011` | `GPL-2.0` | 🔴 **byte-identical** — `3` "translations", **one file** *(md5 `eb723b61…`)* |
+| italian | `22 483` | 🟡 `GPL?` | version not resolvable from a translated title |
+| french | `22 154` | 🔴 `LGPL?` *(window rule)* | 🔴 a translated title misread as **LESSER** |
+| german | `23 652` | `GPL-2.0` | — |
+| spanish | `19 978` | 🔴 `NO-FAMILY` | no title line this instrument recognises |
+| portuguese | `20 506` | 🟡 `GPL?` | — |
+
+🔵 **Declared limit of the instrument, not of the documents:** the grant detector is
+**English-only**, so every translated body scores `GRANT?-NON-EN`. That is a property of the
+reader. 🔵 [`evidence/formalms-translated-licence.2026-10-14-p197.tsv`](../evidence/formalms-translated-licence.2026-10-14-p197.tsv).
+
+### 🟢 The platform shelf — `13` rows, licence from BYTES, branch RESOLVED
+
+| platform | repo | 🟢 licence *(bytes)* | branch | what it is |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** · `35 147` B at `COPYING.txt` | `main` | the largest installed LMS base worldwide |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** · `35 136` B | `master` | higher-ed/MOOC platform |
+| **Tutor** | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`AGPL-3.0`** · `34 523` B | 🔵 **`release`** | the Docker distribution that makes Open edX operable |
+| **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`AGPL-3.0`** · `34 520` B | `master` | North American university incumbent |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **`ECL-2.0`** · `11 120` B | `master` | research-university collaboration/learning environment |
+| 🟢 **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** · `10 982` B | `master` | 🟢 **the one permissive university LMS** |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **`GPL-3.0`** · `35 147` B | `master` | LMS with deep LATAM + francophone-Africa deployment |
+| **Forma LMS** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **`GPL-2.0`** · `15 146` B *(off-root)* | `master` | corporate-training LMS, Docebo fork lineage |
+| 🟢 **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** · `1 097` B | `develop` | 🟢 **offline-first** — the low-connectivity primitive |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **`LGPL-3.0`** · `8 241` B | 🔵 **`19.0`** | education **ERP/SIS** on Odoo: admissions, attendance, fees, gradebook |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`GPL-3.0`** · `35 121` B | 🔵 **`v31.0.00`** | K-12 school management |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL-2.0`** · `15 214` B | 🔵 **`mobile`** | student information system — 🟡 **v2, a different compatibility story** |
+| **openSIS** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL-2.0`** · `17 286` B at `docs/License.txt` | `master` | SIS — 🔴 **this KB stored it as `LGPL?` for ten passes** |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 **`LGPL-3.0`** · `7 652` B | 🔵 **`v3.0.x-develop`** | virtual classroom / web conferencing |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **`GPL-3.0`** · `35 146` B | `master` | interactive content runtime embedded by Moodle + Canvas |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **`MIT`** · `1 079` B | `master` | course catalogue/portal front end for Open edX |
+
+### 🟢 The permissive shortlist, which is the only part of this page a studio needs in a hurry
+
+🟢 **`OpenOLAT` *(Apache-2.0)*, `Kolibri` *(MIT)*, `Richie` *(MIT)*, `oppia` *(Apache-2.0)*.**
+🟡 `OpenEduCat` *(LGPL-3.0)* and `BigBlueButton` *(LGPL-3.0)* are weak copyleft — linkable
+without infecting the caller, which is usually workable. 🔴 **Everything else on the shelf is
+`GPL`/`AGPL`/`ECL`, and `4` of the `16` rows are Affero**, where merely *operating* the service
+over a network triggers source disclosure to users.
+
+### 🔵 Branch resolution is not a detail
+
+🔴 **`6` of the `16` platforms above have a default branch that is neither `main` nor
+`master`** — `release`, `19.0`, `v31.0.00`, `mobile`, `v3.0.x-develop`, `develop`. 🔴 **A sweep
+that guesses gets `404` and records "no licence"**, which is a **false absence** on six of the
+most important platforms in this industry. 🟢 `git ls-remote --symref HEAD`, `30`/`30`.
+🔵 [`evidence/default-branch-resolution.2026-10-14-p197.tsv`](../evidence/default-branch-resolution.2026-10-14-p197.tsv).
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **A web sweep this pass returned, in its own words, *"sources disagree on several
@@ -4384,3 +4467,4 @@ and will not improve by re-running the same query.
   levels down — `repos/foundations.md`). **None of the platforms on this page has had its vendored
   subtrees read.** For a platform of Moodle's or OpenOlat's size that is a material unknown, not a
   footnote.
+

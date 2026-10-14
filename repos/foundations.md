@@ -3,6 +3,113 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **The lane census has a new row, and it is the one this KB was built on.**
+`bash <repo script>` — the door to all `290` recipes in `compose/code/` — is **denied by the
+session's permission classifier** *(`[Code from External]`)*. Tried twice: once as
+`bash "$PWD/lib/test_license_family.sh"`, once on the documented
+`cd lib && ./test_license_family.sh`. Both denied.
+
+🟢 **The distinction p196 taught applies to this KB's own instruments now:** the recipes are
+not *gone*, the **execution door** is shut. They remain readable, citable and auditable — and
+`P0a` got more value out of them this pass than any pass that ran them.
+
+### 🟢 The lane census, re-measured
+
+| lane | door | p195 | p196 | 🟢 **p197** | what it yields |
+|---|---|---|---|---|---|
+| 🟢 `raw.githubusercontent.com` | `curl` | `200` | `200` | 🟢 **`200`** | licence **bytes** |
+| 🟢 `git clone --filter=blob:none` + `ls-tree` | `git` | used | `88`/`88` | 🟢 **`7`/`7`, `0` failures** | the complete tree — the only channel that sustains an ABSENCE |
+| 🆕 🟢 `git ls-remote --symref HEAD` | `git` | — | — | 🟢 **`30`/`30`** | the **real** default branch, not a guess |
+| 🟢 GitHub MCP `search_repositories` | `mcp` | 🔴 presumed dead | 🟢 ANSWERS | 🟢 **ANSWERS** | ranked slugs + `license.spdx_id` + ★ + `pushed_at` |
+| 🔴 `github.com` HTML *(incl. `/trending`)* | `curl` | `403` | `403` | 🔴 **`403`** | nothing |
+| 🔴 `api.github.com` | `curl` | `403` | `403` | 🔴 **`403`** | nothing |
+| 🔴 `gnu.org`, `mozilla.org` | `curl` | — | `403` | 🔴 **transfer fails outright** | canonical licence texts — unreachable |
+| 🔴 `eur-lex.europa.eu` | `dns` | — | NO-RESOLVE | 🔴 **NO-RESOLVE** | primary OJ text — unreachable |
+| 🆕 🔴 **`bash <repo script>`** | `exec` | 🟢 free | 🟢 free | 🔴 **DENIED** | 🔴 **the KB's `290` recipes — READABLE, NOT RUNNABLE** |
+| 🆕 🟢 `python3 -I <own script>` | `exec` | — | — | 🟢 **OK** | re-derived instruments only |
+
+🔵 [`evidence/lane-census.2026-10-14-p197.tsv`](../evidence/lane-census.2026-10-14-p197.tsv).
+
+🟢 **The substitute for the canonical licence texts is still named, not hidden:** SPDX
+`license-list-data` over the raw lane. This pass pulled `8` pristine anchors from it and they
+are what every band and ratio below is measured against.
+
+### 🆕 🟢 The anchor table, because two families need more than one anchor
+
+| family | SPDX pristine | bytes |
+|---|---|---|
+| `MIT` | `MIT.txt` | `1 078` |
+| `Apache-2.0` | `Apache-2.0.txt` | `10 280` |
+| `ECL-2.0` | `ECL-2.0.txt` | `11 111` |
+| `GPL-2.0` | `GPL-2.0-only.txt` | `17 337` |
+| `GPL-3.0` | `GPL-3.0-only.txt` | `34 674` |
+| `AGPL-3.0` | `AGPL-3.0-only.txt` | `34 020` |
+| `LGPL-2.1` | `LGPL-2.1-only.txt` | `26 001` |
+| 🔴 `LGPL-3.0` | `LGPL-3.0-only.txt` | `42 098` — 🔴 **and this is the WRONG anchor for real repositories** |
+
+### 🔴 `LGPL-3.0`'s SPDX anchor is unusable, and the ratio says so in one glance
+
+🔵 p196 flagged that `LGPL-3.0` is published in two legitimate forms. 🟢 **This pass measures
+the gap:**
+
+| slug | bytes | ratio to SPDX `42 098` |
+|---|---|---|
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | `7 651` | 🔴 **`0.182`×** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `7 652` | 🔴 **`0.182`×** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `8 241` | 🔴 **`0.196`×** |
+
+🟢 **The shipped form is the `~7.6` KB ADDENDUM** — the text that incorporates `GPL-3.0` by
+reference rather than restating it. SPDX publishes the standalone form. Both are valid
+`LGPL-3.0`; they differ `5`-fold in bytes. 🔴 **Any band, gate or freshness check that centres
+`LGPL-3.0` on `42 098` flags every real repository.** The addendum form needs its own anchor,
+and deriving it from `≥10` rows is pre-registered.
+
+### 🟢 Foundational repositories — `10` rows, every licence from BYTES
+
+| repo | 🟢 licence *(bytes)* | branch | what it is foundational FOR |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** · `35 147` B at **`COPYING.txt`** | `main` | the LMS with the largest installed base; 🔵 **the grant is not at a file named `LICENSE`** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** · `35 136` B | `master` | the higher-ed course platform; 🔴 **network-use disclosure** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`AGPL-3.0`** · `34 520` B | `master` | the North American university LMS incumbent |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **`Apache-2.0`** · `11 358` B | `develop` | 🟢 interactive lesson engine — **permissive, and `6 855`★** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** · `1 097` B | `develop` | 🟢 **offline-first** learning platform — the LATAM/Africa connectivity primitive |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **`MIT`** · `1 079` B | `master` | 🟢 course-catalogue/marketing front end for Open edX |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`AGPL-3.0`** · `34 523` B | **`release`** | the Docker distribution that makes Open edX deployable |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **`GPL-3.0`** · `35 146` B | `master` | the interactive-content runtime embedded by Moodle, Canvas and Drupal |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** · `33 893` B | — | `3 312`★ LMS on the Frappe stack |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | 🟡 **`LGPL-2.1`** · `24 480` B | — | `24 122`★ creative-coding library; the teaching-of-code primitive |
+
+🔵 `6` of `10` are copyleft and `3` of those are Affero. 🟢 **The permissive foundations are
+`oppia`, `kolibri` and `richie`** — and that is the short list for a hosted deliverable that
+cannot carry a disclosure obligation.
+
+### 🆕 🔴 Four repositories where the grant is NOT where a reader would look
+
+🔵 Full table: [`evidence/licence-at-wrong-path.2026-10-14-p197.tsv`](../evidence/licence-at-wrong-path.2026-10-14-p197.tsv).
+
+| slug | 🔴 what a reader assumes | 🟢 what the bytes say |
+|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | `LICENSE` is the licence | 🔴 `LICENSE` = **`CC-BY-4.0`** *(content)*; 🟢 the code grant is **`LICENSE-CODE`** = `MIT` |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | Apache-2.0 *(the open web)* | 🔴 **`GPL-2.0`**, and **nothing at the root** — it ships at `html/lib/System/license/license_english.txt` |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | Apache-2.0 *(the open web)* | 🟡 Apache-2.0 **declared in `NOTICE`** `679` B — 🔴 **the repo ships NO licence text at all** |
+| [`frappe/education`](https://github.com/frappe/education) | `GPL-3.0` *(the sidebar)* | 🔴 **`license.txt` is `19` bytes:** `License: GNU GPL V3` — a pointer, no holder, no warranty disclaimer, no *or-later* clause |
+
+🔴 **Three of the four are weaker than they look, and the fourth is mislabelled in both
+directions.** For a studio this is the difference between a grant it can rely on and a
+sentence in a file.
+
+### 🟢 Declared gaps, so silence is not mistaken for coverage
+
+- 🔴 **The `494`-row existence census did not run** — execution lane. The shelf count stands at
+  p196's `494` distinct, unre-verified this pass.
+- 🔴 **The `26` population rows no census has reached are still unreached**, for the same reason.
+- 🔴 **No star velocity.** `pushed_at`-filtered rank is *stock filtered by recency*, not flow;
+  `github.com/trending` is `403`.
+- 🔴 **`sonic-pi-net/sonic-pi` resolves only to `AGPL?`** — the version is not readable from
+  its title line. Carried as unresolved, not rounded to `AGPL-3.0`.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **A lane this file declared gone one pass ago is reachable by a different door.** p195
@@ -5897,3 +6004,4 @@ Kiwix and a local model, and it is permissive enough to fork.
 - 🟡 **Three `UNRESOLVED` lineage clusters remain** (`education-ai-suite`, `OpenPronounce`,
   `agents-radar`). Each needs one clone per side; none is an education-supply row, which is why they
   were left — recorded so the 25-cluster figure is not read as 25 resolved.
+

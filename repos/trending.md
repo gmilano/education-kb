@@ -3,6 +3,83 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **A door that was open for every prior pass is shut: the KB's own `290` recipes cannot be
+EXECUTED.** `bash <repo script>` is denied by the session's permission classifier
+*(`[Code from External]`)*. 🟢 The trending substitute itself is unaffected — it runs on the MCP
+channel and the raw lane, both open.
+
+### 🟢 The lane census, re-measured — one row flips, and it is not a GitHub row
+
+| lane | p195 | p196 | 🟢 **p197** |
+|---|---|---|---|
+| `github.com/trending` | 🔴 `403` | 🔴 `403` | 🔴 **`403`** |
+| `github.com/trending/python?since=weekly` | 🔴 `403` | 🔴 `403` | 🔴 **`403`** |
+| `github.com/<owner>/<repo>` *(plain page)* | 🔴 `403` | 🔴 `403` | 🔴 **`403`** |
+| `api.github.com/repos/…` via `curl` | 🔴 `403` | 🔴 `403` | 🔴 **`403`** |
+| GitHub MCP `search_repositories` | 🔴 presumed dead | 🟢 ANSWERS | 🟢 **ANSWERS** |
+| 🟢 `raw.githubusercontent.com` *(control)* | 🟢 `200` | 🟢 `200` | 🟢 **`200`** |
+| 🟢 `git clone --filter=blob:none` + `ls-tree` | — | 🟢 `88`/`88` | 🟢 **`7`/`7`** |
+| 🆕 🟢 `git ls-remote --symref HEAD` | — | — | 🟢 **`30`/`30`** |
+| 🆕 🔴 **`bash <repo script>`** | 🟢 free | 🟢 free | 🔴 **DENIED** |
+
+🔵 **The correction this pass owes itself:** it planned around instruments it could not run,
+and discovered that only after `P0a` had already cited them. 🟢 **A lane census must be run
+BEFORE the pass is planned, not after** — and *"can I execute my own register?"* is now a row
+in it.
+
+### 🟢 Ranked education rows active in the last `30` days
+
+🔵 Query `topic:education stars:>500 pushed:>2026-09-14` · `total_count` **`69`** · `25`
+returned · ranked by ★. 🔴 **Not GitHub's trending algorithm** — stock filtered by recency.
+Licences marked 🟢 were read from **bytes**; the rest are the channel's `spdx_id`, unverified
+this pass and labelled as such.
+
+| repo | ★ | pushed | licence | on this shelf? |
+|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `457 043` | `2026-10-14` | `BSD-3-Clause` *(channel)* | standing |
+| [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `399 027` | `2026-10-12` | 🟡 `CC-BY-4.0` *(channel)* | standing · 🔵 p196 read `18 658` B |
+| [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 240` | `2026-10-14` | `MIT` *(channel)* | standing |
+| [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | `130 684` | `2026-10-10` | 🟢 **`CC-BY-NC`** · `20 849` B | 🔴 **NON-COMMERCIAL — resolved this pass** |
+| [`Chalarangelo/30-seconds-of-code`](https://github.com/Chalarangelo/30-seconds-of-code) | `129 194` | `2026-10-02` | 🟡 `CC-BY-4.0` *(channel)* | standing |
+| [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) | `96 947` | `2026-10-11` | `MIT` *(channel)* | 🔴 **re-read for a `LICENSE-CODE` split in p198** |
+| [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | `91 468` | `2026-09-15` | `MIT` *(channel)* | 🔴 **same — Microsoft ships `CC-BY` + `LICENSE-CODE`** |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | `24 122` | `2026-10-13` | 🟢 **`LGPL-2.1`** · `24 480` B | 🟢 agrees |
+| [`sonic-pi-net/sonic-pi`](https://github.com/sonic-pi-net/sonic-pi) | `12 200` | `2026-10-13` | 🟡 **`AGPL?`** · `15 981` B | 🔴 was `NOASSERTION` |
+| [`ankidroid/Anki-Android`](https://github.com/ankidroid/Anki-Android) | `12 014` | `2026-10-14` | `GPL-3.0` *(channel)* | standing |
+| [`logisim-evolution/logisim-evolution`](https://github.com/logisim-evolution/logisim-evolution) | `7 770` | `2026-10-14` | `GPL-3.0` *(channel)* | standing |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | `2026-10-09` | `Apache-2.0` *(channel)* | standing |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | `2026-10-14` | 🟢 **`Apache-2.0`** · `11 358` B | 🟢 agrees |
+| [`gsantner/markor`](https://github.com/gsantner/markor) | `6 283` | `2026-10-10` | 🟢 **`Apache-2.0`** · `10 462` B | 🔴 was `NOASSERTION` |
+| [`hneemann/Digital`](https://github.com/hneemann/Digital) | `6 082` | `2026-10-08` | `GPL-3.0` *(channel)* | standing |
+| [`JuliaPluto/Pluto.jl`](https://github.com/JuliaPluto/Pluto.jl) | `5 396` | `2026-10-12` | `MIT` *(channel)* | standing |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | `4 622` | `2026-10-12` | 🟢 **`CC-BY-SA`** · `620` B | 🔴 was `NOASSERTION` |
+| 🆕 [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | `4 179` | `2026-10-13` | 🟢 **`AGPL-3.0`** · `34 523` B | 🆕 **NEW** |
+| [`brootware/awesome-cyber-security-university`](https://github.com/brootware/awesome-cyber-security-university) | `3 656` | `2026-10-04` | `CC0-1.0` *(channel)* | standing |
+| [`rathena/rathena`](https://github.com/rathena/rathena) | `3 607` | `2026-10-06` | `GPL-3.0` *(channel)* | standing |
+| [`ob-f/OpenBot`](https://github.com/ob-f/OpenBot) | `3 535` | `2026-10-12` | `MIT` *(channel)* | standing |
+| [`trifectatechfoundation/teach-rs`](https://github.com/trifectatechfoundation/teach-rs) | `3 409` | `2026-10-09` | `CC-BY-SA-4.0` *(channel)* | standing |
+| [`frappe/lms`](https://github.com/frappe/lms) | `3 312` | `2026-10-14` | 🟢 **`AGPL-3.0`** · `33 893` B | 🟢 agrees |
+
+🔴 **The licence composition of education's top of rank is the story.** Of the `23` rows above,
+🔴 **`6` are Creative Commons** *(`CC-BY-4.0` ×`2`, `CC-BY-SA` ×`2`, `CC-BY-NC`, `CC0`)* — and
+CC licences are **content** licences. 🔴 **A studio that greps for "permissive" and sees
+`CC-BY` has found a licence that does not grant patent peace and was never drafted for code.**
+🟢 `hello-algo` at `130 684`★ is the sharpest case: `CC-BY-NC` forbids the commercial use that
+*is* a client engagement.
+
+### 🔴 Pre-registered for p198, from this table
+
+🔵 `microsoft/Web-Dev-For-Beginners` and `microsoft/ML-For-Beginners` both read `MIT` on the
+channel. 🔴 **`microsoft/autogen` reads `MIT` on the channel too, and its root `LICENSE` is
+`CC-BY-4.0` with the code grant at `LICENSE-CODE`.** 🟢 **Enumerate the roots of all three and
+count the split.** If Microsoft's education repos carry the same dual-file shape, every `MIT`
+this KB has recorded for a Microsoft row is *"right family, wrong file"* — and the count is
+the finding.
+
 ## Pass 196 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
@@ -24078,3 +24155,4 @@ Adyacentes que aparecieron en trending de educación AI sin que pudiéramos veri
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+
