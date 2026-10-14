@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 🔜 Registered for p204 — pre-registered with falsifiers
+
+🟢 **p203 discharged five pre-registered actions (`OV` `OW` `OU` `OX` `OT`) and found the
+cost of its own discovery vocabulary.** **(a)** The licence column's restructure is now
+earned on `24` measured rows, not argued. **(b)** `topic:ai-tutor` is **saturated** — `20`/`20`
+already held — while a vocabulary this KB never searched held `12` new foundational rows.
+**(c)** The execution seam is a **conjunction**, so instruments must split at the network
+boundary.
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🆕 🔴 **`ACTION OZ`** — how much of this industry is outside `ingest/config.json`'s five vocabularies? | `topic:ai-tutor` `20`/`20` known vs `topic:open-educational-resources` `12`/`20` NEW — [`evidence/content-code-scope-extension.2026-10-14-p203.tsv`](../evidence/content-code-scope-extension.2026-10-14-p203.tsv) | 🟢 **limb `1`:** reading the next `3` unsearched vocabularies *(`scorm` `xapi` `lti`, from p202's `ACTION OP` census)* yields `15`+ more rows new to this KB → **`ingest/config.json` is the KB's real boundary and must be rewritten, with the vocabulary list published as data**. 🔴 **limb `2`:** `<5` new rows → `Gap 461` is specific to OER and the config is adequate. 🔵 **Measure NEW-TO-KB per vocabulary, not row count — p203's saturation finding is a novelty RATE, not a volume** |
+| 🆕 🔴 **`ACTION PA`** — expand `topic:open-educational-resources` past the first `20` of `378` | p203 read `20`; **`358` unread**, declared in [`repos/trending.md`](../repos/trending.md) | 🟢 **limb `1`:** the Carpentries two-scope instrument appears in `20`+ more rows → **it is the OER layer's DEFAULT instrument**, and this KB can publish one grant pattern instead of per-row reads. 🔴 **limb `2`:** it is confined to Carpentries-affiliated orgs → a house style, and every other OER row needs its own blob read. 🔵 **`WebFetch` renders `20` before `Load more`; find the pagination or declare the ceiling as a channel limit** |
+| 🆕 🔴 **`ACTION PB`** — restructure the licence column to carry `scope`, and backfill | `P203-1`; the reader already emits it: [`compose/code/p203-grant-blob-reader/classify.sh`](../compose/code/p203-grant-blob-reader/classify.sh) `scope_headings()` | 🟢 **limb `1`:** re-reading the `~60` highest-★ rows with `scope_headings` finds `5`+ whose published cell misdescribes a shipped path → **backfill is mandatory and the KB has been publishing wrong licences, with a count**. 🔴 **limb `2`:** `0`–`1` → the `24` known rows are the population; add the field for new rows only and do not backfill. 🔵 **A row is only WRONG if the misdescribed path is one an engagement would ship** |
+| 🆕 🟡 **`ACTION PC`** — resolve the `58` rows where no grant was found at `main`/`master` | [`evidence/licence-path-form-census.2026-10-14-p203.tsv`](../evidence/licence-path-form-census.2026-10-14-p203.tsv) — `58` of `260` | 🟢 **limb `1`:** most resolve once the default branch is read *(p202 built `evidence/default-branch-*`)* → **`22`% was a probe artefact and the real ungranted rate is far lower; publish the corrected figure**. 🔴 **limb `2`:** they are genuinely ungranted → **`~22`% of this KB's shelf cannot be used by a client at all**, which is a sourcing finding, not a probe finding. 🔵 **p203 declared this as an UPPER bound; do not quote `22`% as a measurement until this runs** |
+| 🆕 🟢 **`ACTION PD`** — does the EMEA procurement chain *(conformity assessment → EU declaration → CE marking)* bind an OPEN-SOURCE component supplier? | [`intel/market.md`](market.md) EMEA, p203 | 🟢 **limb `1`:** the duty falls on the deployer and the provider placing the system on the market, so **a studio integrating permissive components is a provider and inherits it** → the CE-marking artefact becomes a named deliverable in `P203-B`. 🔴 **limb `2`:** open-source components supplied free fall under the Act's open-source carve-out → **the duty attaches only at the institution, and the studio's product is the documentation, not the conformity**. 🔵 **The Act has an explicit free-and-open-source provision; read ITS text, not a vendor blog. ⚠️ `eur-lex.europa.eu` does not resolve from this session** |
+| 🟡 **`ACTION NU`** *(carried, unchanged)* — Vietnam's `2026-03-01` / `2027-03-01` | [`intel/market.md`](market.md) APAC | 🔵 **Publish both with the conflict attached and stop re-asking per pass.** p203 did not re-search it, per p202's instruction |
+| 🟢 **`ACTION NU-EU`** *(verification only)* | Regulation (EU) 2026/1744, OJ `2026-07-24`, in force `2026-07-27`; Annex III education → `2027-12-02`; Article 50 live `2026-08-02`; 🆕 **Article 4 literacy duty live** | 🔵 **Third independent corroboration at p203.** Verify at the Official Journal before a client deliverable; **stop treating the dates as unknown** |
+
+### 🔴 One ask that only a human can answer
+
+1. 🔴 **`ACTION MN` *(carried, SIXTEENTH pass)* — may this KB open licensing issues on
+   third-party repositories?** 🟢 **Still NOT RUN, and still correctly so: an outward-facing
+   write on other people's repositories on an unattended run.** 🆕 **p203 adds a second
+   candidate of p202's kind, and it is stronger because the software is meant to be
+   embedded:** [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) (`164★`) is a
+   **SCORM run-time JavaScript API** licensed **`CC-BY-SA-4.0`** — a content copyleft, with
+   **no patent grant**, on a library whose entire purpose is to be shipped inside other
+   people's course packages. **Queue:** `education-agent-skills` (`858★`, `mcp-server/` under
+   `CC-BY-SA-4.0`), `SCOBot` (`164★`), `LMS-Laravel/LMS-Laravel` (`505★`),
+   `LearnPress/learnpress` (`275★`).
+
+### 🆕 Gaps opened and closed by p203
+
+- 🆕 🔴 **`Gap 461` — a KB's content shelf is a function of its query list, and nobody had
+  measured the function.** 🟢 `topic:ai-tutor`: `20` rows returned, **`20` already held — the
+  first saturated channel in `203` passes.** 🟢 Same hour,
+  `topic:open-educational-resources`: **`12` of `20` rows NEW**, including the entire
+  **Carpentries** family *(Software Carpentry, Data Carpentry, Library Carpentry — the
+  largest instructor-led open curriculum organisation in the world)*. 🔴 **Cause: Carpentries
+  repositories carry none of `ingest/config.json`'s five topics.** 🔵 **Gate: a saturation
+  result is a claim about the VOCABULARY, never about the industry** — `Gap 460`'s rule,
+  applied to this KB's own ingest config rather than to a published row. `ACTION OZ`.
+- 🆕 🔴 **`Gap 462` — two one-axis readings of the execution seam, each fitting all prior
+  evidence, and both wrong.** p202: *"RED vs NO-RED"*. p203's first draft: *"where the code
+  lives, not the network"*. 🟢 **Measured 2×2: offline script RUNS (`19`/`19`), inline network
+  returns `200` (`~300` reads), network-in-script REFUSED.** 🔴 **The predicate is the
+  CONJUNCTION, and no pass before this one filled all four cells.** 🟢 **Acted on: instruments
+  now split at the network boundary so the decidable half is always runnable** —
+  `compose/code/p203-grant-blob-reader/`.
+  [`evidence/channel-conjunction-2x2.2026-10-14-p203.tsv`](../evidence/channel-conjunction-2x2.2026-10-14-p203.tsv).
+- 🟢 **`ACTION OV` CLOSED — limb `2`.** `16` rows blob-read: `12` permissive, `3` copyleft
+  *(`lxHive` GPL-2.0, `oat-sa/lib-lti1p3-core` GPL-2.0, `Edlib` GPL-3.0)*, `1`
+  content-copyleft over software *(`SCOBot` `CC-BY-SA-4.0`)*. 🟢 **`P202-1` survives with a
+  named `10`-row permissive spine; all four exclusions have substitutes.** 🔴 **And the
+  copyleft here is OLD copyleft — two GPL-2.0 grants, a 1991 instrument governing the LTI
+  plumbing of 2026 AI deployments.**
+- 🟢 **`ACTION OX` CLOSED — limb `1` fires on `10` explicit two-scope rows** *(+`5`
+  content-only grants over executable notebooks, +`1` `CC0` over an index)*. 🔴 **With p202's
+  `8`: `24` rows where one licence cell misdescribes part of the repository.** 🔵 **Strongest
+  form: `carpentries/lesson-example` is the TEMPLATE, so the two-scope grant propagates to
+  every lesson generated from it** — the one thing p202 found the rest of the industry gets
+  wrong is, in this family, correct by construction. `P203-1` → `ACTION PB`.
+- 🟢 **`ACTION OU` CLOSED — limb `2`.** `134` READMEs read, **`1` hit**. A grant's tense is a
+  one-row curiosity; **no `permanence` field**. `EdOptimize` recorded, question closed.
+- 🟢 **`ACTION OW` CLOSED — both halves.** `ralph` is **MIT at `LICENSE.md`** *(limb `1`)*; and
+  the shelf sweep found **`12` of `202` granted rows (`5.9`%) carry the grant at a non-bare
+  path** *(limb `2`)*, among them `TheAlgorithms/Python` and `rasbt/LLMs-from-scratch`.
+  🔵 **`58` rows found nothing at `main`/`master` — declared as an UPPER bound, not a
+  measurement.** `ACTION PC`.
+- 🟢 **`Gap 459` EXTENDED off the agent-skill shelf.** `cybercussion/SCOBot` `164★` — a
+  **SCORM JavaScript API** under **`CC-BY-SA-4.0`**. 🔴 **So the content/code confusion is not
+  a property of prompt payloads; it reaches the interop foundations this KB recommends.**
+- 🟢 **p202's EMEA procurement gap CLOSES.** The mechanism is **conformity assessment + EU
+  declaration of conformity + CE marking** for a high-risk system supplied to a contracting
+  authority, with **Article 4's AI-literacy duty already in force** and **schools as
+  `deployers`**. 🔵 Secondary interpretation → `ACTION PD` tests who the duty binds.
+- 🟢 **p202's MEA gap PARTLY CLOSES at the third pass.** Rwanda *(National AI Policy covering
+  education; three-year MoU with Anthropic, February 2026)*, Egypt *(Council expanded January
+  2026; strategy 2025–2030; `750k` graduates/year)*, Gulf *(large-scale initiatives)*,
+  South Africa *(draft policy **withdrawn `2026-04-26` over AI-hallucinated citations**)*.
+  🔴 **Still no binding AI-in-education regulation in MEA — strategies, not laws.**
+- 🟢 **p202's LATAM "no named institutional buyer" gap CLOSES.** **PUC Chile: `194`
+  pedagogical agents, `~100` courses, `4 600`+ students**, outcome measurement still being
+  built. 🟢 **That last clause is the engagement.**
+- 🔴 **`Gap 457` REPRODUCES and sharpens.** LATAM published at **`$105.6M` (2024)** against
+  this KB's carried **`$1.5B→$4.2B`** — **`~14`–`40`×, with a named house on each side.**
+  Three 2026 global estimates span `$2.7B`–`$10.6B` on overlapping scopes.
+
 ## 🔜 Registered for p203 — pre-registered with falsifiers
 
 🟢 **p202 changed one thing about what a pass can do and one thing about what this KB

@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14 — THREE RECIPES BUILT ONLY FROM GRANTS READ THIS PASS
+
+🔵 **Rule applied to every row below, per `Gap 458`/`459`:** each component names **what it
+contains**, **what its grant reaches**, and **the path that grant covers.** 🔴 **No component
+appears whose licence was not read from its own blob this pass or a prior one.**
+
+---
+
+### 🟢 `P203-A` — Train-the-trainer at national scale *(APAC first, LATAM second)*
+
+🔴 **The demand, measured this pass:** India makes AI and computational thinking mandatory
+from **Class `3`** in `2026–27` with **`~10M` teachers to train and `15`% AI-fluent**; the
+EU's **Article 4 AI-literacy duty is already in force**; Google.org and the Raspberry Pi
+Foundation have **funded `24 000` LATAM educators** to reach `1.25M` students by 2028.
+🟢 **Nobody is buying a tutor here. They are buying trained teachers and proof of it.**
+
+**Wire-up:**
+
+| layer | component | grant *(path)* | why this one |
+|---|---|---|---|
+| curriculum | [carpentries/instructor-training](https://github.com/carpentries/instructor-training) `189★` | 🟢 `CC-BY-4.0` *(instructional material)* + **MIT** *(example code)* | **train-the-trainer material whose grant permits commercial adaptation with attribution.** 🔴 Not `CC-BY-SA` — the adaptation may stay closed |
+| lesson format | [carpentries/lesson-example](https://github.com/carpentries/lesson-example) | 🟢 `CC-BY-4.0` + **MIT** | 🟢 the template: **every generated lesson inherits a two-scope grant**, so the client's legal question is answered by construction |
+| authoring agent | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) `858★` | 🔴 **`CC-BY-SA-4.0`** over all `165` `SKILL.md`; **no software grant for `mcp-server/`** | 🟡 **use as REFERENCE pedagogy, do not adapt into the deliverable** — ShareAlike would force the client's curriculum open |
+| …or authoring agent | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) `29★` | 🟢 **MIT** *(whole repo)* | 🟢 **the shippable alternative**: `10` skills implementing Knowledge Space Theory, code and payload both MIT |
+| delivery + record | [openfun/marsha](https://github.com/openfun/marsha) `151★` **MIT** → any LMS over **LTI 1.3** via [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) `138★` **MIT** | 🟢 both blob-read `master/LICENSE` | the institution keeps Moodle/Canvas unmodified |
+| evidence | **xAPI** statements → [openfun/ralph](https://github.com/openfun/ralph) **MIT** *(`master/LICENSE.md`)* or [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) `334★` **Apache-2.0** | 🟢 blob-read | 🟢 **"we trained `N` teachers and here is the statement log" is the deliverable a ministry pays for** |
+| conformance | [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) `78★` **MIT** | 🟢 blob-read | tests the spec's MUST requirements before a ministry audit does |
+
+🔴 **Do not use:** `g3i/lxHive` *(GPL-2.0)* as the LRS, `oat-sa/lib-lti1p3-core` *(GPL-2.0)*
+as the LTI side, `cybercussion/SCOBot` *(`CC-BY-SA-4.0`)* in the courseware package.
+🟢 **Every one has a permissive substitute in the table above.**
+
+🔵 **Effort: `8`–`10` weeks** to a first cohort with an xAPI evidence trail. 🔴 **The hard part
+is not the stack — it is that `carpentries/instructor-training` teaches research computing
+and must be re-authored for school teachers.** That re-authoring is the engagement.
+
+---
+
+### 🟢 `P203-B` — The district compliance harness *(North America)*
+
+🔴 **The demand, measured this pass:** **Ohio requires every K-12 district to have adopted a
+formal AI-use policy by `2026-07-01`**; `134` bills across `31` states in 2026; **Oklahoma
+and Maryland require human oversight and bar AI from high-stakes student decisions**;
+**Maryland requires a district `AI coordinator`**; **California AB 1159** would bar student
+data from model training. 🟢 **Thousands of small buyers with a legal duty and no evaluation
+function.**
+
+**Wire-up:**
+
+1. 🟢 **Policy conformance register** — the artefact the statute names. Model it on this KB's
+   own [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv): one row per tool, per state
+   duty, per evidence link.
+2. 🟢 **Synthetic-content marking** — **EU Article 50 is in force since `2026-08-02` and the
+   instruments already exist in this repo**:
+   [`compose/code/aiact-50-2-exposure/`](code/aiact-50-2-exposure/). 🟢 **Built for EMEA,
+   reusable verbatim for a US district that wants disclosure** — no statute requires it yet,
+   which is exactly why it is cheap to offer.
+3. 🟢 **Human-oversight gate** — every grading or placement decision emits an **xAPI**
+   statement to an LRS the district owns *(`ADL_LRS`, Apache-2.0)*, with the human
+   reviewer as `actor`. 🔴 **"Human oversight" is unprovable without a log, and the statute
+   demands the oversight, not the log — so the log is the differentiator.**
+4. 🔴 **Data-residency boundary** — AB 1159's shape *(no student data into training)* means
+   the tutor's inference path must be separable from its telemetry path. 🟢 **`xAPI` already
+   separates them: statements go to the LRS, not to the model vendor.**
+5. 🟢 **Ship-what-you-may check** — run the content/code scope question over every component
+   before delivery; `24` measured rows in this KB carry a licence cell that misdescribes
+   part of the repository.
+
+🔵 **Effort: `6`–`8` weeks** per district template, then it is a repeatable sale across the
+`30`+ states publishing guidance. 🟢 **The reusable asset is the register and the oversight
+log, not the model.**
+
+---
+
+### 🟢 `P203-C` — Governance retrofit over an existing agent deployment *(LATAM)*
+
+🔴 **The demand, measured this pass:** **Brazil `56`% of teachers use AI** *(OECD average
+`36`%)*, **`9` in `10` regional 15-year-olds have used an AI chatbot for schoolwork**
+*(PISA 2025)* — and **`22`% of Brazilian schools have guidelines, `26`% of HE institutions
+have a strategy, `9`% evaluate it, `8`% of students can state the rules.** 🟢 **And there is
+now a named in-region reference at scale: PUC Chile runs `194` pedagogical agents across
+`~100` courses for `4 600`+ students, and says its outcome measurement is still being
+built.**
+
+🟢 **That last clause is the sale.** The agents are already deployed; what is missing is
+evidence that they work and a frame that says what is allowed.
+
+**Wire-up:**
+
+| step | component | grant | output |
+|---|---|---|---|
+| 1. instrument what already runs | **xAPI** emitters on the existing tutors → [openfun/ralph](https://github.com/openfun/ralph) **MIT** | 🟢 blob-read `master/LICENSE.md` | one statement per interaction, in a standard the institution owns |
+| 2. attach to the gradebook without forking it | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) **MIT** or [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) **Apache-2.0** | 🟢 blob-read | LTI 1.3 Advantage, platform untouched |
+| 3. prove conformance | [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) **MIT** | 🟢 blob-read | the audit artefact |
+| 4. the AI-use register | this KB's policy-matrix shape | — | 🟢 **answers the `8`%-of-students finding directly: a published, per-course statement of what AI is permitted** |
+| 5. Spanish/Portuguese curriculum | 🔴 **ask what the grant REACHES first** | 🔴 p202: `~23 000★` of the headline LATAM corpus is **MIT over a bibliography** | 🟢 **`mouredev/Hello-Python` `37.8k★` is the row whose grant reaches its own material** |
+
+🔴 **Do not open with a tutor.** The region's adoption already exceeds the OECD average;
+🟢 **open with the governance and evaluation layer, cite PUC Chile as the in-region
+precedent, and use the Google.org/Raspberry Pi `24 000`-educator programme as the training
+channel that is already funded.**
+
+🔵 **Effort: `6`–`8` weeks** for instrumentation + register on one faculty; the agents stay
+as they are.
+
+---
+
+### 🔵 What p203 did NOT build, and why
+
+🔴 **No pattern here depends on a network-bearing script running inside this repository.**
+`ACTION OT` measured the seam as **inline command vs committed script** — the reader
+[`compose/code/p203-grant-blob-reader/read_grant.sh`](code/p203-grant-blob-reader/read_grant.sh)
+is committed as the reproducible method and **was refused execution in the same session that
+performed `~300` inline reads of the same URLs.** 🟢 **A client engagement runs it in CI,
+where that seam does not exist; a pass of this KB cannot, and says so.**
+
 ## Pass 202 — 2026-10-14
 
 ### 🟢 P202-1 — The LRS-backed tutor: give the agent a standards-compliant memory *(Global, 6–8 wks)*

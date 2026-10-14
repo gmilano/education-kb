@@ -1,0 +1,17 @@
+repo	stars_published	ref	grant_path	family	verdict_vs_ACTION_OV_limb1	note
+adlnet/xAPI-Spec	954	master	LICENSE	Apache-2.0	permissive	the specification itself; ADL authors
+adlnet/ADL_LRS	334	master	LICENSE	Apache-2.0	permissive	reference LRS from the standard's authors
+g3i/lxHive	79	master	LICENSE	GPL-2.0	COPYLEFT	LRS in PHP; label published by p202 was unread
+adlnet/lrs-conformance-test-suite	78	master	LICENSE	MIT	permissive	conformance gate for the MUST requirements
+cybercussion/SCOBot	164	master	LICENSE	CC-BY-SA-4.0	CONTENT-COPYLEFT-ON-SOFTWARE	a SCORM JavaScript API under a content licence; no patent grant
+sr258/scorm-h5p-wrapper	58	master	LICENSE	MIT	permissive	packs H5P into SCORM
+LiaScript/LiaScript-Exporter	29	master	LICENSE	BSD-3-Clause	permissive	markdown course to SCORM/xAPI/PDF/ePub/APK
+adlnet/CATAPULT	59	master	LICENSE	Apache-2.0	permissive	cmi5 test suite and player
+dmitry-viskov/pylti1.3	138	master	LICENSE	MIT	permissive	LTI 1.3 Advantage tool, Python
+packbackbooks/lti-1-3-php-library	53	master	LICENSE.md	Apache-2.0	permissive	GRANT ONLY AT .md PATH; bare LICENSE is 404
+1EdTech/lti-1-3-php-library	n/a-canonical-upstream	master	LICENSE	Apache-2.0	permissive	the canonical upstream p202 said this KB should hold
+oat-sa/lib-lti1p3-core	37	master	LICENSE	GPL-2.0	COPYLEFT	LTI 1.3 core, platform and tool sides
+jupyterhub/ltiauthenticator	73	master	LICENSE	BSD-3-Clause	permissive	LTI to JupyterHub
+openfun/marsha	151	master	LICENSE	MIT	permissive	LTI learning-content management, France Universite Numerique
+cerpus/Edlib	46	master	LICENSE	GPL-3.0	COPYLEFT	interactive learning resources, Cerpus Norway
+openfun/ralph	n/a	master	LICENSE.md	MIT	permissive	ACTION OW limb 1: .md path resolves, body is MIT

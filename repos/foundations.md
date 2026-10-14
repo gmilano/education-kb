@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14 — `ACTION OV` CLOSES ON LIMB 2, AND THE CARPENTRIES WERE MISSING FOR 202 PASSES
+
+### 🔴 `ACTION OV`: the `13` unread rows are read, and `4` of `16` are not permissive
+
+🟢 **Every row p202 published marked `(not blob-read)` is now read from its own blob**, plus
+three p202 named but did not probe (`xAPI-Spec`, the `1EdTech` canonical upstream,
+`openfun/ralph`). 🔴 **Pre-registered limb `1` — *"all permissive → P202-1's wire-up is
+sellable as written"* — is FALSIFIED.** Census:
+[`evidence/foundations-unread-grants.2026-10-14-p203.tsv`](../evidence/foundations-unread-grants.2026-10-14-p203.tsv).
+
+**`12` permissive · `3` copyleft · `1` content-copyleft over software.**
+
+| Row | ★ | path read | grant *(blob)* | verdict |
+|---|---|---|---|---|
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | `954` | `master/LICENSE` | **Apache-2.0** | 🟢 the specification itself |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | `334` | `master/LICENSE` | **Apache-2.0** | 🟢 **the LRS to build on** |
+| [g3i/lxHive](https://github.com/g3i/lxHive) | `79` | `master/LICENSE` | 🔴 **GPL-2.0** | 🔴 **route around** — p202 published it unread as a lightweight LRS option |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | `78` | `master/LICENSE` | **MIT** | 🟢 the conformance gate |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | `164` | `master/LICENSE` | 🔴 **`CC-BY-SA-4.0`** | 🔴 **a SCORM JavaScript API under a CONTENT copyleft** — see below |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | `58` | `master/LICENSE` | **MIT** *(`(c) 2019 Sebastian Rettig`)* | 🟢 H5P → SCORM |
+| [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | `29` | `master/LICENSE` | **BSD-3-Clause** *(`(c) 2020, André Dietrich`)* | 🟢 markdown → SCORM/xAPI/PDF/ePub/APK |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | `59` | `master/LICENSE` | **Apache-2.0** | 🟢 `cmi5` test suite and player |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | `138` | `master/LICENSE` | **MIT** *(`(c) 2019 Dmitry Viskov`)* | 🟢 LTI 1.3 in Python |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | — | `master/LICENSE` | **Apache-2.0** | 🟢 **the canonical upstream p202 said to hold** |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | `53` | 🔴 `master/LICENSE.md` | **Apache-2.0** | 🟢 same grant as upstream; **bare `LICENSE` is a `404`** |
+| [oat-sa/lib-lti1p3-core](https://github.com/oat-sa/lib-lti1p3-core) | `37` | `master/LICENSE` | 🔴 **GPL-2.0** | 🔴 **route around** — the platform-side LTI core |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | `73` | `master/LICENSE` | **BSD-3-Clause** | 🟢 LMS → JupyterHub |
+| [openfun/marsha](https://github.com/openfun/marsha) | `151` | `master/LICENSE` | **MIT** *(`(c) 2018-present GIP FUN-MOOC`)* | 🟢 LTI content management |
+| [cerpus/Edlib](https://github.com/cerpus/Edlib) | `46` | `master/LICENSE` | 🔴 **GPL-3.0** | 🔴 **route around** |
+| [openfun/ralph](https://github.com/openfun/ralph) | — | 🔴 `master/LICENSE.md` | **MIT** *(`(c) 2020-present France Université Numérique`)* | 🟢 `ACTION OW` limb `1`: **the `.md` path resolves and the body is MIT** |
+
+🟢 **So `P202-1` survives, but it must now name paths.** The permissive spine of the
+xAPI/SCORM/LTI layer is: **`ADL_LRS` (Apache-2.0) + `lrs-conformance-test-suite` (MIT) +
+`pylti1.3` (MIT) or `1EdTech/lti-1-3-php-library` (Apache-2.0) + `ltiauthenticator`
+(BSD-3) + `CATAPULT` (Apache-2.0) + `scorm-h5p-wrapper` (MIT) + `LiaScript-Exporter`
+(BSD-3) + `ralph` (MIT) + `marsha` (MIT)** — **`10` rows, every grant blob-read, nothing
+copyleft.** 🔴 **Excluded by this pass: `lxHive`, `oat-sa/lib-lti1p3-core`, `Edlib`,
+`SCOBot`.**
+
+### 🔴 `SCOBot` is the finding that generalises: a JavaScript library under a content licence
+
+🟢 `cybercussion/SCOBot` `164★` is a **SCORM run-time API you embed in courseware** — and its
+`LICENSE` title line reads **`CREATIVE COMMONS ATTRIBUTION-SHAREALIKE 4.0 INTERNATIONAL`**.
+🔴 **That is `Gap 459` on the FOUNDATIONS shelf, not the agent-skill shelf** — so p202's class
+is not a property of the agent-skill layer. **`ShareAlike` on an embedded library means every
+course package that ships it is a derivative**, and a CC licence **carries no patent grant**.
+
+### 🆕 🟢 The Carpentries: `12` new rows, and a `202`-pass absence with a cause
+
+🔴 **This KB has never held a single Carpentries repository.** 🟢 **The Carpentries (Software
+Carpentry, Data Carpentry, Library Carpentry) is the largest instructor-led open curriculum
+organisation in the world**, and its lessons are the default teaching material for research
+computing. 🔴 **Cause, measured: its repositories carry `topic:open-educational-resources`
+and lesson-specific topics, and NEVER `ai-tutor`, `edtech` or `educational-ai`** — the
+vocabularies this KB's `ingest/config.json` searches. **Discovery vocabulary determined the
+content shelf for `202` passes.** `Gap 461`.
+
+🟢 **And every one of them carries the same two-scope instrument**, read from the blob:
+
+> `## Instructional Material` — *"All Carpentries … instructional material is made available
+> under the [Creative Commons Attribution license] … for any purpose, even commercially."*
+> `## Software` — *"Except where otherwise noted, the example programs and other software
+> provided by The Carpentries are made available under the [OSI]-approved [MIT license]."*
+
+| Row | ★ | path | content | code |
+|---|---|---|---|---|
+| [swcarpentry/git-novice](https://github.com/swcarpentry/git-novice) | `379` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [datacarpentry/R-ecology-lesson](https://github.com/datacarpentry/R-ecology-lesson) | `338` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [carpentries/instructor-training](https://github.com/carpentries/instructor-training) | `189` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [swcarpentry/r-novice-inflammation](https://github.com/swcarpentry/r-novice-inflammation) | `174` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [datacarpentry/r-raster-vector-geospatial](https://github.com/datacarpentry/r-raster-vector-geospatial) | `119` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [datacarpentry/image-processing](https://github.com/datacarpentry/image-processing) | `113` | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [swcarpentry/shell-novice](https://github.com/swcarpentry/shell-novice) | *(not measured p203)* | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [datacarpentry/python-ecology-lesson](https://github.com/datacarpentry/python-ecology-lesson) | *(not measured p203)* | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [librarycarpentry/lc-git](https://github.com/librarycarpentry/lc-git) | *(not measured p203)* | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** |
+| [carpentries/lesson-example](https://github.com/carpentries/lesson-example) | *(not measured p203)* | `main/LICENSE.md` | `CC-BY-4.0` | 🟢 **MIT** — 🔴 **the TEMPLATE: the instrument propagates to every lesson built from it** |
+| [merely-useful/py-rse](https://github.com/merely-useful/py-rse) | `261` | `master/LICENSE.md` | `CC-BY-4.0` | 🔴 **not granted** |
+| [spatialaudio/digital-signal-processing-lecture](https://github.com/spatialaudio/digital-signal-processing-lecture) | `885` | `master/LICENSE` | `CC-BY-4.0` | 🔴 **not granted** — and the asset **is** Jupyter notebooks |
+
+🔴 **`★` left blank is `★` not measured.** `api.github.com` returned `403` all pass; the
+figures above come from the rendered `topic:open-educational-resources` page, which lists
+`20` of `378` repositories, and four of these rows were not among the `20`.
+
+🟢 **Why this is a foundations row and not a curiosity:** `carpentries/lesson-example` is the
+template, so **an agent that generates a lesson in the Carpentries format inherits a grant
+that is already explicit about code vs content** — the one thing p202 found the rest of this
+industry gets wrong.
+
 ## Pass 202 — 2026-10-14 — THE STANDARDS LAYER IS THE FOUNDATION THIS KB HAD NOT READ
 
 🔴 **For `201` passes this KB has catalogued tutors, LMSs and graders, and never the layer

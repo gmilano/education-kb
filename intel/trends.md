@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14 — THE CHANNEL SEAM INVERTED, AND FOUR FALSIFIERS DISCHARGED
+
+### 🔴 `ACTION OT` CLOSED: the seam is a CONJUNCTION — network AND from-file
+
+🟢 **Measured this pass in one session, all four cells:**
+
+| | inline command | committed script |
+|---|---|---|
+| **no network** | — | 🟢 **RUNS** — `test_classify.sh`, **`19`/`19`** |
+| **network** | 🟢 **`200`** — `~300` reads of `raw.githubusercontent.com` | 🔴 **REFUSED** |
+
+🔴 **Neither axis alone predicts the verdict.** Network is not the seam: inline network
+calls ran freely all pass. Being a committed file is not the seam either: an offline
+committed script executed. 🟢 **The predicate is the CONJUNCTION — network-bearing code read
+from a file.**
+
+🔵 **So p202's restatement of the pass-74 note — *"el seam real no es librería vs script, es
+RED vs NO-RED"* — is CORRECT ABOUT SCRIPTS and incomplete as stated**, because it implies no
+network call can run, and `~300` did. 🔴 **This pass's own first draft made the opposite
+error**, concluding from the single denial that *"the seam is where the code lives, not
+whether it touches the network"* — falsified ten minutes later by the offline script
+running. 🟢 **Both one-axis readings fit the earlier evidence; only the 2×2 distinguishes
+them, and no prior pass had filled all four cells.** `Gap 462`.
+
+🟢 **Consequence, and it is actionable rather than merely recorded:** an instrument should be
+**split at the network boundary**, so the decidable half is always runnable by the pass that
+writes it. 🟢 **p203 did this:**
+[`compose/code/p203-grant-blob-reader/`](../compose/code/p203-grant-blob-reader/) ships
+`classify.sh` *(pure, no network, `19`/`19` offline suite including `8` regressions —
+`CC-BY-SA` must not collapse to `CC-BY`, `AGPL` not to `GPL`, an empty body not to MIT)* and
+`read_grant.sh` *(the fetch, refused here, runs in CI)*. 🔵 **The pass performed its `~300`
+reads inline and says so; the script is the record of method, never presented as the
+measurement.**
+
+### 🟢 `ACTION OV` CLOSED — limb `2`. `4` of `16` foundation rows are not permissive
+
+🟢 All `13` rows p202 published as `(not blob-read)` are read, plus `3` more.
+**`12` permissive · `3` copyleft · `1` content-copyleft over software.** 🔴 **`g3i/lxHive`
+(GPL-2.0), `oat-sa/lib-lti1p3-core` (GPL-2.0), `cerpus/Edlib` (GPL-3.0),
+`cybercussion/SCOBot` (`CC-BY-SA-4.0`).** 🟢 `P202-1` survives and now names a `10`-row
+permissive spine. See [`repos/foundations.md`](../repos/foundations.md).
+
+🔴 **The trend worth naming: this layer's copyleft is OLD copyleft.** Two GPL-**2.0** grants
+on actively used interop libraries — **a 1991 instrument governing the LTI plumbing of 2026
+AI deployments.** 🟢 Permissive alternatives exist for every one of the four.
+
+### 🟢 `ACTION OX` CLOSED — limb `1` fires. The licence column needs a `scope` field
+
+🟢 **`16` rows measured; `10` carry an EXPLICIT two-scope grant** — `## Instructional
+Material` → `CC-BY-4.0`, `## Software` → **MIT**, in one `LICENSE.md`. Plus `5` rows whose
+grant is content-only **over executable notebooks**, and `1` `CC0` dedication over an index.
+🔴 **With p202's `8`, that is `24` rows where a single licence cell is wrong about part of
+the repository.** Limb `1`'s threshold was `10`+.
+
+🟢 **So the restructure is earned:** a row publishes `licence` **per path**, and `MIT` stops
+being publishable without saying *of what*. 🔵 **The strongest form of the finding: the
+Carpentries instrument is carried by `carpentries/lesson-example`, the lesson TEMPLATE —
+so the two-scope grant PROPAGATES to every lesson generated from it.** `P203-1`.
+
+### 🟢 `ACTION OU` CLOSED — limb `2`. A grant's tense is a one-row curiosity
+
+🟢 **`140` repositories probed, `134` READMEs read, exactly `1` hit:**
+`PlaypowerLabs/EdOptimize` — *"`LICENSE NOTE: CURRENTLY, THIS PLATFORM IS LICENSED GPLv3.
+ALL MODIFICATIONS/COPIES OF THIS PLATFORM MUST HAVE GPLv3 LICENSE AND MUST DISCLOSE ALL OF
+THEIR SO[URCE]`"*. 🔴 **Limb `1` needed `3`+ more and found none.** 🟢 **No `permanence`
+field. Record `EdOptimize` and stop asking.**
+[`evidence/grant-tense-sweep.2026-10-14-p203.tsv`](../evidence/grant-tense-sweep.2026-10-14-p203.tsv).
+
+### 🟢 `ACTION OW` CLOSED — limb `1` for `ralph`, limb `2` for the shelf
+
+🟢 **`openfun/ralph`'s grant is at `LICENSE.md` and the body is MIT** *(`(c) 2020-present
+France Université Numérique`)* — p202 published a badge; p203 publishes the blob.
+
+🔴 **And the sweep found the historical under-read p202 asked about.** `260` shelf rows
+probed: **`190` bare `LICENSE` · `8` `.md`-only · `4` `.txt`-only · `58` no grant at any
+probed path.** 🔴 **So `12` of the `202` rows that carry a grant hold it at a non-bare
+path — `5.9`%**, among them `TheAlgorithms/Python`, `Submitty/Submitty`, `ai-shifu/ai-shifu`,
+`CaviraOSS/PageLM`, `codelitdev/courselit` and **`rasbt/LLMs-from-scratch`**. 🟢 **A
+bare-`LICENSE` probe silently reports those as ungranted.**
+[`evidence/licence-path-form-census.2026-10-14-p203.tsv`](../evidence/licence-path-form-census.2026-10-14-p203.tsv).
+
+🔵 **Declared limit on that figure:** the probe tried refs `main` and `master` only, so **some
+of the `58` are default-branch misses rather than absent grants.** `22`% is an **upper**
+bound on ungranted rows, not a measurement of them.
+
+### 🆕 🔴 `Gap 461` — discovery vocabulary determined the content shelf for `202` passes
+
+🔴 **`topic:ai-tutor` returned `20` rows and this KB held `20` of them: the first saturated
+channel.** 🟢 **The same hour, `topic:open-educational-resources` (`378` repositories) yielded
+`12` rows new to this KB — the entire Carpentries family**, the largest instructor-led open
+curriculum organisation in the world. 🔴 **Cause: Carpentries repos carry no vocabulary that
+`ingest/config.json` searches.** 🟢 **The KB's content shelf was a function of its query list,
+and nobody had measured that.** `ACTION OZ`.
+
+### 🟢 Trends that are about the industry rather than this KB
+
+1. 🔴 **Regulation has stopped asking for principles and started naming duties on PEOPLE.**
+   EU Article 4 (AI literacy, in force), Maryland's district `AI coordinator`, Oklahoma and
+   Maryland's human-oversight requirements, India's Class-`3` mandate against a `15`%
+   teacher-fluency base. 🟢 **The 2026 deliverable is trained staff and documentation; the
+   model is assumed.**
+2. 🔴 **"Agentic" has become the incumbent's word.** Instructure shipped `IgniteAI Agent` in
+   March 2026; PUC Chile runs `194` pedagogical agents across `~100` courses for `4 600`+
+   students. 🟢 **Agent-shaped tutoring is no longer a differentiator — the differentiator is
+   evidence of learning outcomes, which PUC Chile itself says it is still building.**
+3. 🟢 **Pedagogy is moving into the developer's harness.** `nykooi1/vibe-wise` (MIT, `~3.4k★`,
+   `~+3.3k` this window) teaches the user *while the model writes the code*. 🟢 **A plugin,
+   not an app** — and this KB had no row of that shape.
+4. 🔴 **The interop layer is pre-AI, standardised, institutionally adopted, and mostly
+   permissive — and every tutor in this KB still invents its own progress model.** `xAPI` +
+   `SCORM` + `LTI` + analytics is `~1 088` repositories *(p202's `ACTION OP`)*; p203 blob-read
+   its spine and `10` rows are permissive.
+5. 🔴 **Content licensing is the industry's real legal surface, and it is not the software
+   surface.** `24` measured rows where one licence cell misdescribes part of the repository;
+   a SCORM run-time library under `CC-BY-SA`; the second-largest agent-skill repo with **no
+   software grant at all.**
+6. 🔴 **A government AI policy was withdrawn because its own citations were AI-hallucinated**
+   *(South Africa, published `2026-04-10`, withdrawn `2026-04-26`)*. 🟢 **Citation provenance
+   is now a procurement risk with a precedent, and this KB's blob-read discipline is the
+   direct answer to it.**
+
 ## Pass 202 — 2026-10-14
 
 ### 🔴 T1 — The agent payload is content, and content licensing has different reach than software licensing

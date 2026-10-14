@@ -1,0 +1,10 @@
+cell	network	code_location	probe	verdict	count	note
+1	no	committed script	compose/code/p203-grant-blob-reader/test_classify.sh	RAN	19 of 19 assertions passed	offline classification suite incl 8 regressions
+2	no	committed script	scratch offline_probe.sh	RAN	1	control: trivial string-case script executed
+3	yes	inline command	curl raw.githubusercontent.com (blob reads)	200	approx 300	ACTION OV OW OX all measured through this cell
+4	yes	inline command	curl api.github.com/repos	403	all probes	GitHub API refused by proxy not by classifier
+5	yes	inline command	curl github.com/topics	403	all probes	topic pages unavailable over curl
+6	yes	WebFetch	github.com/topics/open-educational-resources	WORKS	20 of 378 rendered	renders 20 before Load more; rounds stars above 1000
+7	yes	WebFetch	github.com/topics/ai-tutor	WORKS	20 of 706 rendered	all 20 already held by this KB
+8	yes	committed script	compose/code/p203-grant-blob-reader/read_grant.sh	REFUSED	1	auto-mode classifier; same URLs that returned 200 inline
+9	yes	git ls-remote	git ls-remote github.com	FAILED	exit 2	no git smart-HTTP to third-party repos

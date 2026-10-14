@@ -1,0 +1,17 @@
+repo	stars_published	grant_path	content_scope	code_scope	explicit_scope_headings	new_to_kb	note
+swcarpentry/git-novice	379	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	canonical Carpentries two-scope instrument
+datacarpentry/R-ecology-lesson	338	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+carpentries/instructor-training	189	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+swcarpentry/r-novice-inflammation	174	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+datacarpentry/r-raster-vector-geospatial	119	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+datacarpentry/image-processing	113	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+datacarpentry/python-ecology-lesson	not-measured-p203	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+swcarpentry/shell-novice	not-measured-p203	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+carpentries/lesson-example	not-measured-p203	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	the lesson TEMPLATE: the instrument propagates to every lesson built from it
+librarycarpentry/lc-git	not-measured-p203	main/LICENSE.md	CC-BY-4.0	MIT	2	yes	same instrument
+merely-useful/py-rse	261	master/LICENSE.md	CC-BY-4.0	NOT-GRANTED	0	yes	research-software-engineering course; code examples under a CONTENT licence only
+upb-lea/reinforcement_learning_course_materials	1200	master/LICENSE	CC-family	NOT-GRANTED	0	no	RL course with executable notebooks; no software grant
+spatialaudio/digital-signal-processing-lecture	885	master/LICENSE	CC-BY-4.0	NOT-GRANTED	0	yes	Jupyter notebooks are the asset; grant is content-only
+spatialaudio/signals-and-systems-lecture	385	master/LICENSE	CC-BY-4.0	NOT-GRANTED	0	yes	same
+0voice/Awesome-CS-OpenCourse	644	main/LICENSE	CC0-1.0	CC0-1.0	0	yes	public-domain dedication over an INDEX of third-party courses (Gap 458 shape)
+cybercussion/SCOBot	164	master/LICENSE	CC-BY-SA-4.0	NO-SEPARATE-GRANT	0	no	a SCORM JavaScript API: software under a content copyleft, no patent grant

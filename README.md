@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14
+
+### 🟢 Four pre-registered falsifiers discharged, and the licence column's restructure is earned
+
+🟢 **`ACTION OV` CLOSED on limb `2`.** Every foundation row p202 published as
+`(not blob-read)` is now read from its own blob, plus three it named but never probed —
+**`16` rows: `12` permissive, `3` copyleft, `1` content-copyleft over software.**
+🔴 **Limb `1` — *"all permissive → `P202-1`'s wire-up is sellable as written"* — is
+falsified by `g3i/lxHive` (GPL-2.0), `oat-sa/lib-lti1p3-core` (GPL-2.0), `cerpus/Edlib`
+(GPL-3.0) and `cybercussion/SCOBot` (`CC-BY-SA-4.0`).** 🟢 **`P202-1` survives because every
+one of the four has a permissive substitute** — the spine is now named, `10` rows, all
+blob-read: `ADL_LRS` · `lrs-conformance-test-suite` · `ralph` · `pylti1.3` ·
+`1EdTech/lti-1-3-php-library` · `ltiauthenticator` · `CATAPULT` · `scorm-h5p-wrapper` ·
+`LiaScript-Exporter` · `marsha`.
+[`evidence/foundations-unread-grants.2026-10-14-p203.tsv`](evidence/foundations-unread-grants.2026-10-14-p203.tsv).
+
+🔴 **`SCOBot` is the row that generalises:** a **SCORM JavaScript API you embed in
+courseware**, whose `LICENSE` title line reads `CREATIVE COMMONS ATTRIBUTION-SHAREALIKE 4.0
+INTERNATIONAL`. 🟢 **So p202's `Gap 459` is not a property of the agent-skill layer — it is on
+the FOUNDATIONS shelf too**, and `ShareAlike` on an embedded library makes every course
+package that ships it a derivative, with **no patent grant**.
+
+### 🟢 `ACTION OX` CLOSED on limb `1`: `10` rows with an explicit two-scope grant
+
+🟢 **The Carpentries `LICENSE.md` is a canonical two-scope instrument**, read from the blob:
+`## Instructional Material` → **`CC-BY-4.0`**, `## Software` → *"the example programs and
+other software … are made available under the [OSI]-approved [MIT license]"*. 🔴 **With
+p202's `8`, that is `24` measured rows where a single licence cell is wrong about part of the
+repository.** Limb `1` needed `10`+. 🟢 **The restructure is earned: a row publishes its
+grant PER PATH, and `MIT` stops being publishable without saying *of what*.** `P203-1`.
+🔵 **Strongest form: the instrument is carried by `carpentries/lesson-example`, the lesson
+TEMPLATE — so the two-scope grant propagates to every lesson generated from it.**
+[`evidence/content-code-scope-extension.2026-10-14-p203.tsv`](evidence/content-code-scope-extension.2026-10-14-p203.tsv).
+
+### 🆕 🔴 `Gap 461` — this KB's content shelf was a function of its query list
+
+🔴 **`topic:ai-tutor` returned `20` rows and this KB already held `20` of them — the first
+saturated channel in `203` passes.** 🟢 **The same hour, `topic:open-educational-resources`
+(`378` repositories) yielded `12` rows new to this KB: the entire Carpentries family** —
+Software Carpentry, Data Carpentry, Library Carpentry, **the largest instructor-led open
+curriculum organisation in the world**, absent for `202` passes. 🔴 **Cause, measured: its
+repositories carry none of the five vocabularies in `ingest/config.json`.** `ACTION OZ`.
+
+### 🟢 `ACTION OU` CLOSED on limb `2`, `ACTION OW` CLOSED on both halves
+
+- 🟢 **`ACTION OU`: a grant's tense is a one-row curiosity.** `140` repositories probed,
+  `134` READMEs read, **exactly `1` hit** *(`PlaypowerLabs/EdOptimize`: `"CURRENTLY, THIS
+  PLATFORM IS LICENSED GPLv3"`)*. 🔴 Limb `1` needed `3`+. 🟢 **No `permanence` field. Stop
+  asking.**
+- 🟢 **`ACTION OW`: `openfun/ralph`'s grant is at `LICENSE.md` and the body is MIT** — p202
+  published a badge, p203 the blob. 🔴 **And the sweep found the under-read: of `260` shelf
+  rows, `190` carry a bare `LICENSE`, `8` only `.md`, `4` only `.txt` — so `12` of the `202`
+  rows with a grant (`5.9`%) hold it at a non-bare path**, among them
+  `TheAlgorithms/Python`, `Submitty`, `ai-shifu`, `PageLM`, `courselit` and
+  `rasbt/LLMs-from-scratch`. 🔵 **Declared limit: the probe tried `main`/`master` only, so the
+  `58` rows with nothing found are an UPPER bound on ungranted rows, not a measurement.**
+
+### 🔴 `ACTION OT` CLOSED: the seam is a conjunction, and this pass's own first draft had it wrong
+
+| | inline command | committed script |
+|---|---|---|
+| **no network** | — | 🟢 **RUNS** — `19`/`19` |
+| **network** | 🟢 **`200`**, `~300` reads | 🔴 **REFUSED** |
+
+🟢 **Neither axis alone predicts the verdict; the predicate is network AND from-file.**
+🔵 p202's *"RED vs NO-RED"* is correct about scripts but implies no network call can run —
+`~300` did. 🔴 **And p203 first concluded the opposite *("the seam is where the code lives")*,
+falsified minutes later by the offline script running.** 🟢 **Only the full 2×2 separates the
+two readings, and no prior pass had filled all four cells.** `Gap 462`.
+🟢 **Acted on, not just recorded:**
+[`compose/code/p203-grant-blob-reader/`](compose/code/p203-grant-blob-reader/) splits at the
+network boundary — `classify.sh` is pure and its suite runs here; `read_grant.sh` fetches and
+runs in CI. [`evidence/channel-conjunction-2x2.2026-10-14-p203.tsv`](evidence/channel-conjunction-2x2.2026-10-14-p203.tsv).
+
+### 🟢 Regions: EMEA's procurement gap closes, MEA's three-pass gap partly closes
+
+- 🟢 **EMEA — the mechanism has a name.** EU AI Act generally applicable **`2026-08-02`**,
+  Annex III education deferred to **`2027-12-02`** *(third independent corroboration of
+  p202's Regulation (EU) 2026/1744)*. 🆕 **Article 4's AI-literacy duty is already in force;
+  schools are `deployers` with their own duties; and a high-risk system supplied to a
+  contracting authority needs conformity assessment, an EU declaration of conformity and CE
+  marking.** 🟢 **p202's declared procurement gap closes: the buyer's question is a
+  documentation question.** ⚠️ `eur-lex.europa.eu` still does not resolve; secondary sources.
+- 🆕 🟢 **The Middle East and Africa half of EMEA.** 🔵 *`MEA` is not a region in this KB's
+  closed vocabulary — it is the half of `EMEA` that was never populated.* **Rwanda**'s
+  National AI Policy covers education and the government signed a **three-year MoU with
+  Anthropic in February 2026**; **Egypt** expanded its National Council for AI in January
+  2026 *(strategy 2025–2030, `750 000` AI graduates/year target)*; the **Gulf** runs
+  large-scale education initiatives. 🔴 **South Africa's draft National AI Policy was
+  withdrawn on `2026-04-26` after its reference list was found to contain AI-hallucinated
+  citations.** 🔴 **Still no binding AI-in-education regulation anywhere in MEA — strategies,
+  not laws.**
+- 🔴 **APAC — the constraint is teachers, not software.** China: AI compulsory **from age
+  `6`** since September 2025, Beijing **`8`h/year** minimum. India: **mandatory from Class
+  `3`** in `2026–27` under the IndiaAI Mission, **`~10M` teachers to train, `15`%
+  AI-fluent.** 🟢 **And p203 found the asset:
+  [`carpentries/instructor-training`](https://github.com/carpentries/instructor-training)
+  is train-the-trainer material under `CC-BY-4.0` + MIT** — `P203-A`.
+- 🟢 **LATAM — a named institutional deployment at last.** **PUC Chile: `194` pedagogical
+  agents across `~100` courses, `4 600`+ students**, outcome measurement still being built.
+  🟢 **Teachers lead the world** *(TALIS 2024: Brazil `56`%, Chile `55`%, vs OECD `36`%)* and
+  **`9` in `10` regional 15-year-olds have used an AI chatbot for schoolwork** *(PISA 2025)*,
+  against **`22`% of Brazilian schools with guidelines.** 🟢 **The sale is governance, and
+  PUC Chile is the reference to cite.**
+- 🔴 **North America — the buyer arrived by statute, and p203 names it.** **Ohio is the first
+  state to require every K-12 district to adopt a formal AI-use policy, deadline
+  `2026-07-01`, already past.** `134` bills across `31` states; `OK` and `MD` require human
+  oversight and bar AI from high-stakes student decisions; `CA AB 1159` would bar student
+  data from model training.
+
+### 🔴 The market figures got worse again
+
+🔴 **Three 2026 estimates, overlapping scopes: `$10.6B` (broad, `41.5`% CAGR) · `$2.7B` (AI
+tutors, `30.5`%) · `$9.79B` (adaptive tutoring).** 🔴 **And LATAM is now published at
+`$105.6M` (2024, MarketsandMarkets) against this KB's carried `$1.5B→$4.2B` — a `~14`–`40`×
+disagreement with a named house on each side.** 🟢 **`Gap 457` is not closing. Quote the
+range, name the scope, ask whether corporate L&D is inside it.**
+
+### 🔴 The one ask that remains for a human
+
+🔴 **`ACTION MN` *(sixteenth pass)* — may this KB open licensing issues on third-party
+repositories?** 🟢 **Still NOT RUN, and still correctly so: an outward-facing write on other
+people's repositories on an unattended run.** 🆕 **p203 adds a second repo of p202's kind:**
+[`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) (`164★`) licenses a **SCORM
+JavaScript API** under **`CC-BY-SA-4.0`** — like `education-agent-skills` (`858★`), not a
+missing licence but **a licence that probably does not do what its author intends**, on
+software meant to be embedded in other people's course packages.
+
 ## Pass 202 — 2026-10-14
 
 ### 🔴 First: the licence column assumes software, and this industry's best layer is content

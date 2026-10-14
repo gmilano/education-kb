@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 203 — a `378`-repo vocabulary this KB had never read, and the Carpentries in it
+
+🟢 **`topic:open-educational-resources` reports `378` repositories; `20` render before
+`Load more`.** 🔴 **`12` of those `20` are new to this KB** — after `202` passes. 🟢 **The
+whole Carpentries family sits in this vocabulary and in no vocabulary
+`ingest/config.json` searches.**
+
+**🆕 New this window, grants blob-read:**
+
+| Row | ★ | grant | shape |
+|---|---|---|---|
+| [spatialaudio/digital-signal-processing-lecture](https://github.com/spatialaudio/digital-signal-processing-lecture) | `885` | `CC-BY-4.0` *(content only)* | 🔴 Jupyter notebooks under a content licence — **the asset is executable and the grant does not say so** |
+| [swcarpentry/git-novice](https://github.com/swcarpentry/git-novice) | `379` | `CC-BY-4.0` + 🟢 **MIT** | two-scope, one file |
+| [spatialaudio/signals-and-systems-lecture](https://github.com/spatialaudio/signals-and-systems-lecture) | `385` | `CC-BY-4.0` *(content only)* | same shape as its sibling |
+| [datacarpentry/R-ecology-lesson](https://github.com/datacarpentry/R-ecology-lesson) | `338` | `CC-BY-4.0` + 🟢 **MIT** | two-scope |
+| [merely-useful/py-rse](https://github.com/merely-useful/py-rse) | `261` | `CC-BY-4.0` *(content only)* | research-software-engineering course; **code examples, no code grant** |
+| [carpentries/instructor-training](https://github.com/carpentries/instructor-training) | `189` | `CC-BY-4.0` + 🟢 **MIT** | 🟢 **how to TRAIN the trainers** — the asset APAC and LATAM demand this pass |
+| [swcarpentry/r-novice-inflammation](https://github.com/swcarpentry/r-novice-inflammation) | `174` | `CC-BY-4.0` + 🟢 **MIT** | two-scope |
+| [datacarpentry/r-raster-vector-geospatial](https://github.com/datacarpentry/r-raster-vector-geospatial) | `119` | `CC-BY-4.0` + 🟢 **MIT** | two-scope |
+| [datacarpentry/image-processing](https://github.com/datacarpentry/image-processing) | `113` | `CC-BY-4.0` + 🟢 **MIT** | two-scope |
+| [0voice/Awesome-CS-OpenCourse](https://github.com/0voice/Awesome-CS-OpenCourse) | `644` | **`CC0-1.0`** | 🔴 **public-domain dedication over an INDEX of third-party university courses** — `Gap 458`'s shape again: the grant reaches the list, not the courses |
+| [swcarpentry/shell-novice](https://github.com/swcarpentry/shell-novice) · [datacarpentry/python-ecology-lesson](https://github.com/datacarpentry/python-ecology-lesson) · [librarycarpentry/lc-git](https://github.com/librarycarpentry/lc-git) | *(not measured)* | `CC-BY-4.0` + 🟢 **MIT** | two-scope |
+| [carpentries/lesson-example](https://github.com/carpentries/lesson-example) | *(not measured)* | `CC-BY-4.0` + 🟢 **MIT** | 🔴 **the template — the instrument propagates to every lesson built from it** |
+
+**🟢 Also trending this window, verified, outside the education vocabularies:**
+
+- [karpathy/nanochat](https://github.com/karpathy/nanochat) — **MIT**, `(c) 2025 Andrej
+  Karpathy`. Full LLM training pipeline, minimal and readable. 🔴 **Deliberately
+  un-optimised and not fault-tolerant: a teaching artefact, and reviewers say so.**
+- [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) — **Apache-2.0**, at
+  🔴 `LICENSE.txt`. *(A bare-`LICENSE` probe would have recorded this row as ungranted.)*
+
+🔵 **Method note for this window:** direct inline `curl` to `raw.githubusercontent.com`
+returned `200` on every probe — **a channel p202 recorded as DENIED.** The same `curl` inside
+a committed script was **DENIED**. See [`intel/trends.md`](../intel/trends.md) `ACTION OT`.
+
+🔵 **Declared gap:** 🔴 **`358` of the `378` rows in this vocabulary are still unread** — the
+page renders `20` and `Load more` was not expanded. **A measured frontier, not a finished
+shelf.**
+
 ## 🆕 Pass 202 — 2026-10-14 — `8` unqueried vocabularies, `3 107` matches, and one gate that admits no noise
 
 🔵 **APPEND-ONLY. History preserved below.**

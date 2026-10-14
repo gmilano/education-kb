@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14 — `topic:ai-tutor` IS SATURATED, AND THE NEW SUPPLY WAS NEVER AN AGENT
+
+🔴 **`20` of `20` rows on `topic:ai-tutor` this pass are already in this KB.** Not one new
+row. 🟢 **That is the first saturated channel in `203` passes, and it is a result, not a
+failure** — p202's `ACTION OP` predicted discovery had to move to new vocabularies, and this
+pass measured the old one hitting its floor.
+
+🟢 Read from the channel this pass: [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)
+**`41.4k★`** *(topic-page figure, rounded above `1 000`)* — 🔴 **p201 published `~24k★`. The
+largest agentic tutor in the industry roughly `+17k★` in one quarter**, and it remains the
+anchor row of this shelf.
+
+### 🟢 The `16` rows blob-read this pass, and what each grant actually permits
+
+🔵 **Channel: `raw.githubusercontent.com` over inline `curl`, read from each repository's own
+blob.** `api.github.com` returns `403`, so **no exact star count is claimed below that a
+topic page did not render.**
+
+| Agent / payload row | ★ | grant *(blob-read)* | what the grant reaches |
+|---|---|---|---|
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | `858` | **`CC-BY-SA-4.0`** | 🔴 `165` `SKILL.md` **and** `mcp-server/` — confirms p202: **no software grant anywhere**, no patent grant |
+| [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | `29` | **MIT** *(`Copyright (c) 2025 Vanderbilt Data Science Institute`)* | 🟢 `10` Claude Code skills implementing Knowledge Space Theory — code **and** payload |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | `~67.2k` | **MIT** *(`Copyright (c) 2026 Rohit Ghumare`)* | 🟢 a teaching corpus for building agents — curriculum **and** code |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | — | **MIT** *(`Copyright (c) 2025 Andrej Karpathy`)* | 🟢 full LLM training pipeline, minimal and readable. 🔴 **Deliberately un-optimised: a teaching artefact, not a training platform** |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | — | **Apache-2.0** *(at `LICENSE.txt`)* | 🟢 curriculum + notebooks; **the only Apache row in this group** |
+| [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) | — | **MIT** *(`Copyright (c) 2025 WalkingLab`)* | 🆕 harness-engineering tutorial, `0`→`1` |
+| [nykooi1/vibe-wise](https://github.com/nykooi1/vibe-wise) | `~3.4k` | **MIT** *(`Copyright (c) 2026 Noah Kim`)* | 🆕 a Claude Code / Codex plugin that **teaches while the model writes** — pedagogy as a plugin, a shape this KB had no row for |
+
+🔴 **`vibe-wise` and `walkinglabs` are the only two rows in this table that are new to the
+KB.** The other five were already held; what is new is that **every one of them is now
+blob-read rather than label-read.**
+
+### 🔴 The shelf's own composition changed, and the licence column is the wrong shape for it
+
+🟢 p203 closes `ACTION OX` with **`10` rows carrying an EXPLICIT two-scope grant** — content
+under `CC-BY-4.0`, code under **MIT**, in one file, under two headings. 🔴 **Every agent row
+above is published with ONE licence cell, and for `7` of the `16` rows measured this pass
+that cell is wrong about part of the repository.** Full census:
+[`evidence/content-code-scope-extension.2026-10-14-p203.tsv`](../evidence/content-code-scope-extension.2026-10-14-p203.tsv).
+
+🟢 **The rule this pass adds to p202's:** an agent row must say **which PATH** its grant
+covers — `skills/`, `mcp-server/`, `docs/` — because in this industry those three paths
+routinely carry three different instruments. `P203-1`.
+
+### 🔴 Where these are built — and the query that measured it
+
+🟢 Of the `20` saturated `ai-tutor` rows, **`8` are Chinese-origin by owner and subject**
+(`kaogong-skill` targets Chinese civil-service exams; `feifei-companion` is a Trinity K-12
+companion), `1` is Spanish-language (`artcc/freelingo`), `1` reads as Middle-Eastern in
+origin (`ahmedEid1/lumen`). 🔴 **Stated as p202's `Gap 460` requires: this is a property of
+`topic:ai-tutor`, not of the world.** A different vocabulary this pass
+(`open-educational-resources`) returned a shelf that is **majority North American and
+European academic** — see [`repos/foundations.md`](../repos/foundations.md).
+
 ## Pass 202 — 2026-10-14 — THE LICENCE COLUMN ASSUMES SOFTWARE, AND THE AGENT PAYLOAD IS CONTENT
 
 🔴 **The second-largest agent-skill repository in this industry is licensed `CC-BY-SA-4.0`,

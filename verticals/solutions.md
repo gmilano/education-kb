@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 203 — 2026-10-14 — THE PLATFORM SHELF IS COPYLEFT, AND THE INTEROP LAYER BESIDE IT IS NOT
+
+🔴 **Every general-purpose LMS/SIS this industry actually runs on is copyleft, and p203
+blob-read another one to confirm the pattern rather than assert it.**
+
+| Platform | role | grant | channel |
+|---|---|---|---|
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **SIS** — grades, scheduling, attendance | 🔴 **GPL-2.0** | 🟢 **blob-read this pass**, `master/LICENSE` |
+| Moodle | LMS, the reference everything is measured against | 🔴 GPL-3.0 | carried |
+| Open edX | LMS at scale | 🔴 AGPL-3.0 *(platform)*, Apache-2.0 *(some components)* | carried; ⚠️ roundups disagree — **verify per component** |
+| Canvas LMS | LMS, community edition | 🔴 AGPL-3.0 | carried; 🔴 **community edition excludes features the commercial one has** |
+| OpenOlat | LMS | 🟢 **Apache-2.0** | carried — 🟢 **the one permissive general-purpose LMS on this shelf** |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **SIS + LMS on Odoo** | carried *(p202: bundled-grant carve-outs)* | carried |
+
+🟢 **So the vertical answer has not changed and p203 can now say WHY it does not change:**
+a client who needs the system of record takes a copyleft platform and keeps their work at
+the integration boundary. 🔴 **Searching for a permissive general-purpose LMS is a dead end —
+`OpenOlat` is the single permissive option and it is not the market.**
+
+### 🟢 What DID change: the permissive layer is one level down, and it is now blob-read
+
+🔴 **p202 found the interop layer (`~1 088` repositories) and published its spine
+unread. p203 read it.** 🟢 **`10` rows, every grant read from its own blob, nothing
+copyleft:**
+
+**`ADL_LRS` (Apache-2.0)** · **`lrs-conformance-test-suite` (MIT)** · **`ralph` (MIT)** ·
+**`pylti1.3` (MIT)** · **`1EdTech/lti-1-3-php-library` (Apache-2.0)** ·
+**`ltiauthenticator` (BSD-3)** · **`CATAPULT` (Apache-2.0)** · **`scorm-h5p-wrapper` (MIT)**
+· **`LiaScript-Exporter` (BSD-3)** · **`marsha` (MIT)**
+
+🔴 **Excluded after reading: `lxHive` (GPL-2.0), `oat-sa/lib-lti1p3-core` (GPL-2.0),
+`Edlib` (GPL-3.0), `SCOBot` (`CC-BY-SA-4.0`).**
+
+🟢 **The customisation shape this industry actually supports, stated plainly:** 🔴 **you do
+not fork the LMS.** 🟢 **You speak `LTI 1.3` into it, emit `xAPI` out of it to an LRS you own,
+and keep every line you write on the permissive side of that boundary** — which is exactly
+where the `10` rows above sit. **The copyleft platform stays unmodified and its licence
+never reaches your work.**
+
+### 🆕 🟢 The content layer the platform shelf never had
+
+🟢 **New this pass:** the Carpentries family — `12` rows, **`CC-BY-4.0` for instructional
+material and MIT for example code, in one instrument**, propagated by the lesson template
+[`carpentries/lesson-example`](https://github.com/carpentries/lesson-example). 🟢 **This is
+the first row on this shelf that is curriculum rather than software, with a grant explicit
+enough to ship:** `CC-BY` permits commercial adaptation with attribution, and the code
+examples inside the same repository are separately MIT.
+
+🔴 **The trap, and it is one line away:** `CC-BY` *(Carpentries)* permits a closed
+adaptation; **`CC-BY-SA`** *(`education-agent-skills` `858★`, `SCOBot` `164★`)* does **not** —
+the adaptation must carry the same licence. 🟢 **Same four letters at the front, opposite
+answer to "can we ship this to a client", and only a blob read tells you which you have.**
+
 ## Pass 202 — 2026-10-14 — THE STANDARDS LAYER IS THE VERTICAL NOBODY SELLS, AND IT IS PERMISSIVE
 
 🔵 This page exists for the Odoo/OpenMRS/Moodle move: **start from something that already

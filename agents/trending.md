@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 203 — the tutor channel saturated, and pedagogy arrived as a PLUGIN
+
+🔴 **`topic:ai-tutor` returned `20` rows and this KB already held `20` of them.** First
+saturated channel in `203` passes. 🟢 **The movement this window is not in the tutor shelf; it
+is in two places the tutor vocabulary cannot see.**
+
+**🆕 New this window — both blob-read, both MIT:**
+
+| Row | ★ | grant | why it is new in KIND |
+|---|---|---|---|
+| [nykooi1/vibe-wise](https://github.com/nykooi1/vibe-wise) | `~3.4k` *(`~+3.3k` this window)* | **MIT** *(`(c) 2026 Noah Kim`)* | 🟢 **a Claude Code / Codex PLUGIN that teaches the user while the model writes the code.** Not a tutor app and not a skill pack — **pedagogy delivered inside the developer's own harness.** This KB had no row of this shape |
+| [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) | — | **MIT** *(`(c) 2025 WalkingLab`)* | harness engineering, `0`→`1`. 🟢 **The subject is the agent harness itself** — the teaching material the studio's own engineers need |
+
+**🟢 Movement on rows already held:**
+
+- [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) — **`41.4k★`**, against **`~24k★`
+  published at p201**. 🔴 **Roughly `+17k★` in a quarter**, the largest single move this KB
+  has recorded on an education row. *(Topic-page figure, rounded above `1 000`;
+  `api.github.com` `403` all pass, so no exact count is claimed.)*
+- [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
+  — `~67.2k★`, `~+4.7k` on the window's trending lists. **MIT**, `(c) 2026 Rohit Ghumare`.
+- [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills)
+  — `858★`, **`CC-BY-SA-4.0` re-confirmed from the blob this pass.** 🔴 **Still no software
+  grant for `mcp-server/`.** p202's reading holds on a second independent read.
+
+🔵 **Declared gap:** 🔴 **no exact star counts this window.** `api.github.com` returned `403`
+on every probe; `github.com/topics/*` renders only via `WebFetch` and rounds above `1 000`.
+Every figure above says which channel produced it.
+
+🔵 **Declared gap:** 🔴 **no LATAM-origin and no African-origin new agent row this window.**
+Searched: `topic:ai-tutor` (`20`/`20` known, `1` Spanish-language row already held),
+`topic:open-educational-resources` (`20` of `378` rendered — **majority North American and
+European academic**), and the window's trending aggregators (US-origin). **An informed
+absence, not coverage.**
+
 ## 🆕 Pass 202 — 2026-10-14 — the skill layer is being licensed as content, and regulation just started asking for its architecture
 
 🔵 **APPEND-ONLY. The history below this section is intact.**
