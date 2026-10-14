@@ -1,0 +1,9 @@
+query_shape	language	query	instruments_returned	what_came_back
+pan-regional	English	AI education LATAM 2026 adoption regulation players	0	UNESCO IESALC + DEC adoption surveys; no Brazilian national instrument
+country, no organ	English	Brazil artificial intelligence in schools policy 2026	3	PL 2397/2026 (Senado, 14 May 2026); Parana state technical AI course; PBIA 2024-2028
+country + organ	English	Brazil MEC artificial intelligence education national guidelines 2026	5	Parecer CNE/CP 15/2026 (1 Sep 2026, DOU 6 Oct 2026); MEC basic-education document (Apr 2026); MEC regulatory sandbox (24 Mar 2026); early-childhood recommendation; UNESCO support
+country + organ	Portuguese (p206)	MEC inteligencia artificial educacao diretrizes	4	Segape/MEC referencial; MEC+AGU sandbox; documento orientador 8 Apr 2026; teacher course
+country + organ	English	Mexico SEP artificial intelligence higher education guidelines 2026	4	SEP 10 recommendations (15 Apr 2026); CONAES survey 1.5M students; bachillerato AI track 2026-27; 2025 bill in Education Committee
+country + organ	Spanish	Mexico SEP inteligencia artificial educacion lineamientos 2026	4	same set, plus national consultation (Jul 2026, Delgado)
+country, no organ	English	Canada provincial AI education policy guidance 2026 ministry	3	BC K-12 considerations; Quebec teacher guide; provincial count disputed (3 vs 4)
+country + organ	French	Quebec intelligence artificielle education guide ministere 2026 encadrement	3	MEQ guide 2026 update; Cadre de reference competence numerique (21 Apr 2026); cegep/university guides

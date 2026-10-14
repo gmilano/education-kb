@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 207 — THE OER CHANNEL'S FLOOR, MEASURED: PAGE `10` IS `100`% NOVEL AT `1`★
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🟢 `ACTION PK` CLOSED on limb `1`. A novelty rate without a value floor measures tail depth
+
+🔴 **p205 measured `98.8`% novelty across `80` OER rows and could not tell whether that meant the
+channel was rich or merely deep.** 🟢 **p207 read `topic:open-educational-resources` at page
+`10` and the falsifier fires exactly as p205 wrote it:**
+
+| measure | page `3`–`6` *(p205)* | 🆕 page `10` *(p207)* |
+|---|---|---|
+| rows | `80` | `20` |
+| novelty | `98.8`% | 🔴 **`100`%** |
+| median ★ | `5` | 🔴 **`1`** |
+| max ★ | `27` | 🔴 **`1`** |
+| rows at `0`★ | — | 🔴 **`6` of `20`** |
+
+🔵 **Novelty rose and value collapsed, exactly as a star-sorted channel must behave.** 🟢
+**`T205-1` is now confirmed by measurement rather than argued from the sort order: on a sorted
+channel a bare novelty threshold is unfalsifiable, and every discovery falsifier in
+[`intel/open-gaps.md`](../intel/open-gaps.md) needs a VALUE floor beside it.**
+
+🟢 **Two bounds worth keeping.** 🔵 **The topic holds `380` repositories in total** — the channel
+is finite, and pricing it end-to-end is `19` `WebFetch` calls, not an open commitment. 🔴 **And
+`2` of the `20` rows are not OER at all**:
+[`Reboot-Hub/dji-drone-specs-used-price-index`](https://github.com/Reboot-Hub/dji-drone-specs-used-price-index)
+and [`Reboot-Hub/dji-drone-parts-reference`](https://github.com/Reboot-Hub/dji-drone-parts-reference),
+both drone-market datasets. 🔵 **At tail depth the TOPIC TAG itself degrades, so a star floor is
+also a relevance filter.** 🟢 **Fund this channel down to ~`10`★ and stop.**
+
+🟡 **Rows at the floor, recorded so a later pass does not re-walk page `10`:** the page is
+teaching material almost without exception — lecture notes
+([`Lippitz-Lab/teca`](https://github.com/Lippitz-Lab/teca), Pluto.jl physics;
+[`klb2/tsks15`](https://github.com/klb2/tsks15), Linköping signal detection), Carpentries-shaped
+lessons ([`carpentries-incubator/gitlab-novice`](https://github.com/carpentries-incubator/gitlab-novice),
+[`mambelli/git-novice`](https://github.com/mambelli/git-novice)), multilingual textbooks
+([`bvirrion/one-physics-book`](https://github.com/bvirrion/one-physics-book)) and OER
+infrastructure ([`X5GON/processing-pipeline-api`](https://github.com/X5GON/processing-pipeline-api),
+[`sci-oer/automated-builder`](https://github.com/sci-oer/automated-builder),
+[`splattater/test-oersi`](https://github.com/splattater/test-oersi)). 🔴 **None was read for a
+grant: at `0`–`1`★ the read cost exceeds any plausible deliverable value, which is the whole
+point of a value floor.**
+
+### 🔴 The locator this shelf uses is case-sensitive, and it cost a foundation row
+
+🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) spells its licence **`LICENSE.TXT`** and
+returns `404` on all `22` path forms p206 used. 🔴 **It was recorded as ungranted until the case
+variants were tried.** 🟢 **`90` forms later: `3` recovered, `2` `NOTICE`-only, `12` true
+absences.** 🔵 **p206 fixed what the title line can be WEARING; the filename wears the same
+costume.**
+[`evidence/licence-locator-case.2026-10-14-p207.tsv`](../evidence/licence-locator-case.2026-10-14-p207.tsv).
+
+### 🟢 Byte counts: `95` repos are printed with two values, and `11` of `15` checked are one newline
+
+🔴 **Not errors.** 🟢 **The higher cell is the blob as served; the lower is the blob minus its
+trailing `LF`.** 🔵 **Two conventions, one file, two passes.** 🟢 **Declare the convention —
+bytes as served, newline included — rather than sweeping `<!--corrected-->` across an
+append-only history.**
+[`evidence/byte-cell-conflicts.2026-10-14-p207.tsv`](../evidence/byte-cell-conflicts.2026-10-14-p207.tsv).
+
 ## 2026-10-14 — pass 206 — THE TRENDING SHELF'S GRANTS, RE-READ: `25` UNREADABLE ROWS → `0`
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**

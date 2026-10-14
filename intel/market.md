@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — BRAZIL'S BINDING INSTRUMENT IS SIX WEEKS OLD, AND MEXICO HAS NUMBERED THE GAP
+
+### 🔴 The method correction that produced all of this: name the ORGAN
+
+🟢 **p206 concluded that its Brazilian breakthrough came from querying in Portuguese. It had
+changed two variables at once** — the language, and the fact that it named **MEC**. 🟢 **p207 ran
+the control in English:**
+
+| shape | instruments | what came back |
+|---|---|---|
+| 🔴 pan-regional *(`"LATAM"`)* | `0` | researchers writing about the region |
+| 🟡 country, no organ *(`"Brazil"`)* | `3` | the **legislature's** bill and a **state** programme |
+| 🟢 country + organ *(`"Brazil MEC"`)* | `5` | the **ministry's** and the **council's** instruments |
+
+🔵 **Three near-disjoint result sets, one language.** 🔴 **Language did nothing in four of four
+test cells; the organ did everything.** 🟢 **Run the query once per organ that could issue the
+instrument — ministry, council, legislature, state. Brazil has all four and three passes of this
+KB saw one.**
+[`evidence/query-shape-control.2026-10-14-p207.tsv`](../evidence/query-shape-control.2026-10-14-p207.tsv).
+
+## Opportunities by region
+
+### North America
+
+🆕 🟢 **Mexico has quantified the gap every other market only asserts, and the number is the
+brief.** The **SEP** presented **`10` recommendations for the ethical and critical use of
+generative AI** on **`15` April `2026`**, at the `19ª` ordinary session of **CONAES**, on a
+national survey of **`1.5` million+ students and `166 000`+ teachers**:
+
+| measure | value |
+|---|---|
+| students using AI for academic work | 🟢 **~`70`%** |
+| 🔴 **students unaware of their institution's AI policy** | 🔴 **~`80`%** |
+| students who have had any training | 🔴 **<`30`%** |
+
+🔵 **`80`% unaware of a policy is the opportunity, stated as a number.** 🔴 **The product a
+Mexican university needs first is not a tutor — it is the policy surface around the tools its
+students are already using.** 🟢 **The SEP has said explicitly that it will regulate rather than
+ban**, and the recommendations name institutional guidelines, teacher training, curriculum
+revision and **rethinking assessment**. 🟢 A technical AI track enters the national
+`bachillerato` from **`2026-27`**; a `2025` bill amending the General Education and General
+Higher Education laws sat in the Education Committee as of May `2025`. 🟡 Press- and
+communiqué-sourced; no DOF text reachable from this environment.
+
+🆕 🟡 **Canada is a provincial patchwork, and that is the finding, not a gap.** 🔴 **There is no
+federal instrument and CMEC is holding to provincial jurisdiction**, against pressure from the
+Canadian Teachers' Federation for national guidance. 🟢 **British Columbia** publishes
+*Considerations for Using AI Tools in K-12 Schools* — a decision framework, integration with
+safeguards rather than restriction. 🟢 **Québec** updated its ministry guide on the *pedagogical,
+ethical and legal* use of generative AI for **2026** (first issued `2024`), reportedly moving
+from general caution to operational guidance on **assessment**, and refreshed its **Cadre de
+référence de la compétence numérique on `21` April `2026`** with AI folded into the existing `12`
+dimensions rather than bolted on; separate frameworks exist for cégeps and universities, **none
+mandatory**. 🔴 **Sources disagree on the count** — three provincial ministries with published
+K-12 guidance as of December `2025`, or four (Ontario, Québec, Alberta, BC); one source says
+Ontario's ministry has issued no memorandum at all and the Ontario material is from the privacy
+and human-rights commissioners. 🔴 **Flagged, not resolved.**
+
+🔵 **Engagement shape:** a Canadian deal is **per-province**, and the artefact that travels is
+the mapping between a tool's behaviour and each province's framework — BC's safeguards, Québec's
+assessment rules. 🟢 **Québec is the one to lead with**: it has the most specific guidance and a
+competence framework to map against.
+
+🟡 **The United States remains the weakest-sourced cell on this page.** Secondary roundups report
+only **`10`% of institutions** with formal AI guidelines against **`71`% of US teachers**
+untrained, and a state-by-state patchwork (Colorado, Texas named). 🔴 **No primary federal or
+state instrument was reachable this pass**, and `T207-12` records that the *"regulatory vacuum"*
+framing is partly an artefact of pan-regional queries — the same framing hid Canada's and
+Mexico's instruments until the organ was named. 🔵 **Run the organ sweep on US state education
+agencies before quoting the vacuum to a client.**
+
+### LATAM
+
+🆕 🔴 **Brazil's binding instrument exists, is dated, and is one signature away.**
+**`Parecer CNE/CP nº 15/2026`** was approved by the **Conselho Nacional de Educação on `1`
+September `2026`**; its summary was published in the **`Diário Oficial da União` on `6` October
+`2026`**; it now sits with **MEC for homologation, at which point it binds.**
+
+🟢 **What it says, and it shapes product:** parameters for AI use **at every level and modality**
+of teaching; AI **subordinated to educational purposes and student rights**; and AI **must not
+replace education professionals**. 🔵 **p206 reported the binding instrument as *"in committee"*.
+It has been approved for six weeks** — the cost of one unnamed organ.
+
+🆕 🟡 **Four tracks, four timelines, and they are not coordinated.** A client asking *"what must
+we comply with in Brazil"* has four answers:
+
+| organ | instrument | date | status |
+|---|---|---|---|
+| 🟢 **CNE** *(council)* | `Parecer CNE/CP nº 15/2026` | approved `1` Sep `2026`, DOU `6` Oct `2026` | 🔴 **binds on homologation** |
+| 🟡 **MEC** *(ministry)* | *Inteligência Artificial na Educação Básica* + the Segape referencial | April `2026` | 🟡 **orienting, not normative** |
+| 🟡 **MEC + AGU** | Sandbox Regulatório de IA na educação | `24` March `2026` | 🟡 pilot; results feed future rules |
+| 🟡 **Senado** *(legislature)* | `PL 2397/2026` — national ethical parameters for public **and private** institutions | introduced `14` May `2026` | 🔴 under deliberation |
+| 🟢 **Paraná** *(state)* | first state technical AI course in the public network, `32` schools, ~`2 000` students | `2026` school year | 🟢 **running** |
+
+🔵 **The product-shaping principles are stable across the ministry documents** — supervisão
+humana, transparência, **student authorship**, `LGPD` + `ECA` — and AI is **not recommended in
+`educação infantil`** except for inclusion. 🟡 **Reporting notes the early-childhood line is
+guidance, not a national ban.** 🔴 All of it secondary: `gov.br` returns `000` from this
+environment.
+
+🟢 **The rest of the region, unchanged and worth restating against Brazil:** a UNESCO IESALC
+study of `200` institutions across `19` countries finds **`87`% using AI in at least one area**
+but only **`26`% with any formal framework**; a Digital Education Council survey reports **`92`%
+of students and `79`% of faculty** actively using AI. 🔵 **Chile leads on national policy (AI
+policy since `2021`, a bill in discussion); Brazil and Colombia have national strategies without
+education-sector rules.** 🔴 **The regional constant is the same as Mexico's: use is near
+universal, governance is not.**
+
+🔵 **Engagement shape for LATAM:** the deliverable is the **governance layer**, and Brazil now
+supplies its specification. 🟢 **Build to `CNE/CP 15/2026`'s three principles — subordination to
+pedagogy, non-replacement of staff, student authorship — and the same artefact answers the
+UNESCO `74`% who have no framework at all.**
+
+### EMEA
+
+🆕 🟡 **A second national AI-literacy mandate, dated `2027`.** France will make **one hour per
+week of AI compulsory for all `seconde` students from the `2027` rentrée**, attached to the
+existing **`SNT`** strand; announced June `2026`; the stated content is model mechanics, uses,
+ethics, **digital sovereignty** and critical thinking against manipulation and disinformation.
+🟡 Press-sourced, no ministry text reachable; teaching unions have raised timetable and
+over-exposure concerns. 🔵 **An `18`-month runway is a dated buying window, and it is
+teacher-facing: somebody has to train the teachers of every `seconde` class in France.**
+
+🔴 **The regulatory clock is unchanged from `T206-8` and still the governing fact:** the EU
+`Digital Omnibus` pushed **Annex III high-risk** systems to **`2` December `2027`**, while
+**Article `50` transparency and Article `4` AI literacy are NOT delayed** and the **education
+emotion-recognition ban has been in force since `2` February `2025`**. 🟢 **Annex III names
+assessment, admissions and proctoring** — the three places an education product is most likely
+to sit. 🔵 **Build switchable, not retrofittable.**
+
+🟡 **Pan-regional EMEA enterprise sources remain unusable for education**: an explicit sweep
+returned CompTIA, Workday and Bandwidth-Cavell material on enterprise AI adoption with **no
+education-specific adoption statistic, ministry or vendor**. 🔴 **Written down rather than left
+silent** — and `T207-1` says why, and what to do: **the EMEA cell will not fill from regional
+queries. It fills one organ at a time** — France's `MEN`, Germany's `KMK` and the Länder, Spain's
+`MEFP`, the Nordic agencies. 🟢 **Québec's and Brazil's cells both filled that way this pass.**
+
+### APAC
+
+🔴 **No new instrument this pass, and the pan-regional sweep failed the same way EMEA's did**:
+enterprise AI governance material (Boomi, TechRepublic, Forrester sovereignty forecasts), plus
+corporate skilling announcements — TCS × Pearson, LearnUpon's Sydney HQ, Alteryx Academy — and
+**zero education-specific regulation or adoption statistics.** 🟢 **Recorded as an informed gap,
+and it is the fourth region to confirm `T207-1`'s rule rather than an absence of policy.**
+
+🟢 **What stands from p205 and p206, per country, which is how this cell was filled in the first
+place:** **Singapore** made teacher AI-literacy module `1` **compulsory by end `2026`** — a dated
+window, teacher-first. **South Korea's AI Basic Act entered force `22` January `2026`** and names
+education *high-impact*; its mandatory AI textbooks reached **under `30`% adoption by March** and
+were **stripped of official status by the National Assembly in August**. **China** mandates ≥`8`
+h/yr with Beijing running `1 400`+ schools; **Japan's** MEXT Ver. `2.0` sits ahead of an FY`2030`
+curriculum revision.
+
+🔵 **The cross-regional pattern now has four data points and it is the most actionable thing on
+this page:** 🟢 **mandates aimed at TEACHER capability survive — Singapore, and France's `2027`
+curriculum hour is teacher-delivered.** 🔴 **Mandates aimed at CLASSROOM TOOLS do not — South
+Korea's textbooks were withdrawn within seven months.** 🟢 **Sell the teacher-capability layer.
+It is what survives a change of government, and it is what every one of these instruments is
+reaching for.**
+
 ## Pass 206 — 2026-10-14 — `ACTION PJ` CLOSES ON LIMB `1`: BRAZIL'S POLICY WAS THERE ALL ALONG, IN PORTUGUESE
 
 ### 🟢 `ACTION PJ` — the hole was the query LANGUAGE, and the finding is large

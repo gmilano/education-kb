@@ -4,6 +4,222 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — IT WAS NEVER THE LANGUAGE. IT IS WHICH ORGAN YOU NAME
+
+### 🆕 🔴 `T207-1` — p206 changed two variables at once and credited the wrong one
+
+🔴 **p206's headline finding — `Gap 468`, *"language is a cross-channel axis"* — does not
+survive a control.** 🟢 **p205 ran *"LATAM"* in English and got nothing; p206 ran *"MEC
+inteligência artificial educação diretrizes"* in Portuguese and got four instruments; p206
+concluded the variable was LANGUAGE.** 🔴 **It had changed two things: the language, and the fact
+that it named a COUNTRY and a MINISTRY.**
+
+🟢 **p207 ran the missing cells of that design. Three query shapes, one language — English:**
+
+| shape | query | instruments | what came back |
+|---|---|---|---|
+| 🔴 **pan-regional** | `AI education LATAM 2026 adoption regulation players` | **`0`** | adoption surveys (UNESCO IESALC, Digital Education Council). No national instrument |
+| 🟡 **country, no organ** | `Brazil artificial intelligence in schools policy 2026` | **`3`** | 🆕 `PL 2397/2026` in the **Senado** · 🆕 **Paraná's** state technical AI course · `PBIA 2024-2028` |
+| 🟢 **country + organ** | `Brazil MEC artificial intelligence education national guidelines 2026` | **`5`** | 🆕 **`Parecer CNE/CP nº 15/2026`** · the April basic-education document · the March sandbox · the early-childhood recommendation |
+
+🔵 **The three result sets are very nearly DISJOINT.** 🔴 **Naming the ministry returns the
+ministry's instruments; naming only the country returns the legislature's and the states';
+naming the region returns neither, only researchers writing about the region.** 🟢 **The English
+country+organ query returned MORE than p206's Portuguese one, including the instrument p206
+missed.**
+
+🟢 **Confirmed on a second country in both directions:** Mexico returns the same four SEP items
+in English *and* in Spanish; Canada returns its provincial guidance from a plain English query.
+🟢 **Language did nothing in four of four cells.**
+[`evidence/query-shape-control.2026-10-14-p207.tsv`](../evidence/query-shape-control.2026-10-14-p207.tsv).
+
+🔵 **So the axis is not language and it is not even country — it is the ORGAN.** 🟢 **A search
+index is organised around named institutions, because that is how the documents are titled and
+reported.** 🔴 **This retires `Gap 468` as stated and replaces it: run the query once per organ
+that could plausibly issue the instrument — ministry, council, legislature, state.** 🟢 **Brazil
+has all four, and three passes of this KB saw one of them.**
+
+🟢 **p205's *"per-country beats pan-regional"* was right and is now subsumed: per-ORGAN beats
+per-country beats pan-regional.** 🔴 **Language stays worth testing where a human wrote the
+artefact in one language and no index translated it — which is still true of the LICENCE channel,
+where p206's two Portuguese `AGPL` bodies were real.**
+
+### 🆕 🔴 `T207-2` — three passes, three populations, three methods, `0` true positives
+
+🟢 **p207 pointed the audit at the half of the licence column nobody had checked.** p205 audited
+the `60` highest-★ rows; p206 audited `281` **copyleft** rows; both found `0` wrong cells. The
+standing hypothesis was that the **permissive** half would be dirtier, because a row published
+as `AGPL-3.0` has no upside to being wrong and a row published as `MIT` does.
+
+| pass | population | method | reported | 🟢 **true** | 🔴 false |
+|---|---|---|---|---|---|
+| p205 | `60` highest-★ rows | regex over the licence column | `3` | **`0`** | `3` |
+| p206 | `281` copyleft rows | table-row extraction, blobs at `HEAD` | `3` | **`0`** | `3` |
+| 🆕 **p207** | **`199` permissive rows**, `185` bodies read | blob-first, fixed instrument | **`18`** | **`0`** | **`18`** |
+
+🔴 **The hypothesis is refuted. The permissive half is as clean as the copyleft half.** 🟢 **`24`
+reported mismatches across three passes; `0` true.** 🔵 **`Gap 467` stops being a suspicion about
+one method and becomes a measured property of this column.**
+
+### 🆕 🔴 `T207-3` — the false positives got MORE seductive, and that is the finding
+
+🟢 **p206's false positives were incidental — a university named `MIT` in prose, a vendored
+third-party file.** 🔴 **p207's two best candidates were neither. Both were rows whose PROSE IS
+ABOUT A LICENCE DIVERGENCE, which is the only reason the word `MIT` is in them.**
+
+🔴 [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) — the audit saw a row
+mentioning `MIT` over a body reserving all rights. 🟢 **The KB publishes it as `VIEW-ONLY /
+DO-NOT-USE` and had already written up *"its view-only negation of `MIT`'s verb list"* and the
+verbatim-copied MIT warranty paragraph.**
+
+🔴 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) —
+the audit saw `MIT` over a `CC-BY-NC-SA-4.0` deed. 🟢 **The KB publishes `CC-BY-NC-SA-4.0` and
+records the `package.json`-vs-`LICENSE` split as `P204-1`: *"the divergence IS the row"*.**
+
+🔴 A third, [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph),
+is this KB's own `P965`: **a file at a licence filename can be a FRAMEWORK, not a grant.**
+
+🔵 **The rows that look most like findings are the rows where the curation already happened.**
+🔴 **Had p207 shipped its first draft, it would have replaced three correct, hard-won cells with
+two wrong ones and a redundant one.** 🟢 **The rule, sharpened: when a flagged row's prose is
+about licensing, assume the ROW is the finding and the audit is the error.**
+
+### 🆕 🔴 `T207-4` — there is a worse failure mode than `UNRECOGNISED`, and p205 and p206 built it
+
+🔴 **`T206-4` called a silent `UNRECOGNISED` on a non-OSI family *"the single worst failure mode
+a licence reader has"*.** 🟢 **It is not. Feed p206's classifier an `MIT` body carrying a
+`Commons Clause` rider and it returns `MIT`** — no suffix, no flag, nothing to notice. 🔴 **A
+confident clean permissive answer is worse than `UNRECOGNISED`, because `UNRECOGNISED` at least
+asks to be looked at.**
+
+🔵 **And it is structural, not incidental.** 🟢 **p205's repair was to anchor on the title line;
+p206's was to undress it. A rider does not REPLACE a licence, it AMENDS one — so the title line
+it sits above belongs to the licence being restricted.** 🔴 **The better the anchoring gets, the
+more reliably it finds the inner licence and misses the rider.** 🟢 **The rider test must run
+BEFORE the title walk, and now does.**
+
+🟢 **Three more defects, all in the LOOKUP TABLE rather than the anchoring logic — which nobody
+had re-read in two passes of fixing how the title line is found:** 🔴 `D11` the dot in
+`cc0 1\\.0 universal` was **double-escaped**, so no CC0 body ever matched its own title *(three
+published rows affected, all three of this KB's cells correct)*; 🔴 `D12` `BSD` was in the title
+regex with **no arm in the case block**, so a titled `BSD-3-Clause` body came back
+`BSD-2-Clause`; 🔴 `D13` `attribution-noncommercial` was tested **before** any ShareAlike check
+and the deed branch never tested `/by-nc-sa/`, so the most restrictive CC combination was the one
+that fell through.
+
+🟢 **`12`/`12` offline:**
+[`compose/code/p207-permissive-half-audit/`](../compose/code/p207-permissive-half-audit/).
+
+### 🆕 🔴 `T207-5` — `L1`: the LOCATOR has the same disease, one level up
+
+🔴 **`raw.githubusercontent.com` is case-sensitive, and every path list this KB has shipped is a
+fixed-case enumeration.** 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) — `Apache-2.0`,
+`11 358` B, **in this KB's own foundations table** — spells its file **`LICENSE.TXT`** and
+returns `404` on all `22` path forms p206 used. 🔴 **p207's first probe recorded it as
+ungranted.**
+
+🔵 **p206 fixed everything the TITLE LINE can be wearing. The FILENAME wears the same costume.**
+🟢 **`90` path forms later — `10` bases × `9` extensions — `15` apparent absences resolve to `3`
+recovered (`LICENSE.TXT`, `license.txt`, `License`), `2` `NOTICE`-only (p206's `D7`), and `12`
+true absences.** 🔴 **An absence is only reportable after the case variants have been tried**,
+which is `M2`/`M4` applied to a filename.
+[`evidence/licence-locator-case.2026-10-14-p207.tsv`](../evidence/licence-locator-case.2026-10-14-p207.tsv).
+
+### 🆕 🟢 `T207-6` — `ACTION PM` answered, and its premise was wrong
+
+🟢 **The sweep it asked for: `95` repositories are printed with two or more different byte
+counts. `15` adjudicated against their own blobs.** 🔴 **`0` need a `<!--corrected-->` marker.**
+
+| what the conflict actually was | n |
+|---|---|
+| 🟢 **the trailing `LF` counted in one cell and not the other** — higher value = blob as served, lower = blob minus final newline | **`11`** |
+| 🔴 numbers that were never byte claims (my extractor) | `2` |
+| 🟡 a **trending row pinned to a sha** — a dated observation, correctly recorded | `1` |
+| 🟡 a row inside a **dated pass section** — likewise history, not a current-state cell | `1` |
+
+🔵 **In a KB whose files are append-only dated sections, two cells disagreeing is usually two
+dated OBSERVATIONS, not one error.** 🔴 **Backfilling `<!--corrected-->` across them would mark
+history as corrections and make the archive unreadable.** 🟢 **The real remedy is one sentence,
+not a sweep: declare the convention — bytes are the blob AS SERVED, trailing newline included —
+and all `11` resolve at once.**
+[`evidence/byte-cell-conflicts.2026-10-14-p207.tsv`](../evidence/byte-cell-conflicts.2026-10-14-p207.tsv).
+
+### 🆕 🟢 `T207-7` — `ACTION PK` closed on limb `1`: novelty measures tail depth, confirmed
+
+🟢 **`topic:open-educational-resources` page `10`: `20` of `20` rows new to this KB — `100`%
+novelty — at a median of `1`★, a maximum of `1`★, and `6` rows at `0`★.** 🔴 **p205's falsifier
+fires exactly as written, and `T205-1` is now confirmed rather than argued: on a star-sorted
+channel, novelty rises monotonically with depth and cannot falsify anything without a VALUE
+floor.**
+
+🟢 **Two bounds worth keeping:** the topic holds **`380`** repositories in total, so the channel
+is finite and cheap to price; and 🔴 **`2` of the `20` rows are not OER at all** — a used-price
+index and a parts reference for DJI drones. 🔵 **At tail depth the topic TAG itself degrades, so
+a star floor is also a relevance floor.** 🟢 **Fund this channel to ~`10`★ and stop.**
+
+### 🆕 🟢 `T207-8` — `ACTION PN` closed on limb `2`: the agent channel is language-agnostic
+
+🟢 **Three discovery queries in Chinese, Portuguese and Spanish. Every verified candidate was
+already on this shelf** — `Zenglian990/AI_Tutor_Release`, `plastic-labs/tutor-gpt`,
+`datawhalechina/hello-agents`, `Priyamakeshwari/TeachGPT`, `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`. 🟢 **One new row:**
+[`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) — 🔴 **`GPL-3.0`,
+`35 149` B**, read from its own blob.
+
+🔵 **`1` is inside limb `2`'s `0`–`2` band, so saturation holds for a fourth measurement.** 🟢
+**Together with `T207-1` this resolves `T206-5`'s asymmetry, and the explanation is not the one
+p206 proposed:** 🔴 **GitHub's index is organised by REPOSITORY, which has no issuing organ and
+no official language, so there is nothing for an organ-shaped or language-shaped query to
+unlock.** 🟢 **Policy channels are organ-gated; code channels are not gated at all, they are
+simply exhausted.**
+
+### 🟢 Trends that are about the industry rather than this KB
+
+🆕 🔴 **`T207-9` — Brazil's binding instrument exists, is dated, and is one homologation away.**
+**`Parecer CNE/CP nº 15/2026`**, approved by the **Conselho Nacional de Educação on `1` September
+`2026`**, summary published in the **`Diário Oficial da União` on `6` October `2026`**, now with
+**MEC for homologation — at which point it binds.** 🟢 **It sets parameters for AI across every
+level and modality, subordinates AI to educational purposes and student rights, and states it
+must not replace education professionals.** 🔵 **p206 reported the binding instrument as *"in
+committee"*; it has been approved for six weeks.** 🟡 Secondary sourcing — `gov.br` is `000` from
+this environment.
+
+🆕 🟡 **`T207-10` — the region's policy is arriving on three tracks at once, and they are not
+coordinated.** Brazil now has a **council** instrument (CNE/CP 15/2026), a **ministry** document
+plus a regulatory sandbox, a **Senate** bill (`PL 2397/2026`, introduced `14` May `2026`, national
+ethical parameters for public and private institutions), and a **state** programme (Paraná, first
+in Brazil, technical AI course in `32` public schools, ~`2 000` students). 🔵 **A client asking
+*"what must we comply with in Brazil"* has four answers with four timelines**, and only the first
+is close to binding.
+
+🆕 🟢 **`T207-11` — Mexico has quantified the gap every other market only asserts.** The **SEP**
+presented **`10` recommendations for ethical and critical use of generative AI** on **`15` April
+`2026`** at the `19ª` ordinary session of **CONAES**, on a survey of **`1.5`M+ students and
+`166 000`+ teachers**: 🔴 **~`70`% of students use AI for academic work, ~`80`% do not know their
+institution's policy, and fewer than `30`% have had any training.** 🟢 **The SEP has said
+explicitly it will not ban, but regulate.** 🔵 **`80`% unaware of a policy is a procurement
+brief: the product is not the tutor, it is the policy surface around it.** 🟢 A technical AI track
+enters the national `bachillerato` in **`2026-27`**.
+
+🆕 🟡 **`T207-12` — North America's "regulatory vacuum" is a reporting artefact of pan-regional
+queries.** 🔴 Secondary roundups describe US education AI as operating with *minimal external
+oversight* and only **`10`% of institutions** holding formal AI guidelines against **`71`% of US
+teachers** untrained. 🟢 **But Canada has provincial instruments** — British Columbia's K-12
+*Considerations for Using AI Tools*, Québec's ministry guide updated for **2026** and its **Cadre
+de référence de la compétence numérique** refreshed **`21` April `2026`** with AI folded into the
+existing `12` dimensions — and **Mexico has the SEP work above.** 🔵 **Education is provincial in
+Canada: CMEC is holding to provincial jurisdiction and there is no federal instrument to find.**
+🟡 Sources disagree on the count (three ministries vs four); 🔴 **flagged rather than resolved.**
+
+🆕 🟡 **`T207-13` — a second national AI-literacy mandate, and it is dated `2027`.** France will
+make **one hour per week of AI compulsory for all `seconde` students from the `2027` rentrée**,
+attached to the existing `SNT` strand, announced June `2026`; the stated content is model
+mechanics, uses, ethics, digital sovereignty and critical thinking. 🟡 Press-sourced; no ministry
+text reachable. 🔵 **Set beside Singapore's compulsory teacher module (p205) and South Korea's
+withdrawn textbook mandate (`T206-9`), the pattern holds: mandates aimed at TEACHER capability
+survive, mandates aimed at CLASSROOM TOOLS do not.** 🟢 **France is aiming at the curriculum, with
+an `18`-month runway — a dated window, and the deliverable is teacher-facing.**
+
 ## Pass 206 — 2026-10-14 — LANGUAGE IS AN AXIS, NOT A GAP; AND AN AUDIT'S FALSE-POSITIVE RATE IS A PROPERTY OF THE INDUSTRY
 
 ### 🆕 🟢 `T206-1` — the same blind spot was found in two unrelated channels in one pass

@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — THE FOUNDATION ROWS ARE RIGHT. THE THING THAT LOOKS FOR THEM IS CASE-SENSITIVE
+
+### 🔴 `L1` — a foundation row was recorded as ungranted because of its filename's CAPITALISATION
+
+🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) is on this page: `Apache-2.0`,
+`11 358` B, `470`★, default branch `master`, not archived. 🔴 **p207's licence probe returned
+`404` on all `22` path forms p206 used and recorded it as UNGRANTED.**
+
+🟢 **The file is called `LICENSE.TXT`.** 🔴 **`raw.githubusercontent.com` is case-sensitive, and
+every path list this KB has ever shipped is a fixed-case enumeration** — `LICENSE`, `LICENSE.md`,
+`LICENSE.txt` — **none of which is `LICENSE.TXT`.**
+
+🔵 **This is `D1`/`D2`/`D8` one level up.** 🟢 **p206 fixed everything the TITLE LINE can be
+wearing — a markdown heading, an underline, a BOM. The FILENAME wears the same costume, and
+nobody had looked.**
+
+🟢 **The repaired locator enumerates `90` forms — `10` bases × `9` extensions** —
+[`compose/code/p207-permissive-half-audit/locate.sh`](../compose/code/p207-permissive-half-audit/locate.sh).
+Re-running the `15` apparent absences through it:
+
+| outcome | n | detail |
+|---|---|---|
+| 🟢 **RECOVERED** | **`3`** | `openedx/XBlock` → **`LICENSE.TXT`** `11 358` B `Apache-2.0` · `frappe/lms` → **`license.txt`** `33 893` B `AGPL-3.0` · `open-spaced-repetition/fsrs4anki-helper` → **`License`** `1 079` B `MIT` |
+| 🟡 **`NOTICE`-only** | `2` | `foradian/fedena` `679` B, `projectfedena/fedena` `680` B — p206's `D7`: a `NOTICE` is a channel, not a body |
+| 🔴 **TRUE ABSENCE at `90` forms** | **`12`** | `AccessLint/skills` · `CreveXTech/canvas-lms-mcp` · `Gaurav-Pande/AES_DL` · `JushBJJ/Mr.-Ranedeer-AI-Tutor` · `LearnPress/learnpress` · `Simon-Initiative/lti-example-tool` · `ZQR1101/xueyoujing-companion` · `formalms/formalms` · `educredentials/ec-issuer` · `ink-waffle/sisu-mcp` · `pnp-v/bo-google-classroom-mcp-server` · `tianshuo/trainingllm` |
+
+🔴 **An absence is only reportable after the case variants have been tried.** 🟢 **`M2` and `M4`
+applied to a filename: *"we did not find it"* and *"it is not there"* are different claims, and
+one `404` is not evidence of the second.**
+[`evidence/licence-locator-case.2026-10-14-p207.tsv`](../evidence/licence-locator-case.2026-10-14-p207.tsv).
+
+### 🟢 The permissive half of this shelf, re-read from `185` blobs. `0` rows change
+
+🟢 **`199` published rows carry a permissive family token. `185` bodies read at `HEAD`,
+classified offline with the repaired instrument.** 🔴 **`0` of `199` change family.** Final
+distribution over the bodies actually read:
+
+| family | rows | | family | rows |
+|---|---|---|---|---|
+| 🟢 `MIT` | **`124`** | | 🟡 `ECL-2.0` | `2` |
+| 🟢 `Apache-2.0` | **`40`** | | 🔴 `NON-OSI-proprietary` | `2` |
+| 🔴 `AGPL-3.0` | `4` | | 🔴 `UNRECOGNISED` | `2` |
+| 🟢 `CC0-1.0` | `3` | | 🔴 `GPL-3.0` / `GPL-2.0` | `1` / `1` |
+| 🟢 `BSD-3-Clause` | `3` | | 🔴 `CC-BY-NC-SA-4.0-DEED` | `1` |
+| 🟢 `CC-BY-4.0` | `1` | | 🟡 `Apache-2.0-STATEMENT` | `1` |
+
+🔵 **`164` of `185` — `88.6`% — are `MIT` or `Apache-2.0` read from their own bytes.** 🟢 **That
+is the number to quote on an engagement: the permissive half of this shelf is genuinely
+permissive, verified body by body, not inferred from a sidebar label.**
+[`evidence/permissive-half-census.2026-10-14-p207.tsv`](../evidence/permissive-half-census.2026-10-14-p207.tsv).
+
+🔴 **The `4` rows that moved between the p206 and p207 instruments all moved because the
+INSTRUMENT was wrong, and in all four cases this shelf's published cell was already right:**
+three CC0 bodies that `D11`'s double-escaped dot had been reporting as `CC-unversioned`, and one
+`CC-BY-NC-SA-4.0` deed that `D13` had been dropping the ShareAlike half of.
+
+### 🔵 What this means for the foundations tier specifically
+
+🟢 **Nothing on this page needs changing, which is the third consecutive pass that is true.** 🔴
+**What needed changing was the locator and the classifier, both of which this KB owns.** 🔵 **The
+column is more reliable than the instruments that audit it** — an uncomfortable finding for an
+automated pipeline, and the right one to act on: 🟢 **prefer a curated cell over an automated
+re-derivation, and spend audit budget on the instrument instead.**
+
 ## Pass 206 — 2026-10-14 — THE FOUNDATION ROWS ARE RIGHT; THE READER WAS WRONG IN EIGHT DIFFERENT WAYS
 
 ### 🟢 The census, stated before the diagnosis

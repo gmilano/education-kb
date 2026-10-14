@@ -1,0 +1,18 @@
+repo	verdict	path_found	bytes	note
+openedx/XBlock	RECOVERED	LICENSE.TXT	11358	22-path fixed-case list returns 404; uppercase extension found it
+frappe/lms	RECOVERED	license.txt	33893	lowercase base
+open-spaced-repetition/fsrs4anki-helper	RECOVERED	License	1079	mixed case base
+foradian/fedena	NOTICE-ONLY	NOTICE	679	p206 D7: a NOTICE is a channel, not a body
+projectfedena/fedena	NOTICE-ONLY	NOTICE	680	p206 D7
+AccessLint/skills	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+CreveXTech/canvas-lms-mcp	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+Gaurav-Pande/AES_DL	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+JushBJJ/Mr.-Ranedeer-AI-Tutor	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+LearnPress/learnpress	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+Simon-Initiative/lti-example-tool	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+ZQR1101/xueyoujing-companion	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+formalms/formalms	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+educredentials/ec-issuer	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+ink-waffle/sisu-mcp	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+pnp-v/bo-google-classroom-mcp-server	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)
+tianshuo/trainingllm	TRUE-ABSENCE	-	0	no body at 90 path forms (10 bases x 9 extensions)

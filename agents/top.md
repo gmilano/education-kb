@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — THE PERMISSIVE HALF, AUDITED FOR THE FIRST TIME. `0` CELLS CHANGE
+
+### 🟢 The half nobody had checked, and the prior it refuted
+
+🔴 **p205 audited the `60` highest-★ rows. p206 audited `281` copyleft rows. Both found `0` wrong
+cells and concluded the instrument was the problem.** 🟢 **Neither had audited the rows published
+as PERMISSIVE** — and the standing hypothesis was that those would be dirtier, because a row
+printed `AGPL-3.0` has no upside to being wrong and a row printed `MIT` does.
+
+🟢 **`199` rows carrying a permissive family token, `185` licence bodies read from their own
+blobs at `HEAD` across `90` path forms, every one re-classified offline.** 🔴 **`0` of `199`
+published cells change family.**
+
+| pass | population | reported | 🟢 **true** | 🔴 false |
+|---|---|---|---|---|
+| p205 | `60` highest-★ rows | `3` | **`0`** | `3` |
+| p206 | `281` copyleft rows | `3` | **`0`** | `3` |
+| 🆕 **p207** | **`199` permissive rows** | **`18`** | **`0`** | **`18`** |
+
+🔵 **The hypothesis is refuted: the permissive half is as clean as the copyleft half.** 🟢 **`24`
+reported, `0` true, across three passes and three methods** — see `T207-2`.
+
+### 🔴 The two candidates that nearly became wrong corrections
+
+🟢 **Recorded in full, because they are the best false positives this KB has produced and the
+next pass will meet their shape again.**
+
+| row | what the audit saw | 🟢 what this shelf already publishes |
+|---|---|---|
+| 🔴 [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) | a row mentioning `MIT` over an `842` B body reserving all rights | 🟢 **`VIEW-ONLY` / `DO-NOT-USE`**, with *"its view-only negation of `MIT`'s verb list"* and the verbatim-copied MIT warranty paragraph both already written up |
+| 🔴 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | a row mentioning `MIT` over a `CC-BY-NC-SA-4.0` deed | 🟢 **`CC-BY-NC-SA-4.0`**, with the `package.json`-vs-`LICENSE` split recorded as `P204-1` — *"the divergence IS the row"* |
+| 🔴 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | a `CC0-1.0` cell over a body granting nothing | 🟢 **`P965`** — *a file at a licence filename can be a FRAMEWORK, not a grant* |
+
+🔵 **All three rows are flagged for one reason: their prose is ABOUT a licence divergence, which
+is why a permissive token appears in them at all.** 🔴 **The rows that look most like findings
+are the rows where the curation already happened.**
+
+### 🆕 🟢 `ACTION PN` — the language sweep on the agent channel. `1` new row, limb `2` fires
+
+🟢 **Three discovery queries in Chinese, Portuguese and Spanish.** Every verified candidate was
+already on this shelf: `Zenglian990/AI_Tutor_Release`, `plastic-labs/tutor-gpt`,
+`datawhalechina/hello-agents`, `Priyamakeshwari/TeachGPT`, `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`.
+
+| 🆕 repo | 🟢 grant, read from its own blob at `HEAD` | bytes | region | what it is |
+|---|---|---|---|---|
+| 🟡 [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) | 🔴 **`GPL-3.0`** | `35 149` | **LATAM** *(Brazil, pt-BR)* | Python programming tutor on the Gemini API. Explains the concept, sets a challenge, corrects the code and **never hands over the answer** — the Socratic constraint written into the tool rather than the prompt. 🔴 **Copyleft: a teaching reference, not a deliverable base** |
+
+🔵 **`1` new row is inside limb `2`'s `0`–`2` band — saturation holds for a fourth measurement.**
+🔴 **And the reason is now clear rather than guessed:** a repository has no issuing organ and no
+official language, so there is nothing for an organ-shaped or language-shaped query to unlock
+*(`T207-1`, `T207-8`)*. 🟢 **The agent channel is not gated. It is exhausted.**
+
+### 🔴 What the instrument got wrong this time, and why it keeps being the instrument
+
+🟢 **Four more defects, `12`/`12` offline in
+[`compose/code/p207-permissive-half-audit/`](../compose/code/p207-permissive-half-audit/):**
+
+| # | defect | p206 returns | truth |
+|---|---|---|---|
+| 🔴 `D14` | a **`Commons Clause` rider** amends the licence below it, so a title-line anchor finds the inner licence and misses the rider | 🔴 **`MIT`** — confident, clean, unflagged | `NON-OSI-CommonsClause+MIT` |
+| 🔴 `D11` | the dot in `cc0 1\\.0 universal` was **double-escaped**; no CC0 body ever matched its own title | `CC-unversioned` | `CC0-1.0` |
+| 🔴 `D12` | `BSD` was in the title regex with **no arm in the case block** | `BSD-2-Clause` | `BSD-3-Clause` |
+| 🔴 `D13` | `attribution-noncommercial` tested **before** ShareAlike; the deed branch never tested `/by-nc-sa/` | `CC-BY-NC` / `CC-unversioned` | `CC-BY-NC-SA-4.0` |
+
+🔴 **`D14` is worse than `T206-4`'s `UNRECOGNISED`** — a silent permissive answer invites no
+review — **and it is a consequence of p205's and p206's own repairs**: the better the title
+anchoring gets, the more reliably it finds the inner licence and misses the rider. 🟢 **Fixed by
+testing riders BEFORE the title walk.**
+
+🟢 **The census then ran clean: `0` of `185` bodies carry a rider or a source-available family.**
+🔵 **So `ACTION PP` fires on limb `2` — `canyongbs/advisingapp`'s `Elastic-2.0` really is the only
+source-available grant in this industry's published supply.** 🔴 **The instrument was extended
+anyway, which is what *"on sight, not on need"* means: on need, it would never have fired.**
+
+🔵 **Three of the four defects are in the LOOKUP TABLE, not the anchoring logic.** 🟢 **Two passes
+fixed how the title line is FOUND; nobody had re-read what it is matched AGAINST.**
+
 ## Pass 206 — 2026-10-14 — `ACTION PI` CLOSED ON LIMB `2`, AND THE THING WITH `25` DEFECTS WAS THE INSTRUMENT
 
 ### 🟢 `ACTION PI` — the whole published licence column, re-read. `0` cells change family

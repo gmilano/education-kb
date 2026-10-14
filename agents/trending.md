@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 207 — `1` NEW AGENT IN THREE LANGUAGES, AND THE DISCOVERY CHANNEL IS EXHAUSTED NOT GATED
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🟢 The week's agent movement: one row
+
+🟢 **`ACTION PN` ran the language axis against the one channel p206's language finding did not
+unlock. Three queries, in Chinese, Portuguese and Spanish, aimed at non-English repositories.**
+
+| 🆕 repo | 🟢 grant, first-hand from its own blob at `HEAD` | bytes | region | why it is here |
+|---|---|---|---|---|
+| 🟡 [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) | 🔴 **`GPL-3.0`** | `35 149` | **LATAM** *(Brazil, pt-BR)* | Python programming tutor on the Gemini API: explains, sets a challenge, corrects the submission, **never supplies the answer**. The Socratic constraint lives in the tool, not the prompt. 🔴 **Copyleft — reference, not a deliverable base** |
+
+🔴 **Everything else the three-language sweep returned was already published here**:
+[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) *(`MIT`,
+`1 068` B)*, [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) *(`GPL-3.0`,
+`35 149` B)*,
+[`datawhalechina/hello-agents`](https://github.com/datawhalechina/hello-agents) *(`CC-BY-NC-SA-4.0`,
+`20 849` B)*, [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) *(`MIT`,
+`1 057` B)*,
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+*(`MIT`, `1 141` B)*,
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) *(`MIT`, `1 091` B)*.
+
+🟢 **`1` new row is inside `ACTION PN`'s limb `2` band (`0`–`2`): saturation holds for a fourth
+consecutive measurement.** 🔵 **And `T207-1` explains the asymmetry p206 could not:** a
+repository has no issuing organ and no official language, so an organ-shaped or language-shaped
+query has nothing to unlock. 🟢 **Policy channels are organ-gated. The code channel is not gated
+— it is exhausted.**
+
+### 🔴 Two search-channel claims checked against blobs this pass
+
+🟢 **A Chinese-language result presented `TutorGPT` as a distinct `GPL-3.0` TypeScript project
+with theory-of-mind reasoning.** 🔴 **It is
+[`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt), already on this shelf; the
+`35 149` B body is the canonical `GPL-3.0`.** 🟢 **A Portuguese-language result presented
+`EduAgent` as a GitLink-hosted multi-agent teaching framework.** 🔴 **This KB already carries two
+unrelated repositories under that name** — `Zenglian990/AI_Tutor_Release` *(whose product name is
+EduAgent)* and `Aryan6238/EduAgent` *(ungranted)* — 🔵 **and p-earlier already recorded that
+`SirhanMacx/eduagent` redirects to `SirhanMacx/Claw-ED`.** 🟢 **`EduAgent` is now a collision of
+at least four distinct things and should never be used as an identifier on this shelf.**
+
+### 🆕 🔴 `25` published byte counts disagreed with each other. `0` are errors
+
+🟢 **The sweep `ACTION PM` asked for: `95` repositories on this shelf are printed with two or
+more different byte counts. `15` adjudicated against their own blobs at `HEAD`.**
+
+| what the disagreement was | n |
+|---|---|
+| 🟢 **the trailing `LF`, counted in one cell and not the other** | **`11`** |
+| 🔴 numbers that were never byte claims *(the audit's own extraction)* | `2` |
+| 🟡 a trending row **pinned to a sha** — a dated observation, correctly recorded | `1` |
+| 🟡 a row inside a **dated pass section** — likewise history | `1` |
+
+🔵 **In an append-only file, two cells disagreeing is usually two dated OBSERVATIONS, not one
+error.** 🔴 **`0` of the `15` need a `<!--corrected-->` marker, and backfilling one across them
+would mark history as corrections.** 🟢 **The remedy is a declared convention — bytes are the
+blob AS SERVED, trailing newline included — which resolves all `11` at once.**
+[`evidence/byte-cell-conflicts.2026-10-14-p207.tsv`](../evidence/byte-cell-conflicts.2026-10-14-p207.tsv).
+
+### 🔴 The instrument was wrong again, in four new ways
+
+🟢 **Worth a trending note because one of them changes how a grant should be READ, not just
+classified:** 🔴 **a `Commons Clause` rider sits ABOVE the licence it restricts, so p206's
+title-line anchor returns a clean `MIT` and flags nothing.** 🔵 **A silent permissive answer is
+worse than `UNRECOGNISED`.** 🟢 **Census result: `0` of `185` bodies on the permissive half carry
+a rider or any source-available family, so `canyongbs/advisingapp`'s `Elastic-2.0` remains the
+only one in this industry's supply.** 🔴 **The reader was extended anyway.**
+[`compose/code/p207-permissive-half-audit/`](../compose/code/p207-permissive-half-audit/), `12`/`12`
+offline.
+
 ## 2026-10-14 — pass 206 — `0` NEW AGENTS, `2` SEARCH-CHANNEL ERRORS CAUGHT, `1` LANGUAGE AXIS OPENED
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**

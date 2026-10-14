@@ -1,0 +1,10 @@
+Copyright (c) 2026 Shuyun Yuan. All rights reserved.
+
+This repository is published for portfolio and code-review purposes only.
+Viewing the source on GitHub is permitted; no other rights are granted.
+
+Except as necessary to view this repository through GitHub's standard
+interface, no part of this software or its documentation may be used, copied,
+modified, merged, published, distributed, sublicensed, sold, or otherwise
+exploited, in whole or in part, without the prior written permission of the
+copyright holder.

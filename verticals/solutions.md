@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — ONE PLATFORM ROW RECOVERED FROM A CAPITAL LETTER; THE PERMISSIVE ERP STILL DOES NOT EXIST
+
+### 🟢 `openedx/XBlock` was never ungranted. Its file is called `LICENSE.TXT`
+
+🔴 **The integration tier's most-used extension point was recorded as ungranted by p207's first
+probe.** 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) — the XBlock SDK, the entry
+point for putting an agent inside Open edX — is **`Apache-2.0`, `11 358` B, `470`★, branch
+`master`, not archived**, read from its own blob this pass.
+
+🔴 **It returns `404` on `LICENSE`, `LICENSE.md` and `LICENSE.txt`, because the file is
+`LICENSE.TXT` and `raw.githubusercontent.com` is case-sensitive.** 🔵 **For this page the
+consequence is direct: the one permissively-licensed way into the second-most-deployed LMS in
+the world was one capital letter from being struck off a shortlist.**
+
+### 🟢 The permissive platform tier, unchanged and re-confirmed
+
+🟢 **`185` licence bodies read at `HEAD` this pass across the whole shelf. `0` platform rows
+change family.** The tier stands exactly as p206 published it:
+
+| platform | repo | 🟢 grant, first-hand | what it is |
+|---|---|---|---|
+| 🟢 **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** `10 982` B | **the only full LMS on this shelf under a permissive grant.** Switzerland → **EMEA** |
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** `11 120` B | Apache-2.0 modified for university IP; OSI-approved, permissive → **North America** |
+| 🟢 **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** `11 340` B | lecture capture and video, the classroom-media tier |
+| 🟢 **XBlock SDK** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **`Apache-2.0`** `11 358` B 🆕 *(`LICENSE.TXT`)* | the permissive way INTO Open edX, whose platform is `AGPL-3.0` |
+
+### 🔴 The education ERP gap is now searched three ways and still real
+
+🟢 **An explicit sweep for an MIT- or Apache-licensed education ERP / SIS returned nothing.** 🔴
+**[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) remains
+`LGPL-3.0`** *(`8 241` B)* — weak copyleft, inherited from the Odoo framework it is built on, and
+the only serious open education ERP in the field. Kuali, Compiere and Openbravo surface as
+candidates in undated secondary material and were **not** blob-verified this pass.
+
+🔵 **Stated as an informed gap rather than left silent, for the third pass running:** 🔴 **there
+is no permissively-licensed education ERP.** 🟢 **The practical consequence is a split: take
+`LGPL-3.0` OpenEduCat for the records tier and keep the agent layer in a separate process over
+its API, so the weak copyleft never reaches the client's own code.** 🔵 **That split is `P207-B`
+in [`compose/patterns.md`](../compose/patterns.md).**
+
+### 🔴 The licence rider a customisation shortlist cannot see
+
+🟢 **A `Commons Clause` rider does not replace a licence, it amends one — removing the right to
+SELL.** 🔴 **p206's classifier returns a clean `MIT` on such a body**, which for this page is the
+dangerous case: a platform shortlisted as `MIT` that may not be sold as part of a deliverable.
+
+🟢 **Census result: `0` of `185` bodies on this shelf carry a rider or any source-available
+family.** 🔵 **The platform tier is clean, and
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp)'s `Elastic-2.0` —
+source-available, NOT open source, a higher-education student-success CRM — remains the only one
+in this industry's published supply.** 🔴 **It stays on the DO-NOT-USE list.** 🟢 **The reader
+was extended to catch riders anyway**, because the cost of finding the first one by accident is
+a client deliverable built on a licence that forbids selling it.
+
 ## Pass 206 — 2026-10-14 — THE PLATFORM TIER, RE-READ FROM `15` BLOBS: THERE ARE EXACTLY `4` PERMISSIVE LMSs
 
 ### 🟢 Every row below was read from its own `LICENSE` blob at `HEAD` this pass. No secondary sources

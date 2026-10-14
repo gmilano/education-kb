@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 207 — 2026-10-14 — THREE RECIPES THE ORGAN RULE AND THE BRAZILIAN PARECER MAKE BUILDABLE
+
+🔵 **Every repository named below had its grant read from its own blob at `HEAD` this pass, with
+a locator that tries `90` path forms rather than `22`. No pattern here rests on a sidebar label.**
+
+### 🟢 `P207-A` — the policy-surface layer, built to `CNE/CP nº 15/2026`
+
+🔴 **The problem this solves, stated as a number:** Mexico's SEP survey found **~`80`% of
+students do not know their institution's AI policy** while **~`70`% already use AI for academic
+work**, and UNESCO IESALC found **`87`% of LATAM institutions using AI with `26`% holding any
+framework.** 🔵 **The gap is not a tutor. It is that nobody can say what is allowed.**
+
+🟢 **And the specification now exists:** Brazil's `Parecer CNE/CP nº 15/2026` *(approved `1` Sep
+`2026`, DOU `6` Oct `2026`, binds on MEC homologation)* gives three testable principles — **AI
+subordinated to educational purposes, AI must not replace education professionals, and student
+authorship** — alongside `LGPD` + `ECA`.
+
+```
+[ Moodle (GPL-3.0) | OpenOLAT (Apache-2.0) | Open edX via XBlock (Apache-2.0) ]
+                              |
+                    LTI 1.3 / XBlock boundary        <- the grant boundary too
+                              |
+        [ policy-surface service — YOUR code, separate process ]
+          1. per-assignment policy record: permitted / cautioned / prohibited
+          2. disclosure capture: what the student used, in their words
+          3. authorship attestation  -> CNE/CP 15/2026, student authorship
+          4. human-decision gate on any grade  -> non-replacement principle
+          5. event log -> LGPD/ECA retention window
+```
+
+🟢 **Build it on:** [`openedx/XBlock`](https://github.com/openedx/XBlock) **`Apache-2.0`**
+`11 358` B *(`LICENSE.TXT` — see `L1`)* or
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) for the LMS boundary;
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) **`Apache-2.0`** `10 982` B when the
+deliverable must be closed; [`openfun/ralph`](https://github.com/openfun/ralph) for the xAPI
+event store.
+
+🔵 **Why it travels:** NYC's permitted/cautioned/prohibited taxonomy, EMEA's Annex III
+*(assessment, admissions, proctoring)* and Brazil's referencial all describe **a policy-aware
+layer over existing teaching tools** *(`T206-10`)*. 🟢 **One build, four regions.** 🔴 **`6`–`8`
+weeks.**
+
+### 🟢 `P207-B` — the copyleft split: OpenEduCat records, agent layer out of process
+
+🔴 **The problem:** a client wants an education ERP with agents on top and a deliverable they
+own. 🔴 **There is no permissively-licensed education ERP** — searched three ways this pass,
+confirmed absent — and [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+is **`LGPL-3.0`** *(`8 241` B)*, inherited from Odoo.
+
+```
+OpenEduCat (LGPL-3.0)  --- XML-RPC / REST --->  agent services (YOUR licence)
+   admissions, SIS,          process boundary       advising, scheduling,
+   gradebook, fees           = licence boundary     dropout signals
+```
+
+🟢 **`LGPL-3.0` reaches linked code, not a separate process over an API.** 🔵 **Keep the agents
+out of the Odoo addon path and the client's own code stays theirs.** 🔴 **The moment an agent
+becomes an Odoo module, the boundary is gone** — that is the whole design constraint, and it is
+the reason the split is worth the extra service. 🟢 **`8`–`10` weeks.**
+
+### 🟢 `P207-C` — the teacher-capability product, because it is what survives
+
+🔵 **Four national data points now say the same thing** *(`T207-13`)*: 🟢 **Singapore** made
+teacher AI-literacy module `1` compulsory before pushing tools at classrooms; 🟢 **France** adds
+one compulsory AI hour per week for every `seconde` student **from the `2027` rentrée**, attached
+to `SNT`; 🔴 **South Korea** mandated AI textbooks and the National Assembly **stripped their
+official status within seven months**, after under-`30`% adoption; 🔴 **Mexico** has **<`30`% of
+students trained** and a teacher corps the same survey sizes at `166 000`+.
+
+🔴 **Mandates aimed at classroom TOOLS die. Mandates aimed at TEACHER capability survive.**
+
+🟢 **The build, and it is a curriculum product with a software spine:**
+
+```
+[ content ]  microsoft/ai-agents-for-beginners (MIT, 1 141 B) — 12 lessons, relicensable
+             pguso/agents-from-scratch (MIT, 1 091 B) — local-LLM, no cloud API,
+                                        the sovereignty-constrained variant EMEA asks for
+   AVOID ->  datawhalechina/hello-agents — CC-BY-NC-SA-4.0: NonCommercial, cannot ship
+   AVOID ->  guedesindev/ai_tutor_forge, plastic-labs/tutor-gpt — GPL-3.0: read, do not embed
+[ delivery ] Moodle or OpenOLAT, with the P207-A policy surface as the worked example
+[ evidence ] completion + competence mapping -> Québec's Cadre de référence (12 dimensions,
+             refreshed 21 Apr 2026) or France's five SNT strands
+```
+
+🔵 **The licence note is the pattern's load-bearing part.** 🔴 **The two best-known
+agent-teaching repositories in non-English markets — `hello-agents` (Chinese) and
+`ai_tutor_forge` (Portuguese) — are `CC-BY-NC-SA-4.0` and `GPL-3.0`.** 🟢 **Both are excellent
+reading and neither can be shipped**; the two MIT courses can. 🔴 **`4`–`6` weeks to a first
+cohort.**
+
+### 🔴 What this pass KILLS
+
+🔴 **Any recipe that starts by asking a search engine what a region requires.** 🟢 **Measured
+this pass: a pan-regional query returns `0` instruments, a country query returns the legislature's
+and the states', and only naming the ORGAN returns the ministry's** *(`T207-1`)*. 🔵 **A
+compliance deliverable scoped from a regional search is scoped from the wrong organ's documents**
+— and that is how three consecutive passes of this KB missed a `Parecer` that had been approved
+for six weeks. 🟢 **Enumerate the organs first: ministry, council, legislature, state. Then
+search.**
+
 ## Pass 206 — 2026-10-14 — THREE RECIPES THE LICENCE CENSUS MAKES BUILDABLE, AND ONE IT KILLS
 
 🔵 **Every repository named below had its grant read from its own blob at `HEAD` this pass. No

@@ -1,0 +1,16 @@
+repo	published_pair	true_bytes	ends_LF	bytes_minus_LF	verdict
+AnubisLMS/Anubis	1082/1083	1083	yes	1082	TRAILING-LF-OFF-BY-ONE
+G36maid/moodle-mcp	1063/1064	1064	yes	1063	TRAILING-LF-OFF-BY-ONE
+ls1intum/Artemis	1090/1091	1091	yes	1090	TRAILING-LF-OFF-BY-ONE
+dodona-edu/dolos	1083/1084	1084	yes	1083	TRAILING-LF-OFF-BY-ONE
+ucfopen/canvasapi	1129/1130	1130	yes	1129	TRAILING-LF-OFF-BY-ONE
+showlab/Code2Video	1072/1073	1073	yes	1072	TRAILING-LF-OFF-BY-ONE
+Scorpioyyy/verichalk	1066/1067	1067	yes	1066	TRAILING-LF-OFF-BY-ONE
+wwlwgo/cn-primary-math-knowledge-graph	1117/1118	1118	yes	1117	TRAILING-LF-OFF-BY-ONE
+sgaofen/vibe-schooling	1063/1064	1064	yes	1063	TRAILING-LF-OFF-BY-ONE
+NickScherbakov/codementor-ai-platform	1071/1072	1072	yes	1071	TRAILING-LF-OFF-BY-ONE
+classroomio/classroomio	1717/1718	34523	yes	34522	OTHER
+foundation50/classroom50	35148/35150	35150	yes	35149	ONE-CELL-MATCHES-BLOB
+ahmedEid1/lumen	35148/35149	35149	yes	35148	TRAILING-LF-OFF-BY-ONE
+pguso/agents-from-scratch	1067/1091	1091	no	1091	ONE-CELL-MATCHES-BLOB
+Berserk-hub150/moodle-ai-skill-navigator	222/223	35153	yes	35152	OTHER
