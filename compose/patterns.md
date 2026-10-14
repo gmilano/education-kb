@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
+
+🔵 **Every repo named below had its default branch resolved by `git ls-remote --symref` and its
+licence read from its own blob this hour**, then cross-checked against the KB's shared
+`family_of` *(`65`/`65` agreement)*. 🟢 **Licences are inline because in education the licence
+decides whether a pattern can ship at all** — and this pass found a permissive option at every
+layer where p200 had copyleft only.
+
+### 🔴 P201-1 — Grading modernisation: EXTEND, do not build *(North America / EMEA, 6–8 wks)*
+
+🔴 **This pattern exists to retire p200's advice to build a grader.**
+
+| step | component | licence *(blob, bytes)* | why this one |
+|---|---|---|---|
+| 1. base platform | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(branch `develop`)* | 🟢 **MIT** · `1 091` B | Already carries `gen-ai` **and** `text-exercises`; exam mode; `396` forks; a university runs it in production |
+| 2. or, if TA workflow dominates | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** · `1 542` B | Automated **and** TA grading in one system; `1 109` forks |
+| 3. execution sandbox | [`autolab/Tango`](https://github.com/autolab/Tango) | Apache-2.0 *(API field; not blob-read this pass)* | Standalone REST autograding service — isolates untrusted student code |
+| 4. notebook lane | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · `1 560` B | Python **and R**; pairs with `jameskermode/mograder` (**MIT**) for Marimo |
+| 5. 🟢 **the part you actually build** | LLM free-text feedback behind Artemis's feedback interface, with every suggestion written to an append-only record | — | 🟢 **The ONLY genuine white space measured on this shelf** |
+| 6. audit trail | `ralph` xAPI store *(KB row)* + the `aiact-50-2-*` marking instruments in [`compose/code/`](code/) | — | 🔵 Suites run `427`/`427` this pass, so the gate is executable here |
+
+🟢 **Wiring:** Artemis exercise → Tango sandbox for code, LLM reviewer for prose → **both write a
+statement to `ralph` before the grade is shown** → human confirms. 🔴 **Hard rule: the LLM
+proposes, a human disposes, and the record shows which.** That is literally the requirement
+Oklahoma, Maryland, Colorado, Texas, the EU AI Act, Vietnam and Australia converge on.
+🔵 **Licence gate:** Artemis MIT and Submitty BSD-3 are both safe for a closed deliverable;
+🔴 **do NOT start from `INGInious` (AGPL-3.0) for a hosted engagement** however good its LTI is.
+
+### 🟢 P201-2 — The LATAM corpus tutor: wire `60 000★` of curriculum to an agent *(LATAM, 5–7 wks)*
+
+🟢 **The region's open-source output is corpus, not platform — so build the platform-shaped half
+and keep the corpus as data.**
+
+| step | component | licence | role |
+|---|---|---|---|
+| 1. corpus | [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) `20 921★` · [`mouredev/Hello-Python`](https://github.com/mouredev/Hello-Python) `37 754★` · [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica) `1 417★` · [`natayadev/dataengineering-roadmap`](https://github.com/natayadev/dataengineering-roadmap) `903★` | 🔴 **READ EACH LICENCE FIRST** — content repos are where `CC-BY-NC-*` lives *(p200 found `NonCommercial` on a curriculum row)*; none was blob-read this pass | Spanish/Portuguese curriculum, already structured as learning paths |
+| 2. pedagogy engine | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · `1 073` B | BKT mastery estimation behind an MCP tool call, in Go |
+| 3. memory | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** · `1 074` B | Spaced repetition as tool calls — no scheduler to write |
+| 4. delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `1 097` B | Offline-first; the region's connectivity reality |
+| 5. public data | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 **MIT** · `1 072` B | `70` Brazilian public APIs for enrolment/census context *(Brazil engagements)* |
+
+🟢 **Wiring:** ingest a curriculum repo's markdown tree as the syllabus graph → `tutor-mcp`
+holds mastery per node → the LLM only renders explanation and quizzes → `anki-mcp-server`
+schedules review → Kolibri serves it offline. 🔵 **Every piece MIT, so the deliverable can be
+closed** — 🔴 **except the corpus, whose licence is the one thing this recipe must check per
+repo.**
+
+### 🟢 P201-3 — Moodle-side tutoring and deadline agent *(LATAM / EMEA, 6–8 wks)*
+
+🔵 **Carried from p200 and upgraded with this pass's reads.** Moodle is **GPL-3.0** (`35 147` B)
+and Chamilo is 🆕 **GPL-3.0-or-later** — **integrate over Web Services, never fork into a closed
+deliverable.** 🟢 Add the `8` Moodle MCP servers p200 enumerated **minus the `3` that grant
+nothing** *(`loyaniu/moodle-mcp`, `haanhtuandev/vgu-mcp` and one declaring MIT with no grant)*,
+with [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (**MIT**) as the
+tool layer. 🟢 Put [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (**MIT**, SCORM +
+xAPI) beside it when the client wants **new** courseware in a closed deliverable rather than
+Moodle extension — **that is the option p200's table did not have.**
+
+### 🟡 P201-4 — Lecture capture to searchable, cited video *(EMEA, 8–10 wks)*
+
+| step | component | licence *(blob, bytes)* |
+|---|---|---|
+| 1. capture + distribution | [`opencast/opencast`](https://github.com/opencast/opencast) *(branch `develop`)* | 🟡 **ECL-2.0** · `11 340` B |
+| 2. player | [`polimediaupv/paella`](https://github.com/polimediaupv/paella) *(branch `develop`)* + [`paella-core`](https://github.com/polimediaupv/paella-core) | 🟢 **ECL-2.0** · `9 915` B — 🆕 **grant FOUND this pass at lowercase `license.txt`**; `paella-core` byte-identical |
+| 3. transcription + index | local Whisper + a vector store | per component |
+| 4. tutor over the lecture | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) pattern | 🟢 **MIT** · `1 065` B — **it already cites the source page**, which is what a lecture answer needs |
+
+🔴 **Mandatory gate before the SOW:** `ECL-2.0` is Apache-2.0 **with the § 3 patent grant narrowed
+to "the needs of the education communities"** *(read from `paella`'s own blob, line `7`)*. 🟡 **If
+the deliverable will be reused outside education, that narrowing is a question for counsel, not
+a label for a scanner.** 🟢 p201 removes the previous blocker: the grant text now exists and can
+be put in front of a lawyer.
+
+### 🟢 P201-5 — Governance evidence plane: the `82`-point gap as a product *(all regions, 4–6 wks)*
+
+🟢 **The best-evidenced opportunity in the KB: `92`% student use against `10`% of institutions
+with formal guidelines; `87`% LATAM use against `26`% with a strategy; `87`% APAC agent
+encouragement against `47`% with governance.** The client has already adopted and cannot
+evidence it.
+
+| step | component | licence | role |
+|---|---|---|---|
+| 1. event spine | `ralph` xAPI store *(KB row)* | — | Every AI interaction with a learner becomes a statement. 🔵 **p200 established authority is server-assigned and read-filtered in all four backends** |
+| 2. marking + provenance | [`compose/code/aiact-50-2-*`](code/) | KB-internal | AI Act Article 50 marking; 🟢 **suites executable in this configuration — `427`/`427` this pass** |
+| 3. review UI | `Appsmith` *(Apache-2.0, KB row)* | Apache-2.0 | Where a human signs off |
+| 4. policy routing | `LangGraph` *(MIT, KB row)* | MIT | One graph, a policy node per jurisdiction |
+
+🟢 **Six jurisdictions, one control plane:** Oklahoma, Maryland, 🆕 Colorado, 🆕 Texas, the EU AI
+Act, Vietnam's Law `134/2025/QH15` *(🟡 in-force date published as both `2026-03-01` and
+`2027-03-01` — `ACTION NU` unresolved)* and Australia all reduce to **a human stays accountable
+for high-stakes decisions about a student, with a record.**
+
+### 🟢 P201-6 — Pre-engagement licence gate, now an executable checklist *(all regions, 2–4 days)*
+
+🔵 p200 made this billable; **p201 makes it mechanical, because every step below was run on real
+repos this hour.**
+
+1. 🟢 **Resolve the default branch first** — `git ls-remote --symref <url> HEAD`. 🔴 **`11` of
+   `35` repos measured this pass use neither `main` nor `master`** (`release_11`, `15.0`,
+   `release`, `dev`, `v2`, `mobile`, `develop`). **Hardcoding `main` produces a false
+   *"no licence file"* — which is exactly how p200 lost `paella`'s grant.**
+2. 🟢 **Probe the full path vocabulary**, not `LICENSE`: `LICENSE{,.md,.txt}`, **lowercase
+   `license.txt`**, `LICENCE`, `COPYING{,.txt}`, `COPYING.LESSER`, **`docs/License.txt`**,
+   `LICENSE/LICENSE`. 🔵 Use [`compose/code/lib/licence_path.sh`](code/lib/) — suite `33`/`33`.
+3. 🟢 **Read the grant from `raw.githubusercontent.com`, not from the API's licence field.**
+   🔴 Measured on `topic:lms stars:>200`: the API resolves **`23`/`32`**; blobs lift it to
+   **`29`/`32`**; `NOASSERTION` was readable **`6`/`6`** times. **`NOASSERTION` means *unmatched
+   text*, not *unlicensed*.**
+4. 🟢 **Classify with [`compose/code/lib/license_family.sh`](code/lib/)** — `family_of`, suite
+   `207`/`207`, and `65`/`65` on today's blobs. 🔴 **Never write a new classifier: the GPL-3.0
+   text contains *"GNU Affero General Public License"* in its own § 13, and every pass that
+   greps for the phrase re-earns the defect** *(p77, p200 — `P237`)*.
+5. 🆕 🟢 **Read the whole notice for SCOPE.** `pupilfirst` and `leemons` open with the same
+   sentence and end in **MIT** and **Fair Code** respectively; `human-skill-tree` grants
+   `skills/` under **AGPL OR MIT** and `app/` under **AGPL only**. **Emit `(path → grant)`, not
+   one label.**
+6. 🆕 🟢 **Check the project's own notice for the version policy.** Chamilo's `license.txt` says
+   **"version 3 … or (at your option) any later version"** — `GPL-3.0-**or-later`**, invisible in
+   the licence text itself.
+7. 🔴 **Flag the three failure classes before shortlisting:** non-OSI dressed as open source
+   (`leemons`, Fair Code), **no grant on any channel** (`LMS-Laravel` `505★`, `LearnPress`
+   `275★`), and **narrowed patent grants** (`ECL-2.0`: Sakai, Opencast, paella).
+
+🟢 **Deliverable:** one TSV per candidate repo — `slug · branch · path · bytes · family · scope
+map · verdict` — in the shape of
+[`evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv`](../evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv).
+🔵 **Seven steps, two days, and it has now caught a wrong licence, a missing grant, a non-OSI
+licence and a false absence on four separate `500★`+ repositories.**
+
+
 ## Pass 200 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
 
 🔵 **Every repo named below was verified alive today by `ls-remote --symref`, with its licence

@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 201
+
+🟢 **`ACTION NQ`/`OG`, limb `2`, SIXTH dated entry: `curl https://github.com/trending` → `403`**,
+re-measured this hour alongside `api.github.com` → `403` and `github.com/<slug>` → `403`. 🔵 **The
+HTML surface stays unavailable and this KB should stop pre-registering it.** 🟢 **Ranked
+discovery through the REST API works, so *stock* is enumerable even though *flow* is not** — and
+this pass used it on four vocabularies p200 had not reached.
+
+| query | rows | 🟢 what it added |
+|---|---|---|
+| `topic:autograding stars:>20` | **16** | 🆕 🔴 **An entire shelf p200 declared non-existent.** `3 439★` top-eight, `5` permissive, university-maintained |
+| `topic:ai-tutor stars:>20` | **33** | p200 had `11` skill-layer rows; **`23` read from bytes this pass**, incl. `DeepTutor` at `41 386★` |
+| `topic:lms stars:>200` | **32** | The platform shelf, with **`4` homonym rows** and **`9` licences the API could not resolve** |
+| `topic:student-information-system stars:>30` | **4** | 🟢 **A bounded shelf: `rosariosis` `646★` GPL-2.0, `academico` `404★` MIT, `openSIS-Classic` `345★` GPL-2.0, `College-Management-System` `78★` ungranted** |
+| `topic:e-learning stars:>200` | **6** | 🔴 **Thin, and mostly not AI:** `flat` `6 439★`, `OpenVidu` `2 136★`, `eCourse` `519★` **(archived)**, `react-quiz-component` `403★`, two static sites |
+| `topic:education topic:ai-agents stars:>20` | **12** | `exameow`, `assignment-check`, `scibly`, `learnflow-ai`, `Smart-Study-Agent` — **and `2` rows that are not education at all** |
+| `license:ecl-2.0 stars:>20` | **18** | 🔵 **Unchanged from p200: `18`, identical rows.** A stable, education-concentrated family — **re-run quarterly, not per pass** |
+
+### 🆕 🔴 `ACTION OK` answered — but the finding is the vocabulary's FAILURE MODE, not the size
+
+🟢 **Limb `1` fires: new bounded shelves do appear, and the KB's population was discovery-limited
+all along.** The `16`-row grading shelf alone is a category this KB's `200` prior passes never
+listed. 🔴 **But the same channel also shows why a topic page cannot be ingested unchecked:**
+
+| topic | contaminated rows | what they actually are |
+|---|---|---|
+| `topic:lms` | 🔴 **`4` of `32`** *(`12.5`%)* | [`snapcast`](https://github.com/snapcast/snapcast) `7 921★` and [`AmpliPi`](https://github.com/micro-nova/AmpliPi) `340★` → **Lyrion Music Server**; [`Colourful`](https://github.com/tompazourek/Colourful) `298★` → **the LMS colour space**; [`SWE-agent`](https://github.com/SWE-agent/SWE-agent) `20 552★` → mis-tagged coding agent |
+| `topic:education` + `topic:ai-agents` | 🔴 **`2` of `12`** *(`17`%)* | a Windows **PC system monitor**; an **LLM jailbreak** write-up |
+
+🔴 **By stars the contamination is worse than by count: the two largest rows returned for
+`topic:lms` are a coding agent and a music server** — `28 473★` of noise above the largest real
+education row (`frappe/lms`, `3 312★`). 🟢 **A ranked-discovery pipeline with no relevance gate
+would publish `snapcast` as a top-3 education platform.** 🔵 Named here so the next pass builds
+the gate instead of rediscovering the problem.
+
+### 🟢 `ACTION OL` — the LATAM absence, settled with a SPLIT verdict
+
+🔵 p200 reported: *"a Spanish-language GitHub search for education-AI repos (`stars:>30`)
+returned **zero**"*, and concluded the first-mover claim stood.
+
+- 🟢 **Limb `1` fires on the CHANNEL.** `educacion OR educativa OR aprendizaje OR escuela OR
+  educacao in:name,description,readme stars:>10` → **`1 437` repositories.** 🔴 **p200's `0` was
+  its query, not the world** — `Gap 445` recurring for the third time in two passes.
+- 🔴 **Limb `2` survives on the SUBSTANCE, and this is the version to quote.** Of the top `30`
+  by stars, **not one is AI-in-education *software* of LATAM origin.** What the region's shelf
+  actually contains is **pedagogical CONTENT at enormous scale**:
+  [`mouredev/Hello-Python`](https://github.com/mouredev/Hello-Python) **`37 754★`**,
+  [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao)
+  **`20 921★`** *(Brazil)*,
+  [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis)
+  **`6 073★`**, [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica)
+  **`1 417★`**, [`ossu/computer-science-br`](https://github.com/ossu/computer-science-br) `847★`,
+  [`natayadev/dataengineering-roadmap`](https://github.com/natayadev/dataengineering-roadmap)
+  `903★` *(Argentina)*.
+- 🆕 🟢 **One genuine LATAM-origin infrastructure row, and it is new to this KB:**
+  [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — **MIT** *(`1 072` B,
+  read from its blob)*, **`1 808★`**, created `2026-03-26`: **an MCP server over `70` Brazilian
+  public APIs.** Not education software, but **agent tooling a Brazilian education engagement can
+  call on day one**, and proof the region ships MCP servers.
+
+🟢 **The honest restatement, which is stronger than either p200's or a naive refutation:
+LATAM's open-source education supply is CORPUS, not PLATFORM.** A studio's LATAM advantage is
+not a missing tutor — it is `60 000★` of Spanish- and Portuguese-language curriculum nobody has
+wired to an agent. 🔵
+[`evidence/latam-second-channel.2026-10-14-p201.tsv`](../evidence/latam-second-channel.2026-10-14-p201.tsv) ·
+[`evidence/latam-origin-rows.2026-10-14-p201.tsv`](../evidence/latam-origin-rows.2026-10-14-p201.tsv)
+
+### 🔵 Default branch: `29`% of this shelf is not `main` or `master`
+
+🟢 Measured over the `35` repositories whose default branch was resolved with
+`git ls-remote --symref` this pass: **`11` of `35` (`31`%) use neither `main` nor `master`** —
+`release_11` *(ILIAS)*, `15.0` *(Claroline)*, `release` *(tutor)*, `dev` *(learnhouse)*,
+`v2` *(course-tencent-cloud)*, `mobile` *(rosariosis)*, `develop` *(erpnext, frappe/lms, paella,
+learnpress, Artemis)*. 🔴 **A pipeline that hardcodes `main` silently `404`s on a third of the
+education shelf and records *"no licence file"*** — which is exactly the error that produced
+p200's `paella` verdict. 🟢 Resolve the branch first, always.
+[`evidence/default-branch-census.2026-10-14-p201.tsv`](../evidence/default-branch-census.2026-10-14-p201.tsv)
+
+
 ## 2026-10-14 — Pass 200
 
 🟢 **`ACTION OG` — the `github.com/trending` probe — ANSWERED, and the answer is limb `2`

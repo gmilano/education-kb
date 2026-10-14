@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 201
+
+🆕 🟢 **The window's new category is not a tutor at all — it is the GRADER, and it was here the
+whole time.** `topic:autograding stars:>20` → **`16` repositories**, `3 439★` across the top
+eight, **five of them permissive and university-maintained**: `Artemis` (**MIT**, `818★`, TU
+Munich), `Autolab` (**Apache-2.0**, `808★`, CMU), `Submitty` (**BSD-3-Clause**, `803★`, RPI),
+`okpy/ok` (**Apache-2.0**, `370★`, Berkeley), `otter-grader` (**BSD-3-Clause**, `161★`,
+Berkeley). 🔴 **p200 said this shelf did not exist and advised a studio to build one.** It
+searched *"agentic grading"*; the field says `autograding`.
+
+🆕 **Newest rows on that shelf, both created this year:**
+[`foundation50/classroom50`](https://github.com/foundation50/classroom50) (**GPL-3.0**, `215★`,
+created `2026-04-30`, the open GitHub Classroom alternative) and
+[`jameskermode/mograder`](https://github.com/jameskermode/mograder) (**MIT**, `21★`, created
+`2026-03-04`, grading for **Marimo** notebooks).
+
+### 🆕 🟢 New this window on the tutor shelf — rows no prior cycle of this file carries
+
+| Repo | Licence *(blob)* | ★ | Why it is new information |
+|---|---|---|---|
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** | **515** | 🟢 **Spaced repetition exposed as MCP tool calls.** The memory layer a tutor otherwise re-implements |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | **48** | 🟢 **An ITS as an MCP server — Bayesian Knowledge Tracing in Go.** The composable form of OATutor, and **EMEA-origin** |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** | **95** | 🟢 **AI-native LMS, SCORM + xAPI, white-label, MIT** — positioned explicitly against Moodle/Docebo/Open edX. A permissive LMS exit that did not exist in p200's table |
+| [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | **MIT** | **58** | 🟢 **RL chooses the action, FSRS chooses the timing, the LLM only writes quizzes** — the cleanest separation of pedagogy from generation found so far |
+| [heshengtao/exameow](https://github.com/heshengtao/exameow) | **Apache-2.0** | **70** | 🆕 Created `2026-07-24`: offline-first exam generation in **Tauri + Rust** — the privacy-first shape |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | **64** | K-9 RAG tutor on LanceDB — the youngest learner band on the shelf |
+| [henryyu333/assignment-check](https://github.com/henryyu333/assignment-check) | **MIT** | **53** | Pre-submission rubric/citation checker — **the student side of the grading problem**, and an agent skill |
+| [Bbar0n234/learnflow-ai](https://github.com/Bbar0n234/learnflow-ai) | **Apache-2.0** | **35** | Russian-language, teacher-facing: turns an instructor's own material into lectures and slides. LangGraph + Langfuse |
+| [scibly-dev/scibly](https://github.com/scibly-dev/scibly) | **AGPL-3.0** | **42** | Corporate-learning framing, `duolingo` in its own topics |
+| [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | **AGPL-3.0** | **71** | Material → game-based course |
+| [Mcp-Brasil/mcp-brasil](https://github.com/Mcp-Brasil/mcp-brasil) | **MIT** | **1 808** | 🆕 🟢 **The one LATAM-origin agent-infrastructure row this KB has ever recorded** — MCP server over `70` Brazilian public APIs, created `2026-03-26` |
+
+### 🟢 Movement on rows this KB already tracks
+
+- 🔴 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor): `41 386★`.** Cycle 3 recorded
+  `~24k★`; p200 could not read stars at all. **Apache-2.0, confirmed from its blob this hour**
+  *(`11 408` B)*. It is now larger than most general-purpose agent frameworks.
+- 🟢 **[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) — `951★`, MIT,
+  RESOLVED.** p200 recorded it as *"UNRESOLVABLE: three projects answer to the name, search
+  yields NAMES WITHOUT OWNERS."* 🔵 **Ranked discovery returns owners; name search does not.**
+  That is the capability difference p200 opened, used.
+- 🟡 **[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) —
+  `572★`, and the dual licence is now read in full:** `skills/**` is **AGPL-3.0 OR MIT at the
+  licensee's option**, `app/**` is **AGPL-3.0 only**. 🟢 **So the skill payloads are shippable
+  in a closed client deliverable and the web app is not** — a distinction worth money, and one a
+  repo-level licence column cannot carry.
+- 🔵 `zijinz456/OpenTutor` **`141★`** · `artcc/freelingo` **`172★`** *(AGPL-3.0, `34 514` B)* ·
+  `Li-Evan/Bloom` **`284★`** · `flysheep-ai/education-skills` **`112★`** — all alive, all read
+  from bytes today.
+
+### 🔴 What the discovery channel also shows: `topic:` is not a taxonomy
+
+🔴 **`4` of the `32` rows in `topic:lms stars:>200` are not education software at all** —
+[`snapcast`](https://github.com/snapcast/snapcast) (`7 921★`) and
+[`AmpliPi`](https://github.com/micro-nova/AmpliPi) (`340★`) use `lms` for **Lyrion Music
+Server**, [`Colourful`](https://github.com/tompazourek/Colourful) (`298★`) for the **LMS colour
+space**, and [`SWE-agent`](https://github.com/SWE-agent/SWE-agent) (`20 552★`) is simply
+mis-tagged. 🔴 **And `2` of the `12` rows in `topic:education topic:ai-agents` are a Windows PC
+system monitor and an LLM jailbreak write-up.** 🟢 **`12.5`% and `17`% contamination: a discovery
+pipeline that ingests a topic page without a relevance gate publishes a music server as an LMS.**
+🔵 This is the `topic:school-management` homonym class p200 did not hit, and it is why every row
+on these pages carries a one-line *what it is* rather than a topic list.
+
+🔵 Full census:
+[`evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv`](../evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv) ·
+[`evidence/ai-tutor-shelf.2026-10-14-p201.tsv`](../evidence/ai-tutor-shelf.2026-10-14-p201.tsv) ·
+[`evidence/autograding-shelf.2026-10-14-p201.tsv`](../evidence/autograding-shelf.2026-10-14-p201.tsv)
+
+
 ## 2026-10-14 — Pass 200
 
 🆕 🟢 **New category this window, and it is a distribution change rather than a product change:

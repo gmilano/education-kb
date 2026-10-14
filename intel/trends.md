@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — CURRENT TRENDS
+
+### 1. 🆕 🔴 The grading shelf was never missing — the search term was
+
+**This is the window's correction, and it reverses a build recommendation.** p200 published
+*"Open source has no grading shelf. If AI Studios sells agentic grading, AI Studios builds it."*
+🟢 **`topic:autograding stars:>20` returns `16` repositories**, `3 439★` across the top eight,
+**five permissive and university-maintained**: [`Artemis`](https://github.com/ls1intum/Artemis)
+(**MIT**, `818★`, TU Munich), [`Autolab`](https://github.com/autolab/Autolab) (**Apache-2.0**,
+`808★`, CMU), [`Submitty`](https://github.com/Submitty/Submitty) (**BSD-3**, `803★`, RPI),
+[`okpy/ok`](https://github.com/okpy/ok) (**Apache-2.0**, `370★`, Berkeley),
+[`otter-grader`](https://github.com/ucbds-infra/otter-grader) (**BSD-3**, `161★`, Berkeley).
+🔵 **The trend to read off it: assessment infrastructure in education is UNIVERSITY-MAINTAINED
+and PERMISSIVE, while the LMS layer around it is corporate and copyleft.** 🟢 **The remaining
+white space is narrow and real — LLM free-text grading with an audit trail — and `Artemis` is
+its insertion point, not a blank page.**
+
+### 2. 🟢 The agent-skill tutor layer consolidates, and it is an APAC phenomenon
+
+🔵 p200 identified the shift *(the tutor ships as a `SKILL.md`, not a web app)* and it holds.
+🟢 **Measured wider this pass: `33` repositories under `topic:ai-tutor`, `23` with licences read
+from bytes, `15` of them MIT.** 🔴 **Regional origin: `15` APAC, `4` EMEA, `3` Global, `0` North
+America, `0` LATAM.** 🟢 **And the shelf has acquired a second idiom beside the skill — the MCP
+server:** [`anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (**MIT**, `515★`,
+spaced repetition as tool calls) and [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+(**MIT**, Bayesian Knowledge Tracing in Go). 🔵 **The skill carries the pedagogy; the MCP server
+carries the state.** That split is the architecture this layer is settling on.
+
+### 3. 🆕 🟢 Pedagogy is being pulled OUT of the model
+
+**The most interesting engineering trend on the shelf, and it is a reversal.** 2025's tutors
+asked an LLM to be a teacher. 🟢 **2026's best-designed ones give the LLM the smallest possible
+job:**
+[`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) (**MIT**)
+states it as a design rule — *"RL picks the action, FSRS picks the timing, **the LLM only writes
+the quizzes**"*; [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) puts **BKT** behind
+a tool call; [`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)
+grounds every claim in **a cited slide page**; [`Bloom`](https://github.com/Li-Evan/Bloom)
+implements **Bloom's 2-sigma** explicitly. 🟢 **Cognitive science as deterministic code, the
+model as a renderer** — this is both better pedagogy and a far easier thing to audit under a
+high-risk regime. 🔵 It also explains the small star counts: these are `50`–`500★` projects doing
+the work the `41 386★` platform does implicitly.
+
+### 4. 🔴 The newer the platform, the stronger the copyleft — and `71`% of deployment is cloud
+
+🟢 Measured from blobs this pass: the LMS layer built since ~2020 is **AGPL-3.0** —
+[`frappe/lms`](https://github.com/frappe/lms) (`3 312★`),
+[`learnhouse`](https://github.com/learnhouse/learnhouse) (`2 377★`),
+[`classroomio`](https://github.com/classroomio/classroomio) (`1 717★`),
+[`courselit`](https://github.com/codelitdev/courselit) (`1 274★`),
+[`tutor`](https://github.com/overhangio/tutor) (`1 127★`),
+[`Claroline`](https://github.com/claroline/Claroline) (`350★`) — while Moodle, Chamilo, ILIAS and
+H5P remain plain **GPL-3.0**. 🔴 **AGPL plus the `71.22`% cloud deployment share is the one
+combination that can compel disclosure to a client's end users.** 🟢 **The counter-trend is real
+and newly measurable: a permissive option now exists at every layer** — `mentingo`/`ulearn`/
+`academico` (MIT), `richie` (MIT), `scorm-again` (MIT), `flat` (MIT), `OpenVidu` (Apache-2.0),
+`OpenOLAT` (Apache-2.0), `Kolibri` (MIT), `Artemis` (MIT). **Nine exits, where this KB listed two
+an hour ago.**
+
+### 5. 🆕 🔴 "Open source" in education is acquiring a non-OSI fringe
+
+🟢 [`leemonade/leemons`](https://github.com/leemonade/leemons) (`291★`) ships a **"Fair Code
+License" v1.0** — bespoke, non-OSI — on an LMS that presents as open source. 🔵 The `n8n` pattern
+arriving in this vertical. 🔴 **And `3` rows of the `topic:lms` shelf carrying `1 068★` grant
+nothing at all on any channel** — `LMS-Laravel` (`505★`), `OLD-LMS-Laravel` (`288★`),
+`LearnPress` (`275★`, **not even a `License:` line in its WordPress plugin header**). 🟢 **The
+practical trend: the licence question in education can no longer be answered by a scanner's
+label.** `9`% of a real shelf has no grant, and the loudest non-OSI row is the one a buyer would
+shortlist first.
+
+### 6. 🆕 🟡 The grant is moving OUT of the licence file
+
+🟢 Three shapes measured this pass, all on repos with adoption:
+**(a) split scope inside one notice** — `human-skill-tree` (`skills/` **AGPL OR MIT**, `app/`
+AGPL-only), `pupilfirst` (`docs/` **CC-BY-SA-4.0**, the rest **MIT**), `leemons` (the rest
+**Fair Code**);
+**(b) version policy only in the project's own notice** — 🆕 **Chamilo declares
+`GPL-3.0-**or-later`** in its `license.txt`, a distinction the full GPL text cannot express, and
+this KB had published plain `GPL-3.0` since cycle 3**;
+**(c) the grant at a path no scanner looks at** — lowercase `license.txt` (`erpnext`, `paella`),
+non-root `docs/License.txt` with a **UTF-8 BOM** (`openSIS`). 🔴 **`pupilfirst` and `leemons`
+open with the SAME boilerplate sentence and end in opposite licences.** 🟢 **So *"MIT"* is
+becoming an answer that needs a path attached to be true.**
+
+### 7. 🟢 Discovery is a capability, and `topic:` is not a taxonomy
+
+🔵 p200 opened ranked discovery and it is transformative — two whole shelves found in two passes.
+🔴 **The same channel also shows its own failure mode: `12.5`% of `topic:lms stars:>200` is not
+education** *(Lyrion Music Server ×2, the LMS colour space, a mis-tagged coding agent)*, **and by
+stars the noise outweighs the signal — `28 473★` of it above the largest real education row.**
+🟢 **The trend for anyone building an industry KB: ranked discovery without a relevance gate
+publishes a music server as a top-3 LMS.** Every row on these pages carries a sentence saying
+what it is, for precisely this reason.
+
+### 8. 🔴 Adoption is settled; governance is not — and that gap is now measured twice
+
+🆕 **Global: student AI use `66`% (2024) → `92`% (2025), against `10`% of institutions with
+formal AI guidelines and `71`% of US teachers untrained.** 🔵 **LATAM, properly sampled
+(`200` institutions, `19` countries): `87`% use, `74`% in teaching and learning, `26`% with a
+formal strategy.** 🟢 **Two independent measurements of the same `60`–`82`-point gap, in two
+regions.** 🔴 **APAC supplies a third from the agent side: `87`% of organisations encourage AI
+agents and `47`% govern them.** 🟢 **This is the most reliably reproduced finding in the whole
+file, and it is the engagement: the client has already adopted, and cannot evidence it.**
+
+
 ## Pass 200 — 2026-10-14 — CURRENT TRENDS
 
 ### 1. 🆕 🟢 The tutor stopped being an app and became an agent skill

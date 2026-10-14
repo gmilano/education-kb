@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — THREE PLATFORMS WHOSE LICENCE IS NOT WHAT A SCANNER SAYS
+
+🔵 **p200's SIS/ERP table stands.** What this pass adds is the class of platform where the
+licence **column itself is the wrong shape** — and all three rows have real adoption.
+
+### 🔴 `leemonade/leemons` (`291★`) is NOT open source, and no scanner will tell you
+
+🟢 Read from its own blob this pass — `LICENSE.md`, `10 830` B:
+
+> *"Content outside of the above mentioned files or restrictions is available under the **"Fair
+> code License"** as defined below… **Terms and Conditions of Use for the Fair Code License of
+> Leemons, Version 1.0**"*
+
+🔴 **A bespoke, non-OSI licence on a `291★` LMS/LXP that markets itself as open source.** 🔵 This
+is the `n8n` shape *(Sustainable Use License)* arriving in education. 🟢 **GitHub's API says
+`NOASSERTION` — correctly conservative — and this KB's own `family_of` answers `FAIRCODE`**, so
+the control exists; what was missing was anyone looking. 🔴 **Verdict for AI Studios: not
+usable in a client deliverable without a commercial agreement. Do not shortlist it.**
+
+### 🟡 Two platforms whose grant depends on WHICH DIRECTORY you take
+
+🟢 `ACTION OJ`'s population is `3` repositories, `1 841★` combined — not the one p200 found:
+
+| repo | ★ | path pattern | grant | shippable in a closed deliverable? |
+|---|---|---|---|---|
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | **572** | `skills/**` | **AGPL-3.0 OR MIT**, licensee's option | 🟢 **YES, via the MIT option** |
+| | | `app/**` | **AGPL-3.0** only | 🔴 **NO** |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | **978** | `docs/**` | **CC-BY-SA-4.0** | 🟡 content ShareAlike attaches |
+| | | client-side JavaScript *(incl. compiled output)* | **MIT** | 🟢 **YES** |
+| | | everything else | **MIT** | 🟢 **YES** |
+| [leemonade/leemons](https://github.com/leemonade/leemons) | **291** | third-party components | each owner's own licence | per component |
+| | | everything else | **Fair Code License v1.0** | 🔴 **NO** |
+
+🔴 **And here is the trap that makes a scope reader mandatory rather than nice to have:
+`pupilfirst` and `leemons` open with the SAME boilerplate sentence, verbatim** —
+*"Portions of this software are licensed as follows:"* — **and they end in opposite places.**
+One resolves to **MIT**; the other to a **non-OSI** licence. 🟢 **So the preamble is a SHAPE, not
+a verdict: an instrument must read every bullet to the end and emit `(path pattern → grant)`
+pairs.** 🔵 A repo-level licence column cannot represent any of these three rows, which is why
+this table carries paths.
+
+🟢 **The commercially useful read, stated plainly:** `human-skill-tree`'s **`skills/` payloads
+are MIT-takeable** — a studio may embed those `SKILL.md` files in a client deliverable and must
+not fork the `app/`. That is the single most shippable asset on the agent-skill shelf.
+[`evidence/split-scope-notices.2026-10-14-p201.tsv`](../evidence/split-scope-notices.2026-10-14-p201.tsv)
+
+### 🟢 The platform shelf an engagement actually chooses from — licence from bytes, this hour
+
+| Layer | Platform | Licence | ★ | Customisable with AI on top? |
+|---|---|---|---|---|
+| **LMS / VLE** | [Moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** `35 147` B | — | Yes — **over Web Services + the `8` MCP servers in [`agents/top.md`](../agents/top.md)**; do not fork into a closed deliverable |
+| | [Open edX](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** `35 136` B | — | Yes — **via `XBlock` (Apache-2.0)**; `tutor` (AGPL) is the distribution |
+| | [Chamilo](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0-**or-later** `35 147` B | **1 013** | Strong LATAM + francophone Africa footprint. 🆕 **or-later**, per its own notice |
+| | [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** `35 147` B | **505** | German-speaking EMEA. Branch `release_11` |
+| | [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** `10 982` B | **447** | 🟢 **The permissive full-LMS exit.** QTI, SCORM, curriculum management |
+| | [Sakai](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** `11 120` B | **1 238** | Apache-2.0 with the § 3 patent grant **narrowed to education** — contract review, not a label |
+| | 🆕 [mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** `1 062` B | **95** | 🟢 **AI-native by design: AI mentor + role-play, SCORM + xAPI, white-label** |
+| | 🆕 [ulearn](https://github.com/safytech/ulearn) | 🟢 **MIT** `1 066` B | **700** | Laravel + React |
+| **SIS / school ERP** | 🆕 [academico](https://github.com/academico-sis/academico) | 🟢 **MIT** `1 094` B | **404** | 🟢 **The permissive SIS+LMS.** Laravel + Filament — **the row this layer was missing** |
+| | [RosarioSIS](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** `15 214` B | **646** | Gradebook, attendance, billing. Branch `mobile` |
+| | [openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0** `17 286` B | **345** | Grant at `docs/License.txt` **with a UTF-8 BOM** |
+| | [OpenEduCat](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** `8 241` B | — | 🟢 **Education ERP on Odoo** — weak copyleft, so **linkable**: the practical middle for an ERP engagement |
+| **Content runtime** | [H5P](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** `35 146` B | — | Copyleft reaches the interactive-content runtime |
+| | 🆕 [scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** `1 072` B | **355** | 🟢 **SCORM 1.2/2004 runtime, offline-first** — the standards piece, permissive |
+| **Catalogue** | 🆕 [richie](https://github.com/openfun/richie) | 🟢 **MIT** `1 079` B | **316** | Course catalogue/marketing CMS in front of Open edX or Moodle **without inheriting AGPL** |
+| **Synchronous class** | 🆕 [flat](https://github.com/netless-io/flat) | 🟢 **MIT** `1 062` B | **6 439** | Whiteboard + recording, desktop and web clients |
+| | 🆕 [OpenVidu](https://github.com/OpenVidu/openvidu) | 🟢 **Apache-2.0** `11 357` B | **2 136** | Self-hosted WebRTC on LiveKit; `ai-agents` in its own topics |
+| | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** | — | 🔵 Carried from cycle 3; not re-read this pass |
+| **Offline / low-bandwidth** | [Kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** `1 097` B | — | 🟢 The LATAM/Africa deployment shape |
+| **Assessment / grading** | 🆕 [Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** `1 091` B | **818** | 🟢 **The one platform already doing gen-AI feedback under a permissive licence** |
+| | 🆕 [Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** `1 542` B | **803** | Automated **and TA** grading — human-in-the-loop built in |
+| | 🆕 [INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** `34 764` B | **243** | Sandboxed assessment **with LTI into any LMS** |
+| **Lecture capture** | [Opencast](https://github.com/opencast/opencast) | 🟡 **ECL-2.0** `11 340` B | **508** | 🟢 Front-ended by [`paella`](https://github.com/polimediaupv/paella) — **ECL-2.0, `9 915` B, grant now FOUND** |
+
+🔴 **Three rows a shortlist must exclude on licence grounds alone**, all with real stars:
+`leemons` (`291★`, Fair Code), `LMS-Laravel` (`505★`, **no grant on any channel**) and
+`LearnPress` (`275★`, **no grant, not even in its WordPress plugin header**). 🟢 **Checking this
+costs one `curl`; discovering it after a SOW costs a renegotiation.**
+
+
 ## Pass 200 — 2026-10-14 — THE SIS/ERP LAYER, DECIDED BY LICENCE
 
 🔵 **p199's platform table stands; this section fills the half of it that was thinnest.** p199

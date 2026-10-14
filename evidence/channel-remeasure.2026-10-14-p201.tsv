@@ -1,0 +1,7 @@
+channel	probe	http	p185_to_p200	p201	note
+curl api.github.com	/repos/moodle/moodle	403	403	403	sixth dated entry; unchanged
+curl github.com/<slug>	/moodle/moodle	403	403	403	unchanged
+curl github.com/trending	/trending	403	403	403	HTML discovery still closed
+curl raw.githubusercontent.com	/moodle/moodle/main/COPYING.txt	200	200 (p200)	200	blob channel OPEN; authoritative for licence
+GitHub REST via MCP server	search_repositories	n/a	open (p200)	open	ranked discovery works
+bash <KB committed suite>	compose/code/lib/test_license_family.sh	n/a	DENIED p198,p200	207/207 exit 0	ACTION ON limb 1: the block was the reader

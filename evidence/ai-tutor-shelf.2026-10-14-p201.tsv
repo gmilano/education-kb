@@ -1,0 +1,24 @@
+slug	stars	licence_from_blob	blob_bytes	default_branch	origin_region	shape	updated_at_api
+HKUDS/DeepTutor	41386	Apache-2.0	11408	main	APAC	agent-native tutor platform	2026-10-14
+Miaotofu01/Study-Mate	951	MIT	1064	main	APAC	agent skill	2026-10-14
+24kchengYe/human-skill-tree	572	AGPL-3.0 (skills/ also MIT)	1134	master	APAC	agent skill + web app	2026-10-13
+ankimcp/anki-mcp-server	515	MIT	1074	main	Global	MCP server	2026-10-14
+ZeKaiNie/universal-examprep-skill	307	MIT	1065	main	APAC	agent skill	2026-10-14
+karanb192/algo-sensei	287	MIT	1081	main	APAC	agent skill	2026-10-13
+Li-Evan/Bloom	284	MIT	1069	main	APAC	agent skill + web app	2026-10-13
+SenmuuuuW/universal-diagnostic-tutor-skill	245	MIT	1102	main	APAC	agent skill	2026-10-13
+KeWang0622/kaogong-skill	176	MIT	1083	main	APAC	agent skill	2026-10-14
+artcc/freelingo	172	AGPL-3.0	34514	main	EMEA	self-hosted platform	2026-10-14
+zijinz456/OpenTutor	141	MIT	1068	main	APAC	self-hosted platform	2026-10-14
+flysheep-ai/education-skills	112	MIT	1068	main	APAC	agent skill collection	2026-10-14
+SimonsTang/feifei-companion	106	Apache-2.0	10227	main	APAC	K12 platform	2026-10-06
+Selleo/mentingo	95	MIT	1062	main	EMEA	AI-native LMS	2026-10-14
+ahmedEid1/lumen	88	GPL-3.0	35149	main	Global	agentic RAG platform	2026-09-30
+yh2072/edgameclaw	71	AGPL-3.0	34523	main	APAC	game-based course generator	2026-09-23
+heshengtao/exameow	70	Apache-2.0	10173	main	APAC	exam generator (Tauri/Rust)	2026-10-13
+Zenglian990/AI_Tutor_Release	64	MIT	1068	master	APAC	K-9 RAG tutor	2026-10-13
+HumphreySun98/Smart-Study-Agent	58	MIT	1067	main	APAC	RL + FSRS study agent + MCP	2026-10-07
+henryyu333/assignment-check	53	MIT	1086	main	APAC	agent skill	2026-10-09
+ArnaudGuiovanna/tutor-mcp	48	MIT	1073	main	EMEA	MCP server (ITS/BKT, Go)	2026-10-13
+scibly-dev/scibly	42	AGPL-3.0	34739	main	Global	AI-native learning platform	2026-10-01
+Bbar0n234/learnflow-ai	35	Apache-2.0	11357	main	EMEA	teacher material agent	2026-09-02

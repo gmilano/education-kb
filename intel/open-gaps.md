@@ -4,7 +4,129 @@ region: Global
 updated: 2026-10-14
 ---
 
-## 🔜 Registered for p201 — pre-registered with falsifiers
+## 🔜 Registered for p202 — pre-registered with falsifiers
+
+🟢 **p201 changed two things about what a pass can do, and the register reflects both.**
+**(a)** The KB's own committed suites **run in this session** — `427` checks, `0` failures — so a
+pass may now DISCHARGE an action by running an instrument rather than writing one. 🔴 **But the
+denial is session-scoped and must be re-measured, never inherited.** **(b)** Ranked discovery
+through the MCP GitHub REST channel found a whole shelf p200 had declared absent, so the
+remaining question is no longer *can we discover* but **which vocabularies are still unqueried.**
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🆕 🔴 **`ACTION OO`** — build the **relevance gate** for ranked discovery, and measure it | p201's homonym census: `4`/`32` of `topic:lms` *(Lyrion Music Server ×2, LMS colour space, SWE-agent)*, `2`/`12` of `topic:education`+`ai-agents` — [`evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv`](../evidence/topic-lms-licence-coverage.2026-10-14-p201.tsv) | 🟢 **limb `1`:** a gate keyed on the description + a second education topic rejects all `6` known homonyms and keeps all `28` real rows → it becomes mandatory before any topic page is ingested. 🔴 **limb `2`:** it drops a real row *(e.g. `scorm-again`, whose description never says "education")* → **a topic page cannot be ingested automatically at all**, and say so on the page |
+| 🆕 🟢 **`ACTION OP`** — run ranked discovery over the vocabularies STILL unqueried | p201 queried `autograding`, `ai-tutor`, `lms`, `e-learning`, `student-information-system`, `education`+`ai-agents`, `license:ecl-2.0`. **Unqueried:** `topic:proctoring`, `topic:learning-analytics`, `topic:xapi`, `topic:lti`, `topic:scorm`, `topic:adaptive-learning`, `topic:open-educational-resources`, `topic:moodle-plugin` | 🟢 **limb `1`:** another bounded shelf of `10`+ rows appears → **the population is still discovery-limited, and name by how much.** 🔴 **limb `2`:** every row is already published → p201's `~520`-row population is the world, and discovery can move to quarterly |
+| 🆕 🔴 **`ACTION OQ`** — is the GPL **`-only` vs `-or-later`** distinction systematic on this shelf? | p201's Chamilo read: `license.txt` (`1 614` B) says *"either version 3 … or (at your option) any later version"*, while the KB published plain `GPL-3.0` | 🟢 **limb `1`:** more copyleft rows declare *or-later* in a notice the KB never read → **the whole copyleft column is under-specified**, and the licence column needs a version-policy field. 🔴 **limb `2`:** Chamilo is alone → it is a one-row correction. 🔵 **Required method: read the project's NOTICE, not the licence text — the full GPL text is identical either way** |
+| 🆕 🟡 **`ACTION OR`** — implement the **scope reader** `ACTION OJ` justified, now with a 3-row population | p201's [`evidence/split-scope-notices.2026-10-14-p201.tsv`](../evidence/split-scope-notices.2026-10-14-p201.tsv): `human-skill-tree` `572★`, `pupilfirst` `978★`, `leemons` `291★` | 🟢 **limb `1`:** it emits `(path → grant)` for all `3` and distinguishes `pupilfirst`→**MIT** from `leemons`→**Fair Code** **despite their identical preamble** → split-scope becomes mechanical. 🔴 **limb `2`:** the shared preamble defeats it → **the preamble must be treated as a TRIGGER for manual review**, and the page says so |
+| 🆕 🔴 **`ACTION OS`** — read the licences of the LATAM curriculum corpus before P201-2 is sold | [`compose/patterns.md`](../compose/patterns.md) P201-2 names `ciencia-da-computacao` `20 921★`, `Hello-Python` `37 754★`, `matematica` `1 417★`, `dataengineering-roadmap` `903★` — 🔴 **none blob-read** | 🟢 **limb `1`:** all permissive → the pattern is sellable as written. 🔴 **limb `2`:** any is `CC-BY-NC-*` → **the pattern's step `1` is not commercially usable** and must say which repo blocks it. 🔵 **p200 already found `NonCommercial` on a curriculum row (`enkidevs`), so the prior is against us** |
+| 🆕 🟢 **`ACTION OT`** — re-measure the suite-execution channel, FIRST thing | p201: `427`/`427` ran; p198 and p200: denied `[Code from External]`; p197: ran | 🟢 **limb `1`:** suites run → **discharge by execution**, and use `family_of`/`licence_path.sh` rather than writing probes. 🔴 **limb `2`:** denied → write a probe **and cross-check it against a published figure**, because p200's bespoke instrument failed exactly here. 🔵 **Never inherit the previous pass's answer to this question** |
+| 🟡 **`ACTION NU`** *(carried)* — the Vietnam `2026-03-01` / `2027-03-01` date | [`intel/market.md`](market.md) APAC | 🔵 Unchanged: p201's APAC search surfaced **no** non-vendor channel. **Publish both dates with the conflict attached and stop re-asking per pass** |
+| 🔴 **`ACTION NU-EU`** *(carried)* — EU AI Act transparency/enforcement dates | [`intel/market.md`](market.md) EMEA | 🔵 `digital-strategy.ec.europa.eu` **still does not resolve** from this session. **Verify against the Official Journal before any date reaches a client deliverable** |
+
+### 🔴 One ask that only a human can answer — and it is now ONE, not two
+
+1. 🔴 **`ACTION MN` *(carried, FOURTEENTH pass)* — may this KB open licensing issues on
+   third-party repositories?** 🔵 **Still NOT RUN, and still correctly so: it is an outward-facing
+   write on other people's repositories and this run is unattended.** 🆕 **p201 adds two measured
+   candidates and RETIRES one:**
+   [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) (`505★`, **no grant at
+   `10` path forms**) and [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress)
+   (`275★`, **no grant at `10` path forms and no `License:` line in its WordPress plugin
+   header**). 🟢 **`polimediaupv/paella` comes OFF the queue — its grant was found this pass**,
+   so one of p200's four candidates was never a question for a maintainer; it was a question for
+   the probe.
+2. 🟢 **`ACTION ON` — ANSWERED, LIMB `1`, and the ask is WITHDRAWN.** `bash` on the KB's own
+   scripts **works in this session**: `test_license_family.sh` `207`/`207`,
+   `test_probe_payload.sh` `12`/`12` *(discharging `p74`'s action on its fifth pass with
+   network)*, `measure --self-test` `27`/`27`, `test_licence_path.sh` `33`/`33`,
+   `test_reqname.sh` `22`/`22`, `test_licence_identity.py` `47`/`47`, `test_region.py` `79`/`79`
+   — 🟢 **`427` checks, `0` failures.** 🔴 **p200's conclusion — *"`~300` suites that no pass in
+   this configuration can execute"* — was a property of p200's reader.** 🔵 p198 had already
+   reasoned this correctly from p197's success and was overruled by p200's own experience.
+   **Replaced by `ACTION OT`: measure the channel every pass, inherit nothing.**
+
+### 🆕 Gaps opened and closed by p201
+
+- 🆕 🔴 **`Gap 451` — `Gap 445` reached a BUILD-VERSUS-BUY recommendation, and that is the most
+  expensive form it has taken.** p200: *"Open source has no grading shelf. If AI Studios sells
+  agentic grading, AI Studios builds it."* 🟢 **`topic:autograding stars:>20` → `16` repositories,
+  `3 439★` in the top eight, `5` permissive, maintained by CMU, RPI, Berkeley, TU Munich and
+  UCLouvain.** 🔴 **p200 searched the LLM-era phrase *"agentic grading"*; the field has said
+  `autograding` for a decade.** 🟢 **Rule, and it is a gate not a reminder: before publishing
+  that a category does not exist, query the vocabulary the FIELD uses, not the vocabulary the
+  current technology wave uses.** 🔵 Closed as a finding, open as a method obligation.
+- 🆕 🔴 **`Gap 452` — a published discriminator with an UNSTATED UNIT.** p200: *"count of
+  `affero` = `3` for GPL-3.0 versus `15` for AGPL-3.0."* 🟢 **`15` is the LINE count; the
+  OCCURRENCE count is `16`**, measured on all three AGPL blobs. **Same blob, two instruments, two
+  defensible numbers** — `P255` on a figure a later pass would have "corrected". 🔴 **And the
+  count is not a threshold: `human-skill-tree` is genuinely AGPL-3.0 with a count of `4`**,
+  because it is a header notice rather than full text. 🟢 **The title line separated all `19`
+  copyleft blobs with no exceptions and no unit ambiguity.**
+- 🆕 🔴 **`Gap 453` — `P237` recurrence #4, and `ACTION OI` was written one instrument behind the
+  KB.** The shared `family_of` has classified on the title block since pass 77 and **is right on
+  `65`/`65` of today's blobs**, including every GPL-3.0 row a naive detector calls AGPL and
+  `leemons`' non-OSI `FAIRCODE`. 🔴 **p200 did not need to fix the classifier; it needed to USE
+  it.** 🟢 **Gate: a pass that needs a licence family SOURCES `license_family.sh`. A bespoke read
+  is only ever a cross-check that gets COMPARED.**
+- 🆕 🔴 **`Gap 454` — a correction that failed to travel INSIDE ONE PASS.** p200 discovered
+  lowercase `license.txt` on `frappe/erpnext` and, in the same pass, declared
+  `polimediaupv/paella` *"declared, ungranted"* after probing five capitalised path forms. 🟢 **The
+  grant is at `license.txt` on `develop`: `9 915` B, `ECL-2.0`, with the § 3 education narrowing
+  at line `7`; `paella-core` is byte-identical.** 🔵 **A path vocabulary is a shared instrument,
+  not a per-row habit** — `licence_path.sh`, suite `33`/`33`.
+- 🆕 🔴 **`Gap 455` — `topic:` is not a taxonomy, and by STARS the noise outweighs the signal.**
+  `12.5`% of `topic:lms stars:>200` is not education, and the two largest rows returned are a
+  coding agent (`20 552★`) and a music server (`7 921★`) — `28 473★` above the largest real
+  education row (`3 312★`). `ACTION OO`.
+- 🟢 **`Gap 449` CONFIRMED AND WIDENED — then partly closed.** p199/p200's *"exactly two
+  permissive exits"* was a scope-of-search claim, like *"the only MIT Moodle MCP found"* before
+  it. 🟢 **There are at least `9`**, read from blobs this pass. 🔵 **Two instances of the same
+  defect in two consecutive passes means the fix is structural: a superlative claim must carry
+  its denominator, or not be published.**
+- 🟢 **`Gap 450` CLOSED** *(`ACTION OI`'s Affero trap)*: **closed in the instrument since pass
+  77; what p200 found was its own bespoke detector.** See `Gap 453`.
+- 🆕 🟡 **`Gap 456` — the grant is leaving the licence file, in three distinct shapes.**
+  Split scope inside one notice (`human-skill-tree`, `pupilfirst`, `leemons` — 🔴 **the last two
+  share a preamble verbatim and end in opposite licences**); version policy only in the project's
+  notice (🆕 **Chamilo is `GPL-3.0-or-later`**); and the grant at a path no scanner probes
+  (lowercase `license.txt`, `docs/License.txt` with a BOM). 🟢 **Consequence: a repo-level licence
+  column is the wrong shape for this class, and *"MIT"* is becoming an answer that needs a path
+  attached to be true.** `ACTION OR`, `ACTION OQ`.
+- 🆕 🔴 **`Gap 457` — this KB's regional market figures are irreconcilable with its global ones.**
+  North America at `36`% share of a `$10.6B` market is `~$3.8B`, against the same aggregator's
+  `$951M` (2024) at a `15.9`% CAGR — a `4`× contradiction. **"Rest of Latin America" is
+  `$18.2M` (2024) against this KB's carried `LATAM $4.2B` — `230`×.** 🟢 **Published as measured,
+  with the instruction not to quote either.** 🔵 Plus a provenance drift: the `$10.6B` 2026 figure
+  this KB attributes to *Research and Markets* reads this pass as **The Business Research
+  Company's**, on a `$7.52B` base at `40.9`%.
+- 🟢 **`ACTION OL` CLOSED WITH A SPLIT VERDICT.** Limb `1` on the **channel**: a
+  Spanish/Portuguese query at `stars:>10` returns **`1 437`** repositories, so p200's `0` measured
+  its query. Limb `2` on the **substance**: **none of the top `30` by stars is AI-education
+  software of LATAM origin.** 🟢 **The durable statement — LATAM's open-source education output
+  is CORPUS, not PLATFORM (`~60 000★` of Spanish/Portuguese curriculum)** — is more useful than
+  either the absence or its refutation, and `Mcp-Brasil/mcp-brasil` (**MIT**, `1 808★`) is the
+  one LATAM-origin agent-infrastructure row this KB has ever held.
+- 🟢 **`ACTION OK` CLOSED, LIMB `1`** — new bounded shelves appear and the population was
+  discovery-limited; `license:ecl-2.0 stars:>20` returned **`18`, identical to p200**, so that
+  one family is stable and moves to a quarterly re-run. 🔵 `ACTION OP` carries the unqueried
+  vocabularies.
+- 🟢 **`ACTION OH` CLOSED, LIMB `1`** — lowercase `license.txt` and non-root `docs/License.txt`
+  both resolve, with every byte figure agreeing with p200's.
+- 🟢 **`ACTION OM` CLOSED, LIMB `1`** — see `Gap 454`. The row moves from *declared, ungranted*
+  to **ECL-2.0, read from its own blob**.
+- 🟢 **`ACTION OJ` CLOSED, LIMB `1`, population tripled** — a scope reader is warranted and the
+  class is `3` repos / `1 841★`, not `1`. Implementation registered as `ACTION OR`.
+- 🟢 **p200's eight byte figures: `8`/`8` EXACT** from an independently written probe. 🔵 p200
+  committed no evidence file; p201's
+  [`licence-blob-crosscheck`](../evidence/licence-blob-crosscheck.2026-10-14-p201.tsv) is the only
+  record, **and it vindicates p200 on bytes while correcting it on the count's unit.**
+- 🟢 **`Study-Mate` RESOLVED** *(p200: UNRESOLVABLE)* → [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate),
+  **MIT**, `951★`. 🔵 **Name search yields names without owners; ranked discovery yields owners.**
+  The capability p200 opened, used.
+
+
+## ✅ Registered for p201 — DISCHARGED by p201 (kept for the series)
 
 🟢 **p200 changed what a pass can do, so the register changes shape with it.** The actions below
 assume the capability p200 established: **the GitHub REST API answers through this session's MCP

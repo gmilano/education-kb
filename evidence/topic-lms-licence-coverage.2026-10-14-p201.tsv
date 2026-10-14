@@ -1,0 +1,33 @@
+slug	stars	api_licence_field	blob_licence	blob_path	blob_bytes	default_branch	education_relevant	note
+SWE-agent/SWE-agent	20552	MIT	not probed	-	-	main	NO	homonym: coding agent mis-tagged lms
+snapcast/snapcast	7921	GPL-3.0	not probed	-	-	-	NO	homonym: Lyrion Music Server
+frappe/lms	3312	AGPL-3.0	AGPL-3.0	license.txt	33893	develop	YES	API agrees
+learnhouse/learnhouse	2377	AGPL-3.0	AGPL-3.0	LICENSE	34523	dev	YES	default branch is dev
+classroomio/classroomio	1717	AGPL-3.0	AGPL-3.0	LICENSE	34523	main	YES	API agrees
+codelitdev/courselit	1274	AGPL-3.0	AGPL-3.0	LICENSE.md	34143	main	YES	API agrees
+sakaiproject/sakai	1238	ECL-2.0	ECL-2.0 (p200)	LICENSE	11120	main	YES	ECL-2.0 reference codebase
+xiaochong0302/course-tencent-cloud	1173	GPL-2.0	GPL-2.0	LICENSE	18092	v2	YES	default branch is v2
+overhangio/tutor	1127	AGPL-3.0	AGPL-3.0	LICENSE.txt	34523	release	YES	default branch is release
+chamilo/chamilo-lms	1013	GPL-3.0	GPL-3.0-or-later	LICENSE	35147	master	YES	own notice says or-later; see license.txt
+pupilfirst/pupilfirst	978	NOASSERTION	MIT (docs/ CC-BY-SA-4.0)	LICENSE	1684	master	YES	split-scope notice resolved from bytes
+safytech/ulearn	700	MIT	MIT	LICENSE	1066	master	YES	API agrees
+ishanvyas22/awesome-open-source-systems	671	WTFPL	not probed	-	-	-	NO	awesome-list
+gazpachu/hypatia	651	NOASSERTION	GPL-2.0	license.txt	19350	master	YES	resolved from bytes; last push 2023-02-15
+Automattic/sensei	596	GPL-2.0	not probed	-	-	-	YES	WordPress plugin
+LMS-Laravel/LMS-Laravel	505	MISSING	NO BLOB IN 10 PATHS	-	-	master	YES	UNGRANTED on both channels
+ILIAS-eLearning/ILIAS	505	GPL-3.0	GPL-3.0	LICENSE	35147	release_11	YES	default branch is release_11
+OpenOLAT/OpenOLAT	447	NOASSERTION	Apache-2.0	LICENSE	10982	master	YES	resolved from bytes; permissive exit
+inducer/relate	437	NOASSERTION	MIT	LICENSE	1145	main	YES	no title line; body-grant fallback
+academico-sis/academico	404	MIT	MIT	LICENSE	1094	main	YES	NEW permissive SIS+LMS exit
+jcputney/scorm-again	355	MIT	MIT	LICENSE	1072	master	YES	SCORM runtime
+claroline/Claroline	350	NOASSERTION	AGPL-3.0	LICENSE	34616	15.0	YES	default branch is 15.0
+micro-nova/AmpliPi	340	GPL-3.0	not probed	-	-	-	NO	homonym: Lyrion Music Server
+openfun/richie	316	MIT	MIT	LICENSE	1079	master	YES	course catalogue CMS (France)
+tompazourek/Colourful	298	MIT	not probed	-	-	-	NO	homonym: LMS colour space
+leemonade/leemons	291	NOASSERTION	Fair Code License v1.0	LICENSE.md	10830	main	YES	NOT open source
+LMS-Laravel/OLD-LMS-Laravel	288	MISSING	NO BLOB IN 10 PATHS	-	-	master	YES	UNGRANTED on both channels
+LearnPress/learnpress	275	MISSING	NO BLOB IN 10 PATHS	-	-	develop	YES	no grant in WP plugin header either
+elmsln/elmsln	253	GPL-3.0	GPL-3.0	LICENSE.md	35193	master	YES	35193 B: outside p200 byte band
+AcademicsToday/academicstoday-django	221	Apache-2.0	not probed	-	-	master	YES	last push 2022-08-14
+microsoft/o365-moodle	215	GPL-3.0	not probed	-	-	main	YES	Moodle/Microsoft 365 integration
+gocodebox/lifterlms	211	GPL-3.0	not probed	-	-	main	YES	WordPress plugin

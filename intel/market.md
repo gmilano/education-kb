@@ -4,6 +4,193 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — MARKET SNAPSHOT
+
+🔵 **p199's framing — *"the spread is the finding, not the midpoint"* — survives a third pass and
+gets quantitatively worse.** Searched again this hour, the estimates on offer are:
+
+| source | 2025 base | 2026 | endpoint | CAGR |
+|---|---|---|---|---|
+| IMARC | **$6.4B** | — | **$79.6B (2034)** | `31.35`% |
+| Grand View *(via GII)* | **$8.3B** | **$11.4B** | **$57.2B (2033)** | `25.9`% |
+| The Business Research Company | **$7.52B** | **$10.6B** | — | 🔴 `40.9`% |
+| 🔵 carried since cycle 2 | — | **$10.6B** | **$42.48B (2030)** | `41.5`% |
+| 🔵 carried, secondhand *(HolonIQ via a vendor blog)* | — | **$12.3B** | — | — |
+| 🔵 carried, a K-12 sector report | — | — | **~$32B (2030)** | — |
+
+🔴 **Three 2025 bases spanning `$6.4B`–`$8.3B`, three 2026 figures spanning `$10.6B`–`$12.3B`,
+and FOUR endpoints that disagree by `$47B`.** 🟢 **The CAGRs are the tell: `25.9`% and `40.9`%
+cannot both describe the same market.** They describe different definitions of it.
+
+🆕 **And a provenance correction to this KB's own longest-carried number.** The `$10.6B` 2026
+figure has been attributed on these pages to *Research and Markets*. 🟢 **Read this pass, the
+same figure is The Business Research Company's, with a `$7.52B` 2025 base and a `40.9`% CAGR.**
+🔵 Either two firms publish the same number, or the attribution drifted. **Until someone reads
+a primary report, cite the figure with BOTH candidates attached — never one.**
+
+🟢 **What to put in a client deck:** the range `$6.4B`–`$12.3B` for the current year, the
+disagreement itself, and a named definitional question — *does the estimate include corporate
+L&D, or only formal education?* **That question, asked out loud, is worth more than any
+midpoint**, because the `25.9`-versus-`40.9` gap is exactly where it hides.
+
+### 🔴 The regional figures do not reconcile with the global ones — by `4`× and by `230`×
+
+🟢 Two aggregator figures read this pass, placed against the global numbers above:
+
+- **North America: `$951M` (2024) → `$2.3B` (2029), `15.9`% CAGR**, alongside a separate claim
+  that **North America leads with `36`% share**. 🔴 **`36`% of a `$10.6B` 2026 market is
+  `~$3.8B`. The same aggregator's own North America figure is `$951M` two years earlier at a
+  `15.9`% CAGR — which cannot reach `$3.8B` by 2026.** A `4`× internal contradiction.
+- **"Rest of Latin America": `$18.2M` (2024) → `$36M` (2029).** 🔴 **This KB has carried
+  `LATAM $1.5B → $4.2B` since cycle 2. The two differ by `230`×.** 🟡 *"Rest of Latin America"*
+  excludes the large markets by construction, so the figures are not strictly comparable —
+  🔴 **but no published definition reconciles a `$36M` regional residual with a `$4.2B` region.**
+
+🟢 **Conclusion, unchanged in direction and stronger in evidence: regional AI-education market
+sizing is aggregator-grade and must not be quoted to a client as a number.** 🟢 **Quote adoption
+statistics instead** — they are surveyed, they name their sample, and they are what a buyer
+recognises.
+
+### 🟢 The adoption numbers worth building a pitch on
+
+| statistic | value | sample / source | why it sells |
+|---|---|---|---|
+| 🆕 **Student AI use** | 🔴 **`66`% (2024) → `92`% (2025)** | multi-country roundup | **The demand side is already decided.** The question a client faces is governance, not adoption |
+| 🆕 **Institutions with formal AI guidelines** | 🔴 **`10`%** | same roundup | 🟢 **The `82`-point gap between use and governance IS the engagement** |
+| 🆕 **US teachers lacking AI training** | 🔴 **`71`%** | same roundup | Enablement is a bigger line item than the model |
+| 🔵 **LATAM institutions using AI somewhere** | **`87`%** | UNESCO IESALC + UNU-IAS, `200` institutions, `19` countries, surveyed Aug–Oct 2025 | 🟢 **Best-sourced figure in the file: named sample, named countries** |
+| 🔵 **…in teaching and learning** | **`74`%** | same | — |
+| 🔵 **…with a formal AI strategy** | 🔴 **`26`%** | same | 🟢 **The same gap as the global one, measured properly, in the region Globant sells from** |
+| 🆕 **AI tutors sub-market** | **$1.63B (2024) → $7.99B (2030)** | vendor report | Language learning is its fastest segment — matches `freelingo`/`LexiLingo` on the shelf |
+| 🆕 **Cloud deployment share** | **`71.22`% (2024)** | market report | 🔵 Relevant because the open shelf's new layer is **AGPL**: see below |
+| 🆕 **Orgs likely to invest in AI training in 2026** | **`94`%** | CompTIA IT Industry Outlook 2026, 🔴 **US survey** | Corporate L&D, not schools — **do not present as an education figure** |
+
+### 🔴 A supply-side fact that outranks every market figure on this page
+
+🟢 **The modern open-source LMS layer is `AGPL-3.0`, and `71`% of deployment is cloud.** Measured
+this pass from blobs: `frappe/lms`, `learnhouse`, `classroomio`, `courselit`, `tutor` and
+`Claroline` are all **AGPL** *(see [`repos/foundations.md`](../repos/foundations.md))*. 🔴 **AGPL
+plus SaaS is the one combination that can compel source disclosure to a client's end users.**
+🟢 **That single sentence decides more engagement architecture than the `$6.4B`-to-`$12.3B`
+range does**, and it is measured rather than forecast.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The regulatory layer is local and dense, and it is the buying trigger.** Carried and
+confirmed: **Oklahoma and Maryland** district-level mandates; 🆕 **Colorado and Texas introducing
+piecemeal requirements** this pass. 🔴 **There is no federal education-AI regulator** — one
+commentary read this pass puts it plainly: *"No equivalent to the FDA exists for educational
+technology,"* and adoption decisions sit with individual districts and universities. 🟢 **Fifty
+buyers, each needing the same artefact, none able to buy a national one.**
+
+| opportunity | the open-source starting point | why now |
+|---|---|---|
+| 🟢 **District AI-governance control plane** | `Artemis` (**MIT**) for the assessment audit trail + `ralph` for xAPI + `Appsmith` for the review UI | `10`% of institutions have formal guidelines against `92`% student use. **The gap is the product** |
+| 🆕 🟢 **Grading modernisation on a permissive base** | `Submitty` (**BSD-3**, RPI) or `Autolab` (**Apache-2.0**, CMU) + `Tango` sandbox | 🔴 **p200 told a studio to build this. Three North American universities maintain it already** — the work is LLM free-text feedback on top, not a platform |
+| 🟢 **Teacher enablement at scale** | `flysheep-ai/education-skills` (**MIT**) pattern, re-authored in English | **`71`% of US teachers lack AI training**, and the agent-skill form is the cheapest delivery vehicle found |
+| 🔵 **Courseware partnership slipstream** | — | 🆕 **Carnegie Mellon + the Gates Foundation are putting `$55M` into AI courseware for gateway college courses**; 🆕 **OpenAI launched a country-level education programme with national partners in Q1 2026.** Both create integration demand a studio can serve |
+
+🔴 **Declared gap:** `0` of the `23` agent-skill tutors read this pass is North American in
+origin. **The region buys this layer; it does not currently build it.**
+
+### EMEA
+
+🟢 **The strongest asset base of any region, and the weakest market data.** Measured this pass:
+`Artemis` (**MIT**, TU Munich), `INGInious` (AGPL, UCLouvain), `OpenOLAT` (**Apache-2.0**,
+Switzerland), `mentingo` (**MIT**, Poland), `richie` (**MIT**, France), `OpenVidu`
+(**Apache-2.0**, Spain), `paella`/`paella-core` (**ECL-2.0**, UPV Valencia), `opencast`
+(**ECL-2.0**, German universities), `ILIAS` (GPL-3.0, Germany), `Claroline` (AGPL, Belgium),
+`tutor-mcp` (**MIT**), `learnflow-ai` (**Apache-2.0**, Russian-language).
+
+| opportunity | the open-source starting point | why now |
+|---|---|---|
+| 🟢 **AI Act Article 50 conformity packaging** | the KB's own `aiact-50-2-*` instruments in [`compose/code/`](../compose/code/) *(suites run `427`/`427` this pass)* | Education is **high-risk** under the Act; the marking/provenance work is already built here |
+| 🆕 🟢 **University assessment platform, permissively licensed** | `Artemis` (**MIT**) — gen-AI feedback, exam mode, `396` forks | 🟢 **A European university maintains an MIT assessment platform.** Extending it is a `6`–`8` week engagement; building one is a year |
+| 🟢 **Lecture capture + AI video** | `opencast` (**ECL-2.0**) + `paella` (**ECL-2.0**, grant found this pass) | The piece no LLM framework provides; 🟡 **ECL-2.0's narrowed patent grant is a counsel question before the SOW** |
+| 🟢 **Sovereign/self-hosted stack** | `Ollama`/`vLLM` + `OpenVidu` + `mentingo` (**MIT**) | Data-residency pressure; every component self-hostable and permissive |
+
+🔴 **Declared gaps, measured not assumed.** A regional search this pass returned **no
+education-specific EMEA adoption figure for 2026 and no named education buyers** — the results
+were enterprise-AI pieces *(Workday `2023`, CompTIA's US survey)*. 🔴 **The only education-specific
+European policy item surfaced was the Council of Europe's `2`nd Working Conference on AI
+regulation in education — held `24`–`25 October 2024`.** 🔵 **And `ACTION NU` is unchanged: the
+EU AI Act transparency/enforcement dates remain secondhand, because
+`digital-strategy.ec.europa.eu` does not resolve from this session.** 🔴 **MEA remains the
+thinnest sub-region in this KB: no education-specific regulation or adoption data found, again.**
+
+### APAC
+
+🟢 **The region that builds the agent layer: `15` of the `23` agent-skill tutors read this pass
+are APAC-origin**, led by `DeepTutor` (**Apache-2.0**, HKU, **`41 386★`**) and `Study-Mate`
+(**MIT**, `951★`).
+
+| opportunity | the open-source starting point | why now |
+|---|---|---|
+| 🟢 **High-risk compliance for automated assessment** | `Artemis`/`Submitty` audit trail + the KB's marking instruments | 🔵 **Vietnam's Law No. `134/2025/QH15` names education — automated assessment and behavioural monitoring — as high-risk, and reaches foreign companies.** 🟡 `ACTION NU` carried: the in-force date is published as both `2026-03-01` and `2027-03-01` and no non-vendor channel settled it |
+| 🆕 🟢 **Exam-prep as a vertical credential** | `kaogong-skill` (**MIT**, civil service), `universal-examprep-skill` (**MIT**, slide-cited) | 🟢 **The APAC shelf organises around CREDENTIALS, not subjects** — a packaging insight a Western studio would miss |
+| 🆕 🟢 **Corporate skills alliance slipstream** | `mentingo` (**MIT**, SCORM + xAPI) | 🆕 **TCS and Pearson announced a multi-year AI learning alliance for employer skills gaps**; 🆕 LearnUpon opened a Sydney HQ with AI course authoring |
+| 🔴 **Agent governance, which is the measured bottleneck** | `ralph` xAPI + policy nodes in `LangGraph` | 🆕 **`87`% of APAC organisations encourage AI agents; `47`% have governance for them** *(OneTrust)*. 🆕 **`49`% cite insufficient real-time data infrastructure** *(Boomi/Omdia)* |
+
+🔴 **Declared gap:** this pass's APAC regional search surfaced **no education-specific regulation
+beyond what prior passes already hold** — its hits were enterprise-AI and a Singapore consultation
+on **financial** institutions. 🆕 One education-adjacent governance signal: **OpenAI appointed a
+policy lead for Australia and New Zealand as Canberra tightens AI governance and copyright rules.**
+
+### LATAM
+
+🟢 **The best-sourced region in this file, and the thesis is unchanged: governance, not
+adoption.** 🔵 UNESCO IESALC with UNU-IAS, **`200` institutions across `19` countries**, surveyed
+**August–October 2025**: **`87`% use AI somewhere, `74`% in teaching and learning, `26`% have a
+formal AI strategy.** 🔵 Plus the **UNESCO Observatory on AI in Education for LAC**, launched
+**14 April 2026 in Santiago** (CAF, CENIA, CETIC.br, ECLAC, Santillana, Tec de Monterrey,
+ProFuturo, Ceibal) — a named counterpart map.
+
+🆕 **Two instruments added this pass:**
+- **The Latin American AI Index (ILIA), third edition (2025)** — carries a governance dimension
+  with **regulation** and **human-talent/AI-training** sub-dimensions. 🟢 A regional benchmark a
+  proposal can cite per country.
+- **A 2025 Ibero-American comparative study of AI rules in higher education across Argentina,
+  Brazil, Chile, Peru and Spain**, written to *identify the gaps*. 🟢 **Five jurisdictions, one
+  comparison, already published** — the desk research a regional engagement would otherwise pay
+  for.
+
+| opportunity | the open-source starting point | why now |
+|---|---|---|
+| 🟢 **Institutional AI strategy + governance delivery** | the UNESCO survey as the baseline; `ralph` + `Appsmith` for the evidence layer | 🔴 **`87`% use, `26`% strategy.** The gap is named, measured, and regional |
+| 🆕 🟢 **Wire the region's own curriculum corpus to an agent** | `ciencia-da-computacao` (**`20 921★`**), `Hello-Python` (**`37 754★`**), `matematica` (`1 417★`), `dataengineering-roadmap` (`903★`) + `tutor-mcp` (**MIT**) + `anki-mcp-server` (**MIT**) | 🟢 **`~60 000★` of Spanish/Portuguese curriculum exists and nobody has attached a tutor to it.** 🔴 **That — not a missing platform — is the region's first-mover position** |
+| 🟢 **Offline-first deployment** | `Kolibri` (**MIT**) + `Chamilo` (**GPL-3.0-or-later**, strong regional footprint) | Connectivity remains the constraint; both are proven here |
+| 🆕 🟢 **Brazilian public-data agent tooling** | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (**MIT**, `1 808★`, created `2026-03-26`) | **`70` Brazilian public APIs behind one MCP server** — enrolment, census and demographic tools a Brazilian education engagement needs on day one |
+
+🔴 **Declared, and corrected from p200:** the supply-side absence is **real but narrower than
+stated.** A Spanish/Portuguese query at `stars:>10` returns **`1 437`** repositories, not p200's
+`0` — **but none of the top `30` by stars is AI-education software of LATAM origin.** 🟢 **The
+region's open-source education output is CORPUS, not PLATFORM.** 🔴 **Also declared: the
+`$18.2M`-versus-`$4.2B` regional sizing contradiction above is unresolved, and neither figure
+should be quoted.**
+
+### Global
+
+🟢 **The convergence that sells in four jurisdictions at once, strengthened this pass.**
+**Oklahoma and Maryland**, the **EU AI Act**, **Vietnam's Law 134/2025/QH15** and **Australia**
+are converging on one requirement — *a human stays accountable for high-stakes decisions about a
+student* — and 🆕 **Colorado and Texas** now add a fifth and sixth jurisdiction to the same
+shape. **One control plane, six jurisdictions.**
+
+🔴 **What changed about the build-versus-buy answer:** p200 wrote *"nobody is giving it away"* and
+advised building. 🟢 **Half of that is now false — `Artemis` (MIT), `Submitty` (BSD-3),
+`Autolab` (Apache-2.0), `okpy/ok` (Apache-2.0) and `otter-grader` (BSD-3) give away the
+grading platform and the audit surface.** 🟢 **What nobody gives away is LLM free-text grading
+with a defensible audit trail** — a narrow, buildable gap on top of a maintained base. **That is
+the sellable position, and it is one-tenth the work p200 implied.**
+
+🔵 **Standing instrument warning for anyone quoting this page:** every market figure here is a
+secondary source. 🟢 The adoption statistics name their samples; the market sizes do not
+reconcile. **Quote adoption; cite ranges for size; verify any date against a primary channel
+before it reaches a client deliverable.**
+
+
 ## Pass 200 — 2026-10-14 — MARKET SNAPSHOT
 
 🔵 **p199's framing — *"the spread is the finding, not the midpoint"* — survives this pass and

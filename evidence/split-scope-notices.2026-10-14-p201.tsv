@@ -1,0 +1,8 @@
+slug	stars	blob	bytes	preamble_idiom	path_pattern	grant	shippable_by_a_studio
+24kchengYe/human-skill-tree	572	LICENSE	1134	AGPL header + DUAL LICENSING NOTE	skills/	AGPL-3.0 OR MIT (licensee option)	YES via the MIT option
+24kchengYe/human-skill-tree	572	LICENSE	1134	AGPL header + DUAL LICENSING NOTE	app/	AGPL-3.0 only	NO for a closed deliverable
+pupilfirst/pupilfirst	978	LICENSE	1684	Portions of this software are licensed as follows	docs/	CC-BY-SA-4.0	content ShareAlike applies
+pupilfirst/pupilfirst	978	LICENSE	1684	Portions of this software are licensed as follows	client-side JavaScript	MIT	YES
+pupilfirst/pupilfirst	978	LICENSE	1684	Portions of this software are licensed as follows	everything else	MIT	YES
+leemonade/leemons	291	LICENSE.md	10830	Portions of this software are licensed as follows	third-party components	original owner licence	per component
+leemonade/leemons	291	LICENSE.md	10830	Portions of this software are licensed as follows	everything else	Fair Code License v1.0 (NON-OSI)	NO

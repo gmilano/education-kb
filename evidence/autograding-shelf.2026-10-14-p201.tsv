@@ -1,0 +1,17 @@
+slug	stars	licence_from_blob	blob_path	blob_bytes	default_branch	origin_region	maintainer	llm_feedback
+ls1intum/Artemis	818	MIT	LICENSE	1091	develop	EMEA	TU Munich	YES (gen-ai + text-exercises topics)
+autolab/Autolab	808	Apache-2.0	LICENSE	11324	master	North America	Carnegie Mellon	no
+Submitty/Submitty	803	BSD-3-Clause	LICENSE.md	1542	main	North America	RPI	no
+okpy/ok	370	Apache-2.0	LICENSE	13979	master	North America	UC Berkeley (CS61A)	no
+INGInious/INGInious	243	AGPL-3.0	LICENSE	34764	main	EMEA	UCLouvain	no
+foundation50/classroom50	215	GPL-3.0	LICENSE	35150	main	North America	foundation50	no
+ucbds-infra/otter-grader	161	BSD-3-Clause	LICENSE	1560	master	North America	UC Berkeley Data Science	no
+gradescope/autograder_samples	91	not read	-	-	master	North America	Gradescope (commercial)	no
+autolab/Tango	49	not read	-	-	master	North America	Carnegie Mellon	no
+infomark-org/infomark	35	not read	-	-	main	EMEA	infomark-org	no
+google/prog-edu-assistant	34	not read	-	-	main	North America	Google (ARCHIVED)	no
+uhafner/autograding-github-action	32	not read	-	-	main	EMEA	uhafner	no
+earthlab/matplotcheck	23	not read	-	-	main	North America	CU Boulder Earth Lab	no
+rstudio/ggcheck	23	not read	-	-	main	North America	Posit/RStudio	no
+jameskermode/mograder	21	MIT	LICENSE	1070	main	EMEA	Warwick (Marimo)	no
+TarrySingh/Artificial-Intelligence-...-Tutorials	4013	not read	-	-	master	EMEA	Synapsa	n/a (course corpus)

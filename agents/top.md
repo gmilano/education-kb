@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — THE GRADING SHELF EXISTS, AND p200 TOLD A STUDIO TO BUILD IT
+
+🔴 **p200's most actionable sentence is false, and it is the most expensive kind of false this
+KB produces.** p200 published:
+
+> *"Open source has no grading shelf. **If AI Studios sells agentic grading, AI Studios
+> builds it.**"*
+
+🟢 **Measured this pass through the ranked discovery channel: `topic:autograding stars:>20`
+returns `16` repositories, `3 439★` across the top eight, and FIVE of them are permissively
+licensed and maintained by universities** — Carnegie Mellon, RPI, UC Berkeley, TU Munich and
+UCLouvain. 🔴 **p200 searched for *"agentic grading"* — the LLM-era phrasing — and never queried
+the vocabulary the field has used for a decade.** `Gap 445` *(an instrument's reach published as
+a property of the world)*, now in its **build-versus-buy** form: a reader acting on p200 would
+have funded from scratch what five universities already maintain under MIT, Apache-2.0 and
+BSD-3-Clause.
+
+| Repo | Licence *(blob, bytes)* | ★ | Branch | Origin → region | What it is |
+|---|---|---|---|---|---|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** · `1 091` B | **818** | 🔵 `develop` | TU Munich → **EMEA** | 🆕 🟢 **Interactive learning with automated feedback, and the ONLY row on this shelf that already carries `gen-ai` and `text-exercises`.** Exam mode, programming/modelling/text exercises. **MIT on a Java platform a university runs in production** |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** · `11 324` B | **808** | `master` | Carnegie Mellon → **North America** | Course management with auto-graded assignments; `234` forks. Pairs with [`autolab/Tango`](https://github.com/autolab/Tango) (`49★`), its standalone REST grading service |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** · `1 542` B | **803** | `main` | RPI → **North America** | Submission, automated grading **and TA grading** — the human-in-the-loop half the other rows lack. `1 109` forks |
+| [okpy/ok](https://github.com/okpy/ok) | 🟢 **Apache-2.0** · `13 979` B | **370** | `master` | UC Berkeley CS61A → **North America** | Runs tests, tracks progress, assists debugging — built for a `2 000`-student course |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** · `34 764` B | **243** | `main` | UCLouvain → **EMEA** | Secure sandboxed assessment **with a pluggable LMS interface and LTI** — the integration story, but network copyleft |
+| [foundation50/classroom50](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** · `35 150` B | **215** | `main` | → **North America** | 🆕 **Created `2026-04-30`** — the open alternative to GitHub Classroom, Go + React |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** · `1 560` B | **161** | `master` | UC Berkeley Data Science → **North America** | Python **and R** notebook autograding |
+| [jameskermode/mograder](https://github.com/jameskermode/mograder) | 🟢 **MIT** · `1 070` B | **21** | `main` | → **EMEA** | 🆕 **Created `2026-03-04`** — semi-automated grading for **Marimo** notebooks, with `moodle` and `nbgrader` in its own topics |
+
+🟢 **The corrected recommendation, and it is the opposite of p200's:** **do not build a grader.**
+Extend `Artemis` (MIT, already gen-AI-capable) or `Submitty` (BSD-3, already has TA-grading
+workflow); use `Tango` or `otter-grader` as the execution sandbox. 🔵 **What genuinely does not
+exist** — and this is the defensible version of p200's claim — **is LLM free-text grading with
+an audit trail.** Every row above except Artemis grades by running deterministic tests. **That
+gap is real, it is narrow, and Artemis is the insertion point rather than a blank page.**
+
+### 🟢 The agent-skill tutor layer, re-measured and extended — `11` rows became `23`
+
+🔵 p200 found this layer and was right about its shape: the 2026 tutor ships as a `SKILL.md`
+loaded into Claude Code, Cursor, Codex or Antigravity, not as a hosted app. 🟢 **This pass
+queried `topic:ai-tutor stars:>20` — `33` repositories — and read the licence of `23` from their
+own blobs.** Every licence below is from bytes, this hour.
+
+| Repo | Licence *(blob, bytes)* | ★ | Origin → region | Shape |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `11 408` B | **41 386** | HKU → **APAC** | 🔴 **Cycle 3 recorded `~24k★`. It is now `41 386★`** — lifelong personalised tutoring, multi-agent + RAG. The anchor row of the whole industry |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** · `1 064` B | **951** | → **APAC** | 🟢 **p200 declared this row UNRESOLVABLE** *("three projects answer to the name… search yields NAMES WITHOUT OWNERS")*. **Ranked discovery returns the owner.** Route-planning + project-based study skill |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0**, `skills/` **also MIT** · `1 134` B | **572** | → **APAC** | 🟢 **The `skills/` directory is dual-licensed MIT at the licensee's option — so the skill payloads ARE shippable in a closed deliverable; `app/` is not.** See the scope table below |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** · `1 074` B | **515** | → **Global** | 🆕 **MCP server over Anki** — spaced repetition as a tool call. The cheapest real memory layer for a tutor |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** · `1 065` B | **307** | → **APAC** | Exam-prep coach that **cites the page of the lecture slide** and crops figures — anti-hallucination by provenance |
+| [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** · `1 081` B | **287** | → **APAC** | DSA/LeetCode mentor: progressive hints, mock interviews |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `1 069` B | **284** | → **APAC** | Bloom's 2-sigma as a skill **plus** a self-hostable web app; Socratic |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** · `1 102` B | **245** | → **APAC** | Diagnosis-first: no mode menu, decides the next teaching step |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** · `1 083` B | **176** | → **APAC** | Civil-service exam prep — **a vertical credential, not a subject** |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** · `34 514` B | **172** | → **EMEA** | Self-hosted language learning: CEFR plans, voice, local or cloud LLMs |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · `1 068` B | **141** | → **APAC** | Block-based adaptive workspace, local-first, `10+` providers |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** · `1 068` B | **112** | → **APAC** | A *collection* of teaching skills (gaokao-oriented) |
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 🟢 **Apache-2.0** · `10 227` B | **106** | → **APAC** | K12 companion: textbook-synced, **plus AIGC-detection** |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** · `1 062` B | **95** | Selleo → **EMEA** | 🆕 🟢 **AI-native LMS with an AI mentor and role-play, SCORM + xAPI, white-label — and MIT.** A fourth permissive LMS exit |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** · `35 149` B | **88** | → **Global** | Learner-owned courses, course-scoped RAG with citations, **golden evals in CI**, MCP server |
+| [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | 🔴 **AGPL-3.0** · `34 523` B | **71** | → **APAC** | Turns material into a game-based course |
+| [heshengtao/exameow](https://github.com/heshengtao/exameow) | 🟢 **Apache-2.0** · `10 173` B | **70** | → **APAC** | 🆕 **Created `2026-07-24`** — offline-first exam generator, Tauri + Rust |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT** · `1 068` B | **64** | → **APAC** | K-9 RAG tutor on LanceDB, Socratic |
+| [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 **MIT** · `1 067` B | **58** | → **APAC** | 🟢 **RL picks the action, FSRS picks the timing, the LLM only writes the quizzes** — the clearest division of labour on this shelf. MCP server + Anki export |
+| [henryyu333/assignment-check](https://github.com/henryyu333/assignment-check) | 🟢 **MIT** · `1 086` B | **53** | → **APAC** | Pre-submission rubric/citation/evidence checker |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · `1 073` B | **48** | → **EMEA** | 🆕 🟢 **An MCP server that turns any LLM into an Intelligent Tutoring System — BKT, in Go.** The composable form of what OATutor does as an app |
+| [scibly-dev/scibly](https://github.com/scibly-dev/scibly) | 🔴 **AGPL-3.0** · `34 739` B | **42** | → **Global** | AI-native platform aimed at **corporate** learning |
+| [Bbar0n234/learnflow-ai](https://github.com/Bbar0n234/learnflow-ai) | 🟢 **Apache-2.0** · `11 357` B | **35** | Russian-language → **EMEA** | Turns an instructor's own material into lectures, notes and slides; long-term memory; LangGraph + Langfuse |
+
+🔴 **The regional distribution is the uncomfortable half, and it has not moved since p200:**
+**`15` APAC, `4` EMEA, `3` Global, `0` North America, `0` LATAM** across the `23` rows read.
+🟢 The agent-skill tutor is, as of this hour, **an APAC phenomenon with a European platform
+fringe** — and that is a sourcing fact an engagement should know before it promises a
+"state-of-the-art tutor" assembled from Western repos.
+
+🔵 **`23` agents above the 5-row bar, every licence read from its own blob today**, committed as
+[`evidence/ai-tutor-shelf.2026-10-14-p201.tsv`](../evidence/ai-tutor-shelf.2026-10-14-p201.tsv)
+and [`evidence/autograding-shelf.2026-10-14-p201.tsv`](../evidence/autograding-shelf.2026-10-14-p201.tsv).
+
+### 🟢 `ACTION ON` ANSWERED, LIMB 1 — this session RUNS the KB's own suites
+
+🔴 p198 and p200 both recorded `bash <KB script>` as **denied `[Code from External]`**, and p200
+drew the consequence that *"`compose/code/` holds `~300` suites that no pass in this
+configuration can execute."* 🟢 **Re-measured this pass, every suite runs and every suite
+passes:**
+
+| suite | invocation | checks | failures |
+|---|---|---|---|
+| `lib/test_license_family.sh` | `bash` | **207** | **0** |
+| `lib/test_probe_payload.sh` | `bash` | **12** | **0** |
+| `lib/measure --self-test` | `bash` | **27** | **0** |
+| `lib/test_licence_path.sh` | `bash` | **33** | **0** |
+| `lib/test_reqname.sh` | `bash` | **22** | **0** |
+| `lib/test_licence_identity.py` | `python3 -I` | **47** | **0** |
+| `lib/test_region.py` | `python3 -I` | **79** | **0** |
+| **total** | | 🟢 **427** | 🟢 **0** |
+
+🟢 **`p74`'s pre-registered action — *"the first pass with network must run
+`test_probe_payload.sh`"* — is DISCHARGED on its fifth pass with network: `12`/`12`.** 🔵 **And
+p198's reading is the one that survives: the denial is SESSION-SCOPED, a property of the reader.**
+p197 ran the suite, p198 and p200 could not, p201 can. 🔴 **Which means the twelve-pass
+`ACTION ON` entry was never one question — it is a per-session coin toss, and a pass must
+MEASURE it rather than inherit the last pass's answer.** Committed as
+[`evidence/kb-suite-execution.2026-10-14-p201.tsv`](../evidence/kb-suite-execution.2026-10-14-p201.tsv).
+
+### 🔴 `ACTION OI` — the asked-for fix was unnecessary, and the real defect is older
+
+`ACTION OI` asked p201 to *"replace any Affero-phrase match in the family classifier with the
+title line + mention count discriminator."* 🟢 **No change was needed. The shared classifier was
+already correct, and has been since pass 77.**
+
+🟢 **`family_of` from [`compose/code/lib/license_family.sh`](../compose/code/lib/) was run over
+all `65` licence blobs fetched this pass — it is right on `65`/`65`**, including the five GPL-3.0
+rows a naive detector calls AGPL (`moodle`, `chamilo`, `ILIAS`, `h5p`, `erpnext` → `GPL-3.0`),
+every AGPL row, both `ECL-2.0` rows, four `GPL-2.0` rows, and `leemons`' non-OSI **`FAIRCODE`**.
+🔵 Its own header says why: *"Classifies on the TITLE BLOCK (first 40 lines), never the body
+(P171)"* — and it names the exact failure mode p200 then reproduced.
+
+🔴 **So p200's defect was not a missing control. It was a pass writing its own classifier beside
+a hardened one — `P237`, for the fourth recorded time.** 🟢 The rule that follows is a gate, not
+a reminder: **a pass that needs a licence family SOURCES `license_family.sh`**; the only
+acceptable bespoke read is a cross-check that is *compared* against it.
+
+🔴 **And p200's published discriminator carries a defect of its own: the unit is unstated.**
+
+| blob | `grep -c affero` *(LINES)* | `grep -o affero \| wc -l` *(OCCURRENCES)* |
+|---|---|---|
+| `openedx/edx-platform` | **15** | 🔴 **16** |
+| `artcc/freelingo` | **15** | 🔴 **16** |
+| `hrshadhin/school-management-system` | **15** | 🔴 **16** |
+| the five GPL-3.0 blobs | **3** | **3** |
+
+🟢 **p200 published *"count of `affero` = `15`"*. That is the LINE count; one line contains the
+word twice.** Same blob, two instruments, two defensible numbers — `P255`, on a figure a later
+pass would have "corrected". 🔴 **Worse as a classifier: `24kchengYe/human-skill-tree` is
+genuinely AGPL-3.0 and its count is `4`, because it is a `1 134` B header notice rather than the
+full text.** Any threshold rule — *"more than ten mentions ⇒ AGPL"* — misclassifies a real
+`572★` repository. 🟢 **The title line separates all `19` copyleft blobs read this pass with no
+exceptions and no unit ambiguity. Classify on the title; use the count only as a cross-check,
+and say which unit you counted.** Committed as
+[`evidence/licence-blob-crosscheck.2026-10-14-p201.tsv`](../evidence/licence-blob-crosscheck.2026-10-14-p201.tsv).
+
+🟢 **p200's eight byte figures, re-measured by an independently written probe: `8`/`8` EXACT**
+*(`35 147` / `35 147` / `35 147` / `35 146` / `35 149` / `35 136` / `34 522` / `34 514`)*. 🔵 p200
+committed no evidence file for them, so this cross-check is the only record either pass has —
+and it confirms p200.
+
+
 ## Pass 200 — 2026-10-14 — THE 403 WAS THE READER, AND DISCOVERY IS NOW POSSIBLE
 
 🟢 **The headline is an instrument, and it changes what later passes can do.** Passes `185`–`199`

@@ -1,0 +1,4 @@
+query	threshold	total_count	top_row	top_row_stars	shape_of_top_30	verdict
+educacion OR educativa OR aprendizaje OR escuela OR educacao in:name,description,readme	stars:>10	1437	mouredev/Hello-Python	37754	pedagogical CONTENT (courses, roadmaps, book lists)	channel limb 1: p200's 0 was the query
+p200 Spanish query (educacion IA agente escuela aprendizaje)	stars:>30	0	-	-	-	the 0 was the instrument, not the world
+same corpus, filtered to AI-education SOFTWARE of LATAM origin	stars:>10	0 in top 30	-	-	none found	substance limb 2: supply-side absence HOLDS

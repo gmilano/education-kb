@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14 — THE PERMISSIVE SHELF IS FOUR TIMES BIGGER THAN p200 SAID
+
+🔴 **p199 and p200 both published a sentence an engagement would plan around:**
+
+> *"the open LMS shelf is copyleft almost without exception, and there are **exactly two
+> permissive exits** — Kolibri (MIT) and OpenOLAT (Apache-2.0)."*
+
+🟢 **It is `Gap 449` in form — a claim whose scope was its own search.** p200 read the licences
+of eight platforms it already had. 🟢 **This pass enumerated the whole `topic:lms stars:>200`
+shelf (`32` rows), discarded the four homonyms, and read every unresolved licence from its own
+blob. The permissive exits number at least `9`.**
+
+| Repo | Licence *(blob, bytes)* | ★ | Branch | Origin → region | Why it is an exit |
+|---|---|---|---|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `1 097` B *(p200)* | — | `develop` | → **Global** | 🔵 p200's row, unchanged: the offline-first exit |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10 982` B | **447** | `master` | Switzerland → **EMEA** | 🔵 p200's row, re-read today. 🔴 **The API reports `NOASSERTION` for it** — a scanner would call it unlicensed |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** · `1 094` B | **404** | `main` | → **Global** | 🆕 🟢 **A full school-management platform — SIS *and* LMS — under MIT.** Laravel + Filament, `149` forks. **The permissive answer to RosarioSIS (GPL-2.0) and openSIS (GPL-2.0)** |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** · `1 062` B | **95** | `main` | Poland → **EMEA** | 🆕 🟢 **AI-native LMS with SCORM + xAPI and white-labelling, MIT** — built to replace Moodle/Docebo/Open edX rather than extend them |
+| [openfun/richie](https://github.com/openfun/richie) | 🟢 **MIT** · `1 079` B | **316** | `master` | France Université Numérique → **EMEA** | 🔵 Cycle-2 row, licence now from bytes: the **course catalogue/marketing CMS** that fronts Open edX or Moodle without inheriting their copyleft |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** · `1 072` B | **355** | `master` | → **Global** | 🆕 🟢 **A SCORM 1.2/2004 runtime, offline-first, in TypeScript.** The standards-compliance piece every LMS build needs and no LLM framework has |
+| [safytech/ulearn](https://github.com/safytech/ulearn) | 🟢 **MIT** · `1 066` B | **700** | `master` | → **Global** | 🆕 Laravel + React LMS, MIT, `700★` |
+| [netless-io/flat](https://github.com/netless-io/flat) | 🟢 **MIT** · `1 062` B | **6 439** | `main` | Agora → **APAC** | 🆕 🟢 **The synchronous classroom: Web, Windows and macOS clients, whiteboard, cloud recording.** `6 439★`, MIT |
+| [OpenVidu/openvidu](https://github.com/OpenVidu/openvidu) | 🟢 **Apache-2.0** · `11 357` B | **2 136** | `master` | Spain → **EMEA** | 🆕 Self-hosted real-time video on LiveKit + mediasoup; its own topics now include `ai-agents` |
+| [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT** · `1 145` B | **437** | `main` | UIUC → **North America** | 🆕 Django course platform with grading and code homework. 🔴 **API: `NOASSERTION`; its `LICENSE` carries the MIT grant with no title line at all** |
+
+🟢 **Read across it: a studio building a closed-source education deliverable now has a
+permissive option at every layer** — classroom (`flat`, `OpenVidu`), LMS (`mentingo`, `ulearn`,
+`academico`), catalogue (`richie`), standards (`scorm-again`), offline (`Kolibri`), grading
+(`Artemis` MIT, `Submitty` BSD-3 — see [`agents/top.md`](../agents/top.md)). 🔵 **That was not
+true of this KB's pages an hour ago.**
+
+### 🔴 The copyleft layer is bigger too — and the modern LMS is AGPL, not GPL
+
+🟢 Every licence here read from its own blob this pass:
+
+| Repo | Licence *(blob, bytes)* | ★ | Branch | Consequence |
+|---|---|---|---|---|
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · `33 893` B | **3 312** | 🔵 `develop` | Network copyleft reaches a hosted deliverable |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** · `34 523` B | **2 377** | 🔵 `dev` | Markets itself as *"ai-powered"*; AGPL |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** · `34 523` B | **1 717** | `main` | — |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** · `34 143` B | **1 274** | `main` | — |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · `34 523` B | **1 127** | 🔵 `release` | The Open edX distribution — AGPL on top of AGPL |
+| [claroline/Claroline](https://github.com/claroline/Claroline) | 🔴 **AGPL-3.0** · `34 616` B | **350** | 🔵 `15.0` | 🔴 **API said `NOASSERTION`.** Default branch is a version number |
+| [elmsln/elmsln](https://github.com/elmsln/elmsln) | 🔴 **GPL-3.0** · `35 193` B | **253** | `master` | 🔵 `35 193` B — **outside p200's `35 146`–`35 149` GPL-3.0 band** |
+| [xiaochong0302/course-tencent-cloud](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 **GPL-2.0** · `18 092` B | **1 173** | 🔵 `v2` | APAC MOOC platform |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15 214` B | **646** | 🔵 `mobile` | SIS with heavy LATAM/francophone adoption |
+| [gazpachu/hypatia](https://github.com/gazpachu/hypatia) | 🔴 **GPL-2.0** · `19 350` B | **651** | `master` | 🔴 API `NOASSERTION`; **last push `2023-02-15`** — dormant |
+
+🔴 **The generalisation worth carrying into a SOW: the LMS layer built since ~2020 is AGPL-3.0,
+not GPL-3.0.** Moodle, Chamilo, ILIAS and H5P are plain GPL; `frappe/lms`, `learnhouse`,
+`classroomio`, `courselit`, `tutor` and `Claroline` are **AGPL** — network copyleft, which
+reaches a SaaS deliverable the way plain GPL does not. **The newer the platform, the stronger the
+copyleft.**
+
+### 🔴 The API's licence field, measured on a real shelf
+
+🟢 **A number this KB has never had.** Over the `32` rows of `topic:lms stars:>200`:
+
+| channel | rows resolved | share |
+|---|---|---|
+| GitHub REST `license.spdx_id` | **23** | `72`% |
+| 🟢 **+ blob read** *(`NOASSERTION` rows: `6`/`6` resolved)* | **29** | 🟢 **`91`%** |
+| 🔴 **unresolvable — no grant on ANY channel** | **3** | `9`% |
+
+🔴 **The three ungranted rows carry `1 068★` between them:**
+[`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) (`505★`),
+[`LMS-Laravel/OLD-LMS-Laravel`](https://github.com/LMS-Laravel/OLD-LMS-Laravel) (`288★`) and
+[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) (`275★`). **No blob at `10`
+path forms, and for LearnPress not even a `License:` line in its WordPress plugin header** —
+the one channel a WP plugin normally declares in. 🟡 *(A plugin distributed on wordpress.org must
+be GPL-compatible by that directory's rules; the repository itself declares nothing, and a rule
+about a distribution channel is not a grant in the source.)* 🔵 **`NOASSERTION` means *GitHub
+could not match the text*, not *there is no licence* — `6`/`6` of those rows had a readable grant.
+*Missing field* is the one that means what it says.**
+
+### 🟢 `ACTION OH` DISCHARGED, LIMB 1 — and the same path form closes `ACTION OM`
+
+🟢 **Lowercase `license.txt` resolves, and so does a non-root path.** Measured:
+`frappe/erpnext` → `license.txt` (`35 149` B) · `chamilo/chamilo-lms` → **a second file** at
+`license.txt` (`1 614` B) · `polimediaupv/paella` → `license.txt` (`9 915` B) ·
+`OS4ED/openSIS-Classic` → `docs/License.txt` (`17 286` B, UTF-8 BOM intact). 🔵 Every byte figure
+agrees with p200's.
+
+🟢 **`ACTION OM` DISCHARGED, LIMB 1 — `paella`'s grant EXISTS.** p200 declared it *"declared,
+ungranted"* after `404`s at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license` and `COPYING`
+across three branches. 🔴 **It never tried lowercase `license.txt` — the path form it had
+discovered on `erpnext` in the same pass.**
+
+| | |
+|---|---|
+| path | `license.txt` on `develop` |
+| bytes | **`9 915`** |
+| title line | **`Educational Community License, Version 2.0 (ECL-2.0)`** |
+| § 3 education narrowing | 🟢 present, line `7` |
+| [`polimediaupv/paella-core`](https://github.com/polimediaupv/paella-core) | 🟢 **byte-identical** — same `sha256` (`15efd2f640ed…`) |
+
+🔴 **The lesson is about a correction that failed to travel *inside a single pass*:** p200 found
+the lowercase form, published it, and still left an unrelated row marked ungranted. 🟢 **A path
+vocabulary is a shared instrument** — [`compose/code/lib/licence_path.sh`](../compose/code/lib/),
+whose suite passes `33`/`33` here — **not a per-row habit.** Committed as
+[`evidence/paella-grant-found.2026-10-14-p201.tsv`](../evidence/paella-grant-found.2026-10-14-p201.tsv).
+
+### 🔵 `ECL-2.0` byte figures do NOT identify the family
+
+🟢 Four ECL-2.0 blobs now read across two passes: `sakai` `11 120` B, `opencast` `11 340` B,
+`Hilary` `12 322` B, **`paella`/`paella-core` `9 915` B**. 🔴 **A `2 407`-byte spread on one
+licence.** 🔵 And the copyleft bands are tighter than they look safe: GPL-3.0 spans
+`35 146`–`35 193` and AGPL-3.0 spans `33 893`–`35 136` over `19` blobs — **a `10`-byte gap
+between the two families at their closest.** 🟢 **Bytes are an integrity check on one blob, never
+a family test.** The title line is the test.
+
+### 🆕 🔴 Chamilo is GPL-3.0-**or-later**, and the text it points at is a `404`
+
+🟢 Chamilo's own `license.txt` (`1 614` B, read this pass) says, in the project's words:
+
+> *"This program is free software: you can redistribute it and/or modify it under the terms of
+> the GNU General Public License as published by the Free Software Foundation, **either version 3
+> of the License, or (at your option) any later version**."*
+
+🔴 **This KB has published `GPL-3.0` for Chamilo since cycle 3; the project declares
+`GPL-3.0-or-later`.** 🔵 That is a real SPDX distinction — *-or-later* lets a licensee take the
+code under a future GPL, *-only* does not — **and it is invisible to the channel this KB uses**,
+because the full GPL text is identical either way. **The version policy lives in the project's
+notice, not in the licence.**
+
+🔴 **And the same notice points at `documentation/license.html` as *"the full license"* — which
+returns `404` on `master`.** 🟢 Harmless here *(the real text sits at `LICENSE`, `35 147` B)*,
+but it is a dangling grant reference in the file a licensee is told to read.
+
+🔵 **`20` foundational repos with a licence read from source this pass** — `10` permissive exits,
+`10` copyleft platforms — far above the 5-row bar.
+
+
 ## Pass 200 — 2026-10-14 — ECL-2.0: EDUCATION HAS ITS OWN LICENCE AND THIS KB HAD NEVER NAMED IT
 
 🆕 🟢 **The single most consequential thing found this pass is a licence family, not a repo.**

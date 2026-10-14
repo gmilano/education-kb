@@ -1,0 +1,7 @@
+slug	branch	path	http	bytes	title_line	education_scope_clause_line	sha256_first12	p200_verdict	p201_verdict
+polimediaupv/paella	develop	license.txt	200	9915	Educational Community License, Version 2.0 (ECL-2.0)	7	15efd2f640ed	declared, ungranted	GRANTED: ECL-2.0 read from own blob
+polimediaupv/paella-core	main	license.txt	200	9915	Educational Community License, Version 2.0 (ECL-2.0)	7	15efd2f640ed	not probed	GRANTED: byte-identical to paella
+polimediaupv/paella	develop	LICENSE	404	-	-	-	-	absent (p200 agrees)	absent
+polimediaupv/paella	develop	LICENSE.md	404	-	-	-	-	absent (p200 agrees)	absent
+polimediaupv/paella	develop	LICENSE.txt	404	-	-	-	-	absent (p200 agrees)	absent
+polimediaupv/paella	develop	COPYING	404	-	-	-	-	absent (p200 agrees)	absent

@@ -1,0 +1,9 @@
+suite	invocation	result	checks	failures
+compose/code/lib/test_license_family.sh	bash	PASS	207	0
+compose/code/lib/test_probe_payload.sh	bash	PASS	12	0
+compose/code/lib/measure --self-test	bash	PASS	27	0
+compose/code/lib/test_licence_path.sh	bash	PASS	33	0
+compose/code/lib/test_reqname.sh	bash	PASS	22	0
+compose/code/lib/test_licence_identity.py	python3 -I	PASS	47	0
+compose/code/lib/test_region.py	python3 -I	PASS	79	0
+TOTAL	-	PASS	427	0

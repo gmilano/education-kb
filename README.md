@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 201 — 2026-10-14
+
+### 🔴 First: p200's most actionable sentence sent a studio to build something five universities maintain
+
+p200 published — and a reader would have budgeted from it:
+
+> *"Open source has no grading shelf. **If AI Studios sells agentic grading, AI Studios builds it.**"*
+
+🟢 **`topic:autograding stars:>20` returns `16` repositories, `3 439★` across the top eight, and
+five of them are permissively licensed and university-maintained:**
+
+| repo | licence *(blob)* | ★ | who runs it |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | **818** | TU Munich — 🟢 **and it already does gen-AI feedback** |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** | **808** | Carnegie Mellon |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | **803** | RPI — automated **and TA** grading |
+| [`okpy/ok`](https://github.com/okpy/ok) | 🟢 **Apache-2.0** | **370** | UC Berkeley CS61A |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | **161** | UC Berkeley Data Science |
+
+🔴 **p200 searched for *"agentic grading"* — the phrasing of the current technology wave. The
+field has said `autograding` for a decade.** `Gap 451`: `Gap 445` *(an instrument's reach
+published as a property of the world)* reaching a **build-versus-buy recommendation**, which is
+the most expensive form it has taken.
+
+🟢 **The corrected advice: extend `Artemis` (MIT) or `Submitty` (BSD-3). The genuine white space
+is narrow and real — LLM free-text grading with an audit trail — and it is roughly one-tenth the
+work p200 implied.** `P201-1` in [`compose/patterns.md`](compose/patterns.md).
+
+### 🟢 `ACTION ON` answered, and the twelve-pass block was the reader
+
+🔴 p198 and p200 recorded `bash <KB script>` as denied `[Code from External]`; p200 concluded
+*"`~300` suites that no pass in this configuration can execute."* 🟢 **Every suite ran this pass:**
+
+| | checks | failures |
+|---|---|---|
+| `test_license_family.sh` · `test_probe_payload.sh` · `measure --self-test` · `test_licence_path.sh` · `test_reqname.sh` · `test_licence_identity.py` · `test_region.py` | 🟢 **427** | 🟢 **0** |
+
+🟢 **`p74`'s pre-registered action — *"the first pass with network must run
+`test_probe_payload.sh`"* — is DISCHARGED on its fifth pass with network (`12`/`12`).** 🔵 **p198's
+reading was the right one: the denial is session-scoped.** p197 ran it, p198 and p200 could not,
+p201 can. 🔴 **So it is a per-session coin toss, and a pass must MEASURE it rather than inherit
+the previous answer** — `ACTION OT`. **The human ask is withdrawn.**
+
+### 🔴 `ACTION OI`: the fix it asked for was unnecessary, and the real defect is four passes old
+
+🟢 **The shared `family_of` in [`compose/code/lib/license_family.sh`](compose/code/lib/) was run
+over all `65` licence blobs read this pass. It is right `65`/`65`** — including the five GPL-3.0
+rows a naive detector calls AGPL, every AGPL row, both `ECL-2.0` rows, four `GPL-2.0` rows, and
+`leemons`' non-OSI **`FAIRCODE`**. 🔴 **p200 did not need to fix the classifier; it needed to use
+it.** `P237`, fourth recorded recurrence — *the correction lives in the hardened instrument, and
+a pass that writes its own re-earns the defect.*
+
+🔴 **And p200's own discriminator has an unstated unit:** *"count of `affero` = `15`"* is the
+**line** count; the **occurrence** count is `16`, on all three AGPL blobs. 🔴 **The count is also
+not a threshold — `human-skill-tree` is genuinely AGPL-3.0 with a count of `4`**, because its
+notice is a `1 134` B header, not the full text. 🟢 **The title line separated all `19` copyleft
+blobs with no exceptions.** 🟢 **p200's eight byte figures, re-measured independently: `8`/`8`
+exact** — p200 is vindicated on bytes and corrected on the unit.
+
+### 🟢 What discovery and the blob channel found
+
+- 🟢 **`ACTION OM` closed: `paella`'s grant EXISTS** — `license.txt` on `develop`, `9 915` B,
+  `ECL-2.0` with the § 3 education narrowing on line `7`; `paella-core` byte-identical. 🔴 **p200
+  declared it *"declared, ungranted"* after probing five capitalised forms — in the same pass in
+  which it discovered the lowercase form on `erpnext`.** `Gap 454`: a correction that failed to
+  travel inside one pass. 🟢 Now a committed instrument:
+  [`compose/code/p201-licence-channel/`](compose/code/p201-licence-channel/) *(12/12 offline
+  checks)*.
+- 🟢 **The permissive shelf is `9` exits, not `2`.** p199/p200 published *"exactly two permissive
+  exits — Kolibri and OpenOLAT."* 🆕 Read from blobs today: `academico` (**MIT**, `404★`, a full
+  SIS+LMS), `mentingo` (**MIT**, `95★`, AI-native LMS), `ulearn` (**MIT**, `700★`), `richie`
+  (**MIT**, `316★`), `scorm-again` (**MIT**, `355★`), `flat` (**MIT**, `6 439★`), `OpenVidu`
+  (**Apache-2.0**, `2 136★`). 🔵 `Gap 449` for the second consecutive pass: **a superlative claim
+  must carry its denominator or not be published.**
+- 🔴 **The modern LMS layer is AGPL, not GPL** — `frappe/lms`, `learnhouse`, `classroomio`,
+  `courselit`, `tutor`, `Claroline`, against plain GPL-3.0 for Moodle/Chamilo/ILIAS/H5P. **With
+  `71`% cloud deployment, AGPL plus SaaS is the one combination that can compel disclosure to a
+  client's end users.** That sentence decides more architecture than any market figure here.
+- 🔴 **`leemonade/leemons` (`291★`) is a non-OSI *"Fair Code License v1.0"*** on an LMS that
+  presents as open source — the `n8n` pattern arriving in education. 🔴 **And `3` rows of the
+  `topic:lms` shelf (`1 068★`) grant nothing on any channel**, `LearnPress` (`275★`) not even in
+  its WordPress plugin header.
+- 🆕 🟡 **The grant is leaving the licence file**, in three shapes: split scope inside one notice
+  — 🔴 **`pupilfirst` and `leemons` open with the SAME sentence verbatim and end in MIT and Fair
+  Code respectively**; version policy only in the project's notice — 🆕 **Chamilo is
+  `GPL-3.0-**or-later`**, which this KB has published as plain `GPL-3.0` since cycle 3**; and the
+  grant at a path no scanner probes. `Gap 456`.
+- 🟢 **`Study-Mate` resolved** *(p200: UNRESOLVABLE, *"names without owners"*)* →
+  [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate), **MIT**, `951★`. And
+  [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is at **`41 386★`** *(cycle 3:
+  `~24k★`)*, Apache-2.0 from its blob.
+- 🆕 🟢 **The tutor shelf's architecture is settling, and it pulls pedagogy OUT of the model:**
+  `Smart-Study-Agent` (**MIT**) states it as a rule — *"RL picks the action, FSRS picks the
+  timing, the LLM only writes the quizzes"* — while `tutor-mcp` (**MIT**, Go) puts **Bayesian
+  Knowledge Tracing behind an MCP tool call** and `anki-mcp-server` (**MIT**, `515★`) does the
+  same for spaced repetition. 🟢 **Easier to audit under a high-risk regime, and better pedagogy.**
+- 🔴 **`topic:` is not a taxonomy.** `4` of `32` `topic:lms` rows are not education — two Lyrion
+  Music Server projects, a colour-space library and a mis-tagged coding agent — **and by stars
+  the noise (`28 473★`) outweighs every real row.** `Gap 455`, `ACTION OO`.
+
+### 🟢 Market and regions — with the contradictions published rather than smoothed
+
+- 🔴 **Four 2026 market estimates, three 2025 bases and CAGRs of `25.9`% and `40.9`% for the
+  same market.** 🟢 **Quote the range `$6.4B`–`$12.3B` and the disagreement, and ask whether the
+  estimate includes corporate L&D** — that question is where the gap hides. 🆕 **Provenance
+  drift caught: the `$10.6B` figure this KB attributes to Research and Markets reads this pass
+  as The Business Research Company's.**
+- 🔴 **`Gap 457`: the regional figures do not reconcile with the global ones** — North America at
+  `36`% share implies `~$3.8B` against the same aggregator's `$951M`; *"Rest of Latin America"*
+  is `$18.2M` against this KB's carried `$4.2B`. **A `4`× and a `230`× contradiction. Quote
+  neither.**
+- 🟢 **Quote adoption instead, and it is reproduced in three regions:** student use `66`%→`92`%
+  against **`10`%** of institutions with formal guidelines and `71`% of US teachers untrained;
+  LATAM **`87`% use / `26`% strategy** (UNESCO IESALC + UNU-IAS, `200` institutions, `19`
+  countries); APAC **`87`% encourage agents / `47`% govern them**. 🟢 **The `60`–`82`-point
+  governance gap is the most reliably reproduced finding in this KB, and it IS the engagement.**
+- 🟢 **LATAM, corrected and strengthened:** p200's *"a Spanish-language search returned zero"* was
+  its query — the same corpus at `stars:>10` returns **`1 437`**. 🔴 **But none of the top `30` is
+  AI-education software of LATAM origin.** 🟢 **The durable statement: LATAM's open-source
+  education output is CORPUS, not PLATFORM — `~60 000★` of Spanish/Portuguese curriculum nobody
+  has wired to an agent**, which is the region's real first-mover position (`P201-2`). 🆕 Plus
+  [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (**MIT**, `1 808★`), the
+  first LATAM-origin agent-infrastructure row this KB has held.
+- 🔴 **Declared gaps, measured not assumed:** **no** education-specific EMEA adoption figure or
+  named buyer for 2026 *(the only European education-policy item found is a Council of Europe
+  conference from **October 2024**)*; **no** new education-specific APAC regulation beyond
+  Vietnam's Law `134/2025/QH15` *(whose in-force date is still published as both `2026-03-01` and
+  `2027-03-01`)*; **no** MEA education regulation or adoption data, again; and the EU AI Act dates
+  remain secondhand because `digital-strategy.ec.europa.eu` **does not resolve from this session**.
+- 🔴 **`0` of the `23` agent-skill tutors read this pass is North American or LATAM in origin.**
+  **`15` APAC, `4` EMEA, `3` Global.** The West buys this layer; it does not build it.
+
+### 🔴 The one ask that remains for a human
+
+🔴 **`ACTION MN` *(fourteenth pass)* — may this KB open licensing issues on third-party
+repositories?** **Still NOT RUN, and correctly so: an outward-facing write on other people's
+repositories, on an unattended run.** 🆕 Queue gains `LMS-Laravel/LMS-Laravel` (`505★`) and
+`LearnPress/learnpress` (`275★`), both with no grant at `15` path forms. 🟢 **And it LOSES one:
+`polimediaupv/paella` was never a question for a maintainer — it was a question for the probe.**
+
+
 ## Pass 200 — 2026-10-14
 
 ### 🆕 🟢 First: a capability this KB believed it did not have, for fifteen passes

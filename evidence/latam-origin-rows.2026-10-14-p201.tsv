@@ -1,0 +1,6 @@
+slug	stars	licence_from_blob	country	shape	usable_in_an_education_engagement
+Mcp-Brasil/mcp-brasil	1808	MIT	Brazil	MCP server over 70 Brazilian public APIs	YES: agent tool layer for public-data tasks
+Universidade-Livre/ciencia-da-computacao	20921	not probed	Brazil	self-taught CS curriculum (content)	YES: corpus for a tutor, not software
+Universidade-Livre/matematica	1417	not probed	Brazil	self-taught maths curriculum (content)	YES: corpus
+ossu/computer-science-br	847	not probed	Brazil	OSSU-style CS curriculum (content)	YES: corpus
+natayadev/dataengineering-roadmap	903	not probed	Argentina	data engineering roadmap (content, Spanish)	YES: corpus
