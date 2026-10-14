@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🆕 🔴 **The agent surface this KB spent two passes proving ABSENT exists, and the row it
+produces is a trade, not a win: the build cost halves and the licence cost rises.**
+🟢 Plus one published licence verdict REFUTED on this page's own terms, and a view-only
+licence that inverts `MIT`'s verb list word for word.
+
+### 🆕 🔴 `ACTION NB` — the Open edX MCP server exists. p188's "no server exists" is RETIRED
+
+| field | measured, every byte over `raw.githubusercontent.com/<slug>/HEAD/<path>` with the HTTP code checked |
+|---|---|
+| repo | 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `v0.2.0` |
+| licence | 🔴 **`AGPL-3.0`** — `LICENSE` `34 524` B, `200`, *"GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007"*; corroborated by `pyproject.toml` `license = { text = "AGPL-3.0" }` and the README badge |
+| stars | 🔴 **`1`** |
+| default branch | 🔴 `master` — `main` returns `404` on every path, so a `main`/`master` guess misses this repo entirely |
+| what it is | a Tutor plugin, **two** artefacts: it installs the `openedx-mcp` Django app into the LMS/CMS image *(a REST facade at `/api/mcp/` and `/api/mcp/cms/`)*, and runs a standalone `openedxmcp` container — an MCP streamable-http server proxying to that facade, fronted by Caddy at `mcp.<LMS_HOST>` |
+| LMS tools | README, verbatim: *"people, enroll, analytics, certs, **retire**"* |
+| CMS tools | verbatim: *"course authoring, modulestore"* |
+| auth | verbatim: *"The MCP server holds no secrets: each request carries its own MCP key, forwarded to the facade as `X-MCP-Key`. Authorization is enforced by the facade (`is_staff`/`is_superuser`, live)."* Keys minted in Django admin |
+| 🔴 exposure | the README states `/health` is **unauthenticated** |
+
+🔵 **The absence was a channel artefact in three ways at once**, and that is the method
+lesson worth more than the row: the repository is **not** tagged `open-edx`, **not** tagged
+`mcp`, **not** tagged `mcp-server`, and does **not** match a quoted search for
+`"edx-platform"` — which returned, verbatim, *"Your search did not match any
+repositories"*. It is invisible to every channel p188 used and visible to an unquoted
+repository search. 🟢 p188's reading of the OFFICIAL client's documentation
+*("will never expose MCP server functionality")* stays true **of the official client**. The
+community built one anyway.
+
+🔴 **Why finding it is not straightforwardly good news.** Pattern `33`'s Open edX row drops
+from `8`–`10` weeks to **`4`–`6`**: the integration no longer has to be written, only
+reviewed, keyed and deployed. **But it is `AGPL-3.0` and `1`★, so for a studio that intends
+to EXTEND the server the copyleft reaches the extension.** 🔵 **The permissive route to an
+Open edX agent surface still does not exist** — which is what `Gap 427` should have been
+asking. It is re-stated that way, not closed.
+
+🔴 **And it connects to this pass's trend.** The LMS tool list includes **`retire`** — a
+learner-record deletion tool, agent-callable with one MCP key, authorised only by
+`is_staff`. `ACTION NA` proved the LRS API **refuses** to overwrite a statement *(`409`,
+enforced in code)*. This is the same artefact class reached from the other side of the
+stack with **no such refusal**. 🔵 The defect p188 named now has an agent-reachable
+trigger, named in a README, with a bus factor of one.
+
+### 🔴 AMENDED — `openedx/XBlock`. This page's own `NO_LICENCE_FILE` verdict is REFUTED
+
+| what this KB published | what the bytes say |
+|---|---|
+| 🔴 **`NO_LICENCE_FILE`** · *"Apache-2.0 ASSERTED — and no licence TEXT anywhere in the tree"* · *"Usable, but the grant is a NOTICE not a LICENSE"* | 🟢 **`LICENSE.TXT`, `11 358` B, HTTP `200`, verbatim Apache-2.0** *(tokens: "Apache License", "Version 2.0", "TERMS AND CONDITIONS")* |
+
+🔴 **Cause: path CASE.** `raw.githubusercontent.com` is case-sensitive and this KB's path
+list spells the extension lower-case. `LICENSE` · `LICENSE.txt` · `LICENSE.md` · `COPYING`
+all return `404`; `LICENSE.TXT` returns the licence. 🔵 **A path list that spells the
+extension in one case has not looked for the file — it has looked for one spelling of it.**
+
+🟢 **The row upgrades to clean `Apache-2.0`, and it matters more than most corrections**:
+`XBlock` is the permissive entry point this KB recommends into `AGPL` Open edX, so the
+caveat the wrong verdict forced onto every engagement using it was never real.
+
+🟢 **The honest half: the miss was ISOLATED.** New instrument
+[`P1057`](compose/code/p1057-licence-path-case/README.md) *(`16`/`16` tests)*, swept `16`
+case variants × `14` grant-absent rows = **`224` probes, `0` further grants**. Every other
+grant-absent verdict on these pages survives.
+
+### 🔴 `ACTION MZ` — the licence column, and what `NOT-MIT-BODY` was really hiding
+
+🟢 **`LIMB 2` FIRES.** `P1056` *(unmodified, its own suite re-run: `16`/`16`)* over **`64`
+repositories / `119` reads** — every row published as `Apache-2.0`, `BSD` or `ISC`, plus the
+`13` `NOT-MIT-BODY` rows: 🟢 **`0` further split-scope rows.** The shape is `MIT`-specific
+so far and `P1056` stays an intake check, not a column-wide audit.
+
+🔴 **But the `13` `NOT-MIT-BODY` rows resolve into FOUR unrelated things, and none is the
+split-scope shape p188 feared.** The verdict needs splitting, not widening:
+
+| row | file | bytes | what the bytes actually are |
+|---|---|---|---|
+| 🔴 [`shuyunyuan/talentcoach`](https://github.com/shuyunyuan/talentcoach) | `LICENSE` | `842` | 🔴 **VIEW-ONLY, and the most restrictive shape yet in this KB.** *"published for portfolio and code-review purposes only. Viewing the source on GitHub is permitted; no other rights are granted."* It then **negates `MIT`'s verb list item by item** — *"used, copied, modified, merged, published, distributed, sublicensed, sold"* — while carrying `MIT`'s **warranty paragraph verbatim**, which is why a vocabulary probe can mistake it for `MIT`-adjacent. **Unusable.** `Gap 421`'s fifth sub-`1`kB shape |
+| 🟢 [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | `LICENSE` | `47` | 🟢 **A COMPLETE `MIT` grant, and the `47` bytes are CORRECT.** `DESCRIPTION` *(`1 549` B, `200`)*: *"License: MIT + file LICENSE"*, `writeAlizer` `v1.7.4`. Under R/CRAN convention the grant lives in the manifest and `LICENSE` carries only the YEAR and HOLDER that `MIT` requires. Independently reproduces p185 |
+| 🔴 [`MoKangMedical/digital-sage`](https://github.com/MoKangMedical/digital-sage) | `LICENSE` | `46` | 🔴 **NOT a grant.** The whole file is `MIT License` + `Copyright (c) 2026 MoKangMedical`. No permission clause |
+| 🟡 [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) | `LICENSE.txt` | `35 200` | 🟢 **`GPL-3.0`** — *"GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"*. This KB publishes it as `GPL` and is right; the **version** can now be published too. 🔴 Its *"GNU Affero"* token is `GPL-3`'s own §13 cross-reference, **not** an `AGPL` grant |
+| 🟢 `ashutoshrana/haystack-ferpa-filter` · `bigdata-ustc/edudata` · `myvipbackup2/china-k12-teacher-skills` | `LICENSE` | `12 101` · `11 346` · `11 359` | 🟢 `Apache-2.0`, confirmed by token |
+| 🟡 `ink-waffle/sisu-mcp` · `simon-initiative/lti-example-tool` · `dmontgomery40/mcp-canvas-lms` | — | `0` | `MIT` in `package.json` only — `P971` |
+| 🔴 `crevextech/canvas-lms-mcp` · `educredentials/ec-issuer` | — | `0` | no licence file **and** no manifest licence |
+
+🆕 🔵 **The distinction worth keeping, because both files are ~`46` B and size cannot
+separate them:** a sub-`100` B `LICENSE` naming only **year and holder** inside an R package
+is a **complete** grant *(`writeAlizer`)*; the same size naming a **licence and no body** is
+**incomplete** *(`digital-sage`)*. The packaging convention decides, not the byte count.
+🟢 New channel for this KB: **R/CRAN `DESCRIPTION` `License:`** — a fifth manifest channel
+beside `package.json`, `pyproject.toml`, `pom.xml` and `composer.json`.
+
+🆕 🔴 **A noise mechanism for `P1056`, named because it would have become wrong data.**
+[`Bbar0n234/learnflow-ai`](https://github.com/Bbar0n234/learnflow-ai)'s README carries
+`CC BY-SA 4.0` — but as **third-party data attribution**: *"This product includes IP
+geolocation data by IPinfo, licensed under CC BY-SA 4.0."* A dependency's attribution notice
+is shaped exactly like a content-half grant. `P1056` returns the weaker verdict and
+`permissive_body=False`, so it does not mis-publish. 🟢 **Rule: a CC identifier beside a
+named THIRD PARTY is an attribution, not a scope split.**
+
+### 🟢 Method: the `/HEAD/` ref retires a guess this KB has been making
+
+🟢 `raw.githubusercontent.com/<owner>/<repo>/**HEAD**/<path>` **resolves the default
+branch** *(verified `200` on `blend-ed/tutor-contrib-openedxmcp`, whose default is `master`,
+and on `HKUDS/DeepTutor`)*. Earlier passes probed `main` **and** `master` and published
+verdicts like *"no licence file at `10` paths"* on top of a branch guess. 🔵 `HEAD` removes
+the guess and halves the probe cost. Every one of p189's `880`+ fetches uses it.
+
+Evidence: [`openedx-mcp-server`](evidence/openedx-mcp-server.2026-10-14-p189.tsv) ·
+[`split-scope-sweep`](evidence/split-scope-sweep.2026-10-14-p189.tsv) ·
+[`licence-path-case`](evidence/licence-path-case.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🆕 🟢 **A new licence shape enters this KB, and it is the one this vertical was always

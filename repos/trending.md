@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: `0` education repositories — an ELEVENTH consecutive pass.**
+🔵 Eleven is no longer evidence about education; it is evidence about the trending page.
+The supply is real and measurable *(`12` new slugs in `28` minutes, below)* and it never
+trends. 🟢 **Read this channel as a control that keeps returning `0`, not as a source.**
+
+### 🆕 🟢 The intake channel, measured instead of described
+
+🟢 **For the first time this KB knows what its topic channel supplies per pass.** The same
+`12` pages at `?s=updated`, re-read `28` minutes after p188 *(commit timestamps: p188
+`03:19:21`Z, p189 `03:47`Z)*:
+
+| measure | value |
+|---|---|
+| rows rendered | `239` *(`learning-analytics` served `19`, not `20` — recorded, not explained)* |
+| rows unchanged | `225` |
+| 🆕 **new unique slugs** | 🟢 **`12`** |
+| 🆕 of those, absent from this KB | 🟢 **`10` = `83`%** |
+| churn | **`5.9`%** |
+
+| the `12` new slugs | in KB |
+|---|---|
+| `ImpactMojo/ImpactMojo` · `KaioFelps/lti-consumer-poc` · `mindattic/Tutor` · `nagelligowtham53-ops/nexoras-online` · `nguyenminh121/eLMS` · `Ruslan-Nazarov/papanda` · `SawyerFlynn9246/stable-edtech-ab-assignment-java` · `uaiblaine/moodle-block_compass` · `uaiblaine/moodle-block_feedback_tracker` · `yaobaoda/edtech-asset-pipeline-go` | 🔴 absent |
+| `LearnPress/learnpress` · `Vacademy-io/vacademy_platform` | 🟢 present |
+
+🔵 **And the window is concentrated:** `edtech` moved `6` rows and `lms` moved `4`, while
+🟢 **seven of twelve pages moved ZERO rows in half an hour** *(`adaptive-learning`,
+`ferpa`, `learning-analytics`, `mooc`, `open-badges`, `scorm`,
+`student-information-system`)*. 🟢 **A pass re-reading all twelve every time spends most of
+its budget on pages that cannot have changed.** `moodle` moved `2`, `e-learning` and `lti`
+`1` each.
+
+🟢 **Cache control, because the result would be worthless without it:** the fetch channel
+caches `15` minutes per URL and the interval was `28`, so the reads are live — and four
+pages *did* change, so no page was served frozen.
+
+### 🔴 The figure this page must stop quoting
+
+🔴 **The "absent rate" is RETIRED as a measure of channel coverage.** `79`% (p187) →
+`67.5`% (p188) → **`60.3`% (p189)**. It fell `7.2` points in `28` minutes with only `14` of
+`239` rows changed, because **`14` rows flipped absent → present and every one is now cited
+in a KB page.** p188 ingested them; the slug index grew `1 993` → `2 025`. 🟢 **One quantity
+declining as the backlog clears, not three estimates in conflict. Nobody over-counted.**
+🔵 It is a backlog gauge. The **new-supply** rate above is the coverage measure.
+
+### 🆕 🔴 The week's repository, found by search because no topic carried it
+
+| row | licence | stars | note |
+|---|---|---|---|
+| 🆕 🔴 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `v0.2.0` | 🔴 **`AGPL-3.0`** *(`34 524` B, `200`)* | 🔴 `1` | 🟢 the first MCP server over Open edX this KB has found. 🔴 Not tagged `open-edx`, `mcp` **or** `mcp-server`; a quoted `"edx-platform"` + `mcp` search returned *"Your search did not match any repositories"*. 🔵 Invisible to three channels, visible to one unquoted repository search |
+
+🟢 **Method consequence for this page:** when an absence is asserted, say which channel
+established it. A topic page samples the **tagged** population; `Gap 427` was a tagging
+fact for two passes and was published as a fact about the world.
+
+Evidence: [`recency-churn`](evidence/recency-churn.2026-10-14-p189.tsv) ·
+[`openedx-mcp-server`](evidence/openedx-mcp-server.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

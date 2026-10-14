@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🆕 🔴 **The trend p188 named — nobody protects the durable record of a human decision about
+a learner — now has its mechanism measured on BOTH sides, and the result is sharper than the
+claim: one layer refuses the overwrite in code, the layer above it hands the deletion to an
+agent. The protection exists. It is in the wrong place.**
+
+### 🔴 Trend `1`, amended — the audit record: protected against the client, exposed to the operator and the agent
+
+| who tries to destroy the record | what stops them | measured |
+|---|---|---|
+| 🟢 an **xAPI client** re-writing a statement | 🟢 **`409 CONFLICT`, in code, both write paths** | [`openfun/ralph`](https://github.com/openfun/ralph): `PUT` *(lines `624`–`700`)* and `POST` *(via `_filter_existing_statements`)* deep-compare and **return before `BACKEND_CLIENT.write` is reached**. Source comment, verbatim: *"In the case that the current statement is not equivalent to one found in the database we return a 409, otherwise the usual 204."* 🟢 Append-only **by construction, not convention** |
+| 🔴 an **operator** with store credentials | 🔴 **nothing** | `BaseOperationType` declares `DELETE`/`UPDATE`; default `INDEX` overwrites at a specific id; `--es-op-type` exposes all four on the CLI *(p188)* |
+| 🆕 🔴 an **AI agent** holding one MCP key | 🔴 **nothing** | `tutor-contrib-openedxmcp`'s LMS tool list includes **`retire`**, authorised only by `is_staff`/`is_superuser`. 🔴 `/health` unauthenticated. `1`★, `AGPL-3.0` |
+
+🔵 **Why the amendment matters more than the original trend.** p188's claim was that the
+artefact is unprotected. It is not — at the API layer it is protected properly, and the
+protection is demonstrable in a single live `409` rather than argued. 🔴 **But the agent
+layer this KB has spent eleven passes mapping reaches the same artefact with no equivalent
+refusal, and it got there in the same pass the surface was discovered.** 🟢 **The trend is
+therefore: the agent layer is being built faster than the guarantees underneath it.** That
+is a sentence a client's DPO will recognise, and it prices as design work rather than fear.
+
+### 🆕 🔴 Trend `2`, new — the live prohibition everyone is reading past
+
+🔴 **Article `5(1)(f)` of the EU AI Act prohibits inferring emotions from biometric data in
+EDUCATION INSTITUTIONS, and has since `2` February `2025`.** The Digital Omnibus
+*(Regulation (EU) `2026/1744`)* delayed **high-risk** duties to `2027-12-02`; it did **not**
+delay **prohibitions**. Penalty ceiling: **EUR `35`M or `7`% of worldwide turnover.**
+
+🔵 **The trend is the MISREADING, not the rule.** Eight consecutive passes have found the
+un-amended high-risk date in circulation, and the attention it absorbs is the reason the
+prohibition goes unnoticed: the whole market is discussing a `2027` deadline while sitting
+on a `2025` one that carries the Act's maximum penalty.
+
+- 🟢 **Not caught:** behavioural engagement analytics that do **not** infer emotions. The
+  prohibition targets **emotion inference from biometric data**.
+- 🔴 **Explicitly unresolved:** proctoring, where the Commission's guidelines leave open
+  whether emotion inference as a **secondary** functionality is caught.
+- 🔵 **So the deliverable is a boundary, not a product.** Every proctoring and
+  engagement-analytics row in this KB now needs the same question asked before it is
+  recommended into an EU engagement.
+
+### 🟢 Trend `3`, strengthening — automatic grading is the surface that keeps getting regulated
+
+Four independent jurisdictions, four instruments, one target:
+
+| jurisdiction | instrument | what it does to automatic grading |
+|---|---|---|
+| 🔴 **Vietnam** | Decision `33/2026/QĐ-TTg` | 🔴 **automatic grading or ranking of students is HIGH-RISK by statute** — one of exactly three education entries in `46` systems |
+| 🆕 🔴 **Oklahoma** | district AI policy law | 🔴 **bars AI from being the main basis for high-stakes decisions about students** |
+| 🔴 **South Korea** | AI Basic Act, in force `2026-01-22` | names **education** among "high-impact AI" sectors; requires **human monitoring and intervention** |
+| 🟡 **EU** | AI Act Annex III | education high-risk from `2027-12-02` |
+
+🟢 **And the commercial counterpart, unchanged and corroborated:** the Digital Education
+Council LATAM Survey `2026` found faculty's **lowest** adoption is in **assessment**.
+🔵 **The one thing the market has not automated is the one thing four regulators have
+named.** That is not a coincidence to explain away — it is the engagement, and it is the
+same one in every region: make assessment defensible.
+
+### 🆕 🟢 Trend `4`, new — the credential is the only durable artefact, and it is migrating
+
+🟢 `topics/open-badges` is mid-migration from Open Badges `2.0` to **`OB 3.0` / W3C
+Verifiable Credentials**, and the licence split tracks the migration exactly:
+**permissive on the new side** *(`OB3DefinitionWidget`, `dcc-credential-co-writer-monorep`
+on the MIT-led Digital Credentials Consortium stack, `iblai/wallet`, `proven`,
+`signet-campus` — all `MIT`)*, **copyleft on the old** *(`obadgen` `AGPL-3.0`,
+`openbadgeslib` `LGPL`)*.
+
+🔵 **Connect it to Trend `1` and it stops being a standards story.** A verifiable credential
+is durable **by cryptography**; an xAPI statement is durable **by an application-layer
+`409`** that an operator or an agent can walk around. 🟢 **So the only artefact in this stack
+that survives its own platform is the credential** — and the permissive implementations are
+all on the new standard. 🔵 That is the architectural recommendation this trend produces.
+
+### 🟢 Trend `5` — governance is absent at a rate that makes the regulation academic
+
+| measure | value |
+|---|---|
+| 🔴 schools worldwide with AI guidance | 🔴 **`7`%** — and **`40`% of those informal only** |
+| 🟢 students saying assessment is already changing because of generative AI | 🟢 **`65`%** |
+| students saying AI is integrated in MANY courses | `15`% |
+
+🔵 **`7`% against `65`% is the whole market in two numbers**: the practice has changed, the
+governance has not, and four jurisdictions have started legislating the gap. 🟡 Figures are
+secondary-sourced *(a roundup updated `2026-10-07`; Digital Education Council Global Survey
+`2026`)*.
+
+### 🔴 A standing caveat this KB should state once per page instead of per claim
+
+🔴 **Every government primary source attempted this pass was unreachable** — `eur-lex`,
+the Council's document server, two Commission hosts, Saudi Arabia's state news agency —
+**while the secondary legal-commentary layer was fully reachable and
+`raw.githubusercontent.com` served every byte of code asked of it** *(`880`+ fetches, HTTP
+codes checked)*. 🔵 **So this KB reads CODE at primary fidelity and REGULATION at secondary
+fidelity, by construction.** That is not a flaw in any single claim; it is a property of the
+channel, and it belongs in the open once rather than re-argued per date.
+
+Evidence: [`ralph-append-only`](evidence/ralph-append-only.2026-10-14-p189.tsv) ·
+[`openedx-mcp-server`](evidence/openedx-mcp-server.2026-10-14-p189.tsv) ·
+[`eu-2026-1744-corroboration`](evidence/eu-2026-1744-corroboration.2026-10-14-p189.tsv) ·
+[`gulf-education-instruments`](evidence/gulf-education-instruments.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🆕 🔴 **The trend this pass can PROVE is that the durable record of a human decision about

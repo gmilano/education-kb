@@ -1,0 +1,50 @@
+# p189 — ACTION NC. Close the Gulf gap by naming the INSTITUTIONS instead of the region.
+# p188 declared: "no Gulf education-ministry AI policy found — nothing for Saudi Arabia,
+# the UAE, Qatar or Bahrain despite a query naming those ministries."
+#
+# LIMB 1 (>=1 dated instrument -> "EMEA" stops being answered as "EU" and the Gulf enters
+#         this KB)
+# LIMB 2 (0 -> record it as a CHANNEL limit, not a policy absence, and stop re-running the
+#         regional query)
+#
+# RESULT: LIMB 1 FIRES, THREE OF FOUR STATES. p188's gap was in the QUERY, not the world.
+# 🔴 All sources below are SECONDARY. Every primary host attempted this pass was blocked by
+# this session's egress allowlist (see the note at the end), so no government page was read
+# directly. Dates are reported, not verified against an official text.
+state	instrument	dated	what it does	source class
+Saudi Arabia	🟢 national AI curriculum across all public schools	🟢 launched in the 2025-26 academic year, ~6 million students	a taught SUBJECT, mandatory, in general education. Developed jointly by the National Centre for Curriculum, the Ministry of Education, the Ministry of Communications and Information Technology and 🟢 SDAIA	state news agency (SPA) report, relayed via search; spa.gov.sa itself BLOCKED here
+Saudi Arabia	🟢 a guide for using GENERATIVE AI in general education	issued by the Ministry of Education with SDAIA	🔵 this is the instrument a studio actually needs: it governs USE, not curriculum. Its text was not readable here	same
+UAE	🟢 AI as a mandatory subject, kindergarten to Grade 12, every government school	🟢 announced 2025-05-04 by the Vice President and Ruler of Dubai	from 2026/27 it is a STANDALONE subject, "Artificial Intelligence and Technology", in national-curriculum schools	Gulf News / Gulf Business
+UAE	🟢 a programme to train 22 000 teachers and educators to use AI as a support tool	reviewed by the UAE Cabinet	🔵 the teacher-capability half, which the Saudi and Qatari instruments do not quantify	Gulf Business
+UAE	Ministry of Education 2026-2027 teaching plan, public and private national-curriculum schools	🟡 2026-2027	AI provisions not itemised in what was readable	Gulf News
+Qatar	🟢 AI-Ready Schools implementation roadmap	🟢 2024	the Ministry of Education and Higher Education's own framework, cited to edu.gov.qa	peer-reviewed article, Quality in Higher Education (Taylor & Francis, 2025)
+Qatar	inter-ministerial AI Committee, chaired by MCIT, including the Ministry of Education and Higher Education	2021	governance venue, not an education instrument	same
+Qatar	🟡 ministry statement at the WISE summit, Doha	🟡 2026-05	Ministry representative Aisha Al Emadi: adoption is outpacing policy and teacher preparedness; calls for stronger regulatory frameworks and ethical guidelines. 🔵 A MINISTRY SAYING ITS OWN POLICY IS BEHIND is a sales opening, from their side of the table	Qatar Tribune / Gulf Times
+Bahrain	🔴 National Policy on Artificial Intelligence	2025-07	economy-wide, ethical innovation and digital transformation. 🔴 NO education-specific guidance found under it
+#
+# THE RESIDUAL, NOW PROPERLY SHAPED: Bahrain is the only one of the four with nothing
+# education-specific, and it is the only state where the named-institution probe returned
+# nothing. 🟢 That is a MEASURED absence from a targeted query, not the "no Gulf policy
+# anywhere" p188 recorded. Per limb 2's own instruction, the broad regional query is retired
+# for the Gulf; the remaining question is Bahrain's Ministry of Education alone, and it needs
+# an Arabic-language channel this session does not have.
+#
+# 🔵 WHAT CHANGES COMMERCIALLY: all three instruments that exist are about TEACHING AI
+# (curriculum, subjects, teacher training). Only ONE — Saudi Arabia's MoE/SDAIA generative-AI
+# guide — governs USING AI on learners. 🔴 So in the Gulf the regulated surface is still
+# mostly unregulated, while the procurement budget is curriculum and teacher training. A deck
+# pitched at "AI governance for schools" is aimed at the wrong line item here; a deck pitched
+# at curriculum delivery and teacher capability is aimed at the funded one. That inverts the
+# EMEA-as-EU posture, where Article 5 and Annex III are the whole conversation.
+#
+# 🔴 BLOCKED PRIMARY HOSTS, THIS PASS, PER P950 (not retried host by host):
+#   www.spa.gov.sa                    -> getaddrinfo ENOTFOUND   (Saudi state news agency)
+#   data.consilium.europa.eu          -> getaddrinfo ENOTFOUND   (Council of the EU)
+#   education.ec.europa.eu            -> getaddrinfo ENOTFOUND   (European Commission)
+#   ai-act-service-desk.ec.europa.eu  -> getaddrinfo ENOTFOUND   (Commission AI Act FAQ)
+#   www.actuia.com                    -> getaddrinfo ENOTFOUND
+# That is FIVE new blocked hosts, 14 known. 🔴 THE PATTERN IS THE FINDING: every GOVERNMENT
+# primary source attempted this pass was unreachable, while the secondary legal-commentary
+# layer was fully reachable, and raw.githubusercontent.com served every byte of code asked
+# of it. 🟢 So this KB reads CODE at primary fidelity and REGULATION at secondary fidelity,
+# by construction. State that once per page; do not re-litigate it per claim.

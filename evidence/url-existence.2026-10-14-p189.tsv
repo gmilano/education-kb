@@ -1,0 +1,43 @@
+# p189 — URL existence for every slug and link INTRODUCED by this pass's new sections.
+# Channel: git ls-remote https://github.com/<slug> HEAD. A 40-hex SHA is the proof of existence.
+# Extracted mechanically from the p189 sections of the 9 updated pages, so the list cannot
+# drift from what was published. 19 slugs, 0 failures.
+slug	verdict	head_sha
+Bbar0n234/learnflow-ai	EXISTS	983f7541177d
+MoKangMedical/digital-sage	EXISTS	978cabf91b8e
+MrPrinceAli/proven	EXISTS	3d0fe08389ba
+OpenOLAT/OpenOLAT	EXISTS	8494a140b2ca
+academico-sis/academico	EXISTS	d0cd78ca311f
+blend-ed/tutor-contrib-openedxmcp	EXISTS	4883f88018b5
+brody-0125/signet-campus	EXISTS	0592f537a1b3
+chamilo/chamilo-lms	EXISTS	efdaa67b8d38
+iblai/wallet	EXISTS	0be99d069568
+numbas/Numbas	EXISTS	c9b8462cf088
+oneorigin-2-0/dcc-credential-co-writer-monorep	EXISTS	7be74ba0f4ab
+openeducat/openeducat_erp	EXISTS	46a5d7d40082
+openedx/XBlock	EXISTS	948a3789a7f1
+openfun/ralph	EXISTS	91fef112394d
+opensalt/OB3DefinitionWidget	EXISTS	896596a4228b
+shmercer/writeAlizer	EXISTS	c0317f767554
+shuyunyuan/talentcoach	EXISTS	b450118a7e8a
+tsugiproject/tsugi	EXISTS	7628e6a73ec7
+valentineus/moodle-webhooks	EXISTS	272006335beb
+#
+# NON-GITHUB LINKS INTRODUCED THIS PASS:
+https://pypi.org/project/openedx-mcp/	EXISTS	HTTP 200 (the Django app, shipped separately from the Tutor plugin)
+#
+# BLOCKED HOSTS, this pass, per P950 (not retried host by host). 5 new, 14 known:
+www.spa.gov.sa	BLOCKED	getaddrinfo ENOTFOUND — Saudi state news agency
+data.consilium.europa.eu	BLOCKED	getaddrinfo ENOTFOUND — Council of the EU document server
+education.ec.europa.eu	BLOCKED	getaddrinfo ENOTFOUND — European Commission education portal
+ai-act-service-desk.ec.europa.eu	BLOCKED	getaddrinfo ENOTFOUND — Commission AI Act FAQ
+www.actuia.com	BLOCKED	getaddrinfo ENOTFOUND
+eur-lex.europa.eu	BLOCKED	curl HTTP 000 — reconfirmed from p188
+api.github.com	BLOCKED	HTTP 403 at the agent proxy — so GitHub metadata is unavailable this pass
+github.com (direct curl)	BLOCKED	HTTP 403 at the agent proxy — topic pages read via the rendering channel instead
+#
+# 🔴 THE PATTERN IS THE FINDING: every GOVERNMENT primary source attempted this pass was
+# unreachable, while the secondary legal-commentary layer was fully reachable and
+# raw.githubusercontent.com served every byte of code asked of it (880+ fetches, codes
+# checked). 🟢 This KB reads CODE at primary fidelity and REGULATION at secondary fidelity,
+# by construction. Gap 431.

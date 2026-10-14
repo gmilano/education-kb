@@ -1,0 +1,199 @@
+# p189 — ACTION MZ. P1056 (compose/code/p1056-split-scope-licence/split_scope.py,
+# UNMODIFIED, its own suite re-run here: PASS 16/16) over every row this KB publishes as
+# Apache-2.0, BSD or ISC, plus the 13 rows ACTION MW returned as NOT-MIT-BODY.
+#
+# Channel: raw.githubusercontent.com/<slug>/HEAD/<path>, HTTP code checked on every fetch.
+# 64 repositories. 10 paths probed each (LICENSE, LICENSE.txt, LICENSE.md, COPYING,
+# README.md, LICENSE-DATA, LICENSE-CONTENT, DATA-LICENSE, LICENSE-docs, LICENSE-CC-BY)
+# = 640 requests, 120 returned 200. P1056 was then run over 119 reads (licence file and
+# README for each repo that has them).
+#
+# LIMB 1 (>=1 further split-scope or restricted row -> NOT-MIT-BODY is a blind spot and
+#         the whole licence column needs the pass)
+# LIMB 2 (0 -> the shape is MIT-specific and P1056 stays an intake check)
+#
+# RESULT: LIMB 2 FIRES. 0 further split-scope rows in 119 reads across 64 repositories.
+# The only two SPLIT-SCOPE verdicts are p188's own two instances, both reproduced exactly.
+#
+verdict	count
+CC-PRESENT:scope-unstated	2
+SINGLE-SCOPE	115
+SPLIT-SCOPE:code-permissive-content-CC	2
+#
+# THE TWO SPLIT-SCOPE ROWS, REPRODUCED. Neither is new; both are p188's.
+#   ktwyw/python-for-engineers  LICENSE  1328 B  second=CC BY 4.0  nouns=cheatsheet;dataset;documentation;notebook;teaching material
+#   siskinskai/spedlex  README.md  13823 B  second=CC BY 4.0  nouns=docs;schema
+#   ktwyw/python-for-engineers ALSO reads as CC-PRESENT via its README ("Code is MIT;
+#   teaching materials are CC BY 4.0"), which is the same row through a second channel,
+#   not a second row. P1056 checks all three places by design, so this is expected.
+#
+# 🔴 A NOISE MECHANISM FOR P1056, NAMED HERE BECAUSE IT WOULD HAVE BECOME WRONG DATA:
+#   Bbar0n234/learnflow-ai, README.md 16 863 B -> CC-PRESENT:scope-unstated, CC BY-SA 4.0.
+#   The CC reference is THIRD-PARTY DATA ATTRIBUTION, not a grant on this repo's content:
+#     "This product includes IP geolocation data by IPinfo, licensed under CC BY-SA 4.0."
+#   A dependency's attribution notice is shaped exactly like a content-half grant. P1056
+#   returns the WEAKER verdict and permissive_body=False, so it does not mis-publish.
+#   🟢 Rule: a CC identifier beside a named THIRD PARTY is an attribution, not a scope split.
+#
+# THE 13 NOT-MIT-BODY ROWS NOW RESOLVE. p188 warned a NOT-MIT-BODY verdict is "not a clean
+# bill". Correct — but the thing it was hiding is not the split-scope shape. It is this:
+#
+#  slug                                  file          bytes   what the bytes actually are
+#  valentineus/moodle-webhooks           LICENSE.txt   35 200  GPL-3.0 FULL TEXT ("GNU GENERAL
+#      PUBLIC LICENSE / Version 3, 29 June 2007"). 🟢 This KB publishes it as "GPL" and is
+#      RIGHT; the version can now be published too. 🔴 Its "GNU Affero" token is GPL-3's own
+#      section 13 cross-reference, NOT an AGPL grant — do not re-read it as one.
+#  shuyunyuan/talentcoach                LICENSE          842  🔴 VIEW-ONLY. "published for
+#      portfolio and code-review purposes only. Viewing the source on GitHub is permitted;
+#      no other rights are granted." It then negates MIT's verb list item by item (used,
+#      copied, modified, merged, published, distributed, sublicensed, sold) while carrying
+#      MIT's WARRANTY paragraph verbatim — which is why a vocabulary probe can mistake it
+#      for MIT-adjacent. UNUSABLE in any engagement. Gap 421's FIFTH sub-1kB shape and the
+#      most restrictive one yet.
+#  shmercer/writealizer                  LICENSE           47  🟢 A COMPLETE MIT GRANT, and the
+#      47 bytes are correct. DESCRIPTION (1 549 B, HTTP 200) reads "License: MIT + file
+#      LICENSE", package writeAlizer v1.7.4. Under R/CRAN convention the grant lives in the
+#      manifest and LICENSE carries only the YEAR and COPYRIGHT HOLDER that MIT requires.
+#      Independently reproduces p185's finding. 🟢 NEW CHANNEL for this KB: R/CRAN
+#      DESCRIPTION "License:", a fifth manifest channel beside package.json, pyproject.toml,
+#      pom.xml and composer.json.
+#  MoKangMedical/digital-sage            LICENSE           46  🔴 NOT a grant. The whole file is
+#      "MIT License" + "Copyright (c) 2026 MoKangMedical". No permission clause at all.
+#      🔵 THE DISTINCTION THAT MATTERS, and both files are ~46 B: a sub-100 B LICENSE naming
+#      only YEAR and HOLDER inside an R package is COMPLETE (writealizer); the same size
+#      naming a LICENCE and no body is INCOMPLETE (digital-sage). Size does not separate
+#      them. The manifest and the packaging convention do.
+#  ashutoshrana/haystack-ferpa-filter    LICENSE       12 101  Apache-2.0, confirmed by token.
+#  bigdata-ustc/edudata                  LICENSE       11 346  Apache-2.0, confirmed by token.
+#  myvipbackup2/china-k12-teacher-skills LICENSE       11 359  Apache-2.0, confirmed by token.
+#  ink-waffle/sisu-mcp                   none               0  MIT in package.json only (P971).
+#  simon-initiative/lti-example-tool     none               0  MIT in package.json only (P971).
+#  crevextech/canvas-lms-mcp             none               0  no licence file, no manifest licence.
+#  dmontgomery40/mcp-canvas-lms          none               0  MIT in package.json only (P971).
+#  educredentials/ec-issuer              none               0  no licence file, no manifest licence.
+#
+# 🔵 So NOT-MIT-BODY is a mixed bag of FOUR unrelated things — full copyleft, a view-only
+# reservation, a convention-complete stub, and a bare token — and exactly none of them is
+# the split-scope shape p188 feared. The verdict needs splitting, not widening.
+#
+# THE FULL SWEEP, 119 reads. verdict/second_licence/nouns as P1056 returned them.
+slug	file	bytes	verdict	second_licence	content_nouns	scope_sentence	permissive_body	second_files	publishable
+1EdTech/digital-credentials-public-validator	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+1EdTech/digital-credentials-public-validator	README.md	10141	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+3iPunt/wordpress-lti-1-3	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+3iPunt/wordpress-lti-1-3	README.md	5108	SINGLE-SCOPE	-	-	False	no	-	read the file
+Bbar0n234/learnflow-ai	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Bbar0n234/learnflow-ai	README.md	16863	CC-PRESENT:scope-unstated	CC BY-SA 4.0	docs	False	no	-	read the file
+Crosstalk-Solutions/project-nomad	LICENSE	10779	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Crosstalk-Solutions/project-nomad	README.md	15205	SINGLE-SCOPE	-	docs	True	no	-	read the file
+Cvmcosta/ltijs	LICENSE	11361	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Cvmcosta/ltijs	README.md	4816	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+Ed-Fi-Alliance-OSS/edfi-oneroster	LICENSE	10173	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+Ed-Fi-Alliance-OSS/edfi-oneroster	README.md	4101	SINGLE-SCOPE	-	docs;documentation;schema	False	no	-	read the file
+HKUDS/DeepTutor	LICENSE	11408	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+HKUDS/DeepTutor	README.md	100970	SINGLE-SCOPE	-	dataset;docs;documentation;notebook;schema	False	no	-	read the file
+MoKangMedical/digital-sage	LICENSE	46	SINGLE-SCOPE	-	-	False	no	-	read the file
+MoKangMedical/digital-sage	README.md	1846	SINGLE-SCOPE	-	-	False	no	-	read the file
+Open-TutorAi/open-tutor-ai-CE	LICENSE	1531	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Open-TutorAi/open-tutor-ai-CE	README.md	27166	SINGLE-SCOPE	-	curriculum;docs;documentation;schema	False	no	-	read the file
+OpenOLAT/OpenOLAT	LICENSE	10982	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+OpenOLAT/OpenOLAT	README.md	18927	SINGLE-SCOPE	-	docs;documentation;schema	False	no	-	read the file
+OpenVidu/openvidu	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+OpenVidu/openvidu	README.md	6509	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+Polycentric-Labs/regrails	LICENSE	11282	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Polycentric-Labs/regrails	README.md	14980	SINGLE-SCOPE	-	dataset;docs	False	no	-	read the file
+Principled-Evolution/gopal	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Principled-Evolution/gopal	README.md	30959	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+Selleo/mentingo	LICENSE	1062	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+Selleo/mentingo	README.md	31624	SINGLE-SCOPE	-	docs;documentation;lesson;schema;slide	False	no	-	read the file
+SimonsTang/feifei-companion	LICENSE	10227	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+SimonsTang/feifei-companion	README.md	18296	SINGLE-SCOPE	-	-	False	yes	-	read the file
+VeryMath/VeryMath-textbook-copilot	LICENSE	11338	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+VeryMath/VeryMath-textbook-copilot	README.md	13672	SINGLE-SCOPE	-	docs;slide	False	no	-	read the file
+adlnet/MasterObjectModel	LICENSE	11325	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+adlnet/MasterObjectModel	README.md	450	SINGLE-SCOPE	-	-	False	no	-	read the file
+adlnet/xapi-lab	LICENSE	1082	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+adlnet/xapi-lab	README.md	1573	SINGLE-SCOPE	-	-	False	yes	-	read the file
+ai-shifu/ai-shifu	LICENSE.txt	11342	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+ai-shifu/ai-shifu	README.md	7856	SINGLE-SCOPE	-	docs;lesson	False	no	-	read the file
+alejooroncoy/campus-cli	LICENSE	748	SINGLE-SCOPE	-	-	False	no	-	read the file
+alejooroncoy/campus-cli	README.md	24540	SINGLE-SCOPE	-	docs;notebook	False	no	-	read the file
+ashutoshrana/haystack-ferpa-filter	LICENSE	12101	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+ashutoshrana/haystack-ferpa-filter	README.md	16006	SINGLE-SCOPE	-	docs	False	no	-	read the file
+atrawog/mcp-oauth-gateway	LICENSE	11360	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+atrawog/mcp-oauth-gateway	README.md	37766	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+bigdata-ustc/edudata	LICENSE	11346	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+bigdata-ustc/edudata	README.md	8670	SINGLE-SCOPE	-	dataset;docs;documentation	False	no	-	read the file
+blackboard/BBDN-LTI-Adv-Node	README.md	401	SINGLE-SCOPE	-	-	False	no	-	read the file
+crevextech/canvas-lms-mcp	README.md	9414	SINGLE-SCOPE	-	schema	False	no	-	read the file
+divyarthjain/vtop-bhopal-mcp	LICENSE	11358	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+divyarthjain/vtop-bhopal-mcp	README.md	11599	SINGLE-SCOPE	-	curriculum	False	no	-	read the file
+dmontgomery40/mcp-canvas-lms	README.md	17321	SINGLE-SCOPE	-	documentation;schema	False	no	-	read the file
+educredentials/ec-issuer	README.md	4718	SINGLE-SCOPE	-	-	False	no	-	read the file
+esegrave/edfi	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+esegrave/edfi	README.md	484	SINGLE-SCOPE	-	-	False	no	-	read the file
+geli-lms/geli	LICENSE	11358	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+geli-lms/geli	README.md	4350	SINGLE-SCOPE	-	docs;documentation	False	yes	-	read the file
+giantswarm/mcp-oauth	LICENSE	11353	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+giantswarm/mcp-oauth	README.md	7323	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+googleworkspace/oneroster-integration-conformance-tests	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+googleworkspace/oneroster-integration-conformance-tests	README.md	1734	SINGLE-SCOPE	-	notebook	False	no	-	read the file
+haxtheweb/haxcms-php	LICENSE.md	11362	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+haxtheweb/haxcms-php	README.md	11903	SINGLE-SCOPE	-	docs;schema	False	no	-	read the file
+ideas-edu/ideas	LICENSE.txt	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+ideas-edu/ideas	README.md	1186	SINGLE-SCOPE	-	-	False	no	-	read the file
+impierce/credential-converter	LICENSE	11356	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+impierce/credential-converter	README.md	10732	SINGLE-SCOPE	-	docs;documentation;schema	False	no	-	read the file
+ink-waffle/sisu-mcp	README.md	2340	SINGLE-SCOPE	-	-	False	no	-	read the file
+jupyter/nbgrader	LICENSE	1512	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+jupyter/nbgrader	README.md	2821	SINGLE-SCOPE	-	docs;documentation;notebook	False	no	-	read the file
+ktwyw/python-for-engineers	LICENSE	1328	SPLIT-SCOPE:code-permissive-content-CC	CC BY 4.0	cheatsheet;dataset;documentation;notebook;teaching material	True	yes	-	MIT (code) + CC BY 4.0 (content)
+ktwyw/python-for-engineers	README.md	5159	CC-PRESENT:scope-unstated	CC BY 4.0	cheatsheet;dataset;docs;lesson;notebook;teaching material	False	no	-	read the file
+menthorlabs/menthor	LICENSE	11337	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+menthorlabs/menthor	README.md	3202	SINGLE-SCOPE	-	-	False	no	-	read the file
+myvipbackup2/china-k12-teacher-skills	LICENSE	11359	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+myvipbackup2/china-k12-teacher-skills	README.md	4895	SINGLE-SCOPE	-	docs;lesson;slide	False	no	-	read the file
+nirholas/ai-tutor-mcp	LICENSE	11338	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+nirholas/ai-tutor-mcp	README.md	8536	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+numbas/Numbas	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+numbas/Numbas	README.md	4376	SINGLE-SCOPE	-	docs;documentation	False	yes	-	read the file
+numbas/numbas-lti-provider	LICENSE.md	560	SINGLE-SCOPE	-	-	False	yes	-	read the file
+numbas/numbas-lti-provider	README.md	1570	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+openeducat/openeducat_erp	LICENSE	8241	SINGLE-SCOPE	-	-	False	no	-	read the file
+openeducat/openeducat_erp	README.md	5269	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+openedx/XBlock	LICENSE.TXT	11358	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+openedx/codejail	LICENSE.txt	10174	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+openlxp/openlxp-xia	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+openlxp/openlxp-xia	README.md	4154	SINGLE-SCOPE	-	schema	False	no	-	read the file
+opensalt/OB3DefinitionWidget	LICENSE	1080	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+opensalt/OB3DefinitionWidget	README.md	3574	SINGLE-SCOPE	-	-	False	no	-	read the file
+oppia/oppia	LICENSE	11358	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+penecho/penecho	LICENSE	34523	SINGLE-SCOPE	-	-	False	no	-	read the file
+penecho/penecho	README.md	16296	SINGLE-SCOPE	-	docs	False	no	-	read the file
+rage/secret-project-331	LICENSE	11357	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+rage/secret-project-331	README.md	6742	SINGLE-SCOPE	-	docs;documentation;schema	True	no	-	read the file
+sakaiproject/sakai	LICENSE	11120	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+sakaiproject/sakai	README.md	8429	SINGLE-SCOPE	-	documentation	True	no	-	read the file
+shmercer/writealizer	LICENSE	47	SINGLE-SCOPE	-	-	False	no	-	read the file
+shmercer/writealizer	README.md	14553	SINGLE-SCOPE	-	curriculum;documentation;slide	True	no	-	read the file
+shuyunyuan/talentcoach	LICENSE	842	SINGLE-SCOPE	-	documentation	False	no	-	read the file
+shuyunyuan/talentcoach	README.md	7251	SINGLE-SCOPE	-	docs	False	no	-	read the file
+simon-initiative/lti-example-tool	README.md	5262	SINGLE-SCOPE	-	docs;schema	False	no	-	read the file
+siskinskai/spedlex	LICENSE	1077	SINGLE-SCOPE	-	documentation	False	yes	LICENSE-DATA	read the file
+siskinskai/spedlex	README.md	13823	SPLIT-SCOPE:code-permissive-content-CC	CC BY 4.0	docs;schema	True	no	LICENSE-DATA	MIT (code) + CC BY 4.0 (content)
+thm-mni-ii/feedbacksystem	LICENSE	10785	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+thm-mni-ii/feedbacksystem	README.md	3847	SINGLE-SCOPE	-	docs	False	no	-	read the file
+trilogy-group/oneroster-ts	LICENSE	711	SINGLE-SCOPE	-	-	False	no	-	read the file
+trilogy-group/oneroster-ts	README.md	62037	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+tsugiproject/tsugi	LICENSE	10273	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+tsugiproject/tsugi	README.md	10277	SINGLE-SCOPE	-	docs;documentation	False	no	-	read the file
+tswsxk/EduData	LICENSE	11346	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+tswsxk/EduData	README.md	8673	SINGLE-SCOPE	-	dataset;docs;documentation	False	no	-	read the file
+valentineus/moodle-webhooks	LICENSE.txt	35200	SINGLE-SCOPE	-	-	False	no	-	read the file
+valentineus/moodle-webhooks	README.md	3599	SINGLE-SCOPE	-	-	False	no	-	read the file
+virtUOS/abstimmbar	LICENSE	11358	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+virtUOS/abstimmbar	README.md	10189	SINGLE-SCOPE	-	docs;slide	False	no	-	read the file
+zavora-ai/mcp-student-records	LICENSE	738	SINGLE-SCOPE	-	-	False	yes	-	read the file
+zavora-ai/mcp-student-records	README.md	9652	SINGLE-SCOPE	-	docs	False	no	-	read the file
+zhamanov-seabus/nau-ai-advisor	LICENSE	11375	SINGLE-SCOPE	-	documentation	False	yes	-	read the file
+zhamanov-seabus/nau-ai-advisor	README.md	15048	SINGLE-SCOPE	-	docs;documentation	False	yes	-	read the file

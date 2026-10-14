@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🆕 🟢 **One new pattern, and three amendments that REPRICE steps this KB published yesterday
+— two of them cheaper, one of them re-justified. Every repository named below had its grant
+read this pass over `raw.githubusercontent.com/<slug>/HEAD/<path>` with the HTTP code
+checked.**
+
+### 🟢 Amendment `1` — Pattern `32` step `3` repriced. `3c` is already TRUE; `3b`'s reason CHANGES
+
+🔵 p188 added steps `3a`–`3d` and pre-registered `ACTION NA` to settle whether `ralph`'s LRS
+**refuses** an overwrite or lets `INDEX` through. 🟢 **Limb `1` fired. It refuses — in code,
+on both write paths.**
+
+| path | lines | measured |
+|---|---|---|
+| 🟢 `PUT` | `624`–`700` | on an existing id the handler queries first, then: not equivalent → `HTTPException(409 CONFLICT, "A different statement already exists with the same ID")`, **returning before `BACKEND_CLIENT.write` is reached**. Equivalent → bare `return`, no write, `204` |
+| 🟢 `POST` | `163`–`210`, `728`–`736` | `_filter_existing_statements`, docstring verbatim: *"Drop statements already stored; raise on conflicting duplicates."* Non-equivalent → `409`; equivalent ids are **removed from the write set**; an all-duplicate batch writes nothing and answers `204` |
+| 🟢 source comment | `686`–`689` | verbatim: *"The LRS specification calls for deep comparison of duplicate statement ids. In the case that the current statement is not equivalent to one found in the database we return a 409, otherwise the usual 204."* 🔵 The refusal is **deliberate and documented in the code** |
+| 🔴 `POST` partial-success | `739`–`790` | opt-in bulk backfill *(issue `#622`)* tolerates **validation** errors per item but **not** an id conflict: `409`, `PartialSuccessError(index=-1)`, `inserted_ids=[]` — the whole batch rejected. 🟢 "Partial success" does not weaken the id guarantee |
+
+🔴 **And limb `2`'s own wording was MIS-SPECIFIED, which is worth recording.** It listed
+*"returns `204`"* as evidence of overwriting. `204` is the `xAPI` spec's response for an
+**idempotent duplicate** — here it is the evidence of **refusal**, not of a write. A limb
+that names a status code has to name what the code means in the protocol.
+
+🟢 **So the steps reprice:**
+
+| step | status after this pass |
+|---|---|
+| 🟢 `3c` **PIN the operation type** | 🟢 **CHEAPER THAN WRITTEN — at the API layer it is already true.** Keep the CI check for the backend path, but do not budget build time for the API behaviour. 🔵 And it is **demonstrable in one live `409`** rather than argued |
+| 🔴 `3b` **WORM target** | 🔴 **STAYS MANDATORY — and its justification CHANGES, which makes it an easier sell.** It is not there to stop the application; the application already refuses. **It is there to stop the OPERATOR** — `BaseOperationType` declares `DELETE`/`UPDATE`, default `INDEX` overwrites, and `--es-op-type` exposes all four on the CLI. 🔵 "Who do you trust with Elasticsearch credentials" is a better question in a DPO meeting than "is your LRS immutable" |
+| 🟢 `3a`, `3d` | unchanged. 🟢 `3d`'s rule is vindicated: the `409` was found by **reading the code**, not the docs — p188 established `README`, `docs/index.md` and `docs/features/backends.md` carry **zero** hits for `delet|retention|immutab|append-only|WORM` |
+
+🟡 **Estimate holds at `8`–`10` weeks for steps `1`–`3`, with weeks moving from `3c` to `3b`.**
+
+### 🔴 Amendment `2` — Pattern `33`'s Open edX row, corrected a SECOND time, and the licence is the catch
+
+🔵 p187 priced it at `12`–`14` weeks *("nothing exists")*; p188 corrected that to `8`–`10`
+*(no server exists, but an official MCP CLIENT does, and its docs say it "will never expose
+MCP server functionality")*. 🟢 **`ACTION NB` limb `1` fired: a server exists.**
+
+| if the client runs Open edX | adopt | licence, measured | what you still build | weeks |
+|---|---|---|---|---|
+| 🆕 🟡 **agent surface** | 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `v0.2.0` — Tutor plugin; installs the [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) Django app *(REST facade `/api/mcp/`, `/api/mcp/cms/`)* and runs an MCP streamable-http container behind Caddy at `mcp.<LMS_HOST>` | 🔴 **`AGPL-3.0`** *(`34 524` B, `200`)*, corroborated by `pyproject.toml` and the README badge | review, key management, tool allow-listing, deployment | 🟢 **`4`–`6`** *(from `8`–`10`)* |
+
+🟢 **How to wire it, concretely:**
+
+1. `pip install tutor-contrib-openedxmcp` → `tutor plugins enable openedxmcp` →
+   `tutor images build openedx openedxmcp` → `tutor local launch` → `tutor local do init`
+   *(creates the `MCPKey` tables)*. 🟢 Pin the Django app explicitly:
+   `tutor config save --append OPENEDX_EXTRA_PIP_REQUIREMENTS=openedx-mcp==<version>` —
+   🔵 **two artefacts ship separately, so pin both or you have an unpinned supply chain.**
+2. Mint a key in Django admin *(**Open edX Admin MCP → MCP keys**)*; the client sends it and
+   the facade forwards it as `X-MCP-Key`. 🔴 **Authorisation is `is_staff`/`is_superuser`,
+   evaluated live at the facade — there is no per-tool scope.** So a key is an admin key.
+3. 🔴 **GATE THE TOOL LIST BEFORE ANYTHING ELSE.** The LMS side exposes, verbatim,
+   *"people, enroll, analytics, certs, **retire**"*; the CMS side *"course authoring,
+   modulestore"*. **`retire` deletes a learner record and `is_staff` is the only thing in
+   front of it.** Put the existing [`mcp-allowlist-gateway`](code/mcp-allowlist-gateway/README.md)
+   pattern between the client and `mcp.<LMS_HOST>` and allow-list read tools only until the
+   client has signed off on the write set.
+4. 🔴 **Close `/health`.** The README states it is unauthenticated for probes — acceptable
+   inside a cluster, not on a public Caddy route.
+5. 🔴 **Price the `AGPL` before the weeks.** Deploying it unmodified is ordinary use.
+   **Extending it ships the extension under `AGPL-3.0`** — and because it is a network
+   service, the Affero clause reaches users of the hosted instance. 🔵 For a client who
+   wants a proprietary agent layer, the `4`–`6` weeks is the wrong number: the right answer
+   is a clean-room facade against Open edX's own REST APIs, back at `8`–`10`.
+6. 🔴 **Bus factor `1`★, `v0.2.0`.** Fork and vendor it; do not take a dependency on the
+   upstream release cadence.
+
+🔵 **Why it was missed for two passes, and the rule it produces:** the repository is not
+tagged `open-edx`, `mcp` **or** `mcp-server`, and a quoted `"edx-platform"` + `mcp` search
+returns *"Your search did not match any repositories"*. 🟢 **Rule: an absence established
+from topic pages is a statement about TAGS. Before publishing "nothing exists", run an
+unquoted repository search.**
+
+### 🟢 Amendment `3` — Pattern `34` step `1` gets the path list it was missing
+
+🔵 Pattern `34` *(the split-scope licence audit)* opens by fetching the licence file.
+🔴 **Its path list was case-sensitive and missed a real grant** —
+[`openedx/XBlock`](https://github.com/openedx/XBlock) carries `LICENSE.TXT` *(`11 358` B,
+verbatim Apache-2.0)* and this KB published it as `NO_LICENCE_FILE`.
+
+🟢 **Step `1` is replaced with [`P1057`](code/p1057-licence-path-case/README.md)**
+*(`16`/`16` tests)*:
+
+| `1a` | 🟢 fetch over `/HEAD/`, never `main`/`master` — **`HEAD` resolves the default branch**, so the branch guess disappears and the probe cost halves |
+|---|---|
+| `1b` | 🟢 read the **manifest** first: PEP 639 `license-files` *(`pyproject.toml`)* and npm `licenseFile` **name the path**. 🔴 Authoritative but rare — `1` of `64` rows. 🔴 A licence **string** *(`license = "MIT"`)* is not a licence **path** |
+| `1c` | 🟢 then the **case variants** — `LICENSE`, `LICENSE.TXT`, `LICENSE.txt`, `LICENCE`, `COPYING`, … 🟢 Measured yield over `14` grant-absent rows: **`224` probes, `0` further grants**, so expect this step to find nothing and run it anyway |
+| `1d` | 🆕 🟢 for an **R** package, read `DESCRIPTION`: *"License: MIT + file LICENSE"* means the `~47`-byte `LICENSE` is **complete**, not a stub |
+
+🆕 🔵 **And a trap for step `4`:** a `CC` identifier beside a **named third party** is an
+attribution, not a scope split. [`Bbar0n234/learnflow-ai`](https://github.com/Bbar0n234/learnflow-ai)
+reads *"This product includes IP geolocation data by IPinfo, licensed under CC BY-SA 4.0"* —
+a dependency notice shaped exactly like a content-half grant.
+
+### 🆕 🟢 Pattern `35` — the agent-reachable destructive-tool audit, before the agent ships
+
+🔵 **Why it exists.** This pass found an MCP server whose tool list includes `retire` on the
+same day it proved the LRS beneath it refuses overwrites. 🔴 **The agent layer is being
+built faster than the guarantees underneath it**, and three jurisdictions now require a
+durable record of a human decision about a learner. 🟢 This pattern is the two-week piece of
+work that finds the gap before a client's agent does.
+
+| step | component | licence, as measured | what it does |
+|---|---|---|---|
+| `1` | 🟢 **ENUMERATE the tool surface from the server's own definitions**, not its README. Use the existing [`p139-tool-count-drift`](code/p139-tool-count-drift/README.md) check | — | 🔴 a README's tool list is marketing. The count drifts |
+| `2` | 🟢 **CLASSIFY each tool by what it DESTROYS**: nothing / mutable state / a durable record about a person. 🔴 On `tutor-contrib-openedxmcp` that is `retire`, `enroll` and `certs` on the LMS side and `modulestore` on the CMS side | — | the output is a one-page list a DPO can read |
+| `3` | 🔴 **TEST each destructive tool against the store beneath it, with a LIVE call.** Does anything refuse? 🟢 On [`openfun/ralph`](https://github.com/openfun/ralph) the answer is a documented `409` on both write paths. 🔴 On the Open edX facade, nothing — `is_staff` is the whole control | 🟢 `ralph` `MIT` *(`1 094` B)* | 🔵 never a config review. The `409` and the successful delete are both artefacts you keep |
+| `4` | 🟢 **GATE the write set** with [`mcp-allowlist-gateway`](code/mcp-allowlist-gateway/README.md) in front of the server; read-only until the client signs the write list | — | 🟢 reversible, and it ships in days |
+| `5` | 🔴 **DUAL-WRITE the durable records to an object-lock bucket** *(Pattern `32` step `3b`)* | — | 🔴 the only step that survives a credentialed operator **or** a mis-scoped agent key |
+| `6` | 🟢 **CLOSE the probe endpoints.** `tutor-contrib-openedxmcp` serves `/health` unauthenticated | — | cluster-internal is fine; a public Caddy route is not |
+| `7` | 🟢 **ANCHOR the credential.** Where the artefact must outlive the platform, issue it as **`OB 3.0` / W3C Verifiable Credentials**: [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget), [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep), [`iblai/wallet`](https://github.com/iblai/wallet), [`MrPrinceAli/proven`](https://github.com/MrPrinceAli/proven), [`brody-0125/signet-campus`](https://github.com/brody-0125/signet-campus) | 🟢 all **`MIT`** | 🔵 durable by **cryptography** rather than by an application-layer refusal. 🔴 Avoid the old side — `obadgen` `AGPL-3.0`, `openbadgeslib` `LGPL` |
+
+🟡 **Estimate: `2`–`3` weeks for steps `1`–`4`** *(the audit and the gate)*, **`+4`–`6` for
+`5`–`7`** *(the durable-record work)*. 🟢 **Steps `1`–`4` are the ones to quote first: they
+are cheap, reversible, and they produce the document that justifies `5`–`7`.**
+
+🔵 **Where it applies by region.** 🔴 **EU** — Art. `5(1)(f)` is live since `2025-02-02`,
+so step `2` must also flag any tool inferring **emotion** from biometric data *(penalty
+ceiling EUR `35`M or `7`% of turnover)*; proctoring tools are an explicit grey area.
+🔴 **Vietnam** — automatic grading or ranking is high-risk by statute. 🔴 **Oklahoma** — AI
+may not be the main basis for high-stakes decisions about students. 🔴 **South Korea** —
+education is a "high-impact AI" sector requiring human monitoring and intervention.
+🟢 **LATAM** — no national rule found, so sell steps `1`–`4` as **risk management**, against
+the Digital Education Council finding that faculty's lowest adoption is in **assessment**.
+
+Evidence: [`ralph-append-only`](../evidence/ralph-append-only.2026-10-14-p189.tsv) ·
+[`openedx-mcp-server`](../evidence/openedx-mcp-server.2026-10-14-p189.tsv) ·
+[`licence-path-case`](../evidence/licence-path-case.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🆕 🟢 **One new pattern and three amendments, two of which REPAIR a step this KB published

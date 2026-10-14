@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🆕 🟢 **The Open edX cell changes AGAIN — from a policy into a repository — and the
+platform table gains a column it has been missing: who can delete a learner record, and
+whether anything stops them.**
+
+### 🆕 🔴 AMENDED — the Open edX agent cell. p188 published a POLICY; there is a SERVER
+
+p188 recorded Open edX's agent surface as an absence with an official cause: the official
+MCP client's documentation states it *"will never expose MCP server functionality"*. 🟢 That
+statement is still true **of the official client**. 🔴 **A community server exists anyway.**
+
+| platform | agent surface | licence | verdict for an engagement |
+|---|---|---|---|
+| 🔴 **Open edX** *(`AGPL-3`)* | 🆕 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `v0.2.0` — Tutor plugin + `openedx-mcp` Django facade *(`/api/mcp/`, `/api/mcp/cms/`)* + MCP streamable-http container behind Caddy at `mcp.<LMS_HOST>` | 🔴 **`AGPL-3.0`** *(`34 524` B, `200`)* | 🟡 **Deployable in `4`–`6` weeks instead of `8`–`10`. 🔴 But `1`★ and `AGPL`, so a studio that EXTENDS it is extending copyleft.** 🔵 The PERMISSIVE route to an Open edX agent surface still does not exist |
+| 🟢 **Moodle** *(`GPL-3`, `v5.x`)* | 🟢 **three independent servers** *(unchanged: `G36maid/moodle-mcp`, `CloudDown/polymtl-moodle-connect`, `onbirdev/moodle-webservice_mcp`)* | mixed, `MIT` available | 🟢 still the best-served host, and p188's point stands: 🔴 **`AGPL` is not what prevents a server** — Moodle is `GPL-3` and carries three |
+
+### 🆕 🔴 A new column for this table: who can destroy the record, and what refuses them
+
+🔵 Three jurisdictions now require a durable record of a human decision about a learner
+*(Trend `1`)*. This pass measured, in code, what two platform-layer artefacts actually do
+when asked to overwrite one — and the answers are opposite.
+
+| layer | artefact | asked to overwrite an existing record | measured |
+|---|---|---|---|
+| 🟢 **LRS / xAPI** | [`openfun/ralph`](https://github.com/openfun/ralph) HTTP API | 🟢 **REFUSES** | `409 CONFLICT` on both write paths. `PUT` *(lines `624`–`700`)* and `POST` *(via `_filter_existing_statements`)* compare deeply and **return before `BACKEND_CLIENT.write` is reached**. Source comment, verbatim: *"In the case that the current statement is not equivalent to one found in the database we return a 409, otherwise the usual 204."* 🟢 Append-only **by construction** |
+| 🔴 **LRS storage** | same, backends | 🔴 **ALLOWS** | `BaseOperationType` declares `DELETE` and `UPDATE`; default is `INDEX`, which overwrites at a specific id; `--es-op-type` exposes all four on the CLI *(p188)* |
+| 🔴 **LMS / agent** | `tutor-contrib-openedxmcp` | 🔴 **NOTHING REFUSES** | the LMS tool list includes **`retire`**, authorised only by `is_staff`/`is_superuser` and reachable by any agent holding one MCP key. 🔴 `/health` is unauthenticated |
+
+🔵 **So the guarantee is real and it is in the wrong place.** An xAPI **client** cannot
+tamper with a stored statement; an **operator** with Elasticsearch or Mongo credentials
+can; and an **agent** on the LMS side can retire the learner outright. 🟢 **That is the
+distinction to put in front of a client's DPO, and it is cheap to demonstrate: one `409`,
+live.** Pattern `32`'s WORM store is not there to stop the application — it is there to stop
+the operator.
+
+### 🟢 Corrections to this table's own rows
+
+| row | correction |
+|---|---|
+| 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Clean `Apache-2.0`.** `LICENSE.TXT`, `11 358` B, HTTP `200`. The `NO_LICENCE_FILE` verdict this KB published was a path-**case** artefact. 🔵 The permissive customisation layer onto `AGPL` Open edX carries no licence caveat |
+| 🟢 [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) | 🟢 **`GPL-3.0`**, not bare `GPL` *(`35 200` B, version line read)*. 🔵 Matters because Moodle core is `GPL-3`-or-later, so the plugin is version-compatible with its host |
+| 🔴 [`shuyunyuan/talentcoach`](https://github.com/shuyunyuan/talentcoach) | 🔴 **VIEW-ONLY, remove from any customisation shortlist.** *"Viewing the source on GitHub is permitted; no other rights are granted"* — it negates `MIT`'s verb list item by item while carrying `MIT`'s warranty paragraph verbatim |
+
+🟢 **Unchanged and still the recommendation set for a customisable host:** Moodle *(`GPL-3`,
+three agent servers)*, [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(`Apache-2.0`,
+`10 982` B — a whole university LMS, permissively licensed)*,
+[`tsugi`](https://github.com/tsugiproject/tsugi) *(`Apache-2.0`, the LTI framework by the
+LTI spec's own author)*, [`Numbas`](https://github.com/numbas/Numbas) *(`Apache-2.0`,
+assessment)*, [`academico`](https://github.com/academico-sis/academico) *(`MIT`, `404`★,
+LATAM-built SIS)*, [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms),
+[`OpenEduCat`](https://github.com/openeducat/openeducat_erp), Open edX *(`AGPL-3`)*.
+
+Evidence: [`openedx-mcp-server`](evidence/openedx-mcp-server.2026-10-14-p189.tsv) ·
+[`ralph-append-only`](evidence/ralph-append-only.2026-10-14-p189.tsv) ·
+[`licence-path-case`](evidence/licence-path-case.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🆕 🟢 **Two corrections to this table's own rows, one new LAYER, and the Open edX cell

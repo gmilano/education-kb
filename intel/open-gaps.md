@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 🔜 Registered for p190 — pre-registered with falsifiers
+
+🔴 **Drift noted first, because this file exists to prevent exactly it: the block below this
+one is still headed *"Registered for p186"*. Passes `186`–`188` registered in
+[`README.md`](../README.md) only, so for three more passes the canonical register and the
+README disagreed about what was open.** 🟢 **p189 registers in BOTH.** 🔵 This is the second
+time the same drift has been recorded here, which makes it a process defect rather than an
+oversight: the register is written last, when the pass is already over budget.
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🟢 **`ACTION NE`** — re-derive the **new-supply rate** over the same `12` topic pages, storing the rows | [`evidence/recency-churn.2026-10-14-p189.tsv`](../evidence/recency-churn.2026-10-14-p189.tsv) *(the `239` rows, the `12` new slugs and the `83`% absent figure)* | 🟢 **limb `1`:** `8`–`16` new slugs, `≥70`% absent → 🟢 the intake rate is stable and becomes the published coverage measure. 🔴 **limb `2`:** outside the band → 🔴 one measurement was an artefact; publish a range and name the pass |
+| 🔴 **`ACTION NF`** — count `tutor-contrib-openedxmcp`'s **actual tool definitions** against its README's `7` named tools | [`evidence/openedx-mcp-server.2026-10-14-p189.tsv`](../evidence/openedx-mcp-server.2026-10-14-p189.tsv) *(the verbatim tool lists)* + [`compose/code/p139-tool-count-drift`](../compose/code/p139-tool-count-drift/README.md) | 🟢 **limb `1`:** count matches → 🟢 Pattern `35` step `1` may scope from a README; audit `2`–`3` weeks. 🔴 **limb `2`:** it drifts → 🔴 step `1` must enumerate from definitions every time |
+| 🟢 **`ACTION NG`** — run `P1057` over every row published WITH a licence, not only the grant-absent ones | [`compose/code/p1057-licence-path-case`](../compose/code/p1057-licence-path-case/README.md) + [`evidence/licence-path-case.2026-10-14-p189.tsv`](../evidence/licence-path-case.2026-10-14-p189.tsv) *(`224` probes, `0` further grants)* | 🟢 **limb `1`:** `0` contradictions → 🟢 the `XBlock` miss was a one-off. 🔴 **limb `2`:** `≥1` case-variant file contradicts a published licence → 🔴 full column re-read, and `P1057` becomes a standing intake gate |
+| 🔴 **`ACTION NH`** — does any proctoring row in this KB **infer emotion**? | [`compose/code/seb-proctoring-validator`](../compose/code/seb-proctoring-validator/README.md), [`compose/code/proctoring-reach-audit`](../compose/code/proctoring-reach-audit/README.md), and [`evidence/eu-2026-1744-corroboration.2026-10-14-p189.tsv`](../evidence/eu-2026-1744-corroboration.2026-10-14-p189.tsv) *(the Art. `5(1)(f)` block)* | 🟢 **limb `1`:** none does → 🟢 the rows are clear of Art. `5(1)(f)` on a stated basis. 🔴 **limb `2`:** `≥1` does → 🔴 flag the row; Pattern `35` step `2` gains a mandatory emotion-inference check for EU work |
+| 🟡 **`ACTION NI`** — Bahrain alone: the Ministry of Education's own domain and Arabic-language sources | [`evidence/gulf-education-instruments.2026-10-14-p189.tsv`](../evidence/gulf-education-instruments.2026-10-14-p189.tsv) *(three of four states closed; Bahrain the residual)* | 🟢 **limb `1`:** an instrument exists → 🟢 the Gulf closes completely. 🔴 **limb `2`:** `0` → 🔴 record a LANGUAGE-channel limit and stop asking |
+| 🟢 **`ACTION NJ`** — does `ralph`'s `statements_are_equivalent` compare the WHOLE statement or a subset? | [`evidence/ralph-append-only.2026-10-14-p189.tsv`](../evidence/ralph-append-only.2026-10-14-p189.tsv) *(the `409` paths at lines `163`–`210` and `624`–`700`; the function itself is imported at line `62` and was NOT read)* | 🟢 **limb `1`:** full comparison → 🟢 Pattern `32` step `3c` is sound as repriced; the `409` quotes without qualification. 🔴 **limb `2`:** a subset → 🔴 name the ignored fields; the append-only claim narrows and step `3b` becomes the only real guarantee |
+| 🔴 **`ACTION MN`** *(carried, a human decides, fifth pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4ED/openSIS-Classic`, `alfredang/ai-mms` + `AI-LMS-TMS`, `mohamurshid/ElimuAnalytics`, `MoKangMedical/digital-sage`. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently |
+
+### 🆕 Gaps opened, closed and re-stated by p189
+
+- 🆕 🔴 **`Gap 428` — a reproducible figure can still be measuring the wrong thing.** The
+  "absent rate" *(`79`% → `67.5`% → `60.3`%)* was internally consistent, re-derivable from
+  stored rows, and falling smoothly. 🔴 **It was a gauge of this KB's own ingest backlog the
+  whole time**: `14` of `239` rows flipped absent → present in `28` minutes because p188
+  ingested them, and the slug index grew `1 993` → `2 025`. 🟢 **Rule: before re-measuring a
+  number, ask what would have to be true for it to move. If the answer is "we did our job",
+  it is not a measurement of the world.** p187 is exonerated.
+- 🆕 🔴 **`Gap 429` — path CASE, and the manifest field that makes it unnecessary.**
+  `raw.githubusercontent.com` is case-sensitive; [`openedx/XBlock`](https://github.com/openedx/XBlock)'s
+  `LICENSE.TXT` *(`11 358` B, verbatim `Apache-2.0`)* was published as `NO_LICENCE_FILE`.
+  🟢 Closed as an instrument by [`P1057`](../compose/code/p1057-licence-path-case/README.md),
+  and bounded: `224` further probes over `14` rows returned `0`. 🔴 Still open as a question
+  for `ACTION NG`: did any PUBLISHED licence come from an ambiguous path?
+- 🆕 🔴 **`Gap 430` — the agent layer outruns the guarantees under it.** `ralph`'s LRS refuses
+  an overwrite in code *(`409`, both write paths)*. 🔴 `tutor-contrib-openedxmcp` exposes
+  **`retire`** on the LMS side behind `is_staff` alone, with no per-tool scope and an
+  unauthenticated `/health`. 🔵 Found in the same pass as the server itself. Pattern `35` is
+  the response; `ACTION NF` sizes it.
+- 🆕 🔴 **`Gap 431` — this KB reads code at primary fidelity and regulation at secondary
+  fidelity, by construction.** Five new blocked hosts *(`www.spa.gov.sa`,
+  `data.consilium.europa.eu`, `education.ec.europa.eu`, `ai-act-service-desk.ec.europa.eu`,
+  `www.actuia.com`; `14` known)*, and **every government primary source attempted this pass
+  was unreachable while the secondary legal layer was fully reachable.** 🟢 Not a flaw in any
+  one claim — a property of the channel. State it once per page.
+- 🆕 🔴 **`Gap 432` — proctoring under Art. `5(1)(f)`.** The prohibition on inferring emotions
+  from biometric data in education institutions has applied since **`2025-02-02`** and was
+  **not** delayed by the Omnibus; the Commission's guidelines leave open whether emotion
+  inference as a *secondary* functionality is caught. 🔴 This KB carries four proctoring rows
+  and patterns and cannot currently say which, if any, infer emotion. `ACTION NH` settles it.
+- 🟢 **`Gap 427` RE-STATED, not closed.** The question *"does an MCP/agent surface exist for
+  Open edX?"* is answered **yes** — `AGPL-3.0`, `1`★. 🔵 The question that matters is
+  **"does a PERMISSIVE one exist?"**, and the answer is still **no**.
+- 🟢 **`Gap 421` gains a FIFTH sub-`1`kB shape and it is the most restrictive yet:**
+  [`shuyunyuan/talentcoach`](https://github.com/shuyunyuan/talentcoach) *(`842` B)* — view-only,
+  `MIT`'s verb list negated item by item, `MIT`'s warranty paragraph kept verbatim.
+- 🟢 **`Gap 425` stays closed** *(p188: `0` further `GPL` grants from plugin headers)*.
+  🔴 **`Gap 426` untouched**: a per-topic precision estimate still cannot see account- or
+  intent-shaped noise.
+- 🔴 **p188's APAC gap `2` STILL does not close**: no education-specific APAC
+  teacher-adoption statistic for `2026`. Third pass running. 🔵 Treat it as a channel limit
+  and stop re-running the query — scope APAC on regulation and curriculum.
+
 ## 🔜 Registered for p186 — pre-registered with falsifiers
 
 🔴 **Drift noted first, because this file exists to prevent exactly it: the block below this one is

@@ -1,0 +1,354 @@
+# p189 — ACTION MY. Row-level CHURN of the 12-page recency census against p188's stored 240.
+# Channel: github.com/topics/<t>?s=updated via WebFetch (P93's channel). 20 rows/page.
+#
+# THE INTERVAL IS NOT WHAT THE ACTION ASSUMED, AND THAT IS THE FIRST FINDING.
+# ACTION MY was written to measure churn "48 hours on". Commit timestamps say otherwise:
+#   p187  2026-10-14 02:09:41 Z
+#   p188  2026-10-14 03:19:21 Z   <- 70 minutes after p187, NOT one day
+#   p189  2026-10-14 03:47:00 Z   <- 28 minutes after p188
+# p188's own evidence file says it re-read the pages "one day later" than p187. It did not.
+# So the explanation p188 offered for the 11.5-point drop -- "the recency window may have
+# moved in one day" -- was never available to it. 70 minutes cannot move 28 of 240 rows.
+#
+# CONTROLS (the standing rule: a probe returning one verdict for every row measured nothing)
+#   index positive: hkuds/deeptutor, openfun/ralph, ningkaikok/dotty-tutor,
+#                   g36maid/moodle-mcp, willwearing/graspful  -> all PRESENT
+#   index negative: globant-kb-p189/not-real, didactika/moodle-local_servicemanager -> ABSENT
+#   5/5 and 2/2. TIGHT index this pass: 2 025 slugs (p188 measured 1 993).
+#   CACHE CONTROL: WebFetch caches 15 min/URL and the interval is 28 min, so the reads are
+#   live. Corroborated by the data: 4 of 12 pages DID change, so no page is cache-frozen.
+#
+# LIMB 1 needed churn >=25%. LIMB 2 needed churn <25%.
+#
+topic	p188_rows	p189_rows	same	new	churn_pct
+adaptive-learning	20	20	20	0	0
+e-learning	20	20	19	1	5
+edtech	20	20	14	6	30
+ferpa	20	20	20	0	0
+learning-analytics	20	19	19	0	0
+lms	20	20	16	4	20
+lti	20	20	19	1	5
+mooc	20	20	20	0	0
+moodle	20	20	18	2	10
+open-badges	20	20	20	0	0
+scorm	20	20	20	0	0
+student-information-system	20	20	20	0	0
+TOTAL	240	239	225	14	6
+#
+# LIMB 2 FIRES ON THE FACT: churn 14/239 = 5.9%, far under the 25% threshold. The page is
+# STABLE over this interval. Eight of twelve pages changed by ZERO rows.
+#
+# LIMB 2'S STATED CONSEQUENCE IS REFUTED. It said: the page is stable, therefore the
+# 11.5-point drop WAS a counting error. It was not. A THIRD mechanism, in neither limb,
+# accounts for it, and it is measurable:
+#
+#   THE ABSENT RATE FALLS BECAUSE THIS KB INGESTS THE ROWS IT CENSUSES.
+#
+#   absent, all rows, TIGHT index:   p188 162/240 = 67.5%   p189 144/239 = 60.3%
+#   -> a further 7.2-point fall in 28 minutes, with only 14 of 239 rows changed.
+#   14 rows flipped ABSENT -> PRESENT. Every one is cited in a KB PAGE, not merely in an
+#   evidence file: agents/top.md, repos/foundations.md, repos/trending.md,
+#   verticals/solutions.md. p188 INGESTED them. The index grew 1 993 -> 2 025.
+#
+# ROWS THAT FLIPPED a->p IN 28 MINUTES, AND THE PAGE THAT NOW CITES THEM:
+#   alvaarocl/taskbot                                          agents/top.md 
+#   andyfmiller/vc-dotnet-demos                                agents/top.md repos/trending.md 
+#   ateeducacion/omekas-learningobject                         repos/foundations.md 
+#   edmozley/freeitsm                                          repos/foundations.md repos/trending.md 
+#   eduthemes/paper-lms                                        repos/foundations.md 
+#   gener8v/gener8v.tools.pii-scanner                          agents/top.md 
+#   jakerains/scormplayer                                      repos/foundations.md 
+#   lmsable/lmsable-skill                                      agents/top.md 
+#   mrprinceali/proven                                         agents/top.md verticals/solutions.md 
+#   no-suggest/nosuggest                                       agents/top.md repos/trending.md 
+#   rick-254/moodle-quizsmith                                  agents/trending.md verticals/solutions.md 
+#   thepick/writing-feedback-tool                              agents/top.md 
+#   vicky07092005/moodle-5-1-authentic-relay                   agents/trending.md verticals/solutions.md 
+#   virtuos/abstimmbar                                         repos/foundations.md 
+#
+# CONSEQUENCE, AND IT RETIRES AN INSTRUMENT RATHER THAN A FIGURE:
+# The "absent rate" was read for three passes as a measure of how much of the CHANNEL this
+# KB has not yet seen. It is not. It is a lagging gauge of this KB's own INGEST BACKLOG,
+# and it falls by ~6 points per pass BY CONSTRUCTION, as a consequence of the work being
+# done. p187's 79%, p188's 67.5% and p189's 60.3% are not three estimates of one quantity
+# in disagreement; they are one quantity declining because the backlog is being cleared.
+# NOBODY OVER-COUNTED. 🟢 RULE: never quote the absent rate as channel coverage. Quote it
+# as "rows not yet ingested", with its pass number, or do not quote it.
+#
+# WHAT DOES MEASURE THE CHANNEL: the NEW-SUPPLY rate. 12 unique slugs appeared across 12
+# pages in 28 minutes; 10 of the 12 (83%) are absent from the KB. That is the sustainable
+# intake number, and it is the one a plan can be built on.
+#
+# NEW SLUGS, 2026-10-14, with in_kb verdict. a=absent from the TIGHT index, p=present
+impactmojo/impactmojo	a
+kaiofelps/lti-consumer-poc	a
+learnpress/learnpress	p
+mindattic/tutor	a
+nagelligowtham53-ops/nexoras-online	a
+nguyenminh121/elms	a
+ruslan-nazarov/papanda	a
+sawyerflynn9246/stable-edtech-ab-assignment-java	a
+uaiblaine/moodle-block_compass	a
+uaiblaine/moodle-block_feedback_tracker	a
+vacademy-io/vacademy_platform	p
+yaobaoda/edtech-asset-pipeline-go	a
+#
+# DROPPED off the recency window in the same 28 minutes (13 slugs):
+#   albertovillaosorno/blooket-api
+#   api-evangelist/itslearning
+#   bruchris/canvas-lms-mcp
+#   didactika/moodle-local_iconrestyle
+#   eduplay-moodle-suite/moodle-local_eduplay
+#   emersonprice5367/edtech-deadline-semantic-search
+#   jeanlucio/moodle-block_playerhud
+#   lcuper18/sg-church
+#   loganpierce8517/edtech-record-cleanup-sweep-sweep-edtech-python-a
+#   no-suggest/nosuggest
+#   shimizu-technology/csg-learning-platform
+#   spikeal8-maker/asa-lab
+#   spoorthi55/hcms-human-cognition-measurement-system
+#
+# ONE PAGE RENDERED SHORT: learning-analytics returned 19 rows, not 20, at the same URL
+# and sort order. Recorded, not explained. It is why the denominator below is 239.
+#
+# ALL 239 ROWS AS RENDERED, 2026-10-14 03:47 Z. a=absent from the TIGHT index, p=present
+topic	slug	in_kb
+adaptive-learning	nikhil-reddy05/daily-sql-de-practice	a
+adaptive-learning	yuyann-dev/Study-tracker	a
+adaptive-learning	cbaezp/Pokeria	a
+adaptive-learning	MathTrail/mathtrail-standalone	p
+adaptive-learning	zijinz456/OpenTutor	p
+adaptive-learning	memphis-iis/MoFaCTS	p
+adaptive-learning	willwearing/graspful	p
+adaptive-learning	ZacharyTStone/business-japanese-test-practice	a
+adaptive-learning	astrapi69/adaptive-learner	a
+adaptive-learning	braivo/braivo	p
+adaptive-learning	AkihikoWatanabe/paper_notes	a
+adaptive-learning	jarems421/jami-flashcards	a
+adaptive-learning	putmanmodel/spanda-technical-preview	a
+adaptive-learning	astrapi69/adaptive-learner-content	a
+adaptive-learning	qamarsobhy7-source/Smart-Knowledge-Gap-System	a
+adaptive-learning	prateekchatterji/id-portfolio	a
+adaptive-learning	ArnaudGuiovanna/tutor-mcp	p
+adaptive-learning	TaiyarHossain/word-learning-system	a
+adaptive-learning	minouza/MathCrew	p
+adaptive-learning	AsherFn/Acadex-AI-Google-Deepmind	a
+e-learning	alfredang/AI-LMS-TMS	p
+e-learning	MathTrail/canvas-api	p
+e-learning	mindattic/Tutor	a
+e-learning	himhjr1018/EdGeniuSite	a
+e-learning	DevFloki/gamified-learning-platform	a
+e-learning	Yousef0hanafy/elhokma-story	a
+e-learning	AJorge95/OpenLearning	a
+e-learning	fatihdogann/CourseApp	a
+e-learning	acanas/swad-core	p
+e-learning	dras1911/szkoleniator	a
+e-learning	mairie360/BFF_Elearning	a
+e-learning	iblai/lms	p
+e-learning	DovaCrii/AeroAcademy	a
+e-learning	assapkibasha/no-barriers	a
+e-learning	Sharar12/EduMaster-E-Learning-Platform	a
+e-learning	Sharar12/EduSpark-E-Learning-Platform	a
+e-learning	G36maid/moodle-mcp	p
+e-learning	wingkwong/react-quiz-component	p
+e-learning	ishandutta2007/Awesome-Expert-Technical-Training	a
+e-learning	alfredang/ai-mms	p
+edtech	SawyerFlynn9246/stable-edtech-ab-assignment-java	a
+edtech	thepick/writing-feedback-tool	p
+edtech	MathTrail/canvas-api	p
+edtech	nagelligowtham53-ops/nexoras-online	a
+edtech	ImpactMojo/ImpactMojo	a
+edtech	shahiltiwari011-ux/Buy-Sell	a
+edtech	Vacademy-io/vacademy_platform	p
+edtech	Ruslan-Nazarov/papanda	a
+edtech	yaobaoda/edtech-asset-pipeline-go	a
+edtech	No-Country-simulation/-G-10-CommunityLab-equipo-9	a
+edtech	ningkaikok/dotty-tutor	p
+edtech	paulafanasyev/svetlana_tutor	a
+edtech	SterlingVance8549/learner-session-control	a
+edtech	thickbodied-insecureness453/arno-ai-gym-workout	a
+edtech	digestionadiabaticprocess828/claude-war-room	p
+edtech	susume/GyakutenEigo	a
+edtech	MathTrail/mathtrail-standalone	p
+edtech	thenerso/coding-kata-platform-frontend	a
+edtech	mohamed3laa2000/CloudDesk	a
+edtech	MaloneFreak/SimulAI	a
+ferpa	daTechGuy/GrizzDog-AI	a
+ferpa	siskinskai/spedlex	p
+ferpa	mizcausevic-dev/kinetic-gain-protocol-suite	a
+ferpa	chaz-clark/canvas-toolbox	p
+ferpa	api-evangelist/parallel-learning	a
+ferpa	Krishita17/record-bridge	p
+ferpa	marc-shade/docsingest	p
+ferpa	snflwr-ai/snflwr.ai	a
+ferpa	ashutoshrana/enterprise-rag-patterns	a
+ferpa	ashutoshrana/haystack-ferpa-filter	p
+ferpa	ashutoshrana/voice-ai-governance	a
+ferpa	ashutoshrana/regulated-ai-governance	a
+ferpa	ashutoshrana/ferpa-haystack	a
+ferpa	zhamanov-seabus/nau-ai-advisor	p
+ferpa	Polycentric-Labs/regrails	p
+ferpa	gener8v/gener8v.tools.pii-scanner	p
+ferpa	Principled-Evolution/gopal	p
+ferpa	ZachRouan/district-brain	p
+ferpa	rosalinatorres888/slack-behavioral-segmentation	a
+ferpa	edgentx/mtss-data-model-sample	a
+learning-analytics	riadh565/beta-binomial-classifier-api	a
+learning-analytics	elimu-ai/ml-event-simulator	p
+learning-analytics	soyebmohammad03-dev/Student-Academic-Analytics-and-Risk-Prediction-System	a
+learning-analytics	terracotta-education/terracotta	p
+learning-analytics	pawaritz/reportfeed	a
+learning-analytics	braivo/braivo	p
+learning-analytics	AkihikoWatanabe/paper_notes	a
+learning-analytics	ViralKariya-VK/eaal-platform	a
+learning-analytics	mahalakshmimarri06-gif/learning-gap-system	a
+learning-analytics	kqc-real/streamlit	a
+learning-analytics	openfun/ralph	p
+learning-analytics	mingliu0408-design/learning-analytics-dashboard-assistant	a
+learning-analytics	hiopoip7/Academic-Instability-Early-Warning-System	a
+learning-analytics	Praxity/praxity-proof	a
+learning-analytics	solin-repo/moodle-block_atrisk	p
+learning-analytics	joyceradis/Estudos-Dra-Joyce-Radis	a
+learning-analytics	mohamurshid/ElimuAnalytics	p
+learning-analytics	NASMAK-Technologies/moodle-block_learnboard	a
+learning-analytics	api-evangelist/knewton	a
+lms	nguyenminh121/eLMS	a
+lms	alfredang/AI-LMS-TMS	p
+lms	LearnPress/learnpress	p
+lms	chamilo/chamilo-lms	p
+lms	Vacademy-io/vacademy_platform	p
+lms	Clemmyacromegalic699/5-scripts	a
+lms	thenerso/coding-kata-platform-frontend	a
+lms	devansh2019/EduVerse-ASPNETCore-API	a
+lms	RohanMuppa/brightspace-mcp-server	p
+lms	termitzombak983/Last-Man-Standing-Full-Version	a
+lms	redmodd/tessera	p
+lms	Rick-254/moodle-quizsmith	p
+lms	Emmanuel-Johnson/launch-point-frontend	a
+lms	Emmanuel-Johnson/launch-point-backend	a
+lms	marodriguezd/CrossedArts	a
+lms	joethehuman/the-fieldbook	a
+lms	Yousef0hanafy/elhokma-story	a
+lms	edmozley/freeitsm	p
+lms	AJorge95/OpenLearning	a
+lms	andreyfesunov/dino_lms	a
+lti	KaioFelps/lti-consumer-poc	a
+lti	virtUOS/abstimmbar	p
+lti	numbas/numbas-lti-provider	p
+lti	INGInious/INGInious	p
+lti	openfun/marsha	p
+lti	api-evangelist/proctorio	a
+lti	EduThemes/paper-lms	p
+lti	tsugiproject/tsugi	p
+lti	academic-innovation/django-lti	p
+lti	csev/py4e	a
+lti	shaheeranser/exam-proctor	a
+lti	DecoyLex/ltix	p
+lti	ransomleak/moodle-local_ransomleak	a
+lti	api-evangelist/turnitin	a
+lti	api-evangelist/respondus	a
+lti	api-evangelist/piazza	a
+lti	api-evangelist/packback	a
+lti	api-evangelist/newsela	a
+lti	api-evangelist/lingco-language-labs	a
+lti	api-evangelist/labster	a
+mooc	SamuelMolina13/fullstackopen	a
+mooc	iblai/lms	p
+mooc	s1y4x1/BJTU-course-assistant	a
+mooc	yatori-dev/yatori-go-console	p
+mooc	yatori-dev/yatori-go-core	a
+mooc	INRIA/scikit-learn-mooc	p
+mooc	INGInious/INGInious	p
+mooc	rage/secret-project-331	p
+mooc	five-plus-one/CourseFlow	a
+mooc	JaoBufAnalog/liveness-check	a
+mooc	sunalan2025/sjtu-downloader-all-in-one	a
+mooc	api-evangelist/coursera	a
+mooc	Xue-Wu-Zhi/xuewuzhi-downloader	a
+mooc	jiyanglu04-oss/xueban	a
+mooc	YAOsy040101/chaoxing-auto-course	a
+mooc	xiaochong0302/course-tencent-cloud	p
+mooc	surajromio/WildActor	a
+mooc	himking101/Online-Course-Platform	a
+mooc	sharjeelsayed/learn.sharjeelsayed.com	a
+mooc	csev/py4e	a
+moodle	uaiblaine/moodle-block_compass	a
+moodle	uaiblaine/moodle-block_feedback_tracker	a
+moodle	VICKY07092005/moodle-5-1-authentic-relay	p
+moodle	didactika/moodle-local_servicemanager	a
+moodle	Rick-254/moodle-quizsmith	p
+moodle	moodlehq/moodle-local_ci	a
+moodle	willianmano/moodle-theme_moove	p
+moodle	rockstar49summer/Moodle-Full-Version-Unlocked	a
+moodle	Nasus20202/MoodleMCP	p
+moodle	uaiblaine/moodle-local_dimensions	a
+moodle	uaiblaine/moodle-local_awareness	a
+moodle	moodle/devdocs	a
+moodle	alvaarocl/taskbot	p
+moodle	CloudDown/polymtl-moodle-connect	p
+moodle	eduplay-moodle-suite/eduplay-moodle-suite.github.io	a
+moodle	valentineus/moodle-webhooks	p
+moodle	uaiblaine/moodle-block_dimensions	a
+moodle	eduplay-moodle-suite/moodle-tiny_eduplay	a
+moodle	eduplay-moodle-suite/moodle-repository_eduplay	a
+moodle	eduplay-moodle-suite/moodle-media_eduplay	a
+open-badges	luisgf/openbadgeslib	p
+open-badges	api-evangelist/sertifier	a
+open-badges	api-evangelist/accredible	a
+open-badges	api-evangelist/credly	a
+open-badges	api-evangelist/badgr	a
+open-badges	fedora-infra/tahrir	p
+open-badges	MrPrinceAli/proven	p
+open-badges	ishandutta2007/Awesome-Credential-Management	a
+open-badges	ishandutta2007/Awesome-Digital-Credentialing	a
+open-badges	opensalt/OB3DefinitionWidget	p
+open-badges	hoijui/obadgen	p
+open-badges	brody-0125/signet-campus	p
+open-badges	activitypods/activitybadges	p
+open-badges	prabhathv07/AI_Digital_Badge_Classification	a
+open-badges	Schroedinger-Hat/certo	p
+open-badges	wantaekchoi/vc-verifier	p
+open-badges	iblai/wallet	p
+open-badges	oneorigin-2-0/dcc-credential-co-writer-monorep	p
+open-badges	aion-context/aion-edu	p
+open-badges	andyfmiller/vc-dotnet-demos	p
+scorm	redmodd/tessera	p
+scorm	Yousef0hanafy/elhokma-story	a
+scorm	edmozley/freeitsm	p
+scorm	jakerains/scormplayer	p
+scorm	numbas/Numbas	p
+scorm	kemalyy/edumints-scorm-mcp	p
+scorm	kemalyy/edumints-scorm-skill	p
+scorm	OpenOLAT/OpenOLAT	p
+scorm	Selleo/mentingo	p
+scorm	sergiors/scorm-cli	a
+scorm	ateeducacion/OmekaS-LearningObject	p
+scorm	anarosiris/moodle-local_efscorm	a
+scorm	andre-wojtowicz/learn-git-branching-scorm	a
+scorm	scormflow/scorm-engine	p
+scorm	joseluissaorin/andarama	a
+scorm	LaurentSta/Oneduc	p
+scorm	neiltucker/free-scorm-wrapper	a
+scorm	runestowasser-prog/LearningTheater	a
+scorm	lmsable/lmsable-skill	p
+scorm	api-evangelist/ispring	a
+student-information-system	yukazakiri/koakademy	p
+student-information-system	nastydadde/Student-Management-System	a
+student-information-system	ricardojjulia/ChurchCore-Academy	a
+student-information-system	api-evangelist/powerschool	a
+student-information-system	HossamAhmedSoft/student-information-system-cli	a
+student-information-system	francoisjacquet/rosariosis	p
+student-information-system	2009skvgamerz/School-project-application-	a
+student-information-system	erkinefendiev/aula-magna-community	a
+student-information-system	api-evangelist/university-of-wisconsin-madison	a
+student-information-system	api-evangelist/university-of-warwick	a
+student-information-system	api-evangelist/ucsb	a
+student-information-system	api-evangelist/myu	a
+student-information-system	faisalnjs/PrivateSIS	a
+student-information-system	academico-sis/academico	p
+student-information-system	mohds-rgb/MASAR	a
+student-information-system	OS4ED/openSIS-Classic	p
+student-information-system	SaadOsama10/student-registration-system	a
+student-information-system	api-evangelist/chalkable	a
+student-information-system	Krishita17/record-bridge	p
+student-information-system	Jimmyu2foru18/SUNY-University	a

@@ -1,0 +1,68 @@
+# p189 — the licence-path CASE correction. New instrument P1057
+# (compose/code/p1057-licence-path-case, 16/16 tests passing).
+# Channel: raw.githubusercontent.com/<slug>/HEAD/<path>, HTTP code checked on every fetch.
+#
+# NOT a pre-registered action. It surfaced inside ACTION MZ: 7 of 64 rows returned nothing
+# for this KB's standing path list (LICENSE, LICENSE.txt, LICENSE.md, COPYING), and one of
+# the 7 is a row this KB publishes a verdict about.
+#
+# THE CORRECTION:
+#   repos/foundations.md:2475 publishes openedx/XBlock as
+#     🔴 NO_LICENCE_FILE | 🟡 NOTICE.txt (545 B) | "Apache-2.0 ASSERTED — and no licence
+#     TEXT anywhere in the tree"
+#   repos/foundations.md:2553 adds "Usable, but the grant is a NOTICE not a LICENSE".
+#   🔴 BOTH ARE REFUTED.
+#
+slug	path	http	bytes	measured
+openedx/XBlock	LICENSE.TXT	200	11358	FULL Apache-2.0 text. Tokens: "Apache License", "Version 2.0", "TERMS AND CONDITIONS"
+openedx/XBlock	NOTICE.txt	200	545	exists, as the KB said — but it is not the only grant artefact in the tree
+openedx/XBlock	pyproject.toml	200	3344	line 9 license = "Apache-2.0"; line 10 license-files = ["LICENSE.TXT"] <- the manifest NAMED the file
+openedx/XBlock	LICENSE	404	0	the path this KB probed
+openedx/XBlock	LICENSE.txt	404	0	lowercase extension — 404. raw.githubusercontent.com is CASE-SENSITIVE
+openedx/XBlock	LICENSE.md	404	0	probed, absent
+openedx/XBlock	COPYING	404	0	probed, absent
+#
+# 🔵 WHY IT MATTERS AND NOT ONLY THAT IT IS WRONG: XBlock is the permissive entry point
+# this KB recommends into AGPL Open edX (repos/foundations.md:3068, :3134, :4884 — "the
+# lowest-friction way to put an AI activity inside Open edX"). The caveat the wrong verdict
+# forced onto every engagement using it was never real. 470★, Apache-2.0, clean.
+#
+# CAUSE: a path list that spells the extension in ONE case has not looked for the file. It
+# has looked for one SPELLING of the file.
+#
+# THE YIELD, WHICH IS THE HONEST HALF. 16 case variants x 14 grant-absent rows = 224 probes:
+sweep	probes	further_grants
+case variants over every grant-absent row this KB publishes	224	0
+#
+# THE 14 ROWS SWEPT, all returning NO case-variant licence file (verdicts HOLD):
+#   blackboard/BBDN-LTI-Adv-Node
+#   ink-waffle/sisu-mcp
+#   simon-initiative/lti-example-tool
+#   crevextech/canvas-lms-mcp
+#   dmontgomery40/mcp-canvas-lms
+#   educredentials/ec-issuer
+#   Nasus20202/MoodleMCP
+#   Rick-254/moodle-quizsmith
+#   VICKY07092005/moodle-5-1-authentic-relay
+#   OS4ED/openSIS-Classic
+#   alfredang/ai-mms
+#   alfredang/AI-LMS-TMS
+#   mohamurshid/ElimuAnalytics
+#   MoKangMedical/digital-sage
+#
+# 🟢 SO THE XBlock MISS WAS ISOLATED, NOT SYSTEMIC. Every other grant-absent verdict this
+# KB publishes survives. One real error in 64 rows, then nothing in 224 further requests.
+# A probe that measures its own precision earns the correction it just made.
+#
+# SECOND CHANNEL FINDING, AND IT IS AUTHORITATIVE WHERE IT EXISTS:
+#   PEP 639 license-files (pyproject.toml) and npm licenseFile NAME the licence path.
+#   Coverage measured over the same 64 rows: 1. Rare, so never rely on it; free, so always
+#   read it first. 🔴 A licence STRING is not a licence PATH: license = { text = "AGPL-3.0" }
+#   and "license": "MIT" say nothing about where the text lives. Both are P1057 negatives.
+#
+# THIRD CHANNEL FINDING — the /HEAD/ ref, and it retires a guess this KB has been making:
+#   raw.githubusercontent.com/<owner>/<repo>/HEAD/<path> RESOLVES THE DEFAULT BRANCH.
+#   Verified 200 on blend-ed/tutor-contrib-openedxmcp (default branch master; main 404s)
+#   and HKUDS/DeepTutor. Earlier passes probed main AND master and published verdicts like
+#   "no licence file at 10 paths" on top of a branch guess. 🟢 HEAD removes the guess and
+#   halves the probe cost. Every fetch in p189 uses it.

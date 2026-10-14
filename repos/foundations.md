@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🆕 🔴 **One row on this page carries a verdict that is wrong, and it is the row this page
+recommends most often. Plus the first measurement of what the intake channel actually
+supplies per pass — and the retirement of the figure this KB has been using instead.**
+
+### 🔴 AMENDED — `openedx/XBlock`. `NO_LICENCE_FILE` is REFUTED by `11 358` bytes
+
+| line | what this page published | what the bytes say |
+|---|---|---|
+| `:2475` | 🔴 **`NO_LICENCE_FILE`** · 🟡 `NOTICE.txt` *(`545` B)* · *"Apache-2.0 ASSERTED — and no licence TEXT anywhere in the tree"* | 🟢 **`LICENSE.TXT` · `11 358` B · HTTP `200` · verbatim Apache-2.0** |
+| `:2553` | 🟡 *"Usable, but the grant is a NOTICE not a LICENSE"* | 🟢 **The grant IS a LICENSE. The caveat is withdrawn** |
+
+🔴 **Cause: path CASE.** `raw.githubusercontent.com` is case-sensitive. `LICENSE`,
+`LICENSE.txt`, `LICENSE.md` and `COPYING` all return `404` on this repository;
+`LICENSE.TXT` returns the licence. 🟢 And the manifest said so all along —
+`pyproject.toml` *(`3 344` B, `200`)* line `10`: `license-files = ["LICENSE.TXT"]`.
+
+🔵 **Why this correction is worth more than its size.** `:3068`, `:3134` and `:4884` of
+this page recommend `XBlock` as *"the permissive entry point into an AGPL platform"* and
+*"the lowest-friction way to put an AI activity inside Open edX"*. 🟢 It is `470`★,
+`Apache-2.0`, clean, and the legal caveat a studio would have had to raise was never real.
+
+🟢 **The honest half, and it bounds the damage.** New instrument
+[`P1057`](compose/code/p1057-licence-path-case/README.md) *(`16`/`16` tests)*:
+**`16` case variants × `14` grant-absent rows = `224` probes, `0` further grants.** One
+real error in `64` rows, then nothing in `224` requests. **Every other grant-absent verdict
+on this page survives**, including `OS4ED/openSIS-Classic`, `Nasus20202/MoodleMCP`,
+`Rick-254/moodle-quizsmith` and `VICKY07092005/moodle-5-1-authentic-relay`.
+
+🟢 **Two channel findings that make every future licence read cheaper:**
+
+| channel | authority | measured coverage over the same `64` rows |
+|---|---|---|
+| 🟢 **`/HEAD/` on the raw host resolves the DEFAULT BRANCH** | 🟢 exact | **all of them.** Verified `200` on `blend-ed/tutor-contrib-openedxmcp` *(default `master`; `main` `404`s)* and `HKUDS/DeepTutor`. 🔵 Earlier passes probed `main` **and** `master` and built *"404 at N paths"* verdicts on a branch guess |
+| 🟢 **the manifest NAMES the file** — PEP 639 `license-files`, npm `licenseFile` | 🟢 authoritative | 🔴 **`1` of `64`.** Rare, so never rely on it; free, so always read it first. 🔴 A licence **string** is not a licence **path** |
+
+### 🟢 `ACTION MZ` — the whole permissive licence column, swept
+
+🟢 **`LIMB 2` FIRES.** `P1056` *(unmodified; its suite re-run `16`/`16`)* over **`64`
+repositories, `119` reads, `640` HTTP requests with every code checked** — every row this
+KB publishes as `Apache-2.0`, `BSD` or `ISC`, plus the `13` `NOT-MIT-BODY` rows:
+🟢 **`0` further split-scope rows.** The two known instances
+*(`ktwyw/python-for-engineers`, `siskinskai/spedlex`)* reproduced exactly and nothing else
+carries the shape. `P1056` stays an **intake check**; the licence column does not need a
+re-pass.
+
+🟢 **Three rows confirmed `Apache-2.0` from bytes** rather than from assertion:
+`ashutoshrana/haystack-ferpa-filter` *(`12 101` B)*, `bigdata-ustc/edudata` *(`11 346` B)*,
+`myvipbackup2/china-k12-teacher-skills` *(`11 359` B)*.
+
+🟢 **One row gains a VERSION**: [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks)
+*(`:130`, published as 🟡 `GPL`, `35 200` B)* is **`GPL-3.0`** — *"GNU GENERAL PUBLIC
+LICENSE / Version 3, 29 June 2007"*. 🔵 For a Moodle plugin the version is the point, since
+Moodle core is `GPL-3`-or-later. 🔴 Its *"GNU Affero"* token is `GPL-3`'s own §13
+cross-reference and must not be re-read as an `AGPL` grant.
+
+🆕 🟢 **A fifth manifest channel enters this KB: R/CRAN `DESCRIPTION`.**
+`shmercer/writeAlizer`'s `47`-byte `LICENSE` is **not** a stub — `DESCRIPTION` *(`1 549` B,
+`200`)* reads *"License: MIT + file LICENSE"*, and under R convention the grant lives in the
+manifest while `LICENSE` carries only the year and holder `MIT` requires. 🔵 The row is
+genuinely `MIT`, independently reproducing p185.
+
+### 🆕 🟢 What the intake channel supplies per pass — measured, and it replaces a retired figure
+
+| measure | value | status |
+|---|---|---|
+| 🆕 🟢 **new unique slugs across `12` topic pages in `28` min** | 🟢 **`12`** | 🟢 **the number to plan on** |
+| 🆕 🟢 of those, absent from this KB | 🟢 **`10` = `83`%** | 🟢 the channel is still productive |
+| row-level churn, same window | `14`/`239` = `5.9`% | 🟢 the pages are STABLE |
+| 🔴 "absent rate", p187 → p188 → p189 | `79`% → `67.5`% → **`60.3`%** | 🔴 **RETIRED as a coverage measure** |
+
+🔴 **The absent rate was never measuring the channel.** It fell another `7.2` points in `28`
+minutes while only `14` of `239` rows changed. `14` rows flipped **absent → present**, and
+every one is now cited in a KB **page** — this one, `agents/top.md`, `repos/trending.md`,
+`verticals/solutions.md`. 🔵 **p188 ingested them.** The index grew `1 993` → `2 025`.
+🟢 **So the three figures are not three estimates in disagreement; they are one quantity
+declining because the backlog is being cleared. Nobody over-counted.** Rule:
+quote it as *"rows not yet ingested, pass N"*, or do not quote it.
+
+Evidence: [`licence-path-case`](evidence/licence-path-case.2026-10-14-p189.tsv) ·
+[`split-scope-sweep`](evidence/split-scope-sweep.2026-10-14-p189.tsv) ·
+[`recency-churn`](evidence/recency-churn.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🆕 🟢 **Ten foundational rows enter, every grant read over the raw channel this pass with

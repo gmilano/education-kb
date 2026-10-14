@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **What moved this week is that an absence became a repository. The Open edX agent
+surface this KB recorded as non-existent for two passes exists, it is `AGPL-3.0`, it has `1`
+star, and one of its tools deletes learner records.**
+
+| 🆕 row | licence | stars | why it is this week's movement |
+|---|---|---|---|
+| 🆕 🔴 [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) `v0.2.0` | 🔴 **`AGPL-3.0`** *(`34 524` B, `200`)* | 🔴 `1` | 🟢 **the first MCP server over Open edX this KB has found.** Tutor plugin + `openedx-mcp` Django facade at `/api/mcp/`; MCP streamable-http container behind Caddy at `mcp.<LMS_HOST>`. LMS tools *"people, enroll, analytics, certs, **retire**"*; CMS tools *"course authoring, modulestore"*. 🔴 `/health` unauthenticated |
+| 🆕 🟢 [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) *(PyPI)* | inherits | — | the Django app ships **separately** from the plugin and is version-pinnable via `OPENEDX_EXTRA_PIP_REQUIREMENTS`. 🔵 Two artefacts, two supply-chain decisions |
+
+🔴 **It was invisible to every channel this file normally uses.** Not tagged `open-edx`,
+not tagged `mcp`, not tagged `mcp-server`; a quoted search for `"edx-platform"` + `mcp`
+returned *"Your search did not match any repositories"*. 🟢 **Rule for this page: a topic
+page is a sample of the tagged population, not of the population.** An absence established
+from topic pages alone is a tagging fact.
+
+### 🔴 The week's correction, and it is to a verdict on this KB's own recommended row
+
+🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) carries `LICENSE.TXT`, **`11 358`
+B of verbatim `Apache-2.0`**, HTTP `200`. This KB published it as
+🔴 **`NO_LICENCE_FILE`** — *"no licence TEXT anywhere in the tree"*. The cause is path
+**case**: `raw.githubusercontent.com` is case-sensitive and the probe spelled the extension
+lower-case. 🟢 `224` further case-variant probes over `14` grant-absent rows found
+**`0`** more, so the miss was isolated. New instrument
+[`P1057`](compose/code/p1057-licence-path-case/README.md).
+
+### 🟢 Trending-channel state, unchanged and now eleven passes deep
+
+🔴 **GitHub Trending: still `0` education repositories — an ELEVENTH consecutive pass.**
+🔵 Eleven is a structural fact about the channel, not a sampling accident: the supply is
+real, measurable and it never trends. This KB's intake comes from topic pages and
+repository search, and the trending page should be read as a control that keeps returning
+`0`, not as a source.
+
+🆕 🟢 **What the topic channel actually supplies, measured for the first time.** Over `28`
+minutes across the same `12` topic pages at `?s=updated`: **`12` unique new slugs, `10` of
+them (`83`%) absent from this KB.** 🔵 That is the sustainable intake rate and it is the
+number to plan a pass around — not the absent rate, which `ACTION MY` retired this pass as
+a measure of anything but this KB's own backlog.
+
+| topic page, `?s=updated`, `28` min apart | rows changed |
+|---|---|
+| 🔴 `edtech` | `6` of `20` |
+| 🔴 `lms` | `4` of `20` |
+| `moodle` | `2` of `20` |
+| `e-learning` · `lti` | `1` of `20` each |
+| 🟢 `adaptive-learning` · `ferpa` · `learning-analytics` · `mooc` · `open-badges` · `scorm` · `student-information-system` | 🟢 **`0`** |
+| **total** | **`14` of `239` = `5.9`%** |
+
+🔵 **So the recency window is `edtech`-and-`lms`-shaped.** Seven of twelve pages did not
+move at all in half an hour. A pass that re-reads all twelve every time is spending most of
+its budget on pages that cannot have changed. 🟢 `learning-analytics` rendered `19` rows,
+not `20`, at the same URL and sort order — recorded, not explained.
+
+Evidence: [`openedx-mcp-server`](evidence/openedx-mcp-server.2026-10-14-p189.tsv) ·
+[`recency-churn`](evidence/recency-churn.2026-10-14-p189.tsv) ·
+[`licence-path-case`](evidence/licence-path-case.2026-10-14-p189.tsv)
+
 ## Pass 188 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

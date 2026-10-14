@@ -1,0 +1,59 @@
+# p189 — ACTION NB. Does a FastMCP/agent-tool server over Open edX exist OUTSIDE
+# topics/open-edx? Gap 427.
+#
+# LIMB 1 (one exists -> Gap 427 was a TOPIC-TAGGING artefact, not a real absence, and
+#         Pattern 33's Open edX row drops to 4-6 weeks)
+# LIMB 2 (none -> the 8-10 week estimate is confirmed and the absence is real across two
+#         independent channels)
+#
+# RESULT: LIMB 1 FIRES. THE SERVER EXISTS. p188's "No server exists" is RETIRED.
+# 🔴 And the licence INVERTS the commercial conclusion, which is why finding it is not
+# straightforwardly good news. See the verdict block at the end.
+channel	query	rows	open_edx_rows
+github.com/topics/mcp-server?s=updated	20 rendered	20	0 — nothing LMS-shaped at all. Closest is SkyliveLLC/vikunja-mcp (task management, not an LMS)
+github.com/topics/mcp?s=updated	20 rendered of 96 270	20	0 — closest is didilili/ai-agents-from-zero, an agent TUTORIAL, not an LMS surface
+github.com/search?q="edx-platform"+mcp&type=repositories	0	0	🔴 "Your search did not match any repositories" — the quoted-slug query finds NOTHING
+github.com/search?q=openedx+mcp+server&type=repositories&s=updated	1	🟢 1 — FOUND
+#
+# SO THE ABSENCE WAS A CHANNEL ARTEFACT IN THREE WAYS AT ONCE, and this is the method
+# lesson: the repository is not tagged open-edx, not tagged mcp, not tagged mcp-server,
+# and does not match on the string "edx-platform". It is invisible to every channel p188
+# used, and visible to an unquoted repository search. p188 concluded from the OFFICIAL
+# client's documentation ("will never expose MCP server functionality") plus three topic
+# pages. The official statement remains TRUE of the official client. The community built
+# one anyway.
+#
+# THE ROW, every byte read over raw.githubusercontent.com/<slug>/HEAD/<path>, HTTP checked
+field	measured
+slug	blend-ed/tutor-contrib-openedxmcp
+default branch	🔴 master — /HEAD/ resolved it. main returns 404 on every path, so a main/master guess would have missed this repo entirely
+version	0.2.0 (pyproject.toml, 847 B, HTTP 200)
+LICENSE	🔴 AGPL-3.0 — 34 524 B, HTTP 200, "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007"
+licence, corroborated	pyproject.toml: license = { text = "AGPL-3.0" }; README badge "License: AGPL-3.0"
+stars	🔴 1
+README	3 772 B, HTTP 200
+shape	a Tutor plugin, TWO artefacts: (1) installs the openedx-mcp Django app into the LMS/CMS image, exposing a REST facade at /api/mcp/ and /api/mcp/cms/; (2) runs a standalone `openedxmcp` container — an MCP streamable-http server proxying to that facade, fronted by Caddy at mcp.<LMS_HOST>
+tool surface, LMS side	README architecture diagram, verbatim: "people, enroll, analytics, certs, reports, retire"
+tool surface, CMS side	verbatim: "course authoring, modulestore"
+auth model	verbatim: "The MCP server holds no secrets: each request carries its own MCP key, forwarded to the facade as X-MCP-Key. Authorization is enforced by the facade (is_staff/is_superuser, live)." Keys are minted in Django admin; `tutor local do init` creates the MCPKey tables
+ships	Caddyfile route /mcp*, docker-compose services + healthcheck, k8s deployment/service with readiness/liveness on /health, openedx-common-settings injection, openedx-dockerfile-post-python-requirements pip install
+second artefact	openedx-mcp — the Django app, distributed separately on PyPI, pinnable via OPENEDX_EXTRA_PIP_REQUIREMENTS
+🔴 exposure	the README states /health is UNAUTHENTICATED (for probes)
+#
+# VERDICT, AND IT IS A TRADE NOT A WIN:
+# 🟢 Pattern 33's Open edX row drops from 8-10 weeks to 4-6: the integration no longer has
+#    to be written, only reviewed, keyed and deployed.
+# 🔴 But it is AGPL-3.0 and 1★. The LICENCE cost rises exactly as the BUILD cost falls, and
+#    for a studio that intends to extend the server the AGPL reaches the extension. 🔵 THE
+#    PERMISSIVE ROUTE TO AN OPEN edX AGENT SURFACE STILL DOES NOT EXIST — which is what
+#    Gap 427 should have been asking all along. It is now re-stated that way, not closed.
+# 🔵 Consistent with the platform: Open edX is AGPL, and p188 established that AGPL is NOT
+#    what prevents a server (Moodle is GPL-3 and carries three). The licence here is
+#    inherited from the host, not caused by it.
+#
+# 🔴 AND IT CONNECTS TO THIS PASS'S TREND. The LMS-side tool list includes `retire` — a
+# learner-record deletion tool, callable by an agent holding one MCP key, authorised only
+# by is_staff. ACTION NA proved the LRS API refuses to overwrite a statement. This is the
+# same artefact class with no such refusal, reached from the other side of the stack. The
+# defect p188 named now has an AGENT-REACHABLE trigger, named in a README, with a bus
+# factor of one.

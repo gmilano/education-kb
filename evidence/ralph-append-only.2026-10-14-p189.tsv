@@ -1,0 +1,39 @@
+# p189 — ACTION NA. Does openfun/ralph's LRS REFUSE an overwrite in practice?
+# Read as CODE over raw.githubusercontent.com/openfun/ralph/master/..., HTTP 200 checked.
+#   src/ralph/api/routers/statements.py   30 702 B   HTTP 200
+#   src/ralph/api/models.py                2 088 B   HTTP 200
+#
+# LIMB 1 (the API refuses -> Pattern 32 step 3c is cheaper than written and the API layer
+#         is genuinely append-only)
+# LIMB 2 (it overwrites or returns 204 -> step 3b's WORM target is mandatory and the
+#         estimate holds at 8-10 weeks)
+#
+# RESULT: LIMB 1 FIRES, DECISIVELY AND IN BOTH WRITE PATHS. And LIMB 2's own wording was
+# MIS-SPECIFIED: it listed "returns 204" as evidence of overwriting. 204 is the xAPI spec's
+# response for an IDEMPOTENT DUPLICATE. Here it is the evidence of REFUSAL, not of a write.
+layer	path	lines	measured
+PUT	src/ralph/api/routers/statements.py	624-700	@router.put("/") and @router.put(""), status_code=204. On an existing id the handler queries query_statements_by_ids FIRST, then: 🟢 if statements_are_equivalent is FALSE it raises HTTPException(409 CONFLICT, "A different statement already exists with the same ID") and RETURNS BEFORE BACKEND_CLIENT.write is reached. The overwrite never leaves the API process.
+PUT	same	686-689	Verbatim source comment: "The LRS specification calls for deep comparison of duplicate statement ids. In the case that the current statement is not equivalent to one found in the database we return a 409, otherwise the usual 204." 🟢 The refusal is DELIBERATE and documented in the code.
+PUT	same	690-691	If every existing statement IS equivalent: bare `return`. No write call. 🟢 Idempotent no-op, 204.
+POST	same	163-210 (_filter_existing_statements)	Docstring verbatim: "Drop statements already stored; raise on conflicting duplicates." Non-equivalent existing id -> HTTPException(409, "Differing statements already exist with the same ID: {id}"). Equivalent ids are REMOVED from the write set by the closing dict comprehension, so they are never re-indexed.
+POST	same	728-736 (_post_statements_standard)	Atomic batch. After filtering, `if not statements_dict: response.status_code = 204; return None` — an all-duplicate batch writes NOTHING and answers 204.
+POST	same	739-790 (_post_statements_partial_success)	Opt-in bulk backfill (issue #622). 🔴 Tolerates VALIDATION errors per item but NOT an id conflict: ValueError from the filter -> 409 with PartialSuccessError(index=-1) and inserted_ids=[] — the WHOLE batch is rejected. So "partial success" does not weaken the id guarantee.
+#
+# THE GUARANTEE IS IN THE API PROCESS, NOT IN THE STORE, AND THAT IS THE COMMERCIAL POINT.
+# p188 measured the other half and it still stands: src/ralph/backends/data/base.py declares
+# BaseOperationType {INDEX, CREATE, DELETE, UPDATE, APPEND}, default_operation_type = INDEX
+# (which overwrites at a specific id), DELETE is implemented in es.py and exercised in
+# mongo.py, and --es-op-type exposes create/index/update/delete as a FIRST-CLASS CLI option.
+#
+# SO THE ANSWER SPLITS BY WHO THE ADVERSARY IS:
+#   an xAPI CLIENT cannot tamper with a stored statement           -> 409, enforced, free
+#   an OPERATOR, a backfill job, or anything holding Elasticsearch
+#     or Mongo credentials can delete or overwrite it at will      -> nothing stops it
+#
+# CONSEQUENCE FOR PATTERN 32:
+#   step 3c (application-layer append-only) is CHEAPER than written — it is already true,
+#     and it can be demonstrated to a client in one 409 rather than built.
+#   step 3b (the WORM store) STAYS MANDATORY, but its justification CHANGES: it is not
+#     there to stop the application, it is there to stop the operator. 🔵 That is the
+#     distinction a regulator asks about, and it is a better argument than the one p188 had.
+#   The 8-10 week estimate holds, with the weeks moving from 3c to 3b.

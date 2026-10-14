@@ -4,6 +4,213 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 189 — 2026-10-14
+
+🟢 **All six of the actions pre-registered for this pass are DISCHARGED. Two fired the limb
+as written; FOUR fired the FACT and falsified or outgrew the limb's stated consequence —
+which is the pass's real result and the thing p190 should plan around. The seventh is NOT
+RUN for the fifth pass running, and the reason is unchanged: it is an outward-facing write
+on a third party's repository and this run is unattended.**
+
+🆕 🔴 **The headline is that a figure this KB has quoted for three passes was never measuring
+what it was said to measure — and the correction exonerates p187 instead of accusing it.
+Second: the agent surface this KB proved ABSENT for two passes exists, is `AGPL-3.0`, has
+`1` star, and one of its tools deletes learner records.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION MY`** — row-level CHURN of the `12`-page recency census against p188's stored `240` | 🔴 **DISCHARGED. LIMB `2` FIRES ON THE FACT, ITS CONSEQUENCE REFUTED, AND A THIRD MECHANISM FOUND. Churn `14`/`239` = `5.9`%, so the pages ARE stable — but the `11.5`-point drop was NOT a counting error. 🟢 The absent rate falls because THIS KB INGESTS THE ROWS IT CENSUSES. Nobody over-counted** |
+| 🟢 **`ACTION MZ`** — `P1056` over every `Apache-2.0` / `BSD` row and the `13` `NOT-MIT-BODY` rows | 🟢 **DISCHARGED, LIMB `2` FIRED. `0` further split-scope rows in `119` reads across `64` repositories. 🔴 But the `13` `NOT-MIT-BODY` rows resolve into FOUR unrelated things — and the real licence-column blind spot turned out to be path CASE** |
+| 🔴 **`ACTION NA`** — does `ralph`'s LRS REFUSE an overwrite in practice? | 🟢 **DISCHARGED, LIMB `1` FIRED, BOTH WRITE PATHS. `409 CONFLICT`, returning before `BACKEND_CLIENT.write`, with the refusal documented in a source comment. 🔴 Limb `2`'s own wording was mis-specified: `204` is the spec's IDEMPOTENT-DUPLICATE response, i.e. evidence of REFUSAL** |
+| 🟢 **`ACTION NB`** — does a `FastMCP`/agent surface over Open edX exist outside `topics/open-edx`? | 🟢 **DISCHARGED, LIMB `1` FIRED. IT EXISTS. `blend-ed/tutor-contrib-openedxmcp` `v0.2.0`. 🔴 And the licence INVERTS the conclusion: `AGPL-3.0`, `1`★. Pattern `33` drops to `4`–`6` weeks; the PERMISSIVE route still does not exist** |
+| 🟡 **`ACTION NC`** — close the Gulf gap by naming the institutions | 🟢 **DISCHARGED, LIMB `1` FIRED, THREE OF FOUR STATES. Saudi Arabia, the UAE and Qatar all have dated instruments. p188's gap was in the QUESTION. 🔴 Bahrain remains, as a measured absence** |
+| 🟢 **`ACTION ND`** — verify Regulation (EU) `2026/1744` against a primary source | 🟡 **DISCHARGED INTO A THIRD STATE THE ACTION DID NOT PROVIDE FOR: CORROBORATED, NOT PRIMARY. Six independent legal publishers agree and add the OJ date (`2026-07-24`) and Recital `40`. 🔴 Every primary host is blocked here, so no Official Journal text was read** |
+| 🔴 **`ACTION MN`** *(for a human)* — may this KB open licensing issues on third-party repositories? | 🔴 **NOT RUN, fifth pass running. An outward-facing write on someone else's repository by an unattended run with no live authorisation. Recorded as a decision for a human, not dropped** |
+
+### 🔴 `ACTION MY` — the figure that was never measuring the channel
+
+| measurement, same `12` pages, same sort order, `28` minutes after p188 | result |
+|---|---|
+| rows rendered | `239` *(🟡 `learning-analytics` served `19`, not `20` — recorded, not explained)* |
+| rows unchanged | `225` |
+| 🟢 **row-level churn** | 🟢 **`14`/`239` = `5.9`%**, against the `≥25`% limb `1` needed |
+| pages that moved ZERO rows | 🟢 **`7` of `12`** |
+| 🔴 absent rate, all rows, TIGHT index | 🔴 **`144`/`239` = `60.3`%** *(p188 published `67.5`%, p187 `79`%)* |
+| 🟢 rows that flipped **absent → present** in `28` minutes | 🟢 **`14`** |
+
+🔴 **First, the interval was not what the action assumed.** Commit timestamps: p187
+`02:09:41`Z, p188 `03:19:21`Z, p189 `03:47`Z. **p187 → p188 was `70` MINUTES, not one day**
+— and p188's own evidence file says it re-read the pages *"one day later"*. 🔵 **So the
+explanation p188 offered for the `11.5`-point drop — that the recency window may have moved
+in a day — was never available to it.**
+
+🟢 **And the real mechanism is measurable: `14` rows flipped absent → present, and every one
+is now cited in a KB PAGE** *(`agents/top.md`, `repos/foundations.md`, `repos/trending.md`,
+`verticals/solutions.md`)* — `alvaarocl/taskbot`, `ateeducacion/OmekaS-LearningObject`,
+`edmozley/freeitsm`, `EduThemes/paper-lms`, `jakerains/scormplayer`, `MrPrinceAli/proven`,
+`virtUOS/abstimmbar` and seven more. **p188 ingested them.** The slug index grew
+`1 993` → `2 025`.
+
+🟢 **So `79`% → `67.5`% → `60.3`% is not three estimates of one quantity in disagreement. It
+is ONE QUANTITY DECLINING BECAUSE THE BACKLOG IS BEING CLEARED, at roughly `6` points a
+pass, BY CONSTRUCTION, as a consequence of the work.** 🔵 **p187 did not over-count. The
+instrument was mis-named.**
+
+🟢 **Rule now in force: the "absent rate" is a gauge of this KB's own INGEST BACKLOG and may
+never be quoted as channel coverage.** What measures the channel is the **new-supply rate**,
+measured here for the first time: 🟢 **`12` unique new slugs across `12` pages in `28`
+minutes, `10` of them (`83`%) absent.** That is the number a pass can be planned around.
+
+### 🟢 What the pass is worth: one repository, one correction, one new instrument
+
+🆕 🔴 **The Open edX agent surface, and why it is a trade.**
+[`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp)
+`v0.2.0`: Tutor plugin + the `openedx-mcp` Django facade *(`/api/mcp/`, `/api/mcp/cms/`)* +
+an MCP streamable-http container behind Caddy at `mcp.<LMS_HOST>`. LMS tools, verbatim:
+*"people, enroll, analytics, certs, **retire**"*. 🔴 `AGPL-3.0` *(`34 524` B, `200`)*, `1`★,
+`/health` unauthenticated, authorisation `is_staff`/`is_superuser` with no per-tool scope.
+🟢 Pattern `33` drops `8`–`10` → **`4`–`6` weeks**; 🔴 the permissive route to an Open edX
+agent surface **still does not exist**, which is what `Gap 427` should have asked.
+
+🔵 **It was invisible to three channels at once** — not tagged `open-edx`, `mcp` or
+`mcp-server`, and a quoted `"edx-platform"` + `mcp` search returns *"Your search did not
+match any repositories"*. 🟢 **Rule: an absence established from topic pages is a statement
+about TAGS.**
+
+🆕 🔴 **`openedx/XBlock` is not `NO_LICENCE_FILE`.** It carries `LICENSE.TXT` — **`11 358` B
+of verbatim `Apache-2.0`, HTTP `200`** — and this KB published *"no licence TEXT anywhere in
+the tree"* and *"the grant is a NOTICE not a LICENSE"*. 🔴 Cause: `raw.githubusercontent.com`
+is **case-sensitive** and the probe spelled the extension lower-case. 🔵 `XBlock` is the
+permissive entry point this KB recommends into `AGPL` Open edX, so the caveat was never
+real. 🟢 **And the manifest said so all along:** `pyproject.toml` line `10`,
+`license-files = ["LICENSE.TXT"]`.
+
+🆕 🟢 **New instrument `P1057`** *(`16`/`16` tests,
+[`compose/code/p1057-licence-path-case`](compose/code/p1057-licence-path-case/README.md))*:
+the manifest channel, then case variants. 🟢 **Its honest half, measured in the same pass:
+`16` variants × `14` grant-absent rows = `224` probes, `0` further grants.** The miss was
+isolated; every other grant-absent verdict here survives.
+
+🟢 **And a method win worth more than one row: `/HEAD/` on the raw host resolves the DEFAULT
+BRANCH** *(verified on a repo whose default is `master` and whose `main` `404`s)*. Earlier
+passes probed `main` **and** `master` and published *"404 at N paths"* verdicts on a branch
+guess. All `880`+ fetches this pass use `HEAD`.
+
+### 🔴 Licence findings, all measured from bytes
+
+- 🆕 🔴 **A VIEW-ONLY licence, and it is `MIT` inverted.**
+  [`shuyunyuan/talentcoach`](https://github.com/shuyunyuan/talentcoach) *(`LICENSE`, `842` B)*:
+  *"published for portfolio and code-review purposes only. Viewing the source on GitHub is
+  permitted; no other rights are granted."* It negates `MIT`'s verb list item by item while
+  carrying `MIT`'s **warranty paragraph verbatim** — which is why a vocabulary probe can
+  mistake it for `MIT`-adjacent. **Unusable.** `Gap 421`'s fifth sub-`1`kB shape.
+- 🆕 🟢 **Two `~46`-byte licences, opposite verdicts, and size cannot separate them.**
+  `shmercer/writeAlizer`'s `47` B is a **COMPLETE `MIT` grant** — `DESCRIPTION` reads
+  *"License: MIT + file LICENSE"*, so under R/CRAN convention the grant is in the manifest and
+  `LICENSE` holds only the year and holder `MIT` requires *(independently reproducing p185)*.
+  🔴 `MoKangMedical/digital-sage`'s `46` B is **`MIT License` + a copyright line and no
+  permission clause** — not a grant. 🟢 **The packaging convention decides, not the byte
+  count.** New channel: **R/CRAN `DESCRIPTION` `License:`**, a fifth manifest channel.
+- 🟢 **A version gained:** `valentineus/moodle-webhooks` is **`GPL-3.0`**, not bare `GPL`
+  *(`35 200` B, version line read)*. 🔵 Matters because Moodle core is `GPL-3`-or-later.
+  🔴 Its *"GNU Affero"* token is `GPL-3`'s own §13 cross-reference, not an `AGPL` grant.
+- 🆕 🔴 **A noise mechanism named before it became wrong data:** a `CC` identifier beside a
+  **named third party** is an attribution, not a scope split.
+  `Bbar0n234/learnflow-ai` — *"IP geolocation data by IPinfo, licensed under CC BY-SA 4.0"*.
+  `P1056` returned the weaker verdict, so nothing was mis-published.
+- 🔴 **Five new blocked hosts: `www.spa.gov.sa`, `data.consilium.europa.eu`,
+  `education.ec.europa.eu`, `ai-act-service-desk.ec.europa.eu`, `www.actuia.com`. That is
+  `14`.** Per `P950`, not retried host by host. 🔴 **THE PATTERN IS THE FINDING: every
+  GOVERNMENT primary source attempted this pass was unreachable, while the secondary legal
+  layer was fully reachable and the raw host served every byte of code asked of it.**
+  🟢 So this KB reads **code at primary fidelity and regulation at secondary fidelity, by
+  construction** — stated once per page, not re-argued per claim.
+
+### 🟢 The regional sweep: the Gulf enters, and EMEA gains a live prohibition
+
+- 🆕 🔴 **EMEA — the deadline the whole market is discussing is the wrong one.** Article
+  `5(1)(f)` **prohibits** inferring emotions from biometric data in **education
+  institutions**, and has since **`2` February `2025`**. The Omnibus delayed **high-risk**
+  duties to `2027-12-02`; it did **not** delay **prohibitions**. Penalty ceiling **EUR `35`M
+  or `7`% of worldwide turnover.** 🟢 **Not caught:** behavioural engagement analytics that
+  do not infer emotions. 🔴 **Explicitly unresolved:** proctoring, where emotion inference as
+  a *secondary* functionality is left open by the Commission's guidelines — and this KB
+  carries four proctoring rows and patterns.
+- 🆕 🟢 **EMEA — Regulation (EU) `2026/1744` gains its OJ date and its reason.** Dated
+  `8` July `2026`, **published in the Official Journal `24` July `2026`**, in force
+  `27` July `2026` *(third day after publication)*; also amends Reg. `2018/1139` and
+  `2023/1230`; **Recital `40`** gives the reason *(standards and national authorities not
+  ready)*; 🆕 **Art. `50(2)` machine-readable marking of pre-existing generative AI gets a
+  grace period to `2` December `2026`** — so this KB's four Art. `50(2)` instruments now have
+  a deadline. 🔴 Sources disagree on whether one or two new Art. `5` prohibitions phase in
+  on `2026-12-02`: **do not quote a count.**
+- 🆕 🟢 **EMEA — two EU education instruments, one of them a procurement signal.** Council of
+  the EU `ST-8262-2026-INIT` *(`24` April `2026`)* calls for **updating `DigCompEdu`** to
+  cover educators' AI use — 🔵 the frame EU public-sector education tenders are written
+  against. Plus the Commission's **AI Literacy Framework** for schools and Eurydice's
+  *"Digital education at school in Europe 2026"*.
+- 🆕 🟢 **The Gulf — `ACTION NC` fires, three of four states, and p188's gap was in the
+  question.** 🟢 **Saudi Arabia**: national AI curriculum, all public schools, ~`6`M students,
+  `2025`–`26` academic year, built with **SDAIA** — plus 🟢 **an MoE/SDAIA guide for using
+  GENERATIVE AI in general education**, the only Gulf instrument governing AI *on* learners.
+  🟢 **UAE**: AI mandatory KG–G`12` *(announced `2025-05-04`)*, standalone subject
+  *"Artificial Intelligence and Technology"* from `2026/27`, **`22 000` teachers** trained.
+  🟢 **Qatar**: **AI-Ready Schools implementation roadmap (`2024`)**, MoEHE — and a ministry
+  statement at WISE Doha *(`2026-05`)* that adoption is *"outpacing policy development and
+  teacher preparedness"*. 🔴 **Bahrain**: National AI Policy *(`2025-07`)*, economy-wide, **no
+  education-specific guidance** — the residual, needing an Arabic-language channel.
+  🔵 **Commercially this inverts the EMEA posture: in the Gulf the funded line item is
+  curriculum and teacher capability, and the regulated surface is largely ungoverned.**
+- 🆕 🟢 **North America — a SUBSTANTIVE constraint, not a paperwork one.** 🟢 **Oklahoma**
+  requires a written district AI policy before `2027`–`28` **and bars AI from being the main
+  basis for high-stakes decisions about students.** 🟢 **Tennessee** joins Ohio in legally
+  requiring district policies *(Ohio's deadline `2026-07-01`, passed)*. 🆕 Idaho `S.B. 1227`,
+  Maryland `S.B. 720` *(with **district AI coordinators** — a named role to sell into)*,
+  Virginia `SB 394`/`HB 1186`. 🆕 Federal: ED finalised an **AI grant-priority rule
+  `2026-04-13`**. 🟡 Guidance counts disagree — `31` states *(Ballotpedia, Jan `2026`)* vs
+  `33`–`35` + Puerto Rico: **quote the range.**
+- 🆕 🟢 **APAC — Korea is now dated and it names education.** The **AI Basic Act entered force
+  `2026-01-22`** and names **education** among "high-impact AI" sectors, requiring **human
+  monitoring and intervention** and disclosure of AI-generated content. 🟢 Singapore:
+  **AICET works with the Ministry of Education**, teacher AI training at all levels by `2026`.
+  🟡 Japan: guidelines plus selected school pilots. 🔴 India: no dedicated AI legislation.
+  🔴 **p188's gap `2` still does not close: no education-specific APAC teacher-adoption
+  statistic for `2026`.** Scope APAC on regulation and curriculum, never adoption.
+- 🆕 🟢 **LATAM — the programmes are nameable and they are teacher-capability shaped.**
+  **Google.org `$4.6`M across nine countries**, `1.25`M students by `2028`, delivered by
+  training **`24 000` educators**. HolonIQ `2026` LATAM EdTech `100`: **Brazil nearly half the
+  cohort**; Mexico's **Mattilda `$50`M**; Colombia's **Edtools** *(Barranquilla)*. 🟢 Still the
+  sharpest finding: faculty's **lowest adoption is in ASSESSMENT** *(DEC LATAM `2026`)* — the
+  surface Vietnam, Oklahoma, Korea and the EU all regulated. 🔴 **No national AI-in-education
+  rule found for Brazil, Mexico, Colombia or Chile**: sell governance as risk management, not
+  compliance.
+- 🔴 **Global — the number to open a meeting with: `7`% of schools worldwide have AI
+  guidance, and `40`% of those only informally**, against **`65`% of students saying
+  assessment is already changing** because of generative AI. 🔵 The gap between what is
+  regulated and what is governed is the engagement. Market `2026` stays a **range, `$9`–`11`B**.
+- 🔴 **GitHub Trending: `0` education repositories for an ELEVENTH consecutive pass.**
+  🔵 Eleven is a fact about the trending page, not about education.
+
+### 🟢 Pre-registered for p190, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION NE`** | re-derive the **new-supply rate** over the same `12` pages, so it has two independent measurements instead of one. Store the rows | 🟢 **limb `1`:** `8`–`16` new slugs with `≥70`% absent → 🟢 **the intake rate is stable and becomes this KB's published coverage measure, replacing the retired absent rate.** 🔴 **limb `2`:** outside that band → 🔴 **one measurement was an artefact; report new supply as a range and say which pass produced which end** |
+| 🆕 🔴 **`ACTION NF`** | read `tutor-contrib-openedxmcp`'s **actual tool definitions** *(`tutoropenedxmcp/`, the image build context, and the `openedx-mcp` PyPI payload)* and count them against the README's `7` named tools — `P139`'s tool-count-drift check | 🟢 **limb `1`:** the count matches and `retire` is one tool → 🟢 **Pattern `35` step `1` can trust a README for scoping and the audit is `2`–`3` weeks.** 🔴 **limb `2`:** it drifts → 🔴 **step `1` must enumerate from definitions in every engagement and the estimate rises** |
+| 🆕 🟢 **`ACTION NG`** | run `P1057` over **every** row this KB publishes with a licence, not just the grant-absent ones — does any PUBLISHED licence come from a path that is now ambiguous, or does a case-variant file contradict the one that was read? | 🟢 **limb `1`:** `0` contradictions → 🟢 **the `XBlock` miss is confirmed as a one-off and the licence column is sound.** 🔴 **limb `2`:** `≥1` → 🔴 **the column needs a full re-read and `P1057` becomes a standing intake gate, not a repair tool** |
+| 🆕 🔴 **`ACTION NH`** | settle whether any proctoring row in this KB **infers emotion** — read `shaheeranser/exam-proctor` and the `seb-proctoring-validator` corpus for affect/emotion/engagement-scoring code paths | 🟢 **limb `1`:** none infers emotion → 🟢 **the proctoring rows are clear of Art. `5(1)(f)` and can be recommended into EU engagements with a stated basis.** 🔴 **limb `2`:** `≥1` does → 🔴 **flag the row, and Pattern `35` step `2` gains a mandatory emotion-inference check for EU work** |
+| 🆕 🟡 **`ACTION NI`** | Bahrain alone: probe the Ministry of Education's own domain and Arabic-language sources for an AI-in-education instrument | 🟢 **limb `1`:** one exists → 🟢 **the Gulf closes completely.** 🔴 **limb `2`:** `0` → 🔴 **record it as a LANGUAGE-channel limit, not a policy absence, and stop asking** |
+| 🆕 🟢 **`ACTION NJ`** | does `ralph`'s `statements_are_equivalent` compare the WHOLE statement or a subset? Read the function. 🔵 If it ignores a field, a re-`PUT` differing only in that field is accepted as "equivalent" and the `409` guarantee has a hole | 🟢 **limb `1`:** full comparison → 🟢 **Pattern `32` step `3c` is sound as repriced and the `409` can be quoted to a DPO without qualification.** 🔴 **limb `2`:** a subset → 🔴 **name the ignored fields; the append-only claim narrows to "append-only except for X" and step `3b` becomes the only real guarantee** |
+| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is unchanged: `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4ED/openSIS-Classic` *(`345`★, `GPL` with no licence file)*, `alfredang/ai-mms` + `AI-LMS-TMS`, `mohamurshid/ElimuAnalytics`, `MoKangMedical/digital-sage`. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently |
+
+🔵 **Note for p190 on method.** 🟢 p189's lesson is the sharpest bookkeeping lesson yet, and
+it runs the opposite way to p188's: **p188 learned that a figure without its rows cannot be
+re-measured. p189 learned that a figure WITH its rows can still be measuring the wrong
+thing.** The absent rate was reproducible, internally consistent and falling smoothly across
+three passes — and it was a gauge of this KB's own backlog the whole time. 🔵 **Before
+re-measuring a number, ask what would have to be true for it to move. If the answer is
+"we did our job", it is not a measurement of the world.**
+
 ## Pass 188 — 2026-10-14
 
 🟢 **All five of the actions pre-registered for this pass are DISCHARGED, every one with a
