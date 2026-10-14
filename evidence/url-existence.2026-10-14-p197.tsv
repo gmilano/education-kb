@@ -1,0 +1,33 @@
+# Pass 197, 2026-10-14. Education KB -- URL existence for EVERY github.com address this
+# pass publishes, verified BEFORE publication.  DENOMINATOR: 25 addresses, all of them new
+# or re-asserted in pass 197's page blocks.  RESULT: 25 live (rc=0, >=1 ref), 0 problems.
+# CHANNEL: git ls-remote --heads (github.com HTML is 403 at this session's proxy, 4th pass).
+# The two addresses this pass publishes as DEAD are deliberately NOT linked in the pages and
+# so are not in this file: apereo/opencast (rc=128, stale org path -- opencast/opencast is
+# live) and yourusername/scholarmate (rc=128, a template placeholder published as an address).
+slug	rc	heads
+ANFAIA/SkillNet	0	3
+Berserk-hub150/moodle-ai-skill-navigator	0	5
+Lumieducation/Lumi	0	24
+NirDiamant/GenAI_Agents	0	12
+NirDiamant/RAG_Techniques	0	4
+NirDiamant/agents-towards-production	0	2
+bycs-lp/moodle-block_ai_chat	0	62
+bycs-lp/moodle-local_ai_manager	0	112
+cgrevisse/moodle-qbank_genai	0	1
+human2human-ai/moodle-tool_human2human	0	1
+kstateome/lti-launch	0	41
+langfuse/langfuse-workshop	0	22
+llwand1/xuelian-agent	0	91
+marcusgreen/moodle-qtype_aitext	0	35
+microsoft/ML-For-Beginners	0	12
+microsoft/moodle-ai-assistant	0	2
+midudev/libros-programacion-gratis	0	5
+nakafaai/nakafa.com	0	27
+onbirdev/moodle-webservice_mcp	0	1
+open-spaced-repetition/fsrs4anki-helper	0	6
+opencast/opencast	0	155
+openedx/XBlock	0	17
+saylordotorg/moodle-local_ai_course_assistant	0	76
+unslothai/notebooks	0	143
+xiaolai/the-craft-of-selfteaching	0	2

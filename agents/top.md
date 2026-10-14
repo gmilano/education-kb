@@ -3,6 +3,79 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **`10` new rows, every licence read from the bytes of the tree — and the layer they come
+from is the one p196's channel could not see.** 🔴 **p196 blamed its Python language filter.
+The filter was the WORD.**
+
+| query to the ranked channel | rows |
+|---|---|
+| `education AI agent language:typescript stars:>20` | `5` |
+| 🔴 `education AI agent language:php stars:>10` | 🔴 **`0`** |
+| 🔴 `education AI agent language:java stars:>20` | 🔴 **`0`** |
+| 🟢 `moodle AI language:php pushed:>2026-06-01` | 🟢 **`198`** |
+
+🔵 **The LMS-plugin world does not call itself *«agent»***, so no language switch recovers it —
+only a vocabulary switch does. 🟢 p196's limb `1` *(«the new rows cluster in PHP/Java, the
+LMS-plugin world»)* **fires on the data and fails on the stated mechanism.**
+
+### 🟢 The new rows — licence from bytes, no channel field trusted
+
+| agent | licence *(read from bytes)* | what it is |
+|---|---|---|
+| 🟢 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **`MIT`** *(`LICENSE`, `1 084` B)* | Microsoft's own Moodle AI assistant accelerator — **permissive inside a `GPL` plugin world**, which is the unusual part |
+| 🟢 [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | 🟢 **`Apache-2.0`** *(`10 758` B)* | agents that generate a course and tutor the learner; early, and the **only `Apache-2.0`** row in this batch, so the patent grant travels |
+| 🟢 [`langfuse/langfuse-workshop`](https://github.com/langfuse/langfuse-workshop) | 🟢 **`MIT`** *(`1 073` B)* | a TypeScript agent built to TEACH the AI-engineering loop: tracing, prompt management, datasets, evaluation |
+| 🟢 [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **`MIT`** *(`1 062` B)* | StudentBuddy — study agent for programming beginners: co-reading, question generation, per-item explanation, review. Local-first, self-hostable |
+| 🟡 [`human2human-ai/moodle-tool_human2human`](https://github.com/human2human-ai/moodle-tool_human2human) | 🟡 **`GPL-3.0`** *(`35 149` B)* | AI-facilitated **oral exams**, role plays and debates inside any Moodle course. Created `2026-10-05` — the newest row on this shelf |
+| 🟡 [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai) | 🟡 **`GPL-3.0`** *(`35 178` B)* | generative question-bank plugin |
+| 🟢 [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🟢 **`GPL` by source header** *(`40` of `50` files; no licence FILE)* | an LLM-graded free-text **question type** — the closest thing to an assessment agent that runs inside the LMS |
+| 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟢 **`GPL` by source header** *(`255` of `278` files)* | a provider/quota **manager** for AI inside Moodle — the governance layer a district actually needs |
+| 🟢 [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 **`GPL` by source header** *(`64` of `91` files)* | the chat surface that sits on top of that manager |
+| 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **`NONCOMMERCIAL-NOT-OSI`** *(`7 705` B)* | AI-native K-12→university learning platform. 🔴 **The channel reports `NOASSERTION`; the bytes bar commercial use — do not put it in a deliverable** |
+
+🔴 **`NOASSERTION` has now hidden a commercial barrier three times in two passes** —
+`TrenTorch` *(PolyForm Noncommercial)*, `frappe/education` *(`19` bytes of declaration)* and
+this one. 🟢 **The rule stands and is cheap: read the file, not the field.**
+
+### 🟢 The `3` `OWN-GRANT-AT-ROOT` payloads p196 found and did not read
+
+| row | path | bytes | family |
+|---|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `LICENSE.TXT` | `11 358` | 🟢 **`Apache-2.0`** |
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | `License.txt` | `7 651` | 🟢 **`LGPL-3.0`** |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `License` | `1 079` | 🟢 **`MIT`** |
+
+🟢 **Real grants, all three — p196's limb `1`.** 🔴 **And its arithmetic was wrong:** `16.2`%
+does not fall, because p196 subtracted these `12` rows when it computed it. 🔵 A limb can be
+right as a prediction and wrong as a sum, and whoever runs it owes the sum again.
+
+🆕 🟢 **`kstateome/lti-launch` lands on `7 651` B — p196's `LGPL-3.0` *"GPL by reference"*
+interval, derived from `odoo/odoo` alone.** `unslothai/notebooks` lands on `7 652` B. **The
+interval has corpus outside the row that produced it.**
+
+### 🔴 The non-commercial rows on this shelf, re-read and unchanged
+
+🔴 [`NirDiamant/RAG_Techniques`](https://github.com/NirDiamant/RAG_Techniques) `5 644` B ·
+🔴 [`NirDiamant/GenAI_Agents`](https://github.com/NirDiamant/GenAI_Agents) `5 644` B ·
+🔴 [`NirDiamant/agents-towards-production`](https://github.com/NirDiamant/agents-towards-production)
+`6 107` B — all **`NONCOMMERCIAL-NOT-OSI`**, re-measured by an independent channel this pass and
+**byte-identical to what this page already published**. 🟢 They are the most-cited agent
+curricula in this corpus and **none of them may enter a client deliverable.**
+
+### 🔴 And one correction that is about this KB, not about a repo
+
+🔴 **`p854`'s capability never reached a caller.** Measured on the same bytes:
+`family_of(whole README)` → 🔴 **`UNCLASSIFIED`**; `family_of(declaration line)` → 🟢
+**`CC-BY-NC-ND-3.0`**. The extraction that makes it work lives **in the test**, so every
+channel of this KB reads
+[`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) as
+unlicensed. 🔵 `Gap 440` inside `lib/`. Not fixed this pass, for a measured reason: p195 found
+three restrictive licences read as `MIT` by a hardened classifier, and a declaration reader
+that cannot tell *«this work is licensed under X»* from *«dependency Y is MIT»* brings that
+class back.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **p195 pre-registered four actions, and the FIRST one — *"read the KB before building any

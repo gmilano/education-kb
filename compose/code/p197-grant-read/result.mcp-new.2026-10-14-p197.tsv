@@ -1,0 +1,12 @@
+slug	exists	paths_in_tree	scope	licence_path	bytes	family	verdict
+nakafaai/nakafa.com	YES	7759	ROOT	LICENSE	7705	NONCOMMERCIAL-NOT-OSI	READ
+langfuse/langfuse-workshop	YES	80	ROOT	LICENSE	1073	MIT	READ
+llwand1/xuelian-agent	YES	1705	ROOT	LICENSE	1062	MIT	READ
+marcusgreen/moodle-qtype_aitext	YES	71	NONE	-	0	-	ABSENCE-ENUMERATED
+bycs-lp/moodle-local_ai_manager	YES	328	NONE	-	0	-	ABSENCE-ENUMERATED
+bycs-lp/moodle-block_ai_chat	YES	143	NONE	-	0	-	ABSENCE-ENUMERATED
+human2human-ai/moodle-tool_human2human	YES	32	ROOT	LICENSE	35149	GPL-3.0	READ
+microsoft/moodle-ai-assistant	YES	87	ROOT	LICENSE	1084	MIT	READ
+cgrevisse/moodle-qbank_genai	YES	782	ROOT	LICENSE.md	35178	GPL-3.0	READ
+ANFAIA/SkillNet	YES	1736	ROOT	LICENSE	10758	Apache-2.0	READ
+bigdata-ustc/Agent4Edu	YES	49	NONE	-	0	-	ABSENCE-ENUMERATED

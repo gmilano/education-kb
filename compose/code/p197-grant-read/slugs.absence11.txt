@@ -1,0 +1,11 @@
+marcusgreen/moodle-qtype_aitext
+bycs-lp/moodle-local_ai_manager
+bycs-lp/moodle-block_ai_chat
+bigdata-ustc/Agent4Edu
+aaryansamanta/ai-ethos
+bedriyan/medkit-app
+buynao/aipath
+jude-miller-dev/Milky-institute-online
+mabdulre9/electrical-engineering
+midudev/libros-programacion-gratis
+xiaolai/the-craft-of-selfteaching

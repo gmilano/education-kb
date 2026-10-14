@@ -1,0 +1,12 @@
+slug	text_files	with_grant	classes	strongest	vendored	verdict
+marcusgreen/moodle-qtype_aitext	50	40	VENDORED,COPYRIGHT,GRANT_GPL	GRANT_GPL	2	HEADER-GRANT
+bycs-lp/moodle-local_ai_manager	278	255	VENDORED,COPYRIGHT,GRANT_GPL	GRANT_GPL	5	HEADER-GRANT
+bycs-lp/moodle-block_ai_chat	91	64	VENDORED,COPYRIGHT,GRANT_GPL	GRANT_GPL	3	HEADER-GRANT
+bigdata-ustc/Agent4Edu	45	0	NONE	NONE	0	NO-HEADER-GRANT
+aaryansamanta/ai-ethos	36	0	VENDORED	NONE	10	NO-HEADER-GRANT
+bedriyan/medkit-app	104	0	NONE	NONE	0	NO-HEADER-GRANT
+buynao/aipath	68	0	NONE	NONE	0	NO-HEADER-GRANT
+jude-miller-dev/Milky-institute-online	699	0	NONE	NONE	0	NO-HEADER-GRANT
+mabdulre9/electrical-engineering	1	0	NONE	NONE	0	NO-HEADER-GRANT
+midudev/libros-programacion-gratis	26	0	NONE	NONE	0	NO-HEADER-GRANT
+xiaolai/the-craft-of-selfteaching	74	0	NONE	NONE	0	NO-HEADER-GRANT

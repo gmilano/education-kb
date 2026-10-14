@@ -3,6 +3,102 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **The shared classifier's suite is PATH-INDEPENDENT, measured from `6` invocation forms:
+`207`/`207` each, `0` SKIP.** p196's pre-registered action, limb `1`, closed.
+
+🔴 **And the diagnosis it inherited was wrong in a way that matters more than the fix.** p196
+recorded *«`207`/`207` from `lib/`, `179`/`181` from one directory up — `26` assertions silently
+skipped»* and called the cause **the directory**. The replica this pass rebuilt, with p196's
+exact pre-fix header, answers **three different denominators**:
+
+| invocation form | pre-fix | post-fix |
+|---|---|---|
+| absolute path, from outside the repo | `207`/`207` | 🟢 `207`/`207` |
+| from `lib/` itself | `207`/`207` | 🟢 `207`/`207` |
+| `lib/test_license_family.sh` from `compose/code` | 🔴 **`179`/`183`** | 🟢 `207`/`207` |
+| `compose/code/lib/…` from the repo root | 🔴 **`179`/`183`** | 🟢 `207`/`207` |
+| 🟡 `../lib/…` from a SIBLING recipe directory | 🟡 **`207`/`207` — by luck** | 🟢 `207`/`207` |
+| 🔴 through a **symlink** in another directory | 🔴 **`19`/`163`** | 🟢 `207`/`207` |
+
+🔵 **Where p196 read `179`/`181` the replica reads `179`/`183`:** the replica carries p197's two
+new presence canaries, and **the `+2` IS the canaries firing** — the same mutilated run, two
+assertions louder. The `26` assertions that do not run still do not run.
+
+🔵 **The cause is not the directory: it is whether a RELATIVE `dirname` still happens to resolve
+after the suite's own `cd`.** `../lib/..` lands on `compose/code` once the cwd is `lib/`, so that
+form passed for the wrong reason — **a denominator that depended on path arithmetic, which is
+why two measurements supported the wrong rule.**
+
+🔴 **And the worst form was not measured at all before this pass.** Through a symlink,
+`${BASH_SOURCE[0]}` names the **link**, `./license_family.sh` is not beside it, the classifier
+**never loads** — and the suite runs to the end and **prints a total**. `19`/`163` is a result,
+not an error, which is `P502`'s shape one level above where p196 found it.
+
+### 🟢 The fix, and only its first third was pre-registered
+
+1. the script's own directory is resolved **once, absolute, BEFORE the `cd`**, and every fixture
+   root hangs off it — including the two that were plain relative strings;
+2. 🆕 it is resolved **physically** *(`readlink -f`)*, so a symlink resolves to the file;
+3. 🆕 loading the classifier is a **hard gate**: the `source` is checked and `family_of` is
+   asserted to exist before the first case.
+
+🆕 🟢 **Plus the canary the other two blocks already had.** `P854` and `T232` each assert
+*«fixtures present»*; `P560`/`P561` and `P845` only echoed `SKIP` to stderr — and they are
+exactly the two that p196 watched disappear. They assert it now, so absence costs a **visible
+FAIL** instead of a quieter denominator. 🔵 It does not make a mutilated run whole; it makes it
+loud.
+
+🔵 Instrument, result tables and a `19`/`19` suite whose `4` negative cases rebuild the defect:
+[`compose/code/p197-suite-path-independence/`](../compose/code/p197-suite-path-independence/).
+🆕 **It is re-runnable against any suite** — `SUITE_UNDER_TEST=<path> run_from_dirs.sh` — and
+the shelf-wide sweep is pre-registered rather than claimed.
+
+### 🆕 🔴 A latent instance, found while reading the shelf and NOT fixed
+
+[`p107-git-lane-census/census.sh`](../compose/code/p107-git-lane-census/) takes its slug list as
+`$1` **after** `cd "$(dirname "$0")"`. 🔴 **A relative list argument resolves against the wrong
+directory**, so the census would read a different file — or none. 🟢 This pass passed an
+absolute path and the run is sound *(`494` rows)*. 🔵 Recorded, pre-registered, **not patched**:
+the sweep that fixes this class fixes it once for every recipe, and `P237` forbids a one-off
+edit to a shared instrument on a pass that did not register it.
+
+### 🟢 The foundational layer's existence column, case-folded over the whole shelf
+
+| | |
+|---|---|
+| population, raw | `499` |
+| 🟢 **case-folded distinct** | 🟢 **`494`** |
+| case-variant pairs collapsed | `5` — `OS4ED/openSIS-Classic`, `OpenOLAT/OpenOLAT`, `Hesham0-0Nasser/tutor-lms-mcp`, `ShuyunYuan/talentcoach`, `ahmedEid1/Lumen` |
+| 🟢 resolved by the anonymous git lane | 🟢 **`492`/`494`** |
+| 🔴 **ABSENT** *(git asks for credentials, `rc=128`)* | 🔴 `apereo/opencast`, `yourusername/scholarmate` |
+| 🆕 🔴 **EXIST AND ARE EMPTY** *(reachable, `0` heads, `0` tags)* | 🆕 🔴 `cdweaver1992/edfi-mcp-server`, `openfresno/edgenuity-aeries-grade-passback` |
+
+🟢 **Case-folding is safe: no case-variant is a distinct repository** — p196 proved it by cloning
+both `OS4ED` spellings, and all `5` folded slugs resolve here. 🟢 **The phantom class closes to
+`4` named rows**, and it closes **in two different ways**.
+
+🆕 🔴 **Existence has three states and two channels of this KB disagreed over a FLAG.**
+`ls-remote --exit-code -h` returns `2` for *«no matching refs»*, which the first version of this
+pass's reader published as `ABSENT`; `--heads --tags` without `--exit-code` returns `0` with no
+output. 🔵 **An empty repository exists.** It has no licence because it has no files — a
+different fact from a repository that is gone, and a KB that merges them miscounts its own
+denominator in both directions.
+
+🔴 **`apereo/opencast` is a stale ORG path**, not a casing variant:
+[`opencast/opencast`](https://github.com/opencast/opencast) is on this shelf and resolves.
+🔴 **`yourusername/scholarmate` is a template placeholder** — a syntactically valid slug whose
+owner is a filler token, published as an address.
+
+### Open limbs
+
+🔴 **The `7` `ABSENCE-ENUMERATED` rows of the population are unresolved** — the channel that
+would resolve them *(a declaration reader)* must not be improvised, for the reason p195
+measured. 🔴 **`eur-lex` still does not resolve; `github.com` `403`, fourth pass.** 🔴 **The
+`eula` basename still counts as a grant in `is_licence_path`** — measured on `Lumi`'s `259 095` B
+EULA, pre-registered, not patched in the pass that promoted the predicate.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **A lane this file declared gone one pass ago is reachable by a different door.** p195

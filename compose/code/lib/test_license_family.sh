@@ -11,7 +11,27 @@
 # because AGPL -> AGPL is right by accident.  The defect is visible ONLY on GPL-3.0 input.
 # So GPL-3.0 is a REQUIRED case here, not an optional one.
 set -u
-cd "$(dirname "$0")" && . ./license_family.sh
+# p197 (pre-registrado por p196): la ruta del propio script se resuelve a ABSOLUTA ANTES
+# del `cd`, y todo fixture se cuelga de ella.  El defecto que esto cierra: `${BASH_SOURCE[0]}`
+# y `$0` son RELATIVOS AL CWD DE INVOCACION, asi que despues del `cd` de la linea siguiente
+# un `dirname` de ellos apunta a un sitio que ya no existe -- `lib/../p560-...` leido DESDE
+# `lib/`.  Medido: 207/207 invocada con ruta absoluta o desde este directorio, 179/181 con
+# `bash lib/test_license_family.sh`, donde 26 aserciones no corrian.  No era el directorio:
+# era la FORMA DEL ARGV.
+# Y la ruta se resuelve FISICA: invocada a traves de un enlace simbolico, `${BASH_SOURCE[0]}`
+# apunta al enlace, no al fichero, asi que `./license_family.sh` no existe al lado y el
+# `source` falla.  Medido antes de esta linea: 19/163 por un enlace en otro directorio --
+# el clasificador no llegaba a cargarse y la suite seguia corriendo e IMPRIMIA UN TOTAL.
+_SUITE_SELF="$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || printf '%s' "${BASH_SOURCE[0]}")"
+_SUITE_HERE="$(cd "$(dirname "$_SUITE_SELF")" && pwd)"
+cd "$_SUITE_HERE" || { echo "FATAL: no se pudo entrar a $_SUITE_HERE" >&2; exit 2; }
+. "$_SUITE_HERE/license_family.sh" || { echo "FATAL: no se pudo cargar el clasificador" >&2; exit 2; }
+# El clasificador CARGADO se afirma antes de la primera asercion: sin esto, un `source`
+# fallido degrada la suite en 144 fallos y un total impreso, que es un resultado y no un
+# error.  `P502` otra vez: la ausencia no puede presentarse como veredicto.
+if ! declare -F family_of >/dev/null 2>&1; then
+  echo "FATAL: family_of no esta definida tras cargar $_SUITE_HERE/license_family.sh" >&2; exit 2
+fi
 
 GPL3='                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -701,12 +721,12 @@ Version 3, 29 June 2007
 # Para un treebank --que es una BASE DE DATOS-- 3.0 vs 4.0 es la diferencia entre no tener
 # y tener los derechos sui generis del art. 4, asi que el defecto INVENTABA concesion.
 # ---------------------------------------------------------------------------
-# La suite hace `cd "$(dirname "$0")"` en su linea 14, asi que los fixtures son relativos
-# a ese directorio.  (`${BASH_SOURCE[0]}` llega vacio en este punto y un `dirname ""` deja
-# la ruta en `/fixtures-p551`: el primer intento fallo asi y los cuatro casos dieron
-# UNCLASSIFIED, que es exactamente el modo en que un fixture ausente se disfraza de
-# veredicto -- la forma de P502 sobre el canal de entrada de la propia suite.)
-FIXP551="fixtures-p551"
+# HISTORICO, y el diagnostico estaba a medias: esta ruta era relativa porque la suite hace
+# `cd` a su propio directorio en su cabecera.  El primer intento uso `$(dirname "${BASH_SOURCE[0]}")`
+# DESPUES del `cd` y dejo la ruta en `/fixtures-p551`, con los cuatro casos en UNCLASSIFIED
+# -- un fixture ausente disfrazado de veredicto (`P502`).  p197 cierra el caso: la ruta del
+# script se resuelve a ABSOLUTA en la cabecera, antes del `cd`, y se usa aqui.
+FIXP551="$_SUITE_HERE/fixtures-p551"
 check "P551 PUD real: el titulo dice 3.0 y se contesta 3.0" CC-BY-SA-3.0 \
   "$(family_of "$(cat "$FIXP551/cc-by-sa-3.0-ud-portuguese-pud.LICENSE")")"
 check "P551 NEG Bosque real sigue 4.0 (el arreglo no degrada a todos)" CC-BY-SA-4.0 \
@@ -737,7 +757,7 @@ check "P551 NEG Apache-2.0 no entra a la rama CC por su 2.0" Apache-2.0 \
 # ESTAMPA en vez de LEERSE» para la rama CC y el arreglo NO VIAJO UNA LINEA: la rama MPL
 # estampaba `MPL-2.0` (P561) y la rama EPL colapsaba 1.0 y 2.0 en `EPL` (P560).  Los fixtures
 # son payloads REALES, no sinteticos, y viven en `p560-epl-mpl-version-read/fixtures/`.
-FIXP560="$(dirname "${BASH_SOURCE[0]}")/../p560-epl-mpl-version-read/fixtures"
+FIXP560="$_SUITE_HERE/../p560-epl-mpl-version-read/fixtures"
 if [ -d "$FIXP560" ]; then
   # P561: el texto canonico de MPL-1.1 (SPDX) contestaba MPL-2.0.
   check "P561 MPL-1.1 canonico contesta 1.1 y no el estampado 2.0" MPL-1.1 \
@@ -776,6 +796,10 @@ THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS AGREEMENT.")"
     "$(family_of "$(cat "$FIXP560/dual-mpl-2.0-or-epl-1.0-h2database.LICENSE")")"
 else
   echo "SKIP P560/P561 — fixtures ausentes en $FIXP560" >&2
+  # p197: un SKIP en stderr BAJA EL DENOMINADOR sin bajar el numerador, asi que una
+  # corrida mutilada se lee como una corrida limpia (`P502`: la ausencia disfrazada de
+  # veredicto).  La presencia de la fixture se AFIRMA, para que la ausencia FALLE.
+  check "P560/P561 fixtures de p560 presentes" si no
 fi
 
 # ---------------------------------------------------------------------------
@@ -787,7 +811,7 @@ fi
 # LA RAZON POR LA QUE ESTA SUITE NO LO VEIA, y por eso los canonicos son casos OBLIGATORIOS
 # aca: los cuatro textos canonicos de SPDX clasifican BIEN, porque todos deletrean «Version 3».
 # El defecto vive SOLO en los stubs de titulo -- lo que publican los treebanks y los datasets.
-FIXP613=fixtures-p613
+FIXP613="$_SUITE_HERE/fixtures-p613"
 if [ -d "$FIXP613" ]; then
   # --- el payload REAL que lo encontro: 68 B, UD_Spanish-AnCora en su tag r2.8 ---
   check "P613 stub numerico REAL (AnCora r2.8, 68 B) contesta 3.0 y no el estampado 2.0" GPL-3.0 \
@@ -877,10 +901,10 @@ fi
 # error es la que no se puede permitir: 0BSD no pide nada, PSF-2.0 pide aviso de copyright
 # Y un resumen de los cambios.
 #
-# La ruta se resuelve desde la UBICACION del script, no desde el cwd: `FIXP613` arriba usa
-# una ruta relativa y por eso esa seccion solo corre desde este directorio (`Gap 300`).
-# Esta no hereda la limitacion.
-_H845="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# La ruta se resuelve desde la UBICACION del script, no desde el cwd.  p197: `FIXP613` ya
+# no es relativa tampoco, y `$_SUITE_HERE` es absoluta desde la cabecera, asi que esta
+# forma ya no depende del cwd de invocacion (`Gap 300` cerrado por construccion).
+_H845="$_SUITE_HERE"
 FIXP845="$_H845/fixtures-p845"
 if [ -d "$FIXP845" ]; then
   PSF_REAL="$FIXP845/psf-2.0-typing-extensions-4.16.0.LICENSE"
@@ -898,6 +922,9 @@ if [ -d "$FIXP845" ]; then
     "$(head -c 4000 "$PSF_REAL" | grep -c 'PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2')"
 else
   echo "SKIP P845 — fixtures ausentes en $FIXP845" >&2
+  # p197: misma correccion que arriba.  `P854` y `T232` ya traian su canario de
+  # presencia; estos dos bloques no, y son exactamente los dos que p196 vio desaparecer.
+  check "P845 fixtures-p845 presente" si no
 fi
 
 # NEGATIVO, y es la mitad que importa: un 0BSD legitimo NO nombra la PSF License Version 2,
@@ -967,7 +994,7 @@ check "P854 NEG CC0 sigue CC0"                   CC0-1.0          "$(family_of "
 # Y REGRESION SOBRE EL PAYLOAD REAL que lo expuso: un repo SIN fichero de concesion que
 # declara la sigla en la prosa del README.  Es el caso `P742` (concesion en el cuerpo y no
 # en un fichero) cruzado con la sigla.
-_H852="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+_H852="$_SUITE_HERE"
 FIXP854="$_H852/fixtures-p854"
 if [ -d "$FIXP854" ]; then
   CRAFT="$FIXP854/cc-by-nc-nd-the-craft-of-selfteaching.README.md"
@@ -1022,8 +1049,8 @@ fi
 # `YuanGongND/gopt` con el acuse de recibo de la ASF agregado al final y SIN titulo
 # `Apache Software License`.  Tiene que seguir contestando `BSD`: una clausula sin titulo
 # describe una cortesia, no concede.
-_A11="$(dirname "$0")/../p173-apache11-family/fixtures/apache1.1-real-sakai-manifest.LICENSE"
-_A11NEG="$(dirname "$0")/../p173-apache11-family/fixtures/crafted-bsd3-plus-asf-acknowledgment.LICENSE"
+_A11="$_SUITE_HERE/../p173-apache11-family/fixtures/apache1.1-real-sakai-manifest.LICENSE"
+_A11NEG="$_SUITE_HERE/../p173-apache11-family/fixtures/crafted-bsd3-plus-asf-acknowledgment.LICENSE"
 if [ -f "$_A11" ] && [ -f "$_A11NEG" ]; then
   check "T232 Apache-1.1 real NO es BSD"            Apache-1.1 "$(family_of "$(cat "$_A11")")"
   # el fixture tiene que seguir siendo el blob medido, o el caso de arriba pasa por la
@@ -1041,7 +1068,7 @@ if [ -f "$_A11" ] && [ -f "$_A11NEG" ]; then
   # Apache-2.0 y BSD-3 REALES no se los roba la rama nueva.  `$APACHE` es el title block
   # real de Apache-2.0 que esta suite ya traia; el BSD-3 real es el fixture de `p308`.
   check "T232 Apache-2.0 real sigue siendo Apache-2.0" Apache-2.0 "$(family_of "$APACHE")"
-  _BSD3="$(dirname "$0")/../p308-phrase-anchor-sweep/fixtures/bsd3-YuanGongND-gopt.LICENSE"
+  _BSD3="$_SUITE_HERE/../p308-phrase-anchor-sweep/fixtures/bsd3-YuanGongND-gopt.LICENSE"
   check "T232 BSD-3 real sigue siendo BSD"           BSD "$(family_of "$(cat "$_BSD3")")"
   # La version NO se inventa: un titulo `Apache Software License` sin numero y con la
   # firma de atribucion contesta `Apache-1.x-UNVERSIONED`, como `GPL-UNVERSIONED`.

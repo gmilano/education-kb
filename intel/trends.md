@@ -3,6 +3,76 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🔵 **Trend ids continue the shelf's sequence** — the highest id this KB had published was
+`T316`, so this pass opens at `T317`. 🔵 A new trend reusing a live id is the collision class
+`p150-identifier-collision/` exists to catch, and it is cheaper to check than to unpick.
+
+🆕 🔴 **`T317` — the trend this pass can prove is that the AI in education is moving INTO the LMS
+as plugins, and the plugin layer is `GPL-3.0` almost throughout.**
+
+| | evidence |
+|---|---|
+| population of the layer | 🟢 **`198`** repositories *(`moodle AI language:php pushed:>2026-06-01`, ranked channel)* |
+| licences read this pass | `GPL-3.0` ×`2` *(`35 149`, `35 178` B)*, `GPL` in source headers ×`3` *(`40`/`50`, `255`/`278`, `64`/`91` files)*, 🟢 `MIT` ×`1` *(`microsoft/moodle-ai-assistant`, `1 084` B)* |
+| what the layer contains | a **governance** plugin *(providers, quotas, per-tenant policy)*, a **chat** block on top of it, an **LLM-graded question type**, an **oral-exam** tool *(created `2026-10-05`)*, a **generative question bank**, and an **MCP server over the LMS web-service layer** |
+
+🔵 **Why this is a trend and not a list.** Through `2026` this KB recorded agent frameworks
+arriving **beside** the LMS — a tutor you integrate. The rows above arrive **inside** it, as
+plugins installed by an administrator, governed by the platform's own permission model and
+bound by the platform's licence. 🟢 **That changes who buys** *(the LMS administrator, not the
+innovation office)* 🔴 **and it changes what you may keep** *(a derivative plugin is `GPL`)*.
+
+🆕 🔴 **`T318` — a shelf-wide «no licence» rate cannot survive contact with a layer that licenses
+per file.**
+
+| probe | what it says about `3` Moodle plugins |
+|---|---|
+| root filename | 🔴 *«no licence»* |
+| complete tree *(`P441`'s channel)* | 🔴 *«absence enumerated»* |
+| 🟢 source headers *(p139's instrument)* | 🟢 **`GRANT_GPL` in `40`/`50`, `255`/`278`, `64`/`91`** |
+
+🔴 **So `16.2`% overstates absence in this layer**, and p139's *«`0` of `9`»* — measured over
+**npm** packages — does not generalise to it. 🟢 **The durable form of the figure is per layer,
+with the layer named**, which is pre-registered rather than asserted.
+
+🆕 🔴 **`T319` — `NOASSERTION` is now a reliable signal of something, and it is not «unknown».**
+Third instance in two passes: `TrenTorch` *(PolyForm Noncommercial)*, `frappe/education`
+*(`19` bytes of declaration)*, and this pass 🔴
+[`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) *(`7 705` B,
+**`NONCOMMERCIAL-NOT-OSI`**, `79`★, an AI-native K-12→university platform)*. 🟢 **Read the file,
+not the field** — and the cost of not doing so is a deliverable built on a licence that bars it.
+
+🆕 🟡 **`T320` — the regulatory centre of gravity moved from «AI acts» to instruments that were
+already in force.** Three measured this pass, none of them an AI statute:
+
+| region | the instrument that binds NOW | not |
+|---|---|---|
+| EMEA | 🆕 Article `4` **AI-literacy duty, since `2025-02-02`**; Article `5` **emotion-inference ban**; Article `50` marking since `2026-08-02` | 🔴 Annex III high-risk, deferred to `2027-12-02` |
+| LATAM | 🔴 Chile's **Ley `21.719`** data-protection/profiling regime, **in force `2026-12-01`** | 🔴 Chile's AI bill, second constitutional stage |
+| North America | 🔴 **Maryland `S.B. 720`** *(AI not the primary basis for grading, discipline or placement, since `2026-06-01`)*; Ohio's district-policy mandate *(`2026-07-01`)* | 🟡 a federal framework that may preempt them |
+
+🔵 **The pattern is the same in all three: a general-purpose obligation reaches the education
+deliverable before the education-specific rule does.** 🟢 For a studio this is good news — the
+artefacts are the ones engineering can produce *(a marking layer, a profiling record, a
+human-in-the-loop grading trail)*, not a conformity programme waiting on `2027`.
+
+🆕 🟡 **`T321` — the appetite curve may have turned in one region, and only one source
+differences it.** The Digital Education Council's `2026` higher-education survey has faculty
+intent to use AI in **US & Canada down `76`% → `67`%** year over year, other regions steady.
+🔴 **One source, secondary, and it measures intent rather than deployment** — recorded because
+it is the only year-over-year regional difference any channel returned, and because it points
+the opposite way to every vendor trend piece in the same sweep.
+
+### 🔴 Carried, and sharpened: what this KB still cannot measure
+
+🔴 **Flow.** `github.com/trending` `403`, **fourth consecutive pass**, code recorded.
+🔴 **Agentic market size.** No figure, **fifth pass**.
+🔴 **The `2026` market estimates reached this pass disagree by `28`%** *(`$9.58`bn vs `$12.3`bn)*
+and a third projects `$32.27`bn by `2030` on a different basis. 🟢 This page's standing rule
+holds: **publish the spread, never the midpoint.**
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **The trend this pass can state for the first time is about this KB's own method, and it

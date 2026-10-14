@@ -3,6 +3,172 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🟢 **`P0a` fired for a second consecutive pass**, and this time it is cheap to say what it
+saved: `P441` *(a filename list cannot be fixed by widening it)*, `P237` *(do not rewrite a
+hardened classifier)*, `P742` *(a grant can live in a file's body)*, `P502` *(absence must not
+present itself as a verdict)*, `Gap 440` *(a correction that lands on one page and not the
+others)*, `Gap 441` *(measure an instrument against the rows it ACCUSES)* and p139's header
+channel were **all cited, none re-derived.** 🔴 **And `Gap 441` was cited and then committed
+anyway**, by this pass's own comparator — see `P198-B`.
+
+🔵 **A note on ids before the patterns.** p196 labelled its pattern set `P197-*`. This pass
+**is** `197`, so the scheme collides with its own calendar on the very next pass that uses it.
+This pass continues at `P198-*` rather than renaming anyone's work, and pre-registers the
+decision: **anchor a pattern id to the pass that WROTE it.**
+
+### 🆕 🟢 `P198-A` — Deliver INSIDE the LMS: the plugin stack, with the grant stated at every layer
+
+🔵 **Why now:** the AI in this market is arriving as **plugins**, not as integrations beside the
+platform *(`T317`)*. The buyer is the LMS administrator, the permission model is the platform's,
+and the licence is the platform's too.
+
+```
+   agent / orchestrator  (yours — any licence)
+            │  MCP
+            ▼
+   onbirdev/moodle-webservice_mcp        ← the seam: MCP over Moodle's own web services
+            │  Moodle web-service API (tokens, capabilities, roles)
+            ▼
+   bycs-lp/moodle-local_ai_manager       ← GOVERNANCE: providers, quotas, per-tenant policy
+            │
+            ├── bycs-lp/moodle-block_ai_chat      ← the learner/teacher chat surface
+            ├── marcusgreen/moodle-qtype_aitext   ← LLM-graded free text (see P198-C)
+            ├── cgrevisse/moodle-qbank_genai      ← generative question bank
+            └── human2human-ai/moodle-tool_human2human ← oral exams, role plays, debates
+```
+
+| layer | licence, read this pass | what it obliges |
+|---|---|---|
+| `onbirdev/moodle-webservice_mcp` | *(on shelf)* | the seam — keep it a seam, do not fork it |
+| 🟢 `bycs-lp/moodle-local_ai_manager` | 🟢 **`GPL` in `255`/`278` source headers** | a derivative is `GPL`. 🔵 **There is no licence FILE — the grant is per file, and it is still a grant** |
+| 🟢 `bycs-lp/moodle-block_ai_chat` | 🟢 `GPL` in `64`/`91` headers | same |
+| 🟢 `marcusgreen/moodle-qtype_aitext` | 🟢 `GPL` in `40`/`50` headers | same |
+| 🟡 `human2human-ai/moodle-tool_human2human` · `cgrevisse/moodle-qbank_genai` | 🟡 `GPL-3.0` *(`35 149` / `35 178` B)* | same, stated in a file |
+| 🟢 **`microsoft/moodle-ai-assistant`** | 🟢 **`MIT`** *(`1 084` B)* | 🟢 **the only permissive seat in the layer** — the one row a client may fork into a closed internal build |
+
+🟢 **The build rule:** keep **your** agent and prompt assets **outside** the plugin tree, speak
+to the platform through the MCP seam, and accept `GPL` for anything that lands inside it.
+🔴 **The anti-pattern:** putting proprietary logic in a plugin fork and discovering the
+obligation at hand-over — the plugins carry no licence file, so a casual check reports *«no
+licence»* and the obligation is invisible until someone reads a `.php` header.
+
+### 🆕 🟢 `P198-B` — The licence gate is FOUR channels, and each answers a question the others cannot
+
+🔵 **Why now:** this pass measured one row read four ways and got four different answers, three
+of which would be published as *«no licence»*.
+
+```
+  1. EXISTENCE      git ls-remote --heads --tags          → REFS / EMPTY / ABSENT (three states)
+  2. PATHS          clone --filter=blob:none + ls-tree -r → is_licence_path over the COMPLETE tree
+  3. BYTES          git cat-file -p HEAD:<path> > file    → size_of_file + family_of   (never $(...))
+  4. HEADERS        p139/headers.py over the tree         → SPDX / COPYRIGHT / GRANT_MIT|APACHE|GPL
+     ── and the one that does NOT exist: a DECLARATION reader for prose (see the limit below)
+```
+
+| verdict | what it permits |
+|---|---|
+| 🔴 `ABSENT` *(`rc=128`)* | nothing — the address is dead. 🔴 `apereo/opencast`, `yourusername/scholarmate` |
+| 🆕 🔴 `EMPTY` *(reachable, `0` refs)* | nothing, **and it is a different fact**: the repository exists and has no files. 🔴 `cdweaver1992/edfi-mcp-server`, `openfresno/edgenuity-aeries-grade-passback` |
+| 🟢 grant at root or in subtree, family read | use under that family's terms |
+| 🟢 **no licence file, grant in source headers** | 🟢 **use under that family's terms — this is a grant** *(`3` of `3` Moodle plugins)* |
+| 🔴 no grant on any path and none in any header | 🔴 **do not recommend** — 🔴 **and do not call it *«all rights reserved»***: the header channel cannot see a CC declaration |
+
+🔴 **The measured limit, with this corpus's own proof.**
+[`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching)
+declares `CC-BY-NC-ND` in its `README.md`; this KB has known it since p854, **with a committed
+fixture that is byte-identical to the live file**. The classifier answers 🟢 `CC-BY-NC-ND-3.0`
+on **the declaration line** and 🔴 `UNCLASSIFIED` on **the whole file** — and the extraction
+that makes the difference **lives in the test, not in `lib/`.** 🔵 So no channel of this KB has
+it, and channel `4` must report `NO-HEADER-GRANT`, which is what it measured.
+
+🔴 **And the gate's own instrument accused two innocent rows this pass.** A byte figure near a
+slug is not that slug's licence size: one was a **README size** the page itself labelled, the
+other belonged to **a second slug named in the same table cell** — `Gap 441`, cited at the top
+of this very section and then committed. 🟢 **Two rules, now in the instrument with `10`/`10`
+tests, two of which are those two accusations:** a figure whose preceding `24` characters say
+`README`/`paths`/`★`/`LOC` is not a licence size, and **a line naming another slug cannot
+accuse.**
+
+### 🆕 🟢 `P198-C` — Build the assessment path so the REGULATOR's constraint is the architecture
+
+🔵 **Why now:** Maryland `S.B. 720` *(in force `2026-06-01`)* bars AI as the **primary basis**
+for grading, discipline or placement; Idaho bars AI from replacing teachers; the EU prohibits
+**emotion inference in educational institutions** outright *(Article `5`)*.
+
+```
+   learner response
+        │
+        ▼
+   marcusgreen/moodle-qtype_aitext   ← the model PROPOSES a grade + feedback
+        │                              (GPL in 40/50 headers)
+        ├──► proposal recorded  ─────────────┐
+        ▼                                     │  both rows persisted
+   teacher review (Moodle capability check)    │  = the S.B. 720 evidence
+        │                                     │
+        ├──► accepted / overridden  ──────────┘
+        ▼
+   grade of record  +  xAPI statement via ralph  ← task-level evidence, NOT affect
+```
+
+- 🟢 **The deliverable is the override trail**, not the grader. A system that cannot show a human
+  disposition per graded item cannot be sold into Maryland, and the same artefact answers
+  Vermont's annual vendor certification and Chile's Ley `21.719` profiling record — 🟢 **one
+  build, three jurisdictions**.
+- 🔴 **Do not ship affect analytics in EMEA at all.** Not a toggle: Article `5` prohibits
+  emotion inference in educational institutions. 🟢 Replace it with `xAPI` task evidence through
+  `ralph`, which this KB has already measured, including its deliberate exclusion of the
+  asserting authority from de-duplication.
+- 🟡 **Oral assessment is the newest surface and it is `GPL-3.0`:**
+  [`human2human-ai/moodle-tool_human2human`](https://github.com/human2human-ai/moodle-tool_human2human)
+  *(created `2026-10-05`)*. 🔵 Treat it as a base to configure, not to fork, unless the client
+  accepts `GPL`.
+
+### 🆕 🟢 `P198-D` — Ship a BILL OF MATERIALS with anything H5P-based, and build it by HOLDER
+
+🔵 **Why now:** [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) enumerates
+`6 348` paths and `15` licence texts. 🔴 **`14` belong to Joubel, H5P, Oliver Tacke and
+CKSource; `1` is a `259 095` B EULA; `0` are Lumi's own.**
+
+```
+  ls-tree -r  →  is_licence_path  →  cat-file → family_of  →  grep -m1 copyright  →  GROUP BY holder
+                                                                                        │
+                        ┌───────────────────────────────────────────────────────────────┘
+                        ▼
+      holder == the repo's owner ?  ── no ──►  THIRD-PARTY NOTICE  (goes in the BoM)
+                        │ yes
+                        ▼
+              the project's own grant
+```
+
+- 🔴 **Why the path list fails here:** `is_bundled` excludes `node_modules`, `vendor`,
+  `third_party`… and these texts live under **`assets/h5p/libraries/`** — a path no exclusion
+  list anticipated. 🟢 **The copyright holder identifies them; the path does not.** `P441`'s
+  lesson, one layer up.
+- 🔴 **And `is_licence_path` counts `eula` as a grant.** An EULA is a restriction. 🔵 Measured
+  here, pre-registered, **not patched in the pass that promoted the predicate to `lib/`**
+  *(`P237`, and a byte-identity control that would break)*.
+- 🟢 **The client artefact:** the notice file a buyer needs for an H5P deliverable is **not the
+  platform's licence** — it is a per-holder list of `14` grants, and producing it is an hour of
+  work with the four channels of `P198-B` already wired.
+
+### 🆕 🟢 `P198-E` — An instrument this studio ships must be invocation-independent
+
+🔵 **Why now:** this KB's own shared suite reported **three different denominators** from six
+invocation forms, and the worst form printed a total while the classifier had never loaded.
+
+| rule | why |
+|---|---|
+| 🟢 resolve the script's own directory **once, absolute, BEFORE any `cd`** | `$0` and `${BASH_SOURCE[0]}` are relative to the **invocation** cwd |
+| 🟢 resolve it **physically** *(`readlink -f`)* | through a symlink, the path names the link, and its siblings are not the script's siblings |
+| 🟢 make loading a dependency a **hard gate** *(check the `source`, assert a function exists)* | otherwise a failed load degrades into failures **and a printed total** |
+| 🟢 give every fixture-dependent block a **presence canary** | a `SKIP` to stderr lowers the denominator without lowering the numerator |
+| 🟢 run it from **≥4 forms in CI**, including through a symlink | one form passing is not path independence — `../lib/suite.sh` passed **by luck** |
+
+🟢 Runnable against any suite: `SUITE_UNDER_TEST=<path> p197-suite-path-independence/run_from_dirs.sh`
+*(`19`/`19`, four of five cases negative)*.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **`P0a` was installed as a gate one pass ago. This pass it FIRED, and the saving is

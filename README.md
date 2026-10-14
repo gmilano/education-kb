@@ -3,6 +3,110 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🔴 **Three numbers this KB published turned out to be the REACH OF AN INSTRUMENT rather than
+a property of the world — and the third one is a market claim, not a lab detail.**
+
+| what ran | verdict |
+|---|---|
+| 🟢 **`P0a` — read the register first** | 🟢 **FIRED again.** `P441`, `P237`, `P742`, `P502`, `Gap 440`, `Gap 441` and p139's header channel all had prior art. 🟢 **Second pass running with no "didn't read the register" recurrence in its headline** |
+| 🟢 **`lib/test_license_family.sh` path independence** *(p196's action)* | 🟢 **`207`/`207` from `6` invocation forms, `0` SKIP — the class closes.** 🔴 **And p196's diagnosis was wrong: pre-fix the same suite gives THREE denominators (`207`, `183`, `163`), and the worst one is a symlink where the classifier never loads and a total is still printed** |
+| 🟢 **The `3` `OWN-GRANT-AT-ROOT` payloads, read** | 🟢 **Real grants, all three** — `LGPL-3.0` `7 651` B, `MIT` `1 079` B, `Apache-2.0` `11 358` B. 🔴 **But the limb's arithmetic was wrong: `16.2`% does not fall, because p196 had already subtracted them** |
+| 🔴 **The *"`26` rows never licence-probed"*** | 🔴 **PREMISE FALSE.** `30` folded rows probed; 🟢 **`16` are already published with the SAME byte figure, at the byte**, `0` contradictions. The hole was in the census TSV, not in the knowledge |
+| 🆕 🟢 **The Moodle plugin layer, by source header** | 🟢 **`3` of `3` carry an operative `GPL` grant in `40`/`50`, `255`/`278` and `64`/`91` files.** 🔴 **So p139's *"`0` of `9`"* does not generalise, and `16.2`% OVERSTATES absence in this layer** |
+| 🆕 🔴 **`Lumi`'s `15` texts, row by row** | 🔴 **`14` belong to Joubel / H5P / CKSource and `1` is a `259 095` B EULA.** 🟢 p195's *"the interoperability layer grants nothing"* **SURVIVES on better evidence** |
+| 🆕 🔴 **`p854`'s correction never reached a caller** | 🔴 **`family_of` answers `UNCLASSIFIED` on the whole README and `CC-BY-NC-ND-3.0` on its declaration line.** The extraction lives in the TEST, so no channel of this KB has it |
+| 🟢 **Existence census, case-folded, whole shelf** | 🟢 **`492`/`494` resolve.** 🆕 🔴 **And existence has THREE states: `2` ABSENT, `2` EXIST-AND-ARE-EMPTY** — two channels of this KB disagreed on those two rows over a FLAG |
+
+### 🔴 The finding that will outlive this pass
+
+**An instrument's reach, published as a fact, reads exactly like a fact.** Three times in one
+pass, on three different layers:
+
+| the published number | what it actually measured |
+|---|---|
+| *"`207`/`207`, and `179`/`181` from one directory up"* | 🔴 whether a **relative `dirname`** happened to still resolve after the suite's own `cd`. `../lib/test_license_family.sh` from a sibling directory passed `207`/`207` **by luck** |
+| *"`26` rows have never been licence-probed"* | 🔴 which rows were **in p195's census TSV**. `16` of `30` carry their measured bytes on the pages |
+| 🔴 *"`16.2`% of the shelf has no licence"* | 🔴 which **files** are licence artefacts — not which files CONTAIN a grant. In the Moodle-plugin layer the grant is in every `.php` header, by project rule |
+
+🟢 **The first two cost a suite run and a TSV. The third is a sentence an engagement would act
+on**, and it is wrong in the direction that makes a usable base look unusable.
+
+### 🟢 The findings that stand
+
+- 🆕 🟢 **The MCP ranked channel's bias is VOCABULARY, not language.** p196 blamed its
+  Python filter. Measured here: `education AI agent language:php` returns 🔴 **`0`**;
+  `moodle AI language:php` returns 🟢 **`198`**. 🔵 **The word `agent` is the filter** — the
+  LMS-plugin world does not describe itself that way, and no language switch recovers it.
+- 🆕 🟢 **`10` new rows, every licence read from bytes**, including 🟢 `microsoft/moodle-ai-assistant`
+  *(`MIT`, `1 084` B)* and 🔴 `nakafaai/nakafa.com`, which the channel reports `NOASSERTION`
+  and whose bytes say **non-commercial**. Third time in two passes that `NOASSERTION` hides a
+  commercial barrier.
+- 🆕 🔴 **The never-probed tail is a BIASED sample, as p196's limb `2` predicted:** `7` of the
+  `26` live rows have no grant on any path — **`26.9`%** against the shelf's `16.2`%. Each pass
+  adds what it just researched, and what it just researched is licensed worse than the shelf it
+  inherited.
+- 🆕 🔴 **`yourusername/scholarmate` is a template PLACEHOLDER published as an address** — a
+  syntactically valid slug whose owner is a filler token. Same class as a header row compiled
+  as an entity.
+- 🆕 🟢 **Two independent observations now pin `LGPL-3.0`'s *"GPL by reference"* interval**:
+  `7 651` B *(`kstateome/lti-launch`)* and `7 652` B *(`unslothai/notebooks`)*. p196 derived
+  that interval from one row; it has corpus outside it now.
+- 🆕 🟢 **Every census artefact this pass wrote carries its OWN denominator and date** — p196's
+  third pre-registered action, closed structurally rather than by habit:
+  `evidence/existence-casefolded.2026-10-14-p197.tsv` states `499` raw, 🟢 **`494` case-folded**,
+  the `5` pairs it collapsed, the channel it used and the `492`/`2`/`2` split, **inside the
+  file**. 🔵 A later pass cannot now inherit a denominator without inheriting its date.
+- 🆕 🟢 **`25` of `25` addresses published this pass were verified BEFORE publication**
+  *(`git ls-remote`; `evidence/url-existence.2026-10-14-p197.tsv`)*, and the two dead ones are
+  deliberately **not linked**.
+- 🆕 🔴 **`is_licence_path` counts `eula` as a grant**, measured on `Lumi`'s `259 095` B EULA —
+  the opposite of a grant. 🔵 **Not patched here**: it was promoted to `lib/` this pass under a
+  byte-identity control, and `P237` forbids editing it in the same pass. Pre-registered.
+- 🆕 🔴 **"Bundled" cannot be decided by a path list either.** `Lumi`'s `14` third-party texts
+  live under `assets/h5p/libraries/` — a path no exclusion list anticipated. What identifies
+  them is the **copyright holder**, not the path. `P441`'s lesson, one level up, biting p196's
+  own instrument.
+
+### 🔴 What this pass did NOT do
+
+🔴 **No primary read of the EU text** — `eur-lex.europa.eu` still does not resolve, `github.com`
+is `403` for a **fourth** consecutive pass, `api.github.com` is `403` on everything but
+`/rate_limit`. The OJ number stays **secondary convergence**, now across two more independent
+sources, and says so wherever it appears.
+🔴 **No star velocity, no flow signal** *(`github.com/trending` probed and recorded `403`,
+fourth pass)*.
+🔴 **No declaration-line extractor built**, and the reason is a measurement, not caution: p195
+found three restrictive licences read as `MIT` by a hardened classifier, and an extractor that
+cannot tell *"this work is licensed under X"* from *"dependency Y is MIT"* reintroduces that
+class.
+🔴 **The `7` `ABSENCE-ENUMERATED` population rows are not resolved** — the channel that would
+resolve them is the one §5 of `p197-grant-read` says should not be improvised.
+🔴 **`ACTION MN` — still NOT RUN**, twelfth pass, unchanged reason: an outward-facing write on
+third parties' repositories, and this run is unattended.
+
+### Suites green this pass
+
+| recipe | suite |
+|---|---|
+| [`compose/code/lib/test_license_family.sh`](compose/code/lib/) | 🟢 **`207`/`207` from `6` invocation forms**, including through a symlink — `0` SKIP |
+| [`compose/code/p197-suite-path-independence/`](compose/code/p197-suite-path-independence/) | 🟢 **`19`/`19`** — `4` of its `5` cases are negative, and `C1` rebuilds p196's defect to prove the runner can see it |
+| [`compose/code/lib/test_licence_path.sh`](compose/code/lib/) | 🟢 **`33`/`33`** — p196's `24` cases unchanged, `4` new, plus a **byte-identity control** against p196's original |
+| [`compose/code/p197-census-vs-pages/`](compose/code/p197-census-vs-pages/) | 🟢 **`10`/`10`** — `2` cases are this pass's own false accusations, with the real page text |
+
+### 🔜 Pre-registered for p198, with the limb that would falsify each
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| **Read the register first** — it has fired two passes running; keep it as step `0` | prior art found → cite and spend the pass elsewhere | nothing found → the build is genuinely new |
+| Run `run_from_dirs.sh` with `SUITE_UNDER_TEST=` over **every** suite in `compose/code/` | all path-independent → the class is closed shelf-wide | some disagree → the count each one published is its invocation form, and name them |
+| Extend the header channel over the **whole** Moodle/LMS-plugin layer, not `3` rows | the `GPL`-in-header rate holds → `16.2`% is restated per layer, with the layer named | it does not → the `3` are a publisher convention, not a layer one |
+| Add a **declaration-line** reader to `lib/`, with p195's `PageLM` / `learner-verse` / `graspful` payloads as REQUIRED negative cases | it resolves `xiaolai` and rejects all three dependency-mentions → promote it | it accepts one → the class is back and the reader must not ship |
+| Remove `eula` from `is_licence_path`, or justify keeping it, with `Lumi`'s `259 095` B payload as the case | an EULA stops counting as a grant and the `24`+`4` cases still pass → fixed in one place | some row needs `eula` to be found → say which, and split the predicate by purpose |
+| Exclude **placeholder owners** in the population extractor *(`yourusername`, `your-org`, `username`, `example`)* | `494` → `493` and no real row is lost | a real owner matches → the rule is a list again, and `P441` says find the property instead |
+| Compare page-published **families**, not only byte counts, over the `494` | families agree → the cross-channel validation is complete | one diverges → it is a published-licence error and the correction is the pass |
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **The headline is that the gate p195 installed WORKED, and the first thing it caught was

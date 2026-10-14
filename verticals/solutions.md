@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **The platform layer of this market has a CUSTOMISATION ECONOMY, it is `198` repositories
+deep on one platform alone, and this KB had not sampled it.** 🔵 p196 measured the platforms
+themselves and asked the right next question; it asked it with the wrong word *(see
+[`repos/trending.md`](../repos/trending.md))*.
+
+### 🟢 Moodle is not one repository — it is a plugin market, and the governance plugin already exists
+
+| plugin | licence *(from bytes or headers)* | what it customises |
+|---|---|---|
+| 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟢 **`GPL` in `255` of `278` source headers** | **providers, quotas and per-tenant AI policy** — the layer a ministry or district buys before it buys a tutor |
+| 🟢 [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 **`GPL` in `64` of `91`** | the chat surface **on top of** that manager, not beside it |
+| 🟢 [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🟢 **`GPL` in `40` of `50`** | an **LLM-graded free-text question type** — assessment inside the LMS's own grading pipeline |
+| 🟡 [`human2human-ai/moodle-tool_human2human`](https://github.com/human2human-ai/moodle-tool_human2human) | 🟡 `GPL-3.0` *(`35 149` B)* | AI-facilitated **oral exams**, role plays, debates. Created `2026-10-05` |
+| 🟡 [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai) | 🟡 `GPL-3.0` *(`35 178` B)* | generative question bank |
+| 🟢 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **`MIT`** *(`1 084` B)* | Microsoft's assistant accelerator — 🟢 **the one permissive row in the layer** |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | *(on shelf)* | **MCP over Moodle's web-service layer** — the agent-facing seam |
+| [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | *(on shelf)* | `223`★ — tutoring, quizzes, mind maps, RAG over course material |
+| [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | *(on shelf)* | Saylor's SOLA learning coach |
+
+🔵 **Why this changes the shape of an engagement.** The platform decision in this market is
+usually framed as *«which LMS»*. 🟢 **It is at least as much *«which extension points, under
+which grant»***: the plugin layer is where an AI deliverable actually lands, it is `GPL-3.0`
+almost throughout, and the one `MIT` row in it comes from Microsoft.
+
+### 🆕 🔴 «No licence file» means something different in this layer, and the difference is commercial
+
+🟢 **`3` of the plugins above ship NO licence file anywhere in the complete tree** — and carry an
+**operative `GPL` grant in nearly every source file**, because Moodle requires it by project
+rule.
+
+| | |
+|---|---|
+| 🔴 what a root-file probe reports | *«no licence»* |
+| 🔴 what a complete-tree probe reports | *«absence enumerated»* — stronger, and still wrong |
+| 🟢 what the source headers say | 🟢 **`GRANT_GPL`, in `40`/`50`, `255`/`278`, `64`/`91` files** |
+
+🔴 **So the shelf-wide figure *«`16.2`% of rows have no licence»* OVERSTATES absence in this
+layer**, in the direction that makes a usable base look unusable. 🟢 **The obligation is real
+either way**: a `GPL` grant in a header is a `GPL` grant, so a derivative plugin is `GPL` and a
+client who wanted a proprietary module cannot have one here. 🔵 p139 measured *«`0` of `9`»* for
+the same question over **npm** connector packages. **Two layers, two conventions, one figure
+that cannot describe both.**
+
+### 🟢 The extension point itself, read at last
+
+🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) — **`Apache-2.0`**, `11 358` B, at
+`LICENSE.TXT`. 🔵 The row that defeated five filename lists in this KB now has its grant read
+from bytes by **two independent channels** *(`git cat-file` and `raw.githubusercontent.com`,
+same `11 358`)*. 🟢 **And it matters commercially:** `edx-platform` is `AGPL-3.0`, but
+**`XBlock` — the component API you build against — is permissive with a patent grant.** An
+`XBlock` is therefore the cheapest compliant place to put proprietary logic in the Open edX
+world.
+
+### 🆕 🔴 The bundling trap, measured: `Lumi` ships `14` other people's grants and one EULA
+
+p196 counted `15` *«own licence texts»* in
+[`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) and registered the row-by-row read.
+Run:
+
+| what the `15` are | count |
+|---|---|
+| 🔴 H5P content-type libraries under `assets/h5p/libraries/…`, copyright **Joubel**, **H5P**, **Oliver Tacke**, **CKSource** | 🔴 **`14`** *(13 `MIT`, 1 `Apache-2.0` font licence)* |
+| 🔴 `client/assets/legal/eula.html` — **`259 095` B** | 🔴 **`1`, and an EULA is the opposite of a grant** |
+| 🟢 `Lumi`'s own grant | 🟢 **`0`** |
+
+🟢 **p195's claim *«the interoperability layer grants nothing»* SURVIVES, on better evidence**
+— `1EdTech`, `adlnet` and `Lumi` all grant nothing of their own.
+🔴 **And the deployment consequence is specific:** an H5P-based deliverable redistributes `14`
+third-party grants whose holders are not the platform, so the notice file a client needs is
+**not** the platform's licence — it is a bill of materials.
+
+🆕 🔴 **Two instrument defects fall out of this row, both recorded and neither patched here.**
+`is_bundled` is a **path list** *(`node_modules`, `vendor`, `third_party`…)* and these vendored
+texts live under `assets/h5p/libraries/` — 🔵 **what identifies them is the copyright HOLDER,
+not the path**, which is `P441`'s lesson biting p196's own instrument. And `is_licence_path`
+counts `eula` as a grant. Both pre-registered with falsifiers; `P237` forbids editing the
+predicate in the same pass that promoted it to `lib/`.
+
 ## Pass 196 — 2026-10-14
 
 🆕 🟢 **A web sweep this pass returned, in its own words, *"sources disagree on several

@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 197 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What is new this week is a LAYER, not a repository: the Moodle plugin shelf, `198`
+rows deep, that this KB had been measuring through a word it does not use.**
+
+### 🔴 p196's pre-registered action, run — and the mechanism it named is refuted
+
+p196 registered: *«run the MCP query once per language (JS/TS, Java, PHP, Go) and diff against
+this Python-only `15`; if the new rows cluster in PHP/Java the LANGUAGE FILTER was the bias»*.
+
+| query | rows returned |
+|---|---|
+| `education AI agent language:typescript stars:>20 pushed:>2026-08-01` | `5` |
+| 🔴 `education AI agent language:php stars:>10 pushed:>2026-08-01` | 🔴 **`0`** |
+| 🔴 `education AI agent language:java stars:>20 pushed:>2026-08-01` | 🔴 **`0`** |
+| 🟢 `moodle AI language:php pushed:>2026-06-01` | 🟢 **`198`** |
+
+🟢 **The rows DO cluster in PHP — limb `1` on the data.** 🔴 **And the stated cause is wrong:
+switching the language returns nothing; switching the WORD returns `198`.** 🔵 The plugin world
+describes itself as *«plugin»*, *«qtype»*, *«block»*, *«local»* — never as *«agent»*. **A
+vocabulary is a filter and it does not appear in the query as one.**
+
+### 🆕 The new rows, dated — licence read from bytes, no field trusted
+
+| row | ★ | licence | note |
+|---|---|---|---|
+| 🆕 [`human2human-ai/moodle-tool_human2human`](https://github.com/human2human-ai/moodle-tool_human2human) | `15` | `GPL-3.0` *(`35 149` B)* | 🆕 **created `2026-10-05`** — AI-facilitated oral exams, role plays, debates. The newest row this KB holds |
+| 🆕 [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `223` | *(on shelf)* | the most-starred Moodle-AI plugin measured: tutoring, quizzes, mind maps, RAG over course material |
+| 🆕 [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | `33` | `GPL` **by header** *(`40`/`50` files)* | LLM-graded free-text question type |
+| 🆕 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | `30` | `GPL` **by header** *(`255`/`278`)* | provider + quota governance for AI inside Moodle |
+| 🆕 [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | `16` | `GPL` **by header** *(`64`/`91`)* | the chat surface over that manager |
+| 🆕 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | `16` | *(on shelf)* | Saylor's SOLA learning coach |
+| 🆕 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | `5` | 🟢 `MIT` *(`1 084` B)* | 🟢 **permissive, inside a `GPL` world** |
+| 🆕 [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | `17` | 🟢 `Apache-2.0` *(`10 758` B)* | course-generating + tutoring agents, early |
+| 🆕 [`langfuse/langfuse-workshop`](https://github.com/langfuse/langfuse-workshop) | `55` | 🟢 `MIT` *(`1 073` B)* | teaches the agent-engineering loop with real observability |
+| 🆕 [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | `23` | 🟢 `MIT` *(`1 062` B)* | study agent, local-first, self-hosted |
+| 🆕 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | `79` | 🔴 **non-commercial** *(`7 705` B)* | 🔴 channel says `NOASSERTION`; bytes bar commercial use |
+
+🔵 ★ counts come from the ranked channel, **not** from a flow measurement: `github.com/trending`
+is `403` for a fourth consecutive pass *(recorded in [`repos/trending.md`](../repos/trending.md))*,
+so **nothing here is a velocity claim.**
+
+### 🆕 🟢 The week's substantive finding: in this layer, «no licence file» is not «no licence»
+
+🟢 **`3` of `3`** plugins with **no licence file anywhere in the complete tree** carry an
+**operative `GPL` grant in the header of nearly every source file** — `40`/`50`, `255`/`278`,
+`64`/`91`. 🔵 Moodle requires it by project rule, so the grant travels per file.
+
+🔴 **p139 measured *«`0` of `9`»* for the same question over npm connector packages and that
+result does NOT generalise.** 🟢 Two layers, two conventions, and a shelf-wide *«no licence»*
+rate that means something different in each.
+
+### 🔜 Pre-registered for p198
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| Run the header channel over the **whole** `198`-row Moodle layer, not `3` | the `GPL`-in-header rate holds → restate the shelf's no-licence rate **per layer** | it does not → the `3` are a publisher convention and the layer claim dies |
+| Query the ranked channel by the layer's **own vocabulary** *(`plugin`, `qtype`, `block`, `local`, `tool`)* across Chamilo, Canvas and Open edX too | each LMS has a plugin shelf this KB never sampled → the agent layer is much larger than published | nothing returns → Moodle is the only LMS with a live plugin economy, which is itself the finding |
+| Re-read `DeepTutor`'s ★ weekly against p193's `±10` floor *(carried from p197, still unrun)* | the weekly delta exceeds `±10` → weekly is the right cadence | it does not → drop the star column from trending |
+
 ## Pass 196 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

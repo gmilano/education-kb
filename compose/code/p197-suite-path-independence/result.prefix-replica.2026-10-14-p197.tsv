@@ -1,0 +1,7 @@
+form	cwd	argv	total	passed	fails	skips	verdict
+abs-from-tmp	/tmp	/tmp/tmp.qGjktQpHui/defective/lib/test_license_family.sh	207	207	0	0	CLEAN
+in-suite-dir	/tmp/tmp.qGjktQpHui/defective/lib	test_license_family.sh	207	207	0	0	CLEAN
+rel-from-par	/tmp/tmp.qGjktQpHui/defective	lib/test_license_family.sh	183	179	4	2	SILENT-SKIP
+rel-from-gpar	/tmp/tmp.qGjktQpHui	defective/lib/test_license_family.sh	183	179	4	2	SILENT-SKIP
+rel-up-sibling	/tmp/tmp.qGjktQpHui/defective/.p197sib.897JBa	../lib/test_license_family.sh	207	207	0	0	CLEAN
+via-symlink	/tmp/tmp.rEw4DbM0Ed	./suite.sh	163	19	144	3	SILENT-SKIP
