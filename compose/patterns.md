@@ -3,6 +3,176 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🟢 **Every pattern on this page inherits a licence gate from p194. This pass makes the gate
+RUNNABLE OVER A WHOLE SHELF instead of over a payload at a time, and the cost is now
+measured: `468` slugs, `2 167` probes, `0` throttles, one script run.**
+
+🔴 **And the pass's own lesson goes at the top, because it is a pattern too:** p195 built a
+band control whose entire finding set was already registered here as `P1054`, `P1056` and
+`Gap 421`. 🟢 **`P0a` below is the step that would have prevented it, and it is now step one of
+every engagement AND of every pass.**
+
+### 🆕 🟢 `P0a` — Read the register before building the instrument *(10 minutes, before any code)*
+
+```bash
+# Run this BEFORE writing a classifier, a sweep, or a "new" control.
+CLASS="licence narrowed clause commercial split-scope"      # the defect class, in words
+ls compose/code/ | grep -iE 'licen|grant|clause|scope|family'
+grep -rliE "$(echo "$CLASS" | tr ' ' '|')" compose/code/*/README.md | head
+grep -rniE 'P1054|P1056|P171|P250|P237|Gap 421' agents/top.md repos/foundations.md \
+     verticals/solutions.md intel/trends.md compose/patterns.md | head
+```
+
+🟢 **Exit condition: if any hit describes the defect, CITE it and spend the pass elsewhere.**
+🔴 **p194 registered this failure one pass ago — *"it read p193's summary table as the state of
+knowledge"* — and p195 repeated it against its own census TSV. Second consecutive recurrence,
+which is why it is a gate and not advice.**
+
+### 🟢 `P0b` — The licence gate, now at SHELF scale *(one script run, ~4 minutes for 468 repos)*
+
+🔵 Wiring, concrete: [`compose/code/p195-shelf-licence-census/`](code/p195-shelf-licence-census/).
+
+```bash
+# 1. the CHANNEL — raw.githubusercontent.com.  Measured: 2 167 probes, 0 throttles, 0 refusals.
+#    github.com HTML and api.github.com are BOTH refused at the proxy (403) — do not design on them.
+# 2. the CLASSIFIER — sourced, never forked (P237).  207/207 assertions today.
+. compose/code/lib/payload_measure.sh        # brings in lib/license_family.sh
+
+# 3. the CENSUS — 19-filename root ladder, first 200 wins, status-gated.
+cat slugs.txt | xargs -P 8 -I{} \
+  bash compose/code/p195-shelf-licence-census/shelf_licence_census.sh --one {}
+
+# 4. the TRIAGE — byte band inside the claimed family; flags modified grants for a human.
+bash compose/code/p195-shelf-licence-census/delivery_verdict.sh <slug>
+```
+
+🔴 **Three guards that are not optional, each bought with a measured failure:**
+
+| guard | the failure it prevents |
+|---|---|
+| 🔴 **Gate on the HTTP CODE, never on the body** | `raw.githubusercontent.com` returns a **`14`-byte `404: Not Found`** body. A classifier fed that without a status check will classify it. 🔵 `lib/probe_payload.sh:96` already guards this; p195's own spot-check forgot and had to retract a verdict mid-pass |
+| 🔴 **`NONE` requires a CLEAN ladder** | if any probe returned `403`/`429`/`5xx`, the verdict is `INDETERMINATE`, never `NONE`. At census volume, *"all `404`"* is exactly what throttling forges |
+| 🔴 **Walk the WHOLE ladder when the family is `UNCLASSIFIED`** | `shmercer/writeAlizer`'s first `200` is a **`47`-byte `usethis` template stub**; the real grant is `LICENSE.md`, `1 076` B, `MIT`. First-hit-wins loses it |
+
+🟡 **And the limit, stated: this reads the ROOT only.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `NONE` at root and
+carries `GPL-2.0` at `docs/License.txt` *(`17 286` B)*. 🔵 `p969-root-only-licence-reach`.
+
+### 🟢 `P1` — The shelf-wide licence-provenance audit, as a sellable 2-week deliverable
+
+🔵 **Who buys it:** any client with an inherited education codebase, in **every** region — this
+is the one deliverable p195 can price identically for North America, EMEA, APAC and LATAM.
+
+| step | what runs | what the client gets |
+|---|---|---|
+| `1` | `P0b` over the client's dependency slugs | a byte-verified licence column, **not an API field** |
+| `2` | separate the `AGPL-3.0` set | 🔴 the rows where **self-hosting for a third party triggers disclosure** |
+| `3` | separate the no-licence-at-root set, then probe `docs/`, `legal/`, `.github/` | 🔴 all-rights-reserved rows **vs** `p969` artefacts — a real distinction, measured |
+| `4` | run the band triage | 🔴 the `≈6`% that need a lawyer's eyes, instead of `100`% |
+| `5` | hand over the TSVs and the two scripts | the client can **re-run it**, which is what makes it an audit and not an opinion |
+
+🟢 **Measured yield on this KB's own shelf: `41` Affero rows, `88` root-`NONE`, `5`
+source-available, `2` non-commercial, `16` needing a human read out of `281` permissive.**
+🔴 **Of `281` rows that a licence FIELD would have cleared, three bar commercial use outright.**
+
+### 🟢 `P2` — A deliverable LMS, built only from rows that passed the gate
+
+🔴 **Do not start from the installed base.** Open edX *(`AGPL-3.0`, `35 136` B)*, Canvas
+*(`AGPL-3.0`, `34 520` B)* and `frappe/lms` *(`AGPL-3.0`, `33 893` B — **not `MIT`**, p193) all
+reach a hosted deliverable's own modifications.
+
+| role | repo | licence *(bytes, this pass)* |
+|---|---|---|
+| LMS core | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` *(`10 982`)* |
+| LMS core, alt | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` *(`11 120`)* — patent grant scoped to education |
+| offline / low-bandwidth | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` *(`1 097`)* |
+| lecture capture | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `ECL-2.0` *(`11 340`)* |
+| learning record store | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 `MIT` *(`1 094`)* |
+| sandboxed code execution | [`taybenlor/runno`](https://github.com/taybenlor/runno) | 🟢 `MIT` *(`1 106`)* — *"or via MCP"* |
+| curriculum payload | `microsoft/ML-For-Beginners` · `generative-ai-for-beginners` · 🆕 `ai-agents-for-beginners` | 🟢 `MIT` *(`1 141`, one byte-identical file across all three)* |
+
+🔵 **Wiring:** Sakai or OpenOLAT as the gradebook and roster of record → `runno` as the
+execution sandbox the tutor calls → `ralph` as the xAPI sink that records every agent action
+against a learner → the Microsoft curriculum set as the content the tutor teaches from.
+🔴 **The glue is where the licence risk now lives** *(see T2)*: `1EdTech`'s LTI example tool and
+`adlnet`'s SCORM→xAPI wrapper **grant nothing at root**, so write the adapter or get a grant in
+writing — do not vendor them.
+
+### 🟢 `P3` — LATAM: the `92`% / `26`% governance inventory *(6–8 weeks)*
+
+🔵 **The measured premise:** `92`% of students and `79`% of faculty engaging with AI
+*(Digital Education Council LATAM `2026`, >`30 000` responses)* against **`26`% of institutions
+with a formal framework** *(UNESCO IESALC + UNU-IAS, `200` institutions, `19` countries)*.
+
+| step | detail |
+|---|---|
+| `1` | inventory what is **already** in use — adoption is bottom-up, driven by individual academics and students, so the register comes before the policy |
+| `2` | run `P0b` over every tool found; 🔴 expect source-available rows that look open in a search result |
+| `3` | write the framework around actual use. 🔵 Name the instrument in every number — **framework `26`% ≠ published policy ≈`30`%** |
+| `4` | instrument it: `ralph` *(`MIT`)* as the record, so the framework has evidence and not just prose |
+| `5` | 🟡 target **private non-profits first** — `84`% adoption against `68`% public and `52`% private for-profit, and the planning capacity to buy |
+
+🔴 **Do not build on `menthorlabs/menthor`** — still `archived: true`, third pass.
+🟢 [`alcastaro/opendata-latam-mcp`](https://github.com/alcastaro/opendata-latam-mcp) is `MIT`
+*(`1 557` B, band-checked)* and is the live LATAM-origin row.
+
+### 🟢 `P4` — EMEA: the sovereign teaching stack *(10–12 weeks)*
+
+🔵 **The constraint that drives it:** the EU AI Act puts education AI in the high-risk class,
+and 🔴 **this KB has no `2026` EMEA vendor ranking after four passes of searching** — so sell
+against the measured `31`-point intra-EU adoption spread, not against a market-share story.
+
+| role | repo | why this one |
+|---|---|---|
+| agent teaching base | 🆕 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 `MIT` *(`1 067` B)*, **local LLM, no cloud API calls** — the sovereignty shape, finally permissive. 🔴 `≈796`★: a starting point, not a dependency |
+| LMS | `OpenOLAT` *(`Apache-2.0`)* or `Sakai` *(`ECL-2.0`)* | 🟢 permissive, so the Annex III obligations attach to the client's system and not to a copyleft upstream |
+| record / audit | `openfun/ralph` *(`MIT`)* | 🟢 Art. `50` transparency needs an exportable record |
+| curriculum | Microsoft `MIT` set | 🟢 one licence, three courses |
+
+🟡 **Pitch workload, evidence outcomes.** Sanoma's `>20 000` teachers put AI's effect on
+**learning outcomes** at `16`% while intent to use it for **preparing materials** rose — the
+objection to pre-empt is measured, so lead with the teacher's time and prove the learner's
+result separately.
+
+### 🆕 🟢 `P5` — APAC: build for mandate REVERSIBILITY *(12–14 weeks)*
+
+🔴 **New this pass, and Korea is the completed case.** An August `2025` law demoted Korea's AI
+digital textbooks to **supplementary material**, uptake fell `37`% → `19`%, and ≈`10` publishers
+sued for ≈`₩200` bn in June `2026`. 🟡 **The reported causes are classroom technical failure,
+data-privacy objection and teacher/parent opposition — not model quality.**
+
+| step | detail |
+|---|---|
+| `1` | 🔴 **Make the deliverable outlive the programme**: standards-based content *(QTI / SCORM / xAPI)* plus an exportable learner record. Nothing programme-specific in the data layer |
+| `2` | 🟢 **Build to China's WRITTEN requirements as a spec**: curriculum from ≈age `6`, **minimum `8` h/year**, 🔴 **primary pupils barred from independent generative-AI use** — so the agent is **teacher-mediated by construction**, not by configuration — and teachers barred from replacing core teaching duties |
+| `3` | 🟢 **Japan's window is dated**: `220` textbooks, `11` subjects, fiscal year from **April `2027`** |
+| `4` | 🔴 **Treat APAC curriculum as content-licensed until read**: `microsoft/ai-edu` ships a **custom Chinese-language tutorial-materials notice**, not `MIT` *(`4 806` B, read this pass)* |
+| `5` | 🔴 **Quote no APAC adoption rate.** This KB has none, two passes running |
+
+### 🟢 `P6` — North America: the enforcement-evidence pattern *(4–6 weeks)*
+
+🔵 **The premise, re-measured this pass:** there is **no sector regulator** — no FDA-equivalent
+for edtech — state guidance is largely non-binding, and 🔴 **FERPA and COPPA carry the legal
+weight.** So the sellable artefact is **evidence**, not policy.
+
+| step | detail |
+|---|---|
+| `1` | `ralph` *(`MIT`)* as the LRS: every agent action against a student, exportable |
+| `2` | agent layer **over** the Canvas API — 🔴 **never a fork**, `canvas-lms` is `AGPL-3.0` *(`34 520` B)* |
+| `3` | 🔴 **a per-DISTRICT policy switch, not per-state**: `31` legislating states against Katy ISD's K-`6` ban and NYC's `8`th-grade moratorium |
+| `4` | map the record to **FERPA/COPPA** obligations, and to California AB `1159` where student data must not train models |
+
+### 🔴 What these patterns still cannot source from permissive OSS
+
+| need | status |
+|---|---|
+| 🔴 **Student-success / advising CRM** | 🔴 **The only AI-native row is [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) and it is `Elastic`** *(`3 860` B, read this pass)* — source-available. **No permissive row exists** |
+| 🔴 **Education ERP or SIS under MIT/Apache** | 🔴 Searched again this pass; **none**. `openeducat_erp` is `LGPL-3.0` *(`8 241` B)*, `openSIS` `GPL-2.0`, `rosariosis` `GPL-2.0`. 🟢 **Recommend the LGPL route openly**: a client's own modules link it without becoming copyleft |
+| 🔴 **Licensed LTI / SCORM / xAPI reference implementations** | 🔴 `1EdTech` and `adlnet` reference repos **grant nothing at root** |
+| 🔴 **Production-agent curriculum an enterprise may use** | 🔴 Unchanged from p194: the best-known corpus is **non-commercial** |
+| 🔴 **A copyleft band for the triage control** | 🔴 No band for `AGPL-3.0`/`GPL-3.0`/`ECL-2.0`, so the **`77` copyleft rows are unchecked for `P1054`-style narrowing.** Pre-registered for p196 |
 ## Pass 194 — 2026-10-14
 
 🆕 🔴 **Every pattern below now carries a licence gate as step `0`, because this pass measured

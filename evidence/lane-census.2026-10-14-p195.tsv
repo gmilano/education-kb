@@ -1,0 +1,11 @@
+host_or_path	probe	http	body_discriminator	verdict	p194_result
+github.com/trending?since=daily	GET	403	proxy JSON: "sessions are bound to their configured repositories"	CLOSED-AT-PROXY	200
+github.com/trending?since=weekly	GET	403	proxy JSON, same	CLOSED-AT-PROXY	200
+github.com/trending?since=monthly	GET	403	proxy JSON, same	CLOSED-AT-PROXY	504 x2
+github.com/explore	GET	403	proxy JSON, same	CLOSED-AT-PROXY	NOT MEASURED
+github.com/microsoft/ML-For-Beginners	GET	403	proxy JSON, same	CLOSED-AT-PROXY	NOT MEASURED
+api.github.com/repos/moodle/moodle	GET	403	proxy JSON, same	CLOSED-AT-PROXY	403
+codeload.github.com/moodle/moodle	GET	403	proxy JSON, same	CLOSED-AT-PROXY	NOT MEASURED
+raw.githubusercontent.com	GET x2167	200/404	14-byte "404: Not Found" body on miss	LIVE	LIVE
+git ls-remote https://github.com/moodle/moodle	git smart-HTTP	n/a	exit 0, HEAD sha returned	LIVE	LIVE
+mcp__github__search_repositories	tool call x2	n/a	30/30 rows, stargazers_count + license.spdx_id	LIVE	LIVE

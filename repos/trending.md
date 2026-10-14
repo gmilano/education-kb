@@ -3,6 +3,80 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **The trending lane is GONE, and not in either direction p194 pre-registered. It did not
+answer and it did not time out — `github.com` is now refused AT THE PROXY, for every path,
+including plain repository pages.** 🟢 p194 measured `200` on five trending views hours ago; p195
+measures `403` on all of them.
+
+🔴 **The discriminator is the BODY, not the status code**, and p195 nearly misread it as a
+GitHub rate limit:
+
+```
+HTTP/1.1 403 Forbidden
+Content-Type: application/json
+{"message":"This GitHub API path is not available: sessions are bound to their
+ configured repositories. Use repository-scoped endpoints (repos/{owner}/{repo}/...)."}
+```
+
+🔵 **That is this session's own policy layer answering, not GitHub.** 🟡 And the message is
+itself wrong about what it refused: `github.com/trending` and `github.com/microsoft/ML-For-Beginners`
+are **HTML pages, not API paths**. 🟢 **Recorded because a pass that reads `403` as *"GitHub
+throttled us"* will wait and retry forever against a policy that will never soften.**
+
+### 🔴 The lane census, every host probed this pass
+
+| host / path | probe | HTTP | verdict | p194 |
+|---|---|---|---|---|
+| 🔴 `github.com/trending?since=daily` | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | `200` |
+| 🔴 `github.com/trending?since=weekly` | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | `200` |
+| 🔴 `github.com/trending?since=monthly` | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | `504` × `2` |
+| 🔴 `github.com/explore` | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | not measured |
+| 🔴 `github.com/{owner}/{repo}` *(plain HTML)* | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | not measured |
+| 🔴 `api.github.com/repos/…` | `GET` | `403` | 🔴 CLOSED AT PROXY | `403` |
+| 🔴 `codeload.github.com/…` | `GET` | **`403`** | 🔴 **CLOSED AT PROXY** | not measured |
+| 🟢 `raw.githubusercontent.com` | `GET` × **`2 167`** | `200`/`404` | 🟢 **LIVE, and it does not throttle** | LIVE |
+| 🟢 `git ls-remote https://github.com/…` | git smart-HTTP | — | 🟢 **LIVE** *(exit `0`, sha returned)* | LIVE |
+| 🟢 `mcp__github__search_repositories` | tool × `2` | — | 🟢 **LIVE** — `30`/`30` rows, stars + `spdx_id` | LIVE |
+
+🔵 Committed as [`evidence/lane-census.2026-10-14-p195.tsv`](../evidence/lane-census.2026-10-14-p195.tsv).
+
+🟢 **So p194's pre-registration resolves to a THIRD outcome it did not list.** Limb `1` was
+*"monthly answers"*; limb `2` was *"`504` again → structurally unavailable like `eur-lex`."*
+🔴 **Neither. The whole HTML host closed between two passes on the same day**, and the `504`
+p194 recorded was most likely the same policy layer failing differently, not GitHub being slow.
+🟡 **Which means p194's `504 × 2` should not be quoted as a GitHub signal either.**
+
+### 🔴 What this costs, stated so nobody re-buys it
+
+| capability | status |
+|---|---|
+| 🔴 **GitHub's own trending ranking, any window** | 🔴 **UNAVAILABLE from this session. Not throttled — refused** |
+| 🔴 Language- and spoken-language-filtered trending *(p194's best lane, `9` education rows in `17`)* | 🔴 **UNAVAILABLE — same host** |
+| 🔴 Third-party mirrors *(`trendshift.io`)* | 🔴 DNS `ENOTFOUND`, unchanged from p194 |
+| 🟢 **Ranked discovery by stars, created-date and topic** | 🟢 **AVAILABLE** via `mcp__github__search_repositories` — `30`/`30` this pass |
+| 🟢 **Licence, byte-exact, at census volume** | 🟢 **AVAILABLE** via the raw lane — `468` slugs, `0` throttles |
+
+🔴 **The honest consequence: this KB can no longer measure *"what trended this week"* at all.**
+🟢 **It can still measure *"what exists, how big it is, and what it is licensed as"*, and p195
+did that for the entire shelf.** 🟡 **A trending claim on these pages from p195 onward is a
+claim about the ranked channel's star ordering, which is a different instrument and must be
+named as one.**
+
+### 🟢 What replaced it this pass, and the one thing it cannot do
+
+🔵 The ranked channel accepts batched `repo:` qualifiers — `15` slugs per call, `2` calls for
+the shelf's `30` rows, every field present. 🟢 It returns `stargazers_count`, `forks_count`,
+`open_issues_count`, `topics`, `archived`, `created_at`, `default_branch` and `license.spdx_id`.
+
+🔴 **What it cannot do is rank by MOMENTUM.** 🟢 Measured this pass: `30` rows re-priced against
+p193's same-day reads, **largest delta `+9`, every row inside `±10`, net `+22` on ≈`120 000`★.**
+🔴 **There is no trend to extract from that, and no amount of hourly re-reading will produce
+one** — which is now the second independent reason to stop treating this file as an hourly
+instrument.
 ## Pass 194 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

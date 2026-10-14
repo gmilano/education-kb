@@ -1,0 +1,16 @@
+slug	api_spdx_id	bytes_family	bytes	agree
+HKUDS/DeepTutor	Apache-2.0	Apache-2.0	11408	AGREE
+virgiliojr94/book-to-skill	MIT			DIVERGE
+JushBJJ/Mr.-Ranedeer-AI-Tutor	NONE	NONE	0	AGREE
+openedx/openedx-platform	AGPL-3.0	AGPL-3.0	35136	AGREE
+moodle/moodle	GPL-3.0	GPL-3.0	35147	AGREE
+instructure/canvas-lms	AGPL-3.0	AGPL-3.0	34520	AGREE
+PetoiCamp/OpenCat-Quadruped-Robot	MIT			DIVERGE
+frappe/lms	AGPL-3.0	AGPL-3.0	33893	AGREE
+learnhouse/learnhouse	AGPL-3.0	AGPL-3.0	34523	AGREE
+CaviraOSS/PageLM	NOASSERTION	MIT	8563	API-BLIND
+ai-infra-curriculum/ai-infra-engineer-learning	MIT			DIVERGE
+classroomio/classroomio	AGPL-3.0	AGPL-3.0	34523	AGREE
+sakaiproject/sakai	ECL-2.0	ECL-2.0	11120	AGREE
+learningequality/kolibri	MIT	MIT	1097	AGREE
+mohi-devhub/antivibe	MIT			DIVERGE

@@ -3,6 +3,130 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🟢 **The foundational layer now has a licence column read from bytes on every row, because
+the census p194 pre-registered ran and the lane did not flinch: `468` LIVE slugs, `2 167`
+probes, `0` throttles, `0` refusals, `0` indeterminate rows.** 🔵
+[`evidence/shelf-licence-census.2026-10-14-p195.tsv`](../evidence/shelf-licence-census.2026-10-14-p195.tsv).
+
+🔴 **And the lane that this file has spent thirteen passes characterising lost a member mid-pass.**
+`github.com` — HTML pages, not just the API — is now refused at this session's proxy with `403`
+and a policy JSON body. 🔵 Lane census in [`repos/trending.md`](trending.md).
+
+### 🟢 The foundational shelf, licence read from bytes this pass
+
+| repo | layer | 🟢 licence | bytes | path | delivery |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS | 🟡 **`GPL-3.0`** | `35 147` | `COPYING.txt` | 🟡 copyleft, **no network clause** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | 🔴 **`AGPL-3.0`** | `35 136` | `LICENSE` | 🔴 network-use disclosure |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS | 🔴 **`AGPL-3.0`** | `35 136` | `LICENSE` | 🔴 same, byte-identical |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | 🔴 **`AGPL-3.0`** | `34 520` | `LICENSE` | 🔴 network-use disclosure |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | 🟡 **`GPL-3.0`** | `35 147` | `LICENSE` | 🟡 copyleft |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🔴 **`AGPL-3.0`** | `33 893` | `license.txt` | 🔴 **p193's correction, third channel** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | Open edX deploy | 🔴 **`AGPL-3.0`** | `34 523` | `LICENSE.txt` | 🔴 the deployer is Affero too |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟢 **`ECL-2.0`** | `11 120` | `LICENSE` | 🟢 permissive, **patent grant scoped to education** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture | 🟢 **`ECL-2.0`** | `11 340` | `LICENSE` | 🟢 same family |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 **`Apache-2.0`** | `10 982` | `LICENSE` | 🟢 permissive |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline learning | 🟢 **`MIT`** | `1 097` | `LICENSE` | 🟢 permissive |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | LRS *(xAPI)* | 🟢 **`MIT`** | `1 094` | `LICENSE.md` | 🟢 permissive |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP | 🟡 **`LGPL-3.0`** | `8 241` | `LICENSE` | 🟡 linkable copyleft |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🟡 **`GPL-2.0`** | `15 214` | `LICENSE` | 🟡 copyleft |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management | 🟡 **`GPL-3.0`** | `35 121` | `LICENSE` | 🟡 copyleft |
+
+🟢 **`15` rows, `15` licences from bytes. `ECL-2.0` on `sakai` is byte-exact against the `md5`
+this KB recorded at p191**, so the Apereo family now stands on three independent channels
+*(blobless clone, the ranked channel's `spdx_id`, the raw lane)*.
+
+🔴 **The structural reading, and it is the one a client architecture turns on: the hosted-LMS
+layer is Affero as a MARKET, not as an exception.** 🟢 `41` of the `380` licensed rows on the
+whole shelf are `AGPL-3.0` — **more than every restricted and source-available category
+combined** — and they include Open edX *(four slugs)*, Canvas, Frappe LMS, `classroomio`,
+`learnhouse` and `tutor`. 🟡 **The permissive LMS route exists and is narrow: `ECL-2.0`
+*(Sakai, Opencast)*, `Apache-2.0` *(OpenOLAT)*, `MIT` *(Kolibri, offline-first)*.**
+
+### 🆕 🔴 The interoperability layer does not ship a grant — `3` of `3` standards-body repos
+
+🔵 Measured with the full `19`-filename root ladder, then README-checked, then probed one level
+down at `docs/`, `legal/`, `.github/`:
+
+| repo | body | root licence | README claim | deeper path |
+|---|---|---|---|---|
+| 🔴 [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | **1EdTech** *(LTI)* | 🔴 **NONE** | 🔴 **none** | 🔴 none found |
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **ADL** *(SCORM/xAPI)* | 🔴 **NONE** | 🟡 **`## License` → *"Licensed under the Apache License, Version 2.0"*** | 🔴 none found |
+| 🔴 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🔴 **NONE** | 🔴 **none** | 🔴 none found |
+
+🔴 **These are the reference implementations an engagement reads FIRST when it has to speak LTI,
+SCORM or xAPI**, and two of the three grant nothing in any form this KB can find. 🟡 `adlnet`'s
+is the softer case and still not a grant: **a README sentence electing `Apache-2.0` with no
+licence file anywhere**, which is this KB's claim-versus-file shape with the file simply absent.
+🟢 **Consequence for a proposal: the standards are open; these repositories are not a licensed
+starting point.** 🔵 The permissive interoperability row that *does* hold up is
+[`openfun/ralph`](https://github.com/openfun/ralph) — `MIT`, `1 094` B — at `51`★.
+
+### 🔴 `88` rows return no licence at root — and the figure's SCOPE is the finding
+
+🔵 `18.8`% of the `468`. 🔴 **It must be quoted as *"no licence at ROOT across `19`
+filenames"*, never as *"unlicensed"*, and p195 has the counter-example that proves why:**
+
+| repo | root ladder | 🟢 one directory down |
+|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`19` probes, all `404`** | 🟢 **`docs/License.txt` — `17 286` B, `GPL-2.0`** |
+
+🟢 **The README said so all along** — *"licensed under the GNU General Public License, the full
+license can be found here"*, linking that path. 🔵 **Already registered as
+[`p969-root-only-licence-reach`](../compose/code/p969-root-only-licence-reach/), whose open limb
+is exactly this**; cited rather than re-derived. 🔴 **So `18.8`% is an UPPER BOUND on absence
+and a LOWER BOUND on nothing**, and p196's pre-registered job is to probe the `88` one level
+down and convert it.
+
+### 🆕 🟡 `4` rows elect `Apache-2.0` without shipping it
+
+🔵 Surfaced by a byte-band check, not by reading bodies: `Apache-2.0` is `11 348` B of text,
+and these four are `560`–`738`.
+
+| repo | bytes | what the file contains |
+|---|---|---|
+| [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) | `560` | *"Licensed under the Apache License, Version 2.0 … http://www.apache.org/licenses/LICENSE-2.0"* |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | `738` | same shape |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | `679` | same shape |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | `680` | same shape |
+
+🟢 **The election is valid and the family verdict stands** — these are `Apache-2.0` projects and
+`commercial_use_ok` allows them. 🟡 **What is missing is the licence TEXT, which `Apache-2.0`
+§`4(a)` requires a redistributor to include** — so the obligation lands on whoever ships a
+derivative, and the fix is one file. 🔵 `fedena` is a **fork pair**: distinct `HEAD` shas,
+byte-identical licence files.
+
+### 🔴 The correction this pass owes its own census — the population is not "the whole shelf"
+
+🔵 p192 derived a `472`-slug population and p194 and p195 both inherited the phrase *"the whole
+shelf"*. 🔴 **Four rows on p193's own ranked `30`-row table are NOT in it** —
+`virgiliojr94/book-to-skill` *(rank `2`)*, `PetoiCamp/OpenCat-Quadruped-Robot` *(`7`)*,
+`ai-infra-curriculum/ai-infra-engineer-learning` *(`11`)*, `mohi-devhub/antivibe` *(`15`)* —
+and **all four are rows p193 marked 🆕 NEW.** 🟢 **The extraction predates the pages it claims
+to cover.**
+
+🔵 Also inherited, and already on this page at line `325`: `ShuyunYuan/talentcoach` ≡
+`shuyunyuan/talentcoach` is **one repository** *(`HEAD` sha `b450118a7e8a` under both
+spellings)*, so the `468` holds a duplicate identity and the distinct count is **`467`**.
+
+🔴 **Every per-shelf percentage published since p192 — `18.8`%, `5.7`%, the family
+distribution — carries this denominator.** 🟢 Stated here before anyone quotes one.
+
+### 🟢 Method, carried forward
+
+🟢 **`lib/license_family.sh` was sourced, not forked** *(`207`/`207` **run from `lib/`** —
+🆕 🟡 the same suite returns **`179`/`181` from the repo root**, where two fixture guards fail on
+`cwd`-relative paths and the `26` assertions they feed never run; 🟢 **not a regression — the
+guards failed loudly rather than passing on an empty corpus**, and the shape is registered as
+[`p355-cwd-portability`](../compose/code/p355-cwd-portability/). 🔴 **Never quote the score
+without its `cwd`.**)*, and `P834` was honoured: **every byte count on this page comes from `size_of_file` over a file on disk**, never
+from `$(…)`. 🔴 **p195 still committed the pass-level version of the same error**: it built a
+band control whose findings were already registered as `P1054`, `P1056` and `Gap 421`, because
+it read its own census TSV as the state of knowledge instead of reading these pages.
+🟢 **`P237`'s rule generalises, and p196 inherits it as a pre-registered step: grep
+`compose/code/` and the four pages for the defect class BEFORE building the instrument.**
 ## Pass 194 — 2026-10-14
 
 🆕 🔴 **This pass set out to report a new lane and a new method finding. Both were already in

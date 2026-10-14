@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **There is no trending measurement this pass, and that is the entry.** p194's best lane —
+language-filtered trending, `9` education rows in `17` — ran through `github.com`, and
+`github.com` is now **refused at this session's proxy for every path**: `403` with a policy
+JSON body, on `/trending`, on `/explore`, and on plain repository pages. 🔵 Full lane census in
+[`repos/trending.md`](../repos/trending.md) this pass.
+
+🟢 **So this section records what trending-adjacent signal is still obtainable, and names it
+correctly rather than letting it stand in for the thing that is gone.**
+
+### 🔴 The substitution, and why it is NOT a trending list
+
+| | GitHub trending *(gone)* | 🟢 the ranked channel *(live)* |
+|---|---|---|
+| ranks by | 🔴 **stars gained in a window** | 🟢 **total stars** |
+| answers *"what is moving"* | 🟢 yes | 🔴 **no** |
+| answers *"what exists and how big"* | partly | 🟢 **yes** |
+| education hit rate | `9` / `17` on the jupyter-notebook lane *(p194)* | n/a — queried by slug, not discovered |
+
+🔴 **A total-stars ordering is a STOCK, and trending is a FLOW.** 🟢 Measured this pass, which
+is why the substitution cannot be quietly made: re-pricing the shelf's `30` rows hours after
+p193 moved `6` rows, by **at most `+9`**, net `+22` across ≈`120 000`★. 🔴 **At that resolution
+the stock cannot be differentiated into a flow** — p193's `±10` noise floor now has a second,
+independent confirmation.
+
+### 🟢 New agent-layer rows surfaced by search this pass, licence read from bytes
+
+🔵 Discovered through web search rather than through a trending view, and **both licences were
+read from the raw lane, not taken from a roundup**:
+
+| repo | ★ | licence | bytes | shape |
+|---|---|---|---|---|
+| 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `≈67 000` 🟡 *(secondary)* | 🟢 **`MIT`** | `1 141` | `12`-lesson agent course. 🔵 Licence **byte-identical** to `microsoft/ML-For-Beginners` and `microsoft/generative-ai-for-beginners` — one `MIT` file across Microsoft's whole teaching estate |
+| 🟢 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `≈796` 🟡 *(secondary)* | 🟢 **`MIT`** | `1 067` | agents from first principles on a **local LLM, no cloud APIs**. 🟢 Topics include `ai-education` |
+
+🟡 **Star counts are SECONDARY and labelled so** — neither row was on a ranked-channel batch
+this pass, and the raw lane returns file contents, not `stargazers_count`.
+
+🟢 **`agents-from-scratch` is the row to notice.** 🔵 Every sovereignty-constrained engagement
+this KB has described — EMEA under the AI Act, APAC under China's and Japan's ministry
+requirements — needs a teaching base that runs **without a cloud API call**, and the shelf has
+had no permissive one. 🔴 **It is `≈796`★, so it is a starting point, not a dependency.**
+
+### 🔴 A roundup trap caught before it reached these pages
+
+🔵 One search result named *"Hermes Agent, Nous Research, MIT, `180 000`+★"* in a list of
+education-relevant agents. 🔴 **Not written to any table**: the figure comes from a single
+vendor blog, no licence file was read, and `180 000`★ would make it the largest row in this KB
+by a factor of four. 🟢 The same source warns in its own text that some *"open source"* agents
+ship **Elastic License 2.0** instead — 🔵 which is exactly what p195 measured on
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) *(`Elastic`, `3 860` B)*,
+a row this KB has carried as a platform since before its licence was read.
+
+🟢 **Rule this re-affirms, unchanged: a star count from a roundup is not a measurement, and a
+licence from a roundup is not a licence.**
 ## Pass 194 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

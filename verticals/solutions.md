@@ -3,6 +3,105 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🔴 **A platform row this page has carried as *"UNKNOWN until the body is read"* is now read,
+and the answer is that it is not open source at all.** 🟢 Every platform row below also had its
+licence re-read from bytes through the raw lane this pass, at census volume rather than row by
+row.
+
+### 🆕 🔴 `advisingapp` — the named gap CLOSES, and it closes against the platform
+
+🔵 This page carried: 🔴 *"`advisingapp` is `NOASSERTION` and unread — a `340`★ AI-native
+higher-ed platform whose…"*, with `P47` attached. 🟢 **Read this pass:**
+
+| platform | ★ | path | bytes | 🔴 licence | can it base a client deliverable? |
+|---|---|---|---|---|---|
+| 🔴 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | `LICENSE` | **`3 860`** | 🔴 **`Elastic`** | 🔴 **NO — source-available, not OSS** |
+
+🔴 **The Elastic License permits reading and self-hosting, and bars providing the software to
+third parties as a managed service.** 🟡 That is precisely what an AI Studios engagement
+building a student-success platform **for** a university would do. 🟢 `commercial_use_ok`
+denies it on the family name alone — `Elastic` is a named branch of the gate — so no body
+parse was needed and no judgement call is involved.
+
+🔵 **Why it matters more than one row: `advisingapp` was the only AI-NATIVE higher-ed CRM on
+this page.** 🔴 **The permissive student-success-CRM row does not exist**, and this page should
+stop implying one does.
+
+### 🟢 The platform shelf, licence from bytes, `15` of `15`
+
+| platform | layer | 🟢 licence | bytes | delivery gate |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS | 🟡 `GPL-3.0` | `35 147` | 🟡 copyleft, **no network clause** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | 🟡 `GPL-3.0` | `35 147` | 🟡 copyleft |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school mgmt | 🟡 `GPL-3.0` | `35 121` | 🟡 copyleft |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🟡 `GPL-2.0` | `15 214` | 🟡 copyleft |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | 🔴 `AGPL-3.0` | `35 136` | 🔴 network-use disclosure |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | 🔴 `AGPL-3.0` | `34 520` | 🔴 network-use disclosure |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🔴 `AGPL-3.0` | `33 893` | 🔴 **not `MIT`, per p193** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | Open edX deploy | 🔴 `AGPL-3.0` | `34 523` | 🔴 the deployer too |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS | 🟢 **`ECL-2.0`** | `11 120` | 🟢 **permissive**, patent grant scoped to education |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | lecture capture | 🟢 **`ECL-2.0`** | `11 340` | 🟢 **permissive** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 **`Apache-2.0`** | `10 982` | 🟢 **permissive** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | offline learning | 🟢 **`MIT`** | `1 097` | 🟢 **permissive** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP | 🟡 `LGPL-3.0` | `8 241` | 🟡 linkable |
+| 🔴 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | student-success CRM | 🔴 **`Elastic`** | `3 860` | 🔴 **BARRED as a hosted deliverable** |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | SIS | 🟡 **`GPL-2.0`** | `17 286` | 🟡 copyleft — 🔴 **but see below** |
+
+### 🆕 🟡 The ERP/SIS question, and this pass finally has a measured answer shape
+
+🔵 Searched again this pass: `open source platform education ERP SIS student information system
+MIT Apache license 2026`. 🔴 **The search returned no permissive education ERP or SIS. It
+returned two copyleft ones and a dead end** — which is the same answer p194 recorded, now with
+the licences read from bytes rather than taken from the vendors' own pages:
+
+| candidate | vendor page claims | 🟢 bytes say |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | *"LGPL v3"* | 🟢 **`LGPL-3.0`, `8 241` B — AGREES** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | *"GNU General Public License"* | 🟡 **`GPL-2.0`, `17 286` B — AGREES, but NOT at root** |
+| Kuali | licence not stated in results | 🔴 **not resolved — recorded as unsearched, not as absent** |
+
+🔴 **`openSIS` is the instructive one: the root ladder returns NOTHING across `19` filenames**,
+and the grant is at `docs/License.txt`, one directory down, exactly where its README says.
+🟢 **So the honest verdict is `GPL-2.0`, and the honest method note is that a root-only ladder
+would have filed this platform as unlicensed.** 🔵 Registered upstream as
+[`p969-root-only-licence-reach`](../compose/code/p969-root-only-licence-reach/).
+
+🟢 **Standing conclusion, unchanged and now priced: there is no MIT/Apache education ERP or SIS
+on this shelf.** 🟡 **The permissive route into administration is to put an agent layer ON a
+copyleft SIS over its API rather than to fork it** — the copyleft reaches the derivative work,
+not the client of a network service, for `GPL-2.0` and `GPL-3.0` *(no network clause)*. 🔴 **For
+the `AGPL-3.0` rows that reasoning does not hold**, and that is the distinction this page exists
+to make.
+
+### 🔴 `Odoo`-shaped question, answered for education: the vertical ERP layer is LGPL, not MIT
+
+🟢 `openeducat_erp` is the education analogue of the Odoo pattern this KB cites elsewhere —
+**and it is literally an Odoo module set** *(default branch `19.0`, version-named, tracking
+Odoo releases)*. 🟡 **`LGPL-3.0` means a client's own modules can link it without becoming
+copyleft, and modifications TO it must be shared.** 🟢 **That is a workable commercial posture
+and should be stated as the recommendation rather than as a compromise.**
+
+### 🔴 Platform rows that are source-available, and must never be filed as OSS
+
+| row | licence | bars |
+|---|---|---|
+| 🔴 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | **`Elastic`** | 🔴 offering it to third parties as a managed service |
+| 🔴 [`willwearing/graspful`](https://github.com/willwearing/graspful) | **`P1054`** — MIT's body + an anti-SaaS non-compete | 🔴 hosted competition *(already on this page)* |
+| 🔴 `freesoft/MathCrew` · `minouza/MathCrew` · `lilialla/bandwise` · `shine11224/EchoLingo` | **`PolyForm`** | 🔴 commercial use |
+| 🔴 [`GautamVhavle/learner-verse`](https://github.com/GautamVhavle/learner-verse) | **BUSL 1.1** | 🔴 *"any purpose involving direct or indirect commercial activity"* |
+
+🟢 **`7` platform-shaped rows across four source-available families.** 🔴 **None of them is open
+source, and all of them look like it in a search result** — `MathCrew` appears twice because
+it is a fork pair with byte-identical `PolyForm` licences *(`sha256` `2392d719…`)*.
+
+### 🟢 Unchanged and re-confirmed this pass
+
+🟢 `menthorlabs/menthor` is still **`archived: true`** — a LATAM vertical row frozen upstream,
+re-measured through the ranked channel, unchanged from p192 and p193. 🟢 The `ECL-2.0` reading
+of `sakai` and `opencast` holds across a third channel. 🔴 **`Aeries SIS + Edgenuity` stays
+closed per p192**; no call was spent re-opening it.
 ## Pass 194 — 2026-10-14
 
 🆕 🟢 **The platform licence matrix p193 built from one channel has been re-read from bytes

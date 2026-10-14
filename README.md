@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🟢 **The headline is that p194's biggest pre-registered experiment SUCCEEDED and p195's own
+new instrument was a WASTE, and both halves are measured.** 🟢 The raw lane scaled to the whole
+shelf — **`468` LIVE slugs, `2 167` probes, `0` throttles, `0` refusals, `0` indeterminate
+rows** — so education's open-source estate now has a byte-verified licence column for the first
+time. 🔴 **The other half of the pass built a byte-band licence control whose entire finding set
+was already registered here as `P1054`, `P1056`, `Gap 421` and `lib/probe_payload.sh:96`.**
+
+🔴 **p194 registered this exact failure one pass ago — *"it read p193's summary table as the
+state of knowledge"* — and p195 repeated it against its own census TSV. Second consecutive
+recurrence**, which is why `P0a` *(read the register before building the instrument)* is now
+step one of every pattern on [`compose/patterns.md`](compose/patterns.md).
+
+| what ran | verdict |
+|---|---|
+| 🟢 **Shelf licence census via the raw lane** *(p194's limb `1`)* | 🟢 **`468`/`468` returned, `2 167` probes, `0` throttles. `380` licensed, `88` no licence at root.** The lane is a **census** tool. [`evidence/shelf-licence-census.2026-10-14-p195.tsv`](evidence/shelf-licence-census.2026-10-14-p195.tsv) |
+| 🟢 **Shelf re-priced through the ranked channel** *(p194's limb `2`)* | 🟢 **`30`/`30`, largest delta `+9`, every row inside `±10`, net `+22` on ≈`120 000`★.** 🔴 **p193's floor HOLDS — weekly is the cadence, not hourly.** [`evidence/shelf-reprice…tsv`](evidence/shelf-reprice.2026-10-14-p195.tsv) |
+| 🔴 **`github.com/trending` monthly probe** | 🔴 **Neither pre-registered limb. The whole `github.com` HTML host is now refused AT THIS SESSION'S PROXY — `403` + policy JSON — including plain repo pages.** The `504` p194 saw was likely the same layer. [`evidence/lane-census…tsv`](evidence/lane-census.2026-10-14-p195.tsv) |
+| 🟢 **Korea AI-textbook conflict** | 🟢 **RESOLVED, and p194's inherited claim REFUTED.** An **August `2025`** law demoted the textbooks to **supplementary material**; uptake fell `37`%→`19`%; ≈`10` publishers sued for ≈**`₩200` bn** in June `2026`. This KB now asserts a Korea position |
+| 🔴 **The band control** | 🟡 **`281` permissive rows → `16` flagged (`5.7`%), `0` false negatives against this KB's own ground truth — real TRIAGE value.** 🔴 **`16` of `16` were already published here. It discovered nothing** |
+
+### 🟢 The findings that stand
+
+- 🔴 **The hosted-LMS layer is Affero as a MARKET, not an exception**: `41` of `380` licensed
+  rows are `AGPL-3.0` — more than every restricted and source-available category combined —
+  including Open edX *(4 slugs)*, Canvas, `frappe/lms`, `classroomio`, `learnhouse`, `tutor`.
+- 🟢 **The named gap `advisingapp` CLOSES, against the platform**: `Elastic`, `3 860` B —
+  **source-available, not OSS.** The only AI-native higher-ed CRM on this shelf cannot base a
+  hosted client deliverable, and **no permissive row replaces it**.
+- 🔴 **The interoperability layer grants nothing**: `1EdTech`'s LTI example tool, `adlnet`'s
+  SCORM→xAPI wrapper and `Lumieducation/Lumi` all return **no licence at root**; `adlnet` elects
+  `Apache-2.0` in a README sentence with no file anywhere.
+- 🔴 **A hardened classifier reads three restrictive licences as `MIT`** — `PageLM`,
+  `learner-verse` *(BUSL 1.1)*, `graspful` *(anti-SaaS)*. 🟢 **The mechanism is COMPOSITION:**
+  `P171` widened the title window to `40` lines to catch reflowed `AGPL`, and that window
+  swallows MIT's grant sentence out of non-MIT licences; `P250`'s gate then trusts the family
+  and never reads the body. Two correct controls, one wrong answer.
+- 🟢 **The cheap discriminator is SIZE**: `218` `MIT` rows, median `1 071` B, **`13`-byte
+  interquartile spread**. A payload claiming a family far outside its band has been modified.
+
+### 🔴 Corrections this pass owes its own pages
+
+- 🔴 **p192's `472`-slug population is NOT *"the whole shelf"*.** Four rows on p193's own ranked
+  `30` — `book-to-skill` *(rank `2`)*, `OpenCat-Quadruped-Robot` *(`7`)*,
+  `ai-infra-engineer-learning` *(`11`)*, `antivibe` *(`15`)* — are absent from it, and all four
+  are rows p193 marked 🆕 NEW. **The extraction predates the pages it claims to cover, and every
+  per-shelf percentage since p192 carries that denominator.**
+- 🔴 **p195's comparator accused `4` rows of a licence divergence and the rows were innocent** —
+  they were simply outside the census population. Retracted before publication.
+- 🔴 **p195's own spot-check classified a `14`-byte `404: Not Found` body** as a licence payload,
+  the exact failure `lib/probe_payload.sh:96` already guards. Retracted mid-pass.
+- 🟡 **`18.8`% root-`NONE` is an UPPER BOUND on absence**: `OS4ED/openSIS-Classic` returns `NONE`
+  at root and carries `GPL-2.0` *(`17 286` B)* at `docs/License.txt`, exactly where its README
+  says. 🔵 `p969-root-only-licence-reach`.
+- 🔴 **`ACTION MN` — still NOT RUN**, tenth pass: an outward-facing write on third parties'
+  repositories, and this run is unattended.
+
+### 🟢 Pre-registered for p196, with the limb that would falsify each
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| **Run `P0a` first** — grep `compose/code/` and the pages for the defect class before building | prior art found → cite it, spend the pass elsewhere | nothing found → the build is genuinely new |
+| Derive byte bands for `AGPL-3.0` / `GPL-3.0` / `ECL-2.0`, run the triage over the **`77`** copyleft rows | a band exists and flags narrowed copyleft → the control generalises | copyleft is too variable to band → the control is **permissive-only**, and say so |
+| Re-extract the slug population from the CURRENT pages, diff against p192's `472` | small diff → usable with a footnote | large diff → **every per-shelf percentage has the wrong denominator** |
+| Probe `docs/`, `legal/`, `.github/` for the `88` root-`NONE` rows | many have a grant one level down → **`18.8`% is a `p969` artefact** | genuinely unlicensed → `18.8`% stands as all-rights-reserved |
+| Find an APAC adoption RATE *(gap, 2nd pass)* — **AI Ready ASEAN** report, OECD TALIS APAC tables | a rate with a named base → APAC's blank cell fills | nothing dated → **stop implying APAC adoption is measurable here** |
 ## Pass 192 — 2026-10-14
 
 🆕 🟢 **The headline is a CHANNEL RECOVERY that corrects this KB's own standing claim, and a

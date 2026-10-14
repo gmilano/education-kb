@@ -3,6 +3,236 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🟢 **The whole shelf has a byte-verified licence column for the first time. `468` of `468`
+LIVE slugs returned, `2 167` probes, and the lane did not throttle once.** 🔵 That was p194's
+limb `1` and it is now measured, not hoped: committed as
+[`evidence/shelf-licence-census.2026-10-14-p195.tsv`](../evidence/shelf-licence-census.2026-10-14-p195.tsv).
+
+🔴 **And the pass's own headline is a defect, because the other half of what p195 built was
+already in this KB — with tests.** p195 wrote a byte-band control, flagged `16` of `281`
+permissive rows, and started to publish them as discoveries. **Every single class it found is
+already registered here**: `P1054` *(MIT's body with a clause bolted on)*, `P1056` *(a split
+scope)*, `Gap 421` *(sub-`1`kB non-grants)*, and `lib/probe_payload.sh:96` *(the `404: Not
+Found` body guard)*. 🔴 **p194 registered this exact failure one pass ago — *"it read p193's
+summary table as the state of knowledge"* — and p195 read its own census TSV the same way.
+Second consecutive recurrence.**
+
+### 🟢 The census that DID earn its place — the lane scales
+
+| | p194 *(spot use)* | 🟢 p195 *(census)* |
+|---|---|---|
+| slugs probed | `35` payloads | 🟢 **`468`** |
+| HTTP probes | — | 🟢 **`2 167`** |
+| 🔴 `429` / `403` / `5xx` seen | — | 🟢 **`0`** |
+| rows INDETERMINATE | — | 🟢 **`0`** |
+| licence FOUND at root | — | **`380`** |
+| 🔴 no licence at root | — | 🔴 **`88` — `18.8`%** |
+
+🟢 **Limb `1` holds: the raw lane is a census tool, not a spot tool.** 🔵 The `19`-filename
+ladder averaged `4.6` probes per slug because `337` of `380` hits are a plain `LICENSE`.
+
+🔴 **The `88` must be read as *"no licence at ROOT across `19` filenames"*, and p195 has one
+measured instance proving the distinction decides a platform.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `NONE` at root —
+and its README says *"licensed under the GNU General Public License"* and links `docs/License.txt`,
+which is 🟢 **`17 286` B of `GPL-2.0`, one directory down.** 🔵 Already registered as
+[`p969-root-only-licence-reach`](../compose/code/p969-root-only-licence-reach/); cited here
+rather than re-derived, which is the thing p195 failed to do everywhere else.
+
+### 🟢 The families, across the whole shelf
+
+| family | rows | delivery |
+|---|---|---|
+| 🟢 `MIT` | **`218`** | 🟢 permissive |
+| 🟢 `Apache-2.0` | `56` | 🟢 permissive |
+| 🔴 `AGPL-3.0` | **`41`** | 🔴 network-use disclosure |
+| 🟡 `GPL-3.0` | `29` · `GPL-2.0` `5` | 🟡 strong copyleft |
+| 🟡 `LGPL-3.0` `4` · `LGPL-2.1` `1` · `MPL-2.0` `1` | `6` | 🟡 weak copyleft, linkable |
+| 🟢 `ECL-2.0` | `2` | 🟢 Apache-derived, patent grant scoped to education |
+| 🔴 `PolyForm` `4` · `Elastic` `1` | **`5`** | 🔴 **source-available, NOT open source** |
+| 🔴 `NONCOMMERCIAL-NOT-OSI` | `2` | 🔴 **barred** |
+| 🟡 `CC-BY-SA-4.0` `2` · `CC-BY-4.0` `1` · `CC0-1.0` `2` | `5` | 🟡 content licences on code repos |
+| 🔴 `UNCLASSIFIED` | `5` | 🔴 **read the body before quoting** |
+
+🟢 **`281` of `380` are permissive** *(`MIT`, `Apache-2.0`, `BSD`, `0BSD`, `ISC`, `CC0`)*.
+🔴 **`41` `AGPL-3.0` rows is the number an engagement should see first** — it is larger than
+every restricted category combined, and it includes the `openedx` family, `instructure/canvas-lms`,
+`frappe/lms`, `classroomio` and `learnhouse`: **the hosted-LMS layer is Affero, as a market.**
+
+### 🆕 🟢 The one named gap this pass CLOSES — `advisingapp` is not open source
+
+🔵 p193 published it as 🔴 *"still unread — do not quote"*, and
+[`verticals/solutions.md`](../verticals/solutions.md) carried 🔴 *"UNKNOWN until the body is
+read (`P47`)"*. 🟢 **Read this pass, from bytes:**
+
+| repo | ★ | path | bytes | 🔴 family | delivery |
+|---|---|---|---|---|---|
+| 🔴 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | `LICENSE` | **`3 860`** | 🔴 **`Elastic`** | 🔴 **source-available. NOT an OSS base** |
+
+🔴 **A `340`★ AI-native higher-ed student-success CRM that this KB's verticals page lists as a
+platform, and it cannot be the base of a client deliverable.** 🟢 `commercial_use_ok` denies it
+on the family alone — `Elastic` is a named branch of the gate, so no body parse was needed.
+
+### 🟢 The shelf re-priced — `30` of `30`, and p193's `±10` floor HOLDS
+
+🔵 p194's limb `2` asked whether hourly re-pricing finds momentum or noise. **Answered:**
+
+| | measured |
+|---|---|
+| rows requested / returned | 🟢 **`30` / `30`** |
+| 🟢 largest delta | **`+9`** *(`HKUDS/DeepTutor`, `41 346` → `41 355`)* |
+| rows that moved at all | `6` of `30` |
+| rows outside `±10` | 🟢 **`0`** |
+| net change across ≈`120 000`★ | **`+22`**, or `0.018`% |
+
+🟢 **Limb `2` wins: the floor holds and weekly is the right cadence, not hourly.** 🔴 **This is
+a finding about this job's own schedule** — it runs every hour, and an hourly star re-read
+produces `0.018`% of noise dressed as a delta. 🔵 Committed as
+[`evidence/shelf-reprice.2026-10-14-p195.tsv`](../evidence/shelf-reprice.2026-10-14-p195.tsv).
+🟢 `menthorlabs/menthor` still returns `archived: true`; `CAHLR/OATutor` still returns **no
+topics at all**; both unchanged from p193.
+
+### 🟢 Cross-channel agreement — `10` of `10` where the API field answers at all
+
+🔵 The ranked channel returns `license.spdx_id`; p195 diffed it against its own byte reads.
+
+| rows compared | 🟢 AGREE | 🔴 API-BLIND | DIVERGE |
+|---|---|---|---|
+| `15` | 🟢 **`10`** | 🔴 **`1`** *(`PageLM` → `NOASSERTION`)* | 🔴 **`4` — see the retraction below** |
+
+🟢 **`moodle/moodle` returns `GPL-3.0` from BOTH channels**, which independently confirms
+p194's correction of its own substring defect. 🟢 **`frappe/lms` returns `AGPL-3.0` from both** —
+p193's costliest finding, now standing on three channels. 🟢 `sakaiproject/sakai` `ECL-2.0` at
+**`11 120` B, byte-exact against the `md5` this KB recorded at p191**;
+`opencast/opencast` `ECL-2.0` at `11 340` B.
+
+### 🔴 THE RETRACTION — p195's comparator accused `4` rows, and the rows were innocent
+
+🔵 Those `4` *"DIVERGE"* rows are not divergences. **They are absent from the census population**,
+and p195's comparator read *"absent"* as *"disagrees"*:
+
+| row | p193 ranked shelf | in p192's `472`-slug population |
+|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | rank `2` | 🔴 **NO** |
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | rank `7` | 🔴 **NO** |
+| [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | rank `11` | 🔴 **NO** |
+| [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) | rank `15` | 🔴 **NO** |
+
+🔴 **So *"the whole shelf"* is the wrong phrase for p192's `472`, and p194 and p195 both
+inherited it.** 🟢 All four are rows p193 marked 🆕 **NEW** — **the extraction predates the page
+it claims to cover**, which is a denominator defect and not a licence finding.
+🟢 **Corrected scope: the census covers `468` LIVE slugs of a population extracted at p192, and
+at least `4` published shelf rows sit outside it.** 🔵 Also inherited: `ShuyunYuan/talentcoach`
+≡ `shuyunyuan/talentcoach` is **one repository** *(`HEAD` sha `b450118a7e8a` on both spellings)*,
+so `468` contains a duplicate identity and the distinct count is `467` — 🟢 **already registered
+at [`repos/foundations.md`](../repos/foundations.md) as an owner-case variant**, re-measured here,
+not discovered.
+
+### 🟡 What the band control actually bought, stated at its real size
+
+🔵 The instrument is [`compose/code/p195-shelf-licence-census/delivery_verdict.sh`](../compose/code/p195-shelf-licence-census/delivery_verdict.sh)
+*(`9`/`9` offline)*. 🟢 Its premise is cheap and sound: licence boilerplate is boilerplate, so a
+payload claiming a family while sitting far outside that family's byte band has been **modified**.
+Measured over this pass's own `218` `MIT` rows: **median `1 071` B, p25 `1 067`, p75 `1 080` — a
+`13`-byte interquartile spread.**
+
+| | result |
+|---|---|
+| permissive rows re-read | `281` |
+| 🟢 `IN-BAND` → `GO` | **`265`** |
+| 🔴 flagged `MUST-READ-BODY` | **`16` — `5.7`%** |
+| 🔴 of those `16`, rows whose verdict this KB **already published** | 🔴 **`16` of `16`** |
+
+🟢 **The honest contribution is TRIAGE, not discovery**: the band reaches the `P1054`/`P1056`
+classes **from a number the census already holds**, with no extra body parse, and it produced
+**`0` false negatives against verdicts this KB had already established by hand.** 🔴 **The
+dishonest version — which p195 nearly published — was to present those `16` as new.**
+
+🔵 The four that matter, each **already on these pages**, each still classified 🔴 **`MIT`** by
+`osi_family_of` and 🔴 **ALLOWED** by `commercial_use_ok`:
+
+| repo | bytes | real title | 🔴 what the body does | registered as |
+|---|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `8 563` | *"PageLM Community License"* | 🔴 non-commercial + revenue-share | p193 prose |
+| [`GautamVhavle/learner-verse`](https://github.com/GautamVhavle/learner-verse) | `2 594` | 🔴 ***"Business Source License 1.1"*** | 🔴 *"may NOT … for any purpose involving direct or indirect commercial activity"* | `agents/top.md:3691` |
+| [`willwearing/graspful`](https://github.com/willwearing/graspful) | `1 439` | *"O'Saasy License Agreement"* | 🔴 MIT's grant verbatim **+ clause `2`**, anti-SaaS non-compete | **`P1054`** |
+| [`MoKangMedical/digital-sage`](https://github.com/MoKangMedical/digital-sage) | **`46`** | `MIT License` | 🔴 **a title and a copyright line. NO permission clause at all** | **`Gap 421`** |
+
+🔴 **The mechanism, and it is the one worth carrying forward:** `P171` widened the title window
+to `40` lines so a **reflowed** `AGPL` would still be caught. That same window swallows MIT's
+canonical *"Permission is hereby granted, free of charge"* sentence out of a licence that is not
+MIT. 🔴 **Then `P250`'s gate — *"an identified OSI family permits commercial use BY
+DEFINITION"* — trusts the family and never reads the body.** 🟢 **Two hardened controls, each
+correct in isolation, composing into the one wrong answer that costs a delivery.**
+🟢 `learner-verse` is the sharpest proof: `commercial_use_ok` **has** a `BUSL` branch that
+returns PROHIBITED, and it never fired, because `osi_family_of` answered `MIT` first.
+
+### 🟡 Three more shapes the band flagged, all previously published
+
+| repo | bytes | shape | registered |
+|---|---|---|---|
+| [`ishands/upstack`](https://github.com/ishands/upstack) | `2 807` | 🟡 **DUAL** — `MIT` for code, `CC-BY-SA-4.0` for the `.md` that *are* the product | `agents/top.md:3699` |
+| [`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers) | `1 328` | 🟡 **SPLIT SCOPE** — `MIT` for `src/`+`tests/`, `CC-BY-4.0` for the teaching materials | **`P1056`** |
+| [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | `4 806` | 🔴 a Chinese-language **custom Tutorial-Materials notice**, one script under `Apache-2.0` — **not MIT** | `agents/top.md:4856` |
+
+🔴 **And a class the band found that is NOT a modified grant — it is a missing one.** Four rows
+elect `Apache-2.0` in `560`–`738` B, which is a **reference** to a licence whose text is
+`11 348` B:
+
+| repo | bytes | what is actually in the file |
+|---|---|---|
+| [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) | `560` | *"Licensed under the Apache License, Version 2.0 … http://www.apache.org/licenses/LICENSE-2.0"* |
+| [`zavora-ai/mcp-student-records`](https://github.com/zavora-ai/mcp-student-records) | `738` | same shape |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | `679` | same shape |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | `680` | same shape |
+
+🟢 **The election is valid and the family verdict stands** — these really are `Apache-2.0`
+projects. 🟡 **What they do not ship is the licence text**, which `Apache-2.0` §`4(a)` requires a
+redistributor to include. 🔵 `fedena` is a **fork pair**: different `HEAD` shas, byte-identical
+`LICENSE` *(`sha256` `2392d719…` on the `MathCrew` pair likewise)*.
+
+### 🔴 p195's own instrument defect, found and repaired in-pass
+
+🔵 The census ladder is frequency-ordered and stopped at the **first** `200`. For
+[`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) the first `200` was `LICENSE`
+at **`47` B** — reading only `YEAR:` / `COPYRIGHT HOLDER:`, the `usethis` **template stub**.
+🟢 **The real grant is `LICENSE.md`, `1 076` B, `MIT`.**
+
+🟢 **What did NOT fail: `lib/license_family.sh` returned `UNCLASSIFIED` on the stub rather than
+inventing `MIT` from the word `COPYRIGHT`. The classifier guard held; the LADDER was the defect.**
+🔵 Repaired by [`continue_ladder.sh`](../compose/code/p195-shelf-licence-census/continue_ladder.sh),
+run over all `5` `UNCLASSIFIED` rows: 🟢 **`writeAlizer` is the only row of `468` affected**, and
+the other four carry exactly one licence-shaped path each.
+
+### 🟢 New rows worth a place, licence read from bytes this pass
+
+| repo | ★ | licence | bytes | why |
+|---|---|---|---|---|
+| 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `≈67 000` *(secondary)* | 🟢 **`MIT`** | `1 141` | 🟢 `12`-lesson agent course, **`MIT`**, byte-identical licence to `ML-For-Beginners`. Deliverable as curriculum |
+| 🟢 [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | `≈796` *(secondary)* | 🟢 **`MIT`** | `1 067` | 🟢 agents from first principles on a **local LLM**, no cloud APIs — the sovereignty-constrained teaching base EMEA/APAC engagements ask for |
+
+🟡 Star counts are **secondary and labelled so**: the raw lane returns file contents, not
+`stargazers_count`, and neither row was on a ranked-channel batch this pass.
+
+### 🟢 What this pass did NOT do, stated plainly
+
+🔴 **No `github.com` HTML lane at all** — it closed at the proxy mid-pass; see
+[`repos/trending.md`](../repos/trending.md). 🔴 **No band derived for `AGPL-3.0`, `GPL-3.0` or
+`ECL-2.0`** — `band_of_family` returns `NO-BAND` for them and the delivery column says
+`GO-SUBJECT-TO-FAMILY`, **not `GO`**; the `41` Affero rows are therefore **unchecked for
+P1054-style narrowing**. 🔴 **`ACTION MN` — still NOT RUN**, tenth pass, unchanged reason: an
+outward-facing write on third parties' repositories, and this run is unattended.
+
+### 🟢 Pre-registered for p196, with the limb that would falsify each
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| **Read the KB BEFORE building any instrument** — grep `compose/code/` and the four pages for the defect class first | the grep finds prior art → cite it and spend the pass elsewhere | nothing found → build it, and the build is genuinely new |
+| Derive byte bands for `AGPL-3.0` / `GPL-3.0` / `ECL-2.0` and run `delivery_verdict` over the `77` copyleft rows | a band exists and flags narrowed copyleft → the control generalises beyond permissive | copyleft payloads are too variable to band → the control is **permissive-only**, and say so |
+| Re-extract the shelf slug population from the CURRENT pages and diff against p192's `472` | the diff is small → p192's population is still usable with a footnote | the diff is large → **every per-shelf percentage since p192 has the wrong denominator** |
+| Probe `docs/`, `legal/`, `.github/` for the `88` root-`NONE` rows *(`p969`'s open limb)* | a material share have a grant one level down → **`18.8`% is an artefact of root-only reach** | they are genuinely unlicensed → `18.8`% stands as all-rights-reserved |
 ## Pass 194 — 2026-10-14
 
 🆕 🔴 **Half the stars on education's trending rows carry no right to commercial use —

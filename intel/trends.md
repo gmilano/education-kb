@@ -3,6 +3,156 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 195 — 2026-10-14
+
+🆕 🔴 **The trend this pass can measure for the first time is a WHOLE-SHELF one, and the trend
+it can no longer measure at all is *"trending"*.** 🟢 `468` LIVE slugs read from bytes, `2 167`
+probes, `0` throttles — so the licence distribution of education's open-source estate is now a
+measurement rather than a sample. 🔴 And `github.com` closed at this session's proxy mid-pass,
+so flow is gone and only stock remains.
+
+### 🆕 🟢 T1 — Education's open-source estate is two-thirds permissive, and the exceptions cluster by LAYER
+
+| | rows | share of the `380` licensed |
+|---|---|---|
+| 🟢 permissive *(`MIT` `218`, `Apache-2.0` `56`, `BSD`/`0BSD`/`ISC` `5`, `CC0` `2`)* | **`281`** | 🟢 **`74`%** |
+| 🔴 `AGPL-3.0` | **`41`** | 🔴 **`11`%** |
+| 🟡 `GPL-3.0` `29` · `GPL-2.0` `5` · `LGPL` `5` · `MPL` `1` | `40` | 🟡 `11`% |
+| 🟢 `ECL-2.0` *(education-specific)* | `2` | — |
+| 🔴 source-available *(`PolyForm` `4`, `Elastic` `1`)* + non-commercial `2` | **`7`** | 🔴 `2`% |
+| 🔴 `UNCLASSIFIED` | `5` | 🔴 `1`% |
+
+🔴 **The permissive share is high and it is NOT distributed evenly — it is a function of what
+the repository IS.** 🟢 The agent, tutor, curriculum and MCP-server layers are overwhelmingly
+`MIT`. 🔴 **The hosted-LMS layer is Affero as a market**: Open edX *(four slugs)*, Canvas,
+Frappe LMS, `classroomio`, `learnhouse`, `tutor`. 🟡 **So *"education OSS is permissive"* is
+true of the layer you build and false of the layer you host**, and a proposal that averages the
+two is wrong in the direction that costs money.
+
+### 🆕 🔴 T2 — `18.8`% of the shelf grants nothing at root, and the interoperability layer is the worst of it
+
+🔵 `88` of `468` return no licence across a `19`-filename root ladder. 🔴 **The three
+standards-body reference implementations on this shelf are all in that set:**
+
+| repo | body | root | README claim |
+|---|---|---|---|
+| 🔴 [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | **1EdTech** *(LTI)* | 🔴 NONE | 🔴 none |
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **ADL** *(SCORM/xAPI)* | 🔴 NONE | 🟡 *"Licensed under the Apache License, Version 2.0"* |
+| 🔴 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🔴 NONE | 🔴 none |
+
+🔴 **The standards are open; their reference implementations are not a licensed starting
+point.** 🟢 **The trend statement, falsifiable: as education software gets more interoperable,
+the licence risk moves from the PLATFORM to the GLUE** — the platforms all ship a licence, and
+the adapters increasingly do not.
+
+🟡 **Scope, stated before anyone quotes `18.8`%:** it means *no licence at ROOT*, and p195 has
+a counter-example — [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) carries
+**`GPL-2.0`, `17 286` B, at `docs/License.txt`**. 🔵 Registered as
+[`p969-root-only-licence-reach`](../compose/code/p969-root-only-licence-reach/).
+
+### 🆕 🔴 T3 — A hardened classifier reads three restrictive licences as `MIT`, and the mechanism is COMPOSITION
+
+🔵 `osi_family_of` returns `MIT` and `commercial_use_ok` returns ALLOWED for all three:
+
+| repo | bytes | real title | what the body does |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `8 563` | *"PageLM Community License"* | 🔴 non-commercial + revenue-share |
+| [`GautamVhavle/learner-verse`](https://github.com/GautamVhavle/learner-verse) | `2 594` | **BUSL 1.1** | 🔴 bars *"direct or indirect commercial activity"* |
+| [`willwearing/graspful`](https://github.com/willwearing/graspful) | `1 439` | *"O'Saasy License Agreement"* | 🔴 anti-SaaS non-compete |
+
+🔴 **`P171` widened the title window to `40` lines so a REFLOWED `AGPL` would be caught, and
+that window swallows MIT's canonical *"Permission is hereby granted, free of charge"* sentence
+out of licences that are not MIT. `P250`'s gate then trusts the family and never reads the
+body.** 🟢 **Two hardened controls, each correct alone, composing into the one wrong answer
+that costs a delivery.** 🔵 `learner-verse` is the proof: `commercial_use_ok` **has** a `BUSL`
+branch returning PROHIBITED, and it never fired because the family answered `MIT` first.
+
+🟡 **This is a trend about the LICENCES, not only about the tool: authors are writing MIT's
+grant sentence at the top of restrictive licences.** 🔴 **Four distinct instances now
+*(`PageLM`, `learner-verse`, `graspful`, and `talentcoach`'s verbatim MIT warranty paragraph
+over an all-rights-reserved grant)*, which makes it a drafting pattern rather than an accident.**
+
+### 🟢 T4 — The cheap discriminator is SIZE, and it is a triage tool rather than a verdict
+
+🟢 Measured across this pass's `218` `MIT` rows: **median `1 071` B, p25 `1 067`, p75 `1 080` —
+a `13`-byte interquartile spread.** 🔵 Licence boilerplate is boilerplate, so a payload claiming
+a family from far outside its band has been **modified**.
+
+| | result |
+|---|---|
+| permissive rows banded | `281` |
+| 🟢 `IN-BAND` | `265` |
+| 🔴 flagged for a human read | **`16` — `5.7`%** |
+| 🔴 of those `16`, already published by this KB | 🔴 **`16` of `16`** |
+
+🟢 **It reaches the `P1054`/`P1056` classes from a number the census already holds, with no
+extra fetch, at `0` false negatives against this KB's own hand-built ground truth.** 🔴 **It
+discovered nothing**, and p195 nearly published the `16` as if it had.
+
+### 🆕 🔴 T5 — Apache is increasingly ELECTED without being SHIPPED
+
+🔵 Four rows elect `Apache-2.0` in `560`–`738` B where the licence text is `11 348` B:
+`numbas/numbas-lti-provider`, `zavora-ai/mcp-student-records`, `foradian/fedena`,
+`projectfedena/fedena`. 🟢 **The election is valid and the family verdict stands.** 🟡 **What
+is absent is the text, which §`4(a)` requires a redistributor to include** — so the obligation
+transfers to whoever ships the derivative, and the remedy is one file. 🔵 Distinguish this from
+T2: **T2 is no grant; T5 is a grant by reference.**
+
+### 🟢 T6 — Curriculum at scale is permissive; production-agent curriculum is not
+
+🟢 **One byte-identical `MIT` file *(`1 141` B)* covers `microsoft/ML-For-Beginners`,
+`microsoft/generative-ai-for-beginners` and 🆕 `microsoft/ai-agents-for-beginners`** — a single
+licence across one publisher's entire teaching estate, read from bytes this pass. 🔴 **Against
+which p194's measurement still stands: the best-known corpus for taking agents to production in
+an enterprise is licensed so an enterprise cannot use it** *(`NirDiamant`, three repositories,
+`49.7`% of the trending stars, non-commercial)*. 🟡 **Teach-the-basics is a solved, permissive
+supply. Teach-production is a licensing hole**, and it has not moved.
+
+🆕 🟢 **The sovereignty-shaped gap narrowed a little**:
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) — `MIT`, `1 067` B,
+agents on a **local LLM, no cloud APIs**. 🔴 `≈796`★.
+
+### 🆕 🔴 T7 — A ministry mandate is not a durable market, and Korea is the completed case
+
+🟢 Resolved this pass against p194's CONTESTED cell: an **August `2025`** law reclassified
+Korea's AI digital textbooks as **supplementary material**, the mandate was dropped, school
+uptake fell *(`37`% → `19`%; second-semester use `1 686` schools, `−58.8`%)*, and ≈`10`
+publishers sued for ≈**`₩200` bn in June `2026`.** 🔴 **p194's inherited *"full expansion by
+`2028`"* claim is REFUTED.**
+
+🟡 **The trend, stated so it transfers:** the reported failure causes are **classroom technical
+failure, data-privacy objection, and teacher and parent opposition — not model quality.**
+🟢 **So the reversal risk in a ministry-anchored engagement is an OPERATIONS and CONSENT risk**,
+and the deliverable that survives it is standards-based content plus an exportable record,
+not a programme-specific platform.
+
+### 🟡 T8 — Adoption and governance are still sequenced differently by region, with APAC's cell now ambiguous
+
+🟢 **LATAM remains the only region where adoption measurably outruns governance** — `92`% of
+students and `79`% of faculty engaging *(DEC, >`30 000` responses)* against `26`% of
+institutions with a formal framework. 🟢 EMEA and North America keep governance ahead of use.
+🆕 🟡 **APAC's mandates are ahead of both, and Korea has now shown they are reversible** —
+which is a different risk from the one this KB has been describing.
+🔴 **APAC still has no measured adoption RATE here, second pass, and the searches are named in
+[`intel/market.md`](market.md).**
+
+### 🔴 T9 — This KB's own measurement cadence is too fast, and that is now measured twice
+
+🟢 `30` shelf rows re-priced against p193's same-day reads: **largest delta `+9`, every row
+inside `±10`, net `+22` across ≈`120 000`★ — `0.018`%.** 🔵 Combined with the loss of the
+trending lane, **there is no flow signal available to this session at all.** 🔴 **An hourly
+pass cannot produce a star trend; it can only produce noise shaped like one.** 🟢 **The honest
+cadence for the shelf is weekly, and the honest hourly contribution is a measurement that does
+not depend on time** — a licence census does not, which is why this pass's useful half was the
+census and its wasted half was an instrument that already existed.
+
+### 🟢 What did NOT change, stated so the trend lines stay honest
+
+🟢 `menthorlabs/menthor` **`archived: true`**, third pass. 🟢 `CAHLR/OATutor` still has **no
+topics**, so it stays invisible to every topic query. 🟢 The `ECL-2.0` reading of Sakai and
+Opencast holds on a third channel. 🔴 **No band exists yet for `AGPL-3.0`, `GPL-3.0` or
+`ECL-2.0`, so the `77` copyleft rows are UNCHECKED for `P1054`-style narrowing** — the single
+largest hole left by this pass.
 ## Pass 194 — 2026-10-14
 
 🆕 🔴 **The trend this pass measures is that education's open-source output has moved to a
