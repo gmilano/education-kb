@@ -1,0 +1,76 @@
+# p188 — existence verification for every github slug INTRODUCED by this pass.
+# Oracle: git ls-remote --symref https://github.com/<slug> HEAD.
+# Chosen because this KB measured (p93, re-confirmed every pass since) that
+# 'curl -sI https://github.com/<slug>' does NOT discriminate under this session's egress
+# proxy: it returns 403 for a real slug and an invented one alike. api.github.com and
+# codeload.github.com are both 403 here too, so there is no tree listing available.
+# An invented slug exits 128. Negative control is the last row.
+slug	verdict	HEAD_sha
+DecoyLex/ltix	EXISTS	0a67ea3b
+EduThemes/paper-lms	EXISTS	92fe7977
+MrPrinceAli/proven	EXISTS	3d0fe083
+NASMAK-Technologies/moodle-block_learnboard	EXISTS	c4bd10ba
+No-Suggest/NoSuggest	EXISTS	449741f1
+OS4ED/openSIS-Classic	EXISTS	5d546f20
+OpenOLAT/OpenOLAT	EXISTS	8494a140
+P1ckle3/blackboard-mcp	EXISTS	32af42d9
+Rick-254/moodle-quizsmith	EXISTS	df7574dc
+VICKY07092005/moodle-5-1-authentic-relay	EXISTS	4916c388
+academic-innovation/django-lti	EXISTS	85ff90a4
+academico-sis/academico	EXISTS	d0cd78ca
+activitypods/activitybadges	EXISTS	194555c4
+alfredang/ai-mms	EXISTS	c4c5fc06
+alvaarocl/taskbot	EXISTS	8587ef25
+anarosiris/moodle-local_efscorm	EXISTS	b72aa3ba
+andyfmiller/vc-dotnet-demos	EXISTS	c6ecfb78
+ateeducacion/OmekaS-LearningObject	EXISTS	f3a8988b
+brody-0125/signet-campus	EXISTS	0592f537
+chamilo/chamilo-lms	EXISTS	b00159b6
+didactika/moodle-local_iconrestyle	EXISTS	25bbf5fb
+didactika/moodle-local_servicemanager	EXISTS	6c5f5a2d
+edgentx/mtss-data-model-sample	EXISTS	48ee1ab5
+edmozley/freeitsm	EXISTS	336cc0b1
+eduplay-moodle-suite/moodle-local_eduplay	EXISTS	1e4e5937
+eduplay-moodle-suite/moodle-media_eduplay	EXISTS	495eb52a
+eduplay-moodle-suite/moodle-repository_eduplay	EXISTS	24e7cd15
+eduplay-moodle-suite/moodle-tiny_eduplay	EXISTS	6d431d5f
+francoisjacquet/rosariosis	EXISTS	232819b4
+gener8v/gener8v.tools.pii-scanner	EXISTS	1fe58a42
+globant-kb-p188/definitely-not-a-real-repo	NOT-FOUND	-
+hesham0-0nasser/tutor-lms-mcp	EXISTS	c92e5b9b
+hoijui/obadgen	EXISTS	58989c10
+iblai/wallet	EXISTS	0be99d06
+jakerains/scormplayer	EXISTS	fa12371e
+jeanlucio/moodle-block_playerhud	EXISTS	2b4a7de3
+lmsable/lmsable-skill	EXISTS	b92e2053
+loyaniu/moodle-mcp	EXISTS	22cc56c7
+luisgf/openbadgeslib	EXISTS	7d19141f
+marc-shade/docsingest	EXISTS	9f1bf564
+memphis-iis/MoFaCTS	EXISTS	c93e16ec
+moodlehq/moodle-local_ci	EXISTS	a75c2eac
+numbas/Numbas	EXISTS	c9b8462c
+numbas/numbas-lti-provider	EXISTS	d57d77d7
+oneorigin-2-0/dcc-credential-co-writer-monorep	EXISTS	7be74ba0
+open-spaced-repetition/fsrs4anki-helper	EXISTS	29208f22
+openedx/frontend-app-ai-assistant	NOT-FOUND	-
+openedx/openedx-ai-extensions	EXISTS	66d0792c
+openedx/tutor-contrib-aspects	EXISTS	e819dfc4
+openfun/marsha	EXISTS	2e4f4701
+opensalt/OB3DefinitionWidget	EXISTS	896596a4
+ransomleak/moodle-local_ransomleak	EXISTS	1517455b
+ruud0/aula-virtual-mcp	EXISTS	eb629830
+solin-repo/moodle-block_atrisk	EXISTS	1ecc3d94
+thepick/writing-feedback-tool	EXISTS	84d403ac
+tsugiproject/tsugi	EXISTS	7628e6a7
+uaiblaine/moodle-block_dimensions	EXISTS	cd5e083d
+uaiblaine/moodle-local_awareness	EXISTS	65869704
+uaiblaine/moodle-local_dimensions	EXISTS	aedee743
+valentineus/moodle-webhooks	EXISTS	27200633
+virtUOS/abstimmbar	EXISTS	6bc59c5b
+wantaekchoi/vc-verifier	EXISTS	1cf593a9
+yukazakiri/koakademy	EXISTS	ccb9988a
+zijinz456/OpenTutor	EXISTS	950ffb48
+ktwyw/python-for-engineers	EXISTS	609d8459
+siskinskai/spedlex	EXISTS	6698a9ad
+muhammadusamahoyrr/edx	NOT-PROBED	seen only as a rendered topic row; not shelved
+globant-kb-p188/definitely-not-a-real-repo	NOT-FOUND	EXIT128 (negative control)

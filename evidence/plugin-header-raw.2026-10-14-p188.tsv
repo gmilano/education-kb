@@ -1,0 +1,12 @@
+slug	path	http	bytes	gpl_hits	other	component	version
+loyaniu/moodle-mcp	PROBED-22-PATHS	-	0	0	NO-GRANT-IN-HEADERS	-	-
+hesham0-0nasser/tutor-lms-mcp	PROBED-22-PATHS	-	0	0	NO-GRANT-IN-HEADERS	-	-
+ruud0/aula-virtual-mcp	PROBED-22-PATHS	-	0	0	NO-GRANT-IN-HEADERS	-	-
+P1ckle3/blackboard-mcp	PROBED-22-PATHS	-	0	0	NO-GRANT-IN-HEADERS	-	-
+Rick-254/moodle-quizsmith	README.md	200	14874	0	MIT License	-	-
+VICKY07092005/moodle-5-1-authentic-relay	README.md	200	11332	1	MIT License	-	-
+onbirdev/moodle-webservice_mcp	version.php	200	1200	6	-	webservice_mcp	2026072300
+onbirdev/moodle-webservice_mcp	lib.php	200	5815	6	-	-	-
+onbirdev/moodle-webservice_mcp	locallib.php	200	2718	6	-	-	-
+onbirdev/moodle-webservice_mcp	db/access.php	200	1203	6	-	-	-
+globant-kb-p188/definitely-not-a-real-repo	-	EXIT128	0	0	-	-	-

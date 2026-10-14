@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: still `0` education repositories — a TENTH consecutive pass.**
+🔵 Today's page is nine rows and every one is agent infrastructure, media tooling or
+developer tooling: `morluto/rea`, `bilawalsidhu/gods-eye-view`, `debpalash/VoiceStudio`,
+`mksglu/context-mode`, `cathrynlavery/diagram-design`, `vercel-labs/skills`,
+`lyogavin/airllm`, `storytold/artcraft`, `xtool-org/xtool`. 🟢 The query is kept only as a
+record; p92 recommended spending the budget elsewhere and every pass since has confirmed
+it. 🔵 **Ten passes is no longer a sampling accident — education does not trend on GitHub,
+and a studio that waits for it to will wait indefinitely.**
+
+### 🔴 `ACTION MT` — the census figure this KB published yesterday does not survive
+
+🔵 p187 published **`79`%** of recency-sorted topic rows as absent from this KB's census,
+and pre-registered `ACTION MT` to re-derive it with its largest named noise source — the
+`api-evangelist` account — removed. 🔴 **Limb `1` needed the rate to hold at `≥70`%. It
+measured `64`%. LIMB `2` FIRES: the figure needs re-basing before any deck quotes it.**
+
+| measurement, all `12` pages re-read at `?s=updated` this pass | result |
+|---|---|
+| `api-evangelist` rows rendered | 🟢 **`23`** — **p187's count REPRODUCED EXACTLY** |
+| of those, absent from the KB | `21` |
+| absent, all `240` rows, p187's own index reproduced | 🔴 **`162`/`240` = `67.5`%** *(p187 published `79`%)* |
+| absent, `api-evangelist` EXCLUDED | 🔴 **`139`/`217` = `64`%** ← **the publishable figure** |
+
+🟢 **What IS solid: the account reproduced to the row.** 🔴 **What is not: the unfiltered
+rate fell `11.5` points on a one-day re-read, and this KB cannot say why.**
+
+### 🔴 The reason it cannot say why — and the rule that follows
+
+🟢 **Two indexes were run, because the index is part of the instrument.** A TIGHT index of
+`1 993` slugs this KB cites as `github.com/<owner>/<repo>` *(p187 stated `1 974` — close
+enough to call its instrument reproduced)*, and a WIDE index of `15 836` slug-shaped
+strings across every file type. 🔵 **Index choice moves the figure by `4.6` points at
+most.** 🔴 **So the index explains less than half the drop, and the rest is unresolvable:
+p187 stored its COUNTS and not its ROWS.**
+
+🟢 **Rule, and this file now obeys it: a census over a RECENCY-sorted page must store its
+row list, or its figure is not a measurement — nobody can re-derive it, including this KB
+one day later.** 🔵 All `240` rows of this pass are written into
+[`evidence/recency-census-filtered.2026-10-14-p188.tsv`](../evidence/recency-census-filtered.2026-10-14-p188.tsv)
+with their present/absent verdict, so p189 can separate *the page moved* from *the
+instrument changed*.
+
+🟢 **And an index defect worth recording because the controls caught it:** the first build
+of the index returned MISSING for ALL FIVE known-positive rows. `grep -E` had been handed
+PCRE `(?:...)` syntax. 🔵 **p187's rule — a probe returning the same verdict for every row
+has measured nothing — is now the thing that saved this pass's headline figure.**
+
+### 🔴 `api-evangelist` is a THREE-PAGE phenomenon, not a shelf-wide one
+
+| topic | `api-evangelist` rows | absent before → after |
+|---|---|---|
+| 🔴 `topics/lti` | **`9`** of `20` | `70`% → **`45`%** |
+| 🔴 `topics/student-information-system` | **`6`** | `75`% → **`64`%** |
+| 🔴 `topics/open-badges` | **`4`** | `45`% → **`31`%** |
+| the other **nine** pages | 🟢 **`≤1` each** *(seven have `0`)* | essentially unchanged |
+
+🔵 p187 called the account *"the single largest source of absent rows on this pass"* —
+🟢 **true in aggregate, and misleading per page.** 🔴 **An integration engagement scoping
+`topics/lti` would have read a page that is `45`% genuinely unseen, not `70`%.** That is
+the difference between "this channel is unexplored" and "this channel is nearly
+exhausted", and it is a scoping decision.
+
+🟢 **`open-badges` remains the control that makes the whole exercise credible** — the one
+`30`-repository page, and excluding the flood this KB holds **`69`%** of its recency head.
+🔵 The absent rate still tracks topic SIZE: `moodle` *(`2 149`)* and `lms` *(`2 454`)* are
+`80`%; `ferpa` *(`40`)* is `53`%; `open-badges` *(`30`)* is `31`%.
+
+### 🟢 Trending-adjacent rows worth naming, grants verified this pass
+
+| repo | licence | ★ | region |
+|---|---|---|---|
+| 🆕 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` *(`10 982` B)* | `447` | EMEA |
+| 🆕 🟢 [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `Apache-2.0` *(`10 273` B)* | `376` | North America |
+| 🆕 🟢 [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 `MIT` *(`1 094` B)* | `404` | LATAM |
+| 🆕 🟢 [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 `Apache-2.0` *(`11 357` B)* | `215` | EMEA |
+| 🆕 🟢 [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 `MIT` *(`1 078` B)* | `151` | EMEA |
+| 🆕 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `GPL` *(`15 214` B)* | `646` | EMEA |
+| 🆕 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `GPL` **by reference in the README only**, no licence file | `345` | North America |
+| 🆕 🔴 [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) | 🔴 **NOT OPEN SOURCE** *(`417` B, non-commercial + anti-compete)* | `36` | Global |
+| 🆕 🔴 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` *(`35 147` B)* | `1`k | EMEA |
+
+🔴 **★ counts remain published metadata under test, not evidence** *(`gap 140`)* — every
+figure above is a topic page's own rendering. 🔵 One live example of why: third-party
+coverage this pass puts [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at **`35`k**★
+while these pages carry `22`–`24`k, and its newest release the channel shows is **`v1.4.6`,
+`2026-06-17`**. 🟡 Neither number was read from the repository, so neither is promoted.
+
+Evidence: [`evidence/recency-census-filtered.2026-10-14-p188.tsv`](../evidence/recency-census-filtered.2026-10-14-p188.tsv),
+[`evidence/new-supply-grants.2026-10-14-p188.tsv`](../evidence/new-supply-grants.2026-10-14-p188.tsv).
+
 ## Pass 187 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

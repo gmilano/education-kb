@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🆕 🟢 **Ten foundational rows enter, every grant read over the raw channel this pass with
+the HTTP code checked — and the pass's most useful structural finding is that the
+permissive LMS/SIS route is now THREE wide on each side, not one.**
+
+🔴 **A measured correction to this page's own licence vocabulary first.** The Apache-2.0
+byte fingerprint this KB has been carrying — `11 282`–`11 359` B — is **too narrow at the
+bottom**. `tsugi` measures `10 273` B and `OpenOLAT` `10 982` B, and both are full
+Apache-2.0 text. 🟢 New measured range **`10 273`–`11 359` B**. 🔵 **A byte-count-only
+classifier would have missed both rows. Bytes corroborate; only reading decides.**
+
+### 🟢 The permissive LMS / assessment route, widened
+
+| row | licence, as measured | ★ | region | what it is |
+|---|---|---|---|---|
+| 🆕 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **`Apache-2.0`** *(`LICENSE`, `10 982` B, full text)* | `447` | EMEA | 🟢 **a complete Swiss university LMS under a PERMISSIVE grant.** p187 called OpenOLAT "a permissive ROUTE" from its metadata; the grant is now READ and the call is confirmed |
+| 🆕 🟢 **[`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)** | 🟢 **`Apache-2.0`** *(`LICENSE`, `10 273` B)* | `376` | North America | 🟢 **the LTI application framework written by the author of the IMS LTI specification** (Chuck Severance). 🔵 For an integration engagement this is the most authoritative permissive row on the page |
+| 🆕 🟢 **[`numbas/Numbas`](https://github.com/numbas/Numbas)** | 🟢 **`Apache-2.0`** *(`LICENSE`, `11 357` B)* | `215` | EMEA | 🟢 the **Numbas** maths/science assessment engine, Newcastle University. Item authoring + marking |
+| 🆕 🟡 [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) | 🟡 **`Apache-2.0` BY REFERENCE** *(`LICENSE.md`, **`560` B**)* | `11` | EMEA | the LTI side of Numbas. 🔴 **`P971`, instance SIX** — `560` B names Apache-2.0 and does not contain its terms. 🔵 Say *"by reference"*: §`3`, the patent grant, is the only strong reason to prefer Apache and it travels as a URL |
+| 🆕 🟢 [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 **`MIT`** *(`1 078` B)* | `151` | EMEA | video management for an LMS, from **France Université Numérique** — the same publisher as [`ralph`](https://github.com/openfun/ralph). 🔵 One EMEA public-sector publisher now supplies two layers of this stack |
+| 🆕 🟢 [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | 🟢 **`MIT`** *(`1 098` B)* | `26` | North America | LTI `1.3` for Django, from **University of Michigan Academic Innovation** |
+| 🆕 🟢 [`virtUOS/abstimmbar`](https://github.com/virtUOS/abstimmbar) | 🟢 **`Apache-2.0`** *(`11 358` B)* | `1` | EMEA | classroom voting, Universität Osnabrück |
+| 🆕 🟢 [`EduThemes/paper-lms`](https://github.com/EduThemes/paper-lms) | 🟢 **`MIT`** *(`1 071` B)* | `4` | Global | a light LMS |
+| 🆕 🟢 [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) | 🟢 **`MIT`** *(`1 067` B)* | `0` | North America | a `SCORM` player — 🔵 the runtime side of the `SCORM` column p187 added |
+| 🆕 🟢 [`edmozley/freeitsm`](https://github.com/edmozley/freeitsm) | 🟢 **`MIT`** *(`1 066` B)* | `101` | EMEA | 🟡 ITSM rather than an LMS, but it renders on `topics/lms` and `topics/scorm` and is permissive |
+
+### 🟢 `academico` makes the permissive SIS route THREE wide — and it is LATAM-built
+
+🔵 p174 spent twelve passes recording that no permissive SIS existed; p175 found the
+first. 🟢 **p188 adds the second and reads the third:**
+
+| row | licence | ★ | region |
+|---|---|---|---|
+| 🆕 🟢 **[`academico-sis/academico`](https://github.com/academico-sis/academico)** | 🟢 **`MIT`** *(`1 094` B, full text)* | `404` | 🟢 **LATAM** |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL`, and BY REFERENCE IN THE README ONLY** — *"licensed under the GNU General Public License, the full license can be fou…"*, with **NO licence file at `10` probed paths** | `345` | North America |
+| 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL`** *(`15 214` B)* | `646` | EMEA |
+
+🔴 **`openSIS-Classic` is `P971`, instance SEVEN — and the weakest instance this KB has
+measured.** 🔵 Apache and `MIT` by reference are merely untidy; **`GPL` by reference is a
+compliance problem**, because the `GPL` requires its terms to travel WITH the work. 🟢 A
+studio forking `openSIS` inherits an obligation whose text is not in the tree.
+
+🟢 **So the honest routing advice for a SIS engagement changed this pass:** the
+most-starred options are copyleft and one of them does not ship its own licence, while the
+permissive option — `academico`, `404`★ — is built in-region for LATAM. 🔵 **That is the
+first time this page can answer a LATAM SIS question with a LATAM row.**
+
+### 🔴 Copyleft rows read this pass, recorded so nobody re-reads them
+
+| row | licence | ★ | region |
+|---|---|---|---|
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` *(`35 147` B)* | `1`k | EMEA |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | 🔴 `AGPL-3.0` *(`34 523` B)* | `2` | North America |
+| [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🔴 `AGPL-3.0` *(`34 523` B)* | `7` | APAC |
+| [`ateeducacion/OmekaS-LearningObject`](https://github.com/ateeducacion/OmekaS-LearningObject) | 🔴 `GPL` *(`35 813` B)* | `0` | EMEA *(Canary Islands government ed-tech unit)* |
+
+🔵 **Note the `34 523` B coincidence: `AGPL-3.0`'s full text measures `34 523` B in three
+unrelated repositories this pass** — `MoFaCTS`, `koakademy` and
+`openedx/openedx-ai-extensions`. 🟢 That is a usable fingerprint, and it is how the Open
+edX client's licence was read in one request.
+
+Evidence: [`evidence/new-supply-grants.2026-10-14-p188.tsv`](../evidence/new-supply-grants.2026-10-14-p188.tsv),
+[`evidence/url-existence.2026-10-14-p188.tsv`](../evidence/url-existence.2026-10-14-p188.tsv).
+
 ## Pass 187 — 2026-10-14
 
 🆕 🟢 **Fourteen foundational rows enter, every grant read over the raw channel this pass with the

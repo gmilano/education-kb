@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🆕 🟢 **A new licence shape enters this KB, and it is the one this vertical was always
+going to produce: `MIT` for the code, `CC BY` for the content. Two rows already on this
+page are published WRONG because of it, and in both the mis-stated half is the half a
+studio actually wants.**
+
+🔴 **p188's five pre-registered actions all discharged, and three of them fired by
+RETIRING something this KB published yesterday** — p187's `79`% census figure, p187's
+rule about Moodle plugin licences, and p187's explanation for the Open edX gap. 🔵 The
+pass's own headline is therefore a method one: **three of the four corrections came from
+re-reading this KB's own pages, not from the world.**
+
+### 🆕 🔴 `P1056` — the SPLIT-SCOPE licence. Code `MIT`, content `CC BY`
+
+🔵 `ACTION MW` ran `P1054` over all `46` rows these pages publish as `MIT`. 🟢 **One fired
+the SIZE signal with no restriction-vocabulary hit** — exactly the case `P1054`'s own
+docstring said it could catch but not name.
+
+| row | what `P1054` returned | what the bytes actually say |
+|---|---|---|
+| 🆕 🔴 **[`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers)** | `MIT-BODY-PLUS:unclassified-addition`, `1 328` B, `178` B excess | 🟢 **Not a narrowing — a SCOPE SPLIT.** *"Code in this repository (`src/`, `tests/`, `*.py`) is licensed under the MIT License. Teaching materials (notebooks, README files, cheatsheets, datasets created for this course) are licensed under **CC BY 4.0**."* The MIT body below it is verbatim and intact |
+| 🆕 🔴 **[`siskinskai/spedlex`](https://github.com/siskinskai/spedlex)** | 🔴 `MIT`, `1 077` B — **clean, and incomplete** | 🔴 **The split is in the README, not the licence file.** *"Code: [MIT](LICENSE). Data (everything in `data/`, `schema/` and the term lists in `sources/`): [CC BY 4.0](LICENSE-DATA)."* `LICENSE-DATA` measures `17 023` B of full CC BY 4.0 text |
+
+🔴 **Why this is not a taxonomy point. In BOTH rows the `CC BY` half is the asset.**
+`python-for-engineers` is a course — the notebooks ARE the product. And `spedlex` is the
+special-education vocabulary p187 called *"the unglamorous asset nobody budgets for and
+every SPED engagement needs"*: its `data/`, `schema/` and term lists are the whole repo.
+🔴 **CC BY's attribution requirement is irrevocable, so neither can be silently
+white-labelled into a client's course or pipeline.** 🟢 A studio can still use both — it
+just has to carry the attribution, and it has to know before the SOW, not after.
+
+🟢 **Education repositories are code PLUS content by construction** — a course is
+notebooks, a tutor is an item bank, a de-identifier is a term list. 🔵 **So the
+split-scope licence is the EXPECTED shape in this vertical, not an edge case**, which is
+why it becomes an intake check rather than a correction. New instrument, `16`/`16` tests
+passing, validated end-to-end against the live bytes:
+[`compose/code/p1056-split-scope-licence`](../compose/code/p1056-split-scope-licence/README.md).
+🔵 It checks all three channels the two rows used: the licence file, a second licence
+file, and the README alone.
+
+🔴 **And the instrument limit, measured rather than assumed:** `P1054`'s restriction
+vocabulary only runs AFTER its MIT-body marker matches. So
+[`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) *(`36`★)* — whose
+whole `417` B licence reads *"Source code is made available for transparency and personal
+non-commercial use only … You may NOT: Redistribute … Rebrand or redeploy this
+application commercially or publicly … Use this code as the basis for a competing product
+or service. All rights reserved."* — returns `NOT-MIT-BODY` and `P1054` says nothing about
+it. 🔴 **A `NOT-MIT-BODY` verdict is not a clean bill. `13` rows in this pass's sweep carry
+one.**
+
+### 🟢 The `MIT` column, re-measured: `30` rows clean, one figure too narrow
+
+🟢 **`30` of the `46` rows are genuine, unnarrowed `MIT`.** 🔴 **But p187 published
+canonical MIT at `1 062`–`1 093` B over `15` rows, and over `30` rows the real range is
+`1 063`–`1 114` B** — [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br)
+measures `1 114` B, above p187's ceiling. 🟢 **No row was misclassified**, because
+`P1054`'s own constant was set at `1 150` with deliberate headroom. 🔵 **The published
+FIGURE was too narrow; the instrument was not.** Both are recorded, because only one of
+them was a risk.
+
+🟢 `graspful` reproduced exactly — `1 439` B, `289` B excess, hits on
+`compete`/`hosted, managed`/`saas`/`software-as-a-service`. 🔵 It remains the positive
+control for `P1054` and it is still 🔴 **not open source**.
+
+### 🆕 🟢 A NEW CATEGORY on this page — verifiable credentials as the credential layer
+
+🔵 p187 added the learning-record-store layer to [`verticals`](../verticals/solutions.md).
+🟢 **`topics/open-badges` — the `30`-repository page that is this census's control — turns
+out to be mid-migration from Open Badges `2.0` to `OB 3.0` / W3C Verifiable Credentials,
+and the permissive rows are on the new side of it.**
+
+| row | licence, as measured | region | what it is |
+|---|---|---|---|
+| 🆕 🟢 [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** *(`1 080` B)* | North America | an **Open Badges `3.0`** definition widget |
+| 🆕 🟢 [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) | 🟢 **`MIT`** *(`1 087` B)* | North America | 🟢 built on the **Digital Credentials Consortium** stack — the MIT-led VC effort, i.e. the standards side a university recognises |
+| 🆕 🟢 [`iblai/wallet`](https://github.com/iblai/wallet) | 🟢 **`MIT`** *(`1 063` B)* | North America | a credential **wallet**. Same publisher as [`iblai/lms`](https://github.com/iblai/lms) *(`MIT`, `14`★)* |
+| 🆕 🟢 [`MrPrinceAli/proven`](https://github.com/MrPrinceAli/proven) | 🟢 **`MIT`** *(`1 095` B)* | Global | credential verification |
+| 🆕 🟢 [`brody-0125/signet-campus`](https://github.com/brody-0125/signet-campus) | 🟢 **`MIT`** *(`1 070` B)* | Global | campus credentialing |
+| 🆕 🔴 [`hoijui/obadgen`](https://github.com/hoijui/obadgen) | 🔴 **`AGPL-3.0`** *(`34 020` B)* | EMEA | badge generation — copyleft, not a vendoring candidate |
+| 🆕 🔴 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 **`LGPL`** *(`7 650` B)* | EMEA | the OLD Open Badges `2.0` library. 🔵 the generation this layer is leaving |
+| 🔴 [`wantaekchoi/vc-verifier`](https://github.com/wantaekchoi/vc-verifier) · [`andyfmiller/vc-dotnet-demos`](https://github.com/andyfmiller/vc-dotnet-demos) · [`activitypods/activitybadges`](https://github.com/activitypods/activitybadges) | 🔴 **NO GRANT FOUND** at `15` probed paths each | APAC · NA · EMEA | unusable as trees until someone asks |
+
+🔵 **Why it matters commercially, and it connects to this week's regulation:** three
+regimes now require a durable record of a human decision about a learner *(see
+[`intel/market.md`](../intel/market.md))*, and a verifiable credential is the one artefact
+in this stack that is **cryptographically** durable rather than durable by convention.
+🟢 **The permissive rows are all on the `OB 3.0`/VC side. The copyleft rows are all on the
+`2.0` side.** That is an unusually clean licence/generation split and it favours a studio.
+
+### 🟢 New agent-adjacent rows, grants read this pass
+
+| row | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 [`lmsable/lmsable-skill`](https://github.com/lmsable/lmsable-skill) | 🟢 **`MIT`** *(`1 080` B)* | Global | 🟢 an **agent SKILL for an LMS** — the skill form p186 first saw with `edumints`, now from a SECOND independent vendor. 🔵 The form is reproducing |
+| 🆕 🟢 [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 **`MIT`** *(`1 064` B)* | Global | a PII scanner off `topics/ferpa` — more of the guardrail layer p187 opened |
+| 🆕 🟢 [`marc-shade/docsingest`](https://github.com/marc-shade/docsingest) | 🟢 **`MIT`** *(`1 079` B)* | North America | document ingestion, `6`★, also off `topics/ferpa` |
+| 🆕 🟢 [`thepick/writing-feedback-tool`](https://github.com/thepick/writing-feedback-tool) | 🟢 **`MIT`** *(`1 064` B)* | Global | writing feedback, off `topics/edtech` |
+| 🆕 🟢 [`alvaarocl/taskbot`](https://github.com/alvaarocl/taskbot) | 🟢 **`MIT`** *(`1 075` B)* | Global | 🔵 surfaced on `topics/moodle` but it is **not** a plugin tree — a Moodle-adjacent bot |
+| 🔴 [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | 🔴 **NO GRANT** at `15` paths | APAC | `6`★. Sibling of `alfredang/AI-LMS-TMS`, grant-absent since p187. 🔵 Two repos, one author, no grant on either — `ACTION MN`'s queue grows |
+
 ## Pass 187 — 2026-10-14
 
 🆕 🟢 **A whole CATEGORY enters this page, and the reason it was missing is now measured rather

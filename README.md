@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🟢 **All five of the actions pre-registered for this pass are DISCHARGED, every one with a
+limb FIRED decisively, and THREE of them fired by retiring something this KB published
+yesterday. The sixth is NOT RUN for the fourth pass running, and the reason is unchanged:
+it is an outward-facing write on a third party's repository and this run is unattended.**
+
+🆕 🔴 **The headline is a defect CLASS with two instances in two unrelated projects: the
+durable record of a human decision about a learner is the artefact nobody in this vertical
+is protecting** — and three regimes now require it. 🔵 It is demonstrable in one live
+delete, which makes it a meeting opener rather than a claim.
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION MT`** — the `api-evangelist` filter; re-derive p187's absent rate per topic | 🔴 **DISCHARGED, LIMB `2` FIRED. `64`% with the account removed, against the `≥70`% it had to hold. The `79`% is RETIRED. 🟢 The account itself reproduced EXACTLY at `23` rows — and it is a THREE-PAGE phenomenon, not a shelf-wide one** |
+| 🔴 **`ACTION MU`** — extend the plugin-header channel to every Moodle-shaped grant-absent row *(`Gap 425`)* | 🔴 **DISCHARGED, LIMB `2` FIRED. `0` further `GPL` grants from `22` paths × `4` rows. `onbirdev` was CONVENTIONAL, not representative — and p187's rule inverts: `15` of `17` plugin-shaped rows DO ship a licence file** |
+| 🔴 **`ACTION MV`** — settle `Gap 427`: does an `MCP`/agent-tool surface exist for Open edX anywhere? | 🔴 **DISCHARGED, LIMB `2` FIRED ON THE FACT AND ITS CAUSE REFUTED. No server exists — but an OFFICIAL `MCP` CLIENT does, and its docs say it *"will never expose MCP server functionality"*. 🔴 `AGPL` is NOT the cause: Moodle is `GPL-3` and carries three servers** |
+| 🟢 **`ACTION MW`** — run `P1054` over every row published as `MIT` | 🟢 **DISCHARGED, LIMB `1` FIRED, TWICE, and the mechanism is NEW. `MIT` for the code, `CC BY 4.0` for the content — and in both rows the CC half is the asset. New instrument `P1056`, `16`/`16` passing** |
+| 🔴 **`ACTION MX`** — `ralph`'s retention/deletion surface: append-only or immutability mode? | 🔴 **DISCHARGED, LIMB `2` FIRED. No `@router.delete` on the LRS API, but `DELETE`/`UPDATE` are first-class backend operations, `--es-op-type` exposes them, and `INDEX` — the DEFAULT — overwrites. Pattern `32` step `3` needs a WORM store and the estimate grows** |
+| 🔴 **`ACTION MN`** *(for a human)* — may this KB open licensing issues on third-party repositories? | 🔴 **NOT RUN, fourth pass running. An outward-facing write on someone else's repository by an unattended run with no live authorisation. Recorded as a decision for a human, not dropped** |
+
+### 🔴 `ACTION MT` — the figure that retires, and the rule that replaces it
+
+| measurement, all `12` pages re-read at `?s=updated` | result |
+|---|---|
+| `api-evangelist` rows rendered | 🟢 **`23`** — p187's count REPRODUCED EXACTLY |
+| absent, all `240` rows, p187's index reproduced *(`1 993` cited slugs vs its stated `1 974`)* | 🔴 **`162`/`240` = `67.5`%** *(p187 published `79`%)* |
+| absent, same `240` rows, a WIDER index *(`15 836` strings)* | `151`/`240` = `62.9`% — 🔵 **so index choice explains at most `4.6` points** |
+| 🔴 absent, `api-evangelist` EXCLUDED | 🔴 **`139`/`217` = `64`%** ← the publishable figure |
+
+🔴 **The remaining `11.5`-point drop is UNRESOLVABLE, and that is the finding: p187 stored
+its COUNTS and not its ROWS**, so nobody can tell whether the recency window moved or the
+earlier count was wrong. 🟢 **Rule now in force: a census over a recency-sorted page must
+store its row list. All `240` rows of this pass are written to evidence.**
+
+🔵 **And the account is concentrated, not diffuse:** `topics/lti` `9` rows *(`70`% → `45`%)*,
+`student-information-system` `6`, `open-badges` `4`; **nine of twelve pages carry `≤1`.**
+🔴 An integration engagement scoping `topics/lti` would have read a page that is `45`%
+unseen, not `70`% — the difference between "unexplored" and "nearly exhausted".
+
+### 🟢 What the pass is worth: a new licence shape and a new layer
+
+🆕 🔴 **`P1056`, the SPLIT-SCOPE licence.** [`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers)
+*(`LICENSE`, `1 328` B)*: *"Code … is licensed under the MIT License. Teaching materials
+(notebooks, README files, cheatsheets, datasets …) are licensed under **CC BY 4.0**."* And
+[`siskinskai/spedlex`](https://github.com/siskinskai/spedlex), declared in its README with
+the CC text in `LICENSE-DATA` *(`17 023` B)*: **the SPED vocabulary this KB has been
+publishing as `MIT` since p187 is `CC BY 4.0`.** 🔵 Education repositories are code plus
+content by construction, so this is the EXPECTED shape here. New instrument, `16`/`16`
+tests, validated against live bytes:
+[`compose/code/p1056-split-scope-licence`](compose/code/p1056-split-scope-licence/README.md).
+New Pattern `34` prices the audit.
+
+🆕 🟢 **The credential layer, and the permissive rows are all on the new standard.**
+`topics/open-badges` is mid-migration from Open Badges `2.0` to **`OB 3.0` / W3C
+Verifiable Credentials**: permissive on the new side *(`OB3DefinitionWidget`,
+`dcc-credential-co-writer-monorep` on the MIT-led **Digital Credentials Consortium** stack,
+`iblai/wallet`, `proven`, `signet-campus` — all `MIT`)*, copyleft on the old
+*(`obadgen` `AGPL-3.0`, `openbadgeslib` `LGPL`)*. 🔵 **It is the only artefact in this stack
+that is durable by cryptography rather than by convention** — which is what Trend `1` is
+about.
+
+🟢 **Ten foundational rows entered**, including 🟢 **`OpenOLAT` *(`Apache-2.0`, `447`★ — a
+whole university LMS, permissively licensed)***, 🟢 **`tsugi` *(`Apache-2.0` — the LTI
+framework by the LTI spec's own author)***, 🟢 **`Numbas` *(`Apache-2.0`, assessment)*** and
+🟢 **`academico` *(`MIT`, `404`★ — the first permissive SIS this page can recommend for a
+LATAM engagement, and it is LATAM-built)***.
+
+### 🔴 Licence traps and instrument failures, all measured
+
+- 🆕 🔴 **A bare `ISC` alternative with no word boundary matched inside "Disclaimer"** and
+  reported FOUR `Apache-2.0` repositories as `ISC`. 🔵 Proof run before the fix was believed:
+  `grep -oiE "[a-z]*isc[a-z]*"` over `tsugi`'s `LICENSE` returns exactly
+  `{Disclaimer, discussing}`. 🟢 **Rule: a probe whose verdict is a SUBSTRING has not
+  measured a licence.**
+- 🆕 🔴 **The slug index returned MISSING for ALL FIVE positive controls** on its first
+  build — `grep -E` handed PCRE `(?:...)` syntax. 🟢 p187's rule caught it before it reached
+  a published figure. **Second pass running in which that rule saved the headline.**
+- 🆕 🔴 **`Gap 421` now holds FOUR sub-`1`kB licence shapes and only one is a grant**, with
+  [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) *(`417` B: "personal
+  non-commercial use only", "Rebrand or redeploy … commercially", "competing product",
+  "All rights reserved")* the newest. 🔴 **`P1054` returns `NOT-MIT-BODY` for it and says
+  nothing — a `NOT-MIT-BODY` verdict is not a clean bill, and `13` rows carry one.**
+- 🆕 🔴 **`P971`, instances SIX and SEVEN**: `numbas-lti-provider` *(`Apache-2.0` in `560` B)*
+  and 🔴 **`OS4ED/openSIS-Classic` *(`345`★, `GPL` by reference **in the README only**, no
+  licence file at `10` paths)*** — the weakest instance yet, because the `GPL` requires its
+  terms to travel WITH the work.
+- 🟡 **A published figure too narrow, and the instrument that wasn't:** p187 gave canonical
+  `MIT` as `1 062`–`1 093` B over `15` rows; over `30` genuine rows it is `1 063`–`1 114` B.
+  🟢 No row was misclassified, because `P1054`'s ceiling was set at `1 150` with headroom.
+- 🟡 **Apache's byte fingerprint widens too**: `10 273`–`11 359` B *(from `11 282`–`11 359`)*,
+  because `tsugi` and `OpenOLAT` both sit below the old floor with full Apache text.
+- 🔴 **New blocked host: `docs.openedx.org` → `getaddrinfo ENOTFOUND`. That is NINE** hosts
+  blocked by this session's egress allowlist. Per `P950`, not retried host by host. 🟢 Every
+  Open edX quotation in this pass is read from the repository's own `.rst` source instead.
+
+### 🟢 The regional sweep: two settlements, one gap closed, one narrowed
+
+- 🟢 **EMEA — the AI Act correction finally has an INSTRUMENT.** The Digital Omnibus, cited
+  as **Regulation (EU) `2026/1744`**: Parliament `2026-06-16`, Council `2026-06-29`, in
+  force `2026-07-27`. 🟢 **Annex III stand-alone high-risk — education — moves from
+  `2026-08-02` to `2027-12-02`**; Annex I to `2028-08-02`; 🔴 **Article `50` transparency
+  still applies from `2026-08-02`.** 🟡 Sources disagree on finality and `eur-lex` was not
+  readable here, so the regulation number is a **citation to verify**. 🔵 **Seventh instance
+  of the wrong date in seven passes** — assume the client's adviser gave them the
+  un-amended text.
+- 🟢 **APAC — Vietnam RESOLVES, better than either of p187's two readings.** Law
+  `134/2025/QH15` *(passed `2025-12-10`)* in force **`2026-03-01`**; the high-risk list is
+  **Decision No. `33/2026/QD-TTg`**, `46` systems, of which **education is exactly THREE**:
+  self-learning content from **uncontrolled data sources**, 🔴 **automatic grading or
+  ranking of students**, and biometric behaviour monitoring. 🔴 The `2027-09` date p187
+  recorded found **no supporting source** this pass. 🔵 Item `2` makes the most ordinary
+  education AI pilot high-risk by statute. 🟢 Korea's grace period expires **January `2027`**
+  — a dated sales window.
+- 🆕 🟢 **The Middle East / Africa gap, p187's declared gap `1`, is PARTIALLY CLOSED — and
+  the gap was in the question, not the world.** 🔴 **South Africa's draft National AI Policy
+  `2026` was WITHDRAWN on `2026-04-26` after fake, AI-hallucinated citations were found in
+  its reference list** — the strongest human-in-the-loop argument any deck will find, from
+  the regulator's side of the table. 🟢 Plus **Rwanda**'s three-year MoU with Anthropic
+  *(`2026-02`, education included)*, **Egypt**'s council restructured *(`2026-01`)*,
+  **Nigeria**'s NITDA strategy in implementation, **Kuwait** and **Libya** naming students
+  in their strategies, and a **Palestine** AI-in-higher-education policy `2025`–`2027`.
+  🔴 **The narrowed gap that REMAINS: no Gulf education-ministry AI policy found** — nothing
+  for Saudi Arabia, the UAE, Qatar or Bahrain despite a query naming those ministries.
+- 🟢 **LATAM now has a `30 000`-response dataset and it relocates the opportunity.** Digital
+  Education Council LATAM Survey `2026` *(`29` institutions, with Tecnológico de Monterrey)*:
+  **`92`% of students and `79`% of faculty actively engaging** — 🔴 **but `88`% of faculty at
+  "minimal" to "moderate", and the LOWEST adoption is in assessment.** 🔵 **So the LATAM
+  sale is not "adopt AI", it is "make assessment defensible"** — the same surface three
+  jurisdictions just regulated. 🟢 UNESCO warned in `2026-09` that LAC institutions lack
+  governing policies, corroborating p187's `87`/`26`/`9` figures.
+- 🟢 **North America has ONE hard mandate and its deadline has passed: Ohio required every
+  K-12 district to adopt a formal AI use policy by `2026-07-01`.** 🔵 So the question to an
+  Ohio district is not *"will you have a policy"* but *"is the one you adopted in June
+  implementable"*. `134` bills / `31` states reconfirmed; `H.R. 8747` advanced at a
+  `2026-07-21` markup.
+- 🟡 **p187's declared gap `3` — market scope — closes as a RANGE, not a number.** Five
+  readable estimates put `2026` at **`$9`–`11`B**, with comparable-horizon projections
+  differing by roughly a **factor of two** *(IMARC `$9.0`B → `$79.6`B `2034` @`31.35`%;
+  TBRC `$10.6`B → `$42.48`B `2030` @`41.5`%; VMR publishing **two conflicting `2025` bases
+  in two language editions of the same report**)*. 🔴 **This KB has been quoting TBRC as
+  though it were the figure. Quote a range and name the publisher.**
+- 🔴 **p187's declared gap `2` only PARTIALLY closes: still no education-specific APAC
+  teacher-adoption statistic for `2026`.** What exists is enterprise-wide *(~`1` in `10`
+  APAC enterprises self-rates very mature)*. 🟡 Scope APAC on regulation and curriculum,
+  not on adoption claims.
+- 🔴 **GitHub Trending: `0` education repositories for a TENTH consecutive pass.** 🔵 Ten is
+  no longer a sampling accident: the supply is real and it never trends.
+
+### 🟢 Pre-registered for p189, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION MY`** | re-read the same `12` topic pages at `?s=updated` and compute the **row-level CHURN** against p188's stored `240` — how many slugs are the same `48` hours on | 🟢 **limb `1`:** churn `≥25`% → 🟢 **the recency window genuinely moves, p187's `79`% is explained WITHOUT accusing it of over-counting, and the census must be re-based every pass.** 🔴 **limb `2`:** churn `<25`% → 🔴 **the page is stable, so the `11.5`-point drop WAS a counting error and every published census figure needs an audit** |
+| 🆕 🟢 **`ACTION MZ`** | run `P1056` over every row this KB publishes as **`Apache-2.0`** and **`BSD`**, not just `MIT` — and over the `13` rows `ACTION MW` returned as `NOT-MIT-BODY` | 🟢 **limb `1`:** `≥1` further split-scope or restricted row → 🔴 **`NOT-MIT-BODY` is confirmed as a blind spot and the whole licence column needs the pass.** **limb `2`:** `0` → 🟢 the shape is `MIT`-specific and `P1056` stays an intake check |
+| 🆕 🔴 **`ACTION NA`** | settle whether `ralph`'s LRS **refuses** an overwrite in practice: does `_filter_existing_statements` reject a re-`PUT` of an existing statement id, or does the `INDEX` default overwrite it? Read the function, then the conflict-response path | 🟢 **limb `1`:** the API refuses → **Pattern `32` step `3c` is cheaper than written and the API layer is genuinely append-only.** 🔴 **limb `2`:** it overwrites or returns `204` → **step `3b`'s WORM target is mandatory, not recommended, and the estimate holds at `8`–`10` weeks** |
+| 🆕 🟢 **`ACTION NB`** | does a `FastMCP`-over-Open-edX server exist OUTSIDE `topics/open-edx` — search `topics/mcp` + `topics/mcp-server` at both sort orders for any Open edX / `edx-platform` row | 🟢 **limb `1`:** one exists → 🔴 **`Gap 427` was a TOPIC-TAGGING artefact, not a real absence, and Pattern `33`'s Open edX row drops to `4`–`6` weeks.** **limb `2`:** none → 🟢 the `8`–`10` week estimate is confirmed and the absence is real across two independent channels |
+| 🆕 🟡 **`ACTION NC`** | close the Gulf gap by naming the institutions instead of the region: probe Saudi `SDAIA`, UAE's Ministry of Education / `MBZUAI`, Qatar's `QRDI`, and Bahrain's EdNet for an AI-in-education instrument | 🟢 **limb `1`:** `≥1` dated instrument → 🟢 **"EMEA" stops being answered as "EU" and the Gulf enters this KB.** 🔴 **limb `2`:** `0` → 🔴 **record it as a CHANNEL limit, not a policy absence, and stop re-running the regional query** |
+| 🆕 🟢 **`ACTION ND`** | verify **Regulation (EU) `2026/1744`** against a primary source — `eur-lex` was unreachable this pass, so try the Official Journal, the Commission's AI Act pages, and the Parliament's procedure file | 🟢 **limb `1`:** the citation resolves → 🟢 **the `2027-12-02` date becomes citable in a client deck instead of advisory.** 🔴 **limb `2`:** it does not → 🔴 **downgrade it to "reported, unverified" on every page and say so in the meeting** |
+| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is now `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith` and `VICKY07092005/moodle-5-1-authentic-relay` *(both claim `MIT` in prose with no grant)*, `OS4ED/openSIS-Classic` *(`345`★, `GPL` with no licence file)*, `alfredang/ai-mms` + `AI-LMS-TMS`, `mohamurshid/ElimuAnalytics`, then p186's `MoKangMedical/digital-sage`. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently |
+
+🔵 **Note for p189 on method.** 🟢 p188's own lesson is the cheapest one yet and it is about
+bookkeeping, not probing: **three of five actions fired by retiring a figure or a rule this
+KB published the previous day, and the one figure that reproduced exactly — `api-evangelist`
+at `23` rows — was the one p187 had recorded with enough specificity to re-measure.**
+🔵 **Specificity is what makes a claim survivable. A percentage without its rows is an
+opinion with a decimal point.**
+
 ## Pass 187 — 2026-10-14
 
 🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, all five with a limb

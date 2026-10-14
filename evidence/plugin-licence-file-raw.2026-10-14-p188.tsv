@@ -1,0 +1,26 @@
+slug	exist	sha	where	http	bytes	grant_text	identifier
+loyaniu/moodle-mcp	OK	22cc56c7	NO-GRANT-FOUND	404	0	NO	-
+hesham0-0nasser/tutor-lms-mcp	OK	c92e5b9b	NO-GRANT-FOUND	404	0	NO	-
+ruud0/aula-virtual-mcp	OK	eb629830	NO-GRANT-FOUND	404	0	NO	-
+P1ckle3/blackboard-mcp	OK	32af42d9	NO-GRANT-FOUND	404	0	NO	-
+didactika/moodle-local_servicemanager	OK	6c5f5a2d	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+didactika/moodle-local_iconrestyle	OK	25bbf5fb	LICENSE	200	35148	YES	GNU GENERAL PUBLIC
+Rick-254/moodle-quizsmith	OK	df7574dc	NO-GRANT-FOUND	404	0	NO	-
+moodlehq/moodle-local_ci	OK	a75c2eac	MANIFEST:composer.json	200	455	-	GPL-3.0-or-later
+uaiblaine/moodle-local_dimensions	OK	aedee743	COPYING.txt	200	35147	YES	GNU GENERAL PUBLIC
+uaiblaine/moodle-local_awareness	OK	65869704	COPYING.txt	200	35147	YES	GNU GENERAL PUBLIC
+uaiblaine/moodle-block_dimensions	OK	cd5e083d	COPYING.txt	200	35147	YES	GNU GENERAL PUBLIC
+eduplay-moodle-suite/moodle-tiny_eduplay	OK	6d431d5f	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+eduplay-moodle-suite/moodle-repository_eduplay	OK	24e7cd15	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+eduplay-moodle-suite/moodle-media_eduplay	OK	495eb52a	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+eduplay-moodle-suite/moodle-local_eduplay	OK	1e4e5937	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+valentineus/moodle-webhooks	OK	27200633	LICENSE.txt	200	35200	YES	GNU GENERAL PUBLIC
+VICKY07092005/moodle-5-1-authentic-relay	OK	4916c388	NO-GRANT-FOUND	404	0	NO	-
+alvaarocl/taskbot	OK	8587ef25	LICENSE	200	1075	YES	MIT License
+solin-repo/moodle-block_atrisk	OK	1ecc3d94	LICENSE	200	703	YES	GNU GENERAL PUBLIC
+NASMAK-Technologies/moodle-block_learnboard	OK	c4bd10ba	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+anarosiris/moodle-local_efscorm	OK	b72aa3ba	LICENSE	200	35149	YES	GNU GENERAL PUBLIC
+jeanlucio/moodle-block_playerhud	OK	2b4a7de3	COPYING.txt	200	35149	YES	GNU GENERAL PUBLIC
+ransomleak/moodle-local_ransomleak	OK	1517455b	LICENSE	200	35147	YES	GNU GENERAL PUBLIC
+open-spaced-repetition/fsrs4anki-helper	OK	29208f22	License	200	1079	YES	MIT License
+globant-kb-p188/definitely-not-a-real-repo	EXIT128	-	-	-	0	NO	-

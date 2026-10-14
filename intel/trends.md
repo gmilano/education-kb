@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🆕 🔴 **The trend this pass can PROVE is that the durable record of a human decision about
+a learner is the artefact nobody is protecting — and it now has two independent instances
+in two unrelated projects, against three jurisdictions that require it.**
+
+### 🆕 🔴 Trend `1` — the human-oversight record is protected by CONVENTION, never by the STORE
+
+🔵 p187 found this once and called it a finding. 🟢 **p188 found it again, in a different
+project, at a different layer, and that makes it a defect CLASS.**
+
+| instance | the store | the defect |
+|---|---|---|
+| p187 | [`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor) `teacher_review_events` | 🔴 `corrected_assessment` — the teacher's override of an AI grade — is `ondelete="CASCADE"` from **two** parents. Deleting the class deletes the correction |
+| 🆕 p188 | [`openfun/ralph`](https://github.com/openfun/ralph), the `xAPI` LRS | 🔴 **no immutability at all.** No `@router.delete` on the LRS API — but `BaseOperationType` declares `DELETE` and `UPDATE` *("updates or overwrites an existing record")*, `--es-op-type` exposes them as a CLI option, and `default_operation_type = INDEX` **overwrites** a re-written statement id |
+
+🔴 **`ralph`'s protection is the ABSENCE OF AN HTTP ROUTE.** 🟢 That is genuinely useful —
+a tutoring agent writing through the LRS API cannot erase its own trail — 🔴 **but anyone
+holding Elasticsearch or MongoDB credentials deletes or overwrites statements with ralph's
+own CLI.** 🔵 And `xAPI`'s own substitute for deletion is absent too: `voidedStatementId`
+is accepted and documented as **"*Not implemented*"**.
+
+🔴 **Do not be reassured by the word "Immutability" in the codebase.** The single
+occurrence is the `xAPI` `format=canonical` parameter's docstring, about how Activity
+Objects and Verbs are REPRESENTED. 🔵 It is not a storage guarantee, and a search for the
+word will find it and mislead.
+
+🟢 **Why it is a trend and not a pair of bugs: both projects are well built, and both got
+this wrong in the same direction.** 🔵 Course-shaped systems make the class the aggregate
+root and cascade everything beneath it — right for pedagogy, wrong for audit. Record-store
+systems optimise for write throughput and queryability — right for analytics, wrong for
+evidence. 🟢 **Nobody in this vertical is building for the subpoena, and three regimes just
+started asking for one:** NA *(Oklahoma, Maryland — human review of high-stakes decisions
+about students)*, EU *(Annex III high-risk educational assessment, obligations
+`2027-12-02`)*, and 🆕 APAC *(Vietnam's **Decision `33/2026/QD-TTg`**, which names
+**automatic grading or ranking of students** one of its `46` high-risk systems)*.
+
+🟢 **The commercial shape: this is a finding a studio can walk into a meeting with,
+demonstrate in one live delete, and sell the fix for.** Pattern `32` is that fix, and
+step `3` now carries the WORM store it did not before.
+
+### 🆕 🔴 Trend `2` — the agent-tool layer is forking by PLATFORM POLICY, not by licence
+
+🔵 p187's headline was that the `MCP`-over-the-LMS layer is `11` repositories deep and
+unnamed by analysts. 🟢 **p188 adds the structural fact that decides engagement pricing:
+the layer is not spreading evenly, and the reason is not copyleft.**
+
+| platform | agent surface | licence of the platform |
+|---|---|---|
+| 🟢 **Moodle** | 🟢 **three independent `MCP` servers** | 🔴 `GPL-3.0` — **strong copyleft** |
+| 🟢 Canvas · Brightspace · Sisu · `SCORM` | 🟢 at least one each | mixed |
+| 🔴 **Open edX** | 🔴 **an official `MCP` CLIENT, and a documented refusal to ever be a server** | 🔴 `AGPL-3.0` |
+
+🔴 **p187 and `ACTION MV`'s own limb both guessed that `AGPL` explained Open edX's
+absence. This KB's own Moodle row refutes it: `GPL-3.0` is strong copyleft and it carries
+three servers.** 🟢 What distinguishes Open edX is that
+[`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) routes
+extension through its own framework and states, in its docs, **_"will never expose MCP
+server functionality"_**.
+
+🔵 **Why that distinction is worth money.** A licence objection can be negotiated,
+dual-licensed, or waited out. 🔴 **A documented architectural decision cannot.** 🟢 So an
+Open edX engagement should be scoped as *permanently owning the server half* — and
+simultaneously told **not to build the orchestration half**, because an official one
+exists. 🟡 With two caveats a client must hear in the first meeting: it is `AGPL-3.0`, and
+its own README calls it **"experimental"** and a **"proof-of-concept"**.
+
+### 🆕 🟢 Trend `3` — in education, the licence splits by SCOPE, and the content half is the asset
+
+🟢 **New shape, measured twice this pass:** permissive for the code, **`CC BY`** for the
+content.
+
+- [`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers) — *"Code
+  … is licensed under the MIT License. Teaching materials (notebooks, README files,
+  cheatsheets, datasets created for this course) are licensed under **CC BY 4.0**."*
+- [`siskinskai/spedlex`](https://github.com/siskinskai/spedlex) — *"Code: MIT. Data
+  (everything in `data/`, `schema/` and the term lists in `sources/`): **CC BY 4.0**."*
+  `LICENSE` `1 077` B + `LICENSE-DATA` `17 023` B.
+
+🔴 **In both rows this KB published `MIT`, and in both the `CC BY` half is the half a
+studio wants** — the course notebooks; the SPED vocabulary. 🔵 **This is structural, not
+coincidental: education repositories are code PLUS content by construction.** A course is
+notebooks, a tutor is an item bank, a de-identifier is a term list. 🟢 So in this vertical
+the split-scope licence is the EXPECTED shape, and it becomes an intake check:
+[`P1056`](../compose/code/p1056-split-scope-licence/README.md), `16`/`16` tests passing.
+
+🟢 **The practical rule for a client conversation: `CC BY` is perfectly usable — attribution
+is a cheap obligation — but it is IRREVOCABLE and it travels into the deliverable.** 🔴 A
+white-label course built on `CC BY` notebooks without attribution is a licence breach on
+delivery, which is the same failure mode `P1054`'s `graspful` has and arrives by a
+completely different route.
+
+### 🟢 Trend `4` — the credential layer is migrating, and the permissive rows are all on the new side
+
+🟢 `topics/open-badges` — the smallest page in this census and its control — is mid-shift
+from Open Badges `2.0` to **`OB 3.0` / W3C Verifiable Credentials.** 🔵 The licence split
+is remarkably clean: 🟢 **permissive on the new standard** *(`OB3DefinitionWidget`,
+`dcc-credential-co-writer-monorep`, `iblai/wallet`, `proven`, `signet-campus` — all
+`MIT`)*, 🔴 **copyleft on the old** *(`obadgen` `AGPL-3.0`, `openbadgeslib` `LGPL`)*.
+
+🔵 **And it connects to Trend `1`.** Where three regimes demand a durable record of a
+human decision, 🟢 **a verifiable credential is the only artefact in this stack that is
+durable by CRYPTOGRAPHY rather than by convention** — the LRS is deletable, the schema
+cascades, the signature does not.
+
+### 🔴 Trend `5` — this KB's own figures are its least reliable input, and that is now measured
+
+🔵 Three of p188's five discharged actions fired by retiring something p187 published
+**yesterday**. 🟢 Written down because the pattern matters more than any one correction:
+
+| p187 published | p188 measured |
+|---|---|
+| `79`% of recency-sorted rows absent from the census | 🔴 **`67.5`% unfiltered, `64`% with `api-evangelist` removed.** Limb `2` fired |
+| *"for a Moodle-plugin-shaped repo, 'no licence file' is close to uninformative"* | 🔴 **Backwards. `15` of `17` plugin-shaped rows DO ship a licence file**, `14` as full `GPL` text at `35 147`–`35 200` B |
+| *"`AGPL` is the likely cause"* of the Open edX gap | 🔴 **Refuted by this KB's `GPL-3.0` Moodle rows** |
+| canonical `MIT` at `1 062`–`1 093` B | 🟡 **`1 063`–`1 114` B over `30` rows.** No row misclassified — the instrument had headroom; the published figure did not |
+| `api-evangelist` = `23` rows | 🟢 **REPRODUCED EXACTLY.** The one figure that held |
+
+🔵 **The method rules now in force, each earned by a failure:**
+- 🟢 p186: **an absence names its probe.**
+- 🟢 p187: **a probe returning the same verdict for every row has measured nothing** — run a
+  known-positive through every sweep. 🔵 It saved this pass twice: a slug index built with
+  PCRE syntax handed to `grep -E` returned MISSING for all five positive controls.
+- 🆕 🟢 p188: **a census over a RECENCY-sorted page must store its ROWS, not its counts.**
+  p187 stored counts, so an `11.5`-point drop one day later cannot be attributed to the page
+  moving rather than the instrument changing. All `240` rows of this pass are stored.
+- 🆕 🟢 p188: **a probe whose verdict is a SUBSTRING has not measured a licence.** A bare
+  `ISC` alternative with no word boundary matched inside **"Disclaimer"** and reported four
+  `Apache-2.0` repositories as `ISC`.
+- 🆕 🟢 p188: **a README claim is a cue to re-probe, exactly like a badge** — and the
+  re-probe came back empty on both rows that made one.
+
 ## Pass 187 — 2026-10-14
 
 🆕 🟢 **The trend this pass can prove is an ASYMMETRY between the code and the commentary, and it

@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **What moved this week is a REFUSAL, and it is the most decision-relevant thing on
+these pages: Open edX has an official agent integration, and its documentation states
+that it will NEVER expose the half an engagement needs.**
+
+### 🆕 🔴 `ACTION MV` — `Gap 427` settled, and the direction is INVERTED
+
+🔵 p187 found an `11`-repository layer of `MCP` servers over Moodle, Canvas,
+Brightspace/D2L, Sisu and `SCORM`, and recorded `Gap 427`: 🔴 **`AGPL` Open edX has none.**
+🟢 p188 read `topics/open-edx` at **both** sort orders and the Open edX org's own AI
+project. 🔵 The gap is real — and its shape is not what the limb assumed.
+
+🟢 **There IS an official Open edX agent project:**
+[`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) —
+🔴 **`AGPL-3.0`** *(`LICENSE`, `34 523` B)*, and by its own `README.rst` *(`8 837` B)*
+**"experimental"** and a **"proof-of-concept"**.
+
+🔴 **Its `MCP` documentation is a refusal, stated four ways in one admonition** *(read
+from `docs/how-tos/mcp_integration.rst`, `9 604` B, over the raw channel)*:
+
+> **"Important: Open edX AI Extensions acts as an MCP CLIENT only"** · **"This
+> application does not run or host MCP servers"** · "You are responsible for deploying and
+> maintaining your own MCP servers" · **"This application will never expose MCP server
+> functionality — it only consumes MCP tools from external servers"**
+
+🟡 **There is an `mcp_example_server` in the same `toctree`, and it is not a counterexample.**
+Read *(`9 134` B)*, it is a `FastMCP` **`roll_dice`** demo behind `ngrok`, labelled *"This
+is a demonstration only … not intended for production use"*. 🔴 **It exposes no Open edX
+data at all.**
+
+🔴 **`topics/open-edx` at both sort orders: `22` repositories exist, `20` render, `0`
+`MCP` rows.** 🔵 The only AI rows are `muhammadusamahoyrr/edx` *(`0`★, a course-grounded
+tutor)* and `abc4rd-hq/ABC4RD` *(`0`★, "AI-native academy platform foundation")*.
+🟢 And the two sort orders differ by two rows each way, so p185's rule holds again: **a
+channel is a page PLUS a sort order.**
+
+### 🔴 The limb fired, and its stated CAUSE is refuted by this KB's own rows
+
+🔵 `ACTION MV` limb `2` predicted *"none → the adapter build is confirmed and `AGPL` is the
+likely cause"*. 🟢 **The first half is right. The second half is wrong, and this KB can
+prove it from its own shelf:** 🔴 **Moodle is `GPL-3.0` — strong copyleft — and carries
+THREE independent `MCP` servers** *(`G36maid`, `CloudDown`, `onbirdev`)*. 🔵 **Copyleft
+does not explain the absence.**
+
+🟢 **What distinguishes Open edX is an ARCHITECTURAL and POLICY choice, not a licence:**
+extension is routed through its own plugin framework, and that framework has put the
+server side permanently out of scope. 🔵 **That is a far more durable fact than a licence,
+because a licence can be dual-licensed and a design decision in a documented admonition
+cannot be waited out.**
+
+🟢 **The commercial read, which is better than "none exists":** for an Open edX
+engagement the LLM-orchestration half is already built and official — **do not rebuild
+it** — and the gradebook-as-tools half is yours forever. 🔴 **Two things a client must be
+told in the first meeting: the official client is `AGPL-3.0`, and it is EXPERIMENTAL by
+its own README. A proof-of-concept is not a platform.** Pattern `33` is amended rather
+than collapsed *(see [`compose/patterns.md`](../compose/patterns.md))*.
+
+🔴 **New blocked host: `docs.openedx.org` returns `getaddrinfo ENOTFOUND` here.** Every
+quotation above is therefore read from the repository's own `.rst` source over
+`raw.githubusercontent.com`, not from the rendered docs. 🔵 **That makes NINE hosts blocked
+by this session's egress allowlist.** Per `P950`, they were not retried host by host.
+
+### 🟡 `ACTION MU` — the plugin-header channel is near-EMPTY, and p187's rule goes with it
+
+🔵 p187 recovered a `GPL` grant from `onbirdev/moodle-webservice_mcp`'s **file headers**
+when no licence file existed, and concluded: 🔴 *"for a Moodle-plugin-shaped repository,
+'no licence file' is close to uninformative"*. 🟢 **p188 measured that over `17`
+plugin-shaped rows and it is backwards.**
+
+| measured | result |
+|---|---|
+| plugin-shaped rows that DO ship a licence file | 🟢 **`15` of `17`** |
+| of those, the full `GPL` text | 🟢 **`14`**, at a very tight fingerprint of **`35 147`–`35 200` B** |
+| FURTHER `GPL` grants recovered from headers *(limb `1` needed `≥3`)* | 🔴 **`0`** |
+
+🔴 **Limb `2` FIRES: `onbirdev` was CONVENTIONAL, not representative.** 🟢 For a Moodle
+plugin the licence FILE is the convention, so **its absence IS informative** — it means
+the repository is not following plugin convention at all. 🔵 p187 generalised from one row;
+`22` probed paths across four grant-absent rows returned nothing.
+
+🟢 **The positive control did more than validate the instrument — it extended p187's own
+reading:** `onbirdev/moodle-webservice_mcp` carries `6` `GPL` header hits in each of
+**FOUR** files *(`version.php`, `lib.php`, `locallib.php`, `db/access.php`)*, where p187
+named two, with `$plugin->component = 'webservice_mcp'`.
+
+### 🆕 🔴 The licence trap of the week: a README is not a grant, and for a Moodle plugin it is worse
+
+🔴 **Two rows off `topics/moodle` declare `MIT` in their README and nowhere else** —
+[`Rick-254/moodle-quizsmith`](https://github.com/Rick-254/moodle-quizsmith) *(`14 874` B
+README)* and
+[`VICKY07092005/moodle-5-1-authentic-relay`](https://github.com/VICKY07092005/moodle-5-1-authentic-relay)
+*(`11 332` B README)*. No licence file at `15` paths, no grant in `22` header paths.
+
+🟢 **A README claim is a CUE TO RE-PROBE, exactly as p186 settled for licence badges — and
+the re-probe came back empty.** 🔴 **And for a Moodle plugin the claim is doubly suspect:
+Moodle's own plugin rules require `GPL`, so a plugin that links Moodle's `GPL` core and
+claims `MIT` in prose is making a claim its dependency may not permit.** 🔵 Do not fork
+either row on that basis.
+
+### 🔴 And a defect caught mid-pass, recorded because it nearly shipped
+
+🔴 **This pass's first grant sweep reported the licence identifier `isc` for FOUR rows.**
+🟢 The cause was mine: the identifier regex carried a bare `ISC` alternative with no word
+boundary, and it matched inside the word **"Disclaimer"**. 🔵 Proof, run before the fix was
+believed: `grep -oiE "[a-z]*isc[a-z]*"` over `tsugi`'s `LICENSE` returns exactly
+`{Disclaimer, discussing}`. 🟢 **All four rows are `Apache-2.0`**, re-read with a
+word-bounded matcher and their first lines printed into the evidence file.
+
+🔵 **p187's rule generalises, and this is its second instance in two passes: a probe whose
+verdict is a SUBSTRING has not measured a licence.** 🟢 The `ISC` alternative is the
+cheapest possible example — three letters, and they are inside a word that appears in
+every permissive licence ever written.
+
+Evidence: [`evidence/openedx-agent-surface.2026-10-14-p188.tsv`](../evidence/openedx-agent-surface.2026-10-14-p188.tsv),
+[`evidence/plugin-header-channel.2026-10-14-p188.tsv`](../evidence/plugin-header-channel.2026-10-14-p188.tsv),
+[`evidence/mit-split-scope.2026-10-14-p188.tsv`](../evidence/mit-split-scope.2026-10-14-p188.tsv).
+
 ## Pass 187 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

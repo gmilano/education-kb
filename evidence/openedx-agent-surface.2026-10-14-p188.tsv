@@ -1,0 +1,36 @@
+# p188 — ACTION MV. Gap 427: does an MCP or agent-tool surface exist for Open edX ANYWHERE?
+# Channels read this pass: github.com/topics/open-edx at BOTH sort orders, and the openedx
+# org's own AI project, licence and docs read over raw.githubusercontent.com with HTTP codes.
+#
+# LIMB 1 (one exists -> Pattern 33's 12-14 week estimate collapses to 4-6)  : DOES NOT FIRE
+# LIMB 2 (none -> the adapter build is confirmed, AGPL the likely cause)    : FIRES ON THE
+#        FACT, AND ITS STATED CAUSE IS REFUTED BY THIS KB'S OWN DATA. See the bottom.
+channel	measured	result
+topics/open-edx?s=updated	22 repos exist, 20 rendered	0 MCP rows. 2 AI rows by their own wording: muhammadusamahoyrr/edx (0*, course-grounded AI tutor), abc4rd-hq/ABC4RD (0*, "AI-native academy platform foundation")
+topics/open-edx (stars, default)	22 repos exist, 20 rendered	0 MCP rows. Same 2 AI rows
+both sort orders compared	membership DIFFERS by 2 rows each way	?s=updated carries OpenRoost/curriculum-template + openedxou/captioned-image-xblock; the stars sort carries RizRiyz/edxapp-icon-generator + IndonesiaX/starter-openedx-theme. p185's rule holds: a channel is a page PLUS a sort order
+openedx/openedx-ai-extensions	EXISTS, HEAD 66d0792c	LICENSE 34 523 B = GNU AFFERO GENERAL PUBLIC (AGPL-3.0). README.rst 8 837 B: "experimental", "proof-of-concept". pyproject.toml 2 706 B present
+  its README.rst	grep -ic "mcp" = 0; grep -ic "server" = 0	the project's own front door does not mention MCP AT ALL
+  docs/how-tos/index.rst	HTTP 200, 111 B	toctree names TWO entries: mcp_integration AND mcp_example_server
+  docs/how-tos/mcp_integration.rst	HTTP 200, 9 604 B	VERBATIM: "Important: Open edX AI Extensions acts as an MCP CLIENT only"; "This application does not run or host MCP servers"; "You are responsible for deploying and maintaining your own MCP servers"; "This application will never expose MCP server functionality - it only consumes MCP tools from external servers"
+  docs/how-tos/mcp_example_server.rst	HTTP 200, 9 134 B	the ONLY server in the tree is a FastMCP `roll_dice` demo behind ngrok, labelled "This is a demonstration only... not intended for production use". It exposes NO Open edX data
+openedx/frontend-app-ai-assistant	git ls-remote EXIT 128	DOES NOT EXIST
+docs.openedx.org	getaddrinfo ENOTFOUND	🔴 NEW BLOCKED HOST. The rendered docs are unreachable here; every quotation above is read from the repository's own .rst source over the raw channel instead. This makes NINE hosts blocked (README's ledger had eight)
+#
+# THE VERDICT, and it is better than either pre-registered limb:
+# There is NO MCP server exposing Open edX anywhere this pass could reach. But Open edX has
+# NOT ignored agents — it ships an OFFICIAL, DOCUMENTED MCP CLIENT, and its docs refuse the
+# server role as POLICY ("will never expose"), not as a backlog item. The direction is
+# INVERTED from the 11-repo layer p187 found over Moodle/Canvas/Brightspace/Sisu/SCORM.
+#
+# 🔴 LIMB 2's STATED CAUSE — "AGPL is the likely cause" — IS REFUTED, by this KB's own rows:
+# Moodle is GPL-3 (strong copyleft) and carries THREE independent MCP servers (G36maid,
+# CloudDown, onbirdev). Copyleft therefore does not explain the absence. What distinguishes
+# Open edX is an ARCHITECTURAL CHOICE: extension is routed through its own plugin framework,
+# and that framework has declared the server side out of scope.
+#
+# WHAT IT COSTS AN ENGAGEMENT (Pattern 33 is amended, not collapsed):
+#   already built, do NOT rebuild : the LLM orchestration + tool-consumption half (official)
+#   must still be built           : the server half — Open edX data as MCP tools
+#   two risks a client must be told: the official client is AGPL-3.0, and it is EXPERIMENTAL
+#                                    by its own README. A proof-of-concept is not a platform.

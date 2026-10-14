@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🆕 🟢 **Two corrections to this table's own rows, one new LAYER, and the Open edX cell
+changes from an absence into a POLICY — which is a different thing to price.**
+
+### 🔴 AMENDED — the Open edX cell. "None found" was true and incomplete
+
+🔵 p187 wrote 🔴 *"Open edX (`AGPL-3`) — NO `MCP` server found on any page read this pass"*
+and priced the client as an adapter build. 🟢 **`ACTION MV` read `topics/open-edx` at both
+sort orders and the Open edX org itself. The absence holds. The CELL was wrong.**
+
+| platform | the agent surface, as measured this pass | licence | what it means for a build |
+|---|---|---|---|
+| 🔴 🟢 **Open edX** *(`AGPL-3`)* | 🟢 **an OFFICIAL `MCP` CLIENT exists**: [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions). 🔴 **And its docs refuse the server role as policy:** *"acts as an MCP CLIENT only"*, *"does not run or host MCP servers"*, **_"will never expose MCP server functionality"_**. The only server in its tree is a `roll_dice` demo behind `ngrok`, marked not for production | 🔴 **`AGPL-3.0`** *(`34 523` B)*, and 🔴 **"experimental" / "proof-of-concept" by its own README** | 🟢 **do NOT build the orchestration half — it exists and it is official.** 🔴 **Do build the server half, and assume you own it permanently** |
+| 🔴 **Chamilo, OpenOLAT, Sakai** | 🔴 still **none found** | — | adapter build |
+
+🔴 **And `Gap 427`'s stated cause is REFUTED by this table's own Moodle row: Moodle is
+`GPL-3.0`, strong copyleft, and carries THREE independent `MCP` servers.** 🔵 **Copyleft
+does not explain the gap.** 🟢 What distinguishes Open edX is that extension is routed
+through its own plugin framework and that framework has put the server side out of scope
+in writing. 🔵 **A licence can be dual-licensed; a documented design decision cannot be
+waited out.** Price accordingly and say why.
+
+### 🔴 AMENDED — `ralph`'s LRS cell carries a caveat it did not have
+
+🔵 p187 added the LRS layer and called `ralph` *"the agent's MEMORY of what the learner
+actually did"*. 🟢 **`ACTION MX` read its retention surface as code. The memory is not
+protected.**
+
+| what was checked | measured at `HEAD 91fef112` |
+|---|---|
+| 🟢 LRS HTTP API | 🟢 **route decorators are `get`, `put`, `post` and NOTHING ELSE — there is no `@router.delete`.** Over the LRS API a statement cannot be deleted |
+| 🔴 `xAPI` voiding | 🔴 `voidedStatementId` is accepted and its own description reads **"*Not implemented* Id of voided Statement to fetch"**. The spec's OWN substitute for deletion is absent |
+| 🔴 storage backend | 🔴 `BaseOperationType` declares **`DELETE`** *("deletes an existing record")* and **`UPDATE`** *("updates or overwrites an existing record")*; `--es-op-type` exposes them as a **first-class CLI option** |
+| 🔴 default write mode | 🔴 `default_operation_type = INDEX`, and `INDEX` *"creates a new record with a specific ID"* — so a re-write carrying an existing statement id **OVERWRITES** |
+| 🔴 immutability / append-only / WORM | 🔴 **ZERO occurrences in `6` files read.** The one "Immutability" string is the `xAPI` `format=canonical` docstring, about Activity/Verb representation — 🔴 **not a storage guarantee, and it must not be quoted as one** |
+
+🔴 **So `ralph` is append-only AT THE API LAYER AND NOWHERE ELSE. The audit record's
+protection is the absence of an HTTP route.** 🟢 Anyone holding Elasticsearch or MongoDB
+credentials deletes or overwrites statements using ralph's own CLI, in one documented
+option. 🔵 **Still the right LRS to adopt — it is `MIT` and it runs at national scale —
+but the WORM store is a SEPARATE line item, not a property you inherit.** Pattern `32`
+step `3` is amended.
+
+🔴 **This is the SECOND independent instance of p187's `dotty-tutor` finding**, and two
+unrelated projects make it a class rather than a bug: in `dotty-tutor` the teacher's
+`corrected_assessment` is `CASCADE`-deleted by its class; in `ralph` the record has no
+immutability at all. 🔵 **The human-oversight record is protected by convention, never by
+the store.**
+
+### 🆕 🟢 NEW LAYER — the credential, and it is the only cryptographically durable row here
+
+🔵 p187 added the record store. 🟢 **`topics/open-badges` supplies the layer above it, and
+the permissive rows are all on the `OB 3.0` / W3C Verifiable Credentials side of a
+migration.**
+
+| component | licence | layer | what it does |
+|---|---|---|---|
+| 🆕 🟢 **[`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget)** | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **Open Badges `3.0`** | badge/credential definition authoring on the current standard |
+| 🆕 🟢 **[`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep)** | 🟢 **`MIT`** *(`1 087` B)* | VC issuance | 🟢 built on the **Digital Credentials Consortium** stack — the MIT-led effort, i.e. the side a university registrar recognises |
+| 🆕 🟢 **[`iblai/wallet`](https://github.com/iblai/wallet)** | 🟢 **`MIT`** *(`1 063` B)* | holder wallet | 🟢 pairs with [`iblai/lms`](https://github.com/iblai/lms) *(`MIT`)*, already on this table — **one publisher covering LMS → credential → wallet** |
+| 🆕 🟢 **[`MrPrinceAli/proven`](https://github.com/MrPrinceAli/proven)** · **[`brody-0125/signet-campus`](https://github.com/brody-0125/signet-campus)** | 🟢 **`MIT`** *(`1 095` / `1 070` B)* | verification · campus issuance | the verifier and issuer ends |
+| 🔴 [`hoijui/obadgen`](https://github.com/hoijui/obadgen) | 🔴 `AGPL-3.0` *(`34 020` B)* | generation | copyleft — not a vendoring candidate |
+| 🔴 [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 `LGPL` *(`7 650` B)* | legacy | 🔵 Open Badges **`2.0`** — the generation this layer is leaving |
+
+🟢 **The licence/generation split is unusually clean and it favours a studio: permissive on
+`OB 3.0`/VC, copyleft on `2.0`.** 🔵 And it is the layer that answers this week's
+regulation *(see [`intel/market.md`](../intel/market.md))*: where Oklahoma, Maryland, the
+EU's Annex III and Vietnam's Decision `33/2026/QD-TTg` all demand a durable record of a
+human decision about a learner, **a verifiable credential is the one artefact in this
+stack that is durable by cryptography rather than by convention.**
+
+### 🟢 Platforms added to the routing table
+
+| platform | licence | region | layer / note |
+|---|---|---|---|
+| 🆕 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **`Apache-2.0`** *(`10 982` B)* | EMEA | `447`★ — 🟢 **a complete university LMS under a permissive grant.** p187's "permissive ROUTE" call, now read and confirmed. 🔴 No `MCP` surface |
+| 🆕 🟢 **[`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)** | 🟢 **`Apache-2.0`** *(`10 273` B)* | North America | `376`★ — the **LTI framework by the LTI spec's own author**. The integration layer, permissively licensed |
+| 🆕 🟢 **[`academico-sis/academico`](https://github.com/academico-sis/academico)** | 🟢 **`MIT`** *(`1 094` B)* | 🟢 **LATAM** | `404`★ — 🟢 **a permissive SIS built in-region.** The first time this table answers a LATAM SIS question with a LATAM row |
+| 🆕 🟢 **[`numbas/Numbas`](https://github.com/numbas/Numbas)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `215`★ — assessment authoring + marking, Newcastle University. LTI side is [`numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) 🟡 *(`Apache-2.0` **by reference**, `560` B)* |
+| 🆕 🟢 **[`openfun/marsha`](https://github.com/openfun/marsha)** | 🟢 **`MIT`** *(`1 078` B)* | EMEA | `151`★ — video for an LMS, **France Université Numérique**. 🔵 Same publisher as `ralph`: one EMEA public body now supplies two layers of this stack |
+| 🆕 🔴 **[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis)** | 🔴 `GPL` *(`15 214` B)* | EMEA | `646`★ SIS — copyleft |
+| 🆕 🔴 **[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms)** | 🔴 `GPL-3.0` *(`35 147` B)* | EMEA | `1`k★ — grant now read; still no `MCP` surface |
+
+### 🔴 DO-NOT-FORK, added this pass
+
+| row | verdict |
+|---|---|
+| 🆕 🔴 **[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)** | 🔴 `345`★, and the `GPL` grant is **by reference in the README only** — *"licensed under the GNU General Public License, the full license can be fou…"* — with **no licence file at `10` probed paths**. 🔵 `P971` instance SEVEN, and the weakest: **`GPL` requires its terms to travel WITH the work**, so a fork inherits an obligation whose text is not in the tree |
+| 🆕 🔴 **[`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest)** | 🔴 `36`★, **NOT OPEN SOURCE.** The whole `417` B licence: *"Source code is made available for transparency and personal non-commercial use only … You may NOT: Redistribute … Rebrand or redeploy this application commercially or publicly … Use this code as the basis for a competing product or service. All rights reserved."* |
+| 🆕 🔴 **[`Rick-254/moodle-quizsmith`](https://github.com/Rick-254/moodle-quizsmith)** · **[`VICKY07092005/moodle-5-1-authentic-relay`](https://github.com/VICKY07092005/moodle-5-1-authentic-relay)** | 🔴 Both claim **`MIT` in the README and nowhere else** — no licence file at `15` paths, no grant in `22` header paths. 🔴 **And both are Moodle-plugin-shaped, where Moodle's own rules require `GPL`** — an `MIT` claim over a plugin linking `GPL` core is a claim its dependency may not permit |
+
+Evidence: [`evidence/openedx-agent-surface.2026-10-14-p188.tsv`](../evidence/openedx-agent-surface.2026-10-14-p188.tsv),
+[`evidence/ralph-retention-surface.2026-10-14-p188.tsv`](../evidence/ralph-retention-surface.2026-10-14-p188.tsv),
+[`evidence/new-supply-grants.2026-10-14-p188.tsv`](../evidence/new-supply-grants.2026-10-14-p188.tsv).
+
 ## Pass 187 — 2026-10-14
 
 🆕 🟢 **The routing table gains a LAYER it has never had — the learning record store — and the

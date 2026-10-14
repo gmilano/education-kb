@@ -1,0 +1,39 @@
+slug	exist	sha	where	http	bytes	grant_text	identifier
+tsugiproject/tsugi	OK	7628e6a7	LICENSE	200	10273	YES	isc
+openfun/marsha	OK	2e4f4701	LICENSE	200	1078	YES	MIT License
+OpenOLAT/OpenOLAT	OK	8494a140	LICENSE	200	10982	YES	isc
+numbas/Numbas	OK	c9b8462c	LICENSE	200	11357	YES	isc
+numbas/numbas-lti-provider	OK	d57d77d7	LICENSE.md	200	560	YES	Apache License, Version 2.0
+academico-sis/academico	OK	d0cd78ca	LICENSE	200	1094	YES	MIT License
+OS4ED/openSIS-Classic	OK	5d546f20	NO-GRANT-FOUND	404	0	NO	-
+francoisjacquet/rosariosis	OK	232819b4	LICENSE	200	15214	YES	GNU GENERAL PUBLIC
+academic-innovation/django-lti	OK	85ff90a4	LICENSE	200	1098	YES	MIT License
+chamilo/chamilo-lms	OK	b00159b6	LICENSE	200	35147	YES	GNU GENERAL PUBLIC
+zijinz456/OpenTutor	OK	950ffb48	LICENSE	200	1068	YES	MIT License
+memphis-iis/MoFaCTS	OK	c93e16ec	LICENSE	200	34523	YES	GNU AFFERO GENERAL PUBLIC
+edmozley/freeitsm	OK	336cc0b1	LICENSE	200	1066	YES	MIT License
+yukazakiri/koakademy	OK	ccb9988a	LICENSE.md	200	34523	YES	GNU AFFERO GENERAL PUBLIC
+virtUOS/abstimmbar	OK	6bc59c5b	LICENSE	200	11358	YES	isc
+EduThemes/paper-lms	OK	92fe7977	LICENSE	200	1071	YES	MIT License
+jakerains/scormplayer	OK	fa12371e	LICENSE	200	1067	YES	MIT License
+lmsable/lmsable-skill	OK	b92e2053	LICENSE	200	1080	YES	MIT License
+ateeducacion/OmekaS-LearningObject	OK	f3a8988b	LICENSE	200	35813	YES	GNU GENERAL PUBLIC
+opensalt/OB3DefinitionWidget	OK	896596a4	LICENSE	200	1080	YES	MIT License
+wantaekchoi/vc-verifier	OK	1cf593a9	NO-GRANT-FOUND	404	0	NO	-
+andyfmiller/vc-dotnet-demos	OK	c6ecfb78	NO-GRANT-FOUND	404	0	NO	-
+oneorigin-2-0/dcc-credential-co-writer-monorep	OK	7be74ba0	LICENSE	200	1087	YES	MIT License
+hoijui/obadgen	OK	58989c10	LICENSE.txt	200	34020	YES	GNU AFFERO GENERAL PUBLIC
+activitypods/activitybadges	OK	194555c4	NO-GRANT-FOUND	404	0	NO	-
+iblai/wallet	OK	0be99d06	LICENSE	200	1063	YES	MIT License
+MrPrinceAli/proven	OK	3d0fe083	LICENSE	200	1095	YES	MIT License
+brody-0125/signet-campus	OK	0592f537	LICENSE	200	1070	YES	MIT License
+luisgf/openbadgeslib	OK	7d19141f	LICENSE.txt	200	7650	YES	GNU LESSER GENERAL PUBLIC
+marc-shade/docsingest	OK	9f1bf564	LICENSE	200	1079	YES	MIT License
+No-Suggest/NoSuggest	OK	449741f1	LICENSE	200	417	NO	-
+thepick/writing-feedback-tool	OK	84d403ac	LICENSE	200	1064	YES	MIT License
+gener8v/gener8v.tools.pii-scanner	OK	1fe58a42	LICENSE	200	1064	YES	MIT License
+edgentx/mtss-data-model-sample	OK	48ee1ab5	NO-GRANT-FOUND	404	0	NO	-
+alfredang/ai-mms	OK	c4c5fc06	NO-GRANT-FOUND	404	0	NO	-
+DecoyLex/ltix	OK	0a67ea3b	LICENSE	200	1068	YES	MIT License
+open-spaced-repetition/fsrs4anki-helper	OK	29208f22	License	200	1079	YES	MIT License
+globant-kb-p188/definitely-not-a-real-repo	EXIT128	-	-	-	0	NO	-

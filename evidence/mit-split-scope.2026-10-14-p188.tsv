@@ -1,0 +1,92 @@
+# p188 — ACTION MW. P1054 (compose/code/p1054-mit-plus-clause/mit_plus.py, UNMODIFIED) run
+# over every row this KB publishes as MIT in its p185-p188 sections. 46 rows + 1 negative.
+#
+# LIMB 1 (>=1 further MIT-body-plus-a-clause -> graspful is a pattern and a published
+#         licence is wrong somewhere) : FIRES, TWICE, and the mechanism is NEW.
+# LIMB 2 (0 -> the MIT column is clean): does not fire.
+#
+# CONTROLS
+#   POSITIVE willwearing/graspful -> NOT-OPEN-SOURCE:added-restriction, 1 439 B, 289 B excess,
+#            hits compete/hosted, managed/saas/software-as-a-service. REPRODUCES p187 EXACTLY.
+#   NEGATIVE globant-kb-p188/definitely-not-a-real-repo -> EXIT128.
+#   The sweep did NOT return a uniform verdict: 30 MIT, 13 NOT-MIT-BODY, 1 restricted,
+#   1 MIT-BODY-PLUS, 1 not-read. Per p187's rule, it measured something.
+slug	path	bytes	verdict	restriction_hits	excess_bytes
+g36maid/moodle-mcp	LICENSE	1064	MIT	-	0
+clouddown/polymtl-moodle-connect	LICENSE	1066	MIT	-	0
+kemalyy/edumints-scorm-skill	LICENSE	1069	MIT	-	0
+mathtrail/canvas-api	LICENSE	1066	MIT	-	0
+mathtrail/mathtrail-standalone	LICENSE	1066	MIT	-	0
+ink-waffle/sisu-mcp	package.json	999	NOT-MIT-BODY	-	0
+arnaudguiovanna/tutor-mcp	LICENSE	1073	MIT	-	0
+willwearing/graspful	LICENSE.md	1439	NOT-OPEN-SOURCE:added-restriction	compete,hosted, managed,saas,software-as-a-service	289
+simon-initiative/lti-example-tool	package.json	1005	NOT-MIT-BODY	-	0
+open-spaced-repetition/fsrs4anki-helper	License	1079	MIT	-	0
+zenglian990/ai_tutor_release	LICENSE	1068	MIT	-	0
+devissaputra/adaptive_socratic_tutor	LICENSE	1076	MIT	-	0
+faran70177784/edutune-ai	LICENSE	1073	MIT	-	0
+shuyunyuan/talentcoach	LICENSE	842	NOT-MIT-BODY	-	0
+mokangmedical/digital-sage	LICENSE	46	NOT-MIT-BODY	-	0
+crevextech/canvas-lms-mcp	package.json	535	NOT-MIT-BODY	-	0
+dmontgomery40/mcp-canvas-lms	package.json	3461	NOT-MIT-BODY	-	0
+cliffffffffff/guided-learning	LICENSE	1070	MIT	-	0
+yuanyinglong-91/lecture-notes-tutor	LICENSE	1072	MIT	-	0
+zemmeng/claude-study-system	LICENSE	1064	MIT	-	0
+openfun/ralph	LICENSE.md	1094	MIT	-	0
+scormflow/scorm-engine	LICENSE	1079	MIT	-	0
+elimu-ai/ml-event-simulator	LICENSE	1065	MIT	-	0
+decoylex/ltix	LICENSE	1068	MIT	-	0
+wingkwong/react-quiz-component	LICENSE	1070	MIT	-	0
+redmodd/tessera	LICENSE	1078	MIT	-	0
+iblai/lms	LICENSE	1063	MIT	-	0
+lplnufpi/essay-br	LICENSE	1114	MIT	-	0
+shmercer/writealizer	LICENSE	47	NOT-MIT-BODY	-	0
+onbirdev/moodle-webservice_mcp	NO-FILE-AT-17-PATHS	0	NOT-READ	-	-
+valentineus/moodle-webhooks	LICENSE.txt	35200	NOT-MIT-BODY	-	0
+bruchris/canvas-lms-mcp	LICENSE	1070	MIT	-	0
+chaz-clark/canvas-toolbox	LICENSE	1072	MIT	-	0
+kemalyy/edumints-scorm-mcp	LICENSE	1069	MIT	-	0
+siskinskai/spedlex	LICENSE	1077	MIT	-	0
+zachrouan/district-brain	LICENSE	1067	MIT	-	0
+educredentials/ec-issuer	pyproject.toml	1453	NOT-MIT-BODY	-	0
+ashutoshrana/haystack-ferpa-filter	LICENSE	12101	NOT-MIT-BODY	-	0
+pykt-team/pykt-toolkit	LICENSE	1066	MIT	-	0
+bigdata-ustc/edudata	LICENSE	11346	NOT-MIT-BODY	-	0
+uhafner/autograding-gitlab-action	LICENSE	1080	MIT	-	0
+jameskermode/mograder	LICENSE	1070	MIT	-	0
+algojudge/algojudge-runner	LICENSE	1092	MIT	-	0
+algojudge/algojudge-server	LICENSE	1092	MIT	-	0
+ktwyw/python-for-engineers	LICENSE	1328	MIT-BODY-PLUS:unclassified-addition	-	178
+myvipbackup2/china-k12-teacher-skills	LICENSE	11359	NOT-MIT-BODY	-	0
+globant-kb-p188/definitely-not-a-real-repo	-	0	EXIT128	-	-
+#
+# THE ROW THAT FIRED, AND WHAT THE 178 B ACTUALLY IS:
+# ktwyw/python-for-engineers, LICENSE, 1 328 B. Read verbatim over the raw channel at HEAD
+# 609d8459, the addition is NOT a narrowing — the MIT operative text is verbatim and intact:
+#   "Code in this repository (src/, tests/, *.py) is licensed under the MIT License.
+#    Teaching materials (notebooks, README files, cheatsheets, datasets created
+#    for this course) are licensed under CC BY 4.0."
+# This is a SCOPE SPLIT. New instrument P1056, 16/16 tests passing:
+#   compose/code/p1056-split-scope-licence/
+#
+# THE SECOND INSTANCE, found by probing for the shape and declared in a DIFFERENT PLACE:
+# siskinskai/spedlex README "## License": "Code: [MIT](LICENSE). Data (everything in
+# `data/`, `schema/` and the term lists in `sources/`): [CC BY 4.0](LICENSE-DATA)."
+# Measured: LICENSE 1 077 B (MIT) + LICENSE-DATA 17 023 B (full CC BY 4.0 text, HTTP 200).
+# 🔴 This KB published spedlex as MIT. The SPED VOCABULARY — the asset p187 called "the
+# unglamorous asset nobody budgets for and every SPED engagement needs" — is CC BY 4.0.
+#
+# IN BOTH INSTANCES THE CC HALF IS THE HALF A STUDIO WANTS, and CC BY's attribution
+# requirement is irrevocable. Neither can be silently white-labelled into a client course.
+#
+# A PUBLISHED FIGURE THAT NEEDS WIDENING: p187 published canonical MIT at 1 062-1 093 B over
+# 15 rows. Over 30 genuine MIT rows this pass the range is 1 063-1 114 B — lplnufpi/essay-br
+# measures 1 114 B, ABOVE p187's ceiling. No row was misclassified, because P1054's constant
+# MIT_CANONICAL_HIGH = 1 150 was set with headroom. The PUBLISHED RANGE was too narrow; the
+# instrument was not. Both facts are recorded because only one of them was a risk.
+#
+# INSTRUMENT LIMIT, newly measured: P1054's restriction vocabulary only runs AFTER its
+# MIT-body marker matches. No-Suggest/NoSuggest (417 B: "personal non-commercial use only",
+# "may NOT redistribute", "competing product", "All rights reserved") has no MIT body, so
+# P1054 returns NOT-MIT-BODY and says nothing about a licence that is plainly restricted.
+# 🔴 A NOT-MIT-BODY verdict is NOT a clean bill. 13 rows above carry it.

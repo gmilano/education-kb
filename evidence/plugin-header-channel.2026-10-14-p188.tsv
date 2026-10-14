@@ -1,0 +1,65 @@
+# p188 — ACTION MU / P1055. Gap 425: the Moodle/WordPress PLUGIN FILE HEADER channel,
+# extended from p187's 2-row population to every Moodle-shaped row this KB can reach.
+#
+# Oracles: existence = git ls-remote --symref (invented slug exits 128);
+#          grant     = raw.githubusercontent.com/<slug>/<SHA>/<path>, HTTP CODE checked.
+# Instrument: compose/code/p1056-split-scope-licence is NOT used here; the header probe is
+#          22 canonical plugin paths (version.php, lib.php, locallib.php, settings.php,
+#          db/access.php, index.php, classes/external.php, plugin.php, readme.txt, ...).
+#
+# CONTROLS
+#   POSITIVE onbirdev/moodle-webservice_mcp — p187 measured a GPL grant in its headers and
+#            in NO licence file. REPRODUCED, and EXTENDED: 6 GPL header hits in each of
+#            FOUR files (version.php, lib.php, locallib.php, db/access.php). p187 named two.
+#            $plugin->component = 'webservice_mcp', $plugin->version = 2026072300.
+#   NEGATIVE globant-kb-p188/definitely-not-a-real-repo -> EXIT128.
+#
+# LIMB 1 needed >=3 FURTHER GPL grants recovered from rows recorded as grant-absent.
+# IT RECOVERED 0. LIMB 2 FIRES: onbirdev was CONVENTIONAL, not representative.
+
+## (a) STRICT population — plugin-shaped rows inside this KB's recorded grant-absent set
+slug	licence_file	plugin_headers	verdict
+loyaniu/moodle-mcp	NONE at 15 paths	NO GRANT in 22 paths	ABSENCE HOLDS — and now on two independent channels, not one
+hesham0-0nasser/tutor-lms-mcp	NONE at 15 paths	NO GRANT in 22 paths	ABSENCE HOLDS (WordPress Tutor LMS shape — the channel that should have worked)
+ruud0/aula-virtual-mcp	NONE at 15 paths	NO GRANT in 22 paths	ABSENCE HOLDS
+P1ckle3/blackboard-mcp	NONE at 15 paths	NO GRANT in 22 paths	ABSENCE HOLDS
+
+## (b) MECHANISM population — every Moodle-plugin-shaped row seen this pass
+slug	licence_file	bytes	identifier	note
+didactika/moodle-local_servicemanager	LICENSE	35149	GPL	full GPL text
+didactika/moodle-local_iconrestyle	LICENSE	35148	GPL	full GPL text
+moodlehq/moodle-local_ci	composer.json	455	GPL-3.0-or-later	MANIFEST field, no licence file
+uaiblaine/moodle-local_dimensions	COPYING.txt	35147	GPL	full GPL text
+uaiblaine/moodle-local_awareness	COPYING.txt	35147	GPL	full GPL text
+uaiblaine/moodle-block_dimensions	COPYING.txt	35147	GPL	full GPL text
+eduplay-moodle-suite/moodle-tiny_eduplay	LICENSE	35149	GPL	full GPL text
+eduplay-moodle-suite/moodle-repository_eduplay	LICENSE	35149	GPL	full GPL text
+eduplay-moodle-suite/moodle-media_eduplay	LICENSE	35149	GPL	full GPL text
+eduplay-moodle-suite/moodle-local_eduplay	LICENSE	35149	GPL	full GPL text
+valentineus/moodle-webhooks	LICENSE.txt	35200	GPL	full GPL text
+NASMAK-Technologies/moodle-block_learnboard	LICENSE	35149	GPL	full GPL text
+anarosiris/moodle-local_efscorm	LICENSE	35149	GPL	full GPL text
+jeanlucio/moodle-block_playerhud	COPYING.txt	35149	GPL	full GPL text
+ransomleak/moodle-local_ransomleak	LICENSE	35147	GPL	full GPL text
+solin-repo/moodle-block_atrisk	LICENSE	703	GPL-3	P971 — the grant is BY REFERENCE, not the terms
+alvaarocl/taskbot	LICENSE	1075	MIT License	a Moodle-adjacent bot, NOT a plugin tree
+Rick-254/moodle-quizsmith	NONE at 15 paths	0	-	README claims "MIT License" in 14 874 B. NO licence file, NO header grant
+VICKY07092005/moodle-5-1-authentic-relay	NONE at 15 paths	0	-	README claims "MIT License" in 11 332 B. NO licence file, NO header grant
+#
+# THE RESULT THAT MATTERS, AND IT RETIRES p187's OWN RULE:
+# p187 concluded "for a Moodle-plugin-shaped repository, 'no licence file' is close to
+# uninformative — the grant lives where this KB had never looked". 🔴 MEASURED OVER 17
+# plugin-shaped rows, THAT IS BACKWARDS. 15 of 17 DO ship a licence file; 14 of them the
+# full GPL text at a very tight fingerprint of 35 147-35 200 B. For a Moodle plugin the
+# licence FILE is the convention. Its absence IS informative: it means the repository is
+# not following plugin convention at all. p187 generalised from a single row.
+#
+# THE BONUS FINDING, worth more than the limb: TWO rows declare MIT in the README ONLY.
+# A README claim is not a grant — the same shape p185/p186 settled for licence BADGES.
+# 🔴 And for a MOODLE PLUGIN an MIT README claim is doubly suspect: Moodle's own plugin
+# rules require GPL, so a plugin that links Moodle's GPL core and claims MIT in prose is
+# making a claim its dependency may not permit. Do not fork either row on that basis.
+#
+# GAP 425 IS DISCHARGED. New Gap 428: the header channel is now measured as near-empty for
+# Moodle, but WordPress-plugin-shaped rows were 1 (tutor-lms-mcp) and it had no grant
+# anywhere, so the WordPress header convention is still UNTESTED on this shelf.

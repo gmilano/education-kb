@@ -1,0 +1,34 @@
+# p188 — ACTION MX. openfun/ralph's retention and deletion surface, read as CODE at
+# HEAD 91fef112 over raw.githubusercontent.com with HTTP codes checked.
+# docs/ were read first and are SILENT on the question: README.md (6 880 B), docs/index.md
+# (6 565 B) and docs/features/backends.md (6 557 B) carry ZERO hits for
+# delet|retention|immutab|append-only|WORM|erasur|GDPR|purge. So the docs cannot answer it.
+#
+# LIMB 1 (append-only or retention-pinned -> Pattern 32 step 3 is sound as written)
+# LIMB 2 (statements freely deletable -> step 3 needs a WORM store beside the LRS)
+# RESULT: THE ANSWER SPLITS BY LAYER, and LIMB 2 carries the consequence.
+layer	file	bytes	measured
+LRS HTTP API	src/ralph/api/routers/statements.py	30 702	route decorators present: @router.get("") @router.get("/") @router.put("/") @router.put("") @router.post("/") @router.post(""). 🟢 THERE IS NO @router.delete. A statement cannot be deleted over the LRS API at all
+LRS HTTP API	same	same	🔴 `voidedStatementId` IS accepted as a query parameter and its own description reads "**Not implemented** Id of voided Statement to fetch". So ralph does not implement xAPI VOIDING retrieval — the spec's OWN substitute for deletion is absent
+LRS HTTP API	same	same	the single "Immutability" string in the file (line 436) is the xAPI `format=canonical` parameter's docstring, about Activity/Verb REPRESENTATION. 🔴 It is NOT a storage guarantee and must not be quoted as one
+storage backend	src/ralph/backends/data/base.py	26 632	class BaseOperationType(Enum) declares INDEX, CREATE, DELETE, UPDATE, APPEND. Docstrings verbatim: 'DELETE (str): deletes an existing record.' 'UPDATE (str): updates or overwrites an existing record.' 'INDEX (str): creates a new record with a specific ID.'
+storage backend	same	same	🔴 default_operation_type = BaseOperationType.INDEX. INDEX writes to a SPECIFIC ID, so a re-write carrying an existing statement id OVERWRITES it
+storage backend	src/ralph/backends/data/es.py	16 303	DELETE is implemented in the Elasticsearch write path ("operation_type == BaseOperationType.DELETE (by exclusion)"); REFRESH_AFTER_WRITE is configurable
+storage backend	src/ralph/backends/data/mongo.py	18 062	present; the CHANGELOG carries "Make MongoDB delete-failure tests tolerant to pymongo error message changes", i.e. deletion is an exercised path
+CLI	CHANGELOG.md	19 637	"--es-op-type" exposes the operation type (create, index, update, delete) as a FIRST-CLASS CLI OPTION
+whole tree read	6 files	-	🔴 ZERO occurrences of append-only, WORM, or any immutability/retention MODE. There is no course-scoped deletion either: deletion is per-record, by id, at the backend
+#
+# THE VERDICT: ralph is append-only AT THE API LAYER AND NOWHERE ELSE. The audit record's
+# protection is THE ABSENCE OF AN HTTP ROUTE, not a guarantee of the store. A holder of
+# Elasticsearch or MongoDB credentials deletes or overwrites statements with ralph's OWN
+# CLI, in one documented option.
+#
+# 🔴 LIMB 2 FIRES. Pattern 32 step 3 needs a WORM store beside the LRS and the estimate grows.
+#
+# WHY THIS IS A TREND AND NOT A ONE-OFF: it is the SECOND INDEPENDENT INSTANCE of p187's
+# dotty-tutor finding. There, the teacher's `corrected_assessment` — the human's override of
+# an AI grade — was ondelete=CASCADE from two parents. Here, the LRS that would hold the same
+# record has no immutability at all. Two unrelated projects, same defect class: 🔴 the
+# human-oversight record is protected by CONVENTION, never by the STORE. Three regimes now
+# require that record (NA: Oklahoma, Maryland; EU: Annex III high-risk assessment; APAC:
+# Vietnam Decision 33/2026/QD-TTg names automated grading of students a high-risk system).

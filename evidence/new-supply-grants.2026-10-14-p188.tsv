@@ -1,0 +1,63 @@
+# p188 — grant probe over the shelf-material candidates this pass's 12-page census surfaced.
+# Oracles: existence = git ls-remote --symref (invented slug exits 128); grant = raw
+# .githubusercontent.com/<slug>/<SHA>/<path> with the HTTP CODE checked (a 404 body is 14 B).
+# CONTROLS: positive open-spaced-repetition/fsrs4anki-helper -> MIT, 1 079 B, file named
+# "License" (reproduces p186's published value); negative -> EXIT128. Not a uniform verdict.
+#
+# 🔴 AN INSTRUMENT DEFECT CAUGHT AND FIXED MID-PASS, recorded because it nearly shipped:
+# the first run of this sweep reported `isc` as the licence identifier for FOUR rows. The
+# identifier regex carried a bare `ISC` alternative with no word boundary, and it matched
+# inside the word "Disclaimer". Proof: grep -oiE "[a-z]*isc[a-z]*" over tsugi's LICENSE
+# returns exactly {Disclaimer, discussing}. All four rows are APACHE-2.0, re-read below with
+# a word-bounded matcher and their first lines printed. 🔵 p187's rule generalises: a probe
+# whose verdict is a SUBSTRING has not measured a licence.
+slug	licence_path	bytes	identifier	region	what it is
+tsugiproject/tsugi	LICENSE	10273	Apache-2.0	North America	the LTI application framework from the author of the IMS LTI spec (Chuck Severance). 376*. RE-READ: first line is "Apache License / Version 2.0, January 2004"
+OpenOLAT/OpenOLAT	LICENSE	10982	Apache-2.0	EMEA	a full Swiss university LMS, 447*. p187 called OpenOLAT "a permissive ROUTE" — the grant is now READ and it is Apache-2.0, confirming that call
+numbas/Numbas	LICENSE	11357	Apache-2.0	EMEA	the Numbas assessment engine, 215*. Newcastle University
+numbas/numbas-lti-provider	LICENSE.md	560	Apache-2.0	EMEA	🔴 P971, instance SIX: 560 B says Apache-2.0 BY REFERENCE, not the terms. Say "by reference"
+virtUOS/abstimmbar	LICENSE	11358	Apache-2.0	EMEA	classroom voting, Universitat Osnabruck. 1*
+openfun/marsha	LICENSE	1078	MIT	EMEA	video management for an LMS, 151*. France Universite Numerique, same publisher as ralph
+academico-sis/academico	LICENSE	1094	MIT	LATAM	a permissive SIS, 404*. 🟢 the permissive-SIS route p174 went twelve passes calling non-existent now has a SECOND row
+academic-innovation/django-lti	LICENSE	1098	MIT	North America	LTI 1.3 for Django, University of Michigan Academic Innovation. 26*
+zijinz456/OpenTutor	LICENSE	1068	MIT	APAC	140*; already on this shelf, grant re-read and confirmed this pass
+edmozley/freeitsm	LICENSE	1066	MIT	EMEA	101*
+EduThemes/paper-lms	LICENSE	1071	MIT	Global	4*
+jakerains/scormplayer	LICENSE	1067	MIT	North America	a SCORM player, 0*
+lmsable/lmsable-skill	LICENSE	1080	MIT	Global	🟢 an agent SKILL for an LMS — the skill form p186 first saw with edumints, now a second vendor
+marc-shade/docsingest	LICENSE	1079	MIT	North America	6*; document ingestion, surfaced off topics/ferpa
+thepick/writing-feedback-tool	LICENSE	1064	MIT	Global	writing feedback, off topics/edtech
+gener8v/gener8v.tools.pii-scanner	LICENSE	1064	MIT	Global	a PII scanner off topics/ferpa — the guardrail layer p187 opened
+DecoyLex/ltix	LICENSE	1068	MIT	Global	LTI tooling, 2*
+opensalt/OB3DefinitionWidget	LICENSE	1080	MIT	North America	🟢 OPEN BADGES 3.0 definition widget — see the new category below
+oneorigin-2-0/dcc-credential-co-writer-monorep	LICENSE	1087	MIT	North America	🟢 built on the Digital Credentials Consortium (DCC) stack, the MIT-led VC effort
+iblai/wallet	LICENSE	1063	MIT	North America	a credential WALLET. Same publisher as iblai/lms (MIT, 14*)
+MrPrinceAli/proven	LICENSE	1095	MIT	Global	credential verification
+brody-0125/signet-campus	LICENSE	1070	MIT	Global	campus credentialing
+hoijui/obadgen	LICENSE.txt	34020	AGPL-3.0	EMEA	Open Badges generator — copyleft, NOT a vendoring candidate
+luisgf/openbadgeslib	LICENSE.txt	7650	LGPL	EMEA	the older Open Badges 2.0 library, 1*
+chamilo/chamilo-lms	LICENSE	35147	GPL-3.0	EMEA	1k*; the GPL fingerprint, identical to the Moodle-plugin cohort
+francoisjacquet/rosariosis	LICENSE	15214	GPL	EMEA	a SIS, 646*
+ateeducacion/OmekaS-LearningObject	LICENSE	35813	GPL	EMEA	Canary Islands government education-technology unit
+memphis-iis/MoFaCTS	LICENSE	34523	AGPL-3.0	North America	adaptive-practice research system, University of Memphis. 2*
+yukazakiri/koakademy	LICENSE.md	34523	AGPL-3.0	APAC	7*
+OS4ED/openSIS-Classic	NONE at 10 paths	0	-	North America	🔴 345*, and the grant is BY REFERENCE IN THE README ONLY: "licensed under the GNU General Public License, the full license can be fou..." with NO licence file in the tree. P971, instance SEVEN — and the weakest yet, because GPL requires the terms to travel WITH the work
+No-Suggest/NoSuggest	LICENSE	417	-	Global	🔴 NOT OPEN SOURCE, 36*. Verbatim: "Source code is made available for transparency and personal non-commercial use only... You may NOT: Redistribute... Rebrand or redeploy this application commercially or publicly... Use this code as the basis for a competing product or service. All rights reserved."
+wantaekchoi/vc-verifier	NONE at 15 paths	0	-	APAC	no grant found; probe recorded
+andyfmiller/vc-dotnet-demos	NONE at 15 paths	0	-	North America	no grant found; probe recorded
+activitypods/activitybadges	NONE at 15 paths	0	-	EMEA	no grant found; probe recorded. 6*
+edgentx/mtss-data-model-sample	NONE at 15 paths	0	-	North America	no grant found; probe recorded
+alfredang/ai-mms	NONE at 15 paths	0	-	APAC	no grant found; probe recorded. 6*. Sibling of alfredang/AI-LMS-TMS, also grant-absent since p187
+#
+# THE APACHE BYTE FINGERPRINT WIDENS. This KB held Apache-2.0 at 11 282-11 359 B. Measured
+# this pass: tsugi 10 273 B and OpenOLAT 10 982 B are both BELOW that floor and both are
+# full Apache-2.0 text. New measured range 10 273-11 359 B. 🔴 A byte-count-only classifier
+# would have missed both. Bytes corroborate; only reading decides.
+#
+# GAP 421 NOW HOLDS FOUR DISTINCT SUB-1kB LICENCE SHAPES, and only one of them is a grant:
+#   1 the CRAN munon         — grant in the manifest (shmercer/writeAlizer, 47 B)
+#   2 the TITLE-ONLY stub    — no permission clause at all (MoKangMedical/digital-sage, 46 B)
+#   3 ALL RIGHTS RESERVED borrowing MIT's warranty disclaimer (ShuyunYuan/talentcoach, 842 B)
+#   4 🆕 SOURCE-AVAILABLE, non-commercial, anti-compete (No-Suggest/NoSuggest, 417 B)
+#   plus the P971 family: terms BY REFERENCE (numbas-lti-provider 560 B, moodle-block_atrisk
+#   703 B, and openSIS-Classic with no file at all)

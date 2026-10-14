@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 188 — 2026-10-14
+
+🆕 🟢 **One new pattern and three amendments, two of which REPAIR a step this KB published
+as sound. Every repository named below had its grant read over the raw channel this pass
+with the HTTP code checked.**
+
+### 🔴 Amendment `1` — Pattern `32` step `3` was NOT sound. It needs a WORM store
+
+🔵 p187 published Pattern `32` with step `3` as *"PERSIST it as `xAPI` — an LRS **outside**
+the LMS, so deleting a course in the LMS cannot reach the record"*, and pre-registered
+`ACTION MX` to check `ralph`'s retention surface before treating that as complete. 🟢 **It
+was right to wait. Limb `2` fired.**
+
+| what was checked at `HEAD 91fef112` | measured |
+|---|---|
+| 🟢 LRS HTTP API | 🟢 route decorators are **`get`, `put`, `post` and nothing else** — there is **no `@router.delete`.** A statement cannot be deleted over the LRS API |
+| 🔴 `xAPI` voiding | 🔴 `voidedStatementId` is accepted; its own description reads **"*Not implemented* Id of voided Statement to fetch"** |
+| 🔴 storage layer | 🔴 `BaseOperationType` declares **`DELETE`** *("deletes an existing record")* and **`UPDATE`** *("updates or overwrites an existing record")*; `--es-op-type` exposes them as a **first-class CLI option** |
+| 🔴 default write mode | 🔴 `default_operation_type = INDEX`, which *"creates a new record with a specific ID"* — a re-write carrying an existing statement id **OVERWRITES** |
+| 🔴 append-only / WORM / retention mode | 🔴 **zero occurrences across `6` files read.** The one `"Immutability"` string is the `xAPI` `format=canonical` docstring, about Activity/Verb REPRESENTATION — not a storage guarantee |
+| course-scoped deletion | 🔵 does not exist either way; deletion is per-record, by id, at the backend |
+
+🔴 **So step `3` as written bought LESS than it claimed.** Putting the record outside the
+LMS does stop the LMS from reaching it — 🟢 that half is true and worth having — 🔴 **but it
+does not make the record durable. Its protection is the absence of an HTTP route, and
+anyone with Elasticsearch or MongoDB credentials bypasses it using ralph's own CLI.**
+
+🟢 **Step `3` is REPLACED:**
+
+| step | component | licence, as measured | what it contributes |
+|---|---|---|---|
+| `3a` | 🟢 **KEEP `ralph` as the LRS** — [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** *(`LICENSE.md`, `1 094` B)* | 🟢 still the right choice: `xAPI` in a standard format, run at national scale by France Université Numérique, and **append-only to the agent**, which is the actor you are defending against most of the time |
+| 🆕 `3b` | 🔴 **ADD A WORM TARGET BESIDE IT.** Dual-write every oversight statement to object storage with an **object-lock / retention-pinned** bucket | — *(infrastructure, not a repo)* | 🔴 **this is the step that makes the record survive a credentialed insider.** The LRS stays queryable; the lock-bucket copy is the evidence |
+| 🆕 `3c` | 🟢 **PIN the operation type.** Set the backend operation type explicitly and **refuse `DELETE`/`UPDATE`/`INDEX`-over-existing** in the deployment's own configuration and CI check | — | 🟢 cheap, and it closes the default: `INDEX` overwrites by design, so leaving the default in place is a decision, not an accident |
+| 🆕 `3d` | 🟢 **VERIFY WITH A LIVE DELETE, never a config review** | — | 🔵 the same rule p187 set for `dotty-tutor`'s `ondelete` clauses. Attempt the delete through both the API and the backend, and keep the output |
+
+🟡 **Estimate grows: steps `1`–`3` move from `6`–`8` weeks to `8`–`10`.** 🔴 **Step `2`
+remains the whole value and step `3b` is now second — if a client declines both, the rest
+of the pattern is decoration.**
+
+🟢 **And the sales argument got stronger, not weaker.** Two unrelated, well-built projects
+now show the same defect class *(see [`intel/trends.md`](../intel/trends.md) Trend `1`)*.
+🔵 **That means a studio can walk into a meeting, run one live delete against whatever the
+client already has, and show the audit trail disappear.** It is a demonstration, not a
+claim.
+
+### 🔴 Amendment `2` — Pattern `33`'s Open edX row is wrong in BOTH directions
+
+🔵 p187's row read 🔴 *"Open edX — **nothing exists** — the whole adapter. Price it as a
+build"*, at `12`–`14` weeks. 🟢 **`ACTION MV` read `topics/open-edx` at both sort orders and
+the Open edX org itself. The absence of a SERVER holds; "nothing exists" does not.**
+
+| if the client runs… | adopt | licence | what you still have to build |
+|---|---|---|---|
+| 🔴 🟢 **Open edX** | 🟢 **[`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) — the OFFICIAL `MCP` CLIENT and workflow framework.** 🟢 **Do NOT rebuild this half** | 🔴 **`AGPL-3.0`** *(`34 523` B)*, and 🔴 **"experimental" / "proof-of-concept" by its own `README.rst`** | 🔴 **the SERVER half, permanently.** Its docs state *"does not run or host MCP servers"* and **_"will never expose MCP server functionality"_**. Build a `FastMCP` server over Open edX's existing REST APIs; the docs' own `mcp_example_server` is a `roll_dice` demo behind `ngrok`, marked not for production, and is useful only as a transport template |
+
+🟡 **Revised estimate: `8`–`10` weeks, not `12`–`14`.** 🔵 The orchestration, tool-wiring
+and model-plumbing half is official and exists; what remains is one `FastMCP` server plus
+the governance wrapper. 🔴 **But two risks go in the SOW, not the appendix: the official
+client is `AGPL-3.0`** *(so a hosted derivative triggers network-copyleft — the exact
+question a client building a commercial tutoring service must answer before step `1`)*,
+🔴 **and it is experimental by its author's own description. A proof-of-concept is not a
+platform, and its interfaces will move.**
+
+🟢 **And delete the licence explanation from the pattern.** p187 attributed the Open edX
+gap to `AGPL`. 🔴 **This KB's own Moodle rows refute it — `GPL-3.0` is strong copyleft and
+carries three independent `MCP` servers.** 🔵 The cause is Open edX's plugin architecture
+and a stated policy, which is a far more durable fact: a licence can be dual-licensed; a
+documented design decision cannot be waited out. 🟢 **Say that in the meeting; it is the
+difference between "wait for upstream" and "this is yours to own".**
+
+### 🆕 🟢 Pattern `34` — the split-scope licence audit, before the course ships
+
+🔵 **Why this is a pattern and not a checklist item:** `ACTION MW` ran `P1054` over all
+`46` rows these pages publish as `MIT` and found **two** whose content half is **`CC BY
+4.0`**, not `MIT`. 🟢 **Education repositories are code PLUS content by construction** — a
+course is notebooks, a tutor is an item bank, a de-identifier is a term list — 🔴 **so the
+half a studio actually delivers to a client is routinely the half under a different
+licence.**
+
+| step | what | component / instrument | why |
+|---|---|---|---|
+| `1` | 🟢 **Classify every licence file, don't pattern-match it** | 🟢 [`compose/code/p1054-mit-plus-clause`](p1054-mit-plus-clause/README.md) *(`14` tests)* + 🆕 [`compose/code/p1056-split-scope-licence`](p1056-split-scope-licence/README.md) *(`16` tests)* | 🔴 `P1054` catches a NARROWED grant *(`graspful`'s anti-SaaS clause under MIT's body)*; 🆕 `P1056` catches a SPLIT one. **Both pass a body-matching classifier as `MIT`** |
+| `2` | 🟢 **Probe three channels, not one** | the licence file · a **second** licence file *(`LICENSE-DATA`, `LICENSE-CC`)* · **the README's `## License` section** | 🔴 `spedlex` declares its split in the README and ships the CC text in `LICENSE-DATA`. A root-anchored `LICENSE`-only probe reads it as clean `MIT` — which is what this KB did |
+| `3` | 🔴 **Ask which half you are selling** | — | 🔴 **This is the step that costs money if skipped.** For [`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers) the notebooks ARE the product; for [`siskinskai/spedlex`](https://github.com/siskinskai/spedlex) the `data/`, `schema/` and term lists ARE the repo. In both, the deliverable is the `CC BY` half |
+| `4` | 🟢 **Carry the attribution into the deliverable** | — | 🟢 `CC BY` is a cheap obligation and a perfectly good one — 🔴 **but it is irrevocable and it travels.** A white-labelled client course built on `CC BY` notebooks breaches on delivery |
+| `5` | 🔴 **Read every sub-`1`kB licence file by hand** | — | 🔴 Four distinct shapes now sit on this shelf and only ONE is a grant: the `CRAN` stub *(grant in the manifest, `47` B)*, the TITLE-ONLY stub *(no permission clause, `46` B)*, ALL-RIGHTS-RESERVED borrowing MIT's warranty disclaimer *(`842` B)*, and 🆕 **source-available non-commercial** *(`No-Suggest/NoSuggest`, `417` B)*. 🔴 **`P1054` returns `NOT-MIT-BODY` for the last one and says nothing — a `NOT-MIT-BODY` verdict is not a clean bill** |
+| `6` | 🟡 **Treat a README licence claim as a cue to re-probe, never as a grant** | — | 🔵 the rule p186 settled for BADGES, now with two more instances: `moodle-quizsmith` and `moodle-5-1-authentic-relay` both claim `MIT` in prose with no grant at `15` licence paths or `22` header paths. 🔴 **And both are Moodle-plugin-shaped, where Moodle's rules require `GPL`** |
+
+🟡 **Estimate: `3`–`5` days as a fixed-price package per `20`–`30` candidate repositories**,
+run BEFORE the architecture is chosen. 🟢 **Sell it as risk reduction with a named
+precedent:** `graspful` is agent-first course authoring that *"looks like the best find of
+the pass"* and breaches on delivery for any hosted client service, and `spedlex` is an
+asset this KB itself published under the wrong licence for three passes.
+
+### 🟢 Amendment `3` — Pattern `32` step `5` gets a licence correction, and it is ours
+
+🔴 **Step `5` names [`siskinskai/spedlex`](https://github.com/siskinskai/spedlex) as
+`MIT` *(`1 076` B)*. The code is `MIT`. The VOCABULARY — `data/`, `schema/` and the term
+lists in `sources/` — is `CC BY 4.0`, shipped as `LICENSE-DATA` at `17 023` B.** 🟢 The
+component stays in the pattern, unchanged and still recommended; the licence column now
+reads **`MIT` (code) + `CC BY 4.0` (data)**, and step `4` of Pattern `34` applies to it.
+
+🔵 **This is the single most load-bearing instance of the new shape on this shelf**, because
+`spedlex` is used INSIDE a client's student-data de-identification pipeline. 🟢 Attribution
+has to appear in the client's own deliverable, and that is a sentence in a SOW, not a
+surprise in a review.
+
+### 🟢 Routing additions to existing patterns, grants verified this pass
+
+| pattern | addition | licence |
+|---|---|---|
+| Pattern `33` | 🟢 **[`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)** for the LTI layer — written by the author of the LTI specification | 🟢 `Apache-2.0` *(`10 273` B)* |
+| Pattern `33` | 🟢 **[`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)** where the client is on Django | 🟢 `MIT` *(`1 098` B)* |
+| Pattern `33` | 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** as the permissive LMS target when the client has no incumbent — 🔴 but it has **no `MCP` surface**, so it is a Pattern `33` BUILD, not an adopt | 🟢 `Apache-2.0` *(`10 982` B)* |
+| Pattern `32` | 🟢 **[`numbas/Numbas`](https://github.com/numbas/Numbas)** for assessment authoring and marking where the oversight record needs an item bank under it | 🟢 `Apache-2.0` *(`11 357` B)* |
+| 🟢 **a LATAM engagement** | 🟢 **[`academico-sis/academico`](https://github.com/academico-sis/academico)** — a permissive SIS, `404`★, **built in-region**. 🔵 For twelve passes this KB said no permissive SIS existed | 🟢 `MIT` *(`1 094` B)* |
+| 🟢 **the credential layer** *(new)* | 🟢 **[`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget)** + **[`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep)** + **[`iblai/wallet`](https://github.com/iblai/wallet)** | 🟢 `MIT` *(`1 080` / `1 087` / `1 063` B)* |
+
+🔵 **Why the credential layer belongs in Pattern `32` and not in a pattern of its own yet:**
+it is the only artefact in this stack that is durable by **cryptography** rather than by
+convention, and Pattern `32` is entirely about durability. 🟡 Promoted to its own pattern
+once one of those rows is measured in production rather than read.
+
 ## Pass 187 — 2026-10-14
 
 🆕 🟢 **Two new patterns and three amendments. Every repository named below had its grant read over
