@@ -3,6 +3,244 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **`P0a` was installed as a gate one pass ago. This pass it FIRED, and the saving is
+measured: it answered `3` of p195's `4` pre-registered actions before a line of code was
+written, and one of those three had been pre-registered as an instrument this KB proved does
+not work four passes earlier.** 🟢 **`P0a` stays step one, and this pass adds the two patterns
+that close `P0b`'s stated limits.**
+
+### 🟢 `P0a` — Read the register before building the instrument — **MEASURED, keep it**
+
+🔵 Unchanged from p195; the wiring is in that section below. 🟢 **What is new is its yield:**
+
+| p195's pre-registered action | what `P0a`'s grep returned | what it saved |
+|---|---|---|
+| copyleft byte bands | 🟢 **`P420`** — *"size does not identify"*, with pristine sizes already recorded; `P419` for the header read | the identity half was already answered; only the **narrowing** half was new |
+| `docs/`+`legal/`+`.github/` probe | 🔴 **`P441`** — *"widening a list cannot fix a list"*, with a suite and three prior failures on the same row | 🔴 **the whole instrument. It was already refuted** |
+| population re-extract | 🟢 **`p192`'s population rule**, quotable verbatim from `repos/foundations.md` | the rule did not have to be re-invented, so the diff is comparable |
+| *(the fourth was `P0a` itself)* | — | — |
+
+🟢 **Exit condition, restated because it paid:** if a hit describes the defect, **cite it and
+spend the pass elsewhere.** 🔴 Three consecutive passes had recorded this failure before the
+gate existed; this is the first pass where the gate ran first and the recurrence did not happen.
+
+🔴 **The honest footnote: the gate protects the headline, not every line.** This pass's own
+population extractor shipped **two list-widenings** *(`repos/..`, then `repos/...`)* and its
+throwaway `12`-name licence probe **missed `frappe/education`** at lowercase `license.txt`.
+🟢 **Run `P0a` against the small instruments too, not just the pass's headline build.**
+
+### 🆕 🟢 `P0c` — The tree channel: how to sustain an ABSENCE, not just fail to find a presence
+
+🔵 **This closes `P0b`'s stated limit** *("this reads the ROOT only")*, which stood open from
+p195 through `p969`. 🔵 Wiring: [`compose/code/p196-none-tree-reach/`](code/p196-none-tree-reach/),
+suite **`24`/`24`**.
+
+```bash
+# WHEN: any time you are about to report "no licence" / "no file of kind X".
+# WHY : a filename list can only FIND.  To sustain an ABSENCE you must ENUMERATE (P441).
+#       Measured on this shelf: 19 root filenames missed a ROOT grant on 3 of 88 rows.
+
+# 1. the CHANNEL — commit + trees, no blobs.  Needs no API (api.github.com is 403 here).
+git clone --filter=blob:none --no-checkout --depth 1 "https://github.com/$SLUG" "$D"
+git -C "$D" ls-tree -r --name-only HEAD          # the COMPLETE tree, unpaginated
+
+# 2. the two PURE predicates — offline-testable, and the only place conventions live.
+#    is_licence_path()  : basename rules + the REUSE convention LICENSES/<SPDX-ID>.txt
+#    is_bundled()       : node_modules/ vendor/ third_party/ .venv/ dist/ ... (imported, P126)
+
+# 3. the four VERDICTS — note that only the first is unreachable by a filename list.
+#    ABSENCE-ENUMERATED | OWN-GRANT-AT-ROOT | OWN-GRANT-IN-SUBTREE | BUNDLED-GRANT-ONLY
+bash compose/code/p196-none-tree-reach/tree_reach.sh out.tsv slugs.txt
+```
+
+| cost, measured | |
+|---|---|
+| `88` repositories, full tree each | 🟢 **`0` clone failures** |
+| rows a `19`-name root ladder got wrong | 🔴 **`12` of `88`** — `3` at the root, `9` in subtree |
+| the figure it corrects | 🟢 **`18.8`% → `16.2`%** genuinely ungranted |
+
+🔴 **Three guards, each bought with a failure:**
+
+| guard | the failure |
+|---|---|
+| 🔴 **Match licence paths case-INSENSITIVELY** | `LICENSE.TXT`, `License.txt`, `License`, `license.txt`, `package/license` are all real rows on this shelf that case-sensitive lists missed |
+| 🔴 **Handle `LICENSES/<SPDX-ID>.txt`** | the REUSE convention puts the SPDX id in the **basename**, so a basename-only probe is blind. 🔵 **v1 of this very instrument failed here and its own suite caught it** |
+| 🔴 **Exclude vendored paths BEFORE counting** | `Tushar-cy/Ai-edge-learning-hub` has `359` bundled licence files and **`0` of its own.** Without the exclusion it reads as richly licensed |
+
+🟡 **Its own limit, stated:** a clone per repository is far heavier than `4.6` HTTP probes.
+🟢 **So the shape is: root ladder for the census, tree channel for every `NONE` it returns.**
+Never the tree channel for all `468`.
+
+### 🆕 🟢 `P0d` — A byte band is a SET of intervals, because licences are bimodal by convention
+
+🔵 Wiring: [`compose/code/p196-copyleft-band/`](code/p196-copyleft-band/), suite **`32`/`32`**
+*(carrying p195's seven permissive assertions unchanged — `P237`)*.
+
+```bash
+. compose/code/p196-copyleft-band/band_copyleft.sh
+band_verdict AGPL-3.0 34523     # IN-BAND
+band_verdict LGPL-3.0  7651     # IN-BAND  <- short form, GPL-3.0 BY REFERENCE
+band_verdict LGPL-3.0 43529     # IN-BAND  <- odoo/odoo: FULL form, GPL-3.0 BY VALUE
+band_verdict LGPL-3.0 20000     # OVER     <- the TROUGH between two legitimate forms
+band_verdict AGPL-3.0   723     # UNDER    <- read it: a GNU short NOTICE, a valid grant
+```
+
+🔴 **Why a set and not an interval:** `LGPL-3.0` has **two** legitimate published forms
+*(`7 651` B and `42 098` B)*. 🟢 **A single `lo`/`hi` band calls `odoo/odoo` narrowed, which is
+wrong.** 🟢 The general rule: **a control that assumes one canonical form per category misreads
+the publisher convention, not the content.**
+
+🔴 **Two rules that are not optional:**
+
+| rule | why |
+|---|---|
+| 🔴 **Anchor to a reference OUTSIDE the instrument** (`P417`) | this pass used SPDX `license-list-data` **plus** the shelf's modal size, and inherited p195's ±`10`% width rather than tuning one. 🔴 A band fitted until the answer looks tidy measures the author |
+| 🔴 **The band is a TRIGGER TO READ, never a verdict** | 🟢 **`4` of `83` flagged; `4` of `4` were false positives for narrowing.** `3` were the GNU short-notice form *(a valid grant that LOOKS like `Gap 421`'s non-grants)* and `1` was a missing non-operative appendix |
+
+🔵 **`P420` still holds and bounds this:** size does **not** identify. Three `AGPL-3.0` texts
+here are `34 523` B exactly with different digests. Identity stays `P392`'s *(FILE, digest)*
+pair; family stays `P419`'s `n=2` header read.
+
+### 🆕 🟢 `P0e` — Two lanes, two purposes: discover on the channel, deliver on the bytes
+
+🔵 Measured this pass: `13` rows cross-checked, 🟢 **`11` agree, `0` diverge, 🔴 `2` API-blind.**
+
+```bash
+# DISCOVERY — the GitHub MCP ranked channel.  Answers where curl api.github.com is 403.
+#   gives: slug, stars, pushed_at, license.spdx_id.   0 DIVERGE on 13 rows -> trust the RANKING.
+#   query that worked: topic:education language:Python stars:>300 pushed:>YYYY-MM-DD
+#   KNOWN LIMITS: unfiltered queries exceed the response size limit; some narrow
+#                 variants return total_count:0; language filter biases toward Python.
+
+# DELIVERY — the raw lane, every time, no exceptions.
+#   NEVER let license.spdx_id decide a deliverable.  Measured counter-examples:
+#     TrenTorch/TrenTorch   NOASSERTION -> PolyForm Noncommercial 1.0.0, 4 635 B -> BARRED
+#     frappe/education      NOASSERTION -> 19 bytes: "License: GNU GPL V3"      -> declaration
+curl -sL -o p.txt -w '%{http_code}' "https://raw.githubusercontent.com/$SLUG/HEAD/$PATH"
+. compose/code/lib/payload_measure.sh && family_of_file p.txt && commercial_use_ok "$(cat p.txt)"
+```
+
+🔴 **The rule in one line: `NOASSERTION` is a BLIND SPOT, not a soft "unknown."** On this
+sample it meant a non-commercial bar once and a `19`-byte declaration once — never *"probably
+permissive."*
+
+🟡 **And organisation reputation does not transfer:** `frappe/lms` carries a real `33 893`-byte
+`AGPL-3.0`; `frappe/education` carries `19` bytes. **Same publisher. Read the row, not the owner.**
+
+### 🆕 🟢 `P197-A` — One marking layer, two jurisdictions *(EU Article 50 + China labelling)*
+
+🔵 **Why now:** Regulation (EU) `2026/1744` deferred **Annex III** education high-risk to
+`2027-12-02` but 🔴 **left Article `50` transparency in force since `2026-08-02`** — and China
+already requires **binding AI-content labelling.** 🟢 **Same instrument class, two markets, one
+build.**
+
+```
+            ┌─ generation ─────────────────────────────────────────────┐
+            │  tutor / assessment agent  (DeepTutor, oppia, Anubis…)   │
+            └───────────────────────┬──────────────────────────────────┘
+                                    │ every AI-authored artefact
+            ┌───────────────────────▼──────────────────────────────────┐
+  MARKING   │ compose/code/aiact-50-2-marking/   -> provenance fields  │
+  LAYER     │ compose/code/aiact-50-2-pack/      -> aiact-50-2.xsd     │
+            │ compose/code/aiact-50-2-spans/     -> which SPANS are AI │
+            └───────────────────────┬──────────────────────────────────┘
+            ┌───────────────────────▼──────────────────────────────────┐
+  AUDIT     │ compose/code/agent-tool-receipts-port/  -> per-action    │
+            │ compose/code/action-gap-crosscheck/     -> claim vs act  │
+            └──────────────────────────────────────────────────────────┘
+                                    │
+            ┌───────────────────────▼──────────────────────────────────┐
+  EXPOSURE  │ compose/code/aiact-50-2-exposure/  -> what is UNMARKED   │
+            └──────────────────────────────────────────────────────────┘
+```
+
+🟢 **Deliverable today, not in `2027`**: anything already on an EU market since `2026-08-02`
+owes Article `50` marking. 🔴 **Run `aiact-50-2-exposure/` first** — it reports what is
+*unmarked*, which is the finding a client pays for. 🔵 `aiact-50-2-emitter-gap/` records where
+the emitter side is still missing.
+
+### 🆕 🟢 `P197-B` — The North America deliverable is a policy-conformant configuration
+
+🔵 **Why:** `77` AI-in-classroom bills across `27` states, ≈`33`–`35` states with K-12 guidance,
+and ≥`5` states obliging **districts** to hold AI policies. 🟢 **Oklahoma S.B. `1734` names the
+four clauses, so treat them as a schema, not prose:**
+
+| clause | what the build owes it | the primitive |
+|---|---|---|
+| approved / prohibited instructional uses | a machine-readable use register, enforced at the agent's tool boundary | 🟢 `agent-tool-receipts-port/` — per-action receipts |
+| data protection and **minimisation** | a data-flow inventory produced **by** the system | 🔴 Vermont H.B. `650` makes this a **vendor** duty, certified annually |
+| family transparency | learner-facing disclosure of what the AI did | 🟢 `aiact-50-2-spans/` — which spans are AI-authored |
+| periodic review | dated, diffable policy state | 🟢 `p598-register-freshness-gate/` |
+
+🔴 **Idaho bars AI from replacing human teachers** → 🟢 **teacher-in-the-loop as a hard
+architectural constraint in this region, not a configuration flag.** Gate every
+grade-affecting action on a human approval receipt.
+
+🟢 **Concrete base pairing**, all byte-verified permissive:
+[`CTFd/CTFd`](https://github.com/CTFd/CTFd) *(`Apache-2.0`, `11 314` B)* for graded challenges
+**or** [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) *(`MIT`, `1 083` B)* for
+autograding + per-student IDE, [`oppia/oppia`](https://github.com/oppia/oppia) *(`Apache-2.0`,
+`11 358` B)* for the branching lesson sequence, receipts layer above. 🟢 **All three carry a
+patent grant; `MIT` does not** — which matters in a regulated procurement.
+
+### 🆕 🟢 `P197-C` — Build the assessment path as the REGULATED path
+
+🔵 **Why:** `DeepTutor`'s two releases this week *(`v1.6.14`, `2026-10-08`: visual practice, a
+learning journal, managed plugins)* move it from *explanation* to **assessable sequence with
+retained state**. 🔴 **That is precisely the surface Brazil's PL `2338/2023` would call
+high-risk *(educational evaluation)* and the EU's Annex III already does.** 🟢 **The product
+trend and the regulation are converging on the same feature.**
+
+```
+ learner ──► tutor agent (DeepTutor / open-tutor-ai-CE)
+                 │
+                 ├─ explanation path ──► low regulatory weight
+                 │
+                 └─ ASSESSMENT path ──► 🔴 HIGH-RISK in EU Annex III (2027-12-02)
+                                        🔴 HIGH-RISK in BR PL 2338/2023 (educational evaluation)
+                                        │
+                      ┌─────────────────▼──────────────────┐
+                      │ explainability + audit, FROM DAY 1 │
+                      │  action-gap-crosscheck/  claim≠act │
+                      │  agent-tool-receipts-port/         │
+                      │  aiact-50-2-spans/   AI-authored   │
+                      └────────────────────────────────────┘
+```
+
+🟢 **Separate the two paths in the architecture**, so the regulated obligations attach to the
+assessment surface only. 🔴 **Do not pre-build to Brazil's draft clauses** — PL `2338/2023` is
+still in the Chamber of Deputies and the text can change. 🟢 Build the **audit primitives**,
+which every version of the clause will want.
+
+### 🟢 `P197-D` — Pick the base from the bytes, because the open web is wrong in the expensive direction
+
+🔴 **Measured this pass against a web sweep that itself said *"sources disagree on several
+licenses"*:**
+
+| platform | the web | 🟢 the bytes | cost of believing the web |
+|---|---|---|---|
+| 🔴 `openedx/edx-platform` | AGPLv3 **or** Apache-2.0 | 🟢 **`AGPL-3.0`** `35 136` B | 🔴 an undisclosed **network-use disclosure** duty on a hosted deliverable |
+| 🔴 `sakaiproject/sakai` | *"Apache 2.0"* | 🟢 **`ECL-2.0`** `11 120` B | 🔴 a patent grant **scoped to education**, assumed general |
+
+🔴 **Both web errors run permissive — the direction that costs a client.** 🟢 **The permissive
+platform-grade short list, byte-verified:**
+
+| base | 🟢 licence | bytes | use it for |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` | `10 982` | a **full university LMS**, permissive — rare |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1 097` | **offline-first** delivery *(India Class `3`, LATAM low-connectivity)* |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 `Apache-2.0` | `11 358` | branching lessons with learner state |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | 🟢 `Apache-2.0` | `11 314` | graded challenges, teams, scoring |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 `MIT` | `1 083` | autograding + per-student cloud IDE |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `11 120` | 🟡 permissive, **patent grant scoped to education** |
+
+🔴 **Never base a client deliverable on:** `canyongbs/advisingapp` *(`Elastic` — source-available,
+and still the only AI-native higher-ed CRM here, with **no permissive replacement found**)*,
+`TrenTorch/TrenTorch` *(`PolyForm` non-commercial)*, or the `3` NirDiamant tutorial repositories
+*(non-commercial, byte-identical licences)*.
+
 ## Pass 195 — 2026-10-14
 
 🆕 🟢 **Every pattern on this page inherits a licence gate from p194. This pass makes the gate

@@ -3,6 +3,93 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **p195 closed this file with *"the trending lane is GONE."* It is not gone — the `curl`
+door to it is shut and a second door is open.** 🔴 The HTML lane is confirmed dead; 🟢 the
+GitHub MCP channel answers the same ranked question.
+
+### 🟢 The lane census, re-measured this pass
+
+| lane | p194 | p195 | 🟢 **p196** |
+|---|---|---|---|
+| `github.com/trending` | 🟢 `200` | 🔴 `403` | 🔴 **`403`** |
+| `github.com/trending/python?since=weekly` | 🟢 `200` | 🔴 `403` | 🔴 **`403`** |
+| `github.com/<owner>/<repo>` *(plain page)* | 🟢 `200` | 🔴 `403` | 🔴 **`403`** |
+| `api.github.com/repos/…` via `curl` | 🔴 `403` | 🔴 `403` | 🔴 **`403`** |
+| 🆕 **GitHub MCP `search_repositories`** | — | 🔴 *presumed dead with the API* | 🟢 **ANSWERS — ranked, with `license.spdx_id`, ★ and `pushed_at`** |
+| 🟢 `raw.githubusercontent.com` *(control)* | 🟢 `200` | 🟢 `200` | 🟢 **`200`** |
+| 🟢 `git clone --filter=blob:none` + `ls-tree` | — | — | 🟢 **`88`/`88` clones, `0` failures** |
+
+🔴 **The correction this pass owes p195:** *"the lane is gone"* conflated a **transport** with a
+**channel**. `api.github.com` is unreachable by `curl` through this proxy; the ranked data
+behind it is reachable through MCP. 🔵 A lane census should name the **door**, not just the
+destination — and from now on this table does.
+
+### 🟡 What the new door does NOT give back
+
+🔴 **It is not `/trending`.** GitHub's trending view ranks by **star velocity**; an MCP query
+ranks by **absolute stars** with a `pushed_at` recency filter. 🔴 **So flow is still
+unmeasurable from this session, and the word *"trending"* on this page means
+*"ranked stock, recently pushed"* until the HTML lane returns.** Stated here so no later pass
+inherits the stronger reading.
+
+🔴 **Two further limits, measured:** the unfiltered query **exceeded the response size limit**
+(`82 614` characters, one line) and a `stars:>1000` + `in:name,description` variant returned
+**`total_count: 0`**. The query that worked was **language-filtered to Python**, which biases
+the result toward Python-first projects and **away from the PHP and Java LMS-plugin world**
+where much of education OSS actually lives.
+
+### 🟢 Ranked education repositories, pushed within `30` days — `15` rows, licence from BYTES
+
+🔵 `topic:education language:Python stars:>300 pushed:>2026-09-14` · `total_count` `19`.
+🟢 Full table with per-row byte sizes on [`agents/trending.md`](../agents/trending.md) this
+pass; the licence-bearing summary:
+
+| | n |
+|---|---|
+| rows returned | `15` |
+| 🆕 **new to this shelf** | 🆕 **`8`** |
+| 🟢 permissive **and** `commercial_use_ok` | 🟢 **`11`** |
+| 🔴 `AGPL-3.0` | `1` *(`learnhouse`)* |
+| 🟡 content licence on a content repo | `1` *(`CC-BY-4.0`, `399 021`★)* |
+| 🔴 **NONCOMMERCIAL — barred** | 🔴 **`1`** *(`TrenTorch`, reported `NOASSERTION`)* |
+| 🔴 no grant at root | 🔴 **`2`** *(`minicoohei/ai-agent-camp`, `rajshah6/arXivisual`)* |
+
+### 🔴 The channel's licence field is blind exactly where it matters — `2` of `13`
+
+| rows cross-checked against bytes | 🟢 AGREE | 🔴 API-BLIND | DIVERGE |
+|---|---|---|---|
+| `13` | 🟢 **`11`** | 🔴 **`2`** | 🟢 **`0`** |
+
+🟢 **`0` DIVERGE licenses this channel for DISCOVERY.** 🔴 **`2` API-BLIND forbids it for
+DELIVERY** — and on this sample `NOASSERTION` meant a non-commercial bar once and a `19`-byte
+declaration once. 🔵 Neither is *"unknown, probably permissive."*
+
+### 🟢 The trending rows that are also structural
+
+🔵 Three of the `8` new rows are not tutorials — they are **infrastructure a studio could
+base on**:
+
+| repo | 🟢 licence | what it replaces building |
+|---|---|---|
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) `6 876`★ | 🟢 `Apache-2.0` *(`11 314` B)* | challenge/assessment platform with scoring, teams, hints |
+| [`oppia/oppia`](https://github.com/oppia/oppia) `6 855`★ | 🟢 `Apache-2.0` *(`11 358` B)* | branching lesson engine with learner-state |
+| [`mlcommons/ck`](https://github.com/mlcommons/ck) `649`★ | 🟢 `Apache-2.0` *(`10 174` B)* | reproducible benchmark/experiment automation |
+
+🟢 All three carry a **patent grant**, which `MIT` does not — the axis that matters when a
+deliverable ships into a regulated procurement.
+
+### Pre-registered for p197
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| Re-run the MCP query **per language** *(JS/TS, Java, PHP, Go)* and diff | new rows cluster in PHP/Java → the Python filter was the bias and the shelf gains the plugin layer | the same projects return → Python-first is the real shape, not an artefact |
+| Probe `github.com/trending` once per pass and record the code **even when it is `403`** | it returns `200` → flow is measurable again and this page says so on the day it happens | it stays `403` → the `403` series is itself the finding, dated pass by pass |
+| Read the `2` no-grant-at-root rows with `P441`'s tree channel, not a filename list | a grant exists below root → they join the shelf | absence enumerated → they are all-rights-reserved and **must not** be recommended |
+
 ## Pass 195 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

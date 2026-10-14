@@ -3,6 +3,113 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **A web sweep this pass returned, in its own words, *"sources disagree on several
+licenses"* and *"most say AGPLv3, one says Apache 2.0"* about Open edX. This page does not have
+to choose: every platform row below carries a licence read from BYTES, and the disagreements
+resolve one way.** 🟢 Two of the open web's claims about the biggest platforms in this market
+are **wrong**, and both errors run in the permissive direction — the direction that costs a
+client.
+
+### 🔴 The open web is wrong about `2` of the `8` biggest platforms, both times optimistically
+
+| platform | the open web says | 🟢 the bytes say | verdict |
+|---|---|---|---|
+| 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 split: `AGPLv3` **or** `Apache-2.0` | 🟢 **`AGPL-3.0`** · `35 136` B | 🔴 **the Apache claim is WRONG** |
+| 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 one source: *"Apache 2.0"* | 🟢 **`ECL-2.0`** · `11 120` B | 🔴 **WRONG.** ECL is Apache-*derived*; not the same grant |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `AGPLv3` core | 🟢 **`AGPL-3.0`** · `34 520` B | 🟢 confirmed |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | *"GPL"* | 🟢 **`GPL-3.0`** · `35 147` B at **`COPYING.txt`** | 🟢 confirmed — 🔵 **and the file is not named `LICENSE`** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `Apache-2.0` | 🟢 **`Apache-2.0`** · `10 982` B | 🟢 confirmed — 🟢 **the one permissive university LMS** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LGPLv3` | 🟢 **`LGPL-3.0`** · `8 241` B | 🟢 confirmed |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | *"GPL"* | 🟢 **`GPL-3.0`** · `35 121` B | 🟢 confirmed |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | *"GPL"* | 🟢 **`GPL-2.0`** · `15 214` B | 🟡 **v2, not v3** — a different compatibility story |
+
+🔴 **Both web errors point the same way: they report a copyleft platform as permissive.** A
+studio that takes *"Open edX is Apache-2.0"* from a comparison blog and builds a hosted
+deliverable has adopted an **Affero network-use disclosure obligation** it does not know it
+has. 🟢 This is the concrete value of the byte lane over the consensus lane.
+
+### 🟢 The sweep's own negative result, confirmed by measurement
+
+🔵 The web sweep reported *"none of the results confirmed MIT licensing for any LMS or SIS."*
+🟢 **p195's `468`-slug census agrees, and can say it more strongly: of the hosted-LMS layer,
+`0` rows are `MIT`.** The `218` `MIT` rows on this shelf are tools, agents and content — not
+platforms.
+
+🔴 **`41` of `380` licensed rows are `AGPL-3.0`**, more than every restricted and
+source-available category combined, and they include the `openedx` family *(4 slugs)*,
+`canvas-lms`, `frappe/lms`, `classroomio`, `learnhouse` and `tutor`. 🔵 **The hosted-LMS layer
+is Affero as a market, not as an exception** — and that now rests on two independent channels.
+
+### 🟢 `rosariosis`'s `GPL-2.0` is COMPLETE — the `389`-byte shortfall is an appendix
+
+🔵 This pass's band control flagged it as `UNDER` — the one flag that could have been a real
+narrowing of a platform grant. **Read:**
+
+| | SPDX `GPL-2.0` | `rosariosis` |
+|---|---|---|
+| lines | `117` *(reflowed)* | `276` *(hard-wrapped ~`72` cols)* |
+| words | `2 910` | `2 496` |
+| ends at | the Ty Coon signature block | 🔵 **`END OF TERMS AND CONDITIONS`** |
+
+🟢 **Operative sections `0`–`12` all present. The `414` missing words are entirely the
+non-operative *"How to Apply These Terms to Your New Programs"* appendix. The grant is whole;
+`GPL-2.0` stands.** 🆕 🔵 And it reads *"GNU **Library** General Public License"* where SPDX
+reads *"**Lesser**"* — the FSF's pre-`1999` wording. **`rosariosis` ships the authentic 1991
+text; SPDX ships a modernised one**, so part of the delta is SPDX's edit.
+
+### 🆕 🟢 `odoo/odoo` is IN-BAND, and a one-interval band would have called it narrowed
+
+🔵 `LGPL-3.0` is published in **two legitimate forms**, and this page carries platforms on both:
+
+| platform | bytes | form |
+|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `7 652` | 🟢 **short** — LGPL preamble, `GPL-3.0` by **reference** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `8 241` | 🟢 short |
+| 🆕 [`odoo/odoo`](https://github.com/odoo/odoo) | **`43 529`** | 🟢 **full** — `GPL-3.0` included by **value** *(SPDX's own text is `42 098` B)* |
+
+🟢 **`odoo/odoo` carries the full LGPL-3.0, not a `35`kB anomaly** — a reading a single
+`lo`/`hi` band gets backwards. 🔵 This is why the band became a **SET** of intervals this pass;
+see [`compose/code/p196-copyleft-band/`](../compose/code/p196-copyleft-band/).
+
+### 🆕 🟢 Platform-grade additions this pass, byte-verified
+
+🔵 Found through the reopened MCP ranked channel, then read from bytes.
+
+| platform | ★ | 🟢 licence | bytes | what it is, and why a studio would start here |
+|---|---|---|---|---|
+| 🟢 [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | 🟢 **`Apache-2.0`** | `11 358` | **branching lesson engine** with learner-state and *explorations*. 🟢 Patent grant. The permissive answer to *"we need adaptive sequences, not a course shell"* |
+| 🟢 [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | 🟢 **`Apache-2.0`** | `11 314` | **assessment platform**: challenges, scoring, teams, hints, submission gating. Built for CTFs, but it is a general graded-challenge engine |
+| 🟢 [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `381` | 🟢 **`MIT`** | `1 083` | **autograding + per-student cloud IDE.** The row that covers CS-course delivery end to end |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | 🟢 **`MIT`** | `1 097` | re-confirmed from **both** channels. 🟢 **Still the only permissive, platform-grade, offline-first LMS on this shelf** |
+
+🔴 **And one row that must NOT be taken as a platform:**
+[`frappe/education`](https://github.com/frappe/education) `665`★ — a Frappe-based school
+management app whose **entire licence file is `19` bytes**: `License: GNU GPL V3`, at lowercase
+`license.txt`. 🔴 **A declaration, not a grant.** The ranked channel reports it `NOASSERTION`.
+🔵 Compare `frappe/lms`, whose `AGPL-3.0` is a real `33 893`-byte text — **same publisher,
+different rigour, and the difference decides a hosted deliverable.**
+
+### 🟢 The platform shelf, by delivery posture
+
+| posture | platforms | what it means for a client engagement |
+|---|---|---|
+| 🟢 **permissive — closed deliverable OK** | `OpenOLAT` *(Apache-2.0)*, `Kolibri` *(MIT)*, `oppia` *(Apache-2.0)*, `CTFd` *(Apache-2.0)*, `Anubis` *(MIT)*, `Sakai` + `Opencast` *(ECL-2.0)* | 🟢 the short list. **`ECL-2.0`'s patent grant is scoped to education** — read it if the deliverable is cross-sector |
+| 🟡 **weak copyleft — linkable** | `BigBlueButton`, `OpenEduCat`, `odoo` *(LGPL-3.0)*, `edrys` *(MPL-2.0)* | 🟡 dynamic linking is fine; **modifications to the library itself flow back** |
+| 🔴 **strong copyleft — source on distribution** | `Moodle`, `ILIAS`, `Chamilo`, `Gibbon` *(GPL-3.0)*, `RosarioSIS`, `i-educar` *(GPL-2.0)* | 🔴 distribute the plugin, publish the plugin |
+| 🔴 **Affero — network use triggers disclosure** | `Open edX` family, `Canvas`, `frappe/lms`, `classroomio`, `learnhouse`, `tutor` | 🔴 **a hosted SaaS deliverable discloses.** `41` rows — the largest non-permissive class on this shelf |
+| 🔴 **source-available, NOT open source** | `canyongbs/advisingapp` *(Elastic)*, `TrenTorch` *(PolyForm Noncommercial)* | 🔴 **cannot base a client deliverable.** `advisingapp` remains the only AI-native higher-ed CRM here, and **no permissive row replaces it** |
+
+### Open limbs
+
+🔴 **`advisingapp`'s gap is still open:** `Elastic`-licensed, so the only AI-native higher-ed
+student-success CRM on this shelf is unusable, and p195's search for a permissive replacement
+found none. 🔴 **p195's claim that *"the interoperability layer grants nothing"* is now in
+doubt** — `Lumieducation/Lumi` carries `15` own licence texts below its root *(see
+[`agents/top.md`](../agents/top.md))*, so the layer claim needs re-reading row by row.
+🔴 **`26` of the shelf's `494` distinct rows have never been licence-probed at all.**
+
 ## Pass 195 — 2026-10-14
 
 🆕 🔴 **A platform row this page has carried as *"UNKNOWN until the body is read"* is now read,

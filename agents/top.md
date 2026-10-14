@@ -3,6 +3,251 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **p195 pre-registered four actions, and the FIRST one — *"read the KB before building any
+instrument"* — fired on the other three before a line of code was written.** 🔴 **One of them
+was pre-registered as an instrument this KB had already proved does not work**, and the proof
+was four passes old with a test suite attached. 🟢 So the pass ran the instrument the register
+already held, and the limb answered anyway: **`12` of p195's `88` root-`NONE` rows DO carry
+their own grant, `3` of them at the root.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`P0a` — read the register before building** | 🟢 **LIMB `1` FIRES on all three remaining actions.** `P441`, `P420`, `P1056` and `p969` all had prior art. Cited, not re-derived |
+| 🟢 **Copyleft byte bands** *(limb `2`)* | 🟢 **Band derived for every copyleft family: `79`/`83` `IN-BAND`.** 🔴 But the HYPOTHESIS is refuted — all `4` flags are false positives, and **`0` of `83` rows carry a narrowed grant** |
+| 🟡 **Population re-extract** *(limb `3`)* | 🟡 **SPLITS. `0` removed** *(p192's `472` is a strict subset)* **but `+27` added and `5` rows are one repo twice.** The shelf is `494` distinct, not `472` |
+| 🟢 **`docs/`+`legal/`+`.github/` probe** *(limb `4`)* | 🔴 **INSTRUMENT REJECTED, question ANSWERED.** Ran `P441`'s tree enumeration instead: `12`/`88` grant-bearing. **`18.8`% → `16.2`%** |
+| 🆕 🟢 **A lane this KB lost has reopened** | 🟢 **The GitHub MCP ranked channel answers where `curl api.github.com` is `403`.** `11` agree / `2` API-blind / `0` diverge against bytes |
+
+### 🔴 The fifth recurrence — `openedx/XBlock` ships `LICENSE.TXT`, and that is not news here
+
+🔵 p195's fourth action was *"probe `docs/`, `legal/`, `.github/` for the `88` root-`NONE` rows."*
+🔴 **Three named directories is a filename list with a `/` in it**, and this KB has measured
+four times that widening a list cannot fix one:
+
+| pass | the row | the widening that missed it |
+|---|---|---|
+| p436 | [`openedx/XBlock`](https://github.com/openedx/XBlock) | a `14`-name list, no `LICENSE.TXT` |
+| p440 | the same row | a **`41`-name** widening, **third** miss |
+| p195 | the same row | a **`19`-name** ladder, **fourth** miss — then published inside the `88` |
+| 🔴 **p196's own pre-registration** | the same row | 🔴 **a FIFTH miss by construction: `LICENSE.TXT` is at the ROOT, not in `docs/`** |
+
+🟢 So the pass ran `P441`'s channel — `git clone --filter=blob:none --no-checkout --depth 1`
+then `git ls-tree -r` — over all `88`. 🔵
+[`evidence/none-tree-reach.2026-10-14-p196.tsv`](../evidence/none-tree-reach.2026-10-14-p196.tsv),
+recipe at [`compose/code/p196-none-tree-reach/`](../compose/code/p196-none-tree-reach/), suite **`24`/`24`**.
+
+| verdict | n | share |
+|---|---|---|
+| `ABSENCE-ENUMERATED` — nothing in the complete tree is a licence text | **`74`** | `84.1`% |
+| 🔴 **`OWN-GRANT-AT-ROOT`** — a **root** file the `19`-name ladder missed | **`3`** | `3.4`% |
+| 🔴 `OWN-GRANT-IN-SUBTREE` | **`9`** | `10.2`% |
+| `BUNDLED-GRANT-ONLY` — every grant found is a vendored dependency's | `2` | `2.3`% |
+| `CLONE-FAILED` | 🟢 **`0`** | — |
+
+🔴 **The three root filenames, each two or three characters from a name the ladder tried:**
+
+| row | root filename | the two characters |
+|---|---|---|
+| 🔴 [`openedx/XBlock`](https://github.com/openedx/XBlock) | **`LICENSE.TXT`** *(+ `NOTICE.txt`)* | uppercase extension |
+| 🔴 [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | **`License.txt`** | mixed case **and** extension |
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **`License`** | mixed case, no extension |
+
+🟢 **And it replicates `P441` independently.** `P441`: `9` of `87` (`4` root, `5` subtree) on a
+different population. p196: `12` of `88` (`3` root, `9` subtree). **Two populations, one rate.**
+
+### 🟢 `p969`'s row CLOSES by instrument, and one p195 CONCLUSION is refuted
+
+🟢 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns
+`OWN-GRANT-IN-SUBTREE` — **`11` own licence texts below the root**, which is the
+`docs/License.txt` GPL-2.0 p195 read by hand and left as an open limb. Now reached by a tool.
+
+🔴 **p195 wrote *"the interoperability layer grants nothing"*** from three root-`NONE` reads.
+[`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) carries **`15` own licence texts**
+in a `6 348`-path tree. 🔵 **The root probe was right; the conclusion drawn from it was wrong.**
+The layer-wide claim needs re-reading row by row — **pre-registered below, not quietly dropped.**
+
+### 🟢 The copyleft band — it generalises, and it finds nothing narrowed
+
+🔵 p195 shipped its size-within-family control permissive-only; `band_of_family` returned
+`NO-BAND` for every copyleft family, so `delivery_verdict` said `GO-SUBJECT-TO-FAMILY` and
+`83` rows went unchecked for `P1054`-style narrowing.
+
+🔴 **First, the population: p195 said `77`. It is `83`.** `77` = AGPL `41` + GPL-3.0 `29` +
+GPL-2.0 `5` + ECL-2.0 `2`, which **silently drops the `6` weak-copyleft rows its own families
+table lists** — `LGPL-3.0` ×`4`, `LGPL-2.1` ×`1`, `MPL-2.0` ×`1`. Those `6` contain
+`odoo/odoo` and `bigbluebutton/bigbluebutton`.
+
+🆕 🔴 **The mechanism had to change, and the licence forced it, not the corpus. `LGPL-3.0` is
+published in TWO legitimate forms:**
+
+| form | bytes | what it is | on this shelf |
+|---|---|---|---|
+| **short** | `7 651` | the LGPL preamble alone, `GPL-3.0` **by reference** | `bigbluebutton` `7 652`, `openbadgeslib` `7 650` |
+| **full** | `42 098` | `GPL-3.0` included **by value** *(SPDX's own text)* | 🟢 **`odoo/odoo` `43 529`** |
+
+🔴 **A one-interval band must call one of the two legitimate forms "narrowed."** So **a band is
+a SET of intervals**, and p195's single-interval families are the one-element case. 🟢 **`odoo/odoo`
+is `IN-BAND`, not an anomaly** — a reading a one-interval band gets backwards.
+
+| band verdict over `83` | n |
+|---|---|
+| 🟢 `IN-BAND` | **`79`** |
+| 🔴 `UNDER` | **`4`** |
+| `OVER` | 🟢 `0` |
+
+🔵 Anchors are **external** (`P417`): SPDX `license-list-data` over the raw lane, **plus** the
+modal size in p195's census, spanned ±`10`% — and the `10`% is **inherited from p195's published
+`MIT` band**, not tuned. 🔴 `gnu.org` and `mozilla.org` are both `403` at this session's proxy,
+so the canonical upstreams were unreachable; SPDX is the named substitute.
+
+### 🔴 All `4` flags are FALSE POSITIVES, and `0` of `83` rows are narrowed
+
+🟢 p195's own rule is *"the band is a TRIGGER TO READ, never a verdict"*, so all four were
+fetched and read. Byte sizes reproduced p195's census **exactly** on all four.
+
+| row | bytes | what the bytes ARE |
+|---|---|---|
+| [`andremadstop/learning-nc`](https://github.com/andremadstop/learning-nc) | `723` | 🟢 the FSF's prescribed **short notice** + a `gnu.org` pointer |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | `1 134` | 🟢 the same, **plus a split scope** |
+| [`solin-repo/moodle-block_atrisk`](https://github.com/solin-repo/moodle-block_atrisk) | `703` | 🟢 the same, electing **`GPL-3.0-or-later`** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `15 214` | 🟢 complete `GPL-2.0` **minus the non-operative appendix** |
+
+🔴 **The three short ones are NOT `Gap 421`.** `Gap 421`'s registered shapes **grant nothing** —
+a title and a copyright line, or `talentcoach`'s view-only negation of `MIT`'s verb list. These
+grant **everything the full text grants**, by incorporation by reference, and `P419`'s `n=2`
+header window got the family right on all three. 🟢 **Same size class, opposite legal content** —
+which is precisely why size is a trigger and never a verdict.
+
+🟢 **`rosariosis` is the one that could have been real narrowing**, at only `389` B below the
+edge. Every operative section `0`–`12` is present; the `414` missing words are **entirely** the
+*"How to Apply These Terms"* appendix, and it ends at `END OF TERMS AND CONDITIONS`. 🆕 🔵 It
+also reads *"GNU **Library** General Public License"* where SPDX reads *"**Lesser**"* — the
+FSF's pre-`1999` wording, so **`rosariosis` ships the authentic 1991 text and SPDX a modernised
+one.** Part of the `389` B is SPDX's edit, not the repository's.
+
+🟢 **So: the control generalises *(limb `1`)*, and the thing it was built to find is not here.
+`0` of `83`.** A measured negative, and worth more than a find. 🔵
+[`evidence/copyleft-band.2026-10-14-p196.tsv`](../evidence/copyleft-band.2026-10-14-p196.tsv),
+recipe at [`compose/code/p196-copyleft-band/`](../compose/code/p196-copyleft-band/), suite
+**`32`/`32`** — carrying p195's seven permissive assertions unchanged as a regression control
+(`P237`), pinning the bimodal trough, and asserting `P420`'s *"size does not identify"* as a test.
+
+### 🆕 🟢 A lane reopened — the MCP ranked channel, and its two blind spots
+
+🔴 `github.com` HTML, `/trending` included, and `api.github.com`: **`403` at this session's
+proxy**, re-measured this pass. 🟢 **The GitHub MCP channel reaches the same ranked data and
+returns `license.spdx_id`, stars and `pushed_at`.** p195 recorded the API lane as simply gone;
+it is reachable by a different door.
+
+🔵 Cross-channel agreement, MCP field against this KB's byte reads:
+
+| rows compared | 🟢 AGREE | 🔴 API-BLIND | DIVERGE |
+|---|---|---|---|
+| `13` | 🟢 **`11`** | 🔴 **`2`** | 🟢 **`0`** |
+
+🔴 **Both blind rows cost a delivery decision, in opposite directions:**
+
+| row | MCP says | 🔴 the bytes say |
+|---|---|---|
+| 🔴 [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) `385`★ | `NOASSERTION` | 🔴 **`PolyForm Noncommercial 1.0.0`, `4 635` B — `commercial_use_ok` → PROHIBITED. BARRED** |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) `665`★ | `NOASSERTION` | 🔴 **`license.txt`, `19` B, entire content: `License: GNU GPL V3`** — a declaration, not a grant |
+
+🔴 **And `frappe/education` caught THIS pass out.** The ad-hoc `12`-name probe written here to
+byte-verify the new rows **missed it**, because the path is lowercase `license.txt`. 🟢 p195's
+`19`-name ladder found it. 🔴 **So in the pass whose headline is *"widening a filename list
+cannot fix a list"*, the author's own throwaway list repeated the defect.** The ladder beat the
+ad-hoc probe; the tree channel beats both.
+
+### 🟢 `8` new rows, byte-verified, from the reopened lane
+
+🔵 Discovered through the MCP channel, then **every licence read from bytes over the raw lane**
+and classified by this KB's own `license_family.sh` + the new band. None was taken on the
+channel's word.
+
+| repo | ★ | licence path | bytes | 🟢 family | band | commercial |
+|---|---|---|---|---|---|---|
+| [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 237` | `LICENSE.md` | `1 095` | 🟢 **`MIT`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | `LICENSE` | `11 314` | 🟢 **`Apache-2.0`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| [`mlcommons/ck`](https://github.com/mlcommons/ck) | `649` | `LICENSE.md` | `10 174` | 🟢 **`Apache-2.0`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | `1 029` | `LICENSE.md` | `1 122` | 🟢 **`MIT`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| [`ystemsrx/mini-nanoGPT`](https://github.com/ystemsrx/mini-nanoGPT) | `383` | `LICENSE` | `1 063` | 🟢 **`MIT`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | `337` | `LICENSE` | `1 084` | 🟢 **`MIT`** | 🟢 `IN-BAND` | 🟢 ALLOWED |
+| 🟡 [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `399 021` | `LICENSE` | `18 658` | 🟡 **`CC-BY-4.0`** | `NO-BAND` | 🟢 ALLOWED |
+| 🔴 [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | `385` | `LICENSE` | `4 635` | 🔴 **`PolyForm`** | `NO-BAND` | 🔴 **PROHIBITED** |
+
+🔵 `7` of `8` are permissive and `commercial_use_ok`; the `399 021`★ row is a **content**
+licence on a content repository *(a curated book list, not code)* and `CC-BY-4.0` carries an
+attribution obligation; `TrenTorch` is **barred**.
+
+### 🟡 The shelf is `494` repositories, not `472` — and `5` rows are one repo twice
+
+🔵 p192's rule re-applied verbatim to the current three pages.
+
+| | count |
+|---|---|
+| p192's population | `472` |
+| 🟢 **p196, same rule** | **`499`** |
+| 🔴 added | **`27`** · 🟢 removed | **`0`** |
+| 🔴 **distinct after case-folding** | 🔴 **`494`** |
+
+🟢 **`0` removed: p192's `472` is a strict subset, so no percentage over it was wrong about
+rows that later vanished.** 🔴 **But `+27` in three passes, all on this page, and the cause is
+structural: the population is extracted FROM these pages, and the pass that runs a census also
+WRITES to them.** A census published in pass `N` has a denominator pass `N`'s own writes
+invalidate. 🔵 All `4` rows p195 retracted as *"diverging"* are in the `27` — they were simply
+absent from the population.
+
+🆕 🔴 **`5` pairs are the same repository counted twice**, because GitHub resolves case-insensitively
+and this KB's extractors de-duplicate case-sensitively: `ahmedEid1/Lumen`↔`lumen`,
+`OS4ED/openSIS-Classic`↔`os4ed/…`, `OpenOLAT/OpenOLAT`↔`openolat/…`,
+`Hesham0-0Nasser/tutor-lms-mcp`↔`hesham0-0nasser/…`, `ShuyunYuan/talentcoach`↔`shuyunyuan/…`.
+🟢 **Proved, not inferred:** the tree enumeration cloned both `OS4ED` spellings and returned
+**identical figures** — `5 656` paths, `11` subtree, `11` bundled.
+
+🔵 Recipe at [`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/),
+suite **`20`/`20`**. 🔴 **Its own v1 and v2 were list-widenings** — v1 emitted `repos/..`, v2
+enumerated `.` and `..` and the corpus answered `repos/...` with three dots. v3 states the
+rule instead: *"a name with no non-dot character is not a repository."* **The pass that names a
+defect is not immune to it.**
+
+### The corrected figure
+
+| | rows |
+|---|---|
+| p195's root-`NONE` | `88` |
+| 🔴 less one case-variant duplicate | `−1` → `87` distinct |
+| 🔴 less rows with an own grant at any depth | `−11` distinct |
+| 🟢 **genuinely ungranted, absence ENUMERATED** | 🟢 **`76` → `16.2`%, not `18.8`%** |
+
+🔴 And `468` is itself the wrong denominator: `26` of the `494` distinct rows have never been
+probed at all.
+
+### 🔴 What this pass did NOT do
+
+🔴 **No primary-source verification of the EU date.** `eur-lex.europa.eu` does not resolve from
+this session *(DNS)*, `gnu.org` and `mozilla.org` are `403`. The OJ number now in
+[`intel/market.md`](../intel/market.md) is **convergence across independent secondary sources**,
+which is an advance on p193's *"no OJ reference reachable"* but **is not a byte-verified
+citation** and is labelled as such.
+🔴 **The `3` root hits' bytes are unread** — found, not classified. 🔴 **No notice-form band
+interval added**: deriving one from `3` observations would be fitting the band to the corpus.
+🔴 **`ACTION MN` — still NOT RUN**, eleventh pass, unchanged reason: an outward-facing write on
+third parties' repositories, and this run is unattended.
+
+### 🟢 Pre-registered for p197, with the limb that would falsify each
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| **Read the register first** — it fired on `3` of `4` actions this pass; keep it as step `0` | prior art found → cite and spend the pass elsewhere | nothing found → the build is genuinely new |
+| Read the `3` `OWN-GRANT-AT-ROOT` payloads' bytes and classify them | real grants → the licensed count rises by `3` and `16.2`% falls further | templates or stubs → `Gap 421` absorbs them |
+| Re-read p195's *"interoperability layer grants nothing"* row by row against `Lumi`'s `15` texts | the layer does grant → **retract the layer claim** | the `15` are vendored or non-grants → the claim survives on better evidence |
+| Derive a **notice-form** band interval from a corpus wider than this shelf's `3` rows | the form has a stable range → the `4.8`% false-positive class closes | it is free-text → the band is **full-text-only** and the `3` rows are a permanent exclusion list |
+| Case-fold de-duplication in every extractor and re-run p192's existence census over `494` | `494` resolve → the phantom class closes | some case-variant is genuinely distinct → case-folding is itself unsafe, and name the row |
+| Probe the `26` population rows no census has reached | their rate matches the shelf → `16.2`% is stable | it diverges → the `27` additions are a **biased** sample, because each pass adds what it just researched |
+| Make `lib/test_license_family.sh` resolve fixtures from `${BASH_SOURCE[0]}` and re-run it from `3` directories | `207`/`207` everywhere → the silent-skip class closes | a count still varies → some assertion is CWD-dependent in substance, and name it |
+
 ## Pass 195 — 2026-10-14
 
 🆕 🟢 **The whole shelf has a byte-verified licence column for the first time. `468` of `468`

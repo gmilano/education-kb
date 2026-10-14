@@ -3,6 +3,170 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **A lane this file declared gone one pass ago is reachable by a different door.** p195
+recorded `api.github.com` as `403` and `github.com` HTML as newly `403`; both are re-measured
+`403` this pass. 🟢 **The GitHub MCP channel returns the same ranked data — `license.spdx_id`,
+stars, `pushed_at` — and it answered on the first call.** The API lane was never *gone*; the
+`curl` door to it is shut.
+
+### 🟢 The lane census, corrected
+
+| lane | p195 | 🟢 p196 | what it yields |
+|---|---|---|---|
+| 🟢 `raw.githubusercontent.com` | `200` | 🟢 **`200`** | licence **bytes**; `2 167` probes, `0` throttles at p195's volume |
+| 🟢 `git clone --filter=blob:none` + `ls-tree` | used by `P441` | 🟢 **`200`, `88`/`88` clones, `0` failures** | the **complete tree** — the only channel that sustains an ABSENCE |
+| 🆕 🟢 **GitHub MCP `search_repositories`** | 🔴 recorded as part of a dead API lane | 🟢 **ANSWERS** | ranked slugs + `license.spdx_id` + ★ + `pushed_at` |
+| 🔴 `github.com` HTML *(incl. `/trending`)* | 🔴 `403` | 🔴 **`403`** | nothing |
+| 🔴 `api.github.com` via `curl` | 🔴 `403` | 🔴 **`403`** | nothing |
+| 🔴 `gnu.org`, `mozilla.org` | — | 🔴 **`403` at the proxy** | canonical licence texts — **unreachable** |
+| 🔴 `eur-lex.europa.eu` | — | 🔴 **DNS does not resolve** | primary OJ text — **unreachable** |
+
+🔵 **The substitute for the canonical licence texts is named, not hidden:** SPDX
+`license-list-data` over the raw lane. 🟢 It is still an **external** reference in `P417`'s
+sense — outside the instrument that consumed it — which is the property that matters.
+🔵 [`evidence/licence-pristine-anchors.2026-10-14-p196.tsv`](../evidence/licence-pristine-anchors.2026-10-14-p196.tsv).
+
+### 🔴 `spdx/license-list-data` is itself a root-`NONE` row on this shelf
+
+🔵 A small irony worth recording because it is also a measurement: the repository this pass
+used as its external licence reference **sits in p195's `88` root-`NONE` population**, and the
+tree enumeration finds **`16` own licence texts** in its `13 239`-path tree. 🟢 The reference is
+sound; the root probe simply could not see its grant either.
+
+### 🟢 The foundational layer, licence read from bytes — `+8` rows this pass
+
+🔵 All eight arrived through the reopened MCP channel and **none was published on that
+channel's word**: every licence below was fetched over the raw lane, sized, `md5`'d, and
+classified by `lib/license_family.sh` plus this pass's band.
+
+| repo | ★ | path | bytes | 🟢 family | band | what it is for |
+|---|---|---|---|---|---|---|
+| [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 237` | `LICENSE.md` | `1 095` | 🟢 **`MIT`** | 🟢 `IN-BAND` | reference algorithm corpus — CS curriculum content |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | `LICENSE` | `11 314` | 🟢 **`Apache-2.0`** | 🟢 `IN-BAND` | capture-the-flag platform — **assessment infrastructure** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | `LICENSE` | `11 358` | 🟢 **`Apache-2.0`** | 🟢 `IN-BAND` | explorations / structured lessons |
+| [`mlcommons/ck`](https://github.com/mlcommons/ck) | `649` | `LICENSE.md` | `10 174` | 🟢 **`Apache-2.0`** | 🟢 `IN-BAND` | benchmark automation |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | `1 029` | `LICENSE.md` | `1 122` | 🟢 **`MIT`** | 🟢 `IN-BAND` | material→course generation |
+| [`ystemsrx/mini-nanoGPT`](https://github.com/ystemsrx/mini-nanoGPT) | `383` | `LICENSE` | `1 063` | 🟢 **`MIT`** | 🟢 `IN-BAND` | teaching LLM internals |
+| [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | `337` | `LICENSE` | `1 084` | 🟢 **`MIT`** | 🟢 `IN-BAND` | agent-skill scaffolding |
+| 🟡 [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `399 021` | `LICENSE` | `18 658` | 🟡 **`CC-BY-4.0`** | `NO-BAND` | 🟡 **content licence, attribution obligation** |
+| 🔴 [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | `385` | `LICENSE` | `4 635` | 🔴 **`PolyForm`** | `NO-BAND` | 🔴 **NONCOMMERCIAL — barred from a client deliverable** |
+
+🟢 `learningequality/kolibri` re-confirms **`MIT` at `1 097` B** and
+`AnubisLMS/Anubis` **`MIT` at `1 083` B** from both channels.
+
+### 🔴 The ranked channel's blind spot, measured — `2` of `13`
+
+| rows compared | 🟢 AGREE | 🔴 API-BLIND | DIVERGE |
+|---|---|---|---|
+| `13` | 🟢 **`11`** | 🔴 **`2`** | 🟢 **`0`** |
+
+🔴 **Both blind rows are exactly the rows a delivery decision turns on:**
+
+| row | the channel | 🔴 the bytes |
+|---|---|---|
+| 🔴 `TrenTorch/TrenTorch` | `NOASSERTION` | 🔴 **`PolyForm Noncommercial 1.0.0` — PROHIBITED** |
+| 🔴 `frappe/education` | `NOASSERTION` | 🔴 **`license.txt`, `19` B, in full: `License: GNU GPL V3`** |
+
+🟢 **`0` DIVERGE is the number that licenses the channel for discovery.** 🔴 **`2` API-blind is
+the number that forbids it for delivery.** A `NOASSERTION` is not *"probably permissive"* — on
+this sample it was once a non-commercial bar and once a `19`-byte declaration.
+
+### 🔴 And this file's own ad-hoc probe reproduced the defect it is documenting
+
+🔵 The `12`-name probe written this pass to byte-verify the new rows **missed
+`frappe/education`** — the path is lowercase `license.txt`, and the list had `LICENSE.txt`,
+`License.txt` and `license` but not `license.txt`. 🟢 p195's `19`-name ladder found it.
+🔴 **In the pass whose headline finding is that widening a filename list cannot fix a list, the
+author wrote a list and it failed the same way.** Recorded rather than quietly corrected,
+because it is the strongest available evidence for `P441`.
+
+### 🟢 The platform layer's licences, against what the open web says
+
+🔵 A web sweep this pass returned *"sources disagree on several licenses"* and, for Open edX,
+*"most say AGPLv3, one says Apache 2.0."* 🟢 **This KB does not have to choose — it has bytes:**
+
+| platform | the open web | 🟢 byte-verified | verdict |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 split: AGPLv3 **or** Apache-2.0 | 🟢 **`AGPL-3.0`, `35 136` B** | 🔴 the Apache claim is **WRONG** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 one source says *"Apache 2.0"* | 🟢 **`ECL-2.0`, `11 120` B** | 🔴 **WRONG** — ECL is Apache-*derived*, not Apache |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 🟢 **`Apache-2.0`, `10 982` B** | 🟢 confirmed |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPLv3 core | 🟢 **`AGPL-3.0`, `34 520` B** | 🟢 confirmed |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPLv3 | 🟢 **`LGPL-3.0`, `8 241` B** | 🟢 confirmed |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL | 🟢 **`GPL-3.0`, `35 147` B at `COPYING.txt`** | 🟢 confirmed — **and the filename is not `LICENSE`** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | GPL | 🟢 **`GPL-3.0`, `35 121` B** | 🟢 confirmed |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL | 🟢 **`GPL-2.0`, `15 214` B** | 🟢 confirmed — **v2, not v3** |
+
+🟢 **The web sweep also reported *"none of the results confirmed MIT licensing for any LMS or
+SIS"*, and the census agrees by measurement:** of the hosted-LMS layer, `0` rows are `MIT`. The
+`218` `MIT` rows on this shelf are tools and agents, not platforms. 🔵 p195's *"the hosted-LMS
+layer is Affero as a market"* now stands on a second, independent channel.
+
+### 🟢 The `5` foundational repos the quality bar asks for, all byte-verified, all permissive
+
+| # | repo | ★ | 🟢 licence | bytes | why foundational |
+|---|---|---|---|---|---|
+| `1` | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | 🟢 **`MIT`** | `1 097` | offline-first LMS — the only permissive platform-grade base on this shelf |
+| `2` | [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | 🟢 **`Apache-2.0`** | `11 358` | structured lesson engine with a patent grant |
+| `3` | [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | 🟢 **`Apache-2.0`** | `11 314` | assessment / challenge infrastructure |
+| `4` | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | — | 🟢 **`Apache-2.0`** | `10 982` | full university LMS, permissive — rare |
+| `5` | [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `381` | 🟢 **`MIT`** | `1 083` | autograding / per-student cloud IDE |
+| `6` | [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 237` | 🟢 **`MIT`** | `1 095` | CS curriculum content at scale |
+
+🔵 `sakaiproject/sakai` **`ECL-2.0`** `11 120` B and `opencast/opencast` **`ECL-2.0`** `11 340` B
+remain the two `ECL` rows: Apache-derived, patent grant scoped to education, 🟢 permissive for
+delivery purposes.
+
+### 🟡 The denominator every percentage on this page divides by
+
+🔵 p192's population rule, re-applied verbatim to the current three pages:
+
+| | count |
+|---|---|
+| p192 *(inherited unchanged by p193, p194, p195)* | `472` |
+| 🟢 **p196** | **`499`** raw · 🔴 **`494`** distinct after case-folding |
+| 🔴 added · 🟢 removed | **`+27`** · 🟢 **`0`** |
+
+🔴 **The phrase *"the whole shelf"* — used on this page and on
+[`agents/top.md`](../agents/top.md) — is wrong by `27` real rows and `5` phantoms.** 🟢 The
+useful half: `0` removed, so this shelf still does not rot.
+🔵 [`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/), suite **`20`/`20`**.
+
+### 🆕 🔴 The shared suite's assertion COUNT depends on the invoking directory
+
+🔵 Found by accident this pass, running the shared classifier's suite from one directory up.
+🔴 **The same script, the same commit, two different totals:**
+
+| invoked from | result |
+|---|---|
+| 🟢 `compose/code/lib/` | 🟢 **`207`/`207`** — the figure p194 and p195 published, and it is correct |
+| 🔴 `compose/code/` | 🔴 **`179`/`181`** |
+
+🔴 **The danger is not the `2` failures — it is the `26` assertions that SILENTLY DISAPPEAR.**
+`207 − 181 = 26`. The suite resolves its fixture paths *(`lib/fixtures-p551`, `-p613`, `-p845`,
+`-p854`, `-p990`)* relative to the **current** directory rather than to `${BASH_SOURCE[0]}`, so
+from the wrong place the fixture-backed assertions are skipped and two presence checks fail.
+
+🔴 **A pass that invokes it from the wrong directory reads `179/181` as *"two regressions in the
+shared classifier"* when the truth is *"twenty-six assertions never ran."*** 🟢 **The wrong
+reading is the alarming one, which is the lucky direction** — but a suite that can report a
+smaller denominator without saying so is a suite that can hide coverage loss.
+
+🟢 **`207`/`207` stands. The instrument is sound; its invocation is not path-independent.**
+🔵 The fix is one line *(resolve fixtures from `${BASH_SOURCE[0]}`, as this pass's own recipes
+do)* and it is **not applied here** — `P237` forbids editing the shared classifier on a pass
+that did not pre-register it. 🟢 **Pre-registered for p197**, with the limb: if the count is
+`207` from every directory after the fix, the class closes; if some assertion is genuinely
+CWD-dependent in substance, name it.
+
+### Open limbs
+
+🔴 **`26` of the `494` distinct rows have never been probed by any census.** 🔴 **The `3`
+`OWN-GRANT-AT-ROOT` payloads are found but unread.** 🔴 **No primary-source read of the EU OJ
+text** — `eur-lex` does not resolve here, so the OJ number in
+[`intel/market.md`](../intel/market.md) rests on secondary convergence and says so.
+
 ## Pass 195 — 2026-10-14
 
 🆕 🟢 **The foundational layer now has a licence column read from bytes on every row, because

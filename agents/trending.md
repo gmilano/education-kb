@@ -3,6 +3,85 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **Trending measurement RESUMES, by a different door.** p195 recorded *"there is no
+trending measurement this pass, and that is the entry"* — `github.com/trending` had closed at
+the proxy. 🔴 **It is still closed: `403` on `/trending`, `/trending/python?since=weekly` and
+plain repository pages, re-measured this pass.** 🟢 **But the GitHub MCP `search_repositories`
+channel answers, and it carries what a trending view carries: rank by stars, a recency filter
+(`pushed_at`), and `license.spdx_id`.**
+
+🔵 **Honest about what this is and is not.** A `pushed:>`-filtered ranked query is **not**
+GitHub's trending algorithm — it measures *stock filtered by recency*, not *flow*. 🔴 **Star
+velocity is still unmeasurable from this session.** What follows is the best available
+substitute and is labelled as such, not as a trending list.
+
+### 🟢 Education rows active in the last `30` days — ranked, licence from BYTES
+
+🔵 Query: `topic:education language:Python stars:>300 pushed:>2026-09-14`, `total_count` `19`,
+`15` returned. Every licence below was then **fetched over the raw lane and classified by
+`lib/license_family.sh`** — none is taken on the channel's word.
+
+| repo | ★ | pushed | 🟢 licence *(bytes)* | on this shelf? |
+|---|---|---|---|---|
+| [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `399 021` | `2026-10-12` | 🟡 **`CC-BY-4.0`** *(`18 658`)* | 🆕 **NEW** |
+| [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 237` | `2026-10-14` | 🟢 **`MIT`** *(`1 095`)* | 🆕 **NEW** |
+| [`CTFd/CTFd`](https://github.com/CTFd/CTFd) | `6 876` | `2026-10-09` | 🟢 **`Apache-2.0`** *(`11 314`)* | 🆕 **NEW** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `6 855` | `2026-10-14` | 🟢 **`Apache-2.0`** *(`11 358`)* | on shelf |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2 373` | `2026-10-11` | 🔴 **`AGPL-3.0`** *(`34 523`)* | on shelf |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | `2026-10-13` | 🟢 **`MIT`** *(`1 097`)* | on shelf |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | `1 029` | `2026-10-07` | 🟢 **`MIT`** *(`1 122`)* | 🆕 **NEW** |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | `665` | `2026-10-14` | 🔴 **`19` B: `License: GNU GPL V3`** | on shelf |
+| [`mlcommons/ck`](https://github.com/mlcommons/ck) | `649` | `2026-10-09` | 🟢 **`Apache-2.0`** *(`10 174`)* | 🆕 **NEW** |
+| 🔴 [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | `385` | `2026-10-14` | 🔴 **`PolyForm` NONCOMMERCIAL** *(`4 635`)* | 🆕 **NEW** |
+| [`ystemsrx/mini-nanoGPT`](https://github.com/ystemsrx/mini-nanoGPT) | `383` | `2026-10-12` | 🟢 **`MIT`** *(`1 063`)* | 🆕 **NEW** |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `381` | `2026-09-15` | 🟢 **`MIT`** *(`1 083`)* | on shelf |
+| [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | `337` | `2026-09-26` | 🟢 **`MIT`** *(`1 084`)* | 🆕 **NEW** |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | `347` | `2026-10-07` | 🔴 **NONE at root** | 🆕 **NEW** |
+| [`rajshah6/arXivisual`](https://github.com/rajshah6/arXivisual) | `339` | `2026-10-08` | 🔴 **NONE at root** | 🆕 **NEW** |
+
+🟢 **`8` of `15` are new to this shelf and `7` of those `8` are permissive and
+`commercial_use_ok`.** 🔴 **`2` of `15` grant nothing at root, and `1` is non-commercial.**
+
+### 🔴 The row that proves why the channel cannot be trusted for delivery
+
+🔴 [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) — `385`★, pushed **today** —
+is reported by the ranked channel as **`NOASSERTION`**. The bytes say **PolyForm Noncommercial
+License 1.0.0**, `4 635` B, and this KB's `commercial_use_ok` gate returns **PROHIBITED**.
+🟢 **A row that trends today and cannot ship.** `NOASSERTION` is not *"probably fine"*.
+
+### 🟢 `HKUDS/DeepTutor` — two dated releases this week
+
+🔵 From the project's own release listing, **not** from a star re-read *(p195 measured hourly
+re-pricing at `0.018`% noise and set the cadence to weekly)*:
+
+| version | date | what it adds |
+|---|---|---|
+| 🆕 **`v1.6.14`** | **`2026-10-08`** | visual practice, a **learning journal**, managed plugins |
+| `v1.6.13` | `2026-10-04` | question-bank practice, configurable speech |
+
+🔵 **The direction is legible across the two:** DeepTutor is adding **practice and progress
+state** — question banks, visual practice, a journal — which is the move from *explanation* to
+*assessable sequence*. 🟡 Star count not re-read this pass by design.
+
+### 🔴 What is still not measurable
+
+🔴 **Star velocity.** 🔴 **`github.com/trending`'s own ranking**, which weights velocity, not
+stock. 🔴 **Any non-Python education row**, because the query that returned a parseable result
+was language-filtered — the unfiltered variants either returned `0` or exceeded the response
+limit. 🟡 So *"`8` new rows"* is a floor, and the language filter is a known bias toward
+Python-first projects.
+
+### Pre-registered for p197
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| Run the MCP query once per language *(JS/TS, Java, PHP, Go)* and diff against this Python-only `15` | the new rows cluster in PHP/Java *(the LMS-plugin world)* → the language filter was the bias, and the shelf gains a layer | the rows are the same projects → Python-first is the real shape of education OSS, not an artefact |
+| Re-read `DeepTutor`'s ★ on a **weekly** cadence and test p193's `±10` floor across `7` days | the weekly delta exceeds `±10` → weekly is the right cadence, confirmed | it does not → even weekly is noise, and the star column should be dropped from trending entirely |
+
 ## Pass 195 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

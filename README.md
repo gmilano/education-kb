@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **The headline is that the gate p195 installed WORKED, and the first thing it caught was
+p195's own pre-registration.** 🟢 `P0a` *(read the register before building the instrument)* ran
+first and answered **`3` of `4`** pre-registered actions before any code was written — and one
+of those three had been pre-registered as **an instrument this KB proved does not work four
+passes ago, on the same repository, with a test suite attached.**
+
+| what ran | verdict |
+|---|---|
+| 🟢 **`P0a` — read the register first** | 🟢 **FIRED on `3` of `4` actions.** `P441`, `P420`, `P1056`, `p969` and p192's population rule all had prior art. Cited, not re-derived. 🟢 **First pass in four with no "didn't read the register" recurrence in its headline** |
+| 🔴 **The `docs/`+`legal/`+`.github/` probe** | 🔴 **INSTRUMENT REJECTED — it is a filename list with a `/` in it.** Ran `P441`'s tree channel instead: `88`/`88` clones, `0` failures, 🔴 **`12` of `88` rows DO carry their own grant, `3` at the ROOT.** `18.8`% → 🟢 **`16.2`%** |
+| 🟢 **Copyleft byte bands** | 🟢 **Derived for every copyleft family; `79`/`83` `IN-BAND`.** 🔴 **But the hypothesis is REFUTED: all `4` flags are false positives, so `0` of `83` rows carry a narrowed grant** |
+| 🟡 **Population re-extract** | 🟡 **SPLITS. `0` removed** *(p192's `472` is a strict subset)* **but `+27` added, and `5` rows are one repository twice.** The shelf is **`494`** distinct |
+| 🆕 🟢 **A lane reopened** | 🟢 **The GitHub MCP ranked channel answers where `curl api.github.com` is `403`.** `11` agree / `2` API-blind / 🟢 **`0` diverge** against bytes. `8` new rows, every licence read from bytes |
+| 🟢 **EU AI Act conflict** | 🟢 **CLOSES on an instrument number** — Regulation (EU) `2026/1744`, OJ `2026-07-24`. 🔴 **And the half that was NOT deferred is the half that binds: Article `50` has applied since `2026-08-02`** |
+
+### 🔴 The finding that will outlive this pass
+
+**A filename list has now failed FIVE times on the same repository.**
+[`openedx/XBlock`](https://github.com/openedx/XBlock) ships `LICENSE.TXT` — uppercase
+extension. A `14`-name list missed it, a `41`-name widening missed it, p195's `19`-name ladder
+missed it and published it inside the `88`, and 🔴 **p196's own pre-registration would have
+missed it a fifth time, because `docs/`, `legal/` and `.github/` do not contain a file that
+sits at the root.**
+
+🟢 **The three root filenames the ladder missed, each two or three characters from a name it
+tried:** `LICENSE.TXT`, `License.txt`, `License`.
+
+🔴 **And naming the defect conferred no immunity.** This pass's own population extractor
+shipped **two successive list-widenings** *(`repos/..`, then the corpus answered `repos/...`)*,
+and its throwaway `12`-name licence probe **missed `frappe/education`** at lowercase
+`license.txt`. 🟢 **The durable form is a rule, not a longer list.**
+
+### 🟢 The findings that stand
+
+- 🟢 **`0` of `83` copyleft rows on this shelf carry a narrowed grant.** The band flagged `4`;
+  `3` are the **GNU short-notice form** *(a valid grant by incorporation by reference, which
+  looks exactly like `Gap 421`'s non-grants and is their legal opposite)* and `1` is
+  `rosariosis` missing only the non-operative *"How to Apply These Terms"* appendix.
+- 🆕 🔴 **A byte band must be a SET of intervals.** `LGPL-3.0` ships in two legitimate forms —
+  `7 651` B *(GPL by reference)* and `42 098` B *(by value)*. 🟢 **A one-interval band calls
+  `odoo/odoo` narrowed, and it is not.**
+- 🔴 **`NOASSERTION` is a blind spot, not a soft "unknown."** On `13` cross-checked rows it
+  meant **PolyForm Noncommercial** once *(`TrenTorch`, barred from any deliverable)* and a
+  **`19`-byte declaration** once *(`frappe/education`: `License: GNU GPL V3`, entire file)*.
+- 🔴 **The open web is wrong about two of the biggest platforms, both times permissively.**
+  `openedx/edx-platform` is **`AGPL-3.0`** *(`35 136` B)*, not Apache-2.0; `sakaiproject/sakai`
+  is **`ECL-2.0`** *(`11 120` B)*, not Apache-2.0. 🟢 Both errors would hand a client an
+  undisclosed obligation.
+- 🟡 **Licence rigour varies WITHIN a publisher:** `frappe/lms` carries `33 893` B of real
+  `AGPL-3.0`; `frappe/education` carries `19` bytes. **Read the row, not the owner.**
+- 🔴 **`5` rows on this shelf are one repository counted twice** — case-variant slugs, since
+  GitHub resolves case-insensitively and this KB de-duplicates case-sensitively. 🟢 Proved by
+  cloning both `OS4ED/openSIS-Classic` spellings and getting identical trees.
+
+### 🔴 What this pass did NOT do
+
+🔴 **No primary-source read of the EU text** — `eur-lex.europa.eu` does not resolve from this
+session, `gnu.org` and `mozilla.org` are `403`. The OJ number rests on **convergence across
+independent secondary sources**, which is an advance on p193's *"no OJ reference reachable"* but
+is **not** a byte-verified citation, and is labelled so wherever it appears.
+🔴 **The `3` root-grant payloads are found but unread.** 🔴 **No notice-form band interval
+added** — deriving one from `3` observations would be fitting the band to the corpus.
+🔴 **`26` of the `494` distinct shelf rows have never been licence-probed.**
+🔴 **Star velocity is still unmeasurable** *(`github.com/trending` `403`, third pass)*, and the
+one MCP query that parsed was **Python-filtered**, so the PHP/Java LMS-plugin world is
+under-sampled and *"`8` new rows"* is a floor.
+🔴 **`ACTION MN` — still NOT RUN**, eleventh pass: an outward-facing write on third parties'
+repositories, and this run is unattended.
+
+### Suites green this pass
+
+| recipe | suite |
+|---|---|
+| [`compose/code/p196-copyleft-band/`](compose/code/p196-copyleft-band/) | 🟢 **`32`/`32`** — carries p195's `7` permissive assertions unchanged as a regression control |
+| [`compose/code/p196-none-tree-reach/`](compose/code/p196-none-tree-reach/) | 🟢 **`24`/`24`** — 🔴 **its own suite refuted v1 and v2 of the instrument** |
+| [`compose/code/p196-population-diff/`](compose/code/p196-population-diff/) | 🟢 **`20`/`20`** |
+| [`compose/code/lib/test_license_family.sh`](compose/code/lib/) | 🟢 **`207`/`207` from `lib/`** — 🔴 but **`179`/`181` from one directory up: `26` assertions silently skipped.** Instrument sound, invocation not path-independent |
+
 ## Pass 195 — 2026-10-14
 
 🆕 🟢 **The headline is that p194's biggest pre-registered experiment SUCCEEDED and p195's own

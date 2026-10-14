@@ -1,0 +1,11 @@
+family	spdx_bytes	census_mode	source
+AGPL-3.0	34020	34523	raw.githubusercontent.com/spdx/license-list-data + p195 census
+GPL-3.0	34674	35149	raw.githubusercontent.com/spdx/license-list-data + p195 census
+GPL-2.0	17337	18092	raw.githubusercontent.com/spdx/license-list-data + p195 census
+LGPL-3.0-short	7651	7652	raw.githubusercontent.com/spdx/license-list-data + p195 census
+LGPL-3.0-full	42098	43529	raw.githubusercontent.com/spdx/license-list-data + p195 census
+LGPL-2.1	26001	26526	raw.githubusercontent.com/spdx/license-list-data + p195 census
+MPL-2.0	16727	16725	raw.githubusercontent.com/spdx/license-list-data + p195 census
+ECL-2.0	11111	11340	raw.githubusercontent.com/spdx/license-list-data + p195 census
+MIT	1078	1071	raw.githubusercontent.com/spdx/license-list-data + p195 census
+Apache-2.0	10280	10982	raw.githubusercontent.com/spdx/license-list-data + p195 census

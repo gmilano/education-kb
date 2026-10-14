@@ -3,6 +3,164 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 196 — 2026-10-14
+
+🆕 🟢 **The trend this pass can state for the first time is about this KB's own method, and it
+is measurable: the register is now worth more than the instrument.** 🟢 p195 pre-registered four
+actions; a grep of `compose/code/` *(288 recipes)* and the four pages answered **three of them
+before any code was written**, and one of the three turned out to have been **pre-registered as
+an instrument this KB proved does not work four passes ago.**
+
+🔴 **The second trend is that the measurement lane keeps moving, and *"the lane is gone"* has
+twice meant *"this door is shut."*** p195 declared the GitHub API lane dead; it answers through
+MCP. 🟢 A lane census must name the **door**, not the destination.
+
+### 🆕 🟢 T1 — Education's copyleft estate carries NO narrowed grants, and the negative is the finding
+
+🟢 **`83` copyleft rows, every one banded against two external anchors, `79` `IN-BAND`, `4`
+flagged, and all `4` flags are false positives for narrowing.** 🟢 **`0` of `83`.**
+
+🔵 The `4` resolve into two previously unseparated classes:
+
+| class | n | what it is |
+|---|---|---|
+| 🟢 **GNU short-notice form** | `3` | the FSF's prescribed standard notice + a `gnu.org` pointer. **A valid grant by incorporation by reference** |
+| 🟢 **missing non-operative appendix** | `1` | `rosariosis` ends at `END OF TERMS AND CONDITIONS`; sections `0`–`12` all present |
+
+🔴 **The short-notice rows look exactly like `Gap 421` and are its legal opposite.** `Gap 421`'s
+registered shapes are sub-`1`kB payloads that **grant nothing**; these grant **everything the
+full text grants**. 🟢 **Same size class, opposite content** — which is why a byte band is a
+trigger to read and can never be a verdict. 🔵 The trend: **as copyleft adoption spreads to
+small plugin repositories, the notice form becomes more common, and every size-based control
+will see more of it.** `3` of `83` today on this shelf.
+
+### 🆕 🟢 T2 — Licence documents are BIMODAL by publisher convention, and single-interval controls get the big platforms backwards
+
+🟢 **`LGPL-3.0` ships in two legitimate forms** — short *(`7 651` B, `GPL-3.0` by reference)*
+and full *(`42 098` B, `GPL-3.0` by value)* — and this shelf carries platforms on both:
+`bigbluebutton` `7 652`, `openeducat_erp` `8 241`, and 🟢 **`odoo/odoo` `43 529`.**
+
+🔴 **A one-interval band calls one of the two forms "narrowed," and on this shelf it would have
+flagged `odoo/odoo` — the largest row in the family.** 🟢 **The structural lesson generalises
+past licences: a control that assumes one canonical form per category will misread the
+publisher convention, not the content.** The fix was a band **SET**, with p195's
+single-interval families as the one-element case.
+
+### 🆕 🔴 T3 — A filename list has now failed FIVE times on the same repository, and the fifth failure was written into a pre-registration
+
+| pass | the widening | result on [`openedx/XBlock`](https://github.com/openedx/XBlock) |
+|---|---|---|
+| p436 | `14` names | 🔴 missed `LICENSE.TXT` |
+| p440 | `41` names | 🔴 missed, **third** time |
+| p195 | `19`-name ladder | 🔴 missed, **fourth** time — then published inside its `88` |
+| 🔴 **p196's pre-registration** | `docs/` + `legal/` + `.github/` | 🔴 **would have missed it a FIFTH time — the file is at the ROOT** |
+
+🟢 **`P441`'s channel answers it in one call**: `git clone --filter=blob:none --no-checkout
+--depth 1` then `git ls-tree -r`. `88`/`88` clones, `0` failures, **`12` of `88` rows carry
+their own grant and `3` of those are at the root** *(`LICENSE.TXT`, `License.txt`, `License` —
+each two or three characters from a name the ladder tried)*.
+
+🔴 **And the trend is not about one script.** This pass's own throwaway `12`-name probe **missed
+`frappe/education`** because its path is lowercase `license.txt`, and this pass's population
+extractor shipped **two successive list-widenings of its own** *(`repos/..`, then
+`repos/...`)*. 🟢 **Naming a defect does not confer immunity to it.** The durable form is a
+**rule** — *"a name with no non-dot character is not a repository"* — not a longer list.
+
+### 🆕 🔴 T4 — `NOASSERTION` is a blind spot, not a soft "unknown", and it is blind where delivery is decided
+
+🟢 `13` rows cross-checked, MCP's `license.spdx_id` against this KB's byte reads:
+🟢 **`11` AGREE, `0` DIVERGE** — 🔴 **`2` API-BLIND.**
+
+| row | the channel | 🔴 the bytes |
+|---|---|---|
+| 🔴 `TrenTorch/TrenTorch` `385`★ | `NOASSERTION` | 🔴 **PolyForm Noncommercial `1.0.0` — `commercial_use_ok` PROHIBITED** |
+| 🔴 `frappe/education` `665`★ | `NOASSERTION` | 🔴 **`19` bytes, in full: `License: GNU GPL V3`** |
+
+🟢 **`0` DIVERGE licenses the ranked channel for DISCOVERY.** 🔴 **`2` blind forbids it for
+DELIVERY.** 🔵 The trend to watch: **both blind rows are small, recent repositories** — the
+exact population a trending query surfaces — so the blind rate on *new* rows is plausibly worse
+than on the shelf's established ones. Not measured; stated as the open question.
+
+### 🆕 🟡 T5 — Declared licence rigour varies WITHIN a publisher, and it decides a hosted deliverable
+
+🔵 Two Frappe repositories, same organisation:
+
+| repo | licence artefact | verdict |
+|---|---|---|
+| 🟢 [`frappe/lms`](https://github.com/frappe/lms) | `AGPL-3.0`, **`33 893` B** of real text | 🟢 a grant — this KB's costliest finding, on three channels |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | 🔴 **`19` B**: `License: GNU GPL V3` | 🔴 a **declaration** |
+
+🔴 **One publisher, two rigours, and the difference decides whether a hosted deliverable can
+ship.** 🟢 The practical rule: **organisation-level licence reputation does not transfer across
+repositories.** Read the row, not the owner.
+
+### 🟢 T6 — Regulation's centre of gravity moved from national statute to LOCAL POLICY MANDATE
+
+🟢 **North America is the clearest case, and it is dense**: `77` AI-in-classroom bills across
+`27` states in the `2026` session, ≈`33`–`35` states with official K-12 guidance, and at least
+`5` states obliging **districts** to adopt AI policies — Maryland *(AI coordinators + funded
+PD)*, Ohio *(`2026-07-01`, model policy published)*, Oklahoma *(`2027-28`, four named clauses)*,
+Tennessee *(maintain **and report**)*, Idaho *(and AI may not replace teachers)*.
+
+🔴 **The vendor-side counterpart is Vermont H.B. `650`: edtech providers must register and
+certify privacy compliance ANNUALLY.** 🟢 **The trend: the regulated artefact is shifting from
+the model to the deployment's governance paperwork** — approved/prohibited-use registers, data
+minimisation, family transparency, periodic review. 🟢 That is buildable, and this KB already
+has receipt and audit primitives for it.
+
+### 🆕 🟢 T7 — The EU deferred the half that was in the future and left the half that already binds
+
+🟢 **Regulation (EU) `2026/1744`** *(OJ `2026-07-24`, in force `2026-07-27`)* moved **Annex III
+high-risk — education included — from `2026-08-02` to `2027-12-02`**, a `16`-month deferral,
+and Annex I to `2028-08-02`.
+
+🔴 **Article `50` transparency was NOT delayed and has applied since `2026-08-02`.** New
+Article `5` prohibitions land `2026-12-02`.
+
+🔴 **So the widely-reported *"education AI relief"* inverts the operative picture.** 🟢 The duty
+that touches a shipped deliverable **today** is marking and disclosure — and this KB's
+Article `50(2)` instrument family is therefore the **live** half of its regulatory work, not
+the anticipatory half. 🔴 **Caveat carried, not buried:** `eur-lex` does not resolve from this
+session, so the OJ number is secondary convergence, not a primary read.
+
+🟢 **And the convergence across regions is itself the trend: China's binding AI-content
+labelling is the same instrument class as EU Article `50`.** 🟢 **One marking layer, two
+jurisdictions** — see [`compose/patterns.md`](../compose/patterns.md) this pass.
+
+### 🟡 T8 — Market sizing has stopped being usable; adoption has not
+
+🔴 **Four firms priced `2026` between `$6.4` bn and `$11.4` bn — a `78`% spread on the CURRENT
+year** — and one firm publishes **two different CAGRs** *(`34.52`% and `36.02`%)* in its own
+pages. 🔴 *"AI tutors `$2.7` bn"* and *"AI tutoring platforms `$4.12` bn"* in the same year are
+two definitions, not two measurements.
+
+🟢 **The adoption figures held up and are the ones to quote**: student AI use **`88`%**, faculty
+**`77`%** *(Digital Education Council, July `2026`)*; Khanmigo `45` → **`380`+** district
+partners. 🔴 **And the gap, declared: no channel reached this pass sizes AGENTIC tutoring at
+all** — the segment this KB's agent shelf actually serves.
+
+### 🟡 T9 — The product direction visible in the leading agent is practice and PROGRESS STATE
+
+🔵 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) shipped twice this week:
+**`v1.6.14` (`2026-10-08`)** adds visual practice, a **learning journal** and managed plugins;
+`v1.6.13` (`2026-10-04`) added question-bank practice and configurable speech.
+
+🟢 **Read across the two releases, the move is from *explanation* to *assessable sequence with
+retained state*** — question banks, practice, a journal. 🔴 **Which is exactly the surface
+Brazil's PL `2338/2023` would classify as high-risk *(educational evaluation)* and the EU's
+Annex III already does.** 🟢 **The trend and the regulation are converging on the same
+feature**, and a studio building here should assume the assessment path is the regulated path.
+
+### 🔴 What is NOT measurable from this session, and should not be inferred as absence
+
+🔴 **Star velocity**, so no true *"trending"* ranking — `github.com/trending` is `403`, third
+pass running. 🔴 **Non-Python education rows**, because the only MCP query that returned a
+parseable result was language-filtered; so **the PHP and Java LMS-plugin world is
+under-sampled**, and *"`8` new rows"* is a floor. 🔴 **Any primary regulatory text**: `eur-lex`
+does not resolve, government hosts are null-routed. 🔴 **EMEA adoption rates and vendor
+rankings** *(fourth pass)*, 🔴 **Gulf and African education regulation**, 🔴 **named LATAM
+vendors**, 🔴 **China and Japan education-ministry specifics.**
+
 ## Pass 195 — 2026-10-14
 
 🆕 🔴 **The trend this pass can measure for the first time is a WHOLE-SHELF one, and the trend
