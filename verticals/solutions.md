@@ -3,6 +3,41 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🔴 **The Chamilo cell changes category, not just content: it is no longer an LMS that an
+agent can be bolted onto — it ships the agent layer.** `config/packages/mcp.yaml` declares
+`app: 'Chamilo'`, `version: '2.1.0'`, `/mcp` over HTTP and stdio, and the tree carries
+**`68` `#[McpTool]` definitions, `47` of them writes**, at HEAD `6f9bb2c61985` *(`2026-10-13`)*.
+
+| platform | grant, at full tree depth | 🆕 agent layer, measured from definitions | what an engagement must supply |
+|---|---|---|---|
+| 🟢 **[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms)** | 🟢 **`GPL-3.0+`** — `LICENSE` + `license.txt` at root; `13 271` paths; two vendored subtrees name other families and are **not** the project's grant | 🆕 **native MCP `2.1.0`**: `68` tools *(`21` read / `47` write)*, `48` enforcement sites in `18` of `67` sources, roles `ROLE_ADMIN` / `ROLE_GLOBAL_ADMIN` / `ROLE_QUESTION_MANAGER` / `ROLE_TEACHER`, OAuth 2.1 + JWT + hashed personal keys, **fails closed** on malformed role config | 🔴 **a scoped-key gateway, an audit row and a confirm step for the `47` writes.** The platform supplies the capability and `0` of the accountability |
+| 🟢 **[`moodle/moodle`](https://github.com/moodle/moodle)** | 🟢 **`GPL-3.0`** — `COPYING.txt`, `35 147` B, canonical *(the standing path list reaches `COPYING`, not `COPYING.txt`: enumerated, not guessed)* | `5.3` shipped `2026-10-05`; HEAD `2026-10-13`. 🔴 **No native MCP server in-tree** — the layer is third-party *(`csmediapro/moodle-mcp-server`, `AGPL-3.0?`, read-only)* | 🔴 **`67 592` paths and the tree is now `public/`-prefixed** — every rooted path this KB publishes for Moodle is suspect until re-read *(`ACTION NU`)* |
+| 🟢 **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)** | 🟢 **`ECL-2.0`** — `LICENSE`, `11 120` B, plus three module subtrees; **confirmed at full depth** | HEAD `31590f191769`, **`2026-10-14`** | 🟡 `ECL-2.0` is an Apache-2.0 derivative with a modified patent grant: permissive, and **not** spellable as `Apache-2.0` in a client licence register |
+| 🟢 **[`opencast/opencast`](https://github.com/opencast/opencast)** | 🟢 **`ECL-2.0`** — `LICENSE`, `11 340` B | HEAD `637882d48eb8`, `2026-10-13` | 🟢 lecture capture with in-tree local transcription; the `ECL-2.0` verdict holds |
+
+🔵 **Both `ECL-2.0` rows are worth re-stating because p191's own instrument accused them of
+contradicting themselves** — the id this shelf meets most often in US higher education is the
+one the extractor could not spell. 🟢 **The platforms were right; the tool was wrong.** See
+[`repos/foundations.md`](../repos/foundations.md).
+
+### 🔴 The question a buyer asks about an LMS has changed, and the shelf should answer it in this order
+
+1. 🟢 **Does the platform ship an agent layer?** Chamilo yes *(`68` tools)*; Moodle no;
+   Open edX only via a third-party facade *(`openedx-mcp`, `33` tools)*.
+2. 🔴 **Can a key be narrowed below the human?** Open edX's facade yes *(`9` scopes)*;
+   Chamilo **no** — one role boolean for all `68` tools, so the key IS the user.
+3. 🔴 **Is there a record of what the agent did?** 🔴 **Neither platform.** Chamilo has `0`
+   audit and `0` logger references across its MCP sources; Open edX writes an audit row and
+   **never guards its delete path**.
+4. 🟡 **Is the grant usable for the deliverable?** Chamilo and Moodle `GPL`-family *(copyleft:
+   deploy and extend, do not embed)*; Sakai and Opencast `ECL-2.0` *(permissive)*.
+
+🟢 **Measurement:** [`P1060`](../compose/code/p191-chamilo-agent-surface/README.md) ·
+[`evidence/agent-layer-two-platforms.2026-10-14-p191.tsv`](../evidence/agent-layer-two-platforms.2026-10-14-p191.tsv)
+· [`evidence/git-recency-recovered.2026-10-14-p191.tsv`](../evidence/git-recency-recovered.2026-10-14-p191.tsv)
+
 ## Pass 190 — 2026-10-14
 
 🆕 🔴 **The Open edX cell changes a THIRD time in three passes — from a policy, to a

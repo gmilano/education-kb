@@ -1,0 +1,24 @@
+# p191 — ACTION NN. Does any Gulf state OUTSIDE Saudi Arabia govern AI used ON learners?
+# The distinction this row set exists to hold: governing AI used BY learners (conduct,
+# integrity, age) is NOT governing AI used ON learners (profiling, scoring, proctoring,
+# automated decisions about a person). Channel: web search only — every government primary
+# source attempted was unreachable (Gap 431 holds; 16th blocked host this pass).
+state	instrument	status	governs AI used BY learners	governs AI used ON learners	channel
+UAE	MoE guide "Safe and Responsible Use of Artificial Intelligence in Classrooms" (2026), 25 prohibitions, circulated to all schools, compliance stated mandatory	IN FORCE 2026-02	YES — under-13 and below Grade 7 barred; no undisclosed AI-generated submissions; AI banned in all exams and assessments	NOT FOUND — pillars are age, academic integrity, privacy, supervision; no provision found on AI systems that score, profile or monitor a learner	secondary (news); ministry text not reached
+UAE	Artificial Intelligence and Technology as a mandatory standalone subject, K-12, 2026-27 teaching plan	IN FORCE	curriculum, not conduct	NO	secondary
+Qatar	MoEHE safeguarding policy for private schools and kindergartens, binding Law No. 13/2016 (PDPL); scope names online safety, responsible use of technology and AI	IN FORCE	partially — scope only	NOT FOUND as an AI-specific duty; reaches learner data via the general PDPL	secondary (school-published copy)
+Qatar	MCIT ethical AI principles (promoted 2025-05-08, ~12-month adoption window)	VOLUNTARY	NO	NO — principles, not duties	secondary (tracker)
+Bahrain	PDPL Law No. 30/2018 + Personal Data Protection Authority; implementing orders still being finalised	IN FORCE	NO	INDIRECTLY — secondary guides report rights over SOLELY AUTOMATED decisions, which reaches learner profiling; article not verified against the statute	secondary (DLA Piper / DataGuidance / commercial compliance guides)
+Bahrain	38-article AI Regulation Bill — passed the Shura Council 2024-04, still under review in the lower house, with government pushback that existing statutes suffice	NOT LAW	NO	NO	secondary
+Bahrain	National AI Policy — names education among sectors for government adoption	NON-BINDING	NO	NO	secondary
+# 🔴 VERDICT: LIMB 2 FIRES. 0 of the three non-Saudi Gulf states has an instrument governing
+# AI used ON learners. Saudi Arabia remains the only Gulf state that does, and this KB now
+# publishes that as a MEASURED claim across all four and STOPS re-asking per state.
+# 🟢 The usable consequence for an engagement: outside Saudi Arabia the binding hook in the
+# Gulf is the GENERAL data-protection statute, not an AI instrument — Bahrain's PDPL
+# automated-decision right and Qatar's Law 13/2016 are what a learner-facing model must be
+# argued against. Scope Gulf work on PDPL compliance plus the UAE classroom-conduct guide,
+# never on an AI act that does not exist.
+# 🔴 Confidence limit, stated rather than smoothed: every row here is SECONDARY. iga.gov.bh
+# was ENOTFOUND for p190 and digitaleducationcouncil.com was ENOTFOUND for p191, while every
+# code host served every byte asked of it. See Gap 431 and Gap 437.

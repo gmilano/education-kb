@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🟢 **One new pattern, and three amendments — two of them REPRICING steps this KB published
+yesterday, one of them a licence correction that changes nothing commercially and had to be
+made anyway.** Every repository named below was read at a pinned `HEAD` this pass, or had its
+grant read over `raw.githubusercontent.com` with the HTTP code checked.
+
+### 🆕 Pattern `37` — governing an agent layer the platform already shipped *(4–6 weeks)*
+
+🔴 **The premise changed under this KB's feet.** Patterns `35` and `36` assume the studio
+*chooses* an MCP server. Chamilo `2.1.0` ships `68` tool definitions natively, `47` of them
+writes, with `0` audit rows. 🟢 **So the deliverable is no longer an agent; it is the
+accountability layer around one that is already there.**
+
+| step | what it is | built from | measured basis |
+|---|---|---|---|
+| `1` | 🔴 **Count the surface from DEFINITIONS, never from the docs.** `#[McpTool(name:)]` attributes in `src/CoreBundle/Mcp/` and `src/CoreBundle/Service/Mcp/` | [`P1060`](code/p191-chamilo-agent-surface/README.md) *(`16`/`16` controls)* | `68` tools found; the server's own `instructions:` block names **`0`** of them |
+| `2` | 🟢 **Read the role gate and the default allowlist.** `McpAccessPolicy::DEFAULT_ALLOWED_ROLES` — `ADMIN` and `COURSEMANAGER` true, five roles false — and confirm `security.mcp_enabled` is the kill switch | `src/CoreBundle/Service/Mcp/McpAccessPolicy.php`, `McpServerAccessSubscriber.php` | malformed JSON **fails closed**; `/mcp` returns `404` when disabled |
+| `2a` | 🔴 **Classify the `47` writes by REVERSIBILITY, by hand, and write the list down.** This is the step `Gap 438` and `Gap 442` exist to force | the write list in [`result.2026-10-14.tsv`](code/p191-chamilo-agent-surface/result.2026-10-14.tsv) | Open edX got this wrong in one release and has not noticed in four |
+| `3` | 🔴 **Put a scoped-key gateway in front of `/mcp`**, because the platform cannot narrow a key below the user. One key per `(tool-set, purpose)`, mapped to a Chamilo service account per role | `compose/code/mcp-allowlist-gateway` *(this KB's own)* | `McpAccessPolicy::canUse()` is **one boolean for `68` tools** |
+| `4` | 🔴 **Add the audit row the platform does not write** — tool, caller, key id, payload digest, outcome, before the write — and make the gateway refuse the call if the row cannot persist | `openedx-mcp`'s own ordering is the reference design | `0` `audit` and `0` logger references across `67` Chamilo MCP sources |
+| `5` | 🟡 **Add a confirm handshake for the irreversible subset from `2a`.** Bind the token to `sha256(tool, user, payload)` so one changed byte invalidates it | `openedx-mcp` `guards.py` `issue_confirm_token` / `consume_confirm_token` | `confirm` occurs in Chamilo tool DESCRIPTIONS and in `0` enforcement sites |
+| `6` | 🔴 **Gate `generate_student_success_feedback` behind a human sign-off** and keep the draft out of the learner's record until signed | `compose/code/grading-draft-gate` *(this KB's own)* | AI feedback about a named learner is **Annex III point `3` by name**, duty `2027-12-02` |
+| `7` | 🟢 **Keep the credential model; do not rebuild it.** `sha256(random_bytes(32))`, `hash_equals`, masked display, `revokedAt`, `lastUsedAt`, plus OAuth 2.1 at `/.well-known/oauth-protected-resource/mcp` | the platform, unchanged | 🟢 this is the half Chamilo already does properly — rebuilding it is waste |
+
+🔵 **Why `4` before `5`:** a confirm handshake without an audit row tells you an action was
+approved and still not who approved it. 🔴 **And both are cheaper than they look** — the
+gateway is one reverse proxy and one table — **because the platform supplies the hard half:
+`48` enforced role checks in `18` of `67` files, which this pattern does not re-implement.**
+
+### 🔴 Amendment to Pattern `35` *(Open edX agent layer)* — step `2a` is now MANDATORY, and the version is pinned
+
+🟢 `ACTION NL` and `ACTION NM` closed from five `sha256`-verified sdists, and the result makes
+the step unavoidable rather than advisable:
+
+- 🔴 **`reset_attempts` has carried `write:users` without `destructive` since `0.1.1`**, and
+  `tool_views.py` is byte-identical `0.1.2` → `0.1.5`. There is no release in which this was
+  right, so **no version pin fixes it** — the gateway must add the scope.
+- 🔴 **`has_delete_permission` is absent from all five releases** and `admin.py` is
+  byte-identical from `0.1.2` *(`sha256` `3be322597768`)*. The audit log's delete path has
+  never been guarded. Step: override it in the deployment, and remove Django's default bulk
+  delete action.
+- 🟢 **Pin `0.1.5` anyway**, and record the digest *(`bfc7e7b0e3b1f1fe…`)*: the package
+  declares **no repository address and ships no changelog**, so a digest is the only identity
+  the artefact has. 🔵 Bus factor `1`, and that belongs in the risk register, not a footnote.
+
+### 🆕 Amendment to Pattern `36` *(the learner-record trail)* — step `6` is MANDATORY, and the reason is the SPECIFICATION
+
+🟢 `ACTION NP` closes limb `1` and **corrects this KB's own framing**: `openfun/ralph` *does*
+enforce authority — it is server-assigned on write unless the caller holds `authority/write`,
+and all four backends filter by it on read. 🔴 **But `statements_are_equivalent` excludes
+`authority` because the xAPI specification excludes it**, by ralph's own docstring. 🔵 **So
+the hole is in the standard and is present in every conforming LRS; no vendor can patch you
+out of it.**
+
+| step | change | why |
+|---|---|---|
+| `6` | 🔴 **MANDATORY: compare the asserting `authority` in your own ingest layer before you `PUT`**, and reject a re-`PUT` from a different authority instead of letting the LRS answer `204` | the LRS is *conforming* when it discards it; your integration is the only place the comparison can live |
+| 🆕 `6a` | 🔴 **NEW: never forward a `PUT` through ralph if attribution matters downstream.** `POST` enriches authority then forwards; `PUT` forwards then enriches, and `forwarding.py` sends `json=statements` verbatim — so a forwarded `PUT` carries the client's own unvalidated `authority` while the local copy is correct | two call orders, eleven lines apart, in `api/routers/statements.py` |
+| 🆕 `6b` | 🟡 **NEW: treat the `all` scope as `authority/write`.** `UserScopes.is_authorized` expands `all` to include it, so a convenience key can assert any agent as the asserting authority | `src/ralph/api/auth/user.py:47` |
+
+### 🟢 Amendment to every pattern naming `GemMate` — the licence was wrong, the pattern is not
+
+🔴 [`linyeping/GemMate`](https://github.com/linyeping/GemMate) is **`Apache-2.0`**
+*(`LICENSE`, `11 305` B)*, not the `MIT` this file published twice since p172. 🟢 **Both
+remain permissive, so no step and no estimate changes** — and the correction is made anyway,
+because a licence column that is right about the family and wrong about the id is still a
+licence column a client's counsel will read. 🔵 Last commit `2026-05-21`: the dormancy that
+`ACTION NV` will measure shelf-wide is already visible on this row.
+
+### 🟡 And one composition this pass can now name honestly
+
+🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+*(`165` skills, `20` domains, `CC-BY-SA-4.0`)* composes with
+[`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills)
+*(`CC0-1.0`)* and [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) *(`MIT`)* into a
+pedagogy layer over any platform's agent surface. 🔴 **With one hard boundary: `CC-BY-SA` is
+copyleft on CONTENT.** Prompts and skill text derived from it must be licensed alike, so it
+belongs in a client's *configuration*, never inside a proprietary deliverable. 🟢 The `CC0`
+index has no such constraint and can be lifted wholesale.
+
 ## Pass 190 — 2026-10-14
 
 🆕 🟢 **One new pattern, and three amendments that REPRICE steps this KB published
@@ -2174,7 +2255,7 @@ this line is the disclosure for the other `82`.**
 | 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | p172 |
 | 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | p172 |
 | Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** | p172 |
-| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 |
+| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | p172 |
 | 🟢 **Institutional boundary** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) *(Apache-2.0, 376 ★)* for LTI, or an external MCP server — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(MIT, 290 ★)* | 🟢 **Apache-2.0 / MIT** | p172 |
 | 🟢 **Platform, if greenfield** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(92 ★)* · [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **MIT, 1 062 B** · 🟢 **Apache-2.0, 10 982 B** | p172 |
@@ -2395,7 +2476,7 @@ this line is the disclosure. The only component whose STATUS p173 changes is ste
 | 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | p172 |
 | 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | p172 |
 | Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** | p172 |
-| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 |
+| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | p172 |
 | 🟢 **Institutional boundary** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) *(Apache-2.0, 376 ★)* for LTI, or an external MCP server — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(MIT, 290 ★)* | 🟢 **Apache-2.0 / MIT** | p172 |
 | 🟢 **Platform, if greenfield** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(92 ★)* · [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **MIT, 1 062 B** · 🟢 **Apache-2.0, 10 982 B** | p172 |
@@ -4504,7 +4585,7 @@ outright and a cloud round-trip is the compliance question.**
 |---|---|---|
 | Platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — offline-first by design | 🟢 **MIT** |
 | Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** |
-| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** |
+| On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | Spaced repetition | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) — Anki as a tool surface | 🟢 **MIT** |
 | Mastery | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** |
 

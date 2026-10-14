@@ -3,6 +3,103 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🔴 **The Gulf question CLOSES at limb `2`, across all four states: outside Saudi Arabia,
+no Gulf state governs AI used ON learners.** 🟢 **And the commercially useful half is that
+something else does** — the general data-protection statute. 🆕 🔴 **Second: the DEC survey's
+own host is unreachable, and two secondary summaries of it disagree about which region has
+the lowest future intent. This KB records the conflict and resolves neither.**
+
+### 🆕 The regulatory map a learner-facing model is actually argued against
+
+| jurisdiction | the binding instrument | governs AI used **BY** learners | governs AI used **ON** learners |
+|---|---|---|---|
+| 🔴 EU | AI Act Art. `5(1)(f)` *(live since `2025-02-02`, EUR `35`M / `7`%)*; Art. `50` transparency + GPAI *(live `2026-08-02`)*; Art. `50(2)` marking **`2026-12-02`, seven weeks out**; Annex III education duties `2027-12-02` | via institutional policy | 🔴 **YES — directly, and the prohibition is already live** |
+| 🔴 Vietnam | education named high-risk from `2027-03-01`; grace only for systems running before `2026-08-15` | — | 🔴 **YES — nine months BEFORE the EU's Annex III date** |
+| 🟢 Saudi Arabia | SDAIA instruments | yes | 🟢 **YES — still the ONLY Gulf state** |
+| 🆕 🟡 UAE | MoE guide *"Safe and Responsible Use of AI in Classrooms"* *(`2026-02`, `25` prohibitions, circulated to all schools, compliance stated mandatory: under-13 and sub-Grade-7 barred, AI banned in **all** exams, no undisclosed AI-generated submissions)* | 🟢 **YES — binding and detailed** | 🔴 **NOT FOUND.** Its four pillars are age, integrity, privacy, supervision; no provision reached on systems that score, profile or monitor a learner |
+| 🆕 🔴 Qatar | MoEHE safeguarding policy binding Law `13`/`2016` *(PDPL)*; MCIT ethical AI principles are **voluntary** *(promoted `2025-05-08`)* | partially | 🔴 **NO** — learner data is reached only through the general PDPL |
+| 🆕 🔴 Bahrain | PDPL Law `30`/`2018`, authority still finalising implementing orders; secondary guides report rights over **solely automated decisions**. The `38`-article AI bill passed the Shura Council `2024-04` and **is still not law** | 🔴 NO | 🔴 **NO as an AI instrument** — 🟡 yes, indirectly, via the automated-decision right |
+
+🔵 **So the Gulf pitch has a shape now, and it is not an AI-act pitch.** Lead with PDPL
+compliance for anything that profiles or scores a learner, and with the UAE classroom guide
+for anything a student touches. 🟢 **And stop re-asking per state** — this is the measured
+answer across all four:
+[`evidence/gulf-ai-on-learners.2026-10-14-p191.tsv`](../evidence/gulf-ai-on-learners.2026-10-14-p191.tsv).
+
+### 🔴 The demand figures, with their channel named per claim
+
+| figure | source | confidence |
+|---|---|---|
+| `88`% of students use AI in their learning; `77`% of faculty in their teaching *(+`16`pp YoY)* | DEC *AI in Higher Education Global Survey 2026*, n = `45 398` across `35` countries *(`27 284` students, `18 114` faculty)* | 🔴 **SECONDARY.** `www.digitaleducationcouncil.com` → `getaddrinfo ENOTFOUND`, the 16th blocked host |
+| `15`% of students say AI is integrated into **many** of their courses; `43`% into a few; `29`% think instructors are equipped to guide them | same | 🔴 secondary |
+| US/Canada faculty intent `76`% → `67`%; `26`% of US/Canada faculty "excited" against `57`% in APAC | same | 🔴 secondary |
+| LATAM: `92`% of students and `79`% of faculty actively engaging with AI | DEC LATAM regional survey `2026` | 🔴 secondary |
+| 🔴 **which region has the LOWEST future intent** | 🔴 **two summaries of the SAME survey disagree** — one says US/Canada, one says APAC | 🔴 **UNRESOLVED, and left unresolved** |
+
+🔵 **The conflict is worth more than a resolution would be**, because it tells a pitch team
+the per-region intent table is not safely quotable from secondary coverage. 🟢 Quote the
+global figures with the channel named, or quote nothing.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Faculty intent FELL `76`% → `67`% and only `26`% of faculty say they are excited** —
+the lowest enthusiasm of any region measured. 🟢 **So the sellable work is governance and
+evidence, not capability.** The two platform findings this pass are the opening: a US
+university running Sakai *(`ECL-2.0`, HEAD today)* or Open edX has an agent surface of `33`
+to `68` tools and **no record of what an agent did**. 🟢 Lead with Pattern `37`'s audit and
+scoped-key gateway, priced as a compliance deliverable; `FERPA` and institutional IRB
+review are the levers, and `ECL-2.0` is the licence to get right in the register — **not**
+`Apache-2.0`, however often it is written that way.
+
+### EMEA
+
+🔴 **Art. `50(2)` machine-readable marking is `2026-12-02` — seven weeks from this pass** —
+and Art. `5(1)(f)`'s emotion-inference prohibition has been live since `2025-02-02` at
+EUR `35`M or `7`% of worldwide turnover. 🟢 This KB already ships four instruments for the
+marking duty. 🆕 🟢 **Chamilo is the EMEA-shaped opportunity**: `GPL-3.0+`, European
+governance, and a native agent layer whose authorisation model is `48` call sites rather
+than a document. An EU customer cannot sign off `47` write tools with no audit trail, and
+the retrofit is a four-to-six week engagement with a regulatory reason attached.
+🆕 🔴 **And `generate_student_success_feedback` writes AI feedback about a named learner** —
+Annex III point `3` by name, with the `2027-12-02` duty attached.
+
+### APAC
+
+🆕 🟢 **The APAC adoption gap narrows but does NOT close.** `57`% of APAC faculty report
+being excited about AI against `26`% in US/Canada — the most positive region measured.
+🔴 **That is sentiment and intent, not usage**, and no per-region current-usage figure was
+obtainable this pass. 🟢 **Scope APAC on regulation and curriculum, which are measurable:**
+Vietnam names education high-risk from `2027-03-01` with grace only for systems live before
+`2026-08-15` — **nine months before the EU** — so an APAC rollout that will touch Vietnam is
+on the tighter clock. 🔴 Do not price an APAC engagement off an adoption number; there is
+still no verified one.
+
+### LATAM
+
+🟢 **`92`% of students and `79`% of faculty actively engaging with AI** — the permissive-stack
+argument is already won here, as p190 recorded; the work is depth. 🆕 🟢 **Chamilo is a LATAM
+asset, not just an EMEA one** — its maintainers commit daily and its MCP server is already in
+`2.1.0`, so a Spanish/Portuguese-language agent layer on an installed base is a composition,
+not a build. 🔴 **And the one non-commercial trap on this shelf is a LATAM-adjacent content
+repository:** [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum)
+declares `MIT` in `package.json` and ships **`CC-BY-NC-SA-4.0`** as its only licence file.
+`NC` means it cannot be used in paid client work, whatever the manifest says.
+
+### Global
+
+🆕 🔴 **The cross-region offer this pass creates is agent-layer accountability**, because the
+finding is not vendor-specific: `0` of the three agent layers measured in this KB can answer
+*"which agent did this, on whose behalf, and when"*. 🟢 And the xAPI finding makes it
+standard-wide: **no conforming LRS compares the asserting authority when it de-duplicates a
+statement**, because the specification excludes it — so a learning-record store cannot be
+patched out of the problem by its vendor. 🔵 That is the rare finding that is true of
+everyone's stack, demonstrable from source in minutes, and fixable only in the integration
+layer — which is the layer a studio sells.
+
 ## Pass 190 — 2026-10-14
 
 🆕 🟢 **The Gulf CLOSES on existence — `ACTION NI` fires and Bahrain has four instruments,

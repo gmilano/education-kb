@@ -1,0 +1,22 @@
+# p191 — the agent layer of two education platforms, both measured from DEFINITIONS at a
+# pinned HEAD. openedx-mcp figures are p190's (sdist 0.1.5, sha256-verified); Chamilo's are
+# this pass's, from `chamilo/chamilo-lms` HEAD 6f9bb2c6198564108eae11fc57d76a7879b0017d
+# (2026-10-13), 67 PHP sources read over raw.githubusercontent.com at that sha.
+property	openedx-mcp 0.1.5 (a third-party FACADE)	chamilo-lms 2.1.0 MCP (a NATIVE platform server)
+tool definitions	33 (14 read, 19 write)	68 (21 read, 47 write)
+how a key is narrowed	9 enforced scopes via require_scopes(), + `destructive` as an ADDITIVE scope	NOT NARROWABLE — McpAccessPolicy::canUse() is ONE boolean for the whole server
+server gate	per-tool scope check	role allowlist: ADMIN + COURSEMANAGER true by default; STUDENT, DRH, SESSIONADMIN, STUDENT_BOSS, INVITEE false
+per-tool enforcement	scope decorator	48 enforcement sites in 18 of 67 files (isGranted / AccessDeniedException), roles ROLE_ADMIN, ROLE_GLOBAL_ADMIN, ROLE_QUESTION_MANAGER, ROLE_TEACHER
+confirm handshake	single-use token bound to sha256(tool, user, payload); 11 of 19 writes	NONE — "confirm" appears in tool DESCRIPTIONS only, 0 enforcement sites
+rate limits	per-(key,tool), tuned to blast radius, 18/18 match with the audited tool set	NONE — mcp.yaml carries pagination_limit: 50 and nothing else
+audit	MCPAuditLog row written BEFORE the write; the write refused if it cannot persist	NONE — 0 audit and 0 logger references across all 67 sources; attribution is the key's lastUsedAt timestamp
+key hygiene	SHA-256 hashed, shown once, revocable, expiring, privilege re-checked live	sha256(random_bytes(32)) with a prefix, hash_equals compare, masked display, revokedAt, lastUsedAt; ALSO JWT and OAuth 2.1 access tokens (hashed, expiry-checked) with /.well-known/oauth-protected-resource/mcp
+fail-closed configuration	n/a	YES — malformed mcp_allowed_roles JSON denies ALL roles, with a comment explaining why; security.mcp_enabled kill switch returns 404 at the route
+highest-blast-radius write	reset_student_attempts (deletes a StudentModule row) — carries write:users and NOT destructive	update_user_roles — requires ROLE_ADMIN, blocks self-role-change, scopes to the caller's access URL, requires top-of-tree admin to grant global admin, refuses no-ops
+Annex III exposure in the surface	update_course_settings changes a GRADING POLICY with require_confirm=False	generate_student_success_feedback writes AI feedback about a named learner; get_user_course_test_score reads a learner's score; update_course_test_settings edits test configuration
+repository address	NONE — openedx-mcp declares no project_urls and no home_page	github.com/chamilo/chamilo-lms, GPL-3.0+ (LICENSE + license.txt at root)
+# 🔵 The two models are not better and worse; they are OPPOSITE. Open edX's facade can narrow
+# a key and cannot tell you who acted. Chamilo enforces real role checks in code at 48 sites
+# and cannot narrow a key BELOW the user — the key IS the user — and also cannot tell you who
+# acted. 🔴 Neither platform can answer "which agent did this, on whose behalf, and when",
+# which is Gap 433 measured on a second and third codebase rather than argued.

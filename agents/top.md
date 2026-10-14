@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🔴 **The agent layer has moved INTO the platform, and the second platform's model is the
+inverse of the first's. [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) ships
+a NATIVE MCP server — `68` tool definitions, `47` of them writes, at HEAD `6f9bb2c61985`
+*(`2026-10-13`)* — with `48` authorisation checks enforced in code, OAuth 2.1 resource
+metadata, hashed revocable keys and a config that fails closed. 🔴 And `0` audit rows,
+`0` rate limits and no confirm handshake.**
+
+🆕 🔴 **Where `openedx-mcp` can narrow a key nine ways and cannot tell you who acted,
+Chamilo enforces real role checks on `18` of `67` files and cannot narrow a key BELOW THE
+USER AT ALL.** Its whole server is gated by one boolean —
+`McpAccessPolicy::canUse()` — so an agent key is exactly as powerful as the human it belongs
+to. 🔵 **Two platforms, opposite halves of the same missing thing.**
+
+| 🆕 measured, from definitions at a pinned sha | `openedx-mcp` `0.1.5` *(a third-party FACADE)* | 🆕 `chamilo-lms` `2.1.0` MCP *(a NATIVE server)* |
+|---|---|---|
+| tool definitions | `33` *(`14` read, `19` write)* | 🆕 **`68`** *(`21` read, **`47` write**)* |
+| narrowing a key | 🟢 `9` scopes + `destructive` as an additive scope | 🔴 **not narrowable** — one role boolean for all `68` |
+| server gate | per-tool scope check | `ADMIN` + `COURSEMANAGER` allowed by default; `STUDENT`, `DRH`, `SESSIONADMIN`, `STUDENT_BOSS`, `INVITEE` denied |
+| per-tool enforcement in code | the scope decorator | 🟢 **`48` sites** in `18` of `67` files — `ROLE_ADMIN`, `ROLE_GLOBAL_ADMIN`, `ROLE_QUESTION_MANAGER`, `ROLE_TEACHER` |
+| confirm handshake | 🟢 single-use token bound to `sha256(tool, user, payload)`, `11` of `19` writes | 🔴 **none** — `confirm` occurs in tool DESCRIPTIONS only |
+| rate limits | 🟢 per-`(key,tool)`, `18`/`18` match with the audited set | 🔴 **none** *(`pagination_limit: 50` and nothing else)* |
+| audit | 🟢 a row written BEFORE the write; the write refused if it cannot persist | 🔴 **none** — `0` `audit` and `0` logger references in `67` sources; attribution is the key's `lastUsedAt` |
+| credentials | 🟢 `SHA-256`, shown once, revocable, expiring | 🟢 `sha256(random_bytes(32))` + `hash_equals`, masked, `revokedAt`; **plus JWT and OAuth 2.1 access tokens**, hashed and expiry-checked, with `/.well-known/oauth-protected-resource/mcp` |
+| fail-closed config | — | 🟢 **malformed `mcp_allowed_roles` JSON denies EVERY role**, with a comment explaining why; `security.mcp_enabled` returns `404` at the route |
+| repository address | 🔴 **none** — no `project_urls`, no `home_page` | 🟢 `chamilo/chamilo-lms`, `GPL-3.0+` *(`LICENSE` + `license.txt` at root)* |
+
+🔵 **Both rows deserve their green marks.** Chamilo's `update_user_roles` is the most careful
+single tool this KB has read on either platform: `ROLE_ADMIN` required, **self-role-change
+refused**, access-URL scoping, exactly-one-identifier, add/remove overlap rejected,
+top-of-URL-tree admin required to grant global admin, and a no-op refused rather than
+reported as success. 🔴 **And none of that is written down anywhere a buyer can see it** —
+the authorisation model is `48` call sites, not a document.
+
+### 🔴 The Annex III surface is now in the tool list, on both platforms
+
+| platform | the tool | why it is Annex III point `3` by name |
+|---|---|---|
+| `openedx-mcp` | `update_course_settings` *(`require_confirm=False`)* | changes a **grading policy** — *evaluation of learning outcomes* |
+| 🆕 `chamilo` | `generate_student_success_feedback` | **writes AI-generated feedback about a named learner**, after checking the learner is registered in the course-session context and capping the teacher prompt |
+| 🆕 `chamilo` | `update_course_test_settings`, `get_user_course_test_score` | edits test configuration; reads one learner's score |
+
+🟢 **Measurement, instrument and controls:**
+[`P1060`](../compose/code/p191-chamilo-agent-surface/README.md) *(`16`/`16`, offline)* ·
+[`evidence/agent-layer-two-platforms.2026-10-14-p191.tsv`](../evidence/agent-layer-two-platforms.2026-10-14-p191.tsv)
+
+### 🔴 Two rows on this page carry a licence the tree refutes — and one was already corrected elsewhere
+
+| row | this page says | the tree holds, read from bytes | action |
+|---|---|---|---|
+| 🔴 [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) *(EduPage, 2nd impl., EMEA/Slovakia)* | 🔴 **`MIT`** | 🟢 **`GPL-3.0`** — `LICENSE`, `35 183` B, *"GNU GENERAL PUBLIC LICENSE Version 3"* under a `© 2026 Martin Hlaváč` line | 🔴 **CORRECTED: `GPL-3.0`.** Copyleft — fine as a reference implementation, **not** material for a closed client deliverable. 🔵 [`repos/foundations.md`](../repos/foundations.md) already carried this correction; this page did not *(`Gap 440`)* |
+| 🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | *(a p190 LEAD, no owner, no licence)* | 🟢 **`CC-BY-SA-4.0`** — `LICENSE`, `1 230` B, © 2026 Gareth Manning; `241` paths; a second grant at `mcp-server/LICENSE`; last commit `2026-08-28` | 🟢 **PROMOTED to a row** — `165` skills across `20` domains, `19` of them teacher-facing. 🔴 **ShareAlike is copyleft on CONTENT:** compose with it and attribute it; a derivative library must be licensed alike |
+
+🔴 **`Study-Mate`, p190's other lead, is NOT resolvable and the row is not written.** Three
+distinct projects answer to the name; none matches the described *"self-study agent updated
+`2026-10-13`"*; and `Abbilaash/StudyMate` carries **no licence text at all** over `19`
+enumerated paths. 🟢 **The channel limit is now measured rather than suspected: web-search
+discovery yields NAMES WITHOUT OWNERS, and a name is not an address.**
+
+### 🟢 `openedx-mcp`'s two defects, re-read across all five releases
+
+Both `ACTION NL` and `ACTION NM` are discharged from `sha256`-verified sdists
+*(`0.1.1`–`0.1.5`, every digest matched PyPI's own)*.
+
+- 🟢 **The unguarded audit-log delete path is an OMISSION, not a regression.**
+  `has_delete_permission` is absent from **all five** releases and `admin.py` is
+  byte-identical from `0.1.2` on *(`sha256` `3be322597768`)*. 🔴 **No release ships a
+  `CHANGELOG`.**
+- 🔴 **The inverted `destructive` guard is an ORIGINAL finding, and its mechanism is now
+  named.** In `0.1.1` `audited_write()` had **no `destructive` parameter at all**; `0.1.2`
+  introduced it as an additive flag and migrated **four** call sites — `deactivate_user`,
+  `delete_xblock`, `invalidate_certificate`, `request_retirement`. `reset_attempts` was not
+  among them, and `tool_views.py` has not changed since. 🔴 **The destructive set is
+  enumerated by hand in three places** — the `Scope.DESTRUCTIVE` label, the README's scope
+  table, the README's tool table — **and omits it in all three.** 🔵 The author's own dry-run
+  returns `"delete": delete_module`, so the irreversible path is *visible in the preview* and
+  still unscoped: incomplete enumeration, not inattention.
+  [`evidence/openedx-mcp-release-history.2026-10-14-p191.tsv`](../evidence/openedx-mcp-release-history.2026-10-14-p191.tsv)
+
 ## Pass 190 — 2026-10-14
 
 🆕 🔴 **The agent surface p189 found has `33` tools, not the `7` this KB pre-registered — and
@@ -6212,7 +6292,7 @@ evidence** — a named institution, a national system, a country-coded homepage 
 | **edupage-mcp** | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** | 3 | **EMEA (Slovakia)** | **EduPage**, the Slovak/Czech school platform. The most complete connector of the tier: timetables, grades, homework, daily summary, **meal ordering**, multi-school discovery, role-aware student switching and **2FA**. |
 | **ddl-killer** | [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🔴 **AGPL-3.0** (payload-read, p133) | 3 | **APAC (China)** | Student planner for Chinese universities — timetables, tasks and deadlines in one schedule, AI-assisted scheduling, MCP access, Web/Android sync. Created **2026-10-10**. 🔴 **Licence measured by p133 and it is the most restrictive in the tier: the payload is the full AGPL-3.0 text, and the only copyright line in it is the Free Software Foundation's — a `DOCUMENT-TEXT` holder with no program-specific licensor.** Network copyleft on a student-data connector: do not fork into client work. |
 | **mcgill-vsb-mcp** | [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | **MIT** | 2 | **North America (Canada)** | McGill **VSB**: timetable data, conflict checks and schedule generation *without browser automation* — an API path rather than a scraper. |
-| **edupage-mcp** (second) | [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | Independent second EduPage implementation — a useful cross-check, and evidence that EduPage demand is real rather than one person's itch. |
+| **edupage-mcp** (second) | [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | Independent second EduPage implementation — a useful cross-check, and evidence that EduPage demand is real rather than one person's itch. · 🔴 **p191 CORRECTION: `GPL-3.0`** *(read from bytes — see this file's p191 section)* |
 | **mcp-pronotes** | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | **Pronote**, the dominant French school platform: grades, timetables, homework, absences. |
 | **ibu-mcp** | [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) | 🟢 **MIT** (payload-read) | 1 | **EMEA (Bosnia)** | International Burch University: grades, attendance, exams, tuition, notifications. Region is hard evidence — homepage `mine.ibu.edu.ba`, topic `bosnia`. Holder *"Haris Skeledzija"*. |
 | **sisu-mcp** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **no licence field** | 1 | **EMEA (Finland)** | **Sisu (Funidata)**, the Finnish higher-education SIS: attainments, enrolments, timetables, plans. 🔴 **Written for *any* Sisu deployment rather than one university — the broadest reach of the bound connectors, and unusable as published.** Same owner as `ink-waffle/moodle-mcp`, also unlicensed and already flagged below: **this author ships unlicensed education connectors as a pattern.** |

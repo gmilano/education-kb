@@ -1,0 +1,15 @@
+# p191 — existence of every github.com URL published in this pass's sections.
+# github.com HTML is 403 for this entire session (session-scope policy), so existence is
+# established over the git channel: 'git ls-remote --exit-code -h'. 11 of 11 EXIST.
+url	slug	git ls-remote
+https://github.com/GarethManning/education-agent-skills	GarethManning/education-agent-skills	EXISTS
+https://github.com/O0000-code/awesome-academic-skills	O0000-code/awesome-academic-skills	EXISTS
+https://github.com/cccareers/open-source-curriculum	cccareers/open-source-curriculum	EXISTS
+https://github.com/chamilo/chamilo-lms	chamilo/chamilo-lms	EXISTS
+https://github.com/csmediapro/moodle-mcp-server	csmediapro/moodle-mcp-server	EXISTS
+https://github.com/kvnloo/tutor-mcp	kvnloo/tutor-mcp	EXISTS
+https://github.com/linyeping/GemMate	linyeping/GemMate	EXISTS
+https://github.com/mhlavac/edupage-mcp	mhlavac/edupage-mcp	EXISTS
+https://github.com/moodle/moodle	moodle/moodle	EXISTS
+https://github.com/opencast/opencast	opencast/opencast	EXISTS
+https://github.com/sakaiproject/sakai	sakaiproject/sakai	EXISTS

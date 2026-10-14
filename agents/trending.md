@@ -3,6 +3,46 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **What moved this week is a PLATFORM, not a plugin. Chamilo's native MCP server is at
+`2.1.0` with `68` tool definitions and a commit from yesterday; Moodle `5.3` shipped
+`2026-10-05`; Sakai's HEAD is from TODAY.** For eleven passes this KB has tracked education
+agents as third-party servers bolted onto an LMS. 🔴 **That framing is now out of date on the
+two largest open-source LMS platforms in EMEA and LATAM.**
+
+| 🆕 what moved | measured | why it matters this week |
+|---|---|---|
+| 🟢 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **native MCP server `2.1.0`**, `68` `#[McpTool]` definitions *(`21` read / `47` write)*, `/mcp` over HTTP + stdio, OAuth 2.1 resource metadata, file-backed sessions `ttl 3600`; HEAD `6f9bb2c61985`, `2026-10-13`, `GPL-3.0+` | 🔴 **the agent layer is now a platform FEATURE.** An engagement no longer starts by choosing an MCP server; it starts by governing the one that shipped |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | `5.3` released `2026-10-05`; HEAD `b7260e59a831`, `2026-10-13`; **`67 592` paths and the tree is now `public/`-prefixed**; `COPYING.txt` still at root, canonical `GPL-3.0` | 🔴 **a path restructure under every rooted probe this KB owns** — registered as `ACTION NU` rather than assumed harmless |
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | HEAD `31590f191769`, **`2026-10-14` — today**; `ECL-2.0` confirmed at `LICENSE` *(`11 120` B)* and in three module subtrees | 🟢 live, and the `ECL-2.0` verdict holds at full tree depth |
+| 🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **`CC-BY-SA-4.0`** *(`LICENSE`, `1 230` B)*, `165` skills / `20` domains, `241` paths, last commit **`2026-08-28`** | 🟢 p190's lead RESOLVED. 🔴 And its date CORRECTED: the search surfaced `2026-06-26`; `git log -1` says `2026-08-28` |
+| 🟡 [`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills) | **`CC0-1.0`** *(`LICENSE`, read from bytes)*, `278` paths, last commit `2026-09-27` | 🟢 **the one genuinely NEW slug this pass** — an index of academic agent skills, public domain, so it can be lifted wholesale |
+| 🔴 `Study-Mate` | three distinct projects answer to the name; `Abbilaash/StudyMate` has **no licence text** over `19` paths | 🔴 **NOT a row.** p190's lead closes as a channel limit, not a repository |
+
+### 🆕 🟢 The channel changed, and one of p190's losses is RECOVERED
+
+| p190 recorded | p191 measures |
+|---|---|
+| 🔴 *"`api.github.com` — stars, commit dates, topic membership"* lost to a `403` | 🟡 **`/rate_limit` answers `200`; everything else `403` with a reason** — *"sessions are bound to their configured repositories"*, and search is *"not available"*. The `403` is a SESSION-SCOPE boundary, not egress |
+| 🔴 commit dates gone | 🟢 **RECOVERED: `git log -1` over a blobless clone returns date, sha and AUTHOR — `12` of `12` slugs, `0` refusals** |
+| 🔴 stars gone | 🔴 **still gone.** No star count appears in this section, and none should appear in any p191 row |
+| 🔴 trending / topics / search gone | 🔴 **still gone** *(`github.com` HTML `403`; the API's search path refused by policy)* |
+
+🔵 **So the honest shape of this pass's trending file: every row above is a repository this KB
+ADDRESSED and read, not one it DISCOVERED.** 🟢 The composition that works is unchanged and
+now has a second proof: **web search for the slug, `git`/`raw` for the bytes** — and
+`git log -1` for the date.
+
+🆕 🔴 **`0` is still NOT recorded for GitHub Trending.** Twelve passes of an unmeasured
+channel remain unmeasured, and an unmeasured channel is not an empty one.
+
+**Full measurement:**
+[`evidence/git-recency-recovered.2026-10-14-p191.tsv`](../evidence/git-recency-recovered.2026-10-14-p191.tsv)
+· [`evidence/agent-layer-two-platforms.2026-10-14-p191.tsv`](../evidence/agent-layer-two-platforms.2026-10-14-p191.tsv)
+
 ## Pass 190 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
@@ -3630,7 +3670,7 @@ every member of this field implements**, so it is the only word that reaches all
 | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT** | 3 | **EMEA (Slovakia)** | EduPage |
 | [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🟡 **UNREAD** | 3 | **APAC (China)** | Chinese university planners |
 | [`luca-dupont2/mcgill-vsb-mcp`](https://github.com/luca-dupont2/mcgill-vsb-mcp) | **MIT** | 2 | **NA (Canada)** | McGill VSB |
-| [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | EduPage (2nd impl.) |
+| [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | EduPage (2nd impl.) · 🔴 **p191 CORRECTION: `GPL-3.0`** |
 | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | Pronote |
 | [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) | 🟢 **MIT** (payload) | 1 | **EMEA (Bosnia)** | Int'l Burch University |
 | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **none** | 1 | **EMEA (Finland)** | Sisu / Funidata (**any** deployment) |

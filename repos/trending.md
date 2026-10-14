@@ -3,6 +3,43 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: NOT MEASURED, for the twelfth pass. Not `0`.** `github.com` HTML is
+`403` for this whole session. 🆕 🟢 **But the diagnosis p190 published is now CORRECTED, and
+the correction buys back a measure:** `api.github.com` is reachable — `/rate_limit` returns
+`200` with a `15 000`-request core allowance — and refuses everything else **by scope, with a
+stated reason**:
+
+```
+GET /repos/openfun/ralph   403  "GitHub access to this repository is not enabled for this
+                                 session. Use add_repo to request access."
+GET /search/repositories   403  "This GitHub API path is not available: sessions are bound
+                                 to their configured repositories."
+```
+
+🔵 **That is not an egress policy; it is a session-scope boundary** — repository-scoped
+endpoints for attached repositories only, and search refused outright. 🟢 **The consequence
+matters more than the correction: `git log -1` over a blobless clone returns the last commit
+date, sha and author for ANY public slug, with no API at all.** `12` of `12` this pass, `0`
+refusals. 🔴 **Stars and repository SEARCH remain gone**, so discovery is still web-search
+for the name and `git`/`raw` for the bytes.
+
+| 🆕 new or re-measured this pass | grant, read from bytes | recency, from `git log -1` | note |
+|---|---|---|---|
+| 🟢 [`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills) | 🟢 **`CC0-1.0`** *(`LICENSE`; `278` paths enumerated)* | `2026-09-27` · `9142287eb7d2` | 🟢 **the only NEW slug this pass** — an index of academic agent skills by research-lifecycle stage, each entry noting its own licence. Public domain, so it can be lifted wholesale into a Globant asset |
+| 🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟢 **`CC-BY-SA-4.0`** *(`LICENSE`, `1 230` B; `241` paths; second grant at `mcp-server/LICENSE`)* | **`2026-08-28`** · `6bbbce418f82` | 🔴 **ShareAlike — copyleft on content.** Compose and attribute; a derivative library must be licensed alike |
+| 🟢 [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | 🟢 **`MIT`** *(`LICENSE`; `678` paths)* | `2026-10-02` · `3d11705c0dc9` | 🟢 licence CONFIRMED at full tree depth — an ITS-shaped MCP server and the permissive half of any tutoring composition |
+| 🟡 [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟡 **`AGPL-3.0?`** *(`LICENSE` names AGPL **and** GPL — handed over as a reading list, not decided)* | `2026-10-01` · `5a194a53cc39` | 🔴 the ambiguity is the finding: `107` paths, one grant file, two families named in it |
+| 🔴 [`linyeping/GemMate`](https://github.com/linyeping/GemMate) | 🔴 **`Apache-2.0`**, not the `MIT` this file published *(`LICENSE`, `11 305` B)* | `2026-05-21` · `4b72ba92a8b5` | 🔴 **CORRECTED here and in [`compose/patterns.md`](../compose/patterns.md) ×2.** Still permissive, so no pattern changes — but the row was wrong and had been since p172 |
+| 🟡 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | 🔴 `package.json` says **`MIT`**; the only licence FILE is **`CC-BY-NC-SA-4.0`** *(`LICENSE.md`, `1 891` B)* | — | 🔴 **the divergence is the row.** `NC` means non-commercial: reference only in a client engagement, whatever the manifest string says |
+
+🟢 **Full-depth evidence for every row above:**
+[`evidence/licence-column-full-depth.2026-10-14-p191.tsv`](../evidence/licence-column-full-depth.2026-10-14-p191.tsv)
+*(`1 273` trees)* · [`evidence/git-recency-recovered.2026-10-14-p191.tsv`](../evidence/git-recency-recovered.2026-10-14-p191.tsv)
+
 ## Pass 190 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
@@ -2117,7 +2154,7 @@ absent.**
 | 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 20 | 🟢 MIT | TS | 🟢 **Fully offline Electron + Ollama** |
 | 🟢 [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 17 | 🟢 MIT | Python | KG + IRT/BKT mastery. 🔴 **Shelf had `Apache2, ~350★` — both wrong** |
 | 🟢 [`huaxx-lab/LeetLens`](https://github.com/huaxx-lab/LeetLens) | 16 | 🟢 MIT | **Swift** | 🟢 **The only macOS-native row in 156 passes** |
-| 🟢 [`linyeping/GemMate`](https://github.com/linyeping/GemMate) | 11 | 🟢 MIT | **Dart** | On-device Gemma, offline study companion |
+| 🟢 [`linyeping/GemMate`](https://github.com/linyeping/GemMate) | 11 | 🟢 MIT | **Dart** | On-device Gemma, offline study companion · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | 🔴 [`grey8-io/learn-ai-with-grey8`](https://github.com/grey8-io/learn-ai-with-grey8) | 10 | 🔴 AGPL-3.0 | Python | Bootcamp with a local LLM tutor |
 | 🟢 [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | 8 | 🟢 MIT | **Rust** | Offline adaptive desktop app, terminal labs |
 | 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | 7 | 🔴 AGPL-3.0 | Python | 🟢 **SymPy step-verification — symbolic, not generative** |

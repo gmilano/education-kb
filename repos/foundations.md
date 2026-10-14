@@ -3,6 +3,77 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🟢 **The licence column has been read at FULL TREE DEPTH over every row this KB publishes
+with a licence — `1 273` of them, not the `160` `ACTION NK` registered — and it holds:
+`1 037` `AGREE`, `2` `CONTRADICTED`.** 🔴 **And the instrument that found those two
+manufactured THREE more before it was read against the pages.**
+
+| verdict | n | what it means for an engagement |
+|---|---|---|
+| 🟢 `AGREE` | **`1 037`** | an own grant exists in the tree and its family matches what this KB publishes |
+| 🟡 `FAMILY-AMBIGUOUS` | **`141`** | the grant payload NAMES more than one family *(MPL naming the GNU family, EUPL naming five, a GPL exception naming the LGPL)*. 🔵 Handed over as a reading list, never decided — `ACTION NT` resolves the `20` that patterns depend on |
+| 🟡 `TEXT-ABSENT` | **`78`** | **no licence text anywhere in the tree**, yet a licence is published — `Gap 421`'s family: a registry classifier, a README badge, a `pyproject.toml` string. 🔴 Not a contradiction, and **not a grant either** |
+| 🔴 `CONTRADICTED` | **`2`** | below |
+| 🟡 `BUNDLED-ONLY` | `6` | every grant found belongs to a vendored dependency; the project's own is still absent |
+| 🔴 `UNRESOLVABLE` | `8` | the slug does not resolve over `git` — dead, renamed or private |
+| 🟡 `PAIRING-AMBIGUOUS` | `1` | the only row naming this slug also names other repos and other ids, so no id can be attributed to it |
+
+### 🔴 The two rows the tree refutes
+
+| slug | published | the tree holds | consequence |
+|---|---|---|---|
+| [`linyeping/GemMate`](https://github.com/linyeping/GemMate) | 🔴 `MIT` *(since p172)* | 🟢 **`Apache-2.0`** — `LICENSE`, `11 305` B, canonical header | 🟢 **still permissive**, so no pattern changes; corrected in [`repos/trending.md`](trending.md) and twice in [`compose/patterns.md`](../compose/patterns.md) |
+| [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | 🔴 `MIT` *(on [`agents/top.md`](../agents/top.md) and [`agents/trending.md`](../agents/trending.md))* | 🟢 **`GPL-3.0`** — `LICENSE`, `35 183` B, verbatim, under a `© 2026 Martin Hlaváč` line | 🔴 **copyleft.** Reference implementation only; **this page already carried the correction and the agent pages did not** *(`Gap 440`)* |
+
+### 🔴 Why `156` case variants was the wrong instrument, and `160` the wrong population
+
+`ACTION NK` registered the full `P1057` case-variant sweep. 🔴 **A variant list is still a
+list**: it cannot reach `aoe-web-frontend/LICENSE` *(depth)*, `LICENSE/LICENSE.code` *(a
+licence DIRECTORY)*, `debian/copyright` *(packaging)* or `LICENSE.GPL` + `LICENSE.MPL`
+*(family suffix)*. 🟢 **`P441` already proved the generalisation here** — *a filename list can
+only FIND a licence; to sustain its ABSENCE you must ENUMERATE the tree* — so what ran was
+`git clone --filter=blob:none` + `git ls-tree -r` over `1 273` repositories, with every
+candidate's bytes read and classified. 🔵 **Every case variant at the root is a strict subset
+of a complete tree.**
+
+🔴 **And `160` was `13`% of the population.** The number was never derived; it was what p190
+happened to sweep. 🟢 The population is now derived from the published pages themselves and
+committed:
+[`population.2026-10-14.tsv`](../compose/code/p191-licence-case-full-depth/population.2026-10-14.tsv).
+
+### 🔴 The three false accusations this instrument made against this KB's own rows
+
+Its first run reported `6` contradictions. Read against the pages, **three were its own.**
+
+| # | the defect | the row it accused | the fix, with a control |
+|---|---|---|---|
+| `1` | **cross-product pairing** over a row naming several repos and several ids | 🔴 `AlexandreL0pes/q-scraper`, charged with an `Apache-2.0` belonging to `adiel-calixto/IFAcademico` four cells away | an id is attributed only from a line with **exactly one** slug; otherwise `PAIRING-AMBIGUOUS` |
+| `2` | **a prose id read as the published id** | 🔴 [`opencast/opencast`](https://github.com/opencast/opencast), which publishes `ECL-2.0` and explains it as an *"OSI-approved `Apache-2.0` derivative for universities"* | ANY published id matching the tree settles the row — no prose parser needed |
+| `3` | **vocabulary drift between the extractor and the comparator** | 🔴 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **and** `opencast/opencast` — the two largest platforms on this shelf, **both published correctly** | one vocabulary, and `column_full_depth` **raises at import** if the family map does not cover it |
+
+🔵 **Defect `3` is the one to carry forward, and it is not a typo.** The row that gets misread
+is the **best-documented** row: a cell that explains its licence against a better-known one
+contains two ids, and an extractor that cannot spell the first will happily find the second.
+🟢 **Rule: when two modules each hold a vocabulary, the drift between them is a defect with no
+symptom — assert it at import.**
+
+🟢 **Instrument, controls and full result:**
+[`P1059`](../compose/code/p191-licence-case-full-depth/README.md) *(`24`/`24`, offline, three
+controls being the defects above)* ·
+[`evidence/licence-column-full-depth.2026-10-14-p191.tsv`](../evidence/licence-column-full-depth.2026-10-14-p191.tsv)
+
+### 🟢 Declared limits of this sweep, stated before anyone quotes the `1 037`
+
+- 🔴 **Comparison is at FAMILY level.** A published `GPL-2.0` against a GPL-3.0 tree reads
+  `AGREE`; version discrimination is `P613`'s job. `ACTION NT` and `ACTION NS` carry the
+  follow-through.
+- 🟡 **`TEXT-ABSENT` is not a refutation**, deliberately: collapsing it into `CONTRADICTED`
+  would turn this KB's own documented claim-only shapes into errors.
+- 🟡 The population is **slugs on published table rows**. A licence named in a sentence is not
+  a published row, and `1 273` is therefore a floor.
+
 ## Pass 190 — 2026-10-14
 
 🆕 🟢 **`ACTION NG` closes its own question cleanly — `0` case-variant files contradict a

@@ -3,7 +3,153 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
-## 🔜 Registered for p191 — pre-registered with falsifiers
+## 🔜 Registered for p192 — pre-registered with falsifiers
+
+🟢 **Written BEFORE this pass's prose, for the second pass running** — p190 fixed the
+ordering and p191 keeps it, so the register is no longer the thing that drifts.
+
+🟢 **And the channel constraint that governed p190's register is RELAXED, with the mechanism
+now named rather than guessed.** `api.github.com` answers `200` on `/rate_limit` this pass
+and `403` on everything else, with a body that says why: *"sessions are bound to their
+configured repositories"* and *"this GitHub API path is not available"* for search. 🔵 So the
+`403` p190 recorded as egress policy is a **session-scope boundary**: repository-scoped
+endpoints for attached repositories only, and search refused outright. 🟢 **The practical
+consequence is better than p190 could see: `git log -1` over a blobless clone returns the
+last commit date, sha and author for any public slug — `12` of `12` this pass — so RECENCY
+is recovered. Only STARS and SEARCH remain gone.**
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🔴 **`ACTION NQ`** — join Chamilo's `48` enforcement sites to its `68` tools. Which of the `47` WRITES is reachable with **no** check in its own body? | [`compose/code/p191-chamilo-agent-surface/result.2026-10-14.tsv`](../compose/code/p191-chamilo-agent-surface/README.md) *(`68` tools; `18` of `67` files carry enforcement)* | 🟢 **limb `1`:** every write carries `≥1` enforced check → 🟢 the role boolean is the ONLY missing narrowing, Pattern `37`'s gateway is about scoping and audit alone, and the estimate drops. 🔴 **limb `2`:** `≥1` write has none → 🔴 that tool is the engagement's first finding, Pattern `37` step `1` becomes a hard gate, and the `48`-site figure stops being reassuring |
+| 🔴 **`ACTION NR`** — is ralph's exclusion of `authority` from dedupe UNIVERSAL? Read the equivalence path of two other open-source LRSs *(`yetanalytics/lrsql`, `trax-lrs` or Learning Locker)* | [`evidence/ralph-authority-layers.2026-10-14-p191.tsv`](../evidence/ralph-authority-layers.2026-10-14-p191.tsv) *(the exclusion is spec-mandated; ralph is STRICTER than the spec on `timestamp` and `version`)* | 🟢 **limb `1`:** all exclude it → 🟢 publish *"no conforming LRS compares the asserting authority"* as a STANDARD-layer claim, which no vendor can refute by patching, and `Gap 433` becomes a specification finding. 🔴 **limb `2`:** one compares it → 🔴 it is implementable, the ask on ralph becomes legitimate, and `ACTION MN`'s queue gains its first non-licence candidate |
+| 🟡 **`ACTION NS`** — the `78` `TEXT-ABSENT` rows: how many declare a licence in a REGISTRY or MANIFEST instead of in the tree? | [`evidence/licence-column-full-depth.2026-10-14-p191.tsv`](../evidence/licence-column-full-depth.2026-10-14-p191.tsv) + `P1049`/`p440` | 🟢 **limb `1`:** most declare one → 🟢 publish the claim-only RATE as the column's real commercial risk *(a true identifier with no grant text)*. 🔴 **limb `2`:** most declare nothing anywhere → 🔴 those rows are unlicensed in effect and must be relabelled, not footnoted |
+| 🟡 **`ACTION NT`** — the `141` `FAMILY-AMBIGUOUS` rows. Take the `20` that any published pattern depends on and resolve them with `lib/licence_identity.title_spdx` *(the TITLE surface)* instead of a body count | same TSV + [`compose/code/lib/licence_identity.py`](../compose/code/lib/licence_identity.py) | 🟢 **limb `1`:** the title surface resolves `≥18`/`20` → 🟢 promote it as this KB's standard resolver and the ambiguous class shrinks by an order of magnitude. 🔴 **limb `2`:** it does not → 🔴 the ambiguity is REAL *(dual licensing, exceptions)* and those rows need a human, which is a different and more expensive answer |
+| 🟡 **`ACTION NU`** — Moodle `5.3` shipped `2026-10-05` and the tree is now `public/`-prefixed at `67 592` paths. Does any Moodle-derived path this KB publishes still resolve? | [`evidence/git-recency-recovered.2026-10-14-p191.tsv`](../evidence/git-recency-recovered.2026-10-14-p191.tsv) *(`moodle/moodle` HEAD `b7260e59a831`, `2026-10-13`)* | 🟢 **limb `1`:** all resolve *(`COPYING.txt` is still at the root)* → 🟢 record and move on. 🔴 **limb `2`:** `≥1` published path is now under `public/` → 🔴 every Moodle-derived path in this KB is suspect and the re-read is the pass |
+| 🟢 **`ACTION NV`** — run the recovered recency channel over the WHOLE shelf, not `12` slugs: `git log -1` for every slug in the `1 273`-row population | [`evidence/git-recency-recovered.2026-10-14-p191.tsv`](../evidence/git-recency-recovered.2026-10-14-p191.tsv) | 🟢 **limb `1`:** `≥95`% resolve → 🟢 this KB has a DORMANCY measure again, with a channel that has now survived two passes *(`Gap 436`'s rule satisfied)*. 🔴 **limb `2`:** `<95`% → 🔴 record the resolve rate as the measure's own limit before publishing a single date |
+| 🔴 **`ACTION MN`** *(carried, a human decides, SEVENTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4ED/openSIS-Classic`, `alfredang/ai-mms` + `AI-LMS-TMS`, `mohamurshid/ElimuAnalytics`, `MoKangMedical/digital-sage`, `frappe/education`, 🆕 `linyeping/GemMate` and 🆕 `mhlavac/edupage-mcp` *(both carry a licence this KB mis-published, so the correction is OURS and the issue is optional)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently |
+
+### 🆕 Gaps opened, closed and re-stated by p191
+
+- 🆕 🟡 **`Gap 444` — a gate that has been reporting this KB's own CONVENTION as a defect for
+  twenty-five passes.** `P383`'s region-heading gate requires **exactly one**
+  `## Opportunities by region` block per file. [`intel/market.md`](market.md) is
+  **append-only**, so every pass adds one: the count is now `26`, it was `25` before this
+  pass, and the gate's finding count moves by `+1` per pass regardless of what the pass
+  wrote. 🔵 **`P383`'s rule was authored for a page that gets REWRITTEN and applied to a page
+  that gets APPENDED.** 🟢 The remedy is not to loosen the rule: it is to scope it to the
+  CURRENT pass's block, which is the only one a reader or a compiler should be reading
+  region structure from. 🔴 Until then, `P383`'s totals over `intel/market.md` are not a
+  quality signal, and p191's own block is well-formed — one heading, five `###` subsections,
+  all five values in vocabulary.
+- 🆕 🔴 **`Gap 440` — a correction can land on one page and not on the others, and nothing
+  notices.** [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) is published
+  `MIT` in [`agents/top.md`](../agents/top.md) and
+  [`agents/trending.md`](../agents/trending.md) while
+  [`repos/foundations.md`](../repos/foundations.md) **already carries the corrected
+  `GPL-3.0`**. The tree says `GPL-3.0` *(`LICENSE`, `35 183` B, read from bytes)*. 🔵 **The
+  defect is not the wrong licence; it is that the right one was already known.** 🟢 A
+  full-depth sweep over the whole population is how a KB finds the pages a correction did not
+  reach, and `P1059` is now the instrument for it.
+- 🆕 🔴 **`Gap 441` — an instrument's precision must be measured against the rows it
+  ACCUSES, and this one failed that test three times in one build.** `P1059`'s first run
+  reported `6` contradictions; read against the pages, **`3` were its own**: a cross-product
+  over a row naming several repos and several ids *(`AlexandreL0pes/q-scraper`)*, an id named
+  in a row's PROSE read as the row's published id, and a VOCABULARY DRIFT between the
+  extractor and the comparator that mis-reported
+  [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) and
+  [`opencast/opencast`](https://github.com/opencast/opencast) — the two largest platforms on
+  the shelf, both published correctly. 🔵 **The lesson is sharper than "test your
+  instrument":** the row that gets misread is the **best-documented** row, because a cell
+  that explains its licence against a better-known one contains two ids, and an extractor
+  that cannot spell the first will find the second. 🟢 Closed as an instrument by
+  [`P1059`](../compose/code/p191-licence-case-full-depth/README.md) *(`24`/`24` controls,
+  three of them these defects)* and by a hard import-time assertion that the two
+  vocabularies cover each other.
+- 🆕 🟢 **`Gap 434` CLOSED, and bigger than it was stated.** `ACTION NK` asked for `156` case
+  variants over `160` rows. 🟢 **What ran was `P441`'s TREE ENUMERATION over `1 273` rows** —
+  every case variant at the root is a strict subset of a complete tree, and the tree also
+  reaches depth, licence directories, packaging conventions and family suffixes that no
+  variant list can. 🔴 **And the population was the bigger error: `160` was `13`% of the rows
+  this KB publishes with a licence.** 🟢 Result: `1 037` `AGREE`, `141` `FAMILY-AMBIGUOUS`,
+  `78` `TEXT-ABSENT`, `6` `BUNDLED-ONLY`, `8` `UNRESOLVABLE`, **`2` `CONTRADICTED`**.
+  🔵 `ACTION NK` limb `2` fires on the letter of its falsifier, at a rate of `2` in `1 273`.
+- 🆕 🔴 **`Gap 442` — the agent layer's PERMISSION model and its ACCOUNTABILITY model are
+  advancing in opposite directions, and now measured on two platforms.**
+  [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) ships a **native** MCP
+  server *(`2.1.0`, `68` tool definitions: `21` reads, `47` writes)* with `48` enforcement
+  sites in code, OAuth 2.1 resource metadata, hashed and revocable keys, and a configuration
+  that **fails closed** on malformed JSON. 🔴 **And `0` audit references, `0` logger
+  references, `0` rate limits and no confirm handshake across all `67` sources** — `confirm`
+  appears in tool DESCRIPTIONS only. 🔴 Its server gate is **one role boolean for all `68`
+  tools**, so a key cannot be narrowed below the user: the key IS the user. 🔵 **Against
+  `openedx-mcp`, which can narrow a key nine ways and also cannot say who acted, the two
+  models are not better and worse — they are opposite halves of the same missing thing.**
+- 🆕 🟢 **`Gap 433` RE-STATED at the STANDARD layer, which makes it stronger and cheaper to
+  sell.** `ACTION NP` found that `openfun/ralph` **does** enforce authority: the
+  `authority/write` scope exists, `_enrich_statement_with_authority` OVERWRITES a
+  client-supplied authority with the authenticated user's agent unless that scope is held,
+  and all four backends filter by authority on read. 🔴 The exclusion of `authority` from
+  `statements_are_equivalent` is **mandated by the xAPI specification** — ralph's own
+  docstring says so, and ralph is *stricter* than the spec on `timestamp` and `version`.
+  🟢 **So the attribution hole is in the STANDARD, not the implementation, and it is
+  therefore present in every conforming LRS.** p190's framing — *"ralph excludes authority by
+  name"* — was true and pointed at the wrong party.
+- 🆕 🔴 **`Gap 443` — the same statement is attributed differently depending on the HTTP verb
+  that wrote it.** In ralph, `POST` enriches authority and then forwards; `PUT` forwards and
+  then enriches *(the comments say so: "Enrich statement before forwarding" … "Finish
+  enriching statements after forwarding")*, and `forwarding.py` sends `json=statements`
+  verbatim. 🔴 **So a forwarded `PUT` carries the client's own unvalidated `authority` — or
+  none — while the copy stored locally is correctly attributed.** A client with no
+  `authority/write` scope cannot forge attribution locally and **can** forge it downstream.
+  🔵 Not spec-driven and not a reading of prose: two call orders, eleven lines apart.
+- 🆕 🟢 **`Gap 437` HALF-CLOSED: recency is recovered, discovery is still gone.** p190 listed
+  *"stars, commit dates, topic membership"* as lost with `api.github.com`. 🟢 **`git log -1`
+  over a blobless clone returns the last commit date, sha and AUTHOR for any public slug —
+  `12` of `12` this pass, `0` refusals**, and it corrected a published date on the way
+  *(`GarethManning/education-agent-skills` last commit `2026-08-28`, not the `2026-06-26` the
+  search surfaced)*. 🔴 Stars and repository SEARCH remain unavailable, so DISCOVERY still
+  depends on web search for the slug and `git`/`raw` for the bytes.
+- 🟢 **`ACTION NO` resolved, one limb each.** 🟢
+  [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+  is the `165`-skill collection — **`CC-BY-SA-4.0`**, read from bytes *(`LICENSE`, `1 230` B,
+  © 2026 Gareth Manning)*, `241` paths, with a second grant at `mcp-server/LICENSE`.
+  🔴 **ShareAlike is copyleft on CONTENT**: usable with attribution, and a derivative skill
+  library must be licensed alike — so it is a reference and a composition target, never
+  material for a proprietary deliverable. 🔴 **`Study-Mate` is NOT resolvable:** three
+  distinct projects answer to the name, none matching the described *"self-study agent
+  updated `2026-10-13`"*, and one *(`Abbilaash/StudyMate`)* carries **no licence text at all**
+  over `19` enumerated paths. 🟢 So the channel limit p190 suspected is confirmed and now
+  measured: **web-search discovery yields names without owners**, and a name is not an
+  address.
+- 🟢 **`ACTION NL` closed as an OMISSION, not a regression.** `has_delete_permission` is
+  absent from **all five** `openedx-mcp` releases, and `admin.py` is byte-identical from
+  `0.1.2` *(`sha256` `3be322597768`)*. 🔴 **No release ships a `CHANGELOG` at all**, which is
+  the second half of `ACTION NM`'s answer.
+- 🟢 **`ACTION NM` closed: an ORIGINAL finding, and the mechanism is now named.** In `0.1.1`
+  `audited_write()` had **no `destructive` parameter**; `destructive` was used as a
+  *substitute* scope on `deactivate_user`. `0.1.2` turned it into an **additive flag** and
+  migrated **four** call sites — `deactivate_user`, `delete_xblock`,
+  `invalidate_certificate`, `request_retirement` — and `reset_attempts` was not among them.
+  `tool_views.py` is byte-identical `0.1.2` → `0.1.5`. 🔴 **The destructive set is enumerated
+  BY HAND in three places — the enum label, the README's scope table and the README's tool
+  table — and omits it in all three.** 🟢 Nothing upstream calls it deliberate, and nothing
+  upstream could: the package declares no repository address and ships no changelog.
+- 🔴 **`ACTION NN` closed at limb `2`, across all four Gulf states.** `0` of UAE, Qatar and
+  Bahrain has an instrument governing AI used **ON** learners. 🟢 The UAE's `2026-02` MoE
+  guide is binding and real — `25` prohibitions, under-13 and sub-Grade-7 barred, AI banned
+  in all exams — but it governs AI used **BY** learners. 🟢 **The usable hook outside Saudi
+  Arabia is the general data-protection statute**: Bahrain's PDPL *(Law `30`/`2018`,
+  automated-decision rights, implementing orders still being finalised)* and Qatar's Law
+  `13`/`2016`. 🔴 Bahrain's `38`-article AI bill passed the Shura Council in `2024-04` and is
+  still not law. 🔴 **Every row is SECONDARY** — see `Gap 431`.
+- 🟢 **`Gap 431` HOLDS, with a 16th blocked host.** `www.digitaleducationcouncil.com` returned
+  `getaddrinfo ENOTFOUND`, so the DEC Global Survey `2026` PDF could not be read and the
+  per-region faculty table stays second-hand. 🔴 **Two secondary summaries of that same
+  survey disagree about which region has the LOWEST future intent** — one says US/Canada, one
+  says APAC. 🟢 This KB records the disagreement and resolves neither: an unresolved conflict
+  is information, a picked side is not.
+
+## ✅ DISCHARGED — was “Registered for p191”
 
 🟢 **The drift p189 recorded is NOT repeated: p190 registers in BOTH this file and
 [`README.md`](../README.md), and this file was written BEFORE the pass's prose rather than

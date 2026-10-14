@@ -3,6 +3,40 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🆕 🔴 **The trend this pass measures is a RELOCATION: the agent layer has moved from a plugin
+into the platform, and the accountability layer did not move with it.** Chamilo ships `68`
+MCP tools and `0` audit rows. Open edX's facade ships `9` scopes and an audit log it never
+guards against deletion. 🔵 **Capability is being shipped by platform vendors; attribution is
+being left to the integrator.**
+
+| # | trend | measured this pass, from source |
+|---|---|---|
+| 🆕 `T1` | **The agent layer is becoming a platform feature.** For eleven passes this KB tracked education agents as third-party MCP servers. Chamilo `2.1.0` ships `68` tool definitions natively, with OAuth 2.1 resource metadata | `chamilo/chamilo-lms` HEAD `6f9bb2c61985`, `67` sources read at that sha; `config/packages/mcp.yaml` |
+| 🆕 `T2` | **Permission models are maturing; DESTRUCTION models are not.** Two platforms, two shapes, same hole: Open edX can narrow a key nine ways and mis-assigns `destructive` by hand; Chamilo enforces `48` role checks in code and cannot narrow a key below the user | `evidence/agent-layer-two-platforms.2026-10-14-p191.tsv` |
+| 🆕 `T3` | **The attribution gap is in the STANDARD, not the implementations.** `openfun/ralph` enforces authority on write *(server-assigned unless the caller holds `authority/write`)* and filters by it on read in all four backends. Its exclusion of `authority` from dedupe equivalence is **mandated by the xAPI specification**, by its own docstring — and ralph is STRICTER than the spec on `timestamp` and `version` | `src/ralph/utils.py:167`-`186`; `api/routers/statements.py:115`-`133`; `api/auth/user.py:18` |
+| 🆕 `T4` | **An HTTP verb can decide who gets the credit.** In ralph, `POST` enriches authority then forwards; `PUT` forwards then enriches. A forwarded `PUT` carries the client's own unvalidated `authority`, while the locally stored copy is correctly attributed | `api/routers/statements.py` `put()` vs `_post_statements_standard()`; `api/forwarding.py` sends `json=statements` verbatim |
+| 🆕 `T5` | **Copyleft has moved into the CONTENT layer, where buyers do not look for it.** The two agent-skill libraries that matter this week are `CC-BY-SA-4.0` and `CC0-1.0` — a share-alike obligation and a public-domain dedication, neither of which a code-licence review would surface | `GarethManning/education-agent-skills` `LICENSE` `1 230` B; `O0000-code/awesome-academic-skills` `CC0-1.0` |
+| 🟢 `T6` | **North America's constraint is trust, not capability**, and the gap widened: faculty intent `76`% → `67`%, and only `26`% of US/Canada faculty say they are excited about AI against `57`% in APAC | DEC `2026` global survey *(n = `45 398`, `35` countries)*, secondary — the host is unreachable |
+| 🟢 `T7` | **Student use is universal and integration is not.** `88`% of students use AI; `15`% say it is integrated into many of their courses; `29`% think their instructors are equipped to guide them | same survey, secondary |
+| 🟢 `T8` | **Outside Saudi Arabia, the Gulf governs AI used BY learners and not AI used ON them.** The UAE's `2026-02` classroom guide is binding and detailed; Qatar and Bahrain reach learner data only through general data-protection statutes | `evidence/gulf-ai-on-learners.2026-10-14-p191.tsv` |
+
+### 🔵 The method lesson, which is about where a KB's own errors live
+
+p190's lesson was *"label the channel per CLAIM, not per pass"*. 🟢 **p191 adds the one it
+paid for: label the POPULATION too.** `ACTION NK` asked for a sweep over *"all `160` published
+licence rows"*, and `160` was never derived — it was what the previous pass happened to
+reach. The real population is `1 273`. 🔴 **A sweep that calls itself exhaustive and names a
+number it did not derive is a sampling study wearing a census's clothes.**
+
+🟢 **And the second lesson is about which rows an instrument gets wrong.** `P1059` accused
+three rows falsely, and the three were not sloppy rows — they were the rows whose cells
+**explain** their licence *(`ECL-2.0`, *"an OSI-approved `Apache-2.0` derivative"*)*. 🔵 **A
+careful row contains two licence names, so an extractor that cannot spell the right one will
+find the wrong one. Precision must be measured against the best-documented rows, not the
+worst.**
+
 ## Pass 190 — 2026-10-14
 
 🆕 🔴 **The trend p189 named is now measured in two unrelated codebases, and the measurement

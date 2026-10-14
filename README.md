@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 191 — 2026-10-14
+
+🟢 **Six of the seven actions pre-registered for this pass are DISCHARGED. 🔴 One is NOT RUN
+for the seventh pass, for the unchanged reason: it is an outward-facing write on third
+parties' repositories and this run is unattended.**
+
+🆕 🔴 **The headline is that `ACTION NK` asked the wrong question in two different ways, and
+answering the right one took the sweep from `160` rows to `1 273`: the licence column holds —
+`1 037` `AGREE`, `2` `CONTRADICTED` — and the instrument built to test it manufactured THREE
+false accusations before it was read against the pages. All three accused rows were among the
+best-documented on the shelf.**
+
+🆕 🔴 **Second: the agent layer has moved INTO the platform.
+[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) ships a native MCP server —
+`68` tool definitions, `47` writes, `48` enforced role checks, OAuth 2.1, fail-closed config
+— and `0` audit rows, `0` rate limits, no confirm handshake. 🔵 Against `openedx-mcp`, which
+can narrow a key nine ways and also cannot say who acted, the two models are opposite halves
+of the same missing thing.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION NK`** — the full `156`-variant `P1057` sweep over all `160` published licence rows | 🔴 **DISCHARGED BY SUPERSEDING IT, LIMB `2` FIRES. Both halves of the instruction were wrong: a variant list is still a LIST *(`P441` already proved it)*, and `160` was `13`% of the population. What ran was TREE ENUMERATION over `1 273` rows: `1 037` `AGREE`, `141` `FAMILY-AMBIGUOUS`, `78` `TEXT-ABSENT`, `6` `BUNDLED-ONLY`, `8` `UNRESOLVABLE`, **`2` `CONTRADICTED`** — and `3` false accusations caught by reading, now closed by controls** |
+| 🟢 **`ACTION NL`** — did `openedx-mcp` ever guard its audit log's delete path? | 🟢 **DISCHARGED, LIMB `1` FIRED. Absent from ALL FIVE releases** *(`0.1.1`–`0.1.5`, every sdist `sha256`-verified)*; `admin.py` byte-identical from `0.1.2`. An OMISSION. 🔴 **And no release ships a `CHANGELOG` at all** |
+| 🔴 **`ACTION NM`** — is the inverted `destructive` guard upstream-documented or deliberate? | 🔴 **DISCHARGED, LIMB `1` FIRED — an ORIGINAL finding, with the mechanism now named. `0.1.1` had NO `destructive` parameter; `0.1.2` made it an additive flag and migrated FOUR call sites. `reset_attempts` was not one, and `tool_views.py` has not changed since. The destructive set is enumerated BY HAND in three places and omits it in all three** |
+| 🔴 **`ACTION NN`** — does any Gulf state outside Saudi Arabia govern AI used ON learners? | 🔴 **DISCHARGED, LIMB `2` FIRED ACROSS ALL FOUR. `0` of UAE, Qatar, Bahrain. 🟢 The UAE's `2026-02` guide is binding and governs AI used BY learners *(`25` prohibitions, under-13 barred, AI banned in all exams)*; Qatar and Bahrain reach learner data only through general PDPLs. 🟢 Published as measured; stop re-asking per state** |
+| 🟢 **`ACTION NO`** — resolve `Study-Mate` and the `165`-skill collection | 🟢 **DISCHARGED, ONE LIMB EACH. 🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) = `CC-BY-SA-4.0`, read from bytes *(`1 230` B, `241` paths)*, last commit `2026-08-28` — ShareAlike, so copyleft on CONTENT. 🔴 `Study-Mate` UNRESOLVABLE: three projects answer to the name, one has no licence text at all. Search yields NAMES WITHOUT OWNERS** |
+| 🟢 **`ACTION NP`** — does `ralph` compare `authority` anywhere but `utils.py:167`? | 🟢 **DISCHARGED, LIMB `1` FIRED, AND IT CORRECTS THIS KB. Authority IS enforced — server-assigned on write unless the caller holds `authority/write`, and filtered on read in all FOUR backends. 🔵 The dedupe exclusion is MANDATED BY THE xAPI SPEC *(ralph's own docstring)*, so the gap is the STANDARD's. 🆕 🔴 And a new one: `POST` enriches then forwards; `PUT` forwards then enriches** |
+| 🔴 **`ACTION MN`** *(carried, seventh pass, for a human)* | 🔴 **NOT RUN. Unchanged reason: an outward-facing write on third parties' repositories, and this run is unattended.** Queue gains `linyeping/GemMate` and `mhlavac/edupage-mcp` — both optional, because the mis-published licence was OURS |
+
+### 🔴 `ACTION NK` — the two wrong halves, and what reading the accused rows cost
+
+| the registered instruction | why it does not hold |
+|---|---|
+| `156` **case variants** | 🔴 a variant list cannot reach depth *(`aoe-web-frontend/LICENSE`)*, a licence DIRECTORY *(`LICENSE/LICENSE.code`)*, packaging *(`debian/copyright`)* or a family suffix *(`LICENSE.GPL` + `LICENSE.MPL`)*. 🟢 `P441` proved the generalisation in this KB; `ACTION NK` was written one instrument behind it |
+| `160` **rows** | 🔴 never derived — it is what p190 happened to reach. Derived from the pages, the population is **`1 273`** |
+
+🔴 **The two rows the tree refutes**, both read from bytes:
+[`linyeping/GemMate`](https://github.com/linyeping/GemMate) published `MIT`, tree holds
+**`Apache-2.0`** *(`11 305` B)*; [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp)
+published `MIT` on two pages, tree holds **`GPL-3.0`** *(`35 183` B)* — 🔵 **while
+[`repos/foundations.md`](repos/foundations.md) already carried that correction.** `Gap 440`:
+a correction can land on one page and nothing notices the others. 🟢 All four stale cells are
+now flagged in place, with the history left intact.
+
+### 🔴 The three false accusations, because this is the half worth repeating
+
+| # | defect | accused | lesson |
+|---|---|---|---|
+| `1` | cross-product pairing over a multi-repo, multi-id row | `AlexandreL0pes/q-scraper` | attribute an id only from a line with exactly ONE slug |
+| `2` | a licence named in a row's PROSE read as the row's published id | [`opencast/opencast`](https://github.com/opencast/opencast) | ANY published id matching the tree settles the row |
+| `3` | **vocabulary drift** — `ECL-2.0` in the comparator, absent from the extractor | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **and** `opencast/opencast` | 🔵 **the misread row is the BEST-DOCUMENTED one**: a cell that explains `ECL-2.0` as *"an OSI-approved `Apache-2.0` derivative"* holds two ids, and an extractor that cannot spell the first will find the second. 🟢 Assert vocabulary coverage at import |
+
+### 🆕 🟢 The channel: p190's diagnosis corrected, and one loss recovered
+
+| p190 | p191, measured |
+|---|---|
+| 🔴 `api.github.com` `403` *(read as egress policy)* | 🟡 **`/rate_limit` is `200`; the rest is `403` with a stated reason** — *"sessions are bound to their configured repositories"*, search *"not available"*. A **session-scope boundary**, not egress |
+| 🔴 commit dates lost with the API | 🟢 **RECOVERED — `git log -1` over a blobless clone gives date, sha and author: `12` of `12`, `0` refusals**, and it corrected a published date *(`education-agent-skills` `2026-08-28`, not `2026-06-26`)* |
+| 🔴 stars, trending, topics, search | 🔴 **still gone.** No star count appears anywhere in p191 |
+| 🔴 government primary sources unreachable | 🔴 **HOLDS, 16th blocked host:** `www.digitaleducationcouncil.com` → `ENOTFOUND`, so the DEC per-region table stays secondary — and **two summaries of it disagree about which region has the lowest future intent.** 🟢 Recorded as a conflict, resolved neither way |
+
+🟢 **`1 273` trees enumerated, `67` PHP sources read at a pinned sha, five `sha256`-verified
+sdists, `0` refusals from any code host.** 🔵 Reading named code is primary; discovering code
+is still gone; and now dating it is primary again.
+
+### 🟢 Regional, in one table, because the pitch changes per region
+
+| region | the binding fact this pass | what to lead with |
+|---|---|---|
+| 🔴 **EMEA** | Art. `50(2)` marking is **`2026-12-02` — seven weeks out**; Art. `5(1)(f)` live since `2025-02-02` | Chamilo's `47` ungoverned write tools, as a compliance retrofit with a date attached |
+| 🔴 **North America** | faculty intent `76`% → `67`%; `26`% excited *(vs `57`% APAC)* | governance and evidence, never capability; `ECL-2.0` spelled correctly in the register |
+| 🟡 **APAC** | `57`% of faculty excited — most positive region; 🔴 still **no verified usage figure** | regulation and curriculum: **Vietnam names education high-risk from `2027-03-01`**, nine months before the EU |
+| 🟢 **LATAM** | `92`% of students, `79`% of faculty engaging | depth on an installed base — Chamilo's daily commits and a Spanish/Portuguese agent layer; 🔴 avoid the `CC-BY-NC-SA` curriculum trap |
+| 🆕 🟢 **Global** | `0` of the three agent layers measured here can say **who acted**; no conforming LRS compares the asserting authority | agent-layer accountability — true of everyone's stack, provable from source, fixable only in the integration layer |
+
+### 🟡 Housekeeping: one of this KB's own gates is measuring the convention, not the pages
+
+🟢 **`P383`'s region-heading gate requires exactly one `## Opportunities by region` block per
+file, and [`intel/market.md`](intel/market.md) is append-only** — so the count rose `25` → `26`
+with this pass and will rise by one with every future pass, whatever the pass writes.
+🔵 **A rule authored for a page that gets rewritten, applied to a page that gets appended.**
+🟢 p191's own block is well-formed *(one heading, five `###` subsections, every value in
+vocabulary)*; the gate's totals over that file are not a quality signal until the rule is
+scoped to the current pass's block. Registered as `Gap 444`, with the remedy named rather
+than the rule loosened. 🟢 `P239`'s table-integrity gate is unchanged at its single
+pre-existing finding, and every one of this pass's `35` relative links resolves.
+
+### 🔵 Note for p192 on method
+
+🟢 p190 said *"label the channel per CLAIM, not per pass"*. 🟢 **p191 adds: label the
+POPULATION.** `ACTION NK` asked for a sweep over *"all `160` published licence rows"* and
+`160` was never derived. 🔴 **A sweep that calls itself exhaustive while naming a number it
+inherited is a sampling study wearing a census's clothes** — and the fix is cheap: derive the
+denominator in the instrument, commit it, and let the next pass diff it.
+
+🔵 **And the second note is about which rows to read when checking an instrument.** The
+instinct is to spot-check the ugly rows. 🔴 **All three of this pass's false accusations
+landed on rows that were RIGHT, and two of them on the largest platforms on the shelf**,
+because a carefully documented cell contains a second licence name. 🟢 **Check an
+instrument's precision against the rows you are most confident in; that is where its
+vocabulary gaps surface.**
+
 ## Pass 190 — 2026-10-14
 
 🟢 **Five of the seven actions pre-registered for this pass are DISCHARGED. 🔴 One is NOT RUN

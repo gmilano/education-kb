@@ -1,0 +1,20 @@
+# p191 — ACTION NP. Is `authority` compared or enforced anywhere in `openfun/ralph` other
+# than `utils.py:167`? Channel: `git clone --depth 1`, HEAD 91fef112394d (2026-10-12).
+layer	file	what it does with `authority`	verdict
+scope	src/ralph/api/auth/user.py:18,47	declares an `authority/write` scope; the `all` scope EXPANDS to include it	ENFORCED — a client may only assert its own authority unless it holds this scope
+write (POST+PUT)	src/ralph/api/routers/statements.py:115-133 `_enrich_statement_with_authority`	if the caller holds `authority/write` AND supplies `authority`, it is validated as a BaseXapiAgent and kept; otherwise it is OVERWRITTEN with `current_user.agent`	ENFORCED — authority is SERVER-ASSIGNED, not client-trusted
+read	backends/lrs/es.py, mongo.py, clickhouse.py, fs.py (`_add_filter_by_authority`)	filters results by authority in all FOUR backends (`?mine=true`)	ENFORCED — authority is queryable
+equivalence	src/ralph/utils.py:167-186 `statements_are_equivalent`	EXCLUDES `authority` and `stored`; INCLUDES `timestamp` and `version` when present in both	the ONLY equivalence comparison — and the exclusion is SPEC-MANDATED, see below
+# 🟢 ACTION NP: LIMB 1 FIRES, and it CORRECTS p190's framing.
+# p190 published the exclusion as ralph's defect. The docstring says otherwise, verbatim:
+#   "The LRS specification excludes the fields below from equivalency. It was decided to
+#    include them anyway as their value is inherent to the statements."
+#   # other_fields = {"timestamp", "version"}  # "authority" and "stored" remain ignored.
+# So ralph CONFORMS to the xAPI specification on authority and is STRICTER than the spec on
+# two other fields. The attribution gap is at the STANDARD layer, which means it is present
+# in every conforming LRS — a much stronger claim than "ralph has a bug", and one no LRS
+# vendor can refute by patching.
+# 🔴 NEW this pass, and NOT spec-driven: the two write paths disagree about forwarding order.
+path	order	consequence
+POST	`_statements_to_dict` (enriches authority) -> `forward_xapi_statements`	the forwarded copy carries the LRS-ASSIGNED authority
+PUT	`_enrich_statement_with_stored` + `_timestamp` -> `forward_xapi_statements` -> `_enrich_statement_with_authority`	the forwarded copy carries the CLIENT'S OWN unvalidated `authority` (or none), while the locally stored copy is correctly attributed — `forwarding.py` sends `json=statements` verbatim with no sanitisation
