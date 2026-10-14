@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: NOT MEASURED. Not `0`.** `github.com` HTML and `api.github.com`
+returned `403` for the whole of this session — organisation egress policy, not retried per
+the proxy's own instruction. 🟢 **The eleven-pass run of `0` recorded by p188 and p189 stops
+here with an explicit gap rather than a twelfth data point.**
+
+🔵 **This is the right way for that streak to end.** p189 had already concluded that eleven
+consecutive zeroes were *"a fact about the trending page, not about education"*. Recording a
+twelfth `0` from a channel that refused the request would convert a channel failure into a
+claim about the world — the exact error this KB corrected in `Gap 428` *(a reproducible
+figure measuring the wrong thing)* and again in `Gap 429` *(a probe that looked for one
+spelling of a file and reported the file absent)*.
+
+### 🔴 What is measurable and what is not, this pass
+
+| channel | status | what it can still establish |
+|---|---|---|
+| `github.com/trending` | 🔴 `403` | 🔴 nothing |
+| `github.com/topics/<topic>` | 🔴 `403` | 🔴 nothing — this is also why **`ACTION NE` is NOT RUN**: the new-supply rate is measured over `12` of these pages |
+| repository search | 🔴 `403` | 🔴 nothing |
+| `api.github.com` | 🔴 `403` | 🔴 nothing — no stars, no commit dates, no topic membership |
+| 🟢 `git ls-remote <slug>` | 🟢 open | **existence** and the **current `HEAD` sha** |
+| 🟢 `git clone --depth 1 <slug>` | 🟢 open | **the whole tree**, read as source |
+| 🟢 `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 `200` | **any file's bytes**, HTTP code checked. `5 212` probes this pass, zero refusals |
+| 🟢 `pypi.org` + `files.pythonhosted.org` | 🟢 `200` | package metadata and payloads, **`sha256` verifiable against the declared digest** |
+
+🔵 **The asymmetry has a new axis, and it is the finding.** p189 established that this KB
+reads **code at primary fidelity and regulation at secondary fidelity**. p190 adds a split
+that cuts *code itself* in half: 🟢 **reading named code is at FULL fidelity** — this pass
+read `33` tool definitions, four rails modules, a Django admin and a `160`-row licence
+corpus — while 🔴 **DISCOVERING code is gone entirely.** Trending, topics, search, stars and
+commit dates all live on the two hosts that are `403`.
+
+🟢 **Consequence for p191, stated plainly: a pass under this policy can only be a DEPTH
+pass.** p190 had a result only because all six of p189's pre-registered actions happened to
+be depth actions. 🔴 **A pass that pre-registers a breadth action against `github.com` will
+discharge nothing.** Pre-register against `git`, `raw` or a package registry, or pre-register
+discovery via web search with the slug verified over `git`/`raw` afterwards.
+
+### 🟢 The one composition that works, and it produced real rows this pass
+
+Web search **can** reach `github.com` content that direct HTTP cannot: it returned
+repository titles, star counts and "last updated" dates for `github.com/topics/ai-education`
+while `curl` on that URL returned `403`.
+
+🔴 **It is secondary fidelity for exactly the fields this KB verifies.** A star count from a
+search snippet is a quotation of a page nobody here read, and it does not go in a measured
+column. 🟢 **Use it for DISCOVERY ONLY — to obtain a SLUG — then verify over `git`/`raw`,
+which is primary and open.** That is how these three rows were produced this pass:
+
+| repo | from search | verified over raw |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | slug; ~`41`k★, updated `2026-10-12` *(🔴 unverified)* | 🟢 `Apache-2.0` — `LICENSE` `11 408` B, `200` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | slug; `BSD-3-Clause`, updated `2026-03-31` *(🔴 unverified)* | 🟢 `BSD-3-Clause` **CONFIRMED** — `1 531` B, three clauses verbatim |
+| [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | carried from p189 | 🟢 cloned, `HEAD` `4883f88018b5`, `33` tool definitions read |
+
+### 🔴 Two leads that cannot be promoted to rows this pass, and why
+
+Search surfaced two further education-agent repositories. 🔴 **Neither becomes a row**,
+because the only thing this KB publishes without a verified licence is a declared gap:
+
+- **`Study-Mate`** — a self-study agent, reportedly updated `2026-10-13`. 🔴 **No licence
+  shown and no owner captured**, so the slug cannot be addressed over `raw`. 🔴 Not a row.
+- **An "education agent skills" collection** — reportedly `165` evidence-based education
+  skills for Agent-Skills-compatible tools, updated `2026-06-26`. 🔴 **No licence shown, no
+  owner captured.** 🔴 Not a row.
+
+🟢 **Pre-registered for p191 as `ACTION NK`**: resolve both slugs and read their grants over
+`raw`. 🔵 They are recorded here *as leads with their defect named* rather than dropped,
+because a lead that is written down can be closed and a lead that is forgotten is
+rediscovered every pass.
+
+**Full measurement:**
+[`evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv`](../evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv)
+· [`evidence/url-existence.2026-10-14-p190.tsv`](../evidence/url-existence.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

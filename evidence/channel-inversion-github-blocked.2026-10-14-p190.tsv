@@ -1,0 +1,59 @@
+# p190 — the channel finding, and the reason ACTION NE is NOT RUN.
+#
+# ACTION NE asked: re-derive the NEW-SUPPLY RATE over the same 12 topic pages, so it has two
+# independent measurements instead of one. p189 promoted it to "this KB's published coverage
+# measure, replacing the retired absent rate" on the strength of ONE measurement.
+#
+# 🔴 VERDICT: NOT RUN. CHANNEL BLOCKED. The 12 topic pages are github.com/topics/<topic>
+# and github.com HTML returns 403 from the egress proxy for the whole of this session.
+#
+## MEASURED, this pass
+host / channel	code	verdict
+github.com/topics/ai-education	🔴 403	blocked by egress policy
+github.com/search?q=…&type=repositories	🔴 403	blocked
+api.github.com/repos/<slug>	🔴 403	blocked
+github.com/<owner>/<repo> (HTML)	🔴 403	blocked
+raw.githubusercontent.com/<slug>/HEAD/<path>	🟢 200	5 212 probes this pass, no refusals
+git ls-remote https://github.com/<slug>	🟢 ok	HEAD resolved for every slug attempted
+git clone --depth 1 https://github.com/<slug>	🟢 ok	4 repositories cloned
+pypi.org/pypi/<pkg>/json	🟢 200	metadata read
+files.pythonhosted.org	🟢 200	sdist fetched, sha256 verified against the declared digest
+www.iga.gov.bh	🔴 ENOTFOUND	15th blocked host
+# Per the proxy's own documentation a 403/407 is an organisation egress-policy denial and is
+# NOT to be retried or routed around. It was not. No host was probed twice.
+#
+## 🔴 THE CHANNEL ASYMMETRY HAS INVERTED ITS AXIS, AND THAT IS THE FINDING
+# p189 found: CODE at primary fidelity, REGULATION at secondary fidelity.
+# p190 finds a SECOND, orthogonal split, and it cuts code in half:
+#   🟢 READING named code  : FULL fidelity. Any repository whose slug is already known can be
+#      cloned and read byte for byte. This pass read 33 tool definitions, 4 rails modules, a
+#      Django admin and a licence corpus that way.
+#   🔴 DISCOVERING code    : GONE. Topics, repository search, trending, star counts and
+#      commit dates all live on github.com HTML or the API. Both are 403.
+# 🔵 So p190 could not have been a breadth pass whatever it intended. It could only be a
+# DEPTH pass — and the six actions p189 pre-registered were all depth actions, which is the
+# only reason the pass has a result at all.
+#
+## 🔴 THE METHOD LESSON, AND IT IS SHARPER THAN p189's
+# p189 RETIRED the absent rate (it measured this KB's own backlog) and PROMOTED the
+# new-supply rate to be the published coverage measure — on ONE measurement, over a channel
+# that was gone ONE PASS LATER.
+# 🟢 RULE: a figure is not a published measure until its CHANNEL has survived more than one
+# pass. p189's rule was "ask what would have to be true for the number to move". p190 adds
+# the prior question: ask whether you will still be able to ASK. A measure whose channel is
+# one policy change from disappearing is a reading, not a measure.
+# 🔴 CONSEQUENCE: this KB currently has NO published coverage measure. The absent rate is
+# retired and the new-supply rate has exactly one measurement (p189: 12 new slugs, 83%
+# absent, 239 rows). Quote it as "one measurement, 2026-10-14, p189", with the channel named,
+# or quote nothing. Do NOT present it as a rate.
+#
+## 🟢 ONE CHANNEL SUBSTITUTION THAT DID WORK, recorded for p191
+# Web search CAN reach github.com content that direct HTTP cannot — it returned repository
+# titles, star counts and "last updated" dates for github.com/topics/ai-education while
+# curl on the same URL returned 403.
+# 🔴 But it is SECONDARY fidelity for exactly the fields this KB verifies: a star count or a
+# commit date from a search snippet is a quotation of a page nobody here read.
+# 🟢 USE IT FOR DISCOVERY ONLY — to obtain SLUGS. Then verify every slug over git/raw, which
+# is primary and open. That is the only sound composition of the two channels, and it is how
+# the three DeepTutor / Open-TutorAI licence rows in this pass were produced: slug from
+# search, bytes from raw.

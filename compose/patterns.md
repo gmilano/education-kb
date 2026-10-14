@@ -3,6 +3,142 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🟢 **One new pattern, and three amendments that REPRICE steps this KB published
+yesterday — two of them CHEAPER because a control turned out to exist, one of them newly
+MANDATORY because a control turned out to be missing. Every repository named below was read
+as source at a pinned `HEAD` this pass, or had its grant read over
+`raw.githubusercontent.com/<slug>/HEAD/<path>` with the HTTP code checked.**
+
+### 🔴 Amendment `1` — Pattern `35` step `1` must ENUMERATE. It may never scope from a README
+
+🟢 Step `1` already said *"enumerate from the server's own definitions, not its README"*.
+`ACTION NF` was pre-registered to test whether that caution was necessary or merely prudent.
+🔴 **It is necessary, and the margin is larger than drift:**
+
+| | measured |
+|---|---|
+| tool definitions in the build | 🆕 **`33`** — `14` reads, `19` writes |
+| tool names in the README | 🔴 **`0`.** It carries `8` DOMAIN LABELS in an ASCII diagram and defers tool docs to a PyPI README |
+| 🔴 and p189's own cell marked *"verbatim"* | dropped `reports` from those labels — which is where the pre-registered figure `7` came from |
+
+🟢 **Step `1` is REWRITTEN as a hard gate: scope from `@mcp.tool()` / `audited_write`
+definitions, and record the count. If a README names no tools, say so — do not infer a
+surface from a diagram.** 🟡 **The audit estimate rises from `2`–`3` weeks to `3`–`4`** for a
+server of this size, because `19` write tools each need a scope, a reversibility and a
+confirm-state read, and that is now `19` rows of work rather than `6`.
+
+### 🟢 Amendment `2` — Pattern `35` steps `3`, `4` and `6` get CHEAPER on this platform
+
+🔴 Step `3` published *"On the Open edX facade, nothing — `is_staff` is the whole control"*.
+🟢 **REFUTED from the code.** [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) `0.1.5`
+*(`AGPL-3.0`; sdist `43 185` B, **`sha256` verified** against PyPI's declared digest)*
+carries, enforced:
+
+| control | where |
+|---|---|
+| 🟢 **nine scopes** — `read`, `write:enrollment`, `write:users`, `write:roles`, `grant:admin`, `write:certificates`, `write:reports`, `write:courses`, `destructive` | `models.py` `Scope`, enforced by `auth.require_scopes()` |
+| 🟢 **`destructive` is ADDITIVE** — a delete needs its domain scope **and** `destructive` | `guards.audited_write` |
+| 🟢 **single-use confirm token** bound to a `sha256` of `(tool, user, payload)`; one changed byte invalidates it | `_rails.issue/consume_confirm_token` |
+| 🟢 **per-`(key,tool)` rate limits** tuned to blast radius — `bulk_enroll` `5`/`300`s, `request_retirement` `5`/`600`s | `_rails.RATE_LIMITS` |
+| 🟢 **audit row written BEFORE the write**, write refused if it cannot persist | `guards.audited_write` |
+| 🟢 **keys `SHA-256`-hashed, shown once, revocable, expiring, privilege re-checked LIVE** | `models.MCPKey`, `auth.MCPKeyAuthentication` |
+
+🟢 **So step `4`'s allowlist gateway drops from "build it" to "configure the scopes that
+already exist" — days, not weeks — and step `3` can be demonstrated to a client as a
+`403` with `{"required": […], "missing": […]}` rather than built.** 🟢 Step `6` stands:
+`/health` really is unauthenticated, by name, in `auth.py`.
+
+🔵 **The method note that earns its place: p189 read the LICENCE from bytes and the AUTH
+MODEL from a README in the same pass, and published both at the same confidence. The licence
+held; the auth model did not.** A README's security sentence is a claim. A decorator is a fact.
+
+### 🔴 Amendment `3` — Pattern `35` step `2` gains TWO mandatory sub-steps, and they are the ones that bite
+
+🔴 **`2a` — classify by REVERSIBILITY, from the code, never from the scope's NAME.** On this
+very platform the guard is **inverted on the pair that matters**:
+
+| tool | scope | `destructive`? | reality |
+|---|---|---|---|
+| 🔴 `reset_student_attempts` *(audits as `reset_attempts`)* | `write:users` | 🔴 **NO** | `delete_module=True` **deletes the learner's `StudentModule` row** — their submitted state for that block — and fires score-changed signals. **No undo** |
+| 🟢 `deactivate_user` | `write:users` | 🟢 **YES** | flips `is_active=False`; `request_retirement`'s own docstring calls it *"the reversible `is_active` flag"* |
+
+🔵 **A key minted `["read","write:users"]` specifically so it cannot delete CAN delete a
+learner's work, and CANNOT deactivate an account.** 🟢 Deliverable: a reversibility table per
+tool, signed by the client, before any key is minted.
+
+🔴 **`2b` — EU work: run the emotion-inference screen, and report CLASS A and CLASS B
+separately.** Use [`p190-affect-inference-scan`](code/p190-affect-inference-scan/README.md)
+*(`P1058`, `19`/`19` tests)*. 🔴 **Art. `5(1)(f)` is a live PROHIBITION since `2025-02-02` at
+EUR `35`M or `7`% of worldwide turnover and was NOT deferred by the Omnibus.** 🟢 `ACTION NH`
+measured this KB's three proctoring rows: **all three CLEAR** — 🔴 **one of them only because
+`outputFaceBlendshapes` defaults to `false`.** 🔵 **`outputFaceBlendshapes: true` is ONE LINE
+that moves a system from a `2027` duty into a live prohibition. That single sentence is the
+screen's commercial justification.** 🔴 And report CLASS B *(face, gaze, head pose)* as an
+Annex III **duty**, never as a prohibition: a CLASS B hit misreported blocks a usable row.
+
+### 🆕 🟢 Pattern `36` — the agent ATTRIBUTION audit: who acted, and can it be erased?
+
+🔵 **Why it exists.** p189 asserted that nobody protects the durable record of a human
+decision about a learner. 🔴 **p190 measured two unrelated codebases and the claim is wrong
+in an instructive way: both DO protect the record. Neither protects the ACTOR.** That is a
+narrower, demonstrable, vendor-neutral finding — and it is the one a regulator, a DPO or an
+exam board actually asks about, because a trail that cannot say **who** is not a trail.
+
+| step | component | licence, as measured this pass | what it does |
+|---|---|---|---|
+| `1` | 🟢 **Find the attribution columns.** In every audit or statement store, list the fields naming the ACTOR, and for each ask: is it compared, and can it be deleted? | — | 🔵 one table. It is the whole deliverable of step `1` |
+| `2` | 🔴 **Read the DELETE path, not just the write path.** On [`openedx-mcp`](https://pypi.org/project/openedx-mcp/): `MCPAuditLogAdmin` blocks `add` and `change` and freezes every field — and **never overrides `has_delete_permission`**, which Django defaults to `user.has_perm("delete_mcpauditlog")`, with the default **"Delete selected objects"** bulk action intact | 🔴 `AGPL-3.0` *(`34 524` B)* | 🔵 `add`, `change`, `delete` — enumerate all three. One of the three is where this fails |
+| `3` | 🔴 **Read the CASCADE.** `MCPAuditLog.key` and `.user` are `on_delete=models.SET_NULL`: **deleting a key or a user NULLs attribution on every row it produced** — no delete permission on the log required | 🔴 same | 🔴 **The second path, and the one nobody looks for.** Change to `PROTECT`, or snapshot actor identity into the row at write time |
+| `4` | 🔴 **Read the EQUIVALENCE function, not only the conflict response.** [`openfun/ralph`](https://github.com/openfun/ralph)'s `statements_are_equivalent` *(`src/ralph/utils.py:167`)* compares `{actor, verb, object, id, result, context, attachments}` plus `timestamp`/`version` **only when present in both** — and **excludes `authority` and `stored` by name** | 🟢 **`MIT`** — 🆕 `LICENSE.md` `1 094` B, complete grant read this pass *(`LICENSE` itself `404`s)* | 🔴 A re-`PUT` differing only in `authority` answers **`204` and is SILENTLY DISCARDED**. The record is safe; the conflicting claim vanishes |
+| `5` | 🟢 **Snapshot the actor, do not reference it.** Write actor identity as immutable text into the record *(and into the object-lock copy from Pattern `32` step `3b`)*, so no cascade can null it | — | 🟢 the cheapest durable fix in this pattern |
+| `6` | 🟢 **Reject on attribution mismatch at ingest.** Mint statement ids per authority, or refuse a duplicate id from a different authority instead of answering `204` | — | 🟢 one guard in the ingest proxy. **Adds no weeks** |
+| `7` | 🔴 **Tie retention to retirement.** `_rails.redact()` redacts `{confirm_token, password, key, secret, token}` and **NOT `username` or `email`** — so `request_retirement`'s own audit row **permanently stores the username of a learner retired to remove their PII**, and no hook connects the two | 🔴 `AGPL-3.0` | 🔴 **The first question a DPO asks, and it is answerable from source.** One retention rule, one redaction entry |
+| `8` | 🟢 **Anchor what must outlive the platform** as `OB 3.0` / W3C VCs: [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget), [`brody-0125/signet-campus`](https://github.com/brody-0125/signet-campus), [`iblai/wallet`](https://github.com/iblai/wallet) | 🟢 all **`MIT`** | 🔵 attribution durable by **cryptography**, not by an admin permission |
+
+🟡 **Estimate: `2` weeks for steps `1`–`4`** *(the read — and it is a READ, so it is quotable
+at fixed price)*, **`+2`–`3` for `5`–`7`**, **`+3`–`4` for `8`** where credentials must be
+portable. 🟢 **Steps `1`–`4` produce the document that justifies the rest, exactly as in
+Pattern `35`.**
+
+🔵 **Where it applies by region.**
+🔴 **EU** — Annex III education duties *(admissions, evaluation of learning outcomes, student
+placement, exam/behaviour monitoring)* land `2027-12-02`, but **`Art. 50` transparency and
+the GPAI obligations have been LIVE since `2026-08-02`** and **`Art. 50(2)` marking is due
+`2026-12-02` — seven weeks out**; pair this pattern with the four `aiact-50-2-*` instruments
+this KB already ships.
+🔴 **APAC first, not last** — **Vietnam** names automated assessment and behavioural
+monitoring high-risk with compliance by **`2027-03-01`** *(grace only for systems running
+before `2026-08-15`)*, **nine months BEFORE the EU**; **Korea's** AI Basic Act *(in force
+`2026-01-22`)* requires **human monitoring and intervention**, which steps `5`–`6` evidence
+directly.
+🟢 **North America** — Ohio, Tennessee and Oklahoma require district AI policies and Oklahoma
+bars AI as the **main basis** for a high-stakes decision about a student; 🔴 sell against a
+buyer whose enthusiasm **fell nine points** *(US/Canada faculty intent `76`% → `67`%)*, so
+lead with trust, not capability. Maryland's **district AI coordinators** are the named buyer.
+🟢 **LATAM** — no national rule in Brazil, Mexico, Colombia or Chile, so this is **risk
+management**, not compliance; it lands on an installed base that is already permissive
+*(`38`% of organisations use open-source AI; Mexico `65`%, Brazil `46`%)* and already
+using AI shallowly *(`79`% of faculty, `88`% minimal-to-moderate)*.
+🟢 **Gulf** — `4` of `4` states now have a **curriculum** instrument and only Saudi Arabia
+governs **AI used ON learners**, so lead with build-and-train and offer this pattern as the
+governance that is not yet required.
+
+### 🔴 Amendment `4` — a sourcing rule for every pattern in this file, forced by the channel
+
+🔴 **`github.com` HTML and `api.github.com` were `403` for this entire session**, so no star
+count, commit date or topic membership in this file was refreshed this pass. 🟢 **Licences,
+tool definitions and code were all read at primary fidelity over `git` and `raw`.**
+🔵 **So when quoting any pattern here: the LICENCE and the CODE are current; the ATTENTION
+metrics are stale by construction.** Where a pattern's justification rests on a repository
+being actively maintained, say that the maintenance signal was not re-measured.
+
+Evidence: [`openedx-mcp-tool-surface`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv) ·
+[`ralph-equivalence-subset`](../evidence/ralph-equivalence-subset.2026-10-14-p190.tsv) ·
+[`proctoring-affect-inference`](../evidence/proctoring-affect-inference.2026-10-14-p190.tsv) ·
+[`licence-path-case-published`](../evidence/licence-path-case-published.2026-10-14-p190.tsv) ·
+[`channel-inversion-github-blocked`](../evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

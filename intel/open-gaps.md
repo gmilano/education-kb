@@ -3,8 +3,132 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## 🔜 Registered for p191 — pre-registered with falsifiers
 
-## 🔜 Registered for p190 — pre-registered with falsifiers
+🟢 **The drift p189 recorded is NOT repeated: p190 registers in BOTH this file and
+[`README.md`](../README.md), and this file was written BEFORE the pass's prose rather than
+after it.** 🔵 p189 diagnosed the cause correctly — *"the register is written last, when the
+pass is already over budget"* — so the fix was ordering, not discipline.
+
+🔴 **And one constraint governs every row below, learned the hard way this pass:
+`ACTION NE` could not run because its channel returned `403`. No action below is aimed at
+`github.com` HTML or `api.github.com`. A falsifier aimed at a channel you do not control is
+a falsifier that can neither fire nor fail.**
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🟢 **`ACTION NK`** — run the FULL `156`-variant `P1057` sweep over **all `160`** published licence rows, not just the `17` zero-hit ones. This pass swept `160` at `limit=16` *(which cannot reach `.md`)* and `156` variants over only the `17` | [`compose/code/p1057-licence-path-case`](../compose/code/p1057-licence-path-case/README.md) + [`evidence/licence-path-case-published.2026-10-14-p190.tsv`](../evidence/licence-path-case-published.2026-10-14-p190.tsv) *(`5 212` probes; the `7` recovered grants)* | 🟢 **limb `1`:** `0` published licences contradicted → 🟢 the column is sound **at full depth** and `P1057` becomes a standing intake gate at `limit=None`, never at a limit. 🔴 **limb `2`:** `≥1` contradicted → 🔴 full column re-read, and every "grant-absent" verdict older than p190 is suspect |
+| 🔴 **`ACTION NL`** — did `openedx-mcp` EVER guard its audit log's delete path? Read `admin.py` across all five releases *(`0.1.1`–`0.1.5`)* from the sdists | [`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv) `F2` *(`has_add_permission`/`has_change_permission` overridden, `has_delete_permission` never)* | 🟢 **limb `1`:** it was never present in any release → 🟢 an **omission**, and Pattern `36` step `2` is an enumeration checklist *(`add`/`change`/`delete`)*. 🔴 **limb `2`:** it was present and was REMOVED → 🔴 a **regression**, which changes the finding from a design gap into a supply-chain fact and makes version pinning part of the deliverable |
+| 🔴 **`ACTION NM`** — is the inverted `destructive` guard a Globant finding or an upstream known issue? `reset_attempts` carries `write:users` and not `destructive` while `deactivate_user` *(reversible)* carries it. Read the `CHANGELOG.md` of both artefacts and the `0.1.1`–`0.1.5` diff of `tool_views.py` | [`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv) `F1` | 🟢 **limb `1`:** unmentioned anywhere upstream → 🟢 it is an original finding and `ACTION MN`'s queue gains its strongest candidate *(a safety defect, not a licence nit)*. 🔴 **limb `2`:** it is documented or deliberate → 🔴 re-read it as an intended semantic and correct this KB's three pages that now call it inverted |
+| 🟡 **`ACTION NN`** — the Gulf's SUBSTANTIVE gap, which `ACTION NI` opened by closing the existence question: does any Gulf state **outside Saudi Arabia** govern AI used **ON** learners? UAE, Qatar and Bahrain, ministry domains and Arabic sources | [`evidence/bahrain-education-instruments.2026-10-14-p190.tsv`](../evidence/bahrain-education-instruments.2026-10-14-p190.tsv) *(`4` of `4` on curriculum, `1` of `4` on governance)* | 🟢 **limb `1`:** `≥1` exists → 🟢 the Gulf governance pitch has a precedent to cite and the `1`-of-`4` figure is corrected. 🔴 **limb `2`:** `0` → 🔴 publish *"Saudi Arabia is the ONLY Gulf state governing AI used on learners"* as a measured claim across all four, and **stop re-asking per state** |
+| 🟢 **`ACTION NO`** — resolve the two leads p190 refused to promote: **`Study-Mate`** and the **"education agent skills"** collection *(`165` skills)*. Obtain owner/slug via search, then read the grant over `raw` | [`repos/trending.md`](../repos/trending.md) p190, *"Two leads that cannot be promoted"* | 🟢 **limb `1:`** both resolve with a permissive grant read from bytes → 🟢 two new rows, and the search→`git`/`raw` composition is confirmed as this KB's discovery channel under the `403`. 🔴 **limb `2`:** either is unresolvable or non-permissive → 🔴 record it, and note that web-search discovery yields **slugs without owners**, which is a channel limit worth stating |
+| 🟢 **`ACTION NP`** — does `ralph` compare `authority` ANYWHERE else — in the backends, the forwarding path, or the auth layer — or is `utils.py:167` the only equivalence check? | [`evidence/ralph-equivalence-subset.2026-10-14-p190.tsv`](../evidence/ralph-equivalence-subset.2026-10-14-p190.tsv) *(`src/ralph/utils.py:167`-`186`; `authority` and `stored` excluded by name)* | 🟢 **limb `1`:** it is compared or enforced elsewhere → 🟢 the attribution gap narrows to the `PUT`/`POST` dedupe path only, and Pattern `36` step `6` becomes optional. 🔴 **limb `2`:** `utils.py:167` is the only one → 🔴 the gap is platform-wide, step `6` is **mandatory**, and `authority` must be treated as uncompared everywhere |
+| 🔴 **`ACTION MN`** *(carried, a human decides, SIXTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4ED/openSIS-Classic`, `alfredang/ai-mms` + `AI-LMS-TMS`, `mohamurshid/ElimuAnalytics`, `MoKangMedical/digital-sage`, 🆕 `frappe/education` *(`19`-byte name-only licence)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently |
+
+### 🆕 Gaps opened, closed and re-stated by p190
+
+- 🆕 🔴 **`Gap 433` — the record is protected; the ACTOR is not. Measured in two unrelated
+  codebases.** [`openfun/ralph`](https://github.com/openfun/ralph) *(`MIT`)* refuses an
+  overwrite with a documented `409` on both write paths — and its
+  `statements_are_equivalent` **excludes `authority` and `stored` by name**, so a re-`PUT`
+  from a DIFFERENT asserting authority answers `204` and is **silently discarded**.
+  [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) *(`AGPL-3.0`)* blocks `add` and
+  `change` on its audit log and freezes every field — and **never overrides
+  `has_delete_permission`**, keeping Django's default plus the default bulk delete action;
+  and `MCPAuditLog.key`/`.user` are `SET_NULL`, so **deleting a key or a user nulls
+  attribution with no delete permission on the log at all.**
+  🟢 **This CORRECTS p189's trend rather than confirming it, and the correction is the
+  sellable version:** *"nobody protects the record"* is refutable by anyone who has read
+  either codebase; *"the record is protected and the actor is not"* is true in both and
+  demonstrable from source. 🟢 Pattern `36` is the response.
+- 🆕 🔴 **`Gap 434` — a `limit` standing in for a path list.** `P1057`'s variants are ordered
+  extension-major, so `probe_plan(limit=16)` returns `12` bare stems + `4` `.txt` casings and
+  **never reaches `.md`** — one of this KB's four standing licence paths. 🔴 p189's
+  *"`224` probes, `0` further grants"* therefore swept a **strictly smaller** path set than
+  the list it existed to extend. 🟢 Bounded this pass: `7` of `17` zero-hit rows DO carry a
+  grant, and **`2` change verdict** — [`frappe/education`](https://github.com/frappe/education)
+  *(`license.txt`, **`19` B**, `"License: GNU GPL V3"` and nothing else — `Gap 421`'s sixth
+  and smallest sub-`1`kB shape)* and
+  [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider)
+  *(`LICENSE.md`, **`560` B**, the Apache-2.0 appendix notice — **incorporation by
+  reference**)*. 🔵 **And the symmetry is the lesson: p189 RETIRED the *"NOTICE not a
+  LICENSE"* caveat from `openedx/XBlock`, which turned out to hold the full `11 358` B.
+  `numbas` is the row that caveat was always for.** The caveat was right and attached to the
+  wrong row. `ACTION NK` closes it at full depth.
+- 🆕 🔴 **`Gap 435` — a substring standing in for a TOKEN, and it nearly produced a false
+  accusation under a EUR `35`M prohibition.** A case-insensitive `emotion` match fires inside
+  **`deviceMotionEvent`**, and `node_modules` ships `application/emotionml+xml`: `16` false
+  CLASS A hits against a repository **with no camera**. 🟢 Closed as an instrument by
+  [`P1058`](../compose/code/p190-affect-inference-scan/README.md) *(`19`/`19` tests; a leading
+  `\b` plus a vendored-path skip; re-run `0` CLASS A in all three repositories)*.
+  🔵 **Third consecutive pass of the same class, one segment further left each time:** p189
+  found a substring standing in for a **path**, p190 found one standing in for a **token**
+  and a `limit` standing in for a **path list**. 🟢 **Rule: a cheap proxy for a precise thing
+  must be tested against the case that distinguishes them, or it is not a measurement.**
+- 🆕 🔴 **`Gap 436` — this KB has NO published coverage measure, and the reason is a channel.**
+  `github.com` HTML and `api.github.com` were `403` for the whole session, so **`ACTION NE`
+  is NOT RUN** — the new-supply rate is measured over `12` `github.com/topics` pages. 🔴 p189
+  retired the absent rate *(`Gap 428`)* and **promoted** the new-supply rate to *"this KB's
+  published coverage measure"* **on one measurement, over a channel that was gone one pass
+  later.** 🟢 **Quote it as *"one measurement, `2026-10-14`, p189, over `github.com/topics`"*,
+  with the channel named, or quote nothing. Do not present it as a rate.** 🟢 **New rule: a
+  figure is not a published measure until its CHANNEL has survived more than one pass.**
+- 🆕 🟢 **`Gap 437` — the channel asymmetry has a SECOND axis, and it cuts code in half.**
+  p189: code primary, regulation secondary. 🆕 p190: **reading named code is primary
+  *(`5 212` raw probes, `4` clones, a `sha256`-verified sdist, zero refusals)*; DISCOVERING
+  code is gone** *(trending, topics, search, stars, commit dates all live on the two `403`
+  hosts)*. 🔵 **A pass under this policy can only be a DEPTH pass** — p190 had a result only
+  because all six of p189's actions happened to be depth actions. 🟢 One composition works
+  and produced real rows: **web search for the SLUG, `git`/`raw` for the BYTES.**
+- 🟢 **`Gap 430` REFUTED, not closed — and this is the pass's most important correction.**
+  p189 published that `tutor-contrib-openedxmcp` exposes `retire` *"behind `is_staff` alone,
+  with no per-tool scope"*. 🟢 **The facade carries NINE enforced scopes, `destructive` as an
+  additive scope, a single-use confirm token bound to a `sha256` of `(tool, user, payload)`,
+  per-`(key,tool)` rate limits in an exact `18`/`18` match with the audited tool set, an
+  audit row written before the write, and `SHA-256` key hashing with live privilege
+  re-checks.** 🔴 The `/health` half stands. 🔵 **Cause: p189 read the LICENCE from bytes and
+  the AUTH MODEL from a README, in one pass, at one confidence. The licence held; the auth
+  model did not.** 🟢 Pattern `35` steps `3`, `4` and `6` get **cheaper**; step `1` becomes a
+  hard gate and the audit rises to `3`–`4` weeks.
+- 🆕 🔴 **`Gap 438` — the agent layer's PERMISSION model is maturing faster than its
+  DESTRUCTION model.** On a platform with nine working scopes,
+  🔴 **`reset_student_attempts` carries `write:users` and NOT `destructive`** while deleting a
+  learner's submitted `StudentModule` state irreversibly, and 🟢 **`deactivate_user` — *"the
+  reversible `is_active` flag"* by its own docstring — DOES carry it. 🔴 Plus
+  **`update_course_settings` changes a GRADING POLICY with `require_confirm=False`**
+  *(evaluation of learning outcomes is Annex III by name)*, and **`create_block` and
+  `create_block_tree` both audit as `create_xblock`**. 🔵 Scopes, handshakes and limits are
+  arriving; **which operations are irreversible is still assigned by hand, and is wrong.**
+  Pattern `35` step `2a` is the response.
+- 🟢 **`Gap 432` CLOSED by `ACTION NH`.** `0` affect-inference paths in `3` repositories.
+  🔴 Closed with two qualifications that belong in every EU engagement: one row is clear
+  **only because `outputFaceBlendshapes` defaults to `false`** *(one line crosses from a
+  `2027` Annex III duty into a live Art. `5(1)(f)` prohibition)*, and all three rows do
+  exam/behaviour monitoring, which is Annex III point `3` **by name** — clear of the
+  prohibition is not clear of the duty.
+- 🆕 🔴 **`Gap 439` — a published row described a capability it does not have.**
+  [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system)
+  was published as *"full exam platform with **AI proctoring**"*. 🔴 There is no AI and no
+  camera; `ExamJail.jsx` enforces fullscreen and listens for `visibilitychange`,
+  `fullscreenchange` and `contextmenu`, and **`com.exam.proctor` is a Java package name.**
+  🟢 Corrected in [`agents/top.md`](../agents/top.md). 🔵 **And the correction PROMOTES the
+  row for EU work:** exam-integrity signal with zero biometric processing carries no GDPR
+  Art. `9` duty. The description was hiding its best property.
+- 🟢 **`Gap 431` HOLDS, with a 15th blocked host.** `www.iga.gov.bh` returned
+  `getaddrinfo ENOTFOUND`, so the Kingdom of Bahrain AI RAM Report PDF — the only primary
+  source for `ACTION NI`'s headline — could not be read. Every government primary source
+  attempted this pass was unreachable; every code host served every byte asked of it.
+- 🟢 **`ACTION NI` CLOSED, and its HYPOTHESIS refuted.** Bahrain has **four** instruments and
+  **all were found in English**: it was never an Arabic-language channel limit but a
+  **document-shape** limit — Bahrain has no standalone *"AI in education policy"* document,
+  so a query shaped like one returns nothing. 🟢 **Rule: when a probe for a DOCUMENT fails,
+  vary the document's SHAPE before concluding the policy is absent** — `Gap 429`'s lesson,
+  applied to regulation instead of code. 🔴 Re-stated as `ACTION NN`: the Gulf is `4` of `4`
+  on **curriculum** and `1` of `4` on **governing AI used ON learners**.
+
+## ✅ DISCHARGED — was "Registered for p190"
+
+🟢 **All seven rows below were carried into p190 and are resolved: `ACTION NF` limb `2`, `ACTION NG` limb `1`, `ACTION NH` limb `1`, `ACTION NI` limb `1` *(hypothesis refuted)*, `ACTION NJ` limb `2` on the fact with its consequence refuted. 🔴 `ACTION NE` is NOT RUN — channel `403`. 🔴 `ACTION MN` is NOT RUN for a sixth pass and is carried again. The live register is the p191 block at the top of this file.**
 
 🔴 **Drift noted first, because this file exists to prevent exactly it: the block below this
 one is still headed *"Registered for p186"*. Passes `186`–`188` registered in

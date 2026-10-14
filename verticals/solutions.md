@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🔴 **The Open edX cell changes a THIRD time in three passes — from a policy, to a
+repository, to a MEASURED AUTHORISATION MODEL — and the direction reverses. p189 recorded
+the agent layer as ungoverned. It is not: it carries nine enforced scopes, a payload-bound
+confirm handshake and an append-only audit intent. 🔴 What it does NOT protect is WHO acted.**
+
+### 🔴 The platform table gains the column that actually decides an engagement
+
+p189 added *"who can delete a learner record, and whether anything stops them"*. p190 splits
+that column, because the two halves have **opposite** answers on the same artefact:
+
+| platform | agent surface | can an agent delete a learner record? | 🆕 is the ACTOR protected? |
+|---|---|---|---|
+| 🔴 [**Open edX**](https://github.com/openedx/edx-platform) *(`AGPL-3.0`)* via [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) + [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) `0.1.5` | 🟢 **yes — `33` tools, `19` writes** | 🟡 **yes, but rail'd**: `request_retirement` needs `write:users` **+** `destructive` **+** a single-use confirm token, is rate-limited `5`/`600`s, and audits before it writes. 🔴 **BUT `reset_student_attempts` deletes a learner's submitted block state with `write:users` ALONE — no `destructive`, no exception** | 🔴 **NO.** `MCPAuditLogAdmin` blocks **add** and **change** and makes every field readonly — and **never overrides `has_delete_permission`**, which Django defaults to `user.has_perm("delete_mcpauditlog")`. It declares no `actions`, so it keeps the default **"Delete selected objects"** bulk action |
+| 🟡 [**Moodle**](https://github.com/moodle/moodle) *(`GPL-3.0` — 🆕 grant read from `COPYING.txt`, `35 147` B this pass)* | yes, three community MCP servers | *(carried)* | not measured |
+| 🟢 [**openfun/ralph**](https://github.com/openfun/ralph) *(`MIT` — 🆕 grant read from `LICENSE.md`, `1 094` B this pass)* | LRS / xAPI | 🟢 **no — `409 CONFLICT` on both write paths**, returning before the backend write *(p189)* | 🔴 **NO.** `statements_are_equivalent` compares a **subset**, and `authority` — the field naming who asserted the statement — is **excluded by name** in the code's own comment |
+
+### 🔴 The cross-platform finding, and it is the reason to read this page
+
+🔵 **Two unrelated codebases. Two languages. Two layers of the stack. The same omission.**
+
+- `ralph` protects the **record** in code *(`409`, both write paths, documented in a source
+  comment)* and leaves **attribution** outside the comparison.
+- `openedx-mcp` protects the **record** in its admin *(add blocked, change blocked, all
+  fields readonly)* and leaves **attribution** deletable — 🔴 **by two independent paths**:
+  the audit log's own delete permission, **and** `MCPAuditLog.key` / `.user` being
+  `on_delete=models.SET_NULL`, so **deleting a key or a user NULLs the attribution on every
+  audit row it produced.** The rows survive. The actor does not. 🔵 **The second path needs no
+  delete permission on the log at all.**
+
+🟢 **p189 named the trend as *"nobody protects the durable record of a human decision about a
+learner"*. p190 corrects it, and the correction is more useful: the RECORD is protected in
+both. The ACTOR is not.** That is the sentence to open a governance conversation with, and
+it is now measured in code on two platforms rather than asserted.
+
+### 🔴 A third finding on the same artefact, and a DPO will ask it first
+
+🔴 **The PII that `request_retirement` exists to remove is retained by `request_retirement`'s
+own audit row.** `_rails.redact()` redacts `{confirm_token, password, key, secret, token}`
+and does **not** redact `username` or `email`. The tool's payload is
+`{"username": …, "full": …}`, so the audit log permanently stores the username of a learner
+whose account was retired **precisely to remove their PII**. 🔴 A search of
+`native/retirement.py` and `settings/` for `retention|purge|anonymi|MCPAuditLog` returns
+**nothing**: no hook ties the two together.
+
+🔵 **This is not a reason to avoid the platform — it is a scoped, cheap deliverable.** The fix
+is a retention rule on one table plus a redaction entry, and it is the kind of finding that
+justifies an audit before a client discovers it in a DSAR.
+
+### 🟢 The permissive route to an Open edX agent surface still does not exist
+
+🔴 `tutor-contrib-openedxmcp` is **`AGPL-3.0`** *(`LICENSE` `34 524` B)* and **`1`★**, and its
+facade `openedx-mcp` declares **no repository address at all** — no `project_urls`, no
+`home_page` on PyPI. 🔵 **The artefact in which every authorisation decision is made is
+auditable only as a package payload.** Bus factor `1`.
+
+🟢 **The licence is inherited from the host, not caused by it** — Moodle is `GPL-3` and
+carries three servers. 🟢 And the permissive entry point into Open edX is unchanged and now
+sound: [`openedx/XBlock`](https://github.com/openedx/XBlock), **`Apache-2.0`**, whose
+`NO_LICENCE_FILE` verdict p189 refuted *(`LICENSE.TXT`, `11 358` B)* — a correction that
+`ACTION NG` confirms was isolated across all `160` published licence rows this pass.
+
+### 🟢 Exam-integrity platforms, re-scoped by `ACTION NH`
+
+| platform | biometric processing | Art. `5(1)(f)` *(prohibited, LIVE since `2025-02-02`)* | Annex III point `3` *(duty, `2027-12-02`)* |
+|---|---|---|---|
+| 🟢 [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system) *(`MIT`)* | 🟢 **NONE** — no camera API outside vendored trees | 🟢 **not in scope** | 🟡 behaviour monitoring, non-biometric |
+| 🟡 [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform) *(`MIT`)* | camera; `face_detected` as a **boolean** | 🟢 clear — no affect inference | 🔴 yes |
+| 🟡 [`shaheeranser/exam-proctor`](https://github.com/shaheeranser/exam-proctor) | MediaPipe landmarker + `face-api` **identity** check | 🟢 clear — 🔴 **only because `outputFaceBlendshapes` defaults to `false`** | 🔴 yes, **plus GDPR Art. `9`** |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(`MIT`)* | 🟢 none — session-level anomaly detection | 🟢 clear *(carried token census)* | 🟡 non-biometric |
+
+🔵 **For an EU engagement the ranking inverts the usual one:** the platform with **no AI and
+no camera** is the lowest-risk and was published on this KB's own pages as *"full exam
+platform with AI proctoring"* — a description
+[`agents/top.md`](../agents/top.md) corrects this pass. 🔴 And the cleanest biometric row is
+clear by **one unset flag**: `outputFaceBlendshapes: true` is a single line that moves it
+from a `2027` duty into a **live prohibition at EUR `35`M or `7`% of worldwide turnover**.
+
+**Full measurement:**
+[`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv)
+· [`evidence/ralph-equivalence-subset.2026-10-14-p190.tsv`](../evidence/ralph-equivalence-subset.2026-10-14-p190.tsv)
+· [`evidence/proctoring-affect-inference.2026-10-14-p190.tsv`](../evidence/proctoring-affect-inference.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

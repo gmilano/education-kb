@@ -1,0 +1,85 @@
+# p190 — ACTION NJ. Does openfun/ralph's statements_are_equivalent compare the WHOLE
+# statement or a SUBSET? p189 read the 409 paths at statements.py:163-210 and 624-700 but
+# NOT the function itself, which is imported at line 62.
+#
+# LIMB 1 (full comparison -> Pattern 32 step 3c is sound as repriced; the 409 quotes to a
+#         DPO without qualification)
+# LIMB 2 (a subset -> name the ignored fields; the append-only claim narrows to
+#         "append-only except for X" and step 3b becomes the only real guarantee)
+#
+# RESULT: LIMB 2 FIRES ON THE FACT — it IS a subset, and the ignored fields are named in
+# the source. 🔴 BUT LIMB 2's STATED CONSEQUENCE IS REFUTED. The append-only claim does NOT
+# narrow. Nothing about the 409 guarantee has a hole. What has a hole is ATTRIBUTION.
+# 🔵 This is the third pass running in which a limb fires on its fact and falsifies its own
+# consequence, and the reason is the same each time: the limb was written before the
+# mechanism was read.
+#
+## THE CHANNEL — raw.githubusercontent.com/openfun/ralph/HEAD/<path>, HTTP checked
+path	bytes	code
+src/ralph/api/routers/statements.py	30 702	200
+src/ralph/api/models.py	2 088	200
+🆕 src/ralph/utils.py	10 245	200	— the file p189 did not fetch
+#
+## THE FUNCTION, src/ralph/utils.py:167-186, verbatim structure
+field set	fields	compared?
+ALWAYS compared	actor, verb, object, id, result, context, attachments	🟢 yes — 7 fields, unconditional
+CONDITIONALLY compared	timestamp, version	🟡 only when present in BOTH statements: fields.update(other_fields & statement_1.keys() & statement_2.keys())
+🔴 NEVER compared	authority, stored	🔴 NO — excluded by name in the code's own comment: '"authority" and "stored" remain ignored.'
+#
+# The docstring states the rule outright: "To be equivalent, they must be identical on all
+# fields not modified on input by the LRS and identical on other fields, if these fields are
+# present in both statements. For example, if an "authority" field is present in only one
+# statement, they may still be equivalent."
+# 🟢 AND RALPH IS STRICTER THAN THE SPEC, which is worth saying: the comment reads "The LRS
+# specification excludes the fields below from equivalency. It was decided to include them
+# anyway as their value is inherent to the statements." That is timestamp and version.
+# `stored` is LRS-set and ignoring it is correct.
+#
+## WHY THE GUARANTEE DOES NOT NARROW — the branch, re-read at statements.py:683-693
+# if existing_statements:
+#     for existing in existing_statements:
+#         if not statements_are_equivalent(statement_as_dict, existing):
+#             raise HTTPException(409, "A different statement already exists with the same ID")
+#     return                       <-- bare return, BEFORE BACKEND_CLIENT.write
+#
+# 🟢 BOTH branches leave the stored bytes untouched:
+#   NOT equivalent -> 409, returns before the write is reached.
+#   equivalent     -> bare `return`, 204, no write call at all.
+# 🟢 So a re-PUT differing ONLY in `authority` is judged equivalent, answers 204, and
+# WRITES NOTHING. There is no overwrite. p189's limb 2 anticipated "accepted as equivalent
+# and the 409 guarantee has a hole"; the acceptance is real, the hole is not.
+# Same shape on POST: _filter_existing_statements (188-210) raises 409 on a non-equivalent
+# duplicate id and REMOVES equivalent ids from the write set by dict comprehension.
+#
+## 🔴 WHAT IS ACTUALLY HOLED — attribution, and silently
+# `authority` is the field recording WHO ASSERTED the statement. Because it is outside the
+# comparison:
+# 1. 🔴 Two statements with the same id and DIFFERENT asserting authorities are treated as
+#    THE SAME STATEMENT. The second is accepted with 204 and DISCARDED.
+# 2. 🔴 A client cannot distinguish "your statement was stored" from "your statement was
+#    dropped because another authority already claimed that id". Both are 204.
+# 3. 🟡 timestamp and version are compared only when present in both, so a statement WITH a
+#    timestamp and one WITHOUT are equivalent on that field.
+#
+## CONSEQUENCE FOR PATTERN 32
+# 🟢 Step 3c stands exactly as p189 repriced it, and the 409 CAN be quoted to a DPO
+#   unqualified: the application layer will not mutate a stored statement, on either write path.
+# 🔴 What CANNOT be quoted unqualified is "the LRS distinguishes two asserters of the same
+#   statement id". It does not. For a trail whose value is WHO decided, the asserting
+#   authority is outside the integrity comparison and a conflicting claim is swallowed as a
+#   duplicate. 🟢 The fix is cheap and belongs in step 3c: mint statement ids per authority,
+#   or reject on authority mismatch at the ingest proxy. Add no weeks; add one guard.
+# 🟢 Step 3b (the WORM store) is unaffected and stays mandatory for the OPERATOR adversary,
+#   which is p189's split and still holds.
+#
+## 🔵 THE CROSS-ARTEFACT FINDING, and it is this pass's trend measured twice
+# ralph  — protects the RECORD in code (409, both paths) and leaves ATTRIBUTION outside the
+#          comparison (`authority` never compared).
+# openedx-mcp — protects the RECORD in its admin (add blocked, change blocked, every field
+#          readonly) and leaves ATTRIBUTION deletable (key and user are SET_NULL; the audit
+#          log's delete permission is never overridden). See
+#          evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv F2.
+# 🔴 Two unrelated codebases, two different languages, two different layers of the stack,
+# the same omission: the thing protected is the ROW, and the thing left unprotected is WHO.
+# 🟢 p189 named the trend as "nobody protects the durable record of a human decision about a
+# learner". p190 sharpens it: the record IS protected in both. The ACTOR is not.

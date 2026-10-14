@@ -1,0 +1,95 @@
+# p190 — ACTION NH. Does any proctoring row in this KB INFER EMOTION? Gap 432, EU AI Act
+# Article 5(1)(f) — prohibited since 2025-02-02, NOT delayed by the Omnibus, ceiling
+# EUR 35M or 7% of worldwide turnover.
+#
+# LIMB 1 (none infers emotion -> the rows are clear of Art. 5(1)(f) on a stated basis and
+#         can be recommended into EU engagements)
+# LIMB 2 (>=1 does -> flag the row; Pattern 35 step 2 gains a mandatory check for EU work)
+#
+# RESULT: LIMB 1 FIRES. 0 emotion-inference code paths in 3 repositories read as source.
+# 🔴 But the basis is thinner than the verdict looks, and TWO sub-findings matter more than
+# the headline. See S1 and S2.
+#
+## SCOPING FIRST, because p189's stated exposure does not survive contact with the pages
+# p189 published: "This KB carries four proctoring rows and patterns."
+# Measured across the four non-append-only pages, the proctoring-relevant PUBLISHED rows are:
+row	page	status
+VIJAYAPANDIANT/online-examination-system	agents/top.md	READ THIS PASS
+singhrajvardhan/SecureExam-Platform	agents/top.md	READ THIS PASS
+ls1intum/Artemis	verticals/solutions.md	🟢 ALREADY CLEARED — repos/foundations.md publishes the token census "proctor 0, webcam 0, emotion 0, face 2 ... session-level anomaly detection, NO biometric surveillance". Not re-read
+sgaofen/vibe-schooling	agents/top.md + verticals + patterns	🟢 OUT OF SCOPE — it ATTACKS proctoring. Art. 5(1)(f) binds providers and deployers of emotion inference, not a circumvention tool. Recorded as a threat model, correctly
+# 🔵 So the real exposure was TWO unread rows, not four. Plus shaheeranser/exam-proctor,
+# which p189's action named but which is NOT a published row — it is a slug from the
+# recency census (recency-census-filtered p188, recency-churn p189). Read anyway: it is the
+# only one of the three that uses a face model at all, so it carries the real risk.
+#
+## EXISTENCE, over the git protocol (github.com HTML was 403 all pass)
+slug	HEAD
+VIJAYAPANDIANT/online-examination-system	117112b284c61fd754f8f6832672ddc191a57851
+singhrajvardhan/SecureExam-Platform	854a68f9acabee07b4b9382d09ea865372fb42ef
+shaheeranser/exam-proctor	6f29a9bb8adc629d5a599b312febf4e516963768
+#
+## THE SCAN — two token classes, deliberately separate, vendored trees EXCLUDED
+# CLASS A = emotion/affect INFERENCE (what Art. 5(1)(f) prohibits)
+# CLASS B = biometric capture WITHOUT an affect claim (face, gaze, head pose)
+slug	CLASS A hits	CLASS B signal	what it actually derives	Art. 5(1)(f)
+VIJAYAPANDIANT/online-examination-system	🟢 0	🟢 NONE — no getUserMedia, no mediaDevices, no <video>, no webcam anywhere in frontend/src or backend/src	fullscreen enforcement, visibilitychange, fullscreenchange, contextmenu blocking. A browser lock	🟢 NOT EVEN IN SCOPE — it processes no biometric data at all
+singhrajvardhan/SecureExam-Platform	🟢 0	camera + OpenCV; `face_detected` as a BOOLEAN, `multiple_faces`, plus tab_switch / copy_attempt / paste_attempt	a presence counter. teacher/camera_logs.php and student_results.php aggregate SUM(face_detected=1) vs SUM(face_detected=0)	🟢 CLEAR — biometric capture, no affect inference, no categorisation
+shaheeranser/exam-proctor	🟢 0	MediaPipe FaceLandmarker + face-api.js + coco-ssd, in a web worker at 4 fps	head pose yaw/pitch from facialTransformationMatrixes -> `head_pose`; iris deviation -> `eye_gaze`; face-api for an IDENTITY CONSISTENCY check	🟢 CLEAR of 5(1)(f) — 🔴 but see S1
+#
+## S1 🔴 THE CLEANEST ROW IS CLEAR BECAUSE OF ONE DEFAULT, NOT ONE DECISION
+# client/src/student/worker/detection.worker.ts, FaceLandmarker.createFromOptions:
+#     baseOptions: { modelAssetPath: ".../face_landmarker.task", delegate: "GPU" },
+#     runningMode: "VIDEO", numFaces: 1,
+#     outputFacialTransformationMatrixes: true
+# 🔴 `outputFaceBlendshapes` IS NOT SET. MediaPipe defaults it to false. Those blendshapes
+# are the 52 expression coefficients (mouthSmile*, browDown*, …) — the nearest thing in the
+# stack to affect, and the model asset already loaded computes from the same graph.
+# 🔵 SO: one line, `outputFaceBlendshapes: true`, moves this repository from Annex III
+# high-risk (duties 2027-12-02) into a LIVE Article 5 PROHIBITION at the Act's maximum
+# penalty. That is the sentence to put in front of a client, and it is why "we checked, it
+# does not infer emotion" is a statement about a configuration and not about a design.
+# 🟢 What it DOES do that still needs a basis: face-api.js is loaded "for identity
+# consistency check" — biometric IDENTIFICATION, GDPR Art. 9 special-category data, and
+# Annex III point 3 "monitoring and detecting prohibited behaviour of students during tests".
+# Clear of the prohibition is not clear of the duty.
+#
+## S2 🔴 A PUBLISHED ROW'S DESCRIPTION IS REFUTED BY ITS OWN SOURCE
+# agents/top.md publishes:
+#   "VIJAYAPANDIANT/online-examination-system | MIT | 11 | 2026-08-19 | Full exam platform
+#    with AI proctoring; React/Vite + Spring Boot ... The most complete *platform* of the four."
+# 🔴 There is no AI and no proctoring. No camera API is referenced anywhere outside
+# node_modules; ExamJail.jsx enforces fullscreen, listens for visibilitychange and
+# fullscreenchange, and blocks contextmenu. `com.exam.proctor` is a JAVA PACKAGE NAME.
+# 🟢 The platform claim stands. The "AI proctoring" claim does not, and the row must say
+# "browser-lock integrity events (fullscreen, tab-switch), no camera, no model".
+# 🔵 Commercially this is the better row for an EU engagement, not the worse one: it
+# delivers exam integrity signal with ZERO biometric processing, so it carries no Art. 9
+# duty and no Annex III biometric exposure. The description was hiding its best property.
+#
+## S3 🔴 THE INSTRUMENT'S OWN DEFECT, recorded because it nearly produced a false accusation
+# The first scan reported CLASS A hits on VIJAYAPANDIANT: emotion 3, emotionevent 5,
+# emotioneventrotationrate 3, emotioneventacceleration 3, emotionelement 3, emotionml 2.
+# 🔴 ALL SIXTEEN ARE FALSE POSITIVES, from TWO causes at once:
+#   1. a case-insensitive SUBSTRING match for "emotion" fires inside "Devic eMotionEvent" —
+#      "deviceMotionEventRotationRate" contains "emotioneventrotationrate".
+#   2. every hit is in frontend/node_modules/ — mime-db/db.json carries the MIME type
+#      application/emotionml+xml, and caniuse-lite/data/features/deviceorientation.js
+#      carries the DOM event names.
+# 🟢 FIXED by a leading word boundary (\bemotion) and excluding vendored trees. Re-run:
+#      0 CLASS A hits in all three repositories.
+# 🔵 THE CLASS GENERALISES, AND IT IS p189's LESSON ONE SEGMENT OVER: p189 found a
+# SUBSTRING standing in for a PATH (LICENSE vs LICENSE.TXT). This is a SUBSTRING standing
+# in for a TOKEN. 🔴 An unbounded token scan over a tree containing node_modules will
+# accuse almost any JavaScript repository of inferring emotion.
+#
+## WHAT THIS DOES NOT ESTABLISH
+# 🔴 NOTHING WAS RUN. Three repositories were read as source at a pinned HEAD. A model
+#   loaded at runtime from a CDN (both face models here are fetched from cdn.jsdelivr.net
+#   and storage.googleapis.com at startup) can change without the repository changing.
+# 🔴 THREE REPOSITORIES, and one of them is not a published row. ls1intum/Artemis is carried
+#   from a previous pass's token census, not re-read this pass.
+# 🔴 TOKENS, NOT BEHAVIOUR. A model that outputs an affect score under a neutral variable
+#   name would pass this scan. The scan is a screen, not a clearance.
+# 🔴 The Omnibus deferral does NOT apply to Art. 5 prohibitions; it moved Annex III duties
+#   to 2027-12-02. Both facts are needed to read this table, and they point opposite ways.

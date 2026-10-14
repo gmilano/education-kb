@@ -1,0 +1,85 @@
+# p190 — ACTION NG. Run P1057 over EVERY row this KB publishes WITH a licence, not only the
+# grant-absent ones. Does any PUBLISHED licence come from a path that is now ambiguous, or
+# does a case-variant file CONTRADICT the one that was read?
+#
+# LIMB 1 (0 contradictions -> the openedx/XBlock miss was a one-off, the licence column is sound)
+# LIMB 2 (>=1 -> full column re-read, and P1057 becomes a standing intake gate)
+#
+# RESULT: LIMB 1 FIRES ON THE QUESTION ASKED — 0 case-variant files contradict a published
+# licence, over 5 212 probes. 🔴 BUT THE SWEEP THAT ESTABLISHED IT FOUND A BIGGER DEFECT,
+# AND IT IS IN HOW p189 INVOKED ITS OWN INSTRUMENT. See THE LIMIT DEFECT below.
+#
+# Population: 160 rows carrying BOTH a github.com slug AND an SPDX licence token, extracted
+# from the four non-append-only pages (agents/top.md, repos/foundations.md,
+# verticals/solutions.md, compose/patterns.md).
+#
+## SWEEP 1 — parity with p189: probe_plan(limit=16), 160 rows x 16 variants = 2 560 probes
+result	count
+HTTP 200	150
+HTTP 404	2 410
+rows with 0 variants serving bytes	17
+rows with exactly 1	136
+rows with >1 (candidate ambiguity)	7
+🟢 rows where a case variant CONTRADICTS the published licence	0
+#
+# The 7 multi-hit rows are ALL LICENSE + NOTICE pairs — two DIFFERENT files with different
+# jobs (Apache-2.0 §4(d) attribution), not two casings of one file. Not ambiguity.
+slug	paths serving bytes	verdict
+brody-0125/signet-campus	LICENSE 1 070 B + NOTICE 1 043 B	🟢 normal pair
+myvipbackup2/china-k12-teacher-skills	LICENSE 11 359 B + NOTICE 693 B	🟢 normal pair
+niansia/taiwan-exam	LICENSE 1 064 B + NOTICE 1 056 B	🟢 normal pair
+openedx/xblock-lti-consumer	LICENSE 34 520 B + NOTICE 694 B	🟢 normal pair
+penecho/penecho	LICENSE 34 523 B + NOTICE 5 666 B	🟢 normal pair
+terracotta-education/terracotta	LICENSE 11 323 B + NOTICE 239 B	🟢 normal pair
+zhamanov-seabus/nau-ai-advisor	LICENSE 11 375 B + NOTICE 1 080 B	🟢 normal pair
+#
+## 🔴 THE LIMIT DEFECT — p189's 224-probe sweep was NARROWER THAN THE PATH LIST IT EXTENDED
+#
+# P1057's EXTS tuple is ("", ".txt", ".md", ".rst", ".apache2", ".mit", ".gpl") and its
+# variant list is ordered extension-major: 12 bare stems x 3 casings first, then .txt.
+# So probe_plan(limit=16) returns 12 bare + 4 .txt casings and NEVER REACHES `.md`.
+# 🔴 `LICENSE.md` is one of the FOUR paths in this KB's standing list
+# (LICENSE, LICENSE.txt, LICENSE.md, COPYING). p189's "16 case variants x 14 grant-absent
+# rows = 224 probes, 0 further grants" therefore probed a STRICTLY SMALLER path set than the
+# list the instrument was written to extend, and its 0 is not evidence about `.md` at all.
+# 🟢 The instrument is correct. The INVOCATION truncated it below its own baseline.
+#
+## SWEEP 2 — the full variant set on the 17 zero-hit rows: 156 variants x 17 = 2 652 probes
+# 🔴 SEVEN OF THE SEVENTEEN DO CARRY A LICENCE FILE. All seven are at paths limit=16 cannot reach.
+slug	published	path found	bytes	bytes say	verdict
+frappe/education	GPL-3.0	license.txt	🔴 19	"License: GNU GPL V3" — the WHOLE file	🔴 NAME ONLY, NOT A GRANT. Gap 421's SIXTH sub-1kB shape and the smallest yet (19 B vs p189's 46/47 B). No copyright holder, no permission clause, no warranty disclaimer. The identifier is corroborated; the GRANT is absent
+numbas/numbas-lti-provider	Apache-2.0	LICENSE.md	🔴 560	the Apache-2.0 APPENDIX boilerplate — "Licensed under the Apache License, Version 2.0 ... You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0", © 2016 Newcastle University	🔴 INCORPORATION BY REFERENCE. Apache-2.0's own text is 11 358 B; this ships 560 B and a URL. 🔵 THIS IS THE ROW THE "NOTICE not a LICENSE" CAVEAT WAS ALWAYS FOR — p189 retired that caveat for openedx/XBlock, which turned out to hold the full 11 358 B at LICENSE.TXT. The caveat was right; it was attached to the wrong row, and the right row was invisible because `.md` was never probed
+frappe/lms	AGPL-3.0	license.txt	33 893	"GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007" verbatim	🟢 CONFIRMED, grant now read from bytes
+moodle/moodle	GPL-3.0	COPYING.txt	35 147	canonical GPL-3.0	🟢 CONFIRMED. `COPYING` is in the standing list; `COPYING.txt` is not reached at limit=16
+openfun/ralph	MIT	LICENSE.md	1 094	"MIT License / Copyright (c) 2020-present France Université Numérique" + full permission + warranty clauses	🟢 CONFIRMED COMPLETE MIT GRANT. 🔵 Same repository as ACTION NJ: `LICENSE` 404s, `LICENSE.md` is 200
+willianmano/moodle-theme_moove	GPL-3.0	LICENSE.md	34 903	GPL-3.0, markdown-formatted ("GNU General Public License ... _Version 3, 29 June 2007_")	🟢 CONFIRMED. The 244-byte deficit vs canonical 35 147 is markdown re-formatting, not a different grant
+yukazakiri/koakademy	AGPL-3.0	LICENSE.md	34 523	canonical AGPL-3.0 byte count	🟢 CONFIRMED
+#
+## The TEN rows that remain grant-absent after 156 variants each
+# No licence file at any of 156 paths. Their published identifier rests on a manifest or on
+# prose, which P1049/P1054/P1056 govern — not on a licence file.
+CreveXTech/canvas-lms-mcp	MIT
+Gaurav-Pande/AES_DL	MIT
+JushBJJ/Mr.-Ranedeer-AI-Tutor	MIT
+Rick-254/moodle-quizsmith	MIT
+Simon-Initiative/lti-example-tool	MIT
+ZQR1101/xueyoujing-companion	MIT
+formalms/formalms	Apache-2.0 / GPL-2.0
+ink-waffle/sisu-mcp	MIT
+os4ed/openSIS-Classic	GPL-2.0
+tianshuo/trainingllm	MIT
+#
+## 🟢 ONE THING RULED OUT, recorded so it is not asked again
+# SLUG case is NOT a defect. raw.githubusercontent.com treats the OWNER segment as
+# case-INSENSITIVE: OS4ED/openSIS-Classic/HEAD/LICENSE and os4ed/openSIS-Classic/HEAD/LICENSE
+# both return 404, identically. The case-sensitivity P1057 found is in the PATH, and the
+# path only. This KB writes that slug both ways across pages; it changes no verdict.
+#
+## WHAT CHANGES
+# 🟢 ACTION NG's own question closes: 0 contradictions in 5 212 probes. The licence COLUMN
+#   is sound where it was read, and the XBlock miss is confirmed isolated.
+# 🔴 But 7 of 160 rows (4.4%) were published as grant-absent while a grant was one unprobed
+#   extension away, and 2 of those 7 CHANGE VERDICT once read. The repair is not a re-read of
+#   the column — it is deleting the `limit` argument.
+# 🟢 RULE: never probe a path list SHORTER than the standing list it extends. A limit that
+#   silently drops a baseline path turns "we looked" into "we looked somewhere else".

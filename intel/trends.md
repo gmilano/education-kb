@@ -3,6 +3,125 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🔴 **The trend p189 named is now measured in two unrelated codebases, and the measurement
+CORRECTS the claim rather than confirming it. p189 said nobody protects the durable record of
+a human decision about a learner. Both artefacts read this pass DO protect the record — in
+code, deliberately, with comments explaining why. 🔴 Neither protects WHO ACTED.**
+
+### 🔴 Trend `1` — the record is guarded, the actor is not
+
+| artefact | the record | the actor |
+|---|---|---|
+| [`openfun/ralph`](https://github.com/openfun/ralph) *(`MIT`, LRS/xAPI)* | 🟢 **`409 CONFLICT` on BOTH write paths**, raised before `BACKEND_CLIENT.write` is reached, with the refusal explained in a source comment. An equivalent re-`PUT` takes a bare `return` and writes nothing | 🔴 **`statements_are_equivalent` compares a SUBSET.** `authority` — the field naming who asserted the statement — and `stored` are **excluded by name** in the code's own comment: *"'authority' and 'stored' remain ignored."* |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) `0.1.5` *(`AGPL-3.0`, the Open edX facade)* | 🟢 `MCPAuditLogAdmin` sets **`has_add_permission` → `False`**, **`has_change_permission` → `False`**, and **every field readonly**. The audit row is written **before** the write, and the write is refused if it cannot persist | 🔴 **`has_delete_permission` is NEVER overridden** → Django defaults it to `user.has_perm("delete_mcpauditlog")`, and no `actions` list is declared, so the default **"Delete selected objects"** bulk action survives. 🔴 **Second path, needing no delete permission at all:** `MCPAuditLog.key` and `.user` are `on_delete=models.SET_NULL`, so deleting a key or a user **NULLs attribution on every row it produced** |
+
+🔵 **Two codebases, two languages, two layers of the stack, the same omission.** 🟢 **And in
+both cases the author demonstrably thought about integrity** — ralph's refusal is documented
+in a comment; `openedx-mcp` blocked add, blocked change and froze every field. 🔴 **The gap is
+not inattention. It is an incomplete enumeration: `add`, `change`, `delete` — and one of the
+three was not listed.**
+
+🟢 **So the trend is sharper and more sellable than p189's version.** *"Nobody protects the
+record"* invites a rebuttal from any engineer who has read either codebase. 🟢 ***"The record
+is protected and the actor is not"*** is true in both, demonstrable from source, and it is
+precisely the property a regulator, a DPO or an exam board asks about — because an audit
+trail that cannot say **who** is not an audit trail.
+
+🔵 **Consequence for `ralph` specifically, and it is not the one p189's falsifier predicted.**
+Because equivalence means **no write at all**, the append-only guarantee has **no hole**: a
+re-`PUT` differing only in `authority` answers `204` and is **silently DISCARDED**. 🔴 So a
+client cannot distinguish *"your statement was stored"* from *"your statement was dropped
+because another authority already claimed that id"*. 🟢 **Integrity is intact; attribution is
+swallowed.** The fix belongs in `Pattern 32` step `3c` and costs one guard, not weeks: mint
+statement ids per authority, or reject on authority mismatch at the ingest proxy.
+
+### 🔴 Trend `2` — the agent surface arrives better-governed than this KB assumed, and worse-guarded where it counts
+
+🟢 p189 recorded the Open edX agent layer as ungoverned. 🔴 **It is not**: nine enforced
+scopes, `destructive` as an additive scope, a single-use confirm token bound to a `sha256`
+of `(tool, user, payload)`, per-`(key,tool)` rate limits tuned to blast radius, live
+privilege re-checks, `SHA-256` key hashing. 🔵 **This is a genuinely careful design, and the
+correction matters because the previous verdict would have lost a client an integration that
+is safer than the one they would have written themselves.**
+
+🔴 **And yet the two guards that are wrong are wrong in the direction that costs a learner:**
+
+- 🔴 **`reset_student_attempts` carries `write:users` and NOT `destructive`**, and with
+  `delete_module=True` deletes a learner's submitted block state, irreversibly. 🟢
+  **`deactivate_user`, which the package's own docstring calls *"the reversible `is_active`
+  flag"*, DOES carry `destructive`.** 🔵 **The flag is on the reversible tool and off the
+  irreversible one** — so a key provisioned specifically to prevent deletions can delete work.
+- 🔴 **`update_course_settings` changes a GRADING POLICY with `require_confirm=False`** —
+  *evaluation of learning outcomes* is Annex III education by name.
+
+🟢 **The emerging trend across p188–p190 is now stateable as a rule: the agent layer's
+PERMISSION model is maturing faster than its DESTRUCTION model.** Scopes, handshakes and rate
+limits are arriving. What is still assigned by hand — and therefore still wrong — is **which
+operations are irreversible**.
+
+### 🔴 Trend `3` — the method trend, and this one is about this KB
+
+Three consecutive passes have found the same class of defect in this KB's **own
+instruments**, one segment further left each time:
+
+| pass | a thing stood in for a thing | consequence |
+|---|---|---|
+| p189 | a **substring** stood in for a **path** — `LICENSE` probed where the file was `LICENSE.TXT` | a published `NO_LICENCE_FILE` verdict on this KB's recommended permissive entry point, refuted |
+| 🆕 p190 | a **substring** stood in for a **token** — case-insensitive `emotion` fires inside `deviceMotionEvent`, and `node_modules` ships `application/emotionml+xml` | 🔴 `16` false emotion-inference hits against a repository **with no camera**. Nearly a false accusation under a EUR `35`M prohibition |
+| 🆕 p190 | a **`limit`** stood in for a **path list** — `probe_plan(limit=16)` never reaches `.md`, which is one of this KB's four standing licence paths | p189's `224`-probe sweep was **narrower than the list it extended**; `7` of `160` rows published as grant-absent do carry a grant |
+
+🟢 **The rule that covers all three: a cheap proxy for a precise thing must be tested against
+the case that distinguishes them, or it is not a measurement.** `P1058` encodes this literally
+— one of its tests asserts that the *unanchored* pattern **still fires** on the
+`deviceMotionEvent` fixture, so a future edit that drops the `\b` fails loudly instead of
+silently widening.
+
+### 🔴 Trend `4` — the channel, and the figure this KB just lost
+
+🔴 **`github.com` HTML and `api.github.com` are `403` for this entire session.** Reading named
+code is at full fidelity; **discovering** code is gone. 🔴 **`ACTION NE` is NOT RUN** as a
+direct result: the new-supply rate is measured over `12` `github.com/topics` pages.
+
+🔵 **And that is the sharpest method lesson of the pass, because of what p189 did with that
+figure.** p189 **retired** the absent rate *(it had been measuring this KB's own ingest
+backlog — `Gap 428`)* and **promoted** the new-supply rate to be *"this KB's published
+coverage measure"* — **on one measurement, over a channel that was gone one pass later.**
+
+🟢 **p189's rule was: before re-measuring a number, ask what would have to be true for it to
+move. p190 adds the prior question: ask whether you will still be able to ASK.** A measure
+whose channel is one policy change away from disappearing is a **reading**, not a measure.
+
+🔴 **Where that leaves this KB, stated plainly: it currently has NO published coverage
+measure.** The absent rate is retired; the new-supply rate has exactly one measurement
+*(p189: `12` new slugs, `83`% absent, `239` rows)*. 🟢 **Quote it as *"one measurement,
+`2026-10-14`, p189, over `github.com/topics`"* — with the channel named — or quote nothing.
+Do not present it as a rate.** 🔵 And the corollary for pre-registration: a falsifier aimed
+at a channel you do not control is a falsifier that can neither fire nor fail.
+
+### 🟢 Trend `5` — the regulatory calendar stopped being a single date
+
+🔵 The market reads the Omnibus as *"education moved to December `2027`"*. 🔴 **Four dates are
+live or nearly live, and none of them is that one:**
+
+| date | duty | status |
+|---|---|---|
+| 🔴 `2025-02-02` | **Art. `5(1)(f)`** — inferring emotions in education institutions | **PROHIBITED, live, EUR `35`M / `7`%, never deferred** |
+| 🔴 `2026-08-02` | **Art. `50` transparency** + **GPAI provider obligations** | **LIVE — did not move** |
+| 🔴 `2026-12-02` | **Art. `50(2)`** machine-readable marking of pre-existing generative AI | **seven weeks from this pass** |
+| 🔴 `2027-03-01` | **Vietnam** — education on the high-risk list *(automated assessment, behavioural monitoring)*; grace only for systems running before `2026-08-15` | **nine months BEFORE the EU** |
+| `2027-12-02` | EU **Annex III** education duties | the deferred one everyone quotes |
+
+🟢 **So the trend is that the binding constraint has moved OUT of the EU.** For a
+multi-region client the first wall is Vietnam, the live walls are `Art. 50` and the `5(1)(f)`
+prohibition, and `2027-12-02` is the **last** date to plan for, not the first.
+
+**Full measurement:**
+[`evidence/ralph-equivalence-subset.2026-10-14-p190.tsv`](../evidence/ralph-equivalence-subset.2026-10-14-p190.tsv)
+· [`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv)
+· [`evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv`](../evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv)
+· [`compose/code/p190-affect-inference-scan`](../compose/code/p190-affect-inference-scan/README.md)
 
 ## Pass 189 — 2026-10-14
 

@@ -3,6 +3,196 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🟢 **The Gulf CLOSES on existence — `ACTION NI` fires and Bahrain has four instruments,
+all found in ENGLISH, so p189's "Arabic-language channel limit" is REFUTED. It was never a
+language limit; it is a DOCUMENT-SHAPE limit.** 🔴 **And North America delivers the
+counter-narrative figure of the week: faculty intent to use AI FELL nine points.**
+
+### 🟢 `ACTION NI` — Bahrain, and the Gulf picture now splits cleanly in two
+
+| instrument | date | organ | substance |
+|---|---|---|---|
+| 🆕 **Kingdom of Bahrain AI RAM Report** | `2025-11-12` | iGA | 🟢 Names the **Ministry of Education** as lead on integrating AI and digital skills into the **national curriculum**; lists *"curriculum revolution"* — embedding AI in educational content — as a named priority |
+| 🆕 **MoE strategic framework `2023`–`2026`** | `2023`–`2026` | Ministry of Education | 🟢 Digital empowerment; **Scratch** at primary, **Python** at middle and high school; digital ethics and online safety in the materials |
+| 🆕 **Digital Empowerment in Education Program** + **eduNET** | launched `2015` | Ministry of Education | 🟢 National capability for digital educational content; eduNET hosts interactive learning units for public-school students |
+| 🆕 **AI in design & technology** | `2021` | Ministry of Education | 🟢 AI added for grades `2`–`3`; ICT books across primary; digital-economy topics into secondary business sciences |
+| **National Policy for the Use of AI** + GCC Ethics Manual | `2025-07` | iGA | 🟡 Economy-wide, aimed at **government** officials. Names education a priority sector. 🟢 p189 recorded this correctly as *not* education-specific |
+| 🔴 Dedicated AI + cybersecurity curriculum | proposed | Parliament | 🔴 **A PROPOSAL. Not confirmed adopted. Do not quote as an instrument** |
+
+🔴 **p189's diagnosis was wrong about which channel.** Every finding above is in English. The
+reason earlier passes found nothing is that **Bahrain has no standalone "AI in education
+policy" document**, so a query shaped like one returns nothing. The instruments are a
+national readiness report, a ministry strategic framework and ministry programme pages.
+🟢 **Rule: when a probe for a DOCUMENT fails, vary the document's SHAPE before concluding
+the policy is absent.** That is `Gap 429`'s lesson — one spelling of a file is not the file —
+applied to regulation instead of to code.
+
+### 🔴 The Gulf, stated as the two questions that are actually different
+
+| | Saudi Arabia | UAE | Qatar | Bahrain |
+|---|---|---|---|---|
+| **taught ABOUT AI** *(curriculum)* | 🟢 national AI curriculum, all public schools, ~`6`M students, `2025`–`26`, with SDAIA | 🟢 mandatory KG–G`12`; standalone *"Artificial Intelligence and Technology"* from `2026/27`; `22 000` teachers trained | 🟢 AI-Ready Schools roadmap *(`2024`)*, MoEHE | 🟢 **`4` instruments, newly found** |
+| 🔴 **AI used ON learners** *(governed)* | 🟢 MoE/SDAIA guide to **generative AI in general education** | 🔴 none | 🔴 none | 🔴 none |
+
+🟢 **So the Gulf is CLOSED on existence — `4` of `4` — and RE-STATED on substance: `1` of `4`.**
+🔵 **Commercially this confirms and now measures the inversion p189 spotted: in the Gulf the
+FUNDED line item is curriculum and teacher capability, and the REGULATED surface is largely
+ungoverned. An EMEA governance pitch does not transfer.** Sell build-and-train in the Gulf;
+sell compliance in the EU.
+
+🔴 **Reachability, per `Gap 431`:** `www.iga.gov.bh` returned `getaddrinfo ENOTFOUND`, so the
+AI RAM Report PDF — the **only** primary source for the headline above — could not be
+fetched. **15th blocked host.** Every Bahrain statement here is secondary-layer, and that is
+a property of the channel, not a defect in the claim.
+
+### 🟢 EMEA — the Omnibus split in full, and two duties that did NOT move
+
+| duty | date | status |
+|---|---|---|
+| **Annex III** *(education: admissions, evaluation of learning outcomes, student placement, exam/behaviour monitoring)* | `2026-08-02` → 🔴 **`2027-12-02`** | deferred |
+| **Annex I** *(AI embedded in products under product-safety law)* | → `2028-08-02` | deferred |
+| 🔴 **Article `50` TRANSPARENCY duties** | 🔴 **`2026-08-02` — LIVE NOW** | **did NOT move** |
+| 🔴 **GPAI provider obligations** | 🔴 **`2026-08-02` — LIVE NOW** | **did NOT move** |
+| 🔴 **Art. `50(2)` machine-readable marking of pre-existing generative AI** | 🔴 **`2026-12-02`** | grace period — **seven weeks from this pass** |
+| 🔴 **Art. `5(1)(f)` prohibition** on inferring emotions in education institutions | 🔴 **live since `2025-02-02`**, ceiling **EUR `35`M / `7`%** | **never deferred** |
+| 🟡 **Art. `4` AI-literacy duty** | in force | **relaxed, not removed** |
+
+🔵 **The "we have until December 2027" reading is wrong for two entire duty families**, and
+`Art. 50(2)`'s deadline is **seven weeks away**. 🟢 This KB already holds four `Art. 50(2)`
+instruments *(`aiact-50-2-marking` / `-pack` / `-spans` / `-exposure`)*: they stop being
+thought leadership and become a dated deliverable. **Lead with the date.**
+
+### 🟢 APAC — Vietnam gains both its dates, and it binds before Europe
+
+🆕 Vietnam's high-risk list names **education**, including **automated assessment and
+behavioural monitoring**: compliance by 🔴 **`2027-03-01`**, with a grace period for
+education systems already **running before `2026-08-15`**. 🔵 **That lands NINE MONTHS before
+the EU's deferred Annex III date — so for a multi-region client the binding constraint is
+APAC, not Europe, which inverts the usual sequencing of a compliance programme.**
+🟢 Carried: **Korea's AI Basic Act**, in force `2026-01-22`, names education among
+high-impact sectors and requires human monitoring and intervention.
+🔴 **p189's gap `2` does not close for a second pass: there is no `2026` education-specific
+APAC teacher-adoption statistic.** Scope APAC on regulation and curriculum, never adoption,
+and say so rather than substituting a global figure.
+
+### 🟢 LATAM — the adoption figure gains its sample, and the two halves disagree
+
+🆕 🟢 **`79`% of LATAM faculty use AI in teaching** *(+`18` points on the `2025` global
+figure)*, **n = `7 319`**, Digital Education Council `2026`. 🔴 **But `88`% report only
+MINIMAL to MODERATE engagement.** 🔵 **The shape of the LATAM engagement is in those two
+numbers: near-universal shallow use. The work is DEPTH on an installed base that already
+said yes — not adoption, and not training from zero.**
+
+🆕 🟢 **And the single most useful LATAM fact in this file for an open-source studio:
+`38`% of LATAM organisations already use open-source AI — Mexico `65`%, Brazil `46`%**
+*(Linux Foundation / Northern Arizona University)*. 🔵 **The permissive-stack argument does
+not have to be won in Mexico or Brazil. It has already been won.** Lead with integration and
+governance, not with the case for open source.
+
+🟢 **UNESCO IESALC** independently reports widespread LATAM higher-education adoption **while
+governance lags** — a third organ reaching the same conclusion as DEC and as the absence of
+national rules. 🟡 **Brazil's Bill No. `2338`** *(EU-aligned, passed the Senate Dec `2024`)*
+**awaits final approval**, so p189's finding holds: 🔴 **no national AI-in-education rule for
+Brazil, Mexico, Colombia or Chile.** Sell governance as **risk management**, not compliance —
+and say the Brazilian bill is coming. 🟢 **Latam-GPT**, the first open-source LLM trained on
+Latin American data, launched **February `2026`**, Chile-led.
+
+🟢 Carried, and still the sharpest LATAM finding: **faculty's LOWEST adoption is in
+ASSESSMENT** — 🔴 the surface Vietnam, Oklahoma, Korea **and** EU Annex III all regulated.
+🔵 **The least-adopted surface is the most-regulated one. That is the engagement, in one
+sentence.**
+
+### 🔴 North America — the figure that should change how a deck opens
+
+🆕 🔴 **Faculty intent to use AI in the US and Canada FELL from `76`% (`2025`) to `67`%
+(`2026`) — a nine-point decline** *(Digital Education Council, AI in Higher Education Global
+Survey `2026`)*. 🔵 **Every NA deck in this market opens with growth. The buyer-side signal
+is retreat.** 🟢 The opening is **governance and trust**, not capability — which is also
+exactly what Oklahoma, Tennessee and Ohio are legislating.
+
+🟢 Carried: **Oklahoma** bars AI from being the **main basis** for high-stakes decisions about
+students *(policy required before `2027`–`28`)* — a substantive constraint, not paperwork.
+**Tennessee** joins **Ohio** in legally requiring district policies *(Ohio's `2026-07-01`
+deadline has passed)*. **Maryland S.B. `720`** creates **district AI coordinators** — a named
+role to sell into. 🆕 **California's AI transparency laws took effect `2026-01-01`**, so a
+single marking implementation can serve California and EU `Art. 50` together.
+🟡 A secondary aggregator puts NA at **~`36`%** of the global AI-in-education market; no
+methodology is published, so quote it as secondary or not at all.
+
+### 🔴 Global
+
+🔴 **The number to open any meeting with, carried and unchanged: `7`% of schools worldwide
+have AI guidance, `40`% of those only informally — against `65`% of students saying
+assessment is already changing.** 🔵 The gap between what is **regulated** and what is
+**governed** is the engagement. 🟢 Market `2026` stays a **range, `$9`–`11`B**: three passes of
+triangulation have not narrowed it, so no point estimate is published.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Lead with governance, against a declining-enthusiasm buyer.** The nine-point drop in
+faculty intent means the capability pitch is landing in a colder room than last year, while
+Ohio, Tennessee and Oklahoma have made **district AI policy a legal requirement** and
+Maryland has created a **district AI coordinator** role to sell into. 🔵 **Package: a district
+AI policy + an Oklahoma-compliant decision-architecture review** *(no AI as the main basis
+for a high-stakes decision about a student)* **+ a marking implementation that satisfies
+California `2026-01-01` and EU `Art. 50` at once.** 🔴 The artefact-level finding that opens
+the door: `openedx-mcp`'s `update_course_settings` changes a **grading policy** with no
+confirm handshake — an automated high-stakes path, in code, in a platform districts run.
+
+### EMEA
+
+🔴 **Sell the dated thing first: `Art. 50(2)` marking, due `2026-12-02` — seven weeks out.**
+This KB holds four instruments for it already. 🟢 Then the **live** duties nobody has
+diarised because the Omnibus headline said `2027`: `Art. 50` transparency and the GPAI
+obligations have applied since `2026-08-02`, and the **`Art. 5(1)(f)` prohibition** has
+applied since `2025-02-02` at EUR `35`M / `7`%. 🔵 **The highest-value EMEA deliverable this
+pass identified is an emotion-inference audit of a proctoring estate**, because `ACTION NH`
+showed the margin is **one configuration flag**: `outputFaceBlendshapes: true` moves a system
+from a `2027` duty into a live prohibition. 🟢 Pair it with an **`Art. 4` AI-literacy**
+programme written against **DigCompEdu**, which is the frame EU public-sector education
+tenders use.
+
+### APAC
+
+🔴 **Sequence APAC FIRST in any multi-region programme.** Vietnam's education deadline is
+`2027-03-01` — nine months before the EU's deferred Annex III date — with a grace period only
+for systems already running before `2026-08-15`. 🟢 Korea's AI Basic Act *(in force
+`2026-01-22`)* names education and requires **human monitoring and intervention**, which is
+a concrete architecture requirement: a human-in-the-loop gate on assessment and behaviour
+monitoring. 🔵 **Scope APAC on regulation and curriculum only.** 🔴 There is no `2026`
+education-specific APAC teacher-adoption figure in this KB — a declared gap for the second
+pass running — so do not build a business case on an adoption claim here.
+
+### LATAM
+
+🟢 **Skip the case for open source and sell depth and governance.** `38`% of LATAM
+organisations already use open-source AI *(Mexico `65`%, Brazil `46`%)*, and `79`% of faculty
+already use AI — but `88`% only shallowly. 🔵 **The engagement is converting shallow use into
+depth on an installed base, and the highest-leverage surface is the one faculty adopt LEAST
+and regulators target MOST: assessment.** 🟢 With no national rule in Brazil, Mexico,
+Colombia or Chile, governance sells as **risk management** — and Brazil's Bill `2338` makes it
+pre-compliance rather than speculation. 🔵 **Latam-GPT** plus a permissive regional stack
+makes a genuinely sovereign proposition: regional model, regional stack, no licence
+dependency on a single vendor.
+
+### Global
+
+🟢 **The one proposition that needs no regional adaptation is the ATTRIBUTION gap this pass
+measured in code.** `ralph` *(`MIT`)* refuses to overwrite an xAPI statement — and never
+compares `authority`, the field naming who asserted it. `openedx-mcp` *(`AGPL-3.0`)* makes
+every audit field readonly — and leaves the audit log **deletable**, with a second path that
+NULLs attribution whenever a key or user is deleted. 🔵 **Two unrelated codebases, the same
+omission: the record is protected, the actor is not.** 🟢 That is a vendor-neutral,
+jurisdiction-neutral audit offer, and it is now demonstrable from source rather than
+asserted.
+
+**Full measurement:**
+[`evidence/bahrain-education-instruments.2026-10-14-p190.tsv`](../evidence/bahrain-education-instruments.2026-10-14-p190.tsv)
+· [`evidence/regional-sweep.2026-10-14-p190.tsv`](../evidence/regional-sweep.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

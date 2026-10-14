@@ -3,6 +3,188 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🟢 **Five of the seven actions pre-registered for this pass are DISCHARGED. 🔴 One is NOT RUN
+because its CHANNEL returned `403`, and one is NOT RUN for the sixth pass for the unchanged
+reason: it is an outward-facing write on third parties' repositories and this run is
+unattended.**
+
+🆕 🔴 **The headline is a REFUTATION of this KB's own p189 verdict, and it runs in the
+expensive direction: the Open edX agent layer p189 published as ungoverned carries nine
+enforced scopes, a payload-bound confirm handshake, tuned rate limits in an exact `18`/`18`
+match with its tool set, and an audit row written before every write. 🔵 p189 read the
+LICENCE from bytes and the AUTH MODEL from a README, in the same pass, at the same
+confidence. The licence held. The auth model did not.**
+
+🆕 🔴 **Second: on that same careful platform the `destructive` guard is attached to the
+REVERSIBLE tool and withheld from the IRREVERSIBLE one — so a key minted specifically to
+prevent deletions can delete a learner's submitted work.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION NF`** — count the actual tool definitions against the README's `7` named tools | 🔴 **DISCHARGED, LIMB `2` FIRED, BY MORE THAN DRIFT. `33` definitions *(`14` reads, `19` writes)* against **`0`** tool names in the README, which carries `8` DOMAIN LABELS instead. 🔴 And p189's own cell marked *"verbatim"* dropped `reports` — which is where the figure `7` came from. 🟢 Pattern `35` step `1` becomes a hard gate; the audit rises to `3`–`4` weeks** |
+| 🟢 **`ACTION NG`** — `P1057` over every row published WITH a licence | 🟢 **DISCHARGED, LIMB `1` FIRED. `0` case-variant contradictions over `5 212` probes. 🔴 But the sweep exposed `Gap 434`: `probe_plan(limit=16)` never reaches `.md`, so p189's own `224`-probe sweep was narrower than the standing list it extended. `7` of `17` zero-hit rows DO carry a grant; `2` change verdict** |
+| 🟢 **`ACTION NH`** — does any proctoring row INFER EMOTION? | 🟢 **DISCHARGED, LIMB `1` FIRED. `0` affect-inference paths in `3` repositories. 🔴 One is clear only because a MediaPipe flag defaults to `false`; one published row's *"AI proctoring"* description is REFUTED by its own source; and the instrument's first draft produced `16` FALSE hits against a repository with no camera** |
+| 🔴 **`ACTION NJ`** — whole statement or subset? | 🔴 **DISCHARGED, LIMB `2` FIRES ON THE FACT — it IS a subset, and `authority` and `stored` are excluded BY NAME in the source's own comment. 🟢 ITS CONSEQUENCE IS REFUTED: the `409` guarantee has no hole, because equivalence means NO WRITE AT ALL. What is holed is ATTRIBUTION** |
+| 🟢 **`ACTION NI`** — Bahrain alone | 🟢 **DISCHARGED, LIMB `1` FIRED, AND THE HYPOTHESIS REFUTED. Four instruments, **all found in English**. Never an Arabic-language limit — a DOCUMENT-SHAPE limit. Re-stated: the Gulf is `4`/`4` on curriculum, `1`/`4` on governing AI used ON learners** |
+| 🔴 **`ACTION NE`** — re-derive the new-supply rate over the same `12` topic pages | 🔴 **NOT RUN. CHANNEL BLOCKED.** `github.com` HTML and `api.github.com` are `403` for this entire session *(egress policy; not retried, per the proxy's own instruction)*. The `12` pages are `github.com/topics`. 🔴 **`Gap 436`: this KB currently has NO published coverage measure** |
+| 🔴 **`ACTION MN`** *(carried, sixth pass, for a human)* | 🔴 **NOT RUN. Unchanged reason: an outward-facing write on third parties' repositories, and this run is unattended. Queue gains `frappe/education` *(a `19`-byte name-only licence)*** |
+
+### 🔴 `ACTION NF` — the agent surface, measured from definitions and from the facade
+
+Both artefacts read this pass: the proxy by `git clone --depth 1`
+*(`HEAD` `4883f88018b5`)*, and the facade — where **all** authorisation actually lives — from
+the [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) `0.1.5` sdist, **`sha256` verified
+against PyPI's declared digest** *(`bfc7e7b0e3b1f1fe…`, match)*.
+
+| 🟢 what the facade DOES carry | 🔴 what it does NOT |
+|---|---|
+| nine scopes enforced by `require_scopes()`, raising `{"required": […], "missing": […]}` | 🔴 **`reset_student_attempts` carries `write:users` and NOT `destructive`** — and with `delete_module=True` deletes the learner's `StudentModule` row, irreversibly |
+| `destructive` as an **additive** scope — no delete without the domain write scope | 🟢 while `deactivate_user`, *"the reversible `is_active` flag"* by its own docstring, **does** carry `destructive` |
+| a **single-use confirm token** bound to a `sha256` of `(tool, user, payload)`; one changed byte invalidates it | 🔴 **`8` of `19` writes apply immediately with no handshake**, including **`update_course_settings`**, which changes a **grading policy** — *evaluation of learning outcomes* is Annex III by name |
+| per-`(key,tool)` rate limits tuned to blast radius, in an exact **`18`/`18`** match with the audited tool set, with **`0`** fallbacks and **`0`** dead entries | 🔴 **`6` of `19` write tools audit under a name the agent never called**, and `create_block` + `create_block_tree` **both** audit as `create_xblock` |
+| an audit row written **before** the write; the write refused if it cannot persist | 🔴 the audit log is append-only **in its docstring**: `add` blocked, `change` blocked, every field readonly — and **`has_delete_permission` never overridden**, with the default bulk delete action intact |
+| `SHA-256` key hashing, shown once, revocable, expiring, privilege re-checked **live** | 🔴 `MCPAuditLog.key`/`.user` are `SET_NULL`, so **deleting a key or a user nulls attribution** — needing no delete permission on the log at all |
+| — | 🔴 `redact()` covers `{confirm_token, password, key, secret, token}` and **not `username`** — so **`request_retirement`'s own audit row permanently retains the username of a learner retired to remove their PII**, with no hook connecting the two |
+| — | 🔴 **no repository address**: `openedx-mcp` declares no `project_urls` and no `home_page`. The artefact holding every authorisation decision is auditable only as a package payload. Bus factor `1` |
+
+🔵 **The `18`/`18` match matters for the verdict.** This is a careful codebase, which is why
+the two wrong guards read as an **incomplete enumeration** — `add`, `change`, `delete`, and
+one of three unlisted — rather than as inattention. A sloppy codebase would have failed the
+rate-limit join too.
+
+### 🔴 `Gap 433` — the record is protected; the ACTOR is not. Two codebases, same omission.
+
+| | the record | the actor |
+|---|---|---|
+| [`openfun/ralph`](https://github.com/openfun/ralph) 🟢 `MIT` *(🆕 `LICENSE.md` `1 094` B — `LICENSE` itself `404`s)* | 🟢 `409 CONFLICT` on **both** write paths, raised before the backend write, documented in a source comment | 🔴 `statements_are_equivalent` compares `{actor, verb, object, id, result, context, attachments}` + `timestamp`/`version` **only when in both** — and excludes **`authority`** and `stored` by name |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) 🔴 `AGPL-3.0` | 🟢 `add` blocked, `change` blocked, every field readonly, audit before write | 🔴 `delete` open *(default permission + default bulk action)*, and `SET_NULL` cascades erase attribution |
+
+🟢 **So p189's trend is CORRECTED, not confirmed — and the corrected version is the sellable
+one.** *"Nobody protects the record"* is refutable by anyone who has read either codebase.
+🟢 ***"The record is protected and the actor is not"*** is true in both, demonstrable from
+source, and it is exactly what a regulator, a DPO or an exam board asks — because a trail
+that cannot say **who** is not a trail. 🟢 **Pattern `36` is the response**, and steps `1`–`4`
+are a READ, so they quote at fixed price.
+
+🔵 **On `ralph` the consequence is not the one the falsifier predicted.** Because equivalence
+means **no write at all**, a re-`PUT` differing only in `authority` answers **`204` and is
+silently DISCARDED** — a client cannot tell *"stored"* from *"dropped because another
+authority already claimed that id"*. 🟢 Integrity intact; attribution swallowed. The fix is
+one guard at ingest, not weeks of work.
+
+### 🔴 The licence column, swept entire — and `numbas` is the row p189's caveat was always for
+
+`160` published rows carrying both a slug and an SPDX token. `2 560` probes at parity with
+p189, then `2 652` at the **full** `156` variants over the `17` that returned nothing.
+
+🟢 **`0` case-variant files contradict a published licence.** 🔴 **But `7` of the `17` DO carry
+a grant**, all at paths `limit=16` structurally cannot reach, and two change verdict:
+
+- 🔴 [`frappe/education`](https://github.com/frappe/education) — `license.txt`, **`19` B**:
+  `"License: GNU GPL V3"` is the **entire file**. No holder, no permission clause, no
+  disclaimer. 🆕 **`Gap 421`'s sixth sub-`1`kB shape and the smallest yet** *(p189's were
+  `46`/`47` B)*. The identifier is corroborated; **the grant is absent.**
+- 🔴 [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) —
+  `LICENSE.md`, **`560` B**: the Apache-2.0 **appendix notice** and a URL. 🔵 **p189 RETIRED
+  the *"the grant is a NOTICE not a LICENSE"* caveat from `openedx/XBlock`, which turned out
+  to hold the full `11 358` B at `LICENSE.TXT`. This is the row that caveat was always for.
+  The caveat was right and attached to the wrong row** — and invisible for the same reason
+  `XBlock` was: a path nobody probed.
+
+🟢 Also recovered from bytes: `moodle/moodle` *(`COPYING.txt` `35 147` B, `GPL-3.0`)*,
+`frappe/lms` *(`AGPL-3.0`)*, `willianmano/moodle-theme_moove` *(`GPL-3.0`)*,
+`yukazakiri/koakademy` *(`AGPL-3.0`)*, `openfun/ralph` *(`MIT`)*.
+🟢 And one thing ruled out so it is not re-asked: **slug case is NOT a defect** —
+`raw.githubusercontent.com` treats the **owner** segment as case-**insensitive**
+*(`OS4ED/` and `os4ed/` `404` identically)*.
+
+### 🟢 `ACTION NH` — the three proctoring rows, and the one-line crossing
+
+🟢 **`0` affect-inference paths in `3` repositories**, read as source at pinned `HEAD`s.
+Verdicts, and they re-rank the rows for EU work:
+
+- 🟢 [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system)
+  — 🔴 **the published description is REFUTED.** No AI, **no camera**: `ExamJail.jsx` enforces
+  fullscreen and listens for `visibilitychange`/`fullscreenchange`/`contextmenu`, and
+  `com.exam.proctor` is a **Java package name**. 🟢 **The correction PROMOTES the row:**
+  exam-integrity signal with zero biometric processing carries no GDPR Art. `9` duty.
+- 🟢 [`singhrajvardhan/SecureExam-Platform`](https://github.com/singhrajvardhan/SecureExam-Platform)
+  — camera, `face_detected` as a **boolean**. Clear.
+- 🟡 [`shaheeranser/exam-proctor`](https://github.com/shaheeranser/exam-proctor) — head pose,
+  iris deviation, `face-api` **identity** check. 🔴 **Clear only because
+  `outputFaceBlendshapes` is unset and MediaPipe defaults it to `false`.** 🔵 **One line moves
+  it from a `2027-12-02` Annex III duty into a LIVE Art. `5(1)(f)` prohibition at EUR `35`M
+  or `7`% of worldwide turnover.**
+
+🔴 **And the instrument's own defect, recorded because it nearly produced a false accusation:**
+the first draft reported **`16` CLASS A hits** against the repository with no camera — a
+case-insensitive `emotion` firing inside **`deviceMotionEvent`**, every hit inside
+`node_modules`. 🟢 Closed by [`P1058`](compose/code/p190-affect-inference-scan/README.md)
+*(`19`/`19` tests)*, which asserts that the **unanchored** pattern still fires on that
+fixture so the `\b` cannot be quietly dropped. 🔵 **Third consecutive pass of this class, one
+segment further left each time: p189 a substring for a PATH, p190 a substring for a TOKEN and
+a `limit` for a PATH LIST.**
+
+### 🔴 The channel, and the figure this KB just lost
+
+| 🔴 `403` for the whole session | 🟢 open, primary |
+|---|---|
+| `github.com` HTML — trending, topics, repository search | `git ls-remote` and `git clone --depth 1` |
+| `api.github.com` — stars, commit dates, topic membership | `raw.githubusercontent.com/<slug>/HEAD/<path>` — **`5 212` probes, zero refusals** |
+| `www.iga.gov.bh` *(`ENOTFOUND`, 15th blocked host)* | `pypi.org` + `files.pythonhosted.org`, **`sha256`-verifiable** |
+
+🔵 **`Gap 437`: the asymmetry has a second axis and it cuts code in half — reading named code
+is primary; DISCOVERING code is gone.** 🟢 A pass under this policy can only be a **depth**
+pass; p190 had a result only because all six of p189's actions happened to be depth actions.
+🟢 **One composition works and produced real rows: web search for the SLUG, `git`/`raw` for
+the BYTES** *(`HKUDS/DeepTutor` → `Apache-2.0`, `11 408` B; `Open-TutorAi/open-tutor-ai-CE` →
+`BSD-3-Clause`, `1 531` B, three clauses verbatim)*.
+🔴 **`0` is NOT recorded for GitHub Trending.** p189's eleven-pass streak of `0` ends with an
+explicit gap, because an unmeasured channel is not an empty one.
+
+### 🟢 Regional — the binding constraint has moved OUT of the EU
+
+| date | duty | status |
+|---|---|---|
+| 🔴 `2025-02-02` | Art. `5(1)(f)` — inferring emotions in education institutions | **PROHIBITED, live, EUR `35`M / `7`%, never deferred** |
+| 🔴 `2026-08-02` | 🆕 Art. `50` transparency **+** GPAI provider obligations | 🆕 **LIVE — did NOT move** |
+| 🔴 `2026-12-02` | Art. `50(2)` machine-readable marking | **seven weeks from this pass** — and this KB already ships four instruments for it |
+| 🔴 `2027-03-01` | 🆕 **Vietnam** — education high-risk; grace only for systems running before `2026-08-15` | 🆕 **nine months BEFORE the EU** |
+| `2027-12-02` | EU Annex III education duties | the deferred date everyone quotes |
+
+🆕 🔴 **North America: faculty intent to use AI FELL `76`% → `67`%** *(US/Canada, DEC
+`2026`)* — lead with governance and trust, not capability.
+🆕 🟢 **LATAM: `38`% of organisations already use open-source AI — Mexico `65`%, Brazil
+`46`%** *(Linux Foundation)*, and `79`% of faculty use AI but **`88`% only shallowly**
+*(DEC, n = `7 319`)*. 🔵 **The permissive-stack argument is already won there; sell depth.**
+🟢 **Gulf: `4`/`4` on curriculum, `1`/`4` on governance.** 🔴 APAC teacher-adoption remains a
+declared gap for a second pass — scope APAC on regulation and curriculum, never adoption.
+
+### 🟢 Housekeeping the register, because this file is where it drifts
+
+🟢 **p190 registers in BOTH [`intel/open-gaps.md`](intel/open-gaps.md) and here, and the
+register was written BEFORE this prose** — p189 diagnosed the cause correctly as ordering,
+not discipline. 🟢 **The stale `"Registered for p190"` block in `open-gaps.md` is relabelled
+`✅ DISCHARGED`.** 🔴 The `"Registered for p186"` block below it is left as it stands: those
+actions' discharge was not verified this pass, and relabelling it would assert something
+unmeasured.
+
+### 🔵 Note for p191 on method
+
+🟢 p189's lesson was *"before re-measuring a number, ask what would have to be true for it to
+move"*. 🟢 **p190 adds the prior question: ask whether you will still be able to ASK.** The
+new-supply rate was promoted to this KB's published coverage measure on **one** measurement,
+over a channel that was `403` **one pass later** — so a falsifier aimed at a channel you do
+not control can neither fire nor fail, and **a figure is not a published measure until its
+channel has survived more than one pass.**
+
+🔵 **And the pass's other lesson is about mixed-confidence reading.** p189 read a licence from
+bytes and an auth model from a README in one pass and published both the same way. 🟢 **Label
+the channel per CLAIM, not per pass.** A README's security sentence is a claim; a decorator
+is a fact; and this pass spent its best hours discovering that the difference had been
+published as if it were none.
 
 ## Pass 189 — 2026-10-14
 

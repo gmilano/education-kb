@@ -1,0 +1,32 @@
+# p190 — URL existence. Every address this pass writes to a page, verified.
+# 🔴 CHANNEL NOTE: github.com HTML and api.github.com returned 403 for the whole session
+# (egress policy, not retried per the proxy's own instruction). So existence was established
+# over the GIT PROTOCOL (git ls-remote / git clone --depth 1) and content over
+# raw.githubusercontent.com/<slug>/HEAD/<path>. Both are primary.
+#
+slug	channel	result	licence read this pass
+blend-ed/tutor-contrib-openedxmcp	git clone --depth 1	🟢 HEAD 4883f88018b5d179f84c16caf0768d6a7200fefc	AGPL-3.0 (LICENSE, carried from p189)
+openedx-mcp 0.1.5 (PyPI, the facade)	pypi.org/pypi/openedx-mcp/json + files.pythonhosted.org	🟢 sdist 43 185 B, sha256 bfc7e7b0e3b1f1fe99459924356b72e322165ea4c4d2a8a15f3a38229d1b9322 — MATCHES the declared digest	AGPL-3.0 (classifier "License :: OSI Approved :: GNU Affero General Public License v3" + info.license "AGPL-3.0"); 🔴 NO repository address: project_urls and home_page are both null
+openfun/ralph	raw, 3 paths	🟢 statements.py 30 702 B / models.py 2 088 B / 🆕 utils.py 10 245 B, all 200	🆕 🟢 MIT — LICENSE.md 1 094 B, complete grant (LICENSE itself 404s)
+VIJAYAPANDIANT/online-examination-system	git clone --depth 1	🟢 HEAD 117112b284c61fd754f8f6832672ddc191a57851	MIT (published, not re-read this pass)
+singhrajvardhan/SecureExam-Platform	git clone --depth 1	🟢 HEAD 854a68f9acabee07b4b9382d09ea865372fb42ef	MIT (published, not re-read this pass)
+shaheeranser/exam-proctor	git clone --depth 1	🟢 HEAD 6f29a9bb8adc629d5a599b312febf4e516963768	🔴 NOT a published row — a recency-census slug. Licence NOT read
+HKUDS/DeepTutor	raw	🟢 LICENSE 11 408 B, 200	🟢 Apache-2.0 CONFIRMED from bytes — "Apache License / Version 2.0, January 2004"
+Open-TutorAi/open-tutor-ai-CE	raw	🟢 LICENSE 1 531 B, 200	🟢 BSD-3-Clause CONFIRMED from bytes — all three clauses + the standard disclaimer verbatim. The "All rights reserved." opening is BSD-3's own template, NOT a reservation of rights
+frappe/education	raw	🟢 license.txt 19 B, 200	🔴 NAME ONLY: "License: GNU GPL V3" is the entire file
+numbas/numbas-lti-provider	raw	🟢 LICENSE.md 560 B, 200	🔴 INCORPORATION BY REFERENCE — the Apache-2.0 appendix notice, © 2016 Newcastle University, no licence text
+frappe/lms	raw	🟢 license.txt 33 893 B, 200	🟢 AGPL-3.0 verbatim
+moodle/moodle	raw	🟢 COPYING.txt 35 147 B, 200	🟢 GPL-3.0 canonical
+willianmano/moodle-theme_moove	raw	🟢 LICENSE.md 34 903 B, 200	🟢 GPL-3.0, markdown-formatted
+yukazakiri/koakademy	raw	🟢 LICENSE.md 34 523 B, 200	🟢 AGPL-3.0 canonical byte count
+OS4ED/openSIS-Classic	raw, both slug casings	🟡 404 on LICENSE under BOTH OS4ED/ and os4ed/	🔴 still grant-absent after 156 variants. 🟢 And it settles that the OWNER segment is case-INsensitive
+#
+## BLOCKED, named per Gap 431. Not retried.
+www.iga.gov.bh	WebFetch	🔴 getaddrinfo ENOTFOUND — the Kingdom of Bahrain AI RAM Report PDF, the only primary source for ACTION NI's headline. 15th blocked host
+github.com (HTML)	curl	🔴 403 egress policy
+api.github.com	curl	🔴 403 egress policy
+#
+## SWEEP TOTALS
+P1057 published-licence sweep, parity (limit=16)	2 560 probes	150 x 200, 2 410 x 404
+P1057 full variant sweep on the 17 zero-hit rows	2 652 probes	7 grants found, all at paths limit=16 cannot reach
+TOTAL raw-channel probes this pass	5 212	🟢 no refusals, no rate limiting, no truncation

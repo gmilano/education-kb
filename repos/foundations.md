@@ -3,6 +3,104 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🟢 **`ACTION NG` closes its own question cleanly — `0` case-variant files contradict a
+published licence, over `5 212` probes. 🔴 And in closing it, the sweep found that p189's
+`224`-probe sweep was NARROWER THAN THE STANDING PATH LIST IT WAS WRITTEN TO EXTEND: at
+`limit=16` the instrument never reaches `.md` at all. Seven rows this page publishes as
+grant-absent DO carry a licence file, and two of them change verdict once read.**
+
+### 🟢 `ACTION NG` — the published licence column, swept entire
+
+| sweep | probes | result |
+|---|---|---|
+| parity with p189, `probe_plan(limit=16)` over **all `160`** rows carrying a slug **and** an SPDX token | **`2 560`** | `150` × `200`, `2 410` × `404` |
+| 🟢 **case variants CONTRADICTING a published licence** | — | 🟢 **`0`** |
+| rows with more than one path serving bytes | — | `7` — 🟢 **all of them `LICENSE` + `NOTICE` pairs**, two different files with different jobs *(Apache-2.0 §4(d) attribution)*, not two casings of one file |
+| 🔴 rows with **`0`** variants serving bytes | — | 🔴 **`17` of `160`** |
+| the full variant set on those `17` | **`2 652`** | 🔴 **`7` carry a grant after all** |
+
+🟢 **So limb `1` fires on the question as asked: the licence column is sound where it was
+read, and the `openedx/XBlock` miss is confirmed isolated.** 🔴 The defect is elsewhere, and
+it is worse.
+
+### 🔴 The limit defect — the repair is deleting an argument, not re-reading a column
+
+`P1057`'s extension tuple is `("", ".txt", ".md", ".rst", ".apache2", ".mit", ".gpl")` and
+its variant list is ordered **extension-major**: all `12` bare stem-casings first, then
+`.txt`. So **`probe_plan(limit=16)` returns `12` bare + `4` `.txt` casings and never reaches
+`.md`.**
+
+🔴 **`LICENSE.md` is one of the FOUR paths in this KB's own standing list**
+*(`LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`)*. p189's *"`16` case variants × `14`
+grant-absent rows = `224` probes, **`0` further grants**"* therefore probed a **strictly
+smaller** path set than the list the instrument existed to extend — and its `0` is not
+evidence about `.md` at all. 🟢 **The instrument is correct. The invocation truncated it
+below its own baseline.**
+
+🟢 **RULE: never probe a path list SHORTER than the standing list it extends.** A limit that
+silently drops a baseline path turns *"we looked"* into *"we looked somewhere else"*.
+
+### 🔴 The seven rows, and the two that change verdict
+
+| row | published | path | bytes | what the bytes are |
+|---|---|---|---|---|
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | `GPL-3.0` | `license.txt` | 🔴 **`19`** | 🔴 **`License: GNU GPL V3` — that is the WHOLE FILE.** No holder, no permission clause, no disclaimer. 🆕 **`Gap 421`'s SIXTH sub-`1`kB shape and the smallest yet** *(against p189's `46`/`47` B)*. The identifier is corroborated; **the grant is absent** |
+| 🔴 [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) | `Apache-2.0` | `LICENSE.md` | 🔴 **`560`** | 🔴 **INCORPORATION BY REFERENCE** — the Apache-2.0 *appendix* notice, *"Licensed under the Apache License, Version 2.0 … You may obtain a copy of the License at …"*, © `2016` Newcastle University. Apache-2.0's own text is `11 358` B; this ships `560` B and a URL |
+| 🟢 [`frappe/lms`](https://github.com/frappe/lms) | `AGPL-3.0` | `license.txt` | `33 893` | 🟢 `AGPL-3.0` verbatim — grant now read from bytes |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | `COPYING.txt` | `35 147` | 🟢 canonical `GPL-3.0`. 🔵 `COPYING` is in the standing list; **`COPYING.txt` is not reached at `limit=16`** |
+| 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) | `MIT` | `LICENSE.md` | `1 094` | 🟢 complete `MIT` grant, *"© 2020-present France Université Numérique"*. 🔴 `LICENSE` itself `404`s |
+| 🟢 [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | `GPL-3.0` | `LICENSE.md` | `34 903` | 🟢 `GPL-3.0`, markdown-formatted. The `244`-byte deficit vs canonical is re-formatting, not a different grant |
+| 🟢 [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | `AGPL-3.0` | `LICENSE.md` | `34 523` | 🟢 canonical `AGPL-3.0` byte count |
+
+### 🔵 The symmetry worth keeping — p189 retired the right caveat from the wrong row
+
+p189 corrected `openedx/XBlock` and **retired** the caveat it had forced onto every
+engagement: *"usable, but the grant is a NOTICE not a LICENSE."* `XBlock` turned out to hold
+the **full `11 358` B** at `LICENSE.TXT`, so for that row the caveat was never real.
+
+🔴 **`numbas/numbas-lti-provider` is the row that caveat was always for** — `560` B of
+notice and a URL — and it was invisible for the same reason `XBlock` was: **a path nobody
+probed.** 🟢 `XBlock`'s was a case nobody varied; `numbas`'s was an extension a `limit`
+excluded. 🔵 **Two passes, two rows, one class: the licence was never missing, the probe was.**
+
+### 🟢 One thing ruled out, recorded so it is not asked again
+
+🟢 **SLUG case is NOT a defect.** `raw.githubusercontent.com` treats the **owner** segment as
+case-**insensitive**: `OS4ED/openSIS-Classic/HEAD/LICENSE` and
+`os4ed/openSIS-Classic/HEAD/LICENSE` return `404` **identically**. The case-sensitivity
+`P1057` found is in the **path**, and the path only. This KB spells that slug both ways
+across pages; it changes no verdict, and `openSIS-Classic` stays grant-absent after `156`
+variants.
+
+### 🔴 The ten rows still grant-absent after `156` variants each
+
+Their published identifier rests on a **manifest** or on **prose** — `P1049`/`P1054`/`P1056`
+territory — not on a licence file, and the pages must keep saying so:
+[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) ·
+[`Gaurav-Pande/AES_DL`](https://github.com/Gaurav-Pande/AES_DL) ·
+[`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) ·
+[`Rick-254/moodle-quizsmith`](https://github.com/Rick-254/moodle-quizsmith) ·
+[`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) ·
+[`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) ·
+[`formalms/formalms`](https://github.com/formalms/formalms) ·
+[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) ·
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) ·
+[`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm).
+
+### 🔴 This page's channel statement, per `Gap 431`, stated once
+
+Every byte above came from `raw.githubusercontent.com/<slug>/HEAD/<path>` with the HTTP code
+checked, and every existence check from the **git protocol**. 🔴 **`github.com` HTML and
+`api.github.com` returned `403` for the whole of this session** *(egress policy; not retried,
+per the proxy's own instruction)*. 🔵 **So no star count, commit date or topic membership on
+this page was refreshed this pass, and none should be read as current.** Licences and code
+are primary; attention metrics are stale by construction.
+
+**Full measurement:**
+[`evidence/licence-path-case-published.2026-10-14-p190.tsv`](../evidence/licence-path-case-published.2026-10-14-p190.tsv)
+· [`evidence/url-existence.2026-10-14-p190.tsv`](../evidence/url-existence.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

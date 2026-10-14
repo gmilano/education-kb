@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **What moved this week is not a repository — it is a CHANNEL. `github.com` HTML and
+`api.github.com` are `403` for this entire session, so trending, topics, repository search
+and every star count are unavailable. This KB can still read any repository whose slug it
+already knows, at full fidelity. It cannot DISCOVER one.**
+
+🟢 **So the honest trending entry for p190 is a depth entry, and it is the strongest agent
+finding this KB has recorded: the Open edX agent surface was read from its definitions, and
+both of p189's conclusions about it move — one up, one down.**
+
+### 🔴 `0` is not available this pass, and must not be written as `0`
+
+p189 recorded *"GitHub Trending: `0` education repositories — an ELEVENTH consecutive
+pass"*, and noted that eleven was a fact about the trending page rather than about
+education. 🔴 **p190 cannot even look.** 🟢 **No twelfth `0` is recorded.** An unmeasured
+channel is not an empty one, and writing it as `0` would be precisely the error this KB has
+spent the week correcting.
+
+| channel | p190 |
+|---|---|
+| `github.com/trending` · `/topics/*` · repository search | 🔴 **`403` — egress policy, not retried** |
+| `api.github.com` | 🔴 **`403`** |
+| `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **`200`** — `5 212` probes, no refusals |
+| `git ls-remote` · `git clone --depth 1` | 🟢 **open** — `4` repositories cloned this pass |
+| `pypi.org` · `files.pythonhosted.org` | 🟢 **`200`** — sdist fetched, `sha256` verified |
+
+🟢 **One substitution DOES work, and it is worth keeping:** web search reaches
+`github.com` content that direct HTTP cannot — it returned titles, star counts and
+"last updated" dates for `github.com/topics/ai-education` while `curl` on the same URL
+returned `403`. 🔴 **But that is secondary fidelity for exactly the fields this KB verifies.**
+🟢 **Use it for DISCOVERY ONLY — to obtain slugs — then verify every slug over `git`/`raw`.**
+That composition produced this pass's three re-verified licences, and it is the only sound
+one.
+
+### 🆕 🔴 The movement that matters: `tutor-contrib-openedxmcp` has `33` tools
+
+[`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp)
+*(`AGPL-3.0`, `1`★, `HEAD` `4883f88018b5`)* plus its facade
+[`openedx-mcp`](https://pypi.org/project/openedx-mcp/) `0.1.5` *(sdist `43 185` B, `sha256`
+**verified** against PyPI's declared digest)*.
+
+| what p189 said | what the code says |
+|---|---|
+| *"LMS tools: people, enroll, analytics, certs, retire"* — marked **verbatim**, and the figure `7` was pre-registered from it | 🔴 **The README names `0` TOOLS.** It names `8` DOMAIN LABELS, and p189's *"verbatim"* cell **dropped `reports`** from the six. The build registers **`33`** — `14` reads, `19` writes |
+| 🔴 *"`retire` behind `is_staff` alone, with **no per-tool scope**"* | 🟢 **REFUTED. Nine scopes, enforced by `require_scopes()`; `destructive` is ADDITIVE; a single-use confirm token bound to a `sha256` of `(tool, user, payload)`; per-`(key,tool)` rate limits; an audit row written BEFORE the write; keys `SHA-256`-hashed, revocable, expiring, re-checked live** |
+| 🔴 *"an unauthenticated `/health`"* | 🟢 **CONFIRMED** — `auth.py` lets `/health` through without a key, by name |
+
+🔵 **The method lesson is the trend, not the row.** p189 read the LICENCE from bytes and the
+AUTH MODEL from a README, in the same pass, and published both at the same confidence. 🔴
+**The licence held. The auth model did not.** A README's security sentence is a claim; a
+decorator is a fact.
+
+### 🆕 🔴 And the finding a studio would actually be paid to catch
+
+🔴 **`reset_student_attempts` carries `write:users` and NOT `destructive`** — and with
+`delete_module=True` it deletes the learner's `StudentModule` row, their submitted state for
+that block, with no undo. 🟢 **`deactivate_user`, which only flips `is_active=False` and which
+the package's own docstring calls *"the reversible `is_active` flag"*, DOES carry
+`destructive`.**
+
+🔵 **A key minted `["read","write:users"]` specifically to prevent deletions can delete a
+learner's work, and cannot deactivate an account.** The `destructive` guard is attached to
+the reversible tool and withheld from the irreversible one.
+
+Also new, same artefact:
+- 🔴 **`update_course_settings` changes the GRADING POLICY with `require_confirm=False`** —
+  *evaluation of learning outcomes* is Annex III education **by name**.
+- 🔴 **`create_block` and `create_block_tree` both audit as `create_xblock`**, so a one-block
+  edit and an arbitrary-depth course-tree creation are indistinguishable in the trail.
+- 🔴 **`6` of `19` write tools audit under a name the agent never called.**
+
+### 🟢 Re-verified from bytes, because a licence is the one thing this channel can still prove
+
+| repo | licence, read this pass |
+|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** — `LICENSE` `11 408` B, `200`, *"Apache License / Version 2.0, January 2004"*. 🔴 Star count **NOT verified** this pass |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`** — `1 531` B, all three clauses verbatim. 🔵 Opens *"All rights reserved."*, which is `BSD-3`'s own template and **not** a reservation of rights — a shape a vocabulary probe could easily mis-flag |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🆕 🟢 **`MIT`** — `LICENSE.md` `1 094` B. 🔴 `LICENSE` `404`s, which is the only reason this row sat in the grant-absent set |
+
+**Full measurement:**
+[`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv)
+· [`evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv`](../evidence/channel-inversion-github-blocked.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 

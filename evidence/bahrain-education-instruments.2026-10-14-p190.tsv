@@ -1,0 +1,47 @@
+# p190 — ACTION NI. Bahrain alone: does an AI-in-education instrument exist? p189 closed
+# three of four Gulf states and left Bahrain as the residual, hypothesising that the gap was
+# an ARABIC-LANGUAGE channel limit.
+#
+# LIMB 1 (one exists -> the Gulf closes completely)
+# LIMB 2 (0 -> record a LANGUAGE-channel limit, not a policy absence, and stop asking)
+#
+# RESULT: LIMB 1 FIRES, AND THE HYPOTHESIS IS REFUTED. Instruments exist and every one was
+# found in ENGLISH. 🔴 p189's diagnosis was wrong about WHICH channel: it is not a language
+# limit, it is a DOCUMENT-SHAPE limit. Bahrain has no standalone "AI in education policy"
+# document to find, so a query shaped like one returns nothing. The instruments are a
+# national AI readiness report, a ministry strategic framework and ministry programme pages.
+#
+## WHAT EXISTS, all secondary-layer (see the reachability note below)
+instrument	date	organ	what it says
+Kingdom of Bahrain AI RAM Report	2025-11-12	iGA (Information & eGovernment Authority)	🟢 Names the MINISTRY OF EDUCATION as the lead on integrating AI and digital skills into the NATIONAL CURRICULUM, and lists "curriculum revolution" — embedding AI in educational content — as a named priority, alongside integrating AI into the national education strategy
+MoE strategic framework 2023-2026	2023-2026	Ministry of Education (Minister Dr Mohammed Mubarak Juma)	🟢 Digital empowerment as a focus. Learning modules, workshops and hands-on digital-literacy training. Scratch at primary; PYTHON at middle and high school; digital ethics and online safety in the materials
+Digital Empowerment in Education Program + eduNET	launched 2015	Ministry of Education (moe.gov.bh)	🟢 National capability for producing digital educational content; eduNET hosts interactive digital learning units for public-school students
+AI in design & technology curriculum	2021	Ministry of Education (then-Minister Dr Majid Al Nuaimi)	🟢 AI added to design & technology for grades 2-3; ICT books across primary and first preparatory grades; digital-economy topics into secondary business sciences
+National Policy for the Use of AI + GCC Ethics Manual	2025-07	iGA	🟡 Economy-wide and aimed at GOVERNMENT officials and digital-service teams. Names education as a priority sector. NOT school-specific — p189 recorded this correctly
+🔴 Dedicated AI + cybersecurity curriculum	proposed	Parliament	🔴 A PARLIAMENTARY PROPOSAL, reported ~2025. NOT CONFIRMED ADOPTED. Do not quote as an instrument
+#
+## 🔴 WHAT IS STILL ABSENT, AND IT IS THE HALF THAT SELLS
+# Every Bahraini instrument above is CURRICULUM-shaped: what learners are taught ABOUT AI.
+# 🔴 NONE governs AI used ON learners — no equivalent of Saudi Arabia's MoE/SDAIA guide to
+# using GENERATIVE AI in general education, which p189 identified as the only Gulf instrument
+# of that kind. So the Gulf closes on EXISTENCE and re-states on SUBSTANCE:
+#   taught-about-AI : Saudi 🟢, UAE 🟢, Qatar 🟢, Bahrain 🟢   -> 4 of 4, CLOSED
+#   AI-used-on-learners governed : Saudi 🟢, UAE 🔴, Qatar 🔴, Bahrain 🔴 -> 1 of 4
+# 🔵 COMMERCIALLY this is the same inversion p189 found and it is now measured across all
+# four states: in the Gulf the FUNDED line item is curriculum and teacher capability, and
+# the REGULATED surface is largely ungoverned. An EMEA governance pitch does not transfer.
+# Sell build-and-train in the Gulf; sell compliance in the EU.
+#
+## 🔴 REACHABILITY — Gap 431 holds, and this is a 15th blocked host
+# www.iga.gov.bh : getaddrinfo ENOTFOUND. The AI RAM Report PDF, the ONLY primary source for
+# the headline finding above, could not be fetched. Every statement in this file is therefore
+# SECONDARY-LAYER. 🟢 Consistent with p189 and with this pass: every government primary
+# source attempted was unreachable, while code hosts served every byte asked of them.
+# 🔵 State it once: this KB reads code at primary fidelity and regulation at secondary
+# fidelity, by construction. The Bahrain rows are an instance, not an exception.
+#
+## STOP CONDITION
+# 🟢 ACTION NI is DISCHARGED and CLOSED. Do not re-ask "does Bahrain have an AI-in-education
+# instrument" — it does, four of them. 🔴 The question that remains open is the SUBSTANTIVE
+# one and it is now a Gulf-wide gap, not a Bahraini one: does any Gulf state outside Saudi
+# Arabia govern AI used ON learners? That is a new gap, not this action.

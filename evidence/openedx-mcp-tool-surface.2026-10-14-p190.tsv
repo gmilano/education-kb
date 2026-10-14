@@ -1,0 +1,143 @@
+# p190 — ACTION NF. Count tutor-contrib-openedxmcp's ACTUAL tool definitions against the
+# README, and read the facade that enforces authorisation. P139's tool-count-drift check.
+#
+# LIMB 1 (the count matches and `retire` is one tool -> Pattern 35 step 1 may scope from a
+#         README and the audit is 2-3 weeks)
+# LIMB 2 (it drifts -> step 1 must enumerate from definitions every time, estimate rises)
+#
+# RESULT: LIMB 2 FIRES, AND BY MORE THAN DRIFT. The README names ZERO tools. It names 8
+# DOMAIN LABELS in an ASCII diagram. The build registers 33. There is no count to match.
+# 🔴 AND p189's OWN TABLE MIS-TRANSCRIBED THE DIAGRAM IT MARKED "verbatim": it recorded
+# "people, enroll, analytics, certs, retire" and dropped `reports`. That is where the
+# pre-registered figure of "7 named tools" came from. The diagram names 6 LMS + 2 CMS = 8.
+#
+# CHANNELS, all primary. github.com HTML and api.github.com returned 403 this pass (policy),
+# so every byte below came from the git protocol or files.pythonhosted.org.
+#   git clone --depth 1 blend-ed/tutor-contrib-openedxmcp   HEAD 4883f88018b5d179f84c16caf0768d6a7200fefc
+#   openedx_mcp-0.1.5.tar.gz  43 185 B  sha256 VERIFIED against the PyPI declared digest:
+#     declared bfc7e7b0e3b1f1fe99459924356b72e322165ea4c4d2a8a15f3a38229d1b9322
+#     measured bfc7e7b0e3b1f1fe99459924356b72e322165ea4c4d2a8a15f3a38229d1b9322   MATCH
+#
+## PART 1 — THE PROXY'S TOOL DEFINITIONS (@mcp.tool() in tutoropenedxmcp/templates/.../tools/)
+module	tools	names
+reads.py	8	whoami, analytics_overview, list_courses, course_detail, list_users, user_roles, course_team, user_grade
+people.py	8	enroll_user, unenroll_user, bulk_enroll, create_user, deactivate_user, set_role, reset_student_attempts, instructor_access
+ops.py	10	list_course_certificates, user_certificates, generate_certificate, regenerate_certificates, invalidate_certificate, submit_report, report_tasks, report_downloads, retirement_status, request_retirement
+authoring.py	7	read_course_outline, create_block, create_block_tree, update_block, publish_block, delete_block, update_course_settings
+TOTAL	33	14 reads, 19 writes
+README documented tool names	0	the README has NO tool list. Its architecture block names 8 DOMAIN LABELS: people, enroll, analytics, certs, reports, retire (LMS) + course authoring, modulestore (CMS). It points tool docs at the openedx-mcp PyPI README
+#
+## PART 2 — p189's Gap 430 CLAIM IS REFUTED. The facade DOES carry per-tool scope.
+# p189 published: "`tutor-contrib-openedxmcp` exposes `retire` on the LMS side behind
+# `is_staff` alone, with NO per-tool scope and an unauthenticated /health."
+# The /health half is correct (auth.py lets /health through without a key, by name).
+# The "no per-tool scope" half is WRONG, and it was read from a README, not from code.
+layer	measured
+openedx_mcp/models.py Scope	🟢 NINE scopes exist as a TextChoices enum: read, write:enrollment, write:users, write:roles, grant:admin, write:certificates, write:reports, write:courses, destructive
+api/mcp/auth.py require_scopes()	🟢 ENFORCED IN CODE — raises PermissionDenied with {"required":[...], "missing":[...]} when the credential lacks a scope
+api/mcp/guards.py audited_write()	🟢 FOUR rails per write: scope check, per-(key,tool) fixed-window rate limit, single-use confirm token bound to a payload fingerprint, and an audit row written BEFORE the write
+`destructive` is ADDITIVE	🟢 needed = [domain_scope, "destructive"] — a key cannot delete without ALSO holding the relevant write scope
+key handling	🟢 SHA-256 hash stored, raw shown once, prefix only thereafter; revocation; expiry; live is_staff/is_superuser re-check on EVERY request, so demotion revokes immediately
+#
+## PART 3 — THE SCOPE/CONFIRM MATRIX, read from the @audited_write decorators
+proxy_tool_name	facade_audit_name	scope	destructive	require_confirm
+enroll_user	enroll_user	write:enrollment	False	🔴 False
+unenroll_user	unenroll_user	write:enrollment	False	🔴 False
+bulk_enroll	bulk_enroll	write:enrollment	False	True
+create_user	create_user	write:users	False	True
+deactivate_user	deactivate_user	write:users	🟢 True	True
+set_role	set_role	write:roles	False	True (+ require_scopes(grant:admin) inline for global_staff/superuser)
+reset_student_attempts	🔴 reset_attempts	write:users	🔴 False	True
+instructor_access	instructor_access	write:roles	False	True
+generate_certificate	generate_certificate	write:certificates	False	🔴 False
+regenerate_certificates	regenerate_certificates	write:certificates	False	True
+invalidate_certificate	invalidate_certificate	write:certificates	🟢 True	True
+submit_report	submit_report	write:reports	False	🔴 False
+request_retirement	request_retirement	write:users	🟢 True	True
+create_block	🔴 create_xblock	write:courses	False	🔴 False
+create_block_tree	🔴 create_xblock	write:courses	False	🔴 False
+update_block	🔴 update_xblock	write:courses	False	🔴 False
+publish_block	🔴 publish_xblock	write:courses	False	True
+delete_block	🔴 delete_xblock	write:courses	🟢 True	True
+update_course_settings	update_course_settings	write:courses	False	🔴 False
+#
+# COUNTS: 19 write tools. 4 carry destructive. 8 apply IMMEDIATELY with no handshake.
+#         6 audit under a name that is NOT the name the agent called.
+#
+## PART 4 — THE FIVE FINDINGS THAT SURVIVE, in descending commercial weight
+#
+# F1 🔴 THE `destructive` FLAG IS ON THE REVERSIBLE TOOL AND OFF THE IRREVERSIBLE ONE.
+#   `reset_attempts` carries write:users and NOT destructive. With delete_module=True it
+#   calls lms.djangoapps.instructor.enrollment.reset_student_attempts(delete_module=True),
+#   which DELETES the learner's StudentModule row — their submitted state for that block —
+#   and fires score-changed signals. There is no undo.
+#   Meanwhile `deactivate_user` only flips is_active=False — request_retirement's OWN
+#   docstring calls it "the reversible is_active flag" — and it DOES carry destructive.
+#   🔵 CONSEQUENCE: a key provisioned ["read","write:users"] deliberately WITHOUT
+#   destructive, so that it cannot delete, CAN delete a learner's submitted work, and
+#   CANNOT deactivate an account. The guard is inverted on exactly the pair where it matters.
+#
+# F2 🔴 THE AUDIT LOG IS APPEND-ONLY IN ITS DOCSTRING AND DELETABLE IN ITS ADMIN.
+#   models.py: "MCPAuditLog — append-only record of every state-changing tool call",
+#   "Never updated after write." No save() or delete() override exists on the model.
+#   admin.py MCPAuditLogAdmin overrides has_add_permission -> False,
+#   has_change_permission -> False, and every field readonly — 🔴 but NOT
+#   has_delete_permission, which Django defaults to user.has_perm("delete_mcpauditlog"),
+#   and declares no `actions`, so it KEEPS the default "Delete selected objects" bulk action.
+#   🔵 Add is blocked, change is blocked, DELETE is open — including in bulk, from the UI.
+#   🔴 SECOND, INDEPENDENT PATH, needing no delete permission on the log at all:
+#   MCPAuditLog.key and .user are both on_delete=models.SET_NULL. Deleting a key or a user
+#   NULLs the attribution on every audit row it produced. The rows survive; the actor does not.
+#
+# F3 🔴 THE PII THE RETIREMENT TOOL REMOVES IS RETAINED BY THE RETIREMENT TOOL'S OWN AUDIT ROW.
+#   _rails.redact() redacts {confirm_token, password, key, secret, token}. It does NOT
+#   redact `username` or `email`. request_retirement's payload is {"username": ..., "full": ...},
+#   so the audit row permanently stores the username of a learner whose account was retired
+#   precisely to remove their PII. No retention or anonymisation hook ties the two together:
+#   a grep of native/retirement.py and settings/ for retention|purge|anonymi|MCPAuditLog
+#   returns nothing. 🔵 This is the GDPR erasure question a DPO asks, and the answer is in code.
+#
+# F4 🟡 SCOPE NARROWING DOES NOT APPLY TO SUPERUSERS OR TO JWT/SESSION CALLERS — BY DESIGN,
+#   AND THE PACKAGE'S OWN TESTS ASSERT IT. require_scopes() returns early on
+#   request.user.is_superuser; granted_scopes() returns ALL_SCOPES when there is no key.
+#   tests/test_auth.py: test_superuser_bypasses_scope_narrowing, 
+#   test_jwt_or_session_request_has_all_scopes. 🟢 So this is INTENDED, not a bug.
+#   🔴 But models.py sells scopes as "least privilege per credential", and for the superuser
+#   who is most likely to mint an ops key, the scope list is decorative. And set_role can
+#   grant `superuser` (behind grant:admin), which SILENTLY WIDENS every narrow key that user
+#   already holds. State the limit when quoting the scope model to a client.
+#
+# F5 🔴 SIX OF NINETEEN WRITE TOOLS AUDIT UNDER A DIFFERENT NAME, AND TWO COLLAPSE INTO ONE.
+#   create_block and create_block_tree BOTH audit as `create_xblock`. create_block_tree
+#   creates an arbitrary-depth subtree in one call, applies to the draft immediately
+#   (require_confirm=False), and shares create_block's 200-calls/60s budget.
+#   🔵 So the audit trail cannot distinguish "created one block" from "created a course tree",
+#   and an auditor joining an agent transcript to MCPAuditLog.tool on 6 of 19 write tools
+#   joins on nothing. A compliance trail whose join key differs from the caller's is not a trail.
+#
+## PART 5 — what this does NOT establish
+# 🔴 NO TOOL WAS CALLED. 33 registrations is what tools/list would show a client, not 33
+#   verified mutations. Rails were read, not exercised.
+# 🔴 The rate limiter FAILS OPEN by design (check_rate_limit catches Exception -> True), and
+#   both the limiter and the confirm-token store use the ambient Django cache. guards.py says
+#   so: under LocMemCache both are PER-PROCESS, so N workers give N x the stated budget.
+#   Tutor ships memcached, so this is a configuration risk, not a defect of the package.
+# 🔴 The facade has NO repository address. openedx-mcp 0.1.5 declares no project_urls and no
+#   home_page on PyPI; every byte above came from the sdist. The artefact where ALL
+#   authorisation lives is auditable only as a package payload. Bus factor stays 1.
+# 🔴 Version skew: the plugin's README pins `openedx-mcp==0.1.4` as its example; 0.1.5 is
+#   current. Everything above is 0.1.5.
+#
+## PART 6 — one more check, and it comes back CLEAN (recorded because a negative is a result)
+# A tuned rate limit that does not match its tool's name would silently fall back to
+# DEFAULT_RATE_LIMIT (30/60), so the table was joined against the decorators.
+RATE_LIMITS keys	18
+distinct audited_write tool names	18
+tools falling back to the default	🟢 NONE
+dead RATE_LIMITS entries	🟢 NONE
+# 🟢 An exact 18/18 match. The limiter covers every write tool and names nothing that does
+# not exist. 🔵 This matters for the pass's overall verdict: the design IS careful, which is
+# why the two inverted guards (F1: destructive on the reversible tool and not the
+# irreversible one; F2: delete left open on an audit log whose add and change are blocked)
+# read as incomplete ENUMERATION rather than as inattention. A sloppy codebase would have
+# failed this check too.

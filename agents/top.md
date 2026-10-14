@@ -3,6 +3,115 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 190 — 2026-10-14
+
+🆕 🔴 **The agent surface p189 found has `33` tools, not the `7` this KB pre-registered — and
+the README it was counted from names NONE of them. `ACTION NF` limb `2` fires by more than
+drift: there was never a count to match.**
+🟢 **But the pass's real result runs the other way: p189's own `Gap 430` verdict —
+*"`retire` behind `is_staff` alone, with no per-tool scope"* — is REFUTED from the code.
+Nine scopes exist, enforced, with a payload-bound confirm handshake and an audit row written
+before the write.** 🔴 **And then the sharp one: the `destructive` guard is attached to the
+REVERSIBLE tool and withheld from the IRREVERSIBLE one.**
+
+| action | verdict |
+|---|---|
+| 🔴 **`ACTION NF`** — count the actual tool definitions against the README's named tools | 🔴 **DISCHARGED, LIMB `2` FIRED. `33` definitions *(14 reads, 19 writes)* against `0` tool names in the README, which carries `8` DOMAIN LABELS in an ASCII diagram instead. 🔴 p189's own cell marked *"verbatim"* dropped `reports` from that diagram, which is where the figure `7` came from** |
+| 🟢 **`ACTION NG`** — `P1057` over every row published WITH a licence | 🟢 **DISCHARGED, LIMB `1` FIRED. `0` case-variant contradictions in `5 212` probes. 🔴 But the sweep found a worse defect in how p189 invoked its own instrument — see [`repos/foundations.md`](../repos/foundations.md)** |
+| 🟢 **`ACTION NH`** — does any proctoring row INFER EMOTION? | 🟢 **DISCHARGED, LIMB `1` FIRED. `0` affect-inference paths in `3` repositories. 🔴 One row is clear only because a MediaPipe flag defaults to `false`, and one published row's description is REFUTED by its own source** |
+| 🟢 **`ACTION NJ`** — does `ralph`'s `statements_are_equivalent` compare the whole statement? | 🔴 **DISCHARGED, LIMB `2` FIRES ON THE FACT *(it is a subset; `authority` and `stored` are ignored by name)* 🟢 AND ITS CONSEQUENCE IS REFUTED: the `409` guarantee has no hole. What is holed is ATTRIBUTION** |
+| 🟢 **`ACTION NI`** — Bahrain alone | 🟢 **DISCHARGED, LIMB `1` FIRED, and the HYPOTHESIS refuted: instruments exist and all were found in ENGLISH. Not a language limit — a document-shape limit** |
+| 🔴 **`ACTION NE`** — re-derive the new-supply rate over the same `12` topic pages | 🔴 **NOT RUN. CHANNEL BLOCKED. `github.com` HTML and `api.github.com` are `403` for this whole session. See [`intel/trends.md`](../intel/trends.md) — the measure p189 promoted to "published" lost its channel one pass later** |
+| 🔴 **`ACTION MN`** *(carried, sixth pass, for a human)* | 🔴 **NOT RUN, and the reason is unchanged: it is an outward-facing write on third parties' repositories and this run is unattended. Still queued, still undecided** |
+
+### 🔴 `ACTION NF` — the Open edX agent surface, measured from definitions
+
+🔵 Both artefacts were read this pass. The proxy came from `git clone --depth 1`
+*(`HEAD` `4883f88018b5`)*; the facade — where **all** authorisation actually lives — came
+from the `openedx-mcp` `0.1.5` sdist, **`sha256` verified against PyPI's declared digest**.
+
+| field | measured |
+|---|---|
+| proxy tool definitions | 🆕 **`33`** — `reads.py` `8`, `people.py` `8`, `ops.py` `10`, `authoring.py` `7` |
+| of which writes | 🆕 **`19`** |
+| README tool names | 🔴 **`0`.** Its architecture block names `6` LMS + `2` CMS domain labels: *"people, enroll, analytics, certs, reports, retire"* and *"course authoring, modulestore"*. Tool docs are deferred to the `openedx-mcp` PyPI README |
+| 🔴 writes applying with NO confirm handshake | 🔴 **`8` of `19`** — `enroll_user`, `unenroll_user`, `generate_certificate`, `submit_report`, `create_block`, `create_block_tree`, `update_block`, **`update_course_settings`** |
+| writes carrying `destructive` | **`4` of `19`** — `delete_block`, `invalidate_certificate`, `request_retirement`, `deactivate_user` |
+| 🔴 writes auditing under a DIFFERENT name than the agent called | 🔴 **`6` of `19`** |
+| facade repository address | 🔴 **NONE.** `openedx-mcp` declares no `project_urls` and no `home_page`. The artefact holding every authorisation decision is auditable only as a package payload. Bus factor stays `1` |
+
+### 🟢 `Gap 430` is REFUTED, and the correction is larger than the finding it replaces
+
+🔴 p189 published *"exposes `retire` on the LMS side behind `is_staff` alone, **with no
+per-tool scope**"*. 🟢 **That half is wrong, and the reason is the method: it was read from a
+README.** The facade carries, in code:
+
+- 🟢 **Nine scopes** as a `TextChoices` enum — `read`, `write:enrollment`, `write:users`,
+  `write:roles`, `grant:admin`, `write:certificates`, `write:reports`, `write:courses`,
+  `destructive` — enforced by `require_scopes()`, which raises `PermissionDenied` naming
+  `required` and `missing`.
+- 🟢 **`destructive` is ADDITIVE**: `needed = [domain_scope, "destructive"]`, so a key cannot
+  delete without also holding the matching write scope.
+- 🟢 **A single-use confirm token bound to a `sha256` fingerprint of `(tool, user, payload)`**.
+  A write with no token performs a **dry run** and returns a preview plus the token; changing
+  one byte of the payload invalidates it.
+- 🟢 **Per-`(key, tool)` rate limits** tuned to blast radius — `bulk_enroll` `5`/`300`s,
+  `request_retirement` `5`/`600`s.
+- 🟢 **An audit row written BEFORE the write**, and the write refused if it cannot persist.
+- 🟢 Keys are stored as `SHA-256`, shown once, revocable, expiring, and re-checked **live**
+  against `is_staff`/`is_superuser` on every request, so a demotion revokes immediately.
+
+🔵 **The `/health` half of p189's finding stands**: `auth.py` lets `/health` through without a
+key, by name. That was read correctly, from the README, and the code agrees.
+
+### 🔴 The finding that changes a deployment — the guard is inverted on the pair that matters
+
+| tool | scope | `destructive`? | what it actually does |
+|---|---|---|---|
+| 🔴 **`reset_student_attempts`** *(audits as `reset_attempts`)* | `write:users` | 🔴 **NO** | with `delete_module=True` it calls Open edX's own `reset_student_attempts(delete_module=True)`, which **DELETES the learner's `StudentModule` row** — their submitted state for that block — and fires score-changed signals. **No undo** |
+| 🟢 `deactivate_user` | `write:users` | 🟢 **YES** | flips `is_active=False`. `request_retirement`'s **own docstring** calls it *"the reversible `is_active` flag"* |
+
+🔴 **So a key provisioned `["read","write:users"]` — deliberately WITHOUT `destructive`, by an
+operator who wanted to prevent deletions — CAN delete a learner's submitted work and CANNOT
+deactivate an account.** 🔵 That is a one-line fix upstream and a mandatory check in any
+engagement that mints these keys. It is also the strongest argument this KB has for reading
+scope tables from **code** rather than from a scope's **name**.
+
+### 🔴 Two more, both agent-reachable
+
+- 🔴 **`update_course_settings` changes the GRADING POLICY immediately, with
+  `require_confirm=False` and no `destructive` scope.** 🔵 *Evaluation of learning outcomes*
+  is Annex III education by name. The most regulated surface in the tool set is among the
+  least rail'd.
+- 🔴 **`create_block` and `create_block_tree` BOTH audit as `create_xblock`.**
+  `create_block_tree` creates an arbitrary-depth subtree in one call, applies to the draft
+  immediately, and shares `create_block`'s `200`-calls/`60`s budget. 🔵 The audit trail cannot
+  tell *"created one block"* from *"created a course tree"*, and an auditor joining an agent
+  transcript to `MCPAuditLog.tool` joins on nothing for `6` of `19` write tools.
+
+### 🟢 Rows re-verified from bytes this pass
+
+| row | licence, read this pass | note |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** — `LICENSE` `11 408` B, `200`, *"Apache License / Version 2.0, January 2004"* | 🟢 confirmed from bytes. Secondary sources put it near `41`k★ and last updated `2026-10-12`; 🔴 **the star count is NOT verified** — `github.com` is `403` this pass, so it is a search-snippet figure and is not published as a measured one |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`** — `LICENSE` `1 531` B, `200`, all three clauses + the standard disclaimer verbatim | 🟢 This KB's published value is CORRECT. 🔵 Recorded because the file opens *"All rights reserved."*, which reads like a reservation and is in fact `BSD-3`'s own template — a shape that could easily be mis-flagged by a vocabulary probe |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🆕 🟢 **`MIT`** — `LICENSE.md` `1 094` B, complete grant | 🔴 `LICENSE` itself **`404`s**. This row was in the grant-absent set purely because `.md` was never probed. See `ACTION NG` |
+
+### 🔴 A published row's description, refuted by its own source
+
+| row | what this page published | what the source says |
+|---|---|---|
+| [`VIJAYAPANDIANT/online-examination-system`](https://github.com/VIJAYAPANDIANT/online-examination-system) | 🔴 *"Full exam platform with **AI proctoring**; React/Vite + Spring Boot … the most complete platform of the four"* | 🔴 **There is no AI and no proctoring.** No camera API outside `node_modules`; `ExamJail.jsx` enforces fullscreen and listens for `visibilitychange`, `fullscreenchange` and `contextmenu`. 🟡 **`com.exam.proctor` is a JAVA PACKAGE NAME.** 🟢 The *platform* claim stands |
+
+🔵 **And the correction improves the row rather than demoting it.** For an EU engagement a
+system that delivers exam-integrity signal with **zero biometric processing** carries no
+GDPR Art. `9` duty and no Annex III biometric exposure. 🟢 **The description was hiding its
+best property.** Corrected text for the row: *"browser-lock integrity events (fullscreen,
+tab-switch, copy/paste); no camera, no model"*.
+
+**Full measurement:**
+[`evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv`](../evidence/openedx-mcp-tool-surface.2026-10-14-p190.tsv)
+· [`evidence/proctoring-affect-inference.2026-10-14-p190.tsv`](../evidence/proctoring-affect-inference.2026-10-14-p190.tsv)
 
 ## Pass 189 — 2026-10-14
 
