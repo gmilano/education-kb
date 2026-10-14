@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 206 — 2026-10-14 — `ACTION PI` CLOSED ON LIMB `2`, AND THE THING WITH `25` DEFECTS WAS THE INSTRUMENT
+
+### 🟢 `ACTION PI` — the whole published licence column, re-read. `0` cells change family
+
+🟢 **`281` distinct repositories carrying a copyleft token in a published table row were re-read
+from their own blobs at the `HEAD` ref across `22` path forms, and re-classified.** 🔴 **`0` of
+`281` published cells change licence family.**
+
+🟢 **So p205's "`0` exposure" generalises from its `60`-row sample to the whole column, and
+p203's AGPL false positive is now measured to have reached `0` published rows ever.** 🔵 **The
+licence column stands. Do not rebuild it.**
+[`evidence/pi-licence-column-census.2026-10-14-p206.tsv`](../evidence/pi-licence-column-census.2026-10-14-p206.tsv).
+
+### 🔴 The audit was wrong `3` times. Again. On a different method
+
+🔴 **p205 ran an automated pass over the licence column, reported `3` mismatches, and all `3`
+were the AUDIT's error.** 🔴 **p206 used a completely different extraction — table rows, not
+regexes over prose — reported `3` mismatches, and all `3` are the AUDIT's error again:**
+
+| the audit claimed | what the KB actually publishes | verdict |
+|---|---|---|
+| [`UniversalDependencies/UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) published `GPL-3.0`, blob `CC-BY-4.0` | 🟢 **`CC BY 4.0` (`r2.9`+) · `GPL-3.0` (`≤ r2.8`)** — the relicensing `P609` found, already carried with its date | 🔴 **AUDIT WRONG** |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) published `GPL-3.0`, blob `LGPL-3.0` | 🟢 **`LGPL-3.0`**, with the old `GPL-3.0` already struck behind a `<!--corrected-->` marker | 🔴 **AUDIT WRONG** — the KB fixed this before p206 existed |
+| [`foradian/fedena`](https://github.com/foradian/fedena) published `GPL-2.0`, blob `Apache-2.0` | 🟢 **Two different objects**: `Apache-2.0` declared in `NOTICE`, and a `GPL-2.0` cell that describes a **vendored `fckeditor` file** | 🔴 **AUDIT WRONG** |
+
+🟢 **Two passes, two independent extraction methods, exactly `3` false positives each, `0` true
+positives between them. That is no longer an anecdote.** 🔵 **Name it: in an education KB,
+*every* automated licence audit must adjudicate against the published CELL before it reports a
+mismatch — the rows are universities, corpora, vendored third-party files and relicensed
+treebanks, and each of those shapes produces a false positive of its own kind.**
+[`evidence/audit-false-positives.2026-10-14-p206.tsv`](../evidence/audit-false-positives.2026-10-14-p206.tsv).
+
+🟢 **The `<!--corrected-->` marker is the right instrument and it works** — it is why `untis4j`
+was traceable in one read. 🔴 **It is deployed on `1` row.** See `ACTION PM`.
+
+### 🆕 🔴 The agent shelf's licence column had `25` rows the INSTRUMENT could not name
+
+🟢 **The column is right; the reader was not.** p205's classifier returned no determinate family
+on `25` of the `281`: `9` `UNRECOGNISED`, `16` `GPL-unversioned`, `1` `CC-unversioned`. 🟢
+**p206 fixes eight defect classes and the count goes to `0`** —
+[`compose/code/p206-classifier-language-shape/`](../compose/code/p206-classifier-language-shape/),
+**`20`/`20`** offline on `20` real bodies.
+
+🔴 **`16` of the `25` had lost their GPL *version*, and that is the half that costs money.**
+`GPL-2.0` and `GPL-3.0` are not interchangeable: 🔴 **no patent grant in `GPL-2.0`, no inbound
+`Apache-2.0` compatibility, no anti-tivoization clause.** 🔵 **A studio that reads
+`GPL-unversioned` and assumes `GPL-3.0` has assumed a patent grant that is not there.**
+
+### 🆕 🔴 The defect that matters beyond this KB: `"MIT"` is a university, and `"LICENÇA"` is a licence
+
+🔴 **[`portabilis/i-diario`](https://github.com/portabilis/i-diario) and
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) — two
+Brazilian municipal school-management systems — ship the AGPL-3.0 in PORTUGUESE.** Their grant
+titles itself `LICENÇA PÚBLICA GERAL AFFERO GNU`, and every classifier this KB has shipped since
+p203 returned 🔴 `UNRECOGNISED` on them. 🟢 **They are `AGPL-3.0`, `35 326` B each, and p206 reads
+them.**
+
+🔵 **This is the same blind spot `ACTION PJ` was opened to test in the MARKET channel, found
+independently in the LICENCE channel, in the same pass.** 🟢 **`ACTION PJ` fires too** — see
+[`intel/market.md`](../intel/market.md) LATAM. 🔴 **So language is not a market-research quirk.
+It is an axis that cuts across every channel this KB reads**, and p205's lesson *"per-country
+beats pan-regional"* now has a sibling: **per-language beats English-only.**
+
+### 🟡 Discovery: `0` new agent rows, and that is the third consecutive measurement
+
+🟢 **Eight discovery queries this pass, four of them in Portuguese, Spanish or aimed at
+non-English repositories. Every candidate that cleared verification was ALREADY on this shelf:**
+
+| candidate the channel returned | verified | already published here |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0`, **`41.4`k★**, `v1.6.14` (`2026-10-08`) | 🟢 yes — **and unchanged since p205**, so no currency delta either |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🟢 `AGPL-3.0` body, **`1.3`k★**, `189` forks | 🟢 yes |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **`MIT`**, `64`★, `19` forks, `v1.5.5`, README in Chinese, built around 人教版 (PEP) textbooks → **APAC** | 🟢 yes |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT` | 🟢 yes |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 `GPL-3.0` | 🟢 yes |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | 🟢 **`Apache-2.0`** body, `11 338` B | 🟢 yes — 🔴 **and the search summary called it *"proprietary"*. The blob is the authority** |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | 🔴 **a `0`★ FORK of [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)** — byte-identical `1 073` B `LICENSE`, `"forked from"` on the page | 🟢 yes — **already refused promotion**, with the lineage recorded |
+| [`vitorr2101/Projeto-Agente-IA-Educacional`](https://github.com/vitorr2101/Projeto-Agente-IA-Educacional) | 🔴 **NO GRANT** at `7` path forms — a Portuguese-language study-planner agent → **LATAM** | 🔴 **not published, and must not be**: no licence body, no permission to ship |
+
+🔵 **Two things the channel got wrong that the blob got right**, both recorded because they are
+the method and not the week: 🔴 a search summary asserting a licence (`nirholas` — *"proprietary"*,
+actually `Apache-2.0`) and 🔴 a search summary presenting a `0`★ fork as an independent project
+(`kvnloo`). 🟢 **Neither would survive a blob read, and both did survive the summary.**
+
+> 🔵 **The honest headline for the agent shelf this pass is that it did not move.** 🟢 Saturation
+> measured at p203, re-measured at p204, and now measured a third time with a deliberately
+> non-English query set. 🔴 **`0` new rows is a finding when the queries were designed to break
+> the saturation and did not.**
+
 ## Pass 205 — 2026-10-14 — `ACTION PB` CLOSED ON LIMB `2`, AND IN THIS INDUSTRY `"MIT"` IS USUALLY A UNIVERSITY
 
 ### 🟢 `ACTION PB` — the `~60` highest-★ rows, read for SCOPE. `0` misdescribe a shipped path

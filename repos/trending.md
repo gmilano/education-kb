@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 206 — THE TRENDING SHELF'S GRANTS, RE-READ: `25` UNREADABLE ROWS → `0`
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🟢 What was measured
+
+🟢 **Every repository this KB publishes with a copyleft token in a table row — `281` of them,
+spread across all eight files — was re-read from its own blob at the `HEAD` ref over `22` licence
+path forms and re-classified.** 🔴 **`0` published cells change family.** 🔴 **`25` came back with
+no determinate family, and all `25` were the reader.**
+[`evidence/pi-licence-column-census.2026-10-14-p206.tsv`](../evidence/pi-licence-column-census.2026-10-14-p206.tsv).
+
+### 🆕 🟢 Rows this shelf publishes that became READABLE this week
+
+| repo | was | 🆕 now | why it was unreadable |
+|---|---|---|---|
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🔴 `UNRECOGNISED` | 🟢 **`AGPL-3.0`** (`35 326` B) | 🆕 **the body is in PORTUGUESE** — `LICENÇA PÚBLICA GERAL AFFERO GNU` |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | 🔴 `UNRECOGNISED` | 🟢 **`AGPL-3.0`** (`35 326` B) | 🆕 same — Brazilian municipal pre-enrolment system |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 `UNRECOGNISED` | 🔴 **`NON-OSI-Elastic-2.0`** | 🆕 `Elastic License 2.0` was absent from the table — **the worst thing to call `UNRECOGNISED`** |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 `UNRECOGNISED` | 🟢 **`AGPL-3.0-STATEMENT`** | a narrative grant with no title line |
+| [`idempiere/idempiere`](https://github.com/idempiere/idempiere) | 🔴 `UNRECOGNISED` | 🟢 **`GPL-2.0`** | `<center>` + `#` markdown heading broke the `^` anchor |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | 🔴 `UNRECOGNISED` | 🟢 **`LGPL-STATEMENT`** | title stripped from the payload; identifies itself in prose |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 `UNRECOGNISED` | 🟢 **`GPL-3.0-STATEMENT`** | **`19` bytes**: `License: GNU GPL V3` |
+| [`UniversalDependencies/UD_Spanish-AnCora`](https://github.com/UniversalDependencies/UD_Spanish-AnCora) | 🟡 `CC-unversioned` | 🟢 **`CC-BY-4.0-STATEMENT`** | a `189` B pointer at the deed URL |
+| [`logisim-evolution/logisim-evolution`](https://github.com/logisim-evolution/logisim-evolution) | 🟡 `GPL-unversioned` | 🟢 **`GPL-3.0`** | version pushed past a `3`-line window |
+| [`r-dcm/measr`](https://github.com/r-dcm/measr) · [`federicazoe/gradetools`](https://github.com/federicazoe/gradetools) · [`cerpus/Edlib`](https://github.com/cerpus/Edlib) | 🟡 `GPL-unversioned` | 🟢 **`GPL-3.0`** | same |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🟡 `GPL-unversioned` | 🟢 **`GPL-2.0`** | 🆕 **a UTF-8 BOM between `^` and the title** |
+| [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🟡 `GPL-unversioned` | 🟢 **`GPL-3.0`** | 🆕 same BOM |
+| [`pawtograder/platform`](https://github.com/pawtograder/platform) · [`pawtograder/assignment-action`](https://github.com/pawtograder/assignment-action) | 🟡 `GPL-unversioned` / 🔴 `UNRECOGNISED` | 🟢 **`GPL-3.0-STATEMENT`** | 🆕 **a wrapped prose line at column `0`** — `GNU General Public License for more details.` |
+| `9` further Moodle plugin rows *(`moodle-qbank_genai`, `moodle-mod_maici`, `moodle-local_aiid`, `moodle-local_aiquestions`, `moodle-quizaccess_proctoring`, `moodle-theme_moove`, …)* | 🟡 `GPL-unversioned` | 🟢 **`GPL-3.0`** | the Moodle plugin `LICENSE.md` convention: title / `====` / blank / version |
+
+🔴 **`16` of these had lost their GPL VERSION, and `13` of the `16` are Moodle plugins.** 🔵 **The
+Moodle plugin ecosystem ships one `LICENSE.md` template, and that template defeated the reader
+`13` times** — a single formatting convention, not `13` separate problems.
+
+### 🔵 What did NOT change, stated so it is not mistaken for silence
+
+🟢 **`0` new trending repositories this pass.** 🟢 **`0` published licence cells corrected.**
+🟢 **`14` of the `281` still carry no grant at `22` path forms**, agreeing with p204's `56`-row
+census where the two overlap. 🔴 **`DeepTutor` is unchanged at `41.4`k★ / `Apache-2.0` /
+`v1.6.14` (`2026-10-08`)**, so there is no star or release delta to report either.
+
 ## 2026-10-14 — Pass 205 — `ACTION PE` CLOSED: `98.8`% NOVELTY THAT MEANS THE OPPOSITE OF WHAT THE LIMB SAID
 
 ### 🟢 Pages `3`–`6` of `topic:open-educational-resources` read — `79` of `80` rows are new

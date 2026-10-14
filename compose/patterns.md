@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 206 — 2026-10-14 — THREE RECIPES THE LICENCE CENSUS MAKES BUILDABLE, AND ONE IT KILLS
+
+🔵 **Every repository named below had its grant read from its own blob at `HEAD` this pass. No
+pattern here rests on a sidebar label or a comparison article.**
+
+### 🟢 `P206-A` — the permissive LMS base. `OpenOLAT` + `ims-lti` + an agent, for a CLOSED deliverable
+
+🔴 **The problem this solves:** a client wants a hosted, closed-source learning product with AI in
+it. 🔴 **Open edX, Tutor, Canvas CE and Frappe Learning are all `AGPL-3.0`** — modify and host any
+of them and the modifications must be published. 🔴 **Moodle is `GPL-3.0` and its plugins are
+derivative works.**
+
+🟢 **The wiring:**
+
+1. **Base** — [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) 🟢 **`Apache-2.0`,
+   `10 982` B**, read this pass. Java, modular course editor, run in production by European
+   universities. 🟢 **Permissive: modify and host without reciprocity.** Alternative:
+   [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) 🟢 **`ECL-2.0`** if the client is
+   North American and already in the Sakai community.
+2. **Launch path** — [`instructure/ims-lti`](https://github.com/instructure/ims-lti) 🟢 **`MIT`**.
+   🔵 **Even on a permissive base, launch the AI tool over LTI rather than compiling it in**: the
+   same artefact then drops into the client's *existing* Moodle or Canvas without inheriting
+   either platform's grant.
+3. **Tutoring layer** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+   🟢 **`MIT`, `48`★, `v0.6.1`**, BKT behind an MCP tool call, in Go. 🔴 **Do NOT take
+   [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp)** — it is a `0`★ fork with a
+   byte-identical `LICENSE`, `7` commits behind.
+4. **Grading** — [`autolab/Autolab`](https://github.com/autolab/Autolab) 🟢 **`Apache-2.0`** (CMU)
+   or [`Submitty/Submitty`](https://github.com/Submitty/Submitty) 🟢 **`BSD-3-Clause`** (RPI).
+   🔵 Submitty is the one that carries **TA grading** — the human-in-the-loop half.
+
+🟢 **Every component is `Apache-2.0`, `MIT`, `BSD-3` or `ECL-2.0`. The whole stack ships closed.**
+🔵 **Timeline: `8`–`10` weeks.** 🔴 **The thing that breaks this pattern is substituting Moodle
+"because the client already has it" — at that point the plugin is `GPL-3.0` and the recipe is
+`P206-B` instead.**
+
+### 🟡 `P206-B` — the Moodle-shaped engagement, priced honestly
+
+🔴 **`13` of the `16` rows that lost their GPL version in this pass's census were Moodle
+plugins**, all defeated by the same `LICENSE.md` template. 🟢 **All `13` are `GPL-3.0`.** 🔵 **The
+version matters: `GPL-3.0` carries a patent grant and `Apache-2.0` inbound compatibility;
+`GPL-2.0` carries neither.**
+
+🟢 **The wiring, all `GPL-3.0`, all read this pass:**
+
+1. **Base** — [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 **`GPL-3.0`** (`35 147` B).
+2. **AI-in-course plugin** —
+   [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator)
+   🟢 **`GPL-3.0`** *(newly determinate this pass — a UTF-8 BOM had hidden its version)*. 🟢 **Its
+   default `prototype` provider makes NO network calls, and teachers choose which course materials
+   the AI may use** — auditable by construction, which is exactly what Brazil's MEC referencial
+   and the EU's Article 50 both ask for.
+3. **Question generation** —
+   [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions)
+   and [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai), both
+   🟢 **`GPL-3.0`**.
+4. **Proctoring** —
+   [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring)
+   🟢 **`GPL-3.0`**. 🔴 **In EMEA this is Annex III high-risk from `2 December 2027`, and emotion
+   recognition inside it has been PROHIBITED since `2 February 2025`.** 🔵 Build the switch now.
+
+🔴 **Price it as a `GPL-3.0` engagement from day one.** 🟢 The client owns a copyleft deployment
+and that is often fine — 🔴 **what is not fine is discovering it at delivery.** 🔵 **Timeline:
+`6`–`8` weeks.**
+
+### 🟢 `P206-C` — the LATAM municipal stack, in Portuguese, with the compliance layer the referencial asks for
+
+🟢 **This pattern exists because `ACTION PJ` closed and because two blobs were finally readable.**
+
+1. **Base** — [`portabilis/i-diario`](https://github.com/portabilis/i-diario) *(diário de classe)*
+   and [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital),
+   both 🔴 **`AGPL-3.0`, `35 326` B**, real Brazilian municipal infrastructure. 🔴 **Network
+   copyleft: a hosted layer over either must be published.** 🔵 **Decide this with the client
+   BEFORE the build — for a municipal secretaria, publishing is frequently acceptable and
+   occasionally mandatory.**
+2. **Offline tier** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+   🟢 **`MIT`, `1 097` B**. 🔵 Connectivity is the binding constraint in the interior, not model
+   quality, and Kolibri is the only permissive offline-first platform on this shelf.
+3. **The compliance layer, which is the actual product.** 🟢 **Brazil's MEC referencial (março
+   2026) names three requirements that map one-to-one onto build items:**
+
+   | the referencial asks for | what you build |
+   |---|---|
+   | **supervisão humana** | every AI action lands in a teacher-approval queue; nothing reaches a student unreviewed |
+   | **transparência** sobre o funcionamento | a per-interaction disclosure record — the same artefact EU Article 50 requires, so build it once |
+   | **autoria do estudante** | the agent may question and scaffold; it may not produce submittable prose. 🔵 **This is a product constraint, not a policy document** |
+
+   🔴 **Plus `LGPD` *and* the `ECA`.** 🔵 **A GDPR-shaped control set does NOT satisfy the ECA** —
+   it is child-protection law, and it is why the referencial says AI is **not recommended in
+   educação infantil at all, except to include children with disabilities.**
+4. **Sandbox** — 🟢 **MEC and the AGU opened a `Sandbox Regulatório de IA` in março 2026.** 🔵 **A
+   supervised regulatory environment is a procurement door, and it is open now.**
+
+🔵 **Timeline: `6`–`8` weeks for the compliance layer over an existing deployment.** 🟢 **It
+retargets to EMEA almost unchanged** — supervisão humana, transparência and explainability are
+Article 14, Article 50 and the Annex III explanation right under different names.
+
+### 🔴 The pattern this pass KILLS
+
+🔴 **Do not build on [`formalms/formalms`](https://github.com/formalms/formalms).** Three
+comparison articles this pass called it `Apache-2.0`, `GPL` and `LGPL`. 🟢 **The repository
+carries no licence body at `9` path forms, so the default is exclusive copyright.** 🔵 **An
+LMS is not a prototype you throw away, and this is the tier where an ungranted base is most
+expensive.**
+
+🔴 **And do not build on [`frappe/lms`](https://github.com/frappe/lms) expecting `MIT`.** 🟢 **It
+is `AGPL-3.0`, `33 893` B, read this pass** — the comparison article that calls it *"MIT with
+self-hosted data ownership"* is wrong on the one attribute the choice turns on.
+
 ## Pass 205 — 2026-10-14 — THREE RECIPES, AND A GATE THAT REFUSES A COMPONENT BY ITS GRANT
 
 🔵 **Rule applied, per `Gap 458`/`459`, `P204-1` and now `T205-2`:** every component names **what

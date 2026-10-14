@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 206 — `0` NEW AGENTS, `2` SEARCH-CHANNEL ERRORS CAUGHT, `1` LANGUAGE AXIS OPENED
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🟡 The week's agent movement: none
+
+🟢 **Eight discovery queries, four of them non-English or aimed at non-English repositories.
+Every candidate that survived verification was already published on this shelf.**
+
+| candidate | verified this pass, first-hand | status |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `Apache-2.0` · **`41.4`k★** · `5.2`k forks · `v1.6.14` (`2026-10-08`) | 🟡 **carried, and IDENTICAL to p205** — no star delta, no release delta |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `AGPL-3.0` body (`34 522` B) · **`1.3`k★** · `189` forks · `main` | 🟡 carried. Visual tutor: whiteboard, math canvas, mindmap |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **`MIT`** (`1 068` B) · **`64`★** · `19` forks · `v1.5.5` · `master` | 🟡 carried. **EduAgent**, K-9 RAG tutor, README in Chinese, built around 人教版 (PEP) textbooks → **APAC** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `MIT` (`1 064` B) | 🟡 carried |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `GPL-3.0` (`35 149` B) | 🟡 carried |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `MIT` · **`48`★** · `8` forks · **`v0.6.1`, named only in the `README`** | 🟡 carried, 🆕 **version is new** — the Releases tab is empty, so the version lives in one channel only |
+
+### 🔴 Two search-channel errors, both caught by one blob read each
+
+🔴 **A summary called [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp)
+*"proprietary"*.** 🟢 **Its `LICENSE` is `Apache-2.0`, `11 338` B** — and this KB already
+publishes it as `Apache-2.0`, by shipped body, since p201.
+
+🔴 **A summary presented [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) as an
+independent project.** 🟢 **It is a `0`★, `0`-fork FORK of `ArnaudGuiovanna/tutor-mcp`** —
+`"forked from"` on the page, byte-identical `1 073` B `LICENSE`, `452` commits against the
+trunk's `452`+`7`. 🟢 **This KB had already refused to promote it, with the lineage recorded.**
+
+🔵 **Both errors were in the summary layer and neither survived contact with
+`raw.githubusercontent.com`.** 🟢 **The blob is the authority. It has been the authority for
+`200`+ passes and this week is the clearest single-pass demonstration of why.**
+
+### 🆕 🔴 A LATAM-origin agent, and it cannot be shipped
+
+🔴 **[`vitorr2101/Projeto-Agente-IA-Educacional`](https://github.com/vitorr2101/Projeto-Agente-IA-Educacional)**
+— *EduPlan AI*, a Portuguese-language agent that interviews a student about their goals and emits
+a study schedule, plus lesson planning for teachers. 🔴 **No licence body at `7` path forms.**
+🔵 **The default is exclusive copyright: no permission to copy, modify or redistribute.** 🟢 **Not
+published to the shelf, and the reason is recorded so the next pass does not re-discover it.**
+
+🟢 **This is the LATAM agent tier in one row:** the region's usable open-source supply is in the
+**school-system** tier, under `AGPL-3.0`, not in the agent tier. See
+[`intel/market.md`](../intel/market.md) LATAM.
+
+### 🆕 🔴 The agent shelf's grants were re-read, and two of them were unreadable for a reason
+
+🟢 **`ACTION PI` re-read `281` published copyleft rows from their own blobs. The agent-adjacent
+rows came back clean** — but the sweep surfaced the shape that matters for this shelf:
+
+🔴 **[`ankitects/anki`](https://github.com/ankitects/anki) states its grant in a SENTENCE, not an
+instrument**: *"Anki is licensed under the GNU Affero General Public License, version 3 or later,
+with portions contributed by Anki users licensed under the BSD-3 license"*, plus named per-file
+`CC-BY-4.0`, `MIT` and `Apache-2` exceptions. 🟢 **The KB's cell already reads `AGPL-3.0` core
+with per-file exceptions, which is right.** 🔴 **Every classifier this KB shipped returned
+`UNRECOGNISED` on it**, because it was looking for a title line that is not there.
+🟢 **p206 returns `AGPL-3.0-STATEMENT`** — the family, with a suffix that stops anyone quoting the
+sentence as the licence.
+
+🔵 **For an agent shelf this is the shape to watch:** 🟢 **the exceptions are the shippable
+limb.** An `AGPL-3.0` core with `BSD-3` and `MIT` per-file carve-outs is a repository a studio can
+vendor *parts* of — 🔴 **and a one-token licence cell can never say that.**
+
 ## 2026-10-14 — Pass 205 — THE AGENT CHANNEL SATURATES A THIRD TIME, AND THE TOP ROW OF THE SHELF IS UNGRANTED
 
 ### 🔴 The movement this window is again an absence

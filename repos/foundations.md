@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 206 — 2026-10-14 — THE FOUNDATION ROWS ARE RIGHT; THE READER WAS WRONG IN EIGHT DIFFERENT WAYS
+
+### 🟢 The census, stated before the diagnosis
+
+🟢 **`281` repositories, `HEAD` ref, `22` body path forms, re-classified.** Final distribution:
+
+| family | rows | | family | rows |
+|---|---|---|---|---|
+| `GPL-3.0` | **`89`** | | `Apache-2.0` | `7` |
+| `AGPL-3.0` | **`84`** | | `LGPL-3.0` | `5` |
+| `MIT` | `24` | | `GPL-3.0-STATEMENT` | `3` |
+| `GPL-2.0` | `23` | | `AGPL-3.0-STATEMENT` | `3` |
+| `ECL-2.0` | `15` | | 🔴 `NON-OSI-Elastic-2.0` | `1` |
+| 🔴 **no grant at `22` paths** | **`14`** | | `LGPL-STATEMENT` | `1` |
+| `MPL-2.0` | `11` | | `CC-BY-4.0-STATEMENT` | `1` |
+
+🔴 **`219` of `281` — `78`% — are GPL-family copyleft.** 🔵 **That is the single most important
+number on this page for an engagement**, and it is unchanged in shape from every prior pass; what
+changed is that it is now measured rather than labelled.
+[`evidence/pi-licence-column-census.2026-10-14-p206.tsv`](../evidence/pi-licence-column-census.2026-10-14-p206.tsv).
+
+### 🔴 `25` of the `281` came back with no determinate family, and all `25` were the instrument
+
+| # | what the body was wearing | p205 said | truth | measured on |
+|---|---|---|---|---|
+| `D1` | a **markdown heading** — `### GNU GENERAL PUBLIC LICENSE` does not match `^[[:space:]]*` | `GPL-unversioned` | `GPL-3.0` | [`cerpus/Edlib`](https://github.com/cerpus/Edlib), [`idempiere/idempiere`](https://github.com/idempiere/idempiere) |
+| `D2` | a `====` **underline** pushing `Version 3` to line `4`; the window was `3` lines | `GPL-unversioned` | `GPL-3.0` | `13` Moodle-plugin rows |
+| `D3` | 🆕 **the licence is not in English** — `LICENÇA PÚBLICA GERAL AFFERO GNU` | `UNRECOGNISED` | `AGPL-3.0` | [`portabilis/i-diario`](https://github.com/portabilis/i-diario) + `pre-matricula-digital` |
+| `D4` | 🆕 **`Elastic License 2.0`**, absent from the table — and **non-OSI** | `UNRECOGNISED` | `NON-OSI-Elastic-2.0` | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) |
+| `D5` | a **narrative** grant with no title line | `UNRECOGNISED` | `AGPL-3.0-STATEMENT` | [`ankitects/anki`](https://github.com/ankitects/anki) |
+| `D6` | **`19` bytes** — `License: GNU GPL V3`. A reference, not an instrument | `UNRECOGNISED` | `GPL-3.0-STATEMENT` | [`frappe/education`](https://github.com/frappe/education) |
+| `D8` | 🆕 a **UTF-8 BOM** between `^` and the title. `EF BB BF` is not `[[:space:]]` | `GPL-unversioned` | `GPL-2.0` / `GPL-3.0` | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) |
+| `D10` | 🆕 a **wrapped prose line** at column `0` — `GNU General Public License for more details.` | `GPL-unversioned` | `GPL-3.0-STATEMENT` | [`pawtograder/platform`](https://github.com/pawtograder/platform) |
+
+🟢 **Fixed and shipped with an offline regression suite:
+[`compose/code/p206-classifier-language-shape/`](../compose/code/p206-classifier-language-shape/),
+`20`/`20` on `20` real bodies** — the eight defect cases, the four new fixtures, and all five of
+p205's controls, which must not regress and do not.
+[`evidence/instrument-delta.2026-10-14-p206.tsv`](../evidence/instrument-delta.2026-10-14-p206.tsv).
+
+### 🔴 `D7` is p206's own error, recorded because the next pass will make it
+
+🔴 **p206 added `NOTICE` to the body path list and got
+[`foradian/fedena`](https://github.com/foradian/fedena) back as a grant.** 🟢 **An Apache
+`NOTICE` is an attribution file.** It carries a grant *statement* and belongs in p204's **channel**
+taxonomy beside `package.json` — 🔴 **it is not a licence body and must not be probed as one.**
+🟢 **`NOTICE` was removed again; the body path list is `22` forms, not `23`.** 🔵 **This is the
+third time this KB has confused a channel with a body, and each time the cost was one wrong row
+that a control caught.**
+
+### 🟢 `BOM` and accent folding are the same bug in two alphabets
+
+🔵 **[`compose/code/p288-agpl-casefold/`](../compose/code/p288-agpl-casefold/) recorded, long ago,
+that this KB's matchers are byte-oriented.** 🔴 **p206 met it twice more in one pass: `LICENÇA`
+does not case-fold under `tr`, and a UTF-8 BOM is not whitespace under `grep`.** 🟢 **Both are now
+handled in one place, `_fold()`, before any match runs** — and the folding is done with
+per-character substitutions, 🔴 **never a bracket class**, because `[Çç]` would match the
+individual *bytes* of a UTF-8 sequence and corrupt the body instead of folding it.
+
+### 🔵 What a studio takes from this page, unchanged by the instrument work
+
+🔴 **`14` of `281` foundation-tier rows carry no grant at `22` path forms.** 🟢 Unchanged in
+substance from p204's `56`-row census, and the two populations agree where they overlap. 🔴 **The
+default for an ungranted repository is exclusive copyright: no permission to copy, modify or
+redistribute.** 🟢 **The `3` `-STATEMENT` and `1` `CC-BY-4.0-STATEMENT` rows are a softer case** —
+the family is named, the instrument is not shipped — 🟡 **a `PoC` risk a client can accept
+knowingly, with a one-line remedy upstream.**
+
 ## Pass 205 — 2026-10-14 — THE INSTRUMENT WAS WRONG ABOUT THREE LICENCE FAMILIES, AND `HEAD` RETIRES THE DEFAULT-BRANCH PROBLEM
 
 ### 🔴 `p203`'s classifier calls `GPL-3.0` and `MPL-2.0` *"`AGPL-3.0`"* — measured, fixed, shipped

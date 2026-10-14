@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 206 — 2026-10-14 — LANGUAGE IS AN AXIS, NOT A GAP; AND AN AUDIT'S FALSE-POSITIVE RATE IS A PROPERTY OF THE INDUSTRY
+
+### 🆕 🟢 `T206-1` — the same blind spot was found in two unrelated channels in one pass
+
+🔴 **p205 left `ACTION PJ` open on a suspicion: that Brazil's missing national AI-education policy
+was a query-LANGUAGE problem rather than an absence.** 🟢 **It fires.** A Portuguese query returns
+**four** dated 2026 instruments from MEC — see [`intel/market.md`](market.md) LATAM.
+
+🟢 **Independently, and without looking for it, `ACTION PI`'s licence sweep found the SAME
+property in the licence channel:** two Brazilian municipal school systems ship the AGPL **in
+Portuguese**, and every classifier this KB has shipped returned 🔴 `UNRECOGNISED` on them.
+
+🔵 **Two instruments that share nothing — a search channel and a `grep` over licence bodies —
+failed on the same axis in the same pass.** 🟢 **So language is not a coverage gap to be patched
+where it is noticed. It is a dimension every channel has to be tested along**, and the test is
+cheap: run the query, or the matcher, in the language the artefact is actually written in.
+
+🔴 **Operationally this retires a phrasing this KB has used for `200`+ passes.** 🟢 *"Nothing
+found for X"* is only honest when the probe was run in X's language. 🔵 **p205 established
+`per-country beats pan-regional` for APAC. p206 establishes `per-language beats English-only`,
+and the second subsumes the first.**
+
+### 🆕 🔴 `T206-2` — an automated licence audit in THIS industry has a ~`100`% false-positive rate
+
+🟢 **Measured twice, on two methods:**
+
+| pass | method | mismatches reported | true positives | false positives |
+|---|---|---|---|---|
+| p205 | regex over the licence column | `3` | 🔴 **`0`** | 🟢 `3` |
+| p206 | table-row extraction over `281` repos, blobs re-read at `HEAD` | `3` | 🔴 **`0`** | 🟢 `3` |
+
+🔵 **The false positives are not noise — each is a SHAPE this industry produces and others do
+not:** 🔴 a **university named MIT** in a row's prose *(`sdv-dev/SDV`, p205)*; 🔴 a **relicensed
+corpus** whose old family is correctly still printed with its version range
+*(`UD_Spanish-AnCora`)*; 🔴 a **vendored third-party file** whose grant differs from the repo's
+*(`foradian/fedena`'s `fckeditor`)*; 🔴 a **row the KB had already corrected** behind a
+`<!--corrected-->` marker *(`untis4j`)*.
+
+🟢 **The rule, and it is now evidence-backed rather than cautionary: an automated licence audit
+must adjudicate against the published CELL and its prose before it reports a single mismatch.**
+🔴 **An audit that reports blob-vs-token disagreement is measuring its own extraction.**
+
+### 🆕 🟢 `T206-3` — the licence column was right and the READER had eight defects
+
+🔴 **`ACTION PI` was written to find a wrong column. It found a wrong instrument.** `0` of `281`
+published cells change family; `25` of `281` came back with no determinate family at all.
+
+🔵 **The defects cluster into two families that have nothing to do with licensing:**
+
+| family | defects | what it actually is |
+|---|---|---|
+| **the title line is DRESSED** | `D1` markdown heading · `D2` underline pushing the version out of the window · `D8` UTF-8 BOM · `D10` wrapped prose at column `0` | 🔴 **a text-parsing problem**, and it cost `16` rows their GPL **version** |
+| **the title line is ABSENT or FOREIGN** | `D3` Portuguese · `D5` narrative grant · `D6` `19`-byte statement · `D4` a family not in the table | 🔴 **a corpus-coverage problem** |
+
+🔴 **The `16` version losses are the commercially load-bearing half.** `GPL-2.0` has no patent
+grant, no inbound `Apache-2.0` compatibility and no anti-tivoization clause; `GPL-3.0` has all
+three. 🟢 **A studio reading `GPL-unversioned` and assuming the friendlier one has assumed a
+patent grant that does not exist.**
+
+🟢 **`20`/`20` offline, on real bodies:**
+[`compose/code/p206-classifier-language-shape/`](../compose/code/p206-classifier-language-shape/).
+
+### 🆕 🔴 `T206-4` — `Elastic-2.0` returning `UNRECOGNISED` is the worst failure mode a licence reader has
+
+🟢 **[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) is a higher-education
+student-success CRM under the `Elastic License 2.0`** — 🔴 **source-available, NOT open source.**
+🔴 **The instrument returned `UNRECOGNISED`**, which reads to a hurried reader as *"unknown,
+probably fine"*.
+
+🔵 **Rank the failure modes by what they cost:** 🟢 a **wrong permissive family** is caught by
+counsel; 🟡 a **lost version** costs a patent grant; 🔴 **a silent non-OSI family is the one that
+ships proprietary terms into a client deliverable under the word "open source".** 🟢 **p206 adds
+`NON-OSI-Elastic-2.0` beside the existing `NON-OSI-BSL`, `NON-OSI-SSPL` and `NON-OSI-faircode`,
+and the lesson is that this list must be extended on sight, not on need.**
+
+### 🟢 `T206-5` — the discovery channel is saturated for a third measurement, now in three languages
+
+🟢 **Eight queries, four of them non-English or non-English-targeted. Every verified candidate was
+already on the shelf. `0` new agent rows, `0` corrections.** 🔵 **p203 found saturation, p204
+re-measured it, and p206 fails to break it with the one instrument — language — that this same
+pass proved works everywhere else.** 🔴 **That asymmetry is the finding:** language unlocked the
+POLICY channel and the LICENCE channel, and did **not** unlock the agent-discovery channel.
+
+🟢 **The honest reading: GitHub's own discovery surface is already language-agnostic** — the
+Chinese-language [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release)
+*(`MIT`, `64`★, 人教版-aligned, APAC)* and
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) *(`AGPL-3.0`, `1.3`k★)* were
+both already here, found by English queries. 🔴 **It is PROSE channels — government sites,
+policy reporting, licence bodies — that are English-gated**, because a human wrote them in one
+language and no index translated them.
+
+### 🔴 `T206-6` — the search channel asserted two licences this pass, and was wrong about one of them
+
+🟢 **Measured, because it is the channel a studio is most tempted to trust:** a search summary
+called [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) *"proprietary"*; its
+`LICENSE` is 🟢 **`Apache-2.0`, `11 338` B**. The same channel presented
+[`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) as an independent project; it is 🔴 **a
+`0`★ fork** of [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) with a
+byte-identical `1 073` B `LICENSE`. 🔵 **Both were caught by one blob read each. Neither would
+have been caught by reading more summaries.**
+
+### 🔴 `T206-7` — `ACTION PD` / `Gap 241` / `Gap 242`: re-tested in one call, unchanged
+
+🟢 **`curl example.com` → `000`.** 🔴 **No general web egress. The EU AI Act's text, `mext.go.jp`
+and `unu.edu` remain unreachable, and all three falsifiers remain correct and undischargeable from
+this network profile.** 🔵 **Re-priced honestly for the sixth time: these need a session with
+general egress, not another pass.** 🟢 **One call, not three probes — the re-test shape p205
+prescribed, and it worked.**
+[`evidence/channel-egress.2026-10-14-p206.tsv`](../evidence/channel-egress.2026-10-14-p206.tsv).
+
+### 🟢 Trends that are about the industry rather than this KB
+
+🔴 **`T206-8` — the binding deadline moved and the product window is `14` months.** The EU
+`Digital Omnibus` pushed Annex III high-risk systems to **`2 December 2027`**, while **Article 50
+transparency and Article 4 AI literacy are not delayed** and the **education emotion-recognition
+ban has been in force since `2 February 2025`**. 🔵 **Build switchable, not retrofittable.**
+
+🆕 🔴 **`T206-9` — a mandate without teacher readiness fails, and there is now a national-scale
+data point.** South Korea's **AI Basic Act entered force `22 January 2026`** and names
+**education** as *high-impact*; its mandatory AI textbooks reached **under `30`% adoption by
+March** and were **stripped of official status by the National Assembly in August**. 🟡
+Single-sourced and flagged as such. 🟢 **Against it: Singapore made teacher AI-literacy module `1`
+compulsory BEFORE pushing tools at classrooms.** 🔵 **Same region, opposite sequencing, opposite
+outcome.**
+
+🟢 **`T206-10` — the policy layer has started naming the product shape, and in three regions it
+names the SAME shape.** EMEA Annex III names assessment, admissions and proctoring. Brazil's MEC
+referencial names human supervision, transparency and **student authorship**. North America's NYC
+guidance is a permitted / cautioned / prohibited taxonomy. 🔵 **All three describe a policy-aware
+layer over existing teaching tools, and none of them describes a tutor.** 🔴 **The open-source
+shelf this KB tracks is overwhelmingly tutors.**
+
 ## Pass 205 — 2026-10-14 — THE "BLOCKED SITE" GAPS ARE ONE CHANNEL PROPERTY, AND A NOVELTY RATE CAN LIE
 
 ### 🔴 `T205-1` — novelty is not value in a star-sorted channel

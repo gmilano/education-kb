@@ -1,0 +1,4 @@
+repo	audit_claimed	kb_actually_publishes	cite	verdict
+UniversalDependencies/UD_Spanish-AnCora	published GPL-3.0, blob CC-BY-4.0	CC BY 4.0 (r2.9+) with GPL-3.0 flagged for <= r2.8	repos/trending.md:11243	AUDIT WRONG - the row already carries the relicensing P609 found
+untisapi/untis4j	published GPL-3.0, blob LGPL-3.0	LGPL-3.0, with GPL-3.0 already struck through a <!--corrected--> marker	repos/trending.md:12514	AUDIT WRONG - the KB corrected this before p206 existed
+foradian/fedena	published GPL-2.0, blob Apache-2.0 in NOTICE	Apache-2.0 declared in NOTICE; the GPL-2.0 cell describes a VENDORED fckeditor file	repos/foundations.md:843 and agents/top.md:824	AUDIT WRONG - two different objects, both published correctly

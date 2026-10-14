@@ -1,0 +1,6 @@
+host	method	http	verdict
+example.com	curl	000	THE CONTROL. No general web egress. Unchanged from p205.
+eur-lex.europa.eu	curl	000	ACTION PD still not dischargeable from this network profile
+www.mext.go.jp	curl	000	Gap 241 / Gap 242 still not dischargeable
+raw.githubusercontent.com	curl	301	REACHABLE - every licence blob in this pass was read here
+github.com	curl	400	blocked on curl; renders on WebFetch (p205's finding, re-confirmed on 5 repo pages)

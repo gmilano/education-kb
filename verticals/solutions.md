@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 206 — 2026-10-14 — THE PLATFORM TIER, RE-READ FROM `15` BLOBS: THERE ARE EXACTLY `4` PERMISSIVE LMSs
+
+### 🟢 Every row below was read from its own `LICENSE` blob at `HEAD` this pass. No secondary sources
+
+| platform | repo | 🟢 grant, first-hand | bytes | what it is |
+|---|---|---|---|---|
+| 🟢 **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | `10 982` | 🆕 **the ONLY full LMS on this shelf under a permissive grant.** Java, modular course editor, universities and corporates. Switzerland → **EMEA** |
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | `11 120` | Apache-2.0 **modified for university IP**; OSI-approved and permissive. → **North America** |
+| 🟢 **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | `1 097` | **offline-first** learning platform — the low-connectivity answer. Global, heavy LATAM/Africa deployment |
+| 🟢 **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **`MIT`** | `1 079` | course-catalogue / marketing front end for Open edX. France → **EMEA** |
+| 🟡 **OpenEduCat** | [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **`LGPL-3.0`** | `8 241` | the **Odoo analogue for education**: admissions, LMS, SIS, parent app. India → **APAC**. 🟢 LGPL permits linking from closed code |
+| 🟡 **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 **`LGPL-3.0`** | `7 652` | virtual classroom / conferencing. → **North America** |
+| 🔴 **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** | `35 147` | the installed base. 🔴 **Plugins are derivative works: a Moodle plugin is GPL** |
+| 🔴 **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **`GPL-3.0`** | `35 147` | strong Spanish-speaking and LATAM install base |
+| 🔴 **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **`GPL-3.0`** | `35 146` | interactive content, embedded in most of the LMSs above |
+| 🔴 **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | `35 136` | 🔴 **network copyleft: a hosted modification must be published** |
+| 🔴 **Tutor** | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`AGPL-3.0`** | `34 523` | the Docker distribution of Open edX; **same reciprocity** |
+| 🔴 **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`AGPL-3.0`** | `34 520` | Community Edition. 🔴 Cloud features remain proprietary |
+| 🔴 **Frappe Learning** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** | `33 893` | 🔴 **A widely-repeated comparison this pass called it *"MIT, self-hosted data ownership"*. The blob says `AGPL-3.0`.** India → **APAC** |
+| 🟡 **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🟡 **`GPL-3.0-STATEMENT`** | **`19`** | SIS on Frappe. 🔴 **Nineteen bytes: `License: GNU GPL V3`. The family is named, the instrument is not shipped** |
+| 🔴 **Forma LMS** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **NO GRANT at `9` path forms** | — | 🔴 **Three comparison articles this pass called it `Apache-2.0`, `GPL` and `LGPL` respectively. The repository carries no licence body at all** |
+
+### 🔴 The two corrections that cost money, and both were secondary sources, not this KB
+
+🔴 **`frappe/lms` is `AGPL-3.0`, not `MIT`.** 🔵 A studio that picked it on the strength of the
+comparison article would have built a hosted product on a **network-copyleft** base and owed its
+modifications back. 🟢 **`33 893` B of body, read this pass.**
+
+🔴 **`formalms/formalms` has no licence body.** 🔵 Three articles, three different families, and
+the repository settles none of them — 🔴 **the default is exclusive copyright.** 🟢 **This is the
+`22`%-ungranted problem arriving in the PLATFORM tier**, where it is much more expensive than in
+the agent tier: nobody prototypes an LMS and throws it away.
+
+### 🆕 🟢 The sourcing rule this tier now has
+
+🟢 **`4` of `15` platforms are permissive: `OpenOLAT` (`Apache-2.0`), `Sakai` (`ECL-2.0`),
+`Kolibri` (`MIT`), `Richie` (`MIT`).** 🔴 **`8` are `GPL`/`AGPL` copyleft, `2` are `LGPL`, and
+`1` has no grant.**
+
+🔵 **So the decision is made at the base, not at the AI layer:** 🟢 **if the deliverable is a
+hosted, closed product, the base is `OpenOLAT` or `Sakai`** — 🔴 **anything built by modifying
+Open edX, Tutor, Canvas or Frappe Learning and then hosted triggers `AGPL` publication.** 🟢 **If
+the deliverable is a plugin or an LTI tool, the base does not matter**: `instructure/ims-lti`
+(`MIT`) launches an external tool from inside any compliant LMS **without touching platform
+source**, which is the one route that avoids reciprocity entirely.
+
+### 🔴 The LATAM school-system tier, re-read in its own language
+
+🟢 **[`portabilis/i-diario`](https://github.com/portabilis/i-diario)** *(diário de classe)* and
+🟢 **[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital)**
+*(pre-enrolment)* — Brazilian **municipal** school-management systems, deployed by secretarias de
+educação. 🔴 **Both `AGPL-3.0`, `35 326` B each.** 🆕 **Their grant is written in Portuguese
+(`LICENÇA PÚBLICA GERAL AFFERO GNU`), which is why every prior pass of this KB read them as
+`UNRECOGNISED`.** 🔵 **They are the closest thing LATAM has to an `OpenSIS`, they are real
+municipal infrastructure, and a SaaS layer over either of them must be published.**
+
 ## Pass 205 — 2026-10-14 — `moodle` IS `GPL-3.0` AND THIS PASS NEARLY PUBLISHED OTHERWISE
 
 ### 🔴 The vertical shelf's biggest row was a false negative, and the cause was a path list
