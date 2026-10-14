@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved: `4` permissive rows entered the shelf and NONE of them is new to the world. All
+four were already inside channels this KB had read and closed — and three of them inside a
+population it published YESTERDAY as *"absence holds"*.**
+
+🔴 **The week's real news is a correction to p185's own correction.** p185 retired *"the channel is
+exhausted"* and replaced it with *"a channel is a page plus a sort order"*. 🟢 **p186 finds the same
+error one level down: an ABSENCE is a measurement, and it carries the shape of the probe that made
+it.** 🔵 **`Gap 423`: every *"no grant"* on these eight pages is scoped to the probe that looked, and
+this KB's probe looked at `LICENSE`-cased paths and at README prose. It never looked at the
+ecosystem manifest, and it never looked at `License`.**
+
+🟢 **Entering the shelf:**
+
+- 🆕 🟢 **[`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool)
+  — `MIT`, North America.** An `LTI` tool reference implementation from **Carnegie Mellon's Simon
+  Initiative**: Gleam, `docker compose up`, register-with-your-LMS walkthrough. 🔴 **The grant is
+  `"license": "MIT"` in `package.json` and there is no licence file at all.** 🟡 `"version": "0.0.1"`
+  and *"example"* in the name — a handshake reference, not a product.
+- 🆕 🟢 **[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) — `MIT`, EMEA.** A
+  **read-only** `MCP` server over **Sisu (Funidata)**, the SIS the Finnish universities run
+  *(`sisu.tuni.fi` is the README's own example)*. Tools cover study rights, attainments, grades,
+  enrolments, timetable, study plan and the course catalogue. 🟢 **Read-only is a stated design
+  property, not a configuration** — which is exactly what makes a student-record integration
+  quotable. 🔴 Grant in `package.json` only.
+- 🆕 🟢 **[`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper)
+  — `MIT`, `1 079` B full text.** 🔴 **Recorded as grant-absent for one reason: the file is called
+  `License`.** 🔵 The channel is case-sensitive and this KB already knew it — p185 learned it on
+  `readme.md` vs `README.md` and did not carry the lesson across to licence paths.
+- 🆕 🟡 **[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) —
+  `MIT`, APAC.** A K-`1`–`9` RAG tutor against the 人教版 (PEP) curriculum, shipping Android `APK`,
+  iOS `IPA` and a web build. 🔴 **p185 closed it as `NO-badge-only`; the badge was true.** 🔴 **It is
+  a RELEASE repo — the grant covers what is in the tree, and the tree is mostly packaged builds.**
+- 🆕 🟢 **[`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills)
+  — `Apache-2.0`, APAC.** 🟢 **p185's Trend `1` *(tutoring shipped as an agent SKILL)* gains its
+  first REGIONALLY PROFILED instance:** Anthropic's K12 Teacher Skills workflow design, re-cut
+  against Chinese curriculum standards, with *Shanghai Primary Information Technology* as the first
+  complete profile. 🟢 Model-agnostic by explicit statement.
+- 🆕 🟢 **[`devissaputra/adaptive_socratic_tutor`](https://github.com/devissaputra/adaptive_socratic_tutor)
+  — `MIT`.** An inspectable research prototype for adaptive Socratic tutoring and hint selection.
+- 🆕 🟡 **[`Faran70177784/edutune-ai`](https://github.com/Faran70177784/edutune-ai) — `MIT`.**
+  Dataset engineering → QLoRA prep → inference → evaluation over `Mistral-7B-Instruct-v0.3`.
+  🔴 **Its own README says the environment is CPU-only and the project blocks model loading there.**
+
+🔴 **Entering the DO-NOT-USE column, both because of what the licence FILE says:**
+
+- 🔴 **[`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) — `842` B, *"All rights
+  reserved … no other rights are granted"*.** 🔵 It copies `MIT`'s warranty disclaimer, so a
+  grant-text matcher flags it as permissive. **It is not.**
+- 🔴 **[`MoKangMedical/digital-sage`](https://github.com/MoKangMedical/digital-sage) — `46` B: a
+  licence TITLE, a holder, and NO permission clause.** 🔵 An incomplete grant, one commit from fixed.
+
+🟢 **`ACTION MI` — the re-sort at scale, and limb `1` FIRES decisively.**
+
+| topic page, `s=updated` | rendered | page says exist | absent from this KB's census |
+|---|---|---|---|
+| 🟢 `topics/education-ai` | `20` | `69` | 🔴 **`8`** |
+| 🟢 `topics/autograding` | `20` | `94` | 🔴 **`10`** |
+| 🟢 `topics/intelligent-tutoring-system` | `20` | `39` | 🔴 **`4`** |
+| **total** | **`60`** | — | 🔴 **`22` (`37`%)** |
+
+🔴 **Limb `1` asked for `≥5` absent rows to retire the `79`% exhaustion figure. It got `22` on three
+pages.** 🟢 **The `79`% figure is RETIRED.** 🔵 And the `autograding` page is the sharpest case: p185
+read it at stars-descending and the KB holds its whole top shelf *(`Artemis`, `Submitty`, `Autolab`,
+`INGInious`, `otter-grader`, `classroom50`)*. **Sorted by recency, `10` of `20` rows are new to the
+census** — the long tail of a well-covered topic is where the recently-updated rows live.
+
+🟢 **`ACTION MK` — DISCHARGED, LIMB `2` FIRED. `0` further real grants from the suppressed lines.**
+Of `61` population rows only `3` had any line suppressed, and all `3` were already correctly
+classified *(`Omni-Edu`, the known casualty; `learning-tutor`, a genuine dependency inventory;
+`AI_Tutor_Release`, a genuine badge)*. 🟢 **Keyword suppression is NOT retired.** 🔴 **What is
+retired is using a badge verdict to close a row.**
+Evidence: [`evidence/noise-cost.2026-10-14-p186.tsv`](../evidence/noise-cost.2026-10-14-p186.tsv).
+
 ## Pass 185 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

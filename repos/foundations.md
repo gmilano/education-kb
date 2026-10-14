@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **Two foundational rows enter, and the pass's two pre-registered measurements come back with
+OPPOSITE verdicts: the lecture-capture seam is real and named, and the `pt-BR` essay-scoring seam is
+not a seam at all.**
+
+### 🟢 `ACTION MM` — the `opencast` provider interface EXISTS, and it has a name
+
+🔵 **p185 placed [`opencast/opencast`](https://github.com/opencast/opencast) and pre-registered
+`ACTION MM` to find out whether an agent attaches to a documented provider interface or has to fork.
+Limb `1` FIRES.**
+
+🟢 **Read this pass, in full:
+[`modules/transcription-service-api/src/main/java/org/opencastproject/transcription/api/TranscriptionService.java`](https://github.com/opencast/opencast/blob/develop/modules/transcription-service-api/src/main/java/org/opencastproject/transcription/api/TranscriptionService.java)
+— `2 532` B, `ECL-2.0` header *(«The Apereo Foundation licenses this file to you under the
+Educational Community License, Version 2.0»)*.**
+
+| the contract | `7` methods |
+|---|---|
+| 🟢 start | `Job startTranscription(String mpId, Track track)` and an overload taking `String... args` |
+| 🟢 collect | `MediaPackageElement getGeneratedTranscription(String mpId, String jobId, MediaPackageElement.Type type)` |
+| 🟢 callbacks | `void transcriptionDone(String mpId, Object results)` / `void transcriptionError(String mpId, Object results)` |
+| 🟢 declare | `String getLanguage()` |
+| 🟢 hand off | `Map<String, Object> getReturnValues(String mpId, String jobId)` |
+
+🟢 **This is a PUBLIC `api` module, not an internal class.** 🔵 The interface is explicitly designed
+for *"asynchronous external automated transcription"* with a callback — **which is the shape an agent
+wants**: submit the track, return a job, be called back. 🟢 **A studio implements one Java interface
+with `7` methods; it does not fork `230` modules.** 🔵 And `getReturnValues` exists precisely so a
+provider can pass more than the transcript element to the attach handler — the hook for
+confidence scores, diarisation, or an agent's own metadata.
+
+🔴 **And one limit that is a DEPLOYMENT fact, not a code smell: `getLanguage()` returns a single
+`String`.** 🔴 **One service instance declares ONE language.** 🟢 **For a bilingual or trilingual
+institution — which is most of LATAM and much of EMEA — the pattern is one registered provider
+instance per language, with the workflow routing on the series' language, NOT one polyglot
+provider.** 🔵 **Price that as configuration multiplied by languages, in the first conversation.**
+
+🟡 **`ACTION MM` is DISCHARGED on the seam and NOT RUN on the full table list.** The second limb
+asked for `opencast`'s remaining `120` entity-bearing files. 🔴 **There is no tree listing available
+here** *(`api.github.com` `403`, `codeload.github.com` `403` — re-measured)*, so files are reachable
+only at paths a document names. 🔵 **`Gap 422`, and `ACTION MP` carries it.**
+
+### 🔴 `ACTION ML` — the `pt-BR` essay chain is TRAINING, and limb `2` fires hard
+
+🔵 **`Gap 372` is this KB's longest-standing capability gap. p185 closed its PERMISSIVE half and
+pre-registered `ACTION ML` to settle the question that actually decides an engagement: can
+`writeAlizer`'s existing models SCORE a Brazilian essay, or must a studio train?**
+
+🟢 **Both sides read this pass over the raw channel:**
+
+| side | what it actually emits | licence |
+|---|---|---|
+| 🟢 [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) | 🟢 **`5` ANALYTIC competences — `c1`…`c5` — plus a `score`.** Read from the README's own worked example: `c5` takes `40`, `80`, `120`, `160`, `200`; `score` takes `440`…`880`. 🔵 **That is the ENEM rubric: five competences at `0`–`200` in steps of `40`, summing to `0`–`1000`** | 🟢 **`MIT`** *(`1 114` B)* |
+| 🔴 [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) `v1.7.4` | 🔴 **ONE target: *"Overall writing quality"*.** `rb_mod3all` returns three GENRE-specific predictions *(narrative / expository / persuasive)* and their mean, `pred_rb_mod3all_mean`. 🔴 **There is no analytic-competence output of any kind** | 🟢 **`MIT`** *(`47` B stub; grant is `License: MIT + file LICENSE` in `DESCRIPTION`)* |
+
+🔴 **LIMB `2` FIRES, on two independent grounds, and either alone is decisive:**
+
+1. 🔴 **The targets do not correspond.** `5` analytic competences on a `0`–`200` ordinal scale cannot
+   be read off `1` holistic quality estimate. 🔵 **The genre triple is not a rubric** — narrative /
+   expository / persuasive are text TYPES, and ENEM `c1`…`c5` are *formal register*, *grasp of the
+   prompt*, *argumentation*, *cohesion* and *intervention proposal*. 🔴 **There is no mapping to
+   measure; there is an absence of one.**
+2. 🔴 **The models are English-trained.** `DESCRIPTION` gives `Language: en-US`, the input contract
+   is `1 316` `RB.*` English ReaderBench features *(measured p185)*, and the model provenance is
+   Keller-Margulis et al. and Mercer & Cannon — US and Canadian school writing.
+
+🟢 **So the honest recipe is TRAINING on `essay-br`, and Pattern `29` is amended to say exactly
+that.** 🔵 **What a studio actually has, permissively:** an `MIT` labelled `pt-BR` corpus with a
+five-competence rubric, and an `Apache-2.0` feature extractor
+*([`readerbench/readerbench-java`](https://github.com/readerbench/readerbench-java), `10 758` B
+`LICENSE.txt`)*. 🔴 **What it does NOT have is a `pt` model, and it cannot have one by Friday.**
+
+🔴 **`Gap 424`, declared rather than glossed: ReaderBench's PORTUGUESE support is NOT established by
+this pass.** Its README describes the framework without naming supported languages, and `3` probed
+language-resource paths returned `404`. 🔵 **This matters more than the model gap: if the extractor
+has no `pt` pipeline, even the training path is blocked, and the recipe becomes *extract features
+with something else*.** 🟢 **`ACTION MQ` settles it, and it is the single highest-value probe
+outstanding on this shelf** — it decides whether `Gap 372` closes with a training project or reopens
+as a feature-engineering project.
+
+### 🟢 Two rows entering FOUNDATIONS from the recovery pass
+
+| row | licence | layer it fills |
+|---|---|---|
+| 🆕 🟢 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🟢 **`MIT`** *(`package.json`; no licence file)* | 🟢 **the `LTI` handshake, from a credible US holder.** Carnegie Mellon's Simon Initiative; Gleam, `docker compose up`, register-with-your-LMS walkthrough. 🔵 This shelf had `topics/lti` rows but no runnable reference tool whose provenance a US university would recognise |
+| 🆕 🟢 [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** *(`package.json`; no licence file)* | 🟢 **a real SIS exposed as agent TOOLS, read-only** — Sisu / Funidata, the Finnish university SIS. Study rights, attainments, grades, enrolments, timetable, study plan, catalogue |
+
+🔵 **Why `sisu-mcp` matters out of proportion to its size:** every student-record integration on this
+shelf so far has been *build an adapter against an SIS API*. 🟢 **This is the first row where the
+student record is already a tool surface an agent can call, and where READ-ONLY is a property of the
+server rather than a promise in a statement of work.** 🔴 **It is one vendor's SIS and `0`★ — read it
+as a design to copy, not a dependency to adopt.**
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **Three foundational rows enter, and together they close two things this page has carried as

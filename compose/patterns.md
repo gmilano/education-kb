@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **Two new patterns and three amendments. Every repository named below had its licence read over
+the raw channel during this pass, and two of the amendments are REPAIRS to steps p185 published as
+complete.**
+
+### 🆕 🟢 Pattern `31` — the read-only student record as agent tools, with the override that survives
+
+🔵 **The seam [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) opened: a real
+university SIS exposed as `MCP` tools, read-only by design rather than by configuration.** 🟢 **This
+is the first pattern on this shelf where the agent reads the student record WITHOUT a bespoke
+adapter, and where *"it cannot write"* is a property of the server.**
+
+| step | component | licence | the seam, as measured |
+|---|---|---|---|
+| `1` | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** *(`package.json`, `999` B — 🔴 no licence file)* | `sisu_connect` / `sisu_status` / `sisu_disconnect` for the session; `sisu_studies`, `sisu_attainments` for study status and grades; enrolments, timetable, plan, catalogue. 🟢 **READ-ONLY, stated** |
+| `2` | [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🟢 **`MIT`** *(`package.json`, `1 005` B)* | 🟢 the `LTI` handshake, so the agent launches FROM the LMS with the institution's identity rather than beside it. Gleam, `docker compose up` |
+| `3` | audit of every agent turn | 🟢 **`Apache-2.0`** | 🟢 **adopt `dotty-tutor`'s `prompt_*` cluster AS IT STANDS** — `prompt_revisions` *(`9` cols)*, `prompt_heads` *(`2`)*, `prompt_release_events` *(`7`)*. `ACTION MJ` verified the FKs carry **no `ondelete`**, so a released prompt cannot be deleted out from under its release event |
+| `4` | the human override | 🔴 **fix before adopting** | 🔴 **do NOT copy `teacher_review_events` as written.** `class_id` and `assignment_id` are `ondelete="CASCADE"`, so deleting a class deletes `corrected_assessment` — the teacher's override of the machine. 🟢 **Change both to `RESTRICT` and assert it with a LIVE delete** |
+| `5` | mastery state | 🟢 **`MIT` / `Apache-2.0`** | 🔵 the knowledge-tracing cluster p185 told this KB to stop screening: [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) *(`446`★, `MIT`)*, [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) *(`312`★, `Apache-2.0`)* |
+
+🔴 **Price these three honestly.** `sisu-mcp` targets ONE SIS product *(Sisu, by Funidata, run by the
+Finnish universities)* at `0`★ and `v0.1.0` — **outside the Nordics it is a design to copy, not a
+dependency**; the same `7`-tool surface over Banner, SITS or an Ed-Fi ODS is the actual build.
+`lti-example-tool` is `"version": "0.0.1"` and *"example"* by name — **a handshake reference, not a
+product.** 🟢 **And both grants live only in `package.json`, so the licence note in a client's SBOM
+has to say where it was read.**
+
+🔵 **Where it applies:** any engagement where an agent must answer *"how is this student doing?"*
+against the institution's own record. 🟢 **Its selling property is negative capability:** the agent
+demonstrably cannot change a grade, and that is checkable in the server, not asserted in a document.
+
+### 🆕 🟢 Pattern `32` — the licence due-diligence pass, as a priced work package
+
+🔵 **This pass recovered `4` permissive rows from repositories this KB had written off and moved `2`
+to DO-NOT-USE on text a byte count cannot distinguish. The sequence is repeatable and it is the
+cheapest value a studio can hand a client in week one.** 🟢 **Run it in this ORDER — each step exists
+because the one before it returned a wrong answer on a row this KB measured.**
+
+| step | probe | the row that forced it |
+|---|---|---|
+| `1` | **licence FILE, all three casings and `14` paths** — `LICENSE`, `License`, `license`, `LICENCE`, `COPYING`, `LICENSE.txt`, `docs/LICENSE`, … | 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) is `MIT` in a file named **`License`**. The channel is case-sensitive |
+| `2` | **READ the file; check BYTES against the licence it names** | 🔴 `MoKangMedical/digital-sage` serves `46` B: a title, a holder, **no permission clause**. 🔴 `ShuyunYuan/talentcoach` serves `842` B of *"all rights reserved"* that COPIES `MIT`'s warranty disclaimer |
+| `3` | **the ECOSYSTEM MANIFEST** — `package.json`, `DESCRIPTION`, `pyproject.toml`, `pom.xml`, `Cargo.toml`, `composer.json`, … | 🔴 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) and [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) have **no licence file at all**; the grant is one npm field. 🔵 `shmercer/writeAlizer` serves a `47` B `CRAN` stub with the grant in `DESCRIPTION` |
+| `4` | **bare-token scan of README headings** *(`P1049` limb `1`)* | 🔴 `tianshuo/trainingllm`'s entire grant is the word `MIT` under `## License` |
+| `5` | **whole-README identifier scan** *(`P1049` limb `2`)*, then read every hit | 🔴 `xiaolai/the-craft-of-selfteaching` grants in a Chinese sentence with no heading. 🟡 `ACTION MK` measured the `NOISE` filter's total cost at **`1` row**, already recovered — so keep the filter |
+| `6` | **treat a licence BADGE as a cue to re-run step `1`, never as a verdict** | 🔴 p185 closed `Zenglian990/AI_Tutor_Release` as *"badge-only"*. The repo serves `LICENSE`, `1 068` B, full `MIT` text. **The badge was true** |
+
+🟢 **Instruments, with tests, runnable offline:**
+[`compose/code/p1052-stale-absence`](code/p1052-stale-absence/README.md) *(steps `1`–`3`, `13`
+checks)* and [`compose/code/p1049-bare-token-grant`](code/p1049-bare-token-grant/README.md) *(steps
+`4`–`5`, plus `noise_cost.py` for step `5`'s calibration)*.
+
+🔴 **Two honest limits to quote with the work package.** A grant-text matcher flags proprietary
+licences that borrow `MIT`'s disclaimer, so **step `2` is a human read and cannot be automated
+away**. And the manifest limb reads `11` formats but **not** `Moodle` / `WordPress` plugin file
+headers, where a `GPL` grant conventionally lives — 🔵 **so for a plugin-shaped repository the
+absence is not yet established** *(`ACTION MO`)*.
+
+### 🟢 Pattern `28`, amendment — the lecture-capture pattern has a CLASS NAME, and a language limit
+
+🔵 **`ACTION MM` found the seam Pattern `28` step `3` described only as *"a workflow operation"*.**
+
+🟢 **Step `3` is now specific: implement
+`org.opencastproject.transcription.api.TranscriptionService`** — a public `api` module,
+`ECL-2.0`, `7` methods: `startTranscription` *(two overloads)*, `getGeneratedTranscription`,
+`transcriptionDone`, `transcriptionError`, `getLanguage`, `getReturnValues`. 🟢 **Asynchronous with
+callbacks, which is the shape an agent wants.** 🔵 **`getReturnValues` is the channel for anything
+beyond the transcript — confidence, diarisation, the agent's own metadata.**
+
+🆕 🔴 **And the amendment that changes a quote: `getLanguage()` returns a single `String`.** 🔴 **One
+registered provider instance declares ONE language.** 🟢 **So the pattern gains a step: register one
+provider instance per language and route on the series' language in the workflow.** 🔵 **For LATAM
+*(`pt-BR` + `es`)* and much of EMEA, multiply configuration and testing by the language count — and
+`opencast` still ships **`0`** `pt-BR`/`pt-PT` catalogues of `17`, so Brazil carries a translation
+project on top.
+
+### 🔴 Pattern `29`, amendment — the `pt-BR` path is TRAINING, and the blocker moved again
+
+🔵 **`ACTION ML` settled it, and limb `2` fired on two independent grounds.**
+
+🔴 **`essay-br` *(`MIT`)* labels `5` ANALYTIC ENEM competences `c1`…`c5` at `0`–`200` in steps of
+`40`, summing to `0`–`1000`.** 🔴 **`writeAlizer` *(`MIT`, `v1.7.4`)* predicts ONE holistic *"overall
+writing quality"* score — `rb_mod3all` returns three GENRE predictions *(narrative / expository /
+persuasive)* and their mean.** 🔵 **Genre is not rubric. There is no mapping to measure; there is an
+absence of one.** 🔴 **And `DESCRIPTION` says `Language: en-US`, over `1 316` English ReaderBench
+features.**
+
+🟢 **Pattern `29` is therefore re-priced as a TRAINING project, in this order:**
+
+| step | what | licence |
+|---|---|---|
+| `1` | 🔴 **FIRST, settle `Gap 424`** — does [`readerbench/readerbench-java`](https://github.com/readerbench/readerbench-java) have a PORTUGUESE pipeline? Its README names no languages; `3` probed resource paths `404` | 🟢 `Apache-2.0` *(`10 758` B)* |
+| `2a` | 🟢 **if yes** — extract `RB.*` features over `essay-br`, then train `5` ordinal models *(one per competence)* against the human labels. 🔵 `writeAlizer`'s importer and model-registry shape are the template, not its weights | 🟢 `MIT` + `Apache-2.0` |
+| `2b` | 🔴 **if no** — the blocker was never the model and never the licence: it is FEATURE EXTRACTION, and the recipe becomes a `pt` feature pipeline before any scoring work | — |
+| `3` | 🟢 report per-competence, never a single number. 🔵 ENEM is analytic; a holistic score is not a defensible output for a Brazilian assessment | — |
+| `4` | 🔴 carry Matta, Mercer & Keller-Margulis (`2023`) on BIAS in automated writing scores into the proposal. 🟢 **A `pt-BR` model trained on one corpus needs a fairness section before it needs a demo** | — |
+
+🔴 **State the honest headline to a client in one sentence: there is no open-source `pt-BR` essay
+scorer today, and whoever builds it owns the reference.** 🟢 **`ACTION MQ` is a one-probe question
+that decides whether the first week is training or feature engineering.**
+
+### 🟡 Pattern `24`, amendment — adopt HALF of `dotty-tutor`'s audit layer, and fix the other half first
+
+🔵 **p185 amended Pattern `24` to *"stop building and start adapting"* and pre-registered `ACTION MJ`
+to check column by column before the amendment counted as complete. 🟢 It was right to wait: the
+verdict SPLITS.**
+
+| cluster | columns | verdict |
+|---|---|---|
+| 🟢 **`prompt_revisions` + `prompt_heads` + `prompt_release_events`** | **`18`** | 🟢 **ADOPT AS IS.** `content_hash`, `body`, `base_revision_id`, `created_by`, `previewed`; and release events carrying `action`, `revision_id` and **`previous_revision_id`** — 🟢 **lineage, not just a timestamp.** All `3` FKs carry no `ondelete`, so the release record survives a revision delete |
+| 🔴 **`teacher_review_events`** | **`11`** | 🔴 **DO NOT ADOPT AS IS.** `class_id` → `learning_classes` and `assignment_id` → `assignments` are both `ondelete="CASCADE"`. 🔴 **Deleting the class deletes `corrected_assessment`, the human's override of the machine** |
+| 🔴 **`quality_review_*`** *(`12` tables)* | **not measured** | 🔴 **NOT RUN.** The store modules' paths appear in no document, `6` guessed paths `404`, and there is no tree listing here *(`Gap 422`)*. 🔵 **Treat the `12` tables as UNVERIFIED, not as present** |
+
+🟢 **The sentence this amendment exists to make sayable:** *"we adopted a permissive, published
+prompt-governance schema unchanged, and we repaired the one FK that would have deleted the teacher's
+override."* 🔵 **Both halves of that sentence are checkable, and the second half is the one a
+regulator cares about.**
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **Three new patterns and two amendments, and every repository named below had its licence read

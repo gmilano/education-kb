@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **Four permissive rows enter this page, and NOT ONE came from a new source. All four were
+already on channels this KB had read and closed — three sat inside a population this KB published
+yesterday as *"absence holds"*, and the fourth it published as *"a badge is not a licence"*.**
+
+🔴 **p185's headline was that a channel is a page PLUS a sort order. p186's is narrower and more
+expensive: an ABSENCE is a measurement, and a measurement made by one probe has the shape of that
+probe.** 🟢 **`P1052` re-probed `41` rows recorded as grant-absent and recovered `3`, all permissive.
+A fourth came from re-reading a row this KB had closed on a rule that was correct.**
+
+### 🟢 The four recoveries, with the grant as written
+
+| row | licence, verbatim | where it was hiding | what it is |
+|---|---|---|---|
+| 🆕 🟢 **[`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool)** | 🟢 **`MIT`** — `"license": "MIT"` in `package.json` *(`1 005` B)* | 🔴 **there is NO licence file in the tree.** The grant is the npm manifest field and nothing else | 🟢 a working **`LTI` tool reference implementation** — Gleam, `docker compose up`, register-with-your-LMS walkthrough |
+| 🆕 🟢 **[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp)** | 🟢 **`MIT`** — `"license": "MIT"` in `package.json` *(`999` B)* | 🔴 **no licence file in the tree** either | 🟢 **a READ-ONLY `MCP` server over a real university SIS** — Sisu / Funidata: study rights, attainments, grades, enrolments, timetable, study plan, catalogue |
+| 🆕 🟢 **[`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper)** | 🟢 **`MIT`** *(`1 079` B, full text, `Copyright (c) 2022 Open Spaced Repetition`)* | 🔴 **PATH CASING.** The file is named **`License`** — not `LICENSE`, not `LICENCE`, not `COPYING` | 🟢 the scheduling/automation companion to `fsrs4anki` *(`4.1`k★, already on this shelf)* |
+| 🆕 🟢 **[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release)** | 🟢 **`MIT`** *(`LICENSE`, `1 068` B, full text)* | 🔴 **p185 closed this row as `NO-badge-only`** and never re-probed the file | 🟡 a Chinese K-`1`–`9` RAG tutor against the 人教版 (PEP) curriculum, Android `APK` + iOS `IPA` + web |
+
+🔵 **The rule p185 applied to `AI_Tutor_Release` was right: a shields.io badge is a claim about a
+licence, not a licence.** 🔴 **The error was using it to CLOSE the row.** 🟢 **A licence badge is a
+CUE TO RE-PROBE.** Instrument and `13`-check test:
+[`compose/code/p1052-stale-absence`](../compose/code/p1052-stale-absence/README.md).
+Evidence: [`evidence/stale-absence.2026-10-14-p186.tsv`](../evidence/stale-absence.2026-10-14-p186.tsv).
+
+🟡 **Two honest qualifiers before a studio quotes these rows.** `lti-example-tool` is an **example**
+by name and by `"version": "0.0.1"` — it is a reference for the `LTI` handshake, not a product; its
+value is that it comes from the **Simon Initiative**, so the handshake is one a US university
+recognises. And `AI_Tutor_Release` is a **release** repository: the `MIT` grant covers the files
+present, and what is present is dominated by packaged builds. 🔴 **An `MIT` grant over a tree of
+binaries is not an `MIT` grant over the source that built them. Read the tree before promising a
+fork.**
+
+### 🆕 🟢 Rows entering from the `ACTION MI` re-sorts
+
+🟢 **`ACTION MI` fired limb `1` decisively** *(see [`trending.md`](trending.md))*. The rows it
+surfaced that belong on THIS page, licence read over the raw channel this pass:
+
+| row | licence | form | note |
+|---|---|---|---|
+| 🆕 🟢 [`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills) | 🟢 **`Apache-2.0`** *(`11 359` B, full text)* | 🟢 **agent SKILL set** | 🟢 **the agent-skill form with a REGIONAL CURRICULUM PROFILE** — adapts Anthropic's K12 Teacher Skills to Chinese curriculum standards; first complete profile is *Shanghai Primary Information Technology*. 🟢 **Explicitly model-agnostic** *(«不绑定 Claude、Codex、DeepSeek 或某一家模型»)* |
+| 🆕 🟢 [`devissaputra/adaptive_socratic_tutor`](https://github.com/devissaputra/adaptive_socratic_tutor) | 🟢 **`MIT`** *(`1 076` B)* | 🔵 research prototype | an inspectable prototype for adaptive Socratic tutoring and hint selection |
+| 🆕 🟡 [`Faran70177784/edutune-ai`](https://github.com/Faran70177784/edutune-ai) | 🟢 **`MIT`** *(`1 073` B)* | 🟡 platform demo | dataset engineering → QLoRA prep → inference → evaluation over `Mistral-7B-Instruct-v0.3`, Streamlit UI. 🔴 **Its own README states the dev environment is CPU-only and the project BLOCKS `Mistral-7B` loading there. The fine-tuning half is unexercised** |
+
+### 🔴 Two rows that enter the DO-NOT-USE column, and the licence file is why
+
+| row | the file | why it is unusable |
+|---|---|---|
+| 🔴 [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) | `LICENSE`, **`842` B** | 🔴 ***"All rights reserved … published for portfolio and code-review purposes only … no other rights are granted."*** 🔵 **It then COPIES `MIT`'s warranty disclaimer verbatim**, which is why a grant-text matcher flags it. 🟢 A licence file is not a licence; read it |
+| 🔴 [`MoKangMedical/digital-sage`](https://github.com/MoKangMedical/digital-sage) | `LICENSE`, **`46` B** | 🔴 **The whole file is `MIT License` + `Copyright (c) 2026 MoKangMedical`. There is NO permission clause.** 🔵 A licence TITLE and a holder is an INCOMPLETE grant — and a different shape from the `CRAN` stub *(`writeAlizer`, `47` B, grant in `DESCRIPTION`)*. 🟢 One commit fixes it; until then it grants nothing |
+
+🔵 **`Gap 421`: this shelf now holds three distinct sub-`1`kB `LICENSE` shapes, and only one of them
+is a grant** — the `CRAN` muñón *(grant in the manifest)*, the TITLE-ONLY stub *(no grant anywhere)*,
+and the ALL-RIGHTS-RESERVED file that borrows `MIT`'s disclaimer. 🔴 **Byte count alone cannot tell
+them apart; only reading can.**
+
+### 🟡 `ACTION MJ` — `dotty-tutor`'s audit layer, column by column, and the verdict SPLITS
+
+🔵 **p185 amended Pattern `24` to *"stop building and start adapting"* `dotty-tutor`'s `24` audit
+tables, and pre-registered `ACTION MJ` to check them column by column before the amendment was
+treated as complete.** 🟢 **It was right to wait.**
+
+🟢 **Read this pass:
+[`apps/api/persistence/schema.py`](https://github.com/ningkaikok/dotty-tutor/blob/main/apps/api/persistence/schema.py)
+— `19 405` B, `22` `Table()` declarations, SQLAlchemy Core.** The prompt-governance cluster and the
+teacher-review table are both in it.
+
+| cluster | tables | columns | the `p184` requirement: does the record survive a delete? |
+|---|---|---|---|
+| 🟢 **prompt governance** | `prompt_revisions`, `prompt_heads`, `prompt_release_events` | **`9` + `2` + `7` = `18`** | 🟢 **PASSES. All `3` FKs into `prompt_revisions.revision_id` carry NO `ondelete`** — SQL default, so deleting a revision a release event references is **REFUSED**. The release record survives |
+| 🔴 **human review** | `teacher_review_events` | **`11`** | 🔴 **FAILS. `class_id` → `learning_classes` is `ondelete="CASCADE"` and `assignment_id` → `assignments` is `ondelete="CASCADE"`.** 🔴 **Deleting the class deletes the teacher's correction record** |
+
+🟢 **What the prompt cluster gets right, and it is more than Pattern `24` asked for:**
+`prompt_revisions` carries `content_hash`, `body`, `base_revision_id`, `created_at`, `created_by` and
+`previewed`; `prompt_release_events` carries `action`, `revision_id`, **`previous_revision_id`**,
+`created_at`, `created_by`. 🔵 **That is a released prompt as a versioned object WITH its
+predecessor named — the lineage an Annex III audit trail needs, not just a timestamp.**
+
+🔴 **What `teacher_review_events` gets wrong is the exact defect Pattern `24`'s own `p184` amendment
+named on the `civil-ai` port: `RESTRICT` on the policy, `CASCADE` on the receipt.** 🟢 **And the
+column that makes it matter is `corrected_assessment` — the human's override of the machine. That is
+the single most load-bearing field in an education audit trail, and it is cascade-deleted by its
+class.** 🔵 **One `ondelete` clause away from correct; `0` clauses away from being presented as
+correct.**
+
+🔴 **`ACTION MJ` is DISCHARGED on the `prompt_*` cluster, PARTIALLY on human review, and NOT RUN on
+`quality_review_*`.** 🟢 The reason is recorded rather than dressed up: the `12` `quality_review_*`
+tables live in store modules whose paths are not named in
+[`docs/codebase-guide.md`](https://github.com/ningkaikok/dotty-tutor/blob/main/docs/codebase-guide.md),
+and **`6` guessed paths returned `404`.** 🔴 **`Gap 422`: with `api.github.com` and
+`codeload.github.com` both `403` here, there is NO tree listing, so a file whose path no document
+names is unreachable. Every schema census this KB publishes is scoped to *the files the repository's
+own docs name*.** 🔵 **`ACTION MP`.**
+
+🟢 **The net for a studio: adapt `dotty-tutor`'s `prompt_*` cluster as it stands — it is `18`
+columns that already do the job. Do NOT adapt `teacher_review_events` as it stands; change two
+`ondelete` clauses first, and verify with a live delete, not with a migration diff.**
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **One row enters at the top of this page's quality ranking, and it did not come from a new

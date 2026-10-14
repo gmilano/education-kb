@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, `4` with a limb FIRED
+decisively, `2` of them only PARTIALLY and the reason is the same instrument limit in both cases.
+The sixth is NOT RUN, for the second pass running, and the reason is unchanged: it is an
+outward-facing write on a third party's repository and this run is unattended.**
+
+🆕 🟢 **The headline is a method finding, and it costs this KB four rows it had already written off.**
+🔵 p185's lesson was *"a channel is a page PLUS a sort order"*. 🟢 **p186 finds the same error one
+level down: an ABSENCE is a measurement, and it carries the shape of the probe that made it.**
+🔴 **Re-probing `41` rows this KB published yesterday as *"absence holds"* recovered `3` permissive
+grants; a fourth came from a row closed on a rule that was correct and applied wrongly.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION MI`** — re-sort every censused topic page by `s=updated` and count rows absent from the census | 🟢 **DISCHARGED, LIMB `1` FIRED. `22` of `60` rows absent across `3` pages (`37`%). The `79`% exhaustion figure is RETIRED** |
+| 🟡 **`ACTION MJ`** — `dotty-tutor`'s `quality_review_*` and `prompt_*` clusters against Pattern `24`, column by column | 🟡 **DISCHARGED on `prompt_*` (LIMB `1`), FIRED LIMB `2` on human review, NOT RUN on `quality_review_*`. The `18`-column prompt cluster is adoptable as is; `teacher_review_events.corrected_assessment` is `CASCADE`-deleted by its class** |
+| 🟢 **`ACTION MK`** — `P1049` limb `2` with the `NOISE` filter removed | 🟢 **DISCHARGED, LIMB `2` FIRED. `0` further real grants. `Omni-Edu` was the only casualty, and keyword suppression is KEPT** |
+| 🔴 **`ACTION ML`** — does `essay-br`'s `c1`…`c5` map onto `writeAlizer`'s `rb_mod3*` targets? | 🔴 **DISCHARGED, LIMB `2` FIRED, on two independent grounds. `5` analytic competences vs `1` holistic score, and `Language: en-US`. The `pt-BR` path is TRAINING** |
+| 🟡 **`ACTION MM`** — locate `opencast`'s transcription extension point | 🟢 **DISCHARGED on the seam, LIMB `1` FIRED: `TranscriptionService`, a public `ECL-2.0` `api` module with `7` methods. 🔴 NOT RUN on the full table list — no tree listing available here** |
+| 🔴 **`ACTION MN`** *(for a human)* — may this KB open licensing issues on third-party repositories? | 🔴 **NOT RUN, second pass running. An outward-facing write on someone else's repository, by an unattended run with no live authorisation. Recorded as a decision for a human** |
+
+### 🟢 `ACTION MI` — the re-sort at scale, and the figure that retires
+
+| topic page, `?s=updated` | rendered | page says exist | absent from census |
+|---|---|---|---|
+| 🟢 `topics/education-ai` | `20` | `69` | 🔴 **`8`** |
+| 🟢 `topics/autograding` | `20` | `94` | 🔴 **`10`** |
+| 🟢 `topics/intelligent-tutoring-system` | `20` | `39` | 🔴 **`4`** |
+| **total** | **`60`** | — | 🔴 **`22` (`37`%)** |
+
+🔴 **Limb `1` needed `≥5`. It got `22`.** 🔵 **The sharpest case is `autograding`, where this KB holds
+the entire top shelf — `Artemis` `818`★, `Autolab` `808`★, `Submitty` `801`★, `INGInious` `243`★,
+`classroom50` `215`★, `otter-grader` `161`★ — and `10` of `20` recency-sorted rows were still
+unseen.** 🟢 **Coverage of a topic's head is not coverage of a topic.**
+
+🟢 **And an honest counterweight, because it changes how the next pass should read these pages:
+roughly `40`% of what the recency sort surfaces is not shelf material** — a `Catch2` fork, a `4`k★
+course dump, two single assignments. 🔵 **The recency sort has a higher yield AND a lower precision
+than the stars sort. Both figures belong in the next exhaustion estimate.**
+
+### 🟢 What entered, and the licence as written
+
+| row | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🟢 **`MIT`** — `package.json` only, 🔴 no licence file | North America | 🟢 `LTI` reference tool from **Carnegie Mellon's Simon Initiative**. Gleam, `docker compose up`. 🟡 `v0.0.1` |
+| 🆕 🟢 [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** — `package.json` only, 🔴 no licence file | EMEA | 🟢 **a university SIS as READ-ONLY `MCP` tools** (Sisu / Funidata, Finland) |
+| 🆕 🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🟢 **`MIT`** *(`1 079` B, full text)* | Global | 🔴 recorded as unlicensed because the file is named **`License`** |
+| 🆕 🟢 [`uhafner/autograding-gitlab-action`](https://github.com/uhafner/autograding-gitlab-action) | 🟢 **`MIT`** *(`1 080` B)* | EMEA | 🟢 **autograding for self-hosted `GitLab`** — tests, code AND mutation coverage, static analysis → MR note |
+| 🆕 🟢 [`jameskermode/mograder`](https://github.com/jameskermode/mograder) | 🟢 **`MIT`** *(`1 070` B)* | EMEA | 🟢 grading for **`Marimo`** notebooks; on PyPI with CI and docs |
+| 🆕 🟢 [`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills) | 🟢 **`Apache-2.0`** *(`11 359` B)* | APAC | 🟢 **the first agent-skill set with an explicit REGIONAL CURRICULUM PROFILE** (Shanghai Primary IT); model-agnostic by statement |
+| 🆕 🟡 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **`MIT`** *(`1 068` B)* | APAC | 🟡 K-`1`–`9` RAG tutor on the 人教版 curriculum. 🔴 a RELEASE repo — the grant covers packaged builds, not necessarily the source |
+| 🆕 🟢 [`devissaputra/adaptive_socratic_tutor`](https://github.com/devissaputra/adaptive_socratic_tutor) | 🟢 **`MIT`** *(`1 076` B)* | Global | adaptive Socratic tutoring and hint selection; an inspectable prototype |
+| 🆕 🟢 [`AlgoJudge/AlgoJudge-Runner`](https://github.com/AlgoJudge/AlgoJudge-Runner) + [`-Server`](https://github.com/AlgoJudge/AlgoJudge-Server) | 🟢 **`MIT`** *(`1 092` B each)* | Global | containers + `cgroups` sandbox, split from its ASP.NET control plane |
+| 🆕 🔴 [`Acture/scriptmark`](https://github.com/Acture/scriptmark) | 🔴 **`GPL-3.0-or-later`** | Global | grading CLI with TOML specs — copyleft, not a vendoring candidate |
+| 🆕 🔴 [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) | 🔴 **ALL RIGHTS RESERVED** *(`842` B)* | Global | 🔴 *"no other rights are granted"* — **while copying `MIT`'s warranty disclaimer** |
+| 🆕 🔴 [`MoKangMedical/digital-sage`](https://github.com/MoKangMedical/digital-sage) | 🔴 **INCOMPLETE** *(`46` B)* | Global | 🔴 a licence title and a holder, **no permission clause** |
+
+🟢 **New instrument: [`compose/code/p1052-stale-absence`](compose/code/p1052-stale-absence/README.md)**
+— `P1052`, two limbs *(licence FILE across `14` paths and three casings; ecosystem MANIFEST across
+`11` formats)*, `13` offline checks, `0` failures. Plus
+[`noise_cost.py`](compose/code/p1049-bare-token-grant/noise_cost.py) for `ACTION MK`.
+Evidence: [`stale-absence.2026-10-14-p186.tsv`](evidence/stale-absence.2026-10-14-p186.tsv),
+[`noise-cost.2026-10-14-p186.tsv`](evidence/noise-cost.2026-10-14-p186.tsv).
+
+🟢 **New patterns `31` *(read-only student record as agent tools)* and `32` *(the licence
+due-diligence pass as a priced work package)*, plus amendments to `24`, `28` and `29`.**
+
+### 🔴 Declared gaps and absences
+
+- 🆕 🔴 **`Gap 421`: three distinct sub-`1`kB `LICENSE` shapes are now measured on this shelf and
+  only ONE grants anything** — the `CRAN` muñón *(`writeAlizer`, `47` B, grant in `DESCRIPTION`)*,
+  the TITLE-ONLY stub *(`digital-sage`, `46` B, no permission clause)*, and ALL-RIGHTS-RESERVED text
+  that borrows `MIT`'s disclaimer *(`talentcoach`, `842` B)*. 🔵 **Byte count cannot separate them.**
+- 🆕 🔴 **`Gap 422`: without a tree listing, a file whose path no document names is UNREADABLE here.**
+  `api.github.com` `403`, `codeload.github.com` `403`, `github.com` by `curl` `403`, re-measured.
+  🔴 **This capped `ACTION MJ` *(`12` `quality_review_*` tables unverified)* and `ACTION MM` *(the
+  `120`-file table census)* in the same pass.** 🔵 **Every schema census this KB publishes is scoped
+  to *the files the repository's own docs name*, and that scope was never stated before now.**
+- 🆕 🔴 **`Gap 423`: every *"no grant"* on these eight pages is scoped to the probe that looked.**
+  This KB's probe read `LICENSE`-cased paths and README prose; it never read the ecosystem manifest
+  and never read `License`. 🟢 `3` of `41` re-probed rows were permissive all along.
+- 🆕 🔴 **`Gap 424`: ReaderBench's PORTUGUESE support is not established.** Its README names no
+  supported languages and `3` probed language-resource paths `404`. 🔴 **If the `Apache-2.0`
+  extractor has no `pt` pipeline, the `pt-BR` blocker was never the model or the licence — it is
+  feature extraction.** 🔵 **The highest-value outstanding probe on this shelf.**
+- 🟡 **p185's own population was not `61` absences.** `ai-shifu/ai-shifu` — `Apache-2.0` in this KB
+  since p184 — was swept in by the single-slug-per-line extractor. 🔵 **So yesterday's `43`/`61`
+  *"absence holds"* denominator is soft at the edges, and this pass's `37`/`41` is quoted as a FLOOR.**
+- 🔴 **`0` permissive LATAM-origin education SOFTWARE row after `186` passes.** The region's one
+  permissive row, [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br), is a CORPUS — and
+  `ACTION ML` proved this pass that the existing `MIT` toolchain cannot score it.
+- 🔴 **This pass's LATAM search returned almost nothing education-SPECIFIC.** The regulatory picture
+  is legible; the education layer is thin and mostly secondary commentary. 🔵 **Recorded as an
+  informed gap, because silence would look like coverage.**
+- 🔴 **`0` APAC adoption statistic on an official in-language channel**, second pass running —
+  `www.mext.go.jp` `ENOTFOUND` *(`T309`)*. Government TARGETS and private surveys only.
+- 🔴 **The `AI Act` Annex III education date is still SECONDARY.** Sources now add the procedural
+  step *(Council green light `2026-06-29`, Official Journal publication pending)* and converge on
+  **`2027-12-02`** stand-alone / **`2028-08-02`** embedded. 🔴 **`eur-lex.europa.eu` remains
+  `ENOTFOUND` here.** 🟢 **The Article `5`(1)(f) emotion-inference prohibition is unchanged and in
+  force since `2025-02-02` — the deadline that moved has a conformity route; the one that did not
+  has none.**
+- 🔴 **★ counts remain published metadata under test, not evidence** *(`gap 140`)*. Every ★ figure in
+  this pass comes from a topic page's own rendering.
+
+### 🟢 Pre-registered for p187, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION MO`** | extend `P1052` limb `2` to `Moodle` / `WordPress` plugin FILE HEADERS over the plugin-shaped rows inside the `37` that hold | **limb `1`:** `≥1` `GPL` grant in a header → 🔴 **the `37` is not a floor of absences, it is a floor of *"not where we looked"*.** **limb `2`:** `0` → 🟢 the `37` stands as measured |
+| 🆕 🟢 **`ACTION MP`** | reach `dotty-tutor`'s `quality_review_*` tables by READING the named routers (`routers/review_routes.py`, `routers/learning_routes.py`) and following their imports, instead of guessing store paths | **limb `1`:** the paths resolve → 🟢 **finish `ACTION MJ` and verify the `12` human-review tables.** **limb `2`:** the imports are indirected beyond reach → 🔴 **`Gap 422` is structural, and the `12` tables stay UNVERIFIED in Pattern `24`** |
+| 🆕 🔴 **`ACTION MQ`** | settle `Gap 424`: does `readerbench-java` ship a PORTUGUESE pipeline? Read `pom.xml` modules and the resource tree at paths the repo's own docs name | 🟢 **limb `1`:** a `pt` pipeline exists → **Pattern `29` step `2a` is the recipe and `Gap 372` closes as a training project.** 🔴 **limb `2`:** no `pt` → **the blocker is FEATURE EXTRACTION, Pattern `29` takes step `2b`, and the `pt-BR` estimate doubles** |
+| 🆕 🟢 **`ACTION MR`** | re-sort the `~12` remaining censused topic pages by `s=updated` (`lms`, `lti`, `scorm`, `moodle`, `mooc`, `student-information-system`, `learning-analytics`, `open-badges`, `edtech`, `e-learning`, `ferpa`, `adaptive-learning`) and record BOTH the absent-row rate and the not-shelf-material rate | **limb `1`:** absent rate holds near `37`% → 🟢 **publish a recency-sort census figure and retire the stars-only one entirely.** **limb `2`:** it collapses on the platform topics → 🔵 **the effect is specific to agent/tutor topics, where repos are young** |
+| 🆕 🟡 **`ACTION MS`** | read `Zenglian990/AI_Tutor_Release`'s tree at documented paths: is SOURCE present, or only packaged builds? | 🟢 **limb `1`:** source present → the `MIT` grant is usable and the row is an APPLIANCE. 🔴 **limb `2`:** builds only → **an `MIT` grant over binaries, and the row is a product to evaluate, not a tree to fork** |
+| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → ask `MoKangMedical/digital-sage` FIRST *(a `46` B file one sentence from a complete `MIT`)*, then `dotty-tutor` *(complete `Apache-2.0`, no named licensor)*, then `xueyoujing-companion` *(no grant at all)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently and the unlicensed rows stay unusable |
+
+🔵 **Note for p187 on method, and it generalises past licensing: this KB's `43`-row *"absence
+holds"* was published with no statement of what had been probed.** 🟢 **An absence is only as wide
+as the instrument that found it, so from this pass on a declared absence names its probe** — which
+is why `Gap 422` and `Gap 423` are written as scope statements rather than as failures.
+
 ## Pass 185 — 2026-10-14
 
 🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, `3` with a limb FIRED

@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: still `0` education repositories — an eighth consecutive pass.** 🟢 **And
+the alternative channel, which p185 proved had been read at one sort order only, was this pass read
+at `s=updated` across three pages and returned `22` rows absent from this KB's census.**
+
+### 🟢 `ACTION MI` — limb `1` FIRES. The `79`% exhaustion figure is retired.
+
+| topic page, `?s=updated` | rendered | page says exist | absent from census | absent % |
+|---|---|---|---|---|
+| 🟢 `topics/education-ai` | `20` | `69` | 🔴 **`8`** | `40`% |
+| 🟢 `topics/autograding` | `20` | `94` | 🔴 **`10`** | `50`% |
+| 🟢 `topics/intelligent-tutoring-system` | `20` | `39` | 🔴 **`4`** | `20`% |
+| **total** | **`60`** | — | 🔴 **`22`** | **`37`%** |
+
+🔵 **Limb `1`'s threshold was `≥5`. The measurement is `22`.** 🟢 **`Gap 415` is confirmed at scale,
+and every *"channel ~`80`% censused"* figure published before p185 is now known to describe
+stars-descending and nothing else.**
+
+🔴 **The `autograding` result is the one to quote internally, because it is the counter-intuitive
+one.** This KB holds that topic's entire top shelf — [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+*(`818`★)*, [`autolab/Autolab`](https://github.com/autolab/Autolab) *(`808`★)*,
+[`Submitty/Submitty`](https://github.com/Submitty/Submitty) *(`801`★)*,
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) *(`243`★)*,
+[`foundation50/classroom50`](https://github.com/foundation50/classroom50) *(`215`★)*,
+[`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) *(`161`★)* — and still
+**`10` of `20`** recency-sorted rows were unseen. 🟢 **Coverage of a topic's head is not coverage of
+a topic.**
+
+### 🟢 The rows worth a studio's time, licence read over the raw channel this pass
+
+| row | ★ | licence | why it is on this page |
+|---|---|---|---|
+| 🆕 🟢 [`uhafner/autograding-gitlab-action`](https://github.com/uhafner/autograding-gitlab-action) | `11` | 🟢 **`MIT`** *(`1 080` B)* | 🟢 **autograding for `GitLab`, not GitHub** — aggregates test results, code AND mutation coverage, static-analysis findings and software metrics into a structured merge-request note with inline line comments. 🔵 **The first row on this shelf that fits a self-hosted European university's actual CI** |
+| 🆕 🟢 [`jameskermode/mograder`](https://github.com/jameskermode/mograder) | `21` | 🟢 **`MIT`** *(`1 070` B)* | 🟢 **semi-automated grading for `Marimo` notebooks** — on PyPI, with CI, docs site and a Ruff badge. 🔵 This shelf's notebook-grading rows were `nbgrader` and `otter-grader`, both Jupyter; `marimo` is the reactive-notebook successor and this is the grading layer for it |
+| 🆕 🟢 [`AlgoJudge/AlgoJudge-Runner`](https://github.com/AlgoJudge/AlgoJudge-Runner) + [`AlgoJudge-Server`](https://github.com/AlgoJudge/AlgoJudge-Server) | `0` / `4` | 🟢 **`MIT`** *(`1 092` B each)* | 🟡 isolated submission execution with containers and `cgroups`, plus an ASP.NET Core + PostgreSQL control plane. 🔵 **A sandbox split from its API is the right shape**; at `0`–`4`★ it is a reading, not a dependency |
+| 🆕 🟢 [`ktwyw/python-for-engineers`](https://github.com/ktwyw/python-for-engineers) | `0` | 🟢 **`MIT`** *(`1 328` B)* | 🔵 a first-year engineering Python course with autograded exercises — **content**, useful as a fixture corpus rather than as software |
+| 🆕 🔴 [`Acture/scriptmark`](https://github.com/Acture/scriptmark) | `2` | 🔴 **`GPL-3.0-or-later`** *(crates.io badge; no licence file)* | an automated grading CLI with TOML test specs. 🔴 **Copyleft — not a vendoring candidate** |
+
+🔴 **And the honest note on the rest of the `22`:** `chefhom3067/Catch2` is a fork of a C++ unit-test
+framework, `TarrySingh/…-Tutorials` is a `4`k★ course dump, `GSO-SW/csharp-methoden-assignment-lerngruppe`
+and `raflianoza/terasering` are single assignments. 🟢 **They are absent from the census because they
+do not belong in it — which is itself a result: the recency sort surfaces coursework alongside
+tooling, and `~40`% of what it surfaces is not shelf material.**
+
+### 🟢 Three permissive rows recovered by RE-PROBING repos already on this page
+
+🔵 **`P1052` over `41` rows recorded as grant-absent:**
+[`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper)
+is **`MIT`** in a file named `License`;
+[`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) and
+[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) are **`MIT`** in `package.json` with
+no licence file at all. 🔴 **`37` of `41` absences HOLD.** 🟡 **And `1` was never an absence:
+`ai-shifu/ai-shifu` is `Apache-2.0` and this KB has recorded it as such since p184 — it entered the
+no-grant population through a defect in p185's own slug extractor.**
+Evidence: [`evidence/stale-absence.2026-10-14-p186.tsv`](../evidence/stale-absence.2026-10-14-p186.tsv).
+
 ## Pass 185 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

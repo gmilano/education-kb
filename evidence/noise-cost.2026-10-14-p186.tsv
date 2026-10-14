@@ -1,0 +1,15 @@
+# p186 — ACTION MK as registered. P1049 limb 2 re-run over the SAME population with the
+# NOISE filter REMOVED, counting every line the filter suppressed.
+# Instrument: compose/code/p1049-bare-token-grant/noise_cost.py
+# Raw machine output: noise-cost-raw.2026-10-14-p186.tsv
+#
+# VERDICT: LIMB 2 FIRES. 0 further real grants. Of 61 population rows, exactly 3 had any
+# line suppressed, and all 3 were already correctly classified by p185.
+slug	suppressed line	p185 verdict	p186 re-read
+haolpku/Omni-Edu	"The code is licensed under Apache-2.0. Model weights and third-party datasets and benchmarks retain their respective licenses."	NOISE-SUPPRESSED, recovered as YES-permissive-code-only	the known casualty, already recovered at p185. Suppressed for containing "third-party"
+jadrianlg16/learning-tutor	"Third-party components keep their own licenses. PyMuPDF is dual-licensed under AGPL-3.0 ... FastMCP and python-multipart are Apache-2.0, httpx and uvicorn are BSD-3-Clause"	FALSE-POSITIVE (dependency inventory inside the licence section)	the filter was RIGHT. These are dependency licences; the section itself reserves all rights
+Zenglian990/AI_Tutor_Release	"[![License: MIT](https://img.shields.io/badge/License-MIT-purple...)](https://opensource.org/licenses/MIT)"	NO-badge-only	the filter was RIGHT about the LINE and p185 was WRONG about the ROW: the repo serves LICENSE, 1 068 B, full MIT text. See stale-absence.2026-10-14-p186.tsv
+#
+# SO: the NOISE filter's total cost over this population is 1 row (Omni-Edu), already
+# known and already recovered. Keyword suppression is NOT retired. What IS retired is
+# using a badge verdict to CLOSE a row instead of to trigger a file re-probe.

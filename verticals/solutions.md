@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **The routing table gains a row in a layer it had only ever described as *"build an adapter"*,
+and the `opencast` row gains the named class an implementer needs. One row moves to DO-NOT-USE on
+its licence text.**
+
+### 🟢 NEW LAYER — the student record as an agent TOOL SURFACE: `ink-waffle/sisu-mcp`
+
+| platform | licence | layer | tenancy | AI seam |
+|---|---|---|---|---|
+| 🆕 🟢 **[`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp)** | 🟢 **`MIT`** *(`"license": "MIT"` in `package.json`, `999` B — 🔴 **no licence file in the tree**)* | 🟢 **SIS access as `MCP` tools** — `sisu_studies`, `sisu_attainments`, `sisu_connect` / `sisu_status` / `sisu_disconnect` | 🔵 per-user browser session, renewed automatically; stored locally | 🟢 **the server IS the seam.** An agent calls the SIS directly; there is no adapter to write |
+
+🟢 **Why this changes a conversation.** Every SIS row above this one — `openSIS`, `Fedena`,
+`Kosudo/nextSIS`, the Ed-Fi SDKs — is a system you integrate WITH. 🟢 **This is a system already
+shaped as tools an agent can call, and `read-only` is the server's stated design, not a promise in a
+statement of work.** 🔵 For a university engagement, *"the agent can see the student's attainments
+and cannot change them"* is a sentence that survives a data-protection review; *"we will restrict
+the integration to reads"* is a sentence that invites one.
+
+🔴 **Three limits, stated before anyone quotes it.** It targets **one** SIS product — Sisu, by
+Funidata, run by the Finnish universities *(`sisu.tuni.fi` is the README's own example)*, so outside
+the Nordics it is a DESIGN to copy rather than a dependency to adopt. It is `0`★ and
+`"version": "0.1.0"`. 🔴 **And the grant exists only as an npm manifest field** — there is no licence
+file, which is exactly why this KB recorded it as unlicensed until this pass.
+
+### 🟢 `opencast/opencast` — the ROUTE grade is confirmed, and the implementer now has a class name
+
+🔵 **p185 graded `opencast` a ROUTE on a SCHEMA-level provider abstraction and pre-registered
+`ACTION MM` to find the code seam. It is found.**
+
+| what an implementer gets | detail |
+|---|---|
+| 🟢 **the interface** | `org.opencastproject.transcription.api.TranscriptionService` in **`modules/transcription-service-api`** — a public `api` module, `ECL-2.0`, `7` methods |
+| 🟢 **the shape** | asynchronous with callbacks: `startTranscription` → `Job`, then `transcriptionDone` / `transcriptionError`. 🔵 **Exactly how an agent wants to be invoked** |
+| 🟢 **the extra channel** | `getReturnValues(mpId, jobId)` exists so a provider can hand the attach handler more than the transcript — confidence, diarisation, an agent's own metadata |
+| 🔴 **the deployment limit** | **`getLanguage()` returns ONE `String`.** One provider instance, one language |
+
+🔴 **That last row is a pricing fact, not a detail.** 🟢 **A bilingual institution registers one
+provider instance per language and routes on the series' language in the workflow.** 🔵 **For LATAM
+*(`pt-BR` + `es`)* and for much of EMEA, multiply the configuration and the testing by the number of
+languages — and remember `opencast` ships **`0`** `pt-BR` / `pt-PT` locale catalogues *(`17`
+catalogues, `es-ES` and `gl-ES` present)*, so a Brazilian deployment carries a translation project
+on top.
+
+### 🟢 Confirmed, not new: `ai-shifu/ai-shifu` is `Apache-2.0` — and the confirmation is a correction
+
+🟡 **`P1052` returned `ai-shifu` as a licence recovery. It is not one.** 🟢 **`LICENSE.txt`,
+`11 342` B, `Apache License 2.0`, *«Copyright 2024 ai-shifu.com»* — and this KB has recorded exactly
+that since p184.** 🔴 **The row entered a *"no grant"* population through a defect in p185's own
+single-slug-per-line extractor.** 🔵 **So the `61`-row population was not `61` absences, and the
+`43`/`61` *"absence holds"* denominator published yesterday is soft at the edges.** 🟢 **The
+platform's ROUTE grade and its `29`-table commerce coupling *(p185, `ACTION MG`)* are unchanged.**
+
+### 🔴 Moving to DO-NOT-USE: `ShuyunYuan/talentcoach`
+
+🔵 Surfaced this pass on `topics/intelligent-tutoring-system?s=updated` as an *"adaptive guided
+tutoring and performance support system for workplace training"* — a description that reads like a
+corporate-L&D ROUTE candidate.
+
+🔴 **Its `LICENSE` is `842` B and says: *"All rights reserved … published for portfolio and
+code-review purposes only. Viewing the source on GitHub is permitted; no other rights are
+granted."*** 🔴 **Then it copies `MIT`'s warranty disclaimer verbatim**, which is why an automated
+grant-text matcher flags it as permissive.
+
+🟢 **The rule this forces onto the routing table, and it is cheap:** a licence FILE is not a
+licence. 🔵 **`842` B is too short for `Apache-2.0` and too long for `MIT` — and on this shelf an
+anomalous byte count now means *read the file*, because three distinct sub-`1`kB shapes have been
+measured and only one of them grants anything** *(`Gap 421`)*.
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **One platform enters the routing table and fills a layer that had `0` rows; one platform's

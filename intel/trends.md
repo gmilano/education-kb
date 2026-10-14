@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **The method trend this pass can prove is a correction to p185's own correction, and it is the
+cheaper lesson of the two.** 🔵 p185 retired *"the channel is exhausted"* and replaced it with *"a
+channel is a page PLUS a sort order"*. 🟢 **p186 finds the same error one level down: an ABSENCE is a
+measurement, and it carries the shape of the probe that made it.** 🔴 **`Gap 423`: every *"no grant"*
+on these eight pages is scoped to a probe that read `LICENSE`-cased paths and README prose. It never
+read the ecosystem manifest, and it never read `License`.** 🟢 **Re-probing `41` such rows recovered
+`3`, all permissive; a fourth came from a row closed on a correct rule applied wrongly.**
+
+### 🆕 🟢 Trend `1` — the agent SKILL is acquiring REGIONAL CURRICULUM PROFILES
+
+🔵 **p185 named the form: tutoring shipped as a skill for a harness the client already runs, not as
+an application to host. One week on, the form has specialised.**
+
+🟢 **[`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills)
+*(`Apache-2.0`, `11 359` B)* takes Anthropic's K12 Teacher Skills workflow design and re-cuts it
+against Chinese curriculum standards, local classroom practice and a REGION PROFILE** — the first
+complete one being *Shanghai Primary Information Technology*. 🟢 **It is explicitly model-agnostic**
+*(«不绑定 Claude、Codex、DeepSeek 或某一家模型»)*, with `Windows + Codex + DeepSeek Flash` named as
+the currently-verified runtime.
+
+🔵 **What this means for a studio, and it is a change of deliverable:** the unit of work is no
+longer *a tutor* but **a curriculum profile for an existing skill set**. 🟢 **That is the most
+exportable artefact this shelf has produced: the pedagogical workflow is upstream and permissive,
+and the profile — standards, grade bands, local practice, assessment conventions — is the local
+engagement.** 🔴 **And it is the first row on this shelf to make the regional-adaptation layer an
+explicit, named, versionable thing rather than prompt-tuning inside a fork.**
+
+### 🆕 🔴 Trend `2` — the EU high-risk clock moved, the prohibition did not, and the gap between them is the engagement
+
+🟢 **Multiple sources this pass converge on a timeline this KB could not confirm at p185**, and they
+now also report the procedural step that was missing:
+
+| obligation | date, as reported | status of the reporting |
+|---|---|---|
+| 🔴 **Article `5`(1)(f) prohibition — emotion inference in education** | **in force since `2025-02-02`** | 🟢 **unchanged by the omnibus, consistently reported.** 🔴 A prohibition, with no conformity route |
+| 🟡 stand-alone Annex III high-risk *(admissions, grading, level assessment, exam monitoring)* | **`2027-12-02`** | 🟡 reported as approved by the Council on **`2026-06-29`**, *"awaiting publication in the Official Journal"* |
+| 🟡 high-risk embedded in regulated products | **`2028-08-02`** | 🟡 same instrument, same caveat |
+| 🟡 Article `4` AI literacy | in force; 🔴 **wording reported CHANGED** — the duty remains, the *"sufficient level"* language is reported removed | 🟡 secondary only |
+
+🔴 **`eur-lex.europa.eu` remains `ENOTFOUND` from this environment *(`T309`, re-confirmed)*, so
+every date above is SECONDARY.** 🟢 **The planning consequence does not depend on the date, which is
+why it is worth stating:** the deadline that moved is the one with a conformity route; **the one
+that did not move is the one with none.** 🔵 **A client's emotion-inference pilot is not *"early for
+`2027`"* — it is prohibited now.** 🟢 **And Article `27`'s fundamental-rights impact assessment for
+public-body deployers is reported unchanged, which makes the `2027` relief a documentation
+deferral, not a design one.**
+
+### 🆕 🟡 Trend `3` — the demand signal has shifted from adoption to DEFENSIBILITY, and the suppliers have noticed
+
+🔵 Across this pass's searches the same reframing appears from independent directions: a shift *away
+from generic chatbots toward platforms purpose-built for education*; systems *expecting evidence
+that products improve learning quality, persistence, well-being or job-relevant skills*;
+institutions moving to *comprehensive AI strategies with strong oversight*.
+
+🟢 **The supply side now shows it in SCHEMA, which is the part this KB can verify rather than
+quote.** 🔵 **`dotty-tutor` at `8`★ ships `3` prompt-governance tables, `9` agent-audit tables and
+`12` human-review tables** — and `ACTION MJ` measured its prompt cluster as genuinely sufficient
+*(`18` columns, release lineage via `previous_revision_id`, and no `CASCADE` on the audit FKs)*.
+🔴 **It also measured `teacher_review_events.corrected_assessment` — the human's override of the
+machine — as `CASCADE`-deleted by its class.** 🟢 **That is the trend in one row: governance is being
+built, and it is being built one `ondelete` clause short of surviving contact with a regulator.**
+
+### 🔴 Trend `4`, restated because it got worse, not better — the `pt-BR` gap is a FEATURE gap, not a model gap
+
+🔵 **`ACTION ML` settled a question this KB had carried as open since `Gap 372` was opened.** 🔴 **The
+`pt-BR` essay-scoring path is TRAINING, not inference:** `essay-br` *(`MIT`)* labels `5` ENEM
+competences at `0`–`200`; `writeAlizer` *(`MIT`)* predicts `1` holistic quality score from `1 316`
+English ReaderBench features, `Language: en-US`. 🔴 **There is no mapping between them to measure.**
+
+🔴 **And the follow-on is worse than the finding.** `Gap 424`: **ReaderBench's Portuguese support is
+not established** — its README names no supported languages and `3` probed language-resource paths
+`404`. 🔵 **If the Apache-2.0 extractor has no `pt` pipeline, the blocker was never the model and
+never the licence: it is FEATURE EXTRACTION.** 🟢 **`ACTION MQ` is the highest-value outstanding
+probe on this shelf, because it decides whether `Gap 372` closes as a training project or reopens as
+a feature-engineering one.**
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **The trend this pass can prove is about DISCOVERY, and it invalidates a conclusion this KB

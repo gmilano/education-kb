@@ -1,0 +1,57 @@
+# p186 — ACTION MK, enlarged. P1052, the STALE-ABSENCE pass, over every row whose
+# absence p185 recorded as HOLDING. Population derived as (p185 P1049 population of 64
+# lines, 61 slugs + 3 controls) MINUS (the 23 slugs p185's published TSV carries a
+# verdict for) = 41 slugs. p185 reported 43 holds; the 2-row difference is p185's own
+# controls accounting, so 41 is a FLOOR, not the whole set.
+#
+# Instrument: compose/code/p1052-stale-absence/stale_absence.py  (limb 1 FILE, limb 2 MANIFEST)
+# Channel: raw.githubusercontent.com — re-measured this pass as the only GitHub read
+#          channel answering 200 here (api.github.com 403, codeload.github.com 403).
+#
+# WHY THIS PASS EXISTS: ACTION MK asked only what limb 2's NOISE filter cost. The
+# answer is 0 further grants (see noise-cost.2026-10-14-p186.tsv). But running it
+# surfaced an overturn the suppressed lines did not contain: p185 closed
+# Zenglian990/AI_Tutor_Release as NO-badge-only on the rule "a badge is a claim about a
+# licence, not a licence". The rule is correct. Its USE was wrong: the row serves
+# LICENSE, 1 068 B, full MIT text. A badge is a CUE TO RE-PROBE, not a verdict.
+#
+# ACCOUNTING, population = 41:
+#   37  absence HOLDS (no licence file at 14 probed paths, no licence field in 11 manifests)
+#    3  a real own-grant this KB recorded as absent — ALL THREE PERMISSIVE
+#    1  population artefact: a row this KB already records correctly, swept in by
+#       p185's single-slug-per-line extraction (ai-shifu, recorded Apache-2.0 since p184)
+#
+slug	limb	where	bytes	verdict	the grant, as written	why the absence was recorded
+Simon-Initiative/lti-example-tool	MANIFEST	package.json (1 005 B)	1005	YES-permissive	"license": "MIT"	no licence FILE in the tree; the grant is the npm manifest field only
+ink-waffle/sisu-mcp	MANIFEST	package.json (999 B)	999	YES-permissive	"license": "MIT"	no licence FILE in the tree; the grant is the npm manifest field only
+open-spaced-repetition/fsrs4anki-helper	FILE	License (1 079 B)	1079	YES-permissive	MIT License / Copyright (c) 2022 Open Spaced Repetition	PATH CASING — the file is "License", not "LICENSE"/"LICENCE"/"COPYING"
+ai-shifu/ai-shifu	FILE	LICENSE.txt (11 342 B)	11342	POPULATION-ARTEFACT	Apache License 2.0 / Copyright 2024 ai-shifu.com	NOT an overturn — this KB has recorded Apache-2.0 since p184. The row should never have entered the no-grant population
+Zenglian990/AI_Tutor_Release	FILE	LICENSE (1 068 B)	1068	YES-permissive	MIT License, full text	found OUTSIDE this population — p185 closed it as NO-badge-only. See the note above
+#
+# THE 37 THAT HOLD (machine output in stale-absence-raw.2026-10-14-p186.tsv):
+# AI4Bharat/indicnlp_catalog ApexEDM/GIKT Gaurav-Pande/AES_DL GradeAI/gradeai
+# HFUT-LEC/awesome-student-cognitive-modeling JushBJJ/Mr.-Ranedeer-AI-Tutor Kosudo/nextSIS
+# LAION-AI/Desktop_BUD-E P1ckle3/blackboard-mcp Piyushtanwani/DAU-buddy SIU-Toba/docker-guarani
+# TianHongZXY/pytorch-SAKT ZhijieXiong/dlkt arshadshk/Last_Query_Transformer_RNN-PyTorch
+# arshadshk/SAINT-pytorch bigdata-ustc/Agent4Edu brettlballard/DIF
+# ckyeungac/deep-knowledge-tracing-plus cs341-illinois/coursebook
+# douglas150206/IF_VEST_Redacao_Correcao emorynlp/LLM-Grading frappe/education
+# gautamyadavs/AVLTree hesham0-0nasser/tutor-lms-mcp jgabriel-sntx/Corretor-de-redacao-ENEM
+# loyaniu/moodle-mcp lsloan/udp-notebooks luffycodes/Tutorbot-Spock
+# mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK neiltonsantana9-star/redacao onbirdev/moodle-webservice_mcp
+# open-spaced-repetition/srs-benchmark ruud0/aula-virtual-mcp seewoo5/KT victor934034/simulade
+# xiaopengguo/ATKT yxonic/DTransformer
+#
+# DECLARED INSTRUMENT LIMITS, measured this pass, not inferred:
+#  - P1052's GRANT_TEXT marker list includes "THE SOFTWARE IS PROVIDED", the MIT warranty
+#    clause. ShuyunYuan/talentcoach (842 B LICENSE) copies that clause into an ALL RIGHTS
+#    RESERVED licence that states "no other rights are granted". The marker is therefore
+#    a FALSE POSITIVE generator on proprietary licences that borrow MIT's disclaimer.
+#    The bytes and the matched string are printed for exactly this reason: read the file.
+#  - A 46 B LICENSE can hold a licence TITLE and a holder and NO permission clause.
+#    MoKangMedical/digital-sage serves "MIT License\n\nCopyright (c) 2026 MoKangMedical"
+#    and nothing else. That is an INCOMPLETE grant, not an MIT grant, and it is a
+#    different shape from the CRAN stub (writeAlizer 47 B, grant in DESCRIPTION).
+#  - limb 2 reads 11 manifest formats. It does NOT read Moodle/WordPress plugin file
+#    headers, where a GPL grant conventionally lives. Rows of that shape are inside the
+#    37 and their absence is NOT established for this instrument. ACTION MO.

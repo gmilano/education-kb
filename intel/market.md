@@ -4,6 +4,178 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 186 — 2026-10-14
+
+🆕 🟢 **This pass can place SUPPLY in all four regions for the first time, with every placement
+resting on a repository this KB read rather than on a vendor's claim of origin.** 🔴 **Every DEMAND
+figure below remains search-index SECONDARY by this environment's construction — `T309` re-confirmed
+this pass on `eur-lex.europa.eu`.** 🔵 Figures stay attributed to named publications so a client's
+own analyst can pull the primary.
+
+### 🟡 Market size — the spread has moved to the OUT-YEAR, and that is the number clients quote
+
+| source | `2026` size | out-year |
+|---|---|---|
+| IMARC *(p185)* | USD **`9.0`** B | → USD `79.6` B by `2034` |
+| The Business Research Company *(p185)* | USD **`10.6`** B | `40.9`% CAGR |
+| 🆕 Research and Markets | USD **`10.6`** B | 🆕 **→ USD `42.48` B by `2030`, `41.5`% CAGR** |
+| 🆕 a second `2030` estimate *(unnamed in the index summary)* | — | 🆕 🔴 **→ USD `32` B by `2030`** |
+| HolonIQ, via a vendor blog | USD **`12.3`** B | 🔴 vendor publication; treat with caution |
+| Technavio *(p185)* | — | **`45`% CAGR `2025`–`2030`** |
+
+🔴 **The `2026` spread is `9.0`–`12.3` B. The `2030` spread is `32`–`42.5` B — a `33`% disagreement
+on a four-year horizon.** 🟢 **Quote the range with the firm named and expect a client's analyst to
+hold a seventh number.** 🔵 **What is NOT in dispute across any source: a CAGR in the `40`s. The
+disagreement is about the base, not the slope** — which is the useful thing to say in a first
+meeting.
+
+🟡 **The demand figure with a published sample size remains p185's:** the Digital Education
+Council's `2026` higher-education survey, **`45 398` responses across `35` countries**, `88`% of
+students and `77`% of faculty using AI. 🔴 **`57`% of students say their assessments come with
+inadequate AI guidance; `29`% believe their instructors are equipped to guide them.** 🟢 **That gap,
+not adoption, is the engagement.**
+
+### 🟢 SUPPLY by region — measured from the repositories, not from company addresses
+
+| region | rows this KB has READ and placed | what the region is actually supplying |
+|---|---|---|
+| 🟢 **North America** | 🆕 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) *(`MIT`, Carnegie Mellon)*, `Submitty`, `autolab/Autolab`, `ucbds-infra/otter-grader`, `foundation50/classroom50` | 🟢 **interoperability and autograding infrastructure**, much of it university-hosted and institutionally backed |
+| 🟢 **EMEA** | 🆕 [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) *(`MIT`, Finland)*, 🆕 [`uhafner/autograding-gitlab-action`](https://github.com/uhafner/autograding-gitlab-action) *(`MIT`, Germany)*, 🆕 [`jameskermode/mograder`](https://github.com/jameskermode/mograder) *(`MIT`, UK)*, `opencast/opencast` *(`ECL-2.0`)*, `ls1intum/Artemis`, `INGInious` | 🟢 **the self-hosted, data-resident stack** — lecture capture, `GitLab` CI, university SIS, and `17` locale catalogues on `opencast` |
+| 🟢 **APAC** | 🆕 [`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills) *(`Apache-2.0`)*, 🆕 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) *(`MIT`)*, `ningkaikok/dotty-tutor` *(`Apache-2.0`)*, the `knowledge-tracing` cluster *(`pykt-toolkit`, `EduData`, `EduStudio`, `pyedmine` — all `MIT`/`Apache-2.0`)* | 🟢 **learner modelling and curriculum-localised tutoring.** 🟢 **The richest permissive SCHEMAS on this shelf are APAC-origin** |
+| 🟡 **LATAM** | [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) *(`MIT`, `pt-BR` ENEM corpus)`, `SIU-Toba/docker-guarani` *(🔴 no grant)* | 🔴 **ONE permissive row, and it is a CORPUS rather than software.** 🟢 Its value is high *(labelled, five-competence, `pt-BR`)*, but the region is supplying data, not platforms |
+
+🔴 **The LATAM supply absence is stated as a finding, not left as whitespace: after `186` passes this
+KB holds exactly ONE permissively-licensed LATAM-origin education row.** 🔵 **That is an argument for
+Globant's position, not against it — the regional stack is not there to be adopted, and a studio
+that builds it owns the reference.**
+
+## Opportunities by region
+
+### Global
+
+🟢 **`1`. Sell the AUDIT TRAIL as a deliverable, and lead with the defect this pass measured.**
+`ACTION MJ` found a permissive `Apache-2.0` education platform whose prompt-governance cluster is
+genuinely sufficient *(`18` columns, release lineage via `previous_revision_id`, no `CASCADE` on the
+audit FKs)* — and whose `teacher_review_events.corrected_assessment`, the human's override of the
+machine, is `CASCADE`-deleted by its class. 🔵 ***"We have audit tables"* is a claim about a schema;
+*"the override survives a delete"* is a claim about a deployment.** 🟢 Only the second is worth
+anything, and it is two `ondelete` clauses of work.
+
+🟢 **`2`. Licence due diligence as a priced work package.** This pass recovered `4` permissive rows
+from repositories this KB had already written off, and moved `2` rows to DO-NOT-USE on licence text
+a byte count could not distinguish. 🔵 **Three sub-`1`kB `LICENSE` shapes are now measured on this
+shelf and only one grants anything** *(`Gap 421`)*. 🟢 **A client's shortlist is wrong in both
+directions, and the correction is cheap, evidenced and billable.**
+
+### North America
+
+🔴 **The regulatory texture is the opportunity: `134` AI-in-education bills across `31` states in
+`2026`, and `35`+ states with departmental guidance as of June — with essentially no binding
+federal mandate.** 🟢 **A multi-state district or an ed-tech vendor needs a compliance MATRIX, not a
+policy**, and the matrix is the engagement.
+
+🟢 **Named anchors a proposal can cite:** Oklahoma **S.B. `1734`** requires every district to adopt a
+written AI policy before the `2027`-`28` school year; Oklahoma and Maryland have both moved to bar
+AI from high-stakes decisions about students; Ohio **HB `96`** and Tennessee **SB `1711`** devolve
+policy-making to districts; **H.R. `8747`**, the K-12 AI Literacy and Readiness Act of `2026`,
+advanced in committee in July *(🔴 passage not confirmed)*; the Department of Education finalised a
+rule prioritising grants for projects advancing understanding or ethical use of AI in education.
+
+🟡 **The sharpest single signal, and it needs verifying before it is quoted:** New York City's
+preliminary guidance uses a permitted / cautioned / prohibited traffic-light framework, and one
+source reports a moratorium on student-facing generative AI from **`2026-09-02`** affecting nearly
+`600 000` students. 🔴 **Sources conflict on the detail. Verify against the DOE's own document.**
+
+🟢 **The technical fit:** this region supplies the interoperability layer, so a North American
+engagement starts from `LTI` and autograding — now with
+[`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) *(`MIT`,
+Carnegie Mellon)* as a handshake reference whose provenance a US university recognises.
+
+### EMEA
+
+🟢 **The clock asymmetry IS the pitch, and it is this pass's cleanest regional finding.** The Annex
+III high-risk application date for admissions, grading, level assessment and exam monitoring is
+reported moved to **`2027-12-02`** *(Council green light `2026-06-29`; 🔴 Official Journal
+publication unconfirmed, `eur-lex` unreachable here)* — while the **Article `5`(1)(f) prohibition on
+emotion inference in education has been in force since `2025-02-02` and is unchanged.**
+
+🔵 **So the deadline that moved has a conformity route and the one that did not has none.** 🟢 **The
+first conversation with a European institution is a triage: which pilots are PROHIBITED today, which
+are high-risk-but-deferred, and which are neither.** 🔴 **Article `27`'s fundamental-rights impact
+assessment for public-body deployers is reported unchanged — so `2027` is a documentation deferral,
+not a design one.** 🟡 Also reported: the Commission's updated ethical AI guidelines for education
+*(May `2026`)*, Council conclusions on a human-centred approach *(`11` May)*, and a
+Commission-plus-OECD draft **AI Literacy Framework** for primary and secondary education with G7
+endorsement — 🟢 **a framework a studio can build a teacher-enablement offer against.**
+
+🟢 **The technical fit is the strongest of any region:** `opencast` *(`ECL-2.0`)* with three LOCAL
+speech-to-text engines in-tree and a now-named provider interface, `uhafner/autograding-gitlab-action`
+*(`MIT`)* for self-hosted `GitLab`, `sisu-mcp` *(`MIT`)* for the university SIS. 🔵 **Data-residency
+is satisfiable with permissive software here, which is not true on any other shelf.**
+
+### APAC
+
+🟢 **Two national curriculum mandates are the demand, and they are compulsory rather than
+advisory:** China and the UAE are reported as the only countries running **compulsory national AI
+curricula**, since the `2025`-`26` school year; India is reported to make AI and computational
+thinking **mandatory from Class `3` in `2026`-`27`**, tied to a **₹`500` crore** centre of excellence
+and the India AI Mission. 🔴 **Single secondary source for both. Verify before quoting a client.**
+
+🟡 **The regulatory map diverges sharply, which makes a multi-jurisdiction offer sellable:** China
+holds the most developed binding AI regulation in the region; Japan's **AI Promotion Act** is soft
+law with **no penalties**, with a new AI Basic Plan adopted by Cabinet in **July `2026`**; India's IT
+intermediary amendments took effect **`2026-02-20`** targeting AI-generated content, with a July
+`2026` signal toward dedicated legislation. 🟢 **And the one education-SPECIFIC classification found
+anywhere this pass: Vietnam's rules classify automated assessment and behavioural monitoring in
+education as HIGH-RISK** — 🔵 **the same two use cases the EU names, in a jurisdiction with a
+different timetable.**
+
+🟢 **The technical fit:** APAC supplies this shelf's richest permissive schemas — `dotty-tutor`
+*(`Apache-2.0`, `55` tables)*, the whole `MIT`/`Apache-2.0` knowledge-tracing cluster, and now
+`china-k12-teacher-skills` *(`Apache-2.0`)*, **the first agent-skill set with an explicit regional
+curriculum profile.** 🔵 **An APAC engagement adapts rather than builds.**
+
+🔴 **The declared gap, now in its second pass: `0` APAC adoption statistics from an official
+in-language channel.** `www.mext.go.jp` is `ENOTFOUND` from this environment *(`T309`,
+re-confirmed)*. 🟢 Government TARGETS and private surveys are recorded with provenance; **official
+measured adoption is not available here and is not inferred.**
+
+### LATAM
+
+🟢 **Peru is the region's only country with an ENACTED national AI statute** — **Ley N° `31814`**,
+published in *El Peruano* **`2023-07-05`**, implementing regulation **September `2025`**. 🔵 Every
+other major market is at bill, guidance or policy stage.
+
+🟢 **Brazil is where an education engagement is actually decided, and for a specific reason:
+PL `2.338/2023` is reported to treat AI used for EDUCATIONAL EVALUATION as high-risk**, carrying
+documentation and impact-assessment duties. 🔴 **Secondary source, and the bill is in the Chamber of
+Deputies, so the text can still change.** 🟢 **Brazil also launched the region's first AI regulatory
+sandbox (`2025`) and names *Education: strengthening AI training programs* as a vertical axis of its
+national AI strategy.** 🔵 **Sandbox plus a high-risk education classification plus a national
+training axis is the most favourable combination in the region for a governed pilot.**
+
+🟡 **Mexico is split and the sources conflict:** none of the federal AI bills introduced `2022`–`2025`
+was approved; `2026` amendments are reported as the first binding obligations *(performers' rights,
+deepfake offences, enforcement)*; a **February `2026`** Senate bill creating a risk-classifying
+regulator is pending. 🟢 **The demand-side fact that is concrete:** a public AI training centre run
+by **INFOTEC and TecNM with `14` technology companies**, targeting **`10 000` specialists in `2026`**
+and **`25 000` per year** thereafter. 🔵 **That is a workforce pipeline a studio can hire from and
+partner with.**
+
+🔴 **Two absences stated plainly rather than left as silence.** First: **this pass's LATAM search
+returned almost nothing education-SPECIFIC** — the regulatory picture is clear, the education layer
+is thin and mostly secondary commentary. 🔴 **An informed gap, not coverage.** Second: **the
+permissive LATAM supply is still ONE row**, [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br),
+and `ACTION ML` proved this pass that it cannot be scored by the existing `MIT` toolchain — the
+`pt-BR` path is TRAINING, with ReaderBench's Portuguese support itself unverified *(`Gap 424`)*.
+
+🟢 **So the honest LATAM opportunity is narrower and better than *"adopt the stack"*: there is no
+`pt-BR` essay-scoring capability in open source today.** 🔵 **There is a `MIT` corpus with a
+five-competence ENEM rubric, a national exam that uses it, a bill that would classify the use as
+high-risk, and a sandbox to pilot it in.** 🟢 **A studio that builds that model owns the reference
+implementation for a `190`-million-person market, and `ACTION MQ` is the `1`-probe question that
+tells it what the first week of work is.**
+
 ## Pass 185 — 2026-10-14
 
 🆕 🟢 **This pass can place SUPPLY by region as well as demand, which is new: four of the rows
