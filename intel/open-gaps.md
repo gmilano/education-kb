@@ -3,6 +3,80 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## 🔜 Registered for p201 — pre-registered with falsifiers
+
+🟢 **p200 changed what a pass can do, so the register changes shape with it.** The actions below
+assume the capability p200 established: **the GitHub REST API answers through this session's MCP
+server, so a pass can now DISCOVER repositories rather than only verify slugs it already has**
+*(`curl api.github.com` and `curl github.com/<slug>` still return `403` — re-measured p200)*.
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🆕 🟢 **`ACTION OH`** — add **lowercase `license.txt`** to `is_licence_path`, and add the **non-root** probe (`docs/License.txt`) | [`compose/code/lib/licence_path.sh`](../compose/code/lib/) + p200's `frappe/erpnext` (`GPL-3.0`, `35 149` B at `license.txt`) and `OS4ED/openSIS-Classic` (`GPL-2.0`, `17 286` B at `docs/License.txt`, **UTF-8 BOM**) | 🟢 **limb `1`:** both resolve and the existing `28` cases still pass → the case/path class closes. 🔴 **limb `2`:** a case still misses → **name the form**, and the predicate splits by depth as well as by name |
+| 🆕 🔴 **`ACTION OI`** — replace any Affero-phrase match in the family classifier with the **title line + mention count** discriminator | [`compose/code/lib/license_family.sh`](../compose/code/lib/) + p200's `8`-blob measurement | 🟢 **limb `1`:** `moodle`/`chamilo`/`ILIAS`/`h5p`/`erpnext` → `GPL-3.0` (`3` mentions) and `edx-platform`/`hrshadhin`/`freelingo` → `AGPL-3.0` (`15` mentions) → the trap closes and p199's rows are confirmed in the instrument. 🔴 **limb `2`:** any of the `8` disagrees → **the byte count is doing the work, not the phrase**, and the discriminator must be re-derived. 🔵 **REQUIRED negative cases: the four GPL-3.0 blobs, because a naive detector calls them AGPL** |
+| 🆕 🟡 **`ACTION OJ`** — add a **scope reader** that extracts per-directory grants from inside a notice | p200's `24kchengYe/human-skill-tree` (`1 134` B: `skills/` **AGPL-3.0 OR MIT**, `app/` AGPL-only) | 🟢 **limb `1`:** it emits two rows for one repo — `skills/` → `{AGPL-3.0, MIT}`, `app/` → `{AGPL-3.0}` → split-scope becomes mechanical. 🔴 **limb `2`:** it emits one verdict → **the repo-level licence column is the wrong shape** for this class, and the page must carry scope explicitly |
+| 🆕 🟢 **`ACTION OK`** — run the **ranked discovery channel** over the other verticals' vocabularies (`topic:school-management` worked; try `topic:lms`, `topic:student-information-system`, `topic:assessment`, `license:ecl-2.0`) | [`repos/trending.md`](../repos/trending.md) p200 *(`topic:school-management stars:>200` → `7`; `license:ecl-2.0 stars:>20` → `18`)* | 🟢 **limb `1`:** new bounded shelves appear → the KB's population was discovery-limited all along, **and say by how much**. 🔴 **limb `2`:** the topics return what is already published → the shelf is genuinely complete and the `494`-row population is the world, not the instrument |
+| 🆕 🔴 **`ACTION OL`** — settle the LATAM supply-side absence with a **second channel** | p200's Spanish-language query (`educacion IA agente escuela aprendizaje`, `stars:>30`) → **`0` results** | 🟢 **limb `1`:** a Portuguese/Spanish query at a lower threshold, or GitLab, returns real repos → **p200's "does not exist on GitHub in Spanish" was this pass's reach**, and `Gap 445` recurs again. 🔴 **limb `2`:** still nothing → the absence is a property of the world and the first-mover claim in [`intel/market.md`](market.md) stands |
+| 🟡 **`ACTION OM`** — resolve `polimediaupv/paella`'s grant | p200 *(API `ECL-2.0`, `package.json` `ECL-2.0`, `404` on `15` path/branch combinations)* | 🟢 **limb `1`:** a blob is found somewhere → **the probe's path vocabulary is still short**, extend it. 🔴 **limb `2`:** none exists → the row is **declared, ungranted**, and that is what the page must say |
+| 🔴 **`ACTION OG`** *(closed by p200, recorded for the series)* | [`repos/trending.md`](../repos/trending.md) | 🟢 **Answered: limb `2` for the HTML endpoint — `github.com/trending` is `403`, a fifth dated entry — but the CONCLUSION attached to it was false.** Ranked discovery works through the API. 🔵 *Flow* stays unmeasurable; *stock* is now exact |
+
+### 🔴 Two asks that only a human can answer — and both block real work
+
+1. 🔴 **`ACTION MN` *(carried, THIRTEENTH pass)* — may this KB open licensing issues on
+   third-party repositories?** 🔵 **Still NOT RUN, and correctly so: it is an outward-facing
+   write on other people's repositories and this run is unattended.** 🆕 p200 adds four
+   candidates to the queue, each measured rather than guessed:
+   `loyaniu/moodle-mcp` (`42★`, **no grant on any path or manifest**),
+   `haanhtuandev/vgu-mcp` (`10★`, same),
+   `ProjectsAndPrograms/school-management-system` (`206★`, same), and
+   `polimediaupv/paella` (`63★`, **declared, ungranted**). 🟢 **Each is a one-line, genuinely
+   useful question to a maintainer** — *"what licence governs this code?"* — and the KB may not
+   ask it without authorisation.
+2. 🆕 🔴 **`ACTION ON` — may a pass run the KB's OWN scripts?** `bash measure --self-test` and
+   `bash test_probe_payload.sh` were both **denied `[Code from External]`** in p200, as in p198.
+   🔴 **Consequence, stated plainly: p74's pre-registered action — *"the first pass with network
+   must run `test_probe_payload.sh` and expect every byte figure to come back one byte higher"* —
+   is STILL NOT RUN on its fourth pass with network.** 🔵 **This is a property of the reader, not
+   of the KB, and it will not resolve by waiting**: `compose/code/` holds `~300` suites that no
+   pass in this configuration can execute, so every byte figure they assert is unverified here.
+   🟢 **The ask is narrow: permission to execute the KB's own committed test scripts.** Until it
+   is granted, passes must measure with instruments they write themselves — which is what p200
+   did, **and p200's instrument had a defect that its own cross-check caught** *(see `ACTION OI`)*.
+   **That is the cost of the restriction, made concrete.**
+
+### 🆕 Gaps opened and closed by p200
+
+- 🆕 🟢 **`Gap 448` CLOSED ON OPEN — the fifteen-pass `403` was never the API's.** Passes
+  `185`–`199` recorded `api.github.com` → `403` and concluded that star counts and ranked
+  discovery were unavailable. 🔴 **The `403` is a property of `curl` in this session.** The same
+  API answers normally through the MCP server. 🔵 **This is `Gap 445` — an instrument's reach
+  published as a property of the world — in its most expensive form yet**: it did not corrupt one
+  number, it **removed a capability** for fifteen passes. **Every prior pass grew this shelf by
+  guessing slugs because it believed it could not search.**
+- 🆕 🔴 **`Gap 449` — a published recommendation was an instrument-reach statement, and a reader
+  would have acted on it.** p199: *"it is **the only MIT Moodle MCP found**."* There are at least
+  five, and the most-starred has `43★` against that row's `0★`. 🟢 The word *"found"* was
+  load-bearing and the page did not flag it. **Rule: when a claim's scope is the search that
+  produced it, the claim must name the search** — p198's four-channel table generalised to
+  recommendations, not just to figures.
+- 🆕 🔴 **`Gap 450` — this KB's own licence classifier can label every GPL-3.0 repo as AGPL.**
+  The GPL-3.0 text contains *"GNU Affero General Public License"* in § 13. 🔵 **And the defect is
+  intermittent — it depends on how the text is line-wrapped** — which is why it survived: a
+  detector right four times in five looks like a working detector. `ACTION OI`. 🟢 **p199's
+  `GPL-3.0` rows are confirmed correct and must not be "corrected."**
+- 🆕 🟢 **`Gap 451` — licence SCOPE is not expressible in this KB's page schema.** Every page
+  carries one licence per repo. `human-skill-tree` needs **two**, by directory. 🔵 Related to
+  `p1056-split-scope-licence` but new in the pages rather than in the instrument. `ACTION OJ`.
+- 🆕 🔴 **`Gap 452` — the LATAM supply side is absent and this KB cannot yet tell absence from
+  reach.** Zero Spanish-language education-AI repos above `30★`; zero LATAM-origin entries in the
+  `11`-repo skill layer. 🟢 **Declared explicitly rather than left as silence** — per the brief's
+  rule that an informed gap is information. `ACTION OL` tests which it is.
+- 🟡 **`Gap 446` *(p854's capability never reached a caller)* and `ACTION NZ` — UNTOUCHED by
+  p200**, which spent its pass on discovery and the market brief. 🔵 Recorded so the register
+  does not imply progress it did not make.
+- 🔵 **p199's `openedx/XBlock` rule HELD.** p200 did not re-probe it and did not "correct" it.
+  `Apache-2.0` at `LICENSE.TXT`, `11 358` B, stands.
 ## 🔜 Registered for p198 — pre-registered with falsifiers
 
 🔵 **This file is the register, and it had drifted.** Passes `192`–`197` registered their

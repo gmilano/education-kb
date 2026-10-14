@@ -3,6 +3,121 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 200 — 2026-10-14
+
+### 🆕 🟢 First: a capability this KB believed it did not have, for fifteen passes
+
+Passes `185`–`199` each recorded the same wall — `api.github.com` → **`403`**,
+`github.com/<slug>` → **`403`** — and built around it: star counts became `not read`, ranked
+discovery was declared unavailable, and new rows were found by **guessing slugs** (p199 records
+six not-found probes for four cycle-3 rows).
+
+🔵 **Both `curl` channels still return `403`, re-measured this hour.** 🟢 **The same GitHub REST
+API answers normally through this session's MCP server.**
+
+🔴 **So the `403` was a property of `curl` in this session, not of the API** — `Gap 445` *(an
+instrument's reach published as a property of the world)* in its most expensive form yet. **It
+did not corrupt a number; it removed a capability for fifteen passes.** Two things follow:
+
+| | before p200 | p200 |
+|---|---|---|
+| stars / `pushed_at` / `archived` | 🔴 `not read`, or an HTML scrape | 🟢 exact — **all `8` of p199's `not read` cells filled** |
+| 🆕 **discovery** | 🔴 **impossible** — verify a known slug, never find a new one | 🟢 `topic:`, `license:`, `stars:>` — **two whole clusters found that no prior cycle had seen** |
+
+🔵 **And the new channel's limit was measured before it was trusted:** the API's licence field can
+be **manifest-derived** (`polimediaupv/paella`: API `ECL-2.0`, `package.json` `ECL-2.0`, and
+**no blob at `15` path/branch combinations**). **The blob channel stays authoritative for
+licence; the API is for discovery and metadata.** Every licence published this pass was read
+from a repo's own blob.
+
+### 🟢 What discovery found
+
+- 🆕 **The agent-skill tutor layer — `11` repos, `3 655`★ combined, `9` MIT, and absent from
+  every prior cycle.** The 2026 tutor ships as a `SKILL.md` loaded into Claude Code / Cursor /
+  Codex, not as a web app. 🔴 **`9` APAC, `1` EMEA, `0` North America, `0` LATAM.**
+- 🆕 **Moodle-side MCP: `2` → `8`**, led by `peancor/moodle-mcp-server` (**MIT**, `43★`); one
+  created **two days ago** in Rust. 🔴 **`3` of the `8` cannot be shipped** — two grant nothing
+  anywhere, one declares MIT with no grant. 🔴 **This retires p199's *"the only MIT Moodle MCP
+  found"*** — `Gap 449`, a recommendation whose scope was its own search.
+- 🆕 **`ECL-2.0`, a licence family this KB had never named.** Apache-2.0 **with the § 3 patent
+  grant narrowed to "the needs of the education communities"**; `18` repos GitHub-wide, topped by
+  Sakai (`1 238★`) and Opencast (`508★`). 🔵 Cycle 3 published `Sakai(Apache2)`; p199 flagged the
+  clause correctly; **p200 read the text, sized the family and named the consequence** — a
+  contract-review step, not a label.
+- 🔴 **A negative finding worth more than a list: the agentic-grading cluster this KB tables as
+  canonical has `4` stars across three repos**, one of them created seven days before the pass
+  that listed it. **Open source has no grading shelf. If AI Studios sells agentic grading, AI
+  Studios builds it.**
+
+### 🔴 This pass's own defect, caught by its own cross-check — and p199 is vindicated
+
+p200's first licence read said **`AGPL-3.0`** for Moodle, Chamilo, ILIAS and H5P. **p199 had
+published `GPL-3.0`.** 🟢 **p199 is right.**
+
+> **The GPL-3.0 text contains the phrase *"GNU Affero General Public License"* in its own § 13.**
+> Any classifier that decides the family by searching for that phrase calls **every** GPL-3.0
+> repository AGPL.
+
+🔴 **And the defect is intermittent, which is why it survives review:** the same detector read
+`frappe/erpnext` correctly from an identical licence, because the two copies **wrap § 13
+differently** — a line-oriented grep over wrapped legal text is not a classifier. 🟢 **The clean
+discriminator, measured on `8` blobs with no overlap: count of `affero` = `3` (incidental, § 13)
+for GPL-3.0 versus `15` for AGPL-3.0**, title line agreeing. `Gap 450`, `ACTION OI`.
+
+🔵 **Why it mattered enough to re-check rather than publish:** GPL vs AGPL is the difference
+between *"a client may host this"* and *"hosting it may compel disclosure."* 🟢 **The shape is
+p199's own `openedx/XBlock` episode with the roles reversed — a later pass "correcting" an
+earlier one that was right — and p199 wrote the rule for exactly this case.**
+
+### 🔴 Five licence surfaces in one afternoon, all on repos with real adoption
+
+`split scope inside a 1 134-byte notice` *(`human-skill-tree`, `572★`: `skills/` **AGPL-3.0 OR
+MIT**, `app/` AGPL-only)* · `lowercase license.txt` *(`frappe/erpnext`, `GPL-3.0`, `35 149` B)` ·
+`a 19-byte grant REFERENCE` *(`frappe/education`, `665★`)* · `a non-root grant with a UTF-8 BOM`
+*(`openSIS-Classic`, `345★`, `docs/License.txt`)* · `manifest-only declaration` *(`paella`)*.
+
+🟢 **The generalisation: *"no `LICENSE` file"* is a statement about a path, never about a
+grant** — and it is now a billable pre-engagement gate, `P200-6` in
+[`compose/patterns.md`](compose/patterns.md).
+
+### 🟢 Market: the regional brief, with gaps declared rather than left silent
+
+- **LATAM is the best-sourced region of the pass and the thesis is governance:** UNESCO IESALC +
+  UNU-IAS, `200` institutions across `19` countries — **`87%` use AI somewhere, `74%` in teaching
+  and learning, `26%` have a formal AI strategy.** 🆕 Plus a named counterpart map: the **UNESCO
+  Observatory on AI in Education for LAC, launched 14 April 2026 in Santiago** (CAF, CENIA,
+  CETIC.br, ECLAC, Santillana, Tec de Monterrey, ProFuturo, Ceibal).
+- 🆕 **EMEA is not the EU, and this KB had been writing as if it were.** The **UAE National AI
+  Strategy 2031**, **Saudi SDAIA**, and **Kenya/South Africa/Nigeria** drafting — 🔴 sourced from
+  an *insurance*-sector review, so indirect, and **no education-specific MEA regulation or
+  adoption data was found.**
+- 🆕 **APAC's sharpest fact: Vietnam's Law No. 134/2025/QH15, in force 1 March 2026**, reaching
+  foreign companies, with **education — automated assessment and behavioural monitoring — on the
+  high-risk list.**
+- 🟢 **The convergence worth selling:** **Oklahoma and Maryland**, the **EU AI Act**, **Vietnam**
+  and **Australia** are converging on one requirement — *a human stays accountable for
+  high-stakes decisions about a student.* **One control plane, four jurisdictions**, and per the
+  grading finding **nobody is giving it away.** `P200-3`.
+- 🔴 **Unresolved, and p199's warning stands:** the EU AI Act transparency/enforcement dates
+  remain **secondhand** — `digital-strategy.ec.europa.eu` **does not resolve from this session**
+  (`getaddrinfo ENOTFOUND`), so the Commission's own page could not be read. **Verify against the
+  Official Journal before a date goes in a client deliverable.**
+- 🔴 **Declared absence, measured:** a Spanish-language GitHub search for education-AI repos
+  (`stars:>30`) returned **zero**, and none of the `11` skill-layer tutors is LATAM-origin.
+  **An informed gap, not coverage.**
+
+### 🔴 `ACTION ON` — the restriction that is now costing measurable work
+
+`bash measure --self-test` and `bash test_probe_payload.sh` were **denied `[Code from External]`**
+again, as in p198. 🔴 **p74's pre-registered action — *"the first pass with network must run
+`test_probe_payload.sh`"* — is STILL NOT RUN on its fourth pass with network**, and
+`compose/code/` holds `~300` suites no pass in this configuration can execute. 🟢 **The ask, for
+a human: permission to execute the KB's own committed test scripts.** 🔵 Until then a pass must
+measure with instruments it writes itself — **and p200's own instrument had a defect its
+cross-check caught.** That is the cost, made concrete. 🔴 **`ACTION MN` is also carried for a
+THIRTEENTH pass and remains correctly NOT RUN** — an outward-facing write on other people's
+repositories, on an unattended run — now with four measured candidates.
 ## Pass 198 — 2026-10-14
 
 ### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 200 — 2026-10-14 — THE SIS/ERP LAYER, DECIDED BY LICENCE
+
+🔵 **p199's platform table stands; this section fills the half of it that was thinnest.** p199
+listed four student-information systems without star counts, because star counts were
+unreadable to it. 🟢 **With the API channel open *(see [`agents/top.md`](../agents/top.md))*
+the whole `topic:school-management` shelf above `200★` is enumerable — `7` repositories — and
+once the licences are read from their own blobs, the decision collapses to two options.**
+
+### 🟢 Education SIS / school ERP — ranked, then filtered by what Globant can actually ship
+
+| Platform | Repo | Licence *(blob, bytes)* | Stars · forks | Verdict |
+|---|---|---|---|---|
+| **LAVSMS** | [4jean/lav_sms](https://github.com/4jean/lav_sms) | 🟢 **MIT** · `1 072` B | **1 042** · `650` | 🟢 **The permissive pick.** Laravel/PHP: exams, marksheets, teachers, results. Embeddable in a closed deliverable |
+| **Skuul** | [yungifez/skuul](https://github.com/yungifez/skuul) | 🟢 **MIT** · `1 069` B | **409** · `147` | 🟢 **Permissive AND multi-school** — built multi-tenant, which is what a group, network or ministry deployment actually needs |
+| School Management System | [hrshadhin/school-management-system](https://github.com/hrshadhin/school-management-system) | 🔴 **AGPL-3.0** · `34 522` B | **1 145** · `994` | 🔴 **The most-starred, and the one to avoid.** AGPL is *network* copyleft: hosting it for a client can trigger source disclosure |
+| **Frappe Education** | [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3** — by a **`19`-byte reference** | **665** · `455` | Odoo-alternative education ERP on ERPNext. 🔴 Its `license.txt` reads `License: GNU GPL V3` *and nothing else* — the grant is not in this repo |
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15 214` B | **646** · `391` | K-12, multilingual incl. ES/PT → **LATAM**. 🔵 **Default branch is `mobile`** |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0** · `17 286` B at **`docs/License.txt`** | **345** · `288` | 🔴 **No licence at root** — a root-only scan calls this unlicensed and is wrong |
+| School Management System *(PHP)* | [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** | **206** · `111` | 🔴 **Unusable at any quality.** Nothing grants anything |
+| **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** · `8 241` B | — | Odoo-based: admissions, LMS, SIS, parent app. 🟡 Weak copyleft — **linkable**, the practical middle. 🔵 **Default branch is `19.0`** |
+
+🟢 **The one-line answer an engagement needs: of the seven most-adopted school-management
+systems in open source, exactly two are permissive — `lav_sms` (MIT, `1 042★`) and `skuul`
+(MIT, `409★`), both Laravel — and the single most-starred option is AGPL.** 🔵 Popularity and
+licence point in opposite directions here, which is the whole reason this table is worth
+reading before a proposal rather than after.
+
+🔴 **And the Odoo analogue is weaker than cycle 2 implied.** Cycle 2 named OpenEduCat as the
+"Odoo for education." It is LGPL-3.0 and real — but `frappe/education`, the other candidate, is
+**GPL-3 asserted in a nineteen-byte file whose grant text lives in another repository.** For a
+client deliverable, *"the licence of this component cannot be established from this component"*
+is a finding, not a technicality.
+
+### 🔴 ECL-2.0 platforms need a contract step, not just a licence column
+
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (**1 238★**) and
+[`opencast/opencast`](https://github.com/opencast/opencast) (**508★**) are **ECL-2.0**:
+Apache-2.0 with **the § 3 patent grant narrowed to "the needs of the education communities."**
+🟢 p199 flagged the clause; **this pass read the text and counted the family — `18` repos
+GitHub-wide** *(see [`repos/foundations.md`](../repos/foundations.md))*. 🔵 **Practical
+consequence for a platform choice:** permission-wise ECL-2.0 behaves like Apache-2.0, so builds
+and redistribution are fine; **patent-wise the peace is scoped**, so if the deliverable serves a
+non-education licensee or a non-education purpose, that scoping is a question for counsel
+**before** the SOW, not a line in a compliance appendix.
+
+### 🟢 Where this leaves the platform decision, by region
+
+- **LATAM** — Moodle and **Chamilo** remain the installed base (both **GPL-3.0**, so integrate
+  over Web Services, don't embed); **Kolibri (MIT)** where connectivity is the binding
+  constraint; **`skuul` (MIT)** if a new multi-school SIS is in scope. 🔵 `RosarioSIS` is the
+  Spanish/Portuguese-friendly incumbent but GPL-2.0.
+- **EMEA** — **OpenOLAT (Apache-2.0)** is the only permissive full LMS; **ILIAS** for
+  German-speaking assessment-heavy institutions (GPL-3.0, branch `release_11`); **Opencast
+  (ECL-2.0)** for lecture capture, with the patent-scope step above.
+- **North America** — Canvas and Open edX dominate; **`edx-platform` is the one genuine AGPL
+  platform in this set**, so extend it with `XBlock` (`Apache-2.0`) and never fork it into a
+  hosted product.
+- **APAC** — Moodle plus the **Frappe/ERPNext** stack where finance is already on ERPNext
+  (`GPL-3.0`, `license.txt` **lowercase**); **OpenEduCat (LGPL-3.0)** out of India.
+
 ## Pass 199 — 2026-10-14 — CANONICAL PLATFORM TABLE (read this section first)
 
 The customisable systems an engagement actually lands on. **Licence read from the repo's own

@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 200 — 2026-10-14 — CURRENT TRENDS
+
+### 1. 🆕 🟢 The tutor stopped being an app and became an agent skill
+
+**This is the window's structural change, and it is about distribution, not models.** `11`
+tutoring projects verified alive today, **`3 655` stars combined, `9` of them MIT** — and none
+appears in any prior cycle of this KB. They ship a `SKILL.md` loaded by Claude Code, Cursor,
+Codex or Antigravity rather than a hosted product: [`Study-Mate`](https://github.com/Miaotofu01/Study-Mate)
+(`950★`), [`human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (`572★`),
+[`anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (`515★`),
+[`universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (`307★`),
+[`algo-sensei`](https://github.com/karanb192/algo-sensei) (`287★`),
+[`Bloom`](https://github.com/Li-Evan/Bloom) (`284★`).
+
+🔵 **Why it matters more than the star counts suggest:** the distribution problem that killed a
+decade of edtech — getting a tool in front of a learner who already has a workflow — is solved
+by the learner installing a skill into a tool they already use. **There is no app to adopt, no
+LMS integration to negotiate, no procurement.** 🟢 **And the pedagogy is getting better, not
+worse, in this layer:** `universal-examprep-skill` teaches **from the course's own slides with
+page citations** and crops the figures, i.e. grounding by provenance; `Bloom` runs Socratic
+questioning on 2-sigma framing; `universal-diagnostic-tutor-skill` is diagnosis-first with no
+command menu. 🔴 **The whole layer is APAC-origin** (`9` APAC, `1` EMEA, `0` North America,
+`0` LATAM) **and mostly Chinese-language.** MIT licences mean it ports; nobody has ported it.
+
+### 2. 🟢 Moodle's integration layer caught up with Canvas's — and a third of it is unshippable
+
+p199 recorded the Canvas MCP cluster (`6` servers) as the quarter's finding and found only `2`
+Moodle servers. 🟢 **With discovery available there are `8`**, led by
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (**MIT**, `43★`),
+and one — [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp), **Rust, MIT** — was
+**created `2026-10-12`, two days ago.** The layer is being written this week.
+🔴 **But `loyaniu/moodle-mcp` (`42★`, second-most-starred) grants nothing on any path or
+manifest, `haanhtuandev/vgu-mcp` likewise, and `ink-waffle/moodle-mcp` declares MIT in
+`package.json` with no grant.** 🟢 **`5`/`8` carry a real MIT grant — so in this layer the pick
+is never the top of the star ranking**, and p199's generalisation holds in its stronger form:
+*the LMS integration layer is no longer a custom build, for Moodle as well as Canvas.*
+
+### 3. 🔴 Agentic grading is pre-adoption, and now there is a number for it
+
+The three grading agents this KB tables as canonical hold **`4` stars between them** —
+`grading_assistant` `4`, `autograder` `0`, `auto-assessment-agent` `0` *(created seven days
+before the pass that listed it)*. 🔵 All three were `not read` in p199 and are now read.
+🟢 **This is the most decision-relevant trend in the pass precisely because it is negative:
+grading is the highest-demand, most-regulated AI task in education and open source has not
+built it.** Read `auto-assessment-agent` for its criterion-level, evidence-backed audit trail —
+then build. **There is no shelf.**
+
+### 4. 🆕 🔴 Education has its own OSI licence, and this KB had been reporting it as Apache-2.0
+
+**ECL-2.0** — the Educational Community License — *"consists of the Apache 2.0 license, modified
+to change the scope of the patent grant in section 3 to be specific to the needs of the
+education communities,"* quoted from Sakai's own blob. **`license:ecl-2.0 stars:>20` returns
+`18` repositories GitHub-wide**, topped by [`sakai`](https://github.com/sakaiproject/sakai)
+(`1 238★`) and [`opencast`](https://github.com/opencast/opencast) (`508★`).
+🟢 **Permission behaves like Apache-2.0; the patent peace is scoped to education** — which is a
+contract question for any deliverable serving a non-education licensee. 🔵 Cycle 3 published
+`Sakai(Apache2)`; p199 flagged the clause correctly; **this pass read the text and sized the
+family.**
+
+### 5. 🔴 The root `LICENSE` file is becoming the exception — four fresh surfaces in one pass
+
+| surface | instance | what a scanner reports |
+|---|---|---|
+| **split scope inside one notice** | `24kchengYe/human-skill-tree` (`572★`) — `skills/` **AGPL-3.0 OR MIT**, `app/` AGPL-only, in `1 134` B | 🔴 "AGPL" → the MIT-available part is discarded |
+| **lowercase `license.txt`** | `frappe/erpnext` — `GPL-3.0`, `35 149` B | 🔴 "no licence" |
+| **a `19`-byte grant REFERENCE** | `frappe/education` (`665★`) — `License: GNU GPL V3`, and nothing else | 🔴 "GPL-3.0" with no grant behind it |
+| **a non-root grant, with a BOM** | `OS4ED/openSIS-Classic` (`345★`) — `GPL-2.0`, `17 286` B at `docs/License.txt` | 🔴 "no licence" |
+| **manifest-only declaration** | `polimediaupv/paella` — `ECL-2.0` in `package.json`, no blob at `15` path/branch combinations | 🟡 "ECL-2.0" from a manifest, not a grant |
+
+🟢 **The generalisation to carry forward: *"no `LICENSE` file"* is a statement about a path,
+never about a grant** — and a licence column produced by a single-file scan is unreliable on
+repos with real adoption, not just on long-tail ones.
+
+### 6. 🔴 And the classifier trap is in the licences themselves
+
+**The GPL-3.0 text contains the phrase *"GNU Affero General Public License"* in its own § 13.**
+A detector that decides the family by searching for that phrase **labels every GPL-3.0 repo as
+AGPL** — which this pass's own first read did, for Moodle, Chamilo, ILIAS and H5P, before being
+caught. 🟢 **p199's `GPL-3.0` rows were right.** The clean discriminator, measured on `8` blobs:
+**count of `affero` = `3` (incidental, § 13) for GPL-3.0 versus `15` for AGPL-3.0**, with the
+title line agreeing and no overlap. 🔵 **Why this is a trend and not just a bug: GPL vs AGPL is
+the difference between "you may host this for a client" and "hosting it may compel disclosure."**
+A one-character-class mistake in a scanner becomes a wrong architecture.
+
+### 7. 🟢 Regulation is converging on ONE requirement across three continents
+
+**A human must remain accountable for high-stakes decisions about a student.**
+**Oklahoma and Maryland** require human oversight and bar AI from high-stakes student decisions;
+the **EU AI Act** imposes human-oversight duties on admissions/assessment/placement/proctoring
+(Annex III.3); **Vietnam's Law No. 134/2025/QH15**, in force **1 March 2026** and applying to
+foreign companies, puts automated assessment and behavioural monitoring on its **high-risk
+list**; **Australia** proposes mandatory guardrails explicitly including education.
+🟢 **Four jurisdictions, one control.** The requirement is converging faster than the market is
+building for it — and per trend `3`, the open-source shelf for it is empty.
+
+### 8. 🔵 "Evidence, not chat" is now the stated direction of travel
+
+Independent sources this pass push the same way: **OECD's 2026 outlook** recommends moving
+**beyond general-purpose AI tools toward purpose-built educational AI** designed for durable
+learning gains; **HolonIQ** expects *selective* acceleration weighing ethics, transparency and
+proven instructional benefit over personalisation claims; **1EdTech** describes institutions
+building governance structures and evaluation processes; and systems increasingly **demand
+evidence that products improve learning, persistence or job-relevant skills.** 🟢 **Evaluation
+capability is becoming a procurement gate**, which favours a studio that can measure outcomes
+over a vendor that can only ship features. 🔵 **This is the fourth consecutive cycle in which no
+dominant open-source education-AI evaluation harness was found** — the gap p199's predecessors
+also declared, still open.
+
+### 9. 🟡 Adoption is wide, shallow and ungoverned — and the numbers finally agree on that
+
+**LATAM: `87%` of `200` institutions use AI somewhere, `26%` have a strategy** (UNESCO IESALC).
+**EMEA: `10%` of `450+` institutions have formal AI guidelines** (aggregator).
+**North America: `60%` of US K-12 teachers used AI in 2024–25, `32%` weekly** — against a
+**quarter** of HiEd institutions having deployed it formally (p199's ACE figure).
+🟢 **Three regions, three instruments, one shape: usage has outrun governance everywhere.**
+🔵 The sourcing quality differs sharply — UNESCO's is an institutional sample, the EMEA figure
+is a roundup — **so the shape is reportable and the individual percentages are not equally
+trustworthy.**
+
 ## Pass 199 — 2026-10-14 — CURRENT TRENDS
 
 ### 1. 🟢 The LMS integration layer commoditised — this is the quarter's real change

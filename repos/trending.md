@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 200
+
+🟢 **`ACTION OG` — the `github.com/trending` probe — ANSWERED, and the answer is limb `2`
+with a twist.** `curl https://github.com/trending` and `curl https://api.github.com/...` both
+return **`403`** again this hour: **the fifth dated entry in that series.** 🔴 **But the
+conclusion attached to those `403`s for fifteen passes — that ranked discovery is unavailable —
+is now false.** The GitHub REST API answers normally through this session's MCP server, so
+**repository search with `topic:`, `license:` and `stars:>` qualifiers works.**
+
+🔵 **The distinction that matters: `github.com/trending` is still unreachable, so *flow*
+(what gained stars this week) remains unmeasurable. *Stock* (what exists, with exact star
+counts, `pushed_at` and `archived`) is now fully measurable, and search means a pass can find
+repos it did not already know the names of.** Every number in this entry is stock, read today.
+
+### 🆕 🟢 `ACTION OE` — the plugin-layer vocabulary query, partly answered
+
+p197 measured `moodle AI language:php` → `198` and `education AI agent language:php` → `0`, and
+asked whether other LMS plugin shelves exist. 🟢 **The ranked channel now answers by topic
+rather than by guess.** `topic:school-management stars:>200` → **`7` repositories**, i.e. a real
+and bounded shelf:
+
+| Repo | Licence *(blob, bytes)* | Stars | Forks | Signal |
+|---|---|---|---|---|
+| [hrshadhin/school-management-system](https://github.com/hrshadhin/school-management-system) | 🔴 **AGPL-3.0** · `34 522` B | **1 145** | `994` | 🔴 **The most-starred school-management system is AGPL.** `994` forks is the shelf's real centre of gravity |
+| [4jean/lav_sms](https://github.com/4jean/lav_sms) | 🟢 **MIT** · `1 072` B | **1 042** | `650` | 🟢 **The permissive SIS pick.** Laravel/PHP |
+| [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3 by a `19`-byte reference** *(see below)* | **665** | `455` | Built on ERPNext; the Odoo-alternative education ERP |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15 214` B | **646** | `391` | 🔵 **Default branch is `mobile`, not `main`** — a read at `main` returns nothing |
+| [yungifez/skuul](https://github.com/yungifez/skuul) | 🟢 **MIT** · `1 069` B | **409** | `147` | 🟢 **Multi-school (multi-tenant) and MIT** — the better base for a group or ministry deployment |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0 at a NON-ROOT path** *(see below)* | **345** | `288` | Commercial-grade SIS; root read says "no licence" and is wrong |
+| [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** | **206** | `111` | 🔴 Unusable regardless of quality |
+
+🟢 **The useful reduction: of the `7`, exactly `2` are permissive — `lav_sms` (MIT, `1 042★`)
+and `skuul` (MIT, `409★`), both Laravel.** Everything above them in the ranking is copyleft or
+ungranted.
+
+### 🔴 Three licence surfaces measured this pass, each a distinct class
+
+1. 🆕 **Lowercase `license.txt`.** [`frappe/erpnext`](https://github.com/frappe/erpnext) carries
+   **`GPL-3.0`, `35 149` B, at `license.txt`** — and `404`s on `LICENSE`, `LICENSE.md`,
+   `LICENSE.txt`, `LICENSE.TXT`, `COPYING` and nine other forms. 🔵 This KB learned
+   `LICENSE.TXT` (**uppercase**) from `openedx/XBlock` in p197–p199; **lowercase is a third case
+   form**, and it is on the largest education-adjacent ERP in open source. `is_licence_path`
+   needs it — `ACTION OH` in [`intel/open-gaps.md`](../intel/open-gaps.md).
+2. 🆕 **A `19`-byte grant REFERENCE, not a grant.**
+   [`frappe/education`](https://github.com/frappe/education) (**665★**): `license.txt` is
+   nineteen bytes — `License: GNU GPL V3` — and that is the whole file. 🔵 The `p742`
+   grant-body-vs-reference class, now with a `665`-star instance. The real text lives in the
+   framework the app is built on, which means **the licence of this repo cannot be established
+   from this repo.**
+3. 🆕 **A grant at a NON-ROOT path, with a BOM.**
+   [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**345★**) has no licence
+   file at root; its `README` points to `docs/License.txt`, which is **`GPL-2.0`, `17 286` B,
+   and starts with a UTF-8 BOM** (`U+FEFF` before `GNU GENERAL PUBLIC LICENSE`). 🔴 **A
+   root-only reach reports "no licence" for a licensed project** — the `p969` class, and the BOM
+   would additionally break a strict first-line match.
+
+🔵 **Taken together these three plus p200's split-scope notice *(see [`agents/top.md`](../agents/top.md))*
+are four distinct licence surfaces found in a single pass, all on repos with real adoption.**
+🟢 **The generalisation worth carrying: the root `LICENSE` blob is becoming the exception, not
+the rule, and "no `LICENSE` file" is a statement about a path, never about a grant.**
+
+### 🔴 A web-channel claim that does not survive verification
+
+A search roundup this pass named **GegoK12** *"the clearest MIT match"* for an open-source
+education ERP, describing twenty-six free modules on PHP 8.4 / Laravel 12.
+🔴 **`gegok12/gegok12` does not resolve — `ls-remote` returns not-found.** No slug was found
+for it. 🟢 **Not a row.** 🔵 The vendor-page provenance was visible in the source itself, and
+this is the second time this cycle a confident licence claim came from a page with a commercial
+interest in the answer. **The permissive ERP answer is `lav_sms` or `skuul`, both read from
+their own blobs.**
+
 ## 2026-10-14 — Pass 199
 
 🔵 **Verification method, since it changes what the numbers below mean.** `api.github.com` and

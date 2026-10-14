@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 200 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
+
+🔵 **Every repo named below was verified alive today by `ls-remote --symref`, with its licence
+read from its own blob and its star count read from the GitHub REST API.** Licences are inline
+because in education the licence decides whether a pattern can ship at all — and this pass found
+four repos with real adoption whose licence a single-file scan gets wrong.
+
+### P200-1 — Moodle-side tutoring and deadline agent *(LATAM / EMEA, 6–8 wks)*
+
+**Why this pattern now:** Moodle is the installed base across LATAM public universities and
+EMEA public education, and as of this pass its MCP layer is real — but choosing by star count
+picks an unlicensed repo.
+
+| Layer | Component | Licence | Wiring |
+|---|---|---|---|
+| LMS integration | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) `43★` | **MIT** `1 064` B | 🟢 **Fork it.** `43★` is a reference, not a dependency; the fork is the client's asset and its maintenance is a line item |
+| Adaptive block | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) `141★` | **MIT** `1 068` B | Material → notes, quizzes, flashcards; local-first, so it can run inside the institution |
+| Mastery model | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) `266★` | **MIT** | Take the **Bayesian Knowledge Tracing** model, not the UI — this is the part that makes "adaptive" mean something |
+| Policy gate | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) `43 258★` | **MIT** | Explicit state machine: the institution's rules as nodes, not as prompt text |
+| Retention | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) `515★` | **MIT** `1 074` B | 🆕 Spaced repetition under agent control — the one retention primitive that is already adopted |
+
+🔴 **Do not use `loyaniu/moodle-mcp` despite its `42★` — it grants nothing on any path or
+manifest.** Same for `haanhtuandev/vgu-mcp`. 🔵 **Moodle itself is `GPL-3.0`, not AGPL** *(this
+pass re-read the blob; see [`repos/foundations.md`](../repos/foundations.md))*, so integrating
+over Web Services is clean and **hosting the result does not trigger disclosure** — which it
+would on Open edX or Canvas, both genuinely AGPL.
+
+### P200-2 — Courseware shipped as an agent skill *(APAC-first, 4–6 wks; the port is the LATAM/NA play)*
+
+**Why:** the `11`-repo skill layer found this pass *(see [`intel/trends.md`](../intel/trends.md)
+trend 1)* has solved distribution — the learner installs into a tool they already use. `9` of the
+`11` are MIT, and **none is Spanish, Portuguese or US-curriculum.**
+
+1. **Grounding pattern** — copy [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill)
+   (**MIT**, `307★`): teach **from the client's own slides, citing page numbers**, cropping
+   figures. 🟢 **Provenance is the anti-hallucination control** and it is also the evidence trail
+   a procurement review asks for.
+2. **Interaction pattern** — [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill)
+   (**MIT**, `245★`) for diagnosis-first sequencing, plus
+   [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (**MIT**, `284★`) for Socratic questioning.
+3. 🔴 **Skill-tree content — read the licence scope before copying.**
+   [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (`572★`)
+   grants its **`skills/` `SKILL.md` files under AGPL-3.0 *OR MIT, at your option*** and its
+   **`app/` under AGPL-3.0 only.** 🟢 **Take the `skills/` payload under MIT. Do not take `app/`.**
+   The scope lives inside a `1 134`-byte notice, so a scanner reporting "AGPL" would have made
+   this pattern look impossible.
+4. **Vertical shape** — [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill)
+   (**MIT**, `175★`) shows the commercial form: **one high-stakes exam, one skill.** The LATAM
+   analogues are ENEM (Brazil), the Mexican COMIPEMS/EXANI and Colombia's Saber 11 — 🟢 **and
+   this pass measured that no Spanish-language equivalent exists on GitHub above `30★`.**
+
+### P200-3 — Human-oversight control plane for high-stakes decisions *(NA + EMEA + APAC, 10–12 wks)*
+
+🟢 **The highest-value pattern in this pass, because one build is billable in four
+jurisdictions** *(see [`intel/market.md`](../intel/market.md) → Global)*: **Oklahoma and
+Maryland** statute, the **EU AI Act** Annex III.3, **Vietnam's Law No. 134/2025/QH15** (in force
+1 March 2026, reaching foreign companies) and **Australia's** proposed guardrails all require
+that a human stay accountable for admissions, grading and placement decisions.
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| Decision graph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) `43 258★` | **MIT** | Every high-stakes edge passes through an explicit approval node. **The graph is the audit artefact** a conformity assessment asks to see |
+| Rubric evidence | [asu2304/auto-assessment-agent](https://github.com/asu2304/auto-assessment-agent) `0★` | **MIT** | 🟢 **Read the design, not the repo:** criterion-level, evidence-backed scores with deterministic score auditing. That audit trail *is* the compliance deliverable |
+| Approval queue | [johnswyou/autograder](https://github.com/johnswyou/autograder) `0★` | **MIT** | Its README insists on human approval before release — the right default, already expressed |
+| Teacher surface | [laurauguc/grading_assistant](https://github.com/laurauguc/grading_assistant) `4★` | **MIT** | Teachers upload **their own** rubrics; keeps the human the author of the standard |
+| Evidence corpus | [opencast/opencast](https://github.com/opencast/opencast) `508★` | 🔴 **ECL-2.0** | Lecture capture to ground decisions in what was actually taught. 🔴 **Patent scope is narrowed to education use — counsel reviews this before the SOW** |
+
+🔴 **Build, don't buy, and say so in the proposal: these three grading repos total `4` stars.**
+🟢 That is the commercial case rather than an objection to it — the control plane is sellable
+*because* nobody is giving it away, and the regulatory deadlines are already set.
+
+### P200-4 — Permissive SIS plus an AI layer for a school group *(LATAM, 8–10 wks)*
+
+**Why the licence drives this one entirely:** of the seven most-adopted open school-management
+systems, **exactly two are permissive, and the most-starred is AGPL.**
+
+- **Base, pick one:** [`4jean/lav_sms`](https://github.com/4jean/lav_sms) (**MIT** `1 072` B,
+  `1 042★`) for a single institution, or 🟢 [`yungifez/skuul`](https://github.com/yungifez/skuul)
+  (**MIT** `1 069` B, `409★`) **when there are many schools — it is built multi-tenant**, which
+  is the shape of a group or ministry deployment. Both Laravel/PHP.
+- 🔴 **Not** [`hrshadhin/school-management-system`](https://github.com/hrshadhin/school-management-system)
+  (`1 145★`) — **AGPL-3.0** `34 522` B; hosting it for a client can compel source disclosure.
+  🔴 **Not** `ProjectsAndPrograms/school-management-system` (`206★`) — no grant anywhere.
+  🟡 `frappe/education` (`665★`) only if the client is already on ERPNext — and note its licence
+  is a **`19`-byte reference**, so the grant cannot be established from the repo.
+- **AI layer:** dropout/early-warning scoring over the SIS's own attendance and grade tables,
+  with **LangGraph** (**MIT**) gating any intervention that reaches a student or parent, per
+  `P200-3`. 🔵 Pair with **Kolibri** (**MIT** `1 097` B) where connectivity is the binding
+  constraint rather than pedagogy.
+- 🟢 **Governance deliverable, and it is the one the client will actually pay for:** the UNESCO
+  IESALC finding that **`87%` of LATAM institutions use AI while `26%` have a strategy** means
+  the written AI policy — and the mapping from that policy into the LangGraph gates above — is
+  the engagement, not an appendix to it.
+
+### P200-5 — Lecture capture to searchable, grounded course corpus *(EMEA / North America, 6–8 wks)*
+
+- [`opencast/opencast`](https://github.com/opencast/opencast) (**ECL-2.0**, `508★`, branch
+  `develop`) for automated capture and distribution — 🟢 **the piece no LLM framework provides
+  and every "ask your lectures" product needs.**
+- Player: [`polimediaupv/paella`](https://github.com/polimediaupv/paella) (`63★`) — 🟡 **declared
+  `ECL-2.0` in `package.json` with no licence blob at `15` path/branch combinations.** Resolve
+  that with the maintainers before it ships; do not infer the grant from the manifest.
+- Grounding: [`stanford-oval/storm`](https://github.com/stanford-oval/storm) (**MIT**, `31 633★`)
+  for outline-and-cite over the transcript corpus, with
+  [`assafelovic/gpt-researcher`](https://github.com/assafelovic/gpt-researcher)
+  (**Apache-2.0**, `30 093★`) where source-backed briefs are wanted.
+- 🔴 **Step zero, and it is not optional: an ECL-2.0 patent-scope review.** The licence narrows
+  the § 3 patent grant to *"the needs of the education communities."* If the deliverable serves a
+  non-education licensee, that is a question for counsel **before** the statement of work.
+
+### P200-6 — Licence-surface audit as a billable pre-engagement gate *(any region, 1–2 wks)*
+
+🟢 **New pattern, and this pass is its own evidence: five distinct licence surfaces were found in
+a single afternoon, all on repositories with real adoption.** A studio that runs this gate before
+a proposal avoids discovering a copyleft obligation after the architecture is fixed.
+
+The checks, each with a measured instance from this pass:
+
+1. **Resolve the default branch first** (`ls-remote --symref`) — `rosariosis` uses `mobile`,
+   `ILIAS` uses `release_11`, `openeducat` uses `19.0`, `opencast` uses `develop`. A read at
+   `main` returns nothing and *looks* like "no licence."
+2. **Probe case variants** — `LICENSE.TXT` (uppercase, `openedx/XBlock`) **and** `license.txt`
+   (lowercase, `frappe/erpnext`, `GPL-3.0`, `35 149` B). `raw.githubusercontent.com` is
+   case-sensitive.
+3. **Probe non-root paths** — `OS4ED/openSIS-Classic` keeps `GPL-2.0` at `docs/License.txt`
+   (`17 286` B, **with a UTF-8 BOM** that breaks a strict first-line match).
+4. **Measure the payload, then ask whether it is a grant at all** — `frappe/education`'s
+   `license.txt` is **`19` bytes** of claim; `human-skill-tree`'s is a **`1 134`-byte notice**
+   against a `~34 500`-byte AGPL body.
+5. **Read scope inside the notice** — `human-skill-tree` grants `skills/` under **MIT or
+   AGPL at the licensee's option** and `app/` under AGPL only. **Per-directory scope changes the
+   answer from "unusable" to "usable in part."**
+6. 🔴 **Never classify GPL vs AGPL by searching for "Affero."** The GPL-3.0 text contains that
+   phrase in § 13. Use the **title line plus the mention count: `3` = GPL-3.0, `15` = AGPL-3.0**,
+   measured on `8` blobs this pass with no overlap. 🔵 This distinction decides whether a client
+   may host the result.
+7. **Never take the licence from an API or a manifest** — `polimediaupv/paella` reports
+   `ECL-2.0` from both while granting nothing in any file.
+
+🟢 **Deliverable:** a per-component table of *grant / scope / path / byte count / channel*, and
+an explicit list of components that **cannot** enter a closed deliverable. 🔵 **In this pass's
+own corpus that list would have had five entries** — and three of them are the most-starred
+option in their category.
+
 ## Pass 199 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
 
 Every repo named below was verified alive with its licence read from its own blob **today**.

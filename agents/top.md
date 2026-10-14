@@ -4,6 +4,157 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 200 — 2026-10-14 — THE 403 WAS THE READER, AND DISCOVERY IS NOW POSSIBLE
+
+🟢 **The headline is an instrument, and it changes what later passes can do.** Passes `185`–`199`
+all recorded the same wall: `api.github.com` → `403`, `github.com/<slug>` → `403`. p199 drew the
+right conclusion under that constraint — *"star counts come from an HTML read … where a star
+count could not be read this pass, the cell says `not read`"*. **Re-measured this pass, both
+`curl` channels still return `403`** *(`curl -s -o /dev/null -w '%{http_code}'`, this hour)*
+🔴 **but the GitHub REST API answers normally through this session's GitHub MCP server.**
+
+🔵 **So the `403` is a property of `curl` in this session, not of the API.** This is the same
+shape as p198's finding that `bash <repo script>` is denied *by the reader* — and that one
+**reproduced again this pass**: `bash measure --self-test` and `bash test_probe_payload.sh` were
+both denied `[Code from External]`. 🔴 **p74's pre-registered action — *"the first pass with
+network must run `test_probe_payload.sh`"* — is therefore STILL NOT RUN, on its fourth pass with
+network.** It is not an environment problem and waiting will not fix it; it needs a human to
+allow the KB's own scripts, and that ask is now in `intel/open-gaps.md`.
+
+**What the API channel adds that no prior pass had:**
+
+| capability | before p200 | with the API channel |
+|---|---|---|
+| star count / freshness / `archived` | 🔴 `not read` or an HTML scrape | 🟢 exact, with `pushed_at` and `archived` |
+| 🆕 **DISCOVERY** | 🔴 **impossible** — a pass could *verify* a slug it already had, never *find* one | 🟢 `topic:`, `license:`, `stars:>` qualifiers |
+
+🔴 **Discovery is the one that matters.** Every prior pass grew this shelf by *guessing slugs*
+— which is exactly why p199 had to record six not-found probes for four cycle-3 rows. **A KB
+that cannot search can only re-measure what it already knows.**
+
+### 🔴 The instrument's own limit, measured before it is trusted
+
+🟢 **The API's `license` field can be MANIFEST-DERIVED, so it is NOT an independent read of a
+grant.** Measured on [`polimediaupv/paella`](https://github.com/polimediaupv/paella): the API
+reports `ECL-2.0`; `package.json` declares `"license": "ECL-2.0"`; and **no licence blob exists
+at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license` or `COPYING` on `develop`, `master` or
+`main` — `404` on all `15` combinations.** 🔵 **The blob channel stays authoritative for
+licence; the API is a discovery-and-metadata channel.** Every licence in this section is still
+read from the repo's own blob.
+
+### 🟢 All eight of p199's `not read` cells, filled
+
+| row | p199 | 🟢 stars this pass | what it changes |
+|---|---|---|---|
+| [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | `not read` | **59 685** | pushed today; MIT confirmed |
+| [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | `not read` | **43 258** | pushed today |
+| [stanford-oval/storm](https://github.com/stanford-oval/storm) | `not read` | **31 633** | pushed today |
+| [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | `not read` | **30 093** | pushed today |
+| [laurauguc/grading_assistant](https://github.com/laurauguc/grading_assistant) | `not read` | 🔴 **4** | |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | `not read` | 🔴 **1** | AGPL *and* unadopted |
+| [johnswyou/autograder](https://github.com/johnswyou/autograder) | `not read` | 🔴 **0** | |
+| [asu2304/auto-assessment-agent](https://github.com/asu2304/auto-assessment-agent) | `not read` | 🔴 **0** | 🔴 **created `2026-10-07`** — *seven days* before the pass that tabled it |
+
+🔴 **The finding those four red rows add up to: the agentic-grading cluster this KB publishes as
+canonical has `4` stars across three repositories.** p199 claimed no scale for them and was
+right not to — but a canonical row implies *startability*, and these are reference
+implementations, one of them a week old. 🟢 **Stated plainly for an engagement: in open source
+there is no grading shelf to stand on. If AI Studios sells agentic grading, AI Studios builds
+it.** The rubric-audit *design* in `auto-assessment-agent` is still the thing to read first.
+
+### 🔴 Correction — "the only MIT Moodle MCP" was a reach statement
+
+p199: *"`0` stars — a reference implementation, not a dependency. **But it is the only MIT
+Moodle MCP found**"* (of [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server)).
+🔴 **With discovery available, there are at least five, and the most-starred has `43`.** The
+word *"found"* was doing real work in that sentence; `Gap 445` — *an instrument's reach
+published as a property of the world* — **recurs here**, and this time it was load-bearing
+advice: a reader would have forked a 0★ repo believing it was the only MIT option.
+
+### 🟢 Moodle-side MCP servers — the cluster p199 could not see (8 verified today)
+
+Licence from the repo's own blob at the default branch resolved by `ls-remote --symref`.
+
+| Repo | Licence *(blob, bytes)* | Stars | Origin → region | Note |
+|---|---|---|---|---|
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | **MIT** · `1 064` B | **43** | → **EMEA** | 🟢 **Most-starred Moodle MCP.** JavaScript; pushed today |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 🔴 **NO LICENCE FILE** *(nor in any manifest)* | **42** | → **APAC** | 🔴 **Second-most-starred and legally unusable.** Python. Do not ship it |
+| [1alexandrer/moodle-mcp](https://github.com/1alexandrer/moodle-mcp) | **MIT** · `1 074` B | **18** | → **EMEA** | TypeScript; default branch is `master` |
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | **MIT** · `1 064` B | **13** | → **APAC** *(Taiwan)* | 🆕 **Rust, created `2026-10-12` — two days old.** Files-as-markdown; courses, assignments, forums, grades |
+| [haanhtuandev/vgu-mcp](https://github.com/haanhtuandev/vgu-mcp) | 🔴 **NO LICENCE FILE** | **10** | → **APAC** *(Vietnam)* | Go; built for Vietnamese-German University students |
+| [SaadRahman01/moodle-mcp](https://github.com/SaadRahman01/moodle-mcp) | **MIT** · `1 068` B | **9** | → **APAC** | 🔵 **Developer-facing, not student-facing:** serves `moodledev.io` docs, Hooks API, XMLDB and the Moodle Jira. Use it to *build* Moodle plugins |
+| [Deeptanshuu/mydy-lms-helper](https://github.com/Deeptanshuu/mydy-lms-helper) | **MIT** · `1 070` B | **7** | → **APAC** *(India)* | TUI + MCP for a Moodle-based LMS at D.Y. Patil institutions |
+| [ink-waffle/moodle-mcp](https://github.com/ink-waffle/moodle-mcp) | 🟡 **MIT declared in `package.json` only — no blob** | **6** | → **EMEA** | Same declaration-without-grant shape p199 recorded for `DMontgomery40` |
+
+🔵 **Read across the layer:** `5`/`8` carry a real MIT grant, `2`/`8` grant nothing anywhere,
+`1`/`8` declares without a grant. 🟢 **Moodle's integration layer has caught up with Canvas's
+in twelve months** — but a third of it cannot be shipped, so the pick is not the top of the
+star ranking.
+
+### 🆕 🟢 The agent-skill tutor layer — absent from every prior cycle of this KB
+
+🔵 **This is the window's real structural change and it is not an app layer.** The 2026 tutor
+ships as an **agent skill** — a `SKILL.md` loaded by Claude Code, Cursor, Codex or Antigravity —
+rather than as a hosted web product. `11` verified alive today, `3 655` stars combined:
+
+| Repo | Licence *(blob, bytes)* | Stars | Origin → region | What it is |
+|---|---|---|---|---|
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | **MIT** · `1 064` B | **950** | → **APAC** *(zh)* | Route-planning study partner: picks a path, teaches, builds projects alongside |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **split scope — see below** | **572** | → **APAC** | `30+` skills K-12→career on a cognitive-science skill tree |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** · `1 074` B | **515** | → **Global** | 🟢 Puts **Anki** spaced repetition under agent control — the retention primitive, already adopted |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** · `1 065` B | **307** | → **APAC** *(zh)* | 🟢 Teaches **from the course slides with page citations** and crops figures — anti-hallucination by provenance |
+| [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | **MIT** · `1 081` B | **287** | → **APAC** *(India)* | DSA/interview mentor: progressive hints instead of solutions |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | **MIT** · `1 069` B | **284** | → **APAC** *(zh)* | Socratic tutor on Bloom's 2-sigma framing; skill **plus** self-hostable web app |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** · `1 102` B | **245** | → **APAC** | Diagnosis-first: no command menu, decides the next teaching step itself |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | **MIT** · `1 083` B | **175** | → **APAC** *(zh)* | Chinese civil-service exam prep — **a vertical exam as a skill**, the commercial shape |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** · `34 514` B | **172** | → **EMEA** *(Spain)* | Self-hosted language learning: CEFR plans, voice, SRS, local or cloud LLMs |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** · `1 068` B | **141** | → **APAC** | Block-based adaptive workspace, local-first: material → notes, quizzes, flashcards, adaptive tutor |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | **MIT** · `1 068` B | **112** | → **APAC** *(zh)* | Collection of teaching/tutoring skills incl. *gaokao* |
+
+🟢 **`9`/`11` are MIT — this layer is buildable.** 🔴 **And it is almost entirely APAC:** `9`
+APAC, `1` EMEA, 🔴 **`0` North America and `0` LATAM.** The supply side of agent-native tutoring
+is being written in Chinese, for Chinese and Indian exam markets. **For AI Studios that is both
+the opportunity and the warning:** the patterns are MIT and portable, and nobody has built them
+for Spanish, Portuguese or a US curriculum.
+
+### 🟡 A candidate slug for one of p199's four unverifiable rows — NOT a resolution
+
+p199 declared cycle 3's `OpenTutor(MIT,~900★)` unverifiable after six not-found probes
+(`mentorpal/opentutor`, `opentutor/opentutor`, `sudoping01/opentutor`, …).
+🟡 **[zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) resolves, is MIT, and is an
+adaptive tutor** — the licence matches and the description matches. 🔴 **The star count does
+not: `141`, not `~900`.** It was created `2026-02-26`, so it *could* be the referent of an
+August-2026 row, and the gap is consistent with the star inflation p199 confirmed — **but
+"consistent with" is not identification.** 🔵 **Recorded as a candidate. p199's rule stands
+unchanged: a row without a resolvable `owner/repo` is unverifiable forever**, and the remaining
+three cycle-3 rows stay unsourced.
+
+### 🔴 🆕 A licence class this KB has not recorded: SPLIT SCOPE inside one notice
+
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (**572★**) has a
+**`1 134`-byte** `LICENSE`. 🔵 The full AGPL-3.0 text is `~34 500` B — *(measured on `freelingo`
+the same hour: `34 514` B)* — so **the byte count alone proves this is a notice, not a grant
+body.** Its text, quoted:
+
+> *"The SKILL.md files in the `skills/` directory may be used under either this AGPL-3.0 license
+> OR the MIT license, at your option. … The web application code in the `app/` directory is
+> licensed exclusively under AGPL-3.0."*
+
+🔴 **A one-file family scanner labels this repo `AGPL-3.0` and an engagement discards it.** The
+truth is more useful than either verdict: 🟢 **the `skills/` payload — the part worth reusing —
+is available under MIT; the `app/` is not.** Scope lives *inside* the notice, and neither the
+path nor the family is enough to find it.
+
+🔵 **Three further licence-surface instances were measured this pass** — a lowercase
+`license.txt`, a `19`-byte grant *reference*, and a grant at a **non-root** path — all three on
+platform repos. They are in [`verticals/solutions.md`](../verticals/solutions.md), with the
+`is_licence_path` consequence in [`intel/open-gaps.md`](../intel/open-gaps.md).
+
+🟢 **The p199 canonical table below stands unamended apart from the star fills above.** Its
+rows were read the same day; this pass adds the layers it could not discover and does not
+re-litigate it. **`openedx/XBlock` remains `Apache-2.0` at `LICENSE.TXT` — still do not
+"correct" that row.**
+
 ## Pass 199 — 2026-10-14 — CANONICAL AGENT TABLE (read this section first)
 
 **How this pass differs from 185–198.** Those passes measured licence-file byte counts and

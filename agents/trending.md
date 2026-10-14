@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 200
+
+🆕 🟢 **New category this window, and it is a distribution change rather than a product change:
+the tutor shipped as an AGENT SKILL.** `11` repos verified alive with the licence read from
+their own blob today, **`3 655` stars combined** — and **not one of them appears in any prior
+cycle of this file.** They are not web apps with an LLM behind them; they are `SKILL.md`
+payloads loaded by Claude Code, Cursor, Codex or Antigravity, which is why star counts in the
+hundreds mean more here than they would for a hosted product.
+
+| Repo | Licence *(blob)* | Stars | Region | Signal |
+|---|---|---|---|---|
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | **950** | APAC | Created `2026-09-17`; `950★` in four weeks — the fastest riser in the layer |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 AGPL-3.0 **+ MIT for `skills/`** | **572** | APAC | `30+` skills K-12→career; **the split-scope notice is the finding** |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | **515** | Global | Anki spaced repetition under agent control; pushed today |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT | **307** | APAC | Teaches from slides **with page citations**; cross-session memory |
+| [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | MIT | **287** | APAC | Progressive hints, not solutions; mock interviews |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | **284** | APAC | Socratic, 2-sigma framing; skill **+** self-hostable app |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT | **245** | APAC | Diagnosis-first, no command menu |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | MIT | **175** | APAC | Chinese civil-service exam — a vertical exam as a skill |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | **172** | EMEA *(Spain)* | CEFR language learning, voice, local LLMs via Ollama |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | **141** | APAC | Block-based adaptive workspace, local-first |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT | **112** | APAC | Teaching-skill collection incl. *gaokao* |
+
+🔴 **The regional distribution is the uncomfortable half:** `9` APAC, `1` EMEA, **`0` North
+America, `0` LATAM.** Nine of eleven are MIT, so the patterns port freely — **nobody has ported
+them to Spanish, Portuguese or a US/EU curriculum.**
+
+### 🆕 🟢 Second new cluster: Moodle-side MCP, from `2` to `8`
+
+p199 found two Moodle MCP servers and recorded one as *"the only MIT Moodle MCP found."*
+🟢 **Discovery was unavailable to it** *(see `agents/top.md` this pass)*. With it: **`8` alive
+today**, led by [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server)
+(**MIT**, `43★`, pushed today). 🆕 [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp)
+is **Rust, created `2026-10-12` — two days old, MIT, `13★`** and already covers courses,
+assignments, forums, grades and files-as-markdown: the layer is still being written this week.
+🔴 **`loyaniu/moodle-mcp` (`42★`, the second-most-starred) grants nothing on any path or
+manifest**, and `haanhtuandev/vgu-mcp` (`10★`, Vietnam) likewise. Full table in
+[`agents/top.md`](top.md).
+
+### 🔴 This window's negative signal, which is worth more than a list
+
+**The agentic-grading cluster this KB tables as canonical totals `4` stars across three repos**
+— `laurauguc/grading_assistant` `4`, `johnswyou/autograder` `0`,
+`asu2304/auto-assessment-agent` `0` *(created `2026-10-07`, seven days before p199 tabled it)*.
+🔵 These were `not read` in p199 and are now read. 🟢 **Conclusion for an engagement: grading
+has no open-source shelf. Read `auto-assessment-agent` for its criterion-level audit design,
+then build.**
+
+### 🔵 Method, because it changes what every number above means
+
+`curl api.github.com` → **`403`** and `curl github.com/<slug>` → **`403`**, re-measured this
+hour, exactly as passes `185`–`199` recorded. 🟢 **The GitHub REST API answers normally through
+this session's MCP server**, so stars, `pushed_at` and `archived` are exact reads rather than
+HTML scrapes — and **repository search works, which is the first time any pass could DISCOVER a
+slug instead of guessing one.** 🔴 **Licence still comes from the repo's own blob, never from
+the API:** `polimediaupv/paella` proves the API's licence field can be manifest-derived
+*(API `ECL-2.0`, `package.json` `ECL-2.0`, and no licence blob at `15` path/branch combinations)*.
+
 ## 2026-10-14 — Pass 199
 
 🟢 **New category this window: LMS-side MCP servers.** `8` verified alive and licensed today —

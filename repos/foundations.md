@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 200 — 2026-10-14 — ECL-2.0: EDUCATION HAS ITS OWN LICENCE AND THIS KB HAD NEVER NAMED IT
+
+🆕 🟢 **The single most consequential thing found this pass is a licence family, not a repo.**
+The **Educational Community License 2.0 (`ECL-2.0`)** is an OSI-approved licence that this KB
+has misreported as `Apache-2.0` since cycle 3. Quoted from the licence text itself, read from
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)'s own blob this pass:
+
+> *"The Educational Community License version 2.0 ("ECL") consists of the Apache 2.0 license,
+> **modified to change the scope of the patent grant in section 3 to be specific to the needs
+> of the education communities** using this license."*
+
+🔴 **Cycle 3 (`v65`) published `Sakai(Apache2)`. That is wrong in the one way that costs money.**
+The permission grant is Apache-2.0's; **the patent grant is narrower and scoped to education
+use.** 🔵 For a studio that ships derived work into a client's name, a narrowed patent peace is
+a contract-review trigger, not a cosmetic label — and it is precisely the field a scanner
+normalises away when it reports *"Apache-2.0 family"*.
+
+🟢 **Credit where it is due: p199's platform table already had this right**, calling ECL-2.0
+*"Apache-derived with an education-specific patent clause."* 🔵 **What this pass adds is the
+quoted scope, the family census, and the consequence** — that the narrowing is *specifically* to
+§ 3, *specifically* to education communities, and that the family is `18` repositories wide
+rather than a Sakai idiosyncrasy.
+
+🟢 **It is also a small, education-concentrated family, which is why it is easy to miss.**
+Queried this pass: **`license:ecl-2.0 stars:>20` returns `18` repositories GitHub-wide**, and
+the top of that list is education infrastructure:
+
+| Repo | Licence *(blob, bytes)* | Stars | Origin → region | What it is for an education build |
+|---|---|---|---|---|
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** · `11 120` B | **1 238** | Apereo, global → **Global** | Full LMS/VLE in Java; `1 016` forks. The reference ECL-2.0 codebase |
+| [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** · `11 340` B | **508** | → **EMEA** *(German/European universities)* | 🟢 **Automated lecture capture and video distribution at scale** — the piece every university AI-video pattern needs and no LLM framework provides. Default branch `develop` |
+| [music-encoding/music-encoding](https://github.com/music-encoding/music-encoding) | **ECL-2.0** | **241** | → **Global** | Music Encoding Initiative schema — scholarly/conservatoire corpora |
+| [oaeproject/3akai-ux](https://github.com/oaeproject/3akai-ux) | **ECL-2.0** | **134** | → **EMEA** | Open Academic Environment front end |
+| [oaeproject/Hilary](https://github.com/oaeproject/Hilary) | **ECL-2.0** · `12 322` B | **105** | → **EMEA** | OAE back end |
+| [polimediaupv/paella](https://github.com/polimediaupv/paella) | 🟡 **declared `ECL-2.0`, no blob** | **63** | UPV Valencia → **EMEA** | HTML5 multistream player; the usual Opencast front end |
+
+🔵 **Instrument note, and it is a correction to a naive read:** a generic family detector returns
+`UNCLASSIFIED` on all of these, because the text's first distinctive line is *"Educational
+Community License"* and nothing matches `Apache License … Version 2.0` at the top. 🟢 **The
+conservative `UNCLASSIFIED` is the right failure** — far better than the confident
+`Apache-2.0` that earlier cycles published. 🔵 Two traps inside the family: `Hilary`'s `LICENSE`
+**opens with a blank line**, so a first-line read sees nothing; and `paella`'s grant does not
+exist as a file at all.
+
+### 🟢 The permissive exits from an AGPL layer — all re-read from blobs today
+
+🔵 Every licence below was fetched from `raw.githubusercontent.com/<slug>/<default-branch>/<file>`
+this pass, with the default branch resolved by `git ls-remote --symref` first. **Several do not
+use `main`**, and that detail decides whether the read succeeds at all.
+
+| Repo | Licence *(blob, bytes)* | Default branch | Verdict for AI Studios |
+|---|---|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `1 097` B | `develop` | 🟢 **The permissive offline-first exit.** Low-connectivity deployments — the LATAM/Africa shape |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10 982` B | `master` | 🟢 **The permissive full-LMS exit**, and a real one in EMEA |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** · `35 147` B *(`COPYING.txt`)* | `main` | Integrate over Web Services; do not fork into a closed deliverable |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** · `35 136` B *(title line + `15` Affero mentions)* | `master` | 🔴 **Genuinely AGPL, unlike the four below it.** Extend via `XBlock` (`Apache-2.0`), never by forking |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** · `35 147` B | `master` | Strong in LATAM and francophone Africa — integrate, don't embed |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** · `35 147` B | 🔵 `release_11` | German-speaking EMEA. 🔵 **Default branch is `release_11`, not `main`** |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** · `35 146` B *(`LICENSE.txt`)* | `master` | Interactive content; copyleft reaches the content runtime |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** · `8 241` B | 🔵 `19.0` | Education ERP on Odoo. Weak copyleft — linkable, and the practical middle |
+
+🟢 **Read across the layer: the open LMS shelf is copyleft almost without exception, and there
+are exactly two permissive exits — Kolibri (MIT) and OpenOLAT (Apache-2.0).** That is the
+sentence an engagement needs before it promises a client a closed-source deliverable. 🔵 Note
+the distinction the next subsection had to be written to get right: **`edx-platform` is AGPL —
+network copyleft, which reaches a hosted deliverable — while Moodle, Chamilo, ILIAS and H5P are
+plain GPL-3.0**, which does not reach across the network. For a SaaS-shaped engagement that
+difference decides the architecture.
+
+### 🔴 This pass's own defect, caught before publication — and p199 is VINDICATED
+
+🔴 **This pass's first licence read said `AGPL-3.0` for Moodle, Chamilo, ILIAS and H5P.** p199
+had published `GPL-3.0` for all four. 🟢 **p199 is right and this pass's first answer was
+wrong**, and the reason generalises:
+
+> **The GPL-3.0 text contains the phrase *"GNU Affero General Public License"* in its own
+> § 13** (*"Use with the GNU Affero General Public License"*). **Any scanner that decides the
+> family by searching for that phrase labels every GPL-3.0 repository as AGPL.**
+
+🔵 **And the defect is intermittent, which is worse than wrong.** The same detector returned the
+correct `GPL-3.0` for `frappe/erpnext` from an identical licence — because the two copies **wrap
+§ 13 across lines differently**, so a line-oriented match finds the phrase in one file and not
+in the other. 🔴 **A line-oriented grep over a wrapped legal text is not a classifier**, and a
+detector that is right four times out of five hides its defect behind its successes.
+
+🟢 **The discriminator that actually works, measured on eight real blobs this pass:**
+
+| signal | GPL-3.0 | AGPL-3.0 |
+|---|---|---|
+| **title line** *(first `GENERAL PUBLIC LICENSE` match)* | `GNU GENERAL PUBLIC LICENSE` | `GNU AFFERO GENERAL PUBLIC LICENSE` |
+| 🟢 **count of `affero`, case-insensitive** | **`3`** *(all incidental, § 13)* | **`15`** |
+| full-text bytes | `35 146`–`35 149` | `34 514`–`35 136` |
+
+🔵 Measured: `moodle` `35 147` B / `3`, `chamilo` `35 147` B / `3`, `ILIAS` `35 147` B / `3`,
+`h5p` `35 146` B / `3`, `erpnext` `35 149` B / `3` — **all GPL-3.0**; against `edx-platform`
+`35 136` B / `15`, `hrshadhin/school-management-system` `34 522` B / `15`, `freelingo`
+`34 514` B / `15` — **all AGPL-3.0.** 🟢 **The mention count separates them cleanly with no
+overlap, and it is wrap-independent.** This belongs in `lib/license_family.sh` beside the
+existing `p150-gpl-affero-discrimination` work — `ACTION OI` in
+[`intel/open-gaps.md`](../intel/open-gaps.md).
+
+🔵 **The shape of this is p199's own `openedx/XBlock` episode repeating with the roles
+reversed:** a later pass "corrects" an earlier one, and the earlier one was right. **p199 wrote
+the rule for exactly this case — *"Future passes: do not 'correct' that row"* — and it now
+applies to its own GPL-3.0 rows.**
+
+**That is `14` foundational repos with a licence read from source this pass** — above the 5-row
+bar — across three groups: the `ECL-2.0` family (`6`), the permissive exits (`2`), and the
+copyleft platforms a build must integrate with rather than absorb (`6`).
+
+### 🔴 What this pass did NOT establish
+
+- **`paella`'s grant.** The API and `package.json` both say `ECL-2.0`; **no blob exists** at
+  `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license` or `COPYING` across `develop`, `master` and
+  `main`. 🟡 Treat as *declared, ungranted* until someone finds the file.
+- **Whether `ECL-2.0`'s narrowed patent clause has ever been tested**, or what it means for a
+  non-education licensee of education-derived code. 🔵 **That is a legal question, not a
+  measurement**, and it is the one an AI Studios engagement on Sakai or Opencast should put to
+  counsel before the SOW. Registered in [`intel/open-gaps.md`](../intel/open-gaps.md).
+
 ## Pass 199 — 2026-10-14 — CANONICAL FOUNDATIONS TABLE (read this section first)
 
 **Every licence below was read from the repo's own licence blob this pass**, via
