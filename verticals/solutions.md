@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — SEVENTH NEGATIVE READING ON A PERMISSIVE SIS, AND A PLATFORM WHOSE GRANT NO SCANNER CAN SEE
+
+### 🔴 The permissive education SIS does not exist — and seven readings make that a market fact
+
+🟢 **`open source platform education LMS SIS MIT Apache 2026 self-hosted` returned nine sources
+and not one permissive student information system.** 🔴 **What it returned, and what each actually
+is:**
+
+| platform | grant *(verified or shelf-confirmed)* | what it is | permissive? |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** *(read from the blob this pass)* | Java LMS, strong in DACH higher education | 🟢 **yes** |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** *(sidebar, verified this pass)* | Frappe-stack LMS, `3.3k`★ | 🔴 **no — and a blog this pass called it `MIT`** |
+| Moodle | `GPL-3.0` | the largest ecosystem | 🔴 no |
+| Open edX · Canvas | `AGPL` | heavy to self-host | 🔴 no |
+| Sakai | `ECL-2.0` *(Apache-compatible)* | HE LMS | 🟡 effectively yes, via `ECL` |
+| RosarioSIS · Gibbon | `GPL` | the only SIS/school-management answers returned | 🔴 **no** |
+| Forma LMS | 🔴 **sources CONFLICT: `Apache-2.0` vs `GPL`/`LGPL`** | Docebo PHP fork | 🔴 **unresolved — do not quote** |
+
+🔵 **Seventh consecutive negative reading on a permissive SIS.** 🟢 **Stop treating this as a search
+failure and state it to clients as a market fact: the student-record layer of open-source education
+is COPYLEFT, end to end.** 🔴 **Which means the SIS is the wrong place to put proprietary client
+IP, and the architecture must put it in the AI layer ABOVE a copyleft record system** — exactly
+what the `Ed-Fi`-first pattern on this shelf already does *(`Ed-Fi ODS/API`, `Apache-2.0`, is a
+data standard, not an SIS, and that is why it is the permissive escape hatch)*.
+
+### 🆕 🔴 `OpenOLAT`'s grant is sound and INVISIBLE to every automated scanner
+
+🟢 **Read first-hand this pass:
+[`OpenOLAT/OpenOLAT/LICENSE`](https://github.com/OpenOLAT/OpenOLAT/blob/master/LICENSE) is a
+verbatim `Apache License, Version 2.0, January 2004` — `197` lines, `10.7` KB.** 🔴 **GitHub's
+sidebar names no licence for the repository at all, and the API's `license` field uses the same
+detection.**
+
+🔵 **Procurement consequence, and it is concrete:** 🔴 **a client's own licence-scan, SBOM tool or
+vendor-risk questionnaire will come back `NOASSERTION` / "no licence found" for `OpenOLAT`, and in
+most enterprise gates that blocks adoption.** 🟢 **The engagement answer is to ship the blob
+evidence with the recommendation — path, `197` lines, `10.7` KB, first three lines quoted — rather
+than argue with the scanner.** 🔵 **This is the second platform-level instance on these shelves of
+a CORRECT grant that cheap tooling cannot see, and it is worth a standing line in any
+open-source-recommendation deliverable.**
+
 ## Pass 208 — 2026-10-14 — SIXTH PASS WITHOUT A PERMISSIVE EDUCATION ERP, AND THE PLATFORM CHOICE IS NOW DECIDED BY A CONNECTIVITY NUMBER
 
 ### 🔴 The permissive ERP still does not exist, and the sweep is now boring enough to state as a fact

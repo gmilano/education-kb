@@ -1,0 +1,20 @@
+# p209 - first-hand verification of the NO-MASKED class (the 152/179 census rows the p205-p208 comparator cannot see by construction)
+# sample frame: masked rows ranked by number of occurrences in compose/patterns.md (client-facing recipes), top 10 taken
+# channel: WebFetch on github.com (the only host that resolves here); curl CONNECT returns 403 for EVERY host, github.com included
+repo	census_truth	shelf_sites	recipe_sites	verified_grant	grant_source	stars_verified	stars_recorded	verdict
+Selleo/mentingo	MIT	132	32	MIT	sidebar	95	92-93	MATCH
+OpenOLAT/OpenOLAT	APACHE	92	24	Apache-2.0	BLOB (sidebar unclassified, 10.7KB LICENSE)	447	447	MATCH-via-blob
+learningequality/kolibri	MIT	87	24	MIT	sidebar	1.1k	1141	MATCH
+ArnaudGuiovanna/tutor-mcp	MIT	50	23	MIT	sidebar	48	none	MATCH
+openfun/ralph	MIT	47	20	MIT	sidebar	51	none	MATCH
+jcputney/scorm-again	MIT	60	15	MIT	sidebar	355	354	MATCH
+pykt-team/pykt-toolkit	MIT	26	14	MIT	sidebar	446	none	MATCH
+Ed-Fi-Alliance-OSS/edfi-oneroster	APACHE	35	13	Apache-2.0	sidebar	6	none	MATCH
+frappe/lms	AGPL	63	12	AGPL-3.0	sidebar	3.3k	none	MATCH-refutes-secondary-MIT-claim
+ankimcp/anki-mcp-server	MIT	49	10	MIT	sidebar	514	none	MATCH
+# RESULT: 10/10 grant families correct. Point estimate of the masked-class error rate 0%; 95% upper bound ~26% (rule of three, n=10).
+# The sample is deliberately NOT random: it is the highest-exposure subset, where p208's one true positive (towardsai/ai-tutor-app) lived.
+# SIDE FINDING: GitHub does not classify OpenOLAT's LICENSE at all (sidebar shows an unnamed "License" link) although the blob is a verbatim
+# Apache License 2.0. Any future audit keyed on the sidebar/API licence field would report a FALSE UNGRANTED on a correct cell.
+# --- below: recipe-component check, NOT part of the 10-row masked-class sample and NOT counted in the 10/10 statistic ---
+learningequality/studio	MIT	n/a	P209-A component	MIT	sidebar	193	192	MATCH

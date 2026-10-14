@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — `ACTION PU`: THE `85`% THE COMPARATOR CANNOT SEE, READ BY HAND — `10`/`10` CLEAN
+
+### 🟢 `ACTION PU` — the first measurement of the masked class
+
+🔴 **p208 established that `152` of `179` census rows (`85`%) print their true licence family at
+more than one site, and that the p205–p208 comparator CANNOT produce a mismatch on such a row
+however wrong a single cell is.** 🔵 **Three passes then reported the column clean. That report
+was worth nothing on `85`% of the column: an instrument that cannot fail cannot pass either.**
+
+🟢 **`ACTION PU` asked the only question left: read the masked rows by hand and see.** 🔵 **The
+sample is deliberately NOT random — the `152` masked rows were ranked by how many times they occur
+in [`compose/patterns.md`](../compose/patterns.md), and the top `10` taken, because recipes are
+what a client engagement actually reads and p208's one true positive lived in exactly that
+population.**
+
+| repo | shelf sites | recipe sites | shelf says | 🟢 read first-hand this pass | ★ now | ★ on shelf |
+|---|---|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `132` | `32` | `MIT` | 🟢 **`MIT`** | `95` | `92`–`93` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `92` | `24` | `Apache-2.0` | 🟢 **`Apache-2.0`** *(from the blob — see below)* | `447` | `447` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `87` | `24` | `MIT` | 🟢 **`MIT`** | `1.1k` | `1 141` |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `50` | `23` | `MIT` | 🟢 **`MIT`** | `48` | — |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | `47` | `20` | `MIT` | 🟢 **`MIT`** | `51` | — |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `60` | `15` | `MIT` | 🟢 **`MIT`** | `355` | `354` |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `26` | `14` | `MIT` | 🟢 **`MIT`** | `446` | — |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | `35` | `13` | `Apache-2.0` | 🟢 **`Apache-2.0`** | `6` | — |
+| [`frappe/lms`](https://github.com/frappe/lms) | `63` | `12` | `AGPL-3.0` | 🟢 **`AGPL-3.0`** | `3.3k` | — |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `49` | `10` | `MIT` | 🟢 **`MIT`** | `514` | — |
+
+🟢 **`10`/`10` grant families correct. `0` corrections to ship.**
+[`evidence/masked-class-sample.2026-10-14-p209.tsv`](../evidence/masked-class-sample.2026-10-14-p209.tsv).
+
+### 🔵 What `10`/`10` does and does not license this KB to say
+
+🟢 **It is the first evidence of ANY kind about the masked class, where three passes had none.**
+🔴 **It is not a clean bill.** 🔵 **With `n = 10` and `0` errors the point estimate is `0`% and the
+`95`% upper bound is `~26`% (rule of three) — so a masked-class error rate as high as one row in
+four is still not excluded by this measurement.** 🟢 **What it does exclude is the pessimistic
+reading of p208: the masked class is not riddled with p208-shaped errors in its highest-exposure
+rows, which is precisely where an error costs a deliverable.**
+
+🔵 **The honest statement for a client: every repository in the top ten recipe-critical rows had
+its grant confirmed against the repository itself on `2026-10-14`.** 🔴 **The remaining `142`
+masked rows are unmeasured, and the lower-exposure tail is where the next `ACTION` should go —
+`~14` more passes of ten rows to clear the class, or a cheaper per-row channel.**
+
+### 🆕 🔴 The side finding, which is a trap for every automated pass after this one
+
+🔴 **GitHub does not classify `OpenOLAT`'s licence.** 🟢 **Its sidebar shows an unnamed `License`
+link — no family, no SPDX token — while its own blob at
+[`LICENSE`](https://github.com/OpenOLAT/OpenOLAT/blob/master/LICENSE) is a verbatim
+**`Apache License, Version 2.0, January 2004`**, `197` lines / `10.7` KB.** 🔵 **The cell on these
+shelves is RIGHT and GitHub's own classifier is the thing that is silent.**
+
+🔴 **So an audit keyed on the sidebar — or on the API's `license` field, which is the same
+detection — would report a FALSE UNGRANTED on a correct `Apache-2.0` row that `24` recipe sites
+depend on.** 🟢 **Rule for later passes: an unnamed sidebar `License` link is a prompt to open the
+blob, never a finding.** 🔵 **Four of the ten pages also returned an EMPTY `Languages` section,
+so the sidebar is an unreliable single source on more than one field.**
+
+### 🟢 Star refreshes shipped this pass
+
+🟢 `Selleo/mentingo` **`92`–`93`★ → `95`★** · `jcputney/scorm-again` **`354`★ → `355`★** ·
+`OpenOLAT/OpenOLAT` **`447`★, unchanged and exact** · `learningequality/studio` **`192`★ → `193`★** *(verified as a `P209-A` recipe component, outside the sample)* · `learningequality/kolibri` **`1 141` ≈
+`1.1k`, consistent**. 🔵 **Drift across six days is `+1` to `+3`★ on `3` of `4` rows that carried a
+figure — education repos are not a fast-star population, and refreshing stars is not worth a pass
+of its own.**
+
 ## Pass 208 — 2026-10-14 — `ACTION PT`: THE AUDIT WAS NOT NOISY, IT WAS BLIND ON `85`% OF THIS COLUMN — AND IT HID `6` WRONG CELLS
 
 ### 🔴 `ACTION PT` — `5` deliberate errors, `3` caught, and the `3`/`2` split IS the answer

@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 209 — THE TRENDING CHANNEL PRODUCED ONE THING OF VALUE AND IT IS A REFUTATION
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🔴 What the four discovery queries returned
+
+🟢 **Queries run this pass, global shape plus the vertical sweep:**
+`top open source AI agents education 2026 github MIT` ·
+`github trending education AI 2026 open source tutor repository` ·
+`open source platform education LMS SIS MIT Apache 2026 self-hosted` ·
+`AI education industry trends 2026 market size agentic tutoring`.
+
+🔴 **The GitHub-trending query did not return GitHub's trending page at all** — it returned nine
+topic listings and SEO comparison blogs. 🔵 **Ninth pass in which the "trending" channel is an
+aggregator channel; the topic pages (`ai-tutor`, `ai-education`, `study-assistant`) remain the
+only usable surface, and they are star-sorted, which p205 already showed inflates novelty with
+pagination.**
+
+🔴 **New qualifying foundational repos this pass: `0`.** Every repo returned is on the shelves
+(see `agents/trending.md` p209 for the list), save one ungranted `1`★ row rejected there.
+
+### 🆕 🟢 The one finding worth the sweep: a secondary source got a grant wrong, and this KB did not
+
+| repo | what the comparison blog said | 🟢 what the repository says, first-hand | effect |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 *"Frappe LMS is listed as MIT-licensed, with MIT licence with self-hosted data ownership"* | 🟢 **`AGPL-3.0`**, sidebar-classified, `3.3k`★, *"Easy to Use, 100% Open Source Learning Management System"* | 🟢 **This shelf already carries it as `AGPL`. The shelf is right and the blog is wrong** |
+
+🔵 **This is the strongest argument yet for the blob-reading rule.** 🔴 **An engagement that took
+the blog's word and shipped `frappe/lms` as "MIT, do as you like" would have put a client's hosted
+LMS under a network-copyleft source-offer duty.** 🟢 **The same sweep's other platform claims
+(`OpenOLAT` Apache-2.0, `Sakai` Apache-2.0-vs-`ECL-2.0`, `Forma LMS` Apache-2.0-vs-`GPL`) were
+self-contradictory ACROSS the blogs — three of the nine results disagreed with each other on
+`Sakai` and `Forma` alone.** 🔵 **Treat every licence claim in this channel as a question, never
+an answer.**
+
+🔴 **Declared gap:** no new MIT or BSD student-information system surfaced again this pass —
+the sweep returned `RosarioSIS` (GPL) and `Gibbon` (GPL) only. 🔵 **See `verticals/solutions.md`
+p209: that is now a seventh consecutive negative reading and should be treated as a market fact,
+not a search failure.**
+
 ## 2026-10-14 — pass 208 — THE TRENDING CHANNEL IS STILL NOT AN EDUCATION CHANNEL, AND TWO SECONDARY CHANNELS ARE MEASURABLY STALE
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten** — except

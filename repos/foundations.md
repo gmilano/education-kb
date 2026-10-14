@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — THE FOUNDATION ROWS HELD UNDER FIRST-HAND READING, AND ONE OF THEM IS A `6`★ SINGLE POINT OF FAILURE
+
+### 🟢 `ACTION PU`'s foundation-shelf members: `6` of the `10`, all confirmed
+
+🟢 **p209 read the ten most recipe-exposed masked rows against the repositories themselves
+(method and the full table in [`agents/top.md`](../agents/top.md) p209).** 🟢 **Six are foundation
+rows and all six confirmed:** `learningequality/kolibri` **`MIT`**, `openfun/ralph` **`MIT`**,
+`jcputney/scorm-again` **`MIT`**, `pykt-team/pykt-toolkit` **`MIT`**,
+`Ed-Fi-Alliance-OSS/edfi-oneroster` **`Apache-2.0`**, `frappe/lms` **`AGPL-3.0`**.
+
+🟢 **`frappe/lms` is worth stating twice, because a comparison blog this pass claimed it is
+`MIT`.** 🔴 **It is `AGPL-3.0`, sidebar-classified, `3.3k`★.** 🔵 **This shelf has carried it as
+`AGPL` throughout; the secondary source is wrong, and an engagement that trusted it would have put
+a hosted client LMS under a network-copyleft source-offer duty.** See `repos/trending.md` p209.
+
+### 🆕 🔴 The concentration risk this verification pass exposed by accident
+
+| row | ★ | recipe sites | 🔴 what that combination means |
+|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🔴 **`6`** | `13` | 🔴 **`13` recipe sites rest on a `6`-star repository.** `Apache-2.0` and the grant is sound, but ★`6` is one maintainer's side project carrying the `OneRoster 1.2`-over-`Ed-Fi-ODS` hop in a US-K-12 recipe |
+
+🔵 **The grant was never the risk here; the bus factor is.** 🟢 **Keep the row — it does the one
+job nothing else on this shelf does (serves a `OneRoster 1.2` API from an `Ed-Fi ODS` database, and
+`Ed-Fi` is the data standard a US state district most likely already mandates).** 🔴 **But any
+recipe naming it must name the fallback in the same breath: the `Ed-Fi ODS/API` itself
+(`Apache-2.0`, Alliance-maintained) with a `OneRoster` adapter written in the engagement, costed as
+build rather than adopt.** 🔵 **`ACTION PV` for a later pass: sweep every foundation row for
+★`< 50` AND recipe sites `≥ 5`, which is the shape that hides this risk.**
+
+### 🔴 Still nothing new to add, seventh reading
+
+🔴 **New qualifying foundational repos discovered this pass: `0`.** 🟢 **The vertical sweep
+returned `OpenOLAT` (`Apache-2.0`, `447`★ — already here, and `1 369` mentions deep), `Frappe LMS`
+(`AGPL-3.0` — already here), `RosarioSIS` and `Gibbon` (both GPL), `Moodle` (`GPL-3.0`),
+`Open edX` and `Canvas` (`AGPL`).** 🔵 **No permissive SIS exists to find; see
+`verticals/solutions.md` p209.**
+
 ## Pass 208 — 2026-10-14 — `ACTION PS` CLOSES ON LIMB `2`, AND ITS POPULATION WAS THE ARTEFACT
 
 ### 🔴 `ACTION PS` — `26` apparent recoveries, `0` real, and the reason is this pass's own thesis

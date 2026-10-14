@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — THE DISCOVERY CHANNEL IS SATURATED SIX TIMES OVER, AND THE LOBBY HAS NAMED ITS CLAUSE
+
+### 🆕 🟢 `T209-1` — Italy has put a DATE on classroom AI, and its own universities are `87`% short of it
+
+🆕 🔴 **Italy's practical rollout in schools begins `2026-08-03`**, under ministry guidelines framed
+as regulating rather than banning classroom AI. 🟢 **Set that against p158's measurement that
+`13`% of Italian universities hold operational AI governance.** 🔵 **A dated national obligation
+meeting a measured `87`-point readiness gap, in a single language and a single procurement
+perimeter, is the most actionable EMEA shape on these shelves** — more actionable than the AI Act
+itself, because the Act's education deadline is still contested *(`2026-08-02` vs `2027-12-02`)*
+and this date is not.
+
+### 🆕 🟢 `T209-2` — for the first time this KB can name the LOBBY and the CLAUSE, not just the law
+
+🆕 🔴 **The European EdTech Alliance (`200`+ reported member companies) participated in AI Act
+consultations and pushed back on ANNUAL EXTERNAL AUDITS specifically.** 🔵 **Nine passes of EMEA
+regulatory intelligence produced dates, annexes and prohibitions; this is the first CONTESTED TERM
+with an identified interest behind it.** 🟢 **Audit frequency is the variable that decides whether
+Annex III education compliance is a one-off project or an annuity** — and an evidence pipeline
+built for annual re-audit is the same artefact either way, sold as obligation if the clause
+survives and as differentiator if it does not. 🔴 **Track the clause, not only the deadline.**
+
+### 🆕 🟢 `T209-3` — K-12 is a different BUSINESS from higher education, and now there is a number for it
+
+🆕 **AI in K-12 priced apart from the whole for the first time on this shelf: `$0.7`B in `2026` →
+`$18.5`B by `2036`, `38.1`% CAGR** *(Future Market Insights, search-snippet, unverified)*.
+🔵 **K-12 is `~6`% of today's AI-in-education market and compounds `12` points faster than it.**
+🟢 **Trend statement: the money is in higher education and the growth is in K-12, so they are two
+commercial motions — present budget versus future budget — and the common error is one price book
+for both.** 🔴 **Compounding is also why the US age-band restrictions matter commercially: a K-6
+chatbot ban *(Katy ISD, effective `2026-27`)* bites the fastest-growing slice.
+
+### 🟢 `T209-4` — the discovery channel is saturated on a SIXTH reading, and the budget has moved
+
+🟢 **Sixth consecutive pass returning `0`–`1` new qualifying education agents, and `0` new
+foundational repos.** 🔵 **Six independent readings make this a property of the field, not a run of
+quiet weeks: the permissively-licensed education agent population this KB can reach is
+ENUMERATED.** 🔴 **Which inverts the standing instruction to search first — the marginal value of
+another discovery sweep is near zero, while `142` of `179` shelf rows had never been read against
+their own repositories.**
+
+🟢 **p209 moved the budget accordingly and it paid: `10`/`10` recipe-critical masked rows confirmed
+first-hand** *(`agents/top.md` p209)*, plus a secondary source caught publishing `frappe/lms` as
+`MIT` when it is `AGPL-3.0`. 🔵 **Trend for this KB's own method: in a saturated field, VERIFICATION
+produces more defensible value per pass than DISCOVERY.**
+
+### 🆕 🔴 `T209-5` — the tooling trend: machine-readable licence metadata cannot be trusted alone
+
+🔴 **`OpenOLAT` ships a verbatim `Apache License 2.0` blob (`197` lines, `10.7` KB) and GitHub's
+classifier names NO licence for it** — the sidebar shows an unnamed `License` link, and the API's
+`license` field is the same detection. 🔵 **So the industry-standard cheap signal produces a FALSE
+UNGRANTED on one of the most-depended-on platforms in European higher education.** 🟢 **Generalised
+rule, and it applies to client due-diligence as much as to this KB: an SBOM or licence-scan that
+reports "no licence" for a major platform is reporting its own blind spot.** 🔴 **Four of ten
+GitHub pages read this pass also returned an EMPTY `Languages` section, so the unreliability is not
+confined to one field.**
+
 ## Pass 208 — 2026-10-14 — THE ORGAN RULE GENERALISES AND ITS LIST WAS INCOMPLETE; AND A LINE IS NOT A RECORD
 
 ### 🆕 🔴 `T208-1` — `ACTION PQ` fires on limb `1`, and corrects p207's own list

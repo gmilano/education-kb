@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — TWO RECIPES WHOSE EVERY COMPONENT GRANT WAS READ TODAY, AND ONE PLATFORM DELIBERATELY EXCLUDED
+
+🔵 **Every repository named below had its grant read from the repository itself on `2026-10-14`
+(`ACTION PU`, `10`/`10` confirmed) —
+[`evidence/masked-class-sample.2026-10-14-p209.tsv`](../evidence/masked-class-sample.2026-10-14-p209.tsv).**
+🟢 **These are the first recipes on this shelf whose entire bill of materials was verified in the
+same pass that wrote them.** 🔴 **Nothing here rests on a comparison blog: one of this pass's
+sources published [`frappe/lms`](https://github.com/frappe/lms) as `MIT` when it is `AGPL-3.0`.**
+
+### 🟢 `P209-A` — offline-first adaptive K-12, on an all-permissive path *(LATAM public, rural APAC, African deployments)*
+
+🔵 **The constraint that decides this stack is bandwidth, not pedagogy** — and `MIT` end to end,
+so client-proprietary adaptation logic stays proprietary.
+
+| layer | component | grant *(read `2026-10-14`)* | ★ | the job |
+|---|---|---|---|---|
+| delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | `1.1k` | Offline-first platform; content syncs by LAN or USB. The only credible answer with no reliable connectivity |
+| authoring | [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **`MIT`** | `193` | Curates the channels Kolibri ships offline |
+| legacy courseware | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **`MIT`** | `355` | SCORM `1.2`/`2004` runtime in the browser, so the ministry's existing packages play unchanged |
+| telemetry | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** | `51` | `xAPI` Learning Record Store — the statement store everything downstream reads |
+| learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **`MIT`** | `446` | Deep knowledge tracing, benchmarked implementations. Trains on Ralph's statements, emits mastery per skill |
+| tutor loop | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **`MIT`** | `48` | MCP server that turns any LLM into an ITS — the seam where the model is swapped per client |
+| retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **`MIT`** | `514` | Spaced repetition over MCP; scheduling that survives offline |
+
+🟢 **Wiring, concretely:** Kolibri serves content and emits `xAPI` to **Ralph** *(co-located on the
+school server — Ralph is the only component that must accept writes while the uplink is down)*.
+A nightly job batches Ralph's statements into **pyKT**'s format and refreshes a per-learner mastery
+vector. **tutor-mcp** reads that vector as its ITS state and serves the Socratic loop; it and
+**anki-mcp-server** are registered as two MCP servers behind one client-chosen LLM, so the
+model is a configuration decision, not an architectural one. **scorm-again** plays existing
+packages inside Kolibri so no ministry content is re-authored. 🔴 **Sync is one-way up and one-way
+down on a schedule — never assume a live uplink anywhere in this path.**
+
+🔵 **What the engagement BUILDS (the defensible part):** the pyKT↔Ralph feature pipeline, the
+mastery→prompt policy inside tutor-mcp, and the per-grade capability gate. 🟢 **All three sit above
+`MIT` components, so none of it has to be contributed back.**
+
+🔴 **`frappe/lms` is EXCLUDED from this path on purpose.** 🟢 **`AGPL-3.0`: a hosted deployment
+triggers a network source-offer duty over the client's own modifications.** 🔵 **Where the client
+insists on a Frappe stack, price the copyleft perimeter as a separate decision — do not let it
+arrive by accident through a blog that called it `MIT`.**
+
+### 🟢 `P209-B` — EMEA higher education on `OpenOLAT`, with the scanner-evidence step that makes it procurable
+
+🔵 **Why `OpenOLAT` and not Moodle: `Apache-2.0` against `GPL-3.0`** — read from
+[its own blob](https://github.com/OpenOLAT/OpenOLAT/blob/master/LICENSE) this pass, a verbatim
+`Apache License, Version 2.0`, `197` lines / `10.7` KB, `447`★, strong in DACH higher education.
+
+| layer | component | grant | the job |
+|---|---|---|---|
+| LMS | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | Java LMS the institution already recognises |
+| AI-native alternative | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** · `95`★ | Where the client wants an AI-native LMS rather than AI bolted onto an incumbent — AI mentor and role-play built in |
+| telemetry + model | `openfun/ralph` + `pykt-team/pykt-toolkit` | 🟢 **`MIT`** | As `P209-A`; unchanged across regions |
+| tutor loop | `ArnaudGuiovanna/tutor-mcp` | 🟢 **`MIT`** | As `P209-A` |
+
+🆕 🔴 **The step that is NEW and that no previous recipe carries — ship the grant evidence with the
+recommendation.** 🟢 **GitHub classifies NO licence for `OpenOLAT`, so the client's own SBOM tool,
+licence scan or vendor-risk questionnaire will return `NOASSERTION` / "no licence found", and in
+most enterprise gates that BLOCKS adoption of a repository that is in fact `Apache-2.0`.**
+🔵 **Deliverable artefact, one page: the blob path, `197` lines, `10.7` KB, the first three lines
+quoted, and the date read.** 🔴 **Budget it as a procurement task, not a legal one — arguing with
+the scanner costs more than evidencing past it.**
+
+🟢 **Regulatory hooks for the same engagement:** Annex III high-risk duties on admissions,
+assessment and outcome evaluation; the emotion-inference ban *(in force `2025-02-02`)* rules out
+attention and engagement inference from face, voice or keyboard — 🔴 **so no proctoring or
+engagement-scoring component may enter this stack in the EU, whatever the client asks for.**
+🔵 **Plan to `2026-08-02` while the `2027-12-02` reading is unsettled, and build the audit-evidence
+pipeline regardless: the European EdTech Alliance is contesting ANNUAL EXTERNAL AUDIT specifically,
+and the same artefact is an obligation if that clause survives and a differentiator if it does
+not.** 🟢 **Italy is the sharpest single-country entry: a dated rollout from `2026-08-03` against
+`13`% of its own universities holding operational AI governance.**
+
 ## Pass 208 — 2026-10-14 — THREE RECIPES THE ORGAN-TYPE SWEEP MAKES BUILDABLE, AND ONE GRANT CORRECTION THAT CHANGES AN OBLIGATION LIST
 
 🔵 **Every repository named below had its grant read from its own blob at `HEAD` — this pass or

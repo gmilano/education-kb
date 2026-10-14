@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 209 — THE SIXTH SATURATION READING, AND THE VERIFICATION CHANNEL IS NARROWER THAN THE STANDING INSTRUCTION ASSUMES
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🔴 The week's movement: one new row, and it fails on the grant
+
+| 🆕 repo | grant, read first-hand | ★ | region | verdict |
+|---|---|---|---|---|
+| [`Professional-X/StudyCoach`](https://github.com/Professional-X/StudyCoach) | 🔴 **UNGRANTED.** README says *"released under the MIT License"* and links `LICENSE.md` — 🔴 **that path is a `404` and no licence file appears in the tree** | `1` | **Global** *(no declared origin)* | 🔴 **REJECTED — ungranted.** React+Vite study planner: flashcards with spaced repetition, focus timer, summariser, no login. 🔵 **A README sentence is not a grant. At `1`★ and `5` commits this would be rejected on weight anyway, but the grant is the disqualifier** |
+
+🔴 **Everything else the discovery queries returned is already on these shelves**:
+`HKUDS/DeepTutor`, `plastic-labs/tutor-gpt`, `HugeCatLab/ChatTutor`, `Li-Evan/Bloom`,
+`ahmedEid1/lumen`, `zijinz456/OpenTutor`, `SirhanMacx/Claw-ED`, `naorpeled/aitutor`,
+`microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`.
+
+🟢 **Sixth consecutive measurement of `0`–`1` new qualifying industry agents.** 🔵 **Six
+independent readings is saturation of the discovery channel, not six quiet weeks — the marginal
+value of another `top open source AI agents education {year} github MIT` sweep is now close to
+zero, and the budget belongs on VERIFYING the `179` rows already here.** 🟢 **This pass spent it
+there — see `agents/top.md` p209.**
+
+### 🆕 🔴 The standing instruction to verify with `curl -sI` is INOPERABLE in this environment
+
+🔴 **`curl` is not blocked for the open web and open for GitHub. It is blocked for everything,
+GitHub included:** `example.com` → `000` *(CONNECT tunnel failed, `403`)*, `github.com/HKUDS/DeepTutor`
+→ `403`, `api.github.com` → `403`. 🔴 **A pass that "verified" a URL with `curl -sI` here would be
+reading the proxy's refusal, not the repository.**
+
+🟢 **`WebFetch` resolves exactly one host: `github.com`.** Two independent non-GitHub hosts both
+fail at DNS — `arxiv.org` and `www.futuremarketinsights.com`, both `ENOTFOUND` — 🔵 **so this is a
+channel property, settled with two hosts and two transports, not three unlucky sites.**
+[`evidence/discovery-channel.2026-10-14-p209.tsv`](../evidence/discovery-channel.2026-10-14-p209.tsv).
+
+🔵 **What this means for every later pass:** 🟢 **repo pages AND blob pages on `github.com` are
+first-hand verifiable through `WebFetch` — grant, bytes, ★, commit date.** 🔴 **Nothing else is.
+Any market figure, regulation date or ministry document on these shelves is a SEARCH-SNIPPET claim
+and must be labelled as one.** This pass labels its four new non-GitHub facts accordingly in
+`intel/market.md` and `intel/trends.md`.
+
 ## 2026-10-14 — pass 208 — `1` VERIFIED NEW REPO, REJECTED ON THE RULE; AND THE FIFTH SATURATION MEASUREMENT
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten** — except

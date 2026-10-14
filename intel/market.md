@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 209 — 2026-10-14 — A K-12 SEGMENT FIGURE THIS KB NEVER HAD, AND NORTH AMERICA'S NON-US TWO-THIRDS IS STILL A HOLE
+
+🔴 **Provenance warning on everything in this section.** 🟢 **p209 established that the only host
+reachable first-hand here is `github.com`** *(two non-GitHub hosts `ENOTFOUND`, `curl` `403` to
+every host including GitHub —
+[`evidence/discovery-channel.2026-10-14-p209.tsv`](../evidence/discovery-channel.2026-10-14-p209.tsv))*.
+🔴 **So every figure below is a SEARCH-SNIPPET claim, attributed to the firm that made it, and
+NOT verified against the report.** 🔵 **That is a weaker epistemic status than the repository rows
+on `agents/top.md`, and it should be quoted to clients that way.**
+
+### 🆕 🟢 The new figure: the K-12 slice, which this KB had never priced separately
+
+| scope | `2026` | horizon | CAGR | house |
+|---|---|---|---|---|
+| 🆕 **AI in K-12 education** | 🆕 **`$0.7`B** | 🆕 **`$18.5`B by `2036`** | 🆕 **`38.1`%** | Future Market Insights |
+| AI in education, total | `$11.4`B | `$57.2`B by `2033` | `25.9`% | Grand View *(already on shelf)* |
+| AI in education, total | `$9.58`B | `$136.79`B by `2035` | `34.52`% | Precedence *(already on shelf)* |
+| AI tutors | `$2.7`B | `$17.7`B by `2033` | `30.5`% | Grand View *(already on shelf)* |
+
+🔵 **Why the new row earns its place when three total-market rows already exist:** 🟢 **it is the
+first figure on this shelf that prices K-12 APART from the whole, and it says K-12 is `~6`% of the
+total market today while growing `12` points faster than it.** 🔴 **A `$0.7`B segment compounding
+at `38.1`% is a market that does not yet have budget but will have it inside the life of a
+three-year framework agreement.** 🔵 **Commercial reading: K-12 is a land-and-expand motion priced
+off future budget, higher education is a revenue motion priced off present budget. Selling them on
+the same commercial model is the error this row exposes.**
+
+🔴 **The spread between houses did not narrow.** 🟢 **`$9.58`B–`$11.4`B for `2026`, and `2033`–`2035`
+endpoints from `$57.2`B to `$136.79`B — a `2.4`× disagreement on the same market.** 🔵 **Quote
+ranges with the house named, never a single number.**
+
+## Opportunities by region
+
+### North America
+
+🔴 **`ACTION PW` OPENED — this region is still, after nine passes, a US shelf wearing a
+continental label.** 🟢 **The `AI {industry} North America {year} adoption regulation players`
+query returned nine sources and the channel itself reported *"Most of it is U.S.-focused, and I
+found little on Canada or Mexico"* and *"I did not find solid adoption-rate data for higher
+education or for Canada and Mexico."*** 🔵 **That is an informed gap, written down rather than
+papered over: `2` of the `3` NAFTA-bloc education systems are UNCOVERED on this shelf.**
+🟢 **`ACTION PW`: run the probe per organ and per language — `SEP` and `Conacyt`/`SECIHTI` in
+Spanish for Mexico, and per PROVINCE for Canada, because Canadian education is provincial and a
+federal query cannot see it.** 🔵 **p205's own lesson (per-country beats pan-regional) was applied
+to APAC and never to North America.**
+
+🟢 **US corroborations only, no new instrument:** `35` states plus Puerto Rico with guidance,
+Idaho `SB 1227` *(AI may not replace human teachers)*, California `A.B. 1159` *(student-data
+training limits)*, NYC's traffic-light guidance *(red tier bars grading, discipline, promotion
+and graduation decisions)*, Katy ISD's K-6 chatbot ban effective `2026-27`, and the
+`K-12 AI Literacy and Readiness Act of 2026` advanced in committee and **not law**. 🔵 **All
+already on this shelf; a third corroboration pass on US K-12 policy buys nothing and should not be
+funded again.**
+
+🔵 **The buying consequence is unchanged and now triply confirmed: in the US the unit of
+procurement is the STATE and the unit of restriction is the AGE BAND, so a deliverable must carry
+a per-state policy switch and a per-grade capability gate, or it cannot ship nationally.**
+
+### EMEA
+
+🆕 🟢 **A dated national rollout this shelf did not have: Italy's practical rollout in schools
+starts `2026-08-03`**, under ministry guidelines that *regulate* rather than ban classroom AI.
+🔵 **Pair it with the `13`% of Italian universities holding operational AI governance (p158): the
+state has set a date, and `87`% of its own universities are not ready for it.** 🟢 **That is the
+cleanest teacher-and-governance enablement window on the EMEA shelf — a dated obligation meeting a
+measured capability gap, in one country, in a language Globant staffs.**
+
+🆕 🟢 **A named actor, and the contested term is AUDIT FREQUENCY.** 🔴 **The European EdTech
+Alliance — reported as `200`+ member companies — took part in the AI Act consultations and pushed
+back specifically on ANNUAL EXTERNAL AUDITS.** 🔵 **This is the first time this shelf can name WHO
+is lobbying and ON WHAT CLAUSE, rather than only the regulation's dates.** 🟢 **Read it as a
+demand signal: if annual external audit survives, every Annex III education deployment needs a
+repeatable evidence pipeline, and that is a service line, not a feature.** 🔴 **If it is softened,
+the same pipeline is a differentiator instead of a requirement — so build it either way, and price
+it differently depending on the outcome.**
+
+🟢 **Corroborated, not new:** the Annex III high-risk date CONFLICT this shelf already carries as
+its sixth date — `2026-08-02` *(Commission)* versus `2027-12-02` *(the `2026` Digital Omnibus
+analyses)* — came back independently in this pass's sweep, from a different source set. 🔵 **Two
+independent channels now disagree the same way, which raises confidence that the conflict is real
+in the market rather than one analyst's error.** 🔴 **Do not resolve it in a client deck: present
+both dates and plan to the earlier one.** 🟢 **Also corroborated: the emotion-inference ban in
+schools (in force since `2025-02-02`) and the Commission/OECD/G7-endorsed draft AI Literacy
+Framework for primary and secondary education.**
+
+### APAC
+
+🔴 **No new instrument. This sweep was pure corroboration, and that is itself the finding.**
+🟢 **Everything returned is already here:** South Korea's `AI Basic Act` in force `2026-01-22`,
+Vietnam's `Law on AI` in force `2026-03-01` *(naming education a high-risk sector, covering
+automated assessment and behavioural monitoring)*, Japan's promotion-led `AI Basic Plan` with no
+explicit penalties, Taiwan's `AI Basic Act`, China's compulsory AI from age six, and India's AI and
+computational thinking as compulsory subjects from Class `3` in the `2026-27` academic year.
+
+🔵 **p205 closed `ACTION PF` by replacing the pan-regional APAC query with per-country probes. This
+pass ran the pan-regional query once more and it returned nothing the per-country probes had not
+already found.** 🟢 **That retires the pan-regional APAC query for good — not as a failure, as a
+settled measurement.** 🔴 **`ACTION PX`: the two APAC systems with BINDING horizontal law
+(Korea, Vietnam) have never been probed in Korean or Vietnamese, and they are the two most likely
+to carry implementing rules that only exist in-language.**
+
+🟡 **One soft signal worth keeping:** regional opinion research reports Asian publics more
+permissive toward classroom AI than Australian and New Zealand publics, who record higher support
+for BANNING AI in schools. 🔵 **A single ANZ-wide deployment narrative sold on the mainland-Asia
+sentiment will meet a different room in Sydney or Auckland; segment the pitch at the Tasman.**
+
+### LATAM
+
+🆕 🟢 **The density number this shelf was missing, and it reframes the region.** 🔴 **Brazil holds
+more than `47`% of Latin America's `1 300`+ edtechs** *(Distrito, EdTech Report)*, and
+🟢 **LATAM edtech venture funding totalled more than `US$1.2`B in `2025`** *(reported regional
+figure)*. 🔵 **`Distrito` appears on these shelves only in the pre-reset archive — this is the
+first time the live shelf carries it.**
+
+🔵 **What it changes: LATAM is not one market with a Brazilian plurality, it is a Brazilian market
+with a long tail.** 🟢 **Nearly half of all regional supply sits in one country, one language and
+one regulatory perimeter — so a Portuguese-first partner strategy covers more of LATAM's edtech
+supply than every Spanish-speaking country combined, and a region-wide channel build is worse value
+than a Brazil-deep one.** 🔴 **The inverse also holds and is the risk: the Spanish-speaking `53`%
+is `1 300`× fragmented across `18`+ jurisdictions, so DEMAND-side engagements there are
+ministry-by-ministry and cannot be won through an edtech channel at all.**
+
+🟢 **Corroborated, not new:** Brazil's `MEC` **Referencial para o Uso e Desenvolvimento
+Responsáveis de Inteligência Artificial na Educação** `2026` *(with civil-society criticism
+demanding participatory governance, algorithmic transparency and data protection)*, `PL 2.338/2023`
+before the `CTIA` and still unvoted, `~46` AI bills in tramitação, the national AI plan's
+`R$23`B-to-`2028` envelope *(unconfirmed)*, and the `CNE`'s finding that AI expansion has outrun
+its own guidelines. 🔵 **The Portuguese-language probe p206 opened keeps paying: this pass found
+nothing in Brazil that the Portuguese query had not already surfaced, which means that channel is
+now SATURATED too — and it saturated after two passes, against nine for the English ones.**
+
 ## Pass 208 — 2026-10-14 — `ACTION PQ`: FIVE EMEA INSTRUMENTS, THREE APAC ONES, AND A SIXTH LATAM MINISTRY
 
 ### 🔴 The method result that produced every figure below: name the organ TYPE

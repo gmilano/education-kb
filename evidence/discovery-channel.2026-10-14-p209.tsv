@@ -1,0 +1,8 @@
+# p209 - channel probe. Two independent non-github hosts, one github host, two transports.
+host	transport	result	interpretation
+example.com	curl	000 / CONNECT tunnel failed 403	no egress
+github.com/HKUDS/DeepTutor	curl	403	proxy refuses github too - curl -sI is INOPERABLE here
+api.github.com/repos/HKUDS/DeepTutor	curl	403	GitHub API unreachable by curl
+arxiv.org/abs/2602.07176	WebFetch	ENOTFOUND	does not resolve
+www.futuremarketinsights.com	WebFetch	ENOTFOUND	does not resolve
+github.com (repo pages + blob pages)	WebFetch	200, renders	THE ONLY first-hand verification channel available
