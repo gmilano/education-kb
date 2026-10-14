@@ -3,6 +3,173 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🆕 🔴 **Every pattern below now carries a licence gate as step `0`, because this pass measured
+that `49.7`% of the stars on education's trending repositories carry no right to commercial
+use.** 🟢 The gate is not new code — it is
+[`compose/code/lib/license_family.sh`](code/lib/license_family.sh), this KB's hardened
+classifier, `207`/`207` assertions today, which classified all `35` of this pass's payloads and
+reached `NONCOMMERCIAL-NOT-OSI` on a bespoke licence it had never seen.
+
+### 🟢 `P0` — The licence gate every other pattern starts with
+
+🔵 **Two commands, and they are the two this KB already owns.** 🔴 Do **not** write a third
+classifier: `P237` exists because passes `77` and `194` both did, and both reintroduced `P171`.
+
+```sh
+# 1. the licence CHANNEL — bytes, not a badge, not an API field
+curl -sS -o LIC -w '%{http_code}' "https://raw.githubusercontent.com/$SLUG/HEAD/LICENSE"
+
+# 2. the licence CLASSIFIER — title block, never the body
+. compose/code/lib/license_family.sh
+family_of "$(cat LIC)"      # -> MIT | Apache-2.0 | GPL-3.0 | AGPL-3.0 | ECL-2.0
+                            #    LGPL-3.0 | CC-BY-4.0 | NONCOMMERCIAL-NOT-OSI | UNCLASSIFIED
+```
+
+🔵 **Why both halves.** The channel matters because `github.com`, `api.github.com` and
+`codeload.github.com` are all `403` from this environment while the raw host is `200`. The
+classifier matters because **GPL-3.0's §`13` names the Affero licence**, so a body grep marks
+every GPLv3 payload `AGPL-3.0` — and a `404` on `LICENSE` alone is not *"unlicensed"* until
+`19` filenames and the README have been probed *(this pass published four such verdicts that
+way)*.
+
+🔴 **Gate rule for a Globant engagement:** `NONCOMMERCIAL-NOT-OSI`, `CC-*-NC-*` and
+`UNCLASSIFIED`-with-no-file are **STOP**. 🟡 `AGPL-3.0` is **ask** — permitted commercially, with
+network-use disclosure. 🟢 `MIT`, `BSD`, `Apache-2.0`, `ECL-2.0` are **go**.
+
+### 🟢 `P1` — A deliverable curriculum platform, built only from `go` rows
+
+🔵 **The problem this solves:** a team that assembles the obvious best-known corpora ships a
+course it cannot sell. 🔴 `RAG_Techniques` *(`29 858`★)*, `agents-towards-production`
+*(`21 692`★)* and `prompt-eng-interactive-tutorial` *(`38 564`★)* are all **STOP** rows.
+
+| layer | repo | licence *(bytes, this pass)* |
+|---|---|---|
+| curriculum | 🟢 [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 `MIT` *(`1 141` B)* |
+| curriculum | 🟢 [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | 🟢 `MIT` *(`1 141` B)* |
+| graded exercises | 🟢 [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | 🟢 `BSD-3-Clause` *(`1 515` B)* |
+| **runs the learner's code** | 🟢 [`taybenlor/runno`](https://github.com/taybenlor/runno) | 🟢 `MIT` *(`1 106` B)* |
+| delivery platform | 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` *(`11 120` B)* |
+| offline / low-bandwidth delivery | 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` *(`1 097` B)* |
+| open-weight tutor models | 🟡 Qwen3.6-27B · Mistral-Small-4 | 🟡 `Apache-2.0` *(secondary — **gate before use**)* |
+
+🔵 **Wiring.** `runno` is the keystone: it executes a learner's code **in the browser and over
+MCP**, so the tutor agent grades by *running* a submission rather than by asking a model whether
+it looks right. 🟢 `pandas_exercises` supplies tasks with known-good solutions → `runno` executes
+both → the model explains the diff. 🔵 Curriculum from the two Microsoft `MIT` repos is delivered
+through `sakai` *(`ECL-2.0`, permissive)* or `kolibri` *(`MIT`, offline-first)*.
+🔴 **Not through `openedx` or `canvas` unless the client accepts Affero.**
+
+🟡 **Honest limit:** this stack has **no assessment-integrity layer** and this KB has never
+measured one trending. 🔴 It is build-not-buy, and should be scoped as such.
+
+### 🟢 `P2` — The licence-provenance audit, as a sellable `2`-week deliverable
+
+🔵 **Why it sells now, in every region:** `49.7`% of education's trending stars are
+commercially barred, and a client's own inventory was almost certainly assembled from roundups.
+🔴 This KB has corrected a published `MIT` that was Affero *(p193, `frappe/lms`)* and produced an
+Affero that was GPL *(p194, `moodle`)* — **both from reading something other than the bytes.**
+
+```
+for each dependency and vendored corpus in the client's inventory:
+  1. resolve the slug            -> raw lane, README.md 200/404 proves existence
+  2. fetch the licence payload   -> raw lane, 19 candidate filenames
+  3. classify                    -> lib/license_family.sh  (NEVER a fresh grep)
+  4. record slug, path, BYTES, family, channel, date
+  5. verdict: go / ask / STOP
+```
+
+🟢 **The byte count is the deliverable's integrity check**: it lets the next audit tell a
+re-read from a restatement. 🔵 This pass's own output is the worked example —
+[`evidence/licence-from-bytes-rawlane.2026-10-14-p194.tsv`](../evidence/licence-from-bytes-rawlane.2026-10-14-p194.tsv)
+and [`evidence/libcross-license-family.2026-10-14-p194.tsv`](../evidence/libcross-license-family.2026-10-14-p194.tsv),
+`35` payloads, `30`/`35` agreeing with the hardened classifier and `0` substantive divergences.
+
+### 🟢 `P3` — LATAM: the `87`%-adoption / `26`%-strategy inventory
+
+🔵 **The measured opening** *(UNESCO IESALC, `200` institutions, `19` countries)*: `87`% use AI
+somewhere, `74`% in teaching and learning, **`26`% have a formal strategy**, adoption bottom-up.
+🟢 **So the first deliverable is not a pilot — it is an inventory plus a governance frame over
+use that is already happening.**
+
+| layer | choice | why |
+|---|---|---|
+| delivery | 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `MIT` | 🟢 offline-first — the durable permissive LATAM base |
+| 🔴 avoid | [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) `Apache-2.0` | 🔴 **ARCHIVED** — the only other permissive row with LATAM reach |
+| Spanish study content | 🔴 [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis) | 🔴 **no licence file** — **LINK, do not vendor** |
+| counterparties | 🟢 UNESCO LAC Observatory *(Santiago, `2026-04-14`)* + CAF, CENIA, CETIC.br, ECLAC, Santillana, Tec de Monterrey, ProFuturo, Ceibal | 🟢 public-sector entry runs through these — **no region-wide education-AI regulation exists** |
+
+🔵 **The Spanish-lane constraint is measured, not assumed:** the one Spanish-language education
+repository trending this week carries no grant, and `45`% of LAC institutions have AI guidance
+against `≈70`% in Europe and North America.
+
+### 🟢 `P4` — EMEA: pick the licence before the `2027-12-02` Annex III date
+
+🔵 **The measured opening:** teacher AI use `63`% *(Sanoma, `>20 000` teachers, `14` countries)*
+while belief that AI improves **learning outcomes** sits at `16`%, flat across three waves.
+🔴 **The buyer has bought adoption and has not bought evidence** — so the deliverable is measured
+instructional effect, not another assistant.
+
+| decision | 🟢 take | 🔴 instead of |
+|---|---|---|
+| LMS, client keeps its modifications | 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0` *(Switzerland)* · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) `ECL-2.0` | 🔴 [`openedx`](https://github.com/openedx/openedx-platform) `AGPL-3.0` · [`canvas-lms`](https://github.com/instructure/canvas-lms) `AGPL-3.0` |
+| lecture capture | 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) `ECL-2.0` | — |
+| existing Moodle estate | 🟢 **`GPL-3.0` — hosting a modified Moodle does NOT by itself trigger disclosure** | 🔴 **do not tell the client it is Affero** *(p194's own near-miss)* |
+
+🔵 **Timing:** Annex III education obligations apply from **`2027-12-02`** *(p193, resolved by
+convergence)* — so `2026`–`2027` is the architecture window. 🔴 **The `31`-point Eurostat spread
+means a pan-European rollout priced off Nordic readiness fails in Romania, Italy and Bulgaria.**
+
+### 🟢 `P5` — APAC: build to China's and Japan's written requirements
+
+🔵 **China's MOE guidelines are an architecture specification, not a policy mood:** curriculum
+from ≈age `6`, **minimum `8` hours a year** for the youngest cohort, **primary pupils barred from
+using generative AI independently**, **teachers barred from using AI to replace core teaching
+duties.**
+
+🟢 **What that forces, concretely:** a **teacher-in-the-loop, pupil-indirect** design — the agent
+drafts, a teacher releases; the pupil never holds an open generative session. 🔵 This KB's
+standing accountability finding supplies the missing half: **a receipts layer that records who
+released what**, since no measured agent layer can currently say who acted.
+
+| layer | choice | note |
+|---|---|---|
+| hours/coverage tracking against the `8`-hour floor | 🟢 `sakai` `ECL-2.0` or `kolibri` `MIT` | 🟢 permissive |
+| teacher-release gate + receipts | 🟢 build *(no permissive OSS measured)* | 🔴 named build-not-buy |
+| 🔴 do **not** start from | [`frappe/lms`](https://github.com/frappe/lms) `AGPL-3.0` · [`openeducat_erp`](https://github.com/openeducat/openeducat_erp) `LGPL-3.0` | 🔴 both APAC-origin, **both copyleft** — p193's correction, re-verified from bytes this pass |
+
+🆕 🟢 **Japan has a dated procurement window:** `220` textbooks across `11` subjects for the
+fiscal year starting **April `2027`** passed second screening carrying generative-AI content —
+localisation, adaptation and teacher training around that cohort is scoped and dated.
+🔴 **Korea: assert nothing.** The rollout status is contested in this KB's own sources.
+
+### 🟢 `P6` — North America: the enforcement-evidence pattern
+
+🔵 **The measured opening:** `134` AI-in-education bills across `31` states, Ohio's district
+framework deadline already passed, **California AB `1159`** *(bar student data for AI training)*
+and **Oklahoma/Maryland** *(human oversight, no high-stakes AI decisions about students)* —
+against two flagship districts running **moratoria**.
+
+🟢 **All of those are audit obligations, and none is answered by a policy document.** The
+deliverable is an evidence trail: **which model saw which student record, who approved the
+action, and what the retention was** — on a permissive base *(`sakai` `ECL-2.0`, `kolibri`
+`MIT`)*, with `P0`'s licence gate run over the client's existing inventory first.
+
+🔴 **The one thing not to do:** satisfy an AB-`1159`-style obligation with a corpus that bars
+commercial use. 🟢 `49.7`% of education's trending stars would fail that check, and `P0` catches
+it in two commands.
+
+### 🟡 What these patterns still cannot source from permissive OSS
+
+🔴 **Assessment integrity / proctoring** — nothing permissive measured trending.
+🔴 **Student-records (SIS/ERP)** — the permissive end of this market is LMS and lecture capture;
+`openeducat_erp` is `LGPL-3.0` and `rosariosis` is `GPL-2.0`. 🔴 **Agent accountability receipts**
+— standing gap, named build-not-buy for several passes. 🟡 **An eval layer** — the one candidate
+measured, [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen) *(`llm-as-judge` evals)*, is
+`GPL-3.0`. 🟢 **Stated as gaps with their licences, so a scoping conversation starts from what is
+missing rather than discovering it in week three.**
+
 ## Pass 193 — 2026-10-14
 
 🆕 **Four new patterns. Three of them exist because this pass caught this KB making the exact

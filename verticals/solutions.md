@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🆕 🟢 **The platform licence matrix p193 built from one channel has been re-read from bytes
+through a second, independent channel. `15` of `15` rows agree. Nothing moved.**
+
+🔵 p193 took licences from the recovered search channel's `license.spdx_id`, falling back to a
+blobless clone where it returned `NOASSERTION`. 🆕 **p194 re-read every row from
+`raw.githubusercontent.com` — a transport with no relationship to either — and then re-classified
+every payload with [`compose/code/lib/license_family.sh`](../compose/code/lib/license_family.sh),
+this KB's hardened classifier (`207`/`207` assertions today).** 🟢 **A platform shelf that
+survives re-measurement through an unrelated transport AND an independent classifier is one an
+engagement can quote.**
+
+🆕 🟡 **Provenance note, because this page needed it most.** Until this pass **this file named no
+channel at all** — `0` mentions of the lane its every verdict depends on, while
+[`agents/trending.md`](../agents/trending.md) carries `150`. 🟢 Every row below now carries its
+byte count, and the channel is named here: **`raw.githubusercontent.com/<slug>/HEAD/<file>`,
+classified by `lib/license_family.sh`.**
+
+### 🟢 `15` platform rows, licence re-verified from bytes — `5` / `5` / `5` CONFIRMED
+
+| 🟢 PERMISSIVE — build on, deliver, keep your changes | 🔴 AFFERO — network use triggers disclosure | 🟡 OTHER COPYLEFT |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) `ECL-2.0` · `11 120` B | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `AGPL-3.0` · `35 136` B | [`moodle/moodle`](https://github.com/moodle/moodle) `GPL-3.0` · `35 147` B *(`COPYING.txt`)* |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `MIT` · `1 097` B | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) `AGPL-3.0` · `34 520` B | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) `GPL-3.0` · `35 147` B |
+| [`opencast/opencast`](https://github.com/opencast/opencast) `ECL-2.0` · `11 340` B | 🔴 [`frappe/lms`](https://github.com/frappe/lms) **`AGPL-3.0`** · `33 893` B | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `LGPL-3.0` · `8 241` B |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0` · `10 982` B | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) `AGPL-3.0` · `34 523` B | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) `GPL-2.0` · `15 214` B |
+| 🔴 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) `Apache-2.0` · `11 337` B — **ARCHIVED** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) `AGPL-3.0` · `34 523` B | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) `GPL-3.0` · `35 121` B |
+
+🟢 **Every cell carries its byte count this pass**, so any later pass can tell a re-read from a
+restatement. 🔵 `frappe/lms` at `33 893` B is the row p193 corrected from a roundup's `MIT`;
+🟢 **the second channel returns the same `33 893` B of Affero.** The correction holds.
+
+### 🔴 A near-miss worth recording: the three GPL rows were almost published as Affero
+
+🔴 This pass's first, ad-hoc classifier returned **`AGPL-3.0` for `moodle`, `chamilo` and
+`GibbonEdu`**, because GPLv3's §`13` names the Affero licence. 🔴 **This KB registered that defect
+as `P171` and tooled against it in `lib/license_family.sh`; p194 re-derived it because it wrote a
+new classifier instead of sourcing the hardened one.** 🟢 **The library gets all three right**
+— `GPL-3.0`, `GPL-3.0`, `GPL-3.0` — and the full account is in
+[`repos/foundations.md`](../repos/foundations.md) this pass.
+
+🔵 **Why this mattered more here than anywhere else in the KB.** Moodle is the single most
+likely LMS under a client's existing deployment.
+
+| if this KB had published | the advice that follows | 🔴 cost |
+|---|---|---|
+| 🔴 Moodle is `AGPL-3.0` | *"your hosted Moodle obliges you to disclose your modifications to every user over the network"* | 🔴 **a client is told to open-source plugin work it has no obligation to disclose** |
+| 🟢 Moodle is `GPL-3.0` | 🟢 distribute the modified code **if you distribute the software**; hosting it as a service does **not** trigger §`13` by itself | 🟢 correct |
+
+🟡 **p193's error direction was understating obligation; this one would have overstated it.**
+🟢 Both are delivery-routing errors, and the matrix above is now the only form this KB
+publishes: **licence, byte count, and the channel it was read from.**
+
+### 🆕 🔴 The platform shelf did not trend, and that is a finding about the shelf
+
+🔵 Six trending lanes were measured this pass *(see [`agents/trending.md`](../agents/trending.md))*.
+🔴 **Not one of these `15` platforms appeared in any of them.** `openedx/openedx-platform`
+moved `+3` stars in `4` days at p192.
+
+🟢 **Read correctly, that is reassurance, not decay.** 🔵 An LMS with a national installed base
+is not supposed to gain `4 000` stars a week; **a platform that suddenly trends is usually a
+platform being rewritten.** 🟡 **The actionable form: pick platforms from this matrix and pick
+curriculum from the trending lane — they are different markets moving at different speeds, and
+this KB should stop expecting one shelf to serve both.**
+
+### 🆕 🟡 The ERP/SIS question, searched again and still answered the same way
+
+🔵 Searched this pass: `open source platform education ERP SIS MIT Apache 2026`.
+🔴 **No education ERP or SIS under `MIT`, `Apache-2.0` or `BSD` was found.**
+
+| candidate | licence | verdict |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `LGPL-3.0` *(`8 241` B, bytes)* | 🟡 the real ERP/SIS answer — **weak copyleft, usable, conditions attach** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 `GPL-2.0` *(`15 214` B, bytes)* | 🟡 SIS, copyleft |
+| ERPNext / Frappe *(education module)* | 🔴 publisher page states no licence | 🔴 **and its sibling [`frappe/lms`](https://github.com/frappe/lms) is `AGPL-3.0` — treat the family as Affero until read from bytes** |
+| Forma LMS | 🔴 a secondary comparison calls it *"the most permissive licence in this comparison"* | 🔴 **NOT VERIFIED — no bytes read, no slug resolved. Recorded as a lead, not a row** |
+
+🟢 **Stated as an informed gap with the search named:** the permissive end of this market is
+LMS and lecture-capture *(`sakai`, `kolibri`, `opencast`, `OpenOLAT`)*, **not administration.**
+🔴 **An engagement that needs permissive student-records software will be building it, not
+adopting it** — and that is a scoping fact worth more than a filler row.
+
 ## Pass 193 — 2026-10-14
 
 🆕 🔴 **The platform shelf has a licence matrix for the first time, every cell measured today,

@@ -3,6 +3,171 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🆕 🔴 **Half the stars on education's trending rows carry no right to commercial use —
+`49.7`% — and the three biggest offenders are the three tutorial repositories an AI Studios
+engineer is most likely to reach for first.** 🟢 Measured this pass: `10` education rows,
+`229 058`★ between them, **licence read from bytes on every one**.
+
+🔵 Read through `raw.githubusercontent.com` — **a lane this KB has used since at least
+`2026-10-04` and which p193's four-lane table omitted**; the correction to that table is in
+[`repos/foundations.md`](../repos/foundations.md) this pass. 🟢 **Then every verdict below was
+re-classified by this KB's own hardened instrument, `compose/code/lib/license_family.sh`
+(`207`/`207` assertions today): `30` of `35` agree exactly and `0` diverge on substance.**
+🔵 Committed as
+[`evidence/licence-from-bytes-rawlane.2026-10-14-p194.tsv`](../evidence/licence-from-bytes-rawlane.2026-10-14-p194.tsv)
+and [`evidence/libcross-license-family.2026-10-14-p194.tsv`](../evidence/libcross-license-family.2026-10-14-p194.tsv).
+
+### 🆕 🔴 The non-commercial tutorial economy — `3` repositories, `1` licence, byte-identical
+
+🔵 Discovered because they trended this week, then read:
+
+| repo | ★ | licence file | bytes | what it actually grants |
+|---|---|---|---|---|
+| 🔴 [`NirDiamant/RAG_Techniques`](https://github.com/NirDiamant/RAG_Techniques) | `29 858` | `LICENSE` | `5 644` | 🔴 **non-commercial only** |
+| 🔴 [`NirDiamant/agents-towards-production`](https://github.com/NirDiamant/agents-towards-production) | `21 692` | `LICENSE` | `6 107` | 🔴 **non-commercial only** |
+| 🔴 [`NirDiamant/GenAI_Agents`](https://github.com/NirDiamant/GenAI_Agents) | — | `LICENSE` | 🔴 **`5 644` — byte-identical to `RAG_Techniques`** | 🔴 **non-commercial only** |
+
+🔵 The operative clauses, quoted from the bytes:
+
+```
+1.3 No Commercial Use: Licensees are expressly prohibited from using the Licensed
+Material, in whole or in part, for any commercial purpose without prior written
+permission from the Licensor.
+2.1 Exclusive Commercial Rights: All commercial rights to the Licensed Material are
+exclusively reserved by the Licensor.
+```
+
+🔴 **This is a harder bar than Affero.** 🔵 AGPL-3.0 permits commercial use and attaches a
+disclosure obligation; **this permits no commercial use at all.** 🟢 **And this KB already
+models that rung**: `lib/license_family.sh` returned **`NONCOMMERCIAL-NOT-OSI`** on all three
+payloads **without having seen this licence before**, via its `commercial_use_ok` axis.
+🔵 So the category is not p194's contribution — **the three repositories that populate it are.**
+🟡 `agents-towards-production` carves out one exception —
+*"this restriction does not apply to contributors reusing their own contributions"* — which
+is a contributor term, **not a client-delivery term**.
+
+🔵 **Why it belongs in this file and not only in a licence appendix:** `agents-towards-production`
+is, by its own description, *"end-to-end, code-first tutorials for building production-grade
+GenAI agents — from prototype to enterprise deployment."* 🔴 **The best-known corpus for
+taking agents to production in an enterprise is licensed so that an enterprise cannot use it.**
+
+### 🆕 🔴 This KB's own shelf — the `#3` row by stars has NO licence file
+
+🔵 p193's ranked table lists [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+at `29 553`★, third of `30`. 🔴 **It has no licence file at root, and its README names none.**
+
+| repo | ★ | probe | result |
+|---|---|---|---|
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 553` | `19` candidate filenames + README | 🔴 **all `404`; README mentions no licence** |
+| 🔴 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | same | 🔴 **all `404`; README mentions no licence** |
+| 🔴 [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | `17 718` | same | 🟡 **no file — but the README links `CC-BY-NC-ND-3.0`** |
+| 🔴 [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis) | `6 072` | same | 🔴 **all `404`; README (`50 266` B) mentions no licence** |
+
+🔵 Filenames probed: `LICENSE` `LICENSE.md` `LICENSE.txt` `LICENSE.rst` `LICENCE` `LICENCE.md`
+`license` `license.md` `license.txt` `licence.txt` `COPYING` `COPYING.txt` `COPYRIGHT`
+`NOTICE` `MIT-LICENSE` `MIT-LICENSE.txt` `LICENSE-MIT` `LICENSE-APACHE` `UNLICENSE`.
+🟢 **Stated as `19` probes rather than as one**, because *"no licence"* from a single `LICENSE`
+`404` is a claim this KB would not accept from anyone else.
+
+🔴 **No licence is not permissive — it is the absence of a grant**, and `the-craft-of-selfteaching`
+is the sharpest case: `NC` **and** `ND`, so an engagement may neither sell it nor adapt it.
+
+### 🔴 THE PASS'S OWN DEFECT — `P171` re-derived for the fourth time
+
+🔵 This pass's first classifier scanned the licence body for `"gnu affero general public license"`.
+🔴 **It returned `AGPL-3.0` for `moodle/moodle`.** 🔴 **And this KB had already paid for exactly
+that defect, registered it as `P171`, and built `lib/license_family.sh` so it would not have to
+be remembered — which p194 did not consult.** 🟢 The reason is in the text:
+
+```
+13. Use with the GNU Affero General Public License.
+...under version 3 of the GNU Affero General Public License into a single...
+```
+
+🔴 **GPL-3.0's own §13 names the Affero licence — three times.** So a substring scan marks
+**every** GPL-3.0 file as Affero.
+
+| repo | bytes | first non-blank line | 🔴 substring scan | 🟢 correct |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `35 147` *(`COPYING.txt`)* | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **`GPL-3.0`** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `35 147` | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **`GPL-3.0`** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `35 121` | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **`GPL-3.0`** |
+| 🆕 [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen) | `35 149` | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **`GPL-3.0`** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `35 136` | `GNU **AFFERO** GENERAL PUBLIC LICENSE` | `AGPL-3.0` | 🟢 `AGPL-3.0` |
+
+🔴 **p194's proposed fix — *"classify on the first non-blank line"* — is WEAKER than the one
+this KB already owns.** 🟢 `lib/license_family.sh` classifies on the **title block, first `40`
+lines**, because [`compose/code/p288-agpl-casefold`](../compose/code/p288-agpl-casefold/) found a
+**reflowed `AGPL-3.0`** *(`kuali/kfs`, `33 755` B)* whose title line never appears in p194's
+expected form. 🔴 **p194's rule would have misread it as GPL.**
+🔵 `35 147` B of GPLv3 and `35 136` B of AGPLv3 are `11` bytes apart and share most of their
+text — **size is not a discriminator either.**
+🟢 **No new classifier was written this pass. That is `P237`'s rule — *a licence classifier must
+not be forked to be fixed* — and forking it is precisely what produced this defect.**
+
+🟡 **The symmetry with p193 is the point.** p193 corrected an `MIT` that was really Affero —
+an error that *under*-states obligation. 🆕 **p194 produced an Affero that was really GPL — an
+error that over-states it**, and would have told a client its self-hosted Moodle triggers
+network-use disclosure when it does not. 🟢 **Both directions cost a delivery decision.**
+🔴 **The difference: p193 caught somebody else's error, and p194 caught its own — on the fourth
+recurrence of a defect this KB has had tooling against since `2026-10-03`.**
+
+### 🟢 Cross-lane corroboration — `7` of `7` byte sizes match p192/p193's clone reads EXACTLY
+
+🔵 The new lane was validated against this KB's own prior reads, which were taken by blobless
+clone and `git cat-file` — a completely independent mechanism.
+
+| repo | p192/p193 recorded | 🟢 p194 raw lane | match |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `license.txt` · `33 893` B · `AGPL-3.0` | `license.txt` · `33 893` B · `AGPL-3.0` | 🟢 **exact** |
+| [`taybenlor/runno`](https://github.com/taybenlor/runno) | `1 106` B · `MIT` | `1 106` B · `MIT` | 🟢 **exact** |
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `1 069` B · `MIT` | `1 069` B · `MIT` | 🟢 **exact** |
+| [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1 081` B · `MIT` | `1 081` B · `MIT` | 🟢 **exact** |
+| [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) | `1 065` B · `MIT` | `1 065` B · `MIT` | 🟢 **exact** |
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `10 708` B · `Apache-2.0` | `10 708` B · `Apache-2.0` | 🟢 **exact** |
+| [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `LICENSE.md` · `189` B · `CC-BY-NC-SA-4.0` | `LICENSE.md` · `189` B · `CC-BY-NC-SA-4.0` | 🟢 **exact** |
+
+🟢 **`7` / `7`, to the byte, through an unrelated transport.** 🔵 p193's `frappe/lms`
+correction — the costliest finding this KB has published — is now **confirmed by a second
+independent channel**, not merely restated.
+
+### 🆕 🟢 New rows earning a place on the shelf, licence read from bytes this pass
+
+| repo | ★ | licence | bytes | why it earns a row |
+|---|---|---|---|---|
+| 🟢 [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | `91 466` | 🟢 **`MIT`** | `1 141` | 🟢 **the largest permissive curriculum measured by this KB** — `12` weeks, `26` lessons, `52` quizzes. Deliverable as-is |
+| 🟢 [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | `≈121 000` *(secondary)* | 🟢 **`MIT`** | `1 141` — 🔵 byte-identical to the row above | 🟢 `21`-lesson GenAI course under `MIT`. 🟡 Star count is secondary this pass, **licence is primary** |
+| 🟢 [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | `13 214` | 🟢 **`BSD-3-Clause`** | `1 515` | 🟢 graded practice-exercise corpus, permissive — pairs with a sandbox runner |
+| 🟢 [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | — | 🟢 **`MIT`** | `1 070` | 🟢 use-case atlas with an education section; `MIT` on the catalogue itself |
+| 🟡 [`unslothai/notebooks`](https://github.com/unslothai/notebooks) | `5 736` | 🟡 **`LGPL-3.0-or-later`** | `7 652` | 🟡 `250`+ fine-tuning notebooks — **weak copyleft, usable, conditions attach** |
+| 🟡 [`datawhalechina/every-embodied`](https://github.com/datawhalechina/every-embodied) | `4 053` | 🟡 **`CC-BY-4.0`** | `858` | 🟡 APAC-origin embodied-AI learning path. 🔴 **A content licence on a repo full of code** — see `intel/trends.md` |
+| 🟡 [`datawhalechina/llm-algo-leetcode`](https://github.com/datawhalechina/llm-algo-leetcode) | `685` | 🟡 **`CC-BY-4.0`** | `792` | 🟡 same publisher, same mismatch, smaller |
+| 🟡 [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen) | — | 🟡 **`GPL-3.0`** | `35 149` | 🟡 an `ai-tutor` with `llm-as-judge` evals — 🟢 **the eval layer this KB has repeatedly recorded as missing**, at a copyleft price |
+| 🔴 [`continuedev/continue`](https://github.com/continuedev/continue) | — | 🟢 `Apache-2.0` | `11 348` | 🔴 **ARCHIVED — acquired by Cursor, June `2026`** *(secondary)*. Recorded so this KB does not recommend a frozen base |
+
+🔵 `9` rows, `9` licences read from bytes. 🟡 Star counts for rows not on a trending page are
+**secondary this pass and labelled so**: the raw lane returns file contents, **not
+`stargazers_count`**, and the ranked-table channel was not re-queried — p193 priced the shelf
+hours ago and this KB's own noise floor is `±10`.
+
+### 🟢 What this pass did NOT do, stated plainly
+
+🔴 **No star census.** p193 measured `30` rows the same day and registered a `±10` noise floor;
+re-reading them hours later would produce noise, not a delta. 🟢 **Deliberate omission, not a
+gap.** 🔴 **`ACTION MN` — still NOT RUN**, ninth pass, unchanged reason: it is an outward-facing
+write on third parties' repositories and this run is unattended.
+
+### 🟢 Pre-registered for p195, with the limb that would falsify each
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| Re-price the shelf through the ranked channel and diff against p193's `30` | deltas exceed `±10` on some rows → **real momentum** | all deltas inside `±10` → **the floor holds, and weekly is the right cadence, not hourly** |
+| Probe `github.com/trending` **monthly** *(`504` × `2` this pass, UNMEASURED)* | monthly answers → the education rate in a `30`-day window is measurable | `504` again → the monthly view is **structurally** unavailable, like `eur-lex` |
+| Read licences from bytes for the remaining `≈430` shelf slugs via the raw lane | the lane scales → **this KB's whole shelf gets a byte-verified licence column** | rate-limited or `404`-noisy at volume → the lane is a spot tool, not a census tool |
+| Resolve the Korea AI-textbook rollout conflict *(see `intel/market.md`)* | a `2026`-dated Korean source settles it | nothing dated → stays CONTESTED, and this KB stops asserting a Korea position |
+
 ## Pass 193 — 2026-10-14
 
 🆕 🔴 **This page published a licence that bars client delivery as if it were permissive, and

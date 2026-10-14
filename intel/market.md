@@ -3,6 +3,225 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🔵 **Regional research this pass ran one global sweep plus one sweep per region.**
+🆕 🟢 **Two of the three named gaps p193 left for this pass CLOSE, and the third is now
+CONTESTED rather than empty.** 🔴 Every figure below remains **SECONDARY**: the government-host
+null-route is structural *(see [`repos/foundations.md`](../repos/foundations.md))*, so no
+primary instrument text was read, and **no calls were spent re-probing `eur-lex`** — p193's
+finding was taken as standing.
+
+### 🆕 🟢 EMEA — the adoption-rate gap CLOSES
+
+🔵 p193: *"no EMEA adoption rate and no EMEA vendor ranking found this pass — searched, not
+found, recorded as a gap."* 🟢 **The adoption half now has numbers, from two sources with very
+different incentives.**
+
+| source | base | 🟢 EMEA teacher AI use |
+|---|---|---|
+| 🆕 **Sanoma Learning**, `2026` European Teacher Survey *(Sept `2026`)* | **`>20 000` teachers, `14` countries** | 🟢 **`63`%** |
+| 🆕 **OECD TALIS `2024`**, cited in OECD *Digital Education Outlook 2026* | OECD teacher panel | 🟢 **`37`%** use generative AI for work tasks |
+
+🟡 **A `26`-point spread, and it is probably real rather than contradictory**: the OECD figure
+is `2024` fieldwork and the Sanoma figure is `2026`, so read together they are a **trajectory**
+— `37`% → `63`% in roughly two years. 🔴 **Sanoma is an education publisher surveying its own
+market**; recorded with that interest named.
+
+🆕 🔴 **The more useful number is the one that did not move.** Sanoma's teachers' perception of
+AI's impact on **learning outcomes**: `18`% *(`2023`)* → `14`% *(`2025`)* → `16`% *(`2026`)*.
+🟢 Meanwhile intent to use AI for **preparing materials** rose from `49`%. 🔴 **Use is rising on
+teacher workload, not on learner outcomes, and the teachers themselves say so.**
+
+🔵 Also measured: the European Commission's own survey *(`1 130` respondents, mostly school-based)*
+finds concerns across five areas, with **pupil behaviour and academic integrity most pressing**;
+Eurostat has generative-AI use highest among the highly educated *(`48.7`%)* and lowest in
+**Romania `17.8`%, Italy `19.9`%, Bulgaria `22.5`%** — 🟡 a `31`-point intra-EU spread, which is
+why *"the European market"* is not one market. 🔵 Eurydice, *Digital education at school in
+Europe 2026*, is the standing reference.
+
+🔴 **The EMEA VENDOR-RANKING half of the gap does NOT close.** Searched this pass:
+`Europe EdTech AI vendors market leaders 2026 ranking`. 🟢 HolonIQ's **`2026` Europe EdTech 200**
+is the only substantive source — **UK the largest single hub, with France, Germany, Italy and
+Spain strengthening** — but it is a startup list, **not market share**. Pearson recurs as the
+only incumbent named. 🔴 **No measured share or deployment counts found. Recorded as an open
+gap for the third pass running, with the search named.**
+
+### 🆕 🟢 APAC — the education-ministry gap PARTIALLY CLOSES
+
+🔵 p193: *"nothing found on China, Japan or Korea EDUCATION-ministry guidance… so p194 can
+attack the ministries directly."* 🟢 **Done. Two of three answer; the third is contested.**
+
+| country | 🟢 what the ministry actually requires | status |
+|---|---|---|
+| 🆕 🟢 **China** *(MOE)* | **Two guidelines, May `2025`**, AI into primary and secondary schools: curriculum from **≈age `6`**, **minimum `8` hours a year** for the youngest cohort, complexity rising by grade. 🔴 **Primary pupils are barred from using generative AI independently.** 🔴 **Teachers may not use AI to replace core teaching duties.** A translation of the *Guide to Using Generative AI in Primary and Secondary Schools (2025 Edition)* is published by Georgetown **CSET** | 🟢 **SPECIFIC AND BINDING** |
+| 🆕 🟢 **Japan** *(MEXT)* | Guidelines centre **AI literacy and critical evaluation of AI outputs**. 🟢 **`220` textbooks across `11` subjects, mainly for high-school juniors and seniors in the fiscal year starting April `2027`, passed second-round screening — many carry generative-AI content** *(Japan Times, `2026-03-25`)* | 🟢 **DATED, with a procurement window** |
+| 🔴 **South Korea** *(MOE)* | AI-supported **digital textbooks** personalising learning and collecting performance data in real time *(World Bank)*. 🔴 One low-quality source claims subject replacement by `2025` and full expansion by `2028`; **that conflicts with Korea having scaled back the mandatory rollout in `2025`** | 🔴 **CONTESTED — this KB asserts no Korea position** |
+
+🟡 **A `2026`-dated claim about `2025` guidelines is a date this KB flags rather than smooths**:
+the China guidelines are reported as May `2025` instruments, with an April `2026` report adding
+that MOE **plans** AI as a core higher-education subject with discipline-specific textbooks.
+🔴 That second item comes from an opinion-heavy outlet and is recorded as **a plan, not an
+instrument.**
+
+🟢 **The upgrade available here is primacy, not convergence**: unlike `eur-lex`, **CSET's
+translation of the Chinese guide is a reachable near-primary document.** 🔵 Pre-registered for
+p195 as the one source most likely to convert an APAC claim from secondary to near-primary.
+
+### 🆕 🟢 LATAM — adoption measured twice, on large bases, and it is the highest in the KB
+
+| source | base | finding |
+|---|---|---|
+| 🆕 **UNESCO IESALC + UNU-IAS** | **`200` institutions, `19` countries** | 🟢 **`87`% use AI in at least one area; `74`% in teaching and learning.** 🔴 **Only `26`% have a formal AI strategy** |
+| 🆕 **Digital Education Council**, LATAM survey `2026` | **`7 319` faculty, `29` institutions** | 🟢 **`79`% of faculty use AI in teaching** *(+`18` points on the `2025` global figure)*. 🔴 **`88`% report *"minimal"* to *"moderate"* engagement** |
+| **UNESCO**, higher-education guidance survey | regional comparison | 🔴 **`45`% of LAC institutions have or are developing AI guidance — against `≈70`% for Europe and North America** |
+
+🔴 **`87`% adoption against `26`% strategy is a `61`-point governance deficit, and it is
+measured, not inferred.** 🟢 UNESCO's own framing: adoption is **bottom-up** — driven by
+individual academics, researchers and students rather than institutional strategy — and
+**private institutions have materially more planning and governance capacity than public ones.**
+
+🆕 🟢 **New regional institution, with a date:** UNESCO launched the **Observatory on AI in
+Education for Latin America and the Caribbean on `2026-04-14` in Santiago, Chile.** Partners
+include **CAF, CENIA (Chile), CETIC.br (Brazil), ECLAC, Fundación Santillana, Tecnológico de
+Monterrey, ProFuturo and Fundación Ceibal (Uruguay)**. 🔵 Regulation remains general rather than
+education-specific: **Uruguay** was the first LATAM country to sign the Council of Europe
+Framework Convention on AI *(`2025`)*; **Mexico** has a federal AI bill in the Senate;
+**Colombia** adopted CONPES `4144` *(Feb `2025`)*. 🔴 **Still no education-sector AI regulation
+in the region's largest systems.**
+
+### 🆕 🟢 North America — the policy count is now specific
+
+| | measured |
+|---|---|
+| legislation, `2026` session | 🟢 **`134` AI-in-education bills across `31` states** *(one tracker; counts vary by tracker)* |
+| named bills | 🟢 **California AB `1159`** — bar use of student data to train AI models; **Idaho SB `1227`** — require privacy protections for AI tools in schools; **Oklahoma and Maryland** — human oversight required, AI barred from high-stakes decisions about students |
+| federal | 🆕 🟢 **H.R. `8747`, K-12 AI Literacy and Readiness Act of `2026`** — advanced by the House Education and Workforce Committee at a **July `21` markup**; would amend ESEA to let schools spend federal funds on AI |
+| market share | 🟢 **North America holds `36`% of the global AI-in-education market** *(vendor roundup — secondary)* |
+| district divergence | 🔴 **Katy ISD bans generative AI chatbots for K-`6`**, scaffolded access to grade `12`; **New York City has a one-year moratorium on student-facing AI through `8`th grade** |
+| teacher use | `60`% of US K-12 teachers used AI tools in `2024-25` |
+
+🔴 **The divergence is the story.** `31` state legislatures and two of the largest districts in
+the country are moving in **opposite directions** — mandate on one side, moratorium on the other.
+🟡 **State guidance is largely non-binding; FERPA and COPPA still carry the legal weight.**
+
+### 🟢 Market size — the spread, re-stated, and still never to be quoted as one number
+
+| figure | `2026` | source class |
+|---|---|---|
+| 🔴 **AI in education** | **`$6.4 B` – `$12.3 B`** across five research firms | vendor trackers |
+| Research and Markets | `≈$10.6 B` `2026` → **`$42.48 B` by `2030`** | secondary |
+| K-12 segment | `≈$32 B` by `2030` | secondary |
+| HolonIQ *(as cited by a vendor blog)* | `$12.3 B` `2026` | 🔴 **cited, not verified against HolonIQ's own page** |
+
+🔴 **A near-`2×` spread on the same year and the same market.** 🟢 **Quote the range and the
+direction, or quote a client-specific denominator instead.** 🔵 Unchanged from p193, and
+re-affirmed because a new source *(`$12.3 B`)* widened the band rather than narrowing it.
+
+### 🆕 🟢 The one genuinely cross-regional number this pass produced
+
+| region | adoption | formal governance | 🔴 deficit |
+|---|---|---|---|
+| **LATAM** | 🟢 **`87`%** institutional / `79`% faculty | 🔴 **`26`% strategy** · `45`% have/developing guidance | 🔴 **`61` points** |
+| **EMEA** | `63`% teachers *(Sanoma)* | `≈70`% institutions have/developing guidance | 🟢 **governance ahead of use** |
+| **North America** | `60`% K-12 teachers | `≈70`% institutions; `>28` states + DC issued guidance | 🟢 **governance ahead of use** |
+| **APAC** | not measured as a rate this pass | 🟢 **ministry-level mandates in China and Japan** | 🟡 **regulation ahead of adoption measurement** |
+
+🟢 **LATAM is the only region in this KB where adoption measurably outruns governance — and it
+is also the region with the highest measured adoption.** 🔴 The inversion is not a LATAM
+weakness story; **it is a sequencing difference**, and it changes what the first engagement
+deliverable should be in each region. 🟡 **APAC's blank adoption cell is this pass's honest
+gap**: ministry documents were found, **adoption rates were not**.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Sell the audit, not the adoption.** `134` bills across `31` states, Ohio's district
+AI-framework deadline already passed, and two flagship districts running **moratoria** while
+their legislatures run mandates. 🔴 A district cannot answer *"is your policy enforced?"* with a
+policy document.
+
+🆕 **This pass sharpens the pitch with a licence dimension.** California AB `1159` would bar
+using student data to train AI models; Oklahoma and Maryland bar AI from high-stakes student
+decisions. 🟢 **Both are audit obligations, and both need a receipts layer that names who acted**
+— this KB's standing accountability finding. 🔵 **Concrete starting point:** the permissive
+platform rows *(`sakai` `ECL-2.0`, `kolibri` `MIT`)* plus a receipts layer; **not** the
+non-commercial tutorial corpora, which `49.7`% of education's trending stars now sit under.
+
+### EMEA
+
+🟢 **Lead with the number that did not move.** Teacher AI use is `63`% and rising, while teachers'
+belief that AI improves **learning outcomes** sits at `16`% — flat across three survey waves.
+🔴 **An EMEA buyer has already bought adoption and has not bought evidence.** 🟢 The sellable
+deliverable is **measured instructional effect**, not another assistant.
+
+🔵 **Licence posture is the second lever, and it is region-shaped.** The EU AI Act's Annex III
+education obligations apply from **`2027-12-02`** *(p193, resolved by convergence)* — which makes
+`2026`–`2027` the architecture window, not the compliance scramble. 🟢 **Choose
+`OpenOLAT` (`Apache-2.0`, Switzerland) or `sakai` (`ECL-2.0`) over `openedx` (`AGPL-3.0`) or
+`canvas` (`AGPL-3.0`)** when the client intends to keep its modifications. 🟡 **And correct the
+record with them on Moodle: `GPL-3.0`, not Affero** — hosting a modified Moodle does not by
+itself trigger disclosure. 🔴 **The `31`-point Eurostat spread means a pan-European rollout
+priced off German or Nordic readiness will fail in Romania, Italy and Bulgaria.**
+
+### APAC
+
+🟢 **The requirements are already written, and they are unusually specific — which makes them
+biddable.** China: curriculum from age `6`, **`8` hours a year minimum**, **primary pupils barred
+from independent generative-AI use**, **teachers barred from using AI to replace core teaching
+duties.** 🟢 **That is an architecture specification, not a policy mood**: it mandates a
+**teacher-in-the-loop, pupil-indirect** design, which most consumer tutor products cannot satisfy.
+
+🆕 **Japan has a dated procurement window:** `220` textbooks across `11` subjects for the fiscal
+year starting **April `2027`** have passed second screening with generative-AI content. 🟢 The
+adaptation, localisation and teacher-training work around that cohort is scoped and dated.
+🔴 **Do not build on an APAC-origin platform expecting permissive terms** — p193's correction
+stands and was re-verified from bytes this pass: `frappe/lms` is `AGPL-3.0` and
+`openeducat_erp` is `LGPL-3.0`. 🔴 **Korea: assert nothing.** The rollout status is contested
+in this KB's own sources.
+
+### LATAM
+
+🟢 **The `61`-point gap between `87`% adoption and `26`% strategy is the engagement.** It is
+measured on `200` institutions across `19` countries, and UNESCO itself names the mechanism:
+adoption is bottom-up, driven by individuals. 🟢 **So the first deliverable is not a pilot —
+institutions already have hundreds. It is an inventory plus a governance frame over AI use that
+is already happening.**
+
+🔵 **Two region-specific constraints this pass measured.** 🔴 The only permissive platform row
+with LATAM reach, `menthorlabs/menthor` *(`Apache-2.0`, Portuguese)*, is **archived**.
+🔴 And the single Spanish-language education repository trending this week,
+[`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis)
+*(`6 072`★)*, **ships no licence** — so it may be linked, **not vendored**. 🟢 **The durable
+permissive base for low-connectivity LATAM deployment remains
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `1 097` B,
+offline-first)**, re-verified from bytes this pass.
+
+🟢 **Named counterparties, with a date:** the UNESCO **Observatory on AI in Education for LAC**
+*(Santiago, `2026-04-14`)* and its partners — **CAF, CENIA, CETIC.br, ECLAC, Fundación Santillana,
+Tecnológico de Monterrey, ProFuturo, Fundación Ceibal**. 🔵 Public-sector entry runs through
+these bodies, not through national education-AI regulation, **because none of the region's
+largest systems has any.**
+
+### Global
+
+🟢 **The one finding that travels to every region: `49.7`% of the stars on education's trending
+repositories carry no right to commercial use.** 🔴 The three best-known tutorial corpora for
+RAG, for taking agents to production, and for prompt engineering are **non-commercial, non-
+commercial, and unlicensed** respectively. 🟢 **A licence pre-flight gate is therefore a
+billable deliverable in its own right, in any region** — and this KB already ships the
+instrument: [`compose/code/lib/license_family.sh`](../compose/code/lib/license_family.sh),
+`207`/`207` assertions, which classified all `35` of this pass's payloads including a bespoke
+non-commercial licence it had never seen.
+
+🔵 Standing global context: adoption has crossed from experimentation to structured
+implementation; agentic AI is reshaping teaching, administration and student support; SLMs are
+gaining ground for curriculum-specific, governable deployments; AI PCs are `≈15`% of
+institutional PC shipments in `2026`. 🔴 **Against `≈10`% of institutions with formal AI
+guidelines and `71`% of US teachers reporting no AI training**, the binding constraint on every
+engagement in this KB remains **governance and training capacity, not model capability.**
+
 ## Pass 193 — 2026-10-14
 
 🔵 **Regional research this pass ran one global sweep plus one sweep per region.**

@@ -3,6 +3,146 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🆕 🔴 **The trend this pass measures is that education's open-source output has moved to a
+publication format no education taxonomy indexes, and arrived there carrying licences that bar
+the use Globant would make of it.** 🟢 Both halves measured today, both falsifiable.
+
+### 🆕 🔴 T1 — Education trends in exactly one lane, and thirteen passes probed the wrong one
+
+| lane | rows | education rows |
+|---|---|---|
+| default weekly + daily + `trending/python` + `spoken_language_code=pt` | `32` | 🔴 **`0`** |
+| 🟢 `trending/jupyter-notebook` + `spoken_language_code=es` | `18` | 🟢 **`10`** |
+
+🟢 **The mechanism, and it is not a GitHub quirk: the notebook IS the pedagogical artefact.**
+Lesson text, runnable cell and output live in one file, so a filter on `.ipynb` is accidentally
+a filter on *teaching*. 🔴 **`trending/python` returned `0` education rows in the same hour that
+`trending/jupyter-notebook` returned `9`** — same ecosystem, same week, same language family.
+
+🔵 **Falsifier for p195:** probe `zh`, `fr`, `de`, `ja`, `hi` spoken-language lanes. 🟢 If
+education concentrates in narrow lanes generally, they should return non-zero education rates
+on small denominators. 🔴 If they return `0`, then the notebook lane is doing the work and
+language filtering is not, and this trend narrows to **one** lane rather than a class of them.
+
+### 🆕 🔴 T2 — The non-commercial tutorial economy: half the stars, none of the rights
+
+🔵 `10` education rows, `229 058`★, licence read from bytes on every one:
+
+| | stars | share |
+|---|---|---|
+| 🔴 **no commercial grant** | `113 904` | 🔴 **`49.7`%** |
+| 🟢 deliverable | `109 418` | `47.8`% |
+| 🟡 conditions attach *(`LGPL-3.0`)* | `5 736` | `2.5`% |
+
+🔴 **And `91 466` of the `109 418` deliverable stars are a single repository**,
+`microsoft/ML-For-Beginners`. 🔴 **Remove one corporate publisher and education's trending shelf
+is `84`% unusable for client work.**
+
+🟡 **The licence class is not new to this KB — `lib/license_family.sh` has modelled
+`NONCOMMERCIAL-NOT-OSI` for passes, and it classified all three of these payloads correctly
+without prior knowledge of them. 🟢 What is new is which repositories populate it, and their
+share.** `NirDiamant`'s
+three repositories share one byte-identical `Custom License Agreement`: *"expressly prohibited
+from using the Licensed Material, in whole or in part, for any commercial purpose"*, with **all
+commercial rights exclusively reserved.** 🔵 AGPL permits commercial use and attaches disclosure;
+**this permits none.** 🟡 Ordering: `permissive → weak copyleft → Affero → **no commercial
+grant**`.
+
+🔵 **Why it is a trend and not a catalogue entry:** the barred repositories are precisely the
+*production-oriented* ones — `agents-towards-production` describes itself as tutorials for
+*"enterprise deployment."* 🔴 **The corpus for taking agents into an enterprise is licensed so
+an enterprise cannot use it**, and it gained `163` stars this week.
+
+### 🆕 🔴 T3 — Curriculum ships under CONTENT licences; the code inside it does not notice
+
+| repo | licence | 🔴 the mismatch |
+|---|---|---|
+| [`datawhalechina/every-embodied`](https://github.com/datawhalechina/every-embodied) | `CC-BY-4.0` *(`858` B)* | 🔴 a robotics/VLA **code** curriculum under a licence written for prose |
+| [`datawhalechina/llm-algo-leetcode`](https://github.com/datawhalechina/llm-algo-leetcode) | `CC-BY-4.0` *(`792` B)* | 🔴 solutions and test cases — **code** — under the same |
+| [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | `CC-BY-NC-ND-3.0` *(README only, **no file**)* | 🔴 `NC` **and** `ND`: may not be sold **and** may not be adapted |
+| [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `CC-BY-NC-SA-4.0` *(`189` B)* | 🔴 carried since p192; `NC` |
+
+🟡 **Creative Commons explicitly advises against using CC licences for software**, because they
+address neither source availability nor patent grants. 🟢 **`CC-BY-4.0` is still workable** for
+an engagement — commercial use permitted, attribution required — 🔴 **but it tells a client
+nothing about the code's warranty or patent position**, and three of the four rows above are
+`NC` on top. 🔵 **The trend: as curriculum becomes code, its authors keep reaching for content
+licences.** 🟢 Falsifier: if p195's wider byte-read over the shelf finds `CC-*` concentrated in
+pre-`2024` repositories, this is legacy rather than a trend.
+
+### 🆕 🔴 T4 — The `2026` cohort still ships no licence, now with large repositories
+
+🔵 p193 measured five `2026`-created education repositories at `333`–`515`★, **all five with no
+licence file.** 🆕 **p194 shows the pattern is not confined to small new repositories.**
+
+| repo | ★ | probe | result |
+|---|---|---|---|
+| 🔴 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | `19` filenames + README | 🔴 **no licence, none named** |
+| 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 553` | same | 🔴 **no licence, none named** |
+| 🔴 [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis) | `6 072` | same | 🔴 **no licence, none named** |
+
+🔴 **`29 553`★ is the `#3` row on this KB's own shelf.** 🟢 **No licence is not permissive —
+it is the absence of a grant**, and default copyright applies. 🟡 **Direction across two passes:
+p193 found it in the new-and-small cohort, p194 finds it in the large-and-established one, so
+the honest statement is not *"new projects skip licences"* — it is *"education repositories skip
+licences at every size."***
+
+### 🆕 🟢 T5 — Platforms and curriculum are now visibly two markets at two speeds
+
+🔵 Not one of the `15` platform rows in [`verticals/solutions.md`](../verticals/solutions.md)
+appeared in any of six trending lanes. `openedx/openedx-platform` moved `+3` stars in `4` days.
+🟢 Meanwhile `9` curriculum corpora gained `1 266` stars in a week.
+
+🟢 **The actionable form: platform choice is an installed-base and licence decision; curriculum
+choice is an attention and licence decision.** 🔴 **An engagement that reads only trending builds
+a course with nothing to run it in; one that reads only the platform shelf ships a system with
+`2019` content.** 🔵 This KB should stop expecting one shelf to serve both, and p195's shelf
+re-pricing should report platforms and curriculum **separately**.
+
+### 🆕 🟢 T6 — The study layer keeps being published as runnable artefacts, now on a fourth surface
+
+🔵 p192: the second-largest `edtech`-topicked repo on GitHub is a **PDF→skill compiler**
+*(`virgiliojr94/book-to-skill`, `34 806`★, `MIT`)*. p193: `mattpocock/skills` *(`290 184`★)* and
+`vercel-labs/skills` *(`34 736`★)* trending, neither tagged education. 🆕 **p194: the week's
+education momentum is `9` notebook corpora and `0` platforms.**
+
+🟢 **Four independent surfaces agree** — topic, shelf, trending-default, trending-by-language.
+🟢 **The study layer is shipping as skills and notebooks, outside every education taxonomy**,
+which is the mechanism behind thirteen passes of empty topic queries.
+
+### 🆕 🟡 T7 — Adoption and governance are sequenced differently by region, and it is measured
+
+| region | adoption | governance | 🔴 gap |
+|---|---|---|---|
+| **LATAM** | 🟢 `87`% institutional, `79`% faculty | 🔴 `26`% strategy, `45`% guidance | 🔴 **`61` points** |
+| **EMEA** | `63`% teachers | `≈70`% guidance | 🟢 governance ahead |
+| **North America** | `60`% teachers | `≈70`% guidance; `>28` states | 🟢 governance ahead |
+| **APAC** | 🔴 **not measured** | 🟢 ministry mandates *(China, Japan)* | 🟡 regulation ahead of measurement |
+
+🔴 **LATAM is the only region where adoption measurably outruns governance** — and it has the
+KB's highest measured adoption. 🟢 **Not a weakness story, a sequencing story**: it changes the
+first deliverable per region, as [`intel/market.md`](market.md) sets out. 🔴 **APAC's blank
+adoption cell is this pass's named gap**, not an implied zero.
+
+### 🆕 🟡 T8 — Consolidation reaches the tooling an education engagement would have built on
+
+🔴 [`continuedev/continue`](https://github.com/continuedev/continue) — **`Apache-2.0`
+*(`11 348` B, read from bytes this pass)*, archived and read-only after acquisition by Cursor,
+June `2026`** *(secondary)*. 🟢 Permissive licence means existing copies remain usable;
+🔴 **upstream has stopped.** 🟡 **The pattern to watch: a permissive licence protects the code
+you already have and does not protect the roadmap.** 🟢 Recorded so this KB does not recommend a
+frozen base to a coding-education engagement.
+
+### 🟢 What did NOT change, stated so the trend lines stay honest
+
+🟢 The `15`-row platform licence matrix: **re-read from bytes through an independent channel,
+`15` / `15` unchanged.** 🟢 p193's `frappe/lms` Affero correction: **confirmed byte-exact by a
+second lane.** 🔴 The EMEA vendor-ranking gap: **open for a third pass.** 🔴 The Korea
+AI-textbook rollout: **contested, no position asserted.** 🔴 Government primary sources:
+**structurally unreachable, not retested, no calls spent.**
+
 ## Pass 193 — 2026-10-14
 
 🆕 🔴 **The trend this pass measures is a PUBLICATION practice, and it decides whether any of

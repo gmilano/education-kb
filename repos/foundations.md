@@ -3,6 +3,147 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🆕 🔴 **This pass set out to report a new lane and a new method finding. Both were already in
+this KB — one of them `242` times — and the reason p194 did not know is that it read p193's
+summary table as the state of knowledge.**
+
+🟢 **What survives, and it is the stronger result: every licence verdict this pass publishes was
+re-classified by this KB's own hardened instrument, `compose/code/lib/license_family.sh`,
+whose suite measures `207`/`207` today. `30` of `35` agree exactly; the `5` divergences are
+spelling, and in all `5` the library is right.**
+
+### 🔴 First, the correction to this pass's own premise
+
+🔵 p194 probed four URLs for one repository and found `raw.githubusercontent.com` answering
+`200` with licence bytes while three GitHub lanes answered `403`. 🔴 **It then drafted that as a
+discovery. It is not.**
+
+| where the raw lane already appears | count |
+|---|---|
+| [`agents/trending.md`](../agents/trending.md) | 🔴 **`150`** |
+| [`repos/trending.md`](trending.md) | 🔴 **`142`** |
+| `compose/code/` *(files)* | 🔴 **`242`** |
+| this file | `15` |
+| [`intel/trends.md`](../intel/trends.md) · [`agents/top.md`](../agents/top.md) | `10` each |
+| [`intel/market.md`](../intel/market.md) | `8` |
+| 🟡 [`verticals/solutions.md`](../verticals/solutions.md) | 🟡 **`0`** |
+
+🟢 **`compose/code/p288-agpl-casefold/README.md`, dated `2026-10-04`, states it outright:**
+*"`github.com/<org>/<repo>` → `403` en `3`/`3` · `raw.githubusercontent.com` → `200` con payload.
+La licencia se LEE; el `curl -sI` que el encargo ordena sigue muerto acá."* 🔴 **Ten days before
+this pass announced it.**
+
+🔵 **The mechanism of the error is worth more than the error.** p193's lane table lists four
+lanes — `curl` direct, `gh` CLI, MCP `search_repositories`, page fetch — and **does not include
+the raw lane**, although the same file mentions it `150` times further down. 🔴 **A pass that
+reads the newest summary to learn the KB's state learns the summary, not the state.** 🟢 That is
+a property of how this KB publishes, and it is correctable: **a lane table must be a census of
+the lanes this KB uses, not of the lanes the current pass happened to probe.**
+
+### 🟢 The lane table, corrected to a census
+
+| lane | `github.com/trending` | `api.github.com` | file payloads | verdict |
+|---|---|---|---|---|
+| `curl` direct to `github.com` | 🔴 `403`, `378` B | 🔴 `403`, `378` B | 🔴 `403` | blocked |
+| `gh` CLI | — | 🔴 `403` | — | blocked |
+| `codeload.github.com` | — | — | 🔴 **`403`, `378` B** *(new probe this pass)* | blocked |
+| MCP `search_repositories` | n/a | 🟢 works | 🔴 no file bodies | 🟢 **open — the ranking channel** |
+| page fetch | 🟢 `200`, parsed | — | — | 🟢 **open — the trending channel** |
+| 🟢 **`raw.githubusercontent.com`** | n/a | n/a | 🟢 **`200`, real bytes, `HEAD` resolves** | 🟢 **open since at least `2026-10-04` — the licence channel** |
+
+🔵 The `403` body is `378` B and identical on all three blocked GitHub hosts — **larger and more
+specific than the `249` B p193 recorded**:
+
+```json
+{"message":"GitHub access to this repository is not enabled for this session. Use add_repo
+to request access. If add_repo answers that read access is already available and you need
+GitHub API or write ..."}
+```
+
+🟢 **Still this session's own gate, not GitHub's — p193's diagnosis stands.** 🆕 **New this pass:
+`codeload.github.com` is on the gate too, and the gate is path-based rather than host-based,
+which is exactly why the raw host is not on it.**
+
+### 🆕 🔴 Second correction: P171 was re-derived here for the FOURTH time
+
+🔵 This pass's ad-hoc classifier scanned the licence body for `"gnu affero general public
+license"` and returned **`AGPL-3.0` for `moodle/moodle`**. 🟢 Caught, and the cause written up:
+GPL-3.0's §`13` is titled *"Use with the GNU Affero General Public License."*
+
+🔴 **This KB registered that as `P171`, built `lib/license_family.sh` to make it unforgettable,
+and recorded the defect being reintroduced twice before today.** The library's own header says so:
+
+```
+Why this file exists (P237, pass 77 del 2026-10-03). This base had already paid for the
+GPL-3.0/AGPL-3.0 defect and registered it as P171 ...
+And pass 77 reintroduced the defect anyway, in two fresh instruments, because it wrote a
+new classifier from scratch instead of reusing a hardened one. ... A rule that has to be
+remembered is not a control. This file is the control.
+```
+
+🔴 **p194 is the fourth reintroduction, and it happened the same way: a new classifier written
+from scratch.** 🟡 And the library is **stronger than the fix p194 drafted**: p194 proposed
+*"classify on the first non-blank line"*; the library classifies on the **title block, first `40`
+lines**, because `p288-agpl-casefold` found a **reflowed AGPL-3.0** — `kuali/kfs`, `33 755` B —
+whose title line does not appear in that form at all. 🔴 **p194's rule would have misread it.**
+
+🟢 **The remedy this pass takes is the one P237 prescribes: do NOT ship another classifier.**
+🔴 Two earlier drafts of this pass referenced a new `compose/code/licence-preflight-raw-lane/`;
+**it was not written, deliberately**, because forking the classifier is the defect.
+🟢 **`compose/code/lib/license_family.sh` is the instrument, and these pages now point at it.**
+
+### 🟢 Every p194 licence verdict, re-classified by the hardened instrument
+
+🔵 `35` payloads fetched through the raw lane, then passed to `family_of()` from the shared
+library. Committed as
+[`evidence/libcross-license-family.2026-10-14-p194.tsv`](../evidence/libcross-license-family.2026-10-14-p194.tsv).
+
+| | count |
+|---|---|
+| 🟢 **identical verdict** | 🟢 **`30` / `35`** |
+| 🟡 divergent **spelling**, same substance | `5` |
+| 🔴 divergent **substance** | 🟢 **`0`** |
+
+| divergence | p194 ad-hoc | 🟢 library | who is right |
+|---|---|---|---|
+| `NirDiamant/RAG_Techniques` · `agents-towards-production` · `GenAI_Agents` | `NonCommercial-Custom (NOT OSI)` | 🟢 **`NONCOMMERCIAL-NOT-OSI`** | 🟢 **library — it is the canonical family name, and it was reached WITHOUT being told about this licence** |
+| `unslothai/notebooks` · `openeducat/openeducat_erp` | 🔴 `LGPL-3.0-or-later` | 🟢 **`LGPL-3.0`** | 🟢 **library — p194 appended *"or-later"* which neither payload states** |
+
+🟢 **The first row is the real validation.** The `NirDiamant` licence is a bespoke
+`Custom License Agreement` the library has never seen, and its `commercial_use_ok` axis
+classified it **`NONCOMMERCIAL-NOT-OSI` on the text alone.** 🔵 So the *"new licence class above
+Affero"* this pass wanted to announce is also not new — **it is a family this KB already models,
+and p194's contribution is the three repositories that populate it**, not the category.
+
+🔴 **And p194's own `LGPL-3.0-or-later` was an invention.** 🟢 The library reads the version from
+the payload *(`Gap 256`, closed pass `53`)* and declines to add a suffix the bytes do not carry —
+which is the same discipline this KB demands of a star count.
+
+### 🟢 What is genuinely new this pass, stated narrowly
+
+| 🟢 new | 🔴 not new |
+|---|---|
+| 🟢 **six trending lanes measured; education present in exactly one** *(see [`agents/trending.md`](../agents/trending.md))* | 🔴 the raw lane |
+| 🟢 **`codeload.github.com` measured on the gate** | 🔴 the `403`-is-our-own-gate diagnosis *(p193)* |
+| 🟢 **`trendshift.io` → DNS `ENOTFOUND`**, structurally unreachable | 🔴 the GPLv3 §`13` trap *(`P171`)* |
+| 🟢 **`10` education repositories licence-read, `3` non-commercial, `4` unlicensed** | 🔴 the `NONCOMMERCIAL-NOT-OSI` family |
+| 🟢 **EMEA adoption rate and APAC ministry guidance** *(see [`intel/market.md`](../intel/market.md))* | 🔴 the title-block rule |
+
+🟡 **That is a shorter new-findings list than this pass expected to publish, and it is the
+accurate one.**
+
+### 🟢 Standing gaps, re-stated with their mechanism
+
+| gap | mechanism | verdict |
+|---|---|---|
+| government primary sources *(`eur-lex` and `15` others)* | 🔴 DNS null-route to `127.0.0.1` | 🔴 **structurally unreachable — p193's finding taken as standing, no calls spent** |
+| 🆕 third-party trending mirrors *(`trendshift.io`)* | 🔴 DNS `ENOTFOUND` | 🆕 🔴 **structurally unreachable — first measured this pass** |
+| `github.com/trending?since=monthly` | 🔴 `504` × `2` | 🟡 **a timeout, not a refusal — UNMEASURED, retest once in p195** |
+| `stargazers_count` for non-trending rows | 🔴 the raw lane returns files only | 🟡 **that is the MCP channel's job; not re-queried by choice (`±10` floor, p193 priced the shelf hours ago)** |
+| 🆕 [`verticals/solutions.md`](../verticals/solutions.md) never names the raw lane | 🔴 `0` mentions in a file that is entirely licence verdicts | 🆕 🟡 **a provenance gap on this KB's most quoted page — fixed there this pass** |
+
 ## Pass 193 — 2026-10-14
 
 🆕 🟢 **The `403` that has shaped thirteen passes of this KB is NOT GitHub's. It is this

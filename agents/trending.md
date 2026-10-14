@@ -3,6 +3,94 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **p193's headline — *"`19` rows across two windows, not one is an education project"* —
+was a correct measurement of the WRONG VIEW. Education trends on GitHub. It trends in exactly
+one lane, and p193 was not reading that lane.**
+
+🟢 **Both of p193's pre-registered one-call probes ran. Six lanes measured, `50` rows,
+`10` education rows — and all `10` sit in one lane.**
+
+| lane | window | rows | 🟢 education rows | hit rate |
+|---|---|---|---|---|
+| default *(all languages)* | weekly | `10` | 🔴 **`0`** | `0`% |
+| default *(all languages)* | daily | `9` | 🔴 **`0`** | `0`% |
+| `trending/python` | weekly | `11` | 🔴 **`0`** | `0`% |
+| `spoken_language_code=pt` | weekly | `2` | 🔴 **`0`** | `0`% |
+| 🆕 🟢 `spoken_language_code=es` | weekly | `1` | 🟢 **`1`** | 🟢 **`100`%** |
+| 🆕 🟢 **`trending/jupyter-notebook`** | weekly | `17` | 🟢 **`9`** | 🟢 **`53`%** |
+| third-party mirror *(`trendshift.io`)* | — | 🔴 DNS `ENOTFOUND` | — | unreachable |
+| default *(all languages)* | monthly | 🔴 `504` × `2` | 🔴 **UNMEASURED** | — |
+
+🔵 Committed as [`evidence/trending-by-lane.2026-10-14-p194.tsv`](../evidence/trending-by-lane.2026-10-14-p194.tsv).
+🟢 **`0` of `32` rows in the four general lanes. `10` of `18` in the two narrow ones.**
+
+### 🆕 🟢 The lane where education actually trends
+
+🔵 `github.com/trending/jupyter-notebook?since=weekly`, `17` rows, `9` of them education:
+
+| # | repo | ★ | ★ this week | what it is |
+|---|---|---|---|---|
+| `13` | 🟢 [`microsoft/ML-For-Beginners`](https://github.com/microsoft/ML-For-Beginners) | `91 466` | `206` | `12` weeks, `26` lessons, `52` quizzes |
+| `8` | 🔴 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | `166` | interactive prompt-engineering tutorial |
+| `3` | 🔴 [`NirDiamant/RAG_Techniques`](https://github.com/NirDiamant/RAG_Techniques) | `29 858` | `190` | advanced RAG, one notebook per technique |
+| `4` | 🔴 [`NirDiamant/agents-towards-production`](https://github.com/NirDiamant/agents-towards-production) | `21 692` | `163` | end-to-end agent tutorials |
+| `2` | 🔴 [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | `17 718` | `292` | self-teaching, Chinese-language |
+| `12` | 🟢 [`guipsamora/pandas_exercises`](https://github.com/guipsamora/pandas_exercises) | `13 214` | `67` | graded practice exercises |
+| `11` | 🟡 [`unslothai/notebooks`](https://github.com/unslothai/notebooks) | `5 736` | `25` | `250`+ fine-tuning notebooks |
+| `9` | 🟡 [`datawhalechina/every-embodied`](https://github.com/datawhalechina/every-embodied) | `4 053` | `114` | embodied-AI learning path, APAC |
+| `10` | 🟡 [`datawhalechina/llm-algo-leetcode`](https://github.com/datawhalechina/llm-algo-leetcode) | `685` | `53` | LLM algorithm practice lab |
+
+🔵 **Why Jupyter and not Python.** `trending/python` returned `11` rows and `0` education in
+the same hour. 🟢 **The notebook IS the pedagogical artefact** — lesson, runnable cell and
+output in one file — so a language filter on `.ipynb` is, accidentally, a *subject* filter.
+🔴 **Thirteen passes of this KB probed a surface that cannot show education, and then one pass
+recorded `0` as a fact about the ecosystem.**
+
+### 🆕 🔴 And the lane where education trends is the lane where the licences fail
+
+🔵 Licence read from bytes on all `10` rows —
+[`evidence/trending-education-rows-licensed.2026-10-14-p194.tsv`](../evidence/trending-education-rows-licensed.2026-10-14-p194.tsv):
+
+| | stars | share of the `229 058`★ on education's trending rows |
+|---|---|---|
+| 🔴 **no commercial grant** *(`3` × no licence file, `1` × `NC-ND`, `2` × non-commercial custom)* | `113 904` | 🔴 **`49.7`%** |
+| 🟢 deliverable *(`MIT` × `1`, `BSD-3` × `1`, `CC-BY-4.0` × `2`)* | `109 418` | 🟢 `47.8`% |
+| 🟡 conditions attach *(`LGPL-3.0`)* | `5 736` | `2.5`% |
+
+🔴 **Essentially half.** 🟢 And the deliverable half is almost entirely **one repository**:
+`microsoft/ML-For-Beginners` alone is `91 466` of the `109 418`. 🔵 **Remove Microsoft and
+education's trending shelf is `84`% unusable for client work.**
+
+### 🆕 🟢 The Spanish lane: one row, and it IS education
+
+🔵 `spoken_language_code=es`, weekly — **a single row returned**:
+[`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis),
+TypeScript, `6 072`★, **`+43` this week**, *"Lista de libros sobre programación en Español y
+gratis."*
+
+🟢 **A `100`% education hit rate on a denominator of `1`** — stated that way because `1` row is
+not a trend, it is a signal that the filter works. 🔴 **And it has no licence file** *(`19`
+filenames probed, README `50 266` B, no licence named)*. 🟡 **So the one Spanish-language
+education row trending this week is a list an engagement may read and must not vendor.**
+
+🔵 The Portuguese lane returned `2` rows, **neither education**:
+[`agenda-tech-brasil/agenda-tech-brasil`](https://github.com/agenda-tech-brasil/agenda-tech-brasil)
+*(`5 841`★, `+29`)* and [`BrasilAPI/BrasilAPI`](https://github.com/BrasilAPI/BrasilAPI)
+*(`11 272`★, `+31`)* — 🟢 **an informed `0`, probed and written down**, not a silence.
+
+### 🟡 Measured as untested, not as a `0`
+
+🔴 `github.com/trending?since=monthly` — **`504` Gateway Timeout, twice.** 🟢 Recorded
+UNMEASURED. 🔵 A `504` is a timeout, not a refusal; **p193's lesson that a status code is not
+a diagnosis applies to this one too**, so it is pre-registered for p195 rather than concluded.
+🔴 `trendshift.io` — **DNS `ENOTFOUND`**, the same mechanism as the null-routed government
+hosts, not a `403`. 🟢 Third-party trending mirrors are therefore recorded as **structurally
+unreachable from this environment**, and p195 should not spend calls on them.
+
 ## Pass 193 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

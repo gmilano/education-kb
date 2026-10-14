@@ -1,0 +1,11 @@
+slug	lane	stars	stars_this_week	licence_from_bytes	bytes	commercial_delivery
+microsoft/ML-For-Beginners	jupyter-notebook/weekly	91466	206	MIT	1141	YES
+anthropics/prompt-eng-interactive-tutorial	jupyter-notebook/weekly	38564	166	NO-LICENCE-FILE-AT-ROOT	0	NO
+NirDiamant/RAG_Techniques	jupyter-notebook/weekly	29858	190	NonCommercial-Custom (NOT OSI)	5644	NO
+NirDiamant/agents-towards-production	jupyter-notebook/weekly	21692	163	NonCommercial-Custom (NOT OSI)	6107	NO
+xiaolai/the-craft-of-selfteaching	jupyter-notebook/weekly	17718	292	CC-BY-NC-ND-3.0 (README only, no file)	0	NO
+guipsamora/pandas_exercises	jupyter-notebook/weekly	13214	67	BSD-3-Clause	1515	YES
+midudev/libros-programacion-gratis	es/weekly	6072	43	NO-LICENCE-FILE-AT-ROOT	0	NO
+unslothai/notebooks	jupyter-notebook/weekly	5736	25	LGPL-3.0-or-later	7652	WITH-CONDITIONS
+datawhalechina/every-embodied	jupyter-notebook/weekly	4053	114	CC-BY-4.0	858	YES (content, attribution)
+datawhalechina/llm-algo-leetcode	jupyter-notebook/weekly	685	53	CC-BY-4.0	792	YES (content, attribution)

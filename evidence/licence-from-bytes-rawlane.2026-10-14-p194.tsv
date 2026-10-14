@@ -1,0 +1,41 @@
+slug	licence_file	bytes	licence_from_bytes	first_nonblank_line	discriminator
+microsoft/ML-For-Beginners	LICENSE	1141	MIT	MIT License	body
+microsoft/generative-ai-for-beginners	LICENSE	1141	MIT	MIT License	body
+xiaolai/the-craft-of-selfteaching	-	0	NO-LICENCE-FILE-AT-ROOT	-	19 filenames probed, all 404
+NirDiamant/RAG_Techniques	LICENSE	5644	NonCommercial-Custom (NOT OSI)	Custom License Agreement	first-line + clause read
+NirDiamant/agents-towards-production	LICENSE	6107	NonCommercial-Custom (NOT OSI)	Custom License Agreement	first-line + clause read
+anthropics/prompt-eng-interactive-tutorial	-	0	NO-LICENCE-FILE-AT-ROOT	-	19 filenames probed, all 404
+datawhalechina/every-embodied	LICENSE	858	CC-BY-4.0	Creative Commons Attribution 4.0 International	body
+datawhalechina/llm-algo-leetcode	LICENSE	792	CC-BY-4.0	Creative Commons Attribution 4.0 International	body
+unslothai/notebooks	LICENSE	7652	LGPL-3.0-or-later	GNU LESSER GENERAL PUBLIC LICENSE	first-line
+guipsamora/pandas_exercises	LICENSE	1515	BSD	BSD 3-Clause License	body
+midudev/libros-programacion-gratis	-	0	NO-LICENCE-FILE-AT-ROOT	-	19 filenames probed, all 404
+ashishpatel26/500-AI-Agents-Projects	LICENSE	1070	MIT	MIT License	body
+HKUDS/DeepTutor	LICENSE	11408	Apache-2.0	Apache License	body
+virgiliojr94/book-to-skill	LICENSE.md	1068	MIT	MIT License	body
+JushBJJ/Mr.-Ranedeer-AI-Tutor	-	0	NO-LICENCE-FILE-AT-ROOT	-	19 filenames probed, all 404
+frappe/lms	license.txt	33893	AGPL-3.0	GNU AFFERO GENERAL PUBLIC LICENSE	first-line
+moodle/moodle	COPYING.txt	35147	GPL-3.0	GNU GENERAL PUBLIC LICENSE	first-line (corrected: substring scan said AGPL)
+openedx/openedx-platform	LICENSE	35136	AGPL-3.0	GNU AFFERO GENERAL PUBLIC LICENSE	first-line
+instructure/canvas-lms	LICENSE	34520	AGPL-3.0	GNU AFFERO GENERAL PUBLIC LICENSE	first-line
+learningequality/kolibri	LICENSE	1097	MIT	MIT License	body
+sakaiproject/sakai	LICENSE	11120	ECL-2.0	Educational Community License, Version 2.0 (ECL-2.0)	body
+OpenOLAT/OpenOLAT	LICENSE	10982	Apache-2.0	Apache License	body
+opencast/opencast	LICENSE	11340	ECL-2.0	Educational Community License, Version 2.0 (ECL-2.0)	body
+openeducat/openeducat_erp	LICENSE	8241	LGPL-3.0-or-later	For copyright information, please see the COPYRIGHT file.	body
+chamilo/chamilo-lms	LICENSE	35147	GPL-3.0	GNU GENERAL PUBLIC LICENSE	first-line (corrected: substring scan said AGPL)
+classroomio/classroomio	LICENSE	34523	AGPL-3.0	GNU AFFERO GENERAL PUBLIC LICENSE	first-line
+learnhouse/learnhouse	LICENSE	34523	AGPL-3.0	GNU AFFERO GENERAL PUBLIC LICENSE	first-line
+GibbonEdu/core	LICENSE	35121	GPL-3.0	GNU GENERAL PUBLIC LICENSE	first-line (corrected: substring scan said AGPL)
+francoisjacquet/rosariosis	LICENSE	15214	GPL-2.0	GNU GENERAL PUBLIC LICENSE	body
+menthorlabs/menthor	LICENSE	11337	Apache-2.0	Apache License	body
+taybenlor/runno	LICENSE	1106	MIT	MIT License	body
+PetoiCamp/OpenCat-Quadruped-Robot	LICENSE	1069	MIT	MIT License	body
+ai-infra-curriculum/ai-infra-engineer-learning	LICENSE	1081	MIT	MIT License	body
+mohi-devhub/antivibe	LICENSE	1065	MIT	MIT License	body
+webworn/openfoam-mcp-server	LICENSE	10708	Apache-2.0	Apache License	body
+enkidevs/curriculum	LICENSE.md	189	CC-BY-NC-SA-4.0	"This work is licensed under a <a rel=""license"" href=""http://creativecommons.org/licenses/b"	body
+ahmedEid1/Lumen	LICENSE	35149	GPL-3.0	GNU GENERAL PUBLIC LICENSE	first-line (corrected: substring scan said AGPL)
+NirDiamant/GenAI_Agents	LICENSE	5644	NonCommercial-Custom (NOT OSI)	Custom License Agreement	first-line + clause read
+continuedev/continue	LICENSE	11348	Apache-2.0	Apache License	body
+midudev/porfolio	-	0	NO-LICENCE-FILE-AT-ROOT	-	19 filenames probed, all 404

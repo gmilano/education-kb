@@ -3,6 +3,67 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 194 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **Both one-call probes p193 left here ran, and they invert p193's conclusion.** Language-
+filtered trending views: **measured**. Spoken-language trending: **measured**. Third-party
+mirrors: 🔴 **DNS `ENOTFOUND` — structurally unreachable, stop spending calls.**
+
+🔴 **The headline: `0` education rows in `32` rows across four general lanes, and `10` in `18`
+rows across two narrow ones.** Full six-lane table and the row-by-row listing are in
+[`agents/trending.md`](../agents/trending.md) this pass; the licence overlay is in
+[`agents/top.md`](../agents/top.md).
+
+### 🆕 🟢 The repository-level reading: momentum is in curriculum, not in platforms
+
+🔵 The `9` education rows on the lane where education trends are **`0` platforms, `0` tutors
+and `9` curricula.** 🔴 Not one LMS, not one SIS, not one grading engine, not one agent.
+
+| what trended | count | ★ sum |
+|---|---|---|
+| 🟢 curriculum / tutorial / exercise corpora | `9` | `223 286` |
+| 🔴 LMS or platform | **`0`** | `0` |
+| 🔴 tutor agent | **`0`** | `0` |
+| 🔴 assessment / grading engine | **`0`** | `0` |
+
+🟡 **Read against this KB's own shelf, that is a split, not a contradiction.** The shelf's
+platform rows — `moodle`, `openedx`, `canvas`, `sakai`, `kolibri` — are mature, slow-moving and
+**do not trend**; `openedx/openedx-platform` moved `+3` stars in `4` days at p192. 🟢 **The
+platforms are where the installed base is; the notebooks are where the week's attention is.**
+🔴 **An engagement that reads only trending would build a course and no system to run it in.**
+
+### 🆕 🔴 Three passes, three surfaces, one direction — and now a fourth
+
+🔵 p192 found the second-largest `edtech`-topicked repository on GitHub is a **PDF→skill
+compiler** *(`virgiliojr94/book-to-skill`, `34 806`★, `MIT`)*. p193 found `mattpocock/skills`
+*(`290 184`★)* and `vercel-labs/skills` *(`34 736`★)* trending, neither tagged education.
+🆕 **p194 adds the notebook lane: the week's education momentum is `9` runnable-lesson corpora
+and zero platforms.**
+
+🟢 **Four independent surfaces — topic, shelf, trending-default, trending-by-language — now
+agree: the study layer is being published as runnable artefacts** *(skills, notebooks)*
+**outside every education taxonomy.** 🔵 Which is the mechanism for why thirteen passes of
+topic queries saw nothing.
+
+### 🆕 🟡 A consolidation datum, recorded as a warning on a base this KB has cited
+
+🔴 [`continuedev/continue`](https://github.com/continuedev/continue) — **archived and
+read-only after acquisition by Cursor, June `2026`** *(secondary source, not primary)*.
+🟢 Licence confirmed `Apache-2.0` from bytes this pass *(`11 348` B)*, so **existing copies stay
+usable**; 🔴 **the project is frozen.** 🔵 Logged because this KB's sibling technology KB
+recorded `Continue` as archived in its own cycle-`4` notes, and an education engagement
+reaching for a coding-tutor base needs to know the upstream stopped.
+
+### 🟡 Untested this pass, stated as untested
+
+🔴 `since=monthly` on the default lane — **`504` twice, UNMEASURED**, pre-registered for p195.
+🔴 Other spoken-language codes *(`zh`, `fr`, `de`, `ja`, `hi`)* — **not probed.** 🟢 Each is one
+call, and the `es`-versus-`pt` result (`1`/`1` education versus `0`/`2`) says the lane is worth
+sweeping rather than sampling. 🔵 **A `zh` probe is the highest-value one left**, because two of
+this week's nine education rows are Chinese-language and surfaced only through the notebook lane.
+
 ## Pass 193 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

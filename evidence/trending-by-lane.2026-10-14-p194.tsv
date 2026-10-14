@@ -1,0 +1,9 @@
+lane	url	window	rows	education_rows	http	pass_measured
+default (all languages)	https://github.com/trending?since=weekly	weekly	10	0	200	p193
+default (all languages)	https://github.com/trending?since=daily	daily	9	0	200	p193
+default (all languages)	https://github.com/trending?since=monthly	monthly	UNMEASURED	UNMEASURED	504 x2	p194
+spoken_language_code=es	https://github.com/trending?since=weekly&spoken_language_code=es	weekly	1	1	200	p194
+spoken_language_code=pt	https://github.com/trending?since=weekly&spoken_language_code=pt	weekly	2	0	200	p194
+language=python	https://github.com/trending/python?since=weekly	weekly	11	0	200	p194
+language=jupyter-notebook	https://github.com/trending/jupyter-notebook?since=weekly	weekly	17	9	200	p194
+third-party mirror	https://trendshift.io/	n/a	UNREACHABLE	UNREACHABLE	DNS ENOTFOUND	p194
