@@ -1,0 +1,12 @@
+fixture	truth	p203_classifier	p205_classifier	verdict
+OptiKey/OptiKey LICENSE.txt	GPL-3.0	AGPL-3.0	GPL-3.0	p203 WRONG - GPL-3.0 s.13 names the AGPL
+moodle/moodle COPYING.txt	GPL-3.0	AGPL-3.0	GPL-3.0	p203 WRONG - same mechanism, independent repo
+coqui-ai/TTS LICENSE.txt	MPL-2.0	AGPL-3.0	MPL-2.0	p203 WRONG - MPL s.1.12 "Secondary License" names the AGPL
+sakaiproject/sakai LICENSE	ECL-2.0	UNRECOGNISED	ECL-2.0	p203 has no ECL branch though p204 measured ECL twice
+sdv-dev/SDV LICENSE	Business Source License 1.1	NON-OSI-proprietary	NON-OSI-BSL	p203 imprecise - BSL converts to Apache-2.0 at a change date
+kaldi-asr/kaldi COPYING	Apache-2.0	Apache-2.0	Apache-2.0	both correct; defeats a naive 300-char title window (1.5 kB notice prefix)
+frappe/lms license.txt	AGPL-3.0	AGPL-3.0	AGPL-3.0	TRUE positive control - the fix must not break real AGPL
+LibraryCarpentry/lc-r LICENSE.md	two-scope CC-BY-4.0 + MIT	MIT	TWO-SCOPE	p203 collapses a two-scope grant to its software half
+yabellini/fromSpreadSheetToR LICENSE.md	CC-BY-SA-4.0 deed	UNRECOGNISED	CC-BY-SA-4.0-DEED	a SUMMARY of a licence, not the instrument
+numbas/Numbas LICENSE	Apache-2.0	Apache-2.0	Apache-2.0	control - unchanged
+jcputney/scorm-again LICENSE	MIT	MIT	MIT	control - unchanged

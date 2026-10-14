@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — `ACTION PB` CLOSED ON LIMB `2`, AND IN THIS INDUSTRY `"MIT"` IS USUALLY A UNIVERSITY
+
+### 🟢 `ACTION PB` — the `~60` highest-★ rows, read for SCOPE. `0` misdescribe a shipped path
+
+🔴 **p204 explicitly refused to let its `0`/`20` re-verification stand as this test** — *"the `20`
+were re-read for family, not for scope, and were not the highest-★ set."* 🟢 **p205 ran the test
+the action actually registered: the `60` highest-★ rows this KB publishes with a clean star cell,
+each grant re-read from its own blob at the `HEAD` ref and run through `scope_headings`.**
+
+🟢 **Result: `1` of `60` rows is two-scope, and this KB ALREADY publishes it correctly.** 🔴 **So
+limb `2` fires: `0` rows misdescribe a shipped path, and the `24` known two-scope rows remain the
+population.** 🔵 **Do not backfill the licence column.**
+[`evidence/pb-topstar-scope.2026-10-14-p205.tsv`](../evidence/pb-topstar-scope.2026-10-14-p205.tsv).
+
+### 🆕 🟢 The one two-scope row is a SHAPE p204 had not seen: two FILES, not two headings
+
+🟢 **[`microsoft/autogen`](https://github.com/microsoft/autogen)** splits its grant across **two
+files** — root `LICENSE` is 🔴 **`CC-BY-4.0`** (`18 650` B) and `LICENSE-CODE` is 🟢 **`MIT`**
+(`1 141` B). 🟢 **The KB's cell reads `MIT` *(code)* / `CC-BY-4.0` *(docs)*, which is right, and a
+second row already names both files.**
+
+🔴 **This is a DIFFERENT instrument from the Carpentries shape.** p203/p204 established two-scope
+as **one file with two headings** (`## Instructional Material` + `## Software`) and built
+`scope_headings()` for exactly that. 🔴 **`scope_headings()` returns `0` on `autogen`** — the
+heading probe is structurally blind to the two-file shape, just as p204's path probe was blind to
+the two-heading one. 🟢 **Both shapes are now named**, and a scope probe needs both tests:
+
+| shape | where the second scope lives | detector | canonical row |
+|---|---|---|---|
+| two headings | one `LICENSE.md`, `##` sections | `scope_headings() >= 2` | `LibraryCarpentry/lc-r` |
+| 🆕 **two files** | `LICENSE` + `LICENSE-CODE` | a second licence FILE exists | `microsoft/autogen` |
+
+### 🔴 The audit trap this industry sets: `"MIT"` names a university more often than a licence
+
+🔴 **p205's first automated pass over the licence column reported `3` mismatches. All `3` were the
+AUDIT's error and the KB was right each time** — recorded because the next pass will be tempted to
+run the same regex:
+
+🔴 **[`sdv-dev/SDV`](https://github.com/sdv-dev/SDV)** — flagged as *"published `MIT`, blob
+`Business Source License 1.1`"*. 🟢 **The KB publishes it as `🔴 Business Source License 1.1 — no
+es open source`, which is exactly correct.** The audit had matched `MIT` in the row's PROSE:
+*"Nació en el **Data to AI Lab del MIT** (2016)"*. 🔵 **The institution, not the grant.**
+
+🔴 **[`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi)** — flagged `UNRECOGNISED`; the KB's
+`Apache-2.0` is right and the probe's title window was too short *(see
+[`repos/foundations.md`](../repos/foundations.md))*. 🔴 **`microsoft/autogen`** — flagged on a cell
+the audit had truncated at its first family token.
+
+🟢 **The rule, and it is specific to education:** 🔴 **never derive a licence family by matching
+licence tokens in a free-text cell.** 🔵 Read the cell's licence FIELD, or read the blob — in a KB
+whose rows are universities, labs and courses, `MIT`, `BSD` and `Apache` are place names and
+project names before they are grants.
+
+### 🔴 `4` of the `60` highest-★ rows have no grant file at all
+
+🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) **`29.6`k★** ·
+[`csev/py4e`](https://github.com/csev/py4e) `3.1`k★ ·
+[`amosblomqvist/learn`](https://github.com/amosblomqvist/learn) `2.9`k★ ·
+[`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) `2.1`k★ — 🔴 **no licence body at
+`16` path forms.** 🟢 **`Mr.-Ranedeer-AI-Tutor` is the row that matters**: a `29.6`k★ prompt-based
+tutor that this industry cites constantly and that **cannot be shipped by a studio**. 🔵 **It is
+the agent layer's `22`% problem at the very top of the shelf, not in its tail.**
+
+---
+
 ## Pass 204 — 2026-10-14 — THE AGENT SHELF IS THE UNGRANTED SHELF, AND `anthropics` IS ON IT
 
 ### 🔴 `13` of the `56` ungranted rows ARE the agent surface — `23`%
@@ -8737,4 +8802,5 @@ is the point.**
   *"no tool writes anything"* is read from its README tool table and is consistent with its SDK
   surface — it is **not** a handler-by-handler source audit either, and is recorded at that
   strength.
+
 

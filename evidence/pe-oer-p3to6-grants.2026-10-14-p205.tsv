@@ -1,0 +1,80 @@
+page	repo	stars	novelty	grant_path	family_p205	commercial_use
+3	tibonto/educor	16	NEW	LICENSE	CC0-1.0	permitted
+3	Artificial-Intelligence-HSBI-TDU/KI-Vorlesung	20	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+3	LibraryCarpentry/lc-r	19	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+3	pro4bib/handbuch-it-in-bibliotheken	23	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+3	datacarpentry/openrefine-socialsci	26	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+3	weecology/forecasting-course	25	NEW	LICENSE.md	MIT	permitted
+3	travisjneuman/learn.python	14	NEW	LICENSE	MIT	permitted
+3	IAS-Uni-Siegen/RL_course	14	NEW	LICENSE	CC-BY-NC	REFUSED (NC)
+3	Artificial-Intelligence-HSBI-TDU/KI-Vorlesung-W25	15	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+3	Programmiermethoden-CampusMinden/Prog2-Lecture	13	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+3	huguryildiz/signals-and-systems	11	NEW	LICENSE	MIT	permitted
+3	Open-Science-Community-Saudi-Arabia/MOOCs	12	NEW	LICENSE	CC-BY-4.0	permitted
+4	kgdunn/pid-book	10	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+3	datacarpentry/python-ecology-lesson-es	11	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+4	lnnrtwttkhn/version-control-book	8	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+4	Compiler-CampusMinden/CB-Vorlesung-Bachelor-W25	8	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+4	Compiler-CampusMinden/CPL-Vorlesung-Master	8	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+4	UnstableDesign/PrototypingSmartTextiles	7	NEW	LICENSE	CC0-1.0	permitted
+4	ABMArchaeologists/ABMA_tutorials	7	NEW	LICENSE	GPL-3.0	permitted
+3	open-education-hub/cybersecurity-for-it-professionals	11	NEW	COPYING.md	CC-BY-NC	REFUSED (NC)
+4	carpentries-incubator/pando-python	7	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+4	Compiler-CampusMinden/Mini-Python-Builder	7	NEW	LICENSE.md	MIT	permitted
+4	edrubin/EC524W25	6	NEW	LICENSE	MIT	permitted
+4	spatialaudio/classification_exercise	6	NEW	LICENSE	MIT	permitted
+3	reamat/ComputacaoCientifica	23	NEW	none	UNGRANTED	UNKNOWN - no grant
+3	reamat/Calculo	27	NEW	none	UNGRANTED	UNKNOWN - no grant
+4	hollygrimm/py5-noc-book-2	6	NEW	LICENSE	CC-unversioned	permitted
+4	quadriga-dk/Book_Template	6	NEW	LICENSE.md	UNRECOGNISED	permitted
+4	yabellini/fromSpreadSheetToR	6	NEW	LICENSE.md	CC-BY-SA-4.0-DEED	derivative forced open (SA)
+3	reamat/TransformadasIntegrais	16	NEW	none	UNGRANTED	UNKNOWN - no grant
+4	Lippitz-Lab/advanced-experimental-physics	5	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+4	dini-ag-kim/skos-einfuehrung	5	NEW	LICENSE	CC-BY-4.0	permitted
+3	OpenScienceMOOC/Module-9-Open-Educational-Resources	12	NEW	none	UNGRANTED	UNKNOWN - no grant
+3	felixlohmeier/bibliotheks-und-archivinformatik	13	NEW	none	UNGRANTED	UNKNOWN - no grant
+4	X5GON/platform-api	5	NEW	LICENSE	BSD-2-Clause	permitted
+5	V0raOnline/arkinesis	5	NEW	LICENSE	CC-BY-NC	REFUSED (NC)
+5	bmaitner/Community_ecology_course	4	NEW	LICENSE	MIT	permitted
+5	RSE-Sheffield/pando-python	4	NEW	LICENSE.md	CC-BY-4.0-DEED	permitted
+5	Compiler-CampusMinden/CB-Vorlesung-Bachelor	4	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+5	huguryildiz/digital-communications	4	NEW	LICENSE	MIT	permitted
+4	maehr/critical-ai-literacy-for-historians	5	NEW	none	UNGRANTED	UNKNOWN - no grant
+4	Danijel-Korent/open-education	7	NEW	none	UNGRANTED	UNKNOWN - no grant
+5	twillo-lehre-teilen/Train-The-Trainer	3	NEW	LICENSE	CC0-1.0	permitted
+4	yabellini/AgriRemoteSensing	6	NEW	none	UNGRANTED	UNKNOWN - no grant
+5	data-literacy-alliance/dalia-dif	3	NEW	LICENSE	MIT	permitted
+5	data-literacy-alliance/oerbservatory	3	NEW	LICENSE	MIT	permitted
+5	orchardguides/kei-open-mcr	3	NEW	LICENSE	GPL-3.0	permitted
+5	Fuenfgeld/DatamanagementAndArchiving	3	NEW	LICENSE	MIT	permitted
+5	Programmiermethoden-CampusMinden/Deploy-to-Grading	3	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+5	ntious/Systematic-and-Bibliometric-Literature-Review	3	NEW	LICENSE	GPL-3.0	permitted
+5	juliopez/Introduccion-a-la-Teoria-Politica	3	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+4	reamat/AnaliseMatematica	5	NEW	none	UNGRANTED	UNKNOWN - no grant
+5	mandrasch/oer-hoernchen	3	NEW	LICENSE	MIT	permitted
+5	yabellini/deHojasDeCalculoAR	3	NEW	LICENSE.md	CC-BY-SA-4.0-DEED	derivative forced open (SA)
+6	bster/ai-future	3	NEW	LICENSE	MIT	permitted
+5	M-Ismail-ZA/IsmailsGlossary	4	NEW	none	UNGRANTED	UNKNOWN - no grant
+6	aheil/hhn-c	3	NEW	LICENSE	MIT	permitted
+6	Apomera/AlloFlow	3	NEW	LICENSE	AGPL-3.0	permitted
+6	Living-Data-Tutorials/living-data-tutorials.github.io	3	NEW	LICENSE	MIT	permitted
+5	Nadine02/github_oer	3	NEW	none	UNGRANTED	UNKNOWN - no grant
+6	virtUOS/edusharing-opencast-importer	2	NEW	LICENSE	GPL-3.0	permitted
+5	open-education-hub/oer-template	3	NEW	COPYING.md	CC-BY-NC	REFUSED (NC)
+5	enanomapper/tutorials	4	NEW	none	UNGRANTED	UNKNOWN - no grant
+5	NFDI4Biodiversity/nfdi4biodiversity-sle	3	NEW	none	UNGRANTED	UNKNOWN - no grant
+6	maltedreyer-5/lernwerkstatt	2	NEW	LICENSE	MIT	permitted
+6	Programmiermethoden-CampusMinden/prog2_ybel_gitquest	2	NEW	LICENSE.md	MIT	permitted
+6	leonkoellerwirth-arch/razbiram-community	2	NEW	LICENSE	MIT	permitted
+6	benlambm/ai-tools-for-business	2	NEW	LICENSE	CC-unversioned	permitted
+6	vivirony955/ai-driven-sdlc	2	NEW	LICENSE	CC-BY-4.0	permitted
+6	paezha/envsocty3LT3	2	NEW	LICENSE	CC-BY-NC	REFUSED (NC)
+6	Lippitz-Lab/Optics	2	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+6	Lippitz-Lab/Molekuele-und-Festkoerper	2	NEW	LICENSE	CC-BY-SA-4.0	derivative forced open (SA)
+6	igembitsky/virtual-standardized-patient	2	NEW	LICENSE	MIT	permitted
+6	Compiler-CampusMinden/CPL-Vorlesung-Master-W25	2	NEW	LICENSE.md	CC-BY-SA-4.0	derivative forced open (SA)
+6	ammonsalter-del/thedisruptor-sim	2	NEW	LICENSE	CC-BY-NC	REFUSED (NC)
+6	hbunke/oer_im_unterricht	2	NEW	LICENSE.md	CC-BY-4.0	permitted
+6	yabellini/AgroReportesConR	2	NEW	LICENSE.md	CC-BY-SA-4.0-DEED	derivative forced open (SA)
+6	Compiler-CampusMinden/CB-Vorlesung-Bachelor-W26	3	NEW	none	UNGRANTED	UNKNOWN - no grant
+6	PoisotLab/EcoNetworksLabs	2	NEW	none	UNGRANTED	UNKNOWN - no grant

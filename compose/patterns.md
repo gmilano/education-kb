@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — THREE RECIPES, AND A GATE THAT REFUSES A COMPONENT BY ITS GRANT
+
+🔵 **Rule applied, per `Gap 458`/`459`, `P204-1` and now `T205-2`:** every component names **what
+it contains**, **what its grant reaches**, **the path the grant was read from** and 🆕 **whether
+the grant permits COMMERCIAL use** — because on the content shelf `29`% of rows refuse it, and a
+refusal is invisible in a licence cell that only says `CC`.
+
+### 🟢 `P205-A` — Singapore's compulsory teacher-AI module, as a product
+
+🔴 **The window is dated and `~7` weeks out:** MOE's Teacher AI Literacy roadmap makes **module
+`1` compulsory for all primary, secondary and JC teachers by end `2026`**, modules `2`–`3`
+encouraged by end `2027`, subject-specific courses from `2027`
+*([`intel/market.md`](../intel/market.md), APAC)*. 🟢 **Every institution in the country needs
+delivery, tracking and evidence of completion at once.**
+
+| component | contains | grant | path read | commercial |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | LMS substrate, cohort + completion tracking | 🟡 `GPL-3.0` | `COPYING.txt` | 🟢 yes |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | xAPI learning record store — the completion EVIDENCE | 🟢 `Apache-2.0` | `LICENSE` | 🟢 yes |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | SCORM/xAPI runtime in the browser | 🟢 `MIT` | `LICENSE` | 🟢 yes |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | assessment authoring + auto-marking | 🟢 `Apache-2.0` | `LICENSE` | 🟢 yes |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | multi-agent orchestration for draft generation | 🟢 `MIT` **(code)** | 🔴 **`LICENSE-CODE`, not `LICENSE`** | 🟢 yes |
+
+🔴 **The `autogen` line is the one to get right: its root `LICENSE` is `CC-BY-4.0` and governs the
+DOCS.** 🟢 **Depend on `LICENSE-CODE` (`MIT`) and say so in the SBOM** — a reviewer who reads only
+the root file will conclude the dependency is content-licensed.
+
+🔵 **Wiring:** Moodle holds cohorts and issues the completion record → `scorm-again` plays module
+`1` and emits xAPI statements → `ADL_LRS` stores them as the audit trail MOE completion will be
+evidenced against → Numbas carries the end-of-module check → AutoGen drafts subject-specific
+variants for the `2027` tranche, reviewed by a human before publication.
+🔴 **Moodle is `GPL-3.0`: keep the agent layer OUT of Moodle's process** — integrate over xAPI and
+LTI, not as a core patch, or the deliverable ships source. 🔵 **`4`–`6` weeks for the module-`1`
+tranche; the `2027` tranche is a renewal, not a rebuild.**
+
+### 🟢 `P205-B` — the LATAM feedback gap, which is a `31`-point number on one workflow
+
+🔴 **`50`% of LATAM students want AI feedback on assignments; `19`% of faculty give it**
+*(Digital Education Council LATAM 2026, `30 000`+ responses, `29` institutions —* 🔴 *self-selected
+sample, read as an upper bound)*. 🟢 **One workflow, both sides measured, and the gap is the
+brief.**
+
+| component | contains | grant | path read | commercial |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) *or* [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | submission intake *(Chamilo is the LATAM-dense option)* | 🟡 `GPL-3.0` both | `COPYING.txt` · `LICENSE` | 🟢 yes |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | structured auto-marking for the objective half | 🟢 `Apache-2.0` | `LICENSE` | 🟢 yes |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | per-student longitudinal record | 🟢 `Apache-2.0` | `LICENSE` | 🟢 yes |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | draft-feedback agent, reviewer-in-loop | 🟢 `MIT` **(code)** | `LICENSE-CODE` | 🟢 yes |
+
+🔴 **Build it as a DRAFT gate, never an autograder.** `61`% of students fear peer misuse of AI —
+🟢 **a system that drafts feedback for a human to sign is on the right side of that sentiment; one
+that grades is not.** 🔵 **The faculty-facing metric is minutes-per-assignment saved, and it is
+the number that renews the contract.** 🔵 **`6`–`8` weeks.**
+
+### 🟢 `P205-C` — an OER corpus gate that refuses a course by its licence
+
+🔴 **`29`% of the OER tail refuses commercial use or forces derivatives open, and `19`% has no
+grant at all** *(`79` rows,
+[`evidence/pe-oer-p3to6-grants.2026-10-14-p205.tsv`](../evidence/pe-oer-p3to6-grants.2026-10-14-p205.tsv))*.
+🔴 **A studio that harvests OER to build client courseware will ship a `CC-BY-NC` row by accident
+unless something stops it.**
+
+🟢 **The gate, which is `~200` lines and reuses this pass's own instrument:**
+
+1. 🟢 **Resolve each candidate at the `HEAD` ref** — `raw.githubusercontent.com/<repo>/HEAD/<path>`
+   over the `16` path forms. 🔵 No default-branch lookup; `HEAD` resolves `develop` and `release`
+   alike *(controlled on `opencast/opencast`)*.
+2. 🟢 **Classify with
+   [`compose/code/p205-grant-classifier-fix/classify.sh`](code/p205-grant-classifier-fix/classify.sh)** —
+   🔴 **not p203's**, which calls `GPL-3.0` and `MPL-2.0` *"`AGPL-3.0`"*.
+3. 🔴 **REFUSE on `CC-BY-NC*` *(commercial use denied)* and on `UNGRANTED`.**
+   🟡 **WARN on `*-SA` *(derivative forced open)*, on `*-DEED` *(intent only, instrument not
+   shipped)* and on `TWO-SCOPE` *(read both scopes before depending on either)*.**
+4. 🟢 **Emit the per-row TSV as the engagement's provenance artefact** — `repo`, `path`, `family`,
+   `commercial_use`. 🔵 **This is the document that answers a client's legal review**, and the
+   `79`-row file above is a worked example of its output.
+
+🔵 **Cost: `1` `curl` per path form per candidate, and the classifier is offline and unit-tested
+(`15`/`15`).** 🟢 **Run it at ingest, not at delivery.**
+
+---
+
 ## Pass 204 — 2026-10-14 — THREE RECIPES, EACH BUILT ONLY FROM GRANTS READ FROM A BLOB
 
 🔵 **Rule applied to every row below, per `Gap 458`/`459` and extended by `P204-1`:** each
@@ -10038,4 +10120,5 @@ screen as code** — the two education benchmarks that exist are both ungranted.
    **password** (p136). 🟢 **Before any auth or standards claim reaches a client deliverable, clone
    the repository and read the three files that matter** — the config loader, the HTTP client and the
    tool definitions. It took under ten minutes per repository in this environment.
+
 

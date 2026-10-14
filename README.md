@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — THE INSTRUMENT WAS THE FINDING
+
+🔴 **Three of this pass's four results are about how this KB MEASURES, not about education.**
+
+🟢 **`ACTION PE` CLOSED, verdict split.** Pages `3`–`6` of `topic:open-educational-resources`:
+**`79` of `80` rows new, `98.8`%** — limb `1` fires on its letter. 🔴 **Its conclusion is refused:
+a GitHub topic page is star-sorted, so novelty rises monotonically with pagination in ANY channel.
+The `80` rows run `27`★ → `2`★, median `5`★.** 🔵 **Fund OER pagination down to a star floor
+(~`10`★), not without one.** 🔴 **`38` of `79` rows cannot enter a client deliverable: `15`
+ungranted, `6` `CC-BY-NC`, `14` `CC-BY-SA-4.0`, `9` shipping a licence DEED rather than the
+instrument.**
+
+🟢 **`ACTION PB` CLOSED on limb `2`.** The `60` highest-★ rows re-read from their own blobs:
+🟢 **`0` misdescribe a shipped path; do not backfill the licence column.** 🆕 The one two-scope
+row (`microsoft/autogen`) uses a **two-FILE** shape the existing heading detector is blind to.
+🔴 **All `3` "mismatches" p205's first automated audit reported were the AUDIT's errors** — in an
+education KB, `"MIT"` in a prose cell is usually a university.
+
+🔴 **`Gap 466` — this KB's grant classifier was wrong about `GPL-3.0`, `MPL-2.0` and `ECL-2.0`**,
+because those licences quote the AGPL and Apache inside their own text and p203's matcher searched
+the whole body. 🟢 **Published exposure `0` rows; `4` of p205's own rows were wrong before
+re-adjudication.** 🟢 **Fixed, title-line anchored, `15`/`15` offline:**
+[`compose/code/p205-grant-classifier-fix/`](compose/code/p205-grant-classifier-fix/).
+
+🟢 **`ACTION PF` CLOSED `3`/`3`** — per-country beats pan-regional. **China** (≥`8` h/yr, Beijing
+`1 400`+ schools), **Singapore** (🔴 **teacher module `1` COMPULSORY by end `2026`** — a dated
+buying window), **Japan** (MEXT Ver. `2.0`; curriculum revision effective FY`2030`). 🔴 **Brazil
+returned nothing and is declared, not hidden** → `ACTION PJ` probes it in Portuguese.
+
+🔴 **`Gap 241`, `Gap 242` and `ACTION PD` are ONE channel property, not three blocked sites** —
+🟢 **`example.com` returns `000` here.** No general web egress; re-test the whole class with one
+call. 🆕 **But `github.com` pages DO render through `WebFetch`, so stars and licences are
+first-hand verifiable** — `HKUDS/DeepTutor` confirmed at `41.4`k★ / `Apache-2.0` / `v1.6.14`.
+
+🟢 **`HEAD` is a valid raw ref** — `ACTION PC`'s default-branch problem is retired.
+
+---
+
 ## Pass 203 — 2026-10-14
 
 ### 🟢 Four pre-registered falsifiers discharged, and the licence column's restructure is earned
@@ -10084,4 +10122,5 @@ allowlist de egreso: ya son ocho.** Per `P950`, no se reintentaron host por host
 
 ---
 *Red de KBs Globant AI Studios → [globant-kb](../globant-kb/)*
+
 

@@ -1,0 +1,10 @@
+host	channel	curl_http	webfetch	note
+example.com	open-web	000	not-run	DECISIVE CONTROL - a neutral host nobody blocks, also 000
+raw.githubusercontent.com	code-host	200	n/a	licence blobs readable for ANY repo, incl. via the HEAD ref
+api.github.com	code-host	200 / 403	n/a	200 on /rate_limit; 403 on ANY non-configured repo path
+pypi.org	package-registry	200	n/a	present in the proxy noProxy allowlist
+github.com (repo page)	code-host	403	200	star count + licence + release ARE verifiable, via WebFetch only
+github.com/topics	code-host	403	200	paginated discovery works via WebFetch (?page=N)
+www.mext.go.jp	primary-source	000	ENOTFOUND	Japan MEXT generative-AI guideline PDF
+unu.edu	primary-source	000	not-run	Gap 242 instrument
+eur-lex.europa.eu	primary-source	000	ENOTFOUND (p204)	ACTION PD / Gap 241

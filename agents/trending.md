@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 205 — THE AGENT CHANNEL SATURATES A THIRD TIME, AND THE TOP ROW OF THE SHELF IS UNGRANTED
+
+### 🔴 The movement this window is again an absence
+
+🟢 **An open agent sweep was run for this window** — *"open source AI tutor agent education github
+2026 new release MIT Apache"*. 🔴 **It returned `0` repositories this KB does not already hold.**
+The named results were [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *(held)* and
+[`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) *(held;* 🔴 *`GPL-3.0`, so
+outside the permissive filter the query asked for)*.
+
+🔵 **With p203's `topic:ai-tutor` at `0`/`20` and p204's `scorm`/`xapi`/`lti` at `0`/`60`, that is
+a THIRD independent channel returning nothing new.** 🟢 **The agent layer is saturated for this
+KB's purposes and should be polled, not searched.** 🔴 **The only channel still yielding is
+content — and p205 priced what that yield is actually worth** *(see
+[`repos/trending.md`](../repos/trending.md))*.
+
+### 🟢 `DeepTutor` re-verified at a pinned version — and star counts ARE verifiable here
+
+🟢 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) read from its repository page:
+`41.4`k★ · `Apache-2.0` · default branch `main` · 🆕 latest release `v1.6.14`, `2026-10-08`.**
+🟢 **The KB's published `41.4`k and `Apache-2.0` both match exactly.** 🔵 **`v1.6.14` is newer
+than the `v1.0` (April 2026) this KB had been describing** — the project is shipping roughly
+weekly.
+
+🔴 **Secondary sources are useless for this figure and should stop being quoted:** directory sites
+found this window gave DeepTutor *"about `17 000`"*, *"`34 980`"* and *"`v1.5.11`"* — 🔴 **three
+mutually inconsistent values, none of them right.** 🟢 **The repository page is reachable and
+authoritative; use it.**
+
+### 🆕 🔴 `Mr.-Ranedeer-AI-Tutor` — `29.6`k★ and no licence at all
+
+🔴 **The second-highest-★ agent row on this shelf,
+[`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor), carries no
+grant file at `16` path forms.** 🔵 **It is a prompt-engineered tutor, so the payload is CONTENT
+and the ungranted problem bites exactly as `Gap 459` predicts for content rows.** 🔴 **A studio
+cannot ship it, fork it, or quote it in a deliverable** — and its star count guarantees a client
+will raise it by name. 🟢 **Have the answer ready: the technique is reproducible, the artefact is
+not licensed.**
+
+---
+
 ## 2026-10-14 — Pass 204 — THE LMS-MCP TIER HAS NO LICENCE BODY, AND THE TUTOR CHANNEL IS STILL SATURATED
 
 ### 🔴 The movement this window is an ABSENCE, and it sits exactly where a studio would reach
@@ -31931,4 +31972,5 @@ Los star counts de ciclos anteriores estaban inflados por el pipeline, no medido
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+
 

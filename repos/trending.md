@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 205 — `ACTION PE` CLOSED: `98.8`% NOVELTY THAT MEANS THE OPPOSITE OF WHAT THE LIMB SAID
+
+### 🟢 Pages `3`–`6` of `topic:open-educational-resources` read — `79` of `80` rows are new
+
+🟢 **The pagination p204 opened was funded.** `80` rows read across four pages, every row
+classified against this KB's full `2 548`-repo known set, with both controls run *(two invented
+slugs → `NEW`; `HKUDS/DeepTutor` and `adlnet/ADL_LRS` → `KNOWN`)*.
+
+| page | new | known | novelty | ungranted |
+|---|---|---|---|---|
+| `3` | `19` | `1` | `95`% | `5`/`19` **`26`%** |
+| `4` | `20` | `0` | **`100`%** | `4`/`20` `20`% |
+| `5` | `20` | `0` | **`100`%** | `4`/`20` `20`% |
+| `6` | `20` | `0` | **`100`%** | `2`/`20` `10`% |
+| **total** | **`79`** | **`1`** | 🟢 **`98.8`%** | **`15`/`79` `19`%** |
+
+🟢 **So `ACTION PE`'s limb `1` fires on its letter** — novelty stayed far above `40`% across `80`
+more rows. 🔴 **And its stated CONCLUSION does not follow.**
+
+### 🔴 The falsifier the action did not pre-register: novelty measures TAIL DEPTH, not frontier
+
+🔴 **A GitHub topic page is sorted by stars.** Across these four pages the star count falls
+**`27` → `23` → `11` → `8` → `5` → `3` → `2`**. 🟢 **Novelty is therefore guaranteed to rise as
+pagination descends, in ANY star-sorted channel, without the channel being a frontier.** 🔴 **A
+rule of the form "novelty stayed above `40`% → fund the channel" will fire forever on page `N` for
+large `N`.** 🔵 **This is a defect in the MEASURE, not in p204's work** — the same shape would have
+appeared on `topic:scorm` had anyone paginated it instead of reading only its first `20`.
+
+🟢 **So read both halves together: `98.8`% novel AND a median of `5`★.** 🔴 **`60` of the `79` new
+rows sit at or below `10`★, and `33` at or below `3`★; the whole set runs `27`★ down to `2`★** — university lecture notes, one-term
+course repos and personal glossaries, heavily German- and Portuguese-language. 🔵 **The correct
+budget line is NOT "fund OER pagination"; it is "fund OER pagination down to a star floor", and
+the floor this pass's data supports is `10`★ — above which the channel is already exhausted by
+page `3`.**
+
+🟢 **The ungranted rate is the half that genuinely informs:** `19`% across these `79` rows against
+`22`% shelf-wide and `15`% on page `2`. 🔵 **Three pages is now a trend and it is a FLAT one — the
+content tail is not meaningfully worse-granted than the code shelf.** `Gap 465` keeps its shape.
+
+[`evidence/pe-oer-p3to6-grants.2026-10-14-p205.tsv`](../evidence/pe-oer-p3to6-grants.2026-10-14-p205.tsv).
+
+### 🔴 `29`% of the OER tail refuses commercial use or forces derivatives open
+
+🟢 **Corrected census of the `79` new rows, read from their own blobs with p205's fixed
+classifier:**
+
+| family | rows | what it means for an engagement |
+|---|---|---|
+| `MIT` | `19` | 🟢 usable |
+| 🔴 **`UNGRANTED`** | `15` | 🔴 **no grant at `16` path forms — unusable** |
+| 🔴 **`CC-BY-SA-4.0`** | `14` | 🔴 derivative courseware forced open |
+| 🔴 **`CC-BY-NC`** | `6` | 🔴 **commercial use REFUSED** |
+| 🟡 `CC-BY-4.0-DEED` | `6` | 🟡 intent clear, instrument not shipped |
+| `GPL-3.0` | `4` | 🟡 copyleft |
+| `CC-BY-4.0` | `4` | 🟢 attribution only |
+| 🔴 `CC-BY-SA-4.0-DEED` | `3` | 🔴 SA, and no instrument |
+| `CC0-1.0` | `3` | 🟢 public domain |
+| `CC-unversioned` · `UNRECOGNISED` · `BSD-2-Clause` · `AGPL-3.0` | `1` each | — |
+
+🔴 **`23` of `79` — `29`% — carry `NonCommercial` or `ShareAlike` terms.** 🟢 **Combined with the
+`15` ungranted, `38` of `79` rows — nearly half the tail — cannot be dropped into a client
+deliverable as-is.** 🔵 **This is the OER layer's real shape, and it is invisible in a star
+ranking.**
+
+### 🆕 🟡 A new class: the repo ships the licence DEED, not the licence
+
+🟢 **`9` of `79` rows ship a `LICENSE.md` whose own first line reads *"This is a human-readable
+summary of (and not a substitute for) the [license]"*.** 🔵 **It is a real grant signal — it names
+`by-sa` or `by` and links the legal code — but it is NOT the instrument**, and p203's classifier
+returned `UNRECOGNISED` for all of them. 🟢 **p205 classifies them `…-DEED` so they can never be
+quoted as a read grant.** 🔴 **For an engagement: treat a deed row as "licence intended, not
+granted in-repo" and ask the author to commit the legal code.**
+
+---
+
 ## 2026-10-14 — Pass 204 — THE `358` UNREAD ROWS ARE REACHABLE, AND THE TWO-SCOPE GRANT IS A HOUSE STYLE
 
 ### 🟢 `ACTION PA` — the channel ceiling p203 declared is NOT a ceiling
@@ -24610,4 +24685,5 @@ Adyacentes que aparecieron en trending de educación AI sin que pudiéramos veri
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+
 

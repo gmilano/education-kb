@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — `ACTION PF` CLOSED `3`/`3`: APAC'S GAP WAS THE QUERY SHAPE, NOT THE REGION
+
+### 🟢 `ACTION PF` — per-country beats pan-regional, confirmed for a second time
+
+🔴 **p204's pan-APAC sweep returned nothing on China, Singapore or Japan.** 🟢 **p205 asked the
+three per-country queries the action registered. All `3` returned dated national policy —
+limb `1` fires above its own `2`-of-`3` threshold, and `P521` is confirmed a second time.**
+🔵 **The regional query shape was the defect. APAC's demand map is completable.**
+
+## Opportunities by region
+
+### North America
+
+🟡 **The market figures diverge so widely they cannot be quoted as one number**, and this pass
+adds a fourth reading rather than resolving them: MarketsandMarkets puts North America at
+**`$951`M (2024) → `$2.3`B by 2029, `15.9`% CAGR**; Precedence gives the region **`38`% of global
+share (2025)**; Technavio projects **`45`% CAGR 2025–2030** with higher education at **`$285.7`M
+(2024)**. 🔴 **A `15.9`% and a `45`% CAGR cannot both describe the same market** — they scope
+"AI in education" differently and none of the summaries states its scope. 🔵 **Use the regional
+SHARE (`37`–`38`%, on which two independent houses agree) and refuse the growth rate.**
+
+🟢 **The one procurement-grade datum found this window: Khanmigo district pricing at `$35` per
+student per year.** 🔵 **That is a per-seat anchor a studio can actually build a business case
+against** — a `10 000`-student district is a `$350`k/yr incumbent line, and an open-stack
+alternative has to be priced against it, not against a market-size chart. 🔴 Secondary source;
+verify before it reaches a proposal.
+
+### EMEA
+
+🔵 **The regulatory half was deliberately NOT re-searched this pass.** `ACTION NU-EU` retired it
+after p204's fourth corroboration returned `0` new facts; re-running it is the known-cost mistake.
+🟢 **Standing facts remain: Regulation (EU) `2026/1744`, OJ `2026-07-24`, in force `2026-07-27`;
+Annex III education → `2027-12-02`; Annex I → `2028-08-02`; Art. `50` live `2026-08-02`;
+Art. `50(2)` marking grace → `2026-12-02`.**
+
+🟢 **The demand half was searched, and it yields a mechanism rather than a number:** university
+LLM procurement in the EU is consolidating on **a unified contract layer** — one API and one
+governance surface so an institution does not re-procure each time a model changes — routed
+through **NREN and framework agreements**, with **HECVAT**, accessibility review, **DPIA** and
+**FRIA** as named gates. 🔵 **`FRIA` (fundamental-rights impact assessment) is the one a studio
+will be asked for and the one least likely to be in its template.**
+
+🔴 **Declared gap, measured not assumed:** no EMEA-specific vendor market share, no per-country
+university adoption rate, and no 2026 procurement volume were found. 🔵 **Next probe should be EU
+tender databases (TED) or EDUCAUSE Europe, not another market-research summary** — the summaries
+all resolve to the same global figure with no regional split.
+
+### APAC
+
+🟢 **China** — MoE guidelines (May 2025) put AI instruction in primary and secondary schooling
+with **at least `8` hours of AI instruction per year**, standalone or embedded. Beijing: **`1 400`+
+schools** in scope, a graded progression *(grade `3` basics → grade `4` data and coding → grade `5`
+intelligent agents and algorithms → junior high machine-learning logic and misinformation
+detection)*. 🔴 **Two hard guardrails: primary pupils may not use generative AI independently, and
+teachers may not substitute AI for core instruction.** Sits inside the **2024–2035 education
+Master Plan**. 🟡 Sources disagree on national reach *(nationwide vs Beijing-plus-pilots)* and on
+school counts *(`1 400`+ vs `184` pilots)* — 🔵 **treat the `8`-hour floor and the Beijing
+progression as solid, the national framing as unconfirmed.**
+
+🟢 **Singapore — the most procurement-relevant finding in the region.** MOE's **Teacher AI
+Literacy Professional Learning Roadmap** makes **module `1` COMPULSORY for all primary, secondary
+and JC teachers, due end `2026`**; modules `2`–`3` encouraged by end `2027`; subject-specific
+advanced courses from `2027`. 🔴 **That is a dated, mandatory, nationwide teacher-training
+obligation with a deadline `~7` weeks out** — 🟢 **a named buying window for exactly the
+content-plus-assessment work a studio sells.** On the student side MOE is deliberately slow:
+P1–P3 stays hands-on and print-based, no chatbots; AI enters the Student Learning Space under
+teacher supervision. 🔴 **One claim found and NOT confirmed:** a blog reports a May 2026
+announcement making baseline AI modules compulsory across all tertiary courses by 2027; 🔵 no MOE
+source corroborates it — **do not put it in a deck.**
+
+🟢 **Japan** — MEXT's *"Guideline for the Use of Generative AI in Elementary and Secondary
+Education"*, **Ver. `2.0`, dated December 2024**, re-posted March 2026. Four pillars: safe use,
+information security, protection of personal data/privacy/copyright, fairness. 🔴 **Inappropriate
+use is named explicitly** (passing AI work off as one's own; use during exams), and 🔴 **elementary
+use is cautioned against on the basis of the `13`+ age terms of the tools themselves.** 🟢 **The
+forward signal: a government panel convened August 2026 on the next five-year education plan
+(from FY`2028`), and a draft revision of the national curriculum guidelines (unveiled `2026-08-31`)
+adds AI-mechanism education, media literacy and new information study — 🔴 taking effect FY`2030`.**
+🔵 **So Japan is a slow, documented, standards-led market: the money is in compliance-shaped
+teacher tooling, not in student-facing chat.**
+
+🔴 **Channel limit, stated rather than hidden:** all three findings rest on secondary reporting.
+**`www.mext.go.jp` and `www.moe.gov.sg` are unreachable from this session on BOTH channels**
+(`000` on inline `curl`, `ENOTFOUND` on `WebFetch`), 🔵 **and that is not a property of those
+sites — see [`intel/trends.md`](trends.md), `T205-3`.**
+
+### LATAM
+
+🟢 **The Digital Education Council LATAM survey (2026) is the densest regional instrument found:
+`30 000`+ responses across `29` institutions.** `92`% of students and `79`% of faculty actively
+engaging with AI; `94`% of faculty expect to use it in future teaching. 🔴 **The usable finding is
+the asymmetry inside it, not the headline: only `19`% of faculty use AI to give feedback on
+assignments, while `50`% of students want them to** — 🟢 **a `31`-point demand gap on a single,
+well-defined workflow, which is the most precisely specified engagement opening this KB holds for
+the region.** 🔴 **`61`% of students fear misuse by peers** → integrity tooling sells alongside it.
+
+🔴 **Sampling caveat, declared:** the survey was run in collaboration with Tecnológico de
+Monterrey, one of the institutions surveyed. 🔵 **Self-selected, engaged institutions — read the
+`92`% as an upper bound on the region.**
+
+🟢 **Named movement:** Tec de Monterrey is integrating AI into **`44` programmes for 2026**;
+**Laureate Education signed a three-year Google Cloud agreement (July 2026)** covering its Mexico
+and Peru institutions. 🔵 **Both are incumbents choosing hyperscaler stacks — the open-stack pitch
+in LATAM is now a displacement pitch, not a greenfield one.** 🟡 Chile ranked `1`st and Mexico
+`6`th regionally on AI implementation (2024 index); **Latam-GPT** reported `60`% complete.
+
+🔴 **Declared gap: Brazil.** 🟢 **Searched explicitly, in a query naming it.** 🔴 **`0` results on
+Brazilian national AI-education policy or university programmes** — the regional sources returned
+institutional initiatives and vendor partnerships only. 🔵 **For the region's largest education
+system this is a real hole, not a quiet one; next probe should be in Portuguese against MEC.**
+
+---
+
 ## Pass 204 — 2026-10-14 — EMEA REGULATORY DISCOVERY IS SATURATED, AND THE FOURTH CORROBORATION BOUGHT NOTHING
 
 ### 🔴 The pass's own negative result, stated first because it cost the most budget
@@ -13891,4 +14004,5 @@ never found it, and why a studio can buy rather than build it.
 - 🟡 **One quantity is unresolved rather than averaged**: China's minimum annual AI instruction —
   **6 or 8 hours** — and the US session's bill count — **134/31 or 68/27**. Both are countable and
   both are published differently by credible trackers.
+
 

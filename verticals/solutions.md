@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — `moodle` IS `GPL-3.0` AND THIS PASS NEARLY PUBLISHED OTHERWISE
+
+### 🔴 The vertical shelf's biggest row was a false negative, and the cause was a path list
+
+🔴 **p205's first grant sweep reported [`moodle/moodle`](https://github.com/moodle/moodle) — the
+single most-deployed platform in this industry — as having NO licence file.** 🟢 **It has one:
+`COPYING.txt`, `GNU GENERAL PUBLIC LICENSE Version 3`, read from its own blob this pass.** 🔴 **The
+`12` path forms inherited from p203 do not include `COPYING.txt`.**
+
+🟢 **Same cause, second vertical row:** [`frappe/lms`](https://github.com/frappe/lms) ships
+`license.txt` (**`AGPL-3.0`**) and was also reported ungranted. 🔵 **Lowercase `license.txt` and
+`COPYING.txt` are both common in PHP and Python platform projects — exactly the stack this shelf
+is made of.**
+
+🟢 **The list is `16` forms now**, and 🟢 **p204's `58` ungranted rows were re-probed against the
+`6` additions: `0` recovered**, so the `22`% figure is unaffected. 🔵 **But the lesson is
+load-bearing: an ungranted RATE is a statement about a path list as much as about the repositories**,
+and this shelf is where a false negative costs most — 🔴 **"Moodle is unlicensed" would have been
+the single most damaging sentence this KB could emit.**
+
+### 🟢 Vertical platform grants re-read at the `HEAD` ref, this pass
+
+🔵 **Every row below was read from its own blob this pass** — no row is carried over.
+
+| platform | repo | grant | path | note |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`GPL-3.0`** | `COPYING.txt` | 🔴 copyleft — plugins distributed with it inherit |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | `LICENSE` | 🔴 Apache-class, **narrower patent grant** *(p204 `T204-4`)* |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 **`LGPL-3.0`** | `LICENSE` | 🟢 linking permitted; modifications to BBB itself are not |
+| **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`AGPL-3.0`** | `LICENSE` | 🔴 network use triggers source obligations |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** | `license.txt` | 🆕 path corrected this pass |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`AGPL-3.0`** | `LICENSE` | 🔴 the MOOC substrate is itself AGPL |
+
+🔵 **Nothing on this shelf is permissive.** 🟢 **That is not a defect in the shelf — it is the
+shape of the LMS market**, and it means the permissive layer a studio builds on is always the
+layer ABOVE the platform *(connectors, agents, analytics)*, never the platform itself. 🔴 **An
+engagement that modifies Moodle or Canvas core ships source. Price that, or stay out of core.**
+
+### 🔵 `ECL-2.0` is the one to read twice
+
+🟢 **Sakai's grant re-read from its blob this pass: `Educational Community License, Version 2.0`.**
+🔴 **p203's classifier returns `UNRECOGNISED` for it** — it has no ECL branch at all, although
+p204 measured `ECL-2.0` on two rows. 🟢 **p205's classifier recognises it**, and the standing
+reading is unchanged: **Apache-class for copying and redistribution, with a patent grant narrowed
+to education use.** 🔵 **For an education deployment the narrowing is aligned with the use; for a
+platform a studio intends to resell outside education, it is a counsel question.**
+
+---
+
 ## Pass 204 — 2026-10-14 — A PLATFORM ROW THAT READS PERMISSIVE AND SHIPS COPYLEFT
 
 ### 🔴 `LearnPress` is the vertical row this pass corrects, and it was never blob-read
@@ -4912,4 +4961,5 @@ and will not improve by re-running the same query.
   levels down — `repos/foundations.md`). **None of the platforms on this page has had its vendored
   subtrees read.** For a platform of Moodle's or OpenOlat's size that is a material unknown, not a
   footnote.
+
 

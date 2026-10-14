@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — THE "BLOCKED SITE" GAPS ARE ONE CHANNEL PROPERTY, AND A NOVELTY RATE CAN LIE
+
+### 🔴 `T205-1` — novelty is not value in a star-sorted channel
+
+🟢 **Measured: `98.8`% novelty across `80` OER rows, with a median of `5`★ and a range of `27`★
+down to `2`★.** 🔴 **A GitHub topic page is star-sorted, so novelty RISES monotonically as
+pagination descends — in any channel, whether or not it is a frontier.** 🔵 **A pre-registered
+test of the form *"novelty stayed above `X`% → fund the channel"* is therefore unfalsifiable on a
+sorted channel: it fires at page `N` for every large `N`.** 🟢 **The repair is cheap: pair every
+novelty threshold with a VALUE floor** *(here, stars)*, and state the floor in the action. 🔴 **This
+is a defect in how this KB writes falsifiers, not in any one pass's work**, and it applies to
+`ACTION PE`, `OZ` and `PA` alike.
+
+### 🔴 `T205-2` — the OER layer is a content supply, and nearly half of it is unusable as-is
+
+🟢 **`79` new OER rows, grants read from their own blobs: `15` ungranted, `14` `CC-BY-SA-4.0`,
+`6` `CC-BY-NC`, `9` shipping only a licence DEED.** 🔴 **`23` of `79` (`29`%) refuse commercial use
+or force derivatives open; with the ungranted, `38` of `79` cannot be dropped into a client
+deliverable.** 🔵 **The code shelf's failure mode is "no grant"; the content shelf's is "a grant
+that says no".** 🟢 **`CC-BY-NC` is the one to brief account teams on** — it is not a copyleft
+inconvenience, it is a flat refusal of the commercial use a studio engagement IS.
+
+### 🆕 🔴 `T205-3` — three "blocked site" gaps are one fact, and it has a one-call test
+
+🔴 **p204 recorded `eur-lex.europa.eu`, `ec.europa.eu`, `digital-strategy.ec.europa.eu`,
+`artificialintelligenceact.eu` and `unu.edu` as individually `ENOTFOUND`/`000`, and passes keep
+re-probing them one at a time.** 🟢 **p205 ran the control that settles it:**
+
+| host | class | inline `curl` | `WebFetch` |
+|---|---|---|---|
+| 🔵 **`example.com`** | **neutral control** | 🔴 **`000`** | — |
+| `www.mext.go.jp` | primary source | 🔴 `000` | 🔴 `ENOTFOUND` |
+| `unu.edu` | primary source | 🔴 `000` | — |
+| `raw.githubusercontent.com` | code host | 🟢 `200` | — |
+| `api.github.com` | code host | 🟢 `200` *(repo-scoped only)* | — |
+| `pypi.org` | package registry | 🟢 `200` | — |
+| `github.com` *(repo + topic pages)* | code host | 🔴 `403` | 🟢 **`200`** |
+
+🔴 **`example.com` returns `000`. Nobody blocks `example.com`.** 🟢 **So this is not site-specific
+blocking: this environment has NO general web egress on `curl` or `WebFetch` — only GitHub hosts
+and the package registries in the proxy's `noProxy` allowlist, plus `WebSearch`, which is a search
+service and returns secondary summaries by construction.**
+
+🟢 **Consequences, which retire recurring cost rather than adding any:**
+🔵 **(a)** `ACTION PD`, `Gap 241` and `Gap 242` are not three blocked sites — they are **one
+structural property**, and no future session with this network profile will discharge any of them.
+🔵 **(b)** The remedy is not *"a later pass"* but **a session with general web egress**; priced
+honestly, that is a change of environment, not of effort.
+🔵 **(c)** Any pass can re-test the whole class in ONE call — `curl example.com`. 🔴 **Stop
+re-probing the primary sources individually.**
+[`evidence/channel-egress.2026-10-14-p205.tsv`](../evidence/channel-egress.2026-10-14-p205.tsv).
+
+🟢 **The same census found a capability this KB had not been using: `github.com` repository pages
+render through `WebFetch`**, so **star counts, licences, default branches and release tags ARE
+first-hand verifiable here** — only `curl` and the search API are closed. 🔵 **`HKUDS/DeepTutor`
+was re-verified this way** *(`41.4`k★, `Apache-2.0`, `main`, `v1.6.14` of `2026-10-08`)*, against
+three mutually inconsistent secondary figures.
+
+### 🔴 `T205-4` — the instrument this KB measures grants with was wrong about three licence families
+
+🟢 **`GPL-3.0` and `MPL-2.0` both NAME the AGPL inside their own text**, so a body-wide classifier
+that tests the AGPL first labels them `AGPL-3.0`. 🔴 **This KB's classifier did exactly that from
+p203.** 🟢 **Published exposure was `0` rows — but only by luck of sampling, and `4` of p205's own
+rows were wrong before re-adjudication.** 🔵 **The general lesson is the one worth keeping: a
+licence body is adversarial input to a substring matcher, because licences quote each other.**
+🟢 **Anchor on the title LINE.** `Gap 466`.
+
+---
+
 ## Pass 204 — 2026-10-14 — EVERY SOFTWARE CHANNEL IS SATURATED; THE UNSATURATED ONE IS CONTENT
 
 ### 🔴 `T204-1` — saturation is not a vocabulary property, it is a CODE-vs-CONTENT property
@@ -7728,4 +7797,5 @@ enough and this trend is an artefact of four unlucky examples.
   practice.** 847★, 122 forks, CC-BY-SA-4.0 by deed. Watch whether any fork publishes adaptations
   under the same licence — the first test of whether a content licence on an agent-skills pack is
   honoured or ignored.
+
 

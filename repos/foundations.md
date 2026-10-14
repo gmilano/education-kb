@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 205 — 2026-10-14 — THE INSTRUMENT WAS WRONG ABOUT THREE LICENCE FAMILIES, AND `HEAD` RETIRES THE DEFAULT-BRANCH PROBLEM
+
+### 🔴 `p203`'s classifier calls `GPL-3.0` and `MPL-2.0` *"`AGPL-3.0`"* — measured, fixed, shipped
+
+🟢 **The instrument this KB has classified grants with since p203
+([`compose/code/p203-grant-blob-reader/classify.sh`](../compose/code/p203-grant-blob-reader/classify.sh))
+tests the WHOLE body, in an order that puts the AGPL branch first.** 🔴 **Three licences name OTHER
+licences inside their own text:**
+
+| licence | where it names another licence | p203 verdict | truth |
+|---|---|---|---|
+| `GPL-3.0` | section `13`, *"…the GNU Affero General Public License…"* | 🔴 `AGPL-3.0` | 🟢 `GPL-3.0` |
+| `MPL-2.0` | section `1.12`, *"`Secondary License` means … the GNU Affero General Public License, Version 3.0"* | 🔴 `AGPL-3.0` | 🟢 `MPL-2.0` |
+| `ECL-2.0` | paragraph `1`, *"the Apache 2.0 license, modified…"* | 🔴 `UNRECOGNISED` | 🟢 `ECL-2.0` |
+
+🔴 **Reproduced on real bodies, not argued:** [`OptiKey/OptiKey`](https://github.com/OptiKey/OptiKey)
+and [`moodle/moodle`](https://github.com/moodle/moodle) are both `GPL-3.0` and both classify
+`AGPL-3.0`; [`coqui-ai/TTS`](https://github.com/coqui-ai/TTS) is `MPL-2.0` and classifies
+`AGPL-3.0`. 🟢 **A true-AGPL control ([`frappe/lms`](https://github.com/frappe/lms)) classifies
+`AGPL-3.0` correctly, so the defect is a false POSITIVE for the AGPL, not noise.**
+[`evidence/classifier-regression.2026-10-14-p205.tsv`](../evidence/classifier-regression.2026-10-14-p205.tsv).
+
+🟢 **Exposure of the PUBLISHED KB: `0` rows.** Every AGPL row in the classifier era is
+[`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi), and p204 recorded its grant as
+**manifest-only** (`package.json`) — 🟢 **re-confirmed this pass: Lumi has no licence body at `16`
+path forms, so its label never passed through the body classifier.** 🔵 **The bug was live but had
+not yet reached a published cell.** 🔴 **It had reached THIS pass's own output** — `4` of the `5`
+rows p205's OER sweep first called `AGPL-3.0` are `GPL-3.0`, caught only because the sweep was
+re-adjudicated against the bodies.
+
+🟢 **Fixed and shipped with an offline regression suite —
+[`compose/code/p205-grant-classifier-fix/`](../compose/code/p205-grant-classifier-fix/), `15`/`15`
+on `13` real bodies**, the three defect cases and both controls included. 🔵 **The fix is
+TITLE-LINE anchoring: a licence names itself on a line of its own, so classify on that line and
+only fall back to a body-wide search when it decides nothing.**
+
+🔴 **A naive `300`-character title WINDOW is not enough and the suite pins why:**
+[`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) prefixes its Apache text with ~`1.5` kB of
+copyright-header prose, so a window-based probe returns `UNRECOGNISED` on a row this KB correctly
+publishes as `Apache-2.0`. 🟢 **It is a fixture now.**
+
+### 🟢 `HEAD` is a valid `raw.githubusercontent.com` ref — `ACTION PC`'s whole problem is avoidable
+
+🔴 **p203 probed `3` rows on the wrong ref. p204 spent a pass resolving `58` default branches
+(`35` `main`, `18` `master`, `2` `develop`, `1` `release`) to correct it.** 🟢 **None of that is
+necessary: `https://raw.githubusercontent.com/<owner>/<repo>/HEAD/<path>` resolves the default
+branch server-side, whatever it is called.**
+
+🟢 **Controlled before it was used**, on the row p204 found hardest:
+[`opencast/opencast`](https://github.com/opencast/opencast), whose default branch is 🔴 `develop` —
+the `HEAD` ref returns its `ECL-2.0` body. 🟢 Two-scope positive
+([`LibraryCarpentry/lc-r`](https://github.com/LibraryCarpentry/lc-r) → `2` scope headings) and a
+negative (invented slug → `404`) both fire. 🔵 **Every blob read this pass used `HEAD`, and the
+`ls-remote`-per-row step is retired.**
+
+### 🔴 A probe is only as good as its path list — `moodle` is not ungranted
+
+🔴 **p205's first sweep reported `moodle/moodle` and `frappe/lms` as having NO grant.** 🟢 **Both
+do:** `moodle` ships `COPYING.txt` (`GPL-3.0`) and `frappe/lms` ships `license.txt` (`AGPL-3.0`) —
+🔴 **neither path form was in the `12`-form list inherited from p203.** 🟢 **The list is `16` forms
+now** (`COPYING.txt`, `copying.txt`, `license.txt`, `LICENCE.txt` added). 🔵 **Recorded because the
+`22`% ungranted figure this KB now quotes as a MEASUREMENT rests on that list**, and a path list is
+a silent upper bound on it. 🟢 **Re-run against p204's `58` ungranted rows with `6` additional path forms
+(`COPYING.txt`, `copying.txt`, `Copying.txt`, `license.txt`, `License.txt`, `LICENCE.txt`):
+`0` recovered**, so the `22`% measurement stands and the two false negatives above were
+confined to rows the `58` never contained.
+
+---
+
 ## Pass 204 — 2026-10-14 — `22`% WAS NOT A PROBE ARTEFACT, AND A GRANT HAS A CHANNEL BEFORE IT HAS A PATH
 
 ### 🔴 `ACTION PC` CLOSED — limb `1` FALSIFIED, limb `2` CONFIRMED, and a third class exists
@@ -6780,4 +6849,5 @@ Kiwix and a local model, and it is permissive enough to fork.
 - 🟡 **Three `UNRESOLVED` lineage clusters remain** (`education-ai-suite`, `OpenPronounce`,
   `agents-radar`). Each needs one clone per side; none is an education-supply row, which is why they
   were left — recorded so the 25-cluster figure is not read as 25 resolved.
+
 
