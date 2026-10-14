@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 🟢 **The trend this pass measures is about the SHELF, not the market: after `191` passes,
+a recovered discovery channel returns `84`% already-known.** `31` candidate repositories
+surfaced, `7` with zero prior mention here, `5` of those actually education. 🔵 **Open-source
+education AI has stopped producing new top-level projects faster than this KB can read
+them** — the frontier has moved inside the projects that already exist.
+
+### 🟢 T1 — The study layer is being built as agent SKILLS, not as platforms
+
+🔴 **The second-largest `edtech`-topicked repository on GitHub is a PDF→skill compiler.**
+[`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) — `34 799`★,
+created `2026-05-01`, `5` months old. 🔵 Next to it:
+[`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) *(`1 121`★, `MIT`, **`15`
+paths total**)* turns generated code into a deep dive;
+[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) ships Bloom's 2-sigma research as a skill;
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+*(`854`★)* is `165` skills; [`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills)
+*(`48`★, `CC0`)* indexes them.
+
+🟢 **Signal: `15` paths at `1 121`★.** The unit of education software is shrinking from a
+deployable platform to a few files of pedagogy that run inside someone else's harness.
+🔴 **Commercial consequence: the thing a client adopts no longer has a deployment, so it has
+no procurement, no security review, and no owner.** That is an opening and a liability in the
+same sentence.
+
+### 🔴 T2 — The agent layer moved into the platform, and p192 adds the liveness half
+
+🔵 p191 measured the relocation: Chamilo ships `68` native MCP tool definitions, `47` writes,
+`0` audit rows. 🆕 **This pass adds what the recovered channel can see that `git` cannot.**
+🔴 **`archived` is invisible to `ls-remote`** — an archived repository answers identically to
+a live one — and the first archived row on this shelf is a `582`★ LATAM platform
+*(`menthorlabs/menthor`)*. 🟡 **`updated_at` keeps moving on it**, so the one field that looks
+like liveness is the one that isn't.
+
+### 🟢 T3 — Domain tutoring over MCP, outside the gradebook
+
+🟢 [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) —
+`Apache-2.0` *(`10 708` B)*, `121`★, `291` paths — is **computational fluid dynamics tutoring
+with Socratic questioning**, not an LMS wrapper. 🔵 Paired with
+[`taybenlor/runno`](https://github.com/taybenlor/runno) *(`773`★, `MIT`, sandboxed execution
+in-browser **and over MCP**)*, the two supply what every "AI tutor" demo quietly lacks:
+**a tutor that can run the learner's work.** 🔴 Both are small and single-maintainer; the
+pattern is the finding, not the repositories.
+
+### 🔴 T4 — Governance is the universal buy, and it is now dated in three regions
+
+🔵 Not a forecast — three dates and a number:
+🔴 **EMEA `2026-12-02`** *(Art. `50(2)` marking, seven weeks out)*;
+🔴 **North America `2026-07-01`** *(Ohio's district AI-policy mandate, already passed)*;
+🔴 **APAC `2026-01`** *(South Korea's AI Basic Act in force, education "high-impact")*;
+🟢 **LATAM `87`% using / `26`% governed** *(UNESCO IESALC, `200` institutions, `19` countries)*.
+🟢 **Every region now has either a deadline or a measured gap. None has a capability shortage.**
+
+### 🔴 T5 — The NonCommercial curriculum trap is not regional
+
+🔵 This KB warned about `CC-BY-NC-SA` curriculum as a LATAM risk. 🆕 **Measured this pass:
+[`enkidevs/curriculum`](https://github.com/enkidevs/curriculum), `833`★, `5 345` paths,
+`LICENSE.md` = `189` B of `CC-BY-NC-SA-4.0`, in English.** 🔴 **The trap tracks the asset
+class, not the language.** Any curriculum repository is `CC-*` until its bytes say otherwise,
+and popularity plus recent commits is not evidence of a usable licence — 🟢 which is the
+whole argument for reading `LICENSE` from the tree, as this KB does on `1 273` rows.
+
+### 🟡 T6 — Market sizing remains unusable, and the spread got worse
+
+🔴 Three firms, same year: `$10.6B` *(2026)* → `$42.5B` *(2030)*; `$12.3B` by `2026`;
+`~$6B` *(2024)* → `$32B` *(2030)*. 🔴 **A `2`× spread on the CURRENT year.** 🟢 Direction is
+consistent and that is all the number is good for; every one of this pass's sources on sizing
+was a commercial research firm or a vendor blog, and none published a method.
+
+### 🔵 T7 — Method, carried forward: a channel that answers `0` is worse than one that refuses
+
+🆕 **The recovered search channel returns `total_count: 0` with a SUCCESS status for an
+over-conjoined free-text query** — measured twice this pass, once in English, once in Spanish.
+🔴 **A refusal gets recorded as a gap; a `0` gets published as a fact.** The Spanish query's
+`0` would have become *"no LATAM-language education repositories"* in any pipeline that
+trusted it. 🟢 **Rule for p193: a `0` from a free-text query is NOT MEASURED until the same
+question is asked with a `topic:` or `in:name` qualifier.**
 ## Pass 191 — 2026-10-14
 
 🆕 🔴 **The trend this pass measures is a RELOCATION: the agent layer has moved from a plugin

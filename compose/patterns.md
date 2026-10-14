@@ -3,6 +3,109 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 **Three new patterns, all built from what the recovered channel makes possible, plus one
+amendment to `Pattern 2`.**
+
+### 🆕 🟢 Pattern 24 — The pre-engagement shelf audit *(1 day, run before the estimate)*
+
+🔴 **The problem it prevents, measured on this KB's own `472`-row shelf:** `5` of `12`
+vertical platforms do not default to `main`/`master`; `1` canonical slug is a rename that
+clones fine forever; `4` repositories are published under two spellings; `2` published rows
+are empty repositories; and a `833`★ curriculum repo is `NonCommercial`. 🔵 **Every one of
+those is discovered on day `1` of delivery or day `1` of the audit. The price difference is
+the pattern.**
+
+**Step 1 — existence, with the exit code as the verdict.** 🔴 **Not `wc -l`:**
+
+```bash
+# three states, not two: LIVE / EMPTY / ABSENT
+probe() {
+  out=$(git ls-remote "https://github.com/$1" 2>/dev/null); rc=$?
+  if   [ "$rc" -ne 0 ];                        then echo "ABSENT $1"   # exit 128
+  elif [ -z "$out" ];                          then echo "EMPTY  $1"   # resolves, 0 refs
+  else echo "LIVE   $1 $(echo "$out" | head -1 | cut -c1-12)"; fi
+}
+```
+
+🔵 **`git ls-remote … | wc -l` prints `0` for ABSENT and `0` for EMPTY** — the `fatal:` goes to
+stderr. This KB read `0 refs` as *"does not exist"* in `706` places because its negative
+controls only ever tested absent repositories.
+
+**Step 2 — rename and duplicate detection, free, over step 1's output.** Group by HEAD sha;
+any sha claimed by two slugs is a rename *(GitHub redirects the old name silently)* or an
+owner-case variant *(two entities for one repository, downstream)*.
+
+**Step 3 — `archived` and `default_branch`, which git cannot see.** One search call per
+batch of repos; assert `len(items) == len(repo: qualifiers)` and re-probe the difference
+**singly**, because a batch drops unresolvable slugs without erroring and the singleton
+reports `Validation Failed`.
+
+**Step 4 — licence from bytes, never from a badge or an API field:**
+
+```bash
+git clone --filter=blob:none --no-checkout --depth 1 -q "https://github.com/$SLUG" t
+git -C t ls-tree -r --name-only HEAD | grep -iE '^(LICEN[CS]E|COPYING)'
+git -C t cat-file -s "HEAD:LICENSE"   # size, so a 189 B one-liner is visible as such
+git -C t show   "HEAD:LICENSE"
+```
+
+🟢 **Deliverable: a four-column table — `exists` / `live` / `licence id + bytes` /
+`default_branch` — for every repository in the proposed architecture.** 🔵 `enkidevs/curriculum`
+fails column `3` at `189` bytes; `menthorlabs/menthor` fails column `2`; both Ed-Fi rows fail
+column `1`.
+
+### 🆕 🟢 Pattern 25 — A tutor that can RUN the learner's work
+
+🔴 **What every AI-tutor demo lacks:** the tutor discusses code it cannot execute, so it
+cannot see a failure it did not predict. 🟢 **Two permissive repositories close it, both
+MCP-reachable:**
+
+| component | repo | licence *(bytes)* | role |
+|---|---|---|---|
+| sandbox | [`taybenlor/runno`](https://github.com/taybenlor/runno) | `MIT` *(`1 106` B)* | WASI/WASM execution **in the browser or over MCP** — no server-side code execution to secure |
+| domain tutor | [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `Apache-2.0` *(`10 708` B)* | the worked reference: a real solver behind Socratic questioning |
+| learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `MIT` | knowledge tracing over the attempt stream |
+| record | [`openfun/ralph`](https://github.com/openfun/ralph) | — | xAPI LRS for the attempt + verdict events |
+
+**Wiring:** learner submits → `runno` executes in the sandbox and returns **stdout, stderr and
+exit code** → the tutor agent receives the *verdict*, not the prediction → it questions
+against the actual failure → each attempt is emitted as an xAPI statement to `ralph` → `pykt`
+consumes the stream for mastery estimates.
+
+🔴 **The accountability caveat this KB has proven `8` passes running: `ralph` cannot compare
+the asserting authority, so the statement says the learner acted when the AGENT acted.**
+🟢 Fix it in the integration layer: stamp an agent actor and the tool-call id on every
+statement before `ralph` sees it, and keep the learner as `object`-side context. 🔵 Do not
+expect the LRS to do it — the dedupe exclusion is mandated by the xAPI spec itself.
+
+### 🆕 🟡 Pattern 26 — Skill-layer pedagogy over a harness the client already has
+
+🔵 **The trend from `intel/trends.md` T1, as a buildable recipe.** The unit is a few files of
+pedagogy, not a deployment:
+
+| component | repo | licence | 🔴 the licence constraint that decides the architecture |
+|---|---|---|---|
+| skill corpus | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `CC-BY-SA-4.0` *(`1 230` B)* | 🔴 **ShareAlike = copyleft on CONTENT.** Derived skills must be shared alike — fine for a client's internal corpus, 🔴 **not** for a proprietary product |
+| index | [`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills) | `CC0-1.0` | 🟢 public domain — liftable wholesale |
+| code-explanation skill | [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) | `MIT` *(`1 065` B)* | 🟢 `15` paths; `MIT`, so it can be absorbed into a product |
+| adaptive tutor | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | *(see this KB's licence register)* | self-hostable web app + skill |
+| 🔴 **excluded** | [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `CC-BY-NC-SA-4.0` | 🔴 `NonCommercial` — **bars client delivery entirely.** `833`★ and `5 345` paths of content nobody can bill against |
+
+🟢 **The architecture decision falls out of the licence column, not the feature column:** put
+`CC-BY-SA` content in the client's own corpus and keep the `MIT`/`CC0` pieces in anything
+shipped. 🔵 **Run Pattern 24 step `4` on every skill repo before designing**, because this
+layer's assets are content, and content is `CC-*` until its bytes say otherwise.
+
+### 🟡 Amendment to Pattern 2 *(Chamilo Art. `50(2)` marking retrofit)*
+
+🟢 **Add Pattern 24 as step `0`, and the reason is specific.** Chamilo's `default_branch` is
+`master`; Moodle `5.3`'s tree is now `public/`-prefixed; `openedx/edx-platform` is a rename
+that still clones. 🔴 **A marking retrofit is a path-rooted change across an estate**, so a
+runbook that assumes `main` and stable paths breaks on `42`% of this shelf — after the
+estimate is signed. 🔵 The retrofit itself is unchanged: `47` write tools, `0` audit rows, no
+confirm handshake, `2026-12-02`.
 ## Pass 191 — 2026-10-14
 
 🆕 🟢 **One new pattern, and three amendments — two of them REPRICING steps this KB published

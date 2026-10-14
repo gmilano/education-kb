@@ -3,6 +3,79 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 🟢 **The headline is a CHANNEL RECOVERY that corrects this KB's own standing claim, and a
+CONFLATION in the instrument that replaced it.** p191 published *"stars, trending, topics,
+search — still gone."* 🔴 **Wrong on three of four:** repository search answers through the
+`mcp__github__*` server — a different lane from the `curl api.github.com` one p191 measured at
+`403` — returning `stargazers_count`, `forks_count`, `topics`, `archived`, `created_at` and
+`default_branch`. 🟢 **Trending stays NOT MEASURED, and was NOT retested, so it is recorded as
+untested rather than as `0`.**
+
+🆕 🔴 **And the instrument p191 promoted to primary conflates two states. `git ls-remote`
+returns `0` stdout refs for an ABSENT repository and `0` for an EMPTY one; the discriminator
+is the EXIT CODE (`128` vs `0`), and the `fatal:` goes to stderr.** This KB reads `0 refs` as
+*"does not exist"* in `706` places, because its negative controls only ever tested absent
+repositories — correct for every case they tested, silently wrong for the one they never did.
+
+| what ran | verdict |
+|---|---|
+| 🟢 **Existence census over the whole shelf, denominator DERIVED** *(p191's method note)* | 🟢 **`473` slugs extracted → `472` population** *(`repos/` discarded as an extraction artefact)* → **`468` LIVE, `2` EMPTY, `1` ABSENT, `1` extractor false positive.** 🔵 **All `4` exceptions were ALREADY documented on these pages — this shelf does not rot.** Committed as [`evidence/shelf-existence-census.2026-10-14-p192.tsv`](evidence/shelf-existence-census.2026-10-14-p192.tsv) |
+| 🟢 **`ls-remote` calibration, `4` probes** | 🟢 **three-state verdict established** — ABSENT *(exit `128`)* / EMPTY *(exit `0`, `0` refs)* / LIVE. 🟢 One-character remedy: `$?`, not `wc -l` |
+| 🟢 **A named open question CLOSED** | 🟢 `openfresno/edgenuity-aeries-grade-passback` — [`verticals/solutions.md`](verticals/solutions.md) said *"verified that the repository exists and did not verify that it contains anything."* 🔴 **It is EMPTY. No commits.** `15` × `404` was a correct measurement read against the wrong hypothesis |
+| 🟢 **Star census, `30` rows** | 🟢 first ranked table since p179. `DeepTutor` **`41 340`**, `book-to-skill` **`34 799`**, `openedx-platform` **`8 198`** — 🟢 **`+3` on the `8 195` recorded `2026-10-10`, so the channel is live, not cached** |
+| 🆕 🔴 **`3` silent failure modes in the recovered channel** | 🔴 over-conjoined free text → **`total_count: 0` with a SUCCESS status** *(twice: English and Spanish)*; `16` `repo:` qualifiers → **`14` items, no error**; the same unresolvable slug **alone** → `Validation Failed`. 🔴 **The batch hides exactly what the singleton reports.** Remedy: assert `len(items) == len(qualifiers)` |
+| 🆕 🟡 **sha-collision detector** | 🟢 `5` pairs over `468` live slugs: `1` **rename** *(`openedx/edx-platform` → `openedx/openedx-platform`, invisible to `ls-remote` because GitHub redirects)* — **already documented here, so CONFIRMED** — and `4` **owner-case variants** published under both spellings *(`OpenOLAT` `258`/`109`, `openSIS-Classic` `112`/`25`, `tutor-lms-mcp` `4`/`50`, `talentcoach` `10`/`8`)*: **two entities for one repository** |
+| 🆕 🔴 **`archived` — a signal class this KB never had** | 🔴 `menthorlabs/menthor`, `582`★, Portuguese, **`archived: true`** — a LATAM row frozen upstream. 🔵 `updated_at` still moves on it, and `ls-remote` cannot see it. **First archived row ever measured here** |
+| 🆕 🔴 **licence read from bytes, `6` new candidates** | 🟢 `MIT` × `4` *(`antivibe` `1 065` B, `OpenCat` `1 069` B, `ai-infra-engineer-learning` `1 081` B, `runno` `1 106` B)*, `Apache-2.0` × `1` *(`openfoam-mcp-server`, `10 708` B)*, 🔴 **`CC-BY-NC-SA-4.0` × `1`** — `enkidevs/curriculum`, `833`★, `5 345` paths, **`LICENSE.md` is `189` B** |
+| 🔴 **`ACTION MN`** *(carried, eighth pass, for a human)* | 🔴 **NOT RUN. Unchanged reason: an outward-facing write on third parties' repositories, and this run is unattended.** |
+
+### 🟡 The honest half: the sweep accused a row, and reading it cleared the row
+
+🔴 **`yourusername/scholarmate` came out of the extractor as ABSENT. It is not a row** — it is
+a string this KB **quotes** inside a row about [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate),
+where the finding is that *"its README still reads `github.com/yourusername/scholarmate` — an
+unedited template placeholder."*
+
+🔵 **p191's lesson repeating one pass later with a NEW mechanism.** p191: an extractor misreads
+the best-documented rows because a careful cell names a second licence. 🆕 **p192: an extractor
+misreads them because a careful cell QUOTES A DEFECT.** A page that documents other people's
+broken URLs contains broken URLs, and any sweep over its link text will attribute them to the
+page. 🟢 Caught by reading the row before publishing the accusation.
+
+### 🔴 Two date conflicts recorded UNRESOLVED, because no primary source was reachable
+
+| conflict | what the sources disagree about |
+|---|---|
+| 🔴 **EU AI Act, education high-risk** | Omnibus moved it `2026-08` → **`2027-12-02`** per two sources; a third has the Council approving `2026-06-29` **with OJ publication still pending**. 🔴 A `2026` vs `2027` compliance sale |
+| 🔴 **Vietnam, education high-risk** | this pass: Law No. `134/2025/QH15` **enacted `2026-03-01`**, grace period for existing systems. 🔵 **p191 of this KB published `2027-03-01`.** 🟡 A one-year discrepancy **inside this KB** — flagged, not reconciled |
+
+🟢 **Not in conflict: EMEA Art. `50(2)` marking `2026-12-02` *(seven weeks)*; Art. `5(1)(f)`
+emotion-recognition ban live since `2025-02-02`; Ohio's district AI-policy mandate deadline
+`2026-07-01` (passed); South Korea's AI Basic Act in force `2026-01`.**
+
+### 🟢 Pre-registered for p193, with the limb that would falsify each
+
+| action | limb `1` / limb `2` |
+|---|---|
+| 🟢 **`ACTION NQ`** — retest `github.com/trending` HTML, now that the search lane is back | **limb `1`:** reachable → the `13`-pass gap closes. **limb `2`:** still `403` → **declare the HTML surface permanently unavailable and stop pre-registering it** |
+| 🟢 **`ACTION NR`** — re-run the `472`-row census and DIFF it against p192's TSV | **limb `1`:** the set changes → rot is real and the census becomes a standing gate. **limb `2`:** `0` change → run it quarterly, not per pass |
+| 🟢 **`ACTION NS`** — canonicalise all `4` owner-case variant pairs against the API's `full_name`, in place, history intact | **limb `1`:** the compiler emits one entity per repo afterwards → `Gap` closed. **limb `2`:** it still emits two → the defect is in the compiler, not the pages |
+| 🟢 **`ACTION NT`** — run Pattern `24` step `4` *(licence from bytes)* over every `CC-*` row on the shelf | **limb `1`:** more `NonCommercial` found → the curriculum trap is systemic and gets its own register. **limb `2`:** `enkidevs` is the only one → it was an outlier |
+| 🟡 **`ACTION NU`** — reconcile the Vietnam `2026-03-01` / `2027-03-01` discrepancy against any non-vendor channel | **limb `1`:** a quasi-primary channel settles it → the APAC date becomes quotable. **limb `2`:** none does → **publish both dates with the conflict attached and stop re-asking** |
+| 🟢 **`ACTION NV`** — assert `len(items) == len(repo: qualifiers)` in the star instrument and re-probe the difference singly | **limb `1`:** more silent drops found → batching needs the assertion permanently. **limb `2`:** none → p192's `2` were the rename and a slug this pass invented |
+
+### 🔵 Note for p193 on method
+
+🟢 p190: *label the channel per CLAIM.* 🟢 p191: *label the POPULATION.*
+🆕 **p192 adds: label the NULL.** A channel that answers `0` without erroring is more dangerous
+than one that refuses, because a refusal gets recorded as a gap and a `0` gets published as a
+fact. 🔴 **This pass's Spanish-language query returned `total_count: 0` on a channel that
+answered `29 391` to `moodle in:name` in the same minute** — and any pipeline that trusted it
+would now carry *"no LATAM-language education repositories"* as data. 🟢 **A `0` from a
+free-text query is NOT MEASURED until the question is re-asked with a `topic:` or `in:name`
+qualifier.**
 ## Pass 191 — 2026-10-14
 
 🟢 **Six of the seven actions pre-registered for this pass are DISCHARGED. 🔴 One is NOT RUN

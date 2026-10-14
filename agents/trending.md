@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week is not a repository — it is the CHANNEL. Repository search,
+stars, topics and `archived` are reachable again**, through the `mcp__github__*` server rather
+than the `curl api.github.com` lane p191 measured at `403`. 🔴 **So the line this file has
+repeated for twelve passes — *"GitHub Trending: NOT MEASURED… stars, trending, topics, search
+— still gone"* — is now wrong on three counts and right on one.**
+
+| 🆕 what moved | measured today | why it matters this week |
+|---|---|---|
+| 🟢 **the search channel** | `repo:` qualifiers batch *(`16` asked, `14` returned)*; `moodle in:name` → `total_count 29 391`; free-text `topic:` queries answer with stars, forks, topics, `archived`, `created_at` | 🟢 **ranking is back.** `30` shelf rows priced in `agents/top.md` this pass, the first ranked table since p179 |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`41 340`★**, `5 212` forks, `192` open issues, created `2025-12-28`, HEAD today | 🔴 **the shelf's largest row, and it is `10` months old.** Topics now carry `clawbot` |
+| 🆕 🟢 [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **`34 799`★**, `3 656` forks, created `2026-05-01`, `edtech`-topicked, HEAD today | 🔴 **the second-largest `edtech` row on GitHub is a PDF→skill compiler, not a tutor.** The study-tools layer is being built as agent skills, not as platforms |
+| 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **`8 198`★** vs the **`8 195`** this KB recorded `2026-10-10` | 🟢 **`+3` in four days — a live delta, which is how we know the channel is current and not cached** |
+| 🔴 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | **`archived: true`**, `582`★, Portuguese description, `updated_at` `2026-10-12` | 🔴 **a LATAM row that is frozen upstream**, and `updated_at` still moves on it. First archived row ever measured here |
+| 🆕 🔴 [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `833`★; `LICENSE.md` is **`189` B** and reads `CC-BY-NC-SA-4.0`; `5 345` paths | 🔴 **the NonCommercial curriculum trap, in English, at `833`★** — this KB only ever warned about it in Spanish/Portuguese material |
+| 🆕 🟢 [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `Apache-2.0` *(`10 708` B)*, `121`★, `291` paths, last commit `2026-01-18` | 🟢 **a DOMAIN tutor over MCP** — CFD with Socratic questioning. The agent layer reaching a technical subject, not a gradebook |
+| 🟡 **GitHub Trending** | 🔴 **STILL NOT MEASURED — and NOT retested this pass.** The `github.com/trending` HTML surface is a different lane from the search API; recovering one says nothing about the other | 🔴 Stated as an untested gap, not as a `0`. Thirteenth pass without it |
+
+### 🆕 🔴 The recovered channel has THREE silent failure modes, and they all look like coverage
+
+🔵 **This matters more than any row above.** A channel that answers `0` without erroring is
+worse than one that refuses, because a refusal gets recorded and a `0` gets published.
+
+| # | what was sent | what came back | why it is dangerous |
+|---|---|---|---|
+| `1` | `education AI tutor agent stars:>100` — four free-text terms | **`total_count: 0`**, success status, empty `items` | 🔴 **indistinguishable from *"no such repositories exist"***. `moodle in:name` answers `29 391` on the same channel in the same minute, so the channel was fine and the QUERY was over-conjoined |
+| `2` | `educacion IA plataforma aprendizaje OR tutor stars:>50` — Spanish | **`total_count: 0`** | 🔴 **so LATAM-language discovery is NOT MEASURED this pass. It is not zero.** Writing it down as `0` would have manufactured a regional gap that the instrument invented |
+| `3` | `16` × `repo:` qualifiers in one query | **`14` items, no error, no warning** | 🔴 **the two unresolvable slugs were dropped SILENTLY.** A star census built by batching under-reports by exactly the rows that are broken — the ones worth finding |
+| `3b` | the same unresolvable slug **alone** | **`Validation Failed`** — *"the listed users and repositories cannot be searched"* | 🔴 **the batch hides precisely what the singleton reports.** Same channel, same slug, opposite candour, decided by batch size |
+
+🟢 **Remedy, cheap and mechanical: assert `len(items) == len(repo: qualifiers)` and re-probe
+the difference one slug at a time.** That single assertion is what turned failure mode `3`
+into this pass's best finding — the Open edX rename, below.
+
+### 🆕 🟢 How mode `3` paid: a rename that `git ls-remote` cannot see
+
+🔴 **`openedx/edx-platform` and `openedx/openedx-platform` return the SAME HEAD sha**
+*(`e6d65a85f167`)* 🔵 **because GitHub redirects a renamed repository transparently, so the
+old slug `ls-remote`s as perfectly live forever.** The search channel is the only one that
+tells the truth: `repo:openedx/edx-platform` → **`Validation Failed`**;
+`repo:openedx/openedx-platform` → **`8 198`★**.
+
+🟢 **This CONFIRMS the KB rather than correcting it** — `repos/foundations.md` already carries
+*"Renamed: this repo was `openedx/edx-platform`; the old URL still resolves."* 🆕 **What is new
+is the DETECTOR**: sha collisions across the shelf, which found `5` pairs, `4` of them a
+different defect entirely. See `repos/foundations.md` this pass.
 ## Pass 191 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

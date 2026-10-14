@@ -3,6 +3,97 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🔵 **Regional research this pass ran one global sweep plus one sweep per region, on the open
+web. 🔴 Every figure below is SECONDARY** — vendor trackers, UNESCO reports, law-firm
+briefings — 🟢 **and that is labelled per claim rather than per pass**, as p190 asked.
+🔴 **No government primary source was reachable this pass; the `16` blocked-host finding from
+p191 stands and was not retested.**
+
+### 🔴 Two date conflicts this pass could NOT resolve, recorded unresolved
+
+| question | the conflict | why it matters commercially |
+|---|---|---|
+| 🔴 **EU AI Act, education high-risk (Annex III)** | sources say the Digital Omnibus moved it from `2026-08` to **`2027-12-02`**; another says the Council gave final approval `2026-06-29` **and the act still awaited Official Journal publication** | 🔴 **the difference between a `2026` compliance sale and a `2027` one.** Recorded as a conflict, resolved neither way, because no OJ reference was reachable |
+| 🔴 **Vietnam, education as a high-risk sector** | this pass's sources: Law No. `134/2025/QH15` **enacted `2026-03-01`**, education high-risk via a related decree, grace period for systems already in operation. 🔵 **p191 of this KB published `2027-03-01`** as the date education becomes high-risk | 🟡 **a one-year discrepancy inside this KB's own pages.** Both may be true — enactment vs. applicability to existing systems — but it is not measured, so it is flagged, not reconciled |
+
+🟢 **What is NOT in conflict, EMEA:** 🔴 **Art. `50(2)` transparency marking is
+`2026-12-02` — seven weeks out.** 🔴 **Art. `5(1)(f)`, the ban on emotion recognition in
+education, has been live since `2025-02-02`.** 🟡 Art. `27` fundamental-rights impact
+assessment applies to public schools. 🟡 The Omnibus **kept** the AI-literacy duty but
+**dropped the "sufficient level"** qualifier.
+
+### 🟢 Adoption, by region, with the source named
+
+| region | measured by someone else | 🔴 the gap |
+|---|---|---|
+| **North America** | `60`% of US K-12 teachers used AI in the `2024-25` year, `32`% weekly; `134` AI-in-education bills across `31` states; **Ohio first to mandate an AI policy in every district, deadline `2026-07-01`** *(now passed)*; CA **AB `1159`** would bar training on student data; **H.R. `8747`** advanced in committee `2026-07-21`; NA ≈ `36`% of market share | 🔴 no figure on institutional *agent* deployment, as opposed to teacher tool use |
+| **EMEA** | adoption *"uneven"*, education policy still national; Commission draft **AI Literacy Framework** for primary/secondary, OECD + G7 endorsed; Council conclusions `2026-05-11` on human-centred AI in education; `JA Europe` **AI-ENTR4YOUTH** running in `10` countries | 🔴 **teacher training named as the bottleneck by multiple sources, quantified by none** |
+| **APAC** | 🔴 **South Korea's AI Basic Act in force `2026-01`, naming education "high-impact"**; Vietnam law above; Japan light-touch/voluntary; Ipsos Education Monitor `2026`: Asian markets show **lower** support for banning AI in schools, **Australia and NZ higher** | 🔴 **still no verified usage figure for APAC** — the same gap p191 recorded, unchanged |
+| **LATAM** | 🟢 **UNESCO IESALC: `200` institutions, `19` countries — `87`% use AI in ≥`1` area, `74`% in teaching and learning, but only `26`% have a formal AI strategy.** By type: private non-profit `84`%, public `68`%, private for-profit `52`%. OECD TALIS `2024`: Brazil, Chile, Colombia, Costa Rica above the `36`% OECD average; Ceibal `2026`: `75`% of Uruguayan public-school teachers | 🟢 **the best-measured region on this page, and the only one with a governance-gap number attached** |
+| **Global** | market size `$10.6B` *(2026)* → `$42.5B` *(2030)* per one firm; `$12.3B` by `2026` per another; `~$6B` *(2024)* → `$32B` *(2030)* per a third | 🔴 **a `2`× spread on the CURRENT year.** Use the direction, never the number |
+
+🔴 **The LATAM `87`% / `26`% pair is the single most sellable statistic on this page**, and it
+is not a LATAM-only story: it is the governance gap in its most measured form, and the same
+gap is what Art. `50(2)` prices in EMEA and what Ohio's mandate prices in North America.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Lead with governance and evidence, never capability.** Ohio's district-level AI-policy
+mandate has **already passed its `2026-07-01` deadline**, which converts the pitch from
+*"you will need a policy"* to *"you have one — can you show it is enforced?"* 🔵 The
+accountability finding this KB has built over `8` passes answers exactly that question:
+`0` of the three measured agent layers can say **who acted**, and no conforming LRS compares
+the asserting authority. 🔴 **CA AB `1159`** *(training on student data)* makes the data-flow
+audit a second, separable engagement. 🟡 K-12 integration work is real but the public code is
+not: both Ed-Fi/Aeries rows on this shelf are **empty repositories** — the need is published,
+the starting point is not.
+
+### EMEA
+
+🔴 **A date, seven weeks out, on an installed base: Art. `50(2)` marking, `2026-12-02`.**
+Chamilo ships `68` native MCP tool definitions, `47` of them writes, with `0` audit rows and
+no confirm handshake — 🟢 **a compliance retrofit with a deadline attached, on a platform the
+client already runs.** Moodle `5.3`'s `public/`-prefixed tree restructure is a second,
+unglamorous, billable surface: every path-rooted integration in the estate needs re-pointing.
+🟡 Teacher training is named as the bottleneck by every source and quantified by none — an
+opening for a measurement offer rather than a training offer.
+
+### APAC
+
+🟢 **Regulation and curriculum, in that order.** South Korea's AI Basic Act has been in force
+since `2026-01` and names education **high-impact**; Vietnam's law reaches education as
+high-risk *(date disputed — see the conflict table above, and do not quote a single year in a
+proposal)*. 🔵 Two of this shelf's platform rows are APAC-origin — `frappe/lms` *(`3 311`★,
+`MIT`, default branch `develop`)* and `openeducat/openeducat_erp` *(`888`★, default branch
+`19.0`)* — 🟢 **so an APAC engagement can start on APAC-built, permissively-licensed code**,
+which is the one region where that is true. 🔴 **No verified APAC usage figure exists on this
+page; do not build a business case that needs one.**
+
+### LATAM
+
+🟢 **Depth on an installed base, and the governance number does the selling: `87`% using,
+`26`% governed.** Chamilo's LATAM footprint plus its new native MCP server means the agent
+layer is already present in Spanish-speaking institutions that never chose it. 🔴 **Two
+specific traps, both measured this pass:** `menthorlabs/menthor` *(`582`★, Portuguese)* is
+**archived** — fork base, never partner; and the `CC-BY-NC-SA` curriculum trap now has an
+`833`★ English instance *(`enkidevs/curriculum`)*, so the licence check cannot be scoped to
+Spanish/Portuguese assets. 🟢 UNESCO's regional **Observatory on AI in Education** *(launched
+`2026-04`, at ECLAC in Santiago)* is a credible co-signer for a public-sector bid.
+
+### Global
+
+🟢 **Agent-layer accountability — true of everyone's stack, provable from source, fixable only
+in the integration layer.** 🔴 **And new this pass: liveness and identity are measurable
+again, so they belong in every engagement's first week.** `5` of `12` vertical platforms do
+not default to `main`/`master`; `4` repositories on this shelf are published under two
+spellings of their owner; `1` canonical slug *(`openedx/edx-platform`)* is a rename that
+clones fine forever; `2` published rows are empty repositories. 🔵 **None of that is exotic —
+it is the cost of starting from open source without reading `default_branch`, `archived` and
+the licence bytes**, and it is a `1`-day audit that this KB can now run on demand.
 ## Pass 191 — 2026-10-14
 
 🆕 🔴 **The Gulf question CLOSES at limb `2`, across all four states: outside Saudi Arabia,

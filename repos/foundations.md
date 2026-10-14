@@ -3,6 +3,111 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 🟢 **Every repository URL this KB publishes on its three shelf pages has been probed for
+EXISTENCE, with the denominator derived in the instrument rather than inherited — which is
+exactly what p191's method note asked the next pass to do.** 🔴 **And the instrument that did
+it turns out to conflate two states that this KB has been reading as one, in `706` places.**
+
+### 🟢 The census: population derived, not inherited
+
+🔵 **Population rule, stated before the measurement:** every `github.com/<owner>/<repo>` URL
+appearing in [`agents/top.md`](../agents/top.md), [`repos/foundations.md`](foundations.md)
+and [`verticals/solutions.md`](../verticals/solutions.md), de-duplicated, with GitHub's own
+non-repository paths *(`topics/`, `orgs/`, `users/`, …)* excluded.
+
+| | count |
+|---|---|
+| raw distinct slugs extracted | `473` |
+| 🔴 less `repos/` — an extraction artefact from an `api.github.com` URL, never a row | `−1` |
+| 🟢 **derived population** | **`472`** |
+| 🟢 `LIVE` *(refs > `0`, exit `0`)* | **`468`** |
+| 🔴 `EMPTY` *(resolves, `0` refs, exit `0`)* | `2` |
+| 🔴 `ABSENT` *(exit `128`)* | `1` |
+| 🟡 extractor false positive | `1` |
+
+🟢 **Per-page: `325` slugs on `agents/top.md`, `190` here, `192` on `verticals/solutions.md`.**
+Committed as [`evidence/shelf-existence-census.2026-10-14-p192.tsv`](../evidence/shelf-existence-census.2026-10-14-p192.tsv)
+so p193 can diff it rather than re-derive it.
+
+🔵 **The headline is a negative and it is worth stating plainly: `468` of `472` rows resolve,
+and all `4` exceptions were ALREADY DOCUMENTED on these pages.** This shelf does not rot.
+
+### 🔴 The conflation: `0 refs` has meant two different things
+
+🔵 **`git ls-remote` is the instrument p191 promoted to primary after the API lane went
+`403`.** It is sound — but the verdict this KB reads off it is the **stdout line count**, and
+that count cannot separate *absent* from *empty*. Calibrated this pass, four probes:
+
+| state | probe | stdout refs | **exit** | stderr |
+|---|---|---|---|---|
+| absent, attached owner | `gmilano/no-existe-p192-control` | `0` | 🔴 **`128`** | `fatal: could not read Username` |
+| absent, unattached owner | `openfresno/no-existe-p192-control` | `0` | 🔴 **`128`** | `fatal: could not read Username` |
+| 🆕 **real but empty** | `openfresno/edgenuity-aeries-grade-passback` | `0` | 🟢 **`0`** | *none* |
+| live | `moodle/moodle` | `1 959` | `0` | *none* |
+
+🔴 **The exit code discriminates. The ref count does not.** And because the `fatal:` goes to
+**stderr**, a pipeline of the shape `git ls-remote … | wc -l` prints `0` for an absent
+repository and `0` for an empty one — 🔵 **which is why this KB's negative controls
+(`gmilano/…-no-existe-52 → 0 refs`, `globant/NEGATIVE-CONTROL-no-existe-50 → 0 refs`)
+taught it that `0 refs` means *"does not exist"*.** 🟢 **They were calibrated on absent
+repositories only, so the reading was correct for every case they tested and silently wrong
+for the one they never tested.** Remedy: **read the exit code, not the line count** — one
+character of change, `$?` instead of `wc -l`.
+
+### 🆕 🟢 Which settles a question this KB left open BY NAME
+
+🔵 [`verticals/solutions.md`](../verticals/solutions.md) published on
+[`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback):
+*"the raw lane returned `404` for `15` candidate paths across `HEAD`/`main`/`master`, so **this
+pass verified that the repository exists and did not verify that it contains anything.**"*
+
+🟢 **Now measured: it resolves anonymously, exits `0`, writes nothing to stderr and returns
+`0` refs. The repository is EMPTY.** 🔵 Not blocked, not rate-limited, not a raw-lane
+artefact — **there are no commits.** `15` × `404` was the right measurement read against the
+wrong hypothesis: a path probe cannot distinguish *"this path is missing"* from *"every path
+is missing"*, and a ref probe answers it in one call.
+
+🔵 **The same verdict, independently, for [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server)**
+*(`0` refs, exit `0`; search confirms `1`★, created `2026-02-17`)* — which the KB had already
+called empty from `size: 0`. 🟢 **Two channels, one verdict. There is still no Ed-Fi MCP
+server.**
+
+### 🆕 🟡 The sha-collision detector, and the duplicate-identity defect it found
+
+🔵 **New instrument, one line over the census: group the `468` live slugs by HEAD sha and
+report every sha claimed by more than one slug.** `5` pairs:
+
+| pair | diagnosis |
+|---|---|
+| `openedx/edx-platform` ≡ [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟢 **a RENAME, already documented here.** GitHub redirects the old slug, so `ls-remote` reports it live forever; only the search channel refuses it |
+| `OpenOLAT/OpenOLAT` ≡ `openolat/OpenOLAT` | 🔴 **owner-case variant** — published `258` and `109` times respectively |
+| `OS4ED/openSIS-Classic` ≡ `os4ed/openSIS-Classic` | 🔴 **owner-case variant** — `112` and `25` |
+| `Hesham0-0Nasser/tutor-lms-mcp` ≡ `hesham0-0nasser/tutor-lms-mcp` | 🔴 **owner-case variant** — `4` and `50` |
+| `ShuyunYuan/talentcoach` ≡ `shuyunyuan/talentcoach` | 🔴 **owner-case variant** — `10` and `8` |
+
+🔴 **GitHub resolves owner names case-insensitively; a compiler that does not canonicalise
+gets TWO entities for ONE repository.** Four repositories on this shelf are published under
+both spellings, one of them `367` times across the two. 🟢 **Remedy: canonicalise every slug
+at import against the `full_name` the API returns** — now that the API returns one again.
+🔵 Note the asymmetry worth keeping: a case variant is a **compile** defect *(the rows are
+all true)*, while the rename is a **currency** defect *(one row names a slug that
+documentation, topics and search no longer key on)*. They need different fixes.
+
+### 🟡 And the honest half: the sweep accused a row, and reading it cleared the row
+
+🔴 **`yourusername/scholarmate` came out of the extractor as `ABSENT`.** It is not a row.
+🟢 **It is a string this KB QUOTES inside a row about [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate)**,
+where the finding is precisely that *"its README still reads `github.com/yourusername/scholarmate`
+— an unedited template placeholder."*
+
+🔵 **p191's lesson, repeating one pass later, with a new mechanism.** p191 learned that an
+extractor misreads *the best-documented rows* because a careful cell names a second licence.
+🆕 **p192 adds: an extractor misreads them because a careful cell QUOTES A DEFECT.** A page
+that documents other people's broken URLs contains broken URLs, and any sweep over its link
+text will find them and attribute them to the page. 🟢 **Caught by reading the row before
+publishing the accusation — the same control, and the only one that works.**
 ## Pass 191 — 2026-10-14
 
 🆕 🟢 **The licence column has been read at FULL TREE DEPTH over every row this KB publishes

@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 🟢 **The discovery channel is BACK, and it corrects the line this page has carried for
+twelve passes.** p191 published *"stars, trending, topics, search — still gone. No star count
+appears anywhere in p191."* 🔴 **That is now FALSE for three of the four.** Repository search
+answers through the **GitHub MCP server** — a different channel from the `curl api.github.com`
+lane p191 measured at `403` — and it returns `stargazers_count`, `forks_count`, `topics`,
+`archived`, `created_at`, `updated_at` and `default_branch`.
+
+🔵 **So this pass does the thing this KB has not been able to do since p179: rank its own
+shelf.** `30` rows, measured today, one call each batch:
+
+| rank | repo | ★ | created | note measured this pass |
+|---|---|---|---|---|
+| `1` | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`41 340`** | `2025-12-28` | 🔴 the shelf's largest row by `6 541`. Topics now include `clawbot` |
+| `2` | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **`34 799`** | `2026-05-01` | `edtech`-topicked, `5` months old |
+| `3` | [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 554` | `2023-03-31` | a prompt, not a system — rank is reach, not depth |
+| `4` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8 198` | `2013-05-30` | 🟢 **`+3` on the `8 195` this KB recorded `2026-10-10`** — a live delta, so the channel is current |
+| `5` | [`moodle/moodle`](https://github.com/moodle/moodle) | `7 476` | `2009-12-16` | `1 959` refs at full `ls-remote` depth |
+| `6` | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6 869` | `2011-02-01` | `472` open issues |
+| `7` | [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `5 455` | `2021-01-03` | 🆕 **NEW to this shelf** — `MIT` *(`LICENSE`, `1 069` B)*, STEM robotics |
+| `8` | [`frappe/lms`](https://github.com/frappe/lms) | `3 311` | `2021-02-15` | the `MIT` LMS |
+| `9` | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2 371` | `2022-05-10` | default branch is `dev`, not `main` |
+| `10` | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `2 028` | `2025-08-31` | |
+| `11` | [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1 784` | `2025-10-25` | 🆕 **NEW** — `MIT` *(`1 081` B)*, `474` paths, last commit `2026-06-25` |
+| `12` | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `1 717` | `2023-11-01` | |
+| `13` | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1 237` | `2014-12-29` | `ECL-2.0`, spelled correctly in the register since p191 |
+| `14` | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | `2016-01-19` | `544` open issues — the shelf's highest |
+| `15` | [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) | `1 121` | `2026-04-10` | 🆕 **NEW** — `MIT` *(`1 065` B)*, `15` paths, last commit `2026-07-31` |
+| `16` | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `1 012` | `2013-03-29` | the native MCP platform of p191 |
+| `17` | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `931` | `2023-01-21` | |
+| `18` | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `888` | `2013-05-02` | default branch `19.0` — version-named, not `main` |
+| `19` | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `854` | `2026-03-01` | 🟢 p191 resolved its licence *(`CC-BY-SA-4.0`)*; this pass prices its reach |
+| `20` | [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `833` | `2016-11-29` | 🆕 **NEW, and a TRAP — see below** |
+| `21` | [`taybenlor/runno`](https://github.com/taybenlor/runno) | `773` | `2021-06-05` | 🆕 `MIT` *(`1 106` B)* — sandboxed code execution, *"or via MCP"* |
+| `22` | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `646` | `2013-07-02` | default branch is `mobile` |
+| `23` | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `637` | `2013-09-11` | default branch `v31.0.00` |
+| `24` | [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | `582` | `2023-04-16` | 🔴 **`archived: true` — see below** |
+| `25` | [`opencast/opencast`](https://github.com/opencast/opencast) | `508` | `2017-12-23` | 🟢 the real slug; `apereo/opencast` stays absent |
+| `26` | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `447` | `2018-03-29` | |
+| `27` | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `446` | `2022-05-14` | knowledge tracing, `54` open issues |
+| `28` | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | `2023-02-18` | student-success CRM, higher ed |
+| `29` | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `265` | `2019-12-19` | 🔴 **no topics at all** — invisible to every topic query |
+| `30` | [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `121` | `2025-07-06` | 🆕 **NEW** — `Apache-2.0` *(`10 708` B)*, CFD tutoring over MCP, last commit `2026-01-18` |
+
+🔵 Also measured, below the table: [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+`108`★ *(`193` forks — more forks than stars)*, [`openfun/ralph`](https://github.com/openfun/ralph)
+`51`★, [`O0000-code/awesome-academic-skills`](https://github.com/O0000-code/awesome-academic-skills)
+`48`★. 🔴 **`ralph` at `51`★ is the LRS this KB's whole accountability argument rests on.** That
+is not a reason to drop it — it is the reason the argument is still open ground.
+
+### 🆕 🔴 `enkidevs/curriculum` — `833`★, and the NonCommercial trap in a new instance
+
+🟢 **Read from bytes: `LICENSE.md`, `189` B, the whole file is one sentence** —
+*"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."*
+🔴 **`CC-BY-NC-SA-4.0` over `5 345` paths.** This KB has carried *"avoid the `CC-BY-NC-SA`
+curriculum trap"* as a standing LATAM warning since p191. 🆕 **Here is the trap at `833`★ and
+`5 345` paths, in English, which is where nobody was looking for it.** `NonCommercial` bars
+client delivery outright; `ShareAlike` would reach derivative curriculum even if it did not.
+🟢 **Row kept, flagged, and NOT recommended** — the shelf is more useful with a priced
+negative than without the row.
+
+### 🆕 🔴 `menthorlabs/menthor` — `archived: true`, and a signal class this KB never had
+
+🔴 **`582`★, `Vue`, read-only upstream.** Description is Portuguese — *"Plataforma gratuita e
+open-source de ensino de programação"* — so this is a **LATAM** row, and it is the first row
+on this shelf measured as **archived**. 🔵 `updated_at` still reads `2026-10-12`, which is
+exactly why `updated_at` is not a liveness signal: metadata moves on a frozen repository.
+🟢 **`archived` is a field the recovered channel returns and `git ls-remote` cannot see** —
+an archived repo answers `ls-remote` indistinguishably from a live one. Registered as the
+pass's cheapest new quality gate: **read `archived` before recommending any row.**
+
+### 🔴 Two published rows point at repositories with NO COMMITS
+
+| row | measured | status |
+|---|---|---|
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | `0` refs, exit `0`, no stderr; search confirms it exists *(`1`★, created `2026-02-17`)* | 🟢 **CONFIRMS** the KB — already called empty from `size: 0` |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | `0` refs, exit `0`, no stderr | 🆕 🟢 **RESOLVES a named open question** — see `repos/foundations.md` this pass |
+
+🔵 Both are **North America** K-12 integration rows, and both remain listed for who owns them,
+not for what they ship. 🔴 **There is still no Ed-Fi MCP server in existence.**
 ## Pass 191 — 2026-10-14
 
 🆕 🔴 **The agent layer has moved INTO the platform, and the second platform's model is the

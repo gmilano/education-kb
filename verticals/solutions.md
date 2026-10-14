@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🆕 🟢 **Three cells on this page change status this pass, and two of them change because a
+question this page asked ITSELF has been answered.**
+
+### 🟢 `Aeries SIS + Edgenuity` — the open question CLOSES, and the cell loses its product
+
+🔵 **This page published:** *"the raw lane returned `404` for `15` candidate paths across
+`HEAD`/`main`/`master`, so **this pass verified that the repository exists and did not verify
+that it contains anything.**"*
+
+🟢 **Measured now, one call:**
+[`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback)
+resolves anonymously, exits `0`, writes nothing to stderr, and returns **`0` refs.**
+🔴 **The repository is EMPTY — there are no commits.** Not blocked, not a raw-lane artefact.
+🔵 `15` × `404` was a correct measurement read against the wrong hypothesis: a path probe
+cannot tell *"this path is missing"* from *"every path is missing"*.
+
+🟢 **The cell stays, with its claim corrected rather than deleted.** What it documents is now
+unambiguous: **a US school district published the NAME of an Aeries↔Edgenuity passback job and
+no code.** 🔵 That is still the most honest K-12 integration signal on this page for
+**North America** — the need, in public, from the buyer's side — but it is a need, not a
+starting point, and nobody should plan a sprint around cloning it.
+
+### 🔴 `menthor` — a LATAM vertical row that is FROZEN upstream
+
+🔴 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor), `582`★, `Vue`,
+*"Plataforma gratuita e open-source de ensino de programação"* — **`archived: true`.**
+🔵 **`updated_at` still reads `2026-10-12`, which is precisely why `updated_at` is not a
+liveness signal**: metadata moves on a read-only repository, and `git ls-remote` answers an
+archived repo exactly as it answers a live one.
+
+🟢 **Consequence for a LATAM engagement, stated concretely:** a Portuguese-language
+programming-education platform at `582`★ is a legitimate fork base and **not** a partner —
+no upstream will merge anything, so the fork is the product and its maintenance is the
+client's from day one. 🔵 Price it as a one-time asset acquisition, never as a community.
+
+### 🔴 `enkidevs/curriculum` — `833`★ of curriculum nobody can sell
+
+🆕 **New to this KB, and it belongs on THIS page rather than the agents shelf**, because
+curriculum is a vertical asset: `5 345` paths of structured lessons across `20`+ tracks.
+🔴 **`LICENSE.md` is `189` B and the entire file is one sentence: `CC-BY-NC-SA-4.0`.**
+
+🔵 **This KB has carried *"avoid the `CC-BY-NC-SA` curriculum trap"* as a LATAM warning since
+p191.** 🆕 **The trap is not regional.** `NonCommercial` bars client delivery in every region,
+`ShareAlike` reaches derivative curriculum, and at `833`★ in English this is the instance most
+likely to be proposed by someone who checked that the repo was popular and active and never
+opened `LICENSE.md`. 🟢 **Tabled as a priced negative.**
+
+### 🟢 The vertical shelf, now with reach attached
+
+🔵 **First time this page can rank its platforms** — the search channel returns
+`stargazers_count` and `default_branch` again. 🟡 **Two of the four columns below are measured
+today and one is not**: the region column is carried from this KB's existing placements and
+was not re-verified this pass, so it is labelled rather than re-asserted *(see [`agents/top.md`](../agents/top.md) for the full `30`-row
+table)*. The vertical-relevant rows:
+
+| platform | ★ *(measured today)* | 🟡 region of origin *(carried from this KB's prior placements — NOT measured this pass)* | default branch *(measured today)* — 🔵 *a deployment detail that bites* |
+|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8 198` | North America | `master` 🔴 **and the slug is the RENAMED one** — `openedx/edx-platform` still clones, so CI never breaks and docs silently drift |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7 476` | EMEA *(Australia-founded, EMEA-dominant install base)* | `main`, and the tree is `public/`-prefixed since `5.3` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6 869` | North America | `master` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `3 311` | APAC *(India)* | 🔴 **`develop`** — not `main`; a `git clone` lands on unreleased code |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `1 717` | EMEA *(Nigeria/UK)* | `main` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1 237` | North America | `master`, `ECL-2.0` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | Global *(offline-first, LATAM + Africa deployments)* | 🔴 **`develop`**, and `544` open issues |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `1 012` | EMEA *(Belgium/Spain)* + LATAM install base | `master` — ships the native MCP server |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `888` | APAC *(India)* | 🔴 **`19.0`** — version-named default branch, the Odoo convention |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `646` | EMEA *(France)* | 🔴 **`mobile`** — the default branch is not `main`, `master` or `develop` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `637` | APAC *(Hong Kong)* | 🔴 **`v31.0.00`** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `447` | EMEA *(Switzerland)* | `master` |
+
+🆕 🔴 **Five of twelve vertical platforms do NOT default to `main` or `master`** —
+`develop`, `develop`, `19.0`, `mobile`, `v31.0.00`. 🟢 **That is a concrete, repeatable
+engagement defect**: every runbook, Dockerfile and CI config that hardcodes
+`git clone -b main` fails on `42`% of this shelf, and it fails *after* the estimate is
+signed. 🔵 **`default_branch` is a field the recovered channel returns.** Read it before
+writing the runbook — it costs one call and this KB could not make it until today.
 ## Pass 191 — 2026-10-14
 
 🆕 🔴 **The Chamilo cell changes category, not just content: it is no longer an LMS that an

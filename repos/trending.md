@@ -3,6 +3,70 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 192 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🔴 **GitHub Trending: STILL NOT MEASURED — thirteenth pass — and this pass did NOT retest it.**
+🟢 **That distinction is the whole point.** The `github.com/trending` HTML surface and the
+repository-search API are different lanes; **search came back this pass and trending was not
+probed**, so writing *"trending: `0`"* would be inventing a measurement. 🔵 Recorded as an
+untested gap, with the retest left to p193 as a one-call action.
+
+🟢 **What DID come back is momentum by proxy: stars, forks, `created_at` and `archived`.** A
+star count is not a trend, but a star count plus a dated prior IS a delta — and this pass has
+one clean delta on the books:
+
+| repo | prior figure in this KB | measured `2026-10-14` | delta |
+|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8 195` *(recorded `2026-10-10`)* | **`8 198`** | 🟢 **`+3` in `4` days** — and the reason to trust the channel: a cached answer would have returned the same number |
+
+🔵 **Every other row on the shelf now has a FIRST datum rather than a delta.** The ranked table
+is in [`agents/top.md`](../agents/top.md) this pass; p193 can diff it.
+
+### 🆕 🟢 New to this KB this pass, with licence read from bytes
+
+🔵 **All five discovered through the recovered search channel, then licence-verified by
+blobless clone — `git cat-file` over the tree, not a badge, not an API field.**
+
+| repo | ★ | licence, read from bytes | paths | last commit | why it earns a row |
+|---|---|---|---|---|---|
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `5 455` | 🟢 **`MIT`** *(`LICENSE`, `1 069` B)* | `328` | `2026-09-07` | 🟢 the largest **STEM-robotics education** row available; `MIT` over firmware + curriculum |
+| [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1 784` | 🟢 **`MIT`** *(`1 081` B)* | `474` | `2026-06-25` | 🟢 **corporate upskilling content under `MIT`** — rare; most curriculum is `CC-*` |
+| [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) | `1 121` | 🟢 **`MIT`** *(`1 065` B)* | `15` | `2026-07-31` | 🟢 turns generated code into an educational deep dive — **pedagogy as an agent skill**, `15` paths total |
+| [`taybenlor/runno`](https://github.com/taybenlor/runno) | `773` | 🟢 **`MIT`** *(`1 106` B)* | `271` | `2026-05-10` | 🟢 **sandboxed code execution in the browser, and over MCP** — the missing primitive for any agent that must RUN a learner's code |
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `121` | 🟢 **`Apache-2.0`** *(`10 708` B)* | `291` | `2026-01-18` | 🟢 **a domain tutor over MCP** — CFD with Socratic questioning, not a gradebook wrapper |
+
+🔴 **And one new row that is a priced NEGATIVE:**
+[`enkidevs/curriculum`](https://github.com/enkidevs/curriculum), `833`★, `5 345` paths,
+`LICENSE.md` = **`189` B of `CC-BY-NC-SA-4.0`**. 🔴 `NonCommercial` bars client delivery;
+`ShareAlike` would reach derivative curriculum regardless. 🔵 **Listed so nobody re-discovers
+it as an opportunity.**
+
+### 🔴 What this pass searched and did NOT find — stated, because silence reads as coverage
+
+| query sent | result | verdict |
+|---|---|---|
+| `educacion IA plataforma aprendizaje OR tutor stars:>50` | **`total_count: 0`**, success status | 🔴 **LATAM-language repository discovery NOT MEASURED.** The channel returns an un-erroring `0` for over-conjoined free text — the same shape as *"nothing exists"*. Not published as a gap in the market; published as a gap in the instrument |
+| `education AI tutor agent stars:>100` | **`total_count: 0`** | 🔴 same failure mode; the useful query was `topic:` + a single term |
+| `topic:education topic:ai stars:>300` | `21` | 🟢 the productive shape |
+| `topic:edtech stars:>250` | `17` | 🟢 the productive shape |
+| `education mcp server stars:>20` | `7` | 🟡 small, but it is where `openfoam-mcp-server` surfaced |
+| global *"top open source AI agents education 2026 github MIT"* *(web)* | SEO listicles, `0` education-specific MIT repos | 🔴 **the open web is still useless for this shelf** — it returns general agent frameworks. `12` of `12` candidate slugs it suggested were either already published here or not education at all |
+
+🔵 **Honest arithmetic on discovery this pass, counted against the pre-p192 history:
+`31` candidate slugs surfaced by the recovered channel were checked; `7` had ZERO prior
+mentions in this KB, `1` had exactly one, and `23` were already published here.** 🟢 **A
+novelty rate of `7`/`31` = `23`% — and `2` of those `7` (`omnitool-ai/omnitool`,
+`mehmetkahya0/AI-Catalog`) are not education and were deliberately NOT tabled**, which puts
+genuinely usable novelty at `5`/`31` = `16`%.
+
+🔴 **That number is the most useful thing this pass measured about itself.** A recovered
+discovery channel, pointed at a `472`-row shelf, returns `84`% already-known — 🟢 **so the
+shelf is near saturation at THIS altitude, and the return on another wide sweep is low.**
+🔵 The argument that follows is for depth per row — governance, licence scope, who-acted
+accountability — which is where p185–p191 were already going, and this pass is the first to
+put a number behind that instinct rather than an instinct behind the number.
 ## Pass 191 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
