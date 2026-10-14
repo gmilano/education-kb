@@ -1,0 +1,7 @@
+form	cwd	argv	total	passed	fails	skips	verdict
+abs-from-tmp	/tmp	/tmp/education-kb/compose/code/p197-suite-path-independence/../lib/test_license_family.sh	207	207	0	0	CLEAN
+in-suite-dir	/tmp/education-kb/compose/code/lib	test_license_family.sh	207	207	0	0	CLEAN
+rel-from-par	/tmp/education-kb/compose/code	lib/test_license_family.sh	207	207	0	0	CLEAN
+rel-from-gpar	/tmp/education-kb/compose	code/lib/test_license_family.sh	207	207	0	0	CLEAN
+rel-up-sibling	/tmp/education-kb/compose/code/.p197sib.TzsSGz	../lib/test_license_family.sh	207	207	0	0	CLEAN
+via-symlink	/tmp/tmp.3OEG5Un3oy	./suite.sh	207	207	0	0	CLEAN

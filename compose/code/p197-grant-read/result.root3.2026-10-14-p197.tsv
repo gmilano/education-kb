@@ -1,0 +1,4 @@
+slug	exists	paths_in_tree	scope	licence_path	bytes	family	verdict
+kstateome/lti-launch	YES	34	ROOT	License.txt	7651	LGPL-3.0	READ
+open-spaced-repetition/fsrs4anki-helper	YES	45	ROOT	License	1079	MIT	READ
+openedx/XBlock	YES	193	ROOT	LICENSE.TXT	11358	Apache-2.0	READ

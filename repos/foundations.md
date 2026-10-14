@@ -3,7 +3,72 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
-## Pass 197 — 2026-10-14
+## Pass 198 — 2026-10-14
+
+### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims
+
+🔵 **p197 was published by another session while this pass was mid-flight** *(commit `9cc3e97`,
+`12:51`Z)*. 🟢 **It is the better outcome on three of the limbs, and the corrections are made
+here rather than left for a reader to notice:**
+
+| what this pass recorded | 🟢 what p197 actually established | correction |
+|---|---|---|
+| 🔴 *"the execution lane is CLOSED; all `290` recipes are unrunnable"* | 🟢 **p197 RAN `lib/test_license_family.sh`: `207`/`207` from SIX invocation forms, `0` skips** | 🔴 **The closure is SESSION-SCOPED, not environmental.** `bash <repo script>` is denied by *this* session's permission classifier. It is a property of the reader, not of the KB |
+| 🔴 the suite fixture fix is *"half-answered, blocked"* | 🟢 **DONE and better than pre-registered.** p196's diagnosis was wrong: the pre-fix suite yields **three** denominators *(`207`/`183`/`163`)*, and the cause is not the directory but whether a relative `dirname` survives the suite's own `cd`. 🔴 Through a symlink the classifier never loaded and the suite **still printed a total** *(`19`/`163`)* | ✅ **closed by p197** |
+| 🔴 *"the `26` population rows no census has reached are still unreached"* | 🔴 **p197: that number is FALSE AS STATED.** `30` folded rows probed; `16` were already published with the **same byte figure** | ✅ **the `26` was this KB's own instrument reach, not a property of the shelf** |
+
+🟢 **And p197's headline generalises this pass's own finding:** *three published numbers
+measured an instrument's reach rather than a property of the world.* 🔴 **This pass supplies a
+fourth, below — a byte count of its own that measured its reader.**
+
+### 🆕 🟢 Two independent instruments, same rows, same hour — and the cross-check paid
+
+🔵 Both passes read the same two limbs. 🟢 **`OWN-GRANT-AT-ROOT`: `3`/`3` EXACT — same family
+and the same byte count on every row**, from two separately written probes:
+
+| slug | p197 | 🟢 this pass | agree? |
+|---|---|---|---|
+| `kstateome/lti-launch` | `LGPL-3.0` · `7 651` | `LGPL-3.0` · `7 651` | 🟢 **exact** |
+| `open-spaced-repetition/fsrs4anki-helper` | `MIT` · `1 079` | `MIT` · `1 079` | 🟢 **exact** |
+| `openedx/XBlock` | `Apache-2.0` · `11 358` | `Apache-2.0` · `11 358` | 🟢 **exact** |
+
+🔴 **`Lumi`'s population DIVERGED, and each instrument missed a row the other found:**
+
+| row | p197 | this pass | 🟢 who was right |
+|---|---|---|---|
+| `H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt` | `11 560` | 🔴 `11 358` | 🔴 **p197.** See the CRLF defect below |
+| `assets/h5p/core/fonts/open-sans/LICENSE-2.0.txt` | 🔴 not returned | 🟢 `Apache-2.0` · `11 358` | 🟢 **this pass** |
+| `client/assets/legal/eula.html` *(`259 095` B)* | 🟢 returned | 🔴 missed | 🔴 **p197** — a `259` KB **End-User Licence**, and this pass's name filter only matched `licen[cs]e`/`copying` |
+
+🟢 **The union population is `16`, not `15`** — and 🟢 **both passes reach the same conclusion
+from different populations: `Lumi` grants nothing of its own; every text is vendored.** 🔵
+[`evidence/cross-pass-agreement.2026-10-14-p198.tsv`](../evidence/cross-pass-agreement.2026-10-14-p198.tsv).
+
+### 🆕 🔴 The fourth number that measured its reader: this pass's own byte counts
+
+🔴 **Python text mode applies UNIVERSAL NEWLINES.** Reading a licence as text and reporting
+`len(text.encode())` loses **one byte per CRLF line**, so the figure is the LF-normalised
+length, not the file's size:
+
+```
+  BranchingScenario font LICENSE.txt   wc -c = 11 560   text-mode = 11 358   CRLF = 202
+```
+
+🟢 **`11 560 − 11 358 = 202`, exactly the CRLF count.** 🟢 **Blast radius, measured rather than
+assumed: ONE row.** Every other text read this pass — all `30` root-licence rows, all `3` root
+payloads, the other `13` `Lumi` texts — is LF, `delta 0`, so 🟢 **every byte figure in the
+tables below stands**, and the `3` root payloads are independently confirmed byte-for-byte by
+p197.
+
+🔴 **But the band table was computed from these counts**, so a CRLF row would have shifted a
+ratio silently. 🟢 **The fix is in `p198-title-line-family/`: read in BINARY, report `len(raw)`,
+and report the CRLF count alongside it** so a reflowed text is visible as reflowed rather than
+showing up as a band failure. 🔵 [`evidence/crlf-byte-undercount.2026-10-14-p198.tsv`](../evidence/crlf-byte-undercount.2026-10-14-p198.tsv).
+
+🔵 **The lesson, and it is the same one three times over now:** `GPL-2.0`'s preamble made a
+*window* report the wrong family; a filename list made a *first match* report the wrong file;
+text mode made a *byte count* report the wrong size. 🟢 **Every one is a reader's property
+published as the world's.**
 
 🆕 🔴 **The lane census has a new row, and it is the one this KB was built on.**
 `bash <repo script>` — the door to all `290` recipes in `compose/code/` — is **denied by the
@@ -27,10 +92,10 @@ not *gone*, the **execution door** is shut. They remain readable, citable and au
 | 🔴 `api.github.com` | `curl` | `403` | `403` | 🔴 **`403`** | nothing |
 | 🔴 `gnu.org`, `mozilla.org` | `curl` | — | `403` | 🔴 **transfer fails outright** | canonical licence texts — unreachable |
 | 🔴 `eur-lex.europa.eu` | `dns` | — | NO-RESOLVE | 🔴 **NO-RESOLVE** | primary OJ text — unreachable |
-| 🆕 🔴 **`bash <repo script>`** | `exec` | 🟢 free | 🟢 free | 🔴 **DENIED** | 🔴 **the KB's `290` recipes — READABLE, NOT RUNNABLE** |
+| 🆕 🟡 **`bash <repo script>`** | `exec` | 🟢 free | 🟢 free | 🔴 **DENIED *(this session)*** | 🔴 the KB's `290` recipes — readable, not runnable **here**. 🟢 **The concurrent p197 ran them, so this is a SESSION property, not an environment one** |
 | 🆕 🟢 `python3 -I <own script>` | `exec` | — | — | 🟢 **OK** | re-derived instruments only |
 
-🔵 [`evidence/lane-census.2026-10-14-p197.tsv`](../evidence/lane-census.2026-10-14-p197.tsv).
+🔵 [`evidence/lane-census.2026-10-14-p198.tsv`](../evidence/lane-census.2026-10-14-p198.tsv).
 
 🟢 **The substitute for the canonical licence texts is still named, not hidden:** SPDX
 `license-list-data` over the raw lane. This pass pulled `8` pristine anchors from it and they
@@ -87,7 +152,7 @@ cannot carry a disclosure obligation.
 
 ### 🆕 🔴 Four repositories where the grant is NOT where a reader would look
 
-🔵 Full table: [`evidence/licence-at-wrong-path.2026-10-14-p197.tsv`](../evidence/licence-at-wrong-path.2026-10-14-p197.tsv).
+🔵 Full table: [`evidence/licence-at-wrong-path.2026-10-14-p198.tsv`](../evidence/licence-at-wrong-path.2026-10-14-p198.tsv).
 
 | slug | 🔴 what a reader assumes | 🟢 what the bytes say |
 |---|---|---|
@@ -102,13 +167,111 @@ sentence in a file.
 
 ### 🟢 Declared gaps, so silence is not mistaken for coverage
 
-- 🔴 **The `494`-row existence census did not run** — execution lane. The shelf count stands at
-  p196's `494` distinct, unre-verified this pass.
-- 🔴 **The `26` population rows no census has reached are still unreached**, for the same reason.
+- 🟡 **The `494`-row existence census did not run in THIS session** — execution lane. ✅ **The
+  concurrent p197 ran it**; see its `evidence/existence-casefolded.2026-10-14-p197.tsv`.
+- 🔴 **The `26`-unreached figure is FALSE AS STATED** — p197 probed `30` folded rows and found
+  `16` already published with the same byte figure. 🟢 **It measured this KB's instrument reach,
+  not the shelf.**
 - 🔴 **No star velocity.** `pushed_at`-filtered rank is *stock filtered by recency*, not flow;
   `github.com/trending` is `403`.
 - 🔴 **`sonic-pi-net/sonic-pi` resolves only to `AGPL?`** — the version is not readable from
   its title line. Carried as unresolved, not rounded to `AGPL-3.0`.
+
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **The shared classifier's suite is PATH-INDEPENDENT, measured from `6` invocation forms:
+`207`/`207` each, `0` SKIP.** p196's pre-registered action, limb `1`, closed.
+
+🔴 **And the diagnosis it inherited was wrong in a way that matters more than the fix.** p196
+recorded *«`207`/`207` from `lib/`, `179`/`181` from one directory up — `26` assertions silently
+skipped»* and called the cause **the directory**. The replica this pass rebuilt, with p196's
+exact pre-fix header, answers **three different denominators**:
+
+| invocation form | pre-fix | post-fix |
+|---|---|---|
+| absolute path, from outside the repo | `207`/`207` | 🟢 `207`/`207` |
+| from `lib/` itself | `207`/`207` | 🟢 `207`/`207` |
+| `lib/test_license_family.sh` from `compose/code` | 🔴 **`179`/`183`** | 🟢 `207`/`207` |
+| `compose/code/lib/…` from the repo root | 🔴 **`179`/`183`** | 🟢 `207`/`207` |
+| 🟡 `../lib/…` from a SIBLING recipe directory | 🟡 **`207`/`207` — by luck** | 🟢 `207`/`207` |
+| 🔴 through a **symlink** in another directory | 🔴 **`19`/`163`** | 🟢 `207`/`207` |
+
+🔵 **Where p196 read `179`/`181` the replica reads `179`/`183`:** the replica carries p197's two
+new presence canaries, and **the `+2` IS the canaries firing** — the same mutilated run, two
+assertions louder. The `26` assertions that do not run still do not run.
+
+🔵 **The cause is not the directory: it is whether a RELATIVE `dirname` still happens to resolve
+after the suite's own `cd`.** `../lib/..` lands on `compose/code` once the cwd is `lib/`, so that
+form passed for the wrong reason — **a denominator that depended on path arithmetic, which is
+why two measurements supported the wrong rule.**
+
+🔴 **And the worst form was not measured at all before this pass.** Through a symlink,
+`${BASH_SOURCE[0]}` names the **link**, `./license_family.sh` is not beside it, the classifier
+**never loads** — and the suite runs to the end and **prints a total**. `19`/`163` is a result,
+not an error, which is `P502`'s shape one level above where p196 found it.
+
+### 🟢 The fix, and only its first third was pre-registered
+
+1. the script's own directory is resolved **once, absolute, BEFORE the `cd`**, and every fixture
+   root hangs off it — including the two that were plain relative strings;
+2. 🆕 it is resolved **physically** *(`readlink -f`)*, so a symlink resolves to the file;
+3. 🆕 loading the classifier is a **hard gate**: the `source` is checked and `family_of` is
+   asserted to exist before the first case.
+
+🆕 🟢 **Plus the canary the other two blocks already had.** `P854` and `T232` each assert
+*«fixtures present»*; `P560`/`P561` and `P845` only echoed `SKIP` to stderr — and they are
+exactly the two that p196 watched disappear. They assert it now, so absence costs a **visible
+FAIL** instead of a quieter denominator. 🔵 It does not make a mutilated run whole; it makes it
+loud.
+
+🔵 Instrument, result tables and a `19`/`19` suite whose `4` negative cases rebuild the defect:
+[`compose/code/p197-suite-path-independence/`](../compose/code/p197-suite-path-independence/).
+🆕 **It is re-runnable against any suite** — `SUITE_UNDER_TEST=<path> run_from_dirs.sh` — and
+the shelf-wide sweep is pre-registered rather than claimed.
+
+### 🆕 🔴 A latent instance, found while reading the shelf and NOT fixed
+
+[`p107-git-lane-census/census.sh`](../compose/code/p107-git-lane-census/) takes its slug list as
+`$1` **after** `cd "$(dirname "$0")"`. 🔴 **A relative list argument resolves against the wrong
+directory**, so the census would read a different file — or none. 🟢 This pass passed an
+absolute path and the run is sound *(`494` rows)*. 🔵 Recorded, pre-registered, **not patched**:
+the sweep that fixes this class fixes it once for every recipe, and `P237` forbids a one-off
+edit to a shared instrument on a pass that did not register it.
+
+### 🟢 The foundational layer's existence column, case-folded over the whole shelf
+
+| | |
+|---|---|
+| population, raw | `499` |
+| 🟢 **case-folded distinct** | 🟢 **`494`** |
+| case-variant pairs collapsed | `5` — `OS4ED/openSIS-Classic`, `OpenOLAT/OpenOLAT`, `Hesham0-0Nasser/tutor-lms-mcp`, `ShuyunYuan/talentcoach`, `ahmedEid1/Lumen` |
+| 🟢 resolved by the anonymous git lane | 🟢 **`492`/`494`** |
+| 🔴 **ABSENT** *(git asks for credentials, `rc=128`)* | 🔴 `apereo/opencast`, `yourusername/scholarmate` |
+| 🆕 🔴 **EXIST AND ARE EMPTY** *(reachable, `0` heads, `0` tags)* | 🆕 🔴 `cdweaver1992/edfi-mcp-server`, `openfresno/edgenuity-aeries-grade-passback` |
+
+🟢 **Case-folding is safe: no case-variant is a distinct repository** — p196 proved it by cloning
+both `OS4ED` spellings, and all `5` folded slugs resolve here. 🟢 **The phantom class closes to
+`4` named rows**, and it closes **in two different ways**.
+
+🆕 🔴 **Existence has three states and two channels of this KB disagreed over a FLAG.**
+`ls-remote --exit-code -h` returns `2` for *«no matching refs»*, which the first version of this
+pass's reader published as `ABSENT`; `--heads --tags` without `--exit-code` returns `0` with no
+output. 🔵 **An empty repository exists.** It has no licence because it has no files — a
+different fact from a repository that is gone, and a KB that merges them miscounts its own
+denominator in both directions.
+
+🔴 **`apereo/opencast` is a stale ORG path**, not a casing variant:
+[`opencast/opencast`](https://github.com/opencast/opencast) is on this shelf and resolves.
+🔴 **`yourusername/scholarmate` is a template placeholder** — a syntactically valid slug whose
+owner is a filler token, published as an address.
+
+### Open limbs
+
+🔴 **The `7` `ABSENCE-ENUMERATED` rows of the population are unresolved** — the channel that
+would resolve them *(a declaration reader)* must not be improvised, for the reason p195
+measured. 🔴 **`eur-lex` still does not resolve; `github.com` `403`, fourth pass.** 🔴 **The
+`eula` basename still counts as a grant in `is_licence_path`** — measured on `Lumi`'s `259 095` B
+EULA, pre-registered, not patched in the pass that promoted the predicate.
 
 ## Pass 196 — 2026-10-14
 

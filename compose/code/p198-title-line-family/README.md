@@ -49,8 +49,9 @@ a classifier validated only on the families it already gets right scores 100% wh
    `fckeditor/license.txt`, `66 467` B, tri-licensed `GPL`+`LGPL`+`MPL`; `H5P.CKEditor`'s
    `2 167` B) gets the FIRST title only. `P441`'s `names_multiple` column exists for this and
    is still the right channel for it.
-3. It reads **one path**. Choosing *which* path to read is not this instrument's job — see
-   `p197-root-licence-sweep/` for why a first-match filename list gets that wrong.
+3. **Byte counts must come from a BINARY read** — see the `p198` addendum below.
+4. It reads **one path**. Choosing *which* path to read is not this instrument's job — see
+   `p198-root-licence-sweep/` for why a first-match filename list gets that wrong.
 
 ## Why this is re-derived rather than reused
 
@@ -60,3 +61,26 @@ session's permission classifier *(`[Code from External]`)*. `P0a` found the prio
 was cited, not re-invented; the re-derivation is forced by the lane, not by failing to read
 the register. The fix below belongs in `lib/license_family.sh` and a `GPL2_PREAMBLE` case
 belongs in its suite, **both unrun and therefore not shipped into `lib/` this pass.**
+
+## 🆕 `p198` addendum — read the file in BINARY
+
+🔴 **A byte count taken through Python text mode is LF-normalised, not the file's size.**
+Universal newlines collapse `\r\n` to `\n`, so a CRLF licence loses one byte per line:
+
+```
+  Lumi H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt
+    wc -c      = 11 560
+    text mode  = 11 358      <- what this instrument first published
+    CRLF count =    202      <- exactly the delta
+```
+
+Found by **cross-validation**: a concurrent pass read `11 560` where this one said `11 358`.
+`true_bytes.py` in this directory is the fix — it reads `rb`, reports `len(raw)`, and reports
+the CRLF count alongside the family so a reflowed text is visible **as reflowed** instead of
+surfacing later as an unexplained band failure.
+
+**Blast radius, measured rather than assumed: one row.** Every other text read that pass is LF
+with `delta 0`, and the three `OWN-GRANT-AT-ROOT` payloads were independently confirmed
+byte-for-byte by the concurrent pass. The band table in `intel/trends.md` therefore stands —
+but it was computed from text-mode counts, which is why this fix matters more than the one row
+it corrected.

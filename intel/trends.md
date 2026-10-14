@@ -3,7 +3,72 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
-## Pass 197 — 2026-10-14
+## Pass 198 — 2026-10-14
+
+### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims
+
+🔵 **p197 was published by another session while this pass was mid-flight** *(commit `9cc3e97`,
+`12:51`Z)*. 🟢 **It is the better outcome on three of the limbs, and the corrections are made
+here rather than left for a reader to notice:**
+
+| what this pass recorded | 🟢 what p197 actually established | correction |
+|---|---|---|
+| 🔴 *"the execution lane is CLOSED; all `290` recipes are unrunnable"* | 🟢 **p197 RAN `lib/test_license_family.sh`: `207`/`207` from SIX invocation forms, `0` skips** | 🔴 **The closure is SESSION-SCOPED, not environmental.** `bash <repo script>` is denied by *this* session's permission classifier. It is a property of the reader, not of the KB |
+| 🔴 the suite fixture fix is *"half-answered, blocked"* | 🟢 **DONE and better than pre-registered.** p196's diagnosis was wrong: the pre-fix suite yields **three** denominators *(`207`/`183`/`163`)*, and the cause is not the directory but whether a relative `dirname` survives the suite's own `cd`. 🔴 Through a symlink the classifier never loaded and the suite **still printed a total** *(`19`/`163`)* | ✅ **closed by p197** |
+| 🔴 *"the `26` population rows no census has reached are still unreached"* | 🔴 **p197: that number is FALSE AS STATED.** `30` folded rows probed; `16` were already published with the **same byte figure** | ✅ **the `26` was this KB's own instrument reach, not a property of the shelf** |
+
+🟢 **And p197's headline generalises this pass's own finding:** *three published numbers
+measured an instrument's reach rather than a property of the world.* 🔴 **This pass supplies a
+fourth, below — a byte count of its own that measured its reader.**
+
+### 🆕 🟢 Two independent instruments, same rows, same hour — and the cross-check paid
+
+🔵 Both passes read the same two limbs. 🟢 **`OWN-GRANT-AT-ROOT`: `3`/`3` EXACT — same family
+and the same byte count on every row**, from two separately written probes:
+
+| slug | p197 | 🟢 this pass | agree? |
+|---|---|---|---|
+| `kstateome/lti-launch` | `LGPL-3.0` · `7 651` | `LGPL-3.0` · `7 651` | 🟢 **exact** |
+| `open-spaced-repetition/fsrs4anki-helper` | `MIT` · `1 079` | `MIT` · `1 079` | 🟢 **exact** |
+| `openedx/XBlock` | `Apache-2.0` · `11 358` | `Apache-2.0` · `11 358` | 🟢 **exact** |
+
+🔴 **`Lumi`'s population DIVERGED, and each instrument missed a row the other found:**
+
+| row | p197 | this pass | 🟢 who was right |
+|---|---|---|---|
+| `H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt` | `11 560` | 🔴 `11 358` | 🔴 **p197.** See the CRLF defect below |
+| `assets/h5p/core/fonts/open-sans/LICENSE-2.0.txt` | 🔴 not returned | 🟢 `Apache-2.0` · `11 358` | 🟢 **this pass** |
+| `client/assets/legal/eula.html` *(`259 095` B)* | 🟢 returned | 🔴 missed | 🔴 **p197** — a `259` KB **End-User Licence**, and this pass's name filter only matched `licen[cs]e`/`copying` |
+
+🟢 **The union population is `16`, not `15`** — and 🟢 **both passes reach the same conclusion
+from different populations: `Lumi` grants nothing of its own; every text is vendored.** 🔵
+[`evidence/cross-pass-agreement.2026-10-14-p198.tsv`](../evidence/cross-pass-agreement.2026-10-14-p198.tsv).
+
+### 🆕 🔴 The fourth number that measured its reader: this pass's own byte counts
+
+🔴 **Python text mode applies UNIVERSAL NEWLINES.** Reading a licence as text and reporting
+`len(text.encode())` loses **one byte per CRLF line**, so the figure is the LF-normalised
+length, not the file's size:
+
+```
+  BranchingScenario font LICENSE.txt   wc -c = 11 560   text-mode = 11 358   CRLF = 202
+```
+
+🟢 **`11 560 − 11 358 = 202`, exactly the CRLF count.** 🟢 **Blast radius, measured rather than
+assumed: ONE row.** Every other text read this pass — all `30` root-licence rows, all `3` root
+payloads, the other `13` `Lumi` texts — is LF, `delta 0`, so 🟢 **every byte figure in the
+tables below stands**, and the `3` root payloads are independently confirmed byte-for-byte by
+p197.
+
+🔴 **But the band table was computed from these counts**, so a CRLF row would have shifted a
+ratio silently. 🟢 **The fix is in `p198-title-line-family/`: read in BINARY, report `len(raw)`,
+and report the CRLF count alongside it** so a reflowed text is visible as reflowed rather than
+showing up as a band failure. 🔵 [`evidence/crlf-byte-undercount.2026-10-14-p198.tsv`](../evidence/crlf-byte-undercount.2026-10-14-p198.tsv).
+
+🔵 **The lesson, and it is the same one three times over now:** `GPL-2.0`'s preamble made a
+*window* report the wrong family; a filename list made a *first match* report the wrong file;
+text mode made a *byte count* report the wrong size. 🟢 **Every one is a reader's property
+published as the world's.**
 
 🆕 🔴 **The trend this pass can state for the first time is that a silent channel is more
 dangerous than a wrong one — and the silence is BIASED.** 🟢 Across `15` licence rows the
@@ -142,6 +207,76 @@ less:** it answered `6` of `7` pre-registered actions from prose and stored resu
 sequencing: 🟢 **run the lane census BEFORE planning the pass.** p196 pre-registered seven
 actions against instruments that turned out to be unrunnable; a census first would have
 pre-registered seven that were.
+
+## Pass 197 — 2026-10-14
+
+🔵 **Trend ids continue the shelf's sequence** — the highest id this KB had published was
+`T316`, so this pass opens at `T317`. 🔵 A new trend reusing a live id is the collision class
+`p150-identifier-collision/` exists to catch, and it is cheaper to check than to unpick.
+
+🆕 🔴 **`T317` — the trend this pass can prove is that the AI in education is moving INTO the LMS
+as plugins, and the plugin layer is `GPL-3.0` almost throughout.**
+
+| | evidence |
+|---|---|
+| population of the layer | 🟢 **`198`** repositories *(`moodle AI language:php pushed:>2026-06-01`, ranked channel)* |
+| licences read this pass | `GPL-3.0` ×`2` *(`35 149`, `35 178` B)*, `GPL` in source headers ×`3` *(`40`/`50`, `255`/`278`, `64`/`91` files)*, 🟢 `MIT` ×`1` *(`microsoft/moodle-ai-assistant`, `1 084` B)* |
+| what the layer contains | a **governance** plugin *(providers, quotas, per-tenant policy)*, a **chat** block on top of it, an **LLM-graded question type**, an **oral-exam** tool *(created `2026-10-05`)*, a **generative question bank**, and an **MCP server over the LMS web-service layer** |
+
+🔵 **Why this is a trend and not a list.** Through `2026` this KB recorded agent frameworks
+arriving **beside** the LMS — a tutor you integrate. The rows above arrive **inside** it, as
+plugins installed by an administrator, governed by the platform's own permission model and
+bound by the platform's licence. 🟢 **That changes who buys** *(the LMS administrator, not the
+innovation office)* 🔴 **and it changes what you may keep** *(a derivative plugin is `GPL`)*.
+
+🆕 🔴 **`T318` — a shelf-wide «no licence» rate cannot survive contact with a layer that licenses
+per file.**
+
+| probe | what it says about `3` Moodle plugins |
+|---|---|
+| root filename | 🔴 *«no licence»* |
+| complete tree *(`P441`'s channel)* | 🔴 *«absence enumerated»* |
+| 🟢 source headers *(p139's instrument)* | 🟢 **`GRANT_GPL` in `40`/`50`, `255`/`278`, `64`/`91`** |
+
+🔴 **So `16.2`% overstates absence in this layer**, and p139's *«`0` of `9`»* — measured over
+**npm** packages — does not generalise to it. 🟢 **The durable form of the figure is per layer,
+with the layer named**, which is pre-registered rather than asserted.
+
+🆕 🔴 **`T319` — `NOASSERTION` is now a reliable signal of something, and it is not «unknown».**
+Third instance in two passes: `TrenTorch` *(PolyForm Noncommercial)*, `frappe/education`
+*(`19` bytes of declaration)*, and this pass 🔴
+[`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) *(`7 705` B,
+**`NONCOMMERCIAL-NOT-OSI`**, `79`★, an AI-native K-12→university platform)*. 🟢 **Read the file,
+not the field** — and the cost of not doing so is a deliverable built on a licence that bars it.
+
+🆕 🟡 **`T320` — the regulatory centre of gravity moved from «AI acts» to instruments that were
+already in force.** Three measured this pass, none of them an AI statute:
+
+| region | the instrument that binds NOW | not |
+|---|---|---|
+| EMEA | 🆕 Article `4` **AI-literacy duty, since `2025-02-02`**; Article `5` **emotion-inference ban**; Article `50` marking since `2026-08-02` | 🔴 Annex III high-risk, deferred to `2027-12-02` |
+| LATAM | 🔴 Chile's **Ley `21.719`** data-protection/profiling regime, **in force `2026-12-01`** | 🔴 Chile's AI bill, second constitutional stage |
+| North America | 🔴 **Maryland `S.B. 720`** *(AI not the primary basis for grading, discipline or placement, since `2026-06-01`)*; Ohio's district-policy mandate *(`2026-07-01`)* | 🟡 a federal framework that may preempt them |
+
+🔵 **The pattern is the same in all three: a general-purpose obligation reaches the education
+deliverable before the education-specific rule does.** 🟢 For a studio this is good news — the
+artefacts are the ones engineering can produce *(a marking layer, a profiling record, a
+human-in-the-loop grading trail)*, not a conformity programme waiting on `2027`.
+
+🆕 🟡 **`T321` — the appetite curve may have turned in one region, and only one source
+differences it.** The Digital Education Council's `2026` higher-education survey has faculty
+intent to use AI in **US & Canada down `76`% → `67`%** year over year, other regions steady.
+🔴 **One source, secondary, and it measures intent rather than deployment** — recorded because
+it is the only year-over-year regional difference any channel returned, and because it points
+the opposite way to every vendor trend piece in the same sweep.
+
+### 🔴 Carried, and sharpened: what this KB still cannot measure
+
+🔴 **Flow.** `github.com/trending` `403`, **fourth consecutive pass**, code recorded.
+🔴 **Agentic market size.** No figure, **fifth pass**.
+🔴 **The `2026` market estimates reached this pass disagree by `28`%** *(`$9.58`bn vs `$12.3`bn)*
+and a third projects `$32.27`bn by `2030` on a different basis. 🟢 This page's standing rule
+holds: **publish the spread, never the midpoint.**
 
 ## Pass 196 — 2026-10-14
 

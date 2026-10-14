@@ -1,0 +1,7 @@
+limb	rows	agreement	divergence	who_was_right
+OWN-GRANT-AT-ROOT payloads	3	3/3 EXACT - same family AND same byte count on every row	0	both; independent confirmation
+Lumi licence-text population	union 16	14 paths in common, same family, same bytes on 13	3	SPLIT - each instrument missed a row the other found
+Lumi BranchingScenario font bytes	1	0	1	THE CONCURRENT PASS. 11560 is correct; this instrument's text-mode read normalised 202 CRLF endings
+Lumi core/fonts/open-sans/LICENSE-2.0.txt	1	0	1	THIS PASS. Their depth/filter did not return it; it is a real Apache-2.0 text at 11358 B
+Lumi client/assets/legal/eula.html	1	0	1	THE CONCURRENT PASS. A 259095 B End-User Licence; this instrument's name filter only matched licen[cs]e/copying
+interoperability-layer CONCLUSION	-	AGREE	0	both - Lumi grants nothing of its own; every text is vendored. Same conclusion from two different populations

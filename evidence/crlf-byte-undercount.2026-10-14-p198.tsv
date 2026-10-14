@@ -1,0 +1,6 @@
+file	true_bytes_wc	published_by_this_instrument	crlf_endings	delta	verdict
+Lumieducation/Lumi assets/h5p/libraries/H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt	11560	11358	202	202	CORRECTED - this instrument under-reported
+Lumieducation/Lumi assets/h5p/core/fonts/open-sans/LICENSE-2.0.txt	11358	11358	0	0	correct - LF file; NOT the same bytes as the row above
+all 30 root-licence-sweep rows	=	=	0	0	correct - every shelf row read this pass is LF
+all 3 OWN-GRANT-AT-ROOT payloads	=	=	0	0	correct - and independently confirmed byte-for-byte by the concurrent pass
+all 13 other Lumi texts	=	=	0	0	correct

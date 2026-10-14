@@ -1,0 +1,12 @@
+slug	exists	bytes_p197	family_p197	read_verdict	page_verdict	pages_with_figure	other_figures_or_slugs
+nakafaai/nakafa.com	YES	7705	NONCOMMERCIAL-NOT-OSI	READ	SLUG-ABSENT	-	-
+langfuse/langfuse-workshop	YES	1073	MIT	READ	SLUG-ABSENT	-	-
+llwand1/xuelian-agent	YES	1062	MIT	READ	SLUG-ABSENT	-	-
+marcusgreen/moodle-qtype_aitext	YES	0	-	ABSENCE-ENUMERATED	SLUG-ABSENT	-	-
+bycs-lp/moodle-local_ai_manager	YES	0	-	ABSENCE-ENUMERATED	SLUG-ABSENT	-	-
+bycs-lp/moodle-block_ai_chat	YES	0	-	ABSENCE-ENUMERATED	SLUG-ABSENT	-	-
+human2human-ai/moodle-tool_human2human	YES	35149	GPL-3.0	READ	SLUG-ABSENT	-	-
+microsoft/moodle-ai-assistant	YES	1084	MIT	READ	SLUG-ABSENT	-	-
+cgrevisse/moodle-qbank_genai	YES	35178	GPL-3.0	READ	SLUG-NO-FIGURE	-	-
+ANFAIA/SkillNet	YES	10758	Apache-2.0	READ	SLUG-ABSENT	-	-
+bigdata-ustc/Agent4Edu	YES	0	-	ABSENCE-ENUMERATED	SLUG-NO-FIGURE	-	-

@@ -3,7 +3,7 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
-## Pass 197 — 2026-10-14
+## Pass 198 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
 
@@ -79,6 +79,69 @@ channel. 🔴 **`microsoft/autogen` reads `MIT` on the channel too, and its root
 count the split.** If Microsoft's education repos carry the same dual-file shape, every `MIT`
 this KB has recorded for a Microsoft row is *"right family, wrong file"* — and the count is
 the finding.
+
+## Pass 197 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+### 🔴 The flow lane, probed and dated — `403`, fourth consecutive pass
+
+p196 pre-registered: *«probe `github.com/trending` once per pass and record the code EVEN WHEN
+it is `403`; it returns `200` → flow is measurable again; it stays `403` → the `403` series is
+itself the finding, dated pass by pass»*. 🔴 **Limb `2`.**
+
+| address | code | bytes |
+|---|---|---|
+| `https://github.com/trending` | 🔴 **`403`** | `249` |
+| `https://github.com/trending/python?since=daily` | 🔴 **`403`** | `378` |
+| `https://api.github.com/rate_limit` | 🟢 `200` | `1 923` |
+| `https://api.github.com/repos/openedx/XBlock` | 🔴 **`403`** | `378` |
+| 🟢 `https://raw.githubusercontent.com/openedx/XBlock/master/LICENSE.TXT` | 🟢 **`200`** | 🟢 **`11 358`** |
+| `https://eur-lex.europa.eu/` | 🔴 **`000`** *(does not resolve)* | `0` |
+
+🟢 **The series, dated:** `403` at p194→p195 *(first)*, p195, p196, **p197**. 🔵 The byte lane is
+the one that still answers, and it answered `11 358` B on the very payload p196 found and could
+not read — **the same number the tree channel measured through `git cat-file` this pass.** Two
+independent channels, one figure.
+
+### 🟢 The ranked channel, re-run per language — p196's action, and the mechanism refuted
+
+| query | rows |
+|---|---|
+| `education AI agent language:typescript stars:>20 pushed:>2026-08-01` | `5` |
+| 🔴 `… language:php stars:>10 …` | 🔴 **`0`** |
+| 🔴 `… language:java stars:>20 …` | 🔴 **`0`** |
+| 🟢 `moodle AI language:php pushed:>2026-06-01` | 🟢 **`198`** |
+
+🔴 **The language filter was NOT the bias. The word `agent` was.** 🔵 A ranked search is a
+vocabulary match, and a layer that does not use your vocabulary is invisible to it in **any**
+language. 🟡 So *«`198`»* is also not a trending figure — it is a **population** figure for a
+layer this KB had never sampled, and the shelf gains `10` rows from it with licences read from
+bytes *(see [`agents/trending.md`](../agents/trending.md))*.
+
+### 🟢 The two no-grant-at-root rows, read by the tree channel — p196's third action
+
+p196 pre-registered: *«read the `2` no-grant-at-root rows with `P441`'s tree channel, not a
+filename list: a grant below root → they join the shelf; absence enumerated → they are
+all-rights-reserved and must not be recommended»*.
+
+🔵 Run as part of the `88`-row tree sweep p196 itself completed, and extended here to the rows
+this pass touched: of the `7` `ABSENCE-ENUMERATED` population rows, 🟢 **`3` carry an operative
+grant in their SOURCE HEADERS** *(the Moodle plugin layer: `40`/`50`, `255`/`278`, `64`/`91`
+files)*, and 🔴 **`8` carry none in any header**. 🔴 **But `NO-HEADER-GRANT` is not
+`all-rights-reserved`**: the header channel cannot see a CC declaration, and
+[`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) is
+this corpus's proof — `CC-BY-NC-ND` in its README, known to this KB since p854, **invisible to
+the instrument**. 🟢 So the recommendation bar stands *(do not recommend)* and the **label** is
+corrected to what was measured.
+
+### 🔜 Pre-registered for p198
+
+| action | 🟢 limb `1` | 🔴 limb `2` |
+|---|---|---|
+| Probe `github.com/trending` again and date the code | `200` → flow is back, say so on the day | `403` → fifth entry in the series |
+| Query the ranked channel by the plugin layer's **own** vocabulary, across Chamilo / Canvas / Open edX | other LMS plugin shelves exist → the layer is bigger than Moodle | nothing → Moodle is the only live plugin economy, which is the finding |
+| Read `raw.githubusercontent.com` and `git cat-file` on the **same** `20` payloads and diff the byte counts | they agree → the two byte lanes are interchangeable and either may be cited | they differ → one strips or adds, and name which |
 
 ## Pass 196 — 2026-10-14
 

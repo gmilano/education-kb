@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## 🔜 Registered for p198 — pre-registered with falsifiers
+
+🔵 **This file is the register, and it had drifted.** Passes `192`–`197` registered their
+actions in the heads of the eight pages instead of here, so the block below this one is still
+headed *"Registered for p192"*. 🟢 **p197 brings the register back to one place**, with the
+actions as they were written in this pass's page heads, so a reader does not have to reconstruct
+them from eight files.
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🟢 **`ACTION NW`** — read the register first. It has fired two passes running | [`compose/patterns.md`](../compose/patterns.md) `P0a` | 🟢 **limb `1`:** prior art found → cite and spend the pass elsewhere. 🔴 **limb `2`:** nothing found → the build is genuinely new |
+| 🟢 **`ACTION NX`** — run `SUITE_UNDER_TEST=<path> run_from_dirs.sh` over **every** suite in `compose/code/` | [`compose/code/p197-suite-path-independence/`](../compose/code/p197-suite-path-independence/) *(`19`/`19`; `207`/`207` from `6` forms)* | 🟢 **limb `1`:** all path-independent → the class is closed shelf-wide. 🔴 **limb `2`:** some disagree → the count each published is its invocation form, **and name them**. 🔵 One is already known: [`p107-git-lane-census/census.sh`](../compose/code/p107-git-lane-census/) takes its list as `$1` **after** a `cd` |
+| 🟢 **`ACTION NY`** — run the header channel over the **whole** `198`-row Moodle/LMS-plugin layer, not `3` rows | [`compose/code/p197-grant-read/result.headers11.2026-10-14-p197.tsv`](../compose/code/p197-grant-read/) *(`3`/`3` `GRANT_GPL`)* | 🟢 **limb `1`:** the rate holds → restate the shelf's no-licence rate **per layer, with the layer named**. 🔴 **limb `2`:** it does not → the `3` are a publisher convention and the layer claim dies |
+| 🔴 **`ACTION NZ`** — add a **declaration-line** reader to `lib/`, with p195's `PageLM`, `learner-verse` and `graspful` payloads as REQUIRED negative cases | `lib/fixtures-p854/` + p195's three restrictive-read-as-`MIT` rows | 🟢 **limb `1`:** it resolves `xiaolai` *(`CC-BY-NC-ND-3.0`)* **and rejects all three dependency-mentions** → promote it and `Gap 440`-inside-`lib/` closes. 🔴 **limb `2`:** it accepts one → the class p195 measured is back and **the reader must not ship** |
+| 🟡 **`ACTION OA`** — remove `eula` from `is_licence_path`, or justify keeping it | [`compose/code/lib/licence_path.sh`](../compose/code/lib/) + `Lumi`'s `259 095` B `client/assets/legal/eula.html` | 🟢 **limb `1`:** an EULA stops counting as a grant and the `28` cases still pass → fixed in one place. 🔴 **limb `2`:** some row needs `eula` found → **say which**, and split the predicate by purpose |
+| 🟡 **`ACTION OB`** — decide `is_bundled` by **copyright holder**, not by path | [`compose/code/p197-grant-read/result.lumi-15.2026-10-14-p197.tsv`](../compose/code/p197-grant-read/) *(`14` third-party texts under `assets/h5p/libraries/`)* | 🟢 **limb `1`:** holder-vs-owner separates them on this corpus → `P198-D`'s bill of materials becomes mechanical. 🔴 **limb `2`:** holders are absent or ambiguous on ≥`1` row → name it; a vendored text with no copyright line needs a different discriminator |
+| 🟡 **`ACTION OC`** — exclude **placeholder owners** in the population extractor *(`yourusername`, `your-org`, `username`, `example`)* | [`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/) + `yourusername/scholarmate` | 🟢 **limb `1`:** `494` → `493` and no real row is lost. 🔴 **limb `2`:** a real owner matches → **the rule is a list again**, and `P441` says find the property instead |
+| 🟡 **`ACTION OD`** — compare page-published **families**, not only byte counts, over the `494` | [`compose/code/p197-census-vs-pages/`](../compose/code/p197-census-vs-pages/) *(`16` agree / `0` disagree on `30` rows, bytes only)* | 🟢 **limb `1`:** families agree → the cross-channel validation is complete. 🔴 **limb `2`:** one diverges → it is a **published-licence error** and the correction is the pass |
+| 🟡 **`ACTION OE`** — query the ranked channel by the plugin layer's **own** vocabulary *(`plugin`, `qtype`, `block`, `local`, `tool`)* across Chamilo, Canvas and Open edX | [`repos/trending.md`](../repos/trending.md) *(`moodle AI language:php` → `198`; `education AI agent language:php` → `0`)* | 🟢 **limb `1`:** other LMS plugin shelves exist → the agent layer is far larger than published. 🔴 **limb `2`:** nothing returns → **Moodle is the only live plugin economy**, which is itself the finding |
+| 🟡 **`ACTION OG`** — probe `github.com/trending` again and date the code | [`repos/trending.md`](../repos/trending.md) *(`403` ×`4`)* | 🟢 **limb `1`:** `200` → flow is measurable again, say so on the day. 🔴 **limb `2`:** `403` → fifth dated entry in the series |
+| 🔴 **`ACTION MN`** *(carried, a human decides, **TWELFTH** pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` line in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is unchanged, plus 🆕 `nakafaai/nakafa.com` and 🆕 `bigdata-ustc/Agent4Edu` *(no grant on any path or header)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step permanently. 🔵 **Still NOT RUN: an outward-facing write on other people's repositories, and this run is unattended** |
+
+🔵 **`ACTION OF` is SKIPPED as an id, deliberately.** The string *"ACTION OF"* occurs in the
+MIT licence's own text — *"WHETHER IN AN ACTION OF CONTRACT"* — and this KB stores licence
+payloads as fixtures, so `7` committed files already match it. 🟢 An id that cannot be grepped
+in its own repository is not an id; the sequence continues at `OG`.
+
+### 🆕 Gaps opened, closed and re-stated by p197
+
+- 🆕 🟢 **`Gap 445` CLOSED on open — an instrument's REACH published as a property of the
+  world.** Three instances in one pass: a suite whose denominator was its invocation form, a
+  *"never probed"* list that was really *"absent from one TSV"*, and a *"no licence"* rate that
+  was really *"no licence FILE"*. 🔵 The three are not three mistakes; they are one mistake with
+  three surfaces, and the second and third were **published figures an engagement would act
+  on.** 🟢 The remedy that generalises: **every published number names the channel that produced
+  it**, and `P198-B`'s four-channel table is the first instance.
+- 🆕 🔴 **`Gap 446` — `p854`'s capability never reached a caller.** `family_of` answers
+  `CC-BY-NC-ND-3.0` on a declaration **line** and `UNCLASSIFIED` on the **file**, and the
+  extraction lives in the test. 🔵 `Gap 440` *(a correction that did not travel)* **inside
+  `lib/`**, which is the one place this KB assumed it could not happen. Not fixed here, for a
+  measured reason: p195's three-restrictive-licences-read-as-`MIT` class. `ACTION NZ`.
+- 🆕 🔴 **`Gap 447` — existence is three states and two channels of this KB disagreed over a
+  FLAG.** `ls-remote --exit-code -h` returns `2` for *"no matching refs"*; `--heads --tags`
+  returns `0` with no output. 🟢 An empty repository **exists**: it has no licence because it has
+  no files. 🔵 Closed in [`p197-grant-read/read_grants.sh`](../compose/code/p197-grant-read/),
+  and the `494`-row census carries both states.
+- 🆕 🔴 **`Gap 441` RECURRED, against the pass that cited it.** This pass's comparator accused
+  two rows and both accusations were its own — a README size the page itself labelled, and a
+  figure belonging to a second slug in the same cell. 🟢 Closed with two rules and `10`/`10`
+  tests, **two of whose cases are those accusations with the real page text**.
+- 🟢 **`Gap 434`/p196's `88`-row absence class NARROWS from the other side.** The `3`
+  `OWN-GRANT-AT-ROOT` payloads are read and real *(`Apache-2.0` `11 358` B, `LGPL-3.0`
+  `7 651` B, `MIT` `1 079` B)*. 🔴 **And p196's limb double-counted them: `16.2`% is confirmed,
+  not lowered.**
+- 🟢 **`Gap 433`'s neighbour — p195's *"the interoperability layer grants nothing"* SURVIVES on
+  better evidence.** `Lumi`'s `15` texts are `14` third-party grants and one `259 095` B EULA;
+  its own grants number `0`.
+- 🟡 **`Gap 444` *(the region-heading gate counts an append-only page's history)* stands,
+  unchanged.** This pass's block in [`intel/market.md`](market.md) is well-formed — one
+  `## Opportunities by region`, five `###` subsections, all five values in vocabulary — and the
+  file-wide count rises by `1` again, as the gap predicts.
+
 ## 🔜 Registered for p192 — pre-registered with falsifiers
 
 🟢 **Written BEFORE this pass's prose, for the second pass running** — p190 fixed the

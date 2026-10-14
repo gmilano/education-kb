@@ -14,4 +14,5 @@ assets/h5p/libraries/H5P.InteractiveVideo-1.27/LICENCE.md	MIT	GRANT	1059	VENDORE
 assets/h5p/libraries/H5P.MultiMediaChoice-0.3/LICENCE.md	MIT	GRANT	1059	VENDORED - third-party H5P content library
 assets/h5p/libraries/H5P.SingleChoiceSet-1.11/LICENSE.md	MIT	GRANT	1067	VENDORED - third-party H5P content library
 assets/h5p/libraries/H5P.ThreeImage-0.5/LICENSE.md	MIT	GRANT	1071	VENDORED - third-party H5P content library
-assets/h5p/libraries/H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt	Apache-2.0	GRANT	11358	VENDORED - bundled font
+assets/h5p/libraries/H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt	Apache-2.0	GRANT	11560	VENDORED - bundled font; CORRECTED from 11358 (202 CRLF endings; see the CRLF note)
+client/assets/legal/eula.html	UNCLASSIFIED	NON-GRANT-TO-LICENSEE	259095	END-USER LICENCE - MISSED by this instrument's licen[cs]e/copying name filter; found by the concurrent pass. Union population is 16, not 15

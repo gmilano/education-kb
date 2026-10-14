@@ -3,7 +3,72 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
-## Pass 197 — 2026-10-14
+## Pass 198 — 2026-10-14
+
+### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims
+
+🔵 **p197 was published by another session while this pass was mid-flight** *(commit `9cc3e97`,
+`12:51`Z)*. 🟢 **It is the better outcome on three of the limbs, and the corrections are made
+here rather than left for a reader to notice:**
+
+| what this pass recorded | 🟢 what p197 actually established | correction |
+|---|---|---|
+| 🔴 *"the execution lane is CLOSED; all `290` recipes are unrunnable"* | 🟢 **p197 RAN `lib/test_license_family.sh`: `207`/`207` from SIX invocation forms, `0` skips** | 🔴 **The closure is SESSION-SCOPED, not environmental.** `bash <repo script>` is denied by *this* session's permission classifier. It is a property of the reader, not of the KB |
+| 🔴 the suite fixture fix is *"half-answered, blocked"* | 🟢 **DONE and better than pre-registered.** p196's diagnosis was wrong: the pre-fix suite yields **three** denominators *(`207`/`183`/`163`)*, and the cause is not the directory but whether a relative `dirname` survives the suite's own `cd`. 🔴 Through a symlink the classifier never loaded and the suite **still printed a total** *(`19`/`163`)* | ✅ **closed by p197** |
+| 🔴 *"the `26` population rows no census has reached are still unreached"* | 🔴 **p197: that number is FALSE AS STATED.** `30` folded rows probed; `16` were already published with the **same byte figure** | ✅ **the `26` was this KB's own instrument reach, not a property of the shelf** |
+
+🟢 **And p197's headline generalises this pass's own finding:** *three published numbers
+measured an instrument's reach rather than a property of the world.* 🔴 **This pass supplies a
+fourth, below — a byte count of its own that measured its reader.**
+
+### 🆕 🟢 Two independent instruments, same rows, same hour — and the cross-check paid
+
+🔵 Both passes read the same two limbs. 🟢 **`OWN-GRANT-AT-ROOT`: `3`/`3` EXACT — same family
+and the same byte count on every row**, from two separately written probes:
+
+| slug | p197 | 🟢 this pass | agree? |
+|---|---|---|---|
+| `kstateome/lti-launch` | `LGPL-3.0` · `7 651` | `LGPL-3.0` · `7 651` | 🟢 **exact** |
+| `open-spaced-repetition/fsrs4anki-helper` | `MIT` · `1 079` | `MIT` · `1 079` | 🟢 **exact** |
+| `openedx/XBlock` | `Apache-2.0` · `11 358` | `Apache-2.0` · `11 358` | 🟢 **exact** |
+
+🔴 **`Lumi`'s population DIVERGED, and each instrument missed a row the other found:**
+
+| row | p197 | this pass | 🟢 who was right |
+|---|---|---|---|
+| `H5P.BranchingScenario-1.8/src/fonts/LICENSE.txt` | `11 560` | 🔴 `11 358` | 🔴 **p197.** See the CRLF defect below |
+| `assets/h5p/core/fonts/open-sans/LICENSE-2.0.txt` | 🔴 not returned | 🟢 `Apache-2.0` · `11 358` | 🟢 **this pass** |
+| `client/assets/legal/eula.html` *(`259 095` B)* | 🟢 returned | 🔴 missed | 🔴 **p197** — a `259` KB **End-User Licence**, and this pass's name filter only matched `licen[cs]e`/`copying` |
+
+🟢 **The union population is `16`, not `15`** — and 🟢 **both passes reach the same conclusion
+from different populations: `Lumi` grants nothing of its own; every text is vendored.** 🔵
+[`evidence/cross-pass-agreement.2026-10-14-p198.tsv`](../evidence/cross-pass-agreement.2026-10-14-p198.tsv).
+
+### 🆕 🔴 The fourth number that measured its reader: this pass's own byte counts
+
+🔴 **Python text mode applies UNIVERSAL NEWLINES.** Reading a licence as text and reporting
+`len(text.encode())` loses **one byte per CRLF line**, so the figure is the LF-normalised
+length, not the file's size:
+
+```
+  BranchingScenario font LICENSE.txt   wc -c = 11 560   text-mode = 11 358   CRLF = 202
+```
+
+🟢 **`11 560 − 11 358 = 202`, exactly the CRLF count.** 🟢 **Blast radius, measured rather than
+assumed: ONE row.** Every other text read this pass — all `30` root-licence rows, all `3` root
+payloads, the other `13` `Lumi` texts — is LF, `delta 0`, so 🟢 **every byte figure in the
+tables below stands**, and the `3` root payloads are independently confirmed byte-for-byte by
+p197.
+
+🔴 **But the band table was computed from these counts**, so a CRLF row would have shifted a
+ratio silently. 🟢 **The fix is in `p198-title-line-family/`: read in BINARY, report `len(raw)`,
+and report the CRLF count alongside it** so a reflowed text is visible as reflowed rather than
+showing up as a band failure. 🔵 [`evidence/crlf-byte-undercount.2026-10-14-p198.tsv`](../evidence/crlf-byte-undercount.2026-10-14-p198.tsv).
+
+🔵 **The lesson, and it is the same one three times over now:** `GPL-2.0`'s preamble made a
+*window* report the wrong family; a filename list made a *first match* report the wrong file;
+text mode made a *byte count* report the wrong size. 🟢 **Every one is a reader's property
+published as the world's.**
 
 🆕 🔴 **A lane this KB has used since its first pass closed this pass: the KB's own `290`
 recipes are READABLE BUT NOT RUNNABLE.** `bash <repo script>` is denied by the session's
@@ -18,9 +83,9 @@ in this KB's stored data, and one in the pass's own reasoning.
 | 🟢 **Classify the `3` `OWN-GRANT-AT-ROOT` payloads** | 🟢 **All `3` are REAL grants**, not templates. 🔴 **But the limb's own prediction was mis-specified** — see below |
 | 🟢 **Re-read the interoperability-layer claim against `Lumi`'s `15` texts** | 🟢 **CLAIM SURVIVES, now on bytes.** `0` at the root; all `15` are vendored `H5P.*` libraries and bundled fonts |
 | 🟡 **Derive a notice-form band from a wider corpus** | 🟡 **SPLITS BY FAMILY.** Holds for `GPL-3.0`/`AGPL-3.0`/`Apache-2.0`/`ECL-2.0`; 🔴 **FAILS for `LGPL-3.0` and `GPL-2.0`**, each for a different reason |
-| 🔴 **Case-fold de-dup + re-run the `494` existence census** | 🔴 **BLOCKED — execution lane.** The extractors exist and cannot be run. Not silently dropped: recorded as blocked |
-| 🔴 **Probe the `26` unreached population rows** | 🔴 **BLOCKED — same lane** |
-| 🔴 **Fix `lib/test_license_family.sh` fixture resolution and re-run from `3` directories** | 🔴 **HALF-ANSWERED.** The defect is now NAMED by reading *(a `cd` on line `14` plus `${BASH_SOURCE[0]}`-relative paths below it)*, but a patch that cannot be run is not shipped into `lib/` |
+| 🟡 **Case-fold de-dup + re-run the `494` existence census** | 🔴 **BLOCKED in this session** *(execution lane)*. ✅ **Closed by the concurrent p197**, which ran it |
+| 🟡 **Probe the `26` unreached population rows** | 🔴 **BLOCKED in this session.** ✅ **p197 closed it and refuted the premise: the `26` is FALSE as stated** — `30` folded rows probed, `16` already published with the same byte figure |
+| 🟡 **Fix `lib/test_license_family.sh` fixture resolution and re-run from `3` directories** | 🔴 **Named by reading only here** *(a `cd` on line `14` plus `${BASH_SOURCE[0]}`-relative paths below it)*; an unrun patch was not shipped into `lib/`. ✅ **p197 ran it: `207`/`207` from SIX forms, `0` skips** — and found the real cause is not the directory but whether a relative `dirname` survives the `cd` |
 
 ### 🔴 The limb that fired and still refuted its own arithmetic
 
@@ -65,7 +130,7 @@ for ten passes. All four are `GPL-2.0`. ZERO are LGPL.**
 | [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 `LGPL?` | 🟡 **`GPL-2.0`** | `66 467` | 🔴 a **vendored** `fckeditor` file, tri-licensed `GPL`+`LGPL`+`MPL` — first title only |
 
 🔵 The instrument, its negative controls and the limits it declares are in
-[`compose/code/p197-title-line-family/`](../compose/code/p197-title-line-family/); the
+[`compose/code/p198-title-line-family/`](../compose/code/p198-title-line-family/); the
 unrun patch to `lib/` is recorded there as a **proposal**, deliberately not applied.
 
 ### 🟢 The agents shelf — every licence read from BYTES this pass
@@ -122,6 +187,79 @@ licence-named entry, then decide. Never first-match-wins.
 | Enumerate the ROOT of all `494` shelf rows and count how many carry MORE THAN ONE licence-named entry | `≤5` rows → AutoGen is an exception and first-match costs little | `>5` → every licence column in this KB built from a list is suspect, and the number says how much |
 | Derive the `LGPL-3.0` **addendum-form** band from `≥10` rows | a stable `~7.6` KB band → `LGPL-3.0` gets a second anchor and the family becomes bandable | it scatters → `LGPL-3.0` is **full-text-only**, permanently |
 | Resolve `sonic-pi`'s `AGPL?` and every unresolved `?` family on the shelf | all resolve → the `?` class is a reading gap, not a corpus property | some cannot → name the document shape that defeats a title line |
+
+## Pass 197 — 2026-10-14
+
+🆕 🟢 **`10` new rows, every licence read from the bytes of the tree — and the layer they come
+from is the one p196's channel could not see.** 🔴 **p196 blamed its Python language filter.
+The filter was the WORD.**
+
+| query to the ranked channel | rows |
+|---|---|
+| `education AI agent language:typescript stars:>20` | `5` |
+| 🔴 `education AI agent language:php stars:>10` | 🔴 **`0`** |
+| 🔴 `education AI agent language:java stars:>20` | 🔴 **`0`** |
+| 🟢 `moodle AI language:php pushed:>2026-06-01` | 🟢 **`198`** |
+
+🔵 **The LMS-plugin world does not call itself *«agent»***, so no language switch recovers it —
+only a vocabulary switch does. 🟢 p196's limb `1` *(«the new rows cluster in PHP/Java, the
+LMS-plugin world»)* **fires on the data and fails on the stated mechanism.**
+
+### 🟢 The new rows — licence from bytes, no channel field trusted
+
+| agent | licence *(read from bytes)* | what it is |
+|---|---|---|
+| 🟢 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **`MIT`** *(`LICENSE`, `1 084` B)* | Microsoft's own Moodle AI assistant accelerator — **permissive inside a `GPL` plugin world**, which is the unusual part |
+| 🟢 [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | 🟢 **`Apache-2.0`** *(`10 758` B)* | agents that generate a course and tutor the learner; early, and the **only `Apache-2.0`** row in this batch, so the patent grant travels |
+| 🟢 [`langfuse/langfuse-workshop`](https://github.com/langfuse/langfuse-workshop) | 🟢 **`MIT`** *(`1 073` B)* | a TypeScript agent built to TEACH the AI-engineering loop: tracing, prompt management, datasets, evaluation |
+| 🟢 [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **`MIT`** *(`1 062` B)* | StudentBuddy — study agent for programming beginners: co-reading, question generation, per-item explanation, review. Local-first, self-hostable |
+| 🟡 [`human2human-ai/moodle-tool_human2human`](https://github.com/human2human-ai/moodle-tool_human2human) | 🟡 **`GPL-3.0`** *(`35 149` B)* | AI-facilitated **oral exams**, role plays and debates inside any Moodle course. Created `2026-10-05` — the newest row on this shelf |
+| 🟡 [`cgrevisse/moodle-qbank_genai`](https://github.com/cgrevisse/moodle-qbank_genai) | 🟡 **`GPL-3.0`** *(`35 178` B)* | generative question-bank plugin |
+| 🟢 [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🟢 **`GPL` by source header** *(`40` of `50` files; no licence FILE)* | an LLM-graded free-text **question type** — the closest thing to an assessment agent that runs inside the LMS |
+| 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟢 **`GPL` by source header** *(`255` of `278` files)* | a provider/quota **manager** for AI inside Moodle — the governance layer a district actually needs |
+| 🟢 [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 **`GPL` by source header** *(`64` of `91` files)* | the chat surface that sits on top of that manager |
+| 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **`NONCOMMERCIAL-NOT-OSI`** *(`7 705` B)* | AI-native K-12→university learning platform. 🔴 **The channel reports `NOASSERTION`; the bytes bar commercial use — do not put it in a deliverable** |
+
+🔴 **`NOASSERTION` has now hidden a commercial barrier three times in two passes** —
+`TrenTorch` *(PolyForm Noncommercial)*, `frappe/education` *(`19` bytes of declaration)* and
+this one. 🟢 **The rule stands and is cheap: read the file, not the field.**
+
+### 🟢 The `3` `OWN-GRANT-AT-ROOT` payloads p196 found and did not read
+
+| row | path | bytes | family |
+|---|---|---|---|
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `LICENSE.TXT` | `11 358` | 🟢 **`Apache-2.0`** |
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | `License.txt` | `7 651` | 🟢 **`LGPL-3.0`** |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `License` | `1 079` | 🟢 **`MIT`** |
+
+🟢 **Real grants, all three — p196's limb `1`.** 🔴 **And its arithmetic was wrong:** `16.2`%
+does not fall, because p196 subtracted these `12` rows when it computed it. 🔵 A limb can be
+right as a prediction and wrong as a sum, and whoever runs it owes the sum again.
+
+🆕 🟢 **`kstateome/lti-launch` lands on `7 651` B — p196's `LGPL-3.0` *"GPL by reference"*
+interval, derived from `odoo/odoo` alone.** `unslothai/notebooks` lands on `7 652` B. **The
+interval has corpus outside the row that produced it.**
+
+### 🔴 The non-commercial rows on this shelf, re-read and unchanged
+
+🔴 [`NirDiamant/RAG_Techniques`](https://github.com/NirDiamant/RAG_Techniques) `5 644` B ·
+🔴 [`NirDiamant/GenAI_Agents`](https://github.com/NirDiamant/GenAI_Agents) `5 644` B ·
+🔴 [`NirDiamant/agents-towards-production`](https://github.com/NirDiamant/agents-towards-production)
+`6 107` B — all **`NONCOMMERCIAL-NOT-OSI`**, re-measured by an independent channel this pass and
+**byte-identical to what this page already published**. 🟢 They are the most-cited agent
+curricula in this corpus and **none of them may enter a client deliverable.**
+
+### 🔴 And one correction that is about this KB, not about a repo
+
+🔴 **`p854`'s capability never reached a caller.** Measured on the same bytes:
+`family_of(whole README)` → 🔴 **`UNCLASSIFIED`**; `family_of(declaration line)` → 🟢
+**`CC-BY-NC-ND-3.0`**. The extraction that makes it work lives **in the test**, so every
+channel of this KB reads
+[`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) as
+unlicensed. 🔵 `Gap 440` inside `lib/`. Not fixed this pass, for a measured reason: p195 found
+three restrictive licences read as `MIT` by a hardened classifier, and a declaration reader
+that cannot tell *«this work is licensed under X»* from *«dependency Y is MIT»* brings that
+class back.
 
 ## Pass 196 — 2026-10-14
 

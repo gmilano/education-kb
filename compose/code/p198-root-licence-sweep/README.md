@@ -42,12 +42,12 @@ entry, then decide** — never first-match-wins. The `families` / `names_multipl
 `p441-tree-licence-enumeration` already encode this; `P0a` found it, and the honest record is
 that this pass restated the lesson badly before its own data corrected it.
 
-## What `result.2026-10-14-p197.tsv` is, and is not
+## What `result.2026-10-14-p198.tsv` is, and is not
 
 It is `30` education rows, each licence classified from **bytes** by
-`p197-title-line-family/family_title_line.py`. The `family` column is sound. 🔴 **The `path`
+`p198-title-line-family/family_title_line.py`. The `family` column is sound. 🔴 **The `path`
 column is first-match and therefore NOT a claim that no other licence file exists** — see
-`evidence/licence-at-wrong-path.2026-10-14-p197.tsv` for the five rows where it matters.
+`evidence/licence-at-wrong-path.2026-10-14-p198.tsv` for the five rows where it matters.
 
 `2` rows came back `LIST-MISS` and were then resolved on the tree channel:
 `formalms/formalms` *(nothing at root; the grant is a translated UI asset)* and
@@ -57,4 +57,4 @@ column is first-match and therefore NOT a claim that no other licence file exist
 
 `probe_root.sh` is recorded for provenance but **was not executed from this directory** — the
 session's permission classifier denies `bash <repo script>` *(`[Code from External]`)*. It ran
-from the scratchpad as own-authored code. See `evidence/lane-census.2026-10-14-p197.tsv`.
+from the scratchpad as own-authored code. See `evidence/lane-census.2026-10-14-p198.tsv`.

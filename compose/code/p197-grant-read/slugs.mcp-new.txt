@@ -1,0 +1,11 @@
+nakafaai/nakafa.com
+langfuse/langfuse-workshop
+llwand1/xuelian-agent
+marcusgreen/moodle-qtype_aitext
+bycs-lp/moodle-local_ai_manager
+bycs-lp/moodle-block_ai_chat
+human2human-ai/moodle-tool_human2human
+microsoft/moodle-ai-assistant
+cgrevisse/moodle-qbank_genai
+ANFAIA/SkillNet
+bigdata-ustc/Agent4Edu

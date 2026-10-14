@@ -31,4 +31,4 @@ licence-title pattern, then read the version from that line and the next non-emp
 
 `p441-tree-licence-enumeration/result.2026-10-07.tsv` carries `LGPL?` in its `families`
 column for four rows. **All four are `GPL-2.0`; none is LGPL.** See
-`evidence/lgpl-question-resolution.2026-10-14-p197.tsv`.
+`evidence/lgpl-question-resolution.2026-10-14-p198.tsv`.
