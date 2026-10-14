@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — `22`% WAS NOT A PROBE ARTEFACT, AND A GRANT HAS A CHANNEL BEFORE IT HAS A PATH
+
+### 🔴 `ACTION PC` CLOSED — limb `1` FALSIFIED, limb `2` CONFIRMED, and a third class exists
+
+🟢 **All `58` rows p203 declared ungranted were re-probed on their TRUE default branch**, not
+on `main`/`master` as p203 probed them. Census:
+[`evidence/pc-ungranted-resolution.2026-10-14-p204.tsv`](../evidence/pc-ungranted-resolution.2026-10-14-p204.tsv).
+
+🔵 **Channel: `git ls-remote --symref` for the default branch, then `raw.githubusercontent.com`
+over inline `curl` for `12` licence path forms** *(`LICENSE` `LICENSE.md` `LICENSE.txt` `LICENCE`
+`LICENCE.md` `license` `license.md` `LICENSE-MIT` `COPYING` `COPYING.md` `LICENSE.rst` `NOTICE`)*.
+
+**Default branches actually in use:** `35` `main` · `18` `master` · 🔴 **`2` `develop`** ·
+🔴 **`1` `release`** · `2` unresolvable. 🔴 **So p203's `main`/`master` probe addressed the
+wrong ref on `3` of `58` rows** — the mechanism limb `1` predicted is **real**.
+
+🔴 **But the magnitude is not.** 🔴 **`0` of `56` rows carry a licence file at ANY of the `12`
+path forms on their own default branch.** Not one. 🟢 **The `3` wrong-ref rows do not resolve
+either**, so correcting the ref recovers **zero** rows.
+
+> 🔵 **Why this is a measurement and not a channel failure.** The same parallel harness was
+> run against a **positive control** in the same session — `adlnet/xAPI-Spec@master/LICENSE`
+> → **`200`** — and the control passed **through the harness**, not beside it. 🔴 **A first
+> draft of this pass reported `0`/`56` before the control existed; that number was not
+> publishable until it did.**
+
+**🟢 So the published figure is corrected in the opposite direction from the one `ACTION PC`
+expected:** 🔴 **`22`% is a MEASUREMENT, not an upper bound.** It may be quoted.
+
+### 🟢 The third class `ACTION PC` did not anticipate: a grant with a channel but no body
+
+🔴 **"No licence file" is not "no grant."** Probing manifests —
+`package.json` `composer.json` `pyproject.toml` `Cargo.toml` `setup.py` `readme.txt` — splits
+the `56` into three:
+
+| class | rows | what a client may rely on |
+|---|---|---|
+| 🔴 **`SILENT-NO-MANIFEST`** | **`36`** | 🔴 **nothing.** No grant in any channel probed |
+| 🔴 **`SILENT-MANIFEST-NO-FIELD`** | **`12`** | 🔴 **nothing.** A manifest exists and declares no licence |
+| 🟡 **`MANIFEST-DECLARED-BODY-ABSENT`** | **`7`** | 🟡 **a declaration, not a licence text** — see the ladder below |
+| 🔴 **`MANIFEST-CONTRADICTION`** | **`1`** | 🔴 **two channels disagree** — `P204-1` |
+| 🟢 **`LOST-ADDRESS-RECOVERED`** | **`1`** | 🟢 the address was stale, not the grant |
+| 🔴 **`UNADJUDICATED-CHANNEL`** | **`1`** | 🔴 this environment cannot decide |
+
+**The `8` manifest-declared rows, read from their own blob:**
+
+| Row | branch | manifest | declares |
+|---|---|---|---|
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | `main` | `package.json` | **MIT** |
+| [MisterCommand/mcp-canvas-lms](https://github.com/MisterCommand/mcp-canvas-lms) | `main` | `package.json` | **MIT** |
+| [Exhabition/brightspace-mcp-rs](https://github.com/Exhabition/brightspace-mcp-rs) | `main` | `package.json` | **MIT** |
+| [LMS-Laravel/LMS-Laravel](https://github.com/LMS-Laravel/LMS-Laravel) | `master` | `composer.json` | **MIT** |
+| [LMS-Laravel/OLD-LMS-Laravel](https://github.com/LMS-Laravel/OLD-LMS-Laravel) | `master` | `composer.json` | **MIT** |
+| [Simon-Initiative/lti-example-tool](https://github.com/Simon-Initiative/lti-example-tool) | `master` | `package.json` | **MIT** |
+| [Lumieducation/Lumi](https://github.com/Lumieducation/Lumi) | `master` | `package.json` | 🔴 **AGPL-3.0** — route around |
+| [LearnPress/learnpress](https://github.com/LearnPress/learnpress) | 🔴 `develop` | `package.json` | 🔴 **`ISC`** — **and `readme.txt` says `GPLv3`**, `P204-1` |
+
+🔵 **The grant-channel ladder this pass establishes, strongest first:** licence **body** at a
+path → **manifest** field with no body → **README** prose → badge. 🔴 **A manifest field is a
+claim about a licence, not the licence**: there is no copyright holder, no year and no warranty
+disclaimer, so a client's counsel gets a name and nothing to read. 🟢 **Usable for a `PoC`;
+🔴 not sufficient for a deliverable without asking upstream to commit the body.**
+
+### 🔴 `P204-1` — the two manifests in one tree disagree, and the COPYLEFT one governs
+
+🔴 **[LearnPress/learnpress](https://github.com/LearnPress/learnpress)** `develop` @ `f9f2d6e2`:
+
+| channel | says |
+|---|---|
+| `package.json` | 🟢 `"license": "ISC"` — permissive |
+| 🔴 `readme.txt` | 🔴 `License: GPLv3` · `License URI: https://www.gnu.org/licenses/gpl-3.0.html` |
+
+🔴 **`readme.txt` is the WordPress plugin manifest — it is the file that governs the
+distributed plugin.** 🟢 **So the shipped payload is `GPL-3.0` and the `package.json` `ISC`
+plausibly covers only the JS build tooling.** 🔴 **A pass that read `package.json` alone would
+have published this row as permissive, and a studio would have built on it.**
+
+🟢 **Measured, not assumed to generalise: `1` of `8`.** The second-channel sweep found **`7` of
+the `8` have no `readme.txt`/`README` licence line at all** —
+[`evidence/pc-manifest-second-channel.2026-10-14-p204.tsv`](../evidence/pc-manifest-second-channel.2026-10-14-p204.tsv).
+🔵 **The mechanism is the WordPress convention, not a general defect**, and it is also the only
+one of the `8` whose default branch is `develop`. 🔴 **But it is a NEW defect class for
+`ACTION PB`: scope is not only path-vs-path, it is channel-vs-channel.**
+
+### 🟢 `Gap 464` closed before it was declared — a lost address, recovered
+
+🔴 **`apereo/opencast` returns `0` refs from `git ls-remote` and `403` from the HTML channel.**
+🟢 **The repository is not dead; the ADDRESS is.** The live tree is
+[**`opencast/opencast`**](https://github.com/opencast/opencast), default branch 🔴 **`develop`**,
+HEAD `ae86c6aa`, and its grant reads from its own blob:
+
+🟢 **`Educational Community License, Version 2.0 (ECL-2.0)`** — and the body states its own
+deviation: *"the Apache 2.0 license, modified to change the scope of the patent grant in
+section 3 to be specific to the needs of the education communities using this license."*
+
+🔴 **So `ECL-2.0` is NOT Apache-2.0 with a new name — its patent grant is NARROWER**, and this
+is an education KB where that family recurs: [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+is the second `ECL-2.0` row measured this pass. 🟢 **Treat `ECL-2.0` as permissive for
+redistribution and 🔴 flag the patent scope in any engagement that ships a patentable
+pipeline.**
+
+🔴 **The other unresolvable row — `cdweaver1992/edfi-mcp-server` — stays UNADJUDICATED.**
+`ls-remote` `0` refs **and** HTML `403`, so this environment cannot tell a moved repo from a
+blocked one. 🔵 **Declared, not guessed.**
+
+### 🟢 `ACTION OZ` CLOSED — limb `2` fires, and the saturation is CODE-shaped
+
+🟢 **The `3` vocabularies p202's census named as unsearched were read in full:**
+
+| vocabulary | repos matching | rendered | **NEW to this KB** | already published | evidence-only |
+|---|---|---|---|---|---|
+| `topic:scorm` | `229` | `20` | 🔴 **`0`** | `18` | `2` |
+| `topic:xapi` | `300` | `20` | 🔴 **`0`** | `16` | `4` |
+| `topic:lti` | `185` | `20` | 🔴 **`0`** | `17` | `3` |
+| **total** | — | **`60`** | 🔴 **`0`** | **`51`** | **`9`** |
+
+🔴 **`0` of `60`.** Census:
+[`evidence/oz-vocabulary-novelty.2026-10-14-p204.tsv`](../evidence/oz-vocabulary-novelty.2026-10-14-p204.tsv).
+🟢 **Both controls ran:** two invented slugs classified `NEW` *(negative)*; `HKUDS/DeepTutor`
+and `adlnet/ADL_LRS` classified `KNOWN` *(positive)*.
+
+🟢 **So limb `2` fires: `ingest/config.json` is ADEQUATE for the code layer and `Gap 461` is
+specific to OER.** 🔴 **Do not rewrite the config.**
+
+🔵 **And the shape of the saturation is the finding.** p203 measured `topic:ai-tutor` at
+`20`/`20` known. p204 measures three interop vocabularies at `60`/`60` known. 🔴 **Every
+SOFTWARE vocabulary this KB has probed is saturated.** 🟢 **The one vocabulary still yielding
+is `topic:open-educational-resources` — `12`/`20` new at p203 — and it is a CONTENT
+vocabulary.** 🟢 **That is the same seam `P203-1` found in the licence column, arriving
+independently through the discovery channel.** `Gap 465`.
+
+🔵 **The `9` evidence-only rows were promoted to a published page this pass** *(they existed
+only inside a census TSV)*: `adlnet/xAPIWrapper` **Apache-2.0** · `RusticiSoftware/TinCanJS`
+**Apache-2.0** · `RusticiSoftware/TinCanPython` **Apache-2.0** *(`3.x`)* ·
+`RusticiSoftware/TinCan_Prototypes` **Apache-2.0** · `adlnet/xapi-profiles` **Apache-2.0** ·
+`csev/wa4e` **BSD** · `ucfopen/lti-template-flask` **MIT** *(deprecated upstream)* ·
+`greenpeace/gpes-html5-scorm-presentation` **MIT** · `S4-NetQuest/react-scorm-provider`
+**MIT** — all blob-read this pass,
+[`evidence/p204-grant-reverification.2026-10-14-p204.tsv`](../evidence/p204-grant-reverification.2026-10-14-p204.tsv).
+🔴 **`frumbert/scorm_debug` and `WebPA/WebPA` have no grant file and join the ungranted
+population.**
+
+### 🟢 Partial input to `ACTION PB`, explicitly NOT a discharge
+
+🟢 **`20` rows already published were re-read from their own blob at a pinned HEAD this pass,
+and `0` corrections were needed.** 🔵 **`ACTION PB`'s limb test is about a misdescribed
+**scope** on the `~60` highest-★ rows and was not run at that scale.** 🔴 **Do not read
+"`0`/`20` corrections" as "limb `2` fires" — it is `20` rows of the wrong sample, reported
+because it is evidence and withheld from the verdict because it is not the test.**
+
+---
+
 ## Pass 203 — 2026-10-14 — `ACTION OV` CLOSES ON LIMB 2, AND THE CARPENTRIES WERE MISSING FOR 202 PASSES
 
 ### 🔴 `ACTION OV`: the `13` unread rows are read, and `4` of `16` are not permissive

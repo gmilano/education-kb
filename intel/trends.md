@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — EVERY SOFTWARE CHANNEL IS SATURATED; THE UNSATURATED ONE IS CONTENT
+
+### 🔴 `T204-1` — saturation is not a vocabulary property, it is a CODE-vs-CONTENT property
+
+🟢 **Three independent discovery channels were measured to exhaustion across two passes:**
+
+| channel | measured | NEW to this KB | kind |
+|---|---|---|---|
+| `topic:ai-tutor` | p203 | 🔴 **`0` of `20`** | code |
+| `topic:scorm` | **p204** | 🔴 **`0` of `20`** | code |
+| `topic:xapi` | **p204** | 🔴 **`0` of `20`** | code |
+| `topic:lti` | **p204** | 🔴 **`0` of `20`** | code |
+| **EMEA regulatory sweep** | **p204** | 🔴 **`0` new facts** | regulation |
+| `topic:open-educational-resources` | p203 | 🟢 **`12` of `20`** | 🟢 **content** |
+| `topic:open-educational-resources` **page `2`** | **p204** | 🟢 **yields** *(see `ACTION PA`)* | 🟢 **content** |
+
+🔴 **`80` of `80` software rows across four code vocabularies were already held.** 🟢 **Controls
+ran on the novelty measurement** — invented slugs classify `NEW`, known rows classify `KNOWN` —
+so the `0` is a measurement, not a broken matcher.
+[`evidence/oz-vocabulary-novelty.2026-10-14-p204.tsv`](../evidence/oz-vocabulary-novelty.2026-10-14-p204.tsv).
+
+🟢 **So the trend this KB should act on is about itself: `204` passes have exhausted the code
+supply of this industry, and the content supply is barely touched.** 🔴 **This arrives
+independently of `P203-1`, which found the same seam inside the licence column** — content
+grants (`CC-*`) behaving differently from software grants. 🟢 **Two unrelated instruments, one
+boundary.** `Gap 465`.
+
+🔵 **Consequence, and it is a budget instruction rather than an observation:** 🔴 **stop
+spending passes on code-vocabulary discovery.** 🟢 **The yield is in (a) OER pagination — `358`
+rows still unread, now REACHABLE (below), (b) non-GitHub channels, and (c) the regional
+primary sources this environment cannot reach.**
+
+### 🟢 `T204-2` — the channel map, measured on both channels this pass
+
+🔴 **`WebFetch`'s DNS is a per-domain ALLOWLIST, not a general resolver — and inline `curl`
+fails on exactly the same domains.** 🟢 **Measured, not inferred:**
+
+| domain | `WebFetch` | inline `curl` | consequence |
+|---|---|---|---|
+| `github.com` *(topic pages)* | 🟢 renders | — | 🟢 **discovery works, and PAGINATES** |
+| `raw.githubusercontent.com` | — | 🟢 **`200`** | 🟢 **grant bodies readable** |
+| `api.github.com` | — | 🔴 `403` | 🔴 no exact star counts |
+| `eur-lex.europa.eu` | 🔴 `ENOTFOUND` | 🔴 `000` | 🔴 `Gap 241` cannot close |
+| `ec.europa.eu`, `digital-strategy.ec.europa.eu` | 🔴 `ENOTFOUND` | 🔴 `000` | 🔴 the Commission's OWN page is unreachable |
+| `artificialintelligenceact.eu` | 🔴 `ENOTFOUND` | 🔴 `000` | 🔴 **`ACTION PD` NOT DISCHARGEABLE here** |
+| `unu.edu` | 🔴 `ENOTFOUND` | 🔴 `000` | 🔴 **`Gap 242` cannot close** |
+| `marketsandmarkets.com` | 🔴 `ENOTFOUND` | 🔴 `000` | 🟡 regional figures stay snippet-sourced |
+
+🔴 **This retires a hope three passes have budgeted on.** Pass 44 named the UNU paper as the
+cheap remedy for `Gap 242`; pass 43 named the Act's own text as the way to settle `ACTION PD`.
+🟢 **Both are free for anyone with a browser and IMPOSSIBLE from this session.** 🔵 **The
+correct record is not "unread" — it is "unreadable here", and the two must not be confused in
+a cost estimate.**
+
+🟢 **What this environment CAN do, and should therefore be pointed at:** read grant bodies at
+scale from `raw.githubusercontent.com`, resolve default branches and dead addresses with
+`git ls-remote --symref`, and paginate GitHub topic vocabularies. 🔴 **What it cannot do: cite
+any primary legal or market source.**
+
+### 🟢 `T204-3` — a grant has a CHANNEL before it has a path, and the channels can disagree
+
+🔴 **`P203-1` established that a licence needs a `scope` (which path it covers). `P204-1`
+establishes that it needs a `channel` first.** 🟢 **The ladder, strongest to weakest:**
+
+**licence BODY at a path** → **manifest field, no body** → **README prose** → **badge**
+
+🔴 **And the rungs can CONTRADICT each other in one tree.**
+[LearnPress/learnpress](https://github.com/LearnPress/learnpress) `develop` @ `f9f2d6e2`:
+`package.json` says 🟢 `ISC`, `readme.txt` says 🔴 `GPLv3`, and the WordPress `readme.txt` is
+the manifest that governs the DISTRIBUTED plugin. 🔴 **The permissive channel is the
+non-authoritative one.**
+
+🟢 **Measured frequency: `1` of `8` manifest-declared rows** — `7` have no second channel at
+all. 🔵 **So this is a rare mechanism tied to the WordPress convention, NOT a general defect**,
+and it is declared at that strength.
+
+🔴 **The method rule it forces is general even though the defect is rare:** 🟢 **when a row's
+grant comes from a manifest rather than a body, read a SECOND channel before publishing it as
+permissive.** 🔵 **Cost: one `curl`.**
+
+### 🟢 `T204-4` — `ECL-2.0` is in this industry's water supply, and it is not Apache-2.0
+
+🟢 **Two rows measured this pass carry the `Educational Community License 2.0`:**
+[`opencast/opencast`](https://github.com/opencast/opencast) *(`develop` @ `ae86c6aa`)* and
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW).
+
+🔴 **The licence body states its own deviation in its first paragraph:** it is *"the Apache 2.0
+license, modified to change the scope of the patent grant in section `3` to be specific to the
+needs of the education communities using this license."*
+
+🟢 **So `ECL-2.0` is permissive for copying, modification and redistribution — treat it as
+Apache-class for those purposes.** 🔴 **Its PATENT grant is narrower, and it is narrowed
+specifically to education use.** 🔵 **The practical trigger: an engagement that builds a
+patentable pipeline on an `ECL-2.0` component, or that intends to serve a NON-education market
+from it, needs counsel on section `3`.** 🟢 **For an education deployment, which is what this
+KB is for, the narrowing is aligned with the use.**
+
+🔵 **`Apereo` is a recurring publisher in this industry** *(`Sakai`, `OpenLRW`, `Opencast`,
+the Learning Analytics Initiative)*, 🔴 **so this is a family to expect, not a one-off row.**
+
+---
+
 ## Pass 203 — 2026-10-14 — THE CHANNEL SEAM INVERTED, AND FOUR FALSIFIERS DISCHARGED
 
 ### 🔴 `ACTION OT` CLOSED: the seam is a CONJUNCTION — network AND from-file

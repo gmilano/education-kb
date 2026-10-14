@@ -1,0 +1,59 @@
+repo	default_branch	licence_file_12_forms	manifest_channel	class
+0awei0/kt	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+1EdTech/lti-1-3-php-example-tool	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+A-R007/Multi-Agent-Study-Assistant	main	NONE	pyproject.toml::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+AlexandreL0pes/q-scraper	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+ApexEDM/GIKT	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+CipherCraze/SpeakGenie-AI-Tutor	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+CreveXTech/canvas-lms-mcp	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+DMontgomery40/mcp-canvas-lms	main	NONE	package.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+DanieelRC/AgenteConversacional-SAES-R	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+DanieelRC/SAES-R	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Exhabition/brightspace-mcp-rs	main	NONE	package.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+Gaurav-Pande/AES_DL	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+HFUT-LEC/awesome-student-cognitive-modeling	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Hesham0-0Nasser/tutor-lms-mcp	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+LAION-AI/Desktop_BUD-E	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+LMS-Laravel/LMS-Laravel	master	NONE	composer.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+LMS-Laravel/OLD-LMS-Laravel	master	NONE	composer.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+LearnPress/learnpress	develop	NONE	package.json :: "license": "ISC"	MANIFEST-CONTRADICTION
+Lumieducation/Lumi	master	NONE	package.json :: "license": "AGPL-3.0"	MANIFEST-DECLARED-BODY-ABSENT
+MatheusMach/QuantoFalta	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+MisterCommand/mcp-canvas-lms	main	NONE	package.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+Nasus20202/MoodleMCP	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+OS4ED/openSIS-Classic	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+OS4ED/openSIS-Responsive-Design	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+P1ckle3/blackboard-mcp	main	NONE	pyproject.toml::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+Piyushtanwani/DAU-buddy	develop	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+ProjectsAndPrograms/school-management-system	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Rick-254/moodle-quizsmith	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+SIU-Toba/docker-guarani	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Simon-Initiative/lti-example-tool	master	NONE	package.json :: "license": "MIT"	MANIFEST-DECLARED-BODY-ABSENT
+TianHongZXY/pytorch-SAKT	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Tushar-cy/Ai-edge-learning-hub	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+Tushar-cy/Offline-AI	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+VICKY07092005/moodle-5-1-authentic-relay	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+WKolodziejski/QMobile	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+ZQR1101/xueyoujing-companion	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+ZhijieXiong/dlkt	release	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+aaryansamanta/ai-ethos	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+abdullaitcenter-hue/comet-trail-archives	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+activitypods/activitybadges	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+adlnet/SCORM-to-xAPI-Wrapper	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+alfredang/AI-LMS-TMS	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+alfredang/ai-mms	main	NONE	composer.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+andyfmiller/vc-dotnet-demos	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+anthropics/prompt-eng-interactive-tutorial	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+apereo/opencast	UNRESOLVABLE	-	-	LOST-ADDRESS-RECOVERED(opencast/opencast@develop,ECL-2.0)
+arshadshk/Last_Query_Transformer_RNN-PyTorch	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+arshadshk/SAINT-pytorch	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+barneslardo/sis-demo	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+bedriyan/medkit-app	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+blackboard/BBDN-LTI-Adv-Node	master	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+buynao/aipath	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+bycs-lp/moodle-block_ai_chat	main	NONE	package.json::PRESENT-NO-LICENSE-FIELD	SILENT-MANIFEST-NO-FIELD
+bycs-lp/moodle-local_ai_manager	main	NONE	NO-MANIFEST	SILENT-NO-MANIFEST
+cdweaver1992/edfi-mcp-server	UNRESOLVABLE	-	-	UNADJUDICATED-CHANNEL(ls-remote 0 refs, html 403)
+ckyeungac/deep-knowledge-tracing-plus	master	NONE	NO-MANIFEST	SILENT-NO-MANIFEST

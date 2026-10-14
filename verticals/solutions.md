@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — A PLATFORM ROW THAT READS PERMISSIVE AND SHIPS COPYLEFT
+
+### 🔴 `LearnPress` is the vertical row this pass corrects, and it was never blob-read
+
+🔴 **[LearnPress/learnpress](https://github.com/LearnPress/learnpress)** is a WordPress LMS
+plugin and a real vertical platform row — WordPress is the substrate a large share of small
+institutions actually run on. 🔴 **Its grant was in this KB's ungranted population because no
+`LICENSE` file exists on any branch.** 🟢 **Read this pass from two channels on its true
+default branch `develop` @ `f9f2d6e2`:**
+
+| channel | declares | authority |
+|---|---|---|
+| `package.json` | 🟢 `"license": "ISC"` | 🔴 **build tooling** — not the distributed plugin |
+| 🔴 **`readme.txt`** | 🔴 **`License: GPLv3`** *(+ `License URI`)* | 🟢 **the WordPress plugin manifest — this governs what ships** |
+
+🔴 **So the platform row is `GPL-3.0` and must be routed around exactly like Moodle.** 🟢 **A
+pass that had read only `package.json` would have published the one permissive general-purpose
+LMS this industry does not have.**
+
+🔵 **The rule for this shelf, stated so it is reusable:** 🟢 **on a WordPress-ecosystem row,
+`readme.txt` outranks `package.json`.** 🔴 **Never publish a vertical platform's licence from a
+`package.json` alone.**
+
+### 🟢 The platform shelf is unchanged, and now it is unchanged for a measured reason
+
+🔴 **p203 concluded that every general-purpose LMS/SIS this industry runs on is copyleft.**
+🟢 **p204 adds a row to the copyleft side and none to the permissive side:**
+
+| Platform | role | grant | channel |
+|---|---|---|---|
+| **LearnPress** | LMS plugin on WordPress | 🔴 **GPL-3.0** | 🆕 🟢 **`readme.txt` blob-read this pass** |
+| [opencast/opencast](https://github.com/opencast/opencast) | **lecture capture / video** | 🟡 **`ECL-2.0`** | 🆕 🟢 **blob-read, `develop` @ `ae86c6aa`** |
+| Moodle | LMS, the reference | 🔴 GPL-3.0 | carried |
+| Open edX | LMS at scale | 🔴 AGPL-3.0 *(platform)* | carried; verify per component |
+| Canvas LMS | LMS, community edition | 🔴 AGPL-3.0 | carried |
+| OpenOlat | LMS | 🟢 **Apache-2.0** | carried — still the only permissive general-purpose LMS |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **AI-native LMS, self-hostable** | 🟢 **MIT** | 🟢 **re-verified `main` @ `242a9324`** |
+| OpenEduCat | SIS + LMS on Odoo | 🔴 LGPL-3.0 *(bundled carve-outs)* | carried |
+| rosariosis | SIS | 🔴 GPL-2.0 | carried |
+
+🟢 **`opencast` is a genuinely useful addition to the vertical shelf** rather than a licence
+curiosity: lecture capture is a line item in almost every higher-education engagement, and
+🟢 **`ECL-2.0` is permissive for redistribution.** 🔴 **Its patent grant is narrowed to
+education use — see `T204-4` in [`intel/trends.md`](../intel/trends.md).**
+
+### 🟢 The permissive layer is still one level down, and it gained a second LRS
+
+🔴 **The customisation shape this industry supports has not changed: take the copyleft platform
+as the system of record, keep the client's work at the integration boundary.** 🟢 **The
+permissive interop spine, every row blob-read at p203 or p204:**
+
+**`ADL_LRS` (Apache-2.0)** · 🆕 **`yetanalytics/lrsql` (Apache-2.0, `main` @ `cb794e4b`)** ·
+**`lrs-conformance-test-suite` (MIT)** · **`ralph` (MIT)** · **`pylti1.3` (MIT)** ·
+**`1EdTech/lti-1-3-php-library` (Apache-2.0)** · **`ltiauthenticator` (BSD-3)** ·
+**`CATAPULT` (Apache-2.0)** · **`scorm-h5p-wrapper` (MIT)** · **`LiaScript-Exporter` (BSD-3)** ·
+**`marsha` (MIT)** · 🆕 **`jcputney/scorm-again` (MIT, `master` @ `25ca01f9`)** ·
+🆕 **`numbas/Numbas` (Apache-2.0, `master` @ `8c7f23a6`)** ·
+🆕 **`adlnet/xAPIWrapper` (Apache-2.0)** · 🆕 **`RusticiSoftware/TinCanJS` (Apache-2.0)** ·
+🆕 **`RusticiSoftware/TinCanPython` (Apache-2.0, `3.x`)** ·
+🆕 **`S4-NetQuest/react-scorm-provider` (MIT)**
+
+🟢 **Two of these close real holes on this shelf:**
+
+- 🟢 **`scorm-again` (MIT) is the permissive replacement for `cybercussion/SCOBot`**, which
+  p203 flagged as 🔴 **a SCORM JavaScript API under `CC-BY-SA-4.0`** — a content copyleft over
+  software. 🟢 **The remedy for p203's own finding is a row this KB already held.**
+- 🟢 **`lrsql` (Apache-2.0) is a second permissive LRS beside `ADL_LRS`**, so the evidence
+  layer is no longer single-sourced. 🔴 **`g3i/lxHive` (GPL-2.0) and `LearningLocker`
+  (GPL-3.0) remain the rows to route around.**
+
+🔴 **Excluded after reading, carried and extended:** `lxHive` *(GPL-2.0)*,
+`oat-sa/lib-lti1p3-core` *(GPL-2.0)*, `Edlib` *(GPL-3.0)*, `SCOBot` *(`CC-BY-SA-4.0`)*,
+🆕 `adaptlearning/adapt_framework` *(GPL-3.0)*, 🆕 `davidpesce/moodle-logstore_xapi`
+*(GPL-3.0)*, 🆕 `Lumieducation/Lumi` *(AGPL-3.0, manifest-declared)*.
+
+---
+
 ## Pass 203 — 2026-10-14 — THE PLATFORM SHELF IS COPYLEFT, AND THE INTEROP LAYER BESIDE IT IS NOT
 
 🔴 **Every general-purpose LMS/SIS this industry actually runs on is copyleft, and p203

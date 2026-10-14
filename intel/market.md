@@ -4,6 +4,232 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — EMEA REGULATORY DISCOVERY IS SATURATED, AND THE FOURTH CORROBORATION BOUGHT NOTHING
+
+### 🔴 The pass's own negative result, stated first because it cost the most budget
+
+🟢 **The mandated regional sweep was run for all four regions.** 🔴 **EMEA's regulatory half
+returned `0` new facts.** The EU instrument, its identifier, its Official Journal date, its
+entry into force, the Annex III deferral, the Annex I date and the Article 50 split are
+**already held by this KB** and were re-derived from scratch this pass:
+
+| fact re-derived this pass | already in the KB | hits on disk |
+|---|---|---|
+| Regulation **(EU) 2026/1744** *("Digital Omnibus on AI")*, amends Reg. 2024/1689 | 🟢 yes | `143` |
+| OJ **`2026-07-24`**, in force **`2026-07-27`** | 🟢 yes | — |
+| Annex III stand-alone high-risk *(incl. education)* → **`2027-12-02`** | 🟢 yes | — |
+| Annex I embedded-product → **`2028-08-02`** | 🟢 yes | `48` |
+| Article 50 transparency stays **`2026-08-02`** | 🟢 yes | `129` |
+| Article 50(2) marking grace for systems already on market → **`2026-12-02`** | 🟢 yes | `54` |
+
+🔴 **This is the `P582` failure mode and it fired on this pass, not on a past one.** 🟢 **It was
+caught before publication by grepping the tree for each figure instead of writing it up as
+new** — which is the cheap check `P582` exists to force. 🔵 **So the entry is recorded as a
+**fourth independent corroboration** of `ACTION NU-EU` and nothing more.**
+
+🟢 **The actionable reading is not the dates — it is that the channel is exhausted.** 🔴 **A
+fifth EMEA regulatory search is waste.** 🟢 **`ACTION NU-EU` should be retired from
+re-verification and the dates treated as settled**, with the standing limit below.
+
+🔴 **Standing limit, unchanged and re-measured this pass:** `eur-lex.europa.eu`,
+`ec.europa.eu`, `digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` **all fail
+DNS on BOTH channels** — `WebFetch` *(`ENOTFOUND`)* and inline `curl` *(`000`)*. 🔴 **So the
+primary text still cannot be cited from this session** *(`Gap 241`, `Gap 56` class)*, and
+🟢 **the gap's ORIGINAL blocker — *"secondary sources name the amending instrument
+inconsistently"* — is resolved: the identifier is now consistent across every source found.**
+
+### 🟢 New figures this pass, with their provenance attached
+
+🔵 **Every figure below is SNIPPET-SOURCED — read from search-result summaries, NOT from the
+publisher's page**, because `marketsandmarkets.com` and `unu.edu` are `000` on inline `curl`
+and `ENOTFOUND` on `WebFetch`. 🔴 **Do not promote any of these to a client deliverable without
+the publisher page.**
+
+| scope | figure | house | status |
+|---|---|---|---|
+| **North America**, AI in education | 🆕 **`$951M` (2024) → `$2 303.2M` (2029)**, CAGR **`15.9`%** | MarketsandMarkets | 🆕 **new to this KB** |
+| **Rest of Latin America** | 🆕 **`$18.2M` (2024) → `$36M` (2029)**, CAGR **`12.1`%** | MarketsandMarkets | 🆕 **new to this KB** |
+| LATAM *(Brazil `$61.1M` + Mexico `$59.2M`)* | `$105.6M` (2024) | MarketsandMarkets | 🟢 carried from p203 |
+| AI in education, broad | `$7.52B` (2025) → `$10.6B` (2026) | Business Research Company | 🟢 carried |
+| AI in education | `$8.3B` (2025) → `$57.2B` (2033) | Grand View Research | 🟡 carried, re-seen |
+| AI in education | `$6.4B` (2025) → `$79.6B` (2034), **`~31`%** | IMARC | 🆕 **fourth house** |
+
+🟢 **The same-house regional set is the one genuinely useful addition.** With `$951M` for North
+America and `$105.6M` + `$18.2M` for Latin America from **one** publisher, the regional ratio is
+internally consistent for the first time: 🔴 **North America is roughly `7`–`8`× Latin America
+on the same methodology.**
+
+🔴 **And it sharpens `Gap 457` rather than closing it.** This KB still carries **`LATAM $1.5B →
+$4.2B`** from p54 against MarketsandMarkets' **`$105.6M`**. 🔴 **A `~14`×–`40`× disagreement on
+one region stands.** 🟢 **Publish both, name the house, and never quote one figure alone.**
+
+🔴 **North America's share is now THREE incompatible numbers** — `35.1`% (2025), `36`% (2026),
+`37.5`% (2025) — across three roundups. 🔵 **The spread is itself the finding: the share is
+"mid-thirties", and a decimal place is false precision.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buyable gap is governance, not capability.** The adoption figures and the readiness
+figures move in opposite directions: student use is reported at `92`% (2025) against `66`%
+(2024), while 🔴 **only `~10`% of institutions have formal AI guidelines** and 🔴 **`71`% of US
+teachers report no AI training.** 🟢 **So the deliverable an institution can actually sign is a
+policy-plus-training package with an evidence trail, not a tutor.**
+
+🟢 **Named activity this window:** OpenAI launched a country-level education programme with
+**`8` national partners** (Q1 2026); **Carnegie Mellon + Gates Foundation put `$55M`** into AI
+courseware aimed at gateway college courses; **Instructure's `IgniteAI Agent`** (March 2026,
+carried) is the incumbent LMS vendor already shipping an agent.
+
+🔴 **Regulatory shape: a vacuum with state-level patchwork.** There is no FDA-equivalent for
+educational technology; adoption is decided school-by-school and district-by-district, with
+Colorado and Texas introducing piecemeal requirements. 🟡 **Unverified against primary
+sources** — the state detail comes from one analysis.
+
+🔵 **Market size for sizing a deal: `$951M` (2024) → `$2 303.2M` (2029), `15.9`% CAGR**
+*(snippet-sourced)*.
+
+### EMEA
+
+🔴 **The regulatory calendar is settled and the money is small — that combination is the
+regional thesis.** 🟢 **European edtech funding FELL from `$1.2B` (2023) to `$0.8B` (2024)**,
+and 🔴 **workforce learning took more than `70`% of Q1 2026 funding**, leaving K-12 and higher
+education active only at small ticket sizes. 🟢 **So the EMEA buyer is an institution spending
+PUBLIC programme money, not a VC-funded vendor.**
+
+🟢 **The public programmes are the addressable budget, and they are named and dated this
+pass:**
+
+- 🆕 **Netherlands — `Npuls`**, National Growth Fund, **`€600M`** for digital transformation
+  across vocational and higher education, an `8`-year programme **through 2030**.
+- 🆕 **Germany — `€6.9M`**, the **Berlin Educational Technology Lab** with **`8` universities`**,
+  **January 2026 → March 2029**, explicitly to build AI skills into higher education, and
+  explicitly motivated by the AI Act's staff-competence duty.
+- 🆕 **EU — three `Advanced Digital Skills` grant agreements worth `€25.4M`** signed, and the
+  Commission's **ethical guidelines on AI in education updated `9` June**.
+- 🆕 **`Erasmus+`** call on the ethical and effective use of generative AI in education and
+  training, aimed at institutional and systemic readiness.
+- 🔵 **UK, for context and outside the EU duty:** **`£200M`+** committed at a June AI Adoption
+  Summit.
+
+🟢 **The one date that is live NOW rather than in 2027:** 🔴 **Article 50(2) content-marking for
+systems already on the market falls due `2026-12-02` — `7` weeks from this pass.** 🟢 **The
+Annex III education deferral to `2027-12-02` does NOT cover it.** 🔵 **This KB already holds
+the instruments for it** — `compose/code/aiact-50-2-marking/`, `aiact-50-2-spans/`,
+`aiact-50-2-exposure/`, `aiact-50-2-pack/` — 🟢 **so an EMEA marking engagement is the one
+offer this KB can field immediately rather than build.** See `P204-B`.
+
+🔴 **Gap, declared rather than left silent:** the sweep found **no `2026` country-level data on
+university AI adoption RATES across European states, and no ministry strategy beyond the
+German and Dutch programmes above.** 🔵 **The `€6.9M`/`€600M` figures are programme budgets, not
+adoption measurements, and must not be presented as the latter.**
+
+### APAC
+
+🟢 **APAC is the only region where the demand is a legal mandate with a date, and the
+constraint is infrastructure rather than policy.**
+
+- 🟢 **India — AI and computational thinking become a MANDATORY curriculum component from
+  Class `3` in the `2026–27` academic session**, under the National Curriculum Framework for
+  School Education (NCF SE) 2023. 🆕 **The curriculum is being developed by a CBSE expert
+  committee chaired by Prof Karthik Raman of IIT Madras.** 🟡 **One report extends the mandate
+  to Classes `3`–`8` from `2026–27` and Classes `9`–`10` from `2027–28`; the expansion is
+  reported by a single source and is NOT confirmed.**
+- 🔴 **India's binding constraint, and it is the number that should shape any proposal:
+  🆕 only `64.7`% of schools have computers.** 🟢 **An offline-first delivery path is not a
+  nice-to-have in this market** — which is why `Kolibri` (MIT, offline) carries weight here
+  that it does not carry in EMEA.
+- 🆕 **Pakistan — the National Curriculum Council has FINALISED AND NOTIFIED an AI & Robotics
+  curriculum for Grades `1`–`12`**: non-credit for junior grades, an **elective for Grades
+  `9`–`12`**. 🔴 **Education is devolved, so provincial adoption is optional** — the sale is
+  per-province, not national. 🔵 **This KB's only prior `Pakistan` rows concern Arbisoft and
+  Open edX ownership; the curriculum notification is new here.**
+- 🟢 **Commercial activity:** **TCS + Pearson** announced a multi-year AI learning alliance
+  targeting employer skills gaps; **LearnUpon** expanded into APAC with a Sydney HQ and AI
+  course authoring.
+- 🔴 **Adoption constraint at the enterprise layer:** `49`% of APAC businesses cite
+  insufficient infrastructure for real-time data processing, and a OneTrust preview reports
+  `87`% encouraging AI agents against only `47`% having governance and controls.
+
+🔴 **Gap, declared explicitly: the sweep returned NOTHING on China, Singapore or Japan
+education policy for `2026`.** 🔵 **That is a channel result, not an absence of policy** —
+these are three of the region's most active systems. 🟢 **Named as `ACTION PF` so the next pass
+queries them per country rather than pan-APAC**, which is the shape `P521` already proved
+hides tiers.
+
+🟡 **Vietnam's `2026-03-01` / `2027-03-01` conflict stays unresolved and was NOT re-searched
+this pass**, per `ACTION NU`'s standing instruction to publish both and stop re-asking.
+
+### LATAM
+
+🔴 **The region's best instrument was located at pass 44, named again at pass 204, and has
+still never been read — and this pass establishes WHY.**
+
+🟢 **The instrument:** the **UNESCO IESALC + UNU-IAS working paper**, mapping AI use across
+**`200` higher-education institutions in `19` countries**, fielded **August–October 2025**,
+covering teaching and learning, research, community engagement, administration and governance.
+🟢 **Its sampling frame, fielding window and country list are all stated** — the precise
+property the Digital Education Council summary lacks, and the reason `Gap 242`'s regional
+ordering is unusable without it.
+
+🔴 **`unu.edu` is `ENOTFOUND` on `WebFetch` and `000` on inline `curl`.** 🔴 **So `Gap 242`
+CANNOT be closed from this session, and pass 44's cost estimate — *"low cost"* — is wrong for
+this environment.** 🟢 **Re-priced honestly: it is free for anyone with an open browser and
+IMPOSSIBLE here.** 🔵 **That distinction belongs in the gap, because three passes have now
+budgeted for it as cheap.**
+
+🟢 **What the sweep did place this pass:**
+
+- 🆕 **Rest of Latin America: `$18.2M` (2024) → `$36M` (2029), `12.1`% CAGR** — same house as
+  the `$105.6M` LATAM figure, so the two are comparable with each other and 🔴 **not with this
+  KB's carried `$1.5B → $4.2B`.**
+- 🟢 **The `ILIA 2025` Latin American AI Index carries a dedicated REGULATION subdimension**
+  inside its governance section, and treats human talent and AI training as separate enabling
+  factors. 🔴 **Not read this pass** — named as the cheaper reachable substitute for the UNU
+  paper.
+- 🟢 **A comparative study covers Argentina, Brazil, Chile, Peru and Spain**, specifically to
+  identify gaps in how each regulates AI in higher education. 🟢 **This is the first
+  multi-country LATAM regulatory comparison this KB has a pointer to**, and it is the natural
+  input to `Gap 237`'s open question — *which Spanish-speaking systems examine writing against
+  a published rubric?*
+- 🟢 **Players carried, unchanged:** **Teachy** (Brazil, now expanded into Asia), **Vetto**
+  (Brazil), **Ginia** (Mexico), **Lottus Education** (Mexico, `LucIA`).
+- 🔴 **The standing regional risk is unchanged and is the thing a LATAM pitch must answer:**
+  access gaps mean AI widens existing inequality unless the structural conditions are
+  addressed, and education leaders in the region are explicitly asking for AI to move **beyond
+  pilots** to equitable, skills-based learning at scale.
+
+🔵 **One LATAM-origin asset surfaced in this pass's ungranted census and is worth naming here
+because regional supply is thin:** [DanieelRC/AgenteConversacional-SAES-R](https://github.com/DanieelRC/AgenteConversacional-SAES-R)
+(Mexico, SAES conversational agent) — 🔴 **no grant in any channel probed**, so it is a
+reference, not a component.
+
+### Global
+
+🟢 **What the four regions say together, and no one of them says alone:** 🔴 **the thing being
+bought is not the same product in any two regions.** North America buys **governance and
+teacher capability** against a `10`%-guidelines / `71`%-untrained gap; EMEA buys **compliance
+artefacts** against a fixed statutory calendar with public programme money and falling private
+funding; APAC buys **curriculum delivery at national scale** against a `64.7`%-computers
+constraint; LATAM buys **equity and proof it worked** against a `~14`×-contested market size.
+🟢 **A single "AI tutor" pitch fits none of them.**
+
+🔵 **The one offer that travels across all four**, because each region's buyer needs it for a
+different reason: 🟢 **an evidence trail** — xAPI statements in a permissive LRS, with a
+conformance test. 🟢 **EMEA needs it for Article 50 and Annex III documentation, North America
+to substitute measurement for absent regulation, APAC to report a national rollout, LATAM to
+prove equity rather than assert it.** 🟢 **The stack for it is permissive and blob-read:
+`ADL_LRS` (Apache-2.0) or `lrsql` (Apache-2.0) + `lrs-conformance-test-suite` (MIT) +
+`pylti1.3` (MIT).** See `P204-A`.
+
+🔴 **The global market figure remains unquotable as a single number** — four houses, four
+scopes, `2026` values from `$6.4B` to `$10.6B` and horizons from `$42.48B` to `$79.6B`.
+🟢 **Quote the range, name the house, name the scope, and ask whether corporate L&D is inside
+it.** `Gap 457`.
+
+---
+
 ## Pass 203 — 2026-10-14 — THE PROCUREMENT MECHANISM EMEA WAS MISSING HAS A NAME, AND MEA'S THREE-PASS GAP PARTLY CLOSES
 
 ### 🔴 The market figures: `Gap 457` reproduces, and now with a named source on each side

@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — THREE RECIPES, EACH BUILT ONLY FROM GRANTS READ FROM A BLOB
+
+🔵 **Rule applied to every row below, per `Gap 458`/`459` and extended by `P204-1`:** each
+component names **what it contains**, **what its grant reaches**, **the path that grant covers**
+and 🆕 **the CHANNEL the grant was read from**. 🔴 **No component appears whose licence body was
+not read from its own blob.** 🔴 **No component appears whose grant exists only in a manifest.**
+
+---
+
+### 🟢 `P204-A` — The evidence spine, and it is the one offer that sells in all four regions
+
+🟢 **Why this one first:** the mandated regional sweep found four regions buying four different
+things *(see [`intel/market.md`](../intel/market.md) `## Opportunities by region`)*, and
+🟢 **exactly one deliverable that each of them needs for its own reason** — a machine-readable
+record that learning happened. 🔴 **EMEA** needs it for Article 50 / Annex III documentation;
+🔴 **North America** needs it to substitute measurement for absent regulation (`10`% of
+institutions have guidelines); 🔴 **APAC** needs it to report a national rollout; 🔴 **LATAM**
+needs it to prove equity rather than assert it.
+
+**Wire-up:**
+
+| layer | component | grant *(path · channel)* | why this one |
+|---|---|---|---|
+| record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) `144★` | 🟢 **Apache-2.0** *(`main/LICENSE` · blob)* `cb794e4b` | 🆕 **a SQL-backed LRS** — runs on Postgres/SQLite the client already operates, so no new datastore to justify |
+| …or record store | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) `334★` | 🟢 **Apache-2.0** *(`master/LICENSE` · blob)* | the reference LRS; 🟢 **two permissive options means the evidence layer is no longer single-sourced** |
+| conformance | [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) `78★` | 🟢 **MIT** *(`master/LICENSE` · blob)* | 🟢 **tests the xAPI MUST requirements before a ministry audit does** |
+| statement emitter | [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) `223★` | 🟢 **Apache-2.0** *(`master/LICENSE` · blob)* | 🆕 browser-side emitter, promoted to a published row this pass |
+| …in Python | [RusticiSoftware/TinCanPython](https://github.com/RusticiSoftware/TinCanPython) `54★` | 🟢 **Apache-2.0** *(🔴 `3.x/LICENSE` · blob)* | 🔴 **note the branch — `3.x`, not `main`**; a `main` probe returns nothing |
+| legacy courseware bridge | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) `355★` | 🟢 **MIT** *(`master/LICENSE` · blob)* `25ca01f9` | 🟢 **the permissive SCORM runtime** — replaces `SCOBot`, which is `CC-BY-SA-4.0` over software |
+| SCORM → xAPI | [adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) `99★` | 🟢 **Apache-2.0** *(blob, p203)* | carries a `2004`-era course into the statement log |
+| LMS launch | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) `138★` | 🟢 **MIT** *(`master/LICENSE` · blob)* | 🟢 the institution keeps Moodle/Canvas **unmodified** |
+| assessment | [numbas/Numbas](https://github.com/numbas/Numbas) `215★` | 🟢 **Apache-2.0** *(`master/LICENSE` · blob)* `8c7f23a6` | 🆕 **permissive e-assessment with real maths marking** — emits results into the same spine |
+| lecture capture | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 **`ECL-2.0`** *(`develop/LICENSE` · blob)* `ae86c6aa` | 🆕 the video line-item every HE engagement has. 🔴 **Patent grant narrowed to education use — `T204-4`** |
+
+🔴 **Do NOT use:** `g3i/lxHive` *(GPL-2.0)* or `LearningLocker` *(GPL-3.0)* as the LRS;
+`cybercussion/SCOBot` *(`CC-BY-SA-4.0`)* in the courseware package;
+`davidpesce/moodle-logstore_xapi` *(GPL-3.0)* for Moodle event export;
+`adaptlearning/adapt_framework` *(GPL-3.0)* as the authoring tool. 🟢 **Every one has a
+permissive substitute in the table above**, except the Moodle event exporter — 🔴 **for which
+there is none, so emit statements from the tool side via `xAPIWrapper` instead of from
+Moodle's logstore.**
+
+🔵 **Effort: `4`–`6` weeks** to a conformance-passing statement log with one real course flowing
+through it. 🔴 **The hard part is not the stack — it is agreeing the statement vocabulary with
+the client**, because an xAPI profile that nobody agreed to is a log nobody will accept as
+evidence.
+
+---
+
+### 🔴 `P204-B` — EMEA: the Article 50(2) marking sprint, due `2026-12-02` — `7` weeks from this pass
+
+🔴 **This is the only pattern in this KB with a statutory deadline inside the quarter.** 🟢 **The
+Annex III education deferral to `2027-12-02` does NOT cover it:** Article 50 transparency
+applied from `2026-08-02`, and 🔴 **the content-marking grace for systems ALREADY ON THE MARKET
+expires `2026-12-02`.** *(Regulation (EU) 2026/1744; 🔴 **dates held by this KB and corroborated
+a fourth time at p204 — the primary text remains unreachable from this session, `Gap 241`.**)*
+
+🟢 **Why a studio can field this NOW rather than build it:** 🟢 **this KB already contains the
+instruments.**
+
+| step | instrument | what it does |
+|---|---|---|
+| 1 — inventory | [`compose/code/aiact-50-2-exposure/`](code/aiact-50-2-exposure/) | 🟢 which of the client's surfaces are in Article 50(2) scope at all |
+| 2 — locate | [`compose/code/aiact-50-2-spans/`](code/aiact-50-2-spans/) | 🟢 the spans of generated content that require marking |
+| 3 — mark | [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/) | 🟢 apply the marking, with its provenance policy fixtures |
+| 4 — pack | [`compose/code/aiact-50-2-pack/`](code/aiact-50-2-pack/) | 🟢 the evidence pack a deployer hands an auditor |
+| 5 — record | `P204-A`'s spine | 🟢 the statement log that shows the marking was applied, when, to what |
+
+🔴 **The deliverable is the documentation, not a model.** 🟢 **The EMEA buyer is an institution
+spending public programme money** — `Npuls` **`€600M`** through 2030 (Netherlands), the Berlin
+Educational Technology Lab **`€6.9M`** with `8` universities through March 2029 (Germany), three
+EU Advanced Digital Skills grants at **`€25.4M`** — 🟢 **and all of those are budgets for
+capability and compliance, not for licences.**
+
+🔵 **Effort: `3`–`5` weeks** for an inventory plus a marking implementation on one surface.
+🔴 **Stated limit, and it must be in the proposal:** this KB cannot cite the Act's primary text
+from this environment, so 🔴 **the client's own counsel must confirm scope and dates before the
+work is contracted.** 🔴 **`ACTION PD` — whether an open-source component supplier inherits the
+provider's duty — is UNRESOLVED and NOT dischargeable here**, so the engagement must assume the
+studio is a provider and price the conformity work in.
+
+---
+
+### 🟢 `P204-C` — The grant pre-flight: `22`% of a candidate shelf cannot be shipped, and it costs one afternoon to find out
+
+🟢 **This pass measured the real number on this KB's own shelf: `22`% of `260` rows carry no
+licence body, and `0` of `56` were recovered by reading the right branch.** 🔴 **Any engagement
+that assembles a shelf from GitHub search inherits that rate.** 🟢 **The recipe is the ladder,
+run as a gate before a single component is adopted:**
+
+| rung | channel | command shape | verdict |
+|---|---|---|---|
+| 0 | resolve the ref | `git ls-remote --symref <url> HEAD` | 🔴 **never assume `main`** — this pass found `develop`, `master`, `release` and `gh-pages` as default branches, and `3` of `58` rows had been probed on the wrong ref |
+| 0b | dead address? | `0` refs + HTML `403` | 🟢 **try the obvious rename** — `apereo/opencast` → `opencast/opencast` recovered a live `ECL-2.0` tree this pass |
+| 1 | licence **body** | `raw.githubusercontent.com/<r>/<b>/<p>` over `12` path forms | 🟢 **the only rung that yields a licence a client's counsel can read** |
+| 2 | **manifest** | `package.json` · `composer.json` · `pyproject.toml` · `Cargo.toml` · `setup.py` · `readme.txt` | 🟡 **a declaration, not a licence** — no holder, no year, no warranty disclaimer |
+| 2b | 🔴 **second channel** | re-read a DIFFERENT manifest/README on the same tree | 🔴 **mandatory when rung `1` is empty** — `P204-1`: `LearnPress` says `ISC` in `package.json` and `GPLv3` in `readme.txt`, and the copyleft channel governs the payload |
+| 3 | README prose / badge | — | 🔴 **not a grant.** Record and route around |
+
+🟢 **Wire it to the components this KB already ships:**
+[`compose/code/p203-grant-blob-reader/classify.sh`](code/p203-grant-blob-reader/classify.sh)
+*(pure, offline, `19`/`19` suite — classifies a body into a family and emits `scope_headings`)*
+and [`compose/code/p202-grant-scope-reader/`](code/p202-grant-scope-reader/) *(the scope
+split)*. 🔴 **Run the fetch INLINE, not from a committed script** — `p203`'s `ACTION OT` measured
+the seam: network-bearing code read from a file is refused in this environment, while inline
+network calls run freely.
+
+🔵 **Two sourcing refusals this gate catches that a licence NAME alone does not:**
+🔴 **`CC-BY-NC`** *(e.g. `SverigesSandareamatorer/SSA-Akademin`)* refuses commercial use
+outright, and 🔴 **`CC-BY-SA`** *(e.g. `OpenIntroStat/ims-tutorials`, `cybercussion/SCOBot`)*
+forces the client's derivative open. 🟢 **For an OER engagement the two families that permit a
+closed commercial adaptation with attribution are `CC-BY-4.0` and MIT** — and 🟢 **the
+Carpentries two-scope grant** *(`## Instructional Material` `CC-BY-4.0` + `## Software` MIT in
+ONE file)* 🔴 **is a house style confined to Carpentries-affiliated orgs, not an OER default —
+so it cannot be assumed of any other row.**
+
+🔵 **Effort: one afternoon for a `60`-row candidate shelf.** 🟢 **It is the cheapest gate in this
+KB and it is the one that prevents shipping a client code with no permission to copy it.**
+
+---
+
 ## Pass 203 — 2026-10-14 — THREE RECIPES BUILT ONLY FROM GRANTS READ THIS PASS
 
 🔵 **Rule applied to every row below, per `Gap 458`/`459`:** each component names **what it

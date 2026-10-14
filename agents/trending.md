@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 204 — THE LMS-MCP TIER HAS NO LICENCE BODY, AND THE TUTOR CHANNEL IS STILL SATURATED
+
+### 🔴 The movement this window is an ABSENCE, and it sits exactly where a studio would reach
+
+🟢 **`ACTION PC` re-probed all `58` rows p203 declared ungranted — true default branch, `12`
+licence path forms, then manifests.** 🔴 **`13` of the `56` adjudicated rows are agent or MCP
+rows: `23`% of the ungranted population.**
+
+🔴 **The LMS-connector tier, which is the layer an education engagement reaches for FIRST:**
+
+| Row | target | grant |
+|---|---|---|
+| [CreveXTech/canvas-lms-mcp](https://github.com/CreveXTech/canvas-lms-mcp) | Canvas | 🔴 **NONE** |
+| [Nasus20202/MoodleMCP](https://github.com/Nasus20202/MoodleMCP) | Moodle | 🔴 **NONE** |
+| [P1ckle3/blackboard-mcp](https://github.com/P1ckle3/blackboard-mcp) | Blackboard | 🔴 **NONE** |
+| [Hesham0-0Nasser/tutor-lms-mcp](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) | Tutor-LMS | 🔴 **NONE** |
+| [cdweaver1992/edfi-mcp-server](https://github.com/cdweaver1992/edfi-mcp-server) | Ed-Fi | 🔴 **UNADJUDICATED** *(`0` refs + `403`)* |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | Canvas | 🟡 **MIT in `package.json` only** |
+| [MisterCommand/mcp-canvas-lms](https://github.com/MisterCommand/mcp-canvas-lms) | Canvas | 🟡 **MIT in `package.json` only** |
+| [Exhabition/brightspace-mcp-rs](https://github.com/Exhabition/brightspace-mcp-rs) | Brightspace | 🟡 **MIT in `package.json` only** |
+
+🔴 **Not one of the eight carries a licence body.** 🟢 **The recommendation is therefore to
+WRITE the connector**: MCP is a public protocol, these servers are small, and
+`pylti1.3` (MIT) + `ADL_LRS`/`lrsql` (Apache-2.0) already cover the hard parts permissively.
+
+🔴 **Two prompt-tier rows with no grant, both widely cited:**
+[JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) and
+[anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+*(`master`; no `LICENSE`, no `LICENSE.md`, no licence line in `README.md`)*. 🟢 **Vendor
+provenance is not a grant.**
+
+### 🟢 Movement on rows already held — all re-verified at a pinned HEAD, `0` corrections
+
+| Row | grant *(re-read this pass)* | pinned |
+|---|---|---|
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** *(`© 2024 Selleo`)* | `main` @ `242a9324` |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | `main` @ `cb794e4b` |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** *(`© 2020 Jonathan Putney`)* | `master` @ `25ca01f9` |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | `master` @ `8c7f23a6` |
+| [savvides/idstack](https://github.com/savvides/idstack) | 🟢 **MIT** *(`© 2026 idstack contributors`)* | `main` @ `17670271` |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | `main` |
+
+🔵 **`0` corrections across `20` re-read rows** —
+[`evidence/p204-grant-reverification.2026-10-14-p204.tsv`](../evidence/p204-grant-reverification.2026-10-14-p204.tsv).
+🔴 **This is NOT `ACTION PB`'s test** *(which is about a misdescribed **scope** on the `~60`
+highest-★ rows)* and must not be quoted as discharging it.
+
+### 🔴 The tutor channel: still saturated, and now so is every other code vocabulary
+
+🟢 **p203 measured `topic:ai-tutor` at `0`/`20` new. p204 adds `topic:scorm`, `topic:xapi` and
+`topic:lti` at `0`/`20` each.** 🔴 **`80` of `80` software rows across four vocabularies were
+already held.** 🟢 **The one channel still yielding is `topic:open-educational-resources` —
+CONTENT, not code** — and its pagination is now open *(see
+[`repos/trending.md`](../repos/trending.md))*. 🟢 **`T204-1` in
+[`intel/trends.md`](../intel/trends.md).**
+
+🔵 **So no new agent shelf row is claimed this window, and that is the honest report.** 🔴 **A
+pass that needed a new agent row could only have produced one by widening the licence
+standard, which is what `ACTION PC` just measured the cost of.**
+
+---
+
 ## 2026-10-14 — Pass 203 — the tutor channel saturated, and pedagogy arrived as a PLUGIN
 
 🔴 **`topic:ai-tutor` returned `20` rows and this KB already held `20` of them.** First

@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — Pass 204 — THE `358` UNREAD ROWS ARE REACHABLE, AND THE TWO-SCOPE GRANT IS A HOUSE STYLE
+
+### 🟢 `ACTION PA` — the channel ceiling p203 declared is NOT a ceiling
+
+🔴 **p203 declared `20` of `378` rendered and `358` unread, and asked a later pass to *"find
+the pagination or declare the ceiling as a channel limit."*** 🟢 **The pagination exists and is
+trivial: `https://github.com/topics/open-educational-resources?page=2` renders the NEXT `20`.**
+
+🟢 **So `~19` pages × `20` rows are reachable from this session.** 🔴 **The `358` are unread by
+choice of budget from now on, not by channel limit** — and that changes the status of
+`Gap 461` from blocked to merely unfunded.
+
+### 🔴 `ACTION PA`'s falsifier — limb `2` FIRES. It is a Carpentries house style
+
+🟢 **Page `2` read in full, every grant blob-read on its own default branch:**
+[`evidence/pa-oer-page2-grants.2026-10-14-p204.tsv`](../evidence/pa-oer-page2-grants.2026-10-14-p204.tsv).
+
+| grant family | rows |
+|---|---|
+| `CC-BY-4.0` | **`5`** |
+| **MIT** | **`4`** |
+| `CC-other` *(unversioned / other CC)* | `3` |
+| 🔴 **NO GRANT FILE** | 🔴 **`3`** |
+| BSD | `2` |
+| `CC-BY-SA` | `1` |
+| 🔴 `CC-BY-NC` | 🔴 **`1`** |
+| other | `1` |
+
+🔴 **The two-scope grant appears in exactly `5` of `20` rows, and those `5` are exactly the `5`
+Carpentries-affiliated repositories** — `LibraryCarpentry/lc-open-refine`,
+`LibraryCarpentry/lc-data-intro`, `datacarpentry/r-intro-geospatial`,
+`datacarpentry/OpenRefine-ecology-lesson`, `swcarpentry/matlab-novice-inflammation`.
+🟢 **All `5` non-Carpentries `CC` rows are SINGLE-scope.**
+[`evidence/pa-oer-twoscope-shape.2026-10-14-p204.tsv`](../evidence/pa-oer-twoscope-shape.2026-10-14-p204.tsv).
+
+🟢 **So limb `2` fires: the two-scope instrument is a HOUSE STYLE, not the OER layer's default,
+and every non-Carpentries OER row needs its own blob read.** 🔴 **This KB cannot publish one
+grant pattern for the layer.**
+
+> 🔴 **A correction to this pass's own method, recorded because it would have produced the
+> opposite verdict.** The first probe looked for a **second licence PATH** *(`LICENSE-MIT`,
+> `LICENSE-CODE`, …)* and found **`0` of `20`** — from which "no two-scope grants anywhere"
+> follows and is **wrong**. 🟢 **The Carpentries grant is ONE file with TWO headings** —
+> `## Instructional Material` *(`CC-BY-4.0`)* and `## Software` *(MIT)*. 🔵 **A path-shaped
+> probe is structurally blind to a heading-shaped grant**, which is precisely why `P203-1`
+> specified `scope_headings()` rather than a path sweep.
+
+### 🆕 Rows new to a published page this window, grants blob-read
+
+| Row | ★ | grant *(blob)* | shape |
+|---|---|---|---|
+| [cagix/pandoc-thesis](https://github.com/cagix/pandoc-thesis) | `104` | 🟢 **MIT** *(`LICENSE.md`)* | thesis toolchain — 🟢 **a template a university can adopt outright** |
+| [LibraryCarpentry/lc-open-refine](https://github.com/LibraryCarpentry/lc-open-refine) | `60` | 🟢 `CC-BY-4.0` + **MIT** *(two-scope, one file)* | data-cleaning curriculum |
+| [datacarpentry/r-intro-geospatial](https://github.com/datacarpentry/r-intro-geospatial) | `50` | 🟢 `CC-BY-4.0` + **MIT** | R + geospatial curriculum |
+| [NatLibFi/Annif-tutorial](https://github.com/NatLibFi/Annif-tutorial) | `49` | 🟡 `CC-other` *(single scope)* | 🟢 automated subject-indexing tutorial, National Library of Finland |
+| [OpenIntroStat/ims-tutorials](https://github.com/OpenIntroStat/ims-tutorials) | `45` | 🔴 **`CC-BY-SA`** | statistics tutorials — 🔴 **ShareAlike: a derivative curriculum must be released open** |
+| [Dungeon-CampusMinden/Dungeon](https://github.com/Dungeon-CampusMinden/Dungeon) | `37` | 🟢 **MIT** *(`LICENSE.md`)* | 🟢 a game-based programming course — **MIT over both code and material** |
+| [spatialaudio/data-driven-audio-signal-processing-lecture](https://github.com/spatialaudio/data-driven-audio-signal-processing-lecture) | `33` | 🟢 **MIT** | 🔴 **note the sibling divergence**: this org's other lecture repos are `CC-BY-4.0` content-only |
+| [SverigesSandareamatorer/SSA-Akademin](https://github.com/SverigesSandareamatorer/SSA-Akademin) | `41` | 🔴 **`CC-BY-NC`** | 🔴 **NonCommercial — REFUSED for a client engagement** |
+| [IAS-Uni-Siegen/EMD_course](https://github.com/IAS-Uni-Siegen/EMD_course) | `52` | 🟡 `CC-other` *(`LICENSE.txt`)* | engineering course, Uni Siegen |
+| [reamat/AlgebraLinear](https://github.com/reamat/AlgebraLinear) | `73` | 🟡 `CC-other` *(`LICENSE.md`)* | 🟢 **LATAM-origin (Brazil, Portuguese) linear-algebra material** |
+
+🔴 **Three rows on page `2` carry NO grant file at all** — `reamat/PreCalculo`,
+`IAS-Uni-Siegen/PE_course`, `UCLALibrary/research-tips` *(whose default branch is
+`gh-pages`)*. 🟢 **`15`% ungranted on this page, consistent with the `22`% the shelf-wide
+census measures.**
+
+🔵 **Two sourcing notes for an OER engagement, both from this page:** 🔴 **`CC-BY-NC` and
+`CC-BY-SA` both appear here and neither is usable the way a studio usually wants** — `NC`
+refuses commercial use outright, `SA` forces the client's derivative curriculum open.
+🟢 **`CC-BY-4.0` and MIT are the two families that permit a closed, commercial adaptation with
+attribution**, and the Carpentries rows are the only ones that grant both scopes explicitly.
+
+### 🔴 The code vocabularies, by contrast, yielded NOTHING
+
+🟢 **`topic:scorm` (`229` repos), `topic:xapi` (`300`), `topic:lti` (`185`) — `60` rows read,
+`0` new to this KB.** 🟢 **Full reading in [`repos/foundations.md`](foundations.md) under
+`ACTION OZ`.** 🔴 **`9` of the `60` existed only inside a census TSV and were promoted to a
+published page this pass**, which is a bookkeeping fix, not discovery.
+
+---
+
 ## 2026-10-14 — Pass 203 — a `378`-repo vocabulary this KB had never read, and the Carpentries in it
 
 🟢 **`topic:open-educational-resources` reports `378` repositories; `20` render before

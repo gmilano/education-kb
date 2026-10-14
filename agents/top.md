@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 204 — 2026-10-14 — THE AGENT SHELF IS THE UNGRANTED SHELF, AND `anthropics` IS ON IT
+
+### 🔴 `13` of the `56` ungranted rows ARE the agent surface — `23`%
+
+🟢 **`ACTION PC` re-probed every row p203 declared ungranted, on its TRUE default branch
+and across `12` licence path forms** *(method and full census in
+[`repos/foundations.md`](../repos/foundations.md) and
+[`evidence/pc-ungranted-resolution.2026-10-14-p204.tsv`](../evidence/pc-ungranted-resolution.2026-10-14-p204.tsv))*.
+🔴 **`0` of `56` carry a licence file.** 🔴 **And the agent/MCP rows are over-represented in
+that population rather than incidental to it:**
+
+| Ungranted agent / MCP row | shape | grant found |
+|---|---|---|
+| [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | prompt-engineering curriculum, `master` | 🔴 **NONE** — no `LICENSE`, no `LICENSE.md`, no licence line in `README.md` |
+| [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | the best-known prompt-based tutor | 🔴 **NONE** |
+| [CreveXTech/canvas-lms-mcp](https://github.com/CreveXTech/canvas-lms-mcp) | Canvas MCP server | 🔴 **NONE** |
+| [Nasus20202/MoodleMCP](https://github.com/Nasus20202/MoodleMCP) | Moodle MCP server | 🔴 **NONE** |
+| [P1ckle3/blackboard-mcp](https://github.com/P1ckle3/blackboard-mcp) | Blackboard MCP server | 🔴 **NONE** |
+| [Hesham0-0Nasser/tutor-lms-mcp](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) | Tutor-LMS MCP server | 🔴 **NONE** |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | multi-agent study assistant | 🔴 **NONE** |
+| [CipherCraze/SpeakGenie-AI-Tutor](https://github.com/CipherCraze/SpeakGenie-AI-Tutor) | speech tutor | 🔴 **NONE** |
+| [DanieelRC/AgenteConversacional-SAES-R](https://github.com/DanieelRC/AgenteConversacional-SAES-R) | 🟢 LATAM-origin conversational agent *(SAES, Mexico)* | 🔴 **NONE** |
+| [cdweaver1992/edfi-mcp-server](https://github.com/cdweaver1992/edfi-mcp-server) | Ed-Fi MCP server | 🔴 **UNADJUDICATED** — `ls-remote` `0` refs **and** HTML `403` |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | Canvas MCP server | 🟡 **MIT in `package.json` only** — no body |
+| [MisterCommand/mcp-canvas-lms](https://github.com/MisterCommand/mcp-canvas-lms) | Canvas MCP server | 🟡 **MIT in `package.json` only** — no body |
+| [Exhabition/brightspace-mcp-rs](https://github.com/Exhabition/brightspace-mcp-rs) | Brightspace MCP, Rust | 🟡 **MIT in `package.json` only** — no body |
+
+🔴 **So the LMS-MCP tier — the exact layer a studio would reach for to put an agent in front of
+Canvas, Moodle, Blackboard, Brightspace or Ed-Fi — is `3` manifest-declarations and `5`
+silences.** 🟢 **Not one carries a licence body.**
+
+🔵 **Why this is a sourcing finding and not a complaint.** The MCP servers are small and the
+protocol is public: 🟢 **the cheapest route for an engagement is to WRITE the connector, not to
+adopt one of these.** 🔴 **Adopting any of the `5` silent ones means shipping client code with
+no grant at all** — the default is exclusive copyright, so there is no permission to copy,
+modify or redistribute. 🟡 **The `3` MIT-in-manifest rows are a `PoC` risk a client can accept
+knowingly**, and the one-line remedy is to ask upstream to commit a `LICENSE`.
+
+> 🔵 **`anthropics/prompt-eng-interactive-tutorial` deserves its own line** because this KB
+> cites it and because the absence is easy to misread: 🔴 **a widely-used teaching repository
+> from a major vendor with no licence file is still ungranted.** 🟢 **Vendor provenance is not
+> a grant.**
+
+### 🟡 `P204-1` reaches the agent shelf through the licence column, not through a repo
+
+🔴 **One row in the manifest-declared class contradicts itself across channels** —
+[LearnPress/learnpress](https://github.com/LearnPress/learnpress) `develop` @ `f9f2d6e2`
+declares 🟢 `"license": "ISC"` in `package.json` and 🔴 `License: GPLv3` in `readme.txt`, the
+WordPress plugin manifest that governs the distributed payload. 🟢 **Full reading in
+[`repos/foundations.md`](../repos/foundations.md).**
+
+🔴 **The consequence for this page is a method rule, not a row:** 🟢 **when a row's grant comes
+from a manifest, name the manifest.** `"MIT"` with no channel is now as incomplete on this
+shelf as `"MIT"` with no path was after `P203-1`. 🔵 **`ACTION PB` must carry a `channel`
+alongside its `scope` field** — and that is a widening of `PB`, measured rather than argued.
+
+### 🟢 `20` published rows re-read at a pinned HEAD — `0` corrections
+
+🟢 **The licence column of this KB survived a `20`-row audit this pass.** Every grant below was
+re-read from its own blob and matches what the KB already publishes —
+[`evidence/p204-grant-reverification.2026-10-14-p204.tsv`](../evidence/p204-grant-reverification.2026-10-14-p204.tsv):
+
+🟢 [Selleo/mentingo](https://github.com/Selleo/mentingo) **MIT** *(`© 2024 Selleo`, `main` @ `242a9324`)* ·
+🟢 [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) **Apache-2.0** *(`main` @ `cb794e4b`)* ·
+🟢 [jcputney/scorm-again](https://github.com/jcputney/scorm-again) **MIT** *(`© 2020 Jonathan Putney`, `master` @ `25ca01f9`)* ·
+🟢 [numbas/Numbas](https://github.com/numbas/Numbas) **Apache-2.0** *(`master` @ `8c7f23a6`)* ·
+🟢 [savvides/idstack](https://github.com/savvides/idstack) **MIT** *(`© 2026 idstack contributors`, `main` @ `17670271`)* ·
+🟢 [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) **MIT**
+
+🔴 **Two rows are copyleft and are named so they are not reached for by mistake:**
+[adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) **GPL-3.0**
+and [davidpesce/moodle-logstore_xapi](https://github.com/davidpesce/moodle-logstore_xapi)
+**GPL-3.0**.
+
+🔵 **This is `20` rows of re-verification, not `ACTION PB`'s test** — see the note at the end of
+[`repos/foundations.md`](../repos/foundations.md)'s p204 section. 🔴 **It must not be quoted as
+discharging `PB`.**
+
+---
+
 ## Pass 203 — 2026-10-14 — `topic:ai-tutor` IS SATURATED, AND THE NEW SUPPLY WAS NEVER AN AGENT
 
 🔴 **`20` of `20` rows on `topic:ai-tutor` this pass are already in this KB.** Not one new
