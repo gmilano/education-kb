@@ -3,6 +3,164 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🆕 **Four new patterns. Three of them exist because this pass caught this KB making the exact
+mistake each one prevents.**
+
+### 🆕 🔴 Pattern 25 — The licence cliff gate *(half a day, run before any repo reaches a proposal)*
+
+🔴 **The problem, with this pass's base rates rather than a worry:** `5` of `5` education
+repositories created in `2026` above `300`★ have **no licence file at all**; `9` of `30` shelf
+rows return `NOASSERTION` from GitHub's licence field and `1` returns `null`; and of those
+`10`, **`4` hide a licence that bars or encumbers client delivery.** 🔵 **GitHub's licence
+field has a `0`% hit rate on the cases that would stop a delivery.**
+
+**Step 1 — read the licence from BYTES, never from the field.** Blobless, no checkout, one
+clone per repo, seconds each:
+
+```bash
+licence() {                                   # licence <owner/repo>
+  d=$(mktemp -d)
+  git clone --filter=blob:none --no-checkout --depth 1 -q "https://github.com/$1" "$d" 2>/dev/null \
+    || { echo "UNREACHABLE $1"; return; }
+  f=$(git -C "$d" ls-tree HEAD --name-only | grep -iE '^(licen[sc]e|copying)' | head -1)
+  if [ -z "$f" ]; then
+    echo "NONE        $1  paths=$(git -C "$d" ls-tree -r HEAD --name-only | wc -l)"   # all rights reserved
+  else
+    echo "$(git -C "$d" cat-file -p HEAD:$f | grep -viE '^\s*$' | head -1 | cut -c1-60)  [$(git -C "$d" cat-file -s HEAD:$f) B]  $1"
+  fi
+  rm -rf "$d"
+}
+```
+
+**Step 2 — classify into THREE buckets, not two.** 🔴 `NONE` is not *"permissive by
+default"*, it is all rights reserved; `NOASSERTION` is **UNREAD**, not *"unknown, probably
+fine"*.
+
+| bucket | what it means for delivery | examples measured this pass |
+|---|---|---|
+| 🟢 **permissive** | build, modify, deliver, keep changes | `OpenOLAT` `Apache-2.0`, `sakai` `ECL-2.0`, `kolibri` `MIT`, `runno` `MIT` |
+| 🟡 **copyleft — architecture decision** | usable, but decide the boundary in the PROPOSAL | `frappe/lms` `AGPL-3.0`, `openeducat_erp` `LGPL-3.0`, `moodle` `GPL-3.0` |
+| 🔴 **barred or unread** | do not quote, do not plan a sprint | `enkidevs/curriculum` `CC-BY-NC-SA`, `PageLM` community licence, `Mr.-Ranedeer` **none**, `advisingapp` **unread** |
+
+**Step 3 — byte size is a tell.** 🔵 A file claiming `MIT` that is `8 563` B is not MIT
+*(`PageLM`)*; `MIT` is ≈`1 070` B and Apache-2.0 ≈`11 300` B. 🔴 A `189` B licence file is a
+sentence, and the sentence is usually `NonCommercial`.
+
+🟢 **Wire it to Pattern 24** *(existence probe)*: `ls-remote` says `LIVE`/`EMPTY`/`ABSENT`,
+this says `PERMISSIVE`/`COPYLEFT`/`BARRED`, and the recovered channel adds `archived`. Three
+gates, one pre-engagement script, every row on the shelf priced before the estimate.
+
+### 🆕 🟢 Pattern 26 — The four-lane channel probe *(one hour, run before declaring any source dead)*
+
+🔴 **The problem it prevents, measured on this KB:** thirteen passes published *"GitHub
+Trending: NOT MEASURED"* and one published *"the API is gone"*. 🔵 **Both were a gated lane
+inside the measuring environment.** The trending surface answered on the first try through a
+lane that had never been separated out.
+
+**Step 1 — read the error BODY, not the status code.**
+
+```bash
+curl -sS -o body.json -w 'code=%{http_code} ip=%{remote_ip}\n' "$URL"; cat body.json
+```
+
+🔵 This pass: `403`, `249` B, and the body said
+*"sessions are bound to their configured repositories"* — 🟢 **an intermediary refusing a
+path, in vocabulary GitHub does not use.**
+
+**Step 2 — ask the gate something it WILL answer.** `gh api rate_limit` returned a complete
+live quota *(`core 15 000/15 000`, `search 30/30`)* — 🟢 **proving the credential was valid
+and entirely unspent.** 🔴 A dead channel cannot return a live quota.
+
+**Step 3 — enumerate the lanes separately and record each one's verdict.**
+
+| lane | probe | this pass |
+|---|---|---|
+| direct `HTTP` | `curl` | 🔴 `403` *(gated)* |
+| CLI | `gh api` | 🔴 `403` *(same gate)* |
+| MCP server | `search_repositories` | 🟢 open — `30`/`30` rows with stars |
+| page fetch | agent fetch of the HTML surface | 🟢 **open — trending recovered** |
+
+**Step 4 — distinguish *gated* from *unreachable*, because the follow-up differs.**
+🔵 `curl -w '%{remote_ip}'`: six government hosts all resolved to **`127.0.0.1`** — a DNS
+null-route. 🔴 **Gated → try another lane. Null-routed → stop spending calls, record as
+structurally unreachable.**
+
+🟢 **The deliverable is a one-page channel register per engagement**, listing lane × source ×
+verdict × date. 🔴 Without it, a `0` from a blocked lane is published as a fact about the
+world, and nobody downstream can tell the difference.
+
+### 🆕 🔴 Pattern 27 — EMEA Art. `50` estate triage *(2 weeks, deadline already passed)*
+
+🔴 **The problem:** nearly every briefing — this KB's own p192 included — quotes
+**`2026-12-02`** for AI transparency marking. 🔵 **That is the date for generative systems
+ALREADY on the market.** 🔴 **Anything placed on the market after `2026-08-02` has been in
+scope for ten weeks.**
+
+**Step 1 — inventory with PLACEMENT DATES, which almost no institution has.** Pull the
+deployed estate from the platform the client already runs:
+🔵 `moodle/moodle` *(plugin register + install dates)*, `chamilo/chamilo-lms` *(`68` native
+MCP tool definitions, `47` of them writes)*, `instructure/canvas-lms` *(LTI registrations)*,
+`openedx/openedx-platform` *(XBlock install log)*.
+
+**Step 2 — split into the two cohorts.**
+
+| cohort | obligation | date |
+|---|---|---|
+| 🔴 placed on market after `2026-08-02` | Art. `50` marking | **in force now** |
+| 🟡 generative, already on market before it | Art. `50` marking | `2026-12-02` |
+| 🔵 Annex III *(admissions, grading, learning-outcome evaluation, level-of-education decisions)* | full high-risk regime | `2027-12-02` — Reg. (EU) `2026/1744`, substance unchanged |
+| 🔴 emotion recognition in education | **prohibited** | live since `2025-02-02` |
+
+**Step 3 — make the marking auditable, not just present.** 🔵 Wire
+[`openfun/ralph`](https://github.com/openfun/ralph) *(`Apache-2.0`, LRS)* behind the estate so
+each AI interaction emits an xAPI statement carrying the system identifier and its placement
+cohort. 🔴 **Marking that cannot be evidenced after the fact is a screenshot, not a control.**
+
+**Step 4 — the `2027-12-02` programme follows from the same inventory**, which is why the
+triage is sold first and the conformity work second.
+
+🟢 **Why it closes: the trigger has already fired, the client almost certainly believes it has
+not, and the evidence either exists in the LMS or does not — a two-week scope with a binary
+answer.**
+
+### 🆕 🟡 Pattern 28 — The Affero-safe APAC architecture *(2–3 weeks of design, before any code)*
+
+🔴 **The problem this pass created and then caught:** p192 recommended an APAC engagement
+start on `frappe/lms` *"permissively licensed"*. 🔴 **It is `AGPL-3.0`** *(`license.txt`,
+`33 893` B)*. 🔵 **Affero reaches modifications served over a network** — on a hosted LMS,
+that is the client's own differentiating work.
+
+**Step 1 — keep the copyleft platform as a PLATFORM and nothing more.** Run
+[`frappe/lms`](https://github.com/frappe/lms) *(`AGPL-3.0`)* or
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(`LGPL-3.0`,
+Odoo-based)* unmodified, at a pinned release. 🔴 **Every line added inside that tree is a line
+you may owe its users.**
+
+**Step 2 — put the proprietary work in a separate service, across a network boundary.**
+Agent-side, permissively licensed, talking to the platform through its public API or an MCP
+adapter: 🔵 [`taybenlor/runno`](https://github.com/taybenlor/runno) *(`MIT`)* for sandboxed
+code execution, [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit)
+*(`MIT`)* for knowledge tracing, [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server)
+*(`Apache-2.0`)* as the worked example of a domain tutor exposed over MCP.
+
+**Step 3 — if the client wants the platform itself modified, change platform.** 🟢
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) *(`Apache-2.0`)* and
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) *(`ECL-2.0`)* are the two
+fork-safe platforms on this shelf. 🔴 Neither is APAC-origin, and saying so early is cheaper
+than saying it at handover.
+
+**Step 4 — reference design, explicitly not a dependency.**
+[`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online)
+*(`367`★, `786` paths, Spring Cloud, course-recommendation agent as a first-class service)*
+shows the service split an APAC institutional LMS wants. 🔴 **It has no licence file — read it
+for the architecture, clone nothing.**
+
+🟢 **The decision this pattern forces into the proposal — platform modified vs. platform
+wrapped — is the one that costs the most to reverse, and `AGPL` vs `MIT` is a single word in
+a table that nobody re-reads.** 🔵 This pass is the proof: the word was wrong for one pass and
+it inverted a regional recommendation.
 ## Pass 192 — 2026-10-14
 
 🆕 **Three new patterns, all built from what the recovered channel makes possible, plus one

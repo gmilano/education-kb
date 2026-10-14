@@ -3,6 +3,83 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🆕 🔴 **The platform shelf has a licence matrix for the first time, every cell measured today,
+and it says the opposite of what this KB told an APAC engagement one pass ago.**
+
+### 🟢 `15` platform rows, licence read this pass — `5` / `5` / `5`
+
+🔵 Licence taken from the recovered channel's `license.spdx_id` where it resolves, and from
+the **bytes** where it returns `NOASSERTION`. 🔴 Not from a README, not from a badge.
+
+| 🟢 PERMISSIVE — build on, deliver, keep your changes | 🔴 AFFERO — network use triggers disclosure | 🟡 OTHER COPYLEFT |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) `ECL-2.0` · `1 238`★ | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `AGPL-3.0` · `8 198`★ | [`moodle/moodle`](https://github.com/moodle/moodle) `GPL-3.0` · `7 476`★ |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `MIT` · `1 145`★ | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) `AGPL-3.0` · `6 869`★ | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) `GPL-3.0` · `1 012`★ |
+| [`opencast/opencast`](https://github.com/opencast/opencast) `ECL-2.0` · `508`★ | 🔴 [`frappe/lms`](https://github.com/frappe/lms) **`AGPL-3.0`** · `3 311`★ | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `LGPL-3.0` · `888`★ |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0` · `447`★ | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) `AGPL-3.0` · `2 372`★ | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) `GPL-2.0` · `646`★ |
+| 🔴 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) `Apache-2.0` · `582`★ — **ARCHIVED** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) `AGPL-3.0` · `1 717`★ | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) `GPL-3.0` · `637`★ |
+
+🔵 **Five, five and five** — and the only permissive row with LATAM reach is archived.
+
+### 🆕 🔴 CORRECTION — the APAC sentence this KB published yesterday is false
+
+🔵 [`intel/market.md`](../intel/market.md), p192, APAC:
+*"Two of this shelf's platform rows are APAC-origin — `frappe/lms` (`3 311`★, **`MIT`**…) and
+`openeducat/openeducat_erp` (`888`★…) — **so an APAC engagement can start on APAC-built,
+permissively-licensed code**, which is the one region where that is true."*
+
+| the claim | 🔴 measured |
+|---|---|
+| `frappe/lms` is `MIT` | 🔴 **`AGPL-3.0`** — `license.txt`, `33 893` B, read from bytes this pass |
+| `openeducat_erp` is permissive by implication | 🔴 **`LGPL-3.0`** — this KB's own earlier byte read |
+| APAC is *"the one region"* where you can start on permissive code | 🔴 **INVERTED. Both APAC-origin platform rows are copyleft; one is Affero.** The permissive rows are Apereo *(NA)*, Learning Equality *(NA)*, Opencast *(EMEA consortium)* and OpenOLAT *(Switzerland, EMEA)* |
+
+🔴 **This is the costliest kind of error this KB can make**, because it is not a wrong star
+count — **it routes a delivery.** A hosted LMS built on `frappe/lms` and modified for a client
+is an **Affero** deployment: serving it over a network obliges source disclosure of the
+modifications. 🟢 Under `MIT` the same engagement has no such obligation. 🔵 **The word
+changed; the contract changed with it.**
+
+🟢 **Corrected in three places this pass** — here, in [`agents/top.md`](../agents/top.md)'s
+ranked table, and in `intel/market.md`'s APAC opportunity paragraph.
+
+### 🟡 What an APAC engagement should actually start from
+
+🔵 **The honest replacement for the retracted sentence:**
+🟢 **`OpenOLAT` *(`Apache-2.0`)* and `Sakai` *(`ECL-2.0`)* are the fork-safe platforms, and
+neither is APAC-origin.** 🟡 `frappe/lms` and `openeducat_erp` remain the best APAC-built
+platforms and remain **usable** — copyleft is not a prohibition — 🔴 **but they are a
+disclosure decision made at architecture time, not a licence footnote discovered at
+delivery.** 🔵 The clean pattern is agent-side: keep the client's proprietary work in a
+separate service that talks to the platform, rather than inside the Affero tree.
+
+### 🆕 🔴 An APAC vertical row exists, and it is unusable
+
+🔵 [`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online)
+— `367`★, created `2026-01-30`, **`786` paths**, Java/Spring Cloud, bilingual
+Chinese/English description. 🟢 **A production-shaped adult-education platform split into
+`tj-course`, `tj-exam`, `tj-auth`, `tj-data`, `tj-gateway` services — with a
+course-recommendation AI agent as a first-class service, not a bolt-on.** 🔵 Structurally it
+is the closest thing on GitHub to *"what an APAC institutional LMS with agents inside it
+looks like"*.
+
+🔴 **Root tree read: no `LICENSE`, no `COPYING`, nothing.** All rights reserved.
+🟡 **Listed here as evidence of the architecture, explicitly NOT as a starting point.** 🟢 It
+is the reference design an APAC proposal can point at while building on `OpenOLAT` or on the
+client's existing Moodle estate.
+
+### 🟢 Unchanged and re-confirmed this pass
+
+🔵 `menthorlabs/menthor` **`archived: true`**, `582`★ — re-read today, still frozen, still the
+only LATAM-reaching permissive platform row, still not recommendable.
+🔵 `openeducat_erp` default branch `19.0`, `rosariosis` default branch `mobile`,
+`GibbonEdu/core` default branch `v31.0.00`, `frappe/lms` default branch `develop`,
+`learnhouse` default branch `dev`, `kolibri` default branch `develop`, `opencast` default
+branch `develop` — 🔴 **`7` of `15` platform rows do not default to `main` or `master`.**
+🟡 p192 counted `5` of `12`; the ratio holds as the population grows. 🟢 Any clone script in a
+delivery pipeline that assumes `main` fails on nearly half this shelf.
 ## Pass 192 — 2026-10-14
 
 🆕 🟢 **Three cells on this page change status this pass, and two of them change because a

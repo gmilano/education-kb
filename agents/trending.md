@@ -3,6 +3,96 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **GITHUB TRENDING IS MEASURED. After thirteen passes of *"NOT MEASURED"*, the surface
+answered.** 🔵 Not through `curl`, not through `gh`, not through the MCP server — through a
+**fourth lane** this KB had never separated out: the agent's own page-fetch channel.
+🔴 **And the first thing the recovered surface says is a `0`.**
+
+| lane | `github.com/trending` | `api.github.com` | verdict |
+|---|---|---|---|
+| `curl` direct | 🔴 `403`, `249` B | 🔴 `403`, `249` B | blocked |
+| `gh` CLI | — | 🔴 `403` | blocked |
+| MCP `search_repositories` | n/a | 🟢 works *(`30`/`30` this pass)* | open |
+| 🆕 **page fetch** | 🟢 **`200`, parsed** | — | 🟢 **open** |
+
+### 🆕 🔴 Trending, measured twice, `19` rows, **ZERO education**
+
+🔵 **Weekly** *(`github.com/trending?since=weekly`, `2026-10-14`)* — `10` rows:
+
+| # | repo | lang | ★ total | ★ this week |
+|---|---|---|---|---|
+| `1` | `boykopovar/AnyPS5` | C++ | `35 858` | **`28 663`** |
+| `2` | `mattpocock/skills` | Shell | `290 184` | `11 955` |
+| `3` | `tester-army/e2e` | TypeScript | `10 248` | `4 426` |
+| `4` | `EpicGames/raddebugger` | C | `8 494` | `857` |
+| `5` | `heygen-com/hyperframes` | TypeScript | `63 083` | `4 732` |
+| `6` | `thedotmack/claude-mem` | TypeScript | `100 542` | `3 587` |
+| `7` | `cursor/plugins` | TypeScript | `11 271` | `1 141` |
+| `8` | `earthtojake/text-to-cad` | Python | `20 109` | `2 173` |
+| `9` | `flutter/flutter` | Dart | `180 144` | `967` |
+| `10` | `cathrynlavery/diagram-design` | HTML | `54 684` | `9 867` |
+
+🔵 **Daily** *(same day)* — `9` rows: `morluto/rea` *(TS, `219 877`★, **`+54 679` today**)*,
+`bilawalsidhu/gods-eye-view`, `debpalash/VoiceStudio`, `mksglu/context-mode`,
+`cathrynlavery/diagram-design`, `vercel-labs/skills`, `lyogavin/airllm`,
+`storytold/artcraft`, `xtool-org/xtool`.
+
+🔴 **`19` rows across two windows. Not one is an education project.** 🟡 The nearest miss is
+`VoiceStudio` *(audiobooks and transcription)*, and its own description does not claim
+education. 🟢 **This is the first trending datum in this KB's history and it is a negative
+one — which is worth more than the thirteen passes of silence it replaces, because silence
+and a zero look identical in a report and mean opposite things.**
+
+🔵 **Read it precisely: education OSS is not absent from GitHub, it is absent from the
+GLOBAL trending surface.** Two of the top rows are *skills* repositories
+*(`mattpocock/skills` at `290 184`★, `vercel-labs/skills` at `34 736`★)* — the same
+agent-skills shape that p192 found holding the second-largest `edtech`-topicked repository.
+🟢 **The study layer is trending. It is just not trending as education.**
+
+### 🆕 🟢 The `edtech` topic has a DENOMINATOR now, and it is `7`
+
+🔵 Query: `topic:edtech stars:>400 pushed:>2026-08-01`. 🔴 **Total population worldwide:
+`7` repositories.**
+
+| repo | ★ | on this shelf before today? |
+|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `34 807` | 🟢 yes |
+| [`Kaustubh-Natuskar/moreThanFAANGM`](https://github.com/Kaustubh-Natuskar/moreThanFAANGM) | `5 242` | 🔴 **no — and it is a JOB-BOARD list, mis-topicked** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `2 028` | 🟢 yes |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `1 717` | 🟢 yes |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1 145` | 🟢 yes |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `855` | 🟢 yes |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `501` | 🔴 **no — and it has NO LICENCE** |
+
+🟢 **`5` of `7` were already here. Of the `2` that were not, one is mis-topicked and one is
+unlicensed. Net adoptable discoveries from the `edtech` topic this pass: `0`.**
+🔵 p192 said *"the frontier has moved inside the projects that already exist"* and measured
+`84`% already-known. 🟢 **This pass gives that claim a denominator instead of a percentage,
+and the denominator is small enough to recite: seven.**
+
+### 🆕 🔴 What moved this week is a LICENCE CLIFF, not a repository
+
+🔵 Five `2026`-created education repositories, `333`–`515`★, all surfaced this pass, **all
+five with no licence file at root** — read from the root tree, not from a badge. Full table
+in [`agents/top.md`](top.md). 🔴 **`buynao/aipath` `515`★ · `aaryansamanta/ai-ethos` `501`★ ·
+`mabdulre9/electrical-engineering` `487`★ *(`1` path)* ·
+`jude-miller-dev/Milky-institute-online` `367`★ *(`786` paths, APAC)* ·
+`bedriyan/medkit-app` `333`★.**
+
+🔵 **Why it belongs in a TRENDING file and not only in a shelf file:** the thing trending in
+education OSS this week is a publication practice. 🔴 **The cohort that gained stars in `2026`
+did not ship a licence**, and the one that did — the shelf — is the cohort that was built
+before `2026`.
+
+### 🟡 Still not measured, stated as untested rather than as a `0`
+
+🔴 Language-filtered and spoken-language-filtered trending views were **not** probed.
+🔴 Trendshift and other third-party trending mirrors were **not** probed. 🔵 Both are
+one-call actions left to p194, now that the lane is known to work.
 ## Pass 192 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

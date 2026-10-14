@@ -3,6 +3,166 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🔵 **Regional research this pass ran one global sweep plus one sweep per region.**
+🔴 **Every figure below is SECONDARY and will stay secondary**: six government hosts were
+re-probed today and all six resolve to `127.0.0.1` — a DNS null-route, not a `403`. 🟢 The
+mechanism and its finality are documented in
+[`repos/foundations.md`](../repos/foundations.md) this pass. 🟡 **So the upgrade available to
+this KB is not primacy, it is CONVERGENCE** — many independent secondary sources naming the
+same instrument number and the same dates. 🟢 **This pass gets one, on the conflict p192 could
+not resolve.**
+
+### 🆕 🟢 EMEA — the Annex III date conflict CLOSES
+
+🔵 p192 recorded this unresolved, torn between `2026-08` and `2027-12-02`, with one source
+claiming the act *"still awaited Official Journal publication"*.
+
+| | 🟢 resolved this pass |
+|---|---|
+| instrument | 🟢 **Regulation (EU) `2026/1744`** — the *Digital Omnibus on AI* |
+| OJ publication | 🟢 **`2026-07-24`** |
+| entry into force | 🟢 **`2026-07-27`** |
+| 🔴 Annex III high-risk *(education included)* | 🔴 **`2027-12-02`**, moved from `2026-08-02` — a `16`-month deferral |
+| Annex I *(AI embedded in regulated products)* | `2028-08-02`, from `2027-08-02` |
+| substance | 🟢 **unchanged** — risk management, data governance, documentation, human oversight, logging all survive; only the application date moved |
+
+🔵 **Convergence, not primacy:** ten independent secondary sources — including one dated
+`2026-10-13`, yesterday — name the same regulation number and the same two dates.
+🔴 `eur-lex.europa.eu` is null-routed from here, so the Official Journal text was **not**
+read. 🟢 **Recorded as RESOLVED-BY-CONVERGENCE, which is a different and lower claim than
+RESOLVED-BY-PRIMARY — and a much higher one than p192's unresolved conflict.**
+
+### 🆕 🔴 CORRECTION — Art. `50` is TWO dates, and p192 published the later one as if it were the only one
+
+🔵 p192: *"Art. `50(2)` transparency marking is `2026-12-02` — seven weeks out."*
+
+| system | 🔴 date it applies |
+|---|---|
+| placed on the market **after** `2026-08-02` | 🔴 **`2026-08-02` — ALREADY IN FORCE, ten weeks AGO** |
+| generative systems **already on the market** before that | `2026-12-02` — seven weeks out |
+
+🔴 **A school chatbot shipped since August is in scope today, not in December.** 🟡 p192's
+sentence is correct for the installed base and wrong for anything deployed this academic
+year — 🔴 **which is exactly the cohort a `2026` engagement built.** 🟢 Any EMEA conversation
+must triage the estate into the two buckets before quoting a deadline; the triage is
+`Pattern 27` in [`compose/patterns.md`](../compose/patterns.md).
+
+🟢 **Unchanged and re-confirmed:** Art. `5(1)(f)`, the ban on emotion recognition in
+education, has been live since `2025-02-02`. 🔵 New this pass: Art. `5` gains prohibitions on
+non-consensual intimate imagery and CSAM from `2026-12-02`.
+
+### 🟢 Market sizing — the spread is the finding
+
+| scope | figures found this pass | source class |
+|---|---|---|
+| 🔴 **AI in education, `2026`** | **`$6.4 B` – `$11.4 B`** across four research firms | vendor trackers |
+| global EdTech, `2026` | `$404 B` *(HolonIQ, cited)* / `$200 B` `2025` → `$473 B` `2030` *(other)* | secondary |
+| LMS segment | `$28 B` *(HolonIQ, cited)* | secondary |
+| North America, AI in education | `$951 M` `2024` → `$2.3 B` `2029` | MarketsandMarkets |
+| APAC, AI in education | `$591.6 M` `2024` → `$1 848.1 M` `2029`; China `$417.5 M`, Japan `$318.7 M` largest | MarketsandMarkets |
+| 🔴 EdTech venture funding | `$512 M` / `63` deals in Q1 `2026`, **down `24`%** — against another source's *"≈`$1 B` in H1 `2026`"* | contested |
+
+🔴 **A `1.8×` spread on the same year, same market, four firms.** 🟢 **Never quote one
+number.** Quote the range and the direction, or quote a client-specific denominator instead.
+🟡 The funding figures do not reconcile either and are recorded as contested rather than
+averaged.
+
+### 🟢 Adoption and policy, by region, with the source named
+
+| region | what someone else measured | 🔴 the gap |
+|---|---|---|
+| **North America** | `>28` states + DC issued K-12 AI guidance; Ohio required every district to adopt an AI framework by **`2026-07-01`** *(passed)*; only `40`% of districts had AI policies by spring `2025`; `60`% of US K-12 teachers used AI tools in `2024-25` | 🔴 state guidance is largely non-binding; FERPA/COPPA still carry the actual legal weight |
+| **EMEA** | EU education ministers adopted AI-in-education conclusions `2026-05-11`; Commission draft guidelines on high-risk classification published `2026-05-19`, consultation closed `2026-06-23` | 🔴 **no EMEA adoption rate and no EMEA vendor ranking found this pass** — searched, not found, recorded as a gap |
+| **APAC** | 🆕 **Singapore MOE**: AI for Primary 4 is structured, teacher-supervised, delivered through the **Student Learning Space** rather than open platforms *(May `2026`)*. 🆕 **India MoE**: AI and computational thinking **from Class 3, session `2026-27`**, under NEP `2020` / NCF-SE `2023`, teacher training via **NISHTHA** | 🔴 **nothing found on China, Japan or Korea EDUCATION-ministry guidance.** General AI rules exist *(China Interim Measures since `2023-08-15` + content labelling; Japan light-touch/voluntary; India's DPDP phasing to full compliance `2027`)* but none is education-specific |
+| **LATAM** | 🆕 **Universidad de los Andes, Aug `2026`: `716` regulatory instruments and bills across `23` countries and territories**, cutoff `2026-07-03`, **`>80`% filed since `2023`**. Peru passed an AI law in `2023`; Chile has no general law; Mexico has **no binding** national rule *(SEP, ANUIES and Observatorio IA issue recommendations only)*; Brazil has a national AI strategy and **no education-sector regulation**. **ProFuturo/OEI: LATAM-born AI education initiatives are scarce and mostly pilots** | 🔴 no unified regional framework for AI in higher education; universities operate in a normative vacuum |
+| **Global** | Futuresource: adoption has crossed *"from experimentation to structured implementation"*; agentic AI beginning to reshape teaching, administration and student support; SLMs gaining ground for curriculum-specific, governable deployments; AI PCs ≈`15`% of institutional PC shipments in `2026` | 🔴 `10`% of institutions have formal AI guidelines; `71`% of US teachers lack AI training *(secondary compilation)* |
+
+🟡 **Note on the APAC row:** `716` instruments in LATAM versus **zero** education-ministry
+documents found for China, Japan and Korea is a statement about this pass's reach, not about
+those countries. 🟢 Recorded as an informed gap with the searches named, so p194 can attack
+the ministries directly rather than re-running a generic query.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Ohio's `2026-07-01` district AI-framework deadline has passed, so the question is no
+longer *"will you need a policy"* — it is *"can you show yours is enforced?"*** 🔵 This KB's
+standing accountability finding answers exactly that: no measured agent layer can say **who
+acted**. 🔴 New this pass, and it sharpens the pitch: **the API licence field has a `0`% hit
+rate on licences that bar delivery** — so any district or university that filtered its
+approved-tools list by GitHub's licence badge has `NonCommercial` and unlicensed code inside
+an approved estate. 🟢 **That is a one-week audit with a legal consequence attached, and it is
+denominated: on this shelf alone, `9` of `30` rows return `NOASSERTION` and `1` returns
+`null`.** 🟡 The AFT's `$23 M` National Academy for AI Instruction *(with OpenAI, Microsoft and
+Anthropic)* means teacher-training budget exists and is already committed — compete on
+governance and measurement, not on training.
+
+### EMEA
+
+🔴 **Lead with the date that has ALREADY passed, not the one seven weeks out.** Art. `50`
+marking has applied to anything placed on the market since `2026-08-02`; only the
+pre-existing generative estate waits until `2026-12-02`. 🟢 **An estate triage — which
+deployed systems are in scope today — is a billable fortnight with an unambiguous trigger,
+and most institutions have not run it because every briefing they read quoted December.**
+🔵 Then the `2027-12-02` Annex III horizon converts the follow-on into a planned programme
+rather than a scramble: `16` months is enough to build conformity in, and Regulation (EU)
+`2026/1744` changed **no substantive requirement**. 🟢 **Build on `OpenOLAT` (`Apache-2.0`) or
+Sakai (`ECL-2.0`)** — both EMEA-reachable, both fork-safe, both documented in
+[`verticals/solutions.md`](../verticals/solutions.md) this pass.
+
+### APAC
+
+🔴 **RETRACTION, and it is this pass's most expensive correction.** p192 published:
+*"`frappe/lms` (`MIT`) … so an APAC engagement can start on APAC-built, permissively-licensed
+code, which is the one region where that is true."* 🔴 **`frappe/lms` is `AGPL-3.0`**
+*(`license.txt`, `33 893` B, read from bytes today)* **and `openeducat_erp` is `LGPL-3.0`.
+Both APAC-origin platform rows are copyleft; the permissive rows are North American and
+European.** 🟢 **The claim is inverted, not adjusted.**
+
+🟡 **What stands instead:** `frappe/lms` and `openeducat_erp` are still the strongest
+APAC-built platforms and are still deliverable — 🔴 **but Affero on a hosted LMS obliges
+disclosure of the client's modifications to its users, so the architecture decision has to be
+made in the proposal, not discovered at handover.** 🟢 Keep proprietary work in a separate
+agent service outside the Affero tree.
+
+🟢 **The curriculum mandates are the real opening and they are dated.** India puts AI and
+computational thinking **in Class 3 from session `2026-27`** with NISHTHA teacher training;
+Singapore routes Primary 4 AI through the **Student Learning Space** with teacher supervision
+rather than open platforms. 🔵 Both are *content plus platform-integration* work with a school
+calendar as the deadline. 🔴 **No verified APAC adoption figure exists on this page — do not
+build a business case that needs one.**
+
+### LATAM
+
+🟢 **`716` regulatory instruments across `23` countries, `>80`% of them filed since `2023`,
+and almost none of it education-specific.** 🔵 That combination is the offer: institutions
+face a fast-moving, fragmented, non-binding landscape with no sector rule to comply with and
+no safe default. 🟢 **Sell the map and the internal policy, then the implementation** — in
+Mexico the SEP/ANUIES recommendations are explicitly non-binding, and in Brazil the national
+strategy stops short of education.
+
+🔴 **Two warnings this pass, both measured.** `menthorlabs/menthor` — the Portuguese-language
+platform row — is **`archived: true`**, so the one permissive LATAM-reaching platform is
+frozen upstream. 🔴 And the `CC-BY-NC-SA` curriculum trap now has an English-language instance
+at `833`★ *(`enkidevs/curriculum`)*, which returns **`NOASSERTION`** from the API — 🟡 **the
+licence screen cannot be delegated to a filter in any language.** 🟢 ProFuturo/OEI's finding
+that LATAM-born initiatives are *"scarce and mostly pilots"* is the commercial headline: the
+region is buying, and almost nothing is being built there to buy.
+
+### Global
+
+🟢 **The licence cliff is a global, dated phenomenon and it is this pass's reusable asset.**
+Five `2026`-created education repositories at `333`–`515`★, **all five with no licence file**;
+the `edtech` topic above `400`★ and maintained is **`7` repositories worldwide**, of which `5`
+were already on this shelf. 🔵 **So the frontier is content, not code, and it is not
+adoptable.** 🔴 **Any engagement whose plan is *"start from the newest open-source education
+project"* has a `0`-row candidate list this week, and that is worth saying out loud in a
+pitch** — it reframes the conversation from assembly toward building, with the pre-`2026`
+permissive platforms as the base. 🟡 Futuresource's *"experimentation → structured
+implementation"* and the SLM/governance pull point the same way.
 ## Pass 192 — 2026-10-14
 
 🔵 **Regional research this pass ran one global sweep plus one sweep per region, on the open

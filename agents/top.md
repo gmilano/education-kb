@@ -3,6 +3,115 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🆕 🔴 **This page published a licence that bars client delivery as if it were permissive, and
+the error is one this KB had already diagnosed in somebody else's roundup.** p192's ranked
+table, rank `8`, reads *"the `MIT` LMS"* for [`frappe/lms`](https://github.com/frappe/lms).
+🔵 Read from bytes this pass — blobless clone, `git cat-file` over the root tree:
+
+```
+license.txt · 33 893 B · "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007"
+```
+
+🔴 **`AGPL-3.0`.** The recovered search channel's `license.spdx_id` agrees independently:
+`AGPL-3.0`. [`repos/foundations.md`](../repos/foundations.md) of this same KB has carried
+*"`frappe/lms` is AGPL-3.0, not GPL — read from `license.txt`"* for passes, and
+[`compose/patterns.md`](../compose/patterns.md) even names the failure mode:
+*"`frappe/lms` is `33 893` B of Affero where a `2026` roundup printed `MIT`."*
+🆕 **Then this page printed `MIT`.** 🟢 Corrected here, in `intel/market.md`'s APAC paragraph,
+and in `verticals/solutions.md` this pass. 🔵 **Affero on a hosted LMS is the licence that
+reaches the client's own modifications over the network** — this is not a cataloguing nit.
+
+### 🟢 The shelf, re-measured the same day — `30` of `30` rows returned
+
+🔵 p192 asked `16` and got `14`. This pass asked `30` in two batches and **got `30`**, every
+field present. 🟢 **The channel is not merely back, it is complete.**
+
+| | p192 (earlier today) | p193 (now) |
+|---|---|---|
+| rows requested / returned | `16` / `14` | **`30` / `30`** |
+| rows that MOVED | — | `6` of `30` |
+| 🔴 rows that moved **DOWN** | — | **`2`** |
+| net star change across the shelf | — | **`+13`** on ≈`120 000` |
+
+| repo | p192 ★ | p193 ★ | Δ |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `41 340` | **`41 346`** | 🟢 `+6` |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `34 799` | **`34 806`** | 🟢 `+7` |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 554` | `29 553` | 🔴 **`−1`** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2 371` | `2 372` | 🟢 `+1` |
+| [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1 784` | `1 783` | 🔴 **`−1`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `1 237` | `1 238` | 🟢 `+1` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `265` | `266` | 🟢 `+1` |
+| *the other `23` rows* | — | — | **`0`** |
+
+🔴 **Two rows went DOWN, so stars are not monotonic** — unstarring and spam-account purges
+both subtract. 🟡 **Consequence for how p192's own headline should be read:** that pass
+celebrated `openedx/openedx-platform` at **`+3` in `4` days** as proof the channel was live.
+🔵 It was proof of liveness. 🔴 **It is not evidence of momentum** — `+3` sits inside a window
+where single rows move `±1` in hours with nothing happening. 🟢 **Rule registered: below
+`±10`, a star delta is noise; a trend needs multi-day spacing and a direction held across
+re-measures.** `openedx` measured `8 198` again this pass — unchanged in hours, consistent
+with `+3/4 d`.
+
+### 🆕 🔴 The licence FIELD is blind exactly where the licence MATTERS
+
+🔵 The recovered channel returns `license.spdx_id`. 🟢 This pass read it for all `30` rows and
+diffed it against this KB's byte-read register. **`9` rows return `NOASSERTION` and `1`
+returns `null`.**
+
+| row | ★ | API licence field | 🔵 what the BYTES say (this KB, read earlier) | delivery verdict |
+|---|---|---|---|---|
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 553` | 🔴 **`null` — no licence object at all** | 🔴 no licence file | 🔴 **all rights reserved. Rank `3` on this shelf is unusable** |
+| [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `833` | 🔴 `NOASSERTION` | `CC-BY-NC-SA-4.0` *(`LICENSE.md`, `189` B)* | 🔴 **NonCommercial — barred** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `2 028` | 🔴 `NOASSERTION` | *"PageLM Community License"* *(`8 563` B)* | 🔴 **non-commercial wearing MIT's opening sentence** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `855` | 🔴 `NOASSERTION` | `CC-BY-SA-4.0` | 🟡 ShareAlike reaches derivative curriculum |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `888` | 🔴 `NOASSERTION` | `LGPL-3.0` | 🟡 copyleft, linkable |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `447` | 🔴 `NOASSERTION` | `Apache-2.0` | 🟢 permissive |
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `121` | 🔴 `NOASSERTION` | `Apache-2.0` *(`10 708` B)* | 🟢 permissive |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `340` | 🔴 `NOASSERTION` | 🔴 **still unread** | 🔴 **do not quote** |
+
+🔴 **Every licence on this shelf that bars client delivery is one the API field cannot see.**
+`NonCommercial`, the PageLM community licence, and a repository with no licence at all each
+arrive as `NOASSERTION` or `null` — 🟡 and a `NOASSERTION` in a filter reads as *"unknown"*,
+which in practice gets treated as *"probably fine"*. 🟢 **The two rows where `NOASSERTION`
+hides something permissive (`OpenOLAT`, `openfoam-mcp-server`) prove the field is not even a
+conservative signal — it is simply uninformative in both directions.**
+
+🟢 **The doctrine this KB has asserted for many passes is now PRICED: read the licence from
+bytes. The API field has a `0`% hit rate on the cases that would stop a delivery.**
+
+### 🆕 🔴 The licence cliff at the discovery frontier — `5` of `5`, read from bytes
+
+🔵 Five education repositories created in `2026`, `333`–`515`★, surfaced this pass by the
+recovered search channel and **not previously on this shelf**. Root tree read on each:
+
+| repo | ★ | created | paths | 🔴 licence file at root |
+|---|---|---|---|---|
+| [`buynao/aipath`](https://github.com/buynao/aipath) | `515` | `2026-06-12` | `78` | 🔴 **NONE** |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `501` | `2025-12-01` | `150` | 🔴 **NONE** |
+| [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering) | `487` | `2026-09-20` | **`1`** | 🔴 **NONE** |
+| [`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online) | `367` | `2026-01-30` | `786` | 🔴 **NONE** |
+| [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) | `333` | `2026-04-26` | `110` | 🔴 **NONE** |
+
+🔴 **Five of five. Not one licence file between them.** Add `Mr.-Ranedeer-AI-Tutor` at
+`29 553`★ and the count is six, spanning two orders of magnitude of reach. 🔵 No licence is
+not *"permissive by default"* — it is **all rights reserved**, and no amount of stars changes
+that.
+
+🟢 **So none of the five is promoted to the shelf, and that is the finding, not a failure to
+find one.** 🟡 Two are worth naming anyway, as evidence rather than as starting points:
+🔵 [`Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online) is a
+`786`-path Spring Cloud adult-education platform with a **course-recommendation AI agent as a
+first-class service** — the APAC-origin shape this KB has been looking for, published
+unusable. 🔵 [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering)
+is **`487`★ on exactly `1` path** — one `README.md`, created `2026-09-20` — which is p192's
+*"the unit of education software is shrinking"* trend at its limit.
+
+🔵 Full regional reading of all five is in [`intel/trends.md`](../intel/trends.md) this pass;
+the gate that keeps them out of a proposal is `Pattern 25` in
+[`compose/patterns.md`](../compose/patterns.md).
 ## Pass 192 — 2026-10-14
 
 🆕 🟢 **The discovery channel is BACK, and it corrects the line this page has carried for

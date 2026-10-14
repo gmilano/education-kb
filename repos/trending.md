@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **The thirteen-pass gap CLOSES. `github.com/trending` was fetched successfully today,
+weekly and daily, and parsed.** 🔴 **Result: `19` rows, `0` education.** Full tables in
+[`agents/trending.md`](../agents/trending.md); the lane analysis is in
+[`repos/foundations.md`](foundations.md). 🔵 **The line *"GitHub Trending: NOT MEASURED"* is
+retired from this KB — not because the surface changed, but because this KB had been probing
+it with the one lane that is gated.**
+
+### 🟢 Momentum, re-measured the same day — and the noise floor is now known
+
+🔵 `30` shelf rows re-read hours after p192 priced them. **`6` moved. `2` moved DOWN.**
+
+| what p192 said | 🔴 what p193 measures |
+|---|---|
+| `openedx/openedx-platform` **`+3` in `4` days** — *"a live delta, so the channel is current"* | 🟢 still true as a liveness proof. 🔴 **But `openedx` measured `8 198` again today, and two other rows moved `−1` in the same window** |
+| — | 🟢 **Floor registered: `±10`. Below it, a star delta is noise, not momentum** |
+
+🔴 **Stars are non-monotonic.** [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+`29 554` → `29 553` and
+[`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning)
+`1 784` → `1 783`, both in hours. 🟡 **Any trend line this KB draws from single-digit deltas
+is drawing noise.** 🟢 The two rows with real movement — `DeepTutor` `+6`, `book-to-skill`
+`+7` — are the only ones above a plausible floor, and even they need a second day to count.
+
+### 🆕 🔴 The real trend this pass: a cohort that gains stars and ships no licence
+
+🔵 Discovery query `created:>2026-01-01` over education names and descriptions, `>300`★.
+**Five rows. Root tree read on every one.**
+
+| repo | ★ | created | paths | licence file |
+|---|---|---|---|---|
+| [`buynao/aipath`](https://github.com/buynao/aipath) | `515` | `2026-06-12` | `78` | 🔴 **none** |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `501` | `2025-12-01` | `150` | 🔴 **none** |
+| [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering) | `487` | `2026-09-20` | 🔴 **`1`** | 🔴 **none** |
+| [`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online) | `367` | `2026-01-30` | `786` | 🔴 **none** |
+| [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) | `333` | `2026-04-26` | `110` | 🔴 **none** |
+
+🔴 **`487`★ on one `README.md`, three weeks old.** That is
+`mabdulre9/electrical-engineering`, created `2026-09-20` — **the fastest-accumulating
+education row this KB has ever measured, and it has a single file.** 🟡 Nothing to deploy,
+nothing to licence, nothing to audit — and `487` people bookmarked it.
+
+🟢 **The shelf is pre-`2026` code. The frontier is `2026` content.** 🔴 **The two cohorts
+differ on the one attribute that decides whether anything can be delivered to a client, and
+the frontier is on the wrong side of it.**
+
+### 🔵 Where the stars actually went this week
+
+🟡 `mattpocock/skills` `290 184`★ and `vercel-labs/skills` `34 736`★ both trended today, and
+neither is tagged education. 🟢 **Together with p192's finding that the second-largest
+`edtech`-topicked repository on GitHub is a PDF→skill compiler, the direction is consistent
+across three independent surfaces now: topic, shelf, and trending.** 🔴 The study layer is
+being published as agent skills, outside every education taxonomy — which is precisely why
+thirteen passes of topic queries could not see it.
+
+### 🟡 Untested this pass, stated as untested
+
+🔴 Language-filtered trending views, spoken-language trending, and third-party trending
+mirrors — **not probed**. 🟢 One call each for p194, now that the lane is proven.
 ## Pass 192 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🆕 🔴 **The trend this pass measures is a PUBLICATION practice, and it decides whether any of
+`2026`'s education software can be delivered to a client at all.**
+
+### 🔴 T1 — The licence cliff: the `2026` cohort ships stars and no licence
+
+🔵 Five education repositories created in `2026`, `333`–`515`★, every one discovered this
+pass, every one's **root tree read from bytes**:
+
+| repo | ★ | created | paths | region signal | licence |
+|---|---|---|---|---|---|
+| [`buynao/aipath`](https://github.com/buynao/aipath) | `515` | `2026-06-12` | `78` | 🔵 bilingual `README.zh-CN.md` — **APAC** | 🔴 **none** |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `501` | `2025-12-01` | `150` | 🔵 US `501(c)(3)`, `7` languages — **North America** | 🔴 **none** |
+| [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering) | `487` | `2026-09-20` | 🔴 **`1`** | 🟡 unplaced | 🔴 **none** |
+| [`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online) | `367` | `2026-01-30` | `786` | 🔵 Chinese/English, Spring Cloud — **APAC** | 🔴 **none** |
+| [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) | `333` | `2026-04-26` | `110` | 🟡 unplaced | 🔴 **none** |
+
+🔴 **Five of five.** Add [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+at **`29 553`★ with no licence object at all** and the pattern spans two orders of magnitude
+of reach. 🔵 **No licence is not a gap in the metadata — it is all rights reserved.**
+
+🟢 **Why this is a TREND and not five anecdotes:** the shelf — `30` rows, almost all created
+before `2026` — carries a licence on `29` of `30`. 🔴 **The cohort created in `2026` carries
+one on `0` of `5`.** 🟡 The two populations differ on exactly the attribute that decides
+adoptability, and they differ completely.
+
+🔵 **Mechanism, stated as a hypothesis rather than a measurement:** the `2026` cohort is
+published as *content* — a curriculum, a course, a skill, a simulator — by authors who are
+teachers rather than maintainers, into harnesses that never asked them for a `LICENSE`.
+🔴 **Commercial consequence: the more education-native the project, the less likely it can be
+used.**
+
+### 🔴 T2 — The unit keeps shrinking, and it has reached one file
+
+🟢 p192: *"the unit of education software is shrinking from a deployable platform to a few
+files of pedagogy."* 🔴 **p193's limit case: `mabdulre9/electrical-engineering`, `487`★,
+created `2026-09-20`, `1` path — a single `README.md` — the fastest-accumulating education
+row this KB has ever measured.**
+
+🔵 Alongside it, the global trending surface *(measured today, first time in this KB's
+history)* carries `mattpocock/skills` at `290 184`★ and `vercel-labs/skills` at `34 736`★.
+🟡 Neither is tagged education and both are study/reference artefacts.
+🔴 **Three independent surfaces — topic, shelf, trending — now point the same way, and none
+of them classifies this material as education.** 🟢 Which is why thirteen passes of
+education-topic queries could not see where the field went.
+
+### 🟢 T3 — The field has a denominator now, and it is `7`
+
+🔵 `topic:edtech stars:>400 pushed:>2026-08-01` → **`7` repositories worldwide.** `5` already
+on this shelf; of the other two, one is a job-board list and one is unlicensed. 🟢 **Net
+adoptable discoveries: `0`.**
+
+🔴 **This is the strongest form p192's *"the frontier has moved inside existing projects"*
+claim has taken.** 🟡 A percentage *(`84`% already-known)* says the sampling is saturated. 🟢 A
+denominator of `7` says something harder: **the maintained, visible, `edtech`-topicked
+open-source population is small enough to recite from memory, and this KB has read all of
+it.**
+
+### 🔴 T4 — Licence metadata is not a signal, in either direction
+
+🔵 Measured across `30` shelf rows this pass: **`9` return `NOASSERTION`, `1` returns
+`null`.** 🔴 Of those `10`, **`4` hide a licence that bars or encumbers delivery**
+*(`CC-BY-NC-SA`, the PageLM community licence, `CC-BY-SA`, `LGPL`)*, **`2` hide a permissive
+one** *(`Apache-2.0` ×2)*, `1` is genuinely unlicensed at `29 553`★, and `3` are unread.
+🟢 **So `NOASSERTION` predicts nothing** — it is not even conservatively wrong.
+
+🟡 **Trend, not incident: the ecosystem's licence metadata degraded exactly as licence
+diversity increased.** Content licences *(`CC-*`)*, bespoke community licences and no licence
+at all are all invisible to a field designed for OSI code licences. 🔴 **Every tool that
+filters a dependency list by that field — procurement portals, SBOM scanners, approved-tool
+registers — is blind in the same place.**
+
+### 🔴 T5 — Governance dates are splitting into cohorts, and the briefings are quoting one
+
+🔵 EMEA, measured this pass: Art. `50` marking applies from **`2026-08-02`** to systems placed
+on the market after that date, and from **`2026-12-02`** to generative systems already on the
+market. 🔴 **This KB published the December date alone one pass ago, and so does most of the
+public commentary.** 🟢 Annex III high-risk — education — moved to **`2027-12-02`** by
+Regulation (EU) `2026/1744` *(OJ `2026-07-24`, in force `2026-07-27`)*, with **no substantive
+requirement changed.**
+
+🟡 **The trend: deferral is making compliance dates COHORT-dependent rather than
+calendar-dependent.** 🔴 Two systems in the same school, doing the same thing, now have
+obligations `16` months apart based on when they were placed on the market. 🟢 **An inventory
+with placement dates is becoming a compliance artefact in its own right** — and almost nobody
+has one.
+
+### 🟡 T6 — The instrument is part of the finding
+
+🔵 This KB spent thirteen passes recording *"GitHub Trending: NOT MEASURED"* and one pass
+recording *"the API is gone"*. 🔴 **Both were artefacts of a gated lane inside the measuring
+environment, and the `249`-byte body of the `403` said so the whole time.** 🟢 Diagnosis in
+[`repos/foundations.md`](../repos/foundations.md).
+
+🟡 **Trend for anyone building agentic research pipelines, which is most of this KB's
+audience:** as agents acquire more lanes to the same resource — direct `HTTP`, a CLI, an MCP
+server, a page fetcher — **a failure in one lane stops looking like a failure and starts
+looking like a fact about the world.** 🔴 The `0` that gets published is indistinguishable
+from the `0` that is true. 🟢 **The defence is cheap and this pass proves it: read the error
+BODY, and ask the gate a question it will answer *(`rate_limit` returned a full live quota)*
+before declaring a source dead.**
 ## Pass 192 — 2026-10-14
 
 🆕 🟢 **The trend this pass measures is about the SHELF, not the market: after `191` passes,

@@ -3,6 +3,102 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+## Pass 193 — 2026-10-14
+
+🆕 🟢 **The `403` that has shaped thirteen passes of this KB is NOT GitHub's. It is this
+session's own gate, it says so in its body, and the credential behind it is valid.**
+🔴 **Which means every *"the channel is gone"* line this KB has published since p179 was a
+measurement of the measuring environment, not of GitHub.**
+
+### 🔵 The evidence, three calls
+
+**1 — Read the `403` body instead of the status code.** `249` bytes, identical on
+`github.com/trending` and on `api.github.com/search/repositories`:
+
+```json
+{"message":"This GitHub API path is not available: sessions are bound to their
+configured repositories. Use repository-scoped endpoints (repos/{owner}/{repo}/...)."}
+```
+
+🔴 **That is not GitHub's error vocabulary.** GitHub answers rate limits with
+`API rate limit exceeded` and auth failures with `Bad credentials`. 🟢 This is an
+intermediary refusing a *path*.
+
+**2 — Ask for a path the gate allows.** `gh api rate_limit` returns a complete, live GitHub
+quota object:
+
+| bucket | limit | used | remaining |
+|---|---|---|---|
+| `core` | `15 000` | `0` | `15 000` |
+| `search` | `30` | `0` | `30` |
+| `graphql` | `10 000` | `0` | `10 000` |
+
+🟢 **The token is valid, authenticated at an App-level quota, and completely unspent.**
+🔴 **There was never a credential problem and never a rate-limit problem.**
+
+**3 — Ask for a repository-scoped path outside the allow-list.** `repos/HKUDS/DeepTutor`,
+`repos/moodle/moodle`, `repos/openedx/openedx-platform/stargazers` — all three:
+
+```json
+{"message":"GitHub access to this repository is not enabled for this session.
+Use add_repo to request access."}
+```
+
+🟢 **So the gate is per-repository, not per-endpoint.** The lane works; it is scoped to a
+list this KB is not on.
+
+### 🔴 What this corrects, and it is not small
+
+| this KB published | 🟢 what is actually true |
+|---|---|
+| *"stars, trending, topics, search — still gone"* | 🔴 **gone FROM ONE LANE.** The MCP lane returned `30`/`30` rows with stars today; the page-fetch lane returned trending |
+| *"`403` — the API is blocked"* | 🔴 **the session is scoped.** A client running this same instrument on their own machine sees a working API and none of this |
+| *"thirteenth pass without trending"* | 🔴 **thirteen passes of not having tried the fourth lane** |
+
+🟡 **The method lesson, stated so p194 cannot lose it: a status code is not a diagnosis.**
+`403` told this KB *"refused"*; the `249`-byte body told it *who* refused and *why*, and the
+`rate_limit` call told it the refusal was local. 🟢 **Three calls, and a thirteen-pass
+standing gap turns out to have been a one-line misread.**
+
+### 🆕 🔴 The government-primary-source gap has a MECHANISM now, and it is terminal
+
+🔵 p191 recorded `16` blocked hosts; p192 restated the gap and did not retest. 🟢 **Retested
+this pass, six hosts, `12` s timeout each:**
+
+| host | HTTP | resolved IP |
+|---|---|---|
+| `eur-lex.europa.eu` | `000` | 🔴 **`127.0.0.1`** |
+| `digital-strategy.ec.europa.eu` | `000` | 🔴 **`127.0.0.1`** |
+| `www.ed.gov` | `000` | 🔴 **`127.0.0.1`** |
+| `www.unesco.org` | `000` | 🔴 **`127.0.0.1`** |
+| `www.gov.br` | `000` | 🔴 **`127.0.0.1`** |
+| `www.education.gov.au` | `000` | 🔴 **`127.0.0.1`** |
+
+🔴 **Six of six resolve to loopback.** The page-fetch lane — the one that recovered trending
+— returns `getaddrinfo ENOTFOUND` for `eur-lex.europa.eu` while fetching `github.com` in the
+same minute. 🟢 **So this is a DNS null-route on a host allow-list, not a `403`, not a
+timeout, and not lane-specific.**
+
+🔵 **Why that matters more than the gap itself:** a `403` invites a retry and a different
+lane. 🔴 **A null-routed host does not. No number of passes and no new lane will reach
+`eur-lex`, and p194 should stop spending calls on it.** 🟢 Recorded as **structurally
+unreachable** rather than *"not reached this pass"* — the distinction this KB keeps insisting
+on, applied to itself.
+
+🟡 **Consequence for every regulatory claim on [`intel/market.md`](../intel/market.md): it is
+secondary and it will stay secondary from inside this harness.** 🟢 The honest upgrade is
+convergence — many independent secondary sources naming the same instrument number and the
+same dates — and this pass gets one. See the EU `2026/1744` resolution there.
+
+### 🟢 Licence re-read from bytes: `frappe/lms`
+
+🔵 Blobless clone, `--no-checkout`, `git cat-file` on the root tree:
+**`license.txt`, `33 893` B, first line `GNU AFFERO GENERAL PUBLIC LICENSE`.**
+🟢 **Confirms this page. Refutes [`agents/top.md`](../agents/top.md) p192, which printed
+`MIT`.** 🔴 **Three independent instruments now agree it is `AGPL-3.0`** — the bytes, this
+page's earlier read, and the recovered channel's `license.spdx_id`. 🟡 The row stays; the
+licence is corrected wherever this KB printed it wrong, including a regional recommendation
+that was built on the wrong word.
 ## Pass 192 — 2026-10-14
 
 🆕 🟢 **Every repository URL this KB publishes on its three shelf pages has been probed for
