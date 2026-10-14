@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 208 — 2026-10-14 — SIXTH PASS WITHOUT A PERMISSIVE EDUCATION ERP, AND THE PLATFORM CHOICE IS NOW DECIDED BY A CONNECTIVITY NUMBER
+
+### 🔴 The permissive ERP still does not exist, and the sweep is now boring enough to state as a fact
+
+🟢 **`open source platform education ERP CRM MIT Apache LMS student information system` returned
+exactly two platforms, and both are copyleft and both are already on this shelf:**
+
+| platform | grant | what it is |
+|---|---|---|
+| **OpenEduCat** *(community edition)* | 🔴 **`LGPL-3.0`** | Education ERP on the **Odoo** framework — SIS, LMS, CRM with leads/interactions/admissions, modular adoption. 🟡 Vendor claims *"`30 000`+ institutions in `130`+ countries"* are self-published and not verified |
+| **Chamilo** | 🔴 **`GPL`** | LMS plus content management. **LMS-only** — not an ERP and not a CRM |
+
+🔵 **Sixth consecutive measurement.** 🔴 **There is no `MIT`/`Apache-2.0` education ERP, so every
+records-of-authority engagement in this industry is a copyleft engagement, and the only
+architecture that keeps a client's own code closed is the one this KB has published since
+`P207-B`: the ERP keeps the records, the agent layer runs OUT OF PROCESS across an API.**
+
+### 🆕 🔴 The platform decision India's mandate forces, and it is not a licence decision
+
+🔴 **`UDISE+` `2024-25`: `64.7`% of Indian schools have computers, `58`% functional for teaching,
+`63.5`% have internet** — against an `AI & Computational Thinking` curriculum that is
+**mandatory for Classes `3`–`8` from the `2026-27` session**. 🟢 **That pair of numbers selects
+the platform tier before any licence argument starts:**
+
+| tier | asset | grant | fits a `63.5`%-connected national mandate? |
+|---|---|---|---|
+| 🟢 **offline-first** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 **YES — packaged content, local sync, designed for intermittent connectivity** |
+| 🟡 server LMS | Moodle | 🔴 `GPL-3.0` | 🟡 only where a school has a server AND a link |
+| 🔴 cloud-first tutor | any hosted agent | — | 🔴 **NO — a third of the schools cannot reach it** |
+
+🔵 **This is the first time in this KB that a CONNECTIVITY statistic, not a licence, picks the
+platform** — and it is the reason `P208-B` is built on Kolibri rather than on the larger
+platforms.
+
+### 🟡 The MCP integration tier: one connector this KB cannot assess
+
+🟡 **The Moodle/Open edX agent-integration sweep *(see [`repos/trending.md`](../repos/trending.md))*
+returned the **eLeDia MCP Connector**, described as open source and able to create courses,
+manage users and search content **inside Moodle's existing roles and permissions** — 🔴 **and it
+is distributed from `eledia.de`, not GitHub, so this KB's locator and per-cell comparator cannot
+read its grant at all.** 🟢 **Shortlisted as *legal review required*, never as a base.**
+🟢 [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) re-read this
+pass: 🔴 **`AGPL-3.0`, `34 523` B** — reference only.
+
+### 🟢 The platform shelf, unchanged — and one conflict found incidentally
+
+🟢 **Moodle `GPL-3.0` · Open edX `AGPL-3.0` *(with [`openedx/XBlock`](https://github.com/openedx/XBlock)
+`Apache-2.0`, `LICENSE.TXT`, `11 358` B as the permissive way IN)* · Sakai `ECL-2.0` ·
+ILIAS `GPL-3.0` · BigBlueButton `LGPL-3.0` · [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+`MIT` · [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) `Apache-2.0` ·
+OpenEduCat `LGPL-3.0` · Chamilo `GPL` · [`frappe/lms`](https://github.com/frappe/lms) `AGPL-3.0`
+(`33 893` B) · [`Selleo/mentingo`](https://github.com/Selleo/mentingo) `MIT` ·
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) 🔴 `Elastic-2.0`,
+source-available, NOT open source.** 🔵 **No row changed family this pass.**
+
+🆕 🟡 **One conflict this pass found without looking for it, and it is NOT adjudicated:** these
+shelves carry **H5P** as `GPL-3.0` in three places *(`h5p/h5p-php-library`, `h5p/moodle-mod_hvp`,
+and a GPL grouping with Moodle, Chamilo and ILIAS)* **and as `MIT` in one**. 🔴 **H5P is a
+MULTI-REPOSITORY project, so both cells may be right about different repositories — which is
+precisely why a conflict between two repository-level cells cannot be settled at the project
+level.** 🟢 **Registered as `ACTION PW`: name the repository in the cell, then read its blob.**
+
 ## Pass 207 — 2026-10-14 — ONE PLATFORM ROW RECOVERED FROM A CAPITAL LETTER; THE PERMISSIVE ERP STILL DOES NOT EXIST
 
 ### 🟢 `openedx/XBlock` was never ungranted. Its file is called `LICENSE.TXT`

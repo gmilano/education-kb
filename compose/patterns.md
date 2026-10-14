@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 208 — 2026-10-14 — THREE RECIPES THE ORGAN-TYPE SWEEP MAKES BUILDABLE, AND ONE GRANT CORRECTION THAT CHANGES AN OBLIGATION LIST
+
+🔵 **Every repository named below had its grant read from its own blob at `HEAD` — this pass or
+in p207's `185`-body census — and `7` cells on these shelves were CORRECTED this pass, three of
+them in the recipes below.** 🔴 **Bytes are the blob as served, trailing newline included
+(`ACTION PR`).**
+
+### 🟢 `P208-A` — the EMEA engagement, sold as TWO products because the stack has two altitudes
+
+🔴 **The problem, stated as the thing a European client actually gets wrong:** there are three
+instruments at three altitudes and only one is law. 🟢 **The EU **AI Act** *(Annex III high-risk
+for assessment, admissions and learning-outcome evaluation; `2` December `2027` under Reg. (EU)
+`2026/1744`; Article `50` marking already applied from `2` August `2026`; Article `4` AI literacy
+not delayed; education emotion-recognition banned since `2` February `2025`)*; the **Commission's
+revised ethical guidelines** *(`2026`, European Digital Education Hub working group — not law,
+but the text an inspectorate or a works council will quote)*; and the **national frameworks** —
+France's `MEN` **`Cadre d'usage de l'IA en éducation`** *(June `2025`)*, Germany's **`KMK`
+Handlungsempfehlung** *(Oct `2024`)*, Spain's **`INTEF` Guía v`2.0`** *(`1` Sept `2026`)*.
+
+🟢 **Sell them as two engagements, because they have two buyers:**
+
+```
+  COMPLIANCE (sold to the CIO / DPO, against the Act)
+  [ inventory of AI touchpoints ] -> [ Art. 50 marking, live NOW ]
+                                  -> [ Annex III triage: assessment? admissions?
+                                       learning-outcome evaluation? ] -> 2027-12-02 programme
+  evidence layer: openfun/ralph (MIT, LICENSE.md 1 094 B)  <-- xAPI statement per AI interaction,
+                  carrying the system identifier + placement cohort
+
+  ADOPTION (sold to the pedagogical directorate, against the national framework)
+  [ Moodle GPL-3.0 | OpenOLAT Apache-2.0 | Open edX via openedx/XBlock Apache-2.0 ]
+      + teacher-facing policy surface:  FR = cadre d'usage (administrative use IS in scope;
+                                             AI must not substitute the teacher)
+                                        DE = KMK: ADAPT THE EXAMINATION FORMAT
+                                        ES = INTEF Guía v2.0 + Orientaciones (teacher training)
+```
+
+🔵 **The two highest-value line items are the ones no school can build alone:** 🟢 **(a) the
+Annex III triage — most products turn out to sit in exactly one of the three named uses, and
+knowing which decides an `18`-month programme;** 🟢 **(b) Germany's assessment-format redesign,
+which the `KMK` asks for explicitly, is per-Land, and is a product rather than a report.**
+🔴 **Do not sell the Commission's guidelines as compliance** — they are not enforceable, and
+calling them that is how the CIO stops trusting the rest of the proposal.
+
+🟡 **Grant posture:** `OpenOLAT` `Apache-2.0` is the base when the deliverable must stay closed;
+Moodle and Open edX are `GPL-3.0`/`AGPL-3.0`, so the agent layer runs out of process and
+`openedx/XBlock` (`Apache-2.0`, `LICENSE.TXT`, `11 358` B) is the permissive way into Open edX.
+
+### 🟢 `P208-B` — India's Class `3`–`8` mandate, and the number that picks the architecture
+
+🔴 **The brief is dated and national:** `AI & Computational Thinking` is **mandatory for Classes
+`3`–`8` from the `2026-27` session** and **Classes `9`–`10` from `2027-28`**, with **NCERT**
+writing Grades `11`–`12` and **SOAR** carrying educator AI literacy. 🔴 **And `UDISE+` `2024-25`
+says `63.5`% of schools have internet, `64.7`% have computers, `58`% functional for teaching.**
+
+🔵 **So the architecture is decided before any model choice:**
+
+```
+  [ learningequality/kolibri  (MIT) ]        <- offline-first, packaged content, local sync
+        + content channel built from H5P interactives (GPL-3.0 -> CONTENT, kept out of client code)
+        + mastery modelling: pykt-team/pykt-toolkit (MIT) or pyBKT (MIT)  <- runs on the local node
+        + teacher companion: lesson planning + rubric generation, SERVER-SIDE where a link exists,
+          degraded to pre-generated packs where it does not
+  sync: school node -> district -> state, batched; NO per-interaction cloud dependency
+  evidence: xAPI from the local node, forwarded on sync (openfun/ralph, MIT)
+```
+
+🟢 **What makes this a Globant engagement rather than a Kolibri deployment:** 🔴 **the AI has to
+be useful at `0` bandwidth**, which means generation happens at PACKAGING time and inference at
+the edge is small or absent — a content-pipeline problem, not a chatbot problem. 🔵 **Price the
+pipeline and the teacher packs; the tutor is the demo, the packs are the deliverable.**
+
+### 🟢 `P208-C` — the `90 000`-seat teacher-capability factory, which is now a tender shape in three regions
+
+🔴 **The same product is being bought by three organ types at once:** 🟢 **Costa Rica's **MEP**
+with **CENECOOP R.L.** — **`90 000` scholarships**, `32` hours, fully virtual and asynchronous,
+platform open **`27` April – `31` December `2026`**, alongside its **`80`-page `GuíaDocenteIA`**
+*(credited to UNESCO and ULACIT)*; **Singapore's MOE** — teacher AI module `1` **compulsory by
+end `2026`**; **Spain's INTEF** — *Orientaciones para la integración de la IA en la formación
+docente*, update `2026`.
+
+```
+  [ Moodle (GPL-3.0) or Open edX (AGPL-3.0) ]  <- the enrolment and cohort engine
+        + assessment bank: scenario items generated from the MINISTRY's own guide
+          (MEP GuiaDocenteIA / INTEF Guia v2.0 / MOE AIEd framework), NOT from a generic syllabus
+        + Open Badges issuance                       <- the certificate is why a teacher finishes
+        + openfun/ralph (MIT) for completion + item-level evidence
+        + towardsai/ai-tutor-app (Apache-2.0) as the grounded-tutor reference over THAT corpus
+```
+
+🔵 **The engineering problem at `90 000` seats and `32` hours is not content, it is
+ENROLMENT, ASSESSMENT INTEGRITY AND CERTIFICATION AT ONCE, with a hard `31` December date.**
+🟢 **Mexico's SEP numbers say what the content must fix: ~`80`% of students do not know their
+institution's policy and <`30`% of teachers have had training.** 🔴 **And Singapore's MOE has
+told its Parliament it has no local evidence on cognitive impact — so build the evidence
+collection in from day one; it is the follow-on engagement.**
+
+### 🔴 What this pass CORRECTS in the recipes above, and what it KILLS
+
+🔴 **CORRECTED — [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) is
+`Apache-2.0`, not `MIT`.** 🟢 **Three recipe rows on this page said `MIT`** *(`:4623`, `:4844`, `:6895`, now behind `<!--corrected-->` markers)*; its blob is **`Apache-2.0`, `11 386` B**,
+added once on **`28` June `2026`** and never replaced. 🔵 **Still permissive, so every recipe
+stands — but the obligation list does not: `Apache-2.0` requires `NOTICE` preservation, a
+statement of changes, and carries an express patent grant with a termination clause.** 🔴 **A
+client told *"`MIT`, do what you like"* about this component was told the wrong thing.**
+
+🔴 **CORRECTED — [`openfun/ralph`](https://github.com/openfun/ralph) is `MIT`, not `Apache-2.0`.**
+The p193 compliance recipe said `Apache-2.0`; the blob is **`MIT`, `LICENSE.md`, `1 094` B**.
+🟢 **This one loosens: no `NOTICE` duty on the LRS.**
+
+🔴 **KILLED — the eLeDia Moodle MCP connector as a composition base.** It is presented as open
+source, it describes exactly the capability `P208-A` and `P208-C` want *(agent creates courses
+and manages users INSIDE Moodle's existing roles and permissions)*, and 🔴 **it is distributed
+from `eledia.de` rather than GitHub, so this KB cannot read its grant with any instrument it
+owns.** 🟢 **It goes on a shortlist marked *legal review required*. It does not go in a
+recipe.**
+
+🔴 **KILLED — the cloud-first tutor for any national mandate in a low-connectivity market.**
+`63.5`% internet is not a rollout risk, it is a disqualification.
+
 ## Pass 207 — 2026-10-14 — THREE RECIPES THE ORGAN RULE AND THE BRAZILIAN PARECER MAKE BUILDABLE
 
 🔵 **Every repository named below had its grant read from its own blob at `HEAD` this pass, with
@@ -2099,7 +2219,7 @@ MCP tool definitions, `47` of them writes)*, `instructure/canvas-lms` *(LTI regi
 | 🔴 emotion recognition in education | **prohibited** | live since `2025-02-02` |
 
 **Step 3 — make the marking auditable, not just present.** 🔵 Wire
-[`openfun/ralph`](https://github.com/openfun/ralph) *(`Apache-2.0`, LRS)* behind the estate so
+[`openfun/ralph`](https://github.com/openfun/ralph) *(`MIT`<!--corrected p208: published Apache-2.0; own blob LICENSE.md = MIT, 1 094 B-->, LRS)* behind the estate so
 each AI interaction emits an xAPI statement carrying the system identifier and its placement
 cohort. 🔴 **Marking that cannot be evidenced after the fact is a screenshot, not a control.**
 
@@ -4499,7 +4619,7 @@ this line is the disclosure for the other `82`.**
 | 2. **Evidence capture** | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** (🆕 `LICENSE.md`, 1 094 B — 🔴 **plain `LICENSE` is `404`, a `P50` instance**) | p172 |
 | 1. **System of record** — leave it alone | [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 GPL *(`COPYING.txt`)* **or** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) 🔴 AGPL-3.0 | copyleft | p172 |
 | 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | p172 |
-| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | p172 |
+| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **Apache-2.0**<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B-->, LangGraph + FastAPI | 🟢 permissive | p172 |
 | Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** | p172 |
 | On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | p172 |
@@ -4720,7 +4840,7 @@ this line is the disclosure. The only component whose STATUS p173 changes is ste
 | 2. **Evidence capture** | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** (🆕 `LICENSE.md`, 1 094 B — 🔴 **plain `LICENSE` is `404`, a `P50` instance**) | p172 |
 | 1. **System of record** — leave it alone | [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 GPL *(`COPYING.txt`)* **or** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) 🔴 AGPL-3.0 | copyleft | p172 |
 | 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | p172 |
-| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | p172 |
+| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **Apache-2.0**<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B-->, LangGraph + FastAPI | 🟢 permissive | p172 |
 | Tutor client | [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) — Electron + local Ollama, no internet | 🟢 **MIT** | p172 |
 | On-device mobile | [`linyeping/GemMate`](https://github.com/linyeping/GemMate) — Gemma on local hardware, Dart | 🟢 **MIT** | p172 · 🔴 **p191 CORRECTION: `Apache-2.0`** |
 | 🟢 **Pedagogy** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(283 ★)* or [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) *(243 ★)* | 🟢 **MIT, 1 069 B / 1 102 B** | p172 |
@@ -6771,7 +6891,7 @@ edX the AGPL reaches a *hosted* derivative, not just a shipped one.
 |---|---|---|---|
 | 1. **System of record** — leave it alone | [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 GPL *(`COPYING.txt`)* **or** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) 🔴 AGPL-3.0 | copyleft | 🟢 **Unmodified. Enrolment, gradebook and roster stay authoritative here** |
 | 2. **Tutoring surface** — a separate process | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🟢 **MIT**, Go | 🟢 permissive | 🟢 **An Intelligent Tutoring System exposed as an MCP server** — so any host agent calls it as a tool |
-| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **MIT**, LangGraph + FastAPI | 🟢 permissive | 🟢 **Agentic RAG over a curated course corpus — the client's own material, not the open web** |
+| 3. **Content grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 **Apache-2.0**<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B-->, LangGraph + FastAPI | 🟢 permissive | 🟢 **Agentic RAG over a curated course corpus — the client's own material, not the open web** |
 | 4. **Mastery model** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) 🟢 **MIT** | 🟢 permissive | 🟢 **DKT / AKT / SAKT knowledge tracing — answers *"does the student know it?"* with a model, not a vibe** |
 | 5. **The wire** | **LTI 1.3** *(Moodle, Open edX, Canvas, Sakai, ILIAS, Chamilo all speak it)* + the LMS REST API | — | 🟢 **A protocol boundary is not a derivative work.** 🔵 **This is the whole trick** |
 

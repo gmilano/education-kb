@@ -1,0 +1,8 @@
+repo	address	published_before	true_family	bytes_as_served	path	how_established	found_by
+towardsai/ai-tutor-app	agents/top.md:5698	MIT	Apache-2.0	11386	LICENSE	blob at HEAD; GitHub sidebar "Apache-2.0 license"; LICENSE added once, commit b151505, 28 Jun 2026, never replaced	per-cell and per-line comparators
+towardsai/ai-tutor-app	agents/trending.md:3156	MIT	Apache-2.0	11386	LICENSE	as above	per-cell and per-line comparators
+towardsai/ai-tutor-app	repos/trending.md:3262	MIT	Apache-2.0	11386	LICENSE	as above	per-cell and per-line comparators
+towardsai/ai-tutor-app	compose/patterns.md:4623	MIT	Apache-2.0	11386	LICENSE	as above	per-cell and per-line comparators
+towardsai/ai-tutor-app	compose/patterns.md:4844	MIT	Apache-2.0	11386	LICENSE	as above	per-cell and per-line comparators
+towardsai/ai-tutor-app	compose/patterns.md:6895	MIT	Apache-2.0	11386	LICENSE	as above	per-cell and per-line comparators
+openfun/ralph	compose/patterns.md:2223	Apache-2.0	MIT	1094	LICENSE.md	blob at HEAD; the KB publishes MIT correctly at ~15 other sites	per-line comparator ONLY — the site is prose, not a table row

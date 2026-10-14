@@ -4,6 +4,160 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 208 — 2026-10-14 — THE ORGAN RULE GENERALISES AND ITS LIST WAS INCOMPLETE; AND A LINE IS NOT A RECORD
+
+### 🆕 🔴 `T208-1` — `ACTION PQ` fires on limb `1`, and corrects p207's own list
+
+🟢 **p207 retired the pan-regional query and replaced it with: *run the query once per organ that
+could issue the instrument — ministry, council, legislature, state.* `ACTION PQ` asked whether
+that holds on the two regions that had never filled from a regional sweep. Limb `1` wanted `3`+
+dated instruments EMEA and APAC do not carry.** 🔴 **It returned `9`, and `5` of them come from
+organ types p207's list cannot name:**
+
+| organ type | the instrument it issued | why p207's list misses it |
+|---|---|---|
+| 🆕 🔴 **supranational executive** | the **European Commission**'s revised *Ethical guidelines on the use of AI and data in teaching and learning for educators* *(first ed. `2022`, revision `2026`, written by the **European Digital Education Hub**'s working group)* | 🔴 **It sits ABOVE every ministry in EMEA, and in the EU it is also the only layer that issues BINDING law** |
+| 🆕 🔴 **standing conference of subnational ministers** | Germany's **KMK** *Handlungsempfehlung … zum Umgang mit KI in schulischen Bildungsprozessen* *(Oct `2024`, all `16` Länder via the `Ad hoc-AG KI` under NRW's lead)* | 🔴 **A federation with no competent national ministry has no ministry to name.** 🔵 **Same shape as Canada's `CMEC`, which p207 recorded as *"no federal instrument"*** |
+| 🆕 🟡 **agency or institute under a ministry** | Spain's **INTEF** *Guía … v2.0* *(`1` Sept `2026`)* and *Orientaciones … formación docente, Actualización `2026`* | 🟡 The ministry (`MEFP`) is in the credits; **the issuer is the institute** |
+| 🆕 🟡 **examination board + curriculum institute** | India's **CBSE** circular and **NCERT**'s Grades `11`–`12` textbook team, under the MoE's `AI & CT` mandate | 🟡 The mandate is the ministry's; **the documents a school actually follows are the board's** |
+| 🆕 🟡 **the organ that ANSWERS rather than issues** | Singapore **MOE**'s written parliamentary reply *(`25` Feb `2026`)* and forum-letter replies *(`13` Apr, `18` Sep `2026`)* | 🔴 **There is no titled document to find.** The ministry's position exists only as replies |
+
+🔵 **So the axis is not the language *(p206, refuted by p207)*, not the country *(p205,
+subsumed)*, and not quite the organ either — it is the ORGAN TYPE, and which types exist is set
+by how a country allocates authority over education.** 🟢 **Federal systems put it in a
+conference of states; EU members have a supranational layer above the ministry; ministries with
+technical institutes put it in the institute; common-law systems answer in parliament.** 🔴
+**Enumerate the organ types for the jurisdiction BEFORE searching, or the sweep will find the
+country's weakest instrument and miss its binding one.**
+[`evidence/organ-type-sweep.2026-10-14-p208.tsv`](../evidence/organ-type-sweep.2026-10-14-p208.tsv).
+
+### 🆕 🔴 `T208-2` — in this KB, a markdown LINE is not a record. Three instruments inherited the same defect this pass
+
+🔴 **The same error appeared three times in one pass, in three unrelated instruments, and it is
+the reason `Gap 467` was mis-read for three passes:**
+
+| instrument | what it treated as a record | what that cost |
+|---|---|---|
+| 🔴 the licence audit *(p205–p207)* | the repository, as the **union** of every line naming it | 🔴 **`152` of `179` rows unauditable**, and `2` wrong cells survived three audits |
+| 🔴 its `24` historical false positives | the **line** | 🔴 a token belonging to the previous item in a list, read as this repository's grant |
+| 🆕 🔴 p208's own `ungranted` population *(`ACTION PS`)* | the **line** | 🔴 **`26` of `26` "recoveries" were artefacts** — every one is a repository this KB already publishes a grant for |
+
+🟢 **The fix is identical in all three cases and it is not a better regex: the unit of comparison
+must be the CELL — a repository plus the licence column of its OWN table row.** 🔵 **Measured:
+per-cell flags `12` candidates of which `6` are true (`50`%); per-line flags `61` of which `7`
+are true (`11`%); per-repo flagged `24` across three passes of which `0` were true.** 🔴 **And
+neither new comparator dominates — `openfun/ralph`'s wrong cell is a PROSE sentence inside a
+recipe, invisible to the per-cell reader.**
+[`compose/code/p208-seeded-error-audit/`](../compose/code/p208-seeded-error-audit/README.md).
+
+### 🆕 🔴 `T208-3` — the first true positives in four passes, and both are corrections that were never propagated
+
+🔴 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) was published **`MIT` in
+`6` cells across `4` files**; its own blob is **`Apache-2.0`, `11 386` B**. 🟢 **Its `LICENSE`
+was added ONCE — commit `b151505`, `28` June `2026` — and never replaced, and the sidebar reads
+`Apache-2.0`.** 🔴 **So the cell was never right; this is not a relicensing the KB missed.**
+
+🔴 [`openfun/ralph`](https://github.com/openfun/ralph) was published **`Apache-2.0`** in a p193
+recipe step; its blob is **`MIT`, `LICENSE.md`, `1 094` B**.
+
+🔵 **In BOTH cases this KB already holds the right value somewhere else** — `Apache-2.0` for
+`ai-tutor-app` on the agent shelf, complete with an `md5`; `MIT` for `ralph` at some fifteen
+other sites. 🔴 **The wrong value survived three dedicated audits precisely BECAUSE the right
+value existed: it was in the union those audits compared against.** 🟢 **The class, named: a
+correction in this KB is PUBLISHED, not PROPAGATED — and the composition recipes, which are what
+a client engagement actually reads, are the last place a correction arrives.** `7` cells
+corrected in place behind `<!--corrected-->` markers:
+[`evidence/licence-cell-corrections.2026-10-14-p208.tsv`](../evidence/licence-cell-corrections.2026-10-14-p208.tsv).
+
+🔵 **Consequence that is not about this KB:** `MIT` → `Apache-2.0` keeps the deliverable
+permissive, so *"usable"* survives. 🔴 **What does not survive is the obligation list — `Apache-2.0`
+carries `NOTICE` preservation, a change-statement duty and an express patent grant with a
+termination clause, and a client told *"`MIT`, do what you like"* has been told the wrong thing.**
+
+### 🆕 🟡 `T208-4` — `ACTION PT`'s falsifier landed between its own limbs, and that was the informative outcome
+
+🟢 **`5` deliberate errors seeded into a scratch copy; limb `1` was *"catches `4`+"*, limb `2`
+*"catches `≤2`"*.** 🔴 **It caught `3`.** 🟢 **And the `3`/`2` split is not noise: the `3` caught
+are the three seeded on rows whose true family is printed at exactly one site, and the `2` missed
+are the two seeded on rows where it is printed at many.**
+
+🔵 **This is `T268` again — a falsifier that names a threshold must name the population it counts
+over.** 🔴 **`5` seeds drawn from a population that is `85`% unauditable cannot land on either
+limb**, and the fix is to state the limb as a RATE over a declared stratum: *"catches `≥80`% of
+seeds placed on single-site rows"* would have fired cleanly, as would *"catches `≥1` seed on a
+multi-site row"*. 🟢 **Both are now how p208 writes its own actions.**
+
+### 🆕 🟢 `T208-5` — Singapore's ministry says, in its own words, the thing this KB inferred from Korea
+
+🟢 **p207's APAC cell carried a rule inferred from outcomes: mandates aimed at TEACHER capability
+survive, mandates aimed at CLASSROOM TOOLS do not.** 🆕 **MOE now states the tool half directly.**
+🔴 **In a written reply to Parliament on `25` February `2026`, the Education Minister said the
+ministry has NO local data on whether student AI use is linked to weaker cognitive ability and is
+studying the impact.** 🟢 **Its forum replies of `13` April and `18` September `2026` say learning
+stays **print-first** at younger ages, AI is introduced **progressively**, and teachers may
+**deliberately withhold** AI where it does not serve the learning goal.**
+
+🔵 **Read as a procurement signal this is unambiguous: the most AI-forward education ministry in
+APAC is slowing classroom tools while continuing to fund teacher capability.** 🟢 **Sell the
+teacher layer, instrument the student layer for evidence, and expect to be asked for the evidence
+— because the ministry has said in Parliament that it does not have it yet.**
+
+### 🆕 🔴 `T208-6` — India's mandate is dated, national, and lands on a base where one school in three has no internet
+
+🟢 **`AI & Computational Thinking` is MANDATORY for Classes `3`–`8` from the `2026-27` session and
+Classes `9`–`10` from `2027-28`** *(announced `29` October `2025` by the MoE's Department of School
+Education and Literacy)*, with **NCERT** writing Grades `11`–`12` textbooks and **SOAR** carrying
+educator AI literacy. 🔴 **And the base it lands on, from `UDISE+` `2024-25`: `64.7`% of schools
+have computers, `58`% functional for teaching, `63.5`% have internet connectivity.**
+
+🔵 **That single pair of numbers settles an architecture argument before it starts.** 🔴 **A
+cloud-first tutor cannot serve a national Class-`3` mandate when a third of the schools cannot
+reach it.** 🟢 **Offline-first — `learningequality/kolibri` (`MIT`), content packaged and synced
+rather than streamed — stops being a sustainability preference and becomes the only shape that
+satisfies the instrument.**
+
+### 🆕 🟡 `T208-7` — EMEA's instrument stack is three deep and only one layer is law
+
+🟡 **A client asking *"what must we comply with in Europe"* now has three answers at three
+altitudes: the EU **AI Act** *(law — Annex III high-risk for assessment, admissions and
+learning-outcome evaluation, `2` December `2027` under Reg. (EU) `2026/1744`, with Article `50`
+marking already live and the education emotion-recognition ban in force since `2` February
+`2025`)*; the **Commission's ethical guidelines** *(not law, but the text an inspectorate and a
+works council will quote)*; and the **national frameworks** — France's `MEN` cadre, Germany's
+`KMK` recommendation, Spain's `INTEF` guides.* 🔵 **Only the first is enforceable, and it is the
+only one that is not teacher-facing.** 🟢 **Practical consequence: the compliance work is sold
+against the Act and the ADOPTION work is sold against the national framework, and conflating them
+is how an EMEA proposal loses both audiences.**
+
+### 🆕 🟢 `T208-8` — `ACTION PR` discharged: the byte convention, stated once
+
+🟢 **This KB's convention, now declared rather than implied: a byte count is the licence blob
+AS SERVED by `raw.githubusercontent.com` at `HEAD`, trailing newline INCLUDED.** 🔵 **`11` of the
+`15` conflicts p207 adjudicated were one trailing `LF`** — the higher cell is the blob as served,
+the lower is the blob minus its final newline. 🔴 **Two cells differing by exactly `1` byte are
+therefore the same measurement under two conventions, not a correction**, and `<!--corrected-->`
+must not be spent on them.
+
+### 🔴 What this pass measured and did NOT find
+
+🔴 **The agent discovery channel is saturated for a FIFTH consecutive measurement.** `top open
+source AI agents education 2026 github MIT` and `github trending education AI 2026` returned
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch` and `avinash201199/free-ai-agents-resources` — **all four
+already on this shelf, all four on the teach-about-AI axis this KB rejects as an industry asset.**
+🟢 **One genuinely new verified repository, and it is rejected under that same rule:**
+[`naorpeled/aitutor`](https://github.com/naorpeled/aitutor) — **`MIT`, `1 067` B, `217`★, Go,
+*"vimtutor like guide for AI"*** — a terminal tutorial about context windows, MCP and subagents.
+🔵 **Real, permissive, well made, and not an education-industry asset.**
+
+🔴 **No permissive education ERP, for the sixth pass running.** The vertical sweep returned
+**OpenEduCat** *(`LGPL-3.0`)* and **Chamilo** *(GPL)* — both already shelved, both copyleft.
+
+🔴 **Informed gap, written down rather than left silent:** the **eLeDia Moodle MCP connector** is
+presented as open source but is **not on GitHub** *(it is distributed from `eledia.de`)*, so every
+instrument this KB owns — the locator, the census, the per-cell comparator — cannot reach it. 🔵
+**A grant this KB cannot read is not a grant it can recommend building on.**
+
 ## Pass 207 — 2026-10-14 — IT WAS NEVER THE LANGUAGE. IT IS WHICH ORGAN YOU NAME
 
 ### 🆕 🔴 `T207-1` — p206 changed two variables at once and credited the wrong one

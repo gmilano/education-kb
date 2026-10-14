@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 208 — 2026-10-14 — `ACTION PT`: THE AUDIT WAS NOT NOISY, IT WAS BLIND ON `85`% OF THIS COLUMN — AND IT HID `6` WRONG CELLS
+
+### 🔴 `ACTION PT` — `5` deliberate errors, `3` caught, and the `3`/`2` split IS the answer
+
+🟢 **Three passes audited this licence column and reported `24` mismatches, `0` true. `ACTION PT`
+asked the only question that separates *"the column is clean"* from *"the audit cannot see
+anything"*: put errors in on purpose.** 🔴 **`5` seeded into a scratch copy. `3` caught — neither
+limb of the falsifier.**
+
+| seed | shape | caught by the p205–p207 comparator? |
+|---|---|---|
+| [`2022764025/Lecture-Hunter`](https://github.com/2022764025/Lecture-Hunter) `MIT`→`AGPL-3.0` | true family printed at **`1`** site | 🟢 **yes** |
+| [`DecoyLex/ltix`](https://github.com/DecoyLex/ltix) `MIT`→`GPL-3.0` | `1` site, second file | 🟢 **yes** |
+| [`0voice/Awesome-CS-OpenCourse`](https://github.com/0voice/Awesome-CS-OpenCourse) `CC0-1.0`→`MIT` | `1` site, non-code grant | 🟢 **yes** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `Apache-2.0`→`MIT` | printed at **many** sites | 🔴 **no** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) `AGPL-3.0`→`MIT` | printed at **many** sites | 🔴 **no** |
+
+🔵 **The split is structural, not statistical.** 🔴 **p205–p207 compared the true family against
+the UNION of every token on every line naming the repository, so a repository whose true family
+appears twice CANNOT produce a mismatch however wrong a single cell is.** 🟢 **Measured across
+the `179` clean census rows: `27` rows (`15`%) have their true family at exactly one site and are
+auditable; `152` (`85`%) do not and were never auditable.**
+[`evidence/comparator-reach.2026-10-14-p208.tsv`](../evidence/comparator-reach.2026-10-14-p208.tsv).
+
+### 🆕 🔴 The first TRUE POSITIVE in four passes, and it is on this shelf
+
+🔴 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) was published **`MIT` in
+`6` cells across `4` files**. 🟢 **Its own blob at `HEAD` is `Apache-2.0`, `11 386` B at
+`LICENSE`** — and the file was **added once**, commit `b151505`, **`28` June `2026`**, never
+replaced, with the repository sidebar reading `Apache-2.0` and `31`★. 🔴 **The cell was never
+right.**
+
+🔵 **And this shelf already knew.** 🟢 **A later pass read the blob and published
+`Apache-2.0`, `11 386` B, `md5 40a4e9e8486a1d138796aeb1b1a3a6d0` — one table above the wrong
+cells.** 🔴 **The correction was published and never PROPAGATED, and the three composition
+recipes that a client engagement actually reads were the last place it failed to arrive.**
+`7` cells corrected in place behind `<!--corrected-->` markers *(`6` here and on the trending
+shelves, `1` in a p193 recipe for [`openfun/ralph`](https://github.com/openfun/ralph), published
+`Apache-2.0` where its blob is `MIT`, `LICENSE.md`, `1 094` B)*:
+[`evidence/licence-cell-corrections.2026-10-14-p208.tsv`](../evidence/licence-cell-corrections.2026-10-14-p208.tsv).
+
+🔴 **What changes for a deliverable:** `Apache-2.0` is still permissive, so *usable* survives —
+🔴 **but `NOTICE` preservation, a change-statement duty and an express patent grant with a
+termination clause do not come with `MIT`.** 🔵 **A client told *"`MIT`, do as you like"* about
+this repository was told the wrong thing.
+
+### 🟢 The repaired comparator, its price, and the verification
+
+| comparator | unit | seeds caught | candidates | true | precision |
+|---|---|---|---|---|---|
+| per-repo *(p205–p207)* | union of every line | `3`/`5` | `6` repos | `0` | `0`% |
+| per-line | one line | 🟢 **`5`/`5`** | `61` sites | `7` sites | `11`% |
+| 🆕 per-cell | a single-repo TABLE ROW | 🟢 **`5`/`5`** | **`12`** cells | **`6`** | 🟢 **`50`%** |
+
+🟢 **Seeding moved both new comparators by `+5` and `−0` — the five seeded sites and nothing
+else.** 🟢 **After this pass's corrections the per-cell count falls `12` → `6`, and all `6`
+survivors are the adjudicated false-positive shape: a row whose prose is ABOUT a licence
+divergence** *(`microsoft/autogen`'s `CC-BY` root over an `MIT` `LICENSE-CODE`,
+`cccareers/open-source-curriculum`'s manifest-vs-file split, `frappe/lms` quoted as *"the `MIT`
+LMS"* in a table of refuted claims)*. 🔵 **`T207-3` holds and is now quantified: `6` of `12`
+per-cell candidates are rows where the curation already happened.**
+[`compose/code/p208-seeded-error-audit/`](../compose/code/p208-seeded-error-audit/README.md).
+
+### 🟡 Discovery: `0` new agents for a FIFTH consecutive measurement, and one verified rejection
+
+🔴 **`top open source AI agents education 2026 github MIT` and `github trending education AI 2026`
+returned nothing this shelf lacks:** `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`,
+`avinash201199/free-ai-agents-resources`, `HKUDS/DeepTutor` — **all held, and all four of the
+first group are teach-about-AI, which this KB does not count as an education-industry asset.**
+
+🟢 **One new repository, verified and then rejected under that same rule:**
+
+| repo | grant, read from its own blob at `HEAD` | bytes | ★ | verdict |
+|---|---|---|---|---|
+| [`naorpeled/aitutor`](https://github.com/naorpeled/aitutor) | 🟢 **`MIT`** | `1 067` | `217` | 🔴 **REJECTED — teach-about-AI.** A Go/bubbletea terminal tutorial on context windows, MCP, tools and subagents, *"vimtutor like guide for AI"*. Real, permissive, well made, and **not** an education-industry asset |
+
+🟡 **One stale third-party claim, recorded so it is not re-imported:** a directory lists
+`HKUDS/DeepTutor` at **`34.7`k★**. 🟢 **This shelf holds `41.4`k★ at `v1.6.14` (`2026-10-08`),
+confirmed across passes.** 🔴 **The directory is months behind; its MCP-integration claim is
+unverified and is not carried.**
+
 ## Pass 207 — 2026-10-14 — THE PERMISSIVE HALF, AUDITED FOR THE FIRST TIME. `0` CELLS CHANGE
 
 ### 🟢 The half nobody had checked, and the prior it refuted
@@ -5613,7 +5695,7 @@ stated with its evidence.**
 | 🆕 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, 1 073 B | **45** | Go | 🟢 **An MCP server that turns any LLM into an Intelligent Tutoring System, grounded in cognitive science.** 🔵 **The cleanest composition surface on the shelf — see `compose/patterns.md`** |
 | 🆕 🟢 [`LAION-AI/Desktop_BUD-E`](https://github.com/LAION-AI/Desktop_BUD-E) | 🔴 **NO LICENCE FILE** | **43** | Python | 🟡 **EMEA — Germany** *(`P36`, owner profile: LAION AI, non-profit, verified `laion.ai`)*. Voice-assistant framework with pluggable educational skills. 🔴 **A named non-profit shipping no grant is the most surprising row of the sweep** |
 | 🆕 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 **MIT** | **36** | PowerShell | Interactive tutor **built as an agent skill** — spaced repetition, personalised project examples, visual progress dashboard. 🔵 `T98` again |
-| 🆕 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **MIT** | **31** | Python | 🟢 **Agentic RAG tutor on LangGraph (FastAPI + Next.js) over a curated course corpus.** 🔵 **The reference implementation for "tutor over OUR content"** |
+| 🆕 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0**<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B--> | **31** | Python | 🟢 **Agentic RAG tutor on LangGraph (FastAPI + Next.js) over a curated course corpus.** 🔵 **The reference implementation for "tutor over OUR content"** |
 | 🆕 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 🟢 **MIT** | **20** | TypeScript | 🟢 **Fully offline Electron tutor on local Ollama/Llama — no internet.** 🔵 **The row to quote for a data-residency or low-connectivity engagement** |
 | 🆕 🟢 [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **MIT**, 1 094 B | **17** | Python | Knowledge graph + local LLM + Bayesian skill tracking, IRT/BKT mastery, privacy-first RAG. 🔴 **CORRECTION, see below** |
 | 🆕 🟢 [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | 🟢 **MIT** | **8** | Rust | Offline adaptive desktop app: spaced repetition, terminal labs, bring-your-own-key |

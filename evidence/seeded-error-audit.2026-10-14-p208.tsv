@@ -1,0 +1,10 @@
+seed_repo	shape	true_family	seeded_as	site	per_repo_comparator	per_line_comparator	per_cell_comparator
+2022764025/Lecture-Hunter	D1 single truth site, current-state table cell	MIT	AGPL-3.0	agents/trending.md:2149	CAUGHT	CAUGHT	CAUGHT
+DecoyLex/ltix	D2 single truth site, second file	MIT	GPL-3.0	repos/foundations.md:2082	CAUGHT	CAUGHT	CAUGHT
+0voice/Awesome-CS-OpenCourse	D3 single truth site, non-code grant	CC0-1.0	MIT	repos/trending.md:287	CAUGHT	CAUGHT	CAUGHT
+HKUDS/DeepTutor	M1 truth printed at many sites (150 mention lines)	Apache-2.0	MIT	agents/top.md:155	MISSED	CAUGHT	CAUGHT
+openedx/edx-platform	M2 truth printed at many sites (158 mention lines)	AGPL-3.0	MIT	agents/top.md:5037	MISSED	CAUGHT	CAUGHT
+# totals	-	-	-	-	3/5	5/5	5/5
+# baseline candidates on the real tree	-	-	-	-	6 repos	61 sites	12 cells
+# true positives among those candidates	-	-	-	-	0	7 sites (2 repos)	6 cells (1 repo)
+# collateral change under seeding	-	-	-	-	+3 and -0	+5 and -0	+5 and -0

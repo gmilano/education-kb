@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-14
 ---
 
+## Pass 208 — 2026-10-14 — `ACTION PS` CLOSES ON LIMB `2`, AND ITS POPULATION WAS THE ARTEFACT
+
+### 🔴 `ACTION PS` — `26` apparent recoveries, `0` real, and the reason is this pass's own thesis
+
+🟢 **`ACTION PS` asked whether p207's `90`-form case-tolerant locator recovers grants from rows
+this KB has ever recorded as UNGRANTED. Limb `1` wanted `3`+ recoveries; the prior was limb `1`,
+because p207 recovered `3` of `15` in the one population it tried.**
+
+🔴 **`50` candidate rows, `26` returned a licence body, and `26` of `26` are ARTEFACTS: every one
+is a repository this KB already publishes a grant for.** 🟢 **Every one of the `26` was found at
+the plain `LICENSE` path — the FIRST form in the list — so not one of them was a case-sensitivity
+failure in the first place.**
+
+🔵 **The defect is in how the population was built, and it is `T208-2` exactly.** 🔴 **The
+extractor took every line that names a repository and also mentions an absent grant — so a
+repository merely LISTED beside such a sentence entered the population.** 🟢 **`jcputney/scorm-again`
+(`MIT`), `numbas/Numbas` (`Apache-2.0`) and `zijinz456/OpenTutor` (`MIT`) are all published on
+these shelves with their grants and all three were swept in.**
+[`evidence/ungranted-relocate.2026-10-14-p208.tsv`](../evidence/ungranted-relocate.2026-10-14-p208.tsv).
+
+🔴 **Limb `2` fires: the ungranted counts this KB has published are NOT overcounts — at least,
+not demonstrably, and not from this population.** 🟢 **What the pass actually learned is cheaper
+and more useful: the `24` rows that returned `ABSENT` after `90` path forms are the only
+defensible *ungranted* list this KB has ever held, and it is now on disk.** 🔵 **`ACTION PS` is
+re-registered as `ACTION PU` with a population built from CELLS.**
+
+### 🟢 `ACTION PR` DISCHARGED — the byte convention, declared once and for all
+
+🟢 **This KB's bytes are the licence blob AS SERVED by `raw.githubusercontent.com` at `HEAD`,
+TRAILING NEWLINE INCLUDED.** 🔵 **`11` of the `15` byte conflicts p207 adjudicated were exactly
+one trailing `LF`: the higher cell is the blob as served, the lower is the blob minus its final
+newline.** 🔴 **Two cells differing by `1` byte are therefore one measurement under two
+conventions, not an error** — so a `<!--corrected-->` marker must not be spent on them, and the
+remaining ~`80` multi-value repositories resolve by this sentence rather than by re-reading.
+
+### 🔴 A foundation-adjacent cell this pass corrected, and the class it belongs to
+
+🔴 [`openfun/ralph`](https://github.com/openfun/ralph) — the LRS this KB recommends behind an
+AI estate for xAPI evidence — was published **`Apache-2.0`** in the p193 recipe step that names
+it. 🟢 **Its blob is `MIT`, `LICENSE.md`, `1 094` B**, and this KB publishes `MIT` correctly at
+roughly fifteen other sites. 🔵 **Same class as `towardsai/ai-tutor-app` on the agent shelf: a
+correction that was published and never propagated into the recipes.** 🔴 **The recipe is the
+artefact a client reads, so it is the worst possible place for the stale cell to survive — and
+the per-repository audit three passes ran could not see it by construction.**
+
+### 🟢 The foundation shelf itself: unchanged, and re-confirmed by what did NOT move
+
+🟢 **No foundation row changed family this pass.** `learningequality/kolibri` (`MIT`),
+`openedx/XBlock` (`Apache-2.0`, `LICENSE.TXT`, `11 358` B — p207's case recovery holds),
+`openfun/ralph` (`MIT`), `openfun/richie` (`MIT`), `openfun/marsha` (`MIT`),
+`numbas/Numbas` (`Apache-2.0`), `frappe/lms` (`AGPL-3.0`, `33 893` B) and
+`openedx/edx-platform` (`AGPL-3.0`) stand unchanged — `ralph`, `richie` and `Numbas` re-read
+from their own blobs THIS pass, the rest carried from p207's `185`-body census.
+🔵 **`kolibri`'s `MIT` is the load-bearing one this pass** — see `P208-B`: India's
+`63.5`%-internet base makes an offline-first MIT platform the only shape that fits the mandate.
+
 ## Pass 207 — 2026-10-14 — THE FOUNDATION ROWS ARE RIGHT. THE THING THAT LOOKS FOR THEM IS CASE-SENSITIVE
 
 ### 🔴 `L1` — a foundation row was recorded as ungranted because of its filename's CAPITALISATION

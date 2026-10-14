@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 208 — `1` VERIFIED NEW REPO, REJECTED ON THE RULE; AND THE FIFTH SATURATION MEASUREMENT
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten** — except
+one licence token at `agents/trending.md:3156`, corrected in place behind a `<!--corrected-->`
+marker and itemised below, because shipping a wrong grant is not a trend worth preserving.
+
+### 🟢 The week's movement: one row, and it does not qualify
+
+| 🆕 repo | 🟢 grant, first-hand from its own blob at `HEAD` | bytes | ★ | region | verdict |
+|---|---|---|---|---|---|
+| [`naorpeled/aitutor`](https://github.com/naorpeled/aitutor) | 🟢 **`MIT`** | `1 067` | `217` | **Global** *(no declared origin)* | 🔴 **REJECTED — teach-about-AI.** Go + bubbletea terminal tutorial: lessons on context windows, MCP, tools and subagents, each with theory, an interactive visualisation and a quiz, progress saved locally; `npm`/Homebrew/`go install`. 🔵 **A good tool for teaching engineers about agents. Not an asset for an education client** |
+
+🔴 **Everything else the two discovery queries returned is already here**:
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`,
+`HKUDS/DeepTutor`, `plastic-labs/tutor-gpt`. 🟢 **Fifth consecutive measurement of `0`–`1` new
+industry agents, which is saturation on a fifth independent reading, not a quiet week.**
+
+### 🔴 The correction this pass shipped, and why it matters more than the discovery
+
+🔴 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) was published **`MIT`**
+on this shelf, on the top shelf, on `repos/trending.md` and in **three composition recipes**.
+🟢 **Its blob is `Apache-2.0`, `11 386` B, `LICENSE` added once on `28` June `2026`
+(`b151505`) and never replaced.** 🔴 **`6` wrong cells, `4` files, and this KB published the
+RIGHT value in a later pass without going back for the others.**
+
+| address | published | 🟢 corrected to |
+|---|---|---|
+| `agents/top.md:5698` | `MIT` | 🟢 **`Apache-2.0`** |
+| `agents/trending.md:3156` *(this file)* | `MIT` | 🟢 **`Apache-2.0`** |
+| `repos/trending.md:3262` | `MIT` | 🟢 **`Apache-2.0`** |
+| `compose/patterns.md:4623` · `:4723` · `:6774` | `MIT` | 🟢 **`Apache-2.0`** |
+| `compose/patterns.md:2223` — [`openfun/ralph`](https://github.com/openfun/ralph) | `Apache-2.0` | 🟢 **`MIT`** *(`LICENSE.md`, `1 094` B)* |
+
+🔵 **Found by a comparator that reads one CELL at a time.** 🔴 **The per-repository comparator
+three passes used could not see any of them, because the right value existed on another line and
+it compared against the union.** [`compose/code/p208-seeded-error-audit/`](../compose/code/p208-seeded-error-audit/README.md).
+
+### 🟡 Channel notes for the next pass
+
+🟡 **A third-party directory still prints `HKUDS/DeepTutor` at `34.7`k★** against this KB's
+confirmed `41.4`k★ / `v1.6.14`. 🔴 **Directories lag; the blob and the repository page do not.**
+🟢 **`THU-MAIC/OpenMAIC` news coverage dated August `2026` describes `v1.0.0` as current — this KB
+holds `v1.2.0-rc.1` (`2026-10-04`).** 🔵 **Both are the same failure: a secondary channel quoted
+at face value is a stale channel.**
+
 ## 2026-10-14 — pass 207 — `1` NEW AGENT IN THREE LANGUAGES, AND THE DISCOVERY CHANNEL IS EXHAUSTED NOT GATED
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
@@ -3107,7 +3153,7 @@ this shelf.
 |---|---|---|---|
 | 🟢 [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | **58** | 🟢 MIT | 🟢 **Uses the LLM ONLY to write quizzes** — reinforcement learning picks the action, FSRS picks the timing. 🔵 **The cheapest-to-run tutor architecture on the shelf** |
 | 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **45** | 🟢 MIT | 🟢 **Intelligent Tutoring System as an MCP server, in Go.** 🔵 **Composable into any host agent** |
-| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **31** | 🟢 MIT | 🟢 **Agentic RAG over a curated course corpus on LangGraph** — the "tutor over OUR content" reference |
+| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | **31** | 🟢 Apache-2.0<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B--> | 🟢 **Agentic RAG over a curated course corpus on LangGraph** — the "tutor over OUR content" reference |
 | 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | **20** | 🟢 MIT | 🟢 **Fully offline, local Ollama, Electron.** 🔵 **Quote for data-residency work** |
 | 🔴 [`ZelinZhou-THU/stem-tutor-agent`](https://github.com/ZelinZhou-THU/stem-tutor-agent) | **7** | 🔴 AGPL-3.0 | 🟢 **Checks maths step-by-step with SymPy instead of asking a model** — the only symbolic verifier found in 156 passes |
 

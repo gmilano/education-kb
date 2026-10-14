@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-14
 ---
 
+## 2026-10-14 — pass 208 — THE TRENDING CHANNEL IS STILL NOT AN EDUCATION CHANNEL, AND TWO SECONDARY CHANNELS ARE MEASURABLY STALE
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten** — except
+one licence token at `repos/trending.md:3262`, corrected in place behind a `<!--corrected-->`
+marker *(see below)*.
+
+### 🔴 What the trending channel returned, and what it is
+
+🔴 **`github trending education AI 2026` returns aggregators, not GitHub's own list, and every
+repository in it is on the teach-about-AI axis:** `rohitg00/ai-engineering-from-scratch`
+*(reported `#1` on Trending `24` May `2026`)*, `karpathy`'s *Neural Networks: Zero to Hero*,
+*Dive into Deep Learning*, `microsoft/ai-agents-for-beginners`, `speedyapply/2026-AI-College-Jobs`,
+`MadsLorentzen/ai-job-search`. 🟢 **All held or already rejected.** 🔵 **One contextual figure
+worth keeping: a Japanese monthly round-up reports `9` of the top `10` Trending projects in
+February `2026` were AI-related — the channel is saturated with AI and still not with EDUCATION,
+which is the fifth pass to measure that.**
+
+### 🟡 Two secondary channels, measured against this KB's own blobs, and both are stale
+
+| secondary claim | this KB, read first-hand | verdict |
+|---|---|---|
+| a directory: `HKUDS/DeepTutor` at **`34.7`k★**, Apache-2.0, *"recent releases added MCP Services"* | 🟢 **`Apache-2.0` confirmed; `41.4`k★ at `v1.6.14` (`2026-10-08`)** | 🔴 **★ months behind; the MCP claim is unverified and not carried** |
+| news coverage: `THU-MAIC/OpenMAIC` **`v1.0.0`**, `27` August `2026`, *"`11` releases since `26` March `2026`"* | 🟢 **`MIT`, `1 065` B; `v1.2.0-rc.1` dated `2026-10-04`** | 🔴 **two minor versions behind** |
+| a vendor blog: *"DeepTutor is self-hostable, Discord/Slack/web"* | — | 🟡 **plausible, unread, not carried** |
+
+🔵 **Both failures are the same shape as this pass's licence finding: a value quoted from a
+channel that is not the artefact.** 🟢 **The rule this KB already runs on — read the blob, read
+the repository page — is what caught both.**
+
+### 🔴 The LMS-side MCP question, answered honestly: one asset is out of reach
+
+🟢 **`Moodle Open edX AI agent integration 2026 release MCP plugin` returned no Moodle CORE MCP
+release and three third-party implementations:**
+
+| asset | grant | reachable by this KB's instruments? |
+|---|---|---|
+| **eLeDia MCP Connector** for Moodle — *"AI models can create courses, manage users, search content, within the roles and permissions you already defined"* | 🔴 **unknown** | 🔴 **NO — distributed from `eledia.de`, not GitHub.** The locator, the census and the per-cell comparator all reach `raw.githubusercontent.com` only |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **`AGPL-3.0`, `34 523` B** *(re-read this pass)* | 🟢 yes — already shelved, `0`★, last touched `2026-08-18` |
+| **Open edX MCP** *(community posts claim both an MCP server AND Open edX acting as an MCP CLIENT via its AI Extensions Framework)* | 🟡 already shelved | 🟡 **the two claims describe opposite directions and neither was confirmed against Open edX's own release notes** |
+
+🔵 **The informed gap, stated rather than left silent:** 🔴 **the most capable-sounding Moodle MCP
+connector is the one whose grant this KB cannot read.** 🟢 **A grant that cannot be read is not a
+grant that can be recommended — it goes on the shortlist as *legal review required*, never as a
+base.**
+
+### 🟢 The correction shipped on this shelf
+
+🔴 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) at `repos/trending.md:3262`
+read **`MIT`**; its blob is **`Apache-2.0`, `11 386` B**, added once on `28` June `2026` and never
+replaced. 🟢 **Corrected in place.** 🔵 **`6` cells in `4` files carried the same wrong token while
+this KB published the right one elsewhere** —
+[`compose/code/p208-seeded-error-audit/`](../compose/code/p208-seeded-error-audit/README.md).
+
 ## 2026-10-14 — pass 207 — THE OER CHANNEL'S FLOOR, MEASURED: PAGE `10` IS `100`% NOVEL AT `1`★
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
@@ -3206,7 +3259,7 @@ absent.**
 | 🟢 [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 45 | 🟢 MIT | **Go** | 🟢 **ITS as an MCP server** |
 | 🟢 [`poobserver/Agent-World-Builder`](https://github.com/poobserver/Agent-World-Builder) | 43 | 🟢 MIT | Python | Multi-agent simulations from rules and character relationships |
 | 🟢 [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 36 | 🟢 MIT | PowerShell | Tutor as an agent skill, progress dashboard |
-| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 31 | 🟢 MIT | Python | 🟢 **Agentic RAG on LangGraph over a curated corpus** |
+| 🟢 [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 31 | 🟢 Apache-2.0<!--corrected p208: published MIT; own blob LICENSE = Apache-2.0, 11 386 B--> | Python | 🟢 **Agentic RAG on LangGraph over a curated corpus** |
 | 🟢 [`yudongfang-thu/PrepDojo`](https://github.com/yudongfang-thu/PrepDojo) | 31 | 🟢 MIT | Python | Local-first interview practice, **sandboxed code judging** |
 | 🟢 [`koukekoukej-glitch/feynman-tutor`](https://github.com/koukekoukej-glitch/feynman-tutor) | 30 | 🟢 MIT | Python | 🟢 **Inverts the roles: the USER teaches the AI, to expose gaps** |
 | 🟢 [`michael-borck/study-buddy`](https://github.com/michael-borck/study-buddy) | 20 | 🟢 MIT | TS | 🟢 **Fully offline Electron + Ollama** |
