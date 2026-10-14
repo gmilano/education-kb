@@ -1,8 +1,309 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🟢 **Five of the six actions pre-registered for this pass are DISCHARGED, `3` with a limb FIRED
+decisively. The sixth is NOT RUN, and the reason is recorded rather than dressed up.**
+
+🆕 🟢 **The headline is a row, not a method finding: a `55`-table, `76`-foreign-key, `Apache-2.0`
+education platform with a complete AGENT-AUDIT layer, a PROMPT-GOVERNANCE layer and a HUMAN-REVIEW
+layer exists, and this KB had never seen it.**
+[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor) — `8`★, `802` files, `117`
+`test_*.py`, `3` CI workflows, `HEAD 7790650` dated **`2026-10-13`**.
+🔵 **It was invisible to every screening pass this KB has run, for one reason: p184 and its
+predecessors read the topic pages in the DEFAULT order, which is stars. This row was found by
+sorting `topics/ai-tutor` by RECENTLY UPDATED.** 🟢 **The channel was never exhausted at `~80`%;
+one of its two sort orders was.**
+
+🆕 🔴 **And it reframes `ACTION MC` before `ACTION MC` was ever run.** p184 pre-registered an ASK to
+an unlicensed `2`★ holder, to obtain a `22`-table learner model with a decision-audit layer.
+🟢 **A `55`-table model with the same audit layer, PLUS versioned prompt releases and a teacher
+review workflow, is already permissive.** 🔵 **The ASK is still worth making — but it is now worth
+making to `dotty-tutor`, whose only defect is cheap to fix: the `Apache-2.0` appendix is the STOCK
+text, `Copyright [yyyy] [name of copyright owner]` unfilled, with no `NOTICE` and no holder named
+anywhere in the repository.** 🔴 **A complete grant with no identifiable licensor — the exact hazard
+this KB already named on `scaleapi/researchrubrics`.**
+
+| action | verdict |
+|---|---|
+| 🟢 **`ACTION MD`** — bare-token grant pass (`P1049`) over every row recorded as grant-absent | 🟢 **DISCHARGED, LIMB `1` FIRED. `9` of `61` carried a real grant; `6` are permissive** |
+| 🟢 **`ACTION ME`** — probe `opencast/opencast`, the real slug | 🟢 **DISCHARGED, LIMB `1` FIRED. `ECL-2.0`, `16`+ tables, `3` LOCAL speech-to-text engines in-tree** |
+| 🟢 **`ACTION MF`** — price the `writeAlizer` chain end to end | 🟢 **DISCHARGED on STRUCTURE, LIMB `1` FIRED. `24` of `50` artefacts need no gated tool; `ReaderBench` is `Apache-2.0`. 🔴 NOT executed — `osf.io` is refused here** |
+| 🟡 **`ACTION MG`** — the commerce coupling in `ai-shifu` | 🔴 **DISCHARGED, LIMB `2` FIRED. The coupling is STRUCTURAL on the learning side, and the FK census that was asked for returns `0` because the project declares `0` foreign keys** |
+| 🔴 **`ACTION MH`** — close the APAC adoption gap on official in-language channels | 🔴 **DISCHARGED, LIMB `2` FIRED. `0` official figures reachable: `mext.go.jp` is `ENOTFOUND` here, as `eur-lex.europa.eu` was. A government TARGET and two private surveys are recorded with provenance** |
+| 🔴 **`ACTION MC`** — open an issue asking the `xueyoujing-companion` holder for a licence | 🔴 **NOT RUN. This is an outward-facing write on a third party's repository, taken by an unattended run with no live authorisation. Recorded as a decision for a human, and re-pointed at `dotty-tutor`** |
+
+### 🟢 `ACTION MD` — `9` of `61` absences were a probe artefact, and the failure modes are the lesson
+
+🟢 **Population: `61` rows this KB's eight pages record as NO GRANT / unlicensed / no licence file**
+*(single-slug-per-line extraction; ambiguous multi-slug lines dropped, so `61` is a FLOOR)*, plus
+`3` named controls. Instrument: [`compose/code/p1049-bare-token-grant`](compose/code/p1049-bare-token-grant/README.md).
+Evidence: [`evidence/bare-token-grant.2026-10-14-p185.tsv`](evidence/bare-token-grant.2026-10-14-p185.tsv).
+
+| result | n |
+|---|---|
+| 🔴 the absence HOLDS *(no licence heading, no identifier anywhere in the README)* | **`43`** |
+| 🟢 **a real own-grant this KB recorded as ABSENT** | **`9`** |
+| 🟡 an identifier that is **not** a grant | **`4`** |
+| 🔴 false positive of the screen *(after the two instrument bugs below were fixed)* | **`3`** |
+| 🟡 unresolved *(grant by URL; the URL is unreachable from here)* | **`1`** |
+| 🔴 no README at any probed name | **`1`** |
+
+🟢 **The `6` permissive overturns, each one a row a studio can now use:**
+
+| row | the grant, as written | why it matters |
+|---|---|---|
+| 🟢 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `## License` → *"Copyright ©2016 Advanced Distributed Learning / Licensed under the Apache License, Version 2.0"* | 🔴 **This KB said the steward of the standard ships its own bridge UNLICENSED. It does not.** 🟢 Incorporation by reference, with holder and year |
+| 🟢 [`haolpku/Omni-Edu`](https://github.com/haolpku/Omni-Edu) | body prose → *"The code is licensed under `Apache-2.0`. Model weights and third-party datasets and benchmarks retain their respective licenses."* | 🟢 **`225`★, APAC, `2026-09-15` — the biggest row recovered this pass.** 🔴 Code only: the weights are a second grant |
+| 🟢 [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | `## License` → `MIT` | 🟢 **`Gap 325` changes shape: the Open Badges 3.0 + ELM + OID4VCI issuer is permissive after all** |
+| 🟢 [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | `## License` → `MIT` | 🟢 the permissive layer this KB said was overstated by counting it is now correctly counted |
+| 🟢 [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | `## License` → `MIT` | 🟢 a Canvas connector that can actually be shipped |
+| 🟢 [`a5anka/ai-lab-2026-africa-agent-manager`](https://github.com/a5anka/ai-lab-2026-africa-agent-manager) | `## Licence` → *"Apache 2.0."* | 🟢 **and note the spelling: `Licence`. A probe that greps `License` misses it** |
+
+🆕 🟡 **One more, and it is the most interesting legally:**
+[`eugeborzone/Auto_Grade_Guarani`](https://github.com/eugeborzone/Auto_Grade_Guarani) carries a
+BESPOKE grant in Spanish prose — *"Usted es libre de copiar y modificar lo que quiera de esta
+repo."* 🟢 **That is a permission, freely given, on an auto-grading row** *(the EU's most explicitly
+high-risk education activity)*. 🔴 **And it has no warranty disclaimer, no patent clause, no holder
+and no year, so it is a grant a client's counsel will want re-papered, not an SPDX identifier.**
+
+🆕 🔴 **`4` rows carry an identifier that is NOT a grant, and all four would pass a careless eye:**
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) says *"MIT License
+- see `LICENSE` file for details"* and **the file does not exist** *(a dangling reference — the most
+dangerous form, because both channels look settled)*;
+[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) has only a
+`shields.io` **badge**; [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) says
+**`MIT — demo use only`**, and a field-of-use restriction is not `MIT`;
+[`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) says
+*"This project is open source and available for educational purposes"* — **a claim and a
+restriction, with no grant between them.**
+
+🆕 🟢 **Two instrument bugs were found DURING the pass by the instrument's own test suite, and
+fixing them is the cleanest result here: `MIT\b` — with no leading boundary — matched inside
+`sub|mit `, and `CC0` matched inside the hex id `…bcc0-66af…`.** 🔵 **Re-running both limbs with
+`\bMIT\b` and `\bCC0\b` changed exactly `2` verdicts and no others, so none of the `9`
+recoveries rests on the bug.** 🟢 **And it leaves the screen with a useful property: all `3`
+remaining false positives have ONE shape — the licence identifier belonged to a DEPENDENCY or to a
+third-party corpus, not to the project.**
+[`jadrianlg16/learning-tutor`](https://github.com/jadrianlg16/learning-tutor) lists `AGPL-3.0`
+*(PyMuPDF)* and `Apache-2.0` *(FastMCP)* **inside** its `## License` section — a section that reads
+*"All rights reserved … no license is granted to reuse or redistribute it."* The same shape appears
+in `sohan1611/BloodCoded_Agentic` *(a dependency table with three `Apache-2.0` rows above an `MIT`
+project)* and in the two `CorrecaoRedacao` twins *(their `MIT` is the corpus's)*.
+🔵 **`P1050`: a licence section may contain other projects' licences. The grant is the one that
+stands alone or names THIS project — and no regular expression can tell the difference.**
+
+🆕 🔴 **The cheapest lesson of the pass is about this KB's own instrument, not about the shelf.**
+Limb `2`'s `NOISE` filter — written to drop dependency inventories — **suppressed the line that
+recovered the `225`★ row**, because *"Model weights and third-party datasets…"* contains
+`third-party`. 🟢 **Suppression by keyword manufactures false negatives. Present every hit and read
+it.**
+
+### 🟢 `ACTION ME` — `opencast/opencast` is real, permissive, and it closes a layer that had `0` rows
+
+🟢 **`HEAD 637882d`. `LICENSE` = *Educational Community License, Version 2.0* (`ECL-2.0`),
+`11 340` B, full text.** 🔵 `ECL-2.0` is the `Apache-2.0` derivative written for universities: OSI-
+approved, permissive, with the patent grant narrowed to the contributor's own work.
+🟢 **`3 920` tracked paths, `230` modules.**
+
+🟢 **The entities are real** *(`16` read from the first `40` entity-bearing files; the tree holds
+`160`, so this is a floor)*: `oc_series` is the course/series unit, `oc_scheduled_extended_event`
+the scheduled recording, `oc_assets_snapshot` the versioned media, `oc_acl_managed_acl` the access
+control — and **`oc_transcription_service_job` + `oc_transcription_service_provider` are the AI
+seam, declared as a provider abstraction in the schema itself.**
+
+🆕 🟢 **And this is the fact that makes it a COMPOSITION TARGET rather than an archive: three LOCAL
+speech-to-text engines ship in-tree.** `WhisperEngine.java`, `WhisperCppEngine.java` and
+`VoskEngine.java`, each with its own `etc/*.cfg` and its own admin-guide page, beside four CLOUD
+providers *(AmberScript, Google, IBM Watson, Azure)* and an engine-agnostic
+`speech-to-text-api` + `speech-to-text-workflowoperation`.
+🟢 **A university can transcribe every lecture without a single frame of learner audio leaving its
+own network, and the place an agent attaches is a named workflow operation.**
+
+🔵 **Region, by evidence rather than by inference:** `17` locale catalogues, `15` of them European
+*(`da-DK de-DE el-GR en-GB en-US es-ES fr-FR gl-ES he-IL it-IT nl-NL pl-PL sl-SI sv-SE tr-TR`)*
+plus `zh-CN`/`zh-TW`, and a translator roster naming Danish, German, Italian, Galician, Slovenian,
+Swedish, Greek, Turkish and Hebrew contributors. **EMEA.** 🔴 **`0` `pt-BR` and `0` `pt-PT` — the
+standing Portuguese absence, now measured on one more shelf row.**
+
+🟢 **Upstream also ships `AGENTS.md` and `CLAUDE.md`** — the lecture-capture platform is itself
+agent-tooled, which lowers the cost of the first contribution back.
+
+### 🟢 `ACTION MF` — the permissive essay-scoring path exists, and the blocker was never the licence
+
+🟢 **`writeAlizer` v`1.7.4` *(`DESCRIPTION Date: 2026-09-16`, `MIT + file LICENSE`)* declares its
+runtime artefacts in a COMMITTED MANIFEST: `inst/metadata/artifacts.csv`, `50` rows,
+`kind,model,part,file,url,sha`.** 🟢 **All `50` carry a pinned `sha256`.**
+
+| half of the chain | artefacts | gated tool needed |
+|---|---|---|
+| 🟢 **`rb_*` — ReaderBench** | **`24` of `50`** | 🟢 **none** |
+| 🔴 `coh_*` — Coh-Metrix | `24` of `50` | 🔴 registration-gated |
+| 🟡 `gamet_cws1` — GAMET | `2` of `50` | 🟡 free download, still a second tool |
+
+🟢 **`10` model keys run from `import_rb()` alone** *(`rb_mod1`, `rb_mod2`, `rb_mod3narr/exp/per/all`
+and their `_v2` variants)*, the input contract is the **`1 316`-column** `sample_rb.csv` header
+shipped in the package, and **an offline `example` model plus `wa_seed_example_models()` exercises
+the whole wiring with `0` downloads.**
+🟢 **And the feature extractor is permissive: [`readerbench/readerbench-java`](https://github.com/readerbench/readerbench-java)
+is `Apache-2.0`, `10 758` B of full text, *"Copyright 2013 Mihai Dascalu"*.**
+
+🔴 **What this pass did NOT do: run it.** Every one of the `50` artefacts lives on `osf.io`, and
+`osf.io` is refused by this environment's proxy *(`CONNECT tunnel failed, response 403`)*.
+🔵 **So `Gap 372` closes on CAPABILITY and STRUCTURE, and stays open on EXECUTION.**
+🟢 **It also refines `Gap 414`** *(a runtime-downloaded artefact is invisible to every instrument
+here)*: **for this row it is not invisible at all — it is a committed CSV with `50` URLs and `50`
+hashes, which is exactly what an air-gapped install needs.** 🔴 **One host serves all `50`.**
+
+### 🔴 `ACTION MG` — the FK census returns `0`, and that is the finding
+
+🔴 **`ForeignKey` appears `0` times in `ai-shifu`'s entire service tree.** 🔵 **The question as
+pre-registered — *"how many of the `learn_*` and `shifu_*` tables carry a foreign key reaching
+`bill_*`/`order_*`"* — has the answer `0`, and an FK census would have reported the platform fully
+separable. It is not.** 🟢 **The coupling is at the CODE layer:**
+
+| measure | value |
+|---|---|
+| 🔴 `learn/` files importing `order`/`billing`/`promo`/`credit`/`referral` | **`14` of `55`** |
+| 🟡 `shifu/` files importing the same | `18` of `55` — 🟢 **but `17` of the `18` are `admin*`** |
+| 🟢 `shifu/` CORE files touching commerce | **`1`** *(`shifu/route.py`, creator usage admission)* |
+| 🔴 the learning status vocabulary is DEFINED in | **`order/consts.py:12-20`** |
+| 🔴 the lesson access gate | **`Order.status == ORDER_STATUS_SUCCESS`** *(`learn/agent/lesson_entry.py:188-200`, `_has_bought()` → `_require_access()`)* |
+
+🆕 🔴 **State `604` was not a curiosity: `learn_progress_records.status` takes its whole enum from
+the order module, i18n keys included** *(`server.order.learnStatusNotStarted` …)*. 🟢 **And the
+split is clean enough to price: the AUTHORING half is liftable** *(draft/published shifu, outline
+items, `1` core file to touch)*, **the LEARNING half is not** *(`14` files, the status vocabulary,
+and an access gate that asks whether the learner has PAID)*.
+🔵 **So the shelf qualifier `ACTION MG` asked for: `ai-shifu` is a ROUTE for a PAID-COURSE
+engagement; for an institutional deployment it is an AUTHORING route with a learning runtime to
+replace.**
+
+### 🔴 `ACTION MH` — APAC adoption is ABSENT BY MEASUREMENT on official channels, with three named near-misses
+
+🔴 **`www.mext.go.jp` is `ENOTFOUND` on the fetch channel**, exactly as `eur-lex.europa.eu` and
+`ec.europa.eu` were in earlier passes. 🔵 **`T309` now holds on Japanese government hosts too: this
+KB cannot read a primary APAC source from this environment, and that is a property of the
+environment, not of the sources.**
+
+🟡 **What IS recorded, each with its provenance and its denominator:**
+
+- 🟡 **Japan, a government TARGET rather than an adoption rate:** the *Digital Society priority plan
+  2026* sets **`≥50`% of schools using generative AI for 校務 *(school administrative work)* by
+  FY`2027`**, with *"generative-AI pilot schools"* to be designated. 🔵 Reached through a secondary
+  education-press report of the plan, not the plan.
+- 🟡 **Japan, private surveys, two of them, and they do not agree because they do not ask the same
+  question:** M2RI reports teacher use of generative AI for 校務 crossing half at **`56`%** in
+  FY`2025`; Arsaga Partners *(n = `328` school staff, fielded `2026-04-30` → `2026-05-07`)* reports
+  **`60.8`%** feeling a reduction in workload and **`~70`%** observing deeper learning from
+  students' prompt design. 🔴 **Small, self-selected samples. Quote the wording or quote nothing.**
+- 🟢 **Singapore, a POLICY fact that is firmer than any statistic:** MOE's *Teacher AI Literacy
+  Professional Learning Roadmap* makes AI training **compulsory for all primary, secondary and JC
+  teachers**, the first module due **end-`2026`** and two more encouraged by **end-`2027`**.
+- 🔴 **Singapore, a declared ABSENCE from the ministry itself:** in a February `2026` parliamentary
+  reply, MOE stated it *"does not currently possess specific Singapore-based data"* on the
+  correlation between student AI use and cognitive-skill decline, and is studying it.
+  🟢 **An informed absence from the authority that would hold the data is worth more than a
+  third-party estimate.**
+- 🟡 **Cross-region attitude, one survey, named:** the Digital Education Council's `2026` global
+  higher-education survey *(`45 398` responses, `35` countries)* puts student AI use at **`88`%**
+  and faculty use at **`77`%**, and reports **`57`% of APAC faculty excited about AI's potential
+  against `26`% in the US and Canada.** 🔴 Two DEC summaries disagree about which region has the
+  lowest future-adoption intent; neither was reconciled against the report itself.
+
+### 🔴 `ACTION MC` — NOT RUN, and the reason is part of the record
+
+🔴 **`ACTION MC` asks this run to open an issue on a third party's repository.** 🔵 **That is an
+outward-facing write, made by an unattended scheduled run, under no live human authorisation, on a
+repository outside this session's authorised set. It was not done, and no part of it was
+simulated.** 🟢 **It is re-registered below as a decision for a human, with the text ready to send
+and a better target than the one p184 chose.**
+
+### 🟢 What this pass added
+
+- 🆕 🟢 **`ningkaikok/dotty-tutor` enters the shelf as a ROUTE candidate** — `Apache-2.0`, APAC
+  *(its own README is in Chinese and names Chinese teaching material as its target)*, `55` tables,
+  `76` foreign keys, `117` test files, `3` CI workflows, `HEAD` dated `2026-10-13`. 🔵 **Its
+  `quality_review_*` cluster (`10` tables) and `prompt_heads`/`prompt_revisions`/
+  `prompt_release_events` are the two layers every Annex III pattern on this shelf has had to
+  design from scratch.** 🔴 **One named defect: no identifiable licensor.**
+- 🆕 🟢 **`opencast/opencast` enters as the lecture-capture ROUTE** — the layer the shelf had `0`
+  rows for. `ECL-2.0`, EMEA, local Whisper / whisper.cpp / Vosk in-tree.
+- 🆕 🟢 **`readerbench/readerbench-java` enters as a COMPONENT** — `Apache-2.0`, and the piece that
+  makes `writeAlizer` runnable without a gated tool.
+- 🆕 🟢 **`lplnufpi/essay-br` enters as the shelf's first permissive LATAM CORPUS** — `MIT`
+  *(`1 114` B, "Copyright (c) 2021 Laboratório de Processamento de Linguagem Natural - UFPI")*,
+  **`6 577` essays by Brazilian secondary students, graded by human professionals on the five ENEM
+  competencies** *(`c1`…`c5` + total)*, `417` prompts, `13.0` MB.
+  🟢 **The first `pt-BR` asset of any kind on this shelf, after this KB has recorded the Portuguese
+  absence for five passes.**
+- 🆕 🟢 **Three MIT agent-SKILL tutors enter trending as a new FORM** —
+  `Zemmeng/claude-study-system`, `cliffffffffff/guided-learning`,
+  `YUANYINGLONG-91/lecture-notes-tutor`. 🔵 **Tutoring shipped as a skill for an existing agent
+  harness rather than as an application. `GarethManning/education-agent-skills` (`853`★, `165`
+  skills) is the same form at scale — and it is `CC BY-SA 4.0`, a CONTENT licence with a
+  share-alike obligation, not a software licence.**
+- 🆕 🟢 **`P1049`** *(the bare-token grant pass)* and 🆕 **`P1050`** *(a licence section may hold
+  other projects' licences)* are instruments, not opinions:
+  [`compose/code/p1049-bare-token-grant`](compose/code/p1049-bare-token-grant/README.md).
+- 🆕 🟢 **Patterns `28`, `29` and `30`** — permissive lecture capture with local transcription;
+  the `pt-BR` essay-scoring path priced honestly; and the licence-verification order of operations
+  this pass's `9` overturns force.
+
+### 🔴 Declared gaps and absences
+
+- 🆕 🔴 **`Gap 415`: this KB's discovery channel was never `~80`% exhausted — its DEFAULT SORT was.**
+  One re-sort of one topic page *(`ai-tutor?l=python&s=updated`)* returned `dotty-tutor`, the richest
+  permissive schema on the shelf, at `8`★. 🔵 **Every *"channel exhausted"* statement before this
+  pass is scoped to stars-descending and must be re-read that way.**
+- 🆕 🔴 **`Gap 416`: emotion inference is on the shelf, and it is PROHIBITED, not merely high-risk.**
+  [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+  trains on DAiSEE *(facial video labelled boredom / confusion / engagement / frustration)*.
+  🔴 **Emotion recognition in education institutions is banned by `AI Act` Article `5`(1)(f), in
+  force since `2025-02-02` — a prohibition, with no conformity route.** 🔵 It also has `0` licence
+  files, so it is doubly unusable; the compliance blocker is the one that generalises.
+- 🆕 🔴 **`Gap 417`: a grant whose text lives at a URL cannot be verified from here.**
+  `pipwerks/scorm-api-wrapper` grants *"MIT-style license: `http://pipwerks.mit-license.org/`"* in a
+  source header and in `readme.md`; `mit-license.org` does not resolve from this environment **at
+  the apex domain either**, so this is `T309` and not evidence the subdomain is unregistered.
+- 🆕 🔴 **A two-layer grant declared only in prose.** `sohan1611/BloodCoded_Agentic` is `MIT` by file
+  and *"Curriculum material in `data/knowledge/` … is released under `CC BY-SA 4.0`"* by README
+  sentence. 🔵 **The content layer has no file of its own, so a file probe sees one licence where
+  there are two.**
+- 🔴 **`0` APAC adoption statistic on an official in-language channel** *(`ACTION MH` limb `2`)*,
+  and 🔴 **`T309` now re-confirmed on `mext.go.jp`, `osf.io` and `mit-license.org`.**
+- 🔴 **`0` `pt-BR` or `pt-PT` locale on any shelf platform row** — re-measured on `opencast`
+  *(`17` catalogues, neither present)*. 🟢 **But the Portuguese absence is no longer total: the
+  `essay-br` corpus is `pt-BR` and `MIT`.**
+- 🔴 **The `AI Act` Annex III education deadline is reported MOVED, and this KB cannot verify it.**
+  Multiple secondary sources report the application date for Annex III high-risk systems pushed
+  from **`2026-08-02`** to **`2027-12-02`** by an amending regulation cited as **Regulation (EU)
+  2026/1744**, with Article `50`(2) marking obligations falling due **`2026-12-02`** and the
+  Article `5` prohibitions unchanged. 🔴 **`eur-lex.europa.eu` is `ENOTFOUND` here, so this is
+  SECONDARY and the sources disagree on whether it is in force.** 🔵 **Treat the earlier date as
+  binding for planning until a client's own counsel reads the Official Journal.**
+- 🔴 **★ counts remain published metadata under test, not evidence** *(`gap 140`)*. Every ★ figure
+  in this pass comes from a topic page's own rendering.
+
+### 🟢 Pre-registered for p186, with the limb that would falsify each
+
+| action | what | limbs |
+|---|---|---|
+| 🆕 🟢 **`ACTION MI`** | re-sort every topic page this KB has censused by `s=updated` and count the rows absent from the census | **limb `1`:** `≥5` absent rows → 🔴 **`Gap 415` is confirmed at scale and the `79`% exhaustion figure is retired.** **limb `2`:** `≤1` → 🟢 `dotty-tutor` was luck, and stars-descending is an adequate channel |
+| 🆕 🟢 **`ACTION MJ`** | entity-count `dotty-tutor`'s `quality_review_*` and `prompt_*` clusters against Pattern `24`'s hand-built audit layer, column by column | **limb `1`:** the `10`+`3` tables cover the Annex III audit requirement → 🟢 **Pattern `24` stops building and starts adapting.** **limb `2`:** a required field is missing → 🔵 name it, and the pattern keeps the gap |
+| 🆕 🟡 **`ACTION MK`** | run `P1049` limb `2` with the `NOISE` filter REMOVED over the same `61` rows, and count what the filter cost | **limb `1`:** `≥1` further real grant → 🔴 **keyword suppression is retired from every instrument on this shelf.** **limb `2`:** `0` → 🟢 `Omni-Edu` was the only casualty |
+| 🆕 🟢 **`ACTION ML`** | measure whether `essay-br`'s `c1`…`c5` rubric maps onto `writeAlizer`'s `rb_mod3*` targets, and state plainly whether the `pt-BR` path is INFERENCE or TRAINING | **limb `1`:** the targets align → 🟢 a `pt-BR` scoring path exists today. **limb `2`:** they do not *(the `rb_*` models are English-trained)* → 🔴 **the honest recipe is TRAINING on `essay-br`, and Pattern `29` must say so** |
+| 🆕 🟡 **`ACTION MM`** | probe `opencast`'s remaining `120` entity-bearing files and publish the full table list, then locate the `transcription-service-api` extension point an agent would implement | **limb `1`:** a documented provider interface → 🟢 **the lecture-capture pattern gets a named class to implement.** **limb `2`:** the seam is internal only → 🔵 price a fork |
+| 🆕 🔴 **`ACTION MN`** *(for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → ask `dotty-tutor` *(a complete `Apache-2.0` with no named licensor — one sentence to fix)* before `xueyoujing-companion` *(no grant at all)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK step and the unlicensed `3`-in-`10` stay unusable, which is a finding a studio lead can act on |
+
+🔵 **Note for p186 on method, and it is the most expensive habit this KB has broken this pass: a
+channel is not a page, it is a page PLUS a sort order.** `topics/ai-tutor` was read five times and
+declared `~80`% exhausted. **One re-sort of the same URL produced the best permissive schema on the
+shelf, at `8`★, updated the day before.**
 
 ## Pass 184 — 2026-10-13
 

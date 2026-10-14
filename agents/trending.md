@@ -1,8 +1,56 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🟢 **What moved this week: `4` rows entered, `1` of them at the top of the shelf's quality
+ranking, and the week's real news is that the discovery CHANNEL was wrong rather than exhausted.**
+
+🔴 **p184 measured the GitHub topic channel at `79`% already-censused and concluded the channel was
+spent.** 🟢 **This pass re-sorted ONE of those pages — `topics/ai-tutor?l=python&s=updated` instead
+of the default stars order — and the second row absent from the census was
+[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor): `Apache-2.0`, `55` tables,
+`76` foreign keys, `117` test files, updated the day before.** 🔵 **`Gap 415`: a channel is a page
+PLUS a sort order, and every exhaustion figure this KB has published is scoped to
+stars-descending.**
+
+🟢 **Entering the shelf:**
+
+- 🆕 🟢 **[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor) — APPLIANCE,
+  `Apache-2.0`, APAC, `8`★.** The richest permissive education schema this KB has measured: a
+  mastery model, a **mistake-attribution** model, `9` agent-audit tables, `3` prompt-governance
+  tables and `12` human-review tables. 🔴 **No named copyright holder anywhere in the repository.**
+- 🆕 🟢 **Three MIT agent-SKILL tutors, a FORM this page has not carried before** —
+  [`cliffffffffff/guided-learning`](https://github.com/cliffffffffff/guided-learning),
+  [`YUANYINGLONG-91/lecture-notes-tutor`](https://github.com/YUANYINGLONG-91/lecture-notes-tutor),
+  [`Zemmeng/claude-study-system`](https://github.com/Zemmeng/claude-study-system). 🔵 **Tutoring
+  delivered as a skill for a harness the client already runs, not as an application to host.**
+  🟡 The same form at scale is [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+  — `853`★, `165` skills, **`CC BY-SA 4.0`**, so share-alike travels with anything adapted from it.
+
+🟢 **Recovered rather than entering — `ACTION MD` found a grant on `9` of `61` rows this KB had
+recorded as having none.** The three that matter on this page:
+[`haolpku/Omni-Edu`](https://github.com/haolpku/Omni-Edu) *(`225`★, `Apache-2.0` for the code,
+weights carved out)*, [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)
+*(`Apache-2.0` by incorporation by reference, ADL `2016`)* and
+[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) *(the bare word `MIT`)*.
+
+🔴 **Blocked this week, and the block is not a licence:**
+[`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+infers comprehension from facial affect. **`AI Act` Article `5`(1)(f) PROHIBITS emotion inference in
+education institutions**, in force since `2025-02-02`. 🔵 It also carries `0` licence files. **The
+prohibition is the blocker that generalises to every webcam-affect row this shelf will meet.**
+
+🟡 **Carried, unchanged, with a new qualifier:** [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu)
+stays a ROUTE **for a paid-course engagement**. `ACTION MG` measured the coupling: `14` of `55`
+`learn/` files import the commerce modules, the learning status vocabulary is DEFINED in
+`order/consts.py`, and lesson access is gated on `Order.status == ORDER_STATUS_SUCCESS`.
+🟢 **The authoring half is liftable: `1` of `55` core `shifu/` files touches billing.**
 
 ## Pass 184 — 2026-10-13
 

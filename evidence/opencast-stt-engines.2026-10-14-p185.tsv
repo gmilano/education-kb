@@ -1,0 +1,20 @@
+# p185 — ACTION ME. The speech-to-text layer of opencast/opencast at HEAD 637882d.
+# This is what makes the row a COMPOSITION TARGET and not just an LMS-adjacent archive:
+# three LOCAL engines ship in-tree, so no learner audio has to leave the institution.
+kind	module_or_path	engine	hosting
+engine	modules/speech-to-text-impl/.../engine/WhisperEngine.java	OpenAI Whisper (local binary)	LOCAL
+engine	modules/speech-to-text-impl/.../engine/WhisperCppEngine.java	whisper.cpp (local binary)	LOCAL
+engine	modules/speech-to-text-impl/.../engine/VoskEngine.java	Vosk (local model)	LOCAL
+config	etc/org.opencastproject.speechtotext.impl.engine.WhisperEngine.cfg	Whisper	LOCAL
+config	etc/org.opencastproject.speechtotext.impl.engine.WhisperCppEngine.cfg	whisper.cpp	LOCAL
+config	etc/org.opencastproject.speechtotext.impl.engine.VoskEngine.cfg	Vosk	LOCAL
+docs	docs/guides/admin/docs/configuration/transcription.configuration/whisper.md	Whisper	LOCAL
+docs	docs/guides/admin/docs/configuration/transcription.configuration/whispercpp.md	whisper.cpp	LOCAL
+docs	docs/guides/admin/docs/configuration/transcription.configuration/vosk.md	Vosk	LOCAL
+provider	modules/transcription-service-amberscript	AmberScript	CLOUD
+provider	modules/transcription-service-google-speech-impl	Google Speech	CLOUD
+provider	modules/transcription-service-ibm-watson-impl	IBM Watson	CLOUD
+provider	modules/transcription-service-microsoft-azure	Microsoft Azure	CLOUD
+api	modules/speech-to-text-api + speech-to-text-async-api	engine-agnostic API	-
+seam	modules/speech-to-text-workflowoperation	workflow operation — where an agent attaches	-
+locale	17 catalogues: da-DK de-DE el-GR en-GB en-US es-ES fr-FR gl-ES he-IL it-IT nl-NL pl-PL sl-SI sv-SE tr-TR zh-CN zh-TW	-	0 pt-BR, 0 pt-PT

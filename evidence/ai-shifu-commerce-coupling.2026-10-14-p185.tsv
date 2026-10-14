@@ -1,0 +1,14 @@
+# p185 — ACTION MG. How deep does the commerce coupling run in ai-shifu/ai-shifu?
+# Same HEAD as p184: ca75a29. The question was asked as "how many tables carry a foreign
+# key reaching bill_*/order_*". The answer is 0, and the reason is the finding.
+measure	value	evidence
+ForeignKey declarations in the whole service tree	0	grep -rc ForeignKey flaskr/service — no file matches
+learn/ python files importing order/billing/promo/credit/referral	14 of 55	from flaskr.service.(order|billing|promo|credit|referral)
+shifu/ python files importing the same	18 of 55	same
+shifu/ importers that are admin* files	17 of 18	only shifu/route.py is core (admit_creator_usage, admit_creator_preview_usage)
+learn/models.py imports a commerce constant	YES	learn/models.py:6 — from flaskr.service.order.consts import LEARN_STATUS_LOCKED
+where the learning status vocabulary is DEFINED	order/consts.py:12-20	LEARN_STATUS_NOT_STARTED=601 ... REFUND=604 ... RESET=608
+i18n keys for learning states	server.order.learnStatus*	order/consts.py:38-46 (LEARN_STATUS_TYPES)
+lesson access gate	Order.status == ORDER_STATUS_SUCCESS	learn/agent/lesson_entry.py:188-200 _has_bought(), used by _require_access()
+learn/ files importing Order the MODEL (not just a constant)	3	learn_funcs.py:80, agent/lesson_entry.py:40, runscript_v2.py:44
+metering coupling in the learn path	BILL_USAGE_SCENE_PREVIEW / BILL_USAGE_SCENE_PROD	learn/agent/lesson_entry.py:35-38 (flaskr.service.metering.consts)

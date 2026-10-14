@@ -1,0 +1,47 @@
+# p185 — ACTION MD. P1049, the BARE-TOKEN grant pass, over every row the eight published
+# pages record as NO GRANT / unlicensed / no licence file (single-slug-per-line extraction,
+# ambiguous multi-slug lines dropped, so 61 is a FLOOR), plus 3 named controls.
+# Instrument: compose/code/p1049-bare-token-grant/{bare_token_grant.py,whole_readme_scan.py}
+# Channel: raw.githubusercontent.com — the only GitHub read channel that answers 200 here
+#          (api.github.com 403, codeload.github.com 403, both re-measured this pass).
+# screen = what the instrument flagged; read = what the section actually says, read by hand.
+slug	screen	identifier	where	read	usable_grant
+ZQR1101/xueyoujing-companion	NO_HEADING	-	-	absence HOLDS — 0 licence heading, 0 identifier in README	NO
+CreveXTech/canvas-lms-mcp	BARE_TOKEN	MIT	## License	the whole grant is the word MIT	YES-permissive
+CyanXLab/Phonos	BARE_TOKEN	MIT	## License	the whole grant is the word MIT	YES-permissive
+educredentials/ec-issuer	BARE_TOKEN	MIT	## License	the whole grant is the word MIT	YES-permissive
+a5anka/ai-lab-2026-africa-agent-manager	BARE_TOKEN	Apache 2.0	## Licence	the whole grant is "Apache 2.0."	YES-permissive
+adlnet/SCORM-to-xAPI-Wrapper	PROSE_TERMS	Apache-2.0	## License	incorporation by reference, holder "Advanced Distributed Learning", 2016	YES-permissive
+haolpku/Omni-Edu	NOISE-SUPPRESSED	Apache-2.0	body prose	"The code is licensed under Apache-2.0. Model weights and third-party datasets and benchmarks retain their respective licenses."	YES-permissive-code-only
+eugeborzone/Auto_Grade_Guarani	PROSE_TERMS	none	# Licencia	bespoke Spanish grant: "Usted es libre de copiar y modificar lo que quiera de esta repo." No warranty clause, no patent clause, no holder, no year	YES-bespoke
+atutor/ATutor	PROSE_TERMS	GPL (unversioned)	## License	the word GPL with no version	YES-copyleft
+jaltekruse/Free-Math	WHOLE-README	GPL	body prose	"it under the terms of the GNU General Public License as published by"	YES-copyleft
+xiaolai/the-craft-of-selfteaching	CONTROL-MISSED-BY-LIMB-1	CC-BY-NC-ND-3.0	body prose (zh)	本书的版权协议为 CC-BY-NC-ND license — no heading anywhere, so limb 1 returned NO_HEADING	YES-noncommercial
+tianshuo/trainingllm	CONTROL-FOUND	MIT	## License	calibration row from p184: the bare word MIT	YES-permissive
+DMontgomery40/mcp-canvas-lms	BARE_TOKEN	MIT	## License	"MIT License - see [LICENSE](LICENSE) file for details." — the file is ABSENT (12 filenames probed, p-earlier)	NO-dangling-reference
+Zenglian990/AI_Tutor_Release	BADGE_ONLY	MIT	shields.io badge	a badge is a claim about a licence, not a licence	NO-badge-only
+barneslardo/sis-demo	BARE_TOKEN	MIT	## License	"MIT — demo use only." A field-of-use restriction contradicts MIT	NO-contradicted
+A-R007/Multi-Agent-Study-Assistant	PROSE_TERMS	none	## 📄 License	"This project is open source and available for educational purposes." A claim plus a field restriction, and no grant	NO
+pipwerks/scorm-api-wrapper	WHOLE-README	MIT-style	readme.md + source header	"MIT-style license: http://pipwerks.mit-license.org/" — p136 already corrected this row; re-confirmed here through a second path (lowercase readme.md). mit-license.org is UNREACHABLE from this environment (T309), so the referenced text was NOT read	UNRESOLVED
+jadrianlg16/learning-tutor	FALSE-POSITIVE	AGPL-3.0	## License	the token is PyMuPDF's, in a dependency inventory INSIDE the licence section; the section itself says "All rights reserved ... no license is granted"	NO
+rachelproject/module-template	FIXED-BY-BOUNDARY	-	## What licenses are appropriate?	was a false positive TWICE OVER: the heading is a submission POLICY, and the token came from "sub|mit ". With a leading word boundary the section declares no identifier and the verdict is PROSE_TERMS	NO
+IC-Redacoes-UTFPR/CorrecaoRedacao	FALSE-POSITIVE	MIT	body prose	the MIT belongs to a third-party corpus (github.com/lplnufpi/essay-br), not to this repository	NO
+YuriMatsumotoSantos/CorrecaoRedacao	FALSE-POSITIVE	MIT	body prose	same third-party corpus reference; same head tree as the row above	NO
+speedyapply/2026-AI-College-Jobs	FIXED-BY-BOUNDARY	-	body prose	"cc0" matched inside a hex id (…bcc0-66af…). Fixed in this pass: CC0 now requires a word boundary, and the row no longer flags	NO
+horaciohudson/corretor-redacao	NO_README	-	-	no README at any of 9 probed names on 3 refs	NO
+# --- the remaining 43 of 61 population rows: absence HOLDS (no licence heading, no identifier
+# --- anywhere in the README). Full machine output in the two -raw files.
+# ACCOUNTING, population = 61 (controls excluded):
+#   43  absence HOLDS
+#    9  a real own-grant this KB recorded as absent  (6 permissive, 1 bespoke, 2 copyleft)
+#    4  an identifier that is NOT a grant            (dangling file ref, badge, restriction, claim)
+#    1  UNRESOLVED (pipwerks: grant by URL, URL unreachable from here)
+#    3  false positive of the screen — and after the fix below, ALL THREE have one shape:
+#       the identifier belongs to a DEPENDENCY or a third-party corpus, not to the project
+#    1  no README at any probed name
+# TWO WORD-BOUNDARY BUGS WERE FOUND AND FIXED DURING THIS PASS, by the instrument's own test
+# suite: "MIT\b" matched "sub|mit " and "CC0" matched the hex id "…bcc0-66af…". Re-running both
+# limbs with leading boundaries changed exactly those 2 verdicts and no others, so the 9
+# recoveries are unaffected. The raw files published beside this one are the FIXED run.
+# Limb 1 alone flagged 14 of the 20; limb 2 added 5; 1 (haolpku/Omni-Edu) was found only by
+# reading a line limb 2's own NOISE filter had suppressed for containing "third-party".

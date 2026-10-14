@@ -1,0 +1,22 @@
+# p185 — ACTION ME. opencast/opencast, the real slug, read for the first time.
+# HEAD 637882d48eb850b8435c49320b1605ffea7d071d. LICENSE = Educational Community
+# License, Version 2.0 (ECL-2.0), 11 340 B, full text. 3 920 tracked paths, 230 modules.
+# Tables read from the first 40 @Entity/@Table-bearing files over the raw channel; the tree
+# holds 160 entity-ish paths, so 16 is a FLOOR, not the model's size.
+table	concern
+oc_series	course / series — the unit a recording belongs to
+oc_scheduled_extended_event	scheduled recording event
+oc_scheduled_last_modified	scheduling freshness
+oc_assets_snapshot	versioned media snapshot
+oc_assets_asset	media asset
+oc_assets_properties	asset metadata
+oc_assets_version_claim	asset version claim
+oc_search	published search index row
+oc_acl_managed_acl	access-control list, managed
+oc_event_comment	review comment on an event
+oc_event_comment_reply	threaded reply
+oc_oaipmh	OAI-PMH published record
+oc_oaipmh_elements	OAI-PMH record elements
+oc_themes	branding theme
+oc_transcription_service_job	TRANSCRIPTION JOB — the AI seam
+oc_transcription_service_provider	TRANSCRIPTION PROVIDER — the pluggable AI seam

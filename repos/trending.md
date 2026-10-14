@@ -1,8 +1,56 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**
+
+🆕 🔴 **GitHub Trending: `0` education repositories, for a seventh consecutive pass.** 🟢 **And this
+pass found that the ALTERNATIVE channel — the topic pages — had been read at one sort order only.**
+
+🟢 **Three topic pages read this pass, with the page's own rendered totals:**
+
+| topic page | rendered | page says exist | absent from this KB's census |
+|---|---|---|---|
+| `topics/intelligent-tutoring-system` | `20` | `39` | **`2`** — `mskljns/ComprehensionProblems_DAiSEE`, `HyeonahKang/LatentVariableModel-IntelligentTutor` |
+| `topics/knowledge-tracing` | `20` | `93` | 🔴 **`0`** |
+| 🟢 **`topics/ai-tutor?l=python&s=updated`** | `20` | `242` Python of `693` | 🟢 **`7`** — and one of them is the pass's headline row |
+
+🆕 🟢 **The `knowledge-tracing` result is worth stating plainly because it is a GOOD absence: `20`
+of `20` rendered rows were already censused, and `10` of them re-verified permissive this pass** —
+`pykt-team/pykt-toolkit` *(`446`★, `MIT`)*, `bigdata-ustc/EduData` *(`312`★, `Apache-2.0`)*,
+`jhljx/GKT` *(`141`★, `MIT`)*, `jilljenn/ktm` *(`140`★, `MIT`)*,
+`lccasagrande/Deep-Knowledge-Tracing` *(`107`★, `MIT`)*, `tswsxk/EduData` *(`83`★, `Apache-2.0`)*,
+`ZhijieXiong/pyedmine` *(`82`★, `MIT`)*, `HFUT-LEC/EduStudio` *(`78`★, `MIT`)*,
+`THUwangcy/HawkesKT` *(`31`★, `MIT`)*, `jdxyw/deepKT` *(`28`★, `MIT`)*.
+🔵 **The knowledge-tracing layer is the ONE layer on this shelf that is both well covered and
+permissively licensed. Stop screening it.**
+
+🆕 🟢 **The `ai-tutor` re-sort, which is the finding:**
+
+| row | licence | note |
+|---|---|---|
+| 🟢 **[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor)** `8`★ | 🟢 **`Apache-2.0`** *(`11 357` B)* | **`55` tables, `76` FKs, `117` tests, `HEAD` `2026-10-13`.** 🔴 No named licensor |
+| 🟢 [`Zemmeng/claude-study-system`](https://github.com/Zemmeng/claude-study-system) `0`★ | 🟢 **`MIT`** *(`1 064` B)* | a study harness: hooks, slash commands, consistency checks |
+| 🟢 [`cliffffffffff/guided-learning`](https://github.com/cliffffffffff/guided-learning) `0`★ | 🟢 **`MIT`** *(`1 070` B)* | guided-learning agent skill |
+| 🟢 [`YUANYINGLONG-91/lecture-notes-tutor`](https://github.com/YUANYINGLONG-91/lecture-notes-tutor) `0`★ | 🟢 **`MIT`** *(`1 072` B)* | slides → outline, quiz, notes, translation |
+| 🔴 [`deng-group/wendao`](https://github.com/deng-group/wendao) `0`★ | 🔴 **GNU GPL** *(`35 149` B)* | knowledge-graph tutor — copyleft, so not a vendoring candidate |
+| 🔴 [`slegroux/dandelion`](https://github.com/slegroux/dandelion) `0`★ | 🔴 **NO GRANT** | local-first teaching notebook, unusable as published |
+| 🔴 [`invincible-summer/Next-Tutor-Agent`](https://github.com/invincible-summer/Next-Tutor-Agent) `1`★ | 🔴 **NO GRANT** | absence re-confirmed |
+
+🔵 **`4` of the `7` new rows are permissive and `3` of those `4` are `0`★.** 🟢 **`T290` again: on
+this shelf stars predict neither the licence nor the schema. The `8`★ row has `55` tables; the
+`41.3`k★ row at the top of the same page has no `users` table.**
+
+🆕 🟢 **Entering as FOUNDATIONS rather than trending, because they are infrastructure:**
+[`opencast/opencast`](https://github.com/opencast/opencast) *(`ECL-2.0`, lecture capture, `3` local
+STT engines)*, [`readerbench/readerbench-java`](https://github.com/readerbench/readerbench-java)
+*(`Apache-2.0`, the feature extractor `writeAlizer` needs)* and
+[`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) *(`MIT`, **`6 577` ENEM-graded `pt-BR`
+essays** — the shelf's first Portuguese asset of any kind)*.
 
 ## Pass 184 — 2026-10-13
 

@@ -1,8 +1,79 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🆕 🟢 **One platform enters the routing table and fills a layer that had `0` rows; one platform's
+ROUTE grade gains a qualifier that changes what a studio may promise; and one row is added to the
+DO-NOT-BUILD column for a reason that is not a licence.**
+
+### 🟢 NEW LAYER — lecture capture and video management: `opencast/opencast`
+
+| platform | licence | layer | tenancy | AI seam |
+|---|---|---|---|---|
+| 🟢 **[`opencast/opencast`](https://github.com/opencast/opencast)** | 🟢 **`ECL-2.0`** *(`11 340` B, full text; OSI-approved `Apache-2.0` derivative for universities)* | 🟢 **lecture capture + video management** — `oc_series`, `oc_scheduled_extended_event`, `oc_assets_snapshot`, `oc_acl_managed_acl`, `oc_search`, `oc_oaipmh` | 🔵 per-institution install *(`modules/adopter-registration-*` exists; multi-tenancy NOT measured this pass)* | 🟢 **`oc_transcription_service_provider` is a SCHEMA-level provider abstraction, and `modules/speech-to-text-workflowoperation` is the named attachment point** |
+
+🟢 **This is the row a university engagement has been missing.** Everything else on this table is an
+LMS, an SIS or an ERP; **none of them owns the lecture recording.** 🔵 `opencast` owns the capture,
+the versioned asset, the access-control list and the publication channel — and it already speaks
+`OAI-PMH`, so the library's harvester needs no adapter.
+
+🟢 **Three LOCAL transcription engines in-tree** *(Whisper, whisper.cpp, Vosk, each with
+`etc/*.cfg` and an admin-guide page)*, against four cloud providers.
+🔵 **For a public university under a data-residency constraint, that is the difference between a
+procurement conversation and a deployment.**
+
+🔴 **Two honest limits before anyone quotes it:** `230` modules is a large operational surface — this
+is a platform to run, not a library to import — and **`0` of its `17` locale catalogues is `pt-BR`
+or `pt-PT`**, so a Brazilian engagement starts with a translation project *(`es-ES` and `gl-ES`
+are present)*.
+
+### 🟡 QUALIFIER — `ai-shifu/ai-shifu` is a ROUTE *for a paid-course engagement*
+
+🔵 **p184 placed `ai-shifu` as a ROUTE and pre-registered `ACTION MG` to test whether the `29`
+commerce tables are droppable. They are not droppable from the LEARNING half.**
+
+| half | coupling | verdict |
+|---|---|---|
+| 🟢 **authoring** *(`shifu_draft_*`, `shifu_published_*`, outline items)* | **`1` of `55`** core `shifu/` files touches billing *(`shifu/route.py`, creator usage admission)*; `17` of the other `18` importers are `admin*` | 🟢 **LIFTABLE** |
+| 🔴 **learning runtime** *(`learn_progress_records`, generated blocks/elements)* | **`14` of `55`** `learn/` files import `order`/`billing`/`promo`/`credit`/`referral`; the status vocabulary is DEFINED in `order/consts.py:12-20`; `learn/models.py:6` imports `LEARN_STATUS_LOCKED` from the order module; **lesson access is gated on `Order.status == ORDER_STATUS_SUCCESS`** *(`learn/agent/lesson_entry.py:188-200`)* | 🔴 **NOT SEPARABLE without replacing the access gate** |
+
+🔴 **And the measurement that makes this generalisable: `ForeignKey` appears `0` times in the entire
+`ai-shifu` service tree.** 🔵 **A schema-level FK census would have declared the platform fully
+separable and been wrong. On a project with no declared referential integrity, coupling can only be
+read in the IMPORT graph.** 🟢 **`P1051`.**
+
+🟢 **So the promise a studio can make:** *"we can lift the authoring model"* — yes.
+*"we can deploy it for a ministry's free courses"* — only after replacing `_require_access()`, the
+`601`–`608` status vocabulary's home, and the metering admission calls in the learn path.
+🔵 Evidence: [`evidence/ai-shifu-commerce-coupling.2026-10-14-p185.tsv`](../evidence/ai-shifu-commerce-coupling.2026-10-14-p185.tsv).
+
+### 🟢 Rows this table can now route to, after `ACTION MD`
+
+- 🟢 **[`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) is
+  `Apache-2.0`** *(`## License` → *"Copyright ©2016 Advanced Distributed Learning / Licensed under
+  the Apache License, Version 2.0"*)*. 🔵 **The SCORM→xAPI bridge published by the steward of both
+  standards is usable after all** — this table recorded it as unlicensed for five passes.
+- 🟢 **[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) is `MIT`**, so the
+  Canvas connector column has a shippable row that is not a dangling reference. 🔴 **Unlike
+  [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms), whose README
+  points at a `LICENSE` file that does not exist.**
+- 🟢 **[`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) is `MIT`**, which
+  changes `Gap 325`: the Open Badges 3.0 + ELM + OID4VCI issuer is permissive, and the credentialing
+  column has a real candidate.
+
+### 🔴 DO NOT BUILD — and this one is a prohibition, not a licence
+
+🔴 **[`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+infers learner comprehension from facial video** *(DAiSEE labels: boredom, confusion, engagement,
+frustration)*. **`AI Act` Article `5`(1)(f) prohibits emotion inference in education institutions**,
+in force since **`2025-02-02`**, and a prohibition has **no conformity-assessment route out**.
+🔵 **It also has `0` licence files, but the licence is the lesser blocker.** 🟢 **`Gap 416`: every
+webcam-affect row this table meets stops at the same line, and the client conversation is about
+replacing affect inference with interaction signals the learner knowingly produces.**
 
 ## Pass 184 — 2026-10-13
 

@@ -1,0 +1,19 @@
+# p185 — the pass's new row. ningkaikok/dotty-tutor, HEAD 7790650, Apache-2.0 (LICENSE,
+# 11 357 B, full text: 6 grant/appendix markers, so not the P971 notice trap).
+# 802 tracked files, 117 test_*.py files, 3 CI workflows (ci, codeql, service-health).
+# 55 SQLAlchemy Core tables, 76 ForeignKey declarations. Found on the ai-tutor topic page
+# sorted by RECENTLY UPDATED, not by stars: at 8 stars it is invisible to the default sort.
+layer	tables
+learner model	mastery_states knowledge_points chapter_attempts courseware_attempts exercise_attempts variation_attempts learning_sessions chapter_records courseware_records
+mistake model	mistake_items mistake_attributions chapter_english_attempt_reviews
+roster + identity	learning_classes class_memberships auth_sessions auth_invites
+assignment	assignments assignment_plans batch_questions review_tasks
+content + versioning	lesson_documents lesson_publications lesson_media_revisions lesson_media_reviews courseware_publications question_revisions lesson_search_documents upload_jobs legacy_textbook_cleanup_manifests
+AGENT AUDIT	tutor_threads tutor_messages tutor_turn_requests tutor_tool_events tutor_observation_events tutor_artifacts tutor_inputs model_call_metrics voice_sessions
+PROMPT GOVERNANCE	prompt_heads prompt_revisions prompt_release_events
+HUMAN REVIEW	quality_review_cases quality_review_case_revisions quality_review_decisions quality_review_packages quality_review_runs quality_review_run_cases quality_review_run_control quality_review_run_ratings quality_review_run_results teacher_review_events ai_reviews run_snapshots
+background	background_jobs
+# THE ONE DEFECT, named: the Apache-2.0 appendix is the STOCK text — "Copyright [yyyy]
+# [name of copyright owner]" is unfilled, there is no NOTICE file, and no copyright holder
+# or contact address appears in README, SECURITY.md, SUPPORT.md or package.json.
+# A complete grant with no identifiable licensor. Remedy costs one issue.

@@ -1,8 +1,76 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## 🔜 Registered for p186 — pre-registered with falsifiers
+
+🔴 **Drift noted first, because this file exists to prevent exactly it: the block below this one is
+still headed *"Registered for p179"*. Passes `180`–`185` registered their actions in
+[`README.md`](../README.md) only, so for six passes the canonical register and the README
+disagreed about what was open.** 🟢 **p185 registers in BOTH again. The README table is the
+summary; this file carries the anchors.**
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🟢 **`ACTION MI`** — re-read every censused topic page with `s=updated` | [`evidence/census-channel-coverage.2026-10-13-p184.tsv`](../evidence/census-channel-coverage.2026-10-13-p184.tsv) *(the `6` pages and their `79`% figure)* | **limb `1`:** `≥5` census-absent rows → 🔴 `Gap 415` confirmed at scale, the `79`% figure retired. **limb `2`:** `≤1` → 🟢 `dotty-tutor` was luck |
+| 🟢 **`ACTION MJ`** — `dotty-tutor`'s `24` audit/prompt/review tables against Pattern `24`, column by column | [`evidence/dotty-tutor-schema.2026-10-14-p185.tsv`](../evidence/dotty-tutor-schema.2026-10-14-p185.tsv) | **limb `1`:** the requirement is covered → 🟢 Pattern `24` adapts instead of building. **limb `2`:** a required field is absent → 🔵 name it and keep the gap |
+| 🟡 **`ACTION MK`** — `P1049` limb `2` with the `NOISE` filter REMOVED, same `61` rows | [`compose/code/p1049-bare-token-grant/whole_readme_scan.py`](../compose/code/p1049-bare-token-grant/whole_readme_scan.py) *(the filter is the `NOISE` regex)* | **limb `1`:** `≥1` further real grant → 🔴 keyword suppression retired from every instrument here. **limb `2`:** `0` → 🟢 `Omni-Edu` was the only casualty |
+| 🟢 **`ACTION ML`** — does `essay-br`'s `c1`…`c5` rubric map onto `writeAlizer`'s `rb_mod3*` targets? | [`evidence/writealizer-chain.2026-10-14-p185.tsv`](../evidence/writealizer-chain.2026-10-14-p185.tsv) + `essay-br`'s CSV header *(`prompt,title,essay,c1..c5,score`)* | **limb `1`:** targets align → 🟢 a `pt-BR` inference path exists. **limb `2`:** they do not → 🔴 **Pattern `29` must say TRAINING, not inference** |
+| 🟡 **`ACTION MM`** — `opencast`'s remaining `~120` entity files + the `transcription-service-api` extension point | [`evidence/opencast-entities.2026-10-14-p185.tsv`](../evidence/opencast-entities.2026-10-14-p185.tsv) *(the `16`-table floor)* | **limb `1`:** a documented provider interface → 🟢 Pattern `28` names a class to implement. **limb `2`:** internal only → 🔵 price a fork |
+| 🔴 **`ACTION MN`** *(a human decides)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MC` entry in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → ask `dotty-tutor` first *(complete `Apache-2.0`, no named licensor — one sentence)*. 🔴 **limb `2`:** not authorised → Pattern `27` drops the ASK and the unlicensed supply stays unusable |
+
+### 🆕 🔴 Gaps opened by p185
+
+- 🆕 🔴 **`Gap 415` — a channel is a page PLUS a sort order.** `topics/ai-tutor` was read five times
+  at stars-descending and called `~80`% exhausted. One `s=updated` re-read returned
+  [`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor) — `Apache-2.0`, `55` tables,
+  `76` FKs, `117` tests, `8`★. 🔵 **Every exhaustion figure published before p185 is scoped to one
+  sort order.**
+- 🆕 🔴 **`Gap 416` — emotion inference is PROHIBITED, not high-risk, and the shelf already has a
+  row of that shape.** [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+  trains on facial-affect labels *(boredom, confusion, engagement, frustration)*. **`AI Act`
+  Article `5`(1)(f) bans emotion inference in education institutions, in force `2025-02-02`, with
+  no conformity route.** 🔵 Its `0` licence files are the lesser blocker.
+- 🆕 🔴 **`Gap 417` — a grant whose TEXT lives at a URL cannot be verified from here.**
+  `pipwerks/scorm-api-wrapper` grants *"MIT-style license: `http://pipwerks.mit-license.org/`"*;
+  `mit-license.org` does not resolve from this environment **at the apex domain either**, so this is
+  `T309` and not evidence that the subdomain is unregistered.
+- 🆕 🔴 **`Gap 418` — a complete grant with NO IDENTIFIABLE LICENSOR.** `dotty-tutor` ships the
+  stock `Apache-2.0` appendix *(`Copyright [yyyy] [name of copyright owner]`)*, no `NOTICE`, and no
+  holder or contact in `README`, `SECURITY.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md` or
+  `package.json`. 🔵 **The best permissive schema on the shelf has the one defect that is hardest
+  to clear in a client review and cheapest to fix at source.**
+- 🆕 🔴 **`Gap 419` — the two-layer grant with only one file.** `sohan1611/BloodCoded_Agentic` is
+  `MIT` by file and releases `data/knowledge/` under `CC BY-SA 4.0` by README sentence;
+  `haolpku/Omni-Edu` grants `Apache-2.0` for code and carves out weights and datasets in the same
+  sentence. 🔵 **A file probe sees one licence where there are two, and the second one is the one
+  that travels into a deliverable.**
+- 🆕 🔴 **`Gap 420` — the `AI Act` Annex III education deadline is reported MOVED and is
+  unverifiable from here.** `2026-08-02` → **`2027-12-02`**, amending regulation cited as
+  **Regulation (EU) 2026/1744**, Article `50`(2) marking **`2026-12-02`**, Article `5` prohibitions
+  unchanged. 🔴 Secondary sources only, and they disagree on whether it is in force;
+  `eur-lex.europa.eu` is `ENOTFOUND` here. 🔵 **Plan to the earlier date.**
+
+### 🔴 Absences re-confirmed by measurement, not by memory
+
+- 🔴 **`0` APAC adoption statistic on an official in-language channel** — `www.mext.go.jp` is
+  `ENOTFOUND` on the fetch channel *(`ACTION MH`, limb `2`)*. 🟢 A government TARGET
+  *(`≥50`% of schools for 校務 by FY`2027`)*, two private surveys *(`56`%, `60.8`%)* and Singapore
+  MOE's compulsory teacher-AI modules are recorded in their place, each with provenance.
+- 🔴 **`T309` extended to three more hosts this pass:** `www.mext.go.jp`, `osf.io`
+  *(`CONNECT tunnel failed, 403`)* and `mit-license.org`.
+- 🔴 **`0` `pt-BR` / `pt-PT` locale on any platform row** — re-measured on `opencast`'s `17`
+  catalogues. 🟢 **The Portuguese absence is no longer total at the DATA layer:
+  [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) is `MIT` and `pt-BR`.**
+- 🔴 **`0` permissive North-American-origin ROUTE rows, sixth pass.** 🟢 `writeAlizer` remains the
+  one NA-declared permissive COMPONENT.
+- 🔴 **`0` permissive row addressing `校務`-style administrative automation**, which is precisely what
+  Japan's government target measures. 🔵 **The clearest supply/demand mismatch on the shelf.**
+- 🔴 **`43` of the `61` rows recorded as grant-absent are STILL grant-absent after three
+  instruments** *(file probe, cession-text matcher, and now the bare-token pass)*. 🟢 That number is
+  now a measurement rather than an assumption.
 
 ## 🔜 Registered for p179 — pre-registered with falsifiers
 

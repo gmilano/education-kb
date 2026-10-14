@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🆕 🟢 **The trend this pass can prove is about DISCOVERY, and it invalidates a conclusion this KB
+published two passes ago.** 🔴 **p184 measured the GitHub topic channel at `79`% already-censused
+and reasoned that the channel was spent.** 🟢 **It was not the channel that was spent — it was one
+SORT ORDER.** One re-read of `topics/ai-tutor` with `s=updated` instead of the default
+stars-descending returned [`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor):
+`Apache-2.0`, **`55` tables, `76` foreign keys, `117` test files, updated the day before the
+pass** — the richest permissive education schema this KB has measured, at **`8`★**.
+🔵 **`Gap 415`. Every *"channel exhausted"* figure published before today is scoped to
+stars-descending and must be re-read that way.**
+
+### 🆕 🟢 Trend `1` — tutoring is being shipped as an agent SKILL, not as an application
+
+🟢 **Four rows of the same new shape appeared on one topic page in one week:**
+[`cliffffffffff/guided-learning`](https://github.com/cliffffffffff/guided-learning) *(`MIT`)*,
+[`YUANYINGLONG-91/lecture-notes-tutor`](https://github.com/YUANYINGLONG-91/lecture-notes-tutor)
+*(`MIT`)*, [`Zemmeng/claude-study-system`](https://github.com/Zemmeng/claude-study-system) *(`MIT`,
+a harness with hooks and slash commands)*, and at scale
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+*(`853`★, **`165` skills**, `CC BY-SA 4.0`)*.
+
+🔵 **What changes for a studio: there is no application to host.** The deliverable is text and
+tool-definitions dropped into an agent the client already runs, which moves the engagement from
+*build and operate* to *author and govern*. 🔴 **And it moves the licence question from software to
+CONTENT: `CC BY-SA 4.0` carries share-alike on anything adapted and has no patent grant.**
+🟢 **A `0`★ `MIT` skill can therefore be worth more to a deliverable than an `853`★ `CC BY-SA`
+library — the first time on this shelf that the licence, not the schema, decides between two rows
+of the same kind.**
+
+### 🆕 🔴 Trend `2` — *"unlicensed"* on this shelf is partly an instrument artefact
+
+🟢 **`ACTION MD` read `61` rows this KB had recorded as grant-absent. `9` carried a real grant, `6`
+of them permissive.** 🔵 **The grants were in forms no file probe and no cession-text matcher can
+see:** the bare word `MIT` under `## License`; *"Apache 2.0."* under `## Licence` *(British
+spelling)*; `Apache-2.0` named in a body sentence with the model weights carved out; `Apache-2.0`
+by **incorporation by reference** with holder and year; and a bespoke permission written in Spanish
+prose.
+
+🔴 **The inverse is just as common, and more dangerous: `4` rows carry a licence identifier that is
+NOT a grant** — a README pointing at a `LICENSE` file that does not exist, a `shields.io` badge,
+*"MIT — demo use only"*, and *"open source and available for educational purposes"*.
+🟢 **So the direction of the error is symmetric again, as p184 found for blind verdicts: an absence
+can be a probe artefact, and a presence can be a claim.** 🔵 **Neither can be resolved without
+reading, and `T315` stands: published metadata carries no licence signal.**
+
+### 🆕 🔴 Trend `3` — the licence is no longer the binding constraint on the riskiest use cases
+
+🔵 **Two of this pass's rows are blocked by something a licence cannot fix.**
+🔴 [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+infers comprehension from facial affect, and **emotion inference in education institutions is
+PROHIBITED by `AI Act` Article `5`(1)(f)** — in force since `2025-02-02`, with no conformity route
+out. 🟡 **And the Annex III clock that governs the *permitted* high-risk uses is reported MOVED from
+`2026-08-02` to `2027-12-02`** *(an amending regulation cited as Regulation (EU) 2026/1744;
+Article `50`(2) marking due `2026-12-02`)*, **through secondary sources that disagree, on a primary
+host this environment cannot reach.**
+🟢 **The useful consequence is the same either way: the Article `5` prohibitions are already live,
+so affect detection is off the table today, while the audit-and-marking work has at least `14`
+months of runway.**
+
+### 🟢 Trend `4` — the knowledge-tracing layer is DONE, and saying so is worth more than screening it again
+
+🟢 **`20` of `20` rows rendered on `topics/knowledge-tracing` were already in this KB's census, and
+`10` re-verified permissive this pass** — `pykt-team/pykt-toolkit` *(`446`★, `MIT`)*,
+`bigdata-ustc/EduData` *(`312`★, `Apache-2.0`)*, `jhljx/GKT`, `jilljenn/ktm`,
+`lccasagrande/Deep-Knowledge-Tracing`, `tswsxk/EduData`, `ZhijieXiong/pyedmine`,
+`HFUT-LEC/EduStudio`, `THUwangcy/HawkesKT`, `jdxyw/deepKT`.
+🔵 **A studio does not need to evaluate knowledge tracing; it needs to pick one and wire it.**
+🔴 **The layers still missing a permissive row are the ones nobody publishes: `校務`-style
+administrative automation, multi-tenant rostering, and a `pt-BR` locale on any platform row.**
+
+### 🟢 Trend `5` — runtime-downloaded models are becoming declarable, and that is good news for air-gapped work
+
+🟢 **[`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) ships
+`inst/metadata/artifacts.csv`: `50` runtime artefacts, each with a URL and a pinned `sha256`.**
+🔵 **`Gap 414` said a model that arrives over the network is invisible to every instrument on this
+shelf. For this row it is the opposite of invisible — it is a committed manifest, which is exactly
+what a mirrored or air-gapped install needs.** 🔴 **One host serves all `50` *(`osf.io`, refused by
+this environment)*, so the single point of failure is now measurable too.**
 
 ## Pass 184 — 2026-10-13
 

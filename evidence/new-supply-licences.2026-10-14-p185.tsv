@@ -1,0 +1,31 @@
+# p185 — new supply, licence-verified over the raw channel before any row was written.
+# Channels: github.com/topics/intelligent-tutoring-system (39 public repos, 20 rendered),
+# github.com/topics/knowledge-tracing (93 public, 20 rendered),
+# github.com/topics/ai-tutor?l=python&s=updated (242 Python of 693, 20 rendered).
+# in_census = the slug already appears somewhere in this KB's eight published pages.
+slug	stars_as_rendered	in_census	licence_file	bytes	licence	verdict
+ningkaikok/dotty-tutor	8	NEW	LICENSE	11357	Apache-2.0 (full text)	NEW ROUTE candidate — 55 tables, 76 FKs, agent audit + prompt governance + human review
+Zemmeng/claude-study-system	0	NEW	LICENSE	1064	MIT	NEW — tutoring shipped as an agent HARNESS (hooks, slash commands, consistency checks)
+cliffffffffff/guided-learning	0	NEW	LICENSE	1070	MIT	NEW — tutoring shipped as an agent SKILL
+YUANYINGLONG-91/lecture-notes-tutor	0	NEW	LICENSE	1072	MIT	NEW — agent skill: slides to outline, quiz, notes, translation
+deng-group/wendao	0	NEW	LICENSE	35149	GNU GPL	NEW but COPYLEFT — knowledge-graph tutor
+mskljns/ComprehensionProblems_DAiSEE	5	NEW	NONE	0	NO GRANT	DO NOT BUILD — and see the second blocker: DAiSEE is facial affect (boredom/confusion/engagement/frustration). Emotion inference in education is a PROHIBITED practice under AI Act Art. 5(1)(f), in force since 2025-02-02
+HyeonahKang/LatentVariableModel-IntelligentTutor	4	NEW	NONE	0	NO GRANT	research code, unusable as published
+slegroux/dandelion	0	NEW	NONE	0	NO GRANT	unusable as published
+lplnufpi/essay-br	-	NEW	LICENSE	1114	MIT	NEW CORPUS — 6 577 ENEM-graded pt-BR essays, c1..c5 + score, 417 prompts, 13.0 MB. "Copyright (c) 2021 Laboratorio de Processamento de Linguagem Natural - UFPI"
+opencast/opencast	-	NEW (slug never read before)	LICENSE	11340	ECL-2.0 (full text)	NEW ROUTE — see opencast-entities and opencast-stt-engines
+readerbench/readerbench-java	-	NEW	LICENSE.txt	10758	Apache-2.0 (full text)	NEW COMPONENT — the feature extractor that makes writeAlizer runnable
+pykt-team/pykt-toolkit	446	in_census	LICENSE	1066	MIT	re-verified permissive
+bigdata-ustc/EduData	312	in_census	LICENSE	11346	Apache-2.0	re-verified permissive
+ZhijieXiong/pyedmine	82	in_census	LICENSE	1085	MIT	re-verified permissive
+HFUT-LEC/EduStudio	78	in_census	LICENSE	1064	MIT	re-verified permissive
+jilljenn/ktm	140	in_census	LICENSE	1071	MIT	re-verified permissive
+jhljx/GKT	141	in_census	LICENSE	1061	MIT	re-verified permissive
+lccasagrande/Deep-Knowledge-Tracing	107	in_census	LICENSE	1076	MIT	re-verified permissive
+THUwangcy/HawkesKT	31	in_census	LICENSE	1070	MIT	re-verified permissive
+jdxyw/deepKT	28	in_census	LICENSE	1062	MIT	re-verified permissive
+tswsxk/EduData	83	in_census	LICENSE	11346	Apache-2.0	re-verified permissive
+sohan1611/BloodCoded_Agentic	1-2	in_census	LICENSE	1104	MIT	already recorded. NEW FACT: a second grant in README prose — "Curriculum material in data/knowledge/ ... is released under CC BY-SA 4.0". Code and content differ, and only the code licence has a file
+minouza/MathCrew	2	in_census	LICENSE.md	3905	PolyForm Strict 1.0.0	already recorded (byte-identical twin of freesoft/MathCrew) — re-confirmed, still not open source
+grey8-io/learn-ai-with-grey8	10	in_census	LICENSE	34523	AGPL-3.0	re-verified copyleft
+invincible-summer/Next-Tutor-Agent	1	in_census	NONE	0	NO GRANT	absence re-confirmed

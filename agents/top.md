@@ -1,8 +1,92 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🆕 🟢 **One row enters at the top of this page's quality ranking, and it did not come from a new
+channel — it came from re-sorting an OLD one.**
+[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor) was on `topics/ai-tutor`, a
+page this KB has read five times. 🔵 **Every one of those reads took the default sort, which is
+stars. At `8`★ the row is on page 7.** 🟢 **Sorted by `s=updated`, it is row `8`, updated the day
+before this pass.**
+
+### 🟢 The new APPLIANCE row, and why it outranks every other agent on this page
+
+| row | licence | entities | agent audit | human review | maintenance |
+|---|---|---|---|---|---|
+| 🟢 **[`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor)** `8`★ | 🟢 **`Apache-2.0`** *(`LICENSE`, `11 357` B, full text, `6` grant/appendix markers — not the `P971` notice trap)* | 🟢 **`55` tables, `76` `ForeignKey` declarations** | 🟢 **`9` tables** — `tutor_threads`, `tutor_messages`, `tutor_turn_requests`, `tutor_tool_events`, `tutor_observation_events`, `tutor_artifacts`, `tutor_inputs`, `model_call_metrics`, `voice_sessions` | 🟢 **`12` tables** — `quality_review_*` ×`9`, `teacher_review_events`, `ai_reviews`, `review_tasks` | 🟢 `802` files, **`117` `test_*.py`**, `3` CI workflows *(`ci`, `codeql`, `service-health`)*, `HEAD 7790650` **`2026-10-13`** |
+
+🟢 **The learner model:** `mastery_states`, `knowledge_points`, `learning_sessions`,
+`chapter_attempts`, `courseware_attempts`, `exercise_attempts`, `variation_attempts`.
+🆕 🟢 **The MISTAKE model, which nothing else on this page has as a schema:** `mistake_items` and
+**`mistake_attributions`** — *why* the learner got it wrong, persisted and attributable.
+🔵 **This KB praised exactly that idea at `1`★ in `sohan1611/BloodCoded_Agentic` *(failure-cause
+routing, `MIT`)*. `dotty-tutor` has it as `2` tables with foreign keys.**
+🆕 🟢 **And PROMPT GOVERNANCE as data:** `prompt_heads`, `prompt_revisions`, `prompt_release_events`
+— a released prompt is a versioned object with a release event, which is what an Annex III audit
+trail actually needs from the model layer.
+🟢 **Roster and own identity:** `learning_classes`, `class_memberships`, `auth_sessions`,
+`auth_invites`. 🔴 **`0` `tenant_id` / `0` `organization_id` — single-tenant, like every other
+appliance on this shelf.**
+
+🔴 **The one defect, stated before any studio reads the rest:** the `Apache-2.0` appendix is the
+**stock** text — `Copyright [yyyy] [name of copyright owner]` is unfilled, there is **no `NOTICE`
+file**, and no copyright holder, institution or contact address appears in `README.md`,
+`SECURITY.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md` or `package.json`.
+🔵 **A complete grant with no identifiable licensor is the hazard this KB already named on
+`scaleapi/researchrubrics`: in a client review it is harder to clear than a short `MIT` with a
+name.** 🟢 **And it is one issue away from fixed, which is why `ACTION MN` re-points the licensing
+ASK here.**
+
+🔵 **Region: APAC, by declaration rather than inference** — the README's own first line is
+*「面向中文教材与个人错题复习的 AI 学习平台」*, `29` `中文` markers, `zh-CN` catalogues, and Chinese
+textbook OCR as the stated input. 🔴 **`0` `es` and `0` `pt` catalogues.**
+
+### 🟢 Rows this page recorded as UNUSABLE that are not — `ACTION MD`
+
+🔵 Full table and method: [`evidence/bare-token-grant.2026-10-14-p185.tsv`](../evidence/bare-token-grant.2026-10-14-p185.tsv).
+
+| row | this page said | the README says | now |
+|---|---|---|---|
+| 🟢 [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | 🔴 *"NO LICENCE PAYLOAD … no grant under 12 probed filenames"* | `## License` → **`MIT`** | 🟢 **USABLE** |
+| 🟢 [`haolpku/Omni-Edu`](https://github.com/haolpku/Omni-Edu) `225`★ | 🔴 *"NO GRANT — absent on 8 probed paths"* | *"The code is licensed under `Apache-2.0`. Model weights and third-party datasets and benchmarks retain their respective licenses."* | 🟢 **CODE USABLE** 🔴 weights are a second grant |
+| 🟢 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 *"ships its own bridge unlicensed"* | `## License` → *"Copyright ©2016 Advanced Distributed Learning / Licensed under the Apache License, Version 2.0"* | 🟢 **USABLE** |
+| 🔴 [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 *"no grant of rights"* | *"MIT License - see `LICENSE` file for details."* | 🔴 **STILL UNUSABLE — the file does not exist. A dangling reference, and the most dangerous form on this page** |
+| 🔴 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🔴 NO GRANT | a `shields.io` **`License-MIT`** badge, and nothing else | 🔴 **STILL UNUSABLE — a badge is a claim about a licence** |
+| 🔴 [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 *"the topic's #1 row on page 2 has no grant"* | *"This project is open source and available for educational purposes."* | 🔴 **STILL UNUSABLE — a claim plus a field restriction, with no grant between them** |
+| 🔴 [`jadrianlg16/learning-tutor`](https://github.com/jadrianlg16/learning-tutor) | 🔴 *"good design … no grant"* | `## License` → *"All rights reserved … no license is granted to reuse or redistribute it"* **plus a dependency inventory** | 🔴 **CONFIRMED UNUSABLE, and the dependency list is what fooled the screen** |
+| 🔴 [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 🔴 NO GRANT *(p184)* | `0` licence heading, `0` identifier anywhere in the README | 🔴 **CONFIRMED by a third instrument** |
+
+### 🟢 The new FORM on this page: tutoring shipped as an agent SKILL
+
+🆕 🟢 **Three permissive rows that are not applications at all** — they are skills and harnesses for
+an agent the client already runs:
+
+| row | licence | what it is |
+|---|---|---|
+| 🟢 [`cliffffffffff/guided-learning`](https://github.com/cliffffffffff/guided-learning) | 🟢 **`MIT`** *(`1 070` B)* | an agent skill that teaches an unfamiliar concept by questioning rather than answering |
+| 🟢 [`YUANYINGLONG-91/lecture-notes-tutor`](https://github.com/YUANYINGLONG-91/lecture-notes-tutor) | 🟢 **`MIT`** *(`1 072` B)* | slides → outline → quiz → exported notes → translation, as a skill |
+| 🟢 [`Zemmeng/claude-study-system`](https://github.com/Zemmeng/claude-study-system) | 🟢 **`MIT`** *(`1 064` B)* | a study HARNESS: hooks, slash commands and consistency checks over a slide deck |
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 **`CC BY-SA 4.0`** *(`1 230` B)* | **`165` skills** for teachers, school leaders and EdTech builders, `853`★ — the same form at scale |
+
+🔵 **Why the licence column matters more than usual here:** `CC BY-SA 4.0` is a CONTENT licence with
+a **share-alike** obligation. 🟢 For prompts, curricula and skill text that is a workable choice and
+attribution is cheap. 🔴 **But a studio that embeds those skills in a client deliverable inherits
+share-alike on the adapted text, and `CC BY-SA` has no patent grant and is not written for code.**
+🟢 **The three `MIT` rows carry no such condition — which is why a `0`★ `MIT` skill can be worth
+more to an engagement than an `853`★ `CC BY-SA` library.**
+
+🔴 **And one row that is permissively licensed and still must not be built on:**
+[`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+has `0` licence files *(so unusable anyway)*, but the reason it is listed here is the other blocker:
+**it infers comprehension state from facial video** *(DAiSEE: boredom, confusion, engagement,
+frustration)*. 🔴 **Emotion inference in education institutions is PROHIBITED by `AI Act` Article
+`5`(1)(f) — in force since `2025-02-02`, with no conformity-assessment route out.** 🔵 **`Gap 416`.
+Any engagement that reaches for webcam affect detection stops at this line, whatever the licence
+says.**
 
 ## Pass 184 — 2026-10-13
 

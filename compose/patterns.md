@@ -1,8 +1,102 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🆕 🟢 **Three new patterns and two amendments, and every repository named below had its licence read
+over the raw channel during this pass — not carried from a prior one.**
+
+### 🆕 🟢 Pattern `28` — data-resident lecture capture with local transcription and an agent over the transcript
+
+🔵 **The layer this shelf had `0` rows for until `ACTION ME` read
+[`opencast/opencast`](https://github.com/opencast/opencast).** For a university under a
+data-residency constraint, this is the only permissive path measured on this shelf where **no
+learner audio leaves the institution.**
+
+| step | component | licence | the seam, as measured |
+|---|---|---|---|
+| `1` | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** *(`11 340` B)* | `oc_series` for the course, `oc_scheduled_extended_event` for the recording, `oc_assets_snapshot` for the versioned media, `oc_acl_managed_acl` for access |
+| `2` | `modules/speech-to-text-impl/…/engine/WhisperCppEngine.java` + `etc/…WhisperCppEngine.cfg` | 🟢 in-tree | 🟢 **a LOCAL engine. Swap `VoskEngine` for lower cost, `WhisperEngine` for quality — all three ship** |
+| `3` | `modules/speech-to-text-workflowoperation` | 🟢 in-tree | 🟢 **the named attachment point: a workflow operation, so the agent is configuration, not a fork** |
+| `4` | `oc_transcription_service_provider` / `oc_transcription_service_job` | 🟢 in-tree | 🟢 **the provider abstraction is in the SCHEMA — a new provider is a row** |
+| `5` | retrieval over the transcript + `oc_search` | — | 🔵 the published index already exists; the agent reads it rather than re-indexing the media |
+| `6` | audit of every agent turn | 🟢 **`Apache-2.0`** | 🟢 **borrow the shape from [`ningkaikok/dotty-tutor`](https://github.com/ningkaikok/dotty-tutor): `tutor_turn_requests`, `tutor_tool_events`, `model_call_metrics`** |
+
+🔴 **Price these two honestly in the first conversation:** `230` modules is a platform to operate,
+not a library to import; and **`0` of `opencast`'s `17` locale catalogues is `pt-BR` or `pt-PT`**, so
+a Brazilian deployment starts with a translation project *(`es-ES` and `gl-ES` are present, so a
+Spanish-language engagement does not)*.
+🟢 **Contributing back is cheap: upstream ships `AGENTS.md` and `CLAUDE.md`.**
+
+### 🆕 🟡 Pattern `29` — `pt-BR` essay scoring, priced as TRAINING rather than inference
+
+🔵 **`Gap 372` has been this KB's longest-standing capability gap. `ACTION MF` closed its PERMISSIVE
+half and this pattern states what is still missing, because an engagement that assumes inference
+will fail in week two.**
+
+| step | component | licence | what it actually does |
+|---|---|---|---|
+| `1` | [`lplnufpi/essay-br`](https://github.com/lplnufpi/essay-br) | 🟢 **`MIT`** *(`1 114` B, UFPI)* | 🟢 **`6 577` Brazilian secondary-school essays, human-graded on the five ENEM competencies `c1`…`c5` + total, `417` prompts, `13.0` MB** |
+| `2` | [`readerbench/readerbench-java`](https://github.com/readerbench/readerbench-java) | 🟢 **`Apache-2.0`** *(`10 758` B)* | the feature extractor — emits the `RB.*` columns |
+| `3` | [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) v`1.7.4` | 🟢 **`MIT + file LICENSE`** | `import_rb()` → `preprocess()` → `predict_quality()`; the contract is the **`1 316`-column** `sample_rb.csv` header |
+| `4` | `inst/metadata/artifacts.csv` | 🟢 committed | 🟢 **`50` artefacts, `24` of them `rb_*` *(no gated tool)*, every one with a pinned `sha256`** — mirror these before the engagement starts |
+| `5` | a human review gate | 🟢 **`Apache-2.0`** | 🟢 **`dotty-tutor`'s `quality_review_*` cluster (`9` tables) + `teacher_review_events` is the shape; do not invent one** |
+
+🔴 **The honest verdict, and it is the point of the pattern:** `writeAlizer`'s `rb_*` models are
+trained on **English** writing samples. 🟢 **For English, steps `1`–`4` are an inference pipeline
+today.** 🔴 **For `pt-BR`, `essay-br` is TRAINING DATA and the deliverable includes fitting and
+validating a model per competency — a different scope, a different price, and a different
+conversation about accuracy.** 🔵 **`ACTION ML` is pre-registered to settle the rubric mapping
+rather than let this pattern imply it.**
+
+🔴 **And the regulatory step nobody may skip:** automated essay scoring is *evaluation of learning
+outcomes*, an **Annex III** high-risk use. 🔵 **Whatever the application date turns out to be
+*(reported moved to `2027-12-02`, unverifiable from here)*, the deliverable needs the audit trail,
+the human-review record and the Article `50`(2) marking from day one — the marking obligation is
+reported due `2026-12-02`, which is the nearer deadline.**
+
+### 🆕 🟢 Pattern `30` — the licence read order, forced by `9` overturns and `4` false presences in one pass
+
+🔵 **This replaces *"check the licence"* with a sequence, because this pass measured every step
+failing on at least one row.**
+
+| step | question | what fails without it |
+|---|---|---|
+| `1` | Does the slug EXIST? `git ls-remote` | 🔴 `apereo/opencast` cost five passes of *"unprobed"* and one second of `ls-remote` |
+| `2` | Licence FILE, over `raw.githubusercontent.com`, in **both cases** of the filename | 🔴 `pipwerks` has no `README.md` but a `readme.md`, and its grant lives there |
+| `3` | Licence heading — including `Licence`, `Licencia`, `版权协议`, `ライセンス` | 🔴 `a5anka` writes `## Licence`; a `License`-only grep reports nothing |
+| `4` | The BODY, with no keyword suppression | 🔴 `haolpku/Omni-Edu`'s `Apache-2.0` was suppressed by a `third-party` filter — a self-inflicted false negative on a `225`★ row |
+| `5` | **Whose** licence is it? Exclude dependency inventories | 🔴 `jadrianlg16/learning-tutor` lists three dependency licences inside a section that reserves all rights |
+| `6` | If the README names a FILE, does the file exist? | 🔴 `DMontgomery40/mcp-canvas-lms` points at an absent `LICENSE` — the most dangerous form, because both channels look settled |
+| `7` | Is the token a GRANT or a CLAIM? | 🔴 a `shields.io` badge, *"MIT — demo use only"*, *"open source for educational purposes"* — none of the three is a licence |
+| `8` | Is there an identifiable LICENSOR? | 🔴 `dotty-tutor` has a complete `Apache-2.0` with `Copyright [yyyy] [name of copyright owner]` unfilled, no `NOTICE`, no contact — harder to clear in review than a short `MIT` with a name |
+| `9` | Is there a SECOND grant for content or weights? | 🔴 `Omni-Edu` carves out model weights; `BloodCoded_Agentic` releases `data/knowledge/` under `CC BY-SA 4.0` in a README sentence with no file |
+
+🟢 **Instrument for steps `3`–`4`:** [`compose/code/p1049-bare-token-grant`](code/p1049-bare-token-grant/README.md).
+
+### 🟡 Pattern `27` amended — run `P1049` BEFORE the ask
+
+🔴 **Pattern `27` *(the unlicensed-supply triage)* sent a studio straight to the ASK when the best
+schema in a shortlist had no grant.** 🟢 **Step `0` is now: run the bare-token pass. `9` of `61`
+*"unlicensed"* rows on this shelf were already granted, `6` of them permissively — an email asking
+for a licence that already exists is the most expensive kind of cheap step.**
+🔵 **And when an ASK is still needed, prefer a row whose grant is COMPLETE but whose LICENSOR is
+missing** *(`dotty-tutor`: one sentence to fix)* **over a row with no grant at all**
+*(`xueyoujing-companion`: a decision for the holder, not a correction)*.
+
+### 🟡 Pattern `24` amended — stop hand-building the Annex III audit layer
+
+🔴 **Pattern `24` builds a decision-audit layer by hand, because the only schema this KB had seen
+with one was unlicensed at `2`★.** 🟢 **`dotty-tutor` declares it under `Apache-2.0`: `9`
+agent-audit tables *(`tutor_turn_requests`, `tutor_tool_events`, `tutor_observation_events`,
+`model_call_metrics`, …)*, `3` prompt-governance tables *(`prompt_heads`, `prompt_revisions`,
+`prompt_release_events`)* and `12` human-review tables *(`quality_review_*`, `teacher_review_events`,
+`ai_reviews`, `review_tasks`)*.** 🔵 **`ACTION MJ` will check those `24` tables column by column
+against the pattern's requirement before this amendment is treated as complete — until then, adapt
+and verify, do not assume.**
 
 ## Pass 184 — 2026-10-13
 

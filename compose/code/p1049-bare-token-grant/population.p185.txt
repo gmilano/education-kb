@@ -1,0 +1,72 @@
+# P1049 population — every row this KB's pages record as NO GRANT / unlicensed /
+# no licence file, extracted from the eight published pages by a single-slug-per-line
+# filter (ambiguous multi-slug lines dropped, so this is a FLOOR, not the whole set).
+# Two calibration rows at the end, named as controls.
+A-R007/Multi-Agent-Study-Assistant
+AI4Bharat/indicnlp_catalog
+ApexEDM/GIKT
+CreveXTech/canvas-lms-mcp
+CyanXLab/Phonos
+DMontgomery40/mcp-canvas-lms
+Gaurav-Pande/AES_DL
+GradeAI/gradeai
+HFUT-LEC/awesome-student-cognitive-modeling
+IC-Redacoes-UTFPR/CorrecaoRedacao
+JushBJJ/Mr.-Ranedeer-AI-Tutor
+Kosudo/nextSIS
+LAION-AI/Desktop_BUD-E
+P1ckle3/blackboard-mcp
+Piyushtanwani/DAU-buddy
+SIU-Toba/docker-guarani
+Simon-Initiative/lti-example-tool
+TianHongZXY/pytorch-SAKT
+YuriMatsumotoSantos/CorrecaoRedacao
+ZQR1101/xueyoujing-companion
+Zenglian990/AI_Tutor_Release
+ZhijieXiong/dlkt
+a5anka/ai-lab-2026-africa-agent-manager
+adlnet/SCORM-to-xAPI-Wrapper
+arshadshk/Last_Query_Transformer_RNN-PyTorch
+arshadshk/SAINT-pytorch
+atutor/ATutor
+barneslardo/sis-demo
+bigdata-ustc/Agent4Edu
+brettlballard/DIF
+ckyeungac/deep-knowledge-tracing-plus
+cs341-illinois/coursebook
+douglas150206/IF_VEST_Redacao_Correcao
+educredentials/ec-issuer
+emorynlp/LLM-Grading
+eugeborzone/Auto_Grade_Guarani
+frappe/education
+gautamyadavs/AVLTree
+haolpku/Omni-Edu
+hesham0-0nasser/tutor-lms-mcp
+horaciohudson/corretor-redacao
+ink-waffle/sisu-mcp
+jadrianlg16/learning-tutor
+jaltekruse/Free-Math
+jgabriel-sntx/Corretor-de-redacao-ENEM
+loyaniu/moodle-mcp
+lsloan/udp-notebooks
+luffycodes/Tutorbot-Spock
+mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK
+neiltonsantana9-star/redacao
+onbirdev/moodle-webservice_mcp
+open-spaced-repetition/fsrs4anki-helper
+open-spaced-repetition/srs-benchmark
+pipwerks/scorm-api-wrapper
+rachelproject/module-template
+ruud0/aula-virtual-mcp
+seewoo5/KT
+speedyapply/2026-AI-College-Jobs
+victor934034/simulade
+xiaopengguo/ATKT
+yxonic/DTransformer
+# --- CONTROLS ---
+# POSITIVE: p184 read its licence as the bare word MIT under a `## License` heading.
+tianshuo/trainingllm
+# POSITIVE: p184/earlier read a CC-BY-NC-ND grant in README PROSE, no licence file.
+xiaolai/the-craft-of-selfteaching
+# NEGATIVE: a settled LICENSE.txt row — the instrument must not be read as a file probe.
+ai-shifu/ai-shifu

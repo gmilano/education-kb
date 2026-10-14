@@ -1,0 +1,18 @@
+# p185 — ACTION MF. Can the ReaderBench half of writeAlizer run with NO gated tool?
+# Measured on shmercer/writeAlizer v1.7.4 (DESCRIPTION Date: 2026-09-16), MIT + file LICENSE,
+# 36 testthat files, 4 CI workflows, and on readerbench/readerbench-java LICENSE.txt.
+# NOT executed: every model artefact is on osf.io and osf.io is refused by this
+# environment's proxy (CONNECT tunnel 403), so this is a STRUCTURAL discharge.
+fact	value	evidence
+runtime artefacts declared in-repo	50	inst/metadata/artifacts.csv (committed manifest: kind,model,part,file,url,sha)
+artefacts for rb_* models (ReaderBench)	24	same manifest, grouped by model key
+artefacts for coh_* models (Coh-Metrix, registration-gated)	24	same manifest
+artefacts for gamet_cws1 (GAMET, free download)	2	same manifest
+distinct hosts serving the artefacts	1 (osf.io)	every url in the manifest
+artefacts with a pinned sha256	50 of 50	the sha column
+ReaderBench-fed model keys	10	rb_mod1 rb_mod2 rb_mod3narr/exp/per/all + 4 _v2 variants (R/predict_values.R)
+input contract for the rb_* path	1 316 columns	inst/extdata/sample_rb.csv header row (RB.* feature names)
+importer for the rb_* path	import_rb(path)	R/file_utilities.R:293
+offline smoke test with 0 downloads	yes	model "example" + wa_seed_example_models() + inst/extdata/sample_rb.csv
+ReaderBench licence	Apache-2.0, 10 758 B full text	readerbench/readerbench-java LICENSE.txt, "Copyright 2013 Mihai Dascalu"
+osf.io reachable from this environment	NO (CONNECT tunnel 403)	curl -L https://osf.io/2rsnc/download

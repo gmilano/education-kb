@@ -1,8 +1,107 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-14
 ---
+
+## Pass 185 — 2026-10-14
+
+🆕 🟢 **Three foundational rows enter, and together they close two things this page has carried as
+open for five passes: a lecture-capture layer with `0` rows, and an essay-scoring chain whose
+blocker was mis-named as the licence when it was always the FEATURE EXTRACTOR.**
+
+### 🟢 `opencast/opencast` — the lecture-capture ROUTE, and the slug p184 proved exists
+
+🔵 **p184 closed out `apereo/opencast` as non-existent and pre-registered `ACTION ME` for the real
+slug. The real slug is read here for the first time.**
+
+| fact | value |
+|---|---|
+| 🟢 licence | **`ECL-2.0`** — *Educational Community License, Version 2.0*, `LICENSE`, **`11 340` B**, full text. 🔵 The `Apache-2.0` derivative written for universities: OSI-approved, permissive, patent grant narrowed to the contributor's own work |
+| 🟢 `HEAD` | `637882d48eb850b8435c49320b1605ffea7d071d` |
+| 🟢 size | `3 920` tracked paths, **`230` modules** |
+| 🟢 entities | **`16` read** from the first `40` entity-bearing files; the tree holds `160`, so this is a FLOOR |
+| 🟢 region | **EMEA**, by evidence: `17` locale catalogues, `15` of them European, and a translator roster naming Danish, German, Italian, Galician, Slovenian, Swedish, Greek, Turkish and Hebrew contributors |
+| 🔴 Portuguese | **`0` `pt-BR`, `0` `pt-PT`** of the `17` catalogues |
+
+🟢 **The entities that matter:** `oc_series` *(the course/series a recording belongs to)*,
+`oc_scheduled_extended_event` *(the scheduled recording)*, `oc_assets_snapshot` /
+`oc_assets_asset` / `oc_assets_version_claim` *(versioned media with version claims)*,
+`oc_acl_managed_acl` *(managed access control)*, `oc_search` *(the published index)*,
+`oc_oaipmh` + `oc_oaipmh_elements` *(OAI-PMH publication — the metadata-harvest standard a
+university library already speaks)*.
+
+🆕 🟢 **And the two that make it a COMPOSITION TARGET: `oc_transcription_service_job` and
+`oc_transcription_service_provider`.** 🔵 **The provider abstraction is in the SCHEMA, not just in
+the code — which means a new transcription provider is a row, not a fork.**
+
+🟢 **Three LOCAL speech-to-text engines ship in-tree**, each with config and admin documentation:
+
+| engine | path | hosting |
+|---|---|---|
+| 🟢 **Whisper** | `modules/speech-to-text-impl/…/engine/WhisperEngine.java` + `etc/…WhisperEngine.cfg` | 🟢 **LOCAL** |
+| 🟢 **whisper.cpp** | `…/engine/WhisperCppEngine.java` + `etc/…WhisperCppEngine.cfg` | 🟢 **LOCAL** |
+| 🟢 **Vosk** | `…/engine/VoskEngine.java` + `etc/…VoskEngine.cfg` | 🟢 **LOCAL** |
+| 🟡 AmberScript / Google Speech / IBM Watson / Microsoft Azure | `modules/transcription-service-*` | 🔴 CLOUD |
+
+🟢 **So a university can caption every lecture it records without a frame of learner audio leaving
+its own network** — and the attachment point for an agent is a named workflow operation,
+`modules/speech-to-text-workflowoperation`, over an engine-agnostic
+`speech-to-text-api` / `speech-to-text-async-api`.
+🔵 **Upstream also ships `AGENTS.md` and `CLAUDE.md`, so the project already expects agent
+contributors.** Evidence: [`evidence/opencast-entities.2026-10-14-p185.tsv`](../evidence/opencast-entities.2026-10-14-p185.tsv),
+[`evidence/opencast-stt-engines.2026-10-14-p185.tsv`](../evidence/opencast-stt-engines.2026-10-14-p185.tsv).
+
+### 🟢 `readerbench/readerbench-java` — the component that makes `writeAlizer` runnable
+
+🟢 **`Apache-2.0`, `LICENSE.txt`, `10 758` B of full text, *"Copyright 2013 Mihai Dascalu"***
+*(Politehnica University of Bucharest — **EMEA**, by the holder's own declaration)*.
+
+🔵 **Why it belongs on this page rather than in a pattern footnote:** `ACTION MF` asked whether the
+permissive half of `writeAlizer` can run with no registration-gated tool. **It can, and this is the
+tool it needs.**
+
+| the chain, measured | value |
+|---|---|
+| 🟢 runtime artefacts declared in a COMMITTED manifest | **`50`** — `inst/metadata/artifacts.csv` *(`kind,model,part,file,url,sha`)* |
+| 🟢 artefacts needing **no gated tool** *(`rb_*`, ReaderBench)* | **`24` of `50`** |
+| 🔴 artefacts needing Coh-Metrix *(registration-gated)* | `24` of `50` |
+| 🟡 artefacts needing GAMET *(free download, still a second tool)* | `2` of `50` |
+| 🟢 artefacts with a pinned `sha256` | **`50` of `50`** |
+| 🔴 distinct hosts serving all `50` | **`1` — `osf.io`** |
+| 🟢 model keys driven by `import_rb()` alone | **`10`** |
+| 🟢 the input contract | **`1 316` columns** — the `RB.*` header of `inst/extdata/sample_rb.csv` |
+| 🟢 offline smoke test with `0` downloads | `model = "example"` + `wa_seed_example_models()` |
+| 🟢 maintenance | v`1.7.4`, `DESCRIPTION Date: 2026-09-16`, `36` testthat files, `4` CI workflows |
+
+🔴 **Not executed.** `osf.io` is refused by this environment's proxy *(`CONNECT tunnel failed,
+response 403`)*, so `Gap 372` closes on **capability and structure** and stays open on **execution**.
+🟢 **It also narrows `Gap 414`: a runtime-downloaded artefact is NOT invisible here — it is a
+committed CSV with `50` URLs and `50` hashes, which is precisely the input an air-gapped or mirrored
+install needs.** 🔵 Evidence: [`evidence/writealizer-chain.2026-10-14-p185.tsv`](../evidence/writealizer-chain.2026-10-14-p185.tsv).
+
+### 🟢 `lplnufpi/essay-br` — the shelf's first permissive LATAM corpus, and its first `pt-BR` anything
+
+🟢 **`MIT`, `LICENSE`, `1 114` B, *"Copyright (c) 2021 Laboratório de Processamento de Linguagem
+Natural - UFPI"*** *(Universidade Federal do Piauí — **LATAM**, by the holder's own declaration)*.
+
+| fact | value |
+|---|---|
+| 🟢 content | **`6 577` essays written by Brazilian secondary-school students** |
+| 🟢 grading | **graded by human professionals on the five ENEM competencies** — `c1,c2,c3,c4,c5` plus `score` |
+| 🟢 prompts | `417` |
+| 🟢 size | `13.0` MB *(`extended-corpus/extended_essay-br.csv`)* |
+| 🟢 citation | Marinho, Anchiêta & Moura, *"Essay-BR: a Brazilian Corpus to Automatic Essay Scoring Task"*, JIDM `13`(1):`65–76`, `2022`, `doi:10.5753/jidm.2022.2340` |
+
+🔵 **How it was found is itself a finding:** `ACTION MD` flagged two Brazilian essay-correction
+repositories for a licence identifier, the identifier turned out to belong to a **third-party
+corpus they both import**, and the corpus is the asset. 🟢 **A false positive about a grant produced
+the most useful LATAM row of the pass.**
+
+🔴 **What it is NOT:** it is not a model and not a scoring path. `writeAlizer`'s `rb_*` models are
+trained on English writing samples, so for `pt-BR` this corpus is **training data, not inference
+input**. 🔵 **`ACTION ML` is pre-registered to settle that distinction instead of letting a pattern
+imply it.**
 
 ## Pass 184 — 2026-10-13
 
