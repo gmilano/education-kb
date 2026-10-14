@@ -3,6 +3,61 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## 2026-10-14 — Pass 199
+
+🔵 **Verification method, since it changes what the numbers below mean.** `api.github.com` and
+`curl` against `github.com/<slug>` both return **403** in this session, so trending signal came
+from: `git ls-remote --symref` (alive + default branch), the repo's own licence blob over
+`raw.githubusercontent.com` (licence), and an HTML read of the repo page (stars/releases).
+**`77` unique slug probes this pass: `68` alive, `9` not resolvable (`3` dead slugs, `6` unresolvable legacy rows).** No star figure here is carried over
+from an earlier pass.
+
+### Movers
+
+| Repo | Licence | Movement |
+|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 🟢 **~`24k`★ → `41.4k`★ since 1 August** · `v1.6.14` on `2026.10.8` · the only education-specific repo at real scale |
+| [microsoft/agent-framework](https://github.com/microsoft/agent-framework) | **MIT** | 🟢 `14.1k`★ · **now the destination AutoGen sends new users to** |
+| [microsoft/autogen](https://github.com/microsoft/autogen) | MIT *(code)* / CC-BY-4.0 *(docs)* | 🔴 `61.4k`★ but **maintenance mode** |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 🟢 `292`★ · `v1.14.0` **October 2026** · fastest-moving LMS integration repo found |
+| [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | 🟢 `29.8k`★ — steady, and cycle 3's figure was accurate |
+| [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | `6.9k`★ · permissive full learning platform, under-used in this KB |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | `1.1k`★ · small stars, **outsized strategic value** — offline-first + MIT |
+
+### 🔴 Slug corrections — three published or searched slugs do not exist
+
+| Wrong slug | Correct slug | Licence |
+|---|---|---|
+| `eecs-autograder/autograder` | [eecs-autograder/autograder-server](https://github.com/eecs-autograder/autograder-server) | LGPL *(`LICENSE.txt`, branch `develop`)* |
+| `pawtograder/pawtograder` | [pawtograder/platform](https://github.com/pawtograder/platform) | GPL-3.0 *(branch `staging`)* |
+| `frappe/education` *(scanned at `main`)* | [frappe/education](https://github.com/frappe/education) **at branch `develop`** | GPL-3.0 *(`license.txt`, lowercase)* |
+
+### 🔴 Two licence-detection defects that will bite any scanner
+
+1. **[microsoft/autogen](https://github.com/microsoft/autogen)** — root `LICENSE` is
+   **CC-BY-4.0** (docs); the **code licence is MIT in `LICENSE-CODE`**. GitHub's sidebar agrees:
+   `CC-BY-4.0, MIT licenses found`. One-file-per-repo scanning mislabels it.
+2. **[openedx/XBlock](https://github.com/openedx/XBlock)** — `404` on `LICENSE`, `LICENSE.txt`,
+   `LICENSE.md` and `LICENSE.rst`. `pyproject.toml` declares `license = "Apache-2.0"` with
+   `license-files = ["LICENSE.TXT"]`, and **`LICENSE.TXT` (uppercase extension) is `11 358` B of
+   Apache-2.0.** 🟢 **This confirms p197/p198's agreed `Apache-2.0` · `11 358` row from a third
+   independent probe** — `raw.githubusercontent.com` is case-sensitive, and this pass's first
+   answer was the wrong one. **Do not "correct" that row.**
+
+🔵 **Default branches measured this pass that are not `main`:** `master`
+(`openedx/XBlock`, `ucbds-infra/otter-grader`), `develop` (`eecs-autograder/autograder-server`,
+`frappe/education`), `staging` (`pawtograder/platform`). A pipeline hardcoding `main` reports
+"no licence" for all five.
+
+🔴 **Declared gap:** **no trending open-source education repo originating in LATAM or EMEA was
+found this window.** Verified EMEA education OSS exists but is long-standing platform code
+(`OpenOLAT`, `ILIAS`, `Chamilo`, `Richie`, `INGInious`), not trending. **Latam-GPT (Chile,
+Feb 2026) has no education-specific repository** — its education use appears in press coverage
+only. 🟢 **APAC is the net exporter** of education-AI open source this window: `DeepTutor` (HKU),
+`learn-agentic-ai` (Pakistan), `Educhain` + `OpenEduCat` (India), `auto-assessment-agent` (India).
+
+---
 ## Pass 198 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — CURRENT TRENDS
+
+### 1. 🟢 The LMS integration layer commoditised — this is the quarter's real change
+
+`8` MCP servers for the two dominant LMSs were verified alive and licensed today: `6` for Canvas
+(`vishalsachdev` at `v1.14.0`, **October 2026**, `102` tools; `JohannsenLum` gatewaying all
+`1,116` Canvas endpoints) and `2` for Moodle. **In cycle 3 (1 August) this layer did not appear
+in this KB at all.** Consequence: *"integrate an agent with the LMS"* has stopped being the hard
+part of an engagement. 🔴 **But none is official** — no Instructure or Moodle HQ server exists —
+so every one is a community project a client would inherit.
+
+### 2. 🟢 Agentic, not generative — and the administrative work is the beachhead
+
+Market analysts describe the shift from experimental generative-AI apps to **autonomous agentic
+workflows** handling scheduling, grading and administration; Microsoft added agent features to
+its **Education AI Toolkit in April 2026**. 🔵 Note *where* the agency is landing: **back-office
+and assessment, not the tutoring conversation.** The verified repos agree — this pass found `3`
+new MIT rubric-grading agents and `0` new credible tutoring agents besides DeepTutor.
+
+### 3. 🔴 Framework churn just invalidated a standing recommendation
+
+**`microsoft/autogen` now states it is in maintenance mode and directs new users to
+`microsoft/agent-framework`** (MIT, `14.1k`★, Python + .NET, with published migration guides
+from both AutoGen and Semantic Kernel). Cycles 2 and 3 of this KB listed AutoGen as a top
+education framework. **Any education pilot standing on AutoGen is now on a maintenance-mode
+base** — in a 10-week engagement that is a migration you pay for, not a risk you note.
+
+### 4. 🟢 One education agent reached real scale; the rest did not
+
+**`DeepTutor` went from ~`24k`★ (cycle 3, 1 August) to `41.4k`★ today** — `+17k` in ~10 weeks —
+shipping `v1.6.14` on **2026.10.8** with lifelong-memory tutoring. 🔴 **Everything else in the
+education-specific category is small**: the next-largest genuinely education-specific tool
+verified this pass is a `4.4k`★ *curriculum*, then `388`★, `292`★, `266`★.
+🔵 **Read this carefully: there is no broad open-source education-agent ecosystem.** There is one
+breakout project and a long tail of prototypes. Plan to compose general frameworks over LMS MCP
+servers rather than to adopt a vertical agent stack that does not exist.
+
+### 5. 🔴 Published star counts in this KB were systematically inflated
+
+Independent re-measurement found `Educhain` at **`388`**★ against a published `~12k` (`~30×`) and
+`OATutor` at **`266`**★ against `~1.5k` (`~5.6×`). The same defect was already recorded for the
+technology KB in `rotation.json`. 🔵 **Treat every unverified star figure in this KB's history as
+suspect**, and note that `smolagents` (`29.8k` vs published `~30k`) and `learn-agentic-ai`
+(`4.4k` vs `~4.5k`) were accurate — so the inflation is not uniform and cannot be corrected by a
+blanket discount. It has to be re-measured per row.
+
+### 6. 🟢 Compliance moved from theme to deadline (EMEA), and the deadline moved
+
+High-risk duties for assessment/admissions/proctoring AI slid to **2 December 2027** via the
+Digital Omnibus (**2 August 2028** for embedded systems), while **generative-AI transparency
+obligations were not delayed**. **Emotion recognition in schools has been banned since
+2 February 2025** at up to **€35M / 7% of turnover**. 🔵 The practical read: *transparency work
+is due now; conformity assessment has ~14 months of runway*, which is exactly long enough for
+institutions to start procuring it this fiscal year.
+
+### 7. 🟢 National curriculum mandates are now the largest funded demand in the sector
+
+China (compulsory from age six, **September 2025**; AI-literacy infrastructure by **2030**) and
+India (compulsory from **Class 3 in 2026–27**) have committed at national scale. 🔵 Mandates
+create a **teacher-capability gap** before they create a software market — which is why
+`learn-agentic-ai`-style curriculum assets and train-the-trainer models (Google.org/Raspberry
+Pi's `$4.6M` for `1.25M` LATAM students by 2028) are the instrument that matches the demand.
+
+### 8. 🔴 Public sentiment is not uniformly permissive
+
+Ipsos Education Monitor 2026: **Japanese support for banning AI in schools rose `21%` → `29%`**,
+even though Asian markets are generally *less* pro-ban than the global average. Meanwhile in US
+higher education ~`22%` of institutions **formally prohibit** generative AI on assignments while
+only ~`14%` formally allow it. 🔵 **Assessment integrity, not capability, is the live objection**
+in a buying conversation — which is why the deterministic-plus-agentic grading split in
+`compose/patterns.md` is the pattern that survives procurement.
+
+### 9. 🟢 Sovereignty became a procurement criterion, unevenly
+
+**Latam-GPT** (Chile, **February 2026**, CENIA, 60+ institutions / 15 countries, Spanish and
+Portuguese first, Colombian textbooks in training data) gives LATAM public buyers a sovereignty
+story; EMEA has the AI Act plus permissively-licensed local platforms (`OpenOLAT`, Apache-2.0).
+🔴 **Neither has an education-specific open-source implementation** — Latam-GPT's education use
+exists in press coverage, not in a repo. **That gap is a build opportunity, not a product to
+resell.**
 ## Pass 198 — 2026-10-14
 
 ### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims

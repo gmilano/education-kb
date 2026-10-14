@@ -3,6 +3,162 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — RECIPES FROM THIS PASS'S VERIFIED COMPONENTS
+
+Every repo named below was verified alive with its licence read from its own blob **today**.
+Licences are stated inline because in education the licence decides whether a pattern can ship.
+
+### P199-1 — Canvas tutoring + grading assist over an existing LMS *(North America, 6–8 wks)*
+
+**The pattern that fits the crowded NA market: do not rebuild the LMS, attach to it.**
+
+```
+Canvas LMS (AGPL, client-hosted — untouched)
+  └─ vishalsachdev/canvas-mcp (MIT, v1.14.0 Oct 2026) ......... 102 tools, 8 skills
+       └─ microsoft/agent-framework (MIT) ..................... orchestration (NOT AutoGen)
+            ├─ mem0ai/mem0 (Apache-2.0) ....................... per-student longitudinal memory
+            ├─ infiniflow/ragflow (Apache-2.0) ................ course corpus w/ citations
+            ├─ docling-project/docling (MIT) .................. textbook/PDF → structured text
+            ├─ BerriAI/litellm (MIT) .......................... per-student cost cap + provider swap
+            └─ langfuse/langfuse (MIT) ........................ traces = the audit evidence
+```
+
+**Wiring:** fork `canvas-mcp` (you will own it — there is no official server). Point Docling at
+the course materials, index into RAGFlow, require a citation on every tutor answer. Give each
+student a mem0 namespace keyed to the Canvas user id so the tutor remembers across a term.
+Enforce the budget in LiteLLM per student id, not per tenant — a runaway loop is a per-student
+cost event. Ship Langfuse from day one: the traces are what you show an accreditor.
+🔴 **Do not let the agent write grades in v1.** Canvas MCP servers *can* grade
+(`bruchris/canvas-lms-mcp` exposes it); that authority is what gets a pilot cancelled.
+
+### P199-2 — Defensible AI grading: deterministic core, agentic margin *(Global, 8–10 wks)*
+
+**Addresses the live objection (`intel/trends.md` #8): graders are challenged, so build for
+challenge.**
+
+```
+jupyter/nbgrader (BSD) or ucbds-infra/otter-grader (BSD) .. deterministic tests = the score of record
+  └─ asu2304/auto-assessment-agent (MIT) ................... criterion-level rubric scoring w/ evidence
+       └─ johnswyou/autograder (MIT) ........................ handwritten work: locate → transcribe → rubric
+            └─ laurauguc/grading_assistant (MIT) ............ teacher-facing rubric review UI
+                 └─ langfuse/langfuse (MIT) .................. every score's full trace, retained
+```
+
+**Wiring:** code and maths that *can* be tested deterministically are graded by nbgrader/otter —
+no model in that path. The agents only score what tests cannot reach (reasoning, prose, working
+shown), and must emit **per-criterion evidence quotes**, which is precisely what
+`auto-assessment-agent` provides and why it is the pick over a generic LLM call. Route every
+agent score into `grading_assistant` as a *proposal*; a human approves before release —
+`johnswyou/autograder`'s own README demands this. Retain the Langfuse trace for the full appeals
+window.
+🟢 **The sellable artefact is the appeal pack**: for any contested grade, the deterministic
+result, the rubric criteria, the evidence quotes and the model trace.
+
+### P199-3 — EU AI Act conformity harness for assessment AI *(EMEA, 10–12 wks)*
+
+**Assessment and proctoring AI are Annex III high-risk; stand-alone duties apply
+2 December 2027, generative transparency now.**
+
+```
+langchain-ai/langgraph (MIT) ....... explicit graph; each edge is an auditable control point
+  ├─ node: PROHIBITED-USE GATE ..... hard-refuse emotion recognition (banned since 2026-02-02, €35M/7%)
+  ├─ node: TRANSPARENCY ............ AI-interaction disclosure (obligation is live now)
+  ├─ node: HUMAN OVERSIGHT ......... no automated high-stakes decision leaves without sign-off
+  ├─ node: BIAS PROBE .............. cohort-sliced scoring deltas, re-run per release
+  └─ sink: langfuse (MIT) .......... logging + technical documentation evidence
+       on: OpenOLAT (Apache-2.0) or ILIAS (GPL-3) ... permissive / German-market LMS base
+       infra: ollama (MIT) or vllm-project/vllm (Apache-2.0) ... inference stays in-perimeter
+```
+
+**Why LangGraph and not a prompt:** conformity requires you to *demonstrate* a control exists.
+A graph node that cannot be bypassed is demonstrable; a system-prompt instruction is not.
+🟢 Pick **OpenOLAT** when the client needs to embed platform code in something proprietary — it
+is the only major LMS here under Apache-2.0. Keep inference local via Ollama/vLLM so the data
+story and the sovereignty story are the same story.
+🔵 Verify the transparency date against the Official Journal before contracting — sources this
+pass gave both **2 August 2026** and **2 November 2026**.
+
+### P199-4 — Offline-first public-education tutor *(LATAM, 8–10 wks)*
+
+**Built for the binding constraint — connectivity and language, not pedagogy.**
+
+```
+learningequality/kolibri (MIT) ............. offline-first platform + content sync
+  └─ ollama (MIT) ........................... small local model on-prem/on-device
+       ├─ rhasspy/piper (MIT) ............... local TTS (runs on a Raspberry Pi) — accessibility + low literacy
+       ├─ open-spaced-repetition/py-fsrs (MIT) ... FSRS retention scheduling, NOT Anki (AGPL)
+       ├─ CAHLR/OATutor (MIT) .............. BKT mastery model — lift the model, leave the Firebase UI
+       └─ docling (MIT) .................... national curriculum PDFs → structured content
+   LMS base where one exists: chamilo/chamilo-lms (GPL-3, Spanish-origin)
+   grounding option: Latam-GPT (Chile, Feb 2026, Spanish/Portuguese-first)
+```
+
+**Wiring:** everything in the student path runs with **no internet**. Kolibri syncs opportunistically.
+Use `py-fsrs` for scheduling and OATutor's **BKT** for mastery estimation — two small,
+inspectable, MIT models instead of one large opaque one, which also survives a 2 GB model budget.
+Piper matters more than it looks: TTS is the accessibility and low-literacy path, and it runs on
+a Pi.
+🔴 **Match the funding reality**: the regional AI-education market is **tens of millions**
+(Brazil ~`$61.1M`, Mexico ~`$59.2M`), and the committed money is donor and public programme
+(Google.org/Raspberry Pi `$4.6M` → `1.25M` students by 2028, train-the-trainer). **Price and
+staff this as a public-programme delivery, not an institutional software sale.**
+
+### P199-5 — National AI-literacy curriculum delivery at mandate scale *(APAC, 12–14 wks)*
+
+**China: compulsory from age six. India: compulsory from Class 3 in 2026–27. The gap is teachers.**
+
+```
+panaversity/learn-agentic-ai (MIT, 4.4k★) ... existing agentic-AI syllabus to adapt, not write
+  └─ Open edX (AGPL) via overhangio/tutor (AGPL-3.0) ... MOOC-scale teacher cohorts
+       ├─ openedx/XBlock (Apache-2.0, LICENSE.TXT) ..... custom assessment components, no platform fork
+       ├─ jupyterhub/jupyterhub (BSD) ................. live coding for every trainee
+       ├─ jupyter/nbgrader (BSD) ...................... deterministic autograding at cohort scale
+       ├─ opencast/opencast (ECL-2.0) ................. lecture capture → reusable corpus
+       └─ langgraph (MIT) ............................. per-jurisdiction policy nodes
+```
+
+**Wiring:** the deliverable is **teacher capability**, so the platform is a teacher-training MOOC,
+not a student product. Extend via XBlock so upgrades do not become merges. One LangGraph policy
+node per jurisdiction — China's algorithm filing and synthetic-content labelling, India's
+20 February 2026 intermediary rules, **Vietnam's high-risk listing of automated assessment and
+behavioural monitoring** — because APAC has no common framework to code against once.
+🟢 Opencast turns each delivery into reusable assets, which is what makes the second country
+cheaper than the first.
+
+### P199-6 — Moodle-attached tutor for the global installed base *(Global, 4–6 wks)*
+
+**Moodle is the widest installed base (EMEA public education, LATAM universities); this is the
+fastest credible pilot in the catalogue.**
+
+```
+Moodle (GPL-3) — untouched, Web Services REST enabled
+  └─ Jawadh-Salih/moodle-mcp-server (MIT, Go) ...... 14 tools, moodle_mobile_app token
+       └─ huggingface/smolagents (Apache-2.0, 29.8k★) ... minimal code-thinking agent loop
+            ├─ llama_index (MIT) ...................... retrieval over course content
+            ├─ mem0 (Apache-2.0) ..................... learner memory across sessions
+            └─ litellm (MIT) ......................... cost ceiling per learner
+```
+
+**Wiring:** the MIT Go server needs **no Moodle plugin install** — it rides Web Services with the
+`moodle_mobile_app` token, so IT approval is a token and a capability
+(`gradereport/user:view` for grades), not a deployment. That is why this pattern is 4–6 weeks.
+🔴 **It has `0` stars.** Treat it as a reference implementation you fork and harden, and budget
+the hardening. 🔴 **The alternative `csmediapro/moodle-mcp-server` is AGPL-3.0** — viable for an
+internal institutional tool, a trap for a hosted multi-tenant service.
+🔴 **Scope guard:** `submit_assignment` is in the tool list. An agent that can submit on a
+student's behalf is an academic-integrity incident; disable it in v1.
+
+### 🔵 Component licence ledger for the patterns above
+
+| Can embed and sublicense freely | Needs an explicit client decision |
+|---|---|
+| canvas-mcp, moodle-mcp-server *(Jawadh-Salih)*, agent-framework, smolagents, LangGraph, mem0, RAGFlow, Docling, LiteLLM, llama_index, Langfuse, Ollama, vLLM, Piper, Whisper, Kolibri, py-fsrs, OATutor, XBlock, nbgrader, otter-grader, OpenOLAT, Oppia, Richie, Jitsi, the `3` MIT graders | **AGPL:** Open edX, Tutor, Canvas LMS, Anki, INGInious, `csmediapro/moodle-mcp-server` · **GPL:** Moodle, Chamilo, ILIAS, H5P, Pawtograder, Frappe Education, Gibbon, RosarioSIS · **LGPL:** BigBlueButton, OpenEduCat, autograder-server · **ECL-2.0:** Sakai, Opencast |
+
+🟢 **Note the asymmetry deliberately:** the *agent and infrastructure* layer is almost entirely
+permissive, while the *platform* layer is almost entirely copyleft. **That is the architectural
+argument for attaching to the LMS rather than forking it** — it is a licensing argument before
+it is an engineering one.
 ## Pass 198 — 2026-10-14
 
 🆕 🟢 **`P0a` fired for the third consecutive pass and paid most in the pass where the

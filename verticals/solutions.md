@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — CANONICAL PLATFORM TABLE (read this section first)
+
+The customisable systems an engagement actually lands on. **Licence read from the repo's own
+blob this pass**; default branch resolved first, because several of these do not use `main`.
+
+### Learning platforms (LMS)
+
+| Platform | Repo | Licence *(blob read)* | Origin → region | Why it shows up in an engagement |
+|---|---|---|---|---|
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | **GPL-3.0** *(`COPYING.txt`)* | Australia → **APAC** | The global installed-base default, dominant in EMEA public education and LATAM universities. Plugin architecture + Web Services REST API = the AI attach point **without forking** |
+| **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | Axim Collaborative *(Harvard/MIT)* → **North America** | MOOC-scale cohorts, strong authoring. Run it with `overhangio/tutor`; extend it with `XBlock`, never by forking the platform |
+| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | US → **North America** | Dominant in US HiEd. 🔵 Instructure's parent announced an **OpenAI partnership to build AI into the platform**, so a 2026 Canvas engagement is competing with first-party features — integrate at the MCP layer rather than rebuilding the gradebook |
+| **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | Spain/Belgium → **EMEA** | Strong Spanish/French-language footprint; genuinely used across **LATAM** public institutions. 🟢 Underrated for a Spanish-first deployment |
+| **ILIAS** | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | Germany → **EMEA** | German-speaking universities and public sector; built around formal assessment, which maps directly onto EU AI Act high-risk duties |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | Switzerland → **EMEA** | 🟢 **The only major LMS on this list with a permissive licence.** If a client needs to embed LMS code in a proprietary product, this is the short list |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | US consortium → **North America** | Apereo-stewarded HiEd suite; ECL-2.0 is Apache-derived with an education-specific patent clause |
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** · `1.1k`★ | → **Global** | 🟢 **Offline-first and MIT.** The right answer where bandwidth, not pedagogy, is the binding constraint |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** · `6.9k`★ | → **Global** | Interactive lessons with built-in misconception handling; permissive and forkable |
+
+### Student information systems & education ERP
+
+| Platform | Repo | Licence | Note |
+|---|---|---|---|
+| **OpenEduCat** | [OpenEduCat/openeducat_erp](https://github.com/OpenEduCat/openeducat_erp) | **LGPL** | **Odoo-based** education ERP: admissions, LMS, SIS, parent app in one. 🟢 The Odoo analogue for education — and LGPL is friendlier than the AGPL LMSs above. India → **APAC** |
+| **Frappe Education** | [frappe/education](https://github.com/frappe/education) | **GPL-3.0** *(`license.txt`, branch `develop`)* | SIS on the Frappe/ERPNext stack; strong **APAC** (India) adoption, pairs with existing ERPNext finance |
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** | K-12 SIS, PHP; multilingual incl. Spanish/Portuguese → useful in **LATAM** |
+| **Gibbon** | [GibbonEdu/core](https://github.com/GibbonEdu/core) | **GPL-3.0** | K-12, blends SIS with teaching/learning rather than bolting them together |
+
+### Classroom infrastructure & assessment
+
+| Platform | Repo | Licence | Note |
+|---|---|---|---|
+| **BigBlueButton** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | **LGPL** | Purpose-built virtual classroom (not a meeting tool): breakouts, polls, shared whiteboard; native Moodle/Canvas integrations |
+| **Jitsi Meet** | [jitsi/jitsi-meet](https://github.com/jitsi/jitsi-meet) | **Apache-2.0** | Permissive self-hosted video when BBB's LGPL or weight is wrong |
+| **Opencast** | [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** | Automated lecture capture → the corpus a tutoring agent should be grounded in |
+| **H5P** | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | **GPL-3.0** | ~50 interactive content types usable inside Moodle/Canvas/Drupal |
+| **INGInious** | [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | **AGPL-3.0** | Sandboxed secure code assessment; UCLouvain → **EMEA** |
+| **Pawtograder** | [pawtograder/platform](https://github.com/pawtograder/platform) | **GPL-3.0** | CS-course platform: Actions autograding, rubrics, office hours, gradebook |
+| **Richie** | [openfun/richie](https://github.com/openfun/richie) | **MIT** | Course catalogue/CMS front end for Open edX; France Université Numérique → **EMEA** |
+
+### 🟢 The 2026 shift worth acting on
+
+In cycles 2–3 this section was a list of platforms to *customise*. **The change this pass
+records is that the integration layer now exists off the shelf**: `6` MIT-licensed Canvas MCP
+servers and `2` Moodle MCP servers were verified alive today (`agents/top.md`). The work has
+moved from *"build an LMS integration"* to *"choose, fork and harden one, then spend the budget
+on pedagogy and evidence."* 🔴 **No official MCP server exists from Instructure or Moodle HQ** —
+so that fork is the engagement's own asset, and its maintenance is a line item.
 ## Pass 198 — 2026-10-14
 
 🆕 🔴 **The open web was wrong about `2` of the `8` biggest platforms at p196. This pass swept

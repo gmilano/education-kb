@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## 2026-10-14 — Pass 199
+
+🟢 **New category this window: LMS-side MCP servers.** `8` verified alive and licensed today —
+absent from this file in every prior cycle.
+
+| Repo | Licence | Signal |
+|---|---|---|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | `292`★ · **`v1.14.0` released October 2026** · `102` tools, `8` agent skills · most actively maintained of the cluster |
+| [JohannsenLum/canvas-api-mcp](https://github.com/JohannsenLum/canvas-api-mcp) | MIT | `16` curated student tools + gateway to **all `1,116` Canvas endpoints** |
+| [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT | TypeScript; reads rubrics/quizzes, **writes grades and comments** |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT *(`package.json`; no `LICENSE` blob at `main` root)* | `54` tools |
+| [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) · [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) | MIT | upstream + fork adding office-hours/syllabus tools |
+| [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | MIT | ~`125` lines of Python, local-first, alpha — the readable reference |
+| [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** | Go, `14` tools, no plugin install needed. 🔴 `0`★ — **the only MIT Moodle MCP** |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | read-only Moodle access; licence blocks hosted multi-tenant use |
+
+🔴 **No official MCP server from Instructure or Moodle HQ.** Whatever you pick, you own it.
+
+🟢 **DeepTutor is the one education agent compounding.**
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (Apache-2.0) at **`41.4k`★**, up from
+**~`24k`★ at cycle 3 (1 August)** — `+17k` in ~10 weeks — with **`v1.6.14` dated `2026.10.8`**
+and `2,664` commits.
+
+🟢 **New MIT rubric-grading agents** (all verified alive, licence blob read today):
+[johnswyou/autograder](https://github.com/johnswyou/autograder) — agentic grading of
+**handwritten** maths/physics, emits a human review queue;
+[asu2304/auto-assessment-agent](https://github.com/asu2304/auto-assessment-agent) — multi-agent,
+**criterion-level evidence-backed scores** with deterministic score auditing;
+[laurauguc/grading_assistant](https://github.com/laurauguc/grading_assistant) — teacher-facing
+rubric grading (React/Django).
+
+🔴 **RETIRED RECOMMENDATION — `microsoft/autogen`.** `61.4k`★ but the repo now reads
+*"AutoGen is now in maintenance mode"* and *"New users should start with Microsoft Agent
+Framework"*. Cycles 2–3 of this KB listed it as a top education framework.
+🟢 **Successor:** [microsoft/agent-framework](https://github.com/microsoft/agent-framework),
+**MIT**, `14.1k`★, Python + .NET, with migration guides from AutoGen *and* Semantic Kernel.
+
+🔴 **Star corrections** — re-measured independently this pass:
+`satvik314/educhain` **`388`**★ (published `~12k` in cycle 3, **~30× inflated**; README's own
+latest version is `v0.3.13, October 2024`) · `CAHLR/OATutor` **`266`**★ (published `~1.5k`,
+**~5.6×**). Accurate in cycle 3: `smolagents` `29.8k` *(vs `~30k`)*, `learn-agentic-ai` `4.4k`
+*(vs `~4.5k`)*. 🔵 **The inflation is not uniform — it cannot be fixed with a blanket discount.**
+
+🔴 **Unverifiable legacy rows:** cycle 3's `OpenTutor`, `OpenTutorAI-CE`,
+`adaptive-knowledge-graph` and `awesome-ai-llm4education` were published **without slugs**;
+`6` plausible slugs probed, **all not-found**. No row without a resolvable `owner/repo` from here on.
+
+---
 ## Pass 198 — 2026-10-14
 
 🔵 **This file is APPEND-ONLY. Everything below this section is the prior history and stays.**

@@ -3,6 +3,65 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — CANONICAL FOUNDATIONS TABLE (read this section first)
+
+**Every licence below was read from the repo's own licence blob this pass**, via
+`raw.githubusercontent.com/<slug>/<default-branch>/<file>`, after resolving the default branch
+with `git ls-remote --symref`. `77` slugs were probed this pass and `68` resolved; the `29` below are the ones that earn a place in an education build. Licence column shows the
+file the text actually came from when it is not plain `LICENSE`, because that detail is where
+this pass found two real defects (see `agents/top.md`, "licence traps").
+
+🔵 **Why the licence column is the most important column here.** Globant ships client work.
+`MIT` / `Apache-2.0` / `BSD` can be embedded and sublicensed; **`AGPL-3.0` reaches across a
+network boundary**, which means an AGPL component in a hosted student-facing service can oblige
+you to offer the service's source to its users. The AGPL rows below are **not** mistakes — they
+are the best tool in their slot — but they must be an explicit, client-approved decision, not
+something a developer pulls in on a Tuesday.
+
+### 🟢 Build-on-freely — MIT / Apache-2.0 / BSD / ECL
+
+| Repo | Licence *(blob read)* | Slot it fills in an education build |
+|---|---|---|
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **Apache-2.0** *(`LICENSE.TXT`, `11 358` B)* | The **courseware component contract**. Write one XBlock and it runs inside Open edX without forking the platform. 🟢 The single highest-leverage integration point in open education |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** · `1.1k`★ | **Offline-first** learning platform. The only credible answer for low-connectivity deployments — decisive in LATAM public education and rural APAC |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **BSD** | Multi-tenant notebook serving for a whole cohort; the de-facto CS/data-science teaching substrate |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | **BSD** | Assignment release → collect → autograde → feedback over notebooks. Pairs with JupyterHub; **the proven deterministic half of any AI grading pattern** |
+| [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** · `6.9k`★ | Full interactive-lesson platform with its own explorations model; mature, permissive, forkable |
+| [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** | **FSRS** scheduler as a clean Python library — spaced repetition without inheriting Anki's AGPL (see below). 🟢 Use this, not Anki, inside a product |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | The FSRS research/parameter-optimisation work and its evaluation harness |
+| [docling-project/docling](https://github.com/docling-project/docling) | **MIT** | Document → structured text for **textbooks, PDFs, past exams**. MIT-licensed, which makes it the safest ingestion default |
+| [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | **Apache-2.0** | Broader-format ingestion (slides, HTML, email); heavier than Docling, use when format coverage wins |
+| [openai/whisper](https://github.com/openai/whisper) | **MIT** | Lecture/seminar transcription — the input to search, captions and study notes |
+| [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** | Fast local **TTS**; runs on a Raspberry Pi, which matters for accessibility mandates and offline classrooms |
+| [ollama/ollama](https://github.com/ollama/ollama) | **MIT** | Local model serving. **The compliance lever**: inference inside the institution's own perimeter |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm) | **Apache-2.0** | High-throughput serving when a cohort hits it at once (exam week, enrolment) |
+| [BerriAI/litellm](https://github.com/BerriAI/litellm) | **MIT** | One API across providers + per-tenant budgets. 🟢 In education the **cost cap per student** is a product requirement, not an optimisation |
+| [run-llama/llama_index](https://github.com/run-llama/llama_index) | **MIT** | Retrieval over curriculum corpora |
+| [infiniflow/ragflow](https://github.com/infiniflow/ragflow) | **Apache-2.0** | Deep-document RAG with citation surfacing — citations are the difference between a tutor and a plagiarism engine |
+| [mem0ai/mem0](https://github.com/mem0ai/mem0) | **Apache-2.0** | **Longitudinal learner memory** across sessions and terms. The architectural gap in almost every tutoring pilot |
+| [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT** | Tracing + eval of the agent itself. Required evidence for any EU high-risk assessment claim |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | **BSD** | Python/R autograding, containerised; UC Berkeley |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | Apache-derived, education-specific licence; full HiEd LMS/collaboration suite |
+| [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** | Lecture capture + video pipeline at university scale |
+| [jitsi/jitsi-meet](https://github.com/jitsi/jitsi-meet) | **Apache-2.0** | Self-hosted live classroom video |
+| [openfun/richie](https://github.com/openfun/richie) | **MIT** | Course **catalogue / marketing** front end for Open edX; built by France Université Numérique → **EMEA** |
+
+### 🔴 Copyleft — real tools, deliberate decisions
+
+| Repo | Licence | What the licence actually costs you |
+|---|---|---|
+| [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** *(`LICENSE.txt`)* | The official Docker-based Open edX installer and **the only sane way to run Open edX**. Deployment tooling, so the network-copyleft reach is usually acceptable — but confirm per engagement |
+| [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | Reference spaced-repetition implementation. 🟢 **Read it, then build on `py-fsrs` (MIT) instead** |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | **GPL-3.0** *(`LICENSE.txt`)* | Interactive content types embedded in Moodle/Canvas/Drupal. GPL is fine for a plugin inside an already-GPL LMS; it is a problem inside a proprietary product |
+| [UCL-INGI/INGInious](https://github.com/UCL-INGI/INGInious) | **AGPL-3.0** | Secure sandboxed exercise assessment; UCLouvain → **EMEA** |
+| [eecs-autograder/autograder-server](https://github.com/eecs-autograder/autograder-server) | **LGPL** *(`LICENSE.txt`, branch `develop`)* | U. Michigan autograder. 🔵 Earlier note: the slug `eecs-autograder/autograder` **does not exist** — the server repo is the real one |
+| [pawtograder/platform](https://github.com/pawtograder/platform) | **GPL-3.0** *(branch `staging`)* | Open-source GitHub-Classroom replacement for CS courses: Actions autograding, rubric manual grading, gradebook. 🔵 Correct slug is `pawtograder/platform`, **not** `pawtograder/pawtograder` |
+
+🔵 **Default branches are not all `main`.** This pass measured `master` for `openedx/XBlock` and
+`ucbds-infra/otter-grader`, `develop` for `eecs-autograder/autograder-server` and
+`frappe/education`, and `staging` for `pawtograder/platform`. A pipeline that hardcodes `main`
+silently reports "no licence" for all five.
 ## Pass 198 — 2026-10-14
 
 ### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims

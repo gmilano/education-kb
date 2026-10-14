@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — CANONICAL AGENT TABLE (read this section first)
+
+**How this pass differs from 185–198.** Those passes measured licence-file byte counts and
+their own instrument reach. This pass went back to the brief: *which real, licensed, reachable
+agents can an AI Studios engagement start from.* Every row below was verified this pass by two
+independent channels that work from this session:
+
+1. **Existence + default branch** — `git ls-remote --symref https://github.com/<slug> HEAD`.
+2. **Licence** — the actual `LICENSE` blob fetched from `raw.githubusercontent.com/<slug>/<default-branch>/<file>`,
+   then pattern-matched on the licence text itself, *not* on a vendor page or a GitHub sidebar.
+
+`api.github.com` returns **403** for every repo not attached to this session, and
+`curl` against `github.com/<slug>` returns **403** as well, so star counts come from a third
+channel (an HTML read of the repo page). **Where a star count could not be read this pass, the
+cell says `not read`. It is never guessed and never carried over from an earlier pass** — see
+the corrections below for why that rule now exists.
+
+### 🔴 Three corrections to what this KB already published
+
+| claim in the KB | what this pass measured | status |
+|---|---|---|
+| `Educhain(MIT,~12k★)` *(cycle 3, `v65`)* | **`388` stars.** README's own version history reads `v0.3.13 (October 2024) - Current Version`; GitHub Releases is empty | 🔴 **off by ~30×, and the project is ~2 years stale** |
+| `OATutor(MIT,~1.5k★)` *(cycle 3)* | **`266` stars**, Releases empty | 🔴 **off by ~5.6×** |
+| `AutoGen(MIT,~60k★)` *(cycles 2 and 3, listed as a top education framework)* | **`61.4k` stars — but the repo now states `AutoGen is now in maintenance mode` and `New users should start with Microsoft Agent Framework`** | 🔴 **star count fine; the recommendation is stale.** Do not start a 2026 engagement on AutoGen |
+
+The star-inflation defect was already recorded for the *technology* KB in `rotation.json`
+(*"prior cycles' star counts were pipeline-inflated"*). **It is now confirmed in education too**,
+which makes it a pipeline property rather than a one-industry slip.
+
+### 🟢 Education-specific agents — verified 2026-10-14
+
+| Agent | Repo | Licence *(from LICENSE blob)* | Stars | Origin → region | What it actually does |
+|---|---|---|---|---|---|
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | **41.4k** | HKU, Hong Kong → **APAC** | Lifelong personalised tutoring; release `v1.6.14` dated `2026.10.8`, `2,664` commits. **The one education agent with real scale and current maintenance** |
+| **learn-agentic-ai** | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | **MIT** | **4.4k** | Panaversity, Pakistan → **APAC** | Agentic-AI curriculum on the DACA pattern (OpenAI Agents SDK, MCP, A2A, Dapr, Kubernetes). A *syllabus*, not a runtime — use it to train an engagement team, not to ship |
+| **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | **292** | U. Illinois → **North America** | Canvas LMS MCP server, `102` tools + `8` agent skills, release `v1.14.0` **October 2026**. 🟢 **Most actively maintained LMS-side MCP found this pass** |
+| **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** | **266** | UC Berkeley → **North America** | Intelligent tutoring system with **Bayesian Knowledge Tracing**, ReactJS + Firebase. Value is the *BKT mastery model*, not the UI |
+| **Educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | **MIT** | **388** | India → **APAC** | Python package generating educational content (MCQs, lesson plans) from an LLM. 🔴 **Stale — last self-declared version Oct 2024.** Read it for the prompt scaffolds, fork rather than depend |
+| **moodle-mcp-server** *(Go)* | [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** | **0** | → **APAC** *(Sri Lanka)* | `14` tools over Moodle Web Services REST (`moodle_mobile_app` token): courses, grades, assignments, deadlines, `submit_assignment`. 🔴 **0 stars — a reference implementation, not a dependency.** But it is the **only MIT Moodle MCP found** |
+| **moodle-mcp-server** *(AGPL)* | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** | not read | → **EMEA** | Read-only Moodle access via existing Web Services; needs no plugin install. 🔴 **AGPL — see the licence warning below** |
+| **autograder** *(agentic)* | [johnswyou/autograder](https://github.com/johnswyou/autograder) | **MIT** | not read | → **North America** | Agentic grader for **handwritten** maths/physics work: locates answers, transcribes, applies rubric, emits a review queue. Its own README insists on human approval before release |
+| **auto-assessment-agent** | [asu2304/auto-assessment-agent](https://github.com/asu2304/auto-assessment-agent) | **MIT** | not read | → **APAC** *(India)* | Multi-agent rubric grading with **criterion-level, evidence-backed scores** and deterministic score auditing — the audit trail is the differentiator for a regulated deployment |
+| **grading_assistant** *(GradeMate)* | [laurauguc/grading_assistant](https://github.com/laurauguc/grading_assistant) | **MIT** | not read | → **North America** | Teacher-facing rubric grading of written work (React + Django); teachers upload their own rubrics |
+
+**That is 10 verified education-specific rows** — above the 5-row bar, and every slug resolves.
+
+### 🟢 Canvas-side MCP servers — a real 2026 cluster, so pick deliberately
+
+`6` further Canvas MCP servers were verified alive and MIT this pass. They are listed because
+the *cluster itself* is the finding — in 2026 the LMS integration layer is no longer a custom
+build — but they are redundant with each other:
+
+| Repo | Licence | Why you might pick it |
+|---|---|---|
+| [JohannsenLum/canvas-api-mcp](https://github.com/JohannsenLum/canvas-api-mcp) | MIT | `16` curated student tools **plus a gateway reaching all `1,116` Canvas endpoints** — widest reach |
+| [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT | TypeScript; reads rubrics/quizzes and **writes grades and comments** |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT *(declared in `package.json`; no `LICENSE` blob resolved at `main` root)* | `54` tools |
+| [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | MIT | the upstream the forks below derive from |
+| [mdweaver/canvas-mcp](https://github.com/mdweaver/canvas-mcp) | MIT | fork adding office-hours + syllabus tools |
+| [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | MIT | ~`125` lines of Python, local-first, **alpha** — read it to understand the protocol in an afternoon |
+
+🔵 **No official MCP server from Instructure or Moodle HQ exists as of this pass.** Every option
+above is community-maintained. For a client engagement that matters, fork and own it.
+
+### General-purpose frameworks worth composing *on top of* the rows above
+
+| Framework | Repo | Licence | Stars | Note for education work |
+|---|---|---|---|---|
+| **smolagents** | [huggingface/smolagents](https://github.com/huggingface/smolagents) | **Apache-2.0** | **29.8k** | Agents that think in code; smallest honest footprint for a tutoring loop |
+| **Microsoft Agent Framework** | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) | **MIT** | **14.1k** | 🟢 **The successor AutoGen now points new users to.** Python + .NET; ships migration guides *from* AutoGen and Semantic Kernel |
+| **CrewAI** | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | **MIT** | not read | Role-based crews map cleanly onto teacher / grader / reviewer splits |
+| **LangGraph** | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | **MIT** | not read | Explicit state machine — the practical way to encode a *policy* gate (see EMEA, `intel/market.md`) |
+| **STORM** | [stanford-oval/storm](https://github.com/stanford-oval/storm) | **MIT** | not read | Stanford; researches a topic and writes a long grounded article — closest thing to a courseware-outline agent |
+| **GPT Researcher** | [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | **Apache-2.0** | not read | Cited research briefs; pairs with STORM for source-backed course material |
+| **AutoGen** | [microsoft/autogen](https://github.com/microsoft/autogen) | **MIT** *(code)* / CC-BY-4.0 *(docs)* | **61.4k** | 🔴 **Maintenance mode. Listed only so earlier passes' recommendation is explicitly retired** |
+
+### 🔴 Two licence traps this pass hit, both of which a naive scanner gets wrong
+
+1. **`microsoft/autogen` reads as `CC-BY-4.0` if you only fetch `LICENSE`.** The root `LICENSE`
+   is Creative Commons Attribution 4.0 (the docs); **the code licence is MIT and lives in
+   `LICENSE-CODE`.** GitHub's own sidebar says `CC-BY-4.0, MIT licenses found`. A compliance
+   scan that reads one file per repo mislabels this repo in either direction.
+2. **`openedx/XBlock` has no `LICENSE`, `LICENSE.txt`, `LICENSE.md` or `LICENSE.rst`** — this
+   pass got `404` on all four and first recorded `NOLICENSEFILE`. Its `pyproject.toml` declares
+   `license = "Apache-2.0"` with `license-files = ["LICENSE.TXT"]`, and
+   **`LICENSE.TXT` — uppercase extension — is `11 358` bytes of Apache-2.0.**
+   🟢 **This independently confirms the `openedx/XBlock` `Apache-2.0` · `11 358` row that p197
+   and p198 agreed on.** `raw.githubusercontent.com` is case-sensitive; the earlier passes were
+   right and this pass's first answer was wrong. **Future passes: do not "correct" that row.**
+
+### 🔴 Declared gap — four cycle-3 rows that cannot be checked at all
+
+Cycle 3 (`v65`) published `OpenTutor(MIT,~900★)`, `OpenTutorAI-CE(Apache2,~600★)`,
+`adaptive-knowledge-graph(Apache2,~350★)` and `awesome-ai-llm4education(MIT,~800★)`
+**without slugs.** Six plausible slugs were probed this pass (`mentorpal/opentutor`,
+`opentutor/opentutor`, `sudoping01/opentutor`, `OpenTutorAI/OpenTutorAI-CE`,
+`keyuchen2019/adaptive-knowledge-graph`, `Jason-cs18/awesome-ai-llm4education`) and
+**all six returned not-found.** This is not a claim that the projects are fictional — it is a
+claim that **a row recorded without `owner/repo` is unverifiable forever.** Given the star
+inflation confirmed above, these four rows should be treated as unsourced until someone
+supplies a slug. **Rule for later passes: no row without a resolvable `owner/repo`.**
 ## Pass 198 — 2026-10-14
 
 ### 🆕 🔴 First: this pass ran CONCURRENTLY with p197, and p197 refutes three of its claims

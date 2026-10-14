@@ -1,0 +1,78 @@
+slug	status	license_from_blob	license_file	default_branch
+BerriAI/litellm	OK	MIT	LICENSE	main
+CAHLR/OATutor	OK	MIT	LICENSE	main
+DMontgomery40/mcp-canvas-lms	OK	NOLICENSEFILE	-	main
+Gchism94/ai-tutor	OK	MIT	LICENSE	main
+GibbonEdu/core	OK	GPL(Version 3)	LICENSE	v31.0.00
+HKUDS/DeepTutor	OK	Apache-2.0	LICENSE	main
+ILIAS-eLearning/ILIAS	OK	GPL(Version 3)	LICENSE	release_11
+Jason-cs18/awesome-ai-llm4education	NOT-FOUND	-	-	-
+Jawadh-Salih/moodle-mcp-server	OK	MIT	LICENSE	main
+JohannsenLum/canvas-api-mcp	OK	MIT	LICENSE	main
+OpenEduCat/openeducat_erp	OK	LGPL	LICENSE	19.0
+OpenOLAT/OpenOLAT	OK	Apache-2.0	LICENSE	master
+OpenTutorAI/OpenTutorAI-CE	NOT-FOUND	-	-	-
+UCL-INGI/INGInious	OK	AGPL-3.0	LICENSE	main
+Unstructured-IO/unstructured	OK	Apache-2.0	LICENSE.md	main
+admin978/canvas-mcp	OK	MIT	LICENSE	main
+ankitects/anki	OK	AGPL-3.0	LICENSE	main
+assafelovic/gpt-researcher	OK	Apache-2.0	LICENSE	main
+asu2304/auto-assessment-agent	OK	MIT	LICENSE	main
+bigbluebutton/bigbluebutton	OK	LGPL	LICENSE	v3.0.x-develop
+bruchris/canvas-lms-mcp	OK	MIT	LICENSE	main
+chamilo/chamilo-lms	OK	GPL(Version 3)	LICENSE	master
+crewAIInc/crewAI	OK	MIT	LICENSE	main
+csmediapro/moodle-mcp-server	OK	AGPL-3.0	LICENSE	main
+docling-project/docling	OK	MIT	LICENSE	main
+eecs-autograder/autograder	DEAD	-	-	
+eecs-autograder/autograder-sandbox	OK	not-probed	-	-
+eecs-autograder/autograder-server	OK	LGPL	LICENSE.txt	develop
+francoisjacquet/rosariosis	OK	GPL(Version 2)	LICENSE	mobile
+frappe/education	OK	NOLICENSEFILE	-	develop
+h5p/h5p-php-library	OK	GPL(Version 3)	LICENSE.txt	master
+huggingface/smolagents	OK	Apache-2.0	LICENSE	main
+infiniflow/ragflow	OK	Apache-2.0	LICENSE	main
+instructure/canvas-lms	OK	AGPL-3.0	LICENSE	master
+jitsi/jitsi-meet	OK	Apache-2.0	LICENSE	master
+johnswyou/autograder	OK	MIT	LICENSE	main
+jupyter/nbgrader	OK	BSD	LICENSE	main
+jupyterhub/jupyterhub	OK	BSD	LICENSE	main
+karpathy/nanochat	OK	MIT	LICENSE	master
+keyuchen2019/adaptive-knowledge-graph	NOT-FOUND	-	-	-
+langchain-ai/langgraph	OK	MIT	LICENSE	main
+langfuse/langfuse	OK	MIT	LICENSE	main
+laurauguc/grading_assistant	OK	MIT	LICENSE	main
+learningequality/kolibri	OK	MIT	LICENSE	develop
+mdweaver/canvas-mcp	OK	MIT	LICENSE	main
+mem0ai/mem0	OK	Apache-2.0	LICENSE	main
+mentorpal/opentutor	NOT-FOUND	-	-	-
+microsoft/agent-framework	OK	MIT	LICENSE	main
+microsoft/autogen	OK	CC	LICENSE	main
+microsoft/generative-ai-for-beginners	OK	MIT	LICENSE	main
+mlabonne/llm-course	OK	Apache-2.0	LICENSE	main
+moodle/moodle	OK	GPL(Version 3)	COPYING.txt	main
+ollama/ollama	OK	MIT	LICENSE	main
+open-spaced-repetition/fsrs4anki	OK	MIT	LICENSE	main
+open-spaced-repetition/py-fsrs	OK	MIT	LICENSE	main
+openai/whisper	OK	MIT	LICENSE	main
+opencast/opencast	OK	ECL-2.0	LICENSE	develop
+openedx/XBlock	OK	NOLICENSEFILE	-	master
+openedx/edx-platform	OK	AGPL-3.0	LICENSE	master
+openfun/richie	OK	MIT	LICENSE	master
+opentutor/opentutor	NOT-FOUND	-	-	-
+oppia/oppia	OK	Apache-2.0	LICENSE	develop
+overhangio/tutor	OK	AGPL-3.0	LICENSE.txt	release
+panaversity/learn-agentic-ai	OK	MIT	LICENSE	main
+pawtograder/pawtograder	DEAD	-	-	
+pawtograder/pawtograder-app	DEAD	-	-	-
+pawtograder/platform	OK	GPL-3.0	LICENSE	staging
+r-huijts/canvas-mcp	OK	MIT	LICENSE	main
+rhasspy/piper	OK	MIT	LICENSE.md	master
+run-llama/llama_index	OK	MIT	LICENSE	main
+sakaiproject/sakai	OK	ECL-2.0	LICENSE	master
+satvik314/educhain	OK	MIT	LICENSE	main
+stanford-oval/storm	OK	MIT	LICENSE	main
+sudoping01/opentutor	NOT-FOUND	-	-	-
+ucbds-infra/otter-grader	OK	BSD	LICENSE	master
+vishalsachdev/canvas-mcp	OK	MIT	LICENSE	main
+vllm-project/vllm	OK	Apache-2.0	LICENSE	main

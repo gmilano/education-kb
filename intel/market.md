@@ -3,6 +3,178 @@ industry: education
 region: Global
 updated: 2026-10-14
 ---
+
+## Pass 199 — 2026-10-14 — MARKET SNAPSHOT
+
+### 🔴 Market size: the spread is the finding, not the midpoint
+
+Earlier cycles published a single confident figure (`v54`: *"$10.6B→$42.48B(2030,CAGR41.5%)"*;
+`v65`: *"AI-Edu-$9.58B→$42.48B"*). **Searched again this pass, the published 2026 estimates for
+"AI in education" range from `$2.21B` to `$10.6B` — a `4.8×` spread between vendors**, because
+each defines the market differently:
+
+| 2026 estimate | Forecast | Implied CAGR |
+|---|---|---|
+| `$10.6B` | → `$42.48B` by 2030 | `41.5%` |
+| `$10.4B` | → `$32.27B` by 2030 | — |
+| `$7.50B` | → `$25.70B` by 2033 | — |
+| `$2.21B` | → `$6.47B` by 2035 | `12.7%` |
+| *(higher-ed only)* `$4.09B` | → `$13.46B` by 2030 | `34.7%` |
+| *(whole market, long range)* — | → `$136.79B` by 2035 | — |
+
+🔵 **Use the spread, not a point.** All of these come from paid publishers with undisclosed
+methodologies. **Quoting `41.5%` CAGR to a client as fact is a credibility risk** when another
+publisher says `12.7%`. The defensible statement is: *the segment is growing fast, the
+definition is contested, and the higher-ed sub-segment (`$4.09B`, `34.7%`) is the one with
+consistent independent corroboration.*
+
+🟢 **The directional claim that is actually well-corroborated** is the shift in *kind*:
+multiple sources describe a move from experimental generative-AI pilots to **autonomous agentic
+workflows** for scheduling, grading and administration — Microsoft added agent features to its
+Education AI Toolkit in **April 2026**. That is the trend to sell against; the dollar figure is
+not.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The most mature and most crowded region. Sell evidence and governance, not tutoring.**
+
+- **Adoption:** ACE reports **a quarter of HiEd institutions have adopted generative AI for
+  student support, with a further `22%` planning it inside six months.** A separate tracker
+  says only ~`14%` formally *allow* generative AI on assignments while ~`22%` formally prohibit
+  it — most delegate to the instructor. 🔵 The two sets disagree because they measure different
+  things: *institutional deployment* vs *assignment-level permission*. **The gap between them
+  is the opportunity** — institutions are deploying tools they have no coherent policy for.
+- **Scale deployments to compete with:** California State University's partnership with
+  Microsoft/OpenAI/Google — **ChatGPT Edu to `460,000+` students and `63,000+` staff**; Ohio
+  State's campuswide AI-fluency requirement; Canvas's parent + OpenAI building AI into the
+  platform; Northeastern in Anthropic's *Claude for Higher Education*.
+- **Regulation:** fragmented and state-led. **`134` AI-in-education bills across `31` states in
+  2026**; California **AB 1159** bars using student data to train AI models. Federally, the
+  **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** advanced out of committee on a
+  **21 July** markup — *committee action only, not law.*
+- 🟢 **Where to play:** AI-literacy curriculum and assessment-integrity redesign; a policy-to-
+  implementation layer (institutional rules compiled into enforceable agent guardrails — see
+  `compose/patterns.md`); and **state-by-state student-data compliance**, which single-state
+  vendors handle badly.
+- 🔴 **Where not to play:** generic tutoring chat and gradebook rebuilds. First-party platform
+  features and ChatGPT Edu site licences are eating that layer.
+
+### EMEA
+
+🟢 **Regulation is the product. The AI Act makes compliance engineering billable.**
+
+- **Classification:** the EU AI Act lists AI for **admissions, assessment, student placement and
+  exam proctoring** as **high-risk** (Annex III, point 3). **Emotion recognition in schools has
+  been prohibited since 2 February 2025**, with penalties up to **€35M or 7% of global
+  turnover**.
+- 🔴 **The deadline moved, and this is the single most useful fact in this section.** The
+  **Digital Omnibus pushed stand-alone high-risk obligations to 2 December 2027** (and
+  **2 August 2028** for high-risk AI embedded in regulated products); the Council gave final
+  approval **29 June 2026**, with Official Journal publication pending at the time of writing.
+  **Generative-AI transparency obligations were *not* delayed** — sources give **2 August 2026**
+  (one says 2 November 2026) for those, so they are live now.
+  🔵 **Sources conflict on the transparency date; verify against the Official Journal before
+  putting a date in a client deliverable.** The actionable shape is firm: *transparency now,
+  high-risk conformity by end-2027.*
+- **Policy direction:** European Commission updated ethical AI guidelines for education
+  (**May 2026**); Council conclusions on a human-centred approach (**11 May**).
+  🔴 One Spanish-language source claims a binding EU education-specific AI framework approved
+  **15 April 2026** effective **1 January 2027**, and that `68%` of European universities use at
+  least one AI tool. **Neither claim could be corroborated and both conflict with the timeline
+  above — do not repeat them.**
+- 🟢 **Where to play:** **conformity-assessment engineering** — technical documentation, logging,
+  human oversight and bias testing for assessment systems, with ~14 months of runway making this
+  urgent now. Plus **data-sovereign deployments** (`ollama`/`vLLM` + `OpenOLAT`'s permissive
+  licence + `ILIAS` in German-speaking markets).
+- 🔵 **Gap:** this pass found **no reliable 2026 adoption percentages or named EMEA edtech
+  vendors** — searches returned law-firm and compliance-vendor commentary almost exclusively.
+  **That absence is itself a signal:** the EMEA conversation is being led by compliance, not
+  product.
+
+### APAC
+
+🟢 **The policy mandates are real, dated and national — the largest addressable curriculum
+work of any region.**
+
+- **China:** the Ministry of Education has folded AI into **every stage of schooling**, targeting
+  comprehensive **AI-literacy infrastructure by 2030**; AI became a **compulsory subject from
+  age six in September 2025**. Already enforces algorithm filings, synthetic-content labelling
+  and security review for public models.
+- **India:** **AI and computational thinking become compulsory from Class 3 in the 2026–27
+  academic year**, backed by the IndiaAI Mission. IT-rules amendments effective
+  **20 February 2026** impose obligations on intermediaries hosting synthetically generated
+  content (platform-level, not education-specific).
+- **Japan / Korea / Singapore:** already integrating AI curricula (UNESCO). Japan is taking a
+  governance-toolkit route with its AI law still in drafting. **Japanese support for banning AI
+  in schools rose from `21%` to `29%`** (Ipsos Education Monitor 2026) — 🔴 **the one region
+  where measured public sentiment is moving *against* classroom AI**, even though support for
+  bans is lower across most Asian markets than globally.
+- **Vietnam:** education — specifically **automated assessment and behavioural monitoring** — is
+  on its **high-risk AI list**, i.e. EU-style classification outside the EU.
+- **Market players:** TAL pivoted to AI learning hardware; ByteDance's **Gauth**; **Squirrel AI**
+  adaptive teaching in Beijing classrooms; **PhysicsWallah** launched its own AI tutor.
+  🔴 **BYJU'S collapsed from a `$22B` peak into insolvency** — the standing cautionary case for
+  consumer-tutoring unit economics.
+- 🟢 **Where to play:** national-scale **curriculum and teacher-training delivery** (the China/
+  India mandates are unfunded at the teacher level); **AI learning hardware** software stacks;
+  and **multi-jurisdiction compliance**, since APAC has no common framework —
+  `LangGraph` policy nodes per jurisdiction is the pattern that fits.
+- 🔵 **APAC also supplies the open source**: `DeepTutor` (HKU, `41.4k`★), `learn-agentic-ai`
+  (Pakistan), `Educhain` and `OpenEduCat` (India), and `Moodle` itself (Australia). **This is the
+  only region that is a net exporter of education-AI open source.**
+
+### LATAM
+
+🟢 **Funded, documented, and the least served by existing vendors — but build offline-first and
+Spanish/Portuguese-first.**
+
+- **Market:** **Brazil and Mexico together are >`57%`** of the regional AI-in-education market —
+  Brazil ~**`$61.1M`**, Mexico ~**`$59.2M`** (2025). 🔵 Note the order of magnitude: the whole
+  region is **tens of millions**, against **billions** globally. Sources disagree on Brazil's
+  share of regional edtech startups (`47%` vs HolonIQ's `45%`).
+- **Funding that is actually committed:** **Google.org + Raspberry Pi Foundation, `$4.6M`, to
+  reach `1.25M` students by 2028 across nine countries** including Brazil and Mexico, on a
+  **train-the-trainer** model. UNESCO runs a regional **Observatory on AI in Education for Latin
+  America and the Caribbean**, plus a Mexico centres-of-excellence pilot with **CONALEP and
+  DGETI**. The IDB has published lessons from **193 solutions** across the region.
+- **Players (HolonIQ 2026 LATAM EdTech 100):** **Teachy** (Brazil, AI lesson preparation, has
+  expanded into Asia), **Letrus** (Brazil, AI for Portuguese-language writing instruction),
+  **Vetto** (Brazil, newly funded), **Ginia** (Mexico, AI-driven employability).
+  🔵 **The AI-focused LATAM cohort clusters in instructional support, not consumer tutoring** —
+  which is also where the APAC consumer-tutoring collapse happened.
+- **Regulation:** 🔴 **Brazil's `PL 2338/2023` is NOT law.** Senate-approved **10 December 2024**,
+  pending in the Chamber of Deputies since; rapporteur Aguinaldo Ribeiro said on
+  **24 August 2026** that the vote comes **after the October elections**, then it returns to the
+  Senate. Most provisions would apply **730 days after publication**. Until then **LGPD governs**.
+  Education/research exceptions for AI training have had almost no legislative attention.
+  🔴 **This pass found no concrete AI-in-education regulation for Mexico** across two searches —
+  **an informed gap, not coverage.**
+- **Sovereign model:** **Latam-GPT** launched by Chile **February 2026**, coordinated by CENIA
+  with **60+ institutions across 15 countries**, open source, Spanish/Portuguese-first with
+  Indigenous-language plans, free to companies and public institutions; training data has
+  included **Colombian school textbooks**. 🔵 Sources disagree on its base model (one says
+  Llama 3); first version ran on AWS, a later one targets a University of Tarapacá
+  supercomputer. 🔴 **No education-specific Latam-GPT repo or dedicated education project was
+  found** — the education use is stated in coverage only.
+- 🟢 **Where to play:** **offline-first** (`Kolibri`, MIT) for public systems where connectivity
+  is the real constraint; **Spanish/Portuguese-first instructional-support tooling** aligned with
+  Teachy/Letrus rather than competing with US tutoring apps; **`Chamilo`** (Spanish-origin,
+  GPL-3) as the LMS base that regional institutions already run; and **Latam-GPT grounding** as a
+  sovereignty story for public-sector procurement.
+- 🔴 **Do not** reuse a North America engagement shape here. The entire regional market is
+  smaller than a single CSU-scale deployment; the money is in **public programmes and donor
+  funding**, not institutional software budgets.
+
+### 🔵 Regional coverage, stated honestly
+
+| Region | Adoption data | Regulation | Named players | OSS supply |
+|---|---|---|---|---|
+| **North America** | 🟢 strong *(two conflicting sets, both usable)* | 🟢 strong *(state + federal)* | 🟢 strong | 🟢 OATutor, Open edX, Canvas, autograders |
+| **EMEA** | 🔴 **none found** | 🟢 strongest of any region | 🔴 **none found** | 🟢 OpenOLAT, ILIAS, Chamilo, Richie, INGInious |
+| **APAC** | 🟢 strong *(mandates + Ipsos sentiment)* | 🟢 strong, fragmented | 🟢 strong | 🟢 **net exporter** |
+| **LATAM** | 🟡 market size + funding, **no institutional adoption %** | 🔴 Brazil pending, **Mexico not found** | 🟢 strong *(HolonIQ)* | 🔴 **near-zero** — Latam-GPT has no education repo |
 ## Pass 198 — 2026-10-14
 
 🔵 **Regional research ran one global sweep plus one sweep per region**, as the standing method
