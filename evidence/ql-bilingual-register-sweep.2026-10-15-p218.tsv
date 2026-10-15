@@ -1,0 +1,33 @@
+# p218 - ACTION QP: ACTION QL's precondition made BILINGUAL, then re-run over every action in the
+#        register. Instrument: compose/code/p218-bilingual-gate/ql_gate_bilingual.sh
+# Table:  compose/code/p218-bilingual-gate/bilingual_tokens.tsv (10 concepts, EN + ES halves)
+# Scope:  the 8 client-facing shelves. Counts are grep -Eic OCCURRENCES, summed across files.
+#
+concept	en_pattern	en_hits	es_pattern	es_hits	reading
+licence	license|licence|licensed	8672	licencia|licenciado|licenciada	1094	ES half is 11% of corpus - invisible to an EN gate
+no-licence	no licen[cs]e|unlicensed|no grant	1063	sin licencia|sin licenciamiento|no tiene licencia	143	T217-2 confirmed independently
+proprietary	proprietary|all rights reserved	226	propietario|propietaria|todos los derechos reservados	60	the AI-LMS-TMS refusal lives in the ES half
+gate	gate|gating	1340	compuerta|puerta|verificador	207	-
+sweep	sweep|swept	645	barrido|barrida|barrer	466	ES half 42% - nearly balanced
+reading	read|reading	8229	lectura|leer|leido	338	-
+teacher	teacher|teaching staff|educator	807	docente|profesor|profesora|maestro|maestra	98	ACTION QS's axis. NOT silent in either half
+mentoring	mentor|mentoring|induction	100	mentor|mentoria|tutoria|acompanamiento|induccion	255	ES half is the LARGER half - the only concept where it is
+grant	grant|granted	2939	otorga|otorgamiento|concesion|cesion	63	-
+absent	absent|missing|nowhere	810	ausente|falta|no aparece|inexistente	280	-
+#
+# QL RE-RUN OVER THE REGISTER - every action whose anchor contains a claim of ABSENCE
+#
+action	absence_claim_as_written	grepped	verdict
+ACTION QS	"the one content axis these shelves have 216 passes of silence on" (teacher-side)	formacion docente 2; docentes noveles 2; teacher training 31; teacher professional development 2; profesor 3	REFUTED. 8 teacher-side items already on 4 shelves, in BOTH languages
+ACTION QP	"every propagation gate this KB owns matches English only" (T217-2)	compose/code/ for ES tokens -> 10 files	PARTLY REFUTED. p415/clase_positiva_v2.py is SPANISH-ONLY (RE_RECHAZO = no cede|rechaz|sin licencia)
+ACTION QR	"4 shelf cells call alfredang/AI-LMS-TMS NO GRANT"	grep -Foin alfredang/AI-LMS-TMS + medkit-app across 8 shelves	ANCHOR COUNT WRONG. 6 stale cells, not 4 (3 + 3). See grant-state-schema TSV
+ACTION QU	the 3 addresses "do not resolve at all"	4th channel: WebSearch by exact name	CONFIRMED, limb 2. 0 of 3 found renamed or live
+ACTION QT	"the 2 ISB Bayern plugins ... with no v2/v3 in the title window"	README body, read past the window	REFUTED. All 3 GNU rows pin to v3. See gnu-version-pin TSV
+#
+# ROOT CAUSE, and it is MORE GENERAL than T217-2:
+#   p217's novelty grep for ACTION QS ran the tokens `Profe Gabi`, `Elige Educar`, `Elacqua`,
+#   `docentes noveles`, `novice teacher`, `induccion` - all PROPER NOUNS and all correctly 0 -
+#   and then wrote a claim about the AXIS. The tokens were bilingual. The SCOPE was not:
+#   an entity-level grep cannot license an axis-level claim of absence.
+#   T218-1: the gate must compare the SCOPE of the token grepped against the SCOPE of the
+#   claim made. Language was one instance of scope mismatch, not the whole of it.

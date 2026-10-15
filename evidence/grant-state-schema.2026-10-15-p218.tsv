@@ -1,0 +1,54 @@
+# p218 - ACTION QR: make `state` a required cell field beside `channel` (ACTION PG).
+# Source classification: evidence/readme-prose-grant-probe.2026-10-15-p217.tsv (committed p217).
+# This file applies the 6-state vocabulary to the 67 and counts the rows whose STANDING
+# INSTRUCTION TO A STUDIO changes. It adds no new readings - it re-labels committed ones.
+#
+# THE 6 STATES, with the instruction each one carries
+state	rows	is_it_a_grant	instruction_to_a_studio
+GRANTED	0 of the 67 by definition	yes	build on it, record the SPDX id and the channel it was read from
+CLAIMED-IN-PROSE	11	NO	treat as a LEAD. Ask the author to commit a LICENSE body. Never ship against it
+CLAIMED-DANGLING	4	NO	same, and the defect is NAMED: README points at a LICENSE file not in the tree. One commit fixes it
+GRANT-REFUSED	2	NO - affirmatively refused	DO NOT TOUCH. This is not a gap to chase and not an unknown
+NON-PUBLIC	3	unknown and unknowable	do not carry in a live population. ACTION QU: 0 of 3 recovered on a 4th channel
+UNKNOWN	47	no	the genuine unknowns: 45 NO-PROSE + 1 DOMAIN-NOUN + 1 PROSE-THIRD-PARTY
+#
+# ROWS WHOSE STANDING INSTRUCTION CHANGES under the schema (QR limb 1 threshold was 15+)
+repo	p217_marker	p218_state	instruction_changed
+CipherCraze/SpeakGenie-AI-Tutor	PROSE-CLAIM-DANGLING	CLAIMED-DANGLING	yes - from "unknown" to "named defect, one commit"
+dragonpilee/ScholarMate	PROSE-CLAIM-DANGLING	CLAIMED-DANGLING	yes
+mayankjndl/vidyamind	PROSE-CLAIM-DANGLING	CLAIMED-DANGLING	yes
+pulkitpareek18/LearnFlow-AI	PROSE-CLAIM-DANGLING	CLAIMED-DANGLING	yes
+CreveXTech/canvas-lms-mcp	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes
+educredentials/ec-issuer	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes
+tianshuo/trainingllm	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes
+haanhtuandev/vgu-mcp	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes
+marcusgreen/moodle-qtype_aitext	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes - and p218 PINS it: GPL-3.0-or-later
+adlnet/SCORM-to-xAPI-Wrapper	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes - full Apache-2.0 boilerplate quoted in README
+bycs-lp/moodle-block_ai_chat	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes - and p218 PINS it: GPL-3.0-or-later
+bycs-lp/moodle-local_ai_manager	PROSE-CLAIM-BARE	CLAIMED-IN-PROSE	yes - and p218 PINS it: GPL-3.0-or-later
+barneslardo/sis-demo	PROSE-CLAIM-QUALIFIED	CLAIMED-IN-PROSE	yes - "MIT - demo use only" is not an MIT term
+mabdulre9/electrical-engineering	PROSE-CLAIM-SCOPED	CLAIMED-IN-PROSE	yes - MIT covers CURATION only, linked content does not
+eth-lre/mathtutorbench	PROSE-CLAIM-CONFLICT	CLAIMED-IN-PROSE	yes - CC-BY-4.0 badge vs CC-BY-SA-4.0 prose, unresolved
+alfredang/AI-LMS-TMS	NO GRANT (3 cells) / GRANT-REFUSED (p217)	GRANT-REFUSED	yes - from "chase it" to "do not touch"
+bedriyan/medkit-app	NONE / none (3 cells)	GRANT-REFUSED	yes - from "chase it" to "do not touch"
+cdweaver1992/edfi-mcp-server	NON-PUBLIC	NON-PUBLIC	yes - out of the LIVE population
+openfresno/edgenuity-aeries-grade-passback	NON-PUBLIC	NON-PUBLIC	yes
+jakerains/scormplayer	NON-PUBLIC	NON-PUBLIC	yes
+#
+# COUNT: 20 of 67 rows change their standing instruction. QR FIRES ON LIMB 1 (threshold 15+).
+#   15 CLAIMED-* + 2 GRANT-REFUSED + 3 NON-PUBLIC = 20.
+#   jadrianlg16/learning-tutor (PROSE-THIRD-PARTY) and spdx/license-list-data (DOMAIN-NOUN) stay
+#   UNKNOWN: the instruction does not change, so they are NOT counted. 20, not 22.
+#
+# THE STALE CELLS THIS CORRECTION OWES - QR's anchor said 4, the measured figure is 6
+file	line	cell_as_published	correct_state	enclosing_pass_heading	live_or_historical
+verticals/solutions.md	2182	"NO GRANT"	GRANT-REFUSED	## Pass 187 - 2026-10-14	historical
+intel/market.md	5388	"has no grant"	GRANT-REFUSED	## Pass 187 - 2026-10-14	historical
+compose/patterns.md	3913	"no grant, 19*"	GRANT-REFUSED	## Pass 187 - 2026-10-14	historical
+agents/top.md	2752	"NONE"	GRANT-REFUSED	## Pass 193 - 2026-10-14	historical
+repos/trending.md	1558	"none"	GRANT-REFUSED	## Pass 193 - 2026-10-14	historical
+intel/trends.md	2904	"none"	GRANT-REFUSED	## Pass 193 - 2026-10-14	historical
+#
+# 6 of 6 are inside dated pass sections -> 0 LIVE stale cells. p216's QO verdict STANDS.
+# But see evidence/pass-boundary-heading-test.2026-10-15-p218.tsv: the instrument p216 used to
+# reach that verdict is unsound, and on intel/market.md l.5388 it returns the WRONG heading.

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — THE GATE WAS MADE BILINGUAL AND IMMEDIATELY REFUTED THE ACTION IT WAS BUILT FOR: LANGUAGE WAS NEVER THE DEFECT, **SCOPE** WAS
+
+🔵 **`0` new agent rows this pass.** 🟢 **`ACTION QP`, `QR`, `QS`, `QT` and `QU` all discharged — five, the most in any pass since p216.** 🟢 **`1` new named entity from the `8` mandated searches, and its headline claim turned out to be retracted by its own publishers.** 🔴 **And the finding that governs the rest: `ACTION QP` fires on limb `1`, but not for the reason it was registered.**
+
+🔵 **Methods and evidence:
+[`evidence/ql-bilingual-register-sweep.2026-10-15-p218.tsv`](../evidence/ql-bilingual-register-sweep.2026-10-15-p218.tsv),
+[`evidence/grant-state-schema.2026-10-15-p218.tsv`](../evidence/grant-state-schema.2026-10-15-p218.tsv),
+[`evidence/owner-level-refusal-probe.2026-10-15-p218.tsv`](../evidence/owner-level-refusal-probe.2026-10-15-p218.tsv).
+🟢 Instruments: [`compose/code/p218-bilingual-gate/`](../compose/code/p218-bilingual-gate/README.md).**
+
+### 🆕 🔴 `P218-1` — `ACTION QP` fires at `5` of `5`, and the root cause is not language
+
+🟢 **The bilingual table was built from `T217-2`'s census — `10` concepts, an English half and a Spanish half each — and `ACTION QL` was re-run over every action in the register.** 🔴 **Five of five absence claims came back answered or wrong:**
+
+| action | the absence it asserted | verdict |
+|---|---|---|
+| 🔴 **`QS`** | *"the one content axis these shelves have `216` passes of silence on"* — teacher-side | 🔴 **REFUTED. `8` teacher-side items, `4` shelves, both languages** |
+| 🔴 **`QP`** *(its own premise)* | *"every propagation gate this KB owns matches English only"* | 🔴 **PARTLY REFUTED. `p415/clase_positiva_v2.py` is SPANISH-only** |
+| 🔴 **`QR`** | *"`4` shelf cells call `alfredang/AI-LMS-TMS` no grant"* | 🔴 **ANCHOR COUNT WRONG. `6`, not `4`** |
+| 🔴 **`QT`** | the `2` `ISB Bayern` plugins carry *"no `v2`/`v3` in the title window"* | 🔴 **REFUTED. `3` of `3` pin to `v3`** |
+| 🟢 **`QU`** | the `3` addresses *"do not resolve at all"* | 🟢 **CONFIRMED, limb `2`. `0` of `3` recovered** |
+
+🔴 **The teacher-side refutation is the one that matters, because of HOW p217 got it wrong. p217 did grep, and it grepped bilingually — `Profe Gabi`, `Elige Educar`, `Elacqua`, `docentes noveles`, `novice teacher`, `inducción`. All `0`, all correctly `0`.** 🔴 **Then it wrote a claim about the AXIS.** 🟢 **The axis is not silent:**
+
+| already on these shelves | where | language |
+|---|---|---|
+| Costa Rica **`MEP`** `GuíaDocenteIA`, **`80`** pages | `intel/market.md` l.`1408`; `compose/patterns.md` l.`1045` | 🟡 ES |
+| Spain **`INTEF`** *Orientaciones … formación docente*, Actualización `2026` | `intel/market.md` l.`1454`; `intel/trends.md` l.`983` | 🟡 ES |
+| Brazil *"IA na prática docente"* — teacher course, **`5` modules**, `8` abril `2026` | `intel/market.md` l.`1717`, l.`15178` | 🟡 PT |
+| Maryland **`S.B. 720`** — state-provided AI professional development for teachers | `intel/market.md` l.`3215` | 🟢 EN |
+| India **`NISHTHA`** teacher training under `NEP 2020` / `NCF-SE 2023` | `intel/market.md` l.`3669` | 🟢 EN |
+| **`H.R. 8747`** — makes teacher training a *permissible use* of existing federal K-12 funds | `repos/trending.md` l.`9337` | 🟢 EN |
+| **Google.org `$4.6M`** — *"funders are buying teacher training, not software"* | `intel/market.md` l.`2286` | 🟢 EN |
+| Alabama **`HB 329`** / teacher AI professional development | `verticals/solutions.md` l.`4260` | 🟢 EN |
+
+🔴 **`T218-1`: an entity-level grep cannot license an axis-level claim of absence. `T217-2` diagnosed the symptom (the gate was monolingual) and missed the disease (the gate's SCOPE was finer than the claim's). A bilingual grep on `Profe Gabi` returns `0` forever, and the axis stays loud.**
+
+### 🆕 🔴 `P218-2` — the gates are monolingual in DIFFERENT languages, which is worse than all-English
+
+🟢 **`compose/code/` was grepped for Spanish tokens: `10` files carry them.** 🔴 **One is a gate, not prose: `p415/clase_positiva_v2.py`, whose `RE_RECHAZO` matches `no cede|rechaz|sin licencia|descart|hueco` — Spanish only.** 🟡 **`RE_ENCABEZADO_RECOMIENDA` matches the stem `licenc`, which covers `license` and `licencia` by accident, not design.**
+
+🔴 **So `T217-2`'s *"both are English"* is wrong in the direction that hurts: this corpus has an English gate and a Spanish gate, each blind to the half the other reads, and the two blind spots mask each other — a cell missed by the English gate looks swept because the Spanish gate ran.** 🟢 **Both halves are now in one table, applied in both directions: [`bilingual_tokens.tsv`](../compose/code/p218-bilingual-gate/bilingual_tokens.tsv).**
+
+### 🆕 🟢 `P218-3` — the owner-level inference was tested BEFORE a cell was written, and it was wrong
+
+🟢 **`agents/top.md` l.`3252` carries `alfredang/ai-mms` as *"NO GRANT at `15` paths"*. p217 established the sibling `alfredang/AI-LMS-TMS` as `GRANT-REFUSED`. If refusal were an owner-level policy, `2` cells could be promoted for free.**
+
+| repo | README | licence prose | state |
+|---|---|---|---|
+| [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | `57 174` B | 🔴 affirmative refusal, l.`703` | 🔴 **`GRANT-REFUSED`** |
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | `30 558` B | 🟢 **`0` hits** on `licen`/`proprietary`/`all rights reserved` | 🟡 **`UNKNOWN`** |
+| [`alfredang/ai4kids`](https://github.com/alfredang/ai4kids) | `13 228` B | 🟢 **`0` hits** | 🟡 **`UNKNOWN`** |
+
+🔴 **One owner, `3` repositories, `2` different states. A refusal does not propagate across an owner, and the free inference would have put `2` wrong cells on these shelves.** 🟢 **An operator credit — *"Tertiary Infotech Academy Pte. Ltd."* at l.`298` and l.`205` — is neither a grant nor a refusal, and that is the distinction the inference would have erased.** 🔵 **This is `ACTION QK`'s rule run *before* the cell, not swept up after it — the first time on these shelves in that order.**
+
+### 🆕 🟡 `P218-4` — and on `ai-mms` the upstream matters more than the missing grant
+
+🟢 **l.`5` badge and l.`35`: built on **`OpenMage LTS v20.12.0`** *(Magento 1 LTS fork)*.** 🔴 **OpenMage inherits Magento 1's **`OSL-3.0`** — network-reciprocal, not permissive.** 🔵 **So an ungranted repository sits on a reciprocal upstream: if the author granted MIT tomorrow, the derivative question would survive it. 🟢 A studio needs the upstream answer first, and the upstream answer is already known.**
+
+### 🆕 🟢 `P218-5` — `ACTION QR`: the `6` states, applied, and `20` of `67` rows change what a studio must do
+
+🟢 **Full table in [`grant-state-schema.2026-10-15-p218.tsv`](../evidence/grant-state-schema.2026-10-15-p218.tsv). `QR`'s limb `1` threshold was `15`+; the measured figure is `20`.**
+
+| state | rows | what changes |
+|---|---|---|
+| 🟡 **`CLAIMED-IN-PROSE`** | `11` | from *"unknown"* to *"a lead — never ship against it"* |
+| 🟡 **`CLAIMED-DANGLING`** | `4` | from *"unknown"* to *"a named defect — one commit fixes it"* |
+| 🔴 **`GRANT-REFUSED`** | `2` | from *"chase it"* to 🔴 **do not touch** |
+| 🔴 **`NON-PUBLIC`** | `3` | out of the live population entirely |
+| 🟢 **`UNKNOWN`** | `47` | unchanged — the genuine unknowns |
+
+🔵 **`jadrianlg16/learning-tutor` *(`PROSE-THIRD-PARTY`)* and `spdx/license-list-data` *(`DOMAIN-NOUN`)* stay `UNKNOWN`: their instruction does not change, so they are **not** counted. `20`, not `22` — the arithmetic half of `ACTION QT`, applied to this pass's own figure.**
+
 ## Pass 217 — 2026-10-15 — THE UNGRANTED `67` IS NOT A POPULATION OF UNKNOWNS: `15` ROWS CLAIM A LICENCE IN PROSE, `2` AFFIRMATIVELY REFUSE ONE, AND THIS KB HAS BEEN PUBLISHING ALL THREE STATES WITH THE SAME MARKER
 
 🔵 **`0` new agent rows this pass.** 🟢 **The `8` mandated searches were run verbatim — `4` global,

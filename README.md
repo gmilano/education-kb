@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — FIVE ACTIONS DISCHARGED; THE BILINGUAL GATE WAS BUILT, AND IT IMMEDIATELY REFUTED THE ACTION IT WAS BUILT FOR
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows.** 🟢 **`1` new named policy instrument, `3` grant cells pinned to a version, `20` rows re-stated under a `6`-state schema, `2` instruments corrected, `6` stale cells named, and `5` actions closed — `QP`, `QR`, `QS`, `QT`, `QU`.**
+
+### 🆕 🔴 The headline: language was the symptom, **scope** is the disease
+
+🔴 **`T217-2` concluded that every gate this KB owns matches English only, and `1 087` lines of its corpus are Spanish. The table was built, the gate was wired, and `ACTION QL` was re-run over the whole register — `5` of `5` absence claims came back answered, wrong, or confirmed only by accident.**
+
+🔴 **But the gate is not what caught `ACTION QS`. p217 DID grep, and it grepped bilingually:** `Profe Gabi` `0`, `Elige Educar` `0`, `Elacqua` `0`, `docentes noveles` `0`, `novice teacher` `0`, `inducción` `0`. 🟢 **Six tokens, every count correct.** 🔴 **Then it wrote that the teacher-side axis was *"the one content axis these shelves have `216` passes of silence on"* — and the axis carries `8` items across `4` shelves in `3` languages: Costa Rica's `GuíaDocenteIA` *(`80` pages)*, Spain's `INTEF` *Orientaciones … formación docente*, Brazil's *IA na prática docente*, Maryland `S.B. 720`, India `NISHTHA`, Google.org `$4.6M`, `H.R. 8747`, Alabama `HB 329`.**
+
+🔴 **`T218-1`: an entity-level grep cannot license an axis-level claim of absence. Translating a proper noun into six languages still returns `0`.** 🟢 **`ACTION QP` ships the mechanical half; the judgement half is one line in a review checklist, and it is now written down.**
+
+### 🆕 🔴 Three instrument defects, all the same shape
+
+🔴 **In each case the instrument's UNIT was wrong for the thing it measured:**
+
+| `T218` | instrument | unit it used | unit the thing has |
+|---|---|---|---|
+| **`-1`** | the novelty grep | a **token** | an **axis** |
+| **`-3`** | p216's live/historical test | a heading **level** | a pass **boundary** |
+| **`-4`** | `ACTION QE`'s title window | a **line** | a **sentence** |
+
+- 🔴 **`T218-3`:** `364` of `1 349` level-2 headings on these shelves — `27`% — are not pass boundaries. `53` of `intel/market.md`'s `64` are `## Opportunities by region`, **the heading the ingest spec mandates**; `114` of `compose/patterns.md`'s `160` are recipe titles. 🟢 **p216's verdict *("`0` live stale cells")* survives — all `6` found this pass are historical — but the instrument that certified it returns the wrong enclosing heading on `intel/market.md` l.`5388`.** 🟢 **One-line fix committed; `ACTION QO` must not be wired without it.**
+- 🔴 **`T218-4`:** the GPL preamble sentence hard-wraps between the family *(line `N`)* and the version *(line `N+1`)*. 🔴 **`ACTION QE` — *"re-read every GNU cell from the TITLE WINDOW"*, carried unexecuted `3` passes — would have returned *"unpinned"* on every correctly-licensed `GPL-3.0` repository in the corpus.** 🟢 **Executed this pass on `3` rows: all `3` pin to `GPL-3.0-or-later`.** 🟢 **`QE` is closed and folded into `ACTION QX`.**
+- 🔴 **`T218-2`:** the gates are monolingual in **different** languages — `p415/clase_positiva_v2.py` is Spanish-only — so the two blind spots mask each other, which is worse than all-English.
+
+### 🆕 🟢 The findings that stand
+
+- 🟢 **`ACTION QR` fires at `20` of `67`:** the `6`-state vocabulary *(`GRANTED` · `CLAIMED-IN-PROSE` · `CLAIMED-DANGLING` · `GRANT-REFUSED` · `NON-PUBLIC` · `UNKNOWN`)* changes the standing instruction to a studio on `20` rows. 🔵 **`PROSE-THIRD-PARTY` and `DOMAIN-NOUN` stay `UNKNOWN` and are not counted — `20`, not `22`.**
+- 🟢 **`ACTION QU` fires limb `2`:** `0` of `3` non-resolving addresses found renamed or live on a fourth channel. 🟢 **Four numbers, four meanings, and they must stop being used interchangeably: `94` probed · `67` ungranted · **`64` live** · `47` unknown.**
+- 🟢 **`ACTION QT` counts half, limb `2`:** `0` of `6` quoted population counts disagree with the evidence file they cite. The arithmetic axis closes.
+- 🟢 **The owner-level shortcut was tested BEFORE a cell was written, and it was wrong.** `1` owner *(`alfredang`)*, `3` repositories, `2` states: `AI-LMS-TMS` `GRANT-REFUSED`, `ai-mms` and `ai4kids` `UNKNOWN`. 🔵 **An operator credit is neither a grant nor a refusal. `ACTION QK`'s rule, run in the cheap order for the first time.**
+- 🟡 **A new axis nobody had looked at:** `ai-mms` has no grant **and** sits on `OpenMage LTS v20.12.0` → Magento 1's **`OSL-3.0`**, network-reciprocal. 🔴 **A repo with no grant and a reciprocal upstream is a dead end even if the author answers — a different risk from one with a permissive upstream, and this KB records neither.** 🔵 **`ACTION QV`, the highest-priority action for p219: it reorders `ACTION PH`'s entire population.**
+- 🔴 **`ACTION QS` closes on limb `2`:** `arxiv.org` → `ENOTFOUND` on both channels, as is `export.arxiv.org` and `publications.iadb.org`. The teacher-side primary sources stay unreadable from this session.
+
+### 🆕 🟢 The one new entity, and the useful half is a retraction
+
+🔴 **The mandated North America query's first result — a weak aggregator — claimed **Boston Public Schools** would *"require AI fluency for graduation starting September `2026`"*.** 🟢 **It was verified before being written, and `WBUR` and `NBC Boston` had both already issued corrections: *"A previous version of that story incorrectly stated that the AI literacy course is a graduation requirement."***
+
+🟢 **What is real:** announced `2026-03-26` by Mayor **Michelle Wu**; **UMass Boston** + **Paul English** `USD 1M`; grades `7`–`12` AI literacy and fluency **benchmarks** in development. 🔴 **Start date conflicted; curriculum content not established; the Massachusetts state requirement is proposed, not enacted.**
+
+🟢 **Why it earns a place, and it is not the mandate: these shelves already carry the NYC K-8 moratorium. Two large US districts, the same year, opposite directions, both documented — and *that contrast* is the procurement fact.** 🔵 **Recipe `P218-C` wires both shapes.**
+
+### 🆕 🔴 Regional coverage, declared
+
+| region | returned |
+|---|---|
+| 🟢 **North America** | `1` new instrument *(Boston)*; `TRAIGA`, Maryland `S.B. 720`, Oklahoma, `H.R. 8747` carried |
+| 🔴 **EMEA** | 🔴 **DECLARED BLANK — nothing education-specific.** A `2023` Workday study, a US-sampled CompTIA outlook, an enterprise-compliance report. 🔵 `1` occurrence, not a trend *(`ACTION QJ`)* |
+| 🟡 **APAC** | 🟡 **vendor announcements only** *(`Pearson`+`TCS`, `LearnUpon`, `Alteryx`, `NIIT`)*, all carried. 🔴 No ministry policy, no `2026` education statistic |
+| 🟢 **LATAM** | `UNESCO IESALC`/`UNU-IAS` working paper *(`200` institutions, `19` countries)* returned again, already carried. 🔴 `0` education-specific AI rules in any country |
+
+🔵 **Instruments:** [`compose/code/p218-bilingual-gate/`](compose/code/p218-bilingual-gate/README.md) · **Evidence:** [`ql-bilingual-register-sweep`](evidence/ql-bilingual-register-sweep.2026-10-15-p218.tsv) · [`grant-state-schema`](evidence/grant-state-schema.2026-10-15-p218.tsv) · [`pass-boundary-heading-test`](evidence/pass-boundary-heading-test.2026-10-15-p218.tsv) · [`gnu-version-pin`](evidence/gnu-version-pin.2026-10-15-p218.tsv) · [`owner-level-refusal-probe`](evidence/owner-level-refusal-probe.2026-10-15-p218.tsv) · [`boston-ai-literacy-claim`](evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv)
 
 ## Pass 216 — 2026-10-15 — ALL FOUR REGISTERED ACTIONS DISCHARGED: `3` FIRE ON LIMB `2`, AND THE FOURTH FOUND ITS OWN PREMISE REFUTED BY PASS `200`
 

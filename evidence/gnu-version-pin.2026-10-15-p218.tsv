@@ -1,0 +1,23 @@
+# p218 - ACTION QT, second limb: the GNU rows p217 recorded as "version not pinned in window".
+# Channel: raw.githubusercontent.com/<slug>/HEAD/README.md -> 200 on all 3. Read as TEXT, in full,
+# NOT through a window. Root LICENSE/LICENSE.md/COPYING/LICENSE.txt re-probed: 0 x 200 on all 3,
+# so these remain ABSENT at root and the README prose is still the only channel (p211 holds).
+#
+repo	readme_bytes	line	quoted	pinned_version	p217_recorded
+bycs-lp/moodle-block_ai_chat	9633	161-162	"it under the terms of the GNU General Public License as published by / the Free Software Foundation, either version 3 of the License, or"	GPL-3.0-or-later	"GPL (GNU, version not pinned in window)"
+bycs-lp/moodle-local_ai_manager	5354	93-94	"it under the terms of the GNU General Public License as published by / the Free Software Foundation, either version 3 of the License, or"	GPL-3.0-or-later	"GPL (GNU, version not pinned in window)"
+marcusgreen/moodle-qtype_aitext	3312	64	"Licensed under the [GNU GPL v3 or later](https://www.gnu.org/licenses/gpl-3.0.html)."	GPL-3.0-or-later	"GPL-3.0-or-later" (already correct)
+#
+# 3 of 3 resolve to a pinned version. ACTION QT FIRES ON LIMB 1 for the GNU axis.
+# NOTE: these stay CLAIMED-IN-PROSE, not GRANTED. A prose pin is still a prose claim (ACTION QN's
+# own rule). What changes is that the CLAIM is now specific enough to act on.
+#
+# THE INSTRUMENT DEFECT, and it is why ACTION QE would have failed on its 4th carry:
+#   The GPL preamble sentence HARD-WRAPS between the family and the version:
+#     line N    "... the GNU General Public License as published by"        <- family, no version
+#     line N+1  "the Free Software Foundation, either version 3 of the ..." <- the version
+#   A LINE-BASED title window of 1 line matches the family and stops one line before the pin.
+#   ACTION QE has been carried 3 passes as "re-read every GNU-family cell from the TITLE WINDOW".
+#   It would have returned "unpinned" on every correctly-licensed GPL-3.0 repo in the corpus.
+#   T218-4: the window must be SENTENCE-based, not line-based - join lines to the next `.` before
+#   matching. Same class as T218-1: the instrument's unit was finer than the thing it measured.

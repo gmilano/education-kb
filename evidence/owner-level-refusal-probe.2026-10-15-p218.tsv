@@ -1,0 +1,24 @@
+# p218 - the owner-level refusal hypothesis, tested and REFUTED.
+# Lead: p217 established alfredang/AI-LMS-TMS as GRANT-REFUSED ("proprietary software developed by
+# Tertiary Infotech Pte Ltd. All rights reserved."). agents/top.md l.3252 carries a SIBLING,
+# alfredang/ai-mms, as "NO GRANT at 15 paths". If the refusal were an OWNER-level policy, the
+# sibling rows could be promoted to GRANT-REFUSED for free - 2 cells, no new reading.
+# That is exactly the kind of free inference T215-7 was corrected for, so it was TESTED.
+#
+# Channel: raw.githubusercontent.com/<slug>/HEAD/README.md, read in full, both languages.
+repo	readme	bytes	licence_prose	state	evidence
+alfredang/AI-LMS-TMS	README.md	57174	yes - affirmative refusal	GRANT-REFUSED	l.703 "This project is proprietary software developed by Tertiary Infotech Pte Ltd. All rights reserved."
+alfredang/ai-mms	README.md	30558	NO - 0 hits on licen|proprietary|all rights reserved	UNKNOWN (NO-PROSE)	operator named at l.298 "Tertiary Infotech Academy Pte. Ltd." - an OPERATOR credit is not a grant and not a refusal
+alfredang/ai4kids	README.md	13228	NO - 0 hits	UNKNOWN (NO-PROSE)	l.205 same operator credit; live site + App Store id6780267161 + Play sg.com.tertiarycourses.ai4kids
+#
+# VERDICT: 1 owner, 3 repositories, 3 readings, 2 DIFFERENT states. A refusal does NOT propagate
+# across an owner, and the 2 sibling cells stay UNKNOWN. The free inference was wrong.
+# This is the falsifier T215-7 / ACTION QK exist to enforce, run BEFORE the cell was written
+# rather than swept up afterwards - the first time on these shelves that order has been followed.
+#
+# ONE THING WORTH MORE THAN THE LICENCE, on ai-mms specifically:
+#   l.5 badge + l.35: built on OpenMage LTS v20.12.0 (Magento 1 LTS fork).
+#   OpenMage inherits Magento 1's OSL-3.0 - a strong network-reciprocal licence, not permissive.
+#   So an UNGRANTED repo sits on a RECIPROCAL upstream: even if the author granted MIT tomorrow,
+#   the derivative question would remain. A studio evaluating ai-mms needs the upstream answer
+#   first, and the upstream answer is already known. Recorded, not promoted.

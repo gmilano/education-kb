@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 218 — `0` new agents; `1` new named entity, and its headline was retracted by its own newsrooms before this KB could write it down
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🟢 The `8` mandated searches ran verbatim
+
+🟢 **All `8`** — `top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`, and the four regional runs of `AI education {region} 2026 adoption regulation players`.
+
+🔵 **Candidates returned, checked one at a time with the new bilingual gate *(`grep -Fo`, exact strings, both language halves — not the loose alternation that inflates counts)*:**
+
+| returned | already on these shelves? |
+|---|---|
+| `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, `microsoft/ai-agents-for-beginners`, `karpathy` *Zero to Hero*, `d2l`, `Made With ML` | 🟢 yes — 🟡 and all teaching MATERIAL about AI, not education-sector software: **`T176`, fourth consecutive appearance** |
+| `OpenClaw`, `Aider`, `Cline`, `CrewAI`, `AutoGen`, `LangGraph`, `Hermes Agent` | 🟢 yes — 🟡 general-purpose, `T176` again |
+| `OpenEduCat`, `ERPNext`, `Krayin`, `Huly`, `Project NOMAD`, `Odoo` | 🟢 yes |
+| `IESALC`/`UNU-IAS` LAC higher-education working paper, `CENIA`, `Ednova` | 🟢 yes — `IESALC` `223` occurrences |
+| `Pearson`+`TCS` alliance, `LearnUpon` Sydney/`Create+`, `Alteryx` Academy, `NIIT MTS` | 🟢 yes |
+| `TRAIGA`, EU `AI Act` high-risk, Maryland/Oklahoma oversight, NYC K-8 moratorium | 🟢 yes |
+| 🆕 **`Boston Public Schools`** | 🔴 **`0` occurrences — NEW** |
+| 🆕 `twentyhq/twenty` *(`BSL-1.1`)*, `kortix/Suna` *(Elastic `2.0`)* | 🔴 `0` — 🔴 **but neither is OSI-permissive and neither is education-sector. Recorded here as a licence flag, NOT promoted to a row** |
+
+### 🆕 🔴 `Boston Public Schools` — and the useful half is the retraction
+
+🔴 **What the mandated North America query actually returned first was a *"Weekly digest"* aggregator claiming: *"Boston Public Schools will require AI fluency for graduation starting September 2026."* 🟢 The search flagged it unverifiable. It was NOT written to a shelf. It was verified first, and the verification reversed it.**
+
+| claim | status |
+|---|---|
+| 🔴 **AI fluency is a GRADUATION REQUIREMENT** | 🔴 **REFUTED — by the publishers themselves.** `WBUR` and `NBC Boston` both issued corrections: *"A previous version of that story incorrectly stated that the AI literacy course is a graduation requirement."* |
+| programme announced **`2026-03-26`** by Mayor **Michelle Wu** | 🟢 **CONFIRMED**, `4`+ outlets |
+| public-private partnership: **UMass Boston** + **Paul English**, **`USD 1M`** | 🟢 **CONFIRMED** |
+| *"first major US city district to launch an AI literacy curriculum"* | 🟡 confirmed as a **claim the district makes**, not a measurement |
+| grades **`7`–`12`** AI literacy and fluency **benchmarks** in development | 🟢 confirmed, `1` specialist outlet *(`govtech.com`)* |
+| start date | 🔴 **CONFLICT, not resolved:** *"begin in September"* vs *"this summer ahead of the `2027` school year"* |
+| curriculum content, grade coverage at rollout | 🔴 **NOT ESTABLISHED** — explicitly unknown in the sources |
+| Massachusetts **state** graduation recommendations requiring AI/digital-literacy modules | 🟡 **LEAD only — PROPOSED.** Current Class-of-`2026` requirements carry **no** AI component |
+
+🔵 **Why it earns a place, and it is not the mandate:** 🟢 **`govtech.com` frames it as *"Boston and New York City Take Opposite Approaches to AI in School"*, and these shelves already carry the NYC K-8 moratorium.** 🟢 **The pair is now complete — two large US districts, the same year, opposite directions, both documented — and that contrast is a procurement fact neither item is on its own.** 🔵 **Full decomposition: [`evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv`](../evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv).**
+
+🔴 **Method note worth keeping: the weak source and the corrected record differ on the one word a client contract turns on — *"require"*. An unverified snippet would have published a mandate that two newsrooms had already retracted.**
+
+### 🆕 🔴 `3` of the `67` ungranted rows are confirmed gone, on a fourth channel
+
+🟢 **`ACTION QU` fires on limb `2`. Search by exact name — the one channel p217's `README` ×`6` and `git ls-remote --symref` probes had not tried — returned `0` of `3` renamed or live:** `cdweaver1992/edfi-mcp-server`, `openfresno/edgenuity-aeries-grade-passback`, `jakerains/scormplayer`.
+
+🔵 **So they are deleted or private, not address-drifted.** 🟢 **The LIVE ungranted population is **`64`**, not `67`.** 🔵 **`67` stays correct as the count of rows carrying no readable grant; `64` is the count a studio can still act on; `47` is the count this KB knows nothing about *(p217)*. Three different numbers, three different questions, and this KB has spent four passes conflating them.**
+
+### 🆕 🔴 The region that returned nothing, written down so it cannot be read as coverage
+
+| region | the mandated query returned |
+|---|---|
+| 🟢 **North America** | `1` new instrument *(Boston, above)*; `TRAIGA`, Maryland, Oklahoma already carried |
+| 🔴 **EMEA** | 🔴 **NOTHING EDUCATION-SPECIFIC.** Every result was general enterprise AI — a `2023` Workday study, a CompTIA outlook with a US-only sample, a Bandwidth/Cavell report. 🔴 **No ministry, no university adoption figure, no EdTech vendor. Declared blank** |
+| 🟡 **APAC** | 🟡 **vendor announcements only** — `Pearson`+`TCS`, `LearnUpon` Sydney/`Create+`, `Alteryx` Academy, `NIIT MTS`, all already carried. 🔴 **No ministry policy and no `2026` education adoption statistic. The governance results were finance-sector *(Singapore `MAS` consultations)* and sovereignty-framed, not education** |
+| 🟢 **LATAM** | 🟢 The `UNESCO IESALC`/`UNU-IAS` working paper *(`200` institutions, `19` countries, surveyed Aug–Oct `2025`)* returned again and is already carried. 🔴 **`0` education-specific AI rules found for any Latin American country — fragmented frameworks only** |
+
+🔵 **EMEA blanking is `1` occurrence, not a trend: `P215-M2`'s *"sixth consecutive"* run ended at `6` when p216's organ-named probe came back full *(`ACTION QJ`, limb `2`)*. 🟢 Reported as a blank, which is what `QJ` concluded blanks should be.**
+
 ## 2026-10-15 — Pass 217 — `0` new agents, but the five-pass run of `0` NEW ENTITIES ends: `Profe Gabi` is real, and `2` rows on these shelves turn out to have refused a grant all along
 
 🟢 **APPEND-ONLY. History below this section is intact — and this pass is the one that proves why

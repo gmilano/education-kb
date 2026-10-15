@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — THREE RECIPES: THE SIX-STATE INTAKE GATE, THE BILINGUAL NOVELTY CHECK, AND THE TWO-DISTRICT NORTH AMERICA ENGAGEMENT
+
+🔵 **`0` new patterns were invented this pass. `3` are written down because this pass produced the instruments they need.** 🔴 **Note on this file specifically: `114` of its `160` level-2 headings are recipe titles, not pass boundaries — `71`%, the worst on these shelves — so any gate wired with a bare `^## ` test will mis-classify cells here *(`T218-3`)*.**
+
+### 🆕 🟢 `P218-A` — the six-state intake gate: what a studio does with a repository whose licence is not a grant
+
+🔴 **The problem this solves: `67` rows on these shelves carry no readable grant, and until p218 all `67` carried the SAME marker — so a studio reading them could not tell *"ask the author"* from *"do not touch"*. `20` of the `67` turn out to need a different action.**
+
+**Wire it as an intake step, before any technical evaluation:**
+
+```
+1. read the root licence forms      -> raw.githubusercontent.com/<slug>/HEAD/{LICENSE,LICENSE.md,COPYING,LICENSE.txt}
+                                       200 on any  -> GRANTED. Record the SPDX id AND the channel.
+2. read the manifest                -> package.json / pom.xml / composer.json "license" field
+                                       present    -> GRANTED-BY-MANIFEST. One channel only (ACTION PG).
+3. read the README as TEXT, in full -> NOT through a line window (T218-4: the GPL sentence wraps)
+4. classify into exactly one state:
+```
+
+| state | test | what the studio does next | cost |
+|---|---|---|---|
+| 🟢 **`GRANTED`** | licence body or manifest field served | build. Record SPDX + channel | — |
+| 🟡 **`CLAIMED-DANGLING`** | README names a grant **and points at a `LICENSE` file not in the tree** | 🟢 **ask the author to commit the file. One commit fixes it.** `4` rows here | `1` issue |
+| 🟡 **`CLAIMED-IN-PROSE`** | README names a grant, no file | treat as a lead. 🔴 **Never ship against it.** `11` rows | `1` issue |
+| 🔴 **`GRANT-REFUSED`** | README **refuses** a grant | 🔴 **STOP. Not a gap to chase.** `2` rows | `0` — and it saves the issue |
+| 🔴 **`NON-PUBLIC`** | no README on `6` forms, `git ls-remote` empty, `0` search hits | drop from the live population. `3` rows | `0` |
+| 🟡 **`UNKNOWN`** | README reachable, no licence statement | the real backlog. `47` rows | research |
+
+🔴 **Then add the step `p218` found missing — check the UPSTREAM before the grant *(`T218-6`)*:**
+
+```
+5. grep the README for a platform badge/dependency: OpenMage|Magento|Odoo|Moodle|Open edX
+   -> OpenMage / Magento 1  = OSL-3.0            RECIPROCAL
+   -> Moodle                = GPL-3.0-or-later   RECIPROCAL
+   -> Open edX              = AGPL-3.0           RECIPROCAL, network clause
+   -> Odoo CE               = LGPL-3.0           weak reciprocal
+   -> Sakai / Opencast      = ECL-2.0            permissive, NARROWED patent grant (quote §3 in the contract)
+```
+
+🟢 **Worked example, from this pass:** [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) is `UNKNOWN` at step `4` — a tempting lead, `30 558` B of real LMS functionality. 🔴 **Step `5` kills it: `OpenMage LTS v20.12.0` → `OSL-3.0`.** 🔴 **Even if the author granted MIT tomorrow, the derivative question survives.** 🟢 **Two greps, in the right order, save a licensing conversation that could not have ended well.**
+
+🔵 **Instrument:** the `6` states and their `20` reclassified rows are committed at [`evidence/grant-state-schema.2026-10-15-p218.tsv`](../evidence/grant-state-schema.2026-10-15-p218.tsv). 🟡 **Delivery note: this is a `1`–`2` day intake gate for a repository shortlist of `20`–`60`, and it is the step that stops a studio building a prototype on something it can never ship.**
+
+### 🆕 🟢 `P218-B` — the bilingual novelty check, and the judgement step no script can replace
+
+🔴 **The problem: this KB is trilingual in practice *(EN, ES, PT)* and every gate it had was monolingual — and, worse, monolingual in DIFFERENT languages, so the blind spots masked each other *(`T218-2`)*.**
+
+**Mechanical half — committed and runnable:**
+
+```sh
+# refutes an absence claim if EITHER language half returns a hit
+compose/code/p218-bilingual-gate/ql_gate_bilingual.sh teacher mentoring licence
+#   exit 1 = present somewhere -> the claim of absence is REFUTED
+#   exit 0 = absent in both halves -> the claim MAY stand
+
+# the corrected live/historical test (do NOT use a bare `^## ` test)
+compose/code/p218-bilingual-gate/pass_boundary.sh intel/market.md 5388
+#   HISTORICAL  l.5266: ## Pass 187 — 2026-10-14
+```
+
+🟢 **Table:** [`bilingual_tokens.tsv`](code/p218-bilingual-gate/bilingual_tokens.tsv) — `10` concepts, EN and ES halves, built from `T217-2`'s census. 🔵 **Extend it per engagement: a Brazil engagement needs the PT column *(`docente`, `licença`, `proprietário`)*, which this pass's `IA na prática docente` finding shows is already load-bearing in the corpus.**
+
+🔴 **Judgement half — and it is the one that actually failed:**
+
+> **Compare the SCOPE of the token you grepped against the SCOPE of the claim you are about to make.**
+
+🟢 **`p217` grepped `Profe Gabi`, `Elacqua`, `docentes noveles` — correctly `0` — and then claimed the teacher-side AXIS was silent for `216` passes. The axis carries `8` items.** 🔴 **A proper noun returns `0` in every language. No script catches that; a reviewer does.** 🔵 **Put it in the review checklist as one line: *entity grep → entity claim; axis claim → axis grep.***
+
+### 🆕 🟢 `P218-C` — the two-district North America engagement: sell the contrast, not the mandate
+
+🔴 **The problem: a US district buyer does not ask *"should we adopt AI"*. Two of the largest districts in the country answered that question in opposite directions in the same year, and a studio walking into either one needs the other in the room.**
+
+| district | position | what it buys |
+|---|---|---|
+| 🟢 **Boston Public Schools** | building a grades `7`–`12` AI literacy curriculum. Announced `2026-03-26`; UMass Boston + Paul English `USD 1M`. 🔴 **NOT a graduation requirement — retracted** | curriculum, benchmarks, teacher capability. 🔴 **Not an enforcement or compliance system** |
+| 🔴 **New York City** | K-8 moratorium *(carried)* | 🟢 **governance, detection, policy tooling** — the opposite build |
+
+**Wiring, and every component is already on these shelves with a grant:**
+
+```
+BOSTON SHAPE (capability build)
+  Moodle (GPL-3.0-or-later)  or  Open edX (AGPL-3.0)      <- the LMS the district already runs
+    + moodle-local_ai_manager / moodle-block_ai_chat      <- GPL-3.0-or-later, CLAIMED-IN-PROSE:
+                                                             pin the version (P218-F2), get the
+                                                             LICENSE file committed before shipping
+    + OATutor (MIT, UC Berkeley, BKT)                     <- adaptive STEM tutoring, permissive
+    + pykt-toolkit (MIT)                                  <- knowledge tracing / benchmark the
+                                                             grades 7-12 "fluency benchmarks"
+    + Kolibri (MIT)                                       <- offline tier, for the schools that need it
+  GRANT NOTE: the LMS tier is RECIPROCAL. Plan to publish the plugin, not to keep it. (P218-A step 5)
+
+NYC SHAPE (governance build)
+  the same LMS
+    + policy layer: INTEF Guía v2.0 + MEP GuíaDocenteIA + MOE AIEd framework as the RUBRIC
+      (NOT a generic syllabus — these are published instruments, carried below)
+    + audit trail: xAPI via adlnet/SCORM-to-xAPI-Wrapper (Apache-2.0 quoted in README,
+      CLAIMED-IN-PROSE — same caveat)
+    + Opencast (ECL-2.0) where lecture capture is in scope; quote the narrowed §3 patent
+      clause in the contract
+```
+
+🔴 **The two commercial facts that decide the pitch, both from this pass:**
+
+- 🟢 **Only `10`% of institutions have formal AI guidelines and `71`% of US teachers lack AI training.** 🟢 **The readiness gap, not the tool gap, is what is fundable.**
+- 🔴 **Massachusetts state recommendations requiring AI/digital-literacy modules are PROPOSED, not enacted, and the current Class-of-`2026` requirements carry no AI component.** 🔵 **So the buyer is a district today and a state later — scope the engagement to a district budget and design for state-level reuse, not the reverse.**
+
+🟡 **Do not carry the mandate framing into a deck.** 🔴 **Two newsrooms retracted *"required to graduate"*, and a client who checks will find the correction before the meeting ends.** 🔵 **Sources and the full claim decomposition: [`evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv`](../evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv).**
+
+### 🆕 🔴 This file's own stale cell
+
+🔴 **l.`3913` publishes [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) as *"no grant, `19`★"* inside a recipe.** 🔴 **Correct state: `GRANT-REFUSED`** *(`README` l.`703`)*. 🔴 **In a RECIPE this matters more than in a table — a recipe is an instruction to build, and that one cannot be followed.** 🔵 **Inside `## Pass 187 — 2026-10-14`; corrected here, not rewritten. `1` of `6` — full list at [`repos/foundations.md`](../repos/foundations.md) `P218-F4`.**
+
 ## Pass 217 — 2026-10-15 — TWO RECIPES: THE GRANT CLASSIFIER THAT REPORTS A **STATE** INSTEAD OF A LICENCE STRING, AND THE BILINGUAL PROPAGATION GATE
 
 ### 🆕 🟢 `P217-A` — `grant_state()`: never let a prose channel write the licence field

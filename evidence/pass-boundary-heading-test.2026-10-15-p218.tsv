@@ -1,0 +1,34 @@
+# p218 - the instrument defect behind p216's "0 live stale cells" verdict.
+# p216 (ACTION QO scope test) recorded: "a NEAREST-heading test called 9 of the 19 live; the
+# enclosing LEVEL-2 (pass-boundary) test calls 0 live. The heading LEVEL was the whole measurement."
+# That treats `^## ` as SYNONYMOUS with a pass boundary. On these shelves it is not.
+#
+# MEASURED: level-2 headings that are NOT pass boundaries (`^## Pass ` or `^## <date>`)
+file	level2_total	pass_boundaries	shadowing	pct_shadowing
+agents/top.md	91	81	10	11%
+agents/trending.md	354	283	71	20%
+repos/foundations.md	85	72	13	15%
+repos/trending.md	348	282	66	19%
+verticals/solutions.md	77	68	9	12%
+intel/market.md	138	74	64	46%
+intel/trends.md	96	79	17	18%
+compose/patterns.md	160	46	114	71%
+TOTAL	1349	985	364	27%
+#
+# WHY intel/market.md is the worst case, and it is NOT an accident:
+#   53 of its 64 shadowing headings are `## Opportunities by region` - the heading the INGEST
+#   SPEC MANDATES ("opportunities go under a single `## Opportunities by region` heading").
+#   The schema injects a competing level-2 heading into the one file whose cells are most
+#   client-facing, so the live/historical test is least reliable exactly where it matters most.
+#
+# DEMONSTRATION on the one cell where it changes the answer
+cell	nearest_level2_heading	enclosing_pass_heading	nearest_test_says	correct_test_says
+intel/market.md l.5388	## Opportunities by region (l.5291)	## Pass 187 - 2026-10-14 (l.5266)	LIVE (no pass in heading)	HISTORICAL
+#
+# NET: p216's VERDICT (0 live) survives - l.5388 is historical under the correct test, and so are
+# the other 5. The INSTRUMENT does not. ACTION QO must not be wired into `make hooks` with a
+# bare `^## ` test, or it will mis-classify any cell sitting under one of the 364 shadowing
+# headings - 114 of them in compose/patterns.md, the file that holds the client recipes.
+#
+# FIX (one line, applied in compose/code/p218-bilingual-gate/ql_gate_bilingual.sh):
+#   awk 'NR<=L && /^## (Pass |[0-9]{4}-)/{h=$0} END{print h}'   <- not  /^## /

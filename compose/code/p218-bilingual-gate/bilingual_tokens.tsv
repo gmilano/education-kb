@@ -1,0 +1,15 @@
+# p218 ACTION QP - the bilingual token table, wired into ACTION QL's precondition.
+# Built from evidence/shelf-language-census.2026-10-15-p217.tsv (T217-2): 1 087 lines carry
+# `licencia`, 130 `sin licencia`, 31 `PROPIETARIO`, 441 `barrido`, 227 `lectura`, 76 `compuerta`.
+# concept	EN	ES
+concept	en	es
+licence	license|licence|licensed	licencia|licenciado|licenciada
+no-licence	no licen[cs]e|unlicensed|no grant	sin licencia|sin licenciamiento|no tiene licencia
+proprietary	proprietary|all rights reserved	propietario|propietaria|todos los derechos reservados
+gate	gate|gating	compuerta|puerta|verificador
+sweep	sweep|swept	barrido|barrida|barrer
+reading	read|reading	lectura|leer|leido
+teacher	teacher|teaching staff|educator	docente|profesor|profesora|maestro|maestra
+mentoring	mentor|mentoring|induction	mentor|mentoria|tutoria|acompanamiento|induccion
+grant	grant|granted	otorga|otorgamiento|concesion|cesion
+absent	absent|missing|nowhere	ausente|falta|no aparece|inexistente

@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — THE ARITHMETIC HOLDS AT EVERY COUNT CHECKED, AND THE INSTRUMENT THAT CERTIFIED IT IS WRONG IN A WAY NOBODY WOULD HAVE NOTICED
+
+🔵 **`0` new foundation rows.** 🟢 **`ACTION QT` discharged with a split verdict; `ACTION QU` closed on limb `2`.** 🔵 **Evidence:
+[`evidence/gnu-version-pin.2026-10-15-p218.tsv`](../evidence/gnu-version-pin.2026-10-15-p218.tsv),
+[`evidence/pass-boundary-heading-test.2026-10-15-p218.tsv`](../evidence/pass-boundary-heading-test.2026-10-15-p218.tsv),
+[`evidence/grant-state-schema.2026-10-15-p218.tsv`](../evidence/grant-state-schema.2026-10-15-p218.tsv).**
+
+### 🆕 🟢 `P218-F1` — `ACTION QT`, counts half: every quoted population reproduces exactly
+
+🟢 **`QM` checked the headline `67` at p217 and carried the rest forward. p218 recomputed each remaining quoted count from the evidence file it names, independently:**
+
+| quoted count | recomputed | source |
+|---|---|---|
+| `94` `ABSENT` after the `18` root forms | 🟢 **`94`** | [`ungranted-after-18-forms…p211.tsv`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv) rows `4`–`97` |
+| `25` recovered by `ACTION QD` | 🟢 **`25`** | [`lstree-grant-recovery…p215.tsv`](../evidence/lstree-grant-recovery.2026-10-15-p215.tsv) rows `10`–`34` |
+| `22` itemised rows in the prose probe | 🟢 **`22`** | [`readme-prose-grant-probe…p217.tsv`](../evidence/readme-prose-grant-probe.2026-10-15-p217.tsv) |
+| `19` licence-shaped prose hits | 🟢 **`19`** | `8` BARE + `4` DANGLING + `1` QUALIFIED + `1` SCOPED + `1` CONFLICT + `2` REFUSED + `1` THIRD-PARTY + `1` DOMAIN-NOUN |
+| `15` own-project claims | 🟢 **`15`** | `8`+`4`+`1`+`1`+`1` |
+| `67` ungranted | 🟢 **`67`** | re-derived at p217, unchanged |
+
+🟢 **`ACTION QT` fires on limb `2` for the counts: `0` of `6` disagree with the file they cite. `T216-1`'s `63` really was isolated, and the arithmetic axis can be closed.** 🔴 **One figure DOES change, and not by an error:** 🟢 **the `3` `NON-PUBLIC` rows are confirmed gone on a fourth channel *(`ACTION QU`, limb `2`)*, so the **LIVE** ungranted population is **`64`**.** 🔵 **Four numbers now have four distinct meanings and must stop being used interchangeably: `94` probed · `67` ungranted · `64` live · `47` unknown.**
+
+### 🆕 🔴 `P218-F2` — `ACTION QT`, GNU half: `3` of `3` pin to `v3`, and `ACTION QE` would have failed on all three
+
+🟢 **The `3` rows p217 recorded as GNU-family-with-no-version were re-read from the `README` body in full, not through a window:**
+
+| repo | line | pinned | p217 recorded |
+|---|---|---|---|
+| [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | l.`161`–`162` | 🟢 **`GPL-3.0-or-later`** | 🔴 *"version not pinned in window"* |
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | l.`93`–`94` | 🟢 **`GPL-3.0-or-later`** | 🔴 *"version not pinned in window"* |
+| [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | l.`64` | 🟢 **`GPL-3.0-or-later`** | 🟢 already correct |
+
+🔴 **`ACTION QT` fires on limb `1` for this axis. And the reason p217 missed it is an instrument defect that invalidates `ACTION QE`'s entire method — now carried a third pass:**
+
+```
+line N      "... under the terms of the GNU General Public License as published by"
+                                                        ^ family named, NO version
+line N+1    "the Free Software Foundation, either version 3 of the License, or"
+                                                        ^ the version
+```
+
+🔴 **The GPL preamble sentence HARD-WRAPS between the family and the version. A line-based title window of `1` line matches the family and stops exactly one line short of the pin.** 🔴 **`ACTION QE` reads *"re-read every GNU-family cell from the TITLE WINDOW, not the body"* — it would have returned *"unpinned"* on every correctly-licensed `GPL-3.0` repository in the corpus, and the `~97` GNU rows it targets are mostly Moodle plugins carrying this exact boilerplate.** 🟢 **`T218-4`: the window must be SENTENCE-based — join lines to the next `.` before matching.** 🔵 **Same class as `T218-1`: the instrument's unit was finer than the thing it measured.**
+
+🟡 **These `3` stay `CLAIMED-IN-PROSE`, not `GRANTED`.** 🔴 **Re-probed this pass: `LICENSE`, `LICENSE.md`, `COPYING`, `LICENSE.txt` → `0` × `200` on all three, so `p211`'s `ABSENT` holds and the `README` is still the only channel.** 🟢 **`ACTION QN`'s rule is unchanged — a prose pin is still a prose claim. What changes is that the claim is now specific enough for a studio to act on, and `ACTION PH`'s population is now `4` DANGLING + `3` precisely-pinned-but-unfiled.**
+
+### 🆕 🔴 `P218-F3` — the live/historical test p216 certified `ACTION QO` with is unsound
+
+🔴 **p216 recorded: *"a NEAREST-heading test called `9` of the `19` live; the enclosing LEVEL-2 (pass-boundary) test calls `0` live. The heading LEVEL was the whole measurement."*** 🔴 **On these shelves `^## ` is NOT a pass boundary. Measured over all `8`:**
+
+| file | level-2 headings | pass boundaries | shadowing |
+|---|---|---|---|
+| `compose/patterns.md` | `160` | `46` | 🔴 **`114` — `71`%** |
+| `intel/market.md` | `138` | `74` | 🔴 **`64` — `46`%** |
+| `agents/trending.md` | `354` | `283` | `71` |
+| `repos/trending.md` | `348` | `282` | `66` |
+| `intel/trends.md` | `96` | `79` | `17` |
+| `repos/foundations.md` | `85` | `72` | `13` |
+| `verticals/solutions.md` | `77` | `68` | `9` |
+| `agents/top.md` | `91` | `81` | `10` |
+| 🔴 **TOTAL** | **`1 349`** | `985` | 🔴 **`364` — `27`%** |
+
+🔴 **`53` of `intel/market.md`'s `64` shadowing headings are `## Opportunities by region` — the heading the INGEST SPEC MANDATES. The schema injects a competing level-2 heading into the one file whose cells are most client-facing, so the test is least reliable exactly where it matters most.** 🔵 **`compose/patterns.md` is worse in proportion: `71`% of its level-2 headings are recipe titles, not pass boundaries, and it is the file holding the client recipes.**
+
+🟢 **Demonstrated on the one cell where it changes the answer:** `intel/market.md` l.`5388` *(an `alfredang/AI-LMS-TMS` *"has no grant"* cell)*. 🔴 **The bare `^## ` test returns `## Opportunities by region` (l.`5291`), finds no pass in the heading, and calls it **LIVE**.** 🟢 **The corrected test returns `## Pass 187 — 2026-10-14` (l.`5266`): **HISTORICAL**.**
+
+🟢 **p216's VERDICT survives — all `6` stale cells this pass found are historical, so `0` live stands, and for the first time it is established with a sound instrument.** 🔴 **p216's INSTRUMENT does not, and `ACTION QO` must not be wired into `make hooks` carrying it.** 🟢 **One-line fix, committed: [`compose/code/p218-bilingual-gate/pass_boundary.sh`](../compose/code/p218-bilingual-gate/README.md).**
+
+### 🆕 🔴 `P218-F4` — the corrections this pass owes its own pages
+
+🟢 **`6` cells, not `QR`'s claimed `4`, publish a state that the `README` channel has since contradicted. All `6` are inside dated pass sections and are therefore corrected HERE rather than rewritten in place:**
+
+| file | line | as published | correct state |
+|---|---|---|---|
+| `verticals/solutions.md` | `2182` | 🔴 *"NO GRANT"* | 🔴 **`GRANT-REFUSED`** |
+| `intel/market.md` | `5388` | 🔴 *"has no grant"* | 🔴 **`GRANT-REFUSED`** |
+| `compose/patterns.md` | `3913` | 🔴 *"no grant, `19`★"* | 🔴 **`GRANT-REFUSED`** |
+| `agents/top.md` | `2752` | 🔴 *"NONE"* | 🔴 **`GRANT-REFUSED`** |
+| `repos/trending.md` | `1558` | 🔴 *"none"* | 🔴 **`GRANT-REFUSED`** |
+| `intel/trends.md` | `2904` | 🔴 *"none"* | 🔴 **`GRANT-REFUSED`** |
+
+🔴 **`3` are `alfredang/AI-LMS-TMS`, `3` are `bedriyan/medkit-app`.** 🔴 **p217 wrote the `AI-LMS-TMS` correction at `verticals/solutions.md` l.`25` and left the contradicting cell at l.`2182` — in the SAME FILE, `2 157` lines below it.** 🔵 **The propagation defect, committed by the pass whose headline was the propagation defect.**
+
 ## Pass 217 — 2026-10-15 — THE `67` IS ARITHMETICALLY CONFIRMED AND SEMANTICALLY WRONG: `47` IS THE NUMBER OF REPOSITORIES THIS KB KNOWS NOTHING ABOUT
 
 🔵 **`0` new foundation rows.** 🟢 **`ACTION QM` and `ACTION QN` discharged.** 🔵 **Evidence:

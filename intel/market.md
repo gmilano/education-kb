@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — ONE NEW POLICY INSTRUMENT, AND ITS HEADLINE WAS RETRACTED BY ITS OWN NEWSROOMS BEFORE THIS KB COULD PUBLISH IT
+
+🔵 **Channel note, re-tested and unchanged *(fourteenth time)*:** 🔴 **`api.github.com` → `403`; `github.com` HTML → `403`; `publications.iadb.org` → `ENOTFOUND`.** 🆕 🔴 **New this pass: `arxiv.org` → `ENOTFOUND` on BOTH channels — plain `curl` and the page-fetch channel. `export.arxiv.org` → `ENOTFOUND` too.** 🟢 **`raw.githubusercontent.com` → `200`; `git ls-remote --symref`, `git clone --filter=blob:none` and `git ls-tree -r HEAD` all work.** 🔴 **Every market and policy figure below is a SEARCH-SNIPPET claim and is marked as such.**
+
+### 🆕 🟢 `P218-M1` — `ACTION QS` fires on limb `2`: the primary sources cannot be opened from here
+
+🟢 **`QS` said to test `arxiv.org` first, as the cheapest unknown on the list. Tested, two independent channels, both `ENOTFOUND`.** 🔴 **`arXiv 2604.04139` *(Teacher Professional Development on WhatsApp)*, `arXiv 2310.02982` and the IDB working paper behind `Profe Gabi` remain unreadable from this session.** 🟢 **`QS` closes on limb `2`: host-blocked like the government and analyst hosts, and the teacher-side axis stays snippet-level.** 🔵 **It needs a session with general egress — the same condition `ACTION QC` has waited on since p214.**
+
+🔴 **But `QS`'s PREMISE was already refuted before the test ran. See `P218-M2`.**
+
+### 🆕 🔴 `P218-M2` — the teacher-side axis was never silent, and this shelf is where most of it lives
+
+🔴 **`ACTION QS` was registered on *"the teacher-side axis … is the one content axis these shelves have `216` passes of silence on."*** 🟢 **The new bilingual gate refutes it. `5` of the `8` items are on THIS file:**
+
+| instrument | where | language |
+|---|---|---|
+| Costa Rica **`MEP`** — `GuíaDocenteIA`, **`80`** pages, teacher guide | l.`1408` *(and `compose/patterns.md` l.`1045`)* | 🟡 ES |
+| Spain **`INTEF`** — *Orientaciones … formación docente*, Actualización `2026` | l.`1454` *(and `intel/trends.md` l.`983`)* | 🟡 ES |
+| Brazil — *"IA na prática docente"*, teacher course, **`5` modules**, `8` abril `2026` | l.`1717`, l.`15178` | 🟡 PT |
+| Maryland **`S.B. 720`** — state-provided AI professional development for teachers | l.`3215` | 🟢 EN |
+| India **`NISHTHA`** — teacher training under `NEP 2020` / `NCF-SE 2023` | l.`3669` | 🟢 EN |
+| **Google.org `$4.6M`** — *"funders are buying teacher training, not software"* | l.`2286` | 🟢 EN |
+| **`H.R. 8747`** — teacher training as a permissible use of federal K-12 funds | `repos/trending.md` l.`9337` | 🟢 EN |
+| Alabama **`HB 329`** / teacher AI professional development | `verticals/solutions.md` l.`4260` | 🟢 EN |
+
+🔴 **`T218-1`, and it is more general than `T217-2`: p217 grepped `Profe Gabi`, `Elige Educar`, `Elacqua`, `docentes noveles`, `novice teacher`, `inducción` — bilingual, correct, all `0` — and then made a claim about the AXIS. An entity-level grep cannot license an axis-level claim of absence.** 🟢 **What is genuinely new about `Profe Gabi` is narrower and still stands: it is the only ministry-scale deployment of AI *to teachers* with a stated counterfactual that these shelves hold.** 🔵 **`P217-M1`'s conflict *(`13 000` vs `20 000` scale-up)* is unresolved and stays unresolved — `arxiv.org` and `publications.iadb.org` are both closed from here.**
+
+### 🆕 🔴 `P218-M3` — the one new instrument, and the useful half of it is the retraction
+
+🔴 **What the mandated North America query returned FIRST was a *"Weekly digest"* aggregator: *"Boston Public Schools will require AI fluency for graduation starting September `2026`."*** 🟢 **The search flagged it unverifiable. It was verified before writing, and the verification reversed the headline.**
+
+| claim | status | confidence |
+|---|---|---|
+| 🔴 **AI fluency is a GRADUATION REQUIREMENT** | 🔴 **REFUTED by the publishers themselves** — `WBUR` and `NBC Boston` both issued corrections: *"A previous version of that story incorrectly stated that the AI literacy course is a graduation requirement."* | 🟢 **high — two newsroom corrections** |
+| announced **`2026-03-26`** by Mayor **Michelle Wu** | 🟢 **CONFIRMED** | 🟢 `4`+ outlets agree |
+| **UMass Boston** + **Paul English**, **`USD 1M`** private contribution | 🟢 **CONFIRMED** | 🟢 consistent |
+| *"first major US city district to launch an AI literacy curriculum"* | 🟡 a claim the district makes, repeated by outlets — not a measurement | 🟡 framing |
+| grades **`7`–`12`** AI literacy and fluency **benchmarks** under development | 🟢 confirmed | 🟡 `1` specialist outlet |
+| start date | 🔴 **CONFLICT — recorded, not averaged:** *"begin in September"* vs *"this summer ahead of the `2027` school year"* | 🔴 unresolved |
+| curriculum content, grade coverage at rollout | 🔴 **NOT ESTABLISHED** — explicitly unknown in the sources | 🔴 do not quote |
+| Massachusetts **state** graduation recommendations requiring AI/digital-literacy modules | 🟡 **PROPOSED, not enacted.** Current Class-of-`2026` requirements carry **no** AI component | 🟡 lead |
+
+🟢 **Why it belongs here, and it is not the mandate: these shelves already carry the NYC K-8 moratorium. The pair is now complete — two large US districts, the same year, opposite directions, both documented — and *that contrast* is the procurement fact.** 🔵 **Full decomposition: [`evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv`](../evidence/boston-ai-literacy-claim.2026-10-15-p218.tsv).**
+
+🔴 **Method note: the weak source and the corrected record differ on the one word a client contract turns on — *"require"*.**
+
+### 🆕 🔴 `P218-M4` — this shelf's own stale cell, and the instrument that failed to flag it
+
+🔴 **l.`5388` publishes [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) as *"has no grant"*. The correct state is `GRANT-REFUSED` *(`README` l.`703`, proprietary, all rights reserved)*.** 🟢 **The cell is inside `## Pass 187 — 2026-10-14` and is corrected here, not rewritten.**
+
+🔴 **It is also the cell that exposes p216's live/historical instrument: the bare `^## ` test returns `## Opportunities by region` (l.`5291`) as the enclosing heading, finds no pass in it, and calls the cell **LIVE**.** 🔴 **`53` of this file's `64` shadowing level-2 headings are `## Opportunities by region` — the heading the ingest spec MANDATES. 🔵 The schema injects a competing level-2 heading into the one file whose cells are most client-facing.** 🟢 **Corrected test and measurements: [`repos/foundations.md`](../repos/foundations.md) `P218-F3`.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **`1` new instrument, and `2` districts now readable as a pair.**
+
+- 🆕 🟢 **Boston Public Schools** — AI literacy programme announced `2026-03-26`; **UMass Boston** + **Paul English** `USD 1M`; grades `7`–`12` fluency benchmarks in development. 🔴 **NOT a graduation requirement — retracted by `WBUR` and `NBC Boston`.** 🔴 Start date conflicted.
+- 🟢 **The pair:** Boston builds a curriculum; **NYC** holds a K-8 moratorium *(already carried)*. 🟢 **Same country, same year, opposite directions.** 🔵 **An engagement in either district needs the other one's position in the room: the question a US district asks is not *"should we adopt"* but *"which of these two are we"*.**
+- 🟡 **Massachusetts state recommendations** would require AI/digital-literacy modules — **proposed only**. 🔵 A district-level buyer today; a state-level buyer if it passes.
+- 🟢 Carried and unchanged: **`TRAIGA`** *(Texas, transparency duties on consumer-facing AI)*, **Maryland `S.B. 720`** *(state-provided teacher PD)*, Oklahoma oversight, **`H.R. 8747`** *(reported out of committee `21 Jul 2026`, `18`–`15`, amended; **no floor vote, not enacted** — a funding-eligibility bill, not a mandate)*.
+- 🔵 **Market framing, snippet-level and conflicting:** one report puts North America at `USD 951M` *(`2024`)* → `USD 2.3B` *(`2029`, `15.9`% CAGR)*; another uses a different scope and `45`% CAGR for `2025`–`2030`; a third puts the region at `36`% of global share. 🔴 **Not reconcilable; recorded as a spread.** 🟡 Consistent across them: only **`10`%** of institutions have formal AI guidelines and **`71`%** of US teachers lack AI training — 🟢 **the readiness gap, not the adoption gap, is the sellable problem.**
+
+### EMEA
+
+🔴 **DECLARED BLANK. The mandated query returned NOTHING education-specific this pass.**
+
+- 🔴 **Every result was general enterprise AI:** a Workday study **dated `2023`**, a CompTIA `2026` outlook whose survey sample is **US-based**, a Feb-`2026` Bandwidth/Cavell report on EMEA enterprise compliance pressure.
+- 🔴 **No ministry instrument, no university adoption figure, no EdTech vendor, no `2026` education market size.**
+- 🔵 **This is `1` occurrence, not a trend.** `P215-M2`'s *"sixth consecutive"* EMEA/APAC blank run ended at `6` when p216's organ-named probe came back full *(`ACTION QJ`, limb `2`)*. 🟢 **`QJ`'s conclusion applies: report the blank as a blank, do not retire the query.**
+- 🟢 **Carried and unchanged:** EU **`AI Act`** classifies education AI **high-risk**, full effect **August `2026`**; the **`Digital Omnibus`**; Spain **`INTEF`** *Guía* v`2.0` *(`1` Sept `2026`)* and *Orientaciones … formación docente* `2026`; the Commission/OECD/G7 **AI Literacy Framework**; `KMK` *(nothing dated `2026`)*. 🔵 **`Opencast`'s `ECL-2.0` install base is EMEA-led — the platform tier here is reciprocal, not permissive.**
+
+### APAC
+
+🟡 **Vendor announcements only. No policy, no statistics.**
+
+- 🟡 **What returned, all already carried:** **Pearson + TCS** multi-year AI learning alliance *(employer skills gaps)*; **LearnUpon** Sydney HQ + `Create+` AI course authoring; **Alteryx** Academy relaunch with personalised AI learning paths; **NIIT MTS**.
+- 🔴 **No ministry of education policy returned. No `2026` education adoption statistic returned.** 🔴 **The governance results were finance-sector *(Singapore `MAS`-style consultations on AI in financial institutions)* and sovereignty-framed *(Forrester: *"sovereign-by-design execution"*)* — adjacent, not education.** 🔴 **Declared, carried forward from p217 unchanged: no education-specific APAC adoption statistics for `2026` were found.**
+- 🔵 **One general figure that does bear on delivery:** **`49`%** of APAC businesses cite insufficient infrastructure for real-time data processing as an AI barrier. 🟢 **For an education engagement that means the offline-first and low-bandwidth tier matters here — `Kolibri`, `Project NOMAD` — not the streaming tier.**
+- 🟢 **Carried:** China `50`+ standards and content labelling; Korea **AI Basic Act** in force Jan `2026`; Japan voluntary; India **AI + computational thinking compulsory from Class `3`, session `2026-27`** *(`NEP 2020`/`NCF-SE 2023`, teacher training via `NISHTHA`)*, IT Rules amendments effective `2026-02-20`, dedicated AI legislation signalled Jul `2026`; Singapore `MOE`/`AICET`; `MEXT`.
+- 🟡 **Supply, placed, unchanged:** [`course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) *(`GPL-2.0`)*, [`react-quiz-component`](https://github.com/wingkwong/react-quiz-component) *(`MIT`)*, [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) *(`MIT`)*, `china-k12-teacher-skills` *(`Apache-2.0`)*, `AI_Tutor_Release` *(`MIT`)*.
+- 🔴 **Correction to this region's own prose:** [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) is published at l.`5388` as *"has no grant"*. 🔴 **It is `GRANT-REFUSED`.** 🟡 **Its `57 174` B `README` remains the clearest map this KB holds of Singapore's `WSQ`/`SkillsFuture`/`SSG` regime — assessor signatures stamped into learner submissions, survey completion gating trainer payout — and 🟢 a regime where compliance artefacts gate PAYMENT is still a strong agentic-automation market.** 🔴 **But the documentation is readable, not reusable: the refusal closes the code path permanently.**
+
+### LATAM
+
+🟢 **The strongest source returned again and is already carried; `0` new instruments.**
+
+- 🟢 **`UNESCO IESALC` + `UNU-IAS` working paper** — AI implementation in higher education in Latin America and the Caribbean: **`200` institutions, `19` countries, surveyed August–October `2025`**, covering teaching, research, community engagement, administration and governance. 🔵 `IESALC` already appears `223` times on these shelves.
+- 🔴 **`0` education-specific AI rules found for ANY Latin American country.** 🔴 Frameworks that do bite are general: privacy, consumer protection, labour, cybersecurity, IP. 🟢 **Carried:** Brazil **Marco Legal da IA** `2024`; Mexico **no** AI law; El Salvador law `2025`.
+- 🔵 **Investment asymmetry, snippet-level:** LATAM captured **`USD 8.2B`** of the **`USD 190B`** allocated to private AI opportunities globally in `2025` — **`4.3`%**. 🟡 One survey claims **`99`%** of LATAM startups use some AI solution internally, with OpenAI, Gemini and Claude dominating integrations; `CENIA` calls the region the **third-largest market for generative-AI app downloads**. 🔴 **High adoption, thin capital — the gap this KB has recorded since cycle `2`.**
+- 🟢 **Teacher-side, and it is the axis `ACTION QS` called silent:** Costa Rica **`MEP` `GuíaDocenteIA`** *(`80` pages)*, Brazil **`IA na prática docente`** *(`5` modules, `8` abril `2026`)*, `Profe Gabi` *(IDB/MINEDUC Chile, `550`-teacher pilot, WhatsApp, scale-up figure CONFLICTED `13 000` vs `20 000`, outcomes UNPUBLISHED)*. 🔵 **`Ednova` (Chile)** returned again as an AI-personalisation EdTech example and is carried.
+
+### Global
+
+- 🔴 **Market size remains a SPREAD, not a figure, and the spread is a base-year artefact these shelves have already diagnosed *(`## Market size — the spread was mostly a base-year error`, carried below)*.** This pass's returns: `USD 6.4B` *(`2025`, IMARC-based)* → `USD 79.6B` *(`2034`, ~`31`% CAGR)*; vs `USD 8.3B` *(`2025`)* → `USD 11.4B` *(`2026`)* → `USD 57.2B` *(`2033`)*, North America `37.5`% share. 🔴 **Different base years, different scopes, not reconcilable. Recorded as a spread.**
+- 🟡 **AI tutor sub-market:** `USD 1.63B` *(`2024`)* → `USD 7.99B` *(`2030`)*, `30.5`% CAGR, **K-12 the largest share at ~`46`%**. 🔵 Vendor-blog sourced.
+- 🟡 **Student adoption, unverified:** `66`% *(`2024`)* → `92`% *(`2025`)*; `86`% of higher-ed students using AI as a research/brainstorming partner at the start of `2026`. 🔴 **Underlying survey not locatable. Do not quote without it.**
+- 🟢 **The one claim every source agrees on:** institutional procurement is far slower than consumer adoption, and **most institutions remain in pilot mode**. 🟢 **That is the whole commercial thesis of this KB: the buyer is not short of tools, the buyer is short of the governance that lets a pilot become a system.**
+
 ## Pass 217 — 2026-10-15 — THE FIRST TEACHER-SIDE DEPLOYMENT EVIDENCE ON THESE SHELVES, AND TWO SNIPPETS THAT DISAGREE WITH EACH OTHER ABOUT ITS SCALE
 
 🔵 **Channel note, re-tested and unchanged *(thirteenth time)*:** 🔴 **`api.github.com` → `403`;

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — THE PLATFORM TIER IS UNCHANGED FOR A THIRD PASS; THE OWNER-LEVEL SHORTCUT THAT WOULD HAVE CHANGED TWO CELLS WAS TESTED AND IS WRONG
+
+🔵 **`0` new platform rows.** 🟢 **`ACTION QR` applied to the platform-adjacent rows; the `alfredang` owner census completed.** 🔵 **Evidence:
+[`evidence/owner-level-refusal-probe.2026-10-15-p218.tsv`](../evidence/owner-level-refusal-probe.2026-10-15-p218.tsv),
+[`evidence/grant-state-schema.2026-10-15-p218.tsv`](../evidence/grant-state-schema.2026-10-15-p218.tsv).**
+
+### 🆕 🟢 `P218-V1` — the `ECL-2.0` platform tier, re-confirmed, no drift
+
+| platform | repo | grant | what it is | install base |
+|---|---|---|---|---|
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | Full LMS/VLE in Java — the reference `ECL-2.0` codebase | 🟢 **Global** |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** | Automated lecture capture and video distribution at scale | 🟢 **EMEA**-led |
+
+🟢 **Control re-run this pass: `sakai`'s `LICENSE` serves `200` over `raw.githubusercontent.com`, fourteenth consecutive confirmation.** 🔵 **`ECL-2.0` remains `Apache-2.0` copyright terms with a narrowed `§3` patent grant — the clause a studio puts in a contract, quoted in full at `P216-V2`.**
+
+### 🆕 🟢 `P218-V2` — the correction p217 wrote at l.`25` and did not carry to l.`2182`
+
+🔴 **p217's own headline was the propagation defect. It published the `alfredang/AI-LMS-TMS` correction at l.`25` of THIS FILE and left the contradicting cell standing at l.`2182`, `2 157` lines below it, still reading *"NO GRANT"*.**
+
+🟢 **The correct cell, for the record:**
+
+| repo | state | why it is not *"no grant"* |
+|---|---|---|
+| [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | 🔴 **`GRANT-REFUSED`** | `README` l.`703`: *«This project is **proprietary software** developed by Tertiary Infotech Pte Ltd. **All rights reserved**.»* 🔴 An absence can be fixed by asking. 🔴 **A refusal cannot** |
+
+🔵 **The cell sits inside `## Pass 187 — 2026-10-14` and is therefore corrected here, not rewritten — but see [`repos/foundations.md`](foundations.md) `P218-F3`: the instrument p216 used to certify that *"`0` live stale cells"* exist returns the WRONG enclosing heading on `intel/market.md`, and this file carries `9` shadowing level-2 headings of its own.**
+
+### 🆕 🟢 `P218-V3` — the owner-level shortcut, tested before a cell was written, and REFUTED
+
+🔴 **The tempting inference: `AI-LMS-TMS` is refused, so its siblings under the same owner — and the same operator credit, *Tertiary Infotech Academy Pte. Ltd.* — are refused too. Two cells, free, no new reading.** 🟢 **It was tested instead.**
+
+| repo | `README` | licence prose | state | what it is |
+|---|---|---|---|---|
+| [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | `57 174` B | 🔴 refusal at l.`703` | 🔴 **`GRANT-REFUSED`** | `WSQ`/`SkillsFuture`/`SSG` LMS+TMS. 🟡 Still the best `SkillsFuture` documentation on these shelves |
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | `30 558` B | 🟢 **`0` hits** on `licen`\|`proprietary`\|`all rights reserved` | 🟡 **`UNKNOWN`** | Course-registration + LMS on **`OpenMage LTS v20.12.0`** |
+| [`alfredang/ai4kids`](https://github.com/alfredang/ai4kids) | `13 228` B | 🟢 **`0` hits** | 🟡 **`UNKNOWN`** | Kids AI portal; live site + App Store `id6780267161` + Play `sg.com.tertiarycourses.ai4kids` |
+
+🔴 **One owner, `3` repositories, `2` states. The refusal does not propagate, and the shortcut would have put `2` wrong cells on this shelf.** 🟢 **An operator credit is neither a grant nor a refusal — that is precisely the distinction the inference erases.** 🔵 **`ACTION QK`'s rule, run *before* the cell rather than swept up after it.**
+
+### 🆕 🔴 `P218-V4` — the thing on `ai-mms` worth more than its missing licence
+
+🟢 **l.`5` carries an `OpenMage LTS v20.12.0` badge; l.`35` describes a *"production-grade course-registration and learning-management platform built on OpenMage 1.x (Magento 1 LTS)"*, with every product modelled as a **course** — instructor-led trainings, workshops, certifications, no physical inventory.**
+
+🔴 **OpenMage inherits Magento 1's **`OSL-3.0`** — network-reciprocal, not permissive.** 🔵 **So:**
+
+- 🔴 **An ungranted repository sitting on a RECIPROCAL upstream.** 🔴 **If the author granted MIT tomorrow, the derivative question would survive it.**
+- 🟢 **A studio evaluating `ai-mms` needs the upstream answer first, and the upstream answer is already known.**
+- 🟡 **`T218-6`: the `47` genuine unknowns have not been checked for this shape at all. A repo with no grant of its own but a known-reciprocal upstream is a DIFFERENT procurement risk from a repo with no grant and a permissive upstream — and this KB records neither.** 🔵 **Registered as `ACTION QV`.**
+
+### 🆕 🟡 `P218-V5` — the platform tier that returned, and why it stays off this shelf
+
+🟢 **`open source platform education ERP CRM MIT Apache` ran verbatim.** 🔴 **It returned `0` platforms this shelf does not carry.** 🔵 **What came back:**
+
+| returned | status |
+|---|---|
+| **OpenEduCat** *(on Odoo)*, **ERPNext** *(`GPL-3.0`)*, **Krayin**, **Huly**, **Apache OFBiz**, **Odoo** | 🟢 all already carried |
+| 🆕 **`twentyhq/twenty`** *(CRM)* | 🔴 **`BSL-1.1`** — source-available with SaaS restrictions. 🔴 Not OSI, not education-sector. 🟡 **Recorded as a licence flag, not a row** |
+
+🔴 **The query's own result is worth recording: it found *"no clear match for an education ERP/CRM platform under MIT or Apache licensing"*. 🟢 That is consistent with what this shelf has established over `218` passes — the education platform tier is `GPL`/`AGPL`/`ECL`, not permissive, and a studio's build-on-top decision has to start from reciprocity, not from a hunt for an MIT alternative that does not exist.**
+
 ## Pass 217 — 2026-10-15 — THE PLATFORM TIER IS UNCHANGED; THE WARNING TIER IS NOT: THE BEST `SkillsFuture` DOCUMENTATION ON THESE SHELVES IS PROPRIETARY AND HAS BEEN SINCE `pase 126`
 
 🔵 **`0` new platform rows.** 🟢 **`ACTION QN` discharged against the platform-adjacent rows.**

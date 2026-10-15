@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 218 — 2026-10-15 — LANGUAGE WAS THE SYMPTOM, SCOPE IS THE DISEASE: A BILINGUAL GREP ON A PROPER NOUN RETURNS `0` FOREVER, AND THE AXIS STAYS LOUD
+
+### 🆕 🔴 `T218-1` — the general form of `T217-2`, and it supersedes it
+
+🔴 **`T217-2` concluded: every propagation gate this KB owns matches English only, and `1 087` lines of the corpus are Spanish.** 🟢 **True, and the table is now built and wired *([`compose/code/p218-bilingual-gate/`](../compose/code/p218-bilingual-gate/README.md))*.** 🔴 **But it is not the defect that produced `ACTION QS`.**
+
+🟢 **p217's novelty grep for the teacher-side axis ran:** `Profe Gabi` `0`, `Elige Educar` `0`, `Elacqua` `0`, `docentes noveles` `0`, `novice teacher` `0`, `induction`/`inducción` `0`. 🟢 **Six tokens, bilingual, every count correct.** 🔴 **Then it wrote: *"the teacher-side axis … is the one content axis these shelves have `216` passes of silence on."***
+
+🔴 **The axis carries `8` items across `4` shelves in `3` languages — Costa Rica `GuíaDocenteIA` *(ES)*, Spain `INTEF` *Orientaciones … formación docente* *(ES)*, Brazil *IA na prática docente* *(PT)*, Maryland `S.B. 720`, India `NISHTHA`, Google.org `$4.6M`, `H.R. 8747`, Alabama `HB 329`.**
+
+🔴 **`T218-1`: an ENTITY-level grep cannot license an AXIS-level claim of absence. Language was one instance of scope mismatch, not the whole of it — translating `Profe Gabi` into six languages still returns `0`, because the token is a proper noun and the claim is a category.** 🟢 **The rule `ACTION QL` needs is not *"grep in both languages"* but *"compare the SCOPE of what you grepped against the SCOPE of what you are claiming"*.** 🔵 **No script can enforce that. `ACTION QP` ships the mechanical half; the judgement half is a review step, and it is now written down.**
+
+### 🆕 🔴 `T218-2` — the gates are monolingual in DIFFERENT languages, which masks both blind spots
+
+🔴 **`T217-2` said *"`ACTION QL` is a grep. `qg_gate2.py` is a token comparison. Both are English."*** 🔴 **`compose/code/` holds `10` files carrying Spanish tokens, and one of them is a gate: `p415/clase_positiva_v2.py`, whose `RE_RECHAZO` matches `no cede|rechaz|sin licencia|descart|hueco|por que NO` — **Spanish only**.** 🟡 **Its `RE_ENCABEZADO_RECOMIENDA` matches the stem `licenc`, which covers `license` and `licencia` by accident rather than design.**
+
+🔴 **So the corpus has an English gate and a Spanish gate, each blind to the half the other reads. 🔴 That is worse than all-English, because the two blind spots MASK each other: a cell the English gate misses looks swept, because the Spanish gate ran over the same file.** 🟢 **Both halves now sit in one table applied in both directions.**
+
+### 🆕 🔴 `T218-3` — the live/historical instrument conflates a heading LEVEL with a pass BOUNDARY
+
+🔴 **p216 certified `ACTION QO` with *"the enclosing LEVEL-2 (pass-boundary) test calls `0` live. The heading LEVEL was the whole measurement."*** 🔴 **`364` of the `1 349` level-2 headings on these shelves — `27`% — are not pass boundaries:**
+
+| file | shadowing | share | what the shadowing headings are |
+|---|---|---|---|
+| `compose/patterns.md` | 🔴 **`114`** | 🔴 **`71`%** | recipe titles — the client-facing half of the file |
+| `intel/market.md` | 🔴 **`64`** | 🔴 **`46`%** | 🔴 **`53` of them are `## Opportunities by region` — the heading the INGEST SPEC MANDATES** |
+| `agents/trending.md` | `71` | `20`% | dated signal blocks |
+| `repos/trending.md` | `66` | `19`% | dated signal blocks |
+
+🔴 **The schema itself injects the competing heading, so the test is least reliable exactly in the file whose cells a studio reads first.** 🟢 **Verdict survives *(all `6` stale cells are historical)*; instrument does not. One-line fix committed.** 🔵 **`T218-3` and `T218-4` are the same shape as `T218-1`: in all three the instrument's UNIT was wrong for the thing it measured — a token for an axis, a heading level for a pass boundary, a line for a sentence.**
+
+### 🆕 🔴 `T218-4` — a line-based window cannot read the GPL, because the GPL sentence wraps
+
+🔴 **`ACTION QE` — *"re-read every GNU-family cell from the TITLE WINDOW, not the body"* — has been carried `3` passes unexecuted. p218 executed it on `3` rows and it fails by construction:**
+
+```
+line N      "... under the terms of the GNU General Public License as published by"
+line N+1    "the Free Software Foundation, either version 3 of the License, or"
+```
+
+🔴 **Family on line `N`, version on line `N+1`. A `1`-line window stops one line short of the pin, on every correctly-licensed `GPL-3.0` repository in the corpus — and the `~97` GNU rows `QE` targets are mostly Moodle plugins carrying this exact boilerplate.** 🟢 **`3` of `3` rows pinned this pass: `GPL-3.0-or-later`.** 🟢 **The window must be SENTENCE-based: join to the next `.` before matching.**
+
+### 🆕 🟢 `T218-5` — the trending query has a CATEGORY problem, not a saturation problem
+
+🔴 **`github trending education AI 2026` has returned `0` education-sector repositories on `2` consecutive passes, while returning `7`+ *teaching-material-about-AI* repositories each time — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, `karpathy` *Zero to Hero*, `d2l`, `Made With ML`.** 🔴 **These carry the LARGEST star counts on the list, so the signal is crowded out by the noise.**
+
+🟡 **`T176` named this confusion; `p218` measures its persistence at `4` consecutive passes.** 🟢 **`ACTION QJ` withdrew the analogous proposal for the REGIONAL query after measuring both shapes saturated — but this is the opposite failure: not saturation, a category mismatch.** 🔵 **Registered as `ACTION QW`.**
+
+### 🆕 🟢 `T218-6` — a missing grant on a RECIPROCAL upstream is a different risk, and this KB records neither
+
+🟢 **[`alfredang/ai-mms`](https://github.com/alfredang/ai-mms): no licence prose at all *(`0` hits over `30 558` B)*, built on **`OpenMage LTS v20.12.0`** *(Magento 1 LTS)*, which inherits Magento 1's **`OSL-3.0`** — network-reciprocal.**
+
+🔴 **So an ungranted repository sits on a reciprocal upstream, and if the author granted MIT tomorrow the derivative question would survive it.** 🔴 **The `47` genuine unknowns have never been checked for this shape. A repo with no grant of its own and a permissive upstream is a *lead*; a repo with no grant and a reciprocal upstream is a *dead end even if the author answers*.** 🔵 **Registered as `ACTION QV`.**
+
+### 🆕 🟢 `T218-7` — the falsifier was run before the cell, for the first time
+
+🟢 **`ACTION QK` *(p216, limb `2`)* established that this KB had made a person-level inference from an absence exactly once. p218 had the chance to make the same class of error — promote `2` sibling repositories to `GRANT-REFUSED` because their owner refused on a third — and tested it instead of taking it.**
+
+🔴 **The inference was WRONG: `1` owner, `3` repositories, `2` states.** 🟢 **Cost: `2` `README` reads. Saved: `2` wrong cells, and a wrong cell on these shelves costs several passes to find and correct, as `P218-F4`'s `6` stale cells show.** 🔵 **The useful generalisation is about ORDER, not about owners: the falsifier is cheap before the cell and expensive after it.**
+
+### 🆕 🔴 `T218-8` — a retracted headline is the highest-value thing a search returned this pass
+
+🟢 **The mandated North America query's first result claimed Boston Public Schools would *"require AI fluency for graduation starting September `2026`"*. 🔴 Two newsrooms had already retracted that wording.** 🟢 **The programme is real; the mandate is not.**
+
+🔵 **Three things follow for a KB that runs unattended on a schedule:**
+
+- 🔴 **A single weak aggregator can carry a retracted claim indefinitely — the correction attaches to the original article, not to the summary that copied it.**
+- 🟢 **The verification cost one search and changed the one word a client contract would turn on: *"require"*.**
+- 🟡 **The refutation is MORE useful than the claim would have been. A studio pitching Boston needs to know the district is building a curriculum, not enforcing a diploma rule — those are different buyers with different budgets.**
+
+### 🆕 🔴 `T218-9` — this shelf's own stale cell
+
+🔴 **l.`2904` publishes [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) as *"none"*.** 🟢 **`README` l.`189`: *"Private — hackathon submission. Not licensed for redistribution."*** 🔴 **Correct state: `GRANT-REFUSED`.** 🔵 **Inside `## Pass 193 — 2026-10-14`; corrected here, not rewritten. `1` of `6` — full list at [`repos/foundations.md`](../repos/foundations.md) `P218-F4`.**
+
 ## Pass 217 — 2026-10-15 — THE GATE IS MONOLINGUAL AND THE CORPUS IS NOT: `1 087` LINES OF THIS KB'S OWN LICENCE REASONING ARE IN SPANISH, AND THAT IS WHY `ACTION QN` WAS REGISTERED ON A CLAIM ITS OWN SHELVES REFUTE
 
 ### 🆕 🔴 `T217-1` — `ACTION QL` fires on limb `1`, and the novelty claim it catches is `ACTION QN`'s

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 218 — `0` new trending repos for a second pass; `3` rows confirmed GONE on a fourth channel, and the live ungranted population drops to `64`
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 No new trending surface, measured rather than assumed — second consecutive pass
+
+🟢 **`github trending education AI 2026` and `top open source AI agents education 2026 github MIT` both ran verbatim.** 🔴 **`0` education-sector repositories returned that these shelves do not carry.**
+
+🔴 **What came back instead, and it is now a measured pattern rather than an impression:**
+
+| returned | what it actually is |
+|---|---|
+| `microsoft/ai-agents-for-beginners` *(~`67`k★ per one snippet, `47.3`k per another)*, `pguso/agents-from-scratch` *(~`796`★)*, `avinash201199/free-ai-agents-resources` *(~`635`★)*, `rohitg00/ai-engineering-from-scratch` *(`#1` GitHub Trending `2026-05-24` per Trendshift)*, `karpathy` *Zero to Hero*, `d2l`, `Made With ML` | 🟡 **teaching MATERIAL about AI.** Not education-sector software. 🔴 **`T176`, fourth consecutive appearance** |
+| `OpenClaw`, `Aider`, `Cline`, `CrewAI`, `AutoGen`, `LangGraph`, `Hermes Agent`, `Suna` | 🟡 general-purpose agents. `T176` again |
+| 🆕 `twentyhq/twenty` | 🔴 **`BSL-1.1`** — source-available, not OSI. Not education-sector |
+| 🆕 `kortix/Suna` | 🔴 **Elastic License `2.0`** — source-available, not OSI |
+
+🔴 **`T218-5`: the mandated trending query has now returned `0` education-sector repositories on `2` consecutive passes while returning `7`+ teaching-material repositories each time. The query cannot distinguish *software for education* from *material about AI*, and the star counts it surfaces are the LARGEST on the list — so the signal is actively crowded out by the noise.** 🟡 **`ACTION QJ` withdrew the analogous proposal for the regional query after measuring both shapes as saturated; this is the first evidence that the TRENDING query has the opposite problem — not saturation, but a category mismatch. Registered as `ACTION QW`.**
+
+🔵 **Star figures above are SNIPPET-sourced and conflict between sources *(`67`k vs `47.3`k for the same repo)*. 🔴 `api.github.com` → `403` from this session for the fourteenth consecutive pass, so none is recorded as a measured count.**
+
+### 🆕 🟢 `ACTION QU` closed on limb `2`: the `3` are gone, not renamed
+
+🟢 **p217 reached them through `README` × `6` forms *(all `404`)* and `git ls-remote --symref` *(empty, or credentials demanded)*. p218 tried the one channel left — search by exact name:**
+
+| repo | `README` ×`6` | `git ls-remote` | search by name | state |
+|---|---|---|---|---|
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | 🔴 `404` | 🔴 empty | 🔴 **`0` results** | 🔴 **`NON-PUBLIC`** |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | 🔴 `404` | 🔴 empty | 🔴 **`0` results** | 🔴 **`NON-PUBLIC`** |
+| [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) | 🔴 `404` | 🔴 credentials demanded | 🔴 **`0` results** | 🔴 **`NON-PUBLIC`** |
+
+🟢 **`QU` fires on limb `2`: `0` of `3` renamed or live. These shelves are not losing rows to address drift — these three were deleted or made private.** 🔵 **The only near-match the search returned was `EduBase/MCP`, a different project on `mcpservers.org`/Glama, and it was not promoted.**
+
+🟢 **Consequence, and it is the number a studio should use:**
+
+| figure | meaning | answers |
+|---|---|---|
+| `94` | rows `ABSENT` after the `18` root forms *(p211)* | how big the probe was |
+| `67` | rows carrying no readable GRANT | the ungranted count — correct, and not a count of unknowns |
+| 🟢 **`64`** | 🟢 **LIVE ungranted rows** | 🟢 **what is still actionable** |
+| `47` | rows this KB knows NOTHING about *(p217)* | the genuine research backlog |
+
+### 🆕 🟡 `3` rows move from *"GNU, version unknown"* to a pinned version
+
+🟢 **`ACTION QT`, GNU half. Read from the `README` body in full rather than a window:** [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) and [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) both quote *"either version 3 of the License, or (at your option) any later version"*; [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) states *"GNU GPL v3 or later"* outright. 🟢 **All three → `GPL-3.0-or-later`, all three still `CLAIMED-IN-PROSE` *(no `LICENSE` blob: `0` × `200` on `4` forms, re-probed this pass)*.**
+
+🔴 **Why p217 missed it: the GPL preamble sentence hard-wraps between the family and the version, and a `1`-line title window stops one line short of the pin — see [`evidence/gnu-version-pin.2026-10-15-p218.tsv`](../evidence/gnu-version-pin.2026-10-15-p218.tsv). `ACTION QE` has carried this method `3` passes and would have returned *"unpinned"* on every correctly-licensed `GPL-3.0` repo in the corpus.**
+
+### 🆕 🔴 This shelf's own stale cell
+
+🔴 **l.`1558` publishes [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) as *"none"*.** 🟢 **Its `README` l.`189` reads *"Private — hackathon submission. Not licensed for redistribution."*** 🔴 **The correct state is `GRANT-REFUSED`: an affirmative refusal, not an absence.** 🔵 **The cell is inside `## Pass 193 — 2026-10-14` and so is corrected here, not rewritten. `1` of `6` such cells this pass — full list at [`repos/foundations.md`](foundations.md) `P218-F4`.**
+
 ## 2026-10-15 — Pass 217 — `0` new trending repos; `3` rows on these shelves no longer exist in public, and `19` of `67` ungranted rows turn out to carry a licence statement in prose
 
 🟢 **APPEND-ONLY. History below this section is intact.**

@@ -1,0 +1,27 @@
+# p218 - the ONE new named entity this pass, and the useful half of it is a REFUTATION.
+# Novelty: `Boston Public Schools` -> 0 occurrences across the 8 shelves, both language halves.
+#
+# WHAT THE MANDATED REGIONAL QUERY RETURNED (AI education North America 2026 ...):
+#   a single weak aggregator (a "Weekly digest" post) claiming: "Boston Public Schools will
+#   require AI fluency for graduation starting September 2026". The search itself flagged it as
+#   unverifiable. It was NOT written to a shelf. It was verified first.
+#
+claim	status	source_quality	evidence
+AI fluency is a GRADUATION REQUIREMENT	REFUTED - and by the publishers themselves	2 outlets issued corrections	WBUR + NBC Boston corrections: "A previous version of that story incorrectly stated that the AI literacy course is a graduation requirement."
+programme announced 2026-03-26 by Mayor Michelle Wu	CONFIRMED	4+ independent outlets agree	boston.com 2026-03-27; WBUR 2026-03-26; Spokesman-Review 2026-03-30; NBC Boston
+public-private partnership: UMass Boston + Paul English, USD 1M	CONFIRMED	consistent across sources	Spokesman-Review
+first major US city district to launch an AI literacy curriculum	CONFIRMED as a CLAIM made by the district and repeated by outlets	framing, not a measurement	boston.com headline; whdh.com
+grades 7-12 AI literacy and fluency BENCHMARKS in development	CONFIRMED	1 specialist outlet	govtech.com
+start date	CONFLICT - NOT resolved	sources disagree	"begin in September" vs whdh.com "set to begin this summer ahead of the 2027 school year"
+curriculum content and grade coverage at rollout	NOT ESTABLISHED	explicitly unknown in source	"still unclear what the course will look like and which grades will have access"
+Massachusetts STATE graduation recommendations would require AI/digital literacy modules	LEAD only - PROPOSED, not enacted	1 outlet, proposal stage	govtech.com. Current Class of 2026 requirements carry NO AI component
+#
+# WHY IT BELONGS ON A SHELF, and it is not the mandate:
+#   govtech.com frames it as "Boston and New York City Take Opposite Approaches to AI in School".
+#   These shelves ALREADY carry the NYC K-8 moratorium. So the pair is now complete: two large US
+#   districts, the same year, opposite direction, both documented. That contrast is a procurement
+#   fact for a North America engagement in a way neither item is on its own.
+#
+# METHOD NOTE: the weak-source claim and the corrected claim differ on the ONE word a client
+# contract would turn on - "require". An unverified snippet would have put a mandate on these
+# shelves that two newsrooms had already retracted.
