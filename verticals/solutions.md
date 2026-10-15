@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — THE PLATFORM TIER IS UNCHANGED; THE WARNING TIER IS NOT: THE BEST `SkillsFuture` DOCUMENTATION ON THESE SHELVES IS PROPRIETARY AND HAS BEEN SINCE `pase 126`
+
+🔵 **`0` new platform rows.** 🟢 **`ACTION QN` discharged against the platform-adjacent rows.**
+🔵 **Evidence:
+[`evidence/readme-prose-grant-probe.2026-10-15-p217.tsv`](../evidence/readme-prose-grant-probe.2026-10-15-p217.tsv).**
+
+### 🆕 🟢 `P217-V1` — the two `ECL-2.0` platform rows, re-confirmed, no drift
+
+| platform | repo | grant | what it is | region of install base |
+|---|---|---|---|---|
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** · `11 120` B | Full LMS/VLE in Java — the reference `ECL-2.0` codebase | 🟢 **Global** |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** · `11 340` B | Automated lecture capture and video distribution at scale | 🟢 **EMEA**-led |
+
+🟢 **Control re-run this pass: `sakai`'s `LICENSE` serves `200` over `raw`, default branch
+`master` at `38dc517…`.** 🔵 **`Opencast` remains the one layer no LLM framework provides, and
+`ECL-2.0` remains permissive-with-a-narrower-patent-grant — the clause a studio puts in a
+contract, quoted in full at `P216-V2`.**
+
+### 🆕 🔴 `P217-V2` — the correction this shelf owes: `alfredang/AI-LMS-TMS` is not *"no grant"*, it is **refused**
+
+🔴 **This shelf carries, at l.`2107`:**
+
+> | 🔴 **[`alfredang/AI-LMS-TMS`]** | 🔴 **NO GRANT.** 🟡 But its `57 120` B README is the best
+> description this KB holds of Singapore's `WSQ`/`SkillsFuture`/`SSG` assessment-and-funding
+> regime …
+
+🟢 **The `README`, read in full this pass *(`57 174` B at `HEAD`)*, says at l.`703`:**
+
+> *«This project is **proprietary software** developed by Tertiary Infotech Pte Ltd.
+> **All rights reserved**.»*
+
+🔴 **So the correct cell is `GRANT-REFUSED`, not `NO GRANT`, and the difference is the whole
+procurement answer:**
+
+| if the cell says | an analyst does | cost |
+|---|---|---|
+| 🔴 *"NO GRANT"* | queues a licence probe, asks the author, waits | 🔴 wasted — it was answered on day one |
+| 🟢 **`GRANT-REFUSED`** | reads it as a **specification**, writes nothing from it | 🟢 correct and immediate |
+
+🟢 **The row keeps its value and changes its instruction: it is the best available description of
+the Singapore `WSQ`/`SkillsFuture` regime, and it is a document to LEARN from, never a codebase to
+fork, vendor or copy from.** 🔴 **Its sibling [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms)
+is grant-absent on the same author's account; neither is buildable.**
+
+🟡 **And the finding is not new to this KB — `agents/trending.md` l.`19972` recorded
+*"PROPIETARIO EXPLÍCITO"* at `pase 126` on `2026-10-05`. It did not reach this shelf because the
+propagation gate greps English *(`T217-2`)*.**
+
+### 🆕 🔴 `P217-V3` — the identity/rostering exemplar carries a restriction its licence name does not contain
+
+🔴 [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) — cited on these shelves five
+times as the Okta OIDC/SAML + OAuth 2.0 + **SCIM** rostering pattern worth copying — says, at
+l.`456`–`458`:
+
+> `## License` / **MIT — demo use only.**
+
+🔴 **"Demo use only" is a field-of-use restriction. MIT contains no such term, and a permissive
+name with a usage limit bolted on is not the permissive licence.** 🔴 **The complete tree
+*(`89` files)* contains no licence file at all, so the `README` line is the entire grant.**
+🟢 **Instruction: keep reading it as the reference ARCHITECTURE for SIS identity and rostering —
+that is why it is cited — and 🔴 do not lift its code into a deliverable.**
+
+### 🆕 🟡 `P217-V4` — the Moodle plugin tier is GPL, stated in prose only
+
+🟡 **Two `ISB Bayern` Moodle plugins —
+[`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) and
+[`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) — carry
+GNU GPL boilerplate inside the `README` *(`2024, ISB Bayern`, lead developer named)* and no
+licence file.** 🟢 **This is the expected shape: a Moodle plugin inherits GPL by the host's
+architecture, and the Moodle plugin directory requires it.** 🔵 **Recorded as
+`PROSE-CLAIM-BARE` with the version unpinned in the title window — 🟡 *"GNU General Public
+License as published by"* does not, in the matched window, say `v2` or `v3`, and for a Moodle
+plugin that distinction decides compatibility with the host.** 🔴 **Registered as part of
+`ACTION QT`; not resolved this pass.**
+
 
 ## Pass 216 — 2026-10-15 — THE PLATFORM TIER'S LICENCE FAMILY, RE-READ AT CLAUSE LEVEL: `ECL-2.0` IS PERMISSIVE ON COPYRIGHT AND NARROWER THAN `Apache-2.0` ON PATENTS, AND THAT IS THE SENTENCE A STUDIO HAS TO PUT IN A CONTRACT
 

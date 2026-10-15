@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — THE GATE IS MONOLINGUAL AND THE CORPUS IS NOT: `1 087` LINES OF THIS KB'S OWN LICENCE REASONING ARE IN SPANISH, AND THAT IS WHY `ACTION QN` WAS REGISTERED ON A CLAIM ITS OWN SHELVES REFUTE
+
+### 🆕 🔴 `T217-1` — `ACTION QL` fires on limb `1`, and the novelty claim it catches is `ACTION QN`'s
+
+🔴 **`ACTION QN` was registered on the premise that the repository `README`, read as prose, is
+*"the last unread channel"* on the ungranted population.** 🟢 **That premise is refuted by this
+KB's own `agents/trending.md` l.`19972`, written at `pase 126` on `2026-10-05`:**
+
+> | [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | 19 | 10 rutas + README |
+> 🔴 **PROPIETARIO EXPLÍCITO** — README: *«proprietary software developed by Tertiary Infotech
+> Pte Ltd. All rights reserved.»*
+
+🔴 **The channel was read `91` passes ago, the refusal was recorded, and the row still travelled
+through `p211`'s `ABSENT` census, `p215`'s recovery sweep and `p216`'s remainder arithmetic as an
+unknown.** 🟢 **`QL` limb `1` required `1`+ such claim. It has one, and it is the action that was
+supposed to spend this pass.**
+
+### 🆕 🔴 `T217-2` — the root cause, and it is new: every propagation gate this KB owns matches English only
+
+🔴 **`ACTION QL` is a grep. `qg_gate2.py` is a token comparison. Both are English.**
+🟢 **Measured over the `8` client-facing shelves
+*([`evidence/shelf-language-census.2026-10-15-p217.tsv`](../evidence/shelf-language-census.2026-10-15-p217.tsv))*:**
+
+| token | language | matching lines | files |
+|---|---|---|---|
+| `licencia` | 🔴 **ES** | **`1 087`** | `6` |
+| `barrido` *(sweep)* | 🔴 **ES** | `441` | `2` |
+| `lectura` *(reading)* | 🔴 **ES** | `227` | `3` |
+| `sin licencia` *(no licence)* | 🔴 **ES** | `130` | `2` |
+| `compuerta` *(gate)* | 🔴 **ES** | `76` | `2` |
+| `PROPIETARIO` | 🔴 **ES** | `31` | `2` |
+| `license` | 🟢 EN | `4 257` | `8` |
+| `no licence` | 🟢 EN | `566` | `8` |
+
+🔴 **A gate that greps `no licence` and `proprietary` cannot see `sin licencia` or `PROPIETARIO`,
+and there are `161` lines of exactly those two.** 🔵 **This KB's early history — through roughly
+`pase 126` — is written in Spanish, and it contains first-hand licence readings that the English
+half later re-derived, re-queued, or contradicted.**
+
+🟢 **The fix is small and belongs in `ACTION QO`'s gate: a bilingual token table. `licence`/
+`licencia`, `no licence`/`sin licencia`, `proprietary`/`propietario`, `path`/`ruta`,
+`sweep`/`barrido`, `pass`/`pase`.**
+
+### 🆕 🟡 `T217-3` — and this KB already found the language axis once, pointing outward
+
+🟢 **`agents/trending.md` l.`20019` registers `P421`: *«la señal NO-OSI puede no estar en
+inglés»*** — a Chinese-language proprietary `EULA` on `yuanjiusheng/cloud-learning-ce`
+*(`版权所有 … 保留所有权利`)* that an English title list would pass as unlicensed.
+🔴 **So the KB diagnosed the language axis for the repositories it reads, and never turned the
+same instrument on its own shelves.** 🔵 **`T217-2` is `P421` pointed inward, and it is the more
+expensive of the two, because the shelves are what the register greps.**
+
+### 🆕 🔴 `T217-4` — *"no grant"* is doing the work of three different findings
+
+🔴 **An absence marker that covers *"we did not look"*, *"we looked and found nothing"*, *"the
+author claims MIT but never shipped the file"* and *"the author says you may not use this"* is not
+a measurement, it is a queue.** 🟢 **Of the `67`:**
+
+- **`2`** are affirmatively **refused** — `AI-LMS-TMS` *(proprietary)*, `medkit-app`
+  *(not licensed for redistribution)*. 🔴 Never to be queued again.
+- **`15`** carry an **own-project prose claim** — a lead, not a grant.
+- **`47`** are the genuine unknowns *(`45` no-prose + `1` domain-noun + `1` third-party-only)*.
+
+🟢 **`ACTION QR` is registered to make `state` a required field alongside `channel`
+*(`ACTION PG`)*: `REFUSED` / `CLAIMED-IN-PROSE` / `UNREAD` / `UNKNOWN` are four different
+instructions to a studio, and one marker has been carrying all four.**
+
+### 🆕 🟢 `T217-5` — a content axis this KB has `216` passes of silence on: teacher-side deployment evidence
+
+🟢 **The mandated `LATAM` query returned, for the first time, a measured TEACHER-SIDE deployment
+with a named comparator rather than an adoption percentage** — `Profe Gabi` *(IDB/MINEDUC, Chile)*
+and the IDB's `Humans versus Chatbots` evaluation. 🔴 **Grepped in both languages before this
+sentence was written: `Profe Gabi` `0`, `Elige Educar` `0`, `Humans versus Chatbots` `0`,
+`Elacqua` `0`, `docentes noveles` `0`, `novice teacher` `0`.**
+🔵 **Recorded in [`intel/market.md`](market.md) `P217-M1`. 🟡 The shelves hold a great deal on what
+share of teachers use AI and nothing on what happens when a ministry deploys it to them.**
+
 
 ## Pass 216 — 2026-10-15 — THE PROPAGATION DEFECT HAS CLIMBED FROM CELLS TO THE ACTION REGISTER, AND THREE FALSIFIERS CAME BACK NEGATIVE, WHICH IS THE POINT OF HAVING THEM
 

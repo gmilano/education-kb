@@ -1,0 +1,63 @@
+# p217 - ACTION QN: the 67 remaining ungranted rows, probed through the ONE channel left unread -
+#        the repository's own README, read as TEXT.
+# method: curl -sSL raw.githubusercontent.com/<slug>/HEAD/<form> for forms
+#         README.md, readme.md, README.MD, README.rst, README.txt, README  -> first 200 wins.
+#         Then grep the body for a licence-shaped statement and classify FROM THE SECTION BODY,
+#         not from the heading (a bare "## License" heading carries no grant and must be opened).
+# NOTE (carried from ACTION QN's own registration, and it governs every row below):
+#        A PROSE CLAIM IS NOT A GRANT. Nothing here is promoted to a usable licence. Each hit is
+#        recorded as a CLASS. `mcp-powerschool` is the archived precedent for the distinction.
+# population 67 | README reachable 64 | non-public 3 | licence-shaped prose hits 19
+#
+# class vocabulary:
+#   PROSE-CLAIM-DANGLING  - README names a grant AND points at a LICENSE file that is NOT in the tree
+#   PROSE-CLAIM-BARE      - README names a grant, no pointer, no file in tree
+#   PROSE-CLAIM-QUALIFIED - README names a grant AND attaches a term the named licence does not contain
+#   PROSE-CLAIM-SCOPED    - README names a grant for PART of the repo only (curation vs linked content)
+#   PROSE-CLAIM-CONFLICT  - two channels INSIDE the one README name different licences
+#   PROSE-THIRD-PARTY     - the licence section covers dependencies only; no own-project grant
+#   GRANT-REFUSED         - README affirmatively REFUSES a grant. This is not an absence.
+#   DOMAIN-NOUN           - false positive: "licence" is the repo's subject matter, not its grant
+#   NO-PROSE              - README reachable, no licence-shaped statement
+#   NON-PUBLIC            - no README served and the address does not resolve / demands credentials
+repo	readme	bytes	class	grant_named	quoted_or_evidence
+CipherCraze/SpeakGenie-AI-Tutor	README.md	7795	PROSE-CLAIM-DANGLING	MIT	l.193 "licensed under the MIT License - see the [LICENSE](LICENSE) file"; ls-tree HEAD = 180 files, 0 licence-shaped paths
+dragonpilee/ScholarMate	README.md	4868	PROSE-CLAIM-DANGLING	MIT	l.7 shields.io MIT badge + l.152 "see the LICENSE file"; ls-tree HEAD = 36 files, 0 licence-shaped paths
+mayankjndl/vidyamind	README.md	10551	PROSE-CLAIM-DANGLING	MIT	l.244 "See [LICENSE](LICENSE) for details"; ls-tree HEAD = 76 files, 0 licence-shaped paths
+pulkitpareek18/LearnFlow-AI	README.md	4702	PROSE-CLAIM-DANGLING	MIT	l.147 "MIT License - see [LICENSE](LICENSE) for details"; ls-tree HEAD = 179 files, 0 licence-shaped paths
+CreveXTech/canvas-lms-mcp	README.md	9414	PROSE-CLAIM-BARE	MIT	l.243-245 "## License" / "MIT"
+educredentials/ec-issuer	README.md	4718	PROSE-CLAIM-BARE	MIT	l.121-123 "## License" / "MIT"
+tianshuo/trainingllm	README.md	9167	PROSE-CLAIM-BARE	MIT	l.237-239 "## License" / "MIT"
+haanhtuandev/vgu-mcp	README.md	5008	PROSE-CLAIM-BARE	MIT	l.169 "MIT License - made by VGU students, for VGU students"
+marcusgreen/moodle-qtype_aitext	README.md	3312	PROSE-CLAIM-BARE	GPL-3.0-or-later	l.64 "Licensed under the [GNU GPL v3 or later]"; ls-tree HEAD = 71 files, 0 licence-shaped paths
+adlnet/SCORM-to-xAPI-Wrapper	README.md	8202	PROSE-CLAIM-BARE	Apache-2.0	l.146-156 full Apache-2.0 boilerplate quoted inside the README
+bycs-lp/moodle-block_ai_chat	README.md	9633	PROSE-CLAIM-BARE	GPL (GNU, version not pinned in window)	l.154-161 "2024, ISB Bayern" + GNU GPL boilerplate; lead dev named
+bycs-lp/moodle-local_ai_manager	README.md	5354	PROSE-CLAIM-BARE	GPL (GNU, version not pinned in window)	l.86-93 "2024, ISB Bayern" + GNU GPL boilerplate; lead dev named
+barneslardo/sis-demo	README.md	20149	PROSE-CLAIM-QUALIFIED	MIT + field-of-use restriction	l.456-458 "## License" / "MIT - demo use only."  <- "demo use only" is NOT an MIT term
+mabdulre9/electrical-engineering	README.md	37538	PROSE-CLAIM-SCOPED	MIT (curation only)	l.616 "curation, organization and original text ... released under the [MIT License]"; l.618 "Linked courses remain under the license terms set by their publishers"
+eth-lre/mathtutorbench	README.md	14935	PROSE-CLAIM-CONFLICT	CC-BY-4.0 (badge) vs CC-BY-SA-4.0 (prose)	l.3 badge "License: CC BY 4.0" vs l.199-200 "licensed under a Creative Commons Attribution-ShareAlike 4.0 International Li..."
+jadrianlg16/learning-tutor	README.md	19295	PROSE-THIRD-PARTY	none for the project itself	l.174-178 section covers dependencies only: PyMuPDF AGPL-3.0/Artifex, FastMCP + python-multipart Apache-2.0, httpx + uvicorn BSD-3-Clause
+alfredang/AI-LMS-TMS	README.md	57174	GRANT-REFUSED	NONE - proprietary, all rights reserved	l.703 "This project is proprietary software developed by Tertiary Infotech Pte Ltd. All rights reserved."
+bedriyan/medkit-app	README.md	7097	GRANT-REFUSED	NONE - redistribution refused	l.189 "Private - hackathon submission. Not licensed for redistribution."
+spdx/license-list-data	README.md	6696	DOMAIN-NOUN	n/a - false positive	"License List Data" is the repo's SUBJECT. Confirms the licence-text-as-DATA class named at T215-4
+cdweaver1992/edfi-mcp-server	-	-	NON-PUBLIC	n/a	README 404 on all 6 forms; git ls-remote --symref returns empty
+openfresno/edgenuity-aeries-grade-passback	-	-	NON-PUBLIC	n/a	README 404 on all 6 forms; git ls-remote --symref returns empty
+jakerains/scormplayer	-	-	NON-PUBLIC	n/a	README 404 on all 6 forms; git ls-remote demands credentials (private or deleted)
+#
+# DECOMPOSITION OF THE 67, and every figure below is set-verified against the rows above:
+#   22 rows are itemised here; the remaining 45 served a reachable README with NO licence-shaped
+#   statement at all (NO-PROSE) and are not listed individually.
+#     15  own-project licence CLAIM   (4 DANGLING + 8 BARE + 1 QUALIFIED + 1 SCOPED + 1 CONFLICT)
+#      2  GRANT-REFUSED               - affirmatively closed, NOT an absence
+#      1  PROSE-THIRD-PARTY           - dependencies only, no own grant
+#      1  DOMAIN-NOUN                 - false positive
+#      3  NON-PUBLIC
+#     45  NO-PROSE
+#     --
+#     67  set-verified total (22 itemised + 45 unlisted)
+#
+# So "nothing whatever is known about this repo's grant" is true of 47 rows, not 67:
+#   45 NO-PROSE + 1 DOMAIN-NOUN + 1 PROSE-THIRD-PARTY = 47.
+# The 67 remains correct as the UNGRANTED count - a prose claim is still not a grant, and the 2
+# refusals are not grants either - but 67 is not a count of UNKNOWNS, and this KB has been
+# publishing it as though it were.

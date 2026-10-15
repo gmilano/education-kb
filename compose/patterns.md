@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — TWO RECIPES: THE GRANT CLASSIFIER THAT REPORTS A **STATE** INSTEAD OF A LICENCE STRING, AND THE BILINGUAL PROPAGATION GATE
+
+### 🆕 🟢 `P217-A` — `grant_state()`: never let a prose channel write the licence field
+
+🔵 **Problem it solves, measured this pass:** 🔴 **over the `67` ungranted rows, a scanner that
+trusts `README` prose records `MIT` for `4` repositories whose `LICENSE` file does not exist
+*(`180`, `179`, `76` and `36` files in tree, `0` licence-shaped paths)*, records `MIT` for a repo
+whose `README` says *"MIT — demo use only"*, and records `CC BY 4.0` for a benchmark whose own
+prose says `CC BY-SA 4.0`.** 🔴 **A scanner that reads only files records nothing for `2`
+repositories that have affirmatively REFUSED a grant — and so keeps re-queueing them forever.**
+
+🟢 **The recipe. The return value is a `(state, licence, channel)` triple, and the licence slot is
+`None` unless a BLOB was read:**
+
+```python
+# compose/code/p217-grant-state/grant_state.py
+REFUSAL = ("all rights reserved", "proprietary software", "not licensed for redistribution",
+           "todos los derechos reservados", "software propietario", "保留所有权利")  # T217-2, P421
+
+def grant_state(slug):
+    blob = read_licence_blob(slug)                 # p215 ls-tree channel: full tree, 0 blob transfer
+    if blob:
+        return ("GRANTED", classify_p216(blob), "blob")   # p216's ECL-aware title-window classifier
+
+    readme = fetch_readme(slug)                    # 6 forms; None if the repo is gone
+    if readme is None:
+        return ("NON-PUBLIC", None, None)          # confirm with `git ls-remote --symref`
+
+    win = licence_section(readme)                  # the SECTION BODY, never the heading alone
+    if not win:
+        return ("UNKNOWN", None, "readme")
+    if any(t in win.lower() for t in REFUSAL):
+        return ("GRANT-REFUSED", None, "readme")   # <-- answered. Never queue again.
+    if names_a_licence(win) and not points_at_existing_file(slug, win):
+        return ("CLAIMED-DANGLING", None, "readme")
+    return ("CLAIMED-IN-PROSE", None, "readme")
+```
+
+1. 🔴 **Test `GRANT-REFUSED` before any permissive token.** `AI-LMS-TMS`'s `README` contains the
+   word *"License"* as a heading and *"All rights reserved"* as the body. Heading-first ordering
+   gets it backwards — the same ordering bug `P216-A` fixed for `ECL-2.0`.
+2. 🔴 **Open the SECTION, not the heading.** `9` of this pass's `19` hits matched only
+   `## License`; the grant was `1`–`3` lines below, and in two cases it was a refusal.
+3. 🔴 **`licence` stays `None` for every prose state.** This is the rule the whole recipe exists
+   to enforce: 🟢 *a prose claim is a lead with a named channel, never a grant.*
+4. 🟢 **`points_at_existing_file()` is what makes `CLAIMED-DANGLING` cheap** — the tree is already
+   in hand from step one, so the check is a set membership test, not a fetch.
+5. 🟢 **Reject the domain noun.** `spdx/license-list-data` is a repository ABOUT licences;
+   require the section to be the repo's own grant, not its subject *(`T215-4`, second instance)*.
+
+🔵 **Wire it where `P216-A` goes — `make hooks` — and have it write `state` into the cell rather
+than a licence string. 🟢 Four states, four different instructions to a studio:
+`GRANTED` → build · `CLAIMED-*` → ask, one line fixes it · `GRANT-REFUSED` → do not touch ·
+`UNKNOWN` → probe.**
+
+### 🆕 🟢 `P217-B` — the bilingual propagation gate, which is the cheapest fix on this shelf
+
+🔵 **Problem it solves, measured this pass:** 🔴 **`ACTION QN` cost a full pass because it was
+registered on *"`README` prose is the last unread channel"*, and this KB's own
+`agents/trending.md` l.`19972` had read that channel `91` passes earlier and recorded the answer —
+in Spanish.** 🔴 **`1 087` lines of these shelves carry `licencia`; `130` carry `sin licencia`;
+`31` carry `PROPIETARIO`. Every gate this KB has built greps English.**
+
+🟢 **The recipe is a token table, and that is the entire trick:**
+
+```python
+# compose/code/p217-bilingual-gate/tokens.py
+EQUIV = {                     # each row is ONE concept, and the gate must match ANY member
+    "licence":    ("licence", "license", "licencia"),
+    "no_licence": ("no licence", "no license", "sin licencia", "no tiene licencia"),
+    "proprietary":("proprietary", "propietario", "propietaria", "保留所有权利"),
+    "path":       ("path", "paths", "ruta", "rutas"),
+    "sweep":      ("sweep", "barrido"),
+    "reading":    ("reading", "lectura"),
+    "pass":       ("pass", "pase"),
+    "gate":       ("gate", "compuerta"),
+}
+
+def already_on_shelves(concept, shelves):
+    """ACTION QL's precondition. Returns the FIRST citation, or None."""
+    return first_hit(EQUIV[concept], shelves)      # any member counts as a hit
+```
+
+1. 🔴 **Run it as `ACTION QL`'s precondition**, before an action may be registered on a claim of
+   absence. Had it run on `QN`, `QN` would have been registered on the narrower and true claim —
+   *"prose was read for `1` row at `pase 126`; the other `66` are unread"* — and this pass would
+   have started from the right place.
+2. 🟢 **It is free.** `8` concepts, one `grep` each, entirely offline, over files already on disk.
+3. 🟡 **Extend it, do not perfect it.** The table above covers what the census measured; add a row
+   the first time a pass trips on a token it lacks, and record the trip.
+4. 🔵 **Note the precedent this generalises:** `P421` found a Chinese-language proprietary `EULA`
+   on `yuanjiusheng/cloud-learning-ce` and concluded *«la señal NO-OSI puede no estar en
+   inglés»*. 🟢 **`P217-B` is that finding turned inward, onto the shelves themselves —
+   and `REFUSAL` in `P217-A` already carries the Chinese and Spanish forms for the same reason.**
+
 
 ## Pass 216 — 2026-10-15 — TWO RECIPES: THE LICENCE CLASSIFIER THAT CAN SEE EDUCATION'S OWN LICENCE, AND THE AI-OVER-LECTURE-VIDEO STACK THAT `ECL-2.0` MAKES SELLABLE
 

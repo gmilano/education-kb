@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 217 — `0` new agents, but the five-pass run of `0` NEW ENTITIES ends: `Profe Gabi` is real, and `2` rows on these shelves turn out to have refused a grant all along
+
+🟢 **APPEND-ONLY. History below this section is intact — and this pass is the one that proves why
+that matters.**
+
+### 🆕 🟢 The history below this line refuted the action that was supposed to spend this pass
+
+🔴 **`ACTION QN` was registered on *"`README` prose is the last unread channel"*.**
+🟢 **`agents/trending.md` l.`19972` — in this file, `pase 126`, `2026-10-05` — already read it:**
+
+> | [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | 19 | 10 rutas + README |
+> 🔴 **PROPIETARIO EXPLÍCITO** — README: *«proprietary software developed by Tertiary Infotech
+> Pte Ltd. All rights reserved.»*
+
+🔵 **An append-only shelf is the reason that sentence still exists to be found. 🔴 The reason it
+was NOT found — by the gate whose entire job is to find it — is that the gate greps English and
+the sentence is in Spanish *(`T217-2`,
+[`evidence/shelf-language-census.2026-10-15-p217.tsv`](../evidence/shelf-language-census.2026-10-15-p217.tsv))*.**
+
+### 🆕 🟢 `8` searches ran verbatim, and `1` named entity came back that these shelves do not hold
+
+🟢 **All `8` ran** — `top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`,
+`AI education industry trends 2026`, and the four regional runs of
+`AI education {region} 2026 adoption regulation players`.
+
+🔵 **`35` named candidates returned; checked one at a time by grep, in both languages:**
+
+| returned | already on these shelves? |
+|---|---|
+| `Project NOMAD`, `OpenEduCat`, `Krayin`, `Huly`, `Apache OFBiz`, `ERPNext` | 🟢 yes |
+| `OpenHands`, `OpenClaw`, `CrewAI`, `LangGraph`, `Hermes Agent`, `Open WebUI`, `BitNet` | 🟢 yes — 🟡 and all general-purpose, not education-sector: the `T176` category confusion, third consecutive appearance |
+| `H.R. 8747`, `AB 1159`, `SB 1227`, `Katy ISD`, Oklahoma/Maryland oversight, NYC K-8 moratorium, `STUDENTS FIRST` | 🟢 yes |
+| EU `AI Act` high-risk classification, `Digital Omnibus` | 🟢 yes |
+| Vietnam `134/2025/QH15`, Korea `AI Basic Act`, Taiwan `AI Basic Act`, `MEXT`, Singapore `MOE` | 🟢 yes |
+| `IESALC`, LAC `Observatory`, `TALIS 2024`, `PISA 2025`, `CONPES 4144`, `Cetic.br`, `Ceibal`, `Profuturo`, Uruguay/Peru/Mexico instruments | 🟢 yes |
+| 🆕 **`Profe Gabi`** *(IDB/MINEDUC teacher-mentoring chatbot, Chile)* | 🔴 **NO — `0` hits, `ES` and `EN`** |
+| 🆕 `Humans versus Chatbots` *(IDB)*, `Elige Educar`, `Elacqua`, `arXiv 2604.04139`, `TheTeacher.AI` | 🔴 **NO — `0` hits** |
+
+🟢 **Recorded in [`intel/market.md`](../intel/market.md) `P217-M1`–`M3`. 🔴 Outcomes for
+`Profe Gabi` are NOT published in any reachable source and are not quoted; the two snippets even
+disagree on the scale-up figure *(`13 000` vs `20 000`)*, and that disagreement is recorded rather
+than resolved.**
+
+### 🆕 🔴 `2` agent-tier rows move from *"no grant"* to **refused**
+
+| repo | `README`, read today | this shelf's cell before today |
+|---|---|---|
+| [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | 🔴 *"proprietary software … All rights reserved"* `l.703` | 🔴 "NO GRANT" |
+| [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) | 🔴 *"Private — hackathon submission. Not licensed for redistribution."* `l.189` | 🔴 "NONE" *(`agents/top.md` l.`2669`)* |
+
+🔵 **Neither is a gap. Both are answers, and both have been queued as gaps for passes.**
+
+### 🆕 🟡 `4` agent rows promise a `LICENSE` file that is not in their tree
+
+🟡 [`CipherCraze/SpeakGenie-AI-Tutor`](https://github.com/CipherCraze/SpeakGenie-AI-Tutor) *(`180` files)* ·
+[`pulkitpareek18/LearnFlow-AI`](https://github.com/pulkitpareek18/LearnFlow-AI) *(`179`)* ·
+[`mayankjndl/vidyamind`](https://github.com/mayankjndl/vidyamind) *(`76`)* ·
+[`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate) *(`36`)* — 🔴 **each says
+*"MIT — see the `LICENSE` file"*; each full tree contains `0` licence-shaped paths.**
+🟢 **One commit fixes any of them, which is what makes this the most actionable class on the
+shelf — and `ACTION PH`'s standing restraint still applies: this KB does not open issues on third
+parties' repositories unattended.**
+
 
 ## 2026-10-15 — Pass 216 — `0` new agents for the fifth pass, and the thing that moved is this KB's own action register
 

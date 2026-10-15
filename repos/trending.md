@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 217 — `0` new trending repos; `3` rows on these shelves no longer exist in public, and `19` of `67` ungranted rows turn out to carry a licence statement in prose
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 No new trending surface, measured rather than assumed
+
+🟢 **`github trending education AI 2026` and `top open source AI agents education 2026 github MIT`
+both ran verbatim.** 🔴 **`0` repositories returned that these shelves do not carry.**
+🟡 **`Project NOMAD` *(offline-first education server, ~`39.8`k★ on an aggregator dated
+`2026-10-13`)* is already here and the star figure remains snippet-sourced — `api.github.com` is
+`403` from this environment, so it is NOT recorded as a measured count.**
+🔵 **`Open WebUI` *(`155`k★)*, `BitNet`, `karpathy/nanochat` and `microsoft/ai-agents-for-beginners`
+returned again: general-purpose or teaching MATERIAL, not education-sector software — `T176`,
+third consecutive appearance.**
+
+### 🆕 🔴 `3` repositories carried on these shelves have left the public internet
+
+🟢 **Two independent channels agree — `README` `404` on all `6` filename forms, and
+`git ls-remote --symref`:**
+
+| repo | `README` ×`6` | `git ls-remote --symref` | reading |
+|---|---|---|---|
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | 🔴 `404` | 🔴 **empty** | gone or renamed |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | 🔴 `404` | 🔴 **empty** | gone or renamed |
+| [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) | 🔴 `404` | 🔴 **credentials demanded** | private or deleted |
+
+🟡 **Same `3` p216 called *"unresolvable"*, now confirmed through a different request shape.**
+🔵 **They should carry an `ARCHIVED-UPSTREAM` state: a repository that cannot be fetched cannot be
+licensed, and counting it in a live ungranted population overstates the work outstanding by `3`.**
+
+### 🆕 🟡 `19` of the `67` carry a licence-shaped statement in `README` prose
+
+🟢 **Full classification in
+[`evidence/readme-prose-grant-probe.2026-10-15-p217.tsv`](../evidence/readme-prose-grant-probe.2026-10-15-p217.tsv).
+`64` of `67` served a `README`; every hit was classified from the SECTION BODY, never the
+heading — `9` of the `19` matched only `## License`, with the grant `1`–`3` lines below:**
+
+| class | rows | examples |
+|---|---|---|
+| 🟡 `PROSE-CLAIM-DANGLING` | `4` | `SpeakGenie-AI-Tutor`, `LearnFlow-AI`, `vidyamind`, `ScholarMate` — all MIT, all pointing at a file that is not in the tree |
+| 🟡 `PROSE-CLAIM-BARE` | `8` | `canvas-lms-mcp`, `ec-issuer`, `trainingllm`, `vgu-mcp` *(MIT)*; `moodle-qtype_aitext` *(`GPL-3.0`+)*; `SCORM-to-xAPI-Wrapper` *(Apache-2.0 boilerplate in-README)*; `2` `ISB Bayern` Moodle plugins *(GNU GPL, version unpinned)* |
+| 🟡 `PROSE-CLAIM-QUALIFIED` | `1` | `barneslardo/sis-demo` — *"MIT — demo use only"* |
+| 🟡 `PROSE-CLAIM-SCOPED` | `1` | `mabdulre9/electrical-engineering` — MIT on curation; linked courses keep publishers' terms |
+| 🔴 `PROSE-CLAIM-CONFLICT` | `1` | `eth-lre/mathtutorbench` — badge `CC BY 4.0` vs prose `CC BY-SA 4.0`, same file |
+| 🟡 `PROSE-THIRD-PARTY` | `1` | `jadrianlg16/learning-tutor` — dependencies only, no own grant |
+| 🔴 `GRANT-REFUSED` | `2` | `alfredang/AI-LMS-TMS`, `bedriyan/medkit-app` |
+| 🟢 `DOMAIN-NOUN` | `1` | `spdx/license-list-data` — false positive, second instance of the `T215-4` class |
+
+🔴 **None is promoted to a usable licence. 🟢 A prose claim is a lead with a named channel; the
+`mcp-powerschool` precedent governs, and `P217-A` encodes it: the `licence` field stays `None`
+unless a blob was read.**
+
+### 🆕 🟢 The ungranted population, restated honestly
+
+🟢 **`67` is confirmed as a count of rows with no readable GRANT *(`P217-F1`, rebuilt from the two
+evidence files)*. 🔴 It is NOT a count of unknowns.** 🟢 **`47` is:
+`45` `NO-PROSE` + `1` domain-noun + `1` third-party-only. The other `20` are `2` refusals,
+`15` prose claims and `3` repositories that no longer exist.**
+
 
 ## 2026-10-15 — Pass 216 — `0` new trending repos, `5` new `ECL-2.0` grant cells on an abandoned org, and the ungranted count drops to `67`
 

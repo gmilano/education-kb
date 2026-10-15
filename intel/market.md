@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — THE FIRST TEACHER-SIDE DEPLOYMENT EVIDENCE ON THESE SHELVES, AND TWO SNIPPETS THAT DISAGREE WITH EACH OTHER ABOUT ITS SCALE
+
+🔵 **Channel note, re-tested and unchanged *(thirteenth time)*:** 🔴 **`api.github.com` → `403`;
+`github.com` HTML → `403`; `publications.iadb.org` → `ENOTFOUND` from this session.**
+🟢 **`raw.githubusercontent.com` → `200`; `git ls-remote --symref`, `git clone --filter=blob:none`
+and `git ls-tree -r HEAD` all work.** 🔴 **Every market and policy figure below is a
+SEARCH-SNIPPET claim and is marked as such; the IDB primary documents could not be opened.**
+
+### 🆕 🟢 `P217-M1` — `Profe Gabi`: a ministry-scale teacher-mentoring deployment, and the first one these shelves carry
+
+🔴 **Novelty established by grep in BOTH languages before writing** *(`T217-2`)*: `Profe Gabi` `0`
+files, `Elige Educar` `0`, `Humans versus Chatbots` `0`, `Elacqua` `0`, `docentes noveles` `0`,
+`novice teacher` `0`, `induction`/`inducción` `0`.
+
+| field | what the snippets establish | confidence |
+|---|---|---|
+| what | Generative-AI **mentoring chatbot for NOVICE teachers**, delivered over **WhatsApp** — pedagogical, socioemotional and career guidance; principals get support strategies | 🟢 consistent across `2` sources |
+| who | **IDB** working paper, authors **Elacqua, Hermosilla, Kutscher, Del Toro Mijares**; sits inside the **MINEDUC** national mentoring system | 🟢 consistent |
+| pilot | **`550`** primary and secondary teachers, multiple grades and regions, **`8` weeks, Oct–Dec `2024`** | 🟢 consistent |
+| scale-up | 🔴 **the two snippets DISAGREE: `~13 000` teachers in `2025` *(IDB TC document)* vs `20 000` with a randomised controlled trial *(publication summary)*** | 🔴 **unresolved — recorded as a conflict, not averaged** |
+| outcomes | 🔴 **NOT established.** One summary claims *">3× the reach of the national induction programme"* and *"engagement dropped significantly"*; a second, more thorough search could not corroborate either and found no published results | 🔴 **do not quote** |
+
+🔵 **Why it belongs on a studio shelf:** 🟢 **it is the only item here where a government deployed
+AI *to teachers* at national-programme scale with a stated counterfactual.** 🔴 **And the one
+outcome signal that IS corroborated is negative** — see `P217-M2`.
+
+### 🆕 🔴 `P217-M2` — the negative result, which is the more useful half
+
+🟢 **The IDB's *Humans versus Chatbots: Scaling-up behavioral interventions to reduce teacher
+shortages* evaluates a WhatsApp chatbot for recruiting education students in Chile *(the
+`Elige Educar` / "Quiero ser Profe" recruitment line, distinct from `Profe Gabi`)*:**
+
+> 🔴 **the human-run arm worked; the rule-based bot arm produced smaller, statistically
+> insignificant effects.**
+
+🔵 **For a studio this is the sentence to put in a proposal, not bury: on the RECRUITMENT task, a
+rule-based bot underperformed humans in a measured trial. 🟡 It says nothing about a generative
+arm, which is precisely what `Profe Gabi` tests on the MENTORING task — and whose results are not
+public.** 🔴 **Anyone pitching "chatbot replaces mentor" in LATAM is pitching against the only
+controlled evidence on these shelves.**
+
+### 🆕 🟡 `P217-M3` — two further teacher-side sources, logged as leads
+
+| source | what it is | on these shelves before? |
+|---|---|---|
+| 🆕 `arXiv 2604.04139` — *Teacher Professional Development on WhatsApp* | April `2026` preprint; same delivery channel, same population | 🔴 **`0`** |
+| 🆕 `arXiv 2310.02982` — *Are LLMs Useful in the Poorest Schools? TheTeacher.AI in Sierra Leone* | LLM teacher support in a low-connectivity setting | 🔴 **`0`** *(`Sierra Leone` appears in `2` files on other grounds)* |
+
+🔵 **Both are unread this pass — `arxiv.org` was not probed — and are registered as `ACTION QS`
+rather than summarised from a search snippet.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Unchanged and saturated this pass.** The mandated query returned `134` AI-in-education bills
+across `31` states, `H.R. 8747`, California `AB 1159`, Idaho `SB 1227`, Oklahoma/Maryland human
+oversight, `Katy ISD`, the NYC K-8 moratorium — 🟢 **all already carried.**
+🔵 **Opportunity, unchanged: the privacy-and-oversight compliance layer. `AB 1159`-shaped rules
+*(no student data into model training)* are a build, not a policy question, and the
+`P217-A` channel-reporting recipe is the licence half of the same diligence.**
+
+### EMEA
+
+🟢 **Saturated on instruments; the `EU AI Act` high-risk classification of learner-evaluating
+systems and the `Digital Omnibus` timeline are carried.** 🔴 **The `MEN` *(France)* gap stands
+from `ACTION QJ` and is a QUERY-LANGUAGE gap, not an absence — and `T217-2` has now shown the same
+defect operating inside this KB's own shelves, which raises its priority.**
+🟢 **Opportunity: `ECL-2.0` platform work. `Opencast` is EMEA-led, permissive, and still the only
+lecture-video capture layer no LLM framework provides** *(`P216-V1`)*. 🟡 **And
+`eth-lre/mathtutorbench` — ETH Zurich, the strongest EMEA-origin evaluation asset here — carries a
+`CC BY` / `CC BY-SA` self-contradiction that must be resolved before any derived eval set ships.**
+
+### APAC
+
+🟢 **Saturated on instruments: Vietnam's Law `134/2025/QH15` *(in force `1` Mar `2026`, education
+named a high-risk sector — automated assessment, behavioural monitoring)*, Korea's `AI Basic Act`
+*(`22` Jan `2026`, one-year enforcement grace)*, Taiwan's `AI Basic Act`, Japan `MEXT`, Singapore
+`MOE`/`AICET` — all carried.**
+🔴 **New this pass, and it is a WARNING not an opportunity:
+[`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) — the single best description
+this KB holds of Singapore's `WSQ`/`SkillsFuture`/`SSG` assessment-and-funding workflow, in a
+`57 174` B `README` — is `PROPRIETARY, ALL RIGHTS RESERVED`.** 🟢 **Read it to understand the
+regime; 🔴 do not vendor a line of it. Its sibling `alfredang/ai-mms` is grant-absent on the same
+author's account.**
+
+### LATAM
+
+🟢 **The one region that moved this pass.** 🆕 **`Profe Gabi` *(`P217-M1`)* and the IDB
+`Humans versus Chatbots` negative result *(`P217-M2`)* are both new to these shelves.**
+🟢 **Carried and unchanged:** UNESCO `IESALC`/UNU-IAS `200`-institution, `19`-country study
+*(only `26`% hold a formal AI strategy)*; the UNESCO LAC `Observatory` *(launched `14` Apr
+`2026`)*; `TALIS 2024` teacher use *(Brazil `56`%, Chile `55`%, Colombia `53`%, Costa Rica `52`%
+vs OECD `36`%)*; `PISA 2025` *(≈`9` in `10` `15`-year-olds across `13` countries)*; Argentina's
+`75`%/`42`% socio-economic split; `Cetic.br` *(only `22`% of Brazilian schools hold guidelines)*;
+`CONPES 4144`, Uruguay's Council of Europe signature, Peru's sandboxes, Mexico's `2024` bill.
+
+🟢 **Opportunity, and `P217-M2` sharpens it:** 🔴 **the region's gap is governance and teacher
+capability, not student enthusiasm — adoption is already near-universal while `74`% of
+institutions have no strategy.** 🟢 **The sellable engagement is the institutional AI strategy and
+the teacher-facing deployment, and the evidence base now says to staff the human layer rather than
+replace it.**
+
+### Global
+
+🟢 **Market sizing remains vendor-sourced and mutually inconsistent — `$10.6`B *(Research and
+Markets, `2026`)*, `$12.3`B *(HolonIQ via X-Pilot)*, `~$6`B `2024`→`$32`B `2030`
+*(K-12 Academics)*.** 🔴 **Unchanged guidance: do not put a single figure in a client deck
+without naming the house.**
+
 
 ## Pass 216 — 2026-10-15 — `ACTION QJ` IS ANSWERED AND CLOSED ON LIMB `2`: THE REGION SHAPE WAS NEVER THE DEFECT, BECAUSE THE ORGAN-NAMED QUERIES RETURN THE SAME SATURATED CELLS
 

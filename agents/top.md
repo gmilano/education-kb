@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — THE UNGRANTED `67` IS NOT A POPULATION OF UNKNOWNS: `15` ROWS CLAIM A LICENCE IN PROSE, `2` AFFIRMATIVELY REFUSE ONE, AND THIS KB HAS BEEN PUBLISHING ALL THREE STATES WITH THE SAME MARKER
+
+🔵 **`0` new agent rows this pass.** 🟢 **The `8` mandated searches were run verbatim — `4` global,
+`4` per-region — and returned `1` named entity these shelves do not already carry, which ends a
+five-pass run of `0`.** 🟢 **`ACTION QN` and `ACTION QL` discharged; both fire on limb `1`.**
+🔴 **And `QL`'s root cause is the most consequential thing found this pass: this KB is bilingual
+and every gate it has built is monolingual.**
+
+🔵 **Methods and evidence:
+[`evidence/readme-prose-grant-probe.2026-10-15-p217.tsv`](../evidence/readme-prose-grant-probe.2026-10-15-p217.tsv),
+[`evidence/shelf-language-census.2026-10-15-p217.tsv`](../evidence/shelf-language-census.2026-10-15-p217.tsv).**
+
+### 🆕 🔴 `P217-1` — `ACTION QN` fires on limb `1` at `19` of `67`, and the interesting part is not the count
+
+🟢 **The `67` rows this KB carries as ungranted were probed through the one channel p216 left
+unread: the repository's own `README`, read as text.** 🟢 **`64` of `67` served a `README`;
+`19` carried a licence-shaped statement.** 🔴 **`QN`'s limb `1` threshold was `3`.**
+
+🔴 **But a count of `19` is not the finding. The finding is that those `19` are in four different
+legal positions, and these shelves describe every one of them as *"no grant"*:**
+
+| state | rows | what a studio must actually do |
+|---|---|---|
+| 🔴 **`GRANT-REFUSED`** — the author affirmatively refuses a grant | **`2`** | 🔴 **Do not touch.** Not a gap to chase |
+| 🟡 **`PROSE-CLAIM-DANGLING`** — `README` names MIT *and points at a `LICENSE` file that is not in the tree* | **`4`** | 🟡 Ask the author to commit the file. One line fixes it |
+| 🟡 **other own-project prose claims** *(bare, qualified, scoped, conflicting)* | **`11`** | 🟡 Treat as a lead, never as a grant |
+| 🟢 **nothing known** *(`45` `NO-PROSE` + `1` domain-noun + `1` third-party-only)* | **`47`** | 🟢 The genuine unknowns |
+
+🔴 **`47`, not `67`, is the number of repositories about which this KB knows nothing. The `67`
+remains correct as an UNGRANTED count — a prose claim is not a grant, and a refusal is not a grant
+— but it has been read as a count of unknowns, and it is not one.**
+
+### 🆕 🔴 `P217-2` — the two refusals, quoted, because *"no licence"* and *"you may not"* are not the same sentence
+
+| repo | what the `README` actually says | what these shelves say today |
+|---|---|---|
+| 🔴 [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) | *«This project is **proprietary software** developed by Tertiary Infotech Pte Ltd. **All rights reserved**.»* `l.703` | `repos/foundations.md` l.`2941`, `verticals/solutions.md` l.`2107`, `intel/market.md` l.`5278`: 🔴 **"NO GRANT"** |
+| 🔴 [`bedriyan/medkit-app`](https://github.com/bedriyan/medkit-app) | *«**Private** — hackathon submission. **Not licensed for redistribution**.»* `l.189` | `agents/top.md` l.`2669`: 🔴 **"NONE"** |
+
+🔵 **The marker is not wrong. It is undifferentiated, which on this axis is the same cost: an
+analyst reading *"no grant"* queues the row for a licence probe, and both of these rows have been
+answered since the day they were written.**
+
+### 🆕 🔴 `P217-3` — `4` of `4` tested `LICENSE` pointers are DANGLING, which is worse than silence
+
+🟢 **Each of these says *"see the `LICENSE` file"*. Each tree was then read in full through
+`git clone --filter=blob:none --no-checkout` + `git ls-tree -r HEAD` — complete inventory, zero
+blob transfer:**
+
+| repo | what the `README` promises | files in tree | licence-shaped paths |
+|---|---|---|---|
+| [`CipherCraze/SpeakGenie-AI-Tutor`](https://github.com/CipherCraze/SpeakGenie-AI-Tutor) | MIT, *"see the `[LICENSE](LICENSE)` file"* | `180` | 🔴 **`0`** |
+| [`pulkitpareek18/LearnFlow-AI`](https://github.com/pulkitpareek18/LearnFlow-AI) | MIT, *"see `[LICENSE](LICENSE)`"* | `179` | 🔴 **`0`** |
+| [`mayankjndl/vidyamind`](https://github.com/mayankjndl/vidyamind) | MIT, *"See `[LICENSE](LICENSE)`"* | `76` | 🔴 **`0`** |
+| [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate) | MIT badge **and** *"see the `LICENSE` file"* | `36` | 🔴 **`0`** |
+
+🔴 **This is the class that defeats an automated scanner. A tool that trusts `README` prose records
+`MIT` for four repositories whose grant has never been published; a tool that reads only files
+records nothing and is right. 🟢 Globant's answer is the `P217-A` recipe: report the CHANNEL, and
+never let a prose channel write the grant field.**
+
+### 🆕 🟡 `P217-4` — three claims that are not what a one-line scanner would record
+
+- 🟡 [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) — *«MIT — **demo use only**.»*
+  🔴 **"Demo use only" is not a term MIT contains.** A field-of-use restriction bolted to a
+  permissive name is not that permissive licence, and this row is the Okta/SCIM identity example
+  this KB has cited five times as the rostering pattern worth copying.
+- 🟡 [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) *(ETH Zurich, EMEA)* —
+  🔴 **the badge says `CC BY 4.0`; the prose, `193` lines later, says
+  `Creative Commons Attribution-ShareAlike 4.0`.** 🔵 Two channels inside one file, disagreeing on
+  whether derived evaluation sets inherit copyleft. 🔴 These shelves currently say *"no licence
+  field at all"* *(`agents/top.md` l.`9415`)*.
+- 🟡 [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering) —
+  MIT covers *"the curation, organization and original text"*; 🔴 *"linked courses remain under the
+  license terms set by their publishers."* A scoped grant over a content index, not over content.
+
+### 🆕 🟢 `P217-5` — `spdx/license-list-data` confirms a class this KB named at `T215-4`
+
+🟢 **The probe flagged it; the body shows *"License List Data"* is the repository's SUBJECT, and
+*"## License List Data Build Process"* is a build heading.** 🟢 **Licence text as DATA, exactly as
+`T215-4` predicted, now with a second independent instance. 🔵 The classifier needs the same
+title-window discipline `P216-A` gave the ECL token: a heading is not a grant.**
+
 
 ## Pass 216 — 2026-10-15 — THE PROPAGATION DEFECT HAS REACHED THE ACTION REGISTER: `ACTION QI` WAS REGISTERED ON A CLAIM OF NOVELTY THAT PASS `200` REFUTES IN FULL, AND `3` OF `4` ACTIONS FIRE ON LIMB `2`
 

@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 217 — 2026-10-15 — THE `67` IS ARITHMETICALLY CONFIRMED AND SEMANTICALLY WRONG: `47` IS THE NUMBER OF REPOSITORIES THIS KB KNOWS NOTHING ABOUT
+
+🔵 **`0` new foundation rows.** 🟢 **`ACTION QM` and `ACTION QN` discharged.** 🔵 **Evidence:
+[`evidence/readme-prose-grant-probe.2026-10-15-p217.tsv`](../evidence/readme-prose-grant-probe.2026-10-15-p217.tsv),
+[`evidence/shelf-language-census.2026-10-15-p217.tsv`](../evidence/shelf-language-census.2026-10-15-p217.tsv).**
+
+### 🆕 🟢 `P217-F1` — `ACTION QM`: p216's `67` is correct, rebuilt from the evidence files it cites
+
+🟢 **`T216-1` was registered because p215 published `63` three times and the figure was wrong.
+p216 published `67`. Recomputed this pass from the two committed evidence files, independently:**
+
+| step | count | how it was established |
+|---|---|---|
+| `ABSENT` after `18` root forms *(p211)* | `94` | [`ungranted-after-18-forms.2026-10-15-p211.tsv`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv), rows `4`–`97` |
+| recovered by `ACTION QD` *(p215)* | `25` | [`lstree-grant-recovery.2026-10-15-p215.tsv`](../evidence/lstree-grant-recovery.2026-10-15-p215.tsv), rows `10`–`34` |
+| of those `25`, inside the `94` | 🟢 **`25`** | set-verified slug by slug; `0` outside |
+| raw remainder | `69` | `94` − `25` |
+| less the owner-case duplicate pair | `68` | `Hesham0-0Nasser/tutor-lms-mcp` ≡ `hesham0-0nasser/tutor-lms-mcp`, both unrecovered |
+| less the row whose case-variant p215 recovered | 🟢 **`67`** | `os4ed/openSIS-Classic`; variant `OS4ED/openSIS-Classic` recorded `GPL-2.0` |
+
+🟢 **`ACTION QM` fires on limb `2` for this figure: p216's arithmetic reproduces exactly. The
+`63` was isolated, and the correction held.** 🔵 **`QM` is re-registered as `ACTION QT` for the
+remaining quoted populations — this pass verified the headline count, not all of them.**
+
+### 🆕 🔴 `P217-F2` — and the count that IS defensible is still being read as the wrong thing
+
+🟢 **`67` is a correct count of rows carrying no readable GRANT. 🔴 It is not a count of rows this
+KB knows nothing about, and that is how it has been used.** 🟢 **Decomposed by `ACTION QN`, all
+`67` accounted for:**
+
+| class | rows | is it a grant? | is it an unknown? |
+|---|---|---|---|
+| 🔴 `GRANT-REFUSED` | `2` | 🔴 no — affirmatively refused | 🔴 **no. Answered.** |
+| 🟡 `PROSE-CLAIM-DANGLING` | `4` | 🔴 no | 🔴 **no. A lead with a named defect** |
+| 🟡 `PROSE-CLAIM-BARE` | `8` | 🔴 no | 🔴 no |
+| 🟡 `PROSE-CLAIM-QUALIFIED` / `SCOPED` / `CONFLICT` | `3` | 🔴 no | 🔴 no |
+| 🟡 `PROSE-THIRD-PARTY` | `1` | 🔴 no | 🟢 yes |
+| 🟡 `DOMAIN-NOUN` *(false positive)* | `1` | 🔴 n/a | 🟢 yes |
+| 🔴 `NON-PUBLIC` | `3` | 🔴 n/a | 🟡 **moot — the address no longer resolves** |
+| 🟢 `NO-PROSE` | `45` | 🔴 no | 🟢 **yes** |
+| **total** | 🟢 **`67`** | | 🟢 **`47` genuine unknowns** |
+
+🔵 **`45` + `1` + `1` = `47`. The `3` `NON-PUBLIC` rows are excluded from the unknowns because
+there is nothing left to probe.**
+
+### 🆕 🔴 `P217-F3` — `3` rows on these shelves no longer exist in public
+
+🟢 **Established through two independent channels — `README` `404` on all `6` forms, and
+`git ls-remote --symref`:**
+
+| repo | `README` probe | `git ls-remote` |
+|---|---|---|
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | 🔴 `404` ×`6` | 🔴 **empty — does not resolve** |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | 🔴 `404` ×`6` | 🔴 **empty — does not resolve** |
+| [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) | 🔴 `404` ×`6` | 🔴 **demands credentials — private or deleted** |
+
+🟡 **These are the same `3` p216 called *"unresolvable"* in its root re-probe, now confirmed
+through a second channel and a different request shape.** 🔵 **They should be moved to an
+`ARCHIVED-UPSTREAM` state rather than carried in a live ungranted population: a repository that
+cannot be fetched cannot be licensed, and it cannot be a foundation.**
+
+### 🆕 🟢 `P217-F4` — the `ECL-2.0` cells from p216, spot-confirmed, unchanged
+
+🟢 **`raw.githubusercontent.com/sakaiproject/sakai/HEAD/LICENSE` → `200`; `git ls-remote --symref`
+reports `refs/heads/master` at `38dc5174b0563fb9e9cc7af96874f48982d87fdf`.** 🟢 **No drift. The
+`ECL-2.0` platform tier established at pass `200` and re-read at p216 stands.**
+
 
 ## Pass 216 — 2026-10-15 — THE UNGRANTED POPULATION IS `67`, NOT `63` AND NOT `94`; THE `18`-FORM ROOT PROBE IS SOUND AFTER ALL; AND `5` NEW `ECL-2.0` GRANT CELLS LAND ON A ROW-SET THIS SHELF ALREADY CALLED ABANDONED
 

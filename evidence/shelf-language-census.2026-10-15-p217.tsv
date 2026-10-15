@@ -1,0 +1,24 @@
+# p217 - ACTION QL root cause: this KB is BILINGUAL and every propagation gate it has built is monolingual.
+# method: grep -ric over the 8 client-facing shelves for Spanish-language licence vocabulary.
+# why it matters: ACTION QL requires a grep of the shelves before an action may be registered on a
+#   claim of absence. ACTION QN was registered on "README prose is the last unread channel"; that
+#   claim is refuted by agents/trending.md l.19972 (pase 126, 2026-10-05), which reads AI-LMS-TMS
+#   README and records PROPIETARIO EXPLICITO. An English grep cannot reach it.
+#
+token	language	matching_lines	files
+licencia	ES	1087	6
+sin licencia	ES	130	2
+no tiene licencia	ES	9	2
+PROPIETARIO	ES	31	2
+rutas	ES	85	2
+lectura	ES	227	3
+altas permisivas	ES	13	1
+pase 	ES	1938	4
+concesion	ES	1	1
+compuerta	ES	76	2
+barrido	ES	441	2
+license	EN	4257	8
+no licence	EN	566	8
+proprietary	EN	160	8
+paths	EN	491	8
+pass 	EN	3959	8
