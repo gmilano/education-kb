@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — THE TREND WORTH CARRYING IS THAT **PROVENANCE BECAME A PROCUREMENT REQUIREMENT**, AND THE PROOF IS A NATIONAL AI POLICY WITHDRAWN FOR CITING SOURCES THAT DO NOT EXIST
+
+🔵 **`4` trends, each with the evidence that makes it a trend rather than a theme.**
+
+🔵 **Evidence:** [`sm-za-withdrawal-divergence`](../evidence/sm-za-withdrawal-divergence.2026-10-15-p227.tsv) · [`sl-vietnam-instruments`](../evidence/sl-vietnam-instruments.2026-10-15-p227.tsv) · [`sm-africa-queries`](../evidence/sm-africa-queries.2026-10-15-p227.tsv) · [`p227-regional-queries`](../evidence/p227-regional-queries.2026-10-15-p227.tsv)
+
+### 🔴 `T227-1` — provenance is now a reason a buyer REJECTS work, not a reason they prefer it
+
+🔴 **South Africa withdrew its Draft National AI Policy 2026 because the reference list cited non-existent sources — described by one source class as *"fake, AI-generated citations"*.** 🟡 **The withdrawal date diverges across sources *(`2026-06-12` vs `2026-04-26`)* and is published here as both, with provenance.**
+
+🟢 **This is the first instance on these shelves of a GOVERNMENT-level AI deliverable rejected specifically for unverifiable citations, and it changes the sales argument.** 🔵 **Until now "we read every source first-hand" was a quality claim a studio made about itself. 🔴 It is now a procurement risk a client has watched a national ministry get burned by.** 🟡 **Concretely: in any African or EMEA public-sector education engagement, an auditable citation trail is a deliverable line item, not a methodology slide.**
+
+### 🟢 `T227-2` — the governed-adoption turn is now visible in STATUTE, not just in commentary
+
+🔵 **Every regional source this pass converges on the same shift — 2026 is the year education AI moved from experimentation to governed adoption: governance structures, compliance expectations, evaluation processes, demands for evidence of learning gains.** 🟢 **What makes it a trend rather than a theme is that the instruments now exist and carry dates:**
+
+| jurisdiction | instrument | the date that binds |
+|---|---|---|
+| 🔴 **Vietnam** | Law `134/2025/QH15` + Decision `33/2026/QD-TTg` | 🔴 **`2027-09-01`** — education compliance deadline |
+| 🔴 **EU** | AI Act, Annex III education high-risk | 🔴 **`2027-12-02`** *(Reg. (EU) 2026/1744)* |
+| 🟡 **South Korea** | AI Basic Act | in force January 2026 |
+| 🟡 **Taiwan** | AI Basic Act | passed December 2025 |
+| 🟡 **US states** | `134` bills / `31` states; `H.R. 8747` federally | rolling |
+| 🔴 **South Africa** | — | 🔴 **withdrawn; revision targeted January 2027** |
+
+🔵 **The common structure is worth naming because it is what a product must satisfy in all of them: a RISK CLASSIFICATION, a HUMAN-OVERSIGHT record, and a DATA-PROVENANCE statement.** 🟢 **Those three are the portable core; everything else is jurisdiction-specific configuration.**
+
+### 🟢 `T227-3` — assessment is the lowest-adoption, highest-anxiety surface, and that is where the work is
+
+🔴 **LATAM's survey is the sharpest data on these shelves: `92%` of students and `79%` of faculty engaging with AI, yet `88%` of faculty report only minimal-to-moderate engagement — and the LOWEST uptake is in assessment tasks: detecting cheating and generating feedback. `61%` of students fear misuse by peers.**
+
+🟢 **Vietnam independently classifies *"systems that automatically test, evaluate results and rank learners"* as high-risk, and the EU does the same for tools that evaluate learners or gate access to qualifications.** 🔵 **So assessment is simultaneously the surface faculty trust least, students fear most, and regulators have singled out in two unrelated jurisdictions. 🟡 That convergence, from three independent directions, is the strongest signal in this pass.**
+
+🔴 **And these shelves have published the matching supply-side gap since p213: plenty of LLM graders, nothing that measures itself against teacher scores.** 🟢 **An alignment loop — grade, compare against the human score, report the drift — is the one asset that answers all three parties at once.**
+
+### 🟡 `T227-4` — teacher capacity, not student tutoring, is what national programmes are actually buying
+
+🔵 **The programmes with real budgets and real numbers this pass are all teacher-side:** 🟢 **Nigeria's Naija Teacher AI *(`1.5M` licensed teachers, Aug 2025-Aug 2027)*, Egypt's UNESCO AI competency framework for teachers *(launched `2026-06-03`)*, Kenya's `62 000`+ ICT-trained teachers.** 🔴 **Not one of the four African countries' flagship programmes is a student-facing tutor.**
+
+🔵 **This matches the commentary independently: the most successful AI deployments begin with teachers, not students — and the movement is away from generic AI tools toward platforms purpose-built for education.** 🟡 **It also matches the restrictive side of the regulatory map: student-facing AI is where the moratoria are *(NYC through eighth grade, Katy ISD for K-6)*, while teacher-facing AI is where the procurement is.** 🟢 **For a studio that is a straightforward prioritisation rule, and it is the opposite of where most of the open-source agent tier points.**
+
+### 🔵 What this pass does NOT claim
+
+🔴 **Market sizing does not converge: `USD 10.6bn` for 2026 from one report against `USD 12.3bn` attributed to HolonIQ by another — and a same-named source appearing on both sides of the discrepancy.** 🟡 **Several circulated statistics *(`83%` of institutions, a `42%` improvement, a `62%` test-score gain)* carry no verifiable methodology and are not carried here.** 🟢 **No country-level education AI instrument was found for ANY LATAM state, and that is a declared blank rather than a finding of absence.**
+
+
 ## Pass 226 — 2026-10-15 — THE TREND IS THAT CORRECTIONS DO NOT PROPAGATE AND REFUTATIONS DO NOT BECOME CHECKS: THE SAME CLAIM THIS KB KILLED AT p209 CAME BACK THROUGH THE MANDATED QUERY AND THE GATE BUILT TO STOP IT WAS BLIND TO IT
 
 ### 🔴 Trend `1` — a refuted claim's half-life is longer than this KB's memory of refuting it

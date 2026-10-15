@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — THE FOUNDATION TIER GAINS A **SETTLED BOUND** ON ITS LARGEST PLATFORM AND LOSES AN ASSERTION THAT WAS EXACTLY BACKWARDS, AND BOTH CAME FROM READING A `LICENSE` FILE'S **STRUCTURE** RATHER THAN ITS TEXT
+
+🔵 **`0` new foundation rows. `1` bound settled on the tier's largest platform. `1` live assertion WITHDRAWN as inverted. `2` grants re-read first-hand on rows carried for a hundred passes.**
+
+🔵 **Evidence:** [`sn-openedx-bound`](../evidence/sn-openedx-bound.2026-10-15-p227.tsv) · [`so-untabled-refutations`](../evidence/so-untabled-refutations.2026-10-15-p227.tsv) · [`p227-verified-repos`](../evidence/p227-verified-repos.2026-10-15-p227.tsv)
+
+### 🟢 `P227-F1` — `ACTION SN`: `Open edX` is `AGPL-3.0-only`, and the bound is established by ABSENCE
+
+🔵 **p226 read the grant and could not settle the bound, because GPL-family `or-later` lives in FILE HEADERS rather than the `LICENSE`.** 🟢 **`ACTION SN` registered limb `1` as *"a source-file header carries `or (at your option) any later version`"*. 🔴 **Limb `2` fires: `5` files read on `master`, `0` or-later strings.**
+
+| path | `http` | bytes | `sha256`₁₂ | or-later hits |
+|---|---|---|---|---|
+| `lms/envs/common.py` | `200` | **`136 602`** | `7b22d1313438` | 🔴 **`0`** |
+| `cms/envs/common.py` | `200` | `53 271` | `cf6d0d07a01f` | 🔴 **`0`** |
+| `manage.py` | `200` | `3 425` | `d64ca7d5a798` | 🔴 **`0`** |
+| `lms/__init__.py` | `200` | `960` | `067a80d8d23b` | 🔴 **`0`** |
+| `openedx/core/__init__.py` | `200` | `384` | `a980205c9ee8` | 🔴 **`0`** |
+| `setup.py` · `AGPL-3.0-LICENSE` | 🔴 `404` | — | — | absent on `master` |
+
+🟢 **Published state: `AGPL-3.0-only`, as the CONSERVATIVE reading, and the cell says so.** 🟡 **This bound is weaker than p225's `openeducat` resolution, which came from a `2`–`1` vote across three positive channels. 🔵 A bound established by ABSENCE should never be published as though it were voted, and the `65`+`9` `AGPL` cells inherit it with that caveat attached.** 🟢 **The `LICENSE` re-read reproduces p226 to the byte and the hash — `35 136` B, `sha256`₁₂ `e12d78569742` — which is an identity control on a `100`-pass-old row.**
+
+### 🔴 `T227-F2` — the trap, and it is p225's `openeducat` trap in a THIRD shape
+
+🔴 **The root `LICENSE` DOES contain *"any later version"*, three times — at lines `570`, `572` and `638`.**
+
+| lines | where they sit | is it a channel? |
+|---|---|---|
+| `570`, `572` | inside §14, *"Revised Versions of this License"* | 🔴 **no — the p225 shape exactly** |
+| 🆕 `638` | inside the appendix **"How to Apply These Terms to Your New Programs"** | 🔴 **no — and this shape is NEW** |
+
+🟢 **Line `638` sits in the boilerplate NOTICE TEMPLATE, complete with its literal placeholders — `<one line to give the program's name and a brief idea of what it does.>` and `Copyright (C) <year>  <name of author>`.** 🔴 **Its subject is a HYPOTHETICAL FUTURE PROGRAM that a downstream author might write. Counting it would have published `AGPL-3.0-or-later` across the largest platform on these shelves, in `65`+`9` cells.**
+
+🟡 **Standing rule, extending p225's: in a `LICENSE` file the project's own PREAMBLE is a channel; neither the canonical body NOR its how-to-apply appendix is one.** 🔵 **p225 had two kinds of non-channel inside a grant file. There are three.**
+
+### 🔴 `P227-F3` — the assertion that was backwards, withdrawn in place
+
+🔴 **This shelf carried: *"`GibbonEdu/core` is `AGPL-3.0`, not `GPL`."*** 🟢 **It is the reverse. `master/LICENSE`, `35 121` B, `sha256`₁₂ `93178a43d6d3`, title line `GNU GENERAL PUBLIC LICENSE`. The cell is withdrawn behind a `<!--corrected-->` marker and the correct value published** → `P227-SO1` in [`agents/top.md`](../agents/top.md).
+
+🔵 **Why a foundation-tier row got this wrong for so long is worth the space, because the mechanism is reusable:** 🔴 **GPL-3.0's §13 is titled *"Use with the GNU Affero General Public License"* and names the Affero licence in full. 🟢 **So a GPL-3.0 body contains the string `GNU Affero General Public License`, and three methods for telling the families apart are all unsafe:**
+
+| method | verdict | why |
+|---|---|---|
+| byte size | 🔴 **unsafe** | the canonical bodies are **`15` bytes apart**: `35 121` vs `35 136`, both read first-hand this pass |
+| a bare `affero` grep | 🔴 **unsafe** | a GPL-3.0 body carries `3` such tokens |
+| a whole-body search for the AGPL title | 🔴 **unsafe** | the AGPL title appears INSIDE a GPL-3.0 body, in §13. 🔴 **This one defeated p227's own first draft** |
+| 🟢 **the first licence title in DOCUMENT ORDER** | 🟢 **safe** | corroborated by §13's heading; a disagreement is reported, not resolved |
+
+### 🟢 `P227-F4` — `UniTime` is `Apache-2.0`, which changes what this tier can offer
+
+🟢 **[`UniTime/unitime`](https://github.com/UniTime/unitime) — `Apache-2.0`, read first-hand: `master/LICENSE` `11 357` B, `sha256`₁₂ `58d1e17ffe51`, canonical Apache body.** 🔴 **`404` on `main`; `master` is the branch, which is itself worth recording for anyone pinning it.**
+
+🔵 **Why it matters to this tier specifically:** 🔴 **these shelves published it as `GPL-3.0`.** 🟢 **Under the standing MIT/Apache/BSD preference that cell excluded a permissively licensed, mature university timetabling platform from every engagement filter — and timetabling is one of the few education-domain problems where a studio can ship real value without touching student records at all.** 🟡 **An over-restrictive cell is a commercial loss, and `ACTION SO` is the first sweep on these shelves built to find one.**
+
+
 ## Pass 226 — 2026-10-15 — THE FOUNDATION TIER GAINS A **CANONICAL PATH** FOR ITS TWO LARGEST PLATFORM ROWS, AND THE LARGER OF THE TWO SHOULD BE CITED UNDER THE NAME p225 TOLD THIS KB TO DROP
 
 🔵 **`0` new foundation rows. `2` canonical slugs established on evidence. `1` of them reverses a p225 recommendation. `1` grant re-read first-hand on the shelf's second-largest repository.**
@@ -4076,7 +4130,7 @@ a new defect.**
   🔵 **It is the ONLY permissively licensed full LMS in this table, which makes it the one row here
   Globant can build a closed derivative on without a copyleft conversation.** Every other LMS in
   the set is `AGPL-3.0`, `GPL`, `LGPL-3.0` or `ECL-2.0`.
-- 🔴 **`GibbonEdu/core` is `AGPL-3.0`, not `GPL`.** Secondary sources describe it as a *"GPL
+- 🟢 **`GibbonEdu/core` is `GPL-3.0`.** <!--corrected--> 🔴 **The assertion that it is `AGPL-3.0`, not `GPL`, is WITHDRAWN — it is exactly backwards** *(`P227-SO1`; `master/LICENSE` `35 121` B, `sha256`₁₂ `93178a43d6d3`; the `3` `AFFERO` tokens are GPL-3.0 §13's compatibility clause)*. The secondary sources describing it as a *"GPL
   all-in-one school management tool"*; the payload is the Affero text at `35 121` B.
   🔵 **For a hosted deployment that difference is the whole engagement: `AGPL-3.0` reaches users
   over a network and `GPL` does not.**

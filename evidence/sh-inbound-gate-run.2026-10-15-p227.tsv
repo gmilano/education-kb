@@ -1,0 +1,24 @@
+# ACTION SH (standing since p226): the refuted-claims gate run INBOUND on p227's raw search
+# results, before any shelf prose was written. Table: so-refuted-claims.2026-10-15-p227.tsv
+# (13 subjects: 9 PERMISSIVE, 4 RESTRICTIVE). Records: 66 across 14 verbatim queries.
+# Instrument: compose/code/p227-direction-gate (19 controls, all passing).
+reading	result	what it measures
+HITS (subject + refuted pattern, not exempt)	0	whether a tabled error recurred inbound this pass. None did.
+NEAR MISSES (subject matched, refuted pattern did not)	7	reported, never dropped - p226's T226-1 showed a near miss can be a TRUE statement
+	
+# The near misses, and the two findings they carry.
+query	text	subject_matched	verdict
+open source platform education LMS SIS MIT Apache 2026	RosarioSIS (GPL, PHP) and Gibbon (GPL, PHP) are open-source student information systems aimed at K-12 schools.	GibbonEdu/core claimed AGPL-3.0	CORRECTLY SILENT, and it is the pass's sharpest result: the inbound claim 'Gibbon (GPL)' is TRUE. The search surface had Gibbon right and this KB had it wrong. A gate built to protect the shelves from sources cannot catch an error that runs the other way.
+open source platform education LMS SIS MIT Apache 2026	OpenEduCat combines LMS and SIS on one database and is LGPLv3.	openeducat bare LGPL-3.0	CORRECTLY SILENT - LGPLv3 is right; p225 resolved the bound to LGPL-3.0-only on a 2-1 vote
+AI education EMEA 2026 adoption regulation players	Education tools that evaluate learners or influence access to qualifications fall into the high-risk category	EU AI Act Annex III education high-risk date	OVER-BROAD SUBJECT: no date claimed, so nothing to refute
+AI education EMEA 2026 adoption regulation players	One Commission page lists the AI Omnibus amendments as entering force on 27 July 2026, with the AI Act itself entering force on 31 July 2026	EU AI Act Annex III education high-risk date	OVER-BROAD SUBJECT. Also an inbound DIVERGENCE worth keeping: these dates are not the 2026-08-02 general application date these shelves carry
+AI education APAC 2026 adoption regulation players	A July 2026 decision lists education, including automated assessment and behavioural monitoring, among high-risk AI system categories	EU AI Act Annex III education high-risk date	FALSE SUBJECT MATCH - this is VIETNAM, not the EU. The subject pattern matches the bare phrase 'high-risk' in any jurisdiction
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	AI systems that use AI to automatically test, evaluate results, and rank learners are classified as high-risk	EU AI Act Annex III education high-risk date	FALSE SUBJECT MATCH - Vietnam again
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	The overall list covers 46 high-risk AI systems across 6 sectors	EU AI Act Annex III education high-risk date	FALSE SUBJECT MATCH - Vietnam again
+	
+# DEFECT FOUND IN THE TABLE (not the gate): the EU AI Act subject_pattern is
+# (?i)(ai act|annex iii|anexo iii|alto riesgo|high-risk) - the bare token 'high-risk' makes it
+# match any jurisdiction's high-risk regime. 3 of 7 near misses are Vietnamese text matched to
+# an EU subject. The unit of this subject is the (JURISDICTION, INSTRUMENT) pair, not the phrase
+# 'high-risk'. Registered as ACTION SP rather than widened here, because narrowing a
+# subject_pattern can only ever REDUCE what the gate can see and must be done on evidence.

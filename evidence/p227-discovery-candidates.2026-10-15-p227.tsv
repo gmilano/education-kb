@@ -1,0 +1,29 @@
+# p227 discovery measurement, continuing the series p223-p226. Candidates are REPOSITORIES or
+# PLATFORMS named across the 14 queries. Measured, not asserted.
+candidate	already_carried	first_hand_result_p227
+toshieji/moodle-grading-mcp	YES	carried since an earlier pass
+vishalsachdev/canvas-mcp	YES	carried
+bruchris/canvas-lms-mcp	YES	carried
+DMontgomery40/mcp-canvas-lms	YES	carried
+CharlieCardenasToledo/mcp-canvas-server	YES	carried
+r-huijts/canvas-mcp	YES	carried
+mdweaver/canvas-mcp	YES	carried
+zijinz456/OpenTutor	YES	carried; DIRECTION settled this pass - see p227-opentutor-fork-set
+HKUDS/DeepTutor	YES	carried; largest repo on these shelves
+Crosstalk-Solutions/project-nomad	YES	carried; Apache-2.0 read first-hand at p226
+OpenOLAT/OpenOLAT	YES	carried; the tier's only permissive LMS
+frappe/lms	YES	carried; AGPL-3.0, and claimed MIT inbound again at p226
+openedx/openedx-platform	YES	carried; bound settled AGPL-3.0-only this pass (ACTION SN)
+francoisjacquet/rosariosis	YES	carried; GPL-2.0
+GibbonEdu/core	YES	carried; GPL-3.0 RE-ESTABLISHED this pass against 4 stale AGPL cells
+openeducat/openeducat_erp	YES	carried; LGPL-3.0-only since p225
+Moodle	YES	carried
+Chamilo	YES	carried
+Canvas LMS	YES	carried
+Sakai	YES	carried; the ECL-2.0 vs Apache-2.0 conflict is an open gap
+vkumar04/canvas-mcp-lite	NO	EXISTS - 5 refs on the git service; README.md 11 839 B sha256-12 4c15b3a178af. NO GRANT: LICENSE, LICENSE.md and LICENSE.txt all 404 on main. NOT A ROW. Joins ACTION PH's queue
+Sarthak-Neupane/CanvasMCPServer	NO	EXISTS - 2 refs; LICENSE 1 072 B sha256-12 71f670d6352a, MIT, 'Copyright (c) 2025 Sarthak Neupane'; README.md 13 523 B sha256-12 3f4e8bd202b6. NEW ROW
+	
+# RATE: 21 of 23 already carried = 91.3%. Series: p223 89% (18), p224 75% (8), p225 100% (9),
+# p226 93.8% (32), p227 91.3% (23). Five points, and the rate has held above 89% in 4 of 5.
+# The two not carried split exactly as p226's two did: one NO-GRANT repo and one real new row.

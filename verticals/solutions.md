@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — THE SIS TIER GAINS A PERMISSIVELY LICENSED MEMBER WITHOUT A SINGLE NEW ROW, BECAUSE **TWO OF ITS CARRIED ROWS WERE PUBLISHED UNDER THE WRONG LICENCE** — AND BOTH ERRORS RAN AGAINST GLOBANT
+
+🔵 **`0` new platform rows *(`9` of `9` named platforms already carried, for a second pass)*. `2` carried platform grants CORRECTED on first-hand reads. `1` live table row and `1` live assertion WITHDRAWN in place. The tier's permissive count goes from `1` to `2` on a re-read, not a discovery.**
+
+🔵 **Evidence:** [`so-untabled-refutations`](../evidence/so-untabled-refutations.2026-10-15-p227.tsv) · [`p227-verified-repos`](../evidence/p227-verified-repos.2026-10-15-p227.tsv) · **Instrument:** [`p227-direction-gate`](../compose/code/p227-direction-gate/README.md)
+
+### 🔴 `P227-V1` — p226's platform table, corrected
+
+🟢 **p226 published the tier as *"exactly ONE permissively-licensed LMS and ZERO permissively-licensed SIS"*.** 🔴 **The LMS half stands. The SIS half was wrong twice over, and both errors were in the RESTRICTIVE direction** — the direction the refuted-claims table could not express until this pass.
+
+| platform | tier | p226 published | 🟢 first-hand truth, read `2026-10-15` | buildable under the standing MIT/Apache/BSD preference |
+|---|---|---|---|---|
+| [`OpenOlat`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 `Apache-2.0` | 🟢 **unchanged** | 🟢 **YES** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | timetabling | 🔴 **`GPL-3.0`** | 🟢 **`Apache-2.0`** — `master/LICENSE` `11 357` B, `sha256`₁₂ `58d1e17ffe51` | 🟢 **YES — and it was excluded for nothing** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS | 🔴 **`AGPL-3.0`** | 🟢 **`GPL-3.0`** — `35 121` B, `sha256`₁₂ `93178a43d6d3` | 🔴 no — **but no network-use obligation either** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🔴 `GPL-2.0` | 🟢 **unchanged** | 🔴 no |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS / school ops | 🔴 **`AGPL-3.0`** | 🟢 **`MIT`**, with `docs/` at `CC-BY-SA-4.0` — `1 684` B, `sha256`₁₂ `bda0aa6d49f2` | 🟢 **YES, for the code** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | 🔴 `AGPL-3.0` | 🔴 **`AGPL-3.0-only`** — bound settled this pass | 🔴 no |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🔴 `AGPL-3.0` | 🔴 **unchanged** *(`license.txt` `33 893` B)* | 🔴 no |
+| `Moodle` · `Chamilo` · `Canvas LMS` | LMS | 🔴 copyleft | 🔴 **unchanged** | 🔴 no |
+| `AlekSIS` | SIS | 🔴 no resolvable repository | 🔴 **unchanged** | 🔴 n/a |
+
+🟢 **So the honest statement of the tier is: `2` permissively licensed platforms a studio can build on, not `1` — and the second one was already here.**
+
+### 🔴 `P227-V2` — what this cost, stated plainly
+
+🔵 **`GibbonEdu/core` and `UniTime/unitime` are the two platforms in this tier closest to the problems a studio is actually hired to solve: school administration and timetabling.** 🔴 **Both were published under a licence stricter than their real one. Any engagement filter applied to this shelf — *"show me what we can build on"* — returned `OpenOlat` and nothing else.**
+
+🟡 **The `Gibbon` case is worse than a stale cell, because p226 did the right thing and still got it wrong:** 🔴 **its draft wrote `GPL` — correctly — then its self-audit checked that draft against these shelves, found `4` stale `AGPL` cells, and "corrected" a right answer into a wrong one, filing it under *"the error was in the PERMISSIVE direction"*.** 🟢 **Both cells are now withdrawn in place behind `<!--corrected-->` markers, and `P227-SO1` in [`agents/top.md`](../agents/top.md) carries the full sequence.**
+
+### 🟢 `P227-V3` — and the obligation that actually changes for an engagement
+
+🔵 **These are not interchangeable bounds, which is why the correction matters commercially and not just bibliographically:**
+
+| grant | what it reaches | what a studio can ship |
+|---|---|---|
+| 🟢 `Apache-2.0` *(`OpenOlat`, `UniTime`)* | nothing beyond notice and patent terms | 🟢 **a proprietary deliverable on top, no source disclosure** |
+| 🟢 `MIT` *(`pupilfirst` code)* | nothing beyond notice | 🟢 **same** — 🟡 **but `docs/` is `CC-BY-SA-4.0`: ship the docs and the share-alike obligation comes with them** |
+| 🟡 `GPL-3.0` *(`Gibbon`)* | derivative works **distributed** | 🟡 **a hosted service is fine; shipping a modified binary is not** |
+| 🔴 `AGPL-3.0-only` *(`Open edX`, `Canvas`)* | derivative works **made available over a network** | 🔴 **a hosted service triggers source disclosure — the single most consequential cell on this shelf** |
+
+🔴 **The `Gibbon` error was exactly the jump from row `3` to row `4`: it asserted a network-use obligation on a platform that has none.** 🟢 **For a hosted school-management build, that is the difference between a routine engagement and one that must publish its source.**
+
+### 🔵 `P227-V4` — the structural gap, restated and still unclosed
+
+🔴 **There is still NO permissively licensed, full-featured SIS.** 🟢 **`UniTime` is timetabling, not a student information system; `pupilfirst` is school operations and course delivery, not a record of enrolment and transcript.** 🔵 **The `2` real SIS platforms on this shelf are `GPL-3.0` and `GPL-2.0`, and `AlekSIS` still has no resolvable repository at all.** 🟡 **This remains a genuine gap in the open-source education landscape and not a sourcing failure — `9` of `9` named platforms were already carried, for the second pass running.**
+
+
 ## Pass 226 — 2026-10-15 — THE SELF-HOSTED EDUCATION STACK HAS EXACTLY **ONE** PERMISSIVELY-LICENSED LMS AND **ZERO** PERMISSIVELY-LICENSED SIS, AND THE MANDATED VERTICAL QUERY RETURNED A LICENCE CONFLICT IN THE WILD
 
 🔵 **`0` new platform rows *(`9` of `9` named platforms already carried)*. `1` canonical slug corrected on the tier's largest platform. `1` structural gap measured rather than asserted.**
@@ -23,7 +71,7 @@ updated: 2026-10-15
 | `Chamilo` | LMS | 🔴 `GPL` *(bare token on these shelves — NOT a read bound)* | 🔴 no |
 | `Canvas LMS` | LMS | 🔴 `AGPL-3.0` *(community edition)* | 🔴 no |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🔴 **`GPL-2.0`** *(complete body minus the non-operative appendix, `15 214` B)* | 🔴 no |
-| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS | 🔴 **`AGPL-3.0`** | 🔴 no |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS | 🟢 **`GPL-3.0`** <!--corrected--> *(was `AGPL-3.0`; `P227-SO1`, read first-hand: `master/LICENSE` `35 121` B, `sha256`₁₂ `93178a43d6d3`, title line `GNU GENERAL PUBLIC LICENSE`)* | 🔴 no |
 | `AlekSIS` | SIS | 🔴 **NO GRANT ESTABLISHED — the slug does not resolve** | 🔴 n/a |
 
 🔴 **`1` of `6` LMS platforms carries a permissive grant. Of the `3` SIS platforms, `2` have an established grant and NEITHER is permissive; the third has no resolvable repository at all.** 🟡 **This is not a sourcing failure to be fixed by more searching — it is the shape of the market, and it has been stable across passes.**
@@ -34,7 +82,7 @@ updated: 2026-10-15
 
 | cell as first written | 🟢 what the shelves actually carry |
 |---|---|
-| 🔴 `Gibbon` — `GPL` | 🟢 **`GibbonEdu/core`, `AGPL-3.0`** — a materially different obligation, and the error was in the PERMISSIVE direction |
+| 🟢 `Gibbon` — `GPL` — **THIS DRAFT CELL WAS RIGHT** | 🔴 **`AGPL-3.0` was the WRONG “correction”** <!--corrected--> — `GibbonEdu/core` is `GPL-3.0`. p226 judged a correct cell a defect against this KB's own `4` stale `AGPL` cells, and the error ran in the RESTRICTIVE direction, not the permissive one. See `P227-SO1` |
 | 🔴 `RosarioSIS` — `GPL` | 🟢 **`francoisjacquet/rosariosis`, `GPL-2.0`**, complete body read, `15 214` B |
 | 🔴 `AlekSIS` — `EUPL`/copyleft | 🔴 **NOT FOUND** — `AlekSIS/AlekSIS` and `aleksis/AlekSIS-Core` BOTH fail `git ls-remote`. There was no grant to state |
 

@@ -1,0 +1,29 @@
+# ACTION RE (honoured a NINTH time): the verbatim query behind every finding and every blank.
+# 14 queries, 2026-10-15. The gate's input file is keyed by these same strings, so ACTION RE
+# and ACTION SH remain one artefact: the query travels with the text it returned.
+n	verbatim_query	mandate	returned
+1	top open source AI agents education 2026 github MIT	standing (agents)	No education-specific MIT ranking. General agent projects only - all already carried
+2	github trending education AI 2026	standing (trending)	Project NOMAD (~39.8k*, trending snapshot 2026-10-13) - already carried; nanochat, developer-roadmap - general
+3	open source platform education LMS SIS MIT Apache 2026	standing (verticals)	9 platforms, all already carried. 1 of 6 LMS permissive (OpenOlat); 0 of 3 SIS permissive
+4	AI education industry trends 2026	standing (trends)	Market sizing CONFLICTS: USD 10.6bn 2026 -> 42.48bn 2030 vs USD 12.3bn 2026 attributed to HolonIQ. Governance/evidence themes converge
+5	AI education North America 2026 adoption regulation players	standing (region)	134 bills / 31 states; CA AB 1159; ID SB 1227; H.R. 8747; 60% teacher use; 36% market share / USD 3.68bn; NYC K-8 moratorium
+6	AI education EMEA 2026 adoption regulation players	standing (region)	EU AI Act high-risk for learner evaluation; DATE DIVERGENCE on entry into force; EU enterprise adoption 19.95% (not education-specific). Nothing African - which is what ACTION SM was registered for
+7	AI education APAC 2026 adoption regulation players	standing (region)	Vietnam Decision + Law; South Korea AI Basic Act in force Jan 2026; Taiwan AI Basic Act passed Dec 2025; Singapore 60.9% diffusion; ASEAN Responsible AI Roadmap 2025-2030
+8	AI education LATAM 2026 adoption regulation players	standing (region)	DEC LATAM survey 92% students / 79% faculty, 30 000+ responses, 29 institutions; UNESCO IESALC 200 institutions / 19 countries; ILIA index
+9	Nigeria AI education policy 2026	ACTION SM	FIRED - see sm-africa-queries
+10	Kenya AI curriculum 2026	ACTION SM	FIRED - see sm-africa-queries
+11	South Africa AI schools regulation 2026	ACTION SM	FIRED - see sm-africa-queries and sm-za-withdrawal-divergence
+12	Egypt AI education 2026	ACTION SM	FIRED - see sm-africa-queries
+13	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	ACTION SL	FIRED limb 1 - see sl-vietnam-instruments
+14	Vietnam Law on Artificial Intelligence effective 1 March 2026 standalone AI law Southeast Asia first	ACTION SL	FIRED limb 1 - see sl-vietnam-instruments
+	
+# DECLARED BLANKS, so silence is not mistaken for coverage:
+# - Query 1 returned NO education-specific MIT-licensed agent ranking. The generic agent
+#   listicles it did return name nothing this KB does not already carry.
+# - Query 6 returned NOTHING for the UK, Germany, the Nordics or the Gulf beyond passing
+#   mentions, and nothing African at all. The African blank is now known to be the query's
+#   shape (ACTION SM); the UK/DE/Nordic blank is NOT yet tested that way - ACTION SQ.
+# - Query 8 returned NO country-level education AI regulation for any LATAM state. Adoption
+#   data is strong, instruments absent. UNESCO IESALC's own conclusion is that governance lags.
+# - No query returned a 2026-dated release for any of the Canvas/Moodle MCP servers, so their
+#   liveness is asserted by nobody and was established here from ref sets instead.

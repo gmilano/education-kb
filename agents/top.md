@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — `ACTION SO` FIRES AT `7` AND FINDS SOMETHING WORSE THAN A BACKLOG: THE REFUTED-CLAIMS TABLE COULD ONLY EVER EXPRESS **ONE DIRECTION** OF ERROR, AND THE UNTABLED REFUTATION IT MISSED TURNED p226'S OWN SELF-AUDIT INTO THE VECTOR THAT REINTRODUCED IT
+
+🔵 **`1` new agent row, `0` new repository rows, `0` new platform rows. `4` registered actions discharged — `SO` *(the registered highest priority)* on limb `1`, `SM` on limb `1` at `4` of `4`, `SL` on limb `1`, `SN` on limb `2`. `4` live cells WITHDRAWN in place. `7` rows added to the refuted-claims table, `4` of them in a direction the table could not previously express. `11` grants read first-hand. `3` new standing rules. `3` defects found in this pass's own instrument before publishing — all three the same hazard.**
+
+🔵 **Evidence:** [`so-untabled-refutations`](../evidence/so-untabled-refutations.2026-10-15-p227.tsv) · [`so-refuted-claims`](../evidence/so-refuted-claims.2026-10-15-p227.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p227.tsv) · [`p227-verified-repos`](../evidence/p227-verified-repos.2026-10-15-p227.tsv) · **Instrument:** [`p227-direction-gate`](../compose/code/p227-direction-gate/README.md) *(`19` controls)*
+
+### 🔴 `P227-SO1` — the headline, and it is about this KB and not about a source
+
+🟢 **`ACTION SO` asked whether p226's three tabled refutations were the backlog. Limb `1` needed `3`+ further first-hand refutations with no table row. It fires at `7`** → [`so-untabled-refutations`](../evidence/so-untabled-refutations.2026-10-15-p227.tsv).
+
+🔴 **But the count is not the finding. The SHAPE of the seven is.** 🔵 **Every one of p226's six table rows refutes a claim that was too PERMISSIVE — `MIT` claimed where `AGPL-3.0` is true. So every `refuted_pattern` in the table is a permissive-token pattern, and the table was STRUCTURALLY INCAPABLE of expressing the opposite error: a claim too RESTRICTIVE.** 🟢 **Four of the seven are exactly that, and these shelves had already recorded — in prose, at p120 — that an over-restrictive cell is *"a commercial loss no sweep was built to find."***
+
+| direction | what the claim does | who pays | rows before p227 | rows now |
+|---|---|---|---|---|
+| 🔴 `PERMISSIVE` | claims MORE freedom than the grant gives | a client, in a compliance breach | **`6`** | **`9`** |
+| 🟢 `RESTRICTIVE` | claims LESS freedom than the grant gives | Globant, in a buildable repo wrongly excluded | 🔴 **`0` — inexpressible** | 🆕 **`4`** |
+
+### 🔴 `GibbonEdu/core` is `GPL-3.0`, and the way this KB lost that fact is the pass's whole argument
+
+🟢 **Read first-hand this pass: `master/LICENSE`, `200`, `35 121` B, `sha256`₁₂ `93178a43d6d3`, title line `GNU GENERAL PUBLIC LICENSE`. Byte-identical body served on `main`.** 🔵 **It carries `3` `AFFERO` tokens, and all three sit inside **§13, *"Use with the GNU Affero General Public License"*** — GPL-3.0's *compatibility* clause, which permits linking with AGPL work. 🔴 **It is not a grant of AGPL. It is the opposite: a permission to interoperate with one.**
+
+🔵 **The sequence, because each step was reasonable and the outcome was still wrong:**
+
+| # | pass | what happened |
+|---|---|---|
+| 1 | — | an instrument grepped `AFFERO`, hit §13, and wrote `AGPL-3.0`. 🔴 **`4` cells** |
+| 2 | 🟢 `p171` | diagnosed the §13 mechanism **and stated *"Gibbon es `GPL-3.0`"*** | 
+| 3 | 🟢 `p214` | corrected it again, explicitly | 
+| 4 | 🔴 — | **neither refutation was TABLED. The `4` cells were never fixed** |
+| 5 | 🔴 `p226` | its draft wrote `GPL` beside Gibbon — **correctly**. Its self-audit checked the draft against *these shelves*, found the `4` stale `AGPL` cells, judged the correct cell a defect *"in the PERMISSIVE direction"*, and published `AGPL-3.0` again |
+
+🔴 **So the finding is not that tabling lags refuting. It is this:**
+
+> 🔴 **An untabled refutation does not merely fail to catch an inbound recurrence. It leaves residue that a later pass's VERIFICATION STEP will read as authority — and the self-audit becomes the vector.**
+
+🟢 **p226 did everything its own discipline asked. It checked its draft against first-hand shelf content rather than against a search result. 🔴 That is the right rule, and it inverted a correct cell, because the shelf content it checked against was the uncorrected residue of an error refuted fifty-six passes earlier.**
+
+### 🔴 And the sharpest detail: the search surface had Gibbon RIGHT
+
+🟢 **This pass's mandated vertical query returned:**
+
+> *"RosarioSIS (GPL, PHP) and **Gibbon (GPL, PHP)** are open-source student information systems aimed at K-12 schools."*
+
+🟢 **That is TRUE. The gate stayed correctly silent on it** *(a control pins this: firing there would make the gate enforce the KB's own error against a correct source)* → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p227.tsv).
+
+🔵 **A gate built to protect the shelves from sources cannot, by construction, catch an error that runs from the shelves outward.** 🔴 **This is `ACTION QO`'s real scope, and p226's argument for `QO` was backwards: it cited its own draft's `GPL` as the defect. The defect was the cell it checked against. 🟢 The gate `QO` needs is not one that checks drafts against the shelves — it is one that checks the SHELVES against first-hand payloads.**
+
+### 🟢 The `4` cells are WITHDRAWN IN PLACE, not left for the next pass
+
+🔵 **Tabling without fixing would have repeated the p171/p214 failure exactly.** 🟢 **All four now carry `<!--corrected-->` markers, placed OUTSIDE every emphasis span** *(p226 recorded the hazard of a marker landing inside one, where it splits the span and the row reads back as unmarked)*:
+
+| file | what it said | what it says now |
+|---|---|---|
+| [`verticals/solutions.md`](../verticals/solutions.md) | the live platform-tier row: `AGPL-3.0` | 🟢 **`GPL-3.0`**, with the payload |
+| [`verticals/solutions.md`](../verticals/solutions.md) | 🔴 p226's `T226-V0` row asserting the inversion | 🟢 **the draft cell was RIGHT; the "correction" is withdrawn** |
+| [`repos/foundations.md`](../repos/foundations.md) | 🔴 *"`GibbonEdu/core` is `AGPL-3.0`, not `GPL`"* | 🟢 **withdrawn — it is exactly backwards** |
+| [`intel/market.md`](../intel/market.md) | `(AGPL-3.0, Hong Kong)` | 🟢 **`(GPL-3.0, Hong Kong)`** |
+
+### 🔴 `T227-V1` / `V2` / `V3` — three defects in this pass's own work, and all three are ONE hazard
+
+🟢 **Every one was caught by a control before publishing, and all three are the same error in three places: a licence family token matched as a SUBSTRING instead of a word.**
+
+| # | where | the defect | the fix |
+|---|---|---|---|
+| 🔴 `V1` | this pass's own `ACTION SN` probe | reported *"`3` AGPL/licence mentions"* in `cms/envs/common.py`. 🔴 **All three are the token `GNU` inside `DISABLE_DEPRECATED_SIGNUP_URL`** — si**gnu**p | read the token as a WORD |
+| 🔴 `V2` | the new table's `exempt_pattern` for Gibbon | contained the literal `GPL-3.0`, which matches **inside `AGPL-3.0`** — so a planted `AGPL` claim was wrongly EXEMPTED and the `RESTRICTIVE` control failed | `(?<!A)GPL-3\.0` |
+| 🔴 `V3` | the new family discriminator | searched the whole body for the AGPL title. 🔴 **`GNU Affero General Public License` appears INSIDE a GPL-3.0 body, in §13 — so the method inverted Gibbon's answer, the very cell it was built to fix** | read the title POSITIONALLY; exclude the AGPL title from the GPL pattern |
+
+🔵 **`V3` deserves its own line: §13 defeated three successive methods — a bare token grep, a byte-size oracle *(the canonical bodies are `15` bytes apart: `35 121` vs `35 136`)*, and a whole-body title search.** 🟢 **Only the first-title-in-document-order survives, corroborated by §13's heading. The wrong method is kept in the code as `naive_affero_grep()` so the defect stays demonstrable: 🔴 **it is WRONG on Gibbon and RIGHT on Open edX, which is exactly how a broken method survives ~`56` passes undetected.**
+
+🟡 **Standing rule: the unit of a licence family token is a WORD in a KNOWN SECTION, never a substring and never a whole-file hit.** 🔵 **Fifteenth consecutive unit-mismatch headline → `ACTION QY`.**
+
+### 🟢 The `1` new agent row, read first-hand
+
+| agent | grant | payload | what it is |
+|---|---|---|---|
+| 🆕 🟢 [`Sarthak-Neupane/CanvasMCPServer`](https://github.com/Sarthak-Neupane/CanvasMCPServer) | 🟢 **`MIT`** | `main/LICENSE` `1 072` B, `sha256`₁₂ `71f670d6352a`, *"Copyright (c) 2025 Sarthak Neupane"*; `README.md` `13 523` B, `sha256`₁₂ `3f4e8bd202b6`; `2` refs on the git service | An MCP server for Canvas LMS. 🟡 **The smallest Canvas MCP row on these shelves at `2` refs — carried because the grant is clean and read, not because the project is large** |
+
+🔴 **And the candidate that gets named and nothing more:** [`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) — 🟢 **EXISTS**, `5` refs, `README.md` `11 839` B `sha256`₁₂ `4c15b3a178af`; 🔴 **`LICENSE`, `LICENSE.md` and `LICENSE.txt` ALL `404` on `main`. NO GRANT** — not something a studio can build on. Joins `ACTION PH`'s queue, the second such row in two passes.
+
+### 🟢 `91.3%` already-carried, and the series now has five points
+
+🔵 **`23` repository or platform candidates named across `14` queries; `21` already on these shelves** → [`p227-discovery-candidates`](../evidence/p227-discovery-candidates.2026-10-15-p227.tsv).
+
+| pass | candidates | already carried |
+|---|---|---|
+| p223 | `18` | `89%` |
+| p224 | `8` | `75%` |
+| p225 | `9` | `100%` |
+| p226 | `32` | `93.8%` |
+| 🆕 **p227** | **`23`** | **`91.3%`** |
+
+🟢 **Above `89%` in four of five, and the two not carried split exactly as p226's two did: one `NO-GRANT` repository and one real new row.** 🔵 **The topic shelves remain exhausted as a discovery channel; both of this pass's candidates came from a USE-CASE-shaped query *(`open source MCP server Moodle Canvas grading rubric github 2026`)*, which is the channel [`repos/trending.md`](../repos/trending.md) identified at `T223-R2` and it is still the one that pays.**
+
+### 🟢 `ACTION SI` gains a new channel class, and `ACTION SK` gains its first measurement
+
+🟢 **`zijinz456/OpenTutor` is the canonical path of a `3`-path fork set.** 🔵 **All three serve byte-identical `README.md` *(`11 807` B, `sha256`₁₂ `274d94acdd56`)*, `LICENSE` *(`1 068` B, `sha256`₁₂ `5352b4967982`, `MIT`, *"Copyright (c) 2026 Zijin Zhang"*)* and `package.json` *(`198` B, `sha256`₁₂ `50fc11e0a03c`)*.
+
+🟢 **Direction settled by p226's Open edX method: the shared `README` names `github.com/zijinz456/OpenTutor` **`7`** times and neither other path **once**.** → [`p227-opentutor-fork-set`](../evidence/p227-opentutor-fork-set.2026-10-15-p227.tsv)
+
+🔴 **`T227-SI1` — and the corroborating channel must NOT be load-bearing, stated because it was tempting.** 🟡 **The shared grant's copyright line reads *"Zijin Zhang"*, which resembles the handle `zijinz456`. 🔴 But a copyright line names a PERSON and an owner path names an ACCOUNT — inferring one from the other is an `ENTITY → AXIS` unit mismatch, and it fails silently wherever a maintainer's handle does not echo their name or the copyright is held by an employer.** 🟢 **Admitted to `ACTION SI`'s channel list as CORROBORATION ONLY, with that limit attached.**
+
+🔴 **`T227-SI2` — `ACTION SK`'s prediction confirmed on one entity.** 🔵 **These shelves cite **`9`** different owner paths for `OpenTutor`, and `30` of `254` citations — **`11.8%`** — point at a non-canonical path. 🟡 One of them, `DeepTutor/OpenTutor`, collides with a different carried entity entirely *(`HKUDS/DeepTutor`)*.** 🟢 **This is one entity measured, not the `90`-collision census, and it is now the strongest argument for running `ACTION SK`.**
+
+### 🟢 `ACTION SB` and `ACTION PH` — NOT taken, for a twentieth pass
+
+🔴 **Both are OUTWARD actions that open issues in a maintainer's name, and p227 ran unattended. Unchanged.** 🔵 **`PH`'s queue gains [`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) and [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification), both `NO-GRANT` with the repository plainly alive.**
+
+
 ## Pass 226 — 2026-10-15 — `ACTION SH` FIRES **BOTH WAYS**: `0` INBOUND HITS ON THE TABLE AS IT STOOD, AND `1` THE MOMENT THE TABLE COVERS WHAT THIS KB HAD ALREADY REFUTED FIRST-HAND THREE PASSES AND SEVENTEEN PASSES AGO
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows. `2` registered actions discharged — `SH` *(the registered highest priority)* and `SI`, both on limb `1`. `1` refuted claim caught INBOUND before it was written. `1` published p225 recommendation INVERTED on evidence. `4` grants read first-hand. `3` rows added to the refuted-claims table. `2` new standing rules. `3` defects found in this pass's own cells before publishing.**

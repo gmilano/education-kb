@@ -1,0 +1,23 @@
+# ACTION SL (p227): are Vietnam's Decision 33/2026/QD-TTg and the 'standalone AI law' ONE
+# instrument or TWO? Limb 1: a source naming BOTH -> two instruments, cite separately.
+# Limb 2: a source giving QD-TTg 33/2026 a March commencement -> one instrument, one date wrong.
+# VERDICT: LIMB 1 FIRES. They are TWO instruments in a parent/child relation, and more than one
+# source names both together. Cite separately and keep both dates.
+instrument	number	type	adopted	in_force	relation	education_content
+Law on Artificial Intelligence	134/2025/QH15	STATUTE (National Assembly)	2025-12-10, by 429 of 434 deputies present (90.7%)	2026-03-01	PARENT. The first comprehensive, standalone, binding AI statute in Southeast Asia (as reported; not independently verified across other ASEAN jurisdictions)	Framework only: 8 chapters, 35 articles, a three-tier risk regime. Names no sector lists itself
+Decision on the List of High-Risk AI Systems	33/2026/QD-TTg	PRIME MINISTERIAL DECISION	2026-06-30	2026-08-15	CHILD. Issued under the AI Law; supplies the sector lists the statute leaves open	46 high-risk AI systems across 6 sectors, education among them. Named education entries include self-learning content drawn from uncontrolled data sources, and systems that automatically test, evaluate results and rank learners
+	
+# COMPLIANCE DATES - three distinct dates, and they must not be merged:
+date	what it is
+2026-03-01	the AI Law enters force
+2026-08-15	Decision 33/2026/QD-TTg enters force
+2027-03-01	general grace period ends for AI systems already in operation
+2027-09-01	EXTENDED grace period ends for health, EDUCATION and finance - the +6 months p226 recorded
+	
+# p226 RESIDUE RESOLVED: p226 carried 'comply by 1 March 2027' and 'an extra six-month grace
+# period' for education as two half-facts from one source. They are now placed: 2027-03-01 is the
+# general deadline, 2027-09-01 is education's. Neither was wrong; neither was complete.
+	
+# UNRESOLVED, single-sourced, NOT published as fact: one source says Decree 142/2026/ND-CP has
+# applied since 2026-05-01. One source only, and Vietnamese government hosts are egress-blocked
+# from this session, so CONVERGENT-SECONDARY is the best attainable grade and this does not reach it.

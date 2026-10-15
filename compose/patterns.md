@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — `3` RECIPES, EACH BUILT ON A ROW THIS PASS CORRECTED, PLUS THE SHELF GATE `ACTION QO` ACTUALLY NEEDS
+
+🔵 **`3` new patterns. `1` of them exists as working code with `19` controls. All three name specific repositories with first-hand-read grants, and `2` of the three are only possible BECAUSE of a licence correction made this pass.**
+
+🔵 **Evidence:** [`p227-verified-repos`](../evidence/p227-verified-repos.2026-10-15-p227.tsv) · [`so-refuted-claims`](../evidence/so-refuted-claims.2026-10-15-p227.tsv) · **Instrument:** [`p227-direction-gate`](../compose/code/p227-direction-gate/README.md)
+
+### 🟢 `P227-R1` — the SHELF gate, which is `ACTION QO`'s missing concrete form
+
+🔴 **`ACTION QO` has been carried nine passes as *"wire a licence gate into `make hooks`"*. p226 argued for it on the grounds that its own draft wrote `GPL` beside `Gibbon`. 🟢 This pass showed that argument was backwards: the draft was RIGHT and the SHELF CELL was wrong. So the gate `QO` needs runs in the other direction.**
+
+| | p226's proposed gate | 🟢 `P227-R1`'s gate |
+|---|---|---|
+| checks | a draft against the shelves | 🟢 **the shelves against first-hand payloads** |
+| catches | a new cell that disagrees with an old one | 🟢 **an old cell that disagrees with the repository** |
+| would it have caught `Gibbon`? | 🔴 **no — it CAUSED it** | 🟢 **yes** |
+
+**Wiring, concretely:**
+
+1. **Harvest** every `(slug, ref, licence_cell)` triple from the `8` live shelves — one `grep`, offline, owner-casefolded *(`ACTION SJ`)*.
+2. **Read** each slug's grant at `raw.githubusercontent.com/<O>/<R>/<ref>/LICENSE`, falling back to `LICENSE.md`, `LICENSE.txt`, then the ecosystem manifest. 🟢 **The only channels that work from here** → [`p227-channel-reachability`](../evidence/p227-channel-reachability.2026-10-15-p227.tsv).
+3. **Classify** with [`direction_gate.family_of()`](../compose/code/p227-direction-gate/direction_gate.py) for the GPL/AGPL pair — the FIRST title in document order, never byte size *(`15` B apart)*, never a bare `affero` grep *(`3` hits in a GPL-3.0 body)*, never a whole-body title search *(the AGPL title appears INSIDE a GPL-3.0 body)*.
+4. **Fail** on a disagreement; **queue** on an unreadable channel. 🔴 **Never silently prefer the shelf.**
+5. **Report the DIRECTION** of every disagreement, because the two cost different people: `PERMISSIVE` is a client's compliance breach, `RESTRICTIVE` is Globant's lost engagement.
+
+🟢 **Steps 3 and 5 exist as tested code today; `19` controls pass, stdlib only, and the naive method is pinned as *wrong* so the defect cannot quietly stop being demonstrated.** 🟡 **Steps 1, 2 and 4 are a harness around it — a day's work, and the only reason it is not in `make hooks` this pass is that `ACTION SO` consumed the budget.**
+
+### 🟢 `P227-R2` — the assessment alignment loop, on a permissive stack, for the surface three jurisdictions just regulated
+
+🔴 **The convergence from `T227-3`: faculty trust assessment least, students fear it most, and Vietnam and the EU have both singled it out as high-risk.** 🟢 **And the supply gap these shelves have published since p213: plenty of LLM graders, nothing that measures itself against teacher scores.**
+
+| layer | repository | grant | why this one |
+|---|---|---|---|
+| grading I/O | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **`MIT`** | 🟢 **writes grades as UNRELEASED DRAFTS and keeps rubric logic in the caller's prompt** — the human release step stays in the platform, which is the human-oversight record Oklahoma, Maryland, Vietnam and the EU all want |
+| Canvas equivalent | [`Sarthak-Neupane/CanvasMCPServer`](https://github.com/Sarthak-Neupane/CanvasMCPServer) | 🟢 **`MIT`** *(`1 072` B, `sha256`₁₂ `71f670d6352a`, read this pass)* | the same role for a Canvas tenancy |
+| timetable / cohort context | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **`Apache-2.0`** *(`11 357` B, `sha256`₁₂ `58d1e17ffe51`)* | 🔴 **only usable here BECAUSE this pass corrected it from `GPL-3.0`** |
+| offline / low-bandwidth delivery | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **`Apache-2.0`** | the African and LATAM deployments are device- and bandwidth-constrained |
+| local inference | `Ollama` | 🟢 **`MIT`** | keeps student work inside the tenancy — California `AB 1159`'s requirement, directly |
+
+**The loop itself, which is the asset:** grade a submission against the rubric → write it as an **unreleased draft** → the teacher reviews and releases in the platform → **record the delta between the model's score and the released score** → report drift per rubric criterion, per cohort, over time.
+
+🟢 **The drift report is the deliverable.** 🔵 **It is what answers the faculty member (*"it is measured against you, not replacing you"*), the student (*"here is the audit trail"*), and the regulator (*"here is the human-oversight record and the accuracy evidence"*) with one artefact.** 🟡 **Estimate `6`–`8` weeks to a defensible pilot on one faculty's rubrics. 🔴 Do NOT ship it as a grader; ship it as a calibration instrument, because that is both the honest framing and the one that gets past an assessment committee.**
+
+### 🟢 `P227-R3` — teacher-competency delivery at national scale, offline-first
+
+🔴 **From `T227-4`: the programmes with real budgets are teacher-side — Nigeria's `1.5M` teachers, Egypt's UNESCO competency framework, Kenya's `10 382` schools and `62 000` trained teachers. None is a student-facing tutor.**
+
+| layer | repository / asset | grant | role |
+|---|---|---|---|
+| offline content + courses | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **`Apache-2.0`** | Docker orchestration over `Kiwix` + `Kolibri` + `Ollama`; runs with no internet. 🟢 **The single best-fitting row on these shelves for this buyer** |
+| LMS, if a permissive grant is required | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | 🔵 the tier's only permissively licensed LMS |
+| school operations / cohort tracking | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **`MIT`** *(code)* | 🔴 **only usable here BECAUSE this pass corrected it from `AGPL-3.0`.** 🟡 **`docs/` is `CC-BY-SA-4.0` — exclude it from a proprietary deliverable or inherit share-alike** |
+| local inference | `Ollama` | 🟢 **`MIT`** | no egress, which these deployments cannot assume |
+
+**Wiring:** map the client's own competency framework *(Egypt's UNESCO-adapted one; Nigeria's NUC policy as it lands)* to course units in `OpenOlat` → deliver them through `project-nomad` to schools with no reliable connectivity → track teacher progression in `pupilfirst` → certify against the framework's own levels.
+
+🔵 **Sell against the framework, not a feature list** — it is the buyer's own language in both Egypt and Nigeria. 🟡 **Estimate `10`–`12` weeks for a provincial pilot.** 🔴 **Two hard constraints: the SIS connector is unresolvable from here *(`ACTION RK` — Banner, PeopleSoft, Ellucian and Workday Student terms must be checked per client)*, and the citation trail is a deliverable line item in this region, not a methodology slide — South Africa withdrew a national policy over exactly that.**
+
+### 🔴 What these patterns deliberately do NOT include
+
+🔴 **No `AlekSIS`** — no resolvable repository. 🔴 **No [`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) or [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)** — both exist, neither has a grant, and a `NO-GRANT` row must never enter a recipe as a dependency. 🔴 **No `yuanjiusheng/cloud-learning-ce`** — proprietary, despite having been published here as `MIT`. 🟡 **No star-count claim anywhere above: `api.github.com` has been `403` for twenty-one passes and this KB cannot refresh one.**
+
+
 ## Pass 226 — 2026-10-15 — THREE RECIPES: THE INBOUND GATE THAT COSTS NOTHING AND CAUGHT A `17`-PASS-OLD ERROR, THE CANONICAL-SLUG RESOLVER, AND THE SIS CONNECTOR NOBODY HAS BUILT
 
 ### 🆕 🟢 `P226-R1` — the inbound refuted-claims gate *(run it on SEARCH RESULTS, before anything is written)*

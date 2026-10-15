@@ -1,0 +1,68 @@
+# p227 raw inbound records, 2026-10-15. One record per line: QUERY<TAB>TEXT
+# Captured BEFORE any shelf prose was written (ACTION SH, standing since p226).
+top open source AI agents education 2026 github MIT	500 AI Agents Projects is MIT-licensed and showcases practical applications and provides links to open-source projects for implementation, with education among the listed sectors.
+top open source AI agents education 2026 github MIT	MetaGPT is MIT-licensed, and LLMs-from-scratch is an educational project that builds a language model from the ground up.
+top open source AI agents education 2026 github MIT	OpenHands is MIT-licensed and is a platform bundling the agent with its sandboxed runtime.
+top open source AI agents education 2026 github MIT	CrewAI and LangGraph are both MIT-licensed multi-agent frameworks, useful for teaching orchestration.
+top open source AI agents education 2026 github MIT	Dify is not plain MIT (it uses a modified Apache-2.0 license), and AgentGPT is GPL-3.0 and archived.
+github trending education AI 2026	Project NOMAD is the clearest education pick. It had about 39.8k stars in the GitHub trending snapshot from October 13, 2026.
+github trending education AI 2026	nanochat (Karpathy) is listed as The full LLM training stack in one minimal, readable repo.
+open source platform education LMS SIS MIT Apache 2026	OpenOLAT is a Java-based LMS under Apache 2.0, developed by frentix GmbH and derived from the University of Zurich's OLAT.
+open source platform education LMS SIS MIT Apache 2026	Sakai is listed as Apache 2.0 by one source, but another lists it under ECL v2. Verify before relying on either.
+open source platform education LMS SIS MIT Apache 2026	Open edX (originally developed with MIT and Harvard) is AGPLv3.
+open source platform education LMS SIS MIT Apache 2026	Moodle is GPL v3. Canvas LMS open-sources its core under AGPLv3.
+open source platform education LMS SIS MIT Apache 2026	OpenEduCat combines LMS and SIS on one database and is LGPLv3.
+open source platform education LMS SIS MIT Apache 2026	RosarioSIS (GPL, PHP) and Gibbon (GPL, PHP) are open-source student information systems aimed at K-12 schools.
+open source platform education LMS SIS MIT Apache 2026	I found no MIT-licensed LMS or SIS in these results.
+AI education industry trends 2026	One market report projects the AI in education market to reach $10.6 billion in 2026, growing to $42.48 billion by 2030.
+AI education industry trends 2026	An X-Pilot article cites a $12.3 billion figure for 2026 attributed to HolonIQ.
+AI education industry trends 2026	1EdTech sees institutions building governance structures, clarify compliance expectations, and establish evaluation processes.
+AI education North America 2026 adoption regulation players	One roundup counts 134 bills related to AI in education introduced across 31 states in 2026.
+AI education North America 2026 adoption regulation players	California AB 1159 would bar using student data to train AI models, and Idaho SB 1227 would require privacy protections for AI tools in schools.
+AI education North America 2026 adoption regulation players	The House committee advanced the K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747) in a July markup.
+AI education North America 2026 adoption regulation players	60% of U.S. K-12 teachers used AI tools during the 2024-2025 school year, and 32% used them at least weekly.
+AI education North America 2026 adoption regulation players	North America holds the largest regional share of the AI-in-education market, at about 36% (valued at $3.68 billion in 2026).
+AI education North America 2026 adoption regulation players	New York City has a one-year moratorium on student-facing AI through eighth grade.
+AI education EMEA 2026 adoption regulation players	Education tools that evaluate learners or influence access to qualifications fall into the high-risk category, which triggers pre-deployment conformity assessment.
+AI education EMEA 2026 adoption regulation players	One Commission page lists the AI Omnibus amendments as entering force on 27 July 2026, with the AI Act itself entering force on 31 July 2026. A market overview instead says high-risk provisions enter into force Aug 2026.
+AI education EMEA 2026 adoption regulation players	One vendor-style source reports that EU enterprise AI adoption stood at 19.95%, which is business-wide rather than education-specific.
+AI education APAC 2026 adoption regulation players	A July 2026 decision lists education, including automated assessment and behavioural monitoring, among high-risk AI system categories.
+AI education APAC 2026 adoption regulation players	Vietnam's law took effect 1 March 2026 and is the first standalone AI statute in Southeast Asia.
+AI education APAC 2026 adoption regulation players	South Korea's AI Basic Act entered force in January 2026, and Taiwan passed its own AI Basic Act in December 2025.
+AI education APAC 2026 adoption regulation players	Singapore leads the region with a 60.9% AI diffusion rate among working-age adults.
+AI education LATAM 2026 adoption regulation players	The Digital Education Council's 2026 LATAM survey found 92% of students and 79% of faculty actively engaging with AI, from over 30,000 responses across 29 institutions.
+AI education LATAM 2026 adoption regulation players	UNESCO IESALC's report covers 200 higher education institutions across 19 countries and concludes governance frameworks are struggling to keep pace.
+Nigeria AI education policy 2026	On October 13, 2026, the Federal Government urged universities to adopt AI while improving accountability, leadership and compliance.
+Nigeria AI education policy 2026	A 2026 Greener Journals paper states that there is no comprehensive national policy on AI in education.
+Nigeria AI education policy 2026	Naija Teacher AI aims to equip 1.5 million licensed Nigerian teachers, running August 2025 to August 2027.
+Nigeria AI education policy 2026	National AI Strategy targets equipping at least 70% of Nigeria's young workforce aged 16-35, including 50% women, with AI-related skills.
+Kenya AI curriculum 2026	In July 2026 the government launched a programme to equip 10,382 public junior secondary schools with smart classroom technology.
+Kenya AI curriculum 2026	More than 20,700 digital learning devices will be distributed, funded through the World Bank-backed Kenya Digital Economy Acceleration Project (KDEAP).
+Kenya AI curriculum 2026	More than 62,000 teachers had received ICT integration training by July 2026.
+Kenya AI curriculum 2026	A document titled Kenya AI and other Emerging Technologies Policy, 2026 is posted as a draft, building on the Kenya AI Strategy (2025-2030).
+Kenya AI curriculum 2026	A ScienceDirect study noted that AI remains not a part of the Kenyan curriculum, with only coding introduced so far.
+South Africa AI schools regulation 2026	The draft national AI policy was published for comment in April 2026, but was withdrawn for containing references to non-existent sources.
+South Africa AI schools regulation 2026	One source says the withdrawal was on 12 June 2026. Wikipedia and regulations.ai give 26 April 2026, citing fake, AI-generated citations in its reference list.
+South Africa AI schools regulation 2026	A revised version is reportedly expected to go to Cabinet by November 2026, with public release targeted for January 2027.
+South Africa AI schools regulation 2026	AI is currently governed through data protection law, mainly POPIA, overseen by the Information Regulator.
+South Africa AI schools regulation 2026	The draft proposed an AI Ethics Board and an AI Ombudsperson.
+Egypt AI education 2026	UNESCO and Egypt's Ministry of Education launched a national AI competency framework for teachers on 3 June 2026.
+Egypt AI education 2026	Programming and AI courses will be added to technical school curricula starting in the 2026/27 academic year.
+Egypt AI education 2026	A programme for first-year general secondary students has over 236,000 enrolled students and runs on the Japanese Kiryo platform.
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	Decision 33/2026/QD-TTg was issued by the Prime Minister on 30 June 2026 and takes effect on 15 August 2026.
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	It sits under the AI Law (Law 134/2025/QH15), and the AI Law came into effect on 1 March 2026.
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	AI systems that use AI to automatically test, evaluate results, and rank learners are classified as high-risk.
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	Education systems fall under the earliest deadline of before September 1, 2027, which covers healthcare, education, and finance.
+Vietnam Decision 33/2026/QD-TTg high-risk AI education list	The overall list covers 46 high-risk AI systems across 6 sectors.
+Vietnam Law on Artificial Intelligence effective 1 March 2026	The National Assembly passed it on 10 December 2025 by 429 votes of 434 deputies present - 90.7 per cent.
+Vietnam Law on Artificial Intelligence effective 1 March 2026	It is the first comprehensive, standalone, binding AI statute in Southeast Asia, with eight chapters, 35 articles, a three-tier risk regime.
+Vietnam Law on Artificial Intelligence effective 1 March 2026	Grace periods last until 1 March 2027, or 1 September 2027 for AI systems in the fields of health, education and finance.
+Vietnam Law on Artificial Intelligence effective 1 March 2026	One source says Decree 142/2026/ND-CP has applied since 1 May 2026.
+open source MCP server Moodle Canvas grading rubric github 2026	The only Moodle match is toshieji/moodle-grading-mcp, which is MIT-licensed.
+open source MCP server Moodle Canvas grading rubric github 2026	vishalsachdev/canvas-mcp has rubric tools and a batch-grading tool. It is MIT-licensed.
+open source MCP server Moodle Canvas grading rubric github 2026	bruchris/canvas-lms-mcp is a TypeScript server with 165 tools covering rubrics and grading. It is MIT-licensed.
+open source MCP server Moodle Canvas grading rubric github 2026	vkumar04/canvas-mcp-lite is an instructor-focused server built on FastMCP.
+open source MCP server Moodle Canvas grading rubric github 2026	CharlieCardenasToledo/mcp-canvas-server lists rubric-based grading among its 51 tools for teachers.
+open source AI tutor agent repository Apache 2.0 self-hosted students 2026	DeepTutor from HKUDS is Apache 2.0, self-hosted, works with the HKUDS Group at the University of Hong Kong and has passed 37,000 GitHub stars.
+open source AI tutor agent repository Apache 2.0 self-hosted students 2026	OpenTutor describes itself as open source, self-hosted, 10+ LLM providers. The search results did not show its license.
+open source AI tutor agent repository Apache 2.0 self-hosted students 2026	Dify is widely self-hosted but is not a clean Apache 2.0 match. Its license is the Dify Open Source License.

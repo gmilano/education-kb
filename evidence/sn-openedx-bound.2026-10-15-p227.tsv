@@ -1,0 +1,35 @@
+# ACTION SN (p227): settle openedx/openedx-platform's BOUND. p226 read the grant (AGPL-3.0,
+# LICENSE 35 136 B, sha256-12 e12d78569742, canonical body, no project preamble) but could not
+# settle only-vs-or-later, because GPL-family or-later lives in FILE HEADERS.
+# Limb 1: a source-file header carries 'or (at your option) any later version' -> AGPL-3.0-or-later.
+# Limb 2: headers silent or version-specific -> AGPL-3.0-only, stated as the conservative reading.
+# VERDICT: LIMB 2 FIRES. 5 files read on master, 0 or-later strings.
+path	http	bytes	sha256-12	or_later_hits	agpl_or_affero_hits	note
+manage.py	200	3425	d64ca7d5a798	0	0	no licence header at all
+lms/__init__.py	200	960	067a80d8d23b	0	0	no licence header at all
+openedx/core/__init__.py	200	384	a980205c9ee8	0	0	no licence header at all
+cms/envs/common.py	200	53271	cf6d0d07a01f	0	0	see the probe defect below
+lms/envs/common.py	200	136602	7b22d1313438	0	0	the largest settings module on the platform; no licence header
+setup.py	404	-	-	-	-	absent on master
+AGPL-3.0-LICENSE	404	-	-	-	-	absent; the grant lives at LICENSE
+	
+# PUBLISHED STATE: AGPL-3.0-only, as the CONSERVATIVE reading, stated as such.
+# This is a bound established by ABSENCE, which is weaker than p225's openeducat 2-1 vote,
+# and the cell should say so. The 65+9 AGPL cells on these shelves gain this bound.
+	
+# T227-SN1 - THE TRAP, and it is p225's openeducat trap in a THIRD shape.
+# The root LICENSE DOES contain 'any later version', 3 times: lines 570, 572 and 638.
+# Lines 570/572 are inside section 14, 'Revised Versions of this License' - the p225 shape.
+# Line 638 is NEW: it is inside the appendix 'How to Apply These Terms to Your New Programs',
+# the boilerplate NOTICE TEMPLATE, complete with the literal placeholders
+# '<one line to give the program's name...>' and 'Copyright (C) <year> <name of author>'.
+# Its subject is a HYPOTHETICAL FUTURE PROGRAM, not Open edX's grant. Counting it would have
+# published AGPL-3.0-or-later on the largest platform on these shelves, across 65+9 cells.
+# STANDING RULE (extends p225's): in a LICENSE file the project's own preamble is a channel;
+# neither the canonical body NOR its how-to-apply appendix is one.
+	
+# T227-SN2 - a defect in THIS pass's own probe, caught before publishing.
+# A first pass reported '3 AGPL/licence mentions' in cms/envs/common.py. All three are
+# substring matches on the token GNU inside the identifier DISABLE_DEPRECATED_SIGNUP_URL
+# (si-GNU-p). si[GNU]p. The unit of a licence family token is a WORD, not a substring.
+# Third instance of the same substring hazard in this one pass - see T227-V1 and T227-V2.

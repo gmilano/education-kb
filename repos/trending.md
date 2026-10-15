@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — GITHUB TRENDING RETURNED **NOTHING EDUCATION-SPECIFIC** FOR A FOURTH PASS, AND THE ONE EDUCATION REPO IT DID NAME IS ALREADY THIS KB'S SECOND-LARGEST ROW
+
+🔵 **`0` new trending repository rows. `1` trending snapshot date recorded. `1` declared channel gap, stated rather than left silent.**
+
+🔵 **Evidence:** [`p227-regional-queries`](../evidence/p227-regional-queries.2026-10-15-p227.tsv) · [`p227-discovery-candidates`](../evidence/p227-discovery-candidates.2026-10-15-p227.tsv) · [`p227-channel-reachability`](../evidence/p227-channel-reachability.2026-10-15-p227.tsv)
+
+### 🔴 `T227-R1` — the trending channel, and what it actually returned
+
+🟢 **Verbatim query: `github trending education AI 2026`.** 🔴 **It returned general-purpose AI projects and three aggregator listicles. The only education-specific repository named is [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)** — 🟡 **already this KB's second-largest row, carried since p132, `Apache-2.0` read first-hand at p226.**
+
+🔵 **One datum worth keeping: the sources place `project-nomad` at **~`39.8k`★ in a GitHub trending snapshot dated `2026-10-13`**, two days before this pass.** 🔴 **p226 recorded `39 444`★ from an earlier reading. 🟡 Both are AGGREGATOR figures and `api.github.com` is `403` for the twenty-first consecutive pass, so this KB STILL cannot refresh a star count first-hand.** 🟢 **The two numbers are recorded side by side with their dates and neither is promoted to a verified value.**
+
+🟡 **Everything else the query named — `nanochat`, `developer-roadmap`, `Open WebUI`, `BitNet` — is general infrastructure that happens to be useful for learning. 🔴 Calling those "education repos" would be an ENTITY-vs-DOMAIN unit mismatch, and this KB does not carry them as education rows.**
+
+### 🔴 `T227-R2` — the declared gap: `4` passes, `0` education-specific trending repos
+
+🟢 **Stated explicitly so silence is not read as coverage:**
+
+| pass | education-specific repos from the trending channel |
+|---|---|
+| p224 | 🔴 `0` |
+| p225 | 🔴 `0` |
+| p226 | 🔴 `0` |
+| 🆕 **p227** | 🔴 **`0`** |
+
+🔵 **The channel is not broken — it returns results. It is simply that `github trending` is a VELOCITY ranking over all software, and a vertical as small as education AI does not clear that bar in a given week.** 🟢 **The channel that DOES pay, four passes running, is the USE-CASE-shaped query, and it paid again this pass:** `open source MCP server Moodle Canvas grading rubric github 2026` returned the pass's only two new candidates.
+
+🟡 **Recommendation for p228 and after: keep the mandated trending query — it is cheap and it bounds the claim — but stop expecting rows from it, and spend the discovery budget on use-case and language-shaped queries.** 🔵 **Registered as `ACTION SR`.**
+
+### 🟢 `T227-R3` — the `9`-path citation defect, measured on one entity
+
+🔵 **While settling `OpenTutor`'s canonical path, this pass counted how these shelves actually cite it:** 🔴 **`9` distinct owner paths, `30` of `254` citations — **`11.8%`** — pointing somewhere other than the canonical `zijinz456/OpenTutor`.** 🟡 **One, `DeepTutor/OpenTutor`, collides with a different carried entity (`HKUDS/DeepTutor`) and is almost certainly a conflation of two rows rather than a real path.**
+
+🟢 **This is the first MEASUREMENT behind `ACTION SK`, which has been carried unrun for three passes on the strength of a prediction.** 🔴 **One entity is a sample, not the `90`-collision census — but a `11.8%` citation-defect rate on the entity that happened to be checked is a stronger argument than the prediction was** → [`p227-opentutor-fork-set`](../evidence/p227-opentutor-fork-set.2026-10-15-p227.tsv).
+
+
 ## 2026-10-15 — Pass 226 — `0` NEW ROWS, AND THE PASS'S REPOSITORY WORK IS A **DIRECTION** RATHER THAN A DISCOVERY: TWO ALIAS PAIRS NOW HAVE A CANONICAL PATH, AND ONE OF THEM POINTS THE OPPOSITE WAY TO WHAT p225 PUBLISHED
 
 🔵 **`0` new trending repository rows. `ACTION SI` discharged on limb `1`. `1` published recommendation inverted. `1` standing rule added about package registries. `1` known hazard reproduced with a fresh control.**

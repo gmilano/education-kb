@@ -1,0 +1,39 @@
+# p227: ACTION SI's method applied to a FORK SET rather than an alias pair, and it resolves.
+# Three paths served byte-identical README.md AND byte-identical LICENSE, which is the
+# sha-identity signature. Direction then settled on TWO independent channels.
+path	readme_bytes	readme_sha256_12	license_bytes	license_sha256_12	package_json_sha256_12	readme_self_refs
+zijinz456/OpenTutor	11807	274d94acdd56	1068	5352b4967982	50fc11e0a03c	7
+adity982/OpenTutor	11807	274d94acdd56	1068	5352b4967982	50fc11e0a03c	0
+lkh081231/OpenTutor	11807	274d94acdd56	1068	5352b4967982	50fc11e0a03c	0
+	
+# CANONICAL: zijinz456/OpenTutor. MIT, LICENSE 1 068 B sha256-12 5352b4967982.
+# CHANNEL 1 (load-bearing) - the shared README names github.com/zijinz456/OpenTutor 7 times and
+# names neither other path even once. This is exactly p226's Open edX method (5 vs 0) and it is
+# a HARD channel: a count of literal strings in a byte-identical file.
+# CHANNEL 2 (CORROBORATING ONLY) - the shared MIT grant reads 'Copyright (c) 2026 Zijin Zhang',
+# and 'Zijin Zhang' resembles the account handle 'zijinz456'.
+	
+# T227-SI1 - why channel 2 must NOT be load-bearing, stated because it was tempting.
+# A copyright line names a PERSON. An owner path names an ACCOUNT. Inferring the account from
+# the person's name is an ENTITY -> AXIS unit mismatch of exactly the kind ACTION QY sweeps for,
+# and it would fail silently on any project whose maintainer's handle does not echo their name,
+# or whose copyright is held by an employer. It corroborates here and proves nothing in general.
+# Recorded as a NEW CHANNEL CLASS for ACTION SI with its limit attached:
+# 'copyright-holder name' is admissible as corroboration, never as the resolving channel.
+	
+# T227-SI2 - the citation defect ACTION SK predicted, found and measured on one entity.
+# These shelves cite NINE different owner paths for OpenTutor:
+owner_path_cited_on_the_shelves	occurrences	status
+zijinz456/OpenTutor	224	CANONICAL
+adity982/OpenTutor	12	fork, byte-identical, confirmed this pass
+tutornew/OpenTutor	10	unverified this pass
+itsnone-liu/OpenTutor	2	unverified this pass
+iriseye395/OpenTutor	2	unverified this pass
+anoopreddy2007/OpenTutor	1	unverified this pass
+OpenTutorAI/OpenTutor	1	unverified this pass
+Johnson1662/OpenTutor	1	unverified this pass
+DeepTutor/OpenTutor	1	unverified this pass - and note it collides with a DIFFERENT carried entity, HKUDS/DeepTutor
+	
+# So ACTION SK's prediction is confirmed on a single entity: 30 of 254 citations (11.8%) point at
+# a non-canonical path. ACTION SK remains unrun across the 90 queued collisions; this is one
+# entity measured, not the census, and it is now the strongest argument for running it.

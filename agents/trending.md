@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 227 — 2026-10-15 — THE WEEK'S MOVEMENT IS A **FORK SET** AND A `NO-GRANT` SERVER, AND THE AGENT TIER'S REAL NEWS IS THAT `4` OF ITS CARRIED ROWS WERE PUBLISHED UNDER THE WRONG LICENCE IN THE **RESTRICTIVE** DIRECTION
+
+🔵 **`1` new agent row. `2` candidates probed first-hand, `1` carried. `4` carried rows re-licensed on first-hand reads, all four in the direction no sweep before this pass could see.**
+
+🔵 **Evidence:** [`p227-discovery-candidates`](../evidence/p227-discovery-candidates.2026-10-15-p227.tsv) · [`p227-opentutor-fork-set`](../evidence/p227-opentutor-fork-set.2026-10-15-p227.tsv) · [`p227-verified-repos`](../evidence/p227-verified-repos.2026-10-15-p227.tsv)
+
+### 🟢 `T227-A1` — new this week, read first-hand
+
+| agent | grant | payload | note |
+|---|---|---|---|
+| 🆕 🟢 [`Sarthak-Neupane/CanvasMCPServer`](https://github.com/Sarthak-Neupane/CanvasMCPServer) | 🟢 **`MIT`** | `main/LICENSE` `1 072` B, `sha256`₁₂ `71f670d6352a`; `README.md` `13 523` B; `2` refs | Canvas LMS MCP server. 🟡 Smallest of the Canvas MCP rows at `2` refs |
+| 🔴 [`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) | 🔴 **NO GRANT** | `5` refs, `README.md` `11 839` B — 🔴 `LICENSE`/`LICENSE.md`/`LICENSE.txt` all `404` on `main` | **NOT CARRIED.** FastMCP-based, instructor-focused. 🔵 Joins `ACTION PH` |
+
+🔵 **Both arrived through a USE-CASE-shaped query, not a topic tag:** `open source MCP server Moodle Canvas grading rubric github 2026`. 🟢 **That channel has now produced the only new rows in three of the last four passes, exactly as `T223-R2` predicted.**
+
+### 🔴 `T227-A2` — the Canvas MCP shelf is crowded, and this pass measured the crowd
+
+🔵 **The mandated use-case query returned `9` Canvas or Moodle MCP servers. `7` were already carried.** 🟡 **Tool counts as the sources state them — `165`, `102`, `54`, `51`, `7` — vary by a factor of `23` across servers wrapping the SAME API, which is a selection signal for an engagement and not a quality one.** 🔴 **None of the `9` has a `2026`-dated release that any source names, so their liveness is asserted by nobody; what this pass established came from ref sets instead.**
+
+🟢 **The one genuinely distinct shape is [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp)** *(`MIT`, carried)*: it writes grades as **unreleased drafts** and keeps rubric logic in the caller's prompt rather than the server. 🔵 **For a studio that is the safer default — the human release step is in the platform, not in the agent.**
+
+### 🔴 `T227-A3` — `4` carried rows were published under the WRONG licence, all in the RESTRICTIVE direction
+
+🟢 **`ACTION SO` re-read these first-hand this pass. Each was refuted on these shelves before and never tabled** → [`so-untabled-refutations`](../evidence/so-untabled-refutations.2026-10-15-p227.tsv).
+
+| row | published here as | 🟢 first-hand truth | payload | what the error cost |
+|---|---|---|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 `AGPL-3.0` ×`4` cells | 🟢 **`GPL-3.0`** | `35 121` B, `sha256`₁₂ `93178a43d6d3`, title line `GNU GENERAL PUBLIC LICENSE` | 🔴 **network copyleft asserted where none exists** — and it misled p226's own audit |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🔴 `GPL-3.0` | 🟢 **`Apache-2.0`** | `master/LICENSE` `11 357` B, `sha256`₁₂ `58d1e17ffe51` | 🔴 a **permissively licensed** timetabling platform excluded from any engagement filtered on MIT/Apache/BSD |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🔴 `AGPL-3.0` | 🟢 **`MIT`** + `CC-BY-SA-4.0` for `docs/` | `master/LICENSE` `1 684` B, `sha256`₁₂ `bda0aa6d49f2` | 🔴 same loss. 🟡 **And the flat correction to `MIT` is itself imprecise** |
+| [`untisapi/untis4j`](https://github.com/untisapi/untis4j) | 🔴 `GPL-3.0` | 🟢 **`LGPL-3.0`** | `master/LICENSE` `7 378` B, `sha256`₁₂ `dc1ab8bc8b6a` | 🔴 GPL and LGPL differ in exactly the obligation a studio cares about — **linking** |
+
+🔴 **`T227-A4` — `pupilfirst`'s unit is the DIRECTORY, not the repository.** 🟢 **Its grant file states three different bounds in one document: `docs/` is `CC-BY-SA-4.0`, client-side JavaScript is `MIT`, and the remainder is `MIT`.** 🟡 **So "`pupilfirst` is `MIT`" is true of the code and false of the documentation — and a studio that ships the docs with a deliverable has inherited a share-alike obligation on them.** 🔵 **Sixteenth unit-mismatch instance → `ACTION QY`.**
+
+### 🔴 `T227-A5` — and `2` rows in the PERMISSIVE direction, including one that is not open source at all
+
+| row | published here as | 🟢 first-hand truth | payload |
+|---|---|---|---|
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 🔴 `MIT` | 🟢 **`Apache-2.0`** | `main/LICENSE` `11 358` B, `sha256`₁₂ `cfc7749b96f6` — 🟢 **reproduces the shelf's recorded `11 358` B exactly, so this doubles as an identity control** |
+| [`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce) | 🔴 `MIT` | 🔴 **PROPRIETARY** | `master/LICENSE` `4 117` B, `sha256`₁₂ `3636529e0c67` — a Chinese-language EULA opening *"版权所有 (c) 2021，猿究生 / 保留所有权利"* — **all rights reserved** |
+
+🔴 **`cloud-learning-ce` is the most serious row in the set: not a wrong licence but a proprietary product once published on these shelves as `MIT`.** 🔵 **Both were refuted here before — p124 and p120 — and neither was tabled. Both are tabled now.**
+
+### 🟢 `T227-A6` — the fork set, and the channel that resolved it
+
+🟢 **[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) is canonical.** `MIT`, `LICENSE` `1 068` B, `sha256`₁₂ `5352b4967982`. 🔵 **`adity982/OpenTutor` and `lkh081231/OpenTutor` serve byte-identical `README.md`, `LICENSE` and `package.json` — the sha-identity signature of a fork, not a rename.**
+
+🟢 **Resolved by the shared `README`'s own self-references: `7` to `zijinz456`, `0` to either other path.** 🔴 **The tempting second channel — the grant's *"Copyright (c) 2026 Zijin Zhang"* beside the handle `zijinz456` — is admitted as CORROBORATION ONLY: a copyright line names a person, an owner path names an account, and that inference fails silently on any project whose maintainer's handle does not echo their name.**
+
+
 ## 2026-10-15 — Pass 226 — THIS WEEK'S SIGNAL IS A CLAIM THESE SHELVES KILLED **SEVENTEEN PASSES AGO** WALKING BACK IN THROUGH THE MANDATED QUERY, AND THE GATE BUILT TO STOP IT COULD NOT SEE IT
 
 🔵 **`0` new agent rows this week *(`30` of `32` candidates already carried — the largest candidate population yet measured)*. The signal is a refuted claim caught INBOUND before it was written, and the measurement of why the gate nearly missed it.**

@@ -1,0 +1,13 @@
+# p227: South Africa's Draft National AI Policy 2026 was withdrawn. The WITHDRAWAL DATE diverges
+# across sources and p227 does NOT pick one. Recorded as a divergence because the reason given
+# is the same in both and is, for this KB, the single most on-point finding of the pass.
+claim	date_given	source_class	reason_given
+withdrawal	2026-06-12	one secondary source	the draft policy contained references to non-existent sources
+withdrawal	2026-04-26	Wikipedia and regulations.ai	fake, AI-generated citations in its reference list
+	
+# WHY IT MATTERS HERE, and it is not a curiosity:
+# a national AI policy was withdrawn because its citations were AI-generated and did not resolve.
+# That is precisely the failure mode these shelves spend every pass defending against, and it is
+# the strongest external argument yet for the KB's own first-hand-read rule and for ACTION QO.
+# The date divergence is itself the lesson in miniature: two sources, one event, two dates, and
+# the honest published state is BOTH with their provenance, not an average and not a coin toss.

@@ -1,0 +1,18 @@
+# ACTION PD / Gap 241 / Gap 242, re-tested for the 22nd time. p225's REFUTATION of the
+# 'split tracks the HOST' rule reproduces exactly again: github.com HTML is 403 while the
+# git service endpoint on the SAME HOST is 200. The split tracks the SERVICE ENDPOINT.
+channel	probe	code	verdict
+raw.githubusercontent.com	raw.githubusercontent.com/HKUDS/DeepTutor/main/README.md	200	WORKING - the load-bearing grant channel
+github.com git service	github.com/HKUDS/DeepTutor/info/refs?service=git-upload-pack	200	WORKING - existence and ref sets
+registry.npmjs.org	registry.npmjs.org/express	200	WORKING
+pypi.org	pypi.org/pypi/requests/json	200	WORKING
+api.github.com	api.github.com/repos/HKUDS/DeepTutor	403	BLOCKED - 21st consecutive pass. Star counts remain unrefreshable
+github.com HTML	github.com/HKUDS/DeepTutor	403	BLOCKED - same host as the 200 above
+moodle.org	moodle.org/plugins/	000	BLOCKED - ACTION RA's direct route stays shut
+unesco.org	unesco.org/	000	BLOCKED - 22nd test. ACTION RL cannot be run from this session
+education.ec.europa.eu	education.ec.europa.eu/	000	BLOCKED - EMEA primary, 2nd test
+ict.go.ke	ict.go.ke/.../draft-kenya-ai-and-emerging-technologies-policy-2026.pdf	000	BLOCKED - NEW this pass, and the first AFRICAN primary on the list. ACTION SM found the instrument and could not read it
+	
+# 22 for 22: every channel that works is a PACKAGE or SERVICE endpoint; every channel that
+# fails is a WEB page. ACTION SM's result sharpens the cost: the query shape was the fix for
+# FINDING African instruments, and egress is a separate, unfixed obstacle to READING them.

@@ -1,0 +1,14 @@
+# p227 first-hand reads. Channel: raw.githubusercontent.com for grants, the github.com git
+# service endpoint for existence and ref sets. api.github.com is 403 (21st pass), so no stars.
+slug	ref	path	http	bytes	sha256_12	grant	note
+Sarthak-Neupane/CanvasMCPServer	main	LICENSE	200	1072	71f670d6352a	MIT	'Copyright (c) 2025 Sarthak Neupane'. NEW ROW this pass
+vkumar04/canvas-mcp-lite	main	LICENSE	404	-	-	NONE	also 404 at LICENSE.md and LICENSE.txt. NO GRANT - not a row
+GibbonEdu/core	master	LICENSE	200	35121	93178a43d6d3	GPL-3.0	title line GNU GENERAL PUBLIC LICENSE; section 13 is the Affero COMPATIBILITY clause. Identical body served on main
+UniTime/unitime	master	LICENSE	200	11357	58d1e17ffe51	Apache-2.0	canonical Apache body. 404 on main - master is the branch
+pupilfirst/pupilfirst	master	LICENSE	200	1684	bda0aa6d49f2	MIT + CC-BY-SA-4.0	per-DIRECTORY: docs/ is CC-BY-SA-4.0, client-side JS stated MIT, remainder MIT
+JuneYaooo/lineage-skill	main	LICENSE	200	11358	cfc7749b96f6	Apache-2.0	byte count reproduces the shelf's recorded 11 358 B exactly - an identity control
+yuanjiusheng/cloud-learning-ce	master	LICENSE	200	4117	3636529e0c67	PROPRIETARY	Chinese EULA, 保留所有权利 (all rights reserved). Not open source
+untisapi/untis4j	master	LICENSE	200	7378	dc1ab8bc8b6a	LGPL-3.0	GNU LESSER body
+1EdTech/openbadges-specification	master	LICENSE	404	-	-	NONE	404 at LICENSE, LICENSE.md, LICENSE.txt
+openedx/openedx-platform	master	LICENSE	200	35136	e12d78569742	AGPL-3.0-only	reproduces p226's read to the byte and the sha. Bound settled by ABSENCE this pass - see sn-openedx-bound
+zijinz456/OpenTutor	main	LICENSE	200	1068	5352b4967982	MIT	'Copyright (c) 2026 Zijin Zhang'. Canonical of a 3-path fork set
