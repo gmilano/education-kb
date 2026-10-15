@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — `ACTION SC` FIRES LIMB `1`: THE EU DATE THIS KB CORRECTED LAST PASS NOW CONVERGES ACROSS NINE HOUSES, AND THE SAME SEARCH HANDS BACK A BINDING DATE **SEVEN WEEKS** AWAY THAT NO SHELF HERE CARRIED
+
+🔵 **`0` single-figure market claims added. `1` convergence state established across `5` AI Act dates. `1` previously REFUSED regional instrument resolved. `1` new declared blank inside a non-blank region. Every finding and every blank published with its verbatim query.**
+
+🔵 **Evidence:** [`sc-date-convergence`](../evidence/sc-date-convergence.2026-10-15-p224.tsv) · [`p224-regional-queries`](../evidence/p224-regional-queries.2026-10-15-p224.tsv) *(`15` rows, each with its query string)*
+
+### 🆕 🟢 `P224-M1` — `ACTION SC`'s convergence test, and the state it creates
+
+🔴 **`eur-lex.europa.eu`, `consilium.europa.eu` and `unesco.org` are all `CONNECT 403` from this session, for a `19`th test.** 🟢 **`ACTION SC` was registered to stop re-counting that as this KB's failure and to replace it with a test this session CAN run: do `3`+ independent secondary houses converge, with dissenters published?**
+
+🟢 **Limb `1` FIRES on four of five dates.**
+
+| claim | value | houses | state |
+|---|---|---|---|
+| 🔴 **Annex III high-risk *(incl. education)* obligations apply** | 🟢 **`2027-12-02`** | `9` | 🟢 `CONVERGENT-SECONDARY` |
+| the instrument that moved it | `Digital Omnibus on AI`, **`Reg. (EU) 2026/1744`**, in force **`2026-07-27`** | `9` | 🟢 `CONVERGENT-SECONDARY` |
+| Article `50` transparency | 🟢 **unchanged, applied since `2026-08-02`** | `9` | 🟢 `CONVERGENT-SECONDARY` |
+| Annex I *(AI embedded in regulated products)* | **`2028-08-02`** | `3` | 🟢 `CONVERGENT-SECONDARY` |
+| 🆕 🔴 **two NEW Article `5` prohibitions added by the Omnibus** | 🔴 **phase in `2026-12-02`** | `3` | 🟢 `CONVERGENT-SECONDARY` |
+| Annex III's education **use cases** *(admission, outcome evaluation, exam scoring)* | 🔴 **not verified** | `0` | 🔴 `SNIPPET-ONLY` |
+
+🟢 **Houses:** Cloud Security Alliance · Gibson Dunn · Orrick · DLA Piper · Usercentrics · Formalize · alpacax · aiacto.eu · technology.org. 🟡 **The only dissent found is not dissent:** one source dates Council final adoption `2026-06-29` and another OJ publication `2026-07-24` — earlier steps of the same instrument, not rival in-force dates. 🔵 **Published rather than smoothed, as registered.**
+
+🔴 **The `SNIPPET-ONLY` row is the one a proposal must respect.** Every result named the *category* "education" and **not one listed the Annex III points**. 🟡 **So a SOW may carry the DATE as convergent-secondary and must NOT assert the SCOPE.** 🟢 **That asymmetry — date converges, scope does not — is what `ACTION SC` exists to express, and p223's correction of this KB's own prose is now independently corroborated nine times over.**
+
+### 🆕 🔴 `P224-M2` — the nearest binding EU date is not the one anybody is quoting
+
+🔴 **`2026-12-02` — seven weeks from this pass — is when the Omnibus's two new Article `5` prohibitions phase in, and no shelf in this KB carried that date before now.** 🟡 **Commercially: the EMEA conversation this quarter is not Annex III conformity *(~`14` months of runway)* and not Article `50` *(already live)*. It is a prohibition review with a December deadline.** 🟢 **Three clocks, three SOWs → [`compose/patterns.md`](../compose/patterns.md) `P224-R2`.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The volume is in the states, and the buyer is a compliance deadline.** `134` AI-in-education bills across `31` states *(MultiState)*; `35`+ states carrying department-of-education AI guidance as of June `2026`. 🔴 **Hard dates to sell against:** Oklahoma `S.B. 1734` — every district to adopt a **written AI policy** before the `2027-28` school year; Maryland — its `24` districts get **`120` days** from state guidance; Alabama `H.B. 329` — AI instruction inside a required CS course to graduate.
+🔴 **And the restrictive edge is real: New York City's student-facing generative-AI moratorium takes effect `2026-09-02`, and LAUSD has adopted its own.** 🟡 **A district under a moratorium is not a lost engagement — it is a teacher-facing and governance engagement, because the prohibition is on *student-facing* use.**
+🟢 **Federal:** the US Department of Education's grant-priority rule was finalised `2026-04-13`, prioritising projects that expand understanding of AI or its ethical use. 🔴 **`H.R. 8747` *(K-12 AI Literacy and Readiness Act)* advanced in committee `2026-07-21` and is NOT enacted — do not price funding against it.**
+🔴 🆕 **DECLARED BLANK INSIDE A NON-BLANK REGION: Canada and Mexico returned essentially nothing.** The query said *"North America"* and the surface answered with the United States only. 🔵 **Query published verbatim so the next pass can re-run it: `AI education North America 2026 adoption regulation players`. A Canada/Mexico-shaped query is p225's job — p223's withdrawal of p222's APAC blank is the precedent that this is a query shape, not a quiet region.**
+
+### EMEA
+
+🟢 **Three clocks, now dated with nine houses behind them** *(see `P224-M1`)*: Article `50` transparency **live since `2026-08-02`**, two new Article `5` prohibitions **`2026-12-02`**, Annex III education high-risk **`2027-12-02`**. 🟡 **That is a staged programme with ~`14` months of runway, not a single deadline — and the near-term deliverable is the December prohibition review.**
+🟢 **Sovereignty is now buildable rather than aspirational:** `Telli`, a service for German schools, is a first-class provider in a shipping `GPL-3.0-or-later` Moodle plugin, alongside Ollama and — new this pass — a **self-hosted Open WebUI** provider from the University of Turin. 🔵 [`verticals/solutions.md`](../verticals/solutions.md) `T224-V2`.
+🟢 **Other instruments carried:** UK AI Opportunities Action Plan *(Jan `2025`, principles-based)*; Germany's **EUR `20`bn** AI commitment `2025`–`2030`; the Commission's ethical guidance for educators *(first published `2022`)*; Erasmus+ `2026` calls on policy experimentation.
+🔴 **DECLARED BLANK, with its query:** `AI education EMEA 2026 adoption regulation players` returned **no EMEA-wide education adoption statistic and not one named vendor or ministry for any European or African school system.** The Gulf *(UAE, Saudi Arabia)* returned national AI strategies with **no education-specific detail**; Africa returned **nothing at all**. 🟡 **An EMEA proposal should say that the region's education-adoption baseline is unpublished, not invent one.**
+
+### APAC
+
+🟢 **p221's Vietnam finding — which p222 re-ran verbatim and could NOT reproduce — reproduces this pass, and now with an instrument number.** 🔴 **Decision No. `33/2026/QD-TTg`, issued `2026-07-02`, identifies high-risk AI across six sectors **including education**, naming automated assessment and behavioural monitoring; systems already operating before `2026-08-15` get a further **six months**.** Vietnam's broader AI law took effect `2026-03-01`.
+🟢 **South Korea's AI Basic Act entered force `2026-01-22`.** China carries the most comprehensive binding framework; Singapore and Japan lean on voluntary guidelines; Korea, Vietnam and Taiwan sit in between with comprehensive statutes.
+🟡 **The adoption numbers are thin and should be quoted as such:** Singapore leads the region at `60.9%` AI diffusion among working-age adults, while only **`1` in `10`** APAC enterprises self-rates *"very mature"* on AI.
+🔴 **`0` of these read at a primary source — every host was a law firm or a commentary site.** 🟢 **`ACTION RO` stays open and `ACTION SC` now explains why it will not close from this session.** 🔵 **Query: `AI education APAC 2026 adoption regulation players`.**
+
+### LATAM
+
+🟢 **The region's numbers are the strongest on any shelf this pass, and they all say the same thing: adoption has outrun governance.**
+- **UNESCO IESALC**, `200` institutions across `19` countries: 🟢 **`87%` use AI in at least one area**, `74%` in teaching and learning — 🔴 **but only `26%` have a formal AI strategy.**
+- **Digital Education Council LATAM `2026`** *(`29` institutions)*: `92%` of students and `79%` of faculty engaging with AI.
+- **TALIS 2024** teacher AI use, all well above the OECD's `36%`: 🟢 **Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%`.**
+- 🔴 **Brazil, the sellable sentence: `53%` of school administrators use AI and only `22%` of schools have guidelines on its use.**
+🟡 **That `53` / `22` gap is the engagement.** The purchase is not a tutor; it is an AI-use policy with monitoring and an evaluation loop, in Portuguese or Spanish, for an institution that already has the adoption and none of the governance.
+🟢 **`ACTION RF` RESOLVES.** p220 **refused** a claimed `2026` UNESCO regional observatory because it appeared in exactly one opinion column. 🟢 **It is real: the UNESCO Observatory on AI in Education for Latin America and the Caribbean, launched `14 April 2026`, partners CAF, CENIA *(Chile)*, CETIC.br *(Brazil)*, ECLAC, Fundación Santillana, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal *(Uruguay)*.** 🔴 **`unesco.org` is `CONNECT 403` here, so this is `CONVERGENT-SECONDARY`, not primary.** 🔵 **A refusal that later resolves is the system working: p220 was right to refuse one column, and right to register it rather than bury it.**
+🟢 **Regulation:** Uruguay is the first in the region to sign the Council of Europe Framework Convention *(`2025`)*; Colombia's CONPES `4144` *(Feb `2025`)*; Peru's risk-tiered measures with INDECOPI coordination, regulatory sandboxes and phased timelines for micro and small enterprises; 🔴 **Mexico's federal AI bill has sat in the Senate since `2024` and is still pending — do not price against it.**
+
+### Global
+
+🔴 **No single market figure is added, and the standing rule holds: this page quotes a range with sources and years attached, never one number.** 🟢 **The mandated trends query returned `$12.3`B, *"`54%` of students using AI daily or weekly"* and *"`5`–`10` hours saved per week"* — all from vendor blogs and aggregators. 🔴 **NOT carried as fact.** 🔵 **Recorded here only so a later pass does not rediscover them and mistake them for new evidence.**
+🟢 **The one convergent global signal is structural rather than numerical:** the sector's shift from experimentation to **governance** *(1EdTech)* — which is the same finding the LATAM, North America and EMEA sections above reach from three different directions. 🔵 [`intel/trends.md`](trends.md) `T224-T1`.
+
 ## Pass 223 — 2026-10-15 — THE STALE-DATE GATE HAS ALWAYS POINTED OUTWARD. POINTED AT THIS KB'S OWN PROSE IT FIRES TWICE, AND ONE HIT IS THE SENTENCE THAT PRICES AN EMEA ENGAGEMENT
 
 🔵 **`0` new market figures. `3` cells corrected. `1` declared blank closed and shown to have been a query-shape artefact. `1` new primary instrument recorded SNIPPET-ONLY because its host is unreachable from this session.**

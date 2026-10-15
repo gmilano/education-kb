@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 224 — THIS WEEK'S SIGNAL IS AN ARCHITECTURE FORK, NOT A REPO: MOODLE NOW HAS **TWO MUTUALLY EXCLUSIVE** AI SUBSYSTEMS, AND PICKING ONE EXCLUDES THE OTHER'S ENTIRE PLUGIN ECOSYSTEM
+
+🔵 **In one line: `2` new agent rows shipped onto these shelves, both `GPL-3.0-or-later`, both Moodle — and the week's real finding is the sentence in `local_ai_manager`'s `README` that makes the Moodle AI market a fork rather than a stack.**
+
+🔵 **Evidence:** [`p224-new-rows`](../evidence/p224-new-rows.2026-10-15-p224.tsv) · [`t224-namespace-mirror`](../evidence/t224-namespace-mirror.2026-10-15-p224.tsv) · [`p224-regional-queries`](../evidence/p224-regional-queries.2026-10-15-p224.tsv)
+
+### 🆕 🔴 `T224-W1` — the fork, read first-hand from the README
+
+> **`CARE: Currently, plugins requiring the moodle AI subsystem are not compatible with the AI manager and vice versa.`**
+> — [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) `README.md`, `5 354` B, read `2026-10-15`
+
+🔴 **So there are two Moodle AI architectures on these shelves and they do not compose:**
+
+| | **A — Moodle core `core_ai`** | **B — `local_ai_manager`** |
+|---|---|---|
+| ships with | Moodle `4.5`+ | a plugin, `ISB Bayern` |
+| Moodle floor | 🟢 **`4.5`** *(`2024100100`)* | 🔴 **`5.0`** *(`2025041400`, `supported [500, 502]`)* |
+| extension seam | `aiprovider_*` | `aitool_*` + `aipurpose_*` |
+| multi-tenancy | ✗ | 🟢 **yes — its stated reason to exist** |
+| providers on these shelves | 🆕 [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) · [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | OpenAI *(incl. Azure)*, Gemini, Imagen 3 via Vertex, Dall-E, **Ollama**, **Telli** |
+| frontends | any `core_ai`-aware activity | `block_ai_chat`, `tiny_ai`, `block_ai_control`, 🆕 `local_ai_injection`, `qtype_aitext` |
+
+🟡 **What it costs an engagement.** A client on Moodle `4.5` can have **A** and cannot have **B** without a major-version upgrade. A client who needs **per-tenant quotas and purposes** — a ministry, a university system, a state school platform — needs **B**, and inherits a `5.0` floor and a `MATURITY_BETA` frontend. 🔴 **An SOW that lists plugins from both columns is unbuildable as written.** 🟢 **Recipe: [`compose/patterns.md`](../compose/patterns.md) `P224-R1`.**
+
+🔵 **One EMEA sovereignty datum falls out of column B's provider list: `Telli`, a *"Service for German schools"*, sits beside OpenAI and Gemini as a first-class tool.** 🟢 **A state-procured inference endpoint is already a supported provider in a shipping Moodle plugin — which is the EMEA data-residency story told in code rather than in a slide.**
+
+### 🆕 🟢 New this pass
+
+| row | grant | region | why it is here |
+|---|---|---|---|
+| 🆕 🟢 [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) | 🟢 `GPL-3.0-or-later` | 🟢 **EMEA** *(Italy, Univ. of Turin)* | Self-hosted Open WebUI as a `core_ai` provider. **No vendor API in the path** — `ACTION RB`'s second structural escape |
+| 🆕 🟢 [`bycs-lp/moodle-local_ai_injection`](https://github.com/bycs-lp/moodle-local_ai_injection) | 🟢 `GPL-3.0-or-later` | 🟢 **EMEA** *(Germany, ISB Bayern)* | Column-B frontend, `0.3` / `BETA`, depends on `local_ai_manager` |
+
+### 🆕 🔴 `T224-W2` — the mandated trending shape returned teaching material for a SEVENTH time
+
+🔴 **`github trending education AI 2026`, run verbatim: `rohitg00/ai-engineering-from-scratch`, Microsoft's *AI Agents for Beginners*, *Made With ML*, *Neural Networks: Zero to Hero*.** 🔵 **Repos about **learning AI**, not AI **for the education sector**. `0` rows.**
+
+🟢 **`ACTION RD`'s closed verdict holds without amendment, and its standing rule is now paying for itself:** run the mandated shape last, spend one query on it, expect ~`1` row per `10` passes — and weight the constrained shape, which produced **both** of this pass's rows plus the architecture fork above.
+
+🔴 **The vendor-domain warning recurs too.** `open source platform education ERP CRM MIT Apache` returned **`5` of `9` results from `openeducat.org`'s glossary in `5` different languages.** 🔵 p222 saw the same shape from one vendor in `6` languages. 🟡 **A mandated query that rewards SEO returns whoever bought the words.**
+
+### 🟢 Carried, unchanged, and worth re-stating because the week's searches went looking for it
+
+🟢 **ArguLens** *(`Apache-2.0`, Fudan, `QWK 0.813`, [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE))* came back as the top result for `open source automated grading essay scoring agent github Apache MIT 2026` and **is already on these shelves.** 🔵 **Everything else that shape returned was an `ASAP`-2012-era academic project, mostly unlicensed. The automated-scoring supply has not moved this week.**
+
 ## 2026-10-15 — Pass 223 — THIS WEEK'S SIGNAL IS A DATE, NOT A REPO: THE EU'S EDUCATION HIGH-RISK CLOCK IS `2027-12-02`, AND THIS KB WAS TELLING STUDIOS `2026-08-02`
 
 🔵 **In one line: nothing new shipped on the agent shelves this week that this KB did not already hold — `16` of `18` discovery candidates were already here — so the week's finding is a correction with a price tag, plus one `UNGRANTED` agent that answers the grading-alignment gap p213 opened.**

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — FOUR REGIONS, FOUR QUERIES, ONE TREND: ADOPTION OUTRAN GOVERNANCE EVERYWHERE, AND GOVERNANCE IS WHAT `2026` ACTUALLY BUYS
+
+🔵 **`1` new cross-regional trend established from numbers measured this pass rather than asserted. `1` methodological trend added to this KB's `9`-pass unit-mismatch series. `2` vendor statistics declined.**
+
+🔵 **Evidence:** [`p224-regional-queries`](../evidence/p224-regional-queries.2026-10-15-p224.tsv) · [`sc-date-convergence`](../evidence/sc-date-convergence.2026-10-15-p224.tsv) · [`ru-grammar-census`](../evidence/ru-grammar-census.2026-10-15-p224.tsv)
+
+### 🆕 🟢 `T224-T1` — the governance gap is the trend, and it is quantified differently in every region
+
+🔴 **Four independent query shapes, four regions, and the same structure comes back each time: the usage is in place and the rules are not.**
+
+| region | adoption | governance | the gap |
+|---|---|---|---|
+| 🟢 **LATAM** | `87%` of `200` HE institutions use AI somewhere *(IESALC, `19` countries)*; `74%` in teaching and learning | 🔴 **`26%` have a formal AI strategy** | 🔴 **`61` points** |
+| 🟢 **LATAM — Brazil, schools** | `53%` of administrators use AI | 🔴 **`22%` of schools have guidelines** | 🔴 **`31` points** |
+| 🟢 **North America** | `35`+ states publish AI guidance | 🔴 **`134` bills still in flight across `31` states**; districts given `120` days *(MD)* or a `2027-28` deadline *(OK)* to write a policy | 🔴 **guidance exists, binding policy does not** |
+| 🟢 **EMEA** | `—` 🔴 **unpublished: no EMEA-wide education adoption figure exists** | 🟢 three dated statutory clocks *(`2026-08-02` · `2026-12-02` · `2027-12-02`)* | 🔴 **inverted: the rules are dated and the adoption is unmeasured** |
+| 🟡 **APAC** | Singapore `60.9%` diffusion; `1` in `10` enterprises *"very mature"* | 🟢 Vietnam, Korea, China binding; Singapore, Japan voluntary | 🟡 **statutes ahead of institutional capability** |
+
+🟢 **1EdTech reaches the same conclusion top-down — the sector is moving *"from experimentation to governance"*.** 🔵 **This KB reaches it bottom-up, from five separately-sourced measurements, which is the stronger form of the same claim.**
+
+🟡 **What it means for a studio, stated as the thing to sell:** 🔴 **the deliverable in `2026` is not a tutor.** 🟢 **It is an AI-use policy with a monitoring surface and an evaluation loop, in the institution's own language, for a client who already has the adoption and none of the governance** — and EMEA is the one region where the order is reversed, so the EMEA deliverable is conformity against a dated clock instead. 🔵 **Recipes: [`compose/patterns.md`](../compose/patterns.md) `P224-R2` *(governance pack)* and `P224-R3` *(EMEA three-clock)*.**
+
+### 🆕 🔴 `T224-T2` — the methodological trend: a measurement is reproducible only if its ENUMERATOR is published
+
+🔴 **This pass imported p221's own `parse_range()` by path — the literal predicate behind the published `94.3%` — and still could not reproduce p221's population: `4 152` GNU mentions against `2 342`, on a corpus `789` lines larger.**
+
+🟢 **The cause is now named: the unit of enumeration lives in the RUNNER, not in the predicate.** p221 counted table-cell mentions; p224 counted token occurrences including prose. Same predicate, different census.
+
+🔵 **Ninth consecutive unit mismatch in this KB's headline series, and this pass supplies three of them:**
+
+| id | the unit assumed | the unit that decided |
+|---|---|---|
+| `T218-1` | token | **axis** |
+| `T218-3` | heading level | **pass boundary** |
+| `T218-4` | line | **sentence** |
+| `T219-5` | token | **packaging mode** |
+| `T220` | repository | **FILE** |
+| `T221` | licence family | **version range** |
+| `T222` | token | **ecosystem grammar** |
+| `T223` | line | **matched span** |
+| 🆕 **`T224-1`** | a repository's **file set** | 🔴 **the owner's REPOSITORY SET** |
+| 🆕 **`T224-3`** | the row on the line | 🔴 **the grant's SUBJECT** |
+| 🆕 **`T224-4`** | the predicate | 🔴 **the ENUMERATOR** |
+
+🟡 **The series has stopped being a curiosity and is now a checklist item: before publishing a count, name the unit, then check the instrument can see it.** 🔵 **`ACTION QY` stays registered; this pass is three more instances for it.**
+
+### 🆕 🟡 `T224-T3` — two vendor statistics declined, recorded so they are not rediscovered as news
+
+🔴 **The mandated `AI education industry trends 2026` query returned `$12.3`B *(market size)*, *"~`54%` of students use AI daily or weekly"* and *"`5`–`10` hours saved per teacher per week"*.** 🔴 **All from vendor blogs and statistics aggregators; none traceable to a primary instrument.** 🟢 **Declined, and written down here because an undocumented decline looks exactly like an undiscovered fact to the next pass.**
+
+🟢 **What the same query DID yield, and is carried:** agentic lesson-planning and assessment drafting as the year's named development; education-specific platforms displacing generic chatbots; teacher-first adoption as the pattern that survives; digital credentials moving toward the centre of skills-based hiring.
+
 ## Pass 223 — 2026-10-15 — A REFUTED CLAIM IS NOT NEUTRALISED BY BEING REFUTED SOMEWHERE ELSE IN THE SAME FILE. THE UNIT OF A CORRECTION IS THE **READING PATH**, NOT THE DOCUMENT
 
 🔵 **The trend this pass is about knowledge bases, and it is measurable in this one: `3` cells asserted a date this KB had already refuted `4` times, and the refutation was in the same file, `~900` lines away.**

@@ -1,0 +1,29 @@
+# T224-1  the unit of an alias is the OWNER's REPOSITORY SET, not a repository's FILE set
+# All reads 2026-10-15 via raw.githubusercontent.com (branch main). github.com HTML = 403
+# from this session, so the redirect discriminator used for a rename was NOT available.
+repo_name	bycs-lp_code	bycs-lp_sha256_12	mebis-lp_code	mebis-lp_sha256_12	verdict
+moodle-local_ai_manager/version.php	200	738e8757f780	200	738e8757f780	IDENTICAL
+moodle-local_ai_manager/README.md	200	69dcdf42ed9a	200	69dcdf42ed9a	IDENTICAL
+moodle-local_ai_manager/docs/index.md	200	3ab592d1f434	200	3ab592d1f434	IDENTICAL
+moodle-local_ai_manager/CHANGELOG.md	404	-	404	-	ABSENT-BOTH
+moodle-local_ai_manager/lang/en/local_ai_manager.php	200	214f173832f4	200	214f173832f4	IDENTICAL
+moodle-local_ai_manager/settings.php	200	9042B-4ee1641e3e06	200	9042B-4ee1641e3e06	IDENTICAL
+moodle-block_ai_chat/version.php	200	16db6a86c43b	200	16db6a86c43b	IDENTICAL
+moodle-tiny_ai/version.php	200	6debf05610b5	200	6debf05610b5	IDENTICAL
+moodle-block_ai_control/version.php	200	9d8b624f4282	200	9d8b624f4282	IDENTICAL
+moodle-local_ai_injection/version.php	200	b7fc7ae7bf8e	404	-	EXCLUSIVE-TO-bycs-lp
+# VERDICT	MIRROR-PAIR, not a rename and not one repository: 4 repository names serve
+# byte-identical content under both owners, and a 5th exists under bycs-lp ONLY. A GitHub
+# rename redirects EVERY old-slug path, so local_ai_injection's 404 under mebis-lp refutes
+# the rename reading in either direction.
+# METHOD	measuring more FILES of one repository made the alias look certain (5 of 5
+# identical); measuring one more REPOSITORY of the owner refuted it. This is the
+# discriminator ACTION RY asked for and could not get without api.github.com.
+# CANONICAL	mebis-lp, self-declared: local_ai_manager's own README - served identically
+# from BOTH owners - links its sibling plugins as github.com/mebis-lp/moodle-block_ai_chat,
+# /moodle-tiny_ai and /moodle-block_ai_control.
+# TRAP	a blanket bycs-lp -> mebis-lp rewrite BREAKS local_ai_injection, which resolves
+# only under bycs-lp.
+# SHELF COST	30 live mentions of bycs-lp/moodle-local_ai_manager + 11 of
+# mebis-lp/moodle-local_ai_manager = ONE project counted twice; p222 published the mebis-lp
+# spelling as a NEW row when the KB had carried the bycs-lp spelling since p219.

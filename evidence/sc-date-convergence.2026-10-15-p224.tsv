@@ -1,0 +1,14 @@
+# ACTION SC - the convergence test that replaces the unreachable-primary actions.
+# limb 1: 3+ INDEPENDENT secondary sources converge on a date (dissenters published)
+#         -> mark CONVERGENT-SECONDARY, a state a SOW can carry.
+# limb 2: fewer than 3, or no independence -> keep SNIPPET-ONLY.
+claim	value	converging_sources	independent_houses	dissent	state
+AI Act Annex III high-risk (incl. education) obligations apply	2027-12-02	Cloud Security Alliance; Gibson Dunn; Orrick; DLA Piper; Usercentrics; Formalize; alpacax; aiacto.eu; technology.org	9 (4 of them independent law firms or a security-research body)	none found this pass	CONVERGENT-SECONDARY (limb 1 FIRES)
+Instrument that moved it	Digital Omnibus on AI, Reg. (EU) 2026/1744, in force 2026-07-27	same set	9	one source says Council final adoption 2026-06-29, another cites OJ publication 2026-07-24 - both are EARLIER steps of the same instrument, not rival in-force dates	CONVERGENT-SECONDARY
+Article 50 transparency duties	unchanged, applied since 2026-08-02	same set	9	none	CONVERGENT-SECONDARY
+Annex I (AI embedded in regulated products)	2028-08-02	CSA; Gibson Dunn; technology.org	3	none	CONVERGENT-SECONDARY (limb 1 FIRES)
+Two NEW Article 5 prohibitions added by the Omnibus	phase in 2026-12-02	Usercentrics; alpacax; technology.org	3	none	CONVERGENT-SECONDARY (limb 1 FIRES) - and the NEAREST binding EU date for an education engagement: 7 weeks from this pass
+Annex III's education USE CASES (admission, outcome evaluation, exam scoring)	not verified this pass	0 - every result named the CATEGORY "education" without listing the Annex III points	0	-	SNIPPET-ONLY (limb 2) - the scope, unlike the date, does NOT converge and a SOW must not assert it
+# PRIMARY HOSTS, re-tested: eur-lex.europa.eu CONNECT 403, consilium.europa.eu CONNECT 403,
+# unesco.org CONNECT 403. The blocker is the egress policy, not the effort - which is what
+# ACTION SC was registered to stop re-counting as this KB's failure each pass.

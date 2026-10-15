@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — `ACTION RU` FIRES LIMB `1` AT `81`: THE MOST-MENTIONED GNU ROW ON THIS SHELF WAS NEVER SILENT ABOUT ITS BOUND, AND `94.3%` IS A TOKEN COUNT THAT CANNOT BE REPRODUCED FROM ITS OWN PUBLISHED ARTEFACTS
+
+🔵 **`0` new foundation rows. `1` bound restated on the shelf's most load-bearing GNU row. `1` published ratio withdrawn as non-reproducible.**
+
+🔵 **Evidence:** [`ru-grammar-census`](../evidence/ru-grammar-census.2026-10-15-p224.tsv) *(`337` rows, with a grammar column)* · **Instrument:** [`p224-grammar-attribution`](../compose/code/p224-grammar-attribution/README.md) *(`24` tests, `14` controls)*
+
+### 🆕 🟢 `ACTION RU` — p222's registered highest-priority action, run at last
+
+🟢 **Limb `1` wanted `50`+ of the bare GNU mentions to attach to a row whose grant was read from a CRAN `DESCRIPTION` or an Odoo `__manifest__.py`. It fires at `81`.**
+
+| population | bare GNU mentions |
+|---|---|
+| 🔴 **Odoo grammar** — all of them [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`80`** |
+| 🔴 **CRAN grammar** — `dexter-psychometrics/dexter` | **`1`** |
+| 🔵 WIDE *(in those ecosystems, manifest not yet read)* | `101` |
+
+🟢 **So the restatement is specific and it is good news for a studio:** those `81` mentions are **not** silences awaiting a read. Odoo spells `only` by **omission**, so `'license': 'LGPL-3'` in `openeducat_core/__manifest__.py` is a **positive `LGPL-3.0-only`**. 🔴 **`94.3%` remains a true count of bare *tokens* and is NOT a count of unspecified *grants*.**
+
+🟢 **The verdict does not depend on the unit, which matters because the unit is what p222 proved had moved:** `71` on the table-**cell** unit, `83` on the token-occurrence unit before this pass's dependency guard, `81` after. 🔵 **The cell count independently corroborates p222's separately-derived *"`72` bare `LGPL-3.0` cells"* on the same row, from a different instrument, to within one cell.**
+
+### 🆕 🔴 `T224-4` — the denominator does not reproduce, and the census that published it should have said how it counted
+
+🟢 **This pass's instrument *imports* p221's `parse_range()` by path, so "bare" means exactly what it meant when `2 208` was published.** 🔴 **It still does not reproduce p221's population:**
+
+| | p221 | p224 | corpus |
+|---|---|---|---|
+| GNU mentions | `2 342` | `4 152` | `120 296` → `121 085` lines *(+`789`)* |
+| bare | `2 208` | `3 582` | |
+
+🔴 **`789` more lines cannot produce `1 374` more mentions.** 🟢 **Importing a prior instrument's *predicate* does not reproduce its *population*, because the unit of enumeration lives in the RUNNER, not in the predicate:** p221 counted cell-mentions; this counts token occurrences anywhere, prose included.
+
+🟡 **So the `94.3%` ratio is withdrawn as non-reproducible from the published artefacts, and `ACTION RU`'s numerator — the number its limbs were actually stated in — stands.** 🔵 **Standing rule, written down: a census that publishes a ratio must publish its enumerator, not only its predicate.**
+
+### 🆕 🔴 `ACTION RV` is now the shelf's sharpest open licence question, and this pass makes it worse before someone makes it better
+
+🔴 **`openeducat/openeducat_erp` carries `80` bare `LGPL-3.0` mentions on these shelves — more than any other GNU row — and the row is in a `RANGE-CONFLICT` with itself:** `openeducat_core/__manifest__.py` l.`25` says `'license': 'LGPL-3'` *(Odoo's `only`)* while **the same file's header** grants *"either version 3 of the License, or (at your option) any later version"*.
+
+🟡 **Under `ACTION RU`'s finding the conflict is sharper, not softer:** before this pass the manifest token could be read as a silence, which is merely unhelpful. 🔴 **Under Odoo's grammar it is a positive `only` — so the file states two incompatible bounds, and `LGPL-3.0-only` is the conservative one an SOW must assume.** 🟢 **`ACTION RV` stays registered as the highest-priority licence action for p225, with its falsifier unchanged.**
+
+### 🟢 The mandated platform shape, run and declared
+
+🔴 **`open source platform education ERP CRM MIT Apache` produced `0` new foundation rows.** 🟢 It returned **OpenEduCat** *(already carried, and the row above)*, **ERPNext** *(`GPL-3`)* and **Twenty** *(`BSL-1.1` — **not** an OSI grant, recorded so no later pass treats it as one)*. 🔵 **`5` of `9` results were `openeducat.org` glossary pages in `5` languages.**
+
 ## Pass 223 — 2026-10-15 — `0` NEW FOUNDATION ROWS, AND THE REASON IS WORTH MORE THAN A ROW WOULD HAVE BEEN: THE ONE USE CASE LATAM BUYS HAS NO FOUNDATION TO STAND ON
 
 🔵 **`0` new foundation rows. `1` candidate rejected on bus factor and recorded anyway, because the rejection is the finding.**

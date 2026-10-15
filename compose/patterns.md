@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — THREE RECIPES: THE MOODLE AI ARCHITECTURE GATE, THE LATAM GOVERNANCE PACK THAT THE `53`/`22` GAP PAYS FOR, AND THE EMEA THREE-CLOCK PROGRAMME
+
+### 🆕 🔴 `P224-R1` — the Moodle AI architecture gate *(ask this before scoping anything)*
+
+**Who buys it:** anyone running Moodle who has been handed a list of AI plugins. 🔴 **The list is probably unbuildable, because Moodle has two AI subsystems and they do not compose** — read first-hand from [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager)'s `README`: *"plugins requiring the moodle AI subsystem are not compatible with the AI manager and vice versa"*.
+
+**The gate — three questions, in this order:**
+
+1. **What Moodle version is in production?**
+   - `4.5`–`4.x` → 🟢 **column A only.** Column B needs `5.0`. An upgrade is a separate programme; do not hide it inside an AI scope.
+   - `5.0`+ → both are open; go to question `2`.
+2. **Does the client need per-tenant separation** — distinct quotas, purposes or routing per school, faculty or department?
+   - Yes *(ministries, university systems, state platforms)* → 🟢 **column B, [`local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager)**, and accept that its frontends include `MATURITY_BETA` components *(`local_ai_injection` `0.3`)*.
+   - No → 🟢 **column A**, which is core and carries no extra plugin lifecycle.
+3. **Must inference stay inside the client's estate?**
+   - Column A → 🆕 🟢 [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) *(`GPL-3.0-or-later`, Moodle `4.5`+, `MATURITY_STABLE`)* against a self-hosted **Open WebUI**, or [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) against any OpenAI-compatible endpoint.
+   - Column B → **Ollama**, or 🟢 **`Telli`** where the client is a German school.
+
+**What this buys the engagement:** 🟡 **one architectural decision, made in week `1`, that cannot be reversed cheaply in month `6`** — and, in both branches, 🟢 **no vendor API in the inference path, which makes [`ACTION RB`](../intel/open-gaps.md)'s vendor-terms cell read *"n/a — self-hosted endpoint"* instead of unresolved.**
+
+🔴 **Licence check that must happen before the first plugin lands in the tree:** Moodle is GPLv3 and all four plugins named above are `GPL-3.0-or-later`, so they compose. 🔴 **An `oat-sa`/TAO library does NOT — `GPL-2.0-only`, incompatible, and the route is LTI 1.3 as a separate tool *(`P222-R1`)*.**
+
+🔵 **Citation hygiene, from this pass's headline:** `local_ai_manager`, `block_ai_chat`, `tiny_ai` and `block_ai_control` resolve under **both** `mebis-lp` and `bycs-lp`, byte-identically. 🟢 **Cite `mebis-lp` for those four — the project's own `README` does.** 🔴 **But `local_ai_injection` exists under `bycs-lp` ONLY, so a blanket owner rewrite breaks it.** 🟡 **Resolve a mirror pair per repository, never per owner.**
+
+### 🆕 🟢 `P224-R2` — the LATAM governance pack *(what the `53`/`22` gap actually pays for)*
+
+**Who buys it:** a Brazilian, Colombian or Chilean institution where AI use is already normal and unmanaged. 🔴 **The numbers, measured this pass: `53%` of Brazilian school administrators use AI and `22%` of schools have guidelines; across LATAM higher education, `87%` of `200` institutions use AI and `26%` have a strategy.** 🟡 **The purchase is the missing `61` points, not another tutor.**
+
+**Phase 1 — the policy instrument *(`3`–`4` weeks)*.** Draft in Portuguese or Spanish, not translated. Anchor it to what already exists in-country rather than to the EU: Colombia's CONPES `4144`, Peru's risk tiers and INDECOPI coordination, Uruguay's Council of Europe signature. 🔴 **Do not cite Mexico's federal bill as law — it has been pending in the Senate since `2024`.**
+
+**Phase 2 — the monitoring surface *(`4`–`6` weeks)*.** 🟢 **This is where column B earns its keep: [`local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) already ships per-role request limits, per-purpose routing, per-user usage monitoring and a capability-gated teacher view of student prompts.** 🔵 **A governance policy whose controls are already implemented in the LMS is a `6`-week delivery; one that needs them built is a `6`-month one.** Pair with [`block_ai_control`](https://github.com/mebis-lp/moodle-block_ai_control) for the admin surface.
+
+**Phase 3 — the evaluation loop *(ongoing)*.** IESALC's own breakdown names where the region is weakest — evaluation `9.0%` and budget `8.0%` *(p219)*. 🟡 **Quote those two numbers back: an institution with a policy and no evaluation has bought `26%`-of-peers compliance and nothing else.**
+
+🔵 **Dropout prediction stays a BUILD, not an adopt — unchanged from `P223-R2`.** `209` repositories, top ten peaking at `4`★, the one with a published metric *(`AUC-ROC 0.943`, UFRB)* `UNGRANTED`. 🟢 **Quote `0.943` as the bar and own the model.**
+
+### 🆕 🔴 `P224-R3` — the EMEA three-clock programme *(and the clock nobody is quoting is the near one)*
+
+🔴 **p223 established that this KB had been selling one EMEA deadline. There are three, and this pass dates all of them across nine independent houses** → [`sc-date-convergence`](../evidence/sc-date-convergence.2026-10-15-p224.tsv).
+
+| clock | date | status | what it sells |
+|---|---|---|---|
+| Article `50` transparency | `2026-08-02` | 🟢 **live now** | disclosure surfaces on every AI activity — billable today |
+| 🆕 🔴 **two new Article `5` prohibitions** | 🔴 **`2026-12-02`** | 🔴 **`7` weeks out** | a **prohibition review**: find and stop anything in the estate that the Omnibus newly forbids |
+| Annex III education high-risk | `2027-12-02` | ~`14` months | staged conformity programme — risk management, logging, human oversight, technical documentation |
+
+🟡 **Sequence the SOW in that order, because that is the order the money arrives in.** 🔴 **Most EMEA proposals this quarter will quote Annex III and miss December entirely.**
+
+**Phase 1 — prohibition review *(`2`–`3` weeks, start now)*.** Inventory every AI touchpoint in the LMS and SIS. 🔴 **Emotion-inference and behavioural-monitoring features in proctoring are the known exposure on these shelves** — this KB already carries the affect-inference scan *(`p190`)*. 🟢 **Deliverable: a list of features to disable before `2026-12-02`, with the clause each one answers to.**
+
+**Phase 2 — transparency, already live.** 🟢 Put the disclosure string in the activity template, not the model prompt, so it survives a provider swap — unchanged from `P223-R1`. Seam: `aiprovider_openaicompatible` or 🆕 `aiprovider_openwebui`.
+
+**Phase 3 — Annex III conformity, staged to `2027-12-02`.** 🔴 **Scope caveat that must appear in the proposal: the DATE converges across nine houses; the SCOPE does not.** 🔴 **Not one source this pass listed Annex III's education use cases, so the engagement states which systems it treats as in-scope and why, rather than asserting the Annex's contents.** 🟡 **A conformity programme built on an unverified scope is a programme that gets re-scoped after signature.**
+
+🟢 **Data residency, where it is asked for:** `Telli` for German schools, Ollama anywhere, or a self-hosted Open WebUI endpoint via the new Turin provider — 🔵 **all three are provider selections in `GPL-3.0-or-later` plugins, not integrations to build.**
+
 ## Pass 223 — 2026-10-15 — THREE RECIPES: THE TWO-CLOCK EMEA CONFORMITY PACK, THE OFFLINE EARLY-WARNING PILOT, AND THE GATE THAT STOPS THIS KB REPEATING ITS OWN REFUTED CELLS
 
 ### 🆕 🟢 `P223-R1` — the EMEA two-clock pack *(Article `50` now, Annex III `2027-12-02`)*

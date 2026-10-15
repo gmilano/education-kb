@@ -1,0 +1,9 @@
+# New rows, p224. Both grants read first-hand at Moodle's prescribed channel (version.php).
+slug	grant	bound_evidence	channel	branch	bytes	region	moodle_requires	maturity	release	note
+rabser/moodle-aiprovider_openwebui	GPL-3.0-or-later	header: "either version 3 of the License, or (at your option) any later version" + @license "GNU GPL v3 or later"	version.php	main	1228	EMEA (Italy)	2024100100 (Moodle 4.5)	MATURITY_STABLE	1.0.0.0	core_ai provider for a self-hosted Open WebUI endpoint. Root LICENSE 404 on main/master/HEAD - grant is at the prescribed channel, not the file. Header declares derivation from Matt Porritt's openai provider (reciprocal-upstream channel hint, ACTION QV class). Copyright Sergio Rabellino, University of Turin
+bycs-lp/moodle-local_ai_injection	GPL-3.0-or-later	header: "either version 3 of the License, or (at your option) any later version" + @license "GNU GPL v3 or later"	version.php	main	1252	EMEA (Germany)	2025041400 (Moodle 5.0+), supported [500,502]	MATURITY_BETA	0.3	Depends on local_ai_manager >= 2025082900. Copyright ISB Bayern 2025, Dr. Peter Mayer. Exclusive to the bycs-lp namespace (404 under mebis-lp) - see t224-namespace-mirror
+# CANDIDATES ALREADY CARRIED (discovery rate, 2nd consecutive measurement)
+# already-here: ArguLens/wwrwbs AI_AWE, microsoft/moodle-ai-assistant (local_aichat),
+# lmscloud-io/moodle-aiprovider_openaicompatible, bycs-lp/moodle-local_ai_manager,
+# mebis-lp/moodle-local_ai_manager, industria-elearning/moodle-local_forum_ai (NOT carried, deliberately)
+# rate: 6 of 8 candidates already on the shelves = 75% (p223 measured 89% on 18)

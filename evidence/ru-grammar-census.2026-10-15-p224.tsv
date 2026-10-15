@@ -1,0 +1,337 @@
+slug	bare_gnu_mentions	grammar	population	bound_reading	provenance
+moodle/moodle	86	unread	-	unknown - channel unread	
+openeducat/openeducat_erp	80	odoo	STRICT	POSITIVE only (bound carried by omission)	p222 README: openeducat_core/__manifest__.py l.25
+frappe/lms	79	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+openedx/edx-platform	62	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+gibbonedu/core	47	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+os4ed/opensis-classic	41	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+francoisjacquet/rosariosis	40	unread	-	unknown - channel unread	
+frappe/education	38	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+chamilo/chamilo-lms	36	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+plastic-labs/tutor-gpt	36	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+ahmedeid1/lumen	33	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+formalms/formalms	29	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+instructure/canvas-lms	28	unread	-	unknown - channel unread	
+csmediapro/moodle-mcp-server	26	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+hugecatlab/chattutor	26	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+schroedinger-hat/certo	24	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+bigbluebutton/bigbluebutton	23	unread	-	unknown - channel unread	
+learninglocker/learninglocker	21	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+ilias-elearning/ilias	20	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+echo-loop/echo-loop	18	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+frappe/erpnext	18	unread	-	unknown - channel unread	
+oat-sa/lib-lti1p3-core	18	unread	-	unknown - channel unread	
+24kchengye/human-skill-tree	17	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+kstateome/lti-launch	17	prose	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+odoo/odoo	17	odoo	WIDE	POSITIVE only (bound carried by omission)	
+overhangio/tutor	17	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+luisgf/openbadgeslib	16	classifier	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+learnhouse/learnhouse	15	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+classroomio/classroomio	14	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+inginious/inginious	14	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+artcc/freelingo	13	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+memphis-iis/mofacts	13	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+oat-sa/tao-core	12	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+portabilis/i-educar	12	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+xiaochong0302/course-tencent-cloud	12	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+adaptlearning/adapt_framework	11	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+learnpress/learnpress	11	unread	-	unknown - channel unread	
+ankitects/anki	10	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+berserk-hub150/moodle-ai-skill-navigator	10	unread	-	unknown - channel unread	
+moodlehq/moodle-enrol_oneroster	9	unread	-	unknown - channel unread	
+acanas/swad-core	8	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+agentes/plugins	8	unread	-	unknown - channel unread	
+brownplt/ltltutor	8	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+citolab/qti-convert	8	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+elmsln/elmsln	8	-	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+fabrica-de-inovacao/expeditto	8	unread	-	unknown - channel unread	
+h5p/h5p-php-library	8	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+kuali/kc	8	unread	-	unknown - channel unread	
+lumieducation/lumi	8	unread	-	unknown - channel unread	
+untisapi/untis4j	8	prose	STRICT	unknown - channel unread	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+yh2072/edgameclaw	8	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+fwu-de/ais-chat	7	unread	-	unknown - channel unread	
+kuali/kfs	7	unread	-	unknown - channel unread	
+mhlavac/edupage-mcp	7	unread	-	unknown - channel unread	
+openemis/core	7	unread	-	unknown - channel unread	
+penecho/penecho	7	unread	-	unknown - channel unread	
+willianmano/moodle-theme_moove	7	unread	-	unknown - channel unread	
+citolab/qti-components	6	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+despedite/siu-guarani	6	unread	-	unknown - channel unread	
+g3i/lxhive	6	unread	-	unknown - channel unread	
+jplag/jplag	6	unread	-	unknown - channel unread	
+mit/apache	6	unread	-	unknown - channel unread	
+oat-sa/qti-sdk	6	unread	-	unknown - channel unread	
+openedx/edx-proctoring	6	unread	-	unknown - channel unread	
+openedx/openedx-platform	6	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+portabilis/i-diario	6	unread	-	unknown - channel unread	
+tadreeb-lms/tadreeblms	6	unread	-	unknown - channel unread	
+agso-o/sigaa-calendar	5	unread	-	unknown - channel unread	
+chipmates/agoracosmica	5	unread	-	unknown - channel unread	
+codelitdev/courselit	5	unread	-	unknown - channel unread	
+coopcodecommun/pyopenbadges	5	unread	-	unknown - channel unread	
+foundation50/classroom50	5	unread	-	unknown - channel unread	
+inepdadosabertos/api	5	unread	-	unknown - channel unread	
+openedx/openedx-ai-extensions	5	unread	-	unknown - channel unread	
+scibly-dev/scibly	5	unread	-	unknown - channel unread	
+trane-project/trane	5	unread	-	unknown - channel unread	
+ucfopen/udoit	5	unread	-	unknown - channel unread	
+valentineus/moodle-webhooks	5	unread	-	unknown - channel unread	
+yukazakiri/koakademy	5	unread	-	unknown - channel unread	
+19otherrsh-dot/opencred	4	unread	-	unknown - channel unread	
+avps82/mentar	4	unread	-	unknown - channel unread	
+blend-ed/openedx-mcp	4	unread	-	unknown - channel unread	
+cboard-org/cboard	4	unread	-	unknown - channel unread	
+celtic-project/lti-php	4	unread	-	unknown - channel unread	
+elearning-bs23/moodle-quizaccess_proctoring	4	unread	-	unknown - channel unread	
+jeanlucio/moodle-local_aihub	4	unread	-	unknown - channel unread	
+kamlendras/openproctor	4	unread	-	unknown - channel unread	
+lmscloud-io/moodle-mcp-server	4	unread	-	unknown - channel unread	
+nvaccess/nvda	4	unread	-	unknown - channel unread	
+openedx/xblock	4	unread	-	unknown - channel unread	
+openedx/xblock-lti-consumer	4	unread	-	unknown - channel unread	
+pressbooks/pressbooks	4	unread	-	unknown - channel unread	
+processing/p5.js	4	unread	-	unknown - channel unread	
+project/openedx-mcp	4	unread	-	unknown - channel unread	
+themeum/tutor	4	unread	-	unknown - channel unread	
+ucfopen/canvasapi	4	unread	-	unknown - channel unread	
+ucl-ingi/inginious	4	unread	-	unknown - channel unread	
+zelinzhou-thu/stem-tutor-agent	4	unread	-	unknown - channel unread	
+zmievsa/autograder	4	unread	-	unknown - channel unread	
+academico-sis/academico	3	unread	-	unknown - channel unread	
+atutor/atutor	3	unread	-	unknown - channel unread	
+bgwdotdev/libre-oneroster	3	unread	-	unknown - channel unread	
+blend-ed/tutor-contrib-openedxmcp	3	spdx	STRICT	genuine silence	rp-bound-sweep.2026-10-15-p222.tsv (grammar column)
+cgrevisse/moodle-qbank_genai	3	unread	-	unknown - channel unread	
+datacamp/catsim	3	unread	-	unknown - channel unread	
+davidpesce/moodle-logstore_xapi	3	unread	-	unknown - channel unread	
+dmoayad/essay-grader-llm	3	unread	-	unknown - channel unread	
+educationaltestingservice/factor_analyzer	3	unread	-	unknown - channel unread	
+edwyj/ddl-killer	3	unread	-	unknown - channel unread	
+elgg/elgg	3	unread	-	unknown - channel unread	
+emea/apac	3	unread	-	unknown - channel unread	
+five-plus-one/ai-marker-suite	3	unread	-	unknown - channel unread	
+freelanguagetools/vocabsieve	3	unread	-	unknown - channel unread	
+guedesindev/ai_tutor_forge	3	unread	-	unknown - channel unread	
+hoijui/obadgen	3	unread	-	unknown - channel unread	
+human2human-ai/moodle-tool_human2human	3	unread	-	unknown - channel unread	
+idavi/usp-mcp	3	unread	-	unknown - channel unread	
+idempiere/idempiere	3	unread	-	unknown - channel unread	
+infomark-org/infomark	3	unread	-	unknown - channel unread	
+ipti/br.tag	3	unread	-	unknown - channel unread	
+kalvilabs/kalvi	3	unread	-	unknown - channel unread	
+kantord/librelingo	3	unread	-	unknown - channel unread	
+learnosity/learnosity-qti	3	unread	-	unknown - channel unread	
+leogaggl/lxhive	3	unread	-	unknown - channel unread	
+limekiller/moodle-block_openai_chat	3	unread	-	unknown - channel unread	
+moodlehq/moodle-tool_dataprivacy	3	unread	-	unknown - channel unread	
+mozilla/eclipse	3	unread	-	unknown - channel unread	
+mumuki/mumuki-laboratory	3	unread	-	unknown - channel unread	
+nilc-nlp/coh-metrix-port	3	unread	-	unknown - channel unread	
+ohf-voice/piper1-gpl	3	unread	-	unknown - channel unread	
+okpy/ok	3	unread	-	unknown - channel unread	
+os4ed/opensis-responsive-design	3	unread	-	unknown - channel unread	
+peancor/moodle-mcp-server	3	unread	-	unknown - channel unread	
+playpowerlabs/edoptimize	3	unread	-	unknown - channel unread	
+public/ai	3	unread	-	unknown - channel unread	
+qxbao/qldt-hanu-mcp	3	unread	-	unknown - channel unread	
+universaldependencies/ud_spanish-ancora	3	unread	-	unknown - channel unread	
+yunger7/enem-api	3	unread	-	unknown - channel unread	
+0/agpl-3.0	2	unread	-	unknown - channel unread	
+0/lgpl-2.1	2	unread	-	unknown - channel unread	
+5/5	2	unread	-	unknown - channel unread	
+9/9	2	unread	-	unknown - channel unread	
+abdomoaz58-tech/openlearn-ai	2	unread	-	unknown - channel unread	
+ai-lingnan/econai-agent-platform	2	unread	-	unknown - channel unread	
+ajatt-tools/mpvacious	2	unread	-	unknown - channel unread	
+cc/noncommercial	2	unread	-	unknown - channel unread	
+claroline/claroline	2	unread	-	unknown - channel unread	
+codeforlife-education/aimmo	2	unread	-	unknown - channel unread	
+cran/kequate	2	unread	-	unknown - channel unread	
+dendiem/caliper	2	unread	-	unknown - channel unread	
+edx/ease	2	unread	-	unknown - channel unread	
+erp/sis	2	unread	-	unknown - channel unread	
+erpnext/frappe	2	unread	-	unknown - channel unread	
+fedcal/open-jarvis	2	unread	-	unknown - channel unread	
+fedora-infra/tahrir	2	unread	-	unknown - channel unread	
+foradian/fedena	2	unread	-	unknown - channel unread	
+frappe/frappe	2	unread	-	unknown - channel unread	
+gatoreducator/gatorgrader	2	unread	-	unknown - channel unread	
+grey8-io/learn-ai-with-grey8	2	unread	-	unknown - channel unread	
+hefi002/tfg-mcp-moodle-server	2	unread	-	unknown - channel unread	
+hrshadhin/school-management-system	2	unread	-	unknown - channel unread	
+huly/corteza	2	unread	-	unknown - channel unread	
+jayvora-serpentcs/odooeduerp	2	odoo	WIDE	POSITIVE only (bound carried by omission)	
+kiwix/kiwix-android	2	unread	-	unknown - channel unread	
+kiwix/kiwix-tools	2	unread	-	unknown - channel unread	
+kiwix/libkiwix	2	unread	-	unknown - channel unread	
+koha-community/koha	2	unread	-	unknown - channel unread	
+learningequality/kolibri	2	unread	-	unknown - channel unread	
+learninglocker/xapi-agents	2	unread	-	unknown - channel unread	
+lepo-project/roster-hub	2	unread	-	unknown - channel unread	
+lgpl/agpl-shaped	2	unread	-	unknown - channel unread	
+lgplv3/lgpl-3.0	2	unread	-	unknown - channel unread	
+linil/centresis	2	unread	-	unknown - channel unread	
+logisim-evolution/logisim-evolution	2	unread	-	unknown - channel unread	
+manifoldscholar/manifold	2	unread	-	unknown - channel unread	
+mizcausevic-dev/mcp-ai-tutor	2	unread	-	unknown - channel unread	
+openedx/edx-ora2	2	unread	-	unknown - channel unread	
+openedx/event-routing-backends	2	unread	-	unknown - channel unread	
+openfun/xblock-proctor-exam	2	unread	-	unknown - channel unread	
+openolat/openolat	2	unread	-	unknown - channel unread	
+openstax/openstax-cms	2	unread	-	unknown - channel unread	
+openzim/libzim	2	unread	-	unknown - channel unread	
+otterden-lab/autograder	2	unread	-	unknown - channel unread	
+overhangio/openedx-scorm-xblock	2	unread	-	unknown - channel unread	
+papillonapp/papillon-v6	2	unread	-	unknown - channel unread	
+pawtograder/platform	2	unread	-	unknown - channel unread	
+portabilis/pre-matricula-digital	2	unread	-	unknown - channel unread	
+prairielearn/prairielearn	2	unread	-	unknown - channel unread	
+public/lib	2	unread	-	unknown - channel unread	
+pywirrarika/naki	2	unread	-	unknown - channel unread	
+saylordotorg/moodle-local_ai_course_assistant	2	unread	-	unknown - channel unread	
+senjun-team/senjun-courses	2	unread	-	unknown - channel unread	
+snflwr-ai/snflwr.ai	2	unread	-	unknown - channel unread	
+talbano/equate	2	unread	-	unknown - channel unread	
+thiswillbeyourgithub/ankiaiutils	2	unread	-	unknown - channel unread	
+tl-its-umich-edu/caliper-php-public	2	unread	-	unknown - channel unread	
+ucfopen/obojobo	2	unread	-	unknown - channel unread	
+universita-di-ferrara/moodle-aiprovider_gemini	2	unread	-	unknown - channel unread	
+utdanningsdirektoratet/moodle-block_hero	2	unread	-	unknown - channel unread	
+vacademy-io/vacademy_platform	2	unread	-	unknown - channel unread	
+verapdf/verapdf-library	2	unread	-	unknown - channel unread	
+vnschneider/suap-mcp	2	unread	-	unknown - channel unread	
+wwyw4842-dot/openmaic	2	unread	-	unknown - channel unread	
+0/php	1	unread	-	unknown - channel unread	
+1111philo/learn	1	unread	-	unknown - channel unread	
+2022764025/lecture-hunter	1	unread	-	unknown - channel unread	
+4/4	1	unread	-	unknown - channel unread	
+41/41	1	unread	-	unknown - channel unread	
+575/yr	1	unread	-	unknown - channel unread	
+adelahladka/difnlr	1	unread	-	unknown - channel unread	
+ankidroid/anki-android	1	unread	-	unknown - channel unread	
+apps/backend	1	unread	-	unknown - channel unread	
+aprincar/curriculum-bncc	1	unread	-	unknown - channel unread	
+arashactive/laramint	1	unread	-	unknown - channel unread	
+arqueon/certo	1	unread	-	unknown - channel unread	
+asterics/asterics-grid	1	unread	-	unknown - channel unread	
+blocks/create-tree	1	unread	-	unknown - channel unread	
+braivo/braivo	1	unread	-	unknown - channel unread	
+caiocarvalhofre/moodle-mod_maici	1	unread	-	unknown - channel unread	
+caiuc/equipo-8-hacaithon-2026	1	unread	-	unknown - channel unread	
+cerpus/edlib	1	unread	-	unknown - channel unread	
+cgtuebingen/infomark-backend	1	unread	-	unknown - channel unread	
+classmoji/classmoji	1	unread	-	unknown - channel unread	
+cm/rec	1	unread	-	unknown - channel unread	
+coqui-ai/tts	1	unread	-	unknown - channel unread	
+cran/equateirt	1	unread	-	unknown - channel unread	
+datauy/elijoestudiar	1	unread	-	unknown - channel unread	
+decoylex/ltix	1	unread	-	unknown - channel unread	
+dequelabs/axe-core	1	unread	-	unknown - channel unread	
+dexter-psychometrics/dexter	1	cran	STRICT	POSITIVE only (bound carried by omission)	rs-cran-grammar.2026-10-15-p222.tsv (DESCRIPTION read first-hand)
+digiklausur/e2x-docs	1	unread	-	unknown - channel unread	
+dodona-edu/dolos	1	unread	-	unknown - channel unread	
+dolibarr/dolibarr	1	unread	-	unknown - channel unread	
+dummerchen/ucampus	1	unread	-	unknown - channel unread	
+edubadges/badgr-server	1	unread	-	unknown - channel unread	
+edubadges/edubadges-server	1	unread	-	unknown - channel unread	
+education/erp	1	unread	-	unknown - channel unread	
+elmaldelego/open-tutor-ia	1	unread	-	unknown - channel unread	
+espoon-voltti/evaka	1	unread	-	unknown - channel unread	
+evgkatis/ccso	1	unread	-	unknown - channel unread	
+federicazoe/gradetools	1	unread	-	unknown - channel unread	
+fenixedu/fenixedu-academic	1	unread	-	unknown - channel unread	
+fordham-edm-lab/grading-analysis-tool	1	unread	-	unknown - channel unread	
+gatoreducator/gatorgrade	1	unread	-	unknown - channel unread	
+gazpachu/hypatia	1	unread	-	unknown - channel unread	
+gocodebox/lifterlms	1	unread	-	unknown - channel unread	
+gpl/lgpl	1	unread	-	unknown - channel unread	
+groovetch/grvlms-proctoring	1	unread	-	unknown - channel unread	
+haanhtuandev/vgu-mcp	1	unread	-	unknown - channel unread	
+hari7261/ai-tutor	1	unread	-	unknown - channel unread	
+hneemann/digital	1	unread	-	unknown - channel unread	
+igorfonck/logicits	1	unread	-	unknown - channel unread	
+jasig/ssp	1	unread	-	unknown - channel unread	
+jawadh-salih/moodle-mcp-server	1	unread	-	unknown - channel unread	
+judgepeach/math-question-bank	1	unread	-	unknown - channel unread	
+jxmorris12/language_tool_python	1	unread	-	unknown - channel unread	
+kbarbounakis/eduapi	1	unread	-	unknown - channel unread	
+kennisnet/qti-components	1	unread	-	unknown - channel unread	
+kristiyanvachev/question-generation	1	unread	-	unknown - channel unread	
+krzysztofbury/librus-mcp	1	unread	-	unknown - channel unread	
+languagetool-org/languagetool	1	unread	-	unknown - channel unread	
+leads/interactions	1	unread	-	unknown - channel unread	
+libretexts/libretext	1	unread	-	unknown - channel unread	
+licenses/old-licenses	1	unread	-	unknown - channel unread	
+lms/cms	1	unread	-	unknown - channel unread	
+longsightgroup/credtrail-app	1	unread	-	unknown - channel unread	
+loventures/loplatform	1	unread	-	unknown - channel unread	
+lumieducation/h5p-nodejs-library	1	unread	-	unknown - channel unread	
+macewan-cs/lti	1	unread	-	unknown - channel unread	
+macsnoeren/genai-open-assessment	1	unread	-	unknown - channel unread	
+meyerjp3/psychometrics	1	unread	-	unknown - channel unread	
+michael-milette/moodle-local_aiid	1	unread	-	unknown - channel unread	
+microsoft/moodle-ai-assistant	1	unread	-	unknown - channel unread	
+microsoft/o365-moodle	1	unread	-	unknown - channel unread	
+mint-o-badges/badgr-server	1	unread	-	unknown - channel unread	
+mit/agpl	1	unread	-	unknown - channel unread	
+mozilla/rhino	1	unread	-	unknown - channel unread	
+my-language-skills/open-badges-framework	1	unread	-	unknown - channel unread	
+nextcloud/context_chat_backend	1	unread	-	unknown - channel unread	
+nextcloud/integration_openai	1	unread	-	unknown - channel unread	
+nextcloud/llm2	1	unread	-	unknown - channel unread	
+niansia/taiwan-exam	1	unread	-	unknown - channel unread	
+nilc-nlp/nilcmetrix	1	unread	-	unknown - channel unread	
+oat-sa/devkit-lti1p3	1	unread	-	unknown - channel unread	
+oat-sa/extension-tao-testqti	1	unread	-	unknown - channel unread	
+ocadotechnology/codeforlife-workspace	1	unread	-	unknown - channel unread	
+onbirdev/moodle-webservice_mcp	1	unread	-	unknown - channel unread	
+open-behavior-analysis/aba-clinical-agent	1	unread	-	unknown - channel unread	
+openacs/openacs-core	1	unread	-	unknown - channel unread	
+openeducat-inc/openeducat	1	odoo	WIDE	POSITIVE only (bound carried by omission)	
+openedx/ease	1	unread	-	unknown - channel unread	
+openhpi/ki-campus	1	unread	-	unknown - channel unread	
+opetushallitus/aoe	1	unread	-	unknown - channel unread	
+optikey/optikey	1	unread	-	unknown - channel unread	
+package/license	1	unread	-	unknown - channel unread	
+pdf/ua	1	unread	-	unknown - channel unread	
+plastic-labs/honcho	1	unread	-	unknown - channel unread	
+postgresql/mysql	1	unread	-	unknown - channel unread	
+project/tutor-contrib-openedxmcp	1	unread	-	unknown - channel unread	
+pupilfirst/pupilfirst	1	unread	-	unknown - channel unread	
+python/typescript	1	unread	-	unknown - channel unread	
+rathena/rathena	1	unread	-	unknown - channel unread	
+robbert-harms/ybe	1	unread	-	unknown - channel unread	
+ronda-ai/ronda-app	1	unread	-	unknown - channel unread	
+safeexambrowser/seb-server	1	unread	-	unknown - channel unread	
+saniales/ai-lesson-planner	1	unread	-	unknown - channel unread	
+saxionnl/42	1	unread	-	unknown - channel unread	
+schlaflied/plot-ark	1	unread	-	unknown - channel unread	
+showlab/code2video	1	unread	-	unknown - channel unread	
+sidleal/nilcmetrix	1	unread	-	unknown - channel unread	
+sis/lms	1	unread	-	unknown - channel unread	
+sodadata/soda-core	1	unread	-	unknown - channel unread	
+sourcegrade/jagr	1	unread	-	unknown - channel unread	
+spanish/portuguese-friendly	1	unread	-	unknown - channel unread	
+static/js	1	unread	-	unknown - channel unread	
+studydrift/lextures	1	unread	-	unknown - channel unread	
+sudosylabs/proctor	1	unread	-	unknown - channel unread	
+surlabs/aichatformoodle	1	unread	-	unknown - channel unread	
+swaraj-mandre/vidhya-setu	1	unread	-	unknown - channel unread	
+thu-maic/openmaic	1	unread	-	unknown - channel unread	
+tusharnankani/aankh	1	unread	-	unknown - channel unread	
+ucfopen/materia	1	unread	-	unknown - channel unread	
+ucsd-ets/caliper-tracking	1	unread	-	unknown - channel unread	
+unitime/unitime	1	unread	-	unknown - channel unread	
+utdanningsdirektoratet/moodle-mod_adobeconnect_maintained	1	unread	-	unknown - channel unread	
+virtualarkansas/jupyterlite-zestables	1	unread	-	unknown - channel unread	
+webpa/webpa	1	unread	-	unknown - channel unread	
+wenchao-ma/gdina	1	unread	-	unknown - channel unread	
+wingkwong/react-quiz-component	1	unread	-	unknown - channel unread	
+yedidiaklein/moodle-local_aiquestions	1	unread	-	unknown - channel unread	
+TOTAL-BARE-MENTIONS	3582	-	-	-	8 files, 121085 lines
+TOTAL-ATTRIBUTED	1773	-	-	-	single-slug lines only
+AMBIGUOUS-LINE	367	-	-	-	line names 2+ rows - deliberately NOT attributed (p222 defect guard)
+NO-SLUG-ON-LINE	1442	-	-	-	prose mention, no row on the line
+VERDICT-STRICT	81	-	LIMB 1	-	threshold 50
+VERDICT-WIDE	101	-	LIMB 1	-	ecosystem, not yet read

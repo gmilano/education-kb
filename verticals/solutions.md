@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — MOODLE'S AI LAYER IS A **FORK, NOT A STACK**: TWO SUBSYSTEMS THAT CANNOT COMPOSE, WITH DIFFERENT MAJOR-VERSION FLOORS AND DISJOINT PLUGIN ECOSYSTEMS
+
+🔵 **`0` new platform rows. `1` platform-level architectural constraint established first-hand, on the most-deployed LMS on these shelves.**
+
+🔵 **Evidence:** [`p224-new-rows`](../evidence/p224-new-rows.2026-10-15-p224.tsv) · [`t224-namespace-mirror`](../evidence/t224-namespace-mirror.2026-10-15-p224.tsv)
+
+### 🆕 🔴 `T224-V1` — the sentence that forks the Moodle AI market
+
+> **`CARE: Currently, plugins requiring the moodle AI subsystem are not compatible with the AI manager and vice versa.`**
+> — [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) `README.md`, `5 354` B, read first-hand `2026-10-15`
+
+🔴 **Two AI subsystems, one LMS, no interoperability:**
+
+| | **A — core `core_ai`** | **B — `local_ai_manager`** |
+|---|---|---|
+| origin | 🟢 ships **with Moodle `4.5`** | a plugin by **`ISB Bayern`** *(Bavarian state institute)* |
+| Moodle floor | 🟢 **`4.5`** | 🔴 **`5.0`** *(`supported [500, 502]`)* |
+| seam | `aiprovider_*` | `aitool_*` + `aipurpose_*` |
+| multi-tenant | 🔴 no | 🟢 **yes, and that is its stated reason to exist** |
+| per-role quotas, purpose-level routing, teacher visibility of student prompts | 🔴 no | 🟢 **yes** |
+| self-hosted inference | 🆕 [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) · [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | **Ollama**, plus 🟢 **`Telli`, a service for German schools** |
+
+🟡 **This is the first question to ask in a Moodle AI engagement and it is architectural, not cosmetic.** 🔴 **A client on `4.5` can have **A** today and cannot have **B** without a major-version upgrade.** 🔴 **A ministry or university system that needs per-tenant quotas needs **B**, and inherits the `5.0` floor plus a `MATURITY_BETA` frontend *(`local_ai_injection` `0.3`)*.** 🟢 **Recipe and decision gate: [`compose/patterns.md`](../compose/patterns.md) `P224-R1`.**
+
+### 🆕 🟢 `T224-V2` — a state-procured inference endpoint is already a first-class provider
+
+🟢 **Column B lists `Telli` — *"Service for German schools"* — beside OpenAI, Gemini, Vertex Imagen and Ollama.** 🔵 **An EMEA data-residency requirement does not need a custom integration here; it needs a provider selection in a shipping, `GPL-3.0-or-later` plugin.** 🟡 **That is a materially shorter EMEA sovereignty path than this KB has previously carried, and it is the kind of claim a procurement officer can verify in the plugin's own settings page.**
+
+### 🟢 Platform licensing, re-read under this pass's census
+
+- 🔴 **`openeducat/openeducat_erp` — the shelf's most-mentioned GNU platform row — is `LGPL-3.0-only` under Odoo's grammar**, and in a `RANGE-CONFLICT` with its own file header. 🟡 **For a customisation engagement, assume `only` and say so in the SOW.** 🔵 **[`repos/foundations.md`](../repos/foundations.md), `ACTION RU` / `ACTION RV`.**
+- 🟢 **`ERPNext` — `GPL-3`.** 🔴 **`Twenty` — `BSL-1.1`, which is NOT an OSI grant**, recorded here so that no later pass promotes it into a permissive recipe.
+- 🔴 **Unchanged and still load-bearing: the `oat-sa` exclusion.** `GPL-2.0-only` across all `6` TAO/QTI rows keeps the assessment supply out of every GPLv3 LMS on these shelves *(Moodle, Chamilo, ILIAS, Gibbon)*; the route that works is LTI 1.3 — `P222-R1`.
+
 ## Pass 223 — 2026-10-15 — `0` NEW PLATFORM ROWS, AND THE PLATFORM TIER'S COMPLIANCE DATE WAS WRONG ON THE PAGE THAT SELLS IT
 
 🔵 **`0` new platform rows. `0` platform grants changed.** 🔴 **What changed is the sentence a studio says to a Moodle, Open edX or Chamilo client about *when* the EU obligation bites.**

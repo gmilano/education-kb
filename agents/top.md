@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — THE UNIT OF AN ALIAS IS THE OWNER'S **REPOSITORY SET**. MEASURED ON ITS FILES THIS PAIR IS ONE PROJECT; MEASURED ON ITS REPOSITORIES IT IS TWO NAMESPACES, AND THE REWRITE THAT LOOKED OBVIOUS BREAKS A ROW
+
+🔵 **`2` new agent rows *(both `GPL-3.0-or-later`, both read first-hand at Moodle's prescribed channel)*. `1` mirror pair resolved. `1` of p222's `3` "new" rows restated as a row this KB already carried.**
+
+🔵 **Evidence:** [`t224-namespace-mirror`](../evidence/t224-namespace-mirror.2026-10-15-p224.tsv) · [`p224-new-rows`](../evidence/p224-new-rows.2026-10-15-p224.tsv) · [`p224-channel-reachability`](../evidence/p224-channel-reachability.2026-10-15-p224.tsv)
+
+### 🆕 🔴 `T224-1` — the headline: more files of one repository made the alias certain; one more repository of the owner refuted it
+
+🟢 **These shelves cite `bycs-lp/moodle-local_ai_manager` `30` times and `mebis-lp/moodle-local_ai_manager` `11` times.** 🔴 **Both slugs serve the same project.** Read first-hand on `main`, `5` of `5` files byte-identical:
+
+| file | bytes | `sha256`₁₂ both owners |
+|---|---|---|
+| `version.php` | `1 147` | `738e8757f780` |
+| `README.md` | `5 354` | `69dcdf42ed9a` |
+| `docs/index.md` | `811` | `3ab592d1f434` |
+| `lang/en/local_ai_manager.php` | `28 386` | `214f173832f4` |
+| `settings.php` | `9 042` | `4ee1641e3e06` |
+
+🟢 Same component, same `ISB Bayern` copyright, same author, same `$plugin->version = 2026102305`, same `release = '5.1.1'`. 🔴 **And p222's rule says that is corroboration, not proof** — `g3i/lxHive` and `leogaggl/lxHive` were byte-identical and were a *fork pair*.
+
+🔴 **So the probe that could falsify it was run: a FIFTH repository name under both owners.**
+
+| repository name | `bycs-lp` | `mebis-lp` |
+|---|---|---|
+| `moodle-local_ai_manager` | 🟢 `200` | 🟢 `200` *(identical)* |
+| `moodle-block_ai_chat` | 🟢 `200` | 🟢 `200` *(identical, `16db6a86c43b`)* |
+| `moodle-tiny_ai` | 🟢 `200` | 🟢 `200` *(identical, `6debf05610b5`)* |
+| `moodle-block_ai_control` | 🟢 `200` | 🟢 `200` *(identical, `9d8b624f4282`)* |
+| 🔴 **`moodle-local_ai_injection`** | 🟢 **`200`** | 🔴 **`404`** |
+
+🔴 **A GitHub rename redirects EVERY old-slug path.** `local_ai_injection`'s `404` under `mebis-lp` therefore refutes the rename reading **in either direction**. 🟢 **The honest state is `MIRROR-PAIR`: two live namespaces, `4` mirrored repositories, `1` exclusive to `bycs-lp`.**
+
+🟢 **The canonical owner is self-declared, and it was inside the bytes rather than in GitHub's UI:** `local_ai_manager`'s own `README` — served identically from both owners — links its siblings as `github.com/mebis-lp/moodle-block_ai_chat`, `/moodle-tiny_ai` and `/moodle-block_ai_control`. 🔵 **`mebis-lp` for the mirrored four.**
+
+🔴 **And the obvious remedy is a trap.** A blanket `bycs-lp` → `mebis-lp` rewrite **breaks `local_ai_injection`**, which resolves under `bycs-lp` only. 🟡 **Rule: resolve a mirror pair per REPOSITORY, never per owner.**
+
+🔵 **This is the discriminator [`ACTION RY`](../intel/open-gaps.md) asked for and could not get.** `RY` was registered as needing *"a non-API discriminator"* for `openedx/edx-platform` vs `openedx/openedx-platform`. 🟢 **It is this: a path present in one namespace and absent in the other.** 🔴 **`github.com` HTML is `403` from this session as of this pass, so the redirect discriminator is gone — and the namespace-set method does not need it.**
+
+### 🆕 🟡 The correction this costs p222
+
+🔴 **p222 published `mebis-lp/moodle-local_ai_manager` as one of `3` new agent rows.** This KB had carried the same project as `bycs-lp/moodle-local_ai_manager` since p219. 🟢 **p222's count is restated: `2` new rows + `1` mirror of a row already held.** 🔵 **Second consecutive pass in which a measured discovery rate came in below the apparent one — p223 measured `16` of `18` candidates already present; this pass measures `6` of `8`.**
+
+### 🆕 🟢 New rows, both grants read first-hand at `version.php`
+
+| row | grant | region | note |
+|---|---|---|---|
+| 🆕 🟢 [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) | 🟢 `GPL-3.0-or-later` *(`main/version.php`, `1 228` B)* | 🟢 **EMEA** *(Italy)* | `core_ai` provider for a **self-hosted Open WebUI endpoint**. Moodle `4.5`+ *(`requires 2024100100`)*, `MATURITY_STABLE`, `1.0.0.0`. Copyright Sergio Rabellino, **University of Turin** |
+| 🆕 🟢 [`bycs-lp/moodle-local_ai_injection`](https://github.com/bycs-lp/moodle-local_ai_injection) | 🟢 `GPL-3.0-or-later` *(`main/version.php`, `1 252` B)* | 🟢 **EMEA** *(Germany)* | Depends on `local_ai_manager` ≥ `2025082900`. Moodle `5.0`+, `supported [500, 502]`, `MATURITY_BETA`, `0.3`. `ISB Bayern` 2025 |
+
+🔵 **`rabser` has no root `LICENSE`** — `404` on `main`, `master` and `HEAD`. 🟢 **The grant is at the prescribed channel, which is the state p220's rule predicts: a channel is a licence channel only where the ecosystem makes the field mandatory in a mandatory file. Moodle's `version.php` is that file.**
+
+🟢 **`rabser` is the SECOND structural escape from [`ACTION RB`](../intel/open-gaps.md)** *(rows governed by a vendor's API terms rather than by a licence)*, after p222's `aiprovider_openaicompatible`: an Open WebUI endpoint is self-hosted, so there is no vendor API in the path and the vendor-terms cell is *"n/a — self-hosted endpoint"*. 🔵 **Its header also declares derivation from Matt Porritt's `openai` provider — a reciprocal-upstream channel hint of exactly the `ACTION QV` kind, recorded for whoever reads its lineage.**
+
+### 🔴 `ACTION SB` and `ACTION PH` — NOT taken, for a nineteenth pass
+
+🔴 **Both open issues on third parties' repositories — an outward action in a maintainer's name — and p224 ran unattended on a schedule.** 🟢 **Registered and untaken until a human says otherwise.**
+
 ## Pass 223 — 2026-10-15 — `18` DISCOVERY CANDIDATES PROBED, `16` ALREADY HERE, AND THE ONE AGENT THAT ANSWERS THIS KB'S OLDEST DECLARED GAP HAS NO LICENCE AT ALL
 
 🔵 **`1` new agent row. `0` corrections to existing rows.** 🟢 **Discovery saturation is no longer an impression, it is a rate: `18` candidates pulled from three topic shelves, `16` *(`89%`)* already on this page.** 🔴 **The `1` row that matters is `UNGRANTED`, and it is the grading-alignment agent p213 said did not exist.**

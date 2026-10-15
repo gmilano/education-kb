@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 224 — 2026-10-15 — MEASURED ON ITS FILES THE PAIR IS ONE PROJECT; MEASURED ON ITS REPOSITORIES IT IS TWO NAMESPACES. THE UNIT OF AN ALIAS IS THE OWNER'S **REPOSITORY SET**
+
+🔵 **`2` new agent rows *(both `GPL-3.0-or-later`, both read first-hand)*, `0` new repository rows, `0` new platform rows. `3` registered actions discharged — `RU` on limb `1`, `SA` on limb `2`, `SC` on limb `1`. `1` mirror pair resolved and `1` of p222's "new" rows restated. `1` previously REFUSED regional instrument resolved. `1` published ratio withdrawn as non-reproducible. `2` instrument defects found in this pass's own output before publishing.**
+
+### 🔴 The headline: the probe that could falsify the alias was the one that refuted it
+
+🟢 **These shelves cite `bycs-lp/moodle-local_ai_manager` `30` times and `mebis-lp/moodle-local_ai_manager` `11` times for what is plainly one project: `5` of `5` files byte-identical on `main` *(`version.php` `738e8757`, `README` `69dcdf42`, `docs/index.md` `3ab592d1`, a `28 386` B lang file, a `9 042` B `settings.php`)*, same `ISB Bayern` copyright, same `release 5.1.1`.**
+
+🔴 **p222's rule says that is corroboration, not proof — `lxHive` was byte-identical and was a fork pair. So this pass probed a FIFTH repository name under both owners instead of a sixth file under one.**
+
+🔴 **`moodle-local_ai_injection` is `200` under `bycs-lp` and `404` under `mebis-lp`.** 🟢 **A GitHub rename redirects every old-slug path, so that one `404` refutes the rename reading in both directions. The honest state is `MIRROR-PAIR`: two live namespaces, `4` mirrored repositories, `1` exclusive to `bycs-lp`.**
+
+🟢 **The canonical owner was inside the bytes, not in GitHub's UI:** `local_ai_manager`'s `README` — identical from both owners — links its siblings under `mebis-lp`. 🔴 **And the obvious remedy is a trap: a blanket `bycs-lp` → `mebis-lp` rewrite breaks `local_ai_injection`.** 🟡 **Resolve a mirror pair per REPOSITORY, never per owner.**
+
+🔵 **This is the discriminator [`ACTION RY`](intel/open-gaps.md) was registered as lacking — *"a non-API discriminator"* — and it arrived the same pass `github.com` HTML went `403`, removing the redirect method it would otherwise have used. A path present in one namespace and absent in the other needs only the raw host.**
+
+🟡 **It costs p222 a row:** `mebis-lp/moodle-local_ai_manager` was published as new when the KB had carried the `bycs-lp` spelling since p219. 🟢 **`3` new rows restates to `2` new + `1` mirror.** 🔵 **Second consecutive measured discovery rate: `16`/`18` already-present at p223, `6`/`8` here.**
+
+### 🟢 `ACTION RU` fires limb `1` at `81` — p222's registered highest priority, carried unrun into this pass, now discharged
+
+🟢 **Limb `1` wanted `50`+ bare GNU mentions attaching to a row whose grant was read from a CRAN `DESCRIPTION` or an Odoo `__manifest__.py`.** 🔴 **`81`: `80` on [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), `1` on `dexter-psychometrics/dexter`.**
+
+🟢 **So the restatement is specific: those `81` are NOT silences awaiting a read. Odoo spells `only` by omission, so `'license': 'LGPL-3'` is a POSITIVE `LGPL-3.0-only`.** 🔴 **`94.3%` is a true count of bare TOKENS and is not a count of unspecified GRANTS.** 🟢 **Unit-robust: `71` on the cell unit — corroborating p222's independently-derived `72` to within one cell — `83`/`81` on the token unit.**
+
+🔴 **And the denominator does not reproduce.** The instrument *imports p221's own `parse_range()`* and still counts `4 152` GNU mentions against p221's `2 342`, on a corpus `789` lines larger. 🟢 **Cause named: the unit of enumeration lives in the RUNNER, not the predicate. The `94.3%` ratio is withdrawn as non-reproducible; `ACTION RU`'s numerator stands.** 🔵 **Standing rule: a census that publishes a ratio must publish its enumerator.**
+
+### 🔴 Two defects this pass found in its own instrument before publishing
+
+- 🔴 **`T224-2` — the phantom host slug.** `https://github.com/openeducat/openeducat_erp` yielded `github.com/openeducat` *beside* the real row, so a line naming ONE row looked like TWO, dropped out of attribution, and would have produced **a false limb `2`**. 🔵 Already visible in the shelves' own counts: `112` × `github.com/openeducat`. 🟢 **Fix is a rule: a GitHub account name is alphanumeric-and-hyphen, so a dotted owner is always a hostname.**
+- 🔴 **`T224-3` — the dependency-scoped token.** `repos/trending.md` l.`12548` names one row — `CambridgeAssessmentResearch/KernEqWPS`, **`MIT`** — and its `GPL-2`/`GPL-3` tokens belong to the R dependency `MASS`. 🟢 **The unit is the grant's SUBJECT, not the row sharing its line.** 🔵 p222's false-`GRANT-CONFLICT` defect in a second shape; numerator corrected `85` → `83`.
+
+🔵 **Ninth consecutive unit-mismatch headline, and this pass supplies three: file set vs REPOSITORY SET · row-on-line vs grant's SUBJECT · predicate vs ENUMERATOR.**
+
+### 🟢 `ACTION SC` fires limb `1`, and hands back a binding date `7` weeks away that no shelf here carried
+
+🟢 **`9` independent houses converge on Annex III education high-risk at `2027-12-02` under `Reg. (EU) 2026/1744` *(in force `2026-07-27`)*; Article `50` transparency unchanged since `2026-08-02`; Annex I at `2028-08-02`.** 🟢 **Marked `CONVERGENT-SECONDARY` — an honest state a SOW can carry while `eur-lex`, `consilium` and `unesco.org` stay `CONNECT 403`.**
+
+🔴 **New and uncarried anywhere on these shelves: the Omnibus added two Article `5` prohibitions that phase in `2026-12-02`.** 🟡 **That is the nearest binding EU date and most EMEA proposals this quarter will quote Annex III and miss it → [`compose/patterns.md`](compose/patterns.md) `P224-R3`.**
+
+🔴 **The asymmetry that must reach the proposal: the DATE converges, the SCOPE does not.** Not one source listed Annex III's education use cases → `SNIPPET-ONLY`, do not assert.
+
+### 🟢 `ACTION SA` fires limb `2` — and p223's fix held
+
+🔴 **`0` other refuted claims re-asserted in live prose.** The generalised three-subject gate reports **`0` `ASSERTED`, `5` `ATTRIBUTED`** — every live hit is this KB *quoting* a claim it refutes elsewhere, which is permitted. 🟢 **p223's own gate now reports `0`/`0`.** 🟢 **The table is kept anyway with its purpose restated: a regression harness, not a general detector. `9` controls, `6` of which must not fire.**
+
+### 🟢 Regional coverage, every finding and blank with its verbatim query *(`ACTION RE`, sixth time)*
+
+🟢 **All `5` regions non-blank. `2` declared blanks, both new, both published with their query strings** → [`p224-regional-queries`](evidence/p224-regional-queries.2026-10-15-p224.tsv).
+
+- 🔴 **APAC reproduces what p222 could not:** Vietnam **Decision No. `33/2026/QD-TTg`** *(`2026-07-02`)* names education among six high-risk sectors; systems live before `2026-08-15` get six more months. Korea's AI Basic Act in force `2026-01-22`. 🔴 `0` of `7` at a primary source — `ACTION RO` stays open, `SC` explains why.
+- 🔴 **North America is non-blank with a blank inside it:** `134` bills / `31` states, `35`+ states with guidance, NYC's student-facing moratorium from `2026-09-02` — but **Canada and Mexico returned essentially nothing** against a query that said *"North America"*.
+- 🔴 **EMEA's blank is the inverse of everyone else's:** three dated statutory clocks and **no EMEA-wide education adoption figure at all**, plus no named vendor or ministry for any European or African school system.
+- 🟢 **LATAM carries the pass's most sellable number: `53%` of Brazilian school administrators use AI, `22%` of schools have guidelines.** 🟢 **`ACTION RF` RESOLVES — the UNESCO LAC Observatory p220 refused from one opinion column is real, launched `14 April 2026`.**
+
+### 🟢 One trend, reached bottom-up from five measurements
+
+🟢 **Adoption outran governance in every region measured — LATAM `87%` use / `26%` strategy, Brazil `53%` / `22%`, North America guidance-without-policy, APAC statutes-ahead-of-capability — and EMEA inverts it.** 🟡 **So the `2026` deliverable is not a tutor; it is an AI-use policy with a monitoring surface and an evaluation loop, except in EMEA where it is conformity against a dated clock.** 🔵 [`intel/trends.md`](intel/trends.md) `T224-T1`.
+
+### 🔴 Not taken, deliberately, for a `19`th pass
+
+🔴 **`ACTION SB` and `ACTION PH` both open issues on third parties' repositories — an outward action in a maintainer's name — and p224 ran unattended on a schedule.** 🟢 **Registered and untaken until a human says otherwise.**
+
+🔵 **Instrument:** [`p224-grammar-attribution`](compose/code/p224-grammar-attribution/README.md) *(`24` tests, `14` controls)* · **Full register with falsifiers:** [`intel/open-gaps.md`](intel/open-gaps.md)
+
 ## Pass 223 — 2026-10-15 — THE GATE HAS ALWAYS POINTED OUTWARD. POINTED INWARD IT FIRES TWICE, AND ONE HIT IS THE SENTENCE THAT PRICES AN EMEA ENGAGEMENT
 
 🔵 **`4` new repository rows *(`2` `MIT`, `2` `UNGRANTED`)*, `0` new platform rows, `3` cells corrected, `1` declared blank withdrawn, `1` new instrument wired and tested.**

@@ -1,0 +1,13 @@
+# ACTION PD / Gap 241 / Gap 242 - NINETEENTH test, 2026-10-15
+host	result	note
+raw.githubusercontent.com	200	WORKING. ~30 requests this pass; every first-hand grant read came through it
+registry.npmjs.org	200	WORKING (re-confirmed)
+pypi.org	200	WORKING (re-confirmed)
+api.github.com	403	BLOCKED (19th consecutive)
+moodle.org	000 CONNECT-FAIL	BLOCKED. The Moodle plugins directory would have named the canonical owner of the mirror pair
+unesco.org	000 CONNECT-FAIL	BLOCKED (ACTION RL still undischargeable from this session)
+eur-lex.europa.eu	000 CONNECT-FAIL	BLOCKED (ACTION SC's premise, re-confirmed)
+github.com (HTML)	403	NEW BLOCK this pass. A rename redirect on github.com/OWNER/REPO was the obvious discriminator for the mirror pair and it is not available. Forced the namespace-set method instead - which produced a better answer than the redirect would have
+# RULE	p222's working rule holds: the split tracks the HOST, not the kind of resource.
+# github.com joining api.github.com strengthens it - both GitHub web hosts are blocked
+# while GitHub's RAW host is open.

@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 224 — THE DISCOVERY RATE IS NOW A TWO-POINT SERIES, AND `github.com` ITSELF WENT `403` — WHICH FORCED A BETTER ALIAS METHOD THAN THE ONE IT TOOK AWAY
+
+🔵 **`0` new repository rows this pass** *(the `2` new rows are plugins and sit on [`agents/top.md`](../agents/top.md))*. 🟢 **`1` method published that closes a `2`-pass-old methodological gap, `1` new blocked host, `1` discovery rate measured for the second consecutive pass.**
+
+🔵 **Evidence:** [`p224-channel-reachability`](../evidence/p224-channel-reachability.2026-10-15-p224.tsv) · [`t224-namespace-mirror`](../evidence/t224-namespace-mirror.2026-10-15-p224.tsv) · [`p224-regional-queries`](../evidence/p224-regional-queries.2026-10-15-p224.tsv)
+
+### 🆕 🔴 `T224-R1` — `ACTION PD`'s `19`th test, and the new block is the one that mattered this pass
+
+🟢 **WORKING:** `raw.githubusercontent.com` `200` *(~`30` requests; every first-hand grant this pass came through it)* · `registry.npmjs.org` `200` · `pypi.org` `200`.
+🔴 **BLOCKED:** `api.github.com` `403` *(`19`th consecutive)* · `moodle.org` `000` · `unesco.org` `000` · `eur-lex.europa.eu` `000` · 🆕 🔴 **`github.com` HTML `403`.**
+
+🔴 **`github.com` going `403` removed the obvious instrument for this pass's headline.** A rename shows up as a `301` on `github.com/OWNER/REPO`; without it, a mirror pair cannot be resolved by asking GitHub. 🟢 **So it was resolved by asking the NAMESPACE: probe a fifth repository name under both owners and look for a path present in one and absent in the other.** 🔵 **`moodle-local_ai_injection` is `200` under `bycs-lp` and `404` under `mebis-lp`, which refutes a rename in either direction — see [`agents/top.md`](../agents/top.md) `T224-1`.**
+
+🟢 **That is the discriminator [`ACTION RY`](../intel/open-gaps.md) was registered as lacking.** 🟡 **It needs no API, no HTML and no authentication — only the raw host, which is the one host that works. `RY`'s `openedx` pair can now be decided the same way.**
+
+🔵 **p222's working rule survives and strengthens: the split tracks the HOST, not the kind of resource.** 🟢 **Both of GitHub's *web* hosts are now blocked while its *raw* host is open — `17` clean + `1` exception *(`crates.io`)* becomes `18` clean + `1`.**
+
+### 🆕 🟢 `T224-R2` — the discovery rate, measured twice now
+
+| pass | candidates probed | already on the shelves | rate |
+|---|---|---|---|
+| p223 | `18` *(three topic shelves)* | `16` | `89%` |
+| 🆕 p224 | `8` *(use-case + language shapes)* | `6` | `75%` |
+
+🟢 **Both new rows came from a **use-case** query *(`Moodle AI plugin ... local_ai_manager aiprovider`)*, neither from a topic tag — p223's finding, reproduced.** 🔴 **And one of the `6` "already here" was already here **twice**, under two owners, which is how the mirror pair surfaced at all.** 🔵 **A discovery pass that measures its own hit rate finds duplicate carrying as a side effect; one that only counts new rows does not.**
+
+### 🟢 Candidates probed and NOT carried, with the reason
+
+- 🔴 **`industria-elearning/moodle-local_forum_ai`** — returned by this pass's Moodle query for a second time *(p220 was the first)*. 🔴 **Still not carried, unchanged reasons: nothing readable at root across `6` refs, and it will not run without the proprietary, separately licensed *DataCurso AI Provider*.** 🔵 **`ACTION RK`.**
+- 🟢 **`microsoft/moodle-ai-assistant` *(`local_aichat`)*, `lmscloud-io/moodle-aiprovider_openaicompatible`, `wwrwbs/AI_AWE` *(ArguLens)*** — all three already carried, all three re-surfaced by this pass's queries.
+- 🟡 **`rohitg00/ai-engineering-from-scratch`, Microsoft *AI Agents for Beginners*, *Made With ML*, *Neural Networks: Zero to Hero*** — the mandated trending shape's `4` returns. 🔴 **Not carried: these are repositories about **learning AI**, not AI **for the education sector**. Seventh consecutive pass in which that query returns teaching material.**
+
 ## 2026-10-15 — Pass 223 — THE TOPIC SHELVES ARE EXHAUSTED AND A USE-CASE QUERY IN PORTUGUESE FOUND FOUR REPOSITORIES IN ONE GO
 
 🔵 **`16` of `18` topic-shelf candidates were already here. Every row that was new this pass came from a query written in a **use case** or a **language**, not a topic tag.**
