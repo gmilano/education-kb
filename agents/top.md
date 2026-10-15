@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — `ACTION QV` FIRES, AND ITS PREMISE INVERTS: A RECIPROCAL UPSTREAM IS A **CHANNEL HINT** BEFORE IT IS A RISK
+
+🔵 **`1` new agent row** *(the first in `4` passes)*, **`0` new repository rows, `0` new platform rows.** 🟢 **`1` grant RECOVERED on a channel this KB had never read on this row, `1` published cell CONTRADICTED, `1` `3`-pass conflict RESOLVED, `1` new state class, and `2` actions closed — `QV` and `QW`.**
+
+🔵 **Evidence:** [`qv-upstream-reciprocity`](../evidence/qv-upstream-reciprocity.2026-10-15-p219.tsv) · [`qv-ecosystem-channel`](../evidence/qv-ecosystem-channel.2026-10-15-p219.tsv) · [`qw-constrained-trending`](../evidence/qw-constrained-trending.2026-10-15-p219.tsv) · **Instrument:** [`p219-upstream-channel`](../compose/code/p219-upstream-channel/README.md)
+
+### 🆕 🟢 `T219-2` — the headline, and it is a RECOVERY against a cell this file published
+
+🔴 **This file carries [`Hesham0-0Nasser/tutor-lms-mcp`](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) at l.`6805` as *"`NONE`, `0` surfaces"* / *"no `license` key at all"*, and at l.`6887` as *"🔴 Not shippable"* — and at l.`6944` under the heading **`WordPress/Tutor LMS — unshippable as published`**.**
+
+🟢 **`raw.githubusercontent.com/Hesham0-0Nasser/tutor-lms-mcp/HEAD/tutor-lms-mcp.php`, `5 811` B, line `8`:**
+
+```php
+/**
+ * Plugin Name: Tutor LMS MCP Server
+ * Plugin URI:  https://github.com/Hesham0-0Nasser/tutor-lms-mcp
+ * Version:     3.7.0
+ * Author:      Hesham Nasser
+ * License:     GPL-2.0+
+ */
+```
+
+🟢 **The row is `GPL-2.0-or-later`, declared in the WordPress plugin header — the field the WordPress plugin ecosystem uses *instead of* a `LICENSE` file.** 🔴 **And this KB already knew that channel: it published `LearnPress/learnpress` as *"`GPL-3.0`, declared in the WordPress plugin header"* at [`agents/trending.md`](trending.md) l.`6038`. The channel was known, the row was correctly labelled a WordPress plugin in three places on this very shelf, and the two were never joined.**
+
+🔵 **That is the propagation failure this KB has measured near `80`% three times — `P211-1` `6`/`7`, `P214-3` `3`/`4`, `QG` `23`/`7` — reaching a *client-facing verdict*. `0` surfaces was wrong; `unshippable` was wrong.**
+
+### 🆕 🟢 The one new row — and it is the first instrument on these shelves that REFUSES agents
+
+| repo | licence | region | what it is | verified |
+|---|---|---|---|---|
+| 🆕 🟢 [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) | 🟢 **`GPL-3.0-or-later`** | Global | **No More AI** — a Moodle `local` plugin that *"makes it as hard as practical for AI agents to do students' Moodle activities for them, and shows you how often agents are seen on your site, so you can measure the problem before enforcing anything."* `3` modes: **Off** · **Detect only** · **Enforce** | 🟢 **`3` channels, `2026-10-15`:** `LICENSE` `35 149` B · `composer.json` `"license": "GPL-3.0-or-later"` · `version.php` `@license … GNU GPL v3 or later` |
+
+🔴 **Read what it blocks, against this shelf's own Moodle layer:**
+
+> *"AI tools connected to Moodle through a web-service token (MCP servers, scripts, CLIs) → **Stops them** doing students' work (`Block submissions`), or stops students using tokens at all (`Block token`)."*
+
+🔴 **That is the exact architecture of every Moodle row this KB recommends.** [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) is a web-service plugin; [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) authenticates at `user/managetoken.php`; `Nasus20202/MoodleMCP` calls the same surface. 🔵 **`version.php`: `component local_nomoreai`, `version 2026101400`, `release 0.1.2`, `MATURITY_BETA`, requires Moodle `5.2`/`5.3`.** 🟡 **Beta and `0.1.2` — this is a signal, not a deployment.**
+
+🟢 **The honest half, quoted, because it is the half a studio needs:** *"An agent operating the student's own computer like a person would — **cannot be stopped or reliably detected** by any plugin."* 🔵 **And its own advice for high stakes is not software: Safe Exam Browser, a quiz password given out in the room, an IP restriction, or assessment designs that do not rely on unsupervised online work.**
+
+### 🆕 🟡 `ACTION QV`'s verdict, both readings
+
+| reading | count | fires limb `1` *(`3`+)* |
+|---|---|---|
+| **token grep**, as `QV` registered it | **`6`** of `47` | 🟢 yes |
+| **derivation-adjudicated** — installed *into* the upstream, not calling it | **`4`** of `47` | 🟢 yes |
+
+🟢 **The verdict does not rest on the adjudication.** 🔴 **But the CONCLUSION inverts: of the `4` derivatives, `3` were never ungranted.**
+
+| row | upstream | reciprocity | p219 state |
+|---|---|---|---|
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | OpenMage `LTS v20.12.0` → Magento 1 | 🔴 **`OSL-3.0` + `AFL-3.0`, net-reciprocal** | 🆕 🟡 **`UPSTREAM-MANIFEST`** — the `composer.json` *in its tree* declares `["OSL-3.0","AFL-3.0"]`, but its `"name"` is `openmage/magento-lts`. **A grant on the vendored bytes, none on the customisations** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | WordPress | `GPL-2.0-or-later` | 🟢 **`GRANTED-ECOSYSTEM-CHANNEL`** — `composer.json` `GPL-3.0-or-later`, agreeing with `readme.txt` `GPLv3` |
+| [`Hesham0-0Nasser/tutor-lms-mcp`](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) | WordPress + Tutor LMS | `GPL-2.0-or-later` | 🆕 🟢 **`GPL-2.0-or-later` — NEW, and it contradicts this file** |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | Moodle | `GPL-3.0-or-later` | 🟢 **carried from p187 — and it REPRODUCES, so the channel is stable, not a one-off** |
+
+🔵 **The other `2` token hits are `INTEGRATION`, not derivation:** `loyaniu/moodle-mcp` and `Nasus20202/MoodleMCP` call Moodle over its web services. 🟢 **Moodle's `GPL` does not reach either. They stay ordinary `ACTION PH` leads and their author grant is the only open question.**
+
+### 🆕 🔴 `T219-5` — my own instrument was wrong twice, in opposite directions
+
+🔴 **The `moodle-` slug prefix called `loyaniu/moodle-mcp` a plugin *(over-fire)*. The tokens `MCP server` and `OAuth` called `tutor-lms-mcp` an integration *(under-fire)* — the row whose grant was sitting in its plugin header.** 🔵 **Neither a token nor a slug can see the deciding fact, which is the PACKAGING MODE: installed *into* the upstream, or calling it across a network boundary.**
+
+🔵 **Fourth member of the same family, and the family now has a name:** `T218-1` used a **token** where the thing had an **axis**; `T218-3` a heading **level** where the thing had a pass **boundary**; `T218-4` a **line** where the thing had a **sentence**; `T219-5` a **token** where the thing has a **packaging mode**. 🟢 **Wired, tested and committed as [`p219-upstream-channel`](../compose/code/p219-upstream-channel/README.md): `8` tests, `3` of them controls that must not fire.**
+
 ## Pass 218 — 2026-10-15 — THE GATE WAS MADE BILINGUAL AND IMMEDIATELY REFUTED THE ACTION IT WAS BUILT FOR: LANGUAGE WAS NEVER THE DEFECT, **SCOPE** WAS
 
 🔵 **`0` new agent rows this pass.** 🟢 **`ACTION QP`, `QR`, `QS`, `QT` and `QU` all discharged — five, the most in any pass since p216.** 🟢 **`1` new named entity from the `8` mandated searches, and its headline claim turned out to be retracted by its own publishers.** 🔴 **And the finding that governs the rest: `ACTION QP` fires on limb `1`, but not for the reason it was registered.**

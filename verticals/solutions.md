@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — `0` NEW PLATFORM ROWS, AND A DISTRIBUTION CHANNEL FOR THE MOODLE TIER THAT THIS KB HAS NEVER READ
+
+🔵 **`0` new platform rows.** 🟢 **`ACTION QV` — registered here at `T218-6` — is DISCHARGED, and the answer reorders `ACTION PH` for a different reason than the one predicted.**
+
+🔵 **Evidence:** [`qv-upstream-reciprocity`](../evidence/qv-upstream-reciprocity.2026-10-15-p219.tsv) · [`qw-constrained-trending`](../evidence/qw-constrained-trending.2026-10-15-p219.tsv)
+
+### 🆕 🟢 `ACTION QV` closes — the platform tier is where the answer came from
+
+🔴 **`T218-6`, written on this shelf, asked whether the `47` genuine unknowns had ever been checked for a reciprocal upstream. They had not. They have now.**
+
+🟢 **`6` of `47` name a reciprocal upstream; `4` of `47` are installed INTO one.** 🟢 **Limb `1` fires on both readings.** 🔴 **And every one of the `4` is a derivative of a platform already in this file's tier table — Moodle, WordPress, Magento 1.**
+
+🔵 **So the platform tier turns out to carry the answer for the agent shelf:** 🟢 **if a row is a plugin for a platform listed here, the platform's own packaging convention says where its licence lives, and that is cheaper than asking its maintainer anything.**
+
+| platform *(already in this file's tier table)* | its reciprocity | where its ecosystem puts the licence |
+|---|---|---|
+| **Moodle** | `GPL-3.0-or-later` | 🟢 `version.php` + per-file docblocks *(`@license`)* — and the plugin directory REQUIRES `GPL-3.0-or-later` |
+| **WordPress** *(Tutor LMS, LearnPress)* | `GPL-2.0-or-later` | 🟢 `readme.txt` header + the main plugin file's `License:` line |
+| **Magento 1 / OpenMage** | 🔴 `OSL-3.0` + `AFL-3.0`, **network-reciprocal** | 🟡 `composer.json` — 🔴 **but check `"name"`: a vendored fork's manifest describes the UPSTREAM** |
+| **Open edX** | `AGPL-3.0` | `setup.py` / `pyproject.toml` |
+| **Sakai · Opencast** *(Apereo)* | 🟢 `ECL-2.0` — **NOT reciprocal** | `pom.xml`; p216 read it at clause level |
+
+🔴 **The `ECL-2.0` row is in that table as a control. Apereo is an LMS family and it is Apache-derived — treating "education platform" as a proxy for "copyleft" would be wrong on `8` of `13` Apereo rows *(p216)*.**
+
+### 🆕 🔴 A third risk class this file does not record, and `3` rows sit in it
+
+🟡 **`3` of the `47` call a PROPRIETARY SaaS platform over its vendor API:** [`P1ckle3/blackboard-mcp`](https://github.com/P1ckle3/blackboard-mcp), [`karkarkins/BlackboardAssistantMCP`](https://github.com/karkarkins/BlackboardAssistantMCP), [`ruud0/aula-virtual-mcp`](https://github.com/ruud0/aula-virtual-mcp) — all three against **Blackboard Learn**.
+
+🔴 **For these rows the licence question is nearly beside the point.** 🟢 **No reciprocity reaches them — Blackboard is not open source and they derive nothing from it.** 🔴 **What governs them is the vendor's API terms of service: rate limits, permitted use, whether an institution's contract allows a third-party client at all, and whether the vendor may withdraw the endpoint.** 🔴 **This KB records none of that for any row, on any shelf.**
+
+🔵 **So a studio reading a `UNKNOWN` cell on one of those `3` is being pointed at the wrong risk.** 🆕 **`UNKNOWN-PLUS-TOS`, and `ACTION RB` registered: the API-terms axis, for every row on these shelves that calls a proprietary platform — which is more than these `3`.**
+
+### 🆕 🟡 The Moodle plugin directory — a distribution channel with its own licence rule, never read here
+
+🟢 **Every plugin in the Moodle plugin directory is `GPL-3.0-or-later`: Moodle requires it as a condition of listing.** 🔵 **That makes the directory the one platform channel on this shelf where the licence is answered by the channel itself, before any repository is opened.**
+
+🔴 **`7` AI plugins were named in it this pass. `grep` over the `8` client-facing shelves returns `0` for all `7` slugs.** 🔴 **And `moodle.org` → `ENOTFOUND` from this session, so `6` of the `7` cannot be verified here at all — see [`agents/trending.md`](../agents/trending.md) for the table and [`ACTION RA`](../intel/open-gaps.md).**
+
+🔴 **One of the `7` is the reason a channel rule is not a licence read:** 🟡 **`local_assign_ai` is itself `GPL` by the directory's rule, and *"fully dependent on the DataCurso AI Provider plugin … will not function until the provider is installed, configured and properly licensed."*** 🔴 **A `GPL` plugin that cannot run without a proprietary paid dependency is not a thing a studio can build on, and no licence field on either one says so.**
+
 ## Pass 218 — 2026-10-15 — THE PLATFORM TIER IS UNCHANGED FOR A THIRD PASS; THE OWNER-LEVEL SHORTCUT THAT WOULD HAVE CHANGED TWO CELLS WAS TESTED AND IS WRONG
 
 🔵 **`0` new platform rows.** 🟢 **`ACTION QR` applied to the platform-adjacent rows; the `alfredang` owner census completed.** 🔵 **Evidence:

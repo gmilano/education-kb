@@ -1,0 +1,11 @@
+# p219 - channel reachability, re-tested (fifteenth time) plus THREE new blocked hosts and ONE NEW WORKING CHANNEL.
+host_or_channel	result	note
+raw.githubusercontent.com	200	WORKS - 47 of 47 READMEs + 18 manifests + 4 files of the new row served this pass
+packagist.org	200	NEW, WORKS - the PHP package index. A licence channel for every PHP / Moodle / Magento row on these shelves
+api.github.com	403	blocked, unchanged
+github.com (HTML)	403	blocked, unchanged
+arxiv.org / export.arxiv.org	ENOTFOUND	blocked, unchanged (closed ACTION QS at p218)
+publications.iadb.org	ENOTFOUND	blocked, unchanged
+moodle.org	ENOTFOUND	NEW - so the whole Moodle plugin directory is unverifiable from this session. 6 of the 7 AI-grading plugins named this pass die here
+www.apo-tokyo.org	ENOTFOUND	NEW - the APO/SEAMEO INNOTECH primary source for the APAC framework
+www.malaymail.com	ENOTFOUND	NEW - the ASEAN Work Plan launch report

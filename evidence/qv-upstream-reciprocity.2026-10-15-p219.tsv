@@ -1,0 +1,56 @@
+# p219 - ACTION QV: do the 47 licence-unknown rows sit on a RECIPROCAL UPSTREAM?
+# method: the README already fetched for each of the 47 (raw.githubusercontent.com/<slug>/HEAD/README.md,
+#         47 of 47 served, 351 782 B total), grepped for a fixed upstream token table, then EACH HIT
+#         ADJUDICATED from the body for RELATION - derivation vs API integration. A mention is not a derivation.
+# falsifier: limb 1 = 3+ carry a reciprocal upstream. Token reading: 6 of 47. Derivation reading: 4 of 47.
+#            BOTH readings fire limb 1, so the verdict does not rest on the adjudication.
+# NOTE: relation DERIVATIVE-VENDORED/DERIVATIVE-PLUGIN = the upstream licence reaches the work.
+#       INTEGRATION-API = the upstream is called over its own API; its licence does not reach the work.
+repo	p217_class	upstream	upstream_licence	reciprocity	relation	p219_state	evidence
+alfredang/ai-mms	NO-PROSE	OpenMage/Magento-1	OSL-3.0 + AFL-3.0	NET-RECIPROCAL	DERIVATIVE-VENDORED	UPSTREAM-MANIFEST	composer.json in tree IS openmage/magento-lts own manifest: name=openmage/magento-lts, license=[OSL-3.0,AFL-3.0]. Grant covers the vendored upstream body, NOT the author customisations
+Hesham0-0Nasser/tutor-lms-mcp	NO-PROSE	WordPress + Tutor LMS	GPL-2.0-or-later	RECIPROCAL	DERIVATIVE-PLUGIN	GRANTED-ECOSYSTEM-CHANNEL-NEW	"tutor-lms-mcp.php l.8 "" * License:     GPL-2.0+"" inside the WordPress plugin header block (Plugin Name/Plugin URI/Version/Author). CONTRADICTS the published cell ""NONE, 0 surfaces / no license key at all"""
+karkarkins/BlackboardAssistantMCP	NO-PROSE	Blackboard Learn	proprietary SaaS	PROPRIETARY-API	INTEGRATION-API	UNKNOWN-PLUS-TOS	as above; no manifest served at root
+LearnPress/learnpress	NO-PROSE	WordPress	GPL-2.0-or-later	RECIPROCAL	DERIVATIVE-PLUGIN	GRANTED-ECOSYSTEM-CHANNEL	composer.json license=GPL-3.0-or-later AND readme.txt l.7 License: GPLv3 + License URI gnu.org/gpl-3.0. package.json ISC is npm-init default, not a competing grant. Resolves the P204-1 conflict
+loyaniu/moodle-mcp	NO-PROSE	Moodle	GPL-3.0-or-later	RECIPROCAL	INTEGRATION-API	UNKNOWN	"python MCP server; uv add ""mcp[cli]""; calls MOODLE_URL/webservice/rest/server.php with a token from user/managetoken.php. Names Moodle, derives nothing from it. pyproject.toml has no licence field"
+Nasus20202/MoodleMCP	NO-PROSE	Moodle	GPL-3.0-or-later	RECIPROCAL	INTEGRATION-API	UNKNOWN	pnpm/TypeScript workspace, Playwright e2e. Calls Moodle web services. package.json has no license key
+onbirdev/moodle-webservice_mcp	NO-PROSE	Moodle	GPL-3.0-or-later	RECIPROCAL	DERIVATIVE-PLUGIN	GRANTED-ECOSYSTEM-CHANNEL-CARRIED	version.php + lib.php @license GNU GPL v3 or later, @copyright 2025 named author, $plugin->component=webservice_mcp. Already recovered at p187 - reproduces, so the channel is stable
+P1ckle3/blackboard-mcp	NO-PROSE	Blackboard Learn	proprietary SaaS	PROPRIETARY-API	INTEGRATION-API	UNKNOWN-PLUS-TOS	no licence reciprocity; the constraint is the vendor API terms, which this KB records nowhere. pyproject.toml has no licence field
+ruud0/aula-virtual-mcp	NO-PROSE	Blackboard Learn (Aula Virtual)	proprietary SaaS	PROPRIETARY-API	INTEGRATION-API	UNKNOWN-PLUS-TOS	as above; author names TECNUN Universidad de Navarra, ES. No manifest served at root
+1EdTech/lti-1-3-php-example-tool	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+A-R007/Multi-Agent-Study-Assistant	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+aaryansamanta/ai-ethos	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+ApexEDM/GIKT	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+arshadshk/Last_Query_Transformer_RNN-PyTorch	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+arshadshk/SAINT-pytorch	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+buynao/aipath	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+ckyeungac/deep-knowledge-tracing-plus	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+DanieelRC/AgenteConversacional-SAES-R	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+eugeborzone/Auto_Grade_Guarani	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+frjunioalves/suap-mcp	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+Gaurav-Pande/AES_DL	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+gautamyadavs/AVLTree	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+HFUT-LEC/awesome-student-cognitive-modeling	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+jadrianlg16/learning-tutor	PROSE-THIRD-PARTY	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+jaltekruse/Free-Math	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+jude-miller-dev/Milky-institute-online	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+JushBJJ/Mr.-Ranedeer-AI-Tutor	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+LAION-AI/Desktop_BUD-E	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+lsloan/udp-notebooks	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+luffycodes/Tutorbot-Spock	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+MatheusMach/QuantoFalta	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+midudev/libros-programacion-gratis	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+mohamurshid/ElimuAnalytics	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+photolensfocus/Llm-language-learning	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+Piyushtanwani/DAU-buddy	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+seewoo5/KT	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+SIU-Toba/docker-guarani	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+spdx/license-list-data	DOMAIN-NOUN	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+TianHongZXY/pytorch-SAKT	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+vitorr2101/Projeto-Agente-IA-Educacional	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+xiaolai/the-craft-of-selfteaching	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+xiaopengguo/ATKT	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+yxonic/DTransformer	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+ZhijieXiong/dlkt	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged
+ZQR1101/xueyoujing-companion	NO-PROSE	-	-	NO-UPSTREAM-TOKEN	-	UNKNOWN	README carries no reciprocal-upstream token; stays in the ACTION PH queue unchanged

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 219 — `1` new agent, and it is the first thing on these shelves built to REFUSE the agents on these shelves
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🟢 `adamjenkins/moodle-local_nomoreai` — `GPL-3.0-or-later` — the counter-measure arrives
+
+🔵 **Why it is this week's signal and not just a row:** every Moodle integration this KB recommends drives Moodle through a **web-service token**. `local_nomoreai` is a Moodle plugin whose first table is a list of agent access routes and what it does to each one — and route one is *"AI tools connected to Moodle through a web-service token (MCP servers, scripts, CLIs) → **Stops them**."*
+
+🟢 **Verified `2026-10-15` at `3` channels** — `LICENSE` `35 149` B, `composer.json` `"license": "GPL-3.0-or-later"`, `version.php` `@license … GNU GPL v3 or later`. 🔵 `component local_nomoreai` · `version 2026101400` · `release 0.1.2` · `MATURITY_BETA` · Moodle `5.2`/`5.3`.
+
+🟡 **`version 2026101400` is yesterday.** 🔴 **`0.1.2` and `MATURITY_BETA`: do not deploy it, do not ignore it.**
+
+🔵 **Its `3` modes are the procurement-relevant part, and the middle one is why it will spread:** **Off** · **Detect only** *("everything is recorded, `would have been refused` where applicable, but nothing is refused")* · **Enforce**. 🟢 **An institution can measure agent traffic for a term before deciding anything — which is exactly how a block gets adopted.**
+
+🟢 **And it says plainly what it cannot do:** *"An agent operating the student's own computer like a person would — cannot be stopped or reliably detected by any plugin."*
+
+### 🆕 🔴 `ACTION QW` closes, and `T176` closes with it — the query shape was the defect
+
+| shape | query | education-sector repos |
+|---|---|---|
+| 🔴 **unconstrained** *(mandated)* | `github trending education AI 2026` | 🔴 **`0`** — `ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, `microsoft/ai-agents-for-beginners`. **Fifth consecutive pass of teaching material** |
+| 🟢 **constrained** | `… LMS SIS gradebook plugin AI agent moodle` | 🟢 an entire plugin **category** |
+| 🟢 **constrained + `github` + `GPL` + `local_`** | `Moodle AI grading plugin github repository GPL "local_"` | 🟢 **`1` resolved and verified** |
+
+🟢 **`T176` was never a statement about the market.** 🔵 **`ACTION QJ`'s discipline held: the old shape was tested, not retired, and it returned its usual noise.**
+
+### 🆕 🔴 A whole category these shelves carry `0` of — and `6` of the `7` cannot be verified from here
+
+🟡 **The Moodle plugin directory holds an AI-grading category. `grep` over the `8` client-facing shelves returns `0` for every one of these slugs:**
+
+| plugin | what the directory says | repo |
+|---|---|---|
+| 🟢 `local_nomoreai` | *(not read — `moodle.org` unreachable)* | 🟢 **resolved + verified** |
+| 🟡 `local_aigrader` *(AI Grader Pro)* | `GPL-3.0-or-later`; `mod_assign`; Moodle AI Subsystem `generate_text`; `85` PHPUnit + `11` Behat; `17` sites / `26` downloads | 🔴 **none surfaced** |
+| 🟡 `local_aigrade` *(AI Grade)* | `v1.6` *(`2026012000`)*; Moodle `4.5`/`5.0`/`5.1`; licence **not stated** | 🔴 none |
+| 🟡 `local_smartgradeai` | routes grading through **`n8n`**; names Gemini / GPT-4 / Claude 3.5; licence **not stated** | 🔴 none |
+| 🔴 `local_assign_ai` | **hard-depends on the proprietary `DataCurso` AI Provider** — *"will not function until the provider is installed, configured and properly licensed"* | 🔴 none |
+| 🟡 `local_aicheck` | student-facing feedback; initial release `2026-01-18`; licence **not stated** | 🔴 none |
+| 🟡 `local_graidy` *(GRAiDY)* | *"currently available exclusively in South Africa"* | 🔴 none |
+
+🔴 **`moodle.org` → `ENOTFOUND` from this session, which is new and it matters: a directory-only row cannot be verified to this KB's bar, so `6` of these `7` get named and nothing more.** 🔵 **Registered as `ACTION RA`.**
+
+🟢 **One thing is safe to say about all of them without reading moodle.org: Moodle requires `GPL-3.0-or-later` of every plugin in its directory.** 🔴 **A declared licence is still not a read one — `local_assign_ai`'s proprietary provider dependency is the shape that proves the point.**
+
+### 🆕 🟢 `packagist.org` → `200`. A new working channel
+
+🔵 **It is how `local_nomoreai` was resolved: the plugin surfaced as a Packagist package, and the slug came from there.** 🟢 **Packagist carries a `license` field for every PHP package — so for every PHP, Moodle, Magento and Drupal row on these shelves, there is now a channel this session can actually reach.** 🔵 **Registered as `ACTION RC`.**
+
 ## 2026-10-15 — Pass 218 — `0` new agents; `1` new named entity, and its headline was retracted by its own newsrooms before this KB could write it down
 
 🟢 **APPEND-ONLY. History below this section is intact.**

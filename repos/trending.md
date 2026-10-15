@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 219 — `1` new trending repo after `2` passes of `0`, and it was found by CHANGING THE QUERY, not by waiting
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🟢 The row
+
+| repo | licence | stars | why it trends |
+|---|---|---|---|
+| 🆕 [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) | 🟢 **`GPL-3.0-or-later`** *(verified `3` channels)* | 🔴 **not read — `api.github.com` `403`, `github.com` HTML `403`** | 🟢 **`version 2026101400` — committed yesterday.** The first **agent-refusal** instrument on these shelves: it blocks MCP servers and web-service tokens from doing students' Moodle work, and `Detect only` mode lets a site measure agent traffic before enforcing |
+
+🔴 **The star count is NOT published, because it cannot be read from this session.** 🔵 **`ACTION PD`'s `403`s are unchanged at their fifteenth test — and this pass adds `3` new `ENOTFOUND` hosts and `1` new working channel.**
+
+### 🆕 🔴 `ACTION QW` fires limb `1` — and `T176` can finally be retired rather than re-measured
+
+🔴 **The mandated shape `github trending education AI 2026` returned, for the FIFTH consecutive pass, nothing but teaching material:** `ai-engineering-from-scratch`, Karpathy's *Neural Networks: Zero to Hero*, `microsoft/ai-agents-for-beginners`, `aneelv75/github-trending`. 🟡 **And as `T176` noted every time, those carry the largest star counts on the list — which is why the shape never self-corrects.**
+
+🟢 **Constrain the shape to education-sector SOFTWARE and the surface is not empty at all.** 🔵 **`+lms +sis +gradebook +moodle` returned an entire plugin category; adding `+github +GPL +local_` resolved one of them to a verifiable repository.**
+
+🟢 **Verdict: limb `1`, `1` of `1` resolvable. The education-sector trending surface was never empty — the query was asking for lesson plans.** 🔵 **Full comparison in [`qw-constrained-trending`](../evidence/qw-constrained-trending.2026-10-15-p219.tsv).**
+
+🟡 **What the result does NOT license:** 🔴 **`1` repository is `1` repository. The constrained shape is not yet shown to be productive — it is shown to be non-empty, which is all limb `1` asked.** 🟢 **`ACTION RD`: run both shapes side by side for `3` passes before the mandated one is changed.**
+
+### 🆕 🔴 Channel reachability, fifteenth test — `3` new blocked hosts, `1` new working channel
+
+| host | result | note |
+|---|---|---|
+| 🟢 `raw.githubusercontent.com` | `200` | **`47`/`47` READMEs + `18` manifests + `4` files of the new row, all served this pass** |
+| 🆕 🟢 `packagist.org` | **`200`** | 🟢 **NEW — and it is how the new row was found.** A `license` field for every PHP / Moodle / Magento / Drupal row on these shelves |
+| 🔴 `api.github.com` · `github.com` HTML | `403` | unchanged |
+| 🔴 `arxiv.org` · `export.arxiv.org` · `publications.iadb.org` | `ENOTFOUND` | unchanged |
+| 🆕 🔴 `moodle.org` | **`ENOTFOUND`** | 🔴 **the entire Moodle plugin directory is unverifiable from here. `6` of the `7` AI-grading plugins named this pass die at this line** |
+| 🆕 🔴 `www.apo-tokyo.org` | **`ENOTFOUND`** | the APO / SEAMEO INNOTECH primary source for the new APAC framework |
+| 🆕 🔴 `www.malaymail.com` | **`ENOTFOUND`** | the ASEAN Work Plan launch report |
+
+🔵 **The pattern across `15` tests is now clear enough to plan around: `raw.githubusercontent.com` and now `packagist.org` are the only two channels this session can rely on, and both are PACKAGE channels.** 🟢 **Every instrument this KB builds should prefer a package manifest over a web page — not as a preference, but because the web page will not load.**
+
 ## 2026-10-15 — Pass 218 — `0` new trending repos for a second pass; `3` rows confirmed GONE on a fourth channel, and the live ungranted population drops to `64`
 
 🟢 **APPEND-ONLY. History below this section is intact.**

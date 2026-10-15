@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — THE COUNTER-MEASURE ARRIVES: THE FIRST TOOL BUILT TO REFUSE THE AGENTS THIS KB RECOMMENDS
+
+### 🆕 🟢 `T219-7` — the trend, and it is the first one on these shelves that points the other way
+
+🔵 **Every trend this KB has recorded for `218` passes has been about agents getting INTO education systems: MCP servers for Moodle, Canvas, Brightspace, Blackboard; web-service tokens; LTI bridges; grade passback.**
+
+🆕 🔴 **[`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) *(`GPL-3.0-or-later`, `version 2026101400`, `MATURITY_BETA`)* is a Moodle plugin whose purpose is to stop them.** 🟢 **Its own table of agent access routes, and what it does to each:**
+
+| how the agent reaches Moodle | what the plugin does |
+|---|---|
+| web-service token *(MCP servers, scripts, CLIs)* | 🔴 **stops them** submitting students' work, or blocks student tokens entirely |
+| signed cloud agents *(Web Bot Auth)*, telltale user-agent or IP | 🔴 **refuses them** at login and on course pages |
+| browser automation *(Playwright, Puppeteer, Selenium)* | 🟡 **flags** them to teachers — never refuses |
+| an agent driving the student's own computer | 🟢 **cannot be stopped or reliably detected by any plugin** *(its words)* |
+
+🔴 **Row one is this KB's own Moodle architecture.** 🔵 **`onbirdev/moodle-webservice_mcp` IS a web-service plugin; `loyaniu/moodle-mcp` authenticates at `user/managetoken.php`; `Nasus20202/MoodleMCP` calls the same surface; `Hesham0-0Nasser/tutor-lms-mcp` does the WordPress equivalent over OAuth.**
+
+🟢 **So the trend to record is not "a blocker exists". It is that the LMS-integration layer this KB has spent `218` passes cataloguing now has an institutional opt-out, shipped as a plugin, under a licence that lets any institution fork it.** 🔴 **A studio that ships an LMS→MCP integration in `2027` has to answer a question that did not exist in `2026`: what happens when the site turns `Block submissions` on?**
+
+🟡 **The honest limits, and they are the plugin's own:** 🔴 **`release 0.1.2`, `MATURITY_BETA`, requires Moodle `5.2`/`5.3` — a signal, not a deployment.** 🟢 **And its `Detect only` mode is why it will spread anyway: an institution can measure agent traffic for a term before deciding anything, which is how blocks get adopted.**
+
+🔵 **The adjacent fact, from the same search:** 🟡 **the Moodle plugin directory also now carries an AI-GRADING category — `local_aigrader`, `local_aigrade`, `local_smartgradeai`, `local_assign_ai`, `local_aicheck`, `local_graidy`.** 🟢 **Institutions are adopting AI *inside* the LMS, under the LMS's own `GPL`, through the LMS's own directory — while separately gaining the means to refuse AI that arrives from outside it.** 🔴 **Those two movements are the same institutional instinct: keep it governable.**
+
+### 🆕 🟢 `T219-2` — the methodological trend, and it is this KB's most expensive recurring defect
+
+🔴 **Fourth consecutive pass in which the pass's main finding is an INSTRUMENT whose unit was wrong for the thing it measured:**
+
+| | instrument | unit it used | unit the thing has |
+|---|---|---|---|
+| `T218-1` | the novelty grep | a **token** | an **axis** |
+| `T218-3` | the live/historical test | a heading **level** | a pass **boundary** |
+| `T218-4` | `ACTION QE`'s window | a **line** | a **sentence** |
+| 🆕 `T219-5` | `ACTION QV`'s upstream grep | a **token** | a **packaging mode** |
+
+🔵 **`T219-5` is the first of the four to be wrong in BOTH directions at once, which is what makes it useful.** 🔴 **A `moodle-` slug prefix called an API client a plugin; the words *"MCP server"* and *"OAuth"* called a WordPress plugin an API client — and that second row was the one with a `GPL-2.0+` grant sitting in its plugin header, unread for `8` passes.**
+
+🟢 **The general rule, now stated in the form the next pass can use:** 🟢 **before grepping, name the unit of the thing being measured, and check that the pattern can see it.** 🔴 **A token cannot see an axis, a line cannot see a sentence, and a slug cannot see how software is installed.**
+
+### 🆕 🟢 `T219-2b` — an upstream is a CHANNEL HINT before it is a risk
+
+🔴 **`ACTION QV` was registered as a risk probe: a reciprocal upstream makes a row *"a dead end even if the author answers."*** 🟢 **It fires — `4` of `47` are derivatives of `OSL-3.0`, `GPL-2.0` or `GPL-3.0` upstreams — and then the conclusion inverts.**
+
+🟢 **`3` of those `4` were never ungranted. The ecosystem that makes a repo reciprocal is the same ecosystem that prescribes WHERE its licence goes:** WordPress in `readme.txt` and the plugin header; Moodle in `version.php` and the file docblocks; Magento in `composer.json`. 🔵 **Read the channel, and the dead end does not arise.**
+
+🔴 **This matters beyond the `4` rows because it reverses an ORDER OF WORK.** 🔴 **`ACTION PH` — *"ask the maintainer to commit a `LICENSE` body"* — has been registered and deliberately untaken for `15` passes. On `3` of these rows it would have asked a maintainer for a file they had already shipped, under a different name, in the place their ecosystem puts it.** 🟢 **Identify the upstream → read its convention → only then consider asking a human.**
+
+### 🆕 🟡 `T219-8` — a regional blank is evidence about a pass, not about a region
+
+🔴 **p216 closed `ACTION QJ` on limb `2` and licensed the next passes to *"report blanks as blanks"*. p218 reported APAC as vendor-only and EMEA as DECLARED BLANK.** 🟢 **This pass the same shape, with `ministry` and `policy` in the query, returned `2` new APAC ministry instruments and education-specific EMEA policy bodies.**
+
+🔵 **Neither p218 nor `QJ` was dishonest — both reported what their pass returned.** 🔴 **The defect is in how the blank was PUBLISHED: without its query, a blank reads as a statement about the region, and the next pass inherits it as coverage.** 🟢 **`ACTION RE`: a declared regional blank must carry the query string that produced it.** 🔵 **That is `ACTION QL`'s rule — *grep before claiming absence* — extended from the shelves to the world.**
+
 ## Pass 218 — 2026-10-15 — LANGUAGE WAS THE SYMPTOM, SCOPE IS THE DISEASE: A BILINGUAL GREP ON A PROPER NOUN RETURNS `0` FOREVER, AND THE AXIS STAYS LOUD
 
 ### 🆕 🔴 `T218-1` — the general form of `T217-2`, and it supersedes it

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — `ACTION QV` FIRES AND ITS PREMISE INVERTS: A RECIPROCAL UPSTREAM IS A **CHANNEL HINT** BEFORE IT IS A RISK
+
+🔵 **`1` new agent row** *(the first in `4` passes)*, **`0` new repository rows, `0` new platform rows.** 🟢 **`2` actions closed — `QV`, `QW`, both on limb `1`. `1` grant recovered first-hand against a published cell, `1` `15`-pass conflict resolved, `2` new state classes, `3` further rows answered beyond the registered population, `1` new working channel, and `3` newly blocked hosts.**
+
+### 🆕 🟢 The headline: `ACTION QV` asked a risk question and the cheap half of it was a reading question
+
+🔴 **`ACTION QV`, the registered highest-priority action for this pass, asked whether the `47` licence-unknown rows sit on a reciprocal upstream — *"a dead end even if the author answers."* It fires: `6` of `47` name one on a token grep, `4` of `47` are installed INTO one. Limb `1` fires on either reading, so the verdict does not rest on the adjudication.**
+
+🔴 **Then the conclusion inverts. `3` of those `4` were never ungranted.** 🟢 **The ecosystem that makes a repo reciprocal is the same ecosystem that prescribes WHERE its licence goes — WordPress in `readme.txt` and the plugin header, Moodle in `version.php` and the file docblocks, Magento in `composer.json`. Read the channel and the dead end does not arise.**
+
+🔴 **This reverses an order of work that has been stuck for `15` passes.** 🔴 **`ACTION PH` — *"ask the maintainer to commit a `LICENSE` body"* — would have asked `3` of these `4` authors for a file they had already shipped, under a different name, in the place their ecosystem puts it.** 🟢 **Identify the upstream → read its convention → only then consider asking a human. Written up as recipe `P219-A`.**
+
+### 🆕 🟢 The recovery, and it contradicts this KB's own client-facing verdict
+
+🔴 **[`agents/top.md`](agents/top.md) published [`Hesham0-0Nasser/tutor-lms-mcp`](https://github.com/Hesham0-0Nasser/tutor-lms-mcp) as *"`NONE`, `0` surfaces"*, *"no `license` key at all"*, *"🔴 Not shippable"*, under a heading reading **`WordPress/Tutor LMS — unshippable as published`**.**
+
+🟢 **`tutor-lms-mcp.php`, `5 811` B, line `8`: `  * License:     GPL-2.0+` — inside the WordPress plugin header block, beside `Plugin Name`, `Plugin URI`, `Version` and `Author`.**
+
+🔴 **And this KB already knew that channel.** 🔵 **It published `LearnPress/learnpress` as *"`GPL-3.0`, declared in the WordPress plugin header"* `91` passes' worth of shelf ago, and it labelled `tutor-lms-mcp` a WordPress plugin in three separate places on the same shelf. 🔴 **The channel was known, the classification was right, and the two were never joined — the ~`80`% propagation failure this KB keeps measuring, reaching a client-facing verdict.**
+
+🟡 **The detail that makes it sting:** 🔴 **`tutor-lms-mcp` is also the owner-case duplicate pair that step `3` of the published `94`→`69`→`68`→`67` ladder exists to collapse. This KB has had that slug under a magnifying glass for `8` passes and never opened the one file that answered it.**
+
+### 🆕 🔴 `T219-5` — the instrument was wrong in BOTH directions, which is new
+
+| | instrument | unit it used | unit the thing has |
+|---|---|---|---|
+| `T218-1` | the novelty grep | a **token** | an **axis** |
+| `T218-3` | the live/historical test | a heading **level** | a pass **boundary** |
+| `T218-4` | `ACTION QE`'s window | a **line** | a **sentence** |
+| 🆕 **`T219-5`** | **`QV`'s upstream grep** | a **token** | a **packaging mode** |
+
+🔴 **The `moodle-` slug prefix called an API client a plugin *(over-fire)*; the words *"MCP server"* and *"OAuth"* called a WordPress plugin an API client *(under-fire)* — and that second row was the one holding the grant.** 🟢 **Fifth consecutive pass whose headline is a unit mismatch, so the rule now outranks the sweep: name the unit of the thing, then check the pattern can see it.** 🟢 **Wired, tested and committed: [`p219-upstream-channel`](compose/code/p219-upstream-channel/README.md), `8` tests, `3` of them controls that must not fire.**
+
+### 🆕 🟢 The one new row, and it is built to refuse the agents on these shelves
+
+🟢 **[`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) — `GPL-3.0-or-later`, verified at `3` channels** *(`LICENSE` `35 149` B · `composer.json` · `version.php`)* — *"makes it as hard as practical for AI agents to do students' Moodle activities for them."*
+
+🔴 **Route one of its own table is *"AI tools connected to Moodle through a web-service token (MCP servers, scripts, CLIs) → **stops them**"* — the exact architecture of every Moodle integration this KB recommends.** 🟡 **`release 0.1.2`, `MATURITY_BETA`, `version 2026101400` — committed yesterday. A signal, not a deployment.** 🟢 **Its `Detect only` mode is why it will spread: an institution can measure agent traffic for a term before deciding anything.** 🟢 **And it says what it cannot do: *"an agent operating the student's own computer like a person would — cannot be stopped or reliably detected by any plugin."*** 🔵 **Recipe `P219-B` turns that into a four-row SOW page.**
+
+### 🆕 🟢 The findings that stand
+
+- 🟢 **`ACTION QW` closes on limb `1`, and `T176` closes with it after `5` passes.** 🔴 **The mandated `github trending education AI 2026` returned teaching material for the fifth consecutive time. Constrain the shape to education-sector software and the surface is not empty: an entire Moodle AI-plugin category, `7` plugins, `0` of which these shelves carried.** 🟢 **The query was asking for lesson plans.**
+- 🟢 **`LearnPress`'s `15`-pass conflict RESOLVED, and one side was never a grant.** `composer.json` → `GPL-3.0-or-later`, agreeing with `readme.txt`'s `GPLv3`; the `package.json` `ISC` is **`npm init`'s default**. 🔵 **A `license` field in a manifest for a language the project is not written in is weak evidence.**
+- 🆕 🟡 **`UPSTREAM-MANIFEST`, for `alfredang/ai-mms`.** Its `composer.json` declares `["OSL-3.0","AFL-3.0"]` but its `"name"` is `openmage/magento-lts` — the vendored upstream's own manifest. 🔴 **A grant on the bulk of the bytes, none on the author's customisations: this row can be neither treated as unlicensed nor built on, and a studio needs that boundary drawn before an SOW.**
+- 🆕 🟡 **`UNKNOWN-PLUS-TOS`: `3` of the `47` call Blackboard Learn over its vendor API.** 🔴 **No reciprocity reaches them and the licence question is nearly beside the point — what governs them is API terms of service, which this KB records for no row on any shelf.** 🔵 **`ACTION RB`.**
+- 🟢 **The recipe already generalises beyond its registered population.** `3` of p218's `11` `CLAIMED-IN-PROSE` rows — `bycs-lp/moodle-local_ai_manager`, `bycs-lp/moodle-block_ai_chat`, `marcusgreen/moodle-qtype_aitext` — answer from `version.php` in `5` of `6` files read. 🔴 **So `CLAIMED-IN-PROSE` may not be a state at all but an unread channel.** 🔵 **`ACTION RG`, the highest-priority action for p220.**
+- 🟢 **Control: the published `94`→`69`→`68`→`67`→`47` ladder reproduces at every step from the raw TSVs, and the mechanism is now shown rather than asserted** — the `94` contains exactly `2` case-duplicate pairs and the ladder spends one step on each. 🟢 **`ACTION QT`'s limb-`2` verdict independently re-confirmed.**
+
+### 🆕 🔴 Regional coverage, declared — with the query, which is new
+
+| region | query shape | returned |
+|---|---|---|
+| 🟡 **North America** | mandated | 🔵 **`0` new instruments.** Boston / NYC pair carried; `TRAIGA`, Maryland `S.B. 720`, `H.R. 8747`, Alabama `HB 329` carried. 🔴 The OpenAI `8`-partner programme stays single-source and unverified |
+| 🟢 **EMEA** | mandated | 🟢 **NOT BLANK, unlike p218** — Council of Europe AI-and-Education expert group, EC ethical guidelines *(`9 June`, year unstated)*, Eurobarometer `64`% AI-literacy, UK AI Adoption Summit `GBP 200M`+. 🔴 Some CoE material is `2023`–`2024`: continuity, not news |
+| 🟢 **APAC** | mandated + `ministry`, `policy` | 🟢 **`2` NEW ministry-level instruments, first APAC policy return in `3` passes** — **ASEAN Work Plan on Education `2026`–`2030`** *(launched `2026-07-22`, AI readiness `1` of `3` priorities, Singapore chairs `2026`–`2027`)* and **SEAMEO INNOTECH + APO** regional framework. 🔴 **Both SNIPPET-LEVEL: `www.malaymail.com` and `www.apo-tokyo.org` are `ENOTFOUND` here** |
+| 🟡 **LATAM** | mandated *(ES)* | 🔴 **`0` new — and that is a POSITIVE result this time:** Peru `Ley 31814`, the Uniandes `716`-instrument database, IESALC and `73.5`% all returned again and are **already carried** on `4`–`12` shelves each. 🟢 **`1` cell sharpened: IESALC governance — strategy `26.0`%, policies `18.5`%, evaluation `9.0`%, budget `8.0`%.** 🔴 **`1` claim REFUSED: a `2026` UNESCO Regional Observatory *(`33` ministries)* appears in exactly one opinion column → `ACTION RF`** |
+
+🔴 **`ACTION QJ`'s saturation verdict does not hold this pass, and the fix is a format rule, not a research rule:** 🟢 **a declared regional blank must be published WITH the query that produced it, so the next pass can tell a quiet region from a narrow query *(`ACTION RE`)*.** 🔵 **That is `ACTION QL` — *grep before claiming absence* — extended from the shelves to the world.**
+
+### 🆕 🟡 Housekeeping, declared rather than hidden
+
+🟡 **`6` evidence links in the register section were bare filenames, which do not resolve from `intel/`. Rewritten to `../evidence/…` — `4` in this pass's own section, `2` in the `p219` section `p218` wrote.** 🔴 **`10` more of the same shape remain in older sections of [`intel/open-gaps.md`](intel/open-gaps.md) and were left alone: a link path is not a content claim, but a silent sweep over `12 600` lines of history is not this pass's business.** 🔵 **Only paths changed; no prose, verdict or count in any historical section was touched.**
+
+🔵 **Instrument:** [`compose/code/p219-upstream-channel/`](compose/code/p219-upstream-channel/README.md) · **Evidence:** [`qv-upstream-reciprocity`](evidence/qv-upstream-reciprocity.2026-10-15-p219.tsv) · [`qv-ecosystem-channel`](evidence/qv-ecosystem-channel.2026-10-15-p219.tsv) · [`qw-constrained-trending`](evidence/qw-constrained-trending.2026-10-15-p219.tsv) · [`population-ladder-control`](evidence/population-ladder-control.2026-10-15-p219.tsv) · [`p219-channel-reachability`](evidence/p219-channel-reachability.2026-10-15-p219.tsv)
+
 ## Pass 218 — 2026-10-15 — FIVE ACTIONS DISCHARGED; THE BILINGUAL GATE WAS BUILT, AND IT IMMEDIATELY REFUTED THE ACTION IT WAS BUILT FOR
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows.** 🟢 **`1` new named policy instrument, `3` grant cells pinned to a version, `20` rows re-stated under a `6`-state schema, `2` instruments corrected, `6` stale cells named, and `5` actions closed — `QP`, `QR`, `QS`, `QT`, `QU`.**

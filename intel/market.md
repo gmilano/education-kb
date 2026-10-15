@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — APAC RETURNS MINISTRY POLICY FOR THE FIRST TIME IN THREE PASSES, AND EMEA IS NOT BLANK EITHER
+
+🔵 **Channel note, re-tested *(fifteenth time)*:** 🔴 **`api.github.com` → `403`; `github.com` HTML → `403`; `arxiv.org`, `export.arxiv.org`, `publications.iadb.org` → `ENOTFOUND`.** 🆕 🔴 **NEW `ENOTFOUND`: `moodle.org`, `www.apo-tokyo.org`, `www.malaymail.com` — so **both** primary sources for this pass's two new APAC instruments are unreadable from here, and the instruments are recorded at SNIPPET level and labelled as such.** 🆕 🟢 **NEW and working: `packagist.org` → `200`.**
+
+### 🆕 🟡 `ACTION QJ`'s saturation verdict does not hold this pass
+
+🔴 **p216 closed `ACTION QJ` on limb `2` — *"`0` new instruments; both shapes saturated; report blanks as blanks"* — and p218 duly reported APAC as *"vendor announcements only: no ministry policy, no `2026` education statistic"* and EMEA as **DECLARED BLANK**.**
+
+🟢 **This pass the same regional shape, with `ministry` and `policy` in the query, returned `2` APAC instruments at ministry level, and `grep` over the `8` shelves returns `0` for both.** 🟢 **EMEA returned education-specific policy bodies rather than enterprise-compliance filler.**
+
+🔵 **The correction is narrow and it is not a reversal of `QJ`:** 🟡 **`QJ` measured `1` pass and found `0`. Two passes later the same shape returns `2`.** 🔴 **So the regional surface is INTERMITTENT, not saturated — and a blank is evidence about a pass, never about a region.** 🔵 **`ACTION RE` registered: a region's blank may be published only with the query that produced it, so the next pass can tell a quiet region from a narrow query.**
+
+## Opportunities by region
+
+### North America
+
+🔵 **`0` new instruments. The Boston / NYC pair carried from p218 is still the procurement fact.**
+
+- 🟢 Carried and unchanged: **Boston Public Schools** AI literacy *(announced `2026-03-26`; grades `7`–`12` benchmarks in development; **not** a graduation requirement — both `WBUR` and `NBC Boston` corrected that)*, against **NYC**'s K-8 moratorium. 🟢 **Same country, same year, opposite directions.**
+- 🟢 Carried: **`TRAIGA`** *(Texas)*, **Maryland `S.B. 720`**, **Oklahoma**, **`H.R. 8747`**, **Alabama `HB 329`**.
+- 🟡 **Two items returned again and remain SNIPPET-ONLY, so they are named and not relied on:** a **Carnegie Mellon + Gates Foundation `USD 55M`** courseware programme for gateway college courses *(already carried)*, and an **OpenAI country-level education programme with `8` national partners, `Q1 2026`** — 🔴 **single blog source, unverified, do not quote to a client.**
+- 🔴 **The governance gap is the sellable one and it is stable across sources:** *"only `10`% of institutions [have] formal AI guidelines"* and *"`71`% of U.S. teachers lack AI training"*. 🟡 **Secondary roundup figures. 🟢 But they agree in direction with the UNESCO-IESALC governance numbers below, which are survey-based.**
+- 🔵 **Market framing, conflicting as always:** `USD 951M` *(`2024`)* → `USD 2.3B` *(`2029`)* at `15.9`% CAGR for North America; `37.5`% of global share *(`2025`)*. 🔴 **Vendor market-research pages; the global `2025` baselines in the same results disagree by a factor of `2` *(`USD 6.4B` / `7.52B` / `8.3B`)*.**
+
+### EMEA
+
+🟢 **NOT BLANK this pass — and the difference from p218 is that the material is education-specific and institutional rather than enterprise-compliance filler.**
+
+- 🟢 **Council of Europe** — a standing **AI and Education expert group** *(Strasbourg)* and a regulation-focused working-conference process. 🔵 **Already carried** *(`Council of Europe` appears on `9` shelves)*. 🔴 **Some of the CoE material surfacing is `2023`–`2024`, so it is continuity, not news.**
+- 🟢 **European Commission** — updated **ethical guidelines on AI in education**, dated `9 June`. 🔴 **Year not stated in the snippet and the primary page was not readable from here. Recorded as UNDATED.**
+- 🟡 **Eurobarometer:** `64`% of Europeans agree that *"by `2030`, everyone will need to be AI-literate"*. 🔵 **A public-attitude figure, not an adoption figure — it sells a literacy programme, not a platform.**
+- 🟡 **UK:** first **AI Adoption Summit**, `GBP 200M`+ committed, delivered through Big Tech partners *(Cisco, IBM, BT, Rolls-Royce)*. 🔴 **Cross-sector, not education-specific. 🟢 The delivery model — government funds, vendors deliver — is the part that matters for a studio bid.**
+- 🟡 Carried: the **QS Europe EdTech `200`** *(`2026`)* listing; `GPL`-tier platform demand in **Germany** via `bycs-lp`'s Moodle plugins *(ISB Bayern)*.
+- 🔵 **Framing:** Europe AI-in-education `USD 512.6M` *(`2024`)* → `USD 1.33B` *(`2029`)*; the AI Act is in force and classifies education AI as **high-risk**. 🟢 **That classification remains the single most useful EMEA sentence on this shelf: it is why an EMEA engagement pays for documentation that a North America one does not.**
+
+### APAC
+
+🟢 **`2` NEW INSTRUMENTS, both ministry-level, both `0` on these shelves before this pass. This is the first APAC policy return in `3` passes.**
+
+- 🆕 🟢 **ASEAN Work Plan on Education `2026`–`2030`** — launched `2026-07-22`. **AI readiness** *(curricula, teaching methods, assessments)* is one of **three** named priorities. **Singapore chairs ASEAN Education `2026`–`2027`.** 🔴 **SNIPPET-LEVEL: `www.malaymail.com` → `ENOTFOUND`; the launch report could not be opened. The work plan's own text has not been read.**
+- 🆕 🟢 **SEAMEO INNOTECH + APO** *(Asian Productivity Organization)* — developing a **regional policy framework on AI in education** for Southeast Asia, with ministries of education involved, explicitly to *"prevent fragmented, reactive policymaking."* 🔴 **SNIPPET-LEVEL: `www.apo-tokyo.org` → `ENOTFOUND`.** 🟡 **And the verb matters: *explore* / *developing*. This is not an adopted framework — do not sell it as one.**
+- 🟡 Returned again, carried: **Clarivate** APAC AI-policy-and-ethics comparison *(Mainland China, India, Japan, Malaysia, Singapore, South Korea, Taiwan)*; **Malaysia** *"AI Nation by `2030`"*; **Singapore** agentic-AI governance guidance extending its `2020` Model AI Governance Framework; **Bangladesh** draft national AI policy `2026`–`2030`; **SkillsFuture**; Hong Kong's cross-department AI team.
+- 🔵 **The opportunity, and it is a shape Globant is well placed for:** 🟢 **a region whose ministries have just NAMED fragmentation as the problem and are commissioning a common framework is buying standards-alignment work — curriculum mapping, assessment redesign, cross-ministry reporting — ahead of platform work.** 🟢 **Singapore's chair term `2026`–`2027` is the window, and Singapore is where this KB's one `OSL-3.0` production LMS row sits *(`alfredang`, deployed 🇸🇬 🇲🇾 🇬🇭)*.**
+
+### LATAM
+
+🟡 **Nothing new that survives a novelty grep. The region's substance on these shelves is already strong, and this pass's job was to avoid double-counting it.**
+
+- 🔵 **Checked and ALREADY CARRIED:** Peru's **Ley N.º 31814** *(`2023`, first LATAM AI law)* — on `5` shelves; the **Universidad de los Andes** public-algorithms database *(`716` instruments, `23` countries, `>80`% begun after `2023`)* — on `4`; **UNESCO-IESALC** — on `12`; the `73.5`% figure — on `7`.
+- 🟢 **One cell SHARPENED rather than added.** The IESALC survey *(`200` institutions, `19` countries, fielded Aug–Oct `2025`)* is carried, but its **governance** half is the part a studio sells against, and the adoption/governance gap is now stated as one line: 🟢 **adoption — teaching and learning `73.5`%, research `57.0`%, administration `34.1`%, community outreach `20.0`%;** 🔴 **governance — formal AI strategy `26.0`%, institutional policies `18.5`%, evaluation mechanisms `9.0`%, dedicated budget `8.0`%.** 🔵 **`26.0%` returned `0` on a shelf grep, so the governance figures were genuinely thinner here than the adoption ones.**
+- 🔴 **The structural fact, unchanged and worth repeating because it is what makes LATAM a services market:** `0` countries in the region have education-specific AI rules; higher education operates in a *"vacío normativo"*, and Mexico's **SEP** / **ANUIES** proposals *"carecen de carácter vinculante."*
+- 🔴 **One claim REFUSED.** A `2026` **UNESCO Regional Observatory of Educational AI** said to articulate **`33` ministries** returned `0` on these shelves and appears in **exactly one opinion column**. 🔴 **Not written as a fact. If it is real it is the most important LATAM instrument of the year, so `ACTION RF`: find UNESCO's own release.** 🔵 **`arxiv.org` and `publications.iadb.org` are already `ENOTFOUND` here, so this likely needs a session with general egress.**
+- 🟡 Carried: the **OEI / Fundación ProFuturo** review — *"`200`+ digital-education initiatives in `15` years"*, whose stated conclusion is **political discontinuity and absent budget**. 🟢 **A LATAM bid that does not survive a change of government is the region's documented failure mode.**
+
 ## Pass 218 — 2026-10-15 — ONE NEW POLICY INSTRUMENT, AND ITS HEADLINE WAS RETRACTED BY ITS OWN NEWSROOMS BEFORE THIS KB COULD PUBLISH IT
 
 🔵 **Channel note, re-tested and unchanged *(fourteenth time)*:** 🔴 **`api.github.com` → `403`; `github.com` HTML → `403`; `publications.iadb.org` → `ENOTFOUND`.** 🆕 🔴 **New this pass: `arxiv.org` → `ENOTFOUND` on BOTH channels — plain `curl` and the page-fetch channel. `export.arxiv.org` → `ENOTFOUND` too.** 🟢 **`raw.githubusercontent.com` → `200`; `git ls-remote --symref`, `git clone --filter=blob:none` and `git ls-tree -r HEAD` all work.** 🔴 **Every market and policy figure below is a SEARCH-SNIPPET claim and is marked as such.**

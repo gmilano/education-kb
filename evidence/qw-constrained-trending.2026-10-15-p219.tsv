@@ -1,0 +1,28 @@
+# p219 - ACTION QW: the mandated TRENDING query has a CATEGORY mismatch, not a saturation problem.
+# falsifier: limb 1 = a constrained shape returns 1+ repository these shelves do not carry.
+# VERDICT: limb 1 FIRES. 1 of 1 resolvable repository, verified at three independent channels.
+# T176 (five consecutive passes of teaching-material noise) was never a statement about the market.
+query_shape	query	what_it_returned	education_sector_repos
+UNCONSTRAINED (mandated)	github trending education AI 2026	ai-engineering-from-scratch, Neural Networks Zero to Hero, microsoft/ai-agents-for-beginners, aneelv75/github-trending	0 - all teaching-material, fifth consecutive pass (T176)
+CONSTRAINED (+lms +sis +gradebook +moodle)	github 2026 open source LMS SIS gradebook plugin AI agent repository moodle	Moodle AI-grading plugin category in the Moodle plugin directory; ibl.ai Agentic LMS (commercial); Moodle AI subsystem docs	7 plugins named, 1 with a resolvable repo
+CONSTRAINED (+github +GPL +local_)	Moodle AI grading plugin github repository GPL "local_" 2026 source code	packagist.org/packages/adamjenkins/moodle-local_nomoreai	1 RESOLVED AND VERIFIED
+#
+# THE CATEGORY THE SHELVES CARRY 0 OF: AI plugins in the Moodle plugin directory.
+# Every Moodle plugin is GPL-3.0-or-later by Moodle's own plugin requirement.
+# moodle.org -> ENOTFOUND from this session, so a directory-only row CANNOT be verified here.
+plugin	what_the_directory_says	repo_resolved	on_these_shelves_before_p219
+local_nomoreai	(not read - moodle.org unreachable)	YES - github.com/adamjenkins/moodle-local_nomoreai	NO - 0 grep hits
+local_aigrader (AI Grader Pro)	GPL-3.0-or-later; maint. Hernan Diaz Rodriguez; mod_assign; Moodle AI Subsystem generate_text; 85 PHPUnit + 11 Behat; 17 sites / 26 downloads	NO - no VCS address surfaced	NO - 0 grep hits
+local_aigrade (AI Grade)	maint. Brian Pool; v1.6 (2026012000); Moodle 4.5 / 5.0 / 5.1; licence NOT stated in the snippet	NO	NO - 0 grep hits
+local_smartgradeai (Smart Grade AI)	routes grading through n8n; names Gemini / GPT-4 / Claude 3.5; licence NOT stated	NO	NO - 0 grep hits
+local_assign_ai (Assignment AI)	HARD-DEPENDS on the proprietary DataCurso AI Provider plugin - "will not function until the provider is installed, configured and properly licensed"	NO	NO - 0 grep hits
+local_aicheck (AI Check)	student-facing feedback; initial release 2026-01-18; licence NOT stated	NO	NO - 0 grep hits
+local_graidy (GRAiDY)	"currently available exclusively in South Africa"; licence NOT stated	NO	NO - 0 grep hits
+#
+# THE ONE ROW THAT MEETS THIS KB'S BAR, verified three ways on 2026-10-15:
+channel	what_it_served	value
+raw.githubusercontent.com/adamjenkins/moodle-local_nomoreai/HEAD/LICENSE	200	35 149 B - GNU GPL full text
+raw.githubusercontent.com/adamjenkins/moodle-local_nomoreai/HEAD/composer.json	200	"license": "GPL-3.0-or-later"
+raw.githubusercontent.com/adamjenkins/moodle-local_nomoreai/HEAD/version.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+raw.githubusercontent.com/adamjenkins/moodle-local_nomoreai/HEAD/README.md	200	6 369 B
+version.php metadata	-	component local_nomoreai; version 2026101400; release 0.1.2; maturity MATURITY_BETA; requires 2026042000 (Moodle 5.2 / 5.3)

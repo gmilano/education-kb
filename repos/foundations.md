@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — THE ECOSYSTEM CHANNEL WAS READ ACROSS ALL `47` FOR THE FIRST TIME; `p204` HAD READ IT ON `8`
+
+🔵 **`0` new foundation rows.** 🟢 **`ACTION QV` and `QW` discharged; the published population ladder independently reproduced step by step; `1` long-standing manifest CONFLICT resolved.**
+
+🔵 **Evidence:** [`qv-ecosystem-channel`](../evidence/qv-ecosystem-channel.2026-10-15-p219.tsv) · [`population-ladder-control`](../evidence/population-ladder-control.2026-10-15-p219.tsv) · [`p219-channel-reachability`](../evidence/p219-channel-reachability.2026-10-15-p219.tsv)
+
+### 🆕 🟢 `T219-3` — `LearnPress`'s `P204-1` conflict resolves, and the resolution is that one side was never a grant
+
+🔴 **This file has carried the conflict at l.`1249` *(now l.`1249`+ `this` section)* since p204:** *"`package.json` → **`ISC`** — **and `readme.txt` says `GPLv3`**"*. 🔵 **It has also carried the row under `TRUE ABSENCE at 90 forms` at l.`1017`, which is correct and is about licence-shaped PATHS.**
+
+🟢 **A third channel, read this pass:** `raw.githubusercontent.com/LearnPress/learnpress/HEAD/composer.json` → **`"license": "GPL-3.0-or-later"`**.
+
+| channel | says | what it is |
+|---|---|---|
+| `readme.txt` l.`7`–`8` | `License: GPLv3` + `License URI: gnu.org/licenses/gpl-3.0.html` | 🟢 **the WordPress plugin-directory declaration** |
+| 🆕 `composer.json` | `GPL-3.0-or-later` | 🟢 **the PHP-ecosystem manifest — and this is a PHP project** |
+| `package.json` | `ISC` | 🔴 **`npm init`'s DEFAULT value** |
+| `90` licence-shaped paths | nothing | 🟢 correct — there is no file |
+
+🟢 **`2` of `3` real channels agree on `GPL-3`. The outlier is the one belonging to the build tooling rather than to the product, and `ISC` is the string `npm init` writes when nobody answers the licence prompt.** 🔴 **A conflict recorded for `15` passes was an artefact, and the row should never have been read as contested.**
+
+🔵 **The rule this earns, and it is narrow on purpose:** 🟡 **a `license` field in a manifest for a language the project is not written in is weak evidence, and `ISC` in a `package.json` with no other `ISC` signal anywhere is the default, not a declaration.** 🔴 **It does not generalise to a `package.json` in a Node project — there the field is the declaration.**
+
+### 🆕 🟡 `T219-4` — a new state class, and the anchor row of `ACTION QV` is the one that needs it
+
+🟢 **[`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) serves a `composer.json` at root, `7 348` B, and it declares `["OSL-3.0","AFL-3.0"]`.** 🔴 **Its `"name"` is `openmage/magento-lts` and its `"description"` is *"A fork of Magento-1 that is accepting bug fixes (backward compatible, drop in replacement for official Magento)"*.**
+
+🔴 **This is the vendored UPSTREAM's manifest, sitting in a downstream's tree. It is not the author's grant, and `p218`'s `UNKNOWN` was right to refuse it.** 🟢 **But it is not nothing either: the `OSL-3.0`/`AFL-3.0` grant covers the overwhelming majority of the BYTES in that repository, because the repository largely *is* OpenMage.**
+
+🆕 **`UPSTREAM-MANIFEST`, and its standing instruction is unlike every other state:**
+
+> 🟢 The vendored body is licensed *(here: `OSL-3.0` + `AFL-3.0`, network-reciprocal)*. 🔴 The author's own customisations are not. 🔴 **So this row can be neither treated as unlicensed nor built on — the two halves of the tree answer differently, and a studio needs the boundary drawn before an SOW, not after.**
+
+🔵 **This is the `ECL-2.0` lesson of `p216` in a second place: a grant has to be read at CLAUSE and at SCOPE, not just named.** 🔵 **Same trap family as [`sakai-manifest-component-vs-upstream`](../evidence/sakai-manifest-component-vs-upstream.2026-10-13-p172.tsv) — p172 built the instrument for exactly this and the `47` were never run through it.**
+
+### 🆕 🟢 The channel, read across all `47`
+
+🔵 **`11` forms each, one request, no clone:** `package.json` · `pyproject.toml` · `setup.py` · `composer.json` · `Cargo.toml` · `version.php` · `readme.txt` · `pubspec.yaml` · `<reponame>.php` · `plugin.php`.
+
+| measure | value |
+|---|---|
+| serve **any** manifest at root | 🟡 **`15`** of `47` |
+| files served | `18` |
+| carry a **licence field** | 🟢 **`4`** |
+| of those, **new** this pass | 🟢 **`2`** *(`tutor-lms-mcp.php`, `LearnPress`'s `composer.json`)* |
+
+🔴 **`32` of `47` serve no manifest at root at all, and `11` of the `15` that do have no licence field.** 🟢 **So `p204`'s *"none"* generalises: the absence is real for the bulk of this population, and `ACTION PH`'s queue does not shrink much.** 🟢 **It does, however, get correctly ORDERED — see `ACTION PH` in [`intel/open-gaps.md`](../intel/open-gaps.md).**
+
+### 🆕 🟢 Control — the published population ladder, reproduced from the raw TSVs
+
+| step | operation | result |
+|---|---|---|
+| `1` | unique slugs in [`ungranted-after-18-forms`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv) | 🟢 **`94`** |
+| `2` | minus the `25` in [`lstree-grant-recovery`](../evidence/lstree-grant-recovery.2026-10-15-p215.tsv), exact case | 🟢 **`69`** |
+| `3` | collapse the owner-case duplicate pair | 🟢 **`68`** |
+| `4` | remove the lowercase `openSIS-Classic` variant | 🟢 **`67`** |
+| `5` | minus p217's `17` prose/refusal rows and `3` `NON-PUBLIC` | 🟢 **`47`** = `45` `NO-PROSE` + `1` `DOMAIN-NOUN` + `1` `PROSE-THIRD-PARTY` |
+
+🟢 **Every step reproduces, and the mechanism is now shown rather than asserted: the `94` contains EXACTLY `2` case-duplicate pairs, and the ladder spends one step on each.** 🟢 **`ACTION QT`'s limb-`2` verdict is independently re-confirmed.**
+
+🔵 **One line worth keeping, because it is the whole pass in miniature:** 🟡 **the owner-case duplicate that makes step `3` work is `Hesham0-0Nasser/tutor-lms-mcp` — the same row whose grant this pass recovered from a WordPress plugin header.** 🔴 **This KB has had that slug under a magnifying glass for `8` passes and never opened the one file that answered it.**
+
 ## Pass 218 — 2026-10-15 — THE ARITHMETIC HOLDS AT EVERY COUNT CHECKED, AND THE INSTRUMENT THAT CERTIFIED IT IS WRONG IN A WAY NOBODY WOULD HAVE NOTICED
 
 🔵 **`0` new foundation rows.** 🟢 **`ACTION QT` discharged with a split verdict; `ACTION QU` closed on limb `2`.** 🔵 **Evidence:

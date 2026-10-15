@@ -1,0 +1,15 @@
+# p219 - independent reproduction of the published population ladder 94 -> 69 -> 68 -> 67 -> 47.
+# This is a CONTROL, not a finding: it re-confirms ACTION QT's limb-2 verdict from the raw TSVs,
+# and it names the mechanism at each step, which the published prose asserts but does not show.
+step	operation	result	mechanism
+1	unique slugs in ungranted-after-18-forms.2026-10-15-p211.tsv	94	97 lines - 2 comment lines - 1 header
+2	minus the 25 in lstree-grant-recovery.2026-10-15-p215.tsv, EXACT-case match	69	all 25 are present in the 94 (set-verified, 0 strays)
+3	collapse the one owner-case duplicate pair	68	Hesham0-0Nasser/tutor-lms-mcp == hesham0-0nasser/tutor-lms-mcp
+4	remove the lowercase openSIS-Classic variant	67	os4ed/openSIS-Classic; the canonical-case OS4ED/openSIS-Classic is inside the 25 recovered as GPL-2.0
+5	minus the 17 prose/refusal rows and the 3 NON-PUBLIC rows of p217	47	45 NO-PROSE + 1 DOMAIN-NOUN + 1 PROSE-THIRD-PARTY, exactly as published
+#
+# 94 unique exact / 92 unique case-insensitive -> the 94 contains EXACTLY 2 case-duplicate pairs,
+# and the ladder spends one step on each. The published arithmetic is right in every step.
+#
+# NOTE worth one line: the owner-case duplicate that makes step 3 work is tutor-lms-mcp - the same
+# row whose grant this pass recovered from its WordPress plugin header.

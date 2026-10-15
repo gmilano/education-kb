@@ -1,0 +1,41 @@
+# p219 - the ECOSYSTEM-CONVENTIONAL declaration channel, probed across all 47.
+# p204 read a manifest on 8 rows only (pc-manifest-second-channel.2026-10-14-p204.tsv). This is all 47.
+# forms, one request each, no clone: package.json pyproject.toml setup.py composer.json Cargo.toml
+#        version.php readme.txt pubspec.yaml <reponame>.php plugin.php
+# 15 of 47 serve any manifest at root; 18 files total; 4 carry a licence field.
+repo	form	bytes	licence_field_found
+A-R007/Multi-Agent-Study-Assistant	pyproject.toml	553	none
+alfredang/ai-mms	composer.json	7348	"""license"": [""OSL-3.0"",""AFL-3.0""] but ""name"":""openmage/magento-lts"" - UPSTREAM manifest"
+buynao/aipath	package.json	547	none
+frjunioalves/suap-mcp	pyproject.toml	665	none
+Hesham0-0Nasser/tutor-lms-mcp	tutor-lms-mcp.php	5811	License:     GPL-2.0+   (WordPress plugin header, l.8) - NEW
+jadrianlg16/learning-tutor	pyproject.toml	1723	none
+jaltekruse/Free-Math	package.json	3437	none
+LearnPress/learnpress	package.json	2894	"""license"": ""ISC"" - npm-init DEFAULT, not a grant (explains P204-1)"
+LearnPress/learnpress	composer.json	1878	"""license"": ""GPL-3.0-or-later""  - NEW, third channel, resolves P204-1"
+LearnPress/learnpress	readme.txt	42460	License: GPLv3 + License URI gnu.org/licenses/gpl-3.0.html (carried, p204)
+LearnPress/learnpress	learnpress.php	36500	none - the WP header here carries no License: line
+loyaniu/moodle-mcp	pyproject.toml	460	none
+midudev/libros-programacion-gratis	package.json	252	none
+mohamurshid/ElimuAnalytics	pyproject.toml	889	none
+Nasus20202/MoodleMCP	package.json	1471	none
+onbirdev/moodle-webservice_mcp	version.php	1200	@license GNU GPL v3 or later (carried, p187 - reproduces)
+P1ckle3/blackboard-mcp	pyproject.toml	562	none
+yxonic/DTransformer	pyproject.toml	417	none
+#
+# EXTENSION, same pass, beyond the 47: the recipe applied to p218's CLAIMED-IN-PROSE Moodle rows.
+# p218 recorded these 3 as CLAIMED-IN-PROSE ("treat as a LEAD, never ship against it") and PINNED
+# the version from README prose. The ecosystem channel answers all 3 from source instead.
+repo	form	http	licence_field_found
+bycs-lp/moodle-local_ai_manager	version.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+bycs-lp/moodle-local_ai_manager	lib.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+bycs-lp/moodle-block_ai_chat	version.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+bycs-lp/moodle-block_ai_chat	lib.php	404	- (this plugin ships no lib.php; version.php is sufficient)
+marcusgreen/moodle-qtype_aitext	version.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+marcusgreen/moodle-qtype_aitext	lib.php	200	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+#
+# 5 of 6 files served; 3 of 3 repos answered. A docblock @license tag beside a $plugin->component
+# declaration is a SOURCE-HEADER grant, not a README prose claim - the same channel p187 used on
+# onbirdev/moodle-webservice_mcp and the same one p219 used on Hesham0-0Nasser/tutor-lms-mcp.
+# CONSEQUENCE: ACTION PH's 11 CLAIMED-IN-PROSE rows are not one queue either. The Moodle ones are
+# answerable without asking anybody. Registered as ACTION RG.

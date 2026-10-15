@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 219 — 2026-10-15 — THREE RECIPES: THE UPSTREAM-FIRST INTAKE, THE AGENT-REFUSAL READINESS AUDIT, AND THE APAC STANDARDS-ALIGNMENT ENGAGEMENT
+
+🔵 **`0` patterns were invented this pass. `3` are written down because this pass produced the instruments and the facts they need.** 🔴 **Note on this file, carried from `T218-3`: `114` of its level-`2` headings are recipe titles, not pass boundaries — a stale-cell sweep over this file must use `/^## (Pass |[0-9]{4}-)/`.**
+
+---
+
+### `P219-A` — Upstream-first licence intake *(replaces asking the maintainer first)*
+
+🔴 **The problem it fixes:** `ACTION PH` has sat untaken for `15` passes because it means opening issues on strangers' repositories. On `3` of `4` rows tested this pass, the issue would have asked for a file the author had already shipped — in the place their ecosystem puts it.
+
+**Wire it in this order. Stop at the first step that answers.**
+
+1. 🟢 **Identify the upstream from the `README`** — [`compose/code/p219-upstream-channel/upstream_channel.py`](code/p219-upstream-channel/upstream_channel.py) → `upstream(readme)`.
+2. 🟢 **Decide the PACKAGING MODE, not the token** — `relation(readme, slug)` → `DERIVATIVE` *(installed into the upstream)* or `INTEGRATION` *(calls it over a network)*. 🔴 **Installation beats calling: a WordPress plugin that also calls a REST API is still a WordPress plugin.**
+3. 🟢 **If `DERIVATIVE`, read the ecosystem's channel** — `channels(upstream, slug)`:
+
+   | upstream | read, in this order |
+   |---|---|
+   | WordPress | `readme.txt` → `<reponame>.php` *(the `License:` line in the plugin header)* → `composer.json` |
+   | Moodle | `version.php` → `lib.php` → any `classes/*.php` docblock *(`@license`)* |
+   | Magento 1 / OpenMage | `composer.json` — 🔴 **then check `"name"`: if it is the upstream's own package name, you are reading the UPSTREAM's manifest** |
+   | Open edX | `setup.py` → `pyproject.toml` |
+   | Drupal | `<reponame>.info.yml` → `composer.json` |
+
+4. 🟢 **If `INTEGRATION`, skip step `3` entirely.** The upstream's licence does not reach the work; the author's grant is the only question, and the row stays an ordinary `ACTION PH` lead.
+5. 🟡 **If the upstream is a proprietary SaaS** *(Blackboard, PowerSchool, Google Classroom)*, 🔴 **stop treating it as a licence gap.** Record `UNKNOWN-PLUS-TOS` and raise the API-terms question instead *(`ACTION RB`)*.
+6. 🔴 **Only now, if every channel is silent, consider a human.**
+
+🔵 **Cost:** `11` HTTP `GET`s per repo, no clone. 🟢 **Yield this pass: `1` new grant, `1` resolved `15`-pass conflict, `1` new state class, over `47` rows and `~520` requests.**
+
+🔴 **What it does not settle:** whether a plugin is a derivative work in law is contested. 🟢 **The recipe orders WORK, it does not opine — and ordering the work is what saved the issues.**
+
+---
+
+### `P219-B` — Agent-refusal readiness audit *(ship this with every LMS→MCP integration from now on)*
+
+🔴 **The fact that forces it:** [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) *(`GPL-3.0-or-later`)* blocks exactly the architecture every Moodle integration on these shelves uses — the web-service token.
+
+**The deliverable is one page in the SOW, and it has four rows.**
+
+| route | what a site can do to you | what your integration must do |
+|---|---|---|
+| **web-service token** *(this is you)* | 🔴 **refuse submissions, or block student tokens entirely** | 🟢 degrade to read-only rather than erroring; name the capability you lose |
+| **signed cloud agent / user-agent / IP** | 🔴 refused at login and on course pages | 🟢 run from a declared, allow-listable range; document it |
+| **browser automation** | 🟡 flagged to teachers, not refused | 🟡 do not depend on it for anything a teacher would read as cheating |
+| **agent on the student's own machine** | 🟢 cannot be stopped *(the plugin says so)* | 🔵 out of scope — and say so, rather than claiming a control you do not have |
+
+**Wire it:**
+- 🟢 Pick a **`DERIVATIVE`** Moodle substrate over a token client where you can: [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) *(`GPL-3.0-or-later`, grant in its file headers, listed in the Moodle plugin directory)* runs INSIDE Moodle, so a token block is not aimed at it the way it is aimed at an external client.
+- 🟡 Token clients — [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp), `Nasus20202/MoodleMCP` — are faster to stand up and are the thing `Block submissions` is pointed at. 🔵 **Use them for staff-side and reporting work, not for anything that writes a student's submission.**
+- 🟢 Add **`local_nomoreai` in `Detect only`** to the client's own pilot. 🔴 **Not as a block — as the baseline measurement.** You want the agent-traffic number before someone else produces it.
+- 🔴 **Say the quiet part in writing:** for high-stakes assessment the plugin's own advice is Safe Exam Browser, an in-room quiz password, an IP restriction, or assessment designs that do not rely on unsupervised online work. 🟢 **Agreeing with that in the SOW is worth more than a control you cannot deliver.**
+
+🟡 **Caveat to state to the client:** `release 0.1.2`, `MATURITY_BETA`, Moodle `5.2`/`5.3` only. 🟢 **Design for it; do not deploy it.**
+
+---
+
+### `P219-C` — APAC standards-alignment engagement *(the window is Singapore's chair term)*
+
+🔴 **The opening, and it is a ministry asking for exactly this:** **SEAMEO INNOTECH** and the **APO** are developing a regional AI-in-education policy framework explicitly to *"prevent fragmented, reactive policymaking"*, while the **ASEAN Work Plan on Education `2026`–`2030`** *(launched `2026-07-22`)* names **AI readiness** as one of three priorities. 🟢 **Singapore chairs ASEAN Education `2026`–`2027`.**
+
+🔴 **Both facts are SNIPPET-LEVEL — `www.apo-tokyo.org` and `www.malaymail.com` are `ENOTFOUND` from this session, and the framework is being *explored*, not adopted.** 🟢 **Which is precisely why the engagement is standards work and not platform work: nothing has been specified yet.**
+
+**The shape:**
+1. 🟢 **Curriculum and assessment mapping** across the member states a client operates in — the work plan's three priorities translated into per-ministry reporting lines.
+2. 🟢 **Build on a `GPL` substrate the ministries already run.** Moodle is the realistic base: its plugin directory requires `GPL-3.0-or-later`, so an institution can be handed the source without a licence negotiation. 🔵 Pair with [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(`GPL-3.0-or-later`, ISB Bayern)* for provider governance — a public-sector reference, which is the reference a ministry wants.
+3. 🔴 **Do NOT lead with the `OSL-3.0` row.** This KB's one production Singapore LMS — [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms), deployed 🇸🇬 🇲🇾 🇬🇭 — is a vendored OpenMage/Magento-1 fork: **network-reciprocal upstream, no grant on the author's own customisations** *(`UPSTREAM-MANIFEST`, `T219-4`)*. 🟡 **Useful as market evidence that the region deploys this stack. Not a base to build on.**
+4. 🟢 **Carry `P219-B` into the same SOW.** A ministry commissioning a common framework will ask about agent misuse in assessment within one meeting, and the four-row table above is the answer.
+
+🔵 **Why this beats a LATAM-shaped bid here:** 🟢 **LATAM's documented failure mode is political discontinuity and absent budget *(OEI / ProFuturo)*; APAC's is fragmentation across ministries that are currently funding a fix.** 🔴 **Different failure, different deliverable — a region's opportunity is the shape of its failure, and these two are not interchangeable.**
+
 ## Pass 218 — 2026-10-15 — THREE RECIPES: THE SIX-STATE INTAKE GATE, THE BILINGUAL NOVELTY CHECK, AND THE TWO-DISTRICT NORTH AMERICA ENGAGEMENT
 
 🔵 **`0` new patterns were invented this pass. `3` are written down because this pass produced the instruments they need.** 🔴 **Note on this file specifically: `114` of its `160` level-2 headings are recipe titles, not pass boundaries — `71`%, the worst on these shelves — so any gate wired with a bare `^## ` test will mis-classify cells here *(`T218-3`)*.**
