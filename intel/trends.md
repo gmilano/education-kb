@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 221 — 2026-10-15 — THE SECTOR'S OWN TOOLING ALREADY MODELS A LICENCE AS **FAMILY + VERSION**, AND EVERY KB THAT RECORDS IT AS ONE TOKEN — THIS ONE INCLUDED — IS LOSING THE HALF THAT DECIDES COMPATIBILITY
+
+🔵 **Five trends: two about how the sector is governed, two about how it is measured, one about where the open-source supply actually is.**
+
+### 🆕 🔴 `T221-A` — "high-risk education AI" is no longer an EU-only category, and the sooner deadline is in APAC
+
+🔴 **For many passes this KB treated the EU AI Act as the education-sector compliance driver. Three regimes now put education on a high-risk footing, and the EU's own timing has become conditional:**
+
+| regime | in force | education's status | the date that binds |
+|---|---|---|---|
+| EU AI Act Annex III | enforcement from **`2026-08-02`** | HIGH-RISK: access, assessment, educational path | 🟡 **conditional** — the proposed *"AI omnibus"* would gate high-risk obligations on harmonised standards being available |
+| 🆕 **Vietnam AI law** | **`2026-03-01`**, extraterritorial | HIGH-RISK, explicitly **automated assessment** + **behavioural monitoring** | 🔴 **`2027-03-01`** (+6 months for systems already running) |
+| 🆕 **South Korea AI Basic Act** | **`2026-01-22`** | framework-level | — |
+
+🔵 **The trend, stated as a trend: the regulatory *shape* the EU invented is being adopted outside the EU faster than the EU is finishing it.** 🔴 **A studio selling "EU AI Act readiness" is selling against a date that may move; a studio selling Vietnam readiness is selling against one that does not.**
+
+### 🆕 🔴 `T221-B` — the measurement trend, and it is this pass's own correction: a licence family is not a grant
+
+🔴 **This is the sixth consecutive pass whose headline is a unit mismatch, and the unit this time is the one every licence table in the industry collapses.**
+
+🟢 **The sector's own tooling already knows better.** `h5p/h5p-php-library` validates the licence of a *learning object* with **two separate fields**:
+
+```php
+'license'        => '/^(CC BY|CC BY-SA|…|GNU GPL|PD|…)$/',
+'licenseVersion' => '/^(1\.0|2\.0|2\.5|3\.0|4\.0)$/',
+```
+
+🔵 **H5P splits family from version because it knows a family alone cannot answer a reuse question about a piece of content.** 🔴 **And `94.3%` of this KB's `2 342` GNU cell-mentions — `2 208` of them, across `337` rows — record exactly one token and no bound.**
+
+🔴 **What the missing half decides:**
+
+| cell | if the file says | consequence for a studio |
+|---|---|---|
+| `GPL-2.0` | `-only` | 🔴 **cannot be combined with Moodle, Open edX, or any v3 host** |
+| `GPL-2.0` | `-or-later` | 🟢 **can** |
+| `GPL-3.0` | `-or-later` | 🟢 may be carried forward to a future licence version |
+| `GPL-3.0` | bare at source too | 🟡 **genuinely unknown — ask the maintainer, do not assume** |
+
+🟢 **Same token on the shelf, opposite answers. 🔵 The generalisable rule, which is the sixth in this series: NAME THE UNIT OF THE THING, then check your pattern can see it.** The series: token vs **axis** · heading vs **pass boundary** · line vs **sentence** · token vs **packaging mode** · repository vs **file** · 🆕 **family vs VERSION RANGE**.
+
+### 🆕 🟡 `T221-C` — governance-over-experimentation is now the sector's stated posture, and it matches what the regulators did
+
+🟡 **Across the 2026 outlooks read this pass the same shift is described in different words: from experimentation to **governance** — explicit policies, data boundaries and oversight — and from generic chatbots to **education-specific** platforms.**
+
+| strand | what the surfaces say |
+|---|---|
+| 🟢 **purpose-built over generic** | generic chatbots *created* work for teachers — prompt-writing and fact-checking — and the move to classroom-built tools is called the defining trend of 2026 |
+| 🟢 **evidence demands** | buyers increasingly require proof that a product improves learning, persistence, well-being or job-relevant skills |
+| 🟡 **credentials as currency** | digital credentials gaining ground as a hiring signal, pushing skills-based systems |
+| 🟡 **agentic, but narrower** | the 2026 framing favours ethics, transparency and *proven instructional benefit* over broad personalisation claims |
+
+🔵 **The LATAM numbers are the cleanest evidence that the governance strand is real demand and not commentary: `87%` of surveyed institutions using AI, `26%` with a formal strategy.** 🔴 **Adoption outran governance, and the sector is now buying the governance.**
+
+### 🆕 🟡 `T221-D` — the open-source education supply is in the PLUGIN layer, and the generic trending query cannot see it
+
+🔴 **Seven consecutive passes in which `github trending education AI 2026` returned no education-sector software** — roundups, course collections, `developer-roadmap`, `nanochat`. 🟢 **Two passes in which a shape constrained to the sector's platforms returned verifiable plugins.**
+
+🔵 **The structural reason, and it is the trend: the AI being built for education in 2026 is not being built as standalone agents. It is being built as `local_*` and `block_*` Moodle plugins, XBlocks, and `edx-platform` extensions — artefacts that live inside a host LMS, are discovered through that LMS's directory rather than GitHub's trending page, and are licensed by the host's rules rather than the author's preference.**
+
+🔴 **Which is why `MIT`/`Apache-2.0` is the wrong filter for this sector.** 🟢 **Moodle *requires* `GPL-3.0-or-later` of directory-listed plugins, and `edx-platform` is `AGPL-3.0`. Every plugin verified across p220–p221 is reciprocal:** `saylordotorg/moodle-local_ai_course_assistant`, `Limekiller/moodle-block_openai_chat`, `yedidiaklein/moodle-local_aiquestions`, `adamjenkins/moodle-local_nomoreai`, `openedx/openedx-ai-extensions` *(AGPL-3.0)*. 🔵 **A studio that filters this sector for permissive licences filters out the sector.**
+
+### 🆕 🟡 `T221-E` — a new commercial shape worth watching: an OSI grant on key-gated software
+
+🟡 **One repository named this pass claimed `GPL-3.0-or-later` **and** a site licence key, verified offline, with a 15-day evaluation period on fresh installation.** 🔴 **It is `404` from this session, so it is recorded as a claim and not as data** — but the shape is one this KB's vocabulary cannot express, and it is not the same as `UNKNOWN-PLUS-TOS` or `PROPRIETARY-API`:
+
+| shape | the grant | the software |
+|---|---|---|
+| `PROPRIETARY-API` | open | open, but calls a vendor's closed service |
+| `UNKNOWN-PLUS-TOS` | unknown | governed by vendor terms |
+| 🆕 **`OSI-GRANT-PLUS-KEY-GATE`** | 🟢 **reciprocal and free** | 🔴 **refuses to run without a key the vendor issues** |
+
+🔵 **Worth watching because a reciprocal licence and a key gate are in tension: GPLv3's anti-circumvention and installation-information terms exist precisely for this pattern.** 🟢 **Registered as `ACTION RN` for p222 rather than asserted here.**
+
 ## Pass 220 — 2026-10-15 — THE TREND THAT MATTERS IS A MEASUREMENT ONE: A LICENCE IS A PROPERTY OF A **FILE**, AND THE WHOLE SECTOR RECORDS IT PER REPOSITORY
 
 🔵 **Four trends this pass, two of them about the sector and two about how the sector is governed.**

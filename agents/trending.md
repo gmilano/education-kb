@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 221 — `2` new agent rows, and the week's defect is one `p220`'s own instrument scored as `AGREE`
+
+🔵 **What is new this week, in one line: the file-level read p220 registered as its top priority ran over `22` rows, found **none** of the defect it was looking for, and found a different one in `6` of them that every prior pass had scored as clean.**
+
+### 🆕 🟢 New this pass
+
+| repo | licence | channels | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 [`X5GON/x5moodle`](https://github.com/X5GON/x5moodle) | 🟢 `BSD-2-Clause` *(`1 325` B, *"(c) 2018, University of Nantes"*)* | `main/LICENSE` read first-hand | **EMEA (France)** | Moodle activity plugin delivering open educational resources via AI during a course session; evolves on usage signals rather than user data |
+| 🆕 🟢 [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | 🔴 `AGPL-3.0` | 🔵 carried; re-surfaced by the constrained shape | **Global** | `edx-platform` plugin housing AI tools and helpers. 🔴 **Its README says experimental, not for production** |
+| 🆕 🔴 `jmolpea/moodle-block_openaiagent` | 🔴 **not published as data** | 🔴 `404` on `main` and `master` | — | Claimed `GPL-3.0-or-later` + an **offline-verified site licence key** and a 15-day evaluation. 🔴 **Unverifiable from this session — named, not shelved** |
+
+### 🆕 🔴 The week's defect: `AGREE` was the wrong answer `6` times
+
+🔴 **`p220`'s `file_vs_repo()` maps every GNU variant onto one family, `RECIPROCAL`. So it returns `AGREE` whenever a shelf cell and a shipped file name the same family — even when they name different GRANTS.**
+
+| row | shelf cell | the file that ships | `p220` | 🆕 `p221` |
+|---|---|---|---|---|
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | `GPL-2.0` | *"under version 2 of the License **(non-upgradable)**"* | 🟢 `AGREE` | 🔴 **`GPL-2.0-only` — cannot enter a GPLv3 host** |
+| [`themeum/tutor`](https://github.com/themeum/tutor) | `GPL-3.0` | `tutor.php`: **`GPLv2 or later`** · `readme.txt`: **`GPLv3`** | 🟢 `AGREE` | 🔴 **`GRANT-CONFLICT`, three channels** |
+| [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) · [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) · [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) · [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | `GPL-3.0` ×4 | *"version 3 … **or any later version**"* ×4 | 🟢 `AGREE` ×4 | 🟡 **`GPL-3.0-or-later` ×4 — the forward permission the cell omits** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `LGPL-3.0` | *"version 3.0 … or (at your option) any later version"* | 🟢 `AGREE` | 🟡 **`LGPL-3.0-or-later`** |
+
+🔵 **Sixth consecutive pass whose headline is a unit mismatch, and the series now reads:** `T218-1` token vs **axis** · `T218-3` heading level vs **pass boundary** · `T218-4` line vs **sentence** · `T219-5` token vs **packaging mode** · `T220` repository vs **file** · 🆕 **`T221` licence FAMILY vs licence VERSION RANGE**. 🟢 **Wired, tested and committed: [`p221-licence-version-range`](../compose/code/p221-licence-version-range/README.md), `26` tests, `5` of them controls that must not fire.**
+
+### 🆕 🟡 The trending shapes, pass `2` of `3` — and the mandated one is now `0` for `7`
+
+🔴 **Mandated shape, verbatim: `github trending education AI 2026`.** Returned Firecrawl and Analytics Vidhya roundups, a CoddyKit October-2026 trending column, `developer-roadmap`, `nanochat` and `rohitg00/ai-engineering-from-scratch`. 🔴 **Zero education-sector software. Seventh consecutive blank.**
+
+🔴 **Second mandated shape, verbatim: `top open source AI agents education 2026 github MIT`.** Returned general-purpose agents — `OpenHands`, `opencode`, `CrewAI`, `LangGraph` — plus `ashishpatel26/500-AI-Agents-Projects`, a curated link list. 🔵 **The search surface said so itself: *"didn't turn up a ranked list of MIT-licensed AI agents built specifically for education"*.** 🟡 **One useful negative: `AgentGPT` is `GPL-3.0` and **archived 2026-01-28**, read-only.**
+
+🟢 **Constrained shape, verbatim: `open source Moodle Open edX AI plugin repository github 2026 license`.** Returned `3` named repositories, `2` verified. 🔵 **Pass `2` of `3` complete. `RD`'s limb `1` needed `2`+ further repositories over the three passes and now stands at `2` *(`x5moodle` this pass; `local_nomoreai` at p219)* — but do NOT retire the mandated shape on this: `1` of this pass's `2` constrained finds was already carried, and the mandated shape is what surfaced `Project-NOMAD` at p220.**
+
+### 🟡 Channel notes for the next pass
+
+🟢 `raw.githubusercontent.com` `200` *(~`70` requests)*, `registry.npmjs.org` `200`, `pypi.org` `200`, `packagist.org` `200`, `proxy.golang.org` `200`. 🔴 `api.github.com` `403`, `moodle.org` `000`, `unesco.org` `ENOTFOUND`. 🔵 **Seventeenth test, and `17` for `17` on the same split: package channels answer, web pages do not.**
+
+🟡 **Branch-guessing cost, recorded so the next pass budgets for it:** with `api.github.com` at `403` there is no way to read a repository's default branch, so every file read is tried against `main`, then `master`, then `trunk`. 🔵 **For the `22` rows this pass that is ~`3`× the requests a single known branch would need, and `2` rows resolved only on `master` after `main` returned `404`.**
+
 ## 2026-10-15 — Pass 220 — `4` new agent rows, and `2` of them declare one licence at the repository and a narrower one in the file that ships
 
 🔵 **What is new this week, in one line: an entire Moodle AI-plugin category reached these shelves for the first time — and the first two rows read file-by-file both turned out to contradict their own `README`.**

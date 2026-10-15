@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 221 — 2026-10-15 — THREE RECIPES: THE VERSION-RANGE GATE IN `make hooks`, THE MOODLE AI BUILD THAT CLEARS A v3 HOST, AND THE VIETNAM ASSESSMENT COMPLIANCE PACK
+
+🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Two are assembled entirely from rows verified first-hand in p220–p221; the third is dated against a statutory deadline.**
+
+### 🆕 🟢 `P221-R1` — the version-range gate, wired into `make hooks` *(1–2 days)*
+
+🔵 **The problem it solves is this pass's headline: `2 208` of this KB's `2 342` GNU cell-mentions carry no `-only` / `-or-later` bound, and `6` of the `22` rows read this pass had one in the file all along.**
+
+**Wire it:**
+
+| step | what | from |
+|---|---|---|
+| 1 | Extract every GNU licence cell and its row slug from the shelves | 🟢 `compose/code/p221-licence-version-range/version_range.py` → `parse_range()`; the census query is in [`rh-range-census`](../evidence/rh-range-census.2026-10-15-p221.tsv) |
+| 2 | For each slug, read the ecosystem's **prescribed** file — not the root `LICENSE` | 🟢 `p220`'s `prescription()` + 🆕 p221's `ri-prescription-table` TSV, which now carries **19** ecosystems incl. CRAN `DESCRIPTION` and Maven `pom.xml` |
+| 3 | Normalise the comment block to a **sentence stream** before matching | 🟢 `version_range._normalise()` — strips `\r`, comment leaders (`*`, `//`, `#`), collapses whitespace. 🔴 **Without this step a wrapped GNU notice reads as neither family nor bound** |
+| 4 | Compare published cell against file reading | 🟢 `range_compare()` → `AGREE` · `RANGE-UNDERSPECIFIED` · `RANGE-CONFLICT` · `GRANT-CONFLICT` · `BOTH-UNSPECIFIED` · `OUT-OF-SCOPE` |
+| 5 | Fail the hook **only** on `RANGE-CONFLICT` and `GRANT-CONFLICT`; report `RANGE-UNDERSPECIFIED` as a work queue | 🔵 `BOTH-UNSPECIFIED` must **not** fail — the ambiguity is at source and failing on it trains the gate to be ignored |
+| 6 | For the procurement question, call `combinable_with(bound, version, host_version)` | 🟢 Returns `True` / `False` / **`None`** — and `None` is the answer an SOW carries, not an optimistic `True` |
+
+🔴 **Why this is the right form of `ACTION QO` and the previous four attempts were not:** `QO` has been carried five passes because the *vocabulary kept moving*. This gate does not depend on the vocabulary — it reads two strings and compares a bound. 🟢 **`26` tests, `5` controls, zero dependencies beyond the standard library.**
+
+🟡 **Known limit, stated:** `api.github.com` is `403`, so a default branch cannot be read and each path costs up to `3` requests (`main`, `master`, `trunk`). 🔵 **Budget ~`2`–`3`× the number of rows swept.**
+
+### 🆕 🟢 `P221-R2` — a Moodle AI build that provably clears its v3 host *(6–8 weeks)*
+
+🔵 **Moodle is `GPL-3.0-or-later`. Everything installed into its tree inherits that constraint, and this pass found a library on these shelves that fails it.** 🟢 **This recipe is the assembled, licence-cleared stack.**
+
+| layer | repo | licence, **read at file level** | note |
+|---|---|---|---|
+| **host** | Moodle | 🟢 `GPL-3.0-or-later` | the v3 reciprocal host every row below must clear |
+| **AI course assistant** | [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `GPL-3.0-or-later` *(`LICENSE` `35 149` B + `version.php`)* | **SOLA** — in production on Saylor's Learn and Degrees sites; CI across Moodle `4.5`/`5.0`/`5.1`. 🟢 **The only production-proven row in the layer** |
+| **chat block** | [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 `GPL-3.0-or-later` | longest-standing AI chat block for Moodle |
+| **question generation** | [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` *(`version.php` only — root `LICENSE` is `404`)* | generates Moodle questions from course text |
+| **policy / opt-out** | [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) | 🟢 `GPL-3.0-or-later` | 🔵 **the age-banding enforcement point for the NYC / Katy ISD rules** |
+| **proctoring** | [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | 🆕 🟢 **`GPL-3.0-or-later`** *(`version.php`, `1 122` B, read this pass)* | shelf cell said bare `GPL-3.0` until today |
+| **roster sync** | [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | 🆕 🟢 **`GPL-3.0-or-later`** *(`version.php`, `1 249` B)* | org-owned by `moodlehq` |
+| **theme** | [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | 🆕 🟢 **`GPL-3.0-or-later`** *(`version.php`, `1 572` B)* | |
+| **webhooks / eventing** | [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) | 🆕 🟢 **`GPL-3.0-or-later`** *(`version.php`, `1 135` B)* | |
+| **conferencing** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🆕 🟢 **`LGPL-3.0-or-later`** *(`MeetingService.java`, `71 514` B)* | LGPL, so linkable without infecting the host |
+
+🔴 **What this recipe EXCLUDES, and why it is the valuable half:**
+
+| excluded | licence | reason |
+|---|---|---|
+| 🔴 [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | 🔴 **`GPL-2.0-only`** *(*"version 2 … non-upgradable"*, `composer.json` `"GPL-2.0-only"`)* | 🔴 **Incompatible with a v3 host. Cannot go in a Moodle build at all** |
+| 🟡 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 `MIT` at root, `GPL-3.0-or-later` in `local/aichat/version.php` | 🟡 **`FILE-NARROWER` (p220) + `MATURITY_ALPHA` + `version 2024010105`, a stamp no newer fork can upgrade from** |
+| 🟡 [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | 🟡 `LGPL-3.0`, **bound unspecified on both sides** | 🟡 **Usable in all likelihood, but `BOTH-UNSPECIFIED` — ask the maintainer before an SOW commits** |
+| 🟡 [`X5GON/x5moodle`](https://github.com/X5GON/x5moodle) | 🟢 `BSD-2-Clause` | 🟢 **GPL-compatible so it ships fine — but it does not meet Moodle's own directory rule of `GPL-3.0-or-later`** |
+
+🟢 **Deliverable that makes this sellable: the licence appendix is generated, not asserted** — run `P221-R1` over the ten rows and attach the TSV.
+
+### 🆕 🔴 `P221-R3` — the Vietnam automated-assessment compliance pack *(8–10 weeks, deadline `2027-03-01`)*
+
+🔴 **Vietnam's AI law has been in force since `2026-03-01`, is **extraterritorial**, and names **automated assessment** and **behavioural monitoring** as high-risk. Compliance is due `2027-03-01`, with a 6-month grace for systems already in operation.** 🔵 **That is the only dated, education-specific, non-EU compliance deadline on these shelves — and proctoring is squarely inside it.**
+
+| layer | repo | licence | role in the pack |
+|---|---|---|---|
+| **lockdown client** | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) + `seb-win-refactoring` | 🟡 reciprocal *(verify bound with `P221-R1` before SOW)* | the exam-delivery control point |
+| **LMS-side gate** | [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | 🟢 **`GPL-3.0-or-later`** *(read this pass)* | where the behavioural-monitoring disclosure must surface to the candidate |
+| **Open edX path** | [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🔴 `AGPL-3.0` | 🔵 **AGPL means the network-use clause applies — relevant because a proctoring service is network-delivered by definition** |
+| **disclosure marking** | 🟢 `compose/code/aiact-50-2-marking` + `aiact-50-2-pack` + `aiact-50-2-exposure` | — | 🟢 **Built for EU Article 50(2), and the *mechanism* — machine-readable disclosure that content/assessment was AI-processed — is what Vietnam's assessment rule needs too. Reuse the instrument, re-label the obligation** |
+| **assessment-decision audit trail** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) + [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | mixed — 🔴 **run `P221-R1` first** | an xAPI LRS is the per-decision record a high-risk assessment system must be able to produce |
+| **evaluation harness** | [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit), [`eth-lre/MathTutorBench`](https://github.com/eth-lre/MathTutorBench) | 🟡 verify | the *"proven instructional benefit"* evidence buyers now ask for |
+
+🔴 **The sequencing that matters: the grace period applies to systems **already in operation**, so a client running proctoring in Vietnam today has until `2027-09-01`, and a client deploying new has `2027-03-01`.** 🟢 **Establish which, first — it is a six-month difference in scope and price.**
+
+🟡 **Honest gap in this recipe, stated rather than papered over:** this KB holds **no** primary-source reading of the Vietnamese instrument itself. 🔴 **Every detail above comes from secondary legal-summary surfaces, and `ACTION PD`'s `17`th test shows this session cannot reach primary government pages.** 🔵 **Before an SOW cites a date, that text must be read first-hand — registered as `ACTION RO` for p222.**
+
 ## Pass 220 — 2026-10-15 — THREE RECIPES: THE FILE-LEVEL GRANT AUDIT, THE MOODLE AI STACK THAT IS NOW ASSEMBLY NOT CONSTRUCTION, AND THE OFFLINE MINISTRY BOX
 
 🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Two of the three are assembled entirely from rows verified first-hand this pass.**

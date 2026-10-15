@@ -1,0 +1,7 @@
+pass	shape	query_string_verbatim	repos_named	repos_verified	verified_slugs	note
+p220	mandated	github trending education AI 2026	0	0	-	blog roundups + course collections, 6th consecutive time
+p220	constrained	(p220's constrained shape)	5	4	saylordotorg/moodle-local_ai_course_assistant; microsoft/moodle-ai-assistant; Limekiller/moodle-block_openai_chat; yedidiaklein/moodle-local_aiquestions	pass 1 of 3
+p221	mandated	github trending education AI 2026	0	0	-	7th consecutive time: Firecrawl/Analytics Vidhya/CoddyKit roundups, developer-roadmap, nanochat, rohitg00/ai-engineering-from-scratch. NO education-sector software surfaced
+p221	mandated-b	top open source AI agents education 2026 github MIT	1	0	-	returned general-purpose agents (OpenHands, opencode, CrewAI) + ashishpatel26/500-AI-Agents-Projects (a link list). Explicitly: "didn't turn up a ranked list of MIT-licensed AI agents built specifically for education"
+p221	constrained	open source Moodle Open edX AI plugin repository github 2026 license	3	2	X5GON/x5moodle (BSD-2-Clause, Univ. of Nantes 2018, LICENSE 1325 B); openedx/openedx-ai-extensions (AGPL-3.0, already carried)	pass 2 of 3
+p221	constrained-UNVERIFIABLE	open source Moodle Open edX AI plugin repository github 2026 license	1	0	jmolpea/moodle-block_openaiagent	404 from this session on main AND master, for README.md AND version.php. Claimed GPL-3.0-or-later + a site licence KEY, offline-verified, 15-day evaluation. NOT PUBLISHED AS DATA

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 221 — the mandated trending shape goes `0` for `7`, and this pass can finally say what it costs
+
+🔵 **`1` new repository row this week.** 🔴 **Both mandated query shapes ran verbatim and returned no education-sector software for the seventh consecutive pass. The constrained shape returned `3` named repositories, `2` of which verified.**
+
+🔵 **Evidence:** [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p221.tsv) *(both query strings verbatim, per `ACTION RE`)* · [`p221-channel-reachability`](../evidence/p221-channel-reachability.2026-10-15-p221.tsv)
+
+### 🔴 `ACTION RD`, pass `2` of `3` — the shapes side by side
+
+| shape | query string, **verbatim** | named | verified | what came back |
+|---|---|---|---|---|
+| 🔴 **mandated** | `github trending education AI 2026` | `0` | `0` | Firecrawl and Analytics Vidhya roundups, a CoddyKit October-2026 trending column, `developer-roadmap`, `nanochat`, `rohitg00/ai-engineering-from-scratch`. 🔴 **Seventh consecutive pass with zero education-sector software** |
+| 🔴 **mandated (b)** | `top open source AI agents education 2026 github MIT` | `1` | `0` | General-purpose agents — `OpenHands`, `opencode`, `CrewAI`, `LangGraph`, `OpenClaw`, `hermes-agent` — plus `ashishpatel26/500-AI-Agents-Projects`, which is a **curated link list**, not an agent. 🔵 **The surface stated the blank itself: *"didn't turn up a ranked list of MIT-licensed AI agents built specifically for education"*** |
+| 🟢 **constrained** | `open source Moodle Open edX AI plugin repository github 2026 license` | `3` | `2` | 🆕 [`X5GON/x5moodle`](https://github.com/X5GON/x5moodle) *(`BSD-2-Clause`, verified first-hand)*; [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) *(`AGPL-3.0`, **already carried**)*; `jmolpea/moodle-block_openaiagent` *(**`404` here**)* |
+
+🟡 **`RD`'s limb `1` needed `2`+ further repositories across the three passes and now stands at exactly `2`** — `adamjenkins/moodle-local_nomoreai` at p219 and `X5GON/x5moodle` this pass. 🔴 **Do NOT retire the mandated shape at pass `3` on that count alone:** `1` of this pass's `2` constrained hits was already on the shelves, and the **mandated** shape is what surfaced `Project-NOMAD` at p220. 🟢 **The honest reading is that the shapes are complementary, which is what `QJ`'s discipline predicted.**
+
+### 🆕 🔴 One negative worth shelving: an archived agent that roundups still list
+
+🔴 **`AgentGPT` — `GPL-3.0`, and **archived `2026-01-28`**, repository read-only.** 🔵 **It is still being returned by 2026 "best open source AI agents" roundups. Recorded so the next pass does not re-find it as a candidate, and as a live example of why a roundup is not a channel.**
+
+### 🆕 🔴 The unverifiable row, named with its query per `ACTION RE`
+
+🔴 **`jmolpea/moodle-block_openaiagent` → `404` from this session on `main` AND `master`, for `README.md` AND `version.php` (4 probes, all `404`, `14` B each).**
+
+🔵 **What the surface claimed, recorded as a claim and not as data:** `GPL-3.0-or-later`, copyright *"RSMAX Consulting SL 2025-2026"*, a Moodle block offering "Smart Tutor & Support AI" — **and a site licence key, verified offline, with a 15-day evaluation period on fresh installation.**
+
+🟡 **If it verifies, it is the first row on these shelves carrying an OSI reciprocal grant AND a commercial key gate at once** — a shape neither `UNKNOWN-PLUS-TOS` nor `PROPRIETARY-API` describes, because the *grant* is free and the *software* is gated. 🟢 **Registered for p222 as `ACTION RN`.**
+
+### 🟡 The cost of a `403`, measured
+
+🔴 **`api.github.com` has been `403` for `17` consecutive channel tests, so there is no way to read a repository's default branch.** 🔵 **Every file read this pass was therefore tried against `main`, then `master`, then `trunk`:**
+
+| measure | value |
+|---|---|
+| rows read file-by-file | **22** |
+| branch guesses per path | **up to 3** |
+| rows that resolved **only** on `master` after `main` returned `404` | **2** *(`valentineus/moodle-webhooks`, `celtic-project/LTI-PHP`)* |
+| rows that resolved on `main` | **9** |
+| requests served by `raw.githubusercontent.com` | **~70** |
+
+🟢 **Recorded as a budget number, not a complaint: a pass that reads `N` files should plan for ~`2`–`3`×`N` requests while `api.github.com` stays shut.**
+
 ## 2026-10-15 — Pass 220 — `1` new trending repo, `4` new plugin rows, and `2` new PACKAGE channels that between them exposed a broken Go module and a near-invented grant
 
 🔵 **The trending surface this week came from the CONSTRAINED query shape, not the mandated one — `ACTION RD`, pass `1` of `3`. Both strings are recorded verbatim so the comparison is auditable.**

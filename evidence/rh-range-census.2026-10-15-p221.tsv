@@ -1,0 +1,24 @@
+token	bare_mentions	qualified_mentions	note
+GPL-3.0	766	-	bare family+version, no -only / -or-later bound
+AGPL-3.0	761	-	bare
+GPL-2.0	265	-	bare; the family where -only vs -or-later decides GPLv3 compatibility
+LGPL-3.0	212	-	bare
+GPL-3	102	-	bare AND no minor version
+AGPL-3	41	-	bare AND no minor version
+LGPL-2.1	24	-	bare
+GPL-2	21	-	bare AND no minor version
+LGPL-3	13	-	bare AND no minor version
+LGPL-2	3	-	bare AND no minor version
+GPL-3.0-or-later	-	58	carries its bound
+AGPL-3.0-only	-	22	carries its bound
+GPL-3.0-only	-	17	carries its bound
+LGPL-3.0-or-later	-	9	carries its bound
+GPL-2.0-only	-	9	carries its bound
+AGPL-3.0-or-later	-	8	carries its bound
+GPL-2.0-or-later	-	7	carries its bound
+LGPL-2.1-or-later	-	2	carries its bound
+LGPL-2.1-only	-	1	carries its bound
+LGPL-3.0-only	-	1	carries its bound
+TOTAL	2208	134	bare share = 94.3% of 2342 GNU cell-mentions
+DISTINCT-ROWS	337	-	distinct github slugs carrying at least one bare GNU cell
+ARTEFACT-REJECTED	1	-	`AGPL-6 d` in repos/trending.md l.13998 is a liveness-table DAY COUNT, not a licence; rejected by the census guard

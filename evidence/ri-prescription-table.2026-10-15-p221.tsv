@@ -1,0 +1,21 @@
+ecosystem	prescribed_file	licence_field	verdict	in_p220_table	shelf_mentions	confidence
+moodle	version.php	mandatory	PRESCRIBED-CHANNEL	yes	65	read-first-hand-p219-p221
+wordpress	readme.txt + plugin header	mandatory	PRESCRIBED-CHANNEL	yes	26	read-first-hand-p221
+adl-scorm	source-file header	mandatory-by-convention	PRESCRIBED-CHANNEL	yes	-	read-first-hand-p220
+composer	composer.json	optional	PERMISSIVE-MANIFEST	yes	56	read-first-hand-p221
+npm	package.json	optional	PERMISSIVE-MANIFEST	yes	264	read-first-hand-p220-p221
+pypi	pyproject.toml / setup.py / setup.cfg	optional	PERMISSIVE-MANIFEST	yes	203	read-first-hand-p220
+huggingface	card front-matter	optional	PERMISSIVE-MANIFEST	yes	-	channel-000-here
+go	go.mod	absent	NO-CHANNEL	yes	8	read-first-hand-p220
+magento	composer.json	optional	PERMISSIVE-MANIFEST	yes	-	inherited-p220
+none	-	absent	NO-CHANNEL	yes	-	inherited-p220
+maven	pom.xml	optional	PERMISSIVE-MANIFEST	NO	54	named-on-shelves-as-ecosystem-manifest
+cran	DESCRIPTION	mandatory	PRESCRIBED-CHANNEL	NO	53	read-first-hand-p-prior (shmercer/writeAlizer, 1549 B)
+scorm	imsmanifest.xml	absent	NO-CHANNEL	NO	8	named-on-shelves
+cargo	Cargo.toml	optional	PERMISSIVE-MANIFEST	NO	21	filename-mention-only
+gradle	build.gradle	optional	PERMISSIVE-MANIFEST	NO	9	filename-mention-only
+rubygems	*.gemspec	optional	PERMISSIVE-MANIFEST	NO	2	named-on-shelves-as-ecosystem-manifest
+drupal	*.info.yml	optional	PERMISSIVE-MANIFEST	NO	1	filename-mention-only
+pub	pubspec.yaml	optional	PERMISSIVE-MANIFEST	NO	1	filename-mention-only
+openacs	dotlrn.info / *.info	optional	PERMISSIVE-MANIFEST	NO	1	named-on-shelves-as-ecosystem-manifest
+helm	Chart.yaml / charts	UNCONFIRMED	UNCONFIRMED	NO	1	REJECTED - single weak hit, a run instruction not a manifest channel

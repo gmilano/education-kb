@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 221 — 2026-10-15 — THE FOUNDATION ROWS ARE WHERE `FILE-SILENT` BITES, BECAUSE A FOUNDATION IS A THING YOU INSTALL INTO SOMEONE ELSE'S TREE
+
+🔵 **`1` new repository row.** 🔴 **`8` of the `22` rows read file-by-file this pass carry **no licence notice in the file that ships** — and the four largest are all foundation-tier libraries.**
+
+🔵 **Evidence:** [`rh-file-level-range`](../evidence/rh-file-level-range.2026-10-15-p221.tsv) · [`ri-prescription-table`](../evidence/ri-prescription-table.2026-10-15-p221.tsv) · **Instrument:** [`p221-licence-version-range`](../compose/code/p221-licence-version-range/README.md)
+
+### 🆕 🟡 `P221-A` — the foundation rows whose shipped file carries nothing
+
+🔵 **Why this tier specifically: a foundation is consumed by *installation* — `pip install` into a `site-packages` tree, `composer require` into `vendor/`, a zip dropped into an add-ons folder. The repository's root `LICENSE` does not travel with any of those.**
+
+| row | published cell | the file a consumer actually gets | bytes | notice in that file |
+|---|---|---|---|---|
+| 🔴 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `GPL-3.0` *(`LICENSE.txt`, `35 146` B)* | `h5p.classes.php` | 🔴 **`196 920`** | 🟡 **none.** 🔵 **Its `license` / `licenseVersion` / `licenseExtras` hits are H5P **content** metadata validators — `'/^(CC BY\|CC BY-SA\|…\|GNU GPL\|PD\|…)$/'` — describing the licence of a *learning object*, not of the file** |
+| 🔴 [`openedx/XBlock`](https://github.com/openedx/XBlock) | `Apache-2.0` *(`11 358` B)* | `xblock/core.py` | `39 737` | 🟡 **none** |
+| 🔴 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `Apache-2.0` *(manifest @ `master`)* | `src/LtiMessageLaunch.php` | `23 855` | 🟡 **none** — 🔵 **the grant exists in `composer.json` only, which is a `PERMISSIVE-MANIFEST` channel and therefore an optional field that happens to be filled** |
+| 🟡 [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `BSD-3-Clause` *(`1 528` B)* | `ltiauthenticator/lti11/auth.py` | `7 796` | 🟡 **none** |
+| 🟡 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `MIT` | `kolibri/core/auth/models.py` | `75 498` | 🟡 **none** |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `GPL-2.0` | `index.php` | `10 443` | 🟡 **none** — 🔴 **and `GPL-2.0` is exactly the cell where `-only` vs `-or-later` decides GPLv3 compatibility, so this row is both silent AND unbounded** |
+| 🟡 [`Pearson-Advance/openedx-lti-tool-plugin`](https://github.com/Pearson-Advance/openedx-lti-tool-plugin) | `Apache-2.0` *(`main/LICENSE`)* | `openedx_lti_tool_plugin/views.py` · `setup.py` | `3 547` · `4 749` | 🟡 **none in either** |
+| 🟡 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `MIT` *(`1 079` B)* | `__init__.py` · `manifest.json` | `10 799` · `168` | 🟡 **none in either** — 🔴 **and an Anki add-on is distributed as an `.ankiaddon` zip of exactly these files** |
+
+🟢 **The two foundation rows that AGREE at file level, recorded as clean:**
+
+| row | published cell | the shipped file | bytes | reading |
+|---|---|---|---|---|
+| 🟢 [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | `Apache-2.0` | `tincan/statement.py` | `7 342` | 🟢 **full Apache-2.0 header, *"Copyright 2014 Rustici Software"*, plus `setup.py` `license='Apache License 2.0'`** |
+| 🟢 [`oppia/oppia`](https://github.com/oppia/oppia) | `Apache-2.0` | `core/domain/exp_services.py` | `174 203` | 🟢 **full Apache-2.0 header, *"Copyright 2014 The Oppia Authors"*** |
+
+🔵 **The contrast is the useful part: Apache-2.0 projects tend to carry the per-file header its appendix recommends; the GNU and permissive-short-licence rows mostly do not.** 🔴 **`2` of `2` Apache rows carried it; `0` of the `8` silent rows are Apache-with-a-header.**
+
+### 🆕 🔴 `P221-B` — the LTI library tier, and the one row that cannot enter a Moodle tree
+
+🔵 **This KB carries four LTI 1.3 libraries. They are the most-installed-into-a-tree rows on these shelves, and this pass read three of them in source.**
+
+| row | published cell | file read | bytes | file-level reading | verdict |
+|---|---|---|---|---|---|
+| 🔴 [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | `GPL-2.0` | `src/Message/LtiMessage.php` | `3 800` | *"as published by the Free Software Foundation; under version 2 of the License **(non-upgradable)**"* · `composer.json`: `"license": "GPL-2.0-only"` | 🔴 **`GPL-2.0-only`. INCOMPATIBLE with `GPL-3.0`, so it cannot be combined with Moodle. The published cell does not say so** |
+| 🟡 [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) | `LGPL-3.0` *(`7 651` B)* | `src/Tool.php` | `116 419` | `@license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, **version 3**` — 🔵 **names the version and says nothing about later ones** | 🟡 **`BOTH-UNSPECIFIED` — the ambiguity is at SOURCE, not in this KB. Ask the maintainer; do not guess** |
+| 🟡 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `Apache-2.0` | `src/LtiMessageLaunch.php` | `23 855` | 🟡 **no notice; `composer.json` only** | 🟡 **`FILE-SILENT`** |
+
+🔵 **For an engagement that must put an LTI library inside a Moodle plugin, the `oat-sa` row is a hard stop and the other two are questions.** 🟢 **That is three different answers to one procurement question, and before this pass all three cells read as a bare licence token.**
+
+### 🆕 🟢 `P221-C` — CRAN enters the prescription table as a second `PRESCRIBED-CHANNEL`
+
+🟢 **`ACTION RI`'s offline grep found `9` ecosystems on these shelves that `p220`'s hard-coded table does not carry. One of them changes how foundation rows get read:**
+
+| ecosystem | file | field | why it matters here |
+|---|---|---|---|
+| 🆕 🟢 **CRAN** | `DESCRIPTION` | 🟢 **mandatory** | 🟢 **`53` mentions on these shelves, and it is a `PRESCRIBED-CHANNEL` — the third after Moodle's `version.php` and WordPress's `readme.txt`. The R/psychometrics tier of this KB is large *(`dexter`, `girth`, `irtorch`, `pyBKT` neighbours, `writeAlizer`, `tblcheck`, `ggcheck`, `ottr`)* and every one of those rows has a mandatory licence field nobody has swept** |
+| 🆕 🟡 **Maven** · **RubyGems** · **OpenACS** | `pom.xml` · `*.gemspec` · `dotlrn.info` | 🔴 optional | 🔵 `54` · `2` · `1` mentions. 🟡 **The Java/Sakai/QTI tier runs on `pom.xml`, so it is a large population with an optional field** |
+| 🆕 🔴 **SCORM packaging** | `imsmanifest.xml` | 🔴 **no licence field exists** | 🔴 **`NO-CHANNEL`. A delivered SCORM package has nowhere to carry a grant, which is precisely why `T220-1`'s per-SCO file header was the deciding channel** |
+
+🔴 **Rejected, and recorded as rejected:** `Helm` / `Chart.yaml` — a single weak hit which on reading turned out to be a **run instruction**, not a manifest channel. 🟢 **Not published as an ecosystem.**
+
+### 🆕 🟢 The new repository row
+
+| repo | licence | channels | region | what it is |
+|---|---|---|---|---|
+| 🆕 🟢 [`X5GON/x5moodle`](https://github.com/X5GON/x5moodle) | 🟢 **`BSD-2-Clause`** — `main/LICENSE`, `1 325` B, *"Copyright (c) 2018, University of Nantes. All rights reserved."* | 🟢 `LICENSE` read first-hand | **EMEA (France)** | Moodle activity plugin wiring AI-selected open educational resources into a live course session. 🟡 **Dated (2018) and carried as an OER-integration reference, not as a current agent.** 🔵 **Licence note worth keeping: Moodle requires `GPL-3.0-or-later` of plugins in its directory, and `BSD-2-Clause` is GPL-compatible but is not that — so this plugin is distributable inside a Moodle tree while not meeting the directory's own rule** |
+
 ## Pass 220 — 2026-10-15 — THE OFFLINE-FIRST EDUCATION SERVER ARRIVES, AND IT IS THE FIRST FOUNDATION ROW ON THESE SHELVES THAT ASSUMES **NO NETWORK**
 
 🔵 **`1` new foundational repository, verified at `2` channels. 🟢 And a structural finding about these shelves' own reading method: `4` of `11` licence-unknown rows answered from an ecosystem channel, `7` did not, and the split is not about effort — it is about whether the ecosystem MANDATES the field.**

@@ -1,0 +1,10 @@
+channel	probe_url	code	verdict	note	test_number
+raw.githubusercontent.com	/adlnet/SCORM-to-xAPI-Wrapper/master/README.md	200	WORKING	~70 requests served this pass	17
+registry.npmjs.org	/canvas-lms-mcp	200	WORKING	reproduces p220 exactly incl. time.modified	17
+pypi.org	/pypi/requests/json	200	WORKING	reachable	17
+packagist.org	/packages/moodle/moodle.json	200	WORKING	reproduces; ACTION RC still not run	17
+proxy.golang.org	/github.com/stretchr/testify/@v/list	200	WORKING	no licence field exists in go.mod	17
+api.github.com	/repos/adlnet/SCORM-to-xAPI-Wrapper	403	BLOCKED	17 consecutive tests	17
+moodle.org	/plugins/	000	BLOCKED	ENOTFOUND; ACTION RA still blocked at source	17
+unesco.org	/	000	BLOCKED	ENOTFOUND; ACTION RL cannot be run from this session	17
+PATTERN	-	-	-	17 for 17: every WORKING channel is a PACKAGE channel; every BLOCKED one is a WEB page	17

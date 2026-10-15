@@ -1,0 +1,4 @@
+package	registry	license_field	record_repository	shelf_row	identity_ok	usable	note
+canvas-lms-mcp	registry.npmjs.org	MIT	bruchris/canvas-lms-mcp	CreveXTech/canvas-lms-mcp	FALSE	NO	reproduces p220 T220-3 exactly; the gate still refuses it
+canvas-lms-mcp	registry.npmjs.org	MIT	bruchris/canvas-lms-mcp	bruchris/canvas-lms-mcp	TRUE	YES	for the owner the record actually names, the grant is usable
+VERSION-DRIFT	registry.npmjs.org	-	-	bruchris/canvas-lms-mcp	-	-	shelf says v2.2.0 / 2026-10-10 / "172 tools"; registry says latest 2.5.0, time.modified 2026-10-15T07:25:24Z, 77 published versions. Drift CONFIRMED and unchanged from p220

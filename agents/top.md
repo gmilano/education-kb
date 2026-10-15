@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 221 — 2026-10-15 — `ACTION RH` FIRES ON ITS **SECOND** LIMB, AND THE DEFECT IT MISSED IS BIGGER: THE UNIT OF A LICENCE IS THE **VERSION RANGE**, AND `94.3%` OF THIS KB'S GNU CELLS DO NOT CARRY ONE
+
+🔵 **`2` new agent rows, `1` new repository row, `0` new platform rows.** 🔴 **`ACTION RH` — p220's registered highest-priority action — fires limb `2`: `22` redistribution-shaped rows read file-by-file and **`0`** came back `FILE-NARROWER`.** 🟢 **`ACTION RI` fires limb `1` at `9`. `ACTION RJ`/`RM` reproduce p220 exactly. `ACTION QX` lands, inside `RH`, as p220 recommended.**
+
+🔵 **Evidence:** [`rh-file-level-range`](../evidence/rh-file-level-range.2026-10-15-p221.tsv) · [`rh-range-census`](../evidence/rh-range-census.2026-10-15-p221.tsv) · [`ri-prescription-table`](../evidence/ri-prescription-table.2026-10-15-p221.tsv) · [`rj-registry-identity`](../evidence/rj-registry-identity.2026-10-15-p221.tsv) · [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p221.tsv) · [`p221-channel-reachability`](../evidence/p221-channel-reachability.2026-10-15-p221.tsv) · **Instrument:** [`p221-licence-version-range`](../compose/code/p221-licence-version-range/README.md)
+
+### 🆕 🔴 `T221-1` — `ACTION RH` was registered on the wrong prediction, and the control that proves it is the `4` rows that AGREE
+
+🔴 **`RH`'s limb `1` asked for `3`+ further `FILE-NARROWER` rows, on the strength of `T220-1` and `T220-2` having been *"the first two rows tried"*. `22` rows were tried this pass. `FILE-NARROWER` count: `0`.**
+
+🟢 **The `4` Moodle plugins read first-hand are the control, and they agree with their shelf cell on family and on version:**
+
+| row | shelf cell | `version.php`, read `2026-10-15` | bytes |
+|---|---|---|---|
+| 🟢 [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | `GPL-3.0` | *"either version 3 of the License, or (at your option) any later version"* · `@license … GNU GPL v3 or later` | `1 572` |
+| 🟢 [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) | `GPL-3.0` | identical grant · `@copyright 2017 "Valentin Popov"` | `1 135` |
+| 🟢 [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | `GPL-3.0` | identical grant · `@copyright 2024 Brain Station 23` | `1 122` |
+| 🟢 [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | `GPL-3.0` | identical grant · `@copyright Andrew Nicols` | `1 249` |
+
+🔵 **So p220's pair was the SCORM-and-Moodle-plugin distribution shape specifically, not a general defect in repository-level metadata.** 🟢 **That is `RH` doing its job: it was built to be falsifiable and it was falsified.**
+
+### 🆕 🔴 `T221-2` — but all four cells are still unusable, and `p220`'s own instrument reports them as `AGREE`
+
+🔴 **Every one of those `4` files says *"version 3 … **or (at your option) any later version**"*. Every one of those `4` shelf cells says `GPL-3.0`. Those are not the same grant, and `p220`'s `file_vs_repo()` cannot tell them apart — it maps every GNU variant onto one family, `RECIPROCAL`, and returns `AGREE`.**
+
+🔴 **The case that bites is not an or-later, it is an only:**
+
+| row | shelf cell | the file that ships | bytes | consequence |
+|---|---|---|---|---|
+| 🆕 🔴 [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | `GPL-2.0` | `src/Message/LtiMessage.php`: *"as published by the Free Software Foundation; under version 2 of the License **(non-upgradable)**"* · `composer.json`: `"license": "GPL-2.0-only"` | `3 800` | 🔴 **`GPL-2.0-only` is INCOMPATIBLE with `GPL-3.0`. This LTI 1.3 library cannot be combined with a GPLv3 host — Moodle, for one — and the shelf cell does not say so** |
+| 🆕 🔴 [`themeum/tutor`](https://github.com/themeum/tutor) | `GPL-3.0` | `tutor.php` l.`12`: **`License: GPLv2 or later`** · `readme.txt` l.`9`: **`License: GPLv3`** · `master/LICENSE`: `GPL-3.0`, `35 149` B | `1 484` / `42 450` | 🔴 **THREE channels, THREE answers. The shelf publishes one of the three and hides the other two** |
+| 🟢 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `LGPL-3.0` | `MeetingService.java`: *"either version 3.0 of the License, or (at your option) any later version"* | `71 514` | 🟡 **`LGPL-3.0-or-later`** — the forward permission the cell omits |
+
+🔵 **For an SOW the difference is concrete. `GPL-3.0-or-later` lets a studio carry a component forward to a future version of the licence; a bare `GPL-3.0` does not say whether it may. `GPL-2.0-only` decides whether a component may enter a Moodle tree at all — and that is the single question a Moodle engagement asks about a library.**
+
+### 🆕 🔴 `T221-3` — the census: `94.3%` of this KB's GNU cells carry no bound
+
+🔴 **`2 208` bare mentions against `134` qualified, across **`337` distinct rows**:**
+
+| token | bare | token | qualified |
+|---|---|---|---|
+| `GPL-3.0` | **766** | `GPL-3.0-or-later` | 58 |
+| `AGPL-3.0` | **761** | `AGPL-3.0-only` | 22 |
+| `GPL-2.0` | **265** | `GPL-3.0-only` | 17 |
+| `LGPL-3.0` | **212** | `LGPL-3.0-or-later` | 9 |
+| `GPL-3` *(no minor)* | **102** | `GPL-2.0-only` | 9 |
+| `AGPL-3` *(no minor)* | **41** | `AGPL-3.0-or-later` | 8 |
+| `LGPL-2.1` · `GPL-2` · `LGPL-3` · `LGPL-2` | 24 · 21 · 13 · 3 | `GPL-2.0-or-later` + `LGPL-2.1-*` + `LGPL-3.0-only` | 7 + 3 + 1 |
+| 🔴 **TOTAL** | **2 208** | 🟢 **TOTAL** | **134** |
+
+🟢 **One artefact rejected by the census guard, and it was this pass's own:** `AGPL-6` in `repos/trending.md` l.`13998` is **`AGPL-6 d`**, a liveness table's **day count** — not a licence at version `6`. 🔵 **The first census counted it. Recorded because the next liveness table will have more, and because a census that cannot name its own false positive is not a census.**
+
+### 🆕 🟡 `T221-4` — the dominant state is not `FILE-NARROWER` at all, it is `FILE-SILENT`
+
+🟡 **`8` of the `22` shipped files carry **no licence notice of any kind**, including the three largest files read this pass:**
+
+| row | shelf cell | the shipped file | bytes | notice |
+|---|---|---|---|---|
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `GPL-3.0` | `h5p.classes.php` | **`196 920`** | 🟡 **none** *(its `license` hits are H5P **content** metadata regexes, not the file's own grant)* |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `Apache-2.0` | `xblock/core.py` | `39 737` | 🟡 **none** |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `Apache-2.0` | `src/LtiMessageLaunch.php` | `23 855` | 🟡 **none** *(grant is in `composer.json` only)* |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `MIT` | `__init__.py` | `10 799` | 🟡 **none** *(and an Anki add-on ships as a zip of exactly these files)* |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) · [`Pearson-Advance/openedx-lti-tool-plugin`](https://github.com/Pearson-Advance/openedx-lti-tool-plugin) · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `BSD-3-Clause` · `Apache-2.0` · `MIT` · `GPL-2.0` | `auth.py` · `views.py` · `models.py` · `index.php` | `7 796` · `3 547` · `75 498` · `10 443` | 🟡 **none** |
+
+🔵 **`FILE-SILENT` is not an accusation — most source files in most projects carry no per-file notice, and that is normal practice.** 🔴 **It matters here because these `8` rows are redistributed as **loose files into a host application's tree** — a pip-installed XBlock, an `.ankiaddon` zip, a `vendor/` drop — where the repository's `LICENSE` does not travel with them.**
+
+🟢 **Two rows AGREE at file level and are recorded as clean:** [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) *(`tincan/statement.py`, `7 342` B, full Apache-2.0 header + `setup.py` `license='Apache License 2.0'`)* and [`oppia/oppia`](https://github.com/oppia/oppia) *(`core/domain/exp_services.py`, `174 203` B, full Apache-2.0 header)*.
+
+### 🆕 🟢 `ACTION QX` lands — inside `RH`, and it was not a nicety
+
+🟢 **p220 recommended folding `QX`'s sentence-based window into `RH` rather than running it. Folded, built and tested.** 🔴 **Without it the instrument is simply wrong:** a GNU notice in a source file is wrapped to ~80 columns inside a comment block, so
+
+```
+ * Foundation; either version 3.0 of the License, or (at your option) any later
+ * version.
+```
+
+🔴 **reads, line by line, as neither a family nor a bound** — *"Lesser General Public License"* is on l.`7`, *"version 3.0"* on l.`8`, and *"version."* alone on l.`9`. 🟡 **This pass's own first `bigbluebutton` fixture was cut at that wrap and the instrument correctly returned `unspecified`; both the wrapped and the truncated readings are kept as regression tests.** 🔵 **The file is also CRLF, so `\r` has to be stripped before anything else looks at it.**
+
+### 🆕 🟢 `ACTION RI` — the prescription table is now DATA, and it fires limb `1` at `9`
+
+🟢 **`RI` asked whether `2`+ ecosystems on these shelves are missing from `p220`'s hard-coded `10`. **`9` are**, by an offline grep of manifest filenames across the committed shelves:**
+
+| ecosystem | prescribed file | field | verdict | shelf mentions | confidence |
+|---|---|---|---|---|---|
+| 🆕 🟢 **CRAN** | `DESCRIPTION` | 🟢 **mandatory** | `PRESCRIBED-CHANNEL` | 53 | 🟢 **read first-hand in a prior pass** — `shmercer/writeAlizer`, `1 549` B |
+| 🆕 🟡 **Maven** | `pom.xml` | 🔴 optional | `PERMISSIVE-MANIFEST` | 54 | 🟢 named on the shelves as an ecosystem manifest |
+| 🆕 🟡 **RubyGems** | `*.gemspec` | 🔴 optional | `PERMISSIVE-MANIFEST` | 2 | 🟢 named on the shelves as an ecosystem manifest |
+| 🆕 🟡 **OpenACS** | `dotlrn.info` / `*.info` | 🔴 optional | `PERMISSIVE-MANIFEST` | 1 | 🟢 named on the shelves — 🔵 **and missed by this pass's own first list** |
+| 🆕 🔴 **SCORM packaging** | `imsmanifest.xml` | 🔴 **no licence field exists** | `NO-CHANNEL` | 8 | 🟡 named on the shelves |
+| 🆕 🟡 Cargo · Gradle · Drupal · Pub | `Cargo.toml` · `build.gradle` · `*.info.yml` · `pubspec.yaml` | 🔴 optional | `PERMISSIVE-MANIFEST` | 21 · 9 · 1 · 1 | 🟡 **filename mention only — not yet read first-hand on any row** |
+| 🔴 **Helm** | `Chart.yaml` | — | 🔴 **REJECTED** | 1 | 🔴 **a single weak hit, and it is a *run instruction*, not a manifest channel. Not published as an ecosystem** |
+
+🔵 **So the table is the artefact, not the function, exactly as `RI` predicted** — and `CRAN` is the find that matters: a **second `PRESCRIBED-CHANNEL`** ecosystem beyond Moodle/WordPress/ADL, with `53` mentions on these shelves and a mandatory licence field.
+
+### 🆕 🟢 `ACTION RJ` / `RM` — the identity gate and the drift both reproduce exactly
+
+🟢 **`registry.npmjs.org/canvas-lms-mcp`, re-read `2026-10-15`: `license: MIT`, `repository: git+https://github.com/bruchris/canvas-lms-mcp`, `dist-tags.latest 2.5.0`, `time.modified 2026-10-15T07:25:24.732Z`, `77` published versions.** 🔴 **`identity_ok()` still refuses it for the shelf row [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp), which declares the same npm `name` and carries no `license` key.** 🟢 **For [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — the owner the record actually names — the gate passes and the grant is usable.**
+
+🔴 **`RM`'s drift is CONFIRMED and unchanged:** the shelf says `v2.2.0` / `2026-10-10` / *"`172` tools"*; the registry says `2.5.0` / `2026-10-15` / *"`176` tools"*. 🔵 **`time.modified` comes free with the record, so a staleness check keyed on it is still the right hook — `ACTION RM` limb `1` needs `2`+ such rows and this pass measured only this one.**
+
+### 🆕 🟢 The `2` new agent rows and `1` new repository row
+
+| repo | licence | channels read | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 [`X5GON/x5moodle`](https://github.com/X5GON/x5moodle) | 🟢 **`BSD-2-Clause`** — `main/LICENSE`, `1 325` B, *"Copyright (c) 2018, University of Nantes"* | `LICENSE` read first-hand | **EMEA (France)** | Moodle activity plugin: AI-based tools delivering open educational resources during a course session, evolving through usage rather than user data. 🟡 **Older project (2018) — carried as a platform-integration row, not as a 2026 agent** |
+| 🆕 🟢 [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | 🔴 **`AGPL-3.0`** | 🔵 **already carried on these shelves** — re-surfaced by this pass's constrained shape | **Global** | An `edx-platform` plugin housing AI tools and helpers. 🔴 **Its own README says experimental, not for production** |
+| 🆕 🔴 `jmolpea/moodle-block_openaiagent` | 🔴 **NOT PUBLISHED AS DATA** | 🔴 **`404` from this session on `main` AND `master`, for `README.md` AND `version.php`** | — | 🔴 **Named by the constrained shape with a rich claim — `GPL-3.0-or-later`, copyright RSMAX Consulting SL, plus a site licence **key**, verified offline, with a 15-day evaluation period. Unverifiable here, so it gets named and nothing more** *(`ACTION RE`: query string in [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p221.tsv))* |
+
+🔵 **`jmolpea` is worth registering even unverified, because the shape is one this KB's vocabulary cannot express: an OSI reciprocal grant AND an offline-verified commercial key gate on the same plugin.** 🟢 **If it verifies, `OSI-GRANT-PLUS-KEY-GATE` joins `UNKNOWN-PLUS-TOS`.**
+
+### 🟢 `ACTION PD` · `Gap 241` · `Gap 242` — re-tested, seventeenth time, and the pattern goes `3` for `3` again
+
+🟢 **WORKING:** `raw.githubusercontent.com` `200` *(~`70` requests)* · `registry.npmjs.org` `200` · `pypi.org` `200` · `packagist.org` `200` · `proxy.golang.org` `200`. 🔴 **BLOCKED:** `api.github.com` `403` · `moodle.org` `000` · `unesco.org` `ENOTFOUND`.
+
+🔵 **`17` for `17`: every channel that works is a PACKAGE channel; every channel that fails is a WEB page.** 🔴 **`moodle.org` still `000`, so `ACTION RA`'s direct route stays shut; `unesco.org` still `ENOTFOUND`, so `ACTION RL` cannot be run from this session at all.**
+
 ## Pass 220 — 2026-10-15 — `ACTION RG` FIRES ON ITS COUNT AND ITS CONCLUSION IS REFUTED: THE UNIT OF A LICENCE IS THE **FILE**, AND THIS KB HAS BEEN READING REPOSITORIES
 
 🔵 **`4` new agent rows** *(the most in `5` passes)*, **`1` new repository row, `0` new platform rows.** 🟢 **`ACTION RG`, `RB`, `RF` and `RD` all discharged. `2` repository-level grants CONTRADICTED by the files that actually ship, `1` false grant PREVENTED by an identity gate, `2` new working channels, and a new vocabulary split that cuts `CLAIMED-IN-PROSE` in two.**

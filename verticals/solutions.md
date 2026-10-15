@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 221 — 2026-10-15 — THE PLATFORM ROWS ARE THE ONES WHERE AN UNBOUNDED `GPL` CELL COSTS MONEY, BECAUSE A PLATFORM IS WHAT YOU EXTEND
+
+🔵 **`0` new platform rows.** 🔴 **But three carried platform rows changed state on a file-level read, and one of them changes what can be built on top of it.**
+
+🔵 **Evidence:** [`rh-file-level-range`](../evidence/rh-file-level-range.2026-10-15-p221.tsv) · **Instrument:** [`p221-licence-version-range`](../compose/code/p221-licence-version-range/README.md)
+
+### 🆕 🔴 `P221-D` — `themeum/tutor`: three channels, three answers, on a platform with `129` stars-tier adoption
+
+🔴 **Tutor LMS is a WordPress LMS plugin — the shape a studio extends by writing more PHP inside the same tree. Read `2026-10-15`:**
+
+| channel | reading, verbatim | grant |
+|---|---|---|
+| `master/LICENSE` *(`35 149` B)* | the GPLv3 text | 🟡 `GPL-3.0`, unbounded |
+| 🆕 🔴 `master/tutor.php` l.`12` *(`1 484` B)* | **`* License: GPLv2 or later`** | 🔴 **`GPL-2.0-or-later`** |
+| 🆕 🔴 `master/readme.txt` l.`9`–`10` *(`42 450` B)* | **`License: GPLv3`** / `License URI: https://www.gnu.org/licenses/gpl-3.0.html` | 🔴 **`GPL-3.0`, unbounded** |
+
+🔴 **`tutor.php` is the plugin header WordPress itself parses, and `readme.txt` is the file wordpress.org publishes from. Both are `PRESCRIBED-CHANNEL` files, both are mandatory, and they disagree with each other.** 🔵 **`GPLv2 or later` and `GPLv3` are not the same grant: the first permits distribution under v2, the second does not. A derivative work built on this platform inherits whichever one actually governs, and the repository does not say which.**
+
+🟢 **Corrected on the shelf to `GRANT-CONFLICT` with all three channels recorded. 🔴 This is not a question a script can close — it goes to counsel with the three readings attached.**
+
+### 🆕 🟡 `P221-E` — `gocodebox/lifterlms`: the control that exonerates this KB
+
+🟡 **The sibling WordPress LMS platform, read the same way, comes back consistent and **unbounded at source**:**
+
+| channel | reading | grant |
+|---|---|---|
+| `LICENSE` *(`35 141` B, `trunk`, `6ff84cf`)* | GPLv3 text | `GPL-3.0` |
+| 🆕 `master/lifterlms.php` l.`18`–`19` *(`1 844` B)* | `* License: GPLv3` / `* License URI: https://www.gnu.org/licenses/gpl-3.0.html` | `GPL-3.0`, unbounded |
+
+🟢 **`BOTH-UNSPECIFIED`, and that verdict matters: the shelf cell is a faithful copy of an ambiguous source. 🔵 The right record is `UNSPECIFIED-AT-SOURCE` plus a question for the maintainer — NOT a KB defect, and not something to "fix" by inventing a bound.**
+
+### 🆕 🟡 `P221-F` — `h5p/h5p-php-library`: the platform whose own code validates *content* licences and declares none for itself
+
+🔴 **`master/h5p.classes.php`, `196 920` B — the largest file read in this pass or the last — carries no licence notice.** 🟢 **What it does carry is a licence *validator* for learning objects:**
+
+```php
+'license' => '/^(CC BY|CC BY-SA|CC BY-ND|CC BY-NC|CC BY-NC-SA|CC BY-NC-ND|CC0 1\.0|GNU GPL|PD|ODC PDDL|CC PDM|U|C)$/',
+'licenseVersion' => '/^(1\.0|2\.0|2\.5|3\.0|4\.0)$/',
+'licenseExtras' => '/^.{1,5000}$/s',
+```
+
+🔵 **Recorded because it is the sector's own confirmation of this pass's headline: H5P models a content licence as a **family plus a separate `licenseVersion` field**, because it knows a family alone is not a grant. 🔴 Its own code file carries neither.** 🟢 **The platform's cell stays `GPL-3.0` from `LICENSE.txt` *(`35 146` B)*, now marked `FILE-SILENT`.**
+
+### 🆕 🟡 `P221-G` — the platform-extension rows re-read, and the `-or-later` that was always there
+
+🟢 **Four Moodle extension rows and `bigbluebutton` all resolve to an `-or-later` grant their shelf cell did not carry:**
+
+| platform row | cell was | file says | now |
+|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) *(web conferencing, the sector's default)* | `LGPL-3.0` | `MeetingService.java` *(`71 514` B)*: *"either version 3.0 of the License, or (at your option) any later version"* | 🟢 **`LGPL-3.0-or-later`** |
+| [`willianmano/moodle-theme_moove`](https://github.com/willianmano/moodle-theme_moove) | `GPL-3.0` | `version.php` *(`1 572` B)* | 🟢 **`GPL-3.0-or-later`** |
+| [`valentineus/moodle-webhooks`](https://github.com/valentineus/moodle-webhooks) | `GPL-3.0` | `version.php` *(`1 135` B)* | 🟢 **`GPL-3.0-or-later`** |
+| [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | `GPL-3.0` | `version.php` *(`1 122` B)* | 🟢 **`GPL-3.0-or-later`** |
+| [`moodlehq/moodle-enrol_oneroster`](https://github.com/moodlehq/moodle-enrol_oneroster) | `GPL-3.0` | `version.php` *(`1 249` B)* | 🟢 **`GPL-3.0-or-later`** |
+
+🔵 **`-or-later` is the permissive direction, so none of these is a new risk. The point is the opposite: these cells were *understating* the grant, and a studio reading `GPL-3.0` would have assumed it could not carry the component forward.**
+
+### 🆕 🔴 `P221-H` — and the one platform-adjacent row where the bound is a hard stop
+
+🔴 **[`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) is `GPL-2.0-only` — *"under version 2 of the License (non-upgradable)"* in `src/Message/LtiMessage.php` *(`3 800` B)*, and `"license": "GPL-2.0-only"` in `composer.json`.**
+
+🔴 **Consequence, stated for an SOW: this LTI 1.3 library may NOT be combined with a GPLv3 platform. Moodle is `GPL-3.0-or-later`. So the one LTI library on these shelves with the strongest institutional pedigree *(Open Assessment Technologies, the TAO people)* is the one that cannot go into a Moodle build** — and the shelf published it as a bare `GPL-2.0`, which reads as permissive-enough to anyone who does not know the `-only` / `-or-later` distinction.
+
+🟢 **For a Moodle engagement the substitutes already on these shelves:** [`celtic-project/LTI-PHP`](https://github.com/celtic-project/LTI-PHP) *(`LGPL-3.0`, `BOTH-UNSPECIFIED` — ask first)* and [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) *(`Apache-2.0` in `composer.json`, `FILE-SILENT`)*. 🔵 **For an Open edX engagement the question does not arise the same way — `edx-platform` is `AGPL-3.0`, which is also v3.**
+
 ## Pass 220 — 2026-10-15 — THE OFFLINE STACK AND THE MOODLE AI LAYER: `1` NEW PLATFORM ROW AND `4` CUSTOMISABLE PLUGINS ON TOP OF ONE ALREADY HERE
 
 🔵 **`1` new platform row.** 🟢 **And the Moodle layer on this shelf stops being *"Moodle, plus write your own AI"*: there is now a verified plugin category to customise instead of a greenfield build.**
