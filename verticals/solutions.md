@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — THE OFFLINE STACK AND THE MOODLE AI LAYER: `1` NEW PLATFORM ROW AND `4` CUSTOMISABLE PLUGINS ON TOP OF ONE ALREADY HERE
+
+🔵 **`1` new platform row.** 🟢 **And the Moodle layer on this shelf stops being *"Moodle, plus write your own AI"*: there is now a verified plugin category to customise instead of a greenfield build.**
+
+### 🆕 🟢 New platform row — the offline-first education server
+
+| platform | licence | what it is | what a studio customises |
+|---|---|---|---|
+| 🆕 🟢 **Project NOMAD** — [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **`Apache-2.0`** *(`LICENSE` `10 779` B + `package.json`; `v1.35.1`)* | A Docker-orchestrating **Command Center** UI + API that installs and manages a bundle: **Kolibri** *(Khan Academy courses with progress tracking)*, **Kiwix** *(offline Wikipedia, medical references, ebooks)*, **Ollama** or any OpenAI-compatible endpoint *(LM Studio, `llama.cpp`)* for AI chat over an uploaded document base, ProtoMaps, CyberChef, FlatNotes | 🟢 The *"Supply Depot"* catalogue takes **arbitrary custom containers**, so a studio's own service drops in beside the bundled ones without forking NOMAD. 🟢 Content curation *(ZIM selection, Kolibri channels)* is configuration, not code |
+
+🔵 **Where it belongs on this shelf:** every other platform row here — Moodle, Canvas, Open edX, Sakai, OpenOLAT — assumes a reachable server and a reachable model. 🟢 **NOMAD is the first that assumes neither, and it is `Apache-2.0`, so it can be rebranded and resold.** 🔴 **Constraints for a proposal: Debian-based hosts only *(Ubuntu `26.04` LTS recommended, `24.04` LTS and Debian `12` supported; Windows via WSL2)*, ~`5` GB disk and <`1` GB RAM for the core before any content, and its headline install is a `curl | sudo bash`. 🟢 Use the documented Docker-Compose route in an SOW instead.**
+
+🟢 **Two of the bundled upstreams were read first-hand this pass and are both `MIT`: [`learningequality/kolibri`](https://github.com/learningequality/kolibri) and [`ollama/ollama`](https://github.com/ollama/ollama).** 🟡 **[`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools), [`kiwix/libkiwix`](https://github.com/kiwix/libkiwix) and [`protomaps/basemaps`](https://github.com/protomaps/basemaps) have NO root `LICENSE` — three more `PERMISSIVE-MANIFEST` rows, unresolved.** 🔵 **NOMAD orchestrates rather than vendors them, so for a resale engagement the licence question is per-container, not per-NOMAD. Registered as part of `ACTION RH`.**
+
+### 🆕 🟢 The Moodle AI plugin layer — customise, do not rebuild
+
+🟢 **Moodle has been the best-governed platform row on this shelf for `200`+ passes, and the gap was always *"and then you build the AI part yourself."* Four verified plugins close it:**
+
+| plugin | licence | maturity | the build it replaces |
+|---|---|---|---|
+| 🆕 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) *(SOLA)* | 🟢 `GPL-3.0-or-later` | 🟢 **`MATURITY_STABLE`, `release 7.8.9`, in production at Saylor** | an AI learning coach — **start here**, it is the only row of the four with a production deployment behind it |
+| 🆕 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) + [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 `GPL-3.0-or-later` *(read from `version.php` this pass — these rows were `CLAIMED-IN-PROSE` until now)* | 🟢 `MATURITY_STABLE`, `release 5.1.1` / `3.3` | the **provider/quota layer**: API connections to AI services, per-role request limits, usage accounting. 🔵 This is the piece studios keep rewriting |
+| 🆕 🟢 [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 `GPL-3.0-or-later` | 🟢 `MATURITY_STABLE`, `release 4.0.2` | a course-level chat block |
+| 🆕 🟢 [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` | 🟢 `MATURITY_STABLE` | question generation from course text |
+| 🆕 🔴 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 **`MIT` at root, `GPL-3.0-or-later` in `local/aichat/version.php`** | 🔴 `MATURITY_ALPHA`, `release 0.1.0` | an Azure-OpenAI-backed widget + RAG over course content. 🔴 **Do not put it in an SOW until the grant question is answered by its holder** |
+
+🔴 **And the counter-measure sits in the same tree.** [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) *(p219, `GPL-3.0-or-later`)* exists to **block** exactly these integrations when they act for a student. 🟢 **A Moodle AI proposal that does not mention it is incomplete: the institution may install both, and `Detect only` mode means they can measure your traffic for a term before deciding.**
+
+### 🆕 🔴 A platform-adjacent correction a studio must not inherit
+
+🔴 **[`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) is the standard route on this shelf for getting xAPI statements out of legacy SCORM courses, and this KB has carried it as `Apache-2.0`.** 🔴 **The files it tells you to drop into **every SCO** carry a custom ADL grant with a **non-disparagement clause** and **CC BY-SA 3.0** — share-alike, on every course package delivered.** 🔵 **The `Apache-2.0` text is real and sits in the `README`; it is not what travels with the bytes. Full reading in [`agents/top.md`](../agents/top.md) `T220-1`.**
+
+### 🆕 🟡 The vendor-terms column this shelf has never had
+
+🟢 **`ACTION RB`: `19` rows across the `8` shelves have a line naming a proprietary platform — Blackboard Learn, PowerSchool, Google Classroom, Brightspace, Instructure, Clever, Anthology, Workday.** 🔴 **For a closed-API integration the licence cell answers the wrong question: what governs is the vendor's API terms of service, plus whatever tenancy agreement the institution signed. This shelf records that for no row.** 🔵 **`UNKNOWN-PLUS-TOS` enters the vocabulary; the field itself is `ACTION RK`.**
+
 ## Pass 219 — 2026-10-15 — `0` NEW PLATFORM ROWS, AND A DISTRIBUTION CHANNEL FOR THE MOODLE TIER THAT THIS KB HAS NEVER READ
 
 🔵 **`0` new platform rows.** 🟢 **`ACTION QV` — registered here at `T218-6` — is DISCHARGED, and the answer reorders `ACTION PH` for a different reason than the one predicted.**

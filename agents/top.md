@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — `ACTION RG` FIRES ON ITS COUNT AND ITS CONCLUSION IS REFUTED: THE UNIT OF A LICENCE IS THE **FILE**, AND THIS KB HAS BEEN READING REPOSITORIES
+
+🔵 **`4` new agent rows** *(the most in `5` passes)*, **`1` new repository row, `0` new platform rows.** 🟢 **`ACTION RG`, `RB`, `RF` and `RD` all discharged. `2` repository-level grants CONTRADICTED by the files that actually ship, `1` false grant PREVENTED by an identity gate, `2` new working channels, and a new vocabulary split that cuts `CLAIMED-IN-PROSE` in two.**
+
+🔵 **Evidence:** [`rg-prescription-test`](../evidence/rg-prescription-test.2026-10-15-p220.tsv) · [`rb-proprietary-api-rows`](../evidence/rb-proprietary-api-rows.2026-10-15-p220.tsv) · [`rd-constrained-trending`](../evidence/rd-constrained-trending.2026-10-15-p220.tsv) · [`rf-unesco-observatory`](../evidence/rf-unesco-observatory.2026-10-15-p220.tsv) · [`p220-channel-reachability`](../evidence/p220-channel-reachability.2026-10-15-p220.tsv) · **Instrument:** [`p220-file-level-grant`](../compose/code/p220-file-level-grant/README.md)
+
+### 🆕 🔴 `T220-1` — the row p218 called the CLEANEST of the `11` is the most restrictive on the shelf
+
+🔴 **[`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) was classified `PROSE-CLAIM-BARE` with the note *"yes — full Apache-2.0 boilerplate quoted in README"*. The boilerplate is there, verbatim, at `README.md` l.`146`. 🔴 And it is not what governs the files you are told to ship.**
+
+🟢 **`SCORM2004/APIWrapper.js`, `19 594` B, read `2026-10-15`, lines `1`–`40`:**
+
+```
+/****************************************************************************
+SCORM_2004_APIwrapper.js
+(c) 2000, 2011 Advanced Distributed Learning (ADL). Some Rights Reserved.
+*****************************************************************************
+Advanced Distributed Learning ("ADL") grants you ("Licensee") a non-exclusive,
+royalty free, license to use and redistribute this software in source and binary
+code form, provided that i) this copyright notice and license appear on all
+copies of the software; and ii) Licensee does not utilize the software in a
+manner which is disparaging to ADL.
+*****************************************************************************
+*SCORM_2004_APIwrapper.js code is licensed under the Creative Commons
+Attribution-ShareAlike 3.0 Unported License.
+```
+
+| what | says | family |
+|---|---|---|
+| `README.md` `## License` | **Apache-2.0**, full boilerplate, *"Copyright ©2016 Advanced Distributed Learning"* | 🟢 permissive |
+| 🆕 🔴 `SCORM2004/APIWrapper.js` *(`19 594` B)* | a custom ADL grant with a **non-disparagement condition**, **plus CC BY-SA 3.0** | 🔴 **reciprocal, and not OSI-approved** |
+| 🆕 🔴 `SCORM1.2/APIWrapper.js` *(`17 555` B)* | identical header | 🔴 same |
+| 🆕 🟡 `SCORMToXAPIFunctions.js` *(`44 324` B)* | **no notice at all** — and it is the file this project actually contributes | 🟡 silent |
+
+🔴 **Three different answers in one repository, and the one a studio redistributes is the file.** This project's own instructions are *"replace the appropriate `APIWrapper.js` file … with the file included in this project"* and *"add the following code in the `<head>` sections of **each SCO** in your course"*. 🔴 **Every SCO in a delivered course therefore carries a CC BY-SA 3.0 header and a clause forbidding use *"in a manner which is disparaging to ADL"*. Neither term is in Apache-2.0, and a non-disparagement condition is a conduct restriction no OSI licence contains.**
+
+🔵 **For an SOW this is the difference between *"permissive, ship it"* and *"share-alike on every course package you deliver, plus a conduct clause counsel has to read."* The shelf said the first. 🟢 Corrected to `FILE-NARROWER` below.**
+
+### 🆕 🔴 `T220-2` — `MIT` at the repository, `GPL-3.0-or-later` in the file, in a `microsoft/` org repo
+
+🟢 **[`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) is new to these shelves, arrived through `ACTION RD`'s constrained shape, and it has the same defect in a different ecosystem:**
+
+| channel | reading, `2026-10-15` |
+|---|---|
+| root `LICENSE` *(`1 084` B)* | 🟢 **`MIT License` / `Copyright (c) 2026 Moodle AI Chat Contributors`** |
+| `README.md` l.`3`, l.`28` | 🟢 badge **`License: MIT`**, table row **`License`** → **`MIT`** |
+| 🆕 🔴 `local/aichat/version.php` | 🔴 the full Moodle GPL header *("either version 3 of the License, or (at your option) any later version")* and **`@license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later`** |
+
+🔴 **A Moodle plugin is edited and redistributed as PHP files inside a Moodle tree. The file a studio touches says GPLv3-or-later; the repository says MIT.** 🔵 **MIT code can legitimately be distributed inside a GPL project, so this is not a licensing impossibility — it is an unresolved question about which grant a downstream user received, and it cannot be answered from these channels.**
+
+🟡 **Two further facts the same file gives up:** `@copyright 2026 Moodle AI Chat Contributors` — the holder is not stated as Microsoft anywhere in the repo; and `$plugin->version = 2024010105`, a `YYYYMMDDXX` stamp reading **1 January 2024** on a plugin whose copyright line says `2026`. 🔵 **Moodle compares that integer to decide upgrades, so any fork stamped with a real date outranks the original and this build cannot be upgraded *to* from a newer one.**
+
+### 🆕 🟢 The `4` new agent rows — all from `ACTION RD`'s constrained shape, all read first-hand
+
+| repo | licence | region | what it is | verified `2026-10-15` |
+|---|---|---|---|---|
+| 🆕 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 **`GPL-3.0-or-later`** | North America | **SOLA — Saylor Online Learning Assistant.** An AI learning-coach plugin for Moodle, running in production on Saylor's Learn and Degrees sites | 🟢 **`2` channels:** `LICENSE` `35 149` B · `version.php` `@license … GNU GPL v3 or later`. 🟢 `release 7.8.9`, `version 2026101500` *(stamped **today**)*, `MATURITY_STABLE`, `requires 2024100700` *(Moodle 4.5+)*, `supported = [405, 502]` |
+| 🆕 🔴 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 **`MIT` vs `GPL-3.0-or-later` — `FILE-NARROWER`, see `T220-2`** | Global | `local_aichat` — a floating chat widget on course pages, Azure OpenAI behind a retrieval pipeline over course content, shipped with a `theme_myuni` companion | 🔴 **`2` channels that DISAGREE.** 🟡 `release 0.1.0`, **`MATURITY_ALPHA`**, `requires 2023042400` *(Moodle 4.2+)* |
+| 🆕 🟢 [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 **`GPL-3.0-or-later`** | Global | An AI chat block for Moodle — the longest-standing of the category | 🟢 **`2` channels:** `LICENSE` `35 149` B · `version.php` `@license`. `release 4.0.2`, `version 2026051900`, `MATURITY_STABLE`, `requires 2024100700` |
+| 🆕 🟢 [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 **`GPL-3.0-or-later`** | EMEA | Auto-generation of Moodle questions from course text | 🟢 **`1` channel, and that is the point: root `LICENSE` → `404`, `version.php` `@license` answers.** `release 1.0`, `version 202311230001`, `MATURITY_STABLE` |
+
+🔵 **A fifth plugin, `industria-elearning/moodle-local_forum_ai` *(slug from a search surface — 🔴 **unresolvable here: `README.md` and `version.php` both `404` across `HEAD`, `main`, `master`, `develop`, `v1.0.6` and `1.0.6`, so this session cannot confirm the repository exists**)*, is NOT carried: `LICENSE`, `version.php` and `composer.json` are all `404` at root, so nothing about it was read first-hand. 🔴 And it will not function without the proprietary, separately licensed *"DataCurso AI Provider"* plugin — the second `DataCurso` dependency these shelves have hit *(p219 found the first on `local_assign_ai`)*. 🔵 `ACTION RK`.**
+
+### 🆕 🟢 `ACTION RG`'s verdict: limb `1` fires at `4` of `11`, and the conclusion it was registered to prove is REFUTED
+
+| the `11` `CLAIMED-IN-PROSE` rows | ecosystem | prescribed channel | answered? |
+|---|---|---|---|
+| [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | Moodle | `version.php` | 🟢 **`GPL-3.0-or-later`** · `release 2.1.1` |
+| [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | Moodle | `version.php` | 🟢 **`GPL-3.0-or-later`** · `release 3.3` |
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | Moodle | `version.php` | 🟢 **`GPL-3.0-or-later`** · `release 5.1.1` |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | ADL/SCORM | source-file header | 🔴 **answered, and it CONTRADICTS the `README` — `T220-1`** |
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | npm | `package.json` *(`535` B)* | 🔴 **no `license` key** |
+| [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) | npm | `package.json` *(`245` B)* | 🔴 **no `license` key, `"private": true`** |
+| [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) | npm | `package.json` *(`1 078` B)* | 🔴 **no `license` key, `"private": true`** |
+| [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) | PyPI | `pyproject.toml` *(`1 453` B)* | 🔴 **no `license`; `pypi.org/pypi/ec-issuer/json` → `404`, never published** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | PyPI / HF | — | 🔴 **no `pyproject`/`setup.py`/`setup.cfg`; `huggingface.co` → `000` here** |
+| [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | Go | `go.mod` | 🔴 **Go has no licence field — `NO-CHANNEL`. See `T220-4`** |
+| [`mabdulre9/electrical-engineering`](https://github.com/mabdulre9/electrical-engineering) | *(none)* | — | 🔴 **a curated link list; no manifest of any kind** |
+
+🟢 **Control, and it matters: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `NOTICE` were probed at root for all `8` non-Moodle rows — `40` requests, `40` × `404`.** 🔵 **The `CLAIMED-IN-PROSE` classification was correct. The defect was never a missed root file, which is what p215's *"`ABSENT` meant not-at-root"* finding might have predicted.**
+
+🔴 **So `RG`'s registered limb `1` reads *"`4`+ answer → `CLAIMED-IN-PROSE` is not a state but an unread channel, and `ACTION PH`'s queue is mostly a reading job."* The count fires. The second clause is wrong.** 🟢 **The `4` that answer are exactly the rows whose ecosystem *mandates* a licence declaration inside a file that *must* exist. The `7` that do not are npm, PyPI, Go and a link list — where the channel was read, is readable, and is empty by design.**
+
+🟢 **The rule, and it is now ahead of the sweep:** a channel is a **licence** channel only when the ecosystem makes the field **mandatory in a mandatory file**. Everywhere else it is a place a licence is *permitted* to sit, which must not be counted as coverage. 🔵 **Two new states: `PRESCRIBED-CHANNEL` and `PERMISSIVE-MANIFEST`.**
+
+🔴 **And `ACTION PH` is NOT mostly cleared by this. `7` of `11` genuinely need a human — more than the `4` it would have wrongly asked.**
+
+### 🆕 🟢 `T220-3` — the registry answered, and reading it without an identity check would have MANUFACTURED a grant
+
+🟢 **`registry.npmjs.org` → `200`, new in `220` passes. For the package name `canvas-lms-mcp` it returns `"license": "MIT"`.** 🔴 **And its `"repository"` is `git+https://github.com/bruchris/canvas-lms-mcp.git` — not [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp), the shelf row whose `package.json` declares that same npm `"name"` and carries no `license` key.**
+
+| | shelf row `CreveXTech/canvas-lms-mcp` | npm `canvas-lms-mcp` |
+|---|---|---|
+| version | `2.0.0` | **`2.5.0`**, `77` published versions |
+| tools | **`34`**, every one a `GET`, all `readOnlyHint` | **`176`**, including grade writes |
+| licence | 🔴 **none declared anywhere** | 🟢 `MIT` |
+| holder | — | `Christian Bru` |
+
+🔴 **Two different projects sharing one npm name, and the name belongs to the other one.** 🟢 **`identity_ok()` refuses the grant: a registry record describes a PACKAGE, and its licence reaches a repository row only when the record's own `repository` points back at that slug.** 🔵 **This is the propagation failure inverted — not a correct grant lost, a stranger's grant invented. The first of that direction in `220` passes, and the cheaper one to catch.**
+
+🔵 **Carried-row update, same reading:** this KB publishes [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) at l.`8824` as `2.2.0` / `2026-10-10` and at l.`9002` as *"`172 tools`"*. 🔴 **npm now says `latest = 2.5.0`, `modified 2026-10-15T07:25:24Z`, `"176 tools"` — three minor versions in five days. A cell five days old is already stale on this row.**
+
+### 🆕 🔴 `T220-4` — [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) is uninstallable by either Go path, and the only supported route is `curl | sh`
+
+| probe | result |
+|---|---|
+| `go.mod` | 🔴 **`module github.com/tuanha/vgu-mcp`** — not the repository owner |
+| `cmd/vgu-mcp/main.go` | imports `github.com/tuanha/vgu-mcp/internal/{config,moodle,tools}` |
+| `proxy.golang.org/github.com/haanhtuandev/vgu-mcp/@v/list` | 🟢 `200` — `v0.1.0`–`v0.1.3`; `v0.1.3` tagged `2026-09-03`, hash `11873cf` |
+| `proxy.golang.org/…/@v/v0.1.3.mod` | 🟢 `200`, **and the body declares `module github.com/tuanha/vgu-mcp`** |
+| `proxy.golang.org/github.com/tuanha/vgu-mcp/@v/list` | 🔴 `404` — *"could not read Username for 'https://github.com'"*: the declared path does not exist publicly |
+| `pkg.go.dev/github.com/haanhtuandev/vgu-mcp?tab=licenses` | 🔴 `404` — Go's own licence detector has no record |
+
+🔴 **A Go module whose `go.mod` path differs from where it is hosted is rejected by the toolchain under the hosted path and unresolvable under the declared one. Which is why the `README` installs it by piping `scripts/install.sh` *(`4 683` B)* from `raw.githubusercontent.com` into `sh`, as root-adjacent, from a repository with no `LICENSE` file.** 🔵 **A studio cannot vendor this row, cannot pin it, and cannot tell a client what licence it is under. `MIT` appears only in a shields.io badge pointing at a `LICENSE` that `404`s.**
+
+### 🆕 🟡 `ACTION RB` closes on limb `1` at `19` rows — `UNKNOWN-PLUS-TOS` enters the vocabulary
+
+🟢 **`19` rows across the shelves have a shelf line that names a proprietary platform; every one of the `8` shelves fires.** Threshold was `8`+. 🔵 **Full list in [`rb-proprietary-api-rows`](../evidence/rb-proprietary-api-rows.2026-10-15-p220.tsv).** 🔴 **For the `3` Blackboard Learn rows among p219's `47`, the licence cell is nearly beside the point: what governs an integration against a closed vendor API is the API terms of service, and this KB records those for no row on any shelf.**
+
+🟡 **The grep also shows the owner-case duplicate pair `RohanMuppa/brightspace-mcp-server` and `rohanmuppa/brightspace-mcp-server` STILL live on these shelves** — one of the two pairs step `3` of the published `94`→`69`→`68`→`67` ladder exists to collapse. 🔵 **The ladder collapses them in its own arithmetic and the shelves still carry both spellings.**
+
 ## Pass 219 — 2026-10-15 — `ACTION QV` FIRES, AND ITS PREMISE INVERTS: A RECIPROCAL UPSTREAM IS A **CHANNEL HINT** BEFORE IT IS A RISK
 
 🔵 **`1` new agent row** *(the first in `4` passes)*, **`0` new repository rows, `0` new platform rows.** 🟢 **`1` grant RECOVERED on a channel this KB had never read on this row, `1` published cell CONTRADICTED, `1` `3`-pass conflict RESOLVED, `1` new state class, and `2` actions closed — `QV` and `QW`.**

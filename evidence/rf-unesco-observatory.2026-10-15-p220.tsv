@@ -1,0 +1,18 @@
+# p220 - ACTION RF: find a primary release for the claimed 2026 LATAM AI-in-education
+# observatory, which p219 found in exactly 1 opinion column and 0 shelf cells.
+# Verdict: limb 1 FIRES on substance - the instrument is REAL and the 33-ministry figure is
+# corroborated. 🔴 Qualified: unesco.org is ENOTFOUND from this session, so no UNESCO page was
+# read first-hand. 4 independent surfaces agree on date, venue and ministry count.
+field	value	source_class
+name	Observatory on Artificial Intelligence in Education for Latin America and the Caribbean	UNESCO page title (search-surfaced, not fetched)
+launch_date	14 April 2026	agreed by all 4 surfaces
+venue	Santiago, Chile - ECLAC headquarters	agreed
+occasion	2026 Forum of the Countries of Latin America and the Caribbean on Sustainable Development	agreed
+ministries	33 education ministries of the region	agreed; no published list of which formally joined at launch
+also_convenes	universities, research centres, teachers, strategic partners	UNESCO framing
+partners	CAF (Development Bank of Latin America and the Caribbean); CENIA (Chile's National Centre for AI); Cetic.br / NIC.br (Brazil); ECLAC	UNESCO framing
+tec_de_monterrey	collaboration agreement signed with UNESCO Santiago, March 2026, Tec contributing USD 90 000	tecscience.tec.mx
+positioning	described as the first regional platform on this topic anchored in the UN system	UNESCO framing - a claim, recorded as such
+mexico_pilot	co-construction of centres of excellence with CONALEP and DGETI	search-surfaced, single surface, NOT corroborated
+urls	unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean ; unesco.org/en/articles/observatory-artificial-intelligence-education-latin-america-and-caribbean ; dig.watch/updates/unesco-latam-caribbean-ai-observatory ; cadeproject.org/updates/unesco-to-launch-ai-in-education-observatory-for-latin-america-and-the-caribbean ; tecscience.tec.mx/en/education-and-humanism/unesco-and-tec-observatory-artificial-intelligence	4 hosts, 0 fetched (unesco.org ENOTFOUND)
+p219_claim_status	p219 recorded "Regional Observatory of Educational AI (33 ministries, LATAM)" as single-source and unverified. The 33 figure and the LATAM scope are now CORROBORATED; the name is slightly different and the correct one is recorded above

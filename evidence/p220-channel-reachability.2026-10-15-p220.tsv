@@ -1,0 +1,26 @@
+# p220 - ACTION PD / Gap 241 / Gap 242, 16th consecutive test.
+host_or_url	http	class	note
+raw.githubusercontent.com	200	WORKING	~130 requests served this pass; still the only general-purpose read channel
+registry.npmjs.org	200	WORKING-NEW	First use in 220 passes. Answers license + repository + version history. REQUIRES the T220-3 identity gate before its grant may be attributed to a repo row
+proxy.golang.org	200	WORKING-NEW	@v/list and @v/<v>.mod and .info all served. Exposes the declared module path, which is how T220-4 was found
+pypi.org	404	REACHABLE	Host resolves; /pypi/ec-issuer/json 404 because the package was never published. A 404 here is information, not a block
+packagist.org	200	WORKING	p219's reading REPRODUCES. This pass's first probe returned 000 against a malformed list.json query - an instrument error, not a channel failure. Recorded so the next pass does not re-derive it
+pkg.go.dev	404	REACHABLE	github.com/haanhtuandev/vgu-mcp?tab=licenses -> 404. Go's own licence detector has no record, consistent with the repo having no LICENSE file
+api.github.com	403	BLOCKED	unchanged, 16 tests
+github.com (HTML)	403	BLOCKED	unchanged
+huggingface.co	000	BLOCKED-NEW	/api/datasets/... times out. So the HF card channel named for eth-lre/mathtutorbench cannot be read from this session
+unesco.org	ENOTFOUND	BLOCKED-NEW	www.unesco.org does not resolve. ACTION RF's primary source is therefore corroborated across 4 secondary surfaces, NOT read first-hand
+moodle.org	000	BLOCKED	confirms p219. The plugin directory stays unreadable, so ACTION RA still cannot be closed directly
+arxiv.org / export.arxiv.org / publications.iadb.org	ENOTFOUND	BLOCKED	unchanged
+# The pattern holds for a 16th time and is now 3 for 3 on its prediction: every channel that
+# worked this pass is a PACKAGE channel (raw file hosting, npm, Go proxy, Packagist, PyPI).
+# Every channel that failed is a WEB channel. Prefer a manifest to a page - not as taste.
+# Late additions, same pass, recorded after the shelf sections were drafted:
+learningequality.org	000	BLOCKED-NEW	product site unreachable; the repo github.com/learningequality/kolibri reads fine over raw (MIT)
+kiwix.org	000	BLOCKED-NEW	product site unreachable; kiwix/kiwix-tools and kiwix/libkiwix read over raw, neither has a root LICENSE
+ollama.com	000	BLOCKED-NEW	product site unreachable; ollama/ollama reads over raw (MIT)
+protomaps.com	000	BLOCKED-NEW	product site unreachable; protomaps/basemaps reads over raw, no root LICENSE
+# This is the 16-test pattern a 4th, 5th, 6th and 7th time in one pass: the PRODUCT SITE of
+# every bundled upstream is unreachable and the PACKAGE/repo channel for each one is not.
+# Consequence applied to the shelves: every product-site link drafted for the Project-NOMAD
+# rows was replaced with the repository link that was actually read.

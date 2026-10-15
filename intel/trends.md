@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — THE TREND THAT MATTERS IS A MEASUREMENT ONE: A LICENCE IS A PROPERTY OF A **FILE**, AND THE WHOLE SECTOR RECORDS IT PER REPOSITORY
+
+🔵 **Four trends this pass, two of them about the sector and two about how the sector is governed.**
+
+### 🆕 🔴 `1` — Repository-level licence metadata is failing, and education software is where it fails hardest
+
+🔴 **Two of the first two rows this pass read file-by-file declare one licence at the repository and a narrower one in the file that ships. Both are in education software, and both are the kind of code that is redistributed as files rather than as a repository.**
+
+| row | repository | the file a studio redistributes |
+|---|---|---|
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `Apache-2.0` | 🔴 custom ADL **non-disparagement** grant **+ CC BY-SA 3.0**, in every `APIWrapper.js` dropped into every SCO |
+| [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | `MIT` | 🔴 **`@license … GNU GPL v3 or later`** in `local/aichat/version.php` |
+
+🔵 **This is not a coincidence of two repositories; it is structural to this sector.** 🟢 **SCORM packages, Moodle plugins, WordPress plugins, LTI tools and course content are all distributed by dropping files into someone else's tree.** 🔴 **Every automated licence surface in common use — GitHub's own detector, `pkg.go.dev`, SBOM generators, and `220` passes of this KB — reports one licence per repository. For the dominant distribution shape in education software, that unit is wrong.** 🟢 **The shelf-level consequence: `agents/top.md` carried *"Apache-2.0, cleanest of the `11`"* on a row whose delivered bytes are share-alike.**
+
+### 🆕 🟢 `2` — The Moodle AI plugin category became real this quarter, and the provider/quota layer is the valuable part
+
+🟢 **`5` named plugins, `4` verified first-hand, and the release dates cluster in `2026`:** `saylordotorg/moodle-local_ai_course_assistant` `7.8.9` *(`version 2026101500` — stamped today, `MATURITY_STABLE`, in production at Saylor)* · `bycs-lp/moodle-local_ai_manager` `5.1.1` · `bycs-lp/moodle-block_ai_chat` `3.3` · `Limekiller/moodle-block_openai_chat` `4.0.2` · `microsoft/moodle-ai-assistant` `0.1.0` *(alpha)*.
+
+🔵 **The trend inside the trend: the category has split into student-facing chat and an infrastructure layer underneath it.** 🟢 **`local_ai_manager` is not a chatbot — it is API-connection management, **per-role request quotas** and usage accounting.** 🔴 **That is the piece every studio has been rewriting per engagement, and it is `GPL-3.0-or-later` and `MATURITY_STABLE`.** 🔵 **Expect the chat blocks to commoditise and the provider layer to be what institutions actually procure.**
+
+### 🆕 🔴 `3` — The counter-measure trend is now bidirectional: institutions are buying refusal
+
+🔴 **p219 found the first tool built to refuse agents *([`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai), `GPL-3.0-or-later`, `release 0.1.2`, committed `2026-10-14`)*. This pass puts it in context, and the context is policy, not software.**
+
+🟢 **The same quarter produced: a **New York City** one-year moratorium on student-facing AI through `8`th grade; **Katy ISD (TX)** banning generative-AI chatbots K-`6`; **Oklahoma** and **Maryland** statutes barring AI from high-stakes decisions about students; a student-authored national framework from all `50` US states asking for **a right to decline AI use**; and **South Korea's** National Assembly reportedly stripping AI textbooks of official status.**
+
+🔵 **So the demand curve has two sides now, and a studio that only sells adoption is selling into half a market.** 🟢 **`local_nomoreai`'s `Detect only` mode is the commercially interesting shape: measure agent traffic for a term, then decide. 🔴 And its own honest limit is the thing no vendor can sell past — *"an agent operating the student's own computer like a person would cannot be stopped or reliably detected by any plugin."*** 🔵 **Which pushes the real answer toward assessment design, and that is consulting work, not a licence.**
+
+### 🆕 🟡 `4` — Offline-first is re-entering education software, and this time it ships local inference
+
+🟢 **[`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) *(`Apache-2.0`, `v1.35.1`)* bundles Kolibri, Kiwix and **Ollama** into one Debian-installable server: Khan Academy courses with progress tracking, offline Wikipedia and medical references, and AI chat over an uploaded document base — with no egress at all.**
+
+🔵 **Offline education servers are not new *(Kolibri and Kiwix are both long-standing)*. 🟢 What is new is that local inference is now cheap enough to put in the same `5` GB / `<1` GB-RAM box, so the AI layer no longer forces connectivity.** 🔴 **Read against [`intel/market.md`](market.md): the region with the world's highest student AI adoption and the thinnest institutional policy is also the one where connectivity is the binding constraint. The two facts have been in tension on these shelves for `200` passes; this row is the first that resolves it.**
+
+### 🆕 🟡 Standing measurement note
+
+🟢 **The `2026` AI-in-education market figure spans `USD 1.94` B to `USD 11` B across `9` research houses — a `5.5`× range for a single year.** 🔴 **A trend statement built on any one of those numbers is a trend statement about a definition.** 🟢 **The segment figure with a stated boundary — AI tutoring and adaptive learning, `USD 9.79` B in `2026`, `20.9`% CAGR — is the only one safe to quote, and even that is a vendor surface not fetched first-hand.**
+
 ## Pass 219 — 2026-10-15 — THE COUNTER-MEASURE ARRIVES: THE FIRST TOOL BUILT TO REFUSE THE AGENTS THIS KB RECOMMENDS
 
 ### 🆕 🟢 `T219-7` — the trend, and it is the first one on these shelves that points the other way

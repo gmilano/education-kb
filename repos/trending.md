@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 220 — `1` new trending repo, `4` new plugin rows, and `2` new PACKAGE channels that between them exposed a broken Go module and a near-invented grant
+
+🔵 **The trending surface this week came from the CONSTRAINED query shape, not the mandated one — `ACTION RD`, pass `1` of `3`. Both strings are recorded verbatim so the comparison is auditable.**
+
+### 🆕 🟢 New trending repository
+
+| repo | licence | channels read | version | what it is |
+|---|---|---|---|---|
+| 🆕 🟢 [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **`Apache-2.0`** | `2` — `LICENSE` `10 779` B · `package.json` `"license": "Apache-2.0"` | `1.35.1` | Offline-first knowledge and education server: **Kolibri** *(Khan Academy courses + progress tracking)*, **Kiwix** *(offline Wikipedia, medical refs, ebooks)*, **Ollama** or any OpenAI-compatible endpoint for local AI chat over an uploaded document base, ProtoMaps, CyberChef, FlatNotes. ~`5` GB disk, <`1` GB RAM core. Debian-based only |
+
+🔴 **Popularity NOT recorded.** The search surface claims ~`39.8`k stars and a `2026-10-13` trending placement; `api.github.com` → `403` and `github.com` HTML → `403` here, so no star, fork or trending figure is carried. 🟢 **Licence, version, orchestrated upstreams and footprint are first-hand.**
+
+### 🆕 🟢 Four plugin rows, one category these shelves carried `0` of until this pass
+
+| repo | licence | channels | release | note |
+|---|---|---|---|---|
+| 🆕 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `GPL-3.0-or-later` | `2` | **`7.8.9`**, `version 2026101500` | 🟢 `MATURITY_STABLE`, in production at Saylor, CI across Moodle `4.5`/`5.0`/`5.1` — **the most mature row of the category** |
+| 🆕 🔴 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 `MIT` vs `GPL-3.0-or-later` | `2`, **disagreeing** | `0.1.0` | 🔴 `MATURITY_ALPHA` |
+| 🆕 🟢 [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 `GPL-3.0-or-later` | `2` | `4.0.2`, `version 2026051900` | `MATURITY_STABLE` |
+| 🆕 🟢 [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` | **`1` — `version.php` only, root `LICENSE` `404`** | `1.0` | `MATURITY_STABLE` |
+
+🔵 **Not carried:** `industria-elearning/moodle-local_forum_ai` *(slug from a search surface — 🔴 **unresolvable here: `README.md` and `version.php` both `404` across `HEAD`, `main`, `master`, `develop`, `v1.0.6` and `1.0.6`, so this session cannot confirm the repository exists**)* — `LICENSE`, `version.php` and `composer.json` all `404` at root, nothing read first-hand. 🔴 **And it requires the proprietary, separately licensed *DataCurso AI Provider* plugin: the second `DataCurso` dependency these shelves have hit, after p219's `local_assign_ai`.**
+
+### 🆕 🟢 `ACTION PD`, `16`th test — two new WORKING channels, and both are PACKAGE channels
+
+| channel | result | what it bought this pass |
+|---|---|---|
+| 🆕 🟢 `registry.npmjs.org` | **`200`** | A `license` field, a `repository` field and a full version history for any npm name. 🔴 **Requires the `T220-3` identity gate before its grant may be attributed to a repo row** |
+| 🆕 🟢 `proxy.golang.org` | **`200`** | `@v/list`, `@v/<v>.mod` and `@v/<v>.info`. 🔴 **This is how `T220-4` was found: it serves the DECLARED module path, which is the fact a `README` hides** |
+| 🟢 `pypi.org` | `404` for an unpublished name | Host resolves. A `404` here is *information* — `educredentials/ec-issuer` was never published — not a block |
+| 🟢 `packagist.org` | **`200`** | p219's reading REPRODUCES. 🔵 **This pass's first probe returned `000` against a malformed `list.json` query — an instrument error, not a channel failure. Recorded so p221 does not re-derive it** |
+| 🟡 `pkg.go.dev` | `404` | Reachable; no record for the module, consistent with it having no `LICENSE` |
+| 🔴 `huggingface.co` | **`000`** NEW BLOCK | The HF card channel for `eth-lre/mathtutorbench` cannot be read from this session |
+| 🔴 `unesco.org` | **`ENOTFOUND`** NEW BLOCK | 🔴 `ACTION RF`'s primary source is corroborated across `4` secondary surfaces and **read first-hand from none** |
+| 🔴 `api.github.com` · `github.com` HTML | `403` | unchanged, `16` tests |
+| 🔴 `moodle.org` | `000` | confirms p219 — the plugin directory stays unreadable, so `ACTION RA` still cannot close directly |
+
+🟢 **The `16`-test pattern now has a prediction and it went `3` for `3` this pass: every channel that worked is a PACKAGE channel; every channel that failed is a WEB channel.** 🔵 **`raw.githubusercontent.com` served ~`130` requests.**
+
+### 🆕 🔴 `T220-4` — a Go module that cannot be installed under either of its two names
+
+🔴 **[`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp)'s `go.mod` declares `module github.com/tuanha/vgu-mcp`, and its own sources import that path.** 🟢 **The proxy confirms both halves: `…/haanhtuandev/vgu-mcp/@v/list` → `200` with `v0.1.0`–`v0.1.3` *(`v0.1.3` tagged `2026-09-03`, `11873cf`)*, and `@v/v0.1.3.mod` → `200` carrying the mismatched path; `…/tuanha/vgu-mcp/@v/list` → `404`, the declared repository does not exist publicly.**
+
+🔴 **So the toolchain rejects it under the path that resolves and cannot find the path it declares. The only supported install is `curl … scripts/install.sh | sh` *(`4 683` B)* from a repository whose `LICENSE` is a `404` behind a shields.io `MIT` badge.** 🔵 **Not vendorable, not pinnable, not licensable — recorded as such.**
+
 ## 2026-10-15 — Pass 219 — `1` new trending repo after `2` passes of `0`, and it was found by CHANGING THE QUERY, not by waiting
 
 🟢 **APPEND-ONLY. History below this section is intact.**

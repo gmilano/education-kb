@@ -1,0 +1,32 @@
+# p220 - ACTION RB: the API-TERMS axis. Offline grep over the 8 committed shelves for a row
+# whose own shelf line names a proprietary platform. Tokens: Blackboard, PowerSchool,
+# Google Classroom, Brightspace, Instructure, Clever, Anthology, Workday.
+# Verdict: limb 1 FIRES at 19 rows (threshold 8+). UNKNOWN-PLUS-TOS enters the vocabulary.
+# Every one of the 8 shelves names at least one proprietary platform, so the axis is not
+# confined to agents/top.md.
+row	platform_named	note
+Cvmcosta/ltijs	Instructure	LTI 1.3 tool library - the platform is reached by spec, not by vendor API; weakest member of the class
+Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration	Clever	Clever's roster API is contract-gated per district
+Exhabition/brightspace-mcp-rs	Brightspace	D2L Brightspace vendor API
+P1ckle3/blackboard-mcp	Blackboard	Blackboard Learn REST - the class RB was registered on
+RohanMuppa/brightspace-mcp-server	Blackboard,Brightspace	owner-case duplicate of the row below - STILL LIVE on the shelves, see p219 step 3
+rohanmuppa/brightspace-mcp-server	Brightspace	owner-case duplicate of the row above
+alejooroncoy/campus-cli	Blackboard	
+blackboard/BBDN-LTI-Adv-Node	Anthology,Blackboard	vendor's own developer-network sample; terms are the vendor's by definition
+blackboard/BBDN-lti-1p3-tool-example	Anthology,Blackboard	ditto
+bruchris/canvas-lms-mcp	Brightspace	named comparatively; its own target is Canvas
+faizan45640/google-classroom-mcp-server	Google Classroom	Google Workspace for Education ToS + admin consent
+felipedias-ie/blackboard-mcp	Blackboard	
+googleworkspace/oneroster-integration-conformance-tests	Google Classroom	vendor's own conformance suite
+instructure/canvas-lms	Instructure	AGPL-3.0 open core; the SaaS tenancy is what carries terms
+karkarkins/BlackboardAssistantMCP	Blackboard	
+nitsuah/bb-mcp	Blackboard	
+openolat/OpenOLAT	Blackboard	named comparatively
+ruud0/aula-virtual-mcp	Blackboard	Spanish-language row - the bilingual register (p218) is why it is visible here
+tsugiproject/tsugi	Blackboard	LTI hosting framework
+# Per-shelf token counts (mentions, not rows): top.md 95, agents/trending.md 191,
+# foundations.md 55, repos/trending.md 132, solutions.md 123, market.md 48, trends.md 23,
+# patterns.md 73. All 8 shelves fire.
+# 3 of the 47 genuine unknowns (p219 qv-upstream-reciprocity) call Blackboard Learn and are
+# published as UNKNOWN. For those, the licence question is nearly beside the point: what
+# governs is vendor API terms, which this KB records for NO row on ANY shelf.

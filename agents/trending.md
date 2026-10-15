@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 220 — `4` new agent rows, and `2` of them declare one licence at the repository and a narrower one in the file that ships
+
+🔵 **What is new this week, in one line: an entire Moodle AI-plugin category reached these shelves for the first time — and the first two rows read file-by-file both turned out to contradict their own `README`.**
+
+### 🆕 🟢 New this pass — the Moodle AI-plugin layer, read first-hand
+
+| repo | licence | channels | release · maturity | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `GPL-3.0-or-later` | `LICENSE` `35 149` B + `version.php` | **`7.8.9`** · `MATURITY_STABLE` · `version 2026101500` *(**today**)* | **SOLA** — AI learning coach, in production on Saylor's Learn and Degrees sites. `supported = [405, 502]`, CI across Moodle `4.5`/`5.0`/`5.1` |
+| 🆕 🔴 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 `MIT` at root, **`GPL-3.0-or-later` in `local/aichat/version.php`** | `2`, and they DISAGREE | `0.1.0` · 🔴 **`MATURITY_ALPHA`** | `local_aichat` — floating chat widget, Azure OpenAI behind a retrieval pipeline over course content, plus a `theme_myuni` companion |
+| 🆕 🟢 [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 `GPL-3.0-or-later` | `LICENSE` `35 149` B + `version.php` | `4.0.2` · `MATURITY_STABLE` · `version 2026051900` | The longest-standing AI chat block for Moodle |
+| 🆕 🟢 [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` | 🔵 **`version.php` only — root `LICENSE` `404`** | `1.0` · `MATURITY_STABLE` | Auto-generates Moodle questions from course text |
+
+🟢 **All four arrived through `ACTION RD`'s CONSTRAINED query shape, not the mandated one.** 🔵 **Pass `1` of the `3` `ACTION RD` asked for: the mandated `github trending education AI 2026` returned blog roundups and course collections for a sixth consecutive time; the constrained shape returned `5` named plugins of which `4` verified. Both query strings are recorded verbatim in [`rd-constrained-trending`](../evidence/rd-constrained-trending.2026-10-15-p220.tsv), per `ACTION RE`.**
+
+### 🆕 🔴 The week's defect, and it is the same one twice in two ecosystems
+
+🔴 **A repository-level grant and a file-level grant can disagree, and in a Moodle plugin or a drop-in JavaScript wrapper it is the FILE that a studio redistributes.**
+
+| row | repository says | the shipped file says | state |
+|---|---|---|---|
+| [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | `LICENSE` `1 084` B: **`MIT`**, *"© 2026 Moodle AI Chat Contributors"*; `README` badge `MIT` | `local/aichat/version.php`: the Moodle GPL header + **`@license … GNU GPL v3 or later`** | 🔴 `FILE-NARROWER` |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `README` `## License`: **`Apache-2.0`**, quoted in full | `SCORM2004/APIWrapper.js` + `SCORM1.2/APIWrapper.js`: custom ADL **non-disparagement** grant **+ CC BY-SA 3.0**; `SCORMToXAPIFunctions.js`: **nothing** | 🔴 `FILE-NARROWER` |
+
+🔵 **Fifth consecutive pass whose headline is a unit mismatch, and the series now reads:** `T218-1` token vs **axis** · `T218-3` heading level vs **pass boundary** · `T218-4` line vs **sentence** · `T219-5` token vs **packaging mode** · 🆕 **`T220` repository vs FILE**. 🟢 **Wired, tested and committed: [`p220-file-level-grant`](../compose/code/p220-file-level-grant/README.md), `15` tests, `3` of them controls that must not fire.**
+
+### 🆕 🟢 A grant that was ALMOST invented, and the gate that stopped it
+
+🟢 **`registry.npmjs.org` → `200`, a channel never used in `220` passes. It answers `"license": "MIT"` for the package name `canvas-lms-mcp`.** 🔴 **Its `"repository"` is [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — a row these shelves already carry — and NOT [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp), the ungranted row whose own `package.json` declares that same npm `"name"`.**
+
+🔵 **`34` read-only tools and `v2.0.0` on one side; `176` tools, `v2.5.0` and `77` published versions on the other. Two different projects, one npm name.** 🟢 **Every prior propagation finding on these shelves was a correct grant that failed to travel; this is the inverse — a grant that would have travelled to the wrong row. `identity_ok()` refuses it.**
+
+### 🆕 🟡 Carried-row drift worth recording
+
+| row | shelf says | read `2026-10-15` |
+|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `v2.2.0`, `2026-10-10`, *"`172` tools"* | 🔴 **npm `latest = 2.5.0`, `modified 2026-10-15T07:25:24Z`, `"176 tools"`** — three minor versions in five days |
+| [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | `release 3.3` carried | 🟡 **`version 2026102300`** — a `YYYYMMDDXX` stamp reading `23 October 2026`, eight days ahead of this pass |
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | `release 5.1.1` carried | 🟡 **`version 2026102305`** — also future-dated |
+
+🔵 **Future-dated Moodle version stamps are not an error a reader can resolve: they are either deliberate pre-release staging or a typo, and a Moodle site will refuse to upgrade *away* from either until a later stamp exists. Recorded, not adjudicated.**
+
 ## 2026-10-15 — Pass 219 — `1` new agent, and it is the first thing on these shelves built to REFUSE the agents on these shelves
 
 🟢 **APPEND-ONLY. History below this section is intact.**

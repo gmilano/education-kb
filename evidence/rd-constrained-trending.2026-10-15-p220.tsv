@@ -1,0 +1,27 @@
+# p220 - ACTION RD, pass 1 of 3: run the MANDATED and the CONSTRAINED trending shapes side
+# by side before replacing the mandated one. Queries recorded verbatim (ACTION RE).
+shape	query	returned	verifiable_rows	note
+MANDATED	github trending education AI 2026	blog roundups, awesome-lists, course collections, 1 real education server	1	6th consecutive run. T176's finding holds: the shape asks for teaching material. BUT it did surface Crosstalk-Solutions/Project-NOMAD, so it is not sterile
+MANDATED	top open source AI agents education 2026 github MIT	general-purpose agent lists (OpenHands, CrewAI, LangGraph, opencode) + 2 course repos	0	5th consecutive run, 0 education-sector agents. Unchanged
+MANDATED	open source platform education LMS SIS MIT Apache 2026	LMS comparison blogs; OpenOLAT (Apache-2.0), OpenEduCat (LGPLv3), RosarioSIS, Gibbon	0 new	All already carried on verticals/solutions.md. Confirms the platform shelf is saturated for this shape
+MANDATED	AI education industry trends 2026 market size agentic tutoring	9 market-research vendors, spread 1.94 B - 10.6 B for 2026	0	See intel/market.md: the spread is the finding
+CONSTRAINED	Moodle plugin AI 2026 open source github license education sector software release	5 named Moodle AI plugins, 1 Moodle directory page	4	limb 1 SATISFIED on count at pass 1 of 3
+row	licence	channels_read	status
+Crosstalk-Solutions/Project-NOMAD	Apache-2.0	LICENSE 10779 B (Apache boilerplate) + package.json "license": "Apache-2.0" (v1.35.1)	NEW ROW, VERIFIED 2 channels
+saylordotorg/moodle-local_ai_course_assistant	GPL-3.0-or-later	LICENSE 35149 B + version.php @license GNU GPL v3 or later	NEW ROW, VERIFIED 2 channels. release 7.8.9, version 2026101500 (= today), MATURITY_STABLE, requires 2024100700 (Moodle 4.5+), supported [405,502]
+microsoft/moodle-ai-assistant	MIT vs GPL-3.0-or-later	LICENSE 1084 B "MIT License" + local/aichat/version.php @license GNU GPL v3 or later	NEW ROW, VERIFIED and CONFLICTED - T220-2. release 0.1.0, MATURITY_ALPHA, $plugin->version 2024010105 on a 2026 plugin, copyright holder "Moodle AI Chat Contributors" not Microsoft
+Limekiller/moodle-block_openai_chat	GPL-3.0-or-later	LICENSE 35149 B + version.php @license	NEW ROW, VERIFIED 2 channels. release 4.0.2, version 2026051900, MATURITY_STABLE
+yedidiaklein/moodle-local_aiquestions	GPL-3.0-or-later	version.php @license ONLY - root LICENSE 404	NEW ROW, VERIFIED 1 channel. Independent corroboration of ACTION RG: the root file is absent and the prescribed channel answers. release 1.0, version 202311230001, MATURITY_STABLE
+industria-elearning/moodle-local_forum_ai	UNKNOWN	LICENSE 404, version.php 404, composer.json 404 at root	UNRESOLVED. And it requires the proprietary licensed "DataCurso AI Provider" plugin -> the first UNKNOWN-PLUS-TOS candidate outside Blackboard. ACTION RK
+# industria-elearning/moodle-local_forum_ai - follow-up probe, same pass: README.md and
+# version.php requested across HEAD, main, master, develop, v1.0.6 and 1.0.6 = 12 requests,
+# 12x 404. This session cannot confirm the repository exists at all, so the slug is carried
+# as plain text with that stated, never as a link. The release "1.0.6 / 27 May 2026" and the
+# DataCurso dependency come from a search surface only.
+# Project-NOMAD bundled upstreams, read first-hand this pass over raw.githubusercontent.com:
+upstream	repo	licence	channel
+Kolibri	learningequality/kolibri	MIT	LICENSE, head "MIT License"
+Ollama	ollama/ollama	MIT	LICENSE, head "MIT License"
+Kiwix (tools)	kiwix/kiwix-tools	UNKNOWN	README 200, root LICENSE 404 - PERMISSIVE-MANIFEST
+Kiwix (lib)	kiwix/libkiwix	UNKNOWN	README 200, root LICENSE 404 - PERMISSIVE-MANIFEST
+ProtoMaps	protomaps/basemaps	UNKNOWN	README 200, root LICENSE 404 - PERMISSIVE-MANIFEST

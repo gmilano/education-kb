@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — `ACTION RG` FIRES AND ITS CONCLUSION IS REFUTED BY THE SAME COUNT: THE UNIT OF A LICENCE IS THE **FILE**
+
+🔵 **`4` new agent rows** *(the most in `5` passes)*, **`1` new repository row, `1` new platform row.** 🟢 **`4` actions closed — `RG`, `RB`, `RF`, and `RD` at pass `1` of `3`. `2` repository-level grants CONTRADICTED by the files that ship, `1` false grant PREVENTED, `2` new working channels, `8` new state classes, and an entire Moodle AI-plugin category verified first-hand that these shelves carried `0` of.**
+
+### 🆕 🔴 The headline: `ACTION RG` asked whether reading beats asking, and the answer depends on the ecosystem
+
+🟢 **`ACTION RG`, the registered highest-priority action for this pass, ran [`P219-A`](compose/code/p219-upstream-channel/README.md) over the `11` `CLAIMED-IN-PROSE` rows — a population `3`× the one `QV` reordered. It fires: `4` of `11` answer from an ecosystem channel, against a limb-`1` threshold of `4`.**
+
+🔴 **Then the conclusion fails on that same count.** 🟢 **The `4` that answer are exactly the rows whose ecosystem **mandates** a licence declaration inside a file that **must** exist — Moodle's `version.php` docblock, ADL's source-file header. The `7` that do not answer are npm, PyPI, Go and a curated link list, where the manifest was read, is readable, and is **empty by design**.**
+
+🟢 **So `CLAIMED-IN-PROSE` was never one state. The rule that replaces it: a channel is a *licence* channel only when the ecosystem makes the field mandatory in a mandatory file. Everything else is a place a licence is *permitted* to sit, and must not be counted as coverage.** 🔴 **And `ACTION PH`'s queue is not *"mostly a reading job"* as `RG` predicted: `4` rows come off it, `7` are confirmed as genuinely needing a human — more than it would have wrongly asked.**
+
+🟢 **Control that makes the verdict stand: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `NOTICE` were probed at root for all `8` non-Moodle rows. `40` requests, `40` × `404`.** 🔵 **The p218 classification was correct; the defect was never a missed root file.**
+
+### 🆕 🔴 `T220-1` and `T220-2` — two repositories whose licence is wrong about their own bytes
+
+🔴 **The row p218 recorded as the CLEANEST of the `11` turned out to be the most restrictive on the shelf.**
+
+🔴 **[`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)** — `README` `## License` quotes **`Apache-2.0`** in full. 🔴 **`SCORM2004/APIWrapper.js` *(`19 594` B)* and `SCORM1.2/APIWrapper.js` *(`17 555` B)* — the files this project tells you to drop into *every SCO in your course* — carry *"© 2000, 2011 Advanced Distributed Learning"*, a custom grant conditioned on the licensee not using the software *"in a manner which is disparaging to ADL"*, **and CC BY-SA 3.0**. The new file the project actually contributes, `SCORMToXAPIFunctions.js` *(`44 324` B)*, carries no notice at all.** 🔵 **Three answers in one repository; share-alike plus a conduct clause on every delivered course package. The shelf said *"permissive, ship it."***
+
+🔴 **[`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant)**, new this pass — root `LICENSE` *(`1 084` B)* and `README` badge say **`MIT`**; `local/aichat/version.php` carries the full Moodle GPL header and **`@license … GNU GPL v3 or later`**. 🟡 **Copyright is held by *"Moodle AI Chat Contributors"*, not Microsoft, and `$plugin->version = 2024010105` stamps a `2026` plugin with a `1 January 2024` date, so any fork with a real date outranks it in Moodle's upgrade arithmetic.**
+
+🔵 **Fifth consecutive pass whose headline is a unit mismatch, and the family now reads: `T218-1` token vs **axis** · `T218-3` heading level vs **pass boundary** · `T218-4` line vs **sentence** · `T219-5` token vs **packaging mode** · 🆕 **`T220` repository vs FILE**.** 🔴 **This one is the most consequential, because the dominant distribution shape in education software — SCORM packages, Moodle and WordPress plugins, LTI tools, course content — delivers *files into someone else's tree*, and every automated licence surface in common use reports one licence per repository.** 🟢 **Wired, tested, committed: [`p220-file-level-grant`](compose/code/p220-file-level-grant/README.md), `15` tests, `3` of them controls that must not fire.**
+
+### 🆕 🟢 `T220-3` — a grant that was almost INVENTED, which is a new direction of failure
+
+🟢 **`registry.npmjs.org` → `200`, first use in `220` passes. For the package name `canvas-lms-mcp` it answers `"license": "MIT"`.** 🔴 **Its `"repository"` is [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — not [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp), the ungranted shelf row whose own `package.json` declares that same npm `"name"`. `34` read-only tools and `v2.0.0` on one side; `176` tools, `v2.5.0` and `77` published versions on the other.** 🟢 **`identity_ok()` refuses it.** 🔵 **Every prior propagation finding here was a correct grant that failed to travel. This is the inverse — and manufacturing a grant is worse than losing one.**
+
+### 🆕 🔴 `T220-4` — a Go module that cannot be installed under either of its names
+
+🔴 **[`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp)'s `go.mod` declares `module github.com/tuanha/vgu-mcp`.** 🟢 **The Go proxy confirms both halves: `…/haanhtuandev/vgu-mcp/@v/list` → `200` *(`v0.1.0`–`v0.1.3`, `v0.1.3` tagged `2026-09-03`)* with a `.mod` carrying the mismatched path; `…/tuanha/vgu-mcp/@v/list` → `404`, that repository does not exist.** 🔴 **So the toolchain rejects the path that resolves and cannot find the path it declares. The only supported install is piping `scripts/install.sh` into `sh`, from a repository whose `LICENSE` is a `404` behind a `MIT` badge. Not vendorable, not pinnable, not licensable.**
+
+### 🆕 🟢 The new rows, all verified first-hand
+
+| row | licence | channels | note |
+|---|---|---|---|
+| 🆕 🟢 [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **`Apache-2.0`** | `2` — `LICENSE` `10 779` B · `package.json`, `v1.35.1` | **Offline-first knowledge and education server**: Kolibri *(Khan Academy + progress tracking)*, Kiwix *(offline Wikipedia, medical refs, ebooks)*, Ollama or any OpenAI-compatible endpoint, ~`5` GB disk / <`1` GB RAM core. 🔴 **No star count recorded — `api.github.com` `403`** |
+| 🆕 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `GPL-3.0-or-later` | `2` | **SOLA**, `release 7.8.9`, `version 2026101500` *(today)*, `MATURITY_STABLE`, **in production at Saylor** |
+| 🆕 🔴 [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🔴 `MIT` **vs** `GPL-3.0-or-later` | `2`, disagreeing | `MATURITY_ALPHA` — 🔴 **excluded from the recipe, with the reason stated** |
+| 🆕 🟢 [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat) | 🟢 `GPL-3.0-or-later` | `2` | `release 4.0.2`, `MATURITY_STABLE` |
+| 🆕 🟢 [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` | **`1` — `version.php` only, root `LICENSE` `404`** | 🟢 **Independent corroboration of `RG`: the prescribed channel answers where the root file is absent** |
+
+🔵 **Not carried, deliberately:** `industria-elearning/moodle-local_forum_ai` *(slug from a search surface — 🔴 **unresolvable here: `README.md` and `version.php` both `404` across `HEAD`, `main`, `master`, `develop`, `v1.0.6` and `1.0.6`, so this session cannot confirm the repository exists**)* — nothing readable at root, **and it requires the proprietary, separately licensed *DataCurso AI Provider*.** Second `DataCurso` dependency on these shelves. 🔵 **`ACTION RK`.**
+
+### 🆕 🟢 `ACTION RB` and `ACTION RF` both close
+
+- 🟢 **`RB` fires limb `1` at `19` rows** *(threshold `8`+)*; all `8` shelves name a proprietary platform. 🔴 **For a closed-API integration the licence cell answers the wrong question — the governing constraint is vendor API terms, which this KB records for no row on any shelf.** 🟢 **`UNKNOWN-PLUS-TOS` enters the vocabulary.** 🟡 **Side finding: the `RohanMuppa`/`rohanmuppa` owner-case duplicate pair is still live.**
+- 🟢 **`RF` closes: the LATAM instrument is real.** **Observatory on Artificial Intelligence in Education for Latin America and the Caribbean**, UNESCO — launched **`14 April 2026`**, Santiago, at **ECLAC headquarters**, covering **`33` education ministries**; partners **CAF**, **CENIA** *(Chile)*, **Cetic.br/NIC.br** *(Brazil)*, **ECLAC**; Tecnológico de Monterrey agreement March `2026`, **`USD 90 000`**. 🔴 **Qualified: `unesco.org` is `ENOTFOUND` here — `4` independent surfaces agree, none was fetched first-hand. p219's single-source name was wrong; its `33`-ministry figure was right.**
+
+### 🆕 🔴 Regional coverage, declared with the query that produced it *(`ACTION RE`)*
+
+| region | query | returned |
+|---|---|---|
+| 🟢 **North America** | `AI education North America 2026 adoption regulation players` | 🟢 **Rich. `134` bills across `31` states; California `AB 1159`, Idaho `SB 1227`, Oklahoma + Maryland human-oversight statutes; NYC moratorium through grade `8`; Katy ISD K-`6` ban; `H.R. 8747`; a Federal Register Final Priority `2026-04-13`; a student-authored framework asking for a right to decline AI** |
+| 🟢 **EMEA** | `AI education EMEA Europe Middle East Africa 2026 adoption regulation ministry policy` | 🟢 **NOT BLANK, and the Middle East blank p218/p219 both declared CLOSES: the UAE's May `2025` Cabinet decision mandates a nationwide K-`12` AI curriculum, private schools not yet bound.** 🔴 **South Africa's draft National AI Policy was withdrawn `26 April 2026` after AI-hallucinated citations were found in it.** 🔴 **Still nothing on any other sub-Saharan ministry** |
+| 🟢 **APAC** | `AI education APAC Asia Pacific 2026 ministry policy adoption players` | 🟢 **Ministry layer rich: China MoE K-`12` guidance; India mandatory from Class `3` in `2026`–`27`; South Korea `KRW 1.4` tn *(and a reported reversal — single-source)*; Singapore MOE Primary `4` via Student Learning Space; APEC Chengdu ministerial + AI Initiative `2026`–`2030`.** 🔴 **The *"players"* half returned nothing for a third pass** |
+| 🟢 **LATAM** | `AI educación LATAM América Latina 2026 adopción regulación ministerio` | 🟢 **The UNESCO observatory above, plus Colombia's `4 June 2026` MinEducación roadmap running to `2028`, Argentina's `2025` ministry guide, Chile's `2021` policy and a law in discussion, Ecuador `10`th on a regional index.** 🔴 **No unified higher-education framework; most universities decide in a normative vacuum.** 🟡 **The much-quoted *"highest student adoption / only `19`% of institutions"* sentence is TRUNCATED at source — `ACTION RL`** |
+
+### 🆕 🔴 The number a client will ask for, and why it cannot be given
+
+🔴 **Nine research houses put the `2026` AI-in-education market between `USD 1.94` B and `USD 11` B — a `5.5`× spread for one year, which is a disagreement about definitions, not forecasts.** 🟢 **The only figure with a stated boundary is the segment one: AI tutoring and adaptive learning, `USD 9.79` B in `2026` *(from `8.09` B in `2025`)*, `20.9`% CAGR.** 🔵 **`2035` projections off a base that spans `5.5`× should not appear in a proposal at all.**
+
+### 🆕 🟢 Channels — `ACTION PD`'s `16`th test, and its own prediction went `3` for `3`
+
+🟢 **NEW WORKING: `registry.npmjs.org` `200`, `proxy.golang.org` `200`; `pypi.org` reachable *(a `404` there is information)*. `packagist.org` `200` reproduces — this pass's first `000` was a malformed query, an instrument error, recorded so p221 does not re-derive it. `raw.githubusercontent.com` `200`, ~`130` requests.** 🔴 **NEW BLOCKED: `huggingface.co` `000`, `unesco.org` `ENOTFOUND`. Unchanged: `api.github.com` `403`, `github.com` HTML `403`, `moodle.org` `000`, `arxiv.org` / `publications.iadb.org` `ENOTFOUND`. `pkg.go.dev` reachable, `404` for the module.** 🔵 **Every channel that worked is a PACKAGE channel; every channel that failed is a WEB channel. Sixteen tests, and the rule has not broken yet.**
+
+### 🔜 Registered for p221
+
+🔴 **`ACTION RH` is the highest priority:** run the file-level read over every row whose grant came from a root `LICENSE` or a `README` only. 🔵 **`T220-1` and `T220-2` were the first two rows tried and both fired.** 🟢 **Also new: `RI` *(the prescription table as data)*, `RJ` *(registry sweep with a mandatory identity gate)*, `RK` *(the `UNKNOWN-PLUS-TOS` field)*, `RL` *(the truncated LATAM statistic)*, `RM` *(npm version drift)*.** 🟡 **`QX` is now recommended for folding into `RH` rather than running; `PG` is subsumed by it; `QO` gains a fifth precondition and the honest note that it cannot land while the vocabulary keeps moving.** 🔴 **`ACTION PH` remains untaken for a sixteenth pass — it opens issues in a maintainer's name and p220 ran unattended.** 🔵 **Full register with falsifiers: [`intel/open-gaps.md`](intel/open-gaps.md).**
+
 ## Pass 219 — 2026-10-15 — `ACTION QV` FIRES AND ITS PREMISE INVERTS: A RECIPROCAL UPSTREAM IS A **CHANNEL HINT** BEFORE IT IS A RISK
 
 🔵 **`1` new agent row** *(the first in `4` passes)*, **`0` new repository rows, `0` new platform rows.** 🟢 **`2` actions closed — `QV`, `QW`, both on limb `1`. `1` grant recovered first-hand against a published cell, `1` `15`-pass conflict resolved, `2` new state classes, `3` further rows answered beyond the registered population, `1` new working channel, and `3` newly blocked hosts.**

@@ -1,0 +1,24 @@
+# p220 - ACTION RG: run P219-A (identify ecosystem -> read its prescribed channel) over the
+# 11 CLAIMED-IN-PROSE rows classified in evidence/grant-state-schema.2026-10-15-p218.tsv.
+# Channel: raw.githubusercontent.com (200, ACTION PD 16th test), plus registry.npmjs.org (200, NEW),
+# proxy.golang.org (200, NEW), pypi.org (reachable), pkg.go.dev (reachable, 404 for the module).
+# Blocked this pass: huggingface.co (000), moodle.org (000), unesco.org (ENOTFOUND).
+# Verdict: limb 1 FIRES on the count (4 of 11 >= 4). RG's CONCLUSION is REFUTED: the 4 that
+# answer are exactly the rows whose ecosystem MANDATES a licence field in a mandatory file.
+# The other 7 are npm/PyPI/Go/HF/none - channel read, channel EMPTY, a human is the only route.
+row	ecosystem	prescribed_channel	http	channel_answered	grant_read	prescription_class	note
+CreveXTech/canvas-lms-mcp	npm	package.json	200	NO	-	PERMISSIVE-MANIFEST	535 B, hand-written, no license key. Declares npm name canvas-lms-mcp, which belongs to bruchris -> see rb/identity gate. 34 read-only tools
+educredentials/ec-issuer	pypi	pyproject.toml	200	NO	-	PERMISSIVE-MANIFEST	1453 B, [project] has name/version/description/authors, no license. pypi.org/pypi/ec-issuer/json -> 404, never published
+tianshuo/trainingllm	npm	package.json	200	NO	-	PERMISSIVE-MANIFEST	245 B, "private": true - never published, so npm never enforces anything
+haanhtuandev/vgu-mcp	go	go.mod	200	NO	-	NO-CHANNEL	Go defines no licence field. pkg.go.dev?tab=licenses -> 404. See T220-4: go.mod declares module github.com/tuanha/vgu-mcp, which 404s
+marcusgreen/moodle-qtype_aitext	moodle	version.php	200	YES	GPL-3.0-or-later	PRESCRIBED-CHANNEL	@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later; release 2.1.1, version 2026100400, MATURITY_STABLE, supported [405,503]
+adlnet/SCORM-to-xAPI-Wrapper	adl-scorm	source-file header	200	YES	CC-BY-SA-3.0 + custom ADL	PRESCRIBED-CHANNEL	T220-1. README quotes Apache-2.0 in full; SCORM2004/APIWrapper.js (19594 B) and SCORM1.2/APIWrapper.js (17555 B) carry (c) 2000,2011 ADL + non-disparagement + CC BY-SA 3.0; SCORMToXAPIFunctions.js (44324 B) carries NO notice
+bycs-lp/moodle-block_ai_chat	moodle	version.php	200	YES	GPL-3.0-or-later	PRESCRIBED-CHANNEL	release 3.3, version 2026102300 (dated 8 days AHEAD of this pass), requires 2025041400, supported [500,502], MATURITY_STABLE
+bycs-lp/moodle-local_ai_manager	moodle	version.php	200	YES	GPL-3.0-or-later	PRESCRIBED-CHANNEL	release 5.1.1, version 2026102305 (also future-dated), supported [500,502], MATURITY_STABLE
+barneslardo/sis-demo	npm	package.json	200	NO	-	PERMISSIVE-MANIFEST	1078 B, "private": true, pnpm workspace root. README still says "MIT - demo use only", which is not an MIT term
+mabdulre9/electrical-engineering	none	-	-	NO	-	NO-CHANNEL	A curated link list. No manifest of any kind; package.json and LICENSE both 404. MIT claim in prose covers the curation only
+eth-lre/mathtutorbench	pypi/huggingface	pyproject.toml / card	404	NO	-	PERMISSIVE-MANIFEST	No pyproject/setup.py/setup.cfg. requirements.txt 190 B, no licence. huggingface.co/api -> 000 from this session. CC-BY-4.0 badge vs CC-BY-SA-4.0 prose conflict STANDS unresolved
+# Root-licence control: LICENSE, LICENSE.md, LICENSE.txt, COPYING, NOTICE probed for all 8
+# non-Moodle rows = 40 requests, 40x 404. The CLAIMED-IN-PROSE classification is correct:
+# none of these rows has a root licence file. The defect was never a missed root file.
+# TALLY: answered 4/11 (3 Moodle version.php + 1 ADL source header). Not answered 7/11.

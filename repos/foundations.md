@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — THE OFFLINE-FIRST EDUCATION SERVER ARRIVES, AND IT IS THE FIRST FOUNDATION ROW ON THESE SHELVES THAT ASSUMES **NO NETWORK**
+
+🔵 **`1` new foundational repository, verified at `2` channels. 🟢 And a structural finding about these shelves' own reading method: `4` of `11` licence-unknown rows answered from an ecosystem channel, `7` did not, and the split is not about effort — it is about whether the ecosystem MANDATES the field.**
+
+### 🆕 🟢 [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) — `Apache-2.0`
+
+| field | reading, `2026-10-15` |
+|---|---|
+| licence | 🟢 **`Apache-2.0`**, verified at **`2` channels**: `LICENSE` `10 779` B *(Apache License Version 2.0, January 2004 boilerplate)* · `package.json` `"license": "Apache-2.0"` |
+| version | `1.35.1` |
+| author | `Crosstalk Solutions, LLC` |
+| region | Global — 🔵 **but the reason it matters here is LATAM, Africa and rural APAC** |
+| what it is | *"a self-contained, offline-first knowledge and education server packed with critical tools, knowledge, and AI to keep you informed and empowered — anytime, anywhere"* |
+| footprint | **~`5` GB disk and under `1` GB RAM** for the core; offline content and the AI assistant are what actually size the box |
+| constraint | 🔴 **Debian-based only** *(Ubuntu `26.04` LTS recommended; `24.04` LTS and Debian `12` supported)*. Windows via WSL2 only |
+
+🟢 **It is a Docker orchestrator with a management UI, not a monolith — which is exactly what makes it a foundation row rather than a product:**
+
+| layer | upstream it orchestrates | what an engagement gets |
+|---|---|---|
+| **education platform** | 🟢 **Kolibri** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri), 🟢 **`MIT`** *(read first-hand this pass)* | Khan Academy courses **with progress tracking**, offline |
+| **knowledge library** | 🟢 **Kiwix** — [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) · [`kiwix/libkiwix`](https://github.com/kiwix/libkiwix) | offline Wikipedia, medical references, ebooks — ZIM library manager and content selector built in. 🟡 **No root `LICENSE` in either repo — another `PERMISSIVE-MANIFEST` case, unresolved** |
+| **local AI** | 🟢 **Ollama** — [`ollama/ollama`](https://github.com/ollama/ollama), 🟢 **`MIT`** *(read first-hand this pass)*, or any OpenAI-compatible endpoint *(LM Studio, `llama.cpp`)* | AI chat over an uploaded document knowledge base, no egress |
+| maps | **ProtoMaps** — [`protomaps/basemaps`](https://github.com/protomaps/basemaps) | downloadable regional maps. 🟡 No root `LICENSE` |
+| data tools | CyberChef | encryption, encoding, analysis |
+| notes | FlatNotes | local note-taking |
+| extension | *"Supply Depot"* one-click catalogue | PDF tools, file browser, e-book library, password manager, plus arbitrary custom containers |
+
+🔵 **Why this is a foundation and not a trending curiosity:** every AI-in-education row on these shelves assumes a reachable LMS and a reachable model endpoint. 🟢 **This one assumes neither, and it composes three well-governed upstreams rather than reimplementing them.** 🔴 **For a ministry engagement in a region where the measured constraint is connectivity rather than licensing — which is most of the LATAM and Africa material in [`intel/market.md`](../intel/market.md) — it is the only starting point on these shelves that survives the site visit.**
+
+🔴 **What is NOT verified:** the search surface that produced it claims *"about `39.8`k stars"* and a GitHub-trending appearance on `2026-10-13`. 🔴 **`api.github.com` → `403` and `github.com` HTML → `403` from this session, so NO star count, fork count or trending placement is recorded here.** 🔵 **The licence, the version, the orchestrated upstreams and the footprint are first-hand; the popularity is not, and is deliberately left out of the table.**
+
+🟡 **One honest caution for an SOW:** its own quick-install is `curl -fsSL …/install_nomad.sh | sudo bash`, and it says so plainly *(*"sudo/root privileges are required"*)*. 🟢 **There is a documented Docker-Compose route for sites that will not pipe a script to root, and that is the one to put in a proposal.**
+
+### 🆕 🔴 The reading-method finding: why `7` of `11` unknown rows will never answer from a manifest
+
+🟢 **`ACTION RG` ran [`P219-A`](../compose/code/p219-upstream-channel/README.md) over the `11` `CLAIMED-IN-PROSE` rows. `4` answered. The `7` that did not are not unread — they were read, and the field does not exist:**
+
+| ecosystem | mandatory file | licence field | class | rows read |
+|---|---|---|---|---|
+| Moodle | `version.php` | 🟢 **mandatory** *(`@license` docblock)* | `PRESCRIBED-CHANNEL` | `3`/`3` answered |
+| ADL/SCORM | source-file header | 🟢 **mandatory by convention** | `PRESCRIBED-CHANNEL` | `1`/`1` answered |
+| npm | `package.json` | 🔴 **optional** | `PERMISSIVE-MANIFEST` | `0`/`3` |
+| PyPI | `pyproject.toml` | 🔴 **optional** | `PERMISSIVE-MANIFEST` | `0`/`2` |
+| Go | `go.mod` | 🔴 **no such field exists** | `NO-CHANNEL` | `0`/`1` |
+| *(curated link list)* | — | — | `NO-CHANNEL` | `0`/`1` |
+
+🟢 **The rule for every future intake on this shelf:** a channel counts as a **licence** channel only when the ecosystem mandates the field in a file that must exist. 🔴 **Reading `package.json` and finding nothing is not a gap in the reading — it is npm behaving exactly as designed, and it must not be recorded as a defect in the repository.**
+
 ## Pass 219 — 2026-10-15 — THE ECOSYSTEM CHANNEL WAS READ ACROSS ALL `47` FOR THE FIRST TIME; `p204` HAD READ IT ON `8`
 
 🔵 **`0` new foundation rows.** 🟢 **`ACTION QV` and `QW` discharged; the published population ladder independently reproduced step by step; `1` long-standing manifest CONFLICT resolved.**

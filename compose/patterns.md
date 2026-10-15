@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 220 — 2026-10-15 — THREE RECIPES: THE FILE-LEVEL GRANT AUDIT, THE MOODLE AI STACK THAT IS NOW ASSEMBLY NOT CONSTRUCTION, AND THE OFFLINE MINISTRY BOX
+
+🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Two of the three are assembled entirely from rows verified first-hand this pass.**
+
+### 🆕 🟢 `P220-A` — the file-level grant audit, run before any education-software SOW
+
+🔴 **Why it exists: this pass found two repositories whose licence at the repository level is wrong about the bytes a client receives, and in education software the bytes are delivered as files dropped into someone else's tree — SCORM packages, Moodle plugins, WordPress plugins, LTI tools.**
+
+**Wiring, in order:**
+
+1. 🟢 **Classify the ecosystem, then apply the prescription test** — [`compose/code/p220-file-level-grant`](code/p220-file-level-grant/README.md), `prescription(ecosystem)`.
+   - `PRESCRIBED-CHANNEL` *(Moodle `version.php`, WordPress `readme.txt` + plugin header, ADL source headers)* → **read it; asking the maintainer is premature.**
+   - `PERMISSIVE-MANIFEST` *(npm `package.json`, PyPI `pyproject.toml`, HF card)* → read it, and an **empty field is the expected case**, not a defect.
+   - `NO-CHANNEL` *(Go `go.mod`, a curated link list)* → there is nothing to read; a human is the only route.
+2. 🟢 **Enumerate the files that will actually be redistributed**, not the repository. For a SCORM wrapper that is every `*.js` named in the install instructions; for a Moodle plugin every `*.php` in the component tree; for a WordPress plugin the main plugin file.
+3. 🟢 **Read the header of each one** over `raw.githubusercontent.com` *(`200`; the only general-purpose read channel this session has, `16` consecutive tests)* and feed the result to `file_vs_repo(repo_grant, {path: spdx})`.
+4. 🔴 **Stop on `FILE-NARROWER`.** `verdict()` returns *"NEITHER — the grants disagree"*, and that string belongs in the SOW's assumptions section, not in a build.
+5. 🟢 **If a package registry is the only remaining channel, gate it on identity** — `identity_ok(record, slug)`. A registry record describes a **package**; its licence reaches a repository row only when the record's own `repository` points back at that slug.
+
+**Worked example, verbatim from this pass:**
+
+```python
+from file_grant import verdict
+
+verdict('adl-scorm', 'Apache-2.0', {
+    'SCORM2004/APIWrapper.js': 'CC-BY-SA-3.0',   # custom ADL grant + CC BY-SA 3.0
+    'SCORM1.2/APIWrapper.js':  'CC-BY-SA-3.0',
+    'SCORMToXAPIFunctions.js':  None,            # no notice at all
+})
+# comparison -> 'FILE-NARROWER'; rely_on -> 'NEITHER - the grants disagree'
+
+verdict('npm', None, {}, npm_record, 'CreveXTech/canvas-lms-mcp')
+# registry -> 'IDENTITY-FAIL'  (the record belongs to bruchris/canvas-lms-mcp)
+```
+
+🟢 **`15` tests, `3` of them controls that must not fire.** 🔵 **Cost: one request per shipped file, no clone. On the `11` rows audited this pass it was ~`75` requests including a `40`-request root-licence control that came back `40` × `404`.**
+
+### 🆕 🟢 `P220-B` — the Moodle AI stack, assembled from four verified plugins instead of built
+
+🔴 **Until this pass the Moodle recommendation on these shelves ended at *"and then you build the AI part."* It no longer has to.**
+
+| layer | repo | licence | why this one |
+|---|---|---|---|
+| **provider + quota + accounting** | 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟢 `GPL-3.0-or-later` *(read from `version.php` this pass)* | `release 5.1.1`, `MATURITY_STABLE`. API connections to AI services, **per-role request limits**, usage/limit reporting. 🔵 **This is the piece studios keep rewriting per engagement** |
+| **student-facing chat** | 🟢 [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 `GPL-3.0-or-later` | `release 3.3`. Declares `local_ai_manager` as its backend dependency, so the two compose by design rather than by integration work |
+| **learning coach** | 🟢 [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🟢 `GPL-3.0-or-later` | `release 7.8.9`, `MATURITY_STABLE`, **in production on Saylor's Learn and Degrees sites**, CI across Moodle `4.5`/`5.0`/`5.1`. 🟢 The only row of the category with a production deployment behind it — **start the pilot here** |
+| **assessment generation** | 🟢 [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) + [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) | 🟢 `GPL-3.0-or-later` both | `qtype_aitext` `release 2.1.1`, `supported = [405, 503]`; `local_aiquestions` `MATURITY_STABLE` |
+| **the human commit step** | 🟢 `compose/code/grading-draft-gate` *(this KB)* | — | 🔴 **Required, not optional, where Oklahoma and Maryland bar AI from high-stakes decisions about students** |
+| **the refusal layer, installed deliberately** | 🟢 [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai) | 🟢 `GPL-3.0-or-later` | 🔴 **Put it in the proposal yourself, in `Detect only` mode.** It measures agent traffic for a term without enforcing anything. An institution that finds it later, after you have shipped token-based integrations it blocks, will not hear an explanation |
+
+🔴 **Excluded, deliberately, and say why in the SOW:** [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) — `MIT` at the repository, **`GPL-3.0-or-later` inside `local/aichat/version.php`**, `MATURITY_ALPHA`, copyright held by *"Moodle AI Chat Contributors"* rather than Microsoft. 🟢 **It is the best-engineered starting point of the five on paper *(Azure OpenAI behind a retrieval pipeline, a `theme_myuni` companion, a documented threat model)* — and it cannot be put in front of a client until its holder answers which grant applies.**
+
+🔴 **Also excluded:** `industria-elearning/moodle-local_forum_ai` *(slug from a search surface — 🔴 **unresolvable here: `README.md` and `version.php` both `404` across `HEAD`, `main`, `master`, `develop`, `v1.0.6` and `1.0.6`, so this session cannot confirm the repository exists**)* — nothing readable at root, **and it will not run without the proprietary, separately licensed *DataCurso AI Provider*.** 🔵 **Second `DataCurso` dependency on these shelves. A Moodle-directory listing guarantees `GPL-3.0-or-later` on the plugin and says nothing about what the plugin requires.**
+
+🟢 **Licence note that makes the whole stack shippable:** every row above is `GPL-3.0-or-later`, so the stack is internally consistent and a studio's own additions are plugins under the same grant. 🔵 **There is no permissive path through this layer, and there does not need to be: Moodle's plugin directory requires `GPL-3.0-or-later` of every listed plugin anyway.**
+
+### 🆕 🟢 `P220-C` — the offline ministry box, for an engagement where connectivity is the constraint
+
+🔴 **Why it exists: [`intel/market.md`](../intel/market.md) records LATAM as having the world's highest student generative-AI adoption and the thinnest institutional policy, and the UNESCO observatory launched on `14 April 2026` covers `33` education ministries. 🔴 Every other platform row on these shelves assumes a reachable server and a reachable model.**
+
+| layer | what | licence |
+|---|---|---|
+| **the box** | 🟢 [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) `v1.35.1` — a Command Center UI + API orchestrating Docker containers | 🟢 **`Apache-2.0`** *(`LICENSE` `10 779` B + `package.json`)* — 🟢 **rebrandable and resellable** |
+| **courses + progress** | **Kolibri** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — Khan Academy content with progress tracking | 🟢 **`MIT`**, read first-hand this pass |
+| **reference library** | **Kiwix** — [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) · [`kiwix/libkiwix`](https://github.com/kiwix/libkiwix) — offline Wikipedia, medical references, ebooks | 🟡 **no root `LICENSE` in either — resolve before resale** |
+| **local inference** | **Ollama** — [`ollama/ollama`](https://github.com/ollama/ollama), or any OpenAI-compatible endpoint *(LM Studio, `llama.cpp`)* | 🟢 **`MIT`**, read first-hand this pass |
+| **the studio's own service** | 🟢 **drops into the *Supply Depot* catalogue as a custom container — no NOMAD fork required** | yours |
+
+**Sizing and constraints, for the proposal, read first-hand:** ~`5` GB disk and **under `1` GB RAM** for the core; offline content and the model are what size the box. 🔴 **Debian-based hosts only — Ubuntu `26.04` LTS recommended, `24.04` LTS and Debian `12` supported, Windows only via WSL2.** 🔴 **Its headline install is `curl -fsSL … | sudo bash`; use the documented Docker-Compose route in an SOW instead, and say that you did.**
+
+🔴 **What this recipe must NOT claim:** no star count, fork count or trending placement for NOMAD appears anywhere in it. 🔵 **`api.github.com` → `403` and `github.com` HTML → `403` from this session; the `~39.8`k figure a search surface reported is unverified and is deliberately absent.**
+
 ## Pass 219 — 2026-10-15 — THREE RECIPES: THE UPSTREAM-FIRST INTAKE, THE AGENT-REFUSAL READINESS AUDIT, AND THE APAC STANDARDS-ALIGNMENT ENGAGEMENT
 
 🔵 **`0` patterns were invented this pass. `3` are written down because this pass produced the instruments and the facts they need.** 🔴 **Note on this file, carried from `T218-3`: `114` of its level-`2` headings are recipe titles, not pass boundaries — a stale-cell sweep over this file must use `/^## (Pass |[0-9]{4}-)/`.**
