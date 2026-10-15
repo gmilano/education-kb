@@ -1,8 +1,100 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 210 — 2026-10-15 — `ACTION PU` DOUBLES ITS SAMPLE TO `20`/`20`, AND THE INSTRUMENT'S BLIND SPOT IS NOW A MEASURED RATE
+
+### 🟢 `ACTION PU` continued — the next ten masked rows, read by hand
+
+🟢 **p209 read the ten most recipe-exposed masked rows and found `10`/`10` correct, and said in
+terms that the remaining `142` were unmeasured.** 🟢 **p210 took the next ten by the same ranking
+— occurrences in [`compose/patterns.md`](../compose/patterns.md), highest first, from the same
+`281`-row licence census — and read every one against the repository itself on `2026-10-15`.**
+
+| repo | recipe sites | shelf sites | shelf says | 🟢 read first-hand this pass | ★ now |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `38` | `178` | `GPL-3.0` | 🟢 **`GPL-3.0`** | `7.5k` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `24` | `119` | `ECL-2.0` | 🟢 **`ECL-2.0`** *(sidebar names the Educational Community License v2.0)* | `1.2k` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `19` | `49` | `ECL-2.0` | 🟢 **`ECL-2.0`** | `508` |
+| [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | `19` | `24` | `MIT` | 🟢 **`MIT`** | 🔴 **`1`** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `18` | `128` | `AGPL-3.0` | 🟢 **`AGPL-3.0`** | `8.2k` |
+| [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | `16` | `9` | `MIT` | 🟢 **`MIT`** *(no archive or deprecation notice)* | `203` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `15` | `133` | `LGPL-3.0` | 🟢 **`LGPL-3.0`** *(from the blob — sidebar names nothing)* | `889` |
+| [`frappe/education`](https://github.com/frappe/education) | `14` | `61` | `GPL-3.0-STATEMENT` | 🟡 **a `19`-byte STATEMENT, no licence body** *(see below)* | `666` |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `14` | `54` | `MIT` | 🟢 **`MIT`** | `818` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `10` | `59` | `GPL-3.0` | 🟢 **`GPL-3.0`** *(sidebar: `"GPL-3.0, License licenses found"` — multi-licence)* | `1.0k` |
+
+🟢 **`10`/`10` grant families correct. `0` corrections to ship, for the second pass running.**
+[`evidence/masked-class-sample.2026-10-15-p210.tsv`](../evidence/masked-class-sample.2026-10-15-p210.tsv).
+
+### 🟢 What `20`/`20` buys that `10`/`10` did not
+
+🟢 **Cumulative across p209 and p210: `20` masked rows read first-hand, `0` grant-family errors.**
+🔵 **By the same rule of three p209 applied to itself, the `95`% upper bound on the masked-class
+error rate falls from `~26`% to `~15`%.** 🟢 **The pessimistic reading of p208 is now excluded at
+twice the confidence: the masked class is not riddled with p208-shaped errors in the rows a client
+engagement actually reads.**
+
+🔴 **It is still not a clean bill.** 🔵 **`132` of the `152` masked rows remain unmeasured, and the
+two passes have deliberately sampled the SAME tail — highest recipe exposure first — so what is
+measured is the top `13`% of the exposure distribution and nothing else.** 🟢 **The honest client
+statement: every repository in the twenty most recipe-critical rows of this KB had its grant
+confirmed against the repository itself on `2026-10-14` or `2026-10-15`.**
+
+### 🆕 🔴 The side finding from p209 was not an anecdote — it is a `15`% RATE
+
+🔴 **p209 found that GitHub does not classify `OpenOLAT`'s licence and warned that an audit keyed
+on the sidebar or the API's `license` field would be blind to it.** 🔴 **p210 found TWO more in ten
+rows:**
+
+| repo | sidebar | the grant, read from the blob | bytes |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **unnamed `License` link, no family, no SPDX token** | 🟢 **`LGPL-3.0`** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*, full LGPLv3 body | `8.05` KB / `178` lines |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **unnamed `License` link, no family, no SPDX token** | 🟡 **one line: `License: GNU GPL V3`** | 🔴 **`19` bytes / `1` line** |
+
+🔵 **Three of the twenty rows read first-hand have no GitHub-classified licence — `15`%.** 🟢 **That
+is no longer a trap one repository sets; it is a measured property of the instrument every
+automated pass in this KB depends on.** 🔴 **An audit keyed on the GitHub API would return `null`
+for roughly one in seven of this KB's highest-exposure rows, and a pass that treated `null` as
+"ungranted" would have deleted `OpenOLAT` (`Apache-2.0`), `OpenEduCat` (`LGPL-3.0`) and
+`frappe/education` from these shelves.** 🔵 **`ACTION PS` at p208 made exactly this class of error
+in reverse — it built a population of "ungranted" rows that were nothing of the kind.**
+
+### 🆕 🟡 `frappe/education`: a `19`-byte grant is a diligence class of its own
+
+🔴 **[`license.txt`](https://github.com/frappe/education/blob/develop/license.txt) is `19` bytes
+and reads, in full: `License: GNU GPL V3`.** 🔴 **No licence body, no copyright holder, no year, no
+terms, no "either version 3 or any later version" clause.**
+
+🟢 **This KB's family marker for the row — `GPL-3.0-STATEMENT` — was right, and p210 can now say
+first-hand WHY it was marked differently from every other `GPL-3.0` cell on these shelves.**
+🔵 **The distinction is worth a vocabulary, because it decides what a client's counsel can rely on:**
+
+- 🟢 **BODIED** — the repository ships the verbatim licence text *(`OpenOLAT`, `OpenEduCat`, `Moodle`)*. The grant is self-contained.
+- 🟡 **STATED** — the repository names a licence and ships none of it *(`frappe/education`)*. The intent is legible; the terms are incorporated by reference to a document the repository does not contain, and GitHub's own classifier declines to call it a licence.
+
+🔴 **Practical consequence, and it is not theoretical at `61` shelf sites and `14` recipe sites:**
+🔵 **a `STATED` grant is fine for evaluation and bad for a deliverable a client's legal review will
+touch.** 🟢 **Any recipe naming `frappe/education` should either (a) pin the commit and archive the
+statement as evidence, or (b) raise an upstream issue asking for the GPL-3.0 body to be committed
+— a one-file pull request that would convert the row from `STATED` to `BODIED` and fix GitHub's
+classification at the same time.** 🔵 **That is the cheapest open-source contribution available
+anywhere on these shelves, and it removes a diligence flag from a row this KB leans on.**
+
+### 🟢 The two anchor rows, re-read: both still flat
+
+| repo | grant *(read `2026-10-15`)* | ★ now | ★ last recorded | release |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** | `41.4k` | `40.6k` | `2 664` commits |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **`MIT`** | `40.7k` | `39.7k`–`40.0k` | `v1.2.0-rc.1` *(`2026-10-04`)* — 🔴 **unchanged for `11` days, still a pre-release** |
+
+🔵 **Both moved `~1k`★ in a fortnight and neither shipped anything.** 🟢 **`OpenMAIC`'s `v1.2.0`
+has been a release candidate since `2026-10-04`; the `MIT` relicensing still dates only to
+`v0.3.0` (`2026-06-28`) and still does not cover the history, and `packages/mathml2omml` is still
+`LGPL-3.0-or-later`.** 🔴 **Nothing on this row has changed except the star count, which is the
+one number that cannot be used in a client deliverable.**
 
 ## Pass 209 — 2026-10-14 — `ACTION PU`: THE `85`% THE COMPARATOR CANNOT SEE, READ BY HAND — `10`/`10` CLEAN
 

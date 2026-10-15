@@ -1,0 +1,42 @@
+region	country	instrument_or_measure	date	status	provenance
+North America	Mexico	SEP GenAI higher-education survey + 10 acciones for ethical/critical GenAI use	2026-04-15	published	search snippet (SEP comunicado)
+North America	Mexico	SEP national consultation on tech/phones/social media/AI in schools	2026-07	open	search snippet (press)
+North America	Mexico	SEP-UNESCO Letter of Intent, ethical AI in education	2026-09-07	signed	search snippet (La Jornada)
+North America	Mexico	DOF accord restricting phones/smart devices in schools (all-day for basic ed)	2026-11-03	in force from date	search snippet (DOF press)
+North America	Mexico	basic-education AI guidelines	-	NOT FOUND - informed gap	search snippet
+North America	Canada	education is provincial; only BC, QC, ON have concrete AI-in-education steps	-	standing	search snippet (CTF-FCE scan)
+North America	Canada-Ontario	"Cyber Safety and Artificial Intelligence" mandatory educator PD topic	2026-27 school year	mandated	search snippet
+North America	Canada-Ontario	ministry memorandum on AI	-	NONE - boards set rules	search snippet
+North America	Canada-BC	"Considerations for Using AI Tools in K-12 Schools" framework	-	guidance	search snippet
+North America	Canada-Quebec	"Pret pour l'IA" report, 12 recommendations incl. curriculum	-	recommendations	search snippet
+North America	Canada-Alberta	provincial AI-in-education guidance	-	NOT FOUND - informed gap	search snippet
+North America	Canada	CMEC ministers' meeting reinforced provincial control	2026-06	held	search snippet
+North America	USA	AI-in-education bills introduced	2026 session	134 bills / 31 states	search snippet (MultiState)
+North America	USA	Maryland: all 24 districts must adopt AI policies	fall 2026	mandated	search snippet
+North America	USA	K-12 teachers using AI 2024-25 (32% weekly)	2024-25	60%	search snippet
+North America	USA	share of global AI-in-education market	2026	36%	search snippet
+EMEA	EU	AI Act enforcement by AI Office + Member States	2026-08-02	in force	europa.eu digital-strategy
+EMEA	EU	AI Omnibus amendments entered into force	2026-07-27	in force	europa.eu (adoption date conflicts: 2025-11-19 vs 2026-06)
+EMEA	EU	education uses (admissions, assessment, grading) = high-risk, conformity assessment required	-	standing	search snippet
+EMEA	South Africa	Draft National AI Policy published for public comment; STEAM + community AI centres	2026-04-10	draft/consultation	search snippet
+EMEA	UAE	National AI Strategy 2031 + AI Ethics Guidelines	-	standing	search snippet
+EMEA	Saudi Arabia	SDAIA national data & AI governance framework	-	standing	search snippet
+EMEA	Europe	AI-in-education market	2026	$2.64B -> $8.0B by 2030	search snippet (aggregator - weak)
+EMEA	Finland/Estonia/Netherlands	named K-12 AI integration leaders	-	claim	search snippet (aggregator - weak)
+APAC	Vietnam	AI law in force; high-risk list INCLUDES education (automated assessment, behavioural monitoring)	2026-03-01	in force	search snippet
+APAC	Vietnam	compliance deadline; pre-2026-08-15 education systems get +6 months grace	2027-03-01	deadline	search snippet
+APAC	South Korea	AI Basic Act in force	2026-01-22	in force	search snippet
+APAC	Japan/Taiwan	framework/promotion instruments, few direct duties	-	standing	search snippet
+APAC	Singapore/Australia	voluntary frameworks + existing statutes	-	standing	search snippet
+APAC	China/Singapore	established AI-in-education policies and guidelines	-	standing	UNESCO
+APAC	Australia/NZ	higher public support for banning AI in schools than Asian markets	2026	Ipsos Education Monitor 2026	search snippet
+LATAM	Brazil/Chile/Colombia/Costa Rica	secondary teachers using AI (OECD avg 36%)	TALIS 2024	52-56%	UNESCO
+LATAM	region (13 countries)	15-year-olds who have used AI chatbots for schoolwork	PISA 2025	~9 in 10	UNESCO
+LATAM	19 countries / 200 institutions	higher-ed institutions using AI somewhere; only 26% have a formal AI strategy	2026	87% / 26%	UNESCO IESALC
+LATAM	Argentina	AI use among 9-17s by socio-economic class	-	75% high vs 42% low	UNESCO
+LATAM	Brazil	school administrators using AI; schools with guidelines	-	53% / 22%	UNESCO
+LATAM	Uruguay	first LATAM signatory, Council of Europe AI framework convention	2025	signed	IP Helpdesk
+LATAM	Peru	AI law: risk classification, regulatory sandboxes, phased SME timelines	-	passed	IP Helpdesk
+LATAM	Mexico	federal AI bill in Senate, risk-tiered	-	pending	IP Helpdesk
+LATAM	Colombia	national AI policy CONPES 4144	2025-02	adopted	IP Helpdesk
+LATAM	region	UNESCO Observatory on AI in Education for LATAM/Caribbean launched, Santiago	2026-04-14	launched	UNESCO

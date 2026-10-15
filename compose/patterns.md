@@ -1,8 +1,112 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 210 — 2026-10-15 — TWO RECIPES BUILT FOR DATED OBLIGATIONS, WITH EVERY FRAGILE COMPONENT'S FALLBACK NAMED
+
+🔵 **Every repository named below had its grant read from the repository itself on `2026-10-15`
+(`ACTION PU`, this pass) or `2026-10-14` (p209) — `20` of `20` confirmed correct.**
+🟢 **Read dates are given per row, because a grant is a fact with a timestamp.**
+🔴 **New discipline from `ACTION PV` (`repos/foundations.md` p210): any component with ★`< 50` and
+`≥ 5` recipe sites carries its FALLBACK in the same table, costed as BUILD. Three of this KB's
+most-used components are in that class, and both recipes below name theirs.**
+
+### 🟢 `P210-A` — high-risk automated-assessment conformity stack *(Vietnam `2027-03-01`, EU Annex III)*
+
+🔵 **The constraint that decides this stack is not pedagogy or bandwidth — it is EVIDENCE.**
+🔴 **Vietnam's AI law names education in its high-risk list (automated assessment, behavioural
+monitoring), is in force since `2026-03-01`, and sets compliance at `2027-03-01`; systems running
+before `2026-08-15` got `6` extra months and that cut-off has passed.** 🟢 **The EU requires
+conformity assessment BEFORE deployment for the same functions, with the AI Office enforcing since
+`2026-08-02`.** 🔵 **One deliverable, two regions, because both ask the same question: can you show
+how this decision was made?**
+
+| layer | component | grant | ★ | read | the job |
+|---|---|---|---|---|---|
+| assessment engine | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **`MIT`** | `818` | `2026-10-15` | *"Interactive Learning with Automated Feedback"* — this IS the high-risk function, under a permissive grant, from a university that runs it at scale |
+| evidence store | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** | 🟡 **`51`** | `2026-10-14` | `xAPI` Learning Record Store — the immutable audit trail that answers the regulator |
+| learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **`MIT`** | `446` | `2026-10-14` | Benchmarked deep knowledge tracing — mastery estimates that can be explained and re-run |
+| quality harness | [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🟡 **`MIT` (README only; sidebar unclassified)** | 🔴 **`3`** | `2026-10-15` | Pedagogical-quality scoring on mistake identification, mistake location, guidance, actionability — the pre-deployment test report |
+| integration seam | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | 🟢 **`MIT`** | `203` | `2026-10-15` | LTI tool provider/consumer — bolts onto the institution's existing LMS without forking it |
+
+🟢 **Wiring, concretely:** **Artemis** performs the assessment. 🔴 **Every automated decision emits
+an `xAPI` statement to **Ralph** carrying the model identifier and version, the learner input, the
+score, and the rationale — that statement stream IS the conformity record, and it must be written
+at decision time because it cannot be reconstructed afterwards.** **pyKT** consumes Ralph's
+statements to maintain the per-learner mastery vector Artemis reads back, so the learner model is
+explainable from the same store that proves it. **AITutor-EvalKit** runs as a test harness, not a
+runtime dependency: once before deployment and on a schedule thereafter, producing the
+pedagogical-quality report that accompanies the conformity file. **ims-lti** exposes the whole stack
+as an LTI tool so it attaches to the client's incumbent Moodle or Canvas.
+
+🔴 **The licence boundary, and it is the whole reason this stack is shaped this way:** 🟢 **all five
+components are permissive, so the studio's conformity logic, evidence schema and scoring thresholds
+— the defensible work — stay proprietary.** 🔴 **DO NOT FORK the incumbent LMS. `Canvas` and
+`Open edX` are `AGPL-3.0` (both read `2026-10-15`: `edx-platform` `8.2k`★; `Canvas` on shelf), and
+`AGPL` network copyleft on a hosted client system creates a source-offer duty over your
+modifications.** 🔵 **LTI is the seam precisely because it crosses the licence boundary without
+crossing the derivative-work boundary.**
+
+🔴 **Fallbacks, per `ACTION PX`:**
+- 🟡 **`openfun/ralph` at `51`★ carries `20` recipe sites across this KB.** 🟢 **Fallback: `xAPI` is a published specification and the LRS contract is `POST /statements` plus a query API. A studio-owned endpoint over Postgres is `~2` weeks, and for a conformity use-case the write path matters far more than the query surface. Cost it as BUILD and keep Ralph as the default.**
+- 🔴 **`AITutor-EvalKit` at `3`★ and `8` commits is NOT a dependency.** 🟢 **Its value is the published scoring rubric (`MI`/`ML`/`PG`/`AC`) from an `EACL 2026` demo paper, which is reimplementable in-engagement. Use the repo to bootstrap and expect to own the harness.**
+
+🟢 **What the engagement BUILDS (the defensible part):** the decision-to-`xAPI` evidence schema and
+its completeness guarantees, the jurisdiction profile that maps Vietnam's high-risk duties and EU
+Annex III onto the same record, the scoring thresholds and their justification, and the
+re-audit pipeline. 🔵 **Built once, it is the same artefact whether the European EdTech Alliance's
+push-back on ANNUAL external audits succeeds or fails (p209, `T209-2`) — sold as obligation if the
+clause survives, as differentiator if it does not.**
+
+### 🟢 `P210-B` — governance retrofit over a deployed base *(LATAM's `87`/`26` gap)*
+
+🔵 **The constraint here is that there is nothing to sell and nothing to install.** 🟢 **`87`% of
+`200` higher-education institutions across `19` LATAM countries already use AI; `26`% have a formal
+strategy (UNESCO IESALC). Brazil: `53`% of administrators using AI, `22`% of schools with
+guidelines. Teachers in Brazil, Chile, Colombia and Costa Rica at `52`–`56`% against an OECD `36`%
+(TALIS `2024`).** 🔴 **The adoption question is closed. This recipe governs a base that already
+exists, on top of an LMS the institution will not replace.**
+
+| layer | component | grant | ★ | read | the job |
+|---|---|---|---|---|---|
+| incumbent, never forked | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`GPL-3.0`** | `7.5k` | `2026-10-15` | The deployed base across the region. 🔴 **Treat as immovable infrastructure** |
+| integration seam | [`instructure/ims-lti`](https://github.com/instructure/ims-lti) | 🟢 **`MIT`** | `203` | `2026-10-15` | LTI — how proprietary work attaches without touching `GPL` core |
+| visibility | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **`MIT`** | 🟡 **`51`** | `2026-10-14` | 🔴 **Step one of any retrofit: you cannot govern AI use you cannot see** |
+| equity measurement | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **`MIT`** | `446` | `2026-10-14` | Mastery estimates, disaggregated by cohort — the input to the equity report |
+| credential | [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🟢 **`MIT`** | 🔴 **`1`** | `2026-10-15` | Open Badges `3.0` achievement definitions. 🔴 **See the fallback — do not depend on this** |
+| low-bandwidth tail | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | `1.1k` | `2026-10-14` | Offline-first delivery where connectivity is the binding constraint |
+
+🟢 **Wiring, in the order the work must actually happen — this is a sequence, not an architecture
+diagram:**
+1. 🔴 **INSTRUMENT FIRST.** Register an LTI tool via **ims-lti** against the institution's Moodle and route AI interactions through it, emitting `xAPI` to **Ralph**. 🔵 **The `87`/`26` gap means AI use is happening through consumer tools nobody logs; the first deliverable is simply a true picture of it.**
+2. 🟢 **POLICY SECOND, informed by step one.** The `74`% without a strategy do not need a template — they need a strategy that matches what Ralph shows their own institution is doing. 🔵 **UNESCO's Observatory on AI in Education for LATAM (launched `2026-04-14`, Santiago; partners include CENIA, CETIC.br, ECLAC, Tecnológico de Monterrey, ProFuturo, Fundación Ceibal) is the reference table to align to.**
+3. 🟢 **EQUITY THIRD, and it is measured, not asserted.** Feed Ralph's statements to **pyKT** and disaggregate mastery by cohort. 🔴 **Argentina's `75`% vs `42`% AI use by socio-economic class is the shape to test for; an equity audit is a priced component because the disparity is documented region-wide.**
+4. 🟢 **CREDENTIAL FOURTH.** Emit Open Badges `3.0` achievement definitions so the outcome is portable, matching the micro-credential trend.
+5. 🟢 **Where connectivity fails, Kolibri** carries the same content offline and syncs to Ralph on the next uplink.
+
+🔴 **The licence boundary:** 🟢 **Moodle is `GPL-3.0` and stays untouched — no fork, no core patch.
+Everything the studio writes lives behind LTI and stays proprietary.** 🔵 **This is the general
+escape these shelves have recommended for eight passes now that a permissive SIS has been
+confirmed not to exist: put the proprietary work in the AI layer ABOVE a copyleft record system.**
+
+🔴 **Fallbacks, per `ACTION PX`:**
+- 🔴 **`opensalt/OB3DefinitionWidget` at `1`★ is the most fragile row in this entire KB and it sits at `19` recipe sites.** 🟢 **Fallback, and it is cheap: Open Badges `3.0` is a published `1EdTech` specification and the widget is an authoring convenience, not an implementation of anything proprietary. Emit the achievement definition directly from the spec and treat the widget as reference material. 🔵 **No engagement should take a dependency on it.**
+- 🟡 **`openfun/ralph` — as in `P210-A`: studio-owned `xAPI` endpoint, costed as BUILD.**
+
+🟢 **What the engagement BUILDS:** the LTI instrumentation layer, the cohort-disaggregation and
+equity-reporting pipeline over Ralph plus pyKT, and the institutional AI policy derived from
+measured use rather than a template. 🔵 **The sale does not depend on a new AI budget line — it is
+funded as governance, risk and accreditation work over a deployment the institution already paid
+for.**
+
+### 🔴 Deliberately excluded from both recipes, and why
+
+- 🔴 **`frappe/education`** *(`666`★, read `2026-10-15`)* — 🟡 **its entire `license.txt` is `19` bytes: `License: GNU GPL V3`. No licence body, no holder, no year, no terms, and GitHub's classifier declines to name it.** 🔵 **A `STATED` rather than `BODIED` grant (`intel/trends.md` `T210-4`) is fine to evaluate and a diligence flag in anything a client's counsel reads. 🟢 **If a recipe needs it, pin the commit, archive the statement, and raise the one-file upstream PR that commits the GPL-3.0 body.**
+- 🔴 **`Ed-Fi-Alliance-OSS/edfi-oneroster`** *(`6`★, `13` recipe sites)* — excluded here because neither recipe is US-K-12. 🟢 **Where it is needed, p209's fallback stands: `Ed-Fi ODS/API` (`Apache-2.0`) with a `OneRoster` adapter written in the engagement.**
+- 🔴 **`THU-MAIC/OpenMAIC`** *(`MIT`, `40.7k`★, read `2026-10-15`)* — 🟡 **`v1.2.0-rc.1` has been a pre-release since `2026-10-04`, the `MIT` relicensing dates only to `v0.3.0` (`2026-06-28`) and does not cover the history, and `packages/mathml2omml` is `LGPL-3.0-or-later`.** 🔵 **Excellent for a demo, not yet a component of a conformity deliverable.**
+- 🔴 **`Canvas` / `Open edX`** — `AGPL-3.0`. 🔵 **Fine as the incumbent to integrate with over LTI; never fork on a hosted client system.**
 
 ## Pass 209 — 2026-10-14 — TWO RECIPES WHOSE EVERY COMPONENT GRANT WAS READ TODAY, AND ONE PLATFORM DELIBERATELY EXCLUDED
 

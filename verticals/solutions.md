@@ -1,8 +1,84 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 210 — 2026-10-15 — EIGHTH NEGATIVE READING ON A PERMISSIVE SIS, AND THE CHANNEL HAS STARTED ANSWERING A DIFFERENT QUESTION
+
+### 🔴 No permissive education SIS, eighth consecutive reading
+
+🟢 **`open source platform education ERP CRM SIS MIT Apache 2026` returned nine sources.** 🔴 **The
+channel's own verdict, quoted: it *"didn't turn up an open source education platform that is MIT or
+Apache licensed and covers ERP, CRM, and SIS together."*** 🟢 **What it returned, with grants read
+first-hand where the row is on these shelves:**
+
+| platform | grant | read how | what it is | permissive? |
+|---|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`LGPL-3.0`** | 🟢 **blob, `2026-10-15`** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*, `8.05` KB | Education ERP: SIS + LMS + CRM modules, `889`★ | 🔴 **no** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | 🟢 sidebar, `2026-10-15` | the largest ecosystem, `7.5k`★ | 🔴 no |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `AGPL-3.0` | 🟢 sidebar, `2026-10-15` | Open edX LMS & Studio, `8.2k`★ | 🔴 no |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `ECL-2.0` | 🟢 sidebar, `2026-10-15` | HE LMS, `1.2k`★ | 🟡 effectively yes, via `ECL` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-3.0` *(multi-licence)* | 🟢 sidebar, `2026-10-15` | LMS focused on ease of use and accessibility, `1.0k`★ | 🔴 no |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **`GPL-3.0` by `19`-byte statement** | 🟢 blob, `2026-10-15` | *"Open source education / school management system"*, `666`★ | 🔴 no |
+| `ERPNext` · `Dolibarr` | `GPL-3.0` | search snippet | generic ERP with an education module | 🔴 no |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **`Apache-2.0`** | 🟢 **sidebar, `2026-10-15`** | generic ERP: accounting, CRM, orders, warehousing, MRP; `1.1k`★, `30 511` commits | 🟢 **yes — and no education layer at all** |
+| `Atomic CRM` · `Krayin` | `MIT` | search snippet | 🔴 **CRMs, not education systems** | 🟢 yes / 🔴 irrelevant |
+| `RosarioSIS` · `Gibbon` | `GPL` | prior passes | the only SIS answers that exist | 🔴 **no** |
+
+🟢 **State it to clients as the market fact eight readings make it: the student-record layer of
+open-source education is COPYLEFT, end to end, and no amount of searching changes that.**
+
+### 🆕 🔴 The channel drifted, and that is itself the finding
+
+🔴 **Three of this pass's nine hits were generic business software with no education dimension —
+`Apache OFBiz`, `Atomic CRM`, `Krayin`.** 🔵 **The query named `ERP` and `CRM` alongside `SIS`, and
+the channel resolved the permissive constraint by dropping the INDUSTRY instead of returning
+nothing.**
+
+🟢 **Guidance for later passes, because this will recur with any multi-term vertical query:** 🔴 **a
+search that cannot satisfy every term silently relaxes one, and the term it relaxes is the one
+hardest to match — here, `education`.** 🔵 **So a hit list that is `30`% off-vertical is not a bad
+sample; it is the channel telling you the constrained set is EMPTY.** 🟢 **Read the drift as a
+negative result with a confidence attached, and do not re-run the query hoping for better luck.**
+
+### 🆕 🟢 What `Apache OFBiz` is actually worth here — one honest option, not a recommendation
+
+🔵 **`OFBiz` is the only permissive ERP the channel has ever returned for this vertical, and it has
+no education layer whatsoever.** 🟢 **That makes it a genuine architectural option in exactly one
+situation, worth writing down because the shelf has been answering "no permissive SIS" for eight
+passes without naming what the alternative would cost:**
+
+- 🟢 **Use it when** the client's hard constraint is that the record layer must not be copyleft — a vendor embedding the system in a proprietary product, or a ministry whose procurement forbids reciprocal licences on state systems.
+- 🔴 **The cost is the whole domain model.** `OFBiz` gives accounting, parties, orders and warehousing; enrolment, courses, sections, terms, transcripts, attendance and grading are all BUILD. 🔵 **That is `OpenEduCat`'s entire value proposition rebuilt from parties and orders.**
+- 🟡 **The honest comparison:** 🔴 **`OFBiz`-plus-build is almost always the wrong answer on cost, and almost always the only answer on licence.** 🟢 **The cheaper escape remains the one these shelves already prefer: a copyleft record system with the proprietary work in the AI layer ABOVE it, or `Ed-Fi ODS/API` (`Apache-2.0`) as the permissive data-standard escape hatch.**
+- 🟢 **Verified first-hand this pass, so `ACTION PY` opened and closed inside p210:** [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) is 🟢 **`Apache-2.0`** by sidebar, `1.1k`★, `30 511` commits, described as *"an open source product for the automation of enterprise processes"* covering ERP, CRM and e-commerce. 🔵 **The grant is real and the education layer genuinely does not exist — the `30 511` commits are accounting, parties, orders and warehousing.**
+
+### 🆕 🔴 `opensalt/OB3DefinitionWidget` — this shelf's most fragile row, named
+
+🔴 **Read first-hand `2026-10-15`: `MIT`, and `1`★.** 🔴 **It appears at `11` sites on this shelf
+and `19` sites in [`compose/patterns.md`](../compose/patterns.md) — the Open Badges 3.0 credential
+path in every micro-credential recipe this KB publishes runs through a one-star repository.**
+
+🟢 **The mitigation is unusually cheap here, which is why this row is a flag and not an
+emergency:** 🔵 **Open Badges 3.0 is a published `1EdTech` specification, and the widget is a
+convenience for authoring an achievement definition — not an implementation of anything secret.**
+🟢 **Any engagement can emit a conformant achievement definition directly from the spec, and
+should treat the widget as a reference rather than a dependency.** 🔴 **Recipes naming it must say
+so; `ACTION PX` in `repos/foundations.md` p210 carries this.**
+
+### 🟢 Two platform grants that no licence scanner can see — now a `15`% rate, not a curiosity
+
+🔴 **p209 reported that `OpenOLAT`'s sound `Apache-2.0` grant is invisible to GitHub's classifier.**
+🔴 **p210 adds `openeducat/openeducat_erp` (`LGPL-3.0`, `8.05` KB body) and `frappe/education`
+(`GPL-3.0` statement, `19` bytes) — both showing an unnamed `License` link and no SPDX token.**
+
+🔵 **Three of twenty rows read first-hand, `15`%** *(full count in [`agents/top.md`](../agents/top.md) p210)*.
+🔴 **Procurement consequence, now with a number on it: a client's SBOM or licence-scan tool keyed on
+GitHub's detection will report NO LICENCE for roughly one in seven of the platforms on this shelf
+— including two it will then block.** 🟢 **The remedy is the same and it is now routine: ship the
+blob URL, the byte count and the read date beside every grant in a deliverable, so the scanner's
+silence is answered before it is raised.** 🔵 **That is precisely what the tables in this pass do.**
 
 ## Pass 209 — 2026-10-14 — SEVENTH NEGATIVE READING ON A PERMISSIVE SIS, AND A PLATFORM WHOSE GRANT NO SCANNER CAN SEE
 

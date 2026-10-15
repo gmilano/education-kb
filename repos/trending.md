@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## 2026-10-15 — pass 210 — THE TRENDING CHANNEL ANSWERED A DIFFERENT QUESTION, AND THE STAR COLUMN TURNED OUT TO BE FREE INTELLIGENCE
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🔴 What the discovery queries returned
+
+🟢 **Queries run this pass, global shape plus the vertical sweep:**
+`top open source AI agents education 2026 github MIT` ·
+`github trending education AI 2026` ·
+`open source platform education ERP CRM SIS MIT Apache 2026` ·
+`open source AI tutor agent github 2026 new release MIT license education LMS`
+🔵 **plus four per-region probes, reported in `intel/market.md` p210.**
+
+🔴 **`github trending education AI 2026` returned, for the seventh pass running, no
+education-specific trending list.** 🟢 **What it surfaced instead: `Open WebUI` (`154 575`★ per a
+blog), Microsoft `BitNet`, `HKUDS/Vibe-Trading` (`~24k`★), `microsoft/generative-ai-for-beginners`
+(`121k`★), and a GitHub Education announcement that premium models are no longer self-selectable on
+the Copilot Student Plan as of `2026-03-12`.** 🔴 **None is an education asset; the last is a
+procurement fact about a vendor's student tier, not a repository.**
+
+🔵 **Written down as the channel property it is: there is no education vertical on GitHub
+Trending.** 🟢 **A general-purpose trending query cannot see this industry, because education
+repositories do not trend — `Moodle` at `7.5k`★ after twenty years is the ceiling, while a coding
+agent clears `100k`★ in a quarter.** 🔴 **Any later pass tempted to re-run
+`github trending {industry} AI {year}` should read this paragraph first: seven readings, zero
+yield. The query shape is wrong for the vertical, not unlucky.**
+
+### 🆕 🟢 The one methodological gain: the star column was free all along
+
+🟢 **p210 read ten grants with `WebFetch` and got ten star counts in the same responses, at no
+extra cost.** 🔵 **That turned `ACTION PV` — opened at p209 as a separate sweep nobody had budget
+for — into a by-product of verification, and it landed three hits immediately
+(`repos/foundations.md` p210).**
+
+🔴 **The lesson generalises, and it is worth stating because this KB has spent several passes
+designing instruments that read ONE column:** 🟢 **a `WebFetch` of a repository page returns the
+grant, the star count, the fork count, the commit count, the description, the archive/deprecation
+banner and the latest release in one call.** 🔵 **Every pass from here that reads a grant should
+record all of it, because the marginal cost is zero and the second column is where p210's real
+finding came from.** 🟢 **A single-column instrument is the expensive way to look at a page you
+are already fetching.**
+
+### 🟢 Movement on the two anchor rows, and a correction to how this KB quotes them
+
+| repo | grant *(read `2026-10-15`)* | ★ now | ★ last recorded | shipped anything? |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `41.4k` | `40.6k` | 🔴 **no release change observed** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` | `40.7k` | `39.7k`–`40.0k` | 🔴 **no — `v1.2.0-rc.1` (`2026-10-04`) still a pre-release, `11` days on** |
+
+🔴 **Both gained roughly `1 000`★ in a fortnight and neither cut a release.** 🔵 **This KB has
+quoted these two by star count across many passes; p210 is the pass that says stop.** 🟢 **Stars
+measure attention and this industry's buyers do not procure on attention — they procure on a
+grant, a release cadence and a maintainer. `OpenMAIC` has had a release candidate open for `11`
+days and an `MIT` grant that is `3.5` months old and does not cover its own history; those are the
+facts a client needs, and the `40.7k` is the one that would get quoted and the one that means
+least.**
 
 ## 2026-10-14 — pass 209 — THE TRENDING CHANNEL PRODUCED ONE THING OF VALUE AND IT IS A REFUTATION
 

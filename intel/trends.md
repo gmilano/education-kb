@@ -1,8 +1,148 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 210 — 2026-10-15 — A COMPLIANCE DEADLINE WITH EDUCATION NAMED IN IT, AND THE COMMONS IS ROTTING AT THE SEAMS
+
+### 🆕 🔴 `T210-1` — Vietnam is the first jurisdiction to put a COMPLIANCE date on education AI, and its grandfather clause has already expired
+
+🆕 🔴 **Vietnam's AI law has been in force since `2026-03-01`; its high-risk list NAMES education,
+including automated assessment and behavioural monitoring; compliance is due `2027-03-01`; and
+systems already operating in education before `2026-08-15` received an extra `6` months**
+*(search-snippet, unverified)*.
+
+🔵 **Every dated instrument on these shelves until now was a rollout date, a guidance date or an
+enforcement-machinery date. This is the first DEADLINE — a day on which a non-conformant education
+system becomes unlawful.** 🟢 **And the grandfather cut-off is in the past, so the population is
+closed: whatever was running in Vietnamese education on `2026-08-15` is the set that gets the grace
+period, and nothing deployed after it does.** 🔴 **`~16` months to conformity for an installed base
+that cannot grow.**
+
+🟢 **Trend statement: regulatory pressure on education AI has moved from DECLARATION to DEADLINE,
+and it happened in APAC first, not the EU.** 🔵 **The EU named education high-risk earlier and is
+still arguing about which date applies to it (`2026-08-02` vs `2027-12-02`); Vietnam shipped a date
+and a grace window.** 🔴 **A KB that tracked only the EU would have called this trend wrong.**
+
+### 🆕 🟢 `T210-2` — LATAM's defining shape is a `61`-point gap between adoption and governance
+
+🆕 🟢 **`87`% of `200` higher-education institutions across `19` LATAM countries use AI somewhere;
+`26`% have a formal AI strategy** *(UNESCO IESALC)*. 🔵 **Corroborated downward through the system:
+Brazil `53`% of administrators using AI against `22`% of schools with guidelines; teachers in
+Brazil, Chile, Colombia and Costa Rica at `52`–`56`% against an OECD average of `36`% (TALIS
+`2024`); `~9` in `10` `15`-year-olds across `13` countries using AI chatbots for schoolwork (PISA
+`2025`).**
+
+🟢 **Trend statement: in LATAM the adoption question is CLOSED and the governance question has not
+been opened.** 🔵 **This inverts the sales motion every other region needs. There is no case to
+make for AI — teachers, students and administrators are already using it, ahead of the OECD. The
+deliverable is retrofit: policy, evidence, equity and risk controls over a deployed base.**
+🔴 **And the equity dimension is measured, not rhetorical — Argentina `75`% vs `42`% by
+socio-economic class — so an equity audit is a priced component, not a slide.**
+
+🔵 **Why this is a durable trend and not a snapshot: it is sourced from UNESCO, TALIS and PISA
+rather than vendor aggregators, which makes it the best-evidenced regional statement on these
+shelves.** 🟢 **It also now has an institutional venue — UNESCO's Observatory on AI in Education for
+LATAM, launched `2026-04-14` in Santiago.**
+
+### 🆕 🔴 `T210-3` — open-source education has robust PLATFORMS and abandoned CONNECTIVE TISSUE
+
+🟢 **`ACTION PV`'s first measurement, across the `20` rows this KB has read first-hand, found the
+risk is not where it was expected** *(full table in [`repos/foundations.md`](../repos/foundations.md) p210)*:
+
+- 🟢 **Every PLATFORM is fine:** `edx-platform` `8.2k`★, `moodle` `7.5k`★, `sakai` `1.2k`★, `chamilo` `1.0k`★, `kolibri` `1.1k`★, `openeducat_erp` `889`★, `Artemis` `818`★, `frappe/education` `666`★, `opencast` `508`★.
+- 🔴 **Every fragile row is a SEAM:** `opensalt/OB3DefinitionWidget` **`1`★ carrying `19` recipes**, `ArnaudGuiovanna/tutor-mcp` **`48`★ carrying `23`**, `Ed-Fi-Alliance-OSS/edfi-oneroster` **`6`★ carrying `13`**, `openfun/ralph` **`51`★ carrying `20`**.
+
+🔵 **Trend statement: the education commons sustains large institutional platforms and does not
+sustain the glue between them — the badge widget, the MCP tutor server, the roster adapter, the
+learning-record store.** 🟢 **The reason is structural: a university funds Moodle because it runs
+on Moodle; nobody's budget line is "the `xAPI` bridge", so the glue is written once by one person
+and left.**
+
+🟢 **The commercial inversion, and it is the most useful thing in this pass:** 🔵 **the seams are
+exactly what a studio builds and owns anyway.** 🔴 **No client pays Globant to maintain Moodle.**
+🟢 **It pays for integration — and the measurement says the integration layer of this entire
+vertical has NO INCUMBENT. A hardened, permissively-licensed `xAPI`→knowledge-tracing bridge, or a
+maintained `OneRoster`/`Ed-Fi` adapter, is simultaneously the fix for this KB's own fragility and a
+reusable asset across every engagement in the industry.**
+
+### 🆕 🔴 `T210-4` — grant VISIBILITY is now a measured defect, and `STATED` is not `BODIED`
+
+🔴 **`3` of the `20` rows read first-hand — `15`% — have NO GitHub-classified licence:
+`OpenOLAT` (`Apache-2.0`, `10.7` KB body), `openeducat/openeducat_erp` (`LGPL-3.0`, `8.05` KB
+body), `frappe/education` (a `19`-byte statement).** 🟢 **p209 found the first and called it a trap;
+two passes make it a rate.**
+
+🔵 **Consequence for the industry, not just for this KB: a client's SBOM or licence-scan tool keyed
+on GitHub's detection — which is what most are — reports NO LICENCE for roughly one in seven of the
+major open-source education platforms, and will then block two of them.** 🟢 **Shipping the blob
+URL, byte count and read date beside every grant is now standard practice on these shelves.**
+
+🆕 🟡 **And a new axis the `frappe/education` reading forced into existence:**
+🟢 **`BODIED`** — the repository ships the verbatim licence text; the grant is self-contained.
+🟡 **`STATED`** — the repository names a licence and ships none of it. `frappe/education`'s entire
+`license.txt` is `19` bytes: `License: GNU GPL V3`. 🔴 **No body, no holder, no year, no terms.**
+🔵 **Legible intent, incorporated by reference to a document the repository does not contain — and
+GitHub's classifier declines to call it a licence at all.** 🟢 **Fine for evaluation; a diligence
+flag in any deliverable a client's counsel reviews.**
+
+### 🆕 🟢 `T210-5` — "North America" is three procurement systems, and the pitch does not transfer
+
+🟢 **`ACTION PW` closed this pass** *(detail in [`intel/market.md`](market.md) p210)*. 🔵 **The
+three systems:**
+
+| country | unit of procurement | the lever |
+|---|---|---|
+| **USA** | the STATE, restricted by AGE BAND | `134` bills / `31` states in `2026`; Maryland's `24` districts by fall `2026` |
+| **Mexico** | the FEDERATION — one buyer, one language | SEP consultation open since `2026-07`; UNESCO LoI `2026-09-07`; 🔴 **DOF device ban in force `2026-11-03`** |
+| **Canada** | the PROVINCE — and in Ontario, the BOARD | 🟢 **Ontario's MANDATORY educator PD topic for `2026-27` with no ministry memorandum to implement it** |
+
+🔵 **Trend statement: regional labels are a liability in this industry.** 🔴 **A single "North
+America" education deliverable cannot exist — the per-state, per-grade policy switch that a US
+engagement requires is the wrong abstraction for a federal Mexican buyer and meaningless to a
+Canadian province.** 🟢 **Build the policy layer as a pluggable jurisdiction profile, not a US
+feature with exceptions.**
+
+🔴 **And two informed gaps, stated rather than papered over: Alberta has no locatable provincial
+AI-in-education guidance, and Mexico has no final basic-education AI guidelines — only proposed
+ones.**
+
+### 🆕 🟢 `T210-6` — compliance-led EMEA, strategy-led Gulf, and APAC's public opinion runs backwards
+
+🔵 **Three regional pitch shapes, now distinguishable:**
+🟢 **EU — sell CONFORMITY.** The AI Office and Member-State authorities have been enforcing since
+`2026-08-02`, with education's admissions/assessment/grading uses high-risk and conformity
+assessment required pre-deployment.
+🟢 **Gulf — sell ALIGNMENT.** UAE's National AI Strategy `2031` and Saudi SDAIA's governance
+framework are state-led and capital-rich, with 🔴 **no education-specific rule found — an informed
+gap.** 🔵 **Same deliverable as the EU, opposite framing: national-strategy contribution, not
+Annex III defence.**
+🆕 🟢 **South Africa — sell READINESS.** A Draft National AI Policy out for comment since
+`2026-04-10`, with an explicit education-and-skills limb (STEAM curricula, community AI centres).
+🔴 **A draft, so influence work rather than compliance work — and the first actionable African
+instrument these shelves have carried.**
+
+🆕 🟡 **The APAC inversion, which a studio will get wrong by default:** 🔴 **Ipsos's Education
+Monitor `2026` finds Australia and New Zealand show HIGHER public support for banning AI in schools
+than the Asian markets surveyed.** 🔵 **The two APAC markets easiest to sell into on language and
+contracting have the most hostile publics; the harder markets are the receptive ones.** 🟢 **In ANZ
+lead with governance, evidence and opt-out design. In Southeast Asia lead with capability.**
+
+### 🟢 `T210-7` — the discovery channel is saturated on a SEVENTH reading, and there is no education vertical on GitHub Trending
+
+🟢 **Seventh consecutive pass returning `0`–`2` new candidate education agents and `0` accepted;
+eighth consecutive pass returning `0` new foundational repos.** 🔵 **Two rows surfaced and both were
+rejected on WEIGHT, not on grant — `Gchism94/ai-tutor` (`MIT`, `1`★, `5` commits) and
+`maxew6/ai-tutor-project` (`MIT`, `0`★, a redeploy of someone else's tutor).**
+
+🔴 **A separate and sharper channel finding: `github trending {industry} AI {year}` has returned no
+education-specific trending list in seven attempts, and this pass explains why.** 🟢 **Education
+repositories do not trend. `Moodle` at `7.5k`★ after two decades is this vertical's ceiling, while
+a coding agent clears `100k`★ in a quarter.** 🔵 **The trending channel is a popularity instrument
+and this industry is not popular — the query shape is wrong for the vertical, not unlucky.**
+🟢 **Retire it; spend the budget on verification, where `20` rows have now been read by hand and
+`20` of `20` were correct.**
 
 ## Pass 209 — 2026-10-14 — THE DISCOVERY CHANNEL IS SATURATED SIX TIMES OVER, AND THE LOBBY HAS NAMED ITS CLAUSE
 

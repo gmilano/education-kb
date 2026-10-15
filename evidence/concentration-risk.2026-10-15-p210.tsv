@@ -1,0 +1,11 @@
+repo	stars	recipe_sites	grant	pass_read	pv_hit	fallback_named
+opensalt/OB3DefinitionWidget	1	19	MIT	p210	YES	no - ACTION PX
+ArnaudGuiovanna/tutor-mcp	48	23	MIT	p209	YES	no - ACTION PX
+Ed-Fi-Alliance-OSS/edfi-oneroster	6	13	Apache-2.0	p209	YES	yes - Ed-Fi ODS/API + build adapter (p209)
+openfun/ralph	51	20	MIT	p209	borderline (51 stars)	no - ACTION PX
+Selleo/mentingo	95	32	MIT	p209	no	n/a
+instructure/ims-lti	203	16	MIT	p210	no	n/a
+jcputney/scorm-again	355	15	MIT	p209	no	n/a
+pykt-team/pykt-toolkit	446	14	MIT	p209	no	n/a
+ankimcp/anki-mcp-server	514	10	MIT	p209	no	n/a
+opencast/opencast	508	19	ECL-2.0	p210	no	n/a

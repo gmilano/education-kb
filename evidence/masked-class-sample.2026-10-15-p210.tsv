@@ -1,0 +1,11 @@
+repo	recipe_sites	shelf_sites	shelf_says	read_p210	channel	stars	sidebar_classified
+moodle/moodle	38	178	GPL-3.0	GPL-3.0	repo page sidebar	7500	yes
+sakaiproject/sakai	24	119	ECL-2.0	ECL-2.0	repo page sidebar	1200	yes
+opencast/opencast	19	49	ECL-2.0	ECL-2.0	repo page sidebar	508	yes
+opensalt/OB3DefinitionWidget	19	24	MIT	MIT	repo page sidebar	1	yes
+openedx/edx-platform	18	128	AGPL-3.0	AGPL-3.0	repo page sidebar	8200	yes
+instructure/ims-lti	16	9	MIT	MIT	repo page sidebar	203	yes
+openeducat/openeducat_erp	15	133	LGPL-3.0	LGPL-3.0	LICENSE blob (8.05KB/178 lines)	889	NO
+frappe/education	14	61	GPL-3.0-STATEMENT	GPL-3.0 statement only	license.txt blob (19 bytes/1 line)	666	NO
+ls1intum/Artemis	14	54	MIT	MIT	repo page sidebar	818	yes
+chamilo/chamilo-lms	10	59	GPL-3.0	GPL-3.0 (multi: "GPL-3.0, License licenses found")	repo page sidebar	1000	yes

@@ -1,8 +1,76 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 210 — 2026-10-15 — `ACTION PV` LANDS, AND THE BUS-FACTOR RISK IS NOT IN THE PLATFORMS — IT IS IN THE SEAMS
+
+### 🟢 Nine of `ACTION PU`'s ten rows are foundation rows, and all nine confirmed
+
+🟢 **p210 read the next ten most recipe-exposed masked rows against the repositories themselves
+(method and the full table in [`agents/top.md`](../agents/top.md) p210).** 🟢 **Nine sit on this
+shelf and all nine confirmed:** `moodle/moodle` **`GPL-3.0`**, `sakaiproject/sakai` **`ECL-2.0`**,
+`opencast/opencast` **`ECL-2.0`**, `openedx/edx-platform` **`AGPL-3.0`**,
+`instructure/ims-lti` **`MIT`**, `openeducat/openeducat_erp` **`LGPL-3.0`** *(from the blob)*,
+`frappe/education` **`GPL-3.0` by `19`-byte statement only**, `ls1intum/Artemis` **`MIT`**,
+`chamilo/chamilo-lms` **`GPL-3.0`**. 🔵 **The tenth, `opensalt/OB3DefinitionWidget` (`MIT`), is a
+`verticals/solutions.md` row and is the subject of the next section.**
+
+### 🆕 🔴 `ACTION PV` — the first measurement, and it inverts where this KB thought the risk was
+
+🟢 **p209 opened `ACTION PV` after noticing by accident that `Ed-Fi-Alliance-OSS/edfi-oneroster`
+carries `13` recipe sites on `6`★. It asked for a sweep of the shape ★`< 50` AND recipe sites
+`≥ 5`.** 🟢 **p210 can now answer it across the `20` rows this KB has read first-hand, because the
+same `WebFetch` that reads a grant also reads the star count:**
+
+| row | ★ | recipe sites | grant | 🔴 the shape |
+|---|---|---|---|---|
+| [`opensalt/OB3DefinitionWidget`](https://github.com/opensalt/OB3DefinitionWidget) | 🔴 **`1`** | `19` | `MIT` | 🔴 **the worst concentration on these shelves — `19` recipes rest on a ONE-STAR repository** |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🔴 **`48`** | `23` | `MIT` | 🔴 **the most recipe-exposed row in the whole KB, and it is one person's MCP server** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🔴 **`6`** | `13` | `Apache-2.0` | 🔴 **p209's accidental find, now one of a class** |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟡 **`51`** | `20` | `MIT` | 🟡 **one star above the threshold — treat as a hit; the line is arbitrary and `51` is not a community** |
+
+🔴 **`3` clear hits and `1` borderline in `20` rows — `15`–`20`% of this KB's highest-exposure
+rows rest on repositories with no community behind them.**
+[`evidence/concentration-risk.2026-10-15-p210.tsv`](../evidence/concentration-risk.2026-10-15-p210.tsv).
+
+### 🆕 🟢 The structural finding, which is the useful half
+
+🟢 **Look at where the risk is NOT.** 🔵 **Every PLATFORM row read across both passes is
+comfortable:** `openedx/edx-platform` `8.2k`★, `moodle/moodle` `7.5k`★, `sakaiproject/sakai`
+`1.2k`★, `chamilo/chamilo-lms` `1.0k`★, `learningequality/kolibri` `1.1k`★,
+`openeducat/openeducat_erp` `889`★, `ls1intum/Artemis` `818`★, `frappe/education` `666`★,
+`opencast/opencast` `508`★, `instructure/ims-lti` `203`★.
+
+🔴 **Every PV hit is a SEAM:** an Open Badges definition widget, an MCP tutor server, a
+`OneRoster`-over-`Ed-Fi` adapter, an `xAPI` learning-record store. 🔵 **The pattern is exact and it
+was invisible until the stars were read alongside the grants: the education open-source commons has
+robust PLATFORMS and abandoned CONNECTIVE TISSUE.**
+
+🟢 **Two readings follow, and a studio should hold both at once:**
+
+- 🔴 **As risk:** a recipe is only as maintained as its least-maintained component, and these shelves route their most-used recipes through exactly the components nobody maintains. 🔵 **Any recipe naming a PV hit must name the fallback in the same breath and cost it as BUILD, not ADOPT** — the discipline p209 already applied to `edfi-oneroster`.
+- 🟢 **As opportunity, and this is the commercially interesting half:** 🔵 **the seams are where a studio's work is defensible anyway.** 🟢 **A client does not pay Globant to maintain Moodle; it pays for the integration layer — and the measurement says that layer has no incumbent. A hardened, tested, permissively-licensed `xAPI`→knowledge-tracing bridge, or a maintained `OneRoster`/`Ed-Fi` adapter, is both the fix for this KB's own fragility and a reusable asset across every engagement in the vertical.**
+
+🔵 **`ACTION PX` for the next pass:** 🟢 **name a concrete fallback for the three unfallbacked PV
+hits — `OB3DefinitionWidget` *(the Open Badges 3.0 spec is public; the widget is a convenience,
+so the fallback is "implement the definition shape directly")*, `tutor-mcp` *(the MCP protocol is
+the contract; the fallback is a studio-owned MCP server)* and `ralph` *(the fallback is any
+conformant LRS, and the question is whether a permissive one exists — a `permissive LRS` sweep has
+never been run on these shelves)*.* 🔴 **And extend the ★ reading to the whole `281`-row census, not
+only the rows `ACTION PU` happens to reach: stars come free with every grant read, so the sweep
+costs nothing extra from here on.**
+
+### 🔴 Still nothing new to add, eighth reading
+
+🔴 **New qualifying foundational repos discovered this pass: `0`.** 🟢 **The vertical sweep
+returned `OpenEduCat` (`LGPL-3.0`, read first-hand this pass — already here), `Apache OFBiz`
+(`Apache-2.0`, generic ERP, no education layer), `ERPNext` (`GPL-3.0-only`), `Dolibarr`
+(`GPL-3.0`), `Atomic CRM` and `Krayin` (`MIT`, but CRMs and not education systems), and the usual
+`Moodle`/`Open edX`/`Canvas` copyleft set.** 🔵 **Eighth consecutive negative reading, and see
+`verticals/solutions.md` p210 for what the CRM hits mean: the channel has started answering a
+different question than the one being asked.**
 
 ## Pass 209 — 2026-10-14 — THE FOUNDATION ROWS HELD UNDER FIRST-HAND READING, AND ONE OF THEM IS A `6`★ SINGLE POINT OF FAILURE
 

@@ -1,8 +1,70 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## 2026-10-15 — pass 210 — THE SEVENTH SATURATION READING, AND THE VERIFICATION CHANNEL RE-TESTED FROM SCRATCH
+
+🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**
+
+### 🔴 The week's movement: two new rows, both rejected, neither on the grant
+
+🟢 **Both read against the repository itself on `2026-10-15`:**
+
+| 🆕 repo | 🟢 grant, read first-hand | ★ | commits | region | verdict |
+|---|---|---|---|---|---|
+| [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | 🟢 **`MIT`** *(sidebar)* | `1` | `5` | **Global** *(no declared origin)* | 🔴 **REJECTED — weight.** *"An open-source AI-powered tutor built to support student learning through adaptive quizzes, coding help, and ethical guidance."* 🔵 **The grant is clean and the pitch is on-industry; `1`★ and `5` commits is a weekend, and GitHub rendered no commit date at all** |
+| [`maxew6/ai-tutor-project`](https://github.com/maxew6/ai-tutor-project) | 🟢 **`MIT`** *(sidebar)* | `0` | `74` | **Global** *(no declared origin)* | 🔴 **REJECTED — not an upstream.** Self-described *"independent deployment and extension of the open-source AI Tutor project"* by `krishna16-origin`, attribution retained. 🔵 **`74` commits is real work, but a redeploy of someone else's tutor at `0`★ is not an asset a studio adopts — the upstream would be, and the upstream is not on these shelves either** |
+
+🔴 **Everything else the discovery queries returned is already on these shelves**:
+`THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor`, `zijinz456/OpenTutor`, `Selleo/mentingo`,
+`kaushal0494/AITutor-EvalKit`, `ashishpatel26/500-AI-Agents-Projects`,
+`microsoft/ai-agents-for-beginners`, plus the Hugging Face agents course.
+[`evidence/discovery-candidates.2026-10-15-p210.tsv`](../evidence/discovery-candidates.2026-10-15-p210.tsv).
+
+🟢 **`AITutor-EvalKit` deserves one line because the channel presented it as a find.** 🔵 **A search
+for AI-tutor evaluation surfaced it as an `EACL 2026` System Demonstrations paper from MBZUAI
+(Abu Dhabi) with code at [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit).**
+🔴 **This KB already captured it at p120 and archived its README as evidence.** 🟢 **Read again this
+pass: `3`★, `2` forks, `8` commits, `MIT` asserted in the README while the sidebar classifies
+nothing — a fourth instance of the unclassified-sidebar shape measured in `agents/top.md` p210.**
+🔵 **It stays off the agent shelf on weight, and its CATEGORY — pedagogical-quality evaluation of
+tutor responses, scored on mistake identification, mistake location, guidance and actionability —
+is the gap `intel/open-gaps.md` already records. The category matters more than this repository.**
+
+🟢 **Seventh consecutive measurement of `0`–`2` new qualifying industry agents, `0` accepted.**
+🔵 **Seven independent readings. The permissively-licensed education-agent population reachable
+from this channel is enumerated, and p209's conclusion stands unchanged: the marginal value of
+another `top open source AI agents education {year} github MIT` sweep is near zero and the budget
+belongs on verification.** 🟢 **This pass spent it there — ten more rows read by hand, in
+`agents/top.md` p210.**
+
+### 🟢 The channel was re-tested from scratch this pass, not inherited
+
+🔵 **p209 recorded that `curl -sI` — the standing instruction's verification method — is inoperable
+here and that `WebFetch` resolves only `github.com`.** 🟢 **A finding that governs every fact this
+KB ships should not be taken on trust from a prior pass, so p210 re-ran it cold:**
+
+| probe | result `2026-10-15` | agrees with p209 |
+|---|---|---|
+| `curl -sI https://example.com` | 🔴 **`000`** — *"CONNECT tunnel failed, response `403`"* | 🟢 yes |
+| `curl -sI https://github.com/HKUDS/DeepTutor` | 🔴 **`403`** | 🟢 yes |
+| `curl https://api.github.com/repos/HKUDS/DeepTutor` | 🔴 **`403`** | 🟢 yes |
+| `WebFetch` → `github.com` repo page | 🟢 **resolves, full page** | 🟢 yes |
+| `WebFetch` → `github.com` blob page | 🟢 **resolves, licence body readable** | 🟢 yes |
+| `WebFetch` → `arxiv.org` | 🔴 **`ENOTFOUND`** | 🟢 yes |
+
+🔵 **The proxy's own status endpoint confirms the mechanism rather than leaving it inferred: it
+logs `connect_rejected` — *"gateway answered 403 to CONNECT (policy denial or upstream failure)"* —
+against `example.com:443` at the moment of the probe.** 🟢 **So `curl` is not failing on TLS or on
+GitHub's rate limits; the egress policy refuses the tunnel for every host, GitHub included.**
+
+🔴 **Unchanged consequence, restated because it is the single most important caveat on these
+shelves: `github.com` repo and blob pages are first-hand verifiable. NOTHING ELSE IS.** 🟢 **Every
+market figure, regulation date and ministry document in `intel/` is a SEARCH-SNIPPET claim and is
+labelled as one.** 🔵 **This pass added `~40` such claims across four regions and labelled every
+one in [`evidence/regional-probe.2026-10-15-p210.tsv`](../evidence/regional-probe.2026-10-15-p210.tsv).**
 
 ## 2026-10-14 — pass 209 — THE SIXTH SATURATION READING, AND THE VERIFICATION CHANNEL IS NARROWER THAN THE STANDING INSTRUCTION ASSUMES
 
