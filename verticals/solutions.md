@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — THREE PLATFORMS MOVE FROM *"UNUSABLE"* TO BUILDABLE, AND ONE `P971` INSTANCE IS WITHDRAWN
+
+🔵 **`0` new platform rows.** 🟢 **`ACTION QD` re-read the `94` `ABSENT` rows through the
+`git ls-tree` channel; `ACTION QG` then propagated every result into every current-state cell in
+the same pass.** 🔵 **Method:
+[`compose/code/p215-lstree-grant-recovery/`](../compose/code/p215-lstree-grant-recovery/README.md).**
+
+### 🆕 🟢 `P215-V1` — the platform tier's corrections, and all four change a BUILD decision
+
+| platform | 🔴 this shelf said | 🟢 established `2026-10-15` | what it unblocks |
+|---|---|---|---|
+| **Forma LMS** — [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 *"has no licence body"*, *"the default is exclusive copyright"* | 🟢 **`GPL-2.0`**, `html/license.txt` *(`18 346` B)*, plus the grant as a translated UI asset in **`10` languages** | 🟢 A corporate-training LMS that **ships its own licence in the procurement language** — Spanish and Portuguese included |
+| **openSIS** — [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 *"`GPL` by reference in the README ONLY"*, so *"a fork inherits an obligation whose text is not in the tree"* | 🟢 **`GPL-2.0` with the FULL BODY in-tree** at `docs/License.txt` *(`17 286` B)* | 🟢 **`P971` instance SEVEN is WITHDRAWN** — the terms do travel with the work |
+| **Lumi** — [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | 🔴 *"`NONE` / none / none found"* | 🟢 **`AGPL-3.0`** *(`package.json`, `3 600` B)* | 🔴 **Granted, and the WORST direction for a hosted build**: the H5P desktop authoring tool is network-copyleft |
+| **School Management System** — [`ProjectsAndPrograms/…`](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 *"no grant on any path or manifest. Unusable at any quality"* | 🟡 **`MIT`** at `student_panel/LICENSE` *(`1 070` B)* | 🟡 Usable **with the provenance written down** — see the caveat below |
+
+🔴 **The `Lumi` correction is the one to read carefully.** 🔵 **An `AGPL-3.0` grant is worse for a
+client engagement than no grant found, because *"no grant"* stops a build at the proposal while
+*"`AGPL-3.0`"* can pass an unaware reviewer and surface after deployment.** 🟢 **Recorded as a
+licence that changes an architecture, not as good news.**
+
+🟡 **And the caveat on `school-management-system`, stated rather than smoothed:** 🔴 **the `MIT`
+text sits in ONE module directory and is copyright an **individual contributor**, not the
+organisation that owns the repository; the root carries nothing, the other modules carry nothing,
+and `phpmailer/LICENSE` in the same tree is vendored `LGPL-2.1`.** 🔵 **That is a grant, and it is
+the weakest shape of one on this shelf. Use it only with the provenance recorded.**
+
+### 🆕 🟢 `P215-V2` — the SIS/LMS connector tier is now permissive across all four platforms
+
+🟢 **A week ago this shelf described its own connector tier as unusable. The tier did not change;
+the reading did.**
+
+| platform | connector | was | is |
+|---|---|---|---|
+| **Canvas** | `DMontgomery40/mcp-canvas-lms`, `MisterCommand/mcp-canvas-lms` | 🔴 absent | 🟢 **`MIT`** both |
+| **Moodle** | `ink-waffle/moodle-mcp` | 🔴 none | 🟢 **`MIT`** |
+| **Brightspace** | `Exhabition/brightspace-mcp-rs` | 🔴 absent | 🟢 **`MIT`** *(`Cargo.toml` and `package.json` agreeing)* |
+| **Sisu (Funidata)** — EMEA | `ink-waffle/sisu-mcp` | 🔴 *"no licence, unusable as published"* | 🟢 **`MIT`** |
+| **LTI 1.3** | `Simon-Initiative/lti-example-tool` *(CMU)*, `kstateome/lti-launch` | 🔴 `NOASSERTION` / absent | 🟢 **`MIT`** / **`LGPL-3.0`** |
+
+🔵 **EMEA specifically gains a usable institutional-SIS path: `sisu-mcp` is written for *any* Sisu
+deployment rather than one university, and Sisu is the Finnish higher-education SIS.**
+🟡 **`kstateome/lti-launch` is `LGPL-3.0`, not `MIT` — linkable, but modifications to the library
+itself carry obligations.**
+
+### 🆕 🟢 `P215-V3` — `ECL-2.0` belongs on this shelf, and it was never here
+
+🟢 **The **Educational Community License `2.0`** is the Apereo/Sakai house licence — read
+first-hand this pass from `Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`'s
+`LICENSE_HEADER` (`558` B), pointing at `osedu.org/licenses/ECL-2.0`.**
+🔵 **It is an `Apache-2.0` derivative with a patent grant, so for build purposes it sits beside
+`Apache-2.0`, and it is the licence family a studio meets first when it touches **Sakai**,
+**Apereo**, `OpenEQUELLA` or the Learning Analytics Initiative.** 🔴 **`214` passes of this KB
+never recorded it, because a title-window matcher looking for `apache license` does not match
+*"Educational Community License"*.** 🔵 **`ACTION QI` re-reads the Apereo rows rather than
+assuming; this pass claims only the row it read.**
+
 ## Pass 214 — 2026-10-15 — THE PLATFORM SHELF'S BIGGEST CORRECTION THIS MONTH: `GibbonEdu` IS NOT NETWORK-COPYLEFT, AND FORMA LMS HAS A GRANT AFTER ALL
 
 🔵 **`ACTION PZ` *(p211, offline)* reconciled every repository printing more than one grant
@@ -570,10 +628,12 @@ a client deliverable built on a licence that forbids selling it.
 comparison article would have built a hosted product on a **network-copyleft** base and owed its
 modifications back. 🟢 **`33 893` B of body, read this pass.**
 
-🔴 **`formalms/formalms` has no licence body.** 🔵 Three articles, three different families, and
-the repository settles none of them — 🔴 **the default is exclusive copyright.** 🟢 **This is the
-`22`%-ungranted problem arriving in the PLATFORM tier**, where it is much more expensive than in
-the agent tier: nobody prototypes an LMS and throws it away.
+🟢 **`formalms/formalms` IS granted: `GPL-2.0`**, body in-tree at `html/license.txt` *(`18 346` B,
+re-read binary-safe p215)*. <!--corrected--> 🔴 **This KB carried *"no licence body"* here for `35`
+passes; p214 resolved it and this cell was not updated.** 🔵 Three articles still name three
+different families, and the repository DOES settle it — one directory down. 🟡 **The
+`22`%-ungranted figure for the PLATFORM tier is therefore an OVERCOUNT**, and `P215-1` prices
+that: `25` of `94` rows this KB called ungranted carry a grant off-root.
 
 ### 🆕 🟢 The sourcing rule this tier now has
 
@@ -921,7 +981,7 @@ once the licences are read from their own blobs, the decision collapses to two o
 | **Frappe Education** | [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3** — by a **`19`-byte reference** | **665** · `455` | Odoo-alternative education ERP on ERPNext. 🔴 Its `license.txt` reads `License: GNU GPL V3` *and nothing else* — the grant is not in this repo |
 | **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15 214` B | **646** · `391` | K-12, multilingual incl. ES/PT → **LATAM**. 🔵 **Default branch is `mobile`** |
 | **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0** · `17 286` B at **`docs/License.txt`** | **345** · `288` | 🔴 **No licence at root** — a root-only scan calls this unlicensed and is wrong |
-| School Management System *(PHP)* | [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** | **206** · `111` | 🔴 **Unusable at any quality.** Nothing grants anything |
+| School Management System *(PHP)* | [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🟡 **`MIT` at `student_panel/LICENSE`** *(`1 070` B, p215)* <!--corrected--> | **206** · `111` | 🟡 **Granted, but weakly:** the `MIT` text sits in ONE subdirectory and is copyright an individual contributor, not the org; the root and the other modules carry nothing, and `phpmailer/LICENSE` is vendored `LGPL-2.1`. 🔵 Usable with the provenance written down |
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** · `8 241` B | — | Odoo-based: admissions, LMS, SIS, parent app. 🟡 Weak copyleft — **linkable**, the practical middle. 🔵 **Default branch is `19.0`** |
 
 🟢 **The one-line answer an engagement needs: of the seven most-adopted school-management
@@ -1882,7 +1942,7 @@ stack that is durable by cryptography rather than by convention.**
 
 | row | verdict |
 |---|---|
-| 🆕 🔴 **[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)** | 🔴 `345`★, and the `GPL` grant is **by reference in the README only** — *"licensed under the GNU General Public License, the full license can be fou…"* — with **no licence file at `10` probed paths**. 🔵 `P971` instance SEVEN, and the weakest: **`GPL` requires its terms to travel WITH the work**, so a fork inherits an obligation whose text is not in the tree |
+| 🟡 **[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)** | 🟢 `345`★, and the grant is **`GPL-2.0` with its FULL TEXT IN THE TREE** at `docs/License.txt` *(`17 286` B, re-read p215)*; the README points there. 🔴 **Nothing at the `10` probed ROOT paths.** 🔵 **p215 WITHDRAWS this row from `P971`:** the terms DO travel with the work, so a fork inherits no textless obligation — the instance was a root-only artefact <!--corrected--> |
 | 🆕 🔴 **[`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest)** | 🔴 `36`★, **NOT OPEN SOURCE.** The whole `417` B licence: *"Source code is made available for transparency and personal non-commercial use only … You may NOT: Redistribute … Rebrand or redeploy this application commercially or publicly … Use this code as the basis for a competing product or service. All rights reserved."* |
 | 🆕 🔴 **[`Rick-254/moodle-quizsmith`](https://github.com/Rick-254/moodle-quizsmith)** · **[`VICKY07092005/moodle-5-1-authentic-relay`](https://github.com/VICKY07092005/moodle-5-1-authentic-relay)** | 🔴 Both claim **`MIT` in the README and nowhere else** — no licence file at `15` paths, no grant in `22` header paths. 🔴 **And both are Moodle-plugin-shaped, where Moodle's own rules require `GPL`** — an `MIT` claim over a plugin linking `GPL` core is a claim its dependency may not permit |
 
@@ -2499,7 +2559,8 @@ manifest will scope it at zero and be wrong (`T285`).**
 
 ### 🔴 Declared, so the table is not read as more verified than it is
 
-- 🔴 **`formalms/formalms` and `apereo/opencast` are UNRESOLVED, not absent:** both `404` on
+- 🟢 **`formalms/formalms` is RESOLVED — `GPL-2.0` at `html/license.txt`** *(`18 346` B, p215)*. <!--corrected-->
+  🔴 **`apereo/opencast` is still UNRESOLVED, not absent:** `404` on
   `LICENSE` at `HEAD`, and a `404` on one filename is an unprobed name, not a measured absence.
 - 🔴 **`moodle/moodle` was published `NO-LICENCE-FILE` by this KB's own probe** until
   `COPYING.txt` was tried by hand. The probe lists disagree about that filename (`gap 135`).
@@ -3132,7 +3193,7 @@ hash-matching scanner will flag it — the same operational, non-legal risk as `
 | | |
 |---|---|
 | 🔴 **what a secondary source said** | 🔴 ***"Forma LMS, a fork of Docebo, is Apache 2.0 and aimed at corporate training"*** |
-| 🔴 **root grant file** | 🔴 **NONE. `formalms/formalms` has no `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` at its root** |
+| 🟡 **root grant file** | 🔴 **NONE at ROOT** — `formalms/formalms` has no `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` there. 🟢 **The `GPL-2.0` body is at `html/license.txt`** *(`18 346` B, p215)* <!--corrected--> |
 | 🟢 **where the grant actually is** | 🟢 **`html/license.txt`, `18 346` B** |
 | 🔴 **what it actually is** | 🔴 **`GNU GENERAL PUBLIC LICENSE Version 2, June 1991` — verbatim. `5` occurrences of the GPL title, `0` of *"Apache"*** |
 | 🟡 **HEAD** | 🟡 **`446a77a9b9cb`, `2026-07-17` — `88` days** |
@@ -5359,7 +5420,7 @@ connectors are tiny and unofficial, but they exist and they map the API surface.
 | **EduPage** | Slovakia / Czechia | yes | portal login | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) (**MIT**, 3★ — timetables, grades, homework, **meal ordering**, multi-school discovery, 2FA) and an independent second implementation [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) (**MIT**, 1★). 🟢 **Two independent implementations is the strongest demand signal in the tier** |
 | **Pronote** | France | yes | portal login | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) (**MIT**, 1★) — grades, timetables, homework, absences |
 | **IServ** | Germany | yes | portal login | [`chenning42/iserv-mcp`](https://github.com/chenning42/iserv-mcp) (**MIT**, 0★) — parent letters, timetables, **sick notes**. 🔵 The only connector in this KB whose user is a **parent** |
-| **Sisu (Funidata)** | Finland (higher ed) | yes | institutional SIS API | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) (🔴 **no licence**, 1★) — written for **any** Sisu deployment, so the broadest reach of the tier, and unusable as published |
+| **Sisu (Funidata)** | Finland (higher ed) | yes | institutional SIS API | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) (🟢 **`MIT`** in `package.json`, `999` B, p215 <!--corrected-->, 1★) — written for **any** Sisu deployment, so the broadest reach of the tier, and **usable**: the only EMEA-bound SIS connector on these shelves with a permissive grant |
 | **uSaint** | South Korea (higher ed) | yes | via `rusaint` | [`yourssu/soongpt-plugin`](https://github.com/yourssu/soongpt-plugin) (**MIT**, 3★) — course search, timetable planning, **graduation requirements**. Org-owned |
 | **VTOP** | India (VIT) | yes | portal login | [`divyarthjain/vtop-bhopal-mcp`](https://github.com/divyarthjain/vtop-bhopal-mcp) (**Apache-2.0**, 4★) — attendance, marks, timetable, exams |
 | **QLDT** | Vietnam (Hanoi Univ.) | yes | portal login | [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) (**GPL-2.0**, 1★). 🔴 **Jurisdiction warning:** Vietnam's Decision 33/2026/QD-TTg names education, including automated assessment and behavioural monitoring, as high-risk |
@@ -5421,7 +5482,7 @@ and this KB had never listed one.
 | **Aeries SIS + Edgenuity** | **North America (Fresno, California)** | [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) — keeps an **Aeries** gradebook current from **Edgenuity**. 🔴 **No licence field**, 0★. 🔴 **And its content could not be reached:** repo search returns it with metadata, but the raw lane returned 404 for 15 candidate paths across `HEAD`/`main`/`master`, so **this pass verified that the repository exists and did not verify that it contains anything.** 🟢 **Listed because of who owns it: a US school-district-adjacent org publishing its own passback job** — the K-12 integration need, in public, from the buyer's side | 🔴 **none** |
 | 🆕 **TKAWEN OS** *(p136)* | 🟢 **TKAWEN — EMEA (Algeria)** | [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) — an **OpenAPI v1 spec, a TypeScript SDK and an MCP server** for an academy's live catalogue, instructors, certificate verification and, with a learner token, that learner's own dashboard, courses and transcript. 🟢 **Read-only by construction: the repo states it ships no write tool of any kind** — no cart, checkout, review, discussion or progress write. 🟢 **Auth is a learner bearer token, never a password**, and its `whoami` returns the token's abilities and expiry *"never the token itself"*. 🔴 Carries topics `lti`, `scorm`, `xapi` and implements none of them — in the SDK those are **lesson-type enum values**. 🔵 **The first North-African supply row on this page**, and 0★ | 🟢 **MIT** *(payload-read, 1 063 B)* |
 | **Agilix Buzz** | **North America (Idaho Digital Learning Alliance)** | [`RyanGravetteIDLA/qualtrics-lti-connector`](https://github.com/RyanGravetteIDLA/qualtrics-lti-connector) — LTI 1.3 bridge from Buzz LMS to Qualtrics with automated grade passback. 🔴 **ARCHIVED** | **MIT** |
-| **Virtual Arkansas** | **North America (state virtual school)** | [`virtualarkansas/jupyterlite-zestables`](https://github.com/virtualarkansas/jupyterlite-zestables) — JupyterLite notebooks packaged as Canvas content with assessment and state persistence. 🔴 No licence field | 🔴 **none** |
+| **Virtual Arkansas** | **North America (state virtual school)** | [`virtualarkansas/jupyterlite-zestables`](https://github.com/virtualarkansas/jupyterlite-zestables) — JupyterLite notebooks packaged as Canvas content with assessment and state persistence. 🟢 **`MIT`** — declared in BOTH `package.json` *(`567` B)* and `extension/pyproject.toml` *(`license = {text = "MIT"}`)*, p215 <!--corrected--> | 🟢 **`MIT`** |
 
 🔵 **The pattern across this table is the sales argument.** 🟢 **Where a vendor or a public body
 publishes its own integration, the licence is usually permissive and the auth is sanctioned.**

@@ -1,0 +1,34 @@
+# p215 - ACTION QD: the 94 rows this KB recorded as ABSENT, re-read through the `git ls-tree` channel
+# method: git clone --filter=blob:none --no-checkout --depth 1  ->  git ls-tree -r HEAD --name-only
+#         (complete file inventory, ZERO blob transfer), then read only the candidate blobs over
+#         raw.githubusercontent.com and classify from the TITLE WINDOW (P214-1: a whole-body matcher
+#         reads GPL-3.0 as AGPL-3.0 because GPL-3.0 section 13 is titled "Use with the GNU Affero GPL")
+# bytes: binary-safe (curl -o file; wc -c). A text-mode pipe strips CR and understates a CRLF blob
+#        by one byte per line - see P215-5 and the eol column.
+# population 94 | clone/ls-tree failures 3 | own-grant recoveries 25
+repo	grant	path	bytes	eol	channel
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	ECL-2.0	LICENSE_HEADER	558	LF	licence file
+OS4ED/openSIS-Classic	GPL-2.0	docs/License.txt	17286	LF	licence file
+OS4ED/openSIS-Responsive-Design	GPL-2.0	docs/License.txt	17286	LF	licence file
+anthropics/prompt-eng-interactive-tutorial	MIT	AmazonBedrock/LICENSE	947	LF	licence file
+kstateome/lti-launch	LGPL-3.0	License.txt	7651	LF	licence file
+foradian/fedena	Apache-2.0	NOTICE	679	LF	licence file
+projectfedena/fedena	Apache-2.0	NOTICE	680	LF	licence file
+formalms/formalms	GPL-2.0	html/license.txt	18346	CRLF	licence file
+open-spaced-repetition/fsrs4anki-helper	MIT	License	1079	LF	licence file
+nvaccess/nvda	GPL-2.0	copying.txt	53408	LF	licence file
+skhdemo/uoft-quercus-mcp	MIT	LICENSE	1086	LF	licence file
+thm-mni-ii/feedbacksystem	Apache-2.0	LICENSE	10785	LF	licence file
+ProjectsAndPrograms/school-management-system	MIT	student_panel/LICENSE	1070	LF	licence file
+DMontgomery40/mcp-canvas-lms	MIT	package.json	3461	LF	manifest
+Exhabition/brightspace-mcp-rs	MIT	Cargo.toml	867	LF	manifest
+LMS-Laravel/LMS-Laravel	MIT	composer.json	2614	LF	manifest
+LMS-Laravel/OLD-LMS-Laravel	MIT	composer.json	1712	LF	manifest
+MisterCommand/mcp-canvas-lms	MIT	package.json	909	LF	manifest
+Simon-Initiative/lti-example-tool	MIT	package.json	1005	LF	manifest
+Lumieducation/Lumi	AGPL-3.0	package.json	3600	LF	manifest
+ink-waffle/moodle-mcp	MIT	package.json	973	LF	manifest
+ink-waffle/sisu-mcp	MIT	package.json	999	LF	manifest
+kaushal0494/AITutor-EvalKit	ISC	app_src/package.json	2036	LF	manifest
+pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	package.json	606	LF	manifest
+virtualarkansas/jupyterlite-zestables	MIT	package.json	567	LF	manifest

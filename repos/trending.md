@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## 2026-10-15 — Pass 215 — `0` new trending repos, `25` recovered from `ABSENT`, and a licence family this KB had never recorded
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 No new trending surface, stated as a measurement
+
+🟢 **`github trending education AI 2026` and the three other global queries ran verbatim.**
+🔴 **`0` education-sector repositories these shelves do not already carry.** 🔵 **The query
+returns `rohitg00/ai-engineering-from-scratch` *(reported `#1` on GitHub Trending `24` May
+`2026`)*, `microsoft/ai-agents-for-beginners`, Karpathy's *Zero to Hero* and `D2L` — 🟡 **all
+curriculum ABOUT AI, which is why an education query returns them and why none belongs on a
+repos shelf for the education INDUSTRY.** 🔴 **A Japanese trend summary reports `9` of the top
+`10` monthly projects in Feb `2026` were AI-related; no education cut was available.**
+
+### 🆕 🟢 `ECL-2.0` arrives on these shelves — the Apereo/Sakai house licence
+
+🟢 **`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider` grants under the **Educational
+Community License `2.0`**, read from `LICENSE_HEADER` (`558` B) on `2026-10-15`.**
+🔵 **An `Apache-2.0` derivative, `OSI`-approved, with a patent grant — so it behaves permissively
+for a studio.** 🔴 **It is also the licence a title-window matcher looking for `apache license`
+silently fails to recognise, which is how it stayed off these shelves through `214` passes.**
+
+### 🆕 🔴 The byte-count conflict class has a mechanism now
+
+🟢 **`formalms/formalms`' `html/license.txt` is `18 346` B with `340` `CR` bytes over `340`
+lines.** 🔴 **Read through a text-mode pipe it measures `18 006` — exactly `340` short, one byte
+per line, because the pipe strips `CR`.** 🔵 **Every `CRLF` licence blob in this KB has been
+measurable two ways, and the `tr -dc '\r' | wc -c` test distinguishes them in one call.**
+🟢 **p214's `18 346` was right; p215's first read was not.**
+
+### 🆕 🟡 What moved on the foundations shelf without a new row
+
+| repo | was | is |
+|---|---|---|
+| `nvaccess/nvda` *(`NVDA` screen reader — accessibility base)* | 🔴 `ABSENT` | 🟢 **`GPL-2.0`** `copying.txt` |
+| `formalms/formalms` *(Forma LMS)* | 🔴 *"no licence body"* | 🟢 **`GPL-2.0`**, `10` languages in-tree |
+| `OS4ED/openSIS-Classic` *(SIS)* | 🔴 *"`GPL` by reference only"* | 🟢 **`GPL-2.0` body in-tree** |
+| `thm-mni-ii/feedbacksystem` *(autograding, DE)* | 🔴 `ABSENT` | 🟢 **`Apache-2.0`** |
+| `kstateome/lti-launch` *(LTI, Kansas State)* | 🔴 `ABSENT` | 🟢 **`LGPL-3.0`** |
+| `Lumieducation/Lumi` *(H5P desktop)* | 🔴 `NONE` | 🟢 **`AGPL-3.0`** |
+
+---
+
 ## 2026-10-15 — Pass 214 — `0` topic populations opened, `2` repositories recovered from `ABSENT`, and the search channel declared saturated
 
 🟢 **APPEND-ONLY. History below this section is intact.**

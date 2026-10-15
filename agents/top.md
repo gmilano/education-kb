@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — `ABSENT` WAS A ROOT-ONLY ARTEFACT: `25` OF `94` REPOSITORIES THIS KB CALLED UNGRANTED CARRY A GRANT OFF-ROOT. `8` OF THEM ARE AGENT ROWS, AND ONE WAS AN ACCUSATION
+
+🔵 **`0` new agent rows this pass.** 🟢 **The `8` mandated searches were run verbatim — `4` global,
+`4` per-region — and returned `0` agents these shelves do not already carry, which is the fourth
+consecutive confirmation of `T214-2`.** 🟢 **So the pass spent itself on `ACTION QD` and
+`ACTION QG`, both registered by p214, both offline after the clone, and both fire.**
+
+🔵 **Method and the four rules it encodes:
+[`compose/code/p215-lstree-grant-recovery/`](../compose/code/p215-lstree-grant-recovery/README.md).
+Evidence: [`evidence/lstree-grant-recovery.2026-10-15-p215.tsv`](../evidence/lstree-grant-recovery.2026-10-15-p215.tsv),
+[`evidence/lstree-traps-and-nongrants.2026-10-15-p215.tsv`](../evidence/lstree-traps-and-nongrants.2026-10-15-p215.tsv),
+[`evidence/qg-cell-propagation.2026-10-15-p215.tsv`](../evidence/qg-cell-propagation.2026-10-15-p215.tsv).**
+
+### 🆕 🔴 `P215-1` — `ACTION QD` fires on limb `1`, by `25` to a threshold of `15`
+
+🟢 **`p211` recorded `94` shelf repositories as `ABSENT` — no licence blob at `HEAD` after `18`
+path forms.** 🔴 **Every one of those `18` forms was a ROOT path.** 🟢 **Read through the
+`git ls-tree` channel instead — a treeless clone, which transfers the complete path inventory and
+**no file contents** — `25` of the `94` carry a grant the KB could have had all along.**
+
+| channel | recovered | examples |
+|---|---|---|
+| 🟢 **licence file in the tree** | **`13`** | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) `copying.txt` *(`53 408` B, `GPL-2.0`)*; [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) `License.txt` *(`7 651` B, `LGPL-3.0`)*; [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) `License` *(`1 079` B, `MIT`)* |
+| 🟢 **manifest** | **`12`** | [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) `AGPL-3.0`; [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) `MIT`; [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) `MIT` |
+
+🔴 **The cause is not exotic. `3` of the `13` file recoveries differ from a probed name only by
+CASE or extension** — `License`, `License.txt`, `copying.txt` — 🔵 **the same defect this KB
+already recorded on `openedx/XBlock`'s `LICENSE.TXT`, now measured as a population.**
+
+### 🆕 🟢 `P215-2` — the `8` agent-tier rows this moves, and the one that should not have been written
+
+| row | 🔴 this shelf said | 🟢 established `2026-10-15` |
+|---|---|---|
+| [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 *"no licence field"*, *"unusable as published"* | 🟢 **`MIT`** *(`package.json`, `999` B)* |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🔴 *"(none, 6★)"* | 🟢 **`MIT`** *(`973` B)* |
+| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🔴 *"`NOASSERTION`"*, *"cannot be copied into a deliverable"* | 🟢 **`MIT`** *(`1 005` B)* |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🔴 *"`ABSENT` … no grant, so no right to use"* | 🟡 **`MIT`-style, manifest-only** *(`606` B)* |
+| [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | 🔴 *"`NONE`"*, *"all `404`"* | 🟢 **`MIT`** at `AmazonBedrock/LICENSE` *(`947` B)* |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 README points at an absent `LICENSE` | 🟢 **`MIT`** *(`3 461` B)* — the README claim stands, the conclusion does not |
+| [`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms) | — | 🟢 **`MIT`** *(`909` B)* |
+| [`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs) | — | 🟢 **`MIT`** *(`Cargo.toml` **and** `package.json`, agreeing)* |
+
+🔴 **And the one to answer for.** 🔵 **This shelf carried, of the `ink-waffle` rows:
+*"this author ships unlicensed education connectors as a pattern."*** 🟢 **Both repositories
+declare `MIT` in their manifests.** 🔴 **The "pattern" was an artefact of reading root files only,
+and it was an assertion about a **named person** derived from a probe this KB already knew was
+root-limited.** 🟢 **Withdrawn in place, behind a `<!--corrected-->` marker.** 🔵 **`P215-6`
+registers the rule that follows: a row may record *what a channel returned*; a claim about a
+PERSON needs a channel that can support it.**
+
+### 🆕 🟡 `P215-3` — the most-used SCORM wrapper in the world is granted, and no scanner will ever say so
+
+🔵 **This KB's headline read: *"The most-used SCORM library in the world has no licence."***
+🟢 **`pipwerks/scorm-api-wrapper`'s `package.json` declares:**
+
+```json
+"license": "MIT-style license: http://pipwerks.mit-license.org/"
+```
+
+🟢 **So there IS a grant, and the *"no right to use"* conclusion was wrong.** 🔴 **But the string
+is not an SPDX identifier, so every automated scanner returns `NOASSERTION` on it.** 🔵 **The
+defect that travels downstream to `130` forks is therefore **unparseability, not absence** — a
+different problem with a different fix: one line in a manifest, not a licence decision.**
+🟡 **Both readings are now on the shelf; neither was before.**
+
+### 🆕 🔴 `P215-4` — `0` new agents, and the search channel is now a regression test by measurement
+
+🟢 **All `8` mandated searches ran.** 🔴 **Named entities returned that these shelves do not
+already hold: `0` agents.** 🔵 **The global set surfaced `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch` and `rohitg00/ai-engineering-from-scratch` — 🟡 **all three are
+teaching MATERIAL about building agents, not education-sector agents**, which is the category
+confusion `T176` named and the reason this query shape keeps returning the same corpus.**
+🟢 **The one genuinely new artefact is a LATAM research instrument, recorded in
+[`intel/market.md`](../intel/market.md) `P215-M`, not here.**
+
 ## Pass 214 — 2026-10-15 — `ACTION PZ` DISCHARGED: `8` OF `518` REPOS CONTRADICT THEMSELVES, `8` OF `8` ON THE GNU AXIS, AND THE MECHANISM IS `GPL-3.0` §13
 
 🔵 **This pass added `0` new repository rows, and that is the result, not a shortfall.** 🟢 **The
@@ -835,7 +911,7 @@ that population rather than incidental to it:**
 
 | Ungranted agent / MCP row | shape | grant found |
 |---|---|---|
-| [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | prompt-engineering curriculum, `master` | 🔴 **NONE** — no `LICENSE`, no `LICENSE.md`, no licence line in `README.md` |
+| [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | prompt-engineering curriculum, `master` | 🟢 **`MIT`** at `AmazonBedrock/LICENSE` *(`947` B, read first-hand p215)* — 🔴 **nothing at ROOT**: no `LICENSE`, no `LICENSE.md`, no licence line in `README.md` <!--corrected--> |
 | [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | the best-known prompt-based tutor | 🔴 **NONE** |
 | [CreveXTech/canvas-lms-mcp](https://github.com/CreveXTech/canvas-lms-mcp) | Canvas MCP server | 🔴 **NONE** |
 | [Nasus20202/MoodleMCP](https://github.com/Nasus20202/MoodleMCP) | Moodle MCP server | 🔴 **NONE** |
@@ -2241,7 +2317,7 @@ at `29 553`★, third of `30`. 🔴 **It has no licence file at root, and its RE
 | repo | ★ | probe | result |
 |---|---|---|---|
 | 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 553` | `19` candidate filenames + README | 🔴 **all `404`; README mentions no licence** |
-| 🔴 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | same | 🔴 **all `404`; README mentions no licence** |
+| 🟡 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | same | 🔴 **all `404` AT ROOT; README mentions no licence** — 🟢 **but `MIT` ships one directory down at `AmazonBedrock/LICENSE` (`947` B, p215)** <!--corrected--> |
 | 🔴 [`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching) | `17 718` | same | 🟡 **no file — but the README links `CC-BY-NC-ND-3.0`** |
 | 🔴 [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis) | `6 072` | same | 🔴 **all `404`; README (`50 266` B) mentions no licence** |
 
@@ -8830,7 +8906,7 @@ evidence** — a named institution, a national system, a country-coded homepage 
 | **edupage-mcp** (second) | [`mhlavac/edupage-mcp`](https://github.com/mhlavac/edupage-mcp) | **MIT** | 1 | **EMEA (Slovakia)** | Independent second EduPage implementation — a useful cross-check, and evidence that EduPage demand is real rather than one person's itch. · 🔴 **p191 CORRECTION: `GPL-3.0`** *(read from bytes — see this file's p191 section)* |
 | **mcp-pronotes** | [`HAL-XP/mcp-pronotes`](https://github.com/HAL-XP/mcp-pronotes) | **MIT** | 1 | **EMEA (France)** | **Pronote**, the dominant French school platform: grades, timetables, homework, absences. |
 | **ibu-mcp** | [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) | 🟢 **MIT** (payload-read) | 1 | **EMEA (Bosnia)** | International Burch University: grades, attendance, exams, tuition, notifications. Region is hard evidence — homepage `mine.ibu.edu.ba`, topic `bosnia`. Holder *"Haris Skeledzija"*. |
-| **sisu-mcp** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **no licence field** | 1 | **EMEA (Finland)** | **Sisu (Funidata)**, the Finnish higher-education SIS: attainments, enrolments, timetables, plans. 🔴 **Written for *any* Sisu deployment rather than one university — the broadest reach of the bound connectors, and unusable as published.** Same owner as `ink-waffle/moodle-mcp`, also unlicensed and already flagged below: **this author ships unlicensed education connectors as a pattern.** |
+| **sisu-mcp** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** *(`package.json`, `999` B, p215)* | 1 | **EMEA (Finland)** | **Sisu (Funidata)**, the Finnish higher-education SIS: attainments, enrolments, timetables, plans. 🟢 **Written for *any* Sisu deployment rather than one university — the broadest reach of the bound connectors, and `MIT`, so USABLE as published.** 🔴 **p215 WITHDRAWS this KB's claim that *"this author ships unlicensed education connectors as a pattern"*:** `ink-waffle/moodle-mcp` declares `MIT` too *(`973` B)*. 🔵 **The "pattern" was an artefact of reading root files only — and it was an assertion about a named person.** <!--corrected--> |
 | **nycu** | [`zyx1121/nycu`](https://github.com/zyx1121/nycu) | **MIT** | 1 | **APAC (Taiwan)** | National Yang Ming Chiao Tung University portal, E3 LMS, timetable and attendance, packaged as a Claude Code / Codex plugin. |
 | **UofT-MCP** | [`SleepyPandas/UofT-MCP`](https://github.com/SleepyPandas/UofT-MCP) | **MIT** | 1 | **North America (Canada)** | University of Toronto Timetable Builder API. |
 | **qldt-hanu-mcp** | [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) | **GPL-2.0** | 1 | **APAC (Vietnam)** | **QLDT**, Hanoi University's student management system. 🔴 **The only copyleft row in the tier** — and note the jurisdiction: Vietnam's **Decision 33/2026/QD-TTg names education, including automated assessment and behavioural monitoring, as high-risk** (`intel/market.md` → APAC). |
@@ -9072,7 +9148,7 @@ instrument, verdicts and the five ways a licence payload defeats hashing are in
 | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | 215 | 2026-10-09 | 🟢 **Newcastle University (UK)** | Browser-based e-assessment with an emphasis on mathematics. **Institution-owned, permissive, and directly relevant to the 2027 assessment clocks** |
 | [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 **MIT** | 184 | 2026-10-06 | individual | .NET Core SCORM LMS demo. 🔵 Its notice carries **no year at all** |
 | [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | 🔴 **CC-BY-SA-4.0, and only the deed** | 164 | 2026-10-02 | individual | SCORM API for content, with QUnit tests. 🔴 **The licence file is the 837-byte human-readable *deed*, not the legal code** — a ShareAlike *content* licence applied to software. Do not build on this without counsel |
-| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🔴 **ABSENT** | **391** | 2026-09-18 | individual | The canonical SCORM API wrapper, and 🔴 **no licence file exists** under 8 probed filenames. 391★ of unlicensed-by-omission code — no grant, so no right to use |
+| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🟡 **`MIT`-style, MANIFEST-ONLY** | **391** | 2026-09-18 | individual | The canonical SCORM API wrapper. 🔴 **No licence file exists** under 8 probed filenames — 🟢 **but `package.json` (`606` B, p215) declares `"license": "MIT-style license: http://pipwerks.mit-license.org/"`, so the grant is REAL and this KB's *"no grant, so no right to use"* was WRONG.** 🔴 **The string is not an SPDX identifier, so every scanner still returns `NOASSERTION`** <!--corrected--> |
 | [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **ABSENT** | 99 | 2026-03-04 | 🟢 **ADL Initiative (US DoD)** | **The body that wrote SCORM and xAPI.** 🔴 **ARCHIVED, and no licence file.** The steward of the standard ships its own bridge unlicensed and unmaintained |
 
 **QTI 3 — real, permissive, and tiny**
@@ -9164,7 +9240,7 @@ standalone tier.
 **Unlicensed Moodle connectors — do not build on these:** [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp)
 (**no licence field**, 40★ — the second-largest by stars and unusable as published),
 [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) (**none**, 10★, Go, Vietnamese-German
-University) and [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) (**none**, 6★).
+University) and [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) (🟢 **`MIT`** in `package.json`, `973` B, p215 <!--corrected-->, 6★).
 The pattern on this tier is consistent: **the permissive ones are not the most-starred ones.**
 
 ### 🆕 Connector rows added by p136 — and a platform tier this page did not have
@@ -9174,7 +9250,7 @@ The pattern on this tier is consistent: **the permissive ones are not the most-s
 | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** | **56** | **2026-10-11** | 🟢 **Brightspace / D2L — the third major commercial LMS, and a platform tier this page was missing** next to Canvas and Blackboard. Grades, due dates, assignments, announcements, rosters, syllabus; published to npm; *"works with any school"*. 27 forks against 56 stars. 🔵 Same owner as `purdue-mcp`, which p136 measured as a `FORK_AT_TIP` pair with `sharziki/purdue-mcp` — count the connector once |
 | [`tkawen/developer-platform`](https://github.com/tkawen/developer-platform) | 🟢 **MIT** | 0 | 2026-10-04 | 🟢 **A vendor publishing its own MCP server, from Algeria** — the first North-African supply row on this page. Read-only by construction (**no write tools at all**), authenticated with a **learner bearer token, never a password**, and `whoami` returns the token's abilities and expiry *"never the token itself"*. 🔴 Carries topics `lti`, `scorm`, `xapi`; implements none of them — they are lesson-type enums in its API schema |
 | [`ilodezis/mti-lms-mcp`](https://github.com/ilodezis/mti-lms-mcp) | 🟢 **MIT** | *not measured* | — | Moscow Technological Institute student portal. 🔵 Unofficial, single-institution, and **its star count is recorded as not measured** rather than guessed: the MCP search channel did not return the row |
-| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🔴 **NOASSERTION** — no file under 5 filenames | *not measured* | — | An LTI 1.3 example tool from **CMU's Simon Initiative**, in **Gleam**. Listed for the adapter gap above, flagged because an unlicensed reference implementation cannot be copied into a deliverable |
+| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🟢 **`MIT`** *(`package.json`, `1 005` B, p215)* | *not measured* | — | An LTI 1.3 example tool from **CMU's Simon Initiative**, in **Gleam**. Listed for the adapter gap above. 🟢 **p215 CLEARS the flag:** no licence file under 5 filenames, but the manifest grants `MIT`, so the reference implementation CAN be copied into a deliverable <!--corrected--> |
 | [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | *not probed this pass* | 55 | 2026-09-09 | 🟢 **The standards body's own LTI 1.3 reference tool.** 🔵 **42 forks against 55 stars** — the ratio of a reference implementation being *copied* rather than watched, which is what you want at the start of an adapter build |
 
 ### Evaluation and benchmark layer — p130 called this "the largest hole on the shelf"
@@ -9507,9 +9583,13 @@ is the point.**
   precisely to carry learning events to an analytics layer has **no open-source client** — which
   means the measurement layer `T7` calls unshippable is unshippable one level lower than this KB
   thought.
-- 🔴 **The most-used SCORM library in the world has no licence.** `pipwerks/scorm-api-wrapper`,
-  391★, 130 forks, pushed 2026-09-18, eight filenames probed and all absent. Everything downstream
-  of it inherits that defect, and this KB has not yet measured how far downstream that reaches.
+- 🟡 **The most-used SCORM library in the world has no licence FILE — and it DOES have a grant.** <!--corrected-->
+  `pipwerks/scorm-api-wrapper`, 391★, 130 forks, pushed 2026-09-18, eight filenames probed and all
+  absent — 🟢 **and `package.json` (`606` B, read first-hand p215) declares
+  `"license": "MIT-style license: http://pipwerks.mit-license.org/"`.** 🔴 **p215 withdraws the
+  *"no licence"* claim.** 🔵 **What travels downstream is therefore UNPARSEABILITY, not absence:
+  the string is not an SPDX identifier, so scanners return `NOASSERTION` on a repository whose
+  author did grant `MIT`.**
 
 ### 🟢 Verdicts p136 returns on the gaps p135 opened
 

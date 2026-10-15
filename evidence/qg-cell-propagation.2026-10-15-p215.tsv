@@ -1,0 +1,44 @@
+# p215 - ACTION QG: the correction as the unit of work.
+# For every repository p215 established a grant for, EVERY current-state cell mentioning it was
+# re-read and adjudicated in the SAME pass. 263 grant-claim lines touch the 25 repos
+# (170 current-state, 93 in dated append-only history, which is a record and was not edited).
+#
+# verdict WRONG_CORRECTED : the cell contradicted the established grant; corrected behind <!--corrected-->
+# verdict NARROWED        : the cell's claim about FILES was true but its conclusion was not; narrowed
+# verdict ALREADY_RIGHT   : the KB already had it right here - the QG finding, not an error
+# verdict GATE_FALSE_POS  : my comparator flagged it; on reading, the cell is sound
+status	repo	file	line	cell_said	established	verdict
+corrected	anthropics/prompt-eng-interactive-tutorial	agents/top.md	838	NONE - no LICENSE, no LICENSE.md, no README line	MIT @ AmazonBedrock/LICENSE 947 B	WRONG_CORRECTED
+corrected	anthropics/prompt-eng-interactive-tutorial	agents/top.md	2244	all 404; README mentions no licence	MIT @ AmazonBedrock/LICENSE	WRONG_CORRECTED
+corrected	anthropics/prompt-eng-interactive-tutorial	intel/trends.md	2521	no licence, none named	MIT @ AmazonBedrock/LICENSE	WRONG_CORRECTED
+corrected	pipwerks/scorm-api-wrapper	agents/top.md	9075	ABSENT; no grant, so no right to use	MIT-style in package.json 606 B	WRONG_CORRECTED
+corrected	pipwerks/scorm-api-wrapper	agents/top.md	9510	the most-used SCORM library has no licence	MIT-style in package.json	WRONG_CORRECTED
+corrected	pipwerks/scorm-api-wrapper	intel/trends.md	8748	no licence file at all	MIT-style in package.json	NARROWED
+corrected	pipwerks/scorm-api-wrapper	compose/patterns.md	10987	no licence file of any kind	MIT-style in package.json	NARROWED
+corrected	ink-waffle/sisu-mcp	agents/top.md	8833	no licence field; author ships unlicensed as a pattern	MIT in package.json 999 B	WRONG_CORRECTED
+corrected	ink-waffle/moodle-mcp	agents/top.md	9167	(none, 6 stars)	MIT in package.json 973 B	WRONG_CORRECTED
+corrected	ink-waffle/sisu-mcp	verticals/solutions.md	5362	no licence; unusable as published	MIT in package.json	WRONG_CORRECTED
+corrected	Simon-Initiative/lti-example-tool	agents/top.md	9177	NOASSERTION; cannot be copied into a deliverable	MIT in package.json 1005 B	WRONG_CORRECTED
+corrected	Lumieducation/Lumi	repos/foundations.md	1909	NONE / none / none found	AGPL-3.0 in package.json 3600 B	WRONG_CORRECTED
+corrected	Lumieducation/Lumi	intel/trends.md	2330	NONE / none	AGPL-3.0 in package.json	WRONG_CORRECTED
+corrected	OS4ED/openSIS-Classic	repos/foundations.md	2613	GPL by reference in README ONLY; no file at 10 paths	GPL-2.0 body @ docs/License.txt 17286 B	WRONG_CORRECTED
+corrected	OS4ED/openSIS-Classic	verticals/solutions.md	1885	P971 instance 7: terms do not travel with the work	GPL-2.0 body @ docs/License.txt	WRONG_CORRECTED
+corrected	formalms/formalms	repos/foundations.md	3276	UNRESOLVED, not absent	GPL-2.0 @ html/license.txt 18346 B	WRONG_CORRECTED
+corrected	formalms/formalms	verticals/solutions.md	573	has no licence body; default is exclusive copyright	GPL-2.0 @ html/license.txt	WRONG_CORRECTED
+corrected	formalms/formalms	verticals/solutions.md	2502	UNRESOLVED, not absent	GPL-2.0 @ html/license.txt	WRONG_CORRECTED
+corrected	formalms/formalms	verticals/solutions.md	3135	NONE at root	GPL-2.0 @ html/license.txt	NARROWED
+corrected	ProjectsAndPrograms/school-management-system	verticals/solutions.md	924	no grant on any path or manifest; unusable	MIT @ student_panel/LICENSE 1070 B	WRONG_CORRECTED
+corrected	ProjectsAndPrograms/school-management-system	compose/patterns.md	1645	no grant anywhere	MIT @ student_panel/LICENSE	WRONG_CORRECTED
+corrected	virtualarkansas/jupyterlite-zestables	verticals/solutions.md	5424	No licence field / none	MIT in package.json 567 B + pyproject	WRONG_CORRECTED
+corrected	DMontgomery40/mcp-canvas-lms	compose/patterns.md	3792	points at an absent LICENSE	MIT in package.json 3461 B	NARROWED
+# ---- NOT touched, and this is the ACTION QG result: the SAME KB had these right ----
+not_touched	OS4ED/openSIS-Classic	agents/top.md	1988	NONE at root ... 17286 B of GPL-2.0 one directory down	GPL-2.0 @ docs/License.txt	ALREADY_RIGHT
+not_touched	OS4ED/openSIS-Classic	agents/top.md	4936	NO grant file at its ROOT; GPL-2.0 sits at docs/License.txt	GPL-2.0 @ docs/License.txt	ALREADY_RIGHT
+not_touched	OS4ED/openSIS-Classic	compose/patterns.md	2480	NONE at root and carries GPL-2.0 at docs/License.txt	GPL-2.0 @ docs/License.txt	ALREADY_RIGHT
+not_touched	OS4ED/openSIS-Classic	repos/foundations.md	1193	docs/License.txt (17 286 B, UTF-8 BOM intact)	GPL-2.0 @ docs/License.txt	ALREADY_RIGHT
+not_touched	formalms/formalms	intel/market.md	87	p214's own correction, in full	GPL-2.0 @ html/license.txt	ALREADY_RIGHT
+not_touched	formalms/formalms	intel/trends.md	1967	"no licence" shown as what a NAIVE read returns	GPL-2.0 @ html/license.txt	GATE_FALSE_POS
+not_touched	Simon-Initiative/lti-example-tool	compose/patterns.md	3650	no licence file at all; the grant is one npm field	MIT in package.json	ALREADY_RIGHT
+not_touched	foradian/fedena	compose/patterns.md	30	describes the vendored-MIT trap, correctly	Apache-2.0 @ NOTICE	GATE_FALSE_POS
+not_touched	formalms/formalms	verticals/solutions.md	2387	describes a listing's disagreement, not a grant	GPL-2.0 @ html/license.txt	GATE_FALSE_POS
+not_touched	ink-waffle/moodle-mcp	agents/top.md	7907	NONE in 1 npm VERSION - registry metadata	MIT in the repo's package.json	DIFFERENT_OBJECT

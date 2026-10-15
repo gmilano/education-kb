@@ -1,0 +1,47 @@
+# p215 - ACTION QD, limb 2 material: why a path is NOT a grant.
+# Three classes, all observed first-hand on 2026-10-15 in the 94-row ABSENT population.
+#
+# class VENDORED_ONLY : every licence-matching path in the tree belongs to a third party, so a
+#                       naive glob publishes a confident, permissive and FALSE grant.
+#                       This is T214-4 (foradian/fedena) generalising.
+# class NOT_A_GRANT   : the filename matches /licen[cs]e/i but the file is not a grant at all.
+#                       In EDUCATION "licence" is also a DOMAIN NOUN (teaching certification),
+#                       which other industries do not have to filter for.
+# class FILTER_MISS   : a genuinely vendored path that ACTION QD's prescribed filter
+#                       (vendor|lib|node_modules|third_party|public/javascripts) does NOT reject.
+class	repo	path	would_publish	note
+VENDORED_ONLY	alfredang/ai-mms	js/prototype/windows/MIT-LICENSE	MIT	LMS/TMS; 5 licence paths in tree, 0 its own
+VENDORED_ONLY	alfredang/ai-mms	js/tiny_mce/license.txt	LGPL-2.1	TinyMCE, vendored editor
+VENDORED_ONLY	alfredang/ai-mms	app/code/community/Stripe/Payments/LICENSE.txt	(Stripe)	vendored Magento payment module
+VENDORED_ONLY	alfredang/ai-mms	LICENSE_TINYMCE.txt	LGPL-2.1	third-party licence hoisted to ROOT - worst case
+VENDORED_ONLY	LearnPress/learnpress	inc/libraries/wp-background-process/license.txt	GPL-2.0	vendored WP library, not LearnPress's own grant
+NOT_A_GRANT	mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	MDE-EdFiClientSDK/.../LicenseStatusDescriptorsApi.cs	-	Ed-Fi API binding for TEACHER CERTIFICATION licence status
+NOT_A_GRANT	mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	MDE-EdFiClientSDK/.../LicenseTypeDescriptorsApi.md	-	ditto; 6 such paths, 0 grants
+NOT_A_GRANT	spdx/license-list-data	json/licenses.json	BSD	licence texts AS DATA; 339359 B of other people's grants
+NOT_A_GRANT	spdx/license-list-data	licenses.md	BSD	ditto, 156502 B
+NOT_A_GRANT	nvaccess/nvda	ci/scripts/tests/licenseCheck.ps1	-	a CI script that CHECKS licences
+FILTER_MISS	LearnPress/learnpress	inc/libraries/wp-background-process/license.txt	libraries/	segment not in QD's filter
+FILTER_MISS	OS4ED/openSIS-Classic	libraries/htmlpurifier/LICENSE	libraries/	segment not in QD's filter
+FILTER_MISS	OS4ED/openSIS-Responsive-Design	libraries/htmlpurifier/LICENSE	libraries/	segment not in QD's filter
+FILTER_MISS	alfredang/ai-mms	js/tiny_mce/license.txt	js/<lib>/	segment not in QD's filter
+FILTER_MISS	alfredang/ai-mms	app/code/community/Stripe/Payments/LICENSE.txt	app/code/community/	segment not in QD's filter
+FILTER_MISS	ProjectsAndPrograms/school-management-system	phpmailer/LICENSE	bare vendored dir	a third-party project name at top level
+FILTER_MISS	nvaccess/nvda	source/fonts/freefont-20100919-ttf/COPYING	fonts/	vendored font, GPL-3.0, vs NVDA's own GPL-2.0
+FILTER_MISS	formalms/formalms	html/appCore/addons/swfheader/LICENSE.txt	addons/	segment not in QD's filter
+# ---------------------------------------------------------------------------------------------
+# AND THE CONVERSE: QD's filter rejects `lib/`, but p214's GENUINE formalms recovery came from
+# html/lib/System/license/license_english.txt. formalms survives only because html/license.txt
+# also exists. A single-axis path filter is both too narrow (above) and too broad (here).
+FILTER_OVERREACH	formalms/formalms	html/lib/System/license/license_english.txt	rejected by lib/	a REAL grant, 15146 B, 10 languages
+# ---------------------------------------------------------------------------------------------
+# population hygiene: the 94-row list itself carries duplicate rows for the same repository.
+DUPLICATE_ROW	OS4ED/openSIS-Classic == os4ed/openSIS-Classic	-	-	owner-case variant; identical 17286 B blob
+DUPLICATE_ROW	Hesham0-0Nasser/tutor-lms-mcp == hesham0-0nasser/tutor-lms-mcp	-	-	owner-case variant
+DUPLICATE_ROW	foradian/fedena == projectfedena/fedena	-	-	same project, 2 orgs; NOTICE 679 vs 680 B
+# failures, recorded rather than dropped
+CLONE_FAIL	jakerains/scormplayer	-	-	clone refused at HEAD
+LSTREE_FAIL	cdweaver1992/edfi-mcp-server	-	-	clone ok, ls-tree returned nothing at HEAD
+LSTREE_FAIL	openfresno/edgenuity-aeries-grade-passback	-	-	clone ok, ls-tree returned nothing at HEAD
+
+# addendum, p215: spdx/license-list-data declares no grant of its own
+NO_OWN_GRANT	spdx/license-list-data	(root LICENSE, LICENSE.txt, license.txt all 404; README states none)	-	the repo holding every licence publishes none

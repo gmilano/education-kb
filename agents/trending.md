@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## 2026-10-15 — Pass 215 — `0` new agents, and `8` existing agent rows stopped being unlicensed
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 Nothing new arrived, for the fourth consecutive pass, and it is still a measurement
+
+🟢 **`8` mandated searches, run verbatim: `4` global and `4` per-region.** 🔴 **`0` education-sector
+agents that these shelves do not already carry.** 🔵 **What the global set DID return —
+`microsoft/ai-agents-for-beginners` *(`MIT`, ~`67k★` reported)*,
+`pguso/agents-from-scratch` *(`MIT`, ~`796★`)*, `rohitg00/ai-engineering-from-scratch` — is
+🟡 **curriculum ABOUT agents, not agents for education**, and this KB's `agents/` shelf is the
+wrong home for all three.
+
+### 🆕 🟢 The week's actual movement: `8` agent rows changed licence state without a single new row
+
+🔵 **Not from a search — from reading the trees this KB already had rows for.**
+
+| agent row | was | is |
+|---|---|---|
+| `ink-waffle/sisu-mcp` *(EMEA, Finland — Sisu SIS)* | 🔴 no licence field | 🟢 **`MIT`** |
+| `ink-waffle/moodle-mcp` | 🔴 none | 🟢 **`MIT`** |
+| `Simon-Initiative/lti-example-tool` *(CMU, Gleam)* | 🔴 `NOASSERTION` | 🟢 **`MIT`** |
+| `DMontgomery40/mcp-canvas-lms` | 🔴 absent `LICENSE` | 🟢 **`MIT`** *(manifest)* |
+| `MisterCommand/mcp-canvas-lms` *(APAC)* | 🔴 absent | 🟢 **`MIT`** |
+| `Exhabition/brightspace-mcp-rs` | 🔴 absent | 🟢 **`MIT`** |
+| `pipwerks/scorm-api-wrapper` | 🔴 *"no licence"* | 🟡 **`MIT`-style, non-SPDX, manifest-only** |
+| `anthropics/prompt-eng-interactive-tutorial` | 🔴 `NONE` | 🟢 **`MIT`**, one directory down |
+
+🔵 **Consequence for the LMS-connector tier specifically:** 🟢 **the Canvas, Moodle, Brightspace
+and Sisu connector rows are now `MIT` across the board**, where a week ago this KB described the
+whole tier as unusable. 🔴 **The tier did not change. The reading did.**
+
+### 🆕 🔴 A claim about a person, withdrawn
+
+🔴 **This KB published: *"this author ships unlicensed education connectors as a pattern."***
+🟢 **Both of that author's repositories declare `MIT`.** 🔵 **Withdrawn at
+[`agents/top.md`](top.md) behind `<!--corrected-->`. The probe was root-only and the KB knew it
+was root-only; the inference should not have been drawn from it.**
+
+---
+
 ## 2026-10-15 — Pass 214 — the week nothing new arrived, and the shelf corrected itself instead
 
 🟢 **APPEND-ONLY. History below this section is intact.**

@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — `25` REPOSITORIES RECOVERED FROM `ABSENT`, A NEW LICENCE FAMILY ON THESE SHELVES *(`ECL-2.0`)*, AND THE MECHANISM BEHIND EVERY BYTE-COUNT CONFLICT THIS KB TRACKS
+
+🔵 **`0` new foundation rows.** 🟢 **`ACTION QD` and `ACTION QG` discharged instead; both fire.**
+🔵 **Method: [`compose/code/p215-lstree-grant-recovery/`](../compose/code/p215-lstree-grant-recovery/README.md).**
+
+### 🆕 🟢 `P215-F1` — the `13` grants that were in the tree the whole time
+
+🟢 **Read by treeless clone — `git clone --filter=blob:none --no-checkout --depth 1` then
+`git ls-tree -r HEAD --name-only`, which transfers the complete path inventory and `0` file
+contents — then one blob read per candidate. Bytes are binary-safe at `HEAD`, per `T208-8`.**
+
+| repo | 🟢 grant | path | bytes | why `18` root forms missed it |
+|---|---|---|---|---|
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🟢 **`GPL-2.0`** | `copying.txt` | `53 408` | 🔴 lowercase, and not `LICENSE` |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** | `html/license.txt` | `18 346` | 🔴 one directory down |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **`GPL-2.0`** | `docs/License.txt` | `17 286` | 🔴 `docs/`, mixed case |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🟢 **`GPL-2.0`** | `docs/License.txt` | `17 286` | 🔴 same |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **`Apache-2.0`** | `LICENSE` | `10 785` | 🔴 **at root** — an `18`-form miss |
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🟢 **`LGPL-3.0`** | `License.txt` | `7 651` | 🔴 mixed case at root |
+| [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) | 🟢 **`MIT`** | `LICENSE` | `1 086` | 🔴 **at root** — an `18`-form miss |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🟢 **`MIT`** | `License` | `1 079` | 🔴 `License`, no extension |
+| [`ProjectsAndPrograms/school-management-system`](https://github.com/ProjectsAndPrograms/school-management-system) | 🟡 **`MIT`** | `student_panel/LICENSE` | `1 070` | 🔴 one module only |
+| [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | 🟢 **`MIT`** | `AmazonBedrock/LICENSE` | `947` | 🔴 one directory down |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟢 **`Apache-2.0`** | `NOTICE` | `680` | 🔴 `NOTICE`, no body |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🟢 **`Apache-2.0`** | `NOTICE` | `679` | 🔴 `NOTICE`, no body |
+| [`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🆕 🟢 **`ECL-2.0`** | `LICENSE_HEADER` | `558` | 🔴 a header TEMPLATE, not a licence file |
+
+🔴 **Two of these — `thm-mni-ii/feedbacksystem` and `skhdemo/uoft-quercus-mcp` — serve a plain
+`LICENSE` at ROOT.** 🔵 **`18` root forms were probed and both were recorded `ABSENT`, so the
+`94` was never purely a root-reach problem: part of it is probe loss. 🟢 `ACTION QH` re-tests the
+form list itself rather than trusting it a nineteenth time.**
+
+### 🆕 🟢 `P215-F2` — `ECL-2.0`, and it is the one licence family an education KB should not have been missing
+
+🟢 **`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider` grants under the **Educational
+Community License, Version 2.0**, read first-hand from `LICENSE_HEADER` (`558` B):**
+
+> *"Licensed under the Educational Community License, Version 2.0 (the "License"); you may not use
+> this file except in compliance with the License. You may obtain a copy of the License at
+> `http://www.osedu.org/licenses/ECL-2.0`"*
+
+🔵 **`ECL-2.0` is an `Apache-2.0` derivative, `OSI`-approved, and it is the **house licence of the
+Apereo/Sakai world** — Sakai itself, and the Learning Analytics Initiative around it.**
+🟢 **Practically: permissive, patent grant included, so a studio can build on it like
+`Apache-2.0`.** 🔴 **But a classifier matching `apache license` in a title window does not match
+it, and these shelves already carry a Sakai/Apache axis** *(`apache11-reclassification-sakai86`)*.
+🔵 **`ACTION QI` sweeps the Apereo rows for `ECL-2.0` mislabelled as `Apache-2.0`; this pass
+asserts nothing about rows it did not read.**
+
+### 🆕 🔴 `P215-F3` — the byte convention, and why `2` passes disagreed about one file
+
+🟢 **`T208-8` declares a byte count to be the blob AS SERVED at `HEAD`, trailing newline
+included.** 🔴 **p215's first read of `formalms/formalms`' `html/license.txt` returned `18 006` B;
+p214 published `18 346`.** 🟢 **p214 is right, and the `340`-byte gap has one cause:**
+
+| measure | value |
+|---|---|
+| binary bytes *(`curl -o` + `wc -c`)* | 🟢 **`18 346`** |
+| `CR` bytes in the blob | **`340`** |
+| lines | **`340`** |
+| read through a TEXT-mode pipe | 🔴 **`18 006`** = `18 346` − `340` |
+
+🔴 **A text-mode read strips `CR`, so a `CRLF` blob measures one byte short PER LINE.**
+🔵 **This is a complete mechanism for a class this KB has been tracking by symptom —
+`byte-cell-conflicts`, `byte-channel-census` — and the test is cheap: `tr -dc '\r' | wc -c`.**
+🟢 **Only `1` of the `25` blobs recovered this pass is `CRLF`, and it is exactly the `1` that
+produced a conflict.** 🔵 **The convention is unchanged; what changes is that reads must be
+binary. [`remeasure.sh`](../compose/code/p215-lstree-grant-recovery/remeasure.sh) is the gate.**
+
+### 🆕 🔴 `P215-F4` — a path is not a grant, in three distinct ways
+
+🔵 **Full table:
+[`evidence/lstree-traps-and-nongrants.2026-10-15-p215.tsv`](../evidence/lstree-traps-and-nongrants.2026-10-15-p215.tsv).**
+
+| class | instance | what a naive glob publishes |
+|---|---|---|
+| 🔴 **every match vendored** | [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) — `5` licence paths, `0` its own *(TinyMCE, Stripe, Prototype, and a third-party `LICENSE_TINYMCE.txt` hoisted to ROOT)* | 🔴 **`MIT`** on an LMS/TMS |
+| 🔴 **the filename is a DOMAIN NOUN** | 🆕 [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK) — `6` paths, all `LicenseStatusDescriptorsApi` / `LicenseTypeDescriptorsApi`: **teacher-certification** licences | 🔴 nothing, confidently |
+| 🔴 **licence text as DATA** | [`spdx/license-list-data`](https://github.com/spdx/license-list-data) — `339 359` B of *other people's* grants | 🔴 **`BSD`** |
+
+🆕 🔴 **The middle class is specific to this industry and worth stating plainly: in education,
+*"licence"* is also a credential.** 🔵 **A teacher's licence, a licence-status descriptor, a
+licensure endorsement — all match `/licen[cs]e/i` and none is a copyright grant. Any licence
+locator run on an education corpus carries a false-positive rate that the same tool would not have
+on, say, a gaming corpus.**
+
+### 🆕 🔴 `P215-F5` — `ACTION QD`'s own filter is wrong in BOTH directions
+
+🟢 **`QD` prescribed rejecting `vendor/`, `lib/`, `node_modules/`, `third_party/`,
+`public/javascripts/`.** 🔴 **Measured against real trees:**
+
+- 🔴 **too narrow** — it passes `libraries/htmlpurifier/`, `inc/libraries/`, `js/tiny_mce/`,
+  `app/code/community/Stripe/`, `source/fonts/freefont-…/`, `html/appCore/addons/` and a bare
+  top-level `phpmailer/`, every one of them third-party;
+- 🔴 **too broad** — it rejects `lib/`, and **p214's genuine `formalms` recovery was
+  `html/lib/System/license/license_english.txt`.** 🟡 `formalms` survives only because
+  `html/license.txt` exists too.
+
+🟢 **So path shape cannot decide ownership.** 🔵 **The discriminator that worked: a licence file is
+the project's own when **the manifest or `README` points at it**, or when **its copyright holder is
+the project or its author** — which is why the instrument reads the manifest channel ALONGSIDE the
+file channel instead of falling back to it.**
+
+### 🆕 🟡 `P215-F6` — the `94` was never `94` distinct repositories
+
+| duplicate pair | why |
+|---|---|
+| `OS4ED/openSIS-Classic` ≡ `os4ed/openSIS-Classic` | 🔴 owner-case variant; identical `17 286` B blob |
+| `Hesham0-0Nasser/tutor-lms-mcp` ≡ `hesham0-0nasser/tutor-lms-mcp` | 🔴 owner-case variant |
+| `foradian/fedena` ≈ `projectfedena/fedena` | 🟡 same project, two orgs; `NOTICE` `679` vs `680` B |
+
+🔵 **These shelves already know the case-variant class — `repos/foundations.md` names `5` collapsed
+pairs — 🔴 **and the `ABSENT` population was built without applying it**, so published ungranted
+counts carry duplicates on top of being overcounts.
+
+### 🔴 Still unresolved, carried honestly
+
+- 🔴 **`63` of the `94` return nothing on this channel either** — `25` manifests with no `license`
+  field *(`Nasus20202/MoodleMCP` across `5` manifests; `barneslardo/sis-demo` across `5`;
+  `jude-miller-dev/Milky-institute-online` across `6` `pom.xml`)*, and `36` with no licence-shaped
+  path anywhere in the tree. 🟢 **This is the first defensible ungranted list this KB holds, and it
+  is `63`, not `94`.**
+- 🔴 **`3` failures, recorded not dropped:** `jakerains/scormplayer` *(clone refused)*,
+  `cdweaver1992/edfi-mcp-server` and `openfresno/edgenuity-aeries-grade-passback`
+  *(clone succeeded, `ls-tree` empty at `HEAD`)*.
+
 ## Pass 214 — 2026-10-15 — `6` GRANT CELLS CORRECTED ON THIS SHELF, EVERY ONE IN THE GNU FAMILY, AND `2` REPOS RECOVERED FROM `ABSENT`
 
 🔵 **No new repository rows this pass.** 🟢 **`ACTION PZ` — p211's registered, entirely offline
@@ -1906,7 +2033,7 @@ down at `docs/`, `legal/`, `.github/`:
 |---|---|---|---|---|
 | 🔴 [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | **1EdTech** *(LTI)* | 🔴 **NONE** | 🔴 **none** | 🔴 none found |
 | 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **ADL** *(SCORM/xAPI)* | 🔴 **NONE** | 🟡 **`## License` → *"Licensed under the Apache License, Version 2.0"*** | 🔴 none found |
-| 🔴 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🔴 **NONE** | 🔴 **none** | 🔴 none found |
+| 🟡 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🟢 **`AGPL-3.0`** *(`package.json`, `3 600` B, p215)* | 🔴 **none at root** | 🟢 **the manifest** <!--corrected--> |
 
 🔴 **These are the reference implementations an engagement reads FIRST when it has to speak LTI,
 SCORM or xAPI**, and two of the three grant nothing in any form this KB can find. 🟡 `adlnet`'s
@@ -2610,7 +2737,7 @@ first. 🟢 **p188 adds the second and reads the third:**
 | row | licence | ★ | region |
 |---|---|---|---|
 | 🆕 🟢 **[`academico-sis/academico`](https://github.com/academico-sis/academico)** | 🟢 **`MIT`** *(`1 094` B, full text)* | `404` | 🟢 **LATAM** |
-| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL`, and BY REFERENCE IN THE README ONLY** — *"licensed under the GNU General Public License, the full license can be fou…"*, with **NO licence file at `10` probed paths** | `345` | North America |
+| 🟡 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **`GPL-2.0`, and THE FULL BODY IS IN THE TREE** at `docs/License.txt` *(`17 286` B, re-read p215)*; the README points there — 🔴 **nothing at the `10` probed ROOT paths**, which is all *"by reference only"* ever measured <!--corrected--> | `345` | North America |
 | 🔴 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`GPL`** *(`15 214` B)* | `646` | EMEA |
 
 🔴 **`openSIS-Classic` is `P971`, instance SEVEN — and the weakest instance this KB has
@@ -3273,7 +3400,11 @@ at all.** 🟢 **`3` rows are now ROUTE-grade and code-verified — `OpenOLAT`, 
 
 ### 🔴 Still unresolved, carried honestly
 
-- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent.** Unchanged from
+- 🟢 **`formalms/formalms` is RESOLVED: `GPL-2.0`**, body in-tree at `html/license.txt`
+  *(`18 346` B, re-read binary-safe p215, CRLF — see `P215-5`)*, plus the same grant as a
+  translated UI asset in `10` languages. <!--corrected--> 🔴 **p214 established this and `6` cells on
+  these shelves went on saying *"no licence"* — the `ACTION QG` defect, measured.**
+- 🔴 **`apereo/opencast` remains UNRESOLVED, not absent.** Unchanged from
   p179; not probed this pass, which spent its fetch budget on the `17`-row census instead.
 - 🔴 **`ACTION KN` — the `76` grant-path probe lists — is carried for a SIXTH pass.** 🆕 🟡 **Its
   urgency drops, though, and the reason is measurable:** this pass fetched `moodle/moodle` at

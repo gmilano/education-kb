@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — `ABSENT` MEANT *"NOT AT ROOT"*: `27`% OF THIS KB'S UNGRANTED POPULATION WAS GRANTED ALL ALONG, AND THE SAME SHELVES HELD BOTH READINGS
+
+### 🆕 🔴 `T215-1` — the ungranted count was a channel artefact, and now it has a defensible size
+
+🟢 **`25` of `94` rows this KB published as `ABSENT` carry a grant off-root** — `13` in a licence
+file one or more directories down, `12` in a manifest. 🔵 **`ACTION QD` limb `1` fires against a
+threshold of `15`.**
+
+| this KB's ungranted figure | status |
+|---|---|
+| `94` *(p211, after `18` root path forms)* | 🔴 **overcount by `25`, and it contains `3` duplicate pairs** |
+| `63` *(p215, after the `ls-tree` channel)* | 🟢 **the first defensible ungranted list this KB holds** |
+
+🔴 **Every one of p211's `18` path forms was a ROOT path, and the word `ABSENT` was read as
+*"ungranted"* for four passes.** 🟢 **p211 labelled the file correctly — *"an ABSENCE AT ONE
+CHANNEL, not a finding of no licence"* — 🔴 **and the derived cells across four shelves dropped
+the qualifier.** 🔵 **That is `P211-1`'s propagation defect operating on a METHOD CAVEAT rather
+than on a licence value, which is a worse version of it: the caveat is what makes the number
+honest.**
+
+### 🆕 🔴 `T215-2` — `2` of the recoveries sit at ROOT, so this was never purely a reach problem
+
+🟢 **`thm-mni-ii/feedbacksystem` serves `LICENSE` *(`10 785` B, `Apache-2.0`)* and
+`skhdemo/uoft-quercus-mcp` serves `LICENSE` *(`1 086` B, `MIT`)* — at root, under the most
+obvious filename there is.** 🔴 **Both were probed with `18` forms and recorded `ABSENT`.**
+🔵 **So the `94` decomposes into at least three causes, not one:** 🟡 **off-root placement**,
+🟡 **case and extension variance** *(`License`, `License.txt`, `copying.txt` — `3` of `13`)*, and
+🔴 **probe loss at root, cause unknown**. 🟢 **`ACTION QH` tests the form list itself instead of
+trusting it a nineteenth time.**
+
+### 🆕 🔴 `T215-3` — in EDUCATION, *"licence"* is a credential, and licence locators do not know that
+
+🟢 **New false-positive class, and it is industry-specific.**
+[`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK)
+carries `6` paths matching `/licen[cs]e/i`:
+
+| path | what it actually is |
+|---|---|
+| `…/LicenseStatusDescriptorsApi.cs` *(`144 764` B)* | 🔴 Ed-Fi API bindings for **teacher certification licence STATUS** |
+| `…/LicenseTypeDescriptorsApi.md` *(`41 793` B)* | 🔴 Ed-Fi descriptors for **licence TYPE** |
+
+🔴 **`0` of the `6` are copyright grants.** 🔵 **A teacher's licence, a licensure endorsement, a
+licence-status descriptor — all match the same regex a grant locator uses. 🟢 **Any licence sweep
+over an education corpus carries a false-positive rate that the identical tool would not have on a
+gaming or fintech corpus**, because education data models contain *credentialing* as a first-class
+noun.** 🔵 **Two sibling classes, both observed:
+[`spdx/license-list-data`](https://github.com/spdx/license-list-data) ships `339 359` B of **other
+people's** grants as DATA, and [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) has `5`
+licence paths of which `0` are its own.**
+
+### 🆕 🔴 `T215-4` — a single-axis path filter cannot decide ownership, in either direction
+
+🔵 **`ACTION QD` prescribed rejecting `vendor/`, `lib/`, `node_modules/`, `third_party/`,
+`public/javascripts/`. Measured, it fails both ways:**
+
+| direction | instance |
+|---|---|
+| 🔴 **too narrow** | passes `libraries/htmlpurifier/`, `inc/libraries/`, `js/tiny_mce/`, `app/code/community/Stripe/`, `source/fonts/freefont-…/`, `html/appCore/addons/`, bare `phpmailer/` — all third-party |
+| 🔴 **too broad** | rejects `lib/` — and **p214's genuine `formalms` recovery was `html/lib/System/license/license_english.txt`** |
+
+🟢 **The discriminator that worked is not shape but ATTESTATION: a licence file is the project's
+own when the manifest or `README` points at it, or when its copyright holder is the project or its
+author.** 🔵 **Which is why the manifest channel must run ALONGSIDE the file channel, not as a
+fallback — on `foradian/fedena` the manifest-class `NOTICE` is the ONLY channel, and on
+`alfredang/ai-mms` the file channel is pure noise.**
+
+### 🆕 🔴 `T215-5` — every byte-count conflict in this KB has one mechanism, and it is `CR`
+
+🟢 **`formalms/formalms`' `html/license.txt`: `18 346` binary bytes, `340` `CR` bytes, `340`
+lines.** 🔴 **Read through a text-mode pipe: `18 006` — short by exactly `340`, one byte per
+line.** 🟢 **p214 published `18 346` and was right; p215's first read was not.**
+🔵 **`T208-8`'s convention *(the blob AS SERVED)* is unchanged — what this adds is that the READ
+must be binary, and that `tr -dc '\r' | wc -c` separates the two readings in one call.**
+🟡 **Scope, so this is not over-read: `1` of the `25` blobs recovered this pass is `CRLF`, and it
+is exactly the `1` that produced a conflict. `24` are `LF` and have one byte count.**
+
+### 🆕 🔴 `T215-6` — the propagation defect, measured a third time, and the composition is the finding
+
+🟢 **`ACTION QG` ran as a gate over `263` grant-claim lines touching the `25` repositories
+*(`170` current-state, `93` in dated append-only history)*.**
+
+| | count |
+|---|---|
+| 🔴 current-state cells contradicting the established grant | **`23`** *(corrected in place)* |
+| 🟢 current-state cells that ALREADY held the right answer | **`7`** |
+| 🟡 comparator false positives *(cells describing the error, or a naive read, correctly)* | **`4`** |
+| 🔵 dated history mentions *(records, not errors — untouched)* | **`93`** |
+
+🔴 **`formalms/formalms` is the cleanest instance this KB has produced: p214 established
+`GPL-2.0`, and `4` current-state cells went on saying *"no licence body"* and *"UNRESOLVED"* —
+while `intel/market.md` carried p214's correction in full, in the same repository, on the same
+day.** 🔵 **`OS4ED/openSIS-Classic` is the same shape mirrored: `3` cells named `docs/License.txt`
+correctly and `2` concluded the opposite from the same evidence.**
+
+🟢 **So the third independent sample agrees with `P211-1` *(`6`/`7`)* and `P214-3` *(`3`/`4`)*, and
+sharpens them:** 🔴 **the defect is not that this KB fails to learn — it is that a correction lands
+in the cell the pass happened to be looking at.** 🔵 **`ACTION QG`'s gate is therefore the right
+instrument and it must run ON WRITE, not once per pass;
+[`qg_gate2.py`](../compose/code/p215-lstree-grant-recovery/qg_gate2.py) is the implementation.**
+
+### 🆕 🔴 `T215-7` — a claim about a PERSON was derived from a probe this KB knew was root-only
+
+🔴 **This KB published, of two connector rows: *"this author ships unlicensed education connectors
+as a pattern."*** 🟢 **Both repositories declare `MIT` in their manifests *(`973` B, `999` B)*.**
+🔵 **The chain: a root-only probe returned `ABSENT` twice → the two rows were summarised as a
+behaviour → the behaviour was attributed to a named individual.** 🟢 **Withdrawn in place.**
+🔴 **The rule this pass adds: a row may record WHAT A CHANNEL RETURNED; an inference about a
+person's practice requires a channel that can support it, and `ABSENT`-at-one-channel never
+can.** 🔵 **`ACTION QK` sweeps the shelves for other person-level inferences resting on
+`ABSENT`.**
+
+### 🆕 🟢 `T215-8` — `ECL-2.0`: the education sector's own licence family, absent for `214` passes
+
+🟢 **The **Educational Community License `2.0`** — an `OSI`-approved `Apache-2.0` derivative with a
+patent grant, hosted at `osedu.org/licenses/ECL-2.0` — is the house licence of **Sakai** and the
+wider **Apereo** ecosystem.** 🔴 **It appears nowhere on these shelves before this pass, and the
+reason is mechanical: a title-window matcher looking for `apache license`, `mit license` or
+`general public license` does not match *"Educational Community License"*.** 🔵 **Read first-hand
+from `Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`'s `LICENSE_HEADER` (`558` B).**
+🟡 **This KB already carries a Sakai/`Apache-1.1` reclassification axis, so the question
+`ACTION QI` asks is how many Apereo rows read `Apache-2.0` because `ECL-2.0` was invisible.**
+
+### 🆕 🔴 `T215-9` — the search channel, measured a fourth time: saturated globally, BLANK in two regions
+
+🟢 **All `8` mandated searches ran verbatim.** 🔴 **`0` education-sector agents or repositories
+returned that these shelves do not already carry.** 🔵 **The global agent query's top hits —
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch` — are 🟡 **curriculum ABOUT agents, not agents for
+education**, which is a category confusion in the QUERY, not a gap in the corpus.**
+🔴 **EMEA and APAC returned `0` education instruments for the sixth consecutive pass on the
+region-shaped query, while organ-named queries have filled those cells on the first try since
+p208.** 🟢 **Recorded as blanks in [`intel/market.md`](market.md), not smoothed over;
+`ACTION QJ` proposes retiring the shape.**
+
 ## Pass 214 — 2026-10-15 — THE MANDATED SEARCH SET RETURNED `0` NEW FACTS: `23` OF `23` TERMS WERE ALREADY HERE. THE SEARCH CHANNEL IS SATURATED FOR THIS INDUSTRY
 
 ### 🆕 🟢 `T214-1` — the pan-regional query PAID in all four regions, and that is still not a finding
@@ -2327,7 +2462,7 @@ standards-body reference implementations on this shelf are all in that set:**
 |---|---|---|---|
 | 🔴 [`1EdTech/lti-1-3-php-example-tool`](https://github.com/1EdTech/lti-1-3-php-example-tool) | **1EdTech** *(LTI)* | 🔴 NONE | 🔴 none |
 | 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | **ADL** *(SCORM/xAPI)* | 🔴 NONE | 🟡 *"Licensed under the Apache License, Version 2.0"* |
-| 🔴 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🔴 NONE | 🔴 none |
+| 🟡 [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | H5P desktop | 🟢 **`AGPL-3.0`** *(manifest, p215)* | 🔴 none at root <!--corrected--> |
 
 🔴 **The standards are open; their reference implementations are not a licensed starting
 point.** 🟢 **The trend statement, falsifiable: as education software gets more interoperable,
@@ -2518,7 +2653,7 @@ licence file.** 🆕 **p194 shows the pattern is not confined to small new repos
 
 | repo | ★ | probe | result |
 |---|---|---|---|
-| 🔴 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | `19` filenames + README | 🔴 **no licence, none named** |
+| 🟡 [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `38 564` | `19` filenames + README | 🟢 **`MIT` at `AmazonBedrock/LICENSE`** *(`947` B, p215)* — 🔴 the `19` filenames were all ROOT <!--corrected--> |
 | 🔴 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `29 553` | same | 🔴 **no licence, none named** |
 | 🔴 [`midudev/libros-programacion-gratis`](https://github.com/midudev/libros-programacion-gratis) | `6 072` | same | 🔴 **no licence, none named** |
 
@@ -8745,7 +8880,7 @@ canonical SPDX texts (`compose/code/p135-licence-sha-identity`):
 
 🔴 **The practical edge, because this is a procurement risk and not a curiosity.** In this corpus a
 badge would have mislabelled an LMS a studio can use (`OpenOLAT`, permissive) and said nothing about
-two it cannot: `pipwerks/scorm-api-wrapper` (**391★, 130 forks, no licence file at all**) and
+two it cannot: `pipwerks/scorm-api-wrapper` (**391★, 130 forks, no licence file at all** — 🟢 **but `MIT`-style in `package.json`, p215** <!--corrected-->) and
 `cybercussion/SCOBot` (**164★, and the licence file is the CC-BY-SA-4.0 human-readable deed, not the
 legal code** — a ShareAlike content licence on software). 🟢 **Rule: on anything a client will ship,
 read the payload and hash it. A badge is a lead.**

@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — THE REGIONAL QUERIES RETURNED ONE NEW INSTRUMENT AND TWO HONEST BLANKS. THE OPPORTUNITY THAT MOVED IS AGAIN A LICENCE READING
+
+🔵 **Channel note, re-tested and unchanged:** 🔴 **every government and analyst host is `000`/`403`
+from here.** 🟢 **`raw.githubusercontent.com` is `200`; `git ls-remote`, `git clone` and
+`git ls-tree` work.** 🔴 **Every market and policy figure below is a SEARCH-SNIPPET claim and is
+labelled as one; the licence and repository work in
+[`repos/foundations.md`](../repos/foundations.md) is first-hand.**
+
+### 🆕 🟢 `P215-M` — the one genuinely new artefact: a regional research instrument for LATAM
+
+🟢 **A **UNESCO IESALC / UNU-IAS working paper**, dated **September `2026`**, surveys AI use at
+**`200` higher-education institutions across `19` countries** in Latin America and the Caribbean,
+on fieldwork from late `2025`, across five dimensions *(teaching and learning; research; community
+engagement; administration; governance)*.** 🔵 **This is the first instrument these shelves carry
+that measures LATAM higher-ed AI adoption at institution level rather than by market estimate.**
+🔴 **The document host is unreachable from this environment, so its FINDINGS are not recorded —
+only its existence, scope and date.** 🟡 **Also surfaced: a `2025` comparative study of AI rules in
+higher education across **Argentina, Brazil, Chile, Peru and Spain**, and `ILIA 2025` *(CEPAL)*
+with a governance/regulation subdimension.**
+
+### 🆕 🔴 `P215-M2` — EMEA and APAC returned `0` education instruments, for the SIXTH consecutive pass
+
+🔵 **The mandated region query shape — `AI {industry} {region} {year} adoption regulation
+players` — was run verbatim for all four regions.** 🔴 **EMEA and APAC returned ENTERPRISE AI
+material and no education-sector instrument.** 🟢 **This is not silence and must not read as
+coverage:**
+
+| region | what the mandated query returned | verdict |
+|---|---|---|
+| **North America** | 🟡 fragmented oversight *(no FDA-equivalent for edtech; state-level rules in Colorado and Texas)*; 🟡 `OpenAI` country-level education programme with `8` national partners *(Q1 `2026`, snippet)*; 🟡 `$169`M government commitment to responsible AI in higher ed *(Q1 `2026`, snippet)*; 🟡 `71`% of US teachers lacking AI training | 🟢 **usable, all snippet-sourced** |
+| **EMEA** | 🔴 **`0` education instruments.** Returns enterprise-AI adoption surveys, a `2023` Workday study, CompTIA's `2026` outlook *(US-only sample)*. The one education-specific hit is a **Council of Europe** working conference dated **`2024`** — older than what these shelves already carry | 🔴 **BLANK on the mandated shape** |
+| **APAC** | 🔴 **`0` education instruments.** Returns AI-sovereignty and real-time-data pieces. Two education-adjacent commercial items: a **TCS–Pearson** multi-year AI learning alliance, and LearnUpon's Sydney APAC HQ with AI course authoring | 🔴 **BLANK on the mandated shape** |
+| **LATAM** | 🟢 the UNESCO IESALC/UNU-IAS instrument above; 🟡 IDC-sourced ~`47`% regional business AI adoption, Brazil highest; 🟡 a vendor figure of `$18.2`M for *"rest of Latin America"* AI-in-education | 🟢 **paid, and the only region where the mandated shape found a dated instrument** |
+
+🟢 **`T211`'s finding holds for a sixth reading: the region-shaped query is the wrong instrument
+for EMEA and APAC, and ORGAN-NAMED queries fill those cells on the first try** *(p208 got France's
+`MEN`, Germany's `KMK`, Spain's `INTEF`, Singapore's `MOE`, Japan's `MEXT`, India's `CBSE`/`NCERT`
+that way)*. 🔴 **p215 ran the mandated shape as specified and records the blanks rather than
+substituting the shape that works — `ACTION QJ` proposes replacing it.**
+
+🟡 **Global market figures remain irreconcilable across publishers and are carried as a RANGE, not
+a number:** IMARC `$6.4`B *(`2025`)* → `$79.6`B *(`2034`)*; Grand View `$8.3`B *(`2025`)* →
+`$11.4`B *(`2026`)*; The Business Research Company `$7.52`B → `$10.6`B *(`2026`)*. 🔴 **A `12`×
+spread between publishers on the same year is a sign the category is defined differently by each,
+and no single figure should be quoted to a client without its source.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The `25`-row grant recovery lands hardest here, because the recovered SIS and autograding
+rows are North American.** 🟢 **`OS4ED/openSIS-Classic` and `openSIS-Responsive-Design` are
+`GPL-2.0` with the body in-tree; `virtualarkansas/jupyterlite-zestables` — a **state virtual
+school's** Canvas-embedded JupyterLite assessment packaging — is `MIT` in both its manifests.**
+🔵 **Opportunity: a district or state-virtual-school SIS/LMS modernisation on a `GPL-2.0` base
+with `MIT` Canvas content tooling, where the compliance story is now provable from the tree
+rather than asserted.** 🔴 **Constraint to carry: `GPL-2.0` without *"or later"* will not mix with
+`GPL-3.0` components, and the fragmented state-level rules *(Colorado, Texas)* mean the governance
+layer is per-jurisdiction, not national.**
+
+### EMEA
+
+🟢 **EMEA gains the clearest single new capability this pass: `ink-waffle/sisu-mcp` is `MIT`, and
+it targets *any* **Sisu** deployment rather than one university** — Sisu being the Finnish
+higher-education SIS *(Funidata)*. 🟢 **`thm-mni-ii/feedbacksystem`, a German autograding system,
+is `Apache-2.0`.** 🟢 **`formalms/formalms` is `GPL-2.0` **and ships its licence in `10`
+languages**, which matters precisely in European public procurement where the grant must be shown
+in the procurement language.** 🔵 **Opportunity: a Nordic/DACH higher-ed engagement composing a
+permissive SIS connector, an `Apache-2.0` autograder and a `GPL-2.0` LMS — all three now with
+first-hand grants.** 🔴 **Gap, stated: the mandated regional query found `0` `2026` EMEA education
+instruments, and the EU AI Act's high-risk classification for education *(full effect August
+`2026`, snippet-sourced)* is carried unverified because every EU host is unreachable from here.**
+
+### APAC
+
+🟡 **The only APAC-bound row that moved is `MisterCommand/mcp-canvas-lms`, now `MIT`, whose `+0800`
+commit pattern these shelves already used to place it.** 🔴 **Nothing else APAC-specific was
+recovered, and the mandated query returned `0` education instruments for a sixth pass.**
+🟡 **Two commercial signals only, both snippet-sourced: a **TCS–Pearson** multi-year AI learning
+alliance aimed at employer skills gaps, and **LearnUpon**'s Sydney APAC headquarters with AI course
+authoring.** 🔵 **Opportunity, honestly framed as the thinnest of the four: AI-sovereignty pressure
+is reported to be shaping infrastructure choices for roughly half of APAC firms, which for
+education means **self-hosted** model serving over a permissive LMS — a composition these shelves
+can already specify. 🔴 **But this KB holds no `2026` APAC education instrument to anchor it, and
+that gap should be closed by organ-named queries, not by re-running the regional shape.**
+
+### LATAM
+
+🟢 **LATAM is the one region where the mandated query paid, and the payment is an instrument
+rather than a market number: the UNESCO IESALC/UNU-IAS **`200`-institution, `19`-country**
+September `2026` survey.** 🟢 **On the build side, `formalms/formalms`' `GPL-2.0` licence shipped
+in Spanish and Portuguese is directly useful for a ministry or university procurement, and
+`SIU-Toba/docker-guarani` plus `eugeborzone/Auto_Grade_Guarani` *(both still ungranted after this
+channel — see the `63`)* remain the Argentine `SIU-Guaraní` surface.** 🔵 **Opportunity: a
+ministry-scale LMS/SIS deployment where the grant is demonstrable in the procurement language,
+paired with dropout/early-warning scoring — `juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia`
+is on these shelves and is **one of the `63` with no grant**, so it is a reference, not a base.**
+🔴 **Constraint: the `2025` comparative study covering Argentina, Brazil, Chile and Peru reports
+rules that differ per country, so a regional offer needs a per-jurisdiction governance layer.**
+
 ## Pass 214 — 2026-10-15 — THE REGIONAL QUERIES PAID IN ALL FOUR REGIONS AND ADDED `0` FACTS. THE OPPORTUNITY THAT MOVED IS A LICENCE CORRECTION, NOT A MARKET READING
 
 🔵 **Channel note, unchanged and re-tested:** 🔴 **every government and analyst host is

@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 215 — 2026-10-15 — TWO RECIPES: THE GRANT LOCATOR THAT ACTUALLY WORKS, AND THE PERMISSIVE LMS-CONNECTOR STACK `25` RECOVERIES JUST UNBLOCKED
+
+### 🆕 🟢 `P215-A` — the three-channel grant locator *(wire into CI, and into client due diligence)*
+
+🔵 **Problem it solves, measured this pass:** 🔴 **a root-filename probe — `18` forms, which is
+what this KB ran for four passes — reports `ABSENT` on `25` of `94` repositories that DO grant,
+and a naive whole-tree glob reports `MIT` on a school ERP from a vendored file.** 🟢 **Both
+failures are cheap to eliminate, and the fix is three channels plus one ownership test.**
+
+**Repos + tools:**
+[`compose/code/p215-lstree-grant-recovery/`](code/p215-lstree-grant-recovery/README.md) *(this
+KB's implementation)* · `git` ≥ `2.19` *(for `--filter=blob:none`)* ·
+[`spdx/license-list-data`](https://github.com/spdx/license-list-data) *(canonical SPDX texts — use
+it as the comparison corpus, never as a scan target.* 🔴 **And note what p215 found when it looked:
+this repository declares NO grant of its own** — no root licence file over `3` forms and no licence
+statement in its `README`, read `2026-10-15`. 🔵 **The repository that holds every licence does not
+publish one, so treat its contents as reference and settle redistribution with `spdx.org`.*)* ·
+[`google/licenseclassifier`](https://github.com/google/licenseclassifier) *(`Apache-2.0`, `11 358` B,
+read `2026-10-15`)* for body-similarity scoring.
+
+**Wire it up:**
+
+1. 🟢 **Inventory the tree with no blob transfer.**
+   ```bash
+   git clone --filter=blob:none --no-checkout --depth 1 "https://github.com/$SLUG" "$DIR"
+   git -C "$DIR" ls-tree -r HEAD --name-only > paths.txt
+   ```
+   🔵 Reads `4 500`+ paths in seconds; `94` repositories cost one coffee.
+2. 🟢 **Shortlist on the basename, case-insensitively** — `licen[cs]e*`, `copying*`, `copyright*`,
+   `notice`, `unlicense`, plus the manifests `package.json`, `composer.json`, `pyproject.toml`,
+   `setup.py`, `Cargo.toml`, `*.gemspec`, `pom.xml`, `DESCRIPTION`.
+   🔴 **Do NOT stop at root. `13` of this pass's `25` recoveries are off-root, and `3` differ from
+   a probed name only by case.**
+3. 🔴 **Decide OWNERSHIP by attestation, not by path shape** *(`T215-4`)*:
+   - 🟢 the manifest or `README` points at the file → **own**;
+   - 🟢 the copyright holder is the project or its author → **own**;
+   - 🔴 otherwise, and especially under `vendor/`, `libraries/`, `node_modules/`, `addons/`,
+     `fonts/`, `js/<libname>/`, `app/code/community/` or a bare third-party project name
+     *(`phpmailer/`, `htmlpurifier/`, `tiny_mce/`)* → **vendored, discard**.
+   🔴 **A segment blacklist alone is not enough in either direction** — it misses
+   `inc/libraries/…` and it wrongly rejects `html/lib/System/license/…`, which is a REAL grant.
+4. 🔴 **Reject the education-specific false positives** *(`T215-3`)*: a path is not a grant if it
+   is **generated API code or docs for credentialing** *(`LicenseTypeDescriptorsApi.*`,
+   `licensure*`, `*LicenseStatus*`)*, a **licence-text dataset** *(`licenses.json`,
+   `licenses.md`)*, or a **CI script** *(`licenseCheck.*`)*.
+5. 🟢 **Classify from the TITLE WINDOW — the first ~`6` meaningful lines — never the body**
+   *(`P214-1`)*: `GPL-3.0` §13 is titled *"Use with the GNU Affero General Public License"* and the
+   body says `Affero` three times, so a whole-body matcher flips the family.
+   🟢 **Include `ECL-2.0`** *(`"Educational Community License"`)* in the token list — `T215-8`.
+6. 🟢 **Measure bytes BINARY-SAFE** *(`T215-5`)*: `curl -o file` then `wc -c`, and record
+   `tr -dc '\r' | wc -c`. 🔴 A text-mode pipe understates a `CRLF` blob by one byte per line.
+7. 🔴 **Emit `MANIFEST-ONLY` and `NON-SPDX` as distinct states, not as `MIT`.**
+   `pipwerks/scorm-api-wrapper` declares
+   `"license": "MIT-style license: http://pipwerks.mit-license.org/"` — 🟢 a real grant that
+   🔴 **every scanner reports as `NOASSERTION`**. The remediation is a one-line manifest fix, which
+   is worth telling a client; *"unlicensed"* is not.
+8. 🟢 **Gate the write** *(`P215-QG`)*: when a repo's grant changes, re-read EVERY cell that
+   mentions it in the same run —
+   [`qg_gate2.py`](code/p215-lstree-grant-recovery/qg_gate2.py). 🔴 **Three independent samples
+   put this KB's propagation failure rate near `80`%; the gate is the only reason p215's `23`
+   corrections landed together.**
+
+🔵 **Sellable as:** a **2-week licence-provenance audit** over a client's dependency or acquisition
+target, delivering a per-repository grant, channel, byte count, `CRLF` flag and ownership verdict
+— 🟢 **plus the remediation list, which for manifest-only and non-SPDX rows is a one-line PR.**
+🔴 **Collapse `ABSENT` into *"unlicensed"* in that deliverable and you will be wrong `27`% of the
+time, which is this pass's measured rate.**
+
+### 🆕 🟢 `P215-B` — the permissive LMS/SIS connector stack, buildable as of this pass
+
+🔵 **Why now:** 🟢 **a week ago these shelves described the whole LMS-connector tier as unusable;
+`ACTION QD` established `MIT` on every platform in it.** 🔴 **Nothing in the tier changed — the
+reading did — so this recipe is `25` recoveries cashed in, not a new discovery.**
+
+**The stack, every grant read first-hand on `2026-10-15`:**
+
+| layer | component | grant |
+|---|---|---|
+| **LMS/SIS connectors** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) *(`3 461` B)* · [`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms) *(APAC)* · [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) · [`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs) · [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) *(EMEA/Finland)* | 🟢 **`MIT`** throughout |
+| **LTI 1.3 entry** | [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) *(CMU, Gleam)* | 🟢 **`MIT`** *(`1 005` B)* |
+| | [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) *(Java)* | 🟡 **`LGPL-3.0`** *(`7 651` B)* |
+| **LMS** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`**, licence in `10` languages |
+| **SIS** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **`GPL-2.0`**, body in-tree |
+| **autograding** | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) *(DE)* | 🟢 **`Apache-2.0`** *(`10 785` B)* |
+| **spaced repetition** | [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🟢 **`MIT`** *(`1 079` B)* |
+| **accessibility** | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🟡 **`GPL-2.0`** *(`53 408` B)* — ship alongside, do not link into proprietary code |
+| **content authoring** | [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) *(H5P desktop)* | 🔴 **`AGPL-3.0`** — see the warning |
+
+**Wiring:**
+
+1. 🟢 **Connector layer**: run the `MIT` MCP servers per platform; they expose courses,
+   enrolments, assignments and grades as tools. 🔵 `sisu-mcp` is written against *any* Sisu
+   deployment, so one EMEA integration reaches every Finnish institution on it.
+2. 🟢 **Entry point**: mount the agent as an **LTI 1.3** tool so it launches inside the LMS with
+   the user's role and context. 🟡 Prefer the `MIT` Gleam tool for a greenfield service; take
+   `kstateome/lti-launch` *(`LGPL-3.0`)* if the stack is Java and keep modifications to it
+   separable.
+3. 🟢 **Grading loop**: `feedbacksystem` *(`Apache-2.0`)* for autograding submissions, with the
+   agent drafting feedback and a human releasing it.
+4. 🟢 **Retention loop**: `fsrs4anki-helper` *(`MIT`)* for scheduling, driven by mastery signals
+   from the grading loop.
+5. 🔴 **Licence boundaries that decide the architecture, not footnotes:**
+   - 🔴 **`Lumi` is `AGPL-3.0`** — host it and you may owe source for the service around it.
+     🟢 Use the H5P *libraries* for authoring instead, or run `Lumi` as an author's desktop tool
+     outside the hosted boundary.
+   - 🔴 **`GPL-2.0` without *"or later"*** *(`formalms`, `openSIS`, `nvda`)* **will not combine
+     with `GPL-3.0` components.** 🟢 Keep them as separate processes behind APIs.
+   - 🟡 **`GPL-2.0` requires the terms to travel with the work** — 🟢 and on `openSIS` they now
+     demonstrably do, at `docs/License.txt`.
+6. 🟢 **Before shipping any of it, run `P215-A` over the final dependency set** — three of the
+   components above were recorded as ungranted by this KB nine days ago.
+
+🔵 **Regional fit:** 🟢 **EMEA** gets the strongest version *(Sisu connector + German
+`Apache-2.0` autograder + a `GPL-2.0` LMS that ships its licence in the procurement language)*;
+🟢 **North America** gets the `openSIS` + Canvas path with `MIT` state-virtual-school content
+tooling *(`virtualarkansas/jupyterlite-zestables`)*; 🟡 **LATAM** gets `formalms` in Spanish and
+Portuguese; 🔴 **APAC** has one `MIT` Canvas connector and no `2026` policy anchor on these
+shelves — say so in a proposal rather than implying parity.
+
 ## Pass 214 — 2026-10-15 — TWO RECIPES: THE GRANT GATE THAT STOPS `P214-1` RECURRING, AND THE SELF-HOSTED SIS BUILD IT JUST UNBLOCKED
 
 ### 🆕 🟢 `P214-A` — the GNU-family grant gate *(wire this into the KB itself, and into client due diligence)*
@@ -1642,7 +1762,7 @@ systems, **exactly two are permissive, and the most-starred is AGPL.**
   is the shape of a group or ministry deployment. Both Laravel/PHP.
 - 🔴 **Not** [`hrshadhin/school-management-system`](https://github.com/hrshadhin/school-management-system)
   (`1 145★`) — **AGPL-3.0** `34 522` B; hosting it for a client can compel source disclosure.
-  🔴 **Not** `ProjectsAndPrograms/school-management-system` (`206★`) — no grant anywhere.
+  🟡 **`ProjectsAndPrograms/school-management-system`** (`206★`) — 🟢 **`MIT` at `student_panel/LICENSE`** *(`1 070` B, p215 <!--corrected-->)*, but scoped to one subdirectory and copyright an individual, so only with the provenance recorded.
   🟡 `frappe/education` (`665★`) only if the client is already on ERPNext — and note its licence
   is a **`19`-byte reference**, so the grant cannot be established from the repo.
 - **AI layer:** dropout/early-warning scoring over the SIS's own attendance and grade tables,
@@ -3789,7 +3909,7 @@ failing on at least one row.**
 | `3` | Licence heading — including `Licence`, `Licencia`, `版权协议`, `ライセンス` | 🔴 `a5anka` writes `## Licence`; a `License`-only grep reports nothing |
 | `4` | The BODY, with no keyword suppression | 🔴 `haolpku/Omni-Edu`'s `Apache-2.0` was suppressed by a `third-party` filter — a self-inflicted false negative on a `225`★ row |
 | `5` | **Whose** licence is it? Exclude dependency inventories | 🔴 `jadrianlg16/learning-tutor` lists three dependency licences inside a section that reserves all rights |
-| `6` | If the README names a FILE, does the file exist? | 🔴 `DMontgomery40/mcp-canvas-lms` points at an absent `LICENSE` — the most dangerous form, because both channels look settled |
+| `6` | If the README names a FILE, does the file exist? | 🔴 `DMontgomery40/mcp-canvas-lms` points at an absent `LICENSE` — the most dangerous form, because both channels look settled. 🟢 **Its `package.json` (`3 461` B, p215) does declare `MIT`, so step `3` recovers what step `6` flags** <!--corrected--> |
 | `7` | Is the token a GRANT or a CLAIM? | 🔴 a `shields.io` badge, *"MIT — demo use only"*, *"open source for educational purposes"* — none of the three is a licence |
 | `8` | Is there an identifiable LICENSOR? | 🔴 `dotty-tutor` has a complete `Apache-2.0` with `Copyright [yyyy] [name of copyright owner]` unfilled, no `NOTICE`, no contact — harder to clear in review than a short `MIT` with a name |
 | `9` | Is there a SECOND grant for content or weights? | 🔴 `Omni-Edu` carves out model weights; `BloodCoded_Agentic` releases `data/knowledge/` under `CC BY-SA 4.0` in a README sentence with no file |
@@ -10984,7 +11104,7 @@ Open edX (AGPL) and OpenOlat (Apache) identically, because **a SCORM package is 
 That is the same argument P11 makes for launch and rostering, applied to content.
 
 🔴 **Two licence traps on this path, both measured this pass.** Do **not** reach for
-`pipwerks/scorm-api-wrapper` (**391★ and no licence file of any kind** — use `scorm-again`), and do
+`pipwerks/scorm-api-wrapper` (**391★ and no licence file of any kind**, though 🟢 **`package.json` does grant `MIT`-style — p215** <!--corrected-->; `scorm-again` remains the cleaner cite), and do
 **not** reach for `cybercussion/SCOBot` (**164★, CC-BY-SA-4.0, and the file is only the
 human-readable deed** — a ShareAlike content licence on code, with no patent grant). Both are
 popular, which is exactly why they get picked by default.
