@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 225 — TWO ALIAS PAIRS FOUND BY SWEEP, NOT BY ACCIDENT: THE KB WAS CARRYING ITS LARGEST ROW TWICE, AND `90` NAME COLLISIONS TURN OUT TO BE `4` ACTUAL DUPLICATES
+
+🔵 **`0` new trending rows. The mandated trending shape returned teaching material for an EIGHTH consecutive run, so `ACTION RD`'s standing rule is re-confirmed rather than re-tested.** 🟢 **What this slot carries instead is the sweep `ACTION SE` registered, now run with an instrument that can actually decide it.**
+
+### 🟢 `ACTION SE` fires limb `1` — but on `4` pairs, not on the `90` the name census reported
+
+🟢 **The offline half did what it was registered to do: group every live slug by its repo half, look for repeated names under different accounts** → [`se-name-collision-census`](../evidence/se-name-collision-census.2026-10-15-p225.tsv).
+
+| measurement | value |
+|---|---|
+| distinct repo names on the `8` live shelves | 🔵 **`1 707`** |
+| repo names under `2`+ owner **spellings** *(uncorrected)* | 🔴 **`118`** |
+| repo names under `2`+ distinct **accounts** | 🟡 **`90`** |
+| of those, confirmed **aliases** by the ref-set oracle | 🟢 **`4`** |
+
+🔴 **`90` is not `90` duplicates, and saying so would have been this pass's biggest error.** 🟢 **`19` independent projects are called `canvas-mcp` and `10` are called `moodle-mcp`: that is a crowded namespace, not duplicate carrying.** 🟡 **Only the ref-set oracle separates a collision from an alias, which is why limb `1` rests on `4` verified pairs.**
+
+### 🟢 The two NEW alias pairs
+
+| pair | `HEAD` | refs | ref-set diff | verdict |
+|---|---|---|---|---|
+| 🆕 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) :: [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | `76ddb145da81` both | `675` both | 🟢 **`0`** | **ALIAS** |
+| 🆕 [`openedx/ease`](https://github.com/openedx/ease) :: [`edx/ease`](https://github.com/edx/ease) | `056da0adc6f3` both | `173` both | 🟢 **`0`** | **ALIAS** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) :: `openedx/openedx-platform` | `0d132702480243fc` both | `49 749` both | 🟢 **`0`** | **ALIAS** → `ACTION SD` |
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) :: `mebis-lp/...` | `bd3f0e16b8ca` both | `274` both | 🟢 **`0`** | **ALIAS** → `T224-1` |
+
+🟢 **Controls that must NOT read as aliases, and do not:** `g3i/lxHive` :: `leogaggl/lxHive` *(`188` vs `4`)*, `Citolab/qti-components` :: `Kennisnet/qti-components` *(`1 649` vs `36`)*, plus `pylti1.3`, `fedena`, `Edfi-OneRoster`, `certo`, `ims-lti`, `kolibri`, `moodle`, `lti-1-3-php-library` — **all divergent, all genuine forks or distinct projects** → [`sd-se-alias-oracle`](../evidence/sd-se-alias-oracle.2026-10-15-p225.tsv).
+
+🔴 **`apereo/opencast` has no public repository.** 🔵 **The shelves' single `apereo/opencast` mention has nothing behind it; the live project is `opencast/opencast` *(`7 853` refs)*.**
+
+### 🔴 `T225-1` and `T225-2` — two guard failures in this pass's own sweep
+
+- 🔴 **`T225-1`, the owner-case bucket.** The first run said `118`. 🟢 **GitHub account names are case-INSENSITIVE, so `OpenOLAT` and `openolat` are one account spelled two ways — `28` of the `118` were case variants only.** 🟡 **And the cause is on these shelves: this KB spells **`34`** accounts two or more ways *(`HKUDS`/`hkuds`, `1EdTech`/`1edtech`, `Opetushallitus`/`opetushallitus`, `Ed-Fi-Alliance-OSS`/`ed-fi-alliance-oss`, …)*. Harmless to a reader; fatal to any grep-keyed census, which buckets per spelling.**
+- 🔴 **`T225-2`, the API-path phantom owner.** `api.github.com/repos/<OWNER>/<REPO>` contains a literal `github.com/`, so a slug matcher reads the owner as **`repos`**. 🔵 **Direct sibling of p224's `T224-2` dotted-owner rule: that guard rejects a dotted owner, and this one must also reject the API path.**
+
+🟡 **Both guards are now written into the census so the next pass inherits them rather than rediscovering them.**
+
 ## 2026-10-15 — Pass 224 — THE DISCOVERY RATE IS NOW A TWO-POINT SERIES, AND `github.com` ITSELF WENT `403` — WHICH FORCED A BETTER ALIAS METHOD THAN THE ONE IT TOOK AWAY
 
 🔵 **`0` new repository rows this pass** *(the `2` new rows are plugins and sit on [`agents/top.md`](../agents/top.md))*. 🟢 **`1` method published that closes a `2`-pass-old methodological gap, `1` new blocked host, `1` discovery rate measured for the second consecutive pass.**

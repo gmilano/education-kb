@@ -1,0 +1,19 @@
+# Discovery, p225. THIRD consecutive pass to measure the already-present rate.
+# The productive shape is the constrained use-case one (p224's finding), so it was run twice.
+candidate	query_that_found_it	already_on_shelves	note
+local_aigrader (AI Grader Pro)	open source Moodle AI plugin 2026 github MCP grading rubric LTI	YES	carried with grant GPL-3.0-or-later, 85 PHPUnit + 11 Behat, mod_assign, Moodle AI Subsystem generate_text
+local_aigrade (AI Grade, Brian Pool)	same	YES	v1.6, Moodle 4.5/5.0/5.1, uses core AI connection so no own API key
+local_assign_ai (Data Curso)	same	YES	same vendor as industria-elearning/moodle-local_forum_ai, which is ACTION RK's one unresolved row
+local_aicheck (AI Check)	same	YES	v1.0.0 Jan 2026, pre-grading student feedback, no grade effect
+local_smartgradeai (Smart Grade AI)	same	YES	carried with licence NOT STATED; routes grading through n8n
+DeepTutor (HKUDS)	open source AI tutor agent repository 2026 knowledge tracing adaptive learning Apache license	YES	Apache-2.0. Star claims range 11k (early April) to 34.7k (later directory) - NOT published as a figure
+OpenTutor (zijinz456)	same	YES	81 mentions already; BKT named in its own description
+OATutor (CAHLR)	same	YES	MIT, knowledge tracing + LTI + CC-BY textbooks
+csmediapro/moodle-mcp-server	same Moodle shape	YES	AGPL-3.0, TypeScript, 26 mentions already
+# RATE: 9 of 9 candidates already present = 100% already-carried.
+# p223 measured 89% on 18, p224 75% on 8, p225 100% on 9.
+# 0 NEW ROWS THIS PASS, and that is the honest output of these two query shapes - the Moodle
+# AI-plugin tier and the AI-tutor tier are both saturated for them. Said plainly rather than
+# padded: p225's new material is 4 resolved actions and a new instrument, not new rows.
+# LTI: the Moodle query named LTI and returned 0 LTI results. Recorded as a gap in the RESULTS,
+# not as evidence that no such plugin exists.

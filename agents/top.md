@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — THE CHANNEL p224 DECLARED LOST WAS NOT LOST, IT MOVED **PATH**: `github.com` HTML IS `403` AND `github.com`'s GIT SERVICE IS `200`, AND IT CARRIES AN ALIAS ORACLE THAT SETTLES THREE CARRIED ACTIONS
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows. `4` registered actions discharged — `RV` on limb `1`, `SD` on limb `2`, `SE` on limb `1`, `SG` on limb `1`. `1` standing rule REFUTED. `3` defects found in this pass's own instrument before publishing. `1` new hazard class registered.**
+
+### 🔴 The headline: p222's and p224's rule was wrong, and the test that shows it is one line
+
+🟢 **p224 recorded `github.com` HTML going `403` as a NEW BLOCK and drew a rule from it: *"the split tracks the HOST, not the kind of resource"*. 🔴 That rule is refuted.** Same host, same scheme, different path:
+
+| endpoint | result |
+|---|---|
+| `https://github.com/openeducat/openeducat_erp` | 🔴 **`403`** |
+| `https://github.com/openeducat/openeducat_erp/info/refs?service=git-upload-pack` | 🟢 **`200`** |
+
+🟢 **The split tracks the SERVICE ENDPOINT. `github.com`'s git smart-HTTP service answers normally, so `git ls-remote` works** → [`p225-channel-reachability`](../evidence/p225-channel-reachability.2026-10-15-p225.tsv). 🔵 **This is the second consecutive pass in which a block FORCED a better method than the one it removed — and this time it also handed back a capability the KB had written off.**
+
+### 🟢 What the git service gives that `api.github.com` was giving before it went `403`
+
+🟢 **An existence oracle** — refs for a public repository, a credential prompt for anything else. 🟡 **Stated precisely: `NO-PUBLIC-REPO` means absent *or* private, not absent.**
+🟢 **And a complete ref set**, which turns out to be the alias instrument `T224-1` found by accident.
+
+### 🟢 `T224-1`'s mirror pair, confirmed by a second and independent method
+
+🟢 **`bycs-lp/moodle-local_ai_manager` and `mebis-lp/moodle-local_ai_manager` serve BYTE-IDENTICAL ref sets — same `HEAD` `bd3f0e16b8ca`, same `274` refs, `0` differing lines.** 🔵 **p224 reached `MIRROR-PAIR` from `5` byte-identical files plus a `404` on a fifth repository name; the ref set reaches the same place from one request per slug.**
+
+🟡 **One refinement to p224's wording.** 🔴 **An identical ref set is stronger than byte-identical files: it says the two paths serve the same repository STATE, not two copies of it.** 🟢 **Combined with p224's `moodle-local_ai_injection` result — `200` under `bycs-lp`, and this pass confirms **no public repository** under `mebis-lp` — the pattern is a per-REPOSITORY alias, not an owner-level one. 🟡 Which is exactly p224's rule: *resolve a mirror pair per REPOSITORY, never per owner.* It now has a mechanism and a second method behind it.**
+
+### 🔴 `T225-3` — the defect this pass found in its own oracle, using the KB's own control
+
+🔴 **A `HEAD`-only oracle would have been wrong.** 🟢 **`g3i/lxHive` and `leogaggl/lxHive` share a `HEAD` *(`cffee6d90ca9`)* and differ `188` refs to `4`.** 🔴 **p224 names `lxHive` as the pair that was byte-identical and still a FORK pair — so the KB's own documented counter-example is what caught the defect.**
+
+🟡 **The unit is the complete REF SET, not the tip.** 🔵 **Eleventh consecutive unit-mismatch finding, and the KB's own archive supplied the falsifier.**
+
+### 🔵 `0` new rows, and that is the measurement rather than an omission
+
+🟢 **`9` candidates surfaced across two constrained use-case queries; `9` were already on these shelves — `100%` already-carried** → [`p225-discovery-candidates`](../evidence/p225-discovery-candidates.2026-10-15-p225.tsv). 🔵 **Third consecutive measurement: `89%` of `18` at p223, `75%` of `8` at p224, `100%` of `9` here.** 🟡 **The Moodle AI-plugin tier and the AI-tutor tier are both saturated for these shapes; p225's new material is four resolved actions and a new instrument, not new rows. 🔴 Padding the table would have been the only way to make this pass look busier, and the standing rule says fewer real rows always beat padding.**
+
 ## Pass 224 — 2026-10-15 — THE UNIT OF AN ALIAS IS THE OWNER'S **REPOSITORY SET**. MEASURED ON ITS FILES THIS PAIR IS ONE PROJECT; MEASURED ON ITS REPOSITORIES IT IS TWO NAMESPACES, AND THE REWRITE THAT LOOKED OBVIOUS BREAKS A ROW
 
 🔵 **`2` new agent rows *(both `GPL-3.0-or-later`, both read first-hand at Moodle's prescribed channel)*. `1` mirror pair resolved. `1` of p222's `3` "new" rows restated as a row this KB already carried.**

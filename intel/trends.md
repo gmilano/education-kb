@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — THE TREND IS THAT THE CORRECTION DOES NOT PROPAGATE: ADOPTION OUTRAN GOVERNANCE EVERYWHERE, AND THE WRONG COMPLIANCE DATE IS STILL IN CIRCULATION
+
+### 🔴 Trend `1` — a refuted claim keeps coming back, from new sources, through the mandated query
+
+🟢 **This KB refuted two claims and both returned INBOUND this pass** *(Boston's *"graduation requirement"*, refuted by the publishers' own corrections at p218; the AI Act's education high-risk date as *"August 2026"*, corrected to `2027-12-02`)* → [`p225-inbound-reassertion`](../evidence/p225-inbound-reassertion.2026-10-15-p225.tsv).
+
+🟡 **The trend worth naming: a correction published by the original outlet does not reach the aggregators that repeat it.** 🔴 **Seven passes after p218, the same class of source carried the same retracted sentence.** 🔵 **For a KB that researches by search, this means the refutation table is not a tidying exercise — it is the only thing standing between a retracted claim and a client deliverable.**
+
+### 🔴 Trend `2` — adoption outran governance in all four regions, and the gap is now measured in two of them
+
+🔵 **p224 recorded this as *"four regions, four queries, one trend"*. p225 adds numbers rather than a new direction:**
+
+| region | adoption | governance |
+|---|---|---|
+| 🟡 **North America** | `86%` of students across `16` countries using AI *(secondary)* | `10%` of institutions with formal guidelines; `71%` of US teachers untrained |
+| 🟢 **Canada** | federal strategy funds `3 000`+ teachers | ~`63%` of teachers currently untrained; no national curriculum, provincial jurisdiction |
+| 🟢 **Mexico** | `1.5M`+ students, `166k`+ teachers surveyed | regulate-not-prohibit stance; a general AI law still only INTRODUCED |
+| 🟡 **APAC** | `87%` encourage AI agents | `47%` have governance — 🔴 **ENTERPRISE figures, not education** |
+| 🟢 **LATAM** | `200` institutions in `19` countries mapped | ILIA regulation subdimension; policy *"vulnerable to being tossed out with each new administration"* |
+
+🟢 **What `2026` actually buys is still governance — and this pass shows the buyer now has survey evidence to size it with, in two countries that had none on these shelves a pass ago.**
+
+### 🟡 Trend `3` — the supply side is consolidating into tiers, not expanding
+
+🔵 **Third consecutive discovery-rate measurement: `89%` of `18` already-carried at p223, `75%` of `8` at p224, **`100%` of `9`** here.** 🟡 **The Moodle AI-grading tier and the AI-tutor tier are saturated for the query shapes that work. 🔴 The mandated trending shape has returned teaching material for an EIGHTH consecutive run, and the mandated platform query returned `openeducat.org`'s glossary in `5` languages for a SECOND consecutive pass — `5` of `9` results from one vendor domain.**
+
+🟡 **Read together: new supply is not arriving in this vertical at the rate the mandate assumes, and the honest output of a research pass here is increasingly VERIFICATION of what is already carried rather than new rows.**
+
+### 🟢 Trend `4` — the egress policy is now a structural fact about what this KB can know
+
+🔴 **`11` government and primary hosts probed this pass — `moe.gov.sg`, `mext.go.jp`, `education.gov.in`, `gob.mx/sep`, `gaceta.diputados.gob.mx`, `canada.ca`, `cmec.ca`, `oecd.ai`, `ai-watch.ec.europa.eu`, `ai.turiba.lv`, plus `unesco.org` and `eur-lex` again — and every one is blocked, on TWO independent channels *(`curl` and `WebFetch`, the latter failing at DNS)*.**
+
+🟢 **So `ACTION RO` *("read an APAC primary text")* and `ACTION RL` are not unperformed work; they are structurally impossible from this session, exactly as `ACTION SC` reasoned.** 🟡 **`CONVERGENT-SECONDARY` is not a second-best state for this KB — for government sources it is the ONLY state available, and a reader should know that is a property of the pipeline, not of the evidence.**
+
+### 🟢 Trend `5` — a blocked channel keeps producing a better method than the one it removed
+
+🔵 **Second consecutive pass.** 🟢 **p224 lost `github.com` HTML and invented the namespace-set method. 🟢 p225 found that the block is PATH-scoped, not host-scoped — `github.com`'s git service is `200` — and got back a ref-set alias oracle that is cheaper and more decisive than the redirect it replaced.** 🟡 **Both results came from testing the block rather than recording it.**
+
 ## Pass 224 — 2026-10-15 — FOUR REGIONS, FOUR QUERIES, ONE TREND: ADOPTION OUTRAN GOVERNANCE EVERYWHERE, AND GOVERNANCE IS WHAT `2026` ACTUALLY BUYS
 
 🔵 **`1` new cross-regional trend established from numbers measured this pass rather than asserted. `1` methodological trend added to this KB's `9`-pass unit-mismatch series. `2` vendor statistics declined.**

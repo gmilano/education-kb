@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — THREE RECIPES: THE ALIAS GATE THAT COSTS ONE REQUEST PER SLUG, THE `OpenEduCat` PACK NOW THAT ITS BOUND IS RESOLVED, AND THE NORTH AMERICA GOVERNANCE PACK CANADA AND MEXICO JUST PAID FOR
+
+### 🆕 🟢 `P225-R1` — the alias gate *(run it before any licence or inventory claim, including this KB's own)*
+
+🔴 **The problem it solves:** this KB carried its largest platform row twice *(`openedx/edx-platform` + `openedx/openedx-platform`, `65` + `9` AGPL cells)*, carried `INGInious` twice under two owners, and found the first such pair by accident. 🟡 **Any client inventory built by scraping slugs has the same defect, and it inflates both counts and licence exposure.**
+
+🟢 **The wiring, stdlib and `git` only — no API, no `github.com` HTML:**
+
+1. 🟢 **Collect slugs** with an owner matcher that is `alnum`+hyphen only, then **casefold the owner** — GitHub accounts are case-insensitive. 🔴 **Two guards, both learned the hard way: reject a DOTTED owner *(p224 `T224-2`: it is a hostname)* and reject the API path *(`T225-2`: `api.github.com/repos/O/R` reads as owner `repos`)*.**
+2. 🟢 **Group by the repo half** and queue every name carried under `2`+ distinct accounts. 🔵 *(On these shelves: `1 707` names → `90` queued.)*
+3. 🟢 **For each queued slug run `git ls-remote https://github.com/<OWNER>/<REPO>`**, sort, and compare the COMPLETE ref sets pairwise.
+   - 🟢 **identical ref set** → **ALIAS candidate**: one repository, two paths. Merge the cells.
+   - 🔴 **same `HEAD`, different ref count** → **FORK PAIR, not an alias.** 🔵 *The control that proves the step is necessary: `g3i/lxHive` vs `leogaggl/lxHive`, `188` vs `4`.*
+   - 🟡 **different `HEAD`** → independent project sharing a name. 🔵 *`19` such projects are called `canvas-mcp`.*
+   - 🔴 **credential prompt** → `NO-PUBLIC-REPO`, which means absent **or private**.
+4. 🟡 **Confirm an ALIAS candidate with p224's namespace-set probe** — a sibling repository name present under one owner and absent under the other. 🔴 **Required, because a never-diverged fork also shows an identical ref set.**
+5. 🔴 **Do NOT infer direction.** 🟡 **The git service serves both paths with a bare `200` and no `Location` header, so which slug is canonical needs a different channel** *(a `README` that links its siblings, as `T224-1` used)*.
+
+🔵 **Cost on these shelves: `90` queued, `~30` requests, `4` aliases confirmed, `11` fork pairs correctly rejected.** 🟢 **This is also the concrete form `ACTION QO`'s gate was missing — it fails on a real defect and queues the rest, and it composes with `P222-R3`'s `grammar_for(channel)` → `read_bound()` → `reconcile()`.**
+
+### 🆕 🟢 `P225-R2` — the `OpenEduCat` customisation pack *(buildable now that the bound is `only`)*
+
+🟢 **Base:** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) on Odoo — **`LGPL-3.0-only`, RESOLVED p225 on three channels** *(manifest field + root `LICENSE` preamble vs the module header, `2`–`1`)*.
+
+🟡 **What the resolved bound changes in practice:** `LGPL` links either way, so **composition was never the risk — MODIFICATION was.** 🔴 **Under `only`, a derivative of the modules cannot be relicensed under LGPL-`4` or a later GNU version if one appears, and the engagement must not rely on the or-later header that all `8` modules still carry.** 🟢 **Say which channel governs, in writing, before the first module is forked.**
+
+🟢 **The wiring:**
+- 🟢 **Keep customisation in SEPARATE Odoo modules** that depend on `openeducat_*` rather than patching them — the `LGPL` boundary then falls on the module edge, which is the only place it is cheap to defend.
+- 🟢 **AI layer OUTSIDE the ERP:** the ERP holds the record of truth; put generation behind a self-hosted endpoint so no vendor terms attach *(p224's `aiprovider_openwebui` escape, `ACTION RK`)*.
+- 🔴 **Attach the dependency closure, not the top-level cell.** 🔵 **`ACTION RX` is registered precisely because an `MIT`/`LGPL` cell on a row that vendors many third-party grants is what a client's counsel finds after signature.**
+- 🟡 **Record the `404` `COPYRIGHT` pointer** in the diligence note: the root grant file names no copyright holder, so the module headers *(`OpenEduCat Inc`, `2009-TODAY`)* are the only attribution source.
+
+### 🆕 🟢 `P225-R3` — the North America governance-and-training pack *(the gap Canada and Mexico both just measured)*
+
+🔴 **Why it sells:** adoption is near-universal and governance is not. 🟡 **`86%` of students using AI against `10%` of institutions with formal guidelines; `71%` of US teachers and ~`63%` of Canadian teachers untrained; Mexico has surveyed `1.5M`+ students and `166k`+ teachers and published a regulate-not-prohibit stance.** 🟢 **Three jurisdictions, one shaped gap.**
+
+🔴 **Get the buyer right first:** 🟡 **Canada — the PROVINCE or district, never Ottawa** *(education is provincial; the federal strategy funds training, it does not set curriculum)*. 🟡 **US — the district or state; there is no federal product gate.** 🟡 **Mexico — SEP at federal level, which is the one centralised buyer of the three.**
+
+🟢 **The wiring, all parts already on these shelves:**
+1. 🟢 **Human-in-the-loop grading as the first deployment**, because it is the use case the policies actually permit: the `local_aigrader` class of Moodle plugins keeps the teacher as decider — `local_aigrader` is `GPL-3.0-or-later` with `85` PHPUnit and `11` Behat tests, and `local_aigrade` runs on Moodle's core AI connection so no separate API key enters the estate. 🔴 **Both are carried here by Moodle plugin SLUG only: `moodle.org` is `CONNECT`-blocked, so no repository URL has been read first-hand and `local_aigrade`'s licence is still NOT STATED. 🟡 Verify the grant from the repository before either enters a deliverable.**
+2. 🟢 **Pre-grading feedback as the student-facing surface:** `local_aicheck` gives feedback that cannot affect a grade — the lowest-risk student-facing AI in a district that has a moratorium or a documented-oversight rule.
+3. 🔴 **Honour the documented-human-oversight rules by configuration, not by promise:** Maryland- and Oklahoma-class rules prohibit AI from making high-stakes decisions without documented human oversight, so the grading pipeline must emit an auditable record of who decided, not only what was suggested.
+4. 🟢 **Teacher-training track sized from the local number** — `3 000`+ educators is the published federal Canadian target, and ~`63%` untrained is the baseline to measure against.
+5. 🔴 **Keep the vendor out of the data path** where a province or district has residency constraints: self-hosted endpoint, same escape as `P225-R2`.
+
+🔵 **Contrast to carry into any US district conversation, both documented here:** 🟡 **Boston launched an AI literacy curriculum *(announced `2026-03-26`, `UMass Boston` + Paul English, `USD 1M`)* while NYC runs a student-facing moratorium. 🔴 Do NOT describe Boston's as a graduation requirement — two newsrooms retracted that, and the claim came back inbound again this pass.**
+
 ## Pass 224 — 2026-10-15 — THREE RECIPES: THE MOODLE AI ARCHITECTURE GATE, THE LATAM GOVERNANCE PACK THAT THE `53`/`22` GAP PAYS FOR, AND THE EMEA THREE-CLOCK PROGRAMME
 
 ### 🆕 🔴 `P224-R1` — the Moodle AI architecture gate *(ask this before scoping anything)*

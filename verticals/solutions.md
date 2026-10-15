@@ -4,6 +4,22 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — THE SHELF'S SHARPEST LICENCE QUESTION IS SETTLED: `OpenEduCat` IS `LGPL-3.0-only` BY A `2`–`1` VOTE THAT AGREES WITH THE CONSERVATIVE READING
+
+🟢 **`ACTION RV`, carried three passes and registered p225's highest priority, is discharged on limb `1`.** 🔵 **The platform every Odoo education recipe on these shelves stands on now has a resolved bound instead of a conflict** → [`repos/foundations.md`](../repos/foundations.md) `P225-A`, [`rv-openeducat-third-channel`](../evidence/rv-openeducat-third-channel.2026-10-15-p225.tsv).
+
+### 🟢 What changed for a customisation engagement
+
+- 🟢 **`openeducat/openeducat_erp` — `LGPL-3.0-only` (RESOLVED, p225).** 🔵 **Third channel: the repository's root `LICENSE`, whose own preamble names *"Version 3 (LGPLv3)"* with no grant of later versions, siding with the manifest field against the module header. 🟡 The SOW language is no longer *"assume `only` and say so"* — it is `only`, with three channels cited. 🔵 p222's and p224's `RANGE-CONFLICT` cells below are superseded by this section, not rewritten.**
+- 🔴 **The or-later header is still in all `8` modules read.** 🟡 **So a client who takes the header at face value will read `or-later`, and the engagement should say which channel governs before anyone relicenses a derivative. 🔵 This is the one place the resolution still needs a sentence in writing.**
+- 🔴 **The root `LICENSE` points to a `COPYRIGHT` file that is `404`.** 🟡 **Copyright is named only in the module headers *(`OpenEduCat Inc`, `2009-TODAY`)* — a one-file fix on `ACTION PH`'s queue.**
+
+### 🟢 A platform row these shelves were carrying twice
+
+🟢 **[`INGInious/INGInious`](https://github.com/INGInious/INGInious) and [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) are ONE repository under two paths** — byte-identical ref sets, `HEAD` `76ddb145da81`, `675` refs each. 🔵 **The shelves carry `INGInious`=`19` mentions and `UCL-INGI`=`4`; those are the same autograder, and `JuezUN`=`2` is a genuine separate fork.** 🟡 **Cite it once, under either path, and note the alias — the canonical direction is NOT established, because the git service serves both with a bare `200` and no redirect.**
+
+🔵 **Same correction, same method, for the Open edX tier:** `openedx/edx-platform` and `openedx/openedx-platform` are one repository *(`49 749` identical refs)*, so the KB's `65` + `9` AGPL cells were counting one platform twice → `ACTION SD`, limb `2`.
+
 ## Pass 224 — 2026-10-15 — MOODLE'S AI LAYER IS A **FORK, NOT A STACK**: TWO SUBSYSTEMS THAT CANNOT COMPOSE, WITH DIFFERENT MAJOR-VERSION FLOORS AND DISJOINT PLUGIN ECOSYSTEMS
 
 🔵 **`0` new platform rows. `1` platform-level architectural constraint established first-hand, on the most-deployed LMS on these shelves.**

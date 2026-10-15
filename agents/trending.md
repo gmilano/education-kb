@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 225 — THIS WEEK'S SIGNAL IS NOT A REPO: TWO CLAIMS THESE SHELVES ALREADY REFUTED CAME BACK **INBOUND**, THROUGH THE MANDATED QUERY ITSELF
+
+🔵 **`0` new agent rows this week *(`9` of `9` candidates already carried)*. The signal worth recording is a hazard class the KB had no name for.**
+
+### 🔴 `ACTION SA` built an OUTBOUND gate. The error is still in circulation INBOUND
+
+🟢 **p224's `ACTION SA` generalised the self-claim gate and reported `0` `ASSERTED` / `5` `ATTRIBUTED` — p223's fix held, and the gate now reports `0`/`0` on its own output.** 🔴 **That can look like the problem is solved. It is not.** 🔵 **Both refuted claims came back this pass in the results of the mandated North America query, carried by sources that had never been cited here** → [`p225-inbound-reassertion`](../evidence/p225-inbound-reassertion.2026-10-15-p225.tsv).
+
+| the refuted claim, as it came back this pass | this KB's position | source that carried it |
+|---|---|---|
+| 🔴 *"Boston Public Schools recently became the first major US district to **mandate AI fluency as a graduation requirement**, starting in September 2026"* | 🟢 **REFUTED at p218 — and by the publishers themselves. WBUR and NBC Boston both ran corrections: *"A previous version of that story incorrectly stated that the AI literacy course is a graduation requirement."*** | a community *"Weekly digest"* aggregator — **the same class of source p218 caught it in, seven passes later** |
+| 🔴 *"The EU AI Act treats education AI as high-risk, and that obligation **takes effect in August 2026**"* | 🟢 **REFUTED and corrected: Annex III education high-risk applies `2027-12-02` under `Reg. (EU) 2026/1744`. `2026-08-02` is Article `50` TRANSPARENCY, a different obligation** | a vendor comparison page |
+
+🟢 **Neither was written to any shelf.** 🔵 **The second string matches [`sa-refuted-claims`](../evidence/sa-refuted-claims.2026-10-15-p224.tsv) row `1`'s `refuted_pattern` exactly — on an inbound string, which is a use the table was not built for and is well shaped for.**
+
+### 🟡 Why this is a procurement fact and not housekeeping
+
+🔴 **The `August 2026` date is not merely early — it is wrong in the direction that manufactures urgency.** 🟡 **An EMEA proposal that quotes it tells a client a high-risk compliance deadline has already passed, when the binding one is `2027-12-02`.** 🟢 **And the nearest genuinely binding EU date is still p224's find: `2026-12-02`, the two Article `5` prohibitions the Omnibus added — `7` weeks out, and carried by almost nobody.**
+
+🔵 **Registered for p226 as `ACTION SH`: run the `refuted_pattern` column against each pass's SEARCH RESULTS before anything is written, not only against the shelves afterwards. Same table, same regexes, one step earlier in the pipeline.**
+
+### 🟢 The week's one genuine supply note
+
+🟡 **The Moodle AI-grading tier is now crowded enough to be a market rather than a list:** `local_aigrader` *(`GPL-3.0-or-later`, `85` PHPUnit + `11` Behat)*, `local_aigrade` *(v`1.6`, Moodle `4.5`/`5.0`/`5.1`, uses core AI so no own API key)*, `local_assign_ai`, `local_aicheck` *(v`1.0.0`, Jan 2026, pre-grading feedback that cannot affect a grade)* and `local_smartgradeai` *(routes grading through `n8n`; licence still NOT STATED)*. 🔵 **All five were already carried — the news is the density, not any one row.** 🔴 **`local_assign_ai` is `Data Curso`, the same vendor behind `ACTION RK`'s one unresolved row.**
+
 ## 2026-10-15 — Pass 224 — THIS WEEK'S SIGNAL IS AN ARCHITECTURE FORK, NOT A REPO: MOODLE NOW HAS **TWO MUTUALLY EXCLUSIVE** AI SUBSYSTEMS, AND PICKING ONE EXCLUDES THE OTHER'S ENTIRE PLUGIN ECOSYSTEM
 
 🔵 **In one line: `2` new agent rows shipped onto these shelves, both `GPL-3.0-or-later`, both Moodle — and the week's real finding is the sentence in `local_ai_manager`'s `README` that makes the Moodle AI market a fork rather than a stack.**

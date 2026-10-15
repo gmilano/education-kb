@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — `ACTION RV` IS DISCHARGED ON A THIRD CHANNEL: THE ROOT `LICENSE` SIDES WITH THE MANIFEST **2–1**, AND THE CONFLICT IS STRUCTURAL IN `8` OF `8` MODULES
+
+🔵 **`ACTION RV` was carried three passes and registered p225's highest priority. 🟢 It fires limb `1`: a third channel exists, it breaks the tie `2`–`1`, and the resolved bound is `LGPL-3.0-only`** → [`rv-openeducat-third-channel`](../evidence/rv-openeducat-third-channel.2026-10-15-p225.tsv).
+
+### 🟢 `P225-A` — `openeducat/openeducat_erp` resolves to `LGPL-3.0-only`
+
+🟢 **The third channel is the repository's root `LICENSE`, `200`, `8 241` B.** Its line `4` is OpenEduCat's own preamble above the canonical text:
+
+> *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."*
+
+🟢 **Version-specific, with no grant of later versions. So the vote is:** manifest field `'LGPL-3'` *(Odoo's omission grammar = a positive `only`)* **+** root `LICENSE` preamble *(version-specific)* **against** the module header's *"or (at your option) any later version"*. 🔵 **`2`–`1` for `only`.**
+
+🟢 **The vote and the conservative reading agree**, so this result does not depend on which rule you prefer — which is the strongest form a licence resolution on these shelves can take. 🟡 **The published state for this row is now `LGPL-3.0-only` (RESOLVED, p225). 🔵 The `RANGE-CONFLICT` cells in p222's and p224's sections are SUPERSEDED by this one and left standing as the dated record — the same way p224 restated p222's rows rather than editing them.**
+
+### 🔴 The conflict is STRUCTURAL, not one file's slip — `8` of `8` modules read first-hand
+
+🔴 **`openeducat_core`, `openeducat_admission`, `openeducat_attendance`, `openeducat_classroom`, `openeducat_exam`, `openeducat_library`, `openeducat_parent`, `openeducat_activity`: every one declares `'license': 'LGPL-3'` AND carries the or-later header.** 🔵 **So the `80` bare mentions `ACTION RU` counted at p224 are not `80` views of one defect — the defect is reproduced in every module, which is why the resolution had to come from outside the module tier.**
+
+### 🔴 The trap this pass avoided, and it is `T224-3` in a new shape
+
+🔴 **The root `LICENSE` DOES contain *"or any later version"* — at lines `166` and `168`.** 🟢 **Those lines are inside the canonical LGPL-3.0 body itself, section `14`, *"Revised Versions of this License"*. The grant's SUBJECT there is the licence text, not OpenEduCat's grant.** 🔴 **Counting them would have flipped channel `3` to or-later and produced a false `2`–`1` the other way.**
+
+🟡 **Standing rule added: in a `LICENSE` file, the project's own preamble is a channel; the canonical body is not.** 🔵 **Tenth consecutive unit-mismatch finding on these shelves, and the second to come from the KB's own instrument before publishing rather than a pass later.**
+
+### 🔴 `T225-4` — a `DANGLING` pointer inside the root grant file
+
+🔴 **`LICENSE` line `2` says *"For copyright information, please see the COPYRIGHT file."* 🔵 `COPYRIGHT`, `COPYRIGHT.txt` and `openeducat_core/COPYRIGHT` are all `404` on `master`.** 🟡 **So the copyright holder is named only in the module headers *(`OpenEduCat Inc`, `2009-TODAY`)*, and the root grant file points at nothing. 🔵 This joins `ACTION PH`'s ask-the-maintainer queue — it is a one-file fix and exactly the kind of ask a maintainer accepts.**
+
+🟢 **Not a fourth channel:** `openeducat/openeducat_lti` is `404` on every path and both branches, and has **no public repository** under the new ref-set oracle. 🔵 **The shelves already record it `ABSENT`, so this is a confirmation and not a new gap.**
+
 ## Pass 224 — 2026-10-15 — `ACTION RU` FIRES LIMB `1` AT `81`: THE MOST-MENTIONED GNU ROW ON THIS SHELF WAS NEVER SILENT ABOUT ITS BOUND, AND `94.3%` IS A TOKEN COUNT THAT CANNOT BE REPRODUCED FROM ITS OWN PUBLISHED ARTEFACTS
 
 🔵 **`0` new foundation rows. `1` bound restated on the shelf's most load-bearing GNU row. `1` published ratio withdrawn as non-reproducible.**

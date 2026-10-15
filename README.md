@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — THE BLOCK WAS PATH-SCOPED, NOT HOST-SCOPED: `github.com`'s GIT SERVICE IS `200`, AND IT SETTLED THREE CARRIED ACTIONS IN ONE PASS
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `9` of `9` candidates were already carried, and that is published as a measurement rather than padded. `4` registered actions discharged: `RV` *(the registered highest priority, carried three passes)* on limb `1`, `SD` on limb `2`, `SE` on limb `1`, `SG` on limb `1`. `1` standing rule of this KB's own making REFUTED. `4` instrument defects found before publishing. `1` new hazard class.**
+
+### 🔴 The headline: p224 recorded a block; p225 tested it and got a better channel back
+
+🟢 **p224 saw `github.com` HTML go `403` and drew a rule: *"the split tracks the HOST, not the kind of resource."* 🔴 Refuted. Same host, same scheme, different PATH:** `github.com/<OWNER>/<REPO>` → **`403`**, `github.com/<OWNER>/<REPO>/info/refs?service=git-upload-pack` → **`200`**.
+
+🟢 **So `git ls-remote` works, and it returns something `api.github.com` was giving before it went `403`: the complete ref set.** 🔵 **Two slugs serving byte-identical ref sets are one repository under two paths — which is the alias instrument p224's `T224-1` found by accident.**
+
+🟡 **Second consecutive pass in which a blocked channel forced a better method than the one it removed.**
+
+### 🟢 What that one instrument settled
+
+- 🟢 **`ACTION SD` → limb `2`.** `openedx/edx-platform` and `openedx/openedx-platform` are **one repository** *(`49 749` identical refs)*. 🔵 **The KB's `65` + `9` AGPL cells were one platform counted twice.**
+- 🟢 **`ACTION SE` → limb `1`.** Two further alias pairs found by sweep rather than by accident: `INGInious`/`UCL-INGI` and `openedx`/`edx` `ease`. 🔴 **But `90` shared names are not `90` duplicates — only `4` are aliases; `19` independent projects are called `canvas-mcp`.**
+- 🟢 **`T224-1` confirmed by a second, independent method** *(`274` identical refs under both owners)*, with p224's per-REPOSITORY rule corroborated.
+
+### 🟢 `ACTION RV` — the shelf's sharpest licence question, closed
+
+🟢 **`openeducat/openeducat_erp` is `LGPL-3.0-only`.** The third channel is the root `LICENSE`'s own preamble — *"Version 3 (LGPLv3)"*, no or-later grant — siding with the manifest field against the module header, **`2`–`1`**, and the vote agrees with the conservative reading. 🔴 **The conflict is structural: `8` of `8` modules carry both bounds.** 🟢 **The trap avoided: the or-later strings deeper in that file are the canonical LGPL body, not OpenEduCat's grant — `T224-3` in a new shape.**
+
+### 🟢 `ACTION SG` — a regional blank is a hypothesis about the query, now two for two
+
+🟢 **Canada and Mexico both answered a country-shaped query after p224's region-shaped one returned the US only:** *"AI for All"* `2026-06-04` with `CAD 30M` to CanCode and `3 000`+ teachers against ~`63%` untrained; SEP's regulate-not-prohibit stance with a **`1.5M`**-student, **`166k`**-teacher survey and `15` new technical programmes.
+
+### 🔴 The new hazard: the correction does not propagate
+
+🔴 **Two claims these shelves had already refuted came back INBOUND this pass, through the mandated query, from sources never cited here** — Boston's *"graduation requirement"* *(retracted by WBUR and NBC Boston themselves)* and the AI Act's education high-risk date as *"August 2026"* *(it is `2027-12-02`; `2026-08-02` is Article `50` transparency)*. 🟢 **Neither reached a shelf.** 🟡 **`ACTION SA`'s gate watches outbound prose; `ACTION SH` is registered to run the same table against inbound search results instead.**
+
+### 🔴 And one honest reclassification
+
+🔴 **`11` government and primary hosts probed directly — `moe.gov.sg`, `mext.go.jp`, `education.gov.in`, SEP, the Mexican Gaceta, `canada.ca`, CMEC, `oecd.ai`, EC AI Watch, plus `unesco.org` and `eur-lex` — all blocked, on two independent channels.** 🟢 **So `ACTION RO` *("read an APAC primary text")* is not unperformed work; it is structurally impossible from this session. It stops being counted as this KB's failure and is stated as a property of the pipeline.**
+
 ## Pass 224 — 2026-10-15 — MEASURED ON ITS FILES THE PAIR IS ONE PROJECT; MEASURED ON ITS REPOSITORIES IT IS TWO NAMESPACES. THE UNIT OF AN ALIAS IS THE OWNER'S **REPOSITORY SET**
 
 🔵 **`2` new agent rows *(both `GPL-3.0-or-later`, both read first-hand)*, `0` new repository rows, `0` new platform rows. `3` registered actions discharged — `RU` on limb `1`, `SA` on limb `2`, `SC` on limb `1`. `1` mirror pair resolved and `1` of p222's "new" rows restated. `1` previously REFUSED regional instrument resolved. `1` published ratio withdrawn as non-reproducible. `2` instrument defects found in this pass's own output before publishing.**

@@ -1,0 +1,43 @@
+# ACTION RV - DISCHARGED, limb 1. Carried THIRD time, registered p225's highest priority.
+# QUESTION: openeducat/openeducat_erp states two incompatible bounds in one file.
+#   channel 1  openeducat_core/__manifest__.py l.25  'license': 'LGPL-3'
+#              -> under Odoo's grammar the bound is carried by OMISSION, so this is a
+#                 POSITIVE LGPL-3.0-only (p222 T222, p224 ACTION RU)
+#   channel 2  the SAME file's header, l.7-10        "either version 3 of the License,
+#              or (at your option) any later version"  -> LGPL-3.0-or-later
+# THIRD CHANNEL FOUND (the falsifier's limb 1): the repository has a root LICENSE, 200.
+channel	path	verbatim	bound_read	family
+1 module manifest field	openeducat_core/__manifest__.py l.25	'license': 'LGPL-3'	LGPL-3.0-only (Odoo omission grammar)	LGPL
+2 module file header	openeducat_core/__manifest__.py l.7-10	"GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version"	LGPL-3.0-or-later	LGPL
+3 root LICENSE preamble	LICENSE l.4 (8241 B, sha256 528f84036800168d)	"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below."	version-specific, NO or-later grant -> consistent with only	LGPL
+# VOTE: 2-1 for ONLY. Limb 1 fires -> publish the resolved bound LGPL-3.0-only.
+# The vote and the conservative reading AGREE, so the result is stable either way.
+#
+# THE CONFLICT IS STRUCTURAL, NOT A SLIP - 8 of 8 module manifests read first-hand, all identical:
+module	license_field	or_later_header
+openeducat_core	'LGPL-3'	present
+openeducat_admission	'LGPL-3'	present
+openeducat_attendance	'LGPL-3'	present
+openeducat_classroom	'LGPL-3'	present
+openeducat_exam	'LGPL-3'	present
+openeducat_library	'LGPL-3'	present
+openeducat_parent	'LGPL-3'	present
+openeducat_activity	'LGPL-3'	present
+# So the RANGE-CONFLICT is reproduced in every module probed, not inherited from one file.
+#
+# TRAP AVOIDED (would have repeated p224's T224-3 in a new shape):
+#   the root LICENSE contains "or any later version" at l.166 and l.168 - but those lines are
+#   inside the canonical LGPL-3.0 text itself (section 14, "Revised Versions of this License").
+#   The grant's SUBJECT there is the licence body, not OpenEduCat's grant. Counting them would
+#   have flipped channel 3 to or-later and produced a false 2-1 the other way.
+#   RULE: in a LICENSE file, read the project's own preamble; the canonical body is not a channel.
+#
+# DEFECT FOUND IN THE ARTEFACT ITSELF:
+#   LICENSE l.2 says "For copyright information, please see the COPYRIGHT file."
+#   COPYRIGHT, COPYRIGHT.txt and openeducat_core/COPYRIGHT are all 404 on master.
+#   A DANGLING pointer inside the root grant file -> ACTION PH class (ask-the-maintainer), and
+#   it means the copyright holder is named only in the module headers (OpenEduCat Inc, 2009-TODAY).
+#
+# NOT A FOURTH CHANNEL: openeducat/openeducat_lti 404s on every path and both branches, and
+# git ls-remote finds no public repository. The shelves already record it ABSENT
+# (verticals/solutions.md), so this is a confirmation, not a new gap.

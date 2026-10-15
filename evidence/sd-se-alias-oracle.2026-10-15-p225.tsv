@@ -1,0 +1,39 @@
+# ACTIONS SD + SE - both DISCHARGED, using a channel p224 reported as lost.
+# THE INSTRUMENT: git ls-remote over github.com's git smart-HTTP service (200 while the HTML
+# is 403). It returns the COMPLETE ref set. Two slugs serving a byte-identical ref set are one
+# repository under two paths; a fork pair is not.
+# THE UNIT IS THE REF SET, NOT THE TIP - and the KB's own documented control proves it:
+# g3i/lxHive and leogaggl/lxHive share a HEAD and differ 188 vs 4 refs. A HEAD-only oracle
+# would have called p224's known FORK pair an alias.
+pair	head_a	head_b	refs_a	refs_b	refset_diff	verdict
+openedx/edx-platform :: openedx/openedx-platform	0d132702480243fc	0d132702480243fc	49749	49749	0	ALIAS - one repository, two slugs
+INGInious/INGInious :: UCL-INGI/INGInious	76ddb145da81	76ddb145da81	675	675	0	ALIAS - NEW this pass
+openedx/ease :: edx/ease	056da0adc6f3	056da0adc6f3	173	173	0	ALIAS - NEW this pass
+bycs-lp/moodle-local_ai_manager :: mebis-lp/moodle-local_ai_manager	bd3f0e16b8ca	bd3f0e16b8ca	274	274	0	ALIAS - confirms p224's T224-1 by a second method
+g3i/lxHive :: leogaggl/lxHive	cffee6d90ca9	cffee6d90ca9	188	4	188	FORK PAIR (control - must not read as alias)
+Citolab/qti-components :: Kennisnet/qti-components	bf5b736faa8d	230fdecfc880	1649	36	1685	FORK PAIR (control)
+packbackbooks/lti-1-3-php-library :: 1EdTech/lti-1-3-php-library	a20c71b74c31	3a192de99f37	223	61	divergent	NOT an alias - diverged
+learningequality/kolibri :: public-ui/kolibri	b67121093b64	cf38c9a17dd3	10272	9593	divergent	NOT an alias - fork
+moodle/moodle :: Azure/moodle	b7260e59a831	2afa40361348	1959	168	divergent	NOT an alias - different projects
+dmitry-viskov/pylti1.3 :: ucfopen/pylti1.3	d8fa43e1ace2	6a47f0fe0a21	119	5	divergent	NOT an alias - fork
+foradian/fedena :: projectfedena/fedena	333477b06f1d	68a84ac445bf	2	40	divergent	NOT an alias
+Ed-Fi-Alliance-OSS/Edfi-OneRoster :: CSR2017/Edfi-OneRoster	c91362304262	937248be66de	268	35	divergent	NOT an alias - fork
+Schroedinger-Hat/certo :: arqueon/certo	6fd0a11fe2ff	82b10d6a9336	93	75	divergent	NOT an alias
+instructure/ims-lti :: CAHLR/ims-lti	724f1ae45315	9b712f69e51f	213	2	divergent	NOT an alias - fork
+apereo/opencast	-	-	-	-	-	NO PUBLIC REPO. The shelves' single apereo/opencast mention has no repository behind it
+#
+# ACTION SD -> FIRES LIMB 2, as ACTION RY registered: openedx/edx-platform and
+# openedx/openedx-platform are ONE repository (49 749 refs, byte-identical ref sets).
+# Publish as one row under openedx/edx-platform with the alias noted. The KB's 65 + 9 AGPL
+# cells were counting one repository twice.
+#
+# ACTION SE -> FIRES LIMB 1: TWO further alias pairs (INGInious, ease) beyond the pair it was
+# registered from. Duplicate carrying is systematic -> the KB needs an alias cell and every
+# discovery pass should run this oracle. Cost: 1 request per slug, no API, no github.com HTML.
+#
+# LIMIT OF THE ORACLE, stated so the next pass does not overclaim: an identical ref set is a
+# NECESSARY condition for an alias, not a sufficient one - a fork that has never diverged would
+# also match. p224's namespace-set probe (a sibling path present under one owner and absent
+# under the other) stays the discriminator, and it is what decided T224-1. Neither channel gives
+# DIRECTION: the git service serves both paths with a bare 200 and no Location header, so which
+# slug is canonical is still unresolved for all four pairs.

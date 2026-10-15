@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 225 — 2026-10-15 — `ACTION SG` FIRES LIMB `1`: p224's NORTH AMERICA BLANK WAS THE QUERY'S SHAPE, AND CANADA AND MEXICO BOTH HAVE `2026` INSTRUMENTS
+
+🟢 **p224 declared a blank INSIDE a non-blank region — the query said *"North America"* and the surface answered with the United States only. 🔵 A country-shaped query recovers both: this is the SECOND precedent after p223 withdrew p222's APAC blank the same way** → [`p225-regional-queries`](../evidence/p225-regional-queries.2026-10-15-p225.tsv).
+
+🟡 **Standing consequence: a regional blank on these shelves is a hypothesis about the QUERY until a country-shaped one has been run. Two for two now.**
+
+### 🟢 Canada — federal money, provincial jurisdiction, and no national curriculum
+
+🟢 **The *"AI for All"* strategy, released `2026-06-04`: `CAD 30M` to `CanCode` for K-12 digital skills, and K-12 teacher training to roughly double to **`3 000`+** educators.** 🔴 **Education is PROVINCIAL jurisdiction, so there is no national K-12 AI curriculum and the strategy offers little detail on what AI instruction in the early years would be.**
+🟡 **Province level is thin and uneven:** Manitoba's department is *developing* guiding principles; in British Columbia the concrete step surfaced is **district** level *(West Vancouver School District)*. 🔵 **CMEC's `114`th meeting, `2026-06-22`, Quebec City — ministers agreed to refocus CMEC's activities; no AI curriculum decision in the coverage.**
+🔴 **Teacher readiness is the gating constraint: a Leger survey for the Fraser Institute reports ~`63%` of teachers received NO training on how to teach students to use AI.**
+🔴 **PUBLISHED AS A CONFLICT, NOT AVERAGED: outlets give the strategy's total as *"roughly $2 billion"* and *"more than 2.3 billion over five years"*.**
+
+### 🟢 Mexico — regulate, do not prohibit, and the first hard adoption numbers in the region
+
+🟢 **SEP's position as of April 2026 is explicitly REGULATE, NOT PROHIBIT** — ethical-use criteria, AI as support rather than substitute for student effort.
+🟢 **The region's largest institution-level instrument this pass: SEP's national survey on generative AI in higher education — **`1.5M`+ students** and **`166k`+ teachers** — published alongside the `Programa Nacional de Educación Superior 2026–2030`.**
+🟢 **Supply side: `15` new technical `bachillerato` programmes including AI, semiconductors and robotics, from `2026`.** 🔵 **Technical programmes, not degrees.**
+🟡 **A `Ley General para la Regulación y Uso Ético de la Inteligencia Artificial` was introduced in the `Gaceta Parlamentaria` on `2026-06-29`. 🔴 STATUS NOT CONFIRMED — the Gaceta PDF host is `CONNECT`-blocked, so this is a LEAD, not an instrument.** 🔵 **`IMCO` criticises SEP for lacking a route.**
+
+### 🔴 The market figures disagree, and are published as a range with the houses named
+
+| house | figure |
+|---|---|
+| IMARC | `USD 6.4B` (2025) |
+| GII | `USD 8.3B` (2025) → `11.4B` (2026) |
+| The Business Research Company | `USD 7.52B` (2025) → `10.6B` (2026) |
+| MarketsandMarkets, **North America** | `USD 951M` (2024) → `2 303.2M` (2029), `15.9%` CAGR |
+| Technavio, **North America** | `45%` CAGR 2025–30 |
+| MarketsandMarkets, **Rest of LATAM** | `USD 18.2M` (2024) → `36M` (2029) |
+
+🔴 **The two North America figures do not reconcile — `15.9%` and `45%` are not the same market. 🟡 Quote the range and the house, never a single number.**
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟡 **The buyable gap is governance, not capability.** 🔴 **One April-2026 compilation puts `86%` of students across `16` countries already using AI against only `10%` of institutions with formal AI guidelines and `71%` of US teachers without AI training *(secondary, labelled)*. 🟢 Canada supplies the same shape with a harder number: ~`63%` of teachers untrained.**
+🟢 **So the offer that fits both countries is a policy-and-training package, not a tutor: district/province AI policy, a teacher-training track, and an auditable human-in-the-loop grading configuration.** 🔵 **The Moodle grading tier already has the parts — `local_aigrader` is `GPL-3.0-or-later` with `85` PHPUnit and `11` Behat tests and keeps the teacher as decider.**
+🔴 **Jurisdiction is the thing to get right: in Canada the buyer is the province or district, not Ottawa; in the US it is the district or state, with no federal product gate.**
+
+### 🟢 EMEA
+
+🟢 **Germany is the one placeable public commitment: the June 2026 strategic update to the national AI strategy — `50`+ existing and `20`+ new measures across `11` action areas, `EUR 1.6B`+ of BMFTR investment, with education named as a target audience.** 🟡 **Spain is classified *"hybrid"* in a study of `29` national policy documents and recommends AI literacy from primary onward.**
+🟡 **The compliance clock is the differentiator, and most proposals this quarter will quote the wrong date.** 🟢 **Annex III education high-risk: `2027-12-02` *(`Reg. (EU) 2026/1744`, `CONVERGENT-SECONDARY` across `9` houses)*. 🔴 The nearest BINDING date is `2026-12-02` — the two Article `5` prohibitions the Omnibus added, `7` weeks out. 🔴 And `2026-08-02` is Article `50` TRANSPARENCY, not high-risk: a claim that high-risk *"takes effect August 2026"* came back inbound this pass and is wrong.**
+🔴 **Annex III's education SCOPE still does not converge — `0` sources list the use cases — so a SOW may carry the DATE and must not assert the SCOPE.**
+
+### 🟡 APAC
+
+🟢 **India is the region's one current, dated instrument: the Ministry of Education announced (Oct 2025) that AI and Computational Thinking become MANDATORY for Classes `3`–`8` from the `2026-27` session, extending to Classes `9`–`10` in `2027-28`.** 🔴 **Read from an advocacy-group annual report, NOT a ministry document.** 🟡 **That is a curriculum-delivery and teacher-training market with a published start date — the most concrete procurement signal in APAC on these shelves.**
+🟢 **Singapore: an AI-in-higher-education committee unveiled by Education Minister Desmond Lee on `2026-04-01`; no school-level 2026 guideline surfaced.** 🔴 **Japan (MEXT provisional generative-AI guidelines) and Korea (AI coursework, AI digital textbooks) results are all `2023`-dated and NOT confirmed current — do not quote them as live.**
+🔵 **Education-sector players named: TCS + Pearson multi-year AI learning alliance; LearnUpon's Sydney HQ with `Create+` AI authoring; Alteryx Academy relaunch.** 🔴 **The `87%` encourage / `47%` govern figure is ENTERPRISE, not education, and must not be re-labelled.**
+
+### 🟢 LATAM
+
+🟢 **The region now has the best institution-level evidence base of any region on these shelves: the UNESCO IESALC + UNU-IAS working paper maps AI use across **`200` institutions in `19` countries**, surveyed Aug–Oct 2025 — teaching, research, administration and governance.** 🔵 **`ILIA 2025` carries a regulation subdimension; the UNESCO LAC observatory launched `2026-04-14` *(`ACTION RF`, resolved p224)*.**
+🟡 **Chile is repeatedly named the regional leader, with an AI roadmap that survived a change of government — which is the property that matters here, because regional commentary describes policy elsewhere as *"a patchwork of pilot policies, vulnerable to being tossed out with each new administration"*.**
+🔴 **The capacity ceiling is explicit: UNESCO warns of a severe regional teacher shortage, which caps how fast anything can be adopted.** 🟡 **So the LATAM offer is governance-plus-capacity — institutional AI policy, teacher capability, and offline-tolerant delivery — and Mexico's `1.5M`-student survey is the baseline to write proposals against.**
+🔴 **`ACTION RL` is still undischargeable: `unesco.org` is `CONNECT`-blocked for a `20`th consecutive test, so the truncated `19%` claim stays unresolved. 🟡 Two different `19%` statistics are now on these shelves and must not be merged.**
+
+### 🔴 Declared blanks this pass, with the query that produced them
+
+| region / country | verbatim query | state |
+|---|---|---|
+| 🔴 **France** | `national AI education strategy guidance ministry 2026 Germany France Spain Nordic` | **NOTHING returned.** Query-shape suspect — a country-shaped query is the next step, as it was for Canada and Mexico |
+| 🔴 **Nordics** | same | **All material `2019`** *(Denmark's four objectives, Sweden's digital strategy)*. Nothing current |
+| 🔴 **APAC primary texts** | `3` ministry hosts probed directly | **`moe.gov.sg`, `mext.go.jp`, `education.gov.in` all `CONNECT`-blocked on two channels** → `ACTION RO` is blocked on EGRESS |
+| 🔴 **LTI + AI** | `open source Moodle AI plugin 2026 github MCP grading rubric LTI` | **`0` LTI results.** A gap in the RESULTS, not evidence that no such plugin exists |
+
 ## Pass 224 — 2026-10-15 — `ACTION SC` FIRES LIMB `1`: THE EU DATE THIS KB CORRECTED LAST PASS NOW CONVERGES ACROSS NINE HOUSES, AND THE SAME SEARCH HANDS BACK A BINDING DATE **SEVEN WEEKS** AWAY THAT NO SHELF HERE CARRIED
 
 🔵 **`0` single-figure market claims added. `1` convergence state established across `5` AI Act dates. `1` previously REFUSED regional instrument resolved. `1` new declared blank inside a non-blank region. Every finding and every blank published with its verbatim query.**

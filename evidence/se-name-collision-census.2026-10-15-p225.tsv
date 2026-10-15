@@ -1,0 +1,153 @@
+# ACTION SE, the OFFLINE half: group every live slug by its repo half and look for repeated
+# names under different owners. 8 live shelves, archive/ excluded.
+# DEFECT FOUND IN THIS INSTRUMENT BEFORE PUBLISHING (T225-1):
+#   the first run reported 118 "pairs". GitHub OWNER names are case-INSENSITIVE, so OpenOLAT
+#   and openolat are ONE account spelled two ways, not two owners. 28 of the 118 were owner-case
+#   variants only. The unit is the ACCOUNT, not the spelling.
+# SECOND DEFECT (T225-2), the API-path phantom owner:
+#   api.github.com/repos/OWNER/REPO matches a bare "github.com/" and yields owner "repos".
+#   Sibling of p224's T224-2 dotted-owner rule: the guard must reject the API path too.
+# GUARDS APPLIED: owner = alnum+hyphen only (T224-2); owner casefolded (T225-1).
+# MEASUREMENT
+# distinct repo names on the live shelves:	1707
+# repo names under 2+ owner SPELLINGS:	118 (uncorrected, pre-guard)
+# repo names under 2+ distinct ACCOUNTS:	90
+# of those, confirmed ALIAS pairs by the ref-set oracle:	4 (see sd-se-alias-oracle)
+# accounts this KB spells 2+ ways:	34
+#
+# NAME-SHARING IS NOT ALIASING. 19 independent projects are called canvas-mcp and 10 are
+# called moodle-mcp; those are a crowded namespace, not duplicate carrying. Only the
+# ref-set oracle separates the two, which is why SE's limb 1 rests on 4 pairs, not 90.
+#
+# THE KB's OWN CITATION DEFECT - accounts spelled 2+ ways across the shelves.
+# Harmless to a reader, NOT harmless to any grep-keyed census: each spelling becomes its
+# own bucket, which is how a 118 appeared where the answer was 90.
+account_casefolded	spellings_carried
+1edtech	1EdTech | 1edtech
+apereo-learning-analytics-initiative	Apereo-Learning-Analytics-Initiative | apereo-learning-analytics-initiative
+asthetech	AStheTECH | asthetech
+classroomio	ClassroomIO | classroomio
+csr2017	CSR2017 | csr2017
+davidlms	DavidLMS | davidlms
+ed-fi-alliance-oss	Ed-Fi-Alliance-OSS | ed-fi-alliance-oss
+elgg	Elgg | elgg
+fwu-de	FWU-DE | fwu-de
+gibbonedu	GibbonEdu | gibbonedu
+hesham0-0nasser	Hesham0-0Nasser | hesham0-0nasser
+hkuds	HKUDS | hkuds
+imsglobal	IMSGlobal | imsglobal
+juneyaooo	JuneYaooo | juneyaooo
+khan	Khan | khan
+kualico	KualiCo | kualico
+librarycarpentry	LibraryCarpentry | librarycarpentry
+libretexts	LibreTexts | libretexts
+limekiller	Limekiller | limekiller
+longsightgroup	LongsightGroup | longsightgroup
+marcosnahuel	MarcosNahuel | marcosnahuel
+openeducat	OpenEduCat | openeducat
+openemis	OpenEMIS | openemis
+openolat	OpenOLAT | openolat
+opetushallitus	Opetushallitus | opetushallitus
+os4ed	OS4ED | os4ed
+owner	OWNER | owner
+rohanmuppa	RohanMuppa | rohanmuppa
+schroedinger-hat	Schroedinger-Hat | schroedinger-Hat | schroedinger-hat
+shuyunyuan	ShuyunYuan | shuyunyuan
+skolverket	Skolverket | skolverket
+tadreeb-lms	Tadreeb-LMS | tadreeb-lms
+unicon	Unicon | unicon
+xgabrielcv	xGabrielCv | xgabrielcv
+#
+# CANDIDATES: repo names under 2+ distinct accounts, ranked by mentions.
+# Unprobed rows are NOT claims of aliasing - they are the queue the oracle runs on.
+repo_name	accounts(mentions)
+moodle	moodle=129 | azure=1
+kolibri	learningequality=101 | public-ui=2
+canvas-mcp	vishalsachdev=52 | admin978=9 | abr-projects=6 | lindsay-cheng=6 | r-huijts=3 | aryankeluskar=3 | bartmassey-upstream=3 | mdweaver=2 | eastarctica=2 | caleb-media-studio=2 | amirf194=2 | yeetingwaterbottle=1 | zhenghh04=1 | harrywang=1 | jsrodr=1 | lucanardinocchi=1 | plyght=1 | sirdanielm=1 | fdis111=1
+opentutor	zijinz456=81 | adity982=4 | learnablelabs=3 | tutornew=3
+tutor-mcp	arnaudguiovanna=80 | kvnloo=8
+lms	frappe=67 | iblai=5
+moodle-mcp-server	csmediapro=26 | peancor=23 | jawadh-salih=13 | lmscloud-io=3
+canvas-lms-mcp	bruchris=36 | crevextech=12 | ahnopologetic=2 | algorithm0r=2 | mtgibbs=2
+opencast	opencast=53 | apereo=1
+moodle-mcp	g36maid=9 | saadrahman01=9 | loyaniu=8 | marcosnahuel=7 | ink-waffle=5 | 1alexandrer=5 | a2br=3 | linomck=1 | snaw80=1
+core	gibbonedu=34 | openemis=5
+mcp-canvas-lms	dmontgomery40=30 | mistercommand=8
+edfi-oneroster	ed-fi-alliance-oss=32 | csr2017=3
+pylti1.3	dmitry-viskov=25 | ucfopen=5
+fedena	foradian=20 | projectfedena=6 | mazhar266=3
+learnmcp-xapi	davidlms=25 | ashleycribb=4
+tutor	overhangio=24 | themeum=4
+lti-1-3-php-library	packbackbooks=20 | 1edtech=8
+inginious	inginious=19 | ucl-ingi=4 | juezun=2
+autograder	johnswyou=7 | webtech-network=6 | kit-sdq=5 | zmievsa=3 | otterden-lab=2 | ovsyanka83=1
+moodle-local_ai_manager	bycs-lp=18 | mebis-lp=4
+ims-lti	instructure=18 | cahlr=1 | omsmith=1
+brightspace-mcp-server	rohanmuppa=18 | pranav-vijayananth=1
+ai-tutor	topics=6 | krishna16-origin=4 | gchism94=3 | codewithjv=2 | hawary00=1 | eai6=1 | hari7261=1
+edupage-mcp	oliverhruby=13 | mhlavac=5
+certo	schroedinger-hat=15 | arqueon=2
+blackboard-mcp	p1ckle3=10 | felipedias-ie=6 | rd2100=1
+moodler-mcp	dymayo=10 | ghaithalhallak8=6
+tutoria	labsirius=9 | fborrasumh=6
+vgu-mcp	haanhtuandev=9 | tuanha=5
+python	thealgorithms=7 | trending=7
+platform	pawtograder=8 | hcengineering=6
+oneroster.net	jdolny=8 | theopenem=4
+moodle-block_ai_chat	bycs-lp=10 | mebis-lp=1
+rice	kuali=6 | kualico=5
+suap-mcp	frjunioalves=8 | vnschneider=2
+django-lti	academic-innovation=7 | harvard-university-icommons=3
+qti-components	citolab=5 | kennisnet=4
+learnflow-ai	bbar0n234=5 | pulkitpareek18=4
+oneroster	gotranseo=5 | tci=2 | longsightgroup=2
+qti-convert	citolab=8 | rolfis=1
+mcp-brasil	mcp-brasil=6 | dasgltd=2 | marcellodesales=1
+catsim	douglasrizzo=8 | datacamp=1
+openlrs	apereo-learning-analytics-initiative=6 | openhpi=2
+classroom-mcp	sandraschi=6 | davipac=1 | omarniazi=1
+scholarmate	dragonpilee=5 | yourusername=2
+mcp-tutor	mohaneesh-03=5 | moarshy=2
+lxhive	g3i=5 | leogaggl=2
+sis	eagles-edu=5 | zeydsaeed=2
+school-management-system	projectsandprograms=4 | hrshadhin=3
+openedx-lti-tool-plugin	pearson-advance=4 | edunext=2
+go-oneroster	bgwdotdev=3 | fffnite=3
+kt	0awei0=4 | seewoo5=2
+openpronounce	halleck45=4 | chinobv=1 | ronald-tr=1
+lrs	ki-campus=3 | yetanalytics=1 | escolalms=1
+agent-zero	agent0ai=3 | frdel=2
+rubric	the-llm-data-company=2 | paper-instruments=2 | promptster-ai=1
+education-ai-suite	open-edge-platform=3 | wiwaszko-intel=2
+qti	examplary=3 | instructure=2
+learn	amosblomqvist=3 | 1111philo=1
+mathcrew	minouza=3 | freesoft=1
+epesi	cezarc=2 | epesi-team=1 | telaxus=1
+ease	openedx=2 | edx=2
+badgr-server	concentricsky=2 | edubadges=1 | mint-o-badges=1
+opencred	nfh-trust-labs=2 | 19otherrsh-dot=2
+skolverket-mcp	isakskogstad=2 | ksaklfszf921=2
+agents-radar	kouweizhu=2 | duanyytop=2
+api_enem_microdados	filipedeschamps=1 | rendgentmars=1 | livrunakcream=1 | bluesky816=1
+learn-anything	chenchenyaqi=2 | nar101=1
+openbadges-specification	1edtech=2 | imsglobal=1
+scorm	gamestdio=2 | perfectlynormal=1
+adaptive-tutor	algenlab=2 | natiworldclass=1
+edu-convokit	stanfordnlp=2 | rosewang2008=1
+usp-mcp	idavi=2 | caiocastro1=1
+purdue-mcp	sharziki=2 | rohanmuppa=1
+nope	this-org-does-not-exist-zzz9=2 | this-definitely-does-not-exist-xyz123=1
+git-novice	swcarpentry=2 | mambelli=1
+edudata	bigdata-ustc=2 | tswsxk=1
+caliper-spec	1edtech=2 | imsglobal=1
+api	inepdadosabertos=2 | commonstandardsproject=1
+google-classroom-mcp	shimahikojin=1 | pengusto=1 | aaradhya-dev-tamrakar=1
+awesome-eu-ai-act	mlx-cassio=1 | genai-gurus=1
+correcaoredacao	ic-redacoes-utfpr=1 | yurimatsumotosantos=1
+adaptive-ai-tutor	soumics=1 | sujal-shejwal=1
+safetutors	your-username=1 | radiantcrystal=1
+agents	livekit=1 | ed-donner=1
+pyirt	junchenfeng=1 | 17zuoye=1
+google-classroom-mcp-server	faizan45640=1 | sevenc-nanashi=1
+proctor	timadey=1 | sudosylabs=1
+folio	stella=1 | srsatt=1

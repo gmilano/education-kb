@@ -1,0 +1,32 @@
+# ACTION PD / Gap 241 / Gap 242 - TWENTIETH test, 2026-10-15 (p225)
+# HEADLINE: p222's and p224's standing rule - "the split tracks the HOST" - is REFUTED here.
+# Same host, same scheme, different PATH: github.com HTML is 403 while github.com's git
+# smart-HTTP service is 200. The split tracks the SERVICE ENDPOINT, not the host.
+host_or_endpoint	result	note
+raw.githubusercontent.com	200	WORKING (20th). Every first-hand grant read this pass came through it
+github.com/OWNER/REPO (HTML)	403	BLOCKED, as p224 found
+github.com/OWNER/REPO/info/refs?service=git-upload-pack	200	NEW FINDING: WORKING. Same host and scheme as the 403 above
+git ls-remote https://github.com/OWNER/REPO	200/refs	NEW FINDING: WORKING. Returns the complete ref set; credential prompt (fatal) when no public repo exists
+registry.npmjs.org	200	WORKING (re-confirmed)
+pypi.org	200	WORKING (re-confirmed)
+api.github.com	403	BLOCKED (20th consecutive)
+moodle.org	000 CONNECT-FAIL	BLOCKED. Would have named the canonical owner of the alias pairs and carried the 5 plugin listings this pass's discovery query returned
+unesco.org	000 CONNECT-FAIL	BLOCKED (ACTION RL still undischargeable)
+eur-lex.europa.eu	000 CONNECT-FAIL	BLOCKED (ACTION SC's premise, re-confirmed)
+www.moe.gov.sg	000 CONNECT-FAIL	NEW PROBE (ACTION RO). APAC primary text
+www.mext.go.jp	000 CONNECT-FAIL	NEW PROBE (ACTION RO). APAC primary text
+www.education.gov.in	000 CONNECT-FAIL	NEW PROBE (ACTION RO). APAC primary text
+gaceta.diputados.gob.mx	000 CONNECT-FAIL	NEW PROBE. The Mexico AI bill PDF ACTION SG surfaced
+www.gob.mx/sep	000 CONNECT-FAIL	NEW PROBE. SEP primary
+www.canada.ca	000 CONNECT-FAIL	NEW PROBE. Canada federal AI strategy primary
+www.cmec.ca	000 CONNECT-FAIL	NEW PROBE. Canada ministers' council
+oecd.ai	000 CONNECT-FAIL	NEW PROBE. The OECD policy navigator behind the Germany finding
+ai-watch.ec.europa.eu	000 CONNECT-FAIL	NEW PROBE. EC AI Watch country reports
+ai.turiba.lv	000 CONNECT-FAIL	NEW PROBE. The 6-country EMEA higher-education report
+# SECOND CHANNEL for the government tier: WebFetch, not curl. www.moe.gov.sg and oecd.ai both
+# returned "getaddrinfo ENOTFOUND" - DNS, not HTTP. So the government-host block is the same
+# egress policy on both channels and is NOT a curl artefact.
+# CONSEQUENCE for ACTION RO and ACTION RL: 11 government/primary hosts probed on 2 channels,
+# 11 blocked. These actions are blocked ON EGRESS, structurally, exactly as ACTION SC reasoned.
+# They should stop being re-counted each pass as this KB's unperformed work.
+# TALLY: 19 clean + 1 exception (crates.io), carried from p224 unchanged.

@@ -1,0 +1,17 @@
+# NEW HAZARD CLASS, p225. ACTION SA built a gate that stops THIS KB from re-asserting a claim
+# its own shelves have refuted. It fired 0/0 at p224 and the fix held. But the gate watches
+# OUTBOUND prose only - and both refuted claims came back INBOUND this pass, through the
+# mandated regional query itself, carried by sources that had never been cited here.
+refuted_claim	kb_position	what_the_inbound_source_said_this_pass	source_quality	action_taken
+Boston Public Schools AI fluency is a GRADUATION REQUIREMENT	REFUTED at p218 - and by the publishers themselves: WBUR and NBC Boston both issued corrections ("incorrectly stated that the AI literacy course is a graduation requirement")	"Boston Public Schools recently became the first major US district to mandate AI fluency as a graduation requirement, starting in September 2026"	a community "Weekly digest" aggregator - the same class of source p218 caught it in, 7 passes later	NOT WRITTEN TO ANY SHELF. The p218 refutation stands; the confirmed facts (programme announced 2026-03-26 by Mayor Wu, UMass Boston + Paul English, USD 1M) remain the only published form
+EU AI Act education high-risk obligations take effect AUGUST 2026	REFUTED repeatedly; corrected at p223/p224 to Annex III education high-risk at 2027-12-02 under Reg. (EU) 2026/1744, with 2026-08-02 being ARTICLE 50 transparency	"The EU AI Act treats education AI as high-risk, and that obligation takes effect in August 2026"	a vendor comparison page	NOT WRITTEN TO ANY SHELF. This is exactly sa-refuted-claims row 1's refuted_pattern, matched on an INBOUND string
+# WHY THIS MATTERS MORE THAN THE OUTBOUND GATE:
+#   a 0/0 outbound report can look like the problem is solved. It is not - the error is still in
+#   circulation and the mandated queries keep handing it back. The gate's value is that it names
+#   the correction, so an inbound hit is recognisable on sight instead of being re-ingested.
+# PROPOSED SHAPE (registered as ACTION SH for p226): run sa-refuted-claims' refuted_pattern
+#   column against each pass's SEARCH RESULTS before anything is written, not only against the
+#   shelves afterwards. Same table, same regexes, applied one step earlier in the pipeline.
+# NOTE ON THE AUGUST 2026 DATE: a client-facing SOW that quotes it is not merely early, it is
+#   wrong in the direction that creates false urgency. The nearest binding EU date remains
+#   p224's finding of 2026-12-02 (two Article 5 prohibitions added by the Omnibus).
