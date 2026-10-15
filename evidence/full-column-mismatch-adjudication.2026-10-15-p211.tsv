@@ -1,0 +1,34 @@
+# p211 - every mismatching CELL, adjudicated by hand against the blob
+# a candidate is not a finding until it is read (p205: its first automated audit reported 3 mismatches and all 3 were the AUDIT's errors)
+file	line	repo	shelf_says	blob_says	verdict	true_grant	note
+foundations.md	2821	GibbonEdu/core	AGPL-3.0	GPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	GPL-3.0	GPL-3.0 on three channels (blob, composer.json, README); agents/top.md:1931 and foundations.md:1343 already carry the correction
+foundations.md	2865	GibbonEdu/core	AGPL-3.0	GPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	GPL-3.0	GPL-3.0 on three channels (blob, composer.json, README); agents/top.md:1931 and foundations.md:1343 already carry the correction
+solutions.md	2111	GibbonEdu/core	AGPL-3.0	GPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	GPL-3.0	GPL-3.0 on three channels (blob, composer.json, README); agents/top.md:1931 and foundations.md:1343 already carry the correction
+solutions.md	2156	GibbonEdu/core	AGPL-3.0	GPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	GPL-3.0	GPL-3.0 on three channels (blob, composer.json, README); agents/top.md:1931 and foundations.md:1343 already carry the correction
+foundations.md	2235	Schroedinger-Hat/certo	GPL-3.0	AGPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	AGPL-3.0	solutions.md:3550 already carries AGPL-3.0
+foundations.md	2221	acanas/swad-core	GPL-3.0	AGPL-3.0	TRUE-POSITIVE-UNCORRECTED	AGPL-3.0	wrong in BOTH places it appears and never corrected anywhere in this KB; network copyleft present where the shelves say it is absent
+solutions.md	1649	acanas/swad-core	GPL-3.0	AGPL-3.0	TRUE-POSITIVE-UNCORRECTED	AGPL-3.0	wrong in BOTH places it appears and never corrected anywhere in this KB; network copyleft present where the shelves say it is absent
+solutions.md	934	bigbluebutton/bigbluebutton	GPL-3.0	LGPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	LGPL-3.0	foundations.md:4825 already carries LGPL-3.0
+foundations.md	262	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	1137	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	1995	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	2823	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	4928	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	4974	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	5206	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+foundations.md	7029	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	23	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	259	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	685	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	722	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	2113	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	2159	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	3661	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+solutions.md	3902	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+top.md	25	frappe/education	GPL-3.0	GPL-3.0-STATED	NOT-AN-ERROR-stated-not-bodied	GPL-3.0-STATED	19-byte one-line statement, no licence body; p210 named this class
+top.md	2136	frappe/lms	MIT	AGPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	AGPL-3.0	agents/top.md:124 already carries AGPL-3.0; p209 verified it
+foundations.md	2222	memphis-iis/MoFaCTS	GPL-3.0	AGPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	AGPL-3.0	foundations.md:2188 already carries AGPL-3.0
+patterns.md	534	microsoft/autogen	MIT	CC-BY-4.0	NOT-AN-ERROR-two-file	MIT (code)	LICENSE is CC-BY-4.0, LICENSE-CODE is MIT (HTTP 200); patterns.md:534 already says "MIT (code), LICENSE-CODE not LICENSE"
+patterns.md	560	microsoft/autogen	MIT	CC-BY-4.0	NOT-AN-ERROR-two-file	MIT (code)	LICENSE is CC-BY-4.0, LICENSE-CODE is MIT (HTTP 200); patterns.md:534 already says "MIT (code), LICENSE-CODE not LICENSE"
+solutions.md	936	odoo/odoo	GPL-3.0	LGPL-3.0	TRUE-POSITIVE-ALREADY-CORRECTED-ELSEWHERE	LGPL-3.0	foundations.md:4686 already carries LGPL-3.0
+solutions.md	548	pupilfirst/pupilfirst	CC-BY-SA-4.0	MIT	NOT-AN-ERROR-split-scope	docs CC-BY-SA-4.0 / JS MIT	solutions.md:548 already scopes the cell to docs/**

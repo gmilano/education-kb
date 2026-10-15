@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 211 — 2026-10-15 — THE GNU FAMILY IS THIS INDUSTRY'S REAL LICENCE RISK, AND ADOPTION IS OUTRUNNING GOVERNANCE IN ALL FOUR REGIONS
+
+### 🆕 🔴 `T211-1` — the licence risk in education is `GPL`-vs-`AGPL`, not open-vs-proprietary
+
+🔴 **`5` of the `7` wrong grant cells found in this pass's full-column audit are confusions
+*inside* the GNU family.** 🟢 **`0` were permissive-vs-copyleft mixups, and the permissive half
+has now measured clean four passes running.**
+
+🔵 **The mechanism is textual: `GPL-3.0`, `LGPL-3.0` and `AGPL-3.0` open with near-identical
+boilerplate and differ in a clause most scanners never reach.** 🔴 **The consequence is
+operational: the three licences differ on exactly the question every education deployment turns
+on — *does serving students over a network count as distribution?*** 🟢 **For an industry whose
+default delivery model is a hosted, student-facing platform, that is the only licence question
+that changes an architecture.**
+
+🔵 **Deck line:** *"In education the dangerous licence mistake is not using closed software by
+accident — it is reading `AGPL` as `GPL` and discovering network copyleft after you have
+shipped a hosted deployment."*
+
+### 🆕 🔴 `T211-2` — a knowledge base's dominant failure mode is propagation, not error
+
+🔴 **`6` of this pass's `7` wrong cells name a repository whose correct grant this KB had
+**already found and published elsewhere**.** 🟢 **The research was right; the shelf was stale.**
+
+🔵 **This generalises past this KB and is worth saying to a client building their own
+intelligence layer:** 🟢 **once a corpus is append-only and large, the marginal value of
+*another sweep* falls below the marginal value of *reconciling what you already know*.** 🔴 **An
+audit that only looks for new errors will keep finding the same old ones re-served from stale
+rows.**
+
+### 🟢 `T211-3` — adoption is outrunning governance in all four regions, and the gap is the market
+
+| region | adoption | governance | gap |
+|---|---|---|---|
+| **LATAM** | `87`% of institutions use AI *(UNESCO IESALC, `200` institutions, `19` countries)* | 🔴 **`26`%** have any formal framework | 🔴 **`61` pts** |
+| **North America** | near-universal student use | 🔴 **`10`%** of institutions with formal guidelines; `71`% of US teachers untrained | 🔴 **largest reported** |
+| **Global** | student usage reported `66`% → `92`% *(`2024`→`2025`)* | analyst maturity read **`35`/`100`** — most institutions still piloting | 🔴 consistent |
+| **EMEA · APAC** | 🟡 not measured by the queries that reached here | 🟢 **but both have DATED obligations** *(EU AI Act high-risk, Aug `2026`; Singapore teacher module end-`2026`; Vietnam `2027-03-01`)* | 🔵 **inverted** |
+
+🔵 **The inversion in EMEA/APAC is the useful part.** 🟢 **In the Americas the buying trigger is
+the governance vacuum; in EMEA and APAC it is a compliance date.** 🔴 **The same offer sold the
+same way in both will land in only one.**
+
+### 🆕 🟡 `T211-4` — a national AI-education programme has been *reduced*, and it is the first on these shelves
+
+🟢 **South Korea's AI digital textbook rollout has been rolled back:** Korean and home economics
+dropped, social studies and science delayed to `2027`, adjustments applied from `2026`, after
+education governors asked for a slower pace. 🔴 **Sources are `2024`–`2025` and the `2026` status
+could not be verified from here.**
+
+🔵 **Carried because every other national datapoint in this KB is an expansion, and a deck built
+only on expansions is selling a trend rather than describing one.** 🟢 **The honest framing:
+national programmes are being *re-phased* as they meet classrooms, and a studio that plans for
+re-phasing wins the second contract.**
+
+### 🟢 `T211-5` — the market number is a range, and quoting a point figure is a tell
+
+🔴 **Three "2026" global figures from three houses: `$6.4`B, `$10.6`B, `$11.4`B.** 🟢 **All agree
+on `25`%+ growth.** 🔵 **Use the range and the direction. A single figure with a decimal place
+signals the deck was built from one vendor's press release.**
+
+### Carried forward, unchanged
+
+🟢 **Vietnam remains the only jurisdiction on these shelves with a compliance date that *names*
+education** *(in force `2026-03-01`; automated assessment and behavioural monitoring high-risk;
+due `2027-03-01`)*. 🟢 **The EU AI Act's high-risk classification of education AI, reported
+effective August `2026`, is the largest single dated obligation in this KB.** 🟢 **p210's
+commons-at-the-seams finding stands: the platforms are healthy and the connective tissue is
+`1`-star.**
+
 ## Pass 210 — 2026-10-15 — A COMPLIANCE DEADLINE WITH EDUCATION NAMED IN IT, AND THE COMMONS IS ROTTING AT THE SEAMS
 
 ### 🆕 🔴 `T210-1` — Vietnam is the first jurisdiction to put a COMPLIANCE date on education AI, and its grandfather clause has already expired

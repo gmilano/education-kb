@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 211 — 2026-10-15 — TWO PLATFORM GRANTS WERE WRONGER THAN THE SHELF KNEW, AND BOTH RUN IN THE DIRECTION THAT CHANGES THE RECOMMENDATION
+
+### 🔴 The platform grants, re-read from the blob
+
+🟢 **Every platform on this shelf had its licence blob read first-hand this pass** *(channel
+correction in [`repos/foundations.md`](../repos/foundations.md) p211)*. 🔵 **This shelf
+contributed `665` table rows to the audit; `2` platforms carry a cell that would change a
+build/integrate decision, and `1` of those is a platform this KB recommends constantly.**
+
+| platform | a cell on this shelf says | 🟢 read from the blob | why it matters |
+|---|---|---|---|
+| 🔴 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🔴 `GPL-3.0` | 🔴 **`AGPL-3.0`** | 🔴 **network copyleft, on a student-facing platform. Wrong in BOTH places it appears and never corrected** |
+| [`odoo/odoo`](https://github.com/odoo/odoo) `:936` | 🟡 `GPL-3.0` *(describing the embedded text)* | 🟢 **`LGPL-3.0`** | 🟢 **more permissive than the cell reads** — `LGPL` is what makes the `OpenEduCat` stack buildable |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `:934` | 🟡 `GPL-3.0` *(by reference)* | 🟢 **`LGPL-3.0`** | 🟢 **the virtual-classroom layer is library-scoped copyleft, not full `GPL`** |
+
+🔵 **The `odoo` and `bigbluebutton` cells sit in a byte-structure table and describe what is
+*inside* the `LICENSE` file rather than asserting a grant — [`foundations.md`](../repos/foundations.md)
+`:4686` and `:4825` already carry `LGPL-3.0` correctly.** 🔴 **But a reader scanning this shelf
+sees a platform name next to the token `GPL-3.0`, and that is the whole risk `P211-1`
+describes.**
+
+### 🆕 🔴 `P211-4` — `odoo`'s `LICENSE` is the `Gap 466` trap, still armed
+
+🔴 **`odoo/odoo`'s `LICENSE` names `LGPLv3` in its third line and then includes the **full text
+of the GPL** below it**, because the LGPL is drafted as a set of additional permissions on top
+of the GPL. 🟢 **A whole-body matcher returns `GPL-3.0`. A title-anchored one returns
+`LGPL-3.0`.** 🔵 **This is precisely the defect p205 fixed as `Gap 466`, and `odoo` is the
+highest-traffic repository on these shelves where it still bites.**
+
+🟢 **Consequence for the vertical, stated plainly because it decides engagements:** **`LGPL-3.0`
+lets a studio ship proprietary modules on top of Odoo and `OpenEduCat`; `GPL-3.0` would not.**
+🔴 **A shelf that reads `GPL-3.0` would have ruled out the single most common education-ERP
+build pattern this KB recommends.**
+
+### 🟢 `SWAD` — reclassified, and the recommendation changes with it
+
+🟢 **SWAD *(Universidad de Granada, `76`★, EMEA, two decades in production)* is `AGPL-3.0`.**
+🔴 **Previously carried here as `GPL-3.0` with no copyleft caveat.**
+
+🔵 **Revised guidance: integrate-only until the client's deployment model is known.** 🟢 **If
+SWAD is hosted and students reach it over a network, `AGPL-3.0` obliges source disclosure of
+modifications to those users.** 🔵 **That is survivable — it is the same obligation Open edX
+carries — but it must be priced into the engagement, and until this pass it was not visible on
+this shelf at all.**
+
+### 🟢 Permissive-ERP check — ninth negative reading
+
+🟢 **Query run as specified: `open source platform education ERP CRM MIT Apache`.** 🔴 **`0` new
+permissive education ERPs.** 🔵 **The returns restated what this shelf holds: `OpenEduCat`
+*(`LGPL-3.0`, on Odoo)*, `ERPNext` *(`GPL-3.0`)*, and `Twenty` *(`BSL-1.1`, non-OSI, not
+education)*.** 🟢 **p210's `ACTION PY` finding stands as the answer to this query:
+[`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) is the only permissive ERP
+in reach and **has no education layer at all**.**
+
+🟢 **Two SIS candidates came back and neither changes the shelf:**
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) is already here in
+`33` places *(`GPL-2.0`, confirmed from the blob this pass)*; **OpenCampus** — the Drupal + ECA
+SIS reported at `1`M+ European higher-ed users, presented at Apereo in January `2026` — 🔴 **has
+no public repository reachable under the obvious names, so its grant is unknown and it is
+recorded as an informed gap rather than as a component.**
+
 ## Pass 210 — 2026-10-15 — EIGHTH NEGATIVE READING ON A PERMISSIVE SIS, AND THE CHANNEL HAS STARTED ANSWERING A DIFFERENT QUESTION
 
 ### 🔴 No permissive education SIS, eighth consecutive reading

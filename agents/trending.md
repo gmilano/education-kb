@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — pass 211 — THE EIGHTH SATURATION READING, AND A CHANNEL THAT WAS CLOSED TURNS OUT TO HAVE BEEN OPEN
+
+🟢 **Signals this window, newest first. History below is kept and not rewritten.**
+
+### 🔴 `0` new qualifying agents — eighth consecutive reading
+
+🟢 **Queries run exactly as the task specifies:** `top open source AI agents education 2026
+github MIT`, `github trending education AI 2026`. 🔴 **Yield: `0` education-vertical agents.**
+
+🔵 **What the channel returned instead** — recorded so the absence is legible rather than silent:
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+*(`MIT`; a curriculum **about** agents)*,
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) *(`MIT`)*,
+`rohitg00/ai-engineering-from-scratch` *(reported `#1` on GitHub Trending, `2026-05-24`)*, and
+vendor roundups re-listing `CrewAI`, `AutoGen`, `LangGraph`, `goose`, `OpenHands`, `browser-use`,
+`Suna` and `Open Interpreter`.
+
+🔴 **Eight readings is no longer bad luck. The generic query shape does not reach this
+industry's supply**, and the reason is structural: education agents name a *platform* or a
+*pedagogical role*, not the word "agent".
+
+### 🆕 🟢 The verification channel was mis-priced for at least two passes
+
+🔴 **p210 recorded: *"curl is refused at CONNECT for every host including GitHub."*** 🟢 **Wrong
+in the one case that matters — `raw.githubusercontent.com` answers `200`.**
+
+🟢 **Consequence for this shelf: `494` licence blobs read first-hand in a single pass**, against
+`10` per pass by hand in p209 and p210. 🔵 **The trending shelf's standing rule — *a row's grant
+is read from the repository, never from the roundup that mentioned it* — is now cheap enough to
+apply to every row at once rather than to new rows only.**
+
+🔵 **Channel state, re-tested cold this pass (ninth honest re-test):**
+
+| host | result |
+|---|---|
+| `example.com` | 🔴 `000` |
+| `github.com` | 🔴 `403` |
+| `api.github.com` | 🔴 `403` |
+| 🟢 **`raw.githubusercontent.com`** | 🟢 **`200`** |
+| 🟢 **`git ls-remote` / `git clone`** | 🟢 **works** *(the git proxy, a separate path from `curl`)* |
+
+🆕 🟢 **`git ls-remote https://github.com/<owner>/<repo>` is a clean existence test** — it
+returns refs for a live repository and fails closed on one that does not exist. 🔵 **That gives
+this KB a second first-hand channel it has not been using, and it needs no API token.**
+
+### 🟡 Trending, as a channel, for the eighth time
+
+🔴 **`0` education verticals on GitHub Trending.** 🟢 **Consistent with p210's seven readings;
+this is now eight.** 🔵 **The one adjacent signal — a report that nine of the top ten monthly
+trending projects in February `2026` were AI-related — is unverified and, if true, explains the
+null: an education repository cannot out-trend the general AI field, so Trending will never
+surface this industry's supply. The channel is not failing; it is answering a different
+question.**
+
 ## 2026-10-15 — pass 210 — THE SEVENTH SATURATION READING, AND THE VERIFICATION CHANNEL RE-TESTED FROM SCRATCH
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**

@@ -4,6 +4,162 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 211 — 2026-10-15 — THE WHOLE COLUMN, READ FIRST-HAND: `2 051`/`2 082` CELLS AGREE, AND THE `31` THAT DO NOT ARE MOSTLY THIS KB'S OWN CORRECTIONS, UNPROPAGATED
+
+### 🔴 The sampling was never necessary — the channel was mis-priced
+
+🔴 **p210 recorded the channel as: *"curl is refused at CONNECT for every host including GitHub
+(`403`); `WebFetch` resolves `github.com` only."*** 🟢 **That statement is too strong, and it is
+the reason nine passes audited this column ten rows at a time.**
+
+🟢 **`raw.githubusercontent.com` answers `200` to a plain `curl GET` from this environment.**
+🟢 **p211 read `494` licence blobs through it in a single pass.** 🔴 **The rest of p210's channel
+reading stands and was re-tested cold: `example.com` → `000`, `github.com` → `403`,
+`api.github.com` → `403`.** 🔵 **So the general-egress statement was right and the *consequence*
+drawn from it was wrong: the one host that serves licence bodies is reachable, and that is the
+only host this audit needs.**
+
+🆕 🟢 **Second simplification: the ref `HEAD` resolves a repository's default branch.** 🔵 **The
+branch axis — `main` vs `master` vs anything else — disappears entirely.** 🔴 **p207's `90`-form
+locator was priced for a problem that stops existing once `HEAD` is used:**
+
+| path form | blobs served | share |
+|---|---|---|
+| `LICENSE` | `423` | **`85.6`%** |
+| `LICENSE.md` | `41` | `8.3`% |
+| `LICENSE.txt` | `19` | `3.8`% |
+| `license.txt` | `7` | `1.4`% |
+| `LICENCE.md` · `COPYING.txt` · `LICENSE.TXT` · `LICENCE` | `1` each | `0.8`% total |
+
+🟢 **`8` forms cover `100`% of what is findable.**
+[`evidence/locator-path-form-yield.2026-10-15-p211.tsv`](../evidence/locator-path-form-yield.2026-10-15-p211.tsv)
+
+### 🟢 The audit, at full depth
+
+🟢 **Population: every repository named in a table row on the four client-facing shelves —
+[`agents/top.md`](../agents/top.md), this file, [`verticals/solutions.md`](../verticals/solutions.md)
+and [`compose/patterns.md`](../compose/patterns.md).** 🔵 **Not a sample, not a tail, not a
+ranking: all of it.**
+
+| | count |
+|---|---|
+| unique repositories on the four shelves | **`588`** |
+| licence blobs read first-hand at `HEAD` | 🟢 **`494`** |
+| serving no blob after `18` path forms | 🟡 **`94`** |
+| body served, family not nameable | 🟡 **`21`** |
+| **table cells adjudicated against a blob** | 🟢 **`2 082`** |
+| **cells that agree** | 🟢 **`2 051`** — **`98.5`%** |
+| **cells that do not** | 🔴 **`31`**, over `10` repositories |
+
+[`evidence/full-column-grant-census.2026-10-15-p211.tsv`](../evidence/full-column-grant-census.2026-10-15-p211.tsv)
+
+### 🔴 The `31`, adjudicated by hand — because a candidate is not a finding
+
+🔵 **p205's first automated audit reported `3` mismatches and all `3` were the AUDIT's errors.
+Every candidate below was read against its own blob before being called anything.**
+
+🟢 **Three of the ten are NOT errors — and all three were already characterised correctly by this
+KB, which is how we know the instrument sees:**
+
+| repo | shelf | blob | why the shelf is right |
+|---|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | `MIT` | `CC-BY-4.0` | 🟢 **two-FILE repo**: `LICENSE` is `CC-BY-4.0`, `LICENSE-CODE` is `MIT` *(`200`)*. [`patterns.md`](patterns.md) already says *"`MIT` **(code)**, `LICENSE-CODE`, not `LICENSE`"* |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0` | `MIT` | 🟢 **split-scope**: `docs/**` is `CC-BY-SA-4.0`, client JS is `MIT`. [`solutions.md`](../verticals/solutions.md) already scopes the cell |
+| [`frappe/education`](https://github.com/frappe/education) | `GPL-3.0` | `GPL-3.0-STATED` | 🟢 **`19`-byte statement, no body** — p210's own STATED-vs-BODIED class, in `17` cells |
+
+🔴 **Seven carry a genuinely wrong grant family in at least one cell:**
+
+| repo | the cell says | 🟢 the blob says | already corrected elsewhere in this KB? |
+|---|---|---|---|
+| 🔴 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | `GPL-3.0` | 🔴 **`AGPL-3.0`** | 🔴 **NO — wrong in both places it appears** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `AGPL-3.0` | 🟢 **`GPL-3.0`** | 🟢 yes — [`top.md`](../agents/top.md)`:1931`, this file `:1343` |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | `GPL-3.0` | 🟢 **`AGPL-3.0`** | 🟢 yes — this file `:2188` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | `GPL-3.0` | 🟢 **`AGPL-3.0`** | 🟢 yes — [`solutions.md`](../verticals/solutions.md)`:3550` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `GPL-3.0` | 🟢 **`LGPL-3.0`** | 🟢 yes — this file `:4825` |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | `GPL-3.0` | 🟢 **`LGPL-3.0`** | 🟢 yes — this file `:4686` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `MIT` | 🟢 **`AGPL-3.0`** | 🟢 yes — [`top.md`](../agents/top.md)`:124`, p209 verified it |
+
+[`evidence/full-column-mismatch-adjudication.2026-10-15-p211.tsv`](../evidence/full-column-mismatch-adjudication.2026-10-15-p211.tsv)
+
+### 🆕 🔴 `P211-1` — the defect is PROPAGATION, not discovery
+
+🔴 **`6` of the `7` wrong cells name a repository whose CORRECT grant this KB has already found,
+verified and published somewhere else on these shelves.** 🟢 **This prices the class p208 opened
+at `T208-2` — *"both are corrections this KB published and never propagated"* — and p208 could
+only name two instances.** 🔵 **At full depth it is `6` of `7`: the dominant failure mode of this
+KB's licence column is not getting the answer wrong, it is **getting it right in one place and
+leaving the old cell standing in another**.**
+
+🟢 **The remedy is cheap and it is not another sweep.** 🔵 **A correction is only finished when
+the repository's *other* cells are reconciled in the same pass; the per-repo census file shipped
+above makes that a lookup rather than a search.**
+
+### 🆕 🔴 `P211-2` — the one real discovery, and it runs the dangerous way
+
+🔴 **[`acanas/swad-core`](https://github.com/acanas/swad-core) — SWAD, Universidad de Granada's
+platform, `76`★, EMEA, two decades in production — is `AGPL-3.0`.** 🔴 **Both shelves that carry
+it say `GPL-3.0`, and no pass has ever corrected it.** 🔵 **p187 even recorded the byte count
+correctly (`34 501` B) while naming the wrong family — the bytes were read and the title line
+was not.**
+
+🔴 **The direction is what matters. `AGPL-3.0` carries network copyleft; `GPL-3.0` does not.**
+🔴 **A studio reading these shelves would have concluded it could host a modified SWAD for a
+client without a source-disclosure obligation. That conclusion was wrong.** 🟢 **Corrected here,
+and `swad-core` is marked integrate-only until a client's deployment model is known.**
+
+### 🆕 🔴 `P211-3` — the error class is the `GPL`↔`AGPL` axis
+
+🔴 **`5` of the `7` true positives are `GPL`/`AGPL`/`LGPL` confusions.** 🔵 **Not `MIT`-vs-
+`Apache`, not permissive-vs-copyleft — the errors cluster inside the GNU family, between three
+licences whose texts open with twenty near-identical lines and whose *obligations differ by the
+single question a hosted education deployment turns on*: does serving students over a network
+count as distribution?**
+
+🟢 **For this industry that is the most consequential distinction there is**, because the default
+delivery model for an LMS, an SIS or a tutor is hosted and student-facing. 🔵 **Any future audit
+should weight the GNU family above everything else; the permissive half has now been measured
+clean four times.**
+
+### 🟢 The instrument was wrong twice, and the ground truth caught it
+
+🟢 **p209 and p210 hand-read `20` rows. p211 used them as a validation set before trusting the
+classifier on `588`.** 🔴 **It failed twice in development:** it had no rule for `CC-BY-NC-SA`,
+and none for the bare `Attribution 4.0 International` title line that opens every Creative
+Commons deed. 🔴 **Both would have shipped as false "corrections" on `5` cells —
+[`enkidevs/curriculum`](https://github.com/enkidevs/curriculum),
+[`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) and
+`autogen` among them.** 🟢 **Fixed; final score against the hand-read set `20`/`20`.**
+
+🔵 **The lesson is worth more than the fix: p209's and p210's slow hand-reading was not wasted
+work that a faster channel made redundant — it was the only thing standing between this pass and
+five confident wrong answers.** 🟢 **Code, with the order-of-operations lessons it inherits:**
+[`compose/code/p211-full-column-grant-audit/`](../compose/code/p211-full-column-grant-audit/README.md)
+
+### 🟡 The `94` that serve nothing, and the `21` that cannot be named
+
+🟡 **`94` of `588` serve no blob at `HEAD` after `18` forms.** 🔴 **That is an ABSENCE AT ONE
+CHANNEL, not a finding of "no licence"** — a grant may sit in a manifest, a README or a
+subdirectory, and p207 proved exactly that against this KB's own ungranted list.
+[`evidence/ungranted-after-18-forms.2026-10-15-p211.tsv`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv)
+
+🟢 **The `21` unnameable bodies returned `0` new findings — every anomaly in them is one this KB
+already holds:** [`portabilis/i-diario`](https://github.com/portabilis/i-diario) *(the `AGPL-3.0`
+body in **Portuguese**)*, [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts)
+*(`0BSD`)*, [`leemonade/leemons`](https://github.com/leemonade/leemons) *(`Fair Code v1.0`,
+non-OSI)* and [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) *(not open source
+at all)*. 🔵 **The rider detector fired exactly once, on `NoSuggest`, which this KB already flags
+— so p207's finding that this industry's supply carries almost no source-available riders now
+holds over `494` bodies rather than `185`.**
+
+### 🟢 Discovery this pass
+
+🔴 **`0` new foundational repos accepted — the ninth consecutive saturation reading.**
+🟢 **[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) came back from
+the SIS query and is already on these shelves in `33` places** *(`GPL-2.0`, confirmed from the
+blob this pass)*. 🔵 **`OpenCampus`, the Drupal/ECA SIS reported at `1`M+ EU higher-ed users, has
+no reachable public repository under the obvious names — recorded as an informed gap, not as a
+component.**
+
 ## Pass 210 — 2026-10-15 — `ACTION PV` LANDS, AND THE BUS-FACTOR RISK IS NOT IN THE PLATFORMS — IT IS IN THE SEAMS
 
 ### 🟢 Nine of `ACTION PU`'s ten rows are foundation rows, and all nine confirmed

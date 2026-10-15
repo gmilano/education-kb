@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 211 — 2026-10-15 — TWO RECIPES: A GRANT GATE THAT RUNS IN CI, AND AN EU-AI-ACT-SHAPED TUTOR STACK
+
+🔵 **Every component below had its licence blob read first-hand from the repository on
+`2026-10-15`.** 🟢 **Grants shown are from the blob, not from a sidebar, a manifest or a
+roundup.**
+
+### 🆕 `P211-A` — the deployment-aware grant gate *(2–3 days, runs forever)*
+
+🔴 **The problem this pass proved is real: a shelf said `GPL-3.0` where the blob said
+`AGPL-3.0`, on a student-facing platform.** 🟢 **The fix is not vigilance, it is a gate.**
+
+🔵 **The insight that makes it cheap: a licence is only a blocker *relative to a deployment
+model*.** 🟢 **`AGPL-3.0` is harmless in a batch job and decisive in a hosted tutor. So the gate
+takes the deployment model as an input, not just the licence.**
+
+**Components**
+
+| component | grant 🟢 read `2026-10-15` | role |
+|---|---|---|
+| [`compose/code/p211-full-column-grant-audit/`](code/p211-full-column-grant-audit/README.md) | 🟢 this KB | reads every dependency's blob at `HEAD`, rider-first, title-anchored |
+| [`spdx/license-list-data`](https://github.com/spdx/license-list-data) *(optional)* | 🟡 **serves no licence blob at `HEAD` over the `8` forms** — grant not established at this channel | canonical texts to diff against |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) *(optional)* | 🟢 `MIT` *(`1 152` B, read `2026-10-15`)* | schedules the re-read so the gate re-runs on upstream relicensing |
+
+🔵 **The `spdx` row is left in deliberately, with its gap showing.** 🔴 **The repository that
+publishes the canonical licence texts is itself in this pass's `115`-row *grant-not-readable*
+bucket — which is the sharpest possible argument for step `5` below: `ABSENT` must block and ask
+a human, never pass quietly.**
+
+**Wiring**
+
+1. **Declare the deployment model once**, in repo config: `batch` · `on-prem-single-tenant` ·
+   `hosted-multi-tenant`. 🔵 **This is the field every licence scanner omits and the only one
+   that decides anything.**
+2. **Resolve each dependency to `owner/repo`** and fetch
+   `raw.githubusercontent.com/<repo>/HEAD/<form>` over the `8` forms that cover `100`% of real
+   repositories. 🟢 **`HEAD` removes the branch guess; `LICENSE` alone answers `85.6`% of the
+   time.**
+3. **Classify rider-first, then title-anchored.** 🔴 **Both orderings are load-bearing: a
+   Commons Clause rider sits above an `MIT` body, and `odoo`'s `LICENSE` contains the entire
+   `GPL` text underneath the line that says `LGPLv3`.**
+4. **Gate on the pair, not the licence:**
+
+   | | `batch` | `on-prem` | `hosted-multi-tenant` |
+   |---|---|---|---|
+   | `MIT` · `Apache-2.0` · `BSD` · `0BSD` | 🟢 pass | 🟢 pass | 🟢 pass |
+   | `LGPL-3.0` | 🟢 pass | 🟢 pass | 🟡 **pass — link, do not modify** |
+   | `GPL-3.0` | 🟢 pass | 🟡 review | 🟡 review |
+   | 🔴 **`AGPL-3.0`** | 🟢 pass | 🟡 review | 🔴 **BLOCK → human sign-off** |
+   | 🔴 non-OSI *(`Fair Code`, `BSL`, `Elastic`, bespoke)* | 🔴 block | 🔴 block | 🔴 block |
+   | 🟡 `UNRECOGNISED` / `ABSENT` / `STATED`-not-`BODIED` | 🟡 **block pending a human read** | 🟡 same | 🟡 same |
+
+5. **Fail closed on the last row.** 🔴 **`115` of this KB's `588` repositories land in it
+   (`94` absent + `21` unnameable), and that is the row where a Portuguese `AGPL-3.0` hides.**
+
+🔵 **Why it beats a stock SCA scanner for this industry:** 🟢 **three of this KB's `20` highest-
+exposure repositories have no GitHub-classified licence at all** *(p210's `15`% rate)*, so a
+scanner keyed on the API's `license` field returns `null` for one row in seven — and `null`
+usually renders as "no issues found".
+
+### 🆕 `P211-B` — an EU-AI-Act-shaped self-hosted tutor *(8–10 weeks)*
+
+🔵 **Built for one dated obligation: education AI reported classified **high-risk** under the EU
+AI Act from **August `2026`**.** 🟢 **High-risk is a documentation-and-oversight regime, so the
+architecture is chosen for auditability, and every component is self-hostable.**
+
+| layer | component | grant 🟢 read `2026-10-15` | why this one |
+|---|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 `GPL-3.0` *(`COPYING.txt`)* | 🟢 the EMEA institutional default |
+| or | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` *(from the blob — 🔴 **GitHub classifies it as nothing**)* | 🟢 **permissive**, strong DACH install base |
+| virtual classroom | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟢 **`LGPL-3.0`** *(corrected this pass)* | 🟢 library-scoped copyleft — link freely |
+| learning records | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 `MIT` | 🟢 xAPI/LRS — **the audit trail the regime asks for** |
+| interop | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 `MIT` | 🟢 SCORM/xAPI runtime |
+| knowledge tracing | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `MIT` | 🟢 the model whose outputs you must be able to explain |
+| orchestration | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 **`MIT` (code)** — 🔴 **`LICENSE-CODE`, not `LICENSE`** | 🟢 multi-agent drafting |
+| local inference | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 `MIT` | 🟢 **no student data leaves the estate** |
+
+**Wiring**
+
+1. **Ollama in the estate.** 🔵 **Data residency is the cheapest high-risk control to
+   evidence — you cannot mishandle a cross-border transfer you never make.**
+2. **Ralph as the spine, not an afterthought.** 🟢 **Every tutor turn, every grade suggestion
+   and every human override emits an xAPI statement.** 🔵 **The high-risk regime wants
+   traceability and human oversight; an LRS *is* the traceability artefact, and it is `MIT`.**
+3. **Human-in-the-loop on anything touching assessment.** 🔴 **Vietnam's high-risk list already
+   names automated assessment explicitly, so this constraint is not EU-only — build it once.**
+4. **pyKT behind a decision log.** 🔵 **A mastery estimate that changes a student's path is an
+   automated decision; log the inputs and the estimate so it can be reconstructed.**
+5. **BigBlueButton linked, not forked.** 🟢 **`LGPL-3.0` keeps your code yours as long as you
+   link rather than modify** — 🔴 **a distinction this shelf could not have made before this
+   pass, because the cell said `GPL-3.0`.**
+
+🔴 **The component this recipe deliberately refuses:** 🔴 **`SWAD`
+([`acanas/swad-core`](https://github.com/acanas/swad-core)), despite being an excellent EMEA
+platform with twenty years in production — it is **`AGPL-3.0`** *(corrected this pass)*, and in
+a hosted multi-tenant tutor that obliges source disclosure to every student who reaches it.**
+🟢 **Gate `P211-A` blocks it automatically on the `hosted-multi-tenant` row. If the client's
+model is on-prem single-tenant, it comes back on the table.**
+
+🔵 **Fallbacks, per this KB's standing rule that every fragile component names one:** Moodle ↔
+OpenOLAT at the LMS layer; Ralph ↔ a plain xAPI store; `scorm-again` has no equal-grade
+alternative and is the recipe's thinnest seam.
+
 ## Pass 210 — 2026-10-15 — TWO RECIPES BUILT FOR DATED OBLIGATIONS, WITH EVERY FRAGILE COMPONENT'S FALLBACK NAMED
 
 🔵 **Every repository named below had its grant read from the repository itself on `2026-10-15`

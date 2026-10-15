@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — pass 211 — NINTH NULL ON TRENDING, AND THE GRANT COLUMN OF THIS WHOLE SHELF IS NOW VERIFIABLE IN ONE CALL PER ROW
+
+🟢 **Newest first. History below is kept and not rewritten.**
+
+### 🔴 GitHub Trending — ninth consecutive null for an education vertical
+
+🟢 **Query run as specified: `github trending education AI 2026`.** 🔴 **`0` education-vertical
+repositories.** 🔵 **The returns were trackers and curated lists — `trendshift.io`, `gittrend.io`
+— plus general AI-learning repos. The strongest single hit,
+`rohitg00/ai-engineering-from-scratch`, is reported at `#1` on Trending on `2026-05-24` and is a
+general AI-engineering curriculum, not education technology.**
+
+🟢 **Nine readings, `0` yield. This is a measured property of the channel, and it is now stated
+as a rule rather than re-tested each pass:** 🔵 **GitHub Trending ranks by velocity across all of
+software. An education repository with `500`★ cannot appear beside an AI framework gaining
+`5 000`★ in a week. The channel will not surface this industry and no query reformulation fixes
+that.** 🟢 **The channels that do work for this shelf are `topic:` pagination with a star floor,
+platform-named `MCP` queries, and the LATAM/non-English corpus.**
+
+### 🆕 🟢 Every row on this shelf can now be grant-checked first-hand
+
+🟢 **`raw.githubusercontent.com/<repo>/HEAD/LICENSE` answers `200`** — contra p210's reading that
+`curl` was refused everywhere. 🟢 **`HEAD` resolves the default branch, so no row needs its
+branch guessed.** 🔵 **`85.6`% of `494` blobs came back on the first form tried.**
+
+🔵 **Standing instruction for this shelf, now affordable:** a trending row's grant is read from
+the repository at the moment it is added, and the `sha`-pinned byte count recorded beside it.
+🟢 **Rows added before this pass have been swept — the result is in
+[`repos/foundations.md`](foundations.md) p211 and the per-repo values in
+[`evidence/full-column-grant-census.2026-10-15-p211.tsv`](../evidence/full-column-grant-census.2026-10-15-p211.tsv).**
+
+### 🟡 One row on this shelf is affected by the p211 sweep
+
+| repo | this shelf said | 🟢 blob at `HEAD` | action |
+|---|---|---|---|
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🟢 `AGPL-3.0` *(already corrected here)* | 🟢 **`AGPL-3.0`** *(`35 326` B, body in **Portuguese**)* | 🟢 **confirmed, no change** |
+
+🟢 **The translated-licence class this shelf opened holds up: the automated classifier returns
+`UNRECOGNISED` on it, exactly as predicted, and the correct value was already recorded by hand.**
+🔵 **That is the class working as designed — a known unknown, not a silent error.**
+
 ## 2026-10-15 — pass 210 — THE TRENDING CHANNEL ANSWERED A DIFFERENT QUESTION, AND THE STAR COLUMN TURNED OUT TO BE FREE INTELLIGENCE
 
 🟢 **Dated section, appended above the history. Nothing below this line was rewritten.**

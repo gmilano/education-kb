@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 211 — 2026-10-15 — EVERY AGENT ROW'S GRANT READ FIRST-HAND, AND THE EIGHTH SATURATION READING
+
+### 🟢 The agent shelf is now `100`% first-hand on its licence column
+
+🟢 **p211 read the licence blob of every repository on this shelf directly from
+`raw.githubusercontent.com` at `HEAD`** *(the channel correction is in
+[`repos/foundations.md`](../repos/foundations.md) p211; in short, `curl` reaches that one host
+although it reaches nothing else)*. 🔵 **This shelf contributed `1 025` of the `2 818` table rows
+in the full-column audit.**
+
+🟢 **`0` wrong grant families originate on this shelf** beyond the two already named below.
+🔴 **The two that do:**
+
+| repo | the cell says | 🟢 read from the blob | status |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) `:2136` | 🔴 `"the MIT LMS"` | 🟢 **`AGPL-3.0`** *(`33 893` B)* | 🟡 **unpropagated** — `:124` already carries `AGPL-3.0`, and p209 verified it |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 `AGPL-3.0` *(in older sections)* | 🟢 **`GPL-3.0`** | 🟢 corrected at `:1931`; **triple-confirmed this pass** — blob, `composer.json`, `README` |
+
+🔵 **Both are instances of `P211-1`: this KB found the right answer and left the wrong cell
+standing. See [`foundations.md`](../repos/foundations.md) for the measured rate — `6` of `7`.**
+
+### 🔴 Discovery — the eighth consecutive saturation reading
+
+🟢 **The task's discovery queries were run as specified: `top open source AI agents education
+2026 github MIT` and `github trending education AI 2026`.**
+
+🔴 **`0` new qualifying agents accepted.** 🔵 **What came back was, for the eighth pass running,
+*general* AI-agent and AI-learning material rather than education verticals:**
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+*(`MIT`, a course about agents, not an agent for education)*,
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch),
+`rohitg00/ai-engineering-from-scratch`, and roundups naming `CrewAI`, `AutoGen`, `LangGraph`,
+`goose`, `OpenHands` and `browser-use` — all general-purpose, all already known here.
+
+🔴 **The query shape is wrong for this industry and the evidence is now overwhelming.** 🔵 **An
+education-specific agent does not describe itself with the word "agent" plus the word
+"education"; it describes itself as a tutor, a grader, an LMS plugin or an `MCP` server for a
+named platform.** 🟢 **The channels that still yield here are the ones this KB found the hard
+way: platform-named `MCP` queries, `topic:` pages at depth with a star floor, and non-English
+queries on the LATAM corpus.**
+
+🟡 **One methodological note on the secondary sources, since the task asks for real rows:** the
+roundups returned this pass quote star counts that conflict with each other and with GitHub.
+🔴 **No row was added from a roundup. Every star figure on this shelf came from the repository
+itself.**
+
 ## Pass 210 — 2026-10-15 — `ACTION PU` DOUBLES ITS SAMPLE TO `20`/`20`, AND THE INSTRUMENT'S BLIND SPOT IS NOW A MEASURED RATE
 
 ### 🟢 `ACTION PU` continued — the next ten masked rows, read by hand

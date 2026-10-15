@@ -1,0 +1,11 @@
+# p211 - which path form actually served the blob, over 494 reads at HEAD
+# consequence: 8 forms cover 100% of what is findable; the 90-form locator is priced for a problem that does not exist once HEAD removes the branch axis
+path_form	blobs_served	share_pct
+LICENSE	423	85.6
+LICENSE.md	41	8.3
+LICENSE.txt	19	3.8
+license.txt	7	1.4
+LICENCE.md	1	0.2
+COPYING.txt	1	0.2
+LICENSE.TXT	1	0.2
+LICENCE	1	0.2

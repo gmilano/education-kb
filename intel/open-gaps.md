@@ -1,8 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## 🔜 Registered for p212 — pre-registered with falsifiers
+
+🟢 **p211 did not continue `ACTION PU`'s ten-row sample — it RETIRED it, by reading all `588`
+rows at once.** **(a)** 🔴 **The channel was mis-priced: `raw.githubusercontent.com` answers
+`200` to `curl`, so nine passes of ten-row hand-sampling were rate-limited by a belief, not by
+the network.** **(b)** 🔴 **`P211-1`: `6` of `7` wrong cells were corrections this KB had
+already published elsewhere — the dominant failure mode is propagation, not discovery.**
+**(c)** 🔴 **`P211-3`: `5` of `7` errors are `GPL`/`AGPL`/`LGPL` confusions, the one licence
+axis that changes an education architecture.**
+
+| action | anchor on disk | falsifier |
+|---|---|---|
+| 🆕 🔴 **`ACTION PZ`** — reconcile every repository that has MORE THAN ONE distinct grant printed across the four shelves | `P211-1`; [`evidence/full-column-grant-census.2026-10-15-p211.tsv`](../evidence/full-column-grant-census.2026-10-15-p211.tsv) now holds one first-hand grant per repo, so every contradiction is a lookup | 🟢 **limb `1`:** `10`+ repositories carry two or more distinct grant tokens across the shelves → **propagation debt is a standing backlog with a size, and `P211-1`'s `6`/`7` was a floor**. 🔴 **limb `2`:** `<10` → the `7` found this pass were most of it and the column is nearly reconciled. 🔵 **Entirely offline — the census and the row extractor both exist** |
+| 🆕 🔴 **`ACTION QA`** — re-read the `94` `ABSENT` rows through the channels that are NOT this one | [`evidence/ungranted-after-18-forms.2026-10-15-p211.tsv`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv); p207 recovered `3` of `15` from a population declared ungranted | 🟢 **limb `1`:** manifests *(`package.json`, `composer.json`, `setup.py`, `DESCRIPTION`)*, `README` licence sections and `LICENSE` files in subdirectories recover **`15`+** of the `94` → **`ABSENT`-at-one-channel is not ungranted, and this KB's ungranted counts are still overcounts**. 🔴 **limb `2`:** `<15` → the `94` is close to the real ungranted population. 🔵 **`git ls-remote` and `raw.githubusercontent.com` both work; `GibbonEdu`'s `composer.json` was read this way this pass** |
+| 🆕 🟡 **`ACTION QB`** — weight the next audit on the GNU family alone | `T211-1` / `P211-3`: `5` of `7` errors inside `GPL`/`LGPL`/`AGPL`; the permissive half has measured clean `4` passes running | 🟢 **limb `1`:** re-reading ONLY the `97` GNU-family rows *(`46` `AGPL` + `35` `GPL-3.0` + `8` `GPL-2.0` + `8` `LGPL-3.0`)* against their blobs finds **`2`+** further confusions → **the GNU family is a standing hazard and deserves a permanent gate, not a pass**. 🔴 **limb `2`:** `0`–`1` → p211 cleared it and the axis is closed. 🔵 **Offline; the blobs are already on disk** |
+| 🆕 🟡 **`ACTION QC`** — establish whether `OpenCampus` has a public repository | [`verticals/solutions.md`](../verticals/solutions.md) p211: reported at `1`M+ EU higher-ed users, presented at Apereo Jan `2026`, 🔴 **no repo reachable under the obvious names** | 🟢 **limb `1`:** a reachable repository exists → **EMEA gains a `1`M-user SIS with a readable grant, and this KB's "no permissive education ERP" finding may need qualifying**. 🔴 **limb `2`:** nothing public → **a `1`M-user European SIS with no public source is itself the finding**, and the permissive-ERP null stands for a tenth reading. 🔵 **`git ls-remote` is the cheap test and needs no token** |
+| 🟡 **`ACTION PG`** *(carried, unchanged, still not run)* — sweep a second channel over every manifest-sourced row | `P204-1` | 🟢 **limb `1`:** `2`+ contradictions → `channel` becomes a required field. 🔴 **limb `2`:** `0`–`1` → an instance. 🔵 **p211 makes this cheap for the first time: `ACTION QA` reads manifests anyway, so run them together** |
+| 🔴 **`ACTION PH`** *(carried, DELIBERATELY NOT TAKEN)* — ask the `3` MIT-in-manifest MCP rows to commit a `LICENSE` body | [`agents/top.md`](../agents/top.md) p204 | 🔴 **Unchanged and still NOT actioned.** 🔵 It opens issues on third parties' repositories — an outward action. 🔴 **p211, like p205–p210, ran unattended on a schedule, which is the least appropriate context in which to act outwardly in a maintainer's name.** 🟢 **Registered and untaken until a human says otherwise** |
+| 🟢 **`ACTION PD` · `Gap 241` · `Gap 242`** *(RE-TESTED — and PARTLY REFUTED)* | p211 re-ran the one-call control | 🔴 **`example.com` → `000`, `github.com` → `403`, `api.github.com` → `403`: no general web egress, ninth honest re-test.** 🟢 **BUT `raw.githubusercontent.com` → `200` and `git ls-remote`/`git clone` work.** 🔵 **The gap is narrower than eight passes recorded: licence bodies and repository existence are first-hand verifiable at scale. Only *government and analyst hosts* are unreachable, and every `intel/` figure stays labelled a search-snippet claim** |
+
+### Verdicts on p210's open actions
+
+| action | what it asked | p211's verdict |
+|---|---|---|
+| **`ACTION PU`** | *"continue the ten-row masked-class sample"* — limb `1`: further hand-read rows keep agreeing → the masked class is clean | 🟢 **CLOSED — and RETIRED rather than continued.** 🟢 **p211 read all `588` shelf repositories, not the next `10`: `494` blobs, `2 082` cells, `2 051` agreeing (`98.5`%).** 🟢 **The masked class is clean in the sense p209 and p210 claimed** — but 🔴 **the sampling itself was never necessary**, and the `20` hand-read rows turned out to be worth more as a VALIDATION SET than as a sample: they caught two real classifier defects *(`CC-BY-NC-SA`, the bare `Attribution 4.0 International` title line)* that would have shipped `5` false corrections |
+| **`ACTION PV`** | *"sweep the bus-factor read over the remaining platform and seam rows"* | 🟡 **ADVANCED, NOT CLOSED.** 🟢 p211's census gives every row's grant and byte count first-hand, which is the input `PV` needs, 🔴 **but star counts and commit recency are NOT in it — `github.com` is `403` and only `WebFetch` reaches it, one page at a time.** 🔵 **`PV`'s remaining cost is the star column, not the grant column** |
+| **`ACTION PW`** | *(closed by p210)* | 🟢 **Confirmed and extended.** p211's pan-regional run returned real material for North America and LATAM and 🔴 **`0` education instruments for EMEA and APAC — the fifth consecutive failure of that query shape.** 🟢 **Organ-named queries filled both cells on the first try** *(UK `DfE`; Australia's federal framework; Korea's `MOE` rollback)* |
+| **`ACTION PX`** | *"read the Japanese `2026` artefact and the two LATAM resolutions through a reachable mirror"* | 🔴 **STILL BLOCKED, and now explained.** 🟢 **The channel re-test shows the block is host-class, not document-class: every government host is `000`/`403` while `raw.githubusercontent.com` is `200`.** 🔵 **No mirror will fix a policy that refuses the host class. This needs a session with general egress — do not re-probe the documents individually** |
 
 ## 🔜 Registered for p209 — pre-registered with falsifiers
 

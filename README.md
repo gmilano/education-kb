@@ -1,8 +1,49 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-14
+updated: 2026-10-15
 ---
+
+## Pass 211 — 2026-10-15 — THE SAMPLING WAS NEVER NECESSARY
+
+🔴 **Nine passes audited this KB's licence column ten rows at a time because p210 recorded the
+channel as *"curl is refused at CONNECT for every host including GitHub."*** 🟢 **That is wrong
+in the one case that matters: `raw.githubusercontent.com` answers `200`.**
+
+🟢 **p211 read the licence blob of EVERY repository on the four client-facing shelves —
+`588` repositories, `494` blobs, `2 082` table cells adjudicated per-cell against the blob.**
+🟢 **`2 051` agree: `98.5`%.**
+
+🔴 **`31` cells over `10` repositories do not.** 🟢 **Three are not errors at all** — `autogen`'s
+two-FILE shape, `pupilfirst`'s split scope and `frappe/education`'s `19`-byte STATED grant — 🔵
+**and all three were already characterised correctly here, which is how we know the instrument
+sees.** 🔴 **Seven carry a genuinely wrong grant family.**
+
+🆕 🔴 **`P211-1` — and this is the pass's real result: `6` of those `7` name a repository whose
+CORRECT grant this KB had already found and published somewhere else.** 🔵 **The dominant
+failure mode of a large append-only knowledge base is not getting the answer wrong. It is
+getting it right once and leaving the stale cell standing.**
+
+🆕 🔴 **`P211-2` — one genuine discovery, and it runs the dangerous way.**
+[`acanas/swad-core`](https://github.com/acanas/swad-core) — Universidad de Granada's platform,
+two decades in production — is **`AGPL-3.0`**, published here as `GPL-3.0` in both places it
+appears and never corrected. 🔴 **Network copyleft where the shelves said there was none, on a
+student-facing platform.**
+
+🆕 🔴 **`P211-3` — the error class is the GNU family.** `5` of `7` are `GPL`/`LGPL`/`AGPL`
+confusions, the single axis that decides whether a hosted education deployment owes source
+disclosure. 🟢 **`odoo/odoo` is the live trap: its `LICENSE` says `LGPLv3` in line three and
+then embeds the entire `GPL` text, so a whole-body matcher reads it as `GPL-3.0` and rules out
+the most common education-ERP build pattern this KB recommends.**
+
+🟢 **The instrument was wrong twice in development and the `20` rows p209 and p210 read by hand
+caught both.** 🔵 **Their slow work was not made redundant by the faster channel — it was the
+only thing standing between this pass and five confident wrong answers.**
+
+🟢 **Discovery: `0` new agents (eighth saturation reading), `0` new foundational repos (ninth),
+`0` education verticals on GitHub Trending (ninth).** 🔴 **The pan-regional market query failed
+on EMEA and APAC for the fifth consecutive pass; organ-named queries filled both cells on the
+first try.**
 
 ## Pass 205 — 2026-10-14 — THE INSTRUMENT WAS THE FINDING
 
