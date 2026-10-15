@@ -1,0 +1,10 @@
+topic	population_stated	rows_read	ai_mentioning_in_rows	read_by
+lti	185	20	0	p213
+student-information-system	183	20	0	p213
+mooc	640	20	0	p213
+scorm	228	20	2	p213
+question-generation	229	20	0 (pre-LLM T5-era)	p213
+spaced-repetition	2737	20	6	p213
+plagiarism-detection	385	20	0 (none detect AI-written text)	p213
+edtech	4467	40	14	p213
+ai-tutor (page 2)	707	20	20 (>=7 are skills/MCP, not services)	p213

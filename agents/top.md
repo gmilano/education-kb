@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — THE MISSING AGENT IN THIS INDUSTRY IS THE INTEGRITY GRADER: `385` REPOS, `0` DETECT AI-WRITTEN TEXT. `21` NEW ROWS VERIFIED FIRST-HAND
+
+🔵 **Method, unchanged from p211/p212 and re-run cold:** existence and default branch by
+`git ls-remote --symref`; grant by reading the licence blob from
+`raw.githubusercontent.com/<slug>/HEAD/<form>` over `19` path forms and classifying the text.
+🟢 **`77` repositories resolved this pass, `73` of them serving a licence blob. Byte counts are the
+blob AS SERVED, per `T208-8`.**
+
+### 🆕 🔴 `P213-1` — the agent this shelf does not have, stated as a measured absence
+
+🟢 **`topics/plagiarism-detection` — `385` repositories — opened for the first time.** 🔴 **`0` of
+the top `20` detect AI-written text.** 🔵 **Detail and the commercial reading in
+[`intel/trends.md`](../intel/trends.md) `T213-1`.**
+
+🟢 **What the shelf DOES have, and it is permissive, which is the opportunity:**
+
+| Repo | 🟢 Grant *(blob bytes · form)* | ★ | Lang | What it actually does |
+|---|---|---|---|---|
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 **MIT** *(`1 084` · `LICENSE`)* | **351** | TypeScript | 🟢 **Source-code similarity, `MIT`.** The permissive anchor for an integrity build. 🟡 Org `dodona-edu` is the Dodona project — **EMEA** on that basis |
+| [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** *(`11 358`)* | **88** | Python | 🟢 **Verbatim and near-verbatim TEXT matching, `Apache-2.0`** — *"you can read, fork, and run"*. The permissive prose-side engine |
+| [josemmo/plagpatrol](https://github.com/josemmo/plagpatrol) | 🟢 **MIT** *(`1 084`)* | **42** | JavaScript | 🟡 Detects documents **tampered to bypass** detectors. Adversarial-aware, still not AI-text |
+| [jplag/JPlag](https://github.com/jplag/JPlag) | 🔴 **GPL-3.0** *(`35 141`)* | **2**k | Java | The most-starred and most mature engine. 🔴 **`GPL-3.0`: fine to run as a service boundary, a decision to embed** |
+
+🔴 **The honest framing for a client:** 🟢 **the similarity half is solved and permissively
+licensed; the provenance half does not exist in open source.** 🔵 **Recipe `P213-B` in
+[`compose/patterns.md`](../compose/patterns.md) wires the half that exists and names the half a
+studio would have to build.**
+
+### 🆕 🟢 New agent rows — every grant read from the blob on 2026-10-15
+
+🔵 **Permissive, and therefore buildable:**
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | Region | One line |
+|---|---|---|---|---|---|
+| 🆕 **engram** | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | 🟢 **MIT** *(`1 069`)* | **1.5**k | Global | 🟢 **Evidence-based learning engine: first-principles curricula, free-recall verification *with receipts*, `FSRS`-scheduled memory.** 🔵 Ships as a `claude-code` plugin — the `T213-4` shape at the top of its class |
+| 🆕 **obsidian-spaced-repetition** | [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 **MIT** *(`1 078`)* | **2.6**k | Global | Flashcard + whole-note review inside Obsidian. 🟢 **The highest-star `MIT` memory client on this shelf** |
+| 🆕 **MindTrain** | [shigella520/MindTrain](https://github.com/shigella520/MindTrain) | 🟢 **MIT** *(`1 067`)* | **125** | APAC | AI knowledge-training platform, Java `21` + Spring Boot `3.5`, pluggable schedulers, optional `Anki`/`FSRS`. 🔵 README in Simplified Chinese, Traditional Chinese and English |
+| 🆕 **carden** | [alyssaxuu/carden](https://github.com/alyssaxuu/carden) | 🟢 **MIT** *(`1 066`)* | **490** | Global | Flashcards with spaced repetition and gamification |
+| 🆕 **learn-anything** | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | 🟢 **MIT** *(`1 069`)* | **477** | 🟡 unplaced | AI-powered recursive learning system — Socratic deep-dives and generated exercises |
+| 🆕 **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT** *(`1 069`)* | **127** | 🟡 unplaced | Open alternative to Udemy/Coursera — give the model a topic, get a course |
+| 🆕 **Leaf-Question-Generation** | [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | 🟢 **MIT** *(`1 073`)* | **139** | 🟡 unplaced | Multiple-choice generation on `T5`. 🟡 **Pre-LLM, and the cleanest small MCQ baseline on the shelf** |
+| 🆕 **question_generation** | [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | 🟢 **MIT** *(`1 068`)* | **1.1**k | 🟡 unplaced | Neural question generation with transformers. 🟡 Pre-LLM; the most-starred row in `topics/question-generation` |
+
+🔵 **Star refresh on a carried row:** `ArnaudGuiovanna/tutor-mcp` reads **`49`**★ today against the **`48`** p212 published — a one-star drift, recorded rather than re-published as a finding.
+
+🔵 **Copyleft — real and usable, not buildable-on in a hosted deployment:**
+
+| Agent | Repo | 🔴 Grant *(bytes)* | ★ | Region | One line |
+|---|---|---|---|---|---|
+| 🆕 **AnkiAIUtils** | [thiswillbeyourgithub/AnkiAIUtils](https://github.com/thiswillbeyourgithub/AnkiAIUtils) | 🔴 **AGPL-3.0** *(`34 523`)* | **887** | 🟡 unplaced | AI explanations, mnemonics, illustrations and adaptive review over Anki — built for medical school |
+| 🆕 **trane** | [trane-project/trane](https://github.com/trane-project/trane) | 🔴 **AGPL-3.0** *(`34 523`)* | **848** | 🟡 unplaced | 🟢 **A deliberate-practice engine for mastering complex skills** — Rust, and the only row on this shelf modelling practice *dependencies* |
+| 🆕 **LibreLingo** | [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **AGPL-3.0** *(`34 524`)* | **2.6**k | Global | Community-owned language-learning platform. 🔵 The permissive-adjacent answer to Duolingo, but `AGPL` |
+| 🆕 **agoracosmica** | [chipmates/agoracosmica](https://github.com/chipmates/agoracosmica) | 🔴 **AGPL-3.0** *(`34 523`)* + 🔴 **content copyright, CC-BY-4.0 SCHEDULED** | **149** | EMEA | `30` historical figures, narrated and conversational, English + German. 🟢 ChipMates gGmbH, a registered German nonprofit. 🔴 **Content grant is in the FUTURE — see `T213-2`** |
+| 🆕 **aimmo** | [codeforlife-education/aimmo](https://github.com/codeforlife-education/aimmo) | 🔴 **AGPL-3.0** *(`32 920` — **resolved across an owner boundary**)* | **117** | EMEA | Python multiplayer programming game for classrooms. 🔴 **Its own `LICENSE.md` is `115` B and names no family; the grant lives in `ocadotechnology/codeforlife-workspace`** |
+| 🆕 **vocabsieve** | [FreeLanguageTools/vocabsieve](https://github.com/FreeLanguageTools/vocabsieve) | 🔴 **GPL-3.0** *(`35 149`)* | **544** | 🟡 unplaced | Sentence-mining tool for language learning |
+| 🆕 **mpvacious** | [Ajatt-Tools/mpvacious](https://github.com/Ajatt-Tools/mpvacious) | 🔴 **GPL-3.0** *(`35 149`)* | **892** | 🟡 unplaced | Builds Anki cards from film and TV inside `mpv` — the immersion-learning pipeline |
+
+🔴 **Mixed / unresolvable from the repository alone:**
+
+| Agent | Repo | Grant | ★ | Why it is its own row |
+|---|---|---|---|---|
+| 🆕 **orbit** | [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🟡 **`Apache-2.0` libraries; `AGPL-3.0-or-later` OR `BUSL-1.1` for `app` + `backend`, licensee's choice; binaries `Apache-2.0`** | **1.8**k | 🟢 **Spaced-repetition platform for the "mnemonic medium".** 🔴 **Root `LICENSE` is a `457`-B router whose own cross-references are mis-spelled** *(`LICENSE.Apache-2.0` → `404`; the real files are `LICENSE-Apache-2.0`, `10 142` B · `LICENSE-AGPL-3.0-or-later`, `34 523` B · `LICENSE-BUSL-1.1`, `3 893` B)*. 🟡 `BUSL` converts to `Apache-2.0` after `3` years. 🔴 **CLA required (joint copyright assignment)** |
+| **knowledge-graph** *(carried row, NEW reading)* | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | 🔴 **Code `MIT`; data per-dataset across `3` access tiers, authority in an EXTERNAL catalog** | **159** | *"The data layer for smarter educational AI."* 🔴 **`Gated` datasets carry NO open licence.** 🟡 **This KB's published cell *(`MIT`/`CC0-1.0`)* is incomplete, not wrong — see `T213-2`** |
+
+### 🟢 Carried forward unchanged
+
 ## Pass 212 — 2026-10-15 — DISCOVERY WAS NEVER SATURATED: THE INSTRUMENT COULD NOT SEE GITHUB. `54` REPOSITORIES READ FIRST-HAND, `22` NEW AGENT ROWS
 
 ### 🔴 `P212-1` — nine passes declared saturation on a channel that cannot reach the index

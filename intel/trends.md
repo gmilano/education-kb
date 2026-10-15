@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — THE INTEGRITY SHELF ANSWERS THE PREVIOUS QUESTION: `385` REPOSITORIES, `0` DETECT AI-WRITTEN TEXT. AND A GRANT IS NOT A SCALAR, IT IS A RESOLVER
+
+### 🆕 🔴 `T213-1` — the whole open-source academic-integrity shelf predates generative AI
+
+🟢 **`topics/plagiarism-detection` — `385` repositories — read first-hand this pass.** 🔴 **Of the
+top `20`, `0` detect AI-written text.** 🔵 **Every one is classical similarity:**
+[`jplag/JPlag`](https://github.com/jplag/JPlag) *(`2`k★, source-code plagiarism)*,
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) *(`351`★)*,
+`pycode_similar` *(`191`★)*, `automoss` *(`157`★)*, `text-matcher` *(`140`★)*,
+`Writing-Styles-Classification` *(`117`★, stylometry)*, `jieplag` *(`54`★, Rust, inspired by
+Stanford Moss)* — n-grams, TF-IDF, cosine similarity, Wagner–Fischer, authorship stylometry.
+
+🔴 **The industry context makes this a gap and not a curiosity.** 🟢 **Student AI use is reported
+this pass at `92`% for `2025`, up from `66`% in `2024`** *(secondary roundup — see
+[`intel/market.md`](market.md) p213)*. 🔴 **The open-source tools an institution would reach for to
+defend assessment integrity were built to answer *"did this student copy from that student"*, and
+the live question is *"did a model write this"*.**
+
+🟡 **The one row that even acknowledges the new world is adversarial, not detective:**
+[`josemmo/plagpatrol`](https://github.com/josemmo/plagpatrol) *(`42`★, **MIT**, `1 084` B)* —
+*"an app for detecting documents tampered to bypass plagiarism detectors"*. 🔵 **It defends the old
+instrument; it does not replace it.**
+
+🟢 **Deck line:** *"The integrity shelf is mature, permissively licensed, and aimed at the previous
+decade's cheating. That is the largest unbuilt layer in open-source education."*
+
+### 🆕 🔴 `T213-2` — a grant is not a scalar, and not even a path→family map. It is a RESOLVER
+
+🔴 **`P212-A` modelled a repository's grant as `{path-glob → family}` after `pupilfirst` broke a
+title-anchored read.** 🟢 **This pass found `4` grants in one population, none of which that model
+returns correctly.**
+
+| repo | ★ | 🔴 what the model cannot express |
+|---|---|---|
+| [`andymatuschak/orbit`](https://github.com/andymatuschak/orbit) | **`1.8`k** | 🔴 **An ELECTIVE DISJUNCTION.** Libraries are `Apache-2.0`; `packages/app` + `packages/backend` are **`AGPL-3.0-or-later` OR `BUSL-1.1`, the licensee's choice**. A glob maps to a SET, not a family — and compiled binaries are carved back out to `Apache-2.0` |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | **159** | 🔴 **AN EXTERNAL AUTHORITY.** The partition key is not a path — it is **dataset identity and access tier**, resolved from a remote catalog, and the file says terms *"can change between releases"* |
+| [`codeforlife-education/aimmo`](https://github.com/codeforlife-education/aimmo) | **117** | 🔴 **AN OWNER BOUNDARY.** A `115`-byte `LICENSE.md` naming **no family at all**, pointing at `ocadotechnology/codeforlife-workspace` — which serves **`AGPL-3.0`, `32 920` B** |
+| [`chipmates/agoracosmica`](https://github.com/chipmates/agoracosmica) | **149** | 🔴 **A TENSE.** Code is `AGPL-3.0` *(`34 523` B)*; content is **copyright now**, scheduled to `CC-BY-4.0` *"within `6`–`12` months"* of the May `2026` launch |
+
+🟢 **The rule, stated so `P213-A` can implement it:** 🔴 **a licence file is not necessarily a
+grant — it is sometimes a ROUTER.** 🟢 **Classification must be followed by RESOLUTION:** follow
+in-repo references, follow cross-repo and cross-owner references, emit a set where the text says
+*"your choice"*, mark the grant TEMPORAL where it names a conversion or relicensing date, and mark
+it EXTERNAL — never cacheable — where authority sits outside the repository.
+
+🔵 **Why this is the same lesson as `T212-1` wearing different clothes:** 🟢 **p210 established
+`STATED`-not-`BODIED` for a blob that *names* a family without shipping it.** 🔴 **`aimmo` is the
+shape past that: it names nothing, so the `STATED` fallback cannot fire either, and the row lands
+in the `ungranted` bucket — the one class p208 proved this KB systematically mis-reads.** 🟢 **An
+`ungranted` reading is a question, not an answer. `aimmo`'s real answer is the most restrictive
+copyleft in this industry.**
+
+### 🆕 🔴 `T213-3` — the interoperability layer has no AI, and now there is a number for each shelf
+
+🟢 **`T212-2` said the AI layer sits *beside* the platform.** 🟢 **Seven topic populations read
+first-hand this pass and last make it a measured disjunction:**
+
+| GitHub topic | population | AI/LLM/agent/tutor in top `20` | shelf |
+|---|---|---|---|
+| `lti` | `185` | 🔴 **`0`** | interoperability |
+| `student-information-system` | `183` | 🔴 **`0`** | system of record |
+| `mooc` | `640` | 🔴 **`0`** | courseware |
+| `scorm` | `228` | 🔴 **`2`** | packaging |
+| `question-generation` | `229` | 🟡 **pre-LLM** *(`T5`/transformer era, `ACL` `2019`–`2021`)* | assessment generation |
+| `spaced-repetition` | `2 737` | **`6`** | memory |
+| `edtech` | **`4 467`** | 🟢 **`14` of `40`** *(two pages)* | product |
+
+🔵 **`edtech` at `4 467` repositories is the largest education topic this KB has read**, and it had
+never been opened before this pass. 🟢 **The gradient is the finding:** the standards and
+system-of-record shelves are at or near `0`% AI; the product shelf is roughly `35`%. 🔴 **A studio
+proposing *"we will add AI to your LMS"* is proposing to build the adapter, because the standard
+that connects tools to the LMS — `LTI`, `185` repositories — contains none.**
+
+### 🆕 🟢 `T213-4` — the unit of distribution in education AI is becoming a PROMPT ARTEFACT
+
+🟢 **`topics/ai-tutor` page `2` *(population `707`)* read this pass.** 🔵 **Of `20` rows, at least
+`7` are Claude Code Skills or `MCP` servers rather than deployable services:**
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`49`★, Go — "turns
+any LLM into an Intelligent Tutoring System")*, `TovTechOrg/Tov-learn` *(`36`★, "built as a Claude
+Code skill")*, `feynman-tutor` *(`30`★)*, `study-assistant-skills` *(`25`★)*,
+`Nar101/learn-anything` *(`19`★)*, `swaylq/sijiao-skill` *(`18`★)*, plus `Smart-Study-Agent`
+*(`58`★)* shipping an `MCP` server beside its app.
+
+🟡 **The tail is long and shallow: the star ceiling on page `2` is `64`.** 🟢 **This confirms
+p212's `P212-5` at population scale rather than as one anomaly** *(`GarethManning/education-agent-skills`,
+`860`★, `CC-BY-SA-4.0`)*. 🔴 **And it carries p212's licence warning with it: a prompt artefact is
+content, so the governing grant is a content licence, and `CC-BY-SA` share-alike on a skill pack
+reaches the pack, not the tutor that loads it — a distinction no software scanner draws.**
+
+### 🆕 🔴 `T213-5` — `T212-7` measured a QUERY. LATAM's ceiling is not `6` stars
+
+🔴 **p212 published: *"LATAM's open-source ceiling is `6` stars"*, from three GitHub repository
+searches in Spanish and Portuguese.** 🟢 **[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)
+— `582`★, description in Portuguese, **`Apache-2.0`** *(`11 337` B, read today)*, `273` commits —
+is `97`× that ceiling.**
+
+🔵 **Why three language-keyed queries missed it:** 🟢 **its topic tags and repository name are
+English** *(`nuxt`, `vue`)*. 🔴 **It was reachable all along through `topics/edtech`, which no pass
+had opened.** 🟢 **The language-keyed query measures how a project DESCRIBES itself, not where it
+is from — and in LATAM the prose is Portuguese while the metadata is English.**
+
+🟢 **What survives of `T212-7`, and it is the load-bearing half:** 🔴 **`menthor` has no AI layer
+and was **archived by its owner on `2024-12-12`**.** 🔵 **So *"no production-scale education-**AI**
+repository in the region's own languages"* still holds; *"the ceiling is `6` stars"* does not.**
+🟢 **Stated as the positive it is: LATAM's highest-star education repository is permissive and
+abandoned — which makes it a fork, not a competitor.** *(This KB already recorded `menthor` as
+archived at p195; what is new is placing it against `T212-7`'s number.)*
+
+### 🆕 🟢 `T213-6` — Europe's evaluation framework now has a DATE, and it is `11` weeks out
+
+🟢 **p212 recorded the **European Reference Framework for the Evaluation of Educational
+Technologies** as *"in drafting"*.** 🟡 **Its target date is `31/12/2026`**, per the terms of
+reference of the Council of Europe's **Committee of Experts on Artificial Intelligence and
+Education — short name `EDU-IA`** *(doc `CM(2025)131-addfinal`)*. 🔴 **Search-snippet claim:
+`rm.coe.int` does not resolve from here.**
+
+🔵 **Two citations this KB was carrying unnumbered, now numbered:** 🟢 **the AI-literacy
+recommendation is **`CM/Rec(2026)12`**, adopted by the Committee of Ministers in early September
+`2026`, `22` guiding principles.** 🟢 **A **`3`rd working conference** report also exists
+*(`prems-004926`)*; this KB's EMEA track knew only the `2`nd, of October `2024`.**
+
+🟢 **Why the date matters commercially:** 🔴 **an evaluation framework is an evidence requirement,
+and `11` weeks is inside a single engagement.** 🔵 **It is also the strongest argument this KB has
+for `P212-4`'s learning-record shelf: a tutor that emits no `xAPI` cannot be evaluated against a
+framework whose whole subject is evaluation.**
+
+### 🆕 🟢 `T213-7` — four consecutive clean audits. Stop re-auditing this column
+
+🟢 **`77` repositories' grants determined first-hand this pass** *(`73` serving a blob, `4` serving
+none over `19` path forms)*. 🟢 **`53` of them carry a pre-p213 published licence cell. `52` agree
+exactly. `1` is incomplete, not wrong**
+*(`learning-commons-org/knowledge-graph`, published `MIT`/`CC0-1.0`; the blob is the access-tier
+resolver in `T213-2`)*. 🔵 **Two of this KB's own prior readings were reproduced independently and
+blind: `OS4ED/openSIS-Classic` returned `404` on all `19` root path forms exactly as an earlier pass
+recorded, with its grant really at `docs/License.txt`; `adlnet/SCORM-to-xAPI-Wrapper` confirmed
+`ABSENT`.**
+
+🟢 **Recommendation to the next pass, stated plainly:** 🔴 **the licence column is not where the
+defects are any more.** 🟢 **p206, p207, p210 and p213 have now audited it from four different
+methods and moved `0` cells between families.** 🔵 **Spend the call on the surfaces in `T213-3`
+that still read `0`.**
+
+### 🆕 🟡 `T213-8` — the classifier's own byte field violates this KB's byte convention, `1` time in `71`
+
+🟢 **`T208-8` fixed the convention: a byte count is the blob AS SERVED by
+`raw.githubusercontent.com` at `HEAD`, trailing newline included.** 🔴 **`classify.py`'s `bytes`
+field is not that number — it re-encodes the body after `errors='replace'`, so a blob containing
+non-`UTF-8` bytes under-reports.**
+
+🔵 **Measured across all `73` blobs served this pass: `1` divergence —
+[`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec), **served `11 525` B**, classifier
+`11 325` B, **gap `200` B**.** 🟢 **The KB's published cell says `11 525` and is correct.**
+
+🔴 **Why this is worth a paragraph at a `1`/`71` rate:** 🟢 **`T208-8` carved out `1`-byte
+differences as a convention artefact that must not consume a `<!--corrected-->`.** 🔴 **A `200`-byte
+gap is outside that carve-out and looks exactly like a real correction.** 🟢 **The rule: publish
+the fetcher's `wc -c`, never the classifier's `bytes`.**
+
+### 🟢 Carried forward
+
 ## Pass 212 — 2026-10-15 — THE SATURATION WAS THE INSTRUMENT'S; THE AI LAYER IS BESIDE THE PLATFORM, NOT IN IT; AND EUROPE HAS TURNED FROM PERMISSION TO EVIDENCE
 
 ### 🆕 🔴 `T212-1` — "the field is saturated" is a claim about a reader, and this KB made it eight times

@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — THE SYSTEM OF RECORD HAS NO AI IN IT: `183` SIS REPOSITORIES, `0` AI ROWS. AND A PLATFORM THAT CALLS ITSELF "TRULY OPEN SOURCE, FREE FOR COMMERCIAL USE" IS `GPL-2.0`
+
+🔵 **Grants read from the licence blob at `HEAD` on `2026-10-15`; bytes AS SERVED, per `T208-8`.**
+
+### 🆕 🔴 `P213-6` — `topics/student-information-system`: `183` repositories, `0` of the top `20` mention AI
+
+🟢 **The SIS is the system of record — enrolment, attendance, grades, the data every tutor needs
+and every compliance regime audits.** 🔴 **Not one of the top `20` repositories in its topic
+mentions AI, an LLM, an agent or a tutor.** 🔵 **Two mention grades at all** *(`MeetPlan`,
+`school-management-system`)*, **as CRUD, not as inference.**
+
+🟢 **The shelf, with grants read today:**
+
+| platform | 🟢 Grant *(blob bytes · form)* | ★ | Region | What it is |
+|---|---|---|---|---|
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** *(`1 094`)* | **404** | Global | 🟢 **The permissive SIS**, Laravel + Filament. Still the only `MIT` row in this slot |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** *(`15 214`)* | **646** | Global | The most-starred open SIS. 🔴 **`GPL-2.0`** |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0** *(`17 286` · `docs/License.txt`)* | **345** | North America | 🟡 **Grant is NOT at the repository root** — `19` root path forms return `404`, reproduced blind this pass *(`T213-7`)* |
+
+🔵 **The engagement reading:** 🟢 **an AI layer in education attaches to a system of record that
+was not built to host one, under `GPL-2.0` two times in three.** 🔴 **`academico` *(`MIT`)* is the
+only row a studio can extend into a proprietary deliverable without a service boundary.**
+
+### 🆕 🟡 `P213-7` — "truly open source, free for commercial use" is `GPL-2.0`, and both halves are true
+
+🟢 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)
+— `1.2`k★, PHP, Chinese-language, **APAC** — describes itself as
+*"名符其实的开源，可免费商用"* *("genuinely open source, free for commercial use")*.** 🟢 **The blob
+is **`GPL-2.0`, `18 092` B**, read today.**
+
+🔴 **Nothing in that description is false, and a studio that reads it as *permissive* is wrong
+anyway.** 🟢 **`GPL-2.0` IS free for commercial use; what it is not is embeddable in a closed
+deliverable.** 🔵 **This is a distinct trap from the ones p205–p212 catalogued: not a mislabelled
+grant, not a scope partition, but a TRUE self-description that answers a different question than
+the one diligence is asking.** 🟢 **The gate must read the blob even when the description sounds
+settled — especially then.**
+
+### 🟢 Platform rows — grants read from the blob on 2026-10-15
+
+🔵 **`2` rows are new to this KB *(marked 🆕)*; `2` are CARRIED rows re-read today, agreeing with
+their published cells.**
+
+| platform | 🟢 Grant *(blob bytes)* | ★ | Origin → region | What it is, and what it replaces |
+|---|---|---|---|---|
+| 🆕 [kalvilabs/kalvi](https://github.com/kalvilabs/kalvi) | 🔴 **AGPL-3.0** *(`34 523`)* | **117** | 🟡 unplaced *(no country stated; `kalvi.co`)* | 🟢 **"Open Source Infrastructure for Online Education"** — launch a platform, author courses, sell practice exams, run live classes, gamify. 🔴 **`AGPL-3.0`: run it, do not embed it** |
+| 🆕 [PapillonApp/papillon-v6](https://github.com/PapillonApp/papillon-v6) | 🔴 **GPL-3.0** *(`35 149`)* | **117** | France → **EMEA** | 🟢 **A community-built alternative CLIENT for school-life systems** *("vie scolaire")*. 🔵 **The only row on these shelves that is a third-party client for national school software** — a shape worth knowing in EMEA public-sector work |
+| [edrys-org/edrys](https://github.com/edrys-org/edrys) | 🟡 **MPL-2.0** *(`16 725`)* | **334** | Global | 🟢 **Modular remote-teaching platform, "the first live LMS".** 🟡 **`MPL-2.0` is the middle ground this industry almost never offers: file-level copyleft, so a new module you add stays yours** |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** *(`34 523`)* | **1.7**k | Global | Self-hostable education platform pitched as a Moodle alternative for companies. 🔴 **`AGPL`** |
+
+🟢 **Why `edrys` earns a line of its own:** 🔵 **the permissive-platform question `P212-3` answered
+with `OpenOLAT` *(`Apache-2.0`)*, `Artemis` *(`MIT`)*, `mentingo` *(`MIT`)* and `academico`
+*(`MIT`)* now has a fifth shape — `MPL-2.0`.** 🟢 **For a studio writing NEW modules rather than
+modifying existing files, `MPL` is functionally permissive on the work it adds.** 🔴 **It is not
+permissive on the files it edits, which is the distinction a licence column cannot carry and a
+pattern must.**
+
+### 🆕 🔴 `P213-8` — `LTI` is the adapter slot, and there is nothing AI-shaped in it
+
+🟢 **`topics/lti`, `185` repositories, `0` of the top `20` AI-adjacent** *(full table in
+[`repos/foundations.md`](../repos/foundations.md) `P213-5`)*. 🔵 **This is the concrete form of the
+pitch:** 🟢 **every LMS on this shelf — `Moodle`, `Open edX`, `Canvas`, `OpenOLAT`, `Artemis` —
+speaks `LTI 1.3`, and the `LTI` ecosystem contains no AI tool.** 🔴 **So "add AI to your LMS" is
+not a platform migration. It is one `LTI 1.3` tool, and `pylti1.3` *(**MIT**, `1 070` B)* or
+`tsugi` *(**Apache-2.0**, `10 273` B)* is the whole integration surface.**
+
+### 🟢 Carried forward unchanged
+
 ## Pass 212 — 2026-10-15 — THE PERMISSIVE PLATFORM EXISTS, SAKAI IS NOT APACHE, AND `pupilfirst` DEFEATED THIS KB'S OWN CLASSIFIER
 
 ### 🆕 🟢 `P212-3` — nine passes answered the permissive-platform query with `0`. The answer was `3` rows.

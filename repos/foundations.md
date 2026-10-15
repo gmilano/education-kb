@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — TWO SHELVES OPENED: ACADEMIC INTEGRITY (`385` REPOS, PERMISSIVE, AND AIMED AT THE WRONG DECADE) AND ALGORITHMIC MEMORY (`2 737` REPOS, `FSRS`, ALL `MIT`)
+
+🔵 **Every grant below was read from the licence blob at `HEAD` on `2026-10-15`.** 🟢 **Byte counts
+are the blob AS SERVED by `raw.githubusercontent.com`, per `T208-8`** — not the classifier's
+re-encoded field, which `T213-8` shows diverges `1` time in `71`.
+
+### 🆕 🟢 `P213-2` — the memory shelf: `FSRS` is this industry's one fully-`MIT` algorithmic core
+
+🔴 **In `212` passes this KB has carried tutors, graders, LMS platforms, `MCP` connectors and the
+learning-record layer, and has never carried the layer that decides WHEN a learner sees something
+again.** 🟢 **`topics/spaced-repetition` — `2 737` repositories — read this pass.**
+
+🟢 **The remarkable property of this shelf is its licence homogeneity at the core: the entire
+`FSRS` *(Free Spaced Repetition Scheduler)* family is `MIT`.**
+
+| Repo | 🟢 Grant *(blob bytes)* | ★ | Lang | Role in a stack |
+|---|---|---|---|---|
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** *(`1 079`)* | **4.1**k | Jupyter | The reference scheduler, as deployed in Anki |
+| [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** *(`1 089`)* | **725** | — | 🟢 **The algorithm itself** *(`DSR` model)* — the spec you implement against |
+| [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **MIT** *(`1 079`)* | **510** | Python | 🟢 **The cheapest way to put real scheduling behind a tutor.** `MIT`, Python, no platform |
+| 🆕 [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 **MIT** *(`1 078`)* | **2.6**k | TypeScript | Review client over plain notes — the highest-star `MIT` client here |
+| 🆕 [alyssaxuu/carden](https://github.com/alyssaxuu/carden) | 🟢 **MIT** *(`1 066`)* | **490** | JavaScript | Flashcards with gamification; a forkable front end |
+| 🆕 [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | 🟢 **MIT** *(`1 069`)* | **1.5**k | Python | 🟢 **Free-recall verification *with receipts*, `FSRS`-scheduled.** The row that already treats evidence as a first-class output |
+| 🆕 [trane-project/trane](https://github.com/trane-project/trane) | 🔴 **AGPL-3.0** *(`34 523`)* | **848** | Rust | 🟢 **Models practice DEPENDENCIES, not just intervals** — the only row here that knows a skill has prerequisites. 🔴 `AGPL` |
+| 🆕 [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **AGPL-3.0** *(`34 524`)* | **2.6**k | Python | Community-owned language course platform |
+| 🆕 [FreeLanguageTools/vocabsieve](https://github.com/FreeLanguageTools/vocabsieve) | 🔴 **GPL-3.0** *(`35 149`)* | **544** | Python | Sentence mining from real texts |
+| 🆕 [Ajatt-Tools/mpvacious](https://github.com/Ajatt-Tools/mpvacious) | 🔴 **GPL-3.0** *(`35 149`)* | **892** | Lua | Card capture from film/TV inside `mpv` |
+
+🔵 **Why this matters next to `P212-4`'s learning-record shelf:** 🟢 **`xAPI` records what a learner
+DID; `FSRS` decides what they see NEXT.** 🔴 **A tutor with neither is a chat window.** 🟢 **Both
+layers are permissive at their core — `Apache-2.0` for `xAPI`, `MIT` for `FSRS` — which is the
+cheapest credible claim a studio can make in this industry.**
+
+### 🆕 🔴 `P213-3` — the integrity shelf: mature, permissive, and answering the previous decade
+
+🟢 **`topics/plagiarism-detection`, `385` repositories.** 🔴 **`0` of the top `20` detect
+AI-written text.** 🔵 **The four rows worth carrying are tabled in
+[`agents/top.md`](../agents/top.md) `P213-1`:** `dolos` *(**MIT**, `1 084` B, `351`★)`,
+`noplag-engine` *(**Apache-2.0**, `11 358` B, `88`★)*, `plagpatrol` *(**MIT**, `1 084` B, `42`★)*
+and `JPlag` *(🔴 **GPL-3.0**, `35 141` B, `2`k★)*.
+
+🟢 **Stated for the next pass so the measurement is not re-made:** 🔴 **the similarity half of
+academic integrity is solved and permissively licensed. The provenance half — did a model write
+this — has no open-source implementation at any star level on this surface.**
+
+### 🆕 🟡 `P213-4` — the assessment-generation shelf is pre-LLM, and that is a dating, not a dismissal
+
+🟢 **`topics/question-generation`, `229` repositories, top `20` read.** 🟡 **The education-relevant
+rows are `T5`- and transformer-era, with papers from `ACL` `2019`–`2021`:**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | Note |
+|---|---|---|---|
+| 🆕 [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | 🟢 **MIT** *(`1 068`)* | **1.1**k | Neural QG with transformers — the most-starred row on the surface |
+| 🆕 [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | 🟢 **MIT** *(`1 073`)* | **139** | 🟢 **`MIT`, small, legible `T5` MCQ generator** — a baseline to measure an LLM against |
+| [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | *carried row* | **951** | The best-known QG toolkit |
+| [AMontgomerie/question_generator](https://github.com/AMontgomerie/question_generator) | *carried row* | **298** | Reading-comprehension question generation |
+
+🔵 **The useful reading for a studio:** 🟢 **these are not competitors to an LLM — they are
+BASELINES and EVALUATORS.** 🔴 **A client asking *"is your LLM item-writer actually better?"* has
+no answer unless something cheap and deterministic sits beside it.** 🟢 **`Leaf` at `139`★ and
+`MIT` is that something.**
+
+### 🆕 🔴 `P213-5` — the interoperability shelf has no AI in it, and the rows are the proof
+
+🟢 **`topics/lti` — `185` repositories — read first-hand.** 🔴 **`0` of the top `20` mention AI, an
+LLM, an agent or a tutor.** 🔵 **The population is small, old and load-bearing:**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | Lang | Role |
+|---|---|---|---|---|
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** *(`10 273`)* | **376** | PHP | 🟢 **The `LTI` tool framework**, from the author of the `LTI`/`py4e` lineage |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** *(`1 070`)* | **138** | Python | 🟢 **`LTI 1.3` Advantage tool in Python** — the integration path for a Python tutor |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **Apache-2.0** *(`11 343` · `LICENSE.md`)* | **54** | PHP | IMS-certified `LTI 1.3` tool providers in PHP |
+| [openfun/marsha](https://github.com/openfun/marsha) | 🟢 **MIT** *(`1 078`)* | **151** | Python | 🟢 **An `LTI` learning-content management system, `MIT`.** 🔵 `openfun` → France Université Numérique — **EMEA** |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** *(`1 528`)* | **73** | Python | 🟢 **Puts a JupyterHub behind an LMS login** — the fastest classroom-notebook path |
+| [oat-sa/lib-lti1p3-core](https://github.com/oat-sa/lib-lti1p3-core) | 🔴 **GPL-2.0** *(`18 091`)* | **37** | PHP | `LTI 1.3` core, from Open Assessment Technologies. 🔴 **`GPL-2.0`** |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** *(`34 764`)* | **243** | Python | 🟢 **Secure, automated exercise assessment — runs YOUR tests.** 🔴 **`AGPL-3.0`: the autograder you deploy behind a boundary, not embed** |
+| [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | 🔴 **GPL-3.0** *(`35 147`)* | **117** | JavaScript | 🟢 **Accessibility inspection of Canvas course content** — a compliance product with no AI in it |
+
+🆕 🔴 **A diligence trap worth its own line: one university org, two copyleft families.**
+🟢 **`ucfopen` *(University of Central Florida)* ships
+[`UDOIT`](https://github.com/ucfopen/UDOIT) under **`GPL-3.0`** *(`35 147` B)*,
+[`Obojobo`](https://github.com/ucfopen/Obojobo) under **`AGPL-3.0`** *(`34 520` B)* and
+[`Materia`](https://github.com/ucfopen/Materia) under **`AGPL-3.0`** *(`34 523` B)*.* 🔴 **An
+org-level licence assumption is wrong here in the direction that matters — `AGPL` reaches over the
+network, `GPL` does not.** 🟢 **Gate per repository, never per owner.**
+
+### 🟢 Foundation rows from the courseware and records surfaces — grants re-read first-hand this pass
+
+🔵 **`5` rows here are new to this KB *(marked 🆕)*; the other `10` are CARRIED rows whose grants were
+re-read from the blob today and agree with the published cells** *(part of the `48`/`49` in `T213-7`)*.
+
+| Repo | 🟢 Grant *(bytes)* | ★ | Region | Role |
+|---|---|---|---|---|
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** *(`1 072`)* | **355** | Global | 🟢 **A MODERN `SCORM` runtime, `MIT`** — the maintained way to play legacy packages |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** *(`11 357`)* | **215** | Global | 🟢 **Browser-based e-assessment with a mathematics emphasis, `Apache-2.0`.** The permissive maths-assessment engine |
+| 🆕 [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | 🟢 **Apache-2.0** *(`11 326`)* | **121** | 🟡 unplaced | Study application on `.NET 10` |
+| 🆕 [langx/langx](https://github.com/langx/langx) | 🟢 **BSD-3-Clause** *(`1 520`)* | **108** | 🟡 unplaced | Connects language learners — a rare `BSD` row in this industry |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** *(`1 073`)* | **58** | Global | Packs `H5P` interactive content into `SCORM` objects |
+| [studentinsights/studentinsights](https://github.com/studentinsights/studentinsights) | 🟢 **MIT** *(`1 083`)* | **134** | North America | Open, student-centred school data systems |
+| [tutors-sdk/tutors](https://github.com/tutors-sdk/tutors) | 🟢 **MIT** *(`1 088`)* | **125** | Global | 🟡 Course reader — **named "Tutors", it is not an AI tutor** |
+| [sagefy/sagefy](https://github.com/sagefy/sagefy) | 🟢 **Apache-2.0** *(`10 174` · `LICENSE.txt`)* | **120** | Global | Adaptive learning over a concept graph |
+| [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | 🟢 **Apache-2.0** *(`11 362` · `LICENSE.md`)* | **130** | North America | Microsite CMS for course content *(Penn State lineage)* |
+| 🆕 [senjun-team/senjun-courses](https://github.com/senjun-team/senjun-courses) | 🔴 **GPL-3.0** *(`35 149`)* | **159** | EMEA | Programming courses by programmers. 🔵 Russian-language — the region's prose, English metadata |
+| 🆕 [codeforlife-education/aimmo](https://github.com/codeforlife-education/aimmo) | 🔴 **AGPL-3.0** *(`32 920`, cross-owner)* | **117** | EMEA | 🔴 **The grant is in `ocadotechnology/codeforlife-workspace` — see `T213-2`** |
+| 🆕 [chipmates/agoracosmica](https://github.com/chipmates/agoracosmica) | 🔴 **AGPL-3.0** *(`34 523`)* | **149** | EMEA | 🔴 **Content grant scheduled, not granted — see `T213-2`** |
+| [elmsln/elmsln](https://github.com/elmsln/elmsln) | 🔴 **GPL-3.0** *(`35 193` · `LICENSE.md`)* | **253** | North America | Distributed learning-network platform |
+| [WebPA/WebPA](https://github.com/WebPA/WebPA) | 🔴 **GPL-3.0** *(`35 147` · `license.txt`)* | **37** | Global | 🟢 **Online PEER assessment** — a slot nothing else on these shelves fills |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC-BY-SA-4.0** *(`837`)* | **164** | Global | 🔴 **A `SCORM` JavaScript LIBRARY under a share-alike CONTENT licence.** `T212-4`'s risk running in reverse: code wearing a content grant |
+
+### 🟢 Carried forward unchanged
+
 ## Pass 212 — 2026-10-15 — A SHELF THIS KB NEVER HAD: THE LEARNING-RECORD LAYER, `17` REPOS, AND A NEW LICENCE FAMILY NAMED AFTER THIS INDUSTRY
 
 ### 🆕 🟢 `P212-4` — the evidence layer, and why it arrives exactly now

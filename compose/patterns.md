@@ -4,6 +4,132 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — THREE RECIPES: A GRANT RESOLVER THAT HANDLES FOUR SHAPES A MAP CANNOT, THE AI-PROVENANCE INTEGRITY GRADER NOBODY HAS BUILT, AND A MEMORY SPINE THAT IS `MIT` ALL THE WAY DOWN
+
+🔵 **Every component below had its licence blob read first-hand from `raw.githubusercontent.com` at
+`HEAD` on `2026-10-15`.** 🟢 **Byte counts are the blob AS SERVED, per `T208-8` — not the
+classifier's re-encoded field** *(`T213-8`)*. 🟢 **Existence and default branch by
+`git ls-remote --symref`: `66`/`66` resolved.**
+
+### 🆕 `P213-A` — the grant RESOLVER *(a replacement for `P212-A`'s scope map, ~`2` days)*
+
+🔴 **`P212-A` modelled a grant as `{path-glob → family}`. This pass broke it on four repositories
+in one population** *(`T213-2`)*. 🟢 **The fix is to stop treating a licence file as a verdict and
+treat it as a possible ROUTER.**
+
+**The pipeline, replacing `P212-A` steps `1`–`3`:**
+
+1. **Fetch and classify as today** — riders first, then title-anchored, then `STATED`-not-`BODIED`
+   *(p207 / p205 / p210 ordering, unchanged and still correct)*.
+2. 🆕 **ROUTER TEST — run BEFORE accepting `UNRECOGNISED` or `ABSENT`.** A blob under `~800` B that
+   names families, or names sibling files, or contains a URL, is a router. 🔴 **Do not emit a
+   verdict; resolve it.**
+   - **In-repo references:** fetch each named sibling. 🔴 **Try BOTH separator spellings.**
+     🟢 **`andymatuschak/orbit`'s root `LICENSE` *(`457` B)* names `LICENSE.Apache-2.0`; the real
+     file is `LICENSE-Apache-2.0`. Dot-spelling gives `3`/`3` `404`s and a false `ungranted`.**
+   - **Cross-repo / cross-owner references:** fetch and classify at the target, and record the
+     owner boundary in the row. 🟢 **`codeforlife-education/aimmo`'s `115`-B `LICENSE.md` names no
+     family at all and points at `ocadotechnology/codeforlife-workspace` → **`AGPL-3.0`,
+     `32 920` B**.** 🔴 **Read only the repo's own blob and this lands in the `ungranted` bucket —
+     the class p208 proved is systematically mis-read — while the true answer is the most
+     restrictive copyleft in this industry.**
+3. 🆕 **EMIT A SET, NOT A FAMILY, WHERE THE TEXT SAYS "YOUR CHOICE".**
+   🟢 **`orbit`: libraries `Apache-2.0` *(`10 142` B)*; `packages/app` + `packages/backend`
+   `{AGPL-3.0-or-later, BUSL-1.1}` *(`34 523` B / `3 893` B)*, licensee-elected; official compiled
+   binaries carved BACK to `Apache-2.0`.** 🔵 **A map keyed path→family cannot represent an
+   election, and picking either member silently is how a gate ships a wrong answer.**
+4. 🆕 **FLAG `TEMPORAL`** where the text names a conversion or relicensing date.
+   🟢 **Two instances now, so this is no longer p210's one-row curiosity:** `orbit`'s `BUSL-1.1`
+   **converts to `Apache-2.0` after `3` years**, and `chipmates/agoracosmica`'s content is
+   **copyright now, `CC-BY-4.0` scheduled within `6`–`12` months of the May `2026` launch**.
+   🔴 **A cached verdict on a temporal grant is wrong on a schedule.**
+5. 🆕 **FLAG `EXTERNAL` AND REFUSE TO CACHE** where authority sits outside the repository.
+   🟢 **`learning-commons-org/knowledge-graph`: code `MIT`; data per-dataset across three access
+   tiers — `Open` *(`CC-BY-4.0` majority, `CC0` minority)*, `Open + Gated` *(split at DOWNLOAD
+   level)*, `Gated` *(**no open licence**, provider approval, separate terms)* — resolved from a
+   remote catalog the file says can change between releases.** 🔴 **The practical hazard is
+   specific: pull this "educational AI data layer" into a RAG index and `Gated` content can enter a
+   client deliverable with no grant behind it.**
+6. **Gate the paths you actually ship** *(`P212-A` step `3`, unchanged)*, now against a resolved
+   map that may contain sets, tenses and external pointers.
+
+**Components**
+
+| component | 🟢 grant *(read `2026-10-15`)* | role |
+|---|---|---|
+| [`compose/code/p211-full-column-grant-audit/`](code/p211-full-column-grant-audit/) | this KB | classifier + fetcher to extend |
+| `andymatuschak/orbit` | 🟡 multi *(see above)* | 🟢 **fixture: router + election + tense + binary carve-out, in one repo** |
+| `codeforlife-education/aimmo` | 🔴 `AGPL-3.0` *(cross-owner)* | 🟢 fixture: owner-boundary delegation |
+| `learning-commons-org/knowledge-graph` | 🔴 external resolver | 🟢 fixture: access-tier data grant |
+| `chipmates/agoracosmica` | 🔴 `AGPL-3.0` + scheduled content | 🟢 fixture: dated-future grant |
+
+🟢 **Acceptance test, and it is cheap:** 🔵 **the four fixtures above plus `pupilfirst` *(`P212-A`)*
+and `odoo` *(`P211-A`)* — six repositories. A gate that returns the right answer on all six is
+correct on every shape this KB has met in `213` passes.**
+
+### 🆕 `P213-B` — the AI-provenance integrity grader *(the `385`-repo gap, `6`–`8` weeks)*
+
+🔴 **The build case, stated once:** 🟢 **`385` plagiarism-detection repositories; `0` of the top
+`20` detect AI-written text; student AI use reported at `92`% for `2025`.** 🔵 **The similarity half
+is solved AND permissive. The provenance half does not exist in open source.** 🟢 **So this is a
+compose-plus-one-build, not a from-scratch product.**
+
+**Wiring**
+
+| tier | component | 🟢 grant *(bytes)* | why this one |
+|---|---|---|---|
+| assessment host | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** *(`1 091`)* | 🟢 **`MIT` assessment platform with automated feedback already built** |
+| …or behind a boundary | [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** *(`34 764`)* | Secure sandboxed autograding; 🔴 **deploy as a service, do not embed** |
+| code similarity | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 **MIT** *(`1 084`)* | 🟢 **`MIT`. The permissive anchor — `JPlag` is stronger but `GPL-3.0` *(`35 141` B)*** |
+| prose similarity | [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** *(`11 358`)* | Verbatim + near-verbatim matching you can read and fork |
+| tamper check | [josemmo/plagpatrol](https://github.com/josemmo/plagpatrol) | 🟢 **MIT** *(`1 084`)* | 🟡 Catches documents doctored to defeat detectors |
+| 🔴 **provenance scorer** | **BUILD** | — | 🔴 **The gap. No open-source row at any star level on this surface** |
+| baseline item-writer | [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | 🟢 **MIT** *(`1 073`)* | 🟢 **A deterministic `T5` MCQ baseline to measure an LLM against** |
+| evidence | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) + [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** *(`11 357` / `11 525`)* | 🟢 **Every determination emits an `xAPI` statement onto Postgres the client already runs** |
+| LMS attachment | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** *(`1 070`)* | 🟢 **One `LTI 1.3` tool. `P213-8`: this is the ENTIRE integration surface** |
+
+🟢 **Why the evidence tier is not optional, and this is the EMEA sale:** 🔴 **an integrity
+determination that cannot be audited is a liability, not a feature.** 🟢 **The Council of Europe's
+**European Reference Framework for the Evaluation of Educational Technologies** targets
+**`31/12/2026`** *(`T213-6`)*, and Annex III high-risk duties under the `Digital Omnibus` land
+**`2` December `2027`** with *"evaluating learning outcomes"* named in scope.** 🔵 **A grader that
+emits `xAPI` from day one is evaluable; one that does not must be rebuilt before it can be sold
+into Europe.**
+
+🟡 **Scope honesty for a proposal:** 🔴 **do NOT promise reliable AI-text detection — the research
+does not support it.** 🟢 **Promise what the stack can actually deliver: similarity at
+state-of-the-art, tamper detection, a calibrated and auditable provenance SIGNAL with stated error
+bars, and a complete `xAPI` evidence trail. 🔵 **The honest version is the defensible one, and it is
+still `385` repositories ahead of the shelf.**
+
+### 🆕 `P213-C` — the memory spine: a tutor that schedules, `MIT` all the way down *(`4`–`5` weeks)*
+
+🔴 **Most "AI tutor" builds are a chat window with no model of forgetting.** 🟢 **`FSRS` is this
+industry's one fully-`MIT` algorithmic core, and it is small enough to adopt in days.**
+
+| tier | component | 🟢 grant *(bytes)* | role |
+|---|---|---|---|
+| scheduler | [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **MIT** *(`1 079`)* | 🟢 **Real interval scheduling behind the tutor, in Python, no platform** |
+| algorithm spec | [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** *(`1 089`)* | The `DSR` model to implement and tune against |
+| prerequisite graph | [trane-project/trane](https://github.com/trane-project/trane) | 🔴 **AGPL-3.0** *(`34 523`)* | 🟢 **Models practice DEPENDENCIES — read it for the data model even if you do not ship it** |
+| recall verification | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | 🟢 **MIT** *(`1 069`)* | 🟢 **Free-recall checking *with receipts* — already treats evidence as an output** |
+| client | [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 **MIT** *(`1 078`)* | Review UI over plain notes |
+| …or a web client | [alyssaxuu/carden](https://github.com/alyssaxuu/carden) | 🟢 **MIT** *(`1 066`)* | Flashcards + gamification, forkable |
+| tutor loop | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** *(`1 073`)* | 🟢 **`MCP` server turning any LLM into an ITS — the thinnest integration** |
+| evidence | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** *(`11 357`)* | `xAPI` records of every review, for evaluation |
+
+🟢 **The composition in one line:** 🔵 **`py-fsrs` decides WHEN, `engram` verifies WHETHER,
+`tutor-mcp` handles the teaching turn, `lrsql` records that it happened — and every tier except the
+optional `trane` read is `MIT` or `Apache-2.0`.** 🔴 **`trane` is `AGPL`: borrow its prerequisite
+model, do not vendor its code.**
+
+🟡 **Where this wins over a from-scratch tutor:** 🟢 **the two hardest things in a tutor are
+scheduling and verification, and both are solved and permissively licensed.** 🔴 **What is NOT
+solved is content, which is where `T213-4`'s warning applies: a skill pack is content, and
+`CC-BY-SA` on a pack reaches the pack.**
+
+### 🟢 Carried forward unchanged
+
 ## Pass 212 — 2026-10-15 — FOUR RECIPES: A SCOPE-AWARE GRANT GATE, AN EVALUABLE TUTOR, AN LLM GRADER INSIDE AN EXISTING AUTOGRADER, AND AN OFFLINE-FIRST COMPULSORY-AI STACK
 
 🔵 **Every component below had its licence blob read first-hand from `raw.githubusercontent.com` at

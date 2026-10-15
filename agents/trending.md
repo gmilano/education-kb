@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 213 — the week the integrity shelf turned out to be aimed at the wrong decade
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 The structural story this week
+
+🔴 **1. `385` plagiarism-detection repositories, `0` detecting AI-written text.**
+`topics/plagiarism-detection` opened for the first time in `213` passes. Every top-`20` row is
+classical similarity — n-grams, TF-IDF, cosine, Wagner–Fischer, stylometry. 🟢 **The similarity
+half is solved and permissive** *(`dolos` **MIT**, `noplag-engine` **Apache-2.0**)*; 🔴 **the
+provenance half — did a model write this — has no open-source implementation at any star level.**
+🔵 Against student AI use reported at `92`% for `2025`, that is the largest unbuilt layer in this KB.
+
+🆕 🟢 **2. A whole shelf: algorithmic memory, and it is `MIT` at the core.**
+`topics/spaced-repetition` *(`2 737` repos)* read for the first time. The entire **`FSRS`** family
+is **MIT** — `fsrs4anki` *(`4.1`k★)*, `free-spaced-repetition-scheduler` *(`725`★)*, `py-fsrs`
+*(`510`★)*. 🔵 **`xAPI` records what a learner did; `FSRS` decides what they see next. Both layers
+are now permissive at their core.**
+
+🔴 **3. A grant is not a scalar — four shapes in one pass that `P212-A`'s map cannot express.**
+`orbit` *(elective disjunction + tense + binary carve-out)*, `knowledge-graph` *(external
+access-tier catalog)*, `aimmo` *(cross-owner delegation → `AGPL-3.0`)*, `agoracosmica` *(content
+grant scheduled for the future)*. 🟢 **`P213-A` replaces the map with a resolver.**
+
+🟢 **4. The agent is becoming a prompt artefact.** On `topics/ai-tutor` page `2` *(population
+`707`)*, at least `7` of `20` rows are Claude Code Skills or `MCP` servers rather than deployable
+services, and the star ceiling on that page is `64` — a long, shallow tail.
+
+### 🆕 New agent rows this week — grants read from the blob on 2026-10-15
+
+| repo | grant | ★ | region | one line |
+|---|---|---|---|---|
+| [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 MIT *(`1 078`)* | **2.6**k | Global | flashcard + whole-note review over plain notes |
+| [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 AGPL-3.0 *(`34 524`)* | **2.6**k | Global | community-owned language-learning platform |
+| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🟡 Apache-2.0 libs; **AGPL-3.0+ OR BUSL-1.1** for app/backend | **1.8**k | 🟡 unplaced | spaced repetition for the "mnemonic medium" — **the licence fixture of this pass** |
+| [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | 🟢 MIT *(`1 069`)* | **1.5**k | Global | free-recall verification **with receipts**, `FSRS`-scheduled |
+| [Ajatt-Tools/mpvacious](https://github.com/Ajatt-Tools/mpvacious) | 🔴 GPL-3.0 *(`35 149`)* | **892** | 🟡 unplaced | Anki cards from film and TV inside `mpv` |
+| [thiswillbeyourgithub/AnkiAIUtils](https://github.com/thiswillbeyourgithub/AnkiAIUtils) | 🔴 AGPL-3.0 *(`34 523`)* | **887** | 🟡 unplaced | AI explanations, mnemonics and adaptive review over Anki |
+| [trane-project/trane](https://github.com/trane-project/trane) | 🔴 AGPL-3.0 *(`34 523`)* | **848** | 🟡 unplaced | deliberate-practice engine that models prerequisite DEPENDENCIES |
+| [FreeLanguageTools/vocabsieve](https://github.com/FreeLanguageTools/vocabsieve) | 🔴 GPL-3.0 *(`35 149`)* | **544** | 🟡 unplaced | sentence mining for language learning |
+| [alyssaxuu/carden](https://github.com/alyssaxuu/carden) | 🟢 MIT *(`1 066`)* | **490** | Global | flashcards with spaced repetition and gamification |
+| [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | 🟢 MIT *(`1 069`)* | **477** | 🟡 unplaced | AI recursive learning — Socratic deep-dives, generated exercises |
+| [chipmates/agoracosmica](https://github.com/chipmates/agoracosmica) | 🔴 AGPL-3.0 *(`34 523`)* + content **scheduled** | **149** | EMEA | `30` historical figures, conversational, EN + DE. German nonprofit |
+| [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | 🟢 MIT *(`1 073`)* | **139** | 🟡 unplaced | small `T5` MCQ generator — a baseline to measure an LLM against |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 MIT *(`1 069`)* | **127** | 🟡 unplaced | open alternative to Udemy/Coursera — topic in, course out |
+| [shigella520/MindTrain](https://github.com/shigella520/MindTrain) | 🟢 MIT *(`1 067`)* | **125** | APAC | AI knowledge-training, Java `21`, pluggable schedulers, `Anki`/`FSRS` |
+| [codeforlife-education/aimmo](https://github.com/codeforlife-education/aimmo) | 🔴 AGPL-3.0 *(`32 920`, **cross-owner**)* | **117** | EMEA | classroom multiplayer programming game; grant lives in another org |
+| [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | 🟢 MIT *(`1 068`)* | **1.1**k | 🟡 unplaced | neural question generation with transformers — pre-LLM |
+
+🔵 **`8` of `16` are permissive *(`MIT`)*; `7` are `GNU`-family *(`AGPL-3.0` ×`4`, `GPL-3.0` ×`3`)*; `1` is mixed *(`orbit`)*.** 🔴 **`T211-1` holds: the licence
+risk in education is `GPL`-vs-`AGPL`, not open-vs-proprietary.**
+
+🟡 **`9` of `16` rows are UNPLACED by region** — no country, university or organisation is stated on
+the repository and the description is in English. 🟢 **Recorded as a gap rather than guessed: an
+inferred region becomes wrong data the moment the compiler reads it.**
+
+### 🟢 Star refreshes and corrections this week
+
+🔵 `ArnaudGuiovanna/tutor-mcp` reads **`49`**★ against `48` published — one-star drift, not a finding.
+🔴 **`menthorlabs/menthor`** confirmed **archived `2024-12-12`**, `582`★, **`Apache-2.0`**
+*(`11 337` B)* — the row that falsifies `T212-7`'s `6`-star LATAM ceiling.
+🟢 **`learning-commons-org/knowledge-graph`**: published cell *(`MIT`/`CC0-1.0`)* is **incomplete,
+not wrong** — the blob is an access-tier resolver with a `Gated` tier carrying no open licence.
+
 ## 2026-10-15 — Pass 212 — the week the discovery channel opened: `22` new agent rows after eight "saturated" passes
 
 🟢 **APPEND-ONLY. History below this section is intact.**

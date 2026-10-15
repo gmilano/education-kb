@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 213 — three topic populations opened, and the standards layer is measured at `0`% AI
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 The three surfaces opened this week
+
+🟢 **`topics/edtech` — `4 467` repositories — is the largest education topic this KB has ever read**,
+and no pass had opened it before. 🔵 **`topics/spaced-repetition` *(`2 737`)*,
+`topics/plagiarism-detection` *(`385`)*, `topics/question-generation` *(`229`)*, `topics/scorm`
+*(`228`)*, `topics/lti` *(`185`)*, `topics/student-information-system` *(`183`)* and
+`topics/mooc` *(`640`)* were read first-hand the same way.**
+
+### 🆕 🔴 The AI gradient, measured per shelf
+
+| GitHub topic | population | AI/LLM/agent/tutor in top `20` | shelf |
+|---|---|---|---|
+| `lti` | `185` | 🔴 **`0`** | interoperability |
+| `student-information-system` | `183` | 🔴 **`0`** | system of record |
+| `mooc` | `640` | 🔴 **`0`** | courseware |
+| `scorm` | `228` | 🔴 **`2`** | packaging |
+| `question-generation` | `229` | 🟡 pre-LLM *(`T5` era)* | assessment generation |
+| `spaced-repetition` | `2 737` | **`6`** | memory |
+| `edtech` | **`4 467`** | 🟢 **`14` of `40`** *(two pages)* | product |
+
+🔴 **The standards and system-of-record shelves are at or near `0`% AI; the product shelf is roughly
+`35`%.** 🟢 **This is `T212-2` *("the AI layer is beside the platform")* turned into a number.**
+
+### 🆕 Trending / newly-read repositories — grants read from the blob on 2026-10-15
+
+**The memory shelf — `FSRS` is `MIT` at the core**
+
+| repo | grant | ★ | note |
+|---|---|---|---|
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 MIT *(`1 079`)* | **4.1**k | the reference scheduler as deployed in Anki |
+| [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 MIT *(`1 089`)* | **725** | the `DSR` algorithm itself |
+| [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 MIT *(`1 079`)* | **510** | cheapest real scheduling behind a tutor |
+| [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 MIT *(`1 078`)* | **2.6**k | highest-star `MIT` review client |
+| [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | 🟢 MIT *(`1 069`)* | **1.5**k | free-recall verification with receipts |
+| [trane-project/trane](https://github.com/trane-project/trane) | 🔴 AGPL-3.0 *(`34 523`)* | **848** | models practice prerequisites, Rust |
+| [alyssaxuu/carden](https://github.com/alyssaxuu/carden) | 🟢 MIT *(`1 066`)* | **490** | flashcards + gamification |
+
+**The integrity shelf — permissive, and aimed at the previous decade**
+
+| repo | grant | ★ | note |
+|---|---|---|---|
+| [jplag/JPlag](https://github.com/jplag/JPlag) | 🔴 GPL-3.0 *(`35 141`)* | **2**k | the most mature engine; copyleft |
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 MIT *(`1 084`)* | **351** | 🟢 **the permissive anchor for a build** |
+| [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 *(`11 358`)* | **88** | permissive prose-side matching |
+| [josemmo/plagpatrol](https://github.com/josemmo/plagpatrol) | 🟢 MIT *(`1 084`)* | **42** | detects documents tampered to defeat detectors |
+
+🔴 **`0` of the `20` rows on this surface detect AI-written text.**
+
+**The interoperability shelf — `0`% AI, and load-bearing anyway**
+
+| repo | grant | ★ | note |
+|---|---|---|---|
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 *(`10 273`)* | **376** | the `LTI` tool framework |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT *(`1 072`)* | **355** | a MODERN `SCORM` runtime |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 AGPL-3.0 *(`34 764`)* | **243** | sandboxed autograding; deploy behind a boundary |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 *(`11 357`)* | **215** | permissive maths e-assessment |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 CC-BY-SA-4.0 *(`837`)* | **164** | 🔴 **a JS library under a share-alike CONTENT licence** |
+| [openfun/marsha](https://github.com/openfun/marsha) | 🟢 MIT *(`1 078`)* | **151** | `LTI` content management; France Université Numérique |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT *(`1 070`)* | **138** | `LTI 1.3` Advantage tool in Python |
+| [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | 🔴 GPL-3.0 *(`35 147`)* | **117** | Canvas accessibility inspection |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 BSD-3-Clause *(`1 528`)* | **73** | puts a JupyterHub behind an LMS login |
+| [oat-sa/lib-lti1p3-core](https://github.com/oat-sa/lib-lti1p3-core) | 🔴 GPL-2.0 *(`18 091`)* | **37** | `LTI 1.3` core from Open Assessment Technologies |
+
+**New rows from the product and courseware surfaces**
+
+| repo | grant | ★ | region | note |
+|---|---|---|---|---|
+| [kalvilabs/kalvi](https://github.com/kalvilabs/kalvi) | 🔴 AGPL-3.0 *(`34 523`)* | **117** | 🟡 unplaced | "Open Source Infrastructure for Online Education" |
+| [PapillonApp/papillon-v6](https://github.com/PapillonApp/papillon-v6) | 🔴 GPL-3.0 *(`35 149`)* | **117** | EMEA | third-party client for French school-life systems |
+| [senjun-team/senjun-courses](https://github.com/senjun-team/senjun-courses) | 🔴 GPL-3.0 *(`35 149`)* | **159** | EMEA | programming courses; Russian prose, English metadata |
+| [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | 🟢 Apache-2.0 *(`11 326`)* | **121** | 🟡 unplaced | study app on `.NET 10` |
+| [langx/langx](https://github.com/langx/langx) | 🟢 BSD-3-Clause *(`1 520`)* | **108** | 🟡 unplaced | a rare `BSD` row in this industry |
+| [xiaochong0302/course-tencent-cloud](https://github.com/xiaochong0302/course-tencent-cloud) | 🔴 GPL-2.0 *(`18 092`)* | **1.2**k | APAC | 🟡 **calls itself "genuinely open source, free for commercial use" — and is `GPL-2.0`** |
+
+### 🆕 🔴 The licence lesson of the week: a licence file is sometimes a ROUTER
+
+🟢 **Four grants this pass cannot be written as a single family, or even as a path→family map:**
+`andymatuschak/orbit` *(`Apache-2.0` libraries; `AGPL-3.0-or-later` **OR** `BUSL-1.1` for
+`app`/`backend` at the licensee's choice; binaries carved back to `Apache-2.0`; `BUSL` converts
+after `3` years; and the root `LICENSE`'s own file references are mis-spelled with dots where the
+real files use hyphens)*, `learning-commons-org/knowledge-graph` *(three access tiers resolved from
+an external catalog, `Gated` carrying no open licence)*, `codeforlife-education/aimmo` *(a `115`-B
+file naming no family, delegating across an owner boundary to **`AGPL-3.0`**)*, and
+`chipmates/agoracosmica` *(content copyright now, `CC-BY-4.0` **scheduled**)*.
+
+🟢 **`P213-A` in [`compose/patterns.md`](../compose/patterns.md) is the resolver that handles all
+four, with those repositories as its acceptance fixtures.**
+
 ## 2026-10-15 — Pass 212 — the learning-record layer appears, `ECL-2.0` appears, and a permissive LMS appears
 
 🟢 **APPEND-ONLY. History below this section is intact.**

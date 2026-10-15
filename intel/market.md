@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 213 — 2026-10-15 — EUROPE'S EVALUATION FRAMEWORK HAS A DATE (`31/12/2026`), AND THE PAN-REGIONAL QUERY IS RETIRED FOR THE SEVENTH TIME
+
+🔵 **Channel note, re-tested cold this pass:** 🔴 **`rm.coe.int`, `www.coe.int`,
+`www.iesalc.unesco.org` and `data.consilium.europa.eu` all return `000`** *(`ENOTFOUND`)*.
+🟢 **`github.com` and `raw.githubusercontent.com` resolve.** 🔴 **Every market and policy figure in
+this section is a search-snippet claim unless marked otherwise; the repository work in
+[`repos/foundations.md`](../repos/foundations.md) is first-hand.**
+
+### 🔴 The pan-regional query, run exactly as specified, and retired for a seventh time
+
+🟢 **All four were run verbatim.** 🔴 **`AI education EMEA 2026 adoption regulation players`
+returned CompTIA's EMEA IT outlook *(a US-respondent survey)*, a `2023` Workday study and a CPaaS
+vendor page. `AI education APAC 2026 …` returned APAC enterprise-tech trend pieces, a Singapore
+**financial-sector** AI consultation, and corporate-upskilling news.** 🔵 **Between them, `0`
+education-specific policy instruments.**
+
+🟢 **`T207-1` holds on a seventh measurement: in EMEA and APAC the policy channel is ORGAN-gated.**
+🟢 **Naming the organ worked again on the first try — `Council of Europe CAIED European Reference
+Framework evaluation educational technologies AI 2026` returned the whole EMEA track below.**
+
+🟡 **The two regional queries that DID pay, and what they returned:**
+🟢 **North America** surfaced a usable framing — *"no equivalent to the FDA exists for educational
+technology; adoption decisions are made by individual schools, districts or universities with
+minimal external oversight"* — plus **Colorado** and **Texas** as piecemeal state movers, a
+reported **`$169`M** government commitment to responsible AI in higher education in Q1 `2026`, and
+a **`$55`M** Carnegie Mellon / Gates Foundation AI-courseware investment *(single-source)*.
+🟢 **LATAM** surfaced the named organ this KB already carries — **UNESCO IESALC + UNU-IAS** — and
+its separate `2025` UNESCO Chairs comparison: **~`70`% of institutions in Europe and North America
+have or are developing AI guidance against `45`% in Latin America and the Caribbean.** 🔴 **A
+different sample from the `200`-institution study; do not mix the figures.**
+
+### 🆕 🟢 EMEA — the evaluation framework is now DATED, and two citations get their numbers
+
+| instrument | 🟢 status this pass | what it does |
+|---|---|---|
+| **European Reference Framework for the Evaluation of Educational Technologies** | 🆕 🟡 **target date `31/12/2026`**, per the terms of reference of the **Committee of Experts on AI and Education** *(short name **`EDU-IA`**; doc `CM(2025)131-addfinal`)* | 🔴 **An evaluation framework is an EVIDENCE requirement. `11` weeks out from this pass** |
+| **Recommendation on AI Literacy** | 🆕 🟢 now citable as **`CM/Rec(2026)12`**, adopted by the Committee of Ministers early September `2026` | `22` guiding principles; implements Art. `20` of the Framework Convention on AI |
+| **Compass for AI and Education** | 🟢 carried | AI literacy; regulation and governance; teaching/learning/assessment with AI; **evaluation of educational technologies** |
+| 🆕 **`3`rd working conference report** *(`prems-004926`)* | 🟡 exists; host unreachable | This KB's EMEA track knew only the `2`nd, of October `2024` |
+
+🔵 **The regulatory clock itself is unchanged and already correct in this KB** — the `Digital
+Omnibus`, **Reg. (EU) `2026/1744`**, in force `27` July `2026`, moved Annex III stand-alone
+high-risk *(where education sits)* to **`2` December `2027`**, while **Article `50` transparency
+stayed at `2` August `2026`** and the prohibitions — **emotion inference in education among
+them** — have applied since `2` February `2025`. 🟢 **Re-confirmed this pass; `0` cells change.**
+
+### 🔵 Global market size — the spread, restated with this pass's readings
+
+| source *(as reported in secondary roundups)* | base figure | horizon | implied CAGR |
+|---|---|---|---|
+| IMARC derivative | `$6.4`B *(`2025`)* | `$79.6`B by `2034` | `31.35`% |
+| unnamed house via roundup | `$8.3`B *(`2025`)* | `$57.2`B by `2033` | `25.9`% |
+| The Business Research Company | `$10.6`B *(`2026`)* | — | — |
+| 🆕 analyst base case via roundup | — | — | 🟡 **~`28`% through `2036`**, with the sector rated **low maturity, "most institutions still in pilot mode"** |
+
+🔴 **Four-plus houses, no convergence. Quoting a point figure is still a tell.** 🟢 **The newly
+surfaced line worth carrying is not a number but a judgement: institutional PURCHASING moves slower
+than consumer adoption, which is why `28`% sits below the `31`–`41`% band the vendor houses quote.**
+
+🆕 🔵 **Two adoption figures new to this pass** *(secondary, directional)*: 🟢 **student AI use
+reported at `92`% for `2025`, up from `66`% in `2024`**, and 🟢 **K-12 at `45.62`% of total
+adoption**, with **language learning the fastest-growing segment**. 🔴 **The `92`% figure is the
+one that makes `T213-1` a commercial finding rather than a curiosity.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The opening is the governance vacuum, stated in the region's own words:** 🔴 **no FDA-equivalent
+for educational technology, oversight devolved to districts and institutions, **`10`%** of
+institutions holding formal AI guidelines and **`71`%** of US teachers reporting no AI training.**
+🟢 **Sell the thing the vacuum creates demand for: an evidence layer.** 🔵 **`studentinsights`
+*(**MIT**, `1 083` B)* for the data spine, `xAPI` + `lrsql` *(**Apache-2.0**, `11 357` B)* for the
+record, `dolos` *(**MIT**)* for integrity. 🟡 **Colorado and Texas are the two states to watch for
+piecemeal requirements**, and `$169`M of federal-level responsible-AI money in higher education
+*(Q1 `2026`, single-source)* is the budget line to name.
+
+### EMEA
+
+🟢 **The strongest-placed region in this KB, and the only one with a DATED instrument inside one
+engagement cycle: `31/12/2026`.** 🔴 **A tutor that emits no learner-activity record cannot be
+evaluated against a framework whose entire subject is evaluation.** 🟢 **The pitch is compliance-led
+and the components are permissive and European: `OpenOLAT` *(Switzerland, `Apache-2.0`)*, `Artemis`
+*(TUM, **MIT**)*, `marsha` *(France Université Numérique, **MIT**)*, `mentingo` *(Poland, **MIT**)*,
+`lrsql` *(**Apache-2.0**)*. 🔵 **New EMEA rows this pass: `papillon-v6` *(France, `GPL-3.0`)* —
+third-party clients for national school systems are a real shape here — and `agoracosmica`
+*(German nonprofit, `AGPL-3.0` code with a **scheduled** content grant)*.** 🟡 **`CM/Rec(2026)12`
+obliges states to promote AI literacy across the education system: that is a curriculum and
+teacher-training market, not a software one.
+
+### APAC
+
+🔴 **The region where the pan-regional query is most misleading: it returned a Singapore
+**financial-sector** AI consultation and enterprise-IT trend pieces, and `0` education
+instruments.** 🟢 **What this pass CAN place first-hand is code, not policy:** `course-tencent-cloud`
+*(`1.2`k★, `GPL-2.0` — see `P213-7`)*, `MindTrain` *(**MIT**, Java, trilingual README)*,
+`Echo-Loop` *(`4.2`k★, AI listening/speaking)*, and the Chinese-language half of
+`topics/ai-tutor` page `2`. 🔵 **The `T213-4` shape is strongest here: a long tail of small,
+Chinese-language tutor SKILLS rather than platforms.** 🟡 **Declared gap: this pass surfaced no
+ministry-level APAC education-AI instrument. The organ names to try next are the education
+ministries directly, not "APAC".**
+
+### LATAM
+
+🟢 **The region's figures are the best-sourced in this KB and come from a named organ: UNESCO
+IESALC + UNU-IAS, `200` institutions, `19` countries — `87`% using AI in at least one area against
+`26`% holding a formal framework, adoption driven BOTTOM-UP by individual academics and students,
+with public institutions more resource-constrained.** 🆕 🟢 **Context added this pass: the separate
+`2025` UNESCO Chairs comparison puts LATAM at `45`% for having-or-developing AI guidance against
+~`70`% in Europe and North America** — 🔴 **different sample, quoted as a second instrument, not
+as the same measurement.**
+
+🆕 🔴 **The correction that changes the LATAM pitch:** 🟢 **`T212-7`'s *"LATAM's open-source ceiling
+is `6` stars"* is false. [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) is `582`★,
+Portuguese, **`Apache-2.0`** *(`11 337` B)* — and **archived on `2024-12-12`**.** 🟢 **So the
+honest line is better than the old one: the region's highest-star education project is permissive
+and abandoned, which makes it a FORK rather than a competitor, and the `87`/`26` governance gap is
+still the differentiator.** 🔴 **What does NOT exist is a production-scale education-**AI**
+repository in Spanish or Portuguese; that half of `T212-7` survives.
+
+### Global
+
+🟢 **The one finding that is region-independent and the largest unbuilt layer in this KB:**
+🔴 **`385` plagiarism-detection repositories, `0` detecting AI-written text, against student AI use
+reported at `92`%.** 🔵 **Recipe `P213-B` in [`compose/patterns.md`](../compose/patterns.md) wires
+the permissive similarity half — `dolos` *(**MIT**)*, `noplag-engine` *(**Apache-2.0**)* — and
+names the provenance half as a build, not a buy. 🟢 **It sells into every region on this page,
+and in EMEA it sells against a date.**
+
 ## Pass 212 — 2026-10-15 — EMEA HAS A SECOND REGULATOR AND IT IS DRAFTING A LAW ABOUT EDUCATION AI; INDIA HAS MADE AI COMPULSORY; AND LATAM'S REPO CEILING IS NOW MEASURED
 
 🔵 **Channel note, unchanged from p211 and re-tested cold this pass:** no government or analyst
