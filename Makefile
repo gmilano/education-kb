@@ -17,7 +17,7 @@
 SHELL := /bin/bash
 PY ?= python3
 
-.PHONY: hooks gate-offline gate-online reach status
+.PHONY: hooks gate-offline gate-online reach status exists
 
 hooks: gate-offline ## the standing check: every licence instrument's OFFLINE controls
 
