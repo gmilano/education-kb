@@ -1,0 +1,15 @@
+# ACTION RE, honoured an ELEVENTH time (p229) - every finding and every BLANK with the
+# verbatim query that produced it. A finding recorded without its query cannot be
+# re-tested, and one that cannot be re-tested is indistinguishable from one that expired.
+# p228's rule REPRODUCES at 2 for 2: a region-shaped query returns education content only
+# where the region has PAN-REGIONAL INSTITUTIONS publishing about it as a unit.
+region	verbatim_query	result	note
+Global	top open source AI agents education 2026 github MIT	THIN	no education-specific ranking; returned general agent frameworks. microsoft/ai-agents-for-beginners (MIT) is a COURSE, not an education agent
+Global	github trending education AI 2026	BLANK-ON-EDUCATION	third-party trackers only; no education repo surfaced that these shelves do not carry
+Global	open source platform education ERP CRM MIT Apache	THIN	vendor glossary pages from openeducat.org; confirmed OpenEduCat is LGPLv3 on Odoo, i.e. NOT the MIT/Apache the query asked for
+Global	AI education industry trends 2026	NON-BLANK	four 2026-vintage market estimates that disagree; student AI use 66% (2024) -> 92% (2025); sector maturity 35/100; K-12 45.62% of adoption; cloud 71.22% (2024)
+North America	AI education North America 2026 adoption regulation players	NON-BLANK-NO-PLAYERS	USD 951M (2024) -> USD 2.3B (2029) 15.9% CAGR; 10% of institutions have formal AI guidelines; 71% of US teachers untrained. NAMED NO VENDOR and no Canadian or Mexican source
+LATAM	AI education LATAM 2026 adoption regulation players	NON-BLANK-STRONGEST	UNESCO IESALC + UNU-IAS working paper: 200 institutions, 19 countries, fielded Aug-Oct 2025. Baker McKenzie on the absence of harmonised AI law. CENIA/ECLAC on investment below the global average
+EMEA	AI education EMEA 2026 adoption regulation players	BLANK-ON-EDUCATION	third consecutive pass. Returned enterprise AI only - CompTIA, Workday 2023. NAMED NO ministry, university, EdTech vendor or education instrument
+APAC	AI education APAC 2026 adoption regulation players	BLANK-ON-EDUCATION-POLICY	vendor announcements only (Pearson/TCS, LearnUpon, Alteryx). NO education regulation, ministry guidance or school adoption data
+EMEA	Germany Netherlands Sweden national AI education policy schools 2026 ministry	NON-BLANK-COUNTRY-SHAPED	REPRODUCES p228 ACTION SQ: Germany KMK recommendation is October 2024 and guides rather than binds the 16 Laender; Sweden has a 2025 HIGHER-EDUCATION assignment and no school strategy (the contrary claim is an advocacy op-ed); the Netherlands returns NOTHING a fourth time

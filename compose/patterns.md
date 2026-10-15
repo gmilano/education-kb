@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — THREE RECIPES THAT ONLY BECAME WRITEABLE ONCE THE GRANTS WERE READ, AND ONE LIST OF ROWS TO KEEP OUT OF A SOW
+
+🔵 **Every repository named below had its licence read first-hand on `2026-10-15` at the channel stated** → [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · [`sy-bound-channel`](../evidence/sy-bound-channel.2026-10-15-p229.tsv).
+
+### 🟢 `P229-R1` — the EMEA AI-governance surface for a Moodle estate *(8–10 weeks)*
+
+🟡 **The buyer is a German Land, a Nordic municipality or a university consortium, and what it must produce by `2027-12-02` is not a tutor: it is an auditable record of WHICH AI touched WHICH learner's work, under WHOSE purpose.** 🔵 **Article `50` transparency already binds since `2026-08-02`; the Omnibus Article `5` prohibitions land `2026-12-02`.**
+
+| layer | repo | grant *(read first-hand)* | why this one |
+|---|---|---|---|
+| host | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` · `main/COPYING.txt`, `35 147` B | the estate already runs it |
+| broker | [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | `GPL-3.0-or-later` · `version.php` | per-tenant provider, QUOTA and PURPOSE — the purpose field IS the Article `50` record |
+| provider | [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | `GPL-3.0-or-later` · `version.php` | OpenAI-COMPATIBLE, so no vendor API in the path — the structural escape from `ACTION RB` |
+| sovereign inference | self-hosted behind the provider | — | keeps learner text in-jurisdiction; the provider plugin is what makes it swappable |
+| assessment | [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | `GPL-3.0-or-later` · `version.php` | 🔴 **Annex III high-risk** — ship it behind the broker's purpose log or not at all |
+| early warning | [`solin-repo/moodle-block_atrisk`](https://github.com/solin-repo/moodle-block_atrisk) | `GPL-3.0-or-later` · `version.php` | at-risk flags, the one feature the policy must govern explicitly |
+
+🟢 **Why it is legally buildable, and this is the pass's contribution:** every component is `-or-later`, read at Moodle's mandated `version.php` header, so each may enter a `GPL-3.0` host. 🔴 **Contrast the assessment stack: `ACTION RQ` found `6` `oat-sa` repositories at `GPL-2.0-only`, one-way incompatible with GPL-3.0. If this SOW needs QTI, TAO stays a SEPARATE LTI 1.3 tool and the library is [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) *(`Apache-2.0`)*, never `oat-sa/lib-lti1p3-core`.**
+
+🔵 **And the LTI client layer gained a grant this pass: [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) is `MIT` *(`1 070` B)* — invisible until now because the shelf's reader truncated its name at `pylti1`.**
+
+### 🟢 `P229-R2` — LATAM: course-scoped, auditable AI chat on an existing Moodle *(6–8 weeks)*
+
+🟡 **LATAM's binding constraint is not statute — Baker McKenzie confirms no harmonised AI law — it is privacy and institutional governance, against UNESCO IESALC's measured `73.5%` teaching use across `200` institutions in `19` countries.**
+
+```
+Moodle (GPL-3.0)
+  └── caiocarvalhofre/moodle-mod_maici      GPL-3.0-or-later   AI chat as an ACTIVITY MODULE
+        → conversations are COURSE-SCOPED and auditable per assessment, not account-wide
+  └── yedidiaklein/moodle-local_aiquestions GPL-3.0-or-later   question generation for staff
+  └── mebis-lp/moodle-local_ai_manager      GPL-3.0-or-later   quota per faculty = the cost control
+```
+
+🟢 **The activity-module shape is the whole point: a course-scoped conversation has a retention owner and an assessment it belongs to, which is what an institutional data-protection review actually asks for.** 🔴 **Quote the UFRB dropout benchmark `AUC-ROC 0.943` / recall `86.3%` as the bar if the engagement extends to prediction — and BUILD it, since p223 measured `209` LATAM dropout repositories with no permissive, production-grade commons among them.**
+
+### 🟢 `P229-R3` — sell the licence gate itself *(2–3 weeks, and it is reusable across every engagement)*
+
+🟡 **This pass is the argument: a KB that had read `468` grants still carried `45` slugs marked grantless, `23` of which simply had their licence somewhere the probe did not look, and `4` of which were its own regex truncating a name at a dot.** 🔴 **A client with a few hundred dependencies has the same problem and no instrument.**
+
+```
+compose/code/p229-grant-ladder-reach/ladder.sh   slugs.txt out/   # 40 paths x real default branch
+compose/code/lib/license_family.sh                               # the shared classifier (P237)
+compose/code/p222-ecosystem-bound-grammar/                       # five ecosystem grammars + the bound
+make hooks                                                       # 28 offline controls, no egress
+```
+
+🟢 **The four rules that make it worth money, each paid for by a defect here:**
+1. **Resolve the default branch, never guess it** — `git ls-remote --symref` gives existence, branch and SHA in one request.
+2. **A `200` on a manifest is not a grant** — `4` of `20` declared nothing at all.
+3. **Compare the manifest's `name` with the slug** — `4` of `20` described a DIFFERENT project, two of them unrenamed `laravel/laravel` skeletons.
+4. **Never classify from the body of a canonical licence** — BigBlueButton's own LGPL text says *"any later version"* twice and settles nothing about BigBlueButton.
+
+### 🔴 `P229-R4` — rows to keep OUT of a SOW, with the reason
+
+| row | state | why not |
+|---|---|---|
+| [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **NON-OSI, noncommercial** | not buildable on commercially; invisible here for `4` mentions because the slug lost its `.com` |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic** | source-available, not open source |
+| [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) | 🔴 **UNKNOWN** | its `composer.json` is `laravel/laravel`'s; the project's own grant is unreadable from every channel here |
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | 🔴 **UNKNOWN** | serves `openmage/magento-lts`'s manifest at its root |
+| [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) · [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) | 🔴 **ABSENT** | cited on these shelves and resolving on no channel |
+
 ## Pass 228 — 2026-10-15 — FOUR RECIPES, AND THE FIRST ONE IS THE PASS'S OWN INSTRUMENT TURNED INTO A BILLABLE DELIVERABLE: A LICENCE AUDIT THAT KNOWS WHY NAIVE LICENCE AUDITS ARE `82%` WRONG
 
 🔵 **`4` patterns. Each names the exact repositories, the exact grant read first-hand this pass, and the wiring.**

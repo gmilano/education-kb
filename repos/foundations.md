@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — THE FOUNDATION ROW THIS KB LEANS ON HARDEST WAS PUBLISHED AS GRANTLESS, AND ITS LICENCE IS THE CANONICAL `GPL-3.0` BODY AT `COPYING.txt`
+
+🔵 **`0` new repository rows. `30` grants newly readable. `124` live cells confirmed, `0` wrong.** 🔵 **Evidence:** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · **Instrument:** [`p229-grant-ladder-reach`](../compose/code/p229-grant-ladder-reach/README.md)
+
+### 🔴 `P229-F1` — `moodle/moodle`, and the one name that was missing from the ladder
+
+| foundation row | grant, read first-hand `2026-10-15` | channel | bytes · `sha256`₁₂ |
+|---|---|---|---|
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **`GPL-3.0`** *(canonical body, title at offset `0`)* | `main/COPYING.txt` | `35 147` B |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **`GPL-2.0`** | `master/docs/License.txt` | `17 286` B · `224ac3d403e3` |
+| [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🟢 **`GPL-2.0`** | `master/docs/License.txt` | `17 286` B |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** | `master/html/license.txt` | `18 346` B |
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🟡 **`GPL-2.0-or-later` WITH TWO SPECIAL EXCEPTIONS** | `master/copying.txt` | `53 408` B |
+| [`kstateome/lti-launch`](https://github.com/kstateome/lti-launch) | 🟢 **`LGPL-3.0`** | `master/License.txt` | `7 651` B |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **`Apache-2.0`** | `main/pyproject.toml` | — |
+| [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | 🟢 **`AGPL-3.0`** | `main/package.json` | — |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | 🟢 **`LGPL-2.1`** | `main/license.txt` | `24 480` B · `eb2f25f8f165` |
+| [`foradian/fedena`](https://github.com/foradian/fedena) · [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟡 **`Apache-2.0` BY REFERENCE** | `NOTICE` | `679` / `680` B |
+
+🔴 **p228 probed six names on two guessed branches. `COPYING.txt` was not among them, so the most-cited platform on these shelves sat in the grantless class.** 🟢 **The ladder now resolves the REAL default branch from `git ls-remote --symref` and probes `40` paths in three tiers.**
+
+### 🟡 `P229-F2` — two rows whose state is NOT "has a licence", and the distinction is the deliverable
+
+- 🟡 **`nvaccess/nvda` is `or-later` WITH TWO SPECIAL EXCEPTIONS**, stated in the first line of its own `copying.txt`. 🔴 **A `GPL-2.0` cell is incomplete in the same way `Elgg`'s was at p228: it drops the half a studio needs to read before linking.** The exceptions are the whole reason NVDA can be used with certain non-free components, and no cell can carry them — the row must point at the file.
+- 🟡 **`fedena` is a grant BY REFERENCE.** Both forks serve a `679`/`680` B `NOTICE` that NAMES Apache-2.0 and links to its URL; neither serves the body at any of `40` paths. 🔵 **That is `p742`'s body-versus-reference distinction, and the pair differs by exactly ONE byte — a trailing full stop — which is a fork pair, not an alias.**
+
+### 🔴 `P229-F3` — `4` of `20` manifests describe somebody else's project
+
+🔴 **[`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) serves `"name": "openmage/magento-lts"` with `"license": ["OSL-3.0","AFL-3.0"]` at its root; [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) and [`LMS-Laravel/OLD-LMS-Laravel`](https://github.com/LMS-Laravel/OLD-LMS-Laravel) serve an unrenamed `laravel/laravel` skeleton.** 🟢 **`T229-M2`, the seventh non-grant subject: the licence is real, first-hand and correctly parsed, and it is a statement about the UPSTREAM. These three stay UNRESOLVED rather than being published with a borrowed grant.**
+
 ## Pass 228 — 2026-10-15 — THE FOUNDATION TIER WAS SWEPT END TO END FOR THE FIRST TIME: `468` GRANTS READ FIRST-HAND, **`1 372` CELLS CONFIRMED**, AND THE ONE WRONG FAMILY ON THIS SHELF ASSERTS NO NETWORK OBLIGATION ON A PLATFORM THAT HAS ONE
 
 🔵 **`0` new foundation rows. `1` family defect found and corrected in place. `1` grant published for a row carried with none. `468` grants read first-hand across `520` distinct slugs — the first shelf-wide grant read in this KB's history.**

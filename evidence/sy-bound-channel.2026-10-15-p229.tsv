@@ -1,0 +1,22 @@
+# ACTION SY (p229) - settle the GNU bound through a channel a root LICENSE cannot carry.
+# LIMB 1 FIRES AT 6 of 14 (threshold 3+). All six are Moodle plugins and the channel is
+# the mandated version.php header. 9 of the 26 BOUND cells are settled by them.
+# REJECTED, per p225/p227's standing rule: bigbluebutton/bigbluebutton's main/LICENSE is
+# 7652 B of CANONICAL LGPL-3.0 body, whose own text says 'any later version' twice. The
+# canonical body is NOT a channel for the project's bound. Counting it would have been
+# this pass's easiest false positive.
+slug	channel	bytes	bound	verdict
+Limekiller/moodle-block_openai_chat	main/version.php	1090	or-later	SETTLED
+adamjenkins/moodle-local_nomoreai	main/version.php	1141	or-later	SETTLED
+caiocarvalhofre/moodle-mod_maici	main/version.php	1175	or-later	SETTLED
+saylordotorg/moodle-local_ai_course_assistant	main/version.php	1244	or-later	SETTLED
+solin-repo/moodle-block_atrisk	main/version.php	1283	or-later	SETTLED
+yedidiaklein/moodle-local_aiquestions	main/version.php	1176	or-later	SETTLED
+bigbluebutton/bigbluebutton	main/LICENSE	7652	-	REJECTED-CANONICAL-BODY
+Berserk-hub150/moodle-ai-skill-navigator	-	-	-	NO-CHANNEL
+chamilo/chamilo-lms	master/index.php	159	-	UNSETTLED
+frappe/lms	main/pyproject.toml	2104	-	UNSETTLED
+instructure/canvas-lms	master/Gemfile	4005	-	UNSETTLED
+overhangio/tutor	main/tutor/__about__.py	2085	-	UNSETTLED
+penecho/penecho	main/package.json	11535	-	UNSETTLED
+unslothai/notebooks	main/pyproject.toml	749	-	UNSETTLED

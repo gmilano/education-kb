@@ -1,0 +1,50 @@
+# ACTION SW (p229) - the 45 CELL-WITHOUT-GRANT slugs re-probed on BOTH axes:
+# the real default branch from `git ls-remote --symref` (p228 guessed main|master) and
+# 40 paths in three tiers (root names / non-root paths these shelves record / manifests).
+# state=RESOLVED only when a grant is read AND attributable to THIS repository.
+slug	state	grant	channel	ref	head_sha	bytes	note
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	NO-GRANT	-	-	master	59da726edd9b9b453a940c4530212e062fa241b9	-	40 paths x refs, genuinely silent
+CreveXTech/canvas-lms-mcp	CHANNEL-SILENT	-	package.json	main	0310536c0dcad6b4071cc55481ac7eeae1fe6444	535	200 but no licence field: a manifest hit is not a grant
+DMontgomery40/mcp-canvas-lms	FOREIGN-MANIFEST	MIT	package.json	main	c0646ba10ac207d45cc2122d80b3b98e12b497d0	3461	manifest declares 'canvas-mcp-server' - T229-M2, not attributable to this slug
+Exhabition/brightspace-mcp-rs	RESOLVED	MIT	package.json	main	5954a0dd5e5305b3922ed7c5680d2ef922e4a5c3	512	
+Gaurav-Pande/AES_DL	NO-GRANT	-	-	master	a8dbb0e496ce5b8988191412699b45f6ad8a81af	-	40 paths x refs, genuinely silent
+LMS-Laravel/LMS-Laravel	FOREIGN-MANIFEST	MIT	composer.json	master	55ad5acbc42ec8ea2d887586f0c02eef0367f0a3	2614	manifest declares 'laravel/laravel' - T229-M2, not attributable to this slug
+LMS-Laravel/OLD-LMS-Laravel	FOREIGN-MANIFEST	MIT	composer.json	master	26dba8e4bead48e93fcee314f5ecdfc0f6a360c0	1712	manifest declares 'laravel/laravel' - T229-M2, not attributable to this slug
+Lumieducation/Lumi	RESOLVED	AGPL-3.0	package.json	master	236912f8e3c07a6b5c7ece4930b98fec2b6d3f6a	3600	
+MisterCommand/mcp-canvas-lms	RESOLVED	MIT	package.json	main	9fa50a8c7a32bdea063e6a1f95bdb9ec913793c5	909	
+OS4ED/openSIS-Classic	RESOLVED	GPL-2.0	docs/License.txt	master	5d546f20117e12e42b528f9ca91c7f6bd21fb21e	17286	
+OS4ED/openSIS-Responsive-Design	RESOLVED	GPL-2.0	docs/License.txt	master	5d546f20117e12e42b528f9ca91c7f6bd21fb21e	17286	
+ProjectsAndPrograms/school-management-system	NO-GRANT	-	-	main	6b6fae5426044f89c08d0dd101c7fa71f9042a59	-	40 paths x refs, genuinely silent
+Simon-Initiative/lti-example-tool	RESOLVED	MIT	package.json	master	3f4eac0ff2a2f474c9dc8163ec50afbc8cab43ec	1005	
+ZQR1101/xueyoujing-companion	NO-GRANT	-	-	main	98c3010c8ce167990f049f82678450f1aac6af5f	-	40 paths x refs, genuinely silent
+alfredang/ai-mms	FOREIGN-MANIFEST	OSL-3.0 | AFL-3.0	composer.json	main	0f7067f6586fdc8881337df7047ad64ca951d49e	7348	manifest declares 'openmage/magento-lts' - T229-M2, not attributable to this slug
+anthropics/prompt-eng-interactive-tutorial	NO-GRANT	-	-	master	0d277542e927652da25b0014c9b346723af55881	-	40 paths x refs, genuinely silent
+barneslardo/sis-demo	CHANNEL-SILENT	-	package.json	main	e0ffd5b42f5825f8d779c5702840061d65e1c0c4	1078	200 but no licence field: a manifest hit is not a grant
+bycs-lp/moodle-block_ai_chat	RESOLVED	GPL-3.0-or-later	version.php	main	c3bc465776986f0c10ec46c3345d284cbaf429c4	1235	Moodle mandated header; bound probed in a 200 B window
+bycs-lp/moodle-local_ai_injection	RESOLVED	GPL-3.0-or-later	version.php	main	0303fcf63ec2438a41b0bc43f982902f6c3153eb	1252	Moodle mandated header; bound probed in a 200 B window
+bycs-lp/moodle-local_ai_manager	RESOLVED	GPL-3.0-or-later	version.php	main	bd3f0e16b8ca9835ac30de1c0a40a516d4158c31	1147	Moodle mandated header; bound probed in a 200 B window
+dmitry-viskov/pylti1	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+educredentials/ec-issuer	CHANNEL-SILENT	-	pyproject.toml	main	8bafc99c44256d909f379a43af3cc93497d81d76	1452	200 but no licence field: a manifest hit is not a grant
+foradian/fedena	GRANT-BY-REFERENCE	Apache-2.0	NOTICE	master	333477b06f1de86015e1e073724ed386505407c2	679	NOTICE names the licence and points at its URL; the body is not served here
+formalms/formalms	RESOLVED	GPL-2.0	html/license.txt	master	446a77a9b9cbb20dacf008a2d53b2658fb5f5634	18346	
+gener8v/gener8v	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+h5p/h5p-interactive-video	RESOLVED	MIT	package.json	master	8e9d0d24984d8823c4758aeb323d64b43ae788f9	1147	
+ink-waffle/moodle-mcp	RESOLVED	MIT	package.json	main	719538eccd866bedbe2419879214d83a955474e4	973	
+ink-waffle/sisu-mcp	RESOLVED	MIT	package.json	main	c20eccd2f264b2a63fb28c3ce36d22a33fcc29ac	999	
+jakerains/scormplayer	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+jdolny/OneRoster	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+joojdev/academic-tracker-mcp	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+kstateome/lti-launch	RESOLVED	LGPL-3.0	License.txt	master	a952aadf81f63dbf9d7f80f56a9a437711cf6e6a	7651	
+lmscloud-io/moodle-aiprovider_openaicompatible	RESOLVED	GPL-3.0-or-later	version.php	main	040b74d5b13e799d19385dc2a86a69132be2e0b5	1152	Moodle mandated header; bound probed in a 200 B window
+marcusgreen/moodle-qtype_aitext	RESOLVED	GPL-3.0-or-later	version.php	main	513f479b59eade192a25bccafa1abb091467815c	1276	Moodle mandated header; bound probed in a 200 B window
+mebis-lp/moodle-local_ai_manager	RESOLVED	GPL-3.0-or-later	version.php	main	bd3f0e16b8ca9835ac30de1c0a40a516d4158c31	1147	Moodle mandated header; bound probed in a 200 B window
+moodle/moodle	RESOLVED	GPL-3.0	COPYING.txt	main	b7260e59a83124d6311c0217df3ba27ef6b9a7b0	35147	
+nicolaasmatthijs/xapicaliper	CHANNEL-SILENT	-	package.json	master	b79686f511172cd342480206c840157ccd51a0a9	522	200 but no licence field: a manifest hit is not a grant
+nvaccess/nvda	RESOLVED	GPL-2.0-or-later	copying.txt	master	7e3f7955b76f4af0dbb912347ac45eb748d2dea3	53408	GPL-2.0 or later WITH TWO SPECIAL EXCEPTIONS - the cell cannot carry the exceptions
+onbirdev/moodle-webservice_mcp	RESOLVED	GPL-3.0-or-later	version.php	main	198246e5d7121b7658e72e44549006753136ac70	1200	Moodle mandated header; bound probed in a 200 B window
+open-spaced-repetition/fsrs4anki-helper	NO-GRANT	-	-	main	29208f220f21ff994c199712a6aaac47636773bf	-	40 paths x refs, genuinely silent
+openedx/XBlock	RESOLVED	Apache-2.0	pyproject.toml	master	0033d77733fb2ea521a99d0ea756c32ee56e47a4	3344	license key
+os4ed/openSIS-Classic	RESOLVED	GPL-2.0	docs/License.txt	master	5d546f20117e12e42b528f9ca91c7f6bd21fb21e	17286	
+processing/p5	ABSENT	-	-	-	-	-	slug does not resolve at all - distinct from grantless
+projectfedena/fedena	GRANT-BY-REFERENCE	Apache-2.0	NOTICE	master	68a84ac445bf9ad5eb7dd5925388eb788bde9894	680	NOTICE names the licence and points at its URL; the body is not served here
+rabser/moodle-aiprovider_openwebui	RESOLVED	GPL-3.0-or-later	version.php	main	9ce854c5a0fafcf6d2b9a42d7f97925c6900bf64	1228	Moodle mandated header; bound probed in a 200 B window

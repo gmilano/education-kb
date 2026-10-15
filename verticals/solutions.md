@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — FIVE PLATFORM ROWS GAINED A FIRST-HAND GRANT, AND THE TWO THAT DID NOT ARE THE INTERESTING ONES
+
+🔵 **`0` new platform rows.** 🔵 **Evidence:** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · [`sy-bound-channel`](../evidence/sy-bound-channel.2026-10-15-p229.tsv)
+
+### 🟢 `P229-V1` — the platform grants, each read at a path p228's ladder did not reach
+
+| platform | grant | channel | what a studio may do |
+|---|---|---|---|
+| **Moodle** · [`moodle/moodle`](https://github.com/moodle/moodle) | 🟢 **`GPL-3.0`** *(canonical, `35 147` B)* | `main/COPYING.txt` | 🟢 build plugins; 🔴 anything linked in must be GPL-3.0-compatible — which is why the `oat-sa` `GPL-2.0-only` assessment tier stays a separate LTI tool |
+| **openSIS Classic** · [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **`GPL-2.0`** | `master/docs/License.txt` | 🟡 SIS for a school district; GPL-2.0 is one-way incompatible with GPL-3.0 hosts |
+| **openSIS Responsive** · [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🟢 **`GPL-2.0`** | `master/docs/License.txt` | 🔵 serves the SAME `HEAD` SHA as openSIS-Classic — treat as one codebase under two names |
+| **Forma LMS** · [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** | `master/html/license.txt` | 🟡 corporate LMS, Italian-origin, EMEA |
+| **Fedena** · [`foradian/fedena`](https://github.com/foradian/fedena) | 🟡 **`Apache-2.0` BY REFERENCE** | `NOTICE` | 🟡 permissive if the reference holds — ask for a `LICENSE` body before building on it |
+| **Lumi (H5P desktop)** · [`Lumieducation/Lumi`](https://github.com/Lumieducation/Lumi) | 🟢 **`AGPL-3.0`** | `main/package.json` | 🔴 network copyleft: a hosted deployment triggers source disclosure |
+
+### 🔴 `P229-V2` — `LMS-Laravel` is not MIT, and nothing here can say what it is
+
+🔴 **Both [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) and [`LMS-Laravel/OLD-LMS-Laravel`](https://github.com/LMS-Laravel/OLD-LMS-Laravel) serve a `composer.json` declaring `"name": "laravel/laravel"` — the unrenamed framework skeleton. The `MIT` in it is LARAVEL's grant.** 🟡 **Published as `FOREIGN-MANIFEST`: the platform's own licence is UNKNOWN from every channel this session can reach, and a proposal that calls it MIT is quoting the scaffold.**
+
+### 🟢 `P229-V3` — six Moodle plugin platforms settle their BOUND, and one famous row does not
+
+🟢 **`ACTION SY` settled `9` of the `26` `BOUND` cells at `version.php`: [`Limekiller/moodle-block_openai_chat`](https://github.com/Limekiller/moodle-block_openai_chat), [`adamjenkins/moodle-local_nomoreai`](https://github.com/adamjenkins/moodle-local_nomoreai), [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici), [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant), [`solin-repo/moodle-block_atrisk`](https://github.com/solin-repo/moodle-block_atrisk) and [`yedidiaklein/moodle-local_aiquestions`](https://github.com/yedidiaklein/moodle-local_aiquestions) are all `GPL-3.0-or-later`.**
+
+🔴 **[`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) is NOT settled, and the reason is the trap p225 and p227 both named:** its `main/LICENSE` is `7 652` B of CANONICAL LGPL-3.0 body, whose own text contains *"any later version"* twice. 🟢 **The canonical body is not a channel for the project's bound. Rejected rather than counted — this pass's easiest false positive.**
+
+🟡 **`chamilo/chamilo-lms`, `frappe/lms`, `instructure/canvas-lms`, `overhangio/tutor`, `penecho/penecho` and `unslothai/notebooks` stay at the CONSERVATIVE `-only` reading, resting on ABSENCE, and this page says so rather than implying a read.**
+
 ## Pass 228 — 2026-10-15 — THE PLATFORM TIER GAINS A SECOND PERMISSIVELY BUILDABLE MEMBER FROM A RE-READ AND LOSES A `GPL` READING THAT UNDERSTATED A **NETWORK-USE OBLIGATION** — THE SECOND CONSECUTIVE PASS IN WHICH THE TIER CHANGED WITHOUT A SINGLE NEW ROW
 
 🔵 **`0` new platform rows *(`9` of `9` named platforms already carried, for a THIRD pass)*. `2` carried platform grants corrected on first-hand reads. `1` of the two corrections runs AGAINST Globant and `1` runs against a client — the first pass on these shelves to find one of each.**

@@ -1,0 +1,8 @@
+# ACTION SH (standing since p226) - the refuted-claims gate run INBOUND on p229's raw
+# search records, BEFORE any shelf prose was written. Honoured a FOURTH time.
+# Table: st-refuted-claims.2026-10-15-p228.tsv (15 subjects). Records: 30 across 7 verbatim queries.
+# RESULT: 0 HITS, 3 near misses, all three correctly silent.
+subject	record	verdict
+EU AI Act Annex III education high-risk date	"the EU AI Act classifies education AI as high-risk, while the U.S. landscape remains fragmented"	NEAR-MISS-CORRECTLY-SILENT: states the classification without a DATE, and the refuted pattern is the August-2026 date claim
+openeducat bare LGPL-3.0 read as a silence	"OpenEduCat uses LGPLv3 and is built on Odoo"	NEAR-MISS-CORRECTLY-SILENT: names the grant, does not call it unspecified
+openeducat bare LGPL-3.0 read as a silence	"Moodle for learning management, Koha for library management, OpenEduCat for education ERP"	NEAR-MISS-CORRECTLY-SILENT: subject named, no licence claim at all

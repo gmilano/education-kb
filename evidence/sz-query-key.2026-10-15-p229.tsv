@@ -1,0 +1,11 @@
+# ACTION SZ (p229) - key the inbound gate on the (query, record) PAIR. LIMB 1 FIRES.
+# Run OFFLINE over p228's own sp-subject-narrowing records, exactly as registered.
+# SP dropped a genuine EU record because the RECORD carried no EU token. SZ keys on the
+# QUERY's jurisdiction, re-admits that record, and still drops all five Vietnamese ones.
+# 6/6 controls pass. An UNSCOPED query falls back to SP's record test, so SZ never sees less.
+sp_verdict	sz_verdict	sz_reason	query
+DROPPED-REVIEW	KEPT	EU-BY-QUERY	AI education EMEA 2026 adoption regulation players
+KEPT	KEPT	EU-BY-QUERY	AI education EMEA 2026 adoption regulation players
+NEWLY-MATCHED	DROPPED	SUBJECT-ABSENT	AI education EMEA 2026 adoption regulation players
+DROPPED-REVIEW	DROPPED	DROPPED-BY-QUERY-JURISDICTION	AI education APAC 2026 adoption regulation players
+DROPPED-AS-INTENDED	DROPPED	SUBJECT-ABSENT or QUERY-JURISDICTION (x5)	Vietnam Decision 33/2026/QD-TTg high-risk AI education

@@ -1,0 +1,30 @@
+North America AI-in-education market about USD 951 million in 2024, projected USD 2.3 billion by 2029, 15.9% CAGR
+Technavio report covering 2026-2030 cites a 41.7% North American growth figure; a statistics roundup says North America leads at 36% share
+86% of students across 16 countries already use AI in their studies
+only 10% of institutions have formal AI guidelines and 71% of U.S. teachers lack AI training
+no equivalent to the FDA exists for educational technology; adoption decided by individual schools or districts
+the EU AI Act classifies education AI as high-risk, while the U.S. landscape remains fragmented, with states like Colorado and Texas introducing piecemeal requirements
+UNESCO IESALC working paper with UNU-IAS: survey of 200 institutions in 19 countries, fielded August to October 2025
+Baker McKenzie: many Latin American countries have not yet passed fully harmonized AI laws
+99% of LATAM startups use some AI in internal operations; Ednova (Chile) named as an example
+LATAM is the third-largest market for generative AI app downloads, citing CENIA
+CompTIA 2026 outlook: 94% of organizations at least somewhat likely to invest in AI-specific training in 2026
+Workday study reports 38% of EMEA organisations have yet to begin piloting the technologies
+OneTrust reports 87% of organisations encourage AI agents but only 47% have governance
+49% of APAC businesses cited insufficient infrastructure for real-time data processing
+Pearson and TCS announced a multi-year AI learning alliance
+IMARC Group valued the global market at USD 6.4 Billion in 2025 and expects USD 79.6 Billion by 2034 at 31.35% CAGR
+another estimate: USD 8.3 billion in 2025 and about USD 11.4 billion in 2026 growing at 25.9% CAGR
+a third gives USD 7.52 billion for 2025 and USD 10.6 billion for 2026, a CAGR of 40.9%
+global student AI usage surged from 66% in 2024 to 92% in 2025
+AI tutors no longer experimental; language learning fastest-growing segment; K-12 accounted for 45.62% of total adoption
+cloud-based solutions held 71.22% market share in 2024
+market maturity rated 35/100, most institutions still in pilot mode
+OpenEduCat uses LGPLv3 and is built on Odoo, which is a framework with CRM, accounting and HR
+Moodle for learning management, Koha for library management, OpenEduCat for education ERP
+microsoft/ai-agents-for-beginners is MIT licensed with about 67,000 stars as of June 2026
+pguso/agents-from-scratch is MIT-licensed with about 796 stars
+Hermes Agent is MIT-licensed with 180,000+ GitHub stars since its February 2026 launch
+Germany: Conference of Education Ministers adopted an AI recommendation in October 2024; education run by the 16 states
+Sweden: a 2025 government assignment asks higher education institutions to report on integrating AI into courses
+Netherlands: no national AI education policy found

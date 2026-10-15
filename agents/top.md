@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — `23` OF THE `45` "GRANTLESS" SLUGS WERE NEVER GRANTLESS: THE LADDER WAS SIX NAMES AND TWO GUESSED BRANCHES, AND FOUR OF THE "MISSING" REPOSITORIES WERE THE HARVESTER'S OWN TRUNCATIONS
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `5` of `5` verifiable candidates from this pass's global queries were ALREADY CARRIED, published as a measurement rather than padded. `6` registered actions discharged: `SW` *(the registered highest priority)* on limb `1` at `23`, `SX` on limb `2`, `SY` on limb `1` at `6`, `SZ` on limb `1`, plus the standing `SH`, `RE` and `PD`. `ACTION QO` CLOSED after ELEVEN passes — the gate is a `make` target. `124` live cells confirmed, `0` wrong. `30` grants newly readable. `2` defects found in this pass's own instruments before publishing.**
+
+🔵 **Evidence:** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · [`sw-slug-truncation`](../evidence/sw-slug-truncation.2026-10-15-p229.tsv) · [`sw-recovered-slugs`](../evidence/sw-recovered-slugs.2026-10-15-p229.tsv) · [`sx-withdrawn-gate`](../evidence/sx-withdrawn-gate.2026-10-15-p229.tsv) · [`sy-bound-channel`](../evidence/sy-bound-channel.2026-10-15-p229.tsv) · [`sz-query-key`](../evidence/sz-query-key.2026-10-15-p229.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p229.tsv) · [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv) · [`pd-channel-map`](../evidence/pd-channel-map.2026-10-15-p229.tsv) · **Instrument:** [`p229-grant-ladder-reach`](../compose/code/p229-grant-ladder-reach/README.md) *(`28` controls)*
+
+### 🔴 `P229-A1` — the agent shelf's Moodle tier had its grant all along, in the file Moodle mandates
+
+🟢 **Nine agent-shelf rows that p228 published as `CELL-WITHOUT-GRANT` carry `GPL-3.0-or-later`, read first-hand from `version.php` — the header the Moodle plugin standard REQUIRES, which is why it is a channel and not a guess.**
+
+| agent row | grant, read first-hand `2026-10-15` | channel |
+|---|---|---|
+| [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`bycs-lp/moodle-local_ai_injection`](https://github.com/bycs-lp/moodle-local_ai_injection) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`rabser/moodle-aiprovider_openwebui`](https://github.com/rabser/moodle-aiprovider_openwebui) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | 🟢 **`GPL-3.0-or-later`** | `main/version.php` |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) · [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** | `main/package.json` |
+
+🟡 **Commercially this is the difference between "we think this plugin is GPL" and "we read its grant": every one of these is `-or-later`, so each may enter a `GPL-3.0` Moodle host without the one-way incompatibility that `ACTION RQ` found across the whole `oat-sa` assessment tier.**
+
+### 🔴 `P229-A2` — the MCP tier is `MIT`, and one row is not what its manifest says
+
+🟢 **`MIT`, read first-hand from `package.json`:** [`MisterCommand/mcp-canvas-lms`](https://github.com/MisterCommand/mcp-canvas-lms) · [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) · [`Exhabition/brightspace-mcp-rs`](https://github.com/Exhabition/brightspace-mcp-rs) · [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) · [`h5p/h5p-interactive-video`](https://github.com/h5p/h5p-interactive-video)
+
+🔴 **And `4` of the `20` manifests read this pass declare a DIFFERENT PROJECT** — [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) serves `openmage/magento-lts`'s `composer.json` at its root and [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) an unrenamed `laravel/laravel` skeleton. 🟢 **`T229-M2`: a manifest's `name` is a claim about WHOSE manifest it is. Compare it with the slug before attributing, or publish an upstream's licence as the repository's.**
+
+### 🔴 `P229-A3` — `0` new rows, and the discovery rate measured for a SEVENTH consecutive pass
+
+🟢 **`5` of `5` verifiable candidates returned by this pass's global queries were already on these shelves** — `microsoft/ai-agents-for-beginners` *(`122` mentions here)*, `pguso/agents-from-scratch` *(`104`)*, `rohitg00/ai-engineering-from-scratch` *(`131`)*, `avinash201199/free-ai-agents-resources` *(`35`)* and `oaknational/oak-ai-lesson-assistant` *(`11`)*. 🔵 **`ACTION SR`'s DISCOVERY SATURATION holds, and the budget went to depth exactly as it prescribed: `30` grants newly readable against `0` new names.**
+
 ## Pass 228 — 2026-10-15 — `ACTION ST` BUILT THE GATE THAT WAS SUPPOSED TO CLEAR THE LICENCE SHELF. IT REPORTED `11` DEFECTS, **`9` OF THEM WERE THE GATE'S OWN** — AND THE `2` THAT SURVIVED INCLUDE THE GIBBON ERROR RUNNING IN THE DIRECTION THAT COSTS A CLIENT
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — and that is a MEASUREMENT, published below rather than padded. `4` registered actions discharged: `ST` *(the registered highest priority)* on limb `1`, `SQ` on limb `1` at `4` of `4`, `SP` on limb `2`, `SR` on NEITHER limb. `468` grants read first-hand. `3` live wrong cells corrected in place. `2` rows added to the refuted-claims table and `1` LIVE PATTERN DEFECT fixed in it. `9` false findings caught in this pass's own instrument before publishing, plus `2` more after. `30` controls.**

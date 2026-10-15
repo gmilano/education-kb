@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 229 — `0` NEW TRENDING REPOS, AND THE REASON IS WORTH MORE THAN A ROW: THE SHELF'S OWN NAME-READER HAS BEEN TRUNCATING `31` REPOSITORIES AT THEIR FIRST DOT
+
+🔵 **`0` new repository rows. `5` of `5` candidates already carried *(seventh consecutive measured discovery rate)*. `30` grants newly readable on rows already here.**
+
+🔵 **Evidence:** [`sw-slug-truncation`](../evidence/sw-slug-truncation.2026-10-15-p229.tsv) · [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv)
+
+### 🔴 `T229-R1` — the `ABSENT` state, which p228 could not express
+
+🟢 **p228's `CELL-WITHOUT-GRANT` conflated two different facts: *"this repository publishes no grant"* and *"this slug does not resolve at all"*. `git ls-remote` separates them in one request, and the split is `39`/`6`.**
+
+| state | slugs | meaning |
+|---|---|---|
+| 🟢 `RESOLVED` | **23** | grant read first-hand AND attributable to this repository |
+| 🟡 `GRANT-BY-REFERENCE` | `2` | `NOTICE` names the licence and links it |
+| 🔴 `FOREIGN-MANIFEST` | `4` | the manifest declares a DIFFERENT project |
+| 🟡 `CHANNEL-SILENT` | `4` | `200` on a manifest that declares no licence at all |
+| 🔴 `NO-GRANT` | `6` | genuinely silent at `40` paths × up to `3` refs |
+| 🔴 `ABSENT` | `6` | **the slug does not resolve** — `4` of them this KB's own truncations |
+
+🔴 **`2` of the `6` `ABSENT` are not truncations and not typos: [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) and [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) are cited on these shelves and do not resolve on any channel.** 🟡 **A dead slug on a trending shelf is a different failure from a missing licence, and it is the one a client notices first.**
+
+### 🟢 `T229-R2` — a `200` is not a grant, and `4` rows prove it
+
+🟡 **[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp), [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo), [`nicolaasmatthijs/xapicaliper`](https://github.com/nicolaasmatthijs/xapicaliper) and [`educredentials/ec-issuer`](https://github.com/educredentials/ec-issuer) all serve a manifest at `200` that declares NO licence field.** 🔵 **Counting a manifest hit as a resolution would have repeated p228's own headline one layer down — a token whose subject is not a grant — so `CHANNEL-SILENT` is published as its own state.**
+
 ## 2026-10-15 — Pass 228 — FIFTH CONSECUTIVE BLANK ON THE MANDATED TRENDING QUERY, AND THIS PASS FINALLY MEASURED THE ALTERNATIVE: THE USE-CASE CHANNEL RETURNED `0` NEW ROWS TOO
 
 🔵 **`0` new repository rows. The mandated trending query is run anyway, because a cheap query that bounds a claim is worth keeping even when it discovers nothing.**

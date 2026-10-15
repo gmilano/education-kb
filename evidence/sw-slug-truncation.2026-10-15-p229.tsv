@@ -1,0 +1,31 @@
+# ACTION SW / T229-1 (p229) - repository names containing a DOT, truncated by p228's harvester.
+# SLUG_RE allows '.' inside the name AND terminates on '.', and is NON-GREEDY, so the
+# lookahead wins at the first dot: processing/p5.js -> processing/p5.
+# 0 of 12 truncations resolve to a DIFFERENT real repository, so the defect costs SILENCE,
+# never a wrong grant attributed to the wrong subject. Measured, not assumed.
+mentions	true_slug	harvested_as	gated_by_p228
+36	JushBJJ/Mr.-Ranedeer-AI-Tutor	JushBJJ/Mr	GATED-BY-p228
+25	dmitry-viskov/pylti1.3	dmitry-viskov/pylti1	GATED-BY-p228
+8	jdolny/OneRoster.NET	jdolny/OneRoster	GATED-BY-p228
+5	paurushrai/lti-1.3-node-nextjs-starter	paurushrai/lti-1	not-in-520
+5	ucfopen/pylti1.3	ucfopen/pylti1	not-in-520
+4	nakafaai/nakafa.com	nakafaai/nakafa	not-in-520
+4	theopenem/OneRoster.NET	theopenem/OneRoster	not-in-520
+3	processing/p5.js	processing/p5	GATED-BY-p228
+3	scrosseye/persuade_corpus_2.0	scrosseye/persuade_corpus_2	not-in-520
+3	ramsrigouthamg/Questgen.ai	ramsrigouthamg/Questgen	not-in-520
+2	UOC/java-lti-1.3	UOC/java-lti-1	not-in-520
+2	eclipse/paho.mqtt.java	eclipse/paho	not-in-520
+2	UOC/java-lti-1.3-provider-example	UOC/java-lti-1	not-in-520
+2	dmitry-viskov/pylti1.3-django-example	dmitry-viskov/pylti1	GATED-BY-p228
+2	dmitry-viskov/pylti1.3-flask-example	dmitry-viskov/pylti1	GATED-BY-p228
+1	gener8v/gener8v.tools.pii-scanner	gener8v/gener8v	GATED-BY-p228
+1	dkavargy/ESCOPlus2.0	dkavargy/ESCOPlus2	not-in-520
+1	JuliaPluto/Pluto.jl	JuliaPluto/Pluto	not-in-520
+1	lamethods/lamethods.github.io	lamethods/lamethods	not-in-520
+1	ipti/br.tag	ipti/br	not-in-520
+1	fga-eps-mds/2017.2-MerendaMais	fga-eps-mds/2017	not-in-520
+1	jp-cos/jp-cos.github.io	jp-cos/jp-cos	not-in-520
+1	UOC/java-lti-1.3-platform	UOC/java-lti-1	not-in-520
+1	UOC/java-lti-1.3-provider	UOC/java-lti-1	not-in-520
+1	eecs-autograder/autograder.io	eecs-autograder/autograder	not-in-520

@@ -1,0 +1,24 @@
+# ACTION SX (p229) - the cells a <!--corrected--> marker hides from the gate built to check them.
+# MECHANISM: harvest_cells.NARRATIVE_RE matches the word 'corrected', and the marker IS
+# the string <!--corrected-->. The marker matches the pattern that suppresses the cell.
+# FIX: an HTML comment is METADATA about the line, not prose on it - strip, then narrow
+# with p228's five predicates unchanged.
+# VERDICT: LIMB 2. 54 cells gated, 0 corrected values wrong.
+# The draft rule (last token) produced 24 findings; the positional fix (T229-SX1, first
+# token) cut them to 10; reading all 10 on their lines left 0. Every one was an
+# AUDIT-ROW-STRUCK-VALUE: a row whose PURPOSE is to show a wrong value beside its
+# correction, so the marker sits on the withdrawn value BY DESIGN.
+slug	cell_token	first_hand	verdict	why
+untisapi/untis4j	GPL-3.0	LGPL-3.0	AUDIT-ROW	col1 is the narrative "published GPL-3.0, blob LGPL-3.0"; the live cell is LGPL-3.0
+JuneYaooo/lineage-skill	MIT	Apache-2.0	AUDIT-ROW	struck value beside the truth column Apache-2.0
+FWU-DE/ais-chat	Apache-2.0	AGPL-3.0	AUDIT-ROW	struck value; truth column reads AGPL-3.0
+ankitects/anki	CC-BY-SA-4.0	AGPL-3.0	AUDIT-ROW	struck value; truth column reads AGPL-3.0 (P455)
+pupilfirst/pupilfirst	CC-BY-SA-4.0	MIT	AUDIT-ROW	struck value; truth column reads MIT (P456)
+oat-sa/tao-core	LGPL-3.0	GPL-2.0	AUDIT-ROW	struck value; truth column reads GPL-2.0 (P960)
+portabilis/i-educar	LGPL-3.0	GPL-2.0	AUDIT-ROW	struck value; truth column reads GPL-2.0 (P960)
+canyongbs/advisingapp	Elastic-2.0	Elastic	NOTATION	family vs SPDX id, not a disagreement
+lovejzzz/CourseMapper	MIT	NO-FIELD	AUDIT-ROW	struck value; truth column reads "nothing"
+1EdTech/openbadges-specification	Apache-2.0	NO-GRANT	AUDIT-ROW	struck value; truth column reads "no licence file at 22 probed paths"
+Zion-support/curriculum-alignment-checker	MIT	NO-GRANT	AUDIT-ROW	struck value; truth column reads "nothing"
+anthropics/prompt-eng-interactive-tutorial	MIT	NO-GRANT-AT-MY-40-PATHS	MY-REACH	MIT IS served at AmazonBedrock/LICENSE (200) - p229 ladder reach limit, cell is right
+ProjectsAndPrograms/school-management-system	MIT	NO-GRANT-AT-MY-40-PATHS	MY-REACH	MIT IS served at student_panel/LICENSE (200) - ladder reach limit, cell is right

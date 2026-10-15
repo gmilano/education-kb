@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 229 — WHAT IS NEW THIS WEEK IS A **DEFECT IN HOW THIS KB READS NAMES**, NOT AN AGENT: `0` NEW ROWS FROM FIVE GLOBAL QUERIES, AND `31` REPOSITORY NAMES ON THESE SHELVES HAVE BEEN SILENTLY TRUNCATED AT THEIR FIRST DOT
+
+🔵 **`0` new agent rows. `5` of `5` verifiable candidates already carried. `30` grants newly readable on rows this KB already had. `124` live cells confirmed against first-hand payloads, `0` wrong.**
+
+🔵 **Evidence:** [`sw-slug-truncation`](../evidence/sw-slug-truncation.2026-10-15-p229.tsv) · [`sw-recovered-slugs`](../evidence/sw-recovered-slugs.2026-10-15-p229.tsv) · [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv)
+
+### 🔴 `T229-1` — the trending shelf's most-cited missing grant was a regular expression
+
+🟢 **`p228-shelf-gate`'s slug pattern allows `.` INSIDE a repository name and TERMINATES on `.`, and it is non-greedy — so the lookahead wins at the first dot and the name is cut there.**
+
+| cited here | harvested as | the grant that was invisible |
+|---|---|---|
+| [`processing/p5.js`](https://github.com/processing/p5.js) ×`3` | `processing/p5` | 🟢 **`LGPL-2.1`** *(`license.txt`, `24 480` B, `eb2f25f8f165`)* |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) ×`25` | `dmitry-viskov/pylti1` | 🟢 **`MIT`** *(`1 070` B, `5aef77eb4471`)* |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ×`8` | `jdolny/OneRoster` | 🟢 **`MIT`** *(`1 066` B, `1dc50226c38a`)* |
+| [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) ×`4` | `nakafaai/nakafa` | 🔴 **NON-OSI, NONCOMMERCIAL** *(`7 705` B)* |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) ×`36` | `JushBJJ/Mr` | 🟡 genuinely grantless — **CONFIRMS p176's standing verdict** |
+
+🔴 **`31` dotted names, `122` mentions, and the collapse is MANY-TO-ONE:** four distinct `UOC/java-lti-1.3*` repositories all harvest to `UOC/java-lti-1`, and three `dmitry-viskov/pylti1.3*` repositories to one slug. 🟢 **The honest bound, measured: `0` of `12` truncations resolve to a DIFFERENT real repository, so the cost is SILENCE and never a wrong licence on the wrong subject.**
+
+🟡 **The one that matters commercially is `nakafa.com`: a NON-OSI noncommercial grant that stayed invisible for four mentions because the slug lost its `.com`. A studio cannot build on it, and nothing on these shelves said so until now.**
+
+### 🟢 `T229-2` — `ucfopen/pylti1.3` and `dmitry-viskov/pylti1.3` serve a BYTE-IDENTICAL `MIT`
+
+🟢 **Same `1 070` B, same `sha256`₁₂ `5aef77eb4471`. So do [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) and [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) at `1 066` B / `1dc50226c38a`.** 🔴 **Per p222's `lxHive` rule and p228's `T228-A2`, byte identity is CORROBORATION and never proof of an alias — a licence body fingerprints the TEXT, not the repository. Both pairs are published as FORK PAIRS, not aliases.**
+
+### 🔴 `T229-3` — the region-shaped query returned nothing on education for EMEA and APAC, a THIRD time
+
+🟢 **p228's rule reproduces at `2` for `2`:** a region-shaped query returns education content only where the region has PAN-REGIONAL INSTITUTIONS that publish about it as a unit.
+
+- 🟢 **LATAM outperformed again** — UNESCO IESALC with UNU-IAS, `200` institutions across `19` countries *(fielded Aug–Oct 2025)*; CENIA/ECLAC on investment below the global average.
+- 🔴 **EMEA returned enterprise AI only** *(CompTIA, a 2023 Workday study)* — no ministry, no university, no EdTech vendor, no education instrument.
+- 🔴 **APAC returned vendor announcements only** *(Pearson/TCS, LearnUpon, Alteryx)* — no education regulation and no school adoption figure.
+- 🟡 **North America is non-blank with a blank inside it:** USD `951`M *(2024)* → USD `2.3`B *(2029)*, `10%` of institutions with formal AI guidelines, `71%` of US teachers untrained — and **not one named vendor**, no Canadian and no Mexican source.
+- 🟢 **The country-shaped line reproduces p228's `ACTION SQ` exactly:** Germany's KMK recommendation is **October 2024** and guides rather than binds the `16` Länder; Sweden's 2025 assignment is **higher education**, not schools, and the "Sweden has no AI-in-education strategy" claim circulating this week is an **advocacy op-ed**, not a ministry position; the Netherlands returns nothing a **fourth** time.
+
+🔵 **All five regions carry their verbatim query** → [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv). 🟡 **`EMEA` and `APAC` stay RETIRED as research units and kept as reporting buckets.**
+
 ## 2026-10-15 — Pass 228 — WHAT IS NEW THIS WEEK IS A **GRANT**, NOT AN AGENT: `0` NEW AGENT ROWS FROM THREE USE-CASE QUERIES, AND THE ONE MOVEMENT ON THE SHELF IS A PERMISSIVELY LICENSED TEACHER-FACING ASSET THAT WAS ALREADY HERE WITHOUT A LICENCE CELL
 
 🔵 **`0` new agent rows. `5` of `5` verifiable candidates already carried. `1` grant published for a carried row that had none. `468` grants read first-hand shelf-wide.**

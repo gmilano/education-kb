@@ -1,0 +1,9 @@
+# ACTION PD / Gap 241 / Gap 242 - channel map, re-tested a TWENTY-FOURTH time, 2026-10-15 21:0x UTC.
+channel	code	verdict
+raw.githubusercontent.com	200	WORKING - served 468 (p228) + ~2000 probes (p229) with no throttling across 8 shards
+github.com/<o>/<r>/info/refs?service=git-upload-pack	200	WORKING - existence, DEFAULT BRANCH and HEAD SHA in one request
+registry.npmjs.org	200	WORKING
+pypi.org	200	WORKING
+api.github.com	403	BLOCKED - 23rd consecutive
+github.com HTML	403	BLOCKED
+git ls-remote on an INVENTED slug	-	fatal: could not read Username - an auth challenge, NOT a 404; it still discriminates

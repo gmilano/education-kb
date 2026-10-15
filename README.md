@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — `23` OF THE `45` "GRANTLESS" SLUGS HAD A LICENCE ALL ALONG, AND FOUR OF THE "MISSING REPOSITORIES" WERE THIS KB'S OWN REGEX CUTTING A NAME AT ITS FIRST DOT
+
+⏱️ **Second pass of this date.** p228 ran earlier on 2026-10-15; this one ran 20:4x → 21:3x UTC. Stated because these shelves pin SHAs and two passes sharing a date is exactly what a later pass reads as a contradiction.
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `5` of `5` verifiable candidates were already carried, published as a measurement rather than padded. `6` registered actions discharged: `SW` *(the registered highest priority)* on limb `1` at `23`, `SX` on limb `2`, `SY` on limb `1` at `6`, `SZ` on limb `1`, plus the standing `SH`, `RE` and `PD`. `ACTION QO` CLOSED after ELEVEN passes. `30` grants newly readable, `124` live cells confirmed, `0` wrong. `2` new subject classes. `2` defects found in this pass's own instruments before publishing. `28` controls.**
+
+### 🔴 The headline: the ladder was six names and two guessed branches
+
+p228 read `468` grants and reported `149` cells across `45` slugs as `CELL-WITHOUT-GRANT`, noting its own reach — `6 paths x 2 refs`. p229 extended both axes and the class dissolved:
+
+| state | slugs |
+|---|---|
+| 🟢 `RESOLVED` — a grant read first-hand AND attributable | **23** |
+| 🟡 `GRANT-BY-REFERENCE` · `CHANNEL-SILENT` | `2` · `4` |
+| 🔴 `FOREIGN-MANIFEST` · `NO-GRANT` · `ABSENT` | `4` · `6` · `6` |
+
+🔴 **The most load-bearing row on these shelves was in that class.** [`moodle/moodle`](https://github.com/moodle/moodle) serves the canonical `GPL-3.0` body at `main/COPYING.txt` — `35 147` B, title at offset `0`. p228's six names included `COPYING` and not `COPYING.txt`.
+
+🟢 **The ref axis earned its place independently:** `git ls-remote --symref` returns existence, the REAL default branch and the HEAD SHA in one request, so a repository on `develop` or `MOODLE_405_STABLE` stops being indistinguishable from a grantless one.
+
+### 🔴 `T229-1` — a repository name is truncated at its first dot, in the harvester
+
+```python
+SLUG_RE = …/([A-Za-z0-9][A-Za-z0-9_.-]*?)(?=[)\s`,.;:'"\]]|$)
+```
+
+The name **allows** `.` and the terminator **contains** `.`, and the quantifier is **non-greedy** — so the lookahead wins at the first dot. `31` dotted names are cited across the live shelves, `122` mentions, and the collapse is many-to-one: four `UOC/java-lti-1.3*` repositories become one slug.
+
+🟢 **Recovered by reading the TRUE slug:** `processing/p5.js` **`LGPL-2.1`** · `dmitry-viskov/pylti1.3` **`MIT`** · `jdolny/OneRoster.NET` **`MIT`** · `gener8v/gener8v.tools.pii-scanner` **`MIT`** · 🔴 `nakafaai/nakafa.com` **NON-OSI, noncommercial** · 🟡 `JushBJJ/Mr.-Ranedeer-AI-Tutor` genuinely grantless, **confirming p176**.
+
+🟢 **The honest bound, measured: `0` of `12` truncations resolve to a DIFFERENT real repository.** The defect costs SILENCE, never a wrong licence on the wrong subject. It is p224's `T224-2` mirrored — that pass taught the harvester to reject a dotted OWNER, and the same dot in the REPOSITORY half has been cutting names ever since.
+
+### 🔴 `ACTION SX` fires limb `2`, and the instrument that doubted the marker was wrong fifteen times
+
+🟢 **The mechanism was exactly as registered:** `harvest_cells.NARRATIVE_RE` matches the word `corrected`, and the marker IS `<!--corrected-->` — **the marker trips the pattern that suppresses it**. `106` marked lines, none gated by p228.
+
+🔴 **The risk was not.** `54` cells gated, `0` corrected values wrong. The draft rule produced `24` findings; the positional fix (`T229-SX1` — the cell is the FIRST token on a row, never the last) cut them to `10`; reading all ten on their lines left `0`. Every survivor was an **`AUDIT-ROW-STRUCK-VALUE`**: a row whose purpose is to show a wrong value beside its correction, so the marker sits on the withdrawn value by design.
+
+🟢 **So p228's exclusion was right for a reason p228 never stated.** Two classes join its five: `AUDIT-ROW-STRUCK-VALUE` and 🆕 **`FOREIGN-MANIFEST`** — [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) serves `openmage/magento-lts`'s `composer.json` at its root, and two `LMS-Laravel` repositories serve an unrenamed `laravel/laravel` skeleton. **A manifest's `name` is a claim about whose manifest it is.**
+
+### 🟢 `ACTION SY` at `6` of `14`, and the false positive it refused
+
+Six Moodle plugins settle `9` of the `26` `BOUND` cells to `GPL-3.0-or-later` at the mandated `version.php`. 🔴 **BigBlueButton does not: its `LICENSE` is the canonical LGPL-3.0 body, whose own text says *"any later version"* twice. The canonical body is not a channel — p225 and p227's standing rule, and the easiest false positive on offer.**
+
+### 🟢 `make hooks` exists, and p229 names why it took eleven passes
+
+🔴 **The suites only pass from their own working directory.** `python3 -I compose/code/p228-shelf-gate/test_shelf_gate.py` dies on `ModuleNotFoundError: classify_grant` because `-I` strips the script's directory from `sys.path`; the same file passes `30`/`30` from inside its folder. `p355-cwd-portability`'s class — a working gate stayed a one-off because it could not be invoked from where a hook runs.
+
+### 🔴 Regional coverage — the rule reproduces, and two regions are blank on education for a third time
+
+🟢 **LATAM outperformed every other region query again** *(UNESCO IESALC with UNU-IAS: `200` institutions, `19` countries)*. 🔴 **`EMEA` returned enterprise AI only; `APAC` returned vendor announcements only.** 🟢 **The country-shaped line reproduced p228 exactly: Germany's KMK recommendation is October 2024, Sweden's 2025 assignment is higher education, the Netherlands is blank a fourth time.** 🔵 **All five regions with their verbatim query** → [`p229-regional-queries`](evidence/p229-regional-queries.2026-10-15-p229.tsv).
+
+### 🟡 Two defects this pass found in its OWN work before publishing
+
+- 🔴 **`T229-M1`, the unreachable bound.** The Moodle reader's first draft put the or-later clause in a trailing OPTIONAL group behind a LAZY `.{0,120}?`, which matches the empty string at the earliest position — so every Moodle plugin read `unspecified`. 🟢 **Same shape as `T229-1`: a lazy quantifier against a permissive terminator always stops early.** Two instruments, one pass, one rule → `ACTION TB`.
+- 🔴 **A control built on a truncation.** An `ACTION SZ` control quoted a record cut off before its subject token and asserted it must fire. The CONTROL was wrong, not the gate.
+
+🔵 **Instrument:** [`p229-grant-ladder-reach`](compose/code/p229-grant-ladder-reach/README.md) *(`28` controls)* · **Full register with falsifiers:** [`intel/open-gaps.md`](intel/open-gaps.md)
+
 ## Pass 228 — 2026-10-15 — THE LICENCE SHELF WAS READ END TO END FOR THE FIRST TIME: `468` GRANTS, `1 372` CELLS CONFIRMED, `3` CORRECTED — AND THE GATE THAT FOUND THEM WAS WRONG ABOUT `9` MORE
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `5` of `5` verifiable candidates were already carried, published as a measurement rather than padded. `4` registered actions discharged: `ST` *(the registered highest priority)* on limb `1`, `SQ` on limb `1` at `4` of `4`, `SP` on limb `2` *(STOP)*, `SR` on NEITHER limb. `3` live wrong cells corrected in place. `1` live pattern defect fixed in the refuted-claims table. `11` defects found in this pass's own work before and after publishing. `30` controls.**

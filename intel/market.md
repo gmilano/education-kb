@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — THE REGION-SHAPED QUERY FAILED ON EDUCATION FOR EMEA AND APAC A THIRD TIME, AND THE COUNTRY-SHAPED ONE REPRODUCED p228 EXACTLY — SO THE RULE IS NOW A MEASUREMENT, NOT A HYPOTHESIS
+
+🔵 **All `5` regions carry their verbatim query** → [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv). 🔵 **`ACTION RE` honoured an ELEVENTH time; `ACTION SH` run INBOUND on `30` records before any of this prose was written — `0` hits, `3` near misses, all correctly silent** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p229.tsv).
+
+### 🟢 `P229-M1` — the query-shape rule REPRODUCES, which is the thing p222 warned could fail
+
+🔴 **p222 re-ran p221's APAC query verbatim and its findings did not reproduce — which is why every date here now carries its query.** 🟢 **p229 re-ran p228's four region strings and the RULE reproduced at `2` for `2`: LATAM, which has UNESCO IESALC, the IDB's ILIA and CEPAL, returned education content; `EMEA` and `APAC`, which are vendor sales territories with no pan-regional education body, returned none.**
+
+🟡 **A rule that reproduces across two passes and two query vintages is worth more than the rows it replaced. `EMEA` and `APAC` stay retired as RESEARCH units and kept as REPORTING buckets.**
+
+### 🟡 `P229-M2` — the market numbers still do not converge, and this pass adds a NORTH AMERICAN scope mismatch
+
+| figure | source type | year | scope |
+|---|---|---|---|
+| USD `6.4`B → `79.6`B *(2034)*, `31.35%` CAGR | vendor market report | 2025 base | global |
+| USD `8.3`B *(2025)* → `11.4`B *(2026)*, `25.9%` | vendor market report | 2025 base | global |
+| USD `7.52`B *(2025)* → `10.6`B *(2026)*, `40.9%` | vendor market report | 2025 base | global |
+| 🔴 USD `951`M *(2024)* → `2.3`B *(2029)*, `15.9%` | vendor market report | 2024 base | **North America** |
+
+🔴 **The North American figure cannot be reconciled with the global ones: a region said elsewhere to hold `36%` share is here `951`M against a global `6.4`–`8.3`B — about `12`–`15%`.** 🟢 **Standing rule, re-earned: never put a market size in an education deck without naming its scope beside it. Quote the RANGE with the years and the scope, or quote nothing.**
+
+🟢 **The usable pair is unchanged and is not a market size:** student AI use `66%` *(2024)* → `92%` *(2025)* against a sector deployment maturity of `35`/`100`. 🟡 **Consumer use has outrun institutional procurement by a factor nothing in the vendor numbers captures — that gap, not the TAM, is the engagement.**
+
+### 🔴 `P229-M3` — the adoption/governance inversion now has a NORTH AMERICAN number
+
+🟢 **`10%` of institutions have formal AI guidelines and `71%` of US teachers lack AI training, against `86%` of students across `16` countries already using AI.** 🔴 **Keep these denominators DISTINCT from the four LATAM ones `ACTION RL` tracks and from the `92%` student figure above — they are different populations and merging them is how a deck acquires a number nobody can defend.**
+
+## Opportunities by region
+
+### North America
+🟢 **The procurement gap is the product.** `10%` of institutions with formal AI guidelines and `71%` of teachers untrained, against near-universal student use. 🟡 **The sellable first engagement is an AI-use policy with a monitoring surface and an evaluation loop — not a tutor.** 🔴 **This pass's regional query named NO vendor and returned nothing for Canada or Mexico; p225's country-shaped line remains the only way to reach them.** 🟢 **Build on [`moodle/moodle`](https://github.com/moodle/moodle) `GPL-3.0` *(read first-hand this pass)* or [`openedx/XBlock`](https://github.com/openedx/XBlock) `Apache-2.0` for the courseware layer.**
+
+### EMEA
+🔴 **Third consecutive education blank on the region-shaped query; the country-shaped one is the only channel that works.** 🟢 **Germany: the KMK recommendation is **October 2024**, guidance not statute, and education is run by the `16` Länder — so the buyer is a Land, not the Bund.** 🟢 **Sweden's 2025 assignment covers HIGHER EDUCATION only; the "Sweden has no AI-in-education strategy" line circulating this week is an advocacy op-ed and must not be quoted as a government position.** 🔴 **The Netherlands returns nothing for a fourth pass.** 🟡 **The dated clock is unchanged and is the proposal's spine: Article `50` transparency since `2026-08-02`, the Omnibus Article `5` prohibitions at `2026-12-02`, Annex III education high-risk at `2027-12-02`.** 🟢 **The buildable EMEA stack is on these shelves and its grants are now read: [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) and [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible), both `GPL-3.0-or-later`, both state-published or vendor-neutral.**
+
+### APAC
+🔴 **Blank on education policy for a third pass: the region query returned vendor announcements only *(Pearson/TCS, LearnUpon, Alteryx)*.** 🟡 **The instruments these shelves already carry remain the ones to quote, all `CONVERGENT-SECONDARY` because every government host is `403` from this session: Vietnam's Decision `33/2026/QD-TTg` naming education among six high-risk sectors, and Korea's AI Basic Act in force `2026-01-22`.** 🔴 **`ACTION RO` — read an APAC primary text — is structurally impossible here and is stated as a property of the pipeline, not a to-do.**
+
+### LATAM
+🟢 **The best-measured region on these shelves, and it outperformed every other region query again.** UNESCO IESALC with UNU-IAS: `200` institutions across `19` countries, fielded Aug–Oct 2025 — teaching `73.5%`, research `57.0%`, administration `34.1%`, engagement `20.0%`. 🟡 **Baker McKenzie: no harmonised AI law yet, so privacy, consumer-protection and labour rules are what actually bind a deployment — which makes the first deliverable a data-protection and AI-use policy, not a model.** 🔴 **CENIA/ECLAC: public investment far below the global average, so the money is institutional and private, not national.** 🟢 **Build on [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) *(`GPL-3.0-or-later`, bound settled this pass)* — AI chat as a course-scoped Moodle activity, auditable per assessment.**
+
+### Global
+🔴 **Do not quote a single market size.** The four 2026-vintage estimates disagree by a factor of `1.8` on 2026 alone and one of them is a region sold as a world. 🟢 **Quote the pair instead: student use `66%` → `92%` in a year against deployment maturity `35`/`100`.** 🟡 **And `nakafaai/nakafa.com` is this pass's reminder that a licence can be NON-OSI and invisible: it was unreadable for four mentions because its slug lost a `.com`.**
+
 ## Pass 228 — 2026-10-15 — THE QUERY-SHAPE HYPOTHESIS IS `4` FOR `4`, AND p228 FINDS THE RULE BEHIND IT: A REGION-SHAPED QUERY WORKS ONLY WHERE THE REGION HAS **PAN-REGIONAL INSTITUTIONS** THAT PUBLISH ABOUT IT AS A UNIT
 
 🔵 **`4` regional queries + `4` country-shaped European queries + `3` use-case queries + `3` mandated global queries = `14`, every string published verbatim.** 🔵 **`2` declared blanks at region level, `2` declared blanks at country level, `1` declared blank for an asset class.**

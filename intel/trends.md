@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 229 — 2026-10-15 — THE SEVENTEENTH CONSECUTIVE UNIT-MISMATCH HEADLINE, AND THIS ONE IS A CHARACTER CLASS
+
+🔵 **Evidence:** [`sw-slug-truncation`](../evidence/sw-slug-truncation.2026-10-15-p229.tsv) · [`sx-withdrawn-gate`](../evidence/sx-withdrawn-gate.2026-10-15-p229.tsv) · [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv)
+
+### 🔴 `T229-T1` — the lazy quantifier is this base's recurring defect SHAPE, and it appeared twice in one pass
+
+🟢 **p228 was the sixteenth consecutive pass whose headline was a unit mismatch. p229 is the seventeenth, and for the first time the mismatch is in a CHARACTER CLASS rather than in a concept:**
+
+| instrument | pattern | what it was supposed to bound | what it actually bounded |
+|---|---|---|---|
+| `harvest_cells.SLUG_RE` | `[A-Za-z0-9_.-]*?` + a terminator class containing `.` | the repository NAME | 🔴 **the name up to its first dot** |
+| `manifest_grant` draft | `.{0,120}?(any later version)?` | the window after the version | 🔴 **the empty string at the first match** |
+
+🟢 **One rule covers both, and it is now written down: a LAZY quantifier against a PERMISSIVE terminator always stops early. If the thing you are matching may CONTAIN a terminator character, the quantifier cannot be lazy and the terminator cannot be optional.**
+
+🔵 **Both were found in one pass because the second was looked for after the first — the shape, once named, is cheap to sweep for** → `ACTION TB`.
+
+### 🟢 `T229-T2` — a correction marker is not a hiding place, and the gate that doubted it was wrong fifteen times
+
+🔴 **`ACTION SX` was registered on the premise that a `<!--corrected-->` marker makes a cell invisible to the gate built to check it. The premise was exactly right about the MECHANISM — `NARRATIVE_RE` matches the word `corrected`, so the marker trips the pattern that suppresses it — and exactly wrong about the RISK.**
+
+🟢 **`54` cells gated, `0` corrected values wrong.** The gate's first draft produced `24` findings, the positional fix cut them to `10`, and reading all ten on their lines left `0`.
+
+🟡 **`AUDIT-ROW-STRUCK-VALUE` enters the subject vocabulary as the SIXTH member of p228's enumeration, and `FOREIGN-MANIFEST` as the seventh:**
+
+| # | subject class | the token is… |
+|---|---|---|
+| 1–5 | *(p228)* `DIRECTORY-SCOPED` · `BODY-CONTENT` · `CORRECTION-NARRATIVE` · `QUOTED-EXTERNAL-CLAIM` · `UNLINKED-CO-SUBJECT` | |
+| 🆕 6 | **`AUDIT-ROW-STRUCK-VALUE`** | the WRONG value a defect table exists to display beside its correction |
+| 🆕 7 | **`FOREIGN-MANIFEST`** | a real grant belonging to the UPSTREAM project whose manifest this repo serves |
+
+### 🔴 `T229-T3` — adoption still outruns governance, and the North American number is now the sharpest
+
+🟢 **`86%` of students across `16` countries use AI; `10%` of institutions have a formal AI policy; `71%` of US teachers have had no training.** 🟡 **Every region measured on these shelves inverts the same way except EMEA, where a dated statutory clock runs ahead of any measured adoption figure at all.**
+
+🟢 **So the 2026 deliverable is unchanged and is now three-for-three across passes: an AI-use policy with a monitoring surface and an evaluation loop — except in EMEA, where it is conformity against a date.** 🔵 **What p229 adds is the supply side: the Moodle plugin tier that implements exactly that policy surface is `GPL-3.0-or-later`, read first-hand, and may enter a GPL-3.0 host without the incompatibility that excludes the assessment tier.**
+
+### 🟡 `T229-T4` — a dead slug is a trend signal, not just a broken link
+
+🔴 **`6` of `45` probed slugs do not resolve at all, and `2` of those are neither typos nor truncations** — [`jakerains/scormplayer`](https://github.com/jakerains/scormplayer) and [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp). 🟡 **Both are small, recent, single-author education MCP/SCORM projects. The churn rate at the bottom of this shelf is real, and a trending table that never re-probes existence accumulates ghosts** → `ACTION TC`.
+
 ## Pass 228 — 2026-10-15 — THE TREND IS THAT **GOVERNANCE COVERAGE IS NOW THE MEASURABLE DEFICIT EVERYWHERE**, AND FOUR INDEPENDENT JURISDICTIONS PUT A NUMBER ON IT IN THE SAME QUARTER
 
 🔵 **`4` trends, each with the measurement that makes it a trend rather than a theme.**

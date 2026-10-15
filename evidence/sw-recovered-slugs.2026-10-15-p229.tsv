@@ -1,0 +1,10 @@
+# ACTION SW (p229) - grants of the TRUE slugs p228's harvester truncated. Read first-hand.
+true_slug	grant	path	bytes	sha12	note
+processing/p5.js	LGPL-2.1	license.txt	24480	eb2f25f8f165	p228 read this as grantless under the slug processing/p5
+dmitry-viskov/pylti1.3	MIT	LICENSE	1070	5aef77eb4471	the canonical LTI 1.3 Python library
+ucfopen/pylti1.3	MIT	LICENSE	1070	5aef77eb4471	byte-identical to dmitry-viskov - a FORK PAIR, not an alias (p222 rule)
+jdolny/OneRoster.NET	MIT	LICENSE	1066	1dc50226c38a	
+theopenem/OneRoster.NET	MIT	LICENSE	1066	1dc50226c38a	byte-identical to jdolny - fork pair
+gener8v/gener8v.tools.pii-scanner	MIT	LICENSE	1064	0df23c7822c2	
+nakafaai/nakafa.com	NONCOMMERCIAL-NOT-OSI	LICENSE	7705	de3d94045061	NOT buildable on - a non-OSI grant invisible while the slug was truncated
+JushBJJ/Mr.-Ranedeer-AI-Tutor	NO-GRANT	-	-	-	genuinely grantless at 40 paths - CONFIRMS p176 (0 of 16, STANDS)
