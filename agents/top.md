@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — `ACTION ST` BUILT THE GATE THAT WAS SUPPOSED TO CLEAR THE LICENCE SHELF. IT REPORTED `11` DEFECTS, **`9` OF THEM WERE THE GATE'S OWN** — AND THE `2` THAT SURVIVED INCLUDE THE GIBBON ERROR RUNNING IN THE DIRECTION THAT COSTS A CLIENT
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — and that is a MEASUREMENT, published below rather than padded. `4` registered actions discharged: `ST` *(the registered highest priority)* on limb `1`, `SQ` on limb `1` at `4` of `4`, `SP` on limb `2`, `SR` on NEITHER limb. `468` grants read first-hand. `3` live wrong cells corrected in place. `2` rows added to the refuted-claims table and `1` LIVE PATTERN DEFECT fixed in it. `9` false findings caught in this pass's own instrument before publishing, plus `2` more after. `30` controls.**
+
+🔵 **Evidence:** [`st-shelf-gate`](../evidence/st-shelf-gate.2026-10-15-p228.tsv) · [`st-family-defects`](../evidence/st-family-defects.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv) · [`sp-subject-narrowing`](../evidence/sp-subject-narrowing.2026-10-15-p228.tsv) · [`sq-europe-queries`](../evidence/sq-europe-queries.2026-10-15-p228.tsv) · [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p228.tsv) · [`p228-regional-queries`](../evidence/p228-regional-queries.2026-10-15-p228.tsv) · **Instrument:** [`p228-shelf-gate`](../compose/code/p228-shelf-gate/README.md) *(`30` controls)*
+
+### 🔴 `P228-ST1` — the headline, and it is about the INSTRUMENT before it is about the shelf
+
+🟢 **`ACTION ST` was registered as p228's highest priority because p227 found `6` wrong cells by hand and *"has no idea how many remain"*. Limb `1` wanted `3`+ further cells disagreeing with the repository.** 🔵 **The gate was built in five steps, `520` distinct slugs harvested off the three table shelves, `468` grants read first-hand on `raw`.**
+
+🔴 **Its first draft reported `11` family-level disagreements. `9` were defects in the gate.**
+
+| # | slug | cell | first-hand read | draft `1` | the real subject of that token |
+|---|---|---|---|---|---|
+| 1 | [`acanas/swad-core`](https://github.com/acanas/swad-core) | 🔴 `GPL-3.0` | 🟢 **`AGPL-3.0`** | FAMILY | 🟢 **the repository's grant — REAL** |
+| 2 | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | 🔴 `GPL-2.0-only` | 🟢 **`MIT` OR `GPL-2.0`** | FAMILY | 🟢 **the repository's grant — REAL, and INCOMPLETE rather than wrong** |
+| 3 | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `CC-BY-SA-4.0` | `MIT` | 🔴 FAMILY | 🔴 **a DIRECTORY — the row's own subject column reads `docs/**`. The cell is CORRECT** |
+| 4 | [`odoo/odoo`](https://github.com/odoo/odoo) | `GPL-3.0` | `LGPL-3.0` | 🔴 FAMILY | 🔴 **the BODY'S CONTENT — *"`GPL-3.0` included by **value**"*** |
+| 5 | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `GPL-3.0` | `LGPL-3.0` | 🔴 FAMILY | 🔴 **the BODY'S CONTENT — *"LGPL preamble, `GPL-3.0` by **reference**"*** |
+| 6 | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | `MIT` | `Apache-2.0` | 🔴 FAMILY | 🔴 **a CORRECTION NARRATIVE — the line reads *"was published `MIT` in"*** |
+| 7 | [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | `MIT` | `BUSL-1.1` | 🔴 FAMILY | 🔴 **same — *"flagged as published `MIT`"*** |
+| 8 | [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `MIT` | `CC-BY-NC-SA-4.0` | 🔴 FAMILY | 🔴 **the REFUTED PATTERN of a refuted-claims row** |
+| 9 | [`frappe/lms`](https://github.com/frappe/lms) | `MIT` | `AGPL-3.0` | 🔴 FAMILY | 🔴 **a QUOTED SOURCE — the line quotes a table that *"reads \*'the `MIT` LMS'\*"*** |
+| 10 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `AGPL-3` | `LGPL-3.0` | 🔴 FAMILY | 🔴 **an UNLINKED CO-SUBJECT — the `AGPL-3` belongs to **Open edX**, named in the same prose without a link** |
+
+🔴 **So the finding `ACTION ST` actually returns is not a count of wrong cells. It is this:**
+
+> 🔴 **A licence token sitting on a shelf line that cites exactly ONE repository still has at least FIVE possible subjects, and only one of them is *"this repository's grant"*.**
+
+🟢 **p224's `T224-3` said the unit is the grant's SUBJECT. p228 enumerates the subject space, and it is not a refinement of that rule — it is the reason a shelf-wide gate could not have been written before the space was enumerated.** 🔵 **Sixteenth consecutive unit-mismatch headline, and the first in which the mismatch was the INSTRUMENT'S and not a source's.**
+
+### 🟢 The hardened gate, and the honest verdict on `ACTION ST`
+
+| verdict | cells | what it means |
+|---|---|---|
+| 🟢 **`AGREE`** | **`1 372`** | the cell and the first-hand grant name the same family |
+| 🟡 `CELL-WITHOUT-GRANT` | `149` *(`45` slugs)* | **a REACH bound of the instrument, NOT a defect count** — see `P228-ST4` |
+| 🟡 `BOUND` | `26` | same family, different bound. 🔴 **NOT DECIDABLE from a root `LICENSE` at all** |
+| 🟡 `UNDECIDABLE-BODY` | `20` | the body is not a recognised grant; never turned into a defect |
+| 🟡 `NOTATION` | `13` | same grant, different spelling — harmless to a reader, **fatal to a filter** |
+| 🔴 **`FAMILY`** | **`2`** | 🔴 **real defects.** Both `acanas/swad-core` |
+| 🔴 **`INCOMPLETE-DUAL`** | **`1`** | 🔴 **real.** `Elgg/Elgg` |
+
+🟡 **Limb `1` fires, at `3` cells on `2` entities — but barely, and the honest statement combines both limbs: `1 372` of `1 375` decidable cells agree with the repository, so p227's hand sweep was much closer to the population than it feared. 🟢 The gate's standing value is CHEAP VERIFICATION, not cleanup — which is limb `2`'s conclusion, reached through limb `1`'s number.**
+
+### 🔴 `P228-ST2` — `acanas/swad-core` is `AGPL-3.0`, and this is the Gibbon error in the direction that costs a CLIENT
+
+🟢 **Read first-hand this pass: `master/LICENSE`, `200`, `34 501` B, `sha256`₁₂ `884b434957ba`.**
+
+| channel | reading |
+|---|---|
+| title at offset **`0`** | 🟢 **`GNU AFFERO GENERAL PUBLIC LICENSE`** |
+| version line | 🟢 **`Version 3, 19 November 2007`** — 🔴 GPL-3.0's is `29 June 2007` |
+| §13 heading | 🟢 **`Remote Network Interaction`** — the AGPL network clause |
+| §13 `Use with the GNU Affero…` | 🔴 **absent** — so it is not a GPL body |
+| `affero` tokens | `16` |
+| the string `GNU GENERAL PUBLIC LICENSE` | 🟡 **present, at offset `1 880`** — **inside the AGPL body**, the exact mirror of p227's `T227-V3` |
+
+🔴 **These shelves published `GPL-3.0` — at the SAME byte count, `34 501`. A prior pass read the right body and named the wrong family.**
+
+🔵 **p227 corrected `GibbonEdu/core` from `AGPL-3.0` to `GPL-3.0`: an OVER-RESTRICTIVE cell, and it recorded the cost as *"a commercial loss — a buildable repo wrongly excluded"*.** 🔴 **`swad-core` is the same mechanism inverted, and p227's own direction table says who pays for that one: *"a client, in a compliance breach."***
+
+🔴 **Concretely, and this is the whole reason the cell matters:** SWAD is Universidad de Granada's platform, in continuous production for two decades, and the single most likely thing a studio does with it is **host it**. 🔴 **Under the published `GPL-3.0` reading a hosted deployment carried NO disclosure obligation. Under `AGPL-3.0` it triggers source disclosure.** 🟢 **Corrected in place in [`repos/foundations.md`](../repos/foundations.md) and [`verticals/solutions.md`](../verticals/solutions.md), both behind `<!--corrected-->` markers placed OUTSIDE every emphasis span.**
+
+🟡 **And the discipline point: p227 BUILT the GPL/AGPL discriminator and still missed this cell, because p227 swept by hand the cells it already suspected. A hand sweep cannot find an error in a row it has no reason to doubt.**
+
+### 🟢 `P228-ST3` — `Elgg/Elgg` is DUAL, and the positional-title rule has its first real limit
+
+🟢 **`master/LICENSE.txt`, `17 173` B, `sha256`₁₂ `7188c83d8764`. Its FIRST statement, before any licence title:**
+
+> 🟢 ***"Bundled plugins (the contents of the `/mod` directory) are available only under the GPLv2 license. The remainder of the project is available under either MIT or GPLv2."***
+
+🔴 **Two methods disagree and BOTH are incomplete:**
+
+| channel | says | drops |
+|---|---|---|
+| the earliest title *(offset `346`)* | `MIT` | 🔴 the GPLv2 option, and the `/mod` carve-out |
+| `composer.json` *(what this shelf used)* | `GPL-2.0-only` | 🔴 **the `MIT` option — the half a studio wants** |
+
+🟡 **Standing rule, extending p227's positional rule: a licence TITLE is the grant only when the body states ONE grant. A body whose own preamble offers a CHOICE is a DUAL grant, and the earliest title is then one OPTION rather than the licence.** 🟢 **The gate now reports `INCOMPLETE-DUAL` as its own verdict, because a cell naming one option is not WRONG — it is incomplete, and which half it drops decides who pays.**
+
+🟢 **Published state: **`MIT` OR `GPL-2.0`**, with `/mod` at `GPL-2.0-only`. Under the standing MIT/Apache/BSD preference `Elgg` was excluded from every engagement filter, and it did not have to be.**
+
+### 🟡 `P228-ST4` — the `149`-cell class that is NOT `149` defects, stated before anyone quotes it
+
+🔴 **`149` cells over `45` slugs name a licence where the gate found no `LICENSE` file on `6` paths × `2` refs. That number is a property of the LADDER, not of the shelves, and three bounds say so:**
+
+- 🟢 **`23` of the `45` are ALREADY annotated on these shelves with their real channel** — a `package.json`, `pyproject.toml`, `composer.json`, `__manifest__.py` or `DESCRIPTION` field.
+- 🟢 **The ladder is ROOT-ONLY. [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)'s grant is live at `master/docs/License.txt` — `200`, `17 286` B, `sha256`₁₂ `224ac3d403e3`, `GNU GENERAL PUBLIC LICENSE Version 2`, with the UTF-8 BOM.** 🔴 **These shelves recorded both the path and the byte count correctly; the GATE was the thing that could not see it.**
+- 🟢 **[`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) is the sharpest case: its only cell is behind a withdrawal marker, so the gate sees NOTHING about it — and the shelf is right anyway, recording *"no licence file under `8` probed filenames"* with the `package.json` `MIT`-style grant.**
+
+🟡 **So the class is renamed in the published output and reads as *"no grant at the ROOT"*. 🔵 On the one slug where the gate and the shelf disagreed about reachability, the SHELF was better evidence — which is worth recording in a pass whose instrument was built to check the shelves.**
+
+### 🔵 `P228-ST5` — `0` new rows, and the measurement that makes that a finding
+
+🟢 **`5` of `5` verifiable candidates from this pass's use-case queries were ALREADY CARRIED** — [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) *(`165` citations here)*, [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) *(`32`)*, [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) *(`34`)*, [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) *(`15`)*. 🔴 **The one uncarried slug, `AndresPaulino/lesson-plans`, is `404` on every grant path and joins `ACTION PH`'s queue.**
+
+🟢 **One thing the pass DID add to the grant shelf: [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) is cited `15` times here and carried NO licence cell on any live shelf. Read first-hand: `main/LICENSE`, `1 077` B, `sha256`₁₂ `d150aadcccd2`, 🟢 **`MIT`**.** 🔵 **It is the UK's Oak National Academy lesson assistant — the one named, government-documented, permissively licensed teacher-facing asset on these shelves, and it sits exactly where `T227-4` said the procurement is.**
+
+🟢 **And a free identity control: [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) serves `11 357` B, `sha256`₁₂ `58d1e17ffe51` — BYTE-IDENTICAL to the Apache-2.0 body p227 read from `UniTime/unitime`.** 🔵 **Two unrelated repositories serving the same canonical body corroborate the hash as a body fingerprint, which is what makes `sha256`₁₂ worth carrying in a cell at all.**
+
+
 ## Pass 227 — 2026-10-15 — `ACTION SO` FIRES AT `7` AND FINDS SOMETHING WORSE THAN A BACKLOG: THE REFUTED-CLAIMS TABLE COULD ONLY EVER EXPRESS **ONE DIRECTION** OF ERROR, AND THE UNTABLED REFUTATION IT MISSED TURNED p226'S OWN SELF-AUDIT INTO THE VECTOR THAT REINTRODUCED IT
 
 🔵 **`1` new agent row, `0` new repository rows, `0` new platform rows. `4` registered actions discharged — `SO` *(the registered highest priority)* on limb `1`, `SM` on limb `1` at `4` of `4`, `SL` on limb `1`, `SN` on limb `2`. `4` live cells WITHDRAWN in place. `7` rows added to the refuted-claims table, `4` of them in a direction the table could not previously express. `11` grants read first-hand. `3` new standing rules. `3` defects found in this pass's own instrument before publishing — all three the same hazard.**

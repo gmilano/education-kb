@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — THE LICENCE SHELF WAS READ END TO END FOR THE FIRST TIME: `468` GRANTS, `1 372` CELLS CONFIRMED, `3` CORRECTED — AND THE GATE THAT FOUND THEM WAS WRONG ABOUT `9` MORE
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `5` of `5` verifiable candidates were already carried, published as a measurement rather than padded. `4` registered actions discharged: `ST` *(the registered highest priority)* on limb `1`, `SQ` on limb `1` at `4` of `4`, `SP` on limb `2` *(STOP)*, `SR` on NEITHER limb. `3` live wrong cells corrected in place. `1` live pattern defect fixed in the refuted-claims table. `11` defects found in this pass's own work before and after publishing. `30` controls.**
+
+### 🔴 The headline: the instrument was wronger than the shelf
+
+🟢 **`ACTION ST` was registered because p227 corrected `6` cells by hand and *"has no idea how many remain"*. p228 built the gate, harvested `520` distinct slugs and read `468` grants first-hand off `raw` — the first shelf-wide grant read in this KB's history.**
+
+🔴 **Its first draft reported `11` family-level defects. Nine were the gate's own.**
+
+> 🔴 **A licence token sitting on a shelf line that cites exactly ONE repository still has at least FIVE possible subjects, and only one of them is *"this repository's grant"*.**
+
+🟢 **The five, each of which cost a false finding: a DIRECTORY *(`pupilfirst`'s `docs/**`)* · the licence FILE'S CONTENT *(`"GPL-3.0 included by value"` on `odoo`)* · a WITHDRAWN value in a correction narrative *(`towardsai`, `sdv-dev`)* · a QUOTED source's wrong claim *(`frappe/lms`)* · an UNLINKED co-subject *(the `AGPL-3` beside `OpenEduCat` belongs to Open edX)*.** 🔵 **Sixteenth consecutive unit-mismatch headline, and the first in which the mismatch was the instrument's rather than a source's.**
+
+### 🟢 What the hardened gate found
+
+🟢 **`1 372` of `1 375` decidable cells AGREE with the repository.** 🟡 **So p227's hand sweep was far closer to the population than it feared, and the gate's standing value is cheap verification rather than cleanup — limb `2`'s conclusion, reached through limb `1`'s number.**
+
+🔴 **The `3` that did not agree, and they point in OPPOSITE directions — the first pass here to find one of each:**
+
+| slug | published | 🟢 first-hand truth | direction | who pays |
+|---|---|---|---|---|
+| [`acanas/swad-core`](https://github.com/acanas/swad-core) ×`2` | 🔴 `GPL-3.0` | 🟢 **`AGPL-3.0`** *(`34 501` B, `884b434957ba`)* | 🔴 **PERMISSIVE** | 🔴 **a client** — a hosted SWAD build was told it had no network-use trigger |
+| [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | 🔴 `GPL-2.0-only` | 🟢 **`MIT` OR `GPL-2.0`** *(`17 173` B, `7188c83d8764`)* | 🟢 **RESTRICTIVE** | 🟡 **Globant** — a buildable platform excluded for nothing |
+
+🔵 **`swad-core` is p227's Gibbon error running the other way: Gibbon was `AGPL` published as `GPL`; this is `AGPL` published as `GPL`'s opposite. 🔴 The permissive direction is the one a client's counsel finds after a hosted deployment ships.**
+
+### 🟢 `ACTION SQ` fires `4` of `4`, and hands back the rule behind four passes
+
+🟢 **Four country-shaped European queries each returned an instrument, figure or named player** — the UK's DfE product safety standards *(`2026-01-19`)*, **Sweden's first comprehensive national AI strategy *(February 2026)***, Germany's KMK recommendation with **no 2026 resolution**, and the Netherlands with **no national policy at all**.
+
+🔵 **And because this pass ran region-shaped and country-shaped queries side by side, it can say WHY:**
+
+> 🟢 **A region-shaped query returns education content only where the region has PAN-REGIONAL INSTITUTIONS that publish about it as a unit.**
+
+🟢 **LATAM has UNESCO IESALC, the IDB's ILIA index and CEPAL — and its region query OUTPERFORMED all four.** 🔴 **`EMEA` and `APAC` returned nothing on education, twice, because they are not regions but VENDOR SALES TERRITORIES.** 🟡 **Retire them as research units; keep them as reporting buckets.**
+
+### 🔴 `ACTION SR`: neither limb, and the honest answer is a third state
+
+🔴 **The use-case channel `SR` proposed as trending's replacement returned `0` new rows too.** 🟢 **`5` of `5` verifiable candidates already carried; the one uncarried slug is grantless.** 🔵 **Published as DISCOVERY SATURATION, with the sixth consecutive measured discovery rate — and it is the argument for spending the budget on depth, which is what `ST` did.**
+
+### 🟡 Two corrections this pass made to its OWN published draft
+
+🔴 **A ratio added up BY HAND said `326`/`69.7%` permissive; the instrument that counted said `335`/`71.6%` — `Elgg` had moved to the dual bucket.** 🔴 **And a draft claimed `ECL-2.0` was *"a family nobody on this shelf had named"*; these shelves named it at p200 and re-read it at clause level at p216.** 🟢 **Both caught and corrected before the commit; the second is p226's exact failure mode — a draft checked against a search impression rather than against the shelves — one pass after p227 named it.**
+
+
 ## Pass 225 — 2026-10-15 — THE BLOCK WAS PATH-SCOPED, NOT HOST-SCOPED: `github.com`'s GIT SERVICE IS `200`, AND IT SETTLED THREE CARRIED ACTIONS IN ONE PASS
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `9` of `9` candidates were already carried, and that is published as a measurement rather than padded. `4` registered actions discharged: `RV` *(the registered highest priority, carried three passes)* on limb `1`, `SD` on limb `2`, `SE` on limb `1`, `SG` on limb `1`. `1` standing rule of this KB's own making REFUTED. `4` instrument defects found before publishing. `1` new hazard class.**

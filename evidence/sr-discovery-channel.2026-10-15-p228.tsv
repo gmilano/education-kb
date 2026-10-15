@@ -1,0 +1,14 @@
+# ACTION SR - stop expecting rows from the `github trending` channel and reallocate the
+# discovery budget. NEITHER LIMB FIRES AS WRITTEN, and the result is stronger than either.
+channel	query	new education rows	already carried	verdict
+mandated trending	github trending education AI 2026	0	-	BLANK for a 5th consecutive pass. The channel bounds a claim; it does not discover.
+use-case shaped	open source MCP server education LMS Moodle Canvas github 2026	0	csmediapro/moodle-mcp-server (165 citations), admin978/canvas-mcp (34)	HIT but SATURATED
+use-case shaped	open source AI teacher assistant lesson planning github Apache 2026	0	anthropics/k12-teacher-skills (32), oaknational/oak-ai-lesson-assistant (15)	HIT but SATURATED; 1 uncarried candidate (AndresPaulino/lesson-plans) has NO grant
+use-case shaped	open source AI grading agreement teacher scores rubric github 2026	0	-	BLANK for the asset the p213 gap names
+#
+# So SR's limb 1 ("use-case queries return 1+ new carried row while trending returns 0")
+# does NOT fire: the use-case queries returned 0 new rows TOO. Limb 2 does not fire either.
+# The honest reading is a third state SR did not anticipate: at this query depth the shelf
+# is at DISCOVERY SATURATION. 5 of 5 verifiable candidates across three use-case queries
+# were already carried, and the only new slug has no grant. Reallocating budget from
+# trending to use-case queries would not have bought a row this pass.

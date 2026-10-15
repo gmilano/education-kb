@@ -1,0 +1,1588 @@
+# ACTION ST (p228's registered highest priority) - the SHELF gate: every live licence
+# cell on the three table shelves, compared against the grant read FIRST-HAND off raw.
+# 520 distinct slugs harvested, 468 grants read (52 have no grant file on 6 paths x 2 refs).
+# Instrument: compose/code/p228-shelf-gate (30 controls, all passing).
+verdict	slug	file	line	cell	cell_family	read_family	ref	path	bytes	sha12	note
+AGREE	acestein13/campusintel-mcp	top.md	187	MIT	MIT	MIT	main	LICENSE	1066	3c1d62722c6e	
+AGREE	sukhrobyangibaev/mcp_hemis_student	top.md	188	MIT	MIT	MIT	main	LICENSE	1074	059322a7fd97	
+AGREE	openedx/openedx-platform	top.md	189	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	rabser/moodle-aiprovider_openwebui	top.md	281	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	bycs-lp/moodle-local_ai_injection	top.md	282	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+NOTATION	oat-sa/lib-lti1p3-core	top.md	334	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18091	f9c375a1be4a	§13 absent
+NOTATION	oat-sa/tao-core	top.md	335	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/extension-tao-testqti	top.md	336	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/qti-sdk	top.md	337	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/devkit-lti1p3	top.md	338	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18092	8177f9751321	§13 absent
+NOTATION	oat-sa/oneroster-import	top.md	339	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18026	39db8f9acf03	§13 absent
+CELL-WITHOUT-GRANT	lmscloud-io/moodle-aiprovider_openaicompatible	top.md	366	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+BOUND	caiocarvalhofre/moodle-mod_maici	top.md	367	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE.md	35178	ccb349b4132e	§13 agrees
+NOTATION	Citolab/qti-components	top.md	381	GPLv3	GPL-3.0	GPL-3.0	main	LICENSE.md	35199	c4b11c89ca88	§13 agrees
+AGREE	valentineus/moodle-webhooks	top.md	405	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35200	6e7ee8ecc13c	§13 agrees
+AGREE	eLearning-BS23/moodle-quizaccess_proctoring	top.md	406	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.md	35178	ccb349b4132e	§13 agrees
+AGREE	moodlehq/moodle-enrol_oneroster	top.md	407	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	h5p/h5p-php-library	top.md	448	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35146	c53a65c2fd56	§13 agrees
+CELL-WITHOUT-GRANT	openedx/XBlock	top.md	449	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	packbackbooks/lti-1-3-php-library	top.md	450	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	top.md	451	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/openedx-ai-extensions	top.md	496	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+BOUND	saylordotorg/moodle-local_ai_course_assistant	top.md	563	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+BOUND	Limekiller/moodle-block_openai_chat	top.md	565	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+BOUND	yedidiaklein/moodle-local_aiquestions	top.md	566	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE.md	35178	ccb349b4132e	§13 agrees
+CELL-WITHOUT-GRANT	marcusgreen/moodle-qtype_aitext	top.md	574	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	bycs-lp/moodle-block_ai_chat	top.md	575	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	bycs-lp/moodle-local_ai_manager	top.md	576	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	onbirdev/moodle-webservice_mcp	top.md	682	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	barneslardo/sis-demo	top.md	828	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	top.md	1039	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	MisterCommand/mcp-canvas-lms	top.md	1040	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Exhabition/brightspace-mcp-rs	top.md	1041	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Schroedinger-Hat/certo	top.md	1157	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	33820	895609d3e304	§13 agrees
+AGREE	josemmo/plagpatrol	top.md	1202	MIT	MIT	MIT	master	LICENSE	1084	997657291f65	
+AGREE	nagisanzenin/engram	top.md	1216	MIT	MIT	MIT	main	LICENSE	1069	203b75ae088e	
+AGREE	shigella520/MindTrain	top.md	1218	MIT	MIT	MIT	main	LICENSE	1067	8078815070f9	
+AGREE	alyssaxuu/carden	top.md	1219	MIT	MIT	MIT	master	LICENSE	1066	80ffe5a343b5	
+AGREE	ChenChenyaqi/learn-anything	top.md	1220	MIT	MIT	MIT	main	LICENSE	1069	9108ab0c02d7	
+AGREE	assafkip/claudemy	top.md	1221	MIT	MIT	MIT	main	LICENSE	1069	262b47ee1fff	
+AGREE	KristiyanVachev/Leaf-Question-Generation	top.md	1222	MIT	MIT	MIT	main	LICENSE	1073	aa42194af57c	
+AGREE	patil-suraj/question_generation	top.md	1223	MIT	MIT	MIT	master	LICENSE	1068	4c97925e6982	
+AGREE	thiswillbeyourgithub/AnkiAIUtils	top.md	1231	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	trane-project/trane	top.md	1232	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	kantord/LibreLingo	top.md	1233	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34524	e9df4c4e4e64	§13 agrees
+UNDECIDABLE-BODY	codeforlife-education/aimmo	top.md	1235	AGPL-3.0	AGPL-3.0	UNRECOGNISED	master	LICENSE.md	115	f406d19420ea	no recognised licence title
+AGREE	FreeLanguageTools/vocabsieve	top.md	1236	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	Ajatt-Tools/mpvacious	top.md	1237	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	Miaotofu01/Study-Mate	top.md	1295	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ankimcp/anki-mcp-server	top.md	1296	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ai-shifu/ai-shifu	top.md	1297	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	1298	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	1299	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	1300	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	1301	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	1302	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	aieducations/edumcp	top.md	1303	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	zijinz456/OpenTutor	top.md	1305	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	flysheep-ai/education-skills	top.md	1306	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	SimonsTang/feifei-companion	top.md	1307	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10227	59a378bf23a0	
+AGREE	Zenglian990/AI_Tutor_Release	top.md	1309	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	1310	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	SaadRahman01/claude-moodle-dev	top.md	1311	MIT	MIT	MIT	main	LICENSE	1068	df0b3e71710c	
+AGREE	vanderbilt-data-science/knowledge-spaces	top.md	1312	MIT	MIT	MIT	main	LICENSE	1090	ed2ed868dffc	
+AGREE	thm-mni-ii/feedbacksystem	top.md	1313	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	theaiagent/SynthEd	top.md	1314	MIT	MIT	MIT	main	LICENSE	1056	1126322e2cc8	
+AGREE	kltn-moolde/moodle-adaptive-learning-plugin	top.md	1315	MIT	MIT	MIT	main	LICENSE	1086	7fb13a30d308	
+AGREE	artcc/freelingo	top.md	1349	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	ahmedEid1/lumen	top.md	1350	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	Limekiller/moodle-block_openai_chat	top.md	1352	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	brownplt/LTLTutor	top.md	1353	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.txt	35148	8b1ba204bb69	§13 agrees
+UNDECIDABLE-BODY	frappe/education	top.md	1439	GPL-3	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	HKUDS/DeepTutor	top.md	1504	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	THU-MAIC/OpenMAIC	top.md	1505	MIT	MIT	MIT	main	LICENSE	1065	ba2525637432	
+UNDECIDABLE-BODY	learning-commons-org/knowledge-graph	top.md	1693	CC0-1.0	CC0-1.0	UNRECOGNISED	main	LICENSE.md	5789	d849ffef4f98	no recognised licence title
+AGREE	guedesindev/ai_tutor_forge	top.md	1708	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	HKUDS/DeepTutor	top.md	1810	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	HugeCatLab/ChatTutor	top.md	1811	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	Zenglian990/AI_Tutor_Release	top.md	1812	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	Miaotofu01/Study-Mate	top.md	1813	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	plastic-labs/tutor-gpt	top.md	1814	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	top.md	1917	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	MisterCommand/mcp-canvas-lms	top.md	1918	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Exhabition/brightspace-mcp-rs	top.md	1919	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Selleo/mentingo	top.md	1956	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	yetanalytics/lrsql	top.md	1957	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	jcputney/scorm-again	top.md	1958	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	numbas/Numbas	top.md	1959	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	savvides/idstack	top.md	1960	MIT	MIT	MIT	main	LICENSE	1077	eb97ca0d7841	
+AGREE	microsoft/ai-agents-for-beginners	top.md	1961	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	adaptlearning/adapt_framework	top.md	1964	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35129	e90ca2f081fa	§13 agrees
+AGREE	GarethManning/education-agent-skills	top.md	1994	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	1230	f952182df4eb	
+AGREE	vanderbilt-data-science/knowledge-spaces	top.md	1995	MIT	MIT	MIT	main	LICENSE	1090	ed2ed868dffc	
+AGREE	rohitg00/ai-engineering-from-scratch	top.md	1996	MIT	MIT	MIT	main	LICENSE	1070	d116e214adbc	
+AGREE	karpathy/nanochat	top.md	1997	MIT	MIT	MIT	master	LICENSE	1072	42bb09f339a8	
+AGREE	rasbt/LLMs-from-scratch	top.md	1998	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11505	4b6615cdb446	
+AGREE	walkinglabs/learn-harness-engineering	top.md	1999	MIT	MIT	MIT	main	LICENSE	1067	86036cb714ed	
+AGREE	nykooi1/vibe-wise	top.md	2000	MIT	MIT	MIT	main	LICENSE	1065	4e3c1fac5a2c	
+AGREE	GarethManning/education-agent-skills	top.md	2092	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	1230	f952182df4eb	
+AGREE	vanderbilt-data-science/knowledge-spaces	top.md	2093	MIT	MIT	MIT	main	LICENSE	1090	ed2ed868dffc	
+AGREE	savvides/idstack	top.md	2094	MIT	MIT	MIT	main	LICENSE	1077	eb97ca0d7841	
+AGREE	Hyr1sky/TheGrandQuiz	top.md	2095	MIT	MIT	MIT	main	LICENSE	1064	a6d3e3059b30	
+BOUND	Berserk-hub150/moodle-ai-skill-navigator	top.md	2096	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35153	ebdc0e5b7005	§13 agrees
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	2099	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Submitty/Submitty	top.md	2144	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE.md	1542	c123708cb4ef	
+AGREE	okpy/ok	top.md	2145	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	13979	e3b80e19df08	
+AGREE	INGInious/INGInious	top.md	2146	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+AGREE	foundation50/classroom50	top.md	2147	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35150	e57f1c320b8c	§13 agrees
+AGREE	ucbds-infra/otter-grader	top.md	2148	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	master	LICENSE	1560	6af203d41a01	
+AGREE	jameskermode/mograder	top.md	2149	MIT	MIT	MIT	main	LICENSE	1070	99e5f51590b7	
+AGREE	HKUDS/DeepTutor	top.md	2167	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	Miaotofu01/Study-Mate	top.md	2168	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ankimcp/anki-mcp-server	top.md	2170	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	2171	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	2172	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	2173	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	2174	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	2175	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	artcc/freelingo	top.md	2176	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	zijinz456/OpenTutor	top.md	2177	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	flysheep-ai/education-skills	top.md	2178	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	SimonsTang/feifei-companion	top.md	2179	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10227	59a378bf23a0	
+AGREE	ahmedEid1/lumen	top.md	2181	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	yh2072/edgameclaw	top.md	2182	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	heshengtao/exameow	top.md	2183	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	Zenglian990/AI_Tutor_Release	top.md	2184	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	HumphreySun98/Smart-Study-Agent	top.md	2185	MIT	MIT	MIT	main	LICENSE	1067	ca229b6dc765	
+AGREE	henryyu333/assignment-check	top.md	2186	MIT	MIT	MIT	main	LICENSE	1086	ba0f8aa34ed7	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	2187	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	scibly-dev/scibly	top.md	2188	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34739	9027c56f2fc5	§13 agrees
+AGREE	Bbar0n234/learnflow-ai	top.md	2189	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	crewAIInc/crewAI	top.md	2312	MIT	MIT	MIT	main	LICENSE	1055	28868731966f	
+AGREE	peancor/moodle-mcp-server	top.md	2343	MIT	MIT	MIT	main	LICENSE	1064	845ac6ac9e57	
+AGREE	1alexandrer/moodle-mcp	top.md	2345	MIT	MIT	MIT	master	LICENSE	1074	ecc232c0b2aa	
+AGREE	G36maid/moodle-mcp	top.md	2346	MIT	MIT	MIT	main	LICENSE	1064	5da1fff0a1db	
+AGREE	SaadRahman01/moodle-mcp	top.md	2348	MIT	MIT	MIT	main	LICENSE	1068	df0b3e71710c	
+AGREE	Deeptanshuu/mydy-lms-helper	top.md	2349	MIT	MIT	MIT	main	LICENSE	1070	8807b48f91fb	
+CELL-WITHOUT-GRANT	ink-waffle/moodle-mcp	top.md	2350	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Miaotofu01/Study-Mate	top.md	2365	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ankimcp/anki-mcp-server	top.md	2367	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	2368	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	2369	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	2370	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	2371	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	2372	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	artcc/freelingo	top.md	2373	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	zijinz456/OpenTutor	top.md	2374	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	flysheep-ai/education-skills	top.md	2375	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	zijinz456/OpenTutor	top.md	2387	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	HKUDS/DeepTutor	top.md	2454	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	panaversity/learn-agentic-ai	top.md	2455	MIT	MIT	MIT	main	LICENSE	1068	8ea022e30a9b	
+AGREE	vishalsachdev/canvas-mcp	top.md	2456	MIT	MIT	MIT	main	LICENSE	1071	5385a26e2fac	
+AGREE	CAHLR/OATutor	top.md	2457	MIT	MIT	MIT	main	LICENSE	1105	5baaaf977a28	
+AGREE	csmediapro/moodle-mcp-server	top.md	2460	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	johnswyou/autograder	top.md	2461	MIT	MIT	MIT	main	LICENSE	1065	684d737736e0	
+AGREE	asu2304/auto-assessment-agent	top.md	2462	MIT	MIT	MIT	main	LICENSE	1081	aae7ac484db1	
+AGREE	laurauguc/grading_assistant	top.md	2463	MIT	MIT	MIT	main	LICENSE	1072	3b21045edbad	
+AGREE	JohannsenLum/canvas-api-mcp	top.md	2475	MIT	MIT	MIT	main	LICENSE	1070	f01d2f81a436	
+AGREE	bruchris/canvas-lms-mcp	top.md	2476	MIT	MIT	MIT	main	LICENSE	1070	c29329c5ef3b	
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	top.md	2477	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	r-huijts/canvas-mcp	top.md	2478	MIT	MIT	MIT	main	LICENSE	1065	ab5109aafdb8	
+AGREE	mdweaver/canvas-mcp	top.md	2479	MIT	MIT	MIT	main	LICENSE	1065	ab5109aafdb8	
+AGREE	admin978/canvas-mcp	top.md	2480	MIT	MIT	MIT	main	LICENSE	1072	507310119817	
+AGREE	huggingface/smolagents	top.md	2489	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	microsoft/agent-framework	top.md	2490	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	crewAIInc/crewAI	top.md	2491	MIT	MIT	MIT	main	LICENSE	1055	28868731966f	
+AGREE	langchain-ai/langgraph	top.md	2492	MIT	MIT	MIT	main	LICENSE	1072	d9bb52f2e354	
+AGREE	stanford-oval/storm	top.md	2493	MIT	MIT	MIT	main	LICENSE	1091	88241386c28f	
+AGREE	assafelovic/gpt-researcher	top.md	2494	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+CELL-WITHOUT-GRANT	kstateome/lti-launch	top.md	2613	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	top.md	2614	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	openedx/XBlock	top.md	2615	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	top.md	2643	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Responsive-Design	top.md	2644	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	HKUDS/DeepTutor	top.md	2659	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	huggingface/smolagents	top.md	2660	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	satvik314/educhain	top.md	2662	MIT	MIT	MIT	main	LICENSE	1092	e3321a1b62cd	
+AGREE	CAHLR/OATutor	top.md	2663	MIT	MIT	MIT	main	LICENSE	1105	5baaaf977a28	
+AGREE	zijinz456/OpenTutor	top.md	2664	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	Open-TutorAi/open-tutor-ai-CE	top.md	2665	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	Li-Evan/Bloom	top.md	2666	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	Gchism94/ai-tutor	top.md	2667	MIT	MIT	MIT	main	LICENSE	1070	3d5a24e51479	
+AGREE	TovTechOrg/Tov-learn	top.md	2668	MIT	MIT	MIT	master	LICENSE	1064	092d389ac156	
+AGREE	HugeCatLab/ChatTutor	top.md	2669	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	ahmedEid1/lumen	top.md	2670	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	microsoft/moodle-ai-assistant	top.md	2728	MIT	MIT	MIT	main	LICENSE	1084	e0eb0d5ceba1	
+AGREE	langfuse/langfuse-workshop	top.md	2730	MIT	MIT	MIT	main	LICENSE	1073	431bd2d2c849	
+AGREE	llwand1/xuelian-agent	top.md	2731	MIT	MIT	MIT	main	LICENSE	1062	6d0b6c4195c1	
+AGREE	human2human-ai/moodle-tool_human2human	top.md	2732	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	cgrevisse/moodle-qbank_genai	top.md	2733	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.md	35178	ccb349b4132e	§13 agrees
+CELL-WITHOUT-GRANT	openedx/XBlock	top.md	2747	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	kstateome/lti-launch	top.md	2748	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	top.md	2749	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+BOUND	solin-repo/moodle-block_atrisk	top.md	2888	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	703	83a84d3b394e	§13 absent
+AGREE	francoisjacquet/rosariosis	top.md	2889	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	TheAlgorithms/Python	top.md	2945	MIT	MIT	MIT	master	LICENSE.md	1095	4395a1dc4bda	
+AGREE	CTFd/CTFd	top.md	2946	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11314	dcaf3b3bff45	
+AGREE	mlcommons/ck	top.md	2947	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.md	10174	69849221bfb9	
+AGREE	dmoshehun-prog/learn-from-materials	top.md	2948	MIT	MIT	MIT	main	LICENSE.md	1122	15ce43afa44a	
+AGREE	ystemsrx/mini-nanoGPT	top.md	2949	MIT	MIT	MIT	main	LICENSE	1063	703b1fc21029	
+AGREE	SYuan03/Skill-Anything	top.md	2950	MIT	MIT	MIT	main	LICENSE	1084	41bad3fca692	
+AGREE	EbookFoundation/free-programming-books	top.md	2951	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	main	LICENSE	18658	f5b745ef9808	
+AGREE	MoKangMedical/digital-sage	top.md	3180	MIT	MIT	MIT	main	LICENSE	46	b2e79dc84a42	
+AGREE	pguso/agents-from-scratch	top.md	3233	MIT	MIT	MIT	main	LICENSE	1091	f78cc6bf1d57	
+AGREE	microsoft/ML-For-Beginners	top.md	3389	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	guipsamora/pandas_exercises	top.md	3391	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	master	LICENSE	1515	cd9b26413248	
+BOUND	unslothai/notebooks	top.md	3393	LGPL-3.0-or-later	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	datawhalechina/every-embodied	top.md	3394	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	main	LICENSE	858	ba913ae9bc9e	
+AGREE	datawhalechina/llm-algo-leetcode	top.md	3395	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	main	LICENSE	792	7d27b30b4894	
+AGREE	ahmedEid1/Lumen	top.md	3396	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	continuedev/continue	top.md	3397	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11348	b14a17598cb0	
+AGREE	GarethManning/education-agent-skills	top.md	3483	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	1230	f952182df4eb	
+AGREE	openeducat/openeducat_erp	top.md	3484	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	OpenOLAT/OpenOLAT	top.md	3485	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	webworn/openfoam-mcp-server	top.md	3486	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10708	e0ae7f268ba5	
+AGREE	PetoiCamp/OpenCat-Quadruped-Robot	top.md	3549	MIT	MIT	MIT	main	LICENSE	1069	517ad70869fe	
+AGREE	ai-infra-curriculum/ai-infra-engineer-learning	top.md	3553	MIT	MIT	MIT	main	LICENSE	1081	67475eade1ef	
+AGREE	sakaiproject/sakai	top.md	3555	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	mohi-devhub/antivibe	top.md	3557	MIT	MIT	MIT	main	LICENSE	1065	a9e5355735ea	
+AGREE	GarethManning/education-agent-skills	top.md	3561	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	1230	f952182df4eb	
+AGREE	webworn/openfoam-mcp-server	top.md	3572	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10708	e0ae7f268ba5	
+AGREE	GarethManning/education-agent-skills	top.md	3662	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	1230	f952182df4eb	
+AGREE	openfun/ralph	top.md	3782	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	MoKangMedical/digital-sage	top.md	3878	MIT	MIT	MIT	main	LICENSE	46	b2e79dc84a42	
+AGREE	opensalt/OB3DefinitionWidget	top.md	3985	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	oneorigin-2-0/dcc-credential-co-writer-monorep	top.md	3986	MIT	MIT	MIT	main	LICENSE	1087	7f62d1bf385d	
+AGREE	MrPrinceAli/proven	top.md	3988	MIT	MIT	MIT	main	LICENSE	1095	0f2bf00047ad	
+AGREE	brody-0125/signet-campus	top.md	3989	MIT	MIT	MIT	main	LICENSE	1070	f4ce7f63a0ef	
+AGREE	hoijui/obadgen	top.md	3990	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE.txt	34020	d8a6cc31abc1	§13 agrees
+AGREE	lmsable/lmsable-skill	top.md	4005	MIT	MIT	MIT	main	LICENSE	1080	eacb750bb1fe	
+CELL-WITHOUT-GRANT	gener8v/gener8v	top.md	4006	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	marc-shade/docsingest	top.md	4007	MIT	MIT	MIT	main	LICENSE	1079	897ba55a1525	
+AGREE	thepick/writing-feedback-tool	top.md	4008	MIT	MIT	MIT	main	LICENSE	1064	6dc89607e84c	
+AGREE	alvaarocl/taskbot	top.md	4009	MIT	MIT	MIT	master	LICENSE	1075	b42f56be370a	
+AGREE	G36maid/moodle-mcp	top.md	4034	MIT	MIT	MIT	main	LICENSE	1064	5da1fff0a1db	
+AGREE	CloudDown/polymtl-moodle-connect	top.md	4035	MIT	MIT	MIT	main	LICENSE	1066	2eeba2ea886f	
+CELL-WITHOUT-GRANT	onbirdev/moodle-webservice_mcp	top.md	4036	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	kemalyy/edumints-scorm-skill	top.md	4038	MIT	MIT	MIT	main	LICENSE	1069	74564663b69b	
+AGREE	MathTrail/canvas-api	top.md	4039	MIT	MIT	MIT	main	LICENSE	1066	3b28831a20df	
+AGREE	MathTrail/mathtrail-standalone	top.md	4040	MIT	MIT	MIT	main	LICENSE	1066	3b28831a20df	
+CELL-WITHOUT-GRANT	ink-waffle/sisu-mcp	top.md	4043	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	4047	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	top.md	4114	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Zenglian990/AI_Tutor_Release	top.md	4115	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	myvipbackup2/china-k12-teacher-skills	top.md	4138	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11359	1ddb849c5dad	
+AGREE	devissaputra/adaptive_socratic_tutor	top.md	4139	MIT	MIT	MIT	main	LICENSE	1076	c10726bddc58	
+AGREE	Faran70177784/edutune-ai	top.md	4140	MIT	MIT	MIT	main	LICENSE	1073	df3389be30b7	
+AGREE	MoKangMedical/digital-sage	top.md	4147	MIT	MIT	MIT	main	LICENSE	46	b2e79dc84a42	
+AGREE	ningkaikok/dotty-tutor	top.md	4209	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	cliffffffffff/guided-learning	top.md	4259	MIT	MIT	MIT	main	LICENSE	1070	26e5010ec7c9	
+AGREE	YUANYINGLONG-91/lecture-notes-tutor	top.md	4260	MIT	MIT	MIT	main	LICENSE	1072	268c9fb20373	
+AGREE	Zemmeng/claude-study-system	top.md	4261	MIT	MIT	MIT	main	LICENSE	1064	4e4c852d43f9	
+CELL-WITHOUT-GRANT	ZQR1101/xueyoujing-companion	top.md	4303	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	cmkumar87/NUS-MOOC-Transacts-Corpus	top.md	4306	MIT	MIT	MIT	master	LICENSE	1083	2d8f95296606	
+CELL-WITHOUT-GRANT	Gaurav-Pande/AES_DL	top.md	4307	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	travismoore3/aes_system	top.md	4308	MIT	MIT	MIT	master	LICENSE	1069	1f3b59174742	
+AGREE	AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	top.md	4310	MIT	MIT	MIT	main	LICENSE	1061	0c410e37b86b	
+AGREE	siyuanzhao/automated-essay-grading	top.md	4312	MIT	MIT	MIT	master	LICENSE	1068	a719c5319faa	
+AGREE	ai-shifu/ai-shifu	top.md	4332	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	OpenOLAT/OpenOLAT	top.md	4381	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	top.md	4382	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	4383	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Selleo/mentingo	top.md	4384	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	ai-shifu/ai-shifu	top.md	4385	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	zijinz456/OpenTutor	top.md	4386	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	thm-mni-ii/feedbacksystem	top.md	4387	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	Open-TutorAi/open-tutor-ai-CE	top.md	4388	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	zhangl1001/civil-ai	top.md	4389	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	dodona-edu/dolos	top.md	4390	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+UNDECIDABLE-BODY	shmercer/writeAlizer	top.md	4391	MIT	MIT	UNRECOGNISED	master	LICENSE	47	acdf4d7acf3f	no recognised licence title
+AGREE	Li-Evan/Bloom	top.md	4392	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ankimcp/anki-mcp-server	top.md	4393	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	fborrasumh/tutoria	top.md	4394	MIT	MIT	MIT	main	LICENSE	1120	274057d9410c	
+AGREE	Miaotofu01/Study-Mate	top.md	4395	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	4396	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	openeducat/openeducat_erp	top.md	4526	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	plastic-labs/tutor-gpt	top.md	4544	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	openeducat/openeducat_erp	top.md	4545	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	fborrasumh/tutoria	top.md	4646	MIT	MIT	MIT	main	LICENSE	1120	274057d9410c	
+AGREE	Open-TutorAi/open-tutor-ai-CE	top.md	4648	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	OpenOLAT/OpenOLAT	top.md	4690	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	top.md	4691	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	4692	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Selleo/mentingo	top.md	4693	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	zijinz456/OpenTutor	top.md	4694	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	thm-mni-ii/feedbacksystem	top.md	4695	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	Open-TutorAi/open-tutor-ai-CE	top.md	4696	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	zhangl1001/civil-ai	top.md	4697	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	dodona-edu/dolos	top.md	4698	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	Li-Evan/Bloom	top.md	4699	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ankimcp/anki-mcp-server	top.md	4700	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	fborrasumh/tutoria	top.md	4701	MIT	MIT	MIT	main	LICENSE	1120	274057d9410c	
+AGREE	Miaotofu01/Study-Mate	top.md	4702	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	4703	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	Selleo/mentingo	top.md	4742	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	4758	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	open-spaced-repetition/fsrs4anki	top.md	4759	MIT	MIT	MIT	main	LICENSE	1079	2ec9e6e61ed8	
+AGREE	zijinz456/OpenTutor	top.md	4761	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	PrepLabsAI/InterviewMentor	top.md	4763	MIT	MIT	MIT	main	LICENSE	1071	aeb634f7110b	
+AGREE	Selleo/mentingo	top.md	4764	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	ahmedEid1/lumen	top.md	4765	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	4767	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	zhangl1001/civil-ai	top.md	4768	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	towardsai/ai-tutor-app	top.md	4769	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11386	7dc0f2a45a9e	
+AGREE	thm-mni-ii/feedbacksystem	top.md	4770	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	brownplt/LTLTutor	top.md	4771	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.txt	35148	8b1ba204bb69	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	top.md	4822	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	top.md	4823	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	4824	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Selleo/mentingo	top.md	4825	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	zijinz456/OpenTutor	top.md	4826	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	thm-mni-ii/feedbacksystem	top.md	4827	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	zhangl1001/civil-ai	top.md	4828	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	dodona-edu/dolos	top.md	4829	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	Li-Evan/Bloom	top.md	4830	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ankimcp/anki-mcp-server	top.md	4831	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Miaotofu01/Study-Mate	top.md	4832	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	4833	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	zijinz456/OpenTutor	top.md	4872	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	ankimcp/anki-mcp-server	top.md	4873	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	4874	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	OpenOLAT/OpenOLAT	top.md	4894	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	top.md	4895	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	zijinz456/OpenTutor	top.md	4896	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	dodona-edu/dolos	top.md	4897	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	Li-Evan/Bloom	top.md	4898	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	Miaotofu01/Study-Mate	top.md	4899	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ankimcp/anki-mcp-server	top.md	4900	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	4901	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	Miaotofu01/Study-Mate	top.md	4931	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	Li-Evan/Bloom	top.md	4932	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ai-shifu/ai-shifu	top.md	5026	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5027	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5028	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5029	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	HKUDS/DeepTutor	top.md	5031	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5033	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5034	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5035	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5036	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5162	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5163	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5164	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5165	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5166	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5167	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5169	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5170	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5171	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5172	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5249	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5250	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5251	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5252	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5253	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5254	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5256	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5257	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5258	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5259	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5354	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5355	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5356	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5357	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5358	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5359	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5361	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5362	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5363	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5364	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5440	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5441	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5442	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5443	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5444	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5445	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5447	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5448	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5449	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5450	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5490	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5491	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5492	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5493	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5494	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5495	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5497	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5498	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	plastic-labs/tutor-gpt	top.md	5500	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5571	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5572	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5573	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5574	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5575	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5576	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5578	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5579	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5580	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5581	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5665	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	echo-loop/Echo-Loop	top.md	5667	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5668	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5669	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5670	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5672	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5673	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5674	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5675	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	NickScherbakov/codementor-ai-platform	top.md	5694	MIT	MIT	MIT	main	LICENSE	1072	7893452d41e0	
+AGREE	niansia/taiwan-exam	top.md	5695	MIT	MIT	MIT	main	LICENSE	1064	94d43b24eb49	
+AGREE	timothywarner-org/ai901-cert-buddy-claude	top.md	5696	MIT	MIT	MIT	main	LICENSE	1067	f2ddb13a24a1	
+AGREE	jeliael/fakao-ai-exam-engine	top.md	5697	MIT	MIT	MIT	master	LICENSE	1063	a29b8bca5c59	
+AGREE	ai-shifu/ai-shifu	top.md	5755	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	echo-loop/Echo-Loop	top.md	5757	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5758	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5759	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5760	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5762	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5763	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5764	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5765	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	5914	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+BOUND	penecho/penecho	top.md	5915	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	5916	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	5917	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	5918	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	5919	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	5921	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	5922	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	5923	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	5924	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	6088	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	penecho/penecho	top.md	6089	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	6090	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	6091	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	6092	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	6093	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	6095	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	6096	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	6097	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	6098	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	6188	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	penecho/penecho	top.md	6189	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	6190	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	6191	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	6192	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	6193	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	6195	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	6196	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	6197	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	6198	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	6266	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	penecho/penecho	top.md	6267	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	6268	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	6269	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	6270	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	6271	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	6273	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	6274	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	HugeCatLab/ChatTutor	top.md	6275	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	6276	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	6384	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	penecho/penecho	top.md	6385	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	echo-loop/Echo-Loop	top.md	6386	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	6387	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Selleo/mentingo	top.md	6388	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	6389	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	zijinz456/OpenTutor	top.md	6391	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	top.md	6392	MIT	MIT	MIT	main	LICENSE	1070	deffdff30dfd	
+AGREE	Selleo/mentingo	top.md	6614	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HKUDS/DeepTutor	top.md	6615	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+CELL-WITHOUT-GRANT	moodle/moodle	top.md	6689	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	top.md	6690	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	top.md	6691	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openedx/edx-platform	top.md	6692	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	top.md	6750	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	top.md	6751	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	top.md	6752	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	HKUDS/DeepTutor	top.md	6847	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	Miaotofu01/Study-Mate	top.md	6848	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	24kchengYe/human-skill-tree	top.md	6849	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	1134	3fb8cda58638	§13 absent
+AGREE	ankimcp/anki-mcp-server	top.md	6850	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	6851	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	6852	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	6853	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	6854	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	6855	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	artcc/freelingo	top.md	6856	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	HKUDS/DeepTutor	top.md	6909	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	Miaotofu01/Study-Mate	top.md	6910	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	24kchengYe/human-skill-tree	top.md	6911	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	1134	3fb8cda58638	§13 absent
+AGREE	ankimcp/anki-mcp-server	top.md	6912	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	6913	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	6914	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	6915	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	6916	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	6917	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	artcc/freelingo	top.md	6918	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	andremadstop/learning-nc	top.md	6946	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	723	df17186cc811	§13 absent
+AGREE	darkstar42/fluency-loop	top.md	6949	MIT	MIT	MIT	main	LICENSE	1246	22317685a662	
+AGREE	Miaotofu01/Study-Mate	top.md	7038	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	VeryMath/VeryMath-textbook-copilot	top.md	7039	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11338	78818d360ee0	
+AGREE	wildcat430524/StepsToGreat	top.md	7040	MIT	MIT	MIT	main	LICENSE	1082	ea24c55dc504	
+AGREE	huaxx-lab/LeetLens	top.md	7041	MIT	MIT	MIT	main	LICENSE	1066	0d7defd02317	
+AGREE	echo-loop/Echo-Loop	top.md	7164	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	penecho/penecho	top.md	7165	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	HugeCatLab/ChatTutor	top.md	7166	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34522	20b067f86de3	§13 agrees
+AGREE	plastic-labs/tutor-gpt	top.md	7167	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-shifu/ai-shifu	top.md	7168	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	
+AGREE	ankimcp/anki-mcp-server	top.md	7169	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	zijinz456/OpenTutor	top.md	7170	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	Selleo/mentingo	top.md	7171	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	HumphreySun98/Smart-Study-Agent	top.md	7265	MIT	MIT	MIT	main	LICENSE	1067	ca229b6dc765	
+AGREE	wenflow-org/wenflow	top.md	7266	MIT	MIT	MIT	main	LICENSE	1067	b6fac57d4710	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	7268	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	TovTechOrg/Tov-learn	top.md	7270	MIT	MIT	MIT	master	LICENSE	1064	092d389ac156	
+AGREE	michael-borck/study-buddy	top.md	7272	MIT	MIT	MIT	main	LICENSE	1080	95763b116710	
+AGREE	MysterionRise/adaptive-knowledge-graph	top.md	7273	MIT	MIT	MIT	main	LICENSE	1094	2c4797226a30	
+AGREE	skillcoco/skillcoco	top.md	7274	MIT	MIT	MIT	main	LICENSE	1103	22fab8b7f466	
+AGREE	grey8-io/learn-ai-with-grey8	top.md	7275	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	ZelinZhou-THU/stem-tutor-agent	top.md	7276	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35211	fab96a92c83a	§13 agrees
+AGREE	ankimcp/anki-mcp-server	top.md	7368	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	ZeKaiNie/universal-examprep-skill	top.md	7369	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	karanb192/algo-sensei	top.md	7370	MIT	MIT	MIT	main	LICENSE	1081	3b2ca73e81ad	
+AGREE	Li-Evan/Bloom	top.md	7371	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	SenmuuuuW/universal-diagnostic-tutor-skill	top.md	7372	MIT	MIT	MIT	main	LICENSE	1102	a9ca00bcc7a5	
+AGREE	KeWang0622/kaogong-skill	top.md	7373	MIT	MIT	MIT	main	LICENSE	1083	a6943096ffde	
+AGREE	artcc/freelingo	top.md	7374	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34514	ea94d5765c59	§13 agrees
+AGREE	PrepLabsAI/InterviewMentor	top.md	7375	MIT	MIT	MIT	main	LICENSE	1071	aeb634f7110b	
+AGREE	flysheep-ai/education-skills	top.md	7376	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	SimonsTang/feifei-companion	top.md	7377	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10227	59a378bf23a0	
+AGREE	Selleo/mentingo	top.md	7378	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	codeXsidd/Studivexa	top.md	7379	MIT	MIT	MIT	main	LICENSE	1068	58f77360830f	
+AGREE	yh2072/edgameclaw	top.md	7380	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	HKUDS/DeepTutor	top.md	7383	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	five-plus-one/AI-Marker-Suite	top.md	7530	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35154	1ab858f515df	§13 agrees
+AGREE	scibly-dev/scibly	top.md	7532	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34739	9027c56f2fc5	§13 agrees
+AGREE	ai-lingnan/econai-agent-platform	top.md	7533	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	Bbar0n234/learnflow-ai	top.md	7534	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	Miaotofu01/Study-Mate	top.md	7535	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	BetterSEQTA/BetterSEQTA-Plus	top.md	7571	MIT	MIT	MIT	main	LICENSE	1071	5a6d3655162b	
+AGREE	nirholas/ai-tutor-mcp	top.md	7573	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11338	08cadd94b53a	
+AGREE	zavora-ai/mcp-student-records	top.md	7575	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	738	b3886fcd4f82	
+AGREE	mohaneesh-03/mcp-tutor	top.md	7576	MIT	MIT	MIT	main	LICENSE	1056	1126322e2cc8	
+AGREE	admin978/canvas-mcp	top.md	7614	MIT	MIT	MIT	main	LICENSE	1072	507310119817	
+AGREE	zijinz456/OpenTutor	top.md	7623	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	zijinz456/OpenTutor	top.md	7658	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	BetterSEQTA/BetterSEQTA-Plus	top.md	7659	MIT	MIT	MIT	main	LICENSE	1071	5a6d3655162b	
+AGREE	zavora-ai/mcp-student-records	top.md	7660	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	738	b3886fcd4f82	
+AGREE	rohitg00/ai-engineering-from-scratch	top.md	7729	MIT	MIT	MIT	main	LICENSE	1070	d116e214adbc	
+AGREE	pguso/agents-from-scratch	top.md	7730	MIT	MIT	MIT	main	LICENSE	1091	f78cc6bf1d57	
+AGREE	avinash201199/free-ai-agents-resources	top.md	7731	MIT	MIT	MIT	main	LICENSE	1070	12edec716aa1	
+AGREE	Zenglian990/AI_Tutor_Release	top.md	7808	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	flysheep-ai/education-skills	top.md	7810	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	krishna16-origin/ai-tutor	top.md	7811	MIT	MIT	MIT	main	LICENSE	1073	de8107bf9312	
+AGREE	maxew6/ai-tutor-project	top.md	7812	MIT	MIT	MIT	main	LICENSE	1073	de8107bf9312	
+AGREE	zavora-ai/mcp-student-records	top.md	7999	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	738	b3886fcd4f82	
+AGREE	zavora-ai/mcp-student-records	top.md	8034	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	738	b3886fcd4f82	
+AGREE	microsoft/generative-ai-for-beginners	top.md	8101	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	microsoft/ai-agents-for-beginners	top.md	8102	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	pguso/agents-from-scratch	top.md	8103	MIT	MIT	MIT	main	LICENSE	1091	f78cc6bf1d57	
+AGREE	microsoft/ai-agents-for-beginners	top.md	8211	MIT	MIT	MIT	main	LICENSE	1141	c2cfccb812fe	
+AGREE	pguso/agents-from-scratch	top.md	8212	MIT	MIT	MIT	main	LICENSE	1091	f78cc6bf1d57	
+AGREE	alcastaro/opendata-latam-mcp	top.md	8717	MIT	MIT	MIT	main	LICENSE	1557	92d19f73c0d7	
+AGREE	acestein13/campusintel-mcp	top.md	8718	MIT	MIT	MIT	main	LICENSE	1066	3c1d62722c6e	
+AGREE	zijinz456/OpenTutor	top.md	8845	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	ahmedEid1/lumen	top.md	8846	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	mohaneesh-03/mcp-tutor	top.md	8847	MIT	MIT	MIT	main	LICENSE	1056	1126322e2cc8	
+AGREE	nirholas/ai-tutor-mcp	top.md	8848	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11338	08cadd94b53a	
+AGREE	overhangio/tutor	top.md	9148	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	9285	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	zijinz456/OpenTutor	top.md	9286	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	mohaneesh-03/mcp-tutor	top.md	9288	MIT	MIT	MIT	main	LICENSE	1056	1126322e2cc8	
+AGREE	nirholas/ai-tutor-mcp	top.md	9289	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11338	08cadd94b53a	
+AGREE	bruchris/canvas-lms-mcp	top.md	9445	MIT	MIT	MIT	main	LICENSE	1070	c29329c5ef3b	
+AGREE	csmediapro/moodle-mcp-server	top.md	9537	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+CELL-WITHOUT-GRANT	kstateome/lti-launch	top.md	9633	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	JohannsenLum/canvas-api-mcp	top.md	9658	MIT	MIT	MIT	main	LICENSE	1070	f01d2f81a436	
+AGREE	csmediapro/moodle-mcp-server	top.md	9670	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	Jawadh-Salih/moodle-mcp-server	top.md	9672	MIT	MIT	MIT	main	LICENSE	1063	2cf91ec5272f	
+AGREE	HKUDS/DeepTutor	top.md	9814	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	satvik314/educhain	top.md	9815	MIT	MIT	MIT	main	LICENSE	1092	e3321a1b62cd	
+AGREE	vishalsachdev/canvas-mcp	top.md	9816	MIT	MIT	MIT	main	LICENSE	1071	5385a26e2fac	
+AGREE	CAHLR/OATutor	top.md	9817	MIT	MIT	MIT	main	LICENSE	1105	5baaaf977a28	
+AGREE	ArnaudGuiovanna/tutor-mcp	top.md	9820	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	SaadRahman01/claude-moodle-dev	top.md	9821	MIT	MIT	MIT	main	LICENSE	1068	df0b3e71710c	
+AGREE	ideas-edu/ideas	top.md	9822	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.txt	11558	49bbe9114e49	
+AGREE	bruchris/canvas-lms-mcp	top.md	9823	MIT	MIT	MIT	main	LICENSE	1070	c29329c5ef3b	
+AGREE	blend-ed/openedx-mcp	top.md	9825	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34524	8d56b405468a	§13 agrees
+AGREE	Zenglian990/AI_Tutor_Release	top.md	9826	MIT	MIT	MIT	main	LICENSE	1068	695941afdd1f	
+AGREE	flysheep-ai/education-skills	top.md	9827	MIT	MIT	MIT	main	LICENSE	1068	23b91d7c0aef	
+AGREE	krishna16-origin/ai-tutor	top.md	9829	MIT	MIT	MIT	main	LICENSE	1073	de8107bf9312	
+AGREE	sandraschi/classroom-mcp	top.md	9868	MIT	MIT	MIT	master	LICENSE	1071	408dff2e3167	
+AGREE	saytooyum/AI-Based-Timetable-Generation-System	top.md	9871	MIT	MIT	MIT	main	LICENSE	1094	d194e34d2a8e	
+AGREE	BetterSEQTA/BetterSEQTA-Plus	top.md	9880	MIT	MIT	MIT	main	LICENSE	1071	5a6d3655162b	
+AGREE	Agso-o/sigaa-calendar	top.md	9881	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	trindadetiago/sigaa-caiu	top.md	9882	MIT	MIT	MIT	main	LICENSE	1071	e69df76328c3	
+AGREE	juliancasaburi/siu-guarani-promedio-extension	top.md	9883	MIT	MIT	MIT	main	LICENSE	1073	652d46c067d4	
+AGREE	RubsNeto/SigaaUI	top.md	9884	MIT	MIT	MIT	main	LICENSE	1073	c9c2e8ee59eb	
+AGREE	BetterSEQTA/DesQTA	top.md	9885	MIT	MIT	MIT	main	LICENSE	1069	3f2ce5f0c905	
+AGREE	despedite/siu-guarani	top.md	9887	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+CELL-WITHOUT-GRANT	joojdev/academic-tracker-mcp	top.md	9890	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	divyarthjain/vtop-bhopal-mcp	top.md	9894	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	c95bae1d1ce0	
+AGREE	yourssu/soongpt-plugin	top.md	9895	MIT	MIT	MIT	main	LICENSE	1084	8bd9b5065d28	
+AGREE	oliverhruby/edupage-mcp	top.md	9896	MIT	MIT	MIT	main	LICENSE	1070	e99290e1540b	
+AGREE	luca-dupont2/mcgill-vsb-mcp	top.md	9898	MIT	MIT	MIT	main	LICENSE	1068	1eadefa76b5c	
+AGREE	HAL-XP/mcp-pronotes	top.md	9900	MIT	MIT	MIT	master	LICENSE	1063	1db908a46bbb	
+AGREE	zyx1121/nycu	top.md	9903	MIT	MIT	MIT	main	LICENSE	1064	d4894cd12b73	
+AGREE	SleepyPandas/UofT-MCP	top.md	9904	MIT	MIT	MIT	master	LICENSE	1069	47153ef57e9e	
+AGREE	qxbao/qldt-hanu-mcp	top.md	9905	GPL-2.0	GPL-2.0	GPL-2.0	main	LICENSE	18092	8177f9751321	§13 absent
+AGREE	MartinSA04/ntnu-mcp	top.md	9906	MIT	MIT	MIT	main	LICENSE	1077	57fcd6936883	
+AGREE	chenning42/iserv-mcp	top.md	9907	MIT	MIT	MIT	main	LICENSE	1090	5dc99bd5061f	
+AGREE	skhdemo/uoft-quercus-mcp	top.md	9908	MIT	MIT	MIT	main	LICENSE	1086	8c868a56a485	
+AGREE	fakelag28/vsuet-timetable-api-mcp	top.md	9909	MIT	MIT	MIT	main	LICENSE	1064	7912385dc67d	
+AGREE	saytooyum/AI-Based-Timetable-Generation-System	top.md	9922	MIT	MIT	MIT	main	LICENSE	1094	d194e34d2a8e	
+AGREE	felipedias-ie/blackboard-mcp	top.md	9965	MIT	MIT	MIT	main	LICENSE	1084	d65abf96e389	
+AGREE	alejooroncoy/campus-cli	top.md	9968	ISC	ISC	ISC	main	LICENSE	748	4ca1bd2e969c	
+AGREE	3iPunt/wordpress-lti-1-3	top.md	10004	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	CNIT-Organization/ltitoolkit	top.md	10009	MIT	MIT	MIT	main	LICENSE	1070	5aef77eb4471	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	top.md	10017	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	googleworkspace/oneroster-integration-conformance-tests	top.md	10018	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	oat-sa/oneroster-import	top.md	10020	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	18026	39db8f9acf03	§13 absent
+AGREE	bgwdotdev/libre-oneroster	top.md	10021	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	lepo-project/roster-hub	top.md	10022	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+CELL-WITHOUT-GRANT	jdolny/OneRoster	top.md	10026	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	gotranseo/oneroster	top.md	10027	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.txt	11357	c71d239df917	
+AGREE	TCI/OneRoster	top.md	10028	MIT	MIT	MIT	master	LICENSE.txt	1079	d9bdc840b9a0	
+AGREE	ridencww/uniroster-server	top.md	10029	MIT	MIT	MIT	master	LICENSE	1067	09837cca3eae	
+AGREE	DavidLMS/learnmcp-xapi	top.md	10044	MIT	MIT	MIT	main	LICENSE	1069	4aa758cb51b2	
+AGREE	Transcordia/jupiter	top.md	10047	MIT	MIT	MIT	master	LICENSE	1079	354a093350f2	
+AGREE	ZanichelliEditore/LearningRecordStore-xapi	top.md	10048	MIT	MIT	MIT	master	LICENSE	1082	1592732f4483	
+CELL-WITHOUT-GRANT	Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	top.md	10049	ECL-2.0	ECL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	nicolaasmatthijs/xapicaliper	top.md	10052	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	adaptlearning/adapt_framework	top.md	10137	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35129	e90ca2f081fa	§13 agrees
+AGREE	jcputney/scorm-again	top.md	10139	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	gabrieldoty/simplify-scorm	top.md	10140	MIT	MIT	MIT	master	LICENSE	1073	9e0a91a8c645	
+AGREE	numbas/Numbas	top.md	10141	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	dhodges47/SCORM-LearningManagementSystem	top.md	10142	MIT	MIT	MIT	master	LICENSE.txt	1091	8e079631dedc	
+AGREE	cybercussion/SCOBot	top.md	10143	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	837	166ace659a06	
+AGREE	amp-up-io/qti3-item-player	top.md	10151	MIT	MIT	MIT	main	LICENSE	1076	7faa621251d7	
+AGREE	Citolab/qti-convert	top.md	10152	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35196	f93eb1d94904	§13 agrees
+AGREE	LongsightGroup/qti3	top.md	10153	MIT	MIT	MIT	main	LICENSE.md	1072	00ed05b90bf8	
+AGREE	sonyccd/qti-playground	top.md	10154	MIT	MIT	MIT	main	LICENSE	1070	3a9fde8de919	
+AGREE	agencyenterprise/qti-3-player	top.md	10155	MIT	MIT	MIT	main	LICENSE	1066	9e8db37a05d0	
+AGREE	metyatech/markdown-to-qti	top.md	10156	MIT	MIT	MIT	main	LICENSE	1066	5bb49280d709	
+AGREE	epam/qti-learnosity	top.md	10157	MIT	MIT	MIT	main	LICENSE	1069	88d3f4f4e9e6	
+AGREE	impierce/credential-converter	top.md	10164	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11356	efd09e39cb61	
+AGREE	CoopCodeCommun/pyopenbadges	top.md	10165	LGPL-2.1	LGPL-2.1	LGPL-2.1	main	LICENSE	26526	20c17d8b8c48	§13 absent
+AGREE	luisgf/openbadgeslib	top.md	10166	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE.txt	7650	ea8af5e789cb	§13 absent
+AGREE	giantswarm/mcp-oauth	top.md	10194	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11353	bd7c68cdc4e6	
+AGREE	NapthaAI/http-oauth-mcp-server	top.md	10195	MIT	MIT	MIT	main	LICENSE	1066	a3c145784d8d	
+AGREE	empires-security/mcp-oauth2-aws-cognito	top.md	10197	MIT	MIT	MIT	main	LICENSE	1064	a836d083f25a	
+AGREE	tuannvm/oauth-mcp-proxy	top.md	10198	MIT	MIT	MIT	main	LICENSE	1068	772bc7b96e9a	
+AGREE	janwilmake/universal-mcp-oauth	top.md	10199	MIT	MIT	MIT	main	LICENSE	1068	a12151e3f9ad	
+AGREE	1alexandrer/moodle-mcp	top.md	10229	MIT	MIT	MIT	master	LICENSE	1074	ecc232c0b2aa	
+AGREE	SaadRahman01/moodle-mcp	top.md	10230	MIT	MIT	MIT	main	LICENSE	1068	df0b3e71710c	
+AGREE	Deeptanshuu/mydy-lms-helper	top.md	10231	MIT	MIT	MIT	main	LICENSE	1070	8807b48f91fb	
+AGREE	ilodezis/mti-lms-mcp	top.md	10245	MIT	MIT	MIT	main	LICENSE	1101	88455cdb3ab9	
+AGREE	RakeshBabuGajula/Exam_Intellect	top.md	10274	MIT	MIT	MIT	master	LICENSE	1075	a4e58d1074c9	
+AGREE	VIJAYAPANDIANT/online-examination-system	top.md	10275	MIT	MIT	MIT	main	LICENSE	1072	d8fb7c9c9bf5	
+AGREE	singhrajvardhan/SecureExam-Platform	top.md	10276	MIT	MIT	MIT	main	LICENSE.md	1080	5c8b11fe07ed	
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	top.md	10290	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	blend-ed/openedx-mcp	top.md	10292	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34524	8d56b405468a	§13 agrees
+AGREE	adaptlearning/adapt_framework	top.md	10302	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35129	e90ca2f081fa	§13 agrees
+AGREE	Citolab/qti-convert	top.md	10303	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35196	f93eb1d94904	§13 agrees
+AGREE	UniTime/unitime	foundations.md	56	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	58d1e17ffe51	
+AGREE	yassinabdelal-ipynb/el-thanawiya	foundations.md	195	MIT	MIT	MIT	main	LICENSE	1082	7abf98fee25c	
+AGREE	openeducat/openeducat_erp	foundations.md	209	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	228	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learningequality/kolibri	foundations.md	230	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	h5p/h5p-php-library	foundations.md	271	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35146	c53a65c2fd56	§13 agrees
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	272	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	packbackbooks/lti-1-3-php-library	foundations.md	273	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	
+AGREE	jupyterhub/ltiauthenticator	foundations.md	274	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1528	08eebd9662cb	
+AGREE	learningequality/kolibri	foundations.md	275	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	Pearson-Advance/openedx-lti-tool-plugin	foundations.md	277	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	foundations.md	278	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	celtic-project/LTI-PHP	foundations.md	296	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	7651	da7eabb7bafd	§13 absent
+AGREE	packbackbooks/lti-1-3-php-library	foundations.md	297	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	
+AGREE	Crosstalk-Solutions/Project-NOMAD	foundations.md	323	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10779	e4f125622d3c	
+AGREE	learningequality/kolibri	foundations.md	339	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	ollama/ollama	foundations.md	341	MIT	MIT	MIT	main	LICENSE	1058	5934ed2ce0d1	
+CELL-WITHOUT-GRANT	marcusgreen/moodle-qtype_aitext	foundations.md	460	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	nvaccess/nvda	foundations.md	699	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	formalms/formalms	foundations.md	700	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	foundations.md	701	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Responsive-Design	foundations.md	702	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	thm-mni-ii/feedbacksystem	foundations.md	703	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+CELL-WITHOUT-GRANT	kstateome/lti-launch	foundations.md	704	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	skhdemo/uoft-quercus-mcp	foundations.md	705	MIT	MIT	MIT	main	LICENSE	1086	8c868a56a485	
+CELL-WITHOUT-GRANT	open-spaced-repetition/fsrs4anki-helper	foundations.md	706	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	ProjectsAndPrograms/school-management-system	foundations.md	707	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	anthropics/prompt-eng-interactive-tutorial	foundations.md	708	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	projectfedena/fedena	foundations.md	709	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	foradian/fedena	foundations.md	710	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	foundations.md	711	ECL-2.0	ECL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	alfredang/ai-mms	foundations.md	762	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	formalms/formalms	foundations.md	847	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	foradian/fedena	foundations.md	853	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	open-spaced-repetition/fsrs4anki	foundations.md	892	MIT	MIT	MIT	main	LICENSE	1079	2ec9e6e61ed8	
+AGREE	open-spaced-repetition/free-spaced-repetition-scheduler	foundations.md	893	MIT	MIT	MIT	main	LICENSE	1089	c0e0a71cc590	
+AGREE	alyssaxuu/carden	foundations.md	896	MIT	MIT	MIT	master	LICENSE	1066	80ffe5a343b5	
+AGREE	nagisanzenin/engram	foundations.md	897	MIT	MIT	MIT	main	LICENSE	1069	203b75ae088e	
+AGREE	trane-project/trane	foundations.md	898	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	kantord/LibreLingo	foundations.md	899	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34524	e9df4c4e4e64	§13 agrees
+AGREE	FreeLanguageTools/vocabsieve	foundations.md	900	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	Ajatt-Tools/mpvacious	foundations.md	901	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	patil-suraj/question_generation	foundations.md	927	MIT	MIT	MIT	master	LICENSE	1068	4c97925e6982	
+AGREE	tsugiproject/tsugi	foundations.md	944	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+CELL-WITHOUT-GRANT	dmitry-viskov/pylti1	foundations.md	945	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	packbackbooks/lti-1-3-php-library	foundations.md	946	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	
+AGREE	jupyterhub/ltiauthenticator	foundations.md	948	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1528	08eebd9662cb	
+AGREE	ucfopen/UDOIT	foundations.md	951	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ucfopen/UDOIT	foundations.md	955	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ucfopen/Obojobo	foundations.md	956	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	76a97c878c9c	§13 agrees
+AGREE	ucfopen/Materia	foundations.md	957	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	onemnemo/mnemo	foundations.md	970	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11326	62e02db7f9a1	
+AGREE	langx/langx	foundations.md	971	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1520	19ec8f98fa19	
+AGREE	sr258/scorm-h5p-wrapper	foundations.md	972	MIT	MIT	MIT	master	LICENSE	1073	e5a1f41b0bb5	
+AGREE	studentinsights/studentinsights	foundations.md	973	MIT	MIT	MIT	master	LICENSE	1083	53f12859c8a3	
+AGREE	tutors-sdk/tutors	foundations.md	974	MIT	MIT	MIT	main	LICENSE	1088	4800b7fa4014	
+AGREE	sagefy/sagefy	foundations.md	975	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.txt	10174	0d542e0c8804	
+AGREE	haxtheweb/haxcms-php	foundations.md	976	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11362	b662f44e55e8	
+AGREE	senjun-team/senjun-courses	foundations.md	977	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+UNDECIDABLE-BODY	codeforlife-education/aimmo	foundations.md	978	AGPL-3.0	AGPL-3.0	UNRECOGNISED	master	LICENSE.md	115	f406d19420ea	no recognised licence title
+AGREE	chipmates/agoracosmica	foundations.md	979	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	elmsln/elmsln	foundations.md	980	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.md	35193	0e6d22ed58b6	§13 agrees
+AGREE	WebPA/WebPA	foundations.md	981	GPL-3.0	GPL-3.0	GPL-3.0	master	license.txt	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	cybercussion/SCOBot	foundations.md	982	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	837	166ace659a06	
+AGREE	adlnet/xAPI-Spec	foundations.md	1008	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11525	a1587287ff04	
+AGREE	adaptlearning/adapt_framework	foundations.md	1009	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35129	e90ca2f081fa	§13 agrees
+AGREE	adlnet/ADL_LRS	foundations.md	1011	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	58d1e17ffe51	
+AGREE	adlnet/xAPIWrapper	foundations.md	1012	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+AGREE	RusticiSoftware/TinCanJS	foundations.md	1013	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	yetanalytics/lrsql	foundations.md	1014	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	davidpesce/moodle-logstore_xapi	foundations.md	1015	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35121	e1c0ad728983	§13 agrees
+AGREE	adlnet/lrs-conformance-test-suite	foundations.md	1017	MIT	MIT	MIT	master	LICENSE	1046	c0fc02a86ae2	
+AGREE	Apereo-Learning-Analytics-Initiative/OpenLRW	foundations.md	1018	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	9878	f339063d2f60	
+AGREE	adlnet/CATAPULT	foundations.md	1019	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	
+AGREE	tl-its-umich-edu/my-learning-analytics	foundations.md	1021	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11379	b89b380a589b	
+AGREE	PlaypowerLabs/EdOptimize	foundations.md	1022	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	terracotta-education/terracotta	foundations.md	1023	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11323	6dc0e068dcf3	
+AGREE	autolab/Autolab	foundations.md	1072	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11324	a8ad31b1c3f4	
+AGREE	Submitty/Submitty	foundations.md	1073	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE.md	1542	c123708cb4ef	
+AGREE	inducer/relate	foundations.md	1074	MIT	MIT	MIT	main	LICENSE	1145	66ff89ebf05f	
+AGREE	okpy/ok	foundations.md	1075	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	13979	e3b80e19df08	
+AGREE	INGInious/INGInious	foundations.md	1076	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+AGREE	foundation50/classroom50	foundations.md	1077	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35150	e57f1c320b8c	§13 agrees
+AGREE	ucbds-infra/otter-grader	foundations.md	1078	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	master	LICENSE	1560	6af203d41a01	
+AGREE	autolab/Tango	foundations.md	1079	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11324	a8ad31b1c3f4	
+AGREE	infomark-org/infomark	foundations.md	1080	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	google/prog-edu-assistant	foundations.md	1081	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	
+AGREE	uhafner/autograding-github-action	foundations.md	1082	MIT	MIT	MIT	main	LICENSE	1095	d2c7f8d2d8be	
+AGREE	kit-sdq/autograder	foundations.md	1083	MIT	MIT	MIT	main	LICENSE.md	1068	30a0bc0d48b4	
+UNDECIDABLE-BODY	portabilis/i-diario	foundations.md	1238	AGPL-3.0	AGPL-3.0	UNRECOGNISED	main	LICENSE	35326	fe85f94658bf	no recognised licence title
+AGREE	opensalt/OB3DefinitionWidget	foundations.md	1277	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	ArnaudGuiovanna/tutor-mcp	foundations.md	1278	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	foundations.md	1279	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	openfun/ralph	foundations.md	1280	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	foundations.md	1342	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	1420	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+UNDECIDABLE-BODY	portabilis/i-diario	foundations.md	1507	AGPL-3.0	AGPL-3.0	UNRECOGNISED	main	LICENSE	35326	fe85f94658bf	no recognised licence title
+NOTATION	ankitects/anki	foundations.md	1509	AGPL-3	AGPL-3.0	AGPL-3.0	main	LICENSE	1930	bde7d05790a0	§13 absent
+UNDECIDABLE-BODY	frappe/education	foundations.md	1510	GPL-3	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+UNDECIDABLE-BODY	pawtograder/platform	foundations.md	1512	GPL-3	GPL-3.0	GPL-?	main	LICENSE	658	61d7698783f4	§13 absent
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	1564	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	frappe/lms	foundations.md	1566	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	foundations.md	1665	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	MisterCommand/mcp-canvas-lms	foundations.md	1666	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Exhabition/brightspace-mcp-rs	foundations.md	1667	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	LMS-Laravel/LMS-Laravel	foundations.md	1668	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	LMS-Laravel/OLD-LMS-Laravel	foundations.md	1669	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Simon-Initiative/lti-example-tool	foundations.md	1670	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	Lumieducation/Lumi	foundations.md	1671	AGPL-3.0	AGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	adlnet/xAPI-Spec	foundations.md	1783	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11525	a1587287ff04	
+AGREE	adlnet/ADL_LRS	foundations.md	1784	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	58d1e17ffe51	
+AGREE	adlnet/lrs-conformance-test-suite	foundations.md	1786	MIT	MIT	MIT	master	LICENSE	1046	c0fc02a86ae2	
+AGREE	cybercussion/SCOBot	foundations.md	1787	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	837	166ace659a06	
+AGREE	sr258/scorm-h5p-wrapper	foundations.md	1788	MIT	MIT	MIT	master	LICENSE	1073	e5a1f41b0bb5	
+AGREE	LiaScript/LiaScript-Exporter	foundations.md	1789	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	master	LICENSE	1523	6ed2c3b79b2f	
+AGREE	adlnet/CATAPULT	foundations.md	1790	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	
+CELL-WITHOUT-GRANT	dmitry-viskov/pylti1	foundations.md	1791	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	1EdTech/lti-1-3-php-library	foundations.md	1792	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11343	78b49eeaddbf	
+AGREE	packbackbooks/lti-1-3-php-library	foundations.md	1793	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	
+AGREE	oat-sa/lib-lti1p3-core	foundations.md	1794	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	18091	f9c375a1be4a	§13 absent
+AGREE	jupyterhub/ltiauthenticator	foundations.md	1795	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1528	08eebd9662cb	
+AGREE	openfun/marsha	foundations.md	1796	MIT	MIT	MIT	master	LICENSE	1078	6dab88f38735	
+AGREE	cerpus/Edlib	foundations.md	1797	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	34915	0e1372769c3e	§13 agrees
+AGREE	merely-useful/py-rse	foundations.md	1845	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	master	LICENSE.md	1409	4ec1b92e22c2	
+AGREE	spatialaudio/digital-signal-processing-lecture	foundations.md	1846	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	master	LICENSE	19746	03de920e8b18	
+AGREE	openfun/ralph	foundations.md	1876	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	tsugiproject/tsugi	foundations.md	1896	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+AGREE	learningequality/kolibri	foundations.md	1932	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	1933	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	jcputney/scorm-again	foundations.md	1937	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	OpenVidu/openvidu	foundations.md	1940	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	b40930bbcf80	
+AGREE	frappe/lms	foundations.md	1955	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	classroomio/classroomio	foundations.md	1957	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	codelitdev/courselit	foundations.md	1958	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.md	34143	281e174e4d5f	§13 agrees
+AGREE	overhangio/tutor	foundations.md	1959	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	claroline/Claroline	foundations.md	1960	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34616	9107f2ed4192	§13 agrees
+AGREE	xiaochong0302/course-tencent-cloud	foundations.md	1962	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	18431	189b1af95d66	§13 absent
+AGREE	francoisjacquet/rosariosis	foundations.md	1963	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	gazpachu/hypatia	foundations.md	1964	GPL-2.0	GPL-2.0	GPL-2.0	master	license.txt	19350	8369726177d5	§13 absent
+AGREE	opencast/opencast	foundations.md	2081	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	music-encoding/music-encoding	foundations.md	2082	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	9899	8e47bca43011	
+AGREE	oaeproject/3akai-ux	foundations.md	2083	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	12413	26eb150501f6	
+AGREE	oaeproject/Hilary	foundations.md	2084	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	12322	34d6dd461117	
+AGREE	polimediaupv/paella	foundations.md	2085	ECL-2.0	ECL-2.0	ECL-2.0	master	license.txt	9915	15efd2f640ed	
+AGREE	learningequality/kolibri	foundations.md	2103	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	2104	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	2105	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	chamilo/chamilo-lms	foundations.md	2107	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	2108	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	h5p/h5p-php-library	foundations.md	2109	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35146	c53a65c2fd56	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	2110	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	2190	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learningequality/kolibri	foundations.md	2191	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	oppia/oppia	foundations.md	2194	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	open-spaced-repetition/py-fsrs	foundations.md	2195	MIT	MIT	MIT	main	LICENSE	1079	021bff58ad26	
+AGREE	open-spaced-repetition/fsrs4anki	foundations.md	2196	MIT	MIT	MIT	main	LICENSE	1079	2ec9e6e61ed8	
+AGREE	docling-project/docling	foundations.md	2197	MIT	MIT	MIT	main	LICENSE	1072	edb765d1e3e6	
+AGREE	Unstructured-IO/unstructured	foundations.md	2198	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.md	11360	4b190a3ffeb6	
+AGREE	openai/whisper	foundations.md	2199	MIT	MIT	MIT	main	LICENSE	1063	b5d65a59060e	
+AGREE	rhasspy/piper	foundations.md	2200	MIT	MIT	MIT	master	LICENSE.md	1071	4cd71dece703	
+AGREE	ollama/ollama	foundations.md	2201	MIT	MIT	MIT	main	LICENSE	1058	5934ed2ce0d1	
+AGREE	vllm-project/vllm	foundations.md	2202	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	BerriAI/litellm	foundations.md	2203	MIT	MIT	MIT	main	LICENSE	1419	b170d6bf8e88	
+AGREE	run-llama/llama_index	foundations.md	2204	MIT	MIT	MIT	main	LICENSE	1065	24f40b5190fd	
+AGREE	infiniflow/ragflow	foundations.md	2205	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	mem0ai/mem0	foundations.md	2206	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11349	0bbcbe931c35	
+AGREE	langfuse/langfuse	foundations.md	2207	MIT	MIT	MIT	main	LICENSE	1612	fd09d42b5b16	
+AGREE	sakaiproject/sakai	foundations.md	2209	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	opencast/opencast	foundations.md	2210	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	jitsi/jitsi-meet	foundations.md	2211	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	12596	eae52e200cd8	
+AGREE	openfun/richie	foundations.md	2212	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	overhangio/tutor	foundations.md	2218	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	UCL-INGI/INGInious	foundations.md	2221	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+UNDECIDABLE-BODY	pawtograder/platform	foundations.md	2223	GPL-3.0	GPL-3.0	GPL-?	main	LICENSE	658	61d7698783f4	§13 absent
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	2361	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	foundations.md	2362	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	foundations.md	2363	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	oppia/oppia	foundations.md	2364	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	learningequality/kolibri	foundations.md	2365	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openfun/richie	foundations.md	2366	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	overhangio/tutor	foundations.md	2367	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	frappe/lms	foundations.md	2369	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+CELL-WITHOUT-GRANT	processing/p5	foundations.md	2370	LGPL-2.1	LGPL-2.1	NO-GRANT	-	-	-	-	6 paths x 2 refs
+UNDECIDABLE-BODY	frappe/education	foundations.md	2385	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	TheAlgorithms/Python	foundations.md	2539	MIT	MIT	MIT	master	LICENSE.md	1095	4395a1dc4bda	
+AGREE	CTFd/CTFd	foundations.md	2540	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11314	dcaf3b3bff45	
+AGREE	oppia/oppia	foundations.md	2541	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	mlcommons/ck	foundations.md	2542	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE.md	10174	69849221bfb9	
+AGREE	dmoshehun-prog/learn-from-materials	foundations.md	2543	MIT	MIT	MIT	main	LICENSE.md	1122	15ce43afa44a	
+AGREE	ystemsrx/mini-nanoGPT	foundations.md	2544	MIT	MIT	MIT	main	LICENSE	1063	703b1fc21029	
+AGREE	SYuan03/Skill-Anything	foundations.md	2545	MIT	MIT	MIT	main	LICENSE	1084	41bad3fca692	
+AGREE	EbookFoundation/free-programming-books	foundations.md	2546	CC-BY-4.0	CC-BY-4.0	CC-BY-4.0	main	LICENSE	18658	f5b745ef9808	
+AGREE	openeducat/openeducat_erp	foundations.md	2589	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	2590	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	GibbonEdu/core	foundations.md	2591	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	francoisjacquet/rosariosis	foundations.md	2592	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	learningequality/kolibri	foundations.md	2603	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	oppia/oppia	foundations.md	2604	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	CTFd/CTFd	foundations.md	2605	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11314	dcaf3b3bff45	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	2606	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	AnubisLMS/Anubis	foundations.md	2607	MIT	MIT	MIT	main	LICENSE	1083	e36740a2a510	
+AGREE	TheAlgorithms/Python	foundations.md	2608	MIT	MIT	MIT	master	LICENSE.md	1095	4395a1dc4bda	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	2678	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/openedx-platform	foundations.md	2679	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openedx/edx-platform	foundations.md	2680	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	foundations.md	2681	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	chamilo/chamilo-lms	foundations.md	2682	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	frappe/lms	foundations.md	2683	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	overhangio/tutor	foundations.md	2684	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	sakaiproject/sakai	foundations.md	2685	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	opencast/opencast	foundations.md	2686	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	2687	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	foundations.md	2688	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openfun/ralph	foundations.md	2689	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	openeducat/openeducat_erp	foundations.md	2690	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	francoisjacquet/rosariosis	foundations.md	2691	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	GibbonEdu/core	foundations.md	2692	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	openfun/ralph	foundations.md	2722	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	foundations.md	2731	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+UNDECIDABLE-BODY	frappe/education	foundations.md	3243	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	OpenOLAT/OpenOLAT	foundations.md	3399	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	tsugiproject/tsugi	foundations.md	3400	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+AGREE	numbas/Numbas	foundations.md	3401	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	academic-innovation/django-lti	foundations.md	3404	MIT	MIT	MIT	main	LICENSE	1098	c24a6b35e390	
+AGREE	virtUOS/abstimmbar	foundations.md	3405	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	
+AGREE	EduThemes/paper-lms	foundations.md	3406	MIT	MIT	MIT	main	LICENSE	1071	3df8d6baba56	
+CELL-WITHOUT-GRANT	jakerains/scormplayer	foundations.md	3407	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	edmozley/freeitsm	foundations.md	3408	MIT	MIT	MIT	main	LICENSE	1066	324e25179826	
+AGREE	academico-sis/academico	foundations.md	3417	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	chamilo/chamilo-lms	foundations.md	3435	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	memphis-iis/MoFaCTS	foundations.md	3436	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	yukazakiri/koakademy	foundations.md	3437	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE.md	34523	8486a10c4393	§13 agrees
+AGREE	openfun/ralph	foundations.md	3458	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	scormflow/scorm-engine	foundations.md	3459	MIT	MIT	MIT	main	LICENSE	1079	7cdfc153e7f1	
+AGREE	terracotta-education/terracotta	foundations.md	3460	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11323	6dc0e068dcf3	
+AGREE	elimu-ai/ml-event-simulator	foundations.md	3462	MIT	MIT	MIT	main	LICENSE	1065	203d7d837ceb	
+AGREE	rage/secret-project-331	foundations.md	3468	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+FAMILY	acanas/swad-core	foundations.md	3469	GPL-3.0	GPL-3.0	AGPL-3.0	master	LICENSE	34501	884b434957ba	§13 agrees
+AGREE	luisgf/openbadgeslib	foundations.md	3485	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE.txt	7650	ea8af5e789cb	§13 absent
+AGREE	DecoyLex/ltix	foundations.md	3491	MIT	MIT	MIT	main	LICENSE	1068	7ffced5e1c24	
+AGREE	wingkwong/react-quiz-component	foundations.md	3503	MIT	MIT	MIT	master	LICENSE	1070	5453d49638ec	
+AGREE	redmodd/tessera	foundations.md	3504	MIT	MIT	MIT	main	LICENSE	1078	a7b3b71f0efd	
+AGREE	iblai/lms	foundations.md	3505	MIT	MIT	MIT	main	LICENSE	1063	f1269b7b2313	
+AGREE	willianmano/moodle-theme_moove	foundations.md	3507	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.md	34903	831e92808eb5	§13 agrees
+AGREE	willwearing/graspful	foundations.md	3515	MIT	MIT	MIT	main	LICENSE.md	1439	3de0414f7966	
+AGREE	lplnufpi/essay-br	foundations.md	3570	MIT	MIT	MIT	main	LICENSE	1114	79aacbdab319	
+CELL-WITHOUT-GRANT	Simon-Initiative/lti-example-tool	foundations.md	3602	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	ink-waffle/sisu-mcp	foundations.md	3603	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+UNDECIDABLE-BODY	shmercer/writeAlizer	foundations.md	3760	MIT	MIT	UNRECOGNISED	master	LICENSE	47	acdf4d7acf3f	no recognised licence title
+AGREE	openeducat/openeducat_erp	foundations.md	3847	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	OpenOLAT/OpenOLAT	foundations.md	3924	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	foundations.md	3925	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	ArnaudGuiovanna/tutor-mcp	foundations.md	3926	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	thm-mni-ii/feedbacksystem	foundations.md	3927	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	Selleo/mentingo	foundations.md	3928	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Open-TutorAi/open-tutor-ai-CE	foundations.md	3929	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	zijinz456/OpenTutor	foundations.md	3930	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	dodona-edu/dolos	foundations.md	3931	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	3997	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	foundations.md	3998	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	Selleo/mentingo	foundations.md	3999	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	ArnaudGuiovanna/tutor-mcp	foundations.md	4000	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	thm-mni-ii/feedbacksystem	foundations.md	4001	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	zhangl1001/civil-ai	foundations.md	4002	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	dodona-edu/dolos	foundations.md	4003	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	zijinz456/OpenTutor	foundations.md	4004	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	HKUDS/DeepTutor	foundations.md	4005	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+AGREE	ahmedEid1/lumen	foundations.md	4014	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	brownplt/LTLTutor	foundations.md	4015	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.txt	35148	8b1ba204bb69	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	foundations.md	4059	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	foundations.md	4060	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	zijinz456/OpenTutor	foundations.md	4061	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	dodona-edu/dolos	foundations.md	4062	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	Selleo/mentingo	foundations.md	4063	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4064	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	foundations.md	4065	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	foundations.md	4066	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	sakaiproject/sakai	foundations.md	4067	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openeducat/openeducat_erp	foundations.md	4068	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+UNDECIDABLE-BODY	frappe/education	foundations.md	4071	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	ls1intum/Pyris	foundations.md	4072	MIT	MIT	MIT	main	LICENSE	1089	902bddf79bcd	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	4112	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	sakaiproject/sakai	foundations.md	4113	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4114	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	foundations.md	4115	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	foundations.md	4116	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	4119	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	ls1intum/Pyris	foundations.md	4218	MIT	MIT	MIT	main	LICENSE	1089	902bddf79bcd	
+CELL-WITHOUT-GRANT	formalms/formalms	foundations.md	4429	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	eagles-edu/sis	foundations.md	4573	MIT	MIT	MIT	main	LICENSE	1067	d743a2071929	
+AGREE	Arux-Software/Bright	foundations.md	4575	MIT	MIT	MIT	master	LICENSE.txt	1076	6c2b9bea0fbe	
+AGREE	sakaiproject/sakai	foundations.md	4686	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4687	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learningequality/kolibri	foundations.md	4688	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openedx/edx-platform	foundations.md	4689	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	4690	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	4691	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	jcputney/scorm-again	foundations.md	4692	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	sakaiproject/sakai	foundations.md	4776	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4777	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learningequality/kolibri	foundations.md	4778	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openedx/edx-platform	foundations.md	4779	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	4780	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	4781	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	jcputney/scorm-again	foundations.md	4782	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	sakaiproject/sakai	foundations.md	4853	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	learningequality/kolibri	foundations.md	4854	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openedx/edx-platform	foundations.md	4855	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4856	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	4857	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	4858	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	jcputney/scorm-again	foundations.md	4859	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	4927	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	foundations.md	4928	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	jcputney/scorm-again	foundations.md	4929	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	Selleo/mentingo	foundations.md	4930	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	sakaiproject/sakai	foundations.md	4931	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openedx/edx-platform	foundations.md	4932	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	4933	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	francoisjacquet/rosariosis	foundations.md	4934	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	projectfedena/fedena	foundations.md	4987	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	foradian/fedena	foundations.md	4988	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	foundations.md	5007	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	5045	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	5046	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	moodlehq/moodle-enrol_oneroster	foundations.md	5047	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	jcputney/scorm-again	foundations.md	5048	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	sakaiproject/sakai	foundations.md	5049	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openeducat/openeducat_erp	foundations.md	5050	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	chamilo/chamilo-lms	foundations.md	5051	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openedx/edx-platform	foundations.md	5052	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openolat/OpenOLAT	foundations.md	5053	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	5074	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	5075	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	moodlehq/moodle-enrol_oneroster	foundations.md	5076	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	jcputney/scorm-again	foundations.md	5077	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	chamilo/chamilo-lms	foundations.md	5080	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openedx/edx-platform	foundations.md	5081	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	moodlehq/moodle-enrol_oneroster	foundations.md	5253	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	foundations.md	5302	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	openedx/edx-platform	foundations.md	5408	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openedx/xblock-lti-consumer	foundations.md	5409	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	5852	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	frappe/erpnext	foundations.md	5853	GPL-3.0	GPL-3.0	GPL-3.0	master	license.txt	34916	f333043685c8	§13 agrees
+AGREE	frappe/lms	foundations.md	5854	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	5855	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	foundations.md	5928	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	foundations.md	5929	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openlxp/openlxp-xia	foundations.md	5930	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	openfun/richie	foundations.md	5931	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	pykt-team/pykt-toolkit	foundations.md	5932	MIT	MIT	MIT	main	LICENSE	1066	f5f955194636	
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	5933	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	5934	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	foundations.md	5935	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	5936	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	chamilo/chamilo-lms	foundations.md	5937	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	odoo/odoo	foundations.md	5938	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	43529	abc09dad5f84	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	5939	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	frappe/lms	foundations.md	5940	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	frappe/erpnext	foundations.md	5941	GPL-3.0	GPL-3.0	GPL-3.0	master	license.txt	34916	f333043685c8	§13 agrees
+AGREE	luisgf/openbadgeslib	foundations.md	5942	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE.txt	7650	ea8af5e789cb	§13 absent
+AGREE	bigbluebutton/bigbluebutton	foundations.md	6077	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	openeducat/openeducat_erp	foundations.md	6082	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	francoisjacquet/rosariosis	foundations.md	6084	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	OpenOLAT/OpenOLAT	foundations.md	6086	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	foundations.md	6090	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openolat/OpenOLAT	foundations.md	6171	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	foundations.md	6172	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openedx/edx-platform	foundations.md	6174	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	bigbluebutton/bigbluebutton	foundations.md	6176	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+UNDECIDABLE-BODY	frappe/education	foundations.md	6180	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	Selleo/mentingo	foundations.md	6297	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	pykt-team/pykt-toolkit	foundations.md	6343	MIT	MIT	MIT	main	LICENSE	1066	f5f955194636	
+AGREE	hcnoh/knowledge-tracing-collection-pytorch	foundations.md	6344	MIT	MIT	MIT	main	LICENSE	1071	e3ea402ee1ab	
+AGREE	jhljx/GKT	foundations.md	6345	MIT	MIT	MIT	master	LICENSE	1061	26a11083335e	
+AGREE	jilljenn/ktm	foundations.md	6346	MIT	MIT	MIT	master	LICENSE	1071	0c7c1969160d	
+AGREE	lccasagrande/Deep-Knowledge-Tracing	foundations.md	6348	MIT	MIT	MIT	master	LICENSE	1076	cda24c80a4f3	
+AGREE	tswsxk/EduData	foundations.md	6352	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11346	8aaf2e630b1c	
+AGREE	ZhijieXiong/pyedmine	foundations.md	6353	MIT	MIT	MIT	main	LICENSE	1085	fc84421fcf96	
+AGREE	HFUT-LEC/EduStudio	foundations.md	6354	MIT	MIT	MIT	main	LICENSE	1064	3674aa8e4446	
+AGREE	THUwangcy/HawkesKT	foundations.md	6359	MIT	MIT	MIT	main	LICENSE	1070	db8b81b9e054	
+AGREE	jdxyw/deepKT	foundations.md	6360	MIT	MIT	MIT	master	LICENSE	1062	2465d2a0c4b8	
+AGREE	jupyter/nbgrader	foundations.md	6382	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1512	3a83d5b8e22c	
+AGREE	GatorEducator/gatorgrader	foundations.md	6385	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.md	35191	57756125771d	§13 agrees
+AGREE	five-plus-one/AI-Marker-Suite	foundations.md	6386	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35154	1ab858f515df	§13 agrees
+AGREE	zmievsa/autograder	foundations.md	6388	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	ai-lingnan/econai-agent-platform	foundations.md	6389	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	federicazoe/gradetools	foundations.md	6390	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.md	34908	10bf8bb1de5d	§13 agrees
+AGREE	sourcegrade/jagr	foundations.md	6391	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	pedal-edu/pedal	foundations.md	6392	MIT	MIT	MIT	master	LICENSE	1103	ffaa010382b0	
+AGREE	open-spaced-repetition/fsrs4anki	foundations.md	6405	MIT	MIT	MIT	main	LICENSE	1079	2ec9e6e61ed8	
+AGREE	ankimcp/anki-mcp-server	foundations.md	6406	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	6442	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	foundations.md	6443	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+BOUND	instructure/canvas-lms	foundations.md	6444	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+BOUND	bigbluebutton/bigbluebutton	foundations.md	6445	LGPL-3.0-or-later	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	sakaiproject/sakai	foundations.md	6446	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	netless-io/flat	foundations.md	6449	MIT	MIT	MIT	main	LICENSE	1062	8fa1566550df	
+AGREE	OpenVidu/openvidu	foundations.md	6450	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	b40930bbcf80	
+AGREE	academico-sis/academico	foundations.md	6451	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	Ilyas-Codes/eCourse	foundations.md	6452	MIT	MIT	MIT	main	LICENSE	1062	5d6ba721365c	
+AGREE	geli-lms/geli	foundations.md	6453	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	CAHLR/OATutor	foundations.md	6454	MIT	MIT	MIT	main	LICENSE	1105	5baaaf977a28	
+AGREE	pykt-team/pykt-toolkit	foundations.md	6455	MIT	MIT	MIT	main	LICENSE	1066	f5f955194636	
+AGREE	openfun/richie	foundations.md	6456	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	openeducat/openeducat_erp	foundations.md	6457	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	GibbonEdu/core	foundations.md	6459	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	bigbluebutton/bigbluebutton	foundations.md	6616	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	openedx/edx-platform	foundations.md	6617	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	6618	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	instructure/canvas-lms	foundations.md	6619	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	sakaiproject/sakai	foundations.md	6620	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	learningequality/kolibri	foundations.md	6621	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openedx/edx-platform	foundations.md	7117	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	foundations.md	7118	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	7119	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	chamilo/chamilo-lms	foundations.md	7120	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openeducat/openeducat_erp	foundations.md	7121	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	7122	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+CELL-WITHOUT-GRANT	DMontgomery40/mcp-canvas-lms	foundations.md	7276	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	csmediapro/moodle-mcp-server	foundations.md	7277	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+CELL-WITHOUT-GRANT	MisterCommand/mcp-canvas-lms	foundations.md	7278	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	malkreide/global-education-mcp	foundations.md	7314	MIT	MIT	MIT	main	LICENSE	1069	ac1fc40e61a6	
+AGREE	oliverhruby/edupage-mcp	foundations.md	7315	MIT	MIT	MIT	main	LICENSE	1070	e99290e1540b	
+AGREE	divyarthjain/vtop-bhopal-mcp	foundations.md	7316	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	c95bae1d1ce0	
+AGREE	malkreide/global-education-mcp	foundations.md	7358	MIT	MIT	MIT	main	LICENSE	1069	ac1fc40e61a6	
+AGREE	malkreide/global-education-mcp	foundations.md	7438	MIT	MIT	MIT	main	LICENSE	1069	ac1fc40e61a6	
+AGREE	alcastaro/opendata-latam-mcp	foundations.md	7439	MIT	MIT	MIT	main	LICENSE	1557	92d19f73c0d7	
+CELL-WITHOUT-GRANT	kstateome/lti-launch	foundations.md	7767	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	kstateome/lti-launch	foundations.md	7997	LGPL-3.0	LGPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	numbas/Numbas	foundations.md	8045	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	bigbluebutton/bigbluebutton	foundations.md	8088	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	openedx/openedx-platform	foundations.md	8089	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	foundations.md	8090	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learnhouse/learnhouse	foundations.md	8094	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	classroomio/classroomio	foundations.md	8095	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	chamilo/chamilo-lms	foundations.md	8099	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	foundations.md	8101	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	Crosstalk-Solutions/project-nomad	foundations.md	8112	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10779	e4f125622d3c	
+AGREE	saytooyum/AI-Based-Timetable-Generation-System	foundations.md	8132	MIT	MIT	MIT	main	LICENSE	1094	d194e34d2a8e	
+AGREE	Cvmcosta/ltijs	foundations.md	8146	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11361	d5fcb264ff39	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	foundations.md	8148	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	googleworkspace/oneroster-integration-conformance-tests	foundations.md	8149	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	DavidLMS/learnmcp-xapi	foundations.md	8153	MIT	MIT	MIT	main	LICENSE	1069	4aa758cb51b2	
+AGREE	adlnet/MasterObjectModel	foundations.md	8154	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11525	a1587287ff04	
+AGREE	OpenOLAT/OpenOLAT	foundations.md	8238	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	jcputney/scorm-again	foundations.md	8239	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	amp-up-io/qti3-item-player	foundations.md	8241	MIT	MIT	MIT	main	LICENSE	1076	7faa621251d7	
+AGREE	Selleo/mentingo	foundations.md	8242	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	1EdTech/digital-credentials-public-validator	foundations.md	8243	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	cybercussion/SCOBot	foundations.md	8250	CC-BY-SA-4.0	CC-BY-SA-4.0	CC-BY-SA-4.0	main	LICENSE	837	166ace659a06	
+CELL-WITHOUT-GRANT	openedx/XBlock	foundations.md	8264	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/codejail	foundations.md	8265	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.txt	10174	0d542e0c8804	
+AGREE	jcputney/scorm-again	foundations.md	8266	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openfun/richie	foundations.md	8267	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	instructure/ims-lti	foundations.md	8270	MIT	MIT	MIT	main	LICENSE.txt	1068	f7e95fbe6fa9	
+AGREE	openeducat/openeducat_erp	foundations.md	8282	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	academico-sis/academico	foundations.md	8283	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	learningequality/kolibri	foundations.md	8334	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	learningequality/studio	foundations.md	8335	MIT	MIT	MIT	master	LICENSE	1115	5715e50830cd	
+AGREE	jcputney/scorm-again	foundations.md	8360	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	19	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	francoisjacquet/rosariosis	solutions.md	22	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	frappe/lms	solutions.md	25	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	67	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/openedx-platform	solutions.md	69	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	73	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+BOUND	chamilo/chamilo-lms	solutions.md	199	GPL-3.0-or-later	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	GibbonEdu/core	solutions.md	201	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+BOUND	overhangio/tutor	solutions.md	202	AGPL-3.0-only	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+BOUND	frappe/lms	solutions.md	203	AGPL-3.0-or-later	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+NOTATION	oat-sa/tao-core	solutions.md	205	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/extension-tao-testqti	solutions.md	206	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/qti-sdk	solutions.md	207	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18025	a01259a1b522	§13 absent
+NOTATION	oat-sa/lib-lti1p3-core	solutions.md	208	GPL-2	GPL-2.0	GPL-2.0	master	LICENSE	18091	f9c375a1be4a	§13 absent
+INCOMPLETE-DUAL	Elgg/Elgg	solutions.md	209	GPL-2	GPL-2.0	MIT OR GPL-2.0	master	LICENSE.txt	17173	7188c83d8764	earliest title is ONE OPTION, not the grant
+CELL-WITHOUT-GRANT	lmscloud-io/moodle-aiprovider_openaicompatible	solutions.md	225	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	mebis-lp/moodle-local_ai_manager	solutions.md	227	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+BOUND	saylordotorg/moodle-local_ai_course_assistant	solutions.md	315	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+BOUND	Limekiller/moodle-block_openai_chat	solutions.md	317	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+BOUND	yedidiaklein/moodle-local_aiquestions	solutions.md	318	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE.md	35178	ccb349b4132e	§13 agrees
+BOUND	adamjenkins/moodle-local_nomoreai	solutions.md	321	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	opencast/opencast	solutions.md	382	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	opencast/opencast	solutions.md	442	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	opencast/opencast	solutions.md	520	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	solutions.md	735	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	PapillonApp/papillon-v6	solutions.md	763	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	classroomio/classroomio	solutions.md	765	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	ls1intum/Artemis	solutions.md	801	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	frappe/lms	solutions.md	855	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	learnhouse/learnhouse	solutions.md	856	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	classroomio/classroomio	solutions.md	857	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	codelitdev/courselit	solutions.md	858	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.md	34143	281e174e4d5f	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	859	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	overhangio/tutor	solutions.md	860	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	864	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	865	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	academico-sis/academico	solutions.md	866	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	inducer/relate	solutions.md	867	MIT	MIT	MIT	main	LICENSE	1145	66ff89ebf05f	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	965	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	966	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	967	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	chamilo/chamilo-lms	solutions.md	968	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	apache/ofbiz-framework	solutions.md	971	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11906	cbac9a0fde05	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1039	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	1096	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	Selleo/mentingo	solutions.md	1121	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1153	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	opencast/opencast	solutions.md	1155	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1192	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	1194	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openfun/richie	solutions.md	1195	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	OpenEduCat/openeducat_erp	solutions.md	1196	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	bigbluebutton/bigbluebutton	solutions.md	1197	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1198	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	chamilo/chamilo-lms	solutions.md	1199	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	h5p/h5p-php-library	solutions.md	1200	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35146	c53a65c2fd56	§13 agrees
+AGREE	openedx/edx-platform	solutions.md	1201	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	overhangio/tutor	solutions.md	1202	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	1203	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+UNDECIDABLE-BODY	frappe/education	solutions.md	1205	GPL-3	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1270	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	sakaiproject/sakai	solutions.md	1271	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	bigbluebutton/bigbluebutton	solutions.md	1272	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	instructure/canvas-lms	solutions.md	1273	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	openedx/edx-platform	solutions.md	1275	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	opencast/opencast	solutions.md	1324	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	Selleo/mentingo	solutions.md	1329	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	francoisjacquet/rosariosis	solutions.md	1377	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	ls1intum/Artemis	solutions.md	1433	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	Submitty/Submitty	solutions.md	1434	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE.md	1542	c123708cb4ef	
+AGREE	yetanalytics/lrsql	solutions.md	1435	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1439	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+BOUND	Berserk-hub150/moodle-ai-skill-navigator	solutions.md	1440	GPL-3.0-or-later	GPL-3.0	GPL-3.0	main	LICENSE	35153	ebdc0e5b7005	§13 agrees
+AGREE	INGInious/INGInious	solutions.md	1441	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1519	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+NOTATION	chamilo/chamilo-lms	solutions.md	1521	GPL-3	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	1522	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1523	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	solutions.md	1525	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	safytech/ulearn	solutions.md	1526	MIT	MIT	MIT	master	LICENSE	1066	e16aa92b6211	
+AGREE	academico-sis/academico	solutions.md	1527	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	francoisjacquet/rosariosis	solutions.md	1528	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	solutions.md	1529	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openeducat/openeducat_erp	solutions.md	1530	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	h5p/h5p-php-library	solutions.md	1531	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.txt	35146	c53a65c2fd56	§13 agrees
+AGREE	jcputney/scorm-again	solutions.md	1532	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	netless-io/flat	solutions.md	1534	MIT	MIT	MIT	main	LICENSE	1062	8fa1566550df	
+AGREE	OpenVidu/openvidu	solutions.md	1535	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	b40930bbcf80	
+AGREE	bigbluebutton/bigbluebutton	solutions.md	1536	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	learningequality/kolibri	solutions.md	1537	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	ls1intum/Artemis	solutions.md	1538	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	Submitty/Submitty	solutions.md	1539	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE.md	1542	c123708cb4ef	
+AGREE	INGInious/INGInious	solutions.md	1540	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+AGREE	4jean/lav_sms	solutions.md	1561	MIT	MIT	MIT	master	LICENSE	1072	30514d127546	
+AGREE	yungifez/skuul	solutions.md	1562	MIT	MIT	MIT	main	LICENSE	1069	b0fe88bfb0d2	
+AGREE	hrshadhin/school-management-system	solutions.md	1563	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34522	4df3c306ddda	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	1565	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	solutions.md	1566	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openeducat/openeducat_erp	solutions.md	1568	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	opencast/opencast	solutions.md	1585	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1618	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	instructure/canvas-lms	solutions.md	1620	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	chamilo/chamilo-lms	solutions.md	1621	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	1622	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1623	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	oppia/oppia	solutions.md	1626	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	francoisjacquet/rosariosis	solutions.md	1634	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	GibbonEdu/core	solutions.md	1635	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	jitsi/jitsi-meet	solutions.md	1642	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	12596	eae52e200cd8	
+AGREE	opencast/opencast	solutions.md	1643	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	UCL-INGI/INGInious	solutions.md	1645	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	§13 agrees
+UNDECIDABLE-BODY	pawtograder/platform	solutions.md	1646	GPL-3.0	GPL-3.0	GPL-?	main	LICENSE	658	61d7698783f4	§13 absent
+AGREE	openfun/richie	solutions.md	1647	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+UNDECIDABLE-BODY	frappe/education	solutions.md	1670	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1707	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	1708	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	overhangio/tutor	solutions.md	1709	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	1710	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	1711	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1712	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	chamilo/chamilo-lms	solutions.md	1713	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+CELL-WITHOUT-GRANT	formalms/formalms	solutions.md	1714	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	learningequality/kolibri	solutions.md	1715	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openeducat/openeducat_erp	solutions.md	1716	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	GibbonEdu/core	solutions.md	1717	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	1718	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	solutions.md	1719	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	bigbluebutton/bigbluebutton	solutions.md	1720	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	openfun/richie	solutions.md	1722	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	human2human-ai/moodle-tool_human2human	solutions.md	1754	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35149	3972dc9744f6	§13 agrees
+AGREE	cgrevisse/moodle-qbank_genai	solutions.md	1755	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE.md	35178	ccb349b4132e	§13 agrees
+AGREE	microsoft/moodle-ai-assistant	solutions.md	1756	MIT	MIT	MIT	main	LICENSE	1084	e0eb0d5ceba1	
+CELL-WITHOUT-GRANT	openedx/XBlock	solutions.md	1787	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openeducat/openeducat_erp	solutions.md	1838	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	CTFd/CTFd	solutions.md	1897	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11314	dcaf3b3bff45	
+AGREE	AnubisLMS/Anubis	solutions.md	1898	MIT	MIT	MIT	main	LICENSE	1083	e36740a2a510	
+AGREE	learningequality/kolibri	solutions.md	1899	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	1957	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	chamilo/chamilo-lms	solutions.md	1958	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	GibbonEdu/core	solutions.md	1959	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	1960	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openedx/openedx-platform	solutions.md	1961	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	1962	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	overhangio/tutor	solutions.md	1964	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	1965	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	opencast/opencast	solutions.md	1966	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11340	76a975068930	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	1967	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	1968	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	openeducat/openeducat_erp	solutions.md	1969	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+CELL-WITHOUT-GRANT	OS4ED/openSIS-Classic	solutions.md	1971	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	willwearing/graspful	solutions.md	2012	MIT	MIT	MIT	main	LICENSE.md	1439	3de0414f7966	
+AGREE	openeducat/openeducat_erp	solutions.md	2099	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	francoisjacquet/rosariosis	solutions.md	2100	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	sakaiproject/sakai	solutions.md	2250	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	chamilo/chamilo-lms	solutions.md	2273	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	2314	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openfun/ralph	solutions.md	2315	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+CELL-WITHOUT-GRANT	openedx/XBlock	solutions.md	2358	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	VIJAYAPANDIANT/online-examination-system	solutions.md	2366	MIT	MIT	MIT	main	LICENSE	1072	d8fb7c9c9bf5	
+AGREE	singhrajvardhan/SecureExam-Platform	solutions.md	2367	MIT	MIT	MIT	main	LICENSE.md	1080	5c8b11fe07ed	
+AGREE	ls1intum/Artemis	solutions.md	2369	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+CELL-WITHOUT-GRANT	openedx/XBlock	solutions.md	2423	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	OpenOLAT/OpenOLAT	solutions.md	2428	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	tsugiproject/tsugi	solutions.md	2430	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+AGREE	numbas/Numbas	solutions.md	2431	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+AGREE	academico-sis/academico	solutions.md	2432	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	2498	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	oneorigin-2-0/dcc-credential-co-writer-monorep	solutions.md	2499	MIT	MIT	MIT	main	LICENSE	1087	7f62d1bf385d	
+AGREE	hoijui/obadgen	solutions.md	2502	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE.txt	34020	d8a6cc31abc1	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	2516	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	tsugiproject/tsugi	solutions.md	2517	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	
+AGREE	academico-sis/academico	solutions.md	2518	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	openfun/marsha	solutions.md	2520	MIT	MIT	MIT	master	LICENSE	1078	6dab88f38735	
+AGREE	chamilo/chamilo-lms	solutions.md	2522	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openfun/ralph	solutions.md	2549	MIT	MIT	MIT	main	LICENSE.md	1094	08ea77291de9	
+AGREE	scormflow/scorm-engine	solutions.md	2550	MIT	MIT	MIT	main	LICENSE	1079	7cdfc153e7f1	
+CELL-WITHOUT-GRANT	ink-waffle/sisu-mcp	solutions.md	2568	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Principled-Evolution/gopal	solutions.md	2585	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	Polycentric-Labs/regrails	solutions.md	2586	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11282	7269084894a7	
+AGREE	ashutoshrana/haystack-ferpa-filter	solutions.md	2587	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	12101	69ea67464cbf	
+AGREE	siskinskai/spedlex	solutions.md	2588	MIT	MIT	MIT	main	LICENSE	1077	1e306f58a677	
+AGREE	ZachRouan/district-brain	solutions.md	2589	MIT	MIT	MIT	main	LICENSE	1067	c5e4e378c78b	
+AGREE	zhamanov-seabus/nau-ai-advisor	solutions.md	2590	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11375	adec74ee5b6f	
+AGREE	rage/secret-project-331	solutions.md	2596	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	c71d239df917	
+FAMILY	acanas/swad-core	solutions.md	2597	GPL-3.0	GPL-3.0	AGPL-3.0	master	LICENSE	34501	884b434957ba	§13 agrees
+AGREE	iblai/lms	solutions.md	2599	MIT	MIT	MIT	main	LICENSE	1063	f1269b7b2313	
+AGREE	willwearing/graspful	solutions.md	2607	MIT	MIT	MIT	main	LICENSE.md	1439	3de0414f7966	
+CELL-WITHOUT-GRANT	CreveXTech/canvas-lms-mcp	solutions.md	2732	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	educredentials/ec-issuer	solutions.md	2736	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	OpenOLAT/OpenOLAT	solutions.md	2935	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ArnaudGuiovanna/tutor-mcp	solutions.md	2936	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Selleo/mentingo	solutions.md	2937	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	thm-mni-ii/feedbacksystem	solutions.md	2938	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	ls1intum/Artemis	solutions.md	2939	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	zijinz456/OpenTutor	solutions.md	2940	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	Open-TutorAi/open-tutor-ai-CE	solutions.md	2941	BSD-3-Clause	BSD-3-Clause	BSD-3-Clause	main	LICENSE	1531	57c341d09920	
+AGREE	zhangl1001/civil-ai	solutions.md	2942	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	HKUDS/DeepTutor	solutions.md	2943	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	2945	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	sakaiproject/sakai	solutions.md	2946	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openedx/edx-platform	solutions.md	2947	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ArnaudGuiovanna/tutor-mcp	solutions.md	2973	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	2988	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ArnaudGuiovanna/tutor-mcp	solutions.md	2989	MIT	MIT	MIT	main	LICENSE	1073	1e05c9440068	
+AGREE	Selleo/mentingo	solutions.md	2990	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	thm-mni-ii/feedbacksystem	solutions.md	2991	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10785	65125d9e480b	
+AGREE	ls1intum/Artemis	solutions.md	2992	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	zijinz456/OpenTutor	solutions.md	2993	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	zhangl1001/civil-ai	solutions.md	2994	MIT	MIT	MIT	main	LICENSE	1067	5731a2d3ccea	
+AGREE	HKUDS/DeepTutor	solutions.md	2995	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	2996	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	sakaiproject/sakai	solutions.md	2997	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openedx/edx-platform	solutions.md	2998	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	2999	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3050	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	ls1intum/Artemis	solutions.md	3051	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	zijinz456/OpenTutor	solutions.md	3052	MIT	MIT	MIT	main	LICENSE	1068	5352b4967982	
+AGREE	Selleo/mentingo	solutions.md	3053	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	3054	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	3055	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	3056	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	3057	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openeducat/openeducat_erp	solutions.md	3058	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+UNDECIDABLE-BODY	frappe/education	solutions.md	3061	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	Li-Evan/Bloom	solutions.md	3062	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ankimcp/anki-mcp-server	solutions.md	3063	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Miaotofu01/Study-Mate	solutions.md	3064	MIT	MIT	MIT	main	LICENSE	1064	dc1997d82189	
+AGREE	ZeKaiNie/universal-examprep-skill	solutions.md	3065	MIT	MIT	MIT	main	LICENSE	1065	21f44893f051	
+AGREE	dodona-edu/dolos	solutions.md	3066	MIT	MIT	MIT	main	LICENSE	1084	881163366572	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3098	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	3100	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	3101	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	3102	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	ls1intum/Artemis	solutions.md	3103	MIT	MIT	MIT	main	LICENSE	1091	63a0a2b4d6d9	
+AGREE	openeducat/openeducat_erp	solutions.md	3106	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+UNDECIDABLE-BODY	frappe/education	solutions.md	3107	GPL-3.0	GPL-3.0	UNRECOGNISED	master	license.txt	19	1fcecf395312	no recognised licence title
+AGREE	Li-Evan/Bloom	solutions.md	3123	MIT	MIT	MIT	main	LICENSE	1069	7d574cf3632e	
+AGREE	ls1intum/Pyris	solutions.md	3175	MIT	MIT	MIT	main	LICENSE	1089	902bddf79bcd	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3186	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	sakaiproject/sakai	solutions.md	3188	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3189	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	ls1intum/Pyris	solutions.md	3191	MIT	MIT	MIT	main	LICENSE	1089	902bddf79bcd	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3193	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3195	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3196	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3199	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3201	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3202	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openlxp/openlxp-xia	solutions.md	3207	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3265	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	sakaiproject/sakai	solutions.md	3267	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3268	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3271	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3273	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3274	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3277	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3279	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3280	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openlxp/openlxp-xia	solutions.md	3285	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	sgaofen/vibe-schooling	solutions.md	3316	MIT	MIT	MIT	main	LICENSE	1064	e0f7d73d5770	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3330	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	sakaiproject/sakai	solutions.md	3332	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3333	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3336	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3338	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3339	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3342	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3344	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3345	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openlxp/openlxp-xia	solutions.md	3350	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3398	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	3399	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	sakaiproject/sakai	solutions.md	3400	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3401	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3404	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3406	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3407	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3410	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3412	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3413	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openlxp/openlxp-xia	solutions.md	3418	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3477	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	3478	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	sakaiproject/sakai	solutions.md	3479	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3480	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3481	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3482	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3483	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3486	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3488	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3489	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3490	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3543	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	3544	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	sakaiproject/sakai	solutions.md	3545	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3546	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3547	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3548	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3549	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3552	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3554	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3555	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3556	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3597	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	3598	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	sakaiproject/sakai	solutions.md	3599	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3600	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3601	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3602	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3603	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3606	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3608	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3609	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3610	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openlxp/openlxp-xia	solutions.md	3613	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3665	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	learningequality/kolibri	solutions.md	3666	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	sakaiproject/sakai	solutions.md	3667	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	Selleo/mentingo	solutions.md	3668	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3669	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	3670	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	jcputney/scorm-again	solutions.md	3671	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3673	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	3675	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3676	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3677	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	OpenOLAT/OpenOLAT	solutions.md	3798	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	solutions.md	3800	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3803	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3804	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openeducat/openeducat_erp	solutions.md	3805	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	jcputney/scorm-again	solutions.md	3807	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openedx/edx-platform	solutions.md	3858	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	francoisjacquet/rosariosis	solutions.md	3860	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+CELL-WITHOUT-GRANT	os4ed/openSIS-Classic	solutions.md	3861	GPL-2.0	GPL-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openeducat/openeducat_erp	solutions.md	3862	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	jcputney/scorm-again	solutions.md	3864	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	sakaiproject/sakai	solutions.md	3945	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	chamilo/chamilo-lms	solutions.md	3947	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	openedx/edx-platform	solutions.md	3948	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	Selleo/mentingo	solutions.md	3972	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openedx/edx-platform	solutions.md	3973	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	3974	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	openolat/OpenOLAT	solutions.md	4012	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	4015	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	jcputney/scorm-again	solutions.md	4031	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	openolat/OpenOLAT	solutions.md	4075	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	solutions.md	4076	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4152	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	solutions.md	4153	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openeducat/openeducat_erp	solutions.md	4155	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	openedx/edx-platform	solutions.md	4156	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4212	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	solutions.md	4213	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openeducat/openeducat_erp	solutions.md	4215	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	openedx/edx-platform	solutions.md	4216	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4267	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	solutions.md	4268	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	solutions.md	4270	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4308	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openolat/OpenOLAT	solutions.md	4309	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openolat/OpenOLAT	solutions.md	4310	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/edx-platform	solutions.md	4312	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openolat/OpenOLAT	solutions.md	4341	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4343	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4344	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	Selleo/mentingo	solutions.md	4345	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openolat/OpenOLAT	solutions.md	4387	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	solutions.md	4388	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	openlxp/openlxp-xia	solutions.md	4391	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	frappe/lms	solutions.md	4396	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	license.txt	33893	db1a87ba81e8	§13 agrees
+AGREE	openolat/OpenOLAT	solutions.md	4432	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	luisgf/openbadgeslib	solutions.md	4498	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE.txt	7650	ea8af5e789cb	§13 absent
+AGREE	Schroedinger-Hat/certo	solutions.md	4499	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	33820	895609d3e304	§13 agrees
+AGREE	fedora-infra/tahrir	solutions.md	4500	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34917	f59751a85c4e	§13 agrees
+AGREE	opensalt/OB3DefinitionWidget	solutions.md	4501	MIT	MIT	MIT	main	LICENSE	1080	d44082e2d74f	
+AGREE	openedx/edx-platform	solutions.md	4600	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	4601	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	openolat/OpenOLAT	solutions.md	4602	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	Selleo/mentingo	solutions.md	4604	MIT	MIT	MIT	main	LICENSE	1062	ceb97717de1f	
+AGREE	bigbluebutton/bigbluebutton	solutions.md	4605	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	openeducat/openeducat_erp	solutions.md	4609	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	OpenOLAT/OpenOLAT	solutions.md	4638	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	vishalsachdev/canvas-mcp	solutions.md	4678	MIT	MIT	MIT	main	LICENSE	1071	5385a26e2fac	
+AGREE	jcputney/scorm-again	solutions.md	4759	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+CELL-WITHOUT-GRANT	openedx/XBlock	solutions.md	4760	Apache-2.0	Apache-2.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	ankimcp/anki-mcp-server	solutions.md	4761	MIT	MIT	MIT	main	LICENSE	1074	0ef87fdb98da	
+AGREE	Universidade-Livre/ciencia-da-computacao	solutions.md	4774	MIT	MIT	MIT	main	LICENSE	1087	6520b550c69f	
+AGREE	classroomio/classroomio	solutions.md	4791	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	8486a10c4393	§13 agrees
+AGREE	elmsln/elmsln	solutions.md	4792	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE.md	35193	0e6d22ed58b6	§13 agrees
+AGREE	haxtheweb/haxcms-php	solutions.md	4793	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE.md	11362	b662f44e55e8	
+AGREE	edrys-org/edrys	solutions.md	4794	MPL-2.0	MPL-2.0	MPL-2.0	main	LICENSE	16725	1f256ecad192	
+AGREE	studentinsights/studentinsights	solutions.md	4796	MIT	MIT	MIT	master	LICENSE	1083	53f12859c8a3	
+AGREE	learningequality/kolibri	solutions.md	4798	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	4837	GPL-3.0-or-later	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	sakaiproject/sakai	solutions.md	4840	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+BOUND	bigbluebutton/bigbluebutton	solutions.md	4841	LGPL-3.0-or-later	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	learningequality/kolibri	solutions.md	4842	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	netless-io/flat	solutions.md	4843	MIT	MIT	MIT	main	LICENSE	1062	8fa1566550df	
+AGREE	OpenVidu/openvidu	solutions.md	4844	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11357	b40930bbcf80	
+AGREE	academico-sis/academico	solutions.md	4845	MIT	MIT	MIT	main	LICENSE	1094	6051a15f4d44	
+AGREE	Ilyas-Codes/eCourse	solutions.md	4846	MIT	MIT	MIT	main	LICENSE	1062	5d6ba721365c	
+AGREE	geli-lms/geli	solutions.md	4847	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+AGREE	openfun/richie	solutions.md	4848	MIT	MIT	MIT	master	LICENSE	1079	e4b2a3148135	
+AGREE	GibbonEdu/core	solutions.md	4849	GPL-3.0	GPL-3.0	GPL-3.0	main	LICENSE	35121	93178a43d6d3	§13 agrees
+AGREE	openeducat/openeducat_erp	solutions.md	4850	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	openedx/edx-platform	solutions.md	5019	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	5020	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	learningequality/kolibri	solutions.md	5021	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	bigbluebutton/bigbluebutton	solutions.md	5022	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	5055	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	5056	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	5057	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	5058	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	bigbluebutton/bigbluebutton	solutions.md	5060	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	francoisjacquet/rosariosis	solutions.md	5159	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	15214	d954e14e5c75	§13 absent
+AGREE	openeducat/openeducat_erp	solutions.md	5160	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	zavora-ai/mcp-student-records	solutions.md	5162	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	738	b3886fcd4f82	
+AGREE	sakaiproject/sakai	solutions.md	5257	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	5258	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	openedx/edx-platform	solutions.md	5259	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	instructure/canvas-lms	solutions.md	5260	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	§13 agrees
+AGREE	openeducat/openeducat_erp	solutions.md	5261	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	chamilo/chamilo-lms	solutions.md	5262	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	5263	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	csmediapro/moodle-mcp-server	solutions.md	5408	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+AGREE	csmediapro/moodle-mcp-server	solutions.md	5862	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	§13 agrees
+CELL-WITHOUT-GRANT	moodle/moodle	solutions.md	5878	GPL-3.0	GPL-3.0	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	sakaiproject/sakai	solutions.md	5879	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	chamilo/chamilo-lms	solutions.md	5880	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	OpenOLAT/OpenOLAT	solutions.md	5881	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	
+AGREE	openedx/openedx-platform	solutions.md	5883	AGPL-3.0	AGPL-3.0	AGPL-3.0	master	LICENSE	35136	e12d78569742	§13 agrees
+AGREE	openeducat/openeducat_erp	solutions.md	5884	LGPL-3.0	LGPL-3.0	LGPL-3.0	master	LICENSE	8241	528f84036800	§13 absent
+AGREE	learningequality/kolibri	solutions.md	5885	MIT	MIT	MIT	master	LICENSE	1097	3c056b34a476	
+AGREE	Crosstalk-Solutions/project-nomad	solutions.md	5887	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10779	e4f125622d3c	
+AGREE	instructure/ims-lti	solutions.md	5942	MIT	MIT	MIT	main	LICENSE.txt	1068	f7e95fbe6fa9	
+AGREE	Cvmcosta/ltijs	solutions.md	5946	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11361	d5fcb264ff39	
+CELL-WITHOUT-GRANT	dmitry-viskov/pylti1	solutions.md	5948	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	overhangio/tutor	solutions.md	5967	AGPL-3.0	AGPL-3.0	AGPL-3.0	main	LICENSE.txt	34523	0d96a4ff68ad	§13 agrees
+AGREE	sakaiproject/sakai	solutions.md	5970	ECL-2.0	ECL-2.0	ECL-2.0	master	LICENSE	11120	0688f62d04f1	
+AGREE	ILIAS-eLearning/ILIAS	solutions.md	5972	GPL-3.0	GPL-3.0	GPL-3.0	master	LICENSE	35147	8ceb4b9ee5ad	§13 agrees
+AGREE	bigbluebutton/bigbluebutton	solutions.md	5975	LGPL-3.0	LGPL-3.0	LGPL-3.0	main	LICENSE	7652	e3a994d82e64	§13 absent
+AGREE	oppia/oppia	solutions.md	5976	Apache-2.0	Apache-2.0	Apache-2.0	master	LICENSE	11358	cfc7749b96f6	
+CELL-WITHOUT-GRANT	h5p/h5p-interactive-video	solutions.md	5978	MIT	MIT	NO-GRANT	-	-	-	-	6 paths x 2 refs
+AGREE	jcputney/scorm-again	solutions.md	5980	MIT	MIT	MIT	master	LICENSE	1072	383b85b370e8	
+AGREE	alejooroncoy/campus-cli	solutions.md	5981	ISC	ISC	ISC	main	LICENSE	748	4ca1bd2e969c	
+AGREE	HAL-XP/mcp-pronotes	solutions.md	6004	MIT	MIT	MIT	master	LICENSE	1063	1db908a46bbb	
+AGREE	chenning42/iserv-mcp	solutions.md	6005	MIT	MIT	MIT	main	LICENSE	1090	5dc99bd5061f	
+AGREE	yourssu/soongpt-plugin	solutions.md	6007	MIT	MIT	MIT	main	LICENSE	1084	8bd9b5065d28	
+AGREE	divyarthjain/vtop-bhopal-mcp	solutions.md	6008	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11358	c95bae1d1ce0	
+AGREE	qxbao/qldt-hanu-mcp	solutions.md	6009	GPL-2.0	GPL-2.0	GPL-2.0	main	LICENSE	18092	8177f9751321	§13 absent
+AGREE	alejooroncoy/campus-cli	solutions.md	6043	ISC	ISC	ISC	main	LICENSE	748	4ca1bd2e969c	
+AGREE	AlexMeiling/wiseflow-api-integration-packages	solutions.md	6060	MIT	MIT	MIT	main	LICENSE	1068	e6e78066d297	
+AGREE	oat-sa/oneroster-import	solutions.md	6062	GPL-2.0	GPL-2.0	GPL-2.0	master	LICENSE	18026	39db8f9acf03	§13 absent
+AGREE	Ed-Fi-Alliance-OSS/edfi-oneroster	solutions.md	6063	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	
+AGREE	googleworkspace/oneroster-integration-conformance-tests	solutions.md	6064	Apache-2.0	Apache-2.0	Apache-2.0	main	LICENSE	11357	c71d239df917	
+AGREE	RyanGravetteIDLA/qualtrics-lti-connector	solutions.md	6067	MIT	MIT	MIT	main	LICENSE	1069	7021d4966c9c	

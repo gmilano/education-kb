@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — FOUR RECIPES, AND THE FIRST ONE IS THE PASS'S OWN INSTRUMENT TURNED INTO A BILLABLE DELIVERABLE: A LICENCE AUDIT THAT KNOWS WHY NAIVE LICENCE AUDITS ARE `82%` WRONG
+
+🔵 **`4` patterns. Each names the exact repositories, the exact grant read first-hand this pass, and the wiring.**
+
+🔵 **Evidence:** [`st-shelf-gate`](../evidence/st-shelf-gate.2026-10-15-p228.tsv) · [`st-family-defects`](../evidence/st-family-defects.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv) · **Instrument:** [`p228-shelf-gate`](code/p228-shelf-gate/README.md) *(`30` controls)*
+
+### 🟢 `P228-R1` — the licence-reality audit *(sell this; it is `4` files and it already works)*
+
+🔵 **The problem it solves is measured, not asserted.** 🔴 **This pass's own gate reported `11` licence defects and `9` were false — an `82%` false-positive rate — because a licence token near a repository name has at least FIVE subjects that are not that repository's grant.** 🟡 **Any client running `grep -r MIT` over a dependency inventory, or trusting a package manifest, or trusting GitHub's licence badge, is making one of those five mistakes right now.**
+
+**Wiring, in order:**
+
+| step | file | what it does |
+|---|---|---|
+| `1` | [`harvest_cells.py`](code/p228-shelf-gate/harvest_cells.py) | pull `(slug, claimed_licence)` from the client's inventory; **reject** directory-scoped, body-content, narrative, quoted and co-subject tokens |
+| `2` | [`fetch_grants.sh`](code/p228-shelf-gate/fetch_grants.sh) | read the real grant off `raw.githubusercontent.com` — `main` then `master`, `6` filenames, stop at the first `200`. **~`1` request per slug** |
+| `3` | [`classify_grant.py`](code/p228-shelf-gate/classify_grant.py) | name the family POSITIONALLY and detect dual grants |
+| `4` | [`gate.py`](code/p228-shelf-gate/gate.py) | emit `AGREE` / `FAMILY` / `INCOMPLETE-DUAL` / `BOUND` / `NOTATION` / `CELL-WITHOUT-GRANT` / `UNDECIDABLE-BODY` |
+
+🟢 **Why a client cannot get this from a scanner:** 🔴 **the three channels that look obvious are all unsafe, and this KB has the payloads to prove each one** — byte size *(`GPL-3.0` and `AGPL-3.0` canonical bodies are **`15` B apart**: `35 121` vs `35 136`)*, a bare `affero` grep *(a `GPL-3.0` body carries `3`, all in §13)*, and a whole-body search for the AGPL title *(it appears INSIDE a `GPL-3.0` body, in §13 — it defeated p227's own draft)*. 🟢 **The surviving channel is the first licence title in DOCUMENT ORDER, cross-checked on §13, with disagreement reported rather than resolved.**
+
+🟡 **Scope honestly in the SOW:** 🔴 **the ladder is ROOT-ONLY and misses a grant at `docs/License.txt` — [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) keeps a valid `GPL-2.0` there, `17 286` B, `sha256`₁₂ `224ac3d403e3`, BOM and all. 🟢 `CELL-WITHOUT-GRANT` means *"no grant at the root"*, never *"no grant"*, and the deliverable must say so.**
+
+### 🔴 `P228-R2` — hosting-model triage for an education platform build *(do this BEFORE picking the platform)*
+
+🔵 **The single most consequential question in an education engagement is not which LMS — it is whether the deliverable is HOSTED, because that is what `AGPL-3.0` reaches.** 🔴 **p228 moved a platform across this line, which is why the pattern exists.**
+
+| if the deliverable is… | build on | grant, read first-hand `2026-10-15` |
+|---|---|---|
+| 🟢 **hosted SaaS, proprietary code** | [`OpenOlat`](https://github.com/OpenOLAT/OpenOLAT) `Apache-2.0` · [`UniTime/unitime`](https://github.com/UniTime/unitime) `Apache-2.0` *(`11 357` B, `58d1e17ffe51`)* · [`pupilfirst`](https://github.com/pupilfirst/pupilfirst) `MIT` *(`1 684` B, `bda0aa6d49f2`)* · 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) **under its `MIT` option** *(`17 173` B, `7188c83d8764`)* | 🟢 **no disclosure trigger** |
+| 🟡 **on-premise, not redistributed** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) `GPL-3.0` · [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) `GPL-2.0` | 🟡 **fine — disclosure attaches to DISTRIBUTION** |
+| 🟡 **linking a module, shipping proprietary around it** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `LGPL-3.0-only` *(`8 241` B, `528f84036800`)* | 🟡 **publish changes to the module only** |
+| 🔴 **hosted SaaS on a copyleft core** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `AGPL-3.0-only` · [`frappe/lms`](https://github.com/frappe/lms) `AGPL-3.0` · 🆕 [`acanas/swad-core`](https://github.com/acanas/swad-core) **`AGPL-3.0`** *(`34 501` B, `884b434957ba`)* | 🔴 **SOURCE DISCLOSURE on network use** |
+
+🔴 **`swad-core` is the live warning: these shelves published it as `GPL-3.0` until this pass, which told a hosted build it had no trigger. It has one.** 🟢 **Run `P228-R1` against the platform shortlist before the SOW is signed, not after.**
+
+### 🟢 `P228-R3` — the teacher-facing assistant, on permissive ground, with the provenance record the 2027 deadlines want
+
+🔵 **`T227-4` established that national programmes buy TEACHER capacity, not student tutoring, and `T228-1` put numbers on the governance deficit. This recipe is the intersection, and every component is permissively licensed.**
+
+| component | repository | grant, read first-hand |
+|---|---|---|
+| reference implementation | 🆕 [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | 🟢 **`MIT`**, `1 077` B, `sha256`₁₂ `d150aadcccd2` |
+| task skills *(lesson planning, differentiation)* | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **`Apache-2.0`**, `11 357` B, `58d1e17ffe51` |
+| LMS attachment | [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) `MIT` · 🔴 [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) is **`AGPL-3.0`** *(`34 523` B)* — hosted use triggers disclosure | 🟢 / 🔴 |
+
+🟢 **The architectural point is Oak's, not this KB's: `Aila` generates over Oak's OWN CURATED LESSON LIBRARY rather than the open web.** 🔵 **That is why it has a publishable government algorithmic-transparency record — every output traces to a named source.** 🟡 **Copy that shape and the data-provenance statement the EU *(`2027-12-02`)* and Vietnam *(`2027-09-01`)* both require falls out of the architecture instead of being written afterwards.**
+
+🔵 **Where to sell it first:** 🟢 **the UK. It is the only jurisdiction on these shelves with a supplier-facing standard to conform to — DfE *"Generative AI: product safety standards"*, `2026-01-19` — and `44%` of its teachers already use generative AI against about **half of schools with no AI policy at all**.** 🔴 **Pair the build with a school-level AI policy; the policy is the wedge and the assistant is the renewal.**
+
+### 🔴 `P228-R4` — the grader-drift loop: still unbuilt, now wanted by FIVE jurisdictions
+
+🔵 **These shelves have published this supply-side gap since p213. p228 searched for it directly — `open source AI grading agreement teacher scores rubric github 2026` — and found no open-source agreement study and no agreement template.** 🔴 **Fifteenth pass with the gap open.**
+
+🟢 **Why it is now the highest-value unbuilt asset in education AI: five independent jurisdictions converge on the same boundary, and two of them are statutory.**
+
+| jurisdiction | what it says about an AI score |
+|---|---|
+| 🔴 **EU** *(statutory, `2027-12-02`)* | Annex III: tools evaluating learners or gating qualifications are high-risk |
+| 🔴 **Vietnam** *(statutory, `2027-09-01`)* | *"systems that automatically test, evaluate results and rank learners"* are high-risk |
+| 🟡 **UK** | AI marking permitted for **low-stakes** work only, **with a human check** |
+| 🟡 **Netherlands** | AI use in grading tests named as THE risk area |
+| 🔴 **LATAM** | faculty's LOWEST-uptake task; `61%` of students fear peer misuse |
+
+🟢 **The build, and it is small:**
+
+1. **Score source** — pull human marks through an LMS attachment: [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) `MIT` for Canvas; for Moodle note [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) is `AGPL-3.0` and pick accordingly.
+2. **Grade the same work** with a rubric-aligned prompt — the `GradAssist` *(EDULEARN 2026)* shape: draft, never final.
+3. 🔴 **The part nobody ships: report the DRIFT.** Per-rubric-criterion agreement between the model's score and the teacher's, over time, with the disagreements surfaced rather than averaged away.
+4. **Gate on it** — route low agreement to a human, which is precisely the UK's *low-stakes + human check* specification and the EU's human-oversight record.
+
+🟡 **A vendor claim of *"correlations above `0.90` with human raters"* circulates with no methodology attached and is NOT carried here.** 🔵 **That absence IS the opportunity: the deliverable is not a better grader — there are many — it is the only grader that can show a regulator what it got wrong.**
+
+
 ## Pass 227 — 2026-10-15 — `3` RECIPES, EACH BUILT ON A ROW THIS PASS CORRECTED, PLUS THE SHELF GATE `ACTION QO` ACTUALLY NEEDS
 
 🔵 **`3` new patterns. `1` of them exists as working code with `19` controls. All three name specific repositories with first-hand-read grants, and `2` of the three are only possible BECAUSE of a licence correction made this pass.**

@@ -1,0 +1,17 @@
+# ACTION SH (standing since p226): the refuted-claims gate run INBOUND on p228's raw
+# search results, before any shelf prose was written.
+# Table: so-refuted-claims.2026-10-15-p227.tsv (13 subjects: 9 PERMISSIVE, 4 RESTRICTIVE).
+# Records: 60 across 14 verbatim queries. Instrument: compose/code/p227-direction-gate.
+#
+# HITS: 0  -- no tabled error recurred inbound this pass.
+# NEAR MISSES: 3 -- reported, never dropped.
+#
+reading	result	note
+HITS	0	no tabled error recurred inbound
+NEAR MISSES	3	one of them exposes a LIVE DEFECT in the table itself
+		
+# the three near misses
+query	text	subject_matched	verdict
+open source platform education ERP CRM MIT Apache	OpenEduCat is an education ERP built on the Odoo framework and uses Odoo ORM, web framework, reporting engine and security model.	openeducat bare LGPL-3.0 read as a silence	CORRECTLY SILENT - the record makes no licence claim at all
+Germany KMK AI schools 2026	An August 2026 Bitkom position paper argues the states should develop a joint AI action plan with measurable goals.	EU AI Act Annex III education high-risk date	DEFECT IN THE TABLE - the subject pattern `ai act` matched inside the string `AI action plan`. Nothing about the record is an AI Act claim.
+Netherlands AI schools 2026	A Utrecht seminar points to the EU AI Act coming into effect step by step and raises AI use in grading tests as a risk area.	EU AI Act Annex III education high-risk date	CORRECTLY SILENT - a true statement carrying no date claim

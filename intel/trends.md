@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — THE TREND IS THAT **GOVERNANCE COVERAGE IS NOW THE MEASURABLE DEFICIT EVERYWHERE**, AND FOUR INDEPENDENT JURISDICTIONS PUT A NUMBER ON IT IN THE SAME QUARTER
+
+🔵 **`4` trends, each with the measurement that makes it a trend rather than a theme.**
+
+🔵 **Evidence:** [`p228-regional-queries`](../evidence/p228-regional-queries.2026-10-15-p228.tsv) · [`sq-europe-queries`](../evidence/sq-europe-queries.2026-10-15-p228.tsv) · [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p228.tsv)
+
+### 🔴 `T228-1` — the adoption-to-governance gap is now QUANTIFIED in four jurisdictions, and it is the same gap each time
+
+🔵 **p227 recorded the turn to *"governed adoption"* from the instruments. p228 can measure the deficit those instruments are aimed at, because four unrelated sources published a coverage figure this quarter:**
+
+| jurisdiction | individuals adopting | institutions governing | gap |
+|---|---|---|---|
+| 🔴 **LATAM** | `92%` of students, `79%` of faculty | 🔴 **`30%` of universities have published AI policies** | **`62` points** |
+| 🔴 **North America** | — | 🔴 **`10%` of institutions have formal AI guidelines**; `71%` of teachers untrained | **the widest absolute** |
+| 🟡 **UK** | `44%` of teachers using generative AI | 🔴 **~`50%` of schools have no AI policy at all** | ~`-6` points |
+| 🟡 **global** | `92%` student use *(secondary)* | 🔴 **maturity rated `35/100`, *"most institutions still in pilot mode"*** | — |
+
+🟢 **The trend is not *"AI adoption is growing"* — that has been true for four years. It is that the DEFICIT has become a published number, from four independent directions, within one quarter.** 🔵 **A number is procurable in a way a theme is not: a buyer who has read that `90%` of peer institutions lack a guideline can justify a line item.**
+
+🟡 **The UK is the instructive outlier and should be sold differently: at `44%` teacher use against `50%` of schools with no policy, its gap is nearly CLOSED by comparison — and it is the only jurisdiction on these shelves with a supplier-facing PRODUCT SAFETY STANDARD *(DfE, `2026-01-19`)* to conform to.** 🟢 **So EMEA's UK play is conformance evidence; LATAM's and North America's is the policy itself.**
+
+### 🔴 `T228-2` — assessment stays the convergent surface, and a FOURTH independent jurisdiction singled it out
+
+🟢 **p227 found assessment flagged by the EU and Vietnam and distrusted by LATAM faculty. p228 adds two more, from queries that had nothing else in common:**
+
+| direction | what it says about assessment |
+|---|---|
+| 🔴 **EU** | Annex III covers tools that evaluate learners or gate access to qualifications |
+| 🔴 **Vietnam** | Decision `33/2026/QD-TTg` classifies *"systems that automatically test, evaluate results and rank learners"* as high-risk |
+| 🔴 **LATAM** | faculty's LOWEST uptake is assessment — detecting cheating, generating feedback; `61%` of students fear peer misuse |
+| 🆕 🟡 **Netherlands** | a Utrecht seminar on the AI Act raises **AI use in grading tests** as the named risk area |
+| 🆕 🟡 **UK** | the DfE route permits AI marking only for **low-stakes** quizzes, **with results checked by a human** |
+
+🔵 **Five jurisdictions, two of them statutory, and all five land on the same boundary: an AI score is acceptable when a human remains answerable for it.** 🟢 **The UK formulation is the most useful because it is operational rather than principled — *low stakes* plus *human check* is a specification, not a value.**
+
+🔴 **And the supply-side gap these shelves have published since p213 is UNCLOSED for a fifteenth pass.** 🟢 **This pass searched for it directly** — `open source AI grading agreement teacher scores rubric github 2026` — 🔴 **and found no open-source agreement study and no agreement template.** 🟡 **What exists is `GradAssist` *(EDULEARN 2026)*, which drafts rubric-aligned feedback for an instructor to finalise, and a vendor claim of *"correlations above `0.90` with human raters"* that carries no methodology and is NOT carried here.**
+
+> 🟢 **The asset that answers all five jurisdictions at once is still the same one, and still nobody's: a grader that reports its own DRIFT against teacher scores.**
+
+### 🟢 `T228-3` — provenance moved from a quality claim to a CONFORMANCE ARTEFACT, and the EU set its date
+
+🔵 **p227's trend was that provenance became a reason a buyer REJECTS work, proved by South Africa withdrawing a national AI policy over fabricated citations.** 🟢 **p228's addition is that the same requirement now has a deadline and a form.**
+
+🔵 **The three-part structure p227 identified as portable — a risk classification, a human-oversight record, a data-provenance statement — maps onto the dates this way:**
+
+| date | what comes into effect | which of the three it needs |
+|---|---|---|
+| 🔴 **`2026-12-02`** | EU Omnibus Article `5` prohibitions | risk classification |
+| 🔴 **`2027-09-01`** | Vietnam's education compliance deadline | all three |
+| 🔴 **`2027-12-02`** | EU AI Act Annex III education high-risk | all three |
+
+🟡 **`7` weeks to the first of them.** 🔴 **The EU date most proposals will quote is `2027-12-02`; the one that binds first is `2026-12-02`, and it is a PROHIBITION rather than an obligation — there is no conformance path, only a stop.**
+
+### 🟡 `T228-4` — the open-source education agent shelf has reached DISCOVERY SATURATION, and that is a trend about the supply side
+
+🔴 **Five consecutive passes in which the mandated `github trending` query returned ZERO education-specific repositories.** 🟢 **p228 tested `ACTION SR`'s remedy — use-case and language-shaped queries instead — and it returned `0` new rows too: `5` of `5` verifiable candidates were already carried, and the only uncarried slug has no grant at all** → [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv).
+
+🔵 **So the supply-side reading, stated as a measurement rather than a complaint: the discoverable open-source education-AI surface is SMALL and this KB has most of it.** 🟢 **`520` distinct slugs carried, `468` grants read first-hand, `335` of them permissively licensed. What this shelf lacks is not more repositories — it is depth on the ones it has.**
+
+🟡 **Which reframes where a studio's advantage comes from in this industry. 🔴 In a saturated supply, the differentiator is not knowing WHICH repos exist — any competitor's search finds the same `520` — it is knowing what their grants actually say.** 🟢 **p228 found `3` wrong licence cells in its own shelves after `227` passes of care; a competitor working from search results has not checked at all. 🔵 That is why `ACTION ST` belongs in `make hooks` as a standing step rather than a one-off cleanup.**
+
+### 🔵 What this pass does NOT claim
+
+🔴 **Market sizing does not converge and this pass makes it worse rather than better: a North American series at `USD 951M` (2024) → `USD 2 303.2M` (2029) cannot be reconciled with a `36%` North American share of a `USD 10.6bn` global 2026 market. Both are published, neither is merged** → [`intel/market.md`](market.md) `P228-M2`.
+
+🔴 **`USD 169M` in US federal higher-ed AI funding: single secondary source, no primary — NOT carried.** 🔴 **A UK July-2026 teacher-marking guidance item could not be confirmed against gov.uk and is published as unverified, not as fact.** 🔴 **A vendor claim of `>0.90` grader-human correlation has no methodology and is NOT carried.** 🟡 **Sweden's nationwide *"AI Hub"* and free quality-tested tools come from a third-party summary of SOU 2025:12 and are marked `SNIPPET-ONLY`.**
+
+🟢 **No government or primary host was readable this pass either — `ACTION RO` is structural, not unperformed work.** 🔵 **And the four separate LATAM denominators now on these shelves *(IESALC `200`/`19`; DEC `30 000`+/`29`; the `30%` policy figure; the truncated `19%`)* must not be merged into one.**
+
+
 ## Pass 227 — 2026-10-15 — THE TREND WORTH CARRYING IS THAT **PROVENANCE BECAME A PROCUREMENT REQUIREMENT**, AND THE PROOF IS A NATIONAL AI POLICY WITHDRAWN FOR CITING SOURCES THAT DO NOT EXIST
 
 🔵 **`4` trends, each with the evidence that makes it a trend rather than a theme.**

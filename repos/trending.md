@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 228 — FIFTH CONSECUTIVE BLANK ON THE MANDATED TRENDING QUERY, AND THIS PASS FINALLY MEASURED THE ALTERNATIVE: THE USE-CASE CHANNEL RETURNED `0` NEW ROWS TOO
+
+🔵 **`0` new repository rows. The mandated trending query is run anyway, because a cheap query that bounds a claim is worth keeping even when it discovers nothing.**
+
+🔵 **Evidence:** [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv) · [`p228-regional-queries`](../evidence/p228-regional-queries.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv)
+
+### 🔴 `T228-R1` — the mandated query, verbatim, and what it returned
+
+🔵 **Query:** `github trending education AI 2026`
+
+| what came back | education-specific? |
+|---|---|
+| `rohitg00/ai-engineering-from-scratch` — #1 trending Python programming-examples repo, June 2026 | 🔴 **no** — general AI engineering |
+| `MadsLorentzen/ai-job-search` — #1 on an aggregator's list, July 2026 | 🔴 **no** — job search |
+| *"nine of GitHub's top ten monthly trending repos in February 2026 were AI-related"* | 🔴 **no** — and none of the ten was education |
+| a direct, current list of trending EDUCATION repos | 🔴 **not found** |
+
+🟢 **Fifth consecutive pass at `0`.** 🟡 **Standing conclusion, now with five passes behind it: `github trending` is a BOUNDING CLAIM on this shelf, not a discovery channel. It tells us the education-AI surface is not producing breakout repositories, which is a real and reportable fact about the industry — it does not produce rows.**
+
+### 🔴 `T228-R2` — `ACTION SR`'s remedy, measured, and it does not work either
+
+🟢 **`ACTION SR` registered the hypothesis that use-case and language-shaped queries would return rows where trending did not. Three were run** → [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv).
+
+| query | candidates surfaced | already carried | new rows |
+|---|---|---|---|
+| `open source MCP server education LMS Moodle Canvas github 2026` | `2` | 🔴 **`2` of `2`** | 🔴 **`0`** |
+| `open source AI teacher assistant lesson planning github Apache 2026` | `3` | 🔴 **`2` of `3`** *(the third has no grant)* | 🔴 **`0`** |
+| `open source AI grading agreement teacher scores rubric github 2026` | `0` qualifying | — | 🔴 **`0`** |
+
+🔵 **Citation counts for the "new" candidates on these shelves: `csmediapro/moodle-mcp-server` `165`, `admin978/canvas-mcp` `34`, `anthropics/k12-teacher-skills` `32`, `oaknational/oak-ai-lesson-assistant` `15`.** 🔴 **Not one was a discovery.**
+
+🟡 **So the measured discovery rate across BOTH channels this pass is `0` new rows from `4` queries, and the sixth consecutive pass in which this KB publishes its discovery rate instead of padding: `16`/`18` already-present at p223, `6`/`8` at p224, `9`/`9` at p225, `9`/`9` at p226, `21`/`23` at p227, **`5`/`5` here**.**
+
+### 🟢 `T228-R3` — what replaced discovery this pass, and the case for making it standing
+
+🔴 **If the shelf cannot grow outward, the only remaining source of new fact is DEPTH.** 🟢 **`ACTION ST` read `468` grants first-hand across `520` distinct slugs — the first shelf-wide grant read in this KB's history — and returned four things no query could have:**
+
+| return | value |
+|---|---|
+| 🟢 `1 372` cells CONFIRMED against the repository | the shelf can now be quoted with a provenance for each cell |
+| 🔴 `3` live wrong cells, corrected in place | `acanas/swad-core` ×`2` *(permissive direction)*, `Elgg/Elgg` ×`1` *(restrictive)* |
+| 🟢 the tier's licence profile from PAYLOADS | `335` of `468` — `71.6%` — `MIT`/`Apache-2.0`/BSD |
+| 🟢 `142` of `468` grants NOT at `main/LICENSE` | `30.3%`; a one-path gate would have reported a third of the shelf grantless |
+
+🔵 **A repository row's value to an engagement is its GRANT, its maintenance and its fit — and only the first of those three is cheaply and exactly checkable at shelf scale.** 🟡 **On a saturated shelf that is where the budget belongs, and it is the argument for `ACTION ST` joining `make hooks` rather than being spent once.**
+
+### 🔵 `T228-R4` — the licence families the shelf-wide read CORROBORATED, and the gap this pass's own draft invented
+
+🔴 **A first draft of this section claimed `ECL-2.0` was *"a family nobody on this shelf had named"* and registered an action to fix it. That claim was FALSE, and these shelves refute it four times over:** 🟢 **p200 is titled *"`ECL-2.0`: education has its own licence and this KB had never named it"*, p215 added it to the platform shelf, p216 re-read it AT CLAUSE LEVEL — *"permissive on copyright and narrower than `Apache-2.0` on patents, and that is the sentence a studio has to put in a contract"* — and p217 and p218 re-confirmed the cells with no drift.**
+
+🔴 **The mechanism is p226's, exactly, and p227 named it: a draft checked against a SEARCH IMPRESSION rather than against the shelves.** 🟢 **It was caught before publishing by grepping the shelves for the family before asserting its absence, which is now the rule.** 🟡 **`ACTION SU` is withdrawn before registration — there was nothing to register.**
+
+🔵 **What the shelf-wide read actually contributes to `ECL-2.0` is CORROBORATION with payloads, on all `7` rows, every cell `AGREE`:**
+
+| repository | `ECL-2.0` body, read first-hand `2026-10-15` | bytes | `sha256`₁₂ |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master/LICENSE` | `11 120` | `0688f62d04f1` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `master/LICENSE` | `11 340` | `76a975068930` |
+| [`oaeproject/3akai-ux`](https://github.com/oaeproject/3akai-ux) | `master/LICENSE` | `12 413` | `26eb150501f6` |
+| [`oaeproject/Hilary`](https://github.com/oaeproject/Hilary) | `master/LICENSE` | `12 322` | `34d6dd461117` |
+| [`polimediaupv/paella`](https://github.com/polimediaupv/paella) | `master/license.txt` | `9 915` | `15efd2f640ed` |
+| [`music-encoding/music-encoding`](https://github.com/music-encoding/music-encoding) | `master/LICENSE` | `9 899` | `8e47bca43011` |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `master/LICENSE` | `9 878` | `f339063d2f60` |
+
+🟢 **And it EXTENDS p216's `T216-F4`, which found *"the `ECL-2.0` text has `5` byte-lengths in one family"*. 🔴 Measured across all `7` rows first-hand, there are **`7` distinct byte-lengths and `7` distinct hashes** — every single one differs.** 🟡 **So for this family a byte count identifies a REPOSITORY'S COPY and never the licence, which is the opposite of what `T228-A2` just established for `Apache-2.0`, where two unrelated repositories served one hash.**
+
+🔵 **The one family on this tier that is genuinely a hazard rather than an omission:**
+
+| family | repositories | status |
+|---|---|---|
+| 🔴 **`BUSL-1.1`** | `1` — [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | 🔴 **NOT an OSI licence.** Synthetic-data tooling with obvious student-record appeal — the one row on this tier a studio must not assume it can ship |
+
+
 ## Pass 227 — 2026-10-15 — GITHUB TRENDING RETURNED **NOTHING EDUCATION-SPECIFIC** FOR A FOURTH PASS, AND THE ONE EDUCATION REPO IT DID NAME IS ALREADY THIS KB'S SECOND-LARGEST ROW
 
 🔵 **`0` new trending repository rows. `1` trending snapshot date recorded. `1` declared channel gap, stated rather than left silent.**

@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — THE FOUNDATION TIER WAS SWEPT END TO END FOR THE FIRST TIME: `468` GRANTS READ FIRST-HAND, **`1 372` CELLS CONFIRMED**, AND THE ONE WRONG FAMILY ON THIS SHELF ASSERTS NO NETWORK OBLIGATION ON A PLATFORM THAT HAS ONE
+
+🔵 **`0` new foundation rows. `1` family defect found and corrected in place. `1` grant published for a row carried with none. `468` grants read first-hand across `520` distinct slugs — the first shelf-wide grant read in this KB's history.**
+
+🔵 **Evidence:** [`st-shelf-gate`](../evidence/st-shelf-gate.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv) · [`st-family-defects`](../evidence/st-family-defects.2026-10-15-p228.tsv) · **Instrument:** [`p228-shelf-gate`](../compose/code/p228-shelf-gate/README.md)
+
+### 🔴 `P228-F1` — `acanas/swad-core` corrected `GPL-3.0` → `AGPL-3.0`
+
+🟢 **`master/LICENSE`, `34 501` B, `sha256`₁₂ `884b434957ba`. Title at offset `0` is `GNU AFFERO GENERAL PUBLIC LICENSE`; the version line is `Version 3, 19 November 2007`; §13 is `Remote Network Interaction`.** 🔴 **The shelf published `GPL-3.0` at the same byte count — the body was read correctly and the FAMILY was named wrong.**
+
+🔴 **What changes for this tier:** SWAD is a two-decade production platform at Universidad de Granada and the obvious engagement is a hosted one. 🔴 **`AGPL-3.0` reaches derivative works made available OVER A NETWORK. The published `GPL-3.0` cell said a hosted deployment carried no disclosure obligation. It does.** 🟢 **Full sequence in [`agents/top.md`](../agents/top.md) `P228-ST2`.**
+
+### 🟢 `P228-F2` — the tier's grant coverage, measured rather than assumed
+
+| reading | slugs | cells |
+|---|---|---|
+| 🟢 grant READ first-hand off `raw` | **`468`** | — |
+| 🟢 cell AGREES with the grant | — | **`1 372`** |
+| 🟡 no grant at the ROOT | `45` | `149` |
+| 🟡 bound differs *(undecidable from a root `LICENSE`)* | `14` | `26` |
+| 🟡 spelling differs only | `10` | `13` |
+| 🔴 **family wrong** | **`1`** | **`2`** |
+| 🔴 **dual grant named as single** | **`1`** | **`1`** |
+
+🔵 **The family distribution of the `468` bodies, which is the first time this tier can state its own licence profile from payloads rather than from cells:** 🟢 **`248` `MIT` · `77` `Apache-2.0` · `44` `GPL-3.0` · `43` `AGPL-3.0` · `11` `GPL-2.0` · `9` `BSD-3-Clause` · `7` `ECL-2.0` · `7` `LGPL-3.0` · `5` `CC-BY-4.0` · `2` `CC-BY-SA-4.0` · `1` each `LGPL-2.1`, `MIT` OR `GPL-2.0` *(dual)*, `BSD-2-Clause`, `ISC`, `CC-BY-NC-SA-4.0`, `MPL-2.0`, `BUSL-1.1`** — 🟡 **plus `8` bodies this instrument declines to name *(`7` `UNRECOGNISED`, `1` `GPL-?`)*, which are reported and never turned into defects.**
+
+🟢 **So `335` of `468` first-hand grants — `71.6%` — are `MIT`, `Apache-2.0` or BSD, the three this KB's standing preference can build on. Counting the `7` `ECL-2.0` rows alongside them takes it to `342`, `73.1%` — published separately because `ECL-2.0`'s patent grant is narrower than Apache's *(p216)*.** 🔵 **The ratio is published WITH its enumerator, per p224's standing rule: the unit is a distinct SLUG whose grant returned `200`, counted once. 🔴 A first draft of this paragraph said `326` and `69.7%`, by adding the families up by hand and leaving `Elgg` in the `MIT` bucket after the dual-grant reclassification moved it out.**
+
+### 🟢 `P228-F3` — `ECL-2.0` corroborated on all `7` rows, and a gap this pass's own draft invented
+
+🔴 **A first draft of this section claimed the Educational Community License was unnamed on these shelves and registered an action for it. It is named at p200, added to the platform shelf at p215, re-read at clause level at p216 and re-confirmed at p217 and p218.** 🟢 **The claim was withdrawn before publishing; the rule that caught it is to grep the shelves for a family before asserting its absence.** 🟡 **p226's failure mode, one pass after p227 named it — a draft checked against a search impression rather than against the shelves.**
+
+🟢 **What this pass does add is payload corroboration: all `7` `ECL-2.0` cells on this tier read `AGREE` against first-hand bodies, and the `7` bodies have `7` DISTINCT byte-lengths and `7` distinct hashes** — extending p216's `5` → `7` and establishing that for this family a byte count identifies a repository's COPY, never the licence → [`repos/trending.md`](trending.md) `T228-R4`.
+
+🟡 **p216's clause-level sentence still governs how it may be sold, and the `71.6%` figure above is stated WITHOUT it for that reason: `ECL-2.0` is permissive on copyright but NARROWER THAN `Apache-2.0` ON PATENTS, so it is buildable and it is not a drop-in substitute in a contract.**
+
+### 🟢 `P228-F4` — a grant published for a row that was carried without one
+
+🟢 **[`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) — 🟢 **`MIT`**, `main/LICENSE`, `1 077` B, `sha256`₁₂ `d150aadcccd2`, read first-hand `2026-10-15`.**
+
+🔵 **It is cited `15` times across these shelves and carried NO licence cell on any live shelf — a row the gate found by its ABSENCE rather than by a disagreement.** 🟢 **Oak National Academy's Aila is the UK's lesson-planning assistant, with a published government algorithmic-transparency record, running retrieval over Oak's own lesson library.** 🟡 **It is the clearest permissively licensed, teacher-facing, nationally deployed asset on this tier, and `T227-4` already established that teacher-side is where national programmes actually spend.**
+
+### 🔵 `P228-F5` — the ladder's reach, stated as a limit
+
+🔴 **The fetch ladder is `main` then `master`, over `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`, `LICENCE` — all at the ROOT.** 🟢 **Which path answered, across `468` reads:** `300` `main/LICENSE` · `114` `master/LICENSE` · `19` `main/LICENSE.md` · `11` `master/LICENSE.txt` · `11` `master/LICENSE.md` · `6` `main/LICENSE.txt` · `5` `master/license.txt` · `1` `main/license.txt` · `1` `master/LICENCE`.
+
+🔴 **`114` + `11` + `11` + `5` + `1` = `142` of `468` grants — `30.3%` — do NOT live at `main/LICENSE`.** 🟡 **A one-request-per-slug gate that probed only `main/LICENSE` would have reported a third of this tier as grantless.** 🟢 **And the ladder is still not enough: `OS4ED/openSIS-Classic` keeps its grant at `master/docs/License.txt` and the shelves knew that before the gate did → `ACTION SV`.**
+
+
 ## Pass 227 — 2026-10-15 — THE FOUNDATION TIER GAINS A **SETTLED BOUND** ON ITS LARGEST PLATFORM AND LOSES AN ASSERTION THAT WAS EXACTLY BACKWARDS, AND BOTH CAME FROM READING A `LICENSE` FILE'S **STRUCTURE** RATHER THAN ITS TEXT
 
 🔵 **`0` new foundation rows. `1` bound settled on the tier's largest platform. `1` live assertion WITHDRAWN as inverted. `2` grants re-read first-hand on rows carried for a hundred passes.**
@@ -3466,7 +3515,7 @@ EMEA and they are university-built infrastructure, not start-up demos.**
 | repo | licence | region | note |
 |---|---|---|---|
 | 🆕 🟢 **[`rage/secret-project-331`](https://github.com/rage/secret-project-331)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `320`★ — the **University of Helsinki** MOOC platform behind its courses. 🟢 Permissive, and running at national scale |
-| 🆕 🟢 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🟡 **`GPL-3.0`** *(`34 501` B, full text)* | EMEA | `76`★ — **SWAD**, Universidad de Granada's platform, in continuous use for two decades. 🔴 `GPL`: extend, do not absorb |
+| 🆕 🟢 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🔴 **`AGPL-3.0`** *(`34 501` B, `sha256`₁₂ `884b434957ba`, title at offset `0`)* <!--corrected--> | EMEA | `76`★ — **SWAD**, Universidad de Granada's platform, in continuous use for two decades. 🔴 **`AGPL`: a hosted deployment triggers source disclosure** — this shelf published `GPL-3.0` until p228 |
 | 🟢 **[`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS)** | 🔴 **`AGPL-3.0`** *(`34 523` B — 🆕 `P214-1`: published `GPL-3.0` here, title line reads **AFFERO**)* | North America | adaptive practice driven by **cognitive models** — University of Memphis, built for research AND practice. 🔴 **Network copyleft on a hosted tutor** |
 | 🆕 🟢 **[`INRIA/scikit-learn-mooc`](https://github.com/INRIA/scikit-learn-mooc)** | 🟡 **Creative Commons** *(`18 658` B)* | EMEA | `1.4`k★ — **Inria**'s ML course. 🔵 A content grant, not a software one: reusable as **curriculum**, and that is the scarcer asset |
 | 🆕 🟢 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)** | 🟡 **`GPL-2.0`** *(`18 092` B — the `GPL-2` length, not `GPL-3`'s `~35` kB)* | APAC | `1.2`k★ — a PHP online-education system with Docker deployment, default branch `v2`. 🔵 **Per `P960`, `GPL-2` is NOT `LGPL`: "link, don't absorb" does not apply** |

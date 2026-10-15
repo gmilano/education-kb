@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — THE PLATFORM TIER GAINS A SECOND PERMISSIVELY BUILDABLE MEMBER FROM A RE-READ AND LOSES A `GPL` READING THAT UNDERSTATED A **NETWORK-USE OBLIGATION** — THE SECOND CONSECUTIVE PASS IN WHICH THE TIER CHANGED WITHOUT A SINGLE NEW ROW
+
+🔵 **`0` new platform rows *(`9` of `9` named platforms already carried, for a THIRD pass)*. `2` carried platform grants corrected on first-hand reads. `1` of the two corrections runs AGAINST Globant and `1` runs against a client — the first pass on these shelves to find one of each.**
+
+🔵 **Evidence:** [`st-shelf-gate`](../evidence/st-shelf-gate.2026-10-15-p228.tsv) · [`st-family-defects`](../evidence/st-family-defects.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv) · **Instrument:** [`p228-shelf-gate`](../compose/code/p228-shelf-gate/README.md) *(`30` controls)*
+
+### 🔴 `P228-V1` — the tier, corrected
+
+| platform | tier | p227 published | 🟢 first-hand truth, read `2026-10-15` | buildable under the standing MIT/Apache/BSD preference |
+|---|---|---|---|---|
+| [`OpenOlat`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 `Apache-2.0` | 🟢 **unchanged** | 🟢 **YES** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | timetabling | 🟢 `Apache-2.0` | 🟢 **unchanged** *(`11 357` B, `58d1e17ffe51`)* | 🟢 **YES** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | LMS / school ops | 🟢 `MIT` *(code)* | 🟢 **unchanged** — `1 684` B, `bda0aa6d49f2`; `docs/**` `CC-BY-SA-4.0` | 🟢 **YES, for the code** |
+| 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | 🔴 **`GPL-2.0-only`** *(from `composer.json`)* | 🟢 **`MIT` OR `GPL-2.0` — DUAL**, `17 173` B, `7188c83d8764` | 🟢 **YES, under `MIT`** — 🔴 **it was excluded for nothing** |
+| 🆕 [`acanas/swad-core`](https://github.com/acanas/swad-core) | LMS / campus | 🔴 **`GPL-3.0`** | 🔴 **`AGPL-3.0`**, `34 501` B, `884b434957ba` | 🔴 **no — and now with a NETWORK obligation it did not carry before** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS | 🟢 `GPL-3.0` *(p227)* | 🟢 **unchanged** — `35 121` B, `93178a43d6d3` reproduced to the byte | 🔴 no — **but no network-use obligation** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🔴 `GPL-2.0` | 🟢 **unchanged** | 🔴 no |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | 🔴 `AGPL-3.0-only` | 🔴 **unchanged** — `35 136` B, `e12d78569742` | 🔴 no |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🔴 `AGPL-3.0` | 🔴 **unchanged** *(`license.txt` `33 893` B, `db1a87ba81e8`)* | 🔴 no |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP / LMS+SIS | 🟡 `LGPL-3.0-only` *(p225, `2`–`1`)* | 🟢 **`LGPL-3.0` corroborated** — `8 241` B, `528f84036800` | 🟡 **weak copyleft — linkable** |
+| `Moodle` · `Chamilo` · `Canvas LMS` | LMS | 🔴 copyleft | 🔴 **unchanged** | 🔴 no |
+| `AlekSIS` | SIS | 🔴 no resolvable repository | 🔴 **unchanged** | 🔴 n/a |
+
+🟢 **So the honest statement of the tier is `4` permissively buildable platforms — `OpenOlat`, `UniTime`, `pupilfirst` and now `Elgg` — up from `3`, and again the new one was already here.**
+
+### 🔴 `P228-V2` — the two corrections point in OPPOSITE directions, and that is the pass's commercial finding
+
+🔵 **p227 made the refuted-claims table bidirectional and predicted who pays in each direction. p228 is the first pass to produce one of each at platform tier, on the same day:**
+
+| platform | direction | the error | who pays |
+|---|---|---|---|
+| 🆕 `Elgg/Elgg` | 🟢 **RESTRICTIVE** | a dual `MIT`/`GPLv2` grant published as `GPL-2.0-only` | 🟡 **Globant** — a buildable social-learning platform excluded from every engagement filter |
+| 🆕 `acanas/swad-core` | 🔴 **PERMISSIVE** | `AGPL-3.0` published as `GPL-3.0` | 🔴 **a client** — a hosted build told it had no source-disclosure trigger, when it has one |
+
+🔴 **The asymmetry that matters to a SOW: the restrictive error costs a sales opportunity and is recoverable at any time. The permissive error is discovered by a client's counsel AFTER a hosted deployment ships, and is not.** 🟢 **Both are now corrected in place behind `<!--corrected-->` markers.**
+
+### 🟢 `P228-V3` — what each grant lets a studio ship, with the two changed rows in place
+
+| grant | what it reaches | what a studio can ship |
+|---|---|---|
+| 🟢 `Apache-2.0` *(`OpenOlat`, `UniTime`)* | notice and patent terms only | 🟢 **a proprietary deliverable on top, no source disclosure** |
+| 🟢 `MIT` *(`pupilfirst` code, 🆕 `Elgg` under its MIT option)* | notice only | 🟢 **same** — 🟡 `pupilfirst`'s `docs/` is `CC-BY-SA-4.0`; `Elgg`'s `/mod` plugins are `GPL-2.0-only` |
+| 🟡 `LGPL-3.0-only` *(`OpenEduCat`)* | modifications to the library itself | 🟡 **link and ship proprietary around it; publish changes to the module** |
+| 🟡 `GPL-2.0` / `GPL-3.0` *(`RosarioSIS`, `Gibbon`)* | derivative works **distributed** | 🟡 **a hosted service is fine; shipping a modified binary is not** |
+| 🔴 `AGPL-3.0` *(`Open edX`, `frappe/lms`, `Canvas`, 🆕 `swad-core`)* | derivative works **made available over a network** | 🔴 **a hosted service triggers source disclosure — and `swad-core` joined this row this pass** |
+
+### 🔵 `P228-V4` — the structural gap, restated for a third pass and still unclosed
+
+🔴 **There is still NO permissively licensed, full-featured SIS.** 🟢 **`Elgg` is social learning, `UniTime` is timetabling, `pupilfirst` is school operations and course delivery. The `2` real SIS platforms here are `GPL-3.0` and `GPL-2.0`, `openSIS` is `GPL-2.0`, and `AlekSIS` still has no resolvable repository.** 🟡 **Third consecutive pass with `9` of `9` named platforms already carried: this is a genuine gap in the open-source education landscape, not a sourcing failure.**
+
+🟢 **What DID change is that the buildable set is `4` rather than `3`, and both of this pass's movements came from re-reading grants rather than from finding software.** 🔵 **For a tier that has added no row in three passes, a shelf-wide grant re-read is the only remaining source of new commercial fact — which is the argument for `ACTION ST` becoming a standing step.**
+
+
 ## Pass 227 — 2026-10-15 — THE SIS TIER GAINS A PERMISSIVELY LICENSED MEMBER WITHOUT A SINGLE NEW ROW, BECAUSE **TWO OF ITS CARRIED ROWS WERE PUBLISHED UNDER THE WRONG LICENCE** — AND BOTH ERRORS RAN AGAINST GLOBANT
 
 🔵 **`0` new platform rows *(`9` of `9` named platforms already carried, for a second pass)*. `2` carried platform grants CORRECTED on first-hand reads. `1` live table row and `1` live assertion WITHDRAWN in place. The tier's permissive count goes from `1` to `2` on a re-read, not a discovery.**
@@ -206,7 +259,7 @@ updated: 2026-10-15
 | **TAO QTI test** [`oat-sa/extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti) | assessment | 🆕 **`["GPL-2.0-only"]`** | 🔴 **`only`** | 🔴 **NO** |
 | **QTI-SDK** [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | assessment lib | 🆕 **`["GPL-2.0-only"]`**, package name `qtism/qtism` | 🔴 **`only`** | 🔴 **NO** |
 | **LTI 1.3 core** [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | integration lib | `"GPL-2.0-only"` *(p221)* | 🔴 **`only`** | 🔴 **NO** |
-| **Elgg** 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | 🆕 `composer.json`: **`"GPL-2.0-only"`** *(`3 557` B)* | 🔴 **`only`** | 🔴 **NO** |
+| **Elgg** 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | 🆕 **`MIT` OR `GPL-2.0`** — DUAL, read first-hand: `master/LICENSE.txt` `17 173` B, `sha256`₁₂ `7188c83d8764` <!--corrected--> | 🟡 **dual** *(`/mod` plugins `GPL-2.0-only`)* | 🟢 **YES, under `MIT`** |
 
 🔴 **So the shelf has a hard seam.** The LMS tier is GPLv3-family; the whole `oat-sa` assessment tier plus Elgg is `GPL-2.0-only`. 🔵 **`LGPL` rows are the exception and that is deliberate in the instrument: `blocks_gpl3_host()` returns `False` for `LGPL` at any version, because LGPL is written to be *linked* into a differently licensed host.**
 
@@ -2594,7 +2647,7 @@ should be priced as one.
 | platform | licence | region | layer / note |
 |---|---|---|---|
 | 🆕 🟢 **[`rage/secret-project-331`](https://github.com/rage/secret-project-331)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `320`★ — **University of Helsinki**'s MOOC platform. 🟢 The most permissive course-delivery platform on this table |
-| 🆕 🟡 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🟡 `GPL-3.0` *(`34 501` B)* | EMEA | `76`★ — Universidad de Granada, two decades in production |
+| 🆕 🟡 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🔴 **`AGPL-3.0`** *(`34 501` B, `sha256`₁₂ `884b434957ba`)* <!--corrected--> | EMEA | `76`★ — Universidad de Granada, two decades in production. 🔴 **network-use obligation** |
 | 🆕 🟡 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)** | 🟡 `GPL-2.0` *(`18 092` B)* | APAC | `1.2`k★ — PHP, Docker, knowledge-sales oriented. 🔵 **`GPL-2`, so `P960` applies: NOT `LGPL`** |
 | 🆕 🟢 **[`iblai/lms`](https://github.com/iblai/lms)** | 🟢 `MIT` *(`1 062` B)* | North America | skills / competencies / credentials, with a `wallet` companion |
 | 🆕 🟡 **[`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc)** | *(grant unread this pass)* | EMEA | Laravel LMS with `SCORM` + native quizzes — recorded for a later probe |

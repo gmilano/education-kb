@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 228 — WHAT IS NEW THIS WEEK IS A **GRANT**, NOT AN AGENT: `0` NEW AGENT ROWS FROM THREE USE-CASE QUERIES, AND THE ONE MOVEMENT ON THE SHELF IS A PERMISSIVELY LICENSED TEACHER-FACING ASSET THAT WAS ALREADY HERE WITHOUT A LICENCE CELL
+
+🔵 **`0` new agent rows. `5` of `5` verifiable candidates already carried. `1` grant published for a carried row that had none. `468` grants read first-hand shelf-wide.**
+
+🔵 **Evidence:** [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv) · [`st-grant-reads`](../evidence/st-grant-reads.2026-10-15-p228.tsv) · [`p228-regional-queries`](../evidence/p228-regional-queries.2026-10-15-p228.tsv)
+
+### 🟢 `T228-A1` — the one genuinely new fact on the agent shelf this week
+
+| agent | grant, read first-hand `2026-10-15` | payload | why it matters |
+|---|---|---|---|
+| 🆕 [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | 🟢 **`MIT`** | `main/LICENSE`, `1 077` B, `sha256`₁₂ `d150aadcccd2` | 🟢 **Oak National Academy's *Aila* — a nationally deployed UK lesson-planning assistant with a published government algorithmic-transparency record. Cited `15` times on these shelves and carrying NO licence cell on any live shelf until this pass** |
+
+🔵 **It runs retrieval over Oak's own curated lesson library rather than open-web generation, which is the detail that makes it a reference implementation rather than a wrapper: the provenance of every generated lesson traces to a named, curated source.** 🟡 **That is exactly the artefact `T228-3` says the EU and Vietnamese deadlines will require.**
+
+🟢 **And it sits where the money is. `T227-4` established that national programmes buy TEACHER capacity, not student tutoring; `Aila` is teacher-facing, `MIT`, and already in national service.** 🔵 **It is the strongest single starting point on this shelf for a teacher-side engagement, and this KB carried it for `15` citations without ever recording that a studio may build on it.**
+
+### 🟢 `T228-A2` — a free identity control, worth recording because it validates the cell format
+
+🟢 **[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) serves `main/LICENSE` at `11 357` B, `sha256`₁₂ **`58d1e17ffe51`** — BYTE-IDENTICAL to the `Apache-2.0` body p227 read from [`UniTime/unitime`](https://github.com/UniTime/unitime).**
+
+🔵 **Two unrelated repositories, two unrelated owners, one hash.** 🟢 **That is the first cross-repository corroboration on these shelves that `sha256`₁₂ functions as a BODY FINGERPRINT rather than a per-repo checksum — which is the whole reason a licence cell carries one. A cell quoting `58d1e17ffe51` now means *"the canonical Apache-2.0 text"* and not merely *"whatever that repo served that day"*.**
+
+### 🔴 `T228-A3` — `ACTION SR` tested and the answer is worse than either limb
+
+🔵 **`ACTION SR` proposed abandoning the `github trending` channel and spending the budget on use-case queries instead. p228 ran both.**
+
+| channel | query | new carried rows |
+|---|---|---|
+| 🔴 mandated trending | `github trending education AI 2026` | 🔴 **`0`** — fifth consecutive pass |
+| 🔴 use-case | `open source MCP server education LMS Moodle Canvas github 2026` | 🔴 **`0`** — `csmediapro/moodle-mcp-server` *(`165` citations)*, `admin978/canvas-mcp` *(`34`)* |
+| 🔴 use-case | `open source AI teacher assistant lesson planning github Apache 2026` | 🔴 **`0`** — `anthropics/k12-teacher-skills` *(`32`)*, `oaknational/oak-ai-lesson-assistant` *(`15`)* |
+| 🔴 use-case | `open source AI grading agreement teacher scores rubric github 2026` | 🔴 **`0`** — and `0` candidates: a blank for the asset class itself |
+
+🟡 **Neither limb fires. The honest state is a third one `SR` did not anticipate: DISCOVERY SATURATION at this query depth.** 🟢 **Reallocating budget from trending to use-case queries would not have bought a row this pass — so the recommendation is to keep BOTH as cheap bounding claims and move the discovery budget to DEPTH on carried rows, which is what `ACTION ST` delivered.**
+
+🔴 **One uncarried slug appeared and does not qualify: `AndresPaulino/lesson-plans` is `404` on all `6` grant paths across both refs. Joins `ACTION PH`'s queue.**
+
+### 🟡 `T228-A4` — two agent-tier grants re-read, and both were narrative rather than live
+
+🔵 **Worth recording because the shelf was RIGHT both times and a hand-reading of the gate's raw output would have "corrected" it:** 🟢 **[`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) is `Apache-2.0` *(`11 386` B, `7dc0f2a45a9e`)* and [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) is `BUSL-1.1` *(`4 818` B, `fcaa94d4732e`)* — exactly as these shelves already publish them.** 🔴 **The `MIT` tokens the gate flagged on both lines sit inside sentences narrating the value each row was CORRECTED FROM.**
+
+🟡 **`BUSL-1.1` deserves its own line for an engagement filter: it is NOT an OSI licence. `sdv-dev/SDV` is synthetic-data tooling with obvious appeal for student-record work, and it is the one row on this tier a studio must not assume it can ship.**
+
+
 ## Pass 227 — 2026-10-15 — THE WEEK'S MOVEMENT IS A **FORK SET** AND A `NO-GRANT` SERVER, AND THE AGENT TIER'S REAL NEWS IS THAT `4` OF ITS CARRIED ROWS WERE PUBLISHED UNDER THE WRONG LICENCE IN THE **RESTRICTIVE** DIRECTION
 
 🔵 **`1` new agent row. `2` candidates probed first-hand, `1` carried. `4` carried rows re-licensed on first-hand reads, all four in the direction no sweep before this pass could see.**

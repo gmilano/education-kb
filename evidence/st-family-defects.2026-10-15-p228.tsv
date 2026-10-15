@@ -1,0 +1,15 @@
+# ACTION ST step 4 - every FAMILY-level disagreement the gate reported, in BOTH drafts.
+# Draft 1 reported 11. NINE were defects in the gate, not on the shelves: a licence
+# token on a shelf line has at least five possible SUBJECTS and only one of them is
+# "this repository's grant". Draft 2 reports 3, on 2 entities.
+slug	cell	read_first_hand	bytes	sha256_12	draft1	draft2	subject_class	disposition
+acanas/swad-core	GPL-3.0	AGPL-3.0	34501	884b434957ba	FAMILY	FAMILY	the repository's grant	REAL DEFECT - corrected in place, 2 cells
+Elgg/Elgg	GPL-2.0-only	MIT OR GPL-2.0	17173	7188c83d8764	FAMILY	INCOMPLETE-DUAL	the repository's grant	REAL - cell names one option of a dual grant, corrected in place
+pupilfirst/pupilfirst	CC-BY-SA-4.0	MIT	1684	bda0aa6d49f2	FAMILY	excluded	DIRECTORY-SCOPED	FALSE - the row's own subject column is docs/**, so the cell is CORRECT
+odoo/odoo	GPL-3.0	LGPL-3.0	43529	abc09dad5f84	FAMILY	excluded	BODY-CONTENT	FALSE - "GPL-3.0 included by value" describes the BODY, not the grant
+bigbluebutton/bigbluebutton	GPL-3.0	LGPL-3.0	7652	e3a994d82e64	FAMILY	excluded	BODY-CONTENT	FALSE - "LGPL preamble, GPL-3.0 by reference" likewise
+towardsai/ai-tutor-app	MIT	Apache-2.0	11386	7dc0f2a45a9e	FAMILY	excluded	CORRECTION-NARRATIVE	FALSE - the line reads "was published MIT in", narrating a value already withdrawn
+sdv-dev/SDV	MIT	BUSL-1.1	4818	fcaa94d4732e	FAMILY	excluded	CORRECTION-NARRATIVE	FALSE - the line reads "flagged as published MIT"
+cccareers/open-source-curriculum	MIT	CC-BY-NC-SA-4.0	1891	032d28d98aab	FAMILY	excluded	CORRECTION-NARRATIVE	FALSE - MIT is the REFUTED PATTERN in a refuted-claims row
+frappe/lms	MIT	AGPL-3.0	33893	db1a87ba81e8	FAMILY	excluded	QUOTED-EXTERNAL-CLAIM	FALSE - the line quotes a source's wrong claim: reads "the MIT LMS"
+openeducat/openeducat_erp	AGPL-3	LGPL-3.0	8241	528f84036800	FAMILY	excluded	UNLINKED-CO-SUBJECT	FALSE - the AGPL-3 belongs to Open edX, named unlinked on the same line

@@ -1,0 +1,65 @@
+# ACTION RE (honoured a TENTH time): the verbatim query behind every finding and
+# every blank in pass 228. Two columns, tab-separated: query, record.
+# 14 queries. Records are the substantive sentences returned, before any shelf
+# prose was written, so ACTION SH's inbound gate runs on the same text a human
+# would have read.
+top open source AI agents education 2026 github MIT	microsoft/ai-agents-for-beginners is listed at about 67,000 stars with an MIT license as of June 2026.
+top open source AI agents education 2026 github MIT	pguso/agents-from-scratch builds agents from first principles using a local LLM, about 796 stars, MIT, tagged ai-education.
+top open source AI agents education 2026 github MIT	Several sources are vendor or blog roundups with inconsistent figures; open source gets stretched this year, so verify each license on GitHub.
+github trending education AI 2026	rohitg00/ai-engineering-from-scratch is listed as the number one trending Python programming-examples repo as of a June 21 2026 update.
+github trending education AI 2026	A Japanese article says that in February 2026 nine of GitHub's top ten monthly trending repos were AI-related.
+github trending education AI 2026	No direct up-to-date list of GitHub trending EDUCATION repos was found.
+open source platform education ERP CRM MIT Apache	OpenEduCat is an education ERP built on the Odoo framework and uses Odoo's ORM, web framework, reporting engine and security model.
+open source platform education ERP CRM MIT Apache	ERPNext (Frappe) covers ERP and CRM and is fully open-source under the GPL v3 license.
+open source platform education ERP CRM MIT Apache	Twenty is a CRM but uses the Business Source License 1.1, which is not MIT or Apache.
+open source platform education ERP CRM MIT Apache	No Apache-licensed education ERP or CRM was found in these results.
+AI education industry trends 2026	One forecast puts the 2026 market at about 10.6 billion dollars, growing at a 40.9 percent CAGR from 7.52 billion in 2025.
+AI education industry trends 2026	A different IMARC estimate reports a 2025 base of 6.4 billion dollars and a 31.35 percent CAGR for 2026-2034.
+AI education industry trends 2026	One analysis rates the market at 35 out of 100 on maturity, with most institutions still in pilot mode.
+AI education industry trends 2026	One source reports student AI use rising from 66 percent in 2024 to 92 percent in 2025, from a secondary summary.
+AI education North America 2026 adoption regulation players	North America AI in education was valued at 951 million dollars in 2024 and projected to reach 2303.2 million by 2029, a 15.9 percent CAGR.
+AI education North America 2026 adoption regulation players	A 2026 roundup reports only 10 percent of institutions having formal AI guidelines and 71 percent of US teachers lacking AI training.
+AI education North America 2026 adoption regulation players	The US landscape remains fragmented, with states like Colorado and Texas introducing piecemeal requirements.
+AI education North America 2026 adoption regulation players	OpenAI launched a country-level education program with eight national partners in Q1 2026.
+AI education North America 2026 adoption regulation players	Carnegie Mellon and the Gates Foundation invested 55 million dollars into AI courseware targeting gateway college courses.
+AI education North America 2026 adoption regulation players	A claim of 169 million dollars in government funding for higher-ed AI is unverified.
+AI education EMEA 2026 adoption regulation players	CompTIA's 2026 outlook says 94 percent of organizations are at least somewhat likely to invest in AI-specific training in 2026.
+AI education EMEA 2026 adoption regulation players	Workday's study links EMEA's strong regulatory frameworks to lower executive worry about AI trustworthiness.
+AI education EMEA 2026 adoption regulation players	A February 2026 Bandwidth-Cavell report names compliance complexity and data governance as key barriers for EMEA enterprises.
+AI education EMEA 2026 adoption regulation players	Nothing in these results covers education providers, ministries or edtech vendors.
+AI education APAC 2026 adoption regulation players	A Diligent Institute survey found 57 percent of organisations in Asia have already incorporated AI into one or more areas of operations.
+AI education APAC 2026 adoption regulation players	Forrester reported APAC organisations reporting 63 percent AI adoption within IT operations and 46 percent in data management.
+AI education APAC 2026 adoption regulation players	One outlook points to Singapore's consultations on AI use in financial institutions as an example of emerging guardrails.
+AI education APAC 2026 adoption regulation players	No education providers, edtech companies or education ministries are named in these results.
+AI education LATAM 2026 adoption regulation players	A UNESCO IESALC survey of 200 institutions in 19 countries, August to October 2025, found teaching and learning leads adoption at 73.5 percent, research 57.0 percent, administration 34.1 percent, community engagement 20.0 percent.
+AI education LATAM 2026 adoption regulation players	Only 30 percent of universities in Latin America have published policies on how to use AI.
+AI education LATAM 2026 adoption regulation players	Latin America lacks a unified regulatory framework on AI in higher education.
+AI education LATAM 2026 adoption regulation players	Chile has had a national AI policy since 2021 and a law under discussion, while Brazil and Colombia have national strategies but no education-specific rules.
+AI education LATAM 2026 adoption regulation players	In Mexico AI use is rising but there is no national law or binding guideline; SEP and ANUIES have issued non-binding recommendations.
+AI education LATAM 2026 adoption regulation players	The IDB publishes the ILIA index covering 19 countries.
+UK DfE AI education guidance 2026	The product safety document was renamed and expanded to Generative AI product safety standards, updated on 19 January 2026 and launched at the UK AI for Education Summit.
+UK DfE AI education guidance 2026	The support materials collection was refreshed on 19 May 2026 for the 2026-27 academic year, with four modules plus a leaders' support pack.
+UK DfE AI education guidance 2026	A July 2026 report says the UK government released guidance allowing teachers in England to use AI for routine tasks such as marking low-stakes quizzes with results checked by a human. Could not be confirmed against an official DfE page.
+UK DfE AI education guidance 2026	DfE data cited: 44 percent of teachers using generative AI, mainly for planning and preparation; about half of schools still have no AI policy at all.
+Germany KMK AI schools 2026	The KMK adopted a recommendation for education administrations on handling AI in schools in October 2024, covering teaching, exam formats, teacher training, legal rules and equal opportunities.
+Germany KMK AI schools 2026	No 2026 KMK resolution specifically on AI in schools was found.
+Germany KMK AI schools 2026	An August 2026 Bitkom position paper argues the states should develop a joint AI action plan with measurable goals. This is an industry proposal, not a government decision.
+Germany KMK AI schools 2026	North Rhine-Westphalia lists teacher training and drafting of new core curricula for 2026; the first Abitur exams with an AI option are planned for 2030.
+Germany KMK AI schools 2026	The 2025 AI School Award, presented in January 2026, honoured seven schools with 100,000 euros total.
+Sweden AI education policy 2026	The Government adopted Sweden's first comprehensive AI strategy in February 2026, aiming to place Sweden among the world's top 10 AI countries, with an action plan annex.
+Sweden AI education policy 2026	Universities and higher education institutions have been tasked with reporting how they develop educational offerings regarding AI. OECD.AI lists this as active, non-binding, starting 2025.
+Sweden AI education policy 2026	UKA and MYH were asked to study the impact of AI on education offerings in relation to future labour market skills needs.
+Sweden AI education policy 2026	The AI Commission roadmap SOU 2025:12 proposes a national AI education initiative; a third-party summary adds a nationwide AI Hub and free quality-tested AI tools.
+Netherlands AI schools 2026	The University of Groningen holds a kick-off on 18 June 2026 for an AI-in-secondary-education network for the north, with Openbaar Onderwijs Groningen.
+Netherlands AI schools 2026	AI for Education The Netherlands 2026 is set for 29-30 October 2026 at Vrije Universiteit Amsterdam, with tracks on teacher AI literacy and ethics and policy for schools.
+Netherlands AI schools 2026	A Utrecht seminar points to the EU AI Act coming into effect step by step and raises AI use in grading tests as a risk area.
+Netherlands AI schools 2026	No national policy or ministry announcement on AI in schools was found for 2026.
+open source AI grading agreement teacher scores rubric github 2026	A 2026 EDULEARN paper describes GradAssist, which drafts feedback strictly aligned with the instructor's rubric criteria for final instructor review.
+open source AI grading agreement teacher scores rubric github 2026	A vendor-style blog claims production rubric-grading systems report scoring correlations above 0.90 with human raters. The claim is unsourced.
+open source AI grading agreement teacher scores rubric github 2026	No open-source agreement study or standard agreement template for teacher-AI scoring was found.
+open source MCP server education LMS Moodle Canvas github 2026	csmediapro/moodle-mcp-server is a TypeScript project connecting AI agents to Moodle data through Moodle's Web Services API with about 10 query tools.
+open source MCP server education LMS Moodle Canvas github 2026	admin978/canvas-mcp is a local-first server using stdio transport, about 125 lines, 1 star, last updated 2026-05-27, licensed MIT.
+open source MCP server education LMS Moodle Canvas github 2026	Canvas LMS open-sources its core under AGPLv3 alongside its commercial SaaS.
+open source AI teacher assistant lesson planning github Apache 2026	A July 2026 Substack post reports Anthropic opened a repo called k12-teacher-skills with the source of two official Agent Skills from Claude for Teachers, covering lesson planning and differentiation.
+open source AI teacher assistant lesson planning github Apache 2026	Oak National Academy's Aila is a UK lesson-planning assistant with a public repo at github.com/oaknational/oak-ai-lesson-assistant, running on OpenAI GPT-4o over Oak's lesson library.
+open source AI teacher assistant lesson planning github Apache 2026	No project explicitly licensed under Apache 2.0 was confirmed from the search surface itself.

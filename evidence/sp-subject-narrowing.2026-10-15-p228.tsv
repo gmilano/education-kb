@@ -1,0 +1,12 @@
+# ACTION SP - narrow the EU AI Act subject to a jurisdiction token. LIMB 2 FIRES: STOP.
+# Run OFFLINE against p227's own 66 records, exactly as the falsifier specified.
+old_fires	new_fires	other_jurisdiction	verdict	text
+True	False	False	DROPPED-REVIEW	AI education EMEA 2026 adoption regulation players	Education tools that evaluate learners or influence access to qualifications fall into the high-risk category, which triggers pre
+True	True	False	KEPT	AI education EMEA 2026 adoption regulation players	One Commission page lists the AI Omnibus amendments as entering force on 27 July 2026, with the AI Act itself entering force on 3
+False	True	False	NEWLY-MATCHED	AI education EMEA 2026 adoption regulation players	One vendor-style source reports that EU enterprise AI adoption stood at 19.95%, which is business-wide rather than education-spec
+True	False	False	DROPPED-REVIEW	AI education APAC 2026 adoption regulation players	A July 2026 decision lists education, including automated assessment and behavioural monitoring, among high-risk AI system catego
+True	False	True	DROPPED-AS-INTENDED	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	Decision 33/2026/QD-TTg was issued by the Prime Minister on 30 June 2026 and takes effect on 15 August 2026.
+True	False	True	DROPPED-AS-INTENDED	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	It sits under the AI Law (Law 134/2025/QH15), and the AI Law came into effect on 1 March 2026.
+True	False	True	DROPPED-AS-INTENDED	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	AI systems that use AI to automatically test, evaluate results, and rank learners are classified as high-risk.
+True	False	True	DROPPED-AS-INTENDED	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	Education systems fall under the earliest deadline of before September 1, 2027, which covers healthcare, education, and 
+True	False	True	DROPPED-AS-INTENDED	Vietnam Decision 33/2026/QD-TTg high-risk AI education list	The overall list covers 46 high-risk AI systems across 6 sectors.

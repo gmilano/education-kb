@@ -1,0 +1,524 @@
+# ACTION ST step 2 - grants read first-hand on raw.githubusercontent.com, 2026-10-15-p228.
+# The ladder is main then master, over LICENSE/.md/.txt/license.txt/COPYING/LICENCE,
+# and it stops at the first 200, so a slug costs ~1 request and not 12.
+slug	ref	path	bytes	sha12	family	channel	note
+1EdTech/digital-credentials-public-validator	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+1EdTech/lti-1-3-php-library	master	LICENSE	11343	78b49eeaddbf	Apache-2.0	title line @33	
+1alexandrer/moodle-mcp	master	LICENSE	1074	ecc232c0b2aa	MIT	title line @0	
+24kchengYe/human-skill-tree	master	LICENSE	1134	3fb8cda58638	AGPL-3.0	title line @0	§13 absent
+3iPunt/wordpress-lti-1-3	master	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+4jean/lav_sms	master	LICENSE	1072	30514d127546	MIT	title line @0	
+Agso-o/sigaa-calendar	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+Ajatt-Tools/mpvacious	master	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	main	LICENSE	1070	deffdff30dfd	MIT	title line @0	
+AlexMeiling/wiseflow-api-integration-packages	main	LICENSE	1068	e6e78066d297	MIT	title line @0	
+AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	main	LICENSE	1061	0c410e37b86b	MIT	title line @0	
+AnubisLMS/Anubis	main	LICENSE	1083	e36740a2a510	MIT	title line @0	
+Apereo-Learning-Analytics-Initiative/OpenLRW	master	LICENSE	9878	f339063d2f60	ECL-2.0	title line @0	
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+ArnaudGuiovanna/tutor-mcp	main	LICENSE	1073	1e05c9440068	MIT	title line @0	
+Arux-Software/Bright	master	LICENSE.txt	1076	6c2b9bea0fbe	MIT	title line @40	
+Bbar0n234/learnflow-ai	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+BerriAI/litellm	main	LICENSE	1419	b170d6bf8e88	MIT	title line @320	
+Berserk-hub150/moodle-ai-skill-navigator	main	LICENSE	35153	ebdc0e5b7005	GPL-3.0	title line @21	§13 agrees
+BetterSEQTA/BetterSEQTA-Plus	main	LICENSE	1071	5a6d3655162b	MIT	title line @0	
+BetterSEQTA/DesQTA	main	LICENSE	1069	3f2ce5f0c905	MIT	title line @0	
+CAHLR/OATutor	main	LICENSE	1105	5baaaf977a28	MIT	title line @0	
+CNIT-Organization/ltitoolkit	main	LICENSE	1070	5aef77eb4471	MIT	title line @0	
+CTFd/CTFd	master	LICENSE	11314	dcaf3b3bff45	Apache-2.0	title line @0	
+CaviraOSS/PageLM	main	LICENSE.md	8563	c834209c5f33	MIT	title line @72	
+ChenChenyaqi/learn-anything	main	LICENSE	1069	9108ab0c02d7	MIT	title line @0	
+Cicatriiz/openedu-mcp	main	LICENSE	1072	9b3f79992a36	MIT	title line @0	
+CipherCraze/SpeakGenie-AI-Tutor	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Citolab/qti-components	main	LICENSE.md	35199	c4b11c89ca88	GPL-3.0	title line @20	§13 agrees
+Citolab/qti-convert	main	LICENSE	35196	f93eb1d94904	GPL-3.0	title line @20	§13 agrees
+CloudDown/polymtl-moodle-connect	main	LICENSE	1066	2eeba2ea886f	MIT	title line @0	
+CoopCodeCommun/pyopenbadges	main	LICENSE	26526	20c17d8b8c48	LGPL-2.1	title line @18	§13 absent
+CreveXTech/canvas-lms-mcp	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Crosstalk-Solutions/Project-NOMAD	main	LICENSE	10779	e4f125622d3c	Apache-2.0	title line @33	
+Crosstalk-Solutions/project-nomad	main	LICENSE	10779	e4f125622d3c	Apache-2.0	title line @33	
+Cvmcosta/ltijs	master	LICENSE	11361	d5fcb264ff39	Apache-2.0	title line @33	
+DMontgomery40/mcp-canvas-lms	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+DavidLMS/learnmcp-xapi	main	LICENSE	1069	4aa758cb51b2	MIT	title line @0	
+DecoyLex/ltix	main	LICENSE	1068	7ffced5e1c24	MIT	title line @0	
+Deeptanshuu/mydy-lms-helper	main	LICENSE	1070	8807b48f91fb	MIT	title line @0	
+EbookFoundation/free-programming-books	main	LICENSE	18658	f5b745ef9808	CC-BY-4.0	title line @2984	
+Ed-Fi-Alliance-OSS/edfi-oneroster	main	LICENSE	10173	a6cba85bc92e	Apache-2.0	title line @33	
+EduBase/MCP	main	LICENSE	1064	f5bcc2420b01	MIT	title line @0	
+EduThemes/paper-lms	main	LICENSE	1071	3df8d6baba56	MIT	title line @0	
+Elgg/Elgg	master	LICENSE.txt	17173	7188c83d8764	MIT OR GPL-2.0	dual-grant preamble	earliest title is ONE OPTION, not the grant
+Exhabition/brightspace-mcp-rs	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Faran70177784/edutune-ai	main	LICENSE	1073	df3389be30b7	MIT	title line @1	
+FreeLanguageTools/vocabsieve	master	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+G36maid/moodle-mcp	main	LICENSE	1064	5da1fff0a1db	MIT	title line @0	
+GarethManning/education-agent-skills	main	LICENSE	1230	f952182df4eb	CC-BY-SA-4.0	title line @0	
+GatorEducator/gatorgrader	master	LICENSE.md	35191	57756125771d	GPL-3.0	title line @20	§13 agrees
+Gaurav-Pande/AES_DL	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Gchism94/ai-tutor	main	LICENSE	1070	3d5a24e51479	MIT	title line @0	
+GibbonEdu/core	main	LICENSE	35121	93178a43d6d3	GPL-3.0	title line @0	§13 agrees
+HAL-XP/mcp-pronotes	master	LICENSE	1063	1db908a46bbb	MIT	title line @0	
+HFUT-LEC/EduStudio	main	LICENSE	1064	3674aa8e4446	MIT	title line @0	
+HKUDS/DeepTutor	main	LICENSE	11408	cd2f54e1e506	Apache-2.0	title line @34	
+Haris0059/ibu-mcp	main	LICENSE	1073	47ba62f4160b	MIT	title line @0	
+HugeCatLab/ChatTutor	main	LICENSE	34522	20b067f86de3	AGPL-3.0	title line @20	§13 agrees
+HumphreySun98/Smart-Study-Agent	main	LICENSE	1067	ca229b6dc765	MIT	title line @0	
+Hyr1sky/TheGrandQuiz	main	LICENSE	1064	a6d3e3059b30	MIT	title line @0	
+ILIAS-eLearning/ILIAS	master	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	title line @20	§13 agrees
+INGInious/INGInious	main	LICENSE	34764	6d1ebe4ddf66	AGPL-3.0	title line @264	§13 agrees
+Ilyas-Codes/eCourse	main	LICENSE	1062	5d6ba721365c	MIT	title line @0	
+InfinityZero3000/LexiLingo	main	LICENSE	1069	57362e4cde40	MIT	title line @0	
+Jawadh-Salih/moodle-mcp-server	main	LICENSE	1063	2cf91ec5272f	MIT	title line @0	
+JohannsenLum/canvas-api-mcp	main	LICENSE	1070	f01d2f81a436	MIT	title line @0	
+JushBJJ/Mr	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+KeWang0622/kaogong-skill	main	LICENSE	1083	a6943096ffde	MIT	title line @0	
+KristiyanVachev/Leaf-Question-Generation	main	LICENSE	1073	aa42194af57c	MIT	title line @0	
+LMS-Laravel/LMS-Laravel	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+LMS-Laravel/OLD-LMS-Laravel	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Li-Evan/Bloom	main	LICENSE	1069	7d574cf3632e	MIT	title line @0	
+LiaScript/LiaScript-Exporter	master	LICENSE	1523	6ed2c3b79b2f	BSD-3-Clause	title line @79	
+Liberate-Labs/ltikit-sdk	main	LICENSE	1063	1046473117a3	MIT	title line @0	
+Limekiller/moodle-block_openai_chat	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+LongsightGroup/qti3	main	LICENSE.md	1072	00ed05b90bf8	MIT	title line @0	
+Lumieducation/Lumi	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+MartinSA04/ntnu-mcp	main	LICENSE	1077	57fcd6936883	MIT	title line @0	
+MathTrail/canvas-api	main	LICENSE	1066	3b28831a20df	MIT	title line @0	
+MathTrail/mathtrail-standalone	main	LICENSE	1066	3b28831a20df	MIT	title line @0	
+Miaotofu01/Study-Mate	main	LICENSE	1064	dc1997d82189	MIT	title line @0	
+MisterCommand/mcp-canvas-lms	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+MoKangMedical/digital-sage	main	LICENSE	46	b2e79dc84a42	MIT	title line @0	
+MrPrinceAli/proven	main	LICENSE	1095	0f2bf00047ad	MIT	title line @0	
+MysterionRise/adaptive-knowledge-graph	main	LICENSE	1094	2c4797226a30	MIT	title line @0	
+NapthaAI/http-oauth-mcp-server	main	LICENSE	1066	a3c145784d8d	MIT	title line @0	
+NiccoloSalvini/mcp-blackboard-ucsc	main	LICENSE	1073	f3bdd2ed068a	MIT	title line @0	
+NickScherbakov/codementor-ai-platform	main	LICENSE	1072	7893452d41e0	MIT	title line @0	
+OS4ED/openSIS-Classic	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+OS4ED/openSIS-Responsive-Design	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+Open-TutorAi/open-tutor-ai-CE	main	LICENSE	1531	57c341d09920	BSD-3-Clause	title line @88	
+OpenEduCat/openeducat_erp	master	LICENSE	8241	528f84036800	LGPL-3.0	title line @94	§13 absent
+OpenOLAT/OpenOLAT	master	LICENSE	10982	6dbc5b605ed0	Apache-2.0	title line @33	
+OpenVidu/openvidu	master	LICENSE	11357	b40930bbcf80	Apache-2.0	title line @33	
+PapillonApp/papillon-v6	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+Pearson-Advance/openedx-lti-tool-plugin	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+PetoiCamp/OpenCat-Quadruped-Robot	main	LICENSE	1069	517ad70869fe	MIT	title line @0	
+PlaypowerLabs/EdOptimize	master	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+Polycentric-Labs/regrails	main	LICENSE	11282	7269084894a7	Apache-2.0	title line @33	
+PrepLabsAI/InterviewMentor	main	LICENSE	1071	aeb634f7110b	MIT	title line @0	
+Principled-Evolution/gopal	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+ProjectsAndPrograms/school-management-system	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+RakeshBabuGajula/Exam_Intellect	master	LICENSE	1075	a4e58d1074c9	MIT	title line @0	
+RohanMuppa/brightspace-mcp-server	main	LICENSE	1068	047079fbd491	MIT	title line @0	
+RubsNeto/SigaaUI	main	LICENSE	1073	c9c2e8ee59eb	MIT	title line @0	
+RusticiSoftware/TinCanJS	master	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+RyanGravetteIDLA/qualtrics-lti-connector	main	LICENSE	1069	7021d4966c9c	MIT	title line @0	
+SYuan03/Skill-Anything	main	LICENSE	1084	41bad3fca692	MIT	title line @0	
+SaadRahman01/claude-moodle-dev	main	LICENSE	1068	df0b3e71710c	MIT	title line @0	
+SaadRahman01/moodle-mcp	main	LICENSE	1068	df0b3e71710c	MIT	title line @0	
+Sarthak-Neupane/CanvasMCPServer	main	LICENSE	1072	71f670d6352a	MIT	title line @0	
+Schroedinger-Hat/certo	main	LICENSE	33820	895609d3e304	AGPL-3.0	title line @0	§13 agrees
+Selleo/mentingo	main	LICENSE	1062	ceb97717de1f	MIT	title line @0	
+SenmuuuuW/universal-diagnostic-tutor-skill	main	LICENSE	1102	a9ca00bcc7a5	MIT	title line @0	
+ShuyunYuan/talentcoach	main	LICENSE	842	76d0b7213617	UNRECOGNISED	-	no recognised licence title
+Simon-Initiative/lti-example-tool	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+SimonsTang/feifei-companion	main	LICENSE	10227	59a378bf23a0	Apache-2.0	title line @33	
+SleepyPandas/UofT-MCP	master	LICENSE	1069	47153ef57e9e	MIT	title line @0	
+Submitty/Submitty	main	LICENSE.md	1542	c123708cb4ef	BSD-3-Clause	title line @99	
+TCI/OneRoster	master	LICENSE.txt	1079	d9bdc840b9a0	MIT	title line @4	
+THU-MAIC/OpenMAIC	main	LICENSE	1065	ba2525637432	MIT	title line @0	
+THUwangcy/HawkesKT	main	LICENSE	1070	db8b81b9e054	MIT	title line @0	
+TheAlgorithms/Python	master	LICENSE.md	1095	4395a1dc4bda	MIT	title line @3	
+TovTechOrg/Tov-learn	master	LICENSE	1064	092d389ac156	MIT	title line @0	
+Transcordia/jupiter	master	LICENSE	1079	354a093350f2	MIT	title line @4	
+UCL-INGI/INGInious	main	LICENSE	34764	6d1ebe4ddf66	AGPL-3.0	title line @264	§13 agrees
+UniTime/unitime	master	LICENSE	11357	58d1e17ffe51	Apache-2.0	title line @34	
+Universidade-Livre/ciencia-da-computacao	main	LICENSE	1087	6520b550c69f	MIT	title line @0	
+Unstructured-IO/unstructured	main	LICENSE.md	11360	4b190a3ffeb6	Apache-2.0	title line @33	
+VIJAYAPANDIANT/online-examination-system	main	LICENSE	1072	d8fb7c9c9bf5	MIT	title line @0	
+VeryMath/VeryMath-textbook-copilot	main	LICENSE	11338	78818d360ee0	Apache-2.0	title line @33	
+WebPA/WebPA	master	license.txt	35147	8ceb4b9ee5ad	GPL-3.0	title line @20	§13 agrees
+X5GON/x5moodle	main	LICENSE	1325	2a992db80952	BSD-2-Clause	title line @85	
+YUANYINGLONG-91/lecture-notes-tutor	main	LICENSE	1072	268c9fb20373	MIT	title line @0	
+ZQR1101/xueyoujing-companion	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+ZachRouan/district-brain	main	LICENSE	1067	c5e4e378c78b	MIT	title line @0	
+ZanichelliEditore/LearningRecordStore-xapi	master	LICENSE	1082	1592732f4483	MIT	title line @0	
+ZeKaiNie/universal-examprep-skill	main	LICENSE	1065	21f44893f051	MIT	title line @0	
+ZelinZhou-THU/stem-tutor-agent	master	LICENSE	35211	fab96a92c83a	AGPL-3.0	title line @143	§13 agrees
+Zemmeng/claude-study-system	main	LICENSE	1064	4e4c852d43f9	MIT	title line @0	
+Zenglian990/AI_Tutor_Release	main	LICENSE	1068	695941afdd1f	MIT	title line @0	
+ZhijieXiong/pyedmine	main	LICENSE	1085	fc84421fcf96	MIT	title line @0	
+abr-Projects/canvas-mcp	main	LICENSE	1071	5385a26e2fac	MIT	title line @0	
+academic-innovation/django-lti	main	LICENSE	1098	c24a6b35e390	MIT	title line @0	
+academico-sis/academico	main	LICENSE	1094	6051a15f4d44	MIT	title line @0	
+acanas/swad-core	master	LICENSE	34501	884b434957ba	AGPL-3.0	title line @0	§13 agrees
+acestein13/campusintel-mcp	main	LICENSE	1066	3c1d62722c6e	MIT	title line @0	
+adamjenkins/moodle-local_nomoreai	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+adaptlearning/adapt_framework	master	LICENSE	35129	e90ca2f081fa	GPL-3.0	title line @0	§13 agrees
+adlnet/ADL_LRS	master	LICENSE	11357	58d1e17ffe51	Apache-2.0	title line @34	
+adlnet/CATAPULT	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+adlnet/MasterObjectModel	master	LICENSE	11525	a1587287ff04	Apache-2.0	title line @2	
+adlnet/SCORM-to-xAPI-Wrapper	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+adlnet/lrs-conformance-test-suite	master	LICENSE	1046	c0fc02a86ae2	MIT	title line @4	
+adlnet/xAPI-Spec	master	LICENSE	11525	a1587287ff04	Apache-2.0	title line @2	
+adlnet/xAPIWrapper	master	LICENSE	10273	73ba74dfaa52	Apache-2.0	title line @0	
+admin978/canvas-mcp	main	LICENSE	1072	507310119817	MIT	title line @0	
+agencyenterprise/qti-3-player	main	LICENSE	1066	9e8db37a05d0	MIT	title line @0	
+ahmedEid1/Lumen	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+ahmedEid1/lumen	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+ai-infra-curriculum/ai-infra-engineer-learning	main	LICENSE	1081	67475eade1ef	MIT	title line @0	
+ai-lingnan/econai-agent-platform	master	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+ai-shifu/ai-shifu	main	LICENSE.txt	11342	c00cbb6a47a7	Apache-2.0	title line @33	
+aieducations/edumcp	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+alcastaro/opendata-latam-mcp	main	LICENSE	1557	92d19f73c0d7	MIT	title line @0	
+alejooroncoy/campus-cli	main	LICENSE	748	4ca1bd2e969c	ISC	title line @0	
+alfredang/ai-mms	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+alvaarocl/taskbot	master	LICENSE	1075	b42f56be370a	MIT	title line @0	
+alyssaxuu/carden	master	LICENSE	1066	80ffe5a343b5	MIT	title line @0	
+amp-up-io/qti3-item-player	main	LICENSE	1076	7faa621251d7	MIT	title line @0	
+andremadstop/learning-nc	main	LICENSE	723	df17186cc811	AGPL-3.0	title line @0	§13 absent
+ankimcp/anki-mcp-server	main	LICENSE	1074	0ef87fdb98da	MIT	title line @0	
+ankitects/anki	main	LICENSE	1930	bde7d05790a0	AGPL-3.0	title line @27	§13 absent
+anthropics/prompt-eng-interactive-tutorial	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+apache/ofbiz-framework	master	LICENSE	11906	cbac9a0fde05	Apache-2.0	title line @33	
+artcc/freelingo	main	LICENSE	34514	ea94d5765c59	AGPL-3.0	title line @20	§13 agrees
+ashutoshrana/haystack-ferpa-filter	main	LICENSE	12101	69ea67464cbf	Apache-2.0	title line @34	
+assafelovic/gpt-researcher	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+assafkip/claudemy	main	LICENSE	1069	262b47ee1fff	MIT	title line @0	
+asu2304/auto-assessment-agent	main	LICENSE	1081	aae7ac484db1	MIT	title line @0	
+atrawog/mcp-oauth-gateway	main	LICENSE	11360	d5a1bea09983	Apache-2.0	title line @33	
+autolab/Autolab	master	LICENSE	11324	a8ad31b1c3f4	Apache-2.0	title line @0	
+autolab/Tango	master	LICENSE	11324	a8ad31b1c3f4	Apache-2.0	title line @0	
+avinash201199/free-ai-agents-resources	main	LICENSE	1070	12edec716aa1	MIT	title line @0	
+barneslardo/sis-demo	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+bgwdotdev/libre-oneroster	master	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+bigbluebutton/bigbluebutton	main	LICENSE	7652	e3a994d82e64	LGPL-3.0	title line @19	§13 absent
+blend-ed/openedx-mcp	master	LICENSE	34524	8d56b405468a	AGPL-3.0	title line @20	§13 agrees
+brody-0125/signet-campus	main	LICENSE	1070	f4ce7f63a0ef	MIT	title line @0	
+brownplt/LTLTutor	main	LICENSE.txt	35148	8b1ba204bb69	GPL-3.0	title line @20	§13 agrees
+bruchris/canvas-lms-mcp	main	LICENSE	1070	c29329c5ef3b	MIT	title line @0	
+bycs-lp/moodle-block_ai_chat	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+bycs-lp/moodle-local_ai_injection	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+bycs-lp/moodle-local_ai_manager	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+caiocarvalhofre/moodle-mod_maici	main	LICENSE.md	35178	ccb349b4132e	GPL-3.0	title line @0	§13 agrees
+cccareers/open-source-curriculum	main	LICENSE.md	1891	032d28d98aab	CC-BY-NC-SA-4.0	title line @2	
+celtic-project/LTI-PHP	master	LICENSE	7651	da7eabb7bafd	LGPL-3.0	title line @19	§13 absent
+cerpus/Edlib	master	LICENSE	34915	0e1372769c3e	GPL-3.0	title line @4	§13 agrees
+cgrevisse/moodle-qbank_genai	main	LICENSE.md	35178	ccb349b4132e	GPL-3.0	title line @0	§13 agrees
+chamilo/chamilo-lms	master	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	title line @20	§13 agrees
+chenning42/iserv-mcp	main	LICENSE	1090	5dc99bd5061f	MIT	title line @0	
+chipmates/agoracosmica	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+claroline/Claroline	master	LICENSE	34616	9107f2ed4192	AGPL-3.0	title line @113	§13 agrees
+classroomio/classroomio	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+cliffffffffff/guided-learning	main	LICENSE	1070	26e5010ec7c9	MIT	title line @0	
+cmkumar87/NUS-MOOC-Transacts-Corpus	master	LICENSE	1083	2d8f95296606	MIT	title line @0	
+codeXsidd/Studivexa	main	LICENSE	1068	58f77360830f	MIT	title line @0	
+codeforlife-education/aimmo	master	LICENSE.md	115	f406d19420ea	UNRECOGNISED	-	no recognised licence title
+codelitdev/courselit	main	LICENSE.md	34143	281e174e4d5f	AGPL-3.0	title line @4	§13 agrees
+continuedev/continue	main	LICENSE	11348	b14a17598cb0	Apache-2.0	title line @33	
+crewAIInc/crewAI	main	LICENSE	1055	28868731966f	MIT	title line @33	
+csmediapro/moodle-mcp-server	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+cybercussion/SCOBot	main	LICENSE	837	166ace659a06	CC-BY-SA-4.0	title line @0	
+darkstar42/fluency-loop	main	LICENSE	1246	22317685a662	MIT	title line @0	
+datawhalechina/every-embodied	main	LICENSE	858	ba913ae9bc9e	CC-BY-4.0	title line @0	
+datawhalechina/llm-algo-leetcode	main	LICENSE	792	7d27b30b4894	CC-BY-4.0	title line @0	
+davidpesce/moodle-logstore_xapi	master	LICENSE	35121	e1c0ad728983	GPL-3.0	title line @0	§13 agrees
+despedite/siu-guarani	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+devissaputra/adaptive_socratic_tutor	main	LICENSE	1076	c10726bddc58	MIT	title line @0	
+dhodges47/SCORM-LearningManagementSystem	master	LICENSE.txt	1091	8e079631dedc	MIT	title line @0	
+divyarthjain/vtop-bhopal-mcp	main	LICENSE	11358	c95bae1d1ce0	Apache-2.0	title line @33	
+dmitry-viskov/pylti1	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+dmoshehun-prog/learn-from-materials	main	LICENSE.md	1122	15ce43afa44a	MIT	title line @0	
+docling-project/docling	main	LICENSE	1072	edb765d1e3e6	MIT	title line @0	
+dodona-edu/dolos	main	LICENSE	1084	881163366572	MIT	title line @0	
+dragonpilee/ScholarMate	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+eLearning-BS23/moodle-quizaccess_proctoring	master	LICENSE.md	35178	ccb349b4132e	GPL-3.0	title line @0	§13 agrees
+eagles-edu/sis	main	LICENSE	1067	d743a2071929	MIT	title line @0	
+echo-loop/Echo-Loop	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+edmozley/freeitsm	main	LICENSE	1066	324e25179826	MIT	title line @0	
+edrys-org/edrys	main	LICENSE	16725	1f256ecad192	MPL-2.0	title line @0	
+educredentials/ec-issuer	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+elimu-ai/ml-event-simulator	main	LICENSE	1065	203d7d837ceb	MIT	title line @0	
+elmsln/elmsln	master	LICENSE.md	35193	0e6d22ed58b6	GPL-3.0	title line @20	§13 agrees
+empires-security/mcp-oauth2-aws-cognito	main	LICENSE	1064	a836d083f25a	MIT	title line @0	
+epam/qti-learnosity	main	LICENSE	1069	88d3f4f4e9e6	MIT	title line @0	
+fakelag28/vsuet-timetable-api-mcp	main	LICENSE	1064	7912385dc67d	MIT	title line @0	
+fborrasumh/tutoria	main	LICENSE	1120	274057d9410c	MIT	title line @0	
+federicazoe/gradetools	main	LICENSE.md	34908	10bf8bb1de5d	GPL-3.0	title line @0	§13 agrees
+fedora-infra/tahrir	master	LICENSE	34917	f59751a85c4e	AGPL-3.0	title line @20	§13 agrees
+felipedias-ie/blackboard-mcp	main	LICENSE	1084	d65abf96e389	MIT	title line @0	
+five-plus-one/AI-Marker-Suite	master	LICENSE	35154	1ab858f515df	GPL-3.0	title line @20	§13 agrees
+flysheep-ai/education-skills	main	LICENSE	1068	23b91d7c0aef	MIT	title line @0	
+foradian/fedena	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+formalms/formalms	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+foundation50/classroom50	main	LICENSE	35150	e57f1c320b8c	GPL-3.0	title line @20	§13 agrees
+francoisjacquet/rosariosis	master	LICENSE	15214	d954e14e5c75	GPL-2.0	title line @20	§13 absent
+frappe/education	master	license.txt	19	1fcecf395312	UNRECOGNISED	-	no recognised licence title
+frappe/erpnext	master	license.txt	34916	f333043685c8	GPL-3.0	title line @4	§13 agrees
+frappe/lms	main	license.txt	33893	db1a87ba81e8	AGPL-3.0	title line @0	§13 agrees
+g3i/lxHive	master	LICENSE	18092	8177f9751321	GPL-2.0	title line @20	§13 absent
+gabrieldoty/simplify-scorm	master	LICENSE	1073	9e0a91a8c645	MIT	title line @0	
+gazpachu/hypatia	master	license.txt	19350	8369726177d5	GPL-2.0	title line @178	§13 absent
+geli-lms/geli	master	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+gener8v/gener8v	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+giantswarm/mcp-oauth	main	LICENSE	11353	bd7c68cdc4e6	Apache-2.0	title line @33	
+glenn-watt/lti-1p3-reference-tool	main	LICENSE	1067	5bfcb38c6546	MIT	title line @0	
+google/prog-edu-assistant	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+googleworkspace/oneroster-integration-conformance-tests	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+gotranseo/oneroster	main	LICENSE.txt	11357	c71d239df917	Apache-2.0	title line @33	
+grey8-io/learn-ai-with-grey8	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+guedesindev/ai_tutor_forge	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+guipsamora/pandas_exercises	master	LICENSE	1515	cd9b26413248	BSD-3-Clause	title line @81	
+h5p/h5p-interactive-video	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+h5p/h5p-php-library	master	LICENSE.txt	35146	c53a65c2fd56	GPL-3.0	title line @20	§13 agrees
+haolpku/Omni-Edu	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+haxtheweb/haxcms-php	master	LICENSE.md	11362	b662f44e55e8	Apache-2.0	title line @33	
+hcnoh/knowledge-tracing-collection-pytorch	main	LICENSE	1071	e3ea402ee1ab	MIT	title line @0	
+henriquemathias/plataforma-agentes-ia	main	LICENSE	1073	706cffd52dce	MIT	title line @0	
+henryyu333/assignment-check	main	LICENSE	1086	ba0f8aa34ed7	MIT	title line @0	
+heshengtao/exameow	main	LICENSE	10173	a6cba85bc92e	Apache-2.0	title line @33	
+hoijui/obadgen	master	LICENSE.txt	34020	d8a6cc31abc1	AGPL-3.0	title line @0	§13 agrees
+hrshadhin/school-management-system	master	LICENSE	34522	4df3c306ddda	AGPL-3.0	title line @20	§13 agrees
+huaxx-lab/LeetLens	main	LICENSE	1066	0d7defd02317	MIT	title line @0	
+huggingface/smolagents	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+human2human-ai/moodle-tool_human2human	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+iblai/lms	main	LICENSE	1063	f1269b7b2313	MIT	title line @0	
+ictinnovations/ictexam-mcp	main	LICENSE	1114	32fa441f2467	MIT	title line @0	
+ideas-edu/ideas	master	LICENSE.txt	11558	49bbe9114e49	Apache-2.0	title line @35	
+ilodezis/mti-lms-mcp	main	LICENSE	1101	88455cdb3ab9	MIT	title line @0	
+impierce/credential-converter	main	LICENSE	11356	efd09e39cb61	Apache-2.0	title line @33	
+inducer/relate	main	LICENSE	1145	66ff89ebf05f	MIT	title line @121	
+infiniflow/ragflow	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+infomark-org/infomark	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+ink-waffle/moodle-mcp	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+ink-waffle/sisu-mcp	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+instructure/canvas-lms	master	LICENSE	34520	57c8ff33c9c0	AGPL-3.0	title line @20	§13 agrees
+instructure/ims-lti	main	LICENSE.txt	1068	f7e95fbe6fa9	MIT	title line @32	
+jakerains/scormplayer	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+jameskermode/mograder	main	LICENSE	1070	99e5f51590b7	MIT	title line @0	
+janwilmake/universal-mcp-oauth	main	LICENSE	1068	a12151e3f9ad	MIT	title line @0	
+jcputney/scorm-again	master	LICENSE	1072	383b85b370e8	MIT	title line @0	
+jdolny/OneRoster	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+jdxyw/deepKT	master	LICENSE	1062	2465d2a0c4b8	MIT	title line @0	
+jeliael/fakao-ai-exam-engine	master	LICENSE	1063	a29b8bca5c59	MIT	title line @0	
+jhljx/GKT	master	LICENSE	1061	26a11083335e	MIT	title line @0	
+jilljenn/ktm	master	LICENSE	1071	0c7c1969160d	MIT	title line @0	
+jitsi/jitsi-meet	master	LICENSE	12596	eae52e200cd8	Apache-2.0	title line @33	
+johnswyou/autograder	main	LICENSE	1065	684d737736e0	MIT	title line @0	
+joojdev/academic-tracker-mcp	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+josemmo/plagpatrol	master	LICENSE	1084	997657291f65	MIT	title line @0	
+juliancasaburi/siu-guarani-promedio-extension	main	LICENSE	1073	652d46c067d4	MIT	title line @0	
+jupyter/nbgrader	main	LICENSE	1512	3a83d5b8e22c	BSD-3-Clause	title line @70	
+jupyterhub/ltiauthenticator	main	LICENSE	1528	08eebd9662cb	BSD-3-Clause	title line @93	
+kangwonlee/gemini-python-tutor	main	LICENSE	1662	f72afb480080	BSD-3-Clause	title line @90	
+kantord/LibreLingo	main	LICENSE	34524	e9df4c4e4e64	AGPL-3.0	title line @20	§13 agrees
+karanb192/algo-sensei	main	LICENSE	1081	3b2ca73e81ad	MIT	title line @0	
+karpathy/nanochat	master	LICENSE	1072	42bb09f339a8	MIT	title line @0	
+kemalyy/edumints-scorm-skill	main	LICENSE	1069	74564663b69b	MIT	title line @0	
+kit-sdq/autograder	main	LICENSE.md	1068	30a0bc0d48b4	MIT	title line @0	
+kltn-moolde/moodle-adaptive-learning-plugin	main	LICENSE	1086	7fb13a30d308	MIT	title line @0	
+krishna16-origin/ai-tutor	main	LICENSE	1073	de8107bf9312	MIT	title line @0	
+kstateome/lti-launch	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+langchain-ai/langgraph	main	LICENSE	1072	d9bb52f2e354	MIT	title line @0	
+langfuse/langfuse	main	LICENSE	1612	fd09d42b5b16	MIT	title line @589	
+langfuse/langfuse-workshop	main	LICENSE	1073	431bd2d2c849	MIT	title line @0	
+langx/langx	main	LICENSE	1520	19ec8f98fa19	BSD-3-Clause	title line @98	
+laurauguc/grading_assistant	main	LICENSE	1072	3b21045edbad	MIT	title line @0	
+lccasagrande/Deep-Knowledge-Tracing	master	LICENSE	1076	cda24c80a4f3	MIT	title line @0	
+learnhouse/learnhouse	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+learning-commons-org/knowledge-graph	main	LICENSE.md	5789	d849ffef4f98	UNRECOGNISED	-	no recognised licence title
+learningequality/kolibri	master	LICENSE	1097	3c056b34a476	MIT	title line @0	
+learningequality/studio	master	LICENSE	1115	5715e50830cd	MIT	title line @4	
+lepo-project/roster-hub	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+lindsay-cheng/canvas-mcp	main	LICENSE	1071	5385a26e2fac	MIT	title line @0	
+llwand1/xuelian-agent	main	LICENSE	1062	6d0b6c4195c1	MIT	title line @0	
+lmsable/lmsable-skill	main	LICENSE	1080	eacb750bb1fe	MIT	title line @0	
+lmscloud-io/moodle-aiprovider_openaicompatible	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+lplnufpi/essay-br	main	LICENSE	1114	79aacbdab319	MIT	title line @0	
+ls1intum/Artemis	main	LICENSE	1091	63a0a2b4d6d9	MIT	title line @0	
+ls1intum/Pyris	main	LICENSE	1089	902bddf79bcd	MIT	title line @0	
+luca-dupont2/mcgill-vsb-mcp	main	LICENSE	1068	1eadefa76b5c	MIT	title line @0	
+luisgf/openbadgeslib	master	LICENSE.txt	7650	ea8af5e789cb	LGPL-3.0	title line @19	§13 absent
+malkreide/global-education-mcp	main	LICENSE	1069	ac1fc40e61a6	MIT	title line @0	
+marc-shade/docsingest	main	LICENSE	1079	897ba55a1525	MIT	title line @0	
+marcusgreen/moodle-qtype_aitext	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+maxew6/ai-tutor-project	main	LICENSE	1073	de8107bf9312	MIT	title line @0	
+mayankjndl/vidyamind	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+mdweaver/canvas-mcp	main	LICENSE	1065	ab5109aafdb8	MIT	title line @0	
+mebis-lp/moodle-local_ai_manager	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+mem0ai/mem0	main	LICENSE	11349	0bbcbe931c35	Apache-2.0	title line @33	
+memphis-iis/MoFaCTS	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+menthorlabs/menthor	main	LICENSE	11337	36d6788503b8	Apache-2.0	title line @33	
+merely-useful/py-rse	master	LICENSE.md	1409	4ec1b92e22c2	CC-BY-4.0	title line @225	
+metyatech/markdown-to-qti	main	LICENSE	1066	5bb49280d709	MIT	title line @0	
+michael-borck/study-buddy	main	LICENSE	1080	95763b116710	MIT	title line @0	
+microsoft/ML-For-Beginners	main	LICENSE	1141	c2cfccb812fe	MIT	title line @4	
+microsoft/agent-framework	main	LICENSE	1141	c2cfccb812fe	MIT	title line @4	
+microsoft/ai-agents-for-beginners	main	LICENSE	1141	c2cfccb812fe	MIT	title line @4	
+microsoft/generative-ai-for-beginners	main	LICENSE	1141	c2cfccb812fe	MIT	title line @4	
+microsoft/moodle-ai-assistant	main	LICENSE	1084	e0eb0d5ceba1	MIT	title line @0	
+mlcommons/ck	main	LICENSE.md	10174	69849221bfb9	Apache-2.0	title line @33	
+mohaneesh-03/mcp-tutor	main	LICENSE	1056	1126322e2cc8	MIT	title line @0	
+mohi-devhub/antivibe	main	LICENSE	1065	a9e5355735ea	MIT	title line @0	
+moodle/moodle	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+moodlehq/moodle-enrol_oneroster	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+music-encoding/music-encoding	master	LICENSE	9899	8e47bca43011	ECL-2.0	title line @0	
+myvipbackup2/china-k12-teacher-skills	main	LICENSE	11359	1ddb849c5dad	Apache-2.0	title line @33	
+nagisanzenin/engram	main	LICENSE	1069	203b75ae088e	MIT	title line @0	
+naorpeled/aitutor	main	LICENSE	1067	5425f7125406	MIT	title line @0	
+netless-io/flat	main	LICENSE	1062	8fa1566550df	MIT	title line @0	
+niansia/taiwan-exam	main	LICENSE	1064	94d43b24eb49	MIT	title line @0	
+nicolaasmatthijs/xapicaliper	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+ningkaikok/dotty-tutor	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+nirholas/ai-tutor-mcp	main	LICENSE	11338	08cadd94b53a	Apache-2.0	title line @33	
+nitsuah/bb-mcp	main	LICENSE	1063	e024d09e682a	MIT	title line @0	
+numbas/Numbas	master	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+numbas/numbas-lti-provider	master	LICENSE.md	560	d37836feea9d	UNRECOGNISED	-	no recognised licence title
+nvaccess/nvda	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+nykooi1/vibe-wise	main	LICENSE	1065	4e3c1fac5a2c	MIT	title line @0	
+oaeproject/3akai-ux	master	LICENSE	12413	26eb150501f6	ECL-2.0	title line @17	
+oaeproject/Hilary	master	LICENSE	12322	34d6dd461117	ECL-2.0	title line @17	
+oat-sa/devkit-lti1p3	master	LICENSE	18092	8177f9751321	GPL-2.0	title line @20	§13 absent
+oat-sa/extension-tao-testqti	master	LICENSE	18025	a01259a1b522	GPL-2.0	title line @0	§13 absent
+oat-sa/lib-lti1p3-core	master	LICENSE	18091	f9c375a1be4a	GPL-2.0	title line @20	§13 absent
+oat-sa/oneroster-import	master	LICENSE	18026	39db8f9acf03	GPL-2.0	title line @0	§13 absent
+oat-sa/qti-sdk	master	LICENSE	18025	a01259a1b522	GPL-2.0	title line @0	§13 absent
+oat-sa/tao-core	master	LICENSE	18025	a01259a1b522	GPL-2.0	title line @0	§13 absent
+odoo/odoo	master	LICENSE	43529	abc09dad5f84	LGPL-3.0	title line @88	§13 agrees
+okpy/ok	master	LICENSE	13979	e3b80e19df08	Apache-2.0	title line @0	
+oliverhruby/edupage-mcp	main	LICENSE	1070	e99290e1540b	MIT	title line @0	
+ollama/ollama	main	LICENSE	1058	5934ed2ce0d1	MIT	title line @0	
+onbirdev/moodle-webservice_mcp	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+onemnemo/mnemo	main	LICENSE	11326	62e02db7f9a1	Apache-2.0	title line @0	
+oneorigin-2-0/dcc-credential-co-writer-monorep	main	LICENSE	1087	7f62d1bf385d	MIT	title line @0	
+open-spaced-repetition/free-spaced-repetition-scheduler	main	LICENSE	1089	c0e0a71cc590	MIT	title line @0	
+open-spaced-repetition/fsrs4anki	main	LICENSE	1079	2ec9e6e61ed8	MIT	title line @0	
+open-spaced-repetition/fsrs4anki-helper	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+open-spaced-repetition/py-fsrs	main	LICENSE	1079	021bff58ad26	MIT	title line @0	
+openai/whisper	main	LICENSE	1063	b5d65a59060e	MIT	title line @0	
+opencast/opencast	master	LICENSE	11340	76a975068930	ECL-2.0	title line @0	
+openeducat/openeducat_erp	master	LICENSE	8241	528f84036800	LGPL-3.0	title line @94	§13 absent
+openedx/XBlock	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+openedx/codejail	master	LICENSE.txt	10174	0d542e0c8804	Apache-2.0	title line @34	
+openedx/edx-platform	master	LICENSE	35136	e12d78569742	AGPL-3.0	title line @20	§13 agrees
+openedx/openedx-ai-extensions	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+openedx/openedx-platform	master	LICENSE	35136	e12d78569742	AGPL-3.0	title line @20	§13 agrees
+openedx/xblock-lti-consumer	master	LICENSE	34520	57c8ff33c9c0	AGPL-3.0	title line @20	§13 agrees
+openfun/marsha	master	LICENSE	1078	6dab88f38735	MIT	title line @0	
+openfun/ralph	main	LICENSE.md	1094	08ea77291de9	MIT	title line @0	
+openfun/richie	master	LICENSE	1079	e4b2a3148135	MIT	title line @0	
+openlxp/openlxp-xia	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+openolat/OpenOLAT	master	LICENSE	10982	6dbc5b605ed0	Apache-2.0	title line @33	
+opensacorg/learning-blocks	main	LICENSE	1076	06145c4016db	MIT	title line @0	
+opensalt/OB3DefinitionWidget	main	LICENSE	1080	d44082e2d74f	MIT	title line @0	
+oppia/oppia	master	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+os4ed/openSIS-Classic	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+overhangio/tutor	main	LICENSE.txt	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+packbackbooks/lti-1-3-php-library	master	LICENSE.md	11343	78b49eeaddbf	Apache-2.0	title line @33	
+panaversity/learn-agentic-ai	main	LICENSE	1068	8ea022e30a9b	MIT	title line @0	
+patil-suraj/question_generation	master	LICENSE	1068	4c97925e6982	MIT	title line @0	
+pawtograder/platform	main	LICENSE	658	61d7698783f4	GPL-?	title line @142	§13 absent
+peancor/moodle-mcp-server	main	LICENSE	1064	845ac6ac9e57	MIT	title line @0	
+pedal-edu/pedal	master	LICENSE	1103	ffaa010382b0	MIT	title line @0	
+penecho/penecho	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+pguso/agents-from-scratch	main	LICENSE	1091	f78cc6bf1d57	MIT	title line @0	
+pipwerks/scorm-api-wrapper	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+plastic-labs/tutor-gpt	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+polimediaupv/paella	master	license.txt	9915	15efd2f640ed	ECL-2.0	title line @0	
+portabilis/i-diario	main	LICENSE	35326	fe85f94658bf	UNRECOGNISED	-	no recognised licence title
+processing/p5	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+projectfedena/fedena	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+pulkitpareek18/LearnFlow-AI	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+pupilfirst/pupilfirst	master	LICENSE	1684	bda0aa6d49f2	MIT	title line @661	
+pykt-team/pykt-toolkit	main	LICENSE	1066	f5f955194636	MIT	title line @0	
+qxbao/qldt-hanu-mcp	main	LICENSE	18092	8177f9751321	GPL-2.0	title line @20	§13 absent
+r-huijts/canvas-mcp	main	LICENSE	1065	ab5109aafdb8	MIT	title line @0	
+rabser/moodle-aiprovider_openwebui	-	-	-	-	NO-GRANT	404 on every path	6 paths x 2 refs
+rage/secret-project-331	master	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+rasbt/LLMs-from-scratch	main	LICENSE.txt	11505	4b6615cdb446	Apache-2.0	title line @34	
+redmodd/tessera	main	LICENSE	1078	a7b3b71f0efd	MIT	title line @0	
+rhasspy/piper	master	LICENSE.md	1071	4cd71dece703	MIT	title line @0	
+ridencww/uniroster-server	master	LICENSE	1067	09837cca3eae	MIT	title line @0	
+rohitg00/ai-engineering-from-scratch	main	LICENSE	1070	d116e214adbc	MIT	title line @0	
+run-llama/llama_index	main	LICENSE	1065	24f40b5190fd	MIT	title line @4	
+safytech/ulearn	master	LICENSE	1066	e16aa92b6211	MIT	title line @0	
+sagefy/sagefy	master	LICENSE.txt	10174	0d542e0c8804	Apache-2.0	title line @34	
+sakaiproject/sakai	master	LICENSE	11120	0688f62d04f1	ECL-2.0	title line @0	
+sandraschi/classroom-mcp	master	LICENSE	1071	408dff2e3167	MIT	title line @0	
+satvik314/educhain	main	LICENSE	1092	e3321a1b62cd	MIT	title line @0	
+savvides/idstack	main	LICENSE	1077	eb97ca0d7841	MIT	title line @0	
+saylordotorg/moodle-local_ai_course_assistant	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+saytooyum/AI-Based-Timetable-Generation-System	main	LICENSE	1094	d194e34d2a8e	MIT	title line @0	
+scibly-dev/scibly	main	LICENSE	34739	9027c56f2fc5	AGPL-3.0	title line @482	§13 agrees
+scormflow/scorm-engine	main	LICENSE	1079	7cdfc153e7f1	MIT	title line @0	
+sdv-dev/SDV	main	LICENSE	4818	fcaa94d4732e	BUSL-1.1	title line @0	
+senjun-team/senjun-courses	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+sgaofen/vibe-schooling	main	LICENSE	1064	e0f7d73d5770	MIT	title line @0	
+shigella520/MindTrain	main	LICENSE	1067	8078815070f9	MIT	title line @0	
+shmercer/writeAlizer	master	LICENSE	47	acdf4d7acf3f	UNRECOGNISED	-	no recognised licence title
+showlab/Code2Video	main	LICENSE	1073	79035a25d23b	MIT	title line @0	
+singhrajvardhan/SecureExam-Platform	main	LICENSE.md	1080	5c8b11fe07ed	MIT	title line @2	
+siskinskai/spedlex	main	LICENSE	1077	1e306f58a677	MIT	title line @0	
+siyuanzhao/automated-essay-grading	master	LICENSE	1068	a719c5319faa	MIT	title line @0	
+skhdemo/uoft-quercus-mcp	main	LICENSE	1086	8c868a56a485	MIT	title line @0	
+skillcoco/skillcoco	main	LICENSE	1103	22fab8b7f466	MIT	title line @0	
+solin-repo/moodle-block_atrisk	main	LICENSE	703	83a84d3b394e	GPL-3.0	title line @20	§13 absent
+sonyccd/qti-playground	main	LICENSE	1070	3a9fde8de919	MIT	title line @0	
+sourcegrade/jagr	master	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+spatialaudio/digital-signal-processing-lecture	master	LICENSE	19746	03de920e8b18	CC-BY-4.0	title line @2977	
+sr258/scorm-h5p-wrapper	master	LICENSE	1073	e5a1f41b0bb5	MIT	title line @0	
+st22209/Parent-Portal	main	LICENSE	1072	452d946abaab	MIT	title line @0	
+stanford-oval/storm	main	LICENSE	1091	88241386c28f	MIT	title line @0	
+studentinsights/studentinsights	master	LICENSE	1083	53f12859c8a3	MIT	title line @4	
+sukhrobyangibaev/mcp_hemis_student	main	LICENSE	1074	059322a7fd97	MIT	title line @0	
+taybenlor/runno	main	LICENSE	1106	c5aba0773357	MIT	title line @0	
+terracotta-education/terracotta	main	LICENSE	11323	6dc0e068dcf3	Apache-2.0	title line @0	
+theaiagent/SynthEd	main	LICENSE	1056	1126322e2cc8	MIT	title line @0	
+thepick/writing-feedback-tool	main	LICENSE	1064	6dc89607e84c	MIT	title line @0	
+thiswillbeyourgithub/AnkiAIUtils	master	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+thm-mni-ii/feedbacksystem	main	LICENSE	10785	65125d9e480b	Apache-2.0	title line @645	
+timothywarner-org/ai901-cert-buddy-claude	main	LICENSE	1067	f2ddb13a24a1	MIT	title line @0	
+tkawen/developer-platform	main	LICENSE	1063	5d6e231d209c	MIT	title line @0	
+tl-its-umich-edu/my-learning-analytics	master	LICENSE	11379	b89b380a589b	Apache-2.0	title line @33	
+towardsai/ai-tutor-app	main	LICENSE	11386	7dc0f2a45a9e	Apache-2.0	title line @33	
+trane-project/trane	master	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	title line @20	§13 agrees
+travismoore3/aes_system	master	LICENSE	1069	1f3b59174742	MIT	title line @0	
+trindadetiago/sigaa-caiu	main	LICENSE	1071	e69df76328c3	MIT	title line @0	
+tsugiproject/tsugi	master	LICENSE	10273	73ba74dfaa52	Apache-2.0	title line @0	
+tswsxk/EduData	master	LICENSE	11346	8aaf2e630b1c	Apache-2.0	title line @33	
+tuannvm/oauth-mcp-proxy	main	LICENSE	1068	772bc7b96e9a	MIT	title line @0	
+tutors-sdk/tutors	main	LICENSE	1088	4800b7fa4014	MIT	title line @0	
+ucbds-infra/otter-grader	master	LICENSE	1560	6af203d41a01	BSD-3-Clause	title line @117	
+uccser/cs-field-guide	master	LICENCE	1128	d19875cf3401	MIT	title line @0	
+ucfopen/Materia	master	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+ucfopen/Obojobo	master	LICENSE	34520	76a97c878c9c	AGPL-3.0	title line @20	§13 agrees
+ucfopen/UDOIT	main	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	title line @20	§13 agrees
+ucfopen/canvasapi	master	LICENSE	1130	f422adb6cde4	MIT	title line @4	
+uhafner/autograding-github-action	main	LICENSE	1095	d2c7f8d2d8be	MIT	title line @0	
+unslothai/notebooks	main	LICENSE	7652	e3a994d82e64	LGPL-3.0	title line @19	§13 absent
+valentineus/moodle-webhooks	master	LICENSE.txt	35200	6e7ee8ecc13c	GPL-3.0	title line @20	§13 agrees
+vanderbilt-data-science/knowledge-spaces	main	LICENSE	1090	ed2ed868dffc	MIT	title line @0	
+virtUOS/abstimmbar	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	title line @34	
+vishal017/cheatshield	main	LICENSE	1065	72d0f97c1ea0	MIT	title line @0	
+vishalsachdev/canvas-mcp	main	LICENSE	1071	5385a26e2fac	MIT	title line @0	
+vllm-project/vllm	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+walkinglabs/learn-harness-engineering	main	LICENSE	1067	86036cb714ed	MIT	title line @0	
+webworn/openfoam-mcp-server	main	LICENSE	10708	e0ae7f268ba5	Apache-2.0	title line @0	
+wenflow-org/wenflow	main	LICENSE	1067	b6fac57d4710	MIT	title line @0	
+wildcat430524/StepsToGreat	main	LICENSE	1082	ea24c55dc504	MIT	title line @0	
+willianmano/moodle-theme_moove	main	LICENSE.md	34903	831e92808eb5	GPL-3.0	title line @0	§13 agrees
+willwearing/graspful	main	LICENSE.md	1439	3de0414f7966	MIT	title line @62	
+wingkwong/react-quiz-component	master	LICENSE	1070	5453d49638ec	MIT	title line @0	
+xcesaralejandro/lti1p3	main	LICENSE	1082	39618f4f75df	MIT	title line @0	
+xiaochong0302/course-tencent-cloud	master	LICENSE	18431	189b1af95d66	GPL-2.0	title line @20	§13 absent
+yassinabdelal-ipynb/el-thanawiya	main	LICENSE	1082	7abf98fee25c	MIT	title line @0	
+yedidiaklein/moodle-local_aiquestions	main	LICENSE.md	35178	ccb349b4132e	GPL-3.0	title line @0	§13 agrees
+yetanalytics/lrsql	main	LICENSE	11357	c71d239df917	Apache-2.0	title line @33	
+yh2072/edgameclaw	main	LICENSE	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+yourssu/soongpt-plugin	main	LICENSE	1084	8bd9b5065d28	MIT	title line @0	
+ystemsrx/mini-nanoGPT	main	LICENSE	1063	703b1fc21029	MIT	title line @0	
+yukazakiri/koakademy	master	LICENSE.md	34523	8486a10c4393	AGPL-3.0	title line @20	§13 agrees
+yungifez/skuul	main	LICENSE	1069	b0fe88bfb0d2	MIT	title line @0	
+zavora-ai/mcp-student-records	main	LICENSE	738	b3886fcd4f82	Apache-2.0	title line @33	
+zhamanov-seabus/nau-ai-advisor	master	LICENSE	11375	adec74ee5b6f	Apache-2.0	title line @33	
+zhangl1001/civil-ai	main	LICENSE	1067	5731a2d3ccea	MIT	title line @0	
+zijinz456/OpenTutor	main	LICENSE	1068	5352b4967982	MIT	title line @0	
+zmievsa/autograder	main	LICENSE	35149	3972dc9744f6	GPL-3.0	title line @20	§13 agrees
+zyx1121/nycu	main	LICENSE	1064	d4894cd12b73	MIT	title line @0	

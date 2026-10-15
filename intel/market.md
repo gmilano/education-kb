@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 228 — 2026-10-15 — THE QUERY-SHAPE HYPOTHESIS IS `4` FOR `4`, AND p228 FINDS THE RULE BEHIND IT: A REGION-SHAPED QUERY WORKS ONLY WHERE THE REGION HAS **PAN-REGIONAL INSTITUTIONS** THAT PUBLISH ABOUT IT AS A UNIT
+
+🔵 **`4` regional queries + `4` country-shaped European queries + `3` use-case queries + `3` mandated global queries = `14`, every string published verbatim.** 🔵 **`2` declared blanks at region level, `2` declared blanks at country level, `1` declared blank for an asset class.**
+
+🔵 **Evidence:** [`p228-regional-queries`](../evidence/p228-regional-queries.2026-10-15-p228.tsv) *(`15` rows)* · [`sq-europe-queries`](../evidence/sq-europe-queries.2026-10-15-p228.tsv) · [`sr-discovery-channel`](../evidence/sr-discovery-channel.2026-10-15-p228.tsv)
+
+### 🔴 `P228-M1` — `ACTION SQ` fires at `4` of `4`, and the hypothesis is now `4` for `4`
+
+🟢 **Four country-shaped European queries, each returning at least one instrument, figure or named player where p227's `EMEA` shape had returned *"the EU, the UK and the Gulf and nothing substantive national"*.** 🔵 **Fourth consecutive test: APAC p223, Canada/Mexico p225, Africa p227, Europe p228.**
+
+🔴 **But p228 can say WHY, because this pass ran both shapes side by side and they did not fail together:**
+
+| region | region-shaped query | education content returned |
+|---|---|---|
+| 🔴 **EMEA** | `AI education EMEA 2026 adoption regulation players` | 🔴 **NONE** — the source itself states *"nothing here covers education providers, ministries or edtech vendors"* |
+| 🔴 **APAC** | `AI education APAC 2026 adoption regulation players` | 🔴 **NONE** — *"no education providers, edtech companies or education ministries are named"* |
+| 🟢 **LATAM** | `AI education LATAM 2026 adoption regulation players` | 🟢 **THE RICHEST OF THE FOUR** — a `19`-country survey, an adoption hierarchy, a policy count and four named jurisdictions |
+| 🟢 North America | `AI education North America 2026 adoption regulation players` | 🟢 substantive |
+
+> 🟢 **A region-shaped query returns education content only where the region has PAN-REGIONAL INSTITUTIONS that publish about it as a unit.**
+
+🟢 **LATAM has UNESCO IESALC, the IDB's ILIA index and CEPAL — bodies whose remit IS the region, which therefore produce region-level education data for a search surface to find.** 🔴 **`EMEA` and `APAC` have no such institution, because they are not regions: they are VENDOR SALES TERRITORIES. Nobody convenes an EMEA education ministry summit, so no EMEA education dataset exists to retrieve.**
+
+🟡 **This is more useful than *"ask country-shaped questions"*, because it predicts which future shapes will fail without spending a query to find out: `North America` works *(NAFTA-era bodies, CMEC, a shared language)*; `Africa` failed at p227 and needed country strings despite the AU existing; `EMEA` and `APAC` will never work and should be retired as research units while remaining fine as reporting buckets.** 🔵 **Registered as the standing rule behind `ACTION SQ`'s permanent query line.**
+
+### 🟡 `P228-M2` — market sizing still does not converge, and the North American figure makes the incoherence legible
+
+| source class | figure | basis |
+|---|---|---|
+| one 2026 forecast | **`USD 10.6bn`** for 2026, `40.9%` CAGR from `USD 7.52bn` in 2025 | global AI-in-education |
+| IMARC | **`USD 6.4bn`** 2025 base, `31.35%` CAGR 2026-2034 | global AI-in-education |
+| carried from p227 | `USD 12.3bn` attributed to HolonIQ | global |
+| 🆕 one market-research page | **`USD 951M`** 2024 → **`USD 2 303.2M`** 2029, `15.9%` CAGR | **North America only** |
+| 🆕 same roundup | North America holds **`36%`** share | — |
+
+🔴 **The last two cannot both be true alongside the first. A `36%` share of a `USD 10.6bn` 2026 global market is ~`USD 3.8bn` for North America — but the regional series puts North America at `USD 951M` in 2024 reaching only `USD 2.3bn` by 2029.** 🟡 **The two series are measuring different things under the same words, and neither states its scope.** 🟢 **Published here as a DIVERGENCE with both figures and their units, never merged, and no CAGR of this KB's own construction.**
+
+🔵 **The one figure on which two unrelated source classes agree is a NEGATIVE: maturity is rated `35/100`, *"most institutions still in pilot mode"*, which sits beside the `92%` student-engagement figures without contradicting them — individuals have adopted, institutions have not.** 🟢 **That gap is the sales argument, and it is the same gap `P228-M3`'s regional numbers describe in four different jurisdictions.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The measurable gap is GOVERNANCE, not tooling:** 🔴 **`10%` of institutions have formal AI guidelines and `71%` of US teachers lack AI training.** 🔵 **Regulation is fragmented by design — adoption is decided school by school and district by district, with Colorado and Texas adding piecemeal requirements and no federal instrument in force.**
+
+🟢 **What is actually being bought:** OpenAI launched a country-level education programme with **`8` national partners** in Q1 2026; Carnegie Mellon and the Gates Foundation put **`USD 55M`** into AI courseware aimed at **gateway college courses**. 🔵 **Both are teacher- and curriculum-side, consistent with `T227-4`.**
+
+🟡 **The opportunity: an AI GOVERNANCE PACK is a deliverable here, not a methodology slide** — a risk classification, a human-oversight record and a data-provenance statement, generated per district, priced against the `90%` of institutions with no guideline. 🔴 **A figure of `USD 169M` in federal higher-ed AI funding circulated in the same roundup and is NOT carried: no primary source.**
+
+### EMEA
+
+🔴 **The region-shaped query returned NOTHING on education for a second consecutive pass. The four country strings returned everything below** → [`sq-europe-queries`](../evidence/sq-europe-queries.2026-10-15-p228.tsv).
+
+| jurisdiction | the instrument that binds | date |
+|---|---|---|
+| 🔴 **EU** | AI Act Annex III education high-risk *(Reg. (EU) 2026/1744)* | 🔴 **`2027-12-02`** |
+| 🔴 **EU** | Omnibus Article `5` prohibitions | 🔴 **`2026-12-02`** — **the nearest binding EU date, `7` weeks out** |
+| 🟢 **UK** | DfE *"Generative AI: product safety standards"*, renamed and expanded | `2026-01-19` |
+| 🟢 **UK** | DfE support materials refreshed for 2026-27, `4` modules + leaders' pack | `2026-05-19` |
+| 🟢 **Sweden** | 🆕 **first comprehensive national AI strategy**, with action-plan annex | **February 2026** |
+| 🟡 **Sweden** | HEIs tasked with reporting AI in course offerings *(non-binding)*; UKÄ/MYH skills study | from 2025 |
+| 🟡 **Germany** | KMK recommendation on AI in schools — still the live framework | October 2024 |
+| 🔴 **Germany** | **no 2026 KMK resolution** — declared blank | — |
+| 🔴 **Netherlands** | **no national ministry policy for 2026** — declared blank | — |
+
+🟡 **The opportunity, and it is specific:** 🟢 **the UK is the only EMEA jurisdiction here with a PRODUCT SAFETY STANDARD a supplier can be held to, and `44%` of its teachers already use generative AI against *"about half of schools with no AI policy"*.** 🔴 **That is a conformance market: a school-level AI policy plus evidence against the DfE standard, sold into the half with nothing.** 🔵 **Germany's buying unit is the Land, not the Bund — NRW is drafting core curricula for 2026 with its first AI-option Abitur in 2030, and Bitkom is lobbying for a joint plan that does not exist. 🟡 Sweden's February strategy is new enough that its education measures are still an action-plan annex rather than a procurement, which makes it a positioning window rather than a pipeline.**
+
+🔴 **Most EMEA proposals this quarter will quote Annex III at `2027-12-02` and miss the Article `5` prohibitions at `2026-12-02`.** 🟢 **Carried unchanged from p224 and still the sharpest date on this shelf.**
+
+### APAC
+
+🔴 **The region-shaped query returned NOTHING on education, explicitly: no providers, no edtech companies, no ministries. Published as a declared blank for a second consecutive pass, and under `P228-M1` it is now a PREDICTED blank rather than a surprise.**
+
+🟢 **What the shelves carry, from country-shaped work at p223 and p227 and unchanged this pass:**
+
+| jurisdiction | instrument | date that binds |
+|---|---|---|
+| 🔴 **Vietnam** | Law `134/2025/QH15` + Decision `33/2026/QD-TTg` *(`46` systems, `6` sectors)* | 🔴 **`2027-09-01`** — education's compliance deadline |
+| 🟡 **South Korea** | AI Basic Act | in force January 2026 |
+| 🟡 **Taiwan** | AI Basic Act | passed December 2025 |
+
+🟡 **New this pass and enterprise-wide only, carried as context and NOT as education data:** Diligent Institute `57%` of Asian organisations with AI in one or more areas; Forrester `63%` adoption in IT operations and `46%` in data management; Singapore consulting on AI in financial institutions.
+
+🟡 **The opportunity: Vietnam is the only jurisdiction on these shelves with a DATED, SECTOR-SCOPED, EDUCATION-SPECIFIC high-risk list, and it classifies *"systems that automatically test, evaluate results and rank learners"* as high-risk.** 🟢 **That is the same surface the EU singles out and the same surface LATAM faculty trust least — so an assessment-governance asset built once is sellable into all three, and Vietnam's `2027-09-01` is the deadline that makes it urgent rather than interesting.** 🔴 **`ACTION RO` stands: no APAC government primary text is readable from this session, `11`+ hosts blocked, so every row above is `CONVERGENT-SECONDARY`.**
+
+### LATAM
+
+🟢 **The richest regional return of the four, and the only region where the region-SHAPED query outperformed.**
+
+| finding | figure | source class |
+|---|---|---|
+| 🆕 **adoption hierarchy**, `200` institutions across `19` countries, Aug-Oct 2025 | 🟢 **teaching and learning `73.5%` · research `57.0%` · administration `34.1%` · community engagement `20.0%`** | UNESCO IESALC |
+| 🆕 **institutional policy coverage** | 🔴 **only `30%` of LATAM universities have published AI policies** | secondary |
+| carried p227, kept DISTINCT | `92%` students / `79%` faculty engaging; `88%` of faculty at minimal-to-moderate engagement; `61%` of students fear peer misuse — `30 000`+ responses, `29` institutions | Digital Education Council |
+| 🆕 **regional regulatory state** | 🔴 **no unified framework for AI in higher education** | secondary |
+
+🔵 **p227 declared a blank: *"no country-level education AI instrument was found for ANY LATAM state."* p228 narrows it rather than closing it:**
+
+| country | what exists | is it education-specific? | is it binding? |
+|---|---|---|---|
+| 🟡 **Chile** | national AI policy since 2021, a law under discussion | 🔴 **no** | 🔴 not yet |
+| 🟡 **Brazil** | national AI strategy | 🔴 **no** | 🔴 no |
+| 🟡 **Colombia** | national AI strategy | 🔴 **no** | 🔴 no |
+| 🟢 **Mexico** | SEP and ANUIES recommendations; regulate-not-prohibit stance *(p225)* | 🟢 **YES** | 🔴 **explicitly NON-BINDING** |
+
+🟢 **So the precise statement, replacing p227's blanket blank: FOUR LATAM states have national AI instruments, NONE is education-specific and binding, and Mexico's are the only education-specific ones at all.** 🔵 **That is a different and more sellable fact than *"nothing was found"*.**
+
+🟡 **The opportunity, and it is the strongest in this pass:** 🔴 **`92%` student engagement against `30%` institutional policy coverage is the widest adoption-to-governance gap on any of these four shelves — wider than North America's.** 🟢 **And the adoption hierarchy says where to sell: administration sits at `34.1%` and community engagement at `20.0%`, so the back office is nearly untouched while teaching is saturated.** 🔵 **A LATAM engagement that leads with an institutional AI policy plus an administrative-automation pilot meets a documented need in `70%` of universities, and the IDB's ILIA index across `19` countries gives a procurement-grade baseline to quote.** 🔴 **`ACTION RL` stands for a `23`rd time: the truncated `19%` claim is still unreadable, `unesco.org` `000`, and the FOUR separate LATAM denominators on these shelves must not be merged.**
+
+
 ## Pass 227 — 2026-10-15 — `ACTION SM` FIRES AT **`4` OF `4`**: AFRICA WAS NEVER A REGIONAL GAP, IT WAS A QUERY SHAPE — AND THE MOST ON-POINT FINDING OF THE PASS IS A NATIONAL AI POLICY WITHDRAWN BECAUSE ITS CITATIONS WERE AI-GENERATED
 
 🔵 **`ACTION SM` registered limb `1` as *"`1`+ instrument, adoption figure or named player for ANY of the four countries."* 🟢 It fires at `4` of `4` — instruments AND figures AND named players for every one.** 🔴 **`ACTION SL` fires limb `1`: Vietnam's two instruments are TWO, in a parent/child relation.**
