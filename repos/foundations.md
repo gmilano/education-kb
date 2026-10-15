@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — THE FOUNDATION TIER LOSES FIVE ADDRESSES AND GAINS THREE IT ALWAYS HAD: THE `1EdTech` STANDARDS REFERENCE CODE IS **NOT RETRIEVABLE**, AND `processing/p5.js` WAS NEVER MISSING
+
+🔵 **`0` new foundation rows. `18` grants read first-hand across the `25` names p228's reader could not see. `26` addresses across all shelves confirmed dead, `1 862` confirmed live.** 🔵 **Evidence:** [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv) · **Instrument:** [`p230-prose-path-ladder`](../compose/code/p230-prose-path-ladder/README.md) *(`33` controls)*
+
+### 🔴 `P230-F1` — the standards tier, re-probed, and it is the one that lost rows
+
+🟢 **`ACTION TC` is the first existence sweep this KB has run: one `git ls-remote --symref` per slug, `1 904` addresses, one request each. The foundation tier's losses are concentrated in the interoperability-standards family, which is exactly where a studio starts an LTI or analytics engagement.**
+
+| address | what it was | state `2026-10-15` |
+|---|---|---|
+| 🔴 [`1EdTech/caliper-java`](https://github.com/1EdTech/caliper-java) | Caliper Analytics reference implementation, Java | 🔴 **GONE** — and `imsglobal/caliper-java` is gone too |
+| 🔴 [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | Caliper Analytics, JavaScript | 🔴 **GONE** |
+| 🔴 [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) | Caliper Analytics, PHP | 🔴 **GONE** |
+| 🔴 [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | Caliper Analytics, Python | 🔴 **GONE** |
+| 🔴 [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | Open Badges reference server | 🔴 **GONE** — `1EdTech/badgr-server` is gone too |
+| 🔴 [`yetanalytics/lrspipe`](https://github.com/yetanalytics/lrspipe) | xAPI LRS pipeline | 🔴 **GONE** — `yetanalytics/lrs-pipe` too |
+| 🔴 [`LongsightGroup/qti3-core`](https://github.com/LongsightGroup/qti3-core) | QTI 3 core | 🔴 **GONE** |
+| 🔴 [`Eduware-Inc/eduware-oneroster`](https://github.com/Eduware-Inc/eduware-oneroster) | OneRoster implementation | 🔴 **GONE** |
+| 🔴 [`UOC/java-lti-1.3-provider`](https://github.com/UOC/java-lti-1.3-provider) | LTI 1.3 provider | 🔴 **GONE** — its sibling `-provider-example` is LIVE and `MIT` |
+| 🟡 [`apereo/opencast`](https://github.com/apereo/opencast) | lecture capture | 🟡 **MOVED** — 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) is LIVE, probed this pass |
+| 🔴 [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi) | PHP business framework | 🔴 **GONE** — `epesi/epesi` too |
+
+🔴 **The commercial statement, and it is not a housekeeping note: the Caliper Analytics and Open Badges STANDARDS are alive and are what a client asks for by name. Their reference implementations are not retrievable from any address these shelves record, under either the `imsglobal` or the `1EdTech` org spelling.** 🟡 **A proposal that offers to "start from the 1EdTech reference implementation" cannot be delivered from this KB's addresses. `ACTION TE` is registered to find where that code went, if anywhere.**
+
+### 🟢 `P230-F2` — three `ABSENT` rows reconciled with p229's OWN recovery table
+
+🔴 **p229's [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) carries `6` `ABSENT` members. `3` of them are truncated strings whose TRUE names p229 recovered, with grants, in [`sw-recovered-slugs`](../evidence/sw-recovered-slugs.2026-10-15-p229.tsv) — the same pass, a different table, and nothing in the first says so:**
+
+| p229's `ABSENT` row | the real address, recovered in p229's OTHER table | grant, re-read first-hand at p230 | where it sits here |
+|---|---|---|---|
+| 🔴 `processing/p5` — *"does not resolve at all"* | 🟢 [`processing/p5.js`](https://github.com/processing/p5.js) | 🟢 **`LGPL-2.1`**, `license.txt`, `24 480` B · `eb2f25f8f165` | 🟢 **a FOUNDATION row on this page, whose bytes and hash this pass reproduces exactly** |
+| 🔴 `dmitry-viskov/pylti1` | 🟢 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **`MIT`**, `1 070` B · `5aef77eb4471` | the LTI `1.3` tier, `28` mentions |
+| 🔴 `jdolny/OneRoster` | 🟢 [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 **`MIT`**, `1 066` B · `1dc50226c38a` | the rostering tier |
+
+🟢 **The sharpest version: this page already carried `processing/p5.js` with the right licence, the right byte count and the right hash, and p229's recovery table agreed with it — while p229's reach table, written the same hour, said the repository did not resolve at all. The SHELF was right and one of the two INSTRUMENTS was wrong, which is the opposite of every correction in the previous four passes.** 🔵 **p230's existence sweep keys on the fixed harvest, so the two tables can no longer disagree — which is the durable fix, not the three rows.**
+
+### 🟡 `P230-F3` — `12` slugs are grantless at every path these shelves can name, and that number is now stable
+
+🟢 **`ACTION TA` probed `58` prose-harvested paths against the `14` p229 left unresolved and resolved `0` new ones** *(the `2` hits were the register's own seeded positives, and neither is the repository's grant — [`agents/top.md`](../agents/top.md) `T230-A1`)*. 🔵 **Taken with p229's `23` recoveries, the `45` `CELL-WITHOUT-GRANT` slugs of p228 are now fully decomposed: `23` had a grant, `12` are genuinely silent, `4` carry a foreign manifest, `2` grant by reference, `3` were never repositories, and `1` is `ABSENT`.** 🟡 **The `12` are `ACTION PH`'s queue and nothing a pass can read will shrink it further.**
+
 ## Pass 229 — 2026-10-15 — THE FOUNDATION ROW THIS KB LEANS ON HARDEST WAS PUBLISHED AS GRANTLESS, AND ITS LICENCE IS THE CANONICAL `GPL-3.0` BODY AT `COPYING.txt`
 
 🔵 **`0` new repository rows. `30` grants newly readable. `124` live cells confirmed, `0` wrong.** 🔵 **Evidence:** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · **Instrument:** [`p229-grant-ladder-reach`](../compose/code/p229-grant-ladder-reach/README.md)

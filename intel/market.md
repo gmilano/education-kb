@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — THE REGION-SHAPED QUERY FAILED FOR EMEA AND APAC A **FOURTH** TIME, LATAM OUTPERFORMED A **FOURTH** TIME, AND THE EU DEFERRAL THIS KB CORRECTED IS NOW CORROBORATED WITH ITS LEGISLATIVE DATES
+
+🔵 **All `5` regions carry their verbatim query** → [`p230-regional-queries`](../evidence/p230-regional-queries.2026-10-15-p230.tsv). 🔵 **`ACTION RE` honoured a TWELFTH time; `ACTION SQ`'s permanent Europe line run a THIRD time; `ACTION SH` run INBOUND on `34` records before a word of this was written, and it FIRED** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p230.tsv).
+
+### 🟢 `P230-M1` — the query-shape rule reproduces for a fourth pass, and it is now the most tested claim on these shelves
+
+🟢 **p228 derived it, p229 reproduced it, p230 reproduces it again: a region-shaped query returns education content only where the region has PAN-REGIONAL INSTITUTIONS publishing about it as a unit.**
+
+| region | verbatim query | education-specific records |
+|---|---|---|
+| 🟢 **LATAM** | `AI education LATAM 2026 adoption regulation players` | 🟢 **`5`** — the richest return of the pass, again |
+| 🟡 North America | `AI education North America 2026 adoption regulation players` | 🟡 `3` — and it carried a REFUTED claim inbound |
+| 🔴 **EMEA** | `AI education EMEA 2026 adoption regulation players` | 🔴 **`0` — DECLARED BLANK, third consecutive pass.** Returned CompTIA IT strategy, a **2023** Workday finance study and a Bandwidth-Cavell enterprise-communications report |
+| 🔴 **APAC** | `AI education APAC 2026 adoption regulation players` | 🔴 **`0` for formal education.** `3` corporate L&D items only: a TCS–Pearson AI learning alliance, LearnUpon's Sydney HQ, an Alteryx academy relaunch. Nothing on K-12, higher education, or any education ministry |
+
+🔵 **LATAM has UNESCO IESALC, the Digital Education Council and the IDB. `EMEA` and `APAC` are vendor sales territories with no body that publishes about them as a unit — which is why the COUNTRY-shaped query is the only one that works there, and why `ACTION SQ` is a permanent line rather than a hypothesis.**
+
+### 🔴 `P230-M2` — the EU education clock, corroborated at last, and the claim that keeps coming back
+
+🟢 **This KB has corrected the same circulating error five times: *"EU AI Act education high-risk takes effect August 2026"*. It is wrong, and wrong in the direction that manufactures urgency — it tells a client a compliance deadline has already passed.**
+
+🟢 **p230 is the first pass to corroborate the correction with its LEGISLATIVE DATES, from a channel never cited here:**
+
+| obligation | binds from | status this pass |
+|---|---|---|
+| 🟢 Article `4` AI literacy | **`2025-02-02`** | 🟢 **LIVE** — corroborated again |
+| 🟢 Article `50` transparency *(a learner can tell they are talking to a machine)* | **`2026-08-02`** | 🟢 **LIVE** — explicitly NOT deferred |
+| 🟡 Article `50(2)` machine-readable marking | **`2026-12-02`** | 🟡 pending |
+| 🔴 **Annex III point `3` education high-risk** *(admissions, assessing learning outcomes, assigning level, monitoring during tests)* | 🔴 **`2027-12-02`** | 🔴 **DEFERRED from `2026-08-02`** — European Parliament endorsed `2026-06-16`, Council final approval `2026-06-29` |
+| 🔴 Annex I | **`2028-08-02`** | 🔴 pending |
+
+🟡 **NEW on these shelves, and it is billable work rather than a date: EU AI Act **Article 27** requires a deployer that is a BODY GOVERNED BY PUBLIC LAW to complete a FUNDAMENTAL RIGHTS IMPACT ASSESSMENT before putting a high-risk system into use. A state university is such a body; a private edtech vendor is not. The FRIA attaches to the `2027-12-02` clock.** 🔴 **`eur-lex.europa.eu` is `000` for a twenty-fifth time, so all of this stays `CONVERGENT-SECONDARY` and `ACTION RO` stays structural.**
+
+### 🔵 `P230-M3` — the market range widened again, and the third estimate is the useful one
+
+| source | 2025/2026 base | forecast | CAGR |
+|---|---|---|---|
+| IMARC | `$6.4B` *(2025)* | `$79.6B` by 2034 | `31.35%` |
+| The Business Research Company | `$7.52B` *(2025)* → `$10.6B` *(2026)* | — | `40.9%` |
+| 🟡 a third analysis | — | — | 🟡 **`~28%` 2026–2036, with the argument that INSTITUTIONAL PROCUREMENT MOVES SLOWER THAN CONSUMER ADOPTION** |
+
+🟡 **The three disagree by a factor of more than two on the 2025 base alone, which is the measurement: this market has no agreed denominator. The third source is the one a studio should quote in a proposal, because it is the only one whose claim is about the BUYER rather than the technology, and it matches what every regional number below shows — high usage, thin institutional policy.**
+
+## Opportunities by region
+
+### North America
+
+🔴 **The gap is governance, and it is quantified: `10%` of institutions have formal AI guidelines and `71%` of US teachers lack AI training.** 🟡 **One analysis states the sector plainly — *"education AI operates in a relative regulatory vacuum; no equivalent to the FDA exists for educational technology"* — with adoption decided school by school and district by district, and Colorado and Texas introducing piecemeal requirements.** 🟢 **The engagement that follows is a POLICY-AND-EVIDENCE build, not a tutor: a district-level AI register, an evaluation harness, and a human-review record. Every component is on these shelves under a permissive grant.**
+
+### EMEA
+
+🔴 **The region query is BLANK for a third consecutive pass and the country query is the only instrument that works.** 🟢 **Germany: the KMK recommendation of **October 2024** remains the live national school-level framework *(reproduced a third time)*, and NEW this pass — the BMFTR's updated national AI strategy, per an OECD.AI entry updated **June 2026**: `50`+ existing and `20`+ new measures across eleven action areas, over **EUR `1.6B`** in the current legislative period, with the education system named among its target audiences.** 🔴 **Netherlands: BLANK a FIFTH time. Sweden: nothing newer than the **2019** national AI vision; the 2025 assignment remains HIGHER EDUCATION only.** 🟢 **The opportunity is the `2027-12-02` Annex III clock plus the Article `27` FRIA for public-law deployers — an auditable record of which AI touched which learner's work, which is a `8`–`10` week build on `GPL`-compatible Moodle infrastructure.**
+
+### APAC
+
+🔴 **DECLARED BLANK for formal education, for a third consecutive pass. The region returned only corporate L&D: a TCS–Pearson multi-year AI learning alliance, LearnUpon's new Sydney headquarters with AI course authoring, and an Alteryx academy relaunch.** 🟡 **Adjacent signals, not education: `49%` of APAC businesses cite insufficient real-time data infrastructure as an AI barrier, and `87%` of organisations encourage AI agent use while only `47%` have governance for it. OpenAI has named an Australia/New Zealand policy lead as Canberra tightens AI governance and copyright rules.** 🟢 **The honest read for a studio: APAC education intelligence must be gathered COUNTRY BY COUNTRY here — the region word returns a sales territory, not a market.**
+
+### LATAM
+
+🟢 **The strongest regional evidence base of any pass, and the numbers are institutional rather than vendor:**
+
+- 🟢 **Digital Education Council, LATAM 2026 survey: `92%` of students and `79%` of faculty actively engaging with AI** — over `30 000` responses across `29` higher-education institutions.
+- 🟢 **UNESCO IESALC, `200` institutions across `19` countries: teaching and learning `73.5%`, research `57.0%`, administration `34.1%`, community engagement `20.0%`.**
+- 🔴 **And the gap that makes it an engagement: *"Only `30%` of universities in Latin America have published policies on how to use AI."***
+- 🟡 **Regulation is national and uneven: Chile has had a National AI Policy since 2021 with a bill under discussion; Brazil and Colombia have national strategies but no education-sector rule; Mexico has no binding national rules for university AI use, with SEP, ANUIES and the Observatorio IA issuing non-binding recommendations.**
+
+🟢 **The opportunity is the inverse of EMEA's: usage is already near-universal and the missing artefact is INSTITUTIONAL POLICY plus the system that enforces it. That is a `6`–`8` week build per institution and it repeats across `29` named institutions in one survey frame.** 🔴 **`ACTION RL` stands: `unesco.org` is `000` for a twenty-fourth time, so the truncated `19%` claim still cannot be read at source, and LATAM now has FOUR unmerged denominators — the DEC's `30 000`+/`29`, IESALC's `200`/`19`, the `30%` policy-coverage figure and the truncated `19%`.**
+
+### Global
+
+🔵 **`0` new rows from four global queries for an eighth consecutive pass. `3` of `3` verifiable candidates already carried.** 🔴 **One candidate declined: a vendor review's claim of a "Hermes Agent" with `180 000`+ stars since a February 2026 launch — single-source, vendor-authored, implausible against every verified count here. Recorded as a blank with its query rather than as a row.**
+
 ## Pass 229 — 2026-10-15 — THE REGION-SHAPED QUERY FAILED ON EDUCATION FOR EMEA AND APAC A THIRD TIME, AND THE COUNTRY-SHAPED ONE REPRODUCED p228 EXACTLY — SO THE RULE IS NOW A MEASUREMENT, NOT A HYPOTHESIS
 
 🔵 **All `5` regions carry their verbatim query** → [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv). 🔵 **`ACTION RE` honoured an ELEVENTH time; `ACTION SH` run INBOUND on `30` records before any of this prose was written — `0` hits, `3` near misses, all correctly silent** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p229.tsv).

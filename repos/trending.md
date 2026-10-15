@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 230 — THE NAME READER IS FIXED IN THE INSTRUMENT, NOT BY HAND: `25` DOTTED REPOSITORIES NOW HARVEST EVERY PASS, AND TWO OF p229'S OWN TABLES DISAGREED ABOUT WHETHER THREE OF THEM EXIST
+
+🔵 **`0` new trending repository rows *(`3` of `3` candidates already carried — eighth consecutive measured discovery rate)*. `25` dotted names harvested *(p229 recovered `8` by hand; the harvester now finds them all, every pass)*, `18` grants read first-hand, `0` published cells wrong, `2` fork DIRECTIONS settled, `1` non-OSI token replaced by a named instrument.**
+
+🔵 **Evidence:** [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv) · [`td-fork-direction`](../evidence/td-fork-direction.2026-10-15-p230.tsv) · [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · **Instrument:** [`p230-prose-path-ladder`](../compose/code/p230-prose-path-ladder/README.md)
+
+### 🔴 `T230-R1` — `ACTION TD` fires on limb `2`, and the falsifier's own wording is what it refutes
+
+🟢 **The fix is two characters of intent:**
+
+```
+p228   ([A-Za-z0-9][A-Za-z0-9_.-]*?)(?=[)\s`,.;:'"\]]|$)     LAZY,   terminator holds `.`
+p230   ([A-Za-z0-9][A-Za-z0-9_.-]*)(?=[)\s`,;:'"\]]|$)       GREEDY, terminator drops `.`
+```
+
+🔴 **Limb `1` wanted `1`+ re-gated cell to disagree with its repository. `0` do. Every one of the `25` dotted names' published cells is CORRECT, including `processing/p5.js` reproduced to the byte and the `sha256`₁₂ (`24 480` B, `eb2f25f8f165`).**
+
+🟡 **Limb `2`'s wording — *"the truncation cost only coverage"* — needs one correction and one qualification, and p229 supplied half of each itself.**
+
+🔴 **`1` — TWO OF p229'S OWN TABLES DISAGREE ABOUT WHETHER THREE REPOSITORIES EXIST.** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) carries `processing/p5`, `dmitry-viskov/pylti1` and `jdolny/OneRoster` as `ABSENT` — *"slug does not resolve at all, distinct from grantless"* — while [`sw-recovered-slugs`](../evidence/sw-recovered-slugs.2026-10-15-p229.tsv), written in the same pass, carries `processing/p5.js`, `dmitry-viskov/pylti1.3` and `jdolny/OneRoster.NET` WITH their grants. 🟡 **Both tables are internally right: the first is keyed on the truncated string and the second on the true name. But a reader of the first alone concludes a usable component does not exist, and nothing in it says the name is a truncation.** 🟢 **p230's sweep keys EXISTENCE on the fixed harvest, so the two can no longer disagree.**
+
+🟢 **`2` — THE NON-OSI GRANT IS NAMED, not newly found.** p229 recovered [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) and celled it as `NONCOMMERCIAL-NOT-OSI` / `NOASSERTION` on three shelves. 🔵 **p230 reads the body and replaces the token with the instrument:**
+
+> 🔴 *"# **Nakafa Source Available License 1.0** — Effective date: **April 24, 2026** — Copyright (c) 2026 PT NAKAFA TEKNO KREATIF. All rights reserved. **This is not an open-source license.**"*
+
+🟡 **A token says a studio may not build. A named instrument with an effective date and a self-describing sentence is what counsel needs to agree, and it is one read apart from the token.**
+
+### 🟢 `T230-R2` — the `18` grants, read first-hand on `2026-10-15`
+
+| repository | grant | bytes · `sha256`₁₂ | note |
+|---|---|---|---|
+| 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **Nakafa Source Available `1.0`, eff. `2026-04-24` — NOT OSI** | `7 705` · `de3d94045061` | p229 celled this `NONCOMMERCIAL-NOT-OSI`; p230 NAMES the instrument |
+| 🆕 🟢 [`JuliaPluto/Pluto.jl`](https://github.com/JuliaPluto/Pluto.jl) | 🟢 **`MIT`** | `1 082` · `14cccff4d3e1` | newly readable |
+| 🆕 🟡 [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) | 🟡 **`EPL` BY REFERENCE** | `519` · `44ad51523c20` | a `519` B `LICENSE` is a reference, not a body; `NOTICE` is `1 610` B |
+| 🟢 [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 **`MIT`** *(`(c) 2026 GENER8V`)* | `1 064` · `0df23c7822c2` | reproduces p229's recovery exactly |
+| 🟢 [`processing/p5.js`](https://github.com/processing/p5.js) | 🟢 **`LGPL-2.1`** *(`license.txt`)* | `24 480` · `eb2f25f8f165` | **confirmed to the byte** against p229's recovery AND this page's foundation row |
+| 🟢 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **`MIT`** | `1 070` · `5aef77eb4471` | confirmed against p229's recovery; `28` mentions here |
+| 🟢 [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) · [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 🟢 **`MIT`** | `1 066` · `1dc50226c38a` | 🆕 p229 called this a fork pair; the copyright line names `theopenem`, so the DIRECTION is now settled |
+| 🟢 [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 **`MIT`** | `1 070` · `5aef77eb4471` | 🆕 copyright names Dmitry Viskov → `ucfopen` is DOWNSTREAM, a direction p229 left open |
+| 🟢 [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) · [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | 🟢 **`MIT`** | `1 060` · `b6b29f11f74e` | same owner — shared boilerplate, **not** an alias claim |
+| 🟢 [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **`MIT`** | `1 086` · `24d0dca9f165` | confirmed |
+| 🟢 [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | 🟢 **`MIT`** | `1 068` · `9b14ba68d87c` | confirmed |
+| 🟢 [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 **`MIT`** | `1 077` · `7fb8e6113f43` | confirmed |
+| 🔴 [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) | 🔴 **`GPL-3.0`** *(canonical)* | `35 141` · `589ed823e9a8` | confirmed |
+| 🔴 [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🔴 **`GPL-2.0`** *(canonical)* | `18 027` · `111e1f411730` | confirmed |
+
+🔴 **`6` dotted names remain grantless at all `58` recorded paths, and the most-cited of them by a wide margin is [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) — `37` mentions on these shelves, no licence at any path this KB can reach.** 🟡 **It joins `ACTION PH`'s outward queue as its highest-cited member.**
+
+### 🔴 `T230-R3` — `UOC/java-lti-1.3-provider` is gone while its two siblings live
+
+🟡 **[`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) and [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) both resolve and both serve `MIT`. [`UOC/java-lti-1.3-provider`](https://github.com/UOC/java-lti-1.3-provider) does not resolve at all.** 🔵 **An example that outlives the library it exemplifies is a shape worth naming: the LTI `1.3` tier on these shelves now has three addresses from one owner, and the one a studio would actually depend on is the dead one.**
+
 ## 2026-10-15 — Pass 229 — `0` NEW TRENDING REPOS, AND THE REASON IS WORTH MORE THAN A ROW: THE SHELF'S OWN NAME-READER HAS BEEN TRUNCATING `31` REPOSITORIES AT THEIR FIRST DOT
 
 🔵 **`0` new repository rows. `5` of `5` candidates already carried *(seventh consecutive measured discovery rate)*. `30` grants newly readable on rows already here.**

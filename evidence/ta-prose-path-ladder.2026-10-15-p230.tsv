@@ -1,0 +1,38 @@
+# ACTION TA (p230) - probe the grant paths THESE SHELVES THEMSELVES RECORD, instead of a
+# vocabulary a pass invents. 58 paths harvested by SHAPE from the shelves' own prose
+# (harvest.py, ACTION TA half), probed against the 14 slugs p229 left unresolved plus the
+# 2 GRANT-BY-REFERENCE rows and 5 slugs p229 called ABSENT.
+#
+# LIMB 2 FIRES. The falsifier wanted 3+ of the 14 to resolve. 2 did, and BOTH are the two
+# positives the register itself seeded ("already proven 200, so the instrument starts with
+# two positives it must find"). NEW resolutions: 0 of 12.
+#
+# And the premise INVERTS. Neither hit is the repository's grant:
+#   anthropics/prompt-eng-interactive-tutorial  AmazonBedrock/LICENSE  = MIT-0, (c) Amazon.com Inc
+#   ProjectsAndPrograms/school-management-system student_panel/LICENSE = MIT, (c) Adityapayal26
+#                                                phpmailer/LICENSE     = LGPL-2.1, a vendored dep
+# A path a shelf RECORDED is a path at which somebody read A licence. It is not a path at
+# which THIS repository grants. T230-A1.
+slug	p229_state	p230_state	path	bytes	sha256_12	family	subject_of_the_token
+anthropics/prompt-eng-interactive-tutorial	NO-GRANT	HIT-NOT-A-GRANT	AmazonBedrock/LICENSE	947	7cb750713252	MIT-0	THIRD-PARTY SUBDIRECTORY - (c) Amazon.com, Inc., not Anthropic. MIT-0 is not MIT: no attribution clause
+ProjectsAndPrograms/school-management-system	NO-GRANT	HIT-NOT-A-GRANT	student_panel/LICENSE	1070	2c6bf77a1fc0	MIT	SUBDIRECTORY, (c) Adityapayal26 - not the repository owner
+ProjectsAndPrograms/school-management-system	NO-GRANT	HIT-NOT-A-GRANT	phpmailer/LICENSE	26529	a1a33180d029	LGPL-2.1	VENDORED DEPENDENCY - PHPMailer's grant, carried in-tree
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	NO-GRANT	NO-HIT	-	-	-	-	58 prose paths, none served
+Gaurav-Pande/AES_DL	NO-GRANT	NO-HIT	-	-	-	-	58 prose paths, none served
+ZQR1101/xueyoujing-companion	NO-GRANT	NO-HIT	-	-	-	-	58 prose paths, none served
+open-spaced-repetition/fsrs4anki-helper	NO-GRANT	NO-HIT	-	-	-	-	58 prose paths, none served
+CreveXTech/canvas-lms-mcp	CHANNEL-SILENT	NO-HIT	-	-	-	-	manifest 200 without a licence field; no body at any recorded path
+barneslardo/sis-demo	CHANNEL-SILENT	NO-HIT	-	-	-	-	manifest 200 without a licence field
+educredentials/ec-issuer	CHANNEL-SILENT	NO-HIT	-	-	-	-	manifest 200 without a licence field
+nicolaasmatthijs/xapicaliper	CHANNEL-SILENT	NO-HIT	-	-	-	-	manifest 200 without a licence field
+DMontgomery40/mcp-canvas-lms	FOREIGN-MANIFEST	NO-HIT	-	-	-	-	unchanged: manifest names 'canvas-mcp-server'
+LMS-Laravel/LMS-Laravel	FOREIGN-MANIFEST	NO-HIT	-	-	-	-	unchanged: manifest names 'laravel/laravel'
+LMS-Laravel/OLD-LMS-Laravel	FOREIGN-MANIFEST	NO-HIT	-	-	-	-	unchanged: manifest names 'laravel/laravel'
+alfredang/ai-mms	FOREIGN-MANIFEST	NO-HIT	-	-	-	-	unchanged: manifest names 'openmage/magento-lts'
+foradian/fedena	GRANT-BY-REFERENCE	HIT-REFERENCE	NOTICE	679	386aef9c0b40	Apache-2.0 by reference	unchanged: names the licence, serves no body
+projectfedena/fedena	GRANT-BY-REFERENCE	HIT-REFERENCE	NOTICE	680	38af3b29e417	Apache-2.0 by reference	unchanged; differs from foradian by ONE byte
+dmitry-viskov/pylti1.3	ABSENT(TRUNCATED)	RESOLVED	LICENSE	1070	5aef77eb4471	MIT	the repository's own grant - p229's ABSENT was ACTION TD's truncation
+jdolny/OneRoster.NET	ABSENT(TRUNCATED)	RESOLVED	LICENSE	1066	1dc50226c38a	MIT	(c) theopenem - settles fork DIRECTION, see td table
+gener8v/gener8v.tools.pii-scanner	ABSENT(TRUNCATED)	RESOLVED	LICENSE	1064	0df23c7822c2	MIT	(c) 2026 GENER8V - p229 carried the truncated 'gener8v/gener8v'
+jakerains/scormplayer	ABSENT	ABSENT	-	-	-	-	genuinely absent, confirmed by git ls-remote
+joojdev/academic-tracker-mcp	ABSENT	ABSENT	-	-	-	-	genuinely absent, confirmed by git ls-remote

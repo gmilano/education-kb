@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — THE EIGHTEENTH CONSECUTIVE UNIT-MISMATCH HEADLINE, AND THE UNIT IS A **RECORDED PATH**
+
+🔵 **Evidence:** [`ta-prose-path-ladder`](../evidence/ta-prose-path-ladder.2026-10-15-p230.tsv) · [`tb-lazy-quantifier-lint`](../evidence/tb-lazy-quantifier-lint.2026-10-15-p230.tsv) · [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-fork-direction`](../evidence/td-fork-direction.2026-10-15-p230.tsv)
+
+### 🔴 `T230-T1` — the unit of a RECORDED PATH is a READING, not a GRANT
+
+🟢 **Seventeen passes running, the headline here has been a unit mismatch: a licence's unit is a FILE, an alias's unit is a REPOSITORY SET, a bound's unit is an ECOSYSTEM, a claim's unit is a `(query, record)` pair. p230 is the eighteenth and the unit is the humblest yet.**
+
+🔴 **`ACTION TA` reasoned that if these shelves record the path at which a grant was read, that path list beats any vocabulary. The harvest was right. The INFERENCE was a unit error:**
+
+> 🔴 **A recorded path is a path at which SOMEBODY READ A LICENCE.
+> 🟢 A grant is a path at which THIS REPOSITORY GRANTS.
+> These are different objects, and `2` of `2` hits this pass are the first kind.**
+
+🔵 **`MIT-0` under `AmazonBedrock/LICENSE` in an Anthropic repository is Amazon's grant over a subdirectory. `LGPL-2.1` under `phpmailer/LICENSE` in a school management system is PHPMailer's grant over a vendored copy. Both are real, both are first-hand, both are correctly parsed, and NEITHER is the repository's.** 🟢 **Subjects `8` and `9` in the enumeration p228 started at five.**
+
+🟢 **And the discriminator falls out of the same read: COMPARE THE COPYRIGHT HOLDER WITH THE SLUG'S OWNER. `T229-M2` does this for a manifest's `name` field; it works on a licence body's third line, it costs nothing extra, and it would have caught both of this pass's false positives before they were written down.**
+
+### 🔴 `T230-T2` — the lazy quantifier is now a MEASURED class, not an anecdote, and the lint for it was itself truncated
+
+🟢 **p229 found the same defective shape in two instruments in one pass and asked whether it was systemic. `ACTION TB` built the test: expand the quantified character class and the terminator lookahead class, and INTERSECT them. A non-empty intersection means the instrument can stop inside its own subject.**
+
+🔵 **`51` instruments in `compose/code` use a lazy quantifier. `49` are perfectly safe — a grep for `*?` is NOT this lint, which is why eleven passes of eyeballing found nothing.** 🔴 **`2` are defective, both on the character `.`:**
+
+| instrument | status | what the truncation costs |
+|---|---|---|
+| `p228-shelf-gate/harvest_cells.py:17` | 🟡 already registered as `ACTION TD` | `31` names mangled, `24` never harvested |
+| 🆕 🔴 `p129-transcription-audit/bind_tags.py:9` | 🔴 **NEW — not previously known** | it binds every published *"N tags"* FIGURE to an ADDRESS across all ten live shelves, `README` included. A truncated address binds a real figure to a repository that does not exist |
+
+🔴 **And the finding worth carrying beyond this KB: THE FIRST DRAFT OF THE LINT WAS ITSELF TRUNCATED BY THE SAME FAMILY OF DEFECT, ON THE SAME CHARACTER CLASS IT HUNTS.** 🟢 **It captured a lookahead's body with `([^)]*)`. The terminator class of the very defect it is built to find BEGINS with `)`. So the draft read nothing, reported `0` findings across `326` instruments, and reported `0` on its own positive control — the only reason it was caught.** 🔵 **`T230-6`. A lint must be run against a KNOWN POSITIVE before its silence is believed, and this pass is the demonstration.**
+
+### 🟡 `T230-T3` — churn is a measurable property of a knowledge base, and it is `1.4%`
+
+🟢 **The first existence sweep here: `1 904` addresses, `1 862` live, `26` real absences — `1.4%` of `1 888` real slugs.** 🔵 **That is the number a reader needs to interpret every other table on these shelves, and no pass before this one could state it.**
+
+🔴 **The churn is not uniform, which is the trend:**
+- 🔴 **`8` of the `26` are single-author MCP servers** — the tier this KB has repeatedly flagged as having no institution behind it. They are the fastest-appearing and the fastest-disappearing rows here.
+- 🔴 **`5` are STANDARDS reference implementations** *(Caliper ×4, Open Badges)* — the slowest-moving tier, and the most load-bearing. Standards bodies archive; hobbyists delete; both end as a `404`.
+- 🟢 **`1` of the `26` is a MOVE, proven** *(`apereo/opencast` → `opencast/opencast`)*. 🟡 **`MOVED` and `GONE` are indistinguishable in a dead-link table and completely different in a proposal, and separating them costs one extra probe per row.**
+
+🔵 **Standing rule proposed and registered as `ACTION TF`: every trending row carries a LAST-SEEN date, and the sweep runs each pass. One request per address is the cheapest instrument this KB has ever built, and it is the only one that can tell a reader whether a four-pass-old row still exists.**
+
 ## Pass 229 — 2026-10-15 — THE SEVENTEENTH CONSECUTIVE UNIT-MISMATCH HEADLINE, AND THIS ONE IS A CHARACTER CLASS
 
 🔵 **Evidence:** [`sw-slug-truncation`](../evidence/sw-slug-truncation.2026-10-15-p229.tsv) · [`sx-withdrawn-gate`](../evidence/sx-withdrawn-gate.2026-10-15-p229.tsv) · [`p229-regional-queries`](../evidence/p229-regional-queries.2026-10-15-p229.tsv)

@@ -1,0 +1,19 @@
+# ACTION RE (honoured a TWELFTH time) - the verbatim query behind every finding AND every
+# blank. ACTION SQ's permanent Europe line is row 7.
+#
+# The standing result from p228 reproduces for a THIRD consecutive pass: a region-shaped
+# query returns education content only where the region has PAN-REGIONAL INSTITUTIONS
+# publishing about it as a unit. LATAM has UNESCO IESALC, the Digital Education Council and
+# the IDB, and its region query outperformed every other. EMEA and APAC are vendor sales
+# territories, and both returned ZERO education-specific records for the third time running.
+region	verbatim query	education-specific records	what it returned
+Global	top open source AI agents education 2026 github MIT	2	microsoft/ai-agents-for-beginners and pguso/agents-from-scratch - BOTH already carried. Hermes Agent's "180,000+ stars" is single-vendor and NOT published here
+Global	github trending education AI 2026	1	rohitg00/ai-engineering-from-scratch - already carried (131 mentions). TENTH consecutive run of this mandated query returning teaching material rather than an education agent
+Global	open source platform education ERP CRM MIT Apache	1	OpenEduCat, already carried. The search's own conclusion: "I found no education ERP that is clearly MIT or Apache licensed" - which matches this KB's platform tier exactly
+Global	AI education industry trends 2026	0 new	Market range widens again: IMARC $6.4B 2025 -> $79.6B 2034 @31.35%; TBRC $7.52B 2025 -> $10.6B 2026 @40.9%. A THIRD source projects ~28% 2026-2036 and argues institutional procurement lags consumer adoption
+North America	AI education North America 2026 adoption regulation players	3	10% of institutions with formal AI guidelines; 71% of US teachers lacking AI training; "education AI operates in a relative regulatory vacuum", Colorado and Texas piecemeal. CARRIED A REFUTED CLAIM - see sh-inbound-gate-run
+EMEA	AI education EMEA 2026 adoption regulation players	0	DECLARED BLANK, third consecutive pass. Returned CompTIA IT strategy, a 2023 Workday finance study and a Bandwidth-Cavell enterprise-communications report. Not one education source
+APAC	AI education APAC 2026 adoption regulation players	3 (corporate L&D only)	TCS-Pearson multi-year AI learning alliance; LearnUpon Sydney HQ; Alteryx academy relaunch. ZERO on K-12, higher education or any education ministry. DECLARED BLANK for formal education
+LATAM	AI education LATAM 2026 adoption regulation players	5	Digital Education Council LATAM 2026: 92% of students and 79% of faculty engaging with AI, 30 000+ responses, 29 institutions. UNESCO IESALC: 200 institutions, 19 countries - teaching 73.5%, research 57.0%, administration 34.1%, engagement 20.0%. Only 30% of LATAM universities have published an AI policy
+EMEA	Germany Sweden Netherlands national AI in education strategy ministry 2026	2	ACTION SQ, PERMANENT LINE. Germany's KMK recommendation REPRODUCES at October 2024 for a THIRD pass. NEW: BMFTR national AI strategy update, OECD.AI entry updated June 2026, 50+ existing and 20+ new measures, EUR 1.6B, education named among target audiences. Netherlands BLANK a FIFTH time. Sweden: nothing newer than the 2019 national AI vision
+EMEA	EU AI Act August 2026 high-risk education obligations schools universities	4	Annex III point 3 scope reproduced; the 2027-12-02 deferral CORROBORATED with its legislative dates; Article 50 and Article 4 unmoved. Article 27 FRIA duty for public-law deployers - NEW on these shelves

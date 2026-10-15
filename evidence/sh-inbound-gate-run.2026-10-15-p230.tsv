@@ -1,0 +1,18 @@
+# ACTION SH (standing since p226) - the refuted-claims gate run INBOUND on p230's raw
+# search records, BEFORE any shelf prose was written. Honoured a FIFTH time.
+# Table: st-refuted-claims.2026-10-15-p228.tsv (15 subjects). Records: 34 across 8 verbatim queries.
+#
+# RESULT: 2 HITS. The FIRST inbound catches in four runs of this gate.
+#
+# p229 wrote that three consecutive silent runs had made the gate "a cheap regression
+# harness rather than a detector". p230 is the pass that refutes that reading: the subject
+# it caught is the single most commercially consequential date on these shelves, it came
+# back through the MANDATED query, and it came from TWO independent sources in one pass.
+subject	query	record	verdict
+EU AI Act Annex III education high-risk date	AI education North America 2026 adoption regulation players	"The same source notes the EU AI Act classifies education AI as high-risk, with full effect in August 2026."	HIT - refuted. Annex III education applies 2027-12-02; 2026-08-02 is Article 50 transparency
+EU AI Act Annex III education high-risk date	EU AI Act August 2026 high-risk education obligations schools universities	"Another source says the Act officially began its application to high-risk AI systems in education in early August 2026."	HIT - refuted, FIFTH reproduction of this claim on these shelves
+EU AI Act Annex III education high-risk date	EU AI Act August 2026 high-risk education obligations schools universities	"the European Parliament formally endorsed the deal on 16 June 2026 and the Council of the EU gave its final green light on 29 June 2026, pushing the AI Act's high-risk obligations for stand-alone Annex III systems from 2 August 2026 to 2 December 2027"	CORROBORATION - this KB's correction, from a channel never cited here, and it supplies the two LEGISLATIVE DATES the correction never carried
+EU AI Act Annex III education high-risk date	EU AI Act August 2026 high-risk education obligations schools universities	"the Article 50 transparency duty largely proceeds on the original 2 August 2026 schedule"	CORROBORATION - the Article 50 half of the same correction
+EU AI Act Annex III education high-risk date	EU AI Act August 2026 high-risk education obligations schools universities	"AI literacy under Article 4 has also been in force since February 2025"	CORROBORATION - the third limb, matching this KB's 2025-02-02
+openeducat bare LGPL-3.0 read as a silence	open source platform education ERP CRM MIT Apache	"OpenEduCat is built on an open-source ERP framework... The results don't state OpenEduCat's license or Odoo's"	NEAR-MISS-CORRECTLY-SILENT: declares ignorance of the grant rather than mis-stating it
+p221 census 94.3% as unspecified GRANTS	-	-	no record this pass

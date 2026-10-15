@@ -1,0 +1,13 @@
+# ACTION TB (p230) - the LAZY-QUANTIFIER lint. LIMB 1 FIRES at 2.
+#
+# The test is mechanical: expand the quantified character class and the terminator
+# lookahead class and INTERSECT them. A non-empty intersection means the instrument can
+# stop inside its own subject. An empty one means a lazy quantifier that is perfectly safe,
+# which most of the 51 in compose/code are - a grep for `*?` is NOT this lint.
+#
+# Positive control: p228's SLUG_RE, overlap {'.'} - FLAGGED.
+# Negative control: p230's own greedy harvest.py SLUG_RE - NOT flagged.
+# Sweep: 326 instrument directories, every *.py outside fixtures/.
+instrument	line	overlap	status	what the truncation costs
+compose/code/p228-shelf-gate/harvest_cells.py	17	.	ALREADY REGISTERED as ACTION TD	31 dotted repository names mangled; 24 never harvested at all
+compose/code/p129-transcription-audit/bind_tags.py	9	.	NEW - not previously known	binds every published 'N tags' FIGURE to an ADDRESS across all 10 live shelves, README included. A truncated address binds a real figure to a repository that does not exist

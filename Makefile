@@ -38,7 +38,16 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p229-grant-ladder-reach (reach, foreign manifest, withdrawn cells, query key)"; \
 	cd compose/code/p229-grant-ladder-reach && $(PY) test_grant_ladder_reach.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p230-prose-path-ladder (greedy slug, prose paths, the lazy-quantifier lint)"; \
+	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS"; \
+	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
+	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
+
+exists: ## ACTION TC — one `git ls-remote` per slug: existence, default branch, HEAD
+	@$(PY) -I compose/code/p230-prose-path-ladder/harvest.py . slugs > /tmp/p230-slugs.tsv
+	@compose/code/p230-prose-path-ladder/exists.sh /tmp/p230-slugs.tsv /tmp/p230-exists.tsv
+	@awk -F'\t' '{print $$2}' /tmp/p230-exists.tsv | sort | uniq -c
 
 gate-online: ## needs raw.githubusercontent.com — re-read the shelves' grants first-hand
 	@echo "usage: compose/code/p229-grant-ladder-reach/ladder.sh <slugs-file> <out-dir>"

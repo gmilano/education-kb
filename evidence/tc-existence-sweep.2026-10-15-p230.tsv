@@ -1,0 +1,42 @@
+# ACTION TC (p230) - EXISTENCE re-probed across EVERY slug these shelves carry.
+# LIMB 1 FIRES at 26 against a threshold of 5.
+#
+# Run on the FIXED harvest (ACTION TD), never on p228's truncated one - which is the whole
+# reason 3 of p229's 6 ABSENT rows turned out to be the harvester's own fault.
+#
+# 1904 distinct slugs harvested -> 1862 LIVE, 42 did not resolve, of which:
+#     8  are not repositories at all  (github.com/topics/*, /trending/*, /search/*)
+#     3  are placeholders             (OWNER/REPO, owner/repo, yourusername/*)
+#     5  are deliberate negative controls planted by earlier passes
+#    26  are REAL absences            = 1.4% of the 1888 real slugs
+#
+# Two sub-classes, and they are NOT the same finding:
+#   MOVED - the address is dead, the project is alive elsewhere. PROVEN for exactly one.
+#   GONE  - no address this pass could construct resolves.
+slug	state	sub_class	note
+apereo/opencast	ABSENT	MOVED	opencast/opencast is LIVE and probed this pass. The shelves' address is the pre-move one
+1EdTech/caliper-java	ABSENT	GONE	1EdTech Caliper Analytics reference implementation. imsglobal/caliper-java also ABSENT
+1EdTech/caliper-js	ABSENT	GONE	same family
+1edtech/caliper-php	ABSENT	GONE	same family
+imsglobal/caliper-python	ABSENT	GONE	same family under the pre-rename org. BOTH org spellings dead
+concentricsky/badgr-server	ABSENT	GONE	Open Badges reference server. 1EdTech/badgr-server also ABSENT
+yetanalytics/lrspipe	ABSENT	GONE	xAPI LRS pipeline. yetanalytics/lrs-pipe also ABSENT
+Epesi-Team/epesi	ABSENT	GONE	epesi/epesi also ABSENT
+UOC/java-lti-1.3-provider	ABSENT	GONE	sibling UOC/java-lti-1.3 and UOC/java-lti-1.3-provider-example are LIVE
+LongsightGroup/qti3-core	ABSENT	GONE	-
+Eduware-Inc/eduware-oneroster	ABSENT	GONE	-
+Ahmed-html/unlimited-ai-platform	ABSENT	GONE	-
+EastArctica/canvas-mcp	ABSENT	GONE	MCP tier churn
+NiccoloSalvini/mcp-moodle-staff	ABSENT	GONE	MCP tier churn
+NiccoloSalvini/mcp-moodle-teacher	ABSENT	GONE	MCP tier churn
+a-ariff/canvas-instant-mcp	ABSENT	GONE	MCP tier churn
+cdweaver1992/edfi-mcp-server	ABSENT	GONE	MCP tier churn
+radhepa/Teacher-MCP	ABSENT	GONE	MCP tier churn
+tuanha/vgu-mcp	ABSENT	GONE	MCP tier churn
+joojdev/academic-tracker-mcp	ABSENT	GONE	MCP tier churn - carried from p229
+jakerains/scormplayer	ABSENT	GONE	carried from p229
+fh-yarbouh/oak-curriculum-ontology	ABSENT	GONE	-
+invincible-summer/Next-Tutor-Agent	ABSENT	GONE	-
+openfresno/edgenuity-aeries-grade-passback	ABSENT	GONE	-
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit	ABSENT	GONE	AI Act FRIA tooling - the governance tier loses a row
+superbuilders/timeback-dev-python	ABSENT	GONE	-

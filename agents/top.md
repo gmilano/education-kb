@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — `ACTION TA` HARVESTED THE GRANT PATHS THESE SHELVES THEMSELVES RECORD, AND ITS **PREMISE INVERTED**: BOTH OF ITS ONLY TWO HITS ARE SOMEBODY ELSE'S LICENCE
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `3` of `3` verifiable candidates from this pass's global queries were ALREADY CARRIED, published as a measurement for an EIGHTH consecutive pass rather than padded. `4` registered actions discharged: `TA` on limb `2` at `0` of `12`, `TB` on limb `1` at `2`, `TC` on limb `1` at `26`, `TD` on limb `2` at `0` — plus the standing `SH`, `RE`, `SQ` and `PD`. `25` repository names harvested that p228's reader could not see. `2` subject classes added to p229's seven. `8` defects found in this pass's own instruments before publishing — the most of any pass here, and one of them is the same family as the defect under investigation.**
+
+🔵 **Evidence:** [`ta-prose-path-ladder`](../evidence/ta-prose-path-ladder.2026-10-15-p230.tsv) · [`tb-lazy-quantifier-lint`](../evidence/tb-lazy-quantifier-lint.2026-10-15-p230.tsv) · [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv) · [`td-fork-direction`](../evidence/td-fork-direction.2026-10-15-p230.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p230.tsv) · [`p230-regional-queries`](../evidence/p230-regional-queries.2026-10-15-p230.tsv) · [`pd-channel-map`](../evidence/pd-channel-map.2026-10-15-p230.tsv) · **Instrument:** [`p230-prose-path-ladder`](../compose/code/p230-prose-path-ladder/README.md) *(`33` controls)*
+
+### 🔴 `T230-A1` — the headline: a path a shelf RECORDED is not a path at which THIS repository grants
+
+🟢 **`ACTION TA` was registered as p230's highest priority on a good argument. `ACTION SW` had just proved that a fixed vocabulary cannot close the grantless class — `moodle/moodle`, the most load-bearing row on these shelves, sat in it because `COPYING.txt` was not among the `40` paths p229 invented. So p230 stopped inventing and harvested the paths these shelves ALREADY WRITE DOWN: `58` of them, matched by SHAPE rather than by name, so a path no pass has thought of is found the first time somebody records it.**
+
+🔴 **Limb `1` wanted `3`+ of the `14` unresolved slugs to resolve. `2` did. Both are the two positives the register itself seeded — *"already proven `200`, so the instrument starts with two positives it must find"*. NEW resolutions: `0` of `12`.**
+
+🔴 **And then the two it did find turned out not to be grants at all.**
+
+| slug | path | grant read first-hand | whose licence it actually is |
+|---|---|---|---|
+| [`anthropics/prompt-eng-interactive-tutorial`](https://github.com/anthropics/prompt-eng-interactive-tutorial) | `AmazonBedrock/LICENSE` *(`947` B, `7cb750713252`)* | 🔴 **`MIT-0` — "MIT No Attribution"** | 🔴 **`Copyright Amazon.com, Inc. or its affiliates`** — a third party's grant over one subdirectory. The repository itself grants nothing |
+| [`ProjectsAndPrograms/school-management-system`](https://github.com/ProjectsAndPrograms/school-management-system) | `student_panel/LICENSE` *(`1 070` B, `2c6bf77a1fc0`)* | 🟡 `MIT` | 🔴 **`Copyright (c) 2022 Adityapayal26`** — not the repository's owner |
+| [`ProjectsAndPrograms/school-management-system`](https://github.com/ProjectsAndPrograms/school-management-system) | `phpmailer/LICENSE` *(`26 529` B, `a1a33180d029`)* | 🔴 `LGPL-2.1` | 🔴 **PHPMailer's — a VENDORED DEPENDENCY carried in-tree** |
+
+🟢 **So `ACTION TA`'s premise inverts in the cleanest way available: the harvest worked, the ladder did not, and the reason is a unit error the action did not anticipate. A path these shelves recorded is a path at which somebody read *a* licence. It is not a path at which *this repository* grants.** 🔴 **`MIT-0` is also not `MIT`: it removes the attribution requirement, so even the family token would have been wrong if the cell had been written.**
+
+🔵 **Two new subjects, taking p229's seven to NINE:** `THIRD-PARTY-SUBDIRECTORY-GRANT` *(a licence contributed by another organisation over part of a tree)* and `VENDORED-DEPENDENCY-GRANT` *(a dependency's licence carried in-tree)*. 🟢 **Both are instances of one cheap discriminator this KB did not have: COMPARE THE COPYRIGHT HOLDER WITH THE SLUG'S OWNER. `T229-M2` does this for a manifest's `name`; it works on a licence body's third line too, and it is one read.**
+
+🟡 **The honest statement of the class after two passes of work on it: of the `45` slugs p228 called `CELL-WITHOUT-GRANT`, `23` had a grant all along *(p229)*, `12` are grantless at every path these shelves can name *(p230)*, `4` carry a foreign manifest, `2` grant by reference and `3` were never slugs — and `ACTION PH`'s outward queue is the only remaining route for the `12`.**
+
+### 🔴 `T230-A2` — the fork DIRECTION, settled by the line p228's hash rule steps over
+
+🟢 **p228 established a rule and it is correct: a licence-body HASH never evidences an alias, because it fingerprints the CANONICAL TEXT — [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) and [`UniTime/unitime`](https://github.com/UniTime/unitime) serve a byte-identical `Apache-2.0` body and are unrelated.**
+
+🔴 **An `MIT` body is not canonical text alone. Its third line carries a COPYRIGHT HOLDER, and that names a project.**
+
+| pair | shared `sha256`₁₂ | the copyright line, read first-hand | direction |
+|---|---|---|---|
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ↔ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | `1dc50226c38a` *(`1 066` B)* | 🟢 **`Copyright (c) 2020 theopenem`** | 🟢 **`theopenem` is UPSTREAM** |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) ↔ [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `5aef77eb4471` *(`1 070` B)* | 🟢 **`Copyright (c) 2019 Dmitry Viskov`** | 🟢 **`dmitry-viskov` is UPSTREAM** |
+
+🔵 **`ACTION SI` has carried "settle direction for the remaining alias pairs" for four passes with no channel. This is one, it costs a single read, and it is FAMILY-BOUND: `GPL`, `AGPL`, `LGPL` and `EPL` canonical bodies carry the FSF's or the Eclipse Foundation's copyright, never the project's, so the discriminator works for `MIT` and `BSD` and for nothing else.** 🟡 **p229 recovered both pairs and correctly called them FORK PAIRS rather than aliases. What it could not do is say WHICH WAY — and that is one line of the body it had already fetched.**
+
+### 🟢 `T230-A3` — `3` of `3` candidates already carried, and the mandated query pays out for a TENTH run as teaching material
+
+🟢 **This pass's global queries returned `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch` and `rohitg00/ai-engineering-from-scratch` — all three already on these shelves, with `122`, `104` and `131` mentions respectively.** 🔴 **One candidate was NOT published: a vendor review's claim that a "Hermes Agent" from Nous Research has *"180,000+ GitHub stars since its February 2026 launch"*. Single-source, vendor-authored, and the figure is implausible against every verified count here. Recorded as a blank with its query, not as a row.** 🔵 **`ACTION SR`'s DISCOVERY SATURATION holds for an eighth pass, and the budget went to depth: `25` names recovered, `18` grants read, `1 904` addresses re-probed.**
+
 ## Pass 229 — 2026-10-15 — `23` OF THE `45` "GRANTLESS" SLUGS WERE NEVER GRANTLESS: THE LADDER WAS SIX NAMES AND TWO GUESSED BRANCHES, AND FOUR OF THE "MISSING" REPOSITORIES WERE THE HARVESTER'S OWN TRUNCATIONS
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `5` of `5` verifiable candidates from this pass's global queries were ALREADY CARRIED, published as a measurement rather than padded. `6` registered actions discharged: `SW` *(the registered highest priority)* on limb `1` at `23`, `SX` on limb `2`, `SY` on limb `1` at `6`, `SZ` on limb `1`, plus the standing `SH`, `RE` and `PD`. `ACTION QO` CLOSED after ELEVEN passes — the gate is a `make` target. `124` live cells confirmed, `0` wrong. `30` grants newly readable. `2` defects found in this pass's own instruments before publishing.**

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — THE FIRST EXISTENCE SWEEP: `26` OF THESE SHELVES' ADDRESSES ARE DEAD, AND FIVE OF THEM ARE THE REFERENCE IMPLEMENTATIONS OF TWO `1EdTech` STANDARDS THIS KB RECOMMENDS BUILDING ON
+
+⏱️ **Third pass of this date.** p228 and p229 both ran earlier on 2026-10-15; this one ran 21:4x → 22:5x UTC. Stated because these shelves pin SHAs and three passes sharing a date is exactly what a later pass needs to disambiguate.
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows — `3` of `3` verifiable candidates from this pass's global queries were ALREADY CARRIED, published as a measurement for an EIGHTH consecutive pass rather than padded. `4` registered actions discharged: `TA` on limb `2` at `0` of `12`, `TB` on limb `1` at `2`, `TC` on limb `1` at `26`, `TD` on limb `2` at `0`, plus the standing `SH`, `RE`, `SQ` and `PD`. `1 904` addresses re-probed, `25` repository names harvested that p228's reader could not see *(p229 recovered `8` of them by hand)*, `18` grants read first-hand, `0` published cells wrong, `2` fork DIRECTIONS settled by a copyright line. `8` defects found in this pass's own instruments before publishing.**
+
+### 🔴 The supply finding: the standards layer has no retrievable reference code
+
+`ACTION TC` ran one `git ls-remote --symref` per slug across every live shelf — the first existence sweep in this KB's history. `1 862` of `1 904` addresses resolve. Of the `42` that do not, `8` were never repositories *(`github.com/topics/*`, `/trending/*`)*, `3` are placeholders, `5` are deliberate negative controls, and **`26` are real absences — `1.4%`**.
+
+They are not randomly distributed. **Five are the Caliper Analytics reference implementations *(Java, JS, PHP, Python)* and the Open Badges reference server**, dead under BOTH the `imsglobal` and `1EdTech` org spellings, so this is not the 2022 rename leaving a stale address behind. **Eight more are single-author MCP servers.** The slowest-moving tier here and the fastest-moving one are failing the same way. Exactly one of the `26` is a MOVE rather than a loss, and it is proven: `apereo/opencast` → [`opencast/opencast`](https://github.com/opencast/opencast), live.
+
+What that means for a proposal is in [`compose/patterns.md`](compose/patterns.md) `P230-R3`: a Caliper or Open Badges scope is a BUILD, not an integration.
+
+### 🔴 `ACTION TA`'s premise inverted — a recorded path is not a grant
+
+p229 proved a fixed vocabulary cannot close the grantless class. So p230 harvested the `58` grant paths **these shelves themselves record**, by shape rather than by name. The harvest worked; the ladder did not. `0` new resolutions of `12`, and the only `2` hits were the positives the register itself seeded — **and neither is the repository's own licence**: `MIT-0` copyrighted to Amazon.com in an Anthropic repository, and `LGPL-2.1` from a vendored PHPMailer in a school SIS. Subjects `8` and `9` in the enumeration p228 began at five, and a one-read discriminator falls out of them: **compare the copyright holder with the slug's owner.**
+
+### 🟢 The name reader is fixed in the INSTRUMENT, not by hand
+
+`ACTION TD` replaced a lazy repository-name quantifier whose terminator class contained `.`. p229 recovered `8` of the truncated names by hand; the harvester now finds all `25`, every pass, with controls. `0` of their published cells are wrong.
+
+The pass's correction is not a licence — it is that **two of p229's own tables disagree about whether three repositories exist**. [`sw-grant-ladder-reach`](evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) carries `processing/p5`, `dmitry-viskov/pylti1` and `jdolny/OneRoster` as *"does not resolve at all"*, while [`sw-recovered-slugs`](evidence/sw-recovered-slugs.2026-10-15-p229.tsv), from the same hour, carries their true names with grants. Both are internally right — one is keyed on the truncated string — and a reader of the first alone drops a usable component. The existence sweep now keys on the fixed harvest, so they cannot disagree again.
+
+### 🔴 `ACTION SH` fired for the first time in four runs, on the date that matters most
+
+`2` HITS on `34` records: two unrelated sources, one reached through the **mandated** North America query, both claiming the EU AI Act's education high-risk obligations took effect in **August 2026**. They did not. Annex III point `3` applies **`2027-12-02`**; `2026-08-02` is Article `50` transparency, a different obligation, and it IS live. The same pass delivered this correction's first real corroboration — European Parliament `2026-06-16`, Council `2026-06-29` — plus a duty new to these shelves: **Article `27`'s Fundamental Rights Impact Assessment for deployers governed by public law**, which a state university is.
+
+### 🟢 `make hooks` grows a lint, and a suite that passes from anywhere
+
+`32` new controls. The lazy-quantifier lint expands a quantifier's target class and its terminator class and intersects them — `51` instruments use a lazy quantifier, `49` are safe, `2` are not. **Its first draft reported `0` findings, including on its own positive control, because its lookahead capture was truncated by the very character class it hunts.** Believe a lint's silence only after a known positive.
+
+🔵 **Instrument:** [`p230-prose-path-ladder`](compose/code/p230-prose-path-ladder/README.md) *(`33` controls)* · **Full register with falsifiers:** [`intel/open-gaps.md`](intel/open-gaps.md)
+
 ## Pass 229 — 2026-10-15 — `23` OF THE `45` "GRANTLESS" SLUGS HAD A LICENCE ALL ALONG, AND FOUR OF THE "MISSING REPOSITORIES" WERE THIS KB'S OWN REGEX CUTTING A NAME AT ITS FIRST DOT
 
 ⏱️ **Second pass of this date.** p228 ran earlier on 2026-10-15; this one ran 20:4x → 21:3x UTC. Stated because these shelves pin SHAs and two passes sharing a date is exactly what a later pass reads as a contradiction.

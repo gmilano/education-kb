@@ -1,0 +1,53 @@
+# ACTION TD (p230) - SLUG_RE fixed and the dotted names re-gated.
+# LIMB 2 FIRES on the letter of the falsifier: 0 cells disagree with their repository.
+# But the falsifier's phrasing - "the truncation cost only coverage" - is WRONG in two ways
+# this table records.
+#
+# THE FIX. p228: ([A-Za-z0-9][A-Za-z0-9_.-]*?)(?=[)\s`,.;:'"\]]|$)   LAZY, terminator holds `.`
+#          p230: ([A-Za-z0-9][A-Za-z0-9_.-]*)(?=[)\s`,;:'"\]]|$)     GREEDY, terminator drops `.`
+# plus: a trailing `.git` is a clone URL's suffix, not part of the name (T230-1), and a
+# sentence-final period is STRIPPED in post, which is a different operation from stopping at one.
+#
+# 25 dotted names now harvest. 18 carry a grant readable first-hand. 0 published cells wrong.
+#
+# WHAT p230 ADDS OVER p229's HAND RECOVERY, stated precisely because p229 did much of this:
+#   p229's sw-recovered-slugs recovered 8 of these names by hand and celled nakafa.com as
+#   NONCOMMERCIAL-NOT-OSI. p230 does not re-discover that. It adds:
+#   1. THE HARVESTER. 25 names, found by the instrument every pass, with 33 controls and a
+#      make target - not 8 names found by hand once.
+#   2. AN INTRA-PASS CONTRADICTION. p229's sw-grant-ladder-reach carries processing/p5,
+#      dmitry-viskov/pylti1 and jdolny/OneRoster as "slug does not resolve at all" while
+#      sw-recovered-slugs, written the same hour, carries their TRUE names with grants.
+#      Both tables are internally right - the first is keyed on the truncated string - and
+#      nothing in it says so. A reader of the first alone drops a usable component.
+#   3. THE INSTRUMENT NAMED. nakafa.com's token NONCOMMERCIAL-NOT-OSI / NOASSERTION resolves
+#      on a first-hand read to "Nakafa Source Available License 1.0", effective 2026-04-24,
+#      (c) PT NAKAFA TEKNO KREATIF, whose own text reads "This is not an open-source license."
+#      A token tells a studio not to build; a named instrument is what counsel reviews.
+#   4. TWO FORK DIRECTIONS, settled by the copyright line - see td-fork-direction.
+slug	mentions	published_cell	first_hand	bytes	sha256_12	verdict
+nakafaai/nakafa.com	6	NONCOMMERCIAL-NOT-OSI (p229)	Nakafa Source Available License 1.0 (eff. 2026-04-24, "This is not an open-source license")	7705	de3d94045061	TOKEN -> NAMED INSTRUMENT. p229's cell was right; p230 names the licence and its effective date
+processing/p5.js	5	LGPL-2.1	LGPL-2.1 (license.txt)	24480	eb2f25f8f165	CONFIRMED to the byte AND the sha, against both p229's recovery table and this KB's foundation row
+dmitry-viskov/pylti1.3	28	MIT	MIT	1070	5aef77eb4471	CONFIRMED against p229's recovery; p229's OTHER table called 'dmitry-viskov/pylti1' ABSENT
+jdolny/OneRoster.NET	10	MIT	MIT, (c) 2020 theopenem	1066	1dc50226c38a	CONFIRMED against p229's recovery; its other table called 'jdolny/OneRoster' ABSENT. See FORK DIRECTION
+theopenem/OneRoster.NET	5	MIT	MIT, (c) 2020 theopenem	1066	1dc50226c38a	CONFIRMED
+ucfopen/pylti1.3	4	MIT	MIT, (c) 2019 Dmitry Viskov	1070	5aef77eb4471	CONFIRMED
+gener8v/gener8v.tools.pii-scanner	1	MIT	MIT, (c) 2026 GENER8V	1064	0df23c7822c2	reproduces p229's recovery exactly
+JuliaPluto/Pluto.jl	1	NONE	MIT	1082	14cccff4d3e1	NEWLY READABLE
+UOC/java-lti-1.3	2	MIT	MIT	1060	b6b29f11f74e	CONFIRMED
+UOC/java-lti-1.3-provider-example	2	MIT	MIT	1060	b6b29f11f74e	CONFIRMED - byte-identical to its sibling, SAME OWNER, so no alias claim
+dmitry-viskov/pylti1.3-django-example	2	MIT	MIT	1070	1672e02f459e	CONFIRMED - same byte count as the parent, DIFFERENT sha
+dmitry-viskov/pylti1.3-flask-example	2	MIT	MIT	1070	1672e02f459e	CONFIRMED - identical to its django sibling
+dkavargy/ESCOPlus2.0	1	MIT	MIT	1086	24d0dca9f165	CONFIRMED
+paurushrai/lti-1.3-node-nextjs-starter	5	MIT	MIT	1068	9b14ba68d87c	CONFIRMED
+ramsrigouthamg/Questgen.ai	3	MIT	MIT	1077	7fb8e6113f43	CONFIRMED
+fga-eps-mds/2017.2-MerendaMais	1	GPL-3.0	GPL-3.0 (canonical body)	35141	589ed823e9a8	CONFIRMED
+ipti/br.tag	1	GPL-2.0	GPL-2.0 (canonical body)	18027	111e1f411730	CONFIRMED
+eclipse/paho.mqtt.java	2	NONE	EPL - 519 B LICENSE is a REFERENCE, not a body; NOTICE 1610 B	519	44ad51523c20	NEWLY READABLE, as a REFERENCE
+JushBJJ/Mr.-Ranedeer-AI-Tutor	37	NONE	no grant at 58 recorded paths	-	-	NO-GRANT - and the most-cited uncelled slug on these shelves
+eecs-autograder/autograder.io	1	NONE	no grant at 58 recorded paths	-	-	NO-GRANT
+jp-cos/jp-cos.github.io	1	NONE	no grant at 58 recorded paths	-	-	NO-GRANT
+lamethods/lamethods.github.io	1	NONE	no grant at 58 recorded paths	-	-	NO-GRANT
+scrosseye/persuade_corpus_2.0	3	NONE	no grant at 58 recorded paths	-	-	NO-GRANT
+UOC/java-lti-1.3-platform	1	NONE	no grant at 58 recorded paths	-	-	NO-GRANT
+UOC/java-lti-1.3-provider	1	NONE	-	-	-	ABSENT - the slug does not resolve (ACTION TC)

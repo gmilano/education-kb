@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — THE PLATFORM TIER IS RE-PROBED FOR EXISTENCE FOR THE FIRST TIME, AND IT HOLDS — BUT THE STANDARDS LAYER UNDERNEATH IT DOES NOT
+
+🔵 **`0` new platform rows *(`1` of `1` named platform already carried, for a FOURTH pass)*. All `9` platform-tier addresses confirmed LIVE. `1` adjacent platform confirmed GONE, `1` confirmed MOVED.** 🔵 **Evidence:** [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv)
+
+### 🟢 `P230-V1` — every platform this KB recommends still resolves
+
+🟢 **`ACTION TC` swept `1 904` addresses. The platform tier lost NOTHING: [`moodle/moodle`](https://github.com/moodle/moodle), [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform), [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms), [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), [`frappe/lms`](https://github.com/frappe/lms), [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), [`UniTime/unitime`](https://github.com/UniTime/unitime), [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst), [`Elgg/Elgg`](https://github.com/Elgg/Elgg), [`GibbonEdu/core`](https://github.com/GibbonEdu/core), [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis), [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic), [`formalms/formalms`](https://github.com/formalms/formalms), [`acanas/swad-core`](https://github.com/acanas/swad-core) and [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) all resolve with a default branch and a `HEAD`.**
+
+🔵 **The `4` permissively buildable platforms are unchanged and all four are LIVE: `OpenOlat` *(`Apache-2.0`)*, `UniTime` *(`Apache-2.0`)*, `pupilfirst` *(`MIT`, code)* and `Elgg` *(`MIT` OR `GPL-2.0`, dual)*.**
+
+### 🔴 `P230-V2` — what DID disappear is the layer a platform integrates through
+
+🔴 **The adjacent tier lost `11` addresses, and the losses are structural rather than random:**
+
+| what a client asks for | the address this KB recorded | state |
+|---|---|---|
+| **Caliper Analytics** *(learning analytics standard)* | `1EdTech/caliper-{java,js}`, `1edtech/caliper-php`, `imsglobal/caliper-python` | 🔴 **all four GONE, both org spellings** |
+| **Open Badges** *(credentialing)* | `concentricsky/badgr-server`, `1EdTech/badgr-server` | 🔴 **GONE** |
+| **xAPI pipeline** | `yetanalytics/lrspipe` | 🔴 **GONE** |
+| **QTI 3** *(assessment interchange)* | `LongsightGroup/qti3-core` | 🔴 **GONE** |
+| **OneRoster** *(rostering)* | `Eduware-Inc/eduware-oneroster` | 🔴 **GONE** — 🟢 but [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) and [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) are LIVE and `MIT` |
+| **LTI 1.3** | `UOC/java-lti-1.3-provider` | 🔴 **GONE** — 🟢 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) *(`MIT`)*, [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) *(`MIT`)*, [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) *(`MIT`)* and [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) *(`MIT`)* are LIVE |
+| **lecture capture** | `apereo/opencast` | 🟡 **MOVED** → 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) |
+| **PHP business framework** | `Epesi-Team/epesi` | 🔴 **GONE**, both spellings |
+
+🟢 **What a studio does with this: the LMS layer is solid and the ROSTERING and LTI layers are solid under different addresses than this KB used to reach for — all `MIT`, all read first-hand this pass. The ANALYTICS and CREDENTIALING layers have no retrievable reference implementation, and a proposal must say so rather than name a repository that `404`s in the client's first sprint.**
+
+### 🔴 `P230-V3` — the non-OSI platform row gets the NAME of its instrument
+
+🟡 **p229 placed [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) — an Indonesian learning platform cited `6` times here — in the non-OSI tier as `NONCOMMERCIAL-NOT-OSI`, with its channel reporting `NOASSERTION`. p230 reads the `7 705` B body:**
+
+> 🔴 *"# **Nakafa Source Available License 1.0** — Effective date: **April 24, 2026** — Copyright (c) 2026 PT NAKAFA TEKNO KREATIF. All rights reserved. **This is not an open-source license.**"*
+
+🟢 **A token tells a studio not to build. A NAMED instrument with an effective date is what counsel reviews, and the two are one read apart.** 🟡 **It stays beside `BUSL-1.1` on [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV): readable source, no permission to build on it.**
+
 ## Pass 229 — 2026-10-15 — FIVE PLATFORM ROWS GAINED A FIRST-HAND GRANT, AND THE TWO THAT DID NOT ARE THE INTERESTING ONES
 
 🔵 **`0` new platform rows.** 🔵 **Evidence:** [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · [`sy-bound-channel`](../evidence/sy-bound-channel.2026-10-15-p229.tsv)

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 230 — THIS WEEK'S SIGNAL IS `26` DEAD ADDRESSES, AND FIVE OF THEM ARE THE REFERENCE IMPLEMENTATIONS OF TWO `1EdTech` STANDARDS THIS KB RECOMMENDS BUILDING ON
+
+🔵 **`0` new agent rows *(`3` of `3` candidates already carried, eighth consecutive measured discovery rate)*. The week's finding is the first EXISTENCE sweep in this KB's history: every address on these shelves, re-probed in one run.**
+
+🔵 **Evidence:** [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p230.tsv) · [`p230-regional-queries`](../evidence/p230-regional-queries.2026-10-15-p230.tsv)
+
+### 🔴 `T230-1` — `1 904` addresses swept, `26` are gone, and the losses are CONCENTRATED
+
+🟢 **`ACTION TC` ran one `git ls-remote --symref` per slug across every live shelf. `1 862` resolve. `42` do not, and the breakdown matters more than the total:**
+
+| class | count | what it is |
+|---|---|---|
+| 🟢 LIVE | **`1 862`** | resolves, with a default branch and a `HEAD` |
+| 🔵 not a repository | `8` | `github.com/topics/*`, `/trending/*`, `/search/*` — slug-shaped URLs the harvester has always counted |
+| 🔵 placeholder | `3` | `OWNER/REPO`, `owner/repo`, `yourusername/*` |
+| 🔵 negative control | `5` | planted by earlier passes, and all five correctly fail |
+| 🔴 **REAL absence** | **`26`** | **`1.4%` of the `1 888` real addresses** |
+
+🔴 **Five of the `26` are one family, and it is not a hobby tier:**
+
+| address | what it was |
+|---|---|
+| 🔴 [`1EdTech/caliper-java`](https://github.com/1EdTech/caliper-java) · [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) · [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) · [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | the **Caliper Analytics** reference implementations — the 1EdTech learning-analytics standard |
+| 🔴 [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | the **Open Badges** reference server |
+
+🟡 **Both org spellings were tried. `imsglobal/caliper-java` is dead as well as `1EdTech/caliper-java`, and `1EdTech/badgr-server` as well as `concentricsky/badgr-server`, so this is not the 2022 IMS Global → 1EdTech rename leaving a stale address behind.** 🔴 **For a studio scoping an LTI, Caliper or Open Badges engagement, the commercial fact is plain: the standards are alive, and the reference code this KB pointed at is not retrievable from any address it records.**
+
+🟢 **Exactly ONE of the `26` is a MOVE rather than a loss, and it is proven:** [`apereo/opencast`](https://github.com/apereo/opencast) is dead, [`opencast/opencast`](https://github.com/opencast/opencast) is LIVE and was probed this pass. 🔵 **That distinction is the sweep's real product — `MOVED` and `GONE` look identical in a table until somebody probes the alternative, and `25` of `26` had no alternative that resolves.**
+
+🔵 **The remaining cluster is MCP churn:** `EastArctica/canvas-mcp`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher`, `a-ariff/canvas-instant-mcp`, `cdweaver1992/edfi-mcp-server`, `radhepa/Teacher-MCP`, `tuanha/vgu-mcp` and `joojdev/academic-tracker-mcp` — `8` of the `26`, all single-author MCP servers, which is the tier this KB has repeatedly warned has no institution behind it. 🟡 **`ACTION TC`'s standing conclusion: every trending row needs a LAST-SEEN date, and a sweep is cheap enough — one request per address — to run every pass.**
+
+### 🔴 `T230-2` — `ACTION SH` caught something, for the FIRST time in four runs, and it is the date that matters most
+
+🟢 **p229 wrote that three consecutive silent runs had turned the inbound refuted-claims gate into *"a cheap regression harness rather than a detector"*. p230 refutes that reading.** 🔴 **`2` HITS on `34` records from `8` queries, both reproducing the SAME refuted claim, from two unrelated sources, one of them through the MANDATED North America query:**
+
+> 🔴 *"the EU AI Act classifies education AI as high-risk, with full effect in **August 2026**"*
+> 🔴 *"the Act officially began its application to high-risk AI systems in education in **early August 2026**"*
+
+🟢 **This KB's position, unchanged and now in its fifth reproduction: Annex III education high-risk applies `2027-12-02`. `2026-08-02` is Article `50` TRANSPARENCY, a different obligation, and it IS live.**
+
+🟢 **And the same pass delivered the strongest CORROBORATION this correction has ever had, from a channel never cited here: the European Parliament endorsed the deferral on `2026-06-16` and the Council gave final approval on `2026-06-29`, moving stand-alone Annex III obligations from `2026-08-02` to `2027-12-02`.** 🔵 **Those two legislative dates are NEW on these shelves — the correction previously rested on the instrument number alone. `eur-lex.europa.eu` is still `000`, so this stays `CONVERGENT-SECONDARY` and `ACTION RO` stays structural.**
+
+🟡 **Also new, and not previously on these shelves: EU AI Act **Article 27** obliges a deployer that is a body governed by public law to complete a FUNDAMENTAL RIGHTS IMPACT ASSESSMENT before putting a high-risk system into use. A state university is such a body. That is a deliverable a studio can be paid to produce, and it attaches to the `2027-12-02` clock, not the August one.**
+
+### 🟡 `T230-3` — the week's one supply note: a non-OSI TOKEN becomes a named INSTRUMENT
+
+🟡 **p229 recovered [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) from the truncation and celled it `NONCOMMERCIAL-NOT-OSI`, its channel reporting `NOASSERTION`. p230 reads the `7 705` B body and the token resolves to an instrument: **"Nakafa Source Available License 1.0"**, effective `2026-04-24`, `(c) PT NAKAFA TEKNO KREATIF`, whose own second paragraph reads *"This is not an open-source license."*** 🟢 **It stays in the non-OSI tier beside `BUSL-1.1` on [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) — but a named licence with an effective date is reviewable by counsel and a token is not.**
+
 ## 2026-10-15 — Pass 229 — WHAT IS NEW THIS WEEK IS A **DEFECT IN HOW THIS KB READS NAMES**, NOT AN AGENT: `0` NEW ROWS FROM FIVE GLOBAL QUERIES, AND `31` REPOSITORY NAMES ON THESE SHELVES HAVE BEEN SILENTLY TRUNCATED AT THEIR FIRST DOT
 
 🔵 **`0` new agent rows. `5` of `5` verifiable candidates already carried. `30` grants newly readable on rows this KB already had. `124` live cells confirmed against first-hand payloads, `0` wrong.**

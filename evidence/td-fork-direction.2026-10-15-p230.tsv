@@ -1,0 +1,18 @@
+# p230 T230-A2 - FORK DIRECTION settled by the COPYRIGHT LINE, a channel p228 ruled out
+# for hashes and did not consider for holders.
+#
+# p228's rule, and it is correct: a licence-body HASH never evidences an alias, because it
+# fingerprints the CANONICAL TEXT. anthropics/k12-teacher-skills and UniTime/unitime serve a
+# byte-identical Apache-2.0 body and are unrelated projects.
+#
+# But an MIT or BSD body is NOT canonical text alone: its third line carries a COPYRIGHT
+# HOLDER, and that names a PROJECT. Where two slugs share a body hash AND that body names
+# one of the two owners, the direction is settled by a single read.
+#
+# This does NOT work for GPL/AGPL/LGPL/EPL: their canonical bodies carry the FSF's or the
+# Eclipse Foundation's copyright, never the project's. The discriminator is family-bound.
+pair	shared_sha256_12	bytes	copyright line, read first-hand	direction
+jdolny/OneRoster.NET <-> theopenem/OneRoster.NET	1dc50226c38a	1066	Copyright (c) 2020 theopenem	theopenem is UPSTREAM; jdolny carries its grant
+ucfopen/pylti1.3 <-> dmitry-viskov/pylti1.3	5aef77eb4471	1070	Copyright (c) 2019 Dmitry Viskov	dmitry-viskov is UPSTREAM; ucfopen carries its grant
+dmitry-viskov/pylti1.3-django-example <-> -flask-example	1672e02f459e	1070	Copyright (c) 2019 Dmitry Viskov	same owner - NOT an alias claim, shared boilerplate
+UOC/java-lti-1.3 <-> UOC/java-lti-1.3-provider-example	b6b29f11f74e	1060	-	same owner - NOT an alias claim

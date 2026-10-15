@@ -1,0 +1,8 @@
+# ACTION PD / Gap 241 / Gap 242 - RE-TESTED, twenty-fifth time.
+channel	code	verdict
+raw.githubusercontent.com	200	WORKING. ~3 000 probes this pass across 8 shards, no throttling. 25th consecutive positive
+git-upload-pack (git ls-remote --symref)	200	WORKING AT SCALE. 1 904 slugs swept in a single run - the largest use of this channel here. Existence, default branch and HEAD SHA in one request
+api.github.com	403	BLOCKED, 24th consecutive. NOTE: the code is 403, not the 000 earlier passes recorded - a proxy denial, not a DNS failure. Any instrument matching on the failure STRING must be checked
+github.com (HTML)	403	BLOCKED, 24th. Same string change as api.github.com
+unesco.org	000	BLOCKED, 24th. ACTION RL's truncated 19% claim remains unreadable at source
+eur-lex.europa.eu	000	BLOCKED. ACTION RO stays structural: the AI Act deferral was CORROBORATED this pass only through secondary commentary

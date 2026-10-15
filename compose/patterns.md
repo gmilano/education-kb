@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 230 — 2026-10-15 — TWO RECIPES BUILT ONLY FROM ADDRESSES PROVEN LIVE THIS HOUR, AND THE LIST OF NAMES THAT MUST NOT ENTER A SOW
+
+🔵 **Every repository named below was probed for EXISTENCE on `2026-10-15` with `git ls-remote --symref` and, where a grant is stated, read first-hand at the path and byte count given** → [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv).
+
+### 🟢 `P230-R1` — the LTI `1.3` + rostering integration spine, all-permissive *(4–6 weeks)*
+
+🟡 **The buyer is any institution connecting a new tool to an existing LMS estate — the single most common first engagement in this sector, and the one where a dead reference implementation costs a sprint.**
+
+| layer | repository | grant, read `2026-10-15` | why this one |
+|---|---|---|---|
+| LTI `1.3` tool, Python | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **`MIT`** · `1 070` B · `5aef77eb4471` | 🟢 the UPSTREAM of the pair — [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) carries this same body with Viskov's copyright, so `ucfopen` is the fork |
+| LTI `1.3` worked examples | [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) · [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | 🟢 **`MIT`** · `1 070` B · `1672e02f459e` | both LIVE, both the author's own |
+| LTI `1.3`, Node/Next.js | [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | 🟢 **`MIT`** · `1 068` B · `9b14ba68d87c` | the JS path, if the estate is Node |
+| LTI `1.3`, Java | [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) | 🟢 **`MIT`** · `1 060` B · `b6b29f11f74e` | 🔴 **use THIS, not `UOC/java-lti-1.3-provider` — that address is GONE** |
+| OneRoster rostering, .NET | [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 🟢 **`MIT`** · `1 066` B · `1dc50226c38a` | 🟢 the UPSTREAM; [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) carries theopenem's copyright and is the fork |
+| LMS host | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) or [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **`Apache-2.0`** / **`MIT`** | 🟢 the two permissive hosts; a Moodle host forces `GPL-3.0`-compatibility on everything linked in |
+
+🟢 **Every row is `MIT` or `Apache-2.0`, every address resolved this hour, and every fork DIRECTION is settled by the copyright line in the body rather than guessed from star counts.** 🔴 **Wire the tool as an external LTI service, never as a Moodle plugin, if any component is to stay permissive: the Moodle host is `GPL-3.0` *(canonical, `35 147` B at `main/COPYING.txt`)* and reaches anything linked into it.**
+
+### 🟡 `P230-R2` — the LATAM institutional-AI-policy engine *(6–8 weeks, repeatable per institution)*
+
+🟡 **The buyer is a LATAM university, and the evidence is unusually precise: `92%` of students and `79%` of faculty already use AI *(Digital Education Council, `30 000`+ responses, `29` institutions)*, while only `30%` of LATAM universities have published any policy on it. The missing artefact is not a tutor. It is the policy and the system that evidences it.**
+
+| component | repository | grant | role |
+|---|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` *(`main/COPYING.txt`, `35 147` B)* | the estate most LATAM institutions already run |
+| AI routing with a kill switch | [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | 🔴 `GPL-3.0-or-later` *(`main/version.php`)* | per-purpose, per-role AI gating — the policy made executable |
+| learner-facing chat | [`bycs-lp/moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | 🔴 `GPL-3.0-or-later` | 🟢 `-or-later` throughout, so it enters a `GPL-3.0` host cleanly |
+| written-answer grading, human-checked | [`marcusgreen/moodle-qtype_aitext`](https://github.com/marcusgreen/moodle-qtype_aitext) | 🔴 `GPL-3.0-or-later` | 🔴 Annex III evaluative surface — human review is not optional in the design |
+| rostering / SIS edge | [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 🟢 `MIT` | the one permissive component, kept out of process |
+
+🔴 **Deliberately NOT in this recipe: Caliper Analytics. A LATAM analytics scope would normally start from the 1EdTech reference implementation, and all four of its addresses are GONE as of this pass.** 🟡 **Price the analytics layer as a build, not an integration, or scope it out.**
+
+### 🔴 `P230-R3` — the names that must not enter a SOW this week
+
+🔴 **These `26` addresses do not resolve. Each is on these shelves, each would read as a deliverable in a proposal, and each returns nothing:**
+
+🔴 **STANDARDS — the expensive ones:** `1EdTech/caliper-java` · `1EdTech/caliper-js` · `1edtech/caliper-php` · `imsglobal/caliper-python` · `concentricsky/badgr-server` · `yetanalytics/lrspipe` · `LongsightGroup/qti3-core` · `Eduware-Inc/eduware-oneroster` · `UOC/java-lti-1.3-provider`
+
+🔴 **MCP tier:** `EastArctica/canvas-mcp` · `NiccoloSalvini/mcp-moodle-staff` · `NiccoloSalvini/mcp-moodle-teacher` · `a-ariff/canvas-instant-mcp` · `cdweaver1992/edfi-mcp-server` · `radhepa/Teacher-MCP` · `tuanha/vgu-mcp` · `joojdev/academic-tracker-mcp`
+
+🔴 **Other:** `Ahmed-html/unlimited-ai-platform` · `Epesi-Team/epesi` · `fh-yarbouh/oak-curriculum-ontology` · `invincible-summer/Next-Tutor-Agent` · `jakerains/scormplayer` · `openfresno/edgenuity-aeries-grade-passback` · `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit` · `superbuilders/timeback-dev-python`
+
+🟡 **One substitution is available and proven:** 🔴 `apereo/opencast` → 🟢 [`opencast/opencast`](https://github.com/opencast/opencast), LIVE. 🔴 **For the other `25`, no address this pass could construct resolves.**
+
+🔴 **And one name that resolves but must still stay out of a build:** [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) — **"Nakafa Source Available License 1.0"**, which states in its own text *"This is not an open-source license."*
+
 ## Pass 229 — 2026-10-15 — THREE RECIPES THAT ONLY BECAME WRITEABLE ONCE THE GRANTS WERE READ, AND ONE LIST OF ROWS TO KEEP OUT OF A SOW
 
 🔵 **Every repository named below had its licence read first-hand on `2026-10-15` at the channel stated** → [`sw-grant-ladder-reach`](../evidence/sw-grant-ladder-reach.2026-10-15-p229.tsv) · [`sy-bound-channel`](../evidence/sy-bound-channel.2026-10-15-p229.tsv).
