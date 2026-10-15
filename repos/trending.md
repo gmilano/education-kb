@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 231 — THE TRENDING SHELF'S OWN `1.4%` CHURN GETS AN INDEPENDENT SECOND READ, AND THE REGISTRY CHANNEL PRODUCES A ROW GITHUB CANNOT SHOW
+
+🔵 **`3` repository rows added *(all `MIT`)*, `2` refused as ungranted, `5` previously-carried addresses re-confirmed DEAD on a second channel, `1` live artefact found on a channel this shelf has never harvested.**
+
+🔵 **Evidence:** [`te-successor-hunt`](../evidence/te-successor-hunt.2026-10-15-p231.tsv) · [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv) · [`p231-regional-queries`](../evidence/p231-regional-queries.2026-10-15-p231.tsv)
+
+### 🟢 `R231-1` — new this week
+
+| repo | licence, read first-hand | category | one-line read |
+|---|---|---|---|
+| [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) | 🟢 **MIT** | assessment conformance | QTI 3 judge: 1EdTech XSDs + `7 400`+ Schematron rules in a `~21` MB offline image |
+| [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | 🟢 **MIT** | assessment scoring | per-candidate human rubric pass over Results Reporting, comments as `COMMENT` outcomes |
+| [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** | standards-native | LTI 1.3 tool provider in Go with `ags` + `nrps` + `deeplink` + `dynreg` |
+| 🔴 `Jatin-Mehra119/Essay-Scoring-Modeling` | 🔴 **NONE** *(`12` names probed, manifests included)* | assessment scoring | REFUSED — exists, grants nothing |
+| 🔴 `Varun-Krishnan1/AutomatedEssayScoring` | 🔴 **NONE** *(`12` names probed, manifests included)* | assessment scoring | REFUSED — exists, grants nothing |
+
+🔵 **The integrity-tier additions of this pass are filed on `agents/trending.md`, because both ship a runnable tool rather than a library.**
+
+### 🔴 `R231-2` — `ACTION TH`'s first reading: the churn is real and a last-seen date is load-bearing
+
+| address | p230 *(`git ls-remote`)* | p231 *(`raw`, independent)* | verdict |
+|---|---|---|---|
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) · [`1EdTech/caliper-java`](https://github.com/1EdTech/caliper-java) · [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) · [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | 🔴 dead | 🔴 **`404` at `HEAD`/`main`/`master`** | 🔴 **WITHDRAWN, corroborated** |
+| [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) | 🔴 dead | 🔴 **`404` at `HEAD`/`main`/`master`** | 🔴 **WITHDRAWN, corroborated** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *(positive control)* | 🟢 live | 🟢 **`200`** | 🟢 **the channel works — the `404`s are the repositories, not the probe** |
+
+🟢 **`9` further addresses were probed for a rename or a successor *(both org spellings, every sensor language, `caliper-dotnet`, `caliper-ruby`, `caliper-common-fixtures`, `1EdTech/badgr-server`, `IMSGlobal/badgr-server`)* and all `9` are `404`.**
+
+### 🔵 `R231-3` — the channel finding: trending supply exists where this shelf does not look
+
+🔴 **`npm:@timeback/caliper` — `v0.3.3`, `53` versions, created `2026-01-10`, latest published `2026-09-25`, and `license`/`repository`/`homepage` all NONE with an empty readme.** 🟢 **It is the only LIVE Caliper Analytics client this KB has found, and it cannot be a row on these shelves: there is no grant to read and no source to read it in.**
+
+🟡 **`npm:caliper` — `MIT`, *"Incubator for an IMS Caliper implementation"*, `2` versions, last published `2020-01-03`, repository `gitlab.com/wwnorton/lab/caliper`.** 🔵 **Permissive, readable, and six years stale: a reference to read, not a dependency to adopt — and it is on GitLab, which is why a GitHub-shaped harvester never saw it.**
+
+🔴 **`pypi:caliper` resolves to an unrelated tool *(package-change measurement, `github.com/vsoch/caliper`)*. Recorded as this pass's negative control: a registry hit on a standard's NAME is not supply for that standard, and a pass that trusted the `200` would have published a false row.**
+
 ## 2026-10-15 — Pass 230 — THE NAME READER IS FIXED IN THE INSTRUMENT, NOT BY HAND: `25` DOTTED REPOSITORIES NOW HARVEST EVERY PASS, AND TWO OF p229'S OWN TABLES DISAGREED ABOUT WHETHER THREE OF THEM EXIST
 
 🔵 **`0` new trending repository rows *(`3` of `3` candidates already carried — eighth consecutive measured discovery rate)*. `25` dotted names harvested *(p229 recovered `8` by hand; the harvester now finds them all, every pass)*, `18` grants read first-hand, `0` published cells wrong, `2` fork DIRECTIONS settled, `1` non-OSI token replaced by a named instrument.**

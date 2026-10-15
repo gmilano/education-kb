@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 231 — 2026-10-15 — THE ASSESSMENT-GOVERNANCE RECIPE, WIREABLE TODAY AND `MIT` END TO END
+
+🔵 **`3` recipes: one buildable now from rows added this pass, one that turns the identity gap into a two-file adapter, and one list of names that must stay out of a SOW.**
+
+🔵 **Evidence:** [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv) · [`te-successor-hunt`](../evidence/te-successor-hunt.2026-10-15-p231.tsv)
+
+### 🟢 `P231-R1` — the auditable assessment gate: every item conformant, every score a named human's *(6–8 weeks)*
+
+🔵 **Sells into THREE regimes with one build** — EU Annex III point `3` *(`2027-12-02`, plus the Article `27` FRIA for public-law deployers)*, Vietnam's Decision `33/2026/QD-TTg` *(education deadline `2027-09-01`)*, and the Oklahoma/Maryland human-oversight rules. 🟢 **All three name the same component: a system that tests, evaluates or ranks a learner.**
+
+| step | component | licence | what it contributes |
+|---|---|---|---|
+| `1` **ingest** | the client's existing item bank, exported as QTI 3 content packages from Canvas, Moodle or OpenOLAT | n/a | the real inputs, not a demo set |
+| `2` **judge** | [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) as a CI job: `POST /api/validate` with the package ZIP, fail the build on `fatals` | 🟢 **MIT** | 1EdTech XSDs + `7 400`+ Schematron rules; line/column/element path per defect. **Its README claims it never contacts the internet and never stores documents — run it inside the institution's perimeter and no learner content leaves** |
+| `3` **render** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) *(1EdTech Delivery conformance certified)* or [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 MIT *(carried; re-read the grant before the SOW)* | delivery of items that have already passed step `2` |
+| `4` **score, with a human** | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system): per-candidate navigation, per-item rubric criteria, comments written back as Results Reporting `COMMENT` outcomes, HTML/CSV/Results-XML export | 🟢 **MIT** | 🟢 **THE DELIVERABLE.** The oversight record lives in the standard's own outcome vocabulary, so it is portable, diffable and survives a change of platform |
+| `5` **provenance, not detection** | [`OpaceDigitalAgency/opace-ai-content-checker-detector`](https://github.com/OpaceDigitalAgency/opace-ai-content-checker-detector) — use the **C2PA Content Credentials** and hidden-Unicode surfaces, on-device route | 🟢 **MIT** | the Article `50(2)` marking check. 🔴 **Do NOT wire its classifier into a pass/fail path** |
+| `6` **in-LMS boundary** *(Moodle estates)* | [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) + [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟡 `GPL-3.0-or-later` | per-tenant provider configuration and quota. 🔴 **Copyleft: it stays a Moodle plugin, it does not get vendored into a proprietary deliverable** |
+
+🔴 **The licence line that decides the architecture:** steps `2`–`5` are `MIT` and can sit in a studio-owned service; step `6` is `GPL-3.0-or-later` and must remain plugin-shaped inside Moodle. 🟢 **Keep the boundary at HTTP and both halves stay clean.**
+
+🔴 **What this recipe does NOT include, deliberately:** an AI grader on the scoring path. 🔵 **The regulation's own carve-out — Vietnam's text makes a system high-risk where the output is *the sole basis for a decision without meaningful human review* — means the human rubric pass is what keeps the system out of the expensive category. Automating step `4` destroys the thing being sold.**
+
+### 🟡 `P231-R2` — the LTI→MCP adapter, reduced to the one file that is actually missing *(2–3 weeks)*
+
+🔴 **This KB's oldest open blocker: no row terminates a verified LTI launch and then calls an MCP server with a subject IT established.** 🟢 **The halves now both exist and are permissive:**
+
+1. **Verified launch** — [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) *(`MIT`)*: OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment registry, `ltik` session resumption. Register the client's platforms via `tool.Platforms().Register(...)`; implement `lti.Store` against the client's database *(the shipped `memstore` is for tests)*.
+2. **Roster and grades** — the same library's `ags` and `nrps` packages, so the adapter needs no second LMS client.
+3. **Tool surface** — any carried MCP server: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(`MIT`)*, [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, durable learner state with BKT mastery)*.
+4. 🆕 **THE MISSING FILE, and it is small:** a handler that takes the **verified** `sub` from step `1`, mints a short-lived internal token carrying it, and **refuses to proceed when the launch produced no subject claim**. 🔴 **p135 measured that the two existing bridges accept a configured or caller-supplied subject instead — that is the defect this file exists to not have.**
+
+🔴 **Before this ships, two reads this pass did NOT do:** `lti-go`'s `ags` write surface in SOURCE *(a grade write changes a learner's record)*, and its `id_token` validation against a deliberately malformed launch. 🔵 **p136's record is two-for-two: every tier this KB read in source overturned a published cell.**
+
+### 🔴 `P231-R3` — names that must not enter a SOW this week, with the reason
+
+- 🔴 **Any Caliper Analytics *integration*.** The four reference sensors and the Open Badges reference server are `404` on two independent channels. 🟢 **Price a Caliper scope as a BUILD against [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec), with [`1EdTech/caliper-js-example`](https://github.com/1EdTech/caliper-js-example) as the worked reference.** 🔴 **`npm:@timeback/caliper` is live at `v0.3.3` and carries NO licence and NO repository — it cannot enter a deliverable. `npm:caliper` is `MIT` and last shipped `2020-01-03`.** 🔵 **`pypi:caliper` is a different project entirely.**
+- 🔴 **`Hasif50/Automated-Essay-Grader` on any data-boundary engagement.** `MIT`, rubric-shaped, and it does **no local inference**: it requires `OPENAI_API_KEY`, `AZURE_API_KEY` or `COHERE_API_KEY`. 🟢 **For a trainable, patent-covered baseline use [`awsaf49/automated-essay-scoring-2`](https://github.com/awsaf49/automated-essay-scoring-2) *(`Apache-2.0`, DebertaV3 ordinal regression)* or the carried [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) *(`Apache-2.0`)*.**
+- 🔴 **`Jatin-Mehra119/Essay-Scoring-Modeling` and `Varun-Krishnan1/AutomatedEssayScoring`.** Both exist; both grant nothing, after `12` filenames each were probed including `package.json`, `pyproject.toml`, `setup.py` and `setup.cfg`.
+- 🔴 **Any AI-text detector sold as evidence of misconduct.** Every detector on these shelves now disclaims authorship attribution in its own README. 🟢 **Sell the provenance chain instead — C2PA, SynthID-Text, draft history — which is also what Article `50(2)` asks for.**
+
 ## Pass 230 — 2026-10-15 — TWO RECIPES BUILT ONLY FROM ADDRESSES PROVEN LIVE THIS HOUR, AND THE LIST OF NAMES THAT MUST NOT ENTER A SOW
 
 🔵 **Every repository named below was probed for EXISTENCE on `2026-10-15` with `git ls-remote --symref` and, where a grant is stated, read first-hand at the path and byte count given** → [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv).

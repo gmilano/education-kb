@@ -1,0 +1,22 @@
+# p231 — every row added or refused this pass, with the grant read FIRST-HAND over
+# raw.githubusercontent.com (the one 200 channel this session has: github.com HTML, the git
+# service, codeload and api.github.com are all 403 from here — see the channel column).
+#
+# POSITIVE CONTROL for the channel: HKUDS/DeepTutor README -> 200 at HEAD/main/master.
+# NEGATIVE CONTROLS: the five addresses p230's existence sweep called dead are 404 on this
+# channel too (see te-successor-hunt.2026-10-15-p231.tsv) — two independent channels agree.
+#
+# grant_bytes and grant_sha256_12 are of the licence FILE BODY as retrieved, so a later pass
+# can tell a re-licence from a re-read. "manifest_probed" records the p215 lesson: a repository
+# with no licence FILE may still grant in package.json/pyproject.toml, so absence is only
+# absence once the manifest channel is probed too.
+slug	ref	licence_file	grant_bytes	grant_sha256_12	copyright_line_read_first_hand	verdict	tier	manifest_probed
+feyst/qti3-validator	HEAD	LICENSE	1076	1f152eb39f5c	Copyright (c) 2026 Mark van der Feijst	MIT	assessment-conformance	n/a (file present)
+metyatech/qti-scoring-system	HEAD	LICENSE	1066	2d383b4e9fd6	Copyright (c) 2025 metyatech	MIT	assessment-scoring	n/a (file present)
+marcgabe15/lti-go	HEAD	LICENSE	1067	31234d5cd6af	Copyright (c) 2026 marcgabe15	MIT	standards-native / LTI Advantage	n/a (file present)
+lynote-ai/ai-text-detector	HEAD	LICENSE	1081	a580a737f771	Copyright (c) 2026 Open Source Contributors	MIT	integrity / AI-text risk	n/a (file present)
+OpaceDigitalAgency/opace-ai-content-checker-detector	HEAD	LICENSE	1066	f178904c32bf	Copyright (c) 2026 Opace Ltd	MIT	integrity / provenance	n/a (file present)
+Hasif50/Automated-Essay-Grader	HEAD	LICENSE	1433	77df5e37b194	Copyright (c) 2025 Hasif50 - From Hasif's Workspace	MIT	assessment-scoring	n/a (file present)
+awsaf49/automated-essay-scoring-2	HEAD	LICENSE.md	11358	e778f4568fa8	Apache License 2.0 (full body)	Apache-2.0	assessment-scoring	n/a (file present)
+Jatin-Mehra119/Essay-Scoring-Modeling	HEAD	ABSENT	0	-	none found	REFUSED — ungranted	assessment-scoring	12 names probed incl. package.json, pyproject.toml, setup.py, setup.cfg — all 404
+Varun-Krishnan1/AutomatedEssayScoring	HEAD	ABSENT	0	-	none found	REFUSED — ungranted	assessment-scoring	12 names probed incl. package.json, pyproject.toml, setup.py, setup.cfg — all 404

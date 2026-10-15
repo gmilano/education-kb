@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 231 — 2026-10-15 — THE ASSESSMENT PATH GETS ITS FIRST **JUDGE**, AND THE FOUNDATION TIER'S GRAVEST ROW IS NOW A WITHDRAWAL
+
+🔵 **`3` rows added to the foundation tier, all `MIT`, all grants read first-hand. `1` tier re-classified from *"carried"* to *"WITHDRAWN"* on two independent channels.**
+
+🔵 **Evidence:** [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv) · [`te-successor-hunt`](../evidence/te-successor-hunt.2026-10-15-p231.tsv)
+
+### 🟢 `F231-1` — why a validator is a FOUNDATION row and a player is not
+
+🔵 **This shelf has carried QTI renderers since p135 and treated the standard as covered.** 🔴 **It was not: a renderer accepts whatever XML it is given. On a delivery where the client's item bank was authored in another vendor's tool, the first defect surfaces in a learner's browser.** 🟢 **A conformance judge moves that discovery to the pipeline, which is what makes it foundational rather than a feature.**
+
+| row | repo | licence | why it is foundational | what it does NOT do |
+|---|---|---|---|---|
+| 🆕 **qti3-validator** | [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) | 🟢 **MIT** *(`1 076` B, `1f152eb39f5c`)* | 🟢 **The only row on these shelves that JUDGES QTI 3.0/3.0.1 items, tests and packages** against 1EdTech's own XSDs and the `7 400`+ Schematron rules published with them. Docker/`ghcr` image, `~21` MB, line/column/element-path per defect. **Its README claims it never contacts the internet and never stores or logs submitted documents** — so it drops into a CI job and into a regulated perimeter unchanged | 🔴 **Not 1EdTech-certified** *(certification requires paid membership)*; it validates against the published rules, which is a different claim. 🔴 Air-gap claim not verified in source here |
+| 🆕 **qti-scoring-system** | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | 🟢 **MIT** *(`1 066` B, `2d383b4e9fd6`)* | 🟢 **The human-decision surface the regulators name.** Next.js 15 over QTI 3 assessment-test + Results Reporting XML: per-candidate navigation, per-item rubric criteria, comments written back as Results Reporting `COMMENT` outcomes, HTML/CSV/Results-XML export, workspace export/import. 🔵 **Comments persisted INTO the standard's own outcome vocabulary is what makes the oversight record portable instead of a screenshot** | 🔴 Reads from a selected output FOLDER, not from an LMS — the ingestion path is yours to build |
+| 🆕 **lti-go** | [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** *(`1 067` B, `31234d5cd6af`)* | 🟢 **A verified-launch foundation in a language this shelf had none in.** OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment management, `ags`, `nrps`, `deeplink`, `dynreg`, behind a pluggable `lti.Store` *(a `memstore` ships; bring your own for production)* | 🔴 **Not read in source.** Every capability is the author's claim and the `ags` WRITE surface is unaudited — and a grade write is the one call on this shelf that changes a learner's record |
+
+### 🔴 `F231-2` — the foundation tier's gravest row this pass is a SUBTRACTION
+
+🔴 **Four Caliper Analytics reference sensors and the Open Badges reference server are GONE** — `404` on `git ls-remote` *(p230)* and `404` on `raw.githubusercontent.com` *(p231)*, under **both** org spellings, with a live positive control on the same channel. 🟢 **Two independent instruments agree, so this is a withdrawal and not an instrument defect.**
+
+🟡 **What survives, and it matters for pricing:** [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) *(and `IMSGlobal/caliper-spec`)*, [`1EdTech/caliper-js-example`](https://github.com/1EdTech/caliper-js-example), [`1EdTech/CaliperBootcamp`](https://github.com/1EdTech/CaliperBootcamp), [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) and [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator). 🔵 **Open Badges still has a validator; Caliper has a spec, an example and no sensor.**
+
+🔴 **Do not substitute the registry.** `npm:caliper` is **`MIT` but a six-year-stale third-party incubator** *(`2` versions, last published `2020-01-03`, hosted on GitLab)*, and `npm:@timeback/caliper` is **live, `53` versions, `v0.3.3` on `2026-09-25` — and carries NO licence, NO repository and NO readme.** 🟢 **`pypi:caliper` resolves and is an unrelated package-change tool by a different author: a registry `200` on a standard's name is not supply for that standard.**
+
+🔵 **The foundation-tier consequence, stated for a proposal:** a Caliper scope is **a build with a normative reference**, not an integration. Price the sensor.
+
 ## Pass 230 — 2026-10-15 — THE FOUNDATION TIER LOSES FIVE ADDRESSES AND GAINS THREE IT ALWAYS HAD: THE `1EdTech` STANDARDS REFERENCE CODE IS **NOT RETRIEVABLE**, AND `processing/p5.js` WAS NEVER MISSING
 
 🔵 **`0` new foundation rows. `18` grants read first-hand across the `25` names p228's reader could not see. `26` addresses across all shelves confirmed dead, `1 862` confirmed live.** 🔵 **Evidence:** [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv) · **Instrument:** [`p230-prose-path-ladder`](../compose/code/p230-prose-path-ladder/README.md) *(`33` controls)*

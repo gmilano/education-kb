@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 231 — 2026-10-15 — THE TREND THAT MATTERS THIS PASS IS NOT IN THE FIELD, IT IS IN THE **INSTRUMENT**: EIGHT ZERO PASSES WERE A QUERY ARTEFACT
+
+🔵 **`4` trends, `1` of them a correction to how this KB reads its own saturation.**
+
+🔵 **Evidence:** [`p231-regional-queries`](../evidence/p231-regional-queries.2026-10-15-p231.tsv) · [`te-successor-hunt`](../evidence/te-successor-hunt.2026-10-15-p231.tsv) · [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv)
+
+### 🔴 `T231-1` — SATURATION WAS A PROPERTY OF THE QUERY. `8` zero passes, then `7` rows from `4` probes
+
+🟢 **p223–p230 reported a measured discovery rate of zero, eight times, and published it as a finding about the field.** 🔴 **It was a finding about the question.** Four capability-shaped probes — two naming a STANDARD *(`QTI 3.0`, `LTI Advantage AGS`)*, two naming a TASK *(`AI text detector academic integrity`, `automated essay scoring rubric`)* — returned `14` + `14` repositories and **`7` granted rows**, against `0` from four region-shaped and two industry-shaped probes.
+
+🔵 **p132 established this exact substitution once before: the SIS tier was invisible to *"student information system"* and visible to *"timetable"*, because the field is named after platforms and tasks rather than after the analyst's category.** 🟢 **The generalisable rule, and it is cheap to apply: when the row count hits zero, change the SHAPE of the query before concluding anything about supply. An industry name is the weakest probe available; a standard's name is the strongest.**
+
+### 🟢 `T231-2` — ASSESSMENT is where education's AI regulation actually bites, and the open-source supply has just caught up
+
+🔵 **Three jurisdictions, one surface.** EU Annex III point `3` names *admissions, assessing learning outcomes, assigning level, monitoring during tests*. Vietnam's Decision `33` names *systems that automatically test, evaluate results and rank learners*. Oklahoma and Maryland bar AI from *high-stakes decisions about a student*. 🟢 **That is the same component described three times, and it is the one every LMS engagement touches.**
+
+🟢 **As of this pass the open-source answer exists and is `MIT` end to end:** a conformance JUDGE for the item bank *([`feyst/qti3-validator`](https://github.com/feyst/qti3-validator))* and a HUMAN-DECISION surface for the score *([`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system))*, the second writing its record into the standard's own `COMMENT` outcomes. 🔵 **The trend reading: the compliance artefact these three regimes demand is no longer bespoke, and the human-review carve-out in Vietnam's own text makes the oversight surface the cheapest route out of the high-risk category rather than an overhead.**
+
+### 🔴 `T231-3` — THE REFERENCE-IMPLEMENTATION TIER IS DEPRECIATING, AND THE LIVE SUPPLY IS MOVING TO CHANNELS A REPOSITORY HARVESTER CANNOT SEE
+
+🔴 **Four Caliper sensors and the Open Badges reference server are withdrawn — confirmed on two independent channels, with a live positive control.** 🟡 **The specs and a worked example survive; Open Badges still has a validator.**
+
+🔵 **The sharper half is where the live code went.** `npm:@timeback/caliper` has **`53` versions** and shipped `v0.3.3` on `2026-09-25` — with **no licence, no repository and no readme**. `npm:caliper` is `MIT` and six years stale, on **GitLab**. 🔴 **So the learning-analytics standard reads, on GitHub, as having no supply, and on the registry channel as having maintained-but-unadoptable supply.** 🟢 **The trend: `ACTION PD`'s rule — *every channel that works here is a package or service endpoint* — is now a DISCOVERY rule and not only an access workaround. A KB that harvests repositories will progressively under-read a field that publishes artefacts.**
+
+### 🟡 `T231-4` — THE INTEGRITY MARKET IS MOVING FROM DETECTION TO **PROVENANCE**, and the credible projects are the ones that say so
+
+🔵 **Both integrity rows added this pass disclaim authorship attribution in their own READMEs** — *"never presents an AI score as proof of authorship"*, *"a score cannot settle a misconduct allegation"*, *"no accuracy claims are made"* — and the more developed of the two leads with **C2PA Content Credentials, hidden-Unicode forensics and a SynthID-Text lab**, with the classifier as one check among several.
+
+🟢 **Read that as the market signal it is: the buyer's question is shifting from *"was this AI-written?"* to *"what is the record of how this was written?"* — a question that has an auditable answer.** 🔵 **It also converges with EU Article `50(2)` marking, in force since `2026-08-02`, which asks for machine-readable provenance rather than detection.** 🔴 **The counter-trend to price in: every detector on these shelves is now explicitly non-evidentiary, so a studio that ships one as a verdict is selling a dispute, and an institution that buys one has bought an appeals process.**
+
 ## Pass 230 — 2026-10-15 — THE EIGHTEENTH CONSECUTIVE UNIT-MISMATCH HEADLINE, AND THE UNIT IS A **RECORDED PATH**
 
 🔵 **Evidence:** [`ta-prose-path-ladder`](../evidence/ta-prose-path-ladder.2026-10-15-p230.tsv) · [`tb-lazy-quantifier-lint`](../evidence/tb-lazy-quantifier-lint.2026-10-15-p230.tsv) · [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-fork-direction`](../evidence/td-fork-direction.2026-10-15-p230.tsv)

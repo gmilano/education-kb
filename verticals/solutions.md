@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 231 — 2026-10-15 — THE ASSESSMENT VERTICAL GETS A **GATE** AND A **HUMAN SURFACE**, AND THE *"NO MIT LMS"* FINDING REPRODUCES A FOURTH TIME
+
+🔵 **`2` platform-adjacent rows added, `1` standing licence finding re-confirmed on a fresh query, `0` padded.**
+
+🔵 **Evidence:** [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv) · [`p231-regional-queries`](../evidence/p231-regional-queries.2026-10-15-p231.tsv)
+
+### 🔴 `V231-1` — there is still no `MIT` LMS, and the vertical query returns the same six platforms every time
+
+🟡 **Probed again this pass *(`open source platform education LMS SIS ERP MIT Apache 2026`)* and the answer is unchanged — which is worth publishing precisely because it keeps being asked:**
+
+| platform | licence | what it is | the consequence for a deliverable |
+|---|---|---|---|
+| **Moodle** | 🟡 `GPL-3.0` | the most-deployed open-source LMS in the world | 🔴 customisation stays plugin-shaped; a proprietary fork is not available |
+| **Open edX** | 🟡 `AGPL-3.0` *(some components Apache-2.0 — contested across sources, verify per component)* | MOOC-scale platform | 🔴 AGPL `§13`: network use triggers the source obligation |
+| **Canvas LMS** *(community edition)* | 🟡 `AGPL-3.0` | the dominant HE LMS in North America | 🔴 same `§13` reach |
+| **Sakai** | 🟡 `Apache-2.0` / `ECL-2.0` — 🔴 **sources DISAGREE and this KB has not read the grant first-hand** | HE collaboration + learning environment | 🟡 ECL-2.0 is Apache-2.0 with a narrowed patent clause; the difference matters and must be read before it is quoted |
+| **OpenOLAT** | 🟢 **`Apache-2.0`** | web LMS shipping QTI, SCORM, curriculum management and assessment | 🟢 **the permissive option, and the reason this KB retired *"no permissively licensed full-featured LMS"* as stated** |
+| **OpenEduCat** | 🟡 `LGPL-3.0` | the closest thing to an integrated LMS + SIS + ERP *(`70`+ modules, attendance, fees)* | 🟡 library-copyleft: linking is fine, modifying the modules is not free |
+
+🔵 **The honest summary for a buyer: the permissive LMS is `OpenOLAT`, the ubiquitous LMS is `GPL` Moodle, and the ERP-shaped one is `LGPL` OpenEduCat. There is no `MIT` row in this tier and four passes of querying have not produced one.**
+
+### 🟢 `V231-2` — what IS newly permissive is the layer ABOVE the platform, and that is where the vertical is actually built
+
+🟢 **Both rows added this pass are platform-INDEPENDENT and `MIT`, which is what makes them usable against a `GPL`/`AGPL` estate without contaminating anything:**
+
+| row | licence | the vertical slot it fills | wiring |
+|---|---|---|---|
+| 🆕 [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) | 🟢 **MIT** | **assessment conformance gate** — the slot that was empty on these shelves | an HTTP service beside the LMS: `POST` the QTI 3 package, fail the pipeline on `fatals`. Docker/`ghcr`, `~21` MB, schemas built in, **no egress by its own claim** |
+| 🆕 [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | 🟢 **MIT** | **human scoring + oversight record** | a Next.js app over exported assessment-test + Results Reporting XML; comments persist as `COMMENT` outcomes, so the record returns to the platform in the standard's own vocabulary |
+
+🔵 **The vertical pattern this establishes, and it generalises past assessment:** the platform stays copyleft and untouched; the AI and governance layer is permissive and studio-owned; the interface between them is the **standard's own file format**, not an API wrapper. 🟢 **`OpenOLAT` is the one platform in the table that already speaks QTI natively, which makes it the cheapest demo environment for this stack — and its `Apache-2.0` grant means the demo can become the product.**
+
+🔴 **The slot still empty in this tier: an ingestion path. Both new rows read a FOLDER or a POSTed package, not an LMS. The export/import job between Canvas or Moodle and this stack is bespoke code in every engagement, and nothing on these shelves provides it.**
+
 ## Pass 230 — 2026-10-15 — THE PLATFORM TIER IS RE-PROBED FOR EXISTENCE FOR THE FIRST TIME, AND IT HOLDS — BUT THE STANDARDS LAYER UNDERNEATH IT DOES NOT
 
 🔵 **`0` new platform rows *(`1` of `1` named platform already carried, for a FOURTH pass)*. All `9` platform-tier addresses confirmed LIVE. `1` adjacent platform confirmed GONE, `1` confirmed MOVED.** 🔵 **Evidence:** [`tc-existence-sweep`](../evidence/tc-existence-sweep.2026-10-15-p230.tsv) · [`td-dotted-slug-regate`](../evidence/td-dotted-slug-regate.2026-10-15-p230.tsv)

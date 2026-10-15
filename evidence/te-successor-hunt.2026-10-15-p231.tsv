@@ -1,0 +1,59 @@
+# ACTION TE (registered by p230, DISCHARGED here on limb 2 at 1) — "find where the 1EdTech
+# Caliper and Open Badges reference code went, if anywhere."
+#
+# Limb 1 wanted a resolvable address for 2+ of the five withdrawn implementations (a renamed
+# org, a successor repository, a package-registry artefact, or a fork carrying the standard's
+# own copyright line). Limb 2 was 0-1 -> the reference implementations are genuinely withdrawn
+# and every Caliper or Open Badges scope is a BUILD.
+#
+# RESULT: 1. The five SENSOR implementations are unrecoverable under BOTH org spellings. One
+# package-registry artefact exists (npm `caliper`, MIT) and it is a third party's incubator,
+# last published 2020-01-03, hosted on GitLab rather than GitHub. Limb 2 fires.
+#
+# What limb 2 did NOT anticipate and this pass adds: the SPEC repositories and a worked EXAMPLE
+# app survive, under both org spellings, and Open Badges is NOT in the same state as Caliper —
+# 1EdTech/openbadges-validator-core and 1EdTech/digital-credentials-public-validator both
+# resolve. The withdrawal is of SENSORS, not of the standards tier.
+#
+# CHANNEL: raw.githubusercontent.com/<slug>/<ref>/README.md, refs tried HEAD, main, master,
+# develop. Registry channel: registry.npmjs.org and pypi.org/pypi/<name>/json.
+#
+# DEFECT FOUND IN THIS PASS'S OWN INSTRUMENT, BEFORE PUBLISHING, AND IT MATTERS BEYOND THIS FILE:
+# a README.md-keyed probe produces FALSE ABSENCES, because raw.githubusercontent.com is
+# CASE-SENSITIVE. Citolab/qti-components - a row these shelves already carry - is 404 on
+# README.md at every ref and 200 on readme.md, package.json and .gitignore. It is LIVE.
+#
+# So every absence below was re-tested on a FILENAME-AGNOSTIC oracle: `git ls-remote --symref
+# https://github.com/<slug> HEAD` with GIT_TERMINAL_PROMPT=0. A live public repository answers
+# `ref: refs/heads/<branch>`; a withdrawn or private one makes git ask for a username, which is
+# the absence signal. Controls on that oracle: HKUDS/DeepTutor -> refs/heads/main,
+# feyst/qti3-validator -> refs/heads/main, Citolab/qti-components -> refs/heads/main (the false
+# absence is recovered). All ten probed absences below hold on BOTH channels.
+address_or_package	channel	outcome	what_it_is	bears_on
+1EdTech/caliper-js	raw	404 at HEAD/main/master	Caliper JS sensor reference impl	p230's sweep CORROBORATED on a second channel
+1EdTech/caliper-java	raw	404 at HEAD/main/master	Caliper Java sensor reference impl	p230's sweep CORROBORATED
+1edtech/caliper-php	raw	404 at HEAD/main/master	Caliper PHP sensor reference impl	p230's sweep CORROBORATED
+imsglobal/caliper-python	raw	404 at HEAD/main/master	Caliper Python sensor reference impl	p230's sweep CORROBORATED
+concentricsky/badgr-server	raw	404 at HEAD/main/master	Open Badges reference server	p230's sweep CORROBORATED
+IMSGlobal/caliper-js	raw	404	old org spelling of the JS sensor	TE limb 1 — no renamed org
+IMSGlobal/caliper-java	raw	404	old org spelling of the Java sensor	TE limb 1 — no renamed org
+IMSGlobal/caliper-php	raw	404	old org spelling of the PHP sensor	TE limb 1 — no renamed org
+1EdTech/caliper-python	raw	404	new org spelling of the Python sensor	TE limb 1 — no renamed org
+1EdTech/caliper-dotnet	raw	404	the .NET sensor the 1.2 impl guide lists	TE limb 1 — never resolvable here
+1EdTech/caliper-ruby	raw	404	the Ruby sensor the 1.2 impl guide lists	TE limb 1 — never resolvable here
+1EdTech/caliper	raw	404	an umbrella repo, guessed	TE limb 1 — absent
+1edtech/caliper-common-fixtures	raw	404	the conformance fixtures, guessed	TE limb 1 — absent
+1EdTech/caliper-spec	raw	200 at HEAD	the Caliper SPECIFICATION repo	SURVIVES — a build has a normative reference
+IMSGlobal/caliper-spec	raw	200 at HEAD	the spec under the OLD org spelling	SURVIVES — the old spelling still resolves for the spec
+1EdTech/caliper-js-example	raw	200 at HEAD (no package.json at HEAD)	a sample app over the withdrawn JS sensor	SURVIVES — a worked example of a withdrawn dependency
+1EdTech/CaliperBootcamp	raw	200 at HEAD	a Caliper endpoint playground	SURVIVES
+1EdTech/openbadges-validator-core	raw	200 at HEAD	Open Badges validator	Open Badges is NOT in Caliper's state
+1EdTech/digital-credentials-public-validator	raw	200 at HEAD	Open Badges + CLR conformance suite	already carried; re-confirmed live
+1EdTech/badgr-server	raw	404	a guessed successor to the withdrawn Badgr server	no successor under the standards org
+IMSGlobal/badgr-server	raw	404	a guessed successor, old spelling	no successor under the old spelling
+npm:caliper	registry.npmjs.org	200 — MIT, v0.2.2, 2 versions, published 2020-01-03, modified 2022-04-12	"Incubator for an IMS Caliper implementation", repo git@gitlab.com:wwnorton/lab/caliper.git	THE ONE recoverable artefact: third-party, MIT, SIX YEARS STALE, and off GitHub
+npm:@timeback/caliper	registry.npmjs.org	200 — v0.3.3, 53 versions, created 2026-01-10, latest published 2026-09-25	"Caliper Analytics client SDK for Timeback"; license field NONE, repository NONE, homepage NONE, readme EMPTY	LIVE Caliper supply exists on the package channel and is UNGRANTED and SOURCELESS
+npm:caliper-js	registry.npmjs.org	404	-	no registry rescue for the JS sensor
+npm:caliper-sensor	registry.npmjs.org	404	-	no registry rescue under a category name
+pypi:caliper	pypi.org	200 — BUT A NAME COLLISION	"a tool for measuring and assessing change in packages", Vanessa Sochat, github.com/vsoch/caliper	NEGATIVE: a registry 200 on a standard's name is not supply for that standard
+pypi:caliper-python	pypi.org	404	-	no registry rescue for the Python sensor

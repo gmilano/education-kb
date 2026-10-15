@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 231 — 2026-10-15 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A FOURTH CONSECUTIVE PASS**, AND THIS PASS SAYS WHAT THAT IS EVIDENCE OF
+
+🔵 **`4` region queries + `1` in Portuguese, GitHub-shaped. `0` repositories from any of them. `7` rows from capability-shaped queries instead, and `0` of the `7` could be PLACED.**
+
+🔵 **Evidence:** [`p231-regional-queries`](../evidence/p231-regional-queries.2026-10-15-p231.tsv) · [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv)
+
+🔴 **Read the blank correctly, because it has now reproduced four times: the region-shaped query is not a supply instrument. It returns regulators, market reports and vendors — reliably, usefully, and never a repository.** 🟢 **What it IS good for is the regulatory clock, and that is reproduced and cross-checked below. What places a repository is a channel this KB does not yet have** *(`T231`'s open gap)*.
+
+🟡 **Everything in the four subsections below is `CONVERGENT-SECONDARY` where it concerns a government: `eur-lex.europa.eu`, every Vietnamese government host and `opace.agency` are all unreachable from this session, so `ACTION RO` remains a property of the pipeline rather than a to-do.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Reproduced this pass, unchanged and worth re-quoting because it is the only figure in the region with a legislative count behind it: `134` AI-in-education bills introduced across `31` states in the 2026 session** *(MultiState)*, with `H.R. 8747` *(K-12 AI Literacy and Readiness Act)* advanced in the `2026-07-21` markup. 🔵 **Named mechanisms, not themes: California `AB 1159` would bar training AI models on student data; Idaho `SB 1227` would mandate privacy protections for school AI tools; Oklahoma and Maryland require HUMAN OVERSIGHT and bar AI from high-stakes decisions about a student.**
+
+🟡 **Adoption, flagged as survey-grade: `60%` of US K-12 teachers used AI tools in 2024-25 and `32%` weekly. Market share figures *(`36%` of the global total, `~$3.68`B for 2026)* are vendor-report numbers and must be quoted as such or not at all.**
+
+🟢 **THE OPPORTUNITY, and it is newly buildable as of this pass.** Oklahoma's and Maryland's *"human oversight / no high-stakes AI decision"* rule is an **evidentiary** requirement: the district must be able to show WHO decided. 🔵 **[`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) *(`MIT`, added this pass)* writes the human's rubric decision and comment back into the assessment standard's own `COMMENT` outcome — a portable oversight record rather than a screenshot or a log line.** 🟢 **Wire it behind [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) and the deliverable is *"every item conformant, every score a named human's"* — see `compose/patterns.md` → `P231`. `6`–`8` weeks on a Canvas or Moodle item bank.**
+
+🔴 **The region produced `0` new repositories again. For a North American engagement the supply on these shelves remains `CAHLR/OATutor` *(UC Berkeley)*, `zavora-ai/mcp-student-records` and the connector tier — nothing added this pass is placed here.**
+
+### EMEA
+
+🟢 **The clock, reproduced and unchanged — and the three dates must not be merged:** Article `50` transparency obligations in force since **`2026-08-02`**; the Omnibus Article `5` prohibitions at **`2026-12-02`**; **Annex III point `3` education high-risk** *(admissions, assessing learning outcomes, assigning level, monitoring during tests)* at **`2027-12-02`**, deferred from `2026-08-02`. 🔴 **Article `27` adds a FUNDAMENTAL RIGHTS IMPACT ASSESSMENT for deployers that are bodies governed by public law — a state university is one, a private edtech vendor is not.**
+
+🟡 **New on these shelves this pass, both June 2026 and both non-binding but quotable in a proposal as the buyer's own reference frame: the European Commission and the OECD presented an AI-literacy framework for primary and secondary education on `2026-06-18`, and the Commission published updated Guidelines on the Ethical Use of AI and Data in Teaching and Learning.** 🔵 **They matter because they are what a ministry will cite when it asks a studio to show its work.**
+
+🟢 **THE OPPORTUNITY — and this pass supplies the missing instrument.** The `2027-12-02` Annex III clock plus the Article `27` FRIA is a demand for an **auditable record of which AI touched which learner's work**, and the asset list is now complete and licence-clean: [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) *(`MIT`, offline by its own claim — no document leaves the perimeter)* for item conformance, [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) *(`MIT`)* for the human-oversight record, and [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) + [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) *(both `GPL-3.0-or-later`, state-published or vendor-neutral)* for the in-LMS provider boundary. 🔵 **`8`–`10` weeks, and the offline validator is the part that survives a data-protection review.**
+
+🟡 **The second EMEA opportunity is Article `50(2)` MARKING, and it is now a cheaper build than it was last pass.** [`OpaceDigitalAgency/opace-ai-content-checker-detector`](https://github.com/OpaceDigitalAgency/opace-ai-content-checker-detector) *(`MIT`)* already implements **C2PA Content Credentials verification and a SynthID-Text lab** — the provenance half of marking — and those surfaces need no trained model, which is precisely the half its own README says the developer libraries omit. 🔴 **Do not sell its classifier as compliance: the repository itself says a score cannot settle a misconduct allegation.**
+
+🔴 **The region query is BLANK for a fourth consecutive pass; the country-shaped query remains the only one that works. Germany: the KMK recommendation *(October 2024)* is still the live school-level frame and the buyer is a Land, not the Bund. Netherlands: blank a sixth time — 🟡 and note the irony this pass, since the Dutch QTI cluster *(`Citolab`, `kennisnet`)* is the densest standards cluster on these shelves and the region query cannot see it.**
+
+### APAC
+
+🟢 **Reproduced, and the three Vietnamese dates stay separate: Law `134/2025/QH15` in force `2026-03-01`; Decision `33/2026/QD-TTg` in force `2026-08-15` *(`46` systems, `6` sectors, education among them)*; `2027-03-01` the GENERAL grace deadline; `2027-09-01` the EXTENDED deadline for health, EDUCATION and finance.** 🔵 **Korea's AI Basic Act in force `2026-01-22`; Taiwan's AI Basic Act passed December 2025; China carries the most binding regime *(registration + content labelling)*; Singapore and Japan rely on voluntary guidance backed by existing law; ASEAN's guide is voluntary.**
+
+🟡 **Qualifier that belongs in every APAC proposal, from the instrument's own text: many listed systems are high-risk ONLY where the AI output is the sole basis for a decision WITHOUT meaningful human review.** 🟢 **That is not a loophole, it is a design brief — and it is the single clearest commercial argument for the human-oversight row added this pass. A rubric pass by a named human, recorded in the standard's own outcome vocabulary, is the documented control that moves a system out of the sole-basis category.**
+
+🔴 **`0` repositories from the region query, and `0` of this pass's rows are placed in APAC** — although `lynote-ai/ai-text-detector`'s `README.zh-CN` and its `zh`-optimised backbone are an APAC signal this KB refuses to publish as placement. 🟢 **The carried APAC supply is unchanged and substantial: `HKUDS/DeepTutor` *(Apache-2.0, the largest education agent in open source)*, `Zenglian990/AI_Tutor_Release`, `flysheep-ai/education-skills`, `BetterSEQTA/BetterSEQTA-Plus`, `saytooyum/AI-Based-Timetable-Generation-System`.**
+
+### LATAM
+
+🔴 **The supply gap SURVIVES, and for the first time it survives a probe in the region's own language.** A Portuguese, GitHub-shaped query *(`codigo aberto IA educacao Brasil github agente educacional 2026 open source`)* returned **zero** open-source Brazilian educational agents. What it returned instead: policy *(`Parecer CNE/CP nº 15/2026`, approved `2026-09-01`, DOU `2026-10-06`, binding on homologation; the MEC orienting document for basic education)* and a **proprietary** product *(Nexis, launched by Educacional at Bett Brasil 2026)*, with Descomplica, Alura, Qconcursos and Geekie named as adopters rather than publishers. 🟢 **An informed gap: the region's edtech capacity is real and it is not shipping open source.**
+
+🟢 **Demand, reproduced and still the strongest adoption case of the four regions: UNESCO IESALC — `87%` of `200` institutions across `19` countries use AI in at least one area, `74%` in teaching and learning, and only `26%` have a formal AI strategy. TALIS 2024 — `56%` of secondary teachers in Brazil, `55%` Chile, `53%` Colombia, `52%` Costa Rica used AI in the prior year against an OECD average of `36%`. Ceibal — `75%` of Uruguayan public-school teachers. ECLAC/CENIA — regional public AI investment averages six times below the global figure.**
+
+🟢 **THE OPPORTUNITY, and the `87%`/`26%` pair is the whole pitch: adoption has already happened and governance has not.** 🔵 **The sellable asset is the governance layer retrofitted over tools faculty are ALREADY using — the institutional AI strategy `74%` of them lack, instantiated as software: the validator in the pipeline, the human-oversight record on every score, and a provenance chain rather than a detector verdict.** 🟡 **`6`–`8` weeks, and it is deliverable in `pt`/`es`: `lynote-ai/ai-text-detector`'s backbone is optimised for `pt` and `es`, which is the only LATAM-relevant signal in the integrity tier.** 🔴 **Price it as a build, not an integration: nothing in this layer originates in the region, so there is no local upstream to lean on — which is the same sentence this KB has written for seven consecutive passes.**
+
 ## Pass 230 — 2026-10-15 — THE REGION-SHAPED QUERY FAILED FOR EMEA AND APAC A **FOURTH** TIME, LATAM OUTPERFORMED A **FOURTH** TIME, AND THE EU DEFERRAL THIS KB CORRECTED IS NOW CORROBORATED WITH ITS LEGISLATIVE DATES
 
 🔵 **All `5` regions carry their verbatim query** → [`p230-regional-queries`](../evidence/p230-regional-queries.2026-10-15-p230.tsv). 🔵 **`ACTION RE` honoured a TWELFTH time; `ACTION SQ`'s permanent Europe line run a THIRD time; `ACTION SH` run INBOUND on `34` records before a word of this was written, and it FIRED** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p230.tsv).

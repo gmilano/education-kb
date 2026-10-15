@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 231 — THIS WEEK'S SIGNAL: THE ZERO STREAK WAS AN ARTEFACT OF THE **QUERY**, NOT OF THE FIELD — `4` CAPABILITY-SHAPED PROBES RETURNED `7` GRANTED ROWS AFTER `4` REGION-SHAPED ONES RETURNED NONE
+
+🔵 **`7` new agent/repository rows *(first non-zero discovery pass since p222)*, `2` refused as ungranted, `0` padded. `1` declared gap closed, `1` registered action discharged.**
+
+🔵 **Evidence:** [`p231-new-rows`](../evidence/p231-new-rows.2026-10-15-p231.tsv) · [`te-successor-hunt`](../evidence/te-successor-hunt.2026-10-15-p231.tsv) · [`p231-regional-queries`](../evidence/p231-regional-queries.2026-10-15-p231.tsv)
+
+### 🟢 `TR231-1` — the week's trend is a method finding, and it is reusable
+
+| query shape | example | repositories returned | new granted rows |
+|---|---|---|---|
+| 🔴 region-shaped | *"AI education `{region}` 2026 adoption regulation players"* × `4` regions | **`0`** | **`0`** |
+| 🔴 industry-shaped | *"top open source AI agents education 2026 github MIT"*, *"github trending education AI 2026"* | listicles only | **`0`** |
+| 🟢 **standard-shaped** | *"open source QTI 3.0 assessment library…"*, *"…Ed-Fi … LTI Advantage AGS conformance test suite…"* | `14` | **`3`** |
+| 🟢 **task-shaped** | *"…AI text detector academic integrity…"*, *"…automated essay scoring rubric grading…"* | `14` | **`4`** |
+
+🔵 **p132 learned this once already — the SIS tier was invisible until the probe named a CAPABILITY (`timetable`) instead of the category. A hundred passes later the same substitution is still the only thing that moves the row count.** 🟢 **Eight consecutive zero passes were not evidence that open-source education supply had stopped; they were evidence that the industry-shaped query had been exhausted in p213–p222 and kept being re-run.**
+
+### 🆕 `TR231-2` — what is actually new this week, in one line each
+
+- 🟢 [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) — **`MIT`**, QTI 3 conformance JUDGE *(1EdTech XSDs + `7 400`+ Schematron rules, built in; never contacts the internet; never stores documents)*. **Closes the QTI clause of this KB's conformance gap.**
+- 🟢 [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) — **`MIT`**, per-candidate human rubric scoring over QTI 3 Results Reporting, comments persisted as `COMMENT` outcomes. **The human-oversight artefact two regulators now require.**
+- 🟢 [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) — **`MIT`**, LTI 1.3 tool-provider SDK in Go with `ags`, `nrps`, `deeplink`, `dynreg` and verified-launch handling.
+- 🟡 [`OpaceDigitalAgency/opace-ai-content-checker-detector`](https://github.com/OpaceDigitalAgency/opace-ai-content-checker-detector) — **`MIT`**, **C2PA + SynthID + hidden-Unicode provenance** suite; its developer libraries deliberately bundle no model.
+- 🟡 [`lynote-ai/ai-text-detector`](https://github.com/lynote-ai/ai-text-detector) — **`MIT`**, explainable no-network AI-text **risk triage**; the trained tier ships no weights and funnels to a paid API.
+- 🟡 [`awsaf49/automated-essay-scoring-2`](https://github.com/awsaf49/automated-essay-scoring-2) — **`Apache-2.0`**, Keras-team DebertaV3 ordinal-regression AES baseline *(a notebook)*.
+- 🟡 [`Hasif50/Automated-Essay-Grader`](https://github.com/Hasif50/Automated-Essay-Grader) — **`MIT`**, rubric grader; 🔴 **requires third-party API keys, no local inference.**
+- 🔴 **Refused:** `Jatin-Mehra119/Essay-Scoring-Modeling`, `Varun-Krishnan1/AutomatedEssayScoring` — exist, grant nothing, `12` filenames each probed including the manifests.
+
+### 🔴 `TR231-3` — the churn item, and the first **last-seen** reading on it
+
+🔴 **`ACTION TH` *(put a last-seen date on trending rows)* gets its first data point and it argues FOR the date.** p230's sweep found `26` dead addresses; p231 re-probed the five that matter on an **independent channel** *(`raw`, not `git ls-remote`)* and all five are `404` there too, with a live positive control. 🟢 **Two instruments, one answer: the Caliper and Open Badges reference sensors are gone, not mis-probed.** 🟡 **A trending shelf without a last-seen date would still be recommending them.**
+
+🔵 **And the week's sharpest single fact is on the registry channel, where no GitHub harvester can see it:** `npm:@timeback/caliper` is at `v0.3.3` with **`53` versions**, created `2026-01-10`, latest published `2026-09-25` — **`license` NONE, `repository` NONE, readme EMPTY.** 🔴 **The learning-analytics standard whose reference code was withdrawn has a maintained client that nobody can lawfully adopt.**
+
 ## 2026-10-15 — Pass 230 — THIS WEEK'S SIGNAL IS `26` DEAD ADDRESSES, AND FIVE OF THEM ARE THE REFERENCE IMPLEMENTATIONS OF TWO `1EdTech` STANDARDS THIS KB RECOMMENDS BUILDING ON
 
 🔵 **`0` new agent rows *(`3` of `3` candidates already carried, eighth consecutive measured discovery rate)*. The week's finding is the first EXISTENCE sweep in this KB's history: every address on these shelves, re-probed in one run.**
