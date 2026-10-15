@@ -1,0 +1,21 @@
+# p214 - ACTION PZ: repositories printing MORE THAN ONE distinct grant family across the four client-facing shelves
+# shelves: agents/top.md repos/foundations.md verticals/solutions.md compose/patterns.md
+# method: UNAMBIGUOUS CELLS ONLY - a row naming exactly 1 repo and exactly 1 distinct licence family.
+#         multi-token rows (dual grants AND correction trails) are excluded by construction: counting
+#         them would manufacture findings out of this KB's own correction work. 140 rows so excluded.
+# adjudication: p211 census (one first-hand grant per repo) + blobs RE-READ first-hand on 2026-10-15
+# PZ falsifier: limb 1 = >=10 repos contradict -> standing backlog with a size; limb 2 = <10 -> nearly reconciled
+# RESULT: 8 repos contradict -> limb 2 FIRES. But 6 of 8 are real and 8 of 8 sit on the GNU axis.
+# ACTION QF (run same pass): 3 of the 4 wrong-cell repos were ALREADY RIGHT elsewhere in this KB.
+#   GibbonEdu -> P171 (mechanism + "Gibbon es GPL-3.0"); certo -> p98 (AGPL, 33820 B, sha 6fd0a11);
+#   frappe/lms -> the pass correcting a 2026 listicle. Only MoFaCTS is a new reading.
+#   => the contradiction backlog is small; the PROPAGATION failure rate inside it is ~80%.
+repo	shelf_families	blob_family	blob_bytes	blob_form	verdict	channels_agreeing	note
+GibbonEdu/core	AGPL-3.0/GPL-3.0	GPL-3.0	35121	LICENSE	WRONG-CELLS-4	LICENSE-title+composer.json+README	mechanism: GPL-3.0 s13 contains "Affero" 3x; whole-body matcher reads AGPL. Cell asserted "not GPL, as secondary sources say" - backwards. PRIOR-RECORD: P171 documented this mechanism AND stated Gibbon is GPL-3.0; 4 cells stood anyway
+Schroedinger-Hat/certo	AGPL-3.0/GPL-3.0	AGPL-3.0	33820	LICENSE	WRONG-CELLS-1	LICENSE-title	title line reads GNU AFFERO; published GPL-3.0 on foundations shelf. PRIOR-RECORD: p98 read AGPL-3.0 33820 B sha 6fd0a11 first-hand
+memphis-iis/MoFaCTS	AGPL-3.0/GPL-3.0	AGPL-3.0	34523	LICENSE	WRONG-CELLS-1	LICENSE-title	title line reads GNU AFFERO; published GPL-3.0 on foundations shelf. NO PRIOR RECORD - the one genuinely new reading this pass
+frappe/lms	AGPL-3.0/MIT	AGPL-3.0	33893	license.txt	WRONG-CELLS-1	LICENSE-title	star-ranking note read "the MIT LMS"; 13 other cells on these shelves already said AGPL-3.0. PRIOR-RECORD: a pass corrected a 2026 listicle MIT claim with payload 33893 B license.txt AGPL-3.0, noting frappe/frappe framework IS MIT
+foradian/fedena	Apache-2.0/GPL-2.0	Apache-2.0	679	NOTICE	RESOLVED-FROM-ABSENT	NOTICE+README.markdown-l16	STATED not BODIED (p210). 14/14 licence paths in tree are vendored, 0 own. GPL-2.0 cell came from vendored fckeditor - this KB had already diagnosed that correctly
+formalms/formalms	Apache-2.0/GPL-2.0	GPL-2.0	18346	html/license.txt	RESOLVED-FROM-ABSENT	html/license.txt+html/lib/System/license/license_english.txt	GNU GPL v2 June 1991, in 10 languages. Refutes "carries no licence body at all" - that was a ROOT-ONLY reading. Reported Apache-2.0 is a vendored jsdoc/prettify file
+bigbluebutton/bigbluebutton	GPL-3.0/LGPL-3.0	LGPL-3.0	7652	LICENSE	FALSE-POSITIVE-OF-PZ	LICENSE-title	the "GPL-3.0" token is in a BLOB-STRUCTURE table describing LGPL-3.0 publication forms ("GPL-3.0 by reference"). Not a grant claim. Cell is correct; left untouched
+odoo/odoo	GPL-3.0/LGPL-3.0	LGPL-3.0	43529	LICENSE	FALSE-POSITIVE-OF-PZ	LICENSE-title-l2	same blob-structure table ("GPL-3.0 included by value"). Not a grant claim. Cell is correct; left untouched

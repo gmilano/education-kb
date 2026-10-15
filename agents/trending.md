@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 214 — the week nothing new arrived, and the shelf corrected itself instead
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 `0` new agents this week, and it is a measurement rather than a quiet week
+
+🟢 **The `4` global mandated searches ran verbatim** — *open source AI agents education `2026`
+github MIT* · *github trending education AI `2026`* · *open source platform education ERP CRM
+MIT Apache* · *AI education industry trends `2026`*.
+
+🔴 **They returned no education-specific agent this KB does not already carry.** 🔵 **The global
+agent queries returned general-purpose frameworks — `CrewAI`, `LangGraph`, `OpenHands`,
+`OpenCode`, Microsoft's `AI Agents for Beginners`, the Hugging Face agents course — and the
+trending queries returned `nanochat`, `developer-roadmap`, `Open WebUI`, `PyTorch` and
+`Project NOMAD`. 🟡 **Every one of those is either a framework this KB places in
+[`intel/`](../intel/trends.md) rather than on the education shelf, or a learning RESOURCE about
+AI rather than an agent FOR education.** 🔵 **`Project NOMAD` — the offline-first knowledge
+server on GitHub trending `13` Oct `2026` — is already carried.**
+
+🟢 **The distinction is worth stating because it keeps recurring:** 🔴 **a search for *"AI agents
+education"* returns courses that TEACH agents far more often than agents that teach.** 🟢 **With
+`1 880` repository slugs carried, this shelf is past the point where a general search adds to
+it.**
+
+### 🆕 🔴 What the week actually produced: `9` corrected cells, `0` new rows
+
+🟢 **`ACTION PZ` *(p211, offline)* asked which repositories this KB prints two different grants
+for. `8` of `518`. `6` were real.**
+
+| repo | 🔴 was | 🟢 is | direction of the error |
+|---|---|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `AGPL-3.0` ×`4` cells | 🟢 **`GPL-3.0`** | 🔴 **overstated** — network copyleft invented on a school SIS |
+| [`frappe/lms`](https://github.com/frappe/lms) | *"the `MIT` LMS"* | 🔴 **`AGPL-3.0`** | 🔴 **overstated permissiveness** — the worst direction |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | `GPL-3.0` | 🔴 **`AGPL-3.0`** | 🔴 understated |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | `GPL-3.0` | 🔴 **`AGPL-3.0`** | 🔴 understated |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | `GPL-2.0` *(vendored read)* | 🟢 **`Apache-2.0`** *(root `NOTICE`)* | 🟢 recovered from `ABSENT` |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | *"no licence body at all"* | 🟢 **`GPL-2.0`** *(in-tree, `10` languages)* | 🟢 recovered from `ABSENT` |
+
+🔵 **`8` of `8` on the GNU axis**, and the mechanism was named long ago: 🔴 **`GPL-3.0` §13 is
+titled *"Use with the GNU Affero General Public License"* and says `Affero` `3` times, so a
+whole-body matcher reads a `GPL-3.0` blob as `AGPL-3.0`.** 🟢 **`P171` documented exactly this
+and recorded *"Gibbon es `GPL-3.0`"*; `P205` turned it into the title-window rule.** 🔴 **The
+`4` cells stood regardless.**
+
+🔴 **`3` of the `4` wrong-cell repositories were already right elsewhere in this KB** —
+`GibbonEdu` in `P171`, `certo` in **p98** *(`AGPL-3.0`, `33 820` B, sha `6fd0a11`)*, `frappe/lms`
+in the pass that corrected a listicle's `MIT` claim. 🟢 **Only `MoFaCTS` is a new reading.**
+🔵 **`P214-3` in [`agents/top.md`](../agents/top.md): the contradiction backlog is small, but the
+propagation failure rate inside it is ~`80`% across two independent samples.**
+
+### 🆕 🟡 Honest note on this week's own instrument
+
+🔴 **`2` of the `8` flagged repositories were false positives of the script that flagged them.**
+🟢 **`bigbluebutton` and `odoo` were caught because a table ABOUT licence-text structure prints
+*"`GPL-3.0` by reference"* and *"`GPL-3.0` included by value"*.** 🔵 **A licence token in prose
+about licence text is not a grant claim.** 🟢 **Both cells were correct and left untouched, and
+the exclusion is written into
+[`compose/code/p214-multi-grant-reconciliation/README.md`](../compose/code/p214-multi-grant-reconciliation/README.md)
+so the next audit does not re-find them.**
+
+---
 ## 2026-10-15 — Pass 213 — the week the integrity shelf turned out to be aimed at the wrong decade
 
 🟢 **APPEND-ONLY. History below this section is intact.**

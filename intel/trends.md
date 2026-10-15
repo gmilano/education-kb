@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — THE MANDATED SEARCH SET RETURNED `0` NEW FACTS: `23` OF `23` TERMS WERE ALREADY HERE. THE SEARCH CHANNEL IS SATURATED FOR THIS INDUSTRY
+
+### 🆕 🟢 `T214-1` — the pan-regional query PAID in all four regions, and that is still not a finding
+
+🔵 **All `8` mandated searches were run verbatim** — `4` global *(open-source agents, GitHub
+trending, vertical platforms, industry trends)* and `4` regional *(`AI education {region} 2026
+adoption regulation players`)*.
+
+🟢 **First result, and it reverses a standing one:** 🔴 **`T207-1` has recorded for seven
+consecutive passes that in EMEA and APAC the policy channel is ORGAN-gated and the plain
+regional query returns `0` education instruments.** 🟢 **This pass it returned real education
+instruments in BOTH:**
+
+| region | what the plain query returned this pass |
+|---|---|
+| **EMEA** | EU AI Act treatment of admissions/evaluation/exam-scoring as high-risk; the `Digital Omnibus` revised dates; Commission guidance on AI in education |
+| **APAC** | 🟢 **Korea's `AI Basic Act`** *(in force Jan `2026`, synthetic-content labelling, pilot year + `1`-year penalty grace)*; 🟢 **Vietnam's `Law No. 134/2025/QH15`** *(in force `1` Mar `2026`, **education named a high-risk sector**, reaches foreign providers)*; Taiwan's `AI Basic Act` *(Dec `2025`)* |
+| **North America** | `134` AI-in-education bills across `31` states; `CA AB 1159`; `ID SB 1227`; Oklahoma/Maryland human-oversight rules; NYC's K-`8` moratorium; `H.R. 8747` |
+| **LATAM** | UNESCO **Observatory on AI in Education for LAC** *(launched `14` Apr `2026`)*; the `200`-institution IESALC/UNU-IAS study; the Digital Education Council's `7 319`-faculty LATAM survey; Uruguay/CONPES `4144`/Mexico's bill |
+
+🔴 **And every one of them is already in this KB.** 🟢 **`T207-1` should therefore be narrowed,
+not retired: the QUERY SHAPE got better, but the shape was never the binding constraint — this
+KB's coverage was already ahead of it.**
+
+### 🆕 🔴 `T214-2` — the search channel is saturated for this industry, measured term by term
+
+🟢 **`23` distinct named entities were lifted out of the `8` search returns — instruments, bill
+numbers, organs, surveys, figures — and each was grepped against these shelves.**
+
+🔴 **`23` of `23` were already present.** 🟢 **`0` new facts.**
+
+🔵 **Tested:** `Title II` · `Interim Final Rule` · `134/2025` · `Vietnam` · `AI Basic Act` ·
+`South Korea` · `Taiwan` · `Observatory on AI in Education` · `IESALC` · `CONPES` · `Uruguay` ·
+`AB 1159` · `SB 1227` · `H.R. 8747` · `moratorium` · `2 August 2028` · `Digital Education
+Council` · `7 319` · `Oklahoma` · `Ceibal` · `CENIA` · `early-childhood` · `WCAG 2.2`.
+
+🟢 **The honest reading, and it should change how later passes are budgeted:** 🔴 **after `213`
+passes, a fresh general web search is no longer a discovery channel for education AI — it is a
+REGRESSION TEST, and this pass it passed.** 🟢 **The channels that still yield are the ones that
+read primary artefacts: `raw.githubusercontent.com` *(`200`)*, `git ls-remote` and `git ls-tree`.**
+🔵 **Which is why this pass spent itself on `ACTION PZ` instead, and why `PZ` found a defect
+class the search channel could never have surfaced.**
+
+🟡 **Two gaps named rather than left silent:** 🔴 **no APAC source gave education-specific
+ADOPTION rates by country** *(Singapore's `60.9`% AI-diffusion figure is working-age adults, not
+schools)*, and 🔴 **no EMEA source gave school-level adoption for the UK, France or the Gulf.**
+🟢 **Both are search-snippet absences, not measured absences; every government host remains
+`000`/`403` from here.**
+
+### 🆕 🔴 `T214-3` — the GNU family is this industry's standing licence hazard, now total on an independent measure
+
+🟢 **`P211-3` measured `5` of `7` wrong grant cells inside `GPL`/`LGPL`/`AGPL`.** 🟢 **`ACTION
+PZ` re-measured the same axis a completely different way — internal self-contradiction rather
+than blob disagreement — and got `8` of `8`.**
+
+🔵 **Why education specifically keeps landing here:** 🟢 **this industry's mature platforms are
+`2000`s-era civic and university software, and that cohort chose the GNU family.** 🔴 **The one
+licence question that decides a hosted education build — *does serving it to students trigger
+disclosure?* — is exactly the question the GNU family answers differently across `AGPL` *(yes)*,
+`GPL` *(no)* and `LGPL` *(no, and linking is permitted)*. 🔴 **And the three are textually
+nested: `GPL-3.0` §13 names `Affero` `3` times; `LGPL-3.0` is published either short *(by
+reference)* or embedding the whole `GPL`.** 🟢 **So the axis that matters most commercially is
+also the one a text matcher is least able to read.** 🔵 **`T214-3` is a standing instruction:
+**never fill a GNU-family cell from a body match — the title window, or a manifest, or nothing.**
+
+🔴 **And the instruction is not new, which is the uncomfortable part.** 🟢 **`P171` wrote the §13
+mechanism down in full, and `P205` turned it into the title-window rule.** 🔴 **Yet `4`
+`GibbonEdu` cells carried `AGPL-3.0` through every pass since.** 🔵 **A rule written into the
+method does not clean the cells authored before it; only a sweep does, and
+[`intel/open-gaps.md`](open-gaps.md) `ACTION QE` is that sweep.**
+
+### 🆕 🔴 `T214-4` — the vendored-licence false positive, and why it is an education problem
+
+🟢 **`foradian/fedena` carries `14` licence files and `0` of its own.** 🔴 **A subdirectory sweep
+recovers `vendor/plugins/delayed_job/MIT-LICENSE` and publishes a school ERP as `MIT`.**
+🟢 **Its real grant is `Apache-2.0`, stated in a root `NOTICE` of `679` B.**
+
+🔵 **This is not a quirk of one repo.** 🔴 **Education's long-lived PHP and Rails platforms
+predate dependency managers, so they VENDOR their dependencies into the tree** — `fedena` ships
+`fckeditor`, `tiny_mce`, `paperclip`; `formalms` ships `symfony` polyfills, `twig` and a
+`jsdoc`/`prettify` **`Apache-License-2.0.txt`** that three comparison articles mistook for the
+project's grant. 🟢 **In this industry, the licence files in a repository usually outnumber the
+project's own by an order of magnitude**, which makes *"find a LICENSE file"* a measurably
+unsafe method here even though it is adequate in most industries.
+
+---
 ## Pass 213 — 2026-10-15 — THE INTEGRITY SHELF ANSWERS THE PREVIOUS QUESTION: `385` REPOSITORIES, `0` DETECT AI-WRITTEN TEXT. AND A GRANT IS NOT A SCALAR, IT IS A RESOLVER
 
 ### 🆕 🔴 `T213-1` — the whole open-source academic-integrity shelf predates generative AI

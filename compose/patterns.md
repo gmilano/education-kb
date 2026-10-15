@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — TWO RECIPES: THE GRANT GATE THAT STOPS `P214-1` RECURRING, AND THE SELF-HOSTED SIS BUILD IT JUST UNBLOCKED
+
+### 🆕 🟢 `P214-A` — the GNU-family grant gate *(wire this into the KB itself, and into client due diligence)*
+
+🔵 **Problem it solves, measured this pass:** 🔴 **`8` of `8` self-contradicting repositories on
+these shelves sit on the `GPL`/`LGPL`/`AGPL` axis, and the cause is textual nesting — `GPL-3.0`
+§13 names `Affero` `3` times, `LGPL-3.0` either references the `GPL` or embeds it whole.**
+🔴 **A body matcher gets this wrong in both directions, and it is the one axis that decides
+whether a hosted education deployment owes source disclosure.**
+
+🟢 **Parts, all already on disk and all offline except one `curl`:**
+
+| part | where | role |
+|---|---|---|
+| [`compose/code/p211-full-column-grant-audit/fetch_one.sh`](code/p211-full-column-grant-audit/fetch_one.sh) | this repo | reads the licence blob at `HEAD` over `18` path forms from `raw.githubusercontent.com` *(`200`)* |
+| [`compose/code/p211-full-column-grant-audit/classify.py`](code/p211-full-column-grant-audit/classify.py) | this repo | 🟢 **riders before the title walk, then TITLE WINDOW ONLY** — the rule that `P214-1` proves is load-bearing |
+| [`compose/code/p214-multi-grant-reconciliation/reconcile.py`](code/p214-multi-grant-reconciliation/reconcile.py) | 🆕 this pass | catches the *internal* contradiction: the same repo printed with two grants |
+| `git ls-tree -r HEAD --name-only` | git | 🆕 **the vendored-file discriminator** — `T214-4` |
+
+🟢 **Wiring, in the order that matters:**
+
+1. 🟢 **`git ls-tree -r HEAD --name-only | grep -iE 'licen|copying'`, then DROP every path under
+   `vendor/`, `lib/`, `node_modules/`, `third_party/`, `public/javascripts/`.** 🔴 **Skip this
+   step and `foradian/fedena` resolves to `MIT` from `vendor/plugins/delayed_job/MIT-LICENSE` —
+   a permissive answer on a school ERP that is actually `Apache-2.0`.**
+2. 🟢 **Classify from the TITLE WINDOW of what survives, never the whole body.** 🔴 **Whole-body
+   on `GibbonEdu/core` returns `AGPL-3.0`; the title line returns `GPL-3.0`, and the title line
+   is right.**
+3. 🟢 **Cross-check the manifest** — `composer.json`/`package.json` `"license"`, or a root
+   `NOTICE`. 🟢 **`GibbonEdu` agrees on `3` channels; `fedena`'s grant exists ONLY here.**
+4. 🟢 **If the blob is absent at the root, search the tree before declaring `ABSENT`.**
+   🔴 **`formalms/formalms` was published as *"no licence body at all"* while shipping `GPL-2.0`
+   at `html/license.txt` in `10` languages.**
+5. 🟢 **Run `reconcile.py` over the shelves on every commit** and fail on any repository printed
+   with two grant families — 🔵 **excluding multi-token rows, which are correction trails.**
+
+🔵 **Client-facing form:** this is a **licence due-diligence gate** for any education
+engagement that forks open source — `4` steps, no API token, no paid scanner, and it catches the
+exact error class that decides a hosting obligation. 🟡 **Sold as a `1`–`2` week assessment
+before a platform decision is locked.**
+
+### 🆕 🟢 `P214-B` — the self-hosted, customised school SIS that `P214-1` just unblocked
+
+🔵 **This recipe was previously ruled out by this KB's own wrong licence cell.** 🟢 **With
+`GibbonEdu/core` correctly read as `GPL-3.0`, a district- or ministry-owned SIS fork is a clean
+build.**
+
+| layer | component | 🟢 grant *(verified first-hand)* | why this one |
+|---|---|---|---|
+| SIS core | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟢 **`GPL-3.0`** *(`35 121` B · `LICENSE`; `composer.json`; `README` l.81)* | 🟢 **File copyleft — fork, customise, HOST without disclosing source.** Mature, APAC-origin, PHP |
+| learning delivery | [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** *(`18 346` B · `html/license.txt`)* | 🆕 **newly usable this pass.** 🟡 `GPL-2.0` with no *"or later"* — compose only with `MIT`/`Apache-2.0`, 🔴 **never with `GPL-3.0` parts** |
+| ERP / finance | [`odoo/odoo`](https://github.com/odoo/odoo) | 🟢 **`LGPL-3.0`** *(`43 529` B; `LGPLv3` in line `2`)* | 🟢 Re-confirmed this pass. Linking permitted — the standard education-ERP seam |
+| scheduling of practice | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **`MIT`** *(`1 079` B, per `P213-2`)* | 🟢 **The cheapest real scheduler behind a tutor.** `MIT`, Python, no platform lock |
+
+🔴 **The licence seam that makes or breaks it:** 🟢 **`GibbonEdu` (`GPL-3.0`) and `formalms`
+(`GPL-2.0`) CANNOT be linked into one binary** — `GPL-2.0` without *"or later"* is incompatible
+with `GPL-3.0`. 🟢 **Keep them as two services behind an API boundary**, which is also what a
+district wants operationally. 🟢 **`py-fsrs` is `MIT` and may be embedded in either.**
+
+🟢 **The compliance layer, which is the sellable part in North America:** 🔴 **Oklahoma and
+Maryland require human oversight and bar AI from high-stakes decisions about students.**
+🟢 **So every AI-assisted action in the fork — placement, flagging, intervention — writes an
+`xAPI` record *(`Apache-2.0` core, per `P212-4`)* and blocks on a named human approval.**
+🔵 **A `GPL-3.0` fork can ship that as a first-class feature; this is the build that satisfies a
+2026 state statute rather than working around it.**
+
+🟡 **Honest scoping:** 🔴 **a modified `GPL-3.0`/`GPL-2.0` SIS distributed as a product — rather
+than hosted for one institution — carries source obligations to its recipients.** 🟢 **The
+pattern is sound for *"we run it for you"* and for *"you own the fork"*; it is NOT a route to a
+closed commercial SIS product.**
+
+---
 ## Pass 213 — 2026-10-15 — THREE RECIPES: A GRANT RESOLVER THAT HANDLES FOUR SHAPES A MAP CANNOT, THE AI-PROVENANCE INTEGRITY GRADER NOBODY HAS BUILT, AND A MEMORY SPINE THAT IS `MIT` ALL THE WAY DOWN
 
 🔵 **Every component below had its licence blob read first-hand from `raw.githubusercontent.com` at

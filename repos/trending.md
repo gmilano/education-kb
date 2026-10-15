@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 214 — `0` topic populations opened, `2` repositories recovered from `ABSENT`, and the search channel declared saturated
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 No new trending surface this week, stated as a measurement
+
+🔵 **p213 opened three topic populations *(`edtech` `4 467`, `spaced-repetition` `2 737`,
+`plagiarism-detection` `385`)*.** 🟢 **p214 opened none, and ran the mandated trending searches
+to establish whether that was a miss.**
+
+🔴 **`github trending education AI 2026` returned `nanochat`, `developer-roadmap`, `Open WebUI`,
+`PyTorch` and `Project NOMAD` — `0` education-specific repositories this KB does not carry.**
+🟢 **`23` of `23` named entities lifted from all `8` mandated searches were already on these
+shelves** *(term-by-term list in [`intel/trends.md`](../intel/trends.md) `T214-2`)*.
+
+🟢 **The conclusion, which should change how later passes budget their time:** 🔴 **after `213`
+passes and `1 880` carried repository slugs, a general web search is no longer a DISCOVERY
+channel for this industry — it is a regression test.** 🟢 **This week it passed.** 🟢 **The
+channels that still yield are the primary ones: `raw.githubusercontent.com` *(`200`)*,
+`git ls-remote`, and — 🆕 **new this pass** — `git ls-tree -r HEAD --name-only` over a
+blobless `--filter=blob:none --no-checkout` clone, which reads a repository's whole file
+list for almost nothing.**
+
+### 🆕 🟢 The `git ls-tree` channel, and what it found immediately
+
+🔵 **A `--filter=blob:none --no-checkout --depth 1` clone transfers no file contents, then
+`git ls-tree -r HEAD --name-only` lists every path.** 🟢 **`4 568` paths read for `fedena`,
+`5 321` for `formalms`, both in seconds.** 🔵 **This is the channel that settles an `ABSENT`
+row, because it answers *"is there a licence file ANYWHERE"* without `18` speculative `curl`s.**
+
+| repo | paths | licence-ish paths | 🟢 the project's OWN | verdict |
+|---|---|---|---|---|
+| [`foradian/fedena`](https://github.com/foradian/fedena) | `4 568` | `14` | 🔴 **`0`** | 🟢 **`Apache-2.0`** from root `NOTICE` *(`679` B)* + `README.markdown` l.`16`. 🔴 **All `14` are vendored — `fckeditor`, `tiny_mce`, `paperclip`, `delayed_job`** |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | `5 321` | `23` | 🟢 **`2`+`10` translations** | 🟢 **`GPL-2.0`** at `html/license.txt` *(`18 346` B)* and `html/lib/System/license/license_english.txt` *(`15 146` B)* |
+
+🔴 **`fedena` is the warning: `14` licence files, `0` of them the project's.** 🟢 **A
+subdirectory sweep for *"a LICENSE file"* publishes a school ERP as `MIT`.** 🔵 **`T214-4`:
+education's long-lived PHP and Rails platforms predate dependency managers and VENDOR their
+dependencies, so in this industry the licence files in a repository routinely outnumber the
+project's own by an order of magnitude.**
+
+### 🆕 🔵 Trending-adjacent, re-confirmed rather than new
+
+🟢 **`Project NOMAD`** — offline-first knowledge and education server bundling Wikipedia, books
+and courses with optional local AI — **was on GitHub trending `13` Oct `2026`** and is already
+carried. 🟡 **Its relevance is unchanged and worth restating for LATAM and APAC engagements:
+offline-first is the only deployment shape that works where connectivity is the binding
+constraint rather than model quality.**
+
+---
 ## 2026-10-15 — Pass 213 — three topic populations opened, and the standards layer is measured at `0`% AI
 
 🟢 **APPEND-ONLY. History below this section is intact.**

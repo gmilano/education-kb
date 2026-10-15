@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — THE REGIONAL QUERIES PAID IN ALL FOUR REGIONS AND ADDED `0` FACTS. THE OPPORTUNITY THAT MOVED IS A LICENCE CORRECTION, NOT A MARKET READING
+
+🔵 **Channel note, unchanged and re-tested:** 🔴 **every government and analyst host is
+`000`/`403` from here.** 🟢 **`raw.githubusercontent.com` is `200`; `git ls-remote` and
+`git ls-tree` work.** 🔴 **Every market and policy figure below is a search-snippet claim; the
+licence and repository work in [`repos/foundations.md`](../repos/foundations.md) is first-hand.**
+
+🟢 **All `4` regional queries were run verbatim and all `4` returned education-specific
+material** — reversing seven passes of `T207-1` on the query's shape — 🔴 **and `23` of `23`
+named entities across all `8` mandated searches were already on these shelves.** 🔵 **Full
+term-by-term test in [`intel/trends.md`](../intel/trends.md) `T214-2`.** 🟢 **So the market map
+below is RE-CONFIRMED rather than extended, which is a result worth recording explicitly after
+`213` passes: this KB's regional coverage is ahead of the general search channel.**
+
+### 🔵 Re-confirmed this pass, `0` cells changed
+
+| region | instruments re-confirmed | 🟡 status |
+|---|---|---|
+| **North America** | `134` AI-in-education bills / `31` states *(2026 session)*; `CA AB 1159`; `ID SB 1227`; Oklahoma + Maryland human-oversight and high-stakes limits; NYC K-`8` moratorium; `H.R. 8747` *(K-12 AI Literacy and Readiness Act, advanced from House committee)* | 🟡 all carried; no primary-source confirmation available from here |
+| **EMEA** | AI Act high-risk reach over admissions, evaluation and exam scoring; `Digital Omnibus` dates — stand-alone high-risk **`2` Dec `2027`**, embedded **`2` Aug `2028`**, Art. `50` transparency **`2` Aug `2026`**; education-prohibited emotion inference since `2` Feb `2025` | 🟢 carried and consistent |
+| **APAC** | Korea `AI Basic Act` *(Jan `2026`; labelling; pilot year, `1`-year penalty grace)*; 🔴 **Vietnam `Law No. 134/2025/QH15`** *(1 Mar `2026`; **education named high-risk**; binds foreign providers; high-risk compliance reported for Sep `2027` — vendor-blog date, unverified)*; Taiwan `AI Basic Act` *(Dec `2025`)* | 🟡 carried; the Vietnamese compliance date remains single-sourced |
+| **LATAM** | UNESCO **Observatory on AI in Education for LAC** *(14 Apr `2026`; CAF, CENIA, CETIC.br, ECLAC, Fundación Santillana, Tec de Monterrey, ProFuturo, Fundación Ceibal)*; IESALC/UNU-IAS `200`-institution study *(`87`% using AI somewhere, `74`% in teaching, 🔴 **`26`% with a formal AI strategy**)*; DEC survey *(`7 319` faculty, `29` institutions: `79`% use, `88`% minimal-to-moderate depth)*; Uruguay as first CoE Framework Convention signatory; Colombia `CONPES 4144`; Mexico's federal bill | 🟢 carried |
+
+## Opportunities by region
+
+### North America
+
+🟢 **The opportunity that actually changed this pass is a licence correction, and it is worth
+more than any market figure here.** 🔴 **For `4` cells this KB told clients that
+[`GibbonEdu/core`](https://github.com/GibbonEdu/core) — the most mature open school SIS — was
+`AGPL-3.0` and therefore *integrate-only*.** 🟢 **It is `GPL-3.0`: fork it, customise it, host
+it for a district, owe no source disclosure.** 🔵 **That unblocks the single most requested
+build in K-12 — a self-hosted, customised SIS — in the region where `36`% of global
+AI-in-education spend sits and where procurement is district-by-district with, as this KB's
+standing framing puts it, *"no equivalent to the FDA for educational technology."***
+
+🟡 **Pair it with the regulatory reality:** 🔴 **Oklahoma and Maryland now require human
+oversight and bar AI from high-stakes decisions about students**, so the sellable SIS build is
+one where every AI-assisted decision carries a human-approval step and an audit record. 🟢 **A
+`GPL-3.0` fork can ship exactly that; an `AGPL` one would have made the hosting question a
+day-one legal conversation.**
+
+### EMEA
+
+🔴 **`Schroedinger-Hat/certo` is `AGPL-3.0`, not `GPL-3.0`** *(corrected this pass)*. 🔵 **It is
+an EMEA-origin **Open Badges `3.0`** issuer, and `Open Badges`/digital credentials is a named
+`2026` growth line.** 🔴 **Run as a hosted issuing service for a university, `AGPL-3.0` means
+the deployment owes source to its users.** 🟢 **The opportunity survives the correction but
+changes shape: offer `certo` as a self-hosted deployment the institution owns, or budget for
+publishing the modifications.** 🟡 **Getting this backwards is how an EMEA credentialing
+engagement acquires an unplanned disclosure obligation.**
+
+🟢 **The regulatory clock is the demand driver and is unchanged:** Art. `50` transparency has
+applied since **`2` Aug `2026`**, stand-alone high-risk lands **`2` Dec `2027`** and embedded
+**`2` Aug `2028`** — 🔵 **so an EMEA engagement starting now is building for a `2027`
+conformity deadline, and evaluation evidence is the deliverable.**
+
+### APAC
+
+🔴 **Vietnam's `Law No. 134/2025/QH15` names education a high-risk sector, has been in force
+since `1` March `2026`, and reaches foreign providers.** 🔵 **For a global studio that is the
+region's most actionable fact: delivering an education AI system into Vietnam is a regulated
+act regardless of where the team sits.** 🟡 **The reported September `2027` high-risk compliance
+window is single-sourced and should be confirmed against the decree before it is quoted to a
+client.**
+
+🟢 **The licence correction lands here too, and in the region's favour:** `GibbonEdu` is an
+**APAC-origin** project *(Hong Kong)*, and it is the SIS this KB just unblocked. 🔵 **A
+`GPL-3.0` SIS, forked per-jurisdiction to satisfy Korea's labelling duty and Vietnam's
+high-risk classification, is a concrete APAC offer** — and 🔴 **the per-jurisdiction fork is
+only affordable because the grant is file copyleft, not network.**
+
+### LATAM
+
+🔴 **`26`% of `200` LAC institutions have a formal AI strategy while `87`% already use AI
+somewhere**, and the DEC's `7 319`-faculty survey says `79`% of faculty use AI but `88`% only
+*minimally to moderately*. 🟢 **The gap is governance and depth, not access** — which is an
+advisory-plus-platform engagement, not a tool sale.
+
+🟢 **Forma LMS becomes usable in this region this pass.** 🔴 **This KB carried
+[`formalms/formalms`](https://github.com/formalms/formalms) as having *"no licence body at
+all"*, which is disqualifying for any public-sector procurement.** 🟢 **It is `GPL-2.0`, with
+the licence shipped in-tree in `10` languages — Spanish and Portuguese among them.** 🔵 **A
+`GPL-2.0` LMS that already localises its own licence text is a credible base for a ministry or
+university deployment where the grant has to be shown in the procurement language.** 🟡 **One
+constraint to carry into the build: `GPL-2.0` without *"or later"* will not mix with `GPL-3.0`
+components — compose it with `MIT`/`Apache-2.0` parts only.**
+
+🟢 **The UNESCO LAC Observatory *(launched `14` Apr `2026`)* is the region's convening organ and
+its partner list is the region's buyer map** — CAF, CENIA, CETIC.br, ECLAC, Fundación
+Santillana, Tec de Monterrey, ProFuturo, Fundación Ceibal.
+
+---
 ## Pass 213 — 2026-10-15 — EUROPE'S EVALUATION FRAMEWORK HAS A DATE (`31/12/2026`), AND THE PAN-REGIONAL QUERY IS RETIRED FOR THE SEVENTH TIME
 
 🔵 **Channel note, re-tested cold this pass:** 🔴 **`rm.coe.int`, `www.coe.int`,

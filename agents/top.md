@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — `ACTION PZ` DISCHARGED: `8` OF `518` REPOS CONTRADICT THEMSELVES, `8` OF `8` ON THE GNU AXIS, AND THE MECHANISM IS `GPL-3.0` §13
+
+🔵 **This pass added `0` new repository rows, and that is the result, not a shortfall.** 🟢 **The
+`8` mandated searches — `4` global, `4` per-region — were run verbatim and returned `0` findings
+this KB does not already carry.** 🔵 **Detail and the term-by-term test in
+[`intel/trends.md`](../intel/trends.md) `T214-3`.** 🟢 **So the pass spent itself on
+`ACTION PZ`, which p211 registered, which needs no network, and which turned out to hold a
+defect class.**
+
+### 🆕 🔴 `P214-1` — `4` cells on this KB's shelves put **network copyleft on a school SIS** that does not have it
+
+🟢 **`GibbonEdu/core` is `GPL-3.0`.** 🔴 **This KB published `AGPL-3.0` in `4` places**, and one
+of them had hardened the error into an assertion: *"`AGPL-3.0` **(not `GPL`, as secondary sources
+say)**"*. 🔴 **The secondary sources were right.**
+
+🟢 **Three independent channels, read first-hand on `2026-10-15`:**
+
+| channel | reads |
+|---|---|
+| `LICENSE` title line *(`35 121` B)* | 🟢 **`GNU GENERAL PUBLIC LICENSE`, Version 3, 29 June 2007** |
+| `composer.json` | 🟢 **`"license": "GPL-3.0"`** |
+| `README.md` l.`81` | 🟢 *"Gibbon is licensed under GNU General Public License v3.0"* |
+
+🔵 **And the mechanism — which this KB ALREADY KNEW, and that is the real finding:** 🔴 **`GPL-3.0`
+§13 is TITLED *"Use with the GNU Affero General Public License"*, and the word `Affero` appears
+`3` times in the blob — lines `552`, `556`, `559` — so a whole-body matcher reads `GPL-3.0` as
+`AGPL-3.0`.**
+
+🔴 **`P171` wrote this down.** [`repos/trending.md`](../repos/trending.md) carries it verbatim:
+*"La sección 13 del GPL-3.0 se titula literalmente «Use with the GNU Affero General Public
+License», así que TODO texto GPL-3.0 matcheaba AGPL primero"* — and then, 🔴 **in the same
+section: *"el instrumento leyó `GibbonEdu/core` como `AGPL-3.0` y estuvo a un commit de publicar
+una «corrección» al pase 70 — que tenía razón: Gibbon es `GPL-3.0`."***
+
+🟢 **So an earlier pass identified the mechanism, caught its own instrument one commit from
+publishing the wrong correction, and recorded that Gibbon is `GPL-3.0`.** 🔴 **The `4` cells
+saying `AGPL-3.0` stood anyway, for every pass since.** 🔵 **This is not a discovery pass. It is
+`P211-1` in its purest observed form: the answer was found, written up, and never propagated to
+the cells that carried the question.**
+
+### 🆕 🔴 The other `3` wrong-cell repositories, all on the same axis
+
+| repo | 🔴 this KB said | 🟢 blob says *(bytes · form)* | consequence of the error |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 *"the **`MIT`** LMS"* on the star-ranking shelf | 🟢 **`AGPL-3.0`** *(`33 893` · `license.txt`)* | 🔴 **The worst direction to be wrong in.** `13` other cells on these shelves already said `AGPL-3.0`; a reader scanning the ranked list for a permissive LMS found `MIT` |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`33 820` · `LICENSE`)* | 🔴 A hosted **Open Badges `3.0`** issuer owes source. Understated |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`34 523` · `LICENSE`)* | 🔴 A hosted adaptive tutor owes source. Understated |
+
+🔵 **Note the directions: `GibbonEdu` and `frappe/lms` overstated the obligation, `certo` and
+`MoFaCTS` understated it.** 🔴 **The GNU axis is not biased one way — it is simply unreliable
+wherever a cell was filled from a body match.**
+
+### 🆕 🟢 `P214-2` — both `ABSENT` rows resolved, and one of them is a trap for `ACTION QA`
+
+🔵 **`ACTION QA` is registered to re-read `94` `ABSENT` rows through manifests and
+subdirectories.** 🟢 **`PZ` surfaced `2` of them and both resolved — but they resolve in
+OPPOSITE ways, and the difference is the warning `QA` needs before it runs.**
+
+| repo | 🟢 resolution | channel | why it matters to `QA` |
+|---|---|---|---|
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** | `html/license.txt` *(`18 346` B)* + `html/lib/System/license/license_english.txt` *(`15 146` B, **`10` languages**)* | 🟢 **A GENUINE recovery.** 🔴 This KB said *"carries no licence body at all"* — that was a **ROOT-ONLY** reading. The grant was in-tree the whole time |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🟢 **`Apache-2.0`** | root `NOTICE` *(`679` B)* + `README.markdown` l.`16` | 🔴 **A TRAP.** `14` of `14` licence paths in its tree are **vendored third-party** and `0` are the project's own. 🔴 **A naive subdirectory sweep recovers `vendor/plugins/delayed_job/MIT-LICENSE` and publishes `fedena` as `MIT`** |
+
+🔴 **So `ACTION QA` cannot simply glob for licence files: on `fedena` that yields a confident,
+permissive, and entirely false answer** on a school ERP. 🟢 **The discriminator is cheap —
+`git ls-tree -r HEAD --name-only` and reject any path under `vendor/`, `lib/`, `node_modules/`
+or a named third-party directory.** 🔵 **`fedena`'s own row already diagnosed this correctly
+*(“a **vendored** `fckeditor` file”)* and simply never recorded the real grant** — 🔴 **`P211-1`
+again: the right reading, published, and not propagated to the cell that needed it.**
+
+🟡 **`fedena`'s grant is `STATED`, not `BODIED`** *(p210's state)*: a `NOTICE` naming
+`Apache-2.0` with no Apache body shipped anywhere in the tree.
+
+### 🆕 🔴 `P214-3` — `3` of the `4` wrong-cell repositories were ALREADY RIGHT somewhere in this KB
+
+🔵 **`ACTION QF` was registered for p215 and then run immediately, because it is one `grep` and
+it tests whether this pass committed the failure it had just named.** 🔴 **It fires.**
+
+| repo | 🟢 where this KB already had it right | 🔴 how long the wrong cell stood |
+|---|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `P171`, with the §13 mechanism AND the explicit statement *"Gibbon es `GPL-3.0`"* | 🔴 since p70 |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | **p98** read it first-hand: 🔴 **`AGPL-3.0` · `33 820` B · sha `6fd0a11`** — the same bytes p214 re-read | 🔴 since p98 |
+| [`frappe/lms`](https://github.com/frappe/lms) | a pass corrected a `2026` listicle's `MIT` claim with the payload *(`33 893` B, `license.txt`, `AGPL-3.0`)* **and the mechanism** — `frappe/frappe`, the framework underneath, **is** `MIT` | 🔴 the ranked shelf still said *"the `MIT` LMS"* |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | 🟢 **nowhere — this one is genuinely new** | — |
+
+🔴 **`3` of `4`.** 🟢 **`P211-1` measured `6` of `7` on a different population; p214 gets `3` of
+`4` on this one.** 🔵 **Two independent samples now agree that roughly `80`% of this KB's wrong
+licence cells are **not knowledge failures at all** — the KB holds the right answer and the cell
+holds the old one.
+
+🟢 **Which reconciles `PZ`'s two results, and they only look contradictory:** 🟢 **the
+CONTRADICTION backlog is small *(`8` of `518`, limb `2`)*** 🔴 **while the PROPAGATION failure
+rate inside it is high *(`3` of `4`)*.** 🔵 **A small backlog of cells that each had a published
+answer is a worse finding than a large backlog of genuinely unknown ones — it means the defect
+is in how this KB writes corrections, not in what it knows.** 🟢 **`ACTION QG`, registered in
+[`intel/open-gaps.md`](../intel/open-gaps.md), makes the correction itself the unit of work.**
+
+🟡 **One scoping note, so `QF` is not over-read:** 🟢 **the stale values live in CURRENT-STATE
+shelf cells; the correct values live in DATED trending history.** 🔵 **A past grant in an
+append-only dated section is a record, not an error, and none were edited.**
+
+🔵 **Full table, method and the excluded-row rule:
+[`compose/code/p214-multi-grant-reconciliation/`](../compose/code/p214-multi-grant-reconciliation/README.md);
+evidence: [`evidence/multi-grant-reconciliation.2026-10-15-p214.tsv`](../evidence/multi-grant-reconciliation.2026-10-15-p214.tsv).**
+
+---
 ## Pass 213 — 2026-10-15 — THE MISSING AGENT IN THIS INDUSTRY IS THE INTEGRITY GRADER: `385` REPOS, `0` DETECT AI-WRITTEN TEXT. `21` NEW ROWS VERIFIED FIRST-HAND
 
 🔵 **Method, unchanged from p211/p212 and re-run cold:** existence and default branch by
@@ -1468,7 +1574,7 @@ for ten passes. All four are `GPL-2.0`. ZERO are LGPL.**
 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `17 286` | `0.997`× pristine — near-canonical |
 | [`OS4ED/openSIS-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `17 286` | byte-identical to the row above |
 | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) | 🔴 `LGPL?` | 🟢 **`GPL-2.0`** | `53 408` | *"v2 or later, with two special exceptions"* |
-| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 `LGPL?` | 🟡 **`GPL-2.0`** | `66 467` | 🔴 a **vendored** `fckeditor` file, tri-licensed `GPL`+`LGPL`+`MPL` — first title only |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 `LGPL?` | 🟢 **`Apache-2.0`** *(🆕 `P214-2`; was `GPL-2.0`)* | `679` B · root `NOTICE` | 🟢 **RESOLVED: `Apache-2.0`** — root `NOTICE` *(`679` B)* carries the Apache grant boilerplate and `README.markdown` l.`16` reads *"Fedena is released under the Apache License 2.0"*. 🔴 **`STATED`, not `BODIED`** *(`p210`)*: no Apache body ships. 🟢 **This row's own diagnosis was right** — the `GPL-2.0` came from a **vendored** `fckeditor` file; `14` of `14` licence paths in the tree are third-party and `0` are the project's own |
 
 🔵 The instrument, its negative controls and the limits it declares are in
 [`compose/code/p198-title-line-family/`](../compose/code/p198-title-line-family/); the
@@ -2372,7 +2478,7 @@ shelf.** `30` rows, measured today, one call each batch:
 | `5` | [`moodle/moodle`](https://github.com/moodle/moodle) | `7 476` | `2009-12-16` | `1 959` refs at full `ls-remote` depth |
 | `6` | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6 869` | `2011-02-01` | `472` open issues |
 | `7` | [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `5 455` | `2021-01-03` | 🆕 **NEW to this shelf** — `MIT` *(`LICENSE`, `1 069` B)*, STEM robotics |
-| `8` | [`frappe/lms`](https://github.com/frappe/lms) | `3 311` | `2021-02-15` | the `MIT` LMS |
+| `8` | [`frappe/lms`](https://github.com/frappe/lms) | `3 311` | `2021-02-15` | 🆕 🔴 **`AGPL-3.0`, not *"the `MIT` LMS"*** — `P214-1`; blob `33 893` B at `license.txt`, title reads **AFFERO** |
 | `9` | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2 371` | `2022-05-10` | default branch is `dev`, not `main` |
 | `10` | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `2 028` | `2025-08-31` | |
 | `11` | [`ai-infra-curriculum/ai-infra-engineer-learning`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) | `1 784` | `2025-10-25` | 🆕 **NEW** — `MIT` *(`1 081` B)*, `474` paths, last commit `2026-06-25` |

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — THE ANSWER WAS ALREADY HERE: `3` OF `4` WRONG LICENCE CELLS HAD A CORRECT VALUE PUBLISHED ELSEWHERE IN THIS KB
+
+🔵 **`0` new repository rows, `0` new topic shelves, `0` new facts from the mandated searches —
+and `9` corrected cells, `2` repositories recovered from `ABSENT`, and one defect class named.**
+
+🟢 **The search channel is saturated for this industry, and p214 measured it rather than
+assuming it.** 🔴 **All `8` mandated searches ran verbatim; `23` of `23` named entities lifted
+from their returns were already on these shelves.** 🟢 **After `213` passes and `1 880` carried
+repository slugs, a general web search is a REGRESSION TEST for education AI, not a discovery
+channel.** 🔵 **It passed. The pass spent itself on `ACTION PZ` instead.**
+
+### 🆕 `ACTION PZ` — `8` of `518` repositories print two grants. **Limb `2` fires**
+
+🟢 **The propagation backlog is SMALL.** 🔴 **Its composition is the finding:**
+
+- 🔴 **`8` of `8` sit on the GNU axis.** `P211-3` measured `5` of `7`; on `PZ`'s independent
+  measure *(internal self-contradiction, not blob disagreement)* it is total.
+- 🟢 **`6` of `8` are real** — `4` repositories with wrong cells, `2` recovered from `ABSENT`.
+- 🟡 **`2` of `8` are false positives of the comparator**, because a table *about licence text*
+  prints licence tokens that are not grant claims. 🟢 **Recorded, not hidden.**
+
+### 🆕 🔴 `P214-1` — `4` cells put network copyleft on a school SIS that does not have it
+
+🟢 **`GibbonEdu/core` is `GPL-3.0`**, agreeing on `3` channels *(`LICENSE` title line,
+`composer.json`, `README` l.`81`)*. 🔴 **This KB published `AGPL-3.0` in `4` places and marked
+the platform *integrate-only*.** 🟢 **It is file copyleft: fork it, customise it, host it for a
+district, owe no source disclosure** — 🔵 **which unblocks the single most requested build in
+K-12 that this KB had ruled out in error.** 🔴 **The other direction also appeared:
+`Schroedinger-Hat/certo` and `memphis-iis/MoFaCTS` are `AGPL-3.0`, not `GPL-3.0`, so hosted
+badge-issuing and hosted tutoring DO owe source; and `frappe/lms` was carried on the ranked
+shelf as *"the `MIT` LMS"* while being `AGPL-3.0`.**
+
+### 🆕 🔴 `P214-3` — and the mechanism was never the problem
+
+🔴 **`GPL-3.0` §13 is titled *"Use with the GNU Affero General Public License"* and names
+`Affero` `3` times, so a whole-body matcher reads a `GPL-3.0` blob as `AGPL`.** 🟢 **`P171`
+documented that in full and stated *"Gibbon es `GPL-3.0`"*, having caught its own instrument one
+commit from publishing the wrong correction. `P205` turned it into the title-window rule.**
+🔴 **The `4` cells stood anyway.**
+
+🔴 **`ACTION QF` — registered for p215, then run in this pass because it is one `grep` — found
+the same for `3` of the `4`:** `GibbonEdu` *(`P171`)*, `certo` *(p98, the same `33 820` bytes and
+sha `6fd0a11`)*, `frappe/lms` *(the pass that corrected a `2026` listicle)*. 🟢 **Only `MoFaCTS`
+was a new reading.**
+
+🔵 **Two independent samples — `P211-1`'s `6`/`7` and p214's `3`/`4` — now agree that ~`80`% of
+this KB's wrong licence cells are not knowledge failures.** 🟢 **The KB holds the right answer
+and the cell holds the old one.** 🔴 **A small backlog of cells that each had a published answer
+is a worse result than a large backlog of unknown ones: the defect is in how corrections are
+written, not in what is known.** 🟢 **`ACTION QG` is registered to make the correction, not the
+discovery, the unit of work — and
+[`reconcile.py`](compose/code/p214-multi-grant-reconciliation/README.md) already IS that gate;
+it only has to run on write.**
+
+### 🆕 🟢 `P214-2` — `2` `ABSENT` rows resolved, and `ACTION QA`'s method corrected before it runs
+
+🟢 **`formalms/formalms` is `GPL-2.0`** — in-tree at `html/license.txt` *(`18 346` B)* in `10`
+languages; this KB's *"no licence body at all"* was a root-only reading. 🔴 **`foradian/fedena`
+is `Apache-2.0`** *(root `NOTICE`, `679` B)* **and is a trap: `14` of `14` licence paths in its
+tree are vendored and `0` are its own, so a bare glob publishes a school ERP as `MIT`.**
+🔵 **`T214-4`: education's long-lived PHP and Rails platforms predate dependency managers and
+vendor their dependencies, so here the licence files in a repository routinely outnumber the
+project's own by an order of magnitude.** 🟢 **`ACTION QA` re-registered as `QD` with the
+vendored-path filter.**
+
+### 🆕 🟢 New channel: `git ls-tree` over a blobless clone
+
+🟢 **`git clone --filter=blob:none --no-checkout --depth 1` then `git ls-tree -r HEAD
+--name-only` reads a repository's entire file list with no blob transfer** — `4 568` paths for
+`fedena`, `5 321` for `formalms`, in seconds. 🔵 **This is what settles an `ABSENT` row, and it
+widens the reachable surface recorded for `9` passes: not just licence bodies, but complete file
+inventories.** 🔴 **GitHub only — `git.drupalcode.org` is `CONNECT`-refused, which is also why
+`ACTION QC`'s `9` passes of GitHub name-guessing for `OpenCampus` could never have worked: it is
+a Drupal distribution and its code is on a forge this environment cannot reach.**
+
+---
 ## Pass 211 — 2026-10-15 — THE SAMPLING WAS NEVER NECESSARY
 
 🔴 **Nine passes audited this KB's licence column ten rows at a time because p210 recorded the

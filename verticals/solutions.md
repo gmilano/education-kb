@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — THE PLATFORM SHELF'S BIGGEST CORRECTION THIS MONTH: `GibbonEdu` IS NOT NETWORK-COPYLEFT, AND FORMA LMS HAS A GRANT AFTER ALL
+
+🔵 **`ACTION PZ` *(p211, offline)* reconciled every repository printing more than one grant
+across the four client-facing shelves.** 🟢 **`3` cells on THIS page change, and both changes
+move a platform from *"integrate-only"* to *"buildable"*.** 🔵 **Method:
+[`compose/code/p214-multi-grant-reconciliation/`](../compose/code/p214-multi-grant-reconciliation/README.md).**
+
+### 🆕 🟢 `P214-1` — `GibbonEdu/core` is `GPL-3.0`, not `AGPL-3.0`, and the architecture advice inverts
+
+🔴 **For `4` cells across this KB — `2` of them on this page — `GibbonEdu/core` was published as
+`AGPL-3.0`, marked `integrate-only`, and flagged with *"the hosted-deployment question arrives on
+day one."*** 🟢 **It is `GPL-3.0`. That question does not arise.**
+
+| | 🔴 what this page said | 🟢 what is true |
+|---|---|---|
+| grant | `AGPL-3.0` | 🟢 **`GPL-3.0`** *(`35 121` B · `LICENSE`)* |
+| channels | one body match | 🟢 **`3` agreeing:** `LICENSE` title line, `composer.json` `"license": "GPL-3.0"`, `README` l.`81` |
+| copyleft reach | 🔴 network — serving it triggers disclosure | 🟢 **file** — fork, modify, host; **no source disclosure owed to users** |
+| studio posture | 🔴 integrate-only, keep at a service boundary | 🟢 **fork-and-host is open.** Distributing a modified binary still carries `GPL-3.0` |
+
+🔴 **One of the two cells had hardened the error into an assertion — *"`AGPL-3.0` (not `GPL`, as
+secondary sources say)"*.** 🟢 **The secondary sources were right.** 🔵 **The cause is
+mechanical: `GPL-3.0` §13 is titled *"Use with the GNU Affero General Public License"*, so the
+word `Affero` appears `3` times inside a `GPL-3.0` body and a whole-body matcher flips the
+family.** 🔴 **This KB documented that mechanism in `P171` and stated *"Gibbon es `GPL-3.0`"* at
+the time — and these cells still said `AGPL-3.0`.** 🔵 **Full reading in
+[`agents/top.md`](../agents/top.md) `P214-1` and `P214-3`.**
+
+🟢 **Why this is the month's most consequential cell on this page:** 🔵 **a self-hosted school
+SIS, forked and customised, is the single most requested build in this industry.** 🔴 **This KB
+had ruled the most mature open SIS out of it on a licence reading that was wrong.**
+
+### 🆕 🟢 `P214-2` — Forma LMS: the grant was in-tree the whole time
+
+🔴 **This page carried Forma LMS as *"NO GRANT at `9` path forms … carries no licence body at
+all"*.** 🟢 **That was a ROOT-ONLY reading.** 🟢 **`formalms/formalms` is `GPL-2.0`:**
+
+| path | bytes | reads |
+|---|---|---|
+| `html/license.txt` | **`18 346`** | 🟢 **`GNU GENERAL PUBLIC LICENSE`, Version 2, June 1991** |
+| `html/lib/System/license/license_english.txt` | **`15 146`** | 🟢 same, **+ `9` translations** *(Bosnian, Croatian, French, German, Italian, Portuguese, Spanish, Tamil)* |
+
+🔵 **The `Apache-2.0` that three comparison articles reported is a vendored file** —
+`html/templates/standard/jsdoc/scripts/prettify/Apache-License-2.0.txt`. 🟢 **The articles were
+reading a dependency; this KB was reading the root; the project's own answer is `GPL-2.0`, and a
+localised installer licence in `10` languages is where a 2000s-era PHP LMS puts it.**
+
+🟡 **Posture, now that it has a grant:** 🔴 **`GPL-2.0` is file copyleft with no network clause,
+so hosting is clean — but `GPL-2.0` *(not "or later")* is incompatible with `GPL-3.0` code**, so
+a build mixing Forma LMS with a `GPL-3.0` component has a real problem. 🟢 **Mixing with `MIT`
+or `Apache-2.0` components is fine.**
+
+### 🆕 🔴 Understated the other way: `2` hosted-service platforms DO owe source
+
+🔵 **The GNU axis is not biased in one direction — these two moved the opposite way:**
+
+| repo | 🔴 was | 🟢 is | what it means hosted |
+|---|---|---|---|
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`33 820` B)* | 🔴 **An Open Badges `3.0` issuer run as a service owes source to its users** |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`34 523` B)* | 🔴 **A hosted adaptive-practice tutor owes source** |
+
+### 🟢 Unchanged and re-confirmed: `odoo/odoo` is `LGPL-3.0`
+
+🔵 **`PZ` flagged `odoo/odoo` and `bigbluebutton` as self-contradicting; both are FALSE
+POSITIVES of the script** — the stray `GPL-3.0` tokens are in this page's own table *about
+licence-text structure* *("`GPL-3.0` included by **value**")*, not grant claims. 🟢 **Both cells
+are correct and untouched.** 🟢 **`odoo/odoo` remains `LGPL-3.0` *(`43 529` B, `LGPLv3` named in
+line `2` of the blob)*, so the education-ERP-on-Odoo pattern this page recommends stands.**
+
+---
 ## Pass 213 — 2026-10-15 — THE SYSTEM OF RECORD HAS NO AI IN IT: `183` SIS REPOSITORIES, `0` AI ROWS. AND A PLATFORM THAT CALLS ITSELF "TRULY OPEN SOURCE, FREE FOR COMMERCIAL USE" IS `GPL-2.0`
 
 🔵 **Grants read from the licence blob at `HEAD` on `2026-10-15`; bytes AS SERVED, per `T208-8`.**
@@ -492,7 +562,7 @@ a client deliverable built on a licence that forbids selling it.
 | 🔴 **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`AGPL-3.0`** | `34 520` | Community Edition. 🔴 Cloud features remain proprietary |
 | 🔴 **Frappe Learning** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **`AGPL-3.0`** | `33 893` | 🔴 **A widely-repeated comparison this pass called it *"MIT, self-hosted data ownership"*. The blob says `AGPL-3.0`.** India → **APAC** |
 | 🟡 **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🟡 **`GPL-3.0-STATEMENT`** | **`19`** | SIS on Frappe. 🔴 **Nineteen bytes: `License: GNU GPL V3`. The family is named, the instrument is not shipped** |
-| 🔴 **Forma LMS** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **NO GRANT at `9` path forms** | — | 🔴 **Three comparison articles this pass called it `Apache-2.0`, `GPL` and `LGPL` respectively. The repository carries no licence body at all** |
+| 🟡 **Forma LMS** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **`GPL-2.0`** *(🆕 `P214-2`)* | `18 346` B · `html/license.txt` | 🟢 **RESOLVED: the grant is in-tree, not at the root.** `html/license.txt` *(`18 346` B)* and `html/lib/System/license/license_english.txt` *(`15 146` B, + `9` translations)* both carry **GNU GPL Version 2, June 1991**. 🔴 **The earlier *"no licence body at all"* was a ROOT-ONLY reading**; the `Apache-2.0` an article reported is a vendored `jsdoc/prettify` file |
 
 ### 🔴 The two corrections that cost money, and both were secondary sources, not this KB
 
@@ -2343,7 +2413,7 @@ it)*, **APPLIANCE** *(owns its data, deploys cleanly, no user — one learner pe
 | 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | full LMS | `AGPL-3.0` | `34 520` | 🔴 integrate-only | 🔴 Same reach. Integrate over `LTI`, never fork |
 | 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0` | `11 120` | 🟡 integrate-only | 🟡 Permissive in practice, but the patent grant is scoped to educational use — read it before a commercial resale |
 | 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **ERP + LMS + SIS** *(Odoo)* | `LGPL-3.0` | `8 241` | 🟡 ERP route | 🟡 The one integrated LMS+SIS+fees route. `LGPL` permits a separately licensed AI module beside it, which is the natural shape |
-| 🔴 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 `AGPL-3.0` | `35 121` | 🔴 integrate-only | 🔴 Network copyleft on a SIS — the hosted-deployment question arrives on day one |
+| 🟡 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🟢 **`GPL-3.0`** *(🆕 `P214-1`: was `AGPL-3.0`)* | `35 121` | 🟡 **fork-and-host is open** | 🟢 **File copyleft, not network** — the hosted-deployment question this row raised for 4 cells does not arise |
 | 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | 🟡 on-prem | 🟡 Classic copyleft; on-premise deployments are the comfortable case |
 | 🔴 [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte assertion, `md5 2884e131cfab2111873ff0eb5ba55997`** | **`19`** | 🔴 **DO NOT RELY** | 🔴 **There is no grant text in the file — only the string `License: GNU GPL V3`.** Intended `GPL-3.0`; treat as unverified until upstream ships the body |
 | 🟡 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | single-learner study app | 🟢 `MIT` | `1 069` | 🟡 **APPLIANCE** | 🟡 `7` tables, `16` write endpoints, `docker-compose` with a healthcheck. 🔴 **No user, no auth, no tenant — one learner per deployment** |
@@ -2388,7 +2458,7 @@ Globant engagement should start from.**
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | MOOC / LMS | `AGPL-3.0` | `35 136` | 🔴 Network copyleft. A hosted AI layer that links into it inherits the obligation |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | LMS | `AGPL-3.0` | `34 520` | 🔴 Same reach. Integrate over `LTI`, do not fork |
 | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | interactive learning **+ assessment** | 🟢 `MIT`, `1 091` B | `1 091` | 🟢 **Still the strongest route in this table** *(p178)*: `257` entities, `528` write endpoints, its own auth, `LTI 1.3` with grade passback |
-| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 **`AGPL-3.0`** *(not `GPL`, as secondary sources say)* | `35 121` | 🔴 Network copyleft on a SIS — the hosted-deployment question arrives immediately |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🟢 **`GPL-3.0`** *(🆕 `P214-1`: **the secondary sources were right and this cell was wrong** — `LICENSE` title, `composer.json` and `README` all say `GPL-3.0`)* | `35 121` | 🟢 **File copyleft** — fork and host without source disclosure |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | 🟡 Classic copyleft; on-premise deployments are the comfortable case |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP + LMS + SIS *(Odoo)* | `LGPL-3.0` | `8 241` | 🟡 The one integrated LMS+SIS route. `LGPL` permits a separately licensed module alongside it, which is the natural AI shape |
 | [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte ASSERTION: `License: GNU GPL V3`** | **`19`** | 🔴 **The grant was NOT read because there is no grant in the file.** Intended as `GPL-3.0`; treat as unverified until upstream ships the text |

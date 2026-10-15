@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 214 — 2026-10-15 — `6` GRANT CELLS CORRECTED ON THIS SHELF, EVERY ONE IN THE GNU FAMILY, AND `2` REPOS RECOVERED FROM `ABSENT`
+
+🔵 **No new repository rows this pass.** 🟢 **`ACTION PZ` — p211's registered, entirely offline
+reconciliation — was discharged instead, and it found a defect class rather than a backlog.**
+🔵 **Method: [`compose/code/p214-multi-grant-reconciliation/`](../compose/code/p214-multi-grant-reconciliation/README.md).**
+
+### 🆕 `P214-1` result — `8` of `518` repositories printed two grants; **limb `2` fires**
+
+| | count | reading |
+|---|---|---|
+| repositories with `>1` grant family across the `4` client-facing shelves | **`8`** | 🟢 **limb `2`** *(`<10`)*: **the propagation backlog is small.** p211's `6`/`7` was not the floor it feared |
+| of those, on the **GNU axis** | 🔴 **`8` / `8`** | 🔴 **`P211-3` measured `5` of `7`. On this independent measure it is TOTAL** |
+| genuinely wrong cells | **`6`** over `4` repos | corrected on this shelf and in [`verticals/solutions.md`](../verticals/solutions.md) |
+| recovered from `ABSENT` | **`2`** | `P214-2`, below |
+| 🟡 **false positives of the `PZ` script itself** | **`2`** | recorded, not hidden — see the end of this section |
+
+🟢 **`2 262` unambiguous cells were adjudicated. `140` multi-token rows were excluded by
+construction**, because a row printing two grants is usually a **correction trail** — this KB
+working correctly — and counting those would manufacture findings out of its own integrity work.
+
+### 🆕 🔴 Corrections on this shelf
+
+| repo | 🔴 was | 🟢 is *(bytes · form)* | how it is known |
+|---|---|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 `AGPL-3.0` *(`2` cells here, `2` more in `solutions.md`)* | 🟢 **`GPL-3.0`** *(`35 121` · `LICENSE`)* | 🟢 **`3` channels agree:** `LICENSE` title line, `composer.json` `"license"`, `README` l.`81`. 🔴 **Mechanism: `GPL-3.0` §13 is titled *"Use with the GNU Affero General Public License"* and the blob says `Affero` `3` times** *(ll. `552`/`556`/`559`)* — a whole-body matcher reads `AGPL`. 🔴 **`P171` already recorded this mechanism AND *"Gibbon es `GPL-3.0`"*; the cells never followed** |
+| [`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`33 820` · `LICENSE`)* | title line reads **`GNU AFFERO`** |
+| [`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS) | 🟡 `GPL-3.0` | 🔴 **`AGPL-3.0`** *(`34 523` · `LICENSE`)* | title line reads **`GNU AFFERO`** |
+
+🟢 **The `GibbonEdu` correction is the one that changes an architecture.** 🔴 **For `4` cells this
+KB told a client that a school SIS carried network copyleft and had to be *integrate-only*.**
+🟢 **It is file copyleft: fork it, host it, owe no source disclosure.** 🔵 **That is the most
+commonly requested build in this industry and this KB had ruled it out in error.**
+
+### 🆕 🟢 `P214-2` — `2` repositories recovered from `ABSENT`, in opposite directions
+
+🟢 **[`formalms/formalms`](https://github.com/formalms/formalms) → `GPL-2.0`.** The body is
+in-tree, not at the root: `html/license.txt` *(`18 346` B)* and
+`html/lib/System/license/license_english.txt` *(`15 146` B, plus `9` translations — Bosnian,
+Croatian, French, German, Italian, Portuguese, Spanish, Tamil)*, all **GNU GPL Version 2, June
+1991**. 🔴 **This KB's *"carries no licence body at all"* was a root-only reading.**
+
+🔴 **[`foradian/fedena`](https://github.com/foradian/fedena) → `Apache-2.0`, and it is a trap.**
+Root `NOTICE` *(`679` B)* carries the Apache grant boilerplate; `README.markdown` l.`16` states
+it. 🔴 **But `14` of `14` licence paths in its tree are vendored third-party and `0` are the
+project's own** — so a subdirectory glob recovers `vendor/plugins/delayed_job/MIT-LICENSE` and
+publishes a school ERP as **`MIT`**. 🟡 `STATED`, not `BODIED`: no Apache body ships.
+
+🔵 **Consequence for `ACTION QA`** *(registered to sweep the `94` `ABSENT` rows this way)*:
+🔴 **a bare licence-file glob is unsafe.** 🟢 **Reject every path under `vendor/`, `lib/`,
+`node_modules/` or a named third-party directory first; `git ls-tree -r HEAD --name-only` is
+the whole test and needs no token.**
+
+### 🆕 🟡 Stated so the next audit does not re-find them: `2` false positives of `PZ`
+
+🟢 **[`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) and
+[`odoo/odoo`](https://github.com/odoo/odoo) appear to contradict themselves and do not.** Both
+stray tokens sit in a table **about licence-text structure** — *"`GPL-3.0` by **reference**"*,
+*"`GPL-3.0` included by **value**"* — describing the two legitimate forms of `LGPL-3.0`.
+🔵 **A licence token in prose ABOUT licence text is not a grant claim.** 🟢 **Both cells are
+correct; both were left untouched.** 🔴 **Any future column audit over these shelves needs this
+exclusion or it will report two standing findings that are not there.**
+
+---
 ## Pass 213 — 2026-10-15 — TWO SHELVES OPENED: ACADEMIC INTEGRITY (`385` REPOS, PERMISSIVE, AND AIMED AT THE WRONG DECADE) AND ALGORITHMIC MEMORY (`2 737` REPOS, `FSRS`, ALL `MIT`)
 
 🔵 **Every grant below was read from the licence blob at `HEAD` on `2026-10-15`.** 🟢 **Byte counts
@@ -2599,7 +2662,7 @@ EMEA and they are university-built infrastructure, not start-up demos.**
 |---|---|---|---|
 | 🆕 🟢 **[`rage/secret-project-331`](https://github.com/rage/secret-project-331)** | 🟢 **`Apache-2.0`** *(`11 357` B)* | EMEA | `320`★ — the **University of Helsinki** MOOC platform behind its courses. 🟢 Permissive, and running at national scale |
 | 🆕 🟢 **[`acanas/swad-core`](https://github.com/acanas/swad-core)** | 🟡 **`GPL-3.0`** *(`34 501` B, full text)* | EMEA | `76`★ — **SWAD**, Universidad de Granada's platform, in continuous use for two decades. 🔴 `GPL`: extend, do not absorb |
-| 🆕 🟢 **[`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS)** | 🟡 **`GPL-3.0`** *(`34 523` B)* | North America | adaptive practice driven by **cognitive models** — University of Memphis, built for research AND practice |
+| 🟢 **[`memphis-iis/MoFaCTS`](https://github.com/memphis-iis/MoFaCTS)** | 🔴 **`AGPL-3.0`** *(`34 523` B — 🆕 `P214-1`: published `GPL-3.0` here, title line reads **AFFERO**)* | North America | adaptive practice driven by **cognitive models** — University of Memphis, built for research AND practice. 🔴 **Network copyleft on a hosted tutor** |
 | 🆕 🟢 **[`INRIA/scikit-learn-mooc`](https://github.com/INRIA/scikit-learn-mooc)** | 🟡 **Creative Commons** *(`18 658` B)* | EMEA | `1.4`k★ — **Inria**'s ML course. 🔵 A content grant, not a software one: reusable as **curriculum**, and that is the scarcer asset |
 | 🆕 🟢 **[`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud)** | 🟡 **`GPL-2.0`** *(`18 092` B — the `GPL-2` length, not `GPL-3`'s `~35` kB)* | APAC | `1.2`k★ — a PHP online-education system with Docker deployment, default branch `v2`. 🔵 **Per `P960`, `GPL-2` is NOT `LGPL`: "link, don't absorb" does not apply** |
 
@@ -2612,7 +2675,7 @@ shift: the new rows implement `3.0`, i.e. Verifiable Credentials, where the shel
 
 | repo | licence | region | note |
 |---|---|---|---|
-| 🆕 🟢 **[`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo)** | 🟡 **`GPL-3.0`** *(`33 820` B)* | EMEA | `62`★ — **`Open Badges 3.0`** issuance for event and course organisers |
+| 🟢 **[`Schroedinger-Hat/certo`](https://github.com/Schroedinger-Hat/certo)** | 🔴 **`AGPL-3.0`** *(`33 820` B — 🆕 `P214-1`: published `GPL-3.0` here, title line reads **AFFERO**)* | EMEA | `62`★ — **`Open Badges 3.0`** issuance for event and course organisers. 🔴 **Network copyleft: a hosted badge issuer owes source** |
 | 🆕 🟢 **[`fedora-infra/tahrir`](https://github.com/fedora-infra/tahrir)** | 🟡 **`GPL`** *(`34 917` B)* | Global | `85`★ — Fedora's own badge issuer, **a decade of production use**; default branch `develop` |
 | 🆕 🟡 **[`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib)** | 🟡 **`LGPL-3.0`** *(`LICENSE.txt`, `7 650` B)* | EMEA | a Python library + CLI to **issue, verify and revoke** `Open Badges 3.0`. 🟢 **`LGPL` is the one place "link, don't absorb" is the correct advice** *(`P960`)* |
 
@@ -3198,7 +3261,7 @@ agreed across three independent channels.**
 | 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | full LMS | `AGPL-3.0` | `34 520` | North America | 🔴 integrate over `LTI`, do not fork |
 | 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | LMS / collaboration | 🟡 `ECL-2.0` | `11 120` | North America | 🟡 patent grant scoped to educational use |
 | 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP + LMS + SIS *(Odoo)* | `LGPL-3.0` | `8 241` | APAC *(India)* | 🟡 the one integrated LMS+SIS route; `LGPL` permits a separate AI module |
-| 🔴 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🔴 `AGPL-3.0` | `35 121` | APAC *(Hong Kong)* | 🔴 network copyleft on a SIS |
+| 🟡 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | school management / SIS | 🟢 **`GPL-3.0`** *(🆕 `P214-1`: was `AGPL-3.0` here for 4 cells)* | `35 121` | APAC *(Hong Kong)* | 🟡 **file copyleft, NOT network** — a hosted SIS deployment owes no source disclosure |
 | 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS *(K-12)* | `GPL` | `15 214` | EMEA *(France)* | 🟡 on-premise is the comfortable case |
 | 🔴 [`frappe/education`](https://github.com/frappe/education) | school ERP *(Frappe)* | 🔴 **`19`-byte ASSERTION, no grant text** | `19` | APAC *(India)* | 🔴 **UNVERIFIED — intended `GPL-3.0`; the file contains `License: GNU GPL V3` and nothing else** |
 | 🟡 [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | LLM microservice for Artemis | 🟢 `MIT` | `1 089` | EMEA | 🟡 a dependency, not a product *(p178)* |
@@ -3242,7 +3305,7 @@ a new defect.**
 | [`moodle/moodle`](https://github.com/moodle/moodle) | `HEAD` | 🔴 **`COPYING.txt`** | `GPL-3.0` | `35 147` | *(re-probed, see below)* |
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `LICENSE` | `AGPL-3.0` | `35 136` | `47e2062a6393f45a2bd32dca8f8b53d1` |
 | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | `AGPL-3.0` | `34 520` | `73f1eb20517c55bf9493b7dd6e480788` |
-| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `main` | `LICENSE` | 🔴 **`AGPL-3.0`** | `35 121` | `28480d6422e52c304753119903a184b2` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `main` | `LICENSE` | 🟢 **`GPL-3.0`** *(🆕 `P214-1` correction; read `AGPL-3.0` here)* | `35 121` | `28480d6422e52c304753119903a184b2` |
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `master` | `LICENSE` | `GPL` | `15 214` | `4fcab427efca2a10f4b242b15d3d1f34` |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `HEAD` | `LICENSE` | `LGPL-3.0` | `8 241` | `f18b2e83f16ffef283395deccff2c341` |
 | [`frappe/education`](https://github.com/frappe/education) | `HEAD` | `license.txt` | 🔴 **see below** | **`19`** | `2884e131cfab2111873ff0eb5ba55997` |
