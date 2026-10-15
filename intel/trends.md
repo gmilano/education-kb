@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — THE TREND IS THAT CORRECTIONS DO NOT PROPAGATE AND REFUTATIONS DO NOT BECOME CHECKS: THE SAME CLAIM THIS KB KILLED AT p209 CAME BACK THROUGH THE MANDATED QUERY AND THE GATE BUILT TO STOP IT WAS BLIND TO IT
+
+### 🔴 Trend `1` — a refuted claim's half-life is longer than this KB's memory of refuting it
+
+🟢 **p225 named the hazard: a correction published by the original outlet does not reach the aggregators that repeat it.** 🔴 **p226 shows the second half, and it is about the KB rather than the web: a refutation written into prose does not become a CHECK.**
+
+| claim | refuted here | came back | was there a row to catch it? |
+|---|---|---|---|
+| Boston *"graduation requirement"* | p218, with the publishers' own corrections | p225, `7` passes later | 🔴 **no** |
+| `frappe/lms` is `MIT` | p209, first-hand payload *(`33 893` B)* | 🆕 **p226, `17` passes later** | 🔴 **no** |
+
+🔵 **Both were caught by a human read. Neither was caught by the gate, because neither subject was in the table.** 🟢 **The three subjects that WERE in the table did not recur this pass** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv).
+
+🟡 **The generalisable form, and it is not specific to this KB:** an organisation's corrections live in documents, and documents are not executable. 🔴 **Any team doing recurring research accumulates refutations faster than it converts them into checks, and the gap is invisible precisely because the check that would reveal it is the one that was never written.**
+
+### 🔴 Trend `2` — third-party licence claims fail in a CONSISTENT direction, and it is the expensive one
+
+🟢 **Two licence errors surfaced in this pass's results and both were PERMISSIVE-direction:** `frappe/lms` *(`AGPL-3.0`)* called `MIT`, and `Open edX` *(`AGPL-3.0`)* called `MIT`.
+
+🔴 **This is not symmetric noise.** 🟡 **Nobody mistakenly calls an MIT project AGPL — there is no incentive to.** 🟢 **The error runs toward the permissive end because that is the answer a listicle's reader wants, and it is the direction that makes a studio relax at exactly the moment it should not: an `AGPL-3.0` platform is the one where network use is distribution and a hosted customisation triggers the source obligation.**
+
+🔵 **The trend worth carrying into an engagement: treat any licence claim from a comparison page as PERMISSIVE-BIASED and read the repository.** 🔴 **And this pass's own first draft committed the same class of error internally — `GPL` written beside `Gibbon`, which is `AGPL-3.0`** → [`verticals/solutions.md`](../verticals/solutions.md) `T226-V0`. 🟡 **The bias is not a property of listicles; it is a property of writing a plausible licence beside a name instead of reading the cell.**
+
+### 🟢 Trend `3` — adoption-outran-governance is now measured in LATAM with an institution-level denominator
+
+🔵 **p224 recorded this as a four-region direction; p225 added numbers in two regions; p226 adds the clearest single measurement yet:**
+
+| region | adoption | governance | gap |
+|---|---|---|---|
+| 🟢 **LATAM** *(UNESCO IESALC, `200` institutions, `19` countries)* | **`87%`** use AI in `1`+ area; `74%` in teaching and learning | **`26%`** have a formal AI strategy | 🔴 **`61` points** |
+| 🟡 **North America** | `60%` of US K-12 teachers used AI in 2024-25; `32%` weekly | `134` bills across `31` states, no federal statute in force | 🔴 regulation ahead of institutional policy |
+| 🟡 **APAC** | Singapore `60.9%` diffusion *(cross-sector)* | Korea in force, China binding, JP/SG/AU voluntary | 🔴 no common mode |
+
+🟢 **What makes the LATAM number more useful than the others: it has a denominator and a unit — institutions, not users, not responses.** 🟡 **`87%` vs `26%` is a statement about ORGANISATIONS, which is the unit an engagement is actually sold to.**
+
+### 🔴 Trend `4` — the regulatory horizon for education AI is CONVERGING on late 2027, against a date that keeps circulating as 2026
+
+🟢 **EU Annex III education high-risk: `2027-12-02`. Vietnam high-risk sectors including education: `2027-09`.** 🔵 **Two of the three regulating regions, independently, land roughly two years out** → [`intel/market.md`](./market.md).
+
+🔴 **Meanwhile the number in circulation is `August 2026`.** 🟡 **The practical consequence is a planning error in both directions at once: teams that believe the 2026 date think they have already missed it and buy urgently; teams that then discover it was wrong conclude the whole thing is distant and stop.** 🟢 **The accurate posture is neither — `2026-12-02` is genuinely `7` weeks away for the two Article `5` prohibitions, and the high-risk work is a two-year programme that should be starting now because conformity evidence is accumulated, not produced at the end.**
+
+### 🔵 Trend `5` — the open-source education-agent surface is SATURATED at the tiers this KB searches
+
+🟢 **Four consecutive passes have measured the discovery rate: `89%` of `18`, `75%` of `8`, `100%` of `9`, and now `93.8%` of `32` already carried.** 🔵 **The `32` is the largest candidate population yet and the rate held, which makes saturation a measurement rather than an impression.**
+
+🟡 **Where the surface is NOT saturated is specific and worth naming:** 🔴 **there is still no mature open-source MCP connector for a real student information system** — no Banner, no PeopleSoft, no Ellucian, no Workday Student. 🟢 **What exists is personal-scale: one university's HEMIS instance, a public-data server that avoids student accounts, a portal scraper, a read-only catalogue, and a study assistant with no licence at all.** 🔵 **That gap has survived several passes of searching, which is the best evidence available that it is real rather than unsearched.**
+
 ## Pass 225 — 2026-10-15 — THE TREND IS THAT THE CORRECTION DOES NOT PROPAGATE: ADOPTION OUTRAN GOVERNANCE EVERYWHERE, AND THE WRONG COMPLIANCE DATE IS STILL IN CIRCULATION
 
 ### 🔴 Trend `1` — a refuted claim keeps coming back, from new sources, through the mandated query

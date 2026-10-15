@@ -1,0 +1,55 @@
+# ACTION SH (p226's registered highest priority) - the refuted-claims gate, run INBOUND on this
+# pass's raw search results BEFORE anything was written to a shelf.
+# Instrument: compose/code/p226-inbound-gate/ (18 controls, all passing, stdlib only, 0 requests).
+# A row fires when, within ONE RECORD (one line): subject_pattern AND refuted_pattern match and
+# exempt_pattern does not. The line is the unit deliberately - a block unit would let a subject
+# in paragraph 1 pair with an unrelated date in paragraph 9 (the ACTION QY inference).
+measurement	value	note
+inbound records scanned	76	10 mandated + discovery queries, captured verbatim before anything was written
+INBOUND HITS, p224's 3-row table	0	none of the three ORIGINAL subjects recurred this pass
+INBOUND HITS, p226's 6-row table	1	frappe/lms claimed MIT - see below
+NEAR MISSES reported	1	EMEA query; subject matched, refuted_pattern did not, and correctly so
+# --- THE VERDICT, stated in both forms because the falsifier was written against the OLD table
+# LIMB 2 on the letter: running THE EXISTING refuted_pattern column (p224's 3 rows) flags 0.
+# LIMB 1 on the substance: extending the table to subjects THIS KB HAD ALREADY REFUTED FIRST-HAND
+#   flags 1 inbound hit, before anything was written. The gate belongs inbound permanently.
+# The two readings are not in tension. They measure different things: the first measures whether
+# three specific errors recurred (they did not); the second measures whether the table SEES what
+# the KB knows (it did not, until this pass).
+# --- THE HIT ------------------------------------------------------------------------------
+hit_query	open source platform education LMS SIS MIT Apache self-hosted 2026	the MANDATED vertical query
+hit_text	"Frappe LMS is listed as MIT in one comparison, though it is unclear whether that refers to Frappe LMS or another project."	
+kb_position	AGPL-3.0, read first-hand: license.txt 33 893 B. These shelves ALREADY corrected a 2026 listicle's MIT claim for this exact repository at p209, with the payload and the mechanism (frappe/frappe, the framework).	
+why_it_matters	an AGPL-3.0 platform mistaken for MIT is the most expensive licence error available in this tier, and the error direction is PERMISSIVE - it is wrong in the direction that makes a studio relax	
+action_taken	NOT WRITTEN TO ANY SHELF. The p209 correction stands and is restated in verticals/solutions.md.	
+# --- THE COVERAGE MEASUREMENT, which is the pass's real deliverable -------------------------
+retroactive: p225's 2 inbound strings vs p224's 3-row table	1 of 2 caught	the Boston string escaped entirely
+retroactive: p225's 2 inbound strings vs p226's extended table	2 of 2 caught	the added row closes it
+this pass's results vs p224's 3-row table	0 of 1 caught	the frappe string escaped entirely
+this pass's results vs p226's extended table	1 of 1 caught	
+# So the binding constraint on this gate was never SENSITIVITY - every regex fired correctly when
+# it had a subject to fire on. It was COVERAGE. Three times now, a claim this KB had refuted
+# FIRST-HAND was not in the table, so the gate could not see it come back:
+#   Boston      refuted p218, caught by hand p225, tabled p226
+#   frappe/lms  refuted p209, returned inbound p226, tabled p226 - and it FIRED
+#   Open edX    carried AGPL-3.0 in 65+9 cells, never tabled, read first-hand p226, tabled p226
+# A refutation recorded in prose does not become a check. Somebody has to add the row.
+# --- ROWS ADDED THIS PASS, and the first-hand basis for each --------------------------------
+row_added	Boston Public Schools AI fluency as a GRADUATION REQUIREMENT	basis: p218 refutation + WBUR/NBC Boston published corrections
+row_added	frappe/lms claimed MIT	basis: p209 first-hand payload, license.txt 33 893 B, AGPL-3.0
+row_added	Open edX claimed MIT	basis: p226 FIRST-HAND READ - LICENSE 35 136 B, sha256-12 e12d78569742, canonical GNU AFFERO GENERAL PUBLIC LICENSE Version 3 body, served byte-identically from BOTH alias paths
+# --- WHY THE Open edX ROW DID NOT FIRE ON THIS PASS'S OWN Open-edX-as-MIT TEXT ---------------
+# This pass's results also said: "One comparison lists Open edX as MIT, which conflicts with the
+# AGPL listings elsewhere." That is NOT a reassertion - the source flagged its own conflict - and
+# exempt_pattern correctly suppressed it. A control pins both halves: the bare claim fires, the
+# self-flagged one does not. The exempt column is what separates circulation from reporting.
+# --- THE NEAR MISS, and why widening the regex would be an error ----------------------------
+near_miss_text	"EU AI Act: Sources agree it treats education AI as high-risk ... One source says it entered into force in August 2024, and its general application date was 2 August 2026."	EMEA query
+near_miss_verdict	CORRECTLY DID NOT FIRE	"general application date 2 August 2026" is TRUE of the AI Act as a whole
+near_miss_hazard	widening refuted_pattern to catch "general application" would make the gate fire on a TRUE statement	the refuted claim and the true one carry the SAME DATE and differ only in the OBLIGATION
+near_miss_rule	the unit of this refuted claim is the (OBLIGATION, DATE) pair, never the date alone	ACTION QY: twelfth consecutive unit-mismatch finding
+# CONTROLS: 18 tests, 18 passing. MUST FIRE: p225's EU string; p225's Boston string; a bare
+# frappe-MIT claim; a bare Open-edX-MIT claim. MUST NOT FIRE: this pass's EMEA near miss; the
+# Vietnam high-risk/March-2026 line; the self-flagged Open edX conflict; the KB's own published
+# correct form for every subject; a bare date with no subject; a bare subject with no date; a
+# subject and a date in two DIFFERENT records.

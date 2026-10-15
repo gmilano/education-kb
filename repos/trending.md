@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 226 — `0` NEW ROWS, AND THE PASS'S REPOSITORY WORK IS A **DIRECTION** RATHER THAN A DISCOVERY: TWO ALIAS PAIRS NOW HAVE A CANONICAL PATH, AND ONE OF THEM POINTS THE OPPOSITE WAY TO WHAT p225 PUBLISHED
+
+🔵 **`0` new trending repository rows. `ACTION SI` discharged on limb `1`. `1` published recommendation inverted. `1` standing rule added about package registries. `1` known hazard reproduced with a fresh control.**
+
+🔵 **Evidence:** [`si-alias-direction`](../evidence/si-alias-direction.2026-10-15-p226.tsv) · [`p226-channel-reachability`](../evidence/p226-channel-reachability.2026-10-15-p226.tsv)
+
+### 🟢 `ACTION SI` fires limb `1` — `2` of `4` pairs resolved by a non-redirect channel
+
+🔴 **p225's ref-set oracle proved four pairs are each ONE repository under two paths. It cannot say which path is canonical: the git service answers `200` on both and `github.com` HTML is `403` here, so there is no `Location` header to read.** 🟢 **`ACTION SI` asked for a non-redirect channel to name the canonical path for `2`+ of the `4`. It does.**
+
+| pair | channel | verdict | canonical |
+|---|---|---|---|
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) :: `UCL-INGI/INGInious` | `pypi.org` `project_urls` | 🟢 **RESOLVED** — `Repository = github.com/INGInious/INGInious`, `Homepage = inginious.org`, `Docs = docs.inginious.org` | 🟢 **`INGInious/INGInious`** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) :: `openedx/openedx-platform` | `raw` `README.rst`, **both paths** | 🟢 **RESOLVED — AND IT INVERTS p225** | 🔴 **`openedx/openedx-platform`** |
+| `bycs-lp/moodle-local_ai_manager` :: `mebis-lp/…` | `raw` `README.md`, **both paths** | 🟡 **PARTIAL** — sibling-set evidence only | 🟡 `mebis-lp` *(weak)* |
+| `openedx/ease` :: `edx/ease` | `pypi.org` `home_page` | 🔴 **REFUSED — not probative** | 🔴 unresolved |
+
+### 🔴 `T226-R1` — the inversion, stated plainly because it corrects a live recommendation
+
+🟢 **p225's `ACTION SD` concluded: *"publish as ONE row under `openedx/edx-platform` with the alias noted"*.** 🔴 **The project's own `README.rst` — byte-identical from both paths, `12 381` B, `sha256`₁₂ `f015390f93f1` — names `github.com/openedx/openedx-platform` **`5`** times and `github.com/openedx/edx-platform` **`0`** times.**
+
+🔵 **The canonical direction is the OPPOSITE of what p225 published, and the evidence is the project speaking about itself.** 🟡 **p225's section is SUPERSEDED on this point and left standing as the dated record, the same way p225 superseded p222's `RANGE-CONFLICT` cells rather than editing them.**
+
+### 🔴 `T226-R2` — the new standing rule: a registry URL is a **DATED** claim
+
+🔴 **The same channel, the same field, opposite evidentiary value — differing only by age:**
+
+| package | declared repository URL | uploaded | probative? |
+|---|---|---|---|
+| `INGInious` `0.9.2` | `github.com/INGInious/INGInious` | 🟢 **`2026-01-23`** *(`9` months)* | 🟢 **yes** |
+| `ease` `0.1.1` | `github.com/edx/ease` | 🔴 **`2013-06-07`** *(`13` years)* | 🔴 **no** |
+
+🔴 **`ease`'s metadata records the path at PUBLISH time — 2013, which predates the `edx` → `openedx` organisation rename entirely.** 🟡 **It is excellent evidence about 2013 and no evidence at all about the canonical path now.** 🟢 **Rule: never read a registry URL as a canonical pointer without its upload date.** 🔵 **Thirteenth consecutive unit-mismatch finding on these shelves, and the first where the mismatched unit is TIME rather than scope.**
+
+### 🟡 Why pair `4` is only partial, and the honest reason it was not pushed further
+
+🟢 **Both `moodle-local_ai_manager` READMEs are byte-identical at `5 354` B, matching p224's read exactly. The text links `mebis-lp` for `3` of its `3` sibling plugins *(`block_ai_chat`, `block_ai_control`, `tiny_ai`)* and names NEITHER owner for itself.** 🔵 **That is evidence about the owner's repository SET — p224's own unit for an alias — not a self-reference.** 🔴 **These shelves cite `bycs-lp` `30` times to `mebis-lp`'s `11`, and a `3`-of-`3` sibling signal is not enough to invert a `30`-to-`11` citation habit on its own.** 🟡 **Published as weak, not as settled.**
+
+### 🔵 Channels, `21`st test — p225's refutation reproduces exactly
+
+🟢 **WORKING:** `raw.githubusercontent.com` `200` · the git smart-HTTP service `200` · `registry.npmjs.org` `200` · `pypi.org` `200`.
+🔴 **BLOCKED:** `api.github.com` `403` *(`20`th)* · `github.com` HTML `403` · `moodle.org` `000` · `unesco.org` `000` *(`21`st)* · `eur-lex.europa.eu` `000` · 🆕 `education.ec.europa.eu` `000`.
+
+🟢 **Same host, same scheme, different path: `github.com/<O>/<R>` is `403` and `github.com/<O>/<R>/info/refs?service=git-upload-pack` is `200`.** 🔵 **p225's rule — the split tracks the SERVICE ENDPOINT, not the host — reproduces.** 🔴 **The new block is the one that cost this pass something: `education.ec.europa.eu` is the Commission page this pass's OWN EMEA results named as the only reliable source for the AI Act dates, and it is unreadable from here.**
+
 ## 2026-10-15 — Pass 225 — TWO ALIAS PAIRS FOUND BY SWEEP, NOT BY ACCIDENT: THE KB WAS CARRYING ITS LARGEST ROW TWICE, AND `90` NAME COLLISIONS TURN OUT TO BE `4` ACTUAL DUPLICATES
 
 🔵 **`0` new trending rows. The mandated trending shape returned teaching material for an EIGHTH consecutive run, so `ACTION RD`'s standing rule is re-confirmed rather than re-tested.** 🟢 **What this slot carries instead is the sweep `ACTION SE` registered, now run with an instrument that can actually decide it.**

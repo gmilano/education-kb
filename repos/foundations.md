@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — THE FOUNDATION TIER GAINS A **CANONICAL PATH** FOR ITS TWO LARGEST PLATFORM ROWS, AND THE LARGER OF THE TWO SHOULD BE CITED UNDER THE NAME p225 TOLD THIS KB TO DROP
+
+🔵 **`0` new foundation rows. `2` canonical slugs established on evidence. `1` of them reverses a p225 recommendation. `1` grant re-read first-hand on the shelf's second-largest repository.**
+
+🔵 **Evidence:** [`si-alias-direction`](../evidence/si-alias-direction.2026-10-15-p226.tsv) · [`p226-channel-reachability`](../evidence/p226-channel-reachability.2026-10-15-p226.tsv)
+
+### 🔴 `P226-A` — `Open edX` should be cited as `openedx/openedx-platform`
+
+🟢 **p225 established with the ref-set oracle that `openedx/edx-platform` and `openedx/openedx-platform` are ONE repository — `49 749` byte-identical refs — and that the KB's `65` + `9` AGPL cells were one platform counted twice.** 🔵 **It could not say which path was canonical, and recommended `edx-platform` on the strength of it being the better-known name.**
+
+🔴 **The project disagrees.** Its `README.rst`, served byte-identically from both paths *(`12 381` B, `sha256`₁₂ `f015390f93f1`, read `2026-10-15`)*:
+
+| self-reference in the project's own README | count |
+|---|---|
+| 🟢 `github.com/openedx/openedx-platform` | **`5`** |
+| 🔴 `github.com/openedx/edx-platform` | **`0`** |
+
+🟢 **So the canonical path is `openedx/openedx-platform`, and the better-known name is the alias.** 🟡 **For a studio this is not cosmetic: a client inventory, an SBOM or a dependency pin keyed on the non-canonical slug still resolves today, but it resolves through an alias the project itself does not use, and nothing guarantees that alias outlives the next reorganisation.** 🔵 **p225's recommendation is SUPERSEDED on evidence and left standing as the dated record.**
+
+### 🟢 `P226-B` — `INGInious` resolves cleanly, and from a channel with a date on it
+
+🟢 **[`INGInious/INGInious`](https://github.com/INGInious/INGInious) is canonical; `UCL-INGI/INGInious` is the alias.** 🔵 **Channel: `pypi.org`'s `project_urls` for `INGInious` `0.9.2` — `Repository = github.com/INGInious/INGInious`, `Homepage = inginious.org`, `Documentation = docs.inginious.org`.** 🟢 **Uploaded `2026-01-23`, so the claim is `9` months old and describes the project as it is now.**
+
+🟡 **Note for the licence shelf: PyPI's metadata field reads `AGPL 3`, which is a BARE token in the Python-packaging grammar and NOT the positive `only` that Odoo's omission grammar produces** *(p224 `ACTION RU`)*. 🔴 **It is not a grant read, and this row's bound should still come from the repository's own `LICENSE`. Registered as part of `ACTION RW`'s sweep rather than resolved here.**
+
+### 🔴 `T226-F1` — and the pair that REFUSED, which is where the pass's new rule came from
+
+🔴 **`openedx/ease` :: `edx/ease` is NOT resolved.** 🟢 **`pypi.org` does carry a pointer — `home_page = github.com/edx/ease` — and it is worthless for this purpose: the latest release, `0.1.1`, was uploaded `2013-06-07`.** 🔴 **That is `13` years old and predates the `edx` → `openedx` organisation rename entirely, so it names the 2013 path, not the canonical one.** 🔵 **Neither path serves a `README` under any of `README.rst`, `README.md` or `README` on either `master` or `main`, so the second channel is simply absent.**
+
+🟢 **Standing rule added: a package registry's declared repository URL is a DATED claim — it records the path at PUBLISH time, not the canonical path now. Never read one as a canonical pointer without its upload date.** 🔵 **Same channel, same field, opposite evidentiary value at `9` months and at `13` years.**
+
+### 🟢 `project-nomad`'s grant, read rather than cited
+
+🟢 **[`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) — `Apache-2.0`, confirmed first-hand.** `LICENSE` `10 779` B, `sha256`₁₂ `e4f125622d3c`, canonical Apache text with the appendix completed: *"Copyright 2024-2026 Crosstalk Solutions LLC"*.
+
+🔵 **Why it was worth a request on a row carried since p132:** it is the second-largest repository in this KB *(`39 444`★, behind only `HKUDS/DeepTutor`)*, it is the Docker orchestration layer under `Kiwix` + `Kolibri` + `Ollama`, and its `Apache-2.0` had been carried from an aggregator rather than read. 🟢 **Applying p225's preamble-vs-canonical-body rule: the grant here is the canonical Apache body plus a COMPLETED appendix naming the holder — no project preamble, no competing bound, nothing to resolve.** 🟡 **A clean read, recorded because a clean read on a load-bearing row is worth as much as a conflict found on a minor one.**
+
 ## Pass 225 — 2026-10-15 — `ACTION RV` IS DISCHARGED ON A THIRD CHANNEL: THE ROOT `LICENSE` SIDES WITH THE MANIFEST **2–1**, AND THE CONFLICT IS STRUCTURAL IN `8` OF `8` MODULES
 
 🔵 **`ACTION RV` was carried three passes and registered p225's highest priority. 🟢 It fires limb `1`: a third channel exists, it breaks the tie `2`–`1`, and the resolved bound is `LGPL-3.0-only`** → [`rv-openeducat-third-channel`](../evidence/rv-openeducat-third-channel.2026-10-15-p225.tsv).

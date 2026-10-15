@@ -1,0 +1,27 @@
+# ACTION SI (p226) - settle DIRECTION for the 4 alias pairs p225 confirmed with the ref-set oracle.
+# The oracle proves two paths serve ONE repository; it cannot say which path is canonical.
+# Channels used, all non-redirect and all 200: pypi.org project_urls, raw.githubusercontent.com
+# README self-reference. github.com HTML is 403 here, so no Location header is available.
+pair	channel	what_the_channel_said	dated	verdict	canonical
+INGInious/INGInious :: UCL-INGI/INGInious	pypi.org/pypi/INGInious/json	project_urls Repository = https://github.com/INGInious/INGInious (Homepage inginious.org, Docs docs.inginious.org)	2026-01-23 (v0.9.2 upload)	RESOLVED	INGInious/INGInious
+openedx/edx-platform :: openedx/openedx-platform	raw README.rst, BOTH paths	byte-identical READMEs (12 381 B, sha256-12 f015390f93f1). The text names github.com/openedx/openedx-platform 5 times and github.com/openedx/edx-platform 0 times	read 2026-10-15	RESOLVED - AND IT INVERTS p225	openedx/openedx-platform
+bycs-lp/moodle-local_ai_manager :: mebis-lp/moodle-local_ai_manager	raw README.md, BOTH paths	byte-identical (5 354 B, matches p224's read). Names mebis-lp for 3 of its 3 sibling plugins (block_ai_chat, block_ai_control, tiny_ai) and names NEITHER owner for itself	read 2026-10-15	PARTIAL - sibling-set evidence only	mebis-lp (weak; see note)
+openedx/ease :: edx/ease	pypi.org/pypi/ease/json	home_page = https://github.com/edx/ease	2013-06-07 (v0.1.1 upload, latest)	REFUSED - not probative	unresolved
+# LIMB 1 required 2+ of 4 resolvable by a non-redirect channel. It FIRES at 2 clean.
+# --- THE HAZARD THIS ACTION FOUND, which is worth more than the two resolutions --------------
+# A package registry's declared repository URL is a DATED claim: it records the path AT PUBLISH
+# TIME, not the canonical path now. Same channel, same field, opposite evidentiary value:
+#   INGInious  uploaded 2026-01-23 -> 9 months old  -> probative
+#   ease       uploaded 2013-06-07 -> 13 years old  -> names edx/ease, which predates the
+#              edx -> openedx organisation rename entirely, so it is evidence about 2013
+# STANDING RULE ADDED: never read a registry URL as a canonical pointer without its upload date.
+# --- THE INVERSION, stated plainly -----------------------------------------------------------
+# p225's ACTION SD concluded: "publish as ONE row under openedx/edx-platform with the alias noted".
+# The project's own README, served byte-identically from both paths, names openedx-platform 5
+# times and edx-platform 0 times. The canonical direction is the OPPOSITE of what p225 published.
+# This supersedes p225's recommendation on evidence, and is left standing as the dated record.
+# --- WHY PAIR 4 IS ONLY PARTIAL --------------------------------------------------------------
+# The README's mebis-lp links point at THREE SIBLING REPOSITORIES, not at the AI manager itself.
+# That is evidence about the owner's repository SET (p224's own unit for an alias), not a direct
+# self-reference. It is recorded as weak because these shelves cite bycs-lp 30 times to mebis-lp's
+# 11, and a 3-of-3 sibling signal is not enough to invert a 30-to-11 citation habit on its own.

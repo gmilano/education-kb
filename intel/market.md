@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — THE TWO REGIMES THAT REGULATE EDUCATION AI BY NAME LAND THEIR OBLIGATIONS IN **LATE 2027**, NOT IN THE `2026` DATE THAT KEEPS CIRCULATING — SO A MULTI-REGION ENGAGEMENT HAS ONE HORIZON AND IT IS TWO YEARS OUT
+
+🔵 **Evidence:** [`p226-regional-queries`](../evidence/p226-regional-queries.2026-10-15-p226.tsv) *(`10` rows, every query verbatim, every blank named)* · [`p226-apac-vietnam-divergence`](../evidence/p226-apac-vietnam-divergence.2026-10-15-p226.tsv) · [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv)
+
+### 🟢 The pass's best market datum: a compliance horizon that CONVERGES across two regions
+
+🔴 **The date in circulation is `August 2026`. It is wrong, and it is wrong in the direction that manufactures urgency.** 🟢 **The two regimes that name education as high-risk both land in late 2027:**
+
+| regime | education high-risk obligation | date | standing here |
+|---|---|---|---|
+| 🟢 **EU** | Annex III education high-risk | **`2027-12-02`** | `Reg. (EU) 2026/1744` — settled on these shelves since p223 |
+| 🟡 **Vietnam** | high-risk sectors incl. education | **`2027-09`** *(month only)* | 🔴 instrument CONTESTED — see below |
+
+🟢 **For a studio this is the single most useful sentence in this section: a client running an EU and an APAC programme has ONE compliance horizon, roughly two years out, not two competing ones.** 🔵 **The nearest genuinely binding EU date remains p224's find — `2026-12-02`, the two Article `5` prohibitions the Omnibus added, `7` weeks out and carried by almost nobody.**
+
+### 🔴 `T226-M1` — Vietnam: two instruments on these shelves, and they must NOT be merged
+
+🟡 **p224 recorded `Decision No. 33/2026/QD-TTg`, `2026-07-02`. p226's mandated APAC query returned *"a standalone AI law"* with a risk-based classification, education named among high-risk sectors, and a commencement its own sources put at *"March 1, 2026"* and *"March 2026"* — disagreeing with each other.**
+
+🔴 **A Decision (`QD-TTg`) is subordinate legislation; *"a standalone AI law"* is primary legislation. These may well be two instruments, and nothing in this pass establishes that they are one.** 🟢 **Both are published, neither is merged, and the collision is registered as `ACTION SL`** — the same discipline `ACTION RL` imposes on the two different `19%` statistics these shelves carry. 🔵 **What IS established and useful: education is a named high-risk sector in Vietnam's regime, with a `September 2027` horizon.**
+
+## Opportunities by region
+
+### 🟢 North America — the regulatory surface is STATE-level and it is now dense enough to be a product
+
+🟢 **`134` AI-in-education bills across `31` states in the `2026` session** — data privacy, classroom-use limits, curriculum integration. Named instruments: **California `AB 1159`** *(bars using student data to train AI models)*, **Idaho `SB 1227`** *(privacy protections for school AI tools)*; **Oklahoma** and **Maryland** require human oversight and bar AI from high-stakes decisions about students. 🔵 **Federal: the `K-12 AI Literacy and Readiness Act of 2026` (`H.R. 8747`) advanced out of the House Education and Workforce Committee at a `July 21` markup.**
+🔴 **District-level divergence is the operational risk:** New York City runs a one-year moratorium on student-facing AI through eighth grade; Katy ISD (Texas) bans generative AI chatbots for K-6.
+🟢 **The opportunity, stated concretely:** a `50`-state patchwork with a human-oversight requirement recurring across it is a **policy-configuration** problem, not a model problem. 🟡 **A deployment that cannot express *"this district forbids student-facing inference below grade 9"* as configuration will be rebuilt per client.** 🔵 **Market context: North America is reported at `36%` of the AI-in-education market, `USD 3.68B` in 2026 — a vendor-report figure, not verified here.**
+
+### 🟡 EMEA — the obligation is clear, the DATE is the thing clients will get wrong, and the primary source is unreachable from here
+
+🟢 **Consistent across sources: the EU AI Act treats education AI as high-risk where it affects access, assessment or exam scoring — systems that evaluate learners, assign them to programmes, detect prohibited behaviour during assessment, or influence access to qualifications. Those need a conformity assessment before deployment.**
+🔴 **The dates returned this pass were mutually inconsistent and at least two were wrong.** 🔴 **`education.ec.europa.eu` — the Commission page this pass's own results named as the one reliable source — is `000` from this pipeline** → [`p226-channel-reachability`](../evidence/p226-channel-reachability.2026-10-15-p226.tsv). 🟡 **So the EMEA date position here is `CONVERGENT-SECONDARY` by necessity, and the settled value stands: `2027-12-02`.**
+🟢 **Non-EU EMEA:** the UK runs a principles-based regime rather than a statute; the UAE and Saudi Arabia are both pushing national AI strategies with infrastructure and talent spending; Germany carries a `EUR 20bn` AI investment commitment (`2025-2030`, per one aggregator, unverified).
+🟢 **The opportunity:** conformity-assessment evidence is a DELIVERABLE, and almost nothing open-source produces it. 🔵 **A studio that ships the assessment artefacts alongside the system — data provenance, evaluation records, human-oversight design — is selling the part the client cannot buy off the shelf, two years before the deadline.**
+🔴 **AFRICA: no African instrument, adoption figure or player was returned under the EMEA query shape. Named as a standing blank, not as coverage** — see the declared blanks below.
+
+### 🟡 APAC — the most fragmented regulatory map, and the only one where a single posture is impossible
+
+🟢 **South Korea** — the `AI Basic Act` *(Framework Act on the Development of AI and the Creation of a Foundation for Trust)* took effect `2026-01-22`; the regulator has signalled `2026` as a pilot year with a one-year penalty grace period. 🟡 **A grace period is a procurement window, not an exemption.**
+🟡 **Vietnam** — education named high-risk, `September 2027` horizon, instrument contested *(above)*.
+🟢 **China** — the most binding framework: generative-AI service management measures and synthetic-content labelling rules effective `2025-09-01`.
+🔵 **Singapore, Japan, Australia** — voluntary, principles-based, innovation-first. **ASEAN** published a Responsible AI Roadmap in 2025 running to 2030.
+🔴 **No education-specific APAC adoption figure was found** — only cross-sector diffusion (Singapore `60.9%` among working-age adults; `1` in `10` APAC enterprises self-describing as *"very mature"*).
+🟢 **The opportunity:** the spread from China's binding labelling rules to Australia's voluntary principles means a regional platform needs **per-jurisdiction policy nodes**, not one compliance mode — the shape p225's `P6` pattern already describes. 🟡 **This pass adds the reason it cannot be deferred: Korea's grace period expires inside the delivery window of anything started now.**
+
+### 🟢 LATAM — the best-measured region on these shelves, and the gap is governance, not adoption
+
+🟢 **UNESCO IESALC, `200` institutions across `19` countries: `87%` use AI in at least one area and `74%` in teaching and learning — against `26%` with a formal AI strategy.** 🔵 **Adoption is driven by individual academics, researchers and students rather than institutional plans.**
+🟢 **Country figures:** Brazil `56%` of secondary teachers used AI in the previous year *(OECD average `36%`)*; Uruguay `75%` of public-school teachers *(Ceibal)*.
+🔴 **No binding regional AI-in-education law surfaced.** Public-sector activity is capacity-building — UNESCO training for officials in Ecuador and the region.
+🟢 **The opportunity, and it is the sharpest in any region:** a `61`-point gap between use and strategy *(`87%` vs `26%`)* is a **governance-retrofit** engagement on systems already in production. 🟡 **Not a build — an inventory, a policy, an evaluation record and an oversight design wrapped around tools faculty already adopted.** 🔵 **It is also the cheapest engagement to start, because the adoption that justifies it has already happened.**
+
+### 🔵 Global — the market numbers do not agree, and should be quoted as a range or not at all
+
+🔴 **This pass's sources give `USD 7.52B` (2025) → `10.6B` (2026) → `42.48B` (2030) from one report, and `USD 12.3B` for 2026 from another attributing it to HolonIQ.** 🟡 **A `USD 1.7B` spread on the SAME year from two reports citing the same house.** 🔵 **Published as a conflict, not averaged** — the standing treatment on these shelves. 🟢 **The non-numeric global signals are more reliable and point one way: HolonIQ expects selective acceleration concentrated in course design, teacher productivity and admin workflow; 1EdTech reports institutions building governance structures and evaluation processes; and systems increasingly demand EVIDENCE that a product improves learning quality, persistence or job-relevant skills.**
+
+### 🔴 Declared blanks this pass, with the query that produced them
+
+- 🔴 **AFRICA** — nothing returned under `AI education EMEA 2026 adoption regulation players`. 🟢 **p225 proved (`ACTION SG`) that a regional blank can be an artefact of query SHAPE: a country-shaped query recovered Canada and Mexico where *"North America"* had returned the US only. 🔵 Registered for p227 as `ACTION SM` — country-shaped queries for Nigeria, Kenya, South Africa and Egypt — rather than asserted as a real gap here.**
+- 🔴 **EMEA education-specific ADOPTION RATES** — not found. Regulation is well covered; adoption is not.
+- 🔴 **APAC education-specific ADOPTION** — not found. Only cross-sector diffusion figures.
+- 🔴 **Every government primary source** — `education.ec.europa.eu`, `unesco.org`, `eur-lex.europa.eu` all `000`. 🟡 **Structural egress, not this KB's failure** *(`ACTION RO`, reclassified at p225)*.
+
 ## Pass 225 — 2026-10-15 — `ACTION SG` FIRES LIMB `1`: p224's NORTH AMERICA BLANK WAS THE QUERY'S SHAPE, AND CANADA AND MEXICO BOTH HAVE `2026` INSTRUMENTS
 
 🟢 **p224 declared a blank INSIDE a non-blank region — the query said *"North America"* and the surface answered with the United States only. 🔵 A country-shaped query recovers both: this is the SECOND precedent after p223 withdrew p222's APAC blank the same way** → [`p225-regional-queries`](../evidence/p225-regional-queries.2026-10-15-p225.tsv).

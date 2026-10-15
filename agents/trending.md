@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 226 — THIS WEEK'S SIGNAL IS A CLAIM THESE SHELVES KILLED **SEVENTEEN PASSES AGO** WALKING BACK IN THROUGH THE MANDATED QUERY, AND THE GATE BUILT TO STOP IT COULD NOT SEE IT
+
+🔵 **`0` new agent rows this week *(`30` of `32` candidates already carried — the largest candidate population yet measured)*. The signal is a refuted claim caught INBOUND before it was written, and the measurement of why the gate nearly missed it.**
+
+🔵 **Evidence:** [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv) · [`p226-discovery-candidates`](../evidence/p226-discovery-candidates.2026-10-15-p226.tsv) · [`p226-regional-queries`](../evidence/p226-regional-queries.2026-10-15-p226.tsv)
+
+### 🔴 The week's claim: `frappe/lms` came back as `MIT`, and these shelves killed that at p209
+
+🟢 **`ACTION SH` ran BEFORE anything was written — `76` inbound records from `10` queries, scanned against the refuted-claims table.** 🔴 **One hit, and it arrived through the MANDATED vertical query:**
+
+> *"**Frappe LMS is listed as MIT** in one comparison, though it is unclear whether that refers to Frappe LMS or another project."*
+
+🟢 **`frappe/lms` is `AGPL-3.0` — read first-hand on these shelves at p209, `license.txt`, `33 893` B, along with the mechanism *(`frappe/frappe`, the framework)*.** 🔴 **The claim was corrected then. It is back now, seventeen passes later, from a different source.**
+
+🟡 **Why this one is worth the week's slot rather than a footnote:** 🔴 **an `AGPL-3.0` platform mistaken for `MIT` is the most expensive licence error available in the vertical tier, and the error direction is PERMISSIVE — it is wrong in the direction that makes a studio relax.** 🟢 **A team that took that listicle at face value would scope a hosted customisation with no source obligation and discover the obligation after delivery.**
+
+### 🔴 What the same run exposed about the gate itself
+
+🔴 **The `3`-row table could NOT see this hit. `frappe/lms` was not one of its subjects.** 🔵 **The gate was built at p223/p224 around the AI Act date, it reported `0 ASSERTED / 0 ATTRIBUTED` at p224 and p225, and that clean report was always bounded by a subject list nobody had extended.**
+
+🟢 **Three for three now, and the shape does not vary:**
+
+| claim | refuted by this KB | in the table? | outcome |
+|---|---|---|---|
+| Boston *"graduation requirement"* | p218 | 🔴 no | escaped the gate at p225, caught by hand |
+| `frappe/lms` is `MIT` | p209 | 🔴 no | 🔴 **escaped at p226 — tabled this pass, and it FIRED** |
+| `Open edX` is `MIT` | `65`+`9` `AGPL` cells | 🔴 no | read first-hand this pass, then tabled |
+
+🔴 **A refutation recorded in prose does not become a check; somebody has to add the row.** 🟡 **For a KB that researches by search every hour, that is the governing lesson: the gate's reach is its subject list, and the subject list grows only by hand, after a human read catches something.**
+
+🟢 **The three original subjects did NOT recur this pass.** 🔵 **So the August-2026 error is still in circulation — it simply did not surface in these ten queries — and one clean week on three subjects is not a trend.**
+
+### 🟢 The week's supply note — the MCP tier for student data is real, small, and almost entirely already carried
+
+🔵 **A constrained use-case query returned `9` named MCP servers touching student/university data; `8` were already on these shelves.** 🟢 **Two had their `MIT` grants read first-hand for the first time** *(`acestein13/campusintel-mcp` `1 066` B; `sukhrobyangibaev/mcp_hemis_student` `1 074` B)*.
+
+🔴 **The tier's shape is the finding, not any row in it.** 🟡 **Every one of these is a personal or single-institution project:** `mcp_hemis_student` is written around one university's HEMIS instance; `purdue-mcp` explicitly avoids student accounts; the SABIS server SCRAPES one portal; `mcp_for_university` is a read-only catalogue. 🔴 **There is still NO mature open-source MCP connector for a real SIS — no Banner, no PeopleSoft, no Ellucian.** 🟢 **That gap is stable across passes and is the clearest unoccupied build slot on these shelves** → [`compose/patterns.md`](../compose/patterns.md) `P226-R3`.
+
+### 🔴 The one uncarried candidate, and why it is not a row
+
+🔴 **[`kevinraj23/student-assistant-mcp-server`](https://github.com/kevinraj23/student-assistant-mcp-server) EXISTS and has NO GRANT.** 🟢 **Verified first-hand rather than assumed: `git ls-remote` gives `2` refs with `HEAD` `45cf1eee7569` on `refs/heads/main`; `README.md` *(`1 862` B)* and `pyproject.toml` *(`371` B)* both serve `200`; `LICENSE`, `LICENSE.md` and `LICENSE.txt` are all absent.** 🟡 **Recorded as a measured `NO-GRANT` and added to `ACTION PH`'s ask-the-maintainer queue, which is still not actioned unattended.**
+
+### 🔵 The mandated trending shape, NINTH consecutive run of teaching material
+
+🟢 **Verbatim: `github trending education AI 2026`.** Returned `Project NOMAD` *(carried since p132)*, `developer-roadmap`, `nanochat`, `Open WebUI`, `BitNet` — general AI tooling and learning resources, no education agent. 🔵 **`ACTION RD`'s standing rule is re-confirmed for a ninth run: keep both shapes, weight the constrained one, and expect the mandated one to pay off roughly once in ten passes.** 🟡 **It is now nine passes since it last did.**
+
 ## 2026-10-15 — Pass 225 — THIS WEEK'S SIGNAL IS NOT A REPO: TWO CLAIMS THESE SHELVES ALREADY REFUTED CAME BACK **INBOUND**, THROUGH THE MANDATED QUERY ITSELF
 
 🔵 **`0` new agent rows this week *(`9` of `9` candidates already carried)*. The signal worth recording is a hazard class the KB had no name for.**

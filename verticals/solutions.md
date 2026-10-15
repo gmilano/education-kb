@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — THE SELF-HOSTED EDUCATION STACK HAS EXACTLY **ONE** PERMISSIVELY-LICENSED LMS AND **ZERO** PERMISSIVELY-LICENSED SIS, AND THE MANDATED VERTICAL QUERY RETURNED A LICENCE CONFLICT IN THE WILD
+
+🔵 **`0` new platform rows *(`9` of `9` named platforms already carried)*. `1` canonical slug corrected on the tier's largest platform. `1` structural gap measured rather than asserted.**
+
+🔵 **Evidence:** [`p226-regional-queries`](../evidence/p226-regional-queries.2026-10-15-p226.tsv) · [`si-alias-direction`](../evidence/si-alias-direction.2026-10-15-p226.tsv)
+
+### 🔴 The licence shape of the tier, and what it costs a Globant engagement
+
+🟢 **Verbatim query: `open source platform education LMS SIS MIT Apache self-hosted 2026`.** Returned `9` platforms, all already carried. 🔴 **Sorted by the grant a studio can actually build on, the tier is lopsided:**
+
+| platform | tier | grant | buildable-on under the standing MIT/Apache/BSD preference |
+|---|---|---|---|
+| [`OpenOlat`](https://github.com/OpenOLAT/OpenOLAT) | LMS | 🟢 **`Apache-2.0`** | 🟢 **YES — the only one** |
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🔴 **`AGPL-3.0`** *(`license.txt`, `33 893` B — a comparison claimed `MIT` AGAIN this pass; see below)* | 🔴 no |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | LMS | 🔴 **`AGPL-3.0`** *(`LICENSE`, `35 136` B, `sha256`₁₂ `e12d78569742`, read first-hand this pass)* | 🔴 no |
+| `Moodle` | LMS | 🔴 `GPL-3.0-or-later` | 🔴 no |
+| `Chamilo` | LMS | 🔴 `GPL` *(bare token on these shelves — NOT a read bound)* | 🔴 no |
+| `Canvas LMS` | LMS | 🔴 `AGPL-3.0` *(community edition)* | 🔴 no |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS | 🔴 **`GPL-2.0`** *(complete body minus the non-operative appendix, `15 214` B)* | 🔴 no |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS | 🔴 **`AGPL-3.0`** | 🔴 no |
+| `AlekSIS` | SIS | 🔴 **NO GRANT ESTABLISHED — the slug does not resolve** | 🔴 n/a |
+
+🔴 **`1` of `6` LMS platforms carries a permissive grant. Of the `3` SIS platforms, `2` have an established grant and NEITHER is permissive; the third has no resolvable repository at all.** 🟡 **This is not a sourcing failure to be fixed by more searching — it is the shape of the market, and it has been stable across passes.**
+
+### 🔴 `T226-V0` — three defects in this pass's OWN table, found before publishing
+
+🔴 **The first draft of the table above carried three wrong cells, caught by checking each against what these shelves already hold first-hand rather than against the query results:**
+
+| cell as first written | 🟢 what the shelves actually carry |
+|---|---|
+| 🔴 `Gibbon` — `GPL` | 🟢 **`GibbonEdu/core`, `AGPL-3.0`** — a materially different obligation, and the error was in the PERMISSIVE direction |
+| 🔴 `RosarioSIS` — `GPL` | 🟢 **`francoisjacquet/rosariosis`, `GPL-2.0`**, complete body read, `15 214` B |
+| 🔴 `AlekSIS` — `EUPL`/copyleft | 🔴 **NOT FOUND** — `AlekSIS/AlekSIS` and `aleksis/AlekSIS-Core` BOTH fail `git ls-remote`. There was no grant to state |
+
+🟡 **All three came from writing a plausible licence beside a platform name instead of reading the cell.** 🔴 **`GPL` for `Gibbon` is the same class of error as the listicle's `MIT` for `frappe/lms`, committed inside this KB in the same pass that caught it outside** — which is the strongest argument available for `ACTION QO`'s licence gate. 🔵 **Thirteenth and fourteenth unit-mismatch findings: a BARE family token *(`GPL`)* is not a bound, and a platform NAME is not a resolvable repository.**
+
+🟢 **What it means for an engagement, concretely:** the copyleft tier is perfectly usable, and most Globant education work will sit on Moodle or Open edX. 🔴 **What changes is the DELIVERABLE BOUNDARY. On AGPL-3.0 — `Open edX` and `Canvas` — network use is distribution, so a hosted customisation triggers the source obligation for the modified work.** 🟡 **The architecture that keeps a client's proprietary logic proprietary is the one that keeps it OUT of the platform process: an `aiprovider_*`/`aitool_*` plugin seam, or a separate service the platform calls. 🔵 `OpenOlat` is the one platform where that constraint does not apply, which is the whole reason to know it is there.**
+
+### 🔴 `T226-V1` — a licence CONFLICT in the wild, returned by the mandated query itself
+
+🔴 **A comparison page in this pass's results lists `Frappe LMS` as `MIT`. These shelves refuted that exact claim at p209 with the payload — `AGPL-3.0`, `license.txt`, `33 893` B — and it came back anyway, seventeen passes later, from a different source.** 🟢 **It was caught INBOUND by `ACTION SH`'s gate before anything was written, and is the one hit that gate produced this pass** → [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv).
+
+🟡 **A second page lists `Open edX` as `MIT` — but flags its own conflict with the `AGPL` listings around it.** 🟢 **That is a source reporting the error, not circulating it, and the gate correctly stayed silent.** 🔵 **The distinction is worth keeping: one of these needs correcting, the other is doing the correcting.**
+
+🔴 **Neither was written to any shelf.** 🟢 **And the prompt for reading `Open edX`'s `LICENSE` first-hand came out of this: `65` + `9` `AGPL` cells on these shelves and not one byte read, until now** → [`repos/foundations.md`](../repos/foundations.md) `P226-A`.
+
+🔵 **The finding is that the vertical-platform tier is where third-party licence claims are least reliable, and the error direction is consistently PERMISSIVE: a listicle that gets it wrong gets it wrong in the direction that would make a studio relax.** 🔴 **An `AGPL-3.0` platform mistaken for `MIT` is the single most expensive licence error available in this tier.** 🟡 **Standing guidance: never take an LMS grant from a comparison page; read the repository.**
+
+### 🔴 `P226-V2` — cite `Open edX` as `openedx/openedx-platform`
+
+🟢 **The tier's largest platform now has a canonical slug on evidence: its own `README.rst`, byte-identical from both paths, names `openedx/openedx-platform` `5` times and `openedx/edx-platform` `0` times** → [`repos/foundations.md`](../repos/foundations.md) `P226-A`. 🔵 **This REVERSES p225's recommendation in the section below, which is left standing as the dated record.** 🟡 **Practical effect: an SBOM, dependency pin or client inventory should carry the canonical slug, with `edx-platform` noted as the alias it resolves through.**
+
+### 🔴 The standing gap, re-measured and unchanged: no open-source SIS connector tier
+
+🔴 **A constrained query for MCP servers against student information systems returned `9` named projects and NOT ONE institutional connector** — no Banner, no PeopleSoft, no Ellucian, no Workday Student. 🟢 **What exists is personal-scale:** one university's HEMIS instance, a Purdue public-data server that explicitly avoids student accounts, a portal SCRAPER, a read-only course catalogue, and a no-grant study assistant.
+
+🟡 **For a studio this is the clearest unoccupied build slot on these shelves, and it has survived several passes of searching.** 🔵 **The platforms are permissively reachable even where they are copyleft, because a connector talks to an API and does not link the platform — so the licence shape above does NOT block it** → [`compose/patterns.md`](../compose/patterns.md) `P226-R3`.
+
 ## Pass 225 — 2026-10-15 — THE SHELF'S SHARPEST LICENCE QUESTION IS SETTLED: `OpenEduCat` IS `LGPL-3.0-only` BY A `2`–`1` VOTE THAT AGREES WITH THE CONSERVATIVE READING
 
 🟢 **`ACTION RV`, carried three passes and registered p225's highest priority, is discharged on limb `1`.** 🔵 **The platform every Odoo education recipe on these shelves stands on now has a resolved bound instead of a conflict** → [`repos/foundations.md`](../repos/foundations.md) `P225-A`, [`rv-openeducat-third-channel`](../evidence/rv-openeducat-third-channel.2026-10-15-p225.tsv).

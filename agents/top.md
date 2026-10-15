@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — `ACTION SH` FIRES **BOTH WAYS**: `0` INBOUND HITS ON THE TABLE AS IT STOOD, AND `1` THE MOMENT THE TABLE COVERS WHAT THIS KB HAD ALREADY REFUTED FIRST-HAND THREE PASSES AND SEVENTEEN PASSES AGO
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows. `2` registered actions discharged — `SH` *(the registered highest priority)* and `SI`, both on limb `1`. `1` refuted claim caught INBOUND before it was written. `1` published p225 recommendation INVERTED on evidence. `4` grants read first-hand. `3` rows added to the refuted-claims table. `2` new standing rules. `3` defects found in this pass's own cells before publishing.**
+
+🔵 **Evidence:** [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv) · [`si-alias-direction`](../evidence/si-alias-direction.2026-10-15-p226.tsv) · [`p226-discovery-candidates`](../evidence/p226-discovery-candidates.2026-10-15-p226.tsv) · **Instrument:** [`p226-inbound-gate`](../compose/code/p226-inbound-gate/README.md) *(`18` controls)*
+
+### 🔴 The headline: the binding constraint was COVERAGE, and the proof arrived in this pass's own results
+
+🟢 **`ACTION SH` asked for the `refuted_pattern` column to be run against this pass's SEARCH RESULTS before anything was written. It was — `76` inbound records, `10` queries, before a single shelf was touched.**
+
+🔵 **The verdict is best stated in both forms, because the falsifier was written against the table as it then stood:**
+
+| reading | result | what it measures |
+|---|---|---|
+| 🔴 **LIMB `2` on the letter** — the EXISTING `3`-row table | **`0`** inbound hits | whether those three specific errors recurred. They did not |
+| 🟢 **LIMB `1` on the substance** — the table extended to subjects this KB had ALREADY refuted first-hand | **`1`** inbound hit | whether the table can SEE what the KB knows. It could not |
+
+🔴 **The hit, from the MANDATED vertical query:**
+
+> *"**Frappe LMS is listed as MIT** in one comparison, though it is unclear whether that refers to Frappe LMS or another project."*
+
+🟢 **These shelves refuted exactly this claim at p209, for this exact repository, with the payload: `frappe/lms` is `AGPL-3.0`, `license.txt`, `33 893` B.** 🔴 **Seventeen passes later the same claim came back through the mandated query, and the gate could not see it — because `frappe/lms` was not a subject in the table.**
+
+🟢 **The pattern is now three for three, and it is the pass's finding:**
+
+| claim | refuted by this KB | was it in the table? | what happened |
+|---|---|---|---|
+| Boston *"graduation requirement"* | 🟢 p218, with the publishers' own corrections | 🔴 **no** | escaped the gate at p225; caught by a human read |
+| `frappe/lms` is `MIT` | 🟢 p209, first-hand payload | 🔴 **no** | 🔴 **escaped the gate at p226 — until this pass tabled it, and then it FIRED** |
+| `Open edX` is `MIT` | 🟡 `AGPL-3.0` in `65`+`9` cells, never read first-hand | 🔴 **no** | read first-hand this pass, then tabled |
+
+🔵 **So a gate's `0/0` report is bounded by its subject list, and a subject list grows only by hand, after a human read catches something.** 🟢 **A refutation recorded in prose does not become a check. p226 added all three rows** → [`sh-refuted-claims`](../evidence/sh-refuted-claims.2026-10-15-p226.tsv), [`sh-inbound-gate-run`](../evidence/sh-inbound-gate-run.2026-10-15-p226.tsv).
+
+🟡 **And the exempt column earned its place in the same run.** 🔵 **This pass's results ALSO said *"One comparison lists `Open edX` as `MIT`, which conflicts with the `AGPL` listings elsewhere"* — and the gate correctly stayed silent, because a source flagging its own conflict is reporting the error, not circulating it.** 🟢 **A control pins both halves: the bare claim fires, the self-flagged one does not.**
+
+### 🔴 `T226-1` — the near miss, and why making it fire would have been this pass's biggest error
+
+🟢 **One record matched the subject and not the refuted pattern, and the gate reported it rather than passing silently:**
+
+> *"EU AI Act: Sources agree it treats education AI as high-risk … One source says it entered into force in August 2024, and its **general application date was 2 August 2026**."*
+> — the mandated EMEA query, read `2026-10-15`
+
+🟢 **The gate was right to stay silent. `2026-08-02` IS the AI Act's general application date, and these shelves say so.** 🔴 **The refuted claim — *education high-risk obligations take effect August 2026* — carries the SAME DATE and differs only in the OBLIGATION.** 🟡 **Widening `refuted_pattern` to catch *"general application"* would make the gate fire on a true statement.**
+
+🔵 **Standing rule: the unit of this refuted claim is the `(OBLIGATION, DATE)` pair, never the date alone.** 🟢 **Twelfth consecutive unit-mismatch finding, and the second in a row caught by this KB's own instrument before publishing rather than a pass later** → `ACTION QY`.
+
+### 🟢 `0` new rows, measured rather than asserted — and the series now has four points
+
+🔵 **`32` distinct candidates were named across `10` queries; `30` were already on these shelves — `93.8%` already-carried** → [`p226-discovery-candidates`](../evidence/p226-discovery-candidates.2026-10-15-p226.tsv).
+
+| pass | candidates | already carried |
+|---|---|---|
+| p223 | `18` | `89%` |
+| p224 | `8` | `75%` |
+| p225 | `9` | `100%` |
+| 🆕 **p226** | **`32`** | **`93.8%`** |
+
+🟢 **The largest candidate population yet measured, and the rate held.** 🟡 **The two not carried are both recorded and NEITHER becomes a row:**
+
+| candidate | first-hand result | why no row |
+|---|---|---|
+| [`kevinraj23/student-assistant-mcp-server`](https://github.com/kevinraj23/student-assistant-mcp-server) | 🟢 **EXISTS** — `2` refs, `HEAD` `45cf1eee7569` on `refs/heads/main`; `README.md` `1 862` B and `pyproject.toml` `371` B both `200` | 🔴 **`LICENSE`, `LICENSE.md`, `LICENSE.txt` ALL ABSENT. NO GRANT** — not something a studio can build on. Joins `ACTION PH`'s queue |
+| `SABIS Student Portal MCP` | 🔴 **UNVERIFIABLE** — named only by an aggregator listing *(`ISC` per that listing, ~`1 018` days old, works by SCRAPING one university's portal)*; no first-hand slug obtained | 🔴 **No channel here can verify owner, grant or liveness** |
+
+🔴 **Padding either into the table would have been the only way to make this pass look busier.** 🟢 **The standing rule holds: fewer real rows beat padding.**
+
+### 🟢 Four grants read first-hand this pass
+
+| row | channel | grant | artefact |
+|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | `raw` `LICENSE` | 🟢 **`Apache-2.0`** *(carried since p132, now read rather than cited)* | `10 779` B, `sha256`₁₂ `e4f125622d3c`, appendix names *"Copyright 2024-2026 Crosstalk Solutions LLC"* |
+| [`acestein13/campusintel-mcp`](https://github.com/acestein13/campusintel-mcp) | `raw` `LICENSE` | 🟢 **`MIT`** | `1 066` B |
+| [`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) | `raw` `LICENSE` | 🟢 **`MIT`** | `1 074` B |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `raw` `LICENSE`, **both alias paths** | 🟢 **`AGPL-3.0`** | `35 136` B, `sha256`₁₂ `e12d78569742`, byte-identical from both paths. 🟡 **Bound not settled — the canonical body carries no or-later grant string and GPL-family or-later lives in FILE HEADERS. Registered as `ACTION SN`** |
+
+🔵 **`project-nomad`'s grant is the one worth having read:** it is the second-largest repository on these shelves and the Apache-2.0 claim had been carried from an aggregator. 🟢 **It now rests on the project's own `LICENSE`, whose appendix carries the copyright line — which is the p225 preamble-vs-canonical-body discipline applied in the one place it was still owed.**
+
+### 🟡 `T226-2` — the `master`/`main` alias REPRODUCES, and this KB already knew
+
+🔴 **While probing the uncarried candidate, `raw.githubusercontent.com` served `200` for `master/README.md` on a repository whose complete ref set is `HEAD` + `refs/heads/main` and nothing else.** 🟢 **Controls: two nonsense branch names both `404` at `14` B, so it is a specific legacy-name alias and not a wildcard fallback.**
+
+🟢 **This is a REPRODUCTION, not a find.** 🔵 **These shelves already carry it four times over — `T273` (p177, with `3` probed repos and an asymmetry control), `P714`, `P511` and `P819`, the last of which states the rule outright: *"a `200` at `…/master/<path>` is not evidence that `master` exists — resolve with `git ls-remote --symref` first, always."*** 🟡 **Recorded here as a fifth independent confirmation on a fresh repository, and as evidence that the rule is doing its job: the probe was caught by the KB's own standing guidance within the same pass.**
+
 ## Pass 225 — 2026-10-15 — THE CHANNEL p224 DECLARED LOST WAS NOT LOST, IT MOVED **PATH**: `github.com` HTML IS `403` AND `github.com`'s GIT SERVICE IS `200`, AND IT CARRIES AN ALIAS ORACLE THAT SETTLES THREE CARRIED ACTIONS
 
 🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows. `4` registered actions discharged — `RV` on limb `1`, `SD` on limb `2`, `SE` on limb `1`, `SG` on limb `1`. `1` standing rule REFUTED. `3` defects found in this pass's own instrument before publishing. `1` new hazard class registered.**

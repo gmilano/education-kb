@@ -1,0 +1,22 @@
+# ACTION SC (CONVERGENT-SECONDARY) applied to a DIVERGENCE rather than a convergence.
+# p224 recorded a Vietnamese instrument. p226's mandated APAC query returned a DIFFERENT one.
+# These shelves must not merge them - the same error ACTION RL's two 19% statistics warn about.
+pass	instrument_as_recorded	date_as_recorded	education_treatment	source_class
+p224	Decision No. 33/2026/QD-TTg	2026-07-02	named in the APAC section	CONVERGENT-SECONDARY (unesco/gov hosts blocked)
+p226	"a standalone AI law", risk-based classification, no number given	"took effect March 1, 2026" / "scheduled to take effect in March 2026" - the sources disagree with each other	education NAMED among high-risk sectors, with pre-deployment registration and incident reporting; high-risk sectors have until SEPTEMBER 2027	secondary law-firm and consultancy pieces
+# WHAT IS AND IS NOT ESTABLISHED:
+# - NOT established: that these are the same instrument. A Decision (QD-TTg) is subordinate
+#   legislation; "a standalone AI law" is primary legislation. They may well be two instruments.
+# - NOT established: either date. p226's own sources disagree on the commencement month, and
+#   vietnamese government hosts are egress-blocked here (ACTION RO, reclassified at p225).
+# - ESTABLISHED and USEFUL: education is named a HIGH-RISK sector in Vietnam's regime, with a
+#   compliance horizon of SEPTEMBER 2027 for high-risk sectors.
+# --- THE PROCUREMENT-RELEVANT CONVERGENCE, which is this pass's best regional datum ----------
+# Two of the three regulating regions land education high-risk obligations in LATE 2027:
+#   EU       Annex III education high-risk     2027-12-02   (Reg. (EU) 2026/1744)
+#   Vietnam  high-risk sectors incl. education 2027-09      (month only, instrument contested)
+# A multi-region engagement therefore has ONE compliance horizon, not two, and it is ~2 years out
+# - NOT the August 2026 date that keeps circulating inbound (see sh-inbound-gate-run).
+# Registered for p227 as ACTION SL: resolve whether p224's Decision and p226's "standalone law"
+# are one instrument or two. Falsifier: a source naming BOTH -> two instruments, cite separately;
+# a source giving QD-TTg 33/2026 a March commencement -> one instrument, one of the dates is wrong.

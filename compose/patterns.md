@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 226 — 2026-10-15 — THREE RECIPES: THE INBOUND GATE THAT COSTS NOTHING AND CAUGHT A `17`-PASS-OLD ERROR, THE CANONICAL-SLUG RESOLVER, AND THE SIS CONNECTOR NOBODY HAS BUILT
+
+### 🆕 🟢 `P226-R1` — the inbound refuted-claims gate *(run it on SEARCH RESULTS, before anything is written)*
+
+🔴 **The problem it solves:** a team doing recurring research refutes a claim, writes the refutation into a report, and then re-ingests the same claim months later from a different source. 🟢 **This KB did exactly that twice: `frappe/lms` as `MIT` *(refuted p209, returned p226)* and the Boston graduation requirement *(refuted p218, returned p225)*.** 🔵 **An outbound gate — one that checks your own prose — reports `0` and looks like success while the error is still arriving.**
+
+🟢 **The wiring. Stdlib only, no requests, no API:**
+
+1. 🟢 **Keep a table, one row per refuted claim**, with six columns: `subject`, `subject_pattern`, `refuted_pattern`, `correction`, `refuted_by`, `exempt_pattern`. 🔵 *Reference: [`sh-refuted-claims`](../evidence/sh-refuted-claims.2026-10-15-p226.tsv), `6` rows.*
+2. 🟢 **Capture raw search results to a file BEFORE writing anything**, with each block delimited by the verbatim query. 🔵 *That delimiter also satisfies the publish-the-query rule — the query travels with the text it returned.*
+3. 🟢 **Fire on a CONJUNCTION within ONE RECORD:** `subject_pattern` AND `refuted_pattern` match, `exempt_pattern` does not. 🔴 **All three parts are load-bearing.** Subject alone is far too broad *(every AI Act paragraph says "high-risk")*; refuted alone fires on unrelated prose; and without `exempt_pattern` the gate fires on your own correction and on sources REPORTING the error. 🔵 *Measured: this pass's `"Open edX as MIT, which conflicts with the AGPL listings"` is a source doing the correcting, and the exempt column is what tells it apart from circulation.*
+4. 🔴 **Make the record ONE LINE.** A paragraph or block unit lets a subject in line 1 pair with an unrelated date in line 9 — a false positive that looks authoritative.
+5. 🟢 **Report NEAR MISSES as a second channel** — subject matched, refuted pattern did not. 🔴 **A gate that reports only its firings cannot distinguish a clean pass from a blind spot.**
+6. 🔴 **Feed the table from every refutation you make.** 🟡 **This is the step that actually matters and the only manual one: three times now a claim this KB had refuted first-hand was missing from the table, so the gate could not see it return.**
+
+🟢 **Cost: `~250` lines of Python, `18` controls, `0` requests, runs in milliseconds.** 🔵 **Caught a `17`-pass-old error on its first run** → [`p226-inbound-gate`](./code/p226-inbound-gate/README.md).
+
+🟡 **This is the INBOUND half of the licence/claims gate `ACTION QO` has wanted for eight passes.** 🟢 **Recommended `make hooks` scope is now three gates: `P222-R3` *(licence bounds)* + `P225-R1` *(aliases)* + `P226-R1` *(inbound claims)*, plus the three guards — dotted owner, API path, owner case.**
+
+### 🆕 🟢 `P226-R2` — resolving a CANONICAL slug when the redirect channel is closed
+
+🔴 **The problem:** two paths serve one repository. A ref-set comparison proves they are the same repository; it cannot say which path is canonical, and `github.com` HTML — where the `301` would be — is `403` from many pipelines.
+
+🟢 **The ladder, cheapest first, and stop at the first that answers:**
+
+1. 🟢 **Package registry `project_urls`.** `pypi.org/pypi/<pkg>/json` → `info.project_urls.Repository`, or `registry.npmjs.org/<pkg>` → `repository.url`. 🔴 **MANDATORY: read the UPLOAD DATE alongside it.** 🔵 *Measured both ways this pass — `INGInious` `0.9.2` uploaded `2026-01-23` names `INGInious/INGInious` and is probative; `ease` `0.1.1` uploaded `2013-06-07` names `edx/ease` and is evidence about 2013, predating the `edx`→`openedx` rename entirely.*
+2. 🟢 **The project's own `README`, fetched from BOTH paths.** Count self-references. 🔵 *Measured: `Open edX`'s `README.rst` — byte-identical from both paths, `12 381` B — names `openedx/openedx-platform` `5` times and `openedx/edx-platform` `0` times.* 🔴 **This INVERTED the recommendation the previous pass published.**
+3. 🟡 **Sibling-set evidence**, when the README names an ecosystem but not itself. 🔴 **Weak — record it as weak.** 🔵 *Measured: `moodle-local_ai_manager`'s README links `mebis-lp` for `3` of `3` sibling plugins and names neither owner for itself, which is not enough to invert a `30`-to-`11` citation habit.*
+4. 🔴 **If none answers, publish as an UNORDERED alias pair and stop implying a canonical owner.**
+
+🟡 **Why a studio should care rather than treat this as hygiene:** an SBOM, a dependency pin or a client inventory keyed on a non-canonical slug resolves today through an alias the project itself does not use. 🔴 **And duplicate carrying inflates both counts and licence exposure — this KB was counting its largest platform twice, `65` + `9` `AGPL` cells for one repository.**
+
+### 🆕 🟢 `P226-R3` — the SIS connector tier, which is the clearest unoccupied build slot on these shelves
+
+🔴 **The measured gap:** a constrained query for MCP servers against student information systems returned `9` projects and NOT ONE institutional connector. 🟢 **What exists is personal-scale** — [`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) *(`MIT`, written around one university's HEMIS instance)*, [`RohanMuppa/purdue-mcp`](https://github.com/RohanMuppa/purdue-mcp) *(public data only, explicitly avoids student accounts)*, [`acestein13/campusintel-mcp`](https://github.com/acestein13/campusintel-mcp) *(`MIT`, research and scorecard data)*, a portal scraper, a read-only catalogue, and one study assistant with **no licence at all**.
+
+🟢 **Why the licence shape of the platform tier does NOT block this:** a connector talks to an API over the network and does not link the platform, so the `AGPL-3.0` obligations that constrain an `Open edX` or `Canvas` customisation do not reach it. 🔵 **The connector can be `MIT` or `Apache-2.0` even where the platform is copyleft.**
+
+🟢 **The wiring, using only rows these shelves carry first-hand:**
+
+1. 🟢 **Transport and schema** — an MCP server exposing a small, stable tool surface: `enrolment`, `transcript`, `schedule`, `programme`, `term`. 🔵 *Shape it after `mcp_hemis_student`'s tool list, which is the closest working model; that repo's `MIT` grant was read first-hand this pass *(`1 074` B)*.*
+2. 🔴 **Put the policy gate in the SERVER, not the prompt.** 🟡 **Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students; NYC forbids student-facing AI through grade 8. 🔵 Those are per-tenant configuration values, and the one architectural decision that determines whether the build is resold or rewritten per client.**
+3. 🟢 **Emit the conformity evidence as you go** — who asked, what was returned, which policy applied, which human reviewed. 🔵 **This is the EU Annex III deliverable *(`2027-12-02`)* and the LATAM governance-retrofit deliverable at the same time, and it is accumulated, not produced at the end.**
+4. 🟢 **Front it with a platform the client already runs.** 🔵 `Moodle` `4.5`+ via `core_ai`/`aiprovider_*`, or `local_ai_manager` on `5.0`+ when per-tenant quotas are needed — 🔴 **never both, they do not compose** *(p224 `P224-R1`)*.
+5. 🟡 **Self-hosted inference where data residency binds** — `Ollama` behind `local_ai_manager`, which already ships it as a first-class provider alongside the German state endpoint `Telli`.
+
+🔴 **The one thing to verify before quoting it:** the institutional SIS APIs *(Banner, PeopleSoft, Ellucian, Workday Student)* are vendor-licensed, and NONE of them was verifiable from this pipeline. 🟡 **The open-source half is clear; the vendor-terms half is `ACTION RK`'s standing cell and must be checked per client.**
+
 ## Pass 225 — 2026-10-15 — THREE RECIPES: THE ALIAS GATE THAT COSTS ONE REQUEST PER SLUG, THE `OpenEduCat` PACK NOW THAT ITS BOUND IS RESOLVED, AND THE NORTH AMERICA GOVERNANCE PACK CANADA AND MEXICO JUST PAID FOR
 
 ### 🆕 🟢 `P225-R1` — the alias gate *(run it before any licence or inventory claim, including this KB's own)*

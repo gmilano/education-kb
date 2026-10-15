@@ -1,0 +1,21 @@
+# ACTION RE, honoured an EIGHTH time - the verbatim query behind every finding AND every blank.
+# Year computed at run time (2026), never hardcoded.
+scope	verbatim_query	returned	verdict
+Global - agents	top open source AI agents education 2026 github MIT	general agent rankings, no education-filtered MIT list	TEACHING MATERIAL. The mandated agent shape returned meta-lists (500-AI-Agents-Projects, awesome-* rollups) rather than education agents
+Global - trending	github trending education AI 2026	Project NOMAD, developer-roadmap, nanochat, Open WebUI, BitNet	TEACHING MATERIAL, NINTH consecutive run. ACTION RD's standing rule re-confirmed, not re-tested
+Global - verticals	open source platform education LMS SIS MIT Apache self-hosted 2026	Moodle, Open edX, Chamilo, Canvas, OpenOlat, Frappe LMS, RosarioSIS, Gibbon, AlekSIS	ALL 9 ALREADY CARRIED. Also returned a LICENCE CONFLICT in the wild: one comparison lists Open edX as MIT against AGPL-3.0 elsewhere
+Global - trends	AI education industry trends 2026	HolonIQ, 1EdTech, market sizings	USABLE for intel/trends.md; market figures mutually inconsistent (see below)
+North America	AI education North America 2026 adoption regulation players	134 bills / 31 states; CA AB 1159; Idaho SB 1227; H.R. 8747; NYC moratorium; Katy ISD; AASA student framework	RICH. Country-shaped follow-up not needed this pass - ACTION SG's p225 fix is holding
+EMEA	AI education EMEA 2026 adoption regulation players	EU AI Act high-risk framing; Commission ethical guidelines; Erasmus+ 2026; UAE/Saudi strategies; UK principles-based; Germany EUR 20bn	PARTIAL AND CONTESTED. The AI Act dates returned were mutually inconsistent and the Commission's own page is egress-blocked here. Africa: STILL NO RESULT under the EMEA shape - a named, standing gap
+APAC	AI education APAC 2026 adoption regulation players	South Korea AI Basic Act; Vietnam standalone AI law; China labelling rules; SG/JP/AU voluntary; ASEAN roadmap	RICH, and it carries a DIVERGENCE from p224 on Vietnam - see p226-apac-vietnam-divergence
+LATAM	AI education LATAM 2026 adoption regulation players	UNESCO IESALC 200 institutions / 19 countries; Brazil 56%; Uruguay Ceibal 75%; Digital Education Council	RICH. Strongest regional evidence base this pass, and the only one with institution-level denominators
+Discovery - constrained	open source MCP server student information system university 2026 github	9 named MCP servers	8 of 9 ALREADY CARRIED. The constrained shape again outperformed the mandated one, as p224/p225 found
+Discovery - verification	Project NOMAD Crosstalk-Solutions offline education server license github	Crosstalk-Solutions/project-nomad	ALREADY CARRIED since p132. Used to verify the grant first-hand rather than to add a row
+# NAMED BLANKS, stated so that silence is not mistaken for coverage:
+# - AFRICA: no African instrument, adoption figure or player returned under the EMEA query shape.
+#   This is the region's standing blank and the EMEA shape has now failed to surface it repeatedly.
+#   p225 proved (ACTION SG) that a regional blank can be a QUERY-SHAPE artefact: a country-shaped
+#   query recovered Canada and Mexico where "North America" had returned the US only. The same
+#   hypothesis is registered for Africa at p227 as ACTION SM rather than asserted here.
+# - EMEA education-specific ADOPTION RATES: not found. Regulation is well covered, adoption is not.
+# - APAC education-specific ADOPTION: not found. Only cross-sector diffusion (Singapore 60.9%).

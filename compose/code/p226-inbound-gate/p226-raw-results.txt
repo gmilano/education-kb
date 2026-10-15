@@ -1,0 +1,86 @@
+=====QUERY: top open source AI agents education 2026 github MIT
+The search didn't turn up a ranked list of MIT-licensed agent tools for education. Most results are general agent rankings, so treat these as leads rather than a verified education list.
+500 AI Agents Projects: MIT-licensed and catalogs use cases across sectors, including education, with links to open-source projects. Its education entries include a virtual AI tutor and a study-partner agent.
+OpenHands: MIT-licensed, sandboxed runtime. Coding agent, fits education only for programming courses. Its GitHub organisation moved from All-Hands-AI to OpenHands, so older links and API paths against the previous org no longer resolve.
+MetaGPT: Listed under MIT, though the results don't tie it to education.
+Hermes Agent (Nous Research) and OpenClaw: Both MIT-licensed general personal-assistant agents. Neither is education-specific.
+Microsoft's AI Agents for Beginners: 12-lesson course with about 56k stars. License not stated.
+Hugging Face Agents Course: open-source course on building agents. License not stated.
+=====QUERY: github trending education AI 2026
+Project NOMAD (Crosstalk-Solutions) listed on a GitHub trending page as an offline-first knowledge and education server, with Wikipedia, thousands of books, courses, maps, and optional local AI. About 39.8k stars.
+developer-roadmap: community-driven learning paths for every engineering track.
+nanochat (Karpathy): the full LLM training stack in one minimal readable repo.
+awesome-list repo for AI agents includes a learning section with DeepLearning.AI Agent Courses and Microsoft GenAI for Beginners - 21-lesson course.
+Other trending items mostly general AI tooling, such as Open WebUI, about 155K stars, self-hosted AI platform, and BitNet.
+=====QUERY: open source platform education LMS SIS MIT Apache self-hosted 2026
+Moodle is the most common pick, GPL v3 per several sources.
+Open edX is the MOOC-scale option; its own site says there are no license fees. Reviews call it the heaviest to run, needing Tutor, Docker and a DevOps team. License listed as AGPL v3 in most sources.
+Chamilo (GPL) is the lightest to self-host, will even work on shared hosting.
+Canvas has a community edition under AGPLv3, technically demanding to deploy.
+OpenOlat is the Apache 2.0 option in the listings, aimed at Universities and corporates. The only Apache-licensed LMS found.
+Frappe LMS is listed as MIT in one comparison, though it is unclear whether that refers to Frappe LMS or another project.
+RosarioSIS (GPL, PHP): Full student information system for K-12 administration.
+Gibbon (GPL, PHP): all-in-one school management tool for K-12.
+AlekSIS (Python): a good compromise between lightweight solutions and heavier ERP-based systems.
+Sources disagree on some licenses. One comparison lists Open edX as MIT, which conflicts with the AGPL listings elsewhere.
+=====QUERY: AI education industry trends 2026
+HolonIQ expects selective AI acceleration in 2026, clearest gains in course design support, teacher productivity, and administrative workflows.
+Educativa identifies AI agents as the big development, generative AI moving directly into the virtual campus.
+TeachBetter argues the movement away from generic AI tools toward platforms purpose-built for education is the defining trend of 2026.
+1EdTech sees institutions building governance structures, clarifying compliance expectations, establishing evaluation processes.
+1EdTech also highlights digital credentials; HolonIQ notes real-time skills visibility, adaptive training, competency frameworks.
+HolonIQ reports systems increasingly expect evidence that products improve learning quality, persistence, well-being, or job-relevant skills.
+Market size estimates vary widely. One market report projects the sector to expand from $7.52 billion in 2025 to $10.6 billion by 2026, while an X-Pilot report cites $12.3B for 2026 attributed to HolonIQ. Global $10.6B AI in Education Market, 2026: Total Revenue Set to Quadruple During 2026-2030, Reaching $42.48 Billion.
+Several sources are vendor blogs; some statistics (62% test-score gain, 42% outcome improvement) are not independently verified.
+=====QUERY: AI education North America 2026 adoption regulation players
+A market-research page says North America holds the largest regional share of the AI-in-education market, at 36% valued at $3.68 billion in 2026 and expected to reach $32 billion by 2030.
+Survey data reports 60% of U.S. K-12 teachers used AI tools in 2024-2025, with 32% using them at least weekly.
+One 2026 tracker counts 134 AI-in-education bills across 31 states, focused on data privacy, classroom use limits, and curriculum integration.
+Privacy bills include California AB 1159, which bars using student data to train AI models, and Idaho SB 1227, which requires privacy protections for school AI tools.
+Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students.
+At the federal level, the House Education and Workforce Committee advanced the K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747) in a July 21 markup.
+Google, Microsoft, Apple, and IBM are cited as major investors in education AI, and a White House pledge reportedly includes commitments from over 200 technology companies.
+New York City has a one-year moratorium on student-facing AI through eighth grade, and Katy ISD in Texas bans generative AI chatbots for K-6 students.
+Students from All 50 States Produce National Framework for AI in America's Schools; a student-written STUDENTS FIRST Act of 2026 proposes a framework that rejects both outright bans and unrestricted adoption.
+=====QUERY: AI education EMEA 2026 adoption regulation players
+EU AI Act: Sources agree it treats education AI as high-risk when it affects access, assessment, or exam scoring. One guide notes that this includes any system that evaluates learners, assigns them to programmes, detects prohibited behaviour during assessments, or influences access to qualifications. Those systems need a conformity assessment before deployment. The timing is unclear. One source says it entered into force in August 2024, and its general application date was 2 August 2026. But the EU changed the timeline for high-risk systems. The Commission's own page instead lists 31 July 2026 Entry into force of AI Act and 27 July 2026 Entry into force AI Omnibus. Check the official text before relying on any date.
+EU education guidance: the Commission's ethical guidelines for educators on AI and data, first published in 2022, sit alongside the AI Act and GDPR. Erasmus+ 2026 calls for proposals on policy experimentation are also listed.
+Regional adoption: Europe is described as expanding company use while putting more weight on regulation, safety, and privacy. The UAE and Saudi Arabia are highlighted for national AI strategies, infrastructure spending, talent building. The UK operates under principles-based regime guidance rather than a single statute.
+Germany has a EUR 20 bn AI investment commitment (2025-2030), per one aggregator.
+US context for comparison: In 2026, 134 bills related to AI in education legislation have been introduced across 31 states. New York City paused software purchases pending AI guidance, and Maryland districts must adopt AI policies by fall 2026.
+The openeducat.org article, the cmarix blog, and the alicelabs aggregator contain generic or unverified claims.
+Source list included: planbe.eco "EU AI Act for Education - Guide 2026"; openeducat.org "AI in Education 2026: What Schools Are Actually Deploying".
+=====QUERY: AI education APAC 2026 adoption regulation players
+South Korea is the most comprehensive regime. Its AI Basic Act took effect on 22 January 2026; the Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust took effect on 22 January 2026. The MSIT has indicated that 2026 will effectively serve as a pilot period with a one-year penalty grace period.
+Vietnam passed a standalone AI law that uses a risk-based classification. Education is named among high-risk sectors, with pre-deployment registration and incident reporting. Sources differ on the start date: one says it took effect on March 1, 2026, while another says it was scheduled to take effect in March 2026. The same source reports high-risk sectors (finance, healthcare, education) have until September 2027.
+China has the most binding framework, including content labelling and registration rules (Generative AI Services Management Measures and synthetic content identification rules effective September 1, 2025).
+Singapore, Japan, and Australia mainly rely on voluntary, principles-based approaches, the dominant model in Japan, Singapore, and Australia.
+ASEAN published a Responsible AI Roadmap in 2025 outlining phased actions through 2030.
+Singapore leads APAC with a 60.9% AI diffusion rate among working-age adults, and only 1 in 10 APAC enterprises considers itself very mature in AI adoption.
+A market report names Google LLC, Microsoft Corporation, IBM Corporation, Pearson PLC, and Byjus as key AI-in-education players, and says China, India, and Japan dominate the AI in Education market.
+=====QUERY: AI education LATAM 2026 adoption regulation players
+A UNESCO IESALC study of 200 institutions in 19 countries found 87% were using AI in at least one area, while 74% reported using it in teaching and learning.
+UNESCO notes the region's teachers adopted AI quickly; 56% of secondary school teachers in Brazil had used AI over the previous year, compared to an OECD average of 36%. Uruguay's figures are higher still, at 75% of public-school teachers, per Ceibal.
+Only 26% of surveyed institutions had a formal AI strategy; gaps in policies and monitoring. AI adoption is often driven by individual academics, researchers, and students.
+Regulation is mostly still in capacity-building. No sign of a binding regional AI-in-education law. UNESCO training for officials; one course on AI regulation targeted senior officials from the Ombudsman's Office, the Economic Superintendency, and the Superintendency for Personal Data Protection.
+Key players: UNESCO IESALC (lead report, with UNU-IAS support), UNESCO regional offices, the Digital Education Council (its LATAM survey drew over 30,000 responses from 29 higher education institutions), Ceibal in Uruguay, and the OECD TALIS survey. The Latin American AI Index (ILIA) also tracks school-level AI education, describing progress with increases in school-level AI education and postgraduate programs, but these remain exceptions in the region.
+=====QUERY: Project NOMAD Crosstalk-Solutions offline education server license github
+The official repository is Crosstalk-Solutions/project-nomad on GitHub.
+Description: a self-contained, offline-first knowledge and education server packed with critical tools, knowledge, and AI.
+Install: any Debian-based operating system (Ubuntu 26.04 LTS recommended; 24.04 LTS and Debian 12 also supported). Terminal-based install, tools accessed through the browser.
+License: the everydev.ai listing states the project is fully open source under the Apache License 2.0 and includes zero built-in telemetry.
+Creator: started in 2025 by Chris Sherwood of Crosstalk Solutions, LLC.
+Architecture: Docker-based containerized system orchestrating multiple open-source services through a centralized web interface called the Command Center.
+Popularity: within days the project reached 11,500 stars and claimed the number one spot on the trending page. Another article says 33K stars; the trending summary said about 39.8k.
+A repository under rc-chn/project-nomad also exists but is not the Crosstalk-Solutions original.
+=====QUERY: open source MCP server student information system university 2026 github
+acestein13/campusintel-mcp: MCP server for exploring university research, researchers, programs, and institutional data.
+sukhrobyangibaev/mcp_hemis_student: connects Claude to HEMIS, a higher-education management platform, exposing profile, GPA, semester, and schedule tools. README written around one university's instance.
+pawalshriram06-ops/mcp-student-management-system: FastMCP and SQLite demo for creating and updating student records through natural language. Educational, not a production SIS.
+tejpalvirk/student: knowledge graph based MCP Server for courses, assignments, exams.
+RohanMuppa/purdue-mcp: MCP server for public real-time Purdue University data: dining menus, course catalog, campus events, student orgs, weather. Explicitly avoids student accounts.
+kevinraj23/student-assistant-mcp-server: FastMCP server for weighted grade calculations, class schedule lookups, study notes.
+jayendrasai/mcp_for_university: FastAPI and SQLite server exposing a university course catalog with prerequisite graphs and Docker support.
+SABIS Student Portal MCP Server: scrapes Sakarya University's SABIS portal for grades and course information. Listing describes it as ISC-licensed, relies on web scraping, listing shows an age of about 1,018 days.
+UofT Student Helper MCP (Glama listing): reaches the University of Toronto ACORN enrollment system and Quercus LMS.
+Most are small personal or educational projects with few stars or little maintenance evidence.

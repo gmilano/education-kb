@@ -1,0 +1,49 @@
+# Per-pass discovery rate, measured for the FOURTH consecutive pass. Series: 89% of 18 (p223),
+# 75% of 8 (p224), 100% of 9 (p225), 93.8% of 32 (p226).
+candidate	surfaced_by	already_carried	note
+ashishpatel26/500-AI-Agents-Projects	global agents	YES	
+OpenHands (org moved All-Hands-AI -> OpenHands)	global agents	YES	both spellings carried; the rename is already recorded
+MetaGPT	global agents	YES	
+Hermes Agent (Nous Research)	global agents	YES	
+OpenClaw	global agents	YES	
+Microsoft AI Agents for Beginners	global agents	YES	
+Hugging Face Agents Course	global agents	YES	
+Crosstalk-Solutions/project-nomad	trending + verification	YES	carried since p132; grant RE-VERIFIED first-hand this pass
+developer-roadmap	trending	YES	
+karpathy/nanochat	trending	YES	
+Open WebUI	trending	YES	
+BitNet	trending	YES	
+Moodle	verticals	YES	
+Open edX	verticals	YES	
+Chamilo	verticals	YES	
+Canvas LMS	verticals	YES	
+OpenOlat	verticals	YES	
+Frappe LMS	verticals	YES	
+RosarioSIS	verticals	YES	
+Gibbon	verticals	YES	
+AlekSIS	verticals	YES	
+Kolibri	via project-nomad	YES	
+Kiwix	via project-nomad	YES	
+acestein13/campusintel-mcp	MCP discovery	YES	MIT verified first-hand this pass (1 066 B LICENSE)
+sukhrobyangibaev/mcp_hemis_student	MCP discovery	YES	MIT verified first-hand this pass (1 074 B LICENSE)
+pawalshriram06-ops/mcp-student-management-system	MCP discovery	YES	
+tejpalvirk/student	MCP discovery	YES	
+RohanMuppa/purdue-mcp	MCP discovery	YES	
+jayendrasai/mcp_for_university	MCP discovery	YES	
+UofT Student Helper MCP (ACORN/Quercus)	MCP discovery	YES	
+kevinraj23/student-assistant-mcp-server	MCP discovery	NO	SEE BELOW - verified, and NOT written as a row
+SABIS Student Portal MCP	MCP discovery	NO	SEE BELOW - NOT verifiable from here, NOT written as a row
+# TOTAL: 32 distinct candidates named, 30 already carried = 93.8% already-carried.
+# --- THE 2 NOT CARRIED, and why NEITHER becomes a row -------------------------------------
+# kevinraj23/student-assistant-mcp-server
+#   EXISTS, verified first-hand: git ls-remote gives 2 refs, HEAD = 45cf1eee7569 on refs/heads/main.
+#   README.md 1 862 B and pyproject.toml 371 B both serve 200 on raw.
+#   LICENSE, LICENSE.md, LICENSE.txt: ALL ABSENT on the default branch. NO GRANT.
+#   A no-grant repo is not something a studio can build on, and the standing quality bar prefers
+#   fewer real rows to padding. Recorded here as a measured NO-GRANT, not promoted to a shelf.
+#   It joins ACTION PH's ask-the-maintainer queue, which is NOT actioned unattended.
+# SABIS Student Portal MCP
+#   Named only by a third-party aggregator listing (ISC per that listing, ~1 018 days old, works by
+#   SCRAPING a university portal). No first-hand repository slug was obtained, so no channel here
+#   can verify owner, grant or liveness. UNVERIFIABLE -> not written. A scraping-based connector to
+#   one university's portal would be a poor studio starting point even if it verified.

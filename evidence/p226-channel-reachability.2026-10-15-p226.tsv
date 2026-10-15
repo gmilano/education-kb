@@ -1,0 +1,18 @@
+# ACTION PD / Gap 241 / Gap 242 - 21st consecutive test. p225's REFUTATION of the host rule REPRODUCES.
+host_or_endpoint	http	verdict	note
+raw.githubusercontent.com	200	WORKING	every first-hand grant and README this pass came through it
+github.com/<OWNER>/<REPO>/info/refs?service=git-upload-pack	200	WORKING	the git smart-HTTP service; ref-set + existence oracle
+github.com/<OWNER>/<REPO> (HTML)	403	BLOCKED	same host, same scheme, different path -> the split tracks the SERVICE ENDPOINT
+api.github.com	403	BLOCKED	20th consecutive
+registry.npmjs.org	200	WORKING	
+pypi.org	200	WORKING	carried ACTION SI's only clean registry resolution
+moodle.org	000	BLOCKED	ACTION RK still unresolvable from here
+unesco.org	000	BLOCKED	ACTION RL, 21st test
+eur-lex.europa.eu	000	BLOCKED	
+education.ec.europa.eu	000	BLOCKED	NEWLY PROBED. The EMEA primary source named in this pass's own query results
+# p225 refuted p222/p224's "the split tracks the HOST" rule and replaced it with "the split tracks
+# the SERVICE ENDPOINT". That refutation reproduces exactly at p226 on the same two paths.
+# education.ec.europa.eu is this pass's addition to the blocked-government-host set, and it matters
+# more than the others: the EMEA query named the Commission's own page as the one reliable source
+# for the AI Act dates, and that is precisely the page this pipeline cannot read. The EMEA date
+# question is therefore CONVERGENT-SECONDARY (ACTION SC) by necessity, not by choice.
