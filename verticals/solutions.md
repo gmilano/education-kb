@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 212 — 2026-10-15 — THE PERMISSIVE PLATFORM EXISTS, SAKAI IS NOT APACHE, AND `pupilfirst` DEFEATED THIS KB'S OWN CLASSIFIER
+
+### 🆕 🟢 `P212-3` — nine passes answered the permissive-platform query with `0`. The answer was `3` rows.
+
+🟢 **The task's vertical query — `open source platform education ERP CRM MIT Apache` — has
+returned `0` new permissive education platforms for nine consecutive passes, and p211 recorded that
+`apache/ofbiz-framework` is "the only permissive ERP in reach and has no education layer at all".**
+🔴 **That is true of the *search-engine* channel.** 🟢 **Reading `topics/lms` *(`2 468`
+repositories)* and `topics/ai-tutor` *(`707`)* directly produced three permissive platforms in one
+pass:**
+
+| platform | 🟢 Grant *(blob bytes · form)* | ★ | Origin → region | What it is, and what it replaces |
+|---|---|---|---|---|
+| 🆕 🟢 **[Selleo/mentingo](https://github.com/Selleo/mentingo)** | 🟢 **MIT** *(`1 062` · `LICENSE`)* | **95** | Selleo, Poland → **EMEA** | 🟢 **Self-hosted, AI-native LMS — course delivery *with an AI mentor built in*.** 🔵 **The only row on this shelf where the AI layer is native to the platform rather than bolted beside it, and it is `MIT`.** 🟡 Young and small: fork it, own it, do not treat it as a vendor |
+| 🆕 🟢 **[OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **Apache-2.0** *(`10 982`)* | **447** | Switzerland → **EMEA** | 🟢 **A mature, university-grade LMS under `Apache-2.0`.** 🔵 **Deployed across Swiss and German higher education for over a decade.** 🟢 **This is the build-proprietary-modules-on-top answer that `Moodle` *(`GPL-3.0`)* and `Open edX` *(`AGPL-3.0`)* cannot give** |
+| 🆕 🟢 **[academico-sis/academico](https://github.com/academico-sis/academico)** | 🟢 **MIT** *(`1 094`)* | **404** | → Global | School management / **SIS** on Laravel + Filament for small and mid-sized institutions. 🔵 **The permissive student-information-system slot, which `OpenEduCat` *(`LGPL-3.0`, on Odoo)* has held alone on this shelf** |
+| 🆕 🟢 **[ls1intum/Artemis](https://github.com/ls1intum/Artemis)** | 🟢 **MIT** *(`1 091` · `develop`)* | **818** | TUM, Germany → **EMEA** | 🟢 **Interactive learning platform with automated feedback, `12 396` commits.** Detail on the grading tier in [`repos/foundations.md`](../repos/foundations.md) p212 |
+
+🔵 **Stated for the next pass so the finding is not re-discovered:** **the permissive-platform query
+is answered. `OpenOLAT` for a mature LMS, `Artemis` for assessment-led teaching, `mentingo` for an
+AI-native greenfield, `academico` for an SIS.** 🔴 **The nine `0` readings measured the channel.**
+
+### 🔴 `P212-2` — Sakai is `ECL-2.0`. This shelf has said `Apache-2.0` since cycle 3.
+
+🟢 **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) — read first-hand, `11 120`
+bytes, first line `Educational Community License, Version 2.0 (ECL-2.0)`.**
+
+🔵 **`ECL-2.0` is `Apache-2.0` with one change, in the licence's own words: the patent grant in
+section `3` is narrowed "to be specific to the needs of the education communities using this
+license".** 🟢 **Copyright permissions, attribution and `NOTICE` obligations are identical, and it
+is OSI-approved.**
+
+🟢 **Engagement impact: none for building on top.** 🔴 **Procurement impact: real.** 🔵 **A ministry
+or publisher whose diligence reads patent clauses is not being told the truth by "Sakai is Apache",
+and this KB has been supplying that answer for three cycles.** 🟢 **Also `ECL-2.0`:
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW).**
+🟢 **Confirmed NOT `ECL` by first-hand read the same pass — these four cells on this shelf are
+correct as they stand:** `openedx/edx-platform` *(`AGPL-3.0`)*, `learningequality/kolibri`
+*(`MIT`)*, `oppia/oppia` *(`Apache-2.0`)*, `uPortal-project/uPortal` *(`Apache-2.0`)*.
+
+### 🆕 🔴 `P212-7` — `pupilfirst` is a SPLIT-SCOPE grant, and it broke this pass's own classifier
+
+🔴 **[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) *(`978`★, Pupilfirst Pvt.
+Ltd., India → APAC)* was first classified by this pass's probe as `CC-family`. That is wrong, and
+it is wrong in the direction that loses a client a usable platform.**
+
+🟢 **What the blob actually says, read in full *(`1 684` bytes)*:**
+
+| scope | grant |
+|---|---|
+| everything under `docs/` | `CC-BY-SA-4.0` |
+| all client-side JavaScript *(served, compiled, arranged, augmented or combined)* | 🟢 **`MIT`** |
+| third-party components | their own original licences |
+| 🟢 **everything else** | 🟢 **`MIT`** *(full text follows in the same file)* |
+
+🟢 **So `pupilfirst` is an `MIT` platform with `CC-BY-SA` documentation.** 🔴 **A head-anchored
+classifier reads the first licence named — `CC-BY-SA-4.0` — and blocks it.**
+
+🔵 **This is the `Gap 466` class p205 fixed, running the other way.** 🟢 **p211's trap was `odoo`:
+a title saying `LGPLv3` above the full `GPL` text, where a whole-body matcher is wrong and a
+title-anchored one is right.** 🔴 **`pupilfirst` is the mirror: the title-anchored read is wrong
+and only a **scope-aware** read is right.** 🟢 **Neither ordering is sufficient. A licence file can
+carry several grants partitioned by *path*, and the only correct instrument reads the partition.**
+🔵 **The gate in [`compose/patterns.md`](../compose/patterns.md) `P211-A` gains a step for this —
+see `P212-A`.**
+
+### 🟢 The platform shelf, re-read first-hand this pass
+
+| platform | 🟢 Grant *(blob bytes · form)* | ★ | Region | Build-or-integrate |
+|---|---|---|---|---|
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** *(`33 893` · `license.txt` · `develop`)* | **3.3k** | APAC *(India)* | 🟢 **Re-confirms p209 and p211 independently.** Integrate; hosted modifications trigger disclosure |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** *(`34 523` · `dev`)* | **2.4k** | Global | "Next-generation learning platform", AI in its tags. 🔴 `AGPL` — integrate only |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** *(`34 523`)* | **1.7k** | Global | Positions itself as the Moodle alternative for companies |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** *(`34 143` · `LICENSE.md`)* | **1.3k** | Global | Course selling + digital downloads |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🆕 🟢 **ECL-2.0** *(`11 120`)* | **1.2k** | **North America** *(Apereo)* | 🟢 **Permissive. Build on it** — with the patent-scope note above |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** *(`34 523` · `LICENSE.txt` · `release`)* | **1.1k** | Global | The Docker Open edX distribution — the standard way to actually run Open edX |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** *(`35 147`)* | **1k** | EMEA + 🟢 **LATAM install base** | 🔵 **The LMS with genuine Spanish-speaking institutional adoption.** 🟢 **For a LATAM engagement this is the platform in the room, and `GPL-3.0` means plugins, not forks** |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT** *(code)* / `CC-BY-SA-4.0` *(`docs/`)* *(`1 684`)* | **978** | APAC *(India)* | 🟢 **Permissive. Asynchronous online school: tasks, feedback, community** |
+| [gazpachu/hypatia](https://github.com/gazpachu/hypatia) | 🟡 **LGPL** *(`19 350` · `license.txt`)* | **651** | Global | JS LMS for MOOCs. 🟡 Library-scoped copyleft — link, do not modify |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** *(`35 147` · `release_11`)* | **505** | **EMEA** *(Germany)* | Long-established German HE platform |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** *(`10 982`)* | **447** | **EMEA** *(Switzerland)* | 🟢 **Build. The permissive mature LMS** |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** *(`1 094`)* | **404** | Global | 🟢 **Build. Permissive SIS** |
+| [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT/X** *(`1 145`)* | **437** | **North America** | Teaching environment with auto-graded code homework |
+
+### 🔴 The finding that should change how this shelf is sold
+
+🔴 **`18` of the top `20` repositories in `topics/lms` make no mention of AI or an LLM.** 🔵 **Not
+"weak AI" — no mention.** 🟢 **The exceptions are `learnhouse` *(AI in topic tags only)* and
+`Selleo/mentingo` *(genuinely AI-native, and `95`★)*.**
+
+🟢 **Read against the Council of Europe's `2026`–`27` work programme and the EU AI Act's August
+`2026` high-risk classification** *(see [`intel/market.md`](../intel/market.md) p212)*, **the
+conclusion is commercial, not technical:** 🔴 **the installed platform base will not have an
+agent layer by the time the obligations bite.** 🟢 **The seam — `LTI 1.3`, an `MCP` server, a
+Moodle plugin, an `xAPI` emitter — is where the work is, and it is work a studio can deliver in
+weeks against a platform the client already runs.** 🔵 **Selling a platform replacement into this
+market is selling against the client's own sunk cost; selling the seam is selling into a
+deadline.**
+
+### 🟢 Carried forward unchanged
+
+🟢 **`SWAD` is `AGPL-3.0`** *(p211's reclassification stands — integrate-only until the deployment
+model is known)*. 🟢 **`odoo`'s `LICENSE` is the `Gap 466` trap: title-anchored reads `LGPL-3.0`,
+whole-body reads `GPL-3.0`, and `LGPL-3.0` is the correct answer that makes the `OpenEduCat` stack
+buildable.** 🟢 **`Moodle`, `Open edX`, `Canvas`, `BigBlueButton` *(`LGPL-3.0`)*, `H5P`, `Kolibri`
+*(`MIT`)*, `OpenEduCat` *(`LGPL-3.0`)* and `Koha` remain as previously recorded.**
+
 ## Pass 211 — 2026-10-15 — TWO PLATFORM GRANTS WERE WRONGER THAN THE SHELF KNEW, AND BOTH RUN IN THE DIRECTION THAT CHANGES THE RECOMMENDATION
 
 ### 🔴 The platform grants, re-read from the blob

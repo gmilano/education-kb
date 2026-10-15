@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 212 — the learning-record layer appears, `ECL-2.0` appears, and a permissive LMS appears
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 The three structural firsts this week
+
+🟢 **1. A whole shelf: learning records and analytics.** `topics/xapi` *(`300` repos)* and
+`topics/learning-analytics` *(`377`)* were read for the first time in `212` passes. `17` rows now
+sit in [`repos/foundations.md`](foundations.md), `9` of them permissive.
+
+🆕 🟢 **2. A new licence family: `ECL-2.0`, the Educational Community License** — `Apache-2.0` with
+the patent grant narrowed to education communities. 🔴 **It also means this KB has been publishing
+`sakaiproject/sakai` as `Apache-2.0` since cycle 3, and the blob says `ECL-2.0`.**
+
+🟢 **3. A permissive, AI-native LMS actually exists.**
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) — **MIT**, `95`★, Poland. 🔵 **Nine passes
+have answered the task's permissive-platform query with "`0` found".** 🟢 **The answer was behind
+the `lms` and `ai-tutor` topic pages, not behind the search engine.**
+
+### 🆕 Trending / newly-read repositories — grants read from the blob on 2026-10-15
+
+**Learning-record layer**
+
+| repo | grant | ★ | note |
+|---|---|---|---|
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | **954** | the specification, from US DoD ADL |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 GPL-3.0 | **631** | accessible HTML5 course authoring |
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | 🔴 GPL-3.0 | **585** | the best-known open LRS |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | **334** | the spec's reference implementation |
+| [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) | Apache-2.0 | **223** | cheapest emission path from a web tutor |
+| [RusticiSoftware/TinCanJS](https://github.com/RusticiSoftware/TinCanJS) | Apache-2.0 | **208** | from the authors of SCORM |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | **144** | **SQL LRS — runs on the client's Postgres** |
+| [davidpesce/moodle-logstore_xapi](https://github.com/davidpesce/moodle-logstore_xapi) | 🔴 GPL-3.0 | **82** | Moodle event log → LRS |
+| [g3i/lxHive](https://github.com/g3i/lxHive) | 🔴 GPL-2.0 | **79** | lightweight LRS |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | MIT | **78** | spec `MUST`-requirement tests |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🆕 **ECL-2.0** | **62** | record **warehouse** + roster model |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | Apache-2.0 | **59** | `cmi5` player + test suite |
+| [openfun/ralph](https://github.com/openfun/ralph) | 🟢 MIT | **51** | **LRS from France Université Numérique — EMEA, MIT, national-operator built** |
+| [tl-its-umich-edu/my-learning-analytics](https://github.com/tl-its-umich-edu/my-learning-analytics) | Apache-2.0 | **37** | Michigan's student dashboards |
+| [PlaypowerLabs/EdOptimize](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 GPL-3.0 | **31** | K-12 analytics platform |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | Apache-2.0 | **21** | 🟢 **in-course randomised experiments — the only causal-evidence row on these shelves** |
+| [sonsoleslp/tna](https://github.com/sonsoleslp/tna) | 🟡 `46`-byte stub | **13** | Transition Network Analysis; grant not establishable from the blob |
+
+**Grading infrastructure tier** *(decade-old, university-built, mostly permissive)*
+
+| repo | grant | ★ | origin |
+|---|---|---|---|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | **818** | 🟢 **TUM, Germany — highest-★ MIT education platform in this KB** |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | Apache-2.0 | **808** | CMU |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause | **802** | RPI |
+| [inducer/relate](https://github.com/inducer/relate) | MIT/X | **437** | UIUC |
+| [okpy/ok](https://github.com/okpy/ok) | Apache-2.0 | **370** | UC Berkeley |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 AGPL-3.0 | **243** | UCLouvain, Belgium |
+| [foundation50/classroom50](https://github.com/foundation50/classroom50) | 🔴 GPL-3.0 | **215** | CS50 lineage |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3-Clause | **161** | UC Berkeley |
+| [autolab/Tango](https://github.com/autolab/Tango) | Apache-2.0 | **49** | CMU — standalone REST autograder |
+| [infomark-org/infomark](https://github.com/infomark-org/infomark) | 🔴 GPL-3.0 | **35** | EMEA |
+| [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | Apache-2.0 | **34** | Google |
+| [uhafner/autograding-github-action](https://github.com/uhafner/autograding-github-action) | MIT | **32** | EMEA |
+| [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | MIT | **18** | KIT, Germany |
+
+**LMS / platform tier read this week** — detail and the build/integrate call in
+[`verticals/solutions.md`](../verticals/solutions.md) p212:
+[`frappe/lms`](https://github.com/frappe/lms) `AGPL-3.0` `3.3`k★ ·
+[`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) `AGPL-3.0` `2.4`k★ ·
+[`classroomio/classroomio`](https://github.com/classroomio/classroomio) `AGPL-3.0` `1.7`k★ ·
+[`codelitdev/courselit`](https://github.com/codelitdev/courselit) `AGPL-3.0` `1.3`k★ ·
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **`ECL-2.0`** `1.2`k★ ·
+[`overhangio/tutor`](https://github.com/overhangio/tutor) `AGPL-3.0` `1.1`k★ ·
+[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) `GPL-3.0` `1`k★ ·
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) **`MIT` code / `CC-BY-SA-4.0` docs** `978`★ ·
+[`gazpachu/hypatia`](https://github.com/gazpachu/hypatia) `LGPL` `651`★ ·
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) `GPL-3.0` `505`★ ·
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) 🟢 **`Apache-2.0`** `447`★ ·
+[`academico-sis/academico`](https://github.com/academico-sis/academico) 🟢 **`MIT`** `404`★
+
+### 🔴 The negative reading that is worth as much as the positives
+
+🔴 **Of the top `20` repositories in `topics/lms` — a `2 468`-repository topic — `18` make no
+mention of AI or an LLM at all.** 🟢 **The two that do are `SWE-agent` *(mis-tagged; it fixes
+GitHub issues)* and `learnhouse` *(AI in its topic tags only, not its description)*.**
+
+🔵 **So: the AI layer in education is not inside the platforms and is not arriving there soon.**
+🟢 **It sits beside them — as plugins, `MCP` servers and `LTI` tools.** 🔴 **A studio waiting for
+Moodle, Open edX or Canvas to ship an agent layer will wait past the August `2026` EU AI Act
+date.** 🟢 **The integration seam is the product.**
+
 ## 2026-10-15 — pass 211 — NINTH NULL ON TRENDING, AND THE GRANT COLUMN OF THIS WHOLE SHELF IS NOW VERIFIABLE IN ONE CALL PER ROW
 
 🟢 **Newest first. History below is kept and not rewritten.**

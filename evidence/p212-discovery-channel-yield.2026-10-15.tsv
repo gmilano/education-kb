@@ -1,0 +1,17 @@
+surface	population_stated	rows_returned	education_specific_candidates	channel
+github.com/topics/intelligent-tutoring-system	40	20	11	WebFetch
+github.com/topics/ai-tutor	707	20	18	WebFetch
+github.com/topics/autograding	94	20	20	WebFetch
+github.com/topics/learning-analytics	377	20	18	WebFetch
+github.com/topics/xapi	300	20	12	WebFetch
+github.com/topics/moodle-plugin	917	20	4	WebFetch
+github.com/topics/lms	2468	20	18	WebFetch
+github.com/search?q=education AI agent stars:>100	12	10	4	WebFetch
+github.com/search?q=educacion inteligencia artificial	98	10	0	WebFetch
+github.com/search?q=tutor inteligencia artificial	79	10	0	WebFetch
+github.com/search?q=educacao inteligencia artificial	131	10	0	WebFetch
+github.com/search?q=educacao OR educacion IA OR LLM stars:>20	DEGRADED	10	0	WebFetch-returned-global-top-starred-repos-not-query-results
+curl https://github.com/<slug>	403	0	0	curl-refused-at-CONNECT
+curl https://api.github.com/repos/<slug>	403	0	0	curl-refused-at-CONNECT
+curl https://raw.githubusercontent.com/<slug>/HEAD/<form>	200	50/54 blobs	-	curl-OK
+git ls-remote --symref https://github.com/<slug> HEAD	OK	83/83	-	git-protocol-OK

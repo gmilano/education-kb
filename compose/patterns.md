@@ -4,6 +4,181 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 212 — 2026-10-15 — FOUR RECIPES: A SCOPE-AWARE GRANT GATE, AN EVALUABLE TUTOR, AN LLM GRADER INSIDE AN EXISTING AUTOGRADER, AND AN OFFLINE-FIRST COMPULSORY-AI STACK
+
+🔵 **Every component below had its licence blob read first-hand from `raw.githubusercontent.com` at
+`HEAD` on `2026-10-15`.** 🟢 **Grants are from the blob, with byte counts, not from a sidebar, a
+manifest or a roundup.** 🟢 **Existence and default branch by `git ls-remote --symref`.**
+
+### 🆕 `P212-A` — the grant gate, made scope-aware *(a `3`-line amendment to `P211-A`, half a day)*
+
+🔴 **`P211-A` shipped a deployment-aware licence gate and this pass broke it on the first new
+population.** 🟢 **[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) *(`978`★,
+`1 684`-byte `LICENSE`)* names `CC-BY-SA-4.0` first and `MIT` third; the code is `MIT` and only
+`docs/` is `CC-BY-SA`.** 🔴 **A title-anchored read blocks an `MIT` platform.**
+
+🟢 **The fix, inserted between `P211-A`'s steps `3` and `4`:**
+
+1. **After classifying rider-first then title-anchored, scan the blob for *scope language* before
+   emitting a verdict** — `"Portions of this software are licensed as follows"`,
+   `"All content residing under"`, `"<path>/ ... is licensed under"`.
+2. **If scope language is present, emit a MAP, not a scalar:** `{path-glob → family}`, plus a
+   `default` for "content outside of the above mentioned restrictions".
+3. **Gate the paths you actually ship.** 🔵 **If the build vendors `app/` and not `docs/`, the
+   governing grant is the `default`, and `pupilfirst` passes as `MIT`.**
+
+🟢 **Why this is load-bearing and not fussy:** 🔴 **`P211-A`'s `odoo` trap and this one fail in
+**opposite** directions — whole-body is wrong on `odoo`, title-anchored is wrong on `pupilfirst` —
+so no fixed precedence between the two orderings can be correct.** 🟢 **A repository's grant is a
+function of file path. Once the gate models it that way, both cases fall out right.**
+
+**Components**
+
+| component | 🟢 grant *(read `2026-10-15`)* | role |
+|---|---|---|
+| [`compose/code/p211-full-column-grant-audit/`](code/p211-full-column-grant-audit/README.md) | 🟢 this KB | the existing rider-first, title-anchored reader to amend |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) *(optional)* | 🟢 `MIT` *(`1 152` B)* | re-runs the gate on upstream relicensing |
+
+🔴 **Keep `P211-A`'s fail-closed row.** 🔵 **Add one case to it: a `46`-byte `LICENSE` carrying only
+`YEAR` and `COPYRIGHT HOLDER` — the R-package convention, found this pass on
+[`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) — is `ABSENT`, not `MIT`, and must block
+pending a human read of `DESCRIPTION`.**
+
+### 🆕 `P212-B` — the evaluable tutor: an instrumented stack built for the EMEA evaluation turn *(`8`–`10` weeks)*
+
+🔵 **The problem this solves is the one `T212-3` names.** 🔴 **The Council of Europe's `EDU IA`
+committee is drafting a **European Reference Framework for the Evaluation of Educational
+Technologies**, and the EU AI Act's high-risk classification of education AI is reported effective
+**August `2026`**.** 🔴 **A tutor that emits no learner-activity record cannot be evaluated by any
+framework, however good it is.** 🟢 **Instrumentation is not a feature to add later; it is the
+deliverable that makes the rest sellable in EMEA.**
+
+**Components — all verified this pass**
+
+| layer | component | 🟢 grant *(blob bytes)* | why this one |
+|---|---|---|---|
+| tutoring agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `Apache-2.0` | `41.4`k★, the only education agent at real scale and current maintenance |
+| ↳ lighter alternative | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 `MIT` *(`1 069`)* | `285`★; self-hostable, built on Bloom's 2-sigma result |
+| ↳ protocol front door | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `MIT` *(`1 073`)* | Go `MCP` server turning any model into an ITS — swap the model without touching the stack |
+| mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `MIT` | Bayesian Knowledge Tracing; take the **BKT model**, not the UI |
+| ↳ theory alternative | [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 `MIT` *(`1 090`)* | Knowledge Space Theory, already packaged as agent skills |
+| record emission | [`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) | 🟢 `Apache-2.0` *(`10 273`)* | cheapest path from a web tutor to standard statements |
+| record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 `Apache-2.0` *(`11 357`)* | 🟢 **SQL LRS — runs on the client's existing Postgres.** No new datastore to get approved |
+| ↳ EMEA-sovereign alternative | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 `MIT` *(`1 094`)* | LRS + analytics toolbox from France Université Numérique, the operator of France's national Open edX |
+| 🟢 **acceptance gate** | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 `MIT` *(`1 046`)* | 🟢 **Tests the LRS against the spec's `MUST` requirements — this is your evidence that the evidence layer is correct** |
+| causal evidence | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 `Apache-2.0` *(`11 323`)* | 🟢 **Randomly assigns assignment variants inside a live course.** The only component on these shelves that yields *causal* rather than correlational claims |
+| launch / delivery | [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `Apache-2.0` *(`11 358`)* | `cmi5` — the profile that makes an `xAPI` activity launchable from an LMS |
+| ↳ or platform-native | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) · [`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi) | `MIT` · 🔴 `GPL-3.0` | Canvas-side tools *(`102` tools, `v1.14.0`)*; Moodle event log → LRS *(`GPL` is compulsory for Moodle plugins)* |
+
+**Wiring**
+
+1. **Define the statement vocabulary first, before any code.** 🔵 **Pick the verbs the evaluation
+   will need — `attempted`, `answered`, `mastered`, `asked-for-hint`, `received-hint` — and write
+   them as an `xAPI` profile. 🔴 **This is the step teams skip, and it is the step that makes the
+   data answerable later.** 🟢 **`adlnet/xapi-profiles` *(`Apache-2.0`)* documents the structure.**
+2. **Stand up `lrsql` on the client's Postgres and run the conformance suite until it is green.**
+   🟢 **Gate: `100`% of `MUST` requirements pass before any tutor traffic is pointed at it.**
+3. **Wire the tutor to emit through `xAPIWrapper` on every turn** — including hint requests and
+   dead ends. 🔴 **An LRS holding only correct answers cannot evidence a learning *process*,
+   which is what an evaluation framework asks about.**
+4. **Attach the mastery model as a consumer of the LRS, not of the chat transcript.** 🟢 **BKT or
+   KST reads statements; this keeps the pedagogy auditable independently of the model.**
+5. **Run one `terracotta` experiment in the first cohort.** 🔵 **Two variants of one assignment,
+   randomly assigned, outcomes in the LRS.** 🟢 **The output is a causal sentence — *"variant B
+   raised mastery by `n` points, `p` = …"* — which is the only kind of sentence an evaluation
+   framework, a ministry or a sceptical dean actually accepts.**
+6. **Ship the profile, the conformance report and the experiment result as deliverables**, beside
+   the tutor itself. 🟢 **In EMEA these three documents are the product.**
+
+🔴 **Licence posture for a hosted deployment:** every component above is `MIT` or `Apache-2.0`
+except the Moodle bridge *(`GPL-3.0`, unavoidable)* and the optional `LearningLocker` LRS
+*(`GPL-3.0` — prefer `lrsql` or `ralph`)*. 🟢 **The stack is clean for a hosted, multi-tenant,
+student-facing service, which is the one deployment model `T211-1` says this industry defaults to.**
+
+### 🆕 `P212-C` — the LLM grader as a stage inside an autograder that already exists *(`4`–`6` weeks)*
+
+🔴 **p201 found the grading shelf and p200 told a studio to build one. This pass found that the
+hard parts were built a decade ago by universities, under permissive licences.** 🟢 **Sandboxed
+execution, submission handling, TA workflow and audit trails are solved.** 🔴 **What is unsolved is
+rubric judgement on free-text and handwritten work.** 🟢 **So the recipe is a *stage*, not a
+platform.**
+
+| layer | component | 🟢 grant *(blob bytes)* | role |
+|---|---|---|---|
+| execution spine | [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 `Apache-2.0` *(`11 324`)* | 🟢 **Standalone RESTful autograding service — reuse this without adopting a whole platform** |
+| ↳ full platform | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 `MIT` *(`1 091`)* | `818`★, TUM; assessment-led teaching platform with automated feedback |
+| ↳ or | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) · [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 `BSD-3-Clause` *(`1 542`)* · `Apache-2.0` *(`11 324`)* | RPI and CMU; in production for years |
+| notebook / data-science work | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 `BSD-3-Clause` *(`1 560`)* | Python **and** R; the standard in data-science courses |
+| CI-native grading | [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 `MIT` *(`1 095`)* | grades a student repo from CI on configurable metrics *(GitLab sibling exists)* |
+| static-analysis grading | [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 `MIT` *(`1 068`)* | KIT; catches style and structure a test suite cannot |
+| 🟢 **rubric judgement** | [`johnswyou/autograder`](https://github.com/johnswyou/autograder) | `MIT` | **handwritten** maths/physics: locates, transcribes, applies rubric, emits a review queue |
+| ↳ evidence-backed scoring | [`asu2304/auto-assessment-agent`](https://github.com/asu2304/auto-assessment-agent) | `MIT` | criterion-level scores **with evidence per criterion** and deterministic score auditing |
+| ↳ teacher-facing | [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | `MIT` | teachers upload their own rubrics |
+| feedback delivery | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 `Apache-2.0` *(`10 785`)* | in production at THM, Germany — personalised feedback return path |
+
+**Wiring**
+
+1. **Keep the existing autograder as the system of record.** 🔴 **Do not migrate grades.** 🟢 **The
+   LLM stage is a new *grader type* registered with `Tango` or `Artemis`, not a replacement.**
+2. **Deterministic stages run first and gate the expensive one.** 🟢 **Tests, then static analysis,
+   then — only for submissions that need free-text or handwriting judgement — the LLM stage.**
+   🔵 **This is also the cost control: most submissions never reach the model.**
+3. **The LLM stage emits a score *plus* per-criterion evidence** *(`auto-assessment-agent`'s
+   shape)*, never a bare number. 🔴 **A grade a teacher cannot trace is a grade a school cannot
+   defend, and under the EU AI Act's high-risk classification it is a grade that fails an audit.**
+4. **Route every LLM-stage result into a human review queue.** 🟢 **`johnswyou/autograder`'s own
+   README insists on human approval before release — keep that invariant rather than engineering
+   around it.** 🔵 **Vietnam's `2027-03-01` obligations name automated assessment specifically.**
+5. **Emit `xAPI` statements for every grading event** into `P212-B`'s LRS. 🟢 **Grading is the
+   highest-value evidence stream in the whole stack, and it is the one most often left unlogged.**
+6. **Measure the stage against the humans before it goes live:** agreement rate, and the direction
+   of disagreement. 🟢 **`bydeng01/ability-levels-audit` and `bydeng01/conv-vs-ped-tutor` publish
+   frozen data and a pre-registered method for auditing LLM judges — read them for the method
+   before inventing one.** 🟡 **Both are small repositories; treat them as methodology, not
+   dependencies.**
+
+### 🆕 `P212-D` — offline-first delivery for a compulsory AI curriculum *(`10`–`12` weeks, pilot district)*
+
+🔴 **India's Ministry of Education has made AI and Computational Thinking mandatory for Classes
+`3`–`8` from the `2026`–`27` session *(Classes `9`–`10` from `2027`–`28`)*, into a system where a
+third-party `2026` report measures `64.7`% of schools with computers and `63.5`% with internet.**
+🟢 **A cloud tutor cannot serve this mandate. The constraint is the specification.**
+
+| layer | component | 🟢 grant *(blob bytes)* | why |
+|---|---|---|---|
+| offline delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` *(verified this pass)* | built for intermittent connectivity; syncs when a link appears |
+| local institution system | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 `MIT` code / `CC-BY-SA-4.0` `docs/` *(`1 684`)* | `978`★, Indian-built, asynchronous school model. 🔵 **Gate it with `P212-A` or the classifier blocks it** |
+| ↳ or SIS | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 `MIT` *(`1 094`)* | permissive school management for small institutions |
+| curriculum content | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 **`CC-BY-SA-4.0`** *(`1 230`)* | `165` evidence-based pedagogical skills, `20` domains. 🔴 **Share-alike: a district-specific fork must be published share-alike. Decide this with the client's counsel in week `1`, not week `10`** |
+| ↳ permissive alternative | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟢 **`CC0-1.0`** *(`7 048`)* | `WWW '25` multi-agent goal-oriented tutoring, **no attribution obligation at all** |
+| adaptive pathway | [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | 🟢 `MIT` *(`1 086`)* | Q-learning STEM pathways over **`LTI 1.3`** — the standard seam into any LMS |
+| local inference | [`ollama/ollama`](https://github.com/ollama/ollama) | `MIT` | runs a small model on district hardware; no per-token cost, no egress |
+| teacher-side authoring | [`SaadRahman01/claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | 🟢 `MIT` *(`1 068`)* | builds the Moodle plugins the district will need, with a coding agent |
+
+**Wiring**
+
+1. **Assume no connectivity and add it back.** 🟢 **`Kolibri` channels ship on local storage; the
+   sync path is an optimisation, not a dependency.**
+2. **Run the model on district hardware with `ollama`.** 🔵 **A `3`–`8`B model is sufficient for
+   scaffolded explanation at Classes `3`–`8` level** and removes the two objections that kill
+   public-sector pilots: recurring per-token cost and student data leaving the premises.
+3. **Settle the content licence in week one.** 🔴 **`CC-BY-SA-4.0` on the skills means the
+   district's adaptations are publishable obligations.** 🟢 **For a state education department that
+   is usually *acceptable and even attractive*; for a private chain it is usually not.** 🔵 **The
+   answer changes the component, which is why it is a week-one question.**
+4. **Wire adaptation over `LTI 1.3`, not a fork.** 🟢 **It survives the platform decision, which in
+   public-sector education is made above the studio and changes.**
+5. **Instrument with `P212-B`'s emitter even offline** — queue statements locally, flush on sync.
+   🟢 **A mandate that arrives with a date will arrive with a reporting requirement.**
+6. **Pilot in one district, with the `terracotta` experiment from `P212-B` step `5`.** 🔵 **A
+   causal result from one Indian district is the asset that wins the state.**
+
+🟢 **The same stack, re-pointed, serves Canada's "AI for All" literacy programme** *(`1`M
+post-secondary students, `3 000`+ educators with AI learning kits)* **and Mexico's SEP
+consultation** — 🔵 **both are literacy-and-scale mandates without a governance layer, which is
+the shape this recipe is built for.** 🔴 **For Mexico, add Spanish-language capability and expect
+`chamilo` rather than Moodle as the installed platform.**
+
 ## Pass 211 — 2026-10-15 — TWO RECIPES: A GRANT GATE THAT RUNS IN CI, AND AN EU-AI-ACT-SHAPED TUTOR STACK
 
 🔵 **Every component below had its licence blob read first-hand from the repository on

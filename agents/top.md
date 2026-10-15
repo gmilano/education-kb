@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 212 — 2026-10-15 — DISCOVERY WAS NEVER SATURATED: THE INSTRUMENT COULD NOT SEE GITHUB. `54` REPOSITORIES READ FIRST-HAND, `22` NEW AGENT ROWS
+
+### 🔴 `P212-1` — nine passes declared saturation on a channel that cannot reach the index
+
+🟢 **p203–p211 ran the task's discovery queries and recorded eight consecutive "0 new qualifying
+agents", concluding that *"an education-specific agent does not describe itself with the word
+agent plus the word education"*.** 🟢 **That conclusion about vocabulary is correct.** 🔴 **The
+conclusion drawn from it — that discovery here is exhausted — was an artefact of the instrument.**
+
+🆕 🟢 **`WebFetch` resolves `github.com/topics/<topic>` and
+`github.com/search?q=…&type=repositories&s=stars`.** 🔵 **Both return `owner/repo`, star count,
+language and description, `20` rows per page, with the topic's total population stated.** 🔴 **A
+plain `curl` to `github.com` returns `403` from here, which is what every prior pass measured and
+generalised into "GitHub is unreachable".** 🟢 **The HTML surface was always open; only the API and
+the raw socket are closed.**
+
+🔵 **The yield, in one pass, from `6` reads of that surface:**
+
+| surface read | population stated | rows returned | education-specific candidates |
+|---|---|---|---|
+| `topics/intelligent-tutoring-system` | `40` | `20` | `11` |
+| `topics/ai-tutor` | `707` | `20` | `18` |
+| `topics/autograding` | `94` | `20` | `20` |
+| `topics/learning-analytics` | `377` | `20` | `18` |
+| `topics/xapi` · `topics/moodle-plugin` · `topics/lms` | `300` · `917` · `2 468` | `60` | `34` |
+| `search?q=education AI agent stars:>100` | `12` | `10` | `4` |
+
+🟢 **`54` of those candidates were then verified first-hand this pass** — existence and default
+branch by `git ls-remote --symref`, grant by reading the licence blob from
+`raw.githubusercontent.com/<slug>/HEAD/<form>` and classifying the text. 🟢 **`50` serve a blob;
+`3` serve none over `10` path forms; `1` serves a `46`-byte stub.**
+
+🟡 **The channel's limit, stated so the next pass does not trip on it:** a query carrying accented
+characters and an `OR` — `q=educação OR educación IA OR LLM stars:>20` — returned **the global
+top-starred repositories of all time**, not the query's results. 🔴 **It degrades silently rather
+than erroring.** 🟢 **Keep queries simple, ASCII where possible, and confirm the returned rows are
+on-topic before believing a count.** 🟢 **Star figures from the clean reads cross-confirm exactly
+against the repository pages themselves on `2`/`2` spot checks** *(`ls1intum/Artemis` `818`,
+`GarethManning/education-agent-skills` `860`)*, so the numbers below are not the inflated class
+p199 found.
+
+### 🟢 New education-specific agent rows — every grant read from the blob on 2026-10-15
+
+🔵 **Permissive, and therefore buildable:**
+
+| Agent | Repo | 🟢 Grant *(blob bytes · form)* | Stars | Region | What it does |
+|---|---|---|---|---|---|
+| **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | **MIT** *(`1 064` · `LICENSE`)* | **954** | APAC | Plans a learning path, explains concepts, guides projects. 🟢 **Highest-★ new tutor row this pass** |
+| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** *(`1 074`)* | **514** | Global | MCP server over the Anki flashcard app. 🟢 **Puts an agent on top of the largest installed spaced-repetition base there is** |
+| **ai-shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | **Apache-2.0** *(`11 342` · `LICENSE.txt`)* | **326** | APAC | AI-led teaching with typed interaction |
+| **universal-examprep-skill** | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** *(`1 065`)* | **308** | APAC | Exam coach that teaches from the client's own slides **with page citations** — the citation behaviour is the differentiator for an auditable deployment |
+| **algo-sensei** | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | **MIT** *(`1 081`)* | **287** | Global | DSA/interview mentor built on **progressive hints** rather than answers |
+| **Bloom** | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | **MIT** *(`1 069`)* | **285** | APAC | Adaptive tutor built explicitly on Bloom's 2-sigma result; ships as both an agent skill and a self-hostable web app |
+| **universal-diagnostic-tutor-skill** | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** *(`1 102`)* | **245** | APAC | **Diagnosis-first** STEM tutor — assesses before it explains |
+| **kaogong-skill** | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | **MIT** *(`1 083`)* | **177** | APAC | Chinese civil-service exam prep. 🔵 **A worked example of a high-stakes national exam encoded as an agent skill** |
+| **edumcp** | [aieducations/edumcp](https://github.com/aieducations/edumcp) | **Apache-2.0** *(`11 357`)* | **156** | Global | Protocol work connecting `MCP` to education applications. 🟢 **The only attempt found at a *generic* education-MCP layer rather than one server per platform** |
+| **gen-mentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 🟢 **CC0-1.0** *(`7 048`)* | **134** | APAC | Multi-agent goal-oriented tutoring; the official code for a `WWW '25` paper. 🟢 **CC0 is *more* permissive than MIT — no attribution obligation at all** |
+| **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** *(`1 068`)* | **141** | APAC | Local, block-based adaptive workspace generating notes, quizzes and flashcards |
+| **education-skills** | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | **MIT** *(`1 068`)* | **112** | APAC | Education-focused agent skill collection |
+| **feifei-companion** | [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** *(`10 227`)* | **106** | APAC | K-12 education companion system |
+| **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** *(`1 062`)* | **95** | 🟢 **EMEA** *(Selleo, Poland)* | 🟢 **Self-hosted, AI-native LMS under MIT.** See [`verticals/solutions.md`](../verticals/solutions.md) — this is the permissive platform this KB has said nine times does not exist |
+| **AI_Tutor_Release** *(EduAgent)* | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** *(`1 068` · `master`)* | **64** | APAC | RAG tutor targeted at grades K-9 |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** *(`1 073`)* | **48** | Global | Go MCP server that makes any LLM act as an intelligent tutoring system |
+| **claude-moodle-dev** | [SaadRahman01/claude-moodle-dev](https://github.com/SaadRahman01/claude-moodle-dev) | **MIT** *(`1 068`)* | **39** | APAC | Moodle **development** toolkit for coding agents — builds plugins rather than teaching |
+| **knowledge-spaces** | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | **MIT** *(`1 090`)* | **29** | **North America** *(Vanderbilt)* | Knowledge Space Theory toolkit for adaptive education, shipped as agent skills |
+| **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** *(`10 785` · `dev`)* | **24** | 🟢 **EMEA** *(THM, Germany)* | AI-driven personalised student feedback, in production at a German university of applied sciences |
+| **SynthEd** | [theaiagent/SynthEd](https://github.com/theaiagent/SynthEd) | **MIT** *(`1 056`)* | **8** | Global | Agent-based **simulation** environment for open and distance learning research — test a cohort policy before it reaches students |
+| **moodle-adaptive-learning-plugin** | [kltn-moolde/moodle-adaptive-learning-plugin](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | **MIT** *(`1 086`)* | **7** | APAC *(Vietnam)* | Q-learning personalisation of STEM pathways, wired to Moodle over **LTI 1.3**. 🔵 **Low stars, but the LTI-1.3 integration is the pattern, and Vietnam is this KB's one jurisdiction with an education-named compliance date** |
+
+🟢 **That is `22` new verified rows, every one with a resolvable `owner/repo` and a grant read from
+its own licence blob.** 🔵 **Added to the `10` canonical rows of p199, the agent shelf now carries
+`32` education-specific entries.**
+
+### 🆕 🔴 `P212-5` — the largest new "agent" on this shelf is not software, and it is *copyleft*
+
+🔴 **[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— `860`★, `165` evidence-based pedagogical skills across `20` domains, reachable from Claude Code,
+Claude.ai over `MCP`, OpenAI Codex and Hermes Agent — is `CC-BY-SA-4.0`.**
+
+🟢 **Read first-hand: `1 230` bytes, opening line `Creative Commons
+Attribution-ShareAlike 4.0 International`, and the body scopes the grant to *"the educational
+skills, documentation, examples, and curriculum materials"*.** 🔵 **p210's `T210` observation that
+*"the agent payload is content, not software"* is confirmed — and sharpened in the direction that
+matters: **this payload is share-alike.**
+
+🔴 **Consequence for an engagement, stated plainly:** 🟢 **a studio may use these `165` skills,
+including commercially, with attribution.** 🔴 **But a derivative skill pack — a client-specific
+fork of the pedagogy — carries an obligation to license the derivative under `CC-BY-SA-4.0` as
+well.** 🔵 **For a client who regards their pedagogy as proprietary IP, that is a blocker, and it
+is invisible to every licence scanner on the market because the scanners classify code.**
+
+🟡 **The repository also notes that hosted `MCP` access now requires an auth token while local,
+plugin and manual use stay free** — a licence-permissive project with a gated service tier, which
+is a shape worth watching rather than a problem.
+
+### 🔴 Copyleft rows — real, usable, but not buildable-on in a hosted deployment
+
+| Agent | Repo | 🟢 Grant *(blob bytes)* | Stars | Note |
+|---|---|---|---|---|
+| **human-skill-tree** | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0** *(`1 134` — a **short notice**, not the full text)* | **572** | 🟡 `STATED`-not-`BODIED`: the family is unambiguous *(it names AGPLv3 and the copyleft intent)* but the canonical text is absent. **Still treat as `AGPL`** |
+| **moodle-ai-skill-navigator** | [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 **GPL-3.0** *(`35 153`)* | **223** | 🟢 **The largest AI-native Moodle plugin found** — tutoring, quizzes, mind maps, RAG over course materials. `GPL-3.0` is **mandatory** for Moodle plugins, so this is not a project choice and never will be `MIT` |
+| **freelingo** | [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** *(`34 514`)* | **175** | Self-hosted language-learning platform with flashcards + spaced repetition. 🔴 **`AGPL` on a hosted student-facing service is the exact trap `T211-1` describes** |
+| **lumen** | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 🔴 **GPL-3.0** *(`35 149`)* | **88** | Learner-owned platform building private courses with course-scoped tutoring |
+| **tutor-gpt** | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** *(`35 149`)* | not read | 🟢 **Resolves a live ambiguity:** aggregators list this project as both `MIT` and `GPL-3.0`. The blob says `GPL-3.0` |
+| **moodle-block_openai_chat** | [Limekiller/moodle-block_openai_chat](https://github.com/Limekiller/moodle-block_openai_chat) | 🔴 **GPL-3.0** *(`35 149`)* | **42** | Chat block supporting OpenAI, Groq and DeepSeek backends |
+| **LTLTutor** | [brownplt/LTLTutor](https://github.com/brownplt/LTLTutor) | 🔴 **GPL-3.0** *(`35 148` · `LICENSE.txt`)* | **12** | Brown PLT; targets **named misconceptions** in Linear Temporal Logic. 🔵 **The misconception-targeting method is the transferable asset, not the LTL content** |
+
+### 🔴 Ungranted — exists, serves no licence over `10` path forms at `HEAD`
+
+| Repo | Stars | Why it is listed anyway |
+|---|---|---|
+| [luffycodes/Tutorbot-Spock](https://github.com/luffycodes/Tutorbot-Spock) | **56** | LLM tutoring bot built on learning-science principles; cited in the literature. 🔴 **No grant ⇒ all rights reserved ⇒ unusable in a client deliverable.** Read the method, do not vendor the code |
+| [Nutlope/llamatutor](https://github.com/Nutlope/llamatutor) | not read | Widely blogged "open source AI tutor". 🔴 **No licence blob at `HEAD`.** The blogs calling it open source are wrong on the only question that matters |
+| [juno-hwang/juno-dkt](https://github.com/juno-hwang/juno-dkt) | **14** | scikit-learn-style **Deep Knowledge Tracing** in PyTorch — exactly the mastery-model layer this KB wants. 🔴 **Ungranted; reimplement from the papers** |
+
+🔵 **`3` of `54` repositories read this pass are ungranted — `5.6`%, far below the `16`% p196
+measured on an older population, which is consistent with the newer cohort being more
+licence-literate.**
+
+### 🟢 Carried forward unchanged
+
+🟢 **The p199 canonical table below remains the first thing to read** — `DeepTutor`
+*(`Apache-2.0`, `41.4`k★, the one education agent at real scale)*, `canvas-mcp` and the Canvas
+MCP cluster, `OATutor`'s BKT model, and the `autograder` / `auto-assessment-agent` /
+`grading_assistant` grading trio. 🔴 **`AutoGen` stays retired** *(maintenance mode; new work goes
+to `microsoft/agent-framework`)*.
+
 ## Pass 211 — 2026-10-15 — EVERY AGENT ROW'S GRANT READ FIRST-HAND, AND THE EIGHTH SATURATION READING
 
 ### 🟢 The agent shelf is now `100`% first-hand on its licence column

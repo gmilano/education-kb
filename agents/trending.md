@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 212 — the week the discovery channel opened: `22` new agent rows after eight "saturated" passes
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 What is actually new this week
+
+🔵 **The headline is a channel, not a repository.** 🟢 **`github.com/topics/<topic>` and
+`github.com/search?…&type=repositories` resolve through `WebFetch` from this environment**, and
+eight prior passes had concluded discovery was exhausted from a search-engine channel that never
+reaches GitHub's own taxonomy. 🔴 **`curl` to `github.com` still returns `403` — that part of the
+reading was right, the generalisation was not.**
+
+### 🆕 New this week, in star order — all grants read from the licence blob on 2026-10-15
+
+| repo | grant | ★ | region | one line |
+|---|---|---|---|---|
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | **954** | APAC | learning-path planner + concept explainer |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **CC-BY-SA-4.0** | **860** | Global | `165` pedagogical skills, `20` domains — **share-alike content, not software** |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 AGPL-3.0 *(short notice)* | **572** | APAC | skill-tree over `30`+ skills for lifelong learning |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | **514** | Global | MCP server over Anki |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 | **326** | APAC | AI-led teaching loop |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT | **308** | APAC | exam coach **with page citations** |
+| [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | MIT | **287** | Global | progressive-hint DSA mentor |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | **285** | APAC | Bloom 2-sigma adaptive tutor, self-hostable |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT | **245** | APAC | diagnosis-first STEM tutor |
+| [Berserk-hub150/moodle-ai-skill-navigator](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 GPL-3.0 | **223** | Global | **largest AI-native Moodle plugin found**: tutoring, quizzes, mind maps, RAG |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | MIT | **177** | APAC | Chinese civil-service exam prep |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | **175** | Global | self-hosted language learning + spaced repetition |
+| [aieducations/edumcp](https://github.com/aieducations/edumcp) | Apache-2.0 | **156** | Global | generic **education-MCP** protocol layer |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | **141** | APAC | local block-based adaptive workspace |
+| [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 🟢 **CC0-1.0** | **134** | APAC | `WWW '25` multi-agent goal-oriented tutoring |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT | **112** | APAC | education skill collection |
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | Apache-2.0 | **106** | APAC | K-12 companion |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT | **95** | 🟢 EMEA | **AI-native LMS under MIT** |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 🔴 GPL-3.0 | **88** | Global | learner-owned private-course platform |
+| [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | **64** | APAC | RAG tutor, grades K-9 |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | **48** | Global | Go MCP server → LLM as an ITS |
+| [Limekiller/moodle-block_openai_chat](https://github.com/Limekiller/moodle-block_openai_chat) | 🔴 GPL-3.0 | **42** | Global | Moodle chat block *(OpenAI · Groq · DeepSeek)* |
+| [SaadRahman01/claude-moodle-dev](https://github.com/SaadRahman01/claude-moodle-dev) | MIT | **39** | APAC | Moodle plugin **development** toolkit for coding agents |
+| [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | MIT | **29** | North America | Knowledge Space Theory as agent skills |
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | Apache-2.0 | **24** | 🟢 EMEA | personalised student feedback, in production at THM |
+| [theaiagent/SynthEd](https://github.com/theaiagent/SynthEd) | MIT | **8** | Global | agent-based simulation of a cohort |
+| [kltn-moolde/moodle-adaptive-learning-plugin](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | MIT | **7** | APAC *(Vietnam)* | Q-learning pathways over **LTI 1.3** |
+
+### 🔴 Not usable, and worth knowing why
+
+🔴 **[`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) `56`★,
+[`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) and
+[`juno-hwang/juno-dkt`](https://github.com/juno-hwang/juno-dkt) `14`★ serve no licence blob over
+`10` path forms at `HEAD`.** 🔵 **`llamatutor` in particular is described as "open source AI tutor"
+across several blogs this week; it has no grant.**
+
+### 🟡 The week's shape, in one paragraph
+
+🟢 **Agent skills are the dominant new form factor.** 🔵 **`9` of the `22` new permissive rows ship
+as *skills* for a coding agent rather than as services — a YAML header plus prompt scaffolding,
+installed into Claude Code, Codex or an MCP client.** 🔴 **That makes the licence question a
+*content* question, which is how an `860`★ project ends up share-alike and no scanner notices.**
+🟢 **Origin skews hard to APAC** *(`13` of `22`)*, with `2` EMEA rows, `1` North America and the
+rest unplaceable — 🔴 **and `0` from LATAM, which is now a measured ceiling rather than an
+absence** *(see [`intel/market.md`](../intel/market.md) `P212-6`)*.
+
 ## 2026-10-15 — pass 211 — THE EIGHTH SATURATION READING, AND A CHANNEL THAT WAS CLOSED TURNS OUT TO HAVE BEEN OPEN
 
 🟢 **Signals this window, newest first. History below is kept and not rewritten.**

@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 212 — 2026-10-15 — A SHELF THIS KB NEVER HAD: THE LEARNING-RECORD LAYER, `17` REPOS, AND A NEW LICENCE FAMILY NAMED AFTER THIS INDUSTRY
+
+### 🆕 🟢 `P212-4` — the evidence layer, and why it arrives exactly now
+
+🔴 **In `211` passes this KB has carried tutors, graders, LMS platforms and `MCP` connectors, and
+has never once carried the layer that records what a learner did.** 🟢 **`topics/xapi` and
+`topics/learning-analytics` — `300` and `377` repositories — were read this pass for the first
+time, and the layer turns out to be the most standards-mature and most permissively licensed part
+of this whole industry.**
+
+🔵 **Why it matters now rather than as a curiosity:** the Council of Europe's Committee of Experts
+on AI and Education is drafting a **European Reference Framework for the Evaluation of Educational
+Technologies** *(see [`intel/market.md`](../intel/market.md) p212)*. 🟢 **An evaluation framework
+needs evidence, and evidence in education means learner-activity records in a standard schema.**
+🔴 **A studio that ships a tutor with no `xAPI` emission has built something that cannot be
+evaluated — and from August `2026` the EU AI Act classifies education AI as high-risk, which is
+not a context in which "we did not instrument it" is an answer.**
+
+### 🟢 The learning-record shelf — every grant read from the blob on 2026-10-15
+
+| Repo | 🟢 Grant *(blob bytes · form)* | Stars | Lang | Role in a stack |
+|---|---|---|---|---|
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** *(`11 525`)* | **954** | — | 🟢 **The specification itself**, from ADL *(US DoD)*. Permissively licensed, which is why the ecosystem below exists |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** *(`35 129`)* | **631** | JavaScript | Responsive, accessible HTML5 course authoring. 🔴 **`GPL` — the one copyleft row in the authoring slot** |
+| [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** *(`35 141`)* | **585** | JavaScript | The best-known open LRS. 🔴 **`GPL-3.0`: fine to run, a decision to modify** |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** *(`11 357`)* | **334** | Python | ADL's own reference LRS — the implementation the spec is checked against |
+| [adlnet/xAPIWrapper](https://github.com/adlnet/xAPIWrapper) | **Apache-2.0** *(`10 273`)* | **223** | JavaScript | Client-side wrapper; the cheapest way to emit statements from a web tutor |
+| [RusticiSoftware/TinCanJS](https://github.com/RusticiSoftware/TinCanJS) | **Apache-2.0** *(`11 358`)* | **208** | JavaScript | The other mature JS client, from the company that wrote SCORM |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** *(`11 357`)* | **144** | Clojure | 🟢 **SQL-backed LRS.** Runs on Postgres the client already has, instead of a bespoke store — **the pragmatic default for an engagement** |
+| [davidpesce/moodle-logstore_xapi](https://github.com/davidpesce/moodle-logstore_xapi) | 🔴 **GPL-3.0** *(`35 121`)* | **82** | PHP | Ships Moodle's event log to an LRS as `xAPI`. 🔵 **`GPL` is compulsory for Moodle plugins — not a project choice** |
+| [g3i/lxHive](https://github.com/g3i/lxHive) | 🔴 **GPL-2.0** *(`18 092`)* | **79** | PHP | Lightweight LRS. 🟡 **`GPL-2.0` — the only v2 grant found on these shelves this pass** |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** *(`1 046`)* | **78** | JavaScript | 🟢 **Tests an LRS against the spec's `MUST` requirements.** The acceptance gate for the pattern in [`compose/patterns.md`](../compose/patterns.md) `P212-A` |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🆕 🟢 **ECL-2.0** *(`9 878`)* | **62** | Java | Standards-based learning-record **warehouse** — storage plus a roster/course model. 🔵 **See `P212-2` below on `ECL`** |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | **Apache-2.0** *(`11 358`)* | **59** | JavaScript | `cmi5` player and test suite — the profile that makes `xAPI` launchable from an LMS |
+| [openfun/ralph](https://github.com/openfun/ralph) | 🟢 **MIT** *(`1 094` · `LICENSE.md`)* | **51** | Python | 🟢 **LRS and learning-analytics toolbox from France Université Numérique** *(the operator of France's national Open edX)*. **EMEA, MIT, and built by a national platform operator — the strongest single row on this shelf for an EMEA engagement** |
+| [tl-its-umich-edu/my-learning-analytics](https://github.com/tl-its-umich-edu/my-learning-analytics) | **Apache-2.0** *(`11 379`)* | **37** | Python | University of Michigan's student-facing analytics dashboards |
+| [PlaypowerLabs/EdOptimize](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 **GPL-3.0** *(`35 149`)* | **31** | R | K-12 digital-learning analytics platform |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **Apache-2.0** *(`11 323` · `development`)* | **21** | Java | 🟢 **LMS plugin that randomly assigns differentiated assignment variants — in-course A/B experiments.** 🔵 **This is the only repository on any of these shelves that produces *causal* evidence rather than correlational dashboards** |
+| [sonsoleslp/tna](https://github.com/sonsoleslp/tna) | 🟡 **not establishable** *(`46`-byte `LICENSE`: `YEAR` + `COPYRIGHT HOLDER` only)* | **13** | R | Transition Network Analysis. 🔵 **The stub is the R-package convention — `DESCRIPTION` carries the family — but by this KB's blob rule the grant is unread, and it is recorded as unread** |
+
+🟢 **`17` rows, `9` of them permissive** *(`Apache-2.0`, `MIT`, `ECL-2.0`)*. 🔵 **Above the `5`-repo
+bar by a wide margin, and the permissive share on this shelf — `53`% — is the highest of any shelf
+in this KB.**
+
+### 🆕 🔴 `P212-2` — `ECL-2.0`: a licence family named after this industry, and this KB has been getting Sakai wrong
+
+🔴 **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) is `ECL-2.0`, not `Apache-2.0`.**
+🟢 **Read first-hand: `11 120` bytes, first line `Educational Community License, Version 2.0
+(ECL-2.0)`.** 🔴 **This KB has carried Sakai as `Apache-2.0` since cycle 3 (`v65`) and repeated it
+on the verticals shelf ever since.**
+
+🟢 **What `ECL-2.0` is, from the blob's own words:** *"the Apache 2.0 license, modified to change
+the scope of the patent grant in section 3 to be specific to the needs of the education
+communities using this license."*
+
+🔵 **So the practical reading, and why the correction is not pedantry:**
+
+| | `Apache-2.0` | 🆕 `ECL-2.0` |
+|---|---|---|
+| copyright grant | permissive | 🟢 **identical** |
+| attribution / NOTICE | required | 🟢 **identical** |
+| patent grant | broad, from every contributor | 🔴 **narrowed — scoped to the contributor's own contribution as used in education** |
+| OSI-approved | yes | 🟢 **yes** |
+
+🟢 **For a build-on-top engagement the two behave the same.** 🔴 **For a client whose procurement
+diligence reads the patent clause — a government ministry, a large publisher — they are not the
+same document, and answering "Sakai is Apache" in that room is wrong.** 🔵 **`ECL-2.0` also means
+this industry is the only one in the Globant rotation with **its own OSI licence family**, which
+is a fact worth a deck line.
+
+🟢 **Two repositories on these shelves are `ECL-2.0`, both Apereo-lineage:** `sakaiproject/sakai`
+*(`1.2`k★)* and `Apereo-Learning-Analytics-Initiative/OpenLRW` *(`62`★)*. 🟢 **Checked and NOT
+`ECL`, read first-hand the same pass:** `oppia/oppia` *(`Apache-2.0`)*,
+`uPortal-project/uPortal` *(`Apache-2.0`)*, `openedx/edx-platform` *(`AGPL-3.0`)*,
+`learningequality/kolibri` *(`MIT`)*. 🔵 **So `ECL` is an Apereo-family marker, not an
+education-wide one, and the four rows above are confirmed correct as this KB already carries them.**
+
+### 🟢 The grading shelf, now with its infrastructure tier read
+
+🔵 **p201 established that *"the grading shelf exists"*. p212 read `topics/autograding` — `94`
+repositories — and found that the shelf has a mature, decade-old, university-built infrastructure
+tier underneath the LLM graders:**
+
+| Repo | 🟢 Grant *(blob bytes · form)* | Stars | Origin → region | Role |
+|---|---|---|---|---|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** *(`1 091` · `develop`)* | **818** | 🟢 **TUM, Germany → EMEA** | 🟢 **Interactive learning platform with automated feedback; `12 396` commits.** **The highest-★ MIT education platform found in `212` passes, and it is EMEA-built** |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | **Apache-2.0** *(`11 324`)* | **808** | CMU → **North America** | Course management for auto-graded programming work, in production at CMU |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** *(`1 542` · `LICENSE.md`)* | **802** | RPI → **North America** | Submission + automated grading + TA grading. 🟢 **The most permissive grant on the shelf** |
+| [inducer/relate](https://github.com/inducer/relate) | **MIT/X Consortium** *(`1 145`)* | **437** | UIUC → **North America** | Teaching environment with auto-graded code homework |
+| [okpy/ok](https://github.com/okpy/ok) | **Apache-2.0** *(`13 979`)* | **370** | UC Berkeley → **North America** | Runs tests, tracks progress, assists debugging |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** *(`34 764`)* | **243** | 🟢 **UCLouvain, Belgium → EMEA** | **Secure** exercise assessment with an LMS interface. 🔴 **`AGPL` on a hosted grader — price the obligation** |
+| [foundation50/classroom50](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** *(`35 150`)* | **215** | CS50 lineage → **North America** | Open-source alternative to GitHub Classroom |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** *(`1 560`)* | **161** | UC Berkeley → **North America** | Python **and R** autograding; the standard in data-science teaching |
+| [autolab/Tango](https://github.com/autolab/Tango) | **Apache-2.0** *(`11 324`)* | **49** | CMU → **North America** | 🟢 **Standalone RESTful autograding service** — the piece you reuse without adopting a whole platform |
+| [infomark-org/infomark](https://github.com/infomark-org/infomark) | 🔴 **GPL-3.0** *(`35 149`)* | **35** | → EMEA | Go course management with automatic testing |
+| [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | **Apache-2.0** *(`11 358`)* | **34** | Google → **North America** | Builds autograding tests inside Jupyter notebooks |
+| [uhafner/autograding-github-action](https://github.com/uhafner/autograding-github-action) | **MIT** *(`1 095`)* | **32** | → EMEA | Grades a student repo from CI on configurable metrics *(a GitLab sibling exists at `11`★)* |
+| [kit-sdq/autograder](https://github.com/kit-sdq/autograder) | **MIT** *(`1 068` · `LICENSE.md`)* | **18** | 🟢 **KIT, Germany → EMEA** | Static-analysis grading of student Java |
+
+🔵 **The architectural point, which is worth more than any single row:** 🟢 **the sandboxed
+execution, submission handling, plagiarism posture and TA workflow are *solved* and have been for
+years, under `Apache`/`BSD`/`MIT`.** 🔴 **What is unsolved is rubric judgement on free-text and
+handwritten work — which is exactly where the LLM graders on [`agents/top.md`](../agents/top.md)
+sit.** 🟢 **The correct engagement shape is therefore LLM-grader-as-a-stage-inside-`Tango`-or-
+`Artemis`, never a greenfield grading platform.**
+
+### 🟢 Carried forward
+
+🟢 **p211's full-column census stands: `2 051`/`2 082` cells agree with their blobs** *(`98.5`%)*,
+and the `31` exceptions are mostly this KB's own corrections left unpropagated. 🟢 **The `8` path
+forms cover `100`% of findable blobs and `HEAD` removes the branch axis** — reconfirmed on `54`
+fresh repositories this pass, where `LICENSE` alone answered `46` of `50`.
+
 ## Pass 211 — 2026-10-15 — THE WHOLE COLUMN, READ FIRST-HAND: `2 051`/`2 082` CELLS AGREE, AND THE `31` THAT DO NOT ARE MOSTLY THIS KB'S OWN CORRECTIONS, UNPROPAGATED
 
 ### 🔴 The sampling was never necessary — the channel was mis-priced

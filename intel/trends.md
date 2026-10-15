@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 212 — 2026-10-15 — THE SATURATION WAS THE INSTRUMENT'S; THE AI LAYER IS BESIDE THE PLATFORM, NOT IN IT; AND EUROPE HAS TURNED FROM PERMISSION TO EVIDENCE
+
+### 🆕 🔴 `T212-1` — "the field is saturated" is a claim about a reader, and this KB made it eight times
+
+🔴 **Eight consecutive passes ran the task's discovery queries, found nothing new, and escalated
+the conclusion: p204 "the query shape is wrong", p211 "the evidence is now overwhelming".** 🟢 **The
+vocabulary observation was right — an education agent calls itself a tutor or a grader, not an
+"agent".** 🔴 **The saturation conclusion was false, and one `WebFetch` to a GitHub topic page
+falsified it.**
+
+🟢 **`6` reads of GitHub's own HTML surface returned `105` rows, `54` verified first-hand, `22`
+new agent rows, `17` rows of a shelf this KB never had, a new licence family, and `3` permissive
+platforms that nine passes had reported as non-existent.**
+
+🔵 **This is the fourth time in `15` passes that a published claim about the world turned out to be
+a measurement of the instrument** *(p197's three numbers, p198's byte count, p211's "curl reaches
+nothing", and now this)*. 🟢 **The pattern is specific enough to be a rule:** 🔴 **when a negative
+result repeats, instrument the channel before publishing the generalisation.** 🔵 **A repeated
+`0` is evidence about the probe at least as often as it is evidence about the population — and the
+more confidently a corpus restates it, the less anyone re-tests it.**
+
+🟢 **Deck line, and it generalises past this KB to any client building an intelligence function:**
+*"The most expensive error in a knowledge base is not a wrong fact. It is a confident absence —
+because nobody audits a gap."*
+
+### 🆕 🔴 `T212-2` — the AI layer in education is not in the platforms, and will not be there in time
+
+🔴 **`18` of the top `20` repositories in GitHub's `lms` topic — a `2 468`-repository
+population — make no mention of AI or an LLM at all.** 🟢 **The whole AI surface in this industry
+is adjacent: Moodle plugins, `MCP` servers, `LTI 1.3` tools, `xAPI` emitters.**
+
+🔵 **Set that against the dates: EU AI Act high-risk classification of education AI reported
+effective **August `2026`**; Vietnam's education-named obligations due **`2027-03-01`**; India's
+compulsory AI curriculum from the **`2026`–`27`** session.** 🔴 **The installed platform base will
+not have shipped an agent layer by any of them.**
+
+🟢 **Consequence, and it is a positioning statement rather than an observation:** **the integration
+seam is the product.** 🔵 **A studio that sells a platform replacement is selling against the
+client's sunk cost and a multi-year migration. A studio that sells the seam — a plugin, a
+connector, an emitter — ships in weeks against the system the client already runs, and lands on the
+right side of a deadline.** 🟢 **The one counter-example found, `Selleo/mentingo` *(`MIT`, `95`★,
+AI-native LMS)*, proves the shape is possible and its star count proves it is not yet the market.**
+
+### 🆕 🟢 `T212-3` — Europe has moved from *may we use it* to *prove it works*, and that is a different sale
+
+🟢 **The Council of Europe's `EDU IA` committee lists two deliverables that change the shape of an
+EMEA engagement: a **European Reference Framework for the Evaluation of Educational Technologies**
+*(in drafting)* and **a proposal for a legal instrument to regulate AI systems in education**
+*(work programme `2026`–`27`)*. Its adopted **Recommendation on AI Literacy** carries `22`
+principles in `4` themes and implements **Article `20` of the Framework Convention on AI**.**
+
+🔵 **Read the sequence: `2024` was permission *(may AI be used in a classroom)*. `2026` is
+**evaluation** *(does this specific system do what it claims, and can you show it)*.** 🔴 **Those
+demand different artefacts.** 🟢 **A permission regime is satisfied by a policy document; an
+evaluation regime is satisfied only by **learner-activity evidence in a standard schema** — which
+is why `P212-4`'s discovery of the `xAPI`/LRS shelf in the same pass is not a coincidence but the
+other half of the same finding.
+
+🟡 **Honest caveat, carried because it decides whether this goes in a deck:** the adoption dates
+are reported inconsistently across Council of Europe pages and press coverage, and neither
+deliverable's text was reachable from this environment. 🟢 **The *direction* is safe to sell; the
+*dates* must be re-verified at coe.int first.**
+
+### 🆕 🔴 `T212-4` — the licence risk has moved from code to content, and no scanner follows it
+
+🔴 **p211 established that this industry's licence danger is `GPL`-vs-`AGPL`, inside the GNU
+family. That remains true for platforms.** 🆕 🔴 **For *agents* it is no longer the risk at all.**
+
+🟢 **`9` of the `22` new agent rows this pass ship as **skills** — YAML headers plus prompt
+scaffolding, installed into a coding agent or served over `MCP`.** 🔴 **The largest of them,
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+at `860`★ with `165` pedagogical skills, is **`CC-BY-SA-4.0`**: copyleft *content*.** 🟢 **A second,
+`gen-mentor`, is **`CC0-1.0`** — more permissive than `MIT`.**
+
+🔵 **Why this defeats tooling rather than merely complicating it:** 🔴 **licence scanners classify
+software dependencies. A skill pack is neither a dependency nor software — it is prose in a
+repository — so it is either skipped or mislabelled.** 🔴 **And the obligation it carries is the one
+clients care about most: a client-specific fork of the pedagogy must itself be published
+share-alike.** 🟢 **For a client who regards its teaching method as proprietary IP, `CC-BY-SA` is a
+harder blocker than `AGPL`, and nothing in the stack will warn them.**
+
+🔵 **Deck line:** *"In `2026` the licence that stops an education engagement is not on your code.
+It is on your prompts."*
+
+### 🆕 🔴 `T212-5` — a compulsory AI curriculum against a connectivity gap is the largest concrete opportunity in this KB
+
+🟢 **India's Ministry of Education has made **AI and Computational Thinking mandatory for Classes
+`3`–`8` from the `2026`–`27` session**, extending to Classes `9`–`10` in `2027`–`28`.** 🔴 **A
+third-party `2026` report measures the system it lands in: **`64.7`%** of schools with computers,
+**`63.5`%** with internet.**
+
+🟢 **A mandate is a budget with a date; a `35`-point infrastructure gap is a specification.** 🔵
+**Together they specify **offline-first, low-footprint, local-model delivery** — not a cloud tutor.
+🟢 **The stack already exists and is permissive:**
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) *(`MIT`, built for
+offline)* plus a local model plus
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) *(`MIT`, Indian-built)* or
+[`frappe/lms`](https://github.com/frappe/lms) *(`AGPL-3.0`, Indian-built)*. 🔵 **See
+[`compose/patterns.md`](../compose/patterns.md) `P212-D`.**
+
+🔵 **The wider pattern across all four regions, now stated as a rule:** 🟢 **in the Americas the
+buying trigger is a **governance vacuum**; in EMEA it is an **evaluation obligation**; in APAC it is
+a **curriculum or compliance date**.** 🔴 **One offer sold one way lands in exactly one of them.**
+
+### 🆕 🔴 `T212-6` — a licence file can hold several grants partitioned by PATH, and both of this KB's orderings fail on it
+
+🔴 **[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) *(`978`★)* names
+`CC-BY-SA-4.0` in its first grant clause and `MIT` in its third and fourth. The code is `MIT`; only
+`docs/` is `CC-BY-SA`.** 🔴 **This pass's own probe returned `CC-family` and would have blocked an
+`MIT` platform.**
+
+🟢 **Put beside p211's `odoo` trap, the pair is instructive:**
+
+| repo | whole-body matcher | title-anchored matcher | 🟢 correct |
+|---|---|---|---|
+| `odoo/odoo` | 🔴 `GPL-3.0` | 🟢 `LGPL-3.0` | **`LGPL-3.0`** |
+| 🆕 `pupilfirst/pupilfirst` | 🟡 `MIT` *(by volume)* | 🔴 `CC-BY-SA-4.0` | **`MIT` code / `CC-BY-SA-4.0` `docs/`** |
+
+🔴 **Neither ordering is sufficient, and the two failures run in opposite directions — so no fixed
+precedence rule saves you.** 🟢 **The only correct instrument reads the **partition**: a licence
+file may bind different grants to different paths, and a repository's grant is therefore a
+*function of the file path*, not a scalar.** 🔵 **`P212-A` in [`compose/patterns.md`](../compose/patterns.md)
+carries the fix, and it is three lines of logic, not a rewrite.
+
+### 🆕 🔴 `T212-7` — LATAM's open-source ceiling is `6` stars, and that is information
+
+🟢 **Three GitHub repository searches in Spanish and Portuguese, sorted by stars: `308` results,
+top star counts of `6`, `4` and `2`.** 🔴 **There is no production-scale education-AI repository in
+the region's own languages.**
+
+🔵 **Stated as a positive, because it is one:** 🟢 **a LATAM engagement is differentiated by the
+`87`%/`26`% governance gap, by `chamilo` *(the LMS actually installed in Spanish-speaking
+institutions)*, and by Spanish/Portuguese language capability — **not** by regional code, which
+does not exist above hobby scale. 🔵 **The code comes from Munich, Berkeley and Hong Kong. Saying
+so is more credible than implying a regional ecosystem that three measured queries say is absent.**
+
+### 🟢 Carried forward
+
+🟢 **`T211-1`** — in education the dangerous licence mistake is reading `AGPL` as `GPL` and
+discovering network copyleft after shipping a hosted deployment. 🟢 **Still true for platforms;
+`T212-4` extends it to content.** 🟢 **`T211-2`** — a mature corpus's dominant failure mode is
+propagation, not error: `6` of `7` wrong cells named a repository whose correct grant this KB had
+already found. 🆕 🔵 **`T212-1` adds its twin: the second failure mode is a confident absence.**
+🟢 **`T211-3`** — adoption outruns governance in all four regions. 🟢 **`T211-5`** — the market
+number is a range; a point figure with a decimal place is a tell.
+
 ## Pass 211 — 2026-10-15 — THE GNU FAMILY IS THIS INDUSTRY'S REAL LICENCE RISK, AND ADOPTION IS OUTRUNNING GOVERNANCE IN ALL FOUR REGIONS
 
 ### 🆕 🔴 `T211-1` — the licence risk in education is `GPL`-vs-`AGPL`, not open-vs-proprietary
