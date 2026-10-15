@@ -1,0 +1,41 @@
+# p216 - ACTION QI: every Apereo/Sakai/uPortal/Opencast/Unicon-family slug carried on the four
+# client-facing shelves, read first-hand through raw.githubusercontent.com/<slug>/HEAD/<path>
+# and classified TWICE: once with p215's classifier verbatim, once with the same classifier plus
+# an ECL token ordered BEFORE the Apache token.
+#
+# Why the order matters, established first-hand from the blob (sakaiproject/sakai LICENSE l.9-13):
+#   "The Educational Community License version 2.0 ("ECL") consists of the Apache 2.0 license,
+#    modified to change the scope of the patent grant in section 3 to be specific to the needs
+#    of the education communities using this license."
+# So ECL-2.0's body IS Apache-2.0 text. A body matcher returns Apache-2.0; a title-window matcher
+# that tests "apache license" before "educational community license" also returns Apache-2.0.
+#
+# p215_says = UNCLASSIFIED is the measurement: the instrument registered to be made permanent
+# cannot see this family at all. It does not mis-name it; it returns nothing.
+#
+# method: compose/code/p216-ecl-sweep/ecl_sweep.py
+slug	path	http	bytes	p215_says	p216_says	delta
+Apereo-Learning-Analytics-Initiative/Larissa	LICENSE	200	-	Apache-2.0	Apache-2.0	same (CONTROL: really is Apache-2.0)
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	LICENSE	200	-	UNCLASSIFIED	ECL-2.0	DIFFERS
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api	LICENSE	200	-	UNCLASSIFIED	ECL-2.0	DIFFERS
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	LICENSE	200	-	UNCLASSIFIED	ECL-2.0	DIFFERS
+Apereo-Learning-Analytics-Initiative/OpenLRS	LICENSE	200	11087	UNCLASSIFIED	ECL-2.0	DIFFERS (blob header also prints "[OSI Approved License]")
+Apereo-Learning-Analytics-Initiative/OpenLRW	LICENSE	200	-	UNCLASSIFIED	ECL-2.0	DIFFERS
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	pom.xml	200	-	UNCLASSIFIED	UNCLASSIFIED	same (p215 established ECL-2.0 here from the manifest; the TEXT channel has no blob)
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	LICENSE	200	-	UNCLASSIFIED	ECL-2.0	DIFFERS
+Unicon/tool13demo	LICENSE	200	-	Apache-2.0	Apache-2.0	same (CONTROL: really is Apache-2.0)
+apereo/opencast	-	none-of-14	0	-	-	NO-BLOB (not the canonical slug; agents/top.md l.2574 already records opencast/opencast as "the real slug; apereo/opencast stays absent")
+opencast/opencast	LICENSE	200	11340	UNCLASSIFIED	ECL-2.0	DIFFERS
+sakaiproject/sakai	LICENSE	200	11120	UNCLASSIFIED	ECL-2.0	DIFFERS
+uPortal-Project/uPortal	LICENSE	200	-	Apache-2.0	Apache-2.0	same (CONTROL: really is Apache-2.0)
+#
+# RESULT: 8 of 13 are ECL-2.0. p215's classifier returns UNCLASSIFIED on 8 of 8 of them.
+# 3 of 3 genuine Apache-2.0 rows classify identically on both instruments, so the ECL token
+# does not over-fire: the delta is exactly the population the old instrument could not see.
+
+# Reproducibility: the 157/160 and 19 figures are PRE-WRITE measurements, taken before p216
+# wrote its own shelf sections. Re-running the gate after the write returns 166/169 and 21.
+# The +2 are both intel/open-gaps.md l.28 - the ACTION QH verdict row, which quotes T215-2's
+# superseded "recorded ABSENT" wording while stating that the reading was wrong. That is P215's
+# documented comparator exclusion (a line ABOUT a wrong reading prints the wrong reading's
+# tokens): a record, not a cell. The verdicts are unaffected.

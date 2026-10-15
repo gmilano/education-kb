@@ -5,6 +5,158 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — THE PROPAGATION DEFECT HAS REACHED THE ACTION REGISTER: `ACTION QI` WAS REGISTERED ON A CLAIM OF NOVELTY THAT PASS `200` REFUTES IN FULL, AND `3` OF `4` ACTIONS FIRE ON LIMB `2`
+
+🔵 **`0` new agent rows this pass.** 🟢 **The `8` mandated searches were run verbatim — `4` global,
+`4` per-region — and returned `0` agents, `0` repositories and `0` platforms these shelves do not
+already carry, which is the FIFTH consecutive confirmation of `T214-2`.** 🟢 **So the pass spent
+itself on the four actions p215 registered — `ACTION QH`, `QI`, `QJ`, `QK` — all four of which are
+now discharged.** 🔴 **Three fire on limb `2`. The fourth fires, but its premise was false.**
+
+🔵 **Methods: [`compose/code/p216-ecl-sweep/`](../compose/code/p216-ecl-sweep/README.md),
+[`compose/code/p216-root-license-reprobe/`](../compose/code/p216-root-license-reprobe/README.md),
+[`compose/code/p216-person-claims-sweep/`](../compose/code/p216-person-claims-sweep/README.md).
+Evidence: [`evidence/ecl-classifier-blindspot.2026-10-15-p216.tsv`](../evidence/ecl-classifier-blindspot.2026-10-15-p216.tsv),
+[`evidence/root-license-reprobe.2026-10-15-p216.tsv`](../evidence/root-license-reprobe.2026-10-15-p216.tsv),
+[`evidence/person-claims-sweep.2026-10-15-p216.tsv`](../evidence/person-claims-sweep.2026-10-15-p216.tsv),
+[`evidence/qg-scope-adjudication.2026-10-15-p216.tsv`](../evidence/qg-scope-adjudication.2026-10-15-p216.tsv).**
+
+### 🆕 🔴 `P216-1` — `ACTION QI`'s premise is refuted by this KB's own `repos/foundations.md`, `15` passes back
+
+🔴 **`T215-8`, as registered, states that `ECL-2.0` *"appears NOWHERE on these shelves before
+p215"* and that it is *"a licence family this KB had never recorded"*.** 🔴 **Both claims are
+false, and the refutation is a section heading:**
+
+> `repos/foundations.md` l.`1373` — **`## Pass 200 — 2026-10-14 — ECL-2.0: EDUCATION HAS ITS OWN
+> LICENCE AND THIS KB HAD NEVER NAMED IT`**
+
+🟢 **Pass `200` did not merely mention it. It established, `15` passes before p215:** the OSI
+approval; the self-description quoted from
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)'s own blob; the `§3` patent-scope
+narrowing and why it is a contract-review trigger rather than a cosmetic label; a family census
+*(`license:ecl-2.0 stars:>20` → `18` repositories GitHub-wide)*; byte counts of `11 120` for
+`sakai` and `11 340` for `opencast`; and 🔵 **the instrument note itself** — that *"a generic
+family detector returns `UNCLASSIFIED` on all of these"*, with the judgement that the conservative
+`UNCLASSIFIED` is the right failure. 🟢 **p200 even credits p199's platform table for having
+already called `ECL-2.0` *"Apache-derived with an education-specific patent clause"*.**
+
+🔴 **So every substantive element of what p215 registered as new, and of what this pass set out to
+measure, was on these shelves — and one of them, `Apereo-Learning-Analytics-Initiative/OpenLRW`,
+was published as `ECL-2.0` with its `9 878` B blob by pass `212`, three passes before the claim
+that the family had never been recorded.**
+
+🔵 **This is the `P211-1` / `P214-3` / `QG` failure — ~`80`% of this KB's wrong statements are
+propagation, not ignorance — appearing one layer HIGHER than any pass has measured it before.**
+🔴 **Previous instances were CELLS. This one is an `ACTION`: the register that decides what the
+next pass spends its budget on.** 🟢 **The cost is measurable and was paid in full: p216 spent its
+largest single block on re-deriving p200's result from scratch, and the independent re-derivation
+agreeing with p200 line for line IS the evidence that the knowledge was already there.**
+
+### 🆕 🟢 `P216-2` — what the sweep DID add: `5` new `ECL-2.0` rows, and the reason p200's census could not see them
+
+🟢 **`8` of the `13` Apereo/Sakai/uPortal/Opencast/Unicon-family slugs on these shelves are
+`ECL-2.0`, each read first-hand today through `raw.githubusercontent.com/<slug>/HEAD/LICENSE`:**
+
+| repository | `LICENSE` bytes | status on these shelves before p216 |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `11 120` | 🟢 **carried since p200** — 🟢 **byte-identical, un-drifted** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `11 340` | 🟢 **carried since p200** — 🟢 **byte-identical, un-drifted** |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `9 878` | 🟢 **carried since p212** — 🟢 **byte-identical, un-drifted** |
+| 🆕 [`Apereo-Learning-Analytics-Initiative/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | `11 087` | 🆕 **new grant cell** — blob header also prints `[OSI Approved License]` |
+| 🆕 [`Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | `9 919` | 🆕 **new grant cell** |
+| 🆕 [`Apereo-Learning-Analytics-Initiative/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | `9 919` | 🆕 **new grant cell** |
+| 🆕 [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | `9 919` | 🆕 **new grant cell** |
+| 🆕 [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | `11 087` | 🆕 **new grant cell** |
+
+🔵 **The `5` new rows are one coherent thing: the Apereo **Learning Analytics Initiative** stack —
+extractor → processor → record store → dashboard.** 🔴 **And `T216-2` is the reason p200's census
+could not name them: it queried `license:ecl-2.0 stars:>20`, and
+`LearningAnalyticsProcessor` is `14`★ and `OpenLRS` is `3`★.** 🟢 **`OpenLRW` at `62`★ passed that
+threshold and duly appears on these shelves from p212; the two below it did not.** 🔵 **So a
+`stars:>N` filter on a LICENCE census is a popularity filter, and in a sector whose infrastructure
+is written by consortia rather than by startups it removes the institutional middle of the stack.**
+🟡 **p200 also reported a COUNT it did not enumerate — `18` repositories, `6` printed — so `12`
+were known to exist and left unnamed, which is the gap p215 then read as *"never recorded"*.**
+
+🔴 **What these `5` cells are NOT: a stack to build on.** 🟢 **These shelves already measured the
+whole organisation as abandoned** *([`repos/trending.md`](../repos/trending.md), *"The single worst
+cluster on this shelf"*)*: `lap-sakai-extractor` `2014-12-02` *(`4 330` d)*,
+`LearningAnalyticsProcessor` `2016-05-04` *(`3 811` d)*, `OpenLRS` `2019-01-31` *(`2 809` d)*,
+`OpenLRW` `2020-02-06` *(`2 438` d)*, `OpenDashboard-legacy` `2020-02-17` *(`2 427` d)*,
+`OpenDashboard-api` `2020-03-09` *(`2 406` d)* — 🔴 **`6` of `6`, the youngest `6.6` years old.**
+🔵 **So the honest value of `P216-2` is narrow and should be stated as such: it completes the
+LICENCE column on a row-set whose BUILD verdict was already *abandoned*, which makes these
+repositories citable REFERENCES for xAPI/Caliper conformance — now with a known permissive grant —
+and not candidate bases.** 🟢 **A grant cell is worth having on an archaeological row; it is not
+worth promoting the row.**
+
+🟡 **One further measurement, offered without a conclusion:** the `ECL-2.0` text ships in **`5`
+distinct byte lengths** across this family — `9 878`, `9 919` *(×`3`)*, `11 087` *(×`2`)*,
+`11 120`, `11 340`. 🔴 **A byte-count comparator would call these five different licences.**
+🟢 **A title-window classifier calls all eight `ECL-2.0`, which is the right answer.**
+
+### 🆕 🟢 `P216-3` — `ACTION QI`, answered on the measure that was actually open
+
+🟢 **Stripped of the false novelty claim, `QI` still had one real question: does the INSTRUMENT
+that p215 registered to be made permanent see this family?** 🔴 **It does not — `UNCLASSIFIED` on
+`8` of `8`**, reproducing p200's instrument note exactly.
+
+| the falsifier predicted | what was measured |
+|---|---|
+| rows *"currently reading `Apache-2.0`"* are in fact `ECL-2.0` | 🔴 **the classifier returns `UNCLASSIFIED`, not `Apache-2.0`** — it names nothing rather than naming wrongly |
+| the shelves publish `Apache-2.0` on these rows | 🟢 **the shelves publish `ECL-2.0` and are RIGHT: `157` of `160` grant-claim lines across all ten files** |
+| `SakaiXAPI-Provider` is an isolated instance | 🔴 **`8` of `13` — `62`% of the Apereo population here** |
+
+🟢 **The `3` cells that disagree are small and `2` are not grant cells at all:** `agents/top.md`
+l.`2574` is a slug-resolution note *(`apereo/opencast` vs the canonical `opencast/opencast`)*, and
+`intel/open-gaps.md` l.`2300` is a table about per-file licence HEADERS — 🔵 **`P215`'s documented
+comparator exclusion: a table about licence TEXT prints licence tokens that are not grant
+claims.**
+
+🟢 **Fix shipped, with the ordering constraint that makes it work.** 🔴 **The ECL token cannot be
+appended to the classifier: `ECL-2.0`'s body IS `Apache-2.0`'s text, so a body matcher returns
+`Apache-2.0`, and so does a title-window matcher that tests `apache license` first.** 🟢 **It must
+be tested BEFORE the Apache token** — shipped as `classify_p216` in
+[`ecl_sweep.py`](../compose/code/p216-ecl-sweep/ecl_sweep.py), which runs p215's `classify_p215`
+verbatim underneath so the delta between the two is measured rather than asserted. 🟢 **Over-firing
+tested and absent: `uPortal-Project/uPortal`, `Unicon/tool13demo` and
+`Apereo-Learning-Analytics-Initiative/Larissa` really are `Apache-2.0` and classify identically on
+both instruments — `3` of `3` controls hold.**
+
+### 🆕 🔴 `P216-4` — `ACTION QK` fires on limb `2`: `0` further claims about a person
+
+🔴 **`T215-7` is the most serious defect this KB has recorded, because its object was a named
+individual rather than an artefact.** 🟢 **`QK` asked whether it was the only one. On `43`
+candidates, it was.**
+
+| measure | value |
+|---|---|
+| files swept | **`10`** — the `4` client-facing shelves, `intel/market.md`, `intel/trends.md`, `compose/patterns.md`, both trending shelves, `intel/open-gaps.md`, `README.md` |
+| lines attributing a PRACTICE to an actor **and** carrying an absence marker within `±1` line | **`43`** |
+| 🟢 further PERSON-level practice claims | 🟢 **`0`** |
+| 🔵 the withdrawn `ink-waffle` claim and its withdrawal records | `4` |
+| 🟡 artefact- or shelf-scoped claims, correctly bounded | **`39`** |
+| control: actor-claim lines with no absence marker | `75` |
+| control: absence lines with no actor claim | `3 365` |
+
+🟢 **The `39` are the shape a claim of this kind SHOULD have** — *"`9` of `21` published connector
+packages ship no licence file"*, *"`1` of `21` practise per-file notice"*, *"`3` of three published
+jars ship no licence text"*. 🔵 **Every one names a MEASURED POPULATION of payloads and stops
+there.** 🔴 **The withdrawn claim generalised from two root-only readings to what a person
+habitually does.** 🟢 **So `P215-6`'s rule holds with a measurement behind it: a row may record
+what a channel returned; a claim about a PERSON needs a channel that can support it — and on `43`
+candidates this KB broke that rule exactly once.**
+
+### 🔵 Agent-tier rows affected
+
+🟡 **`0` rows change family, `0` rows change usability, `0` rows are added or removed.** 🟢 **`5`
+grant cells are established first-hand for the first time, all on the learning-analytics tier
+rather than the agent tier — recorded in
+[`repos/foundations.md`](../repos/foundations.md) and
+[`verticals/solutions.md`](../verticals/solutions.md).**
+
+---
+*Pass 216 — `0` new rows, `4` actions discharged, `1` instrument repaired, `1` action register corrected.*
 ## Pass 215 — 2026-10-15 — `ABSENT` WAS A ROOT-ONLY ARTEFACT: `25` OF `94` REPOSITORIES THIS KB CALLED UNGRANTED CARRY A GRANT OFF-ROOT. `8` OF THEM ARE AGENT ROWS, AND ONE WAS AN ACCUSATION
 
 🔵 **`0` new agent rows this pass.** 🟢 **The `8` mandated searches were run verbatim — `4` global,

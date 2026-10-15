@@ -1,0 +1,36 @@
+# p216 - ACTION QH: the 18-form root probe tested against ONE variable.
+#
+# Population: p211's 94 ABSENT rows MINUS p215's 25 recoveries = 69 rows (set-verified: 25 of 25
+# recovered slugs are inside the 94, 0 outside). NOTE: open-gaps.md's p216 registration says
+# "the 63 remaining ungranted rows". 94 - 25 = 69. See P216-1.
+#
+# Method, deliberately one variable:
+#   1. git ls-remote --symref https://github.com/<slug> HEAD   -> the TRUE default branch
+#      (p205's ACTION PC established that guessing main/master is itself a loss mode)
+#   2. ONE GET of raw.githubusercontent.com/<slug>/<branch>/LICENSE
+#      No case variants, no extensions, no subdirectories, no manifests.
+#
+# Falsifier (registered by p215): limb 1 = 2+ recoveries -> the probe has a loss mode independent
+# of path reach. limb 2 = 0-1 -> T215-2's two rows were transient and the form list is sound.
+#
+# RESULT: 0 of 69. 66 x HTTP 404, 3 x no symref at all. LIMB 2 FIRES.
+#
+# method: compose/code/p216-root-license-reprobe/reprobe.py + build_worklist.py
+status	count	reading
+404	66	plain root LICENSE does not exist on the true default branch
+NO-SYMREF	3	git ls-remote returns no ref line: the repository does not resolve from here at all
+200	0	no row recovered a grant on this channel
+#
+# The 3 NO-SYMREF rows, and why they are NOT a new finding:
+slug	symref	note
+cdweaver1992/edfi-mcp-server	NO-SYMREF	p215 recorded this as a failure (clone succeeded, ls-tree empty at HEAD). Independently reproduced on a DIFFERENT channel (ls-remote, not clone), so it is not transient.
+jakerains/scormplayer	NO-SYMREF	p215 recorded "clone refused". Reproduced.
+openfresno/edgenuity-aeries-grade-passback	NO-SYMREF	p215 recorded this as a failure (clone succeeded, ls-tree empty at HEAD). Reproduced.
+#
+# ANCHOR DEFECT, recorded because it sent this pass at the wrong population:
+# QH was registered on T215-2, citing thm-mni-ii/feedbacksystem (LICENSE, 10 785 B) and
+# skhdemo/uoft-quercus-mcp (LICENSE, 1 086 B) as rows "recorded ABSENT after 18 forms" that
+# "serve a plain LICENSE at root". Both are in p215's OWN recovered set
+# (evidence/lstree-grant-recovery.2026-10-15-p215.tsv), so neither was in the remaining
+# population QH was asked to re-probe. The action's evidence had already been discharged by the
+# pass that registered it.

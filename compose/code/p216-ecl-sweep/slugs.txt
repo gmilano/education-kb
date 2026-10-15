@@ -1,0 +1,15 @@
+# ACTION QI population: every Apereo/Sakai/uPortal/Opencast/Unicon-family slug carried on the
+# four client-facing shelves, lifted by regex and collapsed on owner case (P215-F6's class).
+Apereo-Learning-Analytics-Initiative/Larissa
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy
+Apereo-Learning-Analytics-Initiative/OpenLRS
+Apereo-Learning-Analytics-Initiative/OpenLRW
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor
+Unicon/tool13demo
+apereo/opencast
+opencast/opencast
+sakaiproject/sakai
+uPortal-Project/uPortal

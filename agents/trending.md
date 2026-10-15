@@ -5,6 +5,73 @@ updated: 2026-10-15
 ---
 
 
+## 2026-10-15 — Pass 216 — `0` new agents for the fifth pass, and the thing that moved is this KB's own action register
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 Nothing new arrived, stated as a measurement for the fifth consecutive pass
+
+🟢 **All `8` mandated searches ran verbatim** — `top open source AI agents education 2026 github
+MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`,
+`AI education industry trends 2026`, and the four regional runs of
+`AI education {region} 2026 adoption regulation players`.
+
+🔴 **Named entities returned that these shelves do not already hold: `0`.** 🔵 **Checked by name,
+one at a time, not assumed:**
+
+| returned by the mandated searches | already on these shelves |
+|---|---|
+| `Project NOMAD` *(offline education server, ~`39.8`k★ per an aggregator)* | 🟢 yes |
+| `OpenEduCat` *(education ERP on Odoo)* | 🟢 yes |
+| `Aureus ERP`, `Corteza`, `Apache OFBiz`, `ERPNext`, `Krayin` | 🟢 yes |
+| `rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, `karpathy/nanochat` | 🟢 yes — 🟡 **and all teaching MATERIAL about building agents, not education-sector agents: the `T176` category confusion, now on its second consecutive appearance** |
+| `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)*, California `AB 1159`, Idaho `SB 1227`, `Katy ISD`, the NYC K-8 moratorium | 🟢 yes |
+| UNESCO `IESALC` `200`-institution / `19`-country study; the LAC `Observatory` | 🟢 yes |
+| Korea `AI Basic Act`; Vietnam `Decision 33/2026/QĐ-TTg`; Taiwan `AI Basic Act`; Australia's National AI Plan | 🟢 yes |
+| `MEXT`; Singapore `MOE` / `AICET`; India `CBSE`/`NCERT` Classes `3`–`8` mandate; Spain `INTEF` Guía v`2.0`; the Commission/OECD/G7 **AI Literacy Framework** | 🟢 yes |
+
+🟢 **`T214-2` has five consecutive confirmations.** 🔵 **For this industry the general web search
+is a REGRESSION TEST, and it passed again. The discovery budget belongs on channels that read
+repositories.**
+
+### 🆕 🔴 The signal this pass: `ACTION QI` was registered as a discovery, and pass `200` had already made it
+
+🔴 **p215 registered `ACTION QI` on `T215-8`, which states that `ECL-2.0` *"appears NOWHERE on
+these shelves before p215"* and is *"a licence family this KB had never recorded"*.**
+🔴 **`repos/foundations.md` l.`1373` is headed **`## Pass 200 — 2026-10-14 — ECL-2.0: EDUCATION HAS
+ITS OWN LICENCE AND THIS KB HAD NEVER NAMED IT`**, and it establishes the OSI approval, the
+quoted `§3` patent-scope narrowing, an `18`-repository family census, `sakai` at `11 120` B,
+`opencast` at `11 340` B, and the instrument note that a generic family detector returns
+`UNCLASSIFIED` on all of them.** 🟢 **p212 then published `OpenLRW` as `ECL-2.0` with its
+`9 878` B blob.**
+
+🔵 **So the propagation defect that `P211-1` *(`6`/`7`)*, `P214-3` *(`3`/`4`)* and `QG` *(`23`/`7`)*
+each measured in CELLS has now been observed in the ACTION REGISTER — the list that decides what
+the next pass spends its budget on.** 🔴 **p216 re-derived p200's result from scratch to find
+this out, and the agreement line-for-line is the evidence.** 🟢 **`ACTION QL` registered for p217:
+before an action is written on a claim of novelty, `grep` the shelves for the family, the slug or
+the licence token it claims is absent.**
+
+### 🆕 🟢 `3` of `4` registered actions closed on limb `2` — and a limb `2` is a result
+
+| action | falsifier | verdict |
+|---|---|---|
+| **`QH`** — is the `18`-form root probe lossy beyond path reach? | limb `1`: `2`+ recoveries on a plain root `LICENSE` | 🟢 **limb `2`. `0` of `69`** — `66` × `404`, `3` unresolvable. The form list is sound |
+| **`QK`** — further PERSON-level claims resting on an absence? | limb `1`: `1`+ | 🟢 **limb `2`. `0` of `43`** candidate lines; the `39` artefact-scoped claims are correctly bounded |
+| **`QJ`** — should the mandated region query be replaced by organ-named ones? | limb `1`: `3`+ dated `2026` instruments the cells lack | 🟢 **limb `2`. `0`** — the organ-named queries returned `INTEF`, `KMK`, `MEXT`, `MOE`, `CBSE`/`NCERT` and the Commission framework, every one already carried. 🔴 **The region SHAPE was never the defect; the regional cells are saturated on BOTH shapes** |
+| **`QI`** — is `ECL-2.0` published as `Apache-2.0`? | limb `1`: `2`+ rows | 🟡 **fires on the INSTRUMENT *(`UNCLASSIFIED` on `8` of `8`)*, limb `2` on the CELLS *(`157` of `160` already right)*, and its premise is refuted outright** |
+
+### 🆕 🟡 The one new artefact, and it is unverifiable from here
+
+🟡 **An ENGLISH edition of Spain's `INTEF` *Guide on the use of AI in Education* v`2.0` is
+reported at `code.intef.es/wp-content/uploads/2026/10/…_version-2_final_English.pdf`.**
+🟢 **These shelves already carry the Spanish v`2.0` *(`1` Sept `2026`)*; an English edition is new
+and directly usable for an EMEA engagement.** 🔴 **`code.intef.es` returns `000` from this
+environment, so this is a SEARCH-SNIPPET claim and is recorded as unverified, consistent with the
+standing channel note on government hosts.**
+
+---
+*Pipeline automático — `0` new agent rows, `4` actions discharged. v216.*
 ## 2026-10-15 — Pass 215 — `0` new agents, and `8` existing agent rows stopped being unlicensed
 
 🟢 **APPEND-ONLY. History below this section is intact.**

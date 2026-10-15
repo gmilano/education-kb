@@ -1,0 +1,26 @@
+### p215's 25 recoveries, in the 2 files p215 did NOT sweep
+files: 2   repos: 25   grant-claim lines: 50
+tally: {'RIGHT': 31, 'WRONG-ABSENCE': 15, 'WRONG-FAMILY': 4}
+file	line	slug	truth	verdict	tokens	absence	text
+intel/open-gaps.md	21	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE	MIT	ABSENT,ungranted	| 🆕 🔴 **`ACTION QH`** — test the `18`-form root probe ITSELF, rather than trusting it a nineteenth time | 🆕 `T215-2`: [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) *(`LICENSE`, `10 785` B)* and [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) *(
+intel/open-gaps.md	553	LMS-Laravel/LMS-Laravel	MIT	WRONG-ABSENCE		no grant	[`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) (`505★`, **no grant at
+intel/open-gaps.md	807	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, SEVENTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005
+intel/open-gaps.md	950	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, SIXTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/m
+intel/open-gaps.md	1072	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, fifth pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/m
+intel/open-gaps.md	4364	kstateome/lti-launch	LGPL-3.0	WRONG-ABSENCE		no licence	- 🟢 **CLOSED — `kstateome/lti-launch` recorded as having no licence file.** It serves
+intel/open-gaps.md	6163	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	none	and 13 further addresses commit none** (`OS4ED/openSIS-Classic`, `LearnPress/learnpress`,
+intel/open-gaps.md	8176	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	MIT	none	| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | scorer — 4 BEA-2025 dimensions | 🔴 **none** (paper claims MIT; `P1014`) | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` 🟢 **un-drifted from p101** | 🟢 `README.md` **14 451 B** |
+intel/open-gaps.md	9291	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE		ungranted	🔴 `thm-mni-ii/feedbacksystem` → **`dev`**. 🔴 `OpenOLAT/OpenOLAT` → **`master`**. 🟢 **Two of twelve probed repositories do not resolve to `main`.** 🔵 Both are on the **platform** tier, where a hardcoded branch silently converts a granted, deployed system into an ungranted one.
+README.md	64	foradian/fedena	Apache-2.0	WRONG-ABSENCE		no licence	languages; this KB's *"no licence body at all"* was a root-only reading. 🔴 **`foradian/fedena`
+README.md	1004	Lumieducation/Lumi	AGPL-3.0	WRONG-ABSENCE		no licence	SCORM→xAPI wrapper and `Lumieducation/Lumi` all return **no licence at root**; `adlnet` elects
+README.md	1025	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		NONE	- 🟡 **`18.8`% root-`NONE` is an UPPER BOUND on absence**: `OS4ED/openSIS-Classic` returns `NONE`
+README.md	1595	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	no licence	| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is unchanged: `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4E
+README.md	1764	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	no grant,no licence	| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is now `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith` and `VICKY07092005/moodle-5-1-authentic-relay` *(both cla
+README.md	2908	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed for a
+README.md	3022	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed this
+README.md	3132	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` are UNRESOLVED, not absent:** `404` on one
+README.md	7164	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-ABSENCE		none	🔴 **`pipwerks/scorm-api-wrapper` declares a grant and this KB said it had none.** It is in
+README.md	7375	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-FAMILY	UNLICENSE		🟢 **`ACTION BR`** — dependency closure of the unlicensed `pipwerks/scorm-api-wrapper` across this
+
+>>> stale/contradicting cells OUTSIDE p215's gate scope: 19
+>>> (inside its scope, after p215's own corrections: 50)

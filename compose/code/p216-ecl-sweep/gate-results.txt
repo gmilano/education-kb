@@ -1,0 +1,97 @@
+==============================================================================
+JOB 1 — ACTION QI: what the shelves publish for the 8 ECL-2.0 repositories
+==============================================================================
+
+### ECL truth, over ALL TEN files
+files: 10   repos: 8   grant-claim lines: 160
+tally: {'RIGHT': 157, 'WRONG-ABSENCE': 1, 'WRONG-FAMILY': 2}
+file	line	slug	truth	verdict	tokens	absence	text
+agents/top.md	2574	opencast/opencast	ECL-2.0	WRONG-ABSENCE		absent	| `25` | [`opencast/opencast`](https://github.com/opencast/opencast) | `508` | `2017-12-23` | 🟢 the real slug; `apereo/opencast` stays absent |
+intel/open-gaps.md	2300	sakaiproject/sakai	ECL-2.0	WRONG-FAMILY	LGPL-2.1		| 🟡 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `129` | 🟢 **`0`** | 🟢 **`129`** | `72` | 🟢 **`0`** | 🟡 **`3`** *(2 `LGPL-2.1`, 1 `IPL-1.0`)* |
+README.md	940	sakaiproject/sakai	ECL-2.0	WRONG-FAMILY	AGPL-3.0,APACHE-2.0		`openedx/edx-platform` is **`AGPL-3.0`** *(`35 136` B)*, not Apache-2.0; `sakaiproject/sakai`
+
+==============================================================================
+JOB 2 — ACTION QG placement: is p215's 8-file gate scope sufficient?
+==============================================================================
+
+### p215's 25 recoveries, in the 8 files p215 SWEPT
+files: 8   repos: 25   grant-claim lines: 336
+tally: {'RIGHT': 286, 'WRONG-ABSENCE': 37, 'WRONG-FAMILY': 13}
+file	line	slug	truth	verdict	tokens	absence	text
+agents/top.md	2064	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		NONE	[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `NONE` at root —
+agents/top.md	5012	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		NO grant	🔴 **`os4ed/openSIS-Classic` is an ACTIVE student information system (HEAD `2026-10-05`) with NO grant
+agents/top.md	7983	ink-waffle/moodle-mcp	MIT	WRONG-ABSENCE		NONE	| 🔴 `@ink-waffle/moodle-mcp` 0.2.0 | 🔴 **NONE** in 1 version | n/a |
+repos/foundations.md	6615	ink-waffle/moodle-mcp	MIT	WRONG-ABSENCE		none	| `@ink-waffle/moodle-mcp@0.2.0` | none | 🔴 **18 `.map` files, zero `sourcesContent`** |
+verticals/solutions.md	2447	formalms/formalms	GPL-2.0	WRONG-FAMILY	APACHE-2.0,ECL-2.0		`ECL-2.0`**, and 🔴 **reports `formalms/formalms` as `Apache-2.0` in one listing and `GPL` in
+intel/market.md	60	virtualarkansas/jupyterlite-zestables	MIT	WRONG-FAMILY	GPL-2.0		`GPL-2.0` with the body in-tree; `virtualarkansas/jupyterlite-zestables` — a **state virtual
+intel/market.md	188	formalms/formalms	GPL-2.0	WRONG-ABSENCE		no licence	[`formalms/formalms`](https://github.com/formalms/formalms) as having *"no licence body at
+compose/patterns.md	150	foradian/fedena	Apache-2.0	WRONG-FAMILY	MIT		step and `foradian/fedena` resolves to `MIT` from `vendor/plugins/delayed_job/MIT-LICENSE` —
+compose/patterns.md	626	kaushal0494/AITutor-EvalKit	ISC	WRONG-FAMILY	MIT		| quality harness | [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🟡 **`MIT` (README only; sidebar unclassified)** | 🔴 **`3`** | `2026-10-15` | Pedagogical-quality scoring on mistake identification, mistake location, guidance, actionability — the pre-deployment tes
+compose/patterns.md	2600	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		NONE	[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `NONE` at root and
+compose/patterns.md	3770	Simon-Initiative/lti-example-tool	MIT	WRONG-ABSENCE		no licence	| `3` | **the ECOSYSTEM MANIFEST** — `package.json`, `DESCRIPTION`, `pyproject.toml`, `pom.xml`, `Cargo.toml`, `composer.json`, … | 🔴 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) and [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) have *
+compose/patterns.md	3770	ink-waffle/sisu-mcp	MIT	WRONG-ABSENCE		no licence	| `3` | **the ECOSYSTEM MANIFEST** — `package.json`, `DESCRIPTION`, `pyproject.toml`, `pom.xml`, `Cargo.toml`, `composer.json`, … | 🔴 [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) and [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) have *
+intel/trends.md	2102	formalms/formalms	GPL-2.0	WRONG-ABSENCE		no licence	| **licence as a translated UI asset**, nothing at root | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 *"no licence"* |
+agents/trending.md	4733	Simon-Initiative/lti-example-tool	MIT	WRONG-ABSENCE	UNLICENSE	ABSENT	| [`Simon-Initiative/lti-example-tool`](https://github.com/Simon-Initiative/lti-example-tool) | 🔴 **ABSENT** (5 filenames) | *not measured* | — | CMU Simon Initiative, in Gleam — an **unlicensed** reference implementation |
+agents/trending.md	5138	ink-waffle/sisu-mcp	MIT	WRONG-ABSENCE		none	| [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🔴 **none** | 1 | **EMEA (Finland)** | Sisu / Funidata (**any** deployment) |
+agents/trending.md	5559	open-spaced-repetition/fsrs4anki-helper	MIT	WRONG-ABSENCE		NO GRANT	| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** in 6 filenames · `main` · `29208f2` |
+agents/trending.md	6203	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	MIT	NONE	| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 3 | 🔴 already NONE | 🔴 MIT badge linking to `LICENSE` → **404** |
+agents/trending.md	9020	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		ABSENT	said rather than counted. 🟢 Invented slug → `ABSENT` (git exit 128). 🟢 `OS4ED/openSIS-Classic` → 404 on
+agents/trending.md	11369	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	MIT	NO GRANT	| `kaushal0494/AITutor-EvalKit` | 🔴 **NO GRANT** — 5 licence paths `404`, README asserts MIT twice | — |
+agents/trending.md	12510	DMontgomery40/mcp-canvas-lms	MIT	WRONG-ABSENCE		UNGRANTED	| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **UNGRANTED** — real, no payload |
+agents/trending.md	12673	formalms/formalms	GPL-2.0	WRONG-FAMILY	APACHE-2.0		`formalms/formalms` (**`P470`** — secondary sources call it Apache-2.0; payload, Packagist and
+agents/trending.md	12864	kaushal0494/AITutor-EvalKit	ISC	WRONG-FAMILY	MIT		| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | **No payload** (repo exists) | ⚠️ **Fourth reproduction** of the *"released under an MIT license"* claim in search summaries. The paper says MIT; the repo does not. **The correction holds** |
+agents/trending.md	12930	DMontgomery40/mcp-canvas-lms	MIT	WRONG-ABSENCE		NO LICENCE,no grant	| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **NO LICENCE PAYLOAD** | — | repo real, no grant under 12 probed filenames |
+agents/trending.md	12985	formalms/formalms	GPL-2.0	WRONG-ABSENCE		no licence	- [`formalms/formalms`](https://github.com/formalms/formalms) has **no licence payload** — `LICENSE`,
+agents/trending.md	14370	ink-waffle/moodle-mcp	MIT	WRONG-ABSENCE		none	| `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` | `@ink-waffle/*` | none declared |
+agents/trending.md	14370	ink-waffle/sisu-mcp	MIT	WRONG-ABSENCE		none	| `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` | `@ink-waffle/*` | none declared |
+agents/trending.md	19436	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	MIT	none	| [kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) — EACL 2026 | MIT, in the paper | **none** |
+agents/trending.md	19722	DMontgomery40/mcp-canvas-lms	MIT	WRONG-ABSENCE		NONE,No licence,no licence	| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 103 | **NONE** — no `LICENSE` on any branch, no licence statement in README | 54 tools, v2.3.0 | **Do not use.** No licence = all rights reserved. |
+agents/trending.md	19950	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		sin archivo	| `OS4ED/openSIS-Classic` | 345 ★ | 🔴 **sin archivo de cesión** (8 sondas, `README` 200) | se presenta como *«commercial grade»*: la clase de `P412` |
+agents/trending.md	25463	ink-waffle/moodle-mcp	MIT	WRONG-ABSENCE		sin licencia	| `ink-waffle/moodle-mcp` | 🟢 original, 🔴 **sin licencia**, 2 ★ — **24 *tools*, la mayor superficie Moodle medida** |
+agents/trending.md	26752	kaushal0494/AITutor-EvalKit	ISC	WRONG-FAMILY	MIT		| `kaushal0494/AITutor-EvalKit` | **MIT ✅** | **ídem, ausencia medida** | *badge* `license-MIT` + sección *«## License / This project is licensed under the MIT License.»* **enlazando un `LICENSE` que no existe** |
+repos/trending.md	944	ProjectsAndPrograms/school-management-system	MIT	WRONG-ABSENCE		no grant	| [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** | **206** | `111` | 🔴 Unusable regardless of quality |
+repos/trending.md	965	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		no licence	[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**345★**) has no licence
+repos/trending.md	1786	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		no licence	| 🆕 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `GPL` **by reference in the README only**, no licence file | `345` | North America |
+repos/trending.md	2862	foradian/fedena	Apache-2.0	WRONG-ABSENCE		ABSENT	| 🆕 🔴 [`foradian/fedena`](https://github.com/foradian/fedena) | 🟡 **same grant, body ABSENT** | 🔴 **`2012-10-12`** | 🔴 **the original tree — fourteen years stale** |
+repos/trending.md	5369	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-ABSENCE		NO LICENCE,absent	| [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper) | 🔴 **NO LICENCE FILE** | **391** | 2026-09-18 | The sector's canonical SCORM wrapper. **Eight filenames probed, all absent.** 130 forks inherit the defect |
+repos/trending.md	5444	virtualarkansas/jupyterlite-zestables	MIT	WRONG-ABSENCE		no licence	| [`virtualarkansas/jupyterlite-zestables`](https://github.com/virtualarkansas/jupyterlite-zestables) | 🔴 **no licence** | 0 | 2026-02-22 | North America (Virtual Arkansas) |
+repos/trending.md	5728	ink-waffle/moodle-mcp	MIT	WRONG-ABSENCE		none	| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🔴 **none** | 6 | 2026-10-01 |
+repos/trending.md	5945	open-spaced-repetition/fsrs4anki-helper	MIT	WRONG-ABSENCE		NO GRANT	| 🔴 [`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** | 4 |
+repos/trending.md	8254	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE		none	| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | scorer (4 BEA-2025 dimensions) | 🔴 **none** | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` 🟢 **un-drifted from p101** | 🟢 `README.md` 14 451 B |
+repos/trending.md	9163	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		ABSENT	measurement; 🟢 invented slug `ABSENT`; 🟢 `OS4ED/openSIS-Classic` 404 on three licence names, reproducing a
+repos/trending.md	12607	formalms/formalms	GPL-2.0	WRONG-FAMILY	APACHE-2.0		Apache-2.0 claim on `formalms/formalms` that **Packagist 404 could not settle**. A reachable npm registry
+repos/trending.md	12638	formalms/formalms	GPL-2.0	WRONG-FAMILY	APACHE-2.0		[`formalms/formalms`](https://github.com/formalms/formalms) (**`P470`** — published as Apache-2.0<!--corrected--> by
+repos/trending.md	13419	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 **unread** | `docs/License.txt` + `docs/LICENSE.rtf` | **format** — a limit, not an absence |
+repos/trending.md	13419	OS4ED/openSIS-Responsive-Design	GPL-2.0	WRONG-FAMILY	MIT		| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`-Responsive-Design`](https://github.com/OS4ED/openSIS-Responsive-Design) | 🔴 **unread** | `docs/License.txt` + `docs/LICENSE.rtf` | **format** — a limit, not an absence |
+repos/trending.md	14315	nvaccess/nvda	GPL-2.0	WRONG-FAMILY	AGPL-3.0,LGPL-3.0		`asterics/AsTeRICS-Grid` AGPL-3.0 (124★/65, Vienna), `pa11y/pa11y` LGPL-3.0, `nvaccess/nvda`
+repos/trending.md	15814	projectfedena/fedena	Apache-2.0	WRONG-ABSENCE		None	| `projectfedena/fedena` ("official" per the secondary source) | **No** — 404 on README and 5 licence filenames, both branches | None readable |
+repos/trending.md	15815	foradian/fedena	Apache-2.0	WRONG-ABSENCE		None	| [`foradian/fedena`](https://github.com/foradian/fedena) — **the vendor that built Fedena** | **Yes** — `README.md` 404s on every branch, but `master/config/routes.rb` and `master/Gemfile` return **200** | **None.** 7 licence filenames × 8 branches probed |
+repos/trending.md	16301	formalms/formalms	GPL-2.0	WRONG-FAMILY	AGPL-3.0,ECL-2.0,GPL-3.0		> **Pase 125 del 2026-10-05 (lectura `22:50Z`):** 🟢 **El hallazgo del pase es un CANAL, no una fila: `github.com/search` estaba declarado muerto en este árbol y responde 200 con resultados reales a `WebFetch` (403 a `curl`) ⇒ acción Y CONFIRMADA, y lo que se había perdido era la ENUMERACIÓN.** Rinde
+repos/trending.md	16453	LMS-Laravel/LMS-Laravel	MIT	WRONG-ABSENCE		sin archivo	**8 sin archivo de cesión** (con `README` 200, o sea existen): `LMS-Laravel/LMS-Laravel` (505 ★) · `aaryansamanta/ai-ethos` (499 ★) · `hkalant/awesome-edtech-tools` (215 ★) · `bobuel/bloom-taxonomy-quiz-builder-skill` · `LeoLiu363/ai-video-understanding` · `ShubhSarin/youtube-study-helper` · `tanghu
+
+### p215's 25 recoveries, in the 2 files p215 did NOT sweep
+files: 2   repos: 25   grant-claim lines: 50
+tally: {'RIGHT': 31, 'WRONG-ABSENCE': 15, 'WRONG-FAMILY': 4}
+file	line	slug	truth	verdict	tokens	absence	text
+intel/open-gaps.md	21	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE	MIT	ABSENT,ungranted	| 🆕 🔴 **`ACTION QH`** — test the `18`-form root probe ITSELF, rather than trusting it a nineteenth time | 🆕 `T215-2`: [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) *(`LICENSE`, `10 785` B)* and [`skhdemo/uoft-quercus-mcp`](https://github.com/skhdemo/uoft-quercus-mcp) *(
+intel/open-gaps.md	553	LMS-Laravel/LMS-Laravel	MIT	WRONG-ABSENCE		no grant	[`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) (`505★`, **no grant at
+intel/open-gaps.md	807	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, SEVENTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005
+intel/open-gaps.md	950	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, SIXTH pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/m
+intel/open-gaps.md	1072	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	MIT		| 🔴 **`ACTION MN`** *(carried, a human decides, fifth pass)* — may this KB open licensing issues on third-party repositories? | this pass's `ACTION MN` row in [`README.md`](../README.md) | 🟢 **limb `1`:** authorised → the queue is `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/m
+intel/open-gaps.md	4364	kstateome/lti-launch	LGPL-3.0	WRONG-ABSENCE		no licence	- 🟢 **CLOSED — `kstateome/lti-launch` recorded as having no licence file.** It serves
+intel/open-gaps.md	6163	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	none	and 13 further addresses commit none** (`OS4ED/openSIS-Classic`, `LearnPress/learnpress`,
+intel/open-gaps.md	8176	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	MIT	none	| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | scorer — 4 BEA-2025 dimensions | 🔴 **none** (paper claims MIT; `P1014`) | `main` · `a71078456a90a7bb616f7c7e1de83f0bfbc44ab1` 🟢 **un-drifted from p101** | 🟢 `README.md` **14 451 B** |
+intel/open-gaps.md	9291	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE		ungranted	🔴 `thm-mni-ii/feedbacksystem` → **`dev`**. 🔴 `OpenOLAT/OpenOLAT` → **`master`**. 🟢 **Two of twelve probed repositories do not resolve to `main`.** 🔵 Both are on the **platform** tier, where a hardcoded branch silently converts a granted, deployed system into an ungranted one.
+README.md	64	foradian/fedena	Apache-2.0	WRONG-ABSENCE		no licence	languages; this KB's *"no licence body at all"* was a root-only reading. 🔴 **`foradian/fedena`
+README.md	1004	Lumieducation/Lumi	AGPL-3.0	WRONG-ABSENCE		no licence	SCORM→xAPI wrapper and `Lumieducation/Lumi` all return **no licence at root**; `adlnet` elects
+README.md	1025	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE		NONE	- 🟡 **`18.8`% root-`NONE` is an UPPER BOUND on absence**: `OS4ED/openSIS-Classic` returns `NONE`
+README.md	1595	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	no licence	| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is unchanged: `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith`, `VICKY07092005/moodle-5-1-authentic-relay`, `OS4E
+README.md	1764	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	MIT	no grant,no licence	| 🔴 **`ACTION MN`** *(carried, for a human)* | decide whether this KB may open licensing issues on third-party repositories, and on which rows | 🟢 **limb `1`:** authorised → the queue is now `Nasus20202/MoodleMCP`, `Rick-254/moodle-quizsmith` and `VICKY07092005/moodle-5-1-authentic-relay` *(both cla
+README.md	2908	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed for a
+README.md	3022	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` remain UNRESOLVED, not absent** — unprobed this
+README.md	3132	formalms/formalms	GPL-2.0	WRONG-ABSENCE		absent	- 🔴 **`formalms/formalms` and `apereo/opencast` are UNRESOLVED, not absent:** `404` on one
+README.md	7164	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-ABSENCE		none	🔴 **`pipwerks/scorm-api-wrapper` declares a grant and this KB said it had none.** It is in
+README.md	7375	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-FAMILY	UNLICENSE		🟢 **`ACTION BR`** — dependency closure of the unlicensed `pipwerks/scorm-api-wrapper` across this
+
+>>> stale/contradicting cells OUTSIDE p215's gate scope: 19
+>>> (inside its scope, after p215's own corrections: 50)

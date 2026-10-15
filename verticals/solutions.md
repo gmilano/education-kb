@@ -5,6 +5,90 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — THE PLATFORM TIER'S LICENCE FAMILY, RE-READ AT CLAUSE LEVEL: `ECL-2.0` IS PERMISSIVE ON COPYRIGHT AND NARROWER THAN `Apache-2.0` ON PATENTS, AND THAT IS THE SENTENCE A STUDIO HAS TO PUT IN A CONTRACT
+
+🔵 **`0` new platform rows.** 🟢 **`ACTION QI` discharged.** 🔵 **Method:
+[`compose/code/p216-ecl-sweep/`](../compose/code/p216-ecl-sweep/README.md); evidence:
+[`evidence/ecl-classifier-blindspot.2026-10-15-p216.tsv`](../evidence/ecl-classifier-blindspot.2026-10-15-p216.tsv).**
+
+### 🆕 🟢 `P216-V1` — the two platform rows that matter, with the grant read from the blob
+
+🟢 **Both are `ECL-2.0`, both byte-identical to p200's readings, both confirmed today:**
+
+| platform | repo | grant *(blob, bytes)* | what it is | region of install base |
+|---|---|---|---|---|
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** · `11 120` B | Full LMS/VLE in Java — the reference `ECL-2.0` codebase | 🟢 **Global** |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **`ECL-2.0`** · `11 340` B | Automated lecture capture and video distribution at scale | 🟢 **EMEA**-led *(German/European universities)* |
+
+🔵 **Opencast remains the piece this KB has repeatedly noted that no LLM framework provides: if a
+client wants AI over lecture VIDEO, the capture and distribution layer is this, and it is
+permissive.**
+
+### 🆕 🟢 `P216-V2` — the clause, quoted, because *"Apache-derived"* is not a procurement answer
+
+🟢 **From `sakaiproject/sakai`'s `LICENSE` l.`9`–`13`, read today:**
+
+```
+The Educational Community License version 2.0 ("ECL") consists of the Apache
+2.0 license, modified to change the scope of the patent grant in section 3 to
+be specific to the needs of the education communities using this license.
+```
+
+🟢 **On the COPYRIGHT axis there is nothing to negotiate: `ECL-2.0` is `Apache-2.0`.** Permissive,
+commercial use, sublicensable, no copyleft, OSI-approved *(`opensource.org/licenses/ECL-2.0`;
+`OpenLRS`' blob prints `[OSI Approved License]` in its own header)*. 🔴 **The amendment is in the
+patent grant, and it is written for universities** *(l.`95`–`100`)*:
+
+> *"Any patent license granted hereby with respect to contributions by an individual employed by an
+> institution or organization is limited to patent claims where the individual that is the author
+> of the Work is also the inventor of the patent claims licensed, and where the organization or
+> institution has the right to grant such license under applicable grant and research funding
+> agreements."*
+
+🔴 **Read plainly, and this is the operative difference for a deliverable:** where an `Apache-2.0`
+contribution carries a patent peace from the contributor's employer, an `ECL-2.0` contribution
+may not — **because a university's grant or research-funding agreement can withhold the right to
+grant it.** 🔵 **Nothing about distribution changes. What changes is the patent warranty a studio
+can offer on a Sakai or Opencast derivative**, and the honest position to take into a contract
+review is: permissive to ship, with a patent indemnity that cannot be inherited from upstream and
+must be priced or carved out.
+
+🟢 **Credit where it belongs: p199 called this *"Apache-derived with an education-specific patent
+clause"* and p200 quoted the scope and named the consequence.** 🔴 **p215 then registered
+`ACTION QI` on the claim that the family had never been recorded, and this pass paid to rediscover
+it.** 🔵 **The licence reading is `16` passes old and correct; the register was wrong.**
+
+### 🆕 🟡 `P216-V3` — the learning-analytics tier is permissive and dead, and both halves must be said together
+
+🟢 **`5` further `ECL-2.0` grant cells established first-hand this pass**, all in
+`Apereo-Learning-Analytics-Initiative`: `OpenLRS` *(`11 087` B)*, `LearningAnalyticsProcessor`
+*(`9 919`)*, `OpenDashboard-api` *(`9 919`)*, `OpenDashboard-legacy` *(`9 919`)*,
+`lap-sakai-extractor` *(`11 087`)*, alongside `OpenLRW` *(`9 878`, un-drifted from p212)*.
+
+🔴 **`6` of `6` repositories in that organisation are abandoned — youngest `6.6` years, oldest
+`11.9`** *(measured at p109 from commit dates and at p111 independently from Travis dependence)*.
+🔵 **So the platform-tier verdict is unchanged and now fully specified:**
+
+| question a client asks | answer this KB can now give |
+|---|---|
+| *"Can we build on the open learning-analytics stack?"* | 🔴 **No maintained option on these shelves.** The `ECL-2.0` stack of the mid-`2010s` is permissive and unmaintained |
+| *"Can we READ it?"* | 🟢 **Yes, and now lawfully and knowingly** — `ECL-2.0` on all six, grants read from the blob |
+| *"What do we deploy instead?"* | 🔵 **Sakai or Opencast for the platform**, with the record layer built rather than adopted — and the segment gap stated to the client rather than papered over |
+
+🟢 **`T216-3`: in education the licence axis and the maintenance axis are INDEPENDENT, and a
+permissive grant on an abandoned repository is a citation right, not a build decision.** 🔴 **This
+KB has twice promoted rows on grant alone; the pairing is now a standing rule on this shelf.**
+
+### 🔵 Platforms re-confirmed, `0` cells changed
+
+🟢 **`uPortal-Project/uPortal`, `Unicon/tool13demo` and
+`Apereo-Learning-Analytics-Initiative/Larissa` are genuinely `Apache-2.0`** — classified
+identically by p215's instrument and p216's, 🔵 **so the new ECL token does not over-fire on the
+neighbouring Apache population: `3` of `3` controls hold.** 🟡 **`apereo/opencast` serves no blob
+on `14` paths and is not the canonical slug; `opencast/opencast` is.**
+
+---
+*Pass 216 — `0` new platform rows, `1` licence family re-read at clause level, `5` grant cells added.*
 ## Pass 215 — 2026-10-15 — THREE PLATFORMS MOVE FROM *"UNUSABLE"* TO BUILDABLE, AND ONE `P971` INSTANCE IS WITHDRAWN
 
 🔵 **`0` new platform rows.** 🟢 **`ACTION QD` re-read the `94` `ABSENT` rows through the

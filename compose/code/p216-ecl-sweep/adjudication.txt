@@ -1,0 +1,27 @@
+hits examined: 19
+  in a DATED / registration / verdict section (a RECORD): 10
+  in a LIVE section (a current claim):                    9
+
+--- LIVE claims contradicted by p215's own readings ---
+file	line	slug	truth	verdict	heading_line	heading
+intel/open-gaps.md	553	LMS-Laravel/LMS-Laravel	MIT	WRONG-ABSENCE	547	### 🔴 One ask that only a human can answer — and it is now ONE, not two
+intel/open-gaps.md	6163	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	6155	### 🟡 `Gap 409` — PARTLY RETRACTED, and the retracted row is the largest LMS in the world
+intel/open-gaps.md	8176	kaushal0494/AITutor-EvalKit	ISC	WRONG-ABSENCE	8172	### 🔴 `Gap 393` OPENED — a benchmark with no grant on either half
+intel/open-gaps.md	9291	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE	9289	### 🟢 Trap T1 is a live event, not history — it paid **twice** in a handful of probes
+README.md	1004	Lumieducation/Lumi	AGPL-3.0	WRONG-ABSENCE	995	### 🟢 The findings that stand
+README.md	1025	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	1014	### 🔴 Corrections this pass owes its own pages
+README.md	2908	formalms/formalms	GPL-2.0	WRONG-ABSENCE	2878	### 🔴 Declared gaps and absences
+README.md	3022	formalms/formalms	GPL-2.0	WRONG-ABSENCE	3000	### 🔴 Declared gaps and absences
+README.md	3132	formalms/formalms	GPL-2.0	WRONG-ABSENCE	3112	### 🔴 What is NOT true of this pass, declared
+
+--- records, left alone ---
+intel/open-gaps.md	21	thm-mni-ii/feedbacksystem	Apache-2.0	WRONG-ABSENCE	7	## 🔜 Registered for p216 — pre-registered with falsifiers
+intel/open-gaps.md	807	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	784	## 🔜 Registered for p192 — pre-registered with falsifiers
+intel/open-gaps.md	950	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	930	## ✅ DISCHARGED — was “Registered for p191”
+intel/open-gaps.md	1072	OS4ED/openSIS-Classic	GPL-2.0	WRONG-FAMILY	1053	## ✅ DISCHARGED — was "Registered for p190"
+intel/open-gaps.md	4364	kstateome/lti-launch	LGPL-3.0	WRONG-ABSENCE	4350	## 🟢 Gaps CLOSED, CORRECTED or RETIRED by p137
+README.md	64	foradian/fedena	Apache-2.0	WRONG-ABSENCE	61	### 🆕 🟢 `P214-2` — `2` `ABSENT` rows resolved, and `ACTION QA`'s method corrected before it runs
+README.md	1595	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	1585	### 🟢 Pre-registered for p190, with the limb that would falsify each
+README.md	1764	OS4ED/openSIS-Classic	GPL-2.0	WRONG-ABSENCE	1754	### 🟢 Pre-registered for p189, with the limb that would falsify each
+README.md	7164	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-ABSENCE	7162	### `P136-B` and `P136-C` — two errors with one shape
+README.md	7375	pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")	WRONG-FAMILY	7373	### Pre-registered for p136

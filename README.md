@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-15
 ---
 
+
+## Pass 216 — 2026-10-15 — ALL FOUR REGISTERED ACTIONS DISCHARGED: `3` FIRE ON LIMB `2`, AND THE FOURTH FOUND ITS OWN PREMISE REFUTED BY PASS `200`
+
+🔵 **`0` new agent rows, `0` new repository rows, `0` new platform rows, `0` new market facts.**
+🟢 **`5` grant cells established first-hand, `3` byte-exact drift controls passed, `1` classifier
+repaired, `1` published population count corrected, and `4` actions closed.**
+
+🟡 **Housekeeping noted rather than hidden: this file's previous section is pass `214` — p215 did
+not add one.** 🔵 **The same discipline gap this pass measures in the action register appears in
+its own changelog.**
+
+### 🆕 🔴 The headline: the propagation defect has reached the ACTION REGISTER
+
+🔴 **`ACTION QI` was registered on `T215-8`, which states that `ECL-2.0` *"appears NOWHERE on these
+shelves before p215"* and is *"a licence family this KB had never recorded"*.**
+🔴 **[`repos/foundations.md`](repos/foundations.md) l.`1373` is headed **`## Pass 200 — 2026-10-14 —
+ECL-2.0: EDUCATION HAS ITS OWN LICENCE AND THIS KB HAD NEVER NAMED IT`**, and establishes the OSI
+approval, the quoted `§3` patent narrowing, an `18`-repository census, `sakai` at `11 120` B,
+`opencast` at `11 340` B, and the note that a generic family detector returns `UNCLASSIFIED` on all
+of them.** 🟢 **p199 had already called `ECL-2.0` *"Apache-derived with an education-specific patent
+clause"*; p212 published `OpenLRW` as `ECL-2.0` at `9 878` B.**
+
+🔵 **Three prior samples put this KB's propagation failure rate near `80`% — `P211-1` `6`/`7`,
+`P214-3` `3`/`4`, `QG` `23`/`7` — and all three measured CELLS.** 🔴 **This is the same failure in
+the register that allocates the next pass's budget, and it cost this pass its largest block of work
+re-deriving a result the shelves already held.** 🟢 **`ACTION QL` registered: no action may be
+written on a claim of absence until the shelves have been `grep`ped for the token, slug or family
+it says is missing.**
+
+### 🆕 🟢 Three falsifiers came back negative, and each closes a standing question
+
+| action | verdict | what it licenses the next pass to STOP doing |
+|---|---|---|
+| **`QH`** — is the `18`-form root probe lossy beyond path reach? | 🟢 **limb `2`: `0` of `69`** *(`66` × `404`, `3` unresolvable)* | 🟢 stop guessing filenames on this population |
+| **`QK`** — further PERSON-level claims resting on an absence? | 🟢 **limb `2`: `0` of `43`** candidates; `39` correctly bounded to measured artefact populations | 🟢 stop re-sweeping; `T215-7` was a single lapse |
+| **`QJ`** — replace the mandated region query with organ-named ones? | 🟢 **limb `2`: `0`** new instruments; both shapes saturated | 🟢 stop proposing the replacement; report blanks as blanks |
+
+🔴 **`QH`'s anchor was also mis-specified: the two rows `T215-2` cited as *"recorded `ABSENT`"*
+while serving a plain root `LICENSE` are both inside p215's own recovered `25`.**
+
+### 🆕 🔴 Corrections this pass owes its own pages
+
+- 🔴 **The remaining ungranted population is `67`, not `63`.** `94` − `25` = `69` raw
+  *(set-verified)*; `68` distinct after one owner-case duplicate pair; `67` after removing
+  `os4ed/openSIS-Classic`, whose variant p215 had already recovered as `GPL-2.0`. 🔴 **p215's own
+  prose composition reaches `64`.** 🔵 **`63` was published in `3` places and in the `p216` action
+  register, where it defined the population this pass was told to probe.**
+- 🔴 **`T215-8`'s novelty claim about `ECL-2.0` is withdrawn** — superseded by pass `200`, credited
+  in place.
+
+### 🆕 🟢 The findings that stand
+
+- 🟢 **`ECL-2.0` read at CLAUSE level, which is what a client engagement needs.** Copyright terms
+  are `Apache-2.0` — permissive, sublicensable, no copyleft, OSI-approved. 🔴 **The patent grant is
+  narrower:** a contribution from an institution-employed author grants patent claims only where
+  that author is also the inventor **and** the institution has the right to grant under its grant
+  and research-funding agreements. 🔵 **So an `Apache-2.0` patent-indemnity clause must not be
+  copied into an SOW over a Sakai or Opencast derivative.**
+- 🟢 **`8` of `13` Apereo-family rows are `ECL-2.0`**; p215's classifier returns `UNCLASSIFIED` on
+  `8` of `8`. 🟢 **Fixed in [`compose/code/p216-ecl-sweep/ecl_sweep.py`](compose/code/p216-ecl-sweep/ecl_sweep.py)
+  with the ECL token ordered BEFORE the Apache token, because `ECL-2.0`'s body IS Apache's text.**
+  🟢 **`3` of `3` over-firing controls hold** *(`uPortal`, `tool13demo`, `Larissa` really are
+  `Apache-2.0`)*.
+- 🟢 **`5` new grant cells, all on the `Apereo-Learning-Analytics-Initiative` stack** — and all `5`
+  on repositories these shelves already measured as abandoned *(`6` of `6`, youngest `6.6` years)*.
+  🔵 **`T216-3`: in education the licence axis and the maintenance axis are independent; a
+  permissive grant on a dead repository is a citation right, not a build decision.**
+- 🟢 **`3` byte-exact drift controls** against readings `4` and `16` passes old: `sakai` `11 120`,
+  `opencast` `11 340`, `OpenLRW` `9 878`.
+- 🟢 **`ACTION QG`'s scope tested and found SUFFICIENT:** `19` contradicting cells exist in the `2`
+  files its gate does not sweep, and `19` of `19` are inside dated pass sections. 🔵 **Method note:
+  a nearest-heading test called `9` live; the enclosing level-`2` test calls `0`. The heading LEVEL
+  was the whole measurement.**
+
+### 🔴 Declared gaps and absences
+
+- 🔴 **`0` new entities from the `8` mandated searches — the FIFTH consecutive confirmation of
+  `T214-2`.** Every named entity returned was checked against the shelves by name and was already
+  present.
+- 🔴 **France's `MEN`: nothing found, in an English-language search.** 🔵 **A query-LANGUAGE gap,
+  not an absence — the one residue `ACTION QJ` leaves behind.**
+- 🔴 **Germany's `KMK`: no `2026` successor** to the Oct `2024` *Handlungsempfehlung* found. An
+  informed blank.
+- 🟡 **An ENGLISH edition of Spain's `INTEF` guide v`2.0` is reported on `code.intef.es`, which
+  returns `000` from here.** Recorded as a search-snippet claim, unverified.
+- 🔴 **`3` addresses do not resolve from this environment at all** — `cdweaver1992/edfi-mcp-server`,
+  `jakerains/scormplayer`, `openfresno/edgenuity-aeries-grade-passback` — reproduced on a second,
+  independent channel *(`git ls-remote`, where p215 used `git clone`)*, so they are unresolvable
+  rather than ungranted.
+- 🔴 **`api.github.com` `403`, `github.com` HTML `403`, government and analyst hosts `000`/`403`** —
+  twelfth consecutive confirmation. 🟢 **`raw.githubusercontent.com` `200`; `git ls-remote`,
+  `clone` and `ls-tree` work.**
+- 🔴 **`ACTION PH` deliberately NOT taken for the twelfth pass:** it would open issues on third
+  parties' repositories, and this pass — like p205–p215 — ran unattended on a schedule.
 ## Pass 214 — 2026-10-15 — THE ANSWER WAS ALREADY HERE: `3` OF `4` WRONG LICENCE CELLS HAD A CORRECT VALUE PUBLISHED ELSEWHERE IN THIS KB
 
 🔵 **`0` new repository rows, `0` new topic shelves, `0` new facts from the mandated searches —

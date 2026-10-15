@@ -5,6 +5,112 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — THE UNGRANTED POPULATION IS `67`, NOT `63` AND NOT `94`; THE `18`-FORM ROOT PROBE IS SOUND AFTER ALL; AND `5` NEW `ECL-2.0` GRANT CELLS LAND ON A ROW-SET THIS SHELF ALREADY CALLED ABANDONED
+
+🔵 **`0` new foundation rows.** 🟢 **`ACTION QH` and `ACTION QI` discharged; `QH` fires on limb `2`
+and `QI`'s premise is refuted by this shelf's own pass `200`.** 🔵 **Methods:
+[`compose/code/p216-root-license-reprobe/`](../compose/code/p216-root-license-reprobe/README.md),
+[`compose/code/p216-ecl-sweep/`](../compose/code/p216-ecl-sweep/README.md).**
+
+### 🆕 🔴 `P216-F1` — the remaining ungranted population was published as `63`; it is `67`, and the figure propagated into the action that spent this pass
+
+🔴 **p215 published, in three places, that *"this KB's ungranted population is `63`, not `94`"*,
+and `intel/open-gaps.md` registered `ACTION QH` to *"re-probe the `63` remaining ungranted
+rows"`.** 🟢 **Rebuilt from this KB's own two evidence files
+*([`ungranted-after-18-forms.2026-10-15-p211.tsv`](../evidence/ungranted-after-18-forms.2026-10-15-p211.tsv),
+[`lstree-grant-recovery.2026-10-15-p215.tsv`](../evidence/lstree-grant-recovery.2026-10-15-p215.tsv))*,
+the remainder is not `63`:**
+
+| step | count | how it was established |
+|---|---|---|
+| `ABSENT` after `18` root forms *(p211)* | `94` | the evidence file, deduplicated |
+| recovered by `ACTION QD` *(p215)* | `25` | 🟢 **set-verified: `25` of `25` are inside the `94`, `0` outside** |
+| **raw remainder** | 🔴 **`69`** | `94` − `25`, not `63` |
+| less the one owner-case duplicate pair inside the remainder | `68` | `Hesham0-0Nasser/tutor-lms-mcp` ≡ `hesham0-0nasser/tutor-lms-mcp` |
+| less the row whose case-variant p215 ALREADY recovered | 🟢 **`67`** | `os4ed/openSIS-Classic`, whose variant `OS4ED/openSIS-Classic` is recorded `GPL-2.0` |
+
+🔴 **p215's own composition does not reach `63` either:** `25` manifests with no `license` field
+plus `36` with no licence-shaped path plus `3` clone/`ls-tree` failures = **`64`**. 🟡 **So `63`
+is not a rounding of a defensible number; it is unreconciled with both the file list and the
+narrative that accompanies it.**
+
+🔵 **Why this matters more than four units.** 🔴 **`QG` — p215's own action — made the CORRECTION
+the unit of work and swept grant CELLS.** 🔴 **A DERIVED COUNT is a cell too, and this one
+propagated out of the shelves and into the ACTION REGISTER, where it defined the population a
+later pass was told to probe.** 🟢 **`T216-1`: a figure computed in one pass and quoted in the
+next is the same propagation hazard as a licence token, and `qg_gate2.py` cannot see it, because
+it compares grants rather than arithmetic.** 🟢 **Recorded as `ACTION QM` for p217 with the
+cheapest possible falsifier: recompute every population count these shelves quote, from the
+evidence file it names.**
+
+### 🆕 🟢 `P216-F2` — `ACTION QH` fires on limb `2`: the `18`-form probe has no loss mode beyond path reach
+
+🟢 **All `69` raw remainder rows were re-probed on the single most obvious path, with exactly one
+variable moved: `git ls-remote --symref` for the TRUE default branch, then ONE `GET` of
+`raw.githubusercontent.com/<slug>/<branch>/LICENSE`.** 🔴 **Recoveries: `0`.**
+
+| status | rows | reading |
+|---|---|---|
+| `404` | **`66`** | no plain root `LICENSE` on the true default branch |
+| `NO-SYMREF` | `3` | 🔴 the repository does not resolve from here at all |
+| 🟢 `200` | 🟢 **`0`** | 🟢 **limb `2`: the form list is sound** |
+
+🟢 **So `ABSENT` was a root-only artefact — `P215-1`'s finding — and nothing more. The `18` forms
+do not additionally lose a plain `LICENSE` that is there.** 🔴 **And `QH`'s anchor was
+mis-specified: `T215-2` cited `thm-mni-ii/feedbacksystem` *(`10 785` B)* and
+`skhdemo/uoft-quercus-mcp` *(`1 086` B)* as rows *"recorded `ABSENT` after `18` forms"* that serve
+a plain root `LICENSE` — 🔴 **but both are in p215's OWN recovered `25`, so neither was in the
+population `QH` was asked to re-probe.** 🟢 **The two rows were evidence that the instrument had
+already been FIXED, read as evidence that it was still broken.**
+
+🟢 **The `3` `NO-SYMREF` rows are p215's `3` recorded failures, independently reproduced on a
+DIFFERENT channel** *(`ls-remote`, not `clone`)*: `cdweaver1992/edfi-mcp-server`,
+`jakerains/scormplayer`, `openfresno/edgenuity-aeries-grade-passback`. 🔵 **Two channels agreeing
+means these are not transient: they are addresses this environment cannot resolve, and they should
+be carried as unresolvable rather than as ungranted.**
+
+### 🆕 🟢 `P216-F3` — `5` new `ECL-2.0` grant cells, on rows this shelf already called a graveyard
+
+🟢 **Read first-hand today, `raw.githubusercontent.com/<slug>/HEAD/LICENSE`, byte counts binary-safe:**
+
+| repository | `LICENSE` bytes | last commit *(p111/p109, this KB)* | verdict |
+|---|---|---|---|
+| 🆕 [`Apereo-Learning-Analytics-Initiative/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | `11 087` | `2019-01-31` *(`2 809` d)* | 🟡 **reference** — conformant LRS to read, not to deploy |
+| 🆕 [`.../LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | `9 919` | `2016-05-04` *(`3 811` d)* | 🟡 **reference** |
+| 🆕 [`.../OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | `9 919` | `2020-03-09` *(`2 406` d)* | 🟡 **reference** |
+| 🆕 [`.../OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | `9 919` | `2020-02-17` *(`2 427` d)* | 🟡 **reference** |
+| 🆕 [`.../lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | `11 087` | `2014-12-02` *(`4 330` d)* | 🟡 **reference** |
+| [`.../OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `9 878` | `2020-02-06` *(`2 438` d)* | 🟢 **un-drifted from p212's `9 878` B** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `11 120` | — | 🟢 **un-drifted from p200's `11 120` B** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `11 340` | — | 🟢 **un-drifted from p200's `11 340` B** |
+
+🟢 **Three independent byte-level confirmations against readings taken `4` and `16` passes ago, all
+exact.** 🔵 **That is a drift control this shelf can report rather than assume.**
+
+🔴 **The `5` new cells do not promote their rows.** 🟢 **`6` of `6` repositories in this
+organisation are abandoned, the youngest `6.6` years old — measured twice, from commit dates
+*(p109)* and independently from CI vendor choice *(p111: Travis, which stopped free OSS builds in
+`2021`)*.** 🔵 **So the correct use of a permissive grant on an abandoned row is CITATION: these
+are the reference implementations of the mid-`2010s` open learning-analytics stack, now with a
+known `ECL-2.0` grant, and the segment still has no maintained open implementation on this shelf
+— which is the market reading, not the repo list.**
+
+### 🆕 🟡 `P216-F4` — the `ECL-2.0` text has `5` byte-lengths in one family
+
+🟡 **`9 878` · `9 919` *(×`3`)* · `11 087` *(×`2`)* · `11 120` · `11 340`.** 🔴 **A byte-count
+comparator would call these five different licences; `P215-5`'s `eol` lesson shows how easily a
+length becomes an identity here.** 🟢 **The title-window classifier returns `ECL-2.0` on all eight,
+which is the right answer, and is why a FAMILY read must come from the title and the byte count
+must stay a drift control rather than a classifier input.**
+
+### 🔵 Channel control, re-tested — twelfth consecutive pass
+
+🟢 **`raw.githubusercontent.com` → `200`. `git ls-remote` and `git clone` → work.** 🔴 **`api.github.com`
+→ `403`; `github.com` HTML → `403`; `code.intef.es` → `000`.** 🔵 **Unchanged, and every figure
+below sourced from a blocked host is marked as a search-snippet claim.**
+
+---
+*Pass 216 — `0` new rows, `5` new grant cells, `1` population count corrected, `3` drift controls passed.*
 ## Pass 215 — 2026-10-15 — `25` REPOSITORIES RECOVERED FROM `ABSENT`, A NEW LICENCE FAMILY ON THESE SHELVES *(`ECL-2.0`)*, AND THE MECHANISM BEHIND EVERY BYTE-COUNT CONFLICT THIS KB TRACKS
 
 🔵 **`0` new foundation rows.** 🟢 **`ACTION QD` and `ACTION QG` discharged instead; both fire.**

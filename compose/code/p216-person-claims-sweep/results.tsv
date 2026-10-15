@@ -1,0 +1,49 @@
+# p216 ACTION QK — actor-practice claims co-located with an absence marker
+# shelves swept: 10   hits: 43
+file	line	trigger	text
+agents/top.md	51	this author	*"this author ships unlicensed education connectors as a pattern."*** 🟢 **Both repositories
+agents/top.md	8320	ship no licence	published connector packages ship no licence file, and registered a falsifier against its own
+agents/top.md	8342	ship no licence	| ship no licence file *(p138's count, independently re-measured)* | 🔴 **9** — 🟢 **agrees with p138 exactly** |
+agents/top.md	8897	the author's	| **academic-tracker-mcp** | [`joojdev/academic-tracker-mcp`](https://github.com/joojdev/academic-tracker-mcp) | **MIT** | 0 | **LATAM (Brazil)** | **SUAP** (*Sistema Unificado de Administração Pública*), the SIS of Brazil's federal institute network — MCP server over the author's own academic record. 🟢 **The first LATAM row this KB ever placed in this tier.** Added p133. |
+agents/top.md	8909	this author	| **sisu-mcp** | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 **`MIT`** *(`package.json`, `999` B, p215)* | 1 | **EMEA (Finland)** | **Sisu (Funidata)**, the Finnish higher-education SIS: attainments, enrolments, timetables, plans. 🟢 **Written for *any* Sisu deployment rather than one university — the broadest reach of the bound connectors, and `MIT`, so USABLE as published.
+agents/trending.md	42	this author	🔴 **This KB published: *"this author ships unlicensed education connectors as a pattern."***
+agents/trending.md	14358	ship no licence	Action A resolved the **87** slugs this shelf cites that ship no licence file against their package
+agents/trending.md	14441	ships no licence	`edci-issuer/licence-EUPL 1.2-brightgreen.svg` — a README badge image — and ships no licence text
+repos/foundations.md	1706	ships NO licence	| [`foradian/fedena`](https://github.com/foradian/fedena) | Apache-2.0 *(the open web)* | 🟡 Apache-2.0 **declared in `NOTICE`** `679` B — 🔴 **the repo ships NO licence text at all** |
+repos/foundations.md	6845	ships no licence	🔴 **It still ships no licence text** — no `LICENSE` or `NOTICE` among the jar's 72 entries. So
+repos/foundations.md	7058	ship no licence	| registry | artefacts measured | 🔴 declare a licence, ship no licence file | rate | vs the 10% threshold |
+repos/foundations.md	7206	ship NO licence	| 🆕 **published payload** | 🔴 **what the client is actually handed** | 🔴 **9 of 21 packages ship NO licence file; 7 of those declare an SPDX id** |
+repos/foundations.md	7213	ships no licence	(2026-10-01) declares **AGPL-3.0** across **141 shipped paths** and ships no licence text, while
+repos/trending.md	1429	ships no licence	### 🆕 🔴 The real trend this pass: a cohort that gains stars and ships no licence
+repos/trending.md	4650	ship no licence	🔴 **Three of three published jars ship no licence text — `SILENT` across 907 entries.** The grant
+repos/trending.md	4774	ships no licence	🔴 **It still ships no licence text**: no `LICENSE` or `NOTICE` across the jar's 72 entries. So
+repos/trending.md	4893	ship no licence	declare a licence and **4 of 5 (80%)** ship no licence text in the jar — against p139's 40–67% and
+repos/trending.md	4994	ship no licence	| registry | artefacts | 🔴 declare a licence, ship no licence file | rate | vs 10% threshold |
+repos/trending.md	5084	ship no licence	| ship no licence file *(p138's finding, independently re-measured)* | 🔴 **9** | 43% — 🟢 **agrees with p138 exactly** |
+repos/trending.md	5162	ships no licence	ships no licence text.** Its repository,
+verticals/solutions.md	1185	ship NO licence	🟢 **`3` of the plugins above ship NO licence file anywhere in the complete tree** — and carry an
+verticals/solutions.md	4728	ships no licence	ships no licence text at all.** 🔴 **And three rows on the LATAM system-of-record tier —
+verticals/solutions.md	5268	ship no licence	**9 ship no licence file**, and the worst is the one attached to Moodle:
+intel/market.md	3984	ships no licence	*(`6 072`★)*, **ships no licence** — so it may be linked, **not vendored**. 🟢 **The durable
+intel/market.md	12654	ships no licence	depends on — **declares LGPL-3.0 in its POM and ships no licence text in its jar** (43 paths,
+intel/market.md	15429	ship no licence	artefacts ship no licence text for a licence they declare, where three repositories in one project
+intel/trends.md	110	this author	🔴 **This KB published, of two connector rows: *"this author ships unlicensed education connectors
+intel/trends.md	111	as a pattern	as a pattern."*** 🟢 **Both repositories declare `MIT` in their manifests *(`973` B, `999` B)*.**
+intel/trends.md	276	systematically	in the `ungranted` bucket — the one class p208 proved this KB systematically mis-reads.** 🟢 **An
+intel/trends.md	2649	ships no licence	### 🆕 🔴 T4 — The `2026` cohort still ships no licence, now with large repositories
+intel/trends.md	7856	ship no licence	5** Maven artefacts on this shelf declare a licence and 🔴 **4 of 5 (80%)** ship no licence text
+intel/trends.md	8117	ship no licence	| **the measurement** | **21** packages, all **sha1-verified** against the registry's own `shasum`. **9** ship no licence file *(independently re-measured, agrees with p138 exactly)*. 🔴 **0 of those 9 carry their own grant in a source header.** In **8 of 9** there is no copyright line, no SPDX tag and no operative licence sentence in any shipped text file |
+intel/trends.md	8192	ship no licence	| measurement | **21** education-LMS connector packages (Canvas, Moodle, Brightspace, EduBase), every tarball **sha1-verified against the registry's own `shasum`**, 21 of 21 matching. 🔴 **7 (33%) declare an SPDX identifier and ship no licence file; 2 (10%) declare nothing and ship nothing; 12 (57%) are clean.** [`p138-npm-payload-licence`](../compose/code/p138-npm-payload-licence/README.md) |
+compose/patterns.md	226	systematically	the class p208 proved is systematically mis-read — while the true answer is the most
+compose/patterns.md	8752	ships no licence	ships no licence body and was last committed in 2012** (`verticals/solutions.md`, p148).
+compose/patterns.md	9174	ships no licence	**AGPL-3.0**, ships no licence text, and **`.push()`es a tool descriptor per discovered
+compose/patterns.md	10038	ships NO licence	**LGPL-3.0 and ships NO licence text in its jar** — so step 1's dependency obliges a notice the
+compose/patterns.md	10223	ship no licence	this shelf ship no licence text, so verify the one you pin. See `P17`.
+compose/patterns.md	11142	ships no licence	| 🆕 will attach an **AGPL-3.0 connector to a GPL platform** (the **P7** route) | 🔴 **P17 first, as a blocking gate** — `moodle-mcp-server-aql` declares AGPL-3.0 over 141 shipped paths and ships no licence text |
+intel/open-gaps.md	24	this author	| 🆕 🔴 **`ACTION QK`** — sweep the shelves for other PERSON-level inferences resting on `ABSENT` | 🆕 `T215-7`: this KB published *"this author ships unlicensed education connectors as a pattern"* about a named individual, from two root-only `ABSENT` readings; **both repositories declare `MIT`** | 🟢 **limb `1`:** **`1`+** further claim about a named person, org or author's PRACTICE rests on an absen
+intel/open-gaps.md	4376	ships no licence	- 🔴 **`DMontgomery40/mcp-canvas-lms` declares MIT and ships no licence text.** 103★, 39 forks,
+README.md	6263	ship no licence	| `P142-C` | 🔴 **`ACTION DF` DISCHARGED and REFUTED — the election is PER-MODULE** | 🔴 **`org.verapdf:verapdf-xmp-core:1.30.3` declares BSD-3-Clause in its own POM**, against a parent offering dual GPL-3.0 / MPL-2.0. 🔴 **And `org.verapdf:xmp-core` does not exist** — `404`, because a `<module>` entry is a source-tree path, not an artifactId. **3 of 3** jars ship no licence text → `P20` step 2 wrong
+README.md	6734	ships no licence	| **North America** | 🔴 **🆕 A federal preemption proposal aims at the exact instrument layer this KB has modelled for three passes.** The White House's **National Policy Framework for AI (March 2026)** recommends Congress **preempt state AI laws** — which would collapse ~31 state regimes and retire p137's "system board is the buying unit" thesis. 🟡 A recommendation, not a bill. 🆕 **Virginia JLARC*
+
+# control: actor-claim lines with no absence on the line: 75
+# control: absence lines with no actor claim:             3365

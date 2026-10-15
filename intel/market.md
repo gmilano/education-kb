@@ -5,6 +5,150 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — `ACTION QJ` IS ANSWERED AND CLOSED ON LIMB `2`: THE REGION SHAPE WAS NEVER THE DEFECT, BECAUSE THE ORGAN-NAMED QUERIES RETURN THE SAME SATURATED CELLS
+
+🔵 **Channel note, re-tested and unchanged:** 🔴 **every government and analyst host is `000`/`403`
+from here** *(`code.intef.es` → `000`, `api.github.com` → `403`, `github.com` HTML → `403`)*.
+🟢 **`raw.githubusercontent.com` is `200`; `git ls-remote`, `git clone` and `git ls-tree` work.**
+🔴 **Every market and policy figure below is a SEARCH-SNIPPET claim and is marked as such.**
+
+### 🆕 🟢 `P216-M1` — `ACTION QJ` fires on limb `2`, and that settles a question six passes old
+
+🔴 **`QJ` was registered on `P215-M2`: the mandated shape `AI education {region} 2026 adoption
+regulation players` returned `0` education instruments for EMEA and APAC for the sixth consecutive
+pass, while organ-named queries had filled both cells on the first try at p208.** 🟢 **`QJ`'s limb
+`1` required `3`+ dated `2026` instruments those cells do not carry. The organ-named queries were
+run. They returned `0`.**
+
+| organ-named query | what it returned | already on these shelves? |
+|---|---|---|
+| Spain **`INTEF`** | *Guide on the use of AI in Education* v`2.0`, Sept `2026`; school-level AI action plans; school AI oversight committees | 🟢 **yes** — carried as `INTEF` Guía v`2.0` *(`1` Sept `2026`)* |
+| EU-level | Commission + OECD + **G7-endorsed** draft **AI Literacy Framework** for primary/secondary | 🟢 **yes** |
+| Germany **`KMK`** | 🔴 **nothing dated `2026`** — only basic-skills and teacher-shortage material | 🟢 shelves carry the `KMK` *Handlungsempfehlung* *(Oct `2024`, all `16` Länder)*; 🔴 **no `2026` successor found, an informed blank** |
+| France **`MEN`** | 🔴 **nothing**, in an English-language search | 🔴 **declared gap: needs a French-language query** |
+| Japan **`MEXT`** | Gen-AI guidelines v`2.0` *(Dec `2024`)*; pilot schools; curriculum revision targeted at FY`2030` | 🟢 **yes** |
+| Singapore **`MOE`** | teacher AI training at every level by `2026`; `AICET` projects with the Ministry; Smart Nation AI leadership by `2030` | 🟢 **yes** |
+| India **`CBSE`/`NCERT`** | AI + Computational Thinking **mandatory Classes `3`–`8` from `2026`–`27`**, Classes `9`–`10` from `2027`–`28`, announced `29` Oct `2025`; CBSE expert committee drafting, NCERT reviewing | 🟢 **yes** |
+
+🟢 **So `QJ` closes on limb `2`, and the reading is stronger than *"the shape was fine"*:**
+🔴 **the EMEA and APAC cells are SATURATED ON BOTH QUERY SHAPES.** 🔵 **The region-shaped query
+returns enterprise-AI material because there is little NEW education-sector material to return,
+not because the words are wrong — and the organ-named shape, which p208 used to fill the cells,
+now returns only what it filled them with.** 🟢 **Recommendation recorded: do not replace the
+mandated shape; keep running it as a regression test, and report the blanks as blanks.**
+
+🟡 **And this pass the mandated shape did NOT blank for EMEA and APAC.** 🔵 **It returned the EU AI
+Act enforcement milestone *(the Commission's own page: *"from `2` August `2026`, the AI Office and
+national authorities started to enforce the AI Act"*, with amendments *"entered into force `27`
+July `2026`"*)*, the conflicting schools-guide dates *(`2` Dec `2027` / `2` Aug `2028`)*, Korea's
+`AI Basic Act`, Vietnam's `Decision 33/2026`, Taiwan's `AI Basic Act` and Australia's National AI
+Plan. 🟢 **All already carried; the EU date conflict is already recorded as contested on these
+shelves.** 🔴 **So `P215-M2`'s *"sixth consecutive blank"* does not reproduce on the seventh
+reading — which is itself a reason not to retire a query on a run of blanks.**
+
+### 🆕 🟡 `P216-M2` — the one new artefact, and it is unverifiable from here
+
+🟡 **An ENGLISH edition of the `INTEF` guide v`2.0` is reported at
+`code.intef.es/wp-content/uploads/2026/10/Guide-on-the-use-of-AI-in-Education_version-2_final_English.pdf`.**
+🟢 **New: these shelves carry the Spanish v`2.0` only, and an English edition is directly usable in
+an EMEA engagement where Spain's framework is the reference but the working language is not
+Spanish.** 🔴 **`code.intef.es` → `000` from this environment. SEARCH-SNIPPET, unverified, and
+recorded as such rather than as a resource.**
+
+### 🔵 Figures re-confirmed, `0` changed
+
+🟢 **LATAM:** UNESCO `IESALC`/UNU-IAS — `200` institutions, `19` countries, `87`% using AI in at
+least one area, `74`% in teaching and learning, 🔴 **only `26`% with a formal AI strategy**; uptake
+`84`% private non-profit vs `68`% public vs `52`% private for-profit. 🟢 **TALIS:** secondary
+teachers having used AI in the previous year — Brazil `56`%, Chile `55`%, Colombia `53`%, Costa
+Rica `52`%, against an OECD average of `36`%. 🟢 **EMEA:** Sanoma `2026` European Teacher Survey,
+`63`% *(>`20 000` teachers, `14` countries)*. 🟢 **North America:** `60`% of US K-12 teachers used
+AI tools in `2024`–`25`, `32`% at least weekly; `134` AI-in-education bills across `31` states in
+`2026`. 🔵 **All snippet-sourced, all unchanged, `0` re-probed — the hosts are blocked.**
+
+🟡 **Global market size remains carried as a RANGE, not a number:** IMARC `$6.4`B *(`2025`)* →
+`$79.6`B *(`2034`)*; Grand View `$8.3`B *(`2025`)* → `$11.4`B *(`2026`)*; The Business Research
+Company `$7.52`B → `$10.6`B *(`2026`)*; a Precedence figure of `$3.68`B for North America at `36`%
+share in `2026`. 🔴 **A `12`× spread between publishers on the same year means the category is
+defined differently by each, and no single figure should be quoted to a client without its
+source.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The licence work this pass lands on the video and LMS tier, which is where the North American
+higher-ed estate actually spends.** 🔵 **Sakai *(`ECL-2.0`, `11 120` B)* and Opencast
+*(`ECL-2.0`, `11 340` B)* are permissive on copyright, and `P216-V2` now gives the exact patent
+sentence a university procurement office will ask about.** 🔵 **Opportunity: an AI-over-lecture-video
+engagement — transcription, search, chaptering, assessment generation — on an Opencast capture base
+with a Sakai or Canvas front end, sold with a licence position that is quotable from the blob rather
+than asserted from a scanner.** 🔴 **Constraint to carry, and it is the differentiator: the
+`ECL-2.0` patent grant does not inherit a contributor's employer's patent peace where a research-
+funding agreement withholds it, so the patent indemnity in the SOW must be priced or carved out —
+not copied from an `Apache-2.0` template.** 🔴 **Governance stays per-jurisdiction: `134` bills
+across `31` states in `2026`, California `AB 1159` on student data, Oklahoma and Maryland requiring
+human oversight on high-stakes decisions, district-level bans *(NYC K-8 moratorium, Katy ISD K-6)*.
+🟡 `H.R. 8747` advanced in a July committee markup and is not law.**
+
+### EMEA
+
+🟢 **EMEA is where the `ECL-2.0` reading pays most, because Opencast's install base is European and
+because European procurement asks the licence question in writing.** 🔵 **Opportunity: a DACH or
+Nordic university-group engagement composing Opencast *(lecture capture, `ECL-2.0`)* with the
+permissive connector tier these shelves already hold, delivered against Spain's `INTEF` v`2.0`
+structure — which organises AI use into the Commission's three categories *(teachers, students,
+schools)* and recommends school-level AI action plans and oversight committees, i.e. a governance
+artefact a client can adopt rather than invent.** 🟢 **The Commission/OECD/G7 **AI Literacy
+Framework** gives the same engagement a learner-outcome spine.** 🔴 **Gaps, declared: no `2026`
+`KMK` successor to the Oct `2024` *Handlungsempfehlung* was found, and no French `MEN` `2026`
+instrument was found in an English-language search — the latter is a query-language gap, not a
+finding of absence.** 🔴 **The EU AI Act's education high-risk duties remain date-contested on
+these shelves *(enforcement from `2` Aug `2026` per the Commission page; `2` Dec `2027` /
+`2` Aug `2028` per a schools guide)*, and every EU host is unreachable from here, so the date goes
+to a client with its source attached.**
+
+### APAC
+
+🟡 **APAC's instruments are the clearest of the four regions and its open-source surface is still
+the thinnest.** 🟢 **What is firm: Korea's `AI Basic Act` in force since `2026-01-22` with a
+one-year penalty grace; Vietnam's `Decision 33/2026/QĐ-TTg` naming `46` high-risk systems with
+education among them; India's `CBSE`/`NCERT` mandate making AI and Computational Thinking
+compulsory for Classes `3`–`8` from `2026`–`27`; Singapore's `MOE`/`AICET` teacher-training target
+for `2026`; `MEXT`'s guidelines with a curriculum revision targeted at FY`2030`.** 🔵 **Opportunity:
+a compliance-led offer — an India K-12 curriculum-delivery build sized by a mandate with a date, or
+a Vietnam/Korea conformity engagement where education is named high-risk in the instrument itself.
+🟢 **That is a stronger anchor than an adoption percentage, and it is what APAC has that the other
+regions do not.** 🔴 **Constraint unchanged: `0` APAC-owned repositories were added this pass, and
+the region's self-hosting preference means the delivery assumption is on-premise model serving over
+a permissive LMS.**
+
+### LATAM
+
+🟢 **LATAM's anchor remains an instrument rather than a market number: the UNESCO `IESALC`/UNU-IAS
+`200`-institution, `19`-country survey — `87`% using AI somewhere, `74`% in teaching and learning,
+🔴 **`26`% with a formal AI strategy**.** 🔵 **That `87`/`26` gap IS the engagement: governance,
+not pilots.** 🟢 **TALIS puts Brazilian, Chilean, Colombian and Costa Rican secondary teachers
+`16`–`20` points above the OECD average on AI use, so the demand side needs no evangelism.**
+🔵 **Opportunity: an AI-governance-and-enablement programme for a university group or ministry —
+policy, oversight committee, teacher training, evaluation — with `INTEF` v`2.0` as a transferable
+Spanish-language structural reference and the UNESCO LAC Observatory as the regional forum.**
+🔴 **Build constraint, unchanged and now better quantified: the Argentine `SIU-Guaraní` surface
+*(`SIU-Toba/docker-guarani`, `eugeborzone/Auto_Grade_Guarani`)* and the Colombian dropout model
+remain among the **`67`** rows with no readable grant, so they are references, not bases.**
+
+### Global
+
+🟢 **One finding is region-independent and worth leading with anywhere: education has its own
+OSI-approved licence, `ECL-2.0`, it is `Apache-2.0` with a narrower patent grant, and almost no
+scanner names it** — p215's classifier returns `UNCLASSIFIED` on `8` of `8` of these repositories.
+🔵 **A studio that can read this family correctly can answer a procurement question that its
+competitors' tooling cannot even parse.** 🔴 **The paired constraint is also global: the
+mid-`2010s` open learning-analytics stack is permissive and abandoned `6` of `6`, so the
+learning-record layer is a BUILD in every region, not an adoption.**
+
+---
+*Pass 216 — `ACTION QJ` closed on limb `2`; `0` market facts added; `1` unverifiable artefact recorded as unverified.*
 ## Pass 215 — 2026-10-15 — THE REGIONAL QUERIES RETURNED ONE NEW INSTRUMENT AND TWO HONEST BLANKS. THE OPPORTUNITY THAT MOVED IS AGAIN A LICENCE READING
 
 🔵 **Channel note, re-tested and unchanged:** 🔴 **every government and analyst host is `000`/`403`

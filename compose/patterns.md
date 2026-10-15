@@ -5,6 +5,101 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — TWO RECIPES: THE LICENCE CLASSIFIER THAT CAN SEE EDUCATION'S OWN LICENCE, AND THE AI-OVER-LECTURE-VIDEO STACK THAT `ECL-2.0` MAKES SELLABLE
+
+### 🆕 🟢 `P216-A` — the `ECL-2.0`-aware grant classifier *(wire into `make hooks`, and into client due diligence)*
+
+🔵 **Problem it solves, measured this pass:** 🔴 **p215's classifier — the one `ACTION QG` proposes
+to make permanent — returns `UNCLASSIFIED` on `8` of `8` `ECL-2.0` repositories on these shelves,
+including `sakaiproject/sakai` and `opencast/opencast`.** 🔴 **Commercial scanners do no better:
+`ECL-2.0`'s body IS `Apache-2.0`'s text, so a whole-body matcher reports *"Apache-2.0 family"* and
+normalises away a patent-grant difference that a studio has to put in a contract.**
+
+🟢 **The recipe, and the ordering constraint is the whole trick:**
+
+```python
+# compose/code/p216-ecl-sweep/ecl_sweep.py  — classify_p216()
+def classify_p216(text):
+    w = title_window(text).lower()          # first 6 meaningful lines, 400 chars
+    if "educational community license" in w:          # <-- MUST precede the Apache test
+        return "ECL-2.0" if "2.0" in w else "ECL-1.0"
+    return classify_p215(text)               # p215's classifier, verbatim, underneath
+```
+
+1. 🔴 **Test the ECL token BEFORE the Apache token.** `ECL-2.0` self-describes as *"the Apache 2.0
+   license, modified to change the scope of the patent grant in section 3"*, so an Apache test that
+   runs first wins on a body match and on any title window wide enough to reach the Apache
+   boilerplate.
+2. 🟢 **Keep `classify_p215` underneath, unmodified, and emit BOTH verdicts.** The delta between
+   the two instruments is the measurement — it is how this pass established `8` of `13` rather than
+   asserting it — and it makes the change auditable in CI rather than a silent behaviour shift.
+3. 🟢 **Classify from the TITLE WINDOW only** *(`P214-1`)*. The same rule that stops `GPL-3.0` §13
+   reading as `AGPL` is what makes the ECL token reliable.
+4. 🟢 **Keep byte counts as a DRIFT control, never as a classifier input.** `ECL-2.0` ships in `5`
+   byte-lengths across one organisation *(`9 878`, `9 919`, `11 087`, `11 120`, `11 340`)*; a
+   length comparator would call them five licences. 🟢 **As a drift control it is excellent: `3` of
+   `3` byte-exact against readings taken `4` and `16` passes ago.**
+5. 🟢 **Test for over-firing before shipping.** `uPortal-Project/uPortal`, `Unicon/tool13demo` and
+   `Apereo-…/Larissa` are genuinely `Apache-2.0` and must classify identically on both
+   instruments. 🟢 **`3` of `3` controls hold.**
+
+🔵 **Client-facing use:** run it over a prospect's dependency tree before the SOW. 🔴 **Any
+`UNCLASSIFIED` on an education repository is a candidate `ECL-2.0`, and every `ECL-2.0` is a
+patent-indemnity conversation**, per `P216-B` step `0`.
+
+### 🆕 🟢 `P216-B` — AI over lecture video on a permissive base, with the licence position stated up front
+
+🔵 **Why this and not another tutoring recipe:** 🟢 **Opencast is the lecture-capture and
+video-distribution layer that every university AI-video ask needs and that no LLM framework
+provides** — and `P216-V2` establishes that it is permissive on copyright, with one clause to
+manage.
+
+**Step `0` — the licence position, before any code.**
+🟢 [`opencast/opencast`](https://github.com/opencast/opencast) **`ECL-2.0`** *(`LICENSE`, `11 340` B,
+read today)*; [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) **`ECL-2.0`**
+*(`11 120` B)*. 🟢 **Copyright terms are `Apache-2.0`: ship it, sublicense it, no copyleft.**
+🔴 **Patent terms are not:** a contribution from an institution-employed author grants patent claims
+only where that author is also the inventor **and** the institution has the right to grant under its
+grant and research-funding agreements. 🔵 **So: do not reuse an `Apache-2.0` indemnity clause.
+Price the patent warranty, or carve it out, and say why — this is the differentiator, because the
+client's own scanner will have reported *"Apache-2.0"*.**
+
+**Step `1` — capture and distribution.** 🟢 **Opencast** *(`ECL-2.0`)*, default branch `develop`
+*(recorded at p200 — do not hardcode `main`; `P216-F2`'s `3` unresolvable rows and p205's
+`ACTION PC` are both that lesson)*.
+
+**Step `2` — the LMS surface.** 🟢 **Sakai** *(`ECL-2.0`)* where the estate is Apereo, or the
+permissive Canvas/Moodle connector tier these shelves already carry
+*(`DMontgomery40/mcp-canvas-lms` **`MIT`**, `MisterCommand/mcp-canvas-lms` **`MIT`**,
+`ink-waffle/moodle-mcp` **`MIT`** — all three established at p215 from manifests)*.
+
+**Step `3` — the record layer, which you BUILD.** 🔴 **Do not adopt the open learning-analytics
+stack.** 🟢 **`OpenLRS`, `OpenLRW`, `LearningAnalyticsProcessor`, `OpenDashboard-api`/`-legacy` and
+`lap-sakai-extractor` are all `ECL-2.0` — grants read first-hand this pass — and all `6` are
+abandoned, youngest `6.6` years.** 🔵 **Use them as xAPI/Caliper CONFORMANCE REFERENCES: read
+`OpenLRS`' statement handling, then implement against the spec on current infrastructure.**
+🟢 **`T216-3`: permissive and dead is a citation right, not a base.**
+
+**Step `4` — the gate that stops this recipe going stale.** 🟢 **Run `P216-A` in CI over steps
+`1`–`3`, and run `qg_gate2.py` on write** *(`ACTION QG`'s placement step — `P216`'s scope test
+found `0` live stale cells outside its `8`-file scope, so it can be wired in unchanged)*.
+🔴 **Add the arithmetic half: `ACTION QM` exists because a published COUNT goes stale the same way
+a licence token does, and no token gate can see it.**
+
+**What this composition does NOT include, stated plainly.** 🔴 **No maintained open LRS.** 🔴 **No
+APAC-owned component** *(`0` added this pass)*. 🔴 **No EU AI Act conformity artefact** — the
+education high-risk duties are date-contested on these shelves and every EU host is unreachable from
+here, so the compliance date goes to the client with its source attached, not as a fact.
+
+### 🔵 Patterns re-confirmed, `0` changed
+
+🟢 **`P215-A`'s three-channel grant locator stands and gains a fourth rule** — classify the blob it
+locates with `P216-A`, or an `ECL-2.0` grant arrives as `UNCLASSIFIED` and gets filed as an
+absence. 🔴 **That is the exact path by which `8` agent-tier rows were published as unusable before
+p215.**
+
+---
+*Pass 216 — `2` recipes, `1` instrument repaired, `1` composition grounded in a clause rather than a label.*
 ## Pass 215 — 2026-10-15 — TWO RECIPES: THE GRANT LOCATOR THAT ACTUALLY WORKS, AND THE PERMISSIVE LMS-CONNECTOR STACK `25` RECOVERIES JUST UNBLOCKED
 
 ### 🆕 🟢 `P215-A` — the three-channel grant locator *(wire into CI, and into client due diligence)*

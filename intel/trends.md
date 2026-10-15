@@ -5,6 +5,97 @@ updated: 2026-10-15
 ---
 
 
+## Pass 216 — 2026-10-15 — THE PROPAGATION DEFECT HAS CLIMBED FROM CELLS TO THE ACTION REGISTER, AND THREE FALSIFIERS CAME BACK NEGATIVE, WHICH IS THE POINT OF HAVING THEM
+
+### 🆕 🔴 `T216-1` — a DERIVED COUNT propagates exactly like a licence token, and no gate this KB owns can see it
+
+🔴 **p215 published the remaining ungranted population as `63` in three places, and
+`intel/open-gaps.md` then told this pass to *"re-probe the `63` remaining ungranted rows"`.**
+🟢 **Recomputed from the two evidence files p215 itself committed, the remainder is `69` raw
+*(`94` − `25`, set-verified)*, `68` after the one owner-case duplicate pair inside it, and
+🟢 **`67`** after removing the row whose case-variant p215 had already recovered.** 🔴 **p215's own
+prose composition reaches `64`, not `63`, either** *(`25` manifests with no `license` field + `36`
+with no licence-shaped path + `3` failures)*.
+
+🔵 **`ACTION QG` — p215's own — made the CORRECTION the unit of work and swept grant CELLS.**
+🔴 **A derived figure is a cell: it is published, it is quoted, and it goes stale the moment the
+population behind it moves.** 🔴 **And `qg_gate2.py` structurally cannot catch it, because it
+compares licence TOKENS against a truth table, and `63` is not a token.** 🟢 **So the gate p215
+proposes to wire into `make hooks` is necessary and not sufficient, and `ACTION QM` is registered
+to test the complementary half: recompute every population count these shelves quote, from the
+evidence file each one names.**
+
+### 🆕 🔴 `T216-2` — the register that decides the next pass's budget is itself unpropagated, and it cost a full pass
+
+🔴 **`T215-8` states that `ECL-2.0` *"appears NOWHERE on these shelves before p215"* and is *"a
+licence family this KB had never recorded"*. `ACTION QI` was registered on that premise.**
+🔴 **`repos/foundations.md` l.`1373`: **`## Pass 200 — 2026-10-14 — ECL-2.0: EDUCATION HAS ITS OWN
+LICENCE AND THIS KB HAD NEVER NAMED IT`** — a full section establishing the OSI approval, the
+quoted `§3` patent narrowing, an `18`-repository census, `sakai` `11 120` B, `opencast` `11 340` B,
+and the `UNCLASSIFIED`-instrument note.** 🟢 **p199 had already called `ECL-2.0`
+*"Apache-derived with an education-specific patent clause"*; p212 published `OpenLRW` as `ECL-2.0`
+at `9 878` B.**
+
+🔵 **Three prior samples put this KB's propagation failure rate near `80`%: `P211-1` `6`/`7`,
+`P214-3` `3`/`4`, `QG` `23`/`7`.** 🔴 **All three measured CELLS. `T216-2` is the same failure in
+the ACTION REGISTER — one layer up, and the layer with leverage, because the register allocates
+the next pass's budget.** 🟢 **p216 re-derived p200's result from scratch, and the fact that an
+independent re-derivation agrees line for line is precisely the evidence that nothing new was
+learned.** 🟢 **`ACTION QL` registered: an action may not be written on a claim of absence until
+the shelves have been `grep`ped for the token, the slug or the family it says is missing.**
+
+### 🆕 🟢 `T216-3` — in education the LICENCE axis and the MAINTENANCE axis are independent, and this KB has conflated them twice
+
+🟢 **`5` new `ECL-2.0` grant cells were established first-hand this pass, and all `5` sit on
+repositories this KB had already measured as abandoned** — the
+`Apereo-Learning-Analytics-Initiative` org, `6` of `6` dead, youngest `6.6` years, verdict reached
+twice independently *(commit dates at p109; Travis dependence at p111)*.
+
+🔵 **A permissive grant on an abandoned repository confers a CITATION right, not a build
+decision.** 🔴 **The temptation runs the other way — a newly-readable `ECL-2.0` cell looks like a
+newly-available base — and the correct output is the pairing:** *permissive, abandoned, cite it,
+do not deploy it.* 🟢 **Standing rule recorded on
+[`verticals/solutions.md`](../verticals/solutions.md): a grant cell never promotes a row on its
+own.**
+
+### 🆕 🟢 `T216-4` — three falsifiers came back NEGATIVE in one pass, and the negatives are the deliverable
+
+🟢 **`QH`, `QK` and `QJ` all fire on limb `2`.** 🔵 **Each closes a question that had been open
+for several passes, and each closure is cheap to act on:**
+
+| closed question | the negative result | what it licenses the next pass to STOP doing |
+|---|---|---|
+| is the `18`-form root probe lossy beyond path reach? | 🟢 **`0` of `69`** recover a plain root `LICENSE` | 🟢 stop guessing filenames; `ABSENT` now means *"not in the tree"*, and `P215-1` was the whole of the artefact |
+| are there further PERSON-level claims resting on an absence? | 🟢 **`0`** of `43` candidates | 🟢 stop re-sweeping; `T215-7` was a single lapse, and the `39` artefact-scoped claims are correctly bounded |
+| should the mandated region query be replaced by organ-named queries? | 🟢 **`0`** new instruments from the organ-named shape | 🟢 stop proposing the replacement; both shapes are saturated, and the blanks are blanks, not instrument failure |
+
+🔴 **A KB that only published its limb-`1` results would carry three open actions it has already
+answered.** 🟢 **`T216-4` is the meta-reading: the value of a pre-registered falsifier is highest
+when it comes back negative, because that is the only cheap way to CLOSE a line of inquiry.**
+
+### 🆕 🔴 `T216-5` — the general search channel is a regression test, on its fifth consecutive confirmation
+
+🟢 **All `8` mandated searches ran verbatim; `0` named entities returned that these shelves do not
+hold** — `Project NOMAD`, `OpenEduCat`, `Aureus ERP`, `Corteza`, `Apache OFBiz`, `ERPNext`,
+`H.R. 8747`, `AB 1159`, `Katy ISD`, UNESCO `IESALC`, the LAC `Observatory`, Korea's `AI Basic Act`,
+Vietnam's `Decision 33/2026`, `MEXT`, Singapore's `MOE`/`AICET`, India's `CBSE`/`NCERT`, `INTEF`
+v`2.0`, the Commission/OECD/G7 `AI Literacy Framework`. 🔵 **`T214-2` now reads across five
+passes.** 🟡 **`T176`'s category confusion also returned for a second consecutive pass: the
+`github MIT` query shape keeps surfacing teaching MATERIAL about building agents
+*(`microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`,
+`karpathy/nanochat`)* rather than education-sector agents, because the words it matches are the
+same.**
+
+### 🔵 Carried unchanged
+
+🔴 **`T214-4`** *(education's PHP/Rails platforms vendor their dependencies, so licence files in a
+repository routinely outnumber the project's own)* — unchallenged this pass. 🔴 **`T215-4`**
+*(path shape cannot decide ownership; attestation can)* — unchallenged. 🟢 **`T215-6`** *(the
+correction, not the discovery, is the unit of work) — reinforced by `T216-1`, which extends it from
+tokens to arithmetic.*
+
+---
+*Pass 216 — `5` trends, `3` of them from negative results.*
 ## Pass 215 — 2026-10-15 — `ABSENT` MEANT *"NOT AT ROOT"*: `27`% OF THIS KB'S UNGRANTED POPULATION WAS GRANTED ALL ALONG, AND THE SAME SHELVES HELD BOTH READINGS
 
 ### 🆕 🔴 `T215-1` — the ungranted count was a channel artefact, and now it has a defensible size

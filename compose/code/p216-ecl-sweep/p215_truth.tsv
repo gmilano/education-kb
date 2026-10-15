@@ -1,0 +1,31 @@
+#         raw.githubusercontent.com and classify from the TITLE WINDOW (P214-1: a whole-body matcher
+#         reads GPL-3.0 as AGPL-3.0 because GPL-3.0 section 13 is titled "Use with the GNU Affero GPL")
+# bytes: binary-safe (curl -o file; wc -c). A text-mode pipe strips CR and understates a CRLF blob
+#        by one byte per line - see P215-5 and the eol column.
+# population 94 | clone/ls-tree failures 3 | own-grant recoveries 25
+repo	grant
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	ECL-2.0
+OS4ED/openSIS-Classic	GPL-2.0
+OS4ED/openSIS-Responsive-Design	GPL-2.0
+anthropics/prompt-eng-interactive-tutorial	MIT
+kstateome/lti-launch	LGPL-3.0
+foradian/fedena	Apache-2.0
+projectfedena/fedena	Apache-2.0
+formalms/formalms	GPL-2.0
+open-spaced-repetition/fsrs4anki-helper	MIT
+nvaccess/nvda	GPL-2.0
+skhdemo/uoft-quercus-mcp	MIT
+thm-mni-ii/feedbacksystem	Apache-2.0
+ProjectsAndPrograms/school-management-system	MIT
+DMontgomery40/mcp-canvas-lms	MIT
+Exhabition/brightspace-mcp-rs	MIT
+LMS-Laravel/LMS-Laravel	MIT
+LMS-Laravel/OLD-LMS-Laravel	MIT
+MisterCommand/mcp-canvas-lms	MIT
+Simon-Initiative/lti-example-tool	MIT
+Lumieducation/Lumi	AGPL-3.0
+ink-waffle/moodle-mcp	MIT
+ink-waffle/sisu-mcp	MIT
+kaushal0494/AITutor-EvalKit	ISC
+pipwerks/scorm-api-wrapper	MIT (non-SPDX string: "MIT-style license: http://pipwerks.mit-license.org/")
+virtualarkansas/jupyterlite-zestables	MIT

@@ -1,0 +1,14 @@
+slug	path	http	p215_says	p216_says	delta
+Apereo-Learning-Analytics-Initiative/Larissa	LICENSE	200	Apache-2.0	Apache-2.0	same
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Apereo-Learning-Analytics-Initiative/OpenLRS	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Apereo-Learning-Analytics-Initiative/OpenLRW	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	pom.xml	200	UNCLASSIFIED	UNCLASSIFIED	same
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+Unicon/tool13demo	LICENSE	200	Apache-2.0	Apache-2.0	same
+apereo/opencast	-	none-of-14	-	-	NO-BLOB
+opencast/opencast	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+sakaiproject/sakai	LICENSE	200	UNCLASSIFIED	ECL-2.0	DIFFERS ECL-STRING-PRESENT
+uPortal-Project/uPortal	LICENSE	200	Apache-2.0	Apache-2.0	same

@@ -5,6 +5,65 @@ updated: 2026-10-15
 ---
 
 
+## 2026-10-15 — Pass 216 — `0` new trending repos, `5` new `ECL-2.0` grant cells on an abandoned org, and the ungranted count drops to `67`
+
+🟢 **APPEND-ONLY. History below this section is intact.**
+
+### 🆕 🔴 No new trending surface, measured rather than assumed
+
+🟢 **`github trending education AI 2026` and `top open source AI agents education 2026 github MIT`
+both ran verbatim.** 🔴 **`0` repositories returned that these shelves do not carry.**
+🟡 **`Project NOMAD` *(offline-first education server, reported ~`39.8`k★ on an aggregator dated
+`2026-10-13`)* is already here; the star figure is snippet-sourced and `api.github.com` is `403`
+from this environment, so it is NOT recorded as a measured count.** 🔵 **`karpathy/nanochat`,
+`rohitg00/ai-engineering-from-scratch` and `microsoft/ai-agents-for-beginners` returned again and
+are again teaching MATERIAL rather than education-sector software — `T176`, second consecutive
+appearance.**
+
+### 🆕 🟢 `5` grant cells land on the worst-maintained cluster on this shelf
+
+🟢 **Read first-hand today through `raw.githubusercontent.com/<slug>/HEAD/LICENSE`:**
+
+| repo | grant *(blob, bytes)* | last commit | what the cell changes |
+|---|---|---|---|
+| 🆕 [`.../OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🟢 **`ECL-2.0`** · `11 087` B | `2019-01-31` *(`2 809` d)* | 🟡 from unrecorded to **permissive, abandoned** |
+| 🆕 [`.../LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🟢 **`ECL-2.0`** · `9 919` B | `2016-05-04` *(`3 811` d)* | 🟡 idem |
+| 🆕 [`.../OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 🟢 **`ECL-2.0`** · `9 919` B | `2020-03-09` *(`2 406` d)* | 🟡 idem |
+| 🆕 [`.../OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🟢 **`ECL-2.0`** · `9 919` B | `2020-02-17` *(`2 427` d)* | 🟡 idem |
+| 🆕 [`.../lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 🟢 **`ECL-2.0`** · `11 087` B | `2014-12-02` *(`4 330` d)* | 🟡 idem |
+
+🔴 **This is the cluster this shelf already headed *"The single worst cluster on this shelf"* —
+`6` of `6` abandoned, verdict reached twice independently *(commit dates at p109; Travis CI
+dependence at p111)*.** 🟢 **A grant is worth recording on an archaeological row because it makes
+the row CITABLE.** 🔴 **It does not make it a base, and this pass promotes none of them.**
+
+### 🆕 🟢 Drift controls: `3` of `3` byte-exact against earlier passes
+
+| repo | this pass | earlier reading | result |
+|---|---|---|---|
+| `sakaiproject/sakai` | `11 120` B | p200: `11 120` B | 🟢 **un-drifted** |
+| `opencast/opencast` | `11 340` B | p200: `11 340` B | 🟢 **un-drifted** |
+| `Apereo-…/OpenLRW` | `9 878` B | p212: `9 878` B | 🟢 **un-drifted** |
+
+🔵 **Three byte-exact confirmations across `4` and `16` passes. A licence blob that does not move
+is a cheap, honest stability signal — and this is the first pass to report it as a control rather
+than as a re-measurement.**
+
+### 🆕 🔴 The ungranted population on these shelves: `94` → `69` → `67`
+
+| figure | source | status |
+|---|---|---|
+| `94` | p211, `18` root forms | 🔴 **a root-only artefact** *(`P215-1`)* |
+| `63` | 🔴 **p215, published in `3` places and in the `p216` action register** | 🔴 **unreconciled with its own evidence files** |
+| `69` | 94 − 25, set-verified | 🟢 **raw remainder** |
+| 🟢 **`67`** | less `1` owner-case duplicate pair, less `1` row whose variant was already recovered | 🟢 **the defensible figure** |
+
+🔴 **All `69` were re-probed on a plain root `LICENSE` this pass. `0` recovered** *(`66` × `404`,
+`3` unresolvable)*, 🟢 **so `67` is not provisional pending another path guess: the obvious path is
+now excluded by measurement.**
+
+---
+*Pipeline automático — `0` new repos, `5` new grant cells, `3` drift controls passed. v216.*
 ## 2026-10-15 — Pass 215 — `0` new trending repos, `25` recovered from `ABSENT`, and a licence family this KB had never recorded
 
 🟢 **APPEND-ONLY. History below this section is intact.**
