@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — A REFUTED CLAIM IS NOT NEUTRALISED BY BEING REFUTED SOMEWHERE ELSE IN THE SAME FILE. THE UNIT OF A CORRECTION IS THE **READING PATH**, NOT THE DOCUMENT
+
+🔵 **The trend this pass is about knowledge bases, and it is measurable in this one: `3` cells asserted a date this KB had already refuted `4` times, and the refutation was in the same file, `~900` lines away.**
+
+### 🆕 🔴 `T223-1` — the correction was never missing; it was unreachable from where the error was read
+
+🟢 **The claim: *"EU AI Act, education high-risk, full effect August 2026."*** 🟢 **The correction: `Reg. (EU) 2026/1744` — Annex III education `2027-12-02`, Art. `50` `2026-08-02`.** 🔴 **Both on `intel/market.md`. The error was at line `48`, in the live regional recommendation; the correction at `~937` and `~2246`, in the archive of earlier passes. A reader who opens the page and reads the top section — which is what the page is *for* — gets the wrong one.**
+
+🔵 **Every previous instrument in this KB has validated **inbound** data: a licence read, a market figure's provenance, a query's verbatim text. 🔴 **None validated the KB's own published prose against the KB's own corrections.** 🟢 **`p223-selfclaim-date-gate` is the first that does, and it found `2` `ASSERTED` + `1` `ATTRIBUTED` cell on its first run.**
+
+🟢 **Eighth consecutive unit-mismatch finding, and the strongest form of it so far:** `T218` line vs sentence · `T220` repository vs file · `T221` family vs version range · `T222` token vs ecosystem grammar · 🆕 **`T223` document vs reading path**. 🔵 **The instrument reproduced the mistake while being built — a quote mark elsewhere on the line exonerated the whole line — which is `T222` again, one level up.**
+
+### 🆕 🟢 `T223-2` — a declared blank is a statement about the instrument, and p222's APAC blank was one
+
+🔴 **p222 declared: no national AI-in-schools policy for Singapore, Australia, India, Japan or South Korea.** 🟢 **One query with a different shape — `ministry guidelines` instead of `players` — returned instruments for China, Indonesia, South Korea, Japan, India, Singapore and Nepal in a single pass.**
+
+🔵 **The generalisation, which this KB should treat as a rule rather than an observation: a blank declared from a *market-shaped* query ("players", "adoption", "vendors") says nothing about *policy-shaped* reality. 🟢 `ACTION RE`'s discipline of publishing the verbatim query is what made this detectable — the blank was honest, and it was still wrong about the world.**
+
+🔴 **What has NOT improved: `0` of the `7` APAC instruments was read at a primary source. `ACTION RO` is open for a fourth pass, and this pass established *why* it keeps failing — see `T223-3`.**
+
+### 🆕 🔴 `T223-3` — this KB's read-the-primary protocol has a structural ceiling, and it is the egress policy
+
+🔴 **Unreachable from this session, all three `CONNECT 403`: `data.consilium.europa.eu`, `www.consilium.europa.eu`, `eur-lex.europa.eu`. 🟢 `unesco.org` has been recorded unreachable since p215.**
+
+🟡 **So: every EU and UN date on these shelves is secondary by construction, and no amount of pass effort will change that from inside this session.** 🟢 **The honest responses are (a) say so in the proposal — "dates are secondary-sourced; confirm against the Official Journal before contracting" is a sentence that builds trust rather than losing it — and (b) stop registering primary-read actions that the egress policy makes impossible, and register instead a *convergence* test: `3`+ independent secondary sources agreeing on a date, with the disagreeing ones published.**
+
+### 🟡 `T223-4` — demand is public and supply is coursework, measured on the LATAM dropout shelf
+
+🟢 **`209` repositories, top ten peaking at `4`★, `2` of `4` probed carrying no licence, `1` `MIT` scaffold with no model.** 🔴 **Meanwhile dropout prediction is the single most-cited AI-in-education use case in LATAM ministry and university discourse on these shelves.**
+
+🔵 **That gap is the trend: in this industry, the *demand* side is written by ministries and the *supply* side by students, and the two have not met in an open-source commons. 🟢 For a studio this is good news — it is a build engagement with a published benchmark to beat *(`AUC-ROC 0.943`)* and no incumbent to displace.**
+
+### 🔵 `T223-5` — policy is converging on restriction-with-a-syllabus, not on adoption
+
+🟢 **China bars independent generative use by primary pupils and bars teachers substituting GenAI for core teaching. Singapore gates P4 use inside the ministry platform. South Korea's mandate was withdrawn after sub-`30%` adoption. India mandates the *subject* from Class `3`. Boston and Ohio State make AI fluency a *graduation requirement*.**
+
+🔵 **Read together: governments are regulating **where AI sits in the curriculum**, not whether schools may use it. 🟢 The product shape that follows is course-scoped, teacher-supervised and auditable — and the product shape that does not follow is the site-wide assistant every vendor is selling.**
+
 ## Pass 222 — 2026-10-15 — A LICENCE IDENTIFIER DOES NOT MEAN THE SAME THING IN TWO ECOSYSTEMS, AND EVERY TOOL THAT TREATS IT AS ONE STRING — THIS KB INCLUDED — IS READING A POSITIVE STATEMENT AS A SILENCE
 
 🔵 **Five trends: two about how open-source licence data is actually encoded, one about how the market is being sized, one about where the sector's AI supply is coming from, one about what regional silence means.**

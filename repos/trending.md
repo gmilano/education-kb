@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 223 — THE TOPIC SHELVES ARE EXHAUSTED AND A USE-CASE QUERY IN PORTUGUESE FOUND FOUR REPOSITORIES IN ONE GO
+
+🔵 **`16` of `18` topic-shelf candidates were already here. Every row that was new this pass came from a query written in a **use case** or a **language**, not a topic tag.**
+
+🔵 **Evidence:** [`discovery-candidates`](../evidence/discovery-candidates.2026-10-15-p223.tsv) *(`23` rows, every query string verbatim)*
+
+### 🆕 🟢 `T223-R1` — new rows this pass
+
+| repo | licence *(first-hand)* | region | stars | why it is here |
+|---|---|---|---|---|
+| [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) | 🟢 `MIT` | EMEA *(Egypt)* | `0` | on-device failure risk, **no network permission**, model card + CI |
+| [`ciia-educacao/evasao-escolar`](https://github.com/ciia-educacao/evasao-escolar) | 🟢 `MIT` | LATAM *(Brazil)* | `1` | dropout-prevention **scaffold** — structure and process, no model yet |
+| [`lincolnmeira/mlp-evasao-ufrb`](https://github.com/lincolnmeira/mlp-evasao-ufrb) | 🔴 `UNGRANTED` | LATAM *(Brazil)* | `1` | **`AUC-ROC 0.943`, recall `86.3%`** on UFRB data — the metric, not the code |
+| [`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction) | 🔴 `UNGRANTED` | APAC *(China)* | n/a | OCR → grading → **teacher-score alignment** loop → [`agents/top.md`](../agents/top.md) |
+
+### 🔴 `T223-R2` — the channel reading, with numbers
+
+| channel | candidates | already on shelf | new | verdict |
+|---|---|---|---|---|
+| `topic:ai-tutor` *(pushed > `2026-09-15`)* | `10` | `10` | `0` | 🔴 **exhausted** |
+| `topic:ai-literacy` | `4` | `4` | `0` | 🔴 **exhausted** |
+| `topic:learning-analytics` *(by recency)* | `4` | `3` | `1` | 🟡 **churn** — the recency sort surfaces `0`★ repositories hours old; signal-to-noise is poor but non-zero |
+| use-case query, Portuguese + Spanish | `4` | `0` | `4` | 🟢 **pays** |
+
+🔵 **The `topic:learning-analytics` recency sweep is worth one honest note: of the ten rows on page one, **seven had `0` stars** and several were student exercises. 🟢 Two were not — [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) *(`Apache-2.0`, an LMS plug-in for running randomised controlled trials inside a real course)* and the `elimu-ai` learning-event work — and both were already here.**
+
+🟢 **Rule for the next pass, which is the actionable part: query the **use case in the buyer's language** *(`evasão`, `deserción`, `abandono escolar`, `بوابة الطالب`)*, not the English topic tag. The topic tags have been swept `200`+ times by this KB and they are finished.**
+
 ## 2026-10-15 — Pass 222 — `ACTION RD` CLOSES AT PASS `3` OF `3`: THE MANDATED SHAPE IS `0` FOR `8`, AND THE HONEST VERDICT IS STILL **KEEP BOTH**
 
 🔵 **`0` new repository rows this week; `3` new agent rows came from the constrained shape and are on [`agents/trending.md`](../agents/trending.md).** 🔴 **A third mandated shape was added this pass and produced the worst result of the three — not a blank, but a single vendor's SEO surface read as a market.**

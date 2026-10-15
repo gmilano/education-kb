@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — THE GATE HAS ALWAYS POINTED OUTWARD. POINTED INWARD IT FIRES TWICE, AND ONE HIT IS THE SENTENCE THAT PRICES AN EMEA ENGAGEMENT
+
+🔵 **`4` new repository rows *(`2` `MIT`, `2` `UNGRANTED`)*, `0` new platform rows, `3` cells corrected, `1` declared blank withdrawn, `1` new instrument wired and tested.**
+
+### 🔴 The headline: this KB published a date it had already refuted four times
+
+🟢 **`intel/market.md`'s live EMEA opportunity paragraph said the EU AI Act is *"fully effective August 2026, with education classified high-risk"*. 🔴 The same file carries `Reg. (EU) 2026/1744`: Annex III education high-risk is **`2027-12-02`**; `2026-08-02` is **Article `50` transparency**. 🔴 Every prior flag of this claim — four of them — was aimed at an inbound source; none asked whether the KB asserts it itself.**
+
+🟢 **`2` `ASSERTED` + `1` `ATTRIBUTED` cell found, all three corrected.** 🟢 **Instrument: [`p223-selfclaim-date-gate`](compose/code/p223-selfclaim-date-gate/README.md), `11` controls, `7` of which must *not* fire. It reproduced the KB's own recurring defect while being built — a quote mark elsewhere on the line exonerated the line — so the rule is restated: **the unit is the matched span, not the line**.**
+
+🟡 **Commercially this is not a typo. `2026-08-02` makes an EMEA transparency engagement procurable now; `2027-12-02` makes Annex III conformity a staged programme with ~`14` months of runway. Two SOWs, not one deadline → [`compose/patterns.md`](compose/patterns.md) `P223-R1`.**
+
+### 🟢 p222's APAC blank is withdrawn — it was the query's shape
+
+🟢 **A `ministry guidelines`-shaped query returned national instruments for **China, Indonesia, South Korea, Japan, India, Singapore and Nepal** in one pass, against p222's declared *"no national AI-in-schools policy"*.** 🔴 **`0` of the `7` read at a primary source — and `T223-3` establishes why that will not change: `consilium.europa.eu`, `eur-lex.europa.eu` and `unesco.org` are all `CONNECT 403` from this session. Every EU and UN date here is secondary by construction, and the proposal should say so.**
+
+### 🔴 LATAM: `209` repositories for the region's most-cited use case, and no commons
+
+🟢 **Dropout prediction, measured this pass: `209` repositories matching `"evasão escolar" OR "deserción escolar"`; top ten peaking at `4`★; `2` of `4` probed with **no licence**; the `MIT` one is a scaffold with no model; the one with a published metric *(`AUC-ROC 0.943`, recall `86.3%`, UFRB)* is `UNGRANTED`.** 🟢 **Build, don't adopt — and quote the `0.943` as the bar → [`compose/patterns.md`](compose/patterns.md) `P223-R2`.**
+
+### 🟢 New rows, every licence read first-hand
+
+| repo | licence | region | note |
+|---|---|---|---|
+| [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) | 🟢 `MIT` | EMEA *(Egypt)* | on-device failure risk, **no Internet permission**, model card + CI — reference, not dependency *(`0`★)* |
+| [`ciia-educacao/evasao-escolar`](https://github.com/ciia-educacao/evasao-escolar) | 🟢 `MIT` | LATAM *(Brazil)* | dropout scaffold, no model |
+| [`lincolnmeira/mlp-evasao-ufrb`](https://github.com/lincolnmeira/mlp-evasao-ufrb) | 🔴 `UNGRANTED` | LATAM *(Brazil)* | the benchmark, not the code |
+| [`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction) | 🔴 `UNGRANTED` *(`8` probes)* | APAC *(China)* | the teacher-score **alignment loop** p213 said was missing |
+
+🔵 **Discovery rate, measured: `16` of `18` topic-shelf candidates were already here *(`89%`)*. Every new row came from a **use-case or language** query, not a topic tag → [`repos/trending.md`](repos/trending.md) `T223-R2`.**
+
 ## Pass 222 — 2026-10-15 — `ACTION RP` FIRES ON ITS SECOND LIMB AND ITS PREMISE INVERTS: A BARE LICENCE TOKEN IS A **POSITIVE** STATEMENT IN TWO OF THE FIVE GRAMMARS IN USE HERE
 
 🔵 **`3` new agent rows, `0` new repository rows, `1` new platform row.** 🟢 **`6` actions discharged — `RP`, `RQ`, `RS`, `RT`, `RN`, and `RD` CLOSED at pass `3` of `3`. `1` organisation-wide licence exclusion that invalidates a whole class of recipe, `1` range conflict on the most-mentioned row on the shelf, `1` family conflict between two channels in the same directory, `3` new agent rows read first-hand, and `2` of this pass's own instrument errors recorded rather than buried.**

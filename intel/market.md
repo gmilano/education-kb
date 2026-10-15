@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — THE STALE-DATE GATE HAS ALWAYS POINTED OUTWARD. POINTED AT THIS KB'S OWN PROSE IT FIRES TWICE, AND ONE HIT IS THE SENTENCE THAT PRICES AN EMEA ENGAGEMENT
+
+🔵 **`0` new market figures. `3` cells corrected. `1` declared blank closed and shown to have been a query-shape artefact. `1` new primary instrument recorded SNIPPET-ONLY because its host is unreachable from this session.**
+
+🔵 **Evidence:** [`sa-selfclaim-dates`](../evidence/sa-selfclaim-dates.2026-10-15-p223.tsv) *(before)* · [`sa-selfclaim-dates-after`](../evidence/sa-selfclaim-dates-after.2026-10-15-p223.tsv) *(after, empty)* · **Instrument:** [`p223-selfclaim-date-gate`](../compose/code/p223-selfclaim-date-gate/README.md) *(`11` controls, `7` of them must not fire)*
+
+### 🆕 🔴 `P223-M1` — this KB flagged a stale date four times in other people's sources, and published it twice in its own
+
+🔴 **`intel/market.md:48` — p222's EMEA opportunity paragraph, the live page — read: *"the EU AI Act, fully effective August 2026, with education classified high-risk."*** 🔴 **The same file, ~`900` lines below, carries `Reg. (EU) 2026/1744`: Annex III stand-alone high-risk *(where education sits)* moved to **`2027-12-02`**, Article `50` transparency **`2026-08-02`**, embedded-in-product **`2028-08-02`**.**
+
+| cell | pass that wrote it | verdict | state after p223 |
+|---|---|---|---|
+| `intel/market.md:48` | p222 | 🔴 `ASSERTED` | 🟢 corrected, two clocks named |
+| `intel/market.md:419` | p218 | 🔴 `ASSERTED` | 🟢 corrected |
+| `intel/market.md:1347` | p205 | 🟡 `ATTRIBUTED` *(reporting verb, no verdict)* | 🟢 corrected |
+
+🟡 **Why it is a market finding and not a typo: the two dates sell different work.** `2026-08-02` means an EMEA transparency-and-disclosure engagement is **procurable now**; `2027-12-02` means Annex III conformity is a **staged** programme with ~`14` months of runway. 🔴 **A studio that quotes the earlier date for Annex III is selling urgency a client's own counsel will refute in the first meeting.**
+
+🔵 **The generalisable finding is about where a correction lives, not whether it exists:** this KB had the right date on the same page, in the same file, and the wrong one still reached the recommendation. **Freshness was never the defect. Locality was.**
+
+### 🆕 🟢 `P223-M2` — the APAC blank p222 declared was the query's shape, not the world's
+
+🟢 **p222 declared, NEW: *"No national AI-in-schools policy for Singapore, Australia, India, Japan or South Korea."*** 🟢 **One differently-shaped query this pass returned ministry-level instruments for six APAC jurisdictions.** 🔴 **So the blank was a measurement artefact. It is withdrawn, and the lesson is recorded in [`intel/trends.md`](trends.md) `T223-2`.**
+
+| jurisdiction | instrument returned this pass | shelf status |
+|---|---|---|
+| **China** | MoE guidance on AI in primary/secondary + on generative AI in schools *(late `2025`)*: primary pupils barred from independent open-ended generation; teachers barred from substituting GenAI for core teaching | 🟢 already on shelf *(`market.md:252`, `:2973`)* |
+| **Indonesia** | joint ministerial decree *(`SKB`)*, national guidelines for digital technology and AI in education, early childhood → university, incl. informal/home learning | 🔴 **DATE CONFLICT:** this pass's source says **~April `2026`**; shelf `market.md:2980` says **March `2026`**. Both secondary → recorded, not resolved |
+| **South Korea** | AI textbooks below `30%` adoption by March; National Assembly stripped statutory status; ~`₩1.4` tn *(~USD `1.25` bn)* national plan | 🟢 already on shelf |
+| **Japan** | `2019` AI-education principles; digital textbooks possibly official from the **`2030`** school year | 🆕 new to shelf |
+| **India** | AI + computational thinking mandatory **from Class 3, `2026-27`** | 🆕 new to shelf |
+| **Singapore** | MOE: P4 AI use structured, teacher-supervised, inside Student Learning Space | 🟢 consistent with shelf |
+| **Nepal** | National AI Policy `2081` *(`2025`)* proposes AI education across universities; early implementation | 🆕 new to shelf |
+
+🔴 **All seven are secondary-sourced. `ACTION RO` — read one APAC primary text — remains open for a fourth pass, and this pass could not discharge it either: see the blocked-host finding below.**
+
+### 🆕 🟡 `P223-M3` — a new EMEA instrument this KB has never carried, and it cannot be read from here
+
+🟢 **Council of the European Union conclusions, document **`ST-9003/2026`**, Brussels, `11` May `2026`** — `0` prior mentions anywhere in this KB *(`grep` across all `*.md`)*. 🟢 **Reported content: AI literacy for teachers, and explicit emphasis on reducing dependence on AI tools built outside Europe, education included.**
+
+🔴 **`SNIPPET-ONLY`. `data.consilium.europa.eu` is `CONNECT 403` from this session**, joining `unesco.org` *(recorded since p215)* and 🆕 `eur-lex.europa.eu`. 🟡 **This is now a structural limit on this KB's read-the-primary protocol, not a per-pass failure: the three hosts that publish the EU and UN primaries are all unreachable. Every EU date on these shelves is secondary by construction, and that is the honest caveat to put in a proposal — not a hedge, a known instrument limit.**
+
+🟢 **Commercially it points the same way as APAC sovereignty: a European buyer now has a Council-level reason to prefer a self-hosted stack, which is the build [`compose/patterns.md`](../compose/patterns.md) `P223-R1` assembles.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Unchanged structurally, and still the largest region by share.** 🔵 **This pass's query returned policy volume, not market motion:** ~`100` state bills in `2026` touching student AI use inside `1 500`+ AI bills overall; `34`–`40` states plus DC/PR with guidance *(counts differ by tracker — methodology, not fact)*; `4` states mandating district AI policies.
+
+🟢 **Named this pass:** Idaho **SB `1227`** *(statewide K-12 framework; AI may not replace teachers; data-privacy duties)* — 🟢 already on shelf; California **A.B. `1159`** *(bars training on student data unless the school benefits)* — 🟢 on shelf; **Boston Public Schools** AI fluency as a graduation requirement from **September `2026`** — 🟢 on shelf; **Ohio State** campus-wide AI fluency requirement — 🆕 thin on shelf *(`2` mentions)*.
+
+🔵 **Adoption split, worth quoting in a deck because it decides the buyer:** ~`92%` of university students vs `54%` of K-12 students using AI for schoolwork *(secondary; RAND `2025` for the K-12 figure)*.
+
+🟢 **Concrete opening, unchanged and reinforced:** per-jurisdiction **policy-and-enablement**, not tooling. 🔵 **What is new is the hook: a district with an AI-fluency graduation requirement has a dated obligation and no curriculum, and `GarethManning/education-agent-skills` *(`CC-BY-SA-4.0`, `864`★ — licence re-read first-hand this pass)* is a teacher-skills corpus a studio can adapt, provided the share-alike term is priced into the SOW.**
+
+### EMEA
+
+🔴 **The headline is the correction above: two clocks, not one.** 🟢 **Art. `50` transparency `2026-08-02` — binding now. Annex III education high-risk `2027-12-02`. Prohibitions, emotion inference in education among them, since `2025-02-02`.**
+
+🟢 **New instrument *(SNIPPET-ONLY)*:** Council conclusions `ST-9003/2026` — teacher AI literacy + reduced dependence on non-European tools.
+
+🟢 **Carried, unrefuted:** enterprise AI adoption spans ~`5%` *(Romania)* to ~`42%` *(Denmark)*; the three stated non-adoption reasons — expertise `70.89%`, legal uncertainty `52.52%`, data protection `48.83%` — remain **two-thirds services work**.
+
+🟢 **Concrete opening, re-timed by the correction:** sell the **Article `50` transparency layer now** *(disclosure, logging, learner-facing notice on any tutor or grader)* and the **Annex III conformity programme as a staged `2027` engagement**, against the GPLv3-family LMS the client already runs. 🔵 **Recipe: [`compose/patterns.md`](../compose/patterns.md) `P223-R1`.**
+
+🆕 🟢 **Supply note, first EMEA row of its kind on these shelves:** [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) *(`MIT`, Egypt)* — course-failure risk inferred **entirely on-device**, Android manifest declaring **no Internet permission**, with a model card and CI. 🟡 **`0`★, single author — a reference implementation, not a dependency.**
+
+### APAC
+
+🟢 **The blank is withdrawn: six jurisdictions returned ministry-level instruments *(table in `P223-M2`)*.** 🔵 **The pattern across them is not "adoption" — it is **restriction with a syllabus**: China bars independent generative use by primary pupils, Singapore gates P4 use inside a ministry platform, Korea stripped its textbook mandate after a sub-`30%` rollout, India mandates the subject rather than the tool.**
+
+🔴 **Korea is the cautionary case to cite in any ministry pitch: a funded national mandate failed on adoption, not on technology.**
+
+🟢 **Concrete opening:** **teacher-supervised, ministry-platform-resident deployments** — the opposite of a site-wide assistant. 🔵 **Pair with the sovereignty motion already on shelf (`87%` encourage agents / `47%` have controls) and the self-hosted Moodle provider row [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible).**
+
+🆕 🟡 **Supply note:** [`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction) *(China)* — the teacher-score-alignment grading loop this KB has said is missing since p213 — is **`UNGRANTED`**: `8` channels probed, no licence. 🔴 **Design reference only; not shippable.**
+
+### LATAM
+
+🔴 **`P223-M4` — the region's most-cited use case has no commons. Measured this pass:** a GitHub search for `"evasão escolar" OR "deserción escolar"` returns **`209` repositories**; the **top ten by stars peak at `4`★**; `4` probed first-hand → `2` carry **no licence at all**, `1` is `MIT` but a **scaffold with no model**, `1` has no README.
+
+| row | licence *(read first-hand)* | what it actually is |
+|---|---|---|
+| [`ciia-educacao/evasao-escolar`](https://github.com/ciia-educacao/evasao-escolar) | 🟢 `MIT` *(`LICENSE`, `1 070` B)* | directory scaffold + contribution rules; **no trained model** |
+| [`lincolnmeira/mlp-evasao-ufrb`](https://github.com/lincolnmeira/mlp-evasao-ufrb) | 🔴 **`UNGRANTED`** *(no `LICENSE` at probed channels)* | MLP on UFRB student data, **`AUC-ROC 0.943`, recall `86.3%`** — the only published metric found |
+| [`michelelozada/Projeto-Evasao-Escolar-Brasil-2019-2021`](https://github.com/michelelozada/Projeto-Evasao-Escolar-Brasil-2019-2021) | 🔴 **`UNGRANTED`** | notebook study, Brazil `2019`–`2021` |
+| [`allefyrafael/painel-evasao-df`](https://github.com/allefyrafael/painel-evasao-df) | 🔵 not probed *(no README; `404`)* | PDAD `2024` dropout dashboard, Federal District |
+
+🟢 **So the build/adopt call for a LATAM dropout engagement is settled and it is BUILD.** 🔵 **The reusable assets are the *datasets and the published metric to beat* — `AUC-ROC 0.943` at a Brazilian federal university is a credible target to quote in a proposal — not the code.**
+
+🟢 **Regulatory picture this pass, all secondary:** no unified regional framework; **Brazil** `PL 2338/2023` passed the Senate Dec `2024`, pending in the Chamber, with a **non-binding** education-ministry guide; **Mexico** closed its legislative period with **no general AI law** — Tec de Monterrey and UNAM self-regulate, per-professor discretion is the norm; **Chile** operates on the `2021` National AI Policy with a bill in Senate committee. 🔴 **One Spanish-language source asserting binding Chilean and Colombian education-AI frameworks contradicts the others and is NOT carried.**
+
+🟡 **Integrity note with procurement consequences:** Chile, Colombia and Mexico require students to declare AI use, with sanctions; **Turnitin is the incumbent detector** at the large universities. 🔵 **Given p213's finding — `385` integrity repos, `0` that detect AI-written text — the honest advice to a LATAM university is declaration-and-process design, not a detector.**
+
+### Global
+
+🔵 **From the global queries, nothing displaces the standing reading:** governance ahead of experimentation; education-specific platforms displacing generic chatbots; corporate upskilling as a demand driver independent of schools and universities. 🟢 **One cross-region datum worth carrying: the EU Council's sovereignty language and APAC's sovereignty requirement point at the same build — self-hosted inference beside the LMS, not inside a vendor's cloud.**
+
+## 🔴 Declared blanks, each with the query that produced it
+
+🟢 **Published per `ACTION RE`.**
+
+| region | query string, verbatim | what was missing |
+|---|---|---|
+| 🔴 **EMEA** | `AI education EMEA Europe Middle East Africa 2026 adoption regulation EU AI Act schools players` | **Third consecutive pass with no European-native EdTech vendor and no ministry rollout data.** The query returns regulation and only regulation — compliance guidance firms, not the market. 🟡 The *players* half of this query has now failed three times with three different phrasings; the next pass should query the buyer *(ministry procurement, university tender)* rather than the vendor |
+| 🔴 **EMEA — primary texts** | `ST-9003/2026` *(direct fetch, not a search)* | 🆕 **`data.consilium.europa.eu`, `eur-lex.europa.eu` and `www.consilium.europa.eu` are all `CONNECT 403` from this session.** Every EU date on these shelves is therefore secondary by construction |
+| 🔴 **LATAM — supply** | `"evasão escolar" OR "deserción escolar"` *(GitHub, by stars)* | Not a blank in volume — `209` repositories — but a blank in **substance**: no maintained, licensed, reusable dropout model exists in Portuguese or Spanish. Recorded as a finding, not an absence |
+| 🟢 **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players ministry guidelines` | 🟢 **NOT BLANK — p222's blank withdrawn.** Six jurisdictions returned ministry instruments; `0` primaries readable |
+
 ## Pass 222 — 2026-10-15 — THE MARKET-SIZE FIGURES ON THIS PAGE SPAN A `10`× RANGE FOR THE SAME YEAR, AND THE HONEST MOVE IS TO STOP QUOTING ONE
 
 🔵 **All five regions returned non-blank this pass. `3` declared blanks are published with the verbatim query that produced them, per `ACTION RE` — and one of them is NEW.**
@@ -45,7 +155,7 @@ updated: 2026-10-15
 
 ### EMEA
 
-🟢 **Instrument:** the **EU AI Act**, fully effective **August 2026**, with education classified **high-risk**. 🔴 **Enterprise AI adoption across member states spans **~`5%` (Romania) to ~`42%` (Denmark)** on Eurostat data — an `8`× internal spread, so "EMEA readiness" is not a single state.
+🟢 **Instrument:** the **EU AI Act**. 🔴 **CORRECTED p223** *(was: "fully effective August 2026" — refuted by this file's own `p196`/`p198` cells and by `Reg. (EU) 2026/1744`)*: **Article `50` transparency has applied since `2026-08-02`; Annex III stand-alone high-risk, where education sits, applies from `2027-12-02`; embedded-in-product high-risk from `2028-08-02`.** 🔵 **Two clocks, not one — and the near one is the sellable one.** 🔴 **Enterprise AI adoption across member states spans **~`5%` (Romania) to ~`42%` (Denmark)** on Eurostat data — an `8`× internal spread, so "EMEA readiness" is not a single state.
 
 🔴 **Why firms did not adopt in 2025, in their own order:** lack of expertise **`70.89%`**, legal uncertainty **`52.52%`**, data protection **`48.83%`**. 🟢 **Two of those three are services work, and the first is the largest.**
 
@@ -416,7 +526,7 @@ updated: 2026-10-15
 - 🔴 **Every result was general enterprise AI:** a Workday study **dated `2023`**, a CompTIA `2026` outlook whose survey sample is **US-based**, a Feb-`2026` Bandwidth/Cavell report on EMEA enterprise compliance pressure.
 - 🔴 **No ministry instrument, no university adoption figure, no EdTech vendor, no `2026` education market size.**
 - 🔵 **This is `1` occurrence, not a trend.** `P215-M2`'s *"sixth consecutive"* EMEA/APAC blank run ended at `6` when p216's organ-named probe came back full *(`ACTION QJ`, limb `2`)*. 🟢 **`QJ`'s conclusion applies: report the blank as a blank, do not retire the query.**
-- 🟢 **Carried and unchanged:** EU **`AI Act`** classifies education AI **high-risk**, full effect **August `2026`**; the **`Digital Omnibus`**; Spain **`INTEF`** *Guía* v`2.0` *(`1` Sept `2026`)* and *Orientaciones … formación docente* `2026`; the Commission/OECD/G7 **AI Literacy Framework**; `KMK` *(nothing dated `2026`)*. 🔵 **`Opencast`'s `ECL-2.0` install base is EMEA-led — the platform tier here is reciprocal, not permissive.**
+- 🟢 **Carried:** EU **`AI Act`** classifies education AI **high-risk** — 🔴 **CORRECTED p223** *(was: "full effect August 2026")*: **Art. `50` since `2026-08-02`, Annex III `2027-12-02`**; the **`Digital Omnibus`**; Spain **`INTEF`** *Guía* v`2.0` *(`1` Sept `2026`)* and *Orientaciones … formación docente* `2026`; the Commission/OECD/G7 **AI Literacy Framework**; `KMK` *(nothing dated `2026`)*. 🔵 **`Opencast`'s `ECL-2.0` install base is EMEA-led — the platform tier here is reciprocal, not permissive.**
 
 ### APAC
 
@@ -1344,8 +1454,7 @@ modules — 🔴 **unconfirmed; `gov.uk` is `000` from here.** 🔴 **No `Ofqual
 found; exam-integrity guidance appears to sit with the awarding bodies rather than the regulator.
 Recorded as an informed gap, not as an absence.**
 
-🟢 **EU — the `AI Act`.** Reported as taking full effect **August `2026`**, classifying education
-AI as **high-risk**. 🔵 **This is the single most consequential dated obligation on these shelves
+🟢 **EU — the `AI Act`.** 🟡 **ATTRIBUTED-CELL, CORRECTED p223** *(was: reported as taking full effect August `2026`)*: the education obligations are **Art. `50` from `2026-08-02`** and **Annex III from `2027-12-02`**; education AI is **high-risk**. 🔵 **This is the single most consequential dated obligation on these shelves
 for an EMEA engagement**, and it lands in the same quarter as the UK's `2026-27` academic year.
 
 🟢 **Carried from p208 and still current:** France's `MEN` *Cadre d'usage de l'IA en éducation*

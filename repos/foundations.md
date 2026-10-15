@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — `0` NEW FOUNDATION ROWS, AND THE REASON IS WORTH MORE THAN A ROW WOULD HAVE BEEN: THE ONE USE CASE LATAM BUYS HAS NO FOUNDATION TO STAND ON
+
+🔵 **`0` new foundation rows. `1` candidate rejected on bus factor and recorded anyway, because the rejection is the finding.**
+
+🔵 **Evidence:** [`discovery-candidates`](../evidence/discovery-candidates.2026-10-15-p223.tsv)
+
+### 🔴 `T223-F1` — dropout prediction: `209` repositories, `0` foundations
+
+🟢 **A foundation row on this shelf has to be something a studio can *depend on*: a grant, a maintainer, and something that runs.** 🔴 **The Portuguese/Spanish dropout-prediction shelf fails all three at once:**
+
+| measure | value |
+|---|---|
+| repositories matching `"evasão escolar" OR "deserción escolar"` | **`209`** |
+| highest star count in the top ten *(sorted by stars)* | **`4`** |
+| of `4` probed first-hand: no licence at all | **`2`** |
+| of `4` probed: `MIT` but **no model** | **`1`** *(scaffold — `data/`, `notebooks/`, contribution rules)* |
+| of `4` probed: published evaluation metric | **`1`** — and it is one of the `UNGRANTED` two |
+
+🔴 **The one repository with a result — [`lincolnmeira/mlp-evasao-ufrb`](https://github.com/lincolnmeira/mlp-evasao-ufrb), `AUC-ROC 0.943`, recall `86.3%` on UFRB student data — carries no grant, so it cannot be a dependency.** 🟢 **It can be a *benchmark*: a Brazilian federal university's published number is the bar a studio's own model has to clear, and quoting it in a proposal costs nothing and concedes nothing.**
+
+🟡 **This is the inverse of the usual finding on this shelf. Elsewhere the problem is a reciprocal licence on a good platform. Here there is no platform — the whole supply is coursework.**
+
+### 🟡 `T223-F2` — the offline candidate, and why it is not a foundation row
+
+🟢 [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) — **`MIT`**, read first-hand *(`main/LICENSE`, `1 082` B)*. 🟢 **Course-level failure-risk inference that runs entirely on the handset: Flutter + an on-device network, a companion Python API for training, a reproducible pipeline, a model card, CI, and an Android manifest that declares *no Internet permission*.** 🟢 **It also refuses to invent a probability for a course with no observed grades — a calibration property most of this shelf does not have.**
+
+🔴 **Not promoted to a foundation row: `0`★, one author, first commits this year.** 🟢 **Recorded as a **reference implementation** for the offline shelf p220 opened — the thing to read before building an offline early-warning box, not the thing to install.** 🔵 **Used that way in [`compose/patterns.md`](../compose/patterns.md) `P223-R2`.**
+
+🔵 **Foundation rows unchanged this pass; `p222`'s `openeducat/openeducat_erp` range conflict *(`ACTION RV`)* is untouched and still open.**
+
 ## Pass 222 — 2026-10-15 — THE MOST-MENTIONED FOUNDATION ROW ON THIS SHELF WAS READ AS `NO-CHANNEL`, AND THE CHANNEL WAS ONE DIRECTORY DOWN
 
 🔵 **`0` new repository rows. 🔴 `1` carried row changes state, and it is the one with `72` licence cells.**

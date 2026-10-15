@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — `0` NEW PLATFORM ROWS, AND THE PLATFORM TIER'S COMPLIANCE DATE WAS WRONG ON THE PAGE THAT SELLS IT
+
+🔵 **`0` new platform rows. `0` platform grants changed.** 🔴 **What changed is the sentence a studio says to a Moodle, Open edX or Chamilo client about *when* the EU obligation bites.**
+
+### 🔴 `T223-V1` — the two clocks a platform engagement runs on
+
+🟢 **Any AI layer bolted onto an LMS for an EU client now has two dated obligations, and this KB had them collapsed into one:**
+
+| obligation | date | what it touches in a platform build |
+|---|---|---|
+| **Article `50`** transparency | 🟢 **in force `2026-08-02`** | the learner-facing surface: a disclosure that the tutor/grader is a machine, on every AI activity in the course |
+| **Annex III** stand-alone high-risk | 🟡 **`2027-12-02`** | admissions, assessing learning outcomes, monitoring during tests — i.e. the **grading and proctoring** plug-ins, not the chat ones |
+| embedded-in-product high-risk | 🟡 **`2028-08-02`** | AI shipped as part of a regulated product |
+| prohibitions *(emotion inference in education)* | 🔴 **since `2025-02-02`** | rules out an entire proctoring feature class, today |
+
+🔵 **Practical effect on the platform tier:** an **AI chat activity** *(course-scoped, disclosed)* is a `2026` sale; an **AI grader or proctor** is a `2027` conformity programme with a `2026` design phase. 🟢 **Same platform, same client, two SOWs — and the second one is where the margin is.**
+
+🔵 **Nothing on the platform shelf changes technically: [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) remains the row that makes a self-hosted model usable inside Moodle, and p222's finding stands — the TAO/`oat-sa` assessment tier is `GPL-2.0-only` and must stay outside a GPLv3 LMS, over LTI `1.3`.**
+
+### 🟡 `T223-V2` — the sovereignty argument now has a Council-level source
+
+🟢 **Council of the EU conclusions `ST-9003/2026` *(`11` May `2026`)* reportedly press for teacher AI literacy and for reduced dependence on AI tools built outside Europe.** 🔴 **`SNIPPET-ONLY` — `data.consilium.europa.eu` is unreachable from this session.**
+
+🔵 **If it holds, it converts the self-hosted stack from a cost argument into a policy argument in EMEA, exactly as sovereignty requirements already do in APAC. 🟢 The platform tier is ready for it: a GPLv3 LMS + a self-hosted OpenAI-compatible provider + local inference is an assembly, not a build.**
+
 ## Pass 222 — 2026-10-15 — THE ASSESSMENT TIER CANNOT GO INSIDE THE LMS TIER: `6` OF `6` `oat-sa` PLATFORMS ARE `GPL-2.0-only` AND EVERY MAJOR OPEN-SOURCE LMS HERE IS GPLv3
 
 🔵 **`1` new platform row.** 🔴 **And a structural finding about the shelf: the two layers a studio most often wants to combine — an LMS and an assessment engine — are on opposite sides of a licence incompatibility that no cell on this page recorded until p221.**

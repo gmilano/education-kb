@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — THREE RECIPES: THE TWO-CLOCK EMEA CONFORMITY PACK, THE OFFLINE EARLY-WARNING PILOT, AND THE GATE THAT STOPS THIS KB REPEATING ITS OWN REFUTED CELLS
+
+### 🆕 🟢 `P223-R1` — the EMEA two-clock pack *(Article `50` now, Annex III `2027-12-02`)*
+
+**Who buys it:** a university or ministry already running a GPLv3-family LMS, told by someone that the AI Act hits them in August `2026`. 🔴 **It does not — not for grading. Art. `50` does. Selling the right clock is the differentiator.**
+
+**Phase 1 — transparency, billable now *(`4`–`6` weeks)*:**
+1. **Disclosure surface** on every AI activity. On Moodle, the AI provider seam is [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) *(`GPL-3.0-or-later`)* — the disclosure string belongs in the activity template, not the model prompt, so it survives a provider swap.
+2. **Self-hosted inference** behind that provider — any OpenAI-compatible server on the institution's own hardware. 🔵 **This is the component the Council's `ST-9003/2026` sovereignty language and APAC's sovereignty requirements both argue for; one build answers both.**
+3. **Interaction log** with learner, prompt, model, model version and timestamp — `Art. 50` needs the disclosure, `Annex III` will need the record, and retrofitting logs into a year of traffic is the expensive way to find that out.
+4. 🔴 **Strip anything that infers emotion. Prohibited in education since `2025-02-02`, no transition.**
+
+**Phase 2 — Annex III programme, designed in `2026`, delivered against `2027-12-02`:** risk-management file, data-governance statement for the training and evaluation sets, human-oversight design for grading decisions, post-market monitoring plan. 🟡 **Scope it only over the systems Annex III names — admissions, assessment of learning outcomes, monitoring during tests. A chat tutor that does none of those is not high-risk, and saying so is worth more to the client than a bigger scope.**
+
+🔴 **Assessment seam, carried from p222 and unchanged:** TAO/`oat-sa` is `GPL-2.0-only` and cannot go **inside** a GPLv3 LMS. Keep it a separate LTI `1.3` tool, and if the recipe needs an LTI library inside the Moodle plugin use [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) *(`Apache-2.0`)*.
+
+🔵 **Date provenance to put in the SOW, verbatim:** *"Art. 50 — 2026-08-02; Annex III stand-alone — 2027-12-02; embedded — 2028-08-02; per Reg. (EU) 2026/1744. These dates are secondary-sourced; confirm against the Official Journal before contracting."* 🟢 **That sentence is honest, and this KB's own `T223-3` is why it is there.**
+
+### 🆕 🟢 `P223-R2` — the offline early-warning pilot *(LATAM, Africa, any low-connectivity district)*
+
+**Who buys it:** a secretariat or federal university with a dropout problem, intermittent connectivity, and student data it cannot send to a cloud.
+
+**The build, and the honest provenance of each part:**
+1. **Inference on the device, not the server.** Read [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) *(`MIT`, Egypt)* first: Flutter + on-device network, **no Internet permission in the manifest**, a model card, and the property that matters pedagogically — **a course with no observed grades gets no invented probability**. 🟡 **`0`★, one author: copy the architecture, do not take the dependency.**
+2. **Train the model yourself.** 🔴 **There is no reusable LATAM dropout model — `209` repositories, `2` of `4` probed without a licence, the one with a real metric `UNGRANTED`** *(see [`repos/foundations.md`](../repos/foundations.md) `T223-F1`)*. Use the institution's own historical records.
+3. **Benchmark to quote:** **`AUC-ROC 0.943`, recall `86.3%`** at UFRB. 🟢 **Published by a Brazilian federal university on Brazilian data — a credible, local bar, and quoting someone else's number costs nothing.**
+4. **Knowledge-tracing layer where the data supports it:** `pyKT` / `pyedmine` on the shelf already, trained offline, exported to the handset.
+5. **Sync when there is a network:** risk scores out, roster and grade updates in. Nothing student-identifiable leaves the device unless the institution's counsel signs it off — which in Brazil is an **LGPD** conversation and in Mexico a per-institution one, since no general AI law passed.
+
+🔵 **Why this shape and not a dashboard: the dashboards exist *(`allefyrafael/painel-evasao-df`, PDAD `2024`)* and they describe the problem to administrators. The intervention happens with a coordinator holding a phone in a corridor.**
+
+### 🆕 🟢 `P223-R3` — wire the self-claim gate into `make hooks`
+
+**What it stops:** this KB telling a studio a date it has already refuted. 🔴 **Not hypothetical — `3` cells, `4` prior refutations, `1` of them in the live EMEA recommendation.**
+
+```bash
+python3 -I compose/code/p223-selfclaim-date-gate/gate.py --self-test   # 11 controls, 7 must not fire
+python3 -I compose/code/p223-selfclaim-date-gate/gate.py .             # exit 1 on any ASSERTED cell
+```
+
+**Wiring:** add to `make hooks` as a hard gate; run it **before** `git commit`, not after, because the cheapest moment to catch a re-published refutation is the pass that writes it.
+
+🔵 **Classification, not deletion, is the design point:** `QUOTED` and `QUOTED-MULTILINE` cells are the KB *reporting* a bad source, which is evidence and must survive; `ATTRIBUTED` warns; only `ASSERTED` fails the build. 🟢 **A gate that cannot tell a quotation from a claim would have forced this KB to delete its own evidence to go green.**
+
+🟡 **`ACTION SA`** *(registered for p224)*: generalise the hard-coded date into a `(subject, refuted-claim, correction)` table, so the next refuted cell gets a gate without new code.
+
 ## Pass 222 — 2026-10-15 — THREE RECIPES: THE LTI SEAM THAT MAKES TAO USABLE, THE SELF-HOSTED MOODLE AI STACK, AND THE ECOSYSTEM-AWARE LICENCE GATE
 
 🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Every row used was read first-hand at its prescribed channel on 2026-10-15; the licences below are quoted, not inferred.**

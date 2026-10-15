@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 223 — 2026-10-15 — `18` DISCOVERY CANDIDATES PROBED, `16` ALREADY HERE, AND THE ONE AGENT THAT ANSWERS THIS KB'S OLDEST DECLARED GAP HAS NO LICENCE AT ALL
+
+🔵 **`1` new agent row. `0` corrections to existing rows.** 🟢 **Discovery saturation is no longer an impression, it is a rate: `18` candidates pulled from three topic shelves, `16` *(`89%`)* already on this page.** 🔴 **The `1` row that matters is `UNGRANTED`, and it is the grading-alignment agent p213 said did not exist.**
+
+🔵 **Evidence:** [`discovery-candidates`](../evidence/discovery-candidates.2026-10-15-p223.tsv) *(every candidate, its shelf status and its first-hand licence read)*
+
+### 🆕 🔴 `T223-A1` — the subjective-grading loop exists, in China, with no grant
+
+| row | licence *(probed first-hand)* | region | what it does |
+|---|---|---|---|
+| 🆕 [`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction) | 🔴 **`UNGRANTED`** — `8` channels probed: `main/{LICENSE,LICENSE.md,LICENSE.txt,COPYING,LICENCE,license,LICENSE-MIT}`, `master/LICENSE`, all `404` | **APAC** *(China; README in English, code comments Chinese)* | subjective grading of open-ended answers: block/answer retrieval → **OCR of handwritten scripts** → **teacher-score injection** → model evaluation → **human-vs-model comparison** → prompt iteration |
+
+🟢 **Why it is worth a row despite the grant:** since p213 this KB has published the finding that the grading shelf has **no alignment loop** — plenty of LLM graders, nothing that measures itself against teacher scores. 🔴 **This is that loop, and it is the shape, not the code, that is the asset.** 🟡 **`ACTION SB`: ask upstream for a grant. Until then it is a design reference and must not enter a recipe as a dependency.**
+
+🔵 **Honest read of its maturity:** entry points are scripts *(`fine_tune_prompt.py`, `handwritten.py`)*, not a package; there is no evaluation result published in the README. **The alignment step is the contribution; the engineering is not.**
+
+### 🟢 `T223-A2` — the saturation rate, measured rather than asserted
+
+🟢 **Three shelves swept, candidates taken top-down by the shelf's own ordering, each checked against this page's `1 850` known slugs and each licence read first-hand at `raw.githubusercontent.com`:**
+
+| shelf | query, verbatim | candidates taken | already here | new |
+|---|---|---|---|---|
+| `topic:ai-tutor` | `topic:ai-tutor pushed:>2026-09-15`, by stars | `10` | `10` | `0` |
+| `topic:ai-literacy` | `topic:ai-literacy`, by stars | `4` *(the non-trivial ones)* | `4` | `0` |
+| `topic:learning-analytics` | `topic:learning-analytics`, by recency | `4` | `3` | `1` *(→ [`repos/trending.md`](../repos/trending.md))* |
+
+🔵 **Licence facts recovered on rows already here, which is the other reason to probe a known row:** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) is **`CC-BY-SA-4.0`** *(both `LICENSE` and `package.json`)* — 🔴 **a content share-alike, not a software grant: adaptations of those `165` teacher skills must be published under the same terms, which is a contract clause, not a footnote.** 🟢 [`Habitat-Thinking/ai-literacy-superpowers`](https://github.com/Habitat-Thinking/ai-literacy-superpowers) `Apache-2.0` · 🟢 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate), [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server), [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) all `MIT` · 🔴 [`artcc/freelingo`](https://github.com/artcc/freelingo) **`AGPL-3.0`** — network copyleft, which rules it out of a hosted client deployment without a clause.
+
+🔵 **What `89%` means for the next pass: the topic shelves are exhausted as a discovery channel for this industry. The two rows found this pass both came from queries in a *language* or a *use case*, not a topic tag — [`repos/trending.md`](../repos/trending.md) `T223-R2` records that as the channel that still pays.**
+
 ## Pass 222 — 2026-10-15 — `ACTION RP` FIRES ON ITS **SECOND** LIMB AT `8` OF `40`, AND `ACTION RQ` FIRES ON ITS FIRST WITH A NAMED EXCLUSION LIST: **EVERY `oat-sa` ROW ON THIS SHELF IS `GPL-2.0-only` AND CANNOT ENTER A GPLv3 HOST**
 
 🔵 **`3` new agent rows, all verified first-hand at the prescribed channel.** 🔴 **`ACTION RP` — p221's registered highest-priority action — fires limb `2`: of the first `40` bare-GNU rows swept against up to `9` prescribed channels on two branches, **`8`** resolved to an explicit bound. Limb `1` needed `20`+. So `UNSPECIFIED-AT-SOURCE` really is the honest published state for the bulk of this shelf, and `ACTION QO`'s gate must report a queue rather than fail.** 🟢 **`ACTION RQ` fires limb `1` at **`5` further rows**, threshold `2`+ — and the `5` are not scattered. They are an organisation.**

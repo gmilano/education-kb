@@ -1,0 +1,24 @@
+shelf	query_verbatim	slug	stars_as_shown	shelf_status	licence_read_first_hand	channel	note
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	HKUDS/DeepTutor	41400	ALREADY-ON-SHELF	not re-read this pass	-	canonical row
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	Miaotofu01/Study-Mate	976	ALREADY-ON-SHELF	MIT	main/LICENSE (1064 B)	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	ankimcp/anki-mcp-server	515	ALREADY-ON-SHELF	MIT	main/LICENSE + package.json	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	ZeKaiNie/universal-examprep-skill	308	ALREADY-ON-SHELF	not probed	-	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	karanb192/algo-sensei	288	ALREADY-ON-SHELF	MIT	main/LICENSE (1081 B)	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	Li-Evan/Bloom	285	ALREADY-ON-SHELF	MIT	main/LICENSE (1069 B)	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	SenmuuuuW/universal-diagnostic-tutor-skill	246	ALREADY-ON-SHELF	not probed	-	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	KeWang0622/kaogong-skill	178	ALREADY-ON-SHELF	not probed	-	-
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	artcc/freelingo	177	ALREADY-ON-SHELF	AGPL-3.0	main/LICENSE (34514 B)	network copyleft - excluded from hosted deployments
+topic:ai-tutor	topic:ai-tutor pushed:>2026-09-15 (by stars)	zijinz456/OpenTutor	141	ALREADY-ON-SHELF	not probed	-	-
+topic:ai-literacy	topic:ai-literacy (by stars)	GarethManning/education-agent-skills	864	ALREADY-ON-SHELF	CC-BY-SA-4.0	main/LICENSE + package.json	content share-alike, NOT a software grant
+topic:ai-literacy	topic:ai-literacy (by stars)	Habitat-Thinking/ai-literacy-superpowers	116	ALREADY-ON-SHELF	Apache-2.0	main/LICENSE (11207 B)	-
+topic:ai-literacy	topic:ai-literacy (by stars)	hanhuark/machine-learning-for-engineers	51	ALREADY-ON-SHELF	BSD-3-Clause	main/LICENSE (1493 B)	-
+topic:ai-literacy	topic:ai-literacy (by stars)	byoungd/up	68700	ALREADY-ON-SHELF	not probed	-	general self-study guide, not education software
+topic:learning-analytics	topic:learning-analytics (by recency)	terracotta-education/terracotta	21	ALREADY-ON-SHELF	Apache-2.0	main/LICENSE (11323 B)	LMS plug-in for randomised controlled trials
+topic:learning-analytics	topic:learning-analytics (by recency)	mohamurshid/ElimuAnalytics	0	ALREADY-ON-SHELF	NO LICENSE FILE FOUND	main/{LICENSE,...} 404	IRT gap detection, Kenya CBC
+topic:learning-analytics	topic:learning-analytics (by recency)	braivo/braivo	0	ALREADY-ON-SHELF	AGPL-3.0-only	main/LICENSE + package.json	white-label adaptive tutors
+topic:learning-analytics	topic:learning-analytics (by recency)	yassinabdelal-ipynb/el-thanawiya	0	NEW	MIT	main/LICENSE (1082 B)	on-device course-failure risk, Egypt
+search:use-case	"evasão escolar" OR "deserción escolar" (by stars)	ciia-educacao/evasao-escolar	1	NEW	MIT	main/LICENSE (1070 B)	scaffold only, no trained model
+search:use-case	"evasão escolar" OR "deserción escolar" (by stars)	lincolnmeira/mlp-evasao-ufrb	1	NEW	NO LICENSE FILE FOUND	main/{LICENSE,...} 404	MLP, AUC-ROC 0.943, UFRB (Brazil)
+search:use-case	"evasão escolar" OR "deserción escolar" (by stars)	michelelozada/Projeto-Evasao-Escolar-Brasil-2019-2021	2	NEW	NO LICENSE FILE FOUND	main/{LICENSE,...} 404	notebook study 2019-2021
+search:use-case	"evasão escolar" OR "deserción escolar" (by stars)	allefyrafael/painel-evasao-df	2	NEW	not probed	README 404	PDAD 2024 dashboard, Distrito Federal
+search:topic	github trending education AI 2026 open source tutor grading agent	MUJINN/intelligent-correction	n/a	NEW	NO LICENSE FILE FOUND	8 probes, all 404	teacher-score-aligned subjective grading loop

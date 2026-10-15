@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 223 — THIS WEEK'S SIGNAL IS A DATE, NOT A REPO: THE EU'S EDUCATION HIGH-RISK CLOCK IS `2027-12-02`, AND THIS KB WAS TELLING STUDIOS `2026-08-02`
+
+🔵 **In one line: nothing new shipped on the agent shelves this week that this KB did not already hold — `16` of `18` discovery candidates were already here — so the week's finding is a correction with a price tag, plus one `UNGRANTED` agent that answers the grading-alignment gap p213 opened.**
+
+🔵 **Evidence:** [`sa-selfclaim-dates`](../evidence/sa-selfclaim-dates.2026-10-15-p223.tsv) · [`discovery-candidates`](../evidence/discovery-candidates.2026-10-15-p223.tsv)
+
+### 🆕 🟢 New this pass
+
+| repo | licence | channel read | region | what it does |
+|---|---|---|---|---|
+| [`MUJINN/intelligent-correction`](https://github.com/MUJINN/intelligent-correction) | 🔴 **`UNGRANTED`** *(`8` probes, all `404`)* | `raw.githubusercontent.com` | APAC *(China)* | OCR → model grading → **teacher-score alignment** → prompt iteration, as one loop |
+| [`yassinabdelal-ipynb/el-thanawiya`](https://github.com/yassinabdelal-ipynb/el-thanawiya) | 🟢 **`MIT`** *(`LICENSE`, `1 082` B, read)* | `raw.githubusercontent.com` | EMEA *(Egypt)* | course-failure risk, **on-device**, Flutter + PyTorch, **no Internet permission in the manifest** |
+
+### 🔴 What changed for anyone building an agent for an EU school this week
+
+🟢 **Article `50` transparency — a learner must be able to tell they are talking to a machine — has been binding since `2026-08-02`.** 🟡 **Annex III high-risk for education *(admissions, assessing outcomes, monitoring during tests)* applies from **`2027-12-02`**, per `Reg. (EU) 2026/1744`.** 🔴 **Three cells on this KB's market page said "full effect August 2026" and were corrected this pass.**
+
+🔵 **Practical consequence for an agent build, today:** the disclosure, logging and human-override surfaces are **required now**; the full conformity file *(risk management, data governance, technical documentation, post-market monitoring)* is a `2027` programme. 🟢 **Build the first set into the agent; schedule the second.**
+
+### 🟡 Three jurisdiction signals an agent builder should hold
+
+🔴 **South Korea** — the AI-textbook mandate failed on **adoption** *(below `30%` by March)* and the National Assembly removed statutory status. **A mandate is not a market.**
+🟡 **China / Singapore** — generative use by younger pupils is **restricted by policy**, and Singapore's P4 use must sit inside the ministry's own platform. **Site-wide assistants are the wrong product shape for APAC schools; course-scoped, teacher-supervised activities are the right one.**
+🟢 **EU Council `ST-9003/2026`** *(`11` May `2026`, SNIPPET-ONLY — host unreachable)* — teacher AI literacy plus **reduced dependence on non-European tools**. 🔵 **Self-hosted inference is now a procurement argument in EMEA as well as APAC.**
+
+### 🔵 Shelf hygiene recorded this week
+
+🔴 [`artcc/freelingo`](https://github.com/artcc/freelingo) is **`AGPL-3.0`** and [`braivo/braivo`](https://github.com/braivo/braivo) is **`AGPL-3.0-only`** *(`package.json`, read first-hand)* — both are network copyleft, both are tutoring/adaptive products, and both are therefore **out** of a hosted client deployment unless the client publishes. 🟢 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) is **`CC-BY-SA-4.0`**: usable, share-alike, and the obligation attaches to the *content*, which is what a teacher-enablement engagement actually ships.
+
 ## 2026-10-15 — Pass 222 — `3` new agent rows, and the week's finding is an **organisation-wide** licence exclusion: all `6` `oat-sa` rows are `GPL-2.0-only`
 
 🔵 **What is new this week, in one line: the bound sweep p221 registered as top priority fired its *second* limb — only `8` of `40` bare-GNU rows carry a readable bound — but the companion `GPL-2.0` sweep fired its first and produced a named exclusion list that invalidates every assessment recipe on these shelves that puts a TAO library inside Moodle.**
