@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — `ACTION RP` FIRES ON ITS **SECOND** LIMB AT `8` OF `40`, AND `ACTION RQ` FIRES ON ITS FIRST WITH A NAMED EXCLUSION LIST: **EVERY `oat-sa` ROW ON THIS SHELF IS `GPL-2.0-only` AND CANNOT ENTER A GPLv3 HOST**
+
+🔵 **`3` new agent rows, all verified first-hand at the prescribed channel.** 🔴 **`ACTION RP` — p221's registered highest-priority action — fires limb `2`: of the first `40` bare-GNU rows swept against up to `9` prescribed channels on two branches, **`8`** resolved to an explicit bound. Limb `1` needed `20`+. So `UNSPECIFIED-AT-SOURCE` really is the honest published state for the bulk of this shelf, and `ACTION QO`'s gate must report a queue rather than fail.** 🟢 **`ACTION RQ` fires limb `1` at **`5` further rows**, threshold `2`+ — and the `5` are not scattered. They are an organisation.**
+
+🔵 **Evidence:** [`rp-bound-sweep`](../evidence/rp-bound-sweep.2026-10-15-p222.tsv) · [`rq-gpl2-only-exclusion`](../evidence/rq-gpl2-only-exclusion.2026-10-15-p222.tsv) · [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p222.tsv) · **Instrument:** [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/README.md) *(`32` tests, `5` controls)*
+
+### 🆕 🔴 `T222-1` — the `oat-sa` exclusion list, which is the deliverable `ACTION RQ` registered
+
+🔴 **`6` of `6` repositories published by [`oat-sa`](https://github.com/oat-sa) on these shelves declare `GPL-2.0-only`, read first-hand from `composer.json` on `master`:**
+
+| row | `composer.json` says | package name declared | bytes | blocks a GPLv3 host? |
+|---|---|---|---|---|
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | `"GPL-2.0-only"` | `oat-sa/lib-lti1p3-core` | `3 800` *(file read, p221)* | 🔴 **YES** |
+| 🆕 [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `["GPL-2.0-only"]` | `oat-sa/tao-core` | `3 041` | 🔴 **YES** |
+| 🆕 [`oat-sa/extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti) | `["GPL-2.0-only"]` | `oat-sa/extension-tao-testqti` | `1 861` | 🔴 **YES** |
+| 🆕 [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | `["GPL-2.0-only"]` | 🟡 **`qtism/qtism`** — name ≠ slug | `1 306` | 🔴 **YES** |
+| 🆕 [`oat-sa/devkit-lti1p3`](https://github.com/oat-sa/devkit-lti1p3) | `"GPL-2.0-only"` | `oat-sa/devkit-lti1p3` | `2 540` | 🔴 **YES** |
+| 🆕 [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | `"GPL-2.0-only"` | `oat-sa/oneroster-import` | `786` | 🔴 **YES** |
+
+🔴 **What this costs a studio, stated plainly.** `oat-sa` is Open Assessment Technologies — the publisher of **TAO**, the dominant open-source assessment and QTI stack, and the LTI 1.3 and QTI libraries the rest of the sector builds against. **`GPL-2.0-only` is incompatible with `GPL-3.0`.** So none of these six may be combined into a GPLv3 host, and the GPLv3 hosts on these very shelves include **Moodle**, **Chamilo**, **ILIAS** and **Gibbon**. 🟡 **Every assessment recipe that puts a TAO or `oat-sa` library inside a Moodle plugin is unbuildable as written, and no cell on these shelves said so before p221.**
+
+🟢 **Two further `GPL-2.0-only` rows outside `oat-sa`:** 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) *(`composer.json`, `3 557` B)* and 🆕 [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp) *(`package.json`, `1 099` B)*. 🟢 **And two that are safe and were also published bare:** [`nvaccess/nvda`](https://github.com/nvaccess/nvda) is `GPLv2+` by trove classifier — `GPL-2.0-or-later`, so it is **fine** in a v3 host — and [`portabilis/i-educar`](https://github.com/portabilis/i-educar) declares `"GPL-2.0-or-later"`.
+
+### 🆕 🔴 `T222-2` — `ACTION RP`'s premise was wrong, because `-only` / `-or-later` is **one ecosystem's spelling**
+
+🔴 **`RP` assumed a single question — *"does the channel carry a bound?"* — with a single grammar. The sweep found four, and in two of them the bound is encoded by **omission**:**
+
+| ecosystem | `or-later` | `only` |
+|---|---|---|
+| **SPDX** *(`composer.json`, `package.json`, `pyproject.toml`)* | `GPL-3.0-or-later` | `GPL-3.0-only` — 🔵 **and a bare token means nothing was said** |
+| **CRAN** *(`DESCRIPTION`)* | `GPL (>= 3)` | 🔴 **`GPL-3` — a bare token is a POSITIVE `only`** |
+| **Odoo** *(`__manifest__.py`)* | `'LGPL-3 or any later version'` | 🔴 **`'LGPL-3'` — same shape, same meaning** |
+| **PyPI classifier** | `… v3 or later (AGPLv3+)` | `… v3 (AGPLv3)` |
+| **GNU header** *(prose)* | *"or (at your option) any later version"* | *"version 2 … (non-upgradable)"* |
+
+🔴 **p221's `parse_range()` scores a bare `GPL-3` as `unspecified` in all five.** For SPDX and for prose that is correct; for CRAN and Odoo it is wrong. 🟡 **So p221's census is right about `2 208` bare *tokens* and wrong to read that as `2 208` unspecified *grants*. 🔵 Seventh consecutive unit-mismatch headline — `T222`: licence **token** vs the token's **ecosystem grammar**.**
+
+### 🆕 🟢 The new rows, all three read first-hand at `version.php`
+
+🟢 **All three came from `ACTION RD`'s constrained query shape, and all three carry an explicit `or-later` bound — which is the ecosystem point again: Moodle's mandated plugin header makes the bound unavoidable, so the Moodle tier answers `100%` of the time while npm, Composer and PyPI leave the field optional.**
+
+| row | licence | channel | what it does |
+|---|---|---|---|
+| 🆕 🟢 [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | 🟢 **`GPL-3.0-or-later`** — *"either version 3 of the License, or (at your option) any later version"* · `@license … GNU GPL v3 or later` | `main/version.php` | **AI Manager** — a per-tenant AI provider, quota and purpose broker for Moodle. 🟢 **Published by *mebis*, the Bavarian state school platform: an institutional publisher, not a hobby plugin** |
+| 🆕 🟢 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 **`GPL-3.0-or-later`** — identical grant · `@license … GNU GPL v3 or later` | `main/version.php` | **OpenAI-compatible API provider** for Moodle `4.5`+ core AI subsystem. 🟢 **This is the row that lets a Moodle AI build run against a self-hosted endpoint instead of a vendor's — the `UNKNOWN-PLUS-TOS` escape hatch `ACTION RB` asked for** |
+| 🆕 🟢 [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) | 🟢 **`GPL-3.0-or-later`** — identical grant · `@license … GNU GPL v3 or later` | `main/version.php` | **MAICI** — a chat *activity* module *(not a block)*, so conversations are course-scoped and gradebook-adjacent. 🟢 **LATAM-authored** |
+
+### 🆕 🔴 `T222-3` — a family conflict between two channels at the **same** root
+
+🔴 **[`classroomio/classroomio`](https://github.com/classroomio/classroomio)** — root `package.json` line `47` declares `"license": "MIT"`. The root `LICENSE` in the same directory is the full **`GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007`**. 🔴 **Permissive versus strong network copyleft, two prescribed channels, same directory, no tie-breaker.** 🔵 **p220's conflicts were repository-level metadata versus a shipped file; this one is manifest versus `LICENSE` at the same level, which is new.** 🟡 **This shelf publishes `AGPL-3.0` for the row — the safer of the two — and that is the right call, but the cell must now say the manifest disagrees.**
+
+🟡 **And the same row supplies the state `ACTION RN` was registered to create.** Its `README` instructs: *"Optional for self-hosted Enterprise-only features (SSO, token-auth, no-tracking): set `LICENSE_KEY` in `apps/api/.env`."* 🟢 **`OSI-GRANT-PLUS-KEY-GATE` enters the vocabulary with a verified, first-hand member — see `ACTION RN`'s verdict in [`intel/open-gaps.md`](../intel/open-gaps.md).**
+
+### 🆕 🟡 `T222-4` — three rows whose licence field is mandated SPDX and is not SPDX
+
+🟡 **Composer and PEP `621` both require an SPDX expression in the field these rows use. These values are not SPDX expressions, so the honest reading is that the channel is **unreadable**, not that it carries a bare bound:**
+
+- [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) — `composer.json` *(`3 080` B)*: `"GPL v3"`
+- [`INGInious/INGInious`](https://github.com/INGInious/INGInious) — `pyproject.toml` *(`3 683` B)*: `license = {text = "AGPL 3"}`
+- [`Citolab/qti-components`](https://github.com/Citolab/qti-components) — `package.json` *(`7 101` B)*: `"GPLv3"`
+
+🟢 **Control that keeps this honest:** the instrument returns `gnu=False` for all three under the `spdx` grammar and resolves the family only when the same string is read as the **prose it actually is**. 🔵 **Three of `40` rows, so `~7.5%` of this shelf's SPDX fields contain something a dependency scanner will silently drop.**
+
+### 🆕 🟡 `T222-5` — two carried rows that this pass must **not** report as defects
+
+🟢 **[`academico-sis/academico`](https://github.com/academico-sis/academico)** `composer.json` → `"MIT"`, and 🟢 **[`wingkwong/react-quiz-component`](https://github.com/wingkwong/react-quiz-component)** `package.json` → `"MIT"`. 🔴 **Both were flagged `GRANT-CONFLICT` by this pass's own extractor, because a `GPL-2.0` token appeared on the same line as the slug.** 🟢 **Reading the other rows for the same slugs shows the shelves already publish `MIT` for both, and the `GPL-2.0` on those lines was part of a *comparison*, not the row's cell.** 🔵 **Two false positives out of the `GPL-2` population, caught by a control and recorded so a later pass does not re-derive them — [`rq-gpl2-only-exclusion`](../evidence/rq-gpl2-only-exclusion.2026-10-15-p222.tsv), last two rows.**
+
+
 ## Pass 221 — 2026-10-15 — `ACTION RH` FIRES ON ITS **SECOND** LIMB, AND THE DEFECT IT MISSED IS BIGGER: THE UNIT OF A LICENCE IS THE **VERSION RANGE**, AND `94.3%` OF THIS KB'S GNU CELLS DO NOT CARRY ONE
 
 🔵 **`2` new agent rows, `1` new repository row, `0` new platform rows.** 🔴 **`ACTION RH` — p220's registered highest-priority action — fires limb `2`: `22` redistribution-shaped rows read file-by-file and **`0`** came back `FILE-NARROWER`.** 🟢 **`ACTION RI` fires limb `1` at `9`. `ACTION RJ`/`RM` reproduce p220 exactly. `ACTION QX` lands, inside `RH`, as p220 recommended.**

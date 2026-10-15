@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — THE MARKET-SIZE FIGURES ON THIS PAGE SPAN A `10`× RANGE FOR THE SAME YEAR, AND THE HONEST MOVE IS TO STOP QUOTING ONE
+
+🔵 **All five regions returned non-blank this pass. `3` declared blanks are published with the verbatim query that produced them, per `ACTION RE` — and one of them is NEW.**
+
+🔵 **Evidence:** [`rp-regional-queries`](../evidence/rp-regional-queries.2026-10-15-p222.tsv) *(every query string verbatim, including the blanks)*
+
+### 🆕 🔴 `P222-M1` — the headline number this page has been carrying has no agreed value
+
+🔴 **Four vendor estimates of the *same* market, all surfaced by one query on 2026-10-15:**
+
+| source | `2025` | `2026` | terminal |
+|---|---|---|---|
+| IMARC | USD **`6.4` B** | — | USD `79.6` B *(`2034`)* |
+| The Business Research Company | USD **`7.52` B** | USD **`10.6` B** | — |
+| unnamed projection *(secondary)* | USD **`8.3` B** | USD **`11.4` B** | USD `57.2` B *(`2033`)* |
+| p221's carried figure | — | — | USD `42.48` B *(`2030`)*, CAGR `41.5%` |
+
+🔴 **The `2025` base alone spans `6.4`–`8.3` B, and the terminal values span `42.5`–`79.6` B on three different end years.** 🟡 **Reconciling them is not possible from secondary summaries; they define the market differently and none publishes its boundary.**
+
+🟢 **The rule this page adopts, and it is a reduction in what it claims:** quote a **range with its sources and years attached**, never a single number, and never a CAGR derived across two vendors' figures. 🔵 **For an SOW: *"independent 2026 estimates put AI-in-education between USD 10.6 B and 11.4 B, with 2030–2034 forecasts between USD 42 B and 80 B depending on market definition"* is defensible. A single figure is not.**
+
+🔴 **One adoption pair is worth more than all four sizes, because it is a direction with a method behind it:** student AI use **`66%` (2024) → `92%` (2025)**, and separately one analyst scores the sector's *deployment* maturity at **`35`/`100`**, i.e. most institutions are still piloting. 🟢 **Use is near-universal; institutional deployment is not. That gap is the engagement.**
+
+### 🆕 🟡 `P222-M2` — a sub-region was being read as a region
+
+🔴 **This pass's LATAM query returned an AI-in-education market of **USD `18.2` M (2024) → `36` M (2029)**.** 🟡 **That figure is labelled *"Rest of Latin America"* — a residual bucket **after** Brazil and Mexico are removed.** 🔴 **p221's shelves carry a LATAM figure of USD `4.2` B. Both can be true; they are not the same quantity, and quoting the smaller as "LATAM" understates the region by three orders of magnitude.** 🟢 **Recorded so no later pass averages them.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Market:** ~USD `951` M *(2024)* → ~USD `2.3` B *(2029)* at **`15.9%`** CAGR, **`36%`** of global share — the largest single region, and the slowest-growing of the five.
+
+🟢 **Named players:** IBM, Microsoft, Google. 🟢 **Fresh capital and programmes this pass:** OpenAI's country-level education programme with **`8` national partners** *(early 2026)*; **Carnegie Mellon + Gates Foundation, USD `55` M** for AI courseware.
+
+🔴 **The gap that is the opportunity:** **`71%`** of US teachers lack AI training, and only **~`10%`** of institutions have formal AI guidelines. 🔵 **Regulation stays state-by-state — Colorado and Texas named this pass — with no federal education-AI authority, so a NA engagement needs a *per-jurisdiction* policy layer rather than one compliance artefact.**
+
+🟢 **Concrete opening:** governance-and-enablement, not tooling. The buyer is a district or system office that already has AI in the building and no policy, no training and no audit trail. 🔵 **Pair it with the Moodle/Open edX provider work in [`verticals/solutions.md`](../verticals/solutions.md) `P222-V3` so the policy has something to attach to.**
+
+### EMEA
+
+🟢 **Instrument:** the **EU AI Act**, fully effective **August 2026**, with education classified **high-risk**. 🔴 **Enterprise AI adoption across member states spans **~`5%` (Romania) to ~`42%` (Denmark)** on Eurostat data — an `8`× internal spread, so "EMEA readiness" is not a single state.
+
+🔴 **Why firms did not adopt in 2025, in their own order:** lack of expertise **`70.89%`**, legal uncertainty **`52.52%`**, data protection **`48.83%`**. 🟢 **Two of those three are services work, and the first is the largest.**
+
+🟡 **Headwind to name in a proposal:** inconsistent national implementation of the Act becoming a patchwork — flagged this pass by an AWS EMEA executive and by the EESC's own policy note. 🔵 **Regional uptake growth ~`30%` YoY.**
+
+🟢 **Concrete opening:** **high-risk conformity work for admissions and assessment systems**, which is where the Act actually bites in education, delivered against a GPLv3-family LMS a client already runs. 🔴 **And this is where `P222-V1`'s seam becomes a selling point: a studio that can say *"your QTI engine must sit outside the LMS, over LTI, and here is why"* is answering a question the client's integrator probably has wrong.**
+
+### APAC
+
+🟢 **Players and motion this pass:** **Pearson + TCS** multi-year AI learning alliance; **LearnUpon** expanding with a new **Sydney** HQ and AI course authoring; **Alteryx Academy** relaunched with AI learning paths; **OpenAI** hired an **ANZ policy lead** as Canberra tightens AI governance and copyright.
+
+🔴 **The governance gap, measured:** **`87%`** of organisations encourage AI-agent use and only **`47%`** have governance controls for agents *(OneTrust)*. 🟡 **Forrester expects sovereignty requirements to shape infrastructure for about **half** of APAC firms; **`49%`** name data-streaming infrastructure as an AI blocker.**
+
+🟢 **Concrete opening:** **agent governance for a sovereign deployment** — the `87`/`47` split is the whole pitch, and sovereignty pushes it toward self-hosted models, which is exactly what 🆕 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) enables inside Moodle.
+
+🔴 **Carried from p221, NOT reproduced this pass:** Vietnam's AI law *(in force 2026-03-01, extraterritorial, automated assessment high-risk, compliance 2027-03-01)* and South Korea's AI Basic Act *(in force 2026-01-22)*. 🔴 **This pass's APAC query returned no national AI-in-education policy for Vietnam, Korea, Japan, Singapore, Australia or India — only enterprise-AI governance. 🟡 Those dates therefore rest on p221's search alone and remain secondary-sourced; `ACTION RO` still has not read a primary text.**
+
+### LATAM
+
+🟢 **The strongest instrument on this shelf:** the **UNESCO IESALC + UNU-IAS** working paper — **`200` higher-education institutions across `19` countries**, surveyed late `2025`, covering teaching, research, administration and governance. 🟢 **Plus **ILIA 2025** *(CEPAL / CENIA)*, tracking governance, regulation, talent and infrastructure, with a **LATAM-GPT** case study.**
+
+🟢 **Regulatory picture:** a `2025` comparative study of higher-education AI rules across **Argentina, Brazil, Chile, Peru and Spain**. 🟡 **Chile is named repeatedly as the regional leader, and the detail that matters commercially is that its roadmap **survived a change of administration** — the one regional instrument with demonstrated continuity.** 🔴 **Elsewhere the pattern is pilot policies that lapse when governments change.**
+
+🟢 **Concrete opening:** Chile first, on continuity grounds; Brazil second, on scale. 🟢 **And a supply-side note: the one LATAM-authored row added this pass, 🆕 [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) *(`GPL-3.0-or-later`, Brazil)*, is an AI chat **activity** module — course-scoped rather than site-wide, which is the shape a ministry pilot actually procures.**
+
+### Global
+
+🔵 **Cross-regional, from the global query:** governance ahead of experimentation; education-specific platforms displacing generic chatbots; cloud deployment at **`71.22%`** share *(2024)*; corporate upskilling as a demand driver independent of the school and university market.
+
+## 🔴 Declared blanks, each with the query that produced it
+
+🟢 **Published per `ACTION RE`. A declared blank without its query is indistinguishable from coverage.**
+
+| region | query string, verbatim | what was missing |
+|---|---|---|
+| 🔴 **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | Still no current inventory of national AI-in-education regulations, and no `2026` vendor or government programme list. `ACTION RL`'s truncated `19%` claim is unresolved for an `18`th test — `unesco.org` is `CONNECT 403` from this session |
+| 🔴 **EMEA** | `AI education EMEA Europe 2026 adoption regulation players` | **Second consecutive pass:** no European-native EdTech vendor surfaced, no ministry rollout data, and the status of the EU *"AI omnibus"* unresolved. The only education-specific hit was a market report whose regional breakdown and player list were not visible |
+| 🆕 🔴 **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | **NEW this pass.** No national AI-in-schools policy for Singapore, Australia, India, Japan or South Korea. p221's Vietnam/Korea/Japan findings did **not** reproduce from this query string |
+
+
 ## Pass 221 — 2026-10-15 — THE REGULATORY MAP IS NOW THE MARKET MAP: THREE JURISDICTIONS PUT EDUCATION ON A **HIGH-RISK** LIST WITH DATED COMPLIANCE DEADLINES, AND TWO OF THEM ARE OUTSIDE THE EU
 
 🔵 **All four regions returned non-blank this pass. `2` declared blanks are published with the verbatim query that produced them, per `ACTION RE`.**

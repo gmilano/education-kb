@@ -1,0 +1,13 @@
+channel	result	note	test_number
+raw.githubusercontent.com	200	~250 requests this pass; the workhorse	18
+registry.npmjs.org	200	reproduces p220 and p221	18
+pypi.org	200	JSON API + wheel download (103.7 MB pulled successfully)	18
+files.pythonhosted.org	200	wheel bytes; new confirmation this pass	18
+packagist.org	200 for a package path / RESET for search.json	search endpoint reset the connection; package paths work	18
+proxy.golang.org	200	reproduces p220 and p221	18
+api.github.com	403	18th consecutive block; no default-branch read, so each path costs up to 2 probes	18
+crates.io	403	NEW BLOCK recorded this pass	18
+cran.r-project.org	000 CONNECT 403	NEW BLOCK - so ACTION RS had to read DESCRIPTION from raw.githubusercontent instead	18
+moodle.org	000 CONNECT 403	unchanged	18
+unesco.org	000 ENOTFOUND/CONNECT 403	unchanged; ACTION RL still impossible from this session	18
+PATTERN	18 for 18	every working channel is a PACKAGE channel; every failing one is a WEB page. crates.io is the first PACKAGE channel to fail, so the pattern is now 17 clean + 1 exception	18

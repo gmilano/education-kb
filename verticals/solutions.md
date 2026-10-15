@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — THE ASSESSMENT TIER CANNOT GO INSIDE THE LMS TIER: `6` OF `6` `oat-sa` PLATFORMS ARE `GPL-2.0-only` AND EVERY MAJOR OPEN-SOURCE LMS HERE IS GPLv3
+
+🔵 **`1` new platform row.** 🔴 **And a structural finding about the shelf: the two layers a studio most often wants to combine — an LMS and an assessment engine — are on opposite sides of a licence incompatibility that no cell on this page recorded until p221.**
+
+🔵 **Evidence:** [`rq-gpl2-only-exclusion`](../evidence/rq-gpl2-only-exclusion.2026-10-15-p222.tsv) · [`rp-bound-sweep`](../evidence/rp-bound-sweep.2026-10-15-p222.tsv) · **Instrument:** [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/README.md) — `blocks_gpl3_host()`
+
+### 🆕 🔴 `P222-V1` — the platform compatibility map, read first-hand
+
+| platform | tier | licence as read | bound | may its code enter a **GPLv3** host? |
+|---|---|---|---|---|
+| **Moodle** | LMS | `GPL-3.0-or-later` *(mandated plugin header)* | 🟢 `or-later` | 🟢 **it IS the host** |
+| **Chamilo** [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | 🆕 `composer.json`: **`"GPL-3.0-or-later"`** *(`8 294` B)* | 🟢 `or-later` | 🟢 host |
+| **ILIAS** [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | LMS | 🟡 `composer.json`: **`"GPL v3"`** — 🔴 **not a valid SPDX expression** | 🔴 `unreadable` | 🟡 host, but the declared field is unusable by a scanner |
+| **Gibbon** [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | SIS/LMS | 🆕 `composer.json`: `"GPL-3.0"` *(`3 097` B)* | 🟡 `unspecified` | 🟡 host |
+| **Open edX** via **Tutor** [`overhangio/tutor`](https://github.com/overhangio/tutor) | distribution | 🆕 `pyproject.toml`: **`license = {text = "AGPL-3.0-only"}`** | 🔴 **`only`** | 🔴 **see `P222-V2`** |
+| **Frappe LMS** [`frappe/lms`](https://github.com/frappe/lms) | LMS | 🆕 `package.json`: **`"AGPL-3.0-or-later"`** *(`875` B)* | 🟢 `or-later` | 🟢 |
+| **OpenEduCat** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP | 🆕 module manifest `'LGPL-3'` **vs** module header *"or (at your option) any later"* | 🔴 **`RANGE-CONFLICT`** | 🟡 LGPL links either way; the conflict bites on *modifying* it |
+| **TAO** [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | assessment | 🆕 `composer.json`: **`["GPL-2.0-only"]`** | 🔴 **`only`** | 🔴 **NO** |
+| **TAO QTI test** [`oat-sa/extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti) | assessment | 🆕 **`["GPL-2.0-only"]`** | 🔴 **`only`** | 🔴 **NO** |
+| **QTI-SDK** [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) | assessment lib | 🆕 **`["GPL-2.0-only"]`**, package name `qtism/qtism` | 🔴 **`only`** | 🔴 **NO** |
+| **LTI 1.3 core** [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | integration lib | `"GPL-2.0-only"` *(p221)* | 🔴 **`only`** | 🔴 **NO** |
+| **Elgg** 🆕 [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | social learning | 🆕 `composer.json`: **`"GPL-2.0-only"`** *(`3 557` B)* | 🔴 **`only`** | 🔴 **NO** |
+
+🔴 **So the shelf has a hard seam.** The LMS tier is GPLv3-family; the whole `oat-sa` assessment tier plus Elgg is `GPL-2.0-only`. 🔵 **`LGPL` rows are the exception and that is deliberate in the instrument: `blocks_gpl3_host()` returns `False` for `LGPL` at any version, because LGPL is written to be *linked* into a differently licensed host.**
+
+### 🆕 🟢 `P222-V2` — the seam is not a dead end, and the detour is already standard practice
+
+🟢 **`GPL-2.0-only` constrains *combining code into one work*. It does not constrain *talking to a separate program over a protocol*.** The sector's own answer is already on these shelves:
+
+- 🟢 **Run TAO as its own deployment** and launch it from the LMS over **LTI 1.3**. Nothing links; two programs, one protocol. 🔵 **The LTI tool side can use a permissive library instead of `oat-sa`'s: [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) is `Apache-2.0`, and [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) is `BSD-3-Clause` *(both confirmed to ship their grant, see [`repos/foundations.md`](../repos/foundations.md) `P222-B`)*.**
+- 🔴 **What is NOT available: a Moodle plugin that bundles QTI-SDK.** 🟡 **Any SOW proposing one is unbuildable as written, and this is the first pass on which this page can say so with a first-hand citation per row.**
+- 🟡 **Tutor's `AGPL-3.0-only` matters in a different way.** AGPL-3 is the strongest reciprocal grant here and `only` removes the forward escape. 🔵 **For a hosted Open edX engagement, the practical consequence is that *network interaction* triggers source provision and there is no option to move to a later AGPL — so plan the source-offer process into the engagement rather than treating it as a licence footnote.**
+
+### 🆕 🟢 `P222-V3` — the new platform row, and it is the one that removes a vendor dependency
+
+| platform | licence | channel | why it is on this page |
+|---|---|---|---|
+| 🆕 🟢 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 **`GPL-3.0-or-later`** — grant + `@license` tag agree | `main/version.php` | 🟢 **Moodle `4.5`+ ships a core **AI subsystem** with pluggable providers, and every provider on these shelves until now pointed at a proprietary vendor API. This one targets any **OpenAI-compatible** endpoint, so the same Moodle build can run against a self-hosted model.** 🔵 **This is the concrete escape from `ACTION RB`'s `UNKNOWN-PLUS-TOS` finding: the licence cell stops being the wrong question when there is no vendor API in the path** |
+
+🟢 **Paired with 🆕 [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager)** *(`GPL-3.0-or-later`, read at `main/version.php`)*, which adds **per-tenant** provider selection, quotas and purpose scoping on top. 🔵 **Both are GPLv3-family, so both may live inside the Moodle tree — unlike the assessment tier above.**
+
+
 ## Pass 221 — 2026-10-15 — THE PLATFORM ROWS ARE THE ONES WHERE AN UNBOUNDED `GPL` CELL COSTS MONEY, BECAUSE A PLATFORM IS WHAT YOU EXTEND
 
 🔵 **`0` new platform rows.** 🔴 **But three carried platform rows changed state on a file-level read, and one of them changes what can be built on top of it.**

@@ -1,0 +1,29 @@
+slug	channel	branch	bytes	value_verbatim	bound	blocks_gpl3_host	package_name_declared	pass	read_date
+oat-sa/lib-lti1p3-core	src/Message/LtiMessage.php + composer.json	master	3800	under version 2 of the License (non-upgradable) / "GPL-2.0-only"	only	YES	oat-sa/lib-lti1p3-core	p221	2026-10-15
+oat-sa/tao-core	composer.json	master	3041	"license": ["GPL-2.0-only"]	only	YES	oat-sa/tao-core	p222	2026-10-15
+oat-sa/oneroster-import	composer.json	master	786	"license": "GPL-2.0-only"	only	YES	oat-sa/oneroster-import	p222	2026-10-15
+oat-sa/devkit-lti1p3	composer.json	master	2540	"license": "GPL-2.0-only"	only	YES	oat-sa/devkit-lti1p3	p222	2026-10-15
+oat-sa/extension-tao-testqti	composer.json	master	1861	"license": ["GPL-2.0-only"]	only	YES	oat-sa/extension-tao-testqti	p222	2026-10-15
+oat-sa/qti-sdk	composer.json	master	1306	"license": ["GPL-2.0-only"]	only	YES	qtism/qtism (NAME != SLUG)	p222	2026-10-15
+qxbao/qldt-hanu-mcp	package.json	main	1099	"license": "GPL-2.0-only"	only	YES	-	p222	2026-10-15
+Elgg/Elgg	composer.json	master	3557	"license": "GPL-2.0-only"	only	YES	elgg/elgg	p222	2026-10-15
+nvaccess/nvda	pyproject.toml	master	12763	License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)	or-later	NO	nvda	p222	2026-10-15
+portabilis/i-educar	composer.json	master	6024	"license": "GPL-2.0-or-later"	or-later	NO	portabilis/i-educar	p222	2026-10-15
+Learnosity/learnosity-qti	composer.json	master	831	"license": ["GPL-2.0"]	unspecified	UNKNOWN	learnosity/learnosity-qti	p222	2026-10-15
+OpenEMIS/core	composer.json	main	6278	"license": "GPL-2.0"	unspecified	UNKNOWN	-	p222	2026-10-15
+gazpachu/hypatia	package.json	master	2674	"license": "GPL-2.0"	unspecified	UNKNOWN	-	p222	2026-10-15
+g3i/lxHive	composer.json	master	923	"license": "GPL-3.0"	unspecified	UNKNOWN	g3i/lxhive	p222	2026-10-15
+leogaggl/lxHive	composer.json	master	923	byte-identical to g3i/lxHive (sha256 b5af29209fa1) - FORK, not alias	unspecified	UNKNOWN	g3i/lxhive	p222	2026-10-15
+idempiere/idempiere	pom.xml	master	9187	no <licenses> block	-	UNKNOWN	-	p222	2026-10-15
+yunger7/enem-api	package.json	main	1485	FIELD-ABSENT	-	UNKNOWN	-	p222	2026-10-15
+xiaochong0302/course-tencent-cloud	composer.json	master	1062	FIELD-ABSENT	-	UNKNOWN	-	p222	2026-10-15
+formalms/formalms	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+OS4ED/openSIS-Classic	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+OS4ED/openSIS-Responsive-Design	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+foradian/fedena	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+atutor/ATutor	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+linil/centreSIS	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+inepdadosabertos/api	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+francoisjacquet/rosariosis	none	-	0	NO-CHANNEL	-	UNKNOWN	-	p222	2026-10-15
+academico-sis/academico	composer.json	main	3564	"license": "MIT" - CONTROL: the shelf publishes MIT elsewhere; the GPL-2.0 token on the same line was a COMPARISON, not this row's cell	-	NO	academico-sis/academico	p222	2026-10-15
+wingkwong/react-quiz-component	package.json	master	2832	"license": "MIT" - CONTROL: same, shelf publishes MIT	-	NO	react-quiz-component	p222	2026-10-15

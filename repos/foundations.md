@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — THE MOST-MENTIONED FOUNDATION ROW ON THIS SHELF WAS READ AS `NO-CHANNEL`, AND THE CHANNEL WAS ONE DIRECTORY DOWN
+
+🔵 **`0` new repository rows. 🔴 `1` carried row changes state, and it is the one with `72` licence cells.**
+
+🔵 **Evidence:** [`rp-bound-sweep`](../evidence/rp-bound-sweep.2026-10-15-p222.tsv) · [`rt-packaging-grant`](../evidence/rt-packaging-grant.2026-10-15-p222.tsv) · [`p222-alias-cluster-remeasure`](../evidence/p222-alias-cluster-remeasure.2026-10-15-p222.tsv) · **Instrument:** [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/README.md)
+
+### 🆕 🔴 `P222-A` — `openeducat/openeducat_erp`: `RANGE-CONFLICT` on the row every Odoo education recipe here stands on
+
+🔴 **[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) carries `72` bare `LGPL-3.0` cells across these shelves — more than any other GNU row.** This pass's first sweep reported it **`NO-CHANNEL`**: `18` root probes across `main` and `master`, every one `404`.
+
+🔴 **That verdict was this pass's own instrument re-committing a defect p215 already recorded — *"ABSENT meant 'not at root'"*.** 🟢 **Odoo's unit of distribution is a MODULE, so the manifest sits one directory down:**
+
+| channel | reads | grammar | bound |
+|---|---|---|---|
+| 🟢 `master/openeducat_core/__manifest__.py` l.`25` | `'license': 'LGPL-3'` | **Odoo** *(closed vocabulary)* | 🔴 **`only`** |
+| 🟢 same file, header | *"the GNU Lesser General Public License as published by the Free Software Foundation, **either version 3 of the License, or (at your option) any later version**"* | **prose** | 🟢 **`or-later`** |
+
+🔴 **Two channels in **one file**, and they state different bounds.** 🔵 **Read without the grammar they agree — both "say LGPL-3". Read with it, this is a `RANGE-CONFLICT` on the most load-bearing foundation row on the shelf, and the conservative reading (`LGPL-3.0-only`) is the one a client-facing SOW has to carry until the maintainer settles it.** 🟡 **Also confirmed first-hand: `openeducat_erp/__manifest__.py` → `200`, so the module tier is broad, not a single path.**
+
+🟢 **The generalised rule, and it is the third time this page has had to write a version of it.** *Freshness per repo (`p134`) · identity before freshness (`p136`) ·* 🆕 **and now: `ABSENT` is only ever `ABSENT-AT-THE-PATH-PROBED`. Before publishing `NO-CHANNEL`, name the ecosystem's unit of distribution and probe at that unit.** 🔵 **For Odoo that is `*/__manifest__.py`; for Moodle a plugin's `version.php`; for a monorepo `apps/*` and `packages/*` — two of this pass's `10` `NO-CHANNEL` rows (`learnhouse/learnhouse`, `brownplt/LTLTutor`) turned out to have a reachable non-root manifest the moment one was tried.**
+
+### 🆕 🟢 `P222-B` — `ACTION RT` closes on limb `2`: the grant **does** travel in the package
+
+🔴 **`ACTION RT` asked whether the `8` `FILE-SILENT` rows p221 found ship their `LICENSE` to a consumer who installs only the package. Limb `1` was `3`+ that do not.** 🟢 **It fires limb `2`. Every row measurable here carries its grant, verified by downloading the wheel and listing its contents — not by trusting metadata:**
+
+| row | artefact | bytes | the grant inside |
+|---|---|---|---|
+| 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) | `xblock-6.3.4-py3-none-any.whl` | `160 348` | 🟢 `xblock-6.3.4.dist-info/licenses/LICENSE.TXT` · `License-Expression: Apache-2.0` |
+| 🟢 [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | `jupyterhub_ltiauthenticator-1.6.3-...whl` | `28 209` | 🟢 `.../licenses/LICENSE` · **and the full BSD-3 text inline in `License:`** |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `kolibri-0.19.5-py2.py3-none-any.whl` | 🔴 **`103 738 893`** | 🟢 `kolibri-0.19.5.dist-info/LICENSE` · `License: MIT` |
+
+🟢 **So `FILE-SILENT` is cosmetic for the PyPI tier: a source file with no header is fine when the packaging carries the notice.** 🔴 **Two rows are not measurable from here at all — `Pearson-Advance/openedx-lti-tool-plugin` and `open-spaced-repetition/fsrs4anki-helper` are both `404` on PyPI under every spelling tried, because one installs from source and the other ships as an `.ankiaddon` zip.** 🔵 **Two more (`h5p/h5p-php-library`, `packbackbooks/lti-1-3-php-library`) are Composer packages and belong to `ACTION RC`.**
+
+### 🆕 🔴 `P222-C` — the closure finding inside Kolibri's wheel, which is the bigger number
+
+🔴 **Kolibri's wheel is `103.7` MB and vendors its whole dependency tree under `kolibri/dist/`. Listing every licence file inside it returns **`81`**: Kolibri's own `MIT` grant, and **`80` third-party licence files** — Django, SQLAlchemy, `cheroot`, `greenlet`, `certifi`, `tzdata`, `morango`, `le_utils` and `70`-odd more, several carrying their own `LICENSE_APACHE` and `LICENSE.PSF` variants.**
+
+🟡 **The shelf cell for this row says `MIT`, and that is correct about Kolibri.** 🔴 **It describes `1` of `81` grants inside the artefact a client actually installs.** 🟢 **This is the same question [`dependency-licence-closure`](../compose/code/dependency-licence-closure/README.md) was built for, and this pass supplies the measurement that makes it urgent for the offline-first tier specifically: a vendored wheel is the one distribution shape where the closure ships *with* the product, so the client redistributes all `81`.**
+
+### 🆕 🟡 `P222-D` — the alias-cluster class, RE-MEASURED, and it has grown
+
+🔵 **Not a new finding.** This page recorded it at l.`7968`: *"`37` further clusters are this KB citing one repository under two spellings"* — `p443`'s case-collision class, instrument [`p136-lineage-verdict`](../compose/code/p136-lineage-verdict/README.md). 🔴 **Re-run over all `8` shelf files on 2026-10-15:**
+
+| metric | prior | 🆕 p222 |
+|---|---|---|
+| distinct GitHub slugs on the shelves | — | `1 884` |
+| case-variant clusters | `37` | 🔴 **`47`** *(`+10`)* |
+| extra rows those clusters create | — | 🔴 **`48`** |
+| mentions involved | — | `691` |
+| clusters where the **repo name** differs in case too | — | `14` *(the rest are owner-only)* |
+
+🟢 **`8` of the `47` were verified first-hand by `README.md` byte identity** — `OpenOLAT/OpenOLAT`↔`openolat/OpenOLAT`, `OS4ED/openSIS-Classic`↔`os4ed/openSIS-Classic`, `GibbonEdu/core`↔`gibbonedu/core`, `ClassroomIO/ClassroomIO`↔`classroomio/classroomio`, `ahmedEid1/Lumen`↔`ahmedEid1/lumen`, `Crosstalk-Solutions/Project-NOMAD`↔`.../project-nomad`, `EduBase/MCP`↔`EduBase/mcp`, `eth-lre/MathTutorBench`↔`eth-lre/mathtutorbench`. 🟢 **Control: `blend-ed/openedx-mcp` vs `blend-ed/tutor-contrib-openedxmcp` → `DIFFERENT`, as it must be.**
+
+🔴 **And a correction this pass owes to its own first reading: byte identity does NOT prove alias.** 🟢 **[`g3i/lxHive`](https://github.com/g3i/lxHive) and [`leogaggl/lxHive`](https://github.com/leogaggl/lxHive) serve a byte-identical `composer.json` *(`923` B, `sha256:b5af29209fa1`)* and are two repositories — a fork pair.** 🔵 **For case-variant clusters the proof is that GitHub slugs are case-insensitive; byte identity is corroboration only.**
+
+🟡 **One pair is neither, and is published as a candidate rather than a conclusion:** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) and `openedx/openedx-platform` — same owner, byte-identical on `package.json` *(`5 540` B, `e16f286893eb469e`)* **and** `setup.py` *(`14` B, `d5558cd419c8d46b`)*, but `raw.githubusercontent.com` reports no redirect and `api.github.com` is `403`, so a rename alias cannot be told from an exact mirror here. 🔵 **`ALIAS-CANDIDATE`. The shelves carry `65` and `9` AGPL cells respectively, so if it is one repository this page is double-counting its largest row.**
+
+
 ## Pass 221 — 2026-10-15 — THE FOUNDATION ROWS ARE WHERE `FILE-SILENT` BITES, BECAUSE A FOUNDATION IS A THING YOU INSTALL INTO SOMEONE ELSE'S TREE
 
 🔵 **`1` new repository row.** 🔴 **`8` of the `22` rows read file-by-file this pass carry **no licence notice in the file that ships** — and the four largest are all foundation-tier libraries.**

@@ -1,0 +1,13 @@
+slug	channel	branch	bytes	license_field_verbatim	cran_grammar_reading	shelf_cell	verdict	read_date
+dexter-psychometrics/dexter	DESCRIPTION	master	1141	License: LGPL-3	LGPL-3.0-only (bare = positive only under CRAN)	LGPL-3 (marked amber/bare)	BOUND-RESOLVED - the cell was not silent, it was CRAN's only-form	2026-10-15
+shmercer/writeAlizer	DESCRIPTION	master	1550	License: MIT + file LICENSE	not GNU - out of scope	MIT	AGREE	2026-10-15
+rstudio/tblcheck	DESCRIPTION	main	1507	License: MIT + file LICENSE	not GNU - out of scope	MIT	AGREE	2026-10-15
+rstudio/ggcheck	DESCRIPTION	main	1595	License: MIT + file LICENSE	not GNU - out of scope	MIT	AGREE	2026-10-15
+ucbds-infra/ottr	DESCRIPTION	master	937	License: BSD_3_clause + file LICENSE	not GNU - out of scope	BSD-3-Clause	AGREE	2026-10-15
+SidneyBissoli/educabR	DESCRIPTION	main	1965	License: MIT + file LICENSE	not GNU - out of scope	MIT	AGREE	2026-10-15
+CambridgeAssessmentResearch/KernEqWPS	DESCRIPTION	master	576	License: MIT + file LICENSE	not GNU - out of scope	MIT	AGREE	2026-10-15
+eribean/girth	-	-	0	404 on main AND master	-	-	NO-DESCRIPTION - a Python package, not an R one	2026-10-15
+eribean/girth_mcmc	-	-	0	404 on main AND master	-	-	NO-DESCRIPTION - a Python package, not an R one	2026-10-15
+joakimwallmark/irtorch	-	-	0	404 on main AND master	-	-	NO-DESCRIPTION - a Python package, not an R one	2026-10-15
+readerbench/readerbench	-	-	0	404 on main AND master	-	-	NO-DESCRIPTION - a Python package, not an R one	2026-10-15
+CORPUS-CONTROL	all 8 shelf files	-	-	grep for CRAN's or-later form `(>= n)`	0 occurrences in 120 296 lines	-	CRAN's or-later form has NEVER appeared in this KB	2026-10-15

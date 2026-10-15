@@ -1,0 +1,31 @@
+# NOT A NEW FINDING. repos/foundations.md l.7968 recorded this class at 37 clusters
+# (p443's case-collision class, instrument compose/code/p136-lineage-verdict/).
+# This is the same measurement re-run on 2026-10-15 over all 8 shelf files.
+metric	p-prior	p222	delta
+distinct github slugs on the shelves	-	1884	-
+case-variant clusters	37	47	+10
+extra rows the clusters create	-	48	-
+mentions involved	-	691	-
+clusters where only the OWNER differs in case	-	33	-
+clusters where the REPO NAME differs in case too	-	14	-
+share of the slug population that is a duplicate	-	2.5%	-
+slug_a	slug_b	verified	README.md sha256 (first 12)
+OpenOLAT/OpenOLAT	openolat/OpenOLAT	IDENTICAL	266a28a9be59
+OS4ED/openSIS-Classic	os4ed/openSIS-Classic	IDENTICAL	971cf7497e9e
+GibbonEdu/core	gibbonedu/core	IDENTICAL	c2b71acc459f
+ClassroomIO/ClassroomIO	classroomio/classroomio	IDENTICAL	663904f2488e
+ahmedEid1/Lumen	ahmedEid1/lumen	IDENTICAL	e96917f4e6af
+Crosstalk-Solutions/Project-NOMAD	Crosstalk-Solutions/project-nomad	IDENTICAL	921aeb569fc2
+EduBase/MCP	EduBase/mcp	IDENTICAL	a92371d216e6
+eth-lre/MathTutorBench	eth-lre/mathtutorbench	IDENTICAL	a9655577df60
+CONTROL blend-ed/openedx-mcp	blend-ed/tutor-contrib-openedxmcp	DIFFERENT	0b7b1037b2a2 vs 41104ca2c6df
+# METHOD NOTE, and it corrects this pass's own first reading.
+# Byte identity does NOT prove alias. g3i/lxHive and leogaggl/lxHive serve a
+# byte-identical composer.json (sha256 b5af29209fa1) and are two repositories - a
+# FORK pair, different owners. For the CASE-VARIANT clusters the proof is that
+# GitHub slugs are case-insensitive, and byte identity is corroboration only.
+# openedx/edx-platform vs openedx/openedx-platform is neither: same owner,
+# byte-identical on package.json (5540 B, e16f286893eb469e) AND setup.py
+# (14 B, d5558cd419c8d46b), but raw.githubusercontent reports no redirect and
+# api.github.com is 403, so rename-alias cannot be distinguished from exact
+# mirror here. Published as ALIAS-CANDIDATE, not as a confirmed duplicate.

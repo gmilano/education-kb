@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — A LICENCE IDENTIFIER DOES NOT MEAN THE SAME THING IN TWO ECOSYSTEMS, AND EVERY TOOL THAT TREATS IT AS ONE STRING — THIS KB INCLUDED — IS READING A POSITIVE STATEMENT AS A SILENCE
+
+🔵 **Five trends: two about how open-source licence data is actually encoded, one about how the market is being sized, one about where the sector's AI supply is coming from, one about what regional silence means.**
+
+### 🆕 🔴 `T222-A` — the bound is an ecosystem property, not a repository property
+
+🔴 **p221 found that `94.3%` of this KB's GNU licence cells carry no `-only` / `-or-later` bound and registered `ACTION RP` to go and read them. `RP` ran and fired its second limb: `8` of the first `40` rows resolved.** 🟢 **But the sweep's real result is that the question was malformed.**
+
+🔴 **`-only` / `-or-later` is **SPDX's** notation. Four other grammars are in active use on these shelves, and in two of them the bound is carried by **omission**:**
+
+| grammar | where it is read | `or-later` | `only` |
+|---|---|---|---|
+| **SPDX** | `composer.json`, `package.json`, `pyproject.toml` | `-or-later` suffix | `-only` suffix · 🔵 **bare = nothing said** |
+| **CRAN** | `DESCRIPTION` | `GPL (>= 3)` | 🔴 **`GPL-3` — bare IS the only-form** |
+| **Odoo** | `*/__manifest__.py` | `'LGPL-3 or any later version'` | 🔴 **`'LGPL-3'` — bare IS the only-form** |
+| **PyPI trove** | classifiers | `… v3 or later (AGPLv3+)` | `… v3 (AGPLv3)` |
+| **prose** | a GNU file header | *"any later version"* | *"(non-upgradable)"* |
+
+🔴 **The consequence for anyone building licence tooling: a scanner that normalises every value to an SPDX string **before** knowing which file it came from destroys information.** 🟢 **`GPL-3` read out of a CRAN `DESCRIPTION` is `GPL-3.0-only`; the same four characters read out of a `package.json` mean the maintainer said nothing.** 🔵 **Both map to the SPDX id `GPL-3.0` and are then indistinguishable.**
+
+🟡 **Measured corroboration, offline:** CRAN's or-later form `(>= n)` appears **`0` times** in this KB's `120 296` lines of shelf content. 🔴 **Not because the R tier is all `only` — because the KB has only ever recorded the token, never the grammar it was written in.**
+
+### 🆕 🔴 `T222-B` — `GPL-2.0-only` clusters by **publisher**, not by project
+
+🔴 **`6` of `6` repositories from a single organisation — [`oat-sa`](https://github.com/oat-sa), publisher of TAO — declare `GPL-2.0-only`. Read first-hand from `composer.json`, six separate files, one answer.**
+
+🟢 **That is a trend about how licence risk is distributed, and it is good news for diligence economics.** 🔵 **Licence bounds are set by a publisher's legal policy and applied uniformly across its repositories. So the efficient unit of licence diligence is the **organisation**, not the repository: read one `oat-sa` manifest and you have predicted the other five. 🟡 Verify the prediction rather than assuming it — but predict first.**
+
+🔴 **The corollary is the uncomfortable one.** Because `GPL-2.0-only` is incompatible with GPLv3, an organisation-level policy becomes an organisation-level **exclusion**: the entire TAO/QTI assessment supply on these shelves is unavailable for linking into Moodle, Chamilo, ILIAS or Gibbon. 🟢 **Over LTI it is fine. Inside the tree it is not — see [`compose/patterns.md`](../compose/patterns.md) `P222-R1`.**
+
+### 🆕 🔴 `T222-C` — the sector is being sized by vendors who do not agree within a factor of `10`
+
+🔴 **Four `2026`-vintage estimates of AI-in-education, one query, same day: `2025` base USD `6.4`–`8.3` B; `2026` USD `10.6`–`11.4` B; terminal USD `42.5` B *(2030)* to `79.6` B *(2034)*.** 🟡 **None publishes its market boundary, so the spread is definitional, not empirical.**
+
+🟢 **The usable signal is not a size, it is a pair:** student AI use **`66%` → `92%`** in one year, against a sector *deployment* maturity score of **`35`/`100`**. 🔴 **Near-universal individual use, immature institutional deployment. 🔵 Every engagement thesis that depends on "the market is growing" is weaker than one that depends on that gap, because the gap is what a client can actually see inside their own institution.**
+
+### 🆕 🟢 `T222-D` — the sector's new AI supply is arriving as **LMS plugins from institutional publishers**, not as standalone agents
+
+🟢 **Eight query runs across three passes of the mandated *"trending AI agents for education"* shape have returned **zero** education-sector repositories. The constrained shape — naming Moodle and Open edX — has returned `12` and verified `9`.**
+
+🟢 **And the publishers are institutions, not startups.** 🆕 This pass: **mebis** *(Bavarian state school platform)*, **LMS Cloud**, and at p220 **Saylor Academy** — shipping production Moodle plugins under `GPL-3.0-or-later`. 🔵 **Moodle `4.5`+ having a pluggable core AI subsystem is what made this shape possible: the integration surface is now specified, so a ministry or a state platform can publish a provider rather than a product.**
+
+🔴 **What that means for a studio's sourcing strategy: stop searching for *"AI agents for education"*. 🟢 Search the host platform's plugin surface, and treat the ecosystem's mandated manifest as both the discovery channel and the licence channel — for Moodle, `version.php` answered `100%` of the time this pass, while the optional fields in npm, Composer and PyPI answered `20%`.**
+
+### 🆕 🟡 `T222-E` — a regional blank is a property of the query, and this pass proves it
+
+🔴 **p221 recorded Vietnam's AI law, South Korea's AI Basic Act and Japan's AI Basic Plan from an APAC query. 🔴 The **same query string**, run verbatim this pass, returned none of them — only enterprise-AI governance material.**
+
+🟡 **Neither pass is wrong. The retrieval surface moved.** 🔵 **The methodological consequence is stronger than it looks: a regional finding recorded without its query string and date cannot be re-tested, and a finding that cannot be re-tested is indistinguishable from one that has quietly expired.** 🟢 **`ACTION RE`'s discipline — publish the verbatim query beside every blank *and* every finding — is the only thing that made this detectable. 🔴 This pass marks every p221 APAC date as secondary-sourced rather than silently re-asserting it.**
+
+
 ## Pass 221 — 2026-10-15 — THE SECTOR'S OWN TOOLING ALREADY MODELS A LICENCE AS **FAMILY + VERSION**, AND EVERY KB THAT RECORDS IT AS ONE TOKEN — THIS ONE INCLUDED — IS LOSING THE HALF THAT DECIDES COMPATIBILITY
 
 🔵 **Five trends: two about how the sector is governed, two about how it is measured, one about where the open-source supply actually is.**

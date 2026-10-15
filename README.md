@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — `ACTION RP` FIRES ON ITS SECOND LIMB AND ITS PREMISE INVERTS: A BARE LICENCE TOKEN IS A **POSITIVE** STATEMENT IN TWO OF THE FIVE GRAMMARS IN USE HERE
+
+🔵 **`3` new agent rows, `0` new repository rows, `1` new platform row.** 🟢 **`6` actions discharged — `RP`, `RQ`, `RS`, `RT`, `RN`, and `RD` CLOSED at pass `3` of `3`. `1` organisation-wide licence exclusion that invalidates a whole class of recipe, `1` range conflict on the most-mentioned row on the shelf, `1` family conflict between two channels in the same directory, `3` new agent rows read first-hand, and `2` of this pass's own instrument errors recorded rather than buried.**
+
+### 🆕 🔴 The headline: `ACTION RP` asked a question with one grammar, and found four
+
+🟢 **`ACTION RP`, p221's registered highest-priority action for this pass, swept the first `40` of `247` bare-GNU rows against up to `9` prescribed channels on two branches. Limb `1` wanted `20`+ to resolve to an explicit bound.**
+
+🔴 **It fires limb `2` at `8`.** 🟢 **So p221's `94.3%` is **not** a reading backlog, `UNSPECIFIED-AT-SOURCE` is the honest published state for the bulk of this shelf, and `ACTION QO`'s gate must report a queue rather than fail — which is a real answer, and a reduction in what the next pass needs to do.**
+
+🔴 **And then the premise inverts.** `-only` / `-or-later` is **SPDX's** notation. Four other grammars are in use on these shelves, and in two of them the bound is carried by **omission**:
+
+| grammar | `or-later` | `only` |
+|---|---|---|
+| **SPDX** *(`composer.json`, `package.json`, `pyproject.toml`)* | `GPL-3.0-or-later` | `GPL-3.0-only` · 🔵 **bare = nothing said** |
+| **CRAN** *(`DESCRIPTION`)* | `GPL (>= 3)` | 🔴 **`GPL-3` — bare IS the only-form** |
+| **Odoo** *(`*/__manifest__.py`)* | `'LGPL-3 or any later version'` | 🔴 **`'LGPL-3'` — bare IS the only-form** |
+| **PyPI trove** | `… v3 or later (AGPLv3+)` | `… v3 (AGPLv3)` |
+| **prose** *(a GNU header)* | *"any later version"* | *"(non-upgradable)"* |
+
+🔴 **p221's `parse_range()` reads a bare `GPL-3` as `unspecified` in all five. For SPDX and prose that is right; for CRAN and Odoo it is wrong.** 🟢 **So `2 208` is the correct count of bare **tokens** and is not the count of unspecified **grants** → `ACTION RU`, the registered highest priority for p223, re-runs the census under the grammar, offline.**
+
+🔵 **Seventh consecutive unit-mismatch headline:** `T218-1` token vs **axis** · `T218-3` heading level vs **pass boundary** · `T218-4` line vs **sentence** · `T219-5` token vs **packaging mode** · `T220` repository vs **FILE** · `T221` family vs **VERSION RANGE** · 🆕 **`T222` token vs its ECOSYSTEM GRAMMAR**. 🟢 **Instrument wired, tested, committed: [`p222-ecosystem-bound-grammar`](compose/code/p222-ecosystem-bound-grammar/README.md), `32` tests, `5` of them controls that must not fire.**
+
+### 🆕 🟢 `ACTION RQ` fires limb `1`, and the deliverable turned out to be an **organisation**
+
+🟢 **`5` further rows resolved to `GPL-2.0-only` against a threshold of `2`+ — and they are not scattered. `6` of `6` repositories published by [`oat-sa`](https://github.com/oat-sa), read first-hand from `6` separate `composer.json` files on `master`:**
+
+[`tao-core`](https://github.com/oat-sa/tao-core) · [`extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti) · [`qti-sdk`](https://github.com/oat-sa/qti-sdk) *(package name `qtism/qtism` — slug ≠ name)* · [`devkit-lti1p3`](https://github.com/oat-sa/devkit-lti1p3) · [`oneroster-import`](https://github.com/oat-sa/oneroster-import) · [`lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) *(p221)*
+
+🔴 **`GPL-2.0-only` is incompatible with `GPL-3.0`. `oat-sa` publishes TAO — the dominant open-source assessment and QTI stack — so the entire assessment supply on these shelves is excluded from every GPLv3 LMS here: Moodle, Chamilo, ILIAS, Gibbon.** 🟡 **Any SOW proposing a Moodle plugin that bundles QTI-SDK is unbuildable as written.**
+
+🟢 **The build that works is on the shelf: [`compose/patterns.md`](compose/patterns.md) `P222-R1` keeps TAO as a separate LTI 1.3 tool and substitutes the one library the recipe turns on — [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library), `Apache-2.0`, in place of `oat-sa/lib-lti1p3-core`.** 🟢 **Two further `GPL-2.0-only` rows outside `oat-sa`: [`Elgg/Elgg`](https://github.com/Elgg/Elgg) and [`qxbao/qldt-hanu-mcp`](https://github.com/qxbao/qldt-hanu-mcp). 🟢 Two that were bare and are safe: `nvaccess/nvda` and `portabilis/i-educar` are both `or-later`.**
+
+### 🆕 🔴 The row it cost the most, and it was this pass's own instrument that nearly lost it
+
+🔴 **[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) carries `72` bare `LGPL-3.0` cells — more than any other GNU row on these shelves.** 🔴 **p222's first sweep published it `NO-CHANNEL` on `18` root probes, every one `404`.**
+
+🟢 **The manifest was one directory down.** Odoo's unit of distribution is a **module**: `openeducat_core/__manifest__.py` → `200`, line `25`: `'license': 'LGPL-3'` — Odoo's `only` — while the **same file's** header grants *"either version 3 of the License, or (at your option) any later version"*. 🔴 **A `RANGE-CONFLICT`, in one file, on the shelf's most load-bearing foundation row → `ACTION RV`.**
+
+🔴 **And that is p215's defect recurring inside a new instrument: *"ABSENT meant 'not at root'"*.** 🟢 **The rule, written down for the third time: `ABSENT` is only ever `ABSENT-AT-THE-PATH-PROBED`. Name the ecosystem's unit of distribution, then probe at that unit.**
+
+### 🆕 🔴 `T222-3` — a family conflict between two channels in the **same** directory
+
+🔴 **[`classroomio/classroomio`](https://github.com/classroomio/classroomio)** — root `package.json` l.`47`: `"license": "MIT"`. Root `LICENSE`, same directory: the full **GNU AFFERO GENERAL PUBLIC LICENSE Version 3**. 🔴 **Permissive versus strong network copyleft, no tie-breaker.** 🔵 **p220's conflicts were repository metadata versus a shipped file; this is manifest versus `LICENSE` at the same level, which is new.**
+
+🟢 **The same row supplies the state `ACTION RN` was registered to create and could not get from `jmolpea`** *(unreachable from `5` channels, now `CLAIMED-BY-SURFACE-ONLY`)*: its `README` gates **SSO, token-auth and no-tracking** behind a `LICENSE_KEY`. 🟢 **`OSI-GRANT-PLUS-KEY-GATE` enters the vocabulary with a verified member → `ACTION RZ`.**
+
+### 🆕 🟢 The new rows, all read first-hand at the prescribed channel
+
+🟢 **All three came from `ACTION RD`'s constrained query shape, all three are `GPL-3.0-or-later`, and all three were published by institutions rather than startups — which is `T222-D`.**
+
+| row | licence | region | note |
+|---|---|---|---|
+| 🆕 🟢 [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | 🟢 `GPL-3.0-or-later` *(`main/version.php`)* | 🟢 **EMEA** | Per-tenant AI provider, quota and purpose broker. **Published by *mebis*, the Bavarian state school platform** |
+| 🆕 🟢 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 `GPL-3.0-or-later` *(`main/version.php`)* | 🟢 **EMEA** | OpenAI-**compatible** provider for Moodle `4.5`+ core AI subsystem. 🟢 **The structural escape from `ACTION RB`: no vendor API in the path** |
+| 🆕 🟢 [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) | 🟢 `GPL-3.0-or-later` *(`main/version.php`)* | 🟢 **LATAM** *(Brazil)* | **MAICI** — AI chat as an **activity module**, so conversations are course-scoped and auditable per assessment |
+
+### 🆕 🟢 Two limb-`2` closures that are answers, not blanks
+
+- 🔴 **`ACTION RT` fires limb `2` at `0`.** 🟢 **`3` of `3` measurable `FILE-SILENT` rows ship their grant inside the wheel, verified by **downloading** the artefact and listing its contents: `XBlock` `6.3.4`, `jupyterhub-ltiauthenticator` `1.6.3`, `kolibri` `0.19.5`. `FILE-SILENT` is cosmetic for the PyPI tier.** 🔴 **The same bytes gave a bigger number: Kolibri's `103.7` MB wheel contains **`81`** licence files — `1` Kolibri grant and `80` vendored. The `MIT` cell describes `1` of `81` grants the client redistributes → `ACTION RX`.**
+- 🔴 **`ACTION RS` fires limb `2` at `0`** — the R tier was already right, `7` of `11` answered from `DESCRIPTION` and all `7` agreed. 🟢 **But reading CRAN's grammar is what made the headline visible, and `cran.r-project.org` being `CONNECT 403` forced the read through `raw.githubusercontent.com`, which worked.**
+
+### 🆕 🔴 Regional coverage, declared with the query that produced it *(`ACTION RE`)*
+
+🟢 **All `5` regions non-blank; `3` declared blanks published with their verbatim queries, one of them new. Full table: [`rp-regional-queries`](evidence/rp-regional-queries.2026-10-15-p222.tsv).**
+
+🔴 **`ACTION RE` earned its keep this pass rather than merely being honoured.** Because p221 published its APAC query string, p222 re-ran it **verbatim** — and p221's Vietnam, South Korea and Japan findings **did not reproduce**. 🟡 **Every date in `P221-R3` is now marked secondary-sourced. 🔵 A finding recorded without its query cannot be re-tested, and one that cannot be re-tested is indistinguishable from one that has expired.**
+
+🔴 **And the market page gives up a number it had been carrying:** four `2026`-vintage vendor estimates of the same market, one query, same day — `2025` base USD `6.4`–`8.3` B, `2026` USD `10.6`–`11.4` B, terminal USD `42.5` B *(2030)* to `79.6` B *(2034)*. 🟢 **The page now quotes a range with sources and years attached and never a single figure. The usable signal is a pair: student AI use `66%` → `92%` in one year against a sector deployment maturity of `35`/`100`.**
+
+### 🆕 🟡 Two of this pass's own errors, recorded rather than buried
+
+- 🔴 **`2` false `GRANT-CONFLICT`s.** The extractor attributed a `GPL-2.0` token to `academico-sis/academico` and `wingkwong/react-quiz-component` because it appeared on the same line as the slug. 🟢 **Both are `MIT`, both already published correctly elsewhere on these shelves, and the token belonged to a *comparison*. Caught by a control and written down so no later pass re-derives them.**
+- 🔴 **Byte identity does NOT prove alias.** 🟢 **`g3i/lxHive` and `leogaggl/lxHive` serve a byte-identical `composer.json` and are two repositories — a fork pair.** 🔵 **For the `47` case-variant clusters re-measured this pass *(up from `37`, `48` extra rows, `691` mentions)* the proof is that GitHub slugs are case-insensitive; byte identity is corroboration only. `openedx/edx-platform` vs `openedx/openedx-platform` is neither and is published as `ALIAS-CANDIDATE` → `ACTION RY`.**
+
+### 🟢 `ACTION PD`, tested an `18`th time — and the pattern breaks
+
+🟢 **WORKING:** `raw.githubusercontent.com` `200` *(~`250` requests)* · `registry.npmjs.org` `200` · `pypi.org` + `files.pythonhosted.org` `200` *(a `103.7` MB wheel pulled)* · `packagist.org` `200` on package paths · `proxy.golang.org` `200`.
+🔴 **BLOCKED:** `api.github.com` `403` · `moodle.org` `000` · `unesco.org` `000` · 🆕 **`crates.io` `403`** · 🆕 **`cran.r-project.org` `CONNECT 403`**.
+
+🔴 **The `17`-pass pattern — *"every working channel is a PACKAGE channel, every failing one is a WEB page"* — BREAKS on `crates.io`, a package channel that fails.** 🟢 **Recorded as `17` clean + `1` exception rather than smoothed over. 🟡 Working rule: the split tracks the HOST, not the kind of resource.**
+
+🔴 **`ACTION PH` remains deliberately untaken for an `18`th pass** — it opens issues on third parties' repositories, an outward action in a maintainer's name, and p222 ran unattended on a schedule.
+
+
 ## Pass 220 — 2026-10-15 — `ACTION RG` FIRES AND ITS CONCLUSION IS REFUTED BY THE SAME COUNT: THE UNIT OF A LICENCE IS THE **FILE**
 
 🔵 **`4` new agent rows** *(the most in `5` passes)*, **`1` new repository row, `1` new platform row.** 🟢 **`4` actions closed — `RG`, `RB`, `RF`, and `RD` at pass `1` of `3`. `2` repository-level grants CONTRADICTED by the files that ship, `1` false grant PREVENTED, `2` new working channels, `8` new state classes, and an entire Moodle AI-plugin category verified first-hand that these shelves carried `0` of.**

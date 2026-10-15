@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 222 — `ACTION RD` CLOSES AT PASS `3` OF `3`: THE MANDATED SHAPE IS `0` FOR `8`, AND THE HONEST VERDICT IS STILL **KEEP BOTH**
+
+🔵 **`0` new repository rows this week; `3` new agent rows came from the constrained shape and are on [`agents/trending.md`](../agents/trending.md).** 🔴 **A third mandated shape was added this pass and produced the worst result of the three — not a blank, but a single vendor's SEO surface read as a market.**
+
+🔵 **Evidence:** [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p222.tsv) *(all four query strings verbatim, per `ACTION RE`)* · [`p222-channel-reachability`](../evidence/p222-channel-reachability.2026-10-15-p222.tsv)
+
+### 🔴 `ACTION RD`, pass `3` of `3` — the three-pass record
+
+| pass | mandated: named / verified | constrained: named / verified |
+|---|---|---|
+| p220 | `0` / `0` | `5` / `4` |
+| p221 | `0` / `0` *(two shapes)* | `3` / `2` |
+| 🆕 p222 | `0` / `0` *(three shapes)* | 🟢 **`4` / `3`** |
+| **total** | 🔴 **`3` named, `0` verified across `8` query runs** | 🟢 **`12` named, `9` verified** |
+
+🟢 **CLOSED, verdict COMPLEMENTARY — which is what p221 registered as the honest expectation, so the action closes on its own prediction rather than on a surprise.**
+
+🔵 **The reason to keep the mandated shape despite `0` for `8`:** it is what surfaced [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD) at p220 — an offline-first education server the constrained shape, which asks about Moodle and Open edX, structurally cannot find. 🟡 **Expected yield: roughly one row in ten passes. Keep it, run it last, and do not spend more than one query on it.**
+
+### 🆕 🔴 The new mandated shape, and why it is the worst of the three
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned `10` results. All `10` were glossary pages from **one vendor's domain** — `openeducat.org` — served in six languages *(`en`, `fr`, `ar`, `de`, `es`, `zh`, `pt-BR`)*.**
+
+🔴 **Read naively that looks like corroboration: six independent-looking pages agreeing that OpenEduCat is the education ERP answer.** 🟢 **It is one page. 🔵 A blank is information; a single-vendor surface mistaken for a market is misinformation, and this is the first time these shelves have caught a trending query returning one.**
+
+🟡 **Side note that the same query got right by accident:** it states OpenEduCat is `LGPLv3` and *"copyleft, not MIT or Apache"*. 🟢 **Independently confirmed first-hand this pass at `openeducat_core/__manifest__.py` — and the module's own header makes it a `RANGE-CONFLICT`, see [`repos/foundations.md`](foundations.md) `P222-A`.**
+
+### 🟢 `ACTION PD` · the channel split, tested an `18`th time
+
+| channel | result | note |
+|---|---|---|
+| 🟢 `raw.githubusercontent.com` | `200` | ~`250` requests this pass |
+| 🟢 `registry.npmjs.org` | `200` | reproduces p220, p221 |
+| 🟢 `pypi.org` · `files.pythonhosted.org` | `200` | 🆕 **a `103.7` MB wheel pulled successfully, so this channel carries payloads, not just metadata** |
+| 🟡 `packagist.org` | `200` for a package path, **connection reset** for `search.json` | 🔵 package paths work; the search endpoint does not |
+| 🟢 `proxy.golang.org` | `200` | unchanged |
+| 🔴 `api.github.com` | `403` | `18`th consecutive block — no default-branch read, so every file path costs up to `2` probes |
+| 🆕 🔴 `crates.io` | `403` | **NEW BLOCK** |
+| 🆕 🔴 `cran.r-project.org` | `CONNECT 403` | **NEW BLOCK** — so `ACTION RS` read `DESCRIPTION` from `raw.githubusercontent.com` instead, and still worked |
+| 🔴 `moodle.org` · `unesco.org` | `CONNECT 403` | unchanged |
+
+🔵 **The `17`-pass pattern was *"every working channel is a PACKAGE channel, every failing one is a WEB page."*** 🔴 **`crates.io` breaks it: a package channel that fails.** 🟢 **The pattern now reads `17` clean + `1` exception, and the exception is recorded rather than smoothed over. 🟡 Working rule for a later pass: the split tracks the host, not the kind of resource — do not predict reachability from "it is a registry".**
+
+
 ## 2026-10-15 — Pass 221 — the mandated trending shape goes `0` for `7`, and this pass can finally say what it costs
 
 🔵 **`1` new repository row this week.** 🔴 **Both mandated query shapes ran verbatim and returned no education-sector software for the seventh consecutive pass. The constrained shape returned `3` named repositories, `2` of which verified.**

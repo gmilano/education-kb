@@ -1,0 +1,10 @@
+slug	pypi_name	version	artefact	artefact_bytes	licence_path_inside_artefact	metadata_line	verdict	read_date
+openedx/XBlock	XBlock	6.3.4	xblock-6.3.4-py3-none-any.whl	160348	xblock-6.3.4.dist-info/licenses/LICENSE.TXT	License-Expression: Apache-2.0 / License-File: LICENSE.TXT	GRANT-TRAVELS	2026-10-15
+jupyterhub/ltiauthenticator	jupyterhub-ltiauthenticator	1.6.3	jupyterhub_ltiauthenticator-1.6.3-py3-none-any.whl	28209	jupyterhub_ltiauthenticator-1.6.3.dist-info/licenses/LICENSE	License: BSD 3-Clause License (full text inline) / License-File: LICENSE	GRANT-TRAVELS	2026-10-15
+learningequality/kolibri	kolibri	0.19.5	kolibri-0.19.5-py2.py3-none-any.whl	103738893	kolibri-0.19.5.dist-info/LICENSE	License: MIT / Classifier: License :: OSI Approved :: MIT License	GRANT-TRAVELS - and see the closure note	2026-10-15
+Pearson-Advance/openedx-lti-tool-plugin	-	-	-	0	NOT ON PyPI (404 for both hyphen and underscore spellings)	-	NOT-MEASURABLE-HERE - installed from source	2026-10-15
+open-spaced-repetition/fsrs4anki-helper	-	-	.ankiaddon zip	0	NOT ON PyPI (404)	-	NOT-MEASURABLE-HERE - Anki addon zip, not a wheel	2026-10-15
+h5p/h5p-php-library	-	-	composer package	948	composer.json present; packagist channel not read this pass	-	DEFERRED to ACTION RC	2026-10-15
+packbackbooks/lti-1-3-php-library	-	-	composer package	-	composer channel not read this pass	-	DEFERRED to ACTION RC	2026-10-15
+francoisjacquet/rosariosis	-	-	no package	0	no manifest at root on main or master	-	NO-PACKAGE - distributed as a source tarball	2026-10-15
+CLOSURE-NOTE	kolibri	0.19.5	same wheel	103738893	80 FURTHER third-party licence files under kolibri/dist/	-	The MIT cell describes 1 of 81 grants inside the artefact a client installs	2026-10-15

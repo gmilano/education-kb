@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-15
 ---
 
+## 2026-10-15 — Pass 222 — `3` new agent rows, and the week's finding is an **organisation-wide** licence exclusion: all `6` `oat-sa` rows are `GPL-2.0-only`
+
+🔵 **What is new this week, in one line: the bound sweep p221 registered as top priority fired its *second* limb — only `8` of `40` bare-GNU rows carry a readable bound — but the companion `GPL-2.0` sweep fired its first and produced a named exclusion list that invalidates every assessment recipe on these shelves that puts a TAO library inside Moodle.**
+
+🔵 **Evidence:** [`rq-gpl2-only-exclusion`](../evidence/rq-gpl2-only-exclusion.2026-10-15-p222.tsv) · [`rp-bound-sweep`](../evidence/rp-bound-sweep.2026-10-15-p222.tsv) · [`rd-trending-shapes`](../evidence/rd-trending-shapes.2026-10-15-p222.tsv) *(all four query strings verbatim, per `ACTION RE`)*
+
+### 🆕 🟢 New this pass
+
+| repo | licence | channels | region | what it does |
+|---|---|---|---|---|
+| 🆕 🟢 [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | 🟢 **`GPL-3.0-or-later`** | `1` — `main/version.php`, grant + `@license` tag agree | 🟢 **EMEA** *(Bavaria, Germany)* | Per-tenant AI provider, quota and purpose broker for Moodle. 🟢 **Institutional publisher: *mebis*, the Bavarian state school platform** |
+| 🆕 🟢 [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 **`GPL-3.0-or-later`** | `1` — `main/version.php` | 🟢 **EMEA** | OpenAI-**compatible** provider for Moodle `4.5`+ core AI subsystem. 🟢 **The row that lets a Moodle AI build target a self-hosted endpoint, so the stack stops depending on a vendor's API terms** |
+| 🆕 🟢 [`caiocarvalhofre/moodle-mod_maici`](https://github.com/caiocarvalhofre/moodle-mod_maici) | 🟢 **`GPL-3.0-or-later`** | `1` — `main/version.php` | 🟢 **LATAM** *(Brazil)* | **MAICI** — AI chat as an *activity module*, so each conversation is course-scoped rather than site-wide like a block |
+
+### 🔴 `ACTION RD`, pass `3` of `3` — the verdict is COMPLEMENTARY, exactly as p221 predicted
+
+| shape | query string, verbatim | named | verified |
+|---|---|---|---|
+| 🔴 **mandated** | `github trending education AI 2026` | `0` | `0` — **8th consecutive blank.** Returned `rohitg00/ai-engineering-from-scratch`, `aneelv75/github-trending`, `speedyapply/2026-AI-College-Jobs`, `MadsLorentzen/ai-job-search` and Karpathy course material. 🔵 **Learning material *about* AI, never education-sector software** |
+| 🔴 **mandated-b** | `top open source AI agents education 2026 github MIT` | `3` | `0` — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`. 🔴 **All three are curricula for *learning to build agents*. The source states it outright: no ranked list of MIT-licensed agents built for education exists** |
+| 🔴 **mandated-c** | `open source platform education ERP CRM MIT Apache` | `0` | `0` — 🔴 **`10` of `10` results were glossary pages from **one vendor** (`openeducat.org`) in six languages. A single-vendor SEO surface read as a market, which is worse than a blank** |
+| 🟢 **constrained** | `open source Moodle Open edX AI plugin repository github 2026 license` | `4` | 🟢 **`3`** — the three rows above. The fourth, `openedx/openedx-ai-extensions`, is already carried |
+
+🟢 **Three-pass totals: mandated `0` verified from `8` attempts; constrained `10` named, `9` verified.** 🔴 **Do not retire the mandated shape anyway — it is what surfaced `Crosstalk-Solutions/Project-NOMAD` at p220, which the constrained shape never would have. 🔵 `ACTION RD` CLOSES: keep both, weight the constrained one, and expect the mandated one to pay off roughly once in ten passes.**
+
+### 🆕 🔴 The week's defect, in the form a studio feels it
+
+🔴 **A client asks for AI-assisted QTI assessment inside their Moodle. The obvious open-source answer on these shelves is a TAO/`oat-sa` library — [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk), [`oat-sa/extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti), [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) — wired into a Moodle plugin.** 🔴 **All six `oat-sa` rows declare `GPL-2.0-only`. Moodle is GPLv3. The combination cannot be distributed.** 🟢 **The route that does work is LTI: keep TAO as a separate *tool*, launch it over LTI 1.3, and never link its code into the Moodle tree — see [`compose/patterns.md`](../compose/patterns.md) `P222-R1`.**
+
+🟡 **One more identity note while reading `oat-sa`:** `oat-sa/qti-sdk`'s `composer.json` declares the package name **`qtism/qtism`**. 🔵 **Slug ≠ package name, which is the p220 identity-gate class again; a registry lookup keyed on the slug finds nothing and a lookup keyed on the name lands somewhere this KB never recorded.**
+
+
 ## 2026-10-15 — Pass 221 — `2` new agent rows, and the week's defect is one `p220`'s own instrument scored as `AGREE`
 
 🔵 **What is new this week, in one line: the file-level read p220 registered as its top priority ran over `22` rows, found **none** of the defect it was looking for, and found a different one in `6` of them that every prior pass had scored as clean.**

@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-15
 ---
 
+## Pass 222 — 2026-10-15 — THREE RECIPES: THE LTI SEAM THAT MAKES TAO USABLE, THE SELF-HOSTED MOODLE AI STACK, AND THE ECOSYSTEM-AWARE LICENCE GATE
+
+🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Every row used was read first-hand at its prescribed channel on 2026-10-15; the licences below are quoted, not inferred.**
+
+### 🆕 🟢 `P222-R1` — AI-assisted QTI assessment for a Moodle client, built across the licence seam *(2–3 weeks)*
+
+🔴 **The problem it solves is this pass's hardest finding: the obvious build is illegal to distribute.** A client with Moodle wants AI-assisted QTI item generation and delivery. The open-source assessment supply is TAO. 🔴 **All `6` `oat-sa` repositories declare `GPL-2.0-only` *(read from `composer.json` on `master`)* and Moodle is GPLv3 — so nothing from `oat-sa` may be linked into the Moodle tree.**
+
+🟢 **The build that works keeps them as two programs:**
+
+| component | repo | licence as read | role |
+|---|---|---|---|
+| LMS host | Moodle `4.5`+ | `GPL-3.0-or-later` | gradebook, enrolment, identity |
+| AI provider | [`lmscloud-io/moodle-aiprovider_openaicompatible`](https://github.com/lmscloud-io/moodle-aiprovider_openaicompatible) | 🟢 `GPL-3.0-or-later` *(`main/version.php`)* | any OpenAI-compatible endpoint |
+| provider governance | [`mebis-lp/moodle-local_ai_manager`](https://github.com/mebis-lp/moodle-local_ai_manager) | 🟢 `GPL-3.0-or-later` *(`main/version.php`)* | per-tenant quotas, purpose scoping |
+| assessment engine | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) + [`oat-sa/extension-tao-testqti`](https://github.com/oat-sa/extension-tao-testqti) | 🔴 `GPL-2.0-only` | 🔴 **SEPARATE deployment — never in the Moodle tree** |
+| the seam | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 `Apache-2.0` | LTI 1.3 tool side, **permissive** |
+| QTI transform | [`Citolab/qti-convert`](https://github.com/Citolab/qti-convert) | 🟡 `GPL-3.0-only` *(`package.json`)* | QTI package conversion — 🟡 **v3-family, so it MAY sit in the Moodle tree, but `only`: no forward move to a future GPL** |
+
+🟢 **Wiring.** Moodle launches TAO as an **LTI 1.3 tool**; grades return over **AGS**; rosters over **NRPS**. Item generation runs *inside Moodle* through `local_ai_manager` → `aiprovider_openaicompatible` → a self-hosted endpoint, and generated items are pushed to TAO as **QTI 3** packages produced by `qti-convert`. 🔵 **Two deployments, one protocol, no linking.**
+
+🔴 **Do NOT use [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) for the tool side** — it is `GPL-2.0-only` and would re-create the incompatibility at the one place the recipe exists to avoid it. 🟢 **`packbackbooks` is `Apache-2.0` and was confirmed this pass to carry its grant; this is the single substitution the whole recipe turns on.**
+
+🟡 **What to write in the SOW:** *"TAO is deployed as a separate LTI tool for licence-compatibility reasons; no `GPL-2.0-only` code is incorporated into the Moodle codebase."* 🔵 **One sentence, and it is the difference between a deliverable the client can distribute and one they cannot.**
+
+### 🆕 🟢 `P222-R2` — a Moodle AI stack with no vendor API in the path *(1–2 weeks)*
+
+🟢 **The problem it solves is `ACTION RB`'s finding: for a closed-API integration the licence cell answers the wrong question, because the governing constraint is the vendor's API terms — which this KB records for no row.** 🟢 **The fix is structural: remove the vendor.**
+
+```
+Moodle 4.5+  (GPL-3.0-or-later, core AI subsystem)
+  └─ local_ai_manager          mebis-lp/moodle-local_ai_manager          GPL-3.0-or-later
+       ├─ aiprovider_openaicompatible  lmscloud-io/moodle-aiprovider_openaicompatible  GPL-3.0-or-later
+       │     └─► self-hosted OpenAI-compatible endpoint   (vLLM / Ollama / llama.cpp)
+       └─ mod_maici            caiocarvalhofre/moodle-mod_maici          GPL-3.0-or-later
+             course-scoped AI chat as an ACTIVITY, so conversations are
+             gradebook-adjacent rather than site-wide
+```
+
+🟢 **Why every row is safe to ship together:** all four are `GPL-3.0-or-later`, read first-hand from each plugin's `version.php`, and the `or-later` bound means the stack can move forward if a future GPL appears. 🔵 **Contrast with [`overhangio/tutor`](https://github.com/overhangio/tutor)'s `AGPL-3.0-only` *(`pyproject.toml`)*, where that forward option does not exist.**
+
+🟢 **Why the activity/block distinction earns its place:** `mod_maici` is an **activity module**, so a conversation belongs to a course and inherits its enrolment, visibility and completion rules. 🔵 **A block is site-furniture; an activity is coursework. For an institution that has to answer *"which students used AI on which assessment"*, only the activity shape produces that record.**
+
+🟡 **Sequencing:** stand up `local_ai_manager` and the provider first and prove one purpose end to end against a self-hosted endpoint *(a day)*. 🔴 **Do not install `mod_maici` until the provider is governed — an ungoverned chat activity is the fastest route to an unbounded inference bill and an unanswerable data-residency question.**
+
+### 🆕 🟢 `P222-R3` — the ecosystem-aware licence gate, as a replacement for `P221-R1` *(1 day)*
+
+🔴 **`ACTION QO` has asked for five passes that a licence gate be wired into `make hooks`. p221 built [`P221-R1`](../compose/code/p221-licence-version-range/README.md) and it was the right shape. 🔴 This pass found the defect that stops it being correct: it reads every channel under SPDX's grammar.**
+
+🟢 **The fix is one function call, not a rewrite:**
+
+```python
+from p222_ecosystem_bound_grammar.bound_grammar import grammar_for, read_bound, reconcile
+
+# BEFORE (p221): one grammar for every channel
+#   parse_range(value)                       -> 'LGPL-3' is ALWAYS 'unspecified'
+# AFTER  (p222): the channel chooses the grammar
+grammar = grammar_for('__manifest__.py')      # -> 'odoo'
+read_bound("'LGPL-3'", grammar)['bound']      # -> 'only'   (a POSITIVE statement)
+read_bound("'LGPL-3'", 'spdx')['bound']       # -> 'unspecified'
+
+verdict = reconcile([('__manifest__.py', "'LGPL-3'"),
+                     ('version.php',     openeducat_header_text)])
+verdict['state']                              # -> 'RANGE-CONFLICT'
+```
+
+🟢 **What to wire, concretely:**
+
+1. **Fail the hook on `RANGE-CONFLICT` and `GRANT-CONFLICT` only.** 🔵 Two states, both meaning two channels contradict each other — never a judgement call.
+2. **Report `UNSPECIFIED-AT-SOURCE` as a queue, never a failure.** 🔴 `ACTION RP` fired limb `2` at `8` of `40`, so this queue is the majority of the shelf and a gate that failed on it would never go green.
+3. **Report `NON-SPDX-IN-SPDX-FIELD` as a warning with the verbatim value.** 🟡 Three rows this pass *(`ILIAS` `"GPL v3"`, `INGInious` `"AGPL 3"`, `Citolab/qti-components` `"GPLv3"`)*, all of which a dependency scanner will silently drop.
+4. **Before emitting `NO-CHANNEL`, probe at the ecosystem's unit of distribution.** 🔴 This pass published `openeducat/openeducat_erp` — the shelf's most-mentioned GNU row — as `NO-CHANNEL` on `18` root probes, and the manifest was at `openeducat_core/__manifest__.py` all along.
+5. **Attach `blocks_gpl3_host()` to every recipe that names a GPLv3 host.** 🟢 That one call is what produces `P222-R1`'s exclusion list automatically instead of by hand.
+
+🟢 **Cost and shape:** stdlib only, no network, **`32` tests of which `5` are controls that must not fire**. 🔵 **It runs against the shelf files already on disk, so it is a pre-commit gate rather than an ingest step — which is what `ACTION QO` asked for five passes ago.**
+
+
 ## Pass 221 — 2026-10-15 — THREE RECIPES: THE VERSION-RANGE GATE IN `make hooks`, THE MOODLE AI BUILD THAT CLEARS A v3 HOST, AND THE VIETNAM ASSESSMENT COMPLIANCE PACK
 
 🔵 **All three name specific repositories, specific files and specific wiring. 🟢 Two are assembled entirely from rows verified first-hand in p220–p221; the third is dated against a statutory deadline.**

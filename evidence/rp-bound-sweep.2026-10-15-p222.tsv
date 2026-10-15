@@ -1,0 +1,43 @@
+slug	shelf_cell	channel_read	branch	bytes	value_verbatim	grammar	bound	state	read_date
+frappe/lms	AGPL-3.0	package.json	main	875	"AGPL-3.0-or-later"	spdx	or-later	BOUND-RESOLVED	2026-10-15
+chamilo/chamilo-lms	GPL-3.0	composer.json	master	8294	"GPL-3.0-or-later"	spdx	or-later	BOUND-RESOLVED	2026-10-15
+overhangio/tutor	AGPL-3.0	pyproject.toml	main	2976	license = {text = "AGPL-3.0-only"}	spdx	only	BOUND-RESOLVED	2026-10-15
+portabilis/i-educar	GPL-2.0	composer.json	master	6024	"GPL-2.0-or-later"	spdx	or-later	BOUND-RESOLVED	2026-10-15
+oat-sa/tao-core	GPL-2.0	composer.json	master	3041	"GPL-2.0-only"	spdx	only	BOUND-RESOLVED	2026-10-15
+ankitects/anki	AGPL-3.0	package.json	main	3476	"AGPL-3.0-or-later"	spdx	or-later	BOUND-RESOLVED	2026-10-15
+Citolab/qti-convert	GPL-3.0	package.json	main	3007	"GPL-3.0-only"	spdx	only	BOUND-RESOLVED	2026-10-15
+yh2072/edgameclaw	AGPL-3.0	pyproject.toml	main	1191	license = { text = "AGPL-3.0-or-later" }	spdx	or-later	BOUND-RESOLVED	2026-10-15
+GibbonEdu/core	GPL-3.0	composer.json	main	3097	"GPL-3.0"	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+csmediapro/moodle-mcp-server	AGPL-3.0	package.json	main	892	"AGPL-3.0"	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+adaptlearning/adapt_framework	GPL-3.0	package.json	master	2780	"GPL-3.0"	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+LearningLocker/learninglocker	GPL-3.0	package.json	master	9589	"GPL-3.0"	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+h5p/h5p-php-library	GPL-3.0	composer.json	master	948	"GPL-3.0"	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+blend-ed/tutor-contrib-openedxmcp	AGPL-3.0	pyproject.toml	master	847	license = { text = "AGPL-3.0" }	spdx	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+kstateome/lti-launch	LGPL-3.0	pom.xml	master	14297	GNU Lesser General Public License (LGPL), Version 3	prose	unspecified	UNSPECIFIED-AT-SOURCE	2026-10-15
+ILIAS-eLearning/ILIAS	GPL-3.0	composer.json	master	3080	"GPL v3"	spdx	-	NON-SPDX-IN-SPDX-FIELD	2026-10-15
+INGInious/INGInious	AGPL-3.0	pyproject.toml	main	3683	license = {text = "AGPL 3"}	spdx	-	NON-SPDX-IN-SPDX-FIELD	2026-10-15
+Citolab/qti-components	GPL-3.0	package.json	main	7101	"GPLv3"	spdx	-	NON-SPDX-IN-SPDX-FIELD	2026-10-15
+classroomio/classroomio	AGPL-3.0	package.json l.47	main	-	"license": "MIT"	spdx	-	GRANT-CONFLICT-FAMILY	2026-10-15
+openeducat/openeducat_erp	LGPL-3.0	openeducat_core/__manifest__.py l.25	master	-	'license': 'LGPL-3'	odoo	only	RANGE-CONFLICT	2026-10-15
+openeducat/openeducat_erp	LGPL-3.0	openeducat_core/__manifest__.py header	master	-	either version 3 of the License, or (at your option) any later version	prose	or-later	RANGE-CONFLICT	2026-10-15
+openedx/edx-platform	AGPL-3.0	package.json	master	5540	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+plastic-labs/tutor-gpt	GPL-3.0	package.json	main	3656	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+frappe/education	GPL-3.0	package.json	master	190	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+HugeCatLab/ChatTutor	AGPL-3.0	package.json	main	1082	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+memphis-iis/MoFaCTS	AGPL-3.0	package.json	main	42	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+luisgf/openbadgeslib	LGPL-3.0	setup.cfg	master	79	FIELD-ABSENT	classifier	-	FIELD-ABSENT	2026-10-15
+xiaochong0302/course-tencent-cloud	GPL-2.0	composer.json	master	1062	FIELD-ABSENT	spdx	-	FIELD-ABSENT	2026-10-15
+untisapi/untis4j	LGPL-3.0	pom.xml	master	2975	no <licenses> block	prose	-	FIELD-ABSENT	2026-10-15
+openedx/openedx-platform	AGPL-3.0	package.json	master	5540	FIELD-ABSENT - byte-identical to openedx/edx-platform	spdx	-	ALIAS-CANDIDATE	2026-10-15
+formalms/formalms	GPL-2.0	none	-	0	root probe x18, all 404	-	-	NO-CHANNEL	2026-10-15
+echo-loop/Echo-Loop	AGPL-3.0	none	-	0	root probe x18 + backend/ + frontend/, all 404	-	-	NO-CHANNEL	2026-10-15
+OS4ED/openSIS-Classic	GPL-2.0	none	-	0	root probe x18 + composer.json, all 404	-	-	NO-CHANNEL	2026-10-15
+os4ed/openSIS-Classic	GPL-2.0	none	-	0	case variant of the row above; one repository	-	-	NO-CHANNEL	2026-10-15
+Schroedinger-Hat/certo	AGPL-3.0	none	-	0	root probe x18 + apps/web/ + packages/core/, all 404	-	-	NO-CHANNEL	2026-10-15
+24kchengYe/human-skill-tree	AGPL-3.0	none	-	0	root probe x18, all 404	-	-	NO-CHANNEL	2026-10-15
+ahmedEid1/lumen	GPL-3.0	none	-	0	root probe x18 + app/build.gradle + pubspec.yaml, all 404	-	-	NO-CHANNEL	2026-10-15
+artcc/freelingo	AGPL-3.0	none	-	0	root probe x18 + composer.json + pubspec.yaml, all 404	-	-	NO-CHANNEL	2026-10-15
+learnhouse/learnhouse	AGPL-3.0	apps/api/pyproject.toml	main	200	reachable but NOT read this pass - non-root, deferred	-	-	NON-ROOT-REACHABLE	2026-10-15
+brownplt/LTLTutor	GPL-3.0	requirements.txt	main	200	reachable but carries no licence field by design	-	-	NON-ROOT-REACHABLE	2026-10-15
+elmsln/elmsln	GPL-3.0	none	-	0	root probe x18 + composer.json, all 404	-	-	NO-CHANNEL	2026-10-15
+acanas/swad-core	GPL-3.0	none	-	0	root probe x18 + swad/Makefile, all 404	-	-	NO-CHANNEL	2026-10-15
