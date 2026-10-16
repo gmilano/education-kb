@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 249 — 2026-10-16 — THREE RECIPES, AND ALL THREE ARE BUILT ON THE LAYER THIS PASS ACTUALLY VERIFIED: **`MIT` INTEROP PLUMBING UNDER COPYLEFT PLATFORMS**, WHICH IS THE REAL LICENCE SHAPE OF THIS INDUSTRY
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 **Attribution rule:** every repository named below had its licence **read first-hand this pass** at a pinned SHA ([`p249-xh-grant-sweep`](../evidence/p249-xh-grant-sweep.2026-10-16-p249.tsv), [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv), [`p249-platform-payloads`](../evidence/p249-platform-payloads.2026-10-16-p249.tsv)) — except where a row is explicitly marked **CARRIED** from an earlier pass.
+
+### 🔵 The licence shape every recipe below is designed around
+
+🔴 **Stated once, because it is the single most load-bearing fact in this KB and this pass confirmed it on `5` payloads:** *every* education platform verified first-hand here is **copyleft** — Moodle `GPL-3.0` *(carried)*, Open edX `AGPL-3.0` *(carried)*, Frappe LMS **`AGPL-3.0`**, OpenEduCat **`LGPL-3.0`**, ERPNext **`GPL-3.0`**. 🟢 **The permissive supply is the PLUMBING**: `LTI 1.3` and `OneRoster` libraries, all `MIT`.
+
+🟢 **So every recipe has the same topology, and it is a licence topology before it is an architecture:** the client's copyleft platform stays **untouched and unmodified**; the studio's deliverable is a **separate `LTI 1.3` tool** that the platform **launches**; the boundary between them is a **protocol**, not a function call. 🔵 That boundary is what keeps the deliverable's licence the studio's own choice.
+
+### 🟢 `P249-1` — The review-of-record tutor: one artefact, four jurisdictions
+
+🔵 **The engagement problem:** `4` US states now mandate district AI policy, Idaho **forbids** AI as the primary basis for grading, discipline or placement, NYC bans it from **IEP/504** work, the EU AI Act makes student evaluation **high-risk**, and Vietnam's AI law names **automated assessment** with a **`2027`** institutional deadline. 🟢 **All four demand the same artefact: a recorded, auditable human review step between an AI output and a decision about a student.** Nobody is buying a better model.
+
+| step | what to wire | licence, verified | what it does |
+|---|---|---|---|
+| `1` **launch** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) *(Python)* · [`uoc/java-lti-1.3`](https://github.com/uoc/java-lti-1.3) *(JVM estates)* | 🟢 `MIT`, `1 070` / `1 060` B | the tool opens **inside** Moodle / Canvas / Brightspace. 🔵 For a **US district**, prefer [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) — same grant, byte-identical payload, and a **US university's own fork** is an easier procurement conversation |
+| `2` **roster** | [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 `MIT`, `1 066` B | who is enrolled in what, from the client's SIS. 🔴 **Its own documented limit: rostering only — grade book NOT implemented.** Grade passback goes back over `LTI Advantage` (step `1`), not here |
+| `3` **generate** | [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT`, `1 077` B | items and questions from course material |
+| `4` 🔴 **the deliverable** | **the studio's own code** | — | every suggestion stored with: the input, the model output, **the educator who reviewed it**, what they **changed**, and the timestamp. 🔴 **This table is the product.** The statutes ask for this, not for accuracy |
+| `5` **gate** | `compose/code/p229-grant-ladder-reach` + `p247-path-class` + `p248-named-proprietary` *(CARRIED, in `make hooks`)* | — | no dependency enters the build without a payload-verified grant |
+
+🔵 **Why it ports:** the EU regulates **placing on the market** (a vendor obligation) and Vietnam and the US states regulate **use** (an institutional obligation). 🔴 **Same artefact, different buyer** — in the EU the studio carries the conformity assessment, in Idaho the district carries the policy. Sell the record to both; do not sell the EU paperwork to a school district.
+
+### 🟢 `P249-2` — The licensed LMS connector set: occupying an empty position
+
+🔵 **The opportunity, measured not guessed:** `11` education MCP connectors and tutors read first-hand this pass — including **three independent Canvas implementations** — and 🔴 **`11` of `11` have no licence at any of `16` Tier-A paths.** A studio cannot ship any of them, and neither can anyone else.
+
+| step | what to build | on what |
+|---|---|---|
+| `1` | an **MCP server** exposing courses, enrolments, assignments and submissions as tools | 🟢 `LTI 1.3` *(`pylti1.3`, `MIT`)* for auth and launch context — **not** scraped sessions or a service token pasted into config, which is what the grantless connectors do |
+| `2` | **roster resolution** behind those tools | 🟢 [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) *(`MIT`)*, or `OneRoster 1.1`/`1.2` directly |
+| `3` | **a licence, stated at the root** | 🟢 `MIT` or `Apache-2.0`, `LICENSE` at Tier A, so the next studio's gate can read it in one request |
+| `4` | **a notebook surface for the teaching side** | 🟢 [`juliapluto/Pluto.jl`](https://github.com/juliapluto/Pluto.jl) *(`MIT`)* where the client's teaching is computational |
+
+🔴 **Do not fork any of the `11`.** A repository with no licence grants nothing: forking it is not a shortcut, it is an unlicensed dependency with a commit history. 🔵 **Before building, discharge `ACTION XK`** — probe those `11` at Tier B and Tier C. A `LICENSE` in `docs/` or a `license` field in `package.json` changes the answer for that repo, and `NO-GRANT-AT-TIER-A` is **not** the same claim as unlicensed.
+
+### 🟡 `P249-3` — Taking the permissive subtree out of a copyleft repository
+
+🔵 **The engagement problem this pass created for itself:** `p248` wrote off `twentyhq/twenty` as `BUSL-1.1`. The payload says `AGPL-3.0` **plus genuinely `MIT` subpackages**. 🔴 **An under-grant error is never caught, because nobody re-reads the licence of a dependency they already rejected** — so this recipe exists to make the second look cheap.
+
+| step | what runs | what it answers |
+|---|---|---|
+| `1` | fetch the **root** `LICENSE` and read its **prose**, not just its family | does it say *"mostly"*, *"except"*, *"certain packages"*, *"two qualifications"*? Twenty's first line says **all four** |
+| `2` | for every carve-out the prose names, fetch **that package's own root** — `packages/<name>/LICENSE` **and** `packages/<name>/package.json` | 🟢 Twenty's `twenty-ui` and `twenty-shared`: real `MIT` text, `1 080` B, *"Copyright (c) 2023-present Twenty.com, PBC"*, `"license": "MIT"` in both manifests. **The carve-out is real** |
+| `3` | 🔴 **grep the SOURCE for licence markers** | Twenty names its commercial files by a **comment**: `/* @license Enterprise */`. 🔴 **No path probe in this KB can see this** — it is `ACTION XL`, and until it lands, step `3` is a **manual read** |
+| `4` | import **the subtree**, never the repository | `twenty-ui` + `twenty-shared` under `MIT` is a usable component layer. 🔴 The **server** is `AGPL-3.0` and does not enter a deliverable |
+
+🔴 **The failure mode this prevents, both ways:** a family cell of `AGPL` throws away a usable `MIT` component library; a family cell of `MIT` on the same repository ships an `AGPL` server. 🔵 **The unit of the decision is the package, and the governing term may be in a code comment.**
+
+### 🔵 What these recipes deliberately do NOT contain
+
+🔴 **No star counts, no "most popular", no momentum claims.** The metadata endpoint is `403` from this session ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)), so repository popularity was **not measured** and nothing below is ranked by it. 🔴 **No LATAM-only pattern and no LATAM-first ordering** — the `P249-1` review record is written to port across North America, EMEA and APAC precisely because this pass found the **same requirement** in all four regions' instruments. 🔴 **No recipe built on a repository whose licence was read from a badge, a roundup or a manifest field** — this pass corrected one of those, from its own last pass.
+
 ## Pass 248 — 2026-10-16 — TWO RECIPES, AND BOTH ARE BUILT FROM WHAT THIS PASS MEASURED RATHER THAN FROM ROWS IT DID NOT READ
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **Attribution rule, stated because this pass ran no supply channel:** every repository named below was read **first-hand by an earlier pass** and is cited to that pass, not to this one. The *instruments* are this pass's own.

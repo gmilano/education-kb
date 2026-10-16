@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 249 — 2026-10-16 — THE PLATFORM CENSUS MOVES FOR THE FIRST TIME IN NINE PASSES, AND IT MOVES BY **CORRECTING THIS KB'S OWN CELL FROM LAST PASS**: `p248` PUBLISHED `twenty` AS `BUSL-1.1` ON A ROUNDUP'S WORD — THE PAYLOAD SAYS **`AGPL-3.0`, WITH `MIT` SUBPACKAGES A STUDIO CAN ACTUALLY SHIP**
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🟢 **`3` platform rows added, `1` CORRECTED, `1` carried ASK CLOSED** — all five on bodies fetched this pass: [`p249-platform-payloads`](../evidence/p249-platform-payloads.2026-10-16-p249.tsv).
+
+### 🔴 `T249-V1` — the correction, and it runs in the direction nobody here was watching
+
+`p247` and `p248` both measured the same trend: *a roundup calls a thing "open source" and the payload says otherwise*. `p248` then applied it and wrote, of `twentyhq/twenty`: 🔴 **`BUSL-1.1` — source-available, *not* OSI** … *"the trend in one row"*. 🔵 **It was taken from the search channel. No payload was read.**
+
+🟢 **The payload, read this pass — `39 965` B — contains `0` occurrences of `"Business Source License"` and `0` of `"BUSL"`.** Its own opening line:
+
+> *"This project is **mostly licensed under the GNU Affero General Public License v3.0 (AGPLv3)** as described below, with two qualifications"*
+
+| the payload's actual structure | verified how |
+|---|---|
+| 🟡 **`AGPL-3.0`** for the project body | first-hand, `39 965` B |
+| 🔴 a **commercially licensed file set**, identified by the comment **`/* @license Enterprise */`** at the top of each file | stated in the payload itself |
+| 🟢 **`MIT`** for named packages — the `twenty` CLI, `twenty-sdk`, `twenty-client-sdk`, `create-twenty-app`, `twenty-shared`, `twenty-ui`, and `packages/twenty-apps` | **verified at the package roots:** `packages/twenty-ui/LICENSE` and `packages/twenty-shared/LICENSE` are both real `MIT` text, `1 080` B, *"Copyright (c) 2023-present Twenty.com, PBC"*, and both `package.json` files declare `"license": "MIT"` |
+
+🔴 **So `p248`'s cell was wrong on the family AND wrong on the conclusion.** It said *"source-available, not OSI"*; `AGPL-3.0` **is** OSI-approved, and the repository additionally ships genuinely permissive subtrees. 🟢 **What a studio can take from `twenty` is `twenty-ui` and `twenty-shared` under `MIT`** — a component library and a shared layer, verified at the package root. A cell reading `BUSL-1.1` throws both away.
+
+🔵 **The trend's real shape, corrected:** it is not *"roundups over-state permissiveness"*. It is that **the licence field in a secondary source is uncorrelated with the payload in BOTH directions** — `p247`/`p248` caught it over-granting, and this pass catches it under-granting and mis-naming the family at the same time. 🔴 **A KB that only looks for over-granting will keep writing the second kind of error, and it did, last pass, in this file.**
+
+### 🔴 `T249-V2` — `ACTION XL`, registered: the grant can be selected by a **code comment**, and no probe here can see that
+
+Twenty's `LICENSE` names its commercial files **by a marker inside the source** — `/* @license Enterprise */`. 🔴 **Every licence instrument this base owns reads PATHS.** `p220` established *"the unit of a licence is the file"*; this is the first first-hand payload where **the discriminator is not a file at all**, and a path ladder cannot be extended to reach it. 🔵 Registered as `ACTION XL` with its falsifier on the agent shelf.
+
+### 🟢 `T249-V3` — the carried ASK from `p248`, CLOSED on a payload
+
+`p248` ran the mandated vertical leg, got **OpenEduCat** with *"licence not stated by the source"*, and correctly refused to publish a row on a silence. 🟢 **The silence is now a body.**
+
+| platform | licence, first-hand | bytes | verdict |
+|---|---|---|---|
+| [**OpenEduCat**](https://github.com/openeducat/openeducat_erp) — education ERP on the **Odoo** framework | 🟡 **`LGPL-3.0`** — payload's own first line: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"* | `8 241` | 🟢 **ASK CLOSED.** Copyleft, so `p248`'s refusal to publish it as a permissive row was **right** — and it is now withheld on a payload instead of on a silence |
+| [**ERPNext**](https://github.com/frappe/erpnext) — general ERP + CRM | 🟡 **`GPL-3.0`** | `35 149` | 🟢 confirmed first-hand, at the **lowercase** `license.txt`. 🔴 My own `6`-name shortcut returned `NO-GRANT` on it first: **the defect was the probe, not the repository** |
+| [**Apache OFBiz**](https://github.com/apache/ofbiz-framework) | 🟢 **`Apache-2.0`** | `11 906` | 🟢 **NEW.** The only `Apache-2.0` ERP this channel has ever served here. 🔴 **NOT education-specific** — so `p248`'s finding *"Apache-licensed education platform: `0` in the result set"* **STANDS** |
+| [**Frappe LMS**](https://github.com/frappe/lms) | 🟡 **`AGPL-3.0`** | `33 893` | 🟢 **NEW.** A real LMS with a first-hand grant — found **only** because the ref axis used `HEAD`: its default branch is **`develop`** |
+| [**Twenty**](https://github.com/twentyhq/twenty) — CRM | 🟡 `AGPL-3.0` + 🟢 `MIT` subpackages + 🔴 a commercially-marked file set | `39 965` | 🔴 **`p248`'s `BUSL-1.1` cell REFUTED** *(above)* |
+
+### 🟡 `T249-V4` — a smaller finding, on a grant that references terms it does not ship
+
+OpenEduCat's `LICENSE` states: *"Since the LGPL is a set of additional permissions on top of the GPL, **the text of the GPL is included at the bottom as well**."* 🔴 **The payload is `8 241` B and it ends on `LGPLv3`'s own final clause.** The `GPLv3` text it promises is **not in the file** — and `LGPLv3` is *defined* as additional permissions layered on the `GPL`. 🔵 A reader who needs the base terms the licence is built from does not receive them from this payload. Recorded as a measurement, not as a compliance opinion.
+
+### 🔴 `T249-V5` — the mandated ERP/CRM leg, and the unchanged structural answer
+
+The leg (`open source platform education ERP CRM MIT Apache`) ran verbatim for the second consecutive pass. 🔴 **It returned the same `3` things: OpenEduCat (now `LGPL-3.0`), ERPNext (`GPL-3.0`), and a dead `2010` project (`CK-ERP`).** 🟢 Plus one addition this pass, Apache OFBiz, which is `Apache-2.0` **and not education-specific**.
+
+🔴 **The structural finding therefore holds for a ninth pass and is stated plainly: there is no permissively-licensed, education-specific ERP or SIS in this channel.** 🔵 Every education platform this KB has verified first-hand — Moodle (`GPL-3.0`), Open edX (`AGPL-3.0`), Frappe LMS (`AGPL-3.0`), OpenEduCat (`LGPL-3.0`), ERPNext (`GPL-3.0`) — is **copyleft**. 🟢 **The permissive supply in this industry is not in the platforms; it is in the plumbing** — `LTI 1.3` and `OneRoster` libraries, all `MIT`, published this pass in [`repos/foundations.md`](../repos/foundations.md). That is a finding about the shape of the market, and it is what `compose/patterns.md` is now built on.
+
 ## Pass 248 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR AN **EIGHTH** PASS, AND THE VERTICAL FINDING IS A LICENCE **ASK**, NOT A ROW: THE ONE EDUCATION-SPECIFIC ERP THE MANDATED QUERY SERVED CAME WITH ITS GRANT **UNSTATED BY ITS OWN CHANNEL**
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **`0` platform rows added, `0` corrected.** The carried estate stands exactly as `p247` published it, and no vertical row's payload was re-fetched this pass.

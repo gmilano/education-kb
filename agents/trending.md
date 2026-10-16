@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 249 — WHAT MOVED: **`6` REPOSITORIES THAT WERE HERE ALL ALONG.** THE SUPPLY DID NOT CHANGE THIS WEEK — WHAT CHANGED IS THAT A CHANNEL EVERY RECENT PASS CALLED SHUT TURNED OUT TO BE **OPEN**, AND READING IT RETURNED `6` LIVE `MIT` EDUCATION REPOS THIS BASE HAD FILED AS NON-EXISTENT
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.
+
+### 🔴 First, the honest negative, because it is the same negative as last week
+
+🔴 **`0` rows from `WebSearch`. The row channel is dry for the ELEVENTH pass in TWELVE.** 🔴 **`0` `topic:` queries — not by choice: the channel is `403`.** The refusal message is new and is recorded verbatim because it changes what any future pass should even attempt:
+
+> *"This GitHub API path is not available: sessions are bound to their configured repositories. Use repository-scoped endpoints (`repos/{owner}/{repo}/...`)."*
+
+🔵 **So "trending" in the GitHub sense was NOT MEASURED this pass and no trending claim is made in either direction** ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)).
+
+### 🟢 What actually moved: the channel map, and it inverts a two-pass diagnosis
+
+| channel | what `p247`/`p248` recorded | measured this pass |
+|---|---|---|
+| `api.github.com` **search** | "proxy-blocked" | 🔴 **`403`, confirmed, with a NEW message naming the reason: session scope** |
+| `api.github.com/repos/{slug}` | assumed usable | 🔴 **`403` for every out-of-scope slug** — so stars, pushed-at and archived are **unmeasurable from here** |
+| `raw.githubusercontent.com/{slug}/HEAD/{path}` | 🔴 **implicitly assumed shut — `ACTION XH` deferred twice as *"needs egress"*** | 🟢 **`200`, OPEN, and DISCRIMINATING** *(good `200` / absent path `404` / absent slug `404`)* |
+| `git-upload-pack info/refs` | `200` *(p225)* | 🟢 `200`, still the only ABSENT-vs-grantless oracle |
+| `github.com` HTML | `403` | 🔴 `403` — the mandate's `curl -sI` remains a dead channel |
+
+🔴 **`60` slugs sat unread for two passes behind the words "it needs egress".** The payload pipe was open; the **search** pipe was shut; the diagnosis named the wrong one.
+
+### 🟢 New on the agent shelf this week — `3` rows, each labelled for what it actually is
+
+| repo | licence *(payload, first-hand)* | bytes | honest label |
+|---|---|---|---|
+| [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT` | `1 077` | 🟢 **an agent capability** — question generation on T5/BERT/GPT-2 |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 `MIT` | `1 070` | 🟡 **a catalogue, not an agent** |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 `MIT` | `1 141` | 🟡 **a curriculum, not an agent** — `12` lessons |
+
+🔵 **Why the labels are in the table and not in a footnote:** the global agent leg returned mostly general-purpose frameworks (OpenHands, opencode, CrewAI, LangGraph) and `2` of the `3` education-shaped `MIT` hits are **reading material**. A shelf that files a curriculum as an agent inflates its own count.
+
+### 🔴 The week's real trending signal, and it is a NEGATIVE about a whole layer
+
+🔴 **`11` education LMS connectors and tutors read first-hand. `11` with NO LICENCE at any of `16` Tier-A paths.**
+
+`crevextech/canvas-lms-mcp` · `dmontgomery40/mcp-canvas-lms` · `mistercommand/mcp-canvas-lms` · `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` · `p1ckle3/blackboard-mcp` · `salshah20/classroom_mcp` · `davipac/classroom-mcp` · `54yyyu/school-mcp` · `sujal-shejwal/adaptive-ai-tutor` · `radiantcrystal/safetutors`
+
+🔵 **The trend, stated as what it is:** the MCP-connector layer for education is being **built fast and published ungoverned** — *three independent Canvas MCP servers* in one `60`-slug sample, and not one of them carrying a grant. 🟢 **For a studio that is an open position, not a disappointment.** 🔵 Scoped honestly: `NO-GRANT-AT-TIER-A`, Tier B and C unprobed (`ACTION XK`).
+
+### 🟡 One ref-axis curiosity worth recording as a trend in its own right
+
+[`davipac/classroom-mcp`](https://github.com/davipac/classroom-mcp)'s **default branch** is `claude/publish-classroom-aluno-mcp-9g61ee`. 🔵 An **agent-authored branch name as the repository default** — a shape that did not exist when this KB's `main|master` ref guess was written, and a reason the `HEAD` ref is now the only safe probe.
+
 ## 2026-10-16 — Pass 248 — WHAT MOVED: **NOTHING IN SUPPLY, AND THE PASS SAYS SO** — THE MOVEMENT IS IN THE READING, WHERE THE "OPEN SOURCE" LABEL DEFECT `p247` MEASURED AS A TREND NOW HAS A **NAMED MECHANISM WITH NO OUTWARD SIGN**
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.

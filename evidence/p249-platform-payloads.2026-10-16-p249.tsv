@@ -1,0 +1,22 @@
+# p249 — the vertical estate, READ FIRST-HAND over the restored payload channel.
+# One of these CORRECTS A CELL THIS KB PUBLISHED LAST PASS, and it corrects it in the direction
+# nobody was watching for: p248 published twentyhq/twenty as BUSL-1.1 on a ROUNDUP's authority.
+slug	path	bytes	family_first_hand	prior_cell_on_these_shelves	verdict
+openeducat/openeducat_erp	LICENSE	8241	LGPL-3.0	🟡 p248: "licence NOT STATED by the source — a licence ASK, not a row"	🟢 ASK CLOSED. Payload's own first line: "OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)". Copyleft, so p248 was RIGHT to withhold the row, and now it is withheld on a PAYLOAD instead of on a silence
+twentyhq/twenty	LICENSE	39965	AGPL-3.0 + MIT subpackages + a commercially-marked file set	🔴 p248: "BUSL-1.1 — source-available, NOT OSI"	🔴 PRIOR CELL REFUTED. The payload contains ZERO occurrences of "Business Source License" or "BUSL". Its own first line: "mostly licensed under the GNU Affero General Public License v3.0 (AGPLv3) ... with two qualifications"
+frappe/erpnext	license.txt	35149	GPL-3.0	🔵 carried: "GPL-3.0 per the channel"	🟢 CONFIRMED first-hand — but only at the LOWERCASE path. My own 6-name shortcut returned NO-GRANT on it first; the defect was the probe, not the repo
+apache/ofbiz-framework	LICENSE	11906	Apache-2.0	— new	🟢 NEW. The only Apache-2.0 ERP this channel has served. 🔴 NOT education-specific: it is a general ERP framework, and p248's finding "Apache-licensed education platform: 0 in the result set" STANDS
+frappe/lms	license.txt	33893	AGPL-3.0	— new	🟢 NEW. A real LMS with a first-hand grant. Found ONLY because the ref axis used HEAD: its default branch is `develop`
+twentyhq/twenty :: packages/twenty-ui	LICENSE	1080	MIT	— new	🟢 the MIT claim is REAL and verified at the package root: "MIT License Copyright (c) 2023-present Twenty.com, PBC", and package.json declares "license": "MIT"
+twentyhq/twenty :: packages/twenty-shared	LICENSE	1080	MIT	— new	🟢 same: MIT at the package root, MIT in package.json (private: true)
+# 🔴 THE MECHANISM, and it is why NO licence-path ladder can ever settle this repository:
+#    Twenty's own LICENSE says which files are commercial by naming A COMMENT IN THE SOURCE —
+#    "/* @license Enterprise */" at the top of the file. A per-file grant selected by a CODE COMMENT
+#    is invisible to every probe this KB owns, all of which read PATHS.
+# 🟡 p220 wrote the rule "the unit of a licence is the FILE". Twenty is the first first-hand payload on
+#    these shelves where the unit is the file AND the discriminator is not a file at all.
+# 🟢 WHAT A STUDIO CAN ACTUALLY TAKE: twenty-ui and twenty-shared, MIT, verified at the package root.
+#    NOT the server. The usable grant is a SUBTREE, and "AGPL, avoid" would have thrown it away.
+# 🟡 A SECOND, SMALLER FINDING, on OpenEduCat: its LICENSE promises "the text of the GPL is included at
+#    the bottom as well". The payload is 8241 B and ends on LGPLv3's own final clause. The GPLv3 text it
+#    promises is NOT in the file — and LGPLv3 is DEFINED as additional permissions on top of the GPL.

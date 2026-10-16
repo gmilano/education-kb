@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 249 — 2026-10-16 — `6` NEW FOUNDATION ROWS, ALL `MIT`, ALL READ FIRST-HAND — AND THE LAYER THEY FORM IS THE ONE THIS KB HAS BEEN MISSING: **THE INTEROP STANDARDS PLUMBING** (`LTI 1.3`, `OneRoster`), WHICH IS WHERE EVERY EDUCATION ENGAGEMENT ACTUALLY TOUCHES THE CLIENT'S LMS
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🟢 **`6` rows added, `0` corrected.** All `6` arrive from `ACTION XH`'s discharge ([`p249-xh-grant-sweep`](../evidence/p249-xh-grant-sweep.2026-10-16-p249.tsv), [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv)).
+
+### 🟢 `T249-F1` — the new foundation layer, and why it belongs on THIS shelf
+
+🔵 **The distinction is stated because it changes what a reader does with these rows.** `4` of the `6` are not AI at all: they are **implementations of the interoperability specifications an LMS speaks**. An education engagement does not begin by choosing a tutor model; it begins by getting a tool **launched inside** Moodle, Canvas, Brightspace or Blackboard (`LTI 1.3`) and **rostered** against the client's SIS (`OneRoster`). 🔴 **This KB has carried LMS platform rows since its first cycle and has never carried the plumbing that connects anything to them.**
+
+| repo | licence | bytes | SHA | layer | what it does |
+|---|---|---|---|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 `MIT` | `1 070` | `d8fa43e1ace2` | **launch** | `LTI 1.3` / `LTI Advantage` tool library, **Python**. The upstream the ecosystem forks |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 `MIT` | `1 070` | `6a47f0fe0a21` | **launch** | University of Central Florida's fork. 🟡 grant **byte-identical** to upstream (`sha256 5aef77eb4471effc`) |
+| [`uoc/java-lti-1.3`](https://github.com/uoc/java-lti-1.3) | 🟢 `MIT` | `1 060` | `e6736166d415` | **launch** | `LTI 1.3` / `LTI Advantage`, **Java** — the JVM half, which the Python row cannot serve |
+| [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 `MIT` | `1 066` | `4f96365d3108` | **roster** | `OneRoster` client, **.NET**, specs `1.1` + `1.2`. 🔴 README's own limit: *"Only rostering calls are supported. Grade book has not been implemented."* |
+| [`juliapluto/Pluto.jl`](https://github.com/juliapluto/Pluto.jl) | 🟢 `MIT` | `1 082` | `90dc3cfe6bda` | **runtime** | reactive notebooks for Julia — a teaching substrate, not an agent |
+| [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT` | `1 077` | `edf8f6aa6c1a` | **capability** | question generation on T5 / BERT / GPT-2 |
+
+🔵 **Every licence above was fetched as a body and measured in bytes at a pinned `HEAD` SHA** — not read off a badge, a manifest field or a search result.
+
+### 🔴 `T249-F2` — the foundation finding: this base declared `6` of these repositories NON-EXISTENT, and the fault was its own
+
+All `6` were carried by `p247` as `UNREAD` under a **mutilated slug**, and `p247`'s list had no state for *"the repository is not there"* — so a name defect was filed as a licence backlog. 🔴 **`18` of the `60` carried slugs do not resolve at all**, and `6` of those `18` resolve the moment the dropped dot-suffix and the folded case are restored. 🔵 Full ledger and the `4` repair guesses that **failed** (so the repair channel is not treated as an oracle): [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv).
+
+### 🟡 `T249-F3` — the ref axis, settled first-hand, with three counterexamples this pass found by accident
+
+`p229`'s ladder already replaced the `main|master` guess with `git ls-remote --symref`. 🟢 **This pass confirms why, on live repositories, and the counterexamples are worth writing down because two of them are education platforms:**
+
+| repo | default branch | what a `main|master` ladder returns |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | **`develop`** | 🔴 `404` at every path — and its grant is a real **`AGPL-3.0`**, `33 893` B at `license.txt` |
+| [`someaspy/chromebookenroller`](https://github.com/someaspy/chromebookenroller) | **`v117+`** | 🔴 `404` at every path — grant is **`MIT`**, `1 075` B |
+| [`davipac/classroom-mcp`](https://github.com/davipac/classroom-mcp) | **`claude/publish-classroom-aluno-mcp-9g61ee`** | 🔴 `404` at every path — an **agent-generated branch name** as the repository default |
+
+🔵 **The literal ref `HEAD` on `raw.githubusercontent.com` resolves all three**, and that was controlled before any negative was believed: `README.md` answers `200` on both `HEAD` and the explicit branch for `master`- and `develop`-default repositories ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)). 🟡 **The third row is a new class** — as agent-authored branches become repository defaults, a two-name ref guess fails on repositories that did not exist when the guess was written.
+
+### 🔴 `T249-F4` — the honest negative on the mandated foundation count
+
+The mandate asks for `5` foundational repos **when they exist**. 🟢 **`6` are published above and all `6` are real, permissive and payload-verified.** 🔴 **`0` of them came from the mandated `github trending` leg**, which returned no education-specific list at all, and `0` came from the `topic:` harvest, which **cannot run from this session** (`403`, message verbatim in the channel map). Every row above came from re-reading a backlog this base already held.
+
 ## Pass 248 — 2026-10-16 — `0` NEW FOUNDATION ROWS, AND THE FOUNDATION FINDING IS A **DILIGENCE ORDER**: `p247` PROVED A FOUNDATION ROW CAN SHIP TWO GRANTS, AND THIS PASS PROVES ONE CAN SHIP A GRANT PLUS A **RIDER THAT LEAVES THE FAMILY COLUMN UNTOUCHED**
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **`0` rows added, `0` rows corrected** — and the second number is a sweep result, not a decision to leave things alone: `183` first-hand repository payloads re-graded against both classifiers, `0` flips ([`p248-repo-payload-regrade`](../evidence/p248-repo-payload-regrade.2026-10-16-p248.tsv)).

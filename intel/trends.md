@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 249 — 2026-10-16 — THE TREND `p247` AND `p248` MEASURED IS **HALF A TREND**, AND THIS PASS FOUND THE OTHER HALF IN THIS KB'S OWN LAST PUBLISHED CELL: THE LICENCE FIELD IN A SECONDARY SOURCE IS UNCORRELATED WITH THE PAYLOAD **IN BOTH DIRECTIONS**
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.**
+
+### 🔴 `T249-T1` — the correction to this base's own trend statement
+
+`p247` established it and `p248` gave it a mechanism: *"open source" is now the most unreliable field in an education tool's description* — with `4` of `5` source-available payloads carried or offered as **permissive**. 🔵 Every instance was the **same direction**: the secondary source **over-granting**.
+
+🔴 **A trend measured in one direction is a hypothesis about a population, tested on a sample selected for that direction.** This pass read `twentyhq/twenty`'s payload — the row `p248` published as `BUSL-1.1` on a roundup's word — and found the error running the **other** way:
+
+| direction | instance | what the secondary source said | what the payload says |
+|---|---|---|---|
+| **over-grant** *(`p247`, `p248`)* | `4` of `5` source-available payloads | `MIT` / "open source" | `BUSL`, `CockroachDB`, Commons Clause rider |
+| 🔴 **under-grant + wrong family** *(this pass)* | [`twentyhq/twenty`](https://github.com/twentyhq/twenty) | `BUSL-1.1`, *"source-available, not OSI"* | 🟢 **`AGPL-3.0`** *(OSI-approved)*, **plus `MIT` subpackages verified at the package root**, plus a commercially-marked file set. **`0` occurrences of `"BUSL"` in `39 965` B** |
+
+🟢 **The corrected trend, stated so it cannot be read one-way again:** *the licence field in a secondary source is **uncorrelated** with the payload — it over-states and under-states, and it gets the **family name** wrong.* 🔴 **The practical consequence is asymmetric and it is the expensive half:** an over-grant error gets caught at delivery, when someone finally reads the licence. An **under-grant** error is **never caught**, because nobody re-reads the licence of a dependency they already rejected. 🔴 **This KB discarded a usable `MIT` component library for a pass on an error of the second kind.**
+
+### 🔴 `T249-T2` — a trend in how a grant is SELECTED, and it has now left the file tree entirely
+
+Three passes have tracked where restriction hides. The sequence is a trend:
+
+| pass | where the governing term lived | can a path probe see it? |
+|---|---|---|
+| `p220` | in a **file**, not the repository | 🟡 yes, if you probe enough paths |
+| `p247` | in a **sibling** of the expected path (`LICENSE` vs `LICENSE-CODE`) | 🟡 yes, with the right name list |
+| `p248` | in a **rider on top of** a permissive grant (Commons Clause) | 🔴 no — the family column still reads `MIT` |
+| 🔴 **`p249`** | 🔴 **in a COMMENT INSIDE THE SOURCE** — Twenty's `/* @license Enterprise */` | 🔴 **no, and no extension of a path ladder ever will** |
+
+🔵 **`4` points, one direction: the unit of a grant keeps getting smaller and keeps moving further from the path tree.** 🟡 Registered as `ACTION XL`: an instrument that greps **source** for licence markers rather than walking paths. 🔴 Until it exists, a `MIT` or `AGPL` cell on these shelves is a statement about **a file**, never about **a repository**.
+
+### 🔴 `T249-T3` — the trend this KB keeps proving about itself: a correction does not travel
+
+| pass | defect | "corrected" | recurred |
+|---|---|---|---|
+| `p217` → `p240` | monolingual commercial branch | `p217` | 🔴 `23` passes later, different instrument |
+| `p233` → 🔴 **`p249`** | **harvested slugs mutilated — suffix dropped** | `p233` | 🔴 **`14` passes later, in `p247`'s harvest, now dropping the DOT-suffix AND case-folding** |
+| `p248` | the only classifier reading a Commons Clause correctly was **not in `make hooks`** | `p248` | — |
+
+🔵 **Three instances is a pattern with a shape: the fix lands in ONE instrument and the DEFECT lives in a CLASS.** 🔴 `p233` repaired its slug list; it did not repair whatever **writes** slug lists, so `p247` wrote `6` mutilated names, and `6` live `MIT` repositories were filed as a licence backlog for two passes. 🟡 `ACTION XJ` is written against the component, not the list, and its falsifier says so.
+
+### 🟢 `T249-T4` — the regulatory trend, and this is the first pass that can state it globally
+
+🟢 **Education is becoming a NAMED high-risk category in general-purpose AI law**, rather than a sector served by guidance:
+
+| jurisdiction | how education enters the law | `2026` status |
+|---|---|---|
+| **EU** | AI Act names **education access and assessment** high-risk — admissions, evaluation, exam scoring; conformity assessment before market | 🟡 dates conflict across sources *(Aug 2026 vs Omnibus in force 27 Jul 2026)* |
+| 🟢 **Vietnam** | standalone AI law names **automated assessment** and **behavioural monitoring** | 🟢 institutional deadline **`2027`** |
+| **South Korea** | AI Basic Act, comprehensive | in force **Jan 2026**, penalties graced one year |
+| **US states** | 🔴 not "high-risk" framing but **outright prohibition** on AI as the primary basis for grading, discipline, placement; `4` states mandate district policy | **`134` bills / `31` states** |
+| **LATAM** | 🔴 **no binding statute** — institutional policy only, at **`26%`** coverage | UNESCO Observatory launched **14 Apr 2026** |
+
+🔵 **The convergent requirement across every one of them is the same artefact, and it is not a model:** a **recorded, auditable human review step** between an AI's output and a decision about a student. 🟢 That is buildable once and sold into the EU, Vietnam, Idaho and New York City. 🔴 **The divergence is the trigger:** the EU regulates **placing on the market** (a vendor obligation), Vietnam and the US states regulate **use** (an institutional obligation). A studio that builds for one and sells into the other ships the wrong artefact to the wrong buyer.
+
+### 🟡 `T249-T5` — the editorial trend, carried with its own channel's warning attached
+
+🔵 The global trends leg returned a consistent line: **experimentation → operations**, governance as the gate, agents for lesson prep and formative feedback, evidence of learning gains over personalization claims, digital credentials as workforce currency. 🔴 **It is editorial consensus, not measurement** — and the channel flagged its own numbers (`$12.3B`, `42%`, `62%`) as vendor-sourced and unverified. 🟢 **The one place it agrees with something measured here:** *"tools built for classrooms rather than generic chatbots"* — and the `11` grantless LMS connectors found this pass are exactly that layer, being built, with no licence on any of them.
+
 ## Pass 248 — 2026-10-16 — THE TREND THIS PASS CAN PROVE IS A **SHAPE CHANGE IN HOW RESTRICTION ARRIVES**: NOT A DIFFERENT LICENCE, BUT A **RIDER ON TOP OF A PERMISSIVE ONE** — WHICH LEAVES THE FIELD EVERY BUYER CHECKS READING `MIT`
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.**

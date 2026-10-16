@@ -1,0 +1,15 @@
+# p249 — THE CHANNEL MAP, RE-MEASURED THIS PASS. Every earlier pass that deferred ACTION XH said it
+# "needs egress". That was half right: the PAYLOAD channel is open and has been open; the SEARCH channel
+# is the one that is shut, and its refusal message changed, which is why it is recorded verbatim here.
+channel	probe	code	verdict	what it means for this KB
+api.github.com/rate_limit	GET	200	🟢 REACHABLE	authenticated: core limit 15000, search limit 30. The host is NOT the blocker
+api.github.com/search/repositories	GET q=topic:education+topic:ai-agent	403	🔴 SHUT	message VERBATIM: "This GitHub API path is not available: sessions are bound to their configured repositories. Use repository-scoped endpoints (repos/{owner}/{repo}/...)." The `topic:` harvest CANNOT run from this session
+api.github.com/repos/{owner}/{repo}	GET microsoft/autogen, HKUDS/DeepTutor, moodle/moodle	403	🔴 SHUT for out-of-scope slugs	"GitHub access to this repository is not enabled for this session." So stars, pushed_at, archived and the /license endpoint are UNAVAILABLE for every slug on these shelves
+raw.githubusercontent.com/{slug}/HEAD/{path}	GET	200 / 404	🟢 OPEN AND DISCRIMINATING	good=200, absent path=404, absent slug=404. THE first-hand payload channel. HEAD resolves master, develop and `v117+` defaults (controlled against README)
+github.com/{slug}/info/refs?service=git-upload-pack	GET	200	🟢 OPEN	existence + default ref + HEAD SHA in one request. The ONLY way to separate ABSENT from grantless on this base
+github.com/{slug} (HTML)	GET	403	🔴 SHUT	unchanged. The mandate's `curl -sI` against github.com is still a dead channel and a 403 here is NOT a 404
+codeload.github.com/{slug}/tar.gz	GET	403	🔴 SHUT	whole-tree reads are unavailable; path-by-path is the only shape
+WebSearch	8 legs (4 global + 4 regional)	-	🟡 OPEN, 0 ROWS	eleventh dry row-pass in twelve. Rich on REGULATION, empty on repositories
+# 🔴 CONSEQUENCE, stated so no later pass re-derives it: a star count, a last-push date or an archived
+#    flag CANNOT be measured from this session. Any such number on these shelves is CARRIED from an
+#    earlier pass's channel, and this pass adds none.

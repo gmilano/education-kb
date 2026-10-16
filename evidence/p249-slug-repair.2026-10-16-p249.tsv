@@ -1,0 +1,26 @@
+# p249 — p233's DEFECT CLASS RECURRED, 14 passes after this base "corrected" it.
+# p233 (2026-10-16 cycle): "3 of the 6 packages p232 published as SOURCELESS have live repositories,
+# and the defect was this KB's own probe dropping the -v4 and -v2 from names that contain them."
+# p247's harvest mutilated names AGAIN, and in TWO ways at once: it dropped everything from the DOT
+# onward, and it CASE-FOLDED what was left. Both mutilations are visible in one row: `Questgen.ai` -> `questgen`.
+# Every repair below was verified with `git ls-remote --symref` and every grant READ FIRST-HAND at a pinned SHA.
+as_carried_by_p247	repaired_slug	mutilation	exists	default_ref	head_sha	grant_path	bytes	family	payload_sha256_16
+dmitry-viskov/pylti1	dmitry-viskov/pylti1.3	dot-suffix dropped	YES	master	d8fa43e1ace2	LICENSE	1070	MIT	5aef77eb4471effc
+ucfopen/pylti1	ucfopen/pylti1.3	dot-suffix dropped	YES	master	6a47f0fe0a21	LICENSE	1070	MIT	5aef77eb4471effc
+uoc/java-lti-1	uoc/java-lti-1.3	dot-suffix dropped	YES	master	e6736166d415	LICENSE	1060	MIT	-
+ramsrigouthamg/questgen	ramsrigouthamg/Questgen.ai	dot-suffix dropped + case-folded	YES	master	edf8f6aa6c1a	LICENSE	1077	MIT	-
+juliapluto/pluto	juliapluto/Pluto.jl	dot-suffix dropped + case-folded	YES	main	90dc3cfe6bda	LICENSE	1082	MIT	-
+theopenem/oneroster	theopenem/oneroster.net	dot-suffix dropped	YES	master	4f96365d3108	LICENSE	1066	MIT	-
+jdolny/oneroster	jdolny/oneroster.js	GUESS	NO	-	-	-	-	-	-
+paurushrai/lti-1	paurushrai/lti-1.3	GUESS	NO	-	-	-	-	-	-
+wort-schule/wort	wort-schule/wort-schule	GUESS	NO	-	-	-	-	-	-
+voodoo2man/iobroker	voodoo2man/ioBroker.vis	GUESS	NO	-	-	-	-	-	-
+# 🟢 RECOVERED: 6 of 6 repairs that resolved are MIT. The mutilation hid PERMISSIVE supply specifically —
+#    it ran in the one direction that costs a studio the rows it is allowed to build on.
+# 🟡 FORK IDENTITY: dmitry-viskov/pylti1.3 and ucfopen/pylti1.3 ship a BYTE-IDENTICAL grant
+#    (sha256 5aef77eb4471effc, both 1070 B, both "Copyright (c) 2019 Dmitry Viskov"), so ucfopen carries
+#    upstream's licence verbatim. p224's rule holds: measured on repositories this is TWO namespaces,
+#    and the row that a studio imports from is the one it actually depends on.
+# 🔴 NOT CLAIMED: that the remaining 8 ABSENT slugs are mutilations. No repair was attempted for them;
+#    4 attempted repairs answered ABSENT too, so the guess channel is NOT reliable and no absence of a
+#    repository is inferred from a failed guess.

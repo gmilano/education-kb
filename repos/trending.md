@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 249 — TRENDING: **GITHUB'S TRENDING CHANNEL IS `403` AND THE REASON IS NOW KNOWN** — SO NO TRENDING RESULT IS PUBLISHED. WHAT IS PUBLISHED INSTEAD IS `60` REPOSITORIES READ ONE BY ONE, AND THE `6` OF THEM THIS BASE HAD RECORDED AS NON-EXISTENT
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.
+
+### 🔴 The negative result, stated first and plainly
+
+| channel | queries run | result |
+|---|---|---|
+| GitHub `topic:` harvest | **`0`** | 🔴 **IMPOSSIBLE, not skipped.** `api.github.com/search/repositories` → **`403`**: *"sessions are bound to their configured repositories"* |
+| GitHub repo metadata *(stars, pushed_at, archived)* | **`0`** | 🔴 **`403` for every out-of-scope slug.** No star count appears in this pass's rows, and that is forced |
+| `github trending education AI 2026` *(mandated `WebSearch` leg)* | `1` | 🔴 **`0` education-specific results.** Returned Open WebUI, BitNet, AirLLM, nanochat — none education |
+| first-hand payload reads *(network)* | 🟢 **`60` slugs + `7` platforms + `2` package roots** | 🟢 where this pass went: `ACTION XH`, discharged in full |
+
+🔵 **Therefore: no trending claim is made for this window, in either direction.** A `403` is not a quiet week ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)).
+
+### 🟢 `6` repositories entering these shelves — not because they are new, but because this base had them WRONG
+
+| as carried by `p247` | the real repository | licence | pinned SHA |
+|---|---|---|---|
+| `dmitry-viskov/pylti1` | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 `MIT` | `d8fa43e1ace2` |
+| `ucfopen/pylti1` | [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 `MIT` | `6a47f0fe0a21` |
+| `uoc/java-lti-1` | [`uoc/java-lti-1.3`](https://github.com/uoc/java-lti-1.3) | 🟢 `MIT` | `e6736166d415` |
+| `ramsrigouthamg/questgen` | [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT` | `edf8f6aa6c1a` |
+| `juliapluto/pluto` | [`juliapluto/Pluto.jl`](https://github.com/juliapluto/Pluto.jl) | 🟢 `MIT` | `90dc3cfe6bda` |
+| `theopenem/oneroster` | [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 `MIT` | `4f96365d3108` |
+
+🔴 **The mutilation dropped everything from the DOT onward and CASE-FOLDED the remainder.** Both are visible in one row: `Questgen.ai` → `questgen`. 🟢 **`6` of `6` recoveries are permissive**, because the dot-suffix convention belongs to version-numbered standards libraries (`pylti1.3`, `java-lti-1.3`) and language package names (`Pluto.jl`, `oneroster.net`, `Questgen.ai`) — **populations that are overwhelmingly `MIT`**. The harvester was deleting a licence-correlated signal from the name. 🔵 Ledger, including the **`4` repair guesses that FAILED**: [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv).
+
+### 🟡 `2` platform repositories found this pass that no trending channel would have surfaced
+
+| repo | licence | why it was invisible |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 🟡 `AGPL-3.0`, `33 893` B | grant at **lowercase** `license.txt` on a **`develop`** default branch |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 `Apache-2.0`, `11 906` B | came from the mandated **ERP** leg, not a trending list. 🔴 Not education-specific |
+
+### 🔵 What this shelf does NOT record this week
+
+🔴 **No star counts, no momentum, no "fastest growing".** Those need the metadata endpoint, which is `403`. 🔴 **No claim that education AI repositories are or are not trending** — the channel that would answer it did not run. 🟢 **What is recorded is `69` payloads read one at a time, which is slower, smaller and true.**
+
 ## 2026-10-16 — Pass 248 — TRENDING: **NOT MEASURED THIS PASS, AND PUBLISHED AS NOT MEASURED** — `0` `topic:` AXES RUN, SO THERE IS NO TRENDING RESULT HERE TO MISTAKE FOR A QUIET WEEK
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.

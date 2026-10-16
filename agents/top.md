@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 249 — 2026-10-16 — `ACTION XH` DISCHARGED, AND IT DID NOT FIND A MISSING LICENCE — IT FOUND **`6` MISSING REPOSITORIES**: THIS KB'S OWN HARVESTER MUTILATED `6` SLUGS AND EVERY ONE OF THEM IS A LIVE, FIRST-HAND **`MIT`** EDUCATION REPOSITORY
+
+⏱️ **EIGHTEENTH pass of `2026-10-16`.** `p232`–`p248` all carry this date.
+
+🟢 **`ACTION XH` DISCHARGED IN FULL — all `60` carried slugs resolved first-hand over the network**, which no pass since `p247` could do. 🟢 **`6` NEW `MIT` ROWS, every one with a payload read at a pinned SHA.** 🟢 **`1` cell this KB published LAST PASS refuted on a payload** *(see [`verticals/solutions.md`](../verticals/solutions.md))*. 🔴 **`18` of the `60` do not exist at all, and `6` of those `18` are THIS BASE'S OWN NAME MUTILATIONS.** 🔴 **The `WebSearch` row channel is dry for the ELEVENTH pass in TWELVE** — every new row below came from the payload channel, not from search. 🔴 **The `topic:` harvest is SHUT, with a new refusal message recorded verbatim** ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)).
+
+🔵 **Evidence:** [`p249-xh-grant-sweep`](../evidence/p249-xh-grant-sweep.2026-10-16-p249.tsv) *(`60` slugs, `2` FOUND / `40` NO-GRANT / `18` ABSENT)* · [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv) *(`6` recoveries, `4` failed guesses)* · [`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv) · [`p249-websearch`](../evidence/p249-websearch.2026-10-16-p249.tsv) *(`8` legs)* · [`p249-platform-payloads`](../evidence/p249-platform-payloads.2026-10-16-p249.tsv)
+
+### 🔴 `T249-A` — the finding, and why it is worse than a licence error
+
+Every pass from `p247` deferred `ACTION XH` with the same three words: *"it needs egress"*. 🔴 **That was half right, and the wrong half was load-bearing.** The payload channel — `raw.githubusercontent.com/<slug>/HEAD/<path>` — **answers `200`, discriminates `404`, and resolves `master`, `develop` and even `v117+` defaults.** It was open. What is shut is the **search** channel, which is a different channel for a different job.
+
+🔴 **So `60` slugs sat unread for two passes behind a diagnosis that named the wrong pipe.** And when they were finally read, the headline was not a licence at all:
+
+| what `p247` recorded | what reading it actually found |
+|---|---|
+| `60` × `UNREAD`, note `5-paths-x-2-guessed-refs` | `2` FOUND · `40` genuinely grantless at Tier A · **`18` that DO NOT EXIST** |
+| *(absent repositories were not a state the list could express)* | 🔴 **`6` of the `18` exist under a slug this base MUTILATED, and `6` of `6` are `MIT`** |
+
+### 🔴 `T249-B` — the mutilation, named, and it is `p233`'s defect **recurring `14` passes after its correction**
+
+`p233` wrote it down: *"the defect was this KB's own probe dropping the `-v4` and `-v2` from names that contain them."* 🔴 **`p247`'s harvest did it again, and in TWO ways at once.** Both are visible in a single row — `Questgen.ai` → `questgen`: everything from the **dot** onward is dropped, **and** what survives is **case-folded**.
+
+| as `p247` carried it | the real repository | grant, first-hand | bytes | pinned SHA |
+|---|---|---|---|---|
+| `dmitry-viskov/pylti1` | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **`MIT`** | `1 070` | `d8fa43e1ace2` |
+| `ucfopen/pylti1` | [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 **`MIT`** | `1 070` | `6a47f0fe0a21` |
+| `uoc/java-lti-1` | [`uoc/java-lti-1.3`](https://github.com/uoc/java-lti-1.3) | 🟢 **`MIT`** | `1 060` | `e6736166d415` |
+| `ramsrigouthamg/questgen` | [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 **`MIT`** | `1 077` | `edf8f6aa6c1a` |
+| `juliapluto/pluto` | [`juliapluto/Pluto.jl`](https://github.com/juliapluto/Pluto.jl) | 🟢 **`MIT`** | `1 082` | `90dc3cfe6bda` |
+| `theopenem/oneroster` | [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 **`MIT`** | `1 066` | `4f96365d3108` |
+
+🔴 **`6` of `6` recoveries are permissive. The mutilation was not random with respect to what it hid** — it ran in the one direction that costs a studio the rows it is actually allowed to build on. 🔵 **And the reason it is `MIT` `6` times is mechanical, not lucky:** the dot-suffix convention belongs to **version-numbered standards libraries** (`pylti1.3`, `java-lti-1.3`) and to **language package conventions** (`Pluto.jl`, `oneroster.net`, `Questgen.ai`) — and those two populations are overwhelmingly permissive. **The harvester was deleting a licence-correlated signal from the name.**
+
+### 🟢 `T249-C` — the `6` new rows, with what each one is actually for
+
+| repo | licence *(first-hand)* | what it is | region basis |
+|---|---|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `MIT` | **LTI 1.3 / LTI Advantage tool library, Python.** The reference implementation most Python LTI tools import | 🔵 unplaced — no affiliation in the payload |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | `MIT` | the **University of Central Florida** fork of the above. 🟡 Its grant is **byte-identical** to upstream's *(`sha256 5aef77eb4471effc`, both `1 070` B, both "Copyright (c) 2019 Dmitry Viskov")* — it carries upstream's licence verbatim | **North America** *(owner is a named US university)* |
+| [`uoc/java-lti-1.3`](https://github.com/uoc/java-lti-1.3) | `MIT` | **LTI 1.3 & LTI Advantage library, Java.** README: *"Library implementing a full LTI Advantage tool"* | **EMEA** *(owner `uoc` = Universitat Oberta de Catalunya, Spain — inferred from the owner, not stated in the payload)* |
+| [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | `MIT` | **question generation.** README: *"an opensource NLP library focused on developing easy to use Question generation algorithms"*, on T5/BERT/GPT-2 | **APAC** *(owner-inferred, India)* |
+| [`juliapluto/Pluto.jl`](https://github.com/juliapluto/Pluto.jl) | `MIT` | **reactive notebooks for Julia** — the teaching-notebook substrate, not an agent | 🔵 unplaced |
+| [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | `MIT` | **OneRoster client library, .NET**, versions `1.1` and `1.2`. README states plainly: *"Only rostering calls are supported. Grade book has not been implemented."* | 🔵 unplaced |
+
+🔵 **Why these are `repos/foundations` material more than `agents/top` material**, and it is said here rather than quietly: `4` of the `6` are **standards plumbing** (LTI 1.3, OneRoster) and one is a **notebook runtime**. They are published on both shelves with that distinction stated, because a KB that files an LTI library as an "AI agent" has told a reader something false about what it does.
+
+### 🟡 `T249-D` — the `3` agent-shelf rows this pass can stand behind, and the `8` it cannot
+
+| repo | licence *(first-hand)* | bytes | what it is |
+|---|---|---|---|
+| [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT` | `1 077` | question generation from passages — the one *generative* education capability recovered this pass |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 `MIT` | `1 070` | 🟡 a **catalogue**, not an agent. It is published as a catalogue. Education is one of its industry sections |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 `MIT` | `1 141` | 🟡 a **curriculum**, not an agent — `12` lessons. Published as a curriculum |
+
+🔴 **And the `8` that cannot be published, which is the more useful half of this table.** The `XH` sweep read `11` education **MCP servers and tutors** — `crevextech/canvas-lms-mcp`, `dmontgomery40/mcp-canvas-lms`, `mistercommand/mcp-canvas-lms`, `ink-waffle/moodle-mcp`, `ink-waffle/sisu-mcp`, `p1ckle3/blackboard-mcp`, `salshah20/classroom_mcp`, `davipac/classroom-mcp`, `54yyyu/school-mcp`, `sujal-shejwal/adaptive-ai-tutor`, `radiantcrystal/safetutors` — and **every single one answered `404` at all `16` Tier-A licence paths.**
+
+🔴 **That is the LMS-connector layer of this whole industry, and it has no grant.** 🔵 It is recorded as `NO-GRANT-AT-TIER-A`, not as "unlicensed": Tier B and Tier C were not probed this pass, and `ABSENT` is only ever `ABSENT-AT-THE-PATH-PROBED` *(`p222`'s rule)*. 🔴 **But at Tier A, which is where a buyer looks, there is nothing to find** — and a studio cannot ship any of them.
+
+### 🔵 `T249-E` — what this pass does NOT claim
+
+🔴 **No star count, no last-push date, no archived flag appears in any row above, and that is forced, not stylistic.** `api.github.com/repos/{owner}/{repo}` answers **`403`** for every slug not attached to this session, so those three fields are **unmeasurable from here** ([`p249-channel-map`](../evidence/p249-channel-map.2026-10-16-p249.tsv)). Any such number elsewhere on these shelves is **carried** from an earlier pass's channel; this pass adds none and corrects none.
+
+🔴 **No absence of supply is claimed.** The `topic:` harvest did not run because it **cannot** run — `403`, message verbatim in the channel map. `8` `WebSearch` legs ran and returned `0` repositories, and that is a **scoped channel result**, not a statement about the world (`ACTION UK`).
+
+### 🔴 `T249-F` — ACTIONs registered by this pass
+
+| id | what it asks | falsifier |
+|---|---|---|
+| **`XJ`** | **Fix the harvester, not the list.** The mutilation is in whatever writes slugs into evidence: it must preserve the dot-suffix and the case. Re-run `p247`'s own harvest output through a repair pass and report how many OTHER carried slugs on these shelves are mutilated. | *falsified if a pass reports "`6` repaired" again without naming the component that truncates* |
+| **`XK`** | **Probe the `11` grantless MCP connectors at Tier B and Tier C** before any pass calls the LMS-connector layer unlicensed. | *falsified if a pass publishes "no grant" on these without a Tier-B/Tier-C probe recorded* |
+| **`XL`** | **A per-file grant can be selected by a CODE COMMENT** (`/* @license Enterprise */`, Twenty, read first-hand this pass). No probe this base owns can see it. Build one that greps the source for licence markers, not the path tree. | *falsified if an instrument lands that still only reads paths* |
+| **`XI`** *(carried from `p248`)* | `p1054-mit-plus-clause` still misses a Commons Clause rider, because a rider can make a licence file **shorter** than canonical `MIT`. | 🔴 **NOT RUN this pass** — no Commons Clause payload was encountered in the `60`; `0` of the `49` existing slugs' grants contained one |
+| **`UX`** | unrun for the **TWELFTH** pass. | — |
+
 ## Pass 248 — 2026-10-16 — `ACTION XE` DISCHARGED, AND ITS DISCHARGE FOUND A **FOURTH** CAUSE OF THE SAME WRONG ANSWER THAT THIS KB HAD **ALREADY MEASURED AND NEVER WIRED**: THE ONLY CLASSIFIER HERE THAT READS A COMMONS CLAUSE CORRECTLY WAS NOT IN `make hooks`, AND THE TWO THAT WERE BOTH RETURNED A CLEAN `MIT`
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** `p232`–`p247` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

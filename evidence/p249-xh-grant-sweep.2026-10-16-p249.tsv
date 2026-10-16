@@ -1,0 +1,74 @@
+# ACTION XH DISCHARGED — p247's 60 UNREAD slugs, read first-hand over the network.
+# channel: raw.githubusercontent.com/<slug>/HEAD/<path>, calibrated P249-style before any negative
+#          was believed (good=200 HKUDS/DeepTutor/HEAD/LICENSE, absent=404, bad-slug=404) and
+#          re-calibrated against non-main defaults (master, develop) with README as the control.
+# ref axis: literal HEAD (resolves the default branch whatever its name) + git ls-remote --symref
+#           for EXISTENCE, because a 404 on this channel cannot tell an absent repo from an absent path.
+# path axis: Tier A, 16 root licence names, byte-for-byte the list in p229-grant-ladder-reach/ladder.sh.
+# DIVERGENCE, recorded not hidden: the repo's own ladder.sh could NOT be executed in this session
+#           (policy: external repo code). The probe was re-implemented in-session, FETCH-ONLY, no
+#           classifier. Tier B and Tier C were NOT probed, so every NO-GRANT below is NO-GRANT-AT-TIER-A.
+slug	state	default_ref	head_sha	path	bytes	family_first_hand	note
+frappe/lms	FOUND	develop	-	license.txt	33893	AGPL-3.0	🟢 real LMS. Grant lives at a LOWERCASE path on a DEVELOP default: a main|master ladder returns 404 at every path
+someaspy/chromebookenroller	FOUND	v117+	-	license.txt	1075	MIT	🟢 only MIT in the carried 60. Default branch is literally `v117+` — first-hand proof the ref axis is not a two-name guess
+accesslint/skills	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+54yyyu/school-mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+anthropics/prompt-eng-interactive-tutorial	NO-GRANT	master	-	16-tierA	-	-	exists (README 200 on HEAD and on master), LICENSE 404 on both — genuinely grantless at Tier A
+alfredang/ai-mms	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+barneslardo/sis-demo	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+cs341-illinois/coursebook	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+crevextech/canvas-lms-mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+cyanxlab/phonos	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+davipac/classroom-mcp	NO-GRANT	claude/publish-classroom-aluno-mcp-9g61ee	-	16-tierA	-	-	exists; default ref is an agent-generated branch name — third distinct non-main default in this sweep
+dmontgomery40/mcp-canvas-lms	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+educredentials/ec-issuer	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+exhabition/brightspace-mcp-rs	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+fracabu/scorm-course-generator	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+gaurav-pande/aes_dl	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+gego-k12/gegok12-documentation	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+gnanakamalesh-m/student-dropout-early-warning	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+h5p/h5p-interactive-video	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant — and H5P's own platform row is carried elsewhere on these shelves
+ink-waffle/sisu-mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+ink-waffle/moodle-mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+jgabriel-sntx/corretor-de-redacao-enem	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant (LATAM-shaped: ENEM essay grader)
+juno-hwang/juno-dkt	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+kaushal0494/aitutor-evalkit	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+lms-laravel/lms-laravel	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+lms-laravel/old-lms-laravel	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+malaysia-ai/malaysian-dataset	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant (APAC-shaped)
+mistercommand/mcp-canvas-lms	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+nicolaasmatthijs/xapicaliper	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+nlp2ct/llm-generated-text-detection	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+open-spaced-repetition/fsrs4anki-helper	NO-GRANT	main	-	16-tierA	-	-	exists; negative RE-CHECKED against README (200) before being believed — channel healthy, repo grantless at Tier A
+p1ckle3/blackboard-mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+projectsandprograms/school-management-system	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+radiantcrystal/safetutors	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+rollercoaster-dev/bun-badges	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+sabiotechteam/teacher-hub	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+schoolutils/webuntis	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+salshah20/classroom_mcp	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+simon-initiative/lti-example-tool	NO-GRANT	master	-	16-tierA	-	-	exists, no Tier-A grant
+sujal-shejwal/adaptive-ai-tutor	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+tejpalvirk/student	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant
+zqr1101/xueyoujing-companion	NO-GRANT	main	-	16-tierA	-	-	exists, no Tier-A grant (CJK-shaped, p247's channel)
+ahmed-html/unlimited-ai-platform	ABSENT	-	-	-	-	-	ls-remote returns nothing
+bootlegyouki/l	ABSENT	-	-	-	-	-	ls-remote returns nothing — name looks mutilated (single letter)
+dkavargy/escoplus2	ABSENT	-	-	-	-	-	ls-remote returns nothing
+dmitry-viskov/pylti1	ABSENT	-	-	-	-	-	🔴 MUTILATED — see p249-slug-repair: dmitry-viskov/pylti1.3 EXISTS and is MIT
+fh-yarbouh/oak-curriculum-ontology	ABSENT	-	-	-	-	-	ls-remote returns nothing
+gener8v/gener8v	ABSENT	-	-	-	-	-	ls-remote returns nothing
+jakerains/scormplayer	ABSENT	-	-	-	-	-	ls-remote returns nothing
+jdolny/oneroster	ABSENT	-	-	-	-	-	repair guess `oneroster.js` also ABSENT
+joojdev/academic-tracker-mcp	ABSENT	-	-	-	-	-	ls-remote returns nothing
+juliapluto/pluto	ABSENT	-	-	-	-	-	🔴 MUTILATED — juliapluto/Pluto.jl EXISTS and is MIT
+paurushrai/lti-1	ABSENT	-	-	-	-	-	repair guess `lti-1.3` also ABSENT
+ramsrigouthamg/questgen	ABSENT	-	-	-	-	-	🔴 MUTILATED — ramsrigouthamg/Questgen.ai EXISTS and is MIT
+schild-report/schild	ABSENT	-	-	-	-	-	ls-remote returns nothing
+theopenem/oneroster	ABSENT	-	-	-	-	-	🔴 MUTILATED — theopenem/oneroster.net EXISTS and is MIT
+ucfopen/pylti1	ABSENT	-	-	-	-	-	🔴 MUTILATED — ucfopen/pylti1.3 EXISTS and is MIT
+uoc/java-lti-1	ABSENT	-	-	-	-	-	🔴 MUTILATED — uoc/java-lti-1.3 EXISTS and is MIT
+voodoo2man/iobroker	ABSENT	-	-	-	-	-	repair guess `ioBroker.vis` also ABSENT
+wort-schule/wort	ABSENT	-	-	-	-	-	repair guess `wort-schule` also ABSENT
+# TOTALS: 60 carried = 2 FOUND + 40 NO-GRANT-at-tier-A + 18 ABSENT.
+# Of the 18 ABSENT, 6 are MUTILATED NAMES whose real repository exists and is MIT (p249-slug-repair),
+# 4 had a repair guess that also answered ABSENT, and 8 were not attempted.
