@@ -1,0 +1,41 @@
+# p233 — the JVM education estate, MEASURED. p232 declared it `UNMEASURED` and warned that the
+# three biggest copyleft LMS estates in this industry are JVM, so the unreadable channel was the
+# one its licence argument most depended on. One 603014-byte read of
+# https://repo1.maven.org/maven2/org/ enumerates 4798 groupId directories, parsed OFFLINE with no
+# further requests. This closes the `org.*` half of that declaration.
+#
+# BOUND, stated because it is the whole honesty of the table: this is the `org.` NAMESPACE, not
+# Maven Central. Education artefacts also publish under edu., com., net., de., ch., uk. and io.,
+# none of which was read this pass (`ACTION TU`). A groupId ABSENT from this list is absent from
+# `org.` only — and given the throttle finding, absence anywhere else on this channel is not
+# establishable at all.
+groupid	present_under_org	what_it_is	already_carried_on_these_shelves	note
+org.apereo	YES	Apereo Foundation — CAS, uPortal, the higher-ed identity and portal tier	YES (8 files)	the live successor namespace to org.jasig
+org.jasig	YES	Apereo's pre-rename namespace	YES (8 files)	both spellings publish, unlike the imsglobal → 1edtech case below
+org.sakaiproject	YES	Sakai LMS	YES (9 files)	presence established on the round-1 read; the round-2/3 429s are throttle, not absence
+org.dspace	YES	DSpace — institutional repository	YES (5 files)	
+org.opencastproject	YES	Opencast — lecture capture	YES (9 files)	p230 proved the repository MOVED apereo/opencast → opencast/opencast; the Maven namespace did not follow the move
+org.olat	YES	OLAT / OpenOLAT LMS	YES (9 files)	org.openolat is NOT present under org. — the project's artefacts publish under the PRE-rename groupId, the same shape as imsglobal below
+org.fenixedu	YES	FenixEdu — the academic management stack built at Instituto Superior Tecnico, Lisbon	thin (2 files)	the only groupId on this list whose project is natively EMEA; a placement candidate for `ACTION TT`
+org.kuali	YES	Kuali — higher-ed ERP / SIS / research administration	YES (6 files)	
+org.kualigan	YES	Kualigan — third-party Kuali integration namespace	NO	a lead, not a row: no repository was probed this pass
+org.imsglobal	YES	1EdTech, under its pre-2022 name	YES (5 files)	THE FINDING, below
+org.1edtech	NO	the standards body's POST-rename namespace	-	NOT-ESTABLISHED under org. — and p230 established that the imsglobal → 1EdTech rename left DEAD repository addresses under BOTH spellings. The rename did not carry the JVM artefacts either
+org.jxapi	NOT-ESTABLISHED	a candidate xAPI Java namespace	NO	listed in the org/ enumeration; the direct listing returned 429 twice. A lead for `ACTION TU`
+org.dataone	YES	DataONE — research data federation	NO	adjacent, not education-core
+org.teachingkidsprogramming	YES	Teaching Kids Programming	NO	a lead; no repository probed
+org.oat-sa	NOT-ESTABLISHED	TAO assessment platform	YES	EXPECTED: the oat-sa estate is PHP/Composer, so its absence from Maven is a fact about its ecosystem, not a gap in this channel
+org.moodle	NOT-ESTABLISHED	Moodle	YES	EXPECTED: PHP
+#
+# THE HEADLINE, read first-hand from the 497-byte org/imsglobal/ listing: the standards body's
+# ENTIRE JVM presence under `org.` is ONE artefact — `basiclti-util/`. That is the LTI 1.1-era
+# BasicLTI utility. There is no caliper-java, no LTI 1.3 artefact, no QTI artefact, no OneRoster
+# artefact under either spelling of the standards body's groupId.
+#
+# WHY THIS CORROBORATES RATHER THAN SURPRISES: p230's existence sweep found the Caliper reference
+# implementations (Java, JS, PHP, Python) and the Open Badges reference server DEAD on GitHub under
+# both org spellings. The Maven channel now says the same thing from an independent direction —
+# the Java reference line was never maintained into the 1EdTech era. The constructive reading,
+# unchanged from p232 and now stronger: there is no MIT/Apache LMS or SIS in this industry, the
+# permissive layer is the STANDARDS AND INTEGRATION layer, and on the JVM even that layer is a
+# single legacy jar. A JVM Ed-Fi/LTI/QTI scope is a BUILD, not an integration.

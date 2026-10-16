@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 233 — THE **REGISTRY TARBALL** AND THE **MAVEN DIRECTORY LISTING** ARE BOTH SOURCE CHANNELS THIS KB HAD NEVER HARVESTED, AND ONE REQUEST ON THE SECOND ENUMERATES `4 798` groupIds
+
+⏱️ **SECOND pass of `2026-10-16`.** p232 published earlier the same date.
+
+🔵 **`5` new repository rows, `1` refused, `0` padded. `4 798` Maven groupIds classified from ONE response. `3` of p232's published cells overturned.**
+
+🔵 **Evidence:** [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv) · [`p233-maven-channel`](../evidence/p233-maven-channel.2026-10-16-p233.tsv) · [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv)
+
+### 🟢 `R233-1` — the JVM education estate, measured. p232 declared it `UNMEASURED`
+
+| groupId | under `org.` | project | already carried |
+|---|---|---|---|
+| `org.apereo` · `org.jasig` | 🟢 PRESENT, both | CAS, uPortal — higher-ed identity and portal | yes |
+| `org.sakaiproject` | 🟢 PRESENT | Sakai LMS | yes |
+| `org.dspace` | 🟢 PRESENT | institutional repository | yes |
+| `org.opencastproject` | 🟢 PRESENT | lecture capture | yes — 🔵 but p230 proved the REPOSITORY moved to `opencast/opencast` while the Maven namespace did not |
+| `org.olat` | 🟢 PRESENT | OpenOLAT LMS | yes — 🔴 `org.openolat` is NOT present; the artefacts publish under the pre-rename groupId |
+| `org.fenixedu` | 🟢 PRESENT | FenixEdu, built at **Instituto Superior Técnico, Lisbon** | 🟡 thin — `2` files |
+| `org.kuali` · `org.kualigan` | 🟢 PRESENT, both | higher-ed ERP / SIS / research admin | `kuali` yes, 🆕 `kualigan` no |
+| `org.imsglobal` | 🟢 PRESENT | the standards body, pre-2022 name | yes — **and see below** |
+| `org.1edtech` | 🔴 **NOT-ESTABLISHED** | the standards body, post-rename | — |
+| `org.jxapi` | 🟡 `429` twice → **NOT-ESTABLISHED** | a candidate xAPI Java namespace | 🆕 no |
+| `org.oat-sa` · `org.moodle` | 🔴 NOT-ESTABLISHED | TAO, Moodle | 🟢 **EXPECTED — both are PHP/Composer estates.** Their absence is a fact about their ecosystem, not a gap in the channel |
+
+🔴 **The headline, from the `497`-byte `org/imsglobal/` listing: the standards body's whole JVM presence under `org.` is ONE artefact — `basiclti-util/`, LTI 1.1-era.** No `caliper-java`, no LTI 1.3, no QTI, no OneRoster. 🟢 **Independent corroboration of p230, which found the Caliper and Open Badges reference implementations dead on GitHub under both org spellings.** 🔴 **A JVM Ed-Fi/LTI/QTI scope is a BUILD, not an integration.**
+
+🟡 **The bound: this is the `org.` NAMESPACE, not Maven Central.** `edu.`, `com.`, `net.`, `de.`, `ch.`, `uk.`, `io.` unread — `ACTION TU`.
+
+### 🔴 `R233-2` — a `404` from `repo1.maven.org` is a THROTTLE, not an absence
+
+🔴 **Measured: `200` with a full listing, `404` with a one-byte body, and `429` — same url, inside one minute.** The throttle-`404` is byte-identical to a real miss and the negative control exhausts exactly as the positive control does.
+
+🔵 **The mirror of p232's own constraint — p232: a `200` is not a READ. p233: a `404` is not an ABSENCE.** 🟢 **This channel establishes PRESENCE and cannot establish ABSENCE from this session.** Verdicts here are `PRESENT` or `NOT-ESTABLISHED`, never *absent*.
+
+🟢 **Channels that ANSWER:** `repo1.maven.org` listings · the Nexus incremental index *(`nexus.index.id=central`, chain `1318453614498`, stamped `20261014071521`)* · the Google GCS mirror *(returns a real `NoSuchKey` document, so it is reachable)*. 🔴 **Unreachable from THIS SESSION — the egress proxy refuses the tunnel:** `search.maven.org/solrsearch`, `central.sonatype.com/api`, `api.deps.dev`. 🟡 **p232 recorded that as a Maven outage. It is a session restriction. Different claim.**
+
+### 🟢 `R233-3` — repositories recovered, not discovered
+
+| repository | licence | recovered how |
+|---|---|---|
+| [`openlearnbadges/openbadges-validator-v2`](https://github.com/openlearnbadges/openbadges-validator-v2) | 🔴 `MPL-2.0` | the tarball's own `package.json` carried the `-v2` p232 dropped |
+| [`openlearnbadges/openbadges-bakery-v4`](https://github.com/openlearnbadges/openbadges-bakery-v4) | 🔴 `MPL-2.0` | same, the `-v4` |
+| [`rollercoaster-dev/openbadges-types`](https://github.com/rollercoaster-dev/openbadges-types) | 🟢 `MIT` | the package's OWN NAME as the repository name — never tried |
+| [`rollercoaster-dev/bun-badges`](https://github.com/rollercoaster-dev/bun-badges) | 🟡 `MIT` by manifest | found while walking that owner's namespace |
+| [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) | 🟢 `Apache-2.0` | a task-shaped query, p231's method |
+
+🟡 **Two packages with no repository at all ship their complete source in the tarball** — `npm:openbadges-ui` *(`175` files, full `src/`)* and `npm:lti-1p3-ags` *(`src/` + `LICENSE` + `.github/workflows/`)*. 🔵 **A package with no repository is not necessarily a package with no source.**
+
+
 ## 2026-10-16 — Pass 232 — THE REGISTRY CHANNEL OUT-PRODUCES EVERY GITHUB-SHAPED QUERY THIS KB HAS RUN, AND `Ed-Fi` TURNS OUT TO HAVE BEEN HALF-CARRIED ALL ALONG
 
 🔵 **`13` repository rows added across this shelf and the foundation tier *(`9` discovery rows + `3` `Ed-Fi` + `1` platform estate)*, `4` refused as ungranted, `6` registry-sourced addresses found DEAD, `1` channel found to answer `200` with no data.**

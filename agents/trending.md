@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 233 — THIS WEEK'S SIGNAL: THE **TARBALL** IS A SOURCE CHANNEL, AND `3` OF THE `6` "SOURCELESS" PACKAGES p232 PUBLISHED LAST NIGHT HAVE LIVE REPOSITORIES ONE SUBSTITUTION AWAY
+
+⏱️ **SECOND pass of `2026-10-16`** — p232 published earlier the same date. Both are dated by publication.
+
+🔵 **`5` new rows *(`1` Apache-2.0, `2` MIT, `2` MPL-2.0 copyleft-flagged)*, `1` refused, `0` padded. `4` registered actions discharged plus the standing `SH`. `3` published cells overturned, all three p232's own.**
+
+🔵 **Evidence:** [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv) · [`p233-to-source-read`](../evidence/p233-to-source-read.2026-10-16-p233.tsv) · [`p233-new-rows`](../evidence/p233-new-rows.2026-10-16-p233.tsv) · [`p233-sh-aiact`](../evidence/p233-sh-aiact.2026-10-16-p233.tsv)
+
+### 🟢 `A233-1` — new this week, with a last-seen date and a `HEAD` sha on every row *(`ACTION TH`, honoured)*
+
+| agent / library | licence, read first-hand | category | last seen alive *(this pass)* | one-line read |
+|---|---|---|---|---|
+| [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) | 🟢 **Apache-2.0** | Ed-Fi / executable acceptance gate | `2026-10-16`, `main` @ `d38b0f9af010` | the first runnable Ed-Fi gate on these shelves: token → Discovery → write/read-back → both paging modes → change queries → ETag + stale-ETag `412`, through NGINX, `PASS`/`FAIL` per step. **North America, placed on its grant's notice** |
+| [`openlearnbadges/openbadges-validator-v2`](https://github.com/openlearnbadges/openbadges-validator-v2) | 🔴 **MPL-2.0** *(weak copyleft, per-file)* | Open Badges / validation | `2026-10-16`, `main` @ `774dc23ba857` | Mozilla's withdrawn validator, continued and released. Canonical `16 726`-byte grant body |
+| [`openlearnbadges/openbadges-bakery-v4`](https://github.com/openlearnbadges/openbadges-bakery-v4) | 🔴 **MPL-2.0** | Open Badges / baking | `2026-10-16`, `main` @ `395e580fdd07` | the baking half. 🔴 grant at `LICENSE-MPL-2.0`, manifest string `"MPL 2.0"` — not SPDX |
+| [`rollercoaster-dev/openbadges-types`](https://github.com/rollercoaster-dev/openbadges-types) | 🟢 **MIT** | Open Badges / types | `2026-10-16`, `main` @ `4dfe36c45234` | OB 2.0/3.0 TS types with VC vocabulary. 🔴 **repo `3.2.3` vs npm `4.0.0`** — the published version's source is still gone |
+| [`rollercoaster-dev/bun-badges`](https://github.com/rollercoaster-dev/bun-badges) | 🟡 **MIT by manifest only** *(no LICENSE file)* | Open Badges / **server** | `2026-10-16`, `main` @ `3546ff2532cc` | an OB 2.0 **and** OB 3.0 issuing server on Bun + Hono with W3C VCs — the shape p230 found dead at the reference server. 🔴 `0.0.2-alpha.0`, stale since `2025-04-14` |
+| 🔴 `npm:@rollercoaster-dev/openbadges-core` | 🔴 **MIT, but `dist/` only** | Open Badges | registry only — `5` spellings `404` | REFUSED — the one package of p232's six that is *genuinely* sourceless |
+
+### 🔴 `A233-2` — the week's correction, and it is this KB correcting itself twelve hours later
+
+🔴 **p232 published `6` packages as "live, granted and sourceless". `3` have live repositories, and `2` more ship their complete `src/` inside the tarball.** The mechanism: **p232's probe dropped the `-v4` and `-v2` suffixes from names that contain them**, and never tried the package's own name as the repository name. 🔵 **Its own table shows `-` in *second_spelling_tried* for precisely the two rows where one substitution would have worked.**
+
+🟢 **The usable rule, now a table rather than a habit:** a registry hit is a lead, the registry's `repository` field is a claim — **and the TARBALL's `package.json` is a better claim, because it ships with the code.** `npm:lti-1p3-ags` even ships `.github/workflows/`: the tarball is effectively a repository snapshot.
+
+### 🟡 `A233-3` — the identity tier has a reference implementation, and a defect all three share
+
+🟢 **`lti-tool/lti-tool` REJECTS a launch with no `sub`** — `sub: z.string()` parsed at `ltiTool.ts:267`, step 5 of `verifyLaunch`, before the audience and nonce checks. **It is the library to cite for the identity tier.** 🔴 **`peregrine-lti` and `lti-go` both ACCEPT one.** 🔴 **And all three accept `sub: ""`**, because `z.string()` has no `.min(1)` — **so the guard an adapter owns is NON-EMPTY, not PRESENT.**
+
+🟡 **peregrine's acceptance is deliberate: its doc comment invokes LTI's anonymous-launch case.** The defect is that *anonymous* and *unchecked* arrive identically.
+
+### 🔴 `A233-4` — the regulatory signal: `ACTION SH` fires for only the second time, and now the instrument has a NUMBER
+
+🟢 **The Digital Omnibus on AI is `Regulation (EU) 2026/1744`** — OJ `2026-07-24`, in force `2026-07-27`, Parliament `2026-06-16`, Council `2026-06-29`. **Those last two dates match p230's finding exactly, from sources that did not have them.**
+
+🔴 **Annex III point `3` — education and vocational training — applies `2027-12-02`, NOT `2026-08-02`.** Annex I moved to `2028-08-02`. 🟢 **Article `50` transparency was NOT postponed and has been live since `2026-08-02`**, with a marking grace period to `2026-12-02` *(single-sourced)*.
+
+🔴 **Two sources through the mandated EMEA query carried the error.** One conflates general applicability with the education carve-out. 🟡 **The other is a PDF dated `2025/11` — it predates the amendment by eight months and cannot be evidence either way; that is provenance, not a refutation of its authors.** 🔴 **Every date here is CORROBORATED-SECONDARY. No source read was the Official Journal, and a client deliverable cites the OJ, not this shelf.**
+
+### 🔴 `A233-5` — the trending channel itself, measured for a sixth time
+
+🔴 **`0` granted rows from `github trending education AI 2026` and `0` from `top open source AI agents education 2026 github MIT`.** What they return is **curricula ABOUT AI** — `microsoft/ai-agents-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `karpathy/nn-zero-to-hero`, D2L — **not AI software FOR education.** 🔵 **All `5` of this pass's rows came from channel probes: a registry tarball, a Maven listing, a task-shaped Ed-Fi query. Not one came from a trending list.**
+
+
 ## 2026-10-16 — Pass 232 — THIS WEEK'S SIGNAL: THE SUPPLY WAS ON THE **PACKAGE REGISTRIES** ALL ALONG — `9` GRANTED ROWS GITHUB-SHAPED QUERIES NEVER SURFACED, AND `6` PACKAGES THAT ARE LIVE, GRANTED AND SOURCELESS
 
 🔵 **`9` new rows *(`8` permissive, `1` copyleft-flagged)*, `4` refused as ungranted, `0` padded. `4` registered actions discharged. `146` registry artefacts classified across `4` registries; Maven Central UNREADABLE from here and recorded as such.**

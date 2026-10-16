@@ -1,0 +1,52 @@
+# p233 — ACTION TS, discharged. Limb `1` FIRES — and it refutes p232's channel verdict twice over.
+#
+# p232 recorded: "Maven Central is DEAD from here — solrsearch and central.sonatype.com both 000,
+# twice", and "repo1.maven.org serves a direct coordinate but 404s a directory listing". The first
+# half is right about those two endpoints. The second half is WRONG, and the way it is wrong is
+# the pass's instrument finding.
+#
+# MEASURED: repo1.maven.org served HTTP 200 WITH a full directory listing, HTTP 404 with a
+# 1-BYTE body, and HTTP 429 with the body "Your ip has exceeded rate limits" — for THE SAME URL,
+# inside one minute. The 1-byte `404` is a THROTTLE wearing an absence's clothes.
+#
+# CONSEQUENCE, and it is the mirror image of p232's own `TH` constraint:
+#   p232 learned A `200` IS NOT A READ   (PyPI answers 200 with a bot-challenge body).
+#   p233 learns  A `404` IS NOT AN ABSENCE (repo1.maven.org answers 404 when throttling).
+# This channel can establish PRESENCE and CANNOT establish ABSENCE from this session. Every
+# verdict below is therefore PRESENT or NOT-ESTABLISHED. The word "absent" is not available here.
+channel	url	http	bytes	content_assertion	verdict
+ctl-repo1-root	https://repo1.maven.org/maven2/	200	132669	`<a href` PRESENT	READABLE — serves a listing
+ctl-repo1-org	https://repo1.maven.org/maven2/org/	200	603014	`<a href` PRESENT	READABLE — 4798 groupId directories in ONE response
+ctl-repo1-org-apache	https://repo1.maven.org/maven2/org/apache/	200	40941	`<a href` PRESENT	READABLE (positive control; the SAME url returned 404/1B on two later attempts)
+repo1-org-imsglobal	https://repo1.maven.org/maven2/org/imsglobal/	200	497	`<a href` PRESENT	READABLE — and the listing is the measurement, see p233-maven-org-census
+maven-index-props	https://repo1.maven.org/maven2/.index/nexus-maven-repository-index.properties	200	1130	`nexus.index.id=central` PRESENT	READABLE — the Nexus incremental index is live, chain-id 1318453614498, timestamp 20261014071521 (+0000)
+gmaven-mirror	https://maven-central.storage-download.googleapis.com/maven2/org/sakaiproject/sakai-kernel-api/maven-metadata.xml	404	235	`<Code>NoSuchKey</Code>`	REACHABLE, coordinate guess wrong — the mirror ANSWERS (a real GCS error document), so it is a candidate channel, not a dead one
+search-maven-solr	https://search.maven.org/solrsearch/select?q=lti&rows=3&wt=json	000	0	no body	UNREACHABLE from this session — the egress proxy refused the CONNECT tunnel (403). This is a SESSION restriction, not a Maven outage, and p232 recorded it as the latter
+central-sonatype-api	https://central.sonatype.com/api/internal/browse/components?size=5	000	0	no body	UNREACHABLE from this session (same mechanism)
+depsdev-v3	https://api.deps.dev/v3/systems/MAVEN/packages/org.sakaiproject%3Asakai-kernel-api	000	0	no body	UNREACHABLE from this session
+depsdev-v3alpha	https://api.deps.dev/v3alpha/systems/MAVEN/packages/org.sakaiproject%3Asakai-kernel-api	000	0	no body	UNREACHABLE from this session
+#
+# THE STABILITY SERIES that produced the finding — three rounds, same four urls, inside one minute:
+# round	org/apache/	org/sakaiproject/	org/oat-sa/	org/
+# 1	200 (40941 B, listing)	429 (96 B)	404 (1 B)	200 (603014 B, listing)
+# 2	404 (1 B)	429 (96 B)	404 (1 B)	429 (96 B)
+# 3	404 (1 B)	404 (1 B)	429 (96 B)	404 (1 B)
+#
+# A PACED READER WAS BUILT AND THEN DISCARDED, and that is recorded rather than hidden: with
+# `curl --fail --retry 8 --retry-delay 6` the instrument's OWN positive control (`com/google/`,
+# which had returned 200 minutes earlier) exhausted its retries. The negative control
+# (`org/zzz-not-a-group-9f8e7d/`) exhausted identically and byte-identically. An instrument whose
+# positive control fails is not a measurement, so its 17-path sweep was killed unpublished rather
+# than tabled as 17 absences. Pacing used curl's own --retry-delay because this harness blocks
+# foreground sleep.
+#
+# A SECOND DEFECT IN THIS PASS'S OWN FIRST PROBE, found before publishing: it reused ONE output
+# file across urls, so a failed transfer left the PREVIOUS url's body in place and three rows
+# inherited Maven's 429 text while reporting `000`. Every probe now writes its own file. This is
+# the same class as p230's eight instrument defects and p231's `T231-F`.
+#
+# WHAT A LATER PASS SHOULD DO WITH THIS: the `org/` listing proves ONE request enumerates a WHOLE
+# namespace. The budget from this session is roughly one or two requests per cold window, so the
+# economical instrument is NOT a per-groupId sweep — it is one listing read per TOP-LEVEL namespace,
+# parsed offline. `ACTION TU` is registered for `edu/`, `com/`, `net/`, `de/`, `ch/`, `uk/`, `io/`.
+# org/jxapi/ was probed once more late in the pass and returned 429: NOT-ESTABLISHED, not absent.

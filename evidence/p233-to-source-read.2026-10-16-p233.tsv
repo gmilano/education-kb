@@ -1,0 +1,28 @@
+# p233 — ACTION TO, discharged. Probes ran 2026-10-16, SECOND pass of this date (p232 ran
+# 2026-10-15 23:4x → 2026-10-16 00:xx; this one 2026-10-16 later in the day).
+#
+# TO asked whether p232's `T232-C` finding on `marcgabe15/lti-go` — `sub` parsed, exposed,
+# never validated — is a FIELD-WIDE pattern or an outlier. Both subjects were read in SOURCE
+# at the SHA p232 recorded, exactly as `ACTION TK` read `lti-go`. NEITHER test suite was
+# EXECUTED; both were READ. The `lti-tool` claim is a read of a zod schema and of the call
+# site that parses against it, not an executed assertion.
+#
+# CONTROL (mandated by the register): `lti-go`'s `launch.go:201` contains `t.now().Sub(...)`,
+# which is `time.Sub`, NOT the subject claim. Every grep below excluded `\.Sub\(` for that
+# reason. No instrument in this pass keyed on the bare token `Sub`.
+#
+# VERDICT: limb `1` FALSIFIED (NOT 2 of 2), limb `2` FIRES at `1`. `lti-go` is not alone and
+# not the rule: of three libraries, `2` ACCEPT a launch with no subject claim and `1` REJECTS it.
+repository	licence_read_first_hand	head_sha_this_pass	default_branch	claim_parsed	claim_validated	file_and_line	missing_sub_verdict	test_covers_missing_sub	note
+stevenweathers/peregrine-lti	Apache-2.0 (canonical body at LICENSE)	a442a55a9ab9cb2928ddca6be9481670c99ced93	main	YES	LENGTH-ONLY, SHORT-CIRCUITED	launch/validations.go:107 assigns; :109 guards	ACCEPTED	NO	`if lti1p3Claims.SUB != "" && (len(...) > 255)` — the `!= ""` conjunct means an EMPTY or ABSENT sub SKIPS the only check that exists. The jwt.Parse option list (validations.go:84-92) requires deployment_id, message_type, version, target_link_uri, nonce, iss and aud — there is NO jwt.WithRequiredClaim("sub")
+stevenweathers/peregrine-lti	-	-	-	-	-	launch/launch_test.go:704-746	-	NO	TestHandleOidcCallbackInvalidSubjectClaim covers the TOO-LONG sub (a 256-char fixture) and asserts the 255-character error. No test constructs a token WITHOUT a subject. Its own doc comment at peregrine/oidc.go:263-270 states the design intent: "the platform may in these cases not include the sub claim ... The tool must interpret the lack of a sub claim as a launch request coming from an anonymous user" — so acceptance is DELIBERATE, and the omission is that the caller cannot tell anonymous from unchecked
+lti-tool/lti-tool	MIT (LICENSE, "Copyright (c) 2025-present James Joplin")	39b4986061f9c75a989510a18c2a37e03eda542d	main	YES	YES — REQUIRED	packages/core/src/schemas/lti13/claims/baseJwtClaims.schema.ts:5	REJECTED	NOT ESTABLISHED	`sub: z.string()` in BaseJwtClaimsSchema, extended into LTI13JwtPayloadSchema (lti13JwtPayload.schema.ts:18). `.parse()` is called on the verified LMS JWT at packages/core/src/ltiTool.ts:267, step 5 of verifyLaunch, BEFORE the audience, target-link-uri and nonce checks. A payload with no `sub` key throws a ZodError and the launch fails. zod pinned `^4.6.5` (packages/core/package.json:40)
+marcgabe15/lti-go	MIT (carried from p232)	carried	-	YES	NO	launch.go:170-206 (read p232)	ACCEPTED	NO	p232's `T232-C`, unchanged by this pass and now placed in a population rather than standing alone
+#
+# THE RESIDUAL NEITHER LIMB ASKED ABOUT, and it is the one that matters for `P232-R1`:
+# `z.string()` with no `.min(1)` and no refinement ACCEPTS the empty string. So `lti-tool`
+# rejects an ABSENT sub and — on this read — ACCEPTS `sub: ""`. All three libraries therefore
+# accept an EMPTY subject; they differ only on an ABSENT one. The guard the adapter must own
+# is NON-EMPTY, not PRESENT. This was read, NOT executed: no zod was installed in this session
+# and the claim about `z.string()`'s treatment of "" is a read of the schema plus the pinned
+# version, not a run. `ACTION TW` is registered to execute it.

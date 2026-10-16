@@ -1,0 +1,37 @@
+# p233 — ACTION TP, discharged. Limb `1` FIRES at `5` of a threshold of `2`.
+#
+# TP asked whether the registry TARBALL recovers source for the `6` packages p232 published as
+# "live, granted and sourceless". It does — and the defect was NOT the registry. It was p232's
+# own probe. `3` of `6` resolve to a LIVE repository, and `2` of the remaining `3` ship their
+# complete source inside the tarball. Exactly `1` of `6` is genuinely sourceless.
+#
+# METHOD: fetch the registry record, download `dist.tarball` for the exact version p232 named,
+# unpack it, read the `repository` field from the TARBALL'S OWN package.json (not the registry
+# document), and probe that address on `git ls-remote` — filename-agnostic, the standing oracle.
+# Nothing in any extracted tree was executed or imported.
+package	version	licence	p232_probed_address	p232_verdict	address_inside_tarball	ls_remote	p233_verdict	grant_read_first_hand	head_sha	last_commit	shipped_source
+npm:openbadges-bakery-v4	1.0.10	MPL-2.0	github.com/openlearnbadges/openbadges-bakery	404	git://github.com/openlearnbadges/openbadges-bakery-v4.git	LIVE	RECOVERED — FULL	YES: LICENSE-MPL-2.0 at root; package.json license field reads the NON-SPDX string "MPL 2.0"	395e580fdd07a6389213eb5fa194518f799504f1	2025-12-18	repo carries lib/ bin/ test/ Makefile index.js; repo version 1.0.10 MATCHES the published version
+npm:openbadges-validator-v2	1.1.4	MPL-2.0	github.com/openlearnbadges/openbadges-validator	404	git://github.com/openlearnbadges/openbadges-validator-v2	LIVE	RECOVERED — FULL	YES: LICENSE is the canonical MPL-2.0 body, 16726 B	774dc23ba85749f642ccc894530621097db33a51	2026-01-28	repo carries lib/ test/ index.js Jakefile; repo version 1.1.4 MATCHES the published version
+npm:openbadges-types	4.0.0	MIT	github.com/rollercoaster-dev/monorepo + /openbadges-monorepo	404 both	git+https://github.com/rollercoaster-dev/monorepo.git	404	RECOVERED — PARTIAL, PREDECESSOR ONLY	YES: LICENSE reads "MIT License / Copyright (c) 2025 Rollercoaster Development"	4dfe36c4523480574c8866889cc13a167148756c	2025-04-28	the LIVE repo rollercoaster-dev/openbadges-types carries version 3.2.3 — the npm release is 4.0.0 and names the (absent) monorepo. Source is retrievable for the PREDECESSOR, not for the published version. These are different claims
+npm:openbadges-ui	1.3.5	MIT	github.com/rollercoaster-dev/monorepo + /openbadges-monorepo	404 both	https://github.com/rollercoaster-dev/monorepo.git	404	SOURCE-IN-TARBALL	no grant body in the tarball	-	-	175 files, 97 source-like, src/ PRESENT: src/components, src/services, src/composables, src/stories, src/styles, src/utils, src/index.ts, src/plugin.ts. The complete Vue source ships in the package
+npm:lti-1p3-ags	2.0.1	MIT	github.com/Tyru5/1EdTech-LTI-1-3	404	https://github.com/Tyru5/1EdTech-LTI-1-3.git	404	SOURCE-IN-TARBALL	LICENSE ships inside the tarball	-	-	26 files, 14 source-like, src/ PRESENT: src/AssignmentGradingServices.ts, src/types/ScorePayload.ts, src/interfaces/*.d.ts, src/utils/, src/errors.ts — plus .github/workflows/. The tarball is effectively a repository snapshot
+npm:@rollercoaster-dev/openbadges-core	0.1.3	MIT	github.com/rollercoaster-dev/monorepo + /openbadges-monorepo	404 both	git+https://github.com/rollercoaster-dev/monorepo.git	404	GENUINELY SOURCELESS	no grant body in the tarball	-	-	8 files: dist/index.js, dist/index.cjs, their .map files, dist/*.d.ts, README.md, package.json. BUILT OUTPUT ONLY. This is the one row of the six for which p232's verdict stands
+#
+# WHY p232 WAS WRONG, stated precisely, because the mechanism is reusable:
+# (a) For the `MPL-2.0` pair it probed `openlearnbadges/openbadges-bakery` and
+#     `openlearnbadges/openbadges-validator` — DROPPING the `-v4` and `-v2` suffixes that are
+#     part of the package name and part of the repository name. Its own table records "-" in the
+#     second_spelling_tried column for exactly these two rows: the one case where it tried no
+#     second spelling is the case where the first substitution would have worked.
+# (b) For `openbadges-types` it tried the monorepo name twice and never tried THE PACKAGE'S OWN
+#     NAME as the repository name, which is live.
+# This is p229's truncation finding wearing different clothes: a name shortened by the harvester,
+# published as an absence. `ACTION TV` generalises the recovery across every registry-sourced
+# address on these shelves.
+#
+# SPELLINGS PROBED AND 404 IN THIS WINDOW (so a later pass does not re-walk them):
+# Tyru5/1EdTech-LTI-1-3, Tyru5/1EdTech-LTI-1.3, Tyru5/lti-1p3-ags, Tyru5/1EdTech-LTI-1-3-AGS,
+# rollercoaster-dev/monorepo, rollercoaster-dev/openbadges, rollercoaster-dev/rollercoaster,
+# rollercoaster-dev/openbadges-ui, rollercoaster-dev/openbadges-core,
+# rollercoaster-dev/openbadges-system.
+# LIVE and NEW to these shelves: rollercoaster-dev/bun-badges.

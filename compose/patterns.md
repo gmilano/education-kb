@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — `P232-R1`'s IDENTITY GUARD IS **MOVED, NOT REMOVED**: THERE IS A LIBRARY THAT VALIDATES THE SUBJECT, AND THE GUARD THAT MATTERS TURNS OUT TO BE A DIFFERENT ONE
+
+⏱️ **SECOND pass of `2026-10-16`.**
+
+🔵 **`4` recipes, every component existence-checked on `git ls-remote` and grant-read first-hand in this pass's window.** 🔴 **`P232-R1` is AMENDED on the strength of a second and third source read — the guard it added is correct but aimed one clause short.** 🟢 **`P233-R2` is new and is the first recipe in this KB that ships with an EXECUTABLE acceptance gate rather than a written standard.**
+
+🔵 **Evidence:** [`p233-to-source-read`](../evidence/p233-to-source-read.2026-10-16-p233.tsv) · [`p233-tr-edfi`](../evidence/p233-tr-edfi.2026-10-16-p233.tsv) · [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv) · [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv)
+
+### 🔴 `P233-R1` — the LTI→MCP adapter, AMENDED: guard **non-empty**, not **present**, and prefer the library that already rejects an absent subject *(3–4 weeks)*
+
+🔵 **This amends `P232-R1`. The recipe does not change shape; two of its clauses get sharper and its library choice gains a default.**
+
+`ACTION TO` read two more libraries in source. The population is now three, and it does not say what `P232-R1` assumed:
+
+| library | a launch with **no** `sub` | a launch with `sub: ""` |
+|---|---|---|
+| `marcgabe15/lti-go` *(`MIT`)* | 🔴 ACCEPTED | 🔴 ACCEPTED |
+| `stevenweathers/peregrine-lti` *(`Apache-2.0`)* | 🔴 ACCEPTED | 🔴 ACCEPTED |
+| 🟢 `lti-tool/lti-tool` *(`MIT`)* | 🟢 **REJECTED** | 🔴 ACCEPTED |
+
+1. 🟢 **NEW DEFAULT for a greenfield Node or TypeScript tool: [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool)** *(`MIT`, `main` @ `39b4986061f9`)*. `sub: z.string()` in `BaseJwtClaimsSchema` is parsed at `ltiTool.ts:267` — **step 5 of `verifyLaunch`, before the audience, target-link-uri and nonce checks** — so an absent subject throws and the launch fails. **It also ships six interchangeable store adapters, so it does not dictate the datastore.**
+2. 🔴 **THE GUARD, RESTATED CORRECTLY — and this is the amendment. Reject on `Subject == ""`, NOT on "subject missing".** All three libraries accept an empty-string subject: peregrine's only `sub` check is `if SUB != "" && len(SUB) > 255`, whose `!= ""` conjunct skips the empty case *(`launch/validations.go:107-109`)*; `lti-tool`'s `z.string()` carries no `.min(1)`; `lti-go` never looks. **A `present-but-empty` subject passes every one of them.**
+3. 🟡 **Decide ANONYMOUS LAUNCH explicitly, because the spec allows it and peregrine implements it deliberately.** Its own doc comment *(`peregrine/oidc.go:263-270`)*: *"the platform may… not include the sub claim… The tool must interpret the lack of a sub claim as a launch request coming from an anonymous user."* 🔴 **So the adapter needs TWO outcomes, not one rejection: an explicit `AnonymousLaunch` path and a hard failure. What must never happen is a session minted with an empty identity because nobody chose.** Make the choice a config flag and log which branch fired.
+4. **Keep `P232-R1`'s scope assertion for Go deployments** — `lti-go`'s `ags` client acquires the right scope and never compares granted with requested *(`ags/client.go:55-72`)*.
+5. **Bind the session to `Subject` + `Issuer` + `DeploymentID` as a composite, never `Subject` alone.** Unchanged, and now load-bearing for a different reason: with anonymous launches permitted, `Subject` alone is not even unique.
+6. **Cross-check** — [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) *(`Apache-2.0`, `main` @ `a442a55a9ab9`)* stays the narrow-scope comparison implementation.
+
+🔵 **Stated plainly: the `lti-tool` claim is a READ of a zod schema plus the call site, at zod `^4.6.5`. No zod was executed in this session.** 🟢 **The three negative cases the guard's tests must cover: no `sub` key; `sub: ""`; and a token granted a narrower scope than requested.**
+
+### 🟢 `P233-R2` — the Ed-Fi engagement that ships with a gate you can run BEFORE you sign *(8–10 weeks, North America)*
+
+🔵 **`P232-R2` built the `Apache-2.0` spine and could only make conformance auditable by QUOTING a written standard. `ACTION TR` found the executable half.**
+
+1. **Stand up the subject** — `P232-R2` unchanged: pick the line first *(`v7.x` = [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + `ODS-Admin-API`; `v8+` = [`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service), `main` @ `a0afbf4d71a9`)*, then the data standard, pinned to its real default branch.
+2. 🆕 🟢 **Add the gate** — [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) *(`Apache-2.0`, canonical `11 357`-byte body, `main` @ `d38b0f9af010`)*. Its `compose.yml` stands a full v8 stack with NGINX, Postgres, identity and swagger-ui; `./start.sh` then `./smoke-test.sh` drives it **through NGINX so routing and TLS are exercised too, not DMS directly.**
+3. 🟢 **Use its step list AS THE ACCEPTANCE CRITERIA, because they are already the right ones:** token acquisition · Discovery · descriptor read · **write and read-back** · **offset/limit AND cursor paging** · **change-query extract** · **ETag update plus a stale-ETag `412`** · a deliberately invalid request · an assessment-style reference write. **One `PASS`/`FAIL`/`SKIP` line per step, non-zero exit on any failure.** Put that transcript in the acceptance pack.
+4. 🟢 **Port its second instrument on day one — it is nearly free.** `init/check-edorgs-http.sh` *(`FR-EDORG-14`)* proves the five baseline `.http` requests have not drifted from `bootstrap/baseline-edorgs.json`, the single source both the bootstrap and the request file read. **Pure text/JSON comparison: no network, no token, no database, runnable standalone.** Generalise it to the client's own fixtures and you have a drift gate for the whole integration.
+5. 🔴 **Say in the SOW what the gate is NOT.** It is a behavioural API-contract gate. **Ed-Fi conformance CERTIFICATION is Alliance-administered** — vendor badges read *"tested against Ed-Fi API Suite 3, V5.3, 6.1, 7.3"*. **An acceptance transcript you generate is not a certificate you can self-issue.** Price the certification path separately or exclude it explicitly.
+6. 🔵 **Caveats from the read:** the kit's scripts were **read, not executed** *(they need Docker and a live stack)*; it is tested on Windows `amd64` with Bash or PowerShell 7 and **untested on macOS and on arm64**, which matters for a consultant's laptop; and its slug `DMS-pilot-testing-kit` differs from its self-title `Ed-Fi-API-v8-pilot-testing-kit` — **one repository, two names.**
+
+### 🟢 `P233-R3` — the Open Badges issuing chain, reassembled from recovered source *(6–8 weeks)*
+
+🔵 **p230 found the Open Badges reference server dead. p231 found the Mozilla line withdrawn. `ACTION TP` recovered the continuations. This is the first time this KB can propose an Open Badges build with every component retrievable.**
+
+1. 🟢 **Issue** — [`rollercoaster-dev/bun-badges`](https://github.com/rollercoaster-dev/bun-badges) *(`MIT` by manifest, Bun + Hono, `main` @ `3546ff2532cc`)*: an OB **2.0 and 3.0** server with W3C Verifiable Credentials and stated backward compatibility between versions. 🔴 **`0.0.2-alpha.0`, last commit `2025-04-14`. Treat it as a REFERENCE to read and a skeleton to fork — not a dependency to pin.** Budget a hard fork.
+2. 🟢 **Bake** — [`openlearnbadges/openbadges-bakery-v4`](https://github.com/openlearnbadges/openbadges-bakery-v4) *(`MPL-2.0`, `main` @ `395e580fdd07`)*: embeds the assertion into the image. The direct continuation of Mozilla's bakery.
+3. 🟢 **Validate** — [`openlearnbadges/openbadges-validator-v2`](https://github.com/openlearnbadges/openbadges-validator-v2) *(`MPL-2.0`, canonical body, `main` @ `774dc23ba857`, last commit `2026-01-28`)*: the independent judge, the same role `feyst/qti3-validator` plays in `P232-R3`. **Run it in CI against every assertion the issuer emits.**
+4. 🟡 **Type the payloads** — [`rollercoaster-dev/openbadges-types`](https://github.com/rollercoaster-dev/openbadges-types) *(`MIT`, `main` @ `4dfe36c45234`)*. 🔴 **THE TRAP: the repository is `3.2.3`; npm ships `4.0.0` against a monorepo that does not exist.** Pin the npm `4.0.0` artefact for its types **or** vendor the repository at `3.2.3` — **do not assume they agree**, and record which you chose.
+5. 🔴 **THE LICENCE CLAUSE THIS RECIPE LIVES OR DIES ON.** Two components are **`MPL-2.0`: weak copyleft with a PER-FILE source-availability obligation.** You may ship them inside a proprietary product **unmodified**; the moment you modify a covered file you must make **that file's** source available. 🟢 **The clean architecture is therefore mechanical: consume the bakery and validator as UNMODIFIED processes or packages, put every client-specific behaviour in your own `MIT` code around them, and never patch their files in place.** 🔴 **Also: the bakery declares `"MPL 2.0"` — not an SPDX identifier — at `LICENSE-MPL-2.0`, not `LICENSE`. An SPDX scanner in the client's pipeline will flag it as unknown. Pre-empt that in the SOW.**
+6. 🔵 **The one component you cannot have:** `@rollercoaster-dev/openbadges-core` is `dist/`-only with no retrievable source at any of five spellings. **Do not take a dependency on it.**
+
+### 🟢 `P233-R4` — the JVM reality check, as a pre-sales instrument *(2 days, any region)*
+
+🔴 **This is not a build. It is the two-day check that stops a mispriced proposal, and it exists because `ACTION TS` measured something clients assume is false.**
+
+**The assumption to test:** *"our stack is Java, so we will pull LTI 1.3 / QTI / OneRoster / Caliper from Maven."*
+
+1. 🔴 **The answer, measured from coordinates: you cannot.** The standards body's entire JVM presence under `org.` is **one artefact — `basiclti-util/`**, LTI 1.1-era. **No `caliper-java`, no LTI 1.3, no QTI, no OneRoster — and `org.1edtech` is not a groupId at all.** Independent corroboration of p230, which found the same reference implementations dead on GitHub under both org spellings.
+2. 🟢 **What IS there is the platform tier, and it resolves:** `org.sakaiproject`, `org.apereo` + `org.jasig` *(CAS, uPortal)*, `org.dspace`, `org.opencastproject`, `org.olat`, `org.fenixedu`, `org.kuali`. **All copyleft or consortium-governed.**
+3. 🔵 **Two build-file traps, same shape:** use **`org.olat`**, not `org.openolat`; use **`org.imsglobal`**, not `org.1edtech`. **A project renames its identity far faster than its coordinates.**
+4. 🟢 **So the architecture the two days should produce:** the standards adapter is **NOT** in the JVM platform. It sits beside it, speaking LTI/QTI/OneRoster over HTTP, implemented in the ecosystem that actually has permissive libraries — **Node (`lti-tool`, `lrnr-lti`), Go (`peregrine-lti`, `lti-go`, `go-qti`), PHP (`bnsoftware/lti-1p3-tool`), Python (`text2qti`)** — and the JVM platform integrates with it as a client. **`P233-R1` is that adapter.**
+5. 🔴 **Method caveat to carry into any repeat of this check: on `repo1.maven.org` a `404` can be a THROTTLE** *(measured: `200`, `404`-with-a-1-byte-body and `429` from the same url inside one minute)*. **Presence is provable there; absence is not.** Read one **namespace listing** and parse it offline rather than probing coordinates one at a time — `/maven2/org/` is a single `603 014`-byte response covering `4 798` groupIds.
+
+🟡 **Bound: `org.` only.** `edu.`, `com.`, `net.`, `de.`, `ch.`, `uk.`, `io.` are unread at this pass *(`ACTION TU`)*, so this check reports *"not established under `org.`"*, never *"does not exist"*.
+
+
 ## Pass 232 — 2026-10-16 — THE ASSESSMENT CHAIN IS NOW PERMISSIVE END TO END, THE `Ed-Fi` SPINE IS `Apache-2.0` END TO END, AND `P231-R2`'s IDENTITY ASSUMPTION IS CORRECTED
 
 🔵 **`4` recipes, every component verified live in this pass's window *(`git ls-remote` + first-hand grant)*, plus the standing list of names that must not enter a SOW.** 🔴 **`P231-R2` is SUPERSEDED by `P232-R1` on the strength of a source read, not a re-reading of a README.**

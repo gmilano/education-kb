@@ -1,0 +1,33 @@
+# p233 — every mandated query, and what it actually returned. Published because an informed gap
+# is information and silence looks exactly like coverage.
+#
+# THE SERIES NOW HAS A SIXTH POINT and it has stopped being news: region-shaped and
+# industry-shaped queries return REGULATION AND MARKET PROSE, which is intel, and ZERO granted
+# repositories, which is supply. p231's `TR231-1` measured this; p232 reproduced it; p233
+# reproduces it again. Every one of this pass's `5` rows came from a CHANNEL probe — a registry
+# tarball, a Maven listing, a task-shaped Ed-Fi query — and not one from a list of trending repos.
+query_shape	query_as_run	repositories_returned	granted_rows_new	what_it_DID_yield
+industry-shaped (mandated)	top open source AI agents education 2026 github MIT	0 education-specific	0	listicles and third-party star trackers. The named repos are general-purpose (microsoft/ai-agents-for-beginners, pguso/agents-from-scratch) — AI-ABOUT-education teaching material, not AI-FOR-education software. The distinction these shelves have drawn since p1
+industry-shaped (mandated)	github trending education AI 2026	0 education-specific	0	rohitg00/ai-engineering-from-scratch, karpathy's nn-zero-to-hero, D2L — again curricula ABOUT AI, not education software. One source's star figure was self-described as unverified
+vertical-shaped (mandated)	open source platform education ERP CRM student information system MIT Apache	1 already carried	0	OpenEduCat (LGPL-3.0, Odoo-based) and Kuali — BOTH already on these shelves, and NEITHER is MIT/Apache. The search's own summary states it could not find an MIT- or Apache-licensed education ERP. That is the ninth independent reproduction of this KB's central licence finding
+trend-shaped (mandated)	AI education industry trends 2026	0	0	market-research prose with estimates that do not agree: IMARC USD 6.4B for 2025 at 31.35% CAGR 2026-2034; another firm USD 8.3B for 2025; The Business Research Company USD 10.6B for 2026. Recorded as a RANGE in intel/market.md, never as a number
+region-shaped (mandated)	AI education North America 2026 adoption regulation players K-12 higher education	0	0	the richest REGIONAL intel of the four: Ohio's framework mandate by 2026-07-01, Idaho SB 1227 enacted, New York A 9190 pending, 28+ states with K-12 guidance, district AI training 24%→48%, student ChatGPT use 13%→26%, only 40% of districts with a policy by spring 2025. Canada and Mexico: NOTHING RETURNED
+region-shaped (mandated)	AI education EMEA 2026 adoption regulation players EU AI Act schools	0	0	regulation only — and TWO sources carrying the error `ACTION SH` watches for (see p233-sh-aiact). NO EMEA adoption statistics, NO ministry programmes, NO vendor list. The search's own summary says so
+region-shaped (mandated)	AI education APAC 2026 adoption regulation players India China Japan	0	0	governance prose: China's Interim AI Measures (in force 2023-08, registration + security review + content labelling), Japan light-touch/voluntary, India's framework still in progress with DPDPA full compliance 2027-05-13, Korea's AI Basic Act in force 2026-01-22. Education-SPECIFIC APAC data: NONE. Awareness figures (China 98%, Japan 94%) are consumer-survey awareness, NOT education adoption, and are not recorded as such
+region-shaped (mandated)	AI education LATAM 2026 adoption regulation players	0	0	the strongest LATAM source these shelves have had, and it is academic: a UNESCO IESALC / UNU-IAS working paper surveying 200 higher-education institutions across 19 countries, fielded 2025-08 to 2025-10, across five dimensions. Plus CENIA/ECLAC: regional public AI investment ~6x BELOW the global average. Still ZERO repositories
+task-shaped (p231's method, NOT mandated)	Ed-Fi API conformance test suite / conformance validation tests	4 probed	1	`ACTION TR` discharged. The method differential holds for a third pass
+channel probe (NOT a search)	npm `dist.tarball` unpack x6	3 recovered LIVE	3	`ACTION TP`. No search engine was involved
+channel probe (NOT a search)	repo1.maven.org directory listings	4798 groupIds enumerated	1 lead	`ACTION TS`. No search engine was involved
+#
+# DECLARED GAPS, stated explicitly per the standing instruction:
+# - LATAM: `0` open-source education repositories. SEVENTH consecutive probe, now having survived
+#   a GitHub sweep, a package-registry sweep (p232) and a Maven namespace enumeration (p233).
+#   The gap is not attributable to the channel any more. It is the finding.
+# - APAC: `0` repositories AND `0` education-specific adoption rates. Still the thinnest region here.
+# - EMEA: `0` repositories from the region-shaped query. The one EMEA-native artefact this pass
+#   found came from the MAVEN channel (org.fenixedu, Instituto Superior Tecnico, Lisbon), not from
+#   any search. That is a method finding about where non-US supply is visible.
+# - North America: `0` repositories from the region-shaped query; the one placed row this pass
+#   (DMS-pilot-testing-kit) was placed by its GRANT's copyright holder, not by a regional query.
+# - Canada and Mexico returned NOTHING inside the North America query. "North America" in these
+#   sources means the United States.

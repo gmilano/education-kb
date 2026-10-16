@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — `3` OF THE `6` PACKAGES p232 PUBLISHED AS **SOURCELESS** HAVE LIVE REPOSITORIES, AND THE DEFECT WAS THIS KB'S OWN PROBE DROPPING THE `-v4` AND `-v2` FROM NAMES THAT CONTAIN THEM
+
+⏱️ **SECOND pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC and is dated by its publication; this pass ran later on `2026-10-16`. Stated because these shelves pin SHAs and two passes sharing a date is exactly what a later pass reads as a contradiction.
+
+🔵 **`5` new rows *(`1` Apache-2.0, `2` MIT, `2` MPL-2.0 copyleft-flagged)*, `1` refused, `0` padded. `4` of the `5` registered actions discharged — `TO` on limb `2`, `TP` on limb `1` at `5` of `2`, `TR` on limb `1` qualified, `TS` on limb `1` — plus the standing `SH`, which fires for only the second time in its history. `TQ` is CARRIED, unrun, and said so.** 🟢 **`4 798` Maven groupIds enumerated in ONE request; the JVM education estate is no longer `UNMEASURED`.** 🔴 **`3` published cells overturned, all three p232's own. `2` defects found in this pass's instruments before publishing, and `1` whole instrument killed unpublished because its positive control failed.**
+
+🔵 **Evidence:** [`p233-to-source-read`](../evidence/p233-to-source-read.2026-10-16-p233.tsv) · [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv) · [`p233-maven-channel`](../evidence/p233-maven-channel.2026-10-16-p233.tsv) · [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv) · [`p233-tr-edfi`](../evidence/p233-tr-edfi.2026-10-16-p233.tsv) · [`p233-new-rows`](../evidence/p233-new-rows.2026-10-16-p233.tsv) · [`p233-queries`](../evidence/p233-queries.2026-10-16-p233.tsv) · [`p233-sh-aiact`](../evidence/p233-sh-aiact.2026-10-16-p233.tsv)
+
+### 🔴 `T233-A` — the headline: `ACTION TP` fires at `5` of `2`, and p232's "sourceless" was a probe defect in `3` of `6` cases
+
+p232's sharpest finding was that a package can be live, granted, actively released **and have no retrievable source**. `ACTION TP` asked whether the registry TARBALL — which carries its own `package.json` — recovers any of them. **It recovers most of them.**
+
+| package | p232 probed | p233 reads in the tarball | `ls-remote` | verdict |
+|---|---|---|---|---|
+| `npm:openbadges-bakery-v4` | `openlearnbadges/openbadges-bakery` | `openlearnbadges/openbadges-bakery-**v4**` | 🟢 **LIVE** | RECOVERED, full |
+| `npm:openbadges-validator-v2` | `openlearnbadges/openbadges-validator` | `openlearnbadges/openbadges-validator-**v2**` | 🟢 **LIVE** | RECOVERED, full |
+| `npm:openbadges-types` | `rollercoaster-dev/monorepo` ×2 spellings | *(same monorepo)* | 🔴 404 — **but `rollercoaster-dev/openbadges-types` is LIVE** | RECOVERED, predecessor only |
+| `npm:openbadges-ui` | `rollercoaster-dev/monorepo` ×2 | *(same)* | 🔴 404 | 🟡 **SOURCE-IN-TARBALL** — complete `src/` ships |
+| `npm:lti-1p3-ags` | `Tyru5/1EdTech-LTI-1-3` | *(same)* | 🔴 404, `4` spellings tried | 🟡 **SOURCE-IN-TARBALL** — `src/` + `LICENSE` + workflows |
+| `npm:@rollercoaster-dev/openbadges-core` | `rollercoaster-dev/monorepo` ×2 | *(same)* | 🔴 404, `5` spellings tried | 🔴 **GENUINELY SOURCELESS** — `dist/` only |
+
+🔴 **The mechanism, stated plainly because it is reusable: p232 dropped the `-v4` and `-v2` suffixes, which are part of the package name AND part of the repository name.** Its own table records `-` in the *second_spelling_tried* column for exactly those two rows — **the one case where it tried no second spelling is the case where the first substitution would have worked.** 🔵 **And for `openbadges-types` it tried the monorepo name twice and never tried THE PACKAGE'S OWN NAME, which resolves.** 🟡 **This is p229's truncation finding wearing different clothes: a name shortened by the harvester and published as an absence.**
+
+🟢 **What it buys: `ACTION TE`'s question — did anyone pick up Mozilla's withdrawn Open Badges line? — is now CLOSED WITH SOURCE.** Both continuations are real, both carry `MPL-2.0`, and the validator's grant is the canonical `16 726`-byte body. 🔴 **`MPL-2.0` is weak copyleft with a PER-FILE source-availability obligation — not permissive, and the row says so wherever it appears.**
+
+### 🔴 `T233-B` — `ACTION TO`: limb `1` falsified, limb `2` fires, and the guard every library gets wrong is a different one
+
+`TO` asked whether p232's `lti-go` finding is field-wide. **It is not — and the population is more useful than either limb anticipated.** Three libraries, read in source at pinned SHAs, on one claim:
+
+| library | `sub` parsed | `sub` validated | a launch with **no** `sub` | file and line |
+|---|---|---|---|---|
+| `marcgabe15/lti-go` *(MIT)* | yes | 🔴 **never** | 🔴 ACCEPTED | `launch.go:170-206` *(p232)* |
+| `stevenweathers/peregrine-lti` *(Apache-2.0)* | yes | 🟡 **length only, short-circuited** | 🔴 ACCEPTED | `launch/validations.go:107-109` |
+| `lti-tool/lti-tool` *(MIT)* | yes | 🟢 **REQUIRED** | 🟢 **REJECTED** | `baseJwtClaims.schema.ts:5` → `ltiTool.ts:267` |
+
+🟡 **peregrine's shape is the instructive one.** It *has* a `sub` check — `if lti1p3Claims.SUB != "" && (len(lti1p3Claims.SUB) > 255)` — and the `!= ""` conjunct means **an empty or absent subject skips the only check that exists.** Its `jwt.Parse` option list requires `deployment_id`, `message_type`, `version`, `target_link_uri`, `nonce`, `iss` and `aud`, and there is **no `jwt.WithRequiredClaim("sub")`**. Its suite covers the *too-long* sub and nothing covers the missing one.
+
+🟢 **And peregrine is not simply wrong: its own doc comment states the intent** — *"the platform may in these cases not include the sub claim… The tool must interpret the lack of a sub claim as a launch request coming from an anonymous user."* **Anonymous launch is a real LTI case.** 🔴 **The defect is that the caller cannot distinguish *deliberately anonymous* from *never checked*, and both arrive as `SUB == ""`.**
+
+🟢 **`lti-tool` is the reference implementation this register asked for.** `sub: z.string()` sits in `BaseJwtClaimsSchema`, extends into `LTI13JwtPayloadSchema`, and `.parse()` runs on the verified LMS JWT at `ltiTool.ts:267` — **step 5 of `verifyLaunch`, before the audience, target-link-uri and nonce checks.** A payload with no `sub` throws and the launch fails.
+
+🔴 **The residual neither limb asked for, and it is the one that changes the recipe: `z.string()` with no `.min(1)` accepts the EMPTY STRING.** So all three libraries accept `sub: ""`; they differ only on an *absent* one. **The guard an adapter must own is NON-EMPTY, not PRESENT.** 🔵 **Read, not executed — no zod was installed in this session; `ACTION TW` is registered to run it.**
+
+🟢 **The mandated control held: `lti-go`'s `launch.go:201` is `t.now().Sub(...)` — `time.Sub`, not the claim. Every grep this pass excluded `\.Sub\(`.**
+
+### 🟢 `T233-C` — `ACTION TS`: Maven Central is readable, and a `404` from it is not an absence
+
+🔴 **p232 recorded Maven Central as "DEAD from here". Half of that is wrong, and the wrong half is the useful one.** `repo1.maven.org` served **`200` with a full listing, `404` with a one-byte body, and `429` with a rate-limit message — for the SAME url, inside one minute.**
+
+🔵 **So this pass learns the mirror image of p232's own constraint:**
+
+> p232: **a `200` is not a READ** *(PyPI answers `200` with a bot challenge)*.
+> p233: **a `404` is not an ABSENCE** *(repo1.maven.org answers `404` when throttling)*.
+
+🔴 **The throttle-`404` is byte-identical to a real miss — the negative control exhausted exactly as the positive control did — so this channel can establish PRESENCE and CANNOT establish ABSENCE from this session.** Every Maven verdict on these shelves is now `PRESENT` or `NOT-ESTABLISHED`. The word *absent* is not available there.
+
+🟢 **A paced reader was built, and then KILLED UNPUBLISHED, because its own positive control failed.** `com/google/` — a `200` minutes earlier — exhausted eight retries. **An instrument whose positive control fails is not a measurement, so its `17`-path sweep was discarded rather than tabled as seventeen absences.** 🔴 **A second defect in this pass's first probe: it reused one output file, so a failed transfer left the previous body in place and three rows inherited Maven's `429` text while reporting `000`.** Both were caught before publishing.
+
+### 🟢 `T233-D` — the JVM education estate, measured: ONE legacy jar at the standards body
+
+🟢 **The economical instrument is not a per-groupId sweep — it is ONE listing read per namespace, parsed offline.** A single `603 014`-byte read of `/maven2/org/` enumerates **`4 798` groupIds**, and the education estate falls out of it with no further requests: `org.apereo`, `org.jasig`, `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.olat`, `org.fenixedu`, `org.kuali`, `org.kualigan`, `org.imsglobal`.
+
+🔴 **The headline, read first-hand from the `497`-byte `org/imsglobal/` listing: the standards body's entire JVM presence under `org.` is ONE artefact — `basiclti-util/`, the LTI 1.1-era utility.** No `caliper-java`, no LTI 1.3, no QTI, no OneRoster, under either spelling — **and `org.1edtech` is not there at all.**
+
+🟢 **This corroborates p230 from an independent direction.** p230's existence sweep found the Caliper reference implementations and the Open Badges reference server dead on GitHub under both org spellings; the Maven channel now says the Java reference line was never maintained into the 1EdTech era. 🔵 **Same shape at `org.olat`, which publishes under the PRE-rename groupId while `org.openolat` is absent — a rename moves a project's name far faster than its coordinates.**
+
+🟡 **The bound, because it is the whole honesty of the table: this is the `org.` NAMESPACE, not Maven Central.** `edu.`, `com.`, `net.`, `de.`, `ch.`, `uk.` and `io.` were not read — `ACTION TU`.
+
+### 🟢 `T233-E` — `ACTION TR`: there IS an executable Ed-Fi gate, and it is not a certification suite
+
+🟢 [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) — **`Apache-2.0`** *(canonical `11 357`-byte body)*, live at `d38b0f9af010`, *"Copyright (c) 2026 Ed-Fi Alliance, LLC and contributors"*. Its `smoke-test.sh` runs **through NGINX** so routing and TLS are exercised, and its documented steps are: a token, Discovery, a descriptor read, **a write and read-back, offset/limit AND cursor paging, a change-query extract, an ETag update plus a stale-ETag `412`, a deliberately invalid request**, and an assessment-style reference write — one `PASS`/`FAIL`/`SKIP` line per step, non-zero exit on failure.
+
+🟡 **That is a behavioural API-contract gate, which is what limb `1` asked for. It is NOT a conformance CERTIFICATION suite, which is what limb `2` warned about** — certification stays Alliance-administered, and a vendor badge reads *"tested against Ed-Fi API Suite 3, V5.3, 6.1, 7.3"*. 🔴 **An acceptance gate you can run now exists; a certificate you can self-issue does not. Those are different procurement facts and a SOW must separate them.** 🔵 **Read, not executed — the kit needs Docker and a running stack.**
+
+🟢 **The cheapest thing in it to port is the second instrument:** `init/check-edorgs-http.sh` *(`FR-EDORG-14`)* proves the five baseline `.http` requests have not drifted from `bootstrap/baseline-edorgs.json` — **pure text/JSON comparison, no network, no token, no database, runnable standalone.**
+
+### 🆕 Rows added by p233
+
+| row | licence | region | why it is here |
+|---|---|---|---|
+| [`openlearnbadges/openbadges-validator-v2`](https://github.com/openlearnbadges/openbadges-validator-v2) | 🔴 `MPL-2.0` *(weak copyleft, per-file)* | unplaced | the published continuation of Mozilla's withdrawn validator; canonical grant body read first-hand |
+| [`openlearnbadges/openbadges-bakery-v4`](https://github.com/openlearnbadges/openbadges-bakery-v4) | 🔴 `MPL-2.0` | unplaced | the baking half of the same line. 🔴 Grant at the NON-CANONICAL path `LICENSE-MPL-2.0`; manifest string `"MPL 2.0"` is not an SPDX id — two reasons a path-vocabulary harvester calls it grantless |
+| [`rollercoaster-dev/openbadges-types`](https://github.com/rollercoaster-dev/openbadges-types) | 🟢 `MIT` | unplaced | OB 2.0/3.0 TypeScript types. 🔴 **Repo is `3.2.3`, npm is `4.0.0`** — build against this and you build against the predecessor |
+| [`rollercoaster-dev/bun-badges`](https://github.com/rollercoaster-dev/bun-badges) | 🟡 `MIT` **by manifest only — no LICENSE file** | unplaced | an Open Badges **SERVER** on Bun + Hono, OB 2.0 + OB 3.0 with W3C VCs. 🔴 `0.0.2-alpha.0`, last commit `2025-04-14`. Do not price as a foundation |
+| [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) | 🟢 `Apache-2.0` | 🟢 **North America** | the executable Ed-Fi acceptance gate. **PLACED on its grant's own notice** — a named US standards organisation |
+
+🔴 **Refused: `npm:@rollercoaster-dev/openbadges-core` `0.1.3`** *(`MIT`)* — `dist/` only, `5` spellings `404`. **The one row of p232's six for which "sourceless" survives.**
+
+### 🔴 Gaps p233 leaves open, stated because silence looks like coverage
+
+- 🔴 **`ACTION TQ` was NOT RUN.** The retroactive holder-placement sweep across every `MIT`/`BSD`/`ISC` row is carried to p234 untouched. **What this pass did learn about placement is narrow and negative: `0` of `4` new permissive rows are placeable** — *"Rollercoaster Development"* is a company name with no stated jurisdiction, and `TQ`'s own rule is that a suffix places nothing. The one placement came from an `Apache-2.0` NOTICE, which is the licence class `TL` called structurally blind.
+- 🔴 **Region-shaped queries: `0` repositories, for a SIXTH consecutive pass**, across all four regions.
+- 🔴 **LATAM: `0` open-source education repositories** — now having survived a GitHub sweep, a registry sweep *(p232)* and a Maven enumeration *(p233)*.
+- 🔴 **APAC: `0` repositories and `0` education-specific adoption rates.** The thinnest region on these shelves.
+- 🟡 **`org.jxapi` returned `429` twice: `NOT-ESTABLISHED`, which after `T233-C` is explicitly not an absence.**
+- 🟡 **`org.kualigan` and `org.teachingkidsprogramming` are leads from the enumeration with no repository probed.**
+
+
 ## Pass 232 — 2026-10-16 — THE **PACKAGE REGISTRY** CHANNEL OPENS AND RETURNS `9` GRANTED ROWS THE REPOSITORY HARVESTER COULD NOT SEE, AND `6` PACKAGES THAT ARE LIVE, GRANTED AND HAVE **NO RETRIEVABLE SOURCE**
 
 ⏱️ **First pass of `2026-10-16`; every probe ran in the window `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC.** Stated because these shelves pin dates to disambiguate same-day passes, and this one crosses the boundary.

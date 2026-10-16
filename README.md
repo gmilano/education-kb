@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — `3` OF THE `6` "SOURCELESS" PACKAGES p232 PUBLISHED TWELVE HOURS EARLIER HAVE LIVE REPOSITORIES, AND MAVEN CENTRAL IS READABLE AFTER ALL — ITS `404` IS A THROTTLE
+
+⏱️ **SECOND pass of `2026-10-16`.** p232 ran earlier the same date *(probes `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC)*. Stated because these shelves pin SHAs and two passes sharing a date is what a later pass reads as a contradiction.
+
+🔵 **`5` new rows *(`1` Apache-2.0, `2` MIT, `2` MPL-2.0 copyleft-flagged)*, `1` refused, `0` padded, `1` row PLACED on first-hand stated evidence. `4` of `5` registered actions discharged — `TO` limb `2`, `TP` limb `1` at `5` of `2`, `TR` limb `1` qualified, `TS` limb `1` — plus the standing `SH`, which fired for only the second time in its history. `ACTION TQ` was NOT RUN and says so.** 🟢 **`4 798` Maven groupIds classified from ONE request.** 🔴 **`3` published cells overturned, all three p232's own. `2` instrument defects caught before publishing; `1` entire instrument killed unpublished.**
+
+### 🔴 The correction: this KB's own probe, not the registry, was the defect
+
+p232's sharpest finding was that a package can be live, granted, actively released **and have no retrievable source**. `ACTION TP` unpacked the registry tarballs. **Three of the six have live repositories, and two more ship their complete `src/` inside the package.** Exactly one is genuinely sourceless.
+
+🔴 **The mechanism, because it is reusable: p232 probed `openlearnbadges/openbadges-bakery` and `openlearnbadges/openbadges-validator` — dropping the `-v4` and `-v2` that are part of those names.** Its own table records `-` in the *second_spelling_tried* column for precisely those two rows: **the one case where it tried no second spelling is the case where one substitution would have worked.** And for `openbadges-types` it tried a monorepo name twice and never tried the package's own name, which resolves.
+
+🟢 **What it buys: `ACTION TE`'s question — did anyone pick up Mozilla's withdrawn Open Badges line? — closes WITH SOURCE**, and [`compose/patterns.md`](compose/patterns.md) `P233-R3` is the first Open Badges recipe this KB can propose with every component retrievable. 🔴 **Two of its components are `MPL-2.0` — weak copyleft with a per-file source obligation — and the recipe's architecture is built around not patching their files in place.**
+
+### 🔴 A `404` is not an absence, which is the exact mirror of p232's own constraint
+
+🔴 **`repo1.maven.org` served `200` with a full listing, `404` with a one-byte body, and `429` — for the SAME url, inside one minute.**
+
+> p232 learned: **a `200` is not a READ** *(PyPI answers `200` with a bot-challenge page)*.
+> p233 learns: **a `404` is not an ABSENCE** *(repo1.maven.org answers `404` when throttling)*.
+
+🟢 **So this channel establishes PRESENCE and cannot establish ABSENCE from this session.** 🔵 **And p232's "Maven Central is DEAD from here" is overturned twice: the listing is not `404`, and `search.maven.org`/`central.sonatype.com` are refused by this SESSION'S egress proxy — a session restriction, not a Maven outage.**
+
+🟢 **The discipline that caught it is the part worth keeping: a complete paced instrument was KILLED UNPUBLISHED when its own positive control failed.** Seventeen paths would have been tabled as seventeen absences. **Believe an instrument's silence only after a known positive.**
+
+### 🟢 The JVM education estate, measured: one legacy jar at the standards body
+
+🟢 **One `603 014`-byte read of `/maven2/org/` enumerates `4 798` groupIds, parsed offline with no further requests.** The education estate is exactly the historic Java tier — Apereo/Jasig, Sakai, DSpace, Opencast, OLAT, FenixEdu, Kuali — **all copyleft or consortium-governed.**
+
+🔴 **And the standards body's entire JVM presence under `org.` is ONE artefact: `basiclti-util/`, LTI 1.1-era.** No Caliper, no LTI 1.3, no QTI, no OneRoster; `org.1edtech` is not a groupId at all. 🟢 **Independent corroboration of p230's existence sweep from a channel that cannot be accused of GitHub bias.** 🔵 **Two rename artefacts of one shape: `org.olat` publishes and `org.openolat` does not; `org.imsglobal` publishes and `org.1edtech` does not — a project renames its identity far faster than its coordinates.** 🔴 **A JVM Ed-Fi/LTI/QTI scope is a BUILD, and `P233-R4` is the two-day pre-sales check that establishes it.**
+
+### 🟢 The identity tier has a reference implementation, and the guard everyone needs is a different one
+
+🟢 **`lti-tool/lti-tool` *(`MIT`)* REJECTS a launch with no `sub`** — schema-required, parsed at `ltiTool.ts:267` before the audience and nonce checks. 🔴 **`peregrine-lti` and `lti-go` both ACCEPT one.** 🔴 **But all three accept `sub: ""`**, so `P232-R1`'s guard is amended in `P233-R1`: **reject on NON-EMPTY, not on PRESENT.** 🟡 **peregrine's acceptance is deliberate — its doc comment invokes LTI's anonymous-launch case — and the real defect is that *anonymous* and *unchecked* arrive identically. The adapter needs two outcomes, not one rejection.**
+
+### 🟢 Ed-Fi gains a gate you can run before you sign
+
+🟢 [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) *(`Apache-2.0`)* drives a v8 stack through NGINX: token, Discovery, write and read-back, **both paging modes**, change queries, **ETag plus stale-ETag `412`**, an invalid request — `PASS`/`FAIL` per step. 🔴 **It is an ACCEPTANCE gate, not a CERTIFICATION suite; certification stays Alliance-administered and a SOW must separate them.** 🟢 **Its `check-edorgs-http.sh` fixture-drift gate needs no network, no token and no database — the cheapest thing on these shelves to port.**
+
+### 🔴 Declared gaps, stated because silence looks like coverage
+
+- 🔴 **`ACTION TQ` was NOT RUN.** The retroactive holder-placement sweep is carried to p234 untouched. What p233 learned is narrow and negative: **`0` of `4` new permissive rows are placeable** — *"Rollercoaster Development"* names no jurisdiction, and `TQ`'s own rule is that a suffix places nothing.
+- 🔴 **Region-shaped queries returned `0` repositories for a SIXTH consecutive pass**, across all four regions. 🟢 **The one EMEA-native artefact this pass found — `org.fenixedu`, Instituto Superior Técnico, Lisbon — came from MAVEN COORDINATES, not from any regional search. Non-US supply is visible in coordinates, not in regional queries.**
+- 🔴 **LATAM: `0` open-source education repositories**, now having survived a GitHub sweep, a registry sweep *(p232)* and a Maven enumeration *(p233)*. 🟢 **But the best LATAM source these shelves have had arrived: a UNESCO IESALC / UNU-IAS working paper surveying `200` higher-education institutions across `19` countries.**
+- 🔴 **APAC: `0` repositories and `0` education-specific adoption rates** — still the thinnest region here. The `98%`/`94%` figures in circulation are consumer AWARENESS, not education adoption, and are not recorded as such.
+- 🔴 **Canada and Mexico returned NOTHING inside the North America query.** "North America" in these sources means the United States.
+- 🔴 **Every AI Act date on these shelves is CORROBORATED-SECONDARY.** No pass has read the Official Journal, and the whole EMEA opportunity section is priced off `2027-12-02`. **`ACTION TX` is registered to fix exactly that.**
+- 🟡 **Maven `edu.`, `com.`, `net.`, `de.`, `ch.`, `uk.`, `io.` are unread** *(`ACTION TU`)*, and `org.jxapi` is `NOT-ESTABLISHED` after two `429`s.
+
+🔵 **Full register with falsifiers:** [`intel/open-gaps.md`](intel/open-gaps.md)
+
+
 ## Pass 232 — 2026-10-16 — THE **PACKAGE REGISTRY** CHANNEL OPENS: `9` GRANTED ROWS THE REPOSITORY HARVESTER NEVER SAW, AND `6` PACKAGES THAT ARE LIVE, GRANTED AND SOURCELESS
 
 ⏱️ **First pass of `2026-10-16`.** Probes ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC; the pass crosses the date boundary and is dated by its publication, because these shelves pin dates to disambiguate same-day passes.

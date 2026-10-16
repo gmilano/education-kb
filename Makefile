@@ -40,6 +40,8 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p230-prose-path-ladder (greedy slug, prose paths, the lazy-quantifier lint)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS"; \
+	echo "── p233-maven-channel   (the response classifier: a 404 is not an absence)"; \
+	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/dev/null && echo "   PASS"; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

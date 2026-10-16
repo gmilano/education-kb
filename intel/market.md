@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A SIXTH CONSECUTIVE PASS**, AND THE ONE EMEA-NATIVE ARTEFACT THIS PASS FOUND CAME FROM **MAVEN COORDINATES**, NOT FROM ANY SEARCH
+
+⏱️ **SECOND pass of `2026-10-16`.**
+
+🔵 **`4` region-shaped queries, `0` repositories, for a SIXTH consecutive pass. `1` row PLACED on first-hand stated evidence. `Regulation (EU) 2026/1744` identified by number. `4 798` Maven groupIds enumerated, which is where the one non-US artefact surfaced.**
+
+🔵 **Evidence:** [`p233-queries`](../evidence/p233-queries.2026-10-16-p233.tsv) · [`p233-sh-aiact`](../evidence/p233-sh-aiact.2026-10-16-p233.tsv) · [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv)
+
+### 🟢 `P233-M1` — the method finding: non-US supply is visible in COORDINATES, not in regional queries
+
+🔴 **Four region-shaped queries returned `0` repositories.** That series is now six passes long and it has stopped being news.
+
+🟢 **What IS new: the Maven namespace enumeration surfaced `org.fenixedu` — the academic-management stack built at Instituto Superior Técnico, Lisbon — which six passes of region-shaped queries never produced.** 🔵 **A package coordinate carries a publisher; a regional search carries vendor prose. If this KB wants non-US supply, it must read registries and repositories, not ask about regions.** 🟢 **`ACTION TU` extends this to `edu.`, `de.`, `ch.`, `uk.`, which is where European university output would sit if it exists.**
+
+### 🔴 `P233-M2` — the EU clock, and it now has an instrument number
+
+🟢 **`Regulation (EU) 2026/1744`** *(the Digital Omnibus on AI)* — OJ **`2026-07-24`**, in force **`2026-07-27`**, Parliament **`2026-06-16`**, Council **`2026-06-29`**. 🔵 **The last two match p230's finding exactly, from sources that did not have them.**
+
+| obligation | applies | moved? |
+|---|---|---|
+| 🔴 **Annex III pt 3 — EDUCATION and vocational training** | **`2027-12-02`** | 🟢 postponed from `2026-08-02` |
+| Annex I — AI in regulated products | `2028-08-02` | postponed from `2027-08-02` |
+| 🟢 **Article `50` transparency** | **`2026-08-02`** | 🔴 **NOT postponed — LIVE NOW** |
+| Art. `50` marking grace for systems already on market | `2026-12-02` | 🟡 single-sourced; **seven weeks out** |
+| Art. `5` prohibitions *(incl. emotion recognition in schools)* | `2025-02-02` | 🔴 never on the postponed track |
+
+🔴 **`ACTION SH` fired on two sources carrying the familiar error.** 🔴 **Every date above is CORROBORATED-SECONDARY — law-firm notes and compliance vendors, not the Official Journal. A client deliverable cites the OJ.**
+
+🟢 **The commercial read, unchanged in direction and now firmer: the education high-risk cliff is `2027-12-02`, which means an EMEA engagement starting now has a REAL runway — and Article `50` plus Article `5` are live TODAY, which means the same engagement has real obligations today.** 🔴 **Selling 2027 readiness while ignoring 2026 transparency is the mistake available here.**
+
+### 🔴 `P233-M3` — market size, recorded as a RANGE because the sources do not agree
+
+🔴 **IMARC: USD `6.4`B for 2025, `31.35%` CAGR 2026-2034. A second firm: USD `8.3`B for 2025. The Business Research Company: USD `10.6`B for 2026.** 🟡 **A `66%` spread on the same year. Recorded as a range, never as a number — the p232 rule.** 🔵 **Student usage is the one figure multiple sources converge on: `66%` (2024) → `92%` (2025) globally, and `88%` of students using generative AI specifically for assessments.** 🔴 **Both are secondary compilations and neither is primary.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The strongest regional intel this pass, and the only region with a PLACED row.** 🟢 [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) *(`Apache-2.0`)* is placed here on its grant's own notice — *"Copyright (c) 2026 Ed-Fi Alliance, LLC"* — and Ed-Fi is a US K-12 data standard by construction.
+
+🔵 **The policy window is OPEN and it is dated:** Ohio required every public, community and STEM school to adopt an AI framework by **`2026-07-01`**; Idaho's **SB 1227** is enacted; New York **A 9190** is pending and would restrict classroom AI to grade 9+; **28+ states plus DC** have issued K-12 guidance. 🔴 **But district AI training ran `24%` → `48%` while only `40%` of districts had an AI policy by spring 2025 — the mandate arrived before the capability.**
+
+🟢 **The sellable shape: a state or district framework-compliance engagement with the Ed-Fi acceptance gate as its technical spine.** The gate is runnable before a contract is signed, which is unusually good for a procurement conversation. 🔵 **Vendor pressure is real — Claude for Education, Gemini free for students through 2026, OpenAI's $50M university research commitment — so the differentiator is NOT the model. It is conformance, data governance and integration.**
+
+🔴 **Declared gap: Canada and Mexico returned NOTHING inside the North America query. "North America" in these sources means the United States, and this KB should stop pretending otherwise.**
+
+### EMEA
+
+🔴 **`0` repositories from the region-shaped query — and the one EMEA-native artefact came from Maven coordinates instead:** 🟢 **`org.fenixedu`**, Instituto Superior Técnico, Lisbon. 🔵 **Add `org.olat` *(OpenOLAT, Switzerland)*, which publishes under its pre-rename groupId.**
+
+🟢 **The clock is the opportunity.** Education high-risk lands **`2027-12-02`** *(Annex III pt 3, postponed by `Regulation (EU) 2026/1744`)*, so there is a genuine fourteen-month runway — **while Article `50` transparency is live since `2026-08-02` and the Article `5` ban on emotion recognition in schools has been live since `2025-02-02`.** 🔵 **p230's Article `27` finding still stands: deployers governed by public law — a state university is one — owe a Fundamental Rights Impact Assessment.**
+
+🟢 **The sellable shape: an AI Act readiness engagement with a dated two-track plan — Article `50`/`5` compliance NOW, Annex III evidence-building toward `2027-12-02`** — anchored on the national-profile capability this KB already carries *(`msaaqcom/nelc-xapi-php-sdk`, the Saudi `NELC` xAPI profile, from p232)*. 🔴 **No EMEA adoption statistics, no ministry programmes and no vendor list were obtainable; the searches' own summaries say so.**
+
+### APAC
+
+🔴 **The thinnest region on these shelves, and it stayed thin: `0` repositories AND `0` education-specific adoption rates.**
+
+🔵 **What IS available is governance, and it is dated:** China's Interim AI Measures in force since **`2023-08`** *(service registration, security review, content labelling, criminal exposure for non-compliance)*; Japan light-touch and voluntary; India's national framework still in progress with DPDPA full compliance **`2027-05-13`**; **Korea's AI Basic Act in force `2026-01-22`**. 🟡 **One 2026 legal update describes a risk-based regime allowing up to 18 months for legacy high-risk systems in health, education and finance but names no jurisdiction — NOT recorded as a fact.**
+
+🔴 **The two figures that look like adoption data are NOT: China `98%` and Japan `94%` are consumer AWARENESS from a nine-market survey, not education adoption.** They are named here only so a later pass does not promote them.
+
+🟢 **The sellable shape is therefore jurisdictional, not technical: a multi-jurisdiction compliance architecture where the labelling and registration obligations differ per country** — China's content labelling is the binding constraint and it is already live. 🔵 **Korea's Act, four months in force at this pass, is the freshest regulatory surface in any region and nobody's reference architecture has absorbed it yet.**
+
+### LATAM
+
+🔴 **`0` open-source education repositories — a SEVENTH consecutive probe, and the gap has now survived a GitHub sweep, a package-registry sweep *(p232)* and a Maven namespace enumeration *(p233)*. It is no longer attributable to the channel. It is the finding.**
+
+🟢 **But this pass found the best LATAM SOURCE these shelves have had, and it is academic rather than vendor:** a **UNESCO IESALC / UNU-IAS working paper surveying `200` higher-education institutions across `19` countries**, fielded `2025-08` to `2025-10`, across five dimensions — teaching, research, administration, governance and capacity. 🔵 **That is an institution-level baseline, which is exactly what a regional proposal has been missing.**
+
+🔴 **The structural constraint, measured: CENIA/ECLAC put regional public AI investment at roughly SIX TIMES BELOW the global average.** 🔴 **And no harmonised regional AI law exists — frameworks for privacy, consumer protection, labour and IP already bind AI deployments while AI-specific law is fragmented or absent, which raises cross-border normative inconsistency as a live risk.**
+
+🟢 **The sellable shape: institution-level AI governance and capability-building for universities, priced against the UNESCO IESALC baseline rather than against a market-size estimate** — because the investment gap means the buyer is an institution or a ministry, not a vendor budget. 🔵 **And since there is no regional open-source supply, a LATAM engagement imports the permissive standards layer this KB carries *(Node/Go/PHP/Python)* and localises it. That is a build, and it should be priced as one.**
+
+
 ## Pass 232 — 2026-10-16 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A FIFTH CONSECUTIVE PASS**, AND THIS PASS FINALLY PLACES TWO ROWS — BY READING THEIR **GRANTS**
 
 🔵 **`4` region-shaped queries → `0` repositories, a fifth consecutive reproduction. `9` new rows, of which `2` are PLACED on stated first-hand evidence — the first rows this KB has placed since the region field was introduced.** 🟢 **The EU clock was independently re-measured this pass and CORROBORATES these shelves rather than correcting them, plus one date they did not carry.**

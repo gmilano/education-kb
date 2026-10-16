@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — THE TREND IS A **CHANNEL** TREND: EVERY ROW THIS PASS CAME FROM A REGISTRY TARBALL, A MAVEN LISTING OR A TASK-SHAPED QUERY, AND **NONE** FROM A TRENDING LIST
+
+⏱️ **SECOND pass of `2026-10-16`.**
+
+🔵 **Evidence:** [`p233-queries`](../evidence/p233-queries.2026-10-16-p233.tsv) · [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv) · [`p233-maven-channel`](../evidence/p233-maven-channel.2026-10-16-p233.tsv) · [`p233-sh-aiact`](../evidence/p233-sh-aiact.2026-10-16-p233.tsv)
+
+### 🟢 `T233-1` — the standing trend, now with a sixth data point: THE CHANNEL IS THE FINDING
+
+| channel | passes run | granted rows yielded |
+|---|---|---|
+| 🔴 region-shaped query *(×4 regions)* | 6 consecutive | **`0`** |
+| 🔴 industry-shaped query *(trending, "top agents")* | p213-p222, p231-p233 | **`0`** |
+| 🟢 **task / capability / standard-shaped query** | p231, p232, p233 | **`7` + `9` + `1`** |
+| 🆕 🟢 **package-registry search** *(p232)* | 1 | **`9`** |
+| 🆕 🟢 **registry TARBALL unpack** *(p233)* | 1 | **`3` recovered + `2` source-only** |
+| 🆕 🟢 **package-repository directory listing** *(p233, Maven)* | 1 | `4 798` groupIds classified, `1` lead |
+
+🔵 **p132 learned the substitution once — the SIS tier was invisible until a probe named a CAPABILITY. A hundred passes later it is still the only thing that moves the row count, and the 2026-10 passes have extended it from the QUERY to the CHANNEL.** 🟢 **The generalisation: the supply in this industry is indexed by what it IMPLEMENTS, not by what it is ABOUT, and the places that index implementations are package registries and artefact repositories.**
+
+### 🔴 `T233-2` — the new instrument rule, and it is the exact mirror of p232's
+
+🔵 **p232: a `200` is not a READ** — PyPI answers `200` with a bot-challenge body.
+🔵 **p233: a `404` is not an ABSENCE** — `repo1.maven.org` answers `404`, with a one-byte body, when throttling.
+
+🔴 **Measured: `200`, `404` and `429` from the SAME url inside one minute. The throttle-`404` is byte-identical to a real miss, and the negative control exhausts exactly as the positive control does.** 🟢 **The durable consequence: on a rate-limited channel, PRESENCE is provable and ABSENCE is not.** Every Maven verdict here reads `PRESENT` or `NOT-ESTABLISHED`.
+
+🟢 **And the discipline that caught it: a whole paced instrument was KILLED UNPUBLISHED because its own positive control failed.** 🔵 **Seventeen paths would have been tabled as seventeen absences. Believe an instrument's silence only after a known positive — p230's lint lesson, reproduced in a different medium.**
+
+### 🔴 `T233-3` — availability and adoptability came apart in p232, and p233 partly puts them back
+
+🟢 **p232's "`6` live, granted, SOURCELESS packages" is now `1`.** Three have live repositories; two more ship complete `src/` in the tarball. 🔴 **The defect was this KB's probe — the `-v4`/`-v2` suffixes dropped from names that contain them, and the package's own name never tried as the repository name.**
+
+🟢 **The trend that survives, and it is the real one:** the publishing layer and the source layer in this field are **loosely coupled**. A package's registry metadata, its tarball metadata and its repository can all disagree, and the tarball is the most reliable of the three **because it ships with the code**. 🔴 **The `@timeback/*` family — `caliper`, `oneroster`, `qti`, `53`/`58`/`59` versions through `2026-09-25`, no licence, no repository, no homepage — remains the pure form: actively maintained, genuinely useful, unadoptable.**
+
+### 🔴 `T233-4` — the JVM is where this industry's past lives, and it is copyleft
+
+🟢 **Measured from coordinates rather than inferred: `4 798` groupIds under `org.`, and the education estate is exactly the historic Java tier** — Apereo/Jasig, Sakai, DSpace, Opencast, OLAT, FenixEdu, Kuali. **All copyleft or consortium-governed.**
+
+🔴 **The standards body holds ONE JVM artefact: `basiclti-util/`, LTI 1.1-era.** No Caliper, no LTI 1.3, no QTI, no OneRoster, and `org.1edtech` does not exist. 🟢 **Independent corroboration of p230's existence sweep, from a channel that cannot be accused of GitHub bias.**
+
+🔵 **Two rename artefacts, same shape, recorded as a pattern rather than two facts: `org.olat` publishes and `org.openolat` does not; `org.imsglobal` publishes and `org.1edtech` does not. A project renames its identity far faster than its coordinates** — and p230 found the same lag in repository addresses. 🟢 **Practical rule for a build file: use the OLD groupId.**
+
+### 🟡 `T233-5` — the identity-validation trend: three libraries, three different wrongs
+
+🟢 **`lti-tool/lti-tool` rejects a launch with no `sub`** *(schema-required, parsed before the audience and nonce checks)* — **the reference implementation for the identity tier.** 🔴 **`peregrine-lti` and `lti-go` accept one.**
+
+🔴 **The trend worth naming: all three accept `sub: ""`.** peregrine has a length check short-circuited by `!= ""`; `lti-tool`'s `z.string()` has no `.min(1)`; `lti-go` never looks. 🟢 **So the field's convergent defect is not *"nobody validates the subject"* — it is *"everybody conflates ABSENT with EMPTY"*, and in LTI those mean different things because anonymous launch is a legitimate case.** 🔵 **peregrine's doc comment proves the intent is deliberate. The gap is that the caller cannot tell *deliberately anonymous* from *never checked*.**
+
+### 🔴 `T233-6` — the regulatory trend: the education cliff moved, and the transparency floor did not
+
+🟢 **`Regulation (EU) 2026/1744` postponed Annex III point `3` — education — to `2027-12-02`.** 🔴 **Article `50` transparency was NOT postponed and is live since `2026-08-02`; the Article `5` school emotion-recognition ban has been live since `2025-02-02`.**
+
+🔵 **The trend inside the trend: the error keeps reproducing because `2026-08-02` IS a real AI Act date and IS when most of the regulation applied.** A writer who summarises the Act correctly in general gets education wrong in particular — which is why `ACTION SH` stays standing and has now paid out twice. 🔴 **Every date on these shelves is CORROBORATED-SECONDARY. No pass has yet read the Official Journal.**
+
+
 ## Pass 232 — 2026-10-16 — THE TREND IS THAT THIS INDUSTRY'S CODE SHIPS TO **PACKAGE REGISTRIES**, AND A REGISTRY RECORD OUTLIVES THE REPOSITORY IT NAMES
 
 🔵 **The nineteenth consecutive unit-mismatch headline, and this pass's unit is the ARTEFACT versus the REPOSITORY.** 🟢 **`146` artefacts classified across `4` registries; `9` granted rows the repository-shaped harvester had never surfaced; `6` granted packages whose repositories do not exist.**

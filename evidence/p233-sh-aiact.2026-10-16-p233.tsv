@@ -1,0 +1,35 @@
+# p233 — `ACTION SH` (standing since p226) fires for the SECOND time in its history, on the same
+# claim and through the mandated EMEA query. SH watches for sources asserting that the EU AI Act's
+# EDUCATION high-risk obligations took effect in August 2026.
+#
+# p230 found this error twice and corrected it: Annex III point `3` (education and vocational
+# training) applies `2027-12-02`; `2026-08-02` is Article `50` transparency, a DIFFERENT obligation,
+# and that one IS live. p230 cited European Parliament `2026-06-16` and Council `2026-06-29`.
+#
+# p233 UPGRADES that record rather than restating it — the instrument now has a NUMBER:
+# the Digital Omnibus on AI is **Regulation (EU) 2026/1744**, published in the Official Journal
+# `2026-07-24`, in force `2026-07-27`; Parliament endorsed `2026-06-16`, Council adopted
+# `2026-06-29` — matching p230's two dates exactly, from sources that did not have them.
+#
+# 🔴 PROVENANCE CAVEAT THAT MUST TRAVEL WITH THIS ROW: every source below is SECONDARY — law-firm
+# notes, compliance vendors and commentary blogs. NONE is the Official Journal text. These shelves
+# have now been burned once by secondary regulatory prose; the dates are recorded as
+# CORROBORATED-SECONDARY, not as read-from-primary. A client deliverable cites the OJ, not this file.
+date_axis	value_p233_records	status	sources_agree	note
+Annex III high-risk (incl. EDUCATION, Annex III pt 3)	2027-12-02	POSTPONED from 2026-08-02	multiple, consistent	the date that matters for every education engagement. p230's finding stands, now with an instrument number
+Annex I high-risk (AI embedded in regulated products)	2028-08-02	POSTPONED from 2027-08-02	consistent	not education-facing; recorded to stop a later pass conflating the two postponements
+Article 50 transparency	2026-08-02	NOT POSTPONED — LIVE	consistent	this is the obligation that genuinely bit in August 2026, and it is the one the error below mistakes for the other
+Art. 50 marking grace period for systems already on the market	2026-12-02	live, expiring	one source	SINGLE-SOURCED. Recorded as such. Seven weeks out from this pass
+instrument	Regulation (EU) 2026/1744	adopted	consistent	OJ 2026-07-24, in force 2026-07-27
+#
+# THE HITS, through the mandated EMEA query:
+source	claim_as_published	verdict	why
+tecnicadellascuola.it	"AI Act applicabile dal 2 agosto 2026" — and that education systems fall under high-risk, so schools must be ready and teachers trained	🔴 REFUTED for the EDUCATION clause	conflates general applicability with the Annex III point 3 obligations, which moved to 2027-12-02. The ARTICLE 50 half of its claim is correct
+rockinst.org "EU AI and Higher Education" PDF	first compliance deadlines "start in summer 2026" for higher education	🟡 CANNOT BE EVIDENCE EITHER WAY	the file path dates it 2025/11 — it PREDATES Regulation (EU) 2026/1744 by eight months. This is a provenance observation, not a correction of its authors: a November 2025 document cannot speak to a June 2026 amendment. A later pass must not record it as a refuted source
+maldita.es	the Act bans emotion-recognition in schools and imposes duties on admissions, grading and proctoring; schools as DEPLOYERS carry their own duties	🟢 SUBSTANTIVELY CORRECT, no date error found	the emotion-recognition prohibition is an Article 5 prohibition and has been live since 2025-02-02 — it was NEVER on the postponed track. The deployer point corroborates p230's Article 27 FRIA finding for public-law institutions
+openeducat.org	"most schools still in pilot or pre-compliance mode because the phased rollout runs through 2026-2027"	🟢 CONSISTENT with the postponement	a vendor blog, and its retention figures are unsourced and NOT recorded; this particular claim happens to be right
+#
+# WHY SH KEEPS PAYING OUT: the error is structurally attractive. `2026-08-02` IS a real AI Act
+# date, and it IS the date most of the regulation became applicable. The education-specific carve
+# is the exception, not the rule, so a writer summarising the Act correctly in general gets
+# education wrong in particular. SH stays standing.

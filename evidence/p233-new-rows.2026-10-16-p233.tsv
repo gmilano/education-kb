@@ -1,0 +1,25 @@
+# p233 — the rows added, every one existence-checked on `git ls-remote` and grant-read first-hand
+# in this pass's window (2026-10-16, SECOND pass of this date). The `ACTION TH` constraint is
+# honoured: every row carries a last-seen date and a HEAD sha.
+#
+# `5` new rows. `3` of them are RECOVERIES of addresses p232 published as unretrievable, which is
+# why this pass's row count is not a discovery count: nothing here was found by a trending list.
+# `0` padded. `1` refused.
+#
+# CONTROLS re-run in the same window: HKUDS/DeepTutor → LIVE (positive), 1EdTech/caliper-java →
+# 404 (negative, p230's established absence, unchanged).
+repository	licence	licence_evidence	region	placement_basis	category	last_seen	head_sha	one_line	caveat_that_must_travel_with_the_row
+openlearnbadges/openbadges-validator-v2	MPL-2.0 — WEAK COPYLEFT, FILE-LEVEL	canonical MPL-2.0 body, 16726 B, at main/LICENSE	unplaced	no holder named in the grant	Open Badges / validation	2026-10-16, main @ 774dc23ba857	the published continuation of Mozilla's withdrawn openbadges-validator; `ACTION TE`'s p231 hunt closes here, with source	MPL-2.0 carries a PER-FILE source-availability obligation. It is not permissive and it is not GPL — a modified file must be offered in source. Last commit 2026-01-28
+openlearnbadges/openbadges-bakery-v4	MPL-2.0 — WEAK COPYLEFT, FILE-LEVEL	LICENSE-MPL-2.0 at root; package.json license field is the NON-SPDX string "MPL 2.0"	unplaced	no holder named in the grant	Open Badges / baking	2026-10-16, main @ 395e580fdd07	the published continuation of Mozilla's withdrawn openbadges-bakery	same MPL obligation. The grant sits at a NON-CANONICAL path (`LICENSE-MPL-2.0`) and the manifest string is not an SPDX identifier — two reasons a path-vocabulary harvester would call this row grantless. Last commit 2025-12-18
+rollercoaster-dev/openbadges-types	MIT	LICENSE: "MIT License / Copyright (c) 2025 Rollercoaster Development"	unplaced	a company name with NO stated jurisdiction places nothing — `ACTION TQ`'s rule, honoured	Open Badges / types	2026-10-16, main @ 4dfe36c45234	Open Badges 2.0/3.0 TypeScript types with Verifiable-Credentials vocabulary	THE VERSION GAP IS THE ROW'S MAIN FACT: the repository is at 3.2.3 and the npm release is 4.0.0, which names a monorepo that does not exist. Build against this and you are building against the PREDECESSOR. Last commit 2025-04-28
+rollercoaster-dev/bun-badges	MIT — BY MANIFEST ONLY	package.json `"license": "MIT"`. NO LICENSE FILE AT ROOT — the grant body is ABSENT	unplaced	-	Open Badges / SERVER	2026-10-16, main @ 3546ff2532cc	an Open Badges SERVER on Bun + Hono, claiming OB 2.0 AND OB 3.0 with W3C Verifiable Credentials and backward compatibility	TWO flags. (1) `0.0.2-alpha.0` and last commit 2025-04-14 — eighteen months stale at this pass. (2) grant-by-manifest, which p217 established is a DIFFERENT state from a grant body; a client's counsel will ask for the file. Do not price this as a foundation
+Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit	Apache-2.0	canonical body, 11357 B, at main/LICENSE	North America	PLACED: the grant's own notice reads "Copyright (c) 2026 Ed-Fi Alliance, LLC and contributors" — a named US standards organisation, and Ed-Fi is a US K-12 data standard by construction	Ed-Fi / executable acceptance gate	2026-10-16, main @ d38b0f9af010	a Docker Compose Ed-Fi API v8 pilot stack plus a non-interactive PASS/FAIL smoke gate that exercises token, Discovery, write/read-back, both paging modes, change queries, ETag and stale-ETag 412, through NGINX	it is an ACCEPTANCE gate, not a CERTIFICATION suite. Read, NOT executed — it needs Docker and a running stack. Its slug and its self-title differ (see p233-tr-edfi)
+#
+# REFUSED this pass, and why — the refusal is the measurement:
+# npm:@rollercoaster-dev/openbadges-core 0.1.3, MIT — the tarball ships `dist/` ONLY (8 files,
+# built output, no src/) and all five repository spellings are 404. Live, granted, and genuinely
+# sourceless. This is the ONE row of p232's six for which "sourceless" survives `ACTION TP`.
+#
+# LEADS NOT PUBLISHED AS ROWS, recorded so they are not re-found: org.kualigan and
+# org.teachingkidsprogramming (present in the Maven org/ enumeration, no repository probed);
+# org.jxapi (listing 429, NOT-ESTABLISHED).

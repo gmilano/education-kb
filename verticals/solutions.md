@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — THE VERTICAL PLATFORM TIER IS CONFIRMED COPYLEFT FOR A **NINTH** TIME, NOW FROM MAVEN COORDINATES RATHER THAN FROM GITHUB
+
+⏱️ **SECOND pass of `2026-10-16`.**
+
+🔵 **`0` new platform rows. `1` already-carried platform re-confirmed by the mandated vertical query, `4 798` Maven groupIds enumerated. Published as a measurement rather than padded — the NINTH consecutive pass to do so.**
+
+🔵 **Evidence:** [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv) · [`p233-queries`](../evidence/p233-queries.2026-10-16-p233.tsv)
+
+### 🔴 `V233-1` — the mandated vertical query answered the licence question itself
+
+The query was *"open source platform education ERP CRM student information system MIT Apache"*. 🔴 **It returned `0` MIT- or Apache-licensed education platforms, and the search's own summary says so in as many words.**
+
+| platform | licence | status here |
+|---|---|---|
+| **OpenEduCat** | 🔴 `LGPL-3.0` *(on the Odoo framework)* | already carried — education ERP with enrolment CRM, student information, admissions pipeline |
+| **Kuali** | institution-governed consortium | already carried — ERP, SIS and research administration, and 🟢 **present on Maven as `org.kuali` + `org.kualigan`** |
+
+🟢 **This is the ninth independent reproduction of the finding this KB is built on: the platform tier in education is copyleft or consortium-governed, and the permissive layer is STANDARDS AND INTEGRATION.** 🔵 **That is not a disappointment — integration is where the revenue is, and a `GPL`/`LGPL` platform you integrate with is a client asset, not a licence problem. The licence problem starts when you DISTRIBUTE a derivative.**
+
+### 🟢 `V233-2` — the customisable-platform map gains a JVM column, read from coordinates
+
+🟢 **Every vertical platform worth customising with AI on top, now cross-checked against the Maven `org.` namespace** — the channel p232 had to declare unmeasured:
+
+| platform | ecosystem | on Maven `org.`? | AI-on-top posture |
+|---|---|---|---|
+| **Moodle** | PHP | 🔴 no — **expected** | the LMS to attach to; its plugin and `version.php` conventions are already mapped on these shelves |
+| **Open edX** | Python | 🔴 no — **expected** | XBlock remains the integration seam |
+| **Sakai** | 🟢 **JVM** | 🟢 `org.sakaiproject` | a real Maven-resolvable integration surface |
+| **OpenOLAT** | 🟢 **JVM** | 🟢 `org.olat` — 🔴 **NOT** `org.openolat` | the rename never reached the coordinates; a build file must use the old groupId |
+| **DSpace** | 🟢 **JVM** | 🟢 `org.dspace` | institutional repository — the research-output seam |
+| **Opencast** | 🟢 **JVM** | 🟢 `org.opencastproject` | lecture capture — the media seam for transcription and search. 🔵 p230: the repository MOVED to `opencast/opencast`, the coordinates did not |
+| **CAS / uPortal** | 🟢 **JVM** | 🟢 `org.apereo` + `org.jasig` | the identity seam, and both namespaces publish |
+| **FenixEdu** | 🟢 **JVM** | 🟢 `org.fenixedu` | 🟢 **the one natively EMEA platform on this map** — academic management built at Instituto Superior Técnico, Lisbon |
+| **TAO** | PHP | 🔴 no — **expected** | assessment; the `oat-sa` estate is `GPL-2.0-only` throughout *(p222)* |
+| **OpenEduCat** | Python/Odoo | 🔴 no — **expected** | `LGPL-3.0` ERP |
+
+🔴 **And the standards body, which is the row that matters: `org.imsglobal` holds exactly ONE artefact, `basiclti-util/`.** A client expecting to `pom.xml` their way to LTI 1.3, QTI or OneRoster on the JVM **cannot**. 🔵 **The permissive standards implementations this KB carries are Node, Go, PHP and Python — `lti-tool`, `lrnr-lti`, `peregrine-lti`, `lti-go`, `bnsoftware/lti-1p3-tool`, `go-qti`, `text2qti`, `feyst/qti3-validator`.**
+
+🟢 **The practical consequence for a vertical engagement: the AI layer does NOT go in the JVM platform. It goes beside it, speaking the standard, in the ecosystem that actually has permissive implementations** — which is exactly the shape `P233-R1` and `P233-R2` sell.
+
+
 ## Pass 232 — 2026-10-16 — THE `Ed-Fi` DATA STANDARD ENTERS THIS SHELF AS THE ONLY **`Apache-2.0` PLATFORM-SCALE** ESTATE IN EDUCATION, AND THE `TAO` ASSESSMENT ESTATE ENTERS FLAGGED
 
 🔵 **`2` platform entries added, both verified live this pass. The `no-permissive-platform` finding is CONFIRMED for a ninth consecutive pass — and now has an exception that is not an LMS.**

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 233 — 2026-10-16 — THE FOUNDATION TIER GAINS AN **EXECUTABLE ACCEPTANCE GATE**, AND THE JVM HALF OF THIS INDUSTRY TURNS OUT TO BE ONE LEGACY JAR AT THE STANDARDS BODY
+
+⏱️ **SECOND pass of `2026-10-16`.**
+
+🔵 **`5` rows added across the shelves; `2` of them are foundation-tier. `4 798` Maven groupIds enumerated in ONE request, closing p232's `UNMEASURED` declaration for the `org.` namespace.**
+
+🔵 **Evidence:** [`p233-maven-org-census`](../evidence/p233-maven-org-census.2026-10-16-p233.tsv) · [`p233-tr-edfi`](../evidence/p233-tr-edfi.2026-10-16-p233.tsv) · [`p233-tp-tarball-recovery`](../evidence/p233-tp-tarball-recovery.2026-10-16-p233.tsv)
+
+### 🟢 `F233-1` — the new foundation row: a gate you can run before you sign
+
+| repository | licence | what it gives a foundation | the caveat |
+|---|---|---|---|
+| [`Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit`](https://github.com/Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit) | 🟢 **Apache-2.0**, canonical `11 357`-byte body, `main` @ `d38b0f9af010` | a Docker Compose **Ed-Fi API v8 (DMS)** stack AND a non-interactive `PASS`/`FAIL` gate that drives it through NGINX: token, Discovery, descriptor read, **write and read-back, offset/limit AND cursor paging, change-query extract, ETag update plus stale-ETag `412`**, a deliberately invalid request, and an assessment-style reference write | 🔴 it is an **acceptance** gate, not a **certification** suite. 🔵 Read, not executed — needs Docker and a live stack |
+
+🟢 **The cheapest component in it to port, and it needs nothing:** `init/check-edorgs-http.sh` *(`FR-EDORG-14`)* — proves the five baseline `.http` requests have not drifted from `bootstrap/baseline-edorgs.json`, the single source of truth both the bootstrap and the request file read. **Pure text/JSON comparison. No network, no token, no database, runnable standalone.** That is a fixture-drift gate any integration project can adopt in an afternoon.
+
+### 🔴 `F233-2` — the JVM foundation, measured: there isn't one
+
+🟢 **One `603 014`-byte read of `/maven2/org/` enumerates `4 798` groupIds, parsed offline.** The education estate is exactly the historic Java tier — `org.apereo`/`org.jasig` *(CAS, uPortal)*, `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.olat`, `org.fenixedu`, `org.kuali` — **and all of it is copyleft or institution-governed, none of it `MIT`/`Apache` library code you can build a product on.**
+
+🔴 **The standards body's entire JVM presence under `org.` is ONE artefact: `basiclti-util/`.** LTI 1.1-era. No `caliper-java`, no LTI 1.3, no QTI, no OneRoster, and `org.1edtech` does not exist as a groupId at all.
+
+🟢 **So the ninth independent reproduction of this KB's central licence finding, now from a channel that cannot be accused of GitHub bias: there is no `MIT`/`Apache` LMS or SIS in this industry, and on the JVM there is no permissive standards layer either.** 🔵 **The permissive supply is Node, Go, PHP and Python — which is where every row this pass added lives.** 🔴 **A JVM Ed-Fi/LTI/QTI scope is a BUILD. Price it as one.**
+
+🟡 **Bound: the `org.` NAMESPACE only.** `edu.`, `com.`, `net.`, `de.`, `ch.`, `uk.`, `io.` unread *(`ACTION TU`)*. 🔴 **And after `T233-C`, absence on this channel is not establishable at all — only presence.**
+
+### 🟢 `F233-3` — the Open Badges foundation is retrievable again, with two licence flags
+
+🟢 **p230 recorded the Open Badges reference server as DEAD. p231's `ACTION TE` went looking for a successor and found the Mozilla line withdrawn. p233 closes it with source:**
+
+- [`openlearnbadges/openbadges-validator-v2`](https://github.com/openlearnbadges/openbadges-validator-v2) — 🔴 **`MPL-2.0`**, canonical `16 726`-byte body, `main` @ `774dc23ba857`, last commit `2026-01-28`.
+- [`openlearnbadges/openbadges-bakery-v4`](https://github.com/openlearnbadges/openbadges-bakery-v4) — 🔴 **`MPL-2.0`**, `main` @ `395e580fdd07`, last commit `2025-12-18`.
+- [`rollercoaster-dev/bun-badges`](https://github.com/rollercoaster-dev/bun-badges) — 🟡 **`MIT` by manifest only**, an OB 2.0 **and** 3.0 issuing server with W3C Verifiable Credentials. 🔴 `0.0.2-alpha.0`, stale since `2025-04-14`.
+
+🔴 **Three flags a proposal must carry.** **(1)** `MPL-2.0` is weak copyleft with a **per-file source-availability obligation** — modify a file and you must offer that file's source. It is neither permissive nor GPL, and the bakery states it as the non-SPDX string `"MPL 2.0"` at the non-canonical path `LICENSE-MPL-2.0`. **(2)** `bun-badges` has **no LICENSE file at all** — `MIT` is a manifest claim, which p217 established is a different state from a grant body, and counsel will ask for the file. **(3)** The badge TYPES package is the trap: the repository is `3.2.3` while npm ships `4.0.0` against a monorepo that does not exist. **Building on the repo means building on the predecessor.**
+
+
 ## Pass 232 — 2026-10-16 — THE `Ed-Fi` CLAUSE CLOSES WITH A NINE-REPOSITORY `Apache-2.0` ESTATE, AND THE PERMISSIVE LAYER OF THIS INDUSTRY IS CONFIRMED TO BE THE **STANDARDS LAYER**, NOT THE PLATFORM LAYER
 
 🔵 **`4` rows added to the foundation tier, `3` of them the `Ed-Fi` core this KB had declared missing, all `Apache-2.0`, all grants read first-hand. `9` of `9` `Ed-Fi` addresses resolve on `git ls-remote`.**

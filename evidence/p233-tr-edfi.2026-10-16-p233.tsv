@@ -1,0 +1,30 @@
+# p233 — ACTION TR, discharged. Limb `1` FIRES at `1`, in a QUALIFIED form that keeps limb `2`'s
+# substance. TR asked for "a granted, resolving repository that TESTS an implementation against
+# Ed-Fi conformance" — the one clause of `ACTION TM` p232 did not test.
+#
+# PROBE SHAPE, honouring p231's `TR231-1`: task-shaped, never industry-shaped.
+#   "Ed-Fi API conformance test suite open source github"
+#   "Ed-Fi conformance validation tests Apache Data-Management-Service OR ODS-API integration tests"
+#
+# NOTHING BELOW WAS EXECUTED. The kit requires Docker and a running stack; its scripts were READ.
+repository	ls_remote	head_sha	licence_read_first_hand	copyright_holder_stated	what_it_actually_does	conformance_verdict	already_carried
+Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit	LIVE	d38b0f9af010259de5ee692f2f0b19ebd47c45d6	Apache-2.0, canonical body 11357 B at main/LICENSE	"Copyright (c) 2026 Ed-Fi Alliance, LLC and contributors"	A Docker Compose pilot environment for Ed-Fi API v8 (DMS) PLUS a non-interactive executable acceptance gate. smoke-test.sh runs init/smoke-test.sh in the tools container THROUGH NGINX, so routing and TLS are exercised, not just DMS directly. Its own documented steps: obtain a token, Discovery, a descriptor read, a write and read-back, offset/limit AND cursor paging, a change-query extract, an ETag update plus a stale-ETag 412, a deliberately invalid request, and an assessment-style reference write. One PASS/FAIL/SKIP line per step, non-zero exit on any failure	BEHAVIOURAL API-CONTRACT GATE — YES. CERTIFICATION SUITE — NO	NO — new row
+Ed-Fi-Alliance-OSS/Data-Management-Service	LIVE	a0afbf4d71a984df9e2471ec1676191ffde962d4	Apache-2.0, canonical body 11357 B	Ed-Fi Alliance	the Ed-Fi API v8 implementation itself, successor to the ODS/API	not a test suite — it is the SUBJECT a suite would test	YES (5 files)
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	LIVE	e453cd2cad8a0653c65453948d3d235aec7c517c	Apache-2.0, canonical body 10172 B at main/LICENSE.txt	Ed-Fi Alliance	ODS/API v7.x core. Ed-Fi API v8+ moved to Data-Management-Service	hosts the Postman integration collections per Ed-Fi docs, run against EdFi.Ods.Api.IntegrationTestHarness — NOT probed in source this pass	PARTIAL, UNREAD — a declared follow-up	YES (8 files)
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards	LIVE	608546c95c924237b869e0f827c7c4d395cb4bdb	Apache-2.0, canonical body 11357 B	Ed-Fi Alliance	README title is "Ed-Fi API Specifications" — the repository is an ALIAS of a renamed project, the p224/p225 shape again	a SPECIFICATION, not a test suite — p232's reading confirmed	YES
+#
+# ALSO WORTH THE ROW IT DOES NOT GET YET: Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit's README titles
+# itself `Ed-Fi-API-v8-pilot-testing-kit` and its OpenSSF badge points at
+# Ed-Fi-Exchange-OSS/Ed-Fi-API-v8-pilot-testing-kit. The slug that resolves and the name the
+# project calls itself DIFFER — another alias, recorded so no later pass reads them as two repos.
+#
+# THE SECOND INSTRUMENT IN THE KIT, which is the part a proposal can actually reuse:
+# init/check-edorgs-http.sh (FR-EDORG-14) proves http/edorgs.http's five baseline requests have not
+# drifted from bootstrap/baseline-edorgs.json — the single source of truth both the bootstrap and
+# the .http file read. Pure text/JSON comparison, NO network, NO token, NO database, runnable
+# standalone. That is a fixture-drift gate, and it is the cheapest thing on these shelves to port.
+#
+# WHAT LIMB `2` STILL OWNS, and it must be said in a SOW before it is priced: Ed-Fi conformance
+# CERTIFICATION is Alliance-administered, not a repository. Vendors publish badges of the form
+# "tested against Ed-Fi API Suite 3, V5.3, 6.1, 7.3". An acceptance gate you can run is now
+# available; a certificate you can self-issue is not. Those are different procurement facts.
