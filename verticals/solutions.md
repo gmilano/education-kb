@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — A PLATFORM THIS SHELF NEVER LISTED HAS BEEN **SWITCHED OFF**, AND THE REPLACEMENT MAP IS A COPYLEFT INCUMBENT PLUS TWO PERMISSIVE PROJECTS WITH `1` STAR BETWEEN THEM
+
+🔴 **GitHub Classroom was decommissioned on `2026-08-28`.** It is the platform on which a large share of the world's university CS coursework was distributed and auto-graded, and 🔴 **this shelf never carried it** — because it was hosted, not installable, and this file lists systems you can stand up.
+
+🔵 **Evidence:** [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv)
+
+### 🟡 The gap this exposes in the shelf's own selection rule
+
+🔵 **This file's rule — *"real systems that can be customized"* — silently excluded every hosted platform, so when one was withdrawn there was no cell to correct.** The platform's absence from the shelf was indistinguishable from the platform not mattering. 🟡 **`ACTION UO`: a hosted platform that an installable row exists *to replace* belongs on this shelf as a `WITHDRAWN` row, precisely so its withdrawal has somewhere to land.** Discharged for this one below.
+
+### 🔴 `WITHDRAWN` — GitHub Classroom
+
+| platform | status | first-hand evidence | what it leaves behind |
+|---|---|---|---|
+| **GitHub Classroom** *(hosted)* | 🔴 **DECOMMISSIONED `2026-08-28`**; sign-ups closed `2026-05-26` | 🟢 [`github/gh-classroom`](https://github.com/github/gh-classroom), the official CLI extension, returns 🔴 **`archived: true`** on the REST channel, as do `3` of the `12` `classroom-resources` repositories. 🔴 The announcement page itself is **not readable from this session** — `github.blog` does not resolve — so this cell rests on the `archived` flags, not on a quote. | Repositories and accounts survive. 🔴 **Classroom-only data does not**: assignment names, tests defined outside repositories, and LTI-integrated rosters are reported deleted. |
+
+### 🟢 The installable replacement map, read at the grant
+
+| platform | grant | ★ | stands up as | the constraint a studio must price in |
+|---|---|---|---|---|
+| [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **`GPL-3.0`** *(`LICENSE` + `README` §License, both read)* | **215** | 🟢 **No server and no database of its own** — static site on GitHub Pages, `gh teacher` / `gh student` CLI extensions, assignments and scores live in the teacher's GitHub org, grading runs in GitHub Actions | 🔴 **Copyleft.** A derivative distributed to a client must carry `GPL-3.0`. 🔴 Also requires a **Team or Enterprise** org *(free for verified educators via GitHub Education)* and broad org-wide read/write scope. |
+| [`jayenashar/classroom`](https://github.com/jayenashar/classroom) | 🟢 **`MIT`** | 🔴 **1** | Self-hosted: static SPA + Firestore + Cloud Functions + a GitHub App | 🟢 **Verified student identity is first-class** — institutional sign-in, then GitHub OAuth linking. 🔴 One star; treat as a design to read, not a system to adopt. |
+| [`jdelfino/handout`](https://github.com/jdelfino/handout) | 🟢 **`Apache-2.0`** | 🔴 **0** | Shell; distribution only | 🔴 **No autograding in v1.** Last push `2026-05-28`. |
+| [`classroom-resources/*` autograding Actions](https://github.com/classroom-resources) | 🟢 **`MIT`** throughout | — | The original grading steps, as GitHub Actions | 🔴 **Engine, reporter and command-grader are `archived`; the Python and I/O graders are not.** 🟢 `MIT` means the frozen half is forkable — see [`compose/patterns.md`](../compose/patterns.md) `P236-1`. |
+
+🔴 **The procurement reading, stated plainly:** the only replacement with real adoption is copyleft; the permissive alternatives have `1` star between them; and the permissively licensed code with actual production history is the **archived** first-party chain. 🟢 **That combination is unusual and it favours a studio** — the mature, battle-tested, `MIT` code is sitting unmaintained and free to fork, which is a far better starting position than a greenfield build.
+
+### 🟢 Carried platform rows re-read on the new channel — no change
+
+🟢 **`OpenEduCat`** remains the vendor-confirmed education ERP/SIS answer on this shelf and remains 🔴 **`LGPL-3.0`**, built on Odoo. The mandated vertical query *(`open source platform education ERP CRM MIT Apache`)* returned **no `MIT`- or `Apache`-licensed SIS this pass**, as it has not in any previous pass. 🟡 **Per `ACTION UK` that is this channel's result, not an absence** — and `p234`'s `BSD-3-Clause` state SIS, already on these shelves, is the standing counter-example to reading it as one.
+
 ## Pass 235 — 2026-10-16 — THE PLATFORM MAP RE-READ AT THE GRANT, AND `GPL-2.0`'s HOLDER FIELD TURNS OUT NOT TO EXIST
 
 🔴 **`0` new platforms. `3` platform-tier grants re-read at byte precision.** 🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv)

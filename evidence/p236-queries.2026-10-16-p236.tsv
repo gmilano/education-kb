@@ -1,0 +1,14 @@
+query	language	channel	result
+top open source AI agents education 2026 github MIT	en	web search	0 education agents — SIXTH consecutive failure; returns general frameworks only
+open source AI tutor agent grading teaching assistant github 2026 Apache MIT	en	web search	4 candidates, all already carried (OpenMAIC, AI-Teaching-Agent, AITutorAgent) + 1 new lead (Spark-IQ, MIT, carried=no)
+github trending education AI 2026	en	web search	no live trending page; aggregator pages only — channel is unreliable for this KB
+open source platform education ERP CRM MIT Apache student information system 2026	en	web search	OpenEduCat (LGPL-3.0) only; no new MIT/Apache SIS
+学校管理 オープンソース 教育 AI GitHub 2026	ja	web search	ACTION UL, FIRST RUN — 6 repos, 2 already carried, 0 with a LICENSE file
+학교 관리 시스템 오픈소스 교육 AI GitHub 2026	ko	web search	ACTION UL, FIRST RUN — 5 repos, 1 MIT with LICENSE file, 1 unresolvable, 1 explicitly not-open-source
+AI education North America 2026 adoption regulation players	en	web search	134 AI-in-education bills across 31 states; NA = 36% share, $3.68B 2026
+AI education EMEA Europe 2026 adoption regulation AI Act players	en	web search	AI Act enforcement began 2026-08-02; high-risk deadline moved to 2027-12-02 (Digital Omnibus) — sources conflict
+AI education APAC 2026 adoption regulation India Japan Korea China players	en	web search	Korea AI Basic Act in force 2026-01-22, education = high-impact; Korean AI-textbook rollout lost official status
+IA educación LATAM 2026 adopción regulación Brasil México Chile plataformas	es	web search	Estado de México reformed art. 61 of its education law (Apr 2026) — first Mexican state to legislate AI in the classroom
+topic:education topic:ai stars:>80 pushed:>2026-09-15	—	GITHUB REST (NEW CHANNEL)	15 repos; 13 of 15 already carried; 2 new (zoonk, kaobuddy-pwa)
+github-classroom in:topic,name,description pushed:>2026-07-01	—	GITHUB REST (NEW CHANNEL)	returned `archived: true` on github/gh-classroom — the field that produced this pass's headline
+org:classroom-resources autograding	—	GITHUB REST (NEW CHANNEL)	12 repos, 3 archived and 9 live — the half-archived chain

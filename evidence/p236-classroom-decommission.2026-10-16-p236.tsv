@@ -1,0 +1,13 @@
+slug	role_in_pipeline	licence	stars	archived	last_push_or_update	consequence
+github/gh-classroom	official GitHub Classroom CLI extension	MIT	126	YES	2026-10-06	the first-party CLI is frozen; MIT, so forkable
+classroom-resources/autograding	autograding engine	MIT	1	YES	2025-04-26	engine frozen
+classroom-resources/autograding-grading-reporter	FINAL step of every autograding workflow — renders output and synced results to Classroom	MIT	11	YES	2026-10-06	the step that reported grades is archived AND its sync target no longer exists
+classroom-resources/autograding-command-grader	grader step (arbitrary command)	MIT	6	YES	2026-10-06	frozen
+classroom-resources/autograding-python-grader	grader step (Python)	MIT	11	NO	2026-02-11	LIVE — chain is only half-archived
+classroom-resources/autograding-io-grader	grader step (stdin/stdout)	MIT	7	NO	2026-09-01	LIVE — chain is only half-archived
+classroom-resources/autograding-example-python	course template	not-read	48	NO	2026-03-22	LIVE
+classroom-resources/autograding-example-java	course template	not-read	30	NO	2025-10-23	LIVE
+classroom-resources/autograding-example-c	course template	not-read	13	NO	2026-03-24	LIVE
+foundation50/classroom50	the named replacement — ALREADY ON 5 SHELVES	GPL-3.0	215	NO	2026-10-14	copyleft: a Globant engagement cannot close-source a derivative
+jayenashar/classroom	self-hosted replacement, verified student identity	MIT	1	NO	2026-10-11	permissive but effectively unadopted
+jdelfino/handout	replacement, no autograding in v1	Apache-2.0	0	NO	2026-05-28	permissive but effectively unadopted

@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — THE TREND IS **WITHDRAWAL**: THE YEAR'S LARGEST EVENT IN EDUCATION TOOLING WAS A PLATFORM BEING TURNED OFF, NOT ONE BEING LAUNCHED
+
+🔵 **Evidence:** [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv) · [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv)
+
+### 🔴 `T236-1` — platform withdrawal is now a live risk class, and these shelves had no column for it
+
+GitHub Classroom went dark `2026-08-28`. 🔴 **The thing to generalise is not the event, it is that this KB could not have seen it coming and could not represent it afterwards**: every freshness signal on these shelves — last commit, last release, star growth — was *healthy* for the `classroom-resources` repositories right up to the freeze, and several are still healthy now. 🟢 **The only field that distinguishes "quiet" from "finished" is `archived`, and it became readable on these shelves for the first time this pass.**
+
+🟡 **The lesson for every vertical KB, not just this one: a dependency's risk is not its commit recency. It is whether the vendor still intends to run the service the code talks to.** The archived reporter still *runs*; what it synced to no longer exists.
+
+### 🟢 `T236-2` — the 2026 regulatory wave is complete, and education is named in all four regions
+
+| region | instrument | status on `2026-10-16` |
+|---|---|---|
+| EMEA | EU AI Act — education = high-risk where it gates access or scores exams | 🟢 **enforcement began `2026-08-02`**; Art. 4 AI-literacy duty live since `2025-02-02`; emotion recognition in schools prohibited; 🔴 conformity deadline moved and **disputed** *(Dec 2027 vs Aug 2028)* |
+| APAC | Korea AI Basic Act — education is "high-impact" | 🟢 **in force `2026-01-22`** |
+| North America | state law, not federal — `134` bills / `31` states | 🟢 live and fragmenting; H.R. 8747 advanced `2026-07-21` |
+| LATAM | Estado de México, education law art. 61 | 🟡 **reformed April 2026**, reported as the region's first classroom-specific AI statute |
+
+🔵 **Last pass this file's headline was *"the trend is governance, and the date everyone quotes for it does not reconcile."* 🟢 That holds, and p236 narrows it**: the *existence* of binding rules is no longer in doubt in any region; what remains unreconciled is a single date, the EU high-risk conformity deadline. 🟡 **`ACTION UQ` carries it.**
+
+### 🔴 `T236-3` — the counter-trend nobody is pricing: mandates are outrunning adoption, and one has already broken
+
+🔴 **Korea is the first completed experiment, and it failed.** AI textbooks were mandated, adoption came in **below `30`%**, and the National Assembly removed their official status. 🟢 **Set that against China mandating AI from age six with ≥8 hours a year in Beijing, and India's ten-million-teacher training push**, and the pattern is clear: **the binding constraint is teacher workflow, not content or policy.**
+
+🔵 **This reframes the market numbers.** Reported student AI use is `92`% (2025, up from `66`% in 2024) while institutions are described as still in pilot mode, with procurement moving slower than consumer adoption. 🔴 **The gap is not an adoption lag that time will close — Korea shows a mandate can land on the wrong side of it and be repealed.**
+
+### 🟢 `T236-4` — the supply bottleneck in APAC is licensing, not code
+
+🟢 **First Japanese- and Korean-language supply probe ever run here** *(`ACTION UL`)*: `11` repositories, `9` uncarried, 🔴 **`7` of `9` with no licence whatsoever**, and one — [`GwonDalhyeon/school-workflow-ai-releases`](https://github.com/GwonDalhyeon/school-workflow-ai-releases) — carrying a README that **explicitly forbids sale and modified redistribution** while looking open on any listing page.
+
+🔵 **Combined with `p235`'s LATAM finding and `ACTION UJ`'s three ungranted Brazilian repositories, a cross-regional pattern is now visible on these shelves: outside North America and EMEA, education software is written and published but not *granted*.** 🟢 **A one-line `LICENSE` file is the whole intervention**, and it is cheap enough to be a community contribution rather than a project. 🟡 **`ACTION UJ` extended to the five ungranted APAC repositories found this pass.**
+
+### 🟡 `T236-5` — a channel note that is itself a trend
+
+🔴 **Web search is now the weakest channel these shelves use for supply.** `github trending education AI 2026` returned no live trending page — only aggregators and a LinkedIn post. The mandated agent query has failed **six consecutive times**. 🟢 **The REST channel answered the same questions with server-side filters, exact star counts and the `archived` flag in one call.** 🟡 **`ACTION US`: move supply discovery to REST and keep web search for regulation, market figures and news, where it is still the better instrument.**
+
 ## Pass 235 — 2026-10-16 — THE 2026 TREND IS GOVERNANCE, AND THE DATE EVERYONE QUOTES FOR IT **DOES NOT RECONCILE**
 
 🔵 **Evidence:** [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv)

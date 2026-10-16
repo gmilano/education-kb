@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — THESE SHELVES HAVE CARRIED THE **REPLACEMENT** FOR GITHUB CLASSROOM ON FIVE FILES WITHOUT EVER RECORDING THAT **CLASSROOM ITSELF WAS SWITCHED OFF** — AND ITS AUTOGRADING CHAIN IS NOW HALF-ARCHIVED, `MIT`, AND FORKABLE
+
+🔴 **`foundation50/classroom50` has been on this shelf since p171, described as *"the open alternative to GitHub Classroom"*. It is on `5` files. 🔴 Not one of them records that GitHub Classroom was decommissioned on `2026-08-28`.** The shelves carry the substitute and never wrote down the cause.
+
+🔵 **Evidence:** [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv) · [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv)
+
+### 🟢 `T236-B` — the finding is first-hand, and it came from a field no previous channel here could read
+
+🔴 **The official announcement is NOT readable from this session**: `github.blog` does not resolve *(`getaddrinfo ENOTFOUND`, both on `WebFetch` and on `curl`)*. A blog quote is therefore **not** what this cell rests on.
+
+🟢 **What it rests on is stronger: the `archived` boolean, read directly off the GitHub REST API for each repository.** That field says what a README cannot — that the maintainer has frozen the code — and **no channel previously open on these shelves could read it.** *(These files have recorded the GitHub API as blocked since the `github-api-proxy-blocked` note; it is open through the MCP channel, see `T236-D`.)*
+
+### 🔴 The chain is archived **in the middle**, which is the part that matters
+
+A standard Classroom autograding workflow chains one or more grader steps and then **one reporter step**. The freeze did not land evenly:
+
+| repository | role in the pipeline | grant | ★ | `archived` |
+|---|---|---|---|---|
+| [`github/gh-classroom`](https://github.com/github/gh-classroom) | the official `gh` CLI extension for educators | 🟢 **`MIT`** *(`LICENSE`, `1 063` B)* | 126 | 🔴 **YES** |
+| [`classroom-resources/autograding`](https://github.com/classroom-resources/autograding) | the autograding engine | 🟢 **`MIT`** *(`LICENSE`, `1 063` B)* | 1 | 🔴 **YES** |
+| [`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | 🔴 **the FINAL step of every workflow** — *"Renders Autograding output and syncs results to GitHub Classroom"* | 🟢 **`MIT`** *(`LICENSE.md`, `1 063` B)* | 11 | 🔴 **YES** |
+| [`classroom-resources/autograding-command-grader`](https://github.com/classroom-resources/autograding-command-grader) | grader step — arbitrary command | 🟢 **`MIT`** *(`LICENSE.md`)* | 6 | 🔴 **YES** |
+| [`classroom-resources/autograding-python-grader`](https://github.com/classroom-resources/autograding-python-grader) | grader step — Python | 🟢 `MIT` | 11 | 🟢 no |
+| [`classroom-resources/autograding-io-grader`](https://github.com/classroom-resources/autograding-io-grader) | grader step — stdin/stdout | 🟢 `MIT` | 7 | 🟢 no |
+| [`classroom-resources/autograding-example-python`](https://github.com/classroom-resources/autograding-example-python) | course template | not read this pass | 48 | 🟢 no |
+| [`classroom-resources/autograding-example-java`](https://github.com/classroom-resources/autograding-example-java) | course template | not read this pass | 30 | 🟢 no |
+| [`classroom-resources/autograding-example-c`](https://github.com/classroom-resources/autograding-example-c) | course template | not read this pass | 13 | 🟢 no |
+
+🔴 **The failure mode this produces is specific.** The **graders still run** — they are live Actions receiving student commits — while the **reporter that renders and returns the grade is archived**, and the service it synced to *("syncs results to GitHub Classroom")* **no longer exists**. A course can therefore keep grading and stop reporting, with no repository in the chain marked broken. 🟢 **Any institution on these shelves can check its own exposure in one command:** `grep -rn "classroom-resources/autograding" .github/workflows/`.
+
+### 🟢 The part that makes this an opportunity rather than a post-mortem: **every frozen piece is `MIT`**
+
+🟢 **All four archived repositories carry an `MIT` `LICENSE`, read first-hand this pass at `1 063` bytes each.** Archived on GitHub means read-only **upstream**; it does not touch the grant. 🟢 **The whole frozen chain is forkable, modifiable and redistributable without asking anyone** — see [`compose/patterns.md`](../compose/patterns.md) `P236-1`.
+
+### 🟡 Two new permissive replacements, published with their real adoption
+
+Both are genuinely `OSI`-permissive, both are new to these shelves, and **both are effectively unadopted** — published that way rather than padded:
+
+| repository | grant | ★ | head | note |
+|---|---|---|---|---|
+| [`jayenashar/classroom`](https://github.com/jayenashar/classroom) | 🟢 **`MIT`** *(`LICENSE` at `master`)* | 🔴 **1** | `master` · `5f2802e` | Self-hosted, built around **verified student identity** — institutional sign-in, then GitHub OAuth linking. Static SPA + Firestore + Cloud Functions + a GitHub App. The identity limb is the one thing `classroom50` does not do. |
+| [`jdelfino/handout`](https://github.com/jdelfino/handout) | 🟢 **`Apache-2.0`** *(`LICENSE` at `main`)* | 🔴 **0** | `main` · `e8782d0` | Distribution only — 🔴 **no autograding in v1**. Last push `2026-05-28`. |
+
+🔴 **And the one everybody is actually being pointed at is copyleft.** [`foundation50/classroom50`](https://github.com/foundation50/classroom50) — the Fifty Foundation's replacement, already on `5` of these shelves — is 🔴 **`GPL-3.0`**, confirmed first-hand this pass *(`LICENSE` opens `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`; `README` §License agrees)*, `215★`, `36` forks, pushed `2026-10-14`, `TypeScript`. 🔵 **For a Globant engagement that is the live constraint: the recommended replacement cannot be folded into a closed derivative, while the archived first-party chain it replaces can.**
+
+### 🟢 One further new foundation row, from the REST channel
+
+| repository | grant | ★ | created | head | what it is |
+|---|---|---|---|---|---|
+| [`zoonk/zoonk`](https://github.com/zoonk/zoonk) | 🟢 **`MIT`** *(`LICENSE`, `1 062` B)* | **157** | `2025-01-30` | `main` | *"Turn your goal into a daily learning plan"* — Next.js + Postgres + Prisma on the Vercel AI SDK. Uncarried until now. |
+
 ## Pass 235 — 2026-10-16 — THE LATAM FOUNDATION SHELF EXISTS AND HAS `15` LIVE ROWS, `9` OF THEM PERMISSIVE — AGAINST A PUBLISHED CLAIM OF `0`
 
 🔴 **`0` new repositories. `15` carried rows re-verified first-hand this window** *(existence by `git ls-remote`, licence by GRANT BODY over `raw.githubusercontent.com`)*. 🟢 **`3` new registry rows.** 🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)

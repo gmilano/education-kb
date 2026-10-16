@@ -1,0 +1,12 @@
+slug	query_language	live	default_branch	head_sha	grant_channel	grant	stars	carried_before	verdict
+chrisryugj/schoolinfo-mcp	ko	yes	main	9f636c106a297a734a4fa0f5a670f26ad2585c44	LICENSE file	MIT	48	no	PUBLISH — topic `korea` makes APAC placement EVIDENCED
+greatsong/curriculum-weaver	ko	yes	main	dcfc3d0ca8eb807690216cd3ba43e853ad9cd629	none	UNGRANTED	not-read	no	WITHHELD — no grant
+shk-cell/2026-ai	ko	yes	main	fe165187b2056a83975340b5b589bcefc8f77eb9	none	UNGRANTED	not-read	no	WITHHELD — no grant
+GwonDalhyeon/school-workflow-ai-releases	ko	yes	main	bb05d9897f542f9c1c14c331e4aece70fa27feca	README prose	NOT-OPEN-SOURCE	not-read	no	REFUSED — README forbids sale and modified redistribution
+tipsedu2019/tips_dashboard	ko	no	—	—	—	—	—	no	UNRESOLVABLE — git ls-remote returns no ref
+Kotaishigaki/2026AI_TD	ja	yes	main	e70163e2c1081ccfe222357b9050c52f07f1edf7	none	UNGRANTED	not-read	no	WITHHELD — no grant
+maikeru2312-beep/edu-ai-platform	ja	yes	main	f503da70ed894753c26d36e1fe4bfe72fb32ef70	none	UNGRANTED	not-read	no	WITHHELD — no grant
+tanzim557/school-management-system	ja	yes	main	51d5c4019e70fb4d68e79565c267f9cf0715db84	README section only	MIT (prose, no LICENSE file)	0	no	LEAD — prose grant, repo created 2026-10-11
+Meleksebri/school-management-system	ja	yes	master	7def8dbd279bfe802769726d7e0161cc2e11ebfb	package.json field	ISC (manifest only)	7	no	LEAD — manifest-only grant, ISC is an npm-init default
+GibbonEdu/core	ja	yes	—	—	—	—	—	YES (9 shelves)	REFUSED — already carried
+frappe/education	ja	yes	—	—	—	—	—	YES (10 shelves)	REFUSED — already carried

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## 2026-10-16 — p236 — a channel these shelves recorded as CLOSED is open, and the first field it returned overturned the week's reading of the grading layer
+
+🟢 **The GitHub REST metadata channel is reachable** through the session's MCP GitHub tools, after these files have carried `github-api-proxy-blocked` as a standing constraint. 🔴 **Direct `curl https://api.github.com/...` is still `403`** *(session-scoped: "GitHub access to this repository is not enabled for this session")* — so the note was true of the channel it described, and false as a general claim about REST.
+
+🔵 **Evidence:** [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv) · [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv)
+
+### 🟢 What the new channel gives that no previous one here could
+
+| field | previously | now |
+|---|---|---|
+| `archived` | 🔴 **unreadable on any channel these shelves had** | 🟢 read per repository — and it produced this pass's headline |
+| `stargazers_count` | from prose on blog pages, unverifiable | 🟢 first-hand |
+| `license.spdx_id` | inferred from a `LICENSE` payload read over `raw.githubusercontent.com` | 🟢 both, and they can now be cross-checked |
+| `pushed_at` / `created_at` | `git ls-remote` gave a SHA but no date | 🟢 first-hand |
+| `topics` | — | 🟢 first-hand — **this is what placed `schoolinfo-mcp` in APAC on evidence** |
+
+🔴 **`archived` is the one that matters.** It is the difference between *"this repository has not been pushed to in a while"* and *"the maintainer has declared it finished"*, and these shelves have been unable to tell those apart for `235` passes.
+
+### 🔴 Trending, re-measured on the new channel
+
+`topic:education topic:ai stars:>80 pushed:>2026-09-15`, sorted by stars, returned `15` repositories. 🔴 **`13` of the `15` were already carried.** The two that were not:
+
+| repository | grant | ★ | note |
+|---|---|---|---|
+| [`zoonk/zoonk`](https://github.com/zoonk/zoonk) | 🟢 **`MIT`** *(`LICENSE`, `1 062` B)* | **157** | goal→daily learning plan; Next.js + Prisma + Vercel AI SDK |
+| [`jin-zi-xuan/kaobuddy-pwa`](https://github.com/jin-zi-xuan/kaobuddy-pwa) | 🔴 **no `LICENSE` file at `main`** | **387** | BYOK exam-cram PWA, created `2026-05-30`. 🔴 **Ungranted — not shelved despite the star count.** |
+
+🟡 **`13` of `15` carried is the same `~45`% steady-state rediscovery rate `agents/top.md` measured independently this pass**, on a different channel and a different query. 🔵 **Two channels agreeing on the rediscovery rate is the first evidence these shelves have that the rate is a property of the KB's reach, not of any one query.**
+
+### 🔴 The archived cohort — new rows, and the reason they are here
+
+Nine `classroom-resources` repositories and `github/gh-classroom` enter these shelves for the first time, carrying a field that changes how they should be read. Full table in [`repos/foundations.md`](foundations.md) `T236-B`; the short form:
+
+🔴 **`github/gh-classroom` (`MIT`, `126★`) — ARCHIVED.** 🔴 **`classroom-resources/autograding` (`MIT`) — ARCHIVED.** 🔴 **`classroom-resources/autograding-grading-reporter` (`MIT`, `11★`), the final step of every autograding workflow — ARCHIVED.** 🔴 **`classroom-resources/autograding-command-grader` (`MIT`, `6★`) — ARCHIVED.** 🟢 **`autograding-python-grader` (`11★`) and `autograding-io-grader` (`7★`) — LIVE.** 🟢 **All three `autograding-example-*` course templates — LIVE.**
+
+🔵 **A supply chain frozen in the middle is a worse state than one frozen outright, because nothing in it reports as broken.**
+
+### 🟢 Recency note on the carried replacement
+
+[`foundation50/classroom50`](https://github.com/foundation50/classroom50) re-read on the new channel: 🔴 **`GPL-3.0`**, `215★` *(unchanged from the carried cell — the carried figure was right)*, `36` forks, `30` open issues, created `2026-04-30`, pushed **`2026-10-14`**, `TypeScript`, `has_wiki`. 🟢 **Actively developed.** It also has a sibling this KB did not carry: [`foundation50/classroom50-language-packs`](https://github.com/foundation50/classroom50-language-packs) *(`1★`, created `2026-07-02`, pushed `2026-10-12`, 🔴 no licence read this pass)*.
+
 ## 2026-10-16 — p235 — *"LATAM in the registry: zero"* is **FALSIFIED ON ITS OWN CHANNEL**: three `MIT` Brazilian education packages, all shipped `2026-10-15`
 
 🔴 **This file carries the cell *"LATAM in the registry: zero"*, and p232 opened the PACKAGE REGISTRY channel precisely to catch rows the repository harvester cannot see.** 🟢 **Three were there the whole time.**

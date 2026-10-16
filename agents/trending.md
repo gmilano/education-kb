@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## 2026-10-16 — p236 — the week's new agent signal is **Korean**, and it only appeared because a query was finally run in Korean
+
+🟢 **`ACTION UL` ran for the first time.** These shelves have probed APAC in English for every one of their `235` previous passes. Two queries in the region's own languages — `学校管理 オープンソース 教育 AI GitHub 2026` and `학교 관리 시스템 오픈소스 교육 AI GitHub 2026` — returned `11` repositories, `9` of them uncarried.
+
+🔵 **Evidence:** [`p236-apac-language-channel`](../evidence/p236-apac-language-channel.2026-10-16-p236.tsv) · [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv)
+
+### 🟢 Promoted to `agents/top.md`
+
+[`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) — 🟢 **`MIT`**, `48★`, `16` forks, `main` `9f636c1`, created `2026-06-14`, updated `2026-10-15`. An **MCP server** over Korea's 학교알리미 disclosure OpenAPI and the NEIS open portal, with `hwp`→Markdown conversion so assessment plans locked in Korean word-processor attachments become tables. 🟢 **Its APAC placement is EVIDENCED, not inferred** — `topic:korea` is on the repository. That is the first such row on this shelf.
+
+### 🔴 What the Japanese channel returned, and why none of it shipped
+
+`6` repositories, `2` already carried *(`GibbonEdu/core`, `frappe/education`)*, and 🔴 **not one of the remaining four has a `LICENSE` file**:
+
+- [`Kotaishigaki/2026AI_TD`](https://github.com/Kotaishigaki/2026AI_TD) *(`main` `e70163e`)* — AI technology-design course materials, 2026 academic year. 🔴 **Ungranted.**
+- [`maikeru2312-beep/edu-ai-platform`](https://github.com/maikeru2312-beep/edu-ai-platform) *(`main` `f503da7`)* — 🔴 **Ungranted.**
+- [`tanzim557/school-management-system`](https://github.com/tanzim557/school-management-system) *(`main` `51d5c40`, `0★`, created `2026-10-11`)* — 🟡 **prose grant only**: a README §License reading *"This project is licensed under the MIT License"* and a shields.io badge, with **no `LICENSE` file in the tree**. Held as a LEAD.
+- [`Meleksebri/school-management-system`](https://github.com/Meleksebri/school-management-system) *(`master` `7def8db`, `7★`)* — 🟡 **manifest grant only**: `package.json` `"license": "ISC"`, no `LICENSE` file. 🔴 **`ISC` is `npm init`'s default value**, so this is weak evidence of intent, not a considered grant. Held as a LEAD.
+
+### 🔴 What the Korean channel returned beyond the one row
+
+- 🔴 [`GwonDalhyeon/school-workflow-ai-releases`](https://github.com/GwonDalhyeon/school-workflow-ai-releases) — **REFUSED, and it is the useful kind of refusal.** Its README reads *"무료로 나누며, 판매·수정 배포는 삼가 주세요"* — **free to share, but please refrain from selling or redistributing modified versions**. 🔵 **That is a repository which looks open on a listing page and forbids both of the things a studio would do with it.** It is a teacher-workflow AI over Korean school messengers (쿨메신저 / 아이좋아), and a region query that only counted repositories would have scored it as supply.
+- 🟡 [`greatsong/curriculum-weaver`](https://github.com/greatsong/curriculum-weaver) *(`main` `dcfc3d0`)* — AI cross-curricular lesson co-design platform on 40 design principles. 🔴 **Ungranted.**
+- 🟡 [`shk-cell/2026-ai`](https://github.com/shk-cell/2026-ai) *(`main` `fe16518`)* — 2026 AI-focus-school secondary materials. 🔴 **Ungranted.**
+- 🔴 [`tipsedu2019/tips_dashboard`](https://github.com/tipsedu2019/tips_dashboard) — **UNRESOLVABLE.** Search surfaced an issue page; `git ls-remote` returns no ref. 🔵 **Recorded per `ACTION UK`: this channel could not resolve it — that is not a claim it does not exist.**
+
+### 🟡 The honest shape of the APAC result
+
+🔴 **`9` uncarried live repositories, `1` publishable grant.** 🔵 **The constraint on APAC education supply is not that the repositories are absent — they are there, and the English queries were simply never going to find them — it is that they are overwhelmingly ungranted.** `7` of the `9` carry no licence at all. 🟡 **`ACTION UN`: run the same two queries with a licence qualifier (`license:mit`, `license:apache-2.0`) on the REST channel, where the filter is server-side, rather than on web search where it is not.**
+
+### 🔴 And the mandated query, for the record
+
+`"top open source AI agents education 2026 github MIT"` → **`0` education agents, SIXTH consecutive pass.**
+
 ## 2026-10-16 — p235 — the week's only new agent signal is a **Brazilian `MIT` MCP server for the national curriculum**, and it was shipped to `npm` the day before this pass
 
 🔴 **Nothing new from web search.** The mandated agent query returned `0` education agents for the FIFTH consecutive pass; `ACTION UC`'s rewording returned `3` candidates and **all `3` were already on these shelves**.

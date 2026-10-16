@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — THE REGULATORY MAP IS NOW THE MARKET MAP: EVERY REGION HAS A **DATED, BINDING** INSTRUMENT TOUCHING EDUCATION, AND THREE OF THE FOUR LANDED IN THE LAST NINE MONTHS
+
+🔵 **Evidence:** [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv) · [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv)
+
+🟢 **For the first time on these shelves, all four regions return a specific legal instrument rather than a sentiment.** That changes what this file sells: the engagement is no longer *"adopt AI"*, it is *"demonstrate compliance with a named rule by a named date"*.
+
+### 🔴 The market-size figures do not reconcile, and this pass stops averaging them
+
+| source type | 2025/2026 base | horizon | note |
+|---|---|---|---|
+| vendor report A | `$6.4B` (2025) | `$79.6B` by 2034 | |
+| vendor report B | `$8.3B` (2025) → `$11.4B` (2026) | — | |
+| vendor report C | — | `40.9%` growth 2025→2026 | |
+| carried cell (p54→p235) | `$9.58B` → `$42.48B` (2030, `41.5%` CAGR) | | |
+
+🔴 **A base year that ranges `$6.4B`–`$9.58B` across four sources is a `50`% spread on the number everything else is derived from.** 🟡 **`ACTION UP`: these shelves should quote the spread, never a point estimate, until one figure is traced to a primary methodology.** 🟢 **The regional split is better evidenced than the total**: North America is reported at **`36`% share, `$3.68B` in 2026**, and that is the one disaggregation two sources agree on.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The opening is regulatory fragmentation at the state level.** `134` AI-in-education bills were introduced across `31` states in 2026 — data privacy, classroom-use limits, curriculum. Named instruments: **California AB 1159** *(bars using student data to train AI models)*; **Oklahoma** and **Maryland** *(require human oversight; bar AI from high-stakes decisions about students)*; **New York City** *(one-year moratorium on student-facing AI through 8th grade)*. Federal: the **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** advanced out of committee `2026-07-21`. Canada's **"AI for All"** strategy (June 2026) is direction, not binding law. Mexico has bills pending and no regulator.
+
+🟢 **The concrete 2026 opening is the Classroom migration**, and it is North-America-weighted because the CS-course estate on GitHub Classroom is. 🔴 **It is time-boxed and already past its deadline**: the platform went dark `2026-08-28` and LTI rosters are reported deleted. 🟢 **Sellable as a fixed-scope engagement**: audit `.github/workflows/` for `classroom-resources/autograding` references, fork the archived `MIT` reporter, stand up a replacement. 🔴 **Price the licence choice explicitly** — `classroom50` is `GPL-3.0`.
+
+🟡 **A `50`-state student-authored framework ("STUDENTS FIRST Act of 2026", AASA, `2026-08-03`) exists** and is a credible stakeholder artefact for public-sector bids.
+
+### EMEA
+
+🔴 **The binding instrument is the EU AI Act, and education is explicitly high-risk** where AI determines access to education or scores exams. 🟢 **Enforcement by the AI Office and national authorities began `2026-08-02`.** 🟢 **Article 4's AI-literacy obligation has applied since `2025-02-02` to every organisation using AI systems — which is every school, now.** 🔴 **Emotion recognition in educational institutions is a prohibited practice** outside medical and safety purposes, and that prohibition is already live.
+
+🔴 **The high-risk conformity deadline does NOT reconcile across sources and this pass refuses to pick one.** The Digital Omnibus on AI moved it; one source says August 2026 → **December 2027**, another gives **`2027-12-02`** for stand-alone high-risk systems and **`2028-08-02`** for those embedded in regulated products; sources also disagree on whether the Omnibus entered into force mid-July 2026 or was merely approved by Council on `2026-06-29` pending Official Journal publication. 🟡 **`ACTION UQ`: resolve against EUR-Lex directly; no EMEA proposal should quote a conformity date from these shelves until it is.**
+
+🟢 **The opportunity is unambiguous even while the date is not**: exam-scoring and admissions systems are high-risk, the literacy duty is already in force, and extraterritorial reach means non-EU vendors serving EU learners are in scope. **Conformity tooling — documentation, logging, human-oversight design, literacy programmes — is billable now.**
+
+### APAC
+
+🟢 **South Korea's AI Basic Act has applied since `2026-01-22`, and its "high-impact" category covers education.** 🔴 **And the region's flagship education-AI programme failed in public**: the Korean AI-textbook rollout saw adoption reported below `30`% and the National Assembly stripped the textbooks' official status. 🔵 **That is the most useful single fact on this shelf for an APAC pitch — the cautionary precedent is domestic, recent, and everyone in the room will know it.** Sell adoption and teacher workflow, not content supply.
+
+🟢 **China is the rollout leader and regulates by service type** — recommendation algorithms, deep synthesis, generative AI, labelling. **AI is a compulsory subject from age six, with Beijing mandating ≥8 hours of AI instruction a year.** 🟢 **Japan's AI Promotion Act carries no penalties**; a new **AI Basic Plan** was adopted July 2026. 🟡 **India has no dedicated AI law**; in July 2026 the government signalled risk-based legislation, alongside a ten-million-teacher training push. 🟢 **Adoption ranking**: Singapore leads, with Australia, Korea and Taiwan close behind; Japan, India and China are relative laggards for different reasons.
+
+🟢 **Supply, measured properly for the first time this pass:** `ACTION UL`'s Japanese and Korean queries found `9` uncarried live repositories. 🔴 **`7` of the `9` carry no licence at all.** 🔵 **So the APAC constraint is not absence of software, it is absence of grants — which is a different and much more tractable engagement problem**: the code exists and its authors are reachable.
+
+### LATAM
+
+🟢 **`p235`'s correction stands and is reinforced: LATAM supply is not zero** — `15` live repositories, `9` permissive, plus three `MIT` Brazilian packages on `PyPI`/`npm`. 🟢 **And demand remains the highest measured of any region** *(Brazil `56%` / Chile `55%` of secondary teachers vs `36%` OECD; `87%` of institutions using AI against `26%` holding a strategy)*.
+
+🟢 **New this pass — the first classroom-specific statute found in the region.** 🔴 **Estado de México reformed article 61 of its state education law in April 2026** to promote responsible, graduated AI use in upper-secondary and higher education — reported as **the first Mexican state to legislate AI in the classroom**. 🟡 **Source is a specialist blog, not the state official gazette; `ACTION UR`: confirm against the Gaceta del Gobierno del Estado de México before it is quoted to a client.**
+
+🟡 **Elsewhere the picture is pending, not absent:** Brazil's **PL 2338/2023** passed the Senate (Dec 2024) and awaits the Chamber of Deputies; Chile's AI bill is in second constitutional reading, with **Ley 21.719** on personal data *(automated profiling and algorithmic decisions)* reported as entering force **`2026-12-01`** — 🔴 **sources conflict on whether it already applies**; Mexico closed its legislative period with no general AI law, leaving sectoral patches. 🔴 **There is no unified Latin American framework for AI in higher education** — stated by an academic source, and that is the gap a regional studio can occupy: **the 87%/26% strategy gap plus `Ley 21.719`'s December date is a concrete, dated reason for a Chilean institution to buy a governance engagement in Q4 2026.**
+
 ## Pass 235 — 2026-10-16 — THE LATAM DEMAND/SUPPLY ASYMMETRY SURVIVES, BUT ITS SUPPLY SIDE IS **NOT ZERO** — AND NAMING THE SUPPLIER CHANGES THE PITCH
 
 🔴 **This file carried the claim that LATAM has `0` open-source education repositories against the region's highest measured adoption, and sold the gap.** 🟢 **The demand half is confirmed again this pass. The supply half was wrong, and the corrected version is a better pitch: the supply exists, it is concentrated in one company and one individual, and it is permissively licensed.**

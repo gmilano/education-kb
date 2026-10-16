@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — `ACTION UL` IS DISCHARGED ON ITS FIRST RUN AND IT ENDS APAC'S INFERRED-REGION PROBLEM: A `MIT` KOREAN **MCP SERVER** WITH `topic:korea` ON THE REPOSITORY ITSELF
+
+⏱️ **FIFTH pass of `2026-10-16`** *(p232–p235 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction)*.
+
+🟢 **`1` new agent row, and its region is EVIDENCED rather than inferred — the first on this shelf.** 🔴 **The mandated query fails for the SIXTH consecutive pass.** 🟢 **`ACTION UL` — p235's open item, never run on these shelves in any language but English — returned `11` repositories across Japanese and Korean, `9` of them uncarried.**
+
+🔵 **Evidence:** [`p236-apac-language-channel`](../evidence/p236-apac-language-channel.2026-10-16-p236.tsv) · [`p236-queries`](../evidence/p236-queries.2026-10-16-p236.tsv)
+
+### 🟢 `T236-A` — the row, and why its placement is different from every other APAC cell here
+
+p235 closed with: *"APAC supply is still ONE row with an INFERRED region (`HKUDS/DeepTutor`, placed from an org handle)."* That is no longer the case.
+
+| agent | grant | ★ | forks | created | head | region | what it is |
+|---|---|---|---|---|---|---|---|
+| [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *chrisryugj*, © 2026 | **48** | 16 | `2026-06-14` | `main` · `9f636c1` | 🟢 **APAC** *(**evidenced**: `topic:korea` on the repository, Korean-language payload, binds two Korean government APIs)* | An **MCP server + CLI** over 학교알리미 (School Info) OpenAPI *(35 structured datasets, every ROK primary/middle/high school)* + NEIS open portal *(meals, calendar, timetable)*, with `hwp`→Markdown parsing via [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) so assessment plans buried in `.hwp` attachments come out as tables |
+
+🔵 **Why this row matters more than its `48` stars suggest.** Every other agent-tier row on these shelves wraps a *model* around *content*. This one wraps **a national education authority's own disclosure data** in MCP and makes it addressable from Claude or Cursor. It is the only row here that is simultaneously: permissively licensed, regionally placed on evidence, government-data-bound, and already an MCP server rather than a thing that would need one written.
+
+🔴 **The honest limit:** `48` stars is small, and the useful half — the `hwp` parser — is a **second repository** (`kordoc`) whose grant this pass did **not** read. 🟡 **`ACTION UM`: read `chrisryugj/kordoc`'s grant before any recipe depends on the `hwp` limb.**
+
+### 🔴 The mandated query, run verbatim for the record — SIXTH consecutive failure
+
+`"top open source AI agents education 2026 github MIT"` → **`0` education agents.** It returned general-purpose frameworks *(LangGraph, CrewAI, Aider, Cline, AutoGPT, Hermes Agent)* and one course *about* agents *(`microsoft/ai-agents-for-beginners`)*. 🟡 **`ACTION UC` stands and is now six-for-six: the mandated wording is the defect.**
+
+🟢 **`ACTION UC`'s rewording, run beside it**, returned `4` candidates. `3` were refused by the carried screen *(`THU-MAIC/OpenMAIC`, `littlecookie0722/AI-Teaching-Agent`, `Ebimsv/AITutorAgent` — the identical three p235 refused)*. The fourth is new:
+
+- 🟡 [`CipherCraze/Spark-IQ`](https://github.com/CipherCraze/Spark-IQ) — 🟢 **`MIT`** *(`LICENSE` at `main`, holder *Noel Manoj*, © 2025)*, head `f3a1a9b`. A teaching-assistant application: automated grading, personalised feedback, resource suggestion. **Carried: no.** 🔴 **Held as a LEAD, not shelved:** this pass read its grant and its existence but not its tree, and the agent tier does not take rows on a description alone.
+
+### 🟡 The duplication rate, measured again
+
+`20` candidates reached the carried screen this pass; `9` were refused as already-carried — **`45`%, identical to p235's rate.** 🔵 **Two passes at `45`% is no longer a coincidence: it is this KB's steady-state rediscovery rate at its current reach, and `ACTION UG`'s index is what converts it from wasted drafting into a cheap refusal.**
+
 ## Pass 235 — 2026-10-16 — `0` NEW AGENT ROWS, AND THE REASON IS NOW MEASURED RATHER THAN GUESSED: THE MANDATED QUERY FAILS FOR THE **FIFTH** CONSECUTIVE PASS, AND THE REWORDED ONE RETURNS ONLY ROWS THIS SHELF ALREADY HOLDS
 
 🔴 **`0` agents added. `3` candidates refused as already-carried.** 🟢 **`1` LATAM agent-tier row recovered from the REGISTRY channel — the first on this shelf.**

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+
+## Pass 236 — 2026-10-16 — THREE RECIPES, AND THE FIRST ONE ONLY EXISTS BECAUSE A FROZEN REPOSITORY TURNED OUT TO BE `MIT`
+
+🔵 **Evidence:** [`p236-classroom-decommission`](../evidence/p236-classroom-decommission.2026-10-16-p236.tsv) · [`p236-apac-language-channel`](../evidence/p236-apac-language-channel.2026-10-16-p236.tsv)
+
+### 🟢 `P236-1` — Classroom exit: audit the half-archived chain, fork the `MIT` reporter, keep the graders
+
+🔴 **The problem.** GitHub Classroom went dark `2026-08-28`. A course's autograding workflow keeps running — the **graders are live Actions** — but [`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter), the step that renders the result and synced it back, is 🔴 **`archived`**, and its sync target no longer exists. 🔵 **Nothing in the chain reports as broken.**
+
+**Wire it up:**
+
+1. **Measure exposure first.** Across every course org:
+   `grep -rln "classroom-resources/autograding" .github/workflows/` — then split the hits into the archived set *(`autograding`, `autograding-grading-reporter`, `autograding-command-grader`)* and the live set *(`autograding-python-grader`, `autograding-io-grader`)*. 🟢 **Only the archived set needs work.**
+2. **Fork the frozen pieces.** All four are 🟢 **`MIT`** *(`LICENSE`/`LICENSE.md`, `1 063` B each, read first-hand at p236)*. Archiving freezes the upstream repository, **not the grant** — fork, un-archive, pin your fork by SHA in `uses:`.
+3. **Cut the dead limb.** In the forked reporter, remove the Classroom sync and emit to something that still exists: a job summary, a commit status, or your LMS over LTI 1.3.
+4. **Keep the live graders unforked**, pinned by SHA, so upstream fixes still reach you.
+5. **Choose the front end deliberately** — and this is the licence decision:
+   - [`foundation50/classroom50`](https://github.com/foundation50/classroom50) — `215★`, actively developed *(pushed `2026-10-14`)*, needs no server, but 🔴 **`GPL-3.0`**: a distributed derivative is copyleft.
+   - [`jayenashar/classroom`](https://github.com/jayenashar/classroom) — 🟢 `MIT`, and the only one of the three that treats **verified student identity** as first-class. 🔴 `1★` — read it as a design, not a dependency.
+   - Or keep GitHub as the substrate and ship only the forked Actions. 🟢 **Smallest diff, no new licence obligation, no new service to run.**
+
+🔵 **Why this is a real engagement and not a chore:** the mature, production-tested code is `MIT` and unmaintained, while the maintained alternative is copyleft. **Forking the archived chain is both the cheaper and the less encumbered path**, and it is defensible to a client precisely because the grant was read rather than assumed.
+
+### 🟢 `P236-2` — Korean school-data assistant: `schoolinfo-mcp` behind the KB's own MCP allowlist gateway
+
+🟢 **What makes this composable is that the hard part is already an MCP server.** [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) *(🟢 `MIT`, `48★`, `main` `9f636c1`)* exposes Korea's 학교알리미 disclosure OpenAPI *(35 structured datasets, every ROK school)* and the NEIS portal *(meals, calendar, timetable)* as MCP tools, and converts `hwp` attachments to Markdown so assessment plans come out as tables.
+
+**Wire it up:**
+
+1. **Front it with [`compose/code/mcp-allowlist-gateway`](code/mcp-allowlist-gateway/README.md)** — already on these shelves. The server reaches two government APIs and parses attacker-supplied `hwp`; 🔴 **an allowlist in front of it is not optional in a school deployment.**
+2. **Bind credentials per tenant.** The CLI and local MCP paths need an authentication key; the remote path does not. 🟢 **Use the remote path for pilots, the keyed local path for anything holding a roster.**
+3. **Put a tutor agent on top** — any carried agent-tier row — with `schoolinfo-mcp` as its *only* data tool, so answers are grounded in the national disclosure record rather than model memory.
+4. 🔴 **Gate the `hwp` limb.** Parsing is delegated to [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc), a **separate repository whose grant p236 did not read** *(`ACTION UM`)*. 🟡 **Until it is read, run the recipe with `hwp` conversion disabled** — the 35 structured datasets do not depend on it.
+5. **Check it against the Korean AI Basic Act.** Education is a **"high-impact"** category and the Act has applied since `2026-01-22`; anything that profiles a named student inherits that duty.
+
+🔵 **Why this one is worth building:** it is the only recipe on these shelves whose data layer is a government's own published record, which is the cheapest possible answer to *"where did this number come from?"*
+
+### 🟢 `P236-3` — the grant-first APAC supply recipe: fix the licence, then compose
+
+🔴 **The measured blocker.** `ACTION UL` found `9` uncarried live APAC education repositories and 🔴 **`7` carry no licence at all** — among them a Korean cross-curricular lesson-design platform *(`greatsong/curriculum-weaver`)* and a Japanese education-AI platform *(`maikeru2312-beep/edu-ai-platform`)*. 🔴 **Unlicensed is not permissive: default copyright forbids use.**
+
+**Wire it up:**
+
+1. **Screen before you scope** — `make carried SLUG=owner/repo` *(`ACTION UG`'s index)*. `45`% of candidates are already on these shelves, measured twice this pass on two independent channels.
+2. **Read the grant at the body, not the badge.** p236 found both failure modes live: [`tanzim557/school-management-system`](https://github.com/tanzim557/school-management-system) states `MIT` in its README with **no `LICENSE` file**, and [`Meleksebri/school-management-system`](https://github.com/Meleksebri/school-management-system) declares `ISC` **only in `package.json`** — which is 🔴 **`npm init`'s default**, not evidence of a decision.
+3. **Check the prose for a counter-grant.** [`GwonDalhyeon/school-workflow-ai-releases`](https://github.com/GwonDalhyeon/school-workflow-ai-releases) reads *"무료로 나누며, 판매·수정 배포는 삼가 주세요"* — **no sale, no modified redistribution**. 🔵 **It would pass any automated "has a licence statement" check and fail the only question that matters.**
+4. **Then ask.** 🟡 **`ACTION UJ` extended:** a one-line `LICENSE` file converts five of this pass's APAC repositories, and three of p235's Brazilian ones, from unusable to composable. **That is the cheapest supply-side intervention available to this KB in any region.**
+
 ## Pass 235 — 2026-10-16 — TWO RECIPES THAT ONLY EXIST BECAUSE THE LATAM SHELF WAS RE-READ, PLUS THE GATE THAT SHOULD RUN BEFORE ANY OF THEM
 
 🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv) · instrument: [`p235-carried-index`](code/p235-carried-index/README.md)
