@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p239 — GitHub Trending went unqueried for a **seventh** pass, and the reason is now measured rather than assumed: **the channel that replaced it returns a timestamp slice, not a sample, above `total_count` ≈ `2 326`**
+
+🟢 **`14` new foundation rows**, all North America, from the US K-12 district-data stack. 🔴 **`5` withheld.** 🟢 **A new tested instrument (`70`/`70`) that classifies a query's shape BEFORE the query is spent.**
+
+🔵 **Evidence:** [`p239-query-shape`](../evidence/p239-query-shape.2026-10-16-p239.tsv) · [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv) · [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv)
+
+### 🔴 What was trending, and what the sort key did to it
+
+| `total_count` | sort | on-topic page one | what page one actually was |
+|---|---|---|---|
+| `8 618` | `updated` | 🔴 **`0.0`%** | free-VPN subscription lists, an NBA prop-betting edge finder, a UFC predictor, a manga reader, an Italian lake blog |
+| `81 905` | `updated` | 🔴 **`0.0`%** | generic Spanish/Portuguese agent projects — marketing bots, an insurance site, a WoW mage guide |
+| `2 326` | `updated` | 🔴 **`2.5`%** | new-grad job-board repos, refreshed nightly by bots |
+| `7 576` | **`stars`** | 🟡 **`48.0`%** | real rows — and it supplied six of this pass's |
+| `253` | `updated` | 🟢 `63.3`% | real rows |
+| `24` | **`SCOPED`** | 🟢 **`91.7`%** | `org:Ed-Fi-Alliance-OSS` |
+
+🔵 **A recency sort over a broad set ranks by LAST PUSH, so it selects for push frequency — and what pushes most often is a bot-refreshed list.** 🟢 **That is why "trending" has returned nothing education-specific for seven passes: the harvest was measuring push cadence.** 🟡 **`8 618` at `0`% versus `7 576` at `48`% is comparable breadth and a `48`-point swing from the sort key alone.**
+
+### 🟢 New foundation rows this week
+
+| repository | grant | kind | pinned | note |
+|---|---|---|---|---|
+| [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) | 🟢 `Apache-2.0` · `11 349` B | Ed-Fi load CLI | `main` @ `1e357bd1956f` | **12**★ — validates + transmits JSONL into an Ed-Fi API |
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | 🟢 `MIT` · `1 072` B | SIS client | `master` @ `a23ec090ea44` | **34**★ — highest-starred permissive row this pass |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 🟢 `MIT` · `1 082` B | SIS client | `master` @ `201c02c36ef2` | **16**★ |
+| [`Clever/clever-go`](https://github.com/Clever/clever-go) | 🟢 `Apache-2.0` · `10 757` B | rostering client | `master` @ `cf9827ad0cc6` | **13**★ — sibling `clever-js` archived since `2022` |
+| [`schwartzpub/ic_parent_api`](https://github.com/schwartzpub/ic_parent_api) | 🟡 `MIT` · `1 073` B | SIS client | `master` @ `60796c9deb35` | 🔴 **© "The Python Packaging Authority"** — a cookiecutter artefact |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect) | 🟢 `Apache-2.0` · `11 357` B | streaming | `main` @ `f65182e0b359` | the successor platform's Kafka seam |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Extensions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions) | 🟢 `Apache-2.0` · `10 173` B | ODS/API plugins | `main` @ `67268e23c6f4` | the documented customisation seam |
+| [`Ed-Fi-Alliance-OSS/MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js) | 🟢 `Apache-2.0` · `10 173` B | model DSL | `main` @ `a7f3c6986c05` | + [`vscode-metaed-ide`](https://github.com/Ed-Fi-Alliance-OSS/vscode-metaed-ide) `LICENSE.md` `10 173` B |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Databases`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Databases) | 🟢 `Apache-2.0` · `10 173` B | deployment | `main` @ `0aa3efb75fe0` | Technical Suite 3 |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Specifications`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Specifications) | 🟢 `Apache-2.0` · `11 357` B | specification | `main` @ `608546c95c92` | + [`Ed-Fi-Actions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions), [`DevSecOps`](https://github.com/Ed-Fi-Alliance-OSS/DevSecOps) |
+| [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) | 🟢 `Apache-2.0` · `10 141` B | LMS data tooling | `main` @ `b1266b721cba` | 🔴 **ARCHIVED `2025-03-10`** — second frozen-but-permissive education chain on these shelves |
+
+### 🔴 Withheld this week
+
+🔴 [`edanalytics/edu_wh`](https://github.com/edanalytics/edu_wh) **(`19`★)** and [`edanalytics/edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) **(`10`★)** — **`PolyForm Noncommercial License 1.0.0`**, read first-hand at `4 771` / `4 769` B. 🔵 **The same owner's [`DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) is carried on these shelves as `Apache-2.0` and cited as *"evidence the grant is actually exercised"*. Owner trust does not transfer across repositories.**
+
+🔴 [`sas-fossdev/saspes`](https://github.com/sas-fossdev/saspes) `AGPL-3.0` *(`34 522` B)* · [`tonyzimbinski/infinite-campus`](https://github.com/tonyzimbinski/infinite-campus) `GPL` *(`35 149` B, `34`★)* · [`NCSIS/InfiniteCampus-Vendor-Integration`](https://github.com/NCSIS/InfiniteCampus-Vendor-Integration) **no grant file**.
+
+### 🔴 The Ed-Fi Apache length, corrected by a census of all `24` org repositories
+
+🔴 **`13` of `24` are the PRISTINE `11 357` B Apache-2.0 *(appendix present)* — the MAJORITY, and a length no pass recorded.** `9` are `10 173`; 🔴 **exactly `1` is `10 172`, the figure these shelves carried across `10` files**; and `1` — [`Ed-Fi-Technology-Roadmap`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap) — **has no grant file at all.**
+
+🔴 **A vintage explanation is falsified:** the groups' push dates overlap, the oldest-pushed repository is pristine and a recent one is trimmed. 🟡 **The trim travels with LINEAGE — all four `LICENSE.txt` files are the ODS product line.** 🔵 **Never generalise a licence byte length from one repository to its org.** [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv)
+
 ## 2026-10-16 — p238 — GitHub Trending returned nothing education-specific for a **sixth** pass, and the channel that replaced it turned out to have an **adversarial failure mode** nobody had measured
 
 🟢 **`22` new foundation rows** — a whole category this KB had only three members of: **EU AI Act compliance instruments**. 🔴 **`2` withheld as non-permissive after their payloads were read.** 🔴 **`13` lure repositories identified in the supply channel itself.**

@@ -1,0 +1,6 @@
+slug	api_reports	grant_read_first_hand	licence_path	bytes	why_withheld	stars
+edanalytics/edu_wh	(license field not returned by this channel)	PolyForm Noncommercial License 1.0.0	LICENSE.md	4771	NOT OSI, NOT permissive - noncommercial only; a studio engagement is commercial. Same owner as the carried Apache-2.0 DPS-Ed-Fi-ODS	19
+edanalytics/edu_edfi_source	(license field not returned by this channel)	PolyForm Noncommercial License 1.0.0	LICENSE.md	4769	NOT OSI, NOT permissive - noncommercial only; same owner-level trust failure	10
+sas-fossdev/saspes	-	GNU AFFERO GENERAL PUBLIC LICENSE	LICENSE	34522	AGPL-3.0 - copyleft, network clause; not a build-on grant for this KB's shelves	13
+tonyzimbinski/infinite-campus	-	GNU GENERAL PUBLIC LICENSE	LICENSE	35149	GPL - copyleft; not a build-on grant	34
+NCSIS/InfiniteCampus-Vendor-Integration	-	NO GRANT FILE	-	0	no licence of any kind at the default branch; ungranted rather than padded in	13

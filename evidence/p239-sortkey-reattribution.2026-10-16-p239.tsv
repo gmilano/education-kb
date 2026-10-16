@@ -1,0 +1,3 @@
+query	total_count	sort	page_size	release_channel_names	zero_star_on_page1	note
+FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01	10815	stars	30	0	0	the license:mit filter is PRESENT and admits the farm; the sort does not surface it
+FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01	10815	updated	30	3	9	same query, same total_count, same day; sort key is the only difference

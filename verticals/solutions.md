@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — THE US K-12 **DISTRICT DATA LAYER** IS THE VERTICAL PLATFORM THIS SHELF NEVER NAMED: `Ed-Fi` IS AN `Apache-2.0` STANDARD *PLUS* A REFERENCE IMPLEMENTATION *PLUS* A CERTIFICATION PROGRAMME, AND `OneRoster` IS THE SEAM BETWEEN IT AND EVERY LMS ALREADY ON THIS SHELF
+
+🟢 **`14` new permissive rows place a whole platform tier.** 🔴 **The mandated platform query was NOT re-run this pass** — `p238` ran it and got `OpenEduCat` again without a licence; this pass spent its budget on the tier above the LMS instead, and says so rather than implying coverage.
+
+🔵 **Evidence:** [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv) · [`p239-withheld`](../evidence/p239-withheld.2026-10-16-p239.tsv)
+
+### 🟢 The tier this shelf was missing
+
+This shelf carries LMSs *(`Moodle`, `Chamilo`, `Canvas`)* and SISs, and recommends customising them. 🔴 **What it never carried is the layer a US district actually integrates AT: the data standard between the SIS and everything else.**
+
+| platform | grant *(read first-hand)* | region basis | what it is, and the customisation seam |
+|---|---|---|---|
+| **Ed-Fi ODS/API** — [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) *(carried)* + 🆕 [`Ed-Fi-Extensions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions), 🆕 [`Ed-Fi-Databases`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Databases) | 🟢 **`Apache-2.0`** — `10 172` / `10 173` B | 🟢 **North America** — Ed-Fi Alliance, US non-profit | 🟢 **An operational data store + REST API with a PUBLISHED EXTENSION MECHANISM.** `Ed-Fi-Extensions` is the sanctioned plugin path — 🔵 **the Odoo-module equivalent for a district data store**, and the right place to attach AI rather than forking the ODS |
+| **Ed-Fi Data Management Service** — [`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) *(carried)* + 🆕 [`Ed-Fi-Kafka-Connect`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect) | 🟢 **`Apache-2.0`** — `11 357` B | 🟢 **North America** | 🟢 **The successor platform, and it has a Kafka seam** — so district events can be consumed as a stream instead of polled. 🟡 `12`★ / `17` forks: new, and the forks outnumber the stars |
+| **Ed-Fi model toolchain** — 🆕 [`MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js) + 🆕 [`vscode-metaed-ide`](https://github.com/Ed-Fi-Alliance-OSS/vscode-metaed-ide) | 🟢 **`Apache-2.0`** — `10 173` B | 🟢 **North America** | 🟢 **The data model is GENERATED from a DSL, and the DSL toolchain is permissive** — an extension is authored, not hand-patched |
+| **OneRoster 1.2 bridge** — [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(carried, `6`★)* | 🟢 **`Apache-2.0`** — `10 173` B | 🟢 **North America** | 🔵 **The seam between Ed-Fi and the LMS tier this shelf already carries** — serves a 1EdTech OneRoster API out of an Ed-Fi ODS. 🔴 **`6`★ carrying `13` recipe sites, as [`repos/foundations.md`](../repos/foundations.md) already flags** |
+| **Ed-Fi load pipeline** — 🆕 [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) | 🟢 **`Apache-2.0`** — `11 349` B | 🟢 **North America** — Education Analytics, US | Validates and transmits JSONL into an Ed-Fi API. 🟢 **`12`★ and third-party — evidence the API is integrated against, not just published** |
+| **SIS clients** — 🆕 [`PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) `34`★, 🆕 [`PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) `16`★, 🆕 [`ic_parent_api`](https://github.com/schwartzpub/ic_parent_api) `9`★ | 🟢 **`MIT`** — `1 072` / `1 082` / `1 073` B | 🟢 **NA by target system** — PowerSchool and Infinite Campus are US K-12 SISs | 🟡 **Where a district's data actually lives.** 🔴 **Read the grant per client: the highest-starred Infinite Campus client is `GPL` and a third has no licence at all** |
+| **Rostering/SSO** — 🆕 [`Clever/clever-go`](https://github.com/Clever/clever-go) | 🟢 **`Apache-2.0`** — `10 757` B | 🟢 **North America** — Clever Inc., US | Go client for the Clever rostering API. 🟡 Sibling `clever-js` *(`24`★)* **archived `2022`** |
+| **LMS analytics** — 🆕 [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) | 🟢 **`Apache-2.0`** — `10 141` B | 🟢 **North America** | 🔴 **ARCHIVED `2025-03-10`**, `11`★ / `12` forks. 🟢 **Permissive and frozen — per `p236`, forking is the cheaper and less encumbered path** |
+
+### 🔴 What a studio must NOT pick up from this tier
+
+| repository | ★ | 🔴 grant | why it matters here |
+|---|---|---|---|
+| [`edanalytics/edu_wh`](https://github.com/edanalytics/edu_wh) | **19** | 🔴 **`PolyForm Noncommercial 1.0.0`** | 🔴 **The obvious companion to the Ed-Fi ODS — *"dbt package for EDU's Ed-Fi data warehouse"* — and the FIRST thing a studio would reach for. A studio engagement is commercial** |
+| [`edanalytics/edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) | 10 | 🔴 **`PolyForm Noncommercial 1.0.0`** | Same; `dbt` package for raw Ed-Fi data |
+| [`tonyzimbinski/infinite-campus`](https://github.com/tonyzimbinski/infinite-campus) | **34** | 🔴 **`GPL`** | The most visible Infinite Campus client |
+| [`sas-fossdev/saspes`](https://github.com/sas-fossdev/saspes) | 13 | 🔴 **`AGPL-3.0`** | PowerSchool browser extension |
+
+🔵 **`edanalytics` is the trap worth naming on this shelf: the same owner's [`DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) is carried as `Apache-2.0` and cited as evidence the Ed-Fi grant is exercised. One owner, both grants, and the noncommercial ones are the analytics layer a client would most want.**
+
+### 🔴 Stated gaps
+
+- 🔴 **The mandated platform query (`open source platform education ERP CRM MIT Apache`) was NOT run this pass.** `p238`'s result stands unchanged: `OpenEduCat` *(`LGPL-3.0` per its own site)*, `Kuali`, `openSIS`, none `MIT`/`Apache` confirmed by that channel.
+- 🔴 **This whole tier is North America.** 🟡 **`ACTION VO`: the EMEA and APAC equivalents are unidentified on this shelf — the UK's `UK Register of Learning Providers`/`LRS` tier, EMEA `xAPI`/`SCORM` stacks and APAC national SIS standards have never been harvested. An informed gap, not coverage.**
+- 🟡 **No row in this tier has been RUN.** The grants, heads and extension seams are read; nothing is deployed. `ACTION VB` *(run a compliance scanner over a carried repository)* remains open and now has a natural target in `Ed-Fi-Extensions`.
+
 ## Pass 238 — 2026-10-16 — THE MANDATED PLATFORM QUERY RETURNED `OpenEduCat` AGAIN AND STILL COULD NOT STATE A LICENCE; MEANWHILE A REPOSITORY NAMED **`Moodle-Full-Version-Unlocked`** PASSES EVERY AUTOMATED LICENCE CHECK ON THIS SHELF
 
 🟢 **`3` new LATAM public-data platform rows.** 🔴 **`1` impersonation of a platform this shelf recommends on nine files.** 🟡 **The mandated platform query reproduced p237's result exactly.**

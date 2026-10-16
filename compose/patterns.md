@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — FIVE RECIPES ON THE US K-12 DISTRICT DATA LAYER PLUS A **SECOND GATE THAT IS BUILT, TESTED AND WIRED** IN THE SAME PASS — `70`/`70` CONTROLS, AND IT REFUSES TWO OF THIS PASS'S OWN HARVESTS
+
+🟢 Every repository named below has its grant **read first-hand** and its head **pinned** in [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv). 🔴 **Four repositories a studio would reach for first are named as FORBIDDEN, not omitted.**
+
+### 🟢 `P239-1` — a district Ed-Fi extension with an AI seam, without forking the ODS *(North America, 6–8 wk)*
+
+🔵 **The point: Ed-Fi has a SANCTIONED plugin path, so nothing here forks the data store.**
+
+| step | repository | grant | pinned |
+|---|---|---|---|
+| 1. stand up the store | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) *(carried)* | `Apache-2.0` | — |
+| 2. deploy the schema | 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-Databases`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Databases) | `Apache-2.0` `10 173` B | `main` · `0aa3efb75fe0` |
+| 3. author the extension as a MODEL, not a patch | 🆕 [`Ed-Fi-Alliance-OSS/MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js) + 🆕 [`vscode-metaed-ide`](https://github.com/Ed-Fi-Alliance-OSS/vscode-metaed-ide) | `Apache-2.0` `10 173` B | `a7f3c6986c05` · `6f191375c41e` |
+| 4. ship it as a plugin | 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-Extensions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions) | `Apache-2.0` `10 173` B | `main` · `67268e23c6f4` |
+| 5. load district data | 🆕 [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) | `Apache-2.0` `11 349` B | `main` · `1e357bd1956f` |
+| 6. gate the PR | 🆕 [`Ed-Fi-Alliance-OSS/Ed-Fi-Actions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions) + 🆕 [`DevSecOps`](https://github.com/Ed-Fi-Alliance-OSS/DevSecOps) | `Apache-2.0` `11 357` B | `d013f8223b47` · `af0afefcdda7` |
+
+🔴 **DO NOT add `edanalytics/edu_wh` or `edanalytics/edu_edfi_source` as the warehouse layer.** They are **`PolyForm Noncommercial License 1.0.0`** *(`4 771` / `4 769` B, read first-hand)* and a studio engagement is commercial. 🟡 **Write the `dbt` layer; the permissive gap is real and `lightbeam` from the same owner already covers the load step.**
+
+### 🟢 `P239-2` — the `Fiona` pattern: a documentation agent with an approval gate on its only write *(North America, 3–4 wk)*
+
+🔵 **Why copy it rather than design one: it is a standards body's own `Apache-2.0` agent, and its write path is already shaped the way a district procurement will demand.**
+
+Wire [🆕 `Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) *(`Apache-2.0`, `11 357` B, `main` · `b5adb129e7ef`)* as the template and keep four of its decisions:
+
+1. **Socket Mode** — outbound WebSocket only, **no public URL and no ingress**. 🔵 The single cheapest thing to inherit for a school-network deployment.
+2. **Domain-filtered retrieval** — it queries documentation sites through a configurable domain allowlist rather than the open web. 🟡 **Swap its retrieval for your client's corpus; keep the allowlist.**
+3. 🟢 **A human-approval gate on the one action that writes** *(`/fiona ticket` → modal → GitHub issue)*. **Read-only by default, approval for the write.**
+4. **Per-user sliding-window rate limiting** + thumbs feedback persisted for analytics.
+
+Compose with 🆕 [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) *(`Apache-2.0`, `main` · `d42adc22adb7`)* for the `prompts/` `skills/` `hooks/` `agents/` layout. 🔴 **Its own `README` warns to review third-party skills before a global install — honour that when vendoring.**
+
+### 🟢 `P239-3` — fork the frozen chains, because the permissive code is the unmaintained code *(North America, 4–6 wk)*
+
+🔵 **`p236` established the rule on the GitHub Classroom autograding chain; this pass found a second instance, so it is a pattern rather than an incident.**
+
+| frozen asset | grant | state | why fork rather than replace |
+|---|---|---|---|
+| `classroom-resources/autograding` + `autograding-grading-reporter` *(`p236`)* | 🟢 **`MIT`** `1 063` B | 🔴 archived; chain breaks **in the middle** — grading runs, reporting does not | 🔴 the recommended replacement [`foundation50/classroom50`](https://github.com/foundation50/classroom50) is **`GPL-3.0`** |
+| 🆕 [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) | 🟢 **`Apache-2.0`** `10 141` B | 🔴 **archived `2025-03-10`**, `11`★ / **`12` forks** | mature LMS-data tooling, already integrated against; more forks than stars |
+
+🟢 **Archiving freezes the repository, not the grant.** 🟡 **Exposure check for the first chain is one command:** `grep -rn "classroom-resources/autograding" .github/workflows/`. 🔵 **Pin `b1266b721cba` when forking `LMS-Toolkit` — an archived repository's `HEAD` will not move, which makes it the easiest pin this KB holds.**
+
+### 🟢 `P239-4` — a permissive SIS integration, grant-checked per client *(North America, 2–3 wk)*
+
+🔴 **This recipe exists because the obvious picks are copyleft.** Of `6` PowerSchool/Infinite Campus clients read first-hand, exactly `3` are permissive:
+
+| system | 🟢 USE | 🔴 DO NOT USE |
+|---|---|---|
+| PowerSchool | 🆕 [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) `MIT` `1 072` B `34`★ · 🆕 [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) `MIT` `1 082` B `16`★ | 🔴 [`sas-fossdev/saspes`](https://github.com/sas-fossdev/saspes) **`AGPL-3.0`** `34 522` B |
+| Infinite Campus | 🟡 🆕 [`schwartzpub/ic_parent_api`](https://github.com/schwartzpub/ic_parent_api) `MIT` `1 073` B `9`★ | 🔴 [`tonyzimbinski/infinite-campus`](https://github.com/tonyzimbinski/infinite-campus) **`GPL`** `35 149` B **`34`★** · 🔴 [`NCSIS/InfiniteCampus-Vendor-Integration`](https://github.com/NCSIS/InfiniteCampus-Vendor-Integration) **no grant file** |
+| rostering | 🆕 [`Clever/clever-go`](https://github.com/Clever/clever-go) `Apache-2.0` `10 757` B `13`★ | 🟡 `Clever/clever-js` `24`★ — **archived `2022`** |
+| Ed-Fi ↔ LMS seam | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) `Apache-2.0` `6`★ | 🔴 **`6`★ carrying `13` recipe sites — single-maintainer risk, flagged since `p229`** |
+
+🔴 **`ic_parent_api`'s `LICENSE` names "The Python Packaging Authority" as copyright holder** — a cookiecutter artefact. 🟡 **The grant text is valid `MIT`; the holder is wrong. Get an attribution statement from the author before shipping it to a client.**
+
+🔵 **The lesson to carry: the `GPL` client TIES the highest-starred permissive one at `34`★, and both non-permissive Infinite Campus clients outrank the only permissive one. Star rank carries no information about the grant.**
+
+### 🟢 `P239-5` — the query-shape gate, built, tested and wired in this pass *(any region, 1 day)*
+
+🔵 **`p238` built [`p238-lure-signature`](code/p238-lure-signature/) to convict a lure after a harvest returns it. This gate prevents the harvest.**
+
+🟢 **[`compose/code/p239-query-shape/`](code/p239-query-shape/) — `70`/`70` controls, from its own directory and under `-I` from the repo root, wired into `make hooks`.** No network, no model: it classifies a query's shape **before the query is spent**.
+
+```bash
+python3 -I compose/code/p239-query-shape/query_shape.py 81905 updated "agente educativo"
+# SLICE   recency sort over 81905 results ranks by LAST PUSH ... scope it with org:/topic:, or sort by stars
+python3 -I compose/code/p239-query-shape/query_shape.py 24 updated "org:Ed-Fi-Alliance-OSS"
+# SCOPED  query is namespace-bound; 24 results are that namespace, not the index
+```
+
+| verdict | may supply rows | may ground *"there is no X"* | may fill a `trending` shelf |
+|---|---|---|---|
+| `SCOPED` / `SAMPLE` | 🟢 | 🟢 | 🟢 |
+| `NARROW` | 🟢 | 🔴 | 🟢 |
+| `HEAD` | 🟢 | 🔴 | 🔴 |
+| `SLICE` | 🔴 | 🔴 | 🔴 |
+
+🔴 **It refused two of this pass's own harvests** — the LATAM vocabulary query *(`81 905`)* and the NA-extension query *(`2 326`)* — **which is why this pass reports three unmeasured regions instead of three absences.**
+
+🟡 **And a control anchored on measurement rejected an earlier version of the gate**: it classified `HEAD` as un-harvestable, but the `48`%-on-topic stars harvest actually supplied six published rows. 🔵 **Harvestability, absence-support and recency-support are three different questions, and the measurement is what forced them apart.**
+
+🟢 **Wire both gates together — shape first, provenance second:**
+
+```bash
+make hooks   # p228/p229/p230/p233/p235/p237/p238 + p239-query-shape, all offline
+# 1. before spending a query:  query_shape.py <total_count> <sort> <query>
+# 2. after it returns rows:    lure_signature.py <owner/repo> <readme> [stars] [forks] [days]
+```
+
 ## Pass 238 — 2026-10-16 — FIVE RECIPES, ONE PER REGION PLUS A GATE THAT IS **BUILT, TESTED AND RUN** RATHER THAN DESCRIBED — `45`/`45` CONTROLS, `43`/`43` OF THIS PASS'S OWN ROWS CLEARED, BOTH LURES CONVICTED
 
 🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) · [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · **instrument:** [`compose/code/p238-lure-signature/`](code/p238-lure-signature/)

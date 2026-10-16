@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — THE TREND IS THAT **EDUCATION AI IS ARRIVING FILED UNDER DATA INTEROPERABILITY**, NOT UNDER EDUCATION AI — AND THE COUNTER-TREND IS THAT THIS KB'S OWN RETRIEVAL HAS BEEN MEASURING **PUSH FREQUENCY** AND CALLING IT RELEVANCE
+
+🔵 **Evidence:** [`p239-query-shape`](../evidence/p239-query-shape.2026-10-16-p239.tsv) · [`p239-sortkey-reattribution`](../evidence/p239-sortkey-reattribution.2026-10-16-p239.tsv) · [`p239-lure-farm-scope`](../evidence/p239-lure-farm-scope.2026-10-16-p239.tsv) · [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv)
+
+### 🟢 `T239-G` — the real trend: the agents are under the STANDARD, not under "education AI"
+
+`ACTION UC` — *"find top open-source education AI agents"* — has failed **nine consecutive passes** on the English web-search channel. 🟢 **This pass found two production education agents, and neither would ever have answered that query:**
+
+| agent | filed under | what it actually is |
+|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | a **data-interoperability standards body** | a deployed Slack assistant over education standards and APIs, `Apache-2.0`, human-approval gate on its only write |
+| [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | the same org's **SDLC tooling** | prompts, skills, hooks and agent definitions, `Apache-2.0` |
+
+🔵 **The institutions actually shipping education AI are the ones that already own the data plumbing, and they file their agents beside their pipelines.** 🟡 **So `ACTION UC` is very likely a vocabulary failure rather than an absence — which is a different finding from nine passes of "no supply", and a more useful one.** 🔴 **Kept unreworded regardless, so its failure stays on the record.**
+
+### 🔴 `T239-A` — the counter-trend, and it is about this KB
+
+🔴 **`0` of `20` of this KB's query-evidence tables record a sort key.** Measured this pass over six harvests:
+
+| `total_count` | sort | on-topic page one |
+|---|---|---|
+| `24` *(`org:`-scoped)* | `updated` | 🟢 **`91.7`%** |
+| `253` | `updated` | 🟢 `63.3`% |
+| `7 576` | **`stars`** | 🟡 `48.0`% |
+| `2 326` | `updated` | 🔴 **`2.5`%** |
+| `8 618` | `updated` | 🔴 **`0.0`%** |
+| `81 905` | `updated` | 🔴 **`0.0`%** |
+
+🔵 **A recency sort over a broad result set ranks by LAST PUSH, so it selects for push FREQUENCY.** `8 618` at `0`% against `7 576` at `48`% is comparable breadth and a **`48`-point swing from the sort key alone**. 🟡 **The practical shape of the trend: what pushes most often on GitHub is bot-maintained — job boards refreshed nightly, trending-trackers, VPN subscription lists, and freshly minted lure repositories. A recency-sorted broad harvest is a census of automation, not of a field.**
+
+### 🔴 `T239-B/C` — the impersonation trend, rescaled
+
+`p238` read its `13`-repository cohort as an education-targeted operation timed to the GitHub Classroom shutdown. 🔴 **A census says otherwise: `≥5 525` repositories in a SIX-DAY window, `100` distinct owners per `100` results, and `1` of `100` page-one names is an education brand.**
+
+🟢 **What IS a trend, and it is sharper than the education reading:**
+
+- 🔴 **Brand impersonation at industrial scale with a VALID permissive payload.** Six members read first-hand — BioShock, Hulu Plus, Cyberduck, EverQuest II, GeoGebra, JClic — every one serving `LICENSE` at `HTTP 200`, every one funnelling to the single host `softyne.com`.
+- 🔵 **The attacked signal is the one the open-source world treats as ground truth.** `p228`–`p238` spent eleven passes establishing that a grant must be read from the payload. 🔴 **A deliberately labelled repository passes that read.** 🟡 **A grant is a permission; it was never a provenance claim** — and that generalises well beyond education.
+- 🟡 **It is now reaching public-sector education brands in EMEA** *(`JClic`, Generalitat de Catalunya)*, where `p238`'s set was `Moodle`, `Google Classroom` and `PRONOTE`.
+
+### 🟡 `T239-F` — a quieter finding, and the pass's own overreach caught before publication
+
+🔴 **A census of all `24` `Ed-Fi-Alliance-OSS` repositories, every grant read first-hand: `13` are the PRISTINE `11 357` B Apache-2.0, `9` are `10 173`, exactly `1` is `10 172`, and `1` has no grant file at all.** 🔴 **`10 172` is the only length these shelves carried — generalised across `10` files from a sample of ONE repository.**
+
+🟡 **This pass first explained the split as VINTAGE and that explanation is falsified by its own census:** the two groups' push dates overlap almost entirely, the org's oldest-pushed repository *(`EdFi.Installer.AppCommon`, `2026-03-19`)* is **pristine** and a recent one *(`Ed-Fi-Data-Standard`, `2026-10-09`)* is **trimmed**. 🟢 **The predicate that survives is LINEAGE: all four `LICENSE.txt` files sit in the short group and all are the ODS product line.**
+
+🔵 **The trend worth carrying is about fingerprints, not licences: a byte length identifies a TEMPLATE, never a provenance and never an org.** 🟡 **`ACTION VN`: pair length with the `APPENDIX` / `END OF TERMS` predicates, which are what actually distinguish the shapes, and never generalise a length from one repository to its org.**
+
+### 🔴 `T239-E` — and the newest licence-risk shape is SOCIAL, not textual
+
+🔴 **[`edanalytics/edu_wh`](https://github.com/edanalytics/edu_wh) `(19★)` and [`edanalytics/edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) `(10★)` are `PolyForm Noncommercial License 1.0.0`** — while the same owner's [`DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) is carried on these shelves as `Apache-2.0` and cited as *"evidence the grant is actually exercised by a third party"*.
+
+🔵 **The trend worth naming: as permissive-by-default erodes, owners become MIXED rather than switching.** Source stays `Apache-2.0`; the **analytics and data-product layers** go source-available or noncommercial — which is precisely the layer a client engagement wants. 🟡 **`ACTION VM`: no row inherits a grant from a sibling repository, however well the owner is established here.**
+
+### 🔴 What this pass did NOT establish
+
+- 🔴 **No regional trend for EMEA, APAC or LATAM was measured.** The English news channel returned secondary vendor press for EMEA and enterprise IT press for APAC; the LATAM supply harvest was refused as a `SLICE`. 🔵 **Three of four regions are unmeasured and said so — `p238`'s own rule, that silence looks exactly like coverage.**
+- 🔴 **`ACTION VA` stands: still no education-agent eval harness.** Both new agent rows are `0`★ and neither ships a benchmark, while the adjacent compliance category has had a published four-tool comparative eval since `p238`.
+- 🔴 **`ACTION VB` unrun**: no compliance instrument has been executed over a carried education repository. 🟡 It now has a natural target in `Ed-Fi-Extensions`.
+
 ## Pass 238 — 2026-10-16 — THE TREND IS THAT **COMPLIANCE HAS BECOME A SOFTWARE CATEGORY**, AND THE COUNTER-TREND IS THAT THE OPEN-SOURCE SUPPLY CHAIN HAS LEARNED TO **FORGE THE ONE SIGNAL THIS KB TRUSTS**
 
 🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) · [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv)

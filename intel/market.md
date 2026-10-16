@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — THE US K-12 **DISTRICT DATA LAYER** IS MAPPED FOR THE FIRST TIME AND IT IS WHERE NORTH AMERICAN EDUCATION INTEGRATION MONEY ACTUALLY SITS — WHILE EMEA, APAC AND LATAM SUPPLY WERE **NOT MEASURED** THIS PASS, AND THAT IS STATED AS A REFUSED HARVEST RATHER THAN AN ABSENCE
+
+🟢 **`16` permissive North America rows** — the gap `p238` closed at `1` of `43`. 🔴 **`3` of `4` regions unmeasured this pass.** 🔵 **No market figure is restated here: `ACTION UP`'s `$6.4`–`11.4` B spread *(`78`%, three firms)* stands exactly as `p238` recorded it, and quoting a point estimate from these shelves is still forbidden.**
+
+🔵 **Evidence:** [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv) · [`p239-queries`](../evidence/p239-queries.2026-10-16-p239.tsv) · [`p239-query-shape`](../evidence/p239-query-shape.2026-10-16-p239.tsv)
+
+### 🟢 The North America market map this pass places
+
+🔵 **US K-12 integration is not an LMS market, it is a DATA-STANDARD market, and the standard is `Apache-2.0`.** Four tiers, each now carried with a first-hand grant:
+
+| tier | who holds it | grant | what a studio sells into it |
+|---|---|---|---|
+| **data standard + reference implementation** | 🟢 **Ed-Fi Alliance** — US non-profit, `Apache-2.0` across the stack, plus a **certification programme** *(`certification-testing`)* | 🟢 permissive | extensions via the sanctioned `Ed-Fi-Extensions` plugin path; model changes via the `MetaEd` DSL |
+| **the SIS the data lives in** | 🔴 **PowerSchool, Infinite Campus** — proprietary US vendors | 🔴 closed; only the **clients** are open | integration, migration, and reporting on top of `MIT` clients |
+| **rostering / identity** | 🟡 **Clever, ClassLink** — US commercial | 🟡 `Apache-2.0` client *(`clever-go`)*, service closed | SSO and roster sync |
+| **analytics / warehouse** | 🔴 **Education Analytics** *(`edanalytics`)* | 🔴 **`PolyForm Noncommercial` on the `dbt` packages**, `Apache-2.0` on the ODS fork | 🟢 **the clearest opening in the map: the warehouse layer's leading open packages are NONCOMMERCIAL, so a permissive `dbt` layer over Ed-Fi is unoccupied** |
+
+🟡 **And one structural signal: `Ed-Fi-Alliance-OSS/Data-Management-Service` carries `12`★ against `17` forks, and `Ed-Fi-Actions` `0`★ against `11` forks. Forks outnumbering stars across an org means integrators, not spectators.**
+
+### 🟢 `ACTION UY` discharged — and the register lesson it carries
+
+`p238` registered `ACTION UY` on the premise that the `FERPA`/`COPPA` statute words were *"contaminated"*. 🔴 **Both halves of that premise are now falsified.** The words are not contaminated — at `sort:stars` they surface no lure at all; they are simply **too common** (`10 815` results). And the district-system vocabulary it mandated was **already `8`-of-`26` carried**, the whole Ed-Fi ODS backbone among it. 🟡 **`ACTION VI`: the claims gate binds DISCOVERY actions, not only *"resolve X"* ones.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The strongest-evidenced region on these shelves for the first time: `16` permissive rows, every grant read first-hand, every region basis institutional rather than inferred.**
+
+- 🟢 **A permissive `dbt`/warehouse layer over Ed-Fi is the clearest gap in the map.** The incumbent open packages — `edu_wh` *(`19`★)* and `edu_edfi_source` *(`10`★)* — are **`PolyForm Noncommercial`**, so no commercial engagement can build on them. `lightbeam` *(`Apache-2.0`, `12`★)* already covers the load step from the same owner.
+- 🟢 **Two frozen-but-permissive chains are forkable now**: the GitHub Classroom autograding chain *(`p236`, `MIT`)* and 🆕 [`LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) *(`Apache-2.0`, archived `2025-03-10`, `11`★/`12` forks)*. 🔵 **Mature, production-tested, permissive, unmaintained — and `p236`'s rule holds: archiving freezes the repository, not the grant.**
+- 🟢 **`Fiona` is a reusable reference, not just a row**: a standards body's own `Apache-2.0` agent with a **human-approval gate on its only write action**, Socket Mode *(no ingress)* and IaC. 🔵 **The approval-gate pattern is what a district procurement will ask for; it now has a citable precedent.**
+- 🟡 **Read the grant per SIS client.** Of `6` PowerSchool/Infinite Campus clients, `3` are permissive and `3` are not, and the `GPL` one ties the highest-starred permissive one at `34`★.
+
+### EMEA
+
+🔴 **NOT MEASURED this pass — no supply harvest was run for EMEA, and the English-language news channel returned nothing citable.**
+
+- 🔴 **WebSearch returned no market sizing, no `2026` EMEA adoption statistic and no primary regulator source.** Named only: London School of Innovation *(degree-awarding powers)*, Cognita's six-country pilot, NIIT MTS *(Fosway grid)*, ICS.AI *(UK HE model)* — 🔴 **all secondary, none with a licence or a repository.**
+- 🟢 **What stands from prior passes, unchanged and still the binding fact:** Annex III point `3` *(education and vocational training)* binds **`2027-12-02`**; Annex I binds `2028-08-02`; `Reg. (EU) 2026/1744` in force `2026-07-27`; the nearest binding date is **`2026-12-02`**, now seven weeks out. 🔴 **`eur-lex.europa.eu` remains a proxy `403`, so these stay `CONVERGENT-SECONDARY` — `ACTION RO` stands.**
+- 🟡 **One new EMEA-relevant signal, and it is adversarial:** the lure farm now carries [`Jclic-Full-Version`](https://github.com/pewcrusher-1922/Jclic-Full-Version) — **JClic is the Generalitat de Catalunya's (XTEC) educational authoring tool.** 🔵 **A European public-sector education brand is being impersonated with a valid `MIT` payload, funnelling to `softyne.com`.**
+- 🟡 **`ACTION VO`: the EMEA district-data equivalent of Ed-Fi is unidentified on these shelves.**
+
+### APAC
+
+🔴 **NOT MEASURED this pass.**
+
+- 🔴 **WebSearch returned enterprise IT press only** — TCS/Pearson skills alliance, LearnUpon's Sydney HQ, OpenAI's ANZ policy hire, Singapore's *financial*-sector consultation. 🔴 **No ministry-of-education policy, no school-level adoption figure, no vendor share.** 🔵 **Consistent with `p237`'s seven-pass negative on this channel; `ACTION UX` stands.**
+- 🟢 **What stands from `p236`:** [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) *(`MIT`, `48`★)* over Korea's 학교알리미 OpenAPI remains the only APAC row with an **evidenced** region basis *(`topic:korea` on the repository)*. 🔴 **And `p236`'s constraint stands: APAC's limit is missing GRANTS, not missing code — `7` of `9` uncarried candidates had no licence at all.**
+- 🟡 Noted but not drafted: [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) *(`147`★, India's National Statistics Office, MCP pilot)* — 🟡 **government-owned and APAC, but statistics rather than education; recorded so a later pass does not rediscover it as education supply.**
+
+### LATAM
+
+🔴 **NOT MEASURED this pass, and this is a REFUSED HARVEST — not an absence.**
+
+- 🔴 **The Spanish/Portuguese harvest returned `total_count` `81 905` at `0`% on-topic** and [`p239-query-shape`](../compose/code/p239-query-shape/) refused it as a `SLICE`. Page one was generic Spanish/Portuguese AI-agent projects: marketing bots, an insurance site, a WoW mage guide.
+- 🟢 **The supply is known to exist**: `p238` took **`13` LATAM rows at `0`% duplication**, its largest regional intake. 🔵 **So this pass's failure is a query-shape failure, and reading it as "LATAM has no supply" would be exactly the error `supports_absence` now refuses.**
+- 🟡 **`ACTION VJ`: re-run LATAM `topic:`-scoped rather than by free-text vocabulary.** `p238`'s productive LATAM queries were narrow *(`total_count` `62` and `42`)*; this pass's was `81 905`.
+- 🔴 **`ACTION UR` still does not discharge.** Estado de México's art. `61` reform remains **legislature-confirmed at committee stage** *(united committees unanimous; Dip. Lilia Urbina Salazar, PRI)*; the `Gaceta del Gobierno` decree and entry-into-force date are still not found. 🔵 **Quotable as a trend, not as a law in force.**
+
+### Global
+
+- 🔴 **One operator is running `≥5 525` brand-impersonation repositories in a six-day window**, `100` distinct owners per `100` page-one results, every member funnelling to `softyne.com`, every one serving a valid `MIT` payload at `HTTP 200`. 🟡 **Education is `1` name in `100` — a thin slice of a general warez farm, which corrects `p238`'s reading of it as education-targeted.**
+- 🔵 **The procurement consequence is region-independent: a permissive licence, even read first-hand from the payload, is not a provenance claim.** 🟢 **[`compose/code/p238-lure-signature/`](../compose/code/p238-lure-signature/) convicts `6`/`6` unseen members; [`compose/code/p239-query-shape/`](../compose/code/p239-query-shape/) prevents the harvest that meets them.**
+
 ## Pass 238 — 2026-10-16 — `ACTION UQ` IS DISCHARGED AS **ALREADY ANSWERED** — THE RECONCILIATION `p236` ASKED FOR WAS PUBLISHED BY `p223` **THE DAY BEFORE** — AND THE MARKET SPREAD `ACTION UP` ORDERED IS NOW MEASURED AT `6.4`–`11.4` `$B`
 
 🔵 **Evidence:** [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv) · [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv)

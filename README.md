@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — `16` PERMISSIVE **NORTH AMERICA** ROWS DISCHARGE `ACTION UY` AND THE GAP `p238` LEFT AT `1`-OF-`43` — BUT THE PASS'S FINDING IS THAT THE PARAMETER DECIDING WHETHER A HARVEST IS A SAMPLE, THE **SORT KEY**, IS RECORDED IN `0` OF THIS KB'S `20` QUERY-EVIDENCE TABLES
+
+⏱️ **EIGHTH pass of `2026-10-16`.** p232–p238 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`16` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **All `16` North America.** 🟢 **A new tested instrument, `70`/`70` controls, wired into `make hooks`.** 🔴 **`5` rows withheld, `2` of them NONCOMMERCIAL from an owner these shelves cite as proof a permissive grant is exercised.** 🔴 **`p238`'s headline re-attributed and its scale corrected by two orders of magnitude.** 🔴 **EMEA, APAC and LATAM were NOT measured — three refused harvests, stated as such.**
+
+🔵 **Evidence:** [`p239-verified-rows`](evidence/p239-verified-rows.2026-10-16-p239.tsv) *(16 slugs)* · [`p239-withheld`](evidence/p239-withheld.2026-10-16-p239.tsv) · [`p239-query-shape`](evidence/p239-query-shape.2026-10-16-p239.tsv) · [`p239-sortkey-reattribution`](evidence/p239-sortkey-reattribution.2026-10-16-p239.tsv) · [`p239-lure-farm-scope`](evidence/p239-lure-farm-scope.2026-10-16-p239.tsv) · [`p239-lure-funnel-shared-host`](evidence/p239-lure-funnel-shared-host.2026-10-16-p239.tsv) · [`p239-edfi-grant-lengths`](evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv) *(26 rows)* · [`p239-queries`](evidence/p239-queries.2026-10-16-p239.tsv) · **instrument:** [`compose/code/p239-query-shape/`](compose/code/p239-query-shape/)
+
+### 🔴 `T239-A` — the headline: this KB has been measuring push frequency and calling it relevance
+
+🔴 **Measured over this KB's own `evidence/` directory: `0` of `20` `*queries*.tsv` files record a sort key.** Six harvests this pass, on-topic rate of page one:
+
+| `total_count` | sort | on-topic | verdict |
+|---|---|---|---|
+| `24` | `updated` | 🟢 **`91.7`%** | `SCOPED` — `org:Ed-Fi-Alliance-OSS` |
+| `253` | `updated` | 🟢 `63.3`% | `SAMPLE` |
+| `2 326` | `updated` | 🔴 **`2.5`%** | `SLICE` |
+| `7 576` | **`stars`** | 🟡 **`48.0`%** | `HEAD` |
+| `8 618` | `updated` | 🔴 **`0.0`%** | `SLICE` |
+| `81 905` | `updated` | 🔴 **`0.0`%** | `SLICE` |
+
+🔵 **The discriminator is not breadth — it is breadth INTERACTING WITH A RECENCY SORT.** `7 576` at `stars` returned `48`%; `8 618` at `updated` returned `0`%. **Comparable breadth, a `48`-point swing from the sort key alone.** 🔴 **Over a large set `sort:updated` ranks by LAST PUSH, so page one selects for push FREQUENCY** — bot-refreshed job boards, trending-trackers, VPN subscription lists. 🟡 And `Ed-Fi` itself is a lesson: GitHub tokenises the hyphen, so it matches `edge-finder`, `ed-finder` and `FictionBook Editor`.
+
+### 🔴 `T239-B` — it re-attributes `p238`'s headline, with `p238`'s own query as the control
+
+`p238` concluded its `license:mit` filter **admits** a lure farm. 🟢 **It does.** 🔴 **But the filter is not what put the farm on page one.** Same query, same `total_count` `10 815`, same day:
+
+| sort | release-channel names, page one | education agents |
+|---|---|---|
+| `stars` | 🟢 **`0` of `30`** | 🔴 `0` *(awesome-lists, CS curricula)* |
+| `updated` | 🔴 **`3` of `30`** | 🔴 `0` *(the farm)* |
+
+🟢 **The `updated` run surfaced a brand `p238` never saw, and `p238`'s gate convicted it on first contact** — [`pewcrusher-1922/Jclic-Full-Version`](https://github.com/pewcrusher-1922/Jclic-Full-Version), `main` · `ba60a2dcf7df`, `LURE` on all four predicates, **`100`% of `21` links on `softyne.com`**. 🟡 JClic is the Generalitat de Catalunya's authoring tool, so the farm now reaches an EMEA public-sector education brand.
+
+### 🔴 `T239-C` — and `p238`'s SCALE claim does not survive a census
+
+🔴 **`"Full-Version" OR "Full-Version-Unlocked" in:name pushed:>2026-10-10` → `total_count` `5 525`, a SIX-DAY window.** Page one of `100`: **`100` distinct owners**, `98` zero-star, `100` zero-fork, 🔴 **`1` education brand.** 🟢 **Six members read first-hand — BioShock, Hulu Plus, Cyberduck, EverQuest II, GeoGebra, JClic — ALL funnel to `softyne.com`, all serve `LICENSE` at `200`, all convict `LURE`.**
+
+🔵 **So it is one operator at `≥5 525` repositories and education is a thin slice of a general warez farm, not its target. `p238` saw `13` of `13` education brands because it sampled through an education-filtered query.** 🟡 **What survives: the exposure is real (`Moodle` is recommended on nine shelves) and the gate scores `6`/`6` prospectively.**
+
+### 🟢 `T239-D` — the supply, and the best row is a production agent built by a STANDARDS BODY
+
+🟢 [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) — **`Apache-2.0`** *(`11 357` B)*, `main` · `b5adb129e7ef`. A deployed Slack assistant over Ed-Fi documentation, standards and APIs: Socket Mode *(no ingress)*, streaming, per-user rate limiting, Azure Bicep IaC, 🟢 **and a human-approval gate on its only write action.** Plus 🟢 [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) *(`Apache-2.0`)*.
+
+🔵 **Neither would ever answer a search for *"education AI agents"* — both are filed under a data-interoperability standard. After nine failures, `ACTION UC` looks like a vocabulary problem rather than an absence.**
+
+Plus `14` foundation rows across the US K-12 district-data stack: `lightbeam`, `Ed-Fi-Kafka-Connect`, `Ed-Fi-Extensions`, `Ed-Fi-Databases`, `MetaEd-js`, `vscode-metaed-ide`, `Ed-Fi-API-Specifications`, `Ed-Fi-Actions`, `DevSecOps`, `PowerSchool-API`, `PyPowerSchool`, `ic_parent_api`, `clever-go`, and 🔴 `LMS-Toolkit` **(archived `2025-03-10`, permissive — `p236`'s second frozen chain)**.
+
+### 🔴 `T239-E` — the sharpest withhold is an OWNER-TRUST failure, not a licence-reading one
+
+🔴 [`edanalytics/edu_wh`](https://github.com/edanalytics/edu_wh) *(`19`★)* and [`edanalytics/edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) *(`10`★)* are **`PolyForm Noncommercial License 1.0.0`** *(`4 771` / `4 769` B, read first-hand)* — while the same owner's [`DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) is carried here as `Apache-2.0` and cited as *"evidence the grant is actually exercised by a third party."*
+
+🔵 **A third defect shape: the payload read works perfectly, and what would have skipped it is a TRUST HEURISTIC ABOUT THE OWNER.** 🔴 **And the noncommercial ones are the `dbt`/warehouse layer — exactly what a studio reaches for first.** 🟡 **`ACTION VM`: no row inherits a grant from a sibling repository.**
+
+Also withheld: `saspes` **`AGPL-3.0`**, `tonyzimbinski/infinite-campus` **`GPL`** *(`34`★ — it ties the highest-starred permissive client)*, `NCSIS/InfiniteCampus-Vendor-Integration` **no grant file**.
+
+### 🔴 `T239-F` — a carried claim falsified, and this pass's own first explanation falsified with it
+
+🔴 **Census of all `24` `Ed-Fi-Alliance-OSS` repositories: `13` are the pristine `11 357` B Apache-2.0, `9` are `10 173`, exactly `1` is `10 172`, and `1` has no grant file.** 🔴 **`10 172` — the only length these shelves carry, generalised across `10` files — is a sample of ONE repository.**
+
+🟡 **This pass first explained the split as repository VINTAGE and its own census refutes that:** the groups' push ranges overlap, the oldest-pushed repository is pristine and a recent one is trimmed. 🟢 **The surviving predicate is LINEAGE — all four `LICENSE.txt` files are the ODS product line.** 🔵 **`ACTION VN`: a byte length identifies a TEMPLATE, never a provenance and never an org.**
+
+### 🔴 Gaps `p239` leaves open, stated because silence looks like coverage
+
+- 🔴 **EMEA, APAC and LATAM supply NOT MEASURED.** 🟢 **LATAM is a REFUSED harvest, not an absence** — `total_count` `81 905` at `0`% on-topic, refused as a `SLICE`; `p238` took `13` LATAM rows at `0`% duplication, so the supply exists. 🟡 **`ACTION VJ`: re-run LATAM `topic:`-scoped.**
+- 🔴 **English WebSearch again returned nothing citable for EMEA or APAC** — vendor press and enterprise IT press, no primary regulator source, no market figure. Consistent with `p237`'s seven-pass negative; `ACTION UX` stands.
+- 🔴 **`ACTION UC` is nine-for-nine**, kept unreworded so the failure stays on the record.
+- 🔴 **`ACTION VA`: still no education-agent eval harness.** Both new agent rows are `0`★ and neither ships a benchmark.
+- 🔴 **`ACTION VB` unrun** — no compliance instrument executed over a carried education repository. 🟡 It now has a natural target in `Ed-Fi-Extensions`.
+- 🟡 **`ACTION VI`: the claims gate binds DISCOVERY actions.** `ACTION UY` mandated a vocabulary that was already `8`-of-`26` carried, the whole Ed-Fi ODS backbone among it — `p238`'s `ACTION VF` defect, recurring one action later in a different clause.
+- 🟡 **`ACTION VK`: the new gate's `(253, 2 326]` interval is unmeasured** — one harvest at `~800` and one at `~1 500` would close it.
+- 🟡 **`ACTION VL`: `total_count` is estimated and capped by GitHub above `1 000`**, so the gate's thresholds rest on an approximation of the API's own.
+- 🟡 **`ACTION UZ` narrows to `10` of `13`** — one of `p238`'s listing-only lures is now read first-hand, plus `5` fresh members.
+- 🔴 **`ACTION UR` still does not discharge:** Estado de México's art. `61` reform remains committee-stage; the `Gaceta del Gobierno` decree is still not found. 🔴 **`eur-lex.europa.eu` remains a proxy `403`; `ACTION RO` stands.**
+
 ## Pass 238 — 2026-10-16 — THE LICENCE FILTER `p237` ADOPTED AS THIS KB'S SUPPLY CHANNEL **ADMITS A DOWNLOAD-LURE FARM**, AND THE GATE AGAINST IT IS BUILT, TESTED AND RUN IN THE SAME PASS
 
 ⏱️ **SEVENTH pass of `2026-10-16`.** p232–p237 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

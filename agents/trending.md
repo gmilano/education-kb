@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p239 — the week's agent news is that **`p238`'s lure farm is not an education story at all** — it is one operator at `≥5 525` repositories in six days, and education is `1` name in `100`
+
+🟢 **`2` new agent rows**, both `Apache-2.0` from a US standards body. 🔴 **`p238`'s headline re-attributed: the sort key, not the licence filter, is what surfaced the farm.** 🟢 **`p238`'s gate convicts `6`/`6` unseen members on first contact — its first prospective test, passed.**
+
+🔵 **Evidence:** [`p239-sortkey-reattribution`](../evidence/p239-sortkey-reattribution.2026-10-16-p239.tsv) · [`p239-lure-farm-scope`](../evidence/p239-lure-farm-scope.2026-10-16-p239.tsv) · [`p239-lure-funnel-shared-host`](../evidence/p239-lure-funnel-shared-host.2026-10-16-p239.tsv)
+
+### 🟢 New this week
+
+| agent | grant | ★ | head | region | what is new |
+|---|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 **`Apache-2.0`** · `11 357` B | 0 | `main` · `b5adb129e7ef` | 🟢 **North America** | 🟢 **A standards body shipping a production education agent** — Slack Bolt + Socket Mode over Ed-Fi docs/standards/APIs, streaming, rate-limited, Azure Bicep IaC, 🟢 **human-approval gate on its only write action** |
+| [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 **`Apache-2.0`** · `11 357` B | 0 | `main` · `d42adc22adb7` | 🟢 **North America** | `prompts/` `skills/` `hooks/` `agents/` for the Ed-Fi SDLC, installable via `skills.sh` or as Copilot CLI custom agents |
+
+🔵 **Neither would ever appear in a search for *"education AI agents"* — both are filed under a data-interoperability standard. `ACTION UC`'s nine-pass failure is looking more like a vocabulary problem than an absence.**
+
+### 🔴 The farm, measured rather than characterised
+
+| what `p238` said | what a census says |
+|---|---|
+| `13` repositories, all education brands | 🔴 **`total_count` `5 525`** for `"Full-Version" OR "Full-Version-Unlocked" in:name pushed:>2026-10-10` — a **six-day** window |
+| *"an education finding rather than a security one"* | 🔴 **`1` of `100` page-one names is an education brand** (`Geogebra-Full-Version`); the rest are EverQuest II, BioShock, Hulu Plus, Kaspersky, Cyberduck, Pokémon Go, Barbie Princess Dress Up |
+| timed to the Classroom shutdown window | 🔴 **The same operator pushed BioShock and Hulu Plus the same day.** Timing coincidence, not targeting |
+| *(not measured)* | 🟢 **`100` distinct owners of `100`; `98` zero-star; `100` zero-fork** — one repository per throwaway account |
+| *(not measured)* | 🟢 **`6` members read first-hand across games, streaming, utilities and education ALL funnel to the single host `softyne.com`** — one operator |
+
+🔵 **`p238` saw `13` of `13` education brands because it sampled through an education-filtered query. The concentration was a property of the filter, not of the farm.** 🟡 **What survives: the exposure is real — `Moodle` is recommended on nine of these shelves — and the gate works.**
+
+### 🟢 The gate's first prospective hit
+
+[`pewcrusher-1922/Jclic-Full-Version`](https://github.com/pewcrusher-1922/Jclic-Full-Version) — `main` · `ba60a2dcf7df`, `README` `10 470` B, `LICENSE` `1 072` B `MIT` at `HTTP 200`, pushed `2026-10-16` **after `p238` ran**.
+
+🔴 **`LURE` — all four predicates.** `NAME` *(`full-version`)* · `FUNNEL` *(`100`% of `21` links on `softyne.com`)* · `BADGE` *(`https://softyne.com/wp-content/uploads/license.svg` — a **picture** of a licence badge)* · `COLDNESS` *(corroborating only)*.
+
+🟡 **JClic is the Generalitat de Catalunya's (XTEC) educational-activity authoring platform — so the farm now reaches an EMEA public-sector education brand, where `p238`'s set was `Moodle`, `Google Classroom`, `PRONOTE` and nine others.**
+
+### 🔴 The channel note that matters more than any row
+
+🔴 **`0` of this KB's `20` `*queries*.tsv` evidence tables record a sort key.** Same query, same `total_count` `10 815`, same day: `sort:stars` → `0` release-channel names on page one; `sort:updated` → `3`. 🔵 **A `trending` shelf can only be filled from a recency sort, which is exactly the sort that promotes a fresh lure. This shelf is the one most exposed to the farm, and [`compose/code/p239-query-shape/`](../compose/code/p239-query-shape/) now refuses a recency harvest above `total_count` `2 326` outright.**
+
 ## 2026-10-16 — p238 — the week's agent news is that **a licence filter can be gamed**, and the cohort doing it impersonates `Google Classroom` seven weeks after Classroom was switched off
 
 🟢 **`21` new agent rows** *(10 LATAM, 9 APAC, 2 region-not-established)*. 🔴 **`13` repositories found masquerading as education products with a valid `MIT` grant.** 🔴 **The mandated query fails for the EIGHTH consecutive pass.**

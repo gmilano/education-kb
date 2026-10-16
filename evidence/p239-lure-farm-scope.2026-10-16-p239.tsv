@@ -1,0 +1,9 @@
+measurement	value	basis
+query	"Full-Version" OR "Full-Version-Unlocked" in:name pushed:>2026-10-10	REST search, sort:updated
+total_count	5525	six-day window ending 2026-10-16
+page1_size	100	perPage=100
+distinct_owners_page1	100	100 of 100 - one repository per throwaway owner
+zero_star_page1	98	of 100
+zero_fork_page1	100	of 100
+education_brand_names_page1	1	Geogebra-Full-Version only; p238's cohort was 13 of 13 education brands
+p238_education_concentration	artefact	p238 sampled through an education-filtered query (FERPA OR COPPA student education)

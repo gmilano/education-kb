@@ -1,0 +1,27 @@
+slug	licence_path	bytes	shape	pushed_at	note
+Ed-Fi-Alliance-OSS/Data-Management-Service	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-16	
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Specifications	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-15	
+Ed-Fi-Alliance-OSS/ed-fi-alliance-oss.github.io	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-16	
+Ed-Fi-Alliance-OSS/Fiona	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-15	
+Ed-Fi-Alliance-OSS/Ed-Fi-Actions	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-15	
+Ed-Fi-Alliance-OSS/ODS-Admin-API	LICENSE	10173	appendix stripped	2026-10-15	
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-15	
+Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-15	
+Ed-Fi-Alliance-OSS/edfi-oneroster	LICENSE	10173	appendix stripped	2026-10-15	
+Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap	NO-GRANT-FILE	0	NO GRANT FILE	2026-10-09	ungranted repository inside an otherwise fully granted org
+Ed-Fi-Alliance-OSS/Automation-Testing	LICENSE	10173	appendix stripped	2026-10-09	
+Ed-Fi-Alliance-OSS/vscode-metaed-ide	LICENSE.md	10173	appendix stripped	2026-10-08	
+Ed-Fi-Alliance-OSS/MetaEd-js	LICENSE	10173	appendix stripped	2026-10-14	
+Ed-Fi-Alliance-OSS/DevSecOps	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-10-01	
+Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-09-09	
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	LICENSE	10173	appendix stripped	2026-10-09	
+Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-09-08	
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	LICENSE.txt	10172	appendix stripped, one byte shorter	2026-10-14	the ONLY repository at this length - and the only figure these shelves carried
+Ed-Fi-Alliance-OSS/certification-testing	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-07-06	
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	LICENSE.txt	10173	appendix stripped	2026-10-14	
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-09-07	
+Ed-Fi-Alliance-OSS/Ed-Fi-Extensions	LICENSE.txt	10173	appendix stripped	2026-06-22	
+Ed-Fi-Alliance-OSS/Ed-Fi-Databases	LICENSE.txt	10173	appendix stripped	2026-04-21	
+Ed-Fi-Alliance-OSS/EdFi.Installer.AppCommon	LICENSE	11357	PRISTINE Apache-2.0 (APPENDIX present)	2026-03-19	
+Clever/clever-go	LICENSE	10757	appendix stripped, a different trim	2025-11-07	outside the org - a fourth distinct length
+Ed-Fi-Exchange-OSS/LMS-Toolkit	LICENSE	10141	appendix AND end-of-terms marker both absent	2025-03-10	different org (Ed-Fi-Exchange-OSS), archived

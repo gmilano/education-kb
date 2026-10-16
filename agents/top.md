@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — `ACTION UY` IS DISCHARGED AND IT PLACES `16` PERMISSIVE **NORTH AMERICA** ROWS AFTER `p238` CLOSED AT `1` OF `43` — BUT THE PASS'S REAL FINDING IS THAT THE PARAMETER DECIDING WHETHER A HARVEST IS A SAMPLE AT ALL, THE **SORT KEY**, IS RECORDED IN `0` OF THIS KB'S `20` QUERY-EVIDENCE TABLES
+
+⏱️ **EIGHTH pass of `2026-10-16`.** p232–p238 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`16` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` actually reported. 🟢 **All `16` are North America — the gap `p238` named as its own.** 🟢 **A new tested instrument, `70`/`70` controls, wired into `make hooks`.** 🔴 **`5` rows withheld, `2` of them under a NONCOMMERCIAL licence from an owner these shelves already cite as evidence that a permissive grant is exercised.** 🔴 **`p238`'s headline is re-attributed, and its scale claim corrected by two orders of magnitude.** 🔴 **LATAM and EMEA supply were NOT measured this pass — both harvests were refused by the new gate rather than read as absences.**
+
+🔵 **Evidence:** [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv) *(16 slugs, grant + bytes + pinned head + region basis)* · [`p239-withheld`](../evidence/p239-withheld.2026-10-16-p239.tsv) · [`p239-query-shape`](../evidence/p239-query-shape.2026-10-16-p239.tsv) · [`p239-sortkey-reattribution`](../evidence/p239-sortkey-reattribution.2026-10-16-p239.tsv) · [`p239-queries`](../evidence/p239-queries.2026-10-16-p239.tsv) · **instrument:** [`compose/code/p239-query-shape/`](../compose/code/p239-query-shape/)
+
+### 🔴 `T239-A` — the headline, and like `p238`'s it is a defect in a channel this KB adopted, not in the world
+
+`p237` moved supply discovery to the REST search channel. `p238` audited that channel's **licence filter**. 🔴 **Neither pass recorded the channel's SORT KEY, and nor did any pass before them: measured over this KB's own `evidence/` directory, `0` of `20` `*queries*.tsv` files name one.**
+
+Six harvests this pass, on-topic rate of page one measured by education vocabulary over name + description:
+
+| `total_count` | sort | page | on-topic | verdict |
+|---|---|---|---|---|
+| `24` | `updated` | 24 | 🟢 **`91.7`%** | `SCOPED` — `org:Ed-Fi-Alliance-OSS` |
+| `253` | `updated` | 30 | 🟢 `63.3`% | `SAMPLE` |
+| `2 326` | `updated` | 40 | 🔴 **`2.5`%** | `SLICE` |
+| `7 576` | **`stars`** | 50 | 🟡 **`48.0`%** | `HEAD` |
+| `8 618` | `updated` | 30 | 🔴 **`0.0`%** | `SLICE` |
+| `81 905` | `updated` | 40 | 🔴 **`0.0`%** | `SLICE` |
+
+🔵 **The discriminator is not breadth — it is breadth INTERACTING WITH A RECENCY SORT.** `7 576` results sorted by stars returned `48`% on-topic; `8 618` sorted by `updated` returned `0`%. **Comparable breadth, a `48`-point swing, attributable to the sort key alone.**
+
+🔴 **Why: over a large result set `sort:updated` ranks by LAST PUSH, so page one selects for push FREQUENCY.** What pushes most often is not what is most relevant. The `Ed-Fi` harvest's page one was a free-VPN subscription list, an NBA prop-betting edge finder, a UFC predictor, an Italian lake blog and a manga reader — **`0` of `30` education rows out of `8 618` results.** 🟡 **And `Ed-Fi` itself is why: GitHub tokenises the hyphen, so `Ed-Fi` matches `edge-finder`, `ed-finder` and `FictionBook Editor`. A hyphenated product name is not a searchable token on this channel.**
+
+### 🔴 `T239-B` — the same mechanism re-attributes `p238`'s headline, and `p238`'s own query is the control
+
+`p238` concluded that its `license:mit` filter **admits** a download-lure farm. 🟢 **The filter does admit it, and that reasoning holds.** 🔴 **But the filter is not what put the farm on page one.** `p238`'s exact query, re-run at both sort keys — same `total_count` (`10 815`), same day, sort the only difference:
+
+| sort | release-channel names on page one | education agents found |
+|---|---|---|
+| `stars` | 🟢 **`0` of `30`** | 🔴 `0` — awesome-lists and CS curricula |
+| `updated` | 🔴 **`3` of `30`** | 🔴 `0` — the farm |
+
+🔵 **The `license:mit` filter is present in BOTH runs. One parameter decides whether a harvester meets the farm.** 🟡 **`p238`'s gate is still needed** — `sort:updated` is the only way to fill a `trending` shelf — **but the cheapest mitigation for this farm is a sort key, not four predicates.**
+
+🟢 **And the `updated` run surfaced a brand `p238` never saw**, which is this pass's prospective test of `p238`'s instrument: [`pewcrusher-1922/Jclic-Full-Version`](https://github.com/pewcrusher-1922/Jclic-Full-Version) — `main` · `ba60a2dcf7df`, `README` `10 470` B, `LICENSE` `1 072` B `MIT` at `HTTP 200`. 🔴 **`LURE` on all four predicates, `100`% of `21` links on `softyne.com` — the same funnel host.** 🟡 **JClic is the Generalitat de Catalunya's educational-activity authoring tool, so the farm now reaches an EMEA public-sector education brand.**
+
+### 🔴 `T239-C` — and `p238`'s SCALE claim does not survive a census
+
+`p238` called the cohort *"an education finding rather than a security one"*, timed to the GitHub Classroom shutdown window. 🔴 **Measured: `"Full-Version" OR "Full-Version-Unlocked" in:name pushed:>2026-10-10` returns `total_count` `5 525` — in a SIX-DAY window.** Page one of `100`: **`100` distinct owners of `100`**, `98` zero-star, `100` zero-fork. 🔴 **`1` of those `100` is an education brand** (`Geogebra-Full-Version`).
+
+🟢 **Six members read first-hand across four verticals — BioShock, Hulu Plus, Cyberduck, EverQuest II, GeoGebra, JClic — ALL funnel to the single host `softyne.com`, all serve `LICENSE` at `200`, all convict `LURE`.** 🔵 **So it is one operator at `≥5 525` repositories, and education is a thin slice of a general warez farm, not its target. `p238` saw `13` of `13` education brands because it sampled through an education-filtered query — the concentration was an artefact of `p238`'s own filter.** 🟡 **What survives intact: the exposure is real (`Moodle` is recommended on nine of these shelves), and `p238`'s gate convicts `6`/`6` unseen members on first contact.**
+
+### 🟢 `T239-D` — the two new agent rows, and the first is a production education agent built by a STANDARDS BODY
+
+| agent | grant *(read first-hand)* | ★ | head | region basis | what it is |
+|---|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 **`Apache-2.0`** — `LICENSE`, `11 357` B | 0 | `main` · `b5adb129e7ef` | 🟢 **North America** — the Ed-Fi Alliance, a US non-profit standards body, named in its own `README` | 🟢 **A deployed Slack assistant over Ed-Fi documentation, standards and APIs.** Slack Bolt + Socket Mode *(outbound WebSocket only, no ingress)*, streaming responses, per-user sliding-window rate limiter, thumbs feedback to Cosmos DB, Azure Bicep IaC. 🟢 **Its one write action — filing a GitHub issue — sits behind an OPTIONAL HUMAN-APPROVAL GATE.** OpenSSF Scorecard badge |
+| [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 **`Apache-2.0`** — `LICENSE`, `11 357` B | 0 | `main` · `d42adc22adb7` | 🟢 **North America** — Ed-Fi Alliance | `prompts/`, `skills/`, `hooks/`, `agents/` for the Ed-Fi SDLC, installable via `skills.sh` or as GitHub Copilot CLI custom agents. 🟡 **Its own `README` warns to review third-party skills before a global install** |
+
+🔵 **`Fiona` is the shape `ACTION UC` has been failing to find for eight passes, and it was never going to turn up in a search for *"education AI agents"*: it is filed under a data-interoperability standard, not under education AI.** 🟡 **It is also the rarest provenance on this shelf — a standards body shipping a production agent under `Apache-2.0`, with an approval gate on its only write.**
+
+### 🔴 `T239-E` — `ACTION UY` discharged, and it was half a REGISTER failure
+
+`p238` registered `ACTION UY` to discover NA supply by district-system name — `Ed-Fi`, `OneRoster`, `Clever`, `PowerSchool`, `Infinite Campus` — on the ground that *"the statute words `FERPA` and `COPPA` are now contaminated"*.
+
+🟢 **The axis is productive: `26` candidates, `16` published.** 🔴 **But `8` of the `26` were ALREADY CARRIED, including the entire Ed-Fi ODS backbone** — `Ed-Fi-ODS`, `Ed-Fi-ODS-Implementation`, `Ed-Fi-ODS-Docker`, `Ed-Fi-Data-Standard`, `Data-Management-Service`, `ODS-Admin-API`, `Ed-Fi-API-Publisher`, `edfi-oneroster` — plus `trending`'s `oneroster-ts`, `oneroster-python` and `powerschool-api`. 🔵 **`make claims TOKEN=Ed-Fi` returns `ALREADY CLAIMED` across `10` files and `640` cells.** 🟡 **`ACTION VF` told the next pass to run that gate before registering a *"resolve X"*. `ACTION UY` is a *"discover X"* and was registered without it. `ACTION VI`: the claims gate binds DISCOVERY actions too — a vocabulary this KB has already harvested is not an unexplored axis.**
+
+🟢 **The statute words were not contaminated either** — `T239-B` shows them returning `0` education agents at `sort:stars`, where no lure appears. 🔵 **They are simply too common in READMEs: `10 815` results means the terms do not select.**
+
+### 🔴 Gaps `p239` leaves open, stated because silence looks like coverage
+
+- 🔴 **LATAM and EMEA supply were NOT MEASURED.** The Spanish/Portuguese harvest returned `total_count` `81 905` at `0`% on-topic and the new gate refused it. 🟢 **This is a refused harvest, not an absence** — `p238` took `13` LATAM rows at `0`% duplication, so the supply exists and this pass simply failed to shape a query for it. 🟡 **`ACTION VJ`: re-run LATAM scoped (`topic:`-bound) rather than by free-text vocabulary.**
+- 🔴 **`ACTION UC` is nine-for-nine.** Kept unreworded so its failure stays on the record — though `T239-D` suggests the query, not the world, is what is wrong: `Fiona` exists and no *"education AI agent"* search would reach it.
+- 🔴 **`ACTION VA` still stands: no education-agent eval harness.** Both new agent rows are `0`★ and neither ships a benchmark.
+- 🔴 **`ACTION VB` unrun** — `airblackbox comply` over a carried education repository. `T239-C` consumed this pass's online budget.
+- 🟡 **`ACTION UZ` narrows:** one of `p238`'s `13` listing-only lures is now read first-hand *(plus `5` fresh members)*, so `10` of `13` remain listing-only.
+- 🟡 **`ACTION VK`: the new gate's `(253, 2 326]` interval is unmeasured** — one harvest at `~800` and one at `~1 500` would close it. The thresholds are the last count observed to work and the first observed to fail, not round numbers.
+- 🟡 **`ACTION VL`: `total_count` is a number GitHub estimates and caps above `1 000`**, so the gate's thresholds rest on an approximation of the API's own.
+
 ## Pass 238 — 2026-10-16 — THE SERVER-SIDE LICENCE FILTER THAT `p237` ADOPTED AS THIS KB'S SUPPLY CHANNEL **ADMITS A DOWNLOAD-LURE FARM**, AND ONE OF ITS `13` REPOSITORIES IMPERSONATES `Google Classroom` IN THE EXACT WINDOW `p236` DATED CLASSROOM'S SHUTDOWN
 
 ⏱️ **SEVENTH pass of `2026-10-16`** *(p232–p237 all carry this date)*.

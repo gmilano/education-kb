@@ -1,0 +1,9 @@
+total_count	sort	page_size	on_topic	on_topic_pct	verdict	harvestable	supports_absence	query
+24	updated	24	22	91.7	SCOPED	yes	yes	org:Ed-Fi-Alliance-OSS pushed:>2026-01-01
+253	updated	30	19	63.3	SAMPLE	yes	yes	OneRoster in:name,description,readme pushed:>2026-04-01
+2326	updated	40	1	2.5	SLICE	no	no	"ClassLink" OR "state longitudinal data" OR "SIS integration" school district agent pushed:>2026-05-01
+7576	stars	50	24	48.0	HEAD	yes	no	"OneRoster" OR "Ed-Fi" OR "Clever API" OR "PowerSchool" OR "Infinite Campus" in:name,description
+8618	updated	30	0	0.0	SLICE	no	no	Ed-Fi in:name,description,readme pushed:>2026-04-01
+81905	updated	40	0	0.0	SLICE	no	no	agente educativo OR "tutor inteligente" OR "gestion escolar" OR "aula virtual" in:name,description,readme pushed:>2026-06-01
+10815	stars	30	0	0.0	HEAD	yes	no	FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01 (p238's query, re-run)
+10815	updated	30	0	0.0	SLICE	no	no	FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01 (p238's query, as p238 ran it)

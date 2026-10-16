@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 239 — 2026-10-16 — `14` NEW NORTH AMERICA FOUNDATION ROWS FROM THE US K-12 DISTRICT-DATA STACK, AND THE PASS'S SHARPEST WITHHOLD IS AN OWNER THESE SHELVES ALREADY CITE AS **EVIDENCE THAT A PERMISSIVE GRANT IS EXERCISED**
+
+🟢 **`14` new foundation rows, every grant read first-hand** at the branch `git ls-remote --symref` reported. 🔴 **`5` rows WITHHELD after their payloads were read.** 🔴 **A carried licence-identity claim is falsified by a census of all `24` repositories in the org: the `10 172` B figure these shelves generalised across `10` files belongs to exactly ONE repository, and the org's MAJORITY shape — `13` of `24`, the pristine `11 357` B Apache-2.0 — was never recorded.**
+
+🔵 **Evidence:** [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv) · [`p239-withheld`](../evidence/p239-withheld.2026-10-16-p239.tsv) · [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv) · [`p239-queries`](../evidence/p239-queries.2026-10-16-p239.tsv)
+
+### 🔴 `T239-E` — the withhold, and it is an OWNER-TRUST failure rather than a licence-reading one
+
+[`repos/foundations.md`](foundations.md) carries [`edanalytics/DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) as `Apache-2.0` (`10 172` B) with the cell *"🟢 **Evidence the grant is actually exercised by a third party.**"* 🟢 **That row is correct.** 🔴 **Two other repositories from the SAME owner are not permissive at all:**
+
+| repository | ★ | 🔴 what the payload says | consequence |
+|---|---|---|---|
+| [`edanalytics/edu_wh`](https://github.com/edanalytics/edu_wh) | **19** | 🔴 **`PolyForm Noncommercial License 1.0.0`**, `LICENSE.md` `4 771` B — *"EDU is licensed under the PolyForm Noncommercial License 1.0.0"* | 🔴 **Not OSI, not permissive. A studio engagement IS commercial** |
+| [`edanalytics/edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) | **10** | 🔴 **`PolyForm Noncommercial License 1.0.0`**, `4 769` B | 🔴 Same |
+
+🔵 **The defect class is new to these shelves.** `p228`–`p238` built an eleven-pass programme establishing that a licence must be read from the payload, not the API field; `p238` added that a payload read does not defeat a *deliberately* labelled repository. 🔴 **This is a third shape: the payload read works perfectly, and the thing that would have skipped it is a TRUST HEURISTIC ABOUT THE OWNER.** An owner cited on these shelves as exercising a permissive grant ships noncommercial packages beside it, and the two `dbt` packages are exactly what a studio would reach for first — `edu_wh` is *"dbt package for EDU's Ed-Fi data warehouse"*, the obvious companion to a carried Ed-Fi ODS fork.
+
+🟡 **`ACTION VM`: no row may inherit a grant from a sibling repository, however well the owner is established on these shelves. Read every slug's own payload.**
+
+### 🔴 `T239-F` — a carried licence-identity claim, falsified by a census of the whole org
+
+[`agents/top.md`](../agents/top.md) line `563` records: *"the same `Apache-2.0` ships at **two byte lengths** inside one org — `10 172` B with the *'How to apply'* APPENDIX stripped"*, and [`agents/trending.md`](../agents/trending.md) line `8763` adds *"Below pristine means text was removed — Ed-Fi's `10 172` B is the appendix."* 🟢 **The appendix explanation is exactly right.** 🔴 **Everything else about it is wrong, and the census says so: all `24` repositories in `Ed-Fi-Alliance-OSS`, every grant read first-hand.**
+
+| bytes | `APPENDIX` | `END OF TERMS` | n of `24` | pushed range |
+|---|---|---|---|---|
+| 🟢 **`11 357`** | 🟢 **present** | 🟢 present | 🟢 **`13`** — the **MAJORITY**, and a length these shelves never recorded | `2026-03-19` … `2026-10-16` |
+| `10 173` | 🔴 absent | 🟢 present | `9` | `2026-04-21` … `2026-10-15` |
+| 🔴 **`10 172`** | 🔴 absent | 🟢 present | 🔴 **`1`** — [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) **alone** | `2026-10-14` |
+| 🔴 **none** | — | — | `1` — [`Ed-Fi-Technology-Roadmap`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap) **has NO grant file** | `2026-10-09` |
+
+🔴 **`10 172` — the one figure these shelves carry, generalised into an org fingerprint across `10` files — is a sample of ONE repository out of `24`.** 🟢 **The org's majority shape is the PRISTINE Apache-2.0, and no pass before this one recorded it.**
+
+🔴 **And the obvious explanation is falsified too.** *Vintage* does not account for it: the two groups' push dates **overlap almost entirely**, and the org's oldest-pushed repository [`EdFi.Installer.AppCommon`](https://github.com/Ed-Fi-Alliance-OSS/EdFi.Installer.AppCommon) *(`2026-03-19`)* is **pristine `11 357`**, while [`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) *(`2026-10-09`)* is **trimmed `10 173`**. 🟡 **The one predicate that does hold is the FILENAME: all four `LICENSE.txt` files sit in the short group, and all are the ODS product line** *(`Ed-Fi-ODS`, `Ed-Fi-ODS-Implementation`, `Ed-Fi-Extensions`, `Ed-Fi-Databases`)* — so the trim travels with a repository's **lineage**, not its date.
+
+🟡 Two further lengths, outside this org: `Clever/clever-go` at `10 757` B, and 🔴 [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) at **`10 141`** B — a third truncation shape, lacking even the `END OF TERMS AND CONDITIONS` marker and ending mid-clause `9`.
+
+🔵 **`ACTION VN`: byte length identifies a TEMPLATE, never a provenance and never an org. Pair it with the `APPENDIX` / `END OF TERMS` predicates, which are what actually distinguish the shapes — and never generalise a length from one repository to its org.** 🔵 Census: [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv) *(26 rows)*.
+
+### 🟢 The `14` rows
+
+**North America (`14` of `14`)** — 🟢 **the gap `p238` closed at `1` row of `43`.**
+
+| repository | grant *(read first-hand)* | ★ | head | region basis | what it is |
+|---|---|---|---|---|---|
+| [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) | 🟢 **`Apache-2.0`** — `11 349` B | **12** | `main` · `1e357bd1956f` | 🟢 **NA** — Education Analytics, US *(`edanalytics.org`)* | 🟢 **CLI that validates and transmits JSONL payloads into an Ed-Fi API** — the load step of a district pipeline. 🟡 **Permissive, unlike the same owner's `dbt` packages above** |
+| [`Clever/clever-go`](https://github.com/Clever/clever-go) | 🟢 **`Apache-2.0`** — `10 757` B | **13** | `master` · `cf9827ad0cc6` | 🟢 **NA** — Clever Inc., US K-12 rostering/SSO | Go client for the Clever rostering API. 🟡 Its sibling `Clever/clever-js` *(`24`★)* is **archived** since `2022` |
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | 🟢 **`MIT`** — `1 072` B | **34** | `master` · `a23ec090ea44` | 🟢 **NA by target system** — PowerSchool SIS, US K-12 | Node.js client for the PowerSchool SIS API. 🟢 **Highest-starred permissive row this pass** |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 🟢 **`MIT`** — `1 082` B | **16** | `master` · `201c02c36ef2` | 🟢 **NA by target system** — PowerSchool SIS | Python client for the PowerSchool API |
+| [`schwartzpub/ic_parent_api`](https://github.com/schwartzpub/ic_parent_api) | 🟡 **`MIT`** — `1 073` B, 🔴 **© "The Python Packaging Authority"** | 9 | `master` · `60796c9deb35` | 🟢 **NA by target system** — Infinite Campus, US K-12 | Infinite Campus parent-portal API client. 🔴 **The grant text IS `MIT` and valid; the HOLDER is a cookiecutter artefact, not the author** — `p237`'s grant-payload-shapes class, arriving through a template |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Specifications`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Specifications) | 🟢 **`Apache-2.0`** — `11 357` B | 4 | `main` · `608546c95c92` | 🟢 **NA** — Ed-Fi Alliance | Guidance for building Ed-Fi-compatible API applications |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Kafka-Connect) | 🟢 **`Apache-2.0`** — `11 357` B | 1 | `main` · `f65182e0b359` | 🟢 **NA** — Ed-Fi Alliance | 🟢 **Kafka Connect transform for the Data Management Service** — the streaming seam of the successor platform |
+| [`Ed-Fi-Alliance-OSS/MetaEd-js`](https://github.com/Ed-Fi-Alliance-OSS/MetaEd-js) | 🟢 **`Apache-2.0`** — `10 173` B | 1 | `main` · `a7f3c6986c05` | 🟢 **NA** — Ed-Fi Alliance | MetaEd core packages — the DSL the Ed-Fi data model is generated from |
+| [`Ed-Fi-Alliance-OSS/vscode-metaed-ide`](https://github.com/Ed-Fi-Alliance-OSS/vscode-metaed-ide) | 🟢 **`Apache-2.0`** — `LICENSE.md`, `10 173` B | 1 | `main` · `6f191375c41e` | 🟢 **NA** — Ed-Fi Alliance | MetaEd IDE for VS Code |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Extensions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Extensions) | 🟢 **`Apache-2.0`** — `LICENSE.txt`, `10 173` B | 2 | `main` · `67268e23c6f4` | 🟢 **NA** — Ed-Fi Alliance | Extension samples deployable as ODS/API plugins — 🟢 **the documented customisation seam** |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Databases`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Databases) | 🟢 **`Apache-2.0`** — `LICENSE.txt`, `10 173` B | 1 | `main` · `0aa3efb75fe0` | 🟢 **NA** — Ed-Fi Alliance | Database deployment utility for Technical Suite 3 |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Actions`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions) | 🟢 **`Apache-2.0`** — `11 357` B | 0 | `main` · `d013f8223b47` | 🟢 **NA** — Ed-Fi Alliance | GitHub Action security workflows, `11` forks across the org |
+| [`Ed-Fi-Alliance-OSS/DevSecOps`](https://github.com/Ed-Fi-Alliance-OSS/DevSecOps) | 🟢 **`Apache-2.0`** — `11 357` B | 0 | `main` · `af0afefcdda7` | 🟢 **NA** — Ed-Fi Alliance | Code-analysis and DevSecOps tooling for the org |
+| [`Ed-Fi-Exchange-OSS/LMS-Toolkit`](https://github.com/Ed-Fi-Exchange-OSS/LMS-Toolkit) | 🟢 **`Apache-2.0`** — `10 141` B | **11** | `main` · `b1266b721cba` | 🟢 **NA** — Ed-Fi Exchange | 🔴 **ARCHIVED `2025-03-10`.** Tools for accessing and analyzing instructional-system data. 🟢 **`p236`'s rule applies: archiving freezes the repository, not the grant** — and this is the second frozen-but-permissive education chain these shelves carry |
+
+### 🔴 Withheld, and why
+
+| repository | ★ | 🔴 payload | consequence |
+|---|---|---|---|
+| [`sas-fossdev/saspes`](https://github.com/sas-fossdev/saspes) | 13 | 🔴 **`AGPL-3.0`** — `34 522` B | Network copyleft; not a build-on grant |
+| [`tonyzimbinski/infinite-campus`](https://github.com/tonyzimbinski/infinite-campus) | **34** | 🔴 **`GPL`** — `35 149` B | 🔴 **The highest-starred Infinite Campus client is copyleft** — the permissive one is `ic_parent_api` at `9`★ |
+| [`NCSIS/InfiniteCampus-Vendor-Integration`](https://github.com/NCSIS/InfiniteCampus-Vendor-Integration) | 13 | 🔴 **no grant file at `main`** | Ungranted rather than padded in |
+
+🟡 **Measured, because it bears on the whole axis: of `6` PowerSchool / Infinite Campus clients read first-hand, exactly `3` are permissive** *(`PowerSchool-API` `34`★, `PyPowerSchool` `16`★, `ic_parent_api` `9`★)* **and `3` are not** *(`infinite-campus` `34`★ `GPL`, `saspes` `13`★ `AGPL-3.0`, `InfiniteCampus-Vendor-Integration` `13`★ ungranted)*. 🔴 **The `GPL` client TIES the highest-starred permissive one, and BOTH non-permissive Infinite Campus clients outrank the only permissive one (`9`★).** 🔵 **Star rank carries no information about the grant on this axis — which is the whole reason every payload is read.**
+
 ## Pass 238 — 2026-10-16 — THIS KB HAS CARRIED THE EDUCATION HIGH-RISK **CLOCK** SINCE `p223` AND THE **DELIVERABLES** SINCE `p224`, AND IT CARRIES ALMOST NONE OF THE **CODE THAT IMPLEMENTS THEM**: `Article 12` APPEARS TWICE ON THESE SHELVES WHILE `C2PA` APPEARS `171` TIMES
 
 🟢 **`22` new foundation rows, every grant read first-hand.** 🔴 **`2` of them WITHHELD from the build shelf after their payloads were read — both report `NOASSERTION` on the GitHub API, and neither is permissive.** 🟢 **A third-party claim corrected: one of the four tools that [`airblackbox`](https://github.com/airblackbox/airblackbox)'s own `README` calls an "open-source EU AI Act scanner" is under the `Elastic License 2.0`.**
