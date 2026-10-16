@@ -122,7 +122,14 @@ def main():
                 total += 1
                 print(f"{f}\t{n}\t{chars!r}\t{src}")
     print(f"# {total} finding(s)", file=sys.stderr)
-    return 0
+    # p250 / `ACTION XJ`: this `return` was an unconditional `0`, and THAT is why the
+    # truncation survived.  The lint found the defect on every single `make hooks` run,
+    # printed both offending lines, and then let the recipe print
+    # `ALL OFFLINE LICENCE CONTROLS PASS` on top of its own finding.  `p233` corrected a
+    # symptom, `p247` reproduced it, `p249` repaired 6 slugs by hand — while the standing
+    # check was reporting the cause the whole time and being ignored BY CONSTRUCTION.
+    # A lint whose exit code cannot fail is a comment.
+    return 1 if total else 0
 
 
 if __name__ == "__main__":

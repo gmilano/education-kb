@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — `ACTION XJ` DISCHARGED, AND THE COMPONENT IT ASKED FOR IS **NOT A REGEX**: THIS KB WROTE A LINT FOR THIS EXACT DEFECT, WIRED IT INTO `make hooks`, AND HARDCODED `return 0` — SO IT REPORTED BOTH OFFENDING LINES ON EVERY PASS AND PRINTED **`ALL OFFLINE LICENCE CONTROLS PASS`** UNDERNEATH ITSELF. THE SWEEP RECOVERS **`30`** SLUGS, NOT `6`
+
+⏱️ **NINETEENTH pass of `2026-10-16`.** `p232`–`p249` all carry this date.
+
+🟢 **`ACTION XJ` DISCHARGED with its falsifier met**: three components named by file and line, each reproduced before it was patched and controlled after. 🟢 **`30` carried slugs recovered — `5×` what `p249` repaired by hand — and `26` phantom stumps dropped.** 🟢 **`29` of the `30` resolved first-hand; `25` of the `26` stumps proven ABSENT.** 🔴 **`1` stump is a LIVE DIFFERENT REPOSITORY that passes every check this base owns.** 🟢 **`ACTION XK` DISCHARGED and it OVERTURNS `p249`'s published conclusion about the LMS-connector layer.** 🔴 **`ACTION UX` RETIRED — unrunnable from this session, measured, after TWELVE passes of deferral.** 🔴 **The `WebSearch` row channel is dry for the TWELFTH pass in THIRTEEN.**
+
+🔵 **Evidence:** [`p250-component-map`](../evidence/p250-component-map.2026-10-16-p250.tsv) · [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) *(`56` slugs read)* · [`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv) *(`11` slugs × `41` paths)* · [`p250-channel-map`](../evidence/p250-channel-map.2026-10-16-p250.tsv) · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv) · [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv) *(`8` legs)*
+
+### 🔴 `T250-A` — the component, named, and why naming it is the whole finding
+
+`ACTION XJ`'s falsifier was explicit: *"falsified if a pass reports `6` repaired again without naming the component that truncates."* 🟢 **Here it is, and there are three.**
+
+| component | the defect | status |
+|---|---|---|
+| [`p228-shelf-gate/harvest_cells.py:17`](../compose/code/p228-shelf-gate/harvest_cells.py) | `SLUG_RE`'s repo group is `([A-Za-z0-9][A-Za-z0-9_.-]*?)` — a **lazy** quantifier whose own class contains `.`, followed by a terminator lookahead `(?=[)\s`,.;:'"\]]|$)` that **also** contains `.`. A lazy quantifier stops at the first position its terminator can match, so **every dotted repository name is cut at its first dot** | 🟢 **FIXED** — greedy, `.` removed from the terminator; the pre-existing `rstrip(".")` still sheds a trailing sentence dot |
+| [`p129-transcription-audit/bind_tags.py:9`](../compose/code/p129-transcription-audit/bind_tags.py) | `ADDR` — **identical defect, second site.** 🔴 No pass in `250` has ever named this one | 🟢 **FIXED** |
+| [`p230-prose-path-ladder/lazy_lint.py`](../compose/code/p230-prose-path-ladder/lazy_lint.py) `main()` | 🔴 **THE ROOT CAUSE OF THE RECURRENCE, and it is not a regex at all:** `return 0`, unconditional | 🟢 **FIXED** — `return 1 if total else 0`, with a positive control |
+
+🔴 **The third row is the finding.** `p230` built a lint **for this exact shape**. Its own docstring gives the worked example: *"`processing/p5.js` harvests as `processing/p5`. Nothing errors; a shorter, wrong answer is simply returned, which is why eleven passes did not see it."* The lint has been wired into `make hooks` since `p229`. It has been reporting **both** offending lines on **every run since**. And because `main()` returned `0` no matter what it found, the recipe printed this, measured verbatim this pass:
+
+```
+# 2 finding(s)
+compose/code/p129-transcription-audit/bind_tags.py	9	'.'	ADDR = re.compile(...)
+compose/code/p228-shelf-gate/harvest_cells.py	17	'.'	SLUG_RE = re.compile(...)
+ALL OFFLINE LICENCE CONTROLS PASS
+```
+
+🔵 **So `p233` naming the defect, `p247` re-committing it and `p249` repairing `6` slugs by hand were never the failure.** The failure is that this base **built the right check, ran it on every pass, and made it incapable of failing.** 🔴 **`processing/p5.js` — the lint's own documented example — is ON these shelves, and was being carried as `processing/p5`.** The instrument, the example and the live defect were the same thing.
+
+> 🟢 **Pinned, so it cannot recur a 251st time.** `6` new controls in [`test_shelf_gate.py`](../compose/code/p228-shelf-gate/test_shelf_gate.py) assert the **answer** (`14` real dotted slugs from these shelves survive the harvest whole), not the regex shape — **`36`/`36` pass** — and the lint now fails `make hooks` on a re-introduction.
+
+### 🔴 `T250-B` — the one truncation that cannot be caught downstream
+
+`25` of the `26` stumps answer `401` on `info/refs`: they are not repositories, and they fail loudly. **One does not.**
+
+| | default branch | HEAD | grant | bytes | sha256/16 |
+|---|---|---|---|---|---|
+| the real row, [`TouchRefletz/maia.edu`](https://github.com/TouchRefletz/maia.edu) | `master` | `278ba25d3129` | `AGPL-3.0` | `34 523` | `8486a10c4393cee1` |
+| 🔴 the stump, [`TouchRefletz/maia`](https://github.com/TouchRefletz/maia) | `main` | `d94ba9b9483f` | `AGPL-3.0` | `34 523` | `8486a10c4393cee1` |
+
+🔴 **Two different repositories. Existence, grant reach, licence family, byte count AND the pinned sha all agree — on the wrong one.** Every gate this base owns returns green on a row that is not the row.
+
+🔵 **And it bounds `ACTION WX`** *(`p243`: "two carried rows with the same pinned `HEAD` are one row until proven otherwise")*. That rule holds **only for families whose canonical text embeds a copyright holder.** Short `MIT` payloads do: [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) and [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) share `5aef77eb4471effc` **because** `ucfopen` ships upstream's holder line verbatim — *"Copyright (c) 2019 Dmitry Viskov"*, read first-hand on both sides this pass. Stock texts do not: `AGPL-3.0` at `34 523` B names nobody, so it collides across unrelated projects. 🔴 **A grant-sha collision is evidence of one row in the holder-embedding tier and evidence of nothing at all outside it.**
+
+### 🟢 `T250-C` — the new agent-shelf rows, every grant read first-hand at a pinned path
+
+The `30` recoveries are **not** `30` new agents — most are standards plumbing, and that is said plainly rather than dressed up. These are the rows that belong on **this** shelf:
+
+| repo | licence *(first-hand)* | bytes | what it is | region basis |
+|---|---|---|---|---|
+| [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 **`MIT`** | `1 113` | 🟢 **the find of this pass.** README verbatim: *"An offline Google Classroom for Philippine public schools (Grades 1 to 12), with paperless self-grading quizzes and a **Socratic AI tutor**"* — *"runs entirely on the classroom's own Wi-Fi with no internet"*. A school-PC hub + budget-Android app (`3`–`4` GB RAM targets) | 🟢 **APAC** *(Philippines, stated in the payload — not owner-inferred)* |
+| [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 **`MIT`** | `1 064` | student-**PII** detection as an inference-time hook, single AWS Lambda + Terraform. README verbatim: *"the detection model follows the **FERPA** definition of personally identifiable information rather than counting regex hits"*, and *"stateless by construction"*. 🟡 README marks the upstream hook API **beta** | 🟢 **North America** *(FERPA is a US statute, named in the payload)* |
+| [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 **`MIT`** | `1 086` | extends and prunes the **ESCO** skills taxonomy from real online job-advert data. 🟡 README self-marks **`Status: Research-Prototype`** | 🟢 **EMEA** *(ESCO is the EU's own skills taxonomy; README says "across Europe")* |
+| [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) | 🟢 `MIT` | `1 077` | question generation on T5/BERT/GPT-2 — re-verified, carried since `p249` | **APAC** *(owner-inferred, India)* |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **`MIT`** | `1 070` | 🟡 a **curriculum**, not an agent, and published as one: model foundations → LLM systems → agent development, with a retrieval-evaluation lab and local graders | 🔵 unplaced |
+
+🔴 **And the row this pass recovered that a studio most needs to be warned about.** The slug `JushBJJ/Mr` has sat on these shelves as a dangling address; its real name is [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor), the most-cited open "AI tutor" project in this industry — and it **EXISTS with NO GRANT at any of `41` paths** *(Tier A + B + C)*.
+
+> 🔴 **It cannot be shipped, forked commercially, or have its prompts vendored into a client deliverable.** 🔵 Recorded as `NO-GRANT-AT-TIER-ABC`, never as "unlicensed" (`p222`: an absence is always *absence-at-the-paths-probed*). 🟢 **This is precisely the harm the truncation was doing** — the base could not warn anyone about a repository it was carrying under a name that `404`s.
+
+### 🔴 `T250-D` — two of this pass's own search-channel candidates, refuted on their payloads
+
+| subject | the channel said | the payload says |
+|---|---|---|
+| `hcengineering/platform` (**Huly**) | leg 3, verbatim: *"licensed under Apache License 2.0"* | 🔴 **`Eclipse Public License - v 2.0`**, `14 197` B. EPL-2.0 is **file-level reciprocal**, not permissive. 🔵 The byte count alone flags it: Apache-2.0's canonical text is `11 358` B — `cortezaproject/corteza` measured at exactly `11 358` this pass |
+| `asadbekme/education-crm` | leg 3: *"is listed as MIT"* | 🔴 **no licence at any of `41` paths, and its `package.json` has no `license` field at all.** The one education-specific CRM the leg returned grants nothing |
+
+🔵 **Both errors run the same way — toward more permission than the repository actually gives.** That is the direction that reaches a client.
+
+### 🔵 `T250-E` — what this pass does NOT claim
+
+🔴 **No star count, no last-push date, no archived flag appears in any row above.** `api.github.com/repos/{owner}/{repo}` answers **`403`** for every slug not attached to this session ([`p250-channel-map`](../evidence/p250-channel-map.2026-10-16-p250.tsv)), so those three fields remain **unmeasurable from here**. Any such number elsewhere on these shelves is **carried**; this pass adds none and corrects none.
+
+🔴 **No absence of supply is claimed** (`ACTION UK`). The `topic:` harvest did not run because it **cannot** — `403`. `8` `WebSearch` legs ran and returned `0` education-agent repositories, and that is a **scoped channel result**, not a statement about the world.
+
+### 🔴 `T250-F` — ACTIONs registered by this pass
+
+| id | what it asks | falsifier |
+|---|---|---|
+| **`XM`** | **Make every standing check capable of failing.** `lazy_lint` was not unique: `make hooks` pipes several instruments through `>/dev/null` and `2>&1`, and any one of them that reports findings on stdout while exiting `0` is the same defect. Audit every recipe line in the `Makefile` for exit-code reachability and report how many of the `20` offline controls can actually fail. | *falsified if a pass "fixes a check" without publishing the exit-code audit over all of them* |
+| **`XN`** | **The `maia` class: a truncation that lands on a real repository.** No gate here can catch it, because every gate agrees. The only discriminator available is that the two slugs differ in the SHELF TEXT. Build a check that reads the shelf address as written and refuses a harvested slug that is a strict prefix of another slug on the same line. | *falsified if a pass publishes a prefix-collision rule that `TouchRefletz/maia` vs `TouchRefletz/maia.edu` does not trip* |
+| **`XO`** | **Publish the `DECLARED-NO-PAYLOAD` state** (`T250`/`ACTION XK`): `6` connectors declare `"license": "MIT"` in a manifest and ship no licence text. That is neither `MIT` nor "no grant", and the shelves have no column for it. Wire it into `p247-path-class` so it cannot be flattened into either. | *falsified if a pass publishes one of the `6` as `MIT`, or records it as `NO-GRANT`, without the new state* |
+| **`XP`** | **`eclipse/paho.mqtt.java`'s `LICENSE` is a `519`-B POINTER** — it names EPL-2.0 and EDL-1.0 and gives their URLs. A Tier-A file at a Tier-A name whose body is a *reference*. `p247`'s path_class has no such class and a payload grep returns `UNRECOGNISED`, which must not read as "no grant". | *falsified if a pass lands a path_class that still grades this payload as unrecognised* |
+| **`XL`** *(carried from `p249`)* | a per-file grant selected by a **code comment**. | 🔴 **NOT RUN** — this pass's online budget went to `XJ`'s `56`-slug sweep and `XK`'s `451` path probes |
+| ~~**`UX`**~~ | 🔴 **RETIRED, not deferred.** Registered for **twelve** passes; asks this base to read regulators' own publications. **Measured this pass: every non-code host is refused at the proxy** — `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `artificialintelligenceact.eu`, `www.unesco.org` all `connect_rejected`, while `pypi.org` answers `200`. The allowlist carries **code-supply** hosts and not **regulator** hosts. 🔵 `WebSearch` is not this base's lazy regulatory channel — it is its **only** one, and the four regional legs are therefore the instrument, not a fallback. | — |
+
 ## Pass 249 — 2026-10-16 — `ACTION XH` DISCHARGED, AND IT DID NOT FIND A MISSING LICENCE — IT FOUND **`6` MISSING REPOSITORIES**: THIS KB'S OWN HARVESTER MUTILATED `6` SLUGS AND EVERY ONE OF THEM IS A LIVE, FIRST-HAND **`MIT`** EDUCATION REPOSITORY
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** `p232`–`p248` all carry this date.

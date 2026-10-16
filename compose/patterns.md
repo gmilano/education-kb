@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — THE PATTERN THIS PASS EARNED IS A **LICENCE PRE-FLIGHT THAT RUNS BEFORE THE ARCHITECTURE DIAGRAM**, BECAUSE `3` OF THIS PASS'S `4` HEADLINE REPOSITORIES WOULD HAVE FAILED IT: AN UNLICENSED TUTOR, A MIS-REPORTED `EPL-2.0`, AND `6` CONNECTORS THAT DECLARE `MIT` AND SHIP NO LICENCE FILE
+
+🔵 **Every repo named below had its grant read first-hand this pass**, at a pinned path with a byte count: [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv) · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).
+
+### 🟢 `P250-1` — **Licence pre-flight.** Day one of any education engagement. ~`2` hours
+
+🔴 **Why this is a pattern and not a checklist item:** this pass alone found that the most-cited open AI tutor in the industry is unlicensed, that a platform reported as `Apache-2.0` is `EPL-2.0`, and that `6` of `11` LMS connectors declare `MIT` while shipping no licence text. 🔵 **Each of those is a week lost if it surfaces after the architecture is agreed.**
+
+```bash
+# the instrument this pass built, in this repo
+compose/code/p250-slug-repair-sweep/probe.sh <slugs.txt> ABC
+#  -> slug | exists_code | existence | grant_path | path_tier | bytes | sha256_16 | family
+```
+
+**Wire it as a gate, in this order:**
+1. 🟢 **Existence first, one request.** `github.com/<slug>/info/refs?service=git-upload-pack` — `200` EXISTS, `401` ABSENT. 🔵 Separates "the address is wrong" from "the licence is missing" before anyone argues about the licence.
+2. 🟢 **Then Tier A (`16` root names), then B (`15` non-root), then C (`5` manifests).** Stop at the first `200` with `≥1` byte.
+3. 🔴 **Grade Tier C as `DECLARED-NO-PAYLOAD`, never as the licence.** A `package.json` `"license"` field is a claim. `6` connectors this pass prove the gap is real.
+4. 🔴 **Check the byte count against the family's canonical length.** Apache-2.0 is `11 358` B (control: `cortezaproject/corteza`, measured). Huly's `14 197` B was the tell before anyone read a word.
+5. 🟢 **Treat a `NO-GRANT` as an upstream issue, not a dead end** — if a manifest declares a licence, ask the author to commit the file.
+
+🔵 **Falsifier for the pattern itself:** if a pre-flight passes `JushBJJ/Mr.-Ranedeer-AI-Tutor` as usable, the gate is not wired right.
+
+### 🟢 `P250-2` — **The COPPA/FERPA vendor-side PII gate.** US K-12, `4`–`6` weeks
+
+🔴 **The trigger is dated and already in force:** the amended **COPPA** rule's general compliance date was **`22 Apr 2026`**, and it binds **edtech vendors** — the party Globant *is* on a build engagement, not the district it sells to.
+
+| layer | repo | licence *(first-hand)* | role |
+|---|---|---|---|
+| PII detection | [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 `MIT` (`1 064` B) | inspects every governed prompt for student PII against the **FERPA definition**, not regex counts. Single AWS Lambda + Terraform, **stateless by construction** |
+| LMS launch | [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 `MIT` (`1 070` B) | LTI 1.3 / Advantage launch. 🔵 A **US university's own fork** — shortens procurement |
+| roster | [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 `MIT` (`1 066` B) | who is enrolled. 🔴 README: *"Only rostering calls are supported. Grade book has not been implemented"* — budget the gradebook separately |
+| district analyst surface | [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | 🟢 `Apache-2.0` (`11 324` B) | 🟢 **what the buyer's side actually looks like** — OneRoster Power Queries published by a real district |
+
+**Wiring:** LTI launch → roster resolve → **every** model call passes the PII gate before egress → the gate's verdict and the reviewer's action land in one append-only record.
+- 🟢 **That record is the deliverable**, not the model: at least six states mandate district AI policy, Idaho forbids AI as the primary basis for grading/discipline/placement, and NYC's red tier bars it from **IEP/504** work. All of them ask *who decided*.
+- 🟡 **Pin the scanner behind an interface** — its upstream inference-hook API is marked **beta**, field names and headers may change.
+
+### 🟢 `P250-3` — **One reviewable-assessment artefact, two jurisdictions.** `6`–`8` weeks
+
+🟢 **The rare two-region reuse, and this pass made the Vietnamese side precise enough to plan against.**
+
+| jurisdiction | the trigger, as the channel states it | what it demands |
+|---|---|---|
+| **Vietnam** | high-risk *when the AI output is the **sole basis** for a decision **without meaningful human review***. In force **`1 Mar 2026`**; compliance **`1 Mar 2027`**; 🟢 systems live before **`15 Aug 2026`** get **+6 months** | an auditable human review step on automated assessment and behavioural monitoring |
+| **US (ID, NYC)** | AI forbidden as the primary basis for grading, discipline, placement; NYC red tier adds IEP/504, counselling, surveillance | the same step, same record |
+
+🔵 **Build once:** an `assessment_decision` record carrying `{model_output, confidence, reviewer_id, reviewer_action, delta, timestamp}` where **`reviewer_action` is required and un-defaultable** — the schema makes "sole basis" unrepresentable. 🟢 Wire the question-generation side on [`ramsrigouthamg/Questgen.ai`](https://github.com/ramsrigouthamg/Questgen.ai) (`MIT`, `1 077` B) and the launch on [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) (`MIT`, `1 060` B) for JVM estates or [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) (`MIT`, `1 068` B) for modern-JS ones.
+- 🟢 **Ask which side of `15 Aug 2026` a Vietnamese prospect's systems fall on before scoping.** It moves the deadline by two quarters.
+- 🔴 **Do not put the EU AI Act in this pattern's scope on this KB's dates.** The candidates are `31 Jul 2026` / `27 Jul 2026` / `Aug 2026` and 🔴 **this base cannot close them** — the Commission's pages are refused at the proxy.
+
+### 🟢 `P250-4` — **Offline-first classroom AI.** APAC and LATAM rural, `6`–`10` weeks
+
+🟢 **Stop theorising this pattern — someone shipped it, under `MIT`.** [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) (`MIT`, `1 113` B) is a working offline Google-Classroom replacement for **Philippine public schools**, grades 1–12: a school-PC hub holding database, files, quizzes, an **AI queue** and USB export, plus an Android app targeting `3`–`4` GB budget phones, on classroom Wi-Fi with **no internet**.
+
+**Wiring:**
+- 🟢 **The `AI queue` is the integration point, and its design is the lesson:** inference is **deferred and batched**, not request/response. Point it at a local **Ollama** runtime on the hub; no token spend, no egress, no data-residency argument.
+- 🟢 **The Socratic tutor is already in it** — the work is localisation (Spanish/Portuguese), curriculum mapping, and the hub's ops story.
+- 🟡 **School calendar matters more than it sounds** for a term-aware tutor; [`ics-tools/ics.tools`](https://github.com/ics-tools/ics.tools) is the German model of that data (`AGPL-3.0-or-later` — a reference for the shape, not a dependency to vendor).
+- 🔵 **Why this travels to LATAM:** the shelves' LATAM constraint set (rural connectivity, local inference, data residency, budget Android) is the constraint set L.A.R.A was *built* against. 🟢 `MIT`, so a derivative is shippable.
+
+### 🟢 `P250-5` — **Skills-taxonomy maintenance for EMEA credentials.** `8`–`10` weeks
+
+🟢 Leg 4 names digital credentials and real-time skills visibility as a `2026` trend; this is its taxonomy end, with a permissive European row.
+
+| layer | repo | licence | role |
+|---|---|---|---|
+| taxonomy lifecycle | [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | 🟢 `MIT` (`1 086` B) | extends, validates and prunes the EU's **ESCO** skills taxonomy from live online job-advert demand. 🟡 self-marked **research prototype** |
+| launch | [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) + 🟢 **NEW** [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | 🟢 `MIT` | the European higher-ed Java estate now has a library **and** a provider-side reference on these shelves |
+| rostering | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 `MIT` (`1 066` B) | .NET estates. 🟡 Same grant payload as both `theopenem` spellings — one row, three aliases |
+
+🔵 **The pattern's value is the direction of the data flow:** ESCO is normally consumed as a fixed vocabulary; `ESCOPlus2.0` treats it as something **maintained against labour-market demand**. 🟢 That is the difference between a credential that maps to a taxonomy and one that maps to a job. 🟡 Build the lifecycle logic, expect to rewrite the prototype's plumbing.
+
+### 🟢 `P250-6` — **Brazilian public-education SIS with an agentic layer.** LATAM, `8`–`12` weeks
+
+🟢 **A genuine LATAM foundation row, recovered this pass from the unreachable stump `ipti/br`:** [`ipti/br.tag`](https://github.com/ipti/br.tag) (`LGPL`, `18 027` B) — IPTI's **T.A.G.** school-management system, in service in Brazilian public education.
+- 🔴 **`LGPL` sets the architecture, so decide it first:** weak copyleft. Deploy and extend T.A.G. as the system of record with agents **alongside** it over its interfaces; do **not** vendor it into a closed product.
+- 🟢 **Dropout prediction is the agentic layer with a buyer**, and the data is already in a SIS: enrolment, attendance, assessment.
+- 🟡 **Domain reference, not a base:** [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) (`LGPL`) on school-meal oversight — the `2017.2` is an academic term, treat as archival.
+- 🔴 **The LATAM connector trap, named:** [`davipac/classroom-mcp`](https://github.com/davipac/classroom-mcp) looks like the obvious Portuguese-language Google Classroom bridge (its package is `classroom-aluno-mcp`). 🔴 It is one of the `6` with a **declared `MIT` and no licence text**. 🟢 Open the issue, then decide — do not ship it on the manifest's word.
+
+### 🔵 `P250-7` — **The anti-pattern this pass retires**
+
+🔴 **"Read the regulator's own publication to settle a date."** Twelve passes registered `ACTION UX` to do exactly this. 🟢 **Measured this pass: impossible from this session** — `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `artificialintelligenceact.eu` and `www.unesco.org` are all refused at the proxy, while `pypi.org` and `github.com` answer `200`.
+- 🔵 **So the correct composition is a HANDOFF, not a fetch:** this KB produces the *claim and its provenance* (which leg, which pass, which conflicting candidates), and a human with unrestricted egress closes it. 🟢 Three dates currently need that handoff: the **EU AI Act**'s, **Vietnam**'s, and **COPPA**'s.
+- 🔴 **Never let a pattern depend on a date this base cannot verify.** `P250-2` and `P250-3` both name their dates *and* their uncertainty for this reason.
+
+---
+
 ## Pass 249 — 2026-10-16 — THREE RECIPES, AND ALL THREE ARE BUILT ON THE LAYER THIS PASS ACTUALLY VERIFIED: **`MIT` INTEROP PLUMBING UNDER COPYLEFT PLATFORMS**, WHICH IS THE REAL LICENCE SHAPE OF THIS INDUSTRY
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 **Attribution rule:** every repository named below had its licence **read first-hand this pass** at a pinned SHA ([`p249-xh-grant-sweep`](../evidence/p249-xh-grant-sweep.2026-10-16-p249.tsv), [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv), [`p249-platform-payloads`](../evidence/p249-platform-payloads.2026-10-16-p249.tsv)) — except where a row is explicitly marked **CARRIED** from an earlier pass.

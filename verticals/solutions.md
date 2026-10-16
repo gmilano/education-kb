@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — THE PLATFORM CENSUS GAINS **SEVEN DEPLOYED NATIONAL AND REGIONAL SYSTEMS** THAT WERE ALREADY ON THESE SHELVES AND UNREACHABLE — AND THE VERTICAL LEG'S ONE PERMISSIVE HEADLINE IS **REFUTED ON ITS PAYLOAD**: HULY IS `EPL-2.0`, NOT THE `Apache-2.0` THE CHANNEL REPORTED
+
+⏱️ **NINETEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv) · [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv).
+
+### 🔴 `T250-V1` — the refutation, and it is the same lesson `T249-V1` taught, in the other direction
+
+`T249-V1` established the rule: **a licence field in a secondary source is uncorrelated with the payload in BOTH directions.** 🟢 This pass's vertical leg (leg 3) tested it immediately and the rule held.
+
+| platform | the channel said | 🔴 the payload says | bytes |
+|---|---|---|---|
+| [**Huly**](https://github.com/hcengineering/platform) — all-in-one project/team platform | leg 3, verbatim: *"licensed under **Apache License 2.0**"* | 🔴 **`Eclipse Public License - v 2.0`** — the payload's literal first line | `14 197` |
+| [`asadbekme/education-crm`](https://github.com/asadbekme/education-crm) — the ONE education-specific CRM the leg returned | *"is listed as **MIT**"* | 🔴 **NOTHING at any of `41` paths** (Tier A+B+C), and `package.json` has **no `license` field at all** | — |
+
+🔵 **EPL-2.0 is file-level reciprocal, not permissive.** A studio told "Apache-2.0" would plan a closed derivative it cannot ship on those terms. 🟢 **And the byte count alone would have flagged it:** Apache-2.0's canonical text is **`11 358`** B — [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) measured at *exactly* `11 358` this pass and serves as the control. `14 197` is not Apache-2.0 and never was.
+
+🟢 **The two leg-3 claims that DID survive their payloads**, published with their byte counts: [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) `MIT` (`1 078` B) and [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) `MIT` (`1 077` B). 🟡 Both are **general-purpose** CRM/ERP, not education platforms — recorded with the flag rather than dressed up as vertical rows.
+
+### 🟢 `T250-V2` — OpenEduCat re-read, and the owner spelling pinned
+
+🟢 **`LGPL-3.0` confirmed a second time, first-hand** — payload verbatim: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*, `8 241` B, sha `528f84036800168d`. 🔵 `T249-V3`'s closure stands and the withholding is correct: copyleft, so not a permissive row.
+
+🟡 **A spelling note, because it costs a probe otherwise.** These shelves carry the repository under **two** owner spellings — `openeducat/openeducat_erp` (`124` cells) and `OpenEduCat/openeducat_erp` (`5` cells). 🟢 **Both resolve**, because GitHub slugs are case-insensitive; the canonical owner is **`OpenEduCat`**. 🔵 This is `ACTION UH`'s class and it is benign here — recorded so a later pass does not "repair" one spelling into a phantom.
+
+### 🟢 `T250-V3` — seven deployed systems, recovered from truncated names
+
+🔵 **These are not new platforms.** Every one was already cited on these shelves under a name that answers `401`, which means no pass could have probed, verified or recommended it. They are **real, deployed, customisable systems** — the Odoo/Moodle/OpenMRS shape this shelf exists to hold — and all seven grants were read first-hand this pass.
+
+| platform | licence *(first-hand)* | bytes | what it is, and what AI goes on top | region |
+|---|---|---|---|---|
+| [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 **`MIT`** | `1 113` | 🟢 **the strongest new vertical row in several passes.** A complete **offline LMS** for Philippine public schools, grades 1–12: school-PC hub (database, files, quizzes, **AI queue**, USB export) + Android app for learners and teachers, on classroom Wi-Fi with **no internet**. The Socratic tutor is already in it; the AI layer is the *queue* | 🟢 **APAC** *(Philippines, stated in payload)* |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🟡 **`LGPL`** | `18 027` | **T.A.G.**, IPTI's school-management system for Brazilian public education — a real SIS in service. 🔵 Weak copyleft: deploy and extend alongside, do not vendor into a closed product | 🟢 **LATAM** *(Brazil)* |
+| [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) | 🟡 **`AGPL-3.0`** | `2 833` | **K-12 Safe AI Learning Platform** — the child-safety framing the NA regulatory leg is now pricing. 🔴 `AGPL` and 🟡 at `2 833` B **not** the canonical `34 523`, so it is a short or modified AGPL notice — read it in full before relying on the family | 🔵 unplaced |
+| [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) | 🟢 **`MIT`** | `1 075` | German-language vocabulary and word-structure platform, Rails + PostgreSQL. 🟢 The only `MIT` **language-learning** platform on this shelf | 🟢 **EMEA** *(German-language payload)* |
+| [`ics-tools/ics.tools`](https://github.com/ics-tools/ics.tools) | 🟡 **`AGPL-3.0-or-later`** | `34 523` | standardised **ICS calendars for German public holidays and school terms**. 🔵 Unglamorous and load-bearing: the school calendar is what every scheduling agent needs and nobody has. 🟢 Grant evidenced **twice** — an `SPDX-License-Identifier` header *and* the payload | 🟢 **EMEA** *(Germany, stated)* |
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 🟢 **`MIT`** | `1 054` | 🟡 reporting around **SchILD**, the NRW school information system — adjacent to the `svws-nrw` estate carried since `p236`. 🔴 **README is empty**: the description is inferred from the name and that neighbourhood, **not read**, and is flagged accordingly | 🟡 **EMEA** *(Germany, inferred)* |
+| [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | 🟢 **`MIT`** | `1 091` | **WebUntis** adapter — the dominant DACH school-timetabling system, bridged into ioBroker. 🔵 The integration surface for timetable-aware agents | 🟢 **EMEA** *(DACH)* |
+| [`TouchRefletz/maia.edu`](https://github.com/TouchRefletz/maia.edu) | 🟡 **`AGPL-3.0`** | `34 523` | 🔴 **recorded with a hard warning rather than a description.** Its README is an image-table and gives no prose claim this pass could read, so **no capability is asserted**. 🔴 It is also the row whose truncation lands on a *live different repository* (`T250-B`) | 🔵 unplaced |
+
+### 🔴 `T250-V4` — the LMS-connector layer: `p249`'s verdict corrected, and the correction matters commercially
+
+🔴 **`p249` published:** *"That is the LMS-connector layer of this whole industry, and it has no grant … a studio cannot ship any of them."* 🟢 **`ACTION XK` probed all `11` at Tier B and Tier C — `451` path requests — and the verdict does not hold.**
+
+| state | count | which | what a studio does |
+|---|---|---|---|
+| 🔴 **`DECLARED-NO-PAYLOAD`** — `"license": "MIT"` in `package.json`, **no licence text anywhere** | **`6`** | `dmontgomery40/mcp-canvas-lms` · `mistercommand/mcp-canvas-lms` · `ink-waffle/moodle-mcp` · `ink-waffle/sisu-mcp` · `salshah20/classroom_mcp` · `davipac/classroom-mcp` | 🟢 **one upstream issue.** The author has already declared `MIT`; what is missing is the file. The npm registry displays `MIT` for these while the repository ships nothing |
+| 🟡 manifest present, **no licence field** | `3` | `crevextech/canvas-lms-mcp` · `p1ckle3/blackboard-mcp` · `54yyyu/school-mcp` | ask, then treat as blocked |
+| 🔴 **nothing at any of `41` paths** | `2` | `sujal-shejwal/adaptive-ai-tutor` · `radiantcrystal/safetutors` | genuinely unshippable |
+
+🔴 **`0` of the `11` reach Tier B.** Not one connector hides a licence in `docs/`, `licenses/` or `legal/` — so `p249`'s Tier-A negative was **not** a reach artefact, and the ladder adds nothing here. 🟢 **Tier C is where the picture changed.**
+
+🔵 **Why the distinction is commercial and not pedantic:** `p246`/`p247`'s rule stands — **a manifest field is a claim, never a payload** — so none of the `6` may be published as `MIT` on these shelves. 🔴 **But recording them as "no grant" erases the one fact that makes them recoverable**, and `p249`'s sentence wrote off six usable integrations as five unusable ones. 🔵 Registered as **`ACTION XO`**: the state needs a column of its own.
+
+---
+
 ## Pass 249 — 2026-10-16 — THE PLATFORM CENSUS MOVES FOR THE FIRST TIME IN NINE PASSES, AND IT MOVES BY **CORRECTING THIS KB'S OWN CELL FROM LAST PASS**: `p248` PUBLISHED `twenty` AS `BUSL-1.1` ON A ROUNDUP'S WORD — THE PAYLOAD SAYS **`AGPL-3.0`, WITH `MIT` SUBPACKAGES A STUDIO CAN ACTUALLY SHIP**
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🟢 **`3` platform rows added, `1` CORRECTED, `1` carried ASK CLOSED** — all five on bodies fetched this pass: [`p249-platform-payloads`](../evidence/p249-platform-payloads.2026-10-16-p249.tsv).

@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — THE **STANDARDS PLUMBING** OF THIS INDUSTRY WAS ON THESE SHELVES ALL ALONG AND UNREACHABLE: `11` LTI 1.3 / ONEROSTER / SIS REPOSITORIES RECOVERED FROM TRUNCATED NAMES, `8` OF THEM **`MIT`**, BECAUSE THE DOT-SUFFIX CONVENTION BELONGS TO **VERSION-NUMBERED STANDARDS LIBRARIES** AND THOSE ARE OVERWHELMINGLY PERMISSIVE
+
+🔵 **Evidence:** [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-component-map`](../evidence/p250-component-map.2026-10-16-p250.tsv) · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).
+
+### 🟢 `T250-F1` — the interoperability tier, at its real addresses
+
+🔵 **Why these are `foundations` and not `agents`, said plainly rather than quietly:** an LTI or OneRoster library is **standards plumbing**. A KB that files one as an "AI agent" has told a reader something false about what it does. They are here because *every* education engagement touches them — an AI tutor that cannot be launched from the LMS and cannot read the roster is a demo.
+
+| repo | licence *(first-hand)* | bytes | sha256/16 | what it is |
+|---|---|---|---|---|
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **`MIT`** | `1 070` | `5aef77eb4471effc` | **LTI 1.3 / LTI Advantage tool library, Python** — the reference implementation most Python LTI tools import |
+| [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) | 🟢 **`MIT`** | `1 070` | `1672e02f459e4293` | 🟢 **NEW** — the Django reference integration. A working launch, not a snippet |
+| [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | 🟢 **`MIT`** | `1 070` | `1672e02f459e4293` | 🟢 **NEW** — the Flask equivalent. 🔵 Byte-identical grant to the Django example and *different* from the parent's |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 🟢 **`MIT`** | `1 070` | `5aef77eb4471effc` | the **University of Central Florida** fork. 🟡 Grant byte-identical to upstream's — it carries upstream's holder line verbatim (*"Copyright (c) 2019 Dmitry Viskov"*, read both sides) |
+| [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) | 🟢 **`MIT`** | `1 060` | `b6b29f11f74e8236` | **LTI 1.3 & LTI Advantage library, Java** |
+| [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | 🟢 **`MIT`** | `1 060` | `b6b29f11f74e8236` | 🟢 **NEW** — the provider-side reference integration |
+| [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | 🟢 **`MIT`** | `1 068` | `9b14ba68d87c5259` | 🟢 **NEW** — LTI 1.3 on **Next.js**. The modern-JS launch surface, which the Python and Java rows do not cover |
+| [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) | 🟢 **`MIT`** | `1 066` | `1dc50226c38abc95` | **OneRoster client library, .NET**, versions `1.1` and `1.2`. 🔴 README verbatim: *"Only rostering calls are supported. Grade book has not been implemented."* |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 **`MIT`** | `1 066` | `1dc50226c38abc95` | 🟡 **same grant payload as the two `theopenem` spellings.** Published as one row with its aliases, not three |
+| [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | 🟢 **`Apache-2.0`** | `11 324` | `50e6751797c50ded` | 🟢 **NEW, and unusually useful**: OneRoster 1.1 **Power Query** definitions published by an actual school district. The analyst-tooling end of rostering, which no library row covers |
+| [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | 🟢 **`MIT`** | `1 091` | `980f47c42722f758` | **WebUntis** timetable adapter — the dominant DACH school timetabling system |
+
+🔵 **The `MIT` concentration is mechanical, not lucky, and `p249` had the reason right:** the dot-suffix convention belongs to **version-numbered standards libraries** (`pylti1.3`, `java-lti-1.3`) and to **language package conventions** (`Pluto.jl`, `oneroster.net`, `Questgen.ai`). Both populations are overwhelmingly permissive. 🔴 **The harvester was deleting a licence-correlated signal from the name** — it did not hide a random `30`, it hid the `30` a studio is most allowed to build on.
+
+### 🟢 `T250-F2` — the substrate and regional rows
+
+| repo | licence *(first-hand)* | bytes | what it is | region basis |
+|---|---|---|---|---|
+| [`JuliaPluto/Pluto.jl`](https://github.com/JuliaPluto/Pluto.jl) | 🟢 **`MIT`** | `1 082` | **reactive notebooks for Julia** — a teaching-notebook runtime, not an agent | 🔵 unplaced |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | 🟡 **`LGPL`** *(at `license.txt`)* | `24 480` | the creative-coding library a very large share of introductory programming teaching is built on. 🔵 **The lint's own worked example, live on these shelves** | 🔵 unplaced |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🟡 **`LGPL-3.0`** | `8 241` | 🟢 **CLOSED FIRST-HAND**, third pass the search channel left it unstated. Payload verbatim: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* | 🔵 — |
+| [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) | 🟢 **`MIT`** | `1 075` | German-language vocabulary platform on Rails + PostgreSQL | **EMEA** *(German-language payload)* |
+| [`ics-tools/ics.tools`](https://github.com/ics-tools/ics.tools) | 🟡 **`AGPL-3.0-or-later`** | `34 523` | standardised **ICS calendars for German public holidays and school terms**. 🟢 Grant evidenced twice over: an `SPDX-License-Identifier` header in the README *and* the payload | **EMEA** *(Germany, stated in the payload)* |
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 🟢 **`MIT`** | `1 054` | 🟡 **reporting around SchILD**, the NRW school information system — adjacent to the `svws-nrw` estate these shelves carry since `p236`. 🔴 Its README is empty, so the description is inferred from the name and that neighbourhood, not read | **EMEA** *(Germany, inferred — flagged)* |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | 🟡 **`LGPL`** | `18 027` | 🟢 **a genuine LATAM row, and the first `foundations` one in several passes**: IPTI's **T.A.G.** school-management system, Brazilian public education | **LATAM** *(Brazil; `br.` prefix and owner `ipti`)* |
+| [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) | 🟡 **`LGPL`** | `35 141` | school-meal (*merenda*) oversight, **UnB** FGA-EPS-MDS coursework. 🔴 The `2017.2` in the name is an academic term — treat as **archival**, not live | **LATAM** *(Brazil, UnB)* |
+
+🔴 **A `foundations`-shelf warning that outranks every row above.** [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) carries a **`519`-byte `LICENSE` that is a POINTER, not a licence**: it *names* `Eclipse Public License v2.0` and `Eclipse Distribution License v1.0` and gives their URLs. 🔵 The dual grant is real, but the text is not in the repository, so a payload grep returns `UNRECOGNISED` — and that must **not** be read as "no grant". Registered as **`ACTION XP`**; `p247`'s path_class has no class for a Tier-A name whose body is a reference.
+
+### 🟡 `T250-F3` — rows verified but NOT education-specific, published with the flag
+
+| repo | licence *(first-hand)* | bytes | why it is flagged |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 `MIT` | `1 078` | general CRM. Leg 3's claim confirmed |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 `MIT` | `1 077` | general ERP, Laravel. Leg 3's claim confirmed |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | 🟢 `Apache-2.0` | `11 358` | general low-code CRM. 🔵 Its `11 358` B is Apache-2.0's **canonical length** and serves as this pass's control for that family |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) *(Huly)* | 🔴 **`EPL-2.0`** | `14 197` | 🔴 **leg 3 said Apache-2.0. REFUTED.** EPL-2.0 is file-level reciprocal — do not plan a closed derivative on it |
+| [`asadbekme/education-crm`](https://github.com/asadbekme/education-crm) | 🔴 **none at `41` paths** | — | 🔴 **leg 3 said "listed as MIT". REFUTED** — no licence file and no `license` field in `package.json`. The only education-specific CRM the leg returned, and it grants nothing |
+
+---
+
 ## Pass 249 — 2026-10-16 — `6` NEW FOUNDATION ROWS, ALL `MIT`, ALL READ FIRST-HAND — AND THE LAYER THEY FORM IS THE ONE THIS KB HAS BEEN MISSING: **THE INTEROP STANDARDS PLUMBING** (`LTI 1.3`, `OneRoster`), WHICH IS WHERE EVERY EDUCATION ENGAGEMENT ACTUALLY TOUCHES THE CLIENT'S LMS
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🟢 **`6` rows added, `0` corrected.** All `6` arrive from `ACTION XH`'s discharge ([`p249-xh-grant-sweep`](../evidence/p249-xh-grant-sweep.2026-10-16-p249.tsv), [`p249-slug-repair`](../evidence/p249-slug-repair.2026-10-16-p249.tsv)).

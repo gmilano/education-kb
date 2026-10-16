@@ -1,0 +1,26 @@
+# p250 — THE CHANNEL MAP, re-measured. One NEW cell and one RETIREMENT.
+# NEW: info/refs on an absent slug answers 401, not 404. p249 recorded the 200 but never
+#      the negative, so no pass could separate ABSENT from grantless in ONE request.
+# RETIREMENT: `ACTION UX` (carried TWELVE passes) asks this base to read regulators' own
+#      publications. Measured below: every non-code host is refused at the proxy. The
+#      action is not UNRUN, it is UNRUNNABLE FROM THIS SESSION, and it is retired here.
+channel	probe	code	verdict	what it means for this KB
+raw.githubusercontent.com/{slug}/HEAD/{path}	GET	200 / 404	🟢 OPEN AND DISCRIMINATING	calibrated before any negative was believed: good=200 (HKUDS/DeepTutor/HEAD/LICENSE, 11408 B Apache-2.0), absent-path=404, bad-slug=404. THE first-hand payload channel
+github.com/{slug}/info/refs?service=git-upload-pack	GET	200 / 401	🟢 OPEN, AND THE NEGATIVE IS NEW	200=EXISTS, 401=ABSENT. p249 recorded only the 200. The 401 is what let this pass prove 25 of 26 truncated stumps are not repositories at all, one request each
+api.github.com/rate_limit	GET	200	🟢 REACHABLE	the host is not the blocker
+api.github.com/repos/{owner}/{repo}	GET microsoft/autogen	403	🔴 SHUT for out-of-scope slugs	stars, pushed_at and archived remain UNMEASURABLE. This pass adds none and corrects none
+api.github.com/search/repositories	GET q=topic:education+topic:ai-agent	403	🔴 SHUT	the `topic:` harvest CANNOT run from this session. Unchanged from p249
+github.com/{slug} (HTML)	GET	403	🔴 SHUT	the mandate's `curl -sI` against github.com is still a dead channel; a 403 here is NOT a 404
+codeload.github.com/{slug}/tar.gz	GET	403	🔴 SHUT	whole-tree reads unavailable; path-by-path is the only shape
+pypi.org/simple/	GET	200	🟢 OPEN	a code-supply host, and it is allowed
+digital-strategy.ec.europa.eu	GET /en/policies/regulatory-framework-ai	000	🔴 connect_rejected	the European Commission's own AI Act page. REFUSED AT THE PROXY
+eur-lex.europa.eu	GET /eli/reg/2024/1689/oj	000	🔴 connect_rejected	the AI Act's own official text. REFUSED AT THE PROXY
+artificialintelligenceact.eu	GET /implementation-timeline/	000	🔴 connect_rejected	the implementation timeline. REFUSED AT THE PROXY
+www.unesco.org	GET /en	000	🔴 connect_rejected	the LATAM leg's own primary source. REFUSED AT THE PROXY
+WebFetch (any non-code host)	digital-strategy.ec.europa.eu	-	🔴 ENOTFOUND	the tool channel is blocked by the same policy as curl
+WebSearch	8 legs (4 global + 4 regional)	-	🟡 OPEN, 0 REPOSITORY ROWS	TWELFTH dry row-pass in thirteen. Rich on REGULATION, empty on repositories
+# 🔵 THE SHAPE OF THE ALLOWLIST, stated so no pass re-derives it: this session may reach
+#    CODE-SUPPLY hosts (github.com, raw.githubusercontent.com, pypi.org) and may not reach
+#    REGULATOR hosts. `ACTION UX` asks for exactly the half that is refused. It is retired,
+#    not deferred: the ONLY regulatory channel this base has is WebSearch, and the four
+#    regional legs are therefore the regulatory instrument, not a fallback for one.

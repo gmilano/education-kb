@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 250 — THE TRENDING CHANNEL RETURNED NO EDUCATION REPOSITORY FOR THE **THIRTEENTH PASS**, SO THIS PASS MEASURED THE SHELVES INSTEAD AND FOUND `30` REPOSITORIES THAT WERE **ALREADY HERE AND UNREACHABLE** — CARRIED UNDER NAMES THAT `404`
+
+🔵 **Evidence:** [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv) *(leg 2)*.
+
+### 🔴 The channel result, published as a channel result
+
+| leg | query | education repositories returned |
+|---|---|---|
+| 2 | `github trending education AI 2026` | 🔴 **`0`** — `nanochat`, `BitNet`, `developer-roadmap`, `grok-build`. Thirteenth consecutive dry pass |
+
+🔵 **`github.com/trending` itself is not readable from here** — `github.com` HTML answers `403` ([`p250-channel-map`](../evidence/p250-channel-map.2026-10-16-p250.tsv)) — so "trending" on this shelf has always meant *what the search channel reports about trending*, and that channel does not slice by industry.
+
+### 🟢 The momentum this pass can actually evidence: `30` recovered addresses
+
+Not new repositories — **newly reachable** ones. Every row below was on these shelves under a truncated name and is published here at its real address with a first-hand grant.
+
+| real slug | was carried as | licence *(first-hand)* | bytes |
+|---|---|---|---|
+| [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | `BootlegYouki/L` 🔴 `401` | 🟢 `MIT` | `1 113` |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `JushBJJ/Mr` 🔴 `401` | 🔴 **none at `41` paths** | — |
+| [`processing/p5.js`](https://github.com/processing/p5.js) | `processing/p5` 🔴 `401` | 🟡 `LGPL` *(`license.txt`)* | `24 480` |
+| [`JuliaPluto/Pluto.jl`](https://github.com/JuliaPluto/Pluto.jl) | `JuliaPluto/Pluto` 🔴 `401` | 🟢 `MIT` | `1 082` |
+| [`eclipse/paho.mqtt.java`](https://github.com/eclipse/paho.mqtt.java) | `eclipse/paho` 🔴 `401` | 🟡 **EPL-2.0 + EDL-1.0 by reference** | `519` |
+| [`dmitry-viskov/pylti1.3-django-example`](https://github.com/dmitry-viskov/pylti1.3-django-example) | `dmitry-viskov/pylti1` 🔴 `401` | 🟢 `MIT` | `1 070` |
+| [`dmitry-viskov/pylti1.3-flask-example`](https://github.com/dmitry-viskov/pylti1.3-flask-example) | `dmitry-viskov/pylti1` 🔴 `401` | 🟢 `MIT` | `1 070` |
+| [`UOC/java-lti-1.3-provider-example`](https://github.com/UOC/java-lti-1.3-provider-example) | `UOC/java-lti-1` 🔴 `401` | 🟢 `MIT` | `1 060` |
+| [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) | `paurushrai/lti-1` 🔴 `401` | 🟢 `MIT` | `1 068` |
+| [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | `Lawrence-Public-Schools/OneRoster-1` 🔴 `401` | 🟢 `Apache-2.0` | `11 324` |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | `jdolny/OneRoster` 🔴 `401` | 🟢 `MIT` | `1 066` |
+| [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) | `dkavargy/ESCOPlus2` 🔴 `401` | 🟢 `MIT` | `1 086` |
+| [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | `gener8v/gener8v` 🔴 `401` | 🟢 `MIT` | `1 064` |
+| [`ics-tools/ics.tools`](https://github.com/ics-tools/ics.tools) | `ics-tools/ics` 🔴 `401` | 🟡 `AGPL-3.0-or-later` | `34 523` |
+| [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) | `wort-schule/wort` 🔴 `401` | 🟢 `MIT` | `1 075` |
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | `schild-report/schild` 🔴 `401` | 🟢 `MIT` | `1 054` |
+| [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) | `snflwr-ai/snflwr` 🔴 `401` | 🟡 `AGPL-3.0` | `2 833` |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | `ipti/br` 🔴 `401` | 🟡 `LGPL` | `18 027` |
+| [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) | `fga-eps-mds/2017` 🔴 `401` | 🟡 `LGPL` | `35 141` |
+| [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | `Voodoo2man/ioBroker` 🔴 `401` | 🟢 `MIT` | `1 091` |
+| [`TouchRefletz/maia.edu`](https://github.com/TouchRefletz/maia.edu) | `TouchRefletz/maia` 🔴 **`200` — A DIFFERENT LIVE REPO** | 🟡 `AGPL-3.0` | `34 523` |
+
+🔵 **Full `56`-row table** *(`30` recovered + `26` stumps, with existence codes, paths, byte counts and pinned hashes)* in [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv). 🔴 **`1` recovery is itself absent**: `UOC/java-lti-1.3-provider` answers `401`, while its `-provider-example` sibling exists.
+
+### 🔴 The last row is the warning
+
+🔴 **`TouchRefletz/maia` is real.** The truncation of `maia.edu` landed on a *different live repository by the same owner* — different default branch (`main` vs `master`), different `HEAD`, and an **identical** `AGPL-3.0` payload down to the sha, because stock licence text names no holder. 🔵 Registered as **`ACTION XN`**: this is the one truncation class no downstream gate here can detect, since every gate agrees.
+
+---
+
 ## 2026-10-16 — Pass 249 — TRENDING: **GITHUB'S TRENDING CHANNEL IS `403` AND THE REASON IS NOW KNOWN** — SO NO TRENDING RESULT IS PUBLISHED. WHAT IS PUBLISHED INSTEAD IS `60` REPOSITORIES READ ONE BY ONE, AND THE `6` OF THEM THIS BASE HAD RECORDED AS NON-EXISTENT
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.

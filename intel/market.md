@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — THE FIRST **FEDERAL, VENDOR-FACING** INSTRUMENT EVER TO REACH THIS SHELF, AND IT IS ALREADY IN FORCE: THE AMENDED **COPPA** RULE, COMPLIANCE DATE **`22 APR 2026`**, WHICH BINDS **EDTECH VENDORS** RATHER THAN SCHOOLS — WHILE APAC'S VIETNAM DATE CONFLICT **CLOSES** AND TURNS OUT NEVER TO HAVE BEEN ONE
+
+⏱️ **NINETEENTH pass of `2026-10-16`.** 🔵 All `8` mandated legs run verbatim with the year **computed** (`2026`): [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv).
+
+### 🟢 `T250-M1` — North America: the richest leg for the third pass, and it finally reaches the federal layer
+
+🔴 **Every North America instrument on this shelf until now has been a state statute or a district policy — things that bind a BUYER.** This pass returns one that binds a **SELLER**.
+
+| instrument | level | what it does | date |
+|---|---|---|---|
+| 🟢 **amended COPPA rule** | **FEDERAL** | binds **edtech vendors** serving younger students — the first instrument on these shelves that regulates the party a studio would *be*, not the party it would sell to | 🟢 **general compliance date `22 Apr 2026`** — already in force |
+| **Ohio** | state | districts **must** have adopted an AI-use policy | 🟢 **by `1 Jul 2026`** — already past |
+| **North Carolina** | state, `Session Law 2026-41` | state **model policy** plus AI-literacy standards | **by `31 Dec 2026`** |
+| **Virginia `H.B. 1186`** | state | AI Innovation in Education **Pilot Program** — funds, evaluates and scales | — |
+| **Utah `H.B. 273`** | state | AI integrated into state **computer-science standards** | — |
+| 🟡 **South Carolina `H.B. 5253`** | state **BILL, not law** | would be the strictest yet: **written parental opt-in**, annual public disclosure of AI tools and data practices, and **no AI replacing licensed teachers** in core instruction or grading | 🔴 **status beyond introduction unconfirmed — do not cite as law** |
+| **SUNY** | system | a systemwide AI policy across **all `64` campuses** | — |
+
+🟢 **The district-policy mandate count MOVES.** `p249` published *"`4` states require both state guidance and district-level AI policy: Idaho, Maryland, Oklahoma, Virginia."* This pass's leg adds **Ohio** (deadline `1 Jul 2026`) and **North Carolina** (`31 Dec 2026`). 🟡 **Recorded as an extension, not a replacement:** the two readings come from different trackers and the shelves do not merge tracker counts into a single number. What is safe to say is **at least six states**, and that the trend `p249` called "mandatory district policy" is now **past-deadline** in at least one of them.
+
+🔴 **The hole, for the SECOND consecutive pass: `0` results on Canada, `0` on Mexico.** "North America" on this shelf means **the United States**, and `2` of its `3` countries are **unmeasured**. 🔵 Two passes of the same negative on the same query is a **channel bound**, not a finding about Canada.
+
+### 🟢 `T250-M2` — APAC: `p249`'s date conflict closes, and it was two different dates all along
+
+`p249` recorded: *"Sources disagree on its start date (one says March 2026, another 1 March 2026)"* and separately *"an institutional deadline of `2027`"*. 🟢 **This pass resolves it, and the resolution is that there was no conflict — there are two distinct dates doing two distinct jobs.**
+
+| Vietnam's AI law | date | what the date governs |
+|---|---|---|
+| the law **takes effect** | **`1 Mar 2026`** | the statute is in force |
+| identified high-risk systems must **comply** | 🟢 **`1 Mar 2027`** | the institutional deadline `p249` carried as "`2027`" |
+| 🟢 **NEW — grandfathering** | systems **already running before `15 Aug 2026`** | get a further **six-month grace period** |
+
+🟢 **The trigger is re-confirmed narrow and it is the most actionable sentence on this shelf:** education AI is high-risk *when the AI output is the sole basis for a decision without meaningful human review.* 🔵 That does not describe a model, it describes a **workflow** — which means the compliance artefact is a reviewable decision step, and it is buildable.
+
+🔴 **A published cell corrected.** `p249` carried *"South Korea — **AI Basic Act**, in force **Jan 2026**"*. 🟢 This pass's leg names it the **AI Framework Act**, effective **`22 Jan 2026`**. The statute's name and its exact day are both refined; the one-year penalty grace through `2026` stands.
+
+🔴 **Unchanged and still worthless for a competitive slide:** the Google / Microsoft / IBM / Pearson / Byjus "key players" list remains a paid-research estimate with **no published method**. 🔴 **And still no education-specific APAC adoption figure, in any pass.**
+
+### 🟡 `T250-M3` — EMEA: the AI Act date narrows to two candidates and **cannot be closed from here**
+
+| source | what it gives |
+|---|---|
+| the Commission's own pages, **as reported by this leg** | **`31 Jul 2026`** entry into force of the **AI Act**; **`27 Jul 2026`** entry into force of the **AI Omnibus** |
+| another source in the same leg | high-risk provisions apply from **`Aug 2026`** |
+
+🔴 **NOT averaged, and this pass can finally say why it is not merely unresolved but unresolvable from this session:** `digital-strategy.ec.europa.eu`, `eur-lex.europa.eu` and `artificialintelligenceact.eu` are all **refused at the proxy** (`connect_rejected`, measured — [`p250-channel-map`](../evidence/p250-channel-map.2026-10-16-p250.tsv)). 🟡 **So the instruction stands and now has a reason attached: verify the date against the Commission before quoting it to a client, because this KB structurally cannot.**
+
+🟡 **Two adoption figures, both carried with their provenance:** only **`10%`** of `450+` surveyed institutions have formal AI guidelines *(vendor roundup)*, and **two-thirds of educators** want monthly or quarterly AI training from their institution *(Microsoft `2026`)*. 🔵 The second is the more useful one for a studio — it prices an **enablement** workstream, which is labour, not licence.
+
+🔴 **For the SECOND consecutive pass: `0` on the Middle East, `0` on Africa.** "EMEA" on this shelf means **Europe plus the UK**. The `EM` and the `A` of the acronym remain **unmeasured**, and that is now a two-pass channel bound rather than a one-pass miss.
+
+### 🔴 `T250-M4` — LATAM: the leg returned the same six sources, finding for finding
+
+🔴 **Identical to `p249`:** UNESCO IESALC (`200` institutions, `19` countries, `87%` using AI somewhere, `74%` in teaching, **`26%`** with a formal strategy) · the Observatory on AI in Education for LAC (launched `14 Apr 2026`, Santiago) · Ceibal (`75%` of Uruguayan public-school teachers) · TALIS `2024` (BR `56` · CL `55` · CO `53` · CR `52` vs OECD `36`) · ILIA (*"remain exceptions in the region"*) · Digital Education Council's `2026` LATAM survey.
+
+🟡 **Two passes returning the same sources is a SATURATION measure of the channel, not new information about the region.** 🔴 **And the regional negative holds for a THIRD pass: `0` binding country-level AI-in-education statutes.** LATAM's `87%` adoption is governed by institutional policy and `26%` strategy coverage, not by law — the exact inverse of APAC.
+
+🔴 **The best quantity on this shelf is now a year old.** The UNESCO census's field window closed **Oct 2025**. It is still the most trustworthy number here, and it describes **last year**.
+
+### 🔵 `T250-M5` — the structural finding: this shelf has exactly one regulatory channel
+
+🔴 **`ACTION UX` — registered for TWELVE passes — asks this base to stop relying on the English search channel and read the regulators' own publications.** 🟢 **Measured this pass: it cannot be done from this session at any budget.** Every regulator host probed is refused at the proxy while `pypi.org` answers `200`: the allowlist carries **code-supply** hosts and not **regulator** hosts.
+
+🔵 **So the four regional `WebSearch` legs are not a lazy substitute for primary sources — they are the ONLY regulatory instrument this base has.** `ACTION UX` is **retired**, and the consequence is published rather than left implicit: **every date on this shelf is a reported date**, and the three the shelves most need (the AI Act's, Vietnam's, COPPA's) must be re-verified by a human with unrestricted egress before they reach a client document.
+
+🔴 **This pass publishes no global market size.** `p247`'s rule (*state the spread, do not average it*) applied to this pass's legs leaves it unusable again: leg 4 returned `86%` of education organisations using gen-AI *with most lacking a policy* and teacher use **doubling** in a year (`60%` in `2024-25`), and the channel **itself** flagged the `$12.3B` figure and the `83%` teaching-assistant claim as unverified against the source they are attributed to. 🔵 The carried estimates (`$9.58B` → `$42.48B` by `2030`, `41.5%` CAGR) stand as **carried**, method still unpublished.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buying trigger changed level this pass, and it now points at the studio itself.** The amended **COPPA** rule has bound edtech vendors since **`22 Apr 2026`**, and at least six states mandate district AI policy with deadlines that have in some cases **already passed** (Ohio, `1 Jul 2026`).
+- 🟢 **Sell the vendor-side compliance layer, because it is the one Globant would need anyway.** [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) (`MIT`, `1 064` B, verified this pass) does student-PII detection at inference time against the **FERPA** definition rather than regex counting, and is stateless by construction. 🔵 That is a COPPA/FERPA control a studio can deploy on its own delivery before it is a product — and it is reusable on every US engagement. 🟡 Its upstream hook API is marked **beta**; wire it behind an interface.
+- 🟢 **Keep building the human-in-the-loop evidence layer** (`p249`'s read, and it strengthens): the deliverable a district can buy is the record of which recommendation an AI produced, who reviewed it and what they changed. 🔵 Launch it inside the LMS on [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) — `MIT`, and a **US university's own fork**, which shortens procurement.
+- 🟢 **NEW and concrete: the district-analyst surface.** [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) (`Apache-2.0`) is OneRoster published **by a school district for its own analysts**. It tells you what the buyer's side of a rostering integration actually looks like, which no library row can.
+- 🟡 **`SC H.B. 5253` is a BILL.** Written parental opt-in and a ban on AI replacing licensed teachers in grading would reshape a K-12 product. Track it; do not plan to it.
+- 🔴 **Scope to the United States or name the country.** Canada and Mexico have returned nothing for two consecutive passes.
+
+### EMEA
+
+🟢 **The AI Act makes education assessment a conformity-assessment problem** — a documentation deliverable before a model deliverable, for anything touching admissions, student evaluation or exam scoring.
+- 🔴 **Do not put an AI Act date in a client document from this KB.** The candidates are `31 Jul 2026` (AI Act) and `27 Jul 2026` (Omnibus) against another source's `Aug 2026` for high-risk provisions, and 🔴 **this base is structurally unable to close it** — the Commission's own pages are refused at the proxy.
+- 🟢 **Lead with the JVM**: [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) is `MIT`, from **Universitat Oberta de Catalunya**, and this pass recovered its **`-provider-example`** sibling (`MIT`, `1 060` B) — so the European higher-ed Java estate now has both a library *and* a working provider-side reference on these shelves.
+- 🟢 **NEW — the skills-and-credentials trend has a permissive European row.** [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) (`MIT`) extends and prunes the EU's own **ESCO** skills taxonomy from live job-advert data. 🔵 Leg 4 names digital credentials and real-time skills visibility as a `2026` trend; this is the taxonomy end of it. 🟡 Self-marked **research prototype** — a starting point, not a product.
+- 🟡 **Price an enablement workstream, not just a build:** two-thirds of educators want recurring AI training, against a `10%` institutional-guideline base rate.
+- 🔴 **An EMEA proposal built on this shelf is a Europe-and-UK proposal.** Middle East and Africa: `0` results, two passes running.
+
+### APAC
+
+🟢 **Vietnam remains the sharpest dated opportunity on this shelf in any region, and this pass makes it precise enough to plan against:** in force **`1 Mar 2026`**, compliance **`1 Mar 2027`**, and systems live before **`15 Aug 2026`** get **six more months**.
+- 🟢 **The grandfathering date is the commercial insight, not a footnote.** An institution with a system running before `15 Aug 2026` buys remediation on a different timetable than one procuring now. 🔵 Ask which side of that date a prospect is on before scoping — it changes the deadline by two quarters.
+- 🟢 **Build the reviewable decision step.** The high-risk trigger fires only where AI output is the **sole basis** for a decision **without meaningful human review**, and the named categories are **automated assessment** and **behavioural monitoring**. 🔵 The same artefact satisfies Idaho's prohibition and NYC's red tier — a genuine two-region reuse.
+- 🟢 **NEW, and the strongest APAC capability row these shelves hold:** [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) (`MIT`, `1 113` B) — an **offline** Google-Classroom replacement for **Philippine public schools**, grades 1–12, with a Socratic AI tutor, running on classroom Wi-Fi with **no internet** and targeting `3`–`4` GB Android phones. 🔵 Region **evidenced in the payload**, not inferred from an owner name.
+- 🟡 **Korea's penalty grace expires with `2026`** under the **AI Framework Act** (effective `22 Jan 2026`) — a remediation window with a known end. Taiwan and India remain framework-stage.
+- 🔴 **Do not build a competitive slide on the APAC "market leaders" list.** It is a vendor estimate with no method.
+
+### LATAM
+
+🟢 **The governance gap is still the engagement and it is still the only census-backed number on this shelf:** `87%` of institutions use AI, `26%` have a strategy — a `61`-point gap.
+- 🔴 **But say its age out loud.** The UNESCO field window closed **Oct 2025**. Selling a `2026` programme on a `2025` census is defensible only if the date is on the slide.
+- 🟢 **NEW — a genuine LATAM `foundations` row, the first in several passes:** [`ipti/br.tag`](https://github.com/ipti/br.tag) (`LGPL`, `18 027` B) is IPTI's **T.A.G.** school-management system for Brazilian public education. 🔵 Recovered this pass from the stump `ipti/br` — it has been on these shelves and unreachable the whole time. 🟡 `LGPL` is weak copyleft: linkable, not closed-forkable, so plan it as a deployed system with modules alongside, not as a vendored library.
+- 🟡 **One more Brazilian row, flagged as archival:** [`fga-eps-mds/2017.2-MerendaMais`](https://github.com/fga-eps-mds/2017.2-MerendaMais) (`LGPL`) — school-meal oversight from UnB coursework. The `2017.2` is an academic term. Useful as a domain reference, not a base.
+- 🟢 **Sell institutional AI policy plus the technical means to enforce it.** Policy alone is a document, and `74%` are already using AI in teaching. 🔵 Enforcement needs launch and roster: `LTI 1.3` for where the tool runs, [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) (`MIT`) for who is enrolled.
+- 🟡 **A language signal worth one line and no more:** [`davipac/classroom-mcp`](https://github.com/davipac/classroom-mcp) names its package `classroom-aluno-mcp` — *aluno* is Portuguese for student. 🔴 That places the package's **language**, not the author's country, and it is one of the `6` connectors with a **declared `MIT` and no licence text** (`T250`/`ACTION XK`). Not shippable as-is.
+- 🟢 **Uruguay is still the reference deployment** (Ceibal, `75%` of public-school teachers); Brazil, Chile, Colombia and Costa Rica run `16`–`20` points above the OECD teacher-use average. These are **adoption-led** markets, not mandate-led.
+
+### Global
+
+🔴 **The one thing every region on this shelf now shares is a licence problem a studio hits in week one, and this pass measured it.**
+- 🔴 **The most-cited open "AI tutor" in this industry — [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) — has NO grant at any of `41` licence paths.** It cannot be shipped, forked commercially, or have its prompts vendored into a deliverable. 🔵 Any engagement that opens with "we'll start from Ranedeer" needs that sentence on day one.
+- 🔴 **`6` of the `11` education LMS connectors declare `"license": "MIT"` in a manifest and ship no licence text at all** ([`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv)). 🟢 **That is a recoverable state, and recognising it is the opportunity:** one upstream issue asking an author to commit the file they already claim converts an unusable dependency into a usable one. `5` others declare nothing and are genuinely blocked.
+- 🔴 **Verify a vendor's licence claim on the payload, always.** This pass refuted two in one leg: **Huly** is `EPL-2.0`, not the Apache-2.0 the channel reported, and `asadbekme/education-crm` has no licence at all despite being "listed as MIT". 🔵 Both errors ran toward **more** permission than the repository grants — the direction that reaches a client.
+- 🟢 **The interoperability tier is the safest global starting point this KB holds**: `8` `MIT` LTI 1.3 / OneRoster libraries plus an `Apache-2.0` district Power Query set, all grants read first-hand this pass, and all of them unreachable on these shelves until now.
+
+---
+
 ## Pass 249 — 2026-10-16 — **EMEA RETURNS A REGULATOR FOR THE FIRST TIME IN ELEVEN PASSES, AND APAC RETURNS THE ONE THING THIS SHELF HAS NEVER HELD**: A NATIONAL AI STATUTE THAT NAMES **EDUCATION** AS A HIGH-RISK CATEGORY BY NAME — VIETNAM'S, WITH AN INSTITUTIONAL DEADLINE OF `2027`
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 All `8` mandated legs run verbatim with the year **computed** (`2026`): [`p249-websearch`](../evidence/p249-websearch.2026-10-16-p249.tsv).

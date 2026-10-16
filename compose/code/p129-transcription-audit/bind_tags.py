@@ -6,7 +6,12 @@ import re, sys, os, collections
 LIVE = ["README.md","agents/top.md","agents/trending.md","repos/foundations.md",
         "repos/trending.md","verticals/solutions.md","intel/market.md","intel/trends.md",
         "intel/open-gaps.md","compose/patterns.md"]
-ADDR = re.compile(r'github\.com/([A-Za-z0-9._-]+/[A-Za-z0-9._-]+?)(?=[)\s`,.\]]|$)')
+# p250 / `ACTION XJ`: the SECOND site of the same defect, and the first pass to name
+# it.  Identical shape to `p228-shelf-gate/harvest_cells.py:17` — a lazy `+?` whose
+# terminator lookahead holds `.` while the quantified class holds `.` too, so every
+# dotted repository name bound here was truncated at its first dot.  `p230`'s lint
+# has been reporting this line alongside the other one, non-blockingly, all along.
+ADDR = re.compile(r'github\.com/([A-Za-z0-9._-]+/[A-Za-z0-9._-]*[A-Za-z0-9_-])(?=[)\s`,.\]]|$)')
 # figures: digits possibly with thin/nbsp/regular space separators, followed by optional markup then 'tags'
 FIG  = re.compile(r'(\d[\d    ]*?)\s*(?:\*\*)?\s*(?:real\s+)?tags\b')
 SHORT = re.compile(r'`([A-Za-z0-9._/-]+)`')

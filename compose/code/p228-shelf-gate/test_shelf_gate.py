@@ -199,5 +199,64 @@ class TestActionSP(unittest.TestCase):
             self.assertTrue(re.search(self.OLD, t), t)
             self.assertTrue(re.search(self.BOUNDED, t), t)
 
+class TestDottedRepoName(unittest.TestCase):
+    """p250 / `ACTION XJ` — the dot-suffix truncation, pinned as behaviour.
+
+    `p233` named this defect, `p247` reproduced it, `p249` repaired `6` slugs BY HAND,
+    and none of them pinned it, so it came back each time.  `p230`'s `lazy_lint.py`
+    guards the regex SHAPE; these controls guard the ANSWER, which is the thing the
+    shelves actually consume.  Every slug below is a real row carried on these shelves.
+    """
+    REAL = [
+        "dmitry-viskov/pylti1.3",
+        "dmitry-viskov/pylti1.3-django-example",
+        "ucfopen/pylti1.3",
+        "UOC/java-lti-1.3",
+        "UOC/java-lti-1.3-provider-example",
+        "ramsrigouthamg/Questgen.ai",
+        "JuliaPluto/Pluto.jl",
+        "theopenem/oneroster.net",
+        "jdolny/OneRoster.NET",
+        "processing/p5.js",
+        "eclipse/paho.mqtt.java",
+        "eecs-autograder/autograder.io",
+        "Ed-Fi-Alliance-OSS/EdFi.Installer.AppCommon",
+        "JushBJJ/Mr.-Ranedeer-AI-Tutor",
+    ]
+
+    def test_a_dotted_repository_name_survives_the_harvest_whole(self):
+        for slug in self.REAL:
+            line = "| [`x`](https://github.com/%s) | `MIT` |" % slug
+            self.assertEqual(H.slugs_on(line), [slug], slug)
+
+    def test_case_is_preserved_by_the_harvester(self):
+        # p249 reported the harvester as case-folding too.  It does NOT: the fold lives
+        # downstream, in `p235-carried-index`'s normaliser and in the `gate-mit-tier`
+        # recipe's `tolower($3)`.  Pinned so the attribution cannot drift again.
+        line = "| [`x`](https://github.com/ramsrigouthamg/Questgen.ai) | `MIT` |"
+        self.assertEqual(H.slugs_on(line), ["ramsrigouthamg/Questgen.ai"])
+
+    def test_a_trailing_sentence_dot_is_still_shed(self):
+        self.assertEqual(H.slugs_on("see github.com/theopenem/oneroster.net."),
+                         ["theopenem/oneroster.net"])
+
+    def test_a_clone_url_folds_onto_the_bare_repository_name(self):
+        for url, bare in (("github.com/ucfopen/pylti1.3.git", "ucfopen/pylti1.3"),
+                          ("github.com/Cvmcosta/ltijs.git", "Cvmcosta/ltijs"),
+                          ("github.com/trilogy-group/oneroster-ts.git",
+                           "trilogy-group/oneroster-ts")):
+            self.assertEqual(H.slugs_on("url %s)" % url), [bare], url)
+
+    def test_the_undotted_population_is_unaffected(self):
+        for slug in ("pykt-team/pykt-toolkit", "openedx/XBlock", "HKUDS/DeepTutor",
+                     "CAHLR/OATutor", "microsoft/ai-agents-for-beginners"):
+            line = "| [`x`](https://github.com/%s) | `MIT` |" % slug
+            self.assertEqual(H.slugs_on(line), [slug], slug)
+
+    def test_a_dotted_OWNER_is_still_rejected_as_a_hostname(self):
+        # T224-2 must survive the fix: greediness must not turn a hostname into an account.
+        self.assertEqual(H.slugs_on("see github.com/docs.example.com/thing)"), [])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

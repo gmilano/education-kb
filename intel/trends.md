@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 250 — 2026-10-16 — THE SECTOR TREND IS **GOVERNANCE BECOMING A PRODUCT SURFACE**, AND THIS PASS CAUGHT SUPPLY FOLLOWING REGULATION INSIDE ONE WINDOW: AN `MIT` **STUDENT-PII DETECTOR BUILT TO THE FERPA DEFINITION** LANDING IN THE SAME QUARTER THE AMENDED **COPPA** RULE STARTED BINDING EDTECH VENDORS
+
+🔵 **Evidence:** [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv) *(legs 4–8)* · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).
+
+### 🟢 `T250-T1` — the trend with a dated instrument and a matching repository
+
+🟢 **Legs 4–8 agree on a direction the shelves have been recording for three passes — *experimentation → governance* — and this pass is the first where BOTH halves are measurable in the same window:**
+
+| the regulation | the supply |
+|---|---|
+| the amended **COPPA** rule binds **edtech vendors**, compliance **`22 Apr 2026`** | [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) — `MIT`, `1 064` B, student-PII detection at inference time, built to the **FERPA definition** rather than regex counting, stateless by construction |
+
+🔵 **That is the useful shape of this trend, and it is not "AI gets regulated".** It is that the compliance layer is arriving as **permissively-licensed infrastructure a studio can deploy**, not as a feature of a closed suite. 🟡 One repository is not a market; it is one observation, published as one.
+
+### 🟢 `T250-T2` — the trends the channel reports, with what each one is worth
+
+| trend | what the channel says | 🔵 what this base can stand behind |
+|---|---|---|
+| **governance is the gate** | AI in education is shifting *from experimentation to governance*; clear policies, data boundaries and oversight are the precondition for adoption | 🟢 **Corroborated by instruments, not just editorial** — `134` bills / `31` states, at least six states mandating district policy, EU conformity assessment, Vietnam's named high-risk categories |
+| **adoption is wide and ungoverned** | `86%` of education organisations use gen-AI and **most lack a policy**; teacher use **doubled** in a year (`60%` in `2024-25`) | 🟡 Vendor-report figures. 🟢 But the shape matches the one census on these shelves: LATAM `87%` use / `26%` strategy. **Two independent channels, same gap** |
+| **teacher-first, not student-first** | the successful deployments begin with teachers | 🟢 Consistent with EMEA's *two-thirds of educators want recurring AI training* — the constraint is enablement, which is labour |
+| **purpose-built beats general-purpose** | a move away from generic AI tools toward platforms built for education | 🟡 Editorial. 🔴 **And this base's own row channel says the opposite about SUPPLY**: `13` passes of search legs return general frameworks, and the education-specific rows come from the payload channel |
+| **assessment is the biggest unclaimed surface** | grading open-ended responses, generating exam variants | 🔴 **And it is the surface every regulator names.** EU high-risk, Vietnam high-risk, Idaho prohibition, NYC red tier, SC's proposed grading ban. 🔵 The largest opportunity and the tightest constraint are **the same surface** — that is the single most important sentence on this shelf |
+| **credentials and skills visibility** | digital credentials as the mechanism for skills-based learning and hiring | 🟢 **Now has a permissive row:** [`dkavargy/ESCOPlus2.0`](https://github.com/dkavargy/ESCOPlus2.0) (`MIT`) maintains the EU's **ESCO** taxonomy from live job-advert demand. 🟡 Research prototype |
+| **offline / low-connectivity delivery** | 🔴 **the channel does not report this at all** | 🟢 **The shelves found it anyway:** [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) (`MIT`) — offline classroom LMS + Socratic AI tutor, Philippine public schools, no internet, budget Android. 🔵 A trend visible in the payload channel and invisible in the search channel |
+| **evidence of learning gains demanded** | buyers increasingly expect proof of improved learning, persistence or job-relevant skills | 🟡 Editorial, and 🔴 the channel **itself** flagged the `62%` test-score and `42%` improvement claims circulating as vendor-sourced and unverified |
+
+### 🔴 `T250-T3` — the counter-trend this base is uniquely placed to report
+
+🔴 **While the sector trends toward governance, the open-source education layer it would be governed on is under-licensed, and this pass put numbers on it:**
+
+| population | state |
+|---|---|
+| the most-cited open AI tutor | 🔴 **no grant at `41` paths** ([`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)) |
+| the `11` education LMS/tutor MCP connectors | 🔴 **`0` licence payloads.** `6` declare `"license": "MIT"` in a manifest with no text; `3` manifests have no licence field; `2` have nothing at all |
+| the interoperability tier (LTI 1.3, OneRoster, SIS) | 🟢 **the healthy exception — `8` `MIT` + `1` `Apache-2.0`**, all read first-hand |
+
+🔵 **The pattern is not random.** The **standards** layer is permissively licensed because standards bodies and universities publish it; the **agent and connector** layer is not, because it is published by individuals shipping fast. 🟢 **For a studio that is directly actionable: build on the standards tier, treat the connector tier as a prototype you will rewrite, and read the grant before either.**
+
+### 🔵 `T250-T4` — a trend about this KB, and it is the pass's own finding
+
+🔴 **`p249`'s trends shelf said: *"on regulation, the shelves are now ahead of the English search channel"*, and re-scoped `ACTION UX` to go read the regulators directly.** 🟢 **That is now measured and it is impossible from here:** every regulator host is refused at the proxy while code-supply hosts answer `200` ([`p250-channel-map`](../evidence/p250-channel-map.2026-10-16-p250.tsv)).
+
+🔵 **So the honest statement of this base's position, which no earlier pass could make:** these shelves are **strong** on repository payloads (`41`-path ladders, byte counts, pinned hashes, first-hand grants) and **structurally second-hand** on regulation — every date here is a *reported* date and must be re-verified by someone with unrestricted egress before it reaches a client. 🟢 Saying so is worth more than a twelfth deferral of an action that cannot run.
+
+---
+
 ## Pass 249 — 2026-10-16 — THE TREND `p247` AND `p248` MEASURED IS **HALF A TREND**, AND THIS PASS FOUND THE OTHER HALF IN THIS KB'S OWN LAST PUBLISHED CELL: THE LICENCE FIELD IN A SECONDARY SOURCE IS UNCORRELATED WITH THE PAYLOAD **IN BOTH DIRECTIONS**
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.**

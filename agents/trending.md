@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 250 — THE ROW CHANNEL IS DRY FOR THE **TWELFTH PASS IN THIRTEEN**, AND THIS PASS CAN FINALLY SAY WHY IT WILL STAY DRY: THE `topic:` HARVEST IS `403` AND THE REGULATOR HOSTS ARE **REFUSED AT THE PROXY** — SO THE ONLY LIVE SUPPLY CHANNEL HERE IS THE **PAYLOAD** ONE, AND IT PAID `30` SLUGS THIS PASS
+
+🔵 **`8` mandated legs run verbatim, year computed (`2026`):** [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv).
+
+### 🔴 What is NOT trending, measured rather than assumed
+
+🔴 **`0` education-agent rows from `8` search legs.** Leg 2 (`github trending education AI 2026`) returned `nanochat`, `BitNet` and `developer-roadmap` — **no education-specific trending list exists in this channel, for the thirteenth pass running.** 🔵 That is a *channel* statement (`ACTION UK`): the `topic:education`+`topic:ai-agent` harvest that would actually test supply answers **`403`** from this session and cannot run at any budget.
+
+### 🟢 What IS new this week, from the payload channel
+
+| repo | licence *(first-hand)* | bytes | why it is a signal |
+|---|---|---|---|
+| [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 **`MIT`** | `1 113` | 🟢 **offline-first AI tutoring as a deployed system, not a demo** — Philippine public schools, grades 1–12, classroom Wi-Fi only, budget-Android targets. The whole offline/low-connectivity pattern these shelves have theorised for LATAM and APAC, shipped by someone else first |
+| [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 **`MIT`** | `1 064` | 🟢 **the compliance layer appearing as infrastructure.** Student-PII detection at inference time, FERPA-definition-based. 🔵 It arrives in the same window the North America leg reports the amended **COPPA** rule binding edtech vendors from **22 Apr 2026** — supply following regulation, visible on these shelves in one pass |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **`MIT`** | `1 070` | 🟡 a **curriculum**, published as one. The "learn the stack by building it" shape (`nanochat`'s genre) crossing into agent engineering |
+| [`caramaschiHG/awesome-ai-agents-2026`](https://github.com/caramaschiHG/awesome-ai-agents-2026) | 🟢 **`CC0-1.0`** | `2 207` | 🟡 a **catalogue**, published as one. Public-domain dedication, so safely quotable |
+| [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 **Creative Commons** | `5 875` | 🔴 **WITHHELD from the code shelves.** A content grant over a catalogue governs the catalogue; this base does not republish a CC licence as a software grant |
+
+### 🔴 The negative trend that matters most to a buyer
+
+🔴 **The most-cited open "AI tutor" project in this industry has no licence.** [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) exists and returns **nothing at `41` licence paths** (Tier A + B + C). 🔵 This base could not have told anyone that until this pass, because it was carrying the project under the truncated name `JushBJJ/Mr`, which `404`s (`T250-A`).
+
+🔴 **And the LMS-connector layer's real state is now measured** — `6` of `11` declare `"license": "MIT"` in a manifest while shipping **no licence text anywhere** ([`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv)). 🟢 Trend-wise that is the opposite of a dead end: a declared intent with a missing file is one issue away from being usable, and `p249`'s "the layer has no grant" hid exactly that.
+
+---
+
 ## 2026-10-16 — Pass 249 — WHAT MOVED: **`6` REPOSITORIES THAT WERE HERE ALL ALONG.** THE SUPPLY DID NOT CHANGE THIS WEEK — WHAT CHANGED IS THAT A CHANNEL EVERY RECENT PASS CALLED SHUT TURNED OUT TO BE **OPEN**, AND READING IT RETURNED `6` LIVE `MIT` EDUCATION REPOS THIS BASE HAD FILED AS NON-EXISTENT
 
 ⏱️ **EIGHTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.

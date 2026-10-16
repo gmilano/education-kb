@@ -1,0 +1,31 @@
+# p250 — `ACTION XJ`'s falsifier was: "falsified if a pass reports '6 repaired' again
+# without naming the component that truncates". Here are the components, by file and line,
+# each one reproduced before it was patched and controlled after.
+component	line	defect	reproduced	fix	status
+compose/code/p228-shelf-gate/harvest_cells.py	17	SLUG_RE's repo group is `([A-Za-z0-9][A-Za-z0-9_.-]*?)` — a LAZY quantifier whose own class contains `.` while its terminator lookahead `(?=[)\s`,.;:'"\]]|$)` ALSO contains `.`. A lazy quantifier stops at the first position the terminator can match, so EVERY dotted repository name is cut at its first dot	github.com/dmitry-viskov/pylti1.3 -> ['dmitry-viskov/pylti1'] · Pluto.jl -> Pluto · Questgen.ai -> Questgen · oneroster.net -> oneroster · java-lti-1.3 -> java-lti-1	quantifier made GREEDY and `.` removed from the terminator class; the pre-existing `repo.rstrip(".")` still sheds a trailing sentence dot	🟢 FIXED
+compose/code/p129-transcription-audit/bind_tags.py	9	ADDR = `([A-Za-z0-9._-]+/[A-Za-z0-9._-]+?)(?=[)\s`,.\]]|$)` — IDENTICAL defect class, second site. 🔴 No pass in 250 has ever named this one	same shape; the lint has reported it alongside the other site all along	bounded to end on a non-dot character	🟢 FIXED
+compose/code/p230-prose-path-ladder/lazy_lint.py	main()	🔴 THE ROOT CAUSE OF THE RECURRENCE, and it is not a regex at all: `return 0`, unconditional. The lint DETECTS both sites, PRINTS both offending lines, and then exits 0, so `make hooks` prints `ALL OFFLINE LICENCE CONTROLS PASS` directly underneath its own finding	`make hooks` tail, measured verbatim this pass: `# 2 finding(s)` then the two lines then `ALL OFFLINE LICENCE CONTROLS PASS`	`return 1 if total else 0`; positive control: a re-introduced lazy slug regex in a scratch file now exits 1	🟢 FIXED + CONTROLLED
+compose/code/p235-carried-index/carried_index.py	34	`slug.rstrip(".,)").lower()` — the slug normaliser case-folds	-	🟡 NOT CHANGED: folding is CORRECT here, because GitHub slugs are case-insensitive and this is the duplicate index	🔵 CORRECT AS IS
+Makefile	105	`awk '{print tolower($3)}'` in the `gate-mit-tier` recipe	-	🟡 NOT CHANGED: same reason	🔵 CORRECT AS IS
+# ── A PUBLISHED CELL CORRECTED ───────────────────────────────────────────────────────────
+# 🔴 p249 wrote: "everything from the DOT onward is dropped, AND what survives is
+#    CASE-FOLDED", attributing both effects to p247's harvest in one sentence.
+# 🟢 MEASURED THIS PASS: the harvester does NOT case-fold. It returns `Questgen` with its
+#    capital Q, `Pluto` with its capital P, `OneRoster` with both capitals, and
+#    `JushBJJ/Mr` with all four. Only the TRUNCATION is the harvester's.
+# 🟢 The fold is downstream and DELIBERATE — carried_index.py:34 and Makefile:105, both
+#    correct where they stand, because a duplicate index SHOULD be case-insensitive.
+# 🔵 Why the distinction is load-bearing rather than pedantic: `ACTION XJ` says "fix the
+#    harvester". A pass that believed p249's attribution would have gone and removed a
+#    `.lower()` that is doing its job, and left the lazy quantifier — the actual defect —
+#    exactly where it was for a 251st pass.
+# ── WHY THIS IS THE ANSWER AND "6 REPAIRED" WAS NOT ──────────────────────────────────────
+# 🔴 p233 named this defect and corrected the SYMPTOM. p247 re-committed it. p249 repaired
+#    6 slugs BY HAND and registered `ACTION XJ` to find the component.
+# 🟢 The component was never hidden. `p230` wrote a lint FOR THIS EXACT SHAPE — its own
+#    docstring gives `processing/p5.js -> processing/p5` as the worked example — the lint
+#    has been wired into `make hooks` since p229, it has been reporting BOTH sites on every
+#    run since, and `processing/p5.js` IS ON THESE SHELVES and WAS being carried as
+#    `processing/p5`. The instrument, the example and the defect were the same thing.
+# 🔵 So the finding is not "a regex was wrong". It is: THIS BASE BUILT THE RIGHT CHECK,
+#    RAN IT ON EVERY PASS, AND MADE IT INCAPABLE OF FAILING. 30 slugs is what that cost.

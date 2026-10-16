@@ -1,0 +1,97 @@
+# p250 — `ACTION XJ` DISCHARGED. The sweep p249 was asked for, over the WHOLE carried
+# population rather than p247's 60-slug list.
+#
+# METHOD. The old harvester and the fixed harvester were both run over all 8 shelves and
+# their distinct-slug sets differenced. That is why this is a SWEEP and not another hand
+# repair: nothing was guessed from a name, the two instruments were made to disagree and
+# every disagreement was then read over the network.
+#   old: python3 -I compose/code/p228-shelf-gate/harvest_cells.py <8 shelves> -> 1858 slugs
+#   new: same, with SLUG_RE made greedy                                       -> 1862 slugs
+#   GAINED 30 (real names the base was truncating) / LOST 26 (the stumps it carried instead)
+#
+# existence = github.com/<slug>/info/refs?service=git-upload-pack  (200 EXISTS / 401 ABSENT)
+# grant     = raw.githubusercontent.com/<slug>/HEAD/<path>, Tier A, 16 root licence names
+state	slug	exists_code	existence	grant_path	path_tier	bytes	sha256_16	family
+RECOVERED	BootlegYouki/L.A.R.A	200	EXISTS	LICENSE	A	1113	92daf8383c28c390	MIT
+RECOVERED	JuliaPluto/Pluto.jl	200	EXISTS	LICENSE	A	1082	14cccff4d3e14cab	MIT
+RECOVERED	JushBJJ/Mr.-Ranedeer-AI-Tutor	200	EXISTS	-	NONE-AT-TIER-A	-	-	NO-GRANT-AT-TIER-A
+RECOVERED	Lawrence-Public-Schools/OneRoster-1.1-PowerQueries	200	EXISTS	LICENSE	A	11324	50e6751797c50ded	Apache-2.0
+RECOVERED	TouchRefletz/maia.edu	200	EXISTS	LICENSE	A	34523	8486a10c4393cee1	AGPL-3.0
+RECOVERED	UOC/java-lti-1.3	200	EXISTS	LICENSE	A	1060	b6b29f11f74e8236	MIT
+RECOVERED	UOC/java-lti-1.3-provider	401	ABSENT	-	-	-	-	-
+RECOVERED	UOC/java-lti-1.3-provider-example	200	EXISTS	LICENSE	A	1060	b6b29f11f74e8236	MIT
+RECOVERED	Voodoo2man/ioBroker.webuntis2	200	EXISTS	LICENSE	A	1091	980f47c42722f758	MIT
+RECOVERED	dkavargy/ESCOPlus2.0	200	EXISTS	LICENSE	A	1086	24d0dca9f1650cfd	MIT
+RECOVERED	dmitry-viskov/pylti1.3	200	EXISTS	LICENSE	A	1070	5aef77eb4471effc	MIT
+RECOVERED	dmitry-viskov/pylti1.3-django-example	200	EXISTS	LICENSE	A	1070	1672e02f459e4293	MIT
+RECOVERED	dmitry-viskov/pylti1.3-flask-example	200	EXISTS	LICENSE	A	1070	1672e02f459e4293	MIT
+RECOVERED	eclipse/paho.mqtt.java	200	EXISTS	LICENSE	A	519	44ad51523c207de3	UNRECOGNISED
+RECOVERED	fga-eps-mds/2017.2-MerendaMais	200	EXISTS	LICENSE	A	35141	589ed823e9a84c56	LGPL
+RECOVERED	gener8v/gener8v.tools.pii-scanner	200	EXISTS	LICENSE	A	1064	0df23c7822c2d066	MIT
+RECOVERED	ics-tools/ics.tools	200	EXISTS	LICENSE	A	34523	8486a10c4393cee1	AGPL-3.0
+RECOVERED	ipti/br.tag	200	EXISTS	LICENSE	A	18027	111e1f4117306c77	LGPL
+RECOVERED	jdolny/OneRoster.NET	200	EXISTS	LICENSE	A	1066	1dc50226c38abc95	MIT
+RECOVERED	juliapluto/Pluto.jl	200	EXISTS	LICENSE	A	1082	14cccff4d3e14cab	MIT
+RECOVERED	paurushrai/lti-1.3-node-nextjs-starter	200	EXISTS	LICENSE	A	1068	9b14ba68d87c5259	MIT
+RECOVERED	processing/p5.js	200	EXISTS	license.txt	A	24480	eb2f25f8f165d5f2	LGPL
+RECOVERED	ramsrigouthamg/Questgen.ai	200	EXISTS	LICENSE	A	1077	7fb8e6113f43f220	MIT
+RECOVERED	schild-report/schild.report	200	EXISTS	LICENSE	A	1054	08f392f7869da7bc	MIT
+RECOVERED	snflwr-ai/snflwr.ai	200	EXISTS	LICENSE	A	2833	0f14d6b37818e79e	AGPL-3.0
+RECOVERED	theopenem/OneRoster.NET	200	EXISTS	LICENSE	A	1066	1dc50226c38abc95	MIT
+RECOVERED	theopenem/oneroster.net	200	EXISTS	LICENSE	A	1066	1dc50226c38abc95	MIT
+RECOVERED	ucfopen/pylti1.3	200	EXISTS	LICENSE	A	1070	5aef77eb4471effc	MIT
+RECOVERED	uoc/java-lti-1.3	200	EXISTS	LICENSE	A	1060	b6b29f11f74e8236	MIT
+RECOVERED	wort-schule/wort.schule	200	EXISTS	LICENSE	A	1075	57149c7beee9690d	MIT
+STUMP-DROPPED	BootlegYouki/L	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	JuliaPluto/Pluto	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	JushBJJ/Mr	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	Lawrence-Public-Schools/OneRoster-1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	TouchRefletz/maia	200	EXISTS	LICENSE	A	34523	8486a10c4393cee1	AGPL-3.0
+STUMP-DROPPED	UOC/java-lti-1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	Voodoo2man/ioBroker	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	dkavargy/ESCOPlus2	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	dmitry-viskov/pylti1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	eclipse/paho	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	fga-eps-mds/2017	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	gener8v/gener8v	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	ics-tools/ics	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	ipti/br	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	jdolny/OneRoster	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	juliapluto/Pluto	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	paurushrai/lti-1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	processing/p5	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	ramsrigouthamg/Questgen	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	schild-report/schild	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	snflwr-ai/snflwr	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	theopenem/OneRoster	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	theopenem/oneroster	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	ucfopen/pylti1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	uoc/java-lti-1	401	ABSENT	-	-	-	-	-
+STUMP-DROPPED	wort-schule/wort	401	ABSENT	-	-	-	-	-
+# ── TALLY ───────────────────────────────────────────────────────────────────────────────
+# RECOVERED 30: 29 EXIST, 1 ABSENT (UOC/java-lti-1.3-provider — its -provider-example does exist)
+#   grants: 17 MIT · 1 Apache-2.0 · 3 AGPL-3.0 · 3 LGPL · 1 EPL-2.0+EDL-1.0 pointer file
+#           · 1 NO-GRANT-AT-TIER-ABC (JushBJJ/Mr.-Ranedeer-AI-Tutor) · 4 duplicates-by-spelling
+# STUMPS 26: 25 ABSENT, 🔴 1 EXISTS
+# 🔴 THE ONE THAT EXISTS IS THE WHOLE FINDING. `TouchRefletz/maia.edu` truncated to
+#    `TouchRefletz/maia`, and `TouchRefletz/maia` IS A REAL REPOSITORY — a different one:
+#      maia       default=main   HEAD=d94ba9b9483f
+#      maia.edu   default=master HEAD=278ba25d3129
+#    Both answer 200 on existence. Both return a grant at Tier A. Both are AGPL-3.0. Both
+#    are 34 523 B. Both hash to 8486a10c4393cee1. So EVERY check this base owns — existence,
+#    grant reach, family, byte count AND the pinned sha — AGREES on the wrong repository.
+#    The other 25 truncations fail loudly. This one cannot be caught downstream at all.
+# 🔵 AND IT BOUNDS `ACTION WX` (p243: "same pinned grant sha => one row until proven
+#    otherwise"). That rule is sound ONLY for families whose canonical text embeds a
+#    copyright holder. Short MIT payloads (1 054–1 113 B) discriminate: dmitry-viskov/pylti1.3
+#    and ucfopen/pylti1.3 share 5aef77eb4471effc BECAUSE ucfopen ships upstream's holder
+#    line verbatim ("Copyright (c) 2019 Dmitry Viskov", read first-hand both sides). Stock
+#    texts do NOT: AGPL-3.0 at 34 523 B carries no holder, so it collides across unrelated
+#    repositories. A sha collision is evidence of one row ONLY in the holder-embedding tier.
+# 🟢 FOUR recoveries are the SAME repository under two spellings, which is `ACTION UH`'s
+#    class arriving through the dot: theopenem/OneRoster.NET + theopenem/oneroster.net +
+#    jdolny/OneRoster.NET all hash 1dc50226c38abc95; UOC/java-lti-1.3 + uoc/java-lti-1.3 +
+#    UOC/java-lti-1.3-provider-example all hash b6b29f11f74e8236; JuliaPluto/Pluto.jl +
+#    juliapluto/Pluto.jl both 14cccff4d3e14cab; dmitry-viskov/pylti1.3-django-example +
+#    -flask-example both 1672e02f459e4293. Case folding is DOWNSTREAM of the harvester
+#    (see p250-component-map) — the harvester preserves case and always did.

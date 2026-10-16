@@ -1,0 +1,55 @@
+# p250 — `ACTION XK` DISCHARGED. p249 read the 11 education MCP/tutor connectors at Tier A
+# only, found 404 on all 16 root paths, and published: "That is the LMS-connector layer of
+# this whole industry, and it has no grant ... a studio cannot ship any of them."
+# `ACTION XK` asked for Tier B and Tier C before that sentence stands. Both were probed.
+# 41 paths per slug: Tier A (16 root licence names) + Tier B (15 non-root) + Tier C (5 manifests).
+slug	exists_code	existence	grant_path	path_tier	bytes	sha256_16	family
+crevextech/canvas-lms-mcp	200	EXISTS	package.json	C	535	e7070243df97a1e7	MANIFEST-CLAIM-NOT-A-PAYLOAD
+dmontgomery40/mcp-canvas-lms	200	EXISTS	package.json	C	3461	402ae4c9b542cb95	MANIFEST-CLAIM-NOT-A-PAYLOAD
+mistercommand/mcp-canvas-lms	200	EXISTS	package.json	C	909	ae89c924bdb0838c	MANIFEST-CLAIM-NOT-A-PAYLOAD
+ink-waffle/moodle-mcp	200	EXISTS	package.json	C	973	340c8539c37e70fd	MANIFEST-CLAIM-NOT-A-PAYLOAD
+ink-waffle/sisu-mcp	200	EXISTS	package.json	C	999	461199bb29b31925	MANIFEST-CLAIM-NOT-A-PAYLOAD
+p1ckle3/blackboard-mcp	200	EXISTS	pyproject.toml	C	562	da32a7b8db545d05	MANIFEST-CLAIM-NOT-A-PAYLOAD
+salshah20/classroom_mcp	200	EXISTS	package.json	C	1370	10a193505cfec5a4	MANIFEST-CLAIM-NOT-A-PAYLOAD
+davipac/classroom-mcp	200	EXISTS	package.json	C	657	9c1e7e99e3982e7b	MANIFEST-CLAIM-NOT-A-PAYLOAD
+54yyyu/school-mcp	200	EXISTS	pyproject.toml	C	683	9ee09ceb2e664a54	MANIFEST-CLAIM-NOT-A-PAYLOAD
+sujal-shejwal/adaptive-ai-tutor	200	EXISTS	-	NONE-AT-TIER-ABC	-	-	NO-GRANT-AT-TIER-ABC
+radiantcrystal/safetutors	200	EXISTS	-	NONE-AT-TIER-ABC	-	-	NO-GRANT-AT-TIER-ABC
+# ── THE MANIFEST CLAIMS, read first-hand (Tier C is a CLAIM, never a payload: p247 path_class)
+#	# crevextech/canvas-lms-mcp	package.json	<ABSENT>	canvas-lms-mcp
+# dmontgomery40/mcp-canvas-lms	package.json	MIT	canvas-mcp-server
+# mistercommand/mcp-canvas-lms	package.json	MIT	mcp-canvas-lms
+# ink-waffle/moodle-mcp	package.json	MIT	@ink-waffle/moodle-mcp
+# ink-waffle/sisu-mcp	package.json	MIT	@ink-waffle/sisu-mcp
+# p1ckle3/blackboard-mcp	pyproject.toml	<ABSENT>	name = "blackboard-mcp"
+# salshah20/classroom_mcp	package.json	MIT	@salshah20/google-classroom-mcp
+# davipac/classroom-mcp	package.json	MIT	classroom-aluno-mcp
+# 54yyyu/school-mcp	pyproject.toml	<ABSENT>	name = "school-mcp"
+# ── TALLY ───────────────────────────────────────────────────────────────────────────────
+# 11 of 11 EXIST (200 on info/refs).
+# 🔴 0 of 11 reach TIER B. Not one connector hides a licence in docs/, licenses/ or legal/.
+#    p249's Tier-A negative was not a reach artefact and the tier ladder adds nothing here.
+# 🟢 9 of 11 reach TIER C, and THAT is where p249's conclusion breaks.
+# 🔴 6 of the 11 DECLARE `"license": "MIT"` in package.json AND SHIP NO LICENCE TEXT at any
+#    of the 41 paths: dmontgomery40/mcp-canvas-lms · mistercommand/mcp-canvas-lms ·
+#    ink-waffle/moodle-mcp · ink-waffle/sisu-mcp · salshah20/classroom_mcp ·
+#    davipac/classroom-mcp
+# 🟡 3 reach a manifest that has NO licence field: crevextech/canvas-lms-mcp (package.json),
+#    p1ckle3/blackboard-mcp (pyproject.toml), 54yyyu/school-mcp (pyproject.toml)
+# 🔴 2 have nothing at all at any of the 41 paths: sujal-shejwal/adaptive-ai-tutor,
+#    radiantcrystal/safetutors
+# ── THE CORRECTION, stated plainly ──────────────────────────────────────────────────────
+# 🔴 "The LMS-connector layer has no grant" is WRONG, and wrong in the direction that costs
+#    a studio real options. The accurate statement is TWO statements:
+#      • 6 of 11 carry a DECLARED MIT INTENT WITH NO LICENCE TEXT. The npm registry will
+#        show MIT for these; the repository ships nothing. That is a known, NAMED and
+#        ASKABLE state — an issue asking the author to commit the file they already claim.
+#      • 5 of 11 declare nothing anywhere, and those are the ones a studio cannot ship.
+# 🔵 This is `p246`/`p247`'s path_class rule doing its job in the useful direction: a
+#    manifest field is NOT a grant, so none of the 6 may be published as `MIT` on these
+#    shelves — AND recording them as "no grant" erases the one fact that makes them
+#    recoverable. The state has a name and it is `DECLARED-NO-PAYLOAD`.
+# 🟢 REGION, from a payload rather than from an owner guess: davipac/classroom-mcp's
+#    package.json names the package `classroom-aluno-mcp`. "aluno" is Portuguese for
+#    student. 🟡 It places the package's LANGUAGE, not the author's country — recorded as a
+#    language signal consistent with LATAM, not as an evidenced LATAM row.

@@ -14,7 +14,15 @@ exists because these shelves already recorded the defect it prevents.
 import re
 import sys
 
-SLUG_RE = re.compile(r"github\.com/([A-Za-z0-9][A-Za-z0-9_-]*)/([A-Za-z0-9][A-Za-z0-9_.-]*?)(?=[)\s`,.;:'\"\]]|$)")
+# p250 / `ACTION XJ`: the repo group is GREEDY.  It was `*?`, and the terminator
+# lookahead contains `.` while the quantified class ALSO contains `.`, so a lazy
+# quantifier stopped at the first dot and `dmitry-viskov/pylti1.3` harvested as
+# `dmitry-viskov/pylti1`.  That is exactly the shape `p230`'s own `lazy_lint.py`
+# documents (`processing/p5.js` -> `processing/p5`) and exactly the shape it has
+# been REPORTING against this line, non-blockingly, ever since.  Greedy + the
+# existing `rstrip(".")` is correct: a trailing sentence dot is still shed, and a
+# repository name may not END in a dot, so nothing legitimate is lost.
+SLUG_RE = re.compile(r"github\.com/([A-Za-z0-9][A-Za-z0-9_-]*)/([A-Za-z0-9][A-Za-z0-9_.-]*)(?=[)\s`,;:'\"\]]|$)")
 
 # Longest-first: AGPL before GPL, LGPL before GPL, -or-later before -only before bare.
 LICENCE_TOKENS = [
@@ -42,6 +50,15 @@ def slugs_on(line):
         if "." in owner:          # T224-2: dotted owner is a hostname
             continue
         repo = repo.rstrip(".")
+        # p250 / `ACTION XJ`, second limb: a CLONE URL is the same repository under a
+        # different spelling.  The shelves carry `ucfopen/pylti1.3.git`,
+        # `Cvmcosta/ltijs.git` and `trilogy-group/oneroster-ts.git` beside the bare
+        # names, and `ACTION UH` counts those as distinct carried rows.  A GitHub
+        # repository name may not end in `.git`, so shedding it cannot collide with a
+        # real name — the only reason it survived is that the LAZY regex truncated at
+        # the dot and never produced a `.git` tail to shed.
+        if repo.endswith(".git"):
+            repo = repo[:-4]
         if not repo or repo in {"md", "txt"}:
             continue
         out.append(f"{owner}/{repo}")
