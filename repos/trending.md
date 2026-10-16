@@ -4,6 +4,105 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS A **POPULATION OF FOUR**: THE WORD PROCUREMENT USES FOR THIS CATEGORY IS NOT THE WORD BUILDERS TAG IT WITH
+
+⏱️ **TWELFTH pass of `2026-10-16`.** History below this section is kept.
+
+🔵 **Full query ledger:** [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · **grants:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · **refusals:** [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv)
+
+### 🔴 The channel finding: `topic:sis topic:school` returns **`4`**
+
+`ACTION WA` *(p242)* named four axes to add. Three of them are functions and one is the category name, and the difference is a factor of forty-five:
+
+| axis | the word it uses | population | what that word IS |
+|---|---|---|---|
+| 🔴 `topic:sis topic:school` | **`sis`** | 🔴 **`4`** | the **procurement** word — what an RFP, a vendor and an analyst call this category |
+| 🟢 `topic:gradebook` | **`gradebook`** | `57` | what a **teacher** calls the thing they open |
+| 🟢 `topic:attendance topic:education` | **`attendance`** | `63` | what a teacher **does** at the start of a lesson |
+| 🟢 `topic:timetable topic:school` | **`timetable`** | `60` | what the **school** argues about in August |
+
+🔵 **`180` repositories under the three function words; `4` under the category word.** 🟡 **A KB that searches the way a buyer talks finds almost nothing; a KB that searches the way a builder tags finds the supply.** That is the generalisable form of `p242`'s *"product vocabulary beats statute vocabulary"* — one level further down.
+
+🔴 **A second channel bound, recorded because it cost a query:** the search API **refused** a five-term bilingual `OR` with *"More than five AND / OR / NOT operators were used"*. A language axis must therefore be run in **narrow** slices, which is part of why language axes under-retrieve. 🔵 Worth reading beside [`p239-query-shape`](../compose/code/p239-query-shape/).
+
+### 🟢 Trending, by axis — `102` rows read, `41` permissive, `31` withheld
+
+**`topic:timetable topic:school`** — `60` found, `25` read, `25`/`25` on topic, 🔴 **`17` of them EMEA.**
+
+| row | ★ | grant | note |
+|---|---|---|---|
+| [`EdupageAPI/edupage-api`](https://github.com/EdupageAPI/edupage-api) | **102** | 🔴 `GPL-3.0` *(`35 148` B)* | The axis's biggest row. Six years old, `23` forks, `hacktoberfest`. Edupage is the Slovak/Central-European school platform |
+| [`artyom7774/Schedule`](https://github.com/artyom7774/Schedule) | **9** | 🟢 `Apache-2.0` | Simulated annealing + metaheuristics timetable solver, Excel export |
+| [`MrIcemanLE/Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) | **12** | 🟢 `MIT` | Germany → Home Assistant |
+| [`githuber110/ranzenpost`](https://github.com/githuber110/ranzenpost) | **6** | 🟢 `MIT` | IServ → Home Assistant, with a **write** path *(sick notes)* |
+| [`Vallaury/vallaury-desktop`](https://github.com/Vallaury/vallaury-desktop) + [`-android`](https://github.com/Vallaury/vallaury-android) | 0 | 🔴 `AGPL-3.0` | Italy, one school *(I.I.S. Vallauri, Fossano)*, two surfaces, **identical payload sha** `3972dc9744f6` |
+| [`stasolejnik/elektron`](https://github.com/stasolejnik/elektron) | 1 | 🔴 `AGPL-3.0` | Poland, one Bydgoszcz school. 🟡 **Its own topics include `ai-slop` and `vibecoded`** — a self-declared provenance these shelves have not seen before |
+| [`LT-Gen/Lesson_Timetable_Generator`](https://github.com/LT-Gen/Lesson_Timetable_Generator) | 1 | 🔴 `AGPL-3.0` | Ukraine. **OR-Tools CP-SAT with the Ministry's sanitary norms as constraints** |
+| [`deploy103/siri-school-timetable`](https://github.com/deploy103/siri-school-timetable) | 0 | 🟢 `MIT` | Korea, on the **NEIS** national API |
+| [`mona-software/mona-thoi-khoa-bieu`](https://github.com/mona-software/mona-thoi-khoa-bieu) | 0 | 🟢 `MIT` | Vietnam, constraint solver, browser-deployable |
+| [`sricodeboon/taraang-boriboon`](https://github.com/sricodeboon/taraang-boriboon) | 0 | 🔴 ARR *(code)* | Thailand. 🟢 **Its DATA is open: the Ministry of Education school registry from `data.go.th` under Open Data Common** |
+| [`siberjedi/planla`](https://github.com/siberjedi/planla) | 0 | 🟢 `MIT` | Turkey, offline, pure HTML/JS |
+| [`Davedka/Ticky`](https://github.com/Davedka/Ticky) | 1 | 🔴 ARR | Hungary. The notice cites **Act LXXVI of 1999** and names no licence |
+| [`david-x3d/Material-Untis`](https://github.com/david-x3d/Material-Untis) · [`nubabe/webuntis-org`](https://github.com/nubabe/webuntis-org) · [`MartinNuc/hass-skola-online`](https://github.com/MartinNuc/hass-skola-online) · [`usenkovpro/deck`](https://github.com/usenkovpro/deck) | 0–1 | 🔴 **no grant at 15 paths** | Untis for Wear OS; WebUntis into Emacs org-mode; Škola Online *(Czech)*; an offline timetable PWA |
+
+**`topic:attendance topic:education`** — `63` found, `25` read, `22`/`25` on topic, `7` countries.
+
+| row | ★ | grant | note |
+|---|---|---|---|
+| [`moto-nrw/project-phoenix`](https://github.com/moto-nrw/project-phoenix) | **9** | 🔴 bespoke **source-available** | Germany, all-day-school supervision, GDPR-shaped, RFID. *"You may NOT use this software in production without a commercial license"*. Default branch `development` |
+| [`HetviBarot21/SmartAttend`](https://github.com/HetviBarot21/SmartAttend) | 0 | 🔴 **no grant** | 🟡 **Kenya — the row this pass most wanted and could not publish.** Offline-first PWA; an ML model trained on **8 years** of attendance data flags persistent absenteeism early |
+| [`chenweichiang/classroom-attendance`](https://github.com/chenweichiang/classroom-attendance) | 0 | 🟢 `MIT` | Taiwan. Rotating QR, one phone per student ID, random spot checks against proxy sign-ins |
+| [`MichaelHilton/nfc-attendance-reader`](https://github.com/MichaelHilton/nfc-attendance-reader) | 1 | 🟡 `MIT` + scope note | ESP32 + PN532, encrypted rosters, Canvas export. 🔴 **The note ends *"swap this section out if so"*** |
+| [`MRL-creator/attendance-workspace`](https://github.com/MRL-creator/attendance-workspace) | 0 | 🟢 `MIT` | Cloudflare Workers + D1. *"Students are records, not login accounts"* |
+| [`skotechlabs/pathshala`](https://github.com/skotechlabs/pathshala) | 0 | 🔴 ARR | Bangladesh. 🔴 **A showcase repo: the payload states the source is proprietary and is not published here** |
+| [`rhmatzeka/AppAbsensiSDN1Bintaro`](https://github.com/rhmatzeka/AppAbsensiSDN1Bintaro) · [`kerntau/class-log-system`](https://github.com/kerntau/class-log-system) | 0 | 🔴 **no grant** | Indonesia *(one elementary school)*; China *(class-log filing and approval)* |
+| [`api-evangelist/*`](https://github.com/api-evangelist) — `powerschool`, `edia`, `class-fka-classedu`, `chalkable`, `spare-payments` | 0–1 | *(not software)* | 🔵 **Five THIRD-PARTY API PROFILES of commercial vendors**, published as `apis-json`. Not rows for these shelves — see `intel/market.md`, where they are a **market map that updates itself** |
+
+**`topic:gradebook` page 2** — `57` found, `28` read *(`ACTION WA`'s remaining 27)*, `24`/`28` on topic, `11` new permissive.
+
+| row | ★ | grant | note |
+|---|---|---|---|
+| [`databayt/hogwarts`](https://github.com/databayt/hogwarts) | **18** | 🔴 **`SSPL-1.0`** | The axis's biggest row and **not OSI**. `10` forks, `30` open issues — an active project |
+| [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) | **14** | 🟢 **`ECL-2.0`** | Writes through to the Sakai Gradebook. `24` forks |
+| [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 1 | 🟢 `MIT` | Taiwan. **Two-layer human confirmation on every write** |
+| [`timdrichards/canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) | 1 | 🟢 `MIT` | A **Claude Code skill** over the Canvas API |
+| [`jacksonrakena/gradekeeper`](https://github.com/jacksonrakena/gradekeeper) | **12** | 🔴 **no grant** | Claims *"800+ learners at 15+ universities"*. Four years old and still no licence payload |
+| [`the-sudipta/gradia`](https://github.com/the-sudipta/gradia) | 0 | 🔴 **`GSANCL-1.0`** | Rust/Tauri, local-first, fidelity-preserving Excel export. A **self-named** source-available licence |
+| [`kadusic1/e-gradebook-platform`](https://github.com/kadusic1/e-gradebook-platform) | 0 | 🔴 `AGPL-3.0` | Database-per-tenant isolation **plus** a RAG chatbot |
+| [`tpt-solutions/tpt-school`](https://github.com/tpt-solutions/tpt-school) | 3 | 🟢 `MIT` | The most complete permissive school platform of the harvest |
+| [`AkshobyaRaoSWE/studentvue-glowup`](https://github.com/AkshobyaRaoSWE/studentvue-glowup) | 0 | 🟢 `MIT` | US district *(Indian Prairie SD 204)*; look-only extension |
+| [`lengelhardt/bb-offline-interactive-dashboard`](https://github.com/lengelhardt/bb-offline-interactive-dashboard) | 2 | 🟢 `MIT` | Blackboard REST + OAuth 2.0, offline dashboard. *"No scraping, no cloud"* |
+| [`jlouisbru/grade-tracking-Canvas-API`](https://github.com/jlouisbru/grade-tracking-Canvas-API) | **6** | 🟢 `MIT` | Google Sheets ↔ Canvas, both directions |
+| [`vugarfamiloglu/gradetrack-pro`](https://github.com/vugarfamiloglu/gradetrack-pro) | 0 | 🟢 `Apache-2.0` | At-risk detection and improvement plans, not just marks |
+| [`AlekseiLopatin/school-website`](https://github.com/AlekseiLopatin/school-website) | 0 | 🟢 `MIT` | 🟢 **Placed APAC on ONE README sentence**: *"the school where I teach in Thailand"* |
+| [`ldsalud/school-management-system`](https://github.com/ldsalud/school-management-system) | 1 | 🔴 **no grant** | Philippines, DepEd-shaped, four role portals. 🟡 **Its README prices a monthly rental — the absence is deliberate** |
+
+**`topic:sis topic:school`** — 🔴 `4` found, `4` read, `4`/`4` on topic.
+
+| row | ★ | grant | note |
+|---|---|---|---|
+| [`databayt/hogwarts`](https://github.com/databayt/hogwarts) | **18** | 🔴 `SSPL-1.0` | also on the gradebook axis |
+| [`SchoolyardSMS/SchoolyardSMS`](https://github.com/SchoolyardSMS/SchoolyardSMS) | 2 | 🟢 `MIT` | LMS **and** SIS, Next.js + Bun |
+| [`dejoski/curious-innovators-academy`](https://github.com/dejoski/curious-innovators-academy) | 0 | 🟢 `MIT` | 🟢 **Published to be forked:** *"Fork it to build a school"* |
+| [`ruskcoder/gradiate-api`](https://github.com/ruskcoder/gradiate-api) | 3 | 🟢 `Apache-2.0` | One API over **HAC and PowerSchool** — two US SIS products |
+
+**LANGUAGE axis `es`/`pt`** — `85` found, `25` read, 🔴 `14`/`25` on topic, `3` new permissive, 🟢 **all LATAM**: [`JohnMartinRB/CE-IPET424`](https://github.com/JohnMartinRB/CE-IPET424) *(Argentina, `MIT`)*, [`JuanI19T/Sistema_Asistencia`](https://github.com/JuanI19T/Sistema_Asistencia) *(Argentina, `MIT`)*, [`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) *(Paraguay, `Apache-2.0`)*; withheld: [`alguarito/Conciencia-`](https://github.com/alguarito/Conciencia-) *(Colombia, `CC-BY-NC-SA-4.0`)*, [`luizengdev/opensga-frontend`](https://github.com/luizengdev/opensga-frontend) *(Brazil, no grant)*.
+
+**`org:iblai`** — a **vendor estate**, opened by the WebSearch leg rather than by a topic. `35` repos, `20` listed, `9` read, 🟢 **`9`/`9` `MIT`**: [`os`](https://github.com/iblai/os) *(`821`★)*, [`vibe`](https://github.com/iblai/vibe) *(`15`★)*, [`claws`](https://github.com/iblai/claws) *(`15`★)*, [`lms`](https://github.com/iblai/lms) *(`14`★)*, [`claw-setup`](https://github.com/iblai/claw-setup) *(`12`★)*, [`ontology`](https://github.com/iblai/ontology) *(`11`★)*, [`course`](https://github.com/iblai/course), [`wallet`](https://github.com/iblai/wallet), [`crm`](https://github.com/iblai/crm). 🔴 **`26` repos unread — `ACTION WG`.**
+
+### 🔴 The refusals, counted
+
+| reason withheld | rows |
+|---|---|
+| 🔴 **no licence payload at `15` paths on the real default branch** | **`13`** |
+| 🔴 reciprocal / network copyleft *(`GPL-3.0`, `AGPL-3.0`)* | `8` |
+| 🔴 non-OSI or bespoke restricted *(`SSPL-1.0`, `PolyForm-NC`, `GSANCL-1.0`, source-available, `CC-BY-NC-SA`, qualified-MIT)* | `6` |
+| 🔴 all rights reserved, no licence named | `3` |
+| 🔴 **a `0`-byte payload at the declared path** | **`1`** |
+| 🔴 slug `ABSENT` at `git ls-remote` | `1` |
+
+🔴 **`13` of `31` refusals are a MISSING licence, not a restrictive one.** 🟡 **On this axis the commonest reason a usable school tool cannot be used is that nobody wrote the file** — and `T243-A` adds the variant where somebody wrote the file and left it empty.
+
 ## Pass 242 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS THAT **THE SEARCH RESULT IS TOO LARGE TO READ DIRECTLY — IT MUST BE REDUCED BEFORE IT IS READ, AND THAT CHANGES WHAT "QUERIED" MEANS**
 
 🔵 **Evidence:** [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv) · [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)

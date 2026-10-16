@@ -1,0 +1,10 @@
+query	axis_type	channel	sort	order	total_count	page	returned	on_topic	carried	new	new_permissive	note
+topic:gradebook pushed:>2026-01-01 (page 2)	SYSTEM-OF-RECORD	GitHub search via MCP	updated	desc	57	2	28	24/28	0	28	11	ACTION WA's remaining 27 of 57, run as page 2. p242 read page 1
+topic:sis topic:school pushed:>2026-01-01	SYSTEM-OF-RECORD	GitHub search via MCP	updated	desc	4	1	4	4/4	0	4	2	ACTION WA. The whole population is FOUR repos — the smallest axis these shelves have measured
+topic:attendance topic:education pushed:>2026-04-01	SYSTEM-OF-RECORD	GitHub search via MCP	updated	desc	63	1	25	22/25	0	25	6	ACTION WA. Produced the Kenya, Taiwan, Indonesia, Bangladesh and Germany rows
+topic:timetable topic:school pushed:>2026-01-01	SYSTEM-OF-RECORD	GitHub search via MCP	updated	desc	60	1	25	25/25	0	25	9	ACTION WA. The single most productive axis of the pass AND the most regionally concentrated: 17/25 EMEA
+boletim OR calificaciones OR asistencia in:readme topic:education pushed:>2026-03-01	LANGUAGE	GitHub search via MCP	updated	desc	85	1	25	14/25	1	24	3	The LATAM leg. Ran because the four system-of-record axes returned almost no LATAM
+org:iblai	VENDOR-ESTATE	GitHub search via MCP	updated	desc	35	1	20	12/20	0	20	9	Opened by the WebSearch leg, not by a topic. Nine MIT rows from one vendor
+repo:rine77/meineschule-digital	SINGLE-ROW	GitHub search via MCP (minimal_output=false)	-	-	1	1	1	1/1	0	0	0	Read to get GitHub's OWN licence verdict on the 0-byte payload: {"key":"other","spdx_id":"NOASSERTION"}
+OpenMAIC multi-agent classroom	NAME	GitHub search via MCP	-	-	13	1	8	8/8	1	0	0	Run to recover the canonical slug after THUDM/OpenMAIC answered ABSENT at git ls-remote
+boletim OR "diario de classe" OR calificaciones OR "libreta de notas" OR asistencia in:readme school OR escuela OR escola pushed:>2026-04-01	LANGUAGE	GitHub search via MCP	updated	desc	-	-	0	-	-	-	-	REFUSED by the API: "More than five AND / OR / NOT operators were used". A query-shape bound worth recording beside p239-query-shape

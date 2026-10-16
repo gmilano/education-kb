@@ -1,0 +1,86 @@
+# 自定义许可协议（非商用免费 / 商用需授权）
+
+**项目：** 学管系统 · 教育培训机构管理系统（student-management-system）
+**作者：** 123xiaojun
+**联系方式：** 通过 GitHub 联系 <https://github.com/123xiaojun>
+**版本：** v1.0.0
+
+---
+
+## 中文版
+
+### 1. 免费使用许可（非商业用途）
+
+在**非商业用途**下，任何人皆可免费使用、复制、修改、合并、发布、分发本项目及其衍生作品，
+无需支付任何费用，但须遵守以下条件：
+
+1. **保留署名** —— 必须在所有副本或实质性部分中保留上述著作权声明、作者信息与本许可协议全文。
+2. **标明修改** —— 如对本项目进行了修改，须以显著方式说明修改内容与修改日期。
+3. **协议传递** —— 衍生作品必须采用与本协议相同或更严格的许可协议，不得改为允许商业使用的协议。
+
+「非商业用途」指不以营利为目的的使用，包括个人学习、研究、教学、非营利用途的公益项目等。
+
+### 2. 商业用途需获得授权
+
+**任何商业用途均须事先取得作者的书面授权。** 本项目面向教育培训机构业务场景，
+尤其请注意：**将其部署到任何以营利为目的的培训机构、学校或企业中用于实际经营，均属于商业用途。**
+
+包括但不限于：
+
+- 将本项目或其衍生作品用于销售、收费服务、付费产品；
+- 集成进商业软件、商业网站或商业课程中；
+- 用于培训机构、学校或企业的内部生产经营活动；
+- 以本项目为基础提供有偿的技术服务、部署服务或定制开发；
+- 在应用内展示广告或其他以本项目获取商业利益的行为。
+
+**如需商用，请联系本人洽谈授权：** <https://github.com/123xiaojun>
+
+### 3. 免责声明
+
+本项目按「现状」提供，不附带任何明示或默示的保证，包括但不限于对适销性、特定用途适用性
+及非侵权性的保证。在任何情况下，作者均不对因使用或无法使用本项目而产生的任何索赔、损害
+或其他责任承担责任。
+
+---
+
+## English Version
+
+### 1. Free License for Non-Commercial Use
+
+For **non-commercial purposes**, permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify, merge, publish,
+and distribute copies of the Software and derivative works, subject to the following conditions:
+
+1. **Attribution** — The above copyright notice, author information, and this license shall be included
+   in all copies or substantial portions of the Software.
+2. **State Changes** — Modified versions must prominently indicate the changes made and the date of change.
+3. **Share Alike** — Derivative works must be licensed under the same or a more restrictive license, and
+   may not be relicensed to permit commercial use.
+
+"Non-commercial" means use not primarily intended for commercial advantage or monetary compensation,
+including personal study, research, teaching, and non-profit projects.
+
+### 2. Commercial Use Requires a License
+
+**Any commercial use requires prior written permission from the author.** Please note in particular that
+deploying this Software in any for-profit training institution, school, or enterprise for actual business
+operations constitutes commercial use.
+
+This includes, but is not limited to:
+
+- selling the Software or derivative works, or using them in paid services or paid products;
+- integrating the Software into commercial software, commercial websites, or commercial courses;
+- use in the internal business operations of training institutions, schools, or enterprises;
+- providing paid technical, deployment, or custom development services based on the Software;
+- displaying advertising or otherwise deriving commercial benefit from the Software.
+
+**To obtain a commercial license, please contact the author:** <https://github.com/123xiaojun>
+
+### 3. Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.

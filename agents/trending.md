@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT STORY IS **WHERE THE AGENT RUNS**: IN EMEA IT IS NOT IN THE SCHOOL AT ALL, IT IS IN **HOME ASSISTANT**, ON THE PARENT'S HARDWARE
+
+⏱️ **TWELFTH pass of `2026-10-16`.** History below this section is kept, as `p232`–`p242` kept theirs.
+
+🟢 **`41` permissive rows this pass, every grant read first-hand.** 🔵 **`35` `MIT`, `4` `Apache-2.0`, `1` `ISC`, `1` `ECL-2.0`.** Full table: [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv).
+
+### 🟢 The category: `6` of the `8` EMEA rows integrate into a **home-automation hub**, not into a school system
+
+`p242` recorded the week's agent story as a **category rather than a repo** — the MCP server over an incumbent LMS, seven of them, six vendors. `p243` ran the system-of-record axes `ACTION WA` named, and the EMEA half of the answer is a **different** integration target for the same idea:
+
+| row | the incumbent it speaks to | where the integration LANDS |
+|---|---|---|
+| [`MrIcemanLE/Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) *(`12`★)* | **Schulmanager Online** *(Germany)* | 🔵 Home Assistant |
+| [`githuber110/ranzenpost`](https://github.com/githuber110/ranzenpost) *(`6`★)* | **IServ** *(Germany)* | 🔵 Home Assistant — a sidebar app, a dashboard card **and** entities for automations |
+| [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | **Skola24** *(Sweden)* | 🔵 Home Assistant |
+| [`Naumsede/webuntis-home-assistant`](https://github.com/Naumsede/webuntis-home-assistant) *(`2`★)* | **WebUntis** *(DACH)* | 🔵 Home Assistant, over MQTT |
+| [`MartinNuc/hass-skola-online`](https://github.com/MartinNuc/hass-skola-online) 🔴 *no grant* | **Škola Online** *(Czech Republic)* | 🔵 Home Assistant |
+| [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | **WebUntis** | 🔵 ioBroker *(the other German home-automation hub)* |
+
+🔵 **Read as a market signal rather than a curiosity:** the integration surface the EMEA builder chose is **the one they own**. A school's platform is procured, closed and not theirs to extend; the house's hub is theirs. So the agent sits in the kitchen and polls the school.
+
+> 🟡 **What that means for an engagement:** in EMEA the demand for a school-data agent is **already demonstrated, by parents, on hardware they bought** — and it is demonstrated against a vendor API nobody has published a contract for. The buyer for the same capability is the district; the proof that it works is in `12` stars on a Home Assistant integration.
+
+### 🟢 The architecture row of the pass, and it is **APAC**
+
+[`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) — 🟢 `MIT` *(`1 066` B)* · `main` · `31ec8150e4ec` · Taiwan *(topics `ntu`, `ntu-cool`; NTU COOL is National Taiwan University's Canvas)*.
+
+Ten tools over Canvas. It **reads** courses, assignments, submissions, announcements, files and roster freely. To **write** — post grades, post announcements — it requires **two** independent confirmations:
+
+1. an **MCP elicitation dialog**, and
+2. a **single-use token bound to the previewed payload**.
+
+🟢 **Signed with a Developer ID; the token lives in the macOS keychain.** 🔵 **This is the only row on these shelves whose write path is harder than its read path by design** — and `T243-F` below is why that matters more than it looks.
+
+### 🔴 `T243-F` — the two largest school systems on earth have **fenced off the exact use case this pass harvested**
+
+`ACTION WB` *(p242: "India and China have no AI-in-education regulatory source on these shelves")* is discharged, and the convergence was not the thing being looked for:
+
+| | what the instrument says about **grading** |
+|---|---|
+| 🔴 **China** *(MOE, two guidelines, May 2025)* | teachers **may not rely on AI to answer pupils' questions**, **should avoid using AI-generated content to evaluate students**, and **may not enter personal data or exam questions into AI tools**. Primary pupils may not independently use open-ended generative tools. Pupils may not submit AI-generated work |
+| 🔴 **India** *(CBSE position, reported)* | AI **does not autonomously mark board answer sheets**; the On-Screen Marking tool shows scanned scripts to **human evaluators, who make the final call** |
+
+🟡 **`p243` harvested `41` permissive rows and the overwhelming majority of them are gradebook, attendance and timetable — the system of record.** The two jurisdictions with the most pupils have written down that the *judgement* in that system stays human.
+
+> 🟢 **So the permitted architecture is not "an AI that grades". It is `che-ntucool-mcp`'s shape: read freely, draft freely, and put a human confirmation in front of every write.** That is a design constraint arriving from regulation and a product differentiator arriving from Taiwan, and they are the same shape.
+
+🔵 **Provenance, stated:** both rows above are **secondary** sources. China's instruments are **2025 guidelines**, described in the sources themselves as **not binding law**, and no 2026 update was located. India's binding instrument is cited as **CBSE circular `Acad-15/2026`** by a blog, and was **not** verified against `cbse.gov.in`. 🔴 **`ACTION WH` registers the primary-source leg as unrun.**
+
+### 🟢 New this week from the WebSearch leg — which had produced nothing for four passes
+
+🟢 **`org:iblai`, `9` repos, every grant `MIT` read first-hand.** The two that matter:
+
+- [`iblai/os`](https://github.com/iblai/os) — 🟢 **`821`★**, `main` · `ec798f1b12ef`. Deploy customisable agents: multi-provider LLM, real-time chat, voice, document training, analytics, SSO, embeddable widgets. **The highest-star permissive row this harvest produced.**
+- [`iblai/ontology`](https://github.com/iblai/ontology) — 🟢 `MIT`, `11`★, `main` · `ca861e65c5e4`. An **on-premise** knowledge layer making **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents **over MCP**, *"no data extraction, your data stays in your network"*.
+
+🔵 **`ontology` completes `p242`'s category.** p242 found MCP servers over the **LMS** — the courseware. This is MCP over the **SIS and the warehouse** — the record. 🟡 **And it is the deployment shape every regulator in this pass's intel asks for: the data does not move.**
+
+🔴 **The same leg also produced a claim that first-hand reading refuted.** A secondary source stated [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is `AGPL-3.0`. Read this pass at `main` · `d128ef67c920`: **`MIT`, `1 065` B, `sha256` `ba2525637432`.** 🟢 **These shelves already recorded the `MIT` relicence of Jun 2026, so the KB was right and the search result was stale** — and the row is now at **`40 873`★**, up from the `40.7k` the shelves last recorded.
+
+### 🔵 The rows that moved, and the rows that cannot move
+
+| slug | ★ | the thing worth watching |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **40 873** | `MIT`, re-verified first-hand. Still the largest education-AI repository on these shelves by an order of magnitude |
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 **821** | one vendor's agent platform, `MIT`, `30` forks |
+| [`EdupageAPI/edupage-api`](https://github.com/EdupageAPI/edupage-api) | **102** | 🔴 `GPL-3.0`. The highest-star *new* row of the pass and it cannot be built on. Six years old, `hacktoberfest`-tagged, `23` forks |
+| [`YTFL/AttendMate…`](https://github.com/YTFL/AttendMate-Bunk-Calculator-Attendance-Tracker) | **41** | 🔴 `AGPL-3.0`. A Flutter attendance tracker with `41` stars — pupil-side demand, network copyleft |
+| [`databayt/hogwarts`](https://github.com/databayt/hogwarts) | **18** | 🔴 `SSPL-1.0`, **not OSI**. The best-resourced SIS of the harvest chose MongoDB's licence |
+| [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) | **14** | 🟢 `ECL-2.0`, **the Educational Community License** — Apache-derived, OSI-approved, written for education, and the only row on these shelves carrying it |
+
+### 🔴 Declared gaps, this week
+
+- 🔴 **`73` rows unread** on the two most productive axes of the pass *(`topic:attendance` returned `63`, `topic:timetable` `60`; `25` read each)*. **`ACTION WF`.**
+- 🔴 **`26` of `35` `org:iblai` repos unread.** **`ACTION WG`.**
+- 🔴 **No primary-source regulatory document** for either India or China. **`ACTION WH`.**
+- 🔴 **No LATAM row on any of the four system-of-record axes.** The LATAM rows came from a language axis run because of that absence. Recorded, not glossed.
+
 ## Pass 242 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT STORY IS A **CATEGORY, NOT A REPO**: THE MCP SERVER OVER AN INCUMBENT LMS. SEVEN OF THEM, SIX VENDORS, AND THE NEWEST ONE IS A **DECLARED DERIVATIVE OF ANOTHER ROW ON THESE SHELVES**
 
 🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)

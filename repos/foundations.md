@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — `13` FOUNDATION ROWS, AND THE REUSABLE LAYER HAS MOVED ONE LEVEL DOWN AGAIN: `p241` FOUND IT IN COMPLIANCE, `p242` IN THE SYSTEM OF RECORD, `p243` FINDS IT IN THE **ADAPTER TO SOMEONE ELSE'S SYSTEM OF RECORD**
+
+🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis, and a row without one says so.
+
+🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) *(41 rows)* · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) *(31 rows)* · [`p243-channels`](../evidence/p243-channels.2026-10-16-p243.tsv) · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv)
+
+### 🟢 `T243-G` — the finding that organises this shelf: **the axis that produced the rows is `topic:timetable`, and it is the most regionally concentrated axis ever measured here**
+
+| axis | population | read | on-topic | new permissive | regional concentration | pass |
+|---|---|---|---|---|---|---|
+| 🟢 **`topic:timetable topic:school`** | `60` | `25` | 🟢 **`25`/`25`** | 🟢 **`9`** | 🔴 **`17`/`25` EMEA** | **`p243`** |
+| 🟢 `topic:attendance topic:education` | `63` | `25` | `22`/`25` | `6` | spread over `7` countries | `p243` |
+| 🟢 `topic:gradebook` *(p2)* | `57` | `28` | `24`/`28` | **`11`** | mixed | `p243` |
+| 🔴 **`topic:sis topic:school`** | 🔴 **`4`** | `4` | `4`/`4` | `2` | none | `p243` |
+| `topic:gradebook` *(p1)* | `57` | `30` | `30`/`30` | `23` | mixed | `p242` |
+| 🔴 LANGUAGE *(`es`/`pt`)* | `85` | `25` | 🔴 `14`/`25` | `3` | 🟢 **all LATAM** | `p243` |
+
+🔴 **`topic:sis topic:school` has a population of FOUR repositories in the whole of GitHub.** The acronym for the category — the word a procurement document uses — is **not** how builders tag their work. 🟢 **The word they do use is the FUNCTION: `gradebook`, `attendance`, `timetable`.** Together those three carry `180` repositories; the category name carries four.
+
+🟡 **And the LANGUAGE axis is confirmed as `p242` ranked it** — worst on-topic rate again *(`14`/`25`)* — **with one correction: it is a bad DISCOVERY axis and the only PLACEMENT axis that works for LATAM.** Four system-of-record axes returned essentially no LATAM row; the language axis returned every one this pass placed there.
+
+### 🟢 EMEA — `4` foundation rows, and all four are **adapters to a national incumbent**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the row)* | What it is |
+|---|---|---|---|---|---|
+| [`MrIcemanLE/Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) | 🟢 **`MIT`** *(`1 095` B)* | **12** | `main` · `6890319c3270` | 🟢 topic `schulmanager`; unofficial client for **Schulmanager Online** *(Germany)* | The best-starred EMEA row of the pass. Grades, timetable and messages out of a German school platform and into a hub the family owns. 🔵 **`4` forks — people are extending it** |
+| [`githuber110/ranzenpost`](https://github.com/githuber110/ranzenpost) | 🟢 **`MIT`** *(`1 068` B)* | **6** | `master` · `92c20f018718` | 🟢 German; targets **IServ**, the German school server suite | The most complete of the family: timetable **with substitutions**, parent letters, noticeboard, **sick notes**, chat — exposed three ways *(app, dashboard card, entities)*. 🟢 **A write path exists here: a sick note is submitted, not just read** |
+| [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | 🟢 **`MIT`** *(`1 091` B)* | 0 | `main` · `d2d83c9237c7` | 🟢 targets **WebUntis** *(Untis GmbH, Austria)* — the dominant DACH timetable platform | 🟢 **Automatic school discovery**: the adapter finds the school rather than being configured with it. The reusable primitive on this shelf |
+| [`artyom7774/Schedule`](https://github.com/artyom7774/Schedule) | 🟢 **`Apache-2.0`** *(`11 357` B)* | **9** | `main` · `5c3c4c70c30f` | 🟢 Russian-language project; the name is from **`завуч`**, the post-Soviet head-teacher role | 🟢 **A SOLVER, not an adapter** — simulated annealing and metaheuristics over class scheduling, Excel export, C++ core with Python. The only permissive timetable **solver** on these shelves |
+
+🔴 **And the row this shelf wanted most is withheld:** [`LT-Gen/Lesson_Timetable_Generator`](https://github.com/LT-Gen/Lesson_Timetable_Generator) — `AGPL-3.0` *(`34 523` B)*, Ukraine — generates a school timetable with **OR-Tools CP-SAT** and encodes the **Ministry of Education's sanitary norms as constraints**. 🟡 **A regulator's rules expressed as a solver model is the single most transferable artefact in this harvest, and network copyleft puts it out of reach of a proprietary deliverable.** 🔵 `artyom7774/Schedule` is the permissive substitute, and it does **not** carry the norms.
+
+### 🟢 APAC — `4` foundation rows, and one of them is the only **national-API** row on these shelves
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 **`MIT`** *(`1 066` B)* | 1 | `main` · `31ec8150e4ec` | 🟢 topics `ntu`, `ntu-cool` — **National Taiwan University's Canvas** | 🟢 **The reference implementation for a GUARDED WRITE.** Reads freely; posts grades and announcements only behind an MCP elicitation dialog **and** a single-use token bound to the previewed payload. Swift, Developer-ID signed, token in the keychain |
+| [`deploy103/siri-school-timetable`](https://github.com/deploy103/siri-school-timetable) | 🟢 **`MIT`** *(`1 066` B)* | 0 | `main` · `48ad2f3e221e` | 🟢 topics `korea`, **`neis`** — the Korean Ministry of Education's school open API | 🟢 **The ONLY row in this harvest built on a NATIONAL GOVERNMENT API**, which means it works for **every** Korean school rather than one. Timetable **and** school meal, delivered through a Siri shortcut |
+| [`mona-software/mona-thoi-khoa-bieu`](https://github.com/mona-software/mona-thoi-khoa-bieu) | 🟢 **`MIT`** *(`1 071` B)* | 0 | `main` · `5886c545c219` | 🟢 topic `vietnam`; **THCS/THPT** are the Vietnamese secondary levels | Constraint solver *(hard constraints + simulated annealing)* for Vietnamese secondary timetables. 🟢 **Runs in Node AND in the browser, CSV/JSON in, printable A4 HTML out** — deployable with no server at all |
+| [`guruduan/SIMG`](https://github.com/guruduan/SIMG) | 🟢 **`MIT`** *(`1 069` B)* | 1 | `main` · `6d41193a5b0b` | 🟢 topic `indonesia`; Indonesian README | 🟢 **A `MIT` plugin INSIDE a `GPL-3.0` host.** Moodle administration for Indonesian schools: teaching journals, permission letters, attendance recap, counselling, extracurriculars, **WhatsApp notifications**. 🔵 **The licence architecture is the lesson: `MIT` flows INTO Moodle, and nothing flows out** |
+
+### 🟢 LATAM — `2` foundation rows
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) *(carried)* | 🟢 **`ISC`** *(`748` B)* | **11** | `main` · `fbde8b72ced1` | 🟢 topic `peru`; targets **UPC** *Aula Virtual* | **Re-read first-hand this pass**, same `ISC`, head newly pinned. CLI **and** MCP over Blackboard Learn — still the only Blackboard-side LATAM row, and still the LATAM row with the most stars |
+| [`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) | 🟢 **`Apache-2.0`** *(`11 916` B)* | 0 | `main` · `b97fe95111ef` | 🟢 topics `paraguay`, `guarani`; *"free forever for Paraguayan education"* | Browser flight simulator over Paraguay on **public-domain NASADEM** terrain, `es-PY` **and Guaraní**. 🟢 **On this shelf for its GRANT ARCHITECTURE as much as its code** — `559` bytes of exclusion note naming three scopes, three licences and the reasoning for each *(see `T243-E` in `agents/top.md`)*. 🔵 **Guaraní localisation is a first on these shelves** |
+
+### 🟢 Global — `3` foundation rows, each with the absence recorded
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why NOT placed | What it is |
+|---|---|---|---|---|---|
+| [`iblai/ontology`](https://github.com/iblai/ontology) | 🟢 **`MIT`** *(`1 063` B)* | **11** | `main` · `ca861e65c5e4` | no regional evidence anywhere in the estate | 🟢 **The foundation row this KB has been missing.** An **on-premise** layer making **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents **over MCP** — *"no data extraction, your data stays in your network"*. Django + Typer, MCP Toolbox, Entra ID. 🟡 **The vendor blog also claims Banner and Workday Student; the README does not, and only the README was read** |
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 **`MIT`** *(`1 070` B)* | 🟢 **821** | `main` · `ec798f1b12ef` | no regional evidence | The agent runtime beside it: multi-provider LLM, chat, voice, document training, analytics, user management, SSO, **embeddable widgets**. `30` forks |
+| [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) | 🟢 **`ECL-2.0`** *(`11 120` B)* | **14** | `master` · `2a230316cb85` | Sakai is an international higher-ed consortium | Attendance that **writes through to the Sakai Gradebook** — a worked example of the write path every row in this harvest needs. 🟢 **`ECL-2.0` is the Educational Community License: Apache-derived, OSI-approved, patent-granting, and the only licence on these shelves written FOR education.** 🔵 Its presence means the four-family model *(MIT/Apache/GPL/AGPL)* under-describes this sector's supply |
+
+### 🔴 What this shelf still does not have, stated rather than implied
+
+- 🔴 **No permissive row that writes to a school's system of record and is PROVEN against a live upstream.** `sakaicontrib/attendance` writes to Sakai and `che-ntucool-mcp` writes to Canvas; neither carries a continuous integration check against the real upstream. 🔵 **The only row on these shelves that does is `krzysztofbury/librus-python-api`** *(p242, weekly live-check CI)* — and it only reads.
+- 🔴 **No permissive timetable solver that encodes a regulator's constraints.** The one that does is `AGPL-3.0` *(Ukraine, above)*.
+- 🔴 **No row on the `topic:sis` axis worth a foundation slot**, because the axis has four repositories in it.
+- 🔴 **`73` rows unread** across `topic:attendance` *(`63`)* and `topic:timetable` *(`60`)*. **`ACTION WF`.**
+
 ## Pass 242 — 2026-10-16 — `12` FOUNDATION ROWS, AND THE REUSABLE LAYER HAS MOVED AGAIN: `p241` FOUND IT IN **COMPLIANCE AND RECORDS**, `p242` FINDS IT IN THE **SYSTEM OF RECORD ITSELF** — ATTENDANCE, GRADEBOOK, TRANSCRIPT
 
 🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis, and a row without one says so.

@@ -1,0 +1,9 @@
+slug	readme_claim	github_api_license	payload_at_declared_path	p1058_verdict	first_hand_family	agreement
+rine77/meineschule-digital	MIT (siehe LICENSE)	{"key":"other","name":"Other","spdx_id":"NOASSERTION"}	200, 0 bytes, sha256 e3b0c44298fc	EMPTY-PAYLOAD / not usable	NONE	0 of 3 channels agree
+EdupageAPI/edupage-api	not stated in the probed window	not read (API path blocked for unattached repos)	200, 35148 bytes	UNQUALIFIED-GRANT, canonical GPL-3.0	GPL-3.0	p243's own token classifier said AGPL-3.0; first-hand read says GPL-3.0 (section 13 names Affero)
+123xiaojun/student-management-system	bilingual custom licence	not read	200, 4569 bytes	QUALIFIED-GRANT ('non-commercial' qualifies 'permission is hereby granted')	MIT text, NOT an MIT grant	family channel says MIT; position channel says narrowed
+THU-MAIC/OpenMAIC	not read this pass	not read	200, 1065 bytes, sha256 ba2525637432	UNQUALIFIED-GRANT	MIT	WebSearch secondary source said AGPL-3.0 and is REFUTED. These shelves already recorded the Jun 2026 MIT relicence
+alejooroncoy/campus-cli	ISC	not read	200, 748 bytes	UNQUALIFIED-GRANT	ISC	shelves already record ISC; p243's own classifier returned UNCLASSIFIED — its family vocabulary lacks ISC
+Naumsede/webuntis-home-assistant	not stated	not read	200, 797 bytes	UNQUALIFIED-GRANT	MIT, DEFECTIVE	holderless ("Copyright (c) 2026" with no name) and the warranty clause is cut off mid-paragraph. Granted, and defective
+OksigeniaSL/oga-veve	Apache-2.0	not read	200, 11916 bytes	UNQUALIFIED-GRANT, canonical Apache-2.0	Apache-2.0 + a stated scope exclusion	559 bytes of Spanish NOTA DE EXCLUSION before the licence: data under ODbL 1.0, assets reserved, the OSM extractor explicitly Apache-2.0
+MichaelHilton/nfc-attendance-reader	MIT	not read	200, 1325 bytes	UNQUALIFIED-GRANT	MIT + a trailing scope note	the note covers 3D-printable case files and ends "swap this section out if so" — template residue left in a published grant

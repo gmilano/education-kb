@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — **TWO CONTRADICTIONS `p242` LEFT OPEN ARE CLOSED** *(Mexico, Colorado)*, THE EMEA TIMELINE NOW HAS A **CITATION AND TWO DATES p242 DID NOT HAVE**, AND `ACTION WB` CLOSES ON A FINDING NOBODY WENT LOOKING FOR: **THE WORLD'S TWO LARGEST SCHOOL SYSTEMS HAVE FENCED OFF AI GRADING**
+
+🔵 **Evidence:** [`p243-websearch`](../evidence/p243-websearch.2026-10-16-p243.tsv) *(9 legs, each with what was verified first-hand and what was not)* · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv) · [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv)
+
+🟢 **`p383-region-heading-gate` runs clean over THIS block for the first time on these shelves:** the `Opportunities by region` block below carries exactly the five closed-vocabulary `###` headings and no out-of-vocabulary sibling — `P383-MISSING-REGION` falls `58`→`57` and `P383-OUT-OF-VOCAB` `46`→`45`, both reductions attributable to this block alone. 🔵 **The prior `76` blocks are unchanged and still carry the defect** *(the gate's own reading: the damage is in the LEVEL, not the count)*.
+
+🔴 **Provenance discipline, restated because this pass leans on it harder than most: every regulatory finding below is a SECONDARY source.** No primary instrument was read — not the Official Journal, not `cbse.gov.in`, not `moe.gov.cn`, not the Mexican Senate's gazette, not the Colorado AG's rulemaking docket. 🟡 **Each is recorded with its citation so the next pass can go to the instrument; `ACTION WH` registers that leg as unrun.**
+
+### 🔴 `T243-J` — the EMEA timeline, upgraded from a report to a **cited regulation**, with two dates these shelves did not carry
+
+`p242` recorded *"the Digital Omnibus moved Annex III (education) high-risk duties to `2027-12-02` … Council final green light reported `2026-06-29`"*. That stands, and it is now sourced and sequenced:
+
+| instrument / duty | date | status for an EMEA engagement |
+|---|---|---|
+| Parliament endorsement | `2026-06-16` | done |
+| Council adoption | `2026-06-29` | done |
+| 🟢 **Published in the OJ as `Regulation (EU) 2026/1744`** | 🟢 **`2026-07-24`** | 🟢 **the citation `p242` did not have** |
+| In force | `2026-07-27` | done |
+| **Art. 4** AI-literacy duty | already applies | 🔴 **live now** |
+| 🆕 **Art. 50** transparency duties — **UNCHANGED by the Omnibus** | 🔴 **applying since `2026-08-02`** | 🔴 **LIVE NOW, and a date `p242` did not record as live** |
+| 🆕 **Two NEW Art. 5 prohibitions** | 🔴 **`2026-12-02`** | 🔴 **SEVEN WEEKS from today** |
+| Emotion recognition in schools — **already prohibited** | `2025-02-02` | 🔴 live, carried from `p242` |
+| **Annex III** high-risk *(education)* | `2027-12-02` | runway |
+| **Annex I** embedded products | `2028-08-02` | runway |
+
+🟡 **The commercial reading has changed as a result.** `p242` read the Omnibus as *"the education deadline moved, so sequencing changed"*. 🔴 **With Art. 50 already live and two new Art. 5 prohibitions seven weeks out, the near-term EMEA obligation is not the high-risk conformity work at all — it is transparency and prohibited-practice screening, today.** The high-risk runway to `2027-12-02` is real **and** it is not what an EMEA client is exposed to this quarter.
+
+### 🟢 `T243-K` — `ACTION WB` discharged, and the two largest school systems **converge on the same limit**
+
+`p242` recorded: *"India and China have no AI-in-education regulatory source on these shelves. Searched this pass and not found."* Both now have one, and both say the same thing about the use case this pass spent its harvest on:
+
+| | the instrument | what it says about **grading and pupil data** |
+|---|---|---|
+| 🔴 **China** | **two MOE guidelines, both May 2025** — one general AI-education guideline, one on generative AI in primary and secondary schools | teachers **may not rely on AI to answer pupils' questions**; **should avoid using AI-generated content to evaluate students**; **may not enter personal information or exam questions into AI tools**. Primary pupils may not independently use open-ended generative tools. Pupils may not submit AI-generated work. 🟡 **Tiered by level: exposure in primary, reasoning in junior high, applied model design in senior high** |
+| 🔴 **India** | **CBSE circular `Acad-15/2026`** *(reported `2026-04-01`)*: Computational Thinking + AI compulsory for Classes **III–VIII** from `2026-27`, no board exam; NCERT framework and Teachers' Handbook; a stated goal of training **10M+ educators**. Plus **MeitY IT Rules amendment of `2026-02-20`** requiring prominent labelling of AI-generated content, and **DPDP** duties on student data | CBSE's position is that **AI does not autonomously mark board answer sheets** — On-Screen Marking shows scanned scripts to **human evaluators who make the final call** |
+
+🔴 **Provenance, plainly: China's instruments are 2025 GUIDANCE, described in the sources themselves as not binding law, and NO 2026 update was located. India's binding instrument is a circular number cited by a blog and NOT verified against `cbse.gov.in`.** 🟡 **`ACTION WB` is therefore discharged as *"a source exists, and here is exactly how weak it is"*, which is still an enormous improvement on a blank.**
+
+> 🟢 **The convergent finding, and it is the most commercially useful line in this pass:** across China, India and *(from `p242`)* Idaho's prohibition on AI **replacing** teachers, the fence is in the same place — **the judgement stays human.** `p243` harvested `41` permissive rows and most of them are gradebook, attendance and timetable. 🔴 **An "AI that grades" is unsellable in the two largest school systems on earth.** 🟢 **An agent that reads the record freely, drafts freely, and puts a human confirmation in front of every write is sellable in all of them — and [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) *(Taiwan, `MIT`)* already ships exactly that: an MCP elicitation dialog plus a single-use token bound to the previewed payload.**
+
+### 🟢 `T243-L` — two contradictions `p242` recorded as unresolved are now closed
+
+| `p242` recorded | `p243` resolves |
+|---|---|
+| 🔴 *"Mexico DISPUTED — sources conflict, not resolved"* | 🟢 **No general AI law as of today.** The Senate's General Law *(`223` articles)* is blocked because its enabling **constitutional amendment to Articles 3 and 73** never reached the floor; a competing National Law *(Ruiz Ruiz, `2026-02-11`)* sits in joint committees; a third initiative `2026-07-24`. 🟢 **Sectoral reforms HAVE passed: the Federal Labor Law and the Federal Copyright Law** *(image and voice protection against AI imitation)*. 🟡 **Education is NOT sectorally regulated — and Article 3, the article the enabling amendment must touch, IS the education article of the Mexican constitution** |
+| 🔴 *"Colorado — one tracker says the AI Act was repealed May 2026, CONFLICTING"* | 🟢 **Both halves were true.** `SB 24-205` was **repealed and reenacted** by **`SB 26-189`, signed `2026-05-14`**, after a federal magistrate **blocked enforcement of `SB 205` in April 2026** *(xAI suit, DOJ supporting)*. The replacement is **notice-based**, uses an **"automated decision-making technology" (ADMT)** category, **drops** impact assessments and the algorithmic-discrimination framework, is **AG-enforced only**, and takes effect **`2027-01-01`**. 🔴 **Draft rules are open for comment through `2026-10-26` — ten days from today** |
+
+### 🔵 `T243-M` — a market map that updates itself, found on a topic axis
+
+The `topic:attendance` harvest returned five repositories that are **not software and not rows for these shelves**, and are worth more here than on the agent shelf: [`api-evangelist/*`](https://github.com/api-evangelist) publishes **independent third-party profiles of commercial vendors' public API surfaces**, as machine-readable `apis-json`.
+
+| profile | the vendor it maps | why it matters commercially |
+|---|---|---|
+| [`powerschool`](https://github.com/api-evangelist/powerschool) | **PowerSchool** | the profile states **5 300+ districts and 17M students across 56 states and provinces** — the North American SIS incumbent, quantified |
+| [`edia`](https://github.com/api-evangelist/edia) | **Edia** | K-12 AI: math tutoring *(reported 8–23% score improvement)*, **attendance intervention against chronic absenteeism (up to 30% reduction)**, district analytics. 🟡 **A competitor shipping the exact attendance-risk product `HetviBarot21/SmartAttend` prototypes in Kenya** |
+| [`class-fka-classedu`](https://github.com/api-evangelist/class-fka-classedu) | **Class** *(fka ClassEDU)* | a teaching layer on top of Zoom and Microsoft Teams, K-12 through corporate |
+| [`chalkable`](https://github.com/api-evangelist/chalkable) | **Chalkable** *(acquired)* | an SIS + an education **app store** over shared student data — the architecture, and the fact that it was acquired |
+| [`spare-payments`](https://github.com/api-evangelist/spare-payments) | **Spare** | cashless school payments: wristbands, phones, ID cards, QR |
+
+🟡 **Recorded as a CHANNEL, not as a vendor claim: these are third-party profiles and their numbers are the profiler's, not the vendor's filing.** 🟢 **The useful part is the API surface each one enumerates — it is a published integration target list for the North American incumbent stack, maintained by someone else.**
+
+### 🔵 Market sizing — the discipline, restated because it keeps being tested
+
+🔴 **No new market figure is published this pass.** The WebSearch legs returned no 2026 market-size primary source, and these shelves do not re-print a number that cannot be traced to its instrument. The figures carried from earlier passes *(AI-in-education `$10.6B` → `$42.48B` by 2030, LATAM `$1.5B` → `$4.2B`)* **remain carried, with their provenance caveats, and are not restated here as new.**
+
+## Opportunities by region
+
+### North America
+
+🔴 **`SB 26-189`'s draft rules close for comment on `2026-10-26` — ten days out.** The engagement that exists this month is not a build; it is a **readiness read** for any district or edtech client operating in Colorado, because the category that replaced "high-risk AI system" is **ADMT**, and a gradebook that flags at-risk pupils is squarely inside it. 🟢 **Carried and still live from `p241`/`p242`: Ohio's district deadline passed `2026-07-01`; Maryland `SB 720` *(signed `2026-05-26`)* requires a central-office AI coordinator per district; Oklahoma `SB 1734` before `2027-28`; Utah local deadline Jul 2027; Idaho `SB 1227` prohibits AI REPLACING teachers; ~`100` state bills tracked in the 2026 session; `33`–`35` states plus Puerto Rico carry K-12 AI guidance.**
+
+🟢 **Technically, the North American opening is the only one with an open-source adapter per incumbent already published:** [`ruskcoder/gradiate-api`](https://github.com/ruskcoder/gradiate-api) *(`Apache-2.0`, HAC **and** PowerSchool)*, [`timdrichards/canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) *(`MIT`, Canvas)*, [`lengelhardt/bb-offline-interactive-dashboard`](https://github.com/lengelhardt/bb-offline-interactive-dashboard) *(`MIT`, Blackboard REST + OAuth 2.0)*, [`jlouisbru/grade-tracking-Canvas-API`](https://github.com/jlouisbru/grade-tracking-Canvas-API) *(`MIT`)*. 🔵 **PowerSchool's own surface is enumerated in a third-party profile *(`T243-M`)*, which is a starting point a studio does not have to build.**
+
+### EMEA
+
+🔴 **Sequencing, corrected: the near-term exposure is Art. 50 transparency *(live since `2026-08-02`)* and two new Art. 5 prohibitions *(`2026-12-02`, seven weeks)* — NOT the Annex III education high-risk work, which has runway to `2027-12-02` under `Regulation (EU) 2026/1744`.** An EMEA education engagement that sequences high-risk conformity first is solving next year's problem and leaving this quarter's unaddressed.
+
+🔴 **And EMEA is the hardest region to source permissively: `13` rows withheld against `8` published, the only region in this pass where refusals outnumber publications** *(measured in [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv))*. The best EMEA artefacts are locked: `GPL-3.0` on Edupage's `102`★ client, `AGPL-3.0` on the Ukrainian OR-Tools timetable solver that encodes the Ministry's sanitary norms, source-available on the German supervision platform, **a `0`-byte licence** on the German MeineSchule client, and **no grant at all** on the Kenyan absenteeism model and the Ethiopian school platform.
+
+🟢 **The opportunity is therefore the ADAPTER, country by country, and it is demonstrated demand:** `17` of `25` rows on the timetable axis are EMEA and most integrate into **Home Assistant** — parents are building this on hardware they own because nobody sold it to them. 🟢 **Permissive bases exist per incumbent:** Schulmanager *(`MIT`, `12`★)*, IServ *(`MIT`, `6`★, with a write path)*, WebUntis *(`MIT`)*, Skola24 *(`MIT`)*, Librus *(`MIT`, with weekly live-check CI)*. 🔴 **The risk to price in is that every one of these is an unofficial client against an API with no published contract — so continuous verification against the live upstream is not a nice-to-have, it is the deliverable's maintenance model.**
+
+### APAC
+
+🟢 **The clearest architectural mandate of any region, and it is a gift rather than a constraint:** China's MOE guidance *(2025, non-binding)* tells teachers not to use AI-generated content to evaluate pupils and not to put personal data into AI tools; India's CBSE position keeps board marking with human evaluators. 🟢 **So the shape to sell is the guarded write, and the reference implementation is already `MIT` and already APAC:** [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp).
+
+🟢 **India is simultaneously the largest curriculum-delivery opportunity on these shelves:** CT + AI compulsory for Classes III–VIII from `2026-27` across CBSE-affiliated schools, with a stated **10M+ educator** training goal that the sources themselves say is behind schedule in many schools. 🔵 **Teacher enablement, not pupil-facing tooling, is where that money is.**
+
+🟢 **Nine countries now carry first-hand APAC evidence** *(Taiwan, Vietnam, South Korea, Indonesia, Thailand, China, India, Bangladesh, Philippines)* — the broadest spread of any region. 🟢 **The highest-leverage technical fact: where the incumbent is a government API, one adapter covers a country.** Korea's **NEIS** does this for a single `MIT` row; Thailand's Ministry of Education school registry is on `data.go.th` under **Open Data Common**. 🔴 **Commercial products in the region are published WITHOUT grants on purpose** — the Philippine DepEd-shaped platform prices a monthly rental, the Bangladeshi one publishes a showcase with the source withheld. **Those are competitors, not bases.**
+
+### LATAM
+
+🔴 **The regulatory picture is the most permissive and the least settled, and `p243` closes the open question.** **Mexico:** no general AI law; the Senate's `223`-article bill is blocked on a constitutional amendment to **Articles 3 and 73** that never reached the floor; **education is not sectorally regulated**. **Brazil:** `PL 2338/2023` passed the Senate `2024-12-10`, still in the Chamber, vote expected after the Oct 2026 elections, **education IS in its high-risk tier**; the Digital ECA *(Law 15.211/2025)* has been in force since `2026-03-17`. **Chile:** bill `16821-19` in committee; data-protection law `21.719` proposed to slip to `2027-12-01`. **Peru:** `Ley 31814` *(2023)* remains the only ENACTED national AI statute in the region. 🟡 **Colombia:** no statute surfaced, but [`alguarito/Conciencia-`](https://github.com/alguarito/Conciencia-) shows what actually governs a Colombian school — the **Manual de Convivencia, Ley 1620 and the SIEE** — and it is school-level due process, not AI law.
+
+🔴 **The supply-side finding is a gap and it is stated as one: FOUR system-of-record axes returned essentially no LATAM row.** Every LATAM row this pass placed came from a Spanish/Portuguese **language** axis run specifically because of that absence — and that axis has the worst on-topic rate on these shelves *(`14`/`25`)*. 🟡 **LATAM's open-source education supply is not under-measured here because of a thin search; it is thin.**
+
+🟢 **What does exist is unusually well shaped for a studio:** [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) *(`ISC`, `11`★, Peru, CLI **and** MCP over Blackboard)* is the regional template for the adapter play; [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) *(p242, `MIT`, `40`★)* already ships Supabase RLS **and** a Stripe Connect revenue split; [`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) *(`Apache-2.0`, Paraguay)* is the first **Guaraní** localisation on these shelves and a model split-scope grant. 🔵 **Argentina has two rows this pass, both `MIT`, both built by the school community itself — which is the buyer profile, not the competitor profile.**
+
+### Global
+
+🔵 *Rows that could not be placed, recorded as such.*
+
+🟢 **The pass's single largest commercial addition is unplaceable and that is fine: `9` `MIT` repositories from one vendor's estate, opened by the WebSearch leg.** [`iblai/ontology`](https://github.com/iblai/ontology) is the one to brief a client on — an **on-premise** layer making **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents **over MCP**, *"no data extraction, your data stays in your network"* — because **that deployment shape is what every regulator in this pass's intel is asking for**, in all four regions at once. 🟢 Beside it, [`iblai/os`](https://github.com/iblai/os) *(`821`★)* is the agent runtime and [`iblai/claws`](https://github.com/iblai/claws) carries the sector agent configurations including higher-education and K-12.
+
+🔴 **Two cautions on that estate, both from reading rather than quoting:** the vendor's blog claims **Banner and Workday Student** connectors and `ontology`'s README names **PeopleSoft, Snowflake, Canvas and Salesforce** and neither of those two; and `26` of the estate's `35` repositories are **unread** *(`ACTION WG`)*.
+
+🔴 **Also Global and also withheld: the best-resourced system of record in the harvest.** [`databayt/hogwarts`](https://github.com/databayt/hogwarts) *(`18`★, `10` forks, `30` open issues)* is `SSPL-1.0` — **not OSI-approved**, and offering it as a service reaches the whole service stack. 🟡 **The pattern across `T243-D` is worth pricing into any education build-vs-buy conversation: on this axis, the projects with the most resources behind them are the ones that chose a non-OSI licence.**
+
 ## Pass 242 — 2026-10-16 — `ACTION UK` IS CLOSED: EMEA AND LATAM ARE MEASURED. AND THE PASS'S MOST CONSEQUENTIAL FINDING IS NOT A REPO — IT IS THAT **THE EU HAS MOVED THE EDUCATION HIGH-RISK DEADLINE TO `2027-12-02`**, WHICH CHANGES THE SEQUENCING OF EVERY EMEA ENGAGEMENT
 
 🟢 **`21` permissive rows across all four regions plus Global, every grant read first-hand: EMEA `3`, LATAM `3`, APAC `4`, North America `3`, Global `8`.** 🔴 **`ACTION UP` STANDS UNCHANGED: the `$6.4`–`11.4` B spread *(`78`%, three firms)* recorded at `p238` is still the only honest statement of market size on these shelves, and quoting a point estimate from here is still forbidden.** 🔵 **No new market figure is introduced by this pass — the regional legs returned REGULATORY and ADOPTION evidence, not sizing, and that is recorded as what it is.**

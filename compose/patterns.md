@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — `5` RECIPES, ONE PER REGION PLUS THE WRITE-PATH PATTERN THEY ALL DEPEND ON — EVERY REPO BELOW HAS A GRANT THIS PASS READ FIRST-HAND, WITH ITS HEAD PINNED
+
+🔵 **Grants and pinned heads:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · **refusals, so a recipe cannot quietly include one:** [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) · **the gate every component was cleared by:** [`p1058-empty-payload-gate`](code/p1058-empty-payload-gate/)
+
+🔴 **The rule these recipes keep, restated:** no component appears below unless its licence **payload** was read this pass at a pinned head. 🔴 **Nothing `GPL-3.0`, `AGPL-3.0`, `SSPL-1.0`, `PolyForm-NC`, `GSANCL-1.0`, source-available, `CC-BY-NC-SA` or grantless is wired into a deliverable** — those rows are named only where a recipe must explain what it is deliberately **not** using.
+
+### 🟢 `P243-1` — **The guarded write** *(the pattern the other four depend on; APAC-proven, globally required)*
+
+**Problem.** Every regulator in this pass's intel fences the same thing: the judgement stays human *(`T243-K`)*. An agent that posts grades autonomously is unsellable in China, India, Idaho and — once `SB 26-189`'s ADMT rules land — Colorado.
+
+**Components, all read first-hand this pass:**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| the reference write path | [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 `MIT` *(`1 066` B)* | `main` · `31ec8150e4ec` |
+| the read-side tool surface | [`timdrichards/canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) | 🟢 `MIT` *(`1 069` B)* | `main` · `15a20cf9ff0f` |
+| a worked gradebook write into a real LMS | [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) | 🟢 `ECL-2.0` *(`11 120` B)* | `master` · `2a230316cb85` |
+| the agent runtime | [`iblai/os`](https://github.com/iblai/os) | 🟢 `MIT` *(`1 070` B)* | `main` · `ec798f1b12ef` |
+
+**Wiring.**
+
+1. Take `che-ntucool-mcp`'s **two-stage confirmation** as the contract, not as an example: an **MCP elicitation dialog** renders the exact payload, and a **single-use token bound to that previewed payload** authorises the write. A token that does not match the preview is refused. 🟢 **The binding is the load-bearing part** — a confirmation dialog that approves "a write" rather than "this write" is theatre.
+2. Split the tool surface in two and make the asymmetry explicit in the tool definitions: `canvas-lms-skill`'s read tools *(roster, assignments, submissions, rubrics)* need no gate; **every** write tool routes through stage 1 + 2.
+3. Keep credentials out of the model's reach: `che-ntucool-mcp` puts the token in the **OS keychain** and is Developer-ID signed. For a server deployment the equivalent is a secret the agent process can use and not read.
+4. Read `sakaicontrib/attendance` for the **gradebook write semantics** an LMS actually expects — it writes attendance through to the Sakai Gradebook, which is the only worked example of that path on these shelves.
+5. Log the preview **and** the confirmation, not just the result. 🔵 That log is what a `SB 26-189` ADMT notice, an EU Art. 50 transparency duty and a CBSE "human made the final call" assertion are all separately asking for — one artefact, three regimes.
+
+🟡 **Effort: 3–4 weeks** for the gate plus one LMS. 🔴 **Do not substitute a "confirm?" prompt for the token binding; that is the whole pattern.**
+
+### 🟢 `P243-2` — **EMEA: the national-incumbent adapter, with its own liveness proof**
+
+**Problem.** `T243-H`: outside North America the system of record is a **national, closed, per-country** product — WebUntis, Schulmanager, IServ, Edupage, Škola Online, Skola24, Librus, MeineSchule.digital. There is no pan-European LMS to integrate with, and every existing client is unofficial against an undocumented API.
+
+**Components:**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| adapter reference, DACH | [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | 🟢 `MIT` *(`1 091` B)* | `main` · `d2d83c9237c7` |
+| adapter reference, Germany | [`MrIcemanLE/Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) | 🟢 `MIT` *(`1 095` B)* | `main` · `6890319c3270` |
+| **a WRITE path that exists** *(sick notes)* | [`githuber110/ranzenpost`](https://github.com/githuber110/ranzenpost) | 🟢 `MIT` *(`1 068` B)* | `master` · `92c20f018718` |
+| Nordics | [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | 🟢 `MIT` *(`1 070` B)* | `main` · `10590659f00b` |
+| **the liveness pattern** | [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | 🟢 `MIT` *(`1 071` B)* | `main` · `83eccea12102` *(p242)* |
+| timetable solver | [`artyom7774/Schedule`](https://github.com/artyom7774/Schedule) | 🟢 `Apache-2.0` *(`11 357` B)* | `main` · `5c3c4c70c30f` |
+
+**Wiring.**
+
+1. One adapter per incumbent behind **one internal interface** — `courses`, `timetable`, `substitutions`, `absences`, `grades`, `messages`. 🔵 `ioBroker.webuntis2`'s **automatic school discovery** is the part to lift first: the adapter should find the tenant, not be configured with it.
+2. 🟢 **Copy `librus-python-api`'s weekly live-check CI against the real upstream, and treat it as the deliverable's warranty.** It is the only row on these shelves that continuously proves its own integration still works; `17` other EMEA rows find out when a parent complains.
+3. Put `P243-1`'s guarded write in front of anything that writes — and note that `ranzenpost` already writes *(a sick note)*, so the write surface in this layer is real and not hypothetical.
+4. For scheduling, use `artyom7774/Schedule` *(`Apache-2.0`, simulated annealing)*. 🔴 **Do NOT use [`LT-Gen/Lesson_Timetable_Generator`](https://github.com/LT-Gen/Lesson_Timetable_Generator)** — it is the better artefact *(OR-Tools CP-SAT with the Ukrainian Ministry's sanitary norms encoded as constraints)* and it is `AGPL-3.0`. 🟡 **Re-derive the norms as constraints from the regulation itself; the regulation is not copyrightable, the implementation is.**
+5. Sequence the compliance work per `T243-J`: **Art. 50 transparency is live now**, two new **Art. 5 prohibitions land `2026-12-02`**, and Annex III education high-risk has runway to `2027-12-02` under `Regulation (EU) 2026/1744`.
+
+🟡 **Effort: 2–3 weeks per incumbent after the first;** `6–8` weeks for the interface, two adapters and the liveness harness.
+
+### 🟢 `P243-3` — **APAC: one adapter, one country** *(the government-API play)*
+
+**Problem.** Nine APAC countries carry first-hand evidence on these shelves and each has its own stack — but where the incumbent is a **government** API, a single adapter covers every school in the jurisdiction.
+
+**Components:**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| national-API reference *(Korea, **NEIS**)* | [`deploy103/siri-school-timetable`](https://github.com/deploy103/siri-school-timetable) | 🟢 `MIT` *(`1 066` B)* | `main` · `48ad2f3e221e` |
+| constraint-solving timetable *(Vietnam)* | [`mona-software/mona-thoi-khoa-bieu`](https://github.com/mona-software/mona-thoi-khoa-bieu) | 🟢 `MIT` *(`1 071` B)* | `main` · `5886c545c219` |
+| attendance with anti-fraud *(Taiwan)* | [`chenweichiang/classroom-attendance`](https://github.com/chenweichiang/classroom-attendance) | 🟢 `MIT` *(`1 071` B)* | `main` · `80700ec85f6f` |
+| Moodle-side administration *(Indonesia)* | [`guruduan/SIMG`](https://github.com/guruduan/SIMG) | 🟢 `MIT` *(`1 069` B)* | `main` · `6d41193a5b0b` |
+| the guarded write *(Taiwan)* | [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 `MIT` *(`1 066` B)* | `main` · `31ec8150e4ec` |
+
+**Wiring.**
+
+1. **Start from the government API, not the school.** `siri-school-timetable` reads **NEIS** and therefore works for every Korean school; the same logic applies to Thailand's school registry on **`data.go.th` *(Open Data Common)***, which is reachable even though the repository that uses it is all-rights-reserved.
+2. Timetabling is the task schools will pay for first and it is a **solver** problem: take `mona-thoi-khoa-bieu`'s hard-constraint + simulated-annealing model, which runs in Node **and** in the browser and emits printable A4 — 🟢 **deployable with no server, which matters where there is no school IT to procure.**
+3. For attendance, `classroom-attendance`'s design is the one to copy rather than fingerprints or faces: **a rotating QR on the projector, one phone bound per student ID, and random spot checks against proxy sign-ins.** 🔵 It solves the fraud problem without collecting biometrics — which also keeps it outside the EU's prohibited-practice list if the same product travels.
+4. Extend Moodle through **`MIT` plugins** *(`SIMG`'s shape, `T243-I`)*: `MIT` flows **into** a `GPL-3.0` host, and nothing flows back out.
+5. Put `P243-1` in front of every write, for the reason `T243-K` gives: China's MOE guidance and India's CBSE position both keep evaluation human.
+
+🟡 **Effort: 4–6 weeks** per country for the read path; the timetable solver is the long pole.
+
+### 🟢 `P243-4` — **LATAM: the campus adapter and the revenue split** *(the thin-supply play)*
+
+**Problem.** `T243`'s supply measurement is blunt: four system-of-record axes returned essentially **no LATAM row**, and every LATAM row published came from a language axis with a `14`/`25` on-topic rate. 🟡 **There is little to fork — so the recipe is to take the two regional artefacts that are unusually well shaped and build the rest.**
+
+**Components:**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| campus adapter, **CLI + MCP over Blackboard** | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 `ISC` *(`748` B)* | `main` · `fbde8b72ced1` |
+| multi-tenant LMS with **RLS + Stripe Connect** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | 🟢 `MIT` *(`1 072` B)* | `master` · `925783e644a6` *(p242)* |
+| split-scope grant + `es-PY`/**Guaraní** localisation | [`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) | 🟢 `Apache-2.0` *(`11 916` B)* | `main` · `b97fe95111ef` |
+| school-community portal *(Argentina)* | [`JohnMartinRB/CE-IPET424`](https://github.com/JohnMartinRB/CE-IPET424) | 🟢 `MIT` *(`1 129` B)* | `main` · `4866673330a8` |
+| offline-first teacher gradebook *(Brazil)* | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | 🟢 `MIT` *(`1 081` B)* | `main` · `b01dde73df1f` *(p242)* |
+
+**Wiring.**
+
+1. `campus-cli` is the regional template and it is `ISC` — **permissive, OSI, and compatible with a proprietary deliverable**. Lift its Blackboard session handling; it already ships both a CLI **and** an MCP server over the same core, which is the right internal split.
+2. Monetisation is solved rather than designed: `lms-front` already carries **Supabase row-level security** and a **Stripe Connect platform-fee-plus-revenue-split**. 🟢 Those are the two things a LATAM marketplace engagement otherwise builds by hand.
+3. **Design for intermittent connectivity as a default, not a feature.** The Brazilian gradebook keeps everything in the device's IndexedDB with **no server at all**; `oga-veve` ships a browser application with procedurally generated terrain. 🔵 Both are the same instinct, and both are regional.
+4. Localise beyond Spanish and Portuguese: `oga-veve` is the first **Guaraní** row on these shelves. 🟡 **For a public-sector engagement in Paraguay, Bolivia or Peru, indigenous-language support is procurement criteria, not polish.**
+5. Regulation is the lightest of any region and the least settled *(`T243-L`)*: **Mexico** has no general AI law and education is not sectorally regulated; **Brazil's** `PL 2338/2023` puts education in its high-risk tier and is pending in the Chamber after the Oct 2026 elections; **Peru's `Ley 31814`** is the only enacted national statute. 🟡 **Build on the Brazilian high-risk tier as the regional ceiling and the deliverable survives the bill passing.**
+
+🟡 **Effort: 6–8 weeks** for one campus adapter plus the billing-split tenancy.
+
+### 🟢 `P243-5` — **North America / global enterprise: the MCP record layer that does not move the data**
+
+**Problem.** The North American record is a closed incumbent *(PowerSchool: `5 300+` districts, `17M` pupils per the third-party API profile in `T243-M`)*, the data cannot leave the institution's network, and `SB 26-189`'s **ADMT** category plus Maryland's per-district AI coordinator mean the deliverable needs an audit story on day one.
+
+**Components:**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| **the record layer, on-premise, over MCP** | [`iblai/ontology`](https://github.com/iblai/ontology) | 🟢 `MIT` *(`1 063` B)* | `main` · `ca861e65c5e4` |
+| agent runtime | [`iblai/os`](https://github.com/iblai/os) | 🟢 `MIT` *(`1 070` B)* | `main` · `ec798f1b12ef` |
+| sector agent configurations *(K-12, higher-ed)* | [`iblai/claws`](https://github.com/iblai/claws) | 🟢 `MIT` *(`1 063` B)* | `main` · `acbd32b4a938` |
+| SIS adapter *(HAC **and** PowerSchool)* | [`ruskcoder/gradiate-api`](https://github.com/ruskcoder/gradiate-api) | 🟢 `Apache-2.0` *(`11 357` B)* | `main` · `4c08bfdb79fc` |
+| Blackboard, official API, no scraping | [`lengelhardt/bb-offline-interactive-dashboard`](https://github.com/lengelhardt/bb-offline-interactive-dashboard) | 🟢 `MIT` *(`1 073` B)* | `main` · `ffac7ef04247` |
+| Canvas read surface | [`timdrichards/canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) | 🟢 `MIT` *(`1 069` B)* | `main` · `15a20cf9ff0f` |
+
+**Wiring.**
+
+1. `iblai/ontology` is the spine: it makes **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents over **MCP**, **on-premise**, *"no data extraction"*. 🟢 **That property is the sale** — it answers FERPA, the EU's data-minimisation instinct and China's "no personal data into AI tools" rule with the same architecture.
+2. 🔴 **Verify the connector list against the repository, not the vendor's blog.** The blog claims **Banner** and **Workday Student**; the README names PeopleSoft, Snowflake, Canvas and Salesforce and not those two. `gradiate-api` covers **HAC and PowerSchool** and is `Apache-2.0`, so the US K-12 gap is fillable from these shelves.
+3. Run `iblai/os` as the agent surface and start from `iblai/claws`' K-12 and higher-education configurations rather than from an empty prompt.
+4. Put `P243-1`'s guarded write in front of every mutation and keep the preview-plus-confirmation log. 🔵 **That log IS the ADMT notice, the Maryland coordinator's evidence and the FERPA access record** — build it once.
+5. 🔴 **Price in the two real risks before quoting:** `26` of the estate's `35` repositories are **unread** *(`ACTION WG`)*, and **`SB 26-189`'s draft rules close for comment on `2026-10-26`**, so the compliance target is still moving.
+
+🟡 **Effort: 8–10 weeks** for the record layer plus one incumbent and the audit trail.
+
+### 🔴 What these recipes deliberately do NOT use, and why it is written down
+
+| component a reader would reach for | why it is excluded |
+|---|---|
+| [`databayt/hogwarts`](https://github.com/databayt/hogwarts) *(`18`★, the best-resourced SIS of the harvest)* | 🔴 `SSPL-1.0` — **not OSI**; offering it as a service reaches the whole service stack |
+| [`EdupageAPI/edupage-api`](https://github.com/EdupageAPI/edupage-api) *(`102`★, the largest adapter estate in EMEA)* | 🔴 `GPL-3.0` |
+| [`LT-Gen/Lesson_Timetable_Generator`](https://github.com/LT-Gen/Lesson_Timetable_Generator) *(a regulator's norms as CP-SAT constraints)* | 🔴 `AGPL-3.0` — re-derive the norms, not the code |
+| [`the-sudipta/gradia`](https://github.com/the-sudipta/gradia) *(local-first Rust/Tauri gradebook)* | 🔴 `GSANCL-1.0`, which defines commercial use to include *"the internal operations of a for-profit organization"* |
+| [`moto-nrw/project-phoenix`](https://github.com/moto-nrw/project-phoenix) *(GDPR-shaped German supervision platform)* | 🔴 source-available: *"You may NOT use this software in production without a commercial license"* |
+| [`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) *(a working MeineSchule.digital client)* | 🔴 **its `LICENSE` is `0` bytes** — `T243-A`. The README says `MIT` and nothing was granted |
+| [`HetviBarot21/SmartAttend`](https://github.com/HetviBarot21/SmartAttend) *(Kenya; absenteeism risk from 8 years of data)* | 🔴 **no licence payload at `15` paths.** 🟡 **The row this pass most wanted in a recipe** |
+| [`Samu-Kiss/Aula`](https://github.com/Samu-Kiss/Aula) | 🔴 `PolyForm-Noncommercial-1.0.0` |
+| [`123xiaojun/student-management-system`](https://github.com/123xiaojun/student-management-system) | 🔴 the MIT sentence is **verbatim** and **prefixed** *"For non-commercial purposes"* — `T243-C` |
+
 ## Pass 242 — 2026-10-16 — `5` RECIPES, ONE PER REGION PLUS THE LICENCE-ARCHITECTURE PATTERN THEY ALL DEPEND ON — EVERY REPO BELOW HAS A GRANT THIS KB READ FIRST-HAND
 
 🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · **instrument:** [`p242-grant-delta`](code/p242-grant-delta/)

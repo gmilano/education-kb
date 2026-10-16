@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — `ACTION WA` DISCHARGED, AND THE AXIS IT NAMED PRODUCED **`41` PERMISSIVE ROWS AND THE PASS'S HEADLINE**: A `LICENSE` FILE THAT EXISTS, ANSWERS `200`, AND IS **`0` BYTES**
+
+⏱️ **TWELFTH pass of `2026-10-16`.** `p232`–`p242` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`41` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported — **`35` `MIT`, `4` `Apache-2.0`, `1` `ISC`, `1` `ECL-2.0`.** 🟢 **`ACTION WA` DISCHARGED: `topic:gradebook`'s remaining `27`, plus `topic:sis`, `topic:attendance` and `topic:timetable`** — four axes, `102` rows read, and **every regional row of this pass came from them.** 🟢 **`ACTION WB` DISCHARGED: India and China both have a source now**, with their provenance caveats written down. 🔴 **`31` rows withheld, every payload read.** 🟢 **The WebSearch leg produced rows for the FIRST TIME IN FIVE PASSES — `9` of them, all `MIT`** — and one claim it also produced was **refuted** by reading the payload.
+
+🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) *(41 slugs, grant + bytes + pinned head + per-row region basis)* · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) *(31 rows)* · [`p243-channels`](../evidence/p243-channels.2026-10-16-p243.tsv) *(8 payloads, channel by channel)* · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv) · [`p243-websearch`](../evidence/p243-websearch.2026-10-16-p243.tsv) · **instrument:** [`compose/code/p1058-empty-payload-gate/`](../compose/code/p1058-empty-payload-gate/) *(29 controls, wired into `make hooks`)*
+
+### 🔴 `T243-A` — the headline: the licence file is **there**, and it is **empty**
+
+[`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) — `main` · `aa3d8bacb42d`. Its README says, in German:
+
+> *"MIT – siehe [LICENSE](LICENSE)."*
+
+`LICENSE` exists at that exact path. It answers `200`. It is **`0` bytes** — `sha256` `e3b0c44298fc…`, **the hash of the empty string, identical for every repository on earth.**
+
+| channel | answer on this one row |
+|---|---|
+| README claim | 🟢 `MIT` |
+| GitHub API `license` | 🔴 `{"key":"other","name":"Other","spdx_id":"NOASSERTION"}` |
+| the payload at the declared path | 🔴 `200`, **`0` bytes** |
+| 🆕 [`p1058-empty-payload-gate`](../compose/code/p1058-empty-payload-gate/) | 🔴 `EMPTY-PAYLOAD` → **not usable**, and the family question is **NOT ASKED** |
+
+🔴 **`0` of `3` channels agree, and the one that is right is the one nobody consults.** 🔵 **Every grant ladder on these shelves documents `byte-floor=1B`** — the HTTP code is authoritative and the byte count is recorded *beside* it rather than instead of it. That rule is correct, and `T243-A` is why the byte count needs a gate of its own: **a `200` with nothing in it enters as `FOUND`.**
+
+🟡 **The row is otherwise exactly what an EMEA engagement wants** — a working client for a German school platform, reading grades, remarks, timetable and homework — **and it is unusable, because the author wrote the licence name in the README and left the file blank.**
+
+### 🔴 `T243-B` — `P171`, for the **fourth** time, in an instrument written **this pass**
+
+p243's harvest was classified by a family matcher written from scratch for this pass, deliberately **without reading `lib/license_family.sh` first**. On its first run it returned **`AGPL-3.0`** on the highest-star row of the entire harvest:
+
+[`EdupageAPI/edupage-api`](https://github.com/EdupageAPI/edupage-api) — **`102`★** · `master` · `423deeb2b2ff` · `35 148` B. Read first-hand, the payload's title line is:
+
+> `GNU GENERAL PUBLIC LICENSE` / `Version 3, 29 June 2007`
+
+🔴 **`GPL-3.0`'s section 13 is titled *"Use with the GNU Affero General Public License"*.** The matcher read the cross-reference as the family.
+
+| | p242 wrote | p243 measured |
+|---|---|---|
+| the claim | *"every classifier on these shelves that greps a licence BODY for a token eventually reads the licence's own text as an addition"* | 🔴 **An INDEPENDENT reimplementation reproduced it on its first run** |
+| occurrences | `3` *(`P171`, `p1054`, `p242-grant-delta`)* | 🔴 **`4`** |
+
+> 🔴 **That promotes the finding from a defect in this codebase to a property of the METHOD.** Any instrument that asks *"which family is this?"* by looking for a family's name in a licence body will eventually find the name in a body belonging to a different licence, because licences cite each other.
+
+🟢 **The fix in [`p1058`](../compose/code/p1058-empty-payload-gate/) is the structural one `p242` required, not a deleted token:** establish whether the payload **is** a canonical body first; if it is, its own words are its terms, and the token window is **never read**. 🟢 **`test_gpl3_section13_still_in_payload` asserts the offending word is STILL IN THE PAYLOAD**, so deleting the guard fails the suite.
+
+🔵 **Correct verdict: `GPL-3.0`. Withheld — and it is the row this pass would most like to have published.**
+
+### 🔴 `T243-C` — the narrowing placed **before** the grant verb
+
+[`123xiaojun/student-management-system`](https://github.com/123xiaojun/student-management-system) — `main` · `2df397a59812` · `4 569` B, bilingual Chinese/English. Its English section reads:
+
+> *"For **non-commercial purposes**, permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction …"*
+
+🟢 **The MIT sentence is verbatim. Nothing is added after it.**
+
+| instrument | what it reads | what it finds here |
+|---|---|---|
+| a family matcher | the MIT phrase | 🔴 `MIT` |
+| [`p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/) | restriction tokens + a size ceiling | 🟢 fires — **but on the document, not on the clause** |
+| [`p242-grant-delta`](../compose/code/p242-grant-delta/) | what is **ADDED** to a canonical text | 🔴 there is no addition to read |
+| 🆕 `p1058.grant_qualifier()` | the `120` characters **before** the grant verb | 🟢 `QUALIFIED-GRANT` — *"'non-commercial' qualifies 'permission is hereby granted'"* |
+
+🔵 **A new position for an old restriction.** `p242`'s delta reads *additions*; `p1054` reads *excess bytes*. This one is four words long, sits in front of the verb, and changes everything the sentence after it says. 🟢 **The window is deliberately short and exercised from both sides**, so a restriction belonging to another clause is not attributed to the grant.
+
+### 🔴 `T243-D` — four licence families this pass had to read in full, and **none of them is one of the four**
+
+The system-of-record axis is where the best-resourced rows live, and **the best-resourced rows are the ones that chose a non-OSI licence:**
+
+| slug | ★ | grant *(bytes)* | what it actually permits |
+|---|---|---|---|
+| [`databayt/hogwarts`](https://github.com/databayt/hogwarts) | **18** | 🔴 **`SSPL-1.0`** *(`30 645` B)* | **The highest-star SIS of the harvest.** MongoDB's licence; **not OSI-approved**; offering it as a service pulls in the whole service stack |
+| [`Samu-Kiss/Aula`](https://github.com/Samu-Kiss/Aula) | 1 | 🔴 **`PolyForm-Noncommercial-1.0.0`** *(`4 563` B)* | Explicitly non-commercial. 🟡 **Found ONLY because the path vocabulary carries the British `LICENCE` spelling** — the American spelling `404`s on this row |
+| [`the-sudipta/gradia`](https://github.com/the-sudipta/gradia) | 0 | 🔴 **`GSANCL-1.0`**, self-named *(`6 568` B)* | Its own first line: *"This is a source-available license, not an open-source license."* Defines **"Commercial Use"** to include *"the internal operations of a for-profit organization"* |
+| [`moto-nrw/project-phoenix`](https://github.com/moto-nrw/project-phoenix) | **9** | 🔴 bespoke **SOURCE-AVAILABLE** *(`1 442` B)* | German all-day-school supervision, GDPR-shaped. *"You may NOT use this software in production without a commercial license"* |
+
+🔵 **Plus two all-rights-reserved notices that name no licence at all** — [`Davedka/Ticky`](https://github.com/Davedka/Ticky) cites **Hungarian Act LXXVI of 1999** instead, and [`skotechlabs/pathshala`](https://github.com/skotechlabs/pathshala) states the repository *is a product showcase* and *"the Pathshala source code is proprietary and is not published here"* — **a repo with no product in it.**
+
+### 🟢 EMEA — `8` rows, and the structural finding is **where** they integrate
+
+🔵 **`17` of the `25` rows on the `topic:timetable` axis are EMEA**, and they are not school systems. They are **clients over the national incumbent school portal** — and a majority of them land in **Home Assistant**, the home-automation hub.
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **Schulmanager HA** | [`MrIcemanLE/Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) | 🟢 **`MIT`** *(`1 095` B)* | **12** | `main` · `6890319c3270` | 🟢 topic `schulmanager`; unofficial API client for **Schulmanager Online**, a German school platform | Grades, timetable and messages out of the Schulmanager app and into Home Assistant |
+| **ranzenpost** | [`githuber110/ranzenpost`](https://github.com/githuber110/ranzenpost) | 🟢 **`MIT`** *(`1 068` B)* | **6** | `master` · `92c20f018718` | 🟢 German description; targets **IServ**, the German school server suite | A child's IServ school day as a sidebar app, a dashboard card and entities: timetable **with substitutions**, parent letters, noticeboard, sick notes, chat |
+| **Skola24 HA** | [`Kretiandpleti/skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) | 🟢 **`MIT`** *(`1 070` B)* | 0 | `main` · `10590659f00b` | 🟢 targets **Skola24**, a Swedish school-scheduling vendor | Swedish school schedules as a Home Assistant entity |
+| **ioBroker.webuntis2** | [`Voodoo2man/ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) | 🟢 **`MIT`** *(`1 091` B)* | 0 | `main` · `d2d83c9237c7` | 🟢 targets **WebUntis** *(Untis GmbH, Austria)*, the dominant DACH timetable platform | ioBroker adapter with **automatic school discovery** |
+| **webuntis-ha** | [`Naumsede/webuntis-home-assistant`](https://github.com/Naumsede/webuntis-home-assistant) | 🟡 **`MIT`, DEFECTIVE** *(`797` B)* | 2 | `main` · `c80caa927881` | 🟢 targets WebUntis; German substitution vocabulary | WebUntis timetables and messages over the internal REST API, with full substitution detail. 🟡 **The payload is HOLDERLESS — *"Copyright (c) 2026"* with no name — and the warranty clause is CUT OFF mid-paragraph. It grants, and it is defective** |
+| **schulmanager-calendar-sync** | [`egore4606/schulmanager-calendar-sync`](https://github.com/egore4606/schulmanager-calendar-sync) | 🟢 **`MIT`** *(`1 066` B)* | 1 | `main` · `54bed30cf7cf` | 🟢 targets Schulmanager Online *(Germany)* | Self-hosted sync of school timetables into Google Calendar |
+| **Planla!** | [`siberjedi/planla`](https://github.com/siberjedi/planla) | 🟢 **`MIT`** *(`1 066` B)* | 0 | `main` · `80c9820d25c8` | 🟢 the row states **"Turkish school timetable generator"** | 🟢 **Offline, pure HTML/JS, no install** — a head teacher runs it from a file on a laptop |
+| **SuperZavych** | [`artyom7774/Schedule`](https://github.com/artyom7774/Schedule) | 🟢 **`Apache-2.0`** *(`11 357` B)* | **9** | `main` · `5c3c4c70c30f` | 🟢 Russian-language project; the name is from **`завуч`**, the post-Soviet head-teacher role | Automatic timetable generation by **simulated annealing and metaheuristics**, with Excel export |
+
+🔴 **And EMEA is the only region of this pass where MORE rows are withheld than published — `13` against `8`.** The best rows on the axis are the unusable ones: `AGPL-3.0` on the Italian and Polish school apps, `GPL-3.0` on Edupage, source-available on the German supervision platform, a `0`-byte grant on the German MeineSchule client, and **no grant at all** on the Kenyan and Ethiopian rows. 🔵 Measured in [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv).
+
+### 🟢 APAC — `6` rows across **`9` countries with first-hand evidence**, the broadest spread of the pass
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **che-ntucool-mcp** | [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 **`MIT`** *(`1 066` B)* | 1 | `main` · `31ec8150e4ec` | 🟢 topics `ntu`, `ntu-cool` — **NTU COOL is National Taiwan University's Canvas instance** | **The row of the pass for architecture.** Canvas MCP server, 10 tools, Swift, Developer-ID signed, token in the keychain. Reads courses, assignments, submissions, roster; **posts grades and announcements ONLY behind a two-layer human confirmation** — an MCP elicitation dialog **plus** a single-use token bound to the previewed payload |
+| **classroom-attendance** | [`chenweichiang/classroom-attendance`](https://github.com/chenweichiang/classroom-attendance) | 🟢 **`MIT`** *(`1 071` B)* | 0 | `main` · `80700ec85f6f` | 🟢 topic `taiwan`; interface in Traditional Chinese (Taiwan) | A rotating QR on the projector, **one phone bound per student ID**, and random spot checks against proxy sign-ins. Single-file FastAPI + SQLite |
+| **mona-thoi-khoa-bieu** | [`mona-software/mona-thoi-khoa-bieu`](https://github.com/mona-software/mona-thoi-khoa-bieu) | 🟢 **`MIT`** *(`1 071` B)* | 0 | `main` · `5886c545c219` | 🟢 topic `vietnam`; **THCS/THPT** are the Vietnamese lower/upper secondary levels | Timetable engine: hard constraints + simulated annealing, CSV/JSON in, **printable A4 HTML** out. Runs in Node **and** in the browser |
+| **siri-school-timetable** | [`deploy103/siri-school-timetable`](https://github.com/deploy103/siri-school-timetable) | 🟢 **`MIT`** *(`1 066` B)* | 0 | `main` · `48ad2f3e221e` | 🟢 topics `korea`, **`neis`** — NEIS is the Korean Ministry of Education's school open API | Today's timetable and school meal for **any** Korean school, read aloud through a Siri shortcut. 🔵 **The only row in the harvest built on a NATIONAL government API** |
+| **SIMG** | [`guruduan/SIMG`](https://github.com/guruduan/SIMG) | 🟢 **`MIT`** *(`1 069` B)* | 1 | `main` · `6d41193a5b0b` | 🟢 topic `indonesia`; Indonesian README *(`jurnal mengajar`, `rekap kehadiran`)* | A **Moodle plugin** under `MIT`: teaching journals, pupil permission letters, attendance recap, counselling, extracurriculars, **WhatsApp notifications**. 🟡 **Note the licence architecture: `MIT` is inbound-compatible with Moodle's `GPL-3.0`, so the plugin can be taken and the host cannot** |
+| **School Portal** | [`AlekseiLopatin/school-website`](https://github.com/AlekseiLopatin/school-website) | 🟢 **`MIT`** *(`1 072` B)* | 0 | `main` · `558f5d34ef3a` | 🟢 README: *"I built it for **the school where I teach in Thailand**"*; trilingual English/Thai/Chinese | Teacher gradebook + school site: news, grades, pupil artwork. 🔵 **Its topics name no country — the placement came from ONE README sentence, and without reading it the row would have been recorded Global** |
+
+### 🟢 LATAM — `4` rows, and the **highest publish rate of any placed region** on the smallest population
+
+🔴 **The four system-of-record axes returned almost no LATAM at all.** These rows came from a Spanish/Portuguese **language** axis run specifically because of that absence — `85` results, `14` on topic, `3` new permissive.
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **campus-cli** *(carried)* | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 **`ISC`** *(`748` B)* | **11** | `main` · `fbde8b72ced1` | 🟢 topic `peru`; targets **UPC** *Aula Virtual* | **CARRIED and re-read first-hand this pass**, same `ISC`, now pinned at this head. CLI **and** MCP server over Blackboard Learn. 🔵 **`p243`'s own classifier returned `UNCLASSIFIED` here — its family vocabulary lacks `ISC`, which these shelves have carried for passes** |
+| **CE-IPET424** | [`JohnMartinRB/CE-IPET424`](https://github.com/JohnMartinRB/CE-IPET424) | 🟢 **`MIT`** *(`1 129` B)* | 0 | `main` · `4866673330a8` | 🟢 the LICENSE **holder** is *"Centro de Estudiantes IPET N° 424"* — a technical secondary school in **Córdoba, Argentina** | A student council's own portal: academic information, forms, procedures and tools for one school community. 🔵 **The `1 129` B is a long holder name, not an added clause** |
+| **Sistema de Asistencia** | [`JuanI19T/Sistema_Asistencia`](https://github.com/JuanI19T/Sistema_Asistencia) | 🟢 **`MIT`** *(`1 087` B)* | 2 | `main` · `a2ca7d856120` | 🟡 **WEAKER BASIS, stated:** README names *"EEST (EACP)"* — **Escuela de Educación Secundaria Técnica**, an Argentine school type. Spanish throughout, no city or province named | Attendance across three surfaces at once: WinForms desktop + Node/Express REST API + Expo mobile |
+| **Óga Veve** | [`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) | 🟢 **`Apache-2.0`** *(`11 916` B)* | 0 | `main` · `b97fe95111ef` | 🟢 topics `paraguay`, `guarani`; the row states *"free forever for Paraguayan education"* | Browser flight simulator over Paraguay: own coefficient-based flight model, procedural terrain from **public-domain NASADEM**, `es-PY` **and Guaraní**. 🟢 **A MODEL split-scope declaration** — see `T243-E` |
+
+### 🟢 North America — `2` rows, the smallest placed cohort
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|---|
+| **studentvue-glowup** | [`AkshobyaRaoSWE/studentvue-glowup`](https://github.com/AkshobyaRaoSWE/studentvue-glowup) | 🟢 **`MIT`** *(`1 069` B)* | 0 | `main` · `6a55b18b4cc6` | 🟢 names **Indian Prairie SD 204** *(Illinois)*; topics `edupoint`, `synergy`, `studentvue` | A pupil's own browser extension restyling the district gradebook into a readable dashboard. 🟢 **States "look-only, no data collection"** |
+| **gradiate-api** | [`ruskcoder/gradiate-api`](https://github.com/ruskcoder/gradiate-api) | 🟢 **`Apache-2.0`** *(`11 357` B)* | 3 | `main` · `4c08bfdb79fc` | 🟢 targets **HAC** *(Home Access Center)* and **PowerSchool** — US K-12 SIS products | One API over two US school information systems. 🔵 **Identical payload `sha` `c71d239df917` to `artyom7774/Schedule`** — the same canonical Apache text, two unrelated rows |
+
+🔵 **`p241` had to run a dedicated North America leg to find rows; `p243` did not run one and found two.** The reason US rows under-count is visible in both of these: a US row names a **vendor product** (`Synergy`, `PowerSchool`, `Canvas`, `Blackboard`) rather than a jurisdiction, and a vendor product places the **product**, not the **row**. Five further US-stack rows in this harvest are therefore recorded **Global** with that absence written down.
+
+### 🟢 Global — `21` rows, every one with the reason it is NOT placed — and `9` of them are **one vendor's estate**
+
+🟢 **The WebSearch leg produced rows for the first time since `p238`.** It offered a vendor claim — *"12 higher-education agent configurations, MIT, with Banner/PeopleSoft/Workday connectors"* — which was then **read repo by repo**:
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 `MIT` *(`1 070` B)* | 🟢 **821** | `main` · `ec798f1b12ef` | **The highest-star permissive row of this harvest.** Create and deploy customisable agents: multiple LLM providers, real-time chat, voice, document training, analytics, user management, SSO, embeddable widgets |
+| [`iblai/ontology`](https://github.com/iblai/ontology) | 🟢 `MIT` *(`1 063` B)* | **11** | `main` · `ca861e65c5e4` | 🟢 **THE ROW THESE SHELVES HAD NO EQUIVALENT FOR.** An **on-premise** knowledge layer that makes **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents **over MCP** — *"no data extraction, your data stays in your network"*. The SIS side of `p242`'s MCP-over-LMS category, at institution scale |
+| [`iblai/claws`](https://github.com/iblai/claws) | 🟢 `MIT` *(`1 063` B)* | **15** | `main` · `acbd32b4a938` | Ready-to-run agent configurations by sector, **higher-education and K-12 among them** — the artefact the WebSearch claim actually pointed at |
+| [`iblai/lms`](https://github.com/iblai/lms) | 🟢 `MIT` *(`1 063` B)* | **14** | `main` · `753161f34e6e` | Skills-intelligence platform: course discovery, competency tracking, digital credentials |
+| [`iblai/vibe`](https://github.com/iblai/vibe) | 🟢 `MIT` *(`1 063` B)* | **15** | `main` · `4783869e4454` | Scaffold a production Next.js app on the platform SDK: SSO, chat, profiles, notifications, analytics. 🔵 **Ships Claude Code skills** |
+| [`iblai/claw-setup`](https://github.com/iblai/claw-setup) | 🟢 `MIT` *(`1 063` B)* | **12** | `main` · `db780e052460` | Connect self-hosted agent servers to the platform: server setup, Caddy TLS, API integration |
+| [`iblai/course`](https://github.com/iblai/course) | 🟢 `MIT` *(`1 079` B)* | 1 | `main` · `1b340da9aa01` | Course-authoring workspace: plan programmes, attach mentors, agent drafts outlines and unit content |
+| [`iblai/wallet`](https://github.com/iblai/wallet) | 🟢 `MIT` *(`1 063` B)* | 0 | `main` · `0be99d069568` | Digital-credentials wallet: verifiable skills credentials, **Open Badges**, certifications |
+| [`iblai/crm`](https://github.com/iblai/crm) | 🟢 `MIT` *(`1 089` B)* | 0 | `main` · `2ed2112c1fdb` | CRM for organisations on the platform; one Next.js codebase to web, desktop and mobile through Tauri |
+
+🟡 **Not placed:** the estate claims no jurisdiction in any of the nine rows. 🟡 **The vendor's own blog is the only source for the Banner/PeopleSoft/Workday connector list; `ontology`'s README names PeopleSoft, Snowflake, Canvas and Salesforce and NOT Banner or Workday.** Recorded as read, not as claimed.
+
+The other `12` Global rows:
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why NOT placed | What it is |
+|---|---|---|---|---|---|
+| [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) | 🟢 **`ECL-2.0`** *(`11 120` B)* | **14** | `master` · `2a230316cb85` | Sakai is an international higher-ed consortium | Sakai attendance tool that **writes through to the Sakai Gradebook**. 🟢 **`ECL-2.0` is the Educational Community License — Apache-derived, OSI-approved, and the only one on these shelves written FOR education** |
+| [`timdrichards/canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) | 🟢 `MIT` *(`1 069` B)* | 1 | `main` · `15a20cf9ff0f` | no regional evidence | A **Claude Code skill**, not an app, for the Canvas API: rosters, assignments, quizzes, pages, rubrics, groups, submissions, grades |
+| [`MichaelHilton/nfc-attendance-reader`](https://github.com/MichaelHilton/nfc-attendance-reader) | 🟡 `MIT` **+ a scope note** *(`1 325` B)* | 1 | `main` · `284e9de612d7` | no author-location evidence | Low-cost NFC/RFID attendance reader *(ESP32 + PN532)* with encrypted rosters and **Canvas gradebook export**. 🟡 **The trailing note ends *"swap this section out if so"* — TEMPLATE RESIDUE left inside a published grant, leaving the `case/` files' licence stated as undecided** |
+| [`lengelhardt/bb-offline-interactive-dashboard`](https://github.com/lengelhardt/bb-offline-interactive-dashboard) | 🟢 `MIT` *(`1 073` B)* | 2 | `main` · `ffac7ef04247` | targets Blackboard, a US vendor product, which places the **product** and not the **row** | Downloads submissions over the **official** Blackboard REST API with OAuth 2.0 and builds an offline grading dashboard. 🟢 *"No scraping, no cloud"* |
+| [`jlouisbru/grade-tracking-Canvas-API`](https://github.com/jlouisbru/grade-tracking-Canvas-API) | 🟢 `MIT` *(`1 066` B)* | **6** | `main` · `862488b179fe` | no regional evidence | Google Sheets ↔ Canvas grade fetch **and upload** |
+| [`tpt-solutions/tpt-school`](https://github.com/tpt-solutions/tpt-school) | 🟢 `MIT` *(`1 069` B)* | 3 | `master` · `3b7abf25ff70` | no regional evidence | The most complete permissive school platform of the harvest: enrolment, HR, timetabling, attendance, gradebook, behaviour, parent portal, finance, report cards. Docker **and** an Electron installer |
+| [`SchoolyardSMS/SchoolyardSMS`](https://github.com/SchoolyardSMS/SchoolyardSMS) | 🟢 `MIT` *(`1 080` B)* | 2 | `main` · `48f14026580c` | no regional evidence | Integrated LMS **and** SIS on Next.js and Bun |
+| [`dejoski/curious-innovators-academy`](https://github.com/dejoski/curious-innovators-academy) | 🟢 `MIT` *(`1 069` B)* | 0 | `main` · `3382305228d0` | no regional evidence | 🟢 **Published to be FORKED:** *"Fork it to build a school."* An SIS + scheduling starter rather than a product |
+| [`DLeungDL/EduOps-System`](https://github.com/DLeungDL/EduOps-System) | 🟢 `MIT` *(`1 065` B)* | 0 | `main` · `11e5e22a5af2` | no regional evidence | Education-centre operations: 1:1 pairing, small groups, monthly roster, attendance, **billing** |
+| [`MRL-creator/attendance-workspace`](https://github.com/MRL-creator/attendance-workspace) | 🟢 `MIT` *(`1 073` B)* | 0 | `main` · `6250e2275622` | no regional evidence | Self-hosted attendance on **Cloudflare Workers + D1**. 🟢 *"Students are records, not login accounts"* — the smallest viable data footprint on this axis |
+| [`elliott-json-park/obsidian-class-timetable`](https://github.com/elliott-json-park/obsidian-class-timetable) | 🟢 `MIT` *(`1 069` B)* | 2 | `main` · `08e5cb24e697` | no regional evidence | A weekly timetable **inside Obsidian**: courses, exams, deadlines, one click to each class's notes |
+| [`vugarfamiloglu/gradetrack-pro`](https://github.com/vugarfamiloglu/gradetrack-pro) | 🟢 `Apache-2.0` *(`11 358` B)* | 0 | `main` · `3a348b259dc7` | no regional evidence | Django gradebook: weighted averages, ranks **with movement**, at-risk detection, improvement plans, PDF/Excel report cards |
+
+### 🟢 `T243-E` — the split-scope declaration done **right**, and the shape to copy
+
+[`OksigeniaSL/oga-veve`](https://github.com/OksigeniaSL/oga-veve) puts `559` bytes of Spanish **before** the Apache-2.0 text:
+
+> *"**NOTA DE EXCLUSIÓN.** Esta licencia Apache-2.0 cubre el código de Óga Veve. NO cubre: · `data/aerodromes/` — base de datos derivada de OpenStreetMap, bajo **Open Database License 1.0** · `assets/` y el contenido del juego — © Oksigenia SL, **todos los derechos reservados**. El extractor `scripts/osm-a-aerodromo.mjs` **sí es Apache-2.0**: un programa que lee una base de datos no es una obra derivada de ella."*
+
+🟢 **Three scopes, each named with its path, its grant and its reasoning** — and the last sentence settles the question a reader would actually ask. 🔵 **Compare [`sricodeboon/taraang-boriboon`](https://github.com/sricodeboon/taraang-boriboon)**, which does the same thing in the opposite direction: the **code** is all-rights-reserved while its **data** keeps open grants — the Thai Ministry of Education school dataset from `data.go.th` under **Open Data Common**, geography under `MIT`, fonts under **OFL 1.1**. 🟡 **The row is withheld and the DATASET is not:** a national school registry is reachable from a repo whose code cannot be used.
+
+### 🟡 `ACTION`s registered by `p243`
+
+- 🔴 **`ACTION WC`** — **sweep the shelves for `0`-byte and whitespace-only grant payloads.** `p243` found one and did not sweep. Every ladder records `byte-floor=1B`, so any such row already on these shelves is carried as `FOUND` with an unclassifiable body. `p1058.payload_state()` is the gate; the sweep is the work.
+- 🔴 **`ACTION WD`** — **`P171` is now a property of the method, not of a codebase.** Every family classifier on these shelves must route through `p1058.family_token_evidence()` before reading a family token, and the rule belongs in `compose/code/lib/` rather than in one instrument. `p243` built the gate and did **not** wire the existing classifiers into it.
+- 🟡 **`ACTION WE`** — `ACTION VY` *(p242)* is **still open**: `p1054` must call `p242-grant-delta.resolve_mit_plus()` rather than return `MIT-BODY-PLUS` as terminal, and the shelves must be swept for rows withheld on a disclosure. `p243` added a second resolution path (`grant_qualifier`) and swept neither.
+- 🟡 **`ACTION WF`** — `topic:attendance topic:education` returned `63` and only `25` were read; `topic:timetable topic:school` returned `60` and only `25` were read. **`73` rows on the two most productive axes of the pass are unread.** Also unqueried: `topic:report-card`, `topic:enrollment`, `topic:school-fees`.
+- 🔴 **`ACTION WG`** — **`org:iblai` has `35` repos and `20` were listed; `9` were read.** A vendor estate is a channel these shelves have never worked systematically, and it produced more permissive rows in one query than four topic axes combined.
+- 🟡 **`ACTION WH`** — the **India** regulatory source is a secondary citation of **CBSE circular `Acad-15/2026`** and the **China** source is a pair of **2025** MOE guidelines described as non-binding. Neither is a primary document. A primary-source leg in `cbse.gov.in` and `moe.gov.cn` remains unrun, and `ACTION WB` is discharged only as *"a source exists and here is what is wrong with it"*.
+
 ## Pass 242 — 2026-10-16 — `p241` LEFT EMEA AND LATAM UNMEASURED AND SAID SO. BOTH ARE NOW MEASURED, AND THE AXIS THAT FOUND THEM IS NOT A STATUTE WORD OR A LANGUAGE WORD — IT IS **`topic:gradebook`**
 
 ⏱️ **ELEVENTH pass of `2026-10-16`.** `p232`–`p241` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

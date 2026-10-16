@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A **THIRD** PASS, AND THE PASS'S VERTICAL FINDING IS A **SECOND PLATFORM LAYER THESE SHELVES HAD NEVER CENSUSED**: THE NATIONAL INCUMBENT SCHOOL PORTAL, WHICH IS NOT OPEN SOURCE AND WHICH IS WHAT EMEA ACTUALLY INTEGRATES WITH
+
+🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-websearch`](../evidence/p243-websearch.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv)
+
+### 🔵 The open-source platform layer, carried forward unchanged
+
+🟢 **No new platform row this pass and no correction to the existing census.** The customisable hosts a studio builds AI on top of stand as recorded by `p242`: **Moodle** `GPL-3.0` · **Open edX** `AGPL-3.0` · **Canvas LMS** `AGPL-3.0` · **OpenEduCat** `LGPL-3.0` · **Sakai** `ECL-2.0` · **OpenOLAT** `Apache-2.0` · **Chamilo**/**ILIAS** `GPL-3.0` · **Kolibri** `MIT` · **BigBlueButton** `LGPL-3.0` · **H5P** `MIT` · **RosarioSIS** `GPL-2.0` · **openSIS Classic** `GPL-2.0` *(at `docs/License.txt`)* · **Fedena** `Apache-2.0` **stated, not bodied**.
+
+🔴 **The WebSearch vertical leg re-offered this whole list for a THIRD pass and added nothing.** It named **Gibbon** as though it were new; [`GibbonEdu/core`](https://github.com/GibbonEdu/core) is **carried**, and was re-read first-hand rather than quoted: 🔴 **`GPL-3.0`, `35 121` B, `sha256` `93178a43d6d3`, head `65f86bf061fa`** — 🟡 **at a default branch named `v31.0.00`, a TAG-shaped branch name, which is exactly the case the ref axis exists for: a guess of `main|master` would have returned `404` at every path and been indistinguishable from a grantless repo.** It also named *"Genius School Management"*, which is a proprietary product, and re-offered **OpenEduCat** `LGPL-3.0`, matching the shelf.
+
+🟡 **So the standing claim holds for a sixth pass: no `MIT`-licensed full LMS exists at this KB's reach, and every SIS on the shelf is `GPL-2.0`.** 🟢 **`ECL-2.0` gained a second data point this pass** — [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) *(`14`★, `11 120` B, read first-hand)* — confirming `p242`'s decision to classify the Educational Community License separately from `Apache-2.0`.
+
+### 🔴 `T243-H` — the layer the census was missing: **the national incumbent, which is nobody's open source**
+
+`ACTION WA`'s timetable axis returned `25` rows and `17` of them are EMEA, and not one is a platform. **They are clients against a platform the school already bought.** Those platforms have never been censused here, because none of them is open source — and that is precisely why the census needed them:
+
+| Incumbent | Jurisdiction *(first-hand, from the rows)* | Open source? | Rows on these shelves that integrate with it |
+|---|---|---|---|
+| **WebUntis / Untis** | DACH — Germany, Austria, Switzerland | 🔴 no, Untis GmbH | 🟢 [`ioBroker.webuntis2`](https://github.com/Voodoo2man/ioBroker.webuntis2) `MIT` · 🟡 [`webuntis-home-assistant`](https://github.com/Naumsede/webuntis-home-assistant) `MIT` *(defective payload)* · 🔴 [`Material-Untis`](https://github.com/david-x3d/Material-Untis) **no grant** · 🔴 [`webuntis-org`](https://github.com/nubabe/webuntis-org) **no grant** |
+| **Schulmanager Online** | Germany | 🔴 no | 🟢 [`Schulmanager-homeassistant`](https://github.com/MrIcemanLE/Schulmanager-homeassistant) `MIT`, `12`★ · 🟢 [`schulmanager-calendar-sync`](https://github.com/egore4606/schulmanager-calendar-sync) `MIT` |
+| **IServ** | Germany | 🔴 no | 🟢 [`ranzenpost`](https://github.com/githuber110/ranzenpost) `MIT`, `6`★ — **and it WRITES: sick notes** |
+| **MeineSchule.digital** | Germany | 🔴 no | 🔴 [`meineschule-digital`](https://github.com/rine77/meineschule-digital) — **`0`-byte LICENSE**, `T243-A` |
+| **Edupage** | Slovakia and Central Europe | 🔴 no | 🔴 [`edupage-api`](https://github.com/EdupageAPI/edupage-api) `GPL-3.0`, **`102`★ — the largest client estate on this layer** |
+| **Škola Online** | Czech Republic | 🔴 no | 🔴 [`hass-skola-online`](https://github.com/MartinNuc/hass-skola-online) **no grant** |
+| **Skola24** | Sweden | 🔴 no | 🟢 [`skola-24-haos-integration`](https://github.com/Kretiandpleti/skola-24-haos-integration) `MIT` |
+| **Librus Synergia** | Poland | 🔴 no | 🟢 [`librus-python-api`](https://github.com/krzysztofbury/librus-python-api) `MIT` *(p242; weekly live-check CI)* |
+| **NEIS** | South Korea | 🟡 **a government OPEN API** | 🟢 [`siri-school-timetable`](https://github.com/deploy103/siri-school-timetable) `MIT` — 🟢 **works for EVERY Korean school, because the API is national** |
+| **DepEd** systems | Philippines | 🔴 no | 🔴 [`school-management-system`](https://github.com/ldsalud/school-management-system) **no grant**, priced as a monthly rental |
+| **Edupoint Synergy / ParentVUE** · **PowerSchool** · **HAC** · **Canvas** · **Blackboard** · **D2L Brightspace** | United States and Canada | 🔴 no *(Canvas community edition is `AGPL-3.0`)* | 🟢 [`studentvue-glowup`](https://github.com/AkshobyaRaoSWE/studentvue-glowup) · 🟢 [`gradiate-api`](https://github.com/ruskcoder/gradiate-api) *(HAC **and** PowerSchool)* · 🟢 [`canvas-lms-skill`](https://github.com/timdrichards/canvas-lms-skill) · 🟢 [`bb-offline-interactive-dashboard`](https://github.com/lengelhardt/bb-offline-interactive-dashboard) · 🟢 [`grade-tracking-Canvas-API`](https://github.com/jlouisbru/grade-tracking-Canvas-API) · *(p242: `brightspace-d2l-mcp`, `brightspace-mcp-server`)* |
+
+🟡 **Read as a vertical finding, this changes what "the platform" means for an education engagement:**
+
+> 🔴 **Outside North America, the system of record is usually a NATIONAL product, it is closed, and it is per-country.** There is no pan-European Canvas. A studio cannot "integrate with the LMS" in EMEA — it integrates with **WebUntis, or Schulmanager, or IServ, or Edupage, or Skola24, or Librus**, one adapter at a time, against an API none of these vendors publishes a contract for.
+
+🟢 **Two things follow, and both are already proven by rows on these shelves:**
+
+1. 🟢 **The adapter is the asset, and it must prove itself continuously.** The only row on these shelves that does is [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api), whose **weekly live-check CI badge** runs against the real upstream. 🔴 **Every other adapter in this layer silently rots when the vendor changes a field** — and `17` EMEA rows now depend on that happening to someone else first.
+2. 🟢 **Where the incumbent is a GOVERNMENT API, the economics invert.** Korea's **NEIS** gives one `MIT` row coverage of **every school in the country**. 🔵 Thailand's school registry is published on **`data.go.th` under Open Data Common** and reaches these shelves through a repo whose *code* is all-rights-reserved *(`sricodeboon/taraang-boriboon`)* — 🟡 **the dataset is usable even though the row is not.**
+
+### 🟢 `T243-I` — the licence architecture of a plugin, stated because one row makes it concrete
+
+[`guruduan/SIMG`](https://github.com/guruduan/SIMG) is a **Moodle plugin** *(Indonesia)* whose own grant is 🟢 **`MIT`** *(`1 069` B, read first-hand)*, inside a host that is `GPL-3.0`.
+
+🔵 **That direction is the whole point.** `MIT` is **inbound-compatible** with `GPL-3.0`: the plugin can be taken into a Moodle deployment, and a `GPL-3.0` host cannot be taken into a proprietary deliverable. 🟡 **So the reusable artefact in the Moodle estate is a permissively licensed plugin, not the platform** — and `p240`'s measurement that **`16`/`16`** Moodle plugins it read were `GPL-3.0` makes `SIMG` the exception worth having found.
+
+🟢 **`p242`'s `T242-E` shape — an `MIT` agent surface in front of a copyleft host, speaking to its API and never linking its code — is reaffirmed by every EMEA row in `T243-H`, and extended:** the host does not have to be open source at all for the shape to work. **Against WebUntis there is no code to link.**
+
 ## Pass 242 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A SECOND PASS, AND THE PASS'S VERTICAL FINDING IS THE **SHAPE THAT GETS AROUND IT**: AN `MIT` AGENT SURFACE IN FRONT OF A COPYLEFT HOST, SPEAKING TO ITS API AND NEVER LINKING ITS CODE
 
 🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)

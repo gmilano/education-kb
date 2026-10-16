@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 243 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **WHO IS BUILDING**: NOT VENDORS, NOT SCHOOLS — **TEACHERS, PARENTS AND PUPILS**, ONE INSTITUTION EACH, AGAINST A PLATFORM THEY DO NOT CONTROL
+
+🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) *(41 rows)* · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) *(31 rows)* · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv) · [`p243-channels`](../evidence/p243-channels.2026-10-16-p243.tsv)
+
+### 🟢 Trend 1 — **the unit of software in this sector is ONE school, and that is a trend, not noise**
+
+Read across `102` rows, the modal education repository of this pass is **built by one person for one institution and published anyway**: [`Vallaury/*`](https://github.com/Vallaury/vallaury-desktop) *(I.I.S. Vallauri, Fossano)* · [`stasolejnik/elektron`](https://github.com/stasolejnik/elektron) *(one Bydgoszcz school)* · [`JohnMartinRB/CE-IPET424`](https://github.com/JohnMartinRB/CE-IPET424) *(IPET N° 424, Córdoba)* · [`rhmatzeka/AppAbsensiSDN1Bintaro`](https://github.com/rhmatzeka/AppAbsensiSDN1Bintaro) *(one Indonesian primary school)* · [`AkshobyaRaoSWE/studentvue-glowup`](https://github.com/AkshobyaRaoSWE/studentvue-glowup) *(Indian Prairie SD 204)* · [`AlekseiLopatin/school-website`](https://github.com/AlekseiLopatin/school-website) *("the school where I teach in Thailand")*.
+
+🔵 **The consequence for discovery is structural, and it explains the star distribution:** `35` of this pass's `41` permissive rows have **`3`★ or fewer**. 🟡 **A one-school tool has no reason to accumulate stars, and a KB that filters this sector by popularity will see almost none of its actual supply.** 🟢 **It also explains the licence chaos:** nobody building for one school is thinking about downstream reuse, which is why `13` of `31` refusals are a **missing** licence rather than a restrictive one.
+
+### 🟢 Trend 2 — **the integration target is drifting away from the institution**
+
+`p242` measured the MCP-server-over-an-incumbent-LMS category. `p243` measured where those clients **land**, and in EMEA the answer is not a school system:
+
+| landing surface | rows this pass |
+|---|---|
+| 🔵 **Home Assistant / ioBroker** *(a home-automation hub)* | **`6`** |
+| an MCP client *(Claude and others)* | `4` |
+| the browser, as an extension or a static page | `4` |
+| **Obsidian**, **Emacs org-mode**, **Google Calendar**, a **Siri shortcut** | `4` |
+
+🟡 **Sixteen of this pass's rows deliver school data into a surface the family or the teacher already runs, and none of them asks the school for anything.** 🔵 Read beside `p242`'s finding that the permissive supply *"has stopped trying to be the LMS and started sitting beside it"* — `p243`'s refinement is that it has now stopped sitting beside the LMS too, and moved into the kitchen.
+
+### 🔴 Trend 3 — **the function word has displaced the category word, and the gap is a factor of forty-five**
+
+| what the word is | the word | repositories |
+|---|---|---|
+| 🔴 the **procurement** word | `topic:sis` + `topic:school` | 🔴 **`4`** |
+| 🟢 the **function** words | `gradebook` · `attendance` · `timetable` | 🟢 **`180`** |
+
+🟡 **Generalised: this sector's builders tag the VERB, and its buyers name the NOUN.** Anyone searching the way the market talks about itself finds four repositories. 🔵 `p242` ranked product vocabulary above statute vocabulary; `p243` finds the same effect one level further down, between a product category and the task it performs.
+
+### 🔴 Trend 4 — **the non-OSI licence is now the best-resourced licence on this axis**
+
+| licence | rows | the biggest row under it |
+|---|---|---|
+| 🟢 `MIT` | **35** | [`iblai/os`](https://github.com/iblai/os) `821`★ |
+| 🟢 `Apache-2.0` | 4 | [`artyom7774/Schedule`](https://github.com/artyom7774/Schedule) `9`★ |
+| 🟢 `ECL-2.0` | 1 | [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance) `14`★ |
+| 🟢 `ISC` | 1 | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) `11`★ |
+| 🔴 `GPL-3.0` / `AGPL-3.0` | 8 | [`EdupageAPI/edupage-api`](https://github.com/EdupageAPI/edupage-api) **`102`★** |
+| 🔴 `SSPL-1.0` · `PolyForm-NC` · `GSANCL-1.0` · source-available · `CC-BY-NC-SA` | 6 | [`databayt/hogwarts`](https://github.com/databayt/hogwarts) **`18`★** *(the biggest SIS)* |
+
+🔵 **Set aside the one vendor estate and the pattern is stark: in the system-of-record category, the row with the most stars, the row with the most forks and the row with the most open issues are all three UNUSABLE for a proprietary deliverable.** 🟡 **That is a market reading, not a licence complaint: the projects that attract contributors in this category are deliberately choosing licences that stop a vendor taking them, and they are choosing non-OSI licences to do it** — `SSPL`, `PolyForm`, and in one case a licence the author wrote and named themselves.
+
+### 🔴 Trend 5 — **the licence file is a worse signal than these shelves have been treating it as**, and this pass has the census
+
+Of `72` payload probes this pass:
+
+| the state the declared licence path was actually in | rows |
+|---|---|
+| 🟢 a canonical, unmodified licence body | `44` |
+| 🟡 a canonical body **plus** something *(scope note, exclusion note, upstream attribution, long holder)* | `5` |
+| 🔴 **no licence payload at `15` paths on the real default branch** | **`13`** |
+| 🔴 a bespoke document that grants nothing | `6` |
+| 🔴 a canonical grant sentence with a **restriction qualifying it** | `1` |
+| 🟡 a grant payload that is **defective** *(holderless, truncated mid-clause)* | `1` |
+| 🔴 **a `0`-byte file at the path the README names** | **`1`** |
+
+🔴 **One row in four has something wrong with its grant that a metadata field cannot express.** 🔵 **GitHub's own `license.spdx_id` returns `NOASSERTION` for the `0`-byte case — technically correct, and it gives the same answer it would for a bespoke proprietary licence, a dual grant and a typo'd filename.** 🟡 **The trend is not that licensing is getting worse; it is that this sector's supply is built by people for whom the licence is the last file they touch, so the only reliable channel is reading the payload.**
+
+### 🟢 Trend 6 — **regulation is converging on a SHAPE, not on a rulebook**
+
+Four jurisdictions, four unrelated instruments, one requirement:
+
+- 🔴 **China** *(MOE 2025 guidance)* — teachers should not use AI-generated content to evaluate pupils; no personal data into AI tools.
+- 🔴 **India** *(CBSE position)* — board scripts are marked by **human evaluators who make the final call**.
+- 🔴 **Idaho `SB 1227`** *(carried, `p242`)* — prohibits AI **replacing** teachers.
+- 🔴 **Colorado `SB 26-189`** *(`T243-L`)* — the replacement category is **"automated decision-making technology"**, and a gradebook that flags at-risk pupils sits inside it.
+
+🟢 **None of these bans the technology. All four place the same fence in the same place: the human keeps the judgement.** 🔵 **The technical expression of that fence already exists, permissively, and it came from Taiwan this pass** — [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) reads Canvas freely and requires **two independent human confirmations** on every write. 🟡 **A trend worth stating as a design rule: in education, make the write path harder than the read path, and the regulatory question answers itself in every region at once.**
+
+### 🔴 Trend 7 — **the data is opening faster than the code**
+
+🔵 Three measurements from this pass, in the same direction:
+
+- 🟢 **South Korea's NEIS** is a national Ministry of Education **open API**, and one `MIT` repository uses it to cover **every school in the country**.
+- 🟡 **Thailand's Ministry of Education school registry** is published on **`data.go.th` under Open Data Common** — and it reaches these shelves inside a repository whose **code is all rights reserved**. 🔴 **The dataset is usable and the row is not.**
+- 🟢 **`OksigeniaSL/oga-veve`** builds Paraguayan terrain from **public-domain NASADEM** and declares its OpenStreetMap-derived aerodrome database **`ODbL 1.0`**, separately from its `Apache-2.0` code.
+
+🟡 **So a sector whose software is `GPL`-locked and licence-chaotic has a data layer that is increasingly government-published and openly licensed.** 🔵 **For a studio that is the cheaper entry point: the registry, the curriculum, the calendar and the meal plan are often already open, while the application that reads them is not.**
+
 ## Pass 242 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **ARM'S LENGTH**: THE PERMISSIVE SUPPLY HAS STOPPED TRYING TO BE THE LMS AND STARTED SITTING BESIDE IT, OVER AN API — AND THAT IS ALSO HOW IT ESCAPES THE COPYLEFT ESTATE
 
 🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) · [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv)
