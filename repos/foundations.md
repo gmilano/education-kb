@@ -1,8 +1,31 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE `Ed-Fi` CLAUSE CLOSES WITH A NINE-REPOSITORY `Apache-2.0` ESTATE, AND THE PERMISSIVE LAYER OF THIS INDUSTRY IS CONFIRMED TO BE THE **STANDARDS LAYER**, NOT THE PLATFORM LAYER
+
+🔵 **`4` rows added to the foundation tier, `3` of them the `Ed-Fi` core this KB had declared missing, all `Apache-2.0`, all grants read first-hand. `9` of `9` `Ed-Fi` addresses resolve on `git ls-remote`.**
+
+🔵 **Evidence:** [`p232-edfi`](../evidence/p232-edfi.2026-10-16-p232.tsv) · [`p232-new-rows`](../evidence/p232-new-rows.2026-10-16-p232.tsv) · [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv)
+
+### 🟢 `F232-1` — the `Ed-Fi` estate, and the admission that this shelf already held most of it
+
+`ACTION TM` fired on limb `1` at `9`. 🔴 **But the honest half of this finding is internal: `6` of the `9` were ALREADY CARRIED somewhere on these shelves while `agents/top.md` was still listing Ed-Fi as an open conformance clause.** 🔵 **The gap was in this KB's reading of itself, not in the field.** The three genuinely new rows are the ones that make the estate *buildable* rather than merely *present*:
+
+| row | repo | licence | why it is foundational | what it does NOT do |
+|---|---|---|---|---|
+| 🆕 **ODS-Admin-API** | [`Ed-Fi-Alliance-OSS/ODS-Admin-API`](https://github.com/Ed-Fi-Alliance-OSS/ODS-Admin-API) | 🟢 **Apache-2.0** *(`10 172` B, APPENDIX stripped)* | 🟢 **The tenant and credential plane for an ODS/API `6.x`–`7.x` deployment.** Without it, every vendor onboarding and key rotation on an Ed-Fi estate is a manual database operation — this is the difference between a running ODS and an operable one | 🔴 Does not cover the `v8+` platform, which moves this concern to the Configuration Management Service. Check the target version before scoping |
+| 🆕 **Ed-Fi-API-Standards** | [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards) | 🟢 **Apache-2.0** *(`11 356` B, full text)* | 🟢 **The written design standard an API must meet to be Ed-Fi-compatible.** This is the artefact that makes *"Ed-Fi conformant"* an auditable claim in a SOW rather than a vendor adjective | 🔴 It is a specification, not a test suite: it does not itself certify an implementation |
+| 🆕 **DPS-Ed-Fi-ODS** | [`edanalytics/DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) | 🟢 **Apache-2.0** *(`10 172` B)* | 🟢 **Evidence the grant is actually exercised by a third party.** A production fork of the ODS core by an organisation that is not the Alliance — the strongest available signal that the Apache grant on this estate is usable in practice, not just in text | 🔴 A fork tracks its own needs: do not assume parity with upstream `main` |
+| 🆕 **lti-tool** | [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | 🟢 **MIT** *(`1 076` B, `4462cc48bc9c`)* | 🟢 **The first LTI `1.3` foundation here that does not dictate the client's datastore.** One core plus six interchangeable store adapters *(`d1`, `dynamodb`, `mysql`, `postgresql`, `memory`)* and a `hono` binding, modified `2026-10-09` | 🔴 Its `ags`/identity surfaces have NOT been read in source. 🔵 Per `T232-C`, treat every launch library's identity claims as unread until a pass reads them |
+
+### 🟢 `F232-2` — the synthesis this shelf can now state as a measurement
+
+🔵 **The vertical query has returned the same answer for NINE consecutive passes: there is no `MIT` or `Apache` LMS and no `MIT` or `Apache` SIS.** OpenEduCat is `LGPL-3.0`, openSIS is `GPL`, Moodle is `GPL-3.0`, Open edX and Canvas are `AGPL-3.0`. 🟢 **This pass supplies the constructive half of that finding: the permissive layer of this industry is the STANDARDS AND INTEGRATION layer.** Ed-Fi's entire nine-repository estate is `Apache-2.0`; the LTI, QTI, OneRoster and xAPI tiers are `MIT`/`Apache`/`BSD` almost throughout.
+
+🟡 **The consequence for a proposal is directional, not cosmetic: Globant's buildable surface in education is the DATA AND STANDARDS SPINE between systems, not a fork of the system of record.** 🔴 **A proposal that promises a customised LMS core inherits `GPL`/`AGPL` obligations; one that promises conformant rostering, launch, assessment and analytics interchange does not.** 🔵 **That is the single most reusable sentence on these shelves and it is now carried with nine passes of evidence behind it.**
 
 ## Pass 231 — 2026-10-15 — THE ASSESSMENT PATH GETS ITS FIRST **JUDGE**, AND THE FOUNDATION TIER'S GRAVEST ROW IS NOW A WITHDRAWAL
 
@@ -18,7 +41,7 @@ updated: 2026-10-15
 |---|---|---|---|---|
 | 🆕 **qti3-validator** | [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) | 🟢 **MIT** *(`1 076` B, `1f152eb39f5c`)* | 🟢 **The only row on these shelves that JUDGES QTI 3.0/3.0.1 items, tests and packages** against 1EdTech's own XSDs and the `7 400`+ Schematron rules published with them. Docker/`ghcr` image, `~21` MB, line/column/element-path per defect. **Its README claims it never contacts the internet and never stores or logs submitted documents** — so it drops into a CI job and into a regulated perimeter unchanged | 🔴 **Not 1EdTech-certified** *(certification requires paid membership)*; it validates against the published rules, which is a different claim. 🔴 Air-gap claim not verified in source here |
 | 🆕 **qti-scoring-system** | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | 🟢 **MIT** *(`1 066` B, `2d383b4e9fd6`)* | 🟢 **The human-decision surface the regulators name.** Next.js 15 over QTI 3 assessment-test + Results Reporting XML: per-candidate navigation, per-item rubric criteria, comments written back as Results Reporting `COMMENT` outcomes, HTML/CSV/Results-XML export, workspace export/import. 🔵 **Comments persisted INTO the standard's own outcome vocabulary is what makes the oversight record portable instead of a screenshot** | 🔴 Reads from a selected output FOLDER, not from an LMS — the ingestion path is yours to build |
-| 🆕 **lti-go** | [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** *(`1 067` B, `31234d5cd6af`)* | 🟢 **A verified-launch foundation in a language this shelf had none in.** OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment management, `ags`, `nrps`, `deeplink`, `dynreg`, behind a pluggable `lti.Store` *(a `memstore` ships; bring your own for production)* | 🔴 **Not read in source.** Every capability is the author's claim and the `ags` WRITE surface is unaudited — and a grade write is the one call on this shelf that changes a learner's record |
+| 🆕 **lti-go** | [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** *(`1 067` B, `31234d5cd6af`)* | 🟢 **A verified-launch foundation in a language this shelf had none in.** OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment management, `ags`, `nrps`, `deeplink`, `dynreg`, behind a pluggable `lti.Store` *(a `memstore` ships; bring your own for production)* | 🔴 **Not read in source.** Every capability is the author's claim and the `ags` WRITE surface is unaudited — and a grade write is the one call on this shelf that changes a learner's record 🔴 **CORRECTED p232 (`T232-C`, read in SOURCE): `sub` is parsed and exposed but NEVER VALIDATED (`launch.go:170-206`) — a launch with no subject claim is ACCEPTED — and the `ags` write performs scope ACQUISITION with NO scope check (`ags/client.go:55-72`).** |
 
 ### 🔴 `F231-2` — the foundation tier's gravest row this pass is a SUBTRACTION
 

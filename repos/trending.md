@@ -1,8 +1,39 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## 2026-10-16 — Pass 232 — THE REGISTRY CHANNEL OUT-PRODUCES EVERY GITHUB-SHAPED QUERY THIS KB HAS RUN, AND `Ed-Fi` TURNS OUT TO HAVE BEEN HALF-CARRIED ALL ALONG
+
+🔵 **`13` repository rows added across this shelf and the foundation tier *(`9` discovery rows + `3` `Ed-Fi` + `1` platform estate)*, `4` refused as ungranted, `6` registry-sourced addresses found DEAD, `1` channel found to answer `200` with no data.**
+
+🔵 **Evidence:** [`p232-new-rows`](../evidence/p232-new-rows.2026-10-16-p232.tsv) · [`p232-edfi`](../evidence/p232-edfi.2026-10-16-p232.tsv) · [`p232-dead-registry-addresses`](../evidence/p232-dead-registry-addresses.2026-10-16-p232.tsv) · [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv)
+
+### 🟢 `R232-1` — new this week, every row with a last-seen date
+
+| repo | licence, read first-hand | category | last seen alive | one-line read |
+|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/ODS-Admin-API`](https://github.com/Ed-Fi-Alliance-OSS/ODS-Admin-API) | 🟢 **Apache-2.0** | SIS / data backbone | `2026-10-16`, `main` @ `9c323758a7a0` | tenant + credential plane for an ODS/API `6.x`–`7.x` estate |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards) | 🟢 **Apache-2.0** | SIS / standard | `2026-10-16`, `main` @ `608546c95c92` | the design standard that makes "Ed-Fi conformant" auditable in a SOW |
+| [`edanalytics/DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) | 🟢 **Apache-2.0** | SIS / production fork | `2026-10-16`, `main` @ `6fb4e094c026` | a third party's production fork — evidence the Apache grant is exercised, not just published |
+| [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | 🟢 **MIT** | standards-native | `2026-10-16`, `main` @ `39b4986061f9` | LTI 1.3 core + `6` store adapters + `hono` binding |
+| [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | 🟢 **MIT** | standards-native | `2026-10-16`, `main` @ `0541ad3a1fa2` | Canvas + LTI scaffold, `271` versions, Harvard University in the grant |
+| [`msaaqcom/nelc-xapi-php-sdk`](https://github.com/msaaqcom/nelc-xapi-php-sdk) | 🟢 **MIT** | xAPI | `2026-10-16`, `master` @ `99386b8ee0a5` | Saudi `NELC` national xAPI profile SDK + Laravel companion |
+| [`lrnfast/lrnr-lti`](https://github.com/lrnfast/lrnr-lti) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `master` @ `d8e118470110` | `5.x` Node LTI provider with a Sequelize store package |
+| [`bnsoftware/lti-1p3-tool`](https://github.com/bnsoftware/lti-1p3-tool) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `master` @ `7e9b1bafa3cf` | permissive PHP LTI 1.3 tool |
+| [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native | `2026-10-16`, `main` @ `a442a55a9ab9` | Go LTI launch validation, narrow by design |
+| [`grokify/go-qti`](https://github.com/grokify/go-qti) | 🟢 **MIT** | assessment | `2026-10-16`, `main` @ `26943408ab01` | QTI types in Go |
+| [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 **BSD-3-Clause** | assessment | `2026-10-16`, `master` @ `80dac052bec7` | Markdown → QTI authoring, six years of releases |
+| [`BLPS/oneroster-php-api`](https://github.com/BLPS/oneroster-php-api) | 🔴 **GPL-3.0** | rostering | `2026-10-16`, `main` @ `ef87887bf0b1` | 🔴 copyleft-flagged, comparison only |
+| 🔴 `rollercoaster-dev/monorepo` | 🔴 n/a | Open Badges | 🔴 **`404`** — two spellings tried | three live `MIT` npm packages name it; it does not exist |
+| 🔴 `openlearnbadges/openbadges-bakery` + `openlearnbadges/openbadges-validator` | 🔴 n/a | Open Badges | 🔴 **`404`** | the `MPL-2.0` successors to Mozilla's withdrawn tooling — published, sourceless |
+| 🔴 `Tyru5/1EdTech-LTI-1-3` | 🔴 n/a | standards-native | 🔴 **`404`** | `npm:lti-1p3-ags` `2.0.1` *(`MIT`)* names it |
+| 🔴 `stmath/go-qti` | 🔴 n/a | assessment | 🔴 **`404`** | listed beside the live `grokify/go-qti`; only the latter was published |
+
+### 🟡 `R232-2` — the channel census, so a later pass can widen it rather than repeat it
+
+🟢 **Readable and productive:** `npm` *(`/-/v1/search`)*, Packagist *(`/search.json`)*, `pkg.go.dev` *(`/search`)*, PyPI *(`/pypi/{name}/json` only)*. 🔴 **Unreadable: PyPI's SEARCH page is a bot challenge that answers `200` with `3 038` bytes and no results, and Maven Central's search is `000` on both `search.maven.org/solrsearch` and `central.sonatype.com/api`.** 🔵 **`repo1.maven.org` serves a direct coordinate *(`junit/junit/maven-metadata.xml` → `200`)* but refuses directory listing *(`404`)*, so the JVM education estate is `UNMEASURED` here and must not be reported as absent.**
 
 ## 2026-10-15 — Pass 231 — THE TRENDING SHELF'S OWN `1.4%` CHURN GETS AN INDEPENDENT SECOND READ, AND THE REGISTRY CHANNEL PRODUCES A ROW GITHUB CANNOT SHOW
 
@@ -16,7 +47,7 @@ updated: 2026-10-15
 |---|---|---|---|
 | [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) | 🟢 **MIT** | assessment conformance | QTI 3 judge: 1EdTech XSDs + `7 400`+ Schematron rules in a `~21` MB offline image |
 | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | 🟢 **MIT** | assessment scoring | per-candidate human rubric pass over Results Reporting, comments as `COMMENT` outcomes |
-| [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** | standards-native | LTI 1.3 tool provider in Go with `ags` + `nrps` + `deeplink` + `dynreg` |
+| [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) | 🟢 **MIT** | standards-native | LTI 1.3 tool provider in Go with `ags` + `nrps` + `deeplink` + `dynreg` 🔴 **CORRECTED p232 (`T232-C`, read in SOURCE): `sub` is parsed and exposed but NEVER VALIDATED (`launch.go:170-206`) — a launch with no subject claim is ACCEPTED — and the `ags` write performs scope ACQUISITION with NO scope check (`ags/client.go:55-72`).** |
 | 🔴 `Jatin-Mehra119/Essay-Scoring-Modeling` | 🔴 **NONE** *(`12` names probed, manifests included)* | assessment scoring | REFUSED — exists, grants nothing |
 | 🔴 `Varun-Krishnan1/AutomatedEssayScoring` | 🔴 **NONE** *(`12` names probed, manifests included)* | assessment scoring | REFUSED — exists, grants nothing |
 

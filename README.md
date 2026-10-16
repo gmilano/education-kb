@@ -1,8 +1,46 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE **PACKAGE REGISTRY** CHANNEL OPENS: `9` GRANTED ROWS THE REPOSITORY HARVESTER NEVER SAW, AND `6` PACKAGES THAT ARE LIVE, GRANTED AND SOURCELESS
+
+⏱️ **First pass of `2026-10-16`.** Probes ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC; the pass crosses the date boundary and is dated by its publication, because these shelves pin dates to disambiguate same-day passes.
+
+🔵 **`9` new rows *(`8` permissive, `1` copyleft-flagged)*, `4` refused as ungranted, `0` padded. All `4` registered actions discharged: `TJ` limb `1` at `9` of `3`, `TM` limb `1` at `9` of `1`, `TK` limb `2` on BOTH clauses, `TL` limb `2` at `1` of `7`. `146` registry artefacts classified across `4` registries, `35` slugs cross-checked against these shelves, `2` rows PLACED on first-hand stated evidence — the first placements in this KB's history. `2` defects found in this pass's own instruments before publishing.**
+
+### 🟢 The supply finding: this industry ships to registries, not to trending lists
+
+`ACTION TJ` harvested `npm`, Packagist, `pkg.go.dev` and PyPI for implementations of LTI, QTI, OneRoster, Caliper, xAPI and Open Badges. **It is the richest single harvest these shelves have had.** Nine granted repositories with no row here — `lti-tool/lti-tool`, `harvard-edtech/caccl`, `msaaqcom/nelc-xapi-php-sdk`, `lrnfast/lrnr-lti`, `bnsoftware/lti-1p3-tool`, `stevenweathers/peregrine-lti`, `grokify/go-qti`, `gpoore/text2qti` and the copyleft-flagged `BLPS/oneroster-php-api`.
+
+🔵 **Why nine passes of GitHub-shaped queries missed them: the registry carries the release history and the last publish date, and a trending list carries neither.** `npm:caccl` has `271` versions across eight years. That is a maintenance signal no star count gives.
+
+### 🔴 The procurement finding: availability and adoptability have come apart
+
+🔴 **`6` of `15` registry-sourced addresses are `404` on `git ls-remote`** — including the `MPL-2.0` Open Badges bakery and validator, which are the published successors to the Mozilla tooling p231 found withdrawn. **Live, granted, actively released, and no retrievable source.** 🔴 **And p231's ungranted one-off is a family: `@timeback/caliper`, `@timeback/oneroster` and `@timeback/qti`, `53`/`58`/`59` versions, released through `2026-09-25`, all with no licence, no repository and no homepage.**
+
+🟡 **A registry hit is a LEAD, not a row. None of the six was published** — see [`compose/patterns.md`](compose/patterns.md) `P232-R4`, which sells the provenance gate this finding justifies.
+
+### 🔴 The source read overturns a published cell for the THIRD consecutive time
+
+`ACTION TK` read [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) in source. 🔴 **`sub` is parsed and exposed but NEVER validated *(`launch.go:170-206`)*, so a launch with no subject claim is accepted and the caller receives an empty identity; the `ags` write performs correct scope ACQUISITION but no scope CHECK *(`ags/client.go:55-72`)*.** 🔵 **p135 found the same shape one layer up in both MCP bridges.** 🟢 **`P231-R2` is superseded by `P232-R1`, which moves the identity guard into the adapter — one file, and the recipe still ships.** 🔴 **p136's record: three for three.**
+
+### 🟢 `Ed-Fi` closes, and the gap was in this KB's reading of itself
+
+`ACTION TM` fired at `9` of a threshold of `1`: a live, uniformly `Apache-2.0`, nine-repository estate. 🔴 **`6` of the `9` were already carried here while `agents/top.md` still listed Ed-Fi as an open conformance clause.** 🟢 **The constructive synthesis, now with nine passes behind it: there is no `MIT`/`Apache` LMS or SIS in this industry, and the permissive layer is the STANDARDS AND INTEGRATION layer — which is exactly where integration revenue is.**
+
+### 🟢 Placement, solved for a minority of rows and honest about the rest
+
+`ACTION TL` discharged on limb `2` — p231's seven rows stay `unplaced` — **but the instrument it asked for exists: the grant's copyright HOLDER when it names an institution, and the artefact NAME when it names a national system.** `harvard-edtech/caccl` → **North America** *("Copyright (c) 2023 Harvard University")*; `msaaqcom/nelc-xapi-php-sdk` → **EMEA** *(the Saudi `NELC` profile)*. 🔴 **It is structurally blind to `Apache`/`GPL`, which name no holder.** 🔵 **A surname is still not evidence.**
+
+### 🔴 Declared gaps, stated because silence looks like coverage
+
+- 🔴 **Region-shaped queries returned `0` repositories for North America, EMEA, APAC and LATAM — a FIFTH consecutive reproduction.** They return regulation and vendor prose, which is intel, not supply.
+- 🔴 **LATAM: `0` open-source education repositories, now surviving a REGISTRY sweep as well as a sixth GitHub probe.** The gap is no longer attributable to the channel.
+- 🔴 **APAC: `0` repositories and `0` APAC-specific adoption rates — the thinnest region on these shelves.**
+- 🔴 **Maven Central is UNREADABLE from this session *(both search endpoints `000`)*, so the JVM education estate is `UNMEASURED`, not absent — and the three biggest copyleft LMS estates in this industry are JVM.**
+- 🟡 **PyPI's search endpoint answers `200` with a bot-challenge page. A `200` is not a read**, and the PyPI sweep is therefore a declared `51`-name vocabulary probe whose recall is bounded and stated.
 
 ## Pass 230 — 2026-10-15 — THE FIRST EXISTENCE SWEEP: `26` OF THESE SHELVES' ADDRESSES ARE DEAD, AND FIVE OF THEM ARE THE REFERENCE IMPLEMENTATIONS OF TWO `1EdTech` STANDARDS THIS KB RECOMMENDS BUILDING ON
 

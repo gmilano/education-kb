@@ -1,0 +1,24 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# ACTION TM: probe the Ed-Fi clause with a CAPABILITY-shaped query, the way QTI was
+# closed in p231. The query that worked names the STANDARD and the ARTEFACT, never the industry:
+#   "Ed-Fi ODS API implementation open source github Apache license"
+# p231 recorded that the token "Ed-Fi" returned NOTHING inside a query that found lti-go. That
+# was a QUERY-SHAPE artefact, not absence: the supply is large, live and uniformly Apache-2.0.
+#
+# Existence on `git ls-remote --symref`; grant body over raw. 9 of 9 resolve.
+slug	exists	default_branch	head_sha12	licence_file	grant_bytes	grant_sha256_12	licence	already_on_these_shelves	role
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	200	main	e453cd2cad8a	LICENSE.txt	10172	59899c6091b5	Apache-2.0	yes (4 files)	the ODS/API core, v7.x
+Ed-Fi-Alliance-OSS/Data-Management-Service	200	main	a0afbf4d71a9	LICENSE	11356	c71d239df917	Apache-2.0	yes (3 files)	the v8+ successor to the ODS/API
+Ed-Fi-Alliance-OSS/ODS-Admin-API	200	main	9c323758a7a0	LICENSE	10172	-	Apache-2.0	NO — NEW	tenant/credential administration for ODS/API 6.x-7.x
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards	200	main	608546c95c92	LICENSE	11356	-	Apache-2.0	NO — NEW	the API design standard an Ed-Fi-compatible API must meet
+edanalytics/DPS-Ed-Fi-ODS	200	main	6fb4e094c026	LICENSE.txt	10172	-	Apache-2.0	NO — NEW	a third-party production fork, evidence the licence is actually exercised
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker	200	main	29c571a6bf6f	LICENSE	11356	-	Apache-2.0	yes (1 file)	container deployment
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	200	main	37ff595c171b	LICENSE.txt	10172	-	Apache-2.0	yes (1 file)	end-user applications and extensions
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	200	v6.2.0	3d24df6675c5	LICENSE	10172	-	Apache-2.0	yes (8 files)	the data standard itself — NOTE: default branch is a VERSION branch, not `main`
+Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher	200	main	3d4de93112dc	LICENSE	11356	-	Apache-2.0	yes (1 file)	moves data between ODS API instances of the same version
+#
+# LICENCE-IDENTITY NUANCE for this KB's sha apparatus: the SAME licence ships at TWO byte
+# lengths inside one org. 10 172 B = Apache-2.0 with the APPENDIX ("How to apply") STRIPPED;
+# 11 356/11 357 B = the full text. Two shas, one licence. A sha-keyed comparator that has not
+# been told this will report a licence CHANGE where there is none.

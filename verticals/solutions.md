@@ -1,8 +1,19 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE `Ed-Fi` DATA STANDARD ENTERS THIS SHELF AS THE ONLY **`Apache-2.0` PLATFORM-SCALE** ESTATE IN EDUCATION, AND THE `TAO` ASSESSMENT ESTATE ENTERS FLAGGED
+
+🔵 **`2` platform entries added, both verified live this pass. The `no-permissive-platform` finding is CONFIRMED for a ninth consecutive pass — and now has an exception that is not an LMS.**
+
+🔵 **Evidence:** [`p232-edfi`](../evidence/p232-edfi.2026-10-16-p232.tsv) · [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv)
+
+| platform | licence | what it is | the consequence for a deliverable |
+|---|---|---|---|
+| 🆕 **Ed-Fi ODS / API** *(+ Data Management Service for `v8+`)* | 🟢 **`Apache-2.0`** *(all `9` repositories, grants read first-hand)* | **The K-12 operational data store and REST API standard** used as a district-and-state data backbone, with a published data standard, an API design standard, container deployment, a cross-instance publisher, an admin/credential plane and a third-party production fork | 🟢 **The only platform-scale estate in this industry a client can fork, extend and ship commercially without a copyleft obligation.** 🔵 Scope to the target version first: `v7.x` is the ODS/API line *(admin via `ODS-Admin-API`)*, `v8+` is the Data Management Service line *(admin moves to the Configuration Management Service)*. 🔴 `Ed-Fi-Data-Standard`'s default branch is `v6.2.0`, not `main` — a deployment script that assumes `main` will check out nothing |
+| 🆕 **TAO** *(the `oat-sa` estate)* | 🔴 **`GPL-2.0-only` / `LGPL-2.1`** across ~`20` Packagist packages, released through `2026-10-15` | **A full computer-based assessment platform** with its own QTI SDK *(`qtism`)*, item and test runners, QTI printing, LTI delivery providers and a OneRoster importer — the most complete open assessment estate in existence | 🔴 **Flagged, not recommended for a customised client delivery: `GPL-2.0-only` on the libraries and `LGPL-2.1` on the Symfony bundle.** 🟡 **Tabled because it is the reference for what a complete assessment platform contains** — read it to scope, then build the conformant pieces on the `MIT`/`BSD` rows this KB carries *(`qti3-validator`, `qti-scoring-system`, `go-qti`, `text2qti`)* |
 
 ## Pass 231 — 2026-10-15 — THE ASSESSMENT VERTICAL GETS A **GATE** AND A **HUMAN SURFACE**, AND THE *"NO MIT LMS"* FINDING REPRODUCES A FOURTH TIME
 

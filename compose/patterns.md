@@ -1,8 +1,67 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE ASSESSMENT CHAIN IS NOW PERMISSIVE END TO END, THE `Ed-Fi` SPINE IS `Apache-2.0` END TO END, AND `P231-R2`'s IDENTITY ASSUMPTION IS CORRECTED
+
+🔵 **`4` recipes, every component verified live in this pass's window *(`git ls-remote` + first-hand grant)*, plus the standing list of names that must not enter a SOW.** 🔴 **`P231-R2` is SUPERSEDED by `P232-R1` on the strength of a source read, not a re-reading of a README.**
+
+🔵 **Evidence:** [`p232-new-rows`](../evidence/p232-new-rows.2026-10-16-p232.tsv) · [`p232-tk-source-read`](../evidence/p232-tk-source-read.2026-10-16-p232.tsv) · [`p232-edfi`](../evidence/p232-edfi.2026-10-16-p232.tsv) · [`p232-dead-registry-addresses`](../evidence/p232-dead-registry-addresses.2026-10-16-p232.tsv)
+
+### 🔴 `P232-R1` — the LTI→MCP adapter, corrected: **the adapter owns the identity guard** *(3–4 weeks, was 2–3)*
+
+🔴 **This supersedes `P231-R2`, which assumed the library validated the launch subject. It does not.** `ACTION TK` read the source: `sub` is parsed into `Claims.Subject` *(`claims.go:84`, `:183`)* and **never checked** *(`launch.go:170-206`)*, so a launch with no subject claim is accepted and the caller receives an empty string. 🔵 **p135 found the identical failure one layer up, in both existing MCP bridges. Unguarded, this recipe would have carried that defect into a client's grade book.**
+
+1. **Verified launch** — [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) *(`MIT`, `main` @ `39b4986…` grant, HEAD read at `af8e89fbe153`)*: OIDC login, `id_token`/`state`/`nonce`, JWKS, platform/deployment registry, `ltik` resumption. Register platforms via `tool.Platforms().Register(...)`.
+2. 🔴 **THE GUARD THIS RECIPE EXISTS TO ADD — one file, non-negotiable.** Wrap `VerifyLaunch` and **reject the launch when `Claims.Subject == ""`**, before any MCP session is minted. Also reject when `Claims.DeploymentID` is absent *(the library does check that one)* and bind the minted session to `Subject` + `Issuer` + `DeploymentID` as a composite, never to `Subject` alone.
+3. 🟡 **Second guard, from the same read:** the `ags` client requests the correct scope *(`ags/types.go:10-13`)* but never compares the GRANTED scope with the requested one *(`ags/client.go:55-72`)*. **Before a grade write, assert the token's granted scope contains `https://purl.imsglobal.org/spec/lti-ags/scope/score`**, or treat every `>=400` from the platform as a possible silent scope denial and surface it as such.
+4. **Score write** — `ags.SubmitScore` *(`ags/scores.go:31`)*, with the timestamp left to the library.
+5. **Cross-check implementation** — [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) *(`Apache-2.0`)*, scoped to launch validation only. 🔵 **Diff its `sub` handling against `lti-go`'s before trusting either; `ACTION TO` is registered to do exactly that in p233.**
+
+🟢 **Why the recipe still ships:** the omission is at a point the adapter must own anyway. **Three to four weeks, and the extra week is the guard, its tests and the negative cases** — a launch with no `sub`, a launch with an empty `sub`, and a token granted a narrower scope than requested.
+
+### 🟢 `P232-R2` — the `Ed-Fi` conformant data spine, `Apache-2.0` end to end *(8–10 weeks, North America)*
+
+🟢 **The only platform-scale estate in education a client can fork, extend and ship commercially with no copyleft obligation. All `9` repositories verified live this pass.**
+
+1. **Pick the line FIRST, because the admin plane differs** — `v7.x` is [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) *(`Apache-2.0`)* with 🆕 [`ODS-Admin-API`](https://github.com/Ed-Fi-Alliance-OSS/ODS-Admin-API) for tenants and credentials; `v8+` is [`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service), where that concern moves to the Configuration Management Service. **Scoping the wrong line costs the admin plane.**
+2. **Stand it up** — [`Ed-Fi-ODS-Docker`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Docker) for the deployment, [`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) for extensions.
+3. **Pin the data standard** — [`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard). 🔴 **Its default branch is `v6.2.0`, NOT `main` — a clone script that assumes `main` checks out nothing.**
+4. **Make conformance auditable** — 🆕 [`Ed-Fi-API-Standards`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Standards) is the written design standard. **Quote it in the SOW so *"Ed-Fi conformant"* is a testable acceptance criterion rather than an adjective.**
+5. **Move data between instances** — [`Ed-Fi-API-Publisher`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-API-Publisher) *(same-version instances only)*.
+6. **Bridge to the LMS tier** — OneRoster via the rows this KB carries, and LTI `1.3` via `P232-R1`'s spine. 🔵 **Precedent to cite: [`edanalytics/DPS-Ed-Fi-ODS`](https://github.com/edanalytics/DPS-Ed-Fi-ODS) is a third party's production fork, which is the strongest evidence available that this grant is exercised and not merely published.**
+
+### 🟢 `P232-R3` — the assessment chain, now `MIT`/`BSD` from AUTHORING to SCORE *(6–8 weeks)*
+
+🔵 **p231 closed the judging end. This pass closes the authoring end, so the chain no longer has a proprietary or copyleft step anywhere in it.**
+
+1. 🆕 **Author** — [`gpoore/text2qti`](https://github.com/gpoore/text2qti) *(`BSD-3-Clause`, released `2026-08-21`)*: Markdown in, QTI out. **This is the cheapest on-ramp in this KB for an item bank that currently lives in Word documents**, and it is the step clients always assume must be manual.
+2. **Judge** — [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) *(`MIT`)*: 1EdTech XSDs plus Schematron rules, offline. **Gate the authored package here before it reaches any player.**
+3. **Deliver** — the QTI player rows this KB carries, with 🆕 [`grokify/go-qti`](https://github.com/grokify/go-qti) *(`MIT`)* if the service tier is Go.
+4. **Score with a named human** — [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) *(`MIT`)*: the human-oversight surface over Results Reporting.
+5. **Launch and return the grade** — `P232-R1`, guard included.
+
+🟡 **The compliance argument this chain makes on its own: Annex III point `3` *(EU, `2027-12-02`)* and Korea's *"high-impact AI"* both turn on whether a human meaningfully reviews an automated judgement.** 🟢 **Step `4` IS that review, and steps `1`–`2` make the item bank auditable — so the chain is a compliance artefact, not just a pipeline.**
+
+### 🟢 `P232-R4` — sell the provenance gate, because this pass proves it catches real defects *(2 weeks, reusable)*
+
+🔴 **This pass found `6` live, granted packages whose repositories are `404`, and a three-package family covering three 1EdTech standards with no licence at all.** 🟡 **A dependency list is therefore not a provenance record, and in this industry that gap is now measurable.**
+
+1. **Resolve every dependency to its repository** and `git ls-remote` it — filename-agnostic, so case and `README` naming cannot produce a false absence *(p231's lesson: a `README.md`-keyed sweep gave `3.2%` false absences)*.
+2. **Read every grant first-hand** from the resolved repository, never from the registry's `license` field, and record bytes plus a hash so a re-licence is distinguishable from a re-read.
+3. 🔴 **Flag the two classes this pass discovered: GRANTED-BUT-SOURCELESS *(`openbadges-types`, `openbadges-bakery-v4`, `openbadges-validator-v2`, `lti-1p3-ags`)* and ACTIVELY-RELEASED-BUT-UNGRANTED *(the three `@timeback/*` packages)*.** Neither is visible from a lockfile.
+4. 🟡 **Normalise licence bodies before comparing them.** `Apache-2.0` ships at `10 172` B with the appendix stripped and `11 356` B in full **inside the same organisation** — a hash-keyed comparator reports a licence change where there is none.
+5. **Deliver the gate as CI**, so it runs on every dependency bump rather than once at audit.
+
+### 🔴 `P232-R5` — the names that must not enter a SOW this week
+
+- 🔴 **`@timeback/caliper`, `@timeback/oneroster`, `@timeback/qti`** — `53`/`58`/`59` versions, released through `2026-09-25`, **no licence, no repository, no homepage.** Actively maintained and legally unadoptable.
+- 🔴 **`openbadges-types`, `openbadges-ui`, `@rollercoaster-dev/openbadges-core`, `openbadges-bakery-v4`, `openbadges-validator-v2`, `lti-1p3-ags`** — granted, published, and their repositories are `404`. **No source at handover.**
+- 🔴 **`stmath/go-qti`** — `404`; use [`grokify/go-qti`](https://github.com/grokify/go-qti) instead.
+- 🔴 **The `oat-sa`/`TAO` estate and `BLPS/oneroster-php-api`** — `GPL-2.0-only`/`LGPL-2.1` and `GPL-3.0`. **Read them to scope; do not build a customised client delivery on them.**
+- 🔴 **The five 1EdTech Caliper sensors and the Open Badges reference server** — still `404` under both org spellings *(p230, corroborated p231)*. **A Caliper scope remains a BUILD.**
 
 ## Pass 231 — 2026-10-15 — THE ASSESSMENT-GOVERNANCE RECIPE, WIREABLE TODAY AND `MIT` END TO END
 
@@ -27,11 +86,12 @@ updated: 2026-10-15
 
 🔴 **What this recipe does NOT include, deliberately:** an AI grader on the scoring path. 🔵 **The regulation's own carve-out — Vietnam's text makes a system high-risk where the output is *the sole basis for a decision without meaningful human review* — means the human rubric pass is what keeps the system out of the expensive category. Automating step `4` destroys the thing being sold.**
 
-### 🟡 `P231-R2` — the LTI→MCP adapter, reduced to the one file that is actually missing *(2–3 weeks)*
+### 🔴 ~~`P231-R2`~~ — **SUPERSEDED by `P232-R1`** — the LTI→MCP adapter, reduced to the one file that is actually missing *(2–3 weeks)*
+🔴 **Do not ship this version.** `ACTION TK` read `lti-go` in SOURCE in p232: the library never validates the launch `sub` *(`launch.go:170-206`)*, so this recipe's step `1` does NOT deliver the verified identity the rest of it assumes. **Use `P232-R1` at the top of this file, which moves the identity guard into the adapter.**
 
 🔴 **This KB's oldest open blocker: no row terminates a verified LTI launch and then calls an MCP server with a subject IT established.** 🟢 **The halves now both exist and are permissive:**
 
-1. **Verified launch** — [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) *(`MIT`)*: OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment registry, `ltik` session resumption. Register the client's platforms via `tool.Platforms().Register(...)`; implement `lti.Store` against the client's database *(the shipped `memstore` is for tests)*.
+1. **Verified launch** — [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) *(`MIT`)*: OIDC login, `id_token`/`state`/`nonce` validation, JWKS, platform/deployment registry, `ltik` session resumption. Register the client's platforms via `tool.Platforms().Register(...)`; implement `lti.Store` against the client's database *(the shipped `memstore` is for tests)*. 🔴 **CORRECTED p232 (`T232-C`, read in SOURCE): `sub` is parsed and exposed but NEVER VALIDATED (`launch.go:170-206`) — a launch with no subject claim is ACCEPTED — and the `ags` write performs scope ACQUISITION with NO scope check (`ags/client.go:55-72`).**
 2. **Roster and grades** — the same library's `ags` and `nrps` packages, so the adapter needs no second LMS client.
 3. **Tool surface** — any carried MCP server: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) *(`MIT`)*, [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, durable learner state with BKT mastery)*.
 4. 🆕 **THE MISSING FILE, and it is small:** a handler that takes the **verified** `sub` from step `1`, mints a short-lived internal token carrying it, and **refuses to proceed when the launch produced no subject claim**. 🔴 **p135 measured that the two existing bridges accept a configured or caller-supplied subject instead — that is the defect this file exists to not have.**

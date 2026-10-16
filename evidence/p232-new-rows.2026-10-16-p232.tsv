@@ -1,0 +1,25 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# every row added or refused this pass. Discovery channel: the PACKAGE REGISTRIES
+# (ACTION TJ), not the repository host. Each row was found as a published ARTEFACT first and
+# only then resolved to a repository, which is the reverse of every prior pass on these shelves.
+#
+# EXISTENCE is on `git ls-remote --symref` (filename-agnostic), honouring the constraint p231
+# carried into this pass: raw.githubusercontent.com is CASE-SENSITIVE and a README.md-keyed
+# sweep gave a 3.2% FALSE-ABSENCE rate. raw is used ONLY to read the grant file body.
+#
+# CONTROLS, both re-run this pass: HKUDS/DeepTutor -> 200 (positive); 1EdTech/caliper-java ->
+# 404 (negative, and the same answer p230/p231 got on two other channels).
+#
+# grant_bytes and grant_sha256_12 are of the licence FILE BODY as retrieved, so a later pass
+# can tell a re-licence from a re-read.
+slug	registry_artefact	registry_evidence	exists	default_branch	head_sha12	licence_file	grant_bytes	grant_sha256_12	licence	copyright_line_read_first_hand	region	region_basis	tier
+lti-tool/lti-tool	npm:@lti-tool/core +6 siblings	30 versions, latest 1.3.0, modified 2026-10-09	200	main	39b4986061f9	LICENSE	1076	4462cc48bc9c	MIT	Copyright (c) 2025-present James Joplin	unplaced	holder is a person, not an institution	standards-native / LTI 1.3 (pluggable store)
+harvard-edtech/caccl	npm:caccl	271 versions, latest 2.6.6, modified 2026-09-30	200	main	0541ad3a1fa2	LICENSE.md	1074	452a9aa7159e	MIT	Copyright (c) 2023 Harvard University	North America	STATED in the grant: a named institution (Harvard University)	standards-native / Canvas+LTI app scaffold
+msaaqcom/nelc-xapi-php-sdk	packagist:msaaq/nelc-xapi-php-sdk	latest release 2026-04-13	200	master	99386b8ee0a5	LICENSE.md	1088	4f6bddca90cd	MIT	Copyright (c) MSAAQ, LLC <info@msaaq.com>	EMEA	STATED in the artefact name: NELC, the Saudi national e-learning authority	xAPI / national-system conformance
+lrnfast/lrnr-lti	npm:lrnr-lti	12 versions, latest 5.9.5, modified 2026-01-29	200	master	d8e118470110	LICENSE	11360	375b1b589116	Apache-2.0	none (Apache boilerplate names no holder)	unplaced	grant carries no holder line; no NOTICE file	standards-native / LTI 1.3
+bnsoftware/lti-1p3-tool	packagist:bnsoftware/lti-1p3-tool	latest release 2026-05-21	200	master	7e9b1bafa3cf	LICENSE.md	11342	944c6521f810	Apache-2.0	none (Apache boilerplate names no holder)	unplaced	grant carries no holder line; no NOTICE file	standards-native / LTI 1.3 (PHP)
+stevenweathers/peregrine-lti	pkg.go.dev:github.com/stevenweathers/peregrine-lti	module resolves on the Go proxy	200	main	a442a55a9ab9	LICENSE	11356	43070e2d4e53	Apache-2.0	none (Apache boilerplate names no holder)	unplaced	grant carries no holder line; no NOTICE file	standards-native / LTI 1.3 launch validation (Go)
+grokify/go-qti	pkg.go.dev:github.com/grokify/go-qti	module resolves on the Go proxy	200	main	26943408ab01	LICENSE	1124	f9c800ce3796	MIT	Copyright 2025 John Wang	unplaced	holder is a person, not an institution	assessment / QTI types in Go
+gpoore/text2qti	pypi:text2qti	latest 0.8.0, released 2026-08-21	200	master	80dac052bec7	LICENSE.txt	1521	78241bb79b0e	BSD-3-Clause	Copyright (c) 2020-2026, Geoffrey M. Poore	unplaced	holder is a person, not an institution	assessment / QTI authoring from Markdown
+BLPS/oneroster-php-api	packagist:blps/oneroster-php-api	latest release 2025-09-26	200	main	ef87887bf0b1	LICENSE	35148	8b1ba204bb69	GPL-3.0	"Copyright (C) 2007 Free Software Foundation" — this is the LICENCE TEXT's own line, NOT a grant by the repository owner	unplaced	no holder stated by the owner	rostering / OneRoster (PHP) — COPYLEFT, flagged

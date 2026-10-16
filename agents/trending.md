@@ -1,8 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## 2026-10-16 — Pass 232 — THIS WEEK'S SIGNAL: THE SUPPLY WAS ON THE **PACKAGE REGISTRIES** ALL ALONG — `9` GRANTED ROWS GITHUB-SHAPED QUERIES NEVER SURFACED, AND `6` PACKAGES THAT ARE LIVE, GRANTED AND SOURCELESS
+
+🔵 **`9` new rows *(`8` permissive, `1` copyleft-flagged)*, `4` refused as ungranted, `0` padded. `4` registered actions discharged. `146` registry artefacts classified across `4` registries; Maven Central UNREADABLE from here and recorded as such.**
+
+🔵 **Evidence:** [`p232-new-rows`](../evidence/p232-new-rows.2026-10-16-p232.tsv) · [`p232-dead-registry-addresses`](../evidence/p232-dead-registry-addresses.2026-10-16-p232.tsv) · [`p232-ungranted-family`](../evidence/p232-ungranted-family.2026-10-16-p232.tsv) · [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv)
+
+### 🟢 `A232-1` — new this week, with a last-seen date on every row *(the `ACTION TH` constraint, honoured)*
+
+| agent / library | licence, read first-hand | category | last seen alive *(this pass)* | one-line read |
+|---|---|---|---|---|
+| [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | 🟢 **MIT** | standards-native / LTI 1.3 | `2026-10-16`, `main` @ `39b4986061f9` | LTI 1.3 with six interchangeable store adapters — the first on this shelf that does not dictate the datastore |
+| [`harvard-edtech/caccl`](https://github.com/harvard-edtech/caccl) | 🟢 **MIT** | Canvas + LTI scaffold | `2026-10-16`, `main` @ `0541ad3a1fa2` | `271` npm versions over eight years, from a university's own ed-tech group. North America, placed on its grant |
+| [`msaaqcom/nelc-xapi-php-sdk`](https://github.com/msaaqcom/nelc-xapi-php-sdk) | 🟢 **MIT** | xAPI / national conformance | `2026-10-16`, `master` @ `99386b8ee0a5` | written against the Saudi `NELC` national xAPI profile — the only national-profile row here. EMEA, placed on its name |
+| [`lrnfast/lrnr-lti`](https://github.com/lrnfast/lrnr-lti) | 🟢 **Apache-2.0** | standards-native / LTI 1.3 | `2026-10-16`, `master` @ `d8e118470110` | a `5.x` Node LTI provider — ends `ltijs` being this shelf's single Node dependence |
+| [`bnsoftware/lti-1p3-tool`](https://github.com/bnsoftware/lti-1p3-tool) | 🟢 **Apache-2.0** | standards-native / LTI 1.3 (PHP) | `2026-10-16`, `master` @ `7e9b1bafa3cf` | a PERMISSIVE PHP LTI tool, where the `oat-sa` estate is `GPL`/`LGPL` throughout |
+| [`stevenweathers/peregrine-lti`](https://github.com/stevenweathers/peregrine-lti) | 🟢 **Apache-2.0** | standards-native / LTI launch | `2026-10-16`, `main` @ `a442a55a9ab9` | narrow-scoped Go launch validation; the comparison implementation for `T232-C` |
+| [`grokify/go-qti`](https://github.com/grokify/go-qti) | 🟢 **MIT** | assessment / QTI types | `2026-10-16`, `main` @ `26943408ab01` | QTI item/response/section/test types in Go — the live sibling of the `404` the registry also lists |
+| [`gpoore/text2qti`](https://github.com/gpoore/text2qti) | 🟢 **BSD-3-Clause** | assessment / QTI authoring | `2026-10-16`, `master` @ `80dac052bec7` | authors QTI from Markdown — the input end of the chain p231 closed the judging end of |
+| [`BLPS/oneroster-php-api`](https://github.com/BLPS/oneroster-php-api) | 🔴 **GPL-3.0** | rostering / OneRoster | `2026-10-16`, `main` @ `ef87887bf0b1` | 🔴 COPYLEFT-FLAGGED, carried for comparison only |
+| 🔴 `npm:@timeback/oneroster` | 🔴 **NONE** *(no repository, no homepage)* | rostering | registry only — no source exists to see | REFUSED — `58` versions, released through `2026-09-25`, ungranted |
+| 🔴 `npm:@timeback/qti` | 🔴 **NONE** *(no repository, no homepage)* | assessment | registry only — no source exists to see | REFUSED — `59` versions, released through `2026-09-25`, ungranted |
+| 🔴 `npm:@superbuilders/oneroster` | 🔴 **NONE** | rostering | `trilogy-group/oneroster-ts` *(already carried)* | REFUSED — exists, grants nothing |
+
+### 🔴 `A232-2` — the week's warning: `6` live, granted packages whose repositories do not exist
+
+🔴 **`npm:openbadges-types` `4.0.0`, `npm:openbadges-ui` `1.3.5`, `npm:@rollercoaster-dev/openbadges-core` `0.1.3` *(all `MIT`, `2026-05-01`)*, `npm:openbadges-bakery-v4` `1.0.10` and `npm:openbadges-validator-v2` `1.1.4` *(`MPL-2.0`, `2025-12-18` / `2026-01-28`)*, and `npm:lti-1p3-ags` `2.0.1` *(`MIT`)* all point at repositories that are `404` on `git ls-remote`** — two spellings tried where an obvious second one existed, with this pass's positive control passing in the same run.
+
+🔵 **The two `MPL-2.0` bakery/validator packages are the Open Badges line `ACTION TE` hunted for in p231.** Someone did pick up the withdrawn Mozilla tooling, published it, and left no retrievable source. 🟡 **A registry hit is a LEAD, not a row — and that is now a table on disk rather than a habit.**
 
 ## 2026-10-15 — Pass 231 — THIS WEEK'S SIGNAL: THE ZERO STREAK WAS AN ARTEFACT OF THE **QUERY**, NOT OF THE FIELD — `4` CAPABILITY-SHAPED PROBES RETURNED `7` GRANTED ROWS AFTER `4` REGION-SHAPED ONES RETURNED NONE
 
@@ -25,7 +54,7 @@ updated: 2026-10-15
 
 - 🟢 [`feyst/qti3-validator`](https://github.com/feyst/qti3-validator) — **`MIT`**, QTI 3 conformance JUDGE *(1EdTech XSDs + `7 400`+ Schematron rules, built in; never contacts the internet; never stores documents)*. **Closes the QTI clause of this KB's conformance gap.**
 - 🟢 [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) — **`MIT`**, per-candidate human rubric scoring over QTI 3 Results Reporting, comments persisted as `COMMENT` outcomes. **The human-oversight artefact two regulators now require.**
-- 🟢 [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) — **`MIT`**, LTI 1.3 tool-provider SDK in Go with `ags`, `nrps`, `deeplink`, `dynreg` and verified-launch handling.
+- 🟢 [`marcgabe15/lti-go`](https://github.com/marcgabe15/lti-go) — **`MIT`**, LTI 1.3 tool-provider SDK in Go with `ags`, `nrps`, `deeplink`, `dynreg` and verified-launch handling. 🔴 **CORRECTED p232 (`T232-C`, read in SOURCE): `sub` is parsed and exposed but NEVER VALIDATED (`launch.go:170-206`) — a launch with no subject claim is ACCEPTED — and the `ags` write performs scope ACQUISITION with NO scope check (`ags/client.go:55-72`).**
 - 🟡 [`OpaceDigitalAgency/opace-ai-content-checker-detector`](https://github.com/OpaceDigitalAgency/opace-ai-content-checker-detector) — **`MIT`**, **C2PA + SynthID + hidden-Unicode provenance** suite; its developer libraries deliberately bundle no model.
 - 🟡 [`lynote-ai/ai-text-detector`](https://github.com/lynote-ai/ai-text-detector) — **`MIT`**, explainable no-network AI-text **risk triage**; the trained tier ships no weights and funnels to a paid API.
 - 🟡 [`awsaf49/automated-essay-scoring-2`](https://github.com/awsaf49/automated-essay-scoring-2) — **`Apache-2.0`**, Keras-team DebertaV3 ordinal-regression AES baseline *(a notebook)*.

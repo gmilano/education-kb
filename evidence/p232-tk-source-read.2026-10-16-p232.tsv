@@ -1,0 +1,19 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# ACTION TK: marcgabe15/lti-go read in SOURCE — shallow clone of default branch `main` at
+# HEAD af8e89fbe1536c1db0ed8079ef45b18134359639. Every claim below is anchored to a FILE and
+# LINE so a later pass can re-read exactly what this one read.
+# The repository's own test suite was NOT executed — only read.
+#
+# TK limb 1 required BOTH: (a) the ags score write performs the LTI 1.3 scope check, AND
+# (b) the id_token path refuses a launch with no subject claim. Verdict: limb 2, both clauses.
+clause	file:line	what the source actually does	verdict vs the published cell
+ags score write: scope present?	ags/scores.go:31	SubmitScore calls c.do(ctx, req, []string{ScopeScore})	CONFIRMED — the correct scope is named
+ags scope URI correctness	ags/types.go:10-13	ScopeScore = "https://purl.imsglobal.org/spec/lti-ags/scope/score"; lineitem, lineitem.readonly, result.readonly also exact	CONFIRMED — the spec URIs are verbatim
+is the requested scope SENT to the platform?	token/token.go:134	the client-credentials token request carries "scope": {scopes}	CONFIRMED — correct scope ACQUISITION
+is the GRANTED scope CHECKED against the requested one?	ags/client.go:55-72	c.do() takes the token and sets Authorization: Bearer; it never compares granted vs requested scope. A narrowed grant surfaces only as the platform's own >=400	REFUTED — there is no scope CHECK, only scope acquisition. A platform that grants less than asked is not detected by this library
+is `sub` in the claim struct?	claims.go:117-118	rawLaunchClaims embeds jwt.Claims, so `sub` is parsed	parsed, yes
+is `sub` exposed to the caller?	claims.go:84, claims.go:183	Claims.Subject is populated from c.Subject by buildClaims	exposed, yes
+is a launch with NO `sub` refused?	launch.go:170-206	validateStandardClaims checks version, message_type, deployment_id, nonce, iss, expiry, aud, azp and iat max-age. There is NO `sub` check anywhere in the validation path	REFUTED — a launch with no subject claim is ACCEPTED and yields Claims.Subject == ""
+does any TEST cover a missing `sub`?	*_test.go (all)	no test asserts rejection of a missing/empty subject; ltitest/platform.go:154 ALWAYS sets "sub", so the happy path masks the hole	REFUTED — not covered
+false-positive trap this read had to avoid	launch.go:201	`t.now().Sub(c.IssuedAt.Time())` is time.Sub, NOT the `sub` claim. A grep for "Sub" reads as a subject check and is not one	recorded so a later pass does not re-introduce the error

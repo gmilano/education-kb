@@ -1,0 +1,17 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# the finding ACTION TJ's limbs did not anticipate: a package can be LIVE, GRANTED and
+# actively released while the repository its own registry record points at DOES NOT EXIST.
+# A registry's `repository` field is a CLAIM, not an address. Verified on `git ls-remote`
+# (filename-agnostic) with the pass's live positive control.
+#
+# Consequence for these shelves: a registry hit is a LEAD, not a row. None of the artefacts
+# below was published as a repository row, because no repository could be retrieved.
+registry_artefact	licence	latest_version	last_published	claimed_repository	ls_remote	second_spelling_tried	ls_remote_2	verdict
+npm:openbadges-types	MIT	4.0.0	2026-05-01	github.com/rollercoaster-dev/monorepo	404	github.com/rollercoaster-dev/openbadges-monorepo	404	live + granted, source unretrievable
+npm:openbadges-ui	MIT	1.3.5	2026-05-01	github.com/rollercoaster-dev/monorepo	404	github.com/rollercoaster-dev/openbadges-monorepo	404	live + granted, source unretrievable
+npm:@rollercoaster-dev/openbadges-core	MIT	0.1.3	2026-05-01	github.com/rollercoaster-dev/monorepo	404	github.com/rollercoaster-dev/openbadges-monorepo	404	live + granted, source unretrievable
+npm:openbadges-bakery-v4	MPL-2.0	1.0.10	2025-12-18	github.com/openlearnbadges/openbadges-bakery	404	-	-	live + granted, source unretrievable
+npm:openbadges-validator-v2	MPL-2.0	1.1.4	2026-01-28	github.com/openlearnbadges/openbadges-validator	404	-	-	live + granted, source unretrievable
+npm:lti-1p3-ags	MIT	2.0.1	2025-01-02	github.com/Tyru5/1EdTech-LTI-1-3	404	-	-	live + granted, source unretrievable
+pkg.go.dev:github.com/stmath/go-qti	UNREAD	-	-	github.com/stmath/go-qti	404	github.com/grokify/go-qti	200	the LIVE sibling was published instead

@@ -1,8 +1,60 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A FIFTH CONSECUTIVE PASS**, AND THIS PASS FINALLY PLACES TWO ROWS — BY READING THEIR **GRANTS**
+
+🔵 **`4` region-shaped queries → `0` repositories, a fifth consecutive reproduction. `9` new rows, of which `2` are PLACED on stated first-hand evidence — the first rows this KB has placed since the region field was introduced.** 🟢 **The EU clock was independently re-measured this pass and CORROBORATES these shelves rather than correcting them, plus one date they did not carry.**
+
+🔵 **Evidence:** [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv) · [`p232-placement`](../evidence/p232-placement.2026-10-16-p232.tsv) · [`p232-edfi`](../evidence/p232-edfi.2026-10-16-p232.tsv)
+
+### 🟢 `P232-M1` — the query-shape rule reproduces a FIFTH time, and placement is now a solved problem for a MINORITY of rows
+
+🔴 **`AI education {region} 2026 adoption regulation players`, run once per region, returned `0` repositories for North America, EMEA, APAC and LATAM.** It returns regulation, vendor announcements and market-report prose — which is genuinely useful intelligence, and is not supply. 🔵 **Five passes is now the most-tested claim on these shelves: the region-shaped query is an INTEL instrument, never a discovery instrument.**
+
+🟢 **What changed this pass is the other half of the problem.** `ACTION TL` asked for an instrument that places a repository without guessing from a surname, and one exists: **the grant's copyright HOLDER when it names an institution, and the artefact NAME when it names a national system.** It placed `2` of `9` new rows — `harvard-edtech/caccl` → **North America** *("Copyright (c) 2023 Harvard University")*, `msaaqcom/nelc-xapi-php-sdk` → **EMEA** *(`NELC`, the Saudi national e-learning authority)*. 🔴 **It is structurally blind to `Apache-2.0` and `GPL` rows, which name no holder — `4` of `4` probed had no `NOTICE` file either.** 🟡 **So placement is recoverable for the `MIT`/`BSD` tier and remains honestly `unplaced` for the rest. `2` of `9` beats `0` of `7` from READMEs and `0` of five passes from region queries.**
+
+### 🟢 `P232-M2` — the EU clock, independently re-measured and CORROBORATED
+
+🟢 **An independent re-probe of the Digital Omnibus returns exactly what these shelves already carry, which is the outcome a KB should want and rarely gets.** Regulation **`(EU) 2026/1744`**, published `2026-07-24`, in force `2026-07-27`; **Annex III point `3` education high-risk → `2027-12-02`**; Article `50` transparency unchanged at **`2026-08-02`**; the Article `5` prohibitions at **`2026-12-02`**. 🔵 **The three dates must still not be merged, and this KB has now corrected the circulating *"education high-risk takes effect August 2026"* error SIX times.**
+
+🆕 **One date these shelves did NOT carry, added:** **Annex I product-embedded high-risk systems → `2028-08-02`.** 🟡 **It matters for exactly one education scope shape — an AI feature embedded in a regulated PRODUCT (a lab instrument, a medical-training device) rather than in a service — and for that shape the client has an extra eight months.**
+
+### 🔴 `P232-M3` — the supply-side market map this pass can state as a measurement
+
+🔵 **Nine passes of the vertical query agree: there is no `MIT`/`Apache` LMS and no `MIT`/`Apache` SIS.** 🟢 **And this pass proves where the permissive supply actually is: the standards and integration layer.** The entire `Ed-Fi` estate is `Apache-2.0` across `9` repositories; the LTI, QTI, OneRoster and xAPI tiers are `MIT`/`Apache`/`BSD` almost throughout; the one complete assessment PLATFORM (`TAO`/`oat-sa`, ~`20` packages) is `GPL-2.0-only`/`LGPL-2.1`.
+
+🔴 **The competitive read: the market's open supply is strongest exactly where integration revenue is, and weakest where platform licensing revenue is.** 🟡 **A competitor promising a "customised open-source LMS" is promising copyleft obligations; the defensible pitch is the conformant spine between systems.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The Ed-Fi estate is a North American opportunity specifically**, because the ODS/API is the district-and-state K-12 data backbone in the US, and it is `Apache-2.0` end to end — forkable, extensible and commercially shippable. 🆕 **`ODS-Admin-API` *(tenant + credential plane)* and `Ed-Fi-API-Standards` *(the auditable conformance claim)* are new to these shelves this pass, and `edanalytics/DPS-Ed-Fi-ODS` proves a third party already runs a production fork.**
+
+🔴 **The regulatory driver is now dated and binding, not advisory:** `134` AI-in-education bills across `31` states *(MultiState, March `2026`)*; Idaho and Utah enacted this session and New York via the **RAISE Act** *(late `2025`)*; **Ohio requires every public, community and STEM school to adopt an AI framework by `2026-07-01`**. 🟡 **A federal tension is live and belongs in any US proposal: EO `14277` *(April `2025`, the AI Education Task Force)* against EO `14365` *(December `2025`, restricting non-aligned state AI laws)*.** 🔵 **The sellable shape: district-level AI governance and data-interchange work on an `Apache-2.0` base, with a per-state policy matrix as the deliverable.** 🔴 **`0` repositories came from the region query — the supply above came from the registry and capability channels.**
+
+### EMEA
+
+🆕 **This pass adds the first EMEA-placed row on these shelves that was placed on EVIDENCE: `msaaqcom/nelc-xapi-php-sdk` *(`MIT`)*, written against the Saudi `NELC` national xAPI conformance profile, with a Laravel companion package.** 🟢 **For Gulf engagements that is the shape of the actual requirement — a national profile, not a generic LRS client — and it is the first time this KB can name the artefact instead of describing the gap.**
+
+🟢 **The EU clock is corroborated and unchanged** *(see `P232-M2`)*: Annex III education high-risk at **`2027-12-02`**, Article `50` transparency already in force since **`2026-08-02`**, Article `5` prohibitions at **`2026-12-02`**, Annex I product-embedded at **`2028-08-02`**. 🔵 **Schools and universities are DEPLOYERS; the vendor is the PROVIDER and carries the conformity burden** — which is the sentence that reframes a compliance conversation into a product conversation. 🟡 **Emotion recognition in schools has been prohibited since `2025-02`, and Article `4` AI-literacy duties are being enforced by national market-surveillance authorities since `2026-08-02`.** 🔴 **`0` repositories from the region query, for a fifth pass.**
+
+### APAC
+
+🔴 **`0` repositories, and `0` APAC-specific adoption rates — the thinnest region on these shelves, stated plainly rather than padded.** 🟢 **The regulatory map is the asset here:** Korea's **AI Basic Act in force since January `2026`**, whose *"high-impact AI"* category **names education among its sectors** and imposes deployer disclosure duties plus a local-representative requirement; China assertive with mandatory registration; Japan deliberately light-touch and voluntary, with a binding proposal at an early stage; India still drafting a national framework.
+
+🟡 **The qualifier that belongs in every APAC proposal remains the one these shelves already carry: many listed systems are high-risk only where the AI output is the SOLE basis for a decision without meaningful human review** — which makes a human-oversight surface a compliance deliverable rather than a feature. 🔵 **Vietnam's Decision `33/2026/QD-TTg` is still the only jurisdiction here with a dated, sector-scoped, education-specific high-risk list.** 🔴 **Declared gap, unchanged: no APAC-origin open-source education repository has ever been surfaced by any channel this KB has run — including, this pass, four registries.**
+
+### LATAM
+
+🔴 **`0` repositories for a sixth consecutive probe, and this pass probed the registries too — so the LATAM open-source education supply gap is no longer a GitHub-channel artefact.** 🟡 **It survives a registry sweep across `npm`, Packagist, `pkg.go.dev` and PyPI.** 🔵 **That is the strongest form this finding has ever had, and it is the honest headline for the region.**
+
+🟢 **The policy map, unchanged and still the sellable asset:** no unified regional framework; Brazil and Colombia carry national AI strategies without education-sector regulation; **Mexico has no binding rule — `SEP`/`ANUIES` recommendations only, which lack legal force**; the **Cartagena de Indias Declaration** *(August `2024`)* is signed by `16` governments; `Latam-GPT` is the sovereignty play.
+
+🔴 **The consequence for a LATAM proposal is the inverse of EMEA's: there is no deadline to organise the work around, so the driver must be institutional policy and auditability rather than compliance.** 🟢 **The `MIT`/`BSD` rows this pass added are usable here precisely because they carry no copyleft obligation into a ministry's estate** — and `gpoore/text2qti` *(`BSD-3-Clause`)* is the cheapest on-ramp in this whole KB for an item bank that currently lives in documents.
 
 ## Pass 231 — 2026-10-15 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A FOURTH CONSECUTIVE PASS**, AND THIS PASS SAYS WHAT THAT IS EVIDENCE OF
 

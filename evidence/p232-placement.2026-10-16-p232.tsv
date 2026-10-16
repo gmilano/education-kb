@@ -1,0 +1,27 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# ACTION TL: find an instrument that places a repository WITHOUT guessing from a
+# surname. Two instruments were run. The first was DEFECTIVE and is recorded as such.
+#
+# INSTRUMENT 1 (README channel, raw, both filename cases): its TLD alternation matched ".co"
+# INSIDE ".com", so every domain came back truncated ("https://github.co"). Rebuilt to extract
+# whole hosts and classify the TLD on the LAST label. The corrected run is what is tabled.
+#
+# RULE HONOURED: a surname is NOT evidence. "Mark van der Feijst" does not place a row in EMEA.
+subject	row_set	channel	stated_evidence_found	placed	region	note
+feyst/qti3-validator	p231	README (12 994 B)	none — only github.com and hub.docker.com	no	unplaced	a surname is not evidence
+metyatech/qti-scoring-system	p231	README (6 576 B)	none	no	unplaced	-
+marcgabe15/lti-go	p231	README (7 522 B)	none — only example.com placeholders	no	unplaced	-
+lynote-ai/ai-text-detector	p231	README (11 513 B)	none — github.com, huggingface.co	no	unplaced	README.zh-CN remains an inference, not a placement
+OpaceDigitalAgency/opace-ai-content-checker-detector	p231	README (86 660 B)	www.gov.uk cited; homepage opace.agency; grant says "Opace Ltd"	PARTIAL	unplaced	gov.uk is cited as REGULATORY CONTENT, not as the publisher's own location; opace.agency is still unresolvable from here (000), corroborating p231's ENOTFOUND. Not enough to place
+Hasif50/Automated-Essay-Grader	p231	README (5 485 B)	none	no	unplaced	-
+awsaf49/automated-essay-scoring-2	p231	README (1 433 B)	none — kaggle.com only	no	unplaced	-
+harvard-edtech/caccl	p232	GRANT HOLDER	"Copyright (c) 2023 Harvard University" — a named institution, read first-hand in LICENSE.md	YES	North America	the channel that works
+msaaqcom/nelc-xapi-php-sdk	p232	ARTEFACT NAME + grant	"nelc-" names the Saudi National eLearning Center, a national system; grant holder "MSAAQ, LLC"	YES	EMEA	the channel that works
+lti-tool/lti-tool	p232	GRANT HOLDER	"Copyright (c) 2025-present James Joplin" — a person	no	unplaced	holder channel fires but names no institution
+grokify/go-qti	p232	GRANT HOLDER	"Copyright 2025 John Wang" — a person	no	unplaced	holder channel fires but names no institution
+gpoore/text2qti	p232	GRANT HOLDER	"Copyright (c) 2020-2026, Geoffrey M. Poore" — a person	no	unplaced	holder channel fires but names no institution
+lrnfast/lrnr-lti	p232	GRANT HOLDER + NOTICE	Apache-2.0 boilerplate names NO holder; no NOTICE file	no	unplaced	the channel is STRUCTURALLY BLIND to Apache/GPL repos
+bnsoftware/lti-1p3-tool	p232	GRANT HOLDER + NOTICE	Apache-2.0 boilerplate names NO holder; no NOTICE file	no	unplaced	same structural blindness
+stevenweathers/peregrine-lti	p232	GRANT HOLDER + NOTICE	Apache-2.0 boilerplate names NO holder; no NOTICE file	no	unplaced	same structural blindness
+BLPS/oneroster-php-api	p232	GRANT HOLDER + NOTICE	the only "Copyright" line is the GPL text's own FSF line; no NOTICE file	no	unplaced	p230's discriminator applied: holder != slug owner, so it is licence text, not a grant line

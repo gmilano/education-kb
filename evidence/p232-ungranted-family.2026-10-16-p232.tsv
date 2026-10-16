@@ -1,0 +1,11 @@
+# p232 — probes ran 2026-10-15 23:4x → 2026-10-16 00:xx UTC (the pass crosses the date
+# boundary; the PASS is dated 2026-10-16 and every measurement below was taken in that window).
+# p231 found ONE ungranted, sourceless, actively-released education-standard package
+# (npm:@timeback/caliper). This pass asked whether it was a one-off. It is not: the same
+# publisher ships the same shape across THREE 1EdTech standards, and NONE of them grants.
+# REFUSED as rows. Recorded because supply that cannot be adopted still shapes a market.
+registry_artefact	standard	licence	latest_version	versions	created	last_published	repository	homepage	verdict
+npm:@timeback/caliper	Caliper	NONE	0.3.3	53	2026-01-10	2026-09-25	NONE	NONE	REFUSED — ungranted (carried from p231)
+npm:@timeback/oneroster	OneRoster	NONE	0.3.3	58	2026-01-10	2026-09-25	NONE	NONE	REFUSED — ungranted (NEW this pass)
+npm:@timeback/qti	QTI	NONE	0.4.1	59	2026-01-14	2026-09-25	NONE	NONE	REFUSED — ungranted (NEW this pass)
+npm:@superbuilders/oneroster	OneRoster	NONE	0.7.0	10	2025-04-29	2026-05-04	github.com/trilogy-group/oneroster-ts	-	REFUSED — ungranted; repo already carried on these shelves

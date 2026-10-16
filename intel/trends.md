@@ -1,8 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-15
+updated: 2026-10-16
 ---
+
+## Pass 232 — 2026-10-16 — THE TREND IS THAT THIS INDUSTRY'S CODE SHIPS TO **PACKAGE REGISTRIES**, AND A REGISTRY RECORD OUTLIVES THE REPOSITORY IT NAMES
+
+🔵 **The nineteenth consecutive unit-mismatch headline, and this pass's unit is the ARTEFACT versus the REPOSITORY.** 🟢 **`146` artefacts classified across `4` registries; `9` granted rows the repository-shaped harvester had never surfaced; `6` granted packages whose repositories do not exist.**
+
+🔵 **Evidence:** [`p232-queries`](../evidence/p232-queries.2026-10-16-p232.tsv) · [`p232-dead-registry-addresses`](../evidence/p232-dead-registry-addresses.2026-10-16-p232.tsv) · [`p232-ungranted-family`](../evidence/p232-ungranted-family.2026-10-16-p232.tsv) · [`p232-tk-source-read`](../evidence/p232-tk-source-read.2026-10-16-p232.tsv)
+
+### 🟢 `T232-1` — the structural trend: education-standard code is DISTRIBUTED, not starred
+
+🔵 **For nine passes this KB has measured a field that looked thin, using queries that look for repositories.** 🟢 **The field is not thin — it is PACKAGED.** The LTI, QTI, OneRoster, Caliper, xAPI and Open Badges tiers publish as installable artefacts on `npm`, Packagist, `pkg.go.dev` and PyPI, where they are found by the integrators who need them and never appear in a trending list or a listicle.
+
+🟡 **Why the distinction is load-bearing and not a technicality: the registry carries the two facts a proposal actually needs — the RELEASE HISTORY and the LAST PUBLISH DATE — and GitHub stars carry neither.** `npm:caccl` has **`271` versions across eight years**; `npm:@lti-tool/core` has `30` versions and was modified `2026-10-09`; the `oat-sa` assessment estate released through `2026-10-15`. 🔵 **A maintenance signal that survives a quiet quarter is worth more than a star count, and these shelves now have one.**
+
+### 🔴 `T232-2` — the counter-trend, and it is a procurement risk: SUPPLY WITHOUT PROVENANCE
+
+🔴 **The same channel that reveals the supply reveals a failure mode the repository channel cannot see: a package that is live, granted, actively released, and whose source cannot be retrieved.** `6` of `15` registry-sourced addresses probed this pass are `404` — including the `MPL-2.0` Open Badges bakery and validator, which are the published successors to the Mozilla tooling `ACTION TE` found withdrawn in p231.
+
+🔴 **And p231's ungranted one-off is a FAMILY:** `@timeback/caliper`, `@timeback/oneroster` and `@timeback/qti` — `53`, `58` and `59` versions, all released through `2026-09-25`, **all three with `license` NONE, `repository` NONE and `homepage` NONE.** 🟡 **Three 1EdTech standards covered by one publisher, actively maintained, and legally unadoptable.**
+
+🔵 **The trend worth carrying into every engagement: in this industry, AVAILABILITY AND ADOPTABILITY HAVE COME APART.** 🟢 **The billable consequence is that a licence-and-provenance gate over a dependency list is no longer hygiene, it is the deliverable that prevents a build on an address that will not exist at handover.**
+
+### 🔴 `T232-3` — the instrument trend this KB keeps re-learning: a `200` IS NOT A READ
+
+🔴 **PyPI's search endpoint answers `200` with a `3 038`-byte *"Client Challenge"* body and zero results.** A sweep keyed on the status code would have published *"PyPI returns nothing for `oneroster`"* — a false absence that would have been indistinguishable from a measured one. 🟡 **Maven Central is the honest opposite: `000` on both search endpoints, so the JVM education estate is recorded as `UNMEASURED`, not as absent.**
+
+🔵 **Added to the standing list of ways this KB's instruments have lied to it:** a case-sensitive `raw` path *(p231, `3.2%` false absence)*, a name quantifier whose terminator class contained `.` *(p230)*, a TLD alternation matching `.co` inside `.com` *(this pass)*, and now a challenge page served as `200`. 🟢 **Four of the four were caught by a control, and the control is always the same: run a probe whose answer you already know, in the same run.**
+
+### 🟡 `T232-4` — the identity trend: every launch library must be read before it is trusted
+
+🔴 **`ACTION TK` read `marcgabe15/lti-go` in source and found that `sub` is parsed and exposed but NEVER VALIDATED** *(`launch.go:170-206`)*, and that the `ags` write performs correct scope ACQUISITION but no scope CHECK *(`ags/client.go:55-72`)*. 🔵 **p135 found the same shape one layer up: both existing MCP bridges discard the verified identity and trust a caller-supplied subject.**
+
+🟢 **The generalisation, now supported three times over: in this field, the identity guarantee is always assumed by the layer above and never asserted by the layer below.** 🔴 **p136's record is three for three — every tier this KB has read in source has overturned a published cell.** 🟡 **The practice that follows: in a standards integration, the adapter owns the identity guard, and a library's README is never the evidence that it has one.**
 
 ## Pass 231 — 2026-10-15 — THE TREND THAT MATTERS THIS PASS IS NOT IN THE FIELD, IT IS IN THE **INSTRUMENT**: EIGHT ZERO PASSES WERE A QUERY ARTEFACT
 
