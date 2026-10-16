@@ -1,0 +1,9 @@
+query	channel	sort_key	order	total_count	read	on_topic	new_permissive	verdict
+topic:digital-textbook	github-search-api-via-MCP	stars	desc	2	2	2	1	POPULATION OF TWO on all of GitHub; both 0 stars; 1 MIT (JP), 1 NO-GRANT (CN). The artefact Korea legislated and Japan plans for 2030 has essentially no open-source supply
+topic:computational-thinking stars:>3	github-search-api-via-MCP	stars	desc	23	20	14	1	the highest-star row (mitmath, 2839) is SPLIT-SCOPE MIT/CC-BY-SA; ZERO Indian repos despite India's Grade-3 AI+CT mandate from AY2026-27
+topic:ai-act	github-search-api-via-MCP	stars	desc	204	20	18	6	THE PRODUCTIVE AXIS OF THE PASS. Education is Annex III high-risk, so this cross-industry compliance layer is education infrastructure. 1 of 20 is BUSL-1.1 misread as Apache-2.0
+topic:student-privacy	github-search-api-via-MCP	stars	desc	9	9	9	3	POPULATION OF NINE, entirely North American (FERPA/COPPA/state law). 4 of 9 already carried
+topic:educacion stars:>2	github-search-api-via-MCP	stars	desc	24	15	12	1	NOT A LATAM AXIS: dominated by SPAIN (franlu, jamj2000, profeIAP). The 4 genuine LATAM rows (UY, MX, CL, +1) were ALL already CARRIED
+topic:educacao stars:>2	github-search-api-via-MCP	stars	desc	25	15	13	0	SATURATED: every on-topic Brazilian row (i-educar, i-diario, bncc-dev x3, pre-matricula-digital, br.tag, bancodeitinerarios) returns CARRIED
+topic:cbse stars:>2	github-search-api-via-MCP	stars	desc	24	15	15	0	ALL student practical projects (class-12 CS, Anki decks, question papers). The single AI row (arjav0703/cbse-ai) is ARCHIVED. India's mandate has no open-source curriculum supply on this axis
+school district AI policy guidance in:name,description,readme stars:>1 pushed:>2026-05-01	github-search-api-via-MCP	stars	desc	77	20	0	0	FREETEXT LEG FAILED: returned public-apis (489341 stars), awesome-osint, API-mega-list. 0 of 20 on-topic. Re-confirms p239/p244: an unscoped freetext query measures GitHub's star distribution, not the axis

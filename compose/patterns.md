@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — FIVE RECIPES, ONE PER REGION, EVERY REPO BELOW READ FIRST-HAND THIS PASS WITH ITS GRANT AND `HEAD` PINNED — AND EACH ONE EXISTS BECAUSE A **REGULATOR NAMED A DATE** THAT FALLS INSIDE AN ENGAGEMENT WINDOW
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) *(every grant + pinned head below)* · [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv)
+
+🔴 **Correction carried into every recipe on this shelf:** [`opensalt/opensalt`](https://github.com/opensalt/opensalt) is cited twice in `p245`'s recipes as `Apache-2.0`. 🟢 **Read first-hand this pass at its real default branch `develop`: it is `MIT`** *(`1 080` B, head `54c353305e8f`, "Copyright (c) 2016 Public Consulting Group")*. The recipes still stand — MIT is the more permissive of the two — but the **attribution step differs**: MIT's single-notice rule, not Apache §4(d) `NOTICE` propagation.
+
+---
+
+### 🟢 `P246-1` — EMEA · **the AI Act conformity pack for a high-risk education deployment**
+
+🔵 **Why now:** emotion recognition in education **prohibited since `2025-02-02`**; high-risk education duties at **`2027-12-02`** *(stand-alone)* / **`2028-08-02`** *(embedded)* under Regulation **(EU) `2026/1744`**. 🟡 **Sequence off the Official Journal — the superseded `2026-08-02` date is still being served as current.**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| risk classification + bias testing | [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 `MIT` *(`1 073` B)* | `main` · `011a5ad9bea2` |
+| art. `14` human-oversight record | [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) | 🟢 `Apache-2.0` *(`11 357` B, canonical)* | `main` · `bf64026544b9` |
+| technical-documentation baseline | [`Francesco-Sovrano/…Assessment-Tools`](https://github.com/Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools) | 🟢 `MIT` *(`1 074` B)* | `main` · `73517e3c38ce` |
+| competency binding for every graded decision | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **`MIT`** *(`1 080` B — **corrected this pass**)* | `develop` · `54c353305e8f` |
+
+**Wiring.** `EuConform` classifies the deployment *(admissions, grading and proctoring are Annex III; a timetabler is not)* and emits the risk record. Its verdict becomes the **gate** on `laravel-ai-act-compliance`'s middleware: any inference the classifier marks high-risk routes through the **human-review tracker** before a decision reaches a pupil, and the tracker's row is the art. `14` evidence. `Sovrano`'s package drafts the conformity documentation and — 🔵 **this is the part worth paying for** — gives a *measured* baseline for how good AI-drafted conformity docs actually are, so the deliverable is not a hallucinated compliance file. `opensalt` binds each graded outcome to a published CASE competency, so "why did the model decide this" resolves to a curriculum statement rather than a logit.
+
+🔴 **Do not substitute [`JehanneDussert/govllm`](https://github.com/JehanneDussert/govllm) into a proprietary deliverable** — it is **`EUPL-1.2`**, reciprocal *(read first-hand, `13 599` B)*. 🟢 **Deploy it as a standalone sovereign service beside the estate and it is an excellent fit**, with GDPR and ANSSI profiles already written.
+
+**Shape:** `6`–`8` weeks to a conformity pack a procurement officer accepts; the human-review tracker is the artefact that renews.
+
+---
+
+### 🟢 `P246-2` — North America · **the district AI-policy and evidence pipeline**
+
+🔵 **Why now:** `134` bills in `31` states. **Ohio's district AI policy deadline is `2026-07-01`**; **Oklahoma SB `1734`** requires a written policy in every district before AY `2027-28`; **Maryland SB `720`** adds a **designated AI coordinator** to sell to; **Vermont HB `650`** makes edtech providers **certify privacy compliance annually**.
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| FERPA obligation schema *(8 families, by section)* | [`mizcausevic-dev/ferpa-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/ferpa-readiness-evidence-bundle) | 🟢 `MIT` *(`1 069` B)* | `main` · `4e5b51e3e099` |
+| FERPA/COPPA PII category map + retention | [`mizcausevic-dev/pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) | 🟢 `MIT` *(`1 069` B)* | `main` · `8f381a44d258` |
+| per-state lifecycle record | [`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) | `MIT` *(**carried**, `p241`)* | — |
+| hash-chained access log over student records | [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | `MIT` *(**carried**, `p241`)* | — |
+| multi-jurisdiction indicator CLI | [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) | 🟢 `Apache-2.0` *(`11 249` B)* | `main` · `fbed8f3baf81` |
+
+**Wiring.** The `state-tracker` holds one lifecycle record per state *(IL SOPPA, CA AB `1584`+AB `2876`, TX HB `18`, NY ED Law `2-d`, VA ChAIPA, CO SB `196`)*; the `evidence-bundle` turns each state's obligations into the eight FERPA families; the `vault-contract-profile` names which fields are regulated and for how long; the `audit-stream` writes a hash-chained row for **every AI read of a student record**, enforcing §`99.32` logging. `getregula` runs in CI as the **Colorado** indicator so the repo itself reports its posture. 🟢 **Vermont's annual certification consumes the bundle unchanged — that is the recurring line.**
+
+🔴 **The policy document itself is the gap.** [`trevor050/honorlyai-resources`](https://github.com/trevor050/honorlyai-resources) holds exactly the K-12 governance and classroom-policy text these bills demand and is **`CC-BY-4.0`** — 🟡 **usable as source material with attribution, not as a code dependency.** Generating the policy is the studio's own build.
+
+🔴 **Texas carve-out: HB `2400` bans AI from providing direct classroom instruction.** Ship this compliance pipeline there; do not ship a tutor.
+
+**Shape:** `4`–`6` weeks per district template, then per-state deltas; the audit stream and the annual certification are the renewals.
+
+---
+
+### 🟢 `P246-3` — APAC · **the Grade-`3` AI literacy curriculum, because it does not exist**
+
+🔵 **Why now:** **India puts AI + Computational Thinking in every school from Grade `3`, from AY `2026-27`** *(NEP 2020)*. **China**: Beijing **`8` compulsory AI hours/year**, Guangdong **`6`**. 🔴 **And `T246-F` measured the supply: `topic:cbse` is `24` repositories of student practical projects with its single AI row `archived`, and `topic:computational-thinking` holds ZERO Indian repositories.**
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| taught CT lesson *(decomposition, abstraction)* | [`LibraryCarpentry/lc-computational-thinking`](https://github.com/LibraryCarpentry/lc-computational-thinking) | 🟢 `MIT` *(`1 115` B)* | `main` · `6386d288f025` |
+| bilingual no-code K-9 AI course *(28 missions)* | [`Notcokeaddictedanymore/aiexplorers`](https://github.com/Notcokeaddictedanymore/aiexplorers) | `MIT` *(**carried**, `p245`)* | — |
+| offline teacher material + P2P delivery | [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | 🟢 `MIT` *(`1 065` B)* | `main` · `25ecbc16b61e` |
+| curriculum-aligned quiz + rubric generation | [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | `MIT` *(**carried**, `p245`)* | — |
+
+**Wiring.** `lc-computational-thinking` supplies the CT spine *(it is a lesson, not a course dump)*; `aiexplorers` supplies the scenario-based AI-literacy missions already built for K-9 and already bilingual; `QuizWeaver` generates the per-chapter assessment **under deterministic rule constraint** so a teacher reviews rather than trusts; `GIGAyama/Digital_textbook` delivers to pupil devices over **WebRTC P2P with no server**, which is what makes it deployable in a classroom with one teacher laptop and no reliable uplink.
+
+🔴 **Do NOT build on [`mitmath/computational-thinking`](https://github.com/mitmath/computational-thinking)** despite its `2 839` stars. Read first-hand *(`308` B, ref `Fall24`)*: **code `MIT` by a link, and the TEXT is `CC-BY-SA-4.0`.** For a curriculum deliverable **the text is the product**, so it carries share-alike. 🟢 `p1054` returns `NOT-MIT-BODY` on it independently.
+
+🔴 **And do not sell a universal-rollout content programme: Korea just repealed one** after sub-`30`% adoption and moved **`$960M`** to institutional capability.
+
+**Shape:** `8`–`10` weeks to a Grade-`3`–`5` pilot in one state board; the mandate covers every school in India, so the second deployment is a localisation, not a rebuild.
+
+---
+
+### 🟢 `P246-4` — LATAM · **integrate, do not rebuild: the institutional AI programme**
+
+🔵 **Why now:** teacher AI use is **`52`–`56`%** across Brazil, Chile, Colombia and Costa Rica against an **OECD `36`%**; `9` in `10` pupils already use chatbots for schoolwork; and **no country in the region has an enacted education-AI statute** *(Peru's `Ley 31814` is general, Brazil's PL `2338/2023` is one chamber away)*. 🟢 **The buyer is the institution:** Tec de Monterrey *(`44`+ degrees by `2026`)*, PUC Chile *(`ConectIA`)*, and **UNESCO's LAC Observatory** with CENIA, CETIC.br and CAF on a **`2026`–`2029`** roadmap.
+
+| role | repo | grant | note |
+|---|---|---|---|
+| SIS / system of record *(Brazil)* | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · [`i-diario`](https://github.com/portabilis/i-diario) | 🔴 `GPL-2.0` *(**carried**)* | 🔵 integrate over its API — **do not link** |
+| curriculum as verified open data | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) · [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | `MIT` *(**carried**)* | `1 721` BNCC learnings, JSON/SQLite/CSV + MCP server |
+| hallucination guard against the curriculum | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | *(**carried**)* | `15 300` answers over `17` models, held-out private set |
+| national-authority reporting *(Chile)* | [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) | *(**carried**)* | attendance into **SENCE**, the state training authority |
+| conformity layer, ported from `P246-1` | `EuConform` + `laravel-ai-act-compliance` | 🟢 `MIT` · `Apache-2.0` | 🟢 **the arbitrage — see below** |
+
+**Wiring.** `bncc-dados` is the curriculum truth; `bncc-benchmark` is the gate that says which model may speak about it; `i-educar`/`i-diario` is the record the institution already runs, reached **over its API so the `GPL-2.0` never touches the deliverable** *(`p242`'s arm's-length pattern)*; `moodle-sence` is the template for the national-reporting plugin every LATAM jurisdiction eventually demands.
+
+🟢 **The arbitrage, stated plainly:** **Brazil's PL `2338/2023` is risk-based and will read like the AI Act.** A conformity pack built for `P246-1` in EMEA **ports to Brazil the day that bill passes** — 🔵 **one build, sold twice**, the same move `p244` found between EMEA and APAC.
+
+🔴 **Do not expect new open-source LATAM supply from the obvious axes:** `topic:educacao` is **saturated** *(every on-topic row `CARRIED`)* and `topic:educacion` is **a Spain axis**.
+
+**Shape:** `6`–`8` weeks from pilot to production — the shortest in any region, because there is no statute to wait for and the record system is already open.
+
+---
+
+### 🟢 `P246-5` — Global · **provenance and the pre-registered pass bar: the assessment-integrity pattern**
+
+🔵 **Why now:** `p245` declared the gap — **automated assessment and credentials had no permissive implementation at all.** 🟢 **Half of it is now closed, and this is the recipe that closes it.** Assessment is **high-risk in EMEA**, **banned in the Texas classroom**, and **the thing every pupil is already using a chatbot for** *(`9` in `10`, PISA `2025`)*.
+
+| role | repo | grant *(bytes)* | pinned head |
+|---|---|---|---|
+| provenance mark that survives copy-paste | [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) | 🟢 `Apache-2.0` *(`11 339` B, canonical)* | `main` · `eb58956d2fde` |
+| criteria hashed + timestamped **before** the test | [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` *(`1 073` B)* | `main` · `dce1a0c2bc72` |
+| identity-blind marking, on-device | [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) | 🟢 `MIT` *(`1 074` B)* | `main` · `331260131579` |
+| competency binding | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **`MIT`** *(corrected)* | `develop` · `54c353305e8f` |
+| hash-chained read log | [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | `MIT` *(**carried**)* | — |
+
+**Wiring, in the order the artefacts are created.** `falsify` registers the rubric **before** any submission is seen, hashing it with `SHA-256` and timestamping it under `RFC 3161` — so "the pass bar was moved after the fact" stops being arguable. `c2patxt` embeds C2PA Content Credentials **in the plain Unicode of the text itself**, so a submission pasted into any LMS box still carries its provenance, which is the only form that survives a real student workflow. `paper-blinder` strips identity and transcribes handwriting **on-device** *(Qwen2.5-VL via Ollama)*, so the marking is blind and no FERPA-covered page leaves the building. `opensalt` binds the resulting mark to a published competency. `student-data-access-audit-stream` records every read.
+
+🟢 **What the pattern produces is a decision a regulator, a parent and an appeals board can each re-verify from different directions** — the rubric's timestamp, the submission's provenance, the mark's competency and the log's hash chain. 🔵 **In EMEA it is the art. `14` evidence; in North America it is the FERPA §`99.32` record; in APAC it is the thing Korea's unions said was missing.**
+
+🔴 **The other half of `p245`'s gap stays open: verifiable credentials / Open Badges 3.0 still has `0` permissive implementations.** Not re-run this pass, and not claimed closed.
+
+**Shape:** `5`–`7` weeks; every component is permissive, so the whole pattern ships into a proprietary estate with no reciprocal obligation.
+
+---
+
+### 🔴 `P246-0` — the due-diligence step that now precedes every recipe above
+
+🔵 **`p244` registered a due-diligence recipe after four licence defects. `p246` found four more shapes in one pass and the step is no longer optional:**
+
+```bash
+# 1. the REAL default branch — never guess main|master
+git ls-remote --symref https://github.com/<owner>/<repo> HEAD
+
+# 2. the grant at THAT ref, first-hand, with the HEAD pinned
+compose/code/p229-grant-ladder-reach/ladder.sh slugs.txt out/
+
+# 3. ROLE + STATE before family: is it ONE resolved grant that governs itself?
+python3 -I compose/code/p246-payload-integrity/payload_integrity.py out/<slug>.body
+
+# 4. family, canonical text, added restrictions, split scope
+. compose/code/lib/license_family.sh && family_of "$(cat out/<slug>.body)"
+python3 -I compose/code/p245-apache-canonical/apache_canonical.py out/<slug>.body
+python3 -I compose/code/p1054-mit-plus-clause/... ; p1056-split-scope-licence/...
+
+# 5. is the row already on the shelves?
+make carried SLUG=<owner>/<repo>
+```
+
+🔴 **Step `3` is new and it is the one that would have caught this pass's headline:** `family_of` answers `Apache-2.0` on a **`Business Source License 1.1`** payload, because BSL names Apache as its *future* licence. 🔴 **Step `1` is the one that caught `Ifes-Academico` (`GPL-3.0` at ref `QAcad`) and `opensalt` (`MIT` at ref `develop`).** 🔴 **Step `4`'s last two commands are the ones that catch `mitmath` (`MIT` code, `CC-BY-SA` text).**
+
+🟢 **Measured cost of skipping it: `2.3`% of this KB's carried `Apache-2.0` rows are not `Apache-2.0`.**
+
 ## Pass 245 — 2026-10-16 — FOUR RECIPES BUILT ON THIS PASS'S ROWS, EACH PINNED AT A HEAD READ FIRST-HAND — AND EVERY ONE OF THEM EXISTS BECAUSE A **REGULATOR NAMED A CAPABILITY THAT HAS NO PERMISSIVE IMPLEMENTATION**
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.**

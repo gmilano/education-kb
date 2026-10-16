@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — EVERY REGION'S EDUCATION-AI CLOCK NOW HAS A **CITATION AND A NUMBER**, AND THE PASS'S MARKET FINDING IS THAT THE ONE REGION WITH NO STATUTE HAS THE **HIGHEST TEACHER ADOPTION IN THE OECD** — LATAM BUYS BEFORE IT REGULATES, EMEA REGULATES BEFORE IT BUYS
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(10 legs, 4 regional)* · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv)
+
+🔴 **The `WebSearch` leg produced `0` new repository rows for the eighth pass in nine.** 🟢 **And its four REGIONAL legs paid the richest regulatory intelligence these shelves have carried — named statutes, named dates, named numbers, in all four regions.** Those are two different facts and `p246` records them as two.
+
+### 🟢 `T246-M1` — the four clocks, each with its instrument named
+
+| Region | 🗓️ The date education AI becomes regulated | Status today |
+|---|---|---|
+| 🔴 **EMEA** | 🔴 **ALREADY ENFORCING in part.** Emotion recognition in education institutions **prohibited since `2025-02-02`**. AI-literacy and prohibited-practice duties in force. 🟡 **High-risk education obligations moved to `2027-12-02`** *(stand-alone)* and **`2028-08-02`** *(embedded in regulated products)* by the **Digital Omnibus** — Council final green light **`2026-06-29`**, Regulation **(EU) `2026/1744`** | pilot-and-pre-compliance; buyers already writing AI Act conformity into procurement |
+| 🟡 **North America** | 🟡 **No federal statute. `134` bills across `31` states**, and the earliest hard district deadlines are **Ohio `2026-07-01`** and **Oklahoma SB `1734`, a written AI policy in every district before AY `2027-28`** | `52` bills in `25` states in Q1 alone; three trackers disagree on the count *(`134`/`31`, `77`/`27`, `52`/`25`)* and the disagreement is scope definition, not error |
+| 🟡 **APAC** | 🟡 **Curriculum mandates, not safety statutes.** **India: AI + Computational Thinking in every school from Grade `3`, from AY `2026-27`** *(NEP 2020)*. **China: Beijing `8` compulsory AI hours/year** primary *and* secondary since `2025`, **Guangdong `6` hours** lower grades, national literacy infrastructure target **`2030`** | 🔴 **Korea is the counter-case** *(`T246-M2`)*. Japan: digital textbooks official *"as early as `2030`"* |
+| 🔴 **LATAM** | 🔴 **No education-AI statute anywhere in the region.** 🟡 **And "none at all" is now too strong: Peru's `Ley 31814` (`2023`) is the region's ONE enacted AI law** — general, not education-specific. Brazil **PL `2338/2023`** Senate-approved `2024-12-10`, **still pending in the Chamber**; Chile's executive bill in committee since `2024-05-07`; Mexico has federal bills under debate and **no enacted statute** | 🟢 governance arrives as an **institutional** instrument, not a legal one — see `T246-M3` |
+
+🔵 **Why the EMEA row is worded twice over:** the superseded **`2026-08-02`** enforcement date was **re-served again this pass**, in the same result set as the correct Omnibus deferral, by pages asserting the *"deadline remains firm, no extensions announced"*. 🔴 **`p241` logged this as at least the fifth re-service; this is the next.** Any EMEA engagement sequenced off a search result rather than off the Official Journal will be sequenced off a dead date.
+
+### 🔴 `T246-M2` — Korea, finished: the mandate was **repealed**, and the money moved
+
+🟢 `p195` corrected an inherited claim that Korea's AI digital textbooks were a success. `p244` said *a mandate is not adoption*. 🔴 **`p246` can now close it with the statutory outcome: the National Assembly STRIPPED the AI digital textbooks of official textbook status**, after adoption sat **below `30`%** by March and unions said the pace had outrun preparation.
+
+🟢 **And the budget did not disappear — it moved: `$960M` committed to AI talent centres and vocational high schools through `2030`.** 🔵 **That is the sellable read.** The failed artefact was *content delivered to every pupil*; the funded artefact is *capability built in institutions*. 🟢 It is the same shift `T246-A`'s row set shows in code: not the tutor, the instrument.
+
+🔵 **Public opinion is moving the same way, and the shelves should not mistake it for hostility to AI:** support for **banning** AI in schools runs `23`% *(Indonesia)* to `31`% *(South Korea)* in the **Ipsos Education Monitor 2026**, and is **rising in Japan and Korea** — the two APAC countries that pushed hardest, fastest.
+
+### 🟢 `T246-M3` — the finding: the region with no statute has the **highest teacher adoption in the OECD**
+
+| Measure | LATAM | OECD average |
+|---|---|---|
+| Secondary teachers who used AI in the previous year *(TALIS, `2024`)* | 🟢 **Brazil `56`% · Chile `55`% · Colombia `53`% · Costa Rica `52`%** | 🔴 `36`% |
+| 15-year-olds who have used an AI chatbot for schoolwork *(PISA `2025`, 13 countries)* | 🟢 **`9` in `10`** | — |
+
+🔴 **So the region with no enacted education-AI law is `16`–`20` points ABOVE the OECD on teacher adoption.** 🟢 **The governance vacuum is being filled institutionally rather than legally**, and the instruments are named and dated:
+
+- 🟢 **UNESCO's Observatory on AI in Education for Latin America and the Caribbean, launched in Santiago on `2026-04-14`**, with **CENIA** *(Chile)*, **CETIC.br** *(Brazil)*, **Tec de Monterrey** *(Mexico)* and **CAF** — on a **`2026`–`2029`** roadmap.
+- 🟢 **Tec de Monterrey is redesigning `44`+ degree programmes to integrate AI by `2026`.**
+- 🟢 **PUC Chile's `ConectIA`** targets university-wide integration by `2026`.
+
+🔵 **Read beside `p245`'s LATAM measure — `87`% of `200`+ institutions using AI somewhere, `26`% with a formal strategy — the two agree: demand is present, policy is absent, and the buyer is the institution, not the ministry.**
+
+### 🔴 `T246-M4` — North America: the statute names the artefact, and the artefact is licensed as **content**
+
+🟢 The NA leg returned **enacted** law, not proposals, and each names a deliverable:
+
+| Instrument | What it obliges | Why a studio cares |
+|---|---|---|
+| **Oklahoma SB `1734`** | every district adopts a **written AI policy** before AY `2027-28` | a document-generation and policy-conformance engagement, at district scale |
+| **Ohio** | district AI policy deadline **`2026-07-01`** | 🔴 the **earliest** hard date in the region |
+| **Maryland SB `720`** | aligned district policies **+ a designated AI coordinator** | a named human owner to sell to |
+| **Alabama HB `329`** | a computer-science course **with AI instruction** as a graduation requirement | curriculum supply, and `T246-F` says it does not exist permissively |
+| **California AB `2876`** | **AI literacy across core K-12 subjects** | the largest curriculum surface in the region |
+| **Vermont HB `650`** | edtech providers **certify privacy compliance annually** | a recurring evidence-bundle obligation — which `mizcausevic-dev/ferpa-readiness-evidence-bundle` *(`MIT`)* is shaped exactly like |
+| **Texas HB `2400`** | 🔴 **bans AI from providing direct classroom instruction** | 🔴 **the tutor product is illegal in the classroom in Texas.** The compliance layer is not |
+| *pending* **NY A.9190** · **SC H.B.5253** | prohibit AI below grade `9` · require parental opt-in | age-gating becomes a product requirement |
+
+🔴 **And the pass's sharpest irony sits here:** `topic:student-privacy` is **`9` repositories on all of GitHub** *(`T246-F`)*, every one North American — and the one repository that holds the **district AI policy** artefact those bills demand, [`trevor050/honorlyai-resources`](https://github.com/trevor050/honorlyai-resources), is **`CC-BY-4.0`** — content, not code. 🟢 **`134` bills of demand, a population of nine in supply, and the policy artefact itself unlicensable as software.**
+
+### 🟢 `T246-M5` — the market numbers, with their spread stated
+
+🔴 **The vendor estimates do not agree and `p246` does not reconcile them:** The Business Research Company puts `2026` at **~`$10.6`B** growing **`40.9`**% CAGR; IMARC projects **`$79.6`B by `2034`** at **`31.35`**% CAGR `2026`–`2034`; a third house assumes **~`28`**% annually to `2036`, reasoning that institutional purchasing moves slower than consumer adoption. 🟡 **One analysis scores the market `35`/`100` on maturity — most institutions still in pilot.** 🔵 **The `35`/`100` is the number a studio should quote, because it is the one that matches the row evidence:** `9` of this pass's `12` permissive rows have fewer than `10` stars.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The compliance engagement is the engagement, and it is now statutory rather than optional.** `134` bills across `31` states, with hard district deadlines at **Ohio `2026-07-01`** and **Oklahoma AY `2027-28`**, and a **named owner** to sell to wherever Maryland SB `720`'s AI-coordinator model is copied.
+- 🟢 **Build:** the district **AI policy + evidence bundle** pipeline. Permissive parts exist — [`mizcausevic-dev/ferpa-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/ferpa-readiness-evidence-bundle) *(`MIT`)* for FERPA's `8` obligation families, [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) *(`MIT`)* for the FERPA/COPPA category map, and Vermont HB `650`'s annual certification as the recurring revenue shape.
+- 🟢 **Build:** **blind grading that never leaves the building** — [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) *(`MIT`)*, on-device handwriting recognition, FERPA-scoped.
+- 🔴 **Do NOT build:** a classroom tutor for Texas. **HB `2400` bans AI from direct classroom instruction**, and NY A.9190 would prohibit it below grade `9`.
+- 🔴 **Declared gap:** `topic:student-privacy` is **`9` repositories**, `4` already carried. The supply is thin enough that a studio contribution would be visible — and the policy artefact itself is `CC-BY-4.0`, so **the code layer is unbuilt**.
+
+### EMEA
+
+🟢 **The only region where the regulator has already named the capability, so conformity is a product feature and not a risk register.** Emotion recognition in education **prohibited since `2025-02-02`**; high-risk duties at **`2027-12-02`** / **`2028-08-02`** under Regulation (EU) `2026/1744`.
+- 🟢 **Build on:** [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) *(`MIT`, `125`★)* for risk classification and bias testing; [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) *(`Apache-2.0`, canonical)* for the **art. `14` human-review tracker**, consent and disclosure middleware; [`Francesco-Sovrano/…Assessment-Tools`](https://github.com/Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools) *(`MIT`)* as the measured baseline for AI-drafted technical documentation.
+- 🟡 **Sequence the engagement off the Official Journal, not off search.** The dead **`2026-08-02`** date is still being served as current *(`T246-M1`)*; a roadmap built on it is `16` months wrong.
+- 🟡 **Note the licence politics:** the sovereignty-minded EMEA supply reaches for **`EUPL-1.2`** *(`JehanneDussert/govllm`)* — reciprocal, deployable as a service, not linkable into a proprietary deliverable. Expect it and price it.
+- 🟢 **Vocational is the unencumbered entry:** [`franlu/Programacion`](https://github.com/franlu/Programacion) is **`Unlicense`** — public domain — over Spain's CFGS/DAM curriculum.
+
+### APAC
+
+🟢 **Curriculum mandates are the budget line, and two of them have dates inside the engagement window.** **India: Grade `3` upward in every school from AY `2026-27`.** **China: `8` compulsory hours/year in Beijing, `6` in Guangdong.**
+- 🟢 **Build:** the **Grade-3 AI + Computational Thinking curriculum**, because `T246-F` measured that it does not exist. `topic:cbse` is `24` repositories of student practical projects, its one AI row is **archived**, and `topic:computational-thinking` holds **zero Indian repositories**. A mandate covering every school in India, with no open-source supply, is the clearest build-vs-buy gap on these shelves.
+- 🟢 **Build offline-first, on the teacher's own hardware** — [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) *(`MIT`)* shares to pupil devices over **WebRTC P2P with no server in the path**, which is both the GIGA School constraint and `p244`'s edge-inference trend.
+- 🔴 **Do NOT sell a universal-rollout content programme.** **Korea just repealed one** after sub-`30`% adoption, and the `$960M` went to **institutional capability** instead. Sell the capability.
+- 🟡 **Japan's `2030` digital-textbook date is a long runway, not a `2026` opportunity** — and `topic:digital-textbook` has a **population of two**, so whoever builds it has the category to themselves.
+
+### LATAM
+
+🟢 **The highest teacher adoption in the OECD and no statute to wait for — the shortest path from pilot to production in any region.** Brazil `56`%, Chile `55`%, Colombia `53`%, Costa Rica `52`% against an OECD `36`%; `9` in `10` pupils already using chatbots for schoolwork.
+- 🟢 **Sell to the institution, not the ministry.** The live buyers are named: **Tec de Monterrey** *(`44`+ degrees being redesigned by `2026`)*, **PUC Chile** *(`ConectIA`)*, and **UNESCO's LAC Observatory** with **CENIA**, **CETIC.br** and **CAF** on a **`2026`–`2029`** roadmap. The Observatory is a procurement surface with a published timeline.
+- 🟢 **Integrate, do not rebuild.** The reachable open-source supply is **saturated and already on these shelves** — `i-educar`, `i-diario`, `bncc-dados`/`bncc-pacotes`/`bncc-benchmark`, `pre-matricula-digital`, `br.tag`, Chile's `moodle-sence`, Uruguay's `ElijoEstudiar`, Mexico's `ResultadosUNAM` open admissions data. 🔵 **`0` new rows this pass because the axis is exhausted, not empty.**
+- 🟡 **Price the regulatory arrival, do not wait for it.** **Peru's `Ley 31814`** already exists; **Brazil's PL `2338/2023`** is one chamber from enactment on a **risk-based** model that will read like the AI Act. A deliverable built to EMEA conformity today ports to Brazil on the day that bill passes — 🟢 **which makes the EMEA compliance build sellable twice**, the same arbitrage `p244` found between EMEA and APAC.
+- 🔴 **Declared gap, stated rather than left silent:** `topic:educacion` is **a Spain axis, not a LATAM one**. LATAM-specific Spanish-language supply is not reachable by the obvious topic, and no pass has yet found the axis that reaches it.
+
+### Global
+
+🟢 **One build serves every clock: the jurisdiction-parameterised conformity instrument.** No two regions share a date, and [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) *(`Apache-2.0`)* already models **EU AI Act + South Korea AI Basic Act + Colorado** in one CLI — the shape to extend, not to reinvent.
+- 🟢 **Build:** **provenance on student work.** [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) *(`Apache-2.0`, canonical)* puts C2PA Content Credentials in plain Unicode text; [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) *(`MIT`)* timestamps the pass bar before the test runs *(`SHA-256`, `RFC 3161`)*. 🔵 **Together they are a permissive answer to `p245`'s declared gap on automated assessment** — and assessment is a high-risk capability in EMEA and a banned one in Texas, so the audit trail is the product.
+- 🔴 **Declared gap, carried from `p245` and unclosed:** **verifiable credentials / Open Badges 3.0 still has `0` on-topic permissive implementations.** `p246` did not re-run that axis and does not claim it changed.
+- 🔴 **Due diligence is now a line item, not a formality.** This pass found a `196`★ row that reads as `Apache-2.0` in every UI and is **`BUSL-1.1`**; a `2 839`★ row whose text half is **`CC-BY-SA`**; a carried row that is **`GPL-3.0`** published as `Apache-2.0`; and a `LICENSE` containing an **unresolved merge conflict**. 🟢 **Budget the licence read. On these measurements it is `2.3`% of rows wrong, and the ones it catches are the expensive ones.**
+
 ## Pass 245 — 2026-10-16 — EVERY REGION NOW HAS A **DATE** ON WHICH ITS EDUCATION AI BECOMES REGULATED, AND THEY DO NOT COINCIDE: EMEA IS **ALREADY ENFORCING**, VIETNAM'S EDUCATION CLOCK RUNS TO **1 SEP 2027**, NORTH AMERICA HAS `134` STATE BILLS AND NO FEDERAL LAW, AND LATAM HAS **NONE AT ALL**
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.**

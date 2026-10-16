@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — `ACTION WY` DISCHARGED OVER THE **WHOLE** `Apache-2.0` TIER — `313` SLUGS, NOT A SAMPLE — AND THE FOUNDATION FINDING IS THAT THIS TIER'S LICENCE PROFILE IS `91.8`% CLEAN, `5.9`% ONE HARMLESS VARIANT, AND `2.3`% **NOT APACHE AT ALL**, WITH TWO CARRIED CELLS CORRECTED HERE
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) *(313 slugs: path, path_class, bytes, family_of, canonical verdict)* · [`p246-payload-integrity`](../evidence/p246-payload-integrity.2026-10-16-p246.tsv) *(321 payloads)* · **instrument:** [`compose/code/p246-payload-integrity/`](../compose/code/p246-payload-integrity/)
+
+### 🟢 `T246-F1` — the census: what this KB's largest permissive tier actually ships
+
+🟡 `ACTION WY` *(registered by `p245`)* asked for `p245-apache-canonical` to be run over **every** carried `Apache-2.0` row, noting its own base rate came from `15` payloads. 🟢 **Done, first-hand: `313` distinct slugs harvested from the shelves, `308` payloads fetched at the branch `git ls-remote --symref` reported, `3` `NO-GRANT`, `2` `ABSENT`.**
+
+| verdict | rows | share of the `305` licence-path payloads |
+|---|---|---|
+| 🟢 `CANONICAL` — byte-faithful ASF text | **`280`** | `91.8`% |
+| 🟡 `NON-CANONICAL` — Apache terms, not ASF bytes | `18` | `5.9`% |
+| 🔴 `NOT-APACHE` — the payload is something else | `7` | `2.3`% |
+
+🔴 **`p245` published `3`/`15` = `20`%. The population says `8.2`%.** A fifteen-payload sample overstated the rate by `2.4`×, and it matters because `p245` published that rate as a warning about building on this tier.
+
+🟢 **And the `18` `NON-CANONICAL` rows are ONE lineage, not `18` modifications.** All `18` carry the identical deviation signature — `submitted to` **`the`** `Licensor`, `received by` **`the`** `Licensor`, and §4(d)'s `excluding` **`any`** `notices`. 🔵 **Word-diffed against the ASF text: one inserted article and one synonym. No granted right differs, no condition changes, no obligation is added or removed.**
+
+> 🟢 **So the correct reading of `NON-CANONICAL` is "not the ASF's bytes" — a transcription lineage.** `p245`'s instrument docstring says exactly this; its pass headline *("a `40 351`-star foundation's `Apache-2.0` payload is NOT the canonical text")* reads as if terms had changed. 🔵 **They had not. What it costs is a hash-matching SPDX scanner returning `UNKNOWN` during due diligence — a process cost, not a licence risk.**
+
+### 🔴 `T246-F2` — two carried foundation cells are wrong, and one is wrong in the dangerous direction
+
+| slug | published on these shelves | 🔴 payload read first-hand | correction |
+|---|---|---|---|
+| [`MuriloCalegari/Ifes-Academico`](https://github.com/MuriloCalegari/Ifes-Academico) | `Apache-2.0` *(`agents/trending.md`)* | 🔴 **`GPL-3.0`** — `35 149` B, root `LICENSE`, ref **`QAcad`**, head `988df6ee264d`, opening *"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"* | 🔴 **copyleft published as permissive.** A deliverable linking it inherits `GPL-3.0`. **Do not build on this row** without that understood |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `Apache-2.0` *(twice in `compose/patterns.md`, as **evidence store** and **competency binding**)* | 🟡 **`MIT`** — `1 080` B, root `LICENSE`, ref **`develop`**, head `54c353305e8f`, *"Copyright (c) 2016 Public Consulting Group"* | 🟡 benign direction *(MIT is more permissive)*, but the **attribution obligation differs**: Apache §4(d) `NOTICE` propagation vs MIT's single-notice rule. Recipes citing it should say `MIT` |
+
+🟢 **Neither was reachable by guessing a branch.** `Ifes-Academico`'s default branch is **`QAcad`** and `opensalt`'s is **`develop`**; a `main|master` probe returns `404` at all `40` paths and reports both as grantless. 🔵 **This is the `p229` ref-axis paying for itself on a carried row rather than on a new one.**
+
+### 🔴 `T246-F3` — the pass's own category error, published so the next pass cannot repeat it
+
+🔴 **`3` of the `10` raw `NOT-APACHE` verdicts were not findings — they were this pass grading the wrong kind of file.** The ladder's **Tier A includes `NOTICE`** and **Tier C includes manifests**, so:
+
+| slug | payload graded | why the verdict is void |
+|---|---|---|
+| `foradian/fedena` · `projectfedena/fedena` | **`NOTICE`** *(`679` / `680` B)* | 🔵 `Apache-2.0` itself distinguishes `LICENSE` from `NOTICE`. A `NOTICE` file is a **required attribution artefact**, never the grant |
+| `openedx/XBlock` | **`pyproject.toml`** *(`3 344` B)* | 🔵 a manifest `license` field is a **CLAIM**, not a payload. 🟢 **The shelves are right: `Apache-2.0` at `LICENSE.TXT`, `11 358` B, confirmed by `p197`.** No defect |
+
+🟢 **The corrected denominator is `305` licence-path payloads, and [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) ships a `path_class` column** so the distinction is in the data and not only in this paragraph.
+
+> 🔵 **`ACTION XC`** *(registered here)* — put `path_class` in [`p229-grant-ladder-reach`](../compose/code/p229-grant-ladder-reach/)'s output **at source**, so every downstream grader refuses `NOTICE` and manifest payloads instead of grading them as licence text. `p246` did it by hand after being wrong three times; the next pass should not have to.
+
+### 🔴 `T246-F4` — a foundation payload that is **two** payloads
+
+[`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) ships a root `LICENSE` of `11 471` B containing an **unresolved `git` merge conflict** — `<<<<<<< HEAD`, `=======`, `>>>>>>> 32db549aa17acfc812d4175d983a95945a02b728` — whose two sides are **the real holder line** *(`Copyright 2024 0xnavarro - IA-PARA-TODOS`)* and **the untouched ASF template** *(`Copyright [yyyy] [name of copyright owner]`)*.
+
+🔴 `p245-apache-canonical` grades it **`CANONICAL`**. 🔴 `holder_of` answers **`NOT-APPLICABLE`** — on a payload that carries a holder in plain text. 🔵 **The second one is `p241`'s fix inverted:** `p241` taught `holder_of` to exclude the ASF template-bracket form, and a conflicted payload contains the template form *and* the real form simultaneously, so the exclusion consumes the real answer. 🟢 **Attribution is precisely what `Apache-2.0` §4 obliges a redistributor to preserve, and this payload does not say whom to attribute.**
+
+🟢 **Base rate: `1` of `321` payloads read first-hand this pass.** Rare, real, and in a **carried** row. 🟢 [`p246-payload-integrity`](../compose/code/p246-payload-integrity/) now answers `CONFLICTED:hunks=1;holder-ambiguous`, `CONFLICTED` outranks the family axis, and the check is wired into `make hooks` with `60` controls.
+
+### 🟢 `T246-F5` — the foundation rows this pass adds: the **conformity layer**
+
+🔵 **The reusable layer has moved once more.** `p241` found it in compliance records, `p242` in the system of record, `p243` in the adapter to someone else's system of record, `p245` in the skills lab. 🟢 **`p246` finds it in the instrument the regulator asks to see** — and unlike the platforms below it, this layer is permissive almost everywhere.
+
+| Foundation | Grant *(bytes)* | ★ | ref · head | Region | Why it is a foundation and not an app |
+|---|---|---|---|---|---|
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 `MIT` *(`1 073` B)* | **125** | `main` · `011a5ad9bea2` | **EMEA** | Risk classification + bias testing with an **evidence engine** — the conformity substrate an education deployment sits on, not a product |
+| [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) | 🟢 `Apache-2.0` *(`11 357` B, **canonical**)* | 6 | `main` · `bf64026544b9` | **EMEA** | Framework **middleware**: human-review tracker, risk register, consent, disclosure. Drops into any Laravel estate, including an incumbent LMS portal |
+| [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) | 🟡 `Apache-2.0` *(`11 249` B, `LICENSE.txt`, non-canonical)* | 4 | `main` · `fbed8f3baf81` | Global | 🔵 **Jurisdiction-parameterised:** EU AI Act + South Korea AI Basic Act + Colorado behind one CLI. The shape to extend when Brazil's PL `2338` passes |
+| [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) | 🟢 `Apache-2.0` *(`11 339` B, **canonical**)* | 5 | `main` · `eb58956d2fde` | Global | A **primitive**, not an app: C2PA Content Credentials embedded in plain Unicode text, so provenance survives copy-paste into any LMS text box |
+| [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` *(`1 073` B)* | 8 | `main` · `dce1a0c2bc72` | Global | Hashes and timestamps evaluation criteria *(`SHA-256`, `RFC 3161`)* **before** the test runs. Language-agnostic — Python, JS, Go, Rust |
+| [`mizcausevic-dev/ferpa-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/ferpa-readiness-evidence-bundle) | 🟢 `MIT` *(`1 069` B)* | **0** | `main` · `4e5b51e3e099` | **North America** | A **schema** over FERPA's `8` obligation families, cited by section — reusable across every district deliverable |
+| [`mizcausevic-dev/pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) | 🟢 `MIT` *(`1 069` B)* | 1 | `main` · `8f381a44d258` | **North America** | FERPA's `7` PII categories + COPPA's `10` PI categories as machine-readable vault targets with retention rules |
+| [`franlu/Programacion`](https://github.com/franlu/Programacion) | 🟢 **`Unlicense`** *(`1 211` B)* | 17 | `main` · `f50f95e536cf` | **EMEA** | 🟢 **Public-domain dedication — the least encumbered grant on these shelves.** Spain's CFGS/DAM vocational programming curriculum, reusable with no obligation at all |
+
+🔴 **Stated plainly: three of these have `0`–`1` stars.** They are schemas and reference implementations. 🟢 **Their value is that they encode a statute's structure, and the statute is what does not change.**
+
+🔴 **And the tier's standing warning is unchanged for a tenth pass:** there is still **no `MIT`/`Apache` LMS-plus-SIS platform**. This pass's `global-verticals` WebSearch leg re-confirmed it from the vendor side — OpenEduCat `LGPLv3`, Open edX `AGPL`, Moodle `GPL`, Canvas `AGPL` — *"none of the results confirm an MIT- or Apache-licensed LMS/SIS product"*.
+
 ## Pass 245 — 2026-10-16 — A NEW FOUNDATION CLASS: THE **SKILLS LAB**, WHERE THE LEARNER'S WORK IS *RUNNING THE REAL TOOL* AND THE CONTENT IS A SIMULATOR — AND THE PASS'S WARNING IS THAT A `40 351`-STAR FOUNDATION'S `Apache-2.0` PAYLOAD IS **NOT THE CANONICAL TEXT**
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.**

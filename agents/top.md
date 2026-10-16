@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — THE PRODUCTIVE AXIS WAS `topic:ai-act`, AND ITS HIGHEST-STAR ROW IS **NOT OPEN SOURCE AT ALL**: `commercial_use_ok` RETURNED **ALLOWED** ON A `Business Source License` PAYLOAD, BECAUSE THE CLASSIFIER'S `BUSL` BRANCH IS **UNREACHABLE BY CONSTRUCTION**
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** `p232`–`p245` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`12` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported — **`8` `MIT`, `3` `Apache-2.0`, `1` `Unlicense`.** 🟢 **All `12` returned `NEW` from the `p235` carried-index gate BEFORE publishing.** 🟢 **All five regions addressed; `4` of `5` produced a row and LATAM's `0` is a SATURATION measure, not an absence.** 🔴 **`12` rows withheld, every payload read.** 🟢 **`ACTION WY` DISCHARGED over the full carried population — `313` slugs, not a sample.** 🔴 **The `WebSearch` leg produced `0` rows for the eighth pass in nine — and its four REGIONAL legs paid the richest regulatory intelligence these shelves have carried.**
+
+🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) *(12 rows, grant + bytes + path + pinned head + per-row region basis + index verdict)* · [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv) *(12, each with its remedy)* · [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) *(`313` carried Apache slugs graded)* · [`p246-payload-integrity`](../evidence/p246-payload-integrity.2026-10-16-p246.tsv) *(321 payloads)* · [`p246-busl-reproduction`](../evidence/p246-busl-reproduction.2026-10-16-p246.tsv) · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) *(8 queries, channel + sort key + total_count)* · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(10 legs)* · **instrument:** [`compose/code/p246-payload-integrity/`](../compose/code/p246-payload-integrity/) *(60 controls, wired into `make hooks`)*
+
+### 🔴 `T246-A` — the headline: a `196`-star row reported `Apache-2.0` and commercially usable is **`Business Source License 1.1`**
+
+`topic:ai-act` reported `total_count: 204`; `20` read by stars descending. Its top row by stars is [`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel) *(`196`★, Rust, agent-runtime governance)*. Read first-hand, its `LICENSE` is `4 913` B and begins:
+
+```
+Business Source License 1.1
+
+Licensor:             Edoardo Bambini, William Petteni, Justus Moritz Bohr
+Additional Use Grant: You may make production use of the Licensed Work,
+                      provided your use does not include offering the
+                      Licensed Work ... to third parties as a hosted or
+                      managed service ...
+Change Date:          2030-05-03
+Change License:       Apache License, Version 2.0
+```
+
+🔴 **`family_of` answers `Apache-2.0`. `commercial_use_ok` answers ALLOWED.** 🔵 **A studio that trusted that cell would have offered a client a managed governance service it has no right to sell until `2030-05-03`.**
+
+🟢 **The classifier is not missing a `BUSL` branch — it HAS one, and the branch is unreachable.** `BSL 1.1` carries a **mandatory** `Change License:` parameter naming the licence the work converts to, and every OSI anchor in `lib/license_family.sh` sits **above** it:
+
+| line | anchor |
+|---|---|
+| `154` | EUPL |
+| `244` · `253` | MPL · EPL |
+| `313`–`371` | GPL / AGPL / LGPL |
+| `378` | **Apache** ← the anchor that fires |
+| `459` · `503` · `565` | BSD · MIT · CC |
+| 🔴 **`646`** | **`Business Source License`** ← never reached |
+
+🔵 **Measured both ways, so the claim is not Apache-specific** *(full reproduction in [`p246-busl-reproduction`](../evidence/p246-busl-reproduction.2026-10-16-p246.tsv))*:
+
+```
+Change License: Apache License, Version 2.0        -> family_of = Apache-2.0   commercial ALLOWED
+Change License: GNU General Public License, v2.0+  -> family_of = GPL-2.0      commercial ALLOWED
+```
+
+> 🔵 **The class, stated once: a licence name in a PARAMETER position is not this payload's grant.** `Change License` names the grant this work does **not** carry yet. The matcher reads a field describing a **future** licence as the licence in force today. It is the same family of defect `p240` found on **language**, `p241` on **absence of restriction vocabulary**, and `P250`/`P312` on **family-implies-commercial**: *a matcher that reads a token and never asks what role the token plays in the document.*
+
+🟢 **Blast radius measured rather than assumed: `0` of the `308` carried `Apache-2.0` payloads re-read first-hand this pass contain the string `Business Source License`.** 🟢 **No published row flips.** The defect is live, today's exposure is nil, and [`p246-payload-integrity`](../compose/code/p246-payload-integrity/) is wired into `make hooks` so it stays nil.
+
+### 🟢 `T246-B` — the `12` permissive rows, and why a cross-industry axis is an education axis
+
+🔵 **Education is Annex III high-risk under the EU AI Act, so the AI-governance compliance layer is education infrastructure** — and `p245` left a declared gap exactly here: *the two capabilities being regulated, automated assessment and credentials, have no permissive implementation at all.* These rows are that layer.
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region *(basis in the row)* | What it is |
+|---|---|---|---|---|---|
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 `MIT` *(`1 073` B)* | **125** | `main` · `011a5ad9bea2` | **EMEA** *(EU-AI-Act-specific instrument; holder Benedikt Hiepler)* | 🔵 **The highest-star PERMISSIVE row of the pass.** EU AI Act **risk classification + bias testing** with an evidence engine. Next.js/TypeScript |
+| [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) | 🟢 `Apache-2.0` *(`11 357` B, **canonical**)* | 6 | `main` · `bf64026544b9` | **EMEA** *(padosoft is Italian; sibling repo is "Italian-first")* | 🔵 **Ships a `human-review tracker`** — AI Act art. `14` human oversight, which is precisely what a high-risk education deployment must evidence. Plus DSAR, bias monitoring, risk register, consent, disclosure middleware |
+| [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) | 🟢 `Apache-2.0` *(`11 249` B, `LICENSE.txt`, 🟡 non-canonical)* | 4 | `main` · `fbed8f3baf81` | Global *(names three jurisdictions)* | 🔵 **The multi-jurisdiction row:** code-observable governance indicators for **EU AI Act + South Korea AI Basic Act + Colorado** in one Python CLI. Reads directly onto `T246-D`'s finding that no two regions share a date |
+| [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) | 🟢 `Apache-2.0` *(`11 339` B, **canonical**)* | 5 | `main` · `eb58956d2fde` | Global *(C2PA is an international standard)* | 🔵 **Embed, extract and verify C2PA Content Credentials in plain Unicode text.** The provenance primitive for *"did a model write this submission?"* — topics name `annex-a8` |
+| [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` *(`1 073` B)* | 8 | `main` · `dce1a0c2bc72` | Global *(jurisdiction-neutral; `article-12` is in its topics only)* | 🟢 **Fixes the pass bar before the test runs:** hashes and timestamps evaluation criteria (`SHA-256`, `RFC 3161`) so anyone can check them later. **A permissive answer to the assessment-integrity gap** |
+| [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) | 🟢 `MIT` *(`1 074` B)* | **0** | `main` · `331260131579` | **North America** *(FERPA is a US statute)* | 🟢 **Blind grading, locally:** FERPA-scoped anonymisation of student work with **on-device handwriting recognition** *(Qwen2.5-VL via Ollama)*. The teacher tool `p245`'s dedicated queries could not find — and it is **edge inference**, `p244`'s trend |
+| [`mizcausevic-dev/pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) | 🟢 `MIT` *(`1 069` B)* | 1 | `main` · `8f381a44d258` | **North America** *(FERPA 34 CFR §99.3 + COPPA 16 CFR §312.2)* | Names FERPA's `7` PII categories and COPPA's `10` PI categories as concrete vault targets, with per-category retention rules |
+| [`mizcausevic-dev/ferpa-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/ferpa-readiness-evidence-bundle) | 🟢 `MIT` *(`1 069` B)* | **0** | `main` · `4e5b51e3e099` | **North America** *(FERPA's 8 obligation families, cited by section)* | Evidence-bundle profile across annual notification §99.7, school-official exception §99.31, directory info §99.37, consent §99.30, disclosure records §99.32, amendment §99.21, breach, procurement |
+| [`Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools`](https://github.com/Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools) | 🟢 `MIT` *(`1 074` B)* | 4 | `main` · `73517e3c38ce` | **EMEA** *(European academic package on the AI Act)* | Replication package for *"Simplifying Software Compliance: AI Technologies in Drafting Technical Documentation for the AI Act"* — the **measured** baseline for AI-drafted conformity docs |
+| [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | 🟢 `MIT` *(`1 065` B)* | **0** | `main` · `25ecbc16b61e` | **APAC** *(topics `japanese` + `gigaschool`)* | 🔵 **One of only TWO repositories on all of GitHub under `topic:digital-textbook`.** Teacher-built PDF annotation with education stamps, sharing to pupils' devices by **WebRTC P2P — no server in the path** |
+| [`LibraryCarpentry/lc-computational-thinking`](https://github.com/LibraryCarpentry/lc-computational-thinking) | 🟢 `MIT` *(`1 115` B)* | 7 | `main` · `6386d288f025` | Global *(The Carpentries is an international lesson network)* | Decomposition, algorithm development and abstraction as a taught lesson. 🟡 **Holder line reads `EvanWill, workshop-template-b`** — attribution names the template author, not Library Carpentry |
+| [`franlu/Programacion`](https://github.com/franlu/Programacion) | 🟢 `Unlicense` *(`1 211` B)* | 17 | `main` · `f50f95e536cf` | **EMEA** *(Spanish `formación profesional`, CFGS/DAM)* | 🟢 **Public-domain dedication** — the least encumbered grant on these shelves. Vocational programming curriculum for Spain's higher-level vocational cycle |
+
+🔴 **Nine of the twelve have fewer than `10` stars and three have `0`.** They are starting points and reference implementations, not platforms, and this shelf does not pretend otherwise. 🟢 **What is new is the LAYER:** `p241` found the engagement in compliance records, `p242` in the system of record, `p243` in the adapter to someone else's system of record — and `p246` finds it in the **conformity instrument the regulator will ask to see**.
+
+### 🔴 `T246-C` — the withheld set, and a `2 839`-star row whose MIT grant is **half of the licence**
+
+🔵 Full table with remedies in [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv). The four that change a decision:
+
+| Repo | ★ | 🔴 Grant | Why it cannot be built on | Remedy |
+|---|---|---|---|---|
+| [`mitmath/computational-thinking`](https://github.com/mitmath/computational-thinking) | **2 839** | 🔴 **SPLIT SCOPE** *(`308` B, `LICENSE.md`, ref **`Fall24`**)* | 🔴 **`family_of` answers a bare `MIT`. The payload says: code `MIT` *by a link*, and *"the **text** is under the **CC BY-SA 4.0** license"*.** For a **course** repository the text IS the product, so the deliverable carries share-alike. 🟢 **`p1054` independently returns `NOT-MIT-BODY` and `is_usable_permissive` = `False`** — the KB owns a correct instrument that the publish path does not consult | usable as code; **upstream-ask** for a code grant over the materials |
+| [`trevor050/honorlyai-resources`](https://github.com/trevor050/honorlyai-resources) | 0 | 🔴 `CC-BY-4.0` *(`1 339` B)* | 🔵 **The sharpest irony of the pass:** the artefact that `134` US state bills demand — K-12 AI governance, classroom policy, vendor evaluation — exists, and is licensed as **content, not code** | curriculum/policy reference; a code grant is needed for tooling |
+| [`JehanneDussert/govllm`](https://github.com/JehanneDussert/govllm) | 31 | 🔴 `EUPL-1.2` *(`13 599` B)* | **The EU's own reciprocal licence**, on continuous LLM governance for EU AI Act / GDPR / ANSSI, self-hosted, sovereignty-first. Reciprocal: not linkable into a proprietary deliverable | deploy as a service; or an upstream commercial grant |
+| [`vaaraio/vaara`](https://github.com/vaaraio/vaara) | 15 | 🔴 `AGPL-3.0` *(`34 020` B)* | Hash-chained, offline-verifiable record of every agent tool call, binding to TPM 2.0 / SEV-SNP. 🟢 **Declares its AGPL in its own description** — no surprise, and the honest kind of no | AGPL deliverable only |
+
+🟢 **The pattern `p245` named holds for a second pass:** the withheld budget goes to rows that are **deliberately** licensed, just not as software. `870` stars of teacher skills behind `CC-BY-SA` last pass; `2 839` stars of course text behind `CC-BY-SA` this pass.
+
+### 🔴 `T246-D` — `ACTION WY` discharged over the **whole** population, and `p245`'s base rate does not survive it
+
+`ACTION WY` asked for `p245-apache-canonical` over every carried `Apache-2.0` row. 🟢 **Done: `313` distinct slugs, `308` payloads read first-hand, graded in [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv).**
+
+| verdict | rows | share |
+|---|---|---|
+| 🟢 `CANONICAL` | **`280`** | `91.8`% |
+| 🟡 `NON-CANONICAL` | `18` | `5.9`% |
+| 🔴 `NOT-APACHE` | `7` | `2.3`% |
+
+🔴 **`p245` measured `3`/`15` — `20`%. The population says `8.2`% non-canonical-or-worse.** A `15`-payload sample over-stated the rate by `2.4`×, and this is recorded because `p245` published that rate as a warning.
+
+🟢 **And the `18` `NON-CANONICAL` rows are ONE variant, not `18` modifications.** Every one carries the same deviation signature — `submitted to **the** Licensor`, `received by **the** Licensor`, §4(d) `excluding **any** notices`. Word-diffed against canonical: **a single inserted article and one synonym.** 🔵 **No granted right differs.** `p245`'s own instrument docstring says exactly this; its pass headline did not, and a reader of the shelf could take `NON-CANONICAL` for *altered terms*. **It means "not the ASF's bytes" — a transcription lineage, and nothing more.**
+
+🔴 **The `7` real `NOT-APACHE` rows are where the money is, and two are wrong cells:**
+
+| slug | published | 🔴 payload read first-hand | direction |
+|---|---|---|---|
+| [`MuriloCalegari/Ifes-Academico`](https://github.com/MuriloCalegari/Ifes-Academico) | `Apache-2.0` | 🔴 **`GPL-3.0`** *(`35 149` B, ref **`QAcad`**)* | 🔴 **DANGEROUS** — copyleft published as permissive. A deliverable that linked it would inherit `GPL-3.0` |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `Apache-2.0` *(in **two** `compose/patterns.md` recipes)* | 🟡 **`MIT`** *(`1 080` B, ref **`develop`**)* — *"Copyright (c) 2016 Public Consulting Group"* | 🟡 benign direction, wrong cell. The attribution obligation differs: Apache §4(d) `NOTICE` propagation vs MIT's single notice |
+
+🔵 **Both were found only because the ladder reads the REAL default branch** — `QAcad` and `develop`. A `main|master` guess would have returned `404` at every path and reported both as grantless.
+
+🔴 **`3` of the `10` raw `NOT-APACHE` verdicts were MY OWN category error, and they are the pass's second instrument finding.** The ladder's Tier A includes `NOTICE` and Tier C includes manifests, so `foradian/fedena` and `projectfedena/fedena` were graded on a **`NOTICE`** file and `openedx/XBlock` on **`pyproject.toml`**. 🟢 Apache-2.0 itself distinguishes `LICENSE` from `NOTICE`, and a manifest's `license` field is a **claim**, not a payload. 🟢 **`openedx/XBlock` is not a defect: the shelves record `Apache-2.0` at `LICENSE.TXT`, `11 358` B, and `p197` confirmed it.** The corrected denominator is `305` licence-path payloads, and the table publishes a `path_class` column so the next pass cannot repeat the error.
+
+> 🔵 **`ACTION XC`** *(registered here)* — give [`p229-grant-ladder-reach`](../compose/code/p229-grant-ladder-reach/)'s output a **`path_class`** column at source, so a downstream grader refuses `NOTICE` and manifest payloads instead of grading them as licence text. `p246` did this by hand, after being wrong three times.
+
+> 🔵 **`ACTION XA`** *(registered here)* — fix the ordering in `lib/license_family.sh`: hoist the source-available anchors *(`BUSL`, `Elastic`, `PolyForm`, `SSPL`, `CAL`)* **above** the OSI anchors, or gate every OSI anchor on `p246-payload-integrity::governing_family` returning `None`. The gate is built and wired; the shared classifier is still ordered wrongly, and only a `0`-row blast radius makes that survivable today.
+
+### 🔴 `T246-E` — a grant payload that is **two** grants: an unresolved merge conflict inside a `LICENSE`
+
+🔵 Found by accident, which is the honest way: `p246` picked a `CANONICAL`-graded payload at random as a diff reference and the diff came back with conflict markers in it.
+
+[`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) ships a root `LICENSE` of `11 471` B whose **appendix is an unresolved `git` merge conflict**:
+
+```
+<<<<<<< HEAD
+   Copyright 2024 0xnavarro - IA-PARA-TODOS          <- the real holder
+=======
+   ... APPENDIX: How to apply the Apache License ...
+   Copyright [yyyy] [name of copyright owner]        <- the untouched ASF template
+>>>>>>> 32db549aa17acfc812d4175d983a95945a02b728
+```
+
+🔴 **Three instruments, three plausible wrong answers.** `p245-apache-canonical` grades it **`CANONICAL`** *(title, grant sentence and all three anchors are intact — the conflict is **after** the terms)*. `family_of` answers `Apache-2.0`. 🔴 **And `holder_of` answers `NOT-APPLICABLE (holder not in the license text by construction)` on a payload that plainly carries `Copyright 2024 0xnavarro`.**
+
+🔵 **That last one is `p241`'s own fix inverted.** `p241` taught `holder_of` to ignore the ASF **template-bracket** form. A conflicted payload contains the template form **and** the real form at once, so the exclusion eats the real answer. 🟢 **Attribution is exactly what `Apache-2.0` §4 obliges a redistributor to preserve, and this payload does not say whom to attribute — it offers two candidates and a conflict marker.**
+
+🟢 **Base rate: `1` of the `321` payloads read first-hand this pass** *(`308` carried Apache + `13` new)*. Rare, real, and in a **carried** row. 🟢 `verdict` now answers `CONFLICTED:hunks=1;holder-ambiguous`, and `CONFLICTED` outranks the family axis — a payload that is two payloads has no single grant for anything downstream to read.
+
+### 🟡 `T246-F` — what the axes did NOT hold, from queries whose shape is recorded
+
+🔵 `p244` established that *a malformed query reports an axis empty*; all shapes below are in [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) with channel and sort key *(`ACTION VH`, `ACTION VV`)*.
+
+| Query | `total_count` | Verdict |
+|---|---|---|
+| `topic:digital-textbook` | 🔴 **`2`** | 🔵 **A POPULATION OF TWO ON ALL OF GITHUB**, both `0`★ — one `MIT` *(Japan)*, one with **no grant at any of 40 paths** *(China)*. The artefact **Korea legislated and then de-legislated**, and that **Japan** plans to make official *"as early as 2030"*, has essentially **no open-source supply**. The shelves held the policy; this is the first supply measure |
+| `topic:cbse stars:>2` | 🟡 `24` | 🔴 **`0` serve India's mandate.** All `15` read are student practical projects — class-12 CS submissions, Anki decks, question-paper dumps. **The single AI row, `arjav0703/cbse-ai`, is `archived`.** India puts **AI + Computational Thinking in every school from Grade 3 in AY `2026-27`**, and this axis has no curriculum supply for it |
+| `topic:computational-thinking stars:>3` | 🟡 `23` | 🔴 **Zero Indian repositories** on the axis India's mandate names. Its highest-star row is split-scope *(`T246-C`)*, and the rest are university course dumps |
+| `topic:student-privacy` | 🟡 **`9`** | 🔵 **A POPULATION OF NINE**, and **entirely North American** — every row cites FERPA, COPPA or a named state statute. `4` of `9` already `CARRIED`. **A gap and a moat at once:** the compliance axis that pays in NA has almost no supply |
+| `topic:educacion stars:>2` | 🟡 `24` | 🔴 **NOT A LATAM AXIS — it is a SPAIN axis** *(`franlu`, `jamj2000`, `profeIAP`)*. The genuine LATAM rows it surfaced *(Uruguay `ElijoEstudiar`, Mexico `ResultadosUNAM`, Chile `moodle-sence`, `openredlab`)* **all returned `CARRIED`** |
+| `topic:educacao stars:>2` | 🟡 `25` | 🔴 **SATURATED.** Every on-topic Brazilian row — `i-educar`, `i-diario`, the three `bncc-dev` packages, `pre-matricula-digital`, `br.tag`, `bancodeitinerarios` — returns `CARRIED`. 🟢 **LATAM's `0` new rows this pass is a saturation measure, not an absence**, and that is a different fact from `p235`'s falsified *"LATAM: 0 repositories"* |
+| `school district AI policy guidance in:name,description,readme stars:>1 pushed:>2026-05-01` | 🔴 `77` / `20` read / **`0` on-topic** | 🔴 **THE FREETEXT LEG FAILED, AGAIN.** It returned [`public-apis`](https://github.com/public-apis/public-apis) at `489 341`★, `awesome-osint` and `API-mega-list`. 🔵 **An unscoped freetext query measures GitHub's star distribution, not the axis.** `p239` and `p244` each said this; it is now measured a third time, and the rule is: **`topic:` or it did not happen** |
+
 ## Pass 245 — 2026-10-16 — THE PRODUCTIVE AXIS WAS `topic:ai-literacy` AND WHAT IT PAYS IS **NOT TUTORS**: SIX OF THE SEVEN NEW AGENT ROWS TEACH A HUMAN TO **AUDIT** A MODEL, AND THE HIGHEST-STAR ROW ON THE AXIS IS **WITHHELD ON A SHARE-ALIKE CONTENT LICENCE**
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.** `p232`–`p244` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

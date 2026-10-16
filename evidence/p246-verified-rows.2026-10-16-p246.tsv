@@ -1,0 +1,13 @@
+slug	grant	bytes	path	ref	head	stars	region	region_basis	index_verdict	axis
+Hiepler/EuConform	MIT	1073	LICENSE	main	011a5ad9bea2002e93475a089169ad7d4e0ddec2	125	EMEA	holder "Benedikt Hiepler"; instrument is EU-AI-Act-specific (risk classification + bias testing)	NEW	topic:ai-act
+padosoft/laravel-ai-act-compliance	Apache-2.0	11357	LICENSE	main	bf64026544b9bccf0106efbc26b5761821ec513f	6	EMEA	padosoft (IT); sibling repo laravel-pii-redactor is "Italian-first"; subject EU AI Act	NEW	topic:ai-act
+Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools	MIT	1074	LICENSE	main	73517e3c38ce622b7e97e6b35bfdcfeb92b3d5cc	4	EMEA	European academic replication package on AI Act technical documentation	NEW	topic:ai-act
+franlu/Programacion	Unlicense	1211	LICENSE	main	f50f95e536cfd19ca4bf2f0f28d6bec4b21141d0	17	EMEA	Spanish FP (formacion profesional) ciclo formativo curriculum; CFGS/DAM modules	NEW	topic:educacion
+mattiebrandolini/paper-blinder	MIT	1074	LICENSE	main	33126013157936f1985d001dab04c7bbc4d4d023	0	North America	FERPA-scoped blind grading; FERPA is a US statute	NEW	topic:student-privacy
+mizcausevic-dev/pii-student-vault-contract-profile	MIT	1069	LICENSE	main	8f381a44d2588ca6665ddf91aaa9df79f4c15e6e	1	North America	FERPA 34 CFR 99.3 + COPPA 16 CFR 312.2 categories	NEW	topic:student-privacy
+mizcausevic-dev/ferpa-readiness-evidence-bundle	MIT	1069	LICENSE	main	4e5b51e3e09953cb8e7a8824bcf3606df692739a	0	North America	FERPA's 8 obligation families, cited by section	NEW	topic:student-privacy
+GIGAyama/Digital_textbook	MIT	1065	LICENSE	main	25ecbc16b61e139995d24589f39d614bf9d5f32f	0	APAC	topics japanese + gigaschool; Japanese description; GIGA School is MEXT's programme	NEW	topic:digital-textbook
+studio-11-co/falsify	MIT	1073	LICENSE	main	dce1a0c2bc72f2453c1eb3ae982629c31108672c	8	Global	jurisdiction-neutral (SHA-256 + RFC 3161); AI Act art.12 appears in its topics only	NEW	topic:ai-act
+kuzivaai/getregula	Apache-2.0	11249	LICENSE.txt	main	fbed8f3baf81f0c5f0860ebaf56a2845b632b547	4	Global	names THREE jurisdictions in one tool: EU AI Act + South Korea AI Basic Act + Colorado	NEW	topic:ai-act
+dualeai/c2patxt	Apache-2.0	11339	LICENSE	main	eb58956d2fde6436fe89aa5349de0fd0a774bd10	5	Global	C2PA is an international content-provenance standard	NEW	topic:ai-act
+LibraryCarpentry/lc-computational-thinking	MIT	1115	LICENSE	main	6386d288f025ff74f132bba09e687b037774fe96	7	Global	The Carpentries is an international lesson network	NEW	topic:computational-thinking

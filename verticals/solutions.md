@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A **SIXTH** PASS, AND THE VERTICAL FINDING IS THAT THE **COMPLIANCE LAYER IS THE ONLY LAYER OF THIS STACK THAT IS PERMISSIVE ALL THE WAY DOWN** — WHICH IS WHY IT IS WHERE THE PERMISSIVE SUPPLY KEEPS APPEARING
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(global-verticals leg)* · [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv)
+
+🟢 **`0` new platform rows.** The customisable-platform census stands as `p241`–`p245` left it, and this pass re-confirmed it from the **vendor** side rather than the repository side.
+
+### 🔴 `T246-V1` — the split, re-measured from outside and unchanged
+
+🔵 The `global-verticals` WebSearch leg — `open source education platform LMS SIS MIT Apache 2026` — produced **`0` new rows** and one useful sentence: *"none of the results confirm an MIT- or Apache-licensed LMS/SIS product."*
+
+| Platform | Layer | Licence | Customisable with AI on top? |
+|---|---|---|---|
+| **Moodle** | LMS | 🔴 `GPL-3.0-or-later` | 🟢 yes — plugin API, and the plugin is the arm's-length shape |
+| **Open edX** | LMS / MOOC | 🔴 `AGPL-3.0` | 🟢 yes — XBlocks *(`openedx/XBlock` is `Apache-2.0` at `LICENSE.TXT`, `11 358` B, re-confirmed this pass)* |
+| **Canvas LMS** | LMS | 🔴 `AGPL-3.0` | 🟢 yes — LTI 1.3 + the REST API |
+| **OpenEduCat** | **LMS + SIS + fees + parent app, one database** | 🔴 `LGPL-3.0` | 🟢 yes — Odoo module layer. 🔵 **The only row that spans LMS *and* SIS** |
+| **ILIAS · Sakai · Chamilo** | LMS | 🔴 `GPL` family | 🟢 yes |
+| **i-educar / i-diario** | **SIS, Brazil's largest free school software** | 🔴 `GPL-2.0` | 🟢 yes — and 🟢 **the LATAM integration surface that actually gets bought** |
+| **Kolibri** | offline-first learning platform | 🔴 `MIT` 🟢 | 🟢 yes — 🟢 **the standing exception: a permissive platform, and it is the offline one** |
+
+🔵 **Six passes of the same answer:** the **finished platform** is copyleft, and the **client library, adapter, plugin and now the conformity instrument** are permissive. 🟢 **`p242` named the escape — an `MIT` agent surface in front of a copyleft host, over its API, never linking its code.** This pass adds the reason the escape keeps widening.
+
+### 🟢 `T246-V2` — the finding: conformity is the one vertical slice with **no copyleft anywhere in it**
+
+🟢 `p245` found the **skills lab** was permissive all the way down. 🟢 **`p246` finds a second such slice, and this one has a statute behind it rather than a fashion.**
+
+| Layer of a compliance deployment | Row | Grant |
+|---|---|---|
+| risk classification + bias testing | [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | 🟢 `MIT` |
+| human oversight record *(AI Act art. `14`)* | [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) | 🟢 `Apache-2.0` |
+| multi-jurisdiction indicators | [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) | 🟢 `Apache-2.0` |
+| content provenance on submitted work | [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) | 🟢 `Apache-2.0` |
+| assessment-criteria pre-registration | [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` |
+| US student-data obligations | [`mizcausevic-dev/ferpa-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/ferpa-readiness-evidence-bundle) | 🟢 `MIT` |
+| technical documentation baseline | [`Francesco-Sovrano/…Assessment-Tools`](https://github.com/Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools) | 🟢 `MIT` |
+
+🔵 **Why this is a vertical fact and not an agent fact:** a studio can ship this entire column into a client's proprietary estate with no reciprocal obligation, **and bolt it onto a `GPL`/`AGPL` LMS over the API without touching the host's licence.** 🟢 **It is the arm's-length pattern with the regulator supplying the reason to buy it.**
+
+🔴 **The counter-example, so the claim is not overstated:** the sovereignty-minded end of the same market reaches for **copyleft on purpose** — [`JehanneDussert/govllm`](https://github.com/JehanneDussert/govllm) is **`EUPL-1.2`** *(the EU's own reciprocal licence, `13 599` B, read first-hand)* and [`vaaraio/vaara`](https://github.com/vaaraio/vaara) is **`AGPL-3.0`** by declaration. 🟡 **Both are deployable as a service; neither is linkable into a proprietary deliverable.** Expect the choice to be deliberate and do not expect to be given a dual licence for asking.
+
+### 🔴 `T246-V3` — a platform layer with a legislature and **two repositories**: the digital textbook
+
+🔵 These shelves have carried the digital-textbook **policy** for eleven passes. 🟢 **`p246` is the first to census the supply, and `topic:digital-textbook` is `2` repositories on all of GitHub**, both `0`★:
+
+- 🟢 [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) — **`MIT`**, `1 065` B, `main` · `25ecbc16b61e`. A Japanese teacher's PDF-annotation and worksheet tool with education stamps, sharing to pupil devices by **WebRTC P2P — no server in the path**. **APAC**, basis: topics `japanese` + `gigaschool`.
+- 🔴 [`docrealm/docs-gb-textbook`](https://github.com/docrealm/docs-gb-textbook) — 中小学教科书国家标准, **`NO-GRANT`** at all `40` licence paths × `2` refs.
+
+🔵 **Set against the policy the shelves already hold** — Korea's AI textbooks **stripped of official status** after sub-`30`% adoption, Japan's *"official as early as `2030`"*, China's compulsory hours — 🟢 **this is a platform category that regulators have named, that has no incumbent open-source platform, and whose only permissive implementation is one teacher's `MIT` repository with zero stars.**
+
+### 🟡 `T246-V4` — the national-incumbent layer, one row richer
+
+🟢 `p243` censused the **national incumbent school portal** — not open source, and what EMEA actually integrates with. 🟡 **This pass adds the LATAM analogue from the `educacion` axis: Chile's `SENCE`**, reached by [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) *(`29`★, **`CARRIED`**)* — a Moodle plugin that registers attendance **into the national training authority's platform**.
+
+🔵 **The shape repeats across every region on these shelves:** the system of record is a government platform with an API and no source, and the sellable artefact is the **plugin that satisfies its reporting obligation**. 🟢 Moodle plugin in Chile, LTI into the state portal in EMEA, PowerSchool client in US K-12 *(`p244`)*, `i-educar` module in Brazil.
+
 ## Pass 245 — 2026-10-16 — THE PERMISSIVE/COPYLEFT SPLIT RECONFIRMS, AND THIS PASS ADDS THE ONE VERTICAL THAT IS **PERMISSIVE ALL THE WAY DOWN**: THE **SKILLS LAB**, WHERE NOTHING COPYLEFT SITS IN THE STACK
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.**

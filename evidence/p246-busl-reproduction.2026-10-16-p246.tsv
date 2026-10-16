@@ -1,0 +1,4 @@
+input	family_of	commercial_use_ok	p246_governing_family	p246_verdict	note
+IAGA-TEAM/IAGA-Sentinel LICENSE (real, 4913 B, main 011a..ced1bbdb)	Apache-2.0	ALLOWED (exit 0)	BUSL	SOURCE-AVAILABLE:BUSL;names-but-does-not-grant=Apache License, Version 2.0	THE FINDING: a 196-star row published as permissive would have been wrong
+minimal BSL, Change License: Apache License, Version 2.0	Apache-2.0	ALLOWED (exit 0)	BUSL	SOURCE-AVAILABLE:BUSL	reproduced from a 10-line synthetic payload
+minimal BSL, Change License: GNU General Public License, Version 2.0 or later	GPL-2.0	ALLOWED (exit 0)	BUSL	SOURCE-AVAILABLE:BUSL	NOT APACHE-SPECIFIC: any change licence defeats the BUSL branch

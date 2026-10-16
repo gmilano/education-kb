@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — **APPEND-ONLY** — THE WEEK'S MOVEMENT IS THAT THE AGENT AXIS HAS CROSSED INTO **REGULATED-CAPABILITY TOOLING**: `topic:ai-act` PAID `6` ROWS WHERE THE TUTOR AND TEACHER AXES PAID `0`, AND THE AXIS'S OWN TOP ROW IS SOURCE-AVAILABLE, NOT OPEN
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) · [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv)
+
+### 🟢 The movement, in one table
+
+| axis | `total_count` | new permissive rows | direction vs last week |
+|---|---|---|---|
+| 🟢 **`topic:ai-act`** | `204` | **`6`** | 🆕 **new axis, and the pass's most productive** |
+| 🟡 `topic:student-privacy` | **`9`** | `3` | 🆕 new axis — and a population of nine |
+| 🟡 `topic:computational-thinking` | `23` | `1` | 🆕 new axis |
+| 🔴 `topic:digital-textbook` | **`2`** | `1` | 🆕 new axis — **the whole category is two repositories** |
+| 🔴 `topic:ai-literacy` *(`p245`'s axis)* | `257` | — | not re-run; `p245`'s `7` rows stand |
+| 🔴 teacher-tooling freetext | `0`–`77` | **`0`** | 🔴 **still sterile, third pass running** |
+
+🔵 **Last week `p245` found the agent axis had moved from the tutor to the AUDITOR — repositories that teach a human to check a model's work.** 🟢 **This week it moved one step further out: from teaching the check to EVIDENCING it.** Six of this pass's twelve rows are conformity instruments — risk classifiers, human-review trackers, evidence bundles, provenance marks, pre-registered pass bars. 🔵 **The agent is no longer the product; the record the agent leaves is the product.**
+
+### 🔴 The week's cautionary row: the axis's top repository reads open and is not
+
+[`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel) — `196`★, Rust, *"sits next to your AI agents and answers the one question the agent itself cannot"* — is **`Business Source License 1.1`**, with an **Additional Use Grant that forbids offering it to third parties as a hosted or managed service** and a **Change Date of `2030-05-03`**.
+
+🔴 **This KB's shared classifier answered `Apache-2.0` and ALLOWED**, because BSL names Apache as its *future* licence and the Apache anchor fires first. 🟢 **Full mechanism, reproduction and the `0`-row blast radius are in [`agents/top.md` `T246-A`](../agents/top.md).** 🔵 **For this shelf the lesson is short: on the agent-governance axis, source-available is now common enough that "it has a LICENSE file" is not a finding.**
+
+### 🟢 The three APAC and NA rows worth watching
+
+| Repo | Grant | ★ | Region | Why it is a trend and not just a row |
+|---|---|---|---|---|
+| [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | 🟢 `MIT` | **0** | **APAC** | 🔵 **Offline-first for a THIRD reason.** `p244` found offline-first arriving in two regions from opposite constraints *(EMEA sovereignty, APAC connectivity)*. This is the third: **WebRTC P2P so pupil data never reaches a server at all** — a teacher's answer to a privacy rule, built by a teacher |
+| [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) | 🟢 `MIT` | **0** | **North America** | 🟢 **The teacher tool the dedicated queries cannot find, again.** `p245` found `QuizWeaver` on a literacy axis; `p246` finds blind grading on a **privacy** axis. 🔴 **Teacher tooling is never on the teaching axis** — three passes of evidence now |
+| [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 🟢 `MIT` | 8 | Global | 🟢 Pre-registers and timestamps the evaluation criteria *(`SHA-256`, `RFC 3161`)* **before** the test runs. 🔵 A permissive foothold in **automated assessment**, which `p245` declared had none |
+
+### 🔴 What did NOT move, said with the query that failed
+
+- 🔴 **The tutor axis paid nothing this week and was not re-run; `p245` measured it near-sterile** *(exactly one new high-star education agent, already carried)*.
+- 🔴 **The freetext channel failed a third time.** `school district AI policy guidance …` returned [`public-apis`](https://github.com/public-apis/public-apis) at `489 341`★ and `0` of `20` on topic. 🟢 **The rule stands: `topic:` or it did not happen.**
+- 🔴 **India's Grade-`3` mandate starts in AY `2026-27` and the agent supply for it is `0`.** `topic:cbse` is `24` student practical projects with its single AI row **archived**.
+- 🔴 **Open Badges 3.0 / verifiable credentials: not re-run this pass.** `p245`'s declared gap stands and `p246` does not claim it changed.
+
 ## Pass 245 — 2026-10-16 — THE WEEK'S MOVEMENT IS THAT **AI-LITERACY OVERTOOK TUTORING** AS THE PRODUCTIVE AGENT AXIS — `257` REPOS, `7` NEW ROWS — WHILE THE TUTOR AXIS PAID **ONE CARRIED REPOSITORY**
 
 ⏱️ **APPEND-ONLY SHELF.** This section is added above pass `244`'s; nothing below it is rewritten.

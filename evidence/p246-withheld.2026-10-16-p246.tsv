@@ -1,0 +1,13 @@
+slug	stars	payload_family	bytes	path	ref	why_withheld	remedy
+IAGA-TEAM/IAGA-Sentinel	196	BUSL-1.1	4913	LICENSE	main	source-available NOT OSI; Additional Use Grant forbids offering it to third parties as a hosted or managed service; Change Date 2030-05-03	buy a commercial licence from the Licensor, or wait for the 2030-05-03 conversion to Apache-2.0
+vaaraio/vaara	15	AGPL-3.0	34020	LICENSE	main	network copyleft; the repo declares AGPL-3.0 in its own description	usable only if the deliverable is itself AGPL, or via an upstream commercial grant
+JehanneDussert/govllm	31	EUPL-1.2	13599	LICENSE	main	EUPL-1.2 is reciprocal (copyleft) with an EU-law compatibility list	usable as a deployed service; not linkable into a proprietary deliverable
+Daniesmor/Dr.Scratch-Northeastern	5	AGPL-3.0	34523	LICENSE.txt	main	network copyleft on a Scratch computational-thinking analyser	reference only, or AGPL deliverable
+mitmath/computational-thinking	2839	SPLIT-SCOPE	308	LICENSE.md	Fall24	code MIT BY REFERENCE (a link, not the text); TEXT is CC-BY-SA-4.0 and for a course repo the text IS the product; p1054 returns NOT-MIT-BODY	usable as code; the lesson text carries share-alike. Upstream-ask for a code grant over the materials
+trevor050/honorlyai-resources	0	CC-BY-4.0	1339	LICENSE	main	a CONTENT licence on the exact artefact 134 US state bills demand (K-12 AI governance + classroom policy + vendor evaluation)	usable as curriculum/policy reference; needs a code grant for tooling built on it
+V0raOnline/arkinesis	6	CC-BY-NC-SA-4.0	20850	LICENSE	main	NON-COMMERCIAL and share-alike; a consultancy cannot ship it	cite as evidence only
+docrealm/docs-gb-textbook	0	NO-GRANT	-	-	main	all 40 licence paths x 2 refs return 404 (Chinese national textbook standard)	upstream-ask
+ia-toki/bebras-pandai	4	NO-GRANT	-	-	main	all 40 licence paths x 2 refs return 404 (Indonesian Bebras computational-thinking app)	upstream-ask
+crodriguezn/python-2025	10	NO-GRANT	-	-	master	all 40 licence paths x 2 refs return 404 (UNEMI Python course, Ecuador)	upstream-ask
+AndyCG03/BotForger-Game	8	NO-GRANT	-	-	main	all 40 licence paths x 2 refs return 404	upstream-ask
+jamj2000/fp-resultados	9	UNCLASSIFIED	1669	composer.json	master	the only payload found is a MANIFEST (tierC), not a licence text; a manifest license field is a CLAIM, not a grant	re-probe at a licence path; upstream-ask if none exists

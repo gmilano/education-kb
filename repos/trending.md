@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS A **POPULATION OF TWO**: THE ARTEFACT KOREA LEGISLATED AND JAPAN PLANS FOR `2030` HAS ALMOST NO OPEN-SOURCE SUPPLY, AND THE AXIS THAT PAID INSTEAD IS **NOT AN EDUCATION TOPIC AT ALL**
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) *(8 queries, channel + sort key + total_count + on-topic count)* · [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) · [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv)
+
+🔵 **Channel, recorded beside the sort key per `ACTION VV` and `ACTION VH`:** every query below ran against the **GitHub search API through the MCP server**, `sort=stars`, `order=desc`. 🟢 **`curl` to that endpoint still returns `403` through this session's proxy** *(`"sessions are bound to their configured repositories"`)*, and the MCP transport is still the one that works — `p241`'s finding, holding for five passes.
+
+### 🔴 `T246-R1` — four axes measured, and two of them are whole categories smaller than a single page of results
+
+| Axis | `total_count` | read | on-topic | new permissive | what the number means |
+|---|---|---|---|---|---|
+| 🔴 **`topic:digital-textbook`** | **`2`** | `2` | `2` | **`1`** | 🔵 **THE WHOLE CATEGORY IS TWO REPOSITORIES**, both `0`★ |
+| 🟡 **`topic:student-privacy`** | **`9`** | `9` | `9` | **`3`** | 🔵 a population of nine, **entirely North American** |
+| 🟡 `topic:computational-thinking stars:>3` | `23` | `20` | `14` | `1` | university course dumps; **zero Indian repositories** |
+| 🟢 **`topic:ai-act`** | `204` | `20` | `18` | **`6`** | 🔵 **the productive axis — and not an education topic** |
+
+🟢 **`topic:digital-textbook`, read in full because it fits on one screen:**
+
+| repo | ★ | grant | region |
+|---|---|---|---|
+| [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) | `0` | 🟢 **`MIT`** *(`1 065` B, `main` · `25ecbc16b61e`)* | **APAC** — Japanese, `gigaschool`, elementary school |
+| [`docrealm/docs-gb-textbook`](https://github.com/docrealm/docs-gb-textbook) | `0` | 🔴 **`NO-GRANT`** — all `40` licence paths × `2` refs return `404` | APAC — 中小学教科书国家标准 |
+
+🔴 **These shelves have carried the digital-textbook POLICY for eleven passes** — Korea's rollback, Japan's *"as early as `2030`"*, China's compulsory hours. 🟢 **This is the first time the SUPPLY has been measured, and it is two repositories, one of them ungranted.** 🔵 **A category with a legislature behind it and two repositories in it is not a crowded market.**
+
+### 🟢 `T246-R2` — the productive axis is a **cross-industry** topic, and that is the finding
+
+🔵 `topic:ai-act` is not tagged `education`. It paid **`6` of this pass's `12`** permissive rows — more than every education-tagged axis combined. 🟢 **The bridge is legal, not semantic: education is Annex III high-risk under the EU AI Act**, so the instruments built for AI Act conformity *are* education infrastructure the moment a school deploys a model.
+
+| repo | ★ | grant *(bytes, canonical?)* | what it contributes |
+|---|---|---|---|
+| [`Hiepler/EuConform`](https://github.com/Hiepler/EuConform) | **125** | 🟢 `MIT` *(`1 073` B)* | risk classification + bias testing, evidence engine |
+| [`padosoft/laravel-ai-act-compliance`](https://github.com/padosoft/laravel-ai-act-compliance) | 6 | 🟢 `Apache-2.0` *(`11 357` B, **canonical**)* | art. `14` **human-review tracker**, DSAR, risk register |
+| [`kuzivaai/getregula`](https://github.com/kuzivaai/getregula) | 4 | 🟡 `Apache-2.0` *(`11 249` B, non-canonical)* | **EU + South Korea + Colorado** in one CLI |
+| [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) | 5 | 🟢 `Apache-2.0` *(`11 339` B, **canonical**)* | C2PA credentials **in plain Unicode text** |
+| [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) | 8 | 🟢 `MIT` *(`1 073` B)* | timestamped pass bar, `RFC 3161` |
+| [`Francesco-Sovrano/…Assessment-Tools`](https://github.com/Francesco-Sovrano/AI-Act-Compliance-Technical-Documentation-Assessment-Tools) | 4 | 🟢 `MIT` *(`1 074` B)* | measured baseline for AI-drafted conformity docs |
+
+🔴 **And the axis's own highest-star row is not open source:** [`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel) at `196`★ is **`BUSL-1.1`**, read first-hand, with a `2030-05-03` change date — misreported as `Apache-2.0` by this KB's shared classifier until this pass. Full mechanism in [`agents/top.md` `T246-A`](../agents/top.md).
+
+### 🔴 `T246-R3` — the licence census over `313` carried `Apache-2.0` rows *(`ACTION WY`)*
+
+🟢 **This is the first time this shelf's `Apache-2.0` tier has been graded against the ASF's actual bytes across the whole population rather than a sample.**
+
+| verdict | rows | share |
+|---|---|---|
+| 🟢 `CANONICAL` | **`280`** | `91.8`% |
+| 🟡 `NON-CANONICAL` *(one known variant — an inserted article and one synonym; **no right differs**)* | `18` | `5.9`% |
+| 🔴 `NOT-APACHE` | `7` | `2.3`% |
+
+🔴 **Two carried cells are wrong and are corrected here:** [`MuriloCalegari/Ifes-Academico`](https://github.com/MuriloCalegari/Ifes-Academico) is **`GPL-3.0`** *(`35 149` B at ref `QAcad`)*, not `Apache-2.0` — 🔴 **copyleft published as permissive, the dangerous direction**; and [`opensalt/opensalt`](https://github.com/opensalt/opensalt) is **`MIT`** *(`1 080` B at ref `develop`)*, not `Apache-2.0`. 🟢 **Both were reachable only because the ladder resolves the REAL default branch** — `QAcad` and `develop` — rather than guessing `main|master`.
+
+🔵 **Two duplicate-spelling pairs surfaced in the same sweep, with byte-identical payloads:** `Crosstalk-Solutions/Project-NOMAD` ≡ `Crosstalk-Solutions/project-nomad` *(both `10 779` B)*, and `Jazy1/rumi-pinokio` ≡ `Orenda-Project/rumi-platform` *(both `11 287` B)*. 🟢 **That is `ACTION WX`'s class arriving through the licence census** — the discriminator is the pinned `HEAD`, and both columns are already in the table.
+
+### 🔴 `T246-R4` — what the channel did NOT hold
+
+- 🔴 **The freetext leg returned `public-apis` at `489 341`★.** `school district AI policy guidance in:name,description,readme stars:>1 pushed:>2026-05-01` → `77` hits, `20` read, **`0` on topic**. 🟢 **Third independent measurement of the same thing** *(`p239`, `p244`, `p246`)*: **an unscoped freetext query measures GitHub's star distribution, not the axis.**
+- 🔴 **`topic:educacao` is SATURATED** — every on-topic Brazilian row returns `CARRIED` *(`i-educar`, `i-diario`, three `bncc-dev` packages, `pre-matricula-digital`, `br.tag`, `bancodeitinerarios`)*. 🟢 **LATAM's `0` new rows is saturation, not absence**, and that is a different fact from the *"LATAM: `0` repositories"* claim `p235` falsified.
+- 🔴 **`topic:educacion` is a SPAIN axis, not a LATAM one** — `franlu`, `jamj2000`, `profeIAP` are Spanish vocational-training teachers. Its genuine LATAM rows *(Uruguay, Mexico, Chile)* were all already carried. 🟡 **No pass has yet found the axis that reaches LATAM-specific Spanish-language supply. Stated as an open channel question, not as an absence.**
+- 🔴 **`topic:cbse` holds `24` repositories and `0` that serve India's Grade-`3` AI mandate** — class-12 CS submissions, Anki decks and question-paper dumps, with the single AI row `arjav0703/cbse-ai` **archived**.
+
 ## Pass 245 — 2026-10-16 — `topic:education license:apache-2.0` OPENED A CLASS THESE SHELVES HAD NO NAME FOR — THE **SKILLS LAB** — AND `project-nomad` AT `40 351`★ IS NOW THE MOST-STARRED ROW IN THIS KB BY AN ORDER OF MAGNITUDE
 
 ⏱️ **APPEND-ONLY SHELF.** This section is added above pass `244`'s; nothing below it is rewritten.

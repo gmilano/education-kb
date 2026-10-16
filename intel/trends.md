@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 246 — 2026-10-16 — THE TREND IS **FROM CAPABILITY TO EVIDENCE**: WHAT THE PERMISSIVE SUPPLY NOW BUILDS IS NOT THE TEACHING, IT IS THE **RECORD THAT THE TEACHING WAS DONE LAWFULLY** — AND THE COUNTER-TREND IS THAT A MANDATE STILL BUYS NOTHING, WHICH KOREA HAS NOW PROVED **STATUTORILY**
+
+⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(4 regional legs)* · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv)
+
+### 🟢 `T246-T1` — the trend: the artefact has moved one step further from the learner, for the fourth pass running
+
+| pass | where the permissive supply was building |
+|---|---|
+| `p242` | **beside** the LMS, over its API — arm's length |
+| `p243` | the **adapter** to someone else's system of record |
+| `p245` | the **audit** — teaching a human to check a model's work |
+| 🆕 **`p246`** | 🟢 **the EVIDENCE — the record that the check happened, timestamped, hash-chained and holdable up to a regulator** |
+
+🔵 **Measured, not asserted:** `6` of this pass's `12` permissive rows are conformity instruments — risk classifiers, human-review trackers, FERPA evidence bundles, content-provenance marks, pre-registered pass bars. 🔴 **The tutor axis and the teacher-tooling axis together paid `0`.**
+
+🟢 **Why it is happening now is in the regional legs, and it is the same reason in four different legal systems:** every region has acquired a **date and a named capability**, and none of them has acquired a **tool**. EMEA has prohibited emotion recognition in education since `2025-02-02` and moved high-risk duties to `2027-12-02`. North America has `134` bills in `31` states, with district AI policies due in Ohio from `2026-07-01`. India mandates AI from Grade `3` in AY `2026-27`. 🔵 **A regulator that names a capability creates demand for proof, and proof is a software artefact.**
+
+### 🔴 `T246-T2` — the counter-trend, now with a statutory outcome: **a mandate is not adoption**
+
+🟢 `p244` stated this and credited Korea. 🔴 **`p246` can close it:** Korea's **National Assembly stripped the AI digital textbooks of official textbook status**, after adoption sat **below `30`%** by March and unions said the pace had outrun preparation.
+
+🟢 **And the money is the real signal: `$960M` moved to AI talent centres and vocational high schools through `2030`.** 🔵 **The failed artefact was content pushed to every pupil; the funded artefact is capability built inside institutions.** That is the same movement `T246-T1` measures in code — away from the delivered lesson, toward the durable instrument.
+
+🔵 **Public opinion is drifting the same way in the countries that moved fastest:** support for **banning** AI in schools runs `23`% *(Indonesia)* to `31`% *(South Korea)* in the **Ipsos Education Monitor 2026**, and is **rising in Japan and South Korea**. 🟡 **Read it as a demand for guardrails, not as rejection** — it is the same constituency that makes `T246-T1`'s evidence layer sellable.
+
+### 🟢 `T246-T3` — the third independent arrival of **offline-first**, and it is a privacy argument now
+
+| pass | region | why offline |
+|---|---|---|
+| `p244` | EMEA | 🟢 sovereignty — the data must not leave the jurisdiction |
+| `p244` | APAC | 🟢 connectivity — the classroom has none |
+| 🆕 **`p246`** | **APAC** *(Japan)* | 🟢 **privacy by architecture — there is no server to breach** |
+
+🔵 [`GIGAyama/Digital_textbook`](https://github.com/GIGAyama/Digital_textbook) *(`MIT`)* shares teacher material to pupils' devices over **WebRTC P2P with no server in the path**, and [`mattiebrandolini/paper-blinder`](https://github.com/mattiebrandolini/paper-blinder) *(`MIT`, **North America**)* runs **handwriting recognition on-device** *(Qwen2.5-VL via Ollama)* so that FERPA-covered work never leaves the building.
+
+🟢 **Three regions, three motives, one architecture.** 🔵 **For a studio this is the rare case where the compliance-driven design and the cheap design are the same design** — and `p244`'s read holds: one build, sellable in more than one region.
+
+### 🔴 `T246-T4` — the trend's blind spot: the regulated capabilities still have thin or **non-code** supply
+
+| Capability a regulator named | Permissive implementation |
+|---|---|
+| 🟢 content provenance on submitted work | 🟢 **now exists** — [`dualeai/c2patxt`](https://github.com/dualeai/c2patxt) `Apache-2.0` |
+| 🟢 pre-registered assessment criteria | 🟢 **now exists** — [`studio-11-co/falsify`](https://github.com/studio-11-co/falsify) `MIT` |
+| 🔴 **district AI policy** *(demanded by `134` US bills)* | 🔴 exists as **`CC-BY-4.0` content** — [`trevor050/honorlyai-resources`](https://github.com/trevor050/honorlyai-resources). **Not a code grant** |
+| 🔴 **AI literacy curriculum, Grade `3`+** *(India, AY `2026-27`)* | 🔴 **none.** `topic:cbse` = `24` student projects, its one AI row **archived**; `topic:computational-thinking` holds **zero Indian repositories** |
+| 🔴 **digital textbook** *(Korea, Japan `2030`, China)* | 🔴 **a population of TWO on all of GitHub**, both `0`★, one ungranted |
+| 🔴 verifiable credentials / Open Badges 3.0 | 🔴 **still `0`** — `p245`'s declared gap, **not re-run this pass** and not claimed changed |
+
+🟢 **This is the trend stated as a buy-list:** the capabilities with permissive supply are the ones a studio should compose; the four red rows are the ones a studio must build, and three of them have a statute with a date attached.
+
+### 🔴 `T246-T5` — the trend in licensing: **source-available is now common enough to be a diligence line item**
+
+🔵 `p245` found the best teacher-agent repository on its axis licensed as `CC-BY-SA` content. 🔴 **`p246` found four distinct ways a licence cell can be wrong, in one pass, across `321` payloads read first-hand:**
+
+1. 🔴 **`BUSL-1.1` reading as `Apache-2.0`** — `196`★ [`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel), because BSL names Apache as its *future* licence *(`Change Date 2030-05-03`)*.
+2. 🔴 **`GPL-3.0` published as `Apache-2.0`** — a carried row, `MuriloCalegari/Ifes-Academico`, found only by resolving its real default branch `QAcad`.
+3. 🔴 **`MIT` over a `CC-BY-SA` text half** — `2 839`★ `mitmath/computational-thinking`, where for a *course* repo the text is the product.
+4. 🔴 **An unresolved merge conflict inside a `LICENSE`** — `0xnavarro/IA-PARA-TODOS`, with two competing copyright lines and no way to tell whom to attribute.
+
+🟢 **Base rate from the population: `2.3`% of carried `Apache-2.0` rows are not Apache at all.** 🔵 **Low enough to be invisible to sampling, high enough that one of them lands in a client deliverable eventually.** 🟢 **The trend to act on: budget the first-hand licence read into every engagement, and run it at the branch `ls-remote` reports, not at `main`.**
+
 ## Pass 245 — 2026-10-16 — THE TREND IS THAT **THE REGULATOR NOW ARRIVES BEFORE THE PLATFORM**, AND THE COUNTER-TREND IS THAT THE TWO CAPABILITIES BEING REGULATED — **AUTOMATED ASSESSMENT** AND **CREDENTIALS** — HAVE **NO PERMISSIVE IMPLEMENTATION AT ALL**
 
 ⏱️ **FOURTEENTH pass of `2026-10-16`.**
