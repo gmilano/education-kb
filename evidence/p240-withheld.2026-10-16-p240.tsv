@@ -1,0 +1,31 @@
+slug	ladder_status	payload_path	bytes	branch	head	classifier_verdict	why_withheld	region_basis
+bennix/HighChem	FOUND	LICENSE	35149	main	07b7f5479b8e	GPL-3.0	copyleft - not permissive	APAC - 沪科版 Shanghai-edition high-school chemistry, gaokao item generation
+bennix/AIGaokao	FOUND	LICENSE	35149	main	73ba2b03ea19	GPL-3.0	copyleft - not permissive	APAC - gaokao mathematics question bank + knowledge graph
+gafapa/moodle-local_moodlia	FOUND	LICENSE	652	main	44c38c41d1fe	GPL-3.0	copyleft - Moodle plugin ecosystem bound	EMEA - Spanish-language Moodle automation over REST and MCP
+ssystems-de/moodle-quiz_livequizmonitor	FOUND	COPYING.txt	35147	main	fd1e1de29833	GPL-3.0	copyleft - Moodle plugin ecosystem bound	EMEA - owner ssystems-de
+CyrilBlum/Moodle-Question-Hub	FOUND	version.php	1130	main	e80b0fbff00c	GPL-3.0	copyleft - GPL header in the manifest, Moodle bound	EMEA - Moodle question-bank marketplace
+dari-learning/moodle-format_dari	FOUND	LICENSE	35147	main	098e18d4d765	GPL-3.0	copyleft - Moodle plugin ecosystem bound	Global - no regional evidence
+davidherney/moodle-format_onetopic	FOUND	LICENSE	35122	master	bf59f12f670d	GPL-3.0	copyleft - Moodle plugin ecosystem bound	Global - no regional evidence
+judge0/judge0	FOUND	LICENSE	34526	master	db4d04497102	GPL-3.0	copyleft - not permissive	EMEA - judge0 is a Croatian project; grant read first-hand
+didactika/moodle-local_autograder	FOUND	LICENSE	35148	main	3dd16f303911	GPL-3.0	copyleft - Moodle plugin ecosystem bound	EMEA - Spanish-language owner didactika
+didactika/moodle-report_autograder	FOUND	LICENSE	35148	main	e0c00daf7bdf	GPL-3.0	copyleft - Moodle plugin ecosystem bound	EMEA - Spanish-language owner didactika
+maestroseb/marcarpro	FOUND	LICENSE	35149	main	36fdb955d43b	GPL-3.0	copyleft - not permissive	EMEA - targets EducaAndOS, the Junta de Andalucía school desktop
+jeanlucio/moodle-local_studiolms	FOUND	COPYING.txt	35149	main	9c78553d51c1	GPL-3.0	copyleft - Moodle plugin ecosystem bound	LATAM - Portuguese-language owner, Brazilian Moodle ecosystem
+jeanlucio/moodle-mod_codereview	FOUND	version.php	1117	main	32b0ab69de54	GPL-3.0	copyleft - GPL header in the manifest, Moodle bound	LATAM - same owner
+jeanlucio/moodle-block_playerhud	FOUND	COPYING.txt	35149	main	43801220cc88	GPL-3.0	copyleft - Moodle plugin ecosystem bound	LATAM - same owner
+jeanlucio/moodle-mod_playervideo	FOUND	COPYING.txt	35149	main	c5e9099e0c2e	GPL-3.0	copyleft - Moodle plugin ecosystem bound	LATAM - same owner
+eduplay-moodle-suite/moodle-local_eduplay	FOUND	LICENSE	35149	main	79310aec33b7	GPL-3.0	copyleft - Moodle plugin ecosystem bound	LATAM - EduPlay is the video service of RNP, Brazil's national research network
+josueninadiaz/kunnskap	FOUND	LICENSE	34523	main	a23e588bb1ad	AGPL-3.0	network copyleft - a hosted studio deliverable triggers section 13	Global - Spanish-language teaching platform, no country marker
+lopentu/inside-the-scorer-paclic2026	FOUND	LICENSE	4638	master	7b106c3f8b83	PolyForm	NONCOMMERCIAL - not OSI	APAC - PACLIC 2026 (Taiwan-based lopentu lab)
+heronerar/OpenGaokao	FOUND	LICENSE	15992	main	a75b65aaa494	UNCLASSIFIED -> NONCOMMERCIAL-NOT-OSI after the p240 fix	custom OpenGaokao-SAL-1.0: 禁止商业使用 (commercial use prohibited), no redistribution off GitHub, no competing products; the payload states it is NOT OSI-approved	APAC - Chinese-language licence, gaokao recommendation toolkit
+edumind-es/edumind-miclase	FOUND	LICENSE	511	main	f837df52de96	UNCLASSIFIED (dual-grant pointer)	511 B pointer naming AGPL-3.0-or-later OR EUPL-1.2 and deferring to two other files; neither is permissive	EMEA - LOMLOE evaluation criteria, Spanish state curriculum
+beenhow/ESW	FOUND (tier C)	pubspec.yaml	4050	master	de47db0a0f62	NO DECLARATION	the ladder reports FOUND for a manifest that contains no licence field at all	APAC - 高中真题课标词 (Chinese curriculum-standard vocabulary)
+yusheng266186-beep/beichen	FOUND (tier C)	package.json	769	main	654be4a24dc1	NO DECLARATION	manifest with no licence field	APAC - Chinese high-school subject-selection companion
+praxisdigital/local_mxaimanager	FOUND (tier C)	version.php	330	MOODLE_50_STABLE	9e0b0efc6e25	NO DECLARATION	Moodle AI-manager plugin whose version.php carries NO GPL header - the ecosystem bound is a policy, not a guarantee	EMEA - owner praxisdigital; branch MOODLE_50_STABLE
+mwakidenis/TechLearn-Kenya	FOUND (tier C)	package.json	2737	main	a070725b7b4d	NO DECLARATION	manifest with no licence field	EMEA - Kenya, named in the repository name and README
+Ray86-dev/nombramientos-canarias	FOUND (tier C)	package.json	689	main	6f877f980771	NO DECLARATION	manifest with no licence field	EMEA - Canarias teacher-appointment PDFs from the Consejería
+xiao222xian/fuyao-zhiyuan-platform	NO-GRANT	-	-	main	8deb1ae9ffdc	-	40 paths x 2 refs, nothing served	APAC - Chinese gaokao platform, topic ai-agent
+Elia43/DataPilot	NO-GRANT	-	-	main	ae6137495a80	-	40 paths x 2 refs, nothing served - and it is the pass's best eval artefact (RAGAS 0.97 answer relevancy, faithfulness 0.64->0.77, 32 students at USJ)	EMEA - Université Saint-Joseph, Beirut
+CesarUTP/TRANSFORMADOR-PDF-A-MOODLE	NO-GRANT	-	-	main	3bae2bb8f045	-	40 paths x 2 refs, nothing served	LATAM - UTP, Panama
+temocbzc/Medidas_de_tendencia_central	NO-GRANT	-	-	main	c70f40a999be	-	40 paths x 2 refs, nothing served	LATAM - CCH-UNAM statistics laboratory, Mexico
+CAHLR/CAHLR-OATutor-Staging-V2	NO-GRANT	-	-	main	c2d2ecf20e0c	-	40 paths x 2 refs, nothing served - the staging twin of CAHLR/OATutor, which IS carried and IS permissive	North America - UC Berkeley CAHLR

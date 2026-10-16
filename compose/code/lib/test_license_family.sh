@@ -1087,5 +1087,82 @@ else
   check "T232 fixtures de p173 presentes" si no
 fi
 
+# -----------------------------------------------------------------------------
+# P240 (pase 240 del 2026-10-16) -- EL TOKEN-MATCH COMERCIAL ERA MONOLINGUE.
+#
+# El especimen es real y se leyo de primera mano: `heronerar/OpenGaokao`, LICENSE de
+# 15 992 B en `main` (`a75b65aaa494`), 92,9% CJK.  Dice «禁止商业使用» (prohibido el uso
+# comercial) y declara que NO es una licencia OSI.  Antes de P240, `commercial_use_ok`
+# contestaba ALLOWED sobre el.  Las aserciones van en los DOS sentidos, porque una
+# lista de tokens nueva se paga en falsos positivos si no se la ata.
+ZH_NC='# OpenGaokao Source-Available License 1.0
+
+本许可证是“源码可见、商业受限”许可证，不是 OSI 认可的开源许可证。
+
+1. 禁止商业使用；商业使用必须事先取得许可人单独签署的书面付费授权；'
+if commercial_use_ok "$ZH_NC"; then
+  check "P240 zh: 禁止商业使用 niega uso comercial" restringido permitido
+else
+  check "P240 zh: 禁止商业使用 niega uso comercial" restringido restringido
+fi
+check "P240 zh: y la familia pasa a NONCOMMERCIAL-NOT-OSI" "NONCOMMERCIAL-NOT-OSI" "$(family_of "$ZH_NC")"
+
+# NEGATIVO zh: un aviso en chino que PERMITE el uso comercial no puede caer en la rama.
+ZH_OK='MIT License
+
+版权所有 (c) 2026
+
+特此免费授予任何人获得本软件副本的权利，包括但不限于使用、复制、修改、合并、出版发行、
+散布、再授权和/或销售本软件副本的权利，允许商业使用。'
+if commercial_use_ok "$ZH_OK"; then
+  check "P240 zh NEGATIVO: aviso MIT en chino sigue permitido" permitido permitido
+else
+  check "P240 zh NEGATIVO: aviso MIT en chino sigue permitido" permitido restringido
+fi
+
+# es/pt: la FRASE, nunca la palabra suelta.  El negativo es el que importa, porque
+# «comercial» aparece en todo texto que habla de uso comercial PARA PERMITIRLO.
+ES_NC='Licencia de uso
+
+Este material se cede unicamente para uso no comercial en el aula.'
+if commercial_use_ok "$ES_NC"; then
+  check "P240 es: \"uso no comercial\" niega"       restringido permitido
+else
+  check "P240 es: \"uso no comercial\" niega"       restringido restringido
+fi
+ES_OK='Licencia MIT
+
+Se concede permiso para usar, copiar y distribuir este software, incluido su uso
+comercial, sin restriccion alguna.'
+if commercial_use_ok "$ES_OK"; then
+  check "P240 es NEGATIVO: \"uso comercial\" no niega" permitido permitido
+else
+  check "P240 es NEGATIVO: \"uso comercial\" no niega" permitido restringido
+fi
+PT_NC='Este conteudo e disponibilizado apenas para uso nao comercial.'
+if commercial_use_ok "$PT_NC"; then
+  check "P240 pt: \"uso nao comercial\" niega"      restringido permitido
+else
+  check "P240 pt: \"uso nao comercial\" niega"      restringido restringido
+fi
+JA_NC='本ソフトウェアは商用利用禁止です。'
+if commercial_use_ok "$JA_NC"; then
+  check "P240 ja: 商用利用禁止 niega"                  restringido permitido
+else
+  check "P240 ja: 商用利用禁止 niega"                  restringido restringido
+fi
+
+# Y LA GUARDA QUE IMPORTA: las familias permisivas REALES no pasan por esta rama en
+# absoluto (la compuerta de P312 las devuelve antes), asi que la lista nueva no puede
+# tocarlas.  Se afirma sobre los fixtures que esta suite ya traia.
+for _fx in MIT APACHE BSD; do
+  eval "_v=\$$_fx"
+  if commercial_use_ok "$_v"; then
+    check "P240 guarda: $_fx sigue permitiendo uso comercial" permitido permitido
+  else
+    check "P240 guarda: $_fx sigue permitiendo uso comercial" permitido restringido
+  fi
+done
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

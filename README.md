@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — `10` PERMISSIVE ROWS ACROSS THE THREE REGIONS `p239` LEFT UNMEASURED, `ACTION VJ` AND `ACTION VK` BOTH DISCHARGED — AND THE PASS'S FINDING IS THAT THIS KB'S **SHARED LICENCE CLASSIFIER IS MONOLINGUAL**, A DEFECT CLASS `p217` NAMED `23` PASSES AGO ON A DIFFERENT INSTRUMENT
+
+⏱️ **NINTH pass of `2026-10-16`.** p232–p239 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`10` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **`ACTION VJ` discharged** — the LATAM harvest `p239` refused returns `86.7`% on-topic when scoped by `topic:`. 🟢 **`ACTION VK` discharged, and the thresholds it was registered to calibrate are FALSIFIED.** 🟢 **Two instrument defects found, fixed and controlled inside the pass**, plus a new gate — `217`/`217`, `66`/`66`, `29`/`29`, all wired into `make hooks`. 🔴 **`30` rows withheld, every payload read.** 🔴 **North America is this pass's gap: `0` of `10`.** 🔴 **The WebSearch leg produced `0` new rows and `0` corrections for a further pass.**
+
+🔵 **Evidence:** [`p240-verified-rows`](evidence/p240-verified-rows.2026-10-16-p240.tsv) *(10 slugs)* · [`p240-withheld`](evidence/p240-withheld.2026-10-16-p240.tsv) *(30 rows)* · [`p240-classifier-defect`](evidence/p240-classifier-defect.2026-10-16-p240.tsv) · [`p240-grant-language`](evidence/p240-grant-language.2026-10-16-p240.tsv) *(35 payloads)* · [`p240-query-shape`](evidence/p240-query-shape.2026-10-16-p240.tsv) · [`p240-ecosystem-licence-bound`](evidence/p240-ecosystem-licence-bound.2026-10-16-p240.tsv) · [`p240-queries`](evidence/p240-queries.2026-10-16-p240.tsv) · **instrument:** [`compose/code/p240-grant-language/`](compose/code/p240-grant-language/)
+
+### 🔴 `T240-A` — the headline: `commercial_use_ok` returned **ALLOWED** on a licence that prohibits commercial use
+
+🔴 [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao), `LICENSE`, **`15 992` B**, `main` · `a75b65aaa494`, **`92.9`% CJK**. A bespoke `OpenGaokao Source-Available License 1.0` whose own text says it is **not OSI-approved** and whose first clause is **禁止商业使用** — *commercial use is prohibited*.
+
+| | `osi_family_of` | `commercial_use_ok` | `family_of` |
+|---|---|---|---|
+| before `p240` | 🟢 `UNCLASSIFIED` | 🔴 **`ALLOWED`** | 🔴 `UNCLASSIFIED` |
+| after `p240` | 🟢 `UNCLASSIFIED` | 🟢 **`RESTRICTED`** | 🟢 **`NONCOMMERCIAL-NOT-OSI`** |
+
+🔵 **Every token in the commercial branch was English.** 🔴 **And [`p217-bilingual-gate`](compose/code/p217-bilingual-gate/) is titled *"the gate is monolingual, the corpus is not"*** — it found the same defect class `23` passes ago, fixed the shelf-grep side, and **never reached `lib/license_family.sh`**. 🟡 **`ACTION VO`: a defect found in one matcher discharges only with a census of every matcher.**
+
+🟢 **Fixed:** `35` restriction phrases across `9` languages, matched as **phrases not bare words** *(`comercial` appears in permissive Spanish; 商业 appears in any notice that permits it)*, `10` new controls both ways, **`217`/`217`**. 🟢 **And because a token list is a closed vocabulary over an open world**, the new instrument answers the question that needs none — *is this payload in a script the token match can be trusted over?* — with `LATIN-SCRIPT`, `NON-ENGLISH-GRANT-RESTRICTED` and 🔵 **`NON-ENGLISH-GRANT-UNREAD`, which is a refusal to clear rather than a verdict.** Over this pass's own `35` payloads: `34` / `1` / `0` false positives.
+
+### 🔴 `T240-B` — `ACTION VK` discharged, and `p239`'s count thresholds do not survive it
+
+| `total_count` | sort | field scope | on-topic | published rows |
+|---|---|---|---|---|
+| `264` | `updated` | `name,description` | 🟢 **`100.0`%** | 3 |
+| `775` | `updated` | `name,description` | 🟢 **`96.7`%** | 1 |
+| `1 368` | `updated` | `name,description` | 🟢 **`100.0`%** | 🔴 **0** |
+| `2 091` | `updated` | 🔴 `name,description,**readme**` | 🔴 **`40.0`%** | 0 |
+
+🔴 **`264` is ABOVE `CAUTION_MAX = 253` and returns the highest rate this KB has measured.** 🔵 **Rows one and four are the same phrase with one parameter changed: `in:readme`.** The count rose `7.9`× *because* the field scope widened — **breadth is the symptom, field scope is the cause.** 🟡 **`p239`'s own evidence agrees in hindsight: all four of its `SLICE` harvests carried `in:readme` or bare unquoted terms; neither high scorer did.** 🟢 Its `SCOPED`-has-no-threshold rule survives and gains a point at `1.5`× `REFUSE_MIN`.
+
+🔴 **And on-topic is not yield: the `1 368` harvest scored `100`% and produced nothing publishable** — thirty genuine student-information systems, nearly all coursework.
+
+### 🔴 `T240-C` — `ACTION VJ` discharged: EMEA and LATAM supply is not absent and not small, it is **bound**
+
+`topic:moodle-plugin`, `total_count` `429`, `30`/`30` on-topic. 🔴 **`16` of `16` grants read first-hand are `GPL-3.0`. `0` permissive.** 🔴 **`23` of `30` page-one rows come from TWO accounts.**
+
+🔵 **That Moodle plugins are GPL is carried since `p228`. What is new is the consequence for a REGIONAL measurement** — the most current European and Latin American education supply on this channel is structurally unavailable to a commercial engagement, and the quantity is now on the record. 🟡 **`ACTION VR`: record distinct owners beside `total_count` in every query-evidence table — a scoped harvest's failure mode is one prolific owner, the benign twin of `p238`'s farm.**
+
+### 🔴 `T240-E` and `T240-G` — two smaller defects, both in instruments, both fixed or recorded
+
+- 🔴 **The ladder's `FOUND` is a file at a probed path, not a grant.** `5` of this pass's `35` are tier-C manifests carrying **no licence field at all** — `pubspec.yaml`, three `package.json`, one `version.php`. 🟡 **`ACTION VQ`: report `DECLARATION-ABSENT`.**
+- 🔴 **`p238`'s FUNNEL predicate counted `localhost:8077` as a funnel host** and marked a real `MIT` row SUSPECT; the links were its own JupyterLab start-up instructions. 🟢 **Loopback, link-local and RFC1918 exemption added, `21` new controls, `66`/`66`.** 🟡 And a usage warning: invoked with a bare repository name instead of `owner/repo`, the **self-host exemption cannot fire** — a project's own GitHub Pages site then scores as a funnel.
+
+### 🔴 `T240-F` — the search leg: `0` new rows, `0` corrections, and a misdating that recurred verbatim
+
+Four global searches and one per region. 🔴 **Everything they surfaced is already carried, in most cases with better provenance.** The channel again offered UNESCO IESALC's `87`%/`26`% as *2026* data where these shelves date the fieldwork to **August–October 2025**, and again offered Vietnam's Decision `33/2026/QĐ-TTg` as new when `p138` carried it with its compliance split. 🟢 **`T10` holds. On regulation this KB is now ahead of the English search channel.**
+
+### 🔴 Gaps `p240` leaves open, stated because silence looks like coverage
+
+- 🔴 **North America: `0` of `10` rows.** `p239`'s `16` NA rows are one pass old and untouched, but this pass added nothing and does not pretend otherwise.
+- 🔴 **`ACTION UX` stands for EMEA** — no primary regulator source, and two "2026 Europe" market figures disagreeing by `25`%.
+- 🔴 **`ACTION VA` narrows but does not discharge.** `Agent_Newton`'s simulated-learner harness is an A/B instrument, not a benchmark; the only artefact with real published scores, [`Elia43/DataPilot`](https://github.com/Elia43/DataPilot) *(RAGAS `0.97` / `0.64`→`0.77`, `32` students, Université Saint-Joseph Beirut)*, **ships no grant at all**.
+- 🔴 **`ACTION VB` unrun** for a second pass — no compliance instrument executed over a carried education repository.
+- 🔴 **`ACTION UC` is ten-for-ten**, kept unreworded so the failure stays on the record.
+- 🟡 **`ACTION VP`: a LATIN-SCRIPT non-English grant is the hole the new gate does NOT cover** — Turkish, Vietnamese or Polish restrictions pass as `LATIN-SCRIPT` and are caught only if the token list carries them. It is the likelier next specimen, not the rarer one.
+- 🟡 **`ACTION VS`: `p239-query-shape` must take `field_scope` and `term_shape` as inputs.** It still classifies on `total_count`, which this pass falsified as the predicate; its thresholds are left in place and contradicted rather than silently edited.
+- 🟡 **`ACTION VU`: the `34`-of-`35` LATIN-SCRIPT result is this pass's `35` payloads only.** The language gate has NOT been run over the `2 188` slugs these shelves carry, so the historical exposure is **unmeasured**, not zero.
+- 🔴 **`ACTION UR` still does not discharge:** Estado de México's art. `61` reform remains committee-stage. 🔴 **`eur-lex.europa.eu` remains a proxy `403`; `ACTION RO` stands.**
+
 ## Pass 239 — 2026-10-16 — `16` PERMISSIVE **NORTH AMERICA** ROWS DISCHARGE `ACTION UY` AND THE GAP `p238` LEFT AT `1`-OF-`43` — BUT THE PASS'S FINDING IS THAT THE PARAMETER DECIDING WHETHER A HARVEST IS A SAMPLE, THE **SORT KEY**, IS RECORDED IN `0` OF THIS KB'S `20` QUERY-EVIDENCE TABLES
 
 ⏱️ **EIGHTH pass of `2026-10-16`.** p232–p238 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

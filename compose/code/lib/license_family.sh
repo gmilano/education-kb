@@ -867,6 +867,43 @@ commercial_use_ok() {
     *"obtain a commercial license"*|*"commercial licence must"*) return 1 ;;
     *"excludes any service or part of selling a service"*) return 1 ;;
   esac
+  # -------------------------------------------------------------------------
+  # P240 (pase 240 del 2026-10-16).  EL TOKEN-MATCH ERA MONOLINGUE, y lo encontro el
+  # primer harvest APAC con alcance `topic:` que estas estanterias toman.
+  #
+  # Especimen real, leido de primera mano: `heronerar/OpenGaokao`, `LICENSE` de 15 992 B
+  # en la rama `main` (`a75b65aaa494`).  El payload es 92,9% CJK y dice, en su primera
+  # clausula, «禁止商业使用» -- PROHIBIDO EL USO COMERCIAL -- y ademas «本许可证...不是 OSI
+  # 认可的开源许可证» (no es una licencia OSI).  Medido ANTES de esta rama:
+  #     osi_family_of     -> UNCLASSIFIED      (correcto: no es familia conocida)
+  #     commercial_use_ok -> 0, o sea ALLOWED  (FALSO, y es el veredicto que importa)
+  # Es exactamente el defecto que P312 arreglo para `CC-BY-NC`, en otro idioma: la
+  # compuerta cae al token-match y el token-match solo sabe ingles.  El coste es el mismo
+  # y en la direccion peligrosa: INVENTA permiso sobre un texto que lo prohibe.
+  #
+  # Por que aparece ahora y no en 239 pases: hasta p239 el canal de suministro era
+  # anglofono.  p239 dejo registrado que EMEA, APAC y LATAM NO estaban medidas; medirlas
+  # es lo que trajo el primer payload no ingles.  El control era adecuado para el estante
+  # que habia, no para el que la ACTION VJ mandaba construir.
+  #
+  # Se matchea FRASE DE RESTRICCION, nunca la palabra suelta: «comercial» aparece en
+  # textos permisivos en castellano, y 商业 aparece en cualquier aviso que mencione el
+  # uso comercial para PERMITIRLO.  Misma conservadurismo que la rama inglesa de arriba.
+  case "$d" in
+    # zh: prohibido el uso comercial / uso no comercial / requiere autorizacion comercial
+    *"禁止商业使用"*|*"禁止商用"*|*"非商业使用"*|*"非商业性使用"*|*"仅限个人非商业"*) return 1 ;;
+    *"商业使用必须"*|*"商业用途需"*|*"商业用途请"*|*"不得用于商业"*) return 1 ;;
+    # ja / ko
+    *"商用利用禁止"*|*"商用利用は禁止"*|*"非営利"*|*"비상업적"*) return 1 ;;
+    # es / pt: la frase, no la palabra
+    *"uso no comercial"*|*"usos no comerciales"*|*"fines no comerciales"*) return 1 ;;
+    *"uso nao comercial"*|*"uso não comercial"*|*"fins nao comerciais"*|*"fins não comerciais"*) return 1 ;;
+    *"prohibido el uso comercial"*|*"proibido o uso comercial"*) return 1 ;;
+    # fr / de / it
+    *"usage non commercial"*|*"fins non commerciales"*|*"à des fins non commerciales"*) return 1 ;;
+    *"nicht-kommerziell"*|*"nicht kommerzielle nutzung"*|*"keine kommerzielle nutzung"*) return 1 ;;
+    *"uso non commerciale"*) return 1 ;;
+  esac
   return 0
 }
 

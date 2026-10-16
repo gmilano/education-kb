@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — `8` NEW FOUNDATION ROWS ACROSS **APAC, EMEA AND LATAM** — AND THE LADDER'S `FOUND` TURNS OUT NOT TO MEAN *A GRANT WAS FOUND*: `5` OF `35` ARE TIER-C MANIFESTS CARRYING NO LICENCE FIELD AT ALL
+
+🟢 **`8` new foundation rows, every grant read first-hand** at the branch `git ls-remote --symref` reported. 🟢 **The regions `p239` left unmeasured are measured.** 🔴 **`30` rows withheld after their payloads were read — `16` `GPL-3.0`, `1` `AGPL-3.0`, `1` `PolyForm`, `1` bespoke Chinese noncommercial, `1` dual-grant pointer, `5` no-declaration manifests, `5` no grant at any probed path.**
+
+🔵 **Evidence:** [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv) · [`p240-withheld`](../evidence/p240-withheld.2026-10-16-p240.tsv) · [`p240-grant-language`](../evidence/p240-grant-language.2026-10-16-p240.tsv) · [`p240-ecosystem-licence-bound`](../evidence/p240-ecosystem-licence-bound.2026-10-16-p240.tsv)
+
+### 🟢 The rows
+
+| Repo | 🟢 Grant *(bytes)* | ★ | Region | Role in a stack |
+|---|---|---|---|---|
+| [`TaiMaBenJi/knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) | 🟢 **`MIT`** *(`1 067` B · `main` · `ae32bfcf8d6d`)* | **80** | **APAC** *(README `42.2`% CJK; content is gaokao, civil-service and WorldSkills `50`-trade banks)* | 🟢 **Fully offline open learning platform** — question banks plus an Android app, no network dependency. The offline-first reference for a low-connectivity engagement |
+| [`electronic-pig/gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) | 🟢 **`MIT`** *(`1 071` B · `main` · `824c389743c2`)* | **98** | **APAC** *(高考志愿推荐系统 — gaokao college-application recommendation)* | Admissions-recommendation frontend, Vue + ECharts over a scores/rankings model — the highest-starred permissive APAC education row these shelves carry |
+| [`Barbarossa2711/GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) | 🟢 **`MIT`** *(`1 071` B · `main` · `7dd36f68852c`)* | 0 | **EMEA** *(German-language UI, same deployment as `GRAPHIT`)* | JupyterLab extension — knowledge-graph explorer, slide-grounded tutor chat, quizzes, mastery and due-review tracking |
+| [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) | 🟢 **`MIT`** *(`1 144` B · `main` · `ff531290ec36`)* | 0 | **EMEA** *(README: "The University of Reading retains rights of original contributions")* | Generates Gradescope autograders for lecturers from a spec — the permissive entry point to the assessment-automation tier |
+| [`swamperu/peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) | 🟢 **`MIT`** *(`1 801` B · `main` · `a0460d619ca9`)* | 0 | **LATAM** *(the `226` UGEL, from INEI and ESCALE/MINEDU public data)* | 🟢 **The administrative geography of Peruvian education as data** — polygons, a dependency-free map library, and an upload-your-own-Excel page |
+| [`franciscoaldun/synco`](https://github.com/franciscoaldun/synco) | 🟢 **`MIT`** *(`1 086` B · `main` · `97f7fb30ea3a`)* | 0 | **LATAM** *(topic `chile`; emulates Project Cybersyn, 1971–1973, "para colegios y universidades")* | Go emulator a whole class operates in real time from phones — portable, no internet |
+| [`fhleonardi/openredlab`](https://github.com/fhleonardi/openredlab) | 🟢 **`MIT`** *(`1 075` B · `main` · `c507d0b56aac`)* | 9 | Global *(Spanish-language README; no country marker found)* | Network simulator for teaching IP addressing, subnetting and diagnosis — step-by-step ping and *why it fails* |
+| [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) | 🟢 **`MIT`** *(`1 100` B · `main` · `b66b0a77540c`)* | 2 | **LATAM** *(topic `peru`)* | QR/NFC attendance for schools on limited connectivity — offline on web, Android and PC *(also shelved in [`verticals/solutions.md`](../verticals/solutions.md))* |
+
+### 🔴 `T240-E` — `FOUND` is a file at a probed path, not a grant
+
+The grant ladder reports `FOUND` when any of its `40` paths answers `200`. Measured over this pass's `40` candidates:
+
+| ladder status | n | what is actually there |
+|---|---|---|
+| `FOUND`, tier A/B *(a licence file)* | 🟢 **30** | a grant, read and classified |
+| `FOUND`, **tier C** *(a manifest)* | 🔴 **5** | 🔴 **`pubspec.yaml`, `package.json` ×3 and a `version.php` carrying NO licence field whatsoever** |
+| `NO-GRANT` | 5 | nothing at `40` paths × `2` refs |
+
+🔵 **So `14`% of this pass's `FOUND` rows carry zero licence information, under the same status word as a read grant.** 🟡 Tier C exists for a good reason — two of this pass's `GPL-3.0` classifications came from the GPL header inside a Moodle `version.php` — **but the status must distinguish *a channel answered* from *a grant was read*.** 🟡 **`ACTION VQ`: tier-C hits report `DECLARATION-ABSENT` rather than `FOUND` when the manifest has no licence field.**
+
+🔴 **And the sharpest of the five is [`praxisdigital/local_mxaimanager`](https://github.com/praxisdigital/local_mxaimanager)** — an **AI-manager plugin for Moodle** whose `version.php` *(`330` B, branch `MOODLE_50_STABLE`)* carries no GPL header at all, in an ecosystem whose plugin standard requires one. 🟡 **The ecosystem bound is a policy, not a per-repository guarantee** — and note the branch: neither `main` nor `master` would have reached this repository at all.
+
 ## Pass 239 — 2026-10-16 — `14` NEW NORTH AMERICA FOUNDATION ROWS FROM THE US K-12 DISTRICT-DATA STACK, AND THE PASS'S SHARPEST WITHHOLD IS AN OWNER THESE SHELVES ALREADY CITE AS **EVIDENCE THAT A PERMISSIVE GRANT IS EXERCISED**
 
 🟢 **`14` new foundation rows, every grant read first-hand** at the branch `git ls-remote --symref` reported. 🔴 **`5` rows WITHHELD after their payloads were read.** 🔴 **A carried licence-identity claim is falsified by a census of all `24` repositories in the org: the `10 172` B figure these shelves generalised across `10` files belongs to exactly ONE repository, and the org's MAJORITY shape — `13` of `24`, the pristine `11 357` B Apache-2.0 — was never recorded.**

@@ -85,6 +85,42 @@ def _norm(s):
     return re.sub(r"[^a-z0-9]", "", str(s).lower())
 
 
+# P240 (pase 240): un host de LOOPBACK o de red privada no puede ser un embudo.
+# Encontrado corriendo esta misma compuerta sobre el suministro fresco de p240:
+# `Barbarossa2711/GRAPHIT` (MIT, leida de primera mano) marco SUSPECT con
+# «FUNNEL: 60% of 5 external links point at localhost:8077».  Son las instrucciones de
+# arranque de su propio JupyterLab.  La premisa de FUNNEL es que un embudo CONCENTRA al
+# lector en un host de un tercero; `localhost` concentra al lector en SU PROPIA maquina,
+# que es la negacion exacta de la premisa.  p238 construyo la exencion de SELF-HOST (el
+# dominio del dueno) y no la de LOOPBACK, porque sus 43 filas no traian instrucciones de
+# desarrollo -- el mismo patron que T240-A: el control era adecuado para el estante que
+# habia.
+_LOOPBACK_HOSTS = ("localhost", "127.0.0.1", "0.0.0.0", "::1", "[::1]", "host.docker.internal")
+_PRIVATE_PREFIXES = ("192.168.", "10.", "169.254.")
+
+
+def is_local_host(host):
+    """True for loopback, link-local, RFC1918 and `.local` hosts.
+
+    Port is stripped first: `localhost:8077` and `127.0.0.1:3000` are the shapes a README
+    actually carries.
+    """
+    h = str(host).lower().strip()
+    if h.startswith("[") and "]" in h:          # bracketed IPv6, with or without a port
+        h = h[: h.index("]") + 1]
+    else:
+        h = h.split(":", 1)[0]
+    if h in _LOOPBACK_HOSTS or h.endswith(".local") or h.endswith(".localhost"):
+        return True
+    if any(h.startswith(p) for p in _PRIVATE_PREFIXES):
+        return True
+    if h.startswith("172."):                    # 172.16.0.0/12, not 172.0.0.0/8
+        part = h.split(".")
+        if len(part) > 1 and part[1].isdigit() and 16 <= int(part[1]) <= 31:
+            return True
+    return False
+
+
 def is_self_host(host, slug):
     """A project's OWN domain is not a funnel.
 
@@ -126,7 +162,7 @@ def funnel_hit(readme, slug=None, threshold=0.60, min_links=5):
         h = _strip_www(h.lower())
         if not h or h in [_strip_www(x) for x in INFRA_HOSTS]:
             continue
-        if is_self_host(h, slug):
+        if is_self_host(h, slug) or is_local_host(h):
             continue
         hosts.append(h)
     if len(hosts) < min_links:
@@ -148,7 +184,7 @@ def badge_hit(readme, slug=None):
         host = _strip_www(_host(url))
         if not host or host in [_strip_www(x) for x in BADGE_HOSTS]:
             continue
-        if is_self_host(host, slug):
+        if is_self_host(host, slug) or is_local_host(host):
             continue
         if LICENSE_BADGE_RE.search(url):
             out.append(url)

@@ -1,0 +1,12 @@
+stage	input	osi_family_of	commercial_use_ok	family_of	note
+before p240	heronerar/OpenGaokao LICENSE (15992 B, main a75b65aaa494, 92.9% CJK)	UNCLASSIFIED	0 = ALLOWED	UNCLASSIFIED	the payload's first clause is 禁止商业使用 - commercial use prohibited
+after p240	same payload, byte-identical	UNCLASSIFIED	1 = RESTRICTED	NONCOMMERCIAL-NOT-OSI	nine languages, 35 restriction phrases added to the shared classifier
+control	MIT fixture	MIT	0 = ALLOWED	MIT	permissive families never reach the token branch (P312 gate)
+control	Apache-2.0 fixture	Apache-2.0	0 = ALLOWED	Apache-2.0	unchanged
+control	BSD-3 fixture	BSD	0 = ALLOWED	BSD	unchanged
+control	Chinese-language MIT notice that PERMITS commercial use	UNCLASSIFIED	0 = ALLOWED	UNCLASSIFIED	the new tokens are phrases, not the bare word 商业
+control	Spanish "Se permite el uso comercial sin restriccion"	UNCLASSIFIED	0 = ALLOWED	UNCLASSIFIED	the bare word comercial does not fire
+control	Spanish "uso no comercial en el aula"	UNCLASSIFIED	1 = RESTRICTED	NONCOMMERCIAL-NOT-OSI	the phrase fires
+suite	compose/code/lib/test_license_family.sh	-	-	-	217/217 after the change (207 before, 10 new controls)
+scan	p240's own 35 first-hand payloads through p240-grant-language	-	-	-	34 LATIN-SCRIPT, 1 NON-ENGLISH-GRANT-RESTRICTED, 0 false positives
+scan	restriction tokens alone over the same 35	-	-	-	15 fire en:noncommercial because GPL-3.0's BODY contains the word; none changes verdict, because the family gate runs first

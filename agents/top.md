@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — THE SHARED LICENCE CLASSIFIER'S COMMERCIAL BRANCH IS **MONOLINGUAL**, AND `p217` NAMED THAT DEFECT CLASS `23` PASSES AGO ON A DIFFERENT INSTRUMENT — THE CORRECTION NEVER TRAVELLED, AND THE FIRST NON-ENGLISH GRANT THESE SHELVES EVER READ WALKED STRAIGHT THROUGH IT
+
+⏱️ **NINTH pass of `2026-10-16`.** p232–p239 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`10` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **`ACTION VJ` and `ACTION VK` both discharged.** 🟢 **Two instrument defects found, fixed and controlled inside the pass** — `217`/`217`, `66`/`66`, and a new gate at `29`/`29`, all wired into `make hooks`. 🔴 **`30` rows withheld, `16` of them `GPL-3.0` from a single scoped harvest.** 🔴 **`p239`'s count thresholds are FALSIFIED by the measurement `ACTION VK` asked for.** 🔴 **North America is this pass's gap: `0` rows of `10`.**
+
+🔵 **Evidence:** [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv) *(10 slugs, grant + bytes + pinned head + region basis)* · [`p240-withheld`](../evidence/p240-withheld.2026-10-16-p240.tsv) *(30 rows)* · [`p240-classifier-defect`](../evidence/p240-classifier-defect.2026-10-16-p240.tsv) · [`p240-grant-language`](../evidence/p240-grant-language.2026-10-16-p240.tsv) *(35 payloads)* · [`p240-query-shape`](../evidence/p240-query-shape.2026-10-16-p240.tsv) · [`p240-ecosystem-licence-bound`](../evidence/p240-ecosystem-licence-bound.2026-10-16-p240.tsv) · [`p240-queries`](../evidence/p240-queries.2026-10-16-p240.tsv) · **instrument:** [`compose/code/p240-grant-language/`](../compose/code/p240-grant-language/)
+
+### 🔴 `T240-A` — the headline: `commercial_use_ok` returned **ALLOWED** on a licence that says *commercial use is prohibited*
+
+🔴 [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) — `LICENSE`, **`15 992` B**, `main` · `a75b65aaa494`, read first-hand. It is a bespoke **`OpenGaokao Source-Available License 1.0`**, and its own text says it is **not an OSI-approved licence**. Its first operative clause is **禁止商业使用** — *commercial use is prohibited*; the second bans competing products; the third bans redistribution off GitHub.
+
+| | before `p240` | after `p240` |
+|---|---|---|
+| `osi_family_of` | 🟢 `UNCLASSIFIED` *(correct — the licence is bespoke)* | 🟢 `UNCLASSIFIED` |
+| `commercial_use_ok` | 🔴 **`ALLOWED`** | 🟢 **`RESTRICTED`** |
+| `family_of` | 🔴 `UNCLASSIFIED` | 🟢 **`NONCOMMERCIAL-NOT-OSI`** |
+
+🔵 **The branch that decides the commercial question is a token match, and every token in it was English** — `non-commercial`, `noncommercial`, `not-for-profit`, `obtain a commercial license`. A payload prohibiting commercial use in Chinese returned the same verdict as one granting it. 🔴 **This is `P312`'s shape in another language**: `P312` fixed `CC-BY-NC` — a family whose *name* says NonCommercial — returning `ALLOWED`. Here the family gate correctly declines and hands the payload to a matcher that cannot read it.
+
+### 🔴 `T240-A2` — and this KB had already named the defect class, in `p217`
+
+🔴 **[`compose/code/p217-bilingual-gate/`](../compose/code/p217-bilingual-gate/) is titled *"the gate is monolingual, the corpus is not"*.** It found that this KB's propagation instruments matched English while its own early shelves were written in Spanish, and it fixed **the shelf-grep side**. 🔴 **It never reached `lib/license_family.sh`.** 🔵 **So the correction lived in one instrument and in prose, and a second instrument inherited none of it — which is the failure mode the shared classifier's own header is a monument to (`P171`, reintroduced at pass 77 by a hand-written copy).** 🟡 **`ACTION VO`: when a defect is found in a *matcher*, the discharge is a census of every matcher in `compose/code/`, not a fix of the one that fired.**
+
+### 🟢 `T240-A3` — the fix, and why a token list is not the fix
+
+🟢 **`35` restriction phrases across `9` languages** *(zh, ja, ko, es, pt, fr, de, it, en)* added to the shared classifier, matched as **phrases, never bare words** — `comercial` appears in permissive Spanish, and 商业 appears in any notice that mentions commercial use to **permit** it. `10` new controls, both directions, **`217`/`217`**.
+
+🔴 **But a token list is a closed vocabulary over an open world.** So [`p240-grant-language`](../compose/code/p240-grant-language/) asks the question that needs no vocabulary — *is this payload in a script the token match cannot be trusted over?* — and answers in three states:
+
+| verdict | meaning |
+|---|---|
+| `LATIN-SCRIPT` | 🟢 the English/Latin token match applies |
+| `NON-ENGLISH-GRANT-RESTRICTED` | 🔴 non-Latin **and** a known phrase fires |
+| `NON-ENGLISH-GRANT-UNREAD` | 🔴 non-Latin, **no** phrase fires — **a refusal to clear** |
+
+🔵 **`UNREAD` is the point: it turns a silent `ALLOWED` into *"no vocabulary this KB owns has read this grant"*.** Run over this pass's own `35` payloads: 🟢 **`34` `LATIN-SCRIPT`, `1` `NON-ENGLISH-GRANT-RESTRICTED`, `0` false positives.** 🟡 **And a measurement that justifies keeping the family gate in front: the restriction tokens alone fire on `15` of the `35`, all `en:noncommercial`, because the BODY of `GPL-3.0` contains the word. None changes verdict — the family gate runs first.**
+
+### 🟢 `T240-D` — the two new agent rows, and the better one ships an **eval harness**
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | Region | One line |
+|---|---|---|---|---|---|
+| **Agent_Newton** | [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) | 🟢 **`MIT`** *(`1 063` B · `main` · `d7eac825fe27`)* | 0 | Global *(no regional evidence)* | Multi-agent ITS over a shared learner-state layer — 🟢 **with a simulated-learner harness for controlled, reproducible comparisons between architectural variants** |
+| **GRAPHIT** | [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 **`MIT`** *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | **EMEA** *(README: "the agent prompts and the generated questions are in German")* | Graph-based ITS for JupyterLab — Neo4j domain **and** learner model, time-decaying mastery with spaced repetition, generated quizzes, multi-agent chat grounded on the lecture slides via GraphRAG |
+
+🟡 **`ACTION VA` — *"still no education-agent eval harness"* — narrows but does not discharge.** `Agent_Newton` ships a **simulated-learner harness**, which is an A/B instrument for architectures, not a benchmark with published scores; and the pass's only artefact carrying real measured scores, [`Elia43/DataPilot`](https://github.com/Elia43/DataPilot) *(RAGAS `0.97` answer relevancy, faithfulness `0.64`→`0.77`, `32` students at Université Saint-Joseph, Beirut)*, 🔴 **ships NO grant at all** — `40` paths × `2` refs, nothing served. **The best-measured education agent this pass found is the one a studio may not use.**
+
+### 🔴 `T240-F` — the WebSearch leg again produced `0` new rows and `0` corrections, and the misdating recurred verbatim
+
+🔵 Four global searches and one per region. 🔴 **Every figure, instrument and institution they surfaced is already carried here, in most cases with better provenance than the channel supplied.** Two measured recurrences:
+
+| the channel offered | what these shelves already record |
+|---|---|
+| UNESCO IESALC's **`87`% / `26`%** as *2026* data | 🔴 the same working paper, **fielded August–October `2025`**, carried as a baseline — **the identical misdating [`agents/top.md`](top.md) recorded a pass ago, repeated verbatim today** |
+| Vietnam's **Decision `33/2026/QĐ-TTg`** as a new APAC education instrument | 🟢 carried since **`p138`**, with the education high-risk list *and* the compliance split *(`2027-03-01`; `2027-09-01` for education, health and finance systems already in operation)* |
+
+🟢 **`T10` holds for a further pass. The honest reading is not "the searches failed" — it is that this KB's regulatory shelf is now ahead of the English web-search channel, and the channel's cost is re-verification, not discovery.**
+
 ## Pass 239 — 2026-10-16 — `ACTION UY` IS DISCHARGED AND IT PLACES `16` PERMISSIVE **NORTH AMERICA** ROWS AFTER `p238` CLOSED AT `1` OF `43` — BUT THE PASS'S REAL FINDING IS THAT THE PARAMETER DECIDING WHETHER A HARVEST IS A SAMPLE AT ALL, THE **SORT KEY**, IS RECORDED IN `0` OF THIS KB'S `20` QUERY-EVIDENCE TABLES
 
 ⏱️ **EIGHTH pass of `2026-10-16`.** p232–p238 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

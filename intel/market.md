@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — THE EMEA AND LATAM SUPPLY `p239` COULD NOT MEASURE IS MEASURED, AND IT IS NOT ABSENT AND NOT SMALL — **IT IS BOUND**: `16` OF `16` GRANTS IN THE LARGEST SINGLE-QUERY EDUCATION HARVEST THESE SHELVES HAVE TAKEN ARE `GPL-3.0`
+
+🟢 **`ACTION VJ` discharged** — the LATAM harvest `p239` refused at `0`% on-topic returns **`86.7`%** when scoped by `topic:`. 🟢 **`10` permissive rows across APAC, EMEA, LATAM and Global.** 🔴 **North America is this pass's gap: `0` of `10`**, stated as such. 🔵 **No market figure is restated here: `ACTION UP`'s `$6.4`–`11.4` B spread *(`78`%, three firms)* stands exactly as `p238` recorded it, and quoting a point estimate from these shelves is still forbidden.**
+
+🔵 **Evidence:** [`p240-ecosystem-licence-bound`](../evidence/p240-ecosystem-licence-bound.2026-10-16-p240.tsv) · [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv) · [`p240-withheld`](../evidence/p240-withheld.2026-10-16-p240.tsv) · [`p240-queries`](../evidence/p240-queries.2026-10-16-p240.tsv)
+
+### 🔴 `T240-C` — the shape of European and Latin American education supply, measured
+
+One harvest — `topic:moodle-plugin pushed:>2026-06-01`, `sort:updated`, `total_count` **`429`**:
+
+| measurement | value |
+|---|---|
+| on-topic, page one | 🟢 **`30` of `30` (`100`%)** — every row is a real Moodle plugin |
+| grants read first-hand | `16` |
+| **permissive** | 🔴 **`0` of `16` (`0.0`%)** |
+| `GPL-3.0` | 🔴 **`16` of `16`** — `11` as the `35 122`–`35 149` B text, `3` as `COPYING.txt`, `2` as the GPL header inside `version.php` |
+| **owner concentration** | 🔴 **`19` of `30` page-one rows from ONE owner** *(`jeanlucio`)*, `4` more from `eduplay-moodle-suite` — **`23` of `30` from two accounts**, `9` distinct owners in all |
+
+🔵 **That Moodle plugins are `GPL` is carried here since `p228`, read first-hand from nine `version.php` headers. What is new is the CONSEQUENCE for a regional measurement**: the richest, most current, most on-topic European and Latin American education supply on this channel is **structurally unavailable to a commercial engagement**, and the quantity is now on the record rather than assumed.
+
+🟡 **And the owner concentration is the scoped channel's own failure mode** — the benign twin of `p238`'s lure farm. A `topic:`-scoped harvest at `sort:updated` can be `77`% one person's release cadence. **A scoped harvest needs an owner-concentration column for the same reason a broad one needs a sort key.** 🟡 **`ACTION VR`: record distinct owners beside `total_count` in every query-evidence table.**
+
+### 🔵 What this means commercially, stated plainly
+
+- 🔴 **Do not sell a Moodle plugin as a proprietary deliverable.** The host is `GPL-3.0`; a plugin that links it is a derivative, and every row measured this pass behaves as though its authors know that.
+- 🟢 **Sell the thing beside it.** The permissive rows this pass places are all *outside* the plugin boundary: an offline platform (`knowledge-commons`), a standalone autograder generator (`autograder-gen`), a JupyterLab extension (`GRAPHIT-Frontend`), open administrative data (`peru-ugel-geojson`).
+- 🟢 **Or sell the service.** `GPL-3.0` constrains distribution, not consultancy: configuration, hosting, migration and integration of a GPL estate are unaffected, and `23`-of-`30` owner concentration says the maintenance market is thin.
+
+## Opportunities by region
+
+### North America
+
+🔴 **`0` of this pass's `10` rows are North American, and that is this pass's gap rather than a finding.** 🟢 **`p239`'s `16` permissive NA rows and its Ed-Fi / PowerSchool / Infinite Campus / Clever map are one pass old and stand unchanged** — nothing this pass measured touches them.
+
+🔵 **One addition from the regulatory leg, carried as context and not as a row:** the 2026 US picture is **districted and procurement-shaped**, not a single instrument — roughly `33`–`35` states plus Puerto Rico have issued guidance, ~`100` bills are live in the 2026 session, and Idaho, Maryland, Oklahoma and Virginia now require **district-level** AI policies. 🟡 **Oklahoma bars AI as the primary basis for grading or discipline and gives parents an opt-out** — which is the same obligation shape as Vietnam's high-risk list and the EU's Annex III, arriving through procurement instead of statute. 🔴 **Sourced from trackers and trade press, not bill texts; carried as a market signal, not as a compliance claim.**
+
+### EMEA
+
+🟢 **`3` permissive rows placed, each with first-hand regional evidence**: [`GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) and [`GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) *(German-language deployment, university lectures)* and [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) *(University of Reading, named in its own README)*.
+
+🔴 **The supply that is NOT permissive is the bigger half of the region, and it is now quantified** — the Moodle plugin estate above, plus [`edumind-es/edumind-miclase`](https://github.com/edumind-es/edumind-miclase), a Spanish **LOMLOE** per-criterion teacher gradebook that is local-first *"los datos del alumnado no salen del dispositivo"* and is licensed **`AGPL-3.0-or-later` OR `EUPL-1.2`** — a `511` B pointer naming two licences, neither permissive.
+
+🔴 **`ACTION UX` stands for an eighth pass on EMEA regulation**: the English WebSearch leg returned market-research blogs only — no primary regulator source, and two "2026 Europe AI-in-education market" figures that disagree by `25`% *(`$2.11` B vs `$2.64` B)*. 🟡 **The opportunity is unchanged and it is the sovereignty one**: a permissive, self-hostable layer *beside* a GPL LMS, sold on data residency.
+
+### APAC
+
+🟢 **`2` permissive rows, and they are the first scoped APAC supply measurement these shelves have taken rather than refused**: [`knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) *(`80`★, fully offline)* and [`gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) *(`98`★)*.
+
+🔴 **And the region produced this pass's headline defect.** The Chinese supply carries **bespoke, non-English, source-available licences** — [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) bans commercial use, competing products and off-GitHub redistribution, in Chinese, in a payload that passed this KB's own commercial gate. 🔵 **Commercial consequence: for APAC rows, the licence is a READING TASK, not a lookup.** A `NOASSERTION` or an unrecognised family in this region is materially more likely to be a real restriction than an omission.
+
+🟢 Regulation is carried and unchanged: **Vietnam's Decision `33/2026/QĐ-TTg`** (education high-risk list; `2027-03-01`, and `2027-09-01` for education systems already in operation), Korea's Framework Act, Taiwan's AI Basic Act.
+
+### LATAM
+
+🟢 **`3` permissive rows and `ACTION VJ` discharged.** `topic:educacion` at `total_count` `197` returned **`26` of `30`** on-topic where `p239`'s unscoped Spanish-language harvest returned **`0` of `40`** at `81 905`.
+
+🔵 **What the harvest shows about the region's supply, and it is a planning fact:** the overwhelming majority is **teaching material** — lab simulations, course notes, interactive exercises from UNAM, UTDT, EAFIT, UJI, UTP — not reusable software. The reusable rows are **public-sector data and offline operations**: [`peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) *(the `226` UGEL from INEI/ESCALE)*, [`LUMMER`](https://github.com/Diego694/LUMMER) *(QR/NFC attendance for limited connectivity)*, [`synco`](https://github.com/franciscoaldun/synco) *(portable, no internet)*.
+
+🟡 **Three of three published LATAM rows are offline-first or open-data.** 🔵 **The regional opportunity is not an LMS and not a tutor — it is CONNECTIVITY-TOLERANT SCHOOL OPERATIONS over public data, which is exactly where the permissive supply already clusters.**
+
+🔴 **And one region-specific licence hazard, measured twice now:** the Spanish-language topic channel mixes **LATAM and Spain** in a single harvest *(UNAM and UTP beside Canarias, Comunitat Valenciana and UJI)*. 🟡 **Region must be read from the ROW, never from the query** — every region in this pass's evidence table has a per-row basis for that reason.
+
+### Global
+
+🟡 **`2` rows carry `Global` honestly rather than by inference**: [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) and [`fhleonardi/openredlab`](https://github.com/fhleonardi/openredlab) — Spanish-language in the second case, with **no country marker found in the README**. 🔵 **A language is not a region, and these shelves stop at the evidence.**
+
 ## Pass 239 — 2026-10-16 — THE US K-12 **DISTRICT DATA LAYER** IS MAPPED FOR THE FIRST TIME AND IT IS WHERE NORTH AMERICAN EDUCATION INTEGRATION MONEY ACTUALLY SITS — WHILE EMEA, APAC AND LATAM SUPPLY WERE **NOT MEASURED** THIS PASS, AND THAT IS STATED AS A REFUSED HARVEST RATHER THAN AN ABSENCE
 
 🟢 **`16` permissive North America rows** — the gap `p238` closed at `1` of `43`. 🔴 **`3` of `4` regions unmeasured this pass.** 🔵 **No market figure is restated here: `ACTION UP`'s `$6.4`–`11.4` B spread *(`78`%, three firms)* stands exactly as `p238` recorded it, and quoting a point estimate from these shelves is still forbidden.**

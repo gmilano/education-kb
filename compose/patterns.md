@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — THREE RECIPES ON THE REGIONS `p239` LEFT UNMEASURED, PLUS A **THIRD GATE BUILT, TESTED AND WIRED** IN THE SAME PASS — `29`/`29` CONTROLS, AND IT REFUSES A PAYLOAD THIS KB'S OWN CLASSIFIER CLEARED
+
+🟢 Every repository named below has its grant **read first-hand** and its head **pinned** in [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv). 🔴 **Repositories a studio would reach for first are named as withheld, with the reason, rather than omitted.**
+
+### 🟢 `P240-1` — a German-language graph tutor over existing lecture material *(EMEA, 6–8 wk)*
+
+🔵 **The point: the domain model is the LECTURE, not a question bank — so the build starts from slides a faculty already has.**
+
+| step | repository | grant | pinned |
+|---|---|---|---|
+| 1. knowledge graph + learner model | [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B)* | `main` · `f7b624fd9d75` |
+| 2. the surface faculty already live in | [`Barbarossa2711/GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) *(JupyterLab)* | 🟢 `MIT` *(`1 071` B)* | `main` · `7dd36f68852c` |
+| 3. mastery scheduling | time-decaying mastery + spaced repetition, **in `GRAPHIT` already** | — | — |
+| 4. the variant question | [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton)'s **simulated-learner harness** | 🟢 `MIT` *(`1 063` B)* | `main` · `d7eac825fe27` |
+
+🔵 **Wire 4 to 1, not beside it.** `GRAPHIT` ships a multi-agent chat grounded on slides via GraphRAG; `Agent_Newton` ships the only thing this pass found that can **compare two such architectures reproducibly**. Run the harness against the GraphRAG retriever and a plain-RAG control before the faculty sees either. 🟡 **Both are `0`★ — this is a build on young code, and the estimate assumes reading it.**
+
+🔴 **Withheld from this recipe, and it is the painful one:** [`Elia43/DataPilot`](https://github.com/Elia43/DataPilot) is a *deployed* RAG teaching assistant with **published RAGAS scores** *(answer relevancy `0.97`, faithfulness `0.64`→`0.77`, `32` students at Université Saint-Joseph, Beirut)*. 🔴 **No grant at `40` paths × `2` refs.** Read it for its evaluation design; do not ship its code.
+
+### 🟢 `P240-2` — connectivity-tolerant school operations over public data *(LATAM, 8–10 wk)*
+
+🔵 **The point: every permissive LATAM row this pass found is offline-first or open-data, so the recipe is built from what the region actually publishes — not an LMS.**
+
+| step | repository | grant | pinned |
+|---|---|---|---|
+| 1. the administrative geography | [`swamperu/peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) — the `226` UGEL from INEI + ESCALE/MINEDU | 🟢 `MIT` *(`1 801` B)* | `main` · `a0460d619ca9` |
+| 2. the school-level operation | [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) — QR/NFC attendance, offline on web, Android and PC | 🟢 `MIT` *(`1 100` B)* | `main` · `b66b0a77540c` |
+| 3. the offline content shell | [`TaiMaBenJi/knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) — fully offline platform + Android app *(`80`★)* | 🟢 `MIT` *(`1 067` B)* | `main` · `ae32bfcf8d6d` |
+| 4. the teaching simulation | [`franciscoaldun/synco`](https://github.com/franciscoaldun/synco) — Go, a class operates it from phones, no internet | 🟢 `MIT` *(`1 086` B)* | `main` · `97f7fb30ea3a` |
+
+🔵 **Steps 1 and 2 compose directly:** LUMMER's attendance rows key to a school; the UGEL polygons turn them into a ministry-legible map without buying a GIS. 🟡 Step 3 is used as the **content shell**, not the content — its banks are Chinese. 🔵 **The deliverable is a district dashboard that works when the link is down and reconciles when it returns.**
+
+🔴 **Withheld:** [`CesarUTP/TRANSFORMADOR-PDF-A-MOODLE`](https://github.com/CesarUTP/TRANSFORMADOR-PDF-A-MOODLE) *(UTP, Panama — exams to Moodle XML via Gemini)* has **no grant**, and the whole Brazilian Moodle suite around `eduplay`/`RNP` is `GPL-3.0`.
+
+### 🟢 `P240-3` — permissive assessment automation that does NOT enter the LMS *(Global, 4–6 wk)*
+
+🔵 **The point: `topic:moodle-plugin` is `16`-of-`16` `GPL-3.0`, so the autograder a studio can actually sell is the one that lives OUTSIDE the plugin boundary.**
+
+| step | repository | grant | pinned |
+|---|---|---|---|
+| 1. generate the graders | [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) — builds Gradescope autograders from a spec | 🟢 `MIT` *(`1 144` B)* | `main` · `ff531290ec36` |
+| 2. the grading contract | a rubric the teacher owns, versioned beside the course | — | — |
+| 3. provenance on every verdict | the Article `12` record-keeping shape this KB carries from `p238` | — | — |
+
+🔴 **Do not substitute** [`didactika/moodle-local_autograder`](https://github.com/didactika/moodle-local_autograder) or [`jeanlucio/moodle-mod_codereview`](https://github.com/jeanlucio/moodle-mod_codereview) **into step 1**: both are `GPL-3.0` *(payloads read, `35 148` B and `1 117` B)* and both are **inside** the host. 🟡 They are the right reference for *behaviour* and the wrong basis for a proprietary deliverable.
+
+🔴 **And the regulatory frame is not optional for this one.** Automated grading is named in **Vietnam's Decision `33/2026/QĐ-TTg`** education high-risk list *(carried since `p138`; `2027-03-01`, `2027-09-01` for systems already running)*, in **EU Annex III point 3**, and — new this pass as a market signal — **Oklahoma bars AI as the primary basis for grading or discipline**. 🔵 **A grading deliverable sold into any of the three needs the human-decision gate and the record, by construction.**
+
+### 🟢 `P240-4` — the licence-reading step every recipe above now inherits
+
+🔵 **Added to this shelf's standing build checklist, because this pass is where it would have failed:**
+
+```bash
+# 1. the real branch and a pinned head, never a guess
+git ls-remote --symref https://github.com/<owner>/<repo> HEAD
+# 2. the grant payload, read first-hand at THAT branch
+compose/code/p229-grant-ladder-reach/ladder.sh slugs.txt out/
+# 3. NEW — is the payload in a language the token match can read?
+python3 -I compose/code/p240-grant-language/grant_language.py out/<owner>_<repo>.body
+# 4. the provenance gate, with the FULL SLUG (the self-host exemption needs the owner)
+python3 -I compose/code/p238-lure-signature/lure_signature.py <owner>/<repo> README.md
+```
+
+🔴 **Step 3 is new because step 2 is not sufficient.** [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao)'s payload was read perfectly at step 2 and cleared by this KB's own commercial gate — it bans commercial use **in Chinese**. 🟡 **Step 4 carries a usage warning this pass paid for: invoked with the bare repository name, the self-host exemption cannot fire and a project's own GitHub Pages site scores as a funnel.** 🟢 **And `localhost` no longer does: a loopback host is not an embudo, `21` new controls, `66`/`66`.**
+
 ## Pass 239 — 2026-10-16 — FIVE RECIPES ON THE US K-12 DISTRICT DATA LAYER PLUS A **SECOND GATE THAT IS BUILT, TESTED AND WIRED** IN THE SAME PASS — `70`/`70` CONTROLS, AND IT REFUSES TWO OF THIS PASS'S OWN HARVESTS
 
 🟢 Every repository named below has its grant **read first-hand** and its head **pinned** in [`p239-verified-rows`](../evidence/p239-verified-rows.2026-10-16-p239.tsv). 🔴 **Four repositories a studio would reach for first are named as FORBIDDEN, not omitted.**

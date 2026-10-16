@@ -1,0 +1,12 @@
+measurement	value	basis
+harvest	topic:moodle-plugin pushed:>2026-06-01, sort updated, page 1 of 30	evidence/p240-queries.2026-10-16-p240.tsv
+total_count	429	REST search
+on_topic_page_one	30 of 30 (100.0%)	every row is a Moodle plugin
+grants read first-hand from this harvest	16	LICENSE / COPYING.txt / version.php at the branch git ls-remote reported
+GPL-3.0	16 of 16 (100.0%)	payload read first-hand; 11 are the 35 122-35 149 B GPL-3.0 text, 2 are the GPL header inside version.php, 3 are COPYING.txt
+permissive	0 of 16 (0.0%)	-
+owner concentration page one	19 of 30 from jeanlucio; 4 of 30 from eduplay-moodle-suite; 23 of 30 from TWO owners	counted on the listing
+distinct owners page one	9	counted on the listing
+plugin with NO grant at all	praxisdigital/local_mxaimanager (version.php 330 B, branch MOODLE_50_STABLE, no GPL header)	the ecosystem bound is a POLICY, not a guarantee per repository
+consequence	a 100%-on-topic regional harvest can yield 0 permissive rows, because the PLATFORM's licence propagates to the plugin	Moodle is GPL-3.0 and its plugin policy requires derivative plugins to be GPL-compatible
+consequence	EMEA and LATAM education supply is NOT absent and NOT small - it is bound	the same harvest is the largest single-query education supply these shelves have measured

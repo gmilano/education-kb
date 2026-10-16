@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, READ THROUGH `topic:` SCOPE FOR THE THREE REGIONS `p239` COULD NOT MEASURE
+
+⏱️ **NINTH pass of `2026-10-16`.** Nothing below replaces an earlier dated section.
+
+🔵 **Eight harvests this pass, every one recorded with its sort key AND its field scope** — [`p240-query-shape`](../evidence/p240-query-shape.2026-10-16-p240.tsv). 🟢 **`8` new permissive repository rows.** 🔴 **`30` withheld.**
+
+### 🟢 What is actually moving, by region
+
+| region | the harvest | what it shows |
+|---|---|---|
+| **APAC** | `topic:gaokao` *(`119`, `20`/`20` on-topic)* | 🟢 **The gaokao tooling cluster is the most active permissive education seam in China on this channel** — [`knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) *(`80`★, fully offline, `9` forks)* and [`gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) *(`98`★, `29` forks)*. 🔴 And it is where bespoke **Chinese-language source-available** licences live |
+| **EMEA + LATAM** | `topic:moodle-plugin` *(`429`, `30`/`30` on-topic)* | 🔴 **`16` of `16` grants `GPL-3.0`.** The customisation market is large, current and copyleft end to end. 🔴 **`23` of `30` page-one rows from two accounts** |
+| **LATAM + Spain** | `topic:educacion` *(`197`, `26`/`30` on-topic)* | 🟡 **Mostly teaching MATERIAL, not software** — UNAM, UTDT, EAFIT, UJI, UTP lab simulations and course notes. The reusable rows are **public data and offline operations** |
+| **Global** | `"intelligent tutoring system"` *(`264`, `30`/`30`)* | 🟢 **The richest education harvest this KB has ever measured** — and `3` of its candidates were already carried |
+
+### 🟢 New permissive rows
+
+| Repo | 🟢 Grant *(bytes · pinned)* | ★ | Lang | Region | Why it trends |
+|---|---|---|---|---|---|
+| [`TaiMaBenJi/knowledge-commons`](https://github.com/TaiMaBenJi/knowledge-commons) | 🟢 `MIT` *(`1 067` B · `main` · `ae32bfcf8d6d`)* | **80** | HTML | **APAC** | Created `2026-09-17`, `80`★ and `9` forks in four weeks — **fully offline** exam platform spanning gaokao, civil service, ICPC/Codeforces and WorldSkills `50` trades |
+| [`electronic-pig/gkvr_system_frontend`](https://github.com/electronic-pig/gkvr_system_frontend) | 🟢 `MIT` *(`1 071` B · `main` · `824c389743c2`)* | **98** | Vue | **APAC** | The reference gaokao college-application recommender; `29` forks say integrators, not spectators |
+| [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | Python | **EMEA** | Created `2026-09-30` — Neo4j + GraphRAG tutor for JupyterLab |
+| [`Barbarossa2711/GRAPHIT-Frontend`](https://github.com/Barbarossa2711/GRAPHIT-Frontend) | 🟢 `MIT` *(`1 071` B · `main` · `7dd36f68852c`)* | 0 | TypeScript | **EMEA** | Created `2026-10-01` |
+| [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) | 🟢 `MIT` *(`1 063` B · `main` · `d7eac825fe27`)* | 0 | Python | Global | Simulated-learner harness for architecture comparison |
+| [`alanlivio/autograder-gen`](https://github.com/alanlivio/autograder-gen) | 🟢 `MIT` *(`1 144` B · `main` · `ff531290ec36`)* | 0 | Python | **EMEA** | University of Reading; Gradescope autograder generation |
+| [`swamperu/peru-ugel-geojson`](https://github.com/swamperu/peru-ugel-geojson) | 🟢 `MIT` *(`1 801` B · `main` · `a0460d619ca9`)* | 0 | Python | **LATAM** | Created `2026-09-29`; the `226` UGEL as polygons from INEI + ESCALE |
+| [`franciscoaldun/synco`](https://github.com/franciscoaldun/synco) | 🟢 `MIT` *(`1 086` B · `main` · `97f7fb30ea3a`)* | 0 | Go | **LATAM** | Created `2026-10-14` — **two days old at harvest** |
+| [`fhleonardi/openredlab`](https://github.com/fhleonardi/openredlab) | 🟢 `MIT` *(`1 075` B · `main` · `c507d0b56aac`)* | 9 | JavaScript | Global | Created `2026-09-28`, `9`★ in under three weeks |
+| [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) | 🟢 `MIT` *(`1 100` B · `main` · `b66b0a77540c`)* | 2 | Kotlin | **LATAM** | Offline attendance for limited connectivity |
+
+### 🟡 Two channel facts this pass paid for, recorded so the next pass does not re-pay
+
+1. 🔴 **Qualifiers cannot be OR-ed.** `topic:kaoyan OR topic:gaokao OR topic:jiaoyu` → **HTTP 422**, *"only logical operators without any search terms"*. A multi-topic regional sweep costs **one harvest per topic**.
+2. 🔴 **The ladder's `FOUND` includes tier-C manifests with no licence field** — `5` of this pass's `35`. `pubspec.yaml`, three `package.json` and one `version.php` answered `200` and declared nothing.
+
+### 🔵 And one row that is this KB looking at itself
+
+🟡 The `2 091`-result harvest — `"intelligent tutoring" in:name,description,readme` — returned [`gmilano/education-kb`](https://github.com/gmilano/education-kb) **on page one**. 🔵 **These shelves are now in the supply channel they harvest.** It is harmless *(the carried index and the on-topic rule both handle it)* and it is a measurement of the `in:readme` failure mode: a repository that **writes about** education agents ranks beside repositories that **are** them.
+
 ## 2026-10-16 — p239 — GitHub Trending went unqueried for a **seventh** pass, and the reason is now measured rather than assumed: **the channel that replaced it returns a timestamp slice, not a sample, above `total_count` ≈ `2 326`**
 
 🟢 **`14` new foundation rows**, all North America, from the US K-12 district-data stack. 🔴 **`5` withheld.** 🟢 **A new tested instrument (`70`/`70`) that classifies a query's shape BEFORE the query is spent.**

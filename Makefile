@@ -47,11 +47,14 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
 	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS"; \
-	echo "── p238-lure-signature   (the provenance gate: 45 controls, ACTION VE)"; \
+	echo "── p238-lure-signature   (the provenance gate: 66 controls, ACTION VE + p240 loopback)"; \
 	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
 	echo "── p239-query-shape      (the sort key: 70 controls, ACTION VH)"; \
 	cd compose/code/p239-query-shape && $(PY) test_query_shape.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
+	echo "── p240-grant-language   (the language axis: 29 controls, ACTION VO)"; \
+	cd compose/code/p240-grant-language && $(PY) test_grant_language.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \

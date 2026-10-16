@@ -195,9 +195,40 @@ for bad in ("", None):
     verdict, _ = classify("whatever", bad, None, None, None)
     check("empty README (%r) is CLEAR, not a crash" % bad, verdict, "CLEAR")
 
+# -----------------------------------------------------------------------------
+# P240: LOOPBACK NO ES EMBUDO.  El especimen es real -- `Barbarossa2711/GRAPHIT`, MIT
+# leida de primera mano en p240, marcada SUSPECT por «60% of 5 external links point at
+# localhost:8077», que son sus instrucciones de arranque de JupyterLab.
+from lure_signature import is_local_host  # noqa: E402
+
+for h, exp in (
+    ("localhost", True), ("localhost:8077", True), ("127.0.0.1", True),
+    ("127.0.0.1:3000", True), ("0.0.0.0:8888", True), ("[::1]:8080", True),
+    ("myhost.local", True), ("192.168.1.10", True), ("10.0.0.5:9000", True),
+    ("172.17.0.2", True), ("169.254.1.1", True), ("host.docker.internal:5432", True),
+    # NEGATIVOS: los que SI son hosts de terceros, y el que parece privado y no lo es.
+    ("softyne.com", False), ("github.com", False), ("172.1.2.3", False),
+    ("172.33.4.5", False), ("localhost.evil.com", False), ("10minutemail.com", False),
+    ("notlocalhost.io", False),
+):
+    check("P240 is_local_host(%s)" % h, is_local_host(h), exp)
+
+# Y la compuerta completa: un README cuyos enlaces apuntan todos a localhost no convoca
+# FUNNEL, mientras el embudo real sigue convicto.
+_LOCAL_README = """# GRAPHIT
+
+Start the backend, then open [the app](http://localhost:8077/lab),
+[the graph browser](http://localhost:8077/graph) and
+[the quiz view](http://localhost:8077/quiz).
+Source lives on [GitHub](https://github.com/Barbarossa2711/GRAPHIT).
+"""
+_v, _hits = classify("Barbarossa2711/GRAPHIT", _LOCAL_README, stars=0, forks=0)
+check("P240 localhost README no convoca FUNNEL",
+      not any("FUNNEL" in h for h in _hits), True)
+
 # ---------------------------------------------------------------- report
 
-TOTAL = 45
+TOTAL = 66
 if FAILS:
     print("FAIL %d/%d" % (len(FAILS), TOTAL))
     for f in FAILS:

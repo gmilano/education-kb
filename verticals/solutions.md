@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — THE MOODLE PLUGIN ESTATE IS THE LARGEST CUSTOMISATION SURFACE ON THIS SHELF AND IT IS `GPL-3.0` END TO END: `16` OF `16` GRANTS READ FIRST-HAND, `0` PERMISSIVE — SO THE SEAM A STUDIO SELLS AT IS **BESIDE** THE PLUGIN BOUNDARY, NOT INSIDE IT
+
+🟢 **The customisation layer of this shelf's most-recommended platform is measured rather than assumed.** 🔴 **`0` of `16` grants permissive.** 🟡 **One new permissive platform row placed — an offline school-operations system, which is where LATAM's permissive supply actually sits.**
+
+🔵 **Evidence:** [`p240-ecosystem-licence-bound`](../evidence/p240-ecosystem-licence-bound.2026-10-16-p240.tsv) · [`p240-withheld`](../evidence/p240-withheld.2026-10-16-p240.tsv) · [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv)
+
+### 🔴 What `topic:moodle-plugin` actually contains, with every grant read
+
+[`verticals/solutions.md`](solutions.md) carries **Moodle** on nine shelves and recommends customising it. 🟢 **The customisation market is real and current** — `total_count` `429` pushed since `2026-06-01`, `30` of `30` page-one rows genuine plugins. 🔴 **And every grant in it is copyleft:**
+
+| plugin *(all read first-hand, all `GPL-3.0`)* | what it adds to a Moodle estate |
+|---|---|
+| [`gafapa/moodle-local_moodlia`](https://github.com/gafapa/moodle-local_moodlia) *(`652` B · `main` · `44c38c41d1fe`)* | 🟡 **MoodlIA automation exposed over REST *and* MCP** — the closest thing on this shelf to an agent seam into Moodle |
+| [`jeanlucio/moodle-local_studiolms`](https://github.com/jeanlucio/moodle-local_studiolms) *(`35 149` B · `9c78553d51c1`)* | AI course builder — outline generated from a topic or pasted material, then sections, pages and activities created in place |
+| [`jeanlucio/moodle-mod_codereview`](https://github.com/jeanlucio/moodle-mod_codereview) *(`1 117` B · `32b0ab69de54`)* | Assesses programming work on GitHub: reads Actions results, adds an AI review, **verifies authorship**, teacher approves the grade |
+| [`jeanlucio/moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo) *(`35 149` B · `c5e9099e0c2e`)* | Interactive video with AI-generated questions and grading, captions and easy-read summaries |
+| [`ssystems-de/moodle-quiz_livequizmonitor`](https://github.com/ssystems-de/moodle-quiz_livequizmonitor) *(`35 147` B · `fd1e1de29833`)* | Real-time supervision of quiz attempts in progress — the proctoring-adjacent surface, inside the LMS |
+| [`didactika/moodle-local_autograder`](https://github.com/didactika/moodle-local_autograder) + [`moodle-report_autograder`](https://github.com/didactika/moodle-report_autograder) *(`35 148` B each)* | Grades completed activities a teacher left ungraded past the deadline, plus the report that audits what it did |
+| [`CyrilBlum/Moodle-Question-Hub`](https://github.com/CyrilBlum/Moodle-Question-Hub) *(`1 130` B · `e80b0fbff00c`)* | A marketplace for Moodle question databases — OER question-bank exchange |
+| [`eduplay-moodle-suite/moodle-local_eduplay`](https://github.com/eduplay-moodle-suite/moodle-local_eduplay) *(`35 149` B · `79310aec33b7`)* | 🟡 Integrates **EduPlay**, the video service of **RNP** — Brazil's national research and education network |
+| [`dari-learning/moodle-format_dari`](https://github.com/dari-learning/moodle-format_dari) · [`davidherney/moodle-format_onetopic`](https://github.com/davidherney/moodle-format_onetopic) *(`20`★)* | Course formats, one with an *"Ask Dari"* assistant |
+
+🔴 **One plugin in the harvest carries NO grant at all:** [`praxisdigital/local_mxaimanager`](https://github.com/praxisdigital/local_mxaimanager) — an **AI manager** plugin whose `version.php` *(`330` B, branch `MOODLE_50_STABLE`)* has no GPL header. 🟡 **The ecosystem bound is a policy, not a per-repository guarantee: read the plugin, not the platform.**
+
+### 🟢 The seam, stated as a rule
+
+🔵 **`GPL-3.0` constrains DISTRIBUTION, not operation.** What a studio may sell on a Moodle estate without a licensing problem:
+
+1. 🟢 **Configuration, hosting, migration, integration and support** — unaffected by the host's grant.
+2. 🟢 **A separate service the LMS talks to over LTI, REST or MCP**, shipped under the studio's own terms, with the Moodle-side connector kept thin and `GPL`. 🟡 `local_moodlia` is the shape of the connector; the service behind it is the deliverable.
+3. 🔴 **Not** a proprietary plugin. 🔴 **Not** a proprietary fork.
+4. 🟡 **And check the maintenance risk before recommending any of the above:** `23` of `30` page-one plugins come from **two accounts**.
+
+### 🟢 The new platform row
+
+| platform | 🟢 grant *(read first-hand)* | region basis | what it is, and the customisation seam |
+|---|---|---|---|
+| 🆕 **LUMMER** — [`Diego694/LUMMER`](https://github.com/Diego694/LUMMER) | 🟢 **`MIT`** *(`1 100` B · `main` · `b66b0a77540c`)* | **LATAM** — topic `peru`; *"para institutos y escuelas con conexión limitada"* | 🟢 **Attendance and student-portal operations that assume the network is absent** — QR/NFC cards, web + Android + PC, reports, Supabase sync when a link exists. 🔵 **The permissive counter-example to the GPL estate above: it is school operations, not LMS customisation, and that is exactly where this pass's LATAM permissive supply clusters.** Seam: the sync layer and the reporting surface |
+
 ## Pass 239 — 2026-10-16 — THE US K-12 **DISTRICT DATA LAYER** IS THE VERTICAL PLATFORM THIS SHELF NEVER NAMED: `Ed-Fi` IS AN `Apache-2.0` STANDARD *PLUS* A REFERENCE IMPLEMENTATION *PLUS* A CERTIFICATION PROGRAMME, AND `OneRoster` IS THE SEAM BETWEEN IT AND EVERY LMS ALREADY ON THIS SHELF
 
 🟢 **`14` new permissive rows place a whole platform tier.** 🔴 **The mandated platform query was NOT re-run this pass** — `p238` ran it and got `OpenEduCat` again without a licence; this pass spent its budget on the tier above the LMS instead, and says so rather than implying coverage.

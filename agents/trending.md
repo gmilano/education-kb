@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — **APPEND-ONLY** — WHAT IS NEW THIS WEEK IN EDUCATION AGENTS, AND THE WEEK'S STRONGEST AGENT IS ONE A STUDIO MAY NOT USE
+
+⏱️ **NINTH pass of `2026-10-16`.** Nothing below replaces an earlier dated section.
+
+🟢 **New permissive agent rows this pass: `2`.** 🔴 **Withheld: `30`.** 🔵 **Channel: GitHub REST search, `8` harvests, sort key AND field scope recorded in [`p240-query-shape`](../evidence/p240-query-shape.2026-10-16-p240.tsv).**
+
+### 🟢 New and permissive
+
+| Agent | Repo | 🟢 Grant *(bytes · pinned)* | ★ | Region | Why it is here |
+|---|---|---|---|---|---|
+| **GRAPHIT** | [`Barbarossa2711/GRAPHIT`](https://github.com/Barbarossa2711/GRAPHIT) | 🟢 `MIT` *(`1 071` B · `main` · `f7b624fd9d75`)* | 0 | **EMEA** | Multi-agent chat grounded on lecture slides via **GraphRAG**, over a **Neo4j** domain *and* learner model, with time-decaying mastery and spaced repetition. Created `2026-09-30` — genuinely new this week |
+| **Agent_Newton** | [`viquta/Agent_Newton`](https://github.com/viquta/Agent_Newton) | 🟢 `MIT` *(`1 063` B · `main` · `d7eac825fe27`)* | 0 | Global | 🟡 **The only artefact this pass found that can compare two tutor architectures reproducibly** — a shared learner-state layer plus a *simulated-learner harness* |
+
+### 🔴 The week's best-measured education agent is withheld
+
+🔴 [`Elia43/DataPilot`](https://github.com/Elia43/DataPilot) — a **deployed** RAG teaching assistant, `32` students at Université Saint-Joseph, Beirut, ChromaDB HNSW retrieval, **published RAGAS scores: answer relevancy `0.97`, faithfulness `0.64`→`0.77`**, adaptive quizzes, weakness tracking, professor admin panel. 🔴 **No grant at `40` paths × `2` refs on `main` · `ae6137495a80`.**
+
+🔵 **It is the counter-example to `ACTION VA`'s framing.** The action asks for an education-agent **eval harness**; the ecosystem's best *evaluation practice* this week is not in a harness at all — it is a deployment that reports its own RAGAS deltas and ships no licence.
+
+### 🔴 Withheld this pass, by reason
+
+| reason | n | the ones worth naming |
+|---|---|---|
+| `GPL-3.0` | **16** | the whole `topic:moodle-plugin` AI tier — [`gafapa/moodle-local_moodlia`](https://github.com/gafapa/moodle-local_moodlia) *(REST **and MCP** automation)*, [`jeanlucio/moodle-local_studiolms`](https://github.com/jeanlucio/moodle-local_studiolms) *(AI course builder)*, [`jeanlucio/moodle-mod_codereview`](https://github.com/jeanlucio/moodle-mod_codereview) *(AI review + authorship verification)*, [`bennix/HighChem`](https://github.com/bennix/HighChem) and [`bennix/AIGaokao`](https://github.com/bennix/AIGaokao) *(RAG + knowledge graph + dual-model item generation and grading)* |
+| **bespoke non-English noncommercial** | **1** | 🔴 [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) — **禁止商业使用**. See `T240-A`: this KB's own classifier cleared it |
+| `PolyForm` | 1 | [`lopentu/inside-the-scorer-paclic2026`](https://github.com/lopentu/inside-the-scorer-paclic2026) — mechanistic interpretability of rubric control in LLM-based essay scoring, **PACLIC 2026**, `25` base models. 🟡 **Second PolyForm specimen in two passes, and the first in education RESEARCH code** |
+| `AGPL-3.0` | 1 | [`josueninadiaz/kunnskap`](https://github.com/josueninadiaz/kunnskap) |
+| dual `AGPL`/`EUPL-1.2` pointer | 1 | [`edumind-es/edumind-miclase`](https://github.com/edumind-es/edumind-miclase) — `511` B naming two licences and deferring to two files |
+| manifest with **no licence field** | 5 | reported `FOUND` by the ladder — see `T240-E` |
+| no grant at any probed path | 5 | including `DataPilot` above |
+
+### 🟡 Carried rows re-encountered, recorded so the duplication rate stays honest
+
+🔵 The `264`-result harvest returned **`3` rows already on these shelves** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`49`★, MCP server that turns any LLM into an ITS)*, [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) *(`134`★, WWW '25 industry-track oral)* and [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) *(`266`★)*. 🟢 **The carried index caught all three before a grant was fetched.** 🟡 **Duplication on that harvest: `3` of the `~8` candidates drafted — the vocabulary is saturating, which is itself the signal that `"intelligent tutoring system"` is now a worked seam.**
+
+🔴 **And a new find on the staging twin:** [`CAHLR/CAHLR-OATutor-Staging-V2`](https://github.com/CAHLR/CAHLR-OATutor-Staging-V2) — same org, same description, created `2026-05-05` — **ships no grant**, while `CAHLR/OATutor` is carried as permissive. 🟡 **`ACTION VM` *(no row inherits a grant from a sibling)*, prospectively confirmed one pass after it was registered, on a sibling pair in the same organisation.**
+
 ## 2026-10-16 — p239 — the week's agent news is that **`p238`'s lure farm is not an education story at all** — it is one operator at `≥5 525` repositories in six days, and education is `1` name in `100`
 
 🟢 **`2` new agent rows**, both `Apache-2.0` from a US standards body. 🔴 **`p238`'s headline re-attributed: the sort key, not the licence filter, is what surfaced the farm.** 🟢 **`p238`'s gate convicts `6`/`6` unseen members on first contact — its first prospective test, passed.**

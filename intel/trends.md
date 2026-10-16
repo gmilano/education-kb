@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 240 — 2026-10-16 — `ACTION VK` IS DISCHARGED AND THE THRESHOLDS IT WAS REGISTERED TO CALIBRATE ARE **FALSIFIED**: A QUOTED PHRASE RESTRICTED TO `name,description` RETURNS `≥96.7`% AT EVERY COUNT FROM `264` TO `1 368`, AND THE `48`-POINT COLLAPSE IS **FIELD SCOPE**, NOT BREADTH
+
+🔵 **Evidence:** [`p240-query-shape`](../evidence/p240-query-shape.2026-10-16-p240.tsv) · [`p240-queries`](../evidence/p240-queries.2026-10-16-p240.tsv)
+
+### 🔴 `T240-B` — the measurement `ACTION VK` asked for, and it refutes the instrument that asked
+
+`p239` set `CAUTION_MAX = 253` *(the last count measured to work)* and `REFUSE_MIN = 2326` *(the first measured to fail)* and registered **`ACTION VK`: the `(253, 2326]` interval wants one harvest at `~800` and one at `~1 500` to close it.** Four interior harvests, same sort key, same day:
+
+| `total_count` | sort | field scope | on-topic | published rows |
+|---|---|---|---|---|
+| `264` | `updated` | `name,description` | 🟢 **`100.0`%** | **3** |
+| `775` | `updated` | `name,description` | 🟢 **`96.7`%** | 1 |
+| `1 368` | `updated` | `name,description` | 🟢 **`100.0`%** | 🔴 **0** |
+| `2 091` | `updated` | 🔴 **`name,description,readme`** | 🔴 **`40.0`%** | 0 |
+
+🔴 **The interval is not a degradation zone at all.** `264` sits *above* `CAUTION_MAX` and returns the highest rate this KB has measured; `1 368` sits mid-interval at `100`%. **A count threshold cannot be the predicate.**
+
+### 🔵 The controlled pair, which is why this is an attribution and not a correlation
+
+Rows one and four are **the same phrase** — `"intelligent tutoring"` — with one parameter changed:
+
+| field scope | `total_count` | on-topic |
+|---|---|---|
+| `in:name,description` | `264` | 🟢 **`100.0`%** |
+| `in:name,description,readme` | 🔴 `2 091` | 🔴 **`40.0`%** |
+
+🔵 **`in:readme` matches a phrase anywhere in a long document, so page one fills with profile READMEs, arXiv trackers and awesome-lists that merely MENTION the topic.** The count rose `7.9`× *because* the field scope widened — **breadth is the symptom, field scope is the cause**, and `p239` read the symptom. 🟡 **`p239`'s own evidence agrees in hindsight: every one of its four `SLICE` harvests carried `in:...,readme` or bare unquoted terms; neither of its two high scorers did.**
+
+🟢 **The remedy is one parameter and it is not the sort key:** *quote the phrase and keep it out of the README*. 🟡 **`ACTION VS`: `p239-query-shape` must take `field_scope` and `term_shape` as inputs; `total_count` alone cannot classify a harvest.** 🔵 `p239`'s **`SCOPED`-has-no-threshold** rule survives intact and gained a point at `1.5`× `REFUSE_MIN`: `topic:edtech` at `total_count` `3 581` still returned `4` of `5` on-topic.
+
+### 🔴 `T240-B2` — and on-topic rate is not yield
+
+🔴 **The `1 368` harvest scored `100`% on-topic and produced `0` publishable rows.** Thirty genuine student-information systems, nearly all first-semester coursework. 🔵 **On-topic measures whether the QUERY found the subject; it says nothing about whether the SUBJECT is reusable.** 🟡 **`ACTION VT`: every query-evidence table records published rows beside on-topic rate** — this pass's does, and the two columns disagree on three of eight harvests.
+
+### 🟡 `T240-G` — a channel fact worth one line
+
+🔴 `topic:kaoyan OR topic:gaokao OR topic:jiaoyu` → **HTTP 422**, *"The search contains only logical operators (AND / OR / NOT) without any search terms."* **Qualifiers cannot be OR-ed on this channel.** 🔵 A multi-topic regional sweep is therefore **one harvest per topic**, which is a cost that has to be budgeted rather than discovered mid-pass.
+
+### 🔴 `T240-F` — the regulatory and market trend leg: `0` new, `0` corrected, for a further pass
+
+Four global searches and one per region produced **no row and no correction**. The two concrete recurrences are recorded in [`agents/top.md`](../agents/top.md): UNESCO IESALC's `87`%/`26`% offered again as *2026* data against fieldwork these shelves date to **August–October 2025**, and Vietnam's Decision `33/2026/QĐ-TTg` offered as new when `p138` carried it with its full compliance split.
+
+🔵 **The trend that matters is the one about this KB rather than the sector: on regulation, the shelves are now ahead of the English search channel.** 🟡 **`ACTION UX` is re-scoped rather than re-registered: stop asking the English channel for EMEA and APAC primary sources, and spend the same budget on the regulators' own publications** — which is the same lesson `T240-A` teaches about payloads, one level up.
+
 ## Pass 239 — 2026-10-16 — THE TREND IS THAT **EDUCATION AI IS ARRIVING FILED UNDER DATA INTEROPERABILITY**, NOT UNDER EDUCATION AI — AND THE COUNTER-TREND IS THAT THIS KB'S OWN RETRIEVAL HAS BEEN MEASURING **PUSH FREQUENCY** AND CALLING IT RELEVANCE
 
 🔵 **Evidence:** [`p239-query-shape`](../evidence/p239-query-shape.2026-10-16-p239.tsv) · [`p239-sortkey-reattribution`](../evidence/p239-sortkey-reattribution.2026-10-16-p239.tsv) · [`p239-lure-farm-scope`](../evidence/p239-lure-farm-scope.2026-10-16-p239.tsv) · [`p239-edfi-grant-lengths`](../evidence/p239-edfi-grant-lengths.2026-10-16-p239.tsv)
