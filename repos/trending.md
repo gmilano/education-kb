@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 247 — TRENDING: THE GERMAN SCHOOL ESTATE SURFACES ALL AT ONCE, AND IT IS **COPYLEFT BY DEFAULT** — `7` ON-TOPIC ROWS, `0` PERMISSIVE
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.
+
+### 🔴 `topic:schule` — a German axis never run here, and its result is a licence finding, not a row
+
+`total_count: 129`, `8` read by stars descending, `7` on topic, **`0` new permissive**, `2` already `CARRIED`.
+
+| Repo | ★ | 🔴 Grant *(read first-hand)* | What it is |
+|---|---|---|---|
+| [`ics-tools/ics.tools`](https://github.com/ics-tools/ics.tools) | 141 | 🔴 `AGPL-3.0` *(`34 523` B)* | Calendar files for statutory holidays and **school holidays of every Bundesland**. The dullest-sounding row and the most reusable one — and network copyleft |
+| [`lanis-mobile/lanis`](https://github.com/lanis-mobile/lanis) | 95 | 🔴 `GPL-3.0` *(`35 149` B)* | Flutter client for the **Hessisches Schulportal**, written by pupils, topics include `reverse-engineering` 🔵 **The state portal has no API, so the client is a reverse-engineering project** — the same shape as China's `smartedu` tier, under a different licence culture |
+| [`aula-app/aula-backend`](https://github.com/aula-app/aula-backend) | 7 | 🔴 `EUPL-1.2` *(`14 013` B)* | School **democracy** platform, PHP. 🔵 The European Commission's own licence, in the wild, in a school |
+| [`mgkurz/ais-chat-builder`](https://github.com/mgkurz/ais-chat-builder) | 5 | 🔴 `CC-BY-SA-4.0` *(`1 552` B)* | **A Claude Skill for teachers** generating `AIS.chat` learning scenarios — see `agents/trending.md` |
+| [`Lukas1120987/Schul-System`](https://github.com/Lukas1120987/Schul-System) | 10 | *(carried)* | 🟢 Already on these shelves as the `MIT`-plus-carve-out payload `p244` fixtured |
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 9 | *(carried)* | NRW report-card generator |
+
+🔵 **The reading:** Germany's school software is **built by pupils and teachers, against portals with no API, and licensed `GPL`/`AGPL`/`EUPL`/`CC-BY-SA`.** 🟢 For a studio that means **integration and hosting work, not forking** — the same conclusion `p240` reached for the European and Latin American supply from the opposite direction, now with a third region's evidence behind it.
+
+### 🟢 `topic:docentes` — `20` rows on all of GitHub, and `6` belong to ONE Argentine technical school
+
+🟢 **`ACTION VR` earned its keep again.** [`ETI-PATAGONIA-AR`](https://github.com/ETI-PATAGONIA-AR) publishes `uPLC` *(placed, `MIT`)*, a water-treatment plant project, an Arduino-FFT rhythm project, WiFi geolocation nodes, and two mathematics manuals for robotics teachers. 🔵 **A single Patagonian `ETI` is `30`% of the Spanish-language teacher axis on GitHub** — concentration that is a FINDING about supply, not a lure signal *(`p238`'s gate returns `CLEAR`)*.
+
+🔴 **And the generic Spanish axis is still Spain.** `topic:escuela` *(`37` rows)*: university LaTeX thesis templates from Alicante, one archived Argentine accounting tool, one Uruguayan civic-tech row already `CARRIED` *(`datauy/ElijoEstudiar`, ANEP open data)*. 🔵 **Third pass in a row that `topic:educacion`/`escuela` resolves to Spain: the LATAM key is a COUNTRY-SPECIFIC noun** *(`docentes`, `enem`, `bncc`)*, never the generic one.
+
+### 🟢 `topic:waec` — the whole of West Africa's exam supply is TWELVE repositories
+
+`total_count: 12`, `12` distinct owners, `8` read, `8` on topic, `0` rediscovery, `3` placed `MIT`. 🔴 **The largest** *(`Seunope/aloc-endpoints`, `223`★, `20 000` past questions)* **has no licence payload.** 🔴 **Two of the eight grant nothing at all.** 🟢 **Two are AI tutors built in the last eleven months** *(`nitoni-jim/ai-tutor-app` — RAG + vector search; `Wemelo1/jamb-waec-tutor` — LLaMA 3.3 + RAG, ungranted)*.
+
+🔵 **Compare the populations, because the comparison is the market map:** `topic:ferpa` + `topic:student-privacy` is a **North American population of `9`** *(p246)*; `topic:waec` is a **West African population of `12`**; `topic:digital-textbook` is a **global population of `2`**. 🟢 **These are not big numbers anywhere** — the education estate's open supply is thin in every region, and the thinness is the opportunity.
+
+### 🔴 GitHub Trending itself: still not a channel this KB can read
+
+🔴 `WebSearch` for *"github trending education AI 2026"* returned aggregators only *(`gittrend.io`, `trendshift.io`, a Japanese monthly round-up)*. 🟢 **`curl` to `api.github.com/search` is `403` from here and the MCP server is `200` for the same query** — so the row channel is the search API through MCP, and "trending" remains a thing this KB infers from `pushed:` and star deltas rather than reads.
+
 ## Pass 246 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS A **POPULATION OF TWO**: THE ARTEFACT KOREA LEGISLATED AND JAPAN PLANS FOR `2030` HAS ALMOST NO OPEN-SOURCE SUPPLY, AND THE AXIS THAT PAID INSTEAD IS **NOT AN EDUCATION TOPIC AT ALL**
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) *(8 queries, channel + sort key + total_count + on-topic count)* · [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) · [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv)

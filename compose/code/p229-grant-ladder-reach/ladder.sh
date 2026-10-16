@@ -31,12 +31,30 @@ set -u
 export GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/bin/true
 HERE="$(cd "$(dirname "$0")" && pwd)"
 . "$HERE/../lib/fetch_payload_to_file.sh"
+# `ACTION XC` (registrada p246, descargada p247).  La escalera emite ahora la CLASE DE RUTA
+# como columna 10, EN EL SITIO donde la ruta se decide.  p246 tuvo que escribir esa columna a
+# mano y se equivoco tres veces en un pase: dos filas graduadas sobre un `NOTICE` -- que
+# Apache-2.0 distingue de su propia licencia en su propio texto -- y una sobre
+# `pyproject.toml`, cuyo campo `license` es una DECLARACION y no un payload.  El Tier A
+# CONTIENE `NOTICE` y el Tier C es todo manifiestos, asi que el consumidor NO puede deducir
+# la clase del tier: tiene que venir de la ruta.  `graduable_as_licence` es el unico predicado
+# que hay que preguntar antes de pasarle un cuerpo a `family_of`.
+. "$HERE/../p247-path-class/path_class.sh"
 
 # Tier A — root licence names.  p228 probed six; the four additions are the ones this base has
 # measured elsewhere: `COPYING.txt` (Moodle's own spelling), the British `LICENCE.txt`, the
 # lowercase `copying.txt` (nvaccess/nvda) and `LICENSE.rst`.
-TIER_A="LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.txt COPYING COPYING.txt COPYING.md
-COPYING.LESSER license.txt license.md License.txt copying.txt LICENSE.rst NOTICE"
+# p247: `LICENSE-CODE` entra PRIMERA, y lo midio un falso positivo de este propio pase.
+# `microsoft/autogen` trae DOS rutas de concesion: `LICENSE` es **CC-BY-4.0** (18.650 B, la
+# licencia de la DOCUMENTACION) y `LICENSE-CODE` es **MIT** (la del codigo).  `LICENSE-CODE`
+# no estaba en ninguno de los 40 nombres, asi que la escalera devolvia el payload de los
+# DOCUMENTOS y un gate de primera mano habria "corregido" una celda `MIT` CORRECTA a
+# `CC-BY-4.0`.  Releer de primera mano no es automaticamente mas seguro: leer el fichero
+# EQUIVOCADO es una clase de error nueva, y es la familia de `ACTION XC` extendida de
+# `NOTICE`/manifiesto a los HERMANOS de alcance partido.  El sujeto de estos estantes es
+# software, asi que cuando las dos rutas existen la del CODIGO es la que gobierna.
+TIER_A="LICENSE-CODE LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.txt COPYING COPYING.txt
+COPYING.md COPYING.LESSER license.txt license.md License.txt copying.txt LICENSE.rst NOTICE"
 # Tier B — non-root licence paths THIS KB HAS ALREADY RECORDED, plus the SPDX `LICENSES/` dir.
 TIER_B="docs/License.txt docs/LICENSE docs/LICENSE.txt docs/license.txt html/license.txt
 public/COPYING.txt public/LICENSE public/license.txt LICENSE/LICENSE licenses/LICENSE
@@ -67,7 +85,7 @@ while IFS= read -r slug; do
   sym=$(timeout 45 git ls-remote --symref "https://github.com/$slug" HEAD 2>/dev/null)
   if [ -z "$sym" ]; then
     # ABSENT is a DIFFERENT state from grantless, and p228 could not tell them apart.
-    printf '%s\tABSENT\t-\t-\t-\t-\t-\t-\t-\n' "$slug"
+    printf '%s\tABSENT\t-\t-\t-\t-\t-\t-\t-\t-\n' "$slug"
     continue
   fi
   defref=$(printf '%s' "$sym" | awk '/^ref:/{print $2}' | sed 's#refs/heads/##' | head -1)
@@ -94,14 +112,15 @@ while IFS= read -r slug; do
           # count is recorded beside it rather than instead of it (p228's rule).
           sha=$(sha256sum "$dest" | cut -c1-12)
           mv "$dest" "$OUT/$key.body"
-          printf '%s\tFOUND\t%s\t%s\t%s\t%s\t%s\t%s\ttier%s\n' \
-                 "$slug" "$ref" "$headsha" "$path" "$code" "$bytes" "$sha" "$tier"
+          printf '%s\tFOUND\t%s\t%s\t%s\t%s\t%s\t%s\ttier%s\t%s\n' \
+                 "$slug" "$ref" "$headsha" "$path" "$code" "$bytes" "$sha" "$tier" \
+                 "$(path_class "$path")"
           hit=1; break
         fi
         rm -f "$dest"
       done
     done
   done
-  [ "$hit" = "1" ] || printf '%s\tNO-GRANT\t%s\t%s\t-\t404\t-\t-\t%d-paths-x-%d-refs\n' \
+  [ "$hit" = "1" ] || printf '%s\tNO-GRANT\t%s\t%s\t-\t404\t-\t-\t%d-paths-x-%d-refs\t-\n' \
                              "$slug" "$defref" "$headsha" "$((nA+nB+nC))" "$(echo $refs | wc -w)"
 done < "$SLUGS"

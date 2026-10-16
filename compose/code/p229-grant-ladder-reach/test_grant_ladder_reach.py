@@ -80,7 +80,14 @@ if sz.main():
 # ---- the ladder's reach must stay PRINTABLE (T272) ------------------------------------
 print('\n-- reach --')
 out = subprocess.run([HERE + '/ladder.sh', '--reach'], capture_output=True, text=True).stdout
-check('T272 reach is printable', out.startswith('tierA=15 tierB=15 tierC=10 total=40'), True)
+# p247 widened Tier A by ONE name -- `LICENSE-CODE`, measured on `microsoft/autogen`, whose
+# root `LICENSE` is CC-BY-4.0 (the DOCS licence, 18 650 B) and whose `LICENSE-CODE` is MIT
+# (the CODE licence).  The count is re-asserted rather than loosened on purpose: a reach that
+# grows silently is a reach nobody re-reads (T272).
+check('T272 reach is printable', out.startswith('tierA=16 tierB=15 tierC=10 total=41'), True)
+check('T272 LICENSE-CODE is in the printed reach (p247)', 'LICENSE-CODE' in out, True)
+check('T272 the code grant is probed BEFORE the bare LICENSE (p247)',
+      out.index('LICENSE-CODE') < out.index('\nLICENSE\n'), True)
 
 print('\n%s' % ('ALL CONTROLS PASS' if not FAILED else 'FAILURES:\n  ' + '\n  '.join(FAILED)))
 sys.exit(1 if FAILED else 0)

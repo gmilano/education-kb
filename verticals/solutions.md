@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — THE VERTICAL FINDING IS A **PLATFORM WITH NO API AND A CLIENT TIER AROUND IT**: CHINA'S `smartedu` AND HESSEN'S `Schulportal` ARE THE SAME SHAPE IN TWO LICENCE CULTURES
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-verified-rows`](../evidence/p247-verified-rows.2026-10-16-p247.tsv) · [`p247-queries`](../evidence/p247-queries.2026-10-16-p247.tsv)
+
+### 🔵 `T247-V1` — a platform class these shelves had no row for: the STATE platform
+
+| Platform | Jurisdiction | Open? | What the open supply actually is |
+|---|---|---|---|
+| **国家中小学智慧教育平台** *(`basic.smartedu.cn`)* | 🔵 **PRC, national, compulsory-education** | 🔴 **No.** The platform is a state service; there is no source and no documented API | 🟢 **A client tier of `8` repositories, `6` of them granted, `4` `MIT` + `1` canonical `Apache-2.0`** — PDF resolvers, a Tauri desktop app, a Go batch downloader, and one Java admin backend. **`7 161`★ at the top.** This is how open source attaches to a closed state platform |
+| **Schulportal Hessen** *(`lanis`)* | EMEA — **Hessen, Germany** | 🔴 **No**, and topics on its client literally say `reverse-engineering` | 🔴 `GPL-3.0` Flutter client written by pupils. Same shape, copyleft licence |
+| **Bundesland school-holiday calendars** | EMEA — Germany, all `16` Länder | 🟡 Data published per-Land, no single feed | 🔴 `AGPL-3.0` *(`ics-tools/ics.tools`, `141`★)* — someone had to build the feed, and network copyleft is the price of using it |
+| **WAEC / NECO / JAMB** | EMEA — **Nigeria, West Africa** | 🔴 **No** developer API from the boards | 🟢 `MIT` unofficial results API *(`idoqo/waec`)* + an ungranted `223`★ question bank *(`Seunope/aloc-endpoints`)*. 🔵 **The exam board is the platform here, and the open supply is its missing API** |
+| **KNEC / CBC** | EMEA — **Kenya** | 🔴 No | 🟢 One `MIT` backend naming KNEC + CBC + WAEC + **M-Pesa** in a single API surface |
+
+🟢 **For a studio engagement this is the most actionable pattern on the shelf today:** the client-side integration layer for a closed national platform is **where the permissive licences are**, because the platform's own code is never open and the clients are built by individuals who reach for `MIT`.
+
+### 🟢 `T247-V2` — the carried platform estate, unchanged and re-affirmed by a vendor's own comparison
+
+🔵 The global-verticals `WebSearch` leg returned, from **OpenEduCat's own** comparison pages, the same split this KB has carried for ten passes — recorded because a vendor conceding it is better evidence than a third-party list:
+
+| Platform | Licence | Class *(the vendor's own grouping)* |
+|---|---|---|
+| **Moodle** | 🔴 `GPL-3.0` | course-centric; `400M+` users / `150k` registered sites *(self-reported, Moodle Stats)* |
+| **Open edX** | 🔴 `AGPL-3.0` | course-centric |
+| **Sakai** · **ILIAS** | 🔴 `ECL-2.0` / `GPL` | institutional |
+| **Canvas LMS** | 🔴 `AGPL-3.0` | **open-core**, commercial upstream |
+| **Chamilo** | 🔴 `GPL` | lightweight |
+| **OpenEduCat** | 🔴 `LGPL-3.0` | education-ERP *(LMS + SIS + fees + parent app on one database)* |
+| **RosarioSIS** | 🔴 `GPL-2.0` | SIS *(`646`★, re-found this pass on `topic:gradebook`)* |
+| **openSIS-Classic** | 🔴 `GPL-2.0` | SIS *(`345`★, re-found)* |
+
+🔴 **TENTH consecutive pass with `0` MIT/Apache LMS or SIS products.** 🟢 **And the conclusion stays the same for a studio: the permissive layer is BESIDE the platform — connectors, MCP servers, skill bundles, compliance records, client tooling — never the platform itself.**
+
+### 🟡 `T247-V3` — one vertical row withheld for a reason worth naming
+
+🔴 [`aula-app/aula-backend`](https://github.com/aula-app/aula-backend) is **`EUPL-1.2`** — the European Commission's own licence — on a school-democracy platform used with youth participation programmes. 🔵 **`EUPL` is copyleft with a compatibility appendix that names five other families**, which is exactly why `P453` put the EUPL anchor first in the shared classifier. 🟢 For an EMEA public-sector engagement `EUPL` is often the *required* licence, not an obstacle: it is the one copyleft that procurement departments in the EU already have language for.
+
 ## Pass 246 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A **SIXTH** PASS, AND THE VERTICAL FINDING IS THAT THE **COMPLIANCE LAYER IS THE ONLY LAYER OF THIS STACK THAT IS PERMISSIVE ALL THE WAY DOWN** — WHICH IS WHY IT IS WHERE THE PERMISSIVE SUPPLY KEEPS APPEARING
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(global-verticals leg)* · [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv)

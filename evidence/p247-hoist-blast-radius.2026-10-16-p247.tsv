@@ -1,0 +1,5 @@
+file	family_before	family_after
+compose/code/p129-transcription-audit/fixtures/licence-bsl11-change-license-mit.txt	MIT	BUSL
+compose/code/p205-grant-classifier-fix/fixtures/bsl-1.1.txt	MIT	BUSL
+compose/code/p246-payload-integrity/fixtures/iaga-sentinel.busl-1.1.txt	Apache-2.0	BUSL
+# 368 fixture payloads swept before and after the P1062 hoist; 3 changed, all 3 BSL payloads that were being misread

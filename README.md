@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — `ACTION XA` DISCHARGED AND THE **BUSL BRANCH IS ALIVE** — BUT THE DISCHARGE PROVED THE FIX INSUFFICIENT: OF THREE REAL SOURCE-AVAILABLE PAYLOADS READ, THE ANCHOR ORDER EXPLAINS **ONE**. PLUS THE FIRST **CJK** HARVEST IN `246` PASSES, AND THE FIRST **AFRICA** SUPPLY AXIS EVER RUN HERE
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** `p232`–`p246` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log moved onto the shelves at `p242` and the entry below is the first README entry since `p241`.** The per-shelf sections and [`intel/open-gaps.md`](intel/open-gaps.md) are the ledger; this is the front door.
+
+🟢 **`12` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, every slug `NEW` from the carried-index gate BEFORE the fetch. 🟢 **`5` ACTIONs discharged** *(`XA`, `XB`, `XC`, `XD`, `UL`)*, **two of them carried for twelve passes.** 🟢 **`821` MIT-tier payloads re-read first-hand; `16` cells disagree with their own payload.** 🟢 **Two new instruments, `145` controls between them, both in `make hooks`.** 🔴 **`21` rows withheld, every payload read.** 🔴 **North America: `0` permissive rows — saturation with its control named, not an absence.** 🔴 **The `WebSearch` row channel is dry for the ninth pass in ten.**
+
+🔵 **Evidence:** [`p247-verified-rows`](evidence/p247-verified-rows.2026-10-16-p247.tsv) *(12)* · [`p247-withheld`](evidence/p247-withheld.2026-10-16-p247.tsv) *(21)* · [`p247-source-available-reach`](evidence/p247-source-available-reach.2026-10-16-p247.tsv) · [`p247-hoist-blast-radius`](evidence/p247-hoist-blast-radius.2026-10-16-p247.tsv) · [`p247-mit-tier-sweep`](evidence/p247-mit-tier-sweep.2026-10-16-p247.tsv) *(821)* · [`p247-mit-tier-corrections`](evidence/p247-mit-tier-corrections.2026-10-16-p247.tsv) *(16)* · [`p247-mit-tier-unread`](evidence/p247-mit-tier-unread.2026-10-16-p247.tsv) *(60)* · [`p247-queries`](evidence/p247-queries.2026-10-16-p247.tsv) *(15)* · [`p247-websearch`](evidence/p247-websearch.2026-10-16-p247.tsv) *(10 legs)* · **instruments:** [`p247-keyed-grant`](compose/code/p247-keyed-grant/) *(86)* · [`p247-path-class`](compose/code/p247-path-class/) *(59)* · [`p247-mit-tier-sweep`](compose/code/p247-mit-tier-sweep/)
+
+### 🟢 The headline, in three lines
+
+1. 🟢 **`ACTION XA` discharged on limb `1`** — the five source-available anchors are hoisted above every OSI anchor, and limb `2`'s premise *(a real Apache payload that merely MENTIONS the BSL)* was **measured empty** with GitHub code search *(`2` hits on all of GitHub for `"Business Source License"` + the Apache body at a licence path; neither OSI-governed; `0` for `PolyForm` + the MIT grant line)*. **Blast radius: `3` of `368` fixtures and `1` published shelf row, all four BSL payloads that were being misread.**
+2. 🔴 **And the discharge falsified its own sufficiency.** Three real source-available payloads, three different causes: **ORDER** *(`IAGA-Sentinel`, fixed)*, **VOCABULARY** *(`cockroachdb/cockroach` — name at offset `0`, and no anchor here knows the string)*, **WINDOW** *(`redpanda-data/common-go` — its BSL reference sits at offset `4 969`, beyond the `4 000`-character truncation)*. 🟢 [`p247-keyed-grant`](compose/code/p247-keyed-grant/) measures the other two.
+3. 🔵 **The `CockroachDB Software License` contains the word "commercial" ZERO times.** It meters the grant with a **License Key**, **Telemetry** and **Protective Measures** instead — so every restriction-vocabulary matcher returns `ALLOWED` by construction. **`KEYED-GRANT` is now a verdict, with `GPL-3.0` and `AGPL-3.0` as adversarial controls.**
+
+### 🟢 Rows placed
+
+| region | rows | names |
+|---|---|---|
+| 🟢 **APAC** | **`7`** | `tchMaterial-parser` *(`7 161`★, `MIT`, the highest-star permissive education row ever placed here)* · `byoungd/up` *(`68 791`★, `MIT`, 🟡 prose not software)* · `knowledge-grab` *(`564`★)* · `smartedu-dl-go` *(`201`★)* · `tchMaterial-downloader` *(`66`★, 🔴 archived)* · `SmartEducation` *(`56`★, canonical `Apache-2.0`)* · `k-emails` *(`6`★, Korea)* |
+| 🟢 **EMEA** | **`3`** | 🔵 **all three from the first Africa supply axis run here:** `idoqo/waec` *(`24`★, Nigeria, WASSCE results API)* · `nitoni-jim/ai-tutor-app` *(RAG tutor over WAEC/NECO/JAMB)* · `think-plus-outlook-study-hub` *(Kenya + Nigeria, KNEC/CBC/WAEC + M-Pesa)* |
+| 🟢 **LATAM** | **`1`** | `ETI-PATAGONIA-AR/uPLC` *(Argentina, off the NEW `topic:docentes` axis, whose owner publishes `6` of its `20` rows)* |
+| 🟢 **Global** | **`1`** | `aaryansamanta/nextgen-ai` *(`494`★ — names the US **and** Taiwan, so neither)* |
+| 🔴 **North America** | **`0`** | 🔴 **Saturation, not absence, and the control is named:** `topic:ai-literacy` returned `5` of `8` already `CARRIED` *(`62.5`%, the pass's highest rediscovery rate)* and `topic:gradebook` `4` of `8`. **The axis the `134` US state bills legislate is the axis these shelves already hold** |
+
+### 🔵 The channel findings
+
+- 🔴 **`topic:教育` returns `0` on all of GitHub.** GitHub topics are latinised in practice, so the channel that carries every non-English row here **has no CJK form** — and `ACTION UL`, carried unrun for twelve passes, **could never have been discharged the way it was written.**
+- 🟢 **What works in CJK is a PROPER NOUN:** `智慧教育` → `374` rows, `8` of `8` on topic, `8` of `8` NEW, all clients for **国家中小学智慧教育平台**. 🔴 **Japanese `学習管理` and Chinese `教育 智能体`: `0` of `8` on topic** — `学習` collides with machine learning in the same script.
+- 🔴 **Freetext + a star sort fails identically in Chinese.** `教育 AI stars:>5` returned `free-programming-books-zh_CN` *(`119 232`★)*, `ruanyf/weekly` *(`106 288`★)*, `minimind` — `0` of `20` on topic. **The failure `p239`/`p244`/`p246` measured in English is not about English.**
+- 🟢 **`topic:waec` is a population of TWELVE on all of GitHub** for West Africa's school-leaving exam — `12` distinct owners, `0` rediscovery, `3` placed `MIT`, and 🔴 **the biggest one** *(`Seunope/aloc-endpoints`, `223`★, `20 000` past questions)* **has no licence payload at any of `40` paths.** 🟡 **One `LICENSE` file is the highest-value licence ask on these shelves.**
+- 🔴 **Germany's school estate is copyleft by default:** `topic:schule` → `7` of `8` on topic, **`0`** permissive — `AGPL-3.0`, `GPL-3.0`, `EUPL-1.2`, `CC-BY-SA-4.0`. 🔵 **Same artefact shape as China's** *(a state platform with no API, surrounded by individually-authored clients)*, **different licence culture.**
+- 🟢 **The GitHub CODE search API works through the MCP server where `curl` is `403`** — re-confirming `p241`'s transport finding on a second endpoint, and it is what made `ACTION XA`'s limb-2 measurement possible at all.
+
+### 🔵 The market reading
+
+🔵 **Korea's `AI Basic Act` has been in force since January 2026 and names EDUCATION in its "high-impact AI" scope** alongside healthcare and finance — the first APAC jurisdiction with school AI in statutory scope, and the jurisdiction `kuzivaai/getregula` *(carried)* already encodes beside the EU AI Act and Colorado. 🟢 **`134` AI-in-education bills across `31` US states in 2026**, with California **AB 1159** *(no student data for model training)* and Oklahoma/Maryland *(human oversight; no AI in high-stakes decisions about students)* the architectural ones. 🟢 **Ghana puts AI, coding and robotics into BASIC school before end-2026; Kenya trains `5 400` teachers before Competency-Based Education reaches senior school in January 2026; Rwanda runs a Claude-based learning companion with ALX explicitly to inform national policy.** 🔴 **And no African jurisdiction has an AI-specific school rule at all.**
+
+🔵 **Read beside the licence findings, the engagement shape is the same in every region: the permissive layer is NEXT TO the platform — clients, connectors, skill bundles, compliance records — and it is service work.**
+
 ## Pass 241 — 2026-10-16 — `16` PERMISSIVE ROWS WITH `6` IN THE **NORTH AMERICA** GAP `p240` DECLARED, `ACTION VO` DISCHARGED AS A CENSUS — AND THE PASS'S FINDING IS THAT `p240` READ ITS OWN DEFECT AS **LANGUAGE** WHEN THE CLASS IS WIDER: THE SAME FUNCTION RETURNED **ALLOWED** ON TWO **ENGLISH** PAYLOADS THAT GRANT NOTHING
 
 ⏱️ **TENTH pass of `2026-10-16`.** p232–p240 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

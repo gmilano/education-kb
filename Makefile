@@ -17,7 +17,7 @@
 SHELL := /bin/bash
 PY ?= python3
 
-.PHONY: hooks gate-offline gate-online reach status exists index carried claims
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims
 
 hooks: gate-offline ## the standing check: every licence instrument's OFFLINE controls
 
@@ -73,6 +73,11 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p246-payload-integrity (ROLE + STATE: 60 controls, the BUSL-unreachable branch)"; \
 	$(PY) -I compose/code/p246-payload-integrity/test_payload_integrity.py >/dev/null && echo "   PASS"; \
+	echo "── p247-keyed-grant     (ENFORCEMENT + the windowless name channel: 74, ACTION XA)"; \
+	$(PY) -I compose/code/p247-keyed-grant/test_keyed_grant.py >/dev/null && echo "   PASS"; \
+	echo "── p247-path-class      (ACTION XC: licence path vs NOTICE vs manifest vs code)"; \
+	cd compose/code/p247-path-class && bash test_path_class.sh >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
@@ -85,6 +90,15 @@ exists: ## ACTION TC — one `git ls-remote` per slug: existence, default branch
 gate-online: ## needs raw.githubusercontent.com — re-read the shelves' grants first-hand
 	@echo "usage: compose/code/p229-grant-ladder-reach/ladder.sh <slugs-file> <out-dir>"
 	@compose/code/p229-grant-ladder-reach/ladder.sh --reach
+
+gate-mit-tier: ## ACTION XB (p247) — re-read the MIT tier's grants first-hand.  NEEDS EGRESS.
+	@echo "881 distinct MIT slugs on the shelves; 821 readable on guessed refs (ACTION XH holds the 60)."
+	@$(PY) -I compose/code/p228-shelf-gate/harvest_cells.py agents/top.md agents/trending.md \
+	  repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md \
+	  intel/trends.md compose/patterns.md 2>/dev/null \
+	  | awk -F'\t' 'NR>1 && $$5=="LIVE" && $$4=="MIT"{print tolower($$3)}' | sort -u > /tmp/p247-mit-slugs.txt
+	@wc -l < /tmp/p247-mit-slugs.txt
+	@compose/code/p247-mit-tier-sweep/sweep.sh /tmp/p247-mit-slugs.txt /tmp/p247-mit-sweep 12
 
 reach: ## print the probe vocabulary (T272: a list you cannot print is a list that gets copied)
 	@compose/code/p229-grant-ladder-reach/ladder.sh --reach

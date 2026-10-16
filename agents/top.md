@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — THE FIRST **CJK** HARVEST IN `246` PASSES, AND IT FOUND A WHOLE CATEGORY THE ENGLISH CHANNEL CANNOT SEE: `8` OF `8` ON-TOPIC ROWS CLUSTERED ON **ONE NATIONAL PLATFORM** — WHILE `topic:教育` RETURNS **ZERO ON ALL OF GITHUB**, SO THE AXIS THAT CARRIED EVERY NON-ENGLISH FIND HERE **HAS NO CJK FORM AT ALL**
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** `p232`–`p246` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`12` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported — **`11` `MIT` and `1` canonical `Apache-2.0`.** 🟢 **All `12` returned `NEW` from the `p235` carried-index gate BEFORE the fetch.** 🟢 **`ACTION UL` DISCHARGED — the CJK queries it has demanded since `p235` were finally run, in Chinese, Japanese AND Korean.** 🟢 **`ACTION XD`'s Africa gap MEASURED on both channels** *(supply and regulation)*, not just named. 🔴 **`21` rows withheld, every payload read.** 🔴 **North America: `0` permissive rows — a saturation measure with its control named, not an absence.** 🔴 **The `WebSearch` row channel is dry for the NINTH pass in ten.**
+
+🔵 **Evidence:** [`p247-verified-rows`](../evidence/p247-verified-rows.2026-10-16-p247.tsv) *(12 rows, grant + bytes + path + `path_class` + pinned head + per-row region basis + index verdict)* · [`p247-withheld`](../evidence/p247-withheld.2026-10-16-p247.tsv) *(21)* · [`p247-queries`](../evidence/p247-queries.2026-10-16-p247.tsv) *(15 queries, channel + sort key + distinct owners + rediscovery rate)* · [`p247-websearch`](../evidence/p247-websearch.2026-10-16-p247.tsv) *(10 legs)* · [`p247-source-available-reach`](../evidence/p247-source-available-reach.2026-10-16-p247.tsv) · [`p247-mit-tier-sweep`](../evidence/p247-mit-tier-sweep.2026-10-16-p247.tsv) *(821 payloads)* · **instruments:** [`p247-keyed-grant`](../compose/code/p247-keyed-grant/) *(86 controls)* · [`p247-path-class`](../compose/code/p247-path-class/) *(59 controls)*, both wired into `make hooks`
+
+### 🟢 `T247-A` — the CJK finding, and it is not "there is Chinese supply"
+
+🔴 **`topic:教育` returns `total_count: 0`.** Not few — **zero, on all of GitHub.** GitHub topics are latinised in practice, so the channel that produced this KB's best non-English rows (`topic:educacion`, `topic:educacao`, `topic:schule` below) **has no CJK form**, and `ACTION UL` — *"run a CJK query before publishing another APAC absence"* — could never have been discharged through it. That is the first half of the finding and it took one request to establish.
+
+🔴 **And the obvious substitute fails the same way English freetext does.** `教育 AI in:name,description,readme stars:>5` reports `1 531` and returns `free-programming-books-zh_CN` *(`119 232`★)*, `ruanyf/weekly` *(`106 288`★)*, `minimind`, `HowToLiveBetter` — **`0` of `20` on topic.** 🔵 **So the freetext failure `p239`/`p244`/`p246` measured in English is NOT a property of English: it is a property of freetext plus a star sort, in any script.**
+
+🟢 **What DID work is a PROPER NOUN.** `智慧教育` *(`374` rows, best-match, no star sort)* returned **`8` of `8` on topic and `8` of `8` `NEW`**, every one of them tooling around **国家中小学智慧教育平台** *(`basic.smartedu.cn`, the PRC national primary/secondary platform)*:
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region *(basis)* | What it is |
+|---|---|---|---|---|---|
+| [`happycola233/tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser) | 🟢 `MIT` *(`1 072` B)* | **7 161** | `main` · `244170e17bf8` | **APAC** *(CN national platform in its own description)* | 🔵 **The highest-star permissive education row this KB has ever placed.** Resolves and downloads the PDF of a state electronic textbook from `smartedu.cn`. Python |
+| [`byoungd/up`](https://github.com/byoungd/up) | 🟢 `MIT` *(`1 807` B, `LICENSE.md`)* | **68 791** | `main` · `f13ff2de84e1` | **APAC** *(Chinese-language, `open-education` topic)* | 🟡 **PROSE, NOT SOFTWARE — flagged as such.** A Chinese lifelong-learning / AI-era study guide. Placed because the grant is real and permissive; **do not read it as a tool** |
+| [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) | 🟢 `MIT` *(`1 063` B)* | 564 | `main` · `70de8441e58e` | **APAC** *(names `basic.smartedu.cn`)* | Tauri + Vue 3 **desktop** client for the same platform's resources. Rust |
+| [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | 🟢 `MIT` *(`1 064` B)* | 201 | `main` · `806008bdf337` | **APAC** *(topics `smartedu` + `textbook`)* | Multi-platform Go client: PDF textbooks, courseware, audio, video |
+| [`amakerlife/tchMaterial-downloader`](https://github.com/amakerlife/tchMaterial-downloader) | 🟢 `MIT` *(`1 066` B)* | 66 | `main` · `71de1745dbaf` | **APAC** *(CN)* | 🔴 **ARCHIVED — read-only.** Login-free textbook download in JavaScript. Published WITH the flag, because an archived permissive row is a fork base and not a dependency |
+| [`lawlite19/SmartEducation`](https://github.com/lawlite19/SmartEducation) | 🟢 `Apache-2.0` *(`11 357` B, **canonical** per `p245`)* | 56 | `master` · `c3825f62a75a` | **APAC** *(智慧教育后台管理子系统)* | The only ADMIN BACKEND on the axis — Java, and the only row that is school-side rather than pupil-side |
+| [`wonderlanded/k-emails`](https://github.com/wonderlanded/k-emails) | 🟢 `MIT` *(`1 097` B)* | 6 | `master` · `63dd291d50e7` | **APAC** *(Korean: 중/고등/대 school e-mail domains)* | 🔵 **The only row the KOREAN leg produced.** Classifies Korean school e-mail domains — an identity primitive for any KR education deployment. TypeScript |
+
+🔵 **The category itself is the finding.** 🔴 **Not one of these is a tutor, an LMS or an agent.** They are **clients for a state platform** — a class that cannot appear on an English axis because the platform's name only exists in Chinese, and which no pass in this KB's history had seen. 🟡 **And the second-largest row on the axis, [`52beijixing/smartedu-download`](https://github.com/52beijixing/smartedu-download) *(`868`★)*, grants NOTHING** *(40 paths × 2 refs, all `404`)* — as does [`cjhdevact/FlyEduDownloader`](https://github.com/cjhdevact/FlyEduDownloader) *(`162`★)*. The licence density on this axis is **`6` granted of `8` read**, and the ungranted two are not the small ones.
+
+### 🔴 `T247-B` — Japanese and Korean concept queries FAILED, and that is published as a channel result
+
+| query | total | read | on topic | what came back |
+|---|---|---|---|---|
+| 🔴 `学習管理` *(JP, "learning management")* | `34 673` | `8` | **`0`** | PyTorch textbooks, `arXivTimes`, Udemy course code. 🔵 **`学習` collides with machine learning in the same script** — a Japanese CONCEPT query cannot separate school from ML |
+| 🟡 `학교 교육` *(KR, "school education")* | `1 662` | `8` | `2` | `k-emails` *(placed)* and `ClassSync/K12` *(no grant)*. Its biggest hit, `NomaDamas/k-skill` *(`7 942`★)*, is agent localisation — **withheld on SUBJECT, with its stars stated so nobody re-finds it as an education row** |
+| 🔴 `教育 智能体` *(CN, "education agent")* | `3 420` | `8` | **`0`** | `TradingAgents-CN`, `BettaFish`, `carrot`. The concept PAIR fails where the proper noun succeeded |
+
+🟢 **`ACTION UL` is therefore DISCHARGED, and its premise is CONFIRMED in a sharper form than it was written:** the APAC blind spot was real, it was never a topic-channel problem, and the key that opens it is **the name of a national system**, not a translation of "education".
+
+### 🟢 `T247-C` — the rows the other regions produced
+
+| Repo | 🟢 Grant | ★ | Region *(country in prose, per the closed vocabulary)* | What it is |
+|---|---|---|---|---|
+| [`idoqo/waec`](https://github.com/idoqo/waec) | 🟢 `MIT` *(`1 073` B, `LICENSE.md`)* | 24 | **EMEA** *(Nigeria)* | 🔵 **From the first AFRICA supply axis ever run on these shelves.** Unofficial developer API for **WASSCE** results — the West African school-leaving exam. PHP |
+| [`nitoni-jim/ai-tutor-app`](https://github.com/nitoni-jim/ai-tutor-app) | 🟢 `MIT` *(`1 074` B)* | 1 | **EMEA** *(Nigeria)* | An **intelligent tutoring system** with RAG + vector search over **WAEC/NECO/JAMB** past papers. The AI-education row the continent's largest exam system has |
+| [`Jose-ctr/think-plus-outlook-study-hub-`](https://github.com/Jose-ctr/think-plus-outlook-study-hub-) | 🟢 `MIT` *(`1 066` B)* | 1 | **EMEA** *(Kenya + Nigeria)* | StudyHub API naming **KNEC, CBC, WAEC** and **M-Pesa** in one backend — the payment rail IS the regional signal |
+| [`ETI-PATAGONIA-AR/uPLC`](https://github.com/ETI-PATAGONIA-AR/uPLC) | 🟢 `MIT` *(`1 073` B)* | 2 | **LATAM** *(Argentina)* | 🔵 **The LATAM row, and it came off a NEW axis** *(`topic:docentes`)*: a Ladder / function-block → Arduino transpiler from a **Patagonian technical school**. Its owner publishes `6` of the `20` rows on that axis |
+| [`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai) | 🟢 `MIT` *(`1 327` B)* | 494 | Global *(US **and** Taiwan named)* | Student-led AI-literacy organisation: seminars, ambassador programme, `50+` members. **Global because it names two regions** — placing it in either would be a guess |
+
+🔴 **North America produced `0` permissive rows, and the control that makes that establishable is named:** both NA-leaning axes were run and both are **rediscovery**, not emptiness — `topic:ai-literacy` returned `5` of `8` already `CARRIED` *(the highest rediscovery rate of the pass, `62.5`%)* and `topic:gradebook` `4` of `8` `CARRIED` *(`rosariosis` `646`★, `openSIS-Classic` `345`★)*. 🔵 **The axis the `134` state bills are about is the axis these shelves already hold** — which is a market reading, not a gap.
+
+### 🔴 `T247-D` — the agent tier, re-measured: `21` withheld, and `3` of them are the interesting ones
+
+- 🔴 **[`mgkurz/ais-chat-builder`](https://github.com/mgkurz/ais-chat-builder)** *(`5`★, Germany)* is a **Claude Skill for teachers** — and its grant is **`CC-BY-SA-4.0`**, a CONTENT licence over code. 🔵 **The agent-skill form is arriving in education, and it is arriving under the wrong licence class.**
+- 🔴 **[`sixiaopangai/2026-AI-Literacy-Exam-Helper`](https://github.com/sixiaopangai/2026-AI-Literacy-Exam-Helper)** *(`24`★)* is `CC-BY-NC-SA-4.0` and says **严禁商用** *("commercial use strictly forbidden")*. 🟢 **`commercial_use_ok` returns `DENIED` — `p240`'s language axis earning its keep on a payload it has never seen.**
+- 🔴 **[`Seunope/aloc-endpoints`](https://github.com/Seunope/aloc-endpoints)** *(`223`★, the biggest row on the WAEC axis)* has **no licence text at any of the 40 paths** — only `license: MIT` in `composer.json`. 🟢 **The ladder now says `MANIFEST` in its own output** *(`ACTION XC`, below)*, so no later pass can read that declaration as a payload.
+
 ## Pass 246 — 2026-10-16 — THE PRODUCTIVE AXIS WAS `topic:ai-act`, AND ITS HIGHEST-STAR ROW IS **NOT OPEN SOURCE AT ALL**: `commercial_use_ok` RETURNED **ALLOWED** ON A `Business Source License` PAYLOAD, BECAUSE THE CLASSIFIER'S `BUSL` BRANCH IS **UNREACHABLE BY CONSTRUCTION**
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** `p232`–`p245` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

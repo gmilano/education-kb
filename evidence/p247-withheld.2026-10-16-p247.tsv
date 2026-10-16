@@ -1,0 +1,25 @@
+slug	grant_read	bytes	path	path_class	stars	region	why_withheld
+RicardoJackMC/Teaching-Material-Download-Manager	GPL-3.0	35149	LICENSE	LICENCE-PATH	48	APAC	copyleft — not a Globant build-on base
+lanis-mobile/lanis	GPL-3.0	35149	LICENSE	LICENCE-PATH	95	EMEA	copyleft; Germany (Hessisches Schulportal client, written by pupils)
+ics-tools/ics.tools	AGPL-3.0	34523	LICENSE	LICENCE-PATH	141	EMEA	network copyleft; Germany (Bundesland school-holiday calendars)
+aula-app/aula-backend	EUPL-1.2	14013	LICENSE.txt	LICENCE-PATH	7	EMEA	EUPL is copyleft with a compatibility appendix; Germany (school democracy platform)
+mgkurz/ais-chat-builder	CC-BY-SA-4.0	1552	LICENSE	LICENCE-PATH	5	EMEA	a CONTENT licence over a Claude Skill for German teachers — share-alike, and the wrong licence class for code
+maestroseb/marcarpro	GPL-3.0	35149	LICENSE	LICENCE-PATH	2	EMEA	copyleft; Spain (Andalusian EducaAndOS interactive-panel annotation tool)
+BrannHub/Escuela-Tech	MPL-2.0	16725	LICENSE	LICENCE-PATH	1	LATAM	file-level copyleft; Argentina; last push 2019 (stale)
+sixiaopangai/2026-AI-Literacy-Exam-Helper	CC-BY-NC-SA-4.0	2427	LICENSE	LICENCE-PATH	24	APAC	NON-COMMERCIAL, and its README says 严禁商用 ("commercial use strictly forbidden"). commercial_use_ok returns DENIED — the Chinese-language denial p240 built its language axis for
+NomaDamas/k-skill	MIT	1056	LICENSE	LICENCE-PATH	7942	APAC	PERMISSIVE but OFF-TOPIC: Korean localisation skills for agents, not education. Withheld on subject, not on licence — stated so the star count is not read as an education finding
+52beijixing/smartedu-download	NO-GRANT	-	-	-	868	APAC	40 paths x 2 refs, all 404. The SECOND-largest row on the 智慧教育 axis grants nothing
+cjhdevact/FlyEduDownloader	NO-GRANT	-	-	-	162	APAC	40 paths x 2 refs, all 404
+ClassSync/K12	NO-GRANT	-	-	-	5	APAC	40 paths x 2 refs, all 404 (Korean; Teams + Google Classroom AI learning environment)
+zcxixixi/ai-course	NO-GRANT	-	-	-	14	APAC	40 paths x 2 refs, all 404 (Chinese AI course for non-CS students)
+jucarhev/escuela	NO-GRANT	-	-	-	3	LATAM	40 paths x 2 refs, all 404
+Wemelo1/jamb-waec-tutor	NO-GRANT	-	-	-	0	EMEA	40 paths x 2 refs, all 404 (Nigeria; LLaMA 3.3 + RAG JAMB/WAEC tutor)
+letired/eduassist	NO-GRANT	-	-	-	6	EMEA	40 paths x 2 refs, all 404 (Berlin)
+Seunope/aloc-endpoints	MANIFEST-LICENCE=MIT	1842	composer.json	MANIFEST	223	EMEA	a manifest `license` field is a DECLARATION, not a payload (ACTION XC). The biggest row on the WAEC axis has no licence TEXT at any of the 40 paths
+KabriAcid/skool	MANIFEST-LICENCE=MIT	3350	composer.json	MANIFEST	0	EMEA	declaration only, no payload
+mi-adesina/freeeducamp-web	MANIFEST-NO-LICENCE-FIELD	664	package.json	MANIFEST	0	EMEA	tierC hit with NO `license` key — the state ACTION VT asked the ladder to emit instead of `FOUND`
+OladokunLT/edurevise	MANIFEST-NO-LICENCE-FIELD	920	package.json	MANIFEST	1	EMEA	same shape
+jacksonrakena/gradekeeper	MANIFEST-NO-LICENCE-FIELD	1306	package.json	MANIFEST	12	Global	same shape; already CARRIED, re-read only to test the manifest state
+# 21 rows withheld, every payload READ (or its absence established at 40 paths x 2-3 refs).
+# `MANIFEST` rows are withheld on the CATEGORY of the file, not on the licence: the manifest
+# may well be telling the truth, and that is exactly why it is not a grant.

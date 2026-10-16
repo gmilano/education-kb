@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — THE TREND THIS PASS CAN PROVE: **"OPEN SOURCE" IS NOW THE MOST UNRELIABLE FIELD IN AN EDUCATION TOOL'S DESCRIPTION** — `4` OF `5` SOURCE-AVAILABLE PAYLOADS READ TODAY WERE CARRIED OR OFFERED AS PERMISSIVE
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-source-available-reach`](../evidence/p247-source-available-reach.2026-10-16-p247.tsv) · [`p247-mit-tier-corrections`](../evidence/p247-mit-tier-corrections.2026-10-16-p247.tsv) · [`p247-websearch`](../evidence/p247-websearch.2026-10-16-p247.tsv)
+
+### 🔴 `T247-T1` — the licence drift is measurable now, not anecdotal
+
+| what it was called | what the payload says | where the claim came from |
+|---|---|---|
+| `MIT` | **`Business Source License 1.1`** *(DataCebo, Inc.)* | 🔴 **a cell on THESE shelves** — `sdv-dev/sdv` |
+| `MIT` | **`fair-code` + Sustainable Use License** | 🔴 a cell on these shelves — `leemonade/leemons` |
+| `MIT` | **`CC-BY-NC-SA-4.0`** *(non-commercial)* | 🔴 a cell on these shelves — `cccareers/open-source-curriculum` |
+| `Apache-2.0` | **`BSL 1.1`**, hosted-service use forbidden until `2030-05-03` | 🔴 `p246`'s own highest-star `topic:ai-act` row — `IAGA-TEAM/IAGA-Sentinel` |
+| "open source AI agent" | **`Elastic License 2.0`** | 🟡 a `WebSearch` round-up, offering `Suna` |
+
+🟢 **Base rate, measured rather than asserted:** in `821` first-hand `MIT`-tier payloads, **`3` are source-available or non-commercial** *(`0.37`%)* and **`16` disagree with their cell** *(`1.95`%)*. 🔵 **Low per-row, and that is exactly why it survives: a `2`% error rate is invisible to review and fatal to the one engagement that lands on it.**
+
+### 🔵 `T247-T2` — the enforcement-conditioned grant, a licence shape with no restriction vocabulary at all
+
+🔴 **The `CockroachDB Software License` contains the word "commercial" ZERO times.** It does not restrict commercial use in words. It conditions the grant on **artefacts**:
+
+> *"You will not operate the Software or a Modified Version **without a License Key** except for Limited Non-Production Use."*
+> *"You will not operate the Software … **without sharing Telemetry**"*
+> *"You will not circumvent, remove, disable, block or alter any technical countermeasures, Telemetry requirements …, License Key requirements, or other elements … designed to enforce the terms of this Agreement (collectively, the **"Protective Measures"**)."*
+
+🟢 **Every restriction-vocabulary matcher returns ALLOWED on that payload by construction** — the class `p241` named — **and the grant-axis instrument returns `GRANT-PRESENT`, correctly, because it DOES grant something.** 🔵 **So the trend is a licence design: permission is real, and metered.** 🟢 This pass built [`p247-keyed-grant`](../compose/code/p247-keyed-grant/) to name it: `KEYED-GRANT`, `86` controls, in `make hooks`.
+
+🔵 **Why it matters for education specifically:** a keyed grant is **incompatible with the deployment shape schools actually have** — air-gapped labs, offline-first rural devices *(Kolibri's whole reason to exist)*, and now **California AB 1159's no-training constraint**, which pushes toward on-device inference. 🔴 **A licence that requires calling home cannot be deployed into a classroom that cannot call home.**
+
+### 🟢 `T247-T3` — the state platform as the integration surface, in two licence cultures
+
+🔵 **China and Hessen produced the SAME artefact this pass:** a closed state education platform with **no API**, surrounded by a tier of individually-authored clients. 🟢 **The difference is only the licence** — `MIT`/`Apache-2.0` in the Chinese tier *(`7 161`★ at the head)*, `GPL-3.0`/`AGPL-3.0`/`EUPL-1.2` in the German one. 🔵 **The trend: as states nationalise education platforms, the open-source layer migrates from the PLATFORM to the CLIENT** — and the client tier is where a studio can both contribute and build.
+
+### 🟡 `T247-T4` — the skill bundle overtakes the framework
+
+🟢 `GarethManning/education-agent-skills`: **`870`★, `165` evidence-grounded skills**, created `2026-03-01`, targeting Claude, Codex and Hermes. 🟢 `mgkurz/ais-chat-builder`: one teacher, one Claude Skill, `CC-BY-SA-4.0`. 🔴 **Neither is a framework, an SDK or a model.** 🔵 **The deliverable in education AI is now PEDAGOGY ENCODED AS PROMPTS AND TOOLS** — which is a content asset wearing a software licence, and `ais-chat-builder`'s `CC-BY-SA-4.0` shows the authors know it.
+
+### 🔴 `T247-T5` — three trends this pass explicitly did NOT re-measure
+
+- 🔴 **Verifiable credentials / Open Badges 3.0 — `0` on-topic permissive implementations** *(`p245`'s declared gap)*. **Not re-run this pass. No claim that it changed.**
+- 🔴 **India's Grade-`3` AI + Computational Thinking mandate from AY `2026-27` with no open curriculum supply** *(`p246`)*. **Not re-run.**
+- 🔴 **`topic:digital-textbook` = a global population of `2`** *(`p246`)*. **Not re-run.**
+
 ## Pass 246 — 2026-10-16 — THE TREND IS **FROM CAPABILITY TO EVIDENCE**: WHAT THE PERMISSIVE SUPPLY NOW BUILDS IS NOT THE TEACHING, IT IS THE **RECORD THAT THE TEACHING WAS DONE LAWFULLY** — AND THE COUNTER-TREND IS THAT A MANDATE STILL BUYS NOTHING, WHICH KOREA HAS NOW PROVED **STATUTORILY**
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv) *(4 regional legs)* · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv)

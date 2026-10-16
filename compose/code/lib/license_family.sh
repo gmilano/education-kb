@@ -170,6 +170,54 @@ osi_family_of() {
     echo "EUPL"; return
   fi
   # -------------------------------------------------------------------------
+  # P1062 (pase 247 del 2026-10-16, `ACTION XA` registrada por p246).  LAS CINCO FAMILIAS
+  # SOURCE-AVAILABLE VAN ANTES DE TODA ANCLA OSI, y el orden no es una preferencia: es la
+  # misma razon que P453 escribio para EUPL, medida sobre la otra punta del problema.
+  #
+  # `BSL 1.1` tiene un parametro OBLIGATORIO -- `Change License:` -- que NOMBRA una licencia
+  # OSI (Apache-2.0 o una GPL, por exigencia del propio texto de MariaDB).  Con las anclas
+  # BUSL/Elastic/PolyForm viviendo 270 lineas MAS ABAJO que las anclas GNU/Apache/MIT, el
+  # primer nombre de licencia que matchea un payload BSL es SIEMPRE el de su licencia
+  # FUTURA, nunca el de la que lo gobierna hoy.  La rama `BUSL` era CODIGO MUERTO POR
+  # CONSTRUCCION: ningun payload BSL podia alcanzarla.
+  #
+  # Medido de primera mano en este pase, no supuesto, sobre el unico BSL de estos estantes:
+  # `IAGA-TEAM/IAGA-Sentinel` (196 estrellas, `LICENSE` 4.913 B, HEAD ced1bbdb) cuyo
+  # Additional Use Grant PROHIBE el uso como servicio hospedado hasta el 2030-05-03:
+  #     family_of         -> Apache-2.0       (su Change License)
+  #     commercial_use_ok -> ALLOWED          (la direccion de P312)
+  #
+  # POR QUE EL HOIST PELADO ES SEGURO, y es lo que `ACTION XA` pre-registro como su limbo 1.
+  # El limbo 2 postulaba un payload Apache REAL que simplemente MENCIONA la BSL -- el caso
+  # inverso que P453 ya tuvo que manejar para EUPL.  Esa poblacion se MIDIO con la API de
+  # busqueda de codigo de GitHub, y esta VACIA al alcance medible:
+  #     "Business Source License" + cuerpo Apache en ruta de licencia -> 2 en todo GitHub
+  #        * `kyupid/whatap-docs` `license/license-open-sources.mdx`  -> documento agregador
+  #        * `redpanda-data/common-go` `license/LICENSE`              -> Redpanda COMMUNITY
+  #          License (27.204 B), o sea NI Apache NI BSL: un tercer source-available
+  #     "Elastic License" + cuerpo Apache en ruta de licencia         -> 1, el mismo .mdx
+  #     PolyForm + la linea de concesion MIT en ruta de licencia      -> 0
+  # Ninguno de los tres hits es un payload GOBERNADO por una licencia OSI, que es lo que el
+  # limbo 2 necesitaba para existir.  El indice de busqueda de codigo es PARCIAL, asi que
+  # esto es un limite superior MEDIDO y no una prueba de vacuidad: se publica como tal.
+  #
+  # El hoist va DEBAJO de EUPL a proposito: P453 dejo escrito que EUPL va primera por
+  # necesidad (su Apendice nombra cinco familias ajenas) y este pase no toca ese orden.
+  # Radio de impacto medido sobre los 368 payloads-fixture de este repo, antes y despues:
+  # `evidence/p247-hoist-blast-radius.2026-10-16-p247.tsv`.
+  #
+  # LO QUE EL ORDEN **NO** ARREGLA, medido en el mismo pase y por eso dicho aca: dos de los
+  # tres payloads source-available reales que se leyeron NO tienen su nombre dentro de la
+  # ventana de 4.000 caracteres (`CockroachDB Software License`, 8.766 B, y la Redpanda
+  # Community License, 27.204 B), y los dos vuelven `UNCLASSIFIED` -> ALLOWED por una via
+  # que NINGUN orden alcanza.  Esa es la mitad que `p247-keyed-grant` mide.
+  # -------------------------------------------------------------------------
+  printf '%s' "$t" | grep -qi 'Business Source License' && { echo "BUSL"; return; }
+  printf '%s' "$t" | grep -qi 'Elastic License'         && { echo "Elastic"; return; }
+  printf '%s' "$t" | grep -qi 'PolyForm'                && { echo "PolyForm"; return; }
+  printf '%s' "$t" | grep -qiE 'fair[ -]?code'          && { echo "FAIRCODE"; return; }
+  printf '%s' "$t" | grep -qi 'Sustainable Use License' && { echo "SUL"; return; }
+  # -------------------------------------------------------------------------
   # P454 (pase 29 del 2026-10-07).  MPL Y EPL VAN ANTES DE LA FAMILIA GNU, y esta base ya
   # pago este defecto EXACTO -- en el otro clasificador, hace dos pases.
   #
@@ -643,9 +691,12 @@ osi_family_of() {
   # eran la razon declarada en el pase 100 para NO rewirear esa copia a esta libreria:
   # adoptarla habria PERDIDO tres familias.  Entran aca para que la condicion
   # pre-registrada se cumpla y el rewiring sea una mejora y no una perdida.
-  printf '%s' "$t" | grep -qi 'Business Source License' && { echo "BUSL"; return; }
-  printf '%s' "$t" | grep -qi 'Elastic License'         && { echo "Elastic"; return; }
-  printf '%s' "$t" | grep -qi 'PolyForm'                && { echo "PolyForm"; return; }
+  #
+  # P1062 (pase 247, `ACTION XA`): LAS TRES ANCLAS SE MUDARON ARRIBA, a continuacion del
+  # bloque EUPL.  Vivian ACA, debajo de GNU/Apache/MIT, y por eso la rama `BUSL` era CODIGO
+  # MUERTO POR CONSTRUCCION -- el parametro OBLIGATORIO `Change License:` de `BSL 1.1`
+  # nombra una licencia OSI, asi que el primer nombre que matchea un payload BSL es el de su
+  # propia licencia FUTURA.  La medicion y los limbos estan arriba, en el sitio nuevo.
   # P964 (pase 92 del 2026-10-10).  FAIR CODE y SUSTAINABLE USE LICENSE entran por la MISMA
   # razon pre-registrada que BUSL/Elastic/PolyForm en P312, y el pase 92 la midio en la
   # direccion contraria: el pase 91 BIFURCO el clasificador (`grant-ladder-v3`) en vez de
@@ -663,8 +714,10 @@ osi_family_of() {
   # al token-match de `commercial_use_ok`, y el cuerpo de la Sustainable Use License CONCEDE
   # uso «for commercial purposes» antes de restringir la reventa -- asi que la familia perdida
   # no solo se perdia, podia volver ALLOWED.  Se niegan explicitamente abajo, con BUSL.
-  printf '%s' "$t" | grep -qiE 'fair[ -]?code'          && { echo "FAIRCODE"; return; }
-  printf '%s' "$t" | grep -qi 'Sustainable Use License' && { echo "SUL"; return; }
+  # P1062 (pase 247, `ACTION XA`): las dos anclas se mudaron arriba con las tres de P312, y
+  # por la misma razon medida -- la Sustainable Use License de n8n CONCEDE uso «for
+  # commercial purposes» antes de restringir la reventa, asi que perderla no solo perdia la
+  # familia: la devolvia ALLOWED.
   # P308: `$n`, no `$1`.  El ancla mide 43 columnas, asi que necesita un envoltorio mas
   # angosto que eso para partirse -- mas raro que el del Unlicense, y ademas esta SOMBREADA
   # por el ancla de titulo «MIT License» de arriba, que ya es normalizada.  Se arregla igual:

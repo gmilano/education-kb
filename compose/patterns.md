@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — FOUR RECIPES, EACH WIRED FROM ROWS THIS PASS READ FIRST-HAND
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Every repo named below was fetched at a pinned `HEAD` and its grant read from `raw.githubusercontent.com` this pass; the licences are in [`p247-verified-rows`](../evidence/p247-verified-rows.2026-10-16-p247.tsv).
+
+### 🟢 `P247-1` — National-curriculum RAG for a PRC K-12 engagement, entirely on permissive rows
+
+**The problem:** a China education client wants a tutor grounded in the *official* curriculum, not in whatever a model remembers. The textbooks live on a closed state platform *(`basic.smartedu.cn`)* with no API.
+
+```
+# 1. acquire — the state corpus, via the client tier
+happycola233/tchMaterial-parser   MIT  7 161★  →  resolve textbook PDF URLs (Python)
+hantang/smartedu-dl-go            MIT    201★  →  batch pull PDF + courseware + audio/video (Go)
+# 2. keep the acquisition auditable
+studio-11-co/falsify              MIT      8★  →  SHA-256 + RFC 3161 timestamp each artefact as fetched
+# 3. index + serve
+#    (carried rows) ollama / vLLM for on-device inference; a vector store of your choice
+# 4. school-side administration
+lawlite19/SmartEducation      Apache-2.0  56★  →  fork as the admin backend (Java), canonical Apache text
+```
+
+🔵 **Why wire it this way:** the two acquisition tools are **`MIT` and maintained** *(top row pushed today)*, so the fragile part — a closed platform's URL scheme — is the part you did not write. 🔴 **Do NOT reach for `52beijixing/smartedu-download` *(`868`★)* or `cjhdevact/FlyEduDownloader` *(`162`★)*: both grant NOTHING** *(40 paths × 2 refs, all `404`)*. 🟡 **And `amakerlife/tchMaterial-downloader` is `MIT` but ARCHIVED** — a fork base, not a dependency.
+
+### 🟢 `P247-2` — A West African exam-prep stack, and the one licence ask that unlocks it
+
+**The problem:** a Nigerian or Kenyan client wants WAEC/JAMB revision with real past papers. The exam boards publish no API.
+
+```
+# the API layer that already exists
+idoqo/waec                            MIT   24★  →  WASSCE results lookup (PHP)
+nitoni-jim/ai-tutor-app               MIT    1★  →  RAG + vector search over past papers (Python/Jupyter)
+Jose-ctr/think-plus-outlook-study-hub- MIT   1★  →  KNEC + CBC + WAEC surface, with M-Pesa already wired
+# the question bank you must ASK for
+Seunope/aloc-endpoints          🔴 NO PAYLOAD  223★  →  20 000 POST-UTME/UTME/WASSCE/NECO questions
+```
+
+🔴 **`aloc-endpoints` declares `license: MIT` in `composer.json` and has no licence file at any of 40 paths.** 🟢 **A single `LICENSE` file converts the largest African education question bank on GitHub into a buildable dependency — the highest-value licence ask on these shelves today.** 🔵 Until then: treat it as **unlicensed**, and build against the three `MIT` rows plus your own content.
+
+🟡 **The deadline makes this urgent, not speculative:** Kenya's Competency-Based Education reaches senior school in **January 2026** with **5 400** teachers being trained by CEMASTEA, and Ghana puts AI and coding into **basic** school **before end-2026**.
+
+### 🟢 `P247-3` — A licence gate you can run before an engagement commits to a dependency
+
+**The problem:** `4` of the `5` source-available payloads this pass read were carried or offered as permissive. A studio cannot re-read every licence by hand.
+
+```bash
+# 1. find the real grant — the ref is NOT a guess, and LICENSE-CODE comes first
+compose/code/p229-grant-ladder-reach/ladder.sh slugs.txt out/
+#    → slug  FOUND  <real-default-branch>  <pinned-HEAD>  <path>  200  <bytes>  <sha>  tierA  LICENCE-PATH
+# 2. REFUSE to grade anything that is not a grant text  (ACTION XC)
+. compose/code/p247-path-class/path_class.sh
+graduable_as_licence "$path" || echo "NOTICE / MANIFEST / SOURCE-FILE / BUNDLED — not a grant"
+# 3. the family, from the shared classifier only
+. compose/code/lib/license_family.sh
+family_of "$(cat out/$key.body)"          # BUSL now REACHABLE (P1062)
+commercial_use_ok "$(cat out/$key.body)"  # exit 0 = allowed
+# 4. the two questions the family cannot answer
+python3 -I compose/code/p247-keyed-grant/keyed_grant.py out/$key.body
+#    → KEYED-GRANT            the grant is metered by a licence key / telemetry / countermeasure
+#    → NAMED-SOURCE-AVAILABLE a source-available NAME appears anywhere in the payload (windowless)
+#    → PARAMETER-FILE         a CRAN `MIT + file LICENSE` parameter file: the grant is in DESCRIPTION
+#    → NO-KEYED-CONDITION     *not* a permission verdict — go and get one
+python3 -I compose/code/p246-payload-integrity/payload_integrity.py out/$key.body
+```
+
+🔵 **Run `2` before `3`.** `p246` graded two rows on a `NOTICE` and one on `pyproject.toml` and published three category errors in a single pass; the ladder now emits the class itself so the next consumer cannot repeat it.
+
+### 🟢 `P247-4` — A deployment-constraint check for a classroom that cannot call home
+
+**The problem:** three different 2026 rules push the same way — California **AB 1159** *(no student data for model training)*, Oklahoma/Maryland *(human oversight, no AI in high-stakes decisions)*, and the EU AI Act's Annex III classification of assessment. 🔵 **Meanwhile a new licence shape requires the software to phone home.**
+
+```
+# 1. will this dependency even run in an air-gapped lab?
+python3 -I compose/code/p247-keyed-grant/keyed_grant.py LICENSE
+#    KEYED-GRANT  →  STOP.  A licence-key/telemetry condition is incompatible with
+#                     offline-first and with a no-egress classroom network.
+# 2. the on-device tier (carried rows, all permissive)
+#    ollama (MIT) · Kolibri (MIT, offline-by-design) · mattiebrandolini/paper-blinder (MIT,
+#    FERPA-scoped blind grading with on-device handwriting recognition via Qwen2.5-VL)
+# 3. the evidence the statute asks for
+#    mizcausevic-dev/ferpa-readiness-evidence-bundle (MIT)  → §99.7/§99.31/§99.32/§99.30 artefacts
+#    padosoft/laravel-ai-act-compliance (Apache-2.0)        → art. 14 human-review tracker
+#    kuzivaai/getregula (Apache-2.0)                        → EU AI Act + KOREA AI Basic Act + Colorado
+```
+
+🔵 **`getregula` is the row that just became more valuable than when it was placed:** Korea's `AI Basic Act` took effect in **January 2026** with **education named in its high-impact scope**, and `getregula` already encodes that jurisdiction beside the EU and Colorado. 🟢 **One tool, three of the four regions that have rules.**
+
 ## Pass 246 — 2026-10-16 — FIVE RECIPES, ONE PER REGION, EVERY REPO BELOW READ FIRST-HAND THIS PASS WITH ITS GRANT AND `HEAD` PINNED — AND EACH ONE EXISTS BECAUSE A **REGULATOR NAMED A DATE** THAT FALLS INSIDE AN ENGAGEMENT WINDOW
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) *(every grant + pinned head below)* · [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv) · [`p246-websearch`](../evidence/p246-websearch.2026-10-16-p246.tsv)

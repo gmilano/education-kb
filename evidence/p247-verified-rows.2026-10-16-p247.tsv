@@ -1,0 +1,18 @@
+slug	grant	bytes	path	path_class	ref	head	stars	region	region_basis	index_verdict	axis
+happycola233/tchMaterial-parser	MIT	1072	LICENSE	LICENCE-PATH	main	244170e17bf8bc97401f65e04d261533d252572a	7161	APAC	Chinese-language tool for 国家中小学智慧教育平台 (basic.smartedu.cn), the PRC national primary/secondary platform	NEW	智慧教育 (CJK freetext, first CJK harvest on these shelves)
+alterem/knowledge-grab	MIT	1063	LICENSE	LICENCE-PATH	main	70de8441e58e29108062c9da4702dcf54475690d	564	APAC	Tauri+Vue desktop client named for basic.smartedu.cn in its own description	NEW	智慧教育
+hantang/smartedu-dl-go	MIT	1064	LICENSE	LICENCE-PATH	main	806008bdf337b7842bf0ab4c3be3826da8d3b9c6	201	APAC	Go multi-platform downloader; topic `smartedu` + `textbook`	NEW	智慧教育
+lawlite19/SmartEducation	Apache-2.0	11357	LICENSE	LICENCE-PATH	master	c3825f62a75a8d817b4115dc8222e7470371d082	56	APAC	智慧教育后台管理子系统 — a Java admin backend; CANONICAL Apache text per p245-apache-canonical	NEW	智慧教育
+amakerlife/tchMaterial-downloader	MIT	1066	LICENSE	LICENCE-PATH	main	71de1745dbafa967397b9a5efaddb49a271490ab	66	APAC	smartedu.cn login-free textbook download; ARCHIVED (read-only, flagged)	NEW	智慧教育
+byoungd/up	MIT	1807	LICENSE.md	LICENCE-PATH	main	f13ff2de84e1f7cc37233a23fc6b3ce2dd213c00	68791	APAC	Chinese-language lifelong-learning / open-education guide; PROSE, not software (flagged)	NEW	topic:ai-literacy
+wonderlanded/k-emails	MIT	1097	LICENSE	LICENCE-PATH	master	63dd291d50e7964c07d4c55b09d97ff3e2d8d887	6	APAC	Korean: classifies 중/고등/대 school e-mail domains — a KR education-identity utility	NEW	학교 교육 (CJK freetext)
+idoqo/waec	MIT	1073	LICENSE.md	LICENCE-PATH	master	38960c4bb9cfe506078656eb90ee8dcef5689270	24	EMEA	Nigeria — unofficial developer API for WASSCE results (WAEC is the West African exam board). Africa is not a value in the closed region vocabulary; it is published as EMEA with the country in prose	NEW	topic:waec (first AFRICA supply axis on these shelves)
+nitoni-jim/ai-tutor-app	MIT	1074	LICENSE	LICENCE-PATH	main	ea80da6f93e3f5c6bac6b6aaad459fc9b55db98d	1	EMEA	Nigeria — intelligent tutoring system with RAG/vector search for WAEC/NECO/JAMB	NEW	topic:waec
+Jose-ctr/think-plus-outlook-study-hub-	MIT	1066	LICENSE	LICENCE-PATH	main	219372b27c7d10459233316ee39ffd2ff5f73062	1	EMEA	Kenya + Nigeria — StudyHub API naming KNEC, CBC, WAEC and M-Pesa in its own description	NEW	topic:waec
+ETI-PATAGONIA-AR/uPLC	MIT	1073	LICENSE	LICENCE-PATH	main	f4b9ac1dcae2fee90901fad8e6724f0326923c5c	2	LATAM	Argentina — Ladder/function-block to Arduino transpiler from an Patagonian technical school (ETI); owner publishes 6 of the 20 rows on its axis	NEW	topic:docentes
+aaryansamanta/nextgen-ai	MIT	1327	LICENSE	LICENCE-PATH	main	50fd69681e2b389f31f882ace2a74f0bae97b5ab	494	Global	Student-led AI-literacy org with named collaborations in the US AND Taiwan — two regions, so Global rather than either	NEW	topic:ai-literacy
+# 12 rows.  Every `grant` read first-hand from raw.githubusercontent.com at the `ref` that
+# `git ls-remote --symref` reported, with the HEAD SHA pinned in the `head` column.
+# Every `path_class` comes from the ladder itself (ACTION XC), not from a hand reading.
+# Every slug was put through `make carried` BEFORE the fetch: 12 of 12 NEW.
+# North America: 0 rows this pass — see `intel/market.md` T247-R and `intel/open-gaps.md`.

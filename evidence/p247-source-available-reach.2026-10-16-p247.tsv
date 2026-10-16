@@ -1,0 +1,12 @@
+payload	slug	bytes	normalised_len	own_name_offset	in_4000_window	family_before_p247	family_after_p247	commercial_before	commercial_after	cause	what_fixes_it
+BSL 1.1	IAGA-TEAM/IAGA-Sentinel	4913	4658	0	yes	Apache-2.0	BUSL	ALLOWED	DENIED	ORDER — the `Change License:` parameter names an OSI licence and every OSI anchor sat 270 lines above the BUSL anchor	P1062, the hoist (done this pass)
+CockroachDB Software License (2024)	cockroachdb/cockroach	8782	8732	0	yes	UNCLASSIFIED	UNCLASSIFIED	ALLOWED	ALLOWED	VOCABULARY — the name is at offset 0, fully inside the window, and NO anchor in this base knows the string. Position cannot matter for a name nobody looks for	p247-keyed-grant: the payload contains "commercial" ZERO times and conditions the grant on a License Key + Telemetry + Protective Measures -> KEYED-GRANT
+Redpanda Community License	redpanda-data/common-go	27204	24661	2	yes	UNCLASSIFIED	UNCLASSIFIED	ALLOWED	ALLOWED	VOCABULARY (own name) + WINDOW (its real `Business Source License v.1.1` reference sits at offset 4969 of 24661 — BEYOND the 4000-char truncation, so even after the hoist no anchor can see it)	p247-keyed-grant `name_anywhere()`, which is windowless by construction
+BSL 1.1	sdv-dev/sdv	4818	-	0	yes	MIT	BUSL	ALLOWED	DENIED	ORDER — and this one is a PUBLISHED SHELF ROW, not a fixture: the Synthetic Data Vault (Licensor: DataCebo, Inc.) is carried on these shelves as MIT	P1062 + the `ACTION XB` sweep that found it
+fair-code / Sustainable Use	leemonade/leemons	10830	-	307 / 634	yes	FAIRCODE	FAIRCODE	DENIED	DENIED	NEITHER — measured against the pre-hoist classifier and it already answered FAIRCODE/DENIED. The MIT cell on the shelves is a WRONG PUBLISHED CELL, not a classifier defect, and P964 named this exact repository FAIRCODE at pass 92. Recorded here so the hoist is not credited with a correction it did not make	a shelf correction (p247), not a code change
+# The triad, stated once: ORDER, VOCABULARY, WINDOW are three different causes of the same
+# ALLOWED, and `ACTION XA` could only ever have fixed the first of them.
+# The `before` column is MEASURED, not inferred: the pre-hoist file was kept and re-sourced,
+# and running it over the same payloads is what withdrew the leemons row above.
+# BLAST RADIUS OF THE HOIST, total: 3 fixture payloads + 1 PUBLISHED shelf row (sdv-dev/sdv).
+# No other verdict on 368 fixtures or 821 swept MIT-tier payloads moves.

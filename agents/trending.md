@@ -4,6 +4,24 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 247 — WHAT MOVED: A NATIONAL-PLATFORM CLIENT TIER WITH `7 161`★ APPEARS OUT OF NOWHERE — BECAUSE NOBODY HAD EVER ASKED IN CHINESE
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.
+
+### 🟢 New this pass
+
+- 🔵 **A new CATEGORY, not a new repo: the state-platform client.** `智慧教育` returned `8` of `8` on-topic rows, all clients for **国家中小学智慧教育平台** *(`basic.smartedu.cn`)*. Top of the tier: [`happycola233/tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser) `MIT`, **`7 161`★**, pushed today. 🟢 **The highest-star permissive education row ever placed on these shelves** — and it is a textbook-PDF resolver, not an agent.
+- 🟡 **Agent SKILLS arrive in the education estate, under content licences.** [`mgkurz/ais-chat-builder`](https://github.com/mgkurz/ais-chat-builder) *(`5`★, created `2026-04-20`)* is a **Claude Skill** that generates `AIS.chat` learning-scenario configurations for German teachers, with built-in "Knappheitsbausteine" against verbose model answers — licensed **`CC-BY-SA-4.0`**. 🔵 Read beside [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) *(`870`★, `CARRIED`, `165` skills)*: **the unit of education AI shipping right now is a SKILL BUNDLE, not a framework.**
+- 🟢 **The first AFRICA rows on these shelves.** `topic:waec` is a population of **TWELVE on all of GitHub** for West Africa's school-leaving exam, `12` distinct owners, `0` rediscovery. Placed: [`idoqo/waec`](https://github.com/idoqo/waec) `MIT` `24`★, [`nitoni-jim/ai-tutor-app`](https://github.com/nitoni-jim/ai-tutor-app) `MIT` *(RAG tutor over WAEC/NECO/JAMB)*, [`Jose-ctr/think-plus-outlook-study-hub-`](https://github.com/Jose-ctr/think-plus-outlook-study-hub-) `MIT` *(KNEC + CBC + WAEC + M-Pesa)*.
+- 🟢 **A LATAM row off a brand-new axis.** `topic:docentes` *(`20` rows total)* is the first Spanish-language axis here that is **not** a Spain axis: [`ETI-PATAGONIA-AR/uPLC`](https://github.com/ETI-PATAGONIA-AR/uPLC) `MIT`, a Ladder→Arduino transpiler from a Patagonian technical school whose owner publishes `6` of the axis's `20` rows.
+- 🔴 **A `196`★ row left the permissive estate retroactively, and a `4 818` B payload took a published cell with it.** `p246` found [`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel) reported `Apache-2.0`; `p247` fixed the anchor order and it now reads **`BUSL`/`DENIED`**. The same fix flipped **[`sdv-dev/sdv`](https://github.com/sdv-dev/sdv)** *(the Synthetic Data Vault, Licensor DataCebo, Inc.)* from the `MIT` these shelves published to **`BUSL`** — see `repos/foundations.md` `T247-X`.
+
+### 🔴 Not new, and said plainly
+
+- 🔴 **The mandated agent query returned `0` repository rows for the NINTH pass in ten.** It offered `microsoft/ai-agents-for-beginners` *(a course)*, "Hermes Agent" and `Suna` *(Elastic License 2.0 — not open source)*. Every candidate was put through `make carried` individually.
+- 🔴 **`topic:ai-literacy` is now the most-saturated axis here: `5` of `8` already `CARRIED`.** `education-agent-skills` `870`★, `ai-literacy-superpowers` `116`★, `machine-learning-for-engineers` `51`★, `ai-dev-days` `33`★ all re-found. 🟢 That is the axis the US state bills legislate, and this KB already holds it.
+- 🔴 **`NomaDamas/k-skill` is `7 942`★, `MIT`, and NOT an education row.** Korean agent localisation. Recorded with its star count precisely so a later pass does not re-find it as one.
+
 ## Pass 246 — 2026-10-16 — **APPEND-ONLY** — THE WEEK'S MOVEMENT IS THAT THE AGENT AXIS HAS CROSSED INTO **REGULATED-CAPABILITY TOOLING**: `topic:ai-act` PAID `6` ROWS WHERE THE TUTOR AND TEACHER AXES PAID `0`, AND THE AXIS'S OWN TOP ROW IS SOURCE-AVAILABLE, NOT OPEN
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-verified-rows`](../evidence/p246-verified-rows.2026-10-16-p246.tsv) · [`p246-queries`](../evidence/p246-queries.2026-10-16-p246.tsv) · [`p246-withheld`](../evidence/p246-withheld.2026-10-16-p246.tsv)

@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 247 — 2026-10-16 — `ACTION XB` DISCHARGED OVER THE `MIT` TIER *(`881` SLUGS, `821` PAYLOADS READ)*, AND THE SWEEP'S HEADLINE IS THAT **`16` OF `821` CELLS DISAGREE WITH THEIR OWN PAYLOAD** — ONE OF THEM A `BUSL` FOUNDATION ROW PUBLISHED HERE AS `MIT`
+
+⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-mit-tier-sweep`](../evidence/p247-mit-tier-sweep.2026-10-16-p247.tsv) *(821 rows)* · [`p247-mit-tier-corrections`](../evidence/p247-mit-tier-corrections.2026-10-16-p247.tsv) *(16)* · [`p247-mit-tier-unread`](../evidence/p247-mit-tier-unread.2026-10-16-p247.tsv) *(60)* · [`p247-hoist-blast-radius`](../evidence/p247-hoist-blast-radius.2026-10-16-p247.tsv) · [`p247-source-available-reach`](../evidence/p247-source-available-reach.2026-10-16-p247.tsv) · **instrument:** [`p247-mit-tier-sweep`](../compose/code/p247-mit-tier-sweep/)
+
+### 🟢 `T247-W` — the budget `ACTION XB` was written with was wrong, and measuring it first saved `1 900` requests
+
+🔴 **`ACTION XB` estimated *"the `2 762` `MIT` cells … ~`2 700` requests at `1` per slug, split by rank across passes".*** 🟢 **Measured before spending one request: `2 801` cells but `881` DISTINCT SLUGS.** The same repository appears on up to eight shelves, and **a cell is not a request.** 🔵 **The whole tier fits in one pass, and no split was needed.**
+
+| | |
+|---|---|
+| distinct `MIT` slugs on the shelves | **`881`** |
+| payloads READ first-hand | 🟢 **`821`** |
+| 🔴 `UNREAD` *(5 paths × 2 **guessed** refs)* | 🔴 **`60`** — **not an absence.** This sweep trades `git ls-remote` for budget, so a repo whose default branch is `develop` or `trunk` is `UNREAD`, exactly the state `p229` built the ref axis to avoid. `HeliumEdu/platform` *(default branch `develop`)* is the proof: the ladder reads it, this sweep does not |
+| 🟢 payloads CONFIRMING their cell | **`805`** of `821` = **`98.05`%** |
+| 🔴 payloads DISAGREEING | 🔴 **`16`** |
+| 🟢 `CONFLICTED` *(p246's defect)* | 🟢 **`0`** — `p246`'s `1`-in-`321` merge-conflict rate does **NOT** reproduce in the `9`×-larger tier. `0xnavarro/IA-PARA-TODOS` stays a singleton, and `ACTION XB`'s limb `2` is **refuted on that specific defect while limb `1` fires on another** |
+
+### 🔴 `T247-X` — the `16`, sorted by what they cost
+
+🔴 **A SOURCE-AVAILABLE payload published as `MIT`, and it is a foundation-tier row.**
+
+| slug | shelf cell | payload, read first-hand | verdict |
+|---|---|---|---|
+| 🔴 [`sdv-dev/sdv`](https://github.com/sdv-dev/sdv) | `MIT` | **`Business Source License 1.1`**, `4 818` B, *Licensor: DataCebo, Inc.*, Licensed Work `SDV` | 🔴 **CORRECTED TO `BUSL`.** The Synthetic Data Vault — a tool an education engagement would reach for to generate pupil data without pupils. 🔵 **Before this pass's hoist the classifier answered `MIT`/`ALLOWED` on that payload; it now answers `BUSL`/`DENIED`.** Measured both ways against the kept pre-hoist copy |
+| 🔴 [`leemonade/leemons`](https://github.com/leemonade/leemons) | `MIT` | **`fair-code` + Sustainable Use License**, `10 830` B | 🔴 **CORRECTED TO `FAIRCODE`.** 🟡 **And the hoist gets NO credit for this one:** re-measured against the pre-hoist classifier, it already answered `FAIRCODE`/`DENIED`. **The `MIT` cell was simply a wrong published cell** — `P964` named this exact repository `FAIRCODE` at pass `92` |
+| 🔴 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `MIT` | **`CC-BY-NC-SA-4.0`**, `1 891` B | 🔴 **CORRECTED — NON-COMMERCIAL.** A career-curriculum row: the single worst cell to get wrong for a studio engagement |
+| 🔴 [`jtylek/epesicrm`](https://github.com/jtylek/epesicrm) | `MIT` | **`GPL-3.0`**, `1 671` B | 🔴 **CORRECTED.** Kenyan school-CRM lineage — a copyleft row sitting in the permissive tier |
+| 🔴 [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) | `MIT` | **`BSD`**, `1 531` B | 🟡 **CORRECTED, same permissive class.** Still buildable; the family name on the shelf was wrong |
+| 🔴 [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `MIT` | **`Apache-2.0`**, `10 708` B | 🟡 **CORRECTED, same permissive class** |
+| 🔴 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | `MIT` | **`MULTI-GRANT-FRAMEWORK`**, `5 789` B | 🟡 **CORRECTED to the multi-grant state** *(`P965`)*: three or more families in one payload is its own answer, not a family |
+| 🟡 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) · [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | `MIT` | **`CC-BY-4.0`** *(`1 299` B · `911` B)* | 🟡 **CORRECTED.** Brazilian BNCC curriculum DATA under a content licence — correct for data, wrong as `MIT`, and the distinction matters because CC-BY-4.0 covers database rights and MIT says nothing about them |
+| 🟢 `rstudio/ggcheck` · `rstudio/tblcheck` · `sonsoleslp/tna` · `shmercer/writealizer` · `sidneybissoli/educabr` | `MIT` | 🟢 **`45`–`61` BYTE PARAMETER FILES** containing only `YEAR:` and `COPYRIGHT HOLDER:` | 🟢 **CELLS CONFIRMED — the gate was wrong, not the shelf.** This is the **CRAN `License: MIT + file LICENSE` convention**: the grant lives in `DESCRIPTION`, the `LICENSE` file supplies the template's two parameters. Verified first-hand on `rstudio/ggcheck`. 🔵 **A first-hand gate reading the payload alone would have "corrected" five CORRECT cells to `UNCLASSIFIED` — and `UNCLASSIFIED` is the branch that falls to the token match.** Now a NAMED state: `PARAMETER-FILE` |
+| 🔴 [`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) | `MIT` | 🔴 **`0` BYTES** | 🔴 **UNCHANGED FROM `p243`, which found the same empty payload.** `p1058-empty-payload-gate` still answers `EMPTY`; the cell still should not say `MIT` |
+
+🟢 **So the `16` are four different things, and lumping them would have been the error:** `6` real family corrections, `2` content-licence corrections, `1` empty payload, `5` CORRECT cells whose payload is a parameter file, and `1` *(`microsoft/autogen`)* that turned out to be a **path** error and is handled in `T247-Y`.
+
+### 🔴 `T247-Y` — reading first-hand is NOT automatically safer: `microsoft/autogen` ships TWO grants, and the ladder was reading the wrong one
+
+🔴 **`microsoft/autogen`'s root `LICENSE` is `CC-BY-4.0`** *(`18 650` B, "Attribution 4.0 International")* — the **documentation** licence. 🟢 **Its code grant is `MIT`, and it lives at `LICENSE-CODE`** *(`1 141` B, verified `200`)*, which was **not one of the ladder's `40` probe names.**
+
+🔵 **The shelves' `MIT` cell for `autogen` was RIGHT, and a first-hand gate would have "corrected" it to `CC-BY-4.0`.** That is a new error class and it belongs beside `ACTION XC`'s: not `NOTICE` and not a manifest, but a **split-scope SIBLING path**. 🟢 **Fixed at source:** `LICENSE-CODE` is now Tier A's FIRST name *(the subject of these shelves is software, so when both exist the code grant governs)*, the reach print is `tierA=16 … total=41`, and `p229`'s own control asserts the new count rather than being loosened to ignore it.
+
+### 🟢 `T247-Z` — foundational rows added this pass
+
+| Repo | 🟢 Grant | ★ | Region | Why it is foundational |
+|---|---|---|---|---|
+| [`happycola233/tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser) | `MIT` *(`1 072` B)* | **7 161** | APAC *(CN)* | 🔵 **The access primitive for the PRC's national textbook corpus.** Any China education engagement that needs the official curriculum text starts here, not at a scraper of its own |
+| [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | `MIT` *(`1 064` B)* | 201 | APAC *(CN)* | Same corpus, Go, multi-platform, and it covers courseware/audio/video as well as PDF — the batch-ingestion shape |
+| [`lawlite19/SmartEducation`](https://github.com/lawlite19/SmartEducation) | `Apache-2.0` *(canonical, `11 357` B)* | 56 | APAC *(CN)* | The only **school-side admin backend** on the axis; `Apache-2.0` makes it the one that can be forked into a product |
+| [`Seunope/aloc-endpoints`](https://github.com/Seunope/aloc-endpoints) | 🔴 **declaration only** *(`composer.json`)* | 223 | EMEA *(Nigeria)* | 🔴 **NOT placed as permissive.** `20 000` past questions for POST-UTME/UTME/WASSCE/NECO is the largest African education dataset endpoint found, and it has **no licence payload at any of 40 paths**. 🟡 **One `LICENSE` file would move it into the permissive tier — the highest-value licence-ask on these shelves today** |
+
 ## Pass 246 — 2026-10-16 — `ACTION WY` DISCHARGED OVER THE **WHOLE** `Apache-2.0` TIER — `313` SLUGS, NOT A SAMPLE — AND THE FOUNDATION FINDING IS THAT THIS TIER'S LICENCE PROFILE IS `91.8`% CLEAN, `5.9`% ONE HARMLESS VARIANT, AND `2.3`% **NOT APACHE AT ALL**, WITH TWO CARRIED CELLS CORRECTED HERE
 
 ⏱️ **FIFTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p246-apache-population`](../evidence/p246-apache-population.2026-10-16-p246.tsv) *(313 slugs: path, path_class, bytes, family_of, canonical verdict)* · [`p246-payload-integrity`](../evidence/p246-payload-integrity.2026-10-16-p246.tsv) *(321 payloads)* · **instrument:** [`compose/code/p246-payload-integrity/`](../compose/code/p246-payload-integrity/)
