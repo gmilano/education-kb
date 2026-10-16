@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — THE TREND IS **EDGE INFERENCE IN THE CLASSROOM**, ARRIVED AT INDEPENDENTLY IN TWO REGIONS FROM OPPOSITE CONSTRAINTS — AND THE COUNTER-TREND IS THAT A **MANDATE IS NOT ADOPTION**, WHICH KOREA JUST PROVED
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.**
+
+🔵 Evidence: [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) · [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv) · [`p244-estate-census`](../evidence/p244-estate-census.2026-10-16-p244.tsv) · [`p244-queries`](../evidence/p244-queries.2026-10-16-p244.tsv).
+
+### 🟢 `T1` — Edge inference is the classroom default now, and two regions got there separately
+
+🔵 **Measured from `9` of this pass's rows, in their own words, not inferred from a trend report:**
+
+| row | region | what it says | the constraint behind it |
+|---|---|---|---|
+| `appbuildersph/modes` | APAC | *"Gemma 4 E2B runs on a laptop, **not the cloud**"* | 🟢 cost, connectivity |
+| `BootlegYouki/L.A.R.A` | APAC | *"**Offline** LAN-Based Classroom"*, `edge-ai` | 🟢 cost, connectivity |
+| `JuLiusGI/Elementary-Learning-Hub` | APAC | *"**Offline-capable** … PWA sync"* | 🟢 cost, connectivity |
+| `straussbastian/ai_flashcards_for_school` | EMEA | *"no sign-in, **no stored results**"* | 🟢 data protection |
+| `foerbsnavi/Notenberechner` | EMEA | *"Alles im Browser, **ohne Anmeldung**"* | 🟢 data protection |
+| `Obi-Wahn/zeitstrahl-werkstatt` | EMEA | *"**ohne Cloud, ohne Konten**, ohne weitere Pakete"* | 🟢 data protection |
+| `Lukas1120987/Schul-System` | EMEA | *"**lokal laufende** Schulverwaltungssoftware"* | 🟢 data protection |
+| `mr89adloff/taschenrechner-fx87de` | EMEA | *"rechnet komplett **im Browser**"* | 🟢 data protection |
+| `MRL-creator/attendance-workspace` *(p243)* | Global | *"Students are records, **not login accounts**"* | 🟢 data minimisation |
+
+🟢 **The engineering is identical and the pitch is not.** 🔵 **For a studio this is the pass's most commercially useful line: the local-inference work, the no-account session model and the local-store-then-sync path are one build, sellable to an EMEA buyer as compliance and to an APAC buyer as economics.** 🟡 **And it is the exact inverse of the vendor-platform rows**, which are cloud-first SSO systems throughout — so the two halves of this market are diverging architecturally, not converging.
+
+### 🔴 `T2` — The counter-trend, and it is the fact worth carrying into every pitch: **a mandate is not adoption**
+
+🔴 **Korea planned mandatory AI textbooks for 2025. Adoption sat under `30%` by March. In August 2026 the National Assembly STRIPPED them of official status** after unions said the pace had outrun preparation. A **`$960M`** plan for AI talent centres and vocational high schools through 2030 replaced them.
+
+🟢 **Set that beside the mandates currently being quoted as market certainty:**
+
+| jurisdiction | the mandate | 🟡 what Korea says about it |
+|---|---|---|
+| **India** | AI + Computational Thinking **mandatory from Class 3**, AY 2026-27; IIT Madras curriculum; `₹500 crore` CoE | 🟡 the largest mandate in the world by pupil count, and teacher readiness is the same unpriced variable |
+| **China** | Beijing `8` hours/year minimum from Sep 2025; national rollout intended | 🔴 sources conflict on whether the national scope exists yet |
+| **EU** | high-risk education obligations **`2 Dec 2027`**, deferred from `2 Aug 2026` | 🔵 **the deferral is itself this pattern** — a timetable met reality and moved |
+
+🟢 **The pattern across all four: the instrument moves faster than the teaching workforce, and the instrument then yields.** 🔵 A plan that assumes a mandate converts to deployment on schedule has one unpriced dependency, and it is teacher preparation.
+
+### 🟢 `T3` — Teacher-side tools are where the permissive licences are
+
+🔵 **Measured on `topic:schule topic:education`: `7` permissive rows, and all seven are built for the TEACHER, not for the institution.** Marking scanned work, computing grade keys, generating exam rubrics, preparing lessons, building seating plans, timelines, flashcards.
+
+🟢 **And the licence split maps onto that boundary almost exactly:** the single-purpose teacher tool is `MIT`; the moment a row becomes an institutional system it becomes `AGPL-3.0` *(`Erwartungshorizont-Studio`, `sitzplan-studio`, `koakademy`, `chalk`)* or `GPL` *(`openSIS`, `CleverNC`, `tidal-ptc`)*. 🟡 **So the permissive supply and the institutional demand are not in the same place**, and an engagement that needs an institutional system is a deployment-and-configuration engagement, not a fork.
+
+### 🟢 `T4` — MCP has moved from integration plumbing to the **authoring** surface
+
+🔵 `p242` recorded MCP-over-LMS as a category. 🟢 **This pass finds MCP on the production side of the classroom, which is a different thing:**
+
+- [`straussbastian/ai_flashcards_for_school`](https://github.com/straussbastian/ai_flashcards_for_school) *(`MIT`)* — **the teacher authors a learning bundle by talking to an MCP agent**, and the class consumes it through a three-word link with no sign-in and nothing stored.
+- [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) — **an MCP server over Brazil's national curriculum**, so an agent can ask what a grade is supposed to learn. 🔴 `CC-BY-4.0`, so the server is not the part to depend on.
+- [`iblai/standard`](https://github.com/iblai/standard) *(`MIT`, `11`★)* — **the `.iblai` agent file format**: a portable Markdown spec for *defining* an agent. 🔵 A format rather than a product, which is the only part of a vendor estate a studio can adopt without adopting the vendor.
+- [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) *(`MIT`, `9`★)* — a `powerschool/` tool skill that **reads and writes** student records, enrolment, attendance and grades.
+
+🟡 **The write path is the thing to watch.** `p243` found `che-ntucool-mcp` gating grade posting behind a two-layer human confirmation. `p244` finds `k-12-agents` declaring SIS **write** access as a tool skill with **no equivalent gate stated in the row**. 🔴 **Write access to a gradebook is the highest-consequence capability in this entire KB, and the ecosystem is not consistent about guarding it.**
+
+### 🟢 `T5` — Curriculum-grounded evaluation exists, in Portuguese, and this KB kept declaring it did not
+
+🔴 Earlier cycles of this KB declared a standing gap: *"no dominant OSS agent eval/observability"*. 🟢 **[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) is an education-specific eval harness and it is public:** LLM **hallucination** measured against Brazil's **BNCC** national curriculum — `15 300` answers from `17` models, methodology and raw data published, **held-out set kept private against contamination**.
+
+🟢 **The held-out design is the part that makes it credible**, and it is the part most education "benchmarks" omit. 🔴 **`CC-BY-4.0`, so the harness's licence is wrong for code** — but the *method* is reusable and the gap statement needs retiring. 🟡 **Registered: the gap claim should be re-read against `make claims` before any pass repeats it.**
+
+### 🔴 `T6` — Licence architecture is now a recurring *defect* class, not an occasional surprise
+
+🔵 **Four distinct licence-architecture defects in `42` rows this pass, each a different shape:**
+
+| shape | row | what is wrong |
+|---|---|---|
+| 🔴 **the inversion** | `bncc-dev` | **data under a software licence, software under a data licence** — both ways round, same owner, three repos |
+| 🔴 **the truncation** | `belentani7/aprende-brasil` | `MIT` with the **liability paragraph missing**; `814` B clears every byte-floor and classifies clean |
+| 🔴 **the carve-out that grants to nobody** | `Lukas1120987/Schul-System` | `/icons` excluded from the author's copyright and assigned to *"Chat-GPT von OpenAI"* — **an entity that cannot hold it and does not claim it** |
+| 🔴 **the third party's grant** | `iblai/botbuilder-python` | `MIT` whose holder is **Microsoft Corporation**, inside a vendor estate, with `fork: false` |
+
+🟢 **Plus the `0`-byte `LICENSE` that started the pass, and `10` of `35` estate repositories with no grant at all.** 🔵 **The generalisation: as AI-assisted authoring spreads, licence files are increasingly generated or pasted rather than chosen** — and the four shapes above are all what that looks like from the outside. 🟢 **For a studio doing due diligence, "what does the LICENSE say" has stopped being a one-line check.**
+
+### 🟡 `T7` — Adoption numbers are moving faster than anyone's ability to verify them
+
+🔴 **The WebSearch leg produced `0` usable rows for the sixth pass in seven, and the market figures it did return do not reconcile**: `$10.6B`–`$11.4B` for the *current* year, three incompatible horizons, a `66%`→`92%` student-adoption jump on a single secondary citation, and a maturity score a vendor describes as its own opinion.
+
+🟢 **What the legs DID pay was regulatory and institutional fact** — dates, bill numbers, a stripped mandate, a Commission finding that **two-thirds of EU education systems** now have an AI strategy. 🔵 **That asymmetry is itself the trend to record: the policy record is becoming citable while the market record is not.** 🟢 **So quote the dates, range the dollars.** 🔵 Per-leg source quality: [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv).
+
+### 🔴 `T8` — And the methodological trend this pass cares most about: **absence is being over-reported**
+
+🔵 Three channels, measured in one pass, each turning *"I could not read it"* into *"it is not there"*:
+
+```
+PAYLOAD   200 + 0 bytes          -> recorded as "no licence file"        (the file exists)
+ADDRESS   rc=0 + 0 refs          -> recorded as "no such repository"     (the repo exists, empty)
+QUERY     void shape -> count 0  -> recorded as "the axis is exhausted"  (124 rows behind it)
+```
+
+🟢 **`p241` named the dual of this on the licence side — a matcher treating the absence of its own vocabulary as permission. `p244` names it for probes: a probe treats the absence of its own vocabulary as the absence of the thing.** 🔵 **For a knowledge base whose value is partly its declared gaps, this is the error that matters most**, because an over-reported absence is indistinguishable from coverage and nobody ever goes back to it. 🟢 Gated in [`p244-absence-states`](../compose/code/p244-absence-states/), `61` controls, wired into `make hooks`.
+
 ## Pass 243 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **WHO IS BUILDING**: NOT VENDORS, NOT SCHOOLS — **TEACHERS, PARENTS AND PUPILS**, ONE INSTITUTION EACH, AGAINST A PLATFORM THEY DO NOT CONTROL
 
 🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) *(41 rows)* · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) *(31 rows)* · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv) · [`p243-channels`](../evidence/p243-channels.2026-10-16-p243.tsv)

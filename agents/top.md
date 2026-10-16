@@ -4,6 +4,223 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — `ACTION WC` ASKED FOR A SWEEP AND THE SWEEP **REFUTED THE ACTION**: NO CARRIED ROW IS A `0`-BYTE GRANT, BECAUSE THE SHARED PROBE NEVER RECORDS ONE AS **FOUND** — IT RECORDS IT AS AN **ABSENCE**, AND THE SAME COLLAPSE IS THEN FOUND IN THE **ADDRESS** AND **QUERY** CHANNELS
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.** `p232`–`p243` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`42` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported — **`40` `MIT`, `1` `Apache-2.0`, `1` `BSD`.** 🟢 **`36` new, `6` carried re-reads, every row put through the `p235` carried-index gate BEFORE publishing.** 🟢 **`ACTION WG` DISCHARGED: `org:iblai` is `35` repos, all `35` now listed and all `26` unread ones probed** — and the two on-topic **education** repos were among the `15` `p243` never listed. 🟢 **`ACTION WC` DISCHARGED by refutation**, with the premise, the mechanism and the reason the shelves are immune all written down. 🟢 **All five regions placed.** 🔴 **`19` rows withheld, every payload read.** 🔴 **The WebSearch leg produced `0` rows for the sixth pass in seven** — and the EMEA and APAC legs paid real intelligence, which is a different fact and is recorded as one.
+
+🔵 **Evidence:** [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) *(42 rows, grant + bytes + pinned head + per-row region basis + index verdict)* · [`p244-withheld`](../evidence/p244-withheld.2026-10-16-p244.tsv) *(19)* · [`p244-absence-proof`](../evidence/p244-absence-proof.2026-10-16-p244.tsv) *(the three channels, proof pairs)* · [`p244-estate-census`](../evidence/p244-estate-census.2026-10-16-p244.tsv) *(all 35)* · [`p244-holder-forms`](../evidence/p244-holder-forms.2026-10-16-p244.tsv) · [`p244-rungs`](../evidence/p244-rungs.2026-10-16-p244.tsv) · [`p244-queries`](../evidence/p244-queries.2026-10-16-p244.tsv) · [`p244-wc-sweep`](../evidence/p244-wc-sweep.2026-10-16-p244.tsv) · [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv) · **instrument:** [`compose/code/p244-absence-states/`](../compose/code/p244-absence-states/) *(61 controls, wired into `make hooks`)*
+
+### 🔴 `T244-A` — the headline: `ACTION WC` was looking for the wrong error
+
+`ACTION WC` asked this pass to sweep for `0`-byte grant payloads *"carried as `FOUND` with an unclassifiable body"*. 🟢 **The sweep ran over all `33` carried rows of the two ungranted censuses.** 🔴 **Zero are `0`-byte payloads, and the premise is false**: the shared probe never records such a row as `FOUND` at all.
+
+`lib/probe_payload.sh::_row_from_fetch` gates on `[ -s "$tmp" ]` — **false for a zero-byte file** — so the ladder walks *past* a `200` and the row falls through to the README-dangling-link branch:
+
+```
+rine77/meineschule-digital  main  DANGLING-README-LINK:LICENSE  0  DECLARED-NOT-GRANTED  -
+```
+
+🔴 **That verdict asserts the file is not there. The file is there, answers `200`, and is `0` bytes** — `sha256` `e3b0c442…`, the hash of the empty string.
+
+| row | the probe's cell | what is true | the remedy |
+|---|---|---|---|
+| [`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) | `DECLARED-NOT-GRANTED` | 🔴 `200`, **`0` bytes** — the file EXISTS | **upstream commit** — the maintainer believes the text already shipped |
+| [`HAZA-AIOS/HAZA-SMS`](https://github.com/HAZA-AIOS/HAZA-SMS) | 🔴 **the same cell** | `404`, body `404: Not Found` *(14 B)* — genuinely absent | **upstream ask** — the README names a path that is not there |
+
+🟢 **So `ACTION WC`'s worry was real and its address was wrong: the `0`-byte payload is not over-credited, it is ERASED** — and an erasure reads as "no grant found", which is indistinguishable from "ships no licence", which is why nobody ever goes back to it.
+
+🟢 **And the shelves are immune for a reason worth keeping:** `p217` established its absences by **tree enumeration** (*"`ls-tree HEAD` = 180 files, `0` licence-shaped paths"*), which an empty file cannot fool. A **path probe** can. 🔵 Measured in [`p244-wc-sweep`](../evidence/p244-wc-sweep.2026-10-16-p244.tsv).
+
+### 🔴 `T244-B` — the class, and it is `p241`'s own sentence with the terms swapped
+
+> 🔵 **`p241`:** *every one of these **matchers** enumerates ways of saying "restricted" and treats the absence of its own vocabulary as **permission**.*
+>
+> 🔴 **`p244`:** *every one of these **probes** enumerates ways of finding a thing and treats the absence of its own vocabulary as the absence of **the thing**.*
+
+Three channels, three independent instances, all measured in this one pass:
+
+| channel | the probe answers | what was actually true |
+|---|---|---|
+| **PAYLOAD** | `DECLARED-NOT-GRANTED` *(= no file)* | `200`, `0` bytes — the file exists |
+| **ADDRESS** | `UNRESOLVED` *(= no such repo)* | 🔴 `rc=0`, `0` refs — the repository **exists** and is **empty** |
+| **QUERY** | `total_count: 0` *(= axis exhausted)* | 🔴 the query **shape is void**; the axis holds `124` rows |
+
+🟢 **The ADDRESS instance, measured on three slugs the shared probe writes down identically:**
+
+```
+cdweaver1992/edfi-mcp-server                 rc=0    refs=0   -> EMPTY-REPO        (exists!)
+openfresno/edgenuity-aeries-grade-passback   rc=0    refs=0   -> EMPTY-REPO        (exists!)
+jakerains/scormplayer                        rc=128  auth     -> UNREACHABLE-AUTH
+```
+
+🔴 **Two of the three are live repositories** with zero commits, so `--symref … HEAD` prints nothing, so `probe_default_branch` returns empty, so `probe_repo` emits `UNRESOLVED`. 🟡 **`p230` declared `26` dead addresses on these shelves; any of them reached through this path is unconfirmed — `ACTION WI`.**
+
+🟢 **The QUERY instance, measured minutes apart in one session:**
+
+```
+topic:deped OR topic:nigeria school management -> total_count   0     <- VOID SHAPE
+topic:deped                                    -> total_count  10
+topic:cbse OR topic:ncert school AI            -> total_count   0     <- VOID SHAPE
+topic:cbse                                     -> total_count 124
+```
+
+🔴 **GitHub's repository search does not take `OR` between qualifiers, and it returns zero rather than an error — which is exactly what an exhausted axis returns.** `134` rows were invisible, and **`topic:deped` is the axis that produced BOTH APAC rows of this pass.** 🟢 `zero_result_is_absence()` is now the gate, and it does not over-fire: `OR` between *bare* terms is still valid and is asserted as such.
+
+### 🟢 EMEA — `8` rows, and the structural finding is the **architecture they share**
+
+🔵 **`7` of the `8` came from one axis, `topic:schule topic:education`, and `7` of those `7` are teacher-side single-purpose tools that run with no cloud and no accounts.** That is not a coincidence of sampling — it is written into the rows: *"ohne Cloud, ohne Konten"*, *"Alles im Browser, ohne Anmeldung"*, *"no sign-in, no stored results"*, *"lokal laufende"*.
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **Schul-System** | [`Lukas1120987/Schul-System`](https://github.com/Lukas1120987/Schul-System) | 🟡 **`MIT`** *(`1 324` B)* | **10** | `main` · `9c208c271ef2` | 🟢 topics `deutsch`, `german`, `schule`, `verwaltung`; German UI and README | The most complete EMEA row: local-first German school administration in Python — login, Stundenplan, Nachrichten, cloud, e-learning, calendar. 🔴 **Carries a carve-out that grants to nobody — `T244-D`** |
+| **ai_flashcards_for_school** | [`straussbastian/ai_flashcards_for_school`](https://github.com/straussbastian/ai_flashcards_for_school) | 🟢 **`MIT`** *(`1 072` B)* | 1 | `main` · `4d3e8c814591` | 🟢 topic `berufsschule` — the German vocational-school type | 🔵 **The row of the pass for data minimisation.** Teacher builds a flashcard bundle **through an MCP agent**; the class opens a **three-word link** — no sign-in, no stored results. FastAPI + Postgres + OAuth2, self-hosted |
+| **capy-note** | [`florianchristophnowak-dot/capy-note`](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 **`MIT`** *(`1 080` B)* | 1 | `main` · `cf7fd7565a2b` | 🟢 topics `lehrer`, `schule`, `unterricht`; German description | Efficient marking of **scanned** pupil work |
+| **prep-ybara** | [`florianchristophnowak-dot/prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara) | 🟢 **`MIT`** *(`1 080` B)* | 1 | `main` · `c113fd3ba66a` | 🟢 German *Unterrichtsvorbereitungs-App*; same owner | Lesson preparation. 🔵 Same owner, same grant, two tools — the EMEA pattern in miniature |
+| **Notenberechner** | [`foerbsnavi/Notenberechner`](https://github.com/foerbsnavi/Notenberechner) | 🟢 **`MIT`** *(`1 069` B)* | 0 | `main` · `f57375bfa9f9` | 🟢 *Notenschlüssel* and *Blocknoten* are German grading instruments | Grade calculator for teachers: points↔grade, exam statistics, PDF/CSV export. **Browser-only, no sign-up** |
+| **taschenrechner-fx87de** | [`mr89adloff/taschenrechner-fx87de`](https://github.com/mr89adloff/taschenrechner-fx87de) | 🟢 **`MIT`** *(`1 071` B)* | 0 | `main` · `fd829377d971` | 🟢 the **fx-87`DE`** PLUS is the German-market Casio school calculator; German description | A faithful web rebuild of the calculator pupils are *examined with* — same keys, all modes, in the browser. 🟢 **Created the day of this pass**, and states *"Kein Casio-Produkt, keine Casio-Firmware"* |
+| **pynrw** | [`realshouzy/pynrw`](https://github.com/realshouzy/pynrw) | 🟢 **`MIT`** *(`1 075` B)* | 0 | `main` · `1655117f668b` | 🟢 names the *zentrale **NRW**-Abiturprüfungen* — North Rhine-Westphalia, a named Land | The NRW Abitur computer-science exam materials from 2018, implemented in Python |
+| **school-ease** | [`musmax/school-ease`](https://github.com/musmax/school-ease) | 🟢 **`MIT`** *(`1 072` B)* | 0 | `master` · `ec794e199210` | 🟡 **WEAKER BASIS, stated:** the GitHub **description** cites **Paystack**, a Nigerian payment processor, beside Stripe. 🔴 **The README carries no regional token at all** | All-in-one primary/secondary platform: timetable, attendance, report cards, **fees and receipts**, staff, subscriptions |
+
+🔴 **And EMEA again withholds its most capable rows:** `AGPL-3.0` on the German exam-rubric studio and the seating-plan studio, `CC-BY-SA-4.0` on a **Claude Skill for teachers**, `CC-BY-4.0` on a teaching-template generator, and a `0`-byte grant on the German school-platform client. 🔵 See [`p244-withheld`](../evidence/p244-withheld.2026-10-16-p244.tsv).
+
+### 🟢 APAC — `2` rows, from the axis the void query had hidden, and **both are offline-first**
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **L.A.R.A** | [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 **`MIT`** *(`1 113` B)* | 1 | `main` · `07b9acf54505` | 🟢 topics `philippines`, `deped`; *"DepEd Grades 1-6"* | **Offline LAN-based classroom with a hybrid Socratic SLM tutor** and paperless quizzes. Tauri v2, edge AI, Material Design 3. 🔵 Holder names a *Capstone Team* — a fourth holder form |
+| **SIBOL** | [`appbuildersph/modes`](https://github.com/appbuildersph/modes) | 🟢 **`MIT`** *(`1 139` B)* | 0 | `main` · `365576161bfc` | 🟢 topics `philippines`, `deped`, `matatag`; *"Filipino Grade 4-6 learners"* | **Local AI maths tutor: Gemma 4 E2B on a laptop, not the cloud.** English, Tagalog and **Taglish**; three modes *(Kalma, Pakinig, Hakbang)*. 🔵 Holder names four students by name |
+
+🔵 **The convergence worth an engagement's attention:** EMEA's rows avoid the cloud because of **data protection**; these avoid it because of **connectivity and cost** — *"runs on a laptop, not the cloud"*, *"Offline LAN-Based"*, *"offline-first … PWA sync"*. 🟢 **Two regions arrive at the same architecture for opposite reasons, and a studio that builds one can ship the other.**
+
+🔴 **APAC's best-documented row of the pass is withheld.** [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) — `AGPL-3.0`, `34 523` B, `7`★, `master` · `99a49957d200` — states its placement twice over: *"started in 2023 as a college feasibility project **here in the Philippines**"* and *"Every feature and data model … is shaped by the day-to-day workflow of **real Philippine schools**"*. Laravel 12, enrolment, billing, registrar. 🔵 **Carried, and re-read first-hand here.**
+
+### 🟢 LATAM — `3` rows, and a **licence inversion** inside one owner's three repositories
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **bncc-dados** *(carried)* | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 **`MIT`** *(`1 092` B)* | **21** | `main` · `9c268978efa2` | 🟢 the LICENSE **holder** is *"Profy Tecnologias Educacionais **Ltda**"* — the Brazilian company form; topics `bncc`, `brasil` | **The best LATAM row on these shelves.** Brazil's **BNCC national curriculum as verified open data**: `1 721` learning objectives in JSON, SQLite and CSV, **provenance per record**, reproducible extraction pipeline, MCP |
+| **EDUCA** | [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) | 🟢 **`MIT`** *(`1 067` B)* | 1 | 🔴 **`dev`** · `d7bdbe4614e0` | 🟢 topics `brasil`, `lgpd`, `gestao-escolar`, `municipal-management`; Portuguese | Municipal school management for a *secretaria de educação* — and its own tagline is the business case: *"A planilha da secretaria de educação não aguenta mais."* 🔴 **Default branch is `dev`** — the shared probe's trap 1, live again |
+| **aprende-brasil** *(carried)* | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) | 🟡 **`MIT`, TRUNCATED** *(`814` B)* | 0 | `main` · `7d9e6170085b` | 🟢 topics `brasil`, `portuguese` | Brazilian interactive platform with an AI tutor, OpenVoice-ready speech. 🔴 **The liability paragraph is absent — `T244-C`** |
+
+🔴 **`T244-E` — the inversion.** `bncc-dev` ships three repositories and put **the dataset under a software licence and the software under a data licence**:
+
+| repo | what it actually is | grant | 🔴 |
+|---|---|---|---|
+| [`bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **a dataset** *(JSON/SQLite/CSV)* | 🟢 `MIT` *(`1 092` B)* | a **software** licence on data |
+| [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | **code** — npm + PyPI packages and an MCP server | 🔴 `CC-BY-4.0` *(`1 299` B)* | a **content** licence on software, which Creative Commons itself advises against |
+| [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | a benchmark harness **and** its data | 🔴 `CC-BY-4.0` *(`911` B)* | `15 300` answers from `17` models, held-out set kept private against contamination |
+
+🟢 **For an engagement this is actionable rather than pedantic:** the data Globant would want is the one cleanly licensed, and the client library it would `pip install` is the one whose licence does not address patent or warranty at all. 🔵 All three carried, all three re-read first-hand this pass.
+
+### 🟢 North America — `2` rows, and the under-count `p243` diagnosed **reproduces on a new axis**
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|---|
+| **ps-plugin-boilerplate** | [`IronCountySchoolDistrict/ps-plugin-boilerplate`](https://github.com/IronCountySchoolDistrict/ps-plugin-boilerplate) | 🟡 **`MIT`, HOLDERLESS** *(`1 057` B)* | 5 | `master` · `555846846a47` | 🟢 **the OWNER is a US school district** — Iron County School District, Utah. That is institutional identity *in the row*, not a vendor product | PowerSchool plugin development boilerplate. 🔵 **A school district publishing its own infrastructure under `MIT`** |
+| **powerschool-alchemy** | [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy) | 🟡 **`MIT`, HOLDERLESS** *(`1 057` B)* | 3 | `master` · `9014b324fe37` | 🟢 same district owner | Query a PowerSchool database through SQLAlchemy |
+
+🔵 **`p243` wrote that US rows under-count because *"a US row names a vendor product rather than a jurisdiction, and a vendor product places the product, not the row."* `p244` ran `topic:powerschool` — a wholly new axis — and reproduced it exactly:** `6` permissive rows on the axis and **`4` of them are Global** under that same rule, because they name `PowerSchool` and no jurisdiction. 🟢 **The rule held on an axis it was not derived from, which is the only way a rule earns its keep.** 🟢 **And the two rows it *did* place were placed by a signal the rule implies but had never been used: the repository OWNER is a school district.**
+
+🔴 **Also withheld on this axis, and these are the complete applications:** [`usechalk/chalk`](https://github.com/usechalk/chalk) *(`AGPL-3.0`, the K-12 IT stack in one Rust binary — device fleet, help desk, rostering, OneRoster, SSO)*, [`keithmedlin/CleverNC`](https://github.com/keithmedlin/CleverNC) *(`GPL-3.0`, and it names **North Carolina School Districts**)*, [`archboard/tidal-ptc`](https://github.com/archboard/tidal-ptc) *(`GPL-3.0`, parent-teacher conferences)*. 🔵 **The measured tendency on this axis: the API client libraries chose `MIT`, the finished applications chose copyleft** — with `IronCountySchoolDistrict` the stated exception in both directions.
+
+### 🟢 Global — `27` rows, `16` of them one vendor estate now read to the bottom
+
+🟢 **`ACTION WG` DISCHARGED.** `org:iblai` returned `total_count: 35` in one page — **a census, not a sample.** `p243` listed `20` and read `9`. All `35` are now listed and all `26` unread ones probed. 🔵 Full table: [`p244-estate-census`](../evidence/p244-estate-census.2026-10-16-p244.tsv).
+
+🔴 **The two most on-topic repositories in the whole estate were in the `15` `p243` never listed:**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | 🟢 `MIT` *(`1 063` B)* | **9** | `main` · `54ee9d91eecd` | 🔵 **School Assistant orchestrator + `12` K-12 specialist subagents** — adaptive tutoring through to district administration, with a `powerschool/` tool skill that **reads and writes** student records, enrolment, attendance and grades |
+| [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | 🟢 `MIT` *(`1 063` B)* | **12** | `main` · `1a2d898bbd04` | 🔵 **Campus Assistant orchestrator + `16` higher-ed subagents** — academic advising, student success |
+| [`iblai/claw-router`](https://github.com/iblai/claw-router) | 🟢 `MIT` *(`1 063` B)* | **44** | `main` · `319b951e6dd4` | 🟢 **The estate's highest-star row after `os`, and `p243` did not list it.** Routes every request to the cheapest model that can handle it |
+| [`iblai/standard`](https://github.com/iblai/standard) | 🟢 `MIT` *(`1 063` B)* | **11** | `main` · `047e867e7a2d` | The `.iblai` **portable Markdown agent-file format**, with a CLI wizard and an example library |
+| [`iblai/infra-cli`](https://github.com/iblai/infra-cli) | 🟢 `MIT` *(`1 063` B)* | **12** | `main` · `9ba80fa786bc` | Provisioning the platform on AWS and GCP with Terraform, configured by Ansible |
+| [`iblai/video`](https://github.com/iblai/video) | 🟢 `MIT` *(`1 063` B)* | 4 | `main` · `4679e59dc8e1` | Avatar video, voice cloning and script authoring in one workspace |
+| [`iblai/iblai-js-sdk`](https://github.com/iblai/iblai-js-sdk) | 🟢 `MIT` *(`1 063` B)* | 1 | `main` · `928c7927298c` | The JavaScript SDK the platform apps import |
+| [`iblai/iblai-openclaw-email`](https://github.com/iblai/iblai-openclaw-email) | 🟢 `MIT` *(`1 063` B)* | 1 | `main` · `b60a6e74a8ad` | Email triage routed to the cheapest capable model |
+| [`iblai/recruit`](https://github.com/iblai/recruit) | 🟢 `MIT` *(`1 089` B)* | 0 | `main` · `45e999448e38` | Recruiting app — **and the only payload in `35` that names the legal entity**, see `T244-F` |
+| [`iblai/vibe-marketing`](https://github.com/iblai/vibe-marketing) | 🟢 `MIT` *(`1 063` B)* | 0 | `main` · `875557e1a172` | Marketing scaffold |
+| [`iblai/{medical-healthcare,legal,government,financial-services,enterprise}-agents`](https://github.com/iblai) | 🟢 `MIT` *(`1 063` B each)* | 10·13·10·15·13 | `main` | 🔵 **The five non-education verticals, published for the census and the composition pattern — not as education rows.** Each is an orchestrator + `12` subagents, identical in shape to the two education ones |
+
+🔴 **`T244-G` — `iblai/claws` is a POINTER, and `p243` published it as the artefact.** `p243` recorded `claws` as *"Ready-to-run agent configurations by sector … the artefact the WebSearch claim actually pointed at."* 🔴 **The configurations are not in it.** They are **seven separate repositories** — `k-12-agents`, `higher-education-agents` and the five above — and `p243` listed none of them. 🟢 **Reading a hub repository returns a description of artefacts; a vendor estate is a graph, and `20 of 35` is where its leaves live.**
+
+🔴 **`T244-H` — `10` of `35` estate repositories ship no grant at all, and one of them is the SDK.** The WebSearch claim `p243` chased was *"MIT"*. Measured: `25` grant, `10` do not — and the ungranted ten include [`iblai/iblai-python-sdk`](https://github.com/iblai/iblai-python-sdk), [`iblai/docs`](https://github.com/iblai/docs) *(9★)* and [`iblai/vibe-agent`](https://github.com/iblai/vibe-agent) *(9★)*. 🟢 **The applications are `MIT` and a client library underneath them is not: that is the licence question an engagement actually hits**, and it is invisible until the estate is read to the bottom.
+
+🔴 **`T244-I` — a third party's grant inside the estate.** [`iblai/botbuilder-python`](https://github.com/iblai/botbuilder-python) carries `MIT` at `1 162` B whose holder line reads **`Copyright (c) Microsoft Corporation. All rights reserved.`** — Microsoft's Bot Framework — and the GitHub API reports **`fork: false`**. 🟢 **Withheld as an estate row and attributed upstream.** 🔵 An estate sweep that counts `MIT` payloads counts this one.
+
+🟡 **`T244-F` — four spellings of one owner, and only one of them is a legal person.** [`p244-holder-forms`](../evidence/p244-holder-forms.2026-10-16-p244.tsv): `ibl.ai` ×15 · `iBL Education` · `IBL AI` *(and a `2025` year)* · **`Class Generation, LLC dba ibl.ai`**. 🔴 **So "is the grant's holder the repo's owner?" cannot be a string-equality test** — and the one payload reachable only through the `dba` clause is also **the estate's only jurisdiction signal**: `LLC` is a US-state-chartered form. 🟡 **Recorded as a corporate-form inference and NOT promoted to a placement**, because the row states no jurisdiction.
+
+**The other `11` Global rows:**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why NOT placed | What it is |
+|---|---|---|---|---|---|
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | 🟢 `MIT` *(`1 072` B)* | **34** | `master` · `a23ec090ea44` | vendor product, no author location | The highest-star PowerSchool client in existence. Node.js |
+| [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 🟢 `MIT` *(`1 101` B)* | **20** | `main` · `f54e292f921e` | vendor product | PHP package for PowerSchool. 🟡 The holder line carries an **email address** |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 🟢 `MIT` *(`1 082` B)* | **16** | `master` · `201c02c36ef2` | vendor product | Python client. 🔵 Holder uses the **©** symbol, not `(c)` — a holder-form variant the matchers must survive |
+| [`louisqli/PowerSchool-What-if-Grades`](https://github.com/louisqli/PowerSchool-What-if-Grades) | 🟢 `MIT` *(`1 064` B)* | 6 | `master` · `f81b8429aa65` | vendor product | Brings Canvas-style what-if grade projection into PowerSchool |
+| [`SomeAspy/ChromeBookEnroller`](https://github.com/SomeAspy/ChromeBookEnroller) | 🟢 `MIT` *(`1 075` B)* | 1 | 🔴 **`v117+`** · `ecd1fd936e66` | topics `k12`, `sysadmin`; no jurisdiction | Bulk Chromebook enrolment jig. 🔴 **Found ONLY at lowercase `license.txt` — `T244-J`.** Default branch is `v117+` |
+| [`Nathansbud/ReportCardGenerator`](https://github.com/Nathansbud/ReportCardGenerator) | 🟢 **`BSD`** *(`1 522` B)* | 2 | `master` · `69235e0ab4bd` | targets **Veracross**, a US independent-school SIS | 🔵 **The pass's only `BSD` row.** Teacher report-card automation over Sheets, Excel and Veracross |
+| [`Mercatura-Forum/thebes-example-university`](https://github.com/Mercatura-Forum/thebes-example-university) | 🟢 `Apache-2.0` *(`11 353` B)* | 0 | `main` · `3292c434b142` | no regional evidence | Course catalogue with enrolment and a registrar view; React + Vite over **Motoko smart contracts** |
+| [`bigdawgsfootball/HomeschoolGradesAndTranscripts`](https://github.com/bigdawgsfootball/HomeschoolGradesAndTranscripts) | 🟢 `MIT` *(`1 070` B)* | 4 | `master` · `ed3cc16648e8` | 🟡 **an inference WAS available and was NOT taken:** homeschool *"high school transcripts"* is a US artefact, and the row names no country | Windows application tracking homeschool grades and generating high-school transcripts |
+| [`raghavendrashivam474/GradeFlow`](https://github.com/raghavendrashivam474/GradeFlow) | 🟢 `MIT` *(`1 074` B)* | 0 | `main` · `f8dbb4c63c75` | no regional evidence | Academic performance platform: assessment, result processing, dashboards |
+| [`Rumaisas-islam/student-report-card-management-system`](https://github.com/Rumaisas-islam/student-report-card-management-system) | 🟢 `MIT` *(`1 069` B)* | 0 | `main` · `287230693526` | no regional evidence | Report cards with login, leaderboard, grade calculation, backup and **complete test coverage** |
+| [`kishorep26/academia-nexus`](https://github.com/kishorep26/academia-nexus) | 🟢 `MIT` *(`1 074` B)* | 0 | `main` · `60daca92a8f2` | no regional evidence | Java web app for training institutes: enrolment, courses, faculty, admissions |
+
+### 🟢 `T244-K` — a withheld row became publishable, and only a **re-read** found it
+
+[`jangtrinh/design-os-pedagogy`](https://github.com/jangtrinh/design-os-pedagogy) — `main` · `3a053d281fb5`. 🔴 **`p157` recorded it on `2026-10-12` as** *"No licence file, no prose claim. **True unknown**"*. 🟢 **It now carries a complete `MIT` at `1 079` B, holder *"Jang Trinh (DESIGN:OS)"*.**
+
+🔵 **The lesson is about cadence, not this row:** an ungranted census is a snapshot of *upstream intentions in progress*, and `29` of the `33` rows swept were confirmed unchanged while **one had quietly become usable**. 🟡 **`ACTION WJ`: the ungranted censuses need a re-read schedule, not a one-off.**
+
+### 🔴 `T244-C` — the truncated grant, for the **second** time
+
+[`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil), `814` B, read in full:
+
+> `MIT License` · `Copyright (c) 2025 Belentani Project` · *"Permission is hereby granted …"* · *"THE SOFTWARE IS PROVIDED "AS IS" … FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.`[EOF]`*
+
+🔴 **The liability paragraph is absent.** `family_of` answers `MIT` — correctly — and says nothing about it. 🔵 **This is `p243`'s `webuntis-ha` (`797` B, cut off mid-paragraph) for the second time, on another continent, so it is a pattern and not an accident: truncation takes the TAIL, and the tail of the MIT text is the clause that protects the AUTHOR.** 🟢 The grant is intact, so the row is usable; the defect is the upstream's to fix and the consumer's to know about. 🟢 Gated by `p244.grant_completeness()`; a byte-floor cannot see this, because `814` B clears every floor on these shelves.
+
+### 🔴 `T244-D` — the carve-out that grants to nobody
+
+[`Lukas1120987/Schul-System`](https://github.com/Lukas1120987/Schul-System), `LICENSE.md`, `1 324` B: a complete canonical MIT, then an `# Anmerkung:`
+
+> *"Alle Bilder in dem Ordner `/icons` sind KI generiert und gelten daher **nicht unter dem Urheberrecht von Lukas1120987**. Das Urheberrecht der Bilder liegt bei **Chat-GPT von OpenAI**."*
+
+🔴 **Two errors in one sentence, and the second is the costly one: the author disclaims the asset path AND assigns it to an entity that cannot hold a copyright and does not claim one.** So `/icons` has **no identifiable rights holder** — the carve-out subtracts a scope without granting it to anybody.
+
+| instrument | what it reads | what it finds here |
+|---|---|---|
+| `lib/license_family.sh` | the title block | 🟢 `MIT` — correct, for the software |
+| [`p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/) | restriction tokens + a size ceiling | 🔴 silent: there is no restriction on the **software** |
+| [`p242-grant-delta`](../compose/code/p242-grant-delta/) | what is ADDED to a canonical text | 🟡 sees an addition, and cannot say the addition grants nothing |
+| [`p1058.grant_qualifier`](../compose/code/p1058-empty-payload-gate/) | the `120` chars before the grant verb | 🔴 silent: the note is `900` B *after* the verb |
+| 🆕 `p244.carveout_holder()` | **does the carve-out's named owner exist as an owner?** | 🟢 `CARVEOUT-NON-HOLDER:chat-gpt` |
+
+🟢 **Contrast `T243-E`'s `oga-veve`, which this KB already holds up as the shape to copy: three scopes, each with a named path, a named grant and a named holder.** 🔵 The difference between the two rows is one sentence, and it decides whether the assets can ship.
+
+### 🔴 `T244-J` — the ladder is case-sensitive and its five names are not
+
+`PROBE_NAMES` in `lib/probe_payload.sh` is `LICENSE LICENSE.md LICENSE.txt LICENCE COPYING` — five names, **every one capital-initial**, against a host that is **case-sensitive**. Measured on [`SomeAspy/ChromeBookEnroller`](https://github.com/SomeAspy/ChromeBookEnroller):
+
+```
+LICENSE       404      LICENSE.txt   404      License.txt   404      license.txt   200   <- 1075 B, MIT
+```
+
+🟢 **One real `MIT` row, reachable only at the spelling the shared ladder does not try.** 🔵 `p243` priced the British `LICENCE` rung at 1-in-44 and kept it because its single payout was a `PolyForm` non-commercial row; the **case** rung is the same economics and has never been bought. 🟡 **`ACTION WL`.** 🔵 Full rung accounting over the pass's `124` probed slugs: [`p244-rungs`](../evidence/p244-rungs.2026-10-16-p244.tsv).
+
+### 🟡 `ACTION`s registered by `p244`
+
+- 🔴 **`ACTION WI`** — **re-measure `p230`'s `26` dead addresses through `p244.address_state()`.** Any declared dead because `ls-remote --symref … HEAD` printed nothing may be a **live, empty** repository. `p244` found `2` such rows in a sample of `33` and did not re-run `p230`'s sweep.
+- 🔴 **`ACTION WM`** — **give `lib/probe_payload.sh` the distinction, don't just document it.** `_row_from_fetch`'s `[ -s "$tmp" ]` and its `404: Not Found` grep both reduce to "falsy", which is what collapses the two states. `p244` built the gate and did **not** change the shared probe; until it routes through `payload_state()`, every future pass re-buys `T244-A`.
+- 🟡 **`ACTION WL`** — **add the lowercase rung** to `PROBE_NAMES`, and record the case axis in the ladder's own header beside the British-spelling note.
+- 🟡 **`ACTION WJ`** — **the ungranted censuses need a re-read schedule.** `1` of `33` rows had become granted in four days (`T244-K`). A census of absences decays faster than a census of presences, and nothing on these shelves says how often to re-ask.
+- 🟡 **`ACTION WK`** — **`topic:powerschool` left `31` of `50` unread and `topic:cbse` left `121` of `124`.** Also still unqueried: `topic:oneroster`, `topic:lti`, `topic:sped`, `topic:safeguarding`.
+- 🔴 **`ACTION WH` stands OPEN for a THIRD pass, and now for EMEA too.** `p244`'s regional legs produced real intelligence and **no primary document**: `cbse.gov.in` and `moe.gov.cn` were not reached, and the EU AI Act dates come from consultancy blogs that **agree on the education deferral to `2 Dec 2027` and disagree on every secondary date**. 🔵 A primary-source leg is the only thing that closes this.
+- 🟡 **`ACTION WN`** — **`ACTION WD` and `ACTION WE` are untouched by this pass and still open.** `WD`: route every family classifier through `p1058.family_token_evidence()` and move the rule into `compose/code/lib/`. `WE`: `p1054` must call `p242-grant-delta.resolve_mit_plus()` rather than return `MIT-BODY-PLUS` as terminal. `p244` added a *fourth* resolution path (`grant_completeness`, `carveout_holder`) and swept for neither — 🔴 **which is the third consecutive pass to add a path and not consolidate.**
+
 ## Pass 243 — 2026-10-16 — `ACTION WA` DISCHARGED, AND THE AXIS IT NAMED PRODUCED **`41` PERMISSIVE ROWS AND THE PASS'S HEADLINE**: A `LICENSE` FILE THAT EXISTS, ANSWERS `200`, AND IS **`0` BYTES**
 
 ⏱️ **TWELFTH pass of `2026-10-16`.** `p232`–`p242` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

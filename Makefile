@@ -66,6 +66,8 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p1058-empty-payload-gate (0-byte grant, self-reference, prefix narrowing: 29)"; \
 	cd compose/code/p1058-empty-payload-gate && $(PY) -I test_empty_payload_gate.py >/dev/null 2>&1 && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p244-absence-states  (payload/address/query absence + truncation: 61)"; \
+	$(PY) -I compose/code/p244-absence-states/test_absence_states.py >/dev/null && echo "   PASS"; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

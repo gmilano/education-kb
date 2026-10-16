@@ -1,0 +1,47 @@
+# p244 - 42 permissive rows, every grant read FIRST-HAND from raw.githubusercontent.com at the
+# branch `git ls-remote --symref` reported, on 2026-10-16.  `index` is the p235 carried-row gate
+# (ACTION UG) run per row BEFORE publishing: CARRIED rows are re-reads, not discoveries.
+# `region` is the closed vocabulary; `region_basis` is quoted FROM THE ROW or says it is absent.
+repo	region	grant	bytes	branch	head	stars	index	region_basis	what_it_is
+Lukas1120987/Schul-System	EMEA	MIT	1324	main	9c208c271ef2	10	NEW	topics `deutsch`,`german`,`schule`,`verwaltung`; German UI and README	Local-first German school administration in Python: login, Stundenplan, Nachrichten, cloud, e-learning, calendar. CARVE-OUT: /icons excluded and assigned to a non-holder
+straussbastian/ai_flashcards_for_school	EMEA	MIT	1072	main	4d3e8c814591	1	NEW	topic `berufsschule` - the German vocational-school type	Teacher builds flashcard bundles through an MCP agent; the class opens a three-word link. No sign-in, no stored results
+florianchristophnowak-dot/capy-note	EMEA	MIT	1080	main	cf7fd7565a2b	1	NEW	topics `lehrer`,`schule`,`unterricht`; German description	Efficient marking of SCANNED pupil work
+florianchristophnowak-dot/prep-ybara	EMEA	MIT	1080	main	c113fd3ba66a	1	NEW	German `Unterrichtsvorbereitungs-App`; topics `lehrer`,`schule`	Lesson-preparation app
+foerbsnavi/Notenberechner	EMEA	MIT	1069	main	f57375bfa9f9	0	NEW	`Notenschluessel` and `Blocknoten` are German grading instruments	Browser-only grade calculator for teachers: points<->grade, exam statistics, PDF/CSV export. No sign-up
+mr89adloff/taschenrechner-fx87de	EMEA	MIT	1071	main	fd829377d971	0	NEW	the fx-87**DE** PLUS is the German-market Casio school calculator; German description	Faithful web rebuild of the school calculator pupils are examined with. Explicitly "Kein Casio-Produkt"
+realshouzy/pynrw	EMEA	MIT	1075	main	1655117f668b	0	NEW	names the `zentrale NRW-Abiturpruefungen`; `NRW` = North Rhine-Westphalia	Python implementations of the NRW Abitur CS exam materials from 2018
+musmax/school-ease	EMEA	MIT	1072	master	ec794e199210	0	NEW	WEAKER BASIS, stated: the GitHub DESCRIPTION cites **Paystack**, a Nigerian payment processor, beside Stripe. The README carries no regional token at all	All-in-one primary/secondary school platform: timetable, attendance, report cards, fees, receipts, staff, subscriptions
+BootlegYouki/L.A.R.A	APAC	MIT	1113	main	07b9acf54505	1	NEW	topics `philippines`,`deped`; "DepEd Grades 1-6"	Offline LAN classroom with a hybrid Socratic SLM tutor and paperless quizzes. Tauri v2, edge AI, no cloud
+appbuildersph/modes	APAC	MIT	1139	main	365576161bfc	0	NEW	topics `philippines`,`deped`,`matatag`; "Filipino Grade 4-6 learners"	SIBOL: offline-first local AI maths tutor. Gemma 4 E2B on a laptop, not the cloud. English, Tagalog, Taglish; three modes
+bncc-dev/bncc-dados	LATAM	MIT	1092	main	9c268978efa2	21	CARRIED	the LICENSE holder is "Profy Tecnologias Educacionais **Ltda**" - the Brazilian company form; topics `bncc`,`brasil`	Brazil's BNCC national curriculum as verified open data: 1721 learning objectives in JSON, SQLite and CSV, per-record provenance, reproducible extraction
+shishiv/EDUCA	LATAM	MIT	1067	dev	d7bdbe4614e0	1	NEW	topics `brasil`,`lgpd`,`gestao-escolar`,`municipal-management`; Portuguese	Municipal school management for a `secretaria de educacao`. NOTE: the default branch is `dev`, not main/master
+belentani7/aprende-brasil	LATAM	MIT	814	main	7d9e6170085b	0	CARRIED	topics `brasil`,`portuguese`	Brazilian interactive education platform with an AI tutor and OpenVoice-ready speech. GRANT IS TRUNCATED: the liability paragraph is absent
+IronCountySchoolDistrict/ps-plugin-boilerplate	North America	MIT	1057	master	555846846a47	5	NEW	the OWNER is a US school district - Iron County School District, Utah - which is institutional identity in the row, not a vendor product	PowerSchool plugin development boilerplate (Babel/Gulp/Webpack). HOLDERLESS payload
+IronCountySchoolDistrict/powerschool-alchemy	North America	MIT	1057	master	9014b324fe37	3	NEW	same district owner	Talk to a PowerSchool database through SQLAlchemy. HOLDERLESS payload
+iblai/k-12-agents	Global	MIT	1063	main	54ee9d91eecd	9	NEW	the estate claims no jurisdiction; see p244-holder-forms for the single `LLC` signal	School Assistant orchestrator + 12 K-12 specialist subagents, incl. PowerSchool SIS read/write and district administration
+iblai/higher-education-agents	Global	MIT	1063	main	1a2d898bbd04	12	NEW	no jurisdiction claimed	Campus Assistant orchestrator + 16 higher-ed subagents: academic advising, student success
+iblai/claw-router	Global	MIT	1063	main	319b951e6dd4	44	NEW	no jurisdiction claimed	Routes every request to the cheapest model that can handle it; the estate's highest-star row p243 did not list
+iblai/standard	Global	MIT	1063	main	047e867e7a2d	11	NEW	no jurisdiction claimed	The `.iblai` agent file format: a portable Markdown spec, CLI wizard and example library
+iblai/infra-cli	Global	MIT	1063	main	9ba80fa786bc	12	NEW	no jurisdiction claimed	Interactive CLI provisioning the platform on AWS and GCP with Terraform, configuring with Ansible
+iblai/video	Global	MIT	1063	main	4679e59dc8e1	4	NEW	no jurisdiction claimed	Avatar video generation, voice cloning and script authoring in one workspace
+iblai/recruit	Global	MIT	1089	main	45e999448e38	0	NEW	WEAKEST BASIS, stated and NOT promoted: the holder reads "Class Generation, **LLC** dba ibl.ai". A US-state-chartered corporate form is a jurisdiction INFERENCE, not a stated jurisdiction	Recruiting app on the platform SDK
+iblai/iblai-js-sdk	Global	MIT	1063	main	928c7927298c	1	NEW	no jurisdiction claimed	The JavaScript SDK every platform app imports
+iblai/iblai-openclaw-email	Global	MIT	1063	main	b60a6e74a8ad	1	NEW	no jurisdiction claimed	Email triage routed to the cheapest capable model
+iblai/vibe-marketing	Global	MIT	1063	main	875557e1a172	0	NEW	no jurisdiction claimed	Marketing site scaffold
+iblai/medical-healthcare-agents	Global	MIT	1063	main	cd0d9fcfa523	10	NEW	no jurisdiction claimed	Non-education vertical; published for the estate census and the composition pattern, not as an education row
+iblai/legal-agents	Global	MIT	1063	main	b059cd452bf3	13	NEW	no jurisdiction claimed	Non-education vertical, as above
+iblai/government-agents	Global	MIT	1063	main	fbf903250c96	10	NEW	no jurisdiction claimed	Non-education vertical, as above
+iblai/financial-services-agents	Global	MIT	1063	main	6ea18f015b1e	15	NEW	no jurisdiction claimed	Non-education vertical, as above
+iblai/enterprise-agents	Global	MIT	1063	main	7f00879a9f57	13	NEW	no jurisdiction claimed	Non-education vertical, as above
+aydenp/PowerSchool-API	Global	MIT	1072	master	a23ec090ea44	34	CARRIED	targets PowerSchool, a US/Canada K-12 vendor product, which by this KB's own rule places the PRODUCT and not the ROW. No author location in the row	Node.js client for the PowerSchool SIS API; the highest-star client on the axis
+grantholle/powerschool-api	Global	MIT	1101	main	f54e292f921e	20	CARRIED	vendor product, no jurisdiction; note the holder line carries an email address	PHP package for PowerSchool
+dougpenny/PyPowerSchool	Global	MIT	1082	master	201c02c36ef2	16	CARRIED	vendor product, no jurisdiction; holder uses the © SYMBOL rather than "(c)"	Python client for the PowerSchool API
+louisqli/PowerSchool-What-if-Grades	Global	MIT	1064	master	f81b8429aa65	6	NEW	vendor product, no jurisdiction	Brings Canvas-style what-if grade projection into PowerSchool
+SomeAspy/ChromeBookEnroller	Global	MIT	1075	v117+	ecd1fd936e66	1	NEW	topics `k12`,`sysadmin`; no jurisdiction	Arduino/C++ jig that enrols Chromebooks in bulk. FOUND ONLY at lowercase `license.txt` - see p244-rungs
+bigdawgsfootball/HomeschoolGradesAndTranscripts	Global	MIT	1070	master	ed3cc16648e8	4	NEW	NOT PLACED although an inference was available: "high school transcripts" for homeschoolers is a US artefact, and the row states no country. Recorded as absent rather than inferred	Windows application tracking homeschool grades and generating high-school transcripts
+raghavendrashivam474/GradeFlow	Global	MIT	1074	main	f8dbb4c63c75	0	NEW	no regional evidence in the row	Academic performance platform: assessment, result processing, dashboards
+Rumaisas-islam/student-report-card-management-system	Global	MIT	1069	main	287230693526	0	NEW	no regional evidence in the row	Python report-card system with login, leaderboard, grade calculation, file backup and test coverage
+kishorep26/academia-nexus	Global	MIT	1074	main	60daca92a8f2	0	NEW	no regional evidence in the row	Java web app for training institutes: enrolment, courses, faculty, admissions
+Nathansbud/ReportCardGenerator	Global	BSD	1522	master	69235e0ab4bd	2	NEW	targets **Veracross**, a US independent-school SIS: vendor product, places the product	Cross-platform teacher report-card automation over Sheets, Excel and Veracross
+Mercatura-Forum/thebes-example-university	Global	Apache-2.0	11353	main	3292c434b142	0	NEW	no regional evidence in the row	Course catalogue with enrolment and a registrar view on the Thebes protocol: React + Vite, Motoko smart contracts
+jangtrinh/design-os-pedagogy	Global	MIT	1079	main	3a053d281fb5	0	CARRIED	no regional evidence in the row	CORRECTION ROW: p157 recorded "No licence file, no prose claim. True unknown" on 2026-10-12. It now carries a complete MIT at 1079 B, holder "Jang Trinh (DESIGN:OS)". A withheld row became publishable and only a re-read found it

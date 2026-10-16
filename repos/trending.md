@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — `topic:school-fees` IS **ONE REPOSITORY ON ALL OF GITHUB**, AND `topic:report-card` IS `31` OF WHICH `19` ARE **GO AND PYTHON CODE-QUALITY TOOLS** — TWO AXES EXHAUSTED, AND THE EXHAUSTION IS THE FINDING
+
+⏱️ **APPEND-ONLY SHELF.** This section is added above pass `243`'s; nothing below it is rewritten.
+
+🔵 Every query with its channel, sort key, `total_count`, rows **read** and **shape verdict**: [`p244-queries`](../evidence/p244-queries.2026-10-16-p244.tsv).
+
+### 🔴 Axis saturation, measured rather than guessed
+
+| axis | `total_count` | read | on-topic | permissive | verdict |
+|---|---|---|---|---|---|
+| `org:iblai` | **35** | **35** | 35 | **15** | 🟢 **CENSUS.** `ACTION WG` discharged |
+| `topic:enrollment topic:education` | **20** | **20** | 20 | **2** | 🟢 **CENSUS.** 1 AGPL, 1 CC-BY-SA, 13 ungranted |
+| `topic:deped` | **10** | **10** | 10 | **2** | 🟢 **CENSUS.** The APAC axis |
+| `topic:schule topic:education` | **16** | 12 | 12 | **7** | 🟢 Near-census. The EMEA axis |
+| `topic:education topic:brasil` | **33** | 33 | ~14 | **3** | 🟢 **CENSUS.** The LATAM axis |
+| `topic:report-card` | **31** | 12 | **12** | **5** | 🔴 **EXHAUSTED: `19` of `31` are off-topic** |
+| `topic:school-fees` | **1** | 1 | 1 | **0** | 🔴 **EXHAUSTED ON ITS FIRST QUERY** |
+| `topic:powerschool` | **50** | 19 | 19 | **6** | 🟡 `31` unread — `ACTION WK` |
+| `topic:cbse` | **124** | 3 | ~3 | **0** | 🟡 `121` unread, mostly school coursework — `ACTION WK` |
+
+🔴 **`topic:school-fees` has exactly ONE repository on all of GitHub.** [`HAZA-AIOS/HAZA-SMS`](https://github.com/HAZA-AIOS/HAZA-SMS) — `1`★, multi-tenant school management on **Cloudflare Workers + D1**: students, admissions, academics, attendance, fees, staff, timetables, examinations. 🔴 **And its README names a `LICENSE` that answers `404`.** 🟢 **So the axis is not merely thin — it is empty of anything usable, and that is now written down** rather than left as silence. 🔵 `ACTION WF` named this axis as unqueried; it is now queried and closed.
+
+🔴 **`topic:report-card` is a TOKEN COLLISION, not an education axis.** `19` of its `31` rows are software-quality "report cards" — [`gojp/goreportcard`](https://github.com/gojp/goreportcard) at `2 174`★ *(archived)*, [`mingrammer/pyreportcard`](https://github.com/mingrammer/pyreportcard), [`Shodh-Labs/jig`](https://github.com/Shodh-Labs/jig) *(MCP server grading)*, a security scanner, a data-quality scorer, an ontology linter, and an AI-politeness novelty. 🟡 **A topic axis is only an axis when the topic means one thing**, and this one means two.
+
+### 🟢 What the on-topic half of `topic:report-card` did pay
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`raghavendrashivam474/GradeFlow`](https://github.com/raghavendrashivam474/GradeFlow) | 🟢 `MIT` *(`1 074` B)* | 0 | `main` · `f8dbb4c63c75` | Assessment, result processing, dashboards; TS + Express + Zustand |
+| [`musmax/school-ease`](https://github.com/musmax/school-ease) | 🟢 `MIT` *(`1 072` B)* | 0 | `master` · `ec794e199210` | All-in-one school platform incl. **fees, receipts and subscriptions** — and the only row this pass reaching **EMEA via a payment rail** *(Paystack, Nigeria; description-only basis, stated)* |
+| [`Nathansbud/ReportCardGenerator`](https://github.com/Nathansbud/ReportCardGenerator) | 🟢 **`BSD`** *(`1 522` B)* | 2 | `master` · `69235e0ab4bd` | 🔵 **The pass's only `BSD` row.** Teacher report cards over Sheets, Excel and **Veracross** |
+| [`bigdawgsfootball/HomeschoolGradesAndTranscripts`](https://github.com/bigdawgsfootball/HomeschoolGradesAndTranscripts) | 🟢 `MIT` *(`1 070` B)* | 4 | `master` · `ed3cc16648e8` | Homeschool grade tracking and **high-school transcript generation** |
+| [`Rumaisas-islam/student-report-card-management-system`](https://github.com/Rumaisas-islam/student-report-card-management-system) | 🟢 `MIT` *(`1 069` B)* | 0 | `main` · `287230693526` | 🟢 Notable for shipping **complete test coverage**, which almost nothing on this axis does |
+| [`tpt-solutions/tpt-school`](https://github.com/tpt-solutions/tpt-school) | 🔵 CARRIED by `p243` | 3 | `master` | Appears on this axis too, confirming `p243`'s row from a second direction |
+
+### 🔴 And the two queries that reported an empty axis while holding `134` rows
+
+```
+topic:deped OR topic:nigeria school management -> total_count   0      <- VOID SHAPE
+topic:deped                                    -> total_count  10
+topic:cbse OR topic:ncert school AI            -> total_count   0      <- VOID SHAPE
+topic:cbse                                     -> total_count 124
+```
+
+🔴 **GitHub's repository search does not accept `OR` between qualifiers, and it answers `0` rather than erroring — which is exactly what a genuinely exhausted axis answers.** 🔴 **`topic:deped` is where BOTH APAC rows of this pass came from**, so the finding is not hypothetical: an empty-axis claim was one keystroke away from publication. 🟢 **Gated now by `p244.zero_result_is_absence()`**, which refuses to call a `0` an absence until the shape checks out — and which deliberately still accepts `OR` between *bare* terms, asserted as a control so the gate cannot over-fire. 🔵 [`p244-absence-states`](../compose/code/p244-absence-states/).
+
+### 🟡 A channel asymmetry worth remembering
+
+| MCP tool | scope |
+|---|---|
+| `search_repositories` | 🟢 **GLOBAL** — any public repository on GitHub |
+| `get_file_contents` | 🔴 **REPO-SCOPED** — *"not configured for this session"* for every slug outside this KB |
+
+🟢 **So repository DISCOVERY is global and file READING is not**, and the only general file channel available here remains `raw.githubusercontent.com`. 🔵 `curl` against `api.github.com` is still `403`, as `p241` recorded — which is why every star count in this pass comes from the MCP search rows and never from the API, and why that provenance is stated rather than implied.
+
+### 🔴 Dead, empty, and the difference
+
+🔴 **Three addresses in the carried census failed to resolve, and they are three DIFFERENT facts:**
+
+```
+cdweaver1992/edfi-mcp-server                 rc=0    refs=0   -> EMPTY-REPO        (EXISTS)
+openfresno/edgenuity-aeries-grade-passback   rc=0    refs=0   -> EMPTY-REPO        (EXISTS)
+jakerains/scormplayer                        rc=128  auth     -> UNREACHABLE-AUTH
+```
+
+🟢 **Two of the three are live repositories with zero commits** — nothing to license because nothing is committed. 🔴 The shared probe writes `UNRESOLVED` for all three, which an existence sweep reads as a dead address. 🟡 **`p230` declared `26` dead addresses on these shelves; any reached by this path is unconfirmed — `ACTION WI`.**
+
 ## Pass 243 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS A **POPULATION OF FOUR**: THE WORD PROCUREMENT USES FOR THIS CATEGORY IS NOT THE WORD BUILDERS TAG IT WITH
 
 ⏱️ **TWELFTH pass of `2026-10-16`.** History below this section is kept.

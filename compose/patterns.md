@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — FOUR RECIPES, EACH NAMING ITS REPOS, ITS GRANTS AND ITS PINNED HEADS — PLUS THE **DUE-DILIGENCE RECIPE** THIS PASS'S FOUR LICENCE DEFECTS MADE NECESSARY
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.**
+
+🔵 Every component below was **read first-hand this pass** and is pinned at the head recorded in [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv). 🔴 **No pattern here composes a withheld row into shippable code**; where a copyleft or ungranted component is the best fit, it is named as *deploy-only* or *upstream-ask* and the boundary is drawn explicitly.
+
+---
+
+### 🟢 `P244-1` — District-facing K-12 agent on the US system of record, without scraping
+
+**For:** a North America K-12 district or state engagement. **Weeks: 6-8.**
+
+| layer | component | 🟢 Grant | pinned head |
+|---|---|---|---|
+| SIS read/write *(REST)* | [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) *(16★)* | 🟢 `MIT` *(`1 082` B)* | `master` · `201c02c36ef2` |
+| SIS read *(SQL/ORM)* | [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy) | 🟡 `MIT` holderless *(`1 057` B)* | `master` · `9014b324fe37` |
+| the supported extension point | [`IronCountySchoolDistrict/ps-plugin-boilerplate`](https://github.com/IronCountySchoolDistrict/ps-plugin-boilerplate) | 🟡 `MIT` holderless *(`1 057` B)* | `master` · `555846846a47` |
+| agent roles, as a starting spec | [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) *(9★)* | 🟢 `MIT` *(`1 063` B)* | `main` · `54ee9d91eecd` |
+| agent definition format | [`iblai/standard`](https://github.com/iblai/standard) *(11★)* | 🟢 `MIT` *(`1 063` B)* | `main` · `047e867e7a2d` |
+| model cost control | [`iblai/claw-router`](https://github.com/iblai/claw-router) *(44★)* | 🟢 `MIT` *(`1 063` B)* | `main` · `319b951e6dd4` |
+
+**Wiring.** 🟢 `PyPowerSchool` for everything transactional *(the official API, OAuth, rate-limited)*; `powerschool-alchemy` **read-only** for the reporting queries the REST API makes expensive — this is the split the district that wrote both tools uses. 🟢 Take the **thirteen role definitions** from `k-12-agents` as your requirements document and re-express them in `.iblai` format; **do not adopt the platform to get them.** 🟢 Put `claw-router` in front of the model calls on day one — an attendance-triage agent over 17M-scale record sets is a cost problem before it is an accuracy problem.
+
+🔴 **The gate this pattern must ship with.** `k-12-agents` declares a `powerschool/` skill that **writes** student records, enrolment, attendance and grades, and **states no human-confirmation gate.** 🟢 **Borrow the gate from `p243`'s `che-ntucool-mcp`** *(`MIT`)*: an elicitation dialog **plus** a single-use token bound to the previewed payload, so the grade that gets posted is the grade a human saw. 🔴 **Write access to a gradebook is the highest-consequence capability in this KB — treat an ungated write path as a defect, not a feature.**
+
+🔴 **Do not embed:** [`usechalk/chalk`](https://github.com/usechalk/chalk) *(`AGPL-3.0`)* is the best K-12 IT stack available and it is **deploy-and-configure only**. 🟢 Its `OneRoster` support is the integration seam if the district already runs it.
+
+🟡 **The compliance add-on that sells itself:** Maryland `SB 720` requires an **AI coordinator per district** and Ohio `HB 96` a board-approved AI policy. 🟢 Ship the coordinator's workflow — model inventory, disclosure register, incident log — as a module beside the agent.
+
+---
+
+### 🟢 `P244-2` — Curriculum-grounded tutor for Brazil, with its own eval harness
+
+**For:** a LATAM engagement at a municipal *secretaria de educação* or a Brazilian edtech. **Weeks: 8-10.**
+
+| layer | component | 🟢 Grant | pinned head |
+|---|---|---|---|
+| **the curriculum, as data** | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(21★)* | 🟢 **`MIT`** *(`1 092` B)* | `main` · `9c268978efa2` |
+| school administration shell | [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) | 🟢 `MIT` *(`1 067` B)* | 🔴 **`dev`** · `d7bdbe4614e0` |
+| tutor surface | [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) | 🟡 `MIT` **truncated** *(`814` B)* | `main` · `7d9e6170085b` |
+| the eval method | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) *(9★)* | 🔴 **`CC-BY-4.0`** *(`911` B)* | `main` · `4713901ce5d7` |
+
+**Wiring.** 🟢 **Load `bncc-dados` directly and write your own client — forty lines.** 🔴 **Do NOT `pip install` or `npm i` [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes): it is `CC-BY-4.0`, a content licence on software, addressing neither patents nor warranty.** 🟢 The dataset you actually want is the one cleanly `MIT`, and this is the whole reason to read licence architecture per-repo rather than per-owner.
+
+🟢 **Ground every tutor response on a BNCC objective code and carry the dataset's per-record provenance through to the UI** — *"this is what grade 5 is required to learn, and here is the source"*. 🔵 That is the deliverable a *secretaria* can defend to a school board, and it is a join rather than a consulting exercise.
+
+🟢 **Then use `bncc-benchmark`'s METHOD, not its code:** hallucination measured against curriculum, with a **held-out set kept private against contamination**. 🔵 The held-out design is what makes it credible and what most education benchmarks omit. 🔴 Re-implement it; `CC-BY-4.0` is the wrong licence to take a harness under.
+
+🔴 **Two upstream asks worth making in week one:** `aprende-brasil`'s `MIT` is **missing its liability paragraph** *(the author kept liability they meant to disclaim — one commit)*, and `EDUCA`'s default branch is **`dev`**, which every tooling assumption in a pipeline will get wrong.
+
+🟡 **LGPD is the design target, not an afterthought** — `EDUCA` names it in its own topics. 🟢 Design to LGPD and the region's unsettled statutes *(Brazil's `PL 2.338/2023`, Chile's merged bill, Mexico's Senate bill, Argentina's absence)* stop mattering.
+
+---
+
+### 🟢 `P244-3` — The one build sold twice: offline-first classroom AI for EMEA **and** APAC
+
+**For:** a German *Land* / DACH school engagement **and** a Philippine DepEd or SEA public-education engagement. **Weeks: 10-12 for the first, 3-4 to re-skin for the second.**
+
+| layer | component | 🟢 Grant | pinned head |
+|---|---|---|---|
+| edge tutor reference *(APAC)* | [`appbuildersph/modes`](https://github.com/appbuildersph/modes) | 🟢 `MIT` *(`1 139` B)* | `main` · `365576161bfc` |
+| LAN classroom reference *(APAC)* | [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 `MIT` *(`1 113` B)* | `main` · `07b9acf54505` |
+| MCP authoring + no-account delivery *(EMEA)* | [`straussbastian/ai_flashcards_for_school`](https://github.com/straussbastian/ai_flashcards_for_school) | 🟢 `MIT` *(`1 072` B)* | `main` · `4d3e8c814591` |
+| administration shell *(EMEA)* | [`Lukas1120987/Schul-System`](https://github.com/Lukas1120987/Schul-System) *(10★)* | 🟡 `MIT` + carve-out *(`1 324` B)* | `main` · `9c208c271ef2` |
+| grading instruments *(EMEA)* | [`foerbsnavi/Notenberechner`](https://github.com/foerbsnavi/Notenberechner) · [`florianchristophnowak-dot/capy-note`](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 `MIT` *(`1 069` / `1 080` B)* | `f57375bfa9f9` · `cf7fd7565a2b` |
+
+**Wiring.** 🟢 **One technical core: a local small model, a no-account session model, and local-store-then-sync.** `modes` is the reference for the first *(Gemma 4 E2B on a teacher's laptop)*; `ai_flashcards_for_school` for the second *(teacher authors through an **MCP agent**, class opens a **three-word link**, nothing stored)*; `L.A.R.A` for the third *(classroom LAN, Tauri v2)*.
+
+🟢 **Then the same core gets two completely different sales conversations:**
+
+| | EMEA | APAC |
+|---|---|---|
+| **why offline** | 🟢 **compliance** — AI Act high-risk duties from **`2 Dec 2027`**, transparency duties **already live**, **emotion recognition already prohibited in education**, FRIA owed by public schools | 🟢 **economics** — connectivity and per-seat cost |
+| **what you ship beside it** | the **FRIA**, the AI inventory, the disclosure wiring | **Taglish/vernacular** support, `SF2`/`SF9`/`SF10` form output, MATATAG alignment |
+| **what the rows prove you need** | *"ohne Cloud, ohne Konten"* is the market's own phrasing | *"runs on a laptop, not the cloud"* is the market's own phrasing |
+
+🔴 **Before shipping `Schul-System`'s assets, read `T244-D`:** its `/icons` are carved out of the author's copyright and assigned to *"Chat-GPT von OpenAI"* — **an entity that cannot hold a copyright and does not claim one, so those files have no identifiable rights holder.** 🟢 **Replace the icons or get a real grant; do not ship them on the strength of the note.** 🔵 The shape to imitate instead is `p243`'s `oga-veve`: every scope named, with its own grant and its own holder.
+
+🔴 **Deploy-only on this axis:** `Erwartungshorizont-Studio` and `sitzplan-studio` *(both `AGPL-3.0`)*, `koakademy` *(`AGPL-3.0`, and the best-documented Philippine platform there is)*. 🔴 **`mgkurz/ais-chat-builder`** — a **Claude Skill for teachers** with built-in brevity constraints — is `CC-BY-SA-4.0`: read it for the technique, do not vendor it.
+
+🟢 **One upstream ask with real upside:** [`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) is exactly the German school-platform client an EMEA pilot wants, and its `LICENSE` is **`0` bytes**. 🔵 Its README already says *"MIT – siehe LICENSE"*, so the maintainer believes they granted. **Ask; it is one commit.**
+
+---
+
+### 🔴 `P244-4` — The due-diligence recipe, because *"check the LICENSE"* is no longer one step
+
+**For:** every engagement, run before a component enters a build. **Hours, not weeks — and this pass found four defects in `42` rows, so it pays.**
+
+```
+# 1. ADDRESS — does it exist, and is it empty?            (p244.address_state)
+out=$(git ls-remote "https://github.com/$SLUG" 2>&1); rc=$?
+#   rc=0, refs>0        -> LIVE
+#   rc=0, refs=0        -> EMPTY-REPO        the repo EXISTS and has no commits
+#   rc=128 + auth       -> UNREACHABLE-AUTH  private, renamed or deleted
+#   NEVER read an empty --symref as "no such repository"
+
+# 2. BRANCH — never assume main/master.
+git ls-remote --symref "https://github.com/$SLUG" HEAD
+#   measured defaults on these shelves: dev, v117+, 2.12, mobile, v31.0.00
+
+# 3. PAYLOAD — the code and the byte count are SEPARATE facts.   (p244.payload_state)
+curl -sS -o /tmp/p -w '%{http_code}' "https://raw.githubusercontent.com/$SLUG/$BR/LICENSE"
+#   200 + bytes>0 -> GRANTED        200 + 0 bytes -> EMPTY-DECLARED   (NOT an absence!)
+#   404 + README names it -> ABSENT-DECLARED      404 + no claim -> ABSENT-UNDECLARED
+#   and the 14-byte body "404: Not Found" is NEVER a payload
+
+# 4. LADDER — six names, and lowercase is one of them.
+for n in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING license.txt; do ... done
+#   then the README's own licence LINK, which is the ONLY way to reach
+#   OS4ED/openSIS-Classic's docs/License.txt (17286 B, with a BOM)
+
+# 5. FAMILY — never grep the body for a family name.          (lib/license_family.sh)
+compose/code/lib/measure --family /tmp/p
+#   GPL-3.0 section 13 is TITLED "Use with the GNU Affero GPL": four independent
+#   classifiers on these shelves have read that as AGPL.  Classify on the TITLE BLOCK.
+
+# 6. COMPLETENESS — is the payload all there?            (p244.grant_completeness)
+#   814 B of MIT clears every byte-floor and is missing the LIABILITY paragraph
+
+# 7. CARVE-OUTS — does an excluded scope name an owner who could license it?
+#                                                        (p244.carveout_holder)
+#   "/icons ... copyright belongs to Chat-GPT by OpenAI" grants to nobody
+
+# 8. HOLDER vs OWNER — is this grant the owner's to give?
+compose/code/lib/measure /tmp/p --repo "$SLUG"
+#   iblai/botbuilder-python: MIT, holder = Microsoft Corporation, fork: false
+#   and ONE owner spells itself FOUR ways, so this is never a string-equality test
+
+# 9. THE WHOLE GRAPH — read the estate to the bottom.
+#   org:iblai = 35 repos.  25 grant, 10 do NOT, and the ungranted ten include the SDK
+#   the granted apps import.  A first page is not a census.
+
+# 10. ACCESS != COPYRIGHT.  A payload answers the copyright question only.
+#   May you CALL this system?  That lives in a third party's Terms of Use (P26) and
+#   no probe in this directory can see it.
+```
+
+🟢 **Steps 1, 3, 6 and 7 are new this pass and all four fired on real rows.** 🔵 Gated by [`p244-absence-states`](../compose/code/p244-absence-states/) — `61` controls, wired into `make hooks`, runnable with no network.
+
+🔵 **Why step 9 earns its place in a client-facing recipe:** the four licence-architecture defects this pass found — the inversion, the truncation, the carve-out, the third party's grant — were all **invisible from a repository's front page** and all cost a day or less to find. 🟢 **One of them, the ungranted SDK beneath `MIT` applications, is the kind of thing that surfaces after integration rather than before.**
+
 ## Pass 243 — 2026-10-16 — `5` RECIPES, ONE PER REGION PLUS THE WRITE-PATH PATTERN THEY ALL DEPEND ON — EVERY REPO BELOW HAS A GRANT THIS PASS READ FIRST-HAND, WITH ITS HEAD PINNED
 
 🔵 **Grants and pinned heads:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · **refusals, so a recipe cannot quietly include one:** [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) · **the gate every component was cleared by:** [`p1058-empty-payload-gate`](code/p1058-empty-payload-gate/)

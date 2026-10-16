@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — ALL FIVE REGIONS PLACED FROM ROW EVIDENCE, AND THE MARKET FINDING IS THAT **EMEA AND APAC HAVE CONVERGED ON THE SAME ARCHITECTURE FOR OPPOSITE REASONS** — WHICH MAKES ONE BUILD SELLABLE TWICE
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.**
+
+🔵 Evidence: [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) *(42 rows, per-row region basis)* · [`p244-withheld`](../evidence/p244-withheld.2026-10-16-p244.tsv) · [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv) *(8 legs, 0 rows, 2 that paid intelligence)* · [`p244-queries`](../evidence/p244-queries.2026-10-16-p244.tsv).
+
+### 🟡 Market size — recorded as a RANGE, because the sources do not reconcile
+
+| figure | source type | 🔴 caveat |
+|---|---|---|
+| AI-in-education **`$10.6B`–`$11.4B` for 2026** | three vendor market-research houses | 🔴 **a `$0.8B` spread on the CURRENT year.** Recorded as a range; any single point would be a choice dressed as a measurement |
+| CAGR **`40.9%`** *(to 2034)* · **`$57.2B` by 2033** · **`$79.6B` by 2034** | same | 🔴 three different horizons, not comparable |
+| APAC **`$18.2B` by 2033, CAGR `28.1%`** | one house | 🟡 the only regional split found; unverifiable |
+| Student AI use **`66%` (2024) → `92%` (2025)** | survey, secondary citation | 🟡 the steepest claim in the set and the one most worth checking before it is quoted to a client |
+| K-12 = **`45.6%`** of adoption · STEM = **`34.8%`** of revenue | one house | 🟡 segment splits, single-source |
+| Market maturity **`35/100`**, *"most institutions still in pilot mode"* | vendor | 🔴 **explicitly a vendor's opinion**, carried as sentiment and not as data |
+
+🟢 **The honest summary for a pitch: the market's direction is unambiguous and its size is not known to better than ±10% in the current year.** 🔵 Full source-quality notes per leg in [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv).
+
+### 🟢 The map this pass actually measured: who publishes education software, by artefact type
+
+🔵 **Derived from `124` probed repositories, not from a vendor deck.** Five publisher types, and each one chooses licences differently:
+
+| publisher type | example | licence tendency | what it means for Globant |
+|---|---|---|---|
+| **Individual developer, client library** | `aydenp/PowerSchool-API` *(34★)* | 🟢 **`MIT`, near-universally** | 🟢 **The integration layer is free.** Build on it |
+| **Vendor estate, platform** | `org:iblai` *(35 repos)* | 🟢 `MIT` on the apps · 🔴 **ungranted on `10`, incl. the SDK** | 🟡 **Read to the bottom of the graph before adopting** |
+| **School or district, own tooling** | `IronCountySchoolDistrict` *(2 repos)* | 🟢 `MIT`, **holderless** | 🟢 An underused channel: institutions that publish and ask nothing back |
+| **Teacher or small team, single-purpose tool** | the German axis *(7 rows)* | 🟢 `MIT` · 🔴 `AGPL`/`CC-BY-SA` on the most capable | 🟡 **Permissive at the small end, copyleft at the useful end** |
+| **Finished platform, any origin** | `openSIS` · `chalk` · `koakademy` | 🔴 **copyleft, near-universally** | 🔴 **Deploy and configure; do not embed** |
+
+🟢 **One line for an engagement lead: the closer a row gets to being a product, the less likely you may build on it — and the integration layer beneath every product is permissive.**
+
+### 🔴 The regulatory clock, by region, from this pass's legs
+
+| region | the date that matters | status |
+|---|---|---|
+| **EMEA** | 🔴 **`2 December 2027`** — high-risk education obligations under the EU AI Act, **deferred from `2 August 2026`** | 🟡 consultancy sources **agree** on the deferral, **disagree** on every secondary date. Digital Omnibus on AI given final Council approval **`29 June 2026`**, awaiting Official Journal |
+| **EMEA** | 🟢 **already in force:** transparency duties since `2 Aug 2026`; **emotion recognition PROHIBITED in education since `2 Feb 2025`** | 🟢 the prohibition is the hard one and it is live now |
+| **EMEA** | schools are **deployers**; public schools owe a **Fundamental Rights Impact Assessment** | 🟢 a deliverable a studio can actually sell |
+| **North America** | state action outruns federal: Idaho `SB 1227`, Maryland `SB 720` *(an AI coordinator per district)*, Ohio `HB 96`, Georgia `SB 179`; NYC traffic-light guidance Mar 2026 with a playbook due Jun 2026 | 🟡 bill numbers checkable; **status not verified here**. 🔴 **Canada and Mexico were not covered by the leg at all** |
+| **APAC** | India: **AI + Computational Thinking mandatory from Class 3 in AY 2026-27**, IIT Madras leading curriculum, NCERT/CBSE coordination committee, `₹500 crore` CoE | 🔴 secondary citation of CBSE circular `Acad-15/2026`; **primary document still not reached** |
+| **APAC** | 🔴 **Korea is the cautionary case:** mandatory AI textbooks planned for 2025 reached **under 30% adoption**, and in **Aug 2026 the National Assembly stripped their official status**; a `$960M` talent-centre plan replaced them | 🟢 **the single most useful fact in this pass for a buyer conversation** |
+| **APAC** | China: Beijing `8` hours/year minimum from Sep 2025, national rollout intended. Japan: pilots; digital textbooks official *"as early as 2030"* | 🔴 sources conflict on China's national scope; `moe.gov.cn` not reached |
+| **LATAM** | Brazil `PL 2.338/2023` *(risk-based)* in the Chamber of Deputies · Chile's executive bill merged with a parliamentary initiative, first constitutional stage · Mexico 2024 Senate bill · Argentina **no statute**, Order `149/2024` names education | 🟡 all moving; none settled |
+| **LATAM** | 🔴 **CENIA: `13` of `19` LAC countries do not teach AI early in schools** | 🟢 the gap *is* the market |
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **The opening is the system of record, and it is permissive.** `PowerSchool` serves *"over 5,300 districts and 17 million students"* and its entire client layer is `MIT`: Node, PHP, Python and an **ORM path straight to the database** *(`powerschool-alchemy`)*. 🟢 **A studio can build district-facing AI on the official API from day one** — no scraping, no reverse engineering, which is what the student-built rows on these shelves all do.
+
+🔵 **The channel nobody here has worked: districts that publish.** `IronCountySchoolDistrict` *(Utah)* ships `MIT` plugin scaffolding and ORM tooling; `keithmedlin/CleverNC` automates rostering for **North Carolina** districts. 🟢 **These are reference customers with public code** — the shortest path from a cold approach to a credible one.
+
+🟡 **The compliance deliverable is concrete and dated:** Maryland `SB 720` requires an **AI coordinator per district**; Ohio `HB 96` a board-approved AI policy per district; Georgia and Idaho statewide frameworks. 🟢 **"Stand up your district AI policy, coordinator workflow and disclosure register"** is a sellable engagement in at least four states this year. 🔴 **Canada and Mexico are an unmeasured gap inside a measured region** — this pass's NA leg covered neither, and that is stated rather than papered over.
+
+🔴 **The honest constraint:** the complete K-12 applications are copyleft — `chalk` *(`AGPL-3.0`)*, `tidal-ptc` *(`GPL-3.0`)*, `CleverNC` *(`GPL-3.0`)*. 🟢 Deploy and configure them; build new value in the `MIT` layer beside them.
+
+### 🟢 EMEA
+
+🟢 **The architecture the market already expects is the one you should quote: local-first, no accounts, no cloud.** Seven of eight EMEA rows ship exactly that, in their own words — *"ohne Cloud, ohne Konten"*, *"Alles im Browser, ohne Anmeldung"*, *"no sign-in, no stored results"*, *"lokal laufende"*. 🔵 **This is not a preference, it is the AI Act and German school data protection expressed as engineering**, and a cloud-first proposal reads as naïve here.
+
+🟢 **The dated compliance work is real and the clock is known:** high-risk education obligations land **`2 Dec 2027`**; transparency duties are **already live**; **emotion recognition in education is already prohibited**; and public schools owe a **Fundamental Rights Impact Assessment**. 🟢 **FRIA-as-a-deliverable, AI inventory, and disclosure wiring are billable now, against a deadline the client cannot move.** 🟡 Nearly **two-thirds of EU education systems** already have an AI strategy *(two Commission reports, 22 Sep 2026)* — so the buyer is past "whether".
+
+🔵 **The integration surface is the national incumbent, not a global LMS.** `p243` found the DACH timetable estate *(WebUntis, Schulmanager, IServ, Skola24)*; `p244` adds the **assessment and administration** side — `Erwartungshorizont-Studio` *(exam rubrics)*, `Notenberechner` *(grading keys)*, `capy-note` *(marking scanned work)*, `pynrw` *(a named Land's Abitur)*. 🟢 **A German engagement integrates with a Land's grading instruments; it does not replace them.**
+
+🔴 **Two EMEA rows a client would want are blocked on licence, and one on a single commit:** `Erwartungshorizont-Studio` and `sitzplan-studio` are `AGPL-3.0`; `mgkurz/ais-chat-builder` — **a Claude Skill for teachers** — is `CC-BY-SA-4.0`; and [`rine77/meineschule-digital`](https://github.com/rine77/meineschule-digital) is *exactly* what an EMEA pilot wants and ships a **`0`-byte `LICENSE`**. 🟢 **That last one is an upstream ask worth making: the maintainer already believes they granted `MIT`.**
+
+### 🟢 APAC
+
+🟢 **Offline-first is the product requirement, and the reason is cost and connectivity rather than law** — which makes it the same build as EMEA's and a completely different sales conversation. Both APAC rows run local models: `appbuildersph/modes` puts **Gemma 4 E2B on a teacher's laptop**; `BootlegYouki/L.A.R.A` runs a **Socratic tutor over classroom LAN**.
+
+🟢 **Multilingual is not a feature here, it is the baseline.** `modes` ships **English, Tagalog and Taglish** — the code-switched register pupils actually speak. 🔵 A studio that treats Taglish/Singlish/Hinglish as first-class has a differentiator that cloud-first vendors structurally lack.
+
+🟢 **The Philippines is the most legible public-sector entry on these shelves**, because DepEd's artefacts are public and specific: `SF2` attendance, `SF9`/`SF10` report forms, **MATATAG** curriculum, the **BEIS school masterlist**, and procurement down to `APP-CSE`, `RIS` *(Appendix 63)* and `RSMI`. 🟢 **Naming those forms correctly is most of the credibility.**
+
+🟡 **India is the largest mandate and the least verified:** AI + Computational Thinking **mandatory from Class 3 in AY 2026-27**, IIT Madras leading curriculum, `₹500 crore` for a Centre of Excellence — and guidance that **educators retain final authority over grading**, which is a design constraint, not a footnote. 🔴 The source is a secondary citation of CBSE circular `Acad-15/2026`; **`ACTION WH` stands open for a third pass.** 🔵 `deedy/cbse_schools_data` *(52★, `CC-BY-SA-4.0`)* gives all **`20 367`** CBSE schools as data for market sizing, usable with attribution and ShareAlike.
+
+🔴 **And the warning this region supplies for the whole KB: Korea's mandatory AI textbooks reached under `30%` adoption and had their official status stripped by the National Assembly in Aug 2026.** 🟢 **A mandate is not adoption.** Quote it when a client's plan depends on one.
+
+🔴 **APAC's best platform is unusable:** `koakademy` *(`AGPL-3.0`)* is the best-documented Philippine school platform in existence, and `sas-fossdev/saspes` *(`AGPL-3.0`)* is Singapore American School's own PowerSchool extension.
+
+### 🟢 LATAM
+
+🟢 **Brazil has something no other region in this KB has: its national curriculum as clean, permissive, provenance-tracked data.** [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) — **`MIT`**, `21`★ — ships the **BNCC**'s `1 721` learning objectives in JSON, SQLite and CSV with **provenance per record** and a reproducible extraction pipeline. 🟢 **Curriculum alignment stops being a consulting deliverable and becomes a join**, and the holder *"Profy Tecnologias Educacionais **Ltda**"* is a Brazilian company, so there is a local party to talk to.
+
+🔴 **Read the licence architecture before you depend on it.** The same owner inverted it: the **dataset** is `MIT`, the **npm/PyPI packages and MCP server** are `CC-BY-4.0`. 🟢 **Take the data, write the client.** 🔵 And `bncc-benchmark` *(`CC-BY-4.0`)* measures **LLM hallucination against the BNCC** — `15 300` answers from `17` models with a held-out set kept private against contamination. 🟢 **That is a curriculum-grounded eval harness, and this KB has repeatedly declared it had none.**
+
+🟢 **The municipal layer is the buyer.** `shishiv/EDUCA` *(`MIT`)* exists for a *secretaria de educação* and names **LGPD** in its own topics; its tagline is the business case in one line — *"A planilha da secretaria de educação não aguenta mais."* 🟢 **Municipal education secretariats running on spreadsheets, with a data-protection statute to satisfy, is a repeatable engagement shape across Brazil's thousands of municipalities.**
+
+🟢 **Sovereignty is a live buying criterion:** **Latam-GPT**, led by Chile's **CENIA** with 30+ institutions across 8 countries, is already being piloted by municipalities **against school dropout** — which is precisely the use case `jhondados`'s Brazilian ML demos model *(`edu-evasao-escolar`, `edu-analise-frequencia`)*. 🔵 **And the gap is the market: CENIA finds `13` of `19` LAC countries do not teach AI early in schools.**
+
+🟡 **Regulation is unsettled everywhere in the region** — Brazil's `PL 2.338/2023` still in the Chamber, Chile's merged bill at first stage, Mexico's Senate bill, Argentina with no statute. 🟢 **Design to the strictest plausible rule and the region's variance stops mattering**; LGPD is the right target.
+
+### 🔵 Global / unplaced — and why `27` rows sit here
+
+🟢 **`27` of `42` rows are Global, and every one carries the reason it is not placed** — because an unstated region is information and a guessed one is damage.
+
+🔵 **The structural cause, confirmed on a new axis.** `p243` wrote that US rows under-count because *"a US row names a vendor product rather than a jurisdiction, and a vendor product places the product, not the row."* 🟢 **`p244` ran `topic:powerschool`, an axis the rule was not derived from, and reproduced it exactly: `6` permissive rows, `4` of them Global under that rule.** 🟢 **A rule that holds on an axis it did not come from is a rule worth keeping.**
+
+🟡 **One row shows where the boundary is.** [`iblai/recruit`](https://github.com/iblai/recruit)'s holder reads *"Class Generation, **LLC** dba ibl.ai"* — and `LLC` is a US-state-chartered form. 🔴 **Recorded as a corporate-form inference and NOT promoted to a placement**, because the row states no jurisdiction. 🔵 It is also the **only** payload of `35` in that estate naming the legal entity, so the estate's one jurisdiction signal was sitting in the `26` repositories nobody had read.
+
+🟡 **And one row where an inference was available and deliberately refused:** `bigdawgsfootball/HomeschoolGradesAndTranscripts` generates *"high school transcripts"* for homeschoolers, which is a US artefact — and the row names no country. 🟢 **Recorded as absent rather than inferred**, so a later pass can find real evidence instead of inheriting a guess.
+
 ## Pass 243 — 2026-10-16 — **TWO CONTRADICTIONS `p242` LEFT OPEN ARE CLOSED** *(Mexico, Colorado)*, THE EMEA TIMELINE NOW HAS A **CITATION AND TWO DATES p242 DID NOT HAVE**, AND `ACTION WB` CLOSES ON A FINDING NOBODY WENT LOOKING FOR: **THE WORLD'S TWO LARGEST SCHOOL SYSTEMS HAVE FENCED OFF AI GRADING**
 
 🔵 **Evidence:** [`p243-websearch`](../evidence/p243-websearch.2026-10-16-p243.tsv) *(9 legs, each with what was verified first-hand and what was not)* · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv) · [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv)

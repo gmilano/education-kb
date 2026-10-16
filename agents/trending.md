@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — THE AXIS THAT PRODUCED BOTH **APAC** ROWS WAS REPORTED **EMPTY** BY A MALFORMED QUERY, AND THE WEEK'S MOVEMENT IS THAT **OFFLINE-FIRST** IS NOW THE DEFAULT ARCHITECTURE IN TWO REGIONS FOR OPPOSITE REASONS
+
+⏱️ **APPEND-ONLY SHELF.** This section is added above pass `243`'s; nothing below it is rewritten.
+
+🔵 **`124` slugs probed, `42` permissive rows published, `19` withheld with the payload read.** Full tables: [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) · [`p244-withheld`](../evidence/p244-withheld.2026-10-16-p244.tsv).
+
+### 🟢 Newest rows by creation date — what actually appeared this week
+
+| created | Repo | 🟢 Grant | ★ | region | why it is the week's signal |
+|---|---|---|---|---|---|
+| **2026-10-16** | [`mr89adloff/taschenrechner-fx87de`](https://github.com/mr89adloff/taschenrechner-fx87de) | 🟢 `MIT` *(`1 071` B)* | 0 | EMEA | Created the **day of this pass**. A web rebuild of the Casio fx-87DE PLUS — *the calculator German pupils are examined with*. 🔵 Carries its own trademark discipline: *"Kein Casio-Produkt, keine Casio-Firmware"* |
+| **2026-10-09** | [`appbuildersph/modes`](https://github.com/appbuildersph/modes) | 🟢 `MIT` *(`1 139` B)* | 0 | APAC | **SIBOL** — Gemma 4 E2B maths tutor running **on a laptop, not the cloud**, in English, Tagalog and **Taglish**, for DepEd MATATAG Grades 4-6 |
+| **2026-10-04** | [`Obi-Wahn/zeitstrahl-werkstatt`](https://github.com/Obi-Wahn/zeitstrahl-werkstatt) | 🔴 **NO PAYLOAD** | 0 | — | Interactive history timelines: teacher projects the board, pupil groups build their own by QR on iPads. *"ohne Cloud, ohne Konten, ohne weitere Pakete."* 🔴 **Ungranted, so unusable** |
+| **2026-09-20** | [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 `MIT` *(`1 113` B)* | 1 | APAC | **Offline LAN classroom with a hybrid Socratic SLM tutor**, Tauri v2, DepEd Grades 1-6 |
+| **2026-10-13** | [`iblai/recruit`](https://github.com/iblai/recruit) | 🟢 `MIT` *(`1 089` B)* | 0 | Global | Three days old, and **the only payload of `35` in its estate that names the legal entity** — `Class Generation, LLC dba ibl.ai` |
+| **2026-08-30** | [`HAZA-AIOS/HAZA-SMS`](https://github.com/HAZA-AIOS/HAZA-SMS) | 🔴 **`404` at a declared path** | 1 | — | 🔴 **The ONLY repository on GitHub carrying `topic:school-fees`** — and its README names a `LICENSE` that is not there |
+
+### 🟢 The week's structural movement: **offline-first, in two regions, for opposite reasons**
+
+🔵 **This is measured from the rows, not asserted.** Seven of the eight EMEA rows and both APAC rows ship an architecture with **no cloud and no accounts**, and they say so in their own words:
+
+| region | row | its own words | the reason the region gives |
+|---|---|---|---|
+| EMEA | `ai_flashcards_for_school` | *"no sign-in, no stored results"* | 🟢 **data protection** — a German school cannot hold pupil records in a vendor's cloud casually |
+| EMEA | `Notenberechner` | *"Alles im Browser, ohne Anmeldung"* | as above |
+| EMEA | `zeitstrahl-werkstatt` | *"ohne Cloud, ohne Konten"* | as above |
+| EMEA | `Schul-System` | *"lokal laufende Schulverwaltungssoftware"* | as above |
+| APAC | `appbuildersph/modes` | *"Gemma 4 E2B runs on a laptop, **not the cloud**"* | 🟢 **connectivity and cost** |
+| APAC | `BootlegYouki/L.A.R.A` | *"**Offline** LAN-Based Classroom"* | as above |
+| APAC | `JuLiusGI/Elementary-Learning-Hub` | *"**Offline-capable** … PWA sync"* | as above |
+
+🟢 **Two regions converge on the same architecture from opposite constraints, which means a studio that builds the EMEA version can ship the APAC one** — the edge-inference work, the no-account session model and the local-store-then-sync path are identical. 🔵 The difference is only in what you say to the buyer. 🟡 **And it is the inverse of the Global/vendor-estate rows, which are cloud-first SSO platforms throughout.**
+
+### 🔴 The trend this shelf cannot show you, and why
+
+🔴 **The WebSearch leg produced `0` rows for the sixth pass in seven.** Six searches of `2026` trending/agent listings returned SEO roundups of general agent frameworks — `aider`, `CrewAI`, `microsoft/ai-agents-for-beginners` — **none of them education-sector systems**, and with star counts that conflict between sources. 🔵 Recorded in [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv) **because an unrun leg and a leg that ran and paid nothing are different facts**, and this KB has conflated them before.
+
+🔴 **GitHub Trending itself went unqueried for a ninth pass** — no live snapshot is reachable from this session; third-party mirrors only. 🔵 `p241`'s `ACTION VV` asked that the **channel** be recorded beside the sort key for exactly this reason, and [`p244-queries`](../evidence/p244-queries.2026-10-16-p244.tsv) now does: every query in this pass carries its channel, its sort key, its `total_count`, how many rows were **read**, and a **shape verdict**.
+
+🔴 **And the shape verdict is the finding.** Two of this pass's queries returned `total_count: 0`:
+
+```
+topic:deped OR topic:nigeria school management -> 0        topic:deped -> 10
+topic:cbse OR topic:ncert school AI            -> 0        topic:cbse  -> 124
+```
+
+🔴 **GitHub's repository search does not take `OR` between qualifiers and returns zero rather than an error — the same answer an exhausted axis gives.** `134` rows were invisible, and **`topic:deped` is the axis both APAC rows above came from.** 🟢 Gated now by `p244.zero_result_is_absence()`: a `0` cannot be published as *"there is nothing on this axis"* until the shape is checked.
+
+### 🟡 Movement on rows this shelf already carries
+
+- 🟢 **[`jangtrinh/design-os-pedagogy`](https://github.com/jangtrinh/design-os-pedagogy) became publishable.** `p157` recorded *"No licence file, no prose claim. True unknown"* on `2026-10-12`; it now carries a complete `MIT` at `1 079` B. 🔵 **One row in `33` changed state in four days** — see `ACTION WJ`.
+- 🟢 **[`archboard/tidal-ptc`](https://github.com/archboard/tidal-ptc)** pushed on the day of this pass. Still `GPL-3.0`; still withheld.
+- 🟢 **[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) and [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)** both updated the day before this pass. 🔴 Re-read first-hand, and the **licence inversion stands**: the dataset is `MIT`, the npm/PyPI packages are `CC-BY-4.0`.
+- 🔴 **`iblai/claws` is not what pass `243` published it as.** It is a pointer; the seven sector configurations are **separate repositories**, two of them education, and all seven were in the `15` repos `p243` never listed.
+
 ## Pass 243 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT STORY IS **WHERE THE AGENT RUNS**: IN EMEA IT IS NOT IN THE SCHOOL AT ALL, IT IS IN **HOME ASSISTANT**, ON THE PARENT'S HARDWARE
 
 ⏱️ **TWELFTH pass of `2026-10-16`.** History below this section is kept, as `p232`–`p242` kept theirs.

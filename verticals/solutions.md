@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — THE **SYSTEM OF RECORD** AXIS SPLITS CLEANLY BY ARTEFACT TYPE: THE **CLIENT LIBRARIES** ARE `MIT` AND THE **FINISHED PLATFORMS** ARE COPYLEFT, WITH THE EXCEPTION NAMED
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.**
+
+🔵 Evidence: [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) · [`p244-withheld`](../evidence/p244-withheld.2026-10-16-p244.tsv) · [`p244-rungs`](../evidence/p244-rungs.2026-10-16-p244.tsv).
+
+### 🔴 The split, measured on `topic:powerschool` — a wholly new axis for these shelves
+
+| artefact type | rows | grant | what it means for a studio |
+|---|---|---|---|
+| 🟢 **API client libraries** | `4` | **all `MIT`** | 🟢 **Integrate freely.** `aydenp/PowerSchool-API` *(34★)*, `grantholle/powerschool-api` *(20★)*, `dougpenny/PyPowerSchool` *(16★)*, `louisqli/PowerSchool-What-if-Grades` *(6★)* |
+| 🟢 **District-published tooling** | `2` | **both `MIT`, holderless** | 🟢 **The stated exception.** `IronCountySchoolDistrict/ps-plugin-boilerplate` + `powerschool-alchemy` — an institution choosing permissive |
+| 🔴 **Finished platforms and applications** | `3` | **all copyleft** | 🔴 **Deploy, don't embed.** See below |
+
+🟢 **The tendency is clean enough to plan around and the exception is real enough to state: a US district publishing its own tooling chose `MIT`, while every complete application on the axis chose copyleft.**
+
+### 🔴 The platforms worth knowing and withholding
+
+| Platform | Repo | 🔴 Grant *(bytes)* | ★ | ref · head | What it actually is |
+|---|---|---|---|---|---|
+| **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL-2.0`** *(`17 286` B)* | **345** | `master` · `5d546f20117e` | 🟢 **The highest-star open SIS in existence.** Attendance, gradebook, report cards, transcripts, parent/teacher/student portals, EMIS, multi-institution in one install. PHP + MySQL. CARRIED, re-read first-hand — and its grant lives at **`docs/License.txt`** with a BOM, reachable only through the README-link rung |
+| **chalk** | [`usechalk/chalk`](https://github.com/usechalk/chalk) | 🔴 **`AGPL-3.0`** *(`34 523` B)* | 2 | `main` · `442c750ebddd` | 🔵 **The K-12 IT stack in ONE Rust binary:** mixed-fleet device tracking *(ChromeOS, Intune, Jamf)*, help desk, 1:1 lifecycle, rostering, **OneRoster**, SSO, Google/AD/Entra provisioning. Self-host free. 🔴 `AGPL` makes the hosted variant the vendor's business, by design |
+| **KoAkademy** | [`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) | 🔴 **`AGPL-3.0`** *(`34 523` B)* | 7 | `master` · `99a49957d200` | 🟢 **The best-documented APAC platform on these shelves.** Laravel 12 + Inertia + React + Filament; enrolment, billing, scheduling, registrar, PWA. Its README states the placement twice: *"here in the Philippines"*, *"shaped by the day-to-day workflow of real Philippine schools"* |
+| **ifitwala_ed** | [`fderyckel/ifitwala_ed`](https://github.com/fderyckel/ifitwala_ed) | 🔴 **NO PAYLOAD** | 4 | `main` | A full Frappe/Python education ERP — admission, attendance, gradebook, scheduling, HRMS, health, CRM, portal. 🔴 **Ships no licence at all, so none of it is usable** despite being the broadest feature set on the `enrollment` axis |
+| **tidal-ptc** | [`archboard/tidal-ptc`](https://github.com/archboard/tidal-ptc) | 🔴 **`GPL-3.0`** *(`34 931` B)* | 6 | `main` · `dd0182762a8c` | Parent-teacher conference scheduling over PowerSchool. Pushed the day of this pass |
+| **CleverNC** | [`keithmedlin/CleverNC`](https://github.com/keithmedlin/CleverNC) | 🔴 **`GPL-3.0`** *(`35 149` B)* | 3 | `master` · `637f79526196` | Clever rostering automation for **North Carolina school districts** — one of only three rows in the pass naming a US jurisdiction |
+| **Erwartungshorizont-Studio** | [`simonhartmannedu/Erwartungshorizont-Studio`](https://github.com/simonhartmannedu/Erwartungshorizont-Studio) | 🔴 **`AGPL-3.0`** *(`34 020` B)* | 1 | `main` · `5148324d0ca8` | German exam-rubric generation and Klausur marking — the German assessment workflow, end to end |
+| **sitzplan-studio** | [`arn0ld87/sitzplan-studio`](https://github.com/arn0ld87/sitzplan-studio) | 🔴 **`AGPL-3.0`** *(`34 523` B)* | 0 | `main` · `04c1341213fc` | Seating plans: classes, scale room drawing, seating rules, print. 🔵 Its own topics declare `agpl` — **a row that labels its own licence in metadata, which is rare and useful** |
+| **HAZA-SMS** | [`HAZA-AIOS/HAZA-SMS`](https://github.com/HAZA-AIOS/HAZA-SMS) | 🔴 **`404` at the declared path** | 1 | `main` | Multi-tenant school management on **Cloudflare Workers + D1**. 🔴 **The only repo on GitHub with `topic:school-fees`, and its README names a `LICENSE` that is not there** |
+
+### 🟢 The verticals that ARE customisable — permissive platforms from this pass
+
+| Platform | Repo | 🟢 Grant *(bytes)* | ★ | region | What you can build on it |
+|---|---|---|---|---|---|
+| **Schul-System** | [`Lukas1120987/Schul-System`](https://github.com/Lukas1120987/Schul-System) | 🟡 **`MIT`** *(`1 324` B)* | **10** | EMEA | Modular German school administration in Python: login, Stundenplan, Nachrichten, cloud, e-learning, calendar. 🔴 **Read the `/icons` carve-out before shipping assets — it names a holder that cannot own them** |
+| **EDUCA** | [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) | 🟢 **`MIT`** *(`1 067` B)* | 1 | LATAM | Municipal school management for a Brazilian *secretaria de educação*: Next.js + Supabase + shadcn, **LGPD-shaped**. 🔴 Default branch is **`dev`** |
+| **tpt-school** | [`tpt-solutions/tpt-school`](https://github.com/tpt-solutions/tpt-school) | 🔵 CARRIED *(p243)* | 3 | Global | The most complete permissive school platform these shelves carry — enrolment through finance and report cards, Docker + Electron |
+| **academia-nexus** | [`kishorep26/academia-nexus`](https://github.com/kishorep26/academia-nexus) | 🟢 **`MIT`** *(`1 074` B)* | 0 | Global | Training-institute management in Java/Spring Boot: enrolment, courses, faculty, admissions. Dockerised |
+| **L.A.R.A** | [`BootlegYouki/L.A.R.A`](https://github.com/BootlegYouki/L.A.R.A) | 🟢 **`MIT`** *(`1 113` B)* | 1 | APAC | 🔵 **An offline LAN classroom as a deployable vertical** — Socratic SLM tutor + paperless quizzes, Tauri v2, Material Design 3, DepEd Grades 1-6 |
+
+### 🟡 Standing platform facts, re-confirmed rather than re-asserted
+
+🟢 **OpenEduCat remains `LGPL-3.0`, confirmed from a third channel this pass.** A WebSearch leg looking specifically for an `MIT`/`Apache` education ERP surfaced OpenEduCat and **its own site states LGPL v3** — matching what `lib/license_family.sh` has classified from the payload since pass `53`. 🔵 **This is a NEGATIVE being reconfirmed, and it is worth the line:** the question *"is there a permissive education ERP?"* now has three independent channels answering **no**, and the search that was run to find one is recorded in [`p244-websearch`](../evidence/p244-websearch.2026-10-16-p244.tsv).
+
+🟡 **Kuali surfaced in the same leg without a licence stated** — a non-profit consortium producing higher-ed ERP, SIS and research administration. 🔴 **Not probed this pass; registered as the next vertical to read first-hand.**
+
+### 🔵 The government-procurement corner, for completeness
+
+🔴 Both **withheld, non-commercial, not OSI-approved** *(`782` B each)* — and worth knowing because they are the only rows on these shelves modelling education-sector **procurement**: [`Oshinobi-obi/AMS_Shopee`](https://github.com/Oshinobi-obi/AMS_Shopee) *(DepEd NCR supply requisition: APP-CSE catalogue, RIS Appendix 63, Blazor .NET 10 + MySQL)* and [`Oshinobi-obi/AMS_Storage_and_Report_System`](https://github.com/Oshinobi-obi/AMS_Storage_and_Report_System) *(the admin half: approve and issue RIS, stock cards, RSMI export)*. 🟢 **The form numbers are the value here** — `SF2`, `SF9`, `SF10`, `APP-CSE`, `RIS`, `RSMI` are the artefacts a Philippine public-education engagement is actually measured on.
+
 ## Pass 243 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A **THIRD** PASS, AND THE PASS'S VERTICAL FINDING IS A **SECOND PLATFORM LAYER THESE SHELVES HAD NEVER CENSUSED**: THE NATIONAL INCUMBENT SCHOOL PORTAL, WHICH IS NOT OPEN SOURCE AND WHICH IS WHAT EMEA ACTUALLY INTEGRATES WITH
 
 🔵 **Evidence:** [`p243-verified-rows`](../evidence/p243-verified-rows.2026-10-16-p243.tsv) · [`p243-withheld`](../evidence/p243-withheld.2026-10-16-p243.tsv) · [`p243-queries`](../evidence/p243-queries.2026-10-16-p243.tsv) · [`p243-websearch`](../evidence/p243-websearch.2026-10-16-p243.tsv) · [`p243-region-saturation`](../evidence/p243-region-saturation.2026-10-16-p243.tsv)

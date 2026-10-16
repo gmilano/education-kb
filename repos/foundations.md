@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 244 — 2026-10-16 — THE **PowerSchool** CLIENT LAYER IS THIS KB'S FIRST FOUNDATION FOR THE **US K-12 SYSTEM OF RECORD**, AND THE PASS'S WARNING IS THAT A VENDOR ESTATE'S APPS CAN BE `MIT` WHILE THE **SDK UNDERNEATH THEM IS UNGRANTED**
+
+⏱️ **THIRTEENTH pass of `2026-10-16`.**
+
+🟢 **`6` new foundational rows, every grant read first-hand**, plus one carried platform re-read and one estate correction. 🔵 Evidence: [`p244-verified-rows`](../evidence/p244-verified-rows.2026-10-16-p244.tsv) · [`p244-estate-census`](../evidence/p244-estate-census.2026-10-16-p244.tsv) · [`p244-rungs`](../evidence/p244-rungs.2026-10-16-p244.tsv).
+
+### 🟢 The PowerSchool client layer — build on these, not on scraping
+
+🔵 **Why this matters for a North America engagement:** `PowerSchool` is the dominant US/Canada K-12 SIS (its own third-party API profile cites *"over 5,300 districts and 17 million students"*). 🟢 **Every client library below is `MIT` and reads the OFFICIAL API** — so a studio never needs to scrape a gradebook, which is the failure mode half the student-built rows on these shelves share.
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Language | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`aydenp/PowerSchool-API`](https://github.com/aydenp/PowerSchool-API) | 🟢 **`MIT`** *(`1 072` B)* | **34** | `master` · `a23ec090ea44` | Node.js | 🟢 **The highest-star PowerSchool client in existence.** CARRIED, re-read first-hand at this head |
+| [`grantholle/powerschool-api`](https://github.com/grantholle/powerschool-api) | 🟢 **`MIT`** *(`1 101` B)* | **20** | `main` · `f54e292f921e` | PHP | The Laravel-ecosystem client. 🟡 Its holder line carries an **email address** — note it before vendoring the file |
+| [`dougpenny/PyPowerSchool`](https://github.com/dougpenny/PyPowerSchool) | 🟢 **`MIT`** *(`1 082` B)* | **16** | `master` · `201c02c36ef2` | Python *(httpx)* | The Python client. 🔵 Holder uses the **©** symbol rather than `(c)` — a holder form every matcher here must survive |
+| [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy) | 🟡 **`MIT`, HOLDERLESS** *(`1 057` B)* | 3 | `master` · `9014b324fe37` | Python *(SQLAlchemy)* | 🔵 **Talks to the PowerSchool DATABASE through an ORM, not the REST API** — the other half of the integration surface. Published by a **US school district** |
+| [`IronCountySchoolDistrict/ps-plugin-boilerplate`](https://github.com/IronCountySchoolDistrict/ps-plugin-boilerplate) | 🟡 **`MIT`, HOLDERLESS** *(`1 057` B)* | 5 | `master` · `555846846a47` | JS *(Babel/Gulp/Webpack)* | 🟢 **The plugin scaffold** — the supported extension point, from a district that ships its own |
+| [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) · [`PSCustomQueriesPlugin`](https://github.com/dougpenny/PSCustomQueriesPlugin) | 🔵 same owner, **unread this pass** | 6 · 3 | — | Swift | 🟡 Registered under `ACTION WK`: `31` of the axis's `50` rows are unread |
+
+🟡 **Both holderless payloads are the `p237` shape** — a canonical `MIT` body with **no copyright line at all**. The grant stands; the holder is unnameable from the payload, and for these two the owner *is* identifiable from the org — a US school district — which is also what placed them in **North America**.
+
+### 🟢 Brazil's national curriculum as a queryable foundation
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why it is a foundation |
+|---|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🟢 **`MIT`** *(`1 092` B)* | **21** | `main` · `9c268978efa2` | 🟢 **The BNCC — Brazil's national common curriculum — as verified open data.** `1 721` learning objectives in **JSON, SQLite and CSV**, with **provenance per record** and a reproducible extraction pipeline. CARRIED, re-read first-hand |
+
+🔴 **And the warning that travels with it.** The same owner's **code** is not `MIT`:
+
+| repo | what it is | grant | the problem |
+|---|---|---|---|
+| `bncc-dados` | the **dataset** | 🟢 `MIT` *(`1 092` B)* | 🟡 a *software* licence on data — generous, slightly odd |
+| [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | **the npm + PyPI packages and MCP server** | 🔴 `CC-BY-4.0` *(`1 299` B)* | 🔴 **a content licence on software.** Creative Commons advises against this for code; it addresses neither patents nor warranty |
+| [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | a benchmark **harness and data** | 🔴 `CC-BY-4.0` *(`911` B)* | `15 300` answers from `17` models, held-out set private against contamination |
+
+🟢 **So the engagement answer is specific: take the DATA from `bncc-dados` under `MIT`, and write your own client rather than `pip install`ing `bncc-pacotes`.** 🔵 The dataset is the asset; the client is forty lines.
+
+### 🔴 The estate lesson: read a dependency graph to the bottom before trusting its licence
+
+🟢 **`ACTION WG` DISCHARGED: `org:iblai` is `35` repositories — a complete census, `total_count: 35` in one page.** `p243` listed `20` and read `9`; all `26` unread are now probed. 🔵 [`p244-estate-census`](../evidence/p244-estate-census.2026-10-16-p244.tsv).
+
+| what `p243`'s partial read supported | what the complete census measures |
+|---|---|
+| *"`9` higher-education agent configurations, `MIT`"* | 🔴 **`25` of `35` grant; `10` ship no payload at all** |
+| `claws` is *"the artefact the claim pointed at"* | 🔴 **`claws` is a POINTER.** The configurations are **`7` separate repos**, two of them education, and `p243` listed none |
+| the estate is uniformly `MIT` | 🔴 **the ungranted `10` include [`iblai/iblai-python-sdk`](https://github.com/iblai/iblai-python-sdk), [`iblai/docs`](https://github.com/iblai/docs) *(9★)* and [`iblai/vibe-agent`](https://github.com/iblai/vibe-agent) *(9★)*** |
+
+🔴 **The applications are `MIT` and a client SDK underneath them is ungranted.** 🟢 **That is the licence question an engagement actually hits** — you adopt the app, you import the SDK, and the SDK is the one with no grant — **and it is invisible until the estate is read past its first page.**
+
+🔴 **And one estate payload is not the estate's to give:** [`iblai/botbuilder-python`](https://github.com/iblai/botbuilder-python) carries `MIT` at `1 162` B whose holder reads **`Copyright (c) Microsoft Corporation. All rights reserved.`** — Microsoft's Bot Framework — with the GitHub API reporting **`fork: false`**. 🟢 Withheld and attributed upstream.
+
+### 🟢 New foundations worth building on, outside the vendor stacks
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why it is a foundation |
+|---|---|---|---|---|
+| [`iblai/standard`](https://github.com/iblai/standard) | 🟢 **`MIT`** *(`1 063` B)* | **11** | `main` · `047e867e7a2d` | 🔵 **The `.iblai` agent file format — a portable Markdown spec for DEFINING an agent**, with a CLI wizard and an example library. A format, not a product: the thing a studio can adopt without adopting the platform |
+| [`iblai/claw-router`](https://github.com/iblai/claw-router) | 🟢 **`MIT`** *(`1 063` B)* | **44** | `main` · `319b951e6dd4` | 🟢 **Cost control as a dependency:** routes every request to the cheapest model that can handle it. The estate's highest-star row after `os`, and sector-agnostic |
+| [`straussbastian/ai_flashcards_for_school`](https://github.com/straussbastian/ai_flashcards_for_school) | 🟢 **`MIT`** *(`1 072` B)* | 1 | `main` · `4d3e8c814591` | 🔵 **The smallest complete reference for an MCP-authored classroom artefact**: teacher generates through an agent, class consumes by **three-word link**, *no sign-in and no stored results*. FastAPI + Postgres + OAuth2 |
+| [`Mercatura-Forum/thebes-example-university`](https://github.com/Mercatura-Forum/thebes-example-university) | 🟢 **`Apache-2.0`** *(`11 353` B)* | 0 | `main` · `3292c434b142` | 🟡 The pass's only on-chain registrar reference: course catalogue, enrolment and registrar view, React + Vite over **Motoko**. Recorded as a reference implementation, not a recommendation |
+
+### 🔵 Carried platform re-read, and the rung that found it
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — **`345`★, the highest-star open SIS in existence** — `master` · `5d546f20117e`. 🔴 **`GPL-2.0`, `17 286` B, withheld**, and re-read first-hand this pass to confirm the thing that makes it a standing lesson: **its payload is at `docs/License.txt`, with a BOM.**
+
+```
+LICENSE  404    LICENSE.md  404    LICENSE.txt  404    LICENCE  404    COPYING  404
+README-LINK -> docs/License.txt   200   17286 B   GPL-2.0
+```
+
+🟢 **No filename ladder on these shelves would have found it; the README's own licence link did, in one request** — which is why `lib/probe_payload.sh` tries the README link *before* the long ladder, and why that ordering is the right one.
+
+🔴 **The rung the ladder still lacks is CASE.** [`SomeAspy/ChromeBookEnroller`](https://github.com/SomeAspy/ChromeBookEnroller) answers `404` at `LICENSE`, `LICENSE.txt` **and** `License.txt`, and `200` at **`license.txt`** — `1 075` B of real `MIT`. 🔵 `PROBE_NAMES` is five names and every one is capital-initial, against a case-sensitive host. 🟡 **`ACTION WL`.** Full accounting over `124` probed slugs: [`p244-rungs`](../evidence/p244-rungs.2026-10-16-p244.tsv).
+
 ## Pass 243 — 2026-10-16 — `13` FOUNDATION ROWS, AND THE REUSABLE LAYER HAS MOVED ONE LEVEL DOWN AGAIN: `p241` FOUND IT IN COMPLIANCE, `p242` IN THE SYSTEM OF RECORD, `p243` FINDS IT IN THE **ADAPTER TO SOMEONE ELSE'S SYSTEM OF RECORD**
 
 🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis, and a row without one says so.

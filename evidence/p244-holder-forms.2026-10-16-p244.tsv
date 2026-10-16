@@ -1,0 +1,10 @@
+# p244 - FOUR spellings of ONE owner inside ONE estate, plus a third party's grant.
+# Why it matters: an estate sweep that asks "is the grant's holder the repo's owner?" cannot
+# answer with string equality.  The one payload that names the LEGAL person is reachable only
+# through the `dba` clause, and it is also the only one carrying a jurisdiction signal.
+holder_string	repos	form	matches_owner_by	jurisdiction_signal
+Copyright (c) 2026 ibl.ai	15	trade name, lowercase, domain-shaped	exact-ish fold of the org login	none
+Copyright (c) 2026 iBL Education	1 (iblai/os)	trade name + descriptor, mixed case	case fold + token drop	none
+Copyright (c) 2025 IBL AI	1 (iblai-js-sdk)	trade name, upper, space-separated, 2025	case fold + separator fold	none
+Copyright (c) 2026 Class Generation, LLC dba ibl.ai	1 (iblai/recruit)	LEGAL ENTITY + "dba" + trade name	ONLY via the `dba` clause	"LLC" - a US-state-chartered form; recorded as a corporate-form inference, NOT a stated jurisdiction
+Copyright (c) Microsoft Corporation. All rights reserved.	1 (iblai/botbuilder-python)	THIRD PARTY	does not match the owner at all	none

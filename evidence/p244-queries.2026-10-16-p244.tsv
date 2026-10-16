@@ -1,0 +1,19 @@
+# p244 - every query this pass ran, with the SORT KEY (ACTION VH/p239) and the CHANNEL
+# (ACTION VV/p241) recorded beside it, plus the SHAPE verdict from p244-absence-states.
+# read/total is what makes a harvest a sample rather than a census.
+channel	query	sort	order	per_page	total_count	read	shape	outcome
+MCP:search_repositories	org:iblai	updated	desc	100	35	35	VALID	ACTION WG DISCHARGED: a complete census, not a sample. 25 grant, 10 ungranted. The 2 education repos were in the 15 p243 never listed
+MCP:search_repositories	topic:report-card	stars	desc	50	31	12 on-topic	VALID	ACTION WF axis. 19 off-topic (Go/Python code-quality "report cards" share the token). 5 permissive rows
+MCP:search_repositories	topic:enrollment topic:education	stars	desc	50	20	20	VALID	ACTION WF axis, CENSUS (20 of 20). 2 permissive, 1 AGPL, 1 CC-BY-SA; 13 ungranted
+MCP:search_repositories	topic:school-fees	stars	desc	50	1	1	VALID	ACTION WF axis EXHAUSTED ON ITS FIRST QUERY: exactly ONE repository on all of GitHub carries this topic, and it ships no licence payload
+MCP:search_repositories	topic:education topic:brasil	stars	desc	30	33	33	VALID	LATAM language/jurisdiction axis. 3 permissive. Also surfaced a 17-repo single-owner estate of ML demo dashboards (jhondados/*)
+MCP:search_repositories	topic:powerschool	stars	desc	30	50	19	VALID	The US K-12 vendor axis. 6 permissive, 4 copyleft. 31 unread - registered as ACTION WK
+MCP:search_repositories	topic:schule topic:education	stars	desc	30	16	12	VALID	EMEA German axis, near-census. 7 permissive, 4 withheld
+MCP:search_repositories	topic:deped	stars	desc	20	10	10	VALID	APAC Philippines axis, CENSUS. 2 permissive, 3 non-commercial, 5 ungranted
+MCP:search_repositories	topic:cbse	stars	desc	20	124	3	VALID	APAC India axis. 121 unread and mostly school coursework. Registered as ACTION WK
+MCP:search_repositories	topic:deped OR topic:nigeria school management	stars	desc	30	0	0	VOID-OR-BETWEEN-QUALIFIERS	🔴 REPORTED AN EMPTY AXIS. `topic:deped` alone returns 10. The axis that produced BOTH APAC rows of this pass was one keystroke from being published as empty
+MCP:search_repositories	topic:cbse OR topic:ncert school AI	stars	desc	25	0	0	VOID-OR-BETWEEN-QUALIFIERS	🔴 REPORTED AN EMPTY AXIS. `topic:cbse` alone returns 124
+MCP:get_file_contents	OS4ED/openSIS-Classic path:/ (and 3 others)	-	-	-	-	0	n/a	🔴 CHANNEL ASYMMETRY: `search_repositories` is GLOBAL, `get_file_contents` is REPO-SCOPED ("not configured for this session"). The only general file channel is raw.githubusercontent.com
+curl	api.github.com/repos/{slug}	-	-	-	-	0	n/a	403 for every slug, as p241 recorded. Stars in this pass come from the MCP search rows, not from the API
+curl	raw.githubusercontent.com ladder, 6 names	-	-	-	-	124 slugs	n/a	The grant channel. Every published and withheld payload in this pass came through it
+git	ls-remote --symref {url} HEAD	-	-	-	-	124 slugs	n/a	Branch + head. 🔴 Returns EMPTY for a live-but-empty repository - see p244-absence-proof

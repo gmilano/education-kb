@@ -1,0 +1,41 @@
+# p244 - ACTION WG DISCHARGED: org:iblai has 35 repos; p243 listed 20 and read 9.  All 35 listed
+# here and all 26 unread ones probed first-hand on 2026-10-16.  Channel: MCP search_repositories
+# (sort=updated, perPage=100, one page, total_count=35 -> the census is COMPLETE, not a sample).
+# 25 of 35 grant; 10 ship no payload at all.  The two on-topic education repos were among the 15
+# p243 never listed.
+repo	stars	grant	bytes	head	holder_in_payload	read_by	note
+iblai/os	821	MIT	1070	ec798f1b12ef	Copyright (c) 2026 iBL Education	p243	highest-star row of the estate
+iblai/ontology	11	MIT	1063	ca861e65c5e4	-	p243	on-prem MCP knowledge layer over PeopleSoft/Snowflake/Canvas/Salesforce
+iblai/claws	15	MIT	1063	acbd32b4a938	-	p243	POINTER repo: the per-sector configs are SEPARATE repos, two of them education
+iblai/lms	14	MIT	1063	753161f34e6e	-	p243	skills intelligence platform
+iblai/vibe	15	MIT	1063	4783869e4454	-	p243	Next.js scaffold, ships Claude Code skills
+iblai/claw-setup	12	MIT	1063	db780e052460	-	p243	self-hosted gateway setup
+iblai/course	1	MIT	1079	1b340da9aa01	-	p243	course-authoring workspace
+iblai/wallet	0	MIT	1063	0be99d069568	-	p243	Open Badges credential wallet
+iblai/crm	0	MIT	1089	2ed2112c1fdb	-	p243	CRM, Tauri to desktop+mobile
+iblai/k-12-agents	9	MIT	1063	54ee9d91eecd	Copyright (c) 2026 ibl.ai	p244	EDUCATION: School Assistant + 12 subagents; names PowerSchool SIS read/write
+iblai/higher-education-agents	12	MIT	1063	1a2d898bbd04	Copyright (c) 2026 ibl.ai	p244	EDUCATION: Campus Assistant + 16 subagents
+iblai/claw-router	44	MIT	1063	319b951e6dd4	Copyright (c) 2026 ibl.ai	p244	highest-star row p243 missed; cheapest-model routing
+iblai/standard	11	MIT	1063	047e867e7a2d	Copyright (c) 2026 ibl.ai	p244	.iblai portable Markdown agent-file format + CLI wizard
+iblai/infra-cli	12	MIT	1063	9ba80fa786bc	Copyright (c) 2026 ibl.ai	p244	Terraform/Ansible provisioning on AWS+GCP
+iblai/video	4	MIT	1063	4679e59dc8e1	Copyright (c) 2026 ibl.ai	p244	avatar video + voice cloning studio
+iblai/recruit	0	MIT	1089	45e999448e38	Copyright (c) 2026 Class Generation, LLC dba ibl.ai	p244	THE ONLY payload naming the legal entity; "LLC" is the estate's sole jurisdiction signal
+iblai/iblai-js-sdk	1	MIT	1063	928c7927298c	Copyright (c) 2025 IBL AI	p244	third holder spelling, and a 2025 year
+iblai/iblai-openclaw-email	1	MIT	1063	b60a6e74a8ad	Copyright (c) 2026 ibl.ai	p244	email triage by cheapest model
+iblai/vibe-marketing	0	MIT	1063	875557e1a172	Copyright (c) 2026 ibl.ai	p244	-
+iblai/botbuilder-python	0	MIT	1162	2cc721e46313	Copyright (c) Microsoft Corporation. All rights reserved.	p244	WITHHELD AS AN ESTATE ROW: the grant is Microsoft's Bot Framework, and the GitHub API reports fork=false
+iblai/medical-healthcare-agents	10	MIT	1063	cd0d9fcfa523	Copyright (c) 2026 ibl.ai	p244	non-education vertical, counted for the census only
+iblai/legal-agents	13	MIT	1063	b059cd452bf3	Copyright (c) 2026 ibl.ai	p244	non-education vertical
+iblai/government-agents	10	MIT	1063	fbf903250c96	Copyright (c) 2026 ibl.ai	p244	non-education vertical
+iblai/financial-services-agents	15	MIT	1063	6ea18f015b1e	Copyright (c) 2026 ibl.ai	p244	non-education vertical
+iblai/enterprise-agents	13	MIT	1063	7f00879a9f57	Copyright (c) 2026 ibl.ai	p244	non-education vertical
+iblai/iblai-python-sdk	1	NO-PAYLOAD	0	-	-	p244	UNGRANTED - and it is the SDK the platform's own apps import
+iblai/vibe-agent	9	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/docs	9	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/vibe-starter	0	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/pr-e2e-action	0	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/opencode-iblai-auth	0	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/iblai-openclaw-extensions-plugin	1	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/quickstarts	1	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/iblai-mentorai-canvas	0	NO-PAYLOAD	0	-	-	p244	UNGRANTED
+iblai/.github	3	NO-PAYLOAD	0	-	-	p244	UNGRANTED (org profile)

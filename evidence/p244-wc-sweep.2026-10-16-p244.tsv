@@ -1,0 +1,11 @@
+# p244 - ACTION WC: "sweep the shelves for 0-byte and whitespace-only grant payloads".
+# SWEPT: 33 slugs, every carried row in the two ungranted censuses (p157 readme-licence-claim and
+# p217 readme-prose-grant-probe), each re-probed first-hand on 2026-10-16 with the HTTP code and
+# the byte count on SEPARATE columns.
+# RESULT: 0 carried rows are 0-byte payloads.  ACTION WC is DISCHARGED and its premise is REFUTED.
+finding	count	detail
+0-byte payloads among carried rows	0	ACTION WC's premise was that such rows are carried as FOUND. They are not carried at all - see p244-absence-proof: the shared probe walks PAST a 0-byte 200 and records an absence
+why the shelves are immune	-	p217 established those absences by TREE ENUMERATION ("ls-tree HEAD = 180 files, 0 licence-shaped paths"), which an empty file cannot fool. A PATH PROBE can. The shelves are safe where they used the tree channel, and that is the transferable lesson
+newly GRANTED row found by the sweep	1	jangtrinh/design-os-pedagogy: p157 recorded "No licence file, no prose claim. True unknown" on 2026-10-12. It now carries a complete MIT, 1079 B, head 3a053d281fb5. A withheld row became publishable and only a re-read found it
+addresses needing reclassification	3	cdweaver1992/edfi-mcp-server and openfresno/edgenuity-aeries-grade-passback are LIVE BUT EMPTY (rc=0, 0 refs); jakerains/scormplayer demands auth. All three read as UNRESOLVED through the shared probe
+still ungranted after the re-probe	29	unchanged from p157/p217; the re-read confirms rather than corrects them

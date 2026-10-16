@@ -1,0 +1,10 @@
+# p244 - 124 slugs probed; WHICH RUNG of the licence-path ladder paid, and the one the shared ladder cannot reach.
+# PROBE_NAMES in lib/probe_payload.sh is "LICENSE LICENSE.md LICENSE.txt LICENCE COPYING" - five
+# names, every one capital-initial.  raw.githubusercontent.com is CASE-SENSITIVE.
+rung	payouts_this_pass	note
+LICENSE	53	the overwhelming default
+LICENSE.md	5	yukazakiri/koakademy, Rumaisas-islam, archboard/tidal-ptc, louisqli/PowerSchool-What-if-Grades, Lukas1120987/Schul-System
+README-LINK	1	OS4ED/openSIS-Classic -> `docs/License.txt` (17286 B, BOM). Unreachable by any filename ladder; the README's own link found it in one request
+TAIL:license.txt (lowercase)	1	SomeAspy/ChromeBookEnroller. 🔴 `LICENSE`, `LICENSE.txt` and `License.txt` ALL return 404 on this row; only the all-lowercase spelling answers 200. The shared five-name ladder cannot reach it
+LICENCE (British)	0	p243 priced this rung at 1-in-44 and it paid 0 here; kept, because its one payout was a PolyForm non-commercial row that would otherwise have read as ungranted
+COPYING	0	no payouts in this pass
